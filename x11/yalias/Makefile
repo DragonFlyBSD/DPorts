@@ -1,5 +1,5 @@
 # Created by: Tim Bishop <tim@bishnet.net>
-# $FreeBSD: x11/yalias/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	yalias
 PORTVERSION=	0.7
