@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: www/mod_fileiri/Makefile 336589 2013-12-15 22:11:20Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	mod_fileiri
 PORTVERSION=	1.15
