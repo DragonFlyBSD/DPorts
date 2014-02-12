@@ -1,5 +1,5 @@
 # Created by: jameskamlyn@gmail.com
-# $FreeBSD: net/tableutil/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	tableutil
 PORTVERSION=	0.6
