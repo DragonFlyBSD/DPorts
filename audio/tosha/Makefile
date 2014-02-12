@@ -1,5 +1,5 @@
 # Created by: Oliver Fromme <oliver.fromme@heim3.tu-clausthal.de>
-# $FreeBSD: audio/tosha/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	tosha
 PORTVERSION=	0.6
