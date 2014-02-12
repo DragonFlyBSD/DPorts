@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: devel/libzvbi/Makefile 341342 2014-01-27 08:48:34Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libzvbi
 PORTVERSION=	0.2.35
