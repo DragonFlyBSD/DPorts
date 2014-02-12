@@ -1,5 +1,5 @@
 # Created by: Pedro F. Giffuni <giffunip@asme.org>
-# $FreeBSD: cad/brlcad/Makefile 341566 2014-01-28 14:06:16Z gahr $
+# $FreeBSD$
 
 PORTNAME=	brlcad
 PORTVERSION=	7.24.0
