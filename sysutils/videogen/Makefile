@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: sysutils/videogen/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	videogen
 PORTVERSION=	0.33
@@ -7,11 +7,13 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://www.dynaweb.hu/opensource/videogen/download/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A tool for calculating XFree86 modelines
+COMMENT=	Tool for calculating XFree86 modelines
 
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
 
 DOCS=		BUGS CHANGES README THANKS
+
+MAKE_JOBS_UNSAFE=yes
 
 post-extract:
 	@${LN} -sf ${PORTNAME}.1x ${WRKSRC}/${PORTNAME}.1
