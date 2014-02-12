@@ -1,5 +1,5 @@
 # Created by: Espen Tagestad <espen@tagestad.no>
-# $FreeBSD: www/p5-CGI-Application-Plugin-ValidateRM/Makefile 341805 2014-01-30 07:55:01Z miwi $
+# $FreeBSD$
 
 PORTNAME=	CGI-Application-Plugin-ValidateRM
 PORTVERSION=	2.5
