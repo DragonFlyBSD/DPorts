@@ -1,5 +1,5 @@
 # Created by: Ju Pengfei <jupengfei@gmail.com>
-# $FreeBSD: science/pynn/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD$
 
 PORTNAME=	pynn
 PORTVERSION=	0.7.5
