@@ -1,5 +1,5 @@
 # Created by: Francisco Cabrita <include@npf.pt.freebsd.org>
-# $FreeBSD: www/joomla25/Makefile 335647 2013-12-04 23:57:57Z nivit $
+# $FreeBSD$
 
 PORTNAME=	joomla
 PORTVERSION=	2.5.16
