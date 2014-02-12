@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: mail/pecl-esmtp/Makefile 340835 2014-01-23 16:00:14Z miwi $
+# $FreeBSD$
 
 PORTNAME=	esmtp
 PORTVERSION=	0.3.1
