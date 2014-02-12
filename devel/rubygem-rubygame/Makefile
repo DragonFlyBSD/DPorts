@@ -1,5 +1,5 @@
 # Created by: ws	Christoph Kick
-# $FreeBSD: devel/rubygem-rubygame/Makefile 332041 2013-10-30 02:42:34Z swills $
+# $FreeBSD$
 
 PORTNAME=	rubygame
 PORTVERSION=	2.6.4
