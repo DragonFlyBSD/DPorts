@@ -1,5 +1,5 @@
 # Created by: Alexander V. Ribchansky <triosoft@triosoft.com.ua>
-# $FreeBSD: russian/xpi-tabextensions/Makefile 341201 2014-01-26 15:08:31Z miwi $
+# $FreeBSD$
 
 PORTNAME=	tabextensions
 PORTVERSION=	2.1.2006031301
