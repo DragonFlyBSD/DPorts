@@ -1,5 +1,5 @@
 # Created by: moeding
-# $FreeBSD: devel/splint/Makefile 340962 2014-01-25 00:23:18Z bapt $
+# $FreeBSD$
 
 PORTNAME=	splint
 PORTVERSION=	3.1.2
