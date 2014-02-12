@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/dangen/Makefile 328916 2013-10-01 05:52:03Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	dangen
 PORTVERSION=	0.5
@@ -25,6 +25,8 @@ PLIST_FILES=	bin/${PORTNAME} \
 		man/man6/${PORTNAME}.6.gz
 PORTDOCS=	*
 PORTDATA=	*
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
