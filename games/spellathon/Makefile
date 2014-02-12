@@ -1,5 +1,5 @@
 # Created by: Girish <girish.rao.dev@gmail.com>
-# $FreeBSD: games/spellathon/Makefile 334499 2013-11-21 16:09:47Z makc $
+# $FreeBSD$
 
 PORTNAME=	spellathon
 PORTVERSION=	6.0
