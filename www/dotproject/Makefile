@@ -1,4 +1,4 @@
-# $FreeBSD: www/dotproject/Makefile 332323 2013-10-31 23:50:20Z garga $
+# $FreeBSD$
 
 PORTNAME=	dotproject
 PORTVERSION=	2.1.7
