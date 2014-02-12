@@ -1,5 +1,5 @@
 # Created by: otaviof@gmail.com
-# $FreeBSD: www/p5-Apache-Htgroup/Makefile 338763 2014-01-05 13:05:56Z az $
+# $FreeBSD$
 
 PORTNAME=	Apache-Htgroup
 PORTVERSION=	1.23
