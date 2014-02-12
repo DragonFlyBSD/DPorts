@@ -1,5 +1,5 @@
 # Created by: Chris D. Faulhaber <jedgar@FreeBSD.org>
-# $FreeBSD: security/fuzz/Makefile 342033 2014-01-31 16:51:13Z miwi $
+# $FreeBSD$
 
 PORTNAME=	fuzz
 PORTVERSION=	0.6
