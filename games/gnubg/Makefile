@@ -1,5 +1,5 @@
 # Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
-# $FreeBSD: games/gnubg/Makefile 342213 2014-02-01 21:37:07Z cs $
+# $FreeBSD$
 
 PORTNAME=	gnubg
 PORTVERSION=	1.02.000
