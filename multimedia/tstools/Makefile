@@ -1,5 +1,5 @@
 # Created by: J.R. Oldroyd <fbsd@opal.com>
-# $FreeBSD: multimedia/tstools/Makefile 335020 2013-11-27 15:05:34Z jadawin $
+# $FreeBSD$
 
 PORTNAME=	tstools
 DISTVERSION=	1_11
