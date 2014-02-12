@@ -1,5 +1,5 @@
 # Created by: Chris S.J. Peron <maneo@bsdpro.com>
-# $FreeBSD: net-mgmt/subcalc/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	subcalc
 PORTVERSION=	1.1
