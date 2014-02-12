@@ -1,5 +1,5 @@
 # Created by: Matt Jibson <dolmant@dolmant.net>
-# $FreeBSD: mail/relaydb/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	relaydb
 PORTVERSION=	1.8
@@ -9,13 +9,11 @@ MASTER_SITES=	http://www.benzedrine.cx/
 MAINTAINER=	m.tsatsenko@gmail.com
 COMMENT=	Spam relay database
 
-MAN8=		relaydb.8
-MANCOMPRESSED=	yes
-PLIST_FILES=	bin/relaydb
+PLIST_FILES=	bin/relaydb \
+		man/man8/relaydb.8.gz
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/relaydb ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/relaydb.8.gz ${MAN8PREFIX}/man/man8
+	${INSTALL_PROGRAM} ${WRKSRC}/relaydb ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/relaydb.8.gz ${STAGEDIR}${MAN8PREFIX}/man/man8
 
 .include <bsd.port.mk>
