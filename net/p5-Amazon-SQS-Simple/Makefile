@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: net/p5-Amazon-SQS-Simple/Makefile 341924 2014-01-31 07:18:16Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Amazon-SQS-Simple
 PORTVERSION=	1.06
