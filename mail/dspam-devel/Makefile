@@ -1,5 +1,5 @@
 # Created by: Ion-Mihai "IOnut" Tetcu <itetcu@people.tecnik93.com>
-# $FreeBSD: mail/dspam-devel/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 # Note to commiters: If not committing a maintainer patch and as a result PKGNAME
 # or user variables (WITH*) changes please add an entry in ${FILESDIR}/UPDATING

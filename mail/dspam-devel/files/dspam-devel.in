@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: mail/dspam-devel/files/dspam-devel.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/mail/dspam-devel/files/dspam-devel.in 340872 2014-01-24 00:14:07Z mat $
 #
 
 # PROVIDE: dspam
