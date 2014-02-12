@@ -1,4 +1,4 @@
-# $FreeBSD: games/gbrainy/Makefile 335084 2013-11-28 09:12:01Z kevlo $
+# $FreeBSD$
 
 PORTNAME=	gbrainy
 PORTVERSION=	2.2.2
