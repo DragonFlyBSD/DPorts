@@ -1,5 +1,5 @@
 # Created by: Alexey V. Degtyarev <alexey@renatasystems.org>
-# $FreeBSD: mail/sieve-connect/Makefile 336574 2013-12-15 19:44:53Z alexey $
+# $FreeBSD$
 
 PORTNAME=	sieve-connect
 PORTVERSION=	0.87
