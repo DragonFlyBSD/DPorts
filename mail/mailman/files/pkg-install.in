@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $FreeBSD: mail/mailman/files/pkg-install.in 330763 2013-10-18 16:42:11Z mandree $
+# $FreeBSD: head/mail/mailman/files/pkg-install.in 330763 2013-10-18 16:42:11Z mandree $
 
 PATH=/bin:/usr/bin:/usr/sbin
 

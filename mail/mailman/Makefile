@@ -1,5 +1,5 @@
 # Created by: n_hibma@qubesoft.com
-# $FreeBSD: mail/mailman/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	mailman
 DISTVERSION=	2.1.17

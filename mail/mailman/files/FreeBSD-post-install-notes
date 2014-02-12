@@ -1,6 +1,6 @@
 # ----------------------------------------------------------------------
 # Post-installation instructions for the FreeBSD port/package of Mailman
-# $FreeBSD: mail/mailman/files/FreeBSD-post-install-notes 325637 2013-08-29 22:58:07Z mandree $
+# $FreeBSD: head/mail/mailman/files/FreeBSD-post-install-notes 325637 2013-08-29 22:58:07Z mandree $
 # ----------------------------------------------------------------------
 
 
