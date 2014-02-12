@@ -1,5 +1,5 @@
 # Created by: Ralf van Dooren <r.vdooren@snow.nl>
-# $FreeBSD: sysutils/rsnapshot/Makefile 339652 2014-01-14 00:44:46Z garga $
+# $FreeBSD$
 
 PORTNAME=	rsnapshot
 PORTVERSION=	1.3.1
