@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/doom-hr/Makefile 333971 2013-11-16 02:51:45Z danilo $
+# $FreeBSD$
 
 PORTNAME=	hr
 PORTVERSION=	1.0
