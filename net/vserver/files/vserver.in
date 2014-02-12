@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: net/vserver/files/vserver.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/net/vserver/files/vserver.in 340872 2014-01-24 00:14:07Z mat $
 #
 # FreeBSD boot time start up script for vserver(8).
 #

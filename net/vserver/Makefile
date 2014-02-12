@@ -1,5 +1,5 @@
 # Created by: Andreas Wetzel <mickey@netassembly.de>
-# $FreeBSD: net/vserver/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	vserver
 PORTVERSION=	2.43c
