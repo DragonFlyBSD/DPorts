@@ -1,4 +1,4 @@
-# $FreeBSD: mail/p5-Dancer-Plugin-Email/Makefile 329844 2013-10-08 22:42:35Z gblach $
+# $FreeBSD$
 
 PORTNAME=	Dancer-Plugin-Email
 PORTVERSION=	1.0100
