@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: databases/postgresql-plruby/Makefile 335486 2013-12-02 13:41:23Z mat $
+# $FreeBSD$
 
 PORTNAME=	postgresql-plruby
 PORTVERSION=	0.5.4
