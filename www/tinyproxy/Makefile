@@ -1,5 +1,5 @@
 # Created by: Mitsuru Yoshida <mitsuru@riken.go.jp>
-# $FreeBSD: www/tinyproxy/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	tinyproxy
 PORTVERSION=	1.8.3
