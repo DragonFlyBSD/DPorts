@@ -1,4 +1,4 @@
-# $FreeBSD: science/step/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD$
 
 PORTNAME=	step
 PORTVERSION=	${KDE4_VERSION}
