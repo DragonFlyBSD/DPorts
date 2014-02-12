@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/helpviewer/Makefile 341878 2014-01-30 19:40:44Z antoine $
+# $FreeBSD$
 
 PORTNAME=	helpviewer
 PORTVERSION=	0.3
