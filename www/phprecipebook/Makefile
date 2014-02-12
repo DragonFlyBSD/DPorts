@@ -1,4 +1,4 @@
-# $FreeBSD: www/phprecipebook/Makefile 329124 2013-10-02 22:56:47Z madpilot $
+# $FreeBSD$
 
 PORTNAME=	phprecipebook
 PORTVERSION=	3.01
