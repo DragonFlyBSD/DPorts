@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: audio/fdk-aac/Makefile 335203 2013-11-29 17:29:51Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	fdk-aac
 PORTVERSION=	0.1.3
