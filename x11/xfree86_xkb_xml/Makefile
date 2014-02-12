@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: x11/xfree86_xkb_xml/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD$
 
 PORTNAME=	xfree86_xkb_xml
 PORTVERSION=	0.4
@@ -18,5 +18,4 @@ CONFIGURE_ARGS=	--with-xkb-base=${LOCALBASE}/lib/X11/xkb
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
