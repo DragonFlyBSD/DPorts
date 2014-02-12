@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: www/p5-WebService-GData/Makefile 339639 2014-01-13 21:31:57Z ehaupt $
+# $FreeBSD$
 
 PORTNAME=	WebService-GData
 PORTVERSION=	0.06
