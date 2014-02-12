@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: shells/psh/files/pkg-deinstall.in 340719 2014-01-22 15:52:06Z mat $
+# $FreeBSD: head/shells/psh/files/pkg-deinstall.in 340719 2014-01-22 15:52:06Z mat $
 #
 
 PSH="%%PREFIX%%/bin/psh"

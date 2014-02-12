@@ -1,5 +1,5 @@
 # Created by: Will Andrews <andrews@technologist.com>
-# $FreeBSD: shells/psh/Makefile 331448 2013-10-23 23:38:12Z garga $
+# $FreeBSD$
 
 PORTNAME=	psh
 PORTVERSION=	1.8.1
