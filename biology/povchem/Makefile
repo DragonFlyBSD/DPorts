@@ -1,5 +1,5 @@
 # Created by: frankch@waru.life.nthu.edu.tw
-# $FreeBSD: biology/povchem/Makefile 334194 2013-11-18 13:45:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	povchem
 PORTVERSION=	1.0
