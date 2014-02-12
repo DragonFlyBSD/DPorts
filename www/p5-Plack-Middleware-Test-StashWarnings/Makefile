@@ -1,5 +1,5 @@
 # Created by: Matthew Seaman <matthew@FreeBSD.org>
-# $FreeBSD: www/p5-Plack-Middleware-Test-StashWarnings/Makefile 336102 2013-12-10 19:47:42Z bdrewery $
+# $FreeBSD$
 
 PORTNAME=	Plack-Middleware-Test-StashWarnings
 PORTVERSION=	0.07
