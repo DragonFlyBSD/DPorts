@@ -1,5 +1,5 @@
 # Created by: Dean Hollister <dean@odyssey.apana.org.au>
-# $FreeBSD: mail/dcc-dccd/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	dcc-dccd
 PORTVERSION=	1.3.141
