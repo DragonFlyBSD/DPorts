@@ -1,5 +1,5 @@
 # Created by: nork@FreeBSD.org
-# $FreeBSD: audio/eawplus/Makefile 339943 2014-01-16 17:34:03Z antoine $
+# $FreeBSD$
 
 PORTNAME=	eawplus
 PORTVERSION=	12.1
