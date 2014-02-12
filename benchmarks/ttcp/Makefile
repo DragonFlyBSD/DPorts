@@ -1,5 +1,5 @@
 # Created by: mharo@FreeBSD.org
-# $FreeBSD: benchmarks/ttcp/Makefile 338717 2014-01-05 00:39:01Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ttcp
 PORTVERSION=	1.12
