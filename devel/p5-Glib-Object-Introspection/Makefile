@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Glib-Object-Introspection/Makefile 340415 2014-01-20 17:02:39Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Glib-Object-Introspection
 PORTVERSION=	0.019
