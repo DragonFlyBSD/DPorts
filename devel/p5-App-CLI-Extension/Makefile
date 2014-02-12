@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: devel/p5-App-CLI-Extension/Makefile 331780 2013-10-27 15:12:16Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	App-CLI-Extension
 PORTVERSION=	1.42.1
