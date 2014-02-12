@@ -1,4 +1,4 @@
-# $FreeBSD: mail/p5-Mail-SpamAssassin-Alt/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTREVISION=	1
 PKGNAMESUFFIX=	-Alt
