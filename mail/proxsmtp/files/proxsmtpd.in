@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: mail/proxsmtp/files/proxsmtpd.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/mail/proxsmtp/files/proxsmtpd.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: proxsmtpd
 # REQUIRE: DAEMON
