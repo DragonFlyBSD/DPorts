@@ -1,5 +1,5 @@
 # Created by: Daniel Roethlisberger <daniel@roe.ch>
-# $FreeBSD: math/msieve/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD$
 
 PORTNAME=	msieve
 PORTVERSION=	1.51
