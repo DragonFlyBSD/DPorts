@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: graphics/p5-Geo-GDAL/Makefile 334029 2013-11-16 20:11:15Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Geo-GDAL
 PORTVERSION=	1.10.1
