@@ -1,5 +1,5 @@
 # Created by: Zhen REN <bg1tpt@gmail.com>
-# $FreeBSD: net/pear-File_Bittorrent2/Makefile 334871 2013-11-25 17:59:58Z antoine $
+# $FreeBSD$
 
 PORTNAME=	File_Bittorrent2
 DISTVERSION=	1.3.1
