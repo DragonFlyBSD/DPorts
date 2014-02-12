@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-deep_merge/Makefile 336273 2013-12-12 15:57:56Z wg $
+# $FreeBSD$
 
 PORTNAME=	deep_merge
 PORTVERSION=	1.0.0
