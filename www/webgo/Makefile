@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: www/webgo/Makefile 339441 2014-01-11 17:46:33Z jlaffaye $
+# $FreeBSD$
 
 PORTNAME=	webgo
 PORTVERSION=	0.1.0.${SVNVERSION}
