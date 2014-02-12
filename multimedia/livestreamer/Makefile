@@ -1,5 +1,5 @@
 # Created by: Juergen Lock <nox@FreeBSD.org>
-# $FreeBSD: multimedia/livestreamer/Makefile 341385 2014-01-27 12:14:09Z koobs $
+# $FreeBSD$
 
 PORTNAME=	livestreamer
 PORTVERSION=	1.7.2
