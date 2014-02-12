@@ -1,5 +1,5 @@
 # Created by: Joel Sutton <jsutton@bbcon.com.au>
-# $FreeBSD: emulators/aftp/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	aftp
 PORTVERSION=	1.0
