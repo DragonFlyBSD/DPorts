@@ -1,5 +1,5 @@
 # Created by: Anes Mukhametov <anes@anes.su>
-# $FreeBSD: audio/icecast-kh/Makefile 334719 2013-11-24 12:05:33Z alexey $
+# $FreeBSD$
 
 PORTNAME=	icecast
 PORTVERSION=	${ICVERSION}.k${KH}
