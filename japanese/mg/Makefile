@@ -1,4 +1,4 @@
-# $FreeBSD: japanese/mg/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mg
 PORTVERSION=	5.0.1.3
