@@ -1,4 +1,4 @@
-# $FreeBSD: databases/py-alembic/Makefile 338533 2014-01-03 08:57:52Z lwhsu $
+# $FreeBSD$
 
 PORTNAME=	alembic
 PORTVERSION=	0.6.2
