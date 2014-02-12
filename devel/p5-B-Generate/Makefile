@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-B-Generate/Makefile 338866 2014-01-06 12:05:42Z az $
+# $FreeBSD$
 
 PORTNAME=	B-Generate
 PORTVERSION=	1.47
