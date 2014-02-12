@@ -1,4 +1,4 @@
-# $FreeBSD: net-mgmt/sblim-wbemcli/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	sblim-wbemcli
 PORTVERSION=	1.6.1
