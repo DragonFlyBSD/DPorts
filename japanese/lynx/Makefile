@@ -1,5 +1,5 @@
 # Created by: Shigeyuki FUKUSHIMA <shige@FreeBSD.org>
-# $FreeBSD: japanese/lynx/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD$
 
 PORTNAME=	lynx
 DISTVERSION=	${VERSION}.${MINOR_VERSION:S/.//}
@@ -32,6 +32,8 @@ L_LIB=		${PREFIX}/etc
 L_HELP=		${PREFIX}/share/lynx_help
 
 MAN1=		lynx.1
+
+MAKE_JOBS_UNSAFE=yes
 
 OPTIONS_DEFINE=	JAPANESE_UTF8 COLOR_STYLE DEFAULT_COLORS DOCS
 OPTIONS_SUB=	yes
