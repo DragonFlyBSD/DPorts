@@ -1,5 +1,5 @@
 # Created by: Dereckson <dereckson@gmail.com>
-# $FreeBSD: lang/malbolge/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD$
 
 PORTNAME=	malbolge
 PORTVERSION=	0.1.1
@@ -16,6 +16,8 @@ PORTDOCS=	*
 NO_STAGE=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/malbolge ${PREFIX}/bin
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
