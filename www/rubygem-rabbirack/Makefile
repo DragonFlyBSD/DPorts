@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: www/rubygem-rabbirack/Makefile 340906 2014-01-24 14:56:38Z miwi $
+# $FreeBSD$
 
 PORTNAME=	rabbirack
 PORTVERSION=	2.0.0
