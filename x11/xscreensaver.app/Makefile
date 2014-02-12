@@ -1,5 +1,5 @@
 # Created by: hemi@puresimplicity.net
-# $FreeBSD: x11/xscreensaver.app/Makefile 339414 2014-01-11 10:03:45Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	XScreenSaver.App
 PORTVERSION=	2.3
