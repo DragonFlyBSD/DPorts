@@ -1,4 +1,4 @@
-# $FreeBSD: databases/mysql-udf-preg/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	mysql-udf-preg
 PORTVERSION=	1.0.1
@@ -9,6 +9,9 @@ DISTNAME=	lib_mysqludf_preg-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Library of MySQL UDFs providing access to PCRE
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-07
 
 LIB_DEPENDS=	libpcre.so:${PORTSDIR}/devel/pcre
 
