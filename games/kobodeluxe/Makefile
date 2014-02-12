@@ -1,5 +1,5 @@
 # Created by: Amar Takhar <verm@drunkmonk.net>
-# $FreeBSD: games/kobodeluxe/Makefile 331269 2013-10-22 13:53:33Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	kobodeluxe
 PORTVERSION=	0.5.1
