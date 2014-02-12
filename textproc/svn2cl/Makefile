@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: textproc/svn2cl/Makefile 329629 2013-10-06 21:14:55Z danilo $
+# $FreeBSD$
 
 PORTNAME=	svn2cl
 PORTVERSION=	0.14
