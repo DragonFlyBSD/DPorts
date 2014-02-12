@@ -1,5 +1,5 @@
 # Created by: Xavier Beaudouin <kiwi@oav.net>
-# $FreeBSD: mail/ovs/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ovs
 PORTVERSION=	1.05
