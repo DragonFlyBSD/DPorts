@@ -1,5 +1,5 @@
 # Created by: Yuri Victorovich <yuri@tsoft.com>
-# $FreeBSD: net-p2p/bitmessage/Makefile 335791 2013-12-06 23:29:54Z feld $
+# $FreeBSD$
 
 PORTNAME=	bitmessage
 PORTVERSION=	0.4.1
