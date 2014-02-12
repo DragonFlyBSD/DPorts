@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: games/xscorch/Makefile 334305 2013-11-19 12:11:25Z marino $
+# $FreeBSD$
 
 PORTNAME=	xscorch
 PORTVERSION=	0.2.1
