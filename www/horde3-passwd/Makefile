@@ -1,5 +1,5 @@
 # Created by: Joao Carlos Mendes Luis (<jonny@jonny.eng.br>)
-# $FreeBSD: www/horde3-passwd/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	passwd
 PORTVERSION=	3.1.3
