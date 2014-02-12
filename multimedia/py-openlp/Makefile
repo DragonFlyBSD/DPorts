@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/py-openlp/Makefile 340608 2014-01-21 13:53:43Z tabthorpe $
+# $FreeBSD$
 
 PORTNAME=	OpenLP
 PORTVERSION=	2.0.3
