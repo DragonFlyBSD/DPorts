@@ -1,5 +1,5 @@
 # Created by: lbartoletti <coder@tuxfamily.org>
-# $FreeBSD: devel/libgta/Makefile 340615 2014-01-21 15:43:06Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	libgta
 PORTVERSION=	1.0.2
