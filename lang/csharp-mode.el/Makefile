@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: lang/csharp-mode.el/Makefile 340164 2014-01-18 10:32:43Z mva $
+# $FreeBSD$
 
 PORTNAME=	csharp-mode.el
 PORTVERSION=	0.8.5
