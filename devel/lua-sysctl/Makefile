@@ -1,4 +1,4 @@
-# $FreeBSD: devel/lua-sysctl/Makefile 339372 2014-01-10 17:10:40Z bapt $
+# $FreeBSD$
 
 PORTNAME=	sysctl
 PORTVERSION=	1.0
