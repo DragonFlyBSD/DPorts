@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: databases/pgbouncer/Makefile 337292 2013-12-23 20:42:11Z antoine $
+# $FreeBSD$
 
 PORTNAME=	pgbouncer
 PORTVERSION=	1.5.4
