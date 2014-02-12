@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/sgt-puzzles/Makefile 341495 2014-01-28 02:33:50Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	puzzles
 PORTVERSION=	r10116
