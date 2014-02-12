@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/beediff/Makefile 334497 2013-11-21 15:41:06Z makc $
+# $FreeBSD$
 
 PORTNAME=	beediff
 PORTVERSION=	1.9
