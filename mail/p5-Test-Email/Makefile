@@ -1,5 +1,5 @@
 # Created by: Matthew Seaman <matthew@FreeBSD.org>
-# $FreeBSD: mail/p5-Test-Email/Makefile 336102 2013-12-10 19:47:42Z bdrewery $
+# $FreeBSD$
 
 PORTNAME=	Test-Email
 PORTVERSION=	0.07
