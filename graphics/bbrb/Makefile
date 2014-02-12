@@ -1,5 +1,5 @@
 # Created by: Dan Peck <peckdani@msu.edu>
-# $FreeBSD: graphics/bbrb/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	bbrb
 PORTVERSION=	0.4.1
