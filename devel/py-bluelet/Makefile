@@ -1,5 +1,5 @@
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD: devel/py-bluelet/Makefile 341441 2014-01-27 18:38:19Z feld $
+# $FreeBSD$
 
 PORTNAME=	bluelet
 PORTVERSION=	0.2.0
