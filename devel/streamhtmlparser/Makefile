@@ -1,5 +1,5 @@
 # Created by: HU Dong <itechbear@gmail.com>
-# $FreeBSD: devel/streamhtmlparser/Makefile 340959 2014-01-25 00:15:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	streamhtmlparser
 PORTVERSION=	0.1
