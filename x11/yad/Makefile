@@ -1,5 +1,5 @@
 # Created by: Danilo Egea Gondolfo <danilo@FreeBSD.org>
-# $FreeBSD: x11/yad/Makefile 335795 2013-12-06 23:50:50Z danilo $
+# $FreeBSD$
 
 PORTNAME=	yad
 PORTVERSION=	0.25.1
