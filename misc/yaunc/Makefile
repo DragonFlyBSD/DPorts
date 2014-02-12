@@ -1,5 +1,5 @@
 # Created by: nsayer@FreeBSD.org
-# $FreeBSD: misc/yaunc/Makefile 337733 2013-12-27 14:47:58Z jadawin $
+# $FreeBSD$
 
 PORTNAME=	yaunc
 PORTVERSION=	1.02
