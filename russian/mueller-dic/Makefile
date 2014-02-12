@@ -1,5 +1,5 @@
 # Created by: Igor Pokrovsky <tiamat@comset.net>
-# $FreeBSD: russian/mueller-dic/Makefile 334183 2013-11-18 13:04:03Z bsam $
+# $FreeBSD$
 
 PORTNAME=	mueller-dic
 PORTVERSION=	1.2
