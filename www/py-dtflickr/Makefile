@@ -1,5 +1,5 @@
 # Created by: Douglas Thrift
-# $FreeBSD: www/py-dtflickr/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	dtflickr
 PORTVERSION=	1.5
