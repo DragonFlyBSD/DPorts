@@ -1,5 +1,5 @@
 # Created by: Olivier Duchateau
-# $FreeBSD: x11/xfce4-embed-plugin/Makefile 341743 2014-01-29 14:51:57Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	xfce4-embed-plugin
 PORTVERSION=	1.4.1
