@@ -1,5 +1,5 @@
 # Created by: Filippo Natali <filippo@widestore.net>
-# $FreeBSD: x11-themes/gtk-lila-theme-extras/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	gtk-lila-theme-extras
 PORTVERSION=	0.4.5
