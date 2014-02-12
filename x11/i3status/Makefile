@@ -1,4 +1,4 @@
-# $FreeBSD: x11/i3status/Makefile 338860 2014-01-06 11:24:29Z bapt $
+# $FreeBSD$
 
 PORTNAME=	i3status
 PORTVERSION=	2.8
