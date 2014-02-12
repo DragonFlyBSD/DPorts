@@ -1,4 +1,4 @@
-# $FreeBSD: games/kmancala/Makefile 331383 2013-10-23 13:08:41Z makc $
+# $FreeBSD$
 
 PORTNAME=	kmancala
 PORTVERSION=	1.0.2
