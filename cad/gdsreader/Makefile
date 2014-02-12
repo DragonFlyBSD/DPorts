@@ -1,5 +1,5 @@
 # Created by: Hiroki Sato <hrs@FreeBSD.org>
-# $FreeBSD: cad/gdsreader/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	gdsreader
 PORTVERSION=	0.3.2
@@ -19,6 +19,8 @@ PLIST_FILES=	bin/gdsreader bin/maptolayer \
 PLIST_DIRS=	${EXAMPLESDIR_REL}
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
