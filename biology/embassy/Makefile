@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsamn.edu.ar>
-# $FreeBSD: biology/embassy/Makefile 339842 2014-01-15 22:48:32Z bapt $
+# $FreeBSD$
 
 PORTNAME=	embassy
 PORTVERSION=	6.2.0
