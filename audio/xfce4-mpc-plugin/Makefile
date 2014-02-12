@@ -1,5 +1,5 @@
 # Created by: Martin Wilke (miwi@FreeBSD.org)
-# $FreeBSD: audio/xfce4-mpc-plugin/Makefile 332714 2013-11-04 13:23:11Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	xfce4-mpc-plugin
 PORTVERSION=	0.4.4
