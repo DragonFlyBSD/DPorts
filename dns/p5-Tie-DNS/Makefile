@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: dns/p5-Tie-DNS/Makefile 334568 2013-11-22 10:25:10Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Tie-DNS
 PORTVERSION=	1.133.260
