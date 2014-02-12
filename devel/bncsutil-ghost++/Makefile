@@ -1,5 +1,5 @@
 # Created by: <ports@c0decafe.net>
-# $FreeBSD: devel/bncsutil-ghost++/Makefile 341406 2014-01-27 13:37:57Z bapt $
+# $FreeBSD$
 
 PORTNAME=	bncsutil
 PORTVERSION=	1.3.2
