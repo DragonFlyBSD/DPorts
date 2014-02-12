@@ -1,5 +1,5 @@
 # Created by: Fumihiko Kimura <jfkimura@yahoo.co.jp>
-# $FreeBSD: www/tdiary/Makefile 338495 2014-01-02 20:35:17Z swills $
+# $FreeBSD$
 
 PORTNAME=	tdiary
 PORTVERSION=	4.0.2
