@@ -1,5 +1,5 @@
 # Created by: Gustavo Fukao <gustavofukao@gmail.com>
-# $FreeBSD: devel/gazpacho/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gazpacho
 PORTVERSION=	0.7.2
