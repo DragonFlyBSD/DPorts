@@ -1,5 +1,5 @@
 # Created by: Sakai Hiroaki <sakai@miya.ee.kagu.sut.ac.jp>
-# $FreeBSD: x11/xmangekyou/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xmangekyou
 PORTVERSION=	2.0.1
