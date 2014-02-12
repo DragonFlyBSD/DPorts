@@ -1,5 +1,5 @@
 # Created by: Masahiro Teramoto <markun@onohara.to>
-# $FreeBSD: japanese/p5-HTML-MobileJp/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD$
 
 PORTNAME=	HTML-MobileJp
 PORTVERSION=	0.08
@@ -22,11 +22,6 @@ TEST_DEPENDS=	p5-Test-Base>0:${PORTSDIR}/devel/p5-Test-Base \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		HTML::MobileJp.3 \
-		HTML::MobileJp::Plugin::GPS.3 \
-		HTML::MobileJp::Plugin::EZweb::Object.3
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 PKGNAMEPREFIX:=	${PKGNAMEPREFIX}p5-
