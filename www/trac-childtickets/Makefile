@@ -1,5 +1,5 @@
 # Created by: Radim Kolar <hsn@sendmail.cz>
-# $FreeBSD: www/trac-childtickets/Makefile 341181 2014-01-26 14:31:18Z miwi $
+# $FreeBSD$
 
 PORTNAME=	childtickets
 PORTVERSION=	2.5.2
