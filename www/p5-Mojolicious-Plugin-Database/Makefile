@@ -1,5 +1,5 @@
 # Created by: Henk van Oers <hvo.pm@xs4all.nl>
-# $FreeBSD: www/p5-Mojolicious-Plugin-Database/Makefile 332678 2013-11-04 09:57:54Z az $
+# $FreeBSD$
 
 PORTNAME=	Mojolicious-Plugin-Database
 PORTVERSION=	1.08
