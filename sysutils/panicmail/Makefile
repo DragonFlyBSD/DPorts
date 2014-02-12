@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/panicmail/Makefile 332673 2013-11-04 08:57:06Z cperciva $
+# $FreeBSD$
 
 PORTNAME=	panicmail
 PORTVERSION=	1.0
