@@ -1,5 +1,5 @@
 # Created by: steinex
-# $FreeBSD: net-mgmt/nagios-check_smartmon/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	check_smartmon
 PORTVERSION=	20100318
