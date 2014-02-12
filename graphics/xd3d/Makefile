@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: graphics/xd3d/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xd3d
 PORTVERSION=	8.3.1
