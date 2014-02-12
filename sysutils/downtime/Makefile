@@ -1,5 +1,5 @@
 # Created by: Nick Withers (nick@nickwithers.com)
-# $FreeBSD: sysutils/downtime/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	downtime
 PORTVERSION=	0.4.0
