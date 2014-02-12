@@ -1,5 +1,5 @@
 # Created by: Horia Racoviceanu <horia@racoviceanu.com>
-# $FreeBSD: www/rubygem-haml-contrib/Makefile 340667 2014-01-21 22:22:24Z swills $
+# $FreeBSD$
 
 PORTNAME=	haml-contrib
 PORTVERSION=	1.0.0.1
