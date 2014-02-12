@@ -1,5 +1,5 @@
 # Created by: Edwin Groothuis <edwin@mavetju.org>
-# $FreeBSD: dns/dnstracer/Makefile 340974 2014-01-25 00:54:22Z bapt $
+# $FreeBSD$
 
 PORTNAME=	dnstracer
 PORTVERSION=	1.9
