@@ -1,5 +1,5 @@
 # Created by: Patrick Doane <patrick@watson.org>
-# $FreeBSD: devel/ocamlweb/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ocamlweb
 PORTVERSION=	1.34
