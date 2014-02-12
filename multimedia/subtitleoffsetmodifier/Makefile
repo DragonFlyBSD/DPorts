@@ -1,5 +1,5 @@
 # Created by: Edwin Groothuis <edwin@mavetju.org>
-# $FreeBSD: multimedia/subtitleoffsetmodifier/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD$
 
 PORTNAME=	subtitleoffsetmodificator
 PORTVERSION=	0.1
