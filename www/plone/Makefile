@@ -1,4 +1,4 @@
-# $FreeBSD: www/plone/Makefile 327956 2013-09-23 09:18:55Z rm $
+# $FreeBSD$
 
 PORTNAME=	plone
 PORTVERSION=	4.3.2
