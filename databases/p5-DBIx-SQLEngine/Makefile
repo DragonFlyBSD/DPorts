@@ -1,5 +1,5 @@
 # Created by: Hansjoerg Pehofer <hansjoerg.pehofer@uibk.ac.at>
-# $FreeBSD: databases/p5-DBIx-SQLEngine/Makefile 332592 2013-11-03 06:53:54Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	DBIx-SQLEngine
 PORTVERSION=	0.93
