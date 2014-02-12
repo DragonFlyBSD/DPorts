@@ -1,5 +1,5 @@
 # Created by: giffunip@asme.org
-# $FreeBSD: graphics/rayshade/Makefile 337436 2013-12-25 18:15:41Z pawel $
+# $FreeBSD$
 
 PORTNAME=	rayshade
 PORTVERSION=	4.0.6
