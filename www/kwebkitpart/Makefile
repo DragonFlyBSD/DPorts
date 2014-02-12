@@ -1,4 +1,4 @@
-# $FreeBSD: www/kwebkitpart/Makefile 338801 2014-01-05 17:19:49Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	kwebkitpart
 PORTVERSION=	1.3.2
