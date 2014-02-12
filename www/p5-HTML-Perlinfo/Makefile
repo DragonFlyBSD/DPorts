@@ -1,5 +1,5 @@
 # Created by: Kurt Jaeger <fbsd-ports@opsec.eu>
-# $FreeBSD: www/p5-HTML-Perlinfo/Makefile 341546 2014-01-28 13:32:12Z miwi $
+# $FreeBSD$
 
 PORTNAME=	HTML-Perlinfo
 PORTVERSION=	1.62
