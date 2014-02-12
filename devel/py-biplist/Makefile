@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <wg@FreeBSD.org>
-# $FreeBSD: devel/py-biplist/Makefile 336730 2013-12-17 14:34:30Z wg $
+# $FreeBSD$
 
 PORTNAME=	biplist
 PORTVERSION=	0.6
