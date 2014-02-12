@@ -1,5 +1,5 @@
 #!/bin/sh
 #
-# $FreeBSD: java/proguard/files/proguard.sh.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/java/proguard/files/proguard.sh.in 340872 2014-01-24 00:14:07Z mat $
 
 exec "%%LOCALBASE%%/bin/java" -Xmx256m -jar "%%DATADIR%%/proguard.jar" "$@"
