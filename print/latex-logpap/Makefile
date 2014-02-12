@@ -1,5 +1,5 @@
 # Created by: hrs@FreeBSD.org
-# $FreeBSD: print/latex-logpap/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	latex-logpap
 PORTVERSION=	0.6.20040201
