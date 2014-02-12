@@ -1,5 +1,5 @@
 
-$FreeBSD: net/l2tpd/files/patch-file.h 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/net/l2tpd/files/patch-file.h 340725 2014-01-22 17:40:44Z mat $
 
 --- file.h.orig	Wed Apr 10 23:09:33 2002
 +++ file.h	Wed Apr 16 16:07:19 2003
