@@ -1,5 +1,5 @@
 # Created by: Sergey V. Dyatko <Sergey.Dyatko@gmail.com>
-# $FreeBSD: devel/p5-Time-Format/Makefile 341707 2014-01-29 09:19:35Z az $
+# $FreeBSD$
 
 PORTNAME=	Time-Format
 PORTVERSION=	1.12
