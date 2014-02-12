@@ -1,5 +1,5 @@
 # Created by: admin@mjbrune.org
-# $FreeBSD: editors/textroom/Makefile 337139 2013-12-21 11:19:14Z pawel $
+# $FreeBSD$
 
 PORTNAME=	textroom
 PORTVERSION=	0.8.2
