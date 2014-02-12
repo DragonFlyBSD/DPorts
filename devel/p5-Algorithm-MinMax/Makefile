@@ -1,5 +1,5 @@
 # Created by: clsung
-# $FreeBSD: devel/p5-Algorithm-MinMax/Makefile 331766 2013-10-27 12:17:59Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Algorithm-MinMax
 PORTVERSION=	0.01
