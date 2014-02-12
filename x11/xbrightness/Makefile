@@ -1,5 +1,5 @@
 # Created by: Michiel Overtoom <motoom@xs4all.nl>
-# $FreeBSD: x11/xbrightness/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xbrightness
 PORTVERSION=	0.3
