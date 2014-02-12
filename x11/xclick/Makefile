@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: x11/xclick/Makefile 339245 2014-01-09 14:48:54Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	xclick
 PORTVERSION=	0.1
