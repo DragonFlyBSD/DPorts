@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: sysutils/msktutil/Makefile 332430 2013-11-01 23:51:27Z zi $
+# $FreeBSD$
 
 PORTNAME=	msktutil
 PORTVERSION=	0.5.1
