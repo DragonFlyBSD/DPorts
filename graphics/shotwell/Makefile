@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org> et al.
-# $FreeBSD: graphics/shotwell/Makefile 341650 2014-01-28 19:51:21Z lx $
+# $FreeBSD$
 
 PORTNAME=	shotwell
 PORTVERSION=	0.15.1
