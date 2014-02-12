@@ -1,5 +1,5 @@
 # Created by: Bjorn Lindstrom <bkhl@elektrubadur.se>
-# $FreeBSD: misc/dtach/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=		dtach
 PORTVERSION=		0.8
@@ -18,6 +18,9 @@ PORTDOCS=	README
 PLIST_FILES=	bin/${PORTNAME}
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 do-install:
