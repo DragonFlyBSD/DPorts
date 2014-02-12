@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: sysutils/dim/Makefile 333273 2013-11-09 03:12:42Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	dim
 PORTVERSION=	1.1
