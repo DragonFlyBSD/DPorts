@@ -1,4 +1,4 @@
-# $FreeBSD: irc/charybdis/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	charybdis
 PORTVERSION=	3.4.2
@@ -36,6 +36,8 @@ CONFIGURE_ARGS=	--with-confdir=${ETCDIR} \
 		--with-logdir=/var/log/${PORTNAME} \
 		--with-moduledir=${DATADIR}/modules \
 		--enable-kqueue
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
