@@ -1,5 +1,5 @@
 # Created by: Anes Mukhametov <anes@anes.su>
-# $FreeBSD: devel/p5-AnyEvent-Worker/Makefile 338870 2014-01-06 12:43:03Z az $
+# $FreeBSD$
 
 PORTNAME=	AnyEvent-Worker
 PORTVERSION=	0.06
