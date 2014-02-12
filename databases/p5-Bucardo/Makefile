@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <mat@FreeBSD.org>
-# $FreeBSD: databases/p5-Bucardo/Makefile 333746 2013-11-14 10:33:13Z mat $
+# $FreeBSD$
 
 PORTNAME=	Bucardo
 PORTVERSION=	4.5.0
