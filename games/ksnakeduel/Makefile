@@ -1,4 +1,4 @@
-# $FreeBSD: games/ksnakeduel/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ksnakeduel
 PORTVERSION=	${KDE4_VERSION}
