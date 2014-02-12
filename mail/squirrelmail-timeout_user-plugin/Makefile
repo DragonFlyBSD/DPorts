@@ -1,4 +1,4 @@
-# $FreeBSD: mail/squirrelmail-timeout_user-plugin/Makefile 336240 2013-12-12 01:32:34Z adamw $
+# $FreeBSD$
 
 PORTNAME=	timeout_user
 PORTVERSION=	1.1.1
