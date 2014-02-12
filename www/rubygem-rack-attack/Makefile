@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: www/rubygem-rack-attack/Makefile 332628 2013-11-03 16:59:07Z swills $
+# $FreeBSD$
 
 PORTNAME=	rack-attack
 PORTVERSION=	2.2.1
