@@ -1,5 +1,5 @@
 # Created by: Volker Stolz <vs@FreeBSD.org>
-# $FreeBSD: textproc/gastex/Makefile 341447 2014-01-27 20:46:39Z mat $
+# $FreeBSD$
 
 PORTNAME=	gastex
 PORTVERSION=	2.7
