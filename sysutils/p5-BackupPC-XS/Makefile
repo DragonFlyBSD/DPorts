@@ -1,5 +1,5 @@
 # Created by: Alexander Moisseev <moiseev@mezonplus.ru>
-# $FreeBSD: sysutils/p5-BackupPC-XS/Makefile 334197 2013-11-18 14:08:08Z jadawin $
+# $FreeBSD$
 
 PORTNAME=	BackupPC-XS
 PORTVERSION=	0.20
