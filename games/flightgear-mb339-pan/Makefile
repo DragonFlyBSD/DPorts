@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: games/flightgear-mb339-pan/Makefile 334921 2013-11-26 07:59:03Z martymac $
+# $FreeBSD$
 
 PORTNAME=	flightgear-mb339-pan
 PORTVERSION=	2.1
