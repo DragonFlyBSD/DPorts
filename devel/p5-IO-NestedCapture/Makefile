@@ -1,5 +1,5 @@
 # Created by: tobez@FreeBSD.org
-# $FreeBSD: devel/p5-IO-NestedCapture/Makefile 332028 2013-10-30 01:38:24Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	IO-NestedCapture
 PORTVERSION=	1.03
