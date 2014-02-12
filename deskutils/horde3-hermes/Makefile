@@ -1,5 +1,5 @@
 # Created by: Beech Rintoul <horde@FreeBSD.org
-# $FreeBSD: deskutils/horde3-hermes/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD$
 
 PORTNAME=	hermes
 PORTVERSION=	1.0.1
