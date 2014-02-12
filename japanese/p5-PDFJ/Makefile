@@ -1,4 +1,4 @@
-# $FreeBSD: japanese/p5-PDFJ/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD$
 
 PORTNAME=	PDFJ
 PORTVERSION=	0.90
