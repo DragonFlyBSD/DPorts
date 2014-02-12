@@ -1,5 +1,5 @@
 # Created by: Gruen Christian <kiki@bsdro.org>
-# $FreeBSD: www/p5-Catalyst-View-HTML-Template/Makefile 341815 2014-01-30 08:51:45Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Catalyst-View-HTML-Template
 PORTVERSION=	0.03
