@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: www/mod_ruby/Makefile 327804 2013-09-21 11:06:03Z dinoex $
+# $FreeBSD$
 
 PORTNAME=	mod_ruby
 PORTVERSION=	1.3.0
