@@ -1,5 +1,5 @@
 # Created by: faulkner@cactus.org
-# $FreeBSD: misc/astrolog/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD$
 
 PORTNAME=	astrolog
 PORTVERSION=	5.41g
