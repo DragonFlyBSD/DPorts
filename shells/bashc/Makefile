@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: shells/bashc/Makefile 337646 2013-12-27 08:10:49Z bapt $
+# $FreeBSD$
 
 PORTNAME=	bashc
 PORTVERSION=	3.2.33.0

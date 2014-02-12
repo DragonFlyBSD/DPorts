@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: shells/bashc/pkg-deinstall 340719 2014-01-22 15:52:06Z mat $
+# $FreeBSD: head/shells/bashc/pkg-deinstall 340719 2014-01-22 15:52:06Z mat $
 #
 
 BASHC="$(echo ${PKG_PREFIX-/usr/local}/bin/bashc | /usr/bin/sed -e 's|//|/|g')"
