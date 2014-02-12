@@ -1,5 +1,5 @@
 # Created by: Dmitry Kazarov <d.y.kazarov@mail.ru>
-# $FreeBSD: print/qpdf/Makefile 340300 2014-01-19 14:10:49Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	qpdf
 PORTVERSION=	5.1.1
