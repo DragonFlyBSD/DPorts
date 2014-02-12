@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: textproc/xt/files/xt.sh 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/textproc/xt/files/xt.sh 340872 2014-01-24 00:14:07Z mat $
 
 IAM=`basename ${0}`
 
