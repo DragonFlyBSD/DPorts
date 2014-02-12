@@ -1,5 +1,5 @@
 # Created by: Sergey V. Dyatko <sergey.dyatko@gmail.com>
-# $FreeBSD: devel/thunar-vcs-plugin/Makefile 331462 2013-10-24 05:05:37Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	thunar-vcs-plugin
 PORTVERSION=	0.1.4
