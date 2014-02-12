@@ -1,5 +1,5 @@
 # Created by: Mark Hannon <markhannon@optusnet.com.au>
-# $FreeBSD: security/gnome-ssh-askpass/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	gnome-ssh-askpass
 PORTVERSION=	5.8p2
