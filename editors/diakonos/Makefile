@@ -1,5 +1,5 @@
 # Created by: Chris Petrik <chris@officialunix.com>
-# $FreeBSD: editors/diakonos/Makefile 338475 2014-01-02 19:55:31Z swills $
+# $FreeBSD$
 
 PORTNAME=	diakonos
 PORTVERSION=	0.9.1
