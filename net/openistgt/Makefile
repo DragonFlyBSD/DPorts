@@ -1,5 +1,5 @@
 # Created by: Daisuke Aoyama <aoyama@peach.ne.jp>
-# $FreeBSD: net/openistgt/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	openistgt
 PORTVERSION=	20120516
