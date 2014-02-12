@@ -1,5 +1,5 @@
 # Created by: Bruno Van Den Bossche <brvdboss@spymac.com>
-# $FreeBSD: java/eclipse-pmd/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	pmd
 PORTVERSION=	2.0.5.v3
