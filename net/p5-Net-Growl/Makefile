@@ -1,5 +1,5 @@
 # Created by: Masahiro Teramoto <markun@onohara.to>
-# $FreeBSD: net/p5-Net-Growl/Makefile 338810 2014-01-05 17:53:15Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-Growl
 PORTVERSION=	0.99
