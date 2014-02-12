@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-Class-DBI-Plugin-Pager/Makefile 341764 2014-01-29 17:31:52Z az $
+# $FreeBSD$
 
 PORTNAME=	Class-DBI-Plugin-Pager
 PORTVERSION=	0.566
