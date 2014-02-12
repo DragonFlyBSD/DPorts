@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Test-Name-FromLine/Makefile 339785 2014-01-15 15:22:05Z kuriyama $
+# $FreeBSD$
 
 PORTNAME=	Test-Name-FromLine
 PORTVERSION=	0.11
