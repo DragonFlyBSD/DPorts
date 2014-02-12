@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-conditional/Makefile 341432 2014-01-27 17:04:38Z skreuzer $
+# $FreeBSD$
 
 PORTNAME=	conditional
 PORTVERSION=	1.0
