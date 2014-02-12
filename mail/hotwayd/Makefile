@@ -1,5 +1,5 @@
 # Created by: John Nielsen <john@jnielsen.net>
-# $FreeBSD: mail/hotwayd/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	hotwayd
 PORTVERSION=	0.8.4
