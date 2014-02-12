@@ -1,5 +1,5 @@
 # Created by: Timur Bakeyev <bat@cpan.org>
-# $FreeBSD: converters/p5-URI-UTF8-Punycode/Makefile 331786 2013-10-27 17:19:37Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	URI-UTF8-Punycode
 PORTVERSION=	1.00
