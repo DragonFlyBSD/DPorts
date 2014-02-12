@@ -1,5 +1,5 @@
 # Created by: Douglas Carmichael <dcarmich@dcarmichael.net>
-# $FreeBSD: devel/kdevelop-pg-qt/Makefile 340104 2014-01-17 20:34:33Z makc $
+# $FreeBSD$
 
 PORTNAME=	kdevelop-pg-qt
 PORTVERSION=	1.0.0
