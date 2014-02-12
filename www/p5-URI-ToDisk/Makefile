@@ -1,5 +1,5 @@
 # Created by: Cory R King <coryking@mozimedia.com>
-# $FreeBSD: www/p5-URI-ToDisk/Makefile 338763 2014-01-05 13:05:56Z az $
+# $FreeBSD$
 
 PORTNAME=	URI-ToDisk
 PORTVERSION=	1.12
