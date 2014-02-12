@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: x11/bmpanel2/Makefile 337803 2013-12-27 20:47:30Z antoine $
+# $FreeBSD$
 
 PORTNAME=	bmpanel2
 DISTVERSION=	2.1pre1
