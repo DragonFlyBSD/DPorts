@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net/py-twitter/Makefile 341222 2014-01-26 15:25:32Z mva $
+# $FreeBSD$
 
 PORTNAME=	twitter
 PORTVERSION=	1.1
