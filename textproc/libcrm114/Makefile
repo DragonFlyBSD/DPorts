@@ -1,5 +1,5 @@
 # Created by: Martin Schuette <info@mschuette.name>
-# $FreeBSD: textproc/libcrm114/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libcrm114
 PORTVERSION=	20100726
