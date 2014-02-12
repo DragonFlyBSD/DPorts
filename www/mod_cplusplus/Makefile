@@ -1,5 +1,5 @@
 # Created by: Michael Durian <durian@shadetreesoftware.com>
-# $FreeBSD: www/mod_cplusplus/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mod_cplusplus
 PORTVERSION=	1.5.4
