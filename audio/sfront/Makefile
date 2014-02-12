@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: audio/sfront/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	sfront
 PORTVERSION=	0.99
@@ -9,7 +9,7 @@ MASTER_SITES=	CRITICAL
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Translator that converts MP4-SA files into efficient C programs
 
-LICENSE=	BSD
+LICENSE=	BSD3CLAUSE
 
 USES=		bison
 
