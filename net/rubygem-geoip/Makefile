@@ -1,4 +1,4 @@
-# $FreeBSD: net/rubygem-geoip/Makefile 332047 2013-10-30 02:53:47Z swills $
+# $FreeBSD$
 
 PORTNAME=	geoip
 PORTVERSION=	1.2.1
