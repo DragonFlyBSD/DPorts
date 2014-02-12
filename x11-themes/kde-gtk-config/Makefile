@@ -1,4 +1,4 @@
-# $FreeBSD: x11-themes/kde-gtk-config/Makefile 333481 2013-11-11 09:23:25Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	kde-gtk-config
 PORTVERSION=	2.2.1
