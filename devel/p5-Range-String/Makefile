@@ -1,5 +1,5 @@
 # Created by: Andrey Ignatov <rdna@rdna.ru>
-# $FreeBSD: devel/p5-Range-String/Makefile 338987 2014-01-07 09:28:30Z az $
+# $FreeBSD$
 
 PORTNAME=	Range-String
 PORTVERSION=	v0.01
