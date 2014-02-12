@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: www/xpi-prism/Makefile 341213 2014-01-26 15:12:42Z miwi $
+# $FreeBSD$
 
 PORTNAME=	prism
 DISTVERSION=	1.0b2
