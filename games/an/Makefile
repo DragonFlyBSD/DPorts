@@ -1,5 +1,5 @@
 # Created by: proff
-# $FreeBSD: games/an/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	an
 PORTVERSION=	0.95
