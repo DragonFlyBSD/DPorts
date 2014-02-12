@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: games/patapizza-tetris/files/patapizza-tetris.in 338331 2013-12-31 18:07:06Z nemysis $
+# $FreeBSD: head/games/patapizza-tetris/files/patapizza-tetris.in 338331 2013-12-31 18:07:06Z nemysis $
 #
 
 cd "%%DATADIR%%"

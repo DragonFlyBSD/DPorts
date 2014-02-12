@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/patapizza-tetris/Makefile 338331 2013-12-31 18:07:06Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	patapizza-tetris
 PORTVERSION=	1.0
