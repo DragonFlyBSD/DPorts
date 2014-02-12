@@ -1,4 +1,4 @@
-# $FreeBSD: audio/kid3-kde4/Makefile 335507 2013-12-02 16:10:20Z makc $
+# $FreeBSD$
 
 PORTNAME=	kid3
 PORTVERSION=	3.0.2
