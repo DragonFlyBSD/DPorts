@@ -1,4 +1,4 @@
-# $FreeBSD: x11-drivers/xorg-drivers/Makefile 336647 2013-12-16 17:24:54Z zeising $
+# $FreeBSD$
 
 PORTNAME=	xorg-drivers
 PORTVERSION=	7.7
