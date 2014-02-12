@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: sysutils/ts/Makefile 333740 2013-11-14 08:39:59Z demon $
+# $FreeBSD$
 
 PORTNAME=	ts
 PORTVERSION=	0.7.4
