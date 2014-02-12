@@ -1,5 +1,5 @@
 # Created by: Kurt Jaeger <fbsd-ports@opsec.eu>
-# $FreeBSD: security/p5-Auth-YubikeyDecrypter/Makefile 341825 2014-01-30 09:42:48Z az $
+# $FreeBSD$
 
 PORTNAME=	Auth-YubikeyDecrypter
 PORTVERSION=	0.07
