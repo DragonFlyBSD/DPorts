@@ -1,4 +1,4 @@
-# $FreeBSD: x11-toolkits/qwt5-designerplugin/Makefile 334497 2013-11-21 15:41:06Z makc $
+# $FreeBSD$
 
 PORTNAME=	qwt
 PORTVERSION=	5.2.3
