@@ -1,5 +1,5 @@
 # Created by: Danijel Tasov <danielt@pilgerer.org>
-# $FreeBSD: shells/heirloom-sh/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	heirloom-sh
 PORTVERSION=	050706
