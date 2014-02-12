@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@rtfm.jp>
-# $FreeBSD: www/rubygem-yapra/Makefile 332058 2013-10-30 03:05:18Z swills $
+# $FreeBSD$
 
 PORTNAME=	yapra
 PORTVERSION=	0.2.2
