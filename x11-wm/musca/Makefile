@@ -1,5 +1,5 @@
 # Created by: Dennis Herrmann <dhn@FreeBSD.org>
-# $FreeBSD: x11-wm/musca/Makefile 327786 2013-09-21 00:01:16Z bapt $
+# $FreeBSD$
 
 PORTNAME=	musca
 PORTVERSION=	0.9.24
