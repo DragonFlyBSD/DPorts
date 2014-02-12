@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net/yconalyzer/Makefile 341926 2014-01-31 07:18:54Z miwi $
+# $FreeBSD$
 
 PORTNAME=	yconalyzer
 PORTVERSION=	1.0.4
