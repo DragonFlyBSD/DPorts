@@ -1,5 +1,5 @@
 # Created by: Michael L. Hostbaek <mich@freebsdcluster.org>
-# $FreeBSD: misc/clex/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	clex
 PORTVERSION=	4.6.6
@@ -27,6 +27,8 @@ NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e '18s,^,#include <stdio.h>,' \
 		${WRKSRC}/src/preview.c
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
