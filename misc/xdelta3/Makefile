@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: misc/xdelta3/Makefile 330456 2013-10-15 20:25:25Z danilo $
+# $FreeBSD$
 
 PORTNAME=	xdelta
 PORTVERSION=	3.0.7
