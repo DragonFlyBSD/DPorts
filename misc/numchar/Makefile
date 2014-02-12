@@ -1,5 +1,5 @@
 # Created by: G. Adam Stanislav <adam@whizkidtech.net>
-# $FreeBSD: misc/numchar/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	numchar
 PORTVERSION=	1.0
