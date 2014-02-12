@@ -1,5 +1,5 @@
 # Created by: Shaun Amott <shaun@inerd.com>
-# $FreeBSD: graphics/raster3d/Makefile 337187 2013-12-22 13:15:23Z tijl $
+# $FreeBSD$
 
 PORTNAME=	raster3d
 PORTVERSION=	3.0.2
