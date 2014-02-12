@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Class-Accessor-Children/Makefile 341711 2014-01-29 10:57:06Z az $
+# $FreeBSD$
 
 PORTNAME=	Class-Accessor-Children
 PORTVERSION=	0.02
