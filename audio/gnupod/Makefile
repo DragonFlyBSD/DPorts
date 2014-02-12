@@ -1,5 +1,5 @@
 # Created by: David Le Brun <david@dyn-ns.net>
-# $FreeBSD: audio/gnupod/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gnupod
 PORTVERSION=	0.99.8
