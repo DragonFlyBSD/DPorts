@@ -1,5 +1,5 @@
 # Created by: Martin Otto
-# $FreeBSD: sysutils/bsd-splash-changer/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	bsd-splash-changer
 PORTVERSION=	060211
