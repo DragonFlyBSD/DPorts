@@ -1,5 +1,5 @@
 # Created by: Lars Engels <lme@FreeBSD.org>
-# $FreeBSD: audio/atunes/Makefile 331267 2013-10-22 13:50:43Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	atunes
 PORTVERSION=	3.1.1
