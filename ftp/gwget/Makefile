@@ -1,5 +1,5 @@
 # Created by: Radek Kozlowski <radek@raadradd.com>
-# $FreeBSD: ftp/gwget/Makefile 341102 2014-01-25 20:58:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gwget
 PORTVERSION=	1.0.4
