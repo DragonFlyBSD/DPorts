@@ -1,5 +1,5 @@
 # Created by: Yoshiro MIHIRA <sanpei@yy.cs.keio.ac.jp>
-# $FreeBSD: x11-clocks/swisswatch/Makefile 339424 2014-01-11 12:51:31Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	swisswatch
 PORTVERSION=	0.06
