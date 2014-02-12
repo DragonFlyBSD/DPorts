@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: ftp/paraget/Makefile 327729 2013-09-20 17:23:18Z bapt $
+# $FreeBSD$
 
 PORTNAME=	paraget
 PORTVERSION=	0.3.0
@@ -10,6 +10,8 @@ MASTER_SITES=	SF
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Parallel ftp-fetching program
 
+LICENSE=	GPLv2
+
 BUILD_DEPENDS=	p5-Class-MethodMaker>=0:${PORTSDIR}/devel/p5-Class-MethodMaker
 RUN_DEPENDS:=	${BUILD_DEPENDS} \
 		p5-URI>=0:${PORTSDIR}/net/p5-URI \
@@ -18,7 +20,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS} \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=	paraget.1
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
