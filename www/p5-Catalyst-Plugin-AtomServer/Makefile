@@ -1,5 +1,5 @@
 # Created by: Oleg Mamontov <oleg@mamontov.net>
-# $FreeBSD: www/p5-Catalyst-Plugin-AtomServer/Makefile 338778 2014-01-05 14:02:22Z az $
+# $FreeBSD$
 
 PORTNAME=	Catalyst-Plugin-AtomServer
 PORTVERSION=	0.04
