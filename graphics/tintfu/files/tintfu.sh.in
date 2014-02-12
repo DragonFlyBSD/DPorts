@@ -1,5 +1,5 @@
 #!/bin/sh
 #
-# $FreeBSD: graphics/tintfu/files/tintfu.sh.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/graphics/tintfu/files/tintfu.sh.in 340872 2014-01-24 00:14:07Z mat $
 
 JAVA_VERSION="%%JAVA_VERSION%%" "%%LOCALBASE%%/bin/java" -jar "%%JAVAJARDIR%%/%%DISTNAME%%.jar"
