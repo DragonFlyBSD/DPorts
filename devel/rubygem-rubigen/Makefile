@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/rubygem-rubigen/Makefile 335708 2013-12-05 20:28:30Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	rubigen
 PORTVERSION=	1.5.8
