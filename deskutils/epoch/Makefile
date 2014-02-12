@@ -1,5 +1,5 @@
 # Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: deskutils/epoch/Makefile 334873 2013-11-25 18:01:01Z makc $
+# $FreeBSD$
 
 PORTNAME=	epoch
 PORTVERSION=	1.6
