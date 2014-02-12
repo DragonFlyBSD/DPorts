@@ -1,4 +1,4 @@
-# $FreeBSD: x11/plasma-scriptengine-python/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	plasma-scriptengine-python
 PORTVERSION=	${KDE4_VERSION}
