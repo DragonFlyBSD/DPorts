@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <nacai@iname.com>
-# $FreeBSD: graphics/scwm-icons/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	scwm-icons
 PORTVERSION=	0.99.2
