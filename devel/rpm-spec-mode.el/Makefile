@@ -1,5 +1,5 @@
 # Created by: Max N. Boyarov <m.boyarov@gmail.com>
-# $FreeBSD: devel/rpm-spec-mode.el/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	rpm-spec-mode.el
 PORTVERSION=	0.12
