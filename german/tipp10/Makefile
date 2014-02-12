@@ -1,5 +1,5 @@
 # Created by: Heiner <h.eichmann@gmx.de>
-# $FreeBSD: german/tipp10/Makefile 334499 2013-11-21 16:09:47Z makc $
+# $FreeBSD$
 
 PORTNAME=	tipp10
 PORTVERSION=	2.1.0
