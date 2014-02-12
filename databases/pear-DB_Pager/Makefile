@@ -1,5 +1,5 @@
 # Created by: Toshiya Saitoh (<toshiya@saitoh.nu>)
-# $FreeBSD: databases/pear-DB_Pager/Makefile 334871 2013-11-25 17:59:58Z antoine $
+# $FreeBSD$
 
 PORTNAME=	DB_Pager
 PORTVERSION=	0.7
