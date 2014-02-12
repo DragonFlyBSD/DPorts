@@ -1,5 +1,5 @@
 # Created by: Li-Lun Wang <llwang@infor.org>
-# $FreeBSD: math/py-symeig/Makefile 337854 2013-12-28 11:21:46Z wg $
+# $FreeBSD$
 
 PORTNAME=	symeig
 PORTVERSION=	1.4
