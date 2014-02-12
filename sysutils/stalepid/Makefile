@@ -1,5 +1,5 @@
 # Created by: roam@FreeBSD.org
-# $FreeBSD: sysutils/stalepid/Makefile 328548 2013-09-28 03:48:23Z eadler $
+# $FreeBSD$
 
 PORTNAME=	stalepid
 PORTVERSION=	1.0.b1
