@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Amon2-Lite/Makefile 341703 2014-01-29 09:17:28Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Amon2-Lite
 PORTVERSION=	0.09
