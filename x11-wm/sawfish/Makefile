@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-# $FreeBSD: x11-wm/sawfish/Makefile 337990 2013-12-29 14:19:49Z antoine $
+# $FreeBSD$
 
 PORTNAME=	sawfish
 PORTVERSION=	1.9.1
