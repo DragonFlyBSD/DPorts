@@ -1,5 +1,5 @@
 # Created by: Andrey A. Chernov <ache@FreeBSD.org>
-# $FreeBSD: sysutils/less/Makefile 339651 2014-01-14 00:28:32Z garga $
+# $FreeBSD$
 
 PORTNAME=	less
 PORTVERSION=	458
