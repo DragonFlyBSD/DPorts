@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/meshviewer/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	meshviewer
 PORTVERSION=	0.3.3
@@ -42,6 +42,9 @@ DOC_FILES3=	*.html *.ico
 PLIST_FILES=	bin/${PORTNAME}
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 post-patch:
