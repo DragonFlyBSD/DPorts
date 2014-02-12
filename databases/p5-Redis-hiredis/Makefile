@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: databases/p5-Redis-hiredis/Makefile 329840 2013-10-08 22:36:41Z gblach $
+# $FreeBSD$
 
 PORTNAME=	Redis-hiredis
 PORTVERSION=	0.11.0
