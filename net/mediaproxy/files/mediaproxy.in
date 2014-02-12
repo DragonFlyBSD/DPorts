@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: net/mediaproxy/files/mediaproxy.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/net/mediaproxy/files/mediaproxy.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: mediaproxy
 # REQUIRE: LOGIN

@@ -1,5 +1,5 @@
 # Created by: Steve Ames <steve@energistic.com>
-# $FreeBSD: net/mediaproxy/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	mediaproxy
 PORTVERSION=	1.8.2
