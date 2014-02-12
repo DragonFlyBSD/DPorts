@@ -1,5 +1,5 @@
 # Created by: Lubomir Marinov <lubomir_m@abv.bg>
-# $FreeBSD: databases/p5-DBD-PgPP/Makefile 332592 2013-11-03 06:53:54Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	DBD-PgPP
 PORTVERSION=	0.08
