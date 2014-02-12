@@ -1,4 +1,4 @@
-# $FreeBSD: net/p5-RPC-EPC-Service/Makefile 338849 2014-01-06 09:14:19Z az $
+# $FreeBSD$
 
 PORTNAME=	RPC-EPC-Service
 PORTVERSION=	0.0.7
