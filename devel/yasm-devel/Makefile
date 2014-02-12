@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/yasm-devel/Makefile 335186 2013-11-29 15:14:08Z koobs $
+# $FreeBSD$
 
 PORTNAME=		yasm
 PORTVERSION=		1.2.0.29
