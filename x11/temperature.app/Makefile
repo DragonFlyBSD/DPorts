@@ -1,5 +1,5 @@
 # Created by: Per Otterstr=F6m <pelle@fukt.bth.se>
-# $FreeBSD: x11/temperature.app/Makefile 337080 2013-12-20 19:18:18Z pawel $
+# $FreeBSD$
 
 PORTNAME=	temperature.app
 PORTVERSION=	1.4
