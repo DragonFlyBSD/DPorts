@@ -1,5 +1,5 @@
 # Created by: Olivier Duchateau <olivierd@FreeBSD.org>
-# $FreeBSD: sysutils/py-iowait/Makefile 340894 2014-01-24 13:34:31Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	iowait
 PORTVERSION=	0.2
