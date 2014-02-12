@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-runt/Makefile 332041 2013-10-30 02:42:34Z swills $
+# $FreeBSD$
 
 PORTNAME=	runt
 PORTVERSION=	0.9.0
