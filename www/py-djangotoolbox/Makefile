@@ -1,5 +1,5 @@
 # Created by: John Hixson <john@ixsystems.com>
-# $FreeBSD: www/py-djangotoolbox/Makefile 336947 2013-12-19 19:04:25Z wg $
+# $FreeBSD$
 
 PORTNAME=	djangotoolbox
 PORTVERSION=	1.6.1
