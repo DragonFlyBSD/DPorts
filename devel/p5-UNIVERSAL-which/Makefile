@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-UNIVERSAL-which/Makefile 338853 2014-01-06 09:57:19Z az $
+# $FreeBSD$
 
 PORTNAME=	UNIVERSAL-which
 PORTVERSION=	0.06
