@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: textproc/p5-Template-Plugin-Lingua-EN-Inflect/Makefile 340711 2014-01-22 14:35:55Z mat $
+# $FreeBSD$
 
 PORTNAME=	Template-Plugin-Lingua-EN-Inflect
 PORTVERSION=	0.02
