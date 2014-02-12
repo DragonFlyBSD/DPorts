@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-# $FreeBSD: net-mgmt/p5-Nagios-Object/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Nagios-Object
 PORTVERSION=	0.21.18
@@ -22,17 +22,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN1=		parse.pl.1 \
-		config_status_demo.pl.1 \
-		test_configuration.pl.1 \
-		statusdat_demo.pl.1 \
-		decode_flags.pl.1
-
-MAN3=		Nagios::Object::Config.3 \
-		Nagios::StatusLog.3 \
-		Nagios::Config::File.3 \
-		Nagios::Object.3 \
-		Nagios::Config.3 \
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
