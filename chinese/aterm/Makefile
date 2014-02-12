@@ -1,5 +1,5 @@
 # Created by: gugod@gugod.org
-# $FreeBSD: chinese/aterm/Makefile 339152 2014-01-08 15:47:09Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	aterm
 PORTVERSION=	1.0.1
