@@ -1,5 +1,5 @@
 # Created by: Alexey V. Antipovsky <kemm@in-line.ru>
-# $FreeBSD: emulators/fuse/Makefile 335163 2013-11-29 11:38:05Z rene $
+# $FreeBSD$
 
 PORTNAME=	fuse
 PORTVERSION=	1.1.1
