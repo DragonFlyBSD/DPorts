@@ -1,5 +1,5 @@
 # Created by: Andrew Turner <andrew+ports@fubar.geek.nz>
-# $FreeBSD: devel/lua-posix/Makefile 340727 2014-01-22 18:07:59Z bapt $
+# $FreeBSD$
 
 PORTNAME=	posix
 PORTVERSION=	31
