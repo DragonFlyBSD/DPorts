@@ -1,5 +1,5 @@
 # Created by: Alex Trull <freebsd.alex@trull.org>
-# $FreeBSD: games/fotaq/Makefile 329386 2013-10-04 21:04:44Z lme $
+# $FreeBSD$
 
 PORTNAME=	fotaq
 PORTVERSION=	1.1
