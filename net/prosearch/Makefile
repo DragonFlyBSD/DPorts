@@ -1,4 +1,4 @@
-# $FreeBSD: net/prosearch/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	prosearch
 PORTVERSION=	0.19.2
