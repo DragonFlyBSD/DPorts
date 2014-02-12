@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@FreeBSD.org>
-# $FreeBSD: x11-toolkits/gtkunique/Makefile 337815 2013-12-27 22:08:39Z antoine $
+# $FreeBSD$
 
 PORTNAME=	gtkunique
 PORTVERSION=	0.9.1
