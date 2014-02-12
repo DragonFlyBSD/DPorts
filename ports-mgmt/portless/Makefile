@@ -1,5 +1,5 @@
 # Created by: Martin Kammerhofer
-# $FreeBSD: ports-mgmt/portless/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	portless
 PORTVERSION=	0.2.7
