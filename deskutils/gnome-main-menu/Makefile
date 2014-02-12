@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: deskutils/gnome-main-menu/Makefile 336190 2013-12-11 18:28:10Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gnome-main-menu
 PORTVERSION=	0.9.12
