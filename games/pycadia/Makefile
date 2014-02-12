@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/pycadia/Makefile 335900 2013-12-08 14:58:36Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	pycadia
 PORTVERSION=	0.5.1

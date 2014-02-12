@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: games/pycadia/files/pycadia.sh.in 335900 2013-12-08 14:58:36Z nemysis $
+# $FreeBSD: head/games/pycadia/files/pycadia.sh.in 335900 2013-12-08 14:58:36Z nemysis $
 #
 
 cd "%%DATADIR%%"
