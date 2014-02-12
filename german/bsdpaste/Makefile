@@ -1,5 +1,5 @@
 # Created by: Aron Schlesinger <as@bsdgroup.de>
-# $FreeBSD: german/bsdpaste/Makefile 339909 2014-01-16 13:05:20Z zi $
+# $FreeBSD$
 
 PORTNAME=	bsdpaste
 PORTVERSION=	1.0.1
