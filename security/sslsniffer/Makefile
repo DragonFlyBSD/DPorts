@@ -1,5 +1,5 @@
 # Created by: Jim Geovedi <jim@corebsd.or.id>
-# $FreeBSD: security/sslsniffer/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	sslsniffer
 PORTVERSION=	1.21
@@ -19,6 +19,9 @@ PORTDOCS=	README
 PLIST_FILES=	bin/sslsniffer
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 do-install:
