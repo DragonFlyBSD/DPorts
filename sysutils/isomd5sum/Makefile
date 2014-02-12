@@ -1,5 +1,5 @@
 # Created by: Mykola Marzhan <delgod@portaone.com>
-# $FreeBSD: sysutils/isomd5sum/Makefile 334566 2013-11-22 10:00:08Z jadawin $
+# $FreeBSD$
 
 PORTNAME=	isomd5sum
 PORTVERSION=	1.0.11
