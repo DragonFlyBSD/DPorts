@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net/gspoof/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gspoof
 PORTVERSION=	3.2
