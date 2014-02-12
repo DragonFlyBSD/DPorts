@@ -1,5 +1,5 @@
 # Created by: Martin Jackson (mhjacks@swbell.net)
-# $FreeBSD: devel/p5-Shell-EnvImporter/Makefile 338867 2014-01-06 12:18:47Z az $
+# $FreeBSD$
 
 PORTNAME=	Shell-EnvImporter
 PORTVERSION=	1.07
