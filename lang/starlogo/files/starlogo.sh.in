@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: lang/starlogo/files/starlogo.sh.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/lang/starlogo/files/starlogo.sh.in 340872 2014-01-24 00:14:07Z mat $
 
 cd %%DATADIR%%/sample-projects && \
 JAVA_VERSION="%%JAVA_VERSION%%" "%%LOCALBASE%%/bin/java" -cp "%%DATADIR%%/starlogo.jar" starlogo.Toplevel compiler english "init 100" "$@"
