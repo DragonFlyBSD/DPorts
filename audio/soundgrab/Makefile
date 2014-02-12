@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: audio/soundgrab/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD$
 
 PORTNAME=	soundgrab
 PORTVERSION=	1.0.1
