@@ -1,5 +1,5 @@
 # Created by: buganini@gmail.com
-# $FreeBSD: graphics/ocrfeeder/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD$
 
 PORTNAME=	ocrfeeder
 PORTVERSION=	0.7.7
@@ -31,6 +31,9 @@ USES=		gettext gmake pkgconfig
 USE_GHOSTSCRIPT=yes
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	NLS 
+
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
