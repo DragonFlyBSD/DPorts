@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: chinese/p5-Lingua-Han-PinYin/Makefile 335986 2013-12-09 14:09:13Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Lingua-Han-PinYin
 PORTVERSION=	0.20
