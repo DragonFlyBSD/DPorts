@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: www/xpi-server_switcher/Makefile 341216 2014-01-26 15:13:24Z miwi $
+# $FreeBSD$
 
 PORTNAME=	server_switcher
 DISTVERSION=	0.4
