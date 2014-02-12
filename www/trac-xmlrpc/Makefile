@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: www/trac-xmlrpc/Makefile 337595 2013-12-26 18:41:32Z wg $
+# $FreeBSD$
 
 PORTNAME=	xmlrpc
 PORTVERSION=	1.1.2.r${SVN_REV}
