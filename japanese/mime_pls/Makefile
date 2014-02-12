@@ -1,5 +1,5 @@
 # Created by: n-shigemura@ensure.jp
-# $FreeBSD: japanese/mime_pls/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mime_pls
 PORTVERSION=	2.02
