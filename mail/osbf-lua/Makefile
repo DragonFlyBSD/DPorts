@@ -1,5 +1,5 @@
 # Created by: RicardoSSP <ricardo.katz@gmail.com>
-# $FreeBSD: mail/osbf-lua/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	osbf-lua
 PORTVERSION=	2.0.4
