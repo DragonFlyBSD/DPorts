@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: x11/qxkb/Makefile 338760 2014-01-05 12:50:47Z antoine $
+# $FreeBSD$
 
 PORTNAME=	qxkb
 PORTVERSION=	0.4.6
