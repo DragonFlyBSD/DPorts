@@ -1,5 +1,5 @@
 # Created by: Aldis Berjoza <aldis@bsdroot.lv>
-# $FreeBSD: security/py-htpasswd/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	htpasswd
 PORTVERSION=	2008.03.05
