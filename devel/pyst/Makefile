@@ -1,8 +1,8 @@
 # Created by: Mikhail T. <m.tsatsenko@gmail.com>
-# $FreeBSD: devel/pyst/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	pyst
-PORTVERSION=	0.4.38
+PORTVERSION=	0.6.50
 CATEGORIES=	devel python
 MASTER_SITES=	SF/${PORTNAME}/pyst/${PORTVERSION}
 
@@ -17,14 +17,15 @@ USE_PYDISTUTILS=	yes
 
 PORTDOCS=	README README.html ChangeLog
 
-NO_STAGE=	yes
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
 post-install:
-	@${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for file in ${PORTDOCS}
-	@${INSTALL_DATA} ${WRKSRC}/${file} ${DOCSDIR}
+	@${INSTALL_DATA} ${WRKSRC}/${file} ${STAGEDIR}${DOCSDIR}
 .endfor
 .endif
 
