@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: misc/grc/Makefile 332014 2013-10-29 21:45:12Z pawel $
+# $FreeBSD$
 
 PORTNAME=	grc
 PORTVERSION=	1.5
