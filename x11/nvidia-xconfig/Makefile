@@ -1,5 +1,5 @@
 # Created by: Alexander Nedotsukov <bland@FreeBSD.org>
-# $FreeBSD: x11/nvidia-xconfig/Makefile 342323 2014-02-02 16:02:58Z miwi $
+# $FreeBSD$
 
 PORTNAME=	nvidia-xconfig
 PORTVERSION=	310.14
