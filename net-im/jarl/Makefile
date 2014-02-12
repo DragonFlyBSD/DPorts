@@ -1,5 +1,5 @@
 # Created by: dd
-# $FreeBSD: net-im/jarl/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD$
 
 PORTNAME=	jarl
 PORTVERSION=	0.5001
