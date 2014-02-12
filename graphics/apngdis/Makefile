@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: graphics/apngdis/Makefile 336755 2013-12-17 19:06:13Z danilo $
+# $FreeBSD$
 
 PORTNAME=	apngdis
 PORTVERSION=	2.6
@@ -18,6 +18,7 @@ NO_WRKSUBDIR=	yes
 
 USE_ZIP=	yes
 USES=		dos2unix gmake
+LDFLAGS+=	-lz
 
 PORTDOCS=	readme.txt
 PLIST_FILES=	bin/${PORTNAME}
