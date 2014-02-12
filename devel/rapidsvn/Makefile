@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rapidsvn/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	rapidsvn
 PORTVERSION=	0.12.1
