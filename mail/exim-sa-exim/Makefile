@@ -1,5 +1,5 @@
 # Created by: Oliver Eikemeier <eik@FreeBSD.org>
-# $FreeBSD: mail/exim-sa-exim/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PKGNAMESUFFIX=	-sa-exim
 MASTERDIR=	${.CURDIR}/../exim
