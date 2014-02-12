@@ -1,5 +1,5 @@
 # Created by: Zach Thompson <hideo@lastamericanempire.com>
-# $FreeBSD: misc/gkrellmlaunch2/Makefile 341060 2014-01-25 17:00:15Z miwi $
+# $FreeBSD$
 
 PORTNAME=	gkrellmlaunch
 PORTVERSION=	0.5
