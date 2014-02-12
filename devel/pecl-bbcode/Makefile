@@ -1,5 +1,5 @@
 # Created by: Ditesh Shashikant Gathani <ditesh@gathani.org>
-# $FreeBSD: devel/pecl-bbcode/Makefile 340830 2014-01-23 15:12:50Z miwi $
+# $FreeBSD$
 
 PORTNAME=	bbcode
 PORTVERSION=	1.0.2
