@@ -1,5 +1,5 @@
 # Created by: Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
-# $FreeBSD: print/gtklp/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gtklp
 PORTVERSION=	1.2.9
@@ -26,6 +26,9 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 MAN1=		gtklp.1 gtklpq.1
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	NLS 
+
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
