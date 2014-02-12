@@ -1,5 +1,5 @@
 # Created by: janos.mohacsi@bsd.hu
-# $FreeBSD: hungarian/hunspell/Makefile 332687 2013-11-04 10:49:03Z bapt $
+# $FreeBSD$
 
 PORTNAME=	hunspell
 PORTVERSION=	1.6.1
