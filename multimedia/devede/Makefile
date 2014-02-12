@@ -1,5 +1,5 @@
 # Created by: Lars Engels <lars.engels@0x20.net>
-# $FreeBSD: multimedia/devede/Makefile 330397 2013-10-15 12:50:46Z bapt $
+# $FreeBSD$
 
 PORTNAME=	devede
 DISTVERSION=	3.23.0
