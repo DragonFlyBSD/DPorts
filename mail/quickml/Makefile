@@ -1,5 +1,5 @@
 # Created by: Yuichiro AIZAWA <yaizawa@mdbl.sfc.keio.ac.jp>
-# $FreeBSD: mail/quickml/Makefile 338481 2014-01-02 20:05:44Z swills $
+# $FreeBSD$
 
 PORTNAME=	quickml
 PORTVERSION=	0.7
