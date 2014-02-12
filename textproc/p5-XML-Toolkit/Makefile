@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: textproc/p5-XML-Toolkit/Makefile 328861 2013-09-30 20:17:08Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	XML-Toolkit
 PORTVERSION=	0.15
