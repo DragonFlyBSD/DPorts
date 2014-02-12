@@ -1,5 +1,5 @@
 # Created by: Lars Eggert
-# $FreeBSD: net-im/p5-Jabber-Connection/Makefile 341765 2014-01-29 17:46:33Z az $
+# $FreeBSD$
 
 PORTNAME=	Jabber-Connection
 PORTVERSION=	0.04
