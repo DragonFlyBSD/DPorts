@@ -1,7 +1,7 @@
 /**
  * DOMXUpdater: a command-line XUpdate processor.
  * 
- * $FreeBSD: textproc/jaxup/files/DOMXUpdater.java 340872 2014-01-24 00:14:07Z mat $
+ * $FreeBSD: head/textproc/jaxup/files/DOMXUpdater.java 340872 2014-01-24 00:14:07Z mat $
  */
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
