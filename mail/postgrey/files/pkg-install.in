@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $FreeBSD: mail/postgrey/files/pkg-install.in 319058 2013-05-25 14:55:19Z madpilot $
+# $FreeBSD: head/mail/postgrey/files/pkg-install.in 319058 2013-05-25 14:55:19Z madpilot $
 
 PATH=/bin:/usr/bin:/usr/sbin
 

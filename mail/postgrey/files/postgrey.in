@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: mail/postgrey/files/postgrey.in 322395 2013-07-06 14:03:24Z madpilot $
+# $FreeBSD: head/mail/postgrey/files/postgrey.in 322395 2013-07-06 14:03:24Z madpilot $
 #
 # PROVIDE: postgrey
 # REQUIRE: LOGIN

@@ -1,5 +1,5 @@
 # Created by: Will Andrews <will@FreeBSD.org>
-# $FreeBSD: mail/postgrey/Makefile 330931 2013-10-19 20:03:52Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	postgrey
 PORTVERSION=	1.34
@@ -40,6 +40,9 @@ USES=		shebangfix perl5
 SHEBANG_FILES=	${WRKSRC}/postgrey
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 post-patch:
