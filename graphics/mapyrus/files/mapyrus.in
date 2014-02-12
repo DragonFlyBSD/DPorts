@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: graphics/mapyrus/files/mapyrus.in 320836 2013-06-13 20:18:12Z nivit $
+# $FreeBSD: head/graphics/mapyrus/files/mapyrus.in 320836 2013-06-13 20:18:12Z nivit $
 if [ -z "${DISPLAY}" ]; then
     JAVA_AWT_HEADLESS="-Djava.awt.headless=true"
 else
