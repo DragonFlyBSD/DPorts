@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/nelly/Makefile 335903 2013-12-08 15:14:04Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	nelly
 PORTVERSION=	1.0
