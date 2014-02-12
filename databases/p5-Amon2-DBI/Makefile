@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-Amon2-DBI/Makefile 341762 2014-01-29 17:18:46Z az $
+# $FreeBSD$
 
 PORTNAME=	Amon2-DBI
 PORTVERSION=	0.32
