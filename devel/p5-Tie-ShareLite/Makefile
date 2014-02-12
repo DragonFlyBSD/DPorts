@@ -1,5 +1,5 @@
 # Created by: jnlin@csie.nctu.edu.tw
-# $FreeBSD: devel/p5-Tie-ShareLite/Makefile 341710 2014-01-29 10:33:57Z az $
+# $FreeBSD$
 
 PORTNAME=	Tie-ShareLite
 PORTVERSION=	0.03
