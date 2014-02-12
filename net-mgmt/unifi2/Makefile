@@ -1,5 +1,5 @@
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD: net-mgmt/unifi2/Makefile 338567 2014-01-03 18:15:52Z feld $
+# $FreeBSD$
 
 PORTNAME=	unifi2
 PORTVERSION=	2.4.6
