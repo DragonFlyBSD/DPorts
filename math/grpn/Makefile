@@ -1,5 +1,5 @@
 # Created by: Chris D. Faulhaber <jedgar@fxp.org>
-# $FreeBSD: math/grpn/Makefile 332860 2013-11-05 15:52:36Z naddy $
+# $FreeBSD$
 
 PORTNAME=	grpn
 PORTVERSION=	1.1.2
