@@ -1,5 +1,5 @@
 # Created by: Paul Dlug <paul@nerdlabs.com>
-# $FreeBSD: net-mgmt/nsca/Makefile 340263 2014-01-19 11:35:27Z mm $
+# $FreeBSD$
 
 PORTNAME=	nsca
 PORTVERSION=	2.9.1
