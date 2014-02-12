@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-HTTP-MobileAgent-Plugin-Locator/Makefile 338784 2014-01-05 15:30:10Z az $
+# $FreeBSD$
 
 PORTNAME=	HTTP-MobileAgent-Plugin-Locator
 PORTVERSION=	0.04
