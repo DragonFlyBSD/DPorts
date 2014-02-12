@@ -1,5 +1,5 @@
 # Created by: Thomas Vogt <thomas.vogt@bsdunix.ch>
-# $FreeBSD: games/foobillard/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD$
 
 PORTNAME=	foobillard
 PORTVERSION=	3.0a
