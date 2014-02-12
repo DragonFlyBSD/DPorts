@@ -1,5 +1,5 @@
 # Created by: snowchyld
-# $FreeBSD: mail/libsrs2/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=		libsrs2
 PORTVERSION=		1.0.18
