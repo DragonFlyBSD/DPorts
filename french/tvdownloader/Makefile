@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: french/tvdownloader/Makefile 336477 2013-12-14 19:40:52Z mva $
+# $FreeBSD$
 
 PORTNAME=	tvdownloader
 PORTVERSION=	0.7.2
