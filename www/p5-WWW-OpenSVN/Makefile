@@ -1,5 +1,5 @@
 # Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-# $FreeBSD: www/p5-WWW-OpenSVN/Makefile 341690 2014-01-29 07:58:41Z miwi $
+# $FreeBSD$
 
 PORTNAME=	WWW-OpenSVN
 PORTVERSION=	0.1.3
