@@ -1,5 +1,5 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: x11-wm/lxmed/Makefile 330799 2013-10-18 23:43:34Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	lxmed
 PORTVERSION=	20120515
