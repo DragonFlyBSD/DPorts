@@ -1,5 +1,5 @@
 # Created by: Satoshi TAOKA <taoka@FreeBSD.org>
-# $FreeBSD: japanese/csrd/Makefile 331404 2013-10-23 18:39:25Z tijl $
+# $FreeBSD$
 
 PORTNAME=	csrd
 PORTVERSION=	1.0
