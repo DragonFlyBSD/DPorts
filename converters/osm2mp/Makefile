@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: converters/osm2mp/Makefile 328587 2013-09-28 15:42:18Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	osm2mp
 PORTVERSION=	r475
