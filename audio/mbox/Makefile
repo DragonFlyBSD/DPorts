@@ -1,5 +1,5 @@
 # Created by: Vladimir Osintsev <oc@nm.ru>
-# $FreeBSD: audio/mbox/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	mbox
 PORTVERSION=	0.7.2
