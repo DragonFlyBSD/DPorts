@@ -1,5 +1,5 @@
 # Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-# $FreeBSD: net-mgmt/p5-Net-ILO/Makefile 338788 2014-01-05 15:44:11Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-ILO
 PORTVERSION=	0.54
