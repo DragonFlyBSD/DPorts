@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: games/xcubes/Makefile 333644 2013-11-13 02:24:04Z danilo $
+# $FreeBSD$
 
 PORTNAME=	xcubes
 PORTVERSION=	5.5.2
