@@ -1,8 +1,8 @@
-# Created by: Piotr Rybicki (<meritus@innervision.pl>)
-# $FreeBSD: textproc/pear-Numbers_Words/Makefile 334871 2013-11-25 17:59:58Z antoine $
+# Created by: Piotr Rybicki <meritus@innervision.pl>
+# $FreeBSD$
 
 PORTNAME=	Numbers_Words
-PORTVERSION=	0.16.2
+PORTVERSION=	0.16.4
 CATEGORIES=	textproc pear
 
 MAINTAINER=	meritus@innervision.pl
