@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: audio/gmpc-mserver/Makefile 337454 2013-12-25 20:20:28Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	gmpc-mserver
 PORTVERSION=	0.20.0
