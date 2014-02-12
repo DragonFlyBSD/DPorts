@@ -1,4 +1,4 @@
-# $FreeBSD: emulators/qemu-launcher/Makefile 327721 2013-09-20 16:43:52Z bapt $
+# $FreeBSD$
 
 PORTNAME=	qemu-launcher
 PORTVERSION=	1.7.4
