@@ -1,5 +1,5 @@
 # Created by: Espen Skoglund <esk@ira.uka.de>
-# $FreeBSD: audio/xmms-liveice/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xmms-liveice
 PORTVERSION=	1.0.0
