@@ -1,5 +1,5 @@
 # Created by: jfitz@FreeBSD.org
-# $FreeBSD: mail/majordomo/Makefile 334732 2013-11-24 15:03:51Z az $
+# $FreeBSD$
 
 PORTNAME=	majordomo
 PORTVERSION=	1.94.5
