@@ -1,4 +1,4 @@
-# $FreeBSD: audio/acoustid-fingerprinter/Makefile 338511 2014-01-03 00:46:47Z bapt $
+# $FreeBSD$
 
 PORTNAME=	acoustid-fingerprinter
 PORTVERSION=	0.6
