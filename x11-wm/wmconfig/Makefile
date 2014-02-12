@@ -1,5 +1,5 @@
 # Created by: Tommy Scheunemann <net@arrishq.org>
-# $FreeBSD: x11-wm/wmconfig/Makefile 341865 2014-01-30 18:01:38Z pawel $
+# $FreeBSD$
 
 PORTNAME=	wmconfig
 PORTVERSION=	1.4.4
