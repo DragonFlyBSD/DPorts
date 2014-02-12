@@ -1,5 +1,5 @@
 # Created by: Per Wigren
-# $FreeBSD: archivers/unadf/Makefile 337541 2013-12-26 15:42:17Z bapt $
+# $FreeBSD$
 
 PORTNAME=	unadf
 PORTVERSION=	0.7.12
