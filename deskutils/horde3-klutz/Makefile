@@ -1,5 +1,5 @@
 # Created by: Beech Rintoul (<beech@FreeBSD.org>)
-# $FreeBSD: deskutils/horde3-klutz/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD$
 
 PORTNAME=	klutz
 PORTVERSION=	1.0
