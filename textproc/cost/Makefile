@@ -1,5 +1,5 @@
 # Created by: Allan Bowhill <kosmos@blarg.net>
-# $FreeBSD: textproc/cost/Makefile 330381 2013-10-15 09:56:31Z gahr $
+# $FreeBSD$
 
 PORTNAME=	cost
 DISTVERSION=	2.3-2004-10-08
@@ -10,6 +10,9 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	SGML/XML application programming tool
 
 OPTIONS_DEFINE=	DOCS
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-10
 
 USES+=		tk
 GNU_CONFIGURE=	YES
