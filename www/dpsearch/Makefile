@@ -1,5 +1,5 @@
 # Created by: Maxim Zakharov <maxime@maxime.net.ru>
-# $FreeBSD: www/dpsearch/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	dpsearch
 PORTVERSION=	4.53
