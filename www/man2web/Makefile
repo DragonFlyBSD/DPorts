@@ -1,4 +1,4 @@
-# $FreeBSD: www/man2web/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	man2web
 PORTVERSION=	0.88

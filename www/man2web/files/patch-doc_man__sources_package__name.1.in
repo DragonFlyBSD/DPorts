@@ -1,5 +1,5 @@
 
-$FreeBSD: www/man2web/files/patch-doc_man__sources_package__name.1.in 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/www/man2web/files/patch-doc_man__sources_package__name.1.in 340725 2014-01-22 17:40:44Z mat $
 
 --- doc/man_sources/package_name.1.in.orig	Sat Apr 19 14:12:16 2003
 +++ doc/man_sources/package_name.1.in	Sat Apr 19 14:13:07 2003
