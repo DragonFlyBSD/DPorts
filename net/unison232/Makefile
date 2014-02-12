@@ -1,5 +1,5 @@
 # Created by: Dan Pelleg <dpelleg+unison@cs.cmu.edu>
-# $FreeBSD: net/unison232/Makefile 333150 2013-11-07 20:01:15Z mandree $
+# $FreeBSD$
 
 PORTNAME=	unison
 PORTVERSION=	2.32.52
