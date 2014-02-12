@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: math/gambit/Makefile 336252 2013-12-12 09:37:51Z gahr $
+# $FreeBSD$
 
 PORTNAME=	gambit
 PORTVERSION=	13.1.1
