@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <wg@FreeBSD.org>
-# $FreeBSD: devel/py-defusedxml/Makefile 336729 2013-12-17 14:29:41Z wg $
+# $FreeBSD$
 
 PORTNAME=	defusedxml
 PORTVERSION=	0.4.1
