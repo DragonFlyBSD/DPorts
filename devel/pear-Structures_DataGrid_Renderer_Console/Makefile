@@ -1,5 +1,5 @@
 # Created by: Nick Hilliard <nick@foobar.org>
-# $FreeBSD: devel/pear-Structures_DataGrid_Renderer_Console/Makefile 333263 2013-11-08 21:41:53Z antoine $
+# $FreeBSD$
 
 PORTNAME=	Structures_DataGrid_Renderer_Console
 PORTVERSION=	0.1.1
