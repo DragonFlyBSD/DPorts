@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: graphics/svg2png/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 #   $MCom: ports/graphics/svg2png/Makefile,v 1.3 2005/08/06 02:21:48 marcus Exp $
 
 PORTNAME=	svg2png
