@@ -1,5 +1,5 @@
 # Created by: markand
-# $FreeBSD: games/nsnake/Makefile 340328 2014-01-19 18:16:46Z marino $
+# $FreeBSD$
 
 PORTNAME=	nsnake
 PORTVERSION=	1.4
