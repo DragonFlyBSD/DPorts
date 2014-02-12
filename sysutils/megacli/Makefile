@@ -1,5 +1,5 @@
 # Created by: Vladimir Laskov <samflanker@gmail.com>
-# $FreeBSD: sysutils/megacli/Makefile 335205 2013-11-29 17:31:26Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	megacli
 PORTVERSION=	8.07.07
