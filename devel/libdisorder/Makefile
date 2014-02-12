@@ -1,4 +1,4 @@
-# $FreeBSD: devel/libdisorder/Makefile 341677 2014-01-28 23:38:25Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libdisorder
 PORTVERSION=	0.0.2
