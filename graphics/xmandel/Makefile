@@ -1,5 +1,5 @@
 # Created by: andreas@marvin.robin.de
-# $FreeBSD: graphics/xmandel/Makefile 339287 2014-01-09 21:39:48Z antoine $
+# $FreeBSD$
 
 PORTNAME=	xmandel
 PORTVERSION=	1.0
