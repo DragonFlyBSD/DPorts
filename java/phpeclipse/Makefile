@@ -1,5 +1,5 @@
 # Created by: rtdean@cytherianage.net
-# $FreeBSD: java/phpeclipse/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	phpeclipse
 PORTVERSION=	1.2.3
