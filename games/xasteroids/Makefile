@@ -1,5 +1,5 @@
 # Created by: swallace
-# $FreeBSD: games/xasteroids/Makefile 333620 2013-11-12 20:53:46Z danilo $
+# $FreeBSD$
 
 PORTNAME=	xasteroids
 PORTVERSION=	5.0
