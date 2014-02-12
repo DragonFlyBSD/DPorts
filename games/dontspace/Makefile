@@ -1,5 +1,5 @@
 # Created by: johnh@isi.edu
-# $FreeBSD: games/dontspace/Makefile 332961 2013-11-06 09:51:38Z gahr $
+# $FreeBSD$
 
 PORTNAME=	dontspace
 PORTVERSION=	1.2
