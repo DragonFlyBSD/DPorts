@@ -1,5 +1,5 @@
 # Created by: Andreas Kohn <andreas@syndrom23.de>
-# $FreeBSD: x11-wm/transset/Makefile 336621 2013-12-16 11:11:09Z zeising $
+# $FreeBSD$
 
 PORTNAME=	transset
 PORTVERSION=	1.0.1
