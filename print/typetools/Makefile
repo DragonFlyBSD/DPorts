@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: print/typetools/Makefile 339730 2014-01-14 22:40:35Z antoine $
+# $FreeBSD$
 
 PORTNAME=	typetools
 PORTVERSION=	2.100
