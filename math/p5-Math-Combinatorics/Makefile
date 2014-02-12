@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@daltons.ca>
-# $FreeBSD: math/p5-Math-Combinatorics/Makefile 332813 2013-11-05 06:56:18Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Math-Combinatorics
 PORTVERSION=	0.09
