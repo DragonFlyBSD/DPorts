@@ -1,5 +1,5 @@
 # Created by: Jaap Akkerhuis <jaap@nlnetlabs.nl>
-# $FreeBSD: dns/autotrust/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD$
 
 PORTNAME=	autotrust
 PORTVERSION=	0.3.1
