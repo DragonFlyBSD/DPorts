@@ -1,4 +1,4 @@
-# $FreeBSD: www/rubygem-chosen-rails/Makefile 335758 2013-12-06 15:23:44Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	chosen-rails
 PORTVERSION=	1.0.1
