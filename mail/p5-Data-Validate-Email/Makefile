@@ -1,5 +1,5 @@
 # Created by: Murilo Opsfelder <mopsfelder@gmail.com>
-# $FreeBSD: mail/p5-Data-Validate-Email/Makefile 338797 2014-01-05 16:33:44Z az $
+# $FreeBSD$
 
 PORTNAME=	Data-Validate-Email
 PORTVERSION=	0.04
