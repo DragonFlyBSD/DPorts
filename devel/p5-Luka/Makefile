@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-Luka/Makefile 338884 2014-01-06 14:40:31Z az $
+# $FreeBSD$
 
 PORTNAME=	Luka
 PORTVERSION=	1.08
