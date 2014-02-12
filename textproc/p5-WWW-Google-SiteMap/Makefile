@@ -1,5 +1,5 @@
 # Created by: nork@FreeBSD.org
-# $FreeBSD: textproc/p5-WWW-Google-SiteMap/Makefile 333056 2013-11-07 03:52:41Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	WWW-Google-SiteMap
 PORTVERSION=	1.10
