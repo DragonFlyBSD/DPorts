@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: textproc/p5-PerlPoint-Converters/Makefile 340668 2014-01-21 22:29:50Z mat $
+# $FreeBSD$
 
 PORTNAME=	PerlPoint-Converters
 PORTVERSION=	1.02.05
