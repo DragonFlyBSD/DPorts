@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: net/yazproxy/Makefile 341981 2014-01-31 12:14:30Z miwi $
+# $FreeBSD$
 
 PORTNAME=	yazproxy
 PORTVERSION=	1.3.9
