@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan <gabor@FreeBSD.org>
-# $FreeBSD: textproc/uml2svg/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	uml2svg
 PORTVERSION=	0.18
