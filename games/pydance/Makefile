@@ -1,5 +1,5 @@
 # Created by: Rudolf Polzer <freebsd-dr@durchnull.de>
-# $FreeBSD: games/pydance/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	pydance
 PORTVERSION=	1.1.0
