@@ -1,5 +1,5 @@
 # Created by: shanee@augusta.de
-# $FreeBSD: x11/bricons/Makefile 338848 2014-01-06 08:46:49Z bapt $
+# $FreeBSD$
 
 PORTNAME=	bricons
 PORTVERSION=	3.0
