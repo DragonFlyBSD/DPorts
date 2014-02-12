@@ -1,5 +1,5 @@
 # Created by: Giacomo Mariani <giacomomariani_at_yahoo_dot_it>
-# $FreeBSD: devel/clewn/Makefile 340757 2014-01-23 00:09:17Z bapt $
+# $FreeBSD$
 
 PORTNAME=	clewn
 PORTVERSION=	1.14
