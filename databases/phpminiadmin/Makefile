@@ -1,5 +1,5 @@
 # Created by: spam@rm-rf.kiev.ua
-# $FreeBSD: databases/phpminiadmin/Makefile 342256 2014-02-02 09:05:59Z ak $
+# $FreeBSD$
 
 PORTNAME=	phpminiadmin
 DISTVERSION=	1.5.091221
