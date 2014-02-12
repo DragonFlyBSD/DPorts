@@ -1,5 +1,5 @@
 # Created by: Jacob Rhoden <jacob@dominoid.org>
-# $FreeBSD: textproc/csv2xml/Makefile 341161 2014-01-26 11:57:13Z mat $
+# $FreeBSD$
 
 PORTNAME=	csv2xml
 PORTVERSION=	0.6
@@ -8,6 +8,9 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A simple but effective csv to xml converter
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-10
 
 USE_BZIP2=	yes
 
