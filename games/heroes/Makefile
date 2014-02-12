@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: games/heroes/Makefile 332446 2013-11-02 03:34:31Z danilo $
+# $FreeBSD$
 
 PORTNAME=	heroes
 PORTVERSION=	0.21
