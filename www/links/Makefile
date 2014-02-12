@@ -1,5 +1,5 @@
 # Created by: Michael Vasilenko <acid@stu.cn.ua>
-# $FreeBSD: www/links/Makefile 339572 2014-01-13 07:23:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	links
 DISTVERSION=	2.8
