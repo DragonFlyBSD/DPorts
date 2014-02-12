@@ -1,5 +1,5 @@
 # Created by: dwhite@FreeBSD.org
-# $FreeBSD: devel/py-kqueue/Makefile 334881 2013-11-25 18:44:35Z mva $
+# $FreeBSD$
 
 PORTNAME=		kqueue
 PORTVERSION=		1.4
