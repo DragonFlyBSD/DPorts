@@ -1,5 +1,5 @@
 # Created by: eserte@cs.tu-berlin.de
-# $FreeBSD: print/dvips2ascii/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	dvips2ascii
 PORTVERSION=	1.3
