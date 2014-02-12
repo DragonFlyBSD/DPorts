@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 use strict;
 
-# $FreeBSD: security/nbaudit/files/nbaudition.pl 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/security/nbaudit/files/nbaudition.pl 340872 2014-01-24 00:14:07Z mat $
 
 # run nmap -oX logfile <host> -p 139 to create the log for this script
 
