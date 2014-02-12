@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: biology/ariadne/Makefile 333626 2013-11-12 21:54:36Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ariadne
 PORTVERSION=	1.3
