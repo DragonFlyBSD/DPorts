@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: x11-clocks/cairo-clock/Makefile 329408 2013-10-05 03:50:02Z daichi $
+# $FreeBSD$
 
 PORTNAME=	cairo-clock
 PORTVERSION=	0.3.4
@@ -17,6 +17,9 @@ USE_LDCONFIG=	yes
 MAN1=		cairo-clock.1
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS NLS 
+
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
