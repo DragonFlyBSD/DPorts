@@ -1,5 +1,5 @@
 # Created by: Steven Honson
-# $FreeBSD: dns/dnsmasq/Makefile 335916 2013-12-08 18:05:35Z mandree $
+# $FreeBSD$
 
 PORTNAME=	dnsmasq
 DISTVERSION=	2.68
