@@ -1,5 +1,5 @@
 # Created by: Pedro Giffuni <giffunip@asme.org>
-# $FreeBSD: graphics/gplot/Makefile 337184 2013-12-22 11:42:11Z tijl $
+# $FreeBSD$
 
 PORTNAME=	gplot
 PORTVERSION=	4.3
