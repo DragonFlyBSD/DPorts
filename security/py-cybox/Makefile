@@ -1,5 +1,5 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: security/py-cybox/Makefile 341888 2014-01-30 21:09:02Z antoine $
+# $FreeBSD$
 
 PORTNAME=	cybox
 PORTVERSION=	2.1.0.0
