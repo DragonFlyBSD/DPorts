@@ -1,4 +1,4 @@
-# $FreeBSD: x11/konsole/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD$
 
 PORTNAME=	konsole
 PORTVERSION=	${KDE4_VERSION}
