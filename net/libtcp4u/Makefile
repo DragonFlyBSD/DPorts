@@ -1,5 +1,5 @@
 # Created by: Juraj Lutter <otis@sk.freebsd.org>
-# $FreeBSD: net/libtcp4u/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	libtcp4u
 PORTVERSION=	3.3.1
