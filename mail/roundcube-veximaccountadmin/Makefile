@@ -1,5 +1,5 @@
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD: mail/roundcube-veximaccountadmin/Makefile 329353 2013-10-04 18:09:26Z feld $
+# $FreeBSD$
 
 PORTNAME=	veximaccountadmin
 PORTVERSION=	0.1
