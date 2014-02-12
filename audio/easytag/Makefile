@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: audio/easytag/Makefile 336613 2013-12-16 07:53:19Z novel $
+# $FreeBSD$
 
 PORTNAME=	easytag
 PORTVERSION=	2.1.8
