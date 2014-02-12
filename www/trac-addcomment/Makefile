@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: www/trac-addcomment/Makefile 341180 2014-01-26 14:30:59Z miwi $
+# $FreeBSD$
 
 PORTNAME=	addcomment
 PORTVERSION=	0.3
@@ -11,6 +11,9 @@ DISTNAME=	${PORTNAME}macro-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Add formatted comments to wiki pages
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-10
 
 RUN_DEPENDS+=	tracd:${PORTSDIR}/www/trac \
 		trac-macropost>0:${PORTSDIR}/www/trac-macropost
