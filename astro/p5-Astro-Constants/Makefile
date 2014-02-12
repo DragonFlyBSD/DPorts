@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: astro/p5-Astro-Constants/Makefile 328609 2013-09-28 17:13:03Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Astro-Constants
 PORTVERSION=	0.09
