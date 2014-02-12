@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@leeym.com>
-# $FreeBSD: mail/openwebmail/Makefile 341583 2014-01-28 14:40:41Z bapt $
+# $FreeBSD$
 
 PORTNAME=	openwebmail
 PORTVERSION=	2.53
