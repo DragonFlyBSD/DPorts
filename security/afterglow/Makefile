@@ -1,5 +1,5 @@
 # Created by: pauls
-# $FreeBSD: security/afterglow/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	afterglow
 PORTVERSION=	1.6.2
