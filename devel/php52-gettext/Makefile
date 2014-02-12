@@ -1,5 +1,5 @@
 # Created by: Alex Keda <admin@lissyara.su>
-# $FreeBSD: devel/php52-gettext/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 CATEGORIES=	devel
 
