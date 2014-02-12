@@ -1,5 +1,5 @@
 # Created by: shigeru@iij.ad.jp
-# $FreeBSD: net/libarms/Makefile 341914 2014-01-31 06:39:24Z miwi $
+# $FreeBSD$
 
 PORTNAME=	libarms
 PORTVERSION=	5.01
