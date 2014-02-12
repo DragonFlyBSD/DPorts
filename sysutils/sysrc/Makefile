@@ -1,5 +1,5 @@
 # Created by: Devin Teske <dteske@FreeBSD.org>
-# $FreeBSD: sysutils/sysrc/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	sysrc
 PORTVERSION=	5.2
