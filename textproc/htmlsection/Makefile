@@ -1,5 +1,5 @@
 # Created by: SAKAI Hiroaki <sakai@seki.ee.kagu.sut.ac.jp>
-# $FreeBSD: textproc/htmlsection/Makefile 341621 2014-01-28 16:40:12Z mat $
+# $FreeBSD$
 
 PORTNAME=	htmlsection
 PORTVERSION=	1.1
