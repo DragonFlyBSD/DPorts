@@ -1,5 +1,5 @@
 # Created by: bruno schwander <bruno@tinkerbox.org>
-# $FreeBSD: cad/geda-gschem/Makefile 338161 2013-12-30 18:51:25Z antoine $
+# $FreeBSD$
 
 PORTNAME=	gschem
 PORTVERSION=	1.4.3
@@ -29,6 +29,8 @@ CONFIGURE_ARGS=	--enable-gdgeda --with-docdir=${DOCSDIR} \
 		--disable-update-desktop-database
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+
+OPTIONS_DEFINE=	NLS 
 
 .include <bsd.port.options.mk>
 
