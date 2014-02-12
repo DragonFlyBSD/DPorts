@@ -1,5 +1,5 @@
 # Created by: Fumiyuki Shimizu <fumifumi@abacustech.jp>
-# $FreeBSD: www/mod_gnutls/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	mod_gnutls
 PORTVERSION=	0.5.10
