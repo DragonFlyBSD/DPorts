@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: head/benchmarks/imb/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	imb
 PORTVERSION=	3.0
@@ -29,6 +29,8 @@ CFLAGS=		-O3
 .if defined(CHECK_RESULTS)
 CFLAGS+=	-DCHECK
 .endif
+
+MAKE_JOBS_UNSAFE=yes
 
 NO_STAGE=	yes
 .include <bsd.port.pre.mk>
