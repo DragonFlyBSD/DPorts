@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: devel/m17n-docs/Makefile 341694 2014-01-29 08:11:01Z bapt $
+# $FreeBSD$
 
 PORTNAME=	m17n-docs
 PORTVERSION=	1.5.5
