@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: games/flightgear-aircraft/Makefile 338879 2014-01-06 13:50:21Z martymac $
+# $FreeBSD$
 
 PORTNAME=	flightgear-aircraft
 PORTVERSION=	20131001
