@@ -1,5 +1,5 @@
 # Created by: Horia Racoviceanu <horia@racoviceanu.com>
-# $FreeBSD: security/libscrypt/Makefile 336645 2013-12-16 16:49:59Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	libscrypt
 PORTVERSION=	1.14
