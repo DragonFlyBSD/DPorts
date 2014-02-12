@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: net/tintin++/Makefile 339477 2014-01-12 03:52:38Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	tintin++
 PORTVERSION=	2.01.0
