@@ -1,5 +1,5 @@
 # Created by: Antony Mawer <ports@mawer.org>
-# $FreeBSD: www/cntlm/Makefile 337439 2013-12-25 19:16:49Z pawel $
+# $FreeBSD$
 
 PORTNAME=	cntlm
 PORTVERSION=	0.92.3
