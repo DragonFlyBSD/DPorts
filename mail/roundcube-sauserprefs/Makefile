@@ -1,5 +1,5 @@
 # Created by: Stefan Bethke <stb@lassitu.de>
-# $FreeBSD: mail/roundcube-sauserprefs/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	sauserprefs
 PORTVERSION=	1.10 # PLEASE MIRROR DISTFILE WITH VERSIONED DIR
