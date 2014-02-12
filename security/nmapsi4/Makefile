@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: security/nmapsi4/Makefile 342166 2014-02-01 15:18:39Z miwi $
+# $FreeBSD$
 
 PORTNAME=	nmapsi4
 PORTVERSION=	0.4.1
