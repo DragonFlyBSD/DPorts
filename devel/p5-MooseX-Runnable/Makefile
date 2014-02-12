@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-MooseX-Runnable/Makefile 334434 2013-11-20 17:39:42Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	MooseX-Runnable
 PORTVERSION=	0.06
