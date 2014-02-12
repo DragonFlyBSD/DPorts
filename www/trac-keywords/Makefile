@@ -1,5 +1,5 @@
 # Created by: Eygene Ryabinkin <rea-fbsd@codelabs.ru>
-# $FreeBSD: www/trac-keywords/Makefile 341185 2014-01-26 14:32:17Z miwi $
+# $FreeBSD$
 
 PORTNAME=	keywords
 PORTVERSION=	0.2
