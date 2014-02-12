@@ -1,4 +1,4 @@
-# $FreeBSD: www/phpgroupware/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	phpgroupware
 PORTVERSION=	0.9.16.017
