@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: x11/slock/Makefile 329977 2013-10-10 08:42:51Z gahr $
+# $FreeBSD$
 
 PORTNAME=	slock
 PORTVERSION=	1.1
