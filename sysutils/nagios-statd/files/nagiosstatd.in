@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: sysutils/nagios-statd/files/nagiosstatd.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/sysutils/nagios-statd/files/nagiosstatd.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: nagiosstatd
 # REQUIRE: DAEMON
