@@ -1,4 +1,4 @@
-# $FreeBSD: finance/homebank/Makefile 341645 2014-01-28 17:37:41Z pawel $
+# $FreeBSD$
 
 PORTNAME=	homebank
 PORTVERSION=	4.5.5
