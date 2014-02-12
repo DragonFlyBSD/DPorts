@@ -1,5 +1,5 @@
 # Created by: Peter Pentchev <roam@FreeBSD.org>
-# $FreeBSD: misc/sssnips/Makefile 340144 2014-01-18 02:49:02Z danilo $
+# $FreeBSD$
 
 PORTNAME=	sssnips
 PORTVERSION=	0.05
