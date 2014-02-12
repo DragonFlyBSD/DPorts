@@ -1,5 +1,5 @@
 # Created by: peter.thoenen@yahoo.com
-# $FreeBSD: games/ftjava/Makefile 334423 2013-11-20 14:54:31Z danilo $
+# $FreeBSD$
 
 PORTNAME=	ftjava
 PORTVERSION=	1.3
