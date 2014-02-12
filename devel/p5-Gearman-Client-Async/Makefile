@@ -1,5 +1,5 @@
 # Created by: Tomoyuki Sakurai <cherry@trombik.org>
-# $FreeBSD: devel/p5-Gearman-Client-Async/Makefile 331953 2013-10-29 14:32:08Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Gearman-Client-Async
 PORTVERSION=	0.94
