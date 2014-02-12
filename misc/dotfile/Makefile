@@ -1,5 +1,5 @@
 # Created by: oly@world.std.com
-# $FreeBSD: misc/dotfile/Makefile 340605 2014-01-21 12:44:38Z gahr $
+# $FreeBSD$
 
 PORTNAME=	dotfile
 PORTVERSION=	2.4.1
