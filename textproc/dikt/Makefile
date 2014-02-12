@@ -1,5 +1,5 @@
 # Created by: Goran Tal <goran.tal@gmail.com>
-# $FreeBSD: textproc/dikt/Makefile 341230 2014-01-26 15:46:14Z mat $
+# $FreeBSD$
 
 PORTNAME=	dikt
 PORTVERSION=	2l
