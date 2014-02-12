@@ -1,5 +1,5 @@
 # Created by: wosch
-# $FreeBSD: german/manpages/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	manpages-de
 PORTVERSION=	0.5
