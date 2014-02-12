@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-foreman/Makefile 332037 2013-10-30 02:34:55Z swills $
+# $FreeBSD$
 
 PORTNAME=	foreman
 PORTVERSION=	0.63.0
