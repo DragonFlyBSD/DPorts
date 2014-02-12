@@ -1,5 +1,5 @@
 # Created by: Tim Daneliuk <tren@tundraware.com>
-# $FreeBSD: sysutils/tren/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	tren
 PORTVERSION=	1.242
