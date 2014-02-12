@@ -1,5 +1,5 @@
 # Created by: ports@c0decafe.net
-# $FreeBSD: security/revelation/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	revelation
 PORTVERSION=	0.4.14
