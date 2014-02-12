@@ -1,5 +1,5 @@
 # Created by: bf <bf2006a@yahoo.com>
-# $FreeBSD: math/dieharder/Makefile 342315 2014-02-02 15:20:05Z miwi $
+# $FreeBSD$
 
 PORTNAME=	dieharder
 PORTVERSION=	3.31.1
