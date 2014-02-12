@@ -1,5 +1,5 @@
 # Created by: Joe Clarke <marcus@marcuscom.com>
-# $FreeBSD: net-mgmt/confregdecode/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	confregdecode
 PORTVERSION=	1.2.1
