@@ -1,5 +1,5 @@
 # Created by: Matt <matt@xtaz.net>
-# $FreeBSD: security/clamassassin/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	clamassassin
 PORTVERSION=	1.2.4
