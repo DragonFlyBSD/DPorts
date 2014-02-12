@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: www/p5-Newsletter/Makefile 332678 2013-11-04 09:57:54Z az $
+# $FreeBSD$
 
 PORTNAME=	Newsletter
 PORTVERSION=	0.03.3
