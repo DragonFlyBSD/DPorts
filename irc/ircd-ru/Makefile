@@ -1,5 +1,5 @@
 # Created by: Khamushkin Ilya <ilya@ircd.ru>
-# $FreeBSD: irc/ircd-ru/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ircd-ru
 PORTVERSION=	1.0.7
