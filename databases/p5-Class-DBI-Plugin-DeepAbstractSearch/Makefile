@@ -1,5 +1,5 @@
 # Created by: milki <milki@rescomp.berkeley.edy>
-# $FreeBSD: databases/p5-Class-DBI-Plugin-DeepAbstractSearch/Makefile 341765 2014-01-29 17:46:33Z az $
+# $FreeBSD$
 
 PORTNAME=	Class-DBI-Plugin-DeepAbstractSearch
 PORTVERSION=	0.08
