@@ -1,5 +1,5 @@
 # Created by: Wayne Cuddy <wayne@crb-web.com>
-# $FreeBSD: x11/xcolorsel/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xcolorsel
 PORTVERSION=	1.1a
