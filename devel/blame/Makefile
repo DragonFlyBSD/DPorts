@@ -1,5 +1,5 @@
 # Created by: John Hein <jhein@symmetricom.com>
-# $FreeBSD: devel/blame/Makefile 340754 2014-01-22 23:59:39Z bapt $
+# $FreeBSD$
 
 PORTNAME=	blame
 PORTVERSION=	1.3.1
