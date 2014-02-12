@@ -1,5 +1,5 @@
 # Created by: Jaosn Helfman <jgh@FreeBSD.org>
-# $FreeBSD: deskutils/xpad-current/Makefile 338511 2014-01-03 00:46:47Z bapt $
+# $FreeBSD$
 
 PORTNAME=	xpad
 PORTVERSION=	4.1
