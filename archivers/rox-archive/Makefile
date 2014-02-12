@@ -1,4 +1,4 @@
-# $FreeBSD: archivers/rox-archive/Makefile 333244 2013-11-08 16:19:49Z olgeni $
+# $FreeBSD$
 
 PORTNAME=	rox-archive
 PORTVERSION=	2.3
