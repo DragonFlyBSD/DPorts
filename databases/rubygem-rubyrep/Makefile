@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: databases/rubygem-rubyrep/Makefile 340899 2014-01-24 14:45:58Z miwi $
+# $FreeBSD$
 
 PORTNAME=		rubyrep
 PORTVERSION=		1.2.0
