@@ -1,5 +1,5 @@
 # Created by: brandoncash@gmail.com
-# $FreeBSD: x11-themes/rezlooks/Makefile 341356 2014-01-27 09:25:28Z miwi $
+# $FreeBSD$
 
 PORTNAME=	rezlooks
 PORTVERSION=	0.6
