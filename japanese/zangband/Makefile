@@ -1,5 +1,5 @@
 # Created by: Makoto YAMAKURA <makoto@pinpott.spnet.ne.jp>
-# $FreeBSD: japanese/zangband/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	zangband
 PORTVERSION=	2.4.0${JA_VERSION}
@@ -14,6 +14,9 @@ EXTRACT_ONLY=	${PORTNAME}-${E_VERSION:S/.//g}-src.zip
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Zangband (Zelazny Angband) with Japanese, color, X11 support
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-10
 
 USE_ZIP=	yes
 EXTRACT_BEFORE_ARGS=	-qa
