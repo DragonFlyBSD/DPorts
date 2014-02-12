@@ -1,4 +1,4 @@
-# $FreeBSD: www/twiki-TopicVarsPlugin/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	TopicVarsPlugin
 SVNREV=		16417
