@@ -1,5 +1,5 @@
 # Created by: Eygene Ryabinkin <rea@FreeBSD.org>
-# $FreeBSD: print/latex-acm/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	latex-acm
 PORTVERSION=	1.1
