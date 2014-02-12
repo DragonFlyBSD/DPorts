@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: www/p5-Catalyst-View-TT-ControllerLocal/Makefile 332617 2013-11-03 15:16:25Z az $
+# $FreeBSD$
 
 PORTNAME=	Catalyst-View-TT-ControllerLocal
 PORTVERSION=	0.02
