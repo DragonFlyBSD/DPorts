@@ -1,5 +1,5 @@
 # Created by: peter
-# $FreeBSD: net/rdist6/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	rdist
 PORTVERSION=	6.1.5
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.magnicomp.com/download/rdist/ \
 		ftp://ftp.sunet.se/pub/unix/admin/mirror-magnicomp/download/rdist/
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A network file distribution/synchronisation utility
+COMMENT=	Network file distribution/synchronisation utility
 
 # To avoid confusion with /usr/bin/rdist, you may prefer otherwise.
 RDIST_NAME?=	rdist6
