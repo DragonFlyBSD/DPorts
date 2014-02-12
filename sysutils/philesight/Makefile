@@ -1,5 +1,5 @@
 # Created by: stas
-# $FreeBSD: sysutils/philesight/Makefile 338487 2014-01-02 20:09:36Z swills $
+# $FreeBSD$
 
 PORTNAME=	philesight
 PORTVERSION=	20090105
