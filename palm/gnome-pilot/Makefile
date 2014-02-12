@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@marcuscom.com>
-# $FreeBSD: palm/gnome-pilot/Makefile 327760 2013-09-20 22:33:41Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gnome-pilot
 PORTVERSION=	2.0.17
