@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: devel/py-repl/Makefile 337066 2013-12-20 18:41:37Z wg $
+# $FreeBSD$
 
 PORTNAME=	repl
 PORTVERSION=	0.8.4
