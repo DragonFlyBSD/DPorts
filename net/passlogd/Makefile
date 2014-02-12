@@ -1,5 +1,5 @@
 # Created by: Pete Fritchman <petef@databits.net>
-# $FreeBSD: net/passlogd/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	passlogd
 PORTVERSION=	0.1f
@@ -11,11 +11,10 @@ COMMENT=	Intercept and dump syslog remote log packets
 
 PLIST_FILES=	sbin/passlogd
 
-NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e "s|.(CXX)|${CC} ${CFLAGS}|g" ${WRKSRC}/Makefile
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/passlogd ${PREFIX}/sbin
+	${INSTALL_PROGRAM} ${WRKSRC}/passlogd ${STAGEDIR}${PREFIX}/sbin
 
 .include <bsd.port.mk>
