@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: comms/conserver-com/files/conserver.in 340851 2014-01-23 19:55:14Z mat $
+# $FreeBSD: head/comms/conserver-com/files/conserver.in 340851 2014-01-23 19:55:14Z mat $
 #
 
 # PROVIDE: conserver
