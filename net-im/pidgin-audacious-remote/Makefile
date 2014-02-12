@@ -1,5 +1,5 @@
 # Created by: Anton Hryciuk <gnixua@gmail.com>
-# $FreeBSD: net-im/pidgin-audacious-remote/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD$
 
 PORTNAME=	pidgin-audacious-remote
 PORTVERSION=	0.5
