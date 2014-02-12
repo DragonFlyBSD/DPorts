@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: misc/cloc/Makefile 339746 2014-01-15 04:17:30Z miwi $
+# $FreeBSD$
 
 PORTNAME=	cloc
 PORTVERSION=	1.60
@@ -20,8 +20,7 @@ EXTRACT_AFTER_ARGS=	./${PORTNAME}
 PLIST_FILES=	bin/${PORTNAME}
 NO_BUILD=	yes
 
-NO_STAGE=	yes
 do-install:
-	@${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME} ${PREFIX}/bin/
+	@${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/
 
 .include <bsd.port.mk>
