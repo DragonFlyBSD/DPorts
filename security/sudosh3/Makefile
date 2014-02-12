@@ -1,5 +1,5 @@
 # Created by: cy@FreeBSD.org
-# $FreeBSD: security/sudosh3/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=		sudosh3
 PORTVERSION=		3.2.0
