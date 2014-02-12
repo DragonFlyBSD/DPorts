@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: devel/styx/Makefile 340958 2014-01-25 00:08:27Z bapt $
+# $FreeBSD$
 
 PORTNAME=	styx
 PORTVERSION=	1.6.1
