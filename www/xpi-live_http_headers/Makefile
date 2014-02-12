@@ -1,5 +1,5 @@
 # Created by: Dominic Fandrey <kamikaze@bsdforen.de>
-# $FreeBSD: www/xpi-live_http_headers/Makefile 341210 2014-01-26 15:11:22Z miwi $
+# $FreeBSD$
 
 PORTNAME=	live_http_headers
 PORTVERSION=	0.17
