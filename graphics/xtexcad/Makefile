@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/xtexcad/Makefile 337771 2013-12-27 18:07:32Z bapt $
+# $FreeBSD$
 
 PORTNAME=	xtexcad
 PORTVERSION=	2.4.1
