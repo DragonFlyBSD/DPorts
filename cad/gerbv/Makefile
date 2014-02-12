@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: cad/gerbv/Makefile 332408 2013-11-01 20:59:30Z pawel $
+# $FreeBSD$
 
 PORTNAME=	gerbv
 PORTVERSION=	2.6.1
