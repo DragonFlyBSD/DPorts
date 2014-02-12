@@ -1,5 +1,5 @@
 # Created by: Kirill Ponomarew <krion@FreeBSD.org>
-# $FreeBSD: net-mgmt/nefu/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	nefu
 PORTVERSION=	1.5
