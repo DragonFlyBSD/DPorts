@@ -1,5 +1,5 @@
 # Created by: <mark@goodstorm.com>
-# $FreeBSD: graphics/php-magickwand/Makefile 341858 2014-01-30 16:36:53Z miwi $
+# $FreeBSD$
 
 PORTNAME=	magickwand
 PORTVERSION=	1.0.9
