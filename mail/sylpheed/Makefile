@@ -1,5 +1,5 @@
 # Created by: shigeri <shigeri@m10.alpha-net.ne.jp>
-# $FreeBSD: mail/sylpheed/Makefile 336838 2013-12-18 15:06:19Z ehaupt $
+# $FreeBSD$
 
 PORTNAME=	sylpheed
 PORTVERSION=	3.3.0
