@@ -1,5 +1,5 @@
 # Created by: Jason Bacon <jwbacon@tds.net>
-# $FreeBSD: sysutils/diskimage-tools/Makefile 336898 2013-12-19 12:57:18Z pawel $
+# $FreeBSD$
 
 PORTNAME=	diskimage-tools
 PORTVERSION=	0.1
