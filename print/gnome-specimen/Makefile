@@ -1,5 +1,5 @@
 # Created by: Steve Wills <steve@mouf.net>
-# $FreeBSD: print/gnome-specimen/Makefile 339926 2014-01-16 16:02:10Z swills $
+# $FreeBSD$
 
 PORTNAME=	gnome-specimen
 PORTVERSION=	0.4
