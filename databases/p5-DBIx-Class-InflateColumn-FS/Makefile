@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-DBIx-Class-InflateColumn-FS/Makefile 341765 2014-01-29 17:46:33Z az $
+# $FreeBSD$
 
 PORTNAME=	DBIx-Class-InflateColumn-FS
 PORTVERSION=	0.01007
