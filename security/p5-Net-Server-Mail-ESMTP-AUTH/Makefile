@@ -1,5 +1,5 @@
 # Created by: Zane C. Bowers <vvelox@vvelox.net>
-# $FreeBSD: security/p5-Net-Server-Mail-ESMTP-AUTH/Makefile 341825 2014-01-30 09:42:48Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-Server-Mail-ESMTP-AUTH
 PORTVERSION=	0.1
