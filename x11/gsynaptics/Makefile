@@ -1,5 +1,5 @@
 # Created by: Norikatsu Shigemura <nork@FreeBSD.org>
-# $FreeBSD: x11/gsynaptics/Makefile 337801 2013-12-27 20:41:58Z antoine $
+# $FreeBSD$
 
 PORTNAME=	gsynaptics
 PORTVERSION=	0.9.16
