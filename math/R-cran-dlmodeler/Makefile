@@ -1,5 +1,5 @@
 # Created by: Cyrille Szymanski <cnszym@gmail.com>
-# $FreeBSD: math/R-cran-dlmodeler/Makefile 337846 2013-12-28 10:28:40Z dbn $
+# $FreeBSD$
 
 PORTNAME=	dlmodeler
 DISTVERSION=	1.2-1
