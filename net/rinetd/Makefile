@@ -1,5 +1,5 @@
 # Created by: alexp
-# $FreeBSD: net/rinetd/Makefile 332306 2013-10-31 23:39:21Z garga $
+# $FreeBSD$
 
 PORTNAME=	rinetd
 PORTVERSION=	0.62

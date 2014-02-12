@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: net/rinetd/files/rinetd.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/net/rinetd/files/rinetd.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: rinetd
 # REQUIRE: DAEMON
