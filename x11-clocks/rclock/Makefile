@@ -1,5 +1,5 @@
 # Created by: obrien@NUXI.com
-# $FreeBSD: x11-clocks/rclock/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	rclock
 PORTVERSION=	2.7.10
