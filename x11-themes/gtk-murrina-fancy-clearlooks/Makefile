@@ -1,5 +1,5 @@
 # Created by: pneumann@gmail.com
-# $FreeBSD: x11-themes/gtk-murrina-fancy-clearlooks/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gtk-murrina-fancy-clearlooks
 PORTVERSION=	0.5
