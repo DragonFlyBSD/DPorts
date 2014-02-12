@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: deskutils/libopensync-plugin-synce-legacy/Makefile 336190 2013-12-11 18:28:10Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libopensync-plugin-synce
 PORTVERSION=	0.22.1
@@ -10,6 +10,9 @@ DISTNAME=	${PORTNAME}-rra-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	SynCE legacy plugin for the OpenSync framework
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-07
 
 LIB_DEPENDS=	libopensync.so:${PORTSDIR}/devel/libopensync022 \
 		librra.so:${PORTSDIR}/palm/synce-librra
