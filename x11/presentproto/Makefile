@@ -1,4 +1,4 @@
-# $FreeBSD: x11/presentproto/Makefile 336621 2013-12-16 11:11:09Z zeising $
+# $FreeBSD$
 
 PORTNAME=	presentproto
 PORTVERSION=	1.0
