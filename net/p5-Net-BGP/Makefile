@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: net/p5-Net-BGP/Makefile 336507 2013-12-15 08:55:51Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-BGP
 PORTVERSION=	0.14
