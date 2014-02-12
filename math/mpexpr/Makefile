@@ -1,5 +1,5 @@
 # Created by: Chuck Hein <geekdude@pacbell.net>
-# $FreeBSD: math/mpexpr/Makefile 332997 2013-11-06 14:50:24Z gahr $
+# $FreeBSD$
 
 PORTNAME=	mpexpr
 PORTVERSION=	1.1
