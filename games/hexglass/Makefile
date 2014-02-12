@@ -1,4 +1,4 @@
-# $FreeBSD: games/hexglass/Makefile 334497 2013-11-21 15:41:06Z makc $
+# $FreeBSD$
 
 PORTNAME=	hexglass
 PORTVERSION=	1.2.1
