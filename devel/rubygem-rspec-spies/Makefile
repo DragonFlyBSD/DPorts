@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-rspec-spies/Makefile 335528 2013-12-02 18:36:14Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	rspec-spies
 PORTVERSION=	2.1.4
