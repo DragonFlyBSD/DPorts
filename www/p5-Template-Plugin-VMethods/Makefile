@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Template-Plugin-VMethods/Makefile 338763 2014-01-05 13:05:56Z az $
+# $FreeBSD$
 
 PORTNAME=	Template-Plugin-VMethods
 PORTVERSION=	0.03
