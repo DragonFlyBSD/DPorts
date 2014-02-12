@@ -1,5 +1,5 @@
 # Created by: Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
-# $FreeBSD: comms/p5-SMS-Send-TW-HiAir/Makefile 341829 2014-01-30 10:27:43Z az $
+# $FreeBSD$
 
 PORTNAME=	SMS-Send-TW-HiAir
 PORTVERSION=	0.02
