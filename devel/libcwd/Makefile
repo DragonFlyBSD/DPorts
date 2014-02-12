@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/libcwd/Makefile 340076 2014-01-17 17:01:07Z miwi $
+# $FreeBSD$
 
 PORTNAME=	libcwd
 PORTVERSION=	1.0.4
