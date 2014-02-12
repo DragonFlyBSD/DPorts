@@ -1,5 +1,5 @@
 # Created by: paul@FreeBSD.org
-# $FreeBSD: net/ldapsdk/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ldapsdk
 PORTVERSION=	6.0.7
