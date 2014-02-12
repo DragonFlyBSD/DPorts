@@ -1,5 +1,5 @@
 # Created by: Carl Makin <carl@stagecraft.cx>
-# $FreeBSD: comms/xastir/Makefile 336176 2013-12-11 15:10:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	xastir
 PORTVERSION=	2.0.4
