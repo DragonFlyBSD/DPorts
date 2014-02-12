@@ -1,5 +1,5 @@
 # Created by: swallace
-# $FreeBSD: games/xinvaders/Makefile 337432 2013-12-25 17:10:20Z pawel $
+# $FreeBSD$
 
 PORTNAME=	xinvaders
 PORTVERSION=	2.1.1
