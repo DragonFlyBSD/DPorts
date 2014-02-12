@@ -1,5 +1,5 @@
 # Created by: Radim Kolar <hsn@sanatana.dharma>
-# $FreeBSD: www/trac-bzr/Makefile 341181 2014-01-26 14:31:18Z miwi $
+# $FreeBSD$
 
 PORTNAME=	bzr
 PORTVERSION=	20110228
