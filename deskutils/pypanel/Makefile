@@ -1,5 +1,5 @@
 # Created by: Florian Unglaub <flo@btw23.de>
-# $FreeBSD: deskutils/pypanel/Makefile 328649 2013-09-29 07:13:33Z mva $
+# $FreeBSD$
 
 PORTNAME=	pypanel
 PORTVERSION=	2.4
