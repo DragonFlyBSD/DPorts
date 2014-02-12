@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-# $FreeBSD: dns/p5-Net-DNS-TestNS/Makefile 328863 2013-09-30 20:20:27Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Net-DNS-TestNS
 PORTVERSION=	1.10
