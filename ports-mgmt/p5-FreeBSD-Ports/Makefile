@@ -1,5 +1,5 @@
 # Created by: Tom Hukins <tom@FreeBSD.org>
-# $FreeBSD: ports-mgmt/p5-FreeBSD-Ports/Makefile 332936 2013-11-06 01:18:34Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	FreeBSD-Ports
 PORTVERSION=	0.04
