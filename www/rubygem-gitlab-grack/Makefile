@@ -1,4 +1,4 @@
-# $FreeBSD: www/rubygem-gitlab-grack/Makefile 332054 2013-10-30 03:01:19Z swills $
+# $FreeBSD$
 
 PORTNAME=	gitlab-grack
 PORTVERSION=	1.0.1
