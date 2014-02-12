@@ -1,5 +1,5 @@
 # Created by: Albert Vernon <f3cun3c02@sneakemail.com>
-# $FreeBSD: archivers/plzip/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	plzip
 PORTVERSION=	1.1
