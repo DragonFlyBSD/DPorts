@@ -1,5 +1,5 @@
 # Created by: Phillip Neumann <pneumann@gmail.com>
-# $FreeBSD: x11-themes/icons-human-azul/Makefile 341394 2014-01-27 12:58:43Z miwi $
+# $FreeBSD$
 
 PORTNAME=	icons-human-azul
 PORTVERSION=	0.1
