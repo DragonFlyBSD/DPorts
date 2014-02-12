@@ -1,5 +1,5 @@
 # Created by: Quentin Stievenart <acieroid@awesom.eu>
-# $FreeBSD: devel/cpuflags/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	cpuflags
 PORTVERSION=	1.41
