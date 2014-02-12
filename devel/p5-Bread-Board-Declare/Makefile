@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Bread-Board-Declare/Makefile 329322 2013-10-04 15:03:59Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Bread-Board-Declare
 PORTVERSION=	0.15
