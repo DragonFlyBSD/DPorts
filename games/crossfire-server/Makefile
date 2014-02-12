@@ -1,5 +1,5 @@
 # Created by: Jasper Jongmans <j.jongmans@aprogas.net>
-# $FreeBSD: games/crossfire-server/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD$
 
 PORTNAME=	crossfire
 PORTVERSION=	1.70.0
