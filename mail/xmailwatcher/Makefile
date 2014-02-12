@@ -1,5 +1,5 @@
 # Created by: Harry Newton
-# $FreeBSD: mail/xmailwatcher/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xmailwatcher
 PORTVERSION=	1.6
