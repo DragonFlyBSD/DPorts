@@ -1,5 +1,5 @@
 # Created by: andrew@ugh.net.au
-# $FreeBSD: dns/p5-BIND-Conf_Parser/Makefile 332593 2013-11-03 07:46:27Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	BIND-Conf_Parser
 PORTVERSION=	0.95
