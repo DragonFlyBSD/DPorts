@@ -1,5 +1,5 @@
 
-$FreeBSD: net-mgmt/ehnt/files/patch-ehnt__main.c 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/net-mgmt/ehnt/files/patch-ehnt__main.c 340725 2014-01-22 17:40:44Z mat $
 
 --- ehnt_main.c.orig	Thu Oct  4 22:18:29 2001
 +++ ehnt_main.c	Mon May 24 12:03:14 2004

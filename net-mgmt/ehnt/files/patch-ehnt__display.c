@@ -1,5 +1,5 @@
 
-$FreeBSD: net-mgmt/ehnt/files/patch-ehnt__display.c 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/net-mgmt/ehnt/files/patch-ehnt__display.c 340725 2014-01-22 17:40:44Z mat $
 
 --- ehnt_display.c.orig
 +++ ehnt_display.c

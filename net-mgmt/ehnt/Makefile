@@ -1,5 +1,5 @@
 # Created by: marck@rinet.ru
-# $FreeBSD: net-mgmt/ehnt/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ehnt
 PORTVERSION=	0.3
