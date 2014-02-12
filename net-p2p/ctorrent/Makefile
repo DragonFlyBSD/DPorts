@@ -1,5 +1,5 @@
 # Created by: Florent Thoumie <flz@xbsd.org>
-# $FreeBSD: net-p2p/ctorrent/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ctorrent
 PORTVERSION=	3.3.2
@@ -15,6 +15,8 @@ GNU_CONFIGURE=	yes
 
 PLIST_FILES=	bin/ctorrent
 PORTDOCS=	README-DNH.TXT UserGuide
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
