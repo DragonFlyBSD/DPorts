@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/info_to_html/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD$
 
 PORTNAME=	info_to_html
 PORTVERSION=	0.9.6
