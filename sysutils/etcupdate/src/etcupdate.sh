@@ -25,7 +25,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: sysutils/etcupdate/src/etcupdate.sh 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/sysutils/etcupdate/src/etcupdate.sh 340872 2014-01-24 00:14:07Z mat $
 
 # This is a tool to manage updating files that are not updated as part
 # of 'make installworld' such as files in /etc.  Unlike other tools,
