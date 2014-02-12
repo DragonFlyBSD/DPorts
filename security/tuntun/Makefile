@@ -1,5 +1,5 @@
 # Created by: Anderson S. Ferreira <anderson@cnpm.embrapa.br>
-# $FreeBSD: security/tuntun/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	tuntun
 PORTVERSION=	0.4.0
