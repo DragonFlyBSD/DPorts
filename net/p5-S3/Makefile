@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net/p5-S3/Makefile 332868 2013-11-05 16:42:55Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	S3
 PORTVERSION=	20071102
