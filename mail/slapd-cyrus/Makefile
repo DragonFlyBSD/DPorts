@@ -1,5 +1,5 @@
 # Created by: Alexey V. Degtyarev
-# $FreeBSD: mail/slapd-cyrus/Makefile 334716 2013-11-24 11:23:42Z alexey $
+# $FreeBSD$
 
 PORTNAME=	slapd-cyrus
 PORTVERSION=	1.00
