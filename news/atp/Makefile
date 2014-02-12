@@ -1,5 +1,5 @@
 # Created by: Donald Burr <dburr@FreeBSD.org>
-# $FreeBSD: news/atp/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=		atp
 PORTVERSION=		1.50
