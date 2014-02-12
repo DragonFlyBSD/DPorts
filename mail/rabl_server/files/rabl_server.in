@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: mail/rabl_server/files/rabl_server.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/mail/rabl_server/files/rabl_server.in 340872 2014-01-24 00:14:07Z mat $
 # $Tecnik: ports/mail/rabl_server/files/rabl_server.sh.in,v 1.4 2005/12/09 19:55:53 itetcu Exp $
 #
 

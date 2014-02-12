@@ -1,5 +1,5 @@
 # Created by: Ion-Mihai "IOnut" Tetcu <itetcu@people.tecnik93.com>
-# $FreeBSD: mail/rabl_server/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	rabl_server
 PORTVERSION=	1.0.0
