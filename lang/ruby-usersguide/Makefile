@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: lang/ruby-usersguide/Makefile 341096 2014-01-25 20:47:28Z swills $
+# $FreeBSD$
 
 PORTNAME=	usersguide
 PORTVERSION=	20051121
