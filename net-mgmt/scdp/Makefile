@@ -1,5 +1,5 @@
 # Created by: arved@FreeBSD.org
-# $FreeBSD: net-mgmt/scdp/Makefile 341125 2014-01-25 22:11:18Z bapt $
+# $FreeBSD$
 
 PORTNAME=	scdp
 PORTVERSION=	1.0.b
