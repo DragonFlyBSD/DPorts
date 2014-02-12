@@ -1,5 +1,5 @@
 # Created by: KANOU Hiroki <kanou@mil.allnet.ne.jp>
-# $FreeBSD: graphics/autotrace/Makefile 340632 2014-01-21 18:31:31Z antoine $
+# $FreeBSD$
 
 PORTNAME=	autotrace
 PORTVERSION=	0.31.1
