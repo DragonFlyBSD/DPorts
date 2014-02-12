@@ -1,5 +1,5 @@
 # Created by: Tomoyuki Sakurai <cherry@trombik.org>
-# $FreeBSD: misc/p5-Locale-US/Makefile 333276 2013-11-09 06:43:33Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Locale-US
 PORTVERSION=	2.112.150
