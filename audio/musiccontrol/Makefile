@@ -1,5 +1,5 @@
 # Created by: Christian Laursen <xi@borderworlds.dk>
-# $FreeBSD: audio/musiccontrol/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	musiccontrol
 PORTVERSION=	0.3
