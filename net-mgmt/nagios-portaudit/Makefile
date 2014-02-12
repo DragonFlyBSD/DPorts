@@ -1,5 +1,5 @@
 # Created by: rea-fbsd@codelabs.ru
-# $FreeBSD: net-mgmt/nagios-portaudit/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	portaudit
 PORTVERSION=	1.0
