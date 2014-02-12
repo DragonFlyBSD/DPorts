@@ -1,5 +1,5 @@
 # Created by: Peter Johnson <johnson.peter@gmail.com>
-# $FreeBSD: devel/autodist/Makefile 341393 2014-01-27 12:57:39Z bapt $
+# $FreeBSD$
 
 PORTNAME=	autodist
 PORTVERSION=	1.5
