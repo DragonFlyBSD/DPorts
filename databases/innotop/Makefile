@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@f2o.org>
-# $FreeBSD: databases/innotop/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD$
 
 PORTNAME=	innotop
 PORTVERSION=	1.9.1
