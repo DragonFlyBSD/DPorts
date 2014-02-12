@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: dns/p5-Net-RBLClient/Makefile 342151 2014-02-01 14:41:36Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Net-RBLClient
 PORTVERSION=	0.5
