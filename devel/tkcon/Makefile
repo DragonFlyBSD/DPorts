@@ -1,5 +1,5 @@
 # Created by: wghicks@bellsouth.net
-# $FreeBSD: devel/tkcon/Makefile 328363 2013-09-26 14:12:56Z gahr $
+# $FreeBSD$
 
 PORTNAME=	tkcon
 PORTVERSION=	2.5
