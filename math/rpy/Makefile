@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: math/rpy/Makefile 333659 2013-11-13 08:19:34Z bf $
+# $FreeBSD$
 
 PORTNAME=	rpy
 PORTVERSION=	1.0.3
