@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/fmars/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	fmars
 PORTVERSION=	0.0.207
@@ -9,6 +9,9 @@ MASTER_SITES=	http://users.v-lo.krakow.pl/~michal/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Fast Memory Array Redcode Simulator
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-07
 
 LICENSE=	GPLv2
 
