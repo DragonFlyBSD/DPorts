@@ -1,5 +1,5 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: security/py-python-registry/Makefile 339939 2014-01-16 17:18:23Z antoine $
+# $FreeBSD$
 
 PORTNAME=	python-registry
 PORTVERSION=	1.0.1
