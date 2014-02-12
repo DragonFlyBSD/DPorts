@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: devel/bin86/Makefile 332186 2013-10-30 22:45:37Z danilo $
+# $FreeBSD$
 
 PORTNAME=	bin86
 PORTVERSION=	0.16.19
