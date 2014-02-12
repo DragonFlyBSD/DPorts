@@ -1,5 +1,5 @@
 # Created by: nivit@users.sourceforge.net
-# $FreeBSD: x11-toolkits/tkshape/Makefile 339211 2014-01-09 08:59:44Z gahr $
+# $FreeBSD$
 
 PORTNAME=		tkshape
 PORTVERSION=		0.4

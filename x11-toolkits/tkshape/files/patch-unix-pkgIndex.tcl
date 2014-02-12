@@ -1,4 +1,4 @@
-$FreeBSD: x11-toolkits/tkshape/files/patch-unix-pkgIndex.tcl 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/x11-toolkits/tkshape/files/patch-unix-pkgIndex.tcl 340725 2014-01-22 17:40:44Z mat $
 --- unix/pkgIndex.tcl	Mon Sep 11 16:27:28 2000
 +++ unix/pkgIndex.tcl.new	Sun Mar 14 13:29:27 2004
 @@ -5,4 +5,4 @@

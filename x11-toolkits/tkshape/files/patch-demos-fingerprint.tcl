@@ -1,4 +1,4 @@
-$FreeBSD: x11-toolkits/tkshape/files/patch-demos-fingerprint.tcl 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/x11-toolkits/tkshape/files/patch-demos-fingerprint.tcl 340725 2014-01-22 17:40:44Z mat $
 --- demos/fingerprint.tcl	Mon Sep 11 12:01:58 2000
 +++ demos/fingerprint.tcl.new	Sun Mar 14 14:37:13 2004
 @@ -5,9 +5,9 @@
