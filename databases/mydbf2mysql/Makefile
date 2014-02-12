@@ -1,5 +1,5 @@
 # Created by: Andrey Polyakov <andrey.polyakov@unix.net>
-# $FreeBSD: databases/mydbf2mysql/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	mydbf2mysql
 PORTVERSION=	0.8.4.5
