@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@python.or.kr>
-# $FreeBSD: converters/py-iconv/Makefile 340448 2014-01-20 18:53:03Z antoine $
+# $FreeBSD$
 
 PORTNAME=	iconv
 PORTVERSION=	1.0
