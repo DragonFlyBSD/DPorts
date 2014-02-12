@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
-# $FreeBSD: x11/xnee/Makefile 341986 2014-01-31 12:32:35Z pawel $
+# $FreeBSD$
 
 PORTNAME=	xnee
 PORTVERSION=	3.17
