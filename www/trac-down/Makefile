@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
-# $FreeBSD: www/trac-down/Makefile 341183 2014-01-26 14:31:44Z miwi $
+# $FreeBSD$
 
 PORTNAME=	down
 PORTVERSION=	0.0.1.r11
