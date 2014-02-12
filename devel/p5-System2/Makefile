@@ -1,5 +1,5 @@
 # Created by: tobez
-# $FreeBSD: devel/p5-System2/Makefile 332205 2013-10-31 07:36:25Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	System2
 PORTVERSION=	0.84
