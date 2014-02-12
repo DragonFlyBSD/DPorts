@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: security/crank/Makefile 342014 2014-01-31 16:24:01Z miwi $
+# $FreeBSD$
 
 PORTNAME=	crank
 PORTVERSION=	0.2.1
