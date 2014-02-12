@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: graphics/skencil/Makefile 338954 2014-01-06 23:24:46Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	skencil
 PORTVERSION=	1.0.a784
