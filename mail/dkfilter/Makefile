@@ -1,5 +1,5 @@
 # Created by: Yoshisato YANAGISAWA
-# $FreeBSD: mail/dkfilter/Makefile 342300 2014-02-02 14:33:37Z miwi $
+# $FreeBSD$
 
 PORTNAME=	dkfilter
 PORTVERSION=	0.11
