@@ -1,5 +1,5 @@
 # Created by: Aldis Berjoza <aldis@bsdroot.lv>
-# $FreeBSD: devel/violet/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	violet
 PORTVERSION=	0.21.1
@@ -23,14 +23,13 @@ NO_BUILD=	YES
 PLIST_FILES=	%%JAVASHAREDIR%%/${PORTNAME}/com.horstmann.violet.jar bin/${PORTNAME}
 PLIST_DIRS=	%%JAVASHAREDIR%%/${PORTNAME}
 
-NO_STAGE=	yes
 pre-install:
 	${ECHO} "#!/bin/sh" > ${WRKDIR}/violet.sh
 	${ECHO} "${PREFIX}/bin/java -jar ${JAVASHAREDIR}/${PORTNAME}/com.horstmann.violet.jar" >> ${WRKDIR}/violet.sh
 
 do-install:
-	${MKDIR} ${JAVASHAREDIR}/${PORTNAME}
-	${INSTALL_DATA} ${DISTDIR}/com.horstmann.violet-${PORTVERSION}.jar ${JAVASHAREDIR}/${PORTNAME}/com.horstmann.violet.jar
-	${INSTALL_SCRIPT} ${WRKDIR}/violet.sh ${PREFIX}/bin/${PORTNAME}
+	${MKDIR} ${STAGEDIR}${JAVASHAREDIR}/${PORTNAME}
+	${INSTALL_DATA} ${DISTDIR}/com.horstmann.violet-${PORTVERSION}.jar ${STAGEDIR}${JAVASHAREDIR}/${PORTNAME}/com.horstmann.violet.jar
+	${INSTALL_SCRIPT} ${WRKDIR}/violet.sh ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 
 .include <bsd.port.mk>
