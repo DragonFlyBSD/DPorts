@@ -1,5 +1,5 @@
 # Created by: Bruce M. Simpson <bms@FreeBSD.org>
-# $FreeBSD: devel/k8048/Makefile 334077 2013-11-17 11:16:59Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	k8048
 PORTVERSION=	2.15
