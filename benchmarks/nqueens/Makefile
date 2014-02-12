@@ -1,5 +1,5 @@
 # Created by: NAKAJI Hiroyuki <nakaji@jp.freebsd.org>
-# $FreeBSD: benchmarks/nqueens/Makefile 338732 2014-01-05 01:22:56Z bapt $
+# $FreeBSD$
 
 PORTNAME=	nqueens
 PORTVERSION=	1.0
