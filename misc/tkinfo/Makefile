@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: misc/tkinfo/Makefile 333000 2013-11-06 14:57:53Z gahr $
+# $FreeBSD$
 
 PORTNAME=	tkinfo
 PORTVERSION=	2.8
