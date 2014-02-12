@@ -1,5 +1,5 @@
 # Created by: David Holm <david@realityrift.com>
-# $FreeBSD: devel/adabooch-doc-html/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	adabooch-doc
 PORTVERSION=	20030309
