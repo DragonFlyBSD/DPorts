@@ -1,5 +1,5 @@
 # Created by: Bruce A. Mah <bmah@ca.sandia.gov>
-# $FreeBSD: x11/dxpc/Makefile 338935 2014-01-06 21:15:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	dxpc
 PORTVERSION=	3.9.2
