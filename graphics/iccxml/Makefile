@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/iccxml/Makefile 328208 2013-09-24 22:26:44Z bsam $
+# $FreeBSD$
 
 PORTNAME=	iccxml
 PORTVERSION=	0.9.6
