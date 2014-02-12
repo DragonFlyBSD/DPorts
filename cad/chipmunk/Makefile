@@ -1,5 +1,5 @@
 # Created by: janek@gaja.ipan.lublin.pl
-# $FreeBSD: cad/chipmunk/Makefile 327711 2013-09-20 15:58:41Z bapt $
+# $FreeBSD$
 
 PORTNAME=	chipmunk
 PORTVERSION=	5.65
