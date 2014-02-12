@@ -1,8 +1,9 @@
 # Created by: Matthias Petermann <matthias@petermann-it.de>
-# $FreeBSD: finance/tryton/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	tryton
 PORTVERSION=	2.4.7
+PORTREVISION=	1
 CATEGORIES=	finance python
 MASTER_SITES=	http://downloads.tryton.org/2.4/
 
@@ -18,8 +19,11 @@ CONFLICTS=	tryton28-2.8.*
 
 USES=		desktop-file-utils gettext
 USE_PYTHON=	2
-USE_PYDISTUTILS=easy_install
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 USE_GNOME=	gtk20 pygtk2
+
+PLIST_FILES=	share/applications/tryton.desktop share/pixmaps/tryton-icon.png
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/tryton.desktop ${STAGEDIR}${PREFIX}/share/applications/tryton.desktop
