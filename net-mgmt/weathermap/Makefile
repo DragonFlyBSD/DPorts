@@ -1,5 +1,5 @@
 # Created by: Felippe de Meirelles Motta <lippe@freebsdbrasil.com.br>
-# $FreeBSD: net-mgmt/weathermap/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	weathermap
 PORTVERSION=	1.1.1
