@@ -1,5 +1,5 @@
 # Created by: Devon H. O'Dell <devon.odell@coyotepoint.com>
-# $FreeBSD: comms/serialoverip/Makefile 334137 2013-11-18 00:37:15Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	serialoverip
 PORTVERSION=	1.0
