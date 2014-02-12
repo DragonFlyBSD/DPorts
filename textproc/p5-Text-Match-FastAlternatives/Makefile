@@ -1,5 +1,5 @@
 # Created by: Kevin Lo <kevlo@FreeBSD.org>
-# $FreeBSD: textproc/p5-Text-Match-FastAlternatives/Makefile 340908 2014-01-24 14:59:10Z mat $
+# $FreeBSD$
 
 PORTNAME=	Text-Match-FastAlternatives
 PORTVERSION=	1.04
