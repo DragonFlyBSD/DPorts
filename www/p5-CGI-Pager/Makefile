@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-CGI-Pager/Makefile 338765 2014-01-05 13:18:23Z az $
+# $FreeBSD$
 
 PORTNAME=	CGI-Pager
 PORTVERSION=	1.00
