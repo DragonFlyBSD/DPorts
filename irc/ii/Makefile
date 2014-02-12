@@ -1,5 +1,5 @@
 # Created by: Julien Laffaye <kimelto@gmail.com>
-# $FreeBSD: irc/ii/Makefile 327736 2013-09-20 18:44:49Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ii
 PORTVERSION=	1.7
@@ -21,6 +21,9 @@ MAKE_ARGS=	-E CC
 .endif
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS EXAMPLES 
+
 .include <bsd.port.options.mk>
 
 do-install:
