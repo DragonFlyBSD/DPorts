@@ -1,4 +1,4 @@
-# $FreeBSD: mail/sma/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	sma
 PORTVERSION=	1.4
@@ -13,6 +13,8 @@ COMMENT=	Program that analyses Sendmail log entries
 ALL_TARGET=	sma
 SAMPLEFILES=	sma.conf
 DOCSFILES=	BUGS COPYRIGHT HISTORY README TODO
+
+OPTIONS_DEFINE=	DOCS EXAMPLES 
 
 .include <bsd.port.options.mk>
 
