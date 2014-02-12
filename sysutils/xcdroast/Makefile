@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <Kai_Allard_Liao@gmx.de>
-# $FreeBSD: sysutils/xcdroast/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	xcdroast
 PORTVERSION=	0.98.a.16
