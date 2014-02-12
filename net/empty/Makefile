@@ -1,5 +1,5 @@
 # Created by: Mikhail Zakharov <zmey20000@yahoo.com>
-# $FreeBSD: net/empty/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	empty
 PORTVERSION=	0.6.18b
