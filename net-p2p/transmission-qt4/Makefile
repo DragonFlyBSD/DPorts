@@ -1,4 +1,4 @@
-# $FreeBSD: net-p2p/transmission-qt4/Makefile 338392 2014-01-01 19:46:53Z crees $
+# $FreeBSD$
 
 PORTREVISION=	0
 PKGNAMESUFFIX=	-qt4
