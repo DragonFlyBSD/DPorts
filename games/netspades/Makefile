@@ -1,5 +1,5 @@
 # Created by: Frank Laszlo <laszlof@freebsdmatrix.net>
-# $FreeBSD: games/netspades/Makefile 337413 2013-12-25 13:13:02Z pawel $
+# $FreeBSD$
 
 PORTNAME=	NetSpades
 PORTVERSION=	4.2.0
