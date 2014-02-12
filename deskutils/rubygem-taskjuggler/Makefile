@@ -1,5 +1,5 @@
 # Created by: Dean Povey <povey@wedgetail.com>
-# $FreeBSD: deskutils/rubygem-taskjuggler/Makefile 335714 2013-12-05 20:29:18Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	taskjuggler
 PORTVERSION=	3.5.0
