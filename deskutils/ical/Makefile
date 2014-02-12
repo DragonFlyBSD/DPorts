@@ -1,5 +1,5 @@
 # Created by: Eric L. Hernes <erich@FreeBSD.org>
-# $FreeBSD: deskutils/ical/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ical
 PORTVERSION=	2.2
