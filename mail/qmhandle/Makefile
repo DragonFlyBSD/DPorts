@@ -1,5 +1,5 @@
 # Created by: petef
-# $FreeBSD: mail/qmhandle/Makefile 327710 2013-09-20 15:58:09Z bdrewery $
+# $FreeBSD$
 
 PORTNAME=	qmhandle
 PORTVERSION=	1.3.2
@@ -16,13 +16,12 @@ OPTIONS_DEFINE=	DOCS
 
 USES=		qmail:run perl5
 
-NO_STAGE=	yes
 NO_BUILD=	yes
 USE_BZIP2=	yes
 
 PORTDOCS=	HISTORY README
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 post-patch:
 	@${REINPLACE_CMD} -e 's,^#!/usr/bin/perl,#!${PERL},g' \
@@ -33,15 +32,13 @@ post-patch:
 		${WRKSRC}/qmHandle.conf.sample
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/qmHandle ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/qmHandle.conf.sample ${PREFIX}/etc
-	[ -f ${PREFIX}/etc/qmHandle.conf ] || \
-		${INSTALL_DATA} -m 0644 ${WRKSRC}/qmHandle.conf.sample ${PREFIX}/etc/qmHandle.conf
+	${INSTALL_SCRIPT} ${WRKSRC}/qmHandle ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/qmHandle.conf.sample ${STAGEDIR}${PREFIX}/etc
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for file in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${file} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${file} ${STAGEDIR}${DOCSDIR}
 .endfor
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
