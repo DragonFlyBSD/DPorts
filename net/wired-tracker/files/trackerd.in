@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: net/wired-tracker/files/trackerd.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/net/wired-tracker/files/trackerd.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: trackerd
 # REQUIRE: 
