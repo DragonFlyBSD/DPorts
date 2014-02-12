@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: audio/festvox-ked16/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD$
 
 PORTNAME=	festvox-ked16
 PORTVERSION=	1.4.0
