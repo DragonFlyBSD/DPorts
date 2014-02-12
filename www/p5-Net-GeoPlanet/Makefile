@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@exit2shell.com>
-# $FreeBSD: www/p5-Net-GeoPlanet/Makefile 338763 2014-01-05 13:05:56Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-GeoPlanet
 PORTVERSION=	0.2
