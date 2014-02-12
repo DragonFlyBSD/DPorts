@@ -1,15 +1,16 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: astro/py-astLib/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD$
 
 PORTNAME=	astLib
-PORTVERSION=	0.6.1
-PORTREVISION=	2
+PORTVERSION=	0.7.0
 CATEGORIES=	astro python
 MASTER_SITES=	SF
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Astronomy modules for Python
+
+LICENSE=	LGPL21
 
 BUILD_DEPENDS=	${PYNUMPY} \
 		${PKGNAMEPREFIX}scipy>=0.7.0:${PORTSDIR}/science/py-scipy \
@@ -18,7 +19,7 @@ BUILD_DEPENDS=	${PYNUMPY} \
 		${PKGNAMEPREFIX}matplotlib>=0.98:${PORTSDIR}/math/py-matplotlib
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USE_PYTHON=	yes
+USE_PYTHON=		yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_AUTOPLIST=	yes
 
