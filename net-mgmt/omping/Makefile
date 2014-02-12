@@ -1,5 +1,5 @@
 # Created by: Frank Wall <fw@moov.de>
-# $FreeBSD: net-mgmt/omping/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	omping
 PORTVERSION=	0.0.4
