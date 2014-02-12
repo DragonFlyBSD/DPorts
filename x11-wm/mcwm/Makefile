@@ -1,5 +1,5 @@
 # Created by: Jakub Lach <jakub_lach@mailplus.pl>
-# $FreeBSD: x11-wm/mcwm/Makefile 327786 2013-09-21 00:01:16Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mcwm
 PORTVERSION=	20130209
@@ -44,6 +44,8 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/hidden ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/hidden.man \
 		${MAN1PREFIX}/man/man1/hidden.1
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
