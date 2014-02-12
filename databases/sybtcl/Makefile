@@ -1,5 +1,5 @@
 # Created by: mi
-# $FreeBSD: databases/sybtcl/Makefile 336187 2013-12-11 18:08:52Z bapt $
+# $FreeBSD$
 
 PORTNAME=	sybtcl
 PORTVERSION=	3.0rc2
