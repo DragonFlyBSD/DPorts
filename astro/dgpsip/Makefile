@@ -1,5 +1,5 @@
 # Created by: Daniel Baker <dbaker@FreeBSD.org>
-# $FreeBSD: astro/dgpsip/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	dgpsip
 PORTVERSION=	1.35
