@@ -1,5 +1,5 @@
 # Created by: Florian Smeets <flo@smeets.im>
-# $FreeBSD: sysutils/pecl-proctitle/Makefile 340835 2014-01-23 16:00:14Z miwi $
+# $FreeBSD$
 
 PORTNAME=	proctitle
 PORTVERSION=	0.1.2
