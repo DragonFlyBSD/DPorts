@@ -1,5 +1,5 @@
 # Created by: Takuya Tsuchida <tsucchi@cpan.org>
-# $FreeBSD: devel/p5-Test-Synopsis/Makefile 338867 2014-01-06 12:18:47Z az $
+# $FreeBSD$
 
 PORTNAME=	Test-Synopsis
 PORTVERSION=	0.06
