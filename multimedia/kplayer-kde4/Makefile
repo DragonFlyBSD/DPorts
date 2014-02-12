@@ -1,5 +1,5 @@
 # Created by: Stefan Eßer <se@FreeBSD.org>
-# $FreeBSD: multimedia/kplayer-kde4/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD$
 
 PORTNAME=	kplayer
 PORTVERSION=	0.7
