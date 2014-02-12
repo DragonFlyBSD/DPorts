@@ -1,5 +1,5 @@
 # Created by: Chris D. Faulhaber <jedgar@FreeBSD.org>
-# $FreeBSD: graphics/pngcrush/Makefile 327901 2013-09-22 23:18:58Z eadler $
+# $FreeBSD$
 
 PORTNAME=	pngcrush
 PORTVERSION=	1.7.67
