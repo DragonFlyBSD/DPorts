@@ -1,5 +1,5 @@
 # Created by: Bartlomiej Rutkowski <r@robakdesign.com>
-# $FreeBSD: www/hastymail2/Makefile 334868 2013-11-25 17:13:37Z adamw $
+# $FreeBSD$
 
 PORTNAME=	hastymail2
 PORTVERSION=	1.1
