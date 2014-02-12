@@ -1,5 +1,5 @@
 
-$FreeBSD: security/apg/files/patch-apg.c 304744 2012-09-23 14:59:36Z matthew $
+$FreeBSD: head/security/apg/files/patch-apg.c 304744 2012-09-23 14:59:36Z matthew $
 
 --- apg.c.orig
 +++ apg.c

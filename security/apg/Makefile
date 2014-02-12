@@ -1,5 +1,5 @@
 # Created by: Peter Pentchev <roam@FreeBSD.org>
-# $FreeBSD: security/apg/Makefile 328443 2013-09-27 08:44:25Z matthew $
+# $FreeBSD$
 
 PORTNAME=	apg
 PORTVERSION=	2.3.0b
