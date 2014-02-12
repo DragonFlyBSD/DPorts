@@ -1,4 +1,4 @@
-# $FreeBSD: lang/ironpython/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	ironpython
 PORTVERSION=	2.7.4
