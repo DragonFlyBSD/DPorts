@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/xorgramana/Makefile 330576 2013-10-17 00:01:16Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	xorgramana
 PORTVERSION=	0.0.8
