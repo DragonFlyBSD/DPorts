@@ -1,5 +1,5 @@
 # Created by: Choe, Cheng-Dae
-# $FreeBSD: devel/jep/Makefile 340503 2014-01-21 00:04:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	jep
 PORTVERSION=	2.4
