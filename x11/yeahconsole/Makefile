@@ -1,5 +1,5 @@
 # Created by: Satoshi Asami <asami@FreeBSD.org>
-# $FreeBSD: x11/yeahconsole/Makefile 333301 2013-11-09 15:27:25Z danfe $
+# $FreeBSD$
 
 PORTNAME=	yeahconsole
 PORTVERSION=	0.3.4
