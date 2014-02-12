@@ -1,5 +1,5 @@
 # Created by: Antonios Anastasiadis <antonakis@gmail.com>
-# $FreeBSD: ports-mgmt/xps/Makefile 337884 2013-12-28 17:39:48Z bapt $
+# $FreeBSD$
 
 PORTNAME=	xps
 PORTVERSION=	0.5.2
