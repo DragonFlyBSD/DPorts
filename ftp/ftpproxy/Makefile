@@ -1,5 +1,5 @@
 # Created by: Philippe Le Berre <philippe@le-berre.com>
-# $FreeBSD: ftp/ftpproxy/Makefile 341097 2014-01-25 20:47:31Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ftpproxy
 PORTVERSION=	1.2.3
