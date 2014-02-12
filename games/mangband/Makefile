@@ -1,5 +1,5 @@
 # Created by: driedfruit
-# $FreeBSD: games/mangband/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	mangband
 PORTVERSION=	1.1.2
@@ -12,8 +12,8 @@ COMMENT=	Free online multiplayer real-time roguelike game
 ALL_TARGET=	mangclient mangband
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 GNU_CONFIGURE=	yes
-USES=		ncurses
-USE_GMAKE=	yes
+USES=		dos2unix gmake ncurses
+DOS2UNIXFILES=	${WRKSRC}/client/main-sdl.c
 
 MAKE_ARGS=	"DATADIR=${DATADIR}"
 
