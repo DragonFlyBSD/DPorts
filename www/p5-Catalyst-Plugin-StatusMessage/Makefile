@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Catalyst-Plugin-StatusMessage/Makefile 338763 2014-01-05 13:05:56Z az $
+# $FreeBSD$
 
 PORTNAME=	Catalyst-Plugin-StatusMessage
 PORTVERSION=	1.002000
