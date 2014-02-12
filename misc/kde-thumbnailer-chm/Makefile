@@ -1,4 +1,4 @@
-# $FreeBSD: misc/kde-thumbnailer-chm/Makefile 331383 2013-10-23 13:08:41Z makc $
+# $FreeBSD$
 
 PORTNAME=	kde-thumbnailer-chm
 PORTVERSION=	0.2
