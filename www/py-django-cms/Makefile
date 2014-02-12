@@ -1,5 +1,5 @@
 # Created by: Matthew X. Economou <xenophon+fbsdports@irtnog.org>
-# $FreeBSD: www/py-django-cms/Makefile 341750 2014-01-29 15:27:52Z miwi $
+# $FreeBSD$
 
 PORTNAME=	django-cms
 PORTVERSION=	2.4.1
