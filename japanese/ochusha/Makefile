@@ -1,5 +1,5 @@
 # Created by: sgr
-# $FreeBSD: japanese/ochusha/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ochusha
 PORTVERSION=	0.5.8.2
