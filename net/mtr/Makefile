@@ -1,5 +1,5 @@
 # Created by: Bill Fumerola <billf@chc-chimes.com>
-# $FreeBSD: net/mtr/Makefile 330010 2013-10-10 14:36:49Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	mtr
 PORTVERSION=	0.85
