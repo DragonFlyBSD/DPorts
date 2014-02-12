@@ -1,5 +1,5 @@
 # Created by: Jim Mock <jim@FreeBSD.org>
-# $FreeBSD: misc/asbutton/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	asbutton
 PORTVERSION=	0.3
@@ -9,6 +9,9 @@ MASTER_SITES=	http://www.tigr.net/afterstep/download/asbutton/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Dockapp that displays 4 or 9 buttons to run apps of your choice
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-07
 
 USE_XORG=	x11 xpm
 ALL_TARGET=	asbutton
