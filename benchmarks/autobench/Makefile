@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: benchmarks/autobench/Makefile 327708 2013-09-20 15:52:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	autobench
 PORTVERSION=	2.1.2
