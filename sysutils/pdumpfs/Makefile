@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: sysutils/pdumpfs/Makefile 342206 2014-02-01 19:15:00Z antoine $
+# $FreeBSD$
 
 PORTNAME=	pdumpfs
 PORTVERSION=	1.3
