@@ -1,5 +1,5 @@
 # Created by: Shigeyuki FUKUSHIMA <shige@FreeBSD.org>
-# $FreeBSD: japanese/lynx-current/Makefile 334022 2013-11-16 18:57:51Z bsam $
+# $FreeBSD$
 
 PORTNAME=	lynx
 DISTVERSION=	${VERSION}.${MINOR_VERSION:S/.//}
