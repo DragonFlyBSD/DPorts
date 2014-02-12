@@ -1,5 +1,5 @@
 # Created by: Douglas Thrift <douglas@douglasthrift.net>
-# $FreeBSD: devel/p5-POSIX-strptime/Makefile 331095 2013-10-21 06:58:26Z culot $
+# $FreeBSD$
 
 PORTNAME=	POSIX-strptime
 PORTVERSION=	0.10
