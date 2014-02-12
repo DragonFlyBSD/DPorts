@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: deskutils/ljit/Makefile 342285 2014-02-02 13:26:12Z antoine $
+# $FreeBSD$
 
 PORTNAME=	ljit
 PORTVERSION=	0.2.5
