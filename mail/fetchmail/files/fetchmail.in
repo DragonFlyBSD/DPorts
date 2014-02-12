@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: mail/fetchmail/files/fetchmail.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/mail/fetchmail/files/fetchmail.in 340872 2014-01-24 00:14:07Z mat $
 #
 
 # PROVIDE: fetchmail

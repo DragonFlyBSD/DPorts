@@ -3,7 +3,7 @@
 # Wrapper for the real fetchmailconf.  Checks whether Python and Tkinter are
 # installed, and runs the real fetchmailconf or alerts the user, as appropriate.
 #
-# $FreeBSD: mail/fetchmail/files/fetchmailconf.in 313331 2013-03-03 08:13:07Z beech $
+# $FreeBSD: head/mail/fetchmail/files/fetchmailconf.in 313331 2013-03-03 08:13:07Z beech $
 
 LOCALBASE=%%LOCALBASE%%
 
