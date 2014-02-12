@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rclint/Makefile 337999 2013-12-29 14:50:31Z crees $
+# $FreeBSD$
 
 PORTNAME=	rclint
 PORTVERSION=	0.0.6

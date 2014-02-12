@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: devel/rclint/files/rclint.in 306289 2012-10-22 20:47:40Z crees $
+# $FreeBSD: head/devel/rclint/files/rclint.in 306289 2012-10-22 20:47:40Z crees $
 #
 
 exec python %%DATADIR%%/rclint.py ${1+"$@"}
