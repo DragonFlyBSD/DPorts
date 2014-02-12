@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: games/corsix-th/Makefile 338447 2014-01-02 15:23:42Z madpilot $
+# $FreeBSD$
 
 PORTNAME=	corsixth
 PORTVERSION=	0.30
