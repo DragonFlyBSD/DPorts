@@ -1,5 +1,5 @@
 # Created by: db
-# $FreeBSD: science/gsmc/Makefile 338191 2013-12-30 22:50:38Z db $
+# $FreeBSD$
 
 PORTNAME=	gsmc
 PORTVERSION=	1.1
