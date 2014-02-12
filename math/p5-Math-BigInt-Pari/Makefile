@@ -1,5 +1,5 @@
 # Created by: Andrey <gugu@zoo.rambler.ru>
-# $FreeBSD: math/p5-Math-BigInt-Pari/Makefile 332813 2013-11-05 06:56:18Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Math-BigInt-Pari
 PORTVERSION=	1.17
