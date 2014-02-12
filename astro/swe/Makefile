@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: astro/swe/Makefile 333428 2013-11-10 19:47:59Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	swe
 PORTVERSION=	1.80.00
