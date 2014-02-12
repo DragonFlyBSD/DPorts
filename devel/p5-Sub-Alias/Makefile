@@ -1,5 +1,5 @@
 # Created by: Peter Vereshagin <peter@vereshagin.org>
-# $FreeBSD: devel/p5-Sub-Alias/Makefile 341953 2014-01-31 09:15:24Z az $
+# $FreeBSD$
 
 PORTNAME=	Sub-Alias
 PORTVERSION=	0.03
