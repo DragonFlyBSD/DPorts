@@ -1,4 +1,4 @@
-# $FreeBSD: net-p2p/ed2k/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ed2k
 PORTVERSION=	1.4
