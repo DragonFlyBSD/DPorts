@@ -1,5 +1,5 @@
 # Created by: Alex Hayward <xelah@xelah.com>
-# $FreeBSD: graphics/pngquant/Makefile 329758 2013-10-08 05:47:27Z ak $
+# $FreeBSD$
 
 PORTNAME=	pngquant
 PORTVERSION=	2.0.0
