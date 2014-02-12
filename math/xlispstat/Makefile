@@ -1,5 +1,5 @@
 # Created by: Eric L. Hernes <erich@rrnet.com>
-# $FreeBSD: math/xlispstat/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD$
 
 PORTNAME=	xlispstat
 PORTVERSION=	3.52.23
