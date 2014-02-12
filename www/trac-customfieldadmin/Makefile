@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: www/trac-customfieldadmin/Makefile 337578 2013-12-26 17:54:58Z wg $
+# $FreeBSD$
 
 PORTNAME=	customfieldadmin
 PORTVERSION=	0.2.2.6485
