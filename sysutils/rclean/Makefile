@@ -1,5 +1,5 @@
 # Created by: Lapo Luchini <lapo@lapo.it>
-# $FreeBSD: sysutils/rclean/Makefile 340985 2014-01-25 05:34:12Z ak $
+# $FreeBSD$
 
 PORTNAME=	rclean
 PORTVERSION=	1.14
