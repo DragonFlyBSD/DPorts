@@ -1,5 +1,5 @@
 # Created by: Justin Hawkins <justin@hawkins.id.au>
-# $FreeBSD: www/twiki/Makefile 331423 2013-10-23 20:45:10Z ak $
+# $FreeBSD$
 
 PORTNAME=	twiki
 PORTVERSION=	5.1.4
