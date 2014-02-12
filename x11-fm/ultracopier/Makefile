@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: x11-fm/ultracopier/Makefile 327780 2013-09-20 23:49:39Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ultracopier
 PORTVERSION=	0.2.0.16
