@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: emulators/advancemame/Makefile 327721 2013-09-20 16:43:52Z bapt $
+# $FreeBSD$
 
 PORTNAME=	advancemame
 PORTVERSION=	1.2
