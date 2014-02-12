@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@rubick>
-# $FreeBSD: textproc/rubygem-albino/Makefile 332050 2013-10-30 02:57:17Z swills $
+# $FreeBSD$
 
 PORTNAME=	albino
 PORTVERSION=	1.3.3
