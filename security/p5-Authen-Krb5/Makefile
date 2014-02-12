@@ -1,5 +1,5 @@
 # Created by: ajk@iu.edu
-# $FreeBSD: security/p5-Authen-Krb5/Makefile 332949 2013-11-06 07:39:31Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Authen-Krb5
 PORTVERSION=	1.9
