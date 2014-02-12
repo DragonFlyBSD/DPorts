@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: devel/p5-JSON-Path/Makefile 332871 2013-11-05 16:55:31Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	JSON-Path
 PORTVERSION=	0.205
