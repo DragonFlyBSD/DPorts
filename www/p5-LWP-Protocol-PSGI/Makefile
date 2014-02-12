@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-LWP-Protocol-PSGI/Makefile 341723 2014-01-29 12:22:39Z miwi $
+# $FreeBSD$
 
 PORTNAME=	LWP-Protocol-PSGI
 PORTVERSION=	0.06
