@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: devel/py-freebsd/Makefile 340926 2014-01-24 19:16:13Z mva $
+# $FreeBSD$
 
 PORTNAME=	freebsd
 PORTVERSION=	0.9.3
