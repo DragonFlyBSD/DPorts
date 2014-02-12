@@ -1,5 +1,5 @@
 # Created by: neuroworker@gmail.com
-# $FreeBSD: games/instead/Makefile 341816 2014-01-30 08:57:49Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	instead
 PORTVERSION=	2.0.2
