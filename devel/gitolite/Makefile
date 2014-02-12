@@ -1,4 +1,4 @@
-# $FreeBSD: devel/gitolite/Makefile 340549 2014-01-21 05:12:40Z milki $
+# $FreeBSD$
 
 PORTNAME=	gitolite
 PORTVERSION=	3.5.2
