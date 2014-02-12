@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: devel/py-circuits/Makefile 342115 2014-02-01 11:17:47Z koobs $
+# $FreeBSD$
 
 PORTNAME=	circuits
 PORTVERSION=	2.1.0
