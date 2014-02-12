@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/avce00/Makefile 340753 2014-01-22 23:58:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	avce00
 PORTVERSION=	2.0.0
