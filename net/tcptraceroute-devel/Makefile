@@ -1,5 +1,5 @@
 # Created by: josh.carroll@gmail.com
-# $FreeBSD: net/tcptraceroute-devel/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	tcptraceroute
 DISTVERSION=	1.5beta7
