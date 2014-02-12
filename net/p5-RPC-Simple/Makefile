@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net/p5-RPC-Simple/Makefile 338849 2014-01-06 09:14:19Z az $
+# $FreeBSD$
 
 PORTNAME=	RPC-Simple
 PORTVERSION=	1.002
