@@ -1,5 +1,5 @@
 # Created by: torstenb
-# $FreeBSD: ftp/mirror/Makefile 327729 2013-09-20 17:23:18Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mirror
 PORTVERSION=	2.9
