@@ -1,5 +1,5 @@
 # Created by: markand
-# $FreeBSD: archivers/squeeze/Makefile 330424 2013-10-15 18:36:02Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	squeeze
 PORTVERSION=	0.2.3
