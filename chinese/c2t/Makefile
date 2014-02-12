@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@FreeBSD.org)
-# $FreeBSD: chinese/c2t/Makefile 329142 2013-10-03 06:40:58Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	c2t
 PORTVERSION=	1.0
