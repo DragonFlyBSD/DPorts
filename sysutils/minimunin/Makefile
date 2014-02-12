@@ -1,5 +1,5 @@
 # Created by: Dirk Engling <erdgeist@erdgeist.org>
-# $FreeBSD: sysutils/minimunin/Makefile 331876 2013-10-28 18:08:56Z flo $
+# $FreeBSD$
 
 PORTNAME=	minimunin
 PORTVERSION=	0.1
