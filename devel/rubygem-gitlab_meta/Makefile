@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-gitlab_meta/Makefile 332037 2013-10-30 02:34:55Z swills $
+# $FreeBSD$
 
 PORTNAME=	gitlab_meta
 PORTVERSION=	6.0
