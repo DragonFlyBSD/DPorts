@@ -1,4 +1,4 @@
-# $FreeBSD: x11-fonts/vollkorn-ttf/Makefile 337398 2013-12-24 23:22:35Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	vollkorn-ttf
 PORTVERSION=	2.1
