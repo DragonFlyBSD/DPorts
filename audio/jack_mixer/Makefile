@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: audio/jack_mixer/Makefile 341827 2014-01-30 09:45:42Z gahr $
+# $FreeBSD$
 
 PORTNAME=	jack_mixer
 PORTVERSION=	9
