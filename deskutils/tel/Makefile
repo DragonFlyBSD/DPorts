@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: deskutils/tel/Makefile 336553 2013-12-15 16:22:17Z wg $
+# $FreeBSD$
 
 PORTNAME=	tel
 PORTVERSION=	0.1.7.1
