@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: audio/openal/Makefile 341848 2014-01-30 15:34:30Z decke $
+# $FreeBSD$
 
 PORTNAME=	openal
 PORTVERSION=	20060211
