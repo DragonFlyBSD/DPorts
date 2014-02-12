@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: archivers/p5-Mac-Macbinary/Makefile 328275 2013-09-25 12:30:08Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Mac-Macbinary
 PORTVERSION=	0.06
