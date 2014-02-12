@@ -1,5 +1,5 @@
 # Created by: Robert Gogolok <gogo@cs.uni-sb.de>
-# $FreeBSD: textproc/rubygem-rak/Makefile 340905 2014-01-24 14:55:44Z miwi $
+# $FreeBSD$
 
 PORTNAME=	rak
 PORTVERSION=	1.4
