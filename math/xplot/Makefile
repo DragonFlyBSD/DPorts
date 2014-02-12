@@ -1,5 +1,5 @@
 # Created by: fenner
-# $FreeBSD: math/xplot/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD$
 
 PORTNAME=	xplot
 PORTVERSION=	0.90.7.1
