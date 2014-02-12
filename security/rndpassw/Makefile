@@ -1,4 +1,4 @@
-# $FreeBSD: security/rndpassw/Makefile 338513 2014-01-03 01:12:59Z bapt $
+# $FreeBSD$
 
 PORTNAME=	rndpassw
 PORTVERSION=	0.1
