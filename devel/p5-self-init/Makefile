@@ -1,5 +1,5 @@
 # Created by: Andrey Kostenko <andrey@kostenko.name>
-# $FreeBSD: devel/p5-self-init/Makefile 332365 2013-11-01 13:08:11Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	self-init
 PORTVERSION=	0.01
