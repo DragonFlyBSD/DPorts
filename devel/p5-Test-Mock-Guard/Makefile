@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Test-Mock-Guard/Makefile 338870 2014-01-06 12:43:03Z az $
+# $FreeBSD$
 
 PORTNAME=	Test-Mock-Guard
 PORTVERSION=	0.09
