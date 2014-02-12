@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: deskutils/ganyremote/Makefile 332005 2013-10-29 21:07:38Z pawel $
+# $FreeBSD$
 
 PORTNAME=	ganyremote
 PORTVERSION=	6.3.1
