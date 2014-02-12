@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: devel/SpecTcl/Makefile 328261 2013-09-25 10:24:50Z gahr $
+# $FreeBSD$
 
 PORTNAME=	SpecTcl
 PORTVERSION=	1.2.2a
