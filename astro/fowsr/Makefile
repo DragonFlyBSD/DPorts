@@ -1,5 +1,5 @@
 # Created by: Alexander Leidinger
-# $FreeBSD: astro/fowsr/Makefile 340340 2014-01-19 18:56:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	fowsr
 PORTVERSION=	${FILEVER}.${FILEDATE}
