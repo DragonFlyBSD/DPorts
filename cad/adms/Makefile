@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-# $FreeBSD: cad/adms/Makefile 338158 2013-12-30 18:36:10Z antoine $
+# $FreeBSD$
 
 PORTNAME=	adms
 PORTVERSION=	2.3.0
