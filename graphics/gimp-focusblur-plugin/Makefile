@@ -1,5 +1,5 @@
 # Created by: Denis Barov <dindin@dindin.ru>
-# $FreeBSD: graphics/gimp-focusblur-plugin/Makefile 340650 2014-01-21 20:16:29Z antoine $
+# $FreeBSD$
 
 PORTNAME=	focusblur
 PORTVERSION=	3.2.6
@@ -27,7 +27,7 @@ PLUGIN_DIR?=	libexec/gimp/2.2/plug-ins
 PLIST_SUB=	PLUGIN_DIR=${PLUGIN_DIR}
 
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+LDFLAGS+=	-lm -L${LOCALBASE}/lib
 
 OPTIONS_DEFINE=	NLS
 OPTIONS_SUB=	yes
