@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/xpi-tabletools/Makefile 341218 2014-01-26 15:14:03Z miwi $
+# $FreeBSD$
 
 PORTNAME=	tabletools
 PORTVERSION=	0.2.6
