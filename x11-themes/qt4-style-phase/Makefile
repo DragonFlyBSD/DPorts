@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: x11-themes/qt4-style-phase/Makefile 334584 2013-11-22 12:54:48Z makc $
+# $FreeBSD$
 
 PORTNAME=	phase
 PORTVERSION=	0.8
