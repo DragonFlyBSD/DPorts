@@ -1,4 +1,4 @@
-# $FreeBSD: math/qtoctave/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD$
 
 PORTNAME=	qtoctave
 PORTVERSION=	0.10.1
