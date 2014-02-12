@@ -1,5 +1,5 @@
 # Created by: Henry Hu <henry.hu.sh@gmail.com>
-# $FreeBSD: chinese/ibus-pinyin/Makefile 339853 2014-01-15 23:17:31Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ibus-pinyin
 PORTVERSION=	1.4.0
