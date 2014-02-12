@@ -1,5 +1,5 @@
 # Created by: Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
-# $FreeBSD: www/yii/Makefile 330956 2013-10-20 01:35:39Z danilo $
+# $FreeBSD$
 
 PORTNAME=	yii
 PORTVERSION=	1.1.14
