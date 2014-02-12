@@ -1,5 +1,5 @@
 # Created by: G. Adam Stanislav <adam@whizkidtech.net>
-# $FreeBSD: graphics/tifmerge/Makefile 339297 2014-01-09 22:49:44Z antoine $
+# $FreeBSD$
 
 PORTNAME=	tifmerge
 PORTVERSION=	1.0
