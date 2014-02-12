@@ -1,5 +1,5 @@
 # Created by: Oliver Eikemeier <eikemeier@fillmore-labs.com>
-# $FreeBSD: mail/p5-IMAP-Sieve/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	IMAP-Sieve
 PORTVERSION=	0.4.9
@@ -22,7 +22,6 @@ USE_PERL5=	configure
 PERLSIEVENAME=	perlsieve-${PORTVERSION}
 PERLSIEVESUFX=	b
 
-NO_STAGE=	yes
 post-extract:
 	@${EXTRACT_CMD} ${EXTRACT_BEFORE_ARGS} \
 		${WRKDIR}/${DISTNAME}/${PERLSIEVENAME}${PERLSIEVESUFX}${EXTRACT_SUFX} \
