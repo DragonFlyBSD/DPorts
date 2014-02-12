@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: graphics/mandelbulber/Makefile 336655 2013-12-16 18:18:07Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	mandelbulber
 DISTVERSION=	1.13-1
