@@ -1,4 +1,4 @@
-# $FreeBSD: www/cplanet/Makefile 330796 2013-10-18 23:39:51Z bapt $
+# $FreeBSD$
 
 PORTNAME=	cplanet
 PORTVERSION=	0.9
