@@ -1,5 +1,5 @@
 
-$FreeBSD: www/trac-downloads/files/patch-tracdownloads_consoleadmin.py 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/www/trac-downloads/files/patch-tracdownloads_consoleadmin.py 340725 2014-01-22 17:40:44Z mat $
 
 --- tracdownloads/consoleadmin.py.orig
 +++ tracdownloads/consoleadmin.py
