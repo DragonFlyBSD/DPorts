@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: math/eukleides/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD$
 
 PORTNAME=	eukleides
 PORTVERSION=	1.5.3
