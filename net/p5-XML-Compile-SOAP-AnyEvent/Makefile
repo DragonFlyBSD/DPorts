@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: net/p5-XML-Compile-SOAP-AnyEvent/Makefile 332868 2013-11-05 16:42:55Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	XML-Compile-SOAP-AnyEvent
 PORTVERSION=	0.01
