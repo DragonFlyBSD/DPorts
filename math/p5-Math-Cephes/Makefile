@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: math/p5-Math-Cephes/Makefile 330139 2013-10-12 16:39:46Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Math-Cephes
 PORTVERSION=	0.5303
