@@ -1,5 +1,5 @@
 # Created by: Carlo Strub <c-s@c-s.li>
-# $FreeBSD: www/ach/Makefile 330971 2013-10-20 04:12:12Z danilo $
+# $FreeBSD$
 
 PORTNAME=	ACH
 PORTVERSION=	1.0.3
