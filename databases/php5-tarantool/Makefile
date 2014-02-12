@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: databases/php5-tarantool/Makefile 332239 2013-10-31 13:10:58Z vg $
+# $FreeBSD$
 
 PORTNAME=	tarantool
 PORTVERSION=	${TR_VER}
