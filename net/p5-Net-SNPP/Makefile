@@ -1,5 +1,5 @@
 # Created by: devin@spamcop.net
-# $FreeBSD: net/p5-Net-SNPP/Makefile 332868 2013-11-05 16:42:55Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Net-SNPP
 PORTVERSION=	1.17
