@@ -1,5 +1,5 @@
 # Created by: Andrey Slusar <anray@FreeBSD.org>
-# $FreeBSD: graphics/libpcd/Makefile 341110 2014-01-25 21:25:09Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libpcd
 PORTVERSION=	1.0.1
