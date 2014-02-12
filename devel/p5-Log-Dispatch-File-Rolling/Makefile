@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Log-Dispatch-File-Rolling/Makefile 341707 2014-01-29 09:19:35Z az $
+# $FreeBSD$
 
 PORTNAME=	Log-Dispatch-File-Rolling
 PORTVERSION=	1.06
