@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: mail/squirrelmail-decode/Makefile 331849 2013-10-28 12:58:16Z adamw $
+# $FreeBSD$
 
 PORTNAME=		squirrelmail-decode
 PORTVERSION=	1.2
