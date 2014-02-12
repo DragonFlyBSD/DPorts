@@ -1,5 +1,5 @@
 # Created by: Horia Racoviceanu <horia@racoviceanu.com>
-# $FreeBSD: www/rubygem-html2haml/Makefile 340679 2014-01-22 02:05:53Z swills $
+# $FreeBSD$
 
 PORTNAME=	html2haml
 PORTVERSION=	1.0.1
