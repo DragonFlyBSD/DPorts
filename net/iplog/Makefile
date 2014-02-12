@@ -1,5 +1,5 @@
 # Created by: Dominik Rothert <dr@domix.de>
-# $FreeBSD: net/iplog/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	iplog
 PORTVERSION=	2.2.3
