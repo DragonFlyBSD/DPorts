@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: graphics/pecomato/Makefile 336546 2013-12-15 15:46:16Z mva $
+# $FreeBSD$
 
 PORTNAME=	pecomato
 PORTVERSION=	0.0.15
