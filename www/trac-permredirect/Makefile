@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: www/trac-permredirect/Makefile 341185 2014-01-26 14:32:17Z miwi $
+# $FreeBSD$
 
 PORTNAME=	permredirect
 PORTVERSION=	3.0
