@@ -1,5 +1,5 @@
 # Created by: dsh@vlink.ru
-# $FreeBSD: security/avcheck/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	avcheck
 PORTVERSION=	0.91
