@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: multimedia/gopchop/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gopchop
 PORTVERSION=	1.0.0
@@ -24,6 +24,9 @@ CPPFLAGS+=	-I${LOCALBASE}/include -DHAVE_DECL_GETOPT
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	NLS 
+
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
