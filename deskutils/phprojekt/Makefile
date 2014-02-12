@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <tux@pinguru.net>
-# $FreeBSD: deskutils/phprojekt/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	phprojekt
 PORTVERSION=	6.0.5
@@ -9,6 +9,9 @@ DISTNAME=	${PORTNAME}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	An open source groupware suite
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-07
 
 USE_PHP=	session imap mysql
 WANT_PHP_WEB=	yes
