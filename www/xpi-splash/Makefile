@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: www/xpi-splash/Makefile 341217 2014-01-26 15:13:43Z miwi $
+# $FreeBSD$
 
 PORTNAME=	splash
 PORTVERSION=	2.0.2
