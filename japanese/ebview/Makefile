@@ -1,4 +1,4 @@
-# $FreeBSD: japanese/ebview/Makefile 340304 2014-01-19 14:24:49Z miwi $
+# $FreeBSD$
 
 PORTNAME=	ebview
 PORTVERSION=	0.2.1
