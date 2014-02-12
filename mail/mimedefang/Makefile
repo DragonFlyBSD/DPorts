@@ -1,5 +1,5 @@
 # Created by: Andrey V. Pevnev <andrey@mgul.ac.ru>
-# $FreeBSD: mail/mimedefang/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mimedefang
 PORTVERSION=	2.74
