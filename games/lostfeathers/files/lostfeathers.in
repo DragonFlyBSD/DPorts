@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: games/lostfeathers/files/lostfeathers.in 329242 2013-10-03 22:03:04Z nemysis $
+# $FreeBSD: head/games/lostfeathers/files/lostfeathers.in 329242 2013-10-03 22:03:04Z nemysis $
 #
 
 cd "%%DATADIR%%"

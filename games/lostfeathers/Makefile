@@ -1,5 +1,5 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: games/lostfeathers/Makefile 339907 2014-01-16 12:46:13Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	lostfeathers
 PORTVERSION=	1.0b
