@@ -1,5 +1,5 @@
 # Created by: jbacon
-# $FreeBSD: science/minc2/Makefile 341763 2014-01-29 17:31:04Z thierry $
+# $FreeBSD$
 
 ############################################################################
 # http://www.bic.mni.mcgill.ca/software/minc/
