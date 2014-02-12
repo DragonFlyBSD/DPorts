@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: benchmarks/flops/Makefile 338743 2014-01-05 01:53:38Z bapt $
+# $FreeBSD$
 
 PORTNAME=	flops
 PORTVERSION=	2.0
