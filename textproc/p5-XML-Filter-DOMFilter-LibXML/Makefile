@@ -1,5 +1,5 @@
 # Created by: Andrew Humphrey <ahumphrey@realestate.com.au>
-# $FreeBSD: textproc/p5-XML-Filter-DOMFilter-LibXML/Makefile 341765 2014-01-29 17:46:33Z az $
+# $FreeBSD$
 
 PORTNAME=	XML-Filter-DOMFilter-LibXML
 PORTVERSION=	0.02
