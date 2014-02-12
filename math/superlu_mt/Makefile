@@ -1,5 +1,5 @@
 # Created by: Pedro Giffuni <giffunip@asme.org>
-# $FreeBSD: math/superlu_mt/Makefile 341172 2014-01-26 13:20:07Z gerald $
+# $FreeBSD$
 
 PORTNAME=	superlu_mt
 PORTVERSION=	2.0.20080115
