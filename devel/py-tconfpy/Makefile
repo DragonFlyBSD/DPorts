@@ -1,5 +1,5 @@
 # Created by: tundra
-# $FreeBSD: devel/py-tconfpy/Makefile 334784 2013-11-24 20:03:26Z mva $
+# $FreeBSD$
 
 PORTNAME=	tconfpy
 PORTVERSION=	2.112
