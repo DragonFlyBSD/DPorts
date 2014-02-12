@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: www/xpi-no-referrer/Makefile 341212 2014-01-26 15:12:21Z miwi $
+# $FreeBSD$
 
 PORTNAME=	no-referrer
 PORTVERSION=	1.0.1
