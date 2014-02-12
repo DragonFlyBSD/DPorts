@@ -1,5 +1,5 @@
 # Created by: Alex Deiter <tiamat@komi.mts.ru>
-# $FreeBSD: net/ris/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ris
 PORTVERSION=	0.4
