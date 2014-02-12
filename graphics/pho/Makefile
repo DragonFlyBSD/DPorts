@@ -1,5 +1,5 @@
 # Created by: Roland Jesse <roland.jesse@gmx.net>
-# $FreeBSD: graphics/pho/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	pho
 DISTVERSION=	0.9.8
