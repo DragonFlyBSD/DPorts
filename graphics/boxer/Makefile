@@ -1,5 +1,5 @@
 # Created by: Charlie Kester <corky1951@comcast.net>
-# $FreeBSD: graphics/boxer/Makefile 340001 2014-01-16 23:50:58Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	boxer
 PORTVERSION=	0.4.0
