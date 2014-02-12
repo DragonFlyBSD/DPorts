@@ -1,5 +1,5 @@
 # Created by: Yuri Pankov <yuri.pankov@gmail.com>
-# $FreeBSD: deskutils/glipper/Makefile 342279 2014-02-02 12:27:07Z antoine $
+# $FreeBSD$
 
 PORTNAME=	glipper
 PORTVERSION=	1.0
