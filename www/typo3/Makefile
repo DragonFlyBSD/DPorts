@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <tux@pinguru.net>
-# $FreeBSD: www/typo3/Makefile 336294 2013-12-12 21:57:48Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	typo3
 PORTVERSION=	6.1.7
