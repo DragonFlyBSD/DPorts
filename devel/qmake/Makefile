@@ -1,5 +1,5 @@
 # Created by: mi@aldan.algebra.com
-# $FreeBSD: devel/qmake/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD$
 
 PORTNAME=	qmake
 PORTVERSION=	3.3.8
