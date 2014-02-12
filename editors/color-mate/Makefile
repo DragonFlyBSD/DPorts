@@ -1,5 +1,5 @@
 # Created by: Satoshi Taoka <taoka@FreeBSD.org>
-# $FreeBSD: editors/color-mate/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	color-mate
 PORTVERSION=	10.6.4
