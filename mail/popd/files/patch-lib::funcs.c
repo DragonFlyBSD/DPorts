@@ -1,4 +1,4 @@
-$FreeBSD: mail/popd/files/patch-lib::funcs.c 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/mail/popd/files/patch-lib::funcs.c 340725 2014-01-22 17:40:44Z mat $
 
 --- lib/funcs.c.orig	Mon Mar  3 21:10:19 2003
 +++ lib/funcs.c	Wed Oct 15 11:18:01 2003
