@@ -1,5 +1,5 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: irc/py-fishcrypt/Makefile 329393 2013-10-04 21:54:39Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	py-fishcrypt
 DISTVERSION=	4.21
