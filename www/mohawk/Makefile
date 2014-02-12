@@ -1,4 +1,4 @@
-# $FreeBSD: www/mohawk/Makefile 336511 2013-12-15 10:02:58Z antoine $
+# $FreeBSD$
 
 PORTNAME=	mohawk
 PORTVERSION=	2.0.10
@@ -26,6 +26,8 @@ USE_RC_SUBR=	mohawk
 
 CFLAGS+=	-I${LOCALBASE}/include/event2/compat -I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib/event2
+
+OPTIONS_DEFINE=	EXAMPLES 
 
 .include <bsd.port.options.mk>
 
