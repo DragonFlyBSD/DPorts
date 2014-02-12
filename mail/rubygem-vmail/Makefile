@@ -1,5 +1,5 @@
 # Created by: Hsin-Han You <hhyou@cs.nctu.edu.tw>
-# $FreeBSD: mail/rubygem-vmail/Makefile 340904 2014-01-24 14:53:03Z miwi $
+# $FreeBSD$
 
 PORTNAME=	vmail
 PORTVERSION=	2.8.6
