@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: archivers/ha/Makefile 328347 2013-09-26 09:52:15Z ak $
+# $FreeBSD$
 
 PORTNAME=	ha
 PORTVERSION=	0.999b
