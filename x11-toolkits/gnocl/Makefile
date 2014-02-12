@@ -1,5 +1,5 @@
 # Created by: Stephane Legrand <stephane@FreeBSD.org>
-# $FreeBSD: x11-toolkits/gnocl/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gnocl
 DISTVERSION=	${BASE_VERSION}-${NIGHTLY_BUILD}
