@@ -1,5 +1,5 @@
 # Created by: Pierre-Paul Lavoie <ppl@nbnet.nb.ca>
-# $FreeBSD: x11-wm/weewm/Makefile 337991 2013-12-29 14:23:48Z antoine $
+# $FreeBSD$
 
 PORTNAME=	weewm
 PORTVERSION=	0.0.2
