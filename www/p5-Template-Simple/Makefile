@@ -1,5 +1,5 @@
 # Created by: Ken McGlothlen <ken.mcglothlen@gmail.com>
-# $FreeBSD: www/p5-Template-Simple/Makefile 338785 2014-01-05 15:36:32Z az $
+# $FreeBSD$
 
 PORTNAME=	Template-Simple
 PORTVERSION=	0.06
