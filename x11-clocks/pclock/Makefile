@@ -1,5 +1,5 @@
 # Created by: Jim Mock <jim@FreeBSD.org>
-# $FreeBSD: x11-clocks/pclock/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	pclock
 PORTVERSION=	0.13.1
