@@ -1,5 +1,5 @@
 
-$FreeBSD: audio/rio500/files/patch-src_rio__add__song.c 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/audio/rio500/files/patch-src_rio__add__song.c 340725 2014-01-22 17:40:44Z mat $
 
 --- src/rio_add_song.c.orig	Sun Aug 22 16:53:27 2004
 +++ src/rio_add_song.c	Sun Aug 22 16:55:17 2004
