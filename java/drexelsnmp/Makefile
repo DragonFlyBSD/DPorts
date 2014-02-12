@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@FreeBSD.org>
-# $FreeBSD: java/drexelsnmp/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	drexelsnmp
 PORTVERSION=	1.4.2
@@ -10,6 +10,9 @@ DISTNAME=	source_${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Java SNMP protocol implementation
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-10
 
 USE_JAVA=	yes
 USE_ZIP=	yes
