@@ -1,5 +1,5 @@
 # Created by: glen.j.barber@gmail.com
-# $FreeBSD: security/clamd-stream-client/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	clamd-stream-client
 DISTVERSION=	1.3
