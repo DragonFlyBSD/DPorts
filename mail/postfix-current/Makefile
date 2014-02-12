@@ -1,5 +1,5 @@
 # Created by: Torsten Blum <torstenb@FreeBSD.org>
-# $FreeBSD: mail/postfix-current/Makefile 340536 2014-01-21 01:17:26Z sahil $
+# $FreeBSD$
 
 PORTNAME=	postfix
 DISTVERSION=	2.12-20140109
