@@ -1,5 +1,5 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: mail/rubygem-pony/Makefile 335756 2013-12-06 15:23:32Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	pony
 PORTVERSION=	1.6.2
