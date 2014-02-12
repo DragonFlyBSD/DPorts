@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: misc/clpbar/Makefile 341855 2014-01-30 16:05:12Z miwi $
+# $FreeBSD$
 
 PORTNAME=	clpbar
 PORTVERSION=	1.11.1
