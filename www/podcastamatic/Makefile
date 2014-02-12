@@ -1,5 +1,5 @@
 # Created by: lars.eggert@gmx.net
-# $FreeBSD: www/podcastamatic/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	podcastamatic
 PORTVERSION=	1.3
