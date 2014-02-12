@@ -1,8 +1,8 @@
 # Created by: n-shigemura@ensure.jp
-# $FreeBSD: japanese/p5-Number-Phone-JP/Makefile 339440 2014-01-11 17:38:28Z danilo $
+# $FreeBSD$
 
 PORTNAME=	Number-Phone-JP
-PORTVERSION=	0.20140106
+PORTVERSION=	0.20140203
 CATEGORIES=	japanese perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:TANIGUCHI
