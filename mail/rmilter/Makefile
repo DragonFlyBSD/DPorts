@@ -1,4 +1,4 @@
-# $FreeBSD: mail/rmilter/Makefile 340910 2014-01-24 15:41:29Z vsevolod $
+# $FreeBSD$
 
 PORTNAME=		rmilter
 PORTVERSION=		1.6.0
