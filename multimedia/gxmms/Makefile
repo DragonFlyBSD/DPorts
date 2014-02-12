@@ -1,5 +1,5 @@
 # Created by: Radek Kozlowski <radek@raadradd.com>
-# $FreeBSD: multimedia/gxmms/Makefile 331423 2013-10-23 20:45:10Z ak $
+# $FreeBSD$
 
 PORTNAME=	gxmms
 PORTVERSION=	0.3.0
