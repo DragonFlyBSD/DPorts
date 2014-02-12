@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: sysutils/p5-Monitor-Simple/Makefile 328874 2013-09-30 20:59:03Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Monitor-Simple
 PORTVERSION=	0.2.8
