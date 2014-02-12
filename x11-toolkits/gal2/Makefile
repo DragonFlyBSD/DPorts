@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: x11-toolkits/gal2/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD$
 #   $MCom: ports/x11-toolkits/gal2/Makefile,v 1.54 2007/05/23 14:37:18 ahze Exp $
 
 PORTNAME=	gal2
