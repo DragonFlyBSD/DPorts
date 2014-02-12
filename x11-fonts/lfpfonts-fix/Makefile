@@ -1,4 +1,4 @@
-# $FreeBSD: x11-fonts/lfpfonts-fix/Makefile 327781 2013-09-20 23:51:14Z bapt $
+# $FreeBSD$
 
 PORTNAME=	lfpfonts-fix
 PORTVERSION=	0.82
