@@ -1,5 +1,5 @@
 # Created by: jabley@clear.co.nz
-# $FreeBSD: net-mgmt/ciscoconf/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ciscoconf
 PORTVERSION=	1.1
