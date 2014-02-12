@@ -1,5 +1,5 @@
 # Created by: jhs@berklix.com / asami (original)
-# $FreeBSD: math/hexcalc/Makefile 341901 2014-01-31 00:03:39Z rene $
+# $FreeBSD$
 
 PORTNAME=	hexcalc
 PORTVERSION=	1.11
