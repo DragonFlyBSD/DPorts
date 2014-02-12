@@ -1,4 +1,4 @@
-# $FreeBSD: x11/plasma-scriptengine-ruby/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD$
 
 PORTNAME=	plasma-scriptengine-ruby
 PORTVERSION=	${KDE4_VERSION}
