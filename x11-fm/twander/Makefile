@@ -1,5 +1,5 @@
 # Created by: tundra
-# $FreeBSD: x11-fm/twander/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	twander
 PORTVERSION=	3.231
