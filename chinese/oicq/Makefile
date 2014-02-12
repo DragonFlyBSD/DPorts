@@ -1,5 +1,5 @@
 # Created by: Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
-# $FreeBSD: chinese/oicq/Makefile 329142 2013-10-03 06:40:58Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	oicq
 PORTVERSION=	1.6
