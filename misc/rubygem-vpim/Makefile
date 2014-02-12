@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: misc/rubygem-vpim/Makefile 340638 2014-01-21 19:13:02Z swills $
+# $FreeBSD$
 
 PORTNAME=	vpim
 PORTVERSION=	13.11.11
