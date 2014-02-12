@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: games/polyglot/Makefile 339568 2014-01-13 05:01:34Z nivit $
+# $FreeBSD$
 
 PORTNAME=	polyglot
 DISTVERSION=	1.4.70b
