@@ -1,5 +1,5 @@
 # Created by: clsung@dragon2.net
-# $FreeBSD: dns/p5-Net-Nslookup/Makefile 336341 2013-12-13 12:56:06Z culot $
+# $FreeBSD$
 
 PORTNAME=	Net-Nslookup
 PORTVERSION=	2.04
