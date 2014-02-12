@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: irc/quassel/Makefile 335010 2013-11-27 12:54:54Z makc $
+# $FreeBSD$
 
 PORTNAME=	quassel
 PORTVERSION=	0.9.2
