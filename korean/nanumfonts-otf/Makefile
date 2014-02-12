@@ -1,4 +1,4 @@
-# $FreeBSD: korean/nanumfonts-otf/Makefile 339059 2014-01-08 00:06:49Z jkim $
+# $FreeBSD$
 
 PORTNAME=	nanumfonts
 PORTVERSION=	3.1
