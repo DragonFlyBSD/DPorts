@@ -1,5 +1,5 @@
 # Created by: Konstantin Chuguev <Konstantin.Chuguev@dante.org.uk>
-# $FreeBSD: converters/iconv-rfc1345/Makefile 339201 2014-01-09 06:57:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	iconv-rfc1345
 PORTVERSION=	2.0
