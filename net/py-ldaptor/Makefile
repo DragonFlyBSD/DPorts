@@ -1,5 +1,5 @@
 # Created by: bra@fsn.hu
-# $FreeBSD: net/py-ldaptor/Makefile 336553 2013-12-15 16:22:17Z wg $
+# $FreeBSD$
 
 PORTNAME=	ldaptor
 PORTVERSION=	0.0.43
