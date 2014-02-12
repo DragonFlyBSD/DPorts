@@ -1,5 +1,5 @@
 # Created by: Christopher J. Ruwe
-# $FreeBSD: math/ess/Makefile 339527 2014-01-12 18:11:34Z tabthorpe $
+# $FreeBSD$
 
 PORTNAME=	ess
 DISTVERSION=	13.09-1
