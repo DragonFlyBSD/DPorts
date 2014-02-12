@@ -1,5 +1,5 @@
 # Created by: Frederic Cambus
-# $FreeBSD: lang/huc/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD$
 
 PORTNAME=	huc
 PORTVERSION=	3.21
