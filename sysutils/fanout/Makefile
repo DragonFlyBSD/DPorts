@@ -1,5 +1,5 @@
 # Created by: janos.mohacsi@bsd.hu
-# $FreeBSD: sysutils/fanout/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	fanout
 PORTVERSION=	0.6.1
@@ -15,11 +15,8 @@ USES=		perl5
 USE_PERL5=	run
 NO_BUILD=	yes
 PLIST_FILES=	bin/fanout bin/fanterm bin/fanmux
-.if !defined(NOPORTDOCS)
 PORTDOCS=	README index.html
-.endif
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,%%LOCALBASE%%,${LOCALBASE},g' \
 		${WRKSRC}/fanterm
@@ -27,12 +24,10 @@ post-patch:
 		${WRKSRC}/fanmux
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/fanout ${PREFIX}/bin/
-	${INSTALL_SCRIPT} ${WRKSRC}/fanterm ${PREFIX}/bin/
-	${INSTALL_SCRIPT} ${WRKSRC}/fanmux ${PREFIX}/bin/
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
-	cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${DOCSDIR}
-.endif
+	${INSTALL_SCRIPT} ${WRKSRC}/fanout ${STAGEDIR}${PREFIX}/bin/
+	${INSTALL_SCRIPT} ${WRKSRC}/fanterm ${STAGEDIR}${PREFIX}/bin/
+	${INSTALL_SCRIPT} ${WRKSRC}/fanmux ${STAGEDIR}${PREFIX}/bin/
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
