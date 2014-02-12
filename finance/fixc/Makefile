@@ -1,4 +1,4 @@
-# $FreeBSD: finance/fixc/Makefile 342344 2014-02-02 17:20:01Z miwi $
+# $FreeBSD$
 
 PORTNAME=	fixc
 PORTVERSION=	1.0
