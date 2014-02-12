@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/sea-defender/Makefile 341657 2014-01-28 21:21:09Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	sea-defender
 PORTVERSION=	0.9
