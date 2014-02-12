@@ -1,5 +1,5 @@
 # Created by: Pietro Cerutti <gahr@gahr.ch>
-# $FreeBSD: audio/musica/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	musica
 PORTVERSION=	1.1.4
