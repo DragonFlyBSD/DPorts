@@ -1,5 +1,5 @@
 # Created by: Yoshisato YANAGISAWA
-# $FreeBSD: mail/dkimproxy/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	dkimproxy
 PORTVERSION=	1.4.1
@@ -25,12 +25,9 @@ DKIMPROXYUSER=	dkimproxy
 USERS=		${DKIMPROXYUSER}
 GROUPS=		${DKIMPROXYUSER}
 
-MAN8=		dkimproxy_in.8 dkimproxy_out.8
-
 SUB_LIST+=	PERL=${PERL} \
 		DKIMPROXYUSER=${DKIMPROXYUSER}
 
-NO_STAGE=	yes
 post-patch:
 	@${GREP} -Ril 'perl' ${WRKDIR} | ${XARGS} ${REINPLACE_CMD} -i '' \
 		-e 's|/usr/bin/perl|${PERL}|' -e 's|@PERL@|${PERL}|'
