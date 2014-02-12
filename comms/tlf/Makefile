@@ -1,5 +1,5 @@
 # Created by: db
-# $FreeBSD: comms/tlf/Makefile 336176 2013-12-11 15:10:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	tlf
 PORTVERSION=	0.9.31
