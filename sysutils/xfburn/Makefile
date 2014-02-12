@@ -1,5 +1,5 @@
 # Created by: J.R. Oldroyd <fbsd@opal.com>
-# $FreeBSD: sysutils/xfburn/Makefile 334050 2013-11-17 02:58:44Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	xfburn
 PORTVERSION=	0.4.3
