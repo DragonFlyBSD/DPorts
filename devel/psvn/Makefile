@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: devel/psvn/Makefile 328357 2013-09-26 13:47:57Z wg $
+# $FreeBSD$
 
 PORTNAME=	psvn
 PORTVERSION=	20120326.212349
