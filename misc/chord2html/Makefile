@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: misc/chord2html/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD$
 
 PORTNAME=	chord2html
 PORTVERSION=	1.3
