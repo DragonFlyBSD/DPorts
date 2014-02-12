@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: irc/xchat-fish/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 #    $MCom: ports/irc/xchat-fish/Makefile,v 1.1 2006/10/04 22:30:07 ahze Exp $
 
 PORTNAME=	fish
@@ -28,6 +28,8 @@ MAKE_ENV+=	CCFLAGS="${CCFLAGS}"
 PLIST_FILES=	lib/xchat/plugins/xfish.so
 PORTDOCS=	FiSH-xchat.txt \
 		FiSH-xchat_History.txt
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
