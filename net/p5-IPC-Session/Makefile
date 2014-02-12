@@ -1,5 +1,5 @@
 # Created by: Alexander Kriventsov <avk@vl.ru>
-# $FreeBSD: net/p5-IPC-Session/Makefile 338800 2014-01-05 17:15:11Z az $
+# $FreeBSD$
 
 PORTNAME=	IPC-Session
 PORTVERSION=	0.05
