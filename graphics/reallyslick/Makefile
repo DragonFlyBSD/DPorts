@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: graphics/reallyslick/Makefile 337464 2013-12-25 23:29:34Z antoine $
+# $FreeBSD$
 
 PORTNAME=	reallyslick
 PORTVERSION=	0.9.1
