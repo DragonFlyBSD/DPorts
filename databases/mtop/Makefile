@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: databases/mtop/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mtop
 PORTVERSION=	0.6.6
