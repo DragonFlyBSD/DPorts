@@ -1,5 +1,5 @@
 # Created by: Felippe de Meirelles Motta <lippemail@gmail.com>
-# $FreeBSD: devel/p5-Test-Kwalitee/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Test-Kwalitee
 PORTVERSION=	1.01
@@ -23,7 +23,4 @@ RUN_DEPENDS=	p5-Module-CPANTS-Analyse>=0:${PORTSDIR}/devel/p5-Module-CPANTS-Anal
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		Test::Kwalitee.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
