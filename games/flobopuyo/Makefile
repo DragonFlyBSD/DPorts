@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/flobopuyo/Makefile 337141 2013-12-21 12:53:21Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	flobopuyo
 PORTVERSION=	0.20
