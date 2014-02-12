@@ -1,5 +1,5 @@
 # Created by: Andrej Zverev <az@inec.ru>
-# $FreeBSD: net/xrdesktop/Makefile 342249 2014-02-02 08:11:05Z eadler $
+# $FreeBSD$
 
 PORTNAME=	xrdesktop
 PORTVERSION=	1.2
