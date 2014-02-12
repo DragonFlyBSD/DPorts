@@ -1,5 +1,5 @@
 # Created by: Kai Wang <kaiw27@gmail.com>
-# $FreeBSD: shells/fish/Makefile 340982 2014-01-25 02:40:17Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	fish
 PORTVERSION=	2.1.0
