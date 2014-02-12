@@ -1,4 +1,4 @@
-# $FreeBSD: japanese/zipcodes/Makefile 338557 2014-01-03 16:15:49Z kuriyama $
+# $FreeBSD$
 
 PORTNAME=	zipcodes
 PORTVERSION=	20131227
