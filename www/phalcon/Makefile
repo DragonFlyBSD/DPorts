@@ -1,5 +1,5 @@
 # Created by: Jin-Sih Lin <linpct@gmail.com>
-# $FreeBSD: www/phalcon/Makefile 341701 2014-01-29 09:02:29Z miwi $
+# $FreeBSD$
 
 PORTNAME=	phalcon
 PORTVERSION=	1.2.4
