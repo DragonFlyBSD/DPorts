@@ -1,4 +1,4 @@
-# $FreeBSD: net/pbnc/Makefile 330608 2013-10-17 06:30:13Z hrs $
+# $FreeBSD$
 
 PORTNAME=	pbnc
 PORTVERSION=	1.0
