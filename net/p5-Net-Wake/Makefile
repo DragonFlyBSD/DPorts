@@ -1,5 +1,5 @@
 # Created by: Yoshihiko Sarumaru <mistral@imasy.or.jp>
-# $FreeBSD: net/p5-Net-Wake/Makefile 338810 2014-01-05 17:53:15Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-Wake
 PORTVERSION=	0.02
