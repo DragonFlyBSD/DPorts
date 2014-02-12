@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: deskutils/fbreader/Makefile 338988 2014-01-07 09:46:29Z fluffy $
+# $FreeBSD$
 
 PORTNAME=	fbreader
 PORTVERSION=	0.99.4
