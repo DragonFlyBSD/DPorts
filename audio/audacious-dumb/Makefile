@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: audio/audacious-dumb/Makefile 331362 2013-10-23 10:26:46Z ehaupt $
+# $FreeBSD$
 
 PORTNAME=	audacious-dumb
 PORTVERSION=	0.82
