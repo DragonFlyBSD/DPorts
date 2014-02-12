@@ -1,5 +1,5 @@
 # Created by: Andy Clark <andrewclarkii@gmail.com>
-# $FreeBSD: benchmarks/nuttcp/Makefile 338733 2014-01-05 01:24:29Z bapt $
+# $FreeBSD$
 
 PORTNAME=	nuttcp
 PORTVERSION=	6.1.2
