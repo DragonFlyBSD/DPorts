@@ -1,5 +1,5 @@
 # Created by: Andrew Stevenson <andrew@ugh.net.au>
-# $FreeBSD: x11/settitle/Makefile 339339 2014-01-10 09:32:14Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	settitle
 PORTVERSION=	1.1.1
@@ -8,6 +8,9 @@ MASTER_SITES=	ftp://ftp.ugh.net.au/pub/unix/settitle/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Program for setting the title of terminal emulator windows
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-10
 
 WRKSRC=		${WRKDIR}/settitle
 
