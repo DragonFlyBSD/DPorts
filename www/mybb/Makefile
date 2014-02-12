@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: www/mybb/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mybb
 PORTVERSION=	1.6.9
@@ -19,15 +19,13 @@ USE_MYSQL=	yes
 SUB_FILES=	pkg-message
 WWWDIR?=	${PREFIX}/www/${PORTNAME}
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 do-install:
-	@${MKDIR} ${WWWDIR}
-	${CP} -R ${WRKSRC}/ ${WWWDIR}
-	${TOUCH} ${WWWDIR}/inc/config.php
-	@${CHOWN} ${WWWOWN} ${WWWDIR}/inc/config.php ${WWWDIR}/inc/settings.php
-	@${CAT} ${PKGMESSAGE}
+	@${MKDIR} ${STAGEDIR}${WWWDIR}
+	${CP} -R ${WRKSRC}/ ${STAGEDIR}${WWWDIR}
+	${TOUCH} ${STAGEDIR}${WWWDIR}/inc/config.php
+	@${CHOWN} ${WWWOWN} ${STAGEDIR}${WWWDIR}/inc/config.php ${STAGEDIR}${WWWDIR}/inc/settings.php
 
 create-plist:
 	@${FIND} -s ${WRKSRC}/${file} -not -type d \
