@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <tux@pinguru.net>
-# $FreeBSD: www/mediawiki120/Makefile 338513 2014-01-03 01:12:59Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mediawiki
 PORTVERSION=	1.20.8
