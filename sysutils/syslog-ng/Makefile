@@ -1,5 +1,5 @@
 # Created by: Ivan Lago <ivan.lago@ifom-ieo-campus.it>
-# $FreeBSD: sysutils/syslog-ng/Makefile 340400 2014-01-20 14:29:02Z cy $
+# $FreeBSD$
 
 PORTNAME=	syslog-ng
 PORTVERSION=	3.4.7
