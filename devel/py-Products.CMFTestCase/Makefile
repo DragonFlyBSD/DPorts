@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-Products.CMFTestCase/Makefile 341155 2014-01-26 07:57:22Z rm $
+# $FreeBSD$
 
 PORTNAME=	Products.CMFTestCase
 PORTVERSION=	0.9.12
