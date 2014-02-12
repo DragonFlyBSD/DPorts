@@ -1,5 +1,5 @@
 # Created by: Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
-# $FreeBSD: chinese/wenju/Makefile 328460 2013-09-27 12:33:07Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	wenju
 PORTVERSION=	1.6
