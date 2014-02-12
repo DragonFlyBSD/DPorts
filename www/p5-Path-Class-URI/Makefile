@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Path-Class-URI/Makefile 338767 2014-01-05 13:23:32Z az $
+# $FreeBSD$
 
 PORTNAME=	Path-Class-URI
 PORTVERSION=	0.04
