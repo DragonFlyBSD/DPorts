@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: www/smb_auth/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	smb_auth
 PORTVERSION=	0.05
@@ -17,6 +17,8 @@ RUN_DEPENDS=	${LOCALBASE}/sbin/smbd:${PORTSDIR}/${SAMBA_PORT}
 
 ALL_TARGET=	smb_auth
 SAMBA_PORT?=	net/samba36
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
