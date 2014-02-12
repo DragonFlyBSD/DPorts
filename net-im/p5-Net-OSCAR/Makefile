@@ -1,5 +1,5 @@
 # Created by: Kelly Cochran <kcochran@trolans.net>
-# $FreeBSD: net-im/p5-Net-OSCAR/Makefile 332816 2013-11-05 07:49:09Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Net-OSCAR
 PORTVERSION=	1.928
