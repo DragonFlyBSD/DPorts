@@ -1,5 +1,5 @@
 # Created by: Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
-# $FreeBSD: textproc/jq/Makefile 341746 2014-01-29 15:12:54Z gahr $
+# $FreeBSD$
 
 PORTNAME=	jq
 PORTVERSION=	1.3
