@@ -1,5 +1,5 @@
 # Created by: Rodrigo Graeff <delphus@gmail.com>
-# $FreeBSD: sysutils/gdmap/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	gdmap
 PORTVERSION=	0.7.5
