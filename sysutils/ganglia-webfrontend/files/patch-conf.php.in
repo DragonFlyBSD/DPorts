@@ -1,5 +1,5 @@
 
-$FreeBSD: sysutils/ganglia-webfrontend/files/patch-conf.php.in 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/sysutils/ganglia-webfrontend/files/patch-conf.php.in 340725 2014-01-22 17:40:44Z mat $
 
 --- conf.php.in.orig
 +++ conf.php.in
