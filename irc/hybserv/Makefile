@@ -1,5 +1,5 @@
 # Created by: Rick Fournier <rick@help-desk.ca>
-# $FreeBSD: irc/hybserv/Makefile 327736 2013-09-20 18:44:49Z bapt $
+# $FreeBSD$
 
 PORTNAME=	hybserv
 PORTVERSION=	1.9.5
