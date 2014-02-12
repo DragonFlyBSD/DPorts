@@ -1,5 +1,5 @@
 # Created by: erwin@FreeBSD.org
-# $FreeBSD: databases/p5-ResourcePool-Resource-DBI/Makefile 332592 2013-11-03 06:53:54Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	ResourcePool-Resource-DBI
 PORTVERSION=	1.0101
