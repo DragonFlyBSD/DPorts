@@ -1,5 +1,5 @@
 # Created by: Rong-En Fan <rafan@FreeBSD.org>
-# $FreeBSD: databases/pear-MDB2_Driver_mysqli/Makefile 334871 2013-11-25 17:59:58Z antoine $
+# $FreeBSD$
 
 PORTNAME=	MDB2_Driver_mysqli
 DISTVERSION=	1.5.0b4
