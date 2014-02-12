@@ -1,5 +1,5 @@
 # Created by: Johannes Meixner <xmj@chaot.net>
-# $FreeBSD: devel/py-tapi/Makefile 342257 2014-02-02 09:27:42Z koobs $
+# $FreeBSD$
 
 PORTNAME=	tapi
 PORTVERSION=	0.1.7
