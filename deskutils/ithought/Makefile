@@ -1,5 +1,5 @@
 # Created by: nbm
-# $FreeBSD: head/deskutils/ithought/Makefile 341877 2014-01-30 19:37:03Z antoine $
+# $FreeBSD$
 
 PORTNAME=	ithought
 PORTVERSION=	a5
