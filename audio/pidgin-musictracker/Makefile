@@ -1,5 +1,5 @@
 # Created by: ports@c0decafe.net
-# $FreeBSD: audio/pidgin-musictracker/Makefile 337921 2013-12-28 21:38:58Z antoine $
+# $FreeBSD$
 
 PORTNAME=	musictracker
 PORTVERSION=	0.4.1
