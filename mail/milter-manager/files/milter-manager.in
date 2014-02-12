@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: mail/milter-manager/files/milter-manager.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/mail/milter-manager/files/milter-manager.in 340872 2014-01-24 00:14:07Z mat $
 #
 
 # PROVIDE: milter-manager
