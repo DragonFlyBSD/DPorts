@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: net/foreman-proxy/files/foreman-proxy.in 341716 2014-01-29 11:46:59Z mm $
+# $FreeBSD: head/net/foreman-proxy/files/foreman-proxy.in 341716 2014-01-29 11:46:59Z mm $
 #
 # PROVIDE: foreman-proxy
 # BEFORE: LOGIN

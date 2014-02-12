@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: net/foreman-proxy/files/pkg-install.in 341716 2014-01-29 11:46:59Z mm $
+# $FreeBSD: head/net/foreman-proxy/files/pkg-install.in 341716 2014-01-29 11:46:59Z mm $
 
 if [ "$2" != "POST-INSTALL" ]; then
     exit 0
