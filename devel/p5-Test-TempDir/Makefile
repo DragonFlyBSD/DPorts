@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: devel/p5-Test-TempDir/Makefile 328515 2013-09-27 20:57:19Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Test-TempDir
 PORTVERSION=	0.08
