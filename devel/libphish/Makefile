@@ -1,5 +1,5 @@
 # Created by: Rashid N. Achilov <shelton@granch.ru>
-# $FreeBSD: devel/libphish/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	libphish
 PORTVERSION=	0.1.0
