@@ -1,5 +1,5 @@
 # Created by: b.f. <bf@FreeBSD.org>
-# $FreeBSD: math/lrng/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD$
 
 PORTNAME=	lrng
 PORTVERSION=	20130314
