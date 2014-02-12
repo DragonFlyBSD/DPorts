@@ -1,5 +1,5 @@
 # Created by: Munish Chopra <mchopra@engmail.uwaterloo.ca>
-# $FreeBSD: net-p2p/opendchub/Makefile 327758 2013-09-20 22:28:25Z bapt $
+# $FreeBSD$
 
 PORTNAME=	opendchub
 PORTVERSION=	0.8.2
