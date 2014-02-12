@@ -1,5 +1,5 @@
 # Created by: Philip Jenvey <pjenvey@groovie.org>
-# $FreeBSD: news/hellanzb/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	hellanzb
 PORTVERSION=	0.13
@@ -24,6 +24,9 @@ USES=		twisted:run,web
 PORTDOCS=	CHANGELOG CREDITS README
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 RUN_DEPENDS+=	unrar:${PORTSDIR}/archivers/unrar
