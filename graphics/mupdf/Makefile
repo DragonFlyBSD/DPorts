@@ -1,5 +1,5 @@
 # Created by: Martin Dieringer <martin.dieringer@gmx.de>
-# $FreeBSD: graphics/mupdf/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mupdf
 PORTVERSION=	1.2
