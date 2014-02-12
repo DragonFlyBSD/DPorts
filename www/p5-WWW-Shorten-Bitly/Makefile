@@ -1,5 +1,5 @@
 # Created by: Masafumi NAKANE <max@FreeBSD.org>
-# $FreeBSD: www/p5-WWW-Shorten-Bitly/Makefile 341691 2014-01-29 07:59:00Z miwi $
+# $FreeBSD$
 
 PORTNAME=	WWW-Shorten-Bitly
 PORTVERSION=	1.17
