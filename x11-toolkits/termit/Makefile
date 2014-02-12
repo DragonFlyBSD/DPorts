@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: x11-toolkits/termit/Makefile 339457 2014-01-11 20:54:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	termit
 PORTVERSION=	2.9.6
