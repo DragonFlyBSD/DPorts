@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: mail/p5-Mail-Freshmeat/Makefile 332803 2013-11-05 02:54:53Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Mail-Freshmeat
 PORTVERSION=	1.20
