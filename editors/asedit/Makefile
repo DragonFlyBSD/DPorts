@@ -1,5 +1,5 @@
 # Created by: Andreas Kohout <shanee@augusta.de>
-# $FreeBSD: editors/asedit/Makefile 332482 2013-11-02 13:47:56Z pawel $
+# $FreeBSD$
 
 PORTNAME=	asedit
 PORTVERSION=	1.3.2
