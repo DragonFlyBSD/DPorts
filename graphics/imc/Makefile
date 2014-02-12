@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: graphics/imc/Makefile 341113 2014-01-25 21:34:35Z bapt $
+# $FreeBSD$
 
 PORTNAME=	imc
 PORTVERSION=	4.3
