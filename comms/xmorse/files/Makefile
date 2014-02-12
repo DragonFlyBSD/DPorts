@@ -1,4 +1,4 @@
-# $FreeBSD: comms/xmorse/files/Makefile 341000 2014-01-25 09:28:51Z marino $
+# $FreeBSD$
 
 CXXFLAGS+= -MMD `fltk-config --cxxflags` `sdl-config --cflags`
 PREFIX	?= /usr/local

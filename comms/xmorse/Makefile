@@ -1,5 +1,5 @@
 # Created by: Sunry Chen <sunrychen@gmail.com>
-# $FreeBSD: comms/xmorse/Makefile 341000 2014-01-25 09:28:51Z marino $
+# $FreeBSD$
 
 PORTNAME=	xmorse
 PORTVERSION=	20041125
