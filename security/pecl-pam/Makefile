@@ -1,5 +1,5 @@
 # Created by: wen@FreeBSD.org
-# $FreeBSD: security/pecl-pam/Makefile 340835 2014-01-23 16:00:14Z miwi $
+# $FreeBSD$
 
 PORTNAME=	pam
 PORTVERSION=	1.0.3
