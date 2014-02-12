@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: mail/rubygem-mailfactory/Makefile 332045 2013-10-30 02:50:05Z swills $
+# $FreeBSD$
 
 PORTNAME=	mailfactory
 PORTVERSION=	1.4.0
