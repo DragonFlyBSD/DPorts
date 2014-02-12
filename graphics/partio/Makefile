@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/partio/Makefile 338014 2013-12-29 15:47:55Z mva $
+# $FreeBSD$
 
 PORTNAME=	partio
 PORTVERSION=	1.1.0.20130624
