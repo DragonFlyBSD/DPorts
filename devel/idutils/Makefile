@@ -1,5 +1,5 @@
 # Created by: pst@FreeBSD.org
-# $FreeBSD: devel/idutils/Makefile 341661 2014-01-28 21:47:19Z bapt $
+# $FreeBSD$
 
 PORTNAME=	idutils
 PORTVERSION=	4.6
