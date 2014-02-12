@@ -1,5 +1,5 @@
 # Created by: Eric Camachat <eric@camachat.org>
-# $FreeBSD: security/keepassx2/Makefile 332100 2013-10-30 12:47:21Z vg $
+# $FreeBSD$
 
 PORTNAME=	KeePassX
 DISTVERSION=	2.0
