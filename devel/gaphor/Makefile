@@ -1,5 +1,5 @@
 # Created by: rehsack@liwing.de
-# $FreeBSD: devel/gaphor/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gaphor
 PORTVERSION=	0.17.2
