@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/ccze/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ccze
 PORTVERSION=	0.2.1
@@ -10,21 +10,24 @@ MASTER_SITES=	http://falafel.200ok.org/distfiles/ccze/ \
 MAINTAINER=	ecu@200ok.org
 COMMENT=	Fast log colorizer
 
-LIB_DEPENDS=	pcre.3:${PORTSDIR}/devel/pcre
+LICENSE=	GPLv2
 
+LIB_DEPENDS=	libpcre.so:${PORTSDIR}/devel/pcre
+
+USES=		gmake
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 
-MAN1=		ccze.1 ccze-cssdump.1
-MAN7=		ccze-plugin.7
+OPTIONS_DEFINE=	DOCS
 
-NO_STAGE=	yes
+PORTDOCS=	FAQ
+
+.include <bsd.port.options.mk>
+
 post-install:
-	@${WRKSRC}/src/ccze-dump > ${PREFIX}/etc/cczerc-sample
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/FAQ ${DOCSDIR}
-.endif
+	@${WRKSRC}/src/ccze-dump > ${STAGEDIR}${PREFIX}/etc/cczerc-sample
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/FAQ ${STAGEDIR}${DOCSDIR}
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/${PORTNAME}/*.so
 
 .include <bsd.port.mk>
