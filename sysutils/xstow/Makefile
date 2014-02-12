@@ -1,5 +1,5 @@
 # Created by: Alan Eldridge <alane@geeksrus.net>
-# $FreeBSD: sysutils/xstow/Makefile 338718 2014-01-05 00:41:13Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	xstow
 PORTVERSION=	1.0.1
