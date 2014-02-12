@@ -1,5 +1,5 @@
 # Created by: Sulev-Madis Silber <madis555@hot.ee>
-# $FreeBSD: devel/p5-Time-Stopwatch/Makefile 341710 2014-01-29 10:33:57Z az $
+# $FreeBSD$
 
 PORTNAME=	Time-Stopwatch
 PORTVERSION=	1.00
