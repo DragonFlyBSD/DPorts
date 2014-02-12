@@ -1,5 +1,5 @@
 # Created by: Tim Cas <ports@stdrand.com>
-# $FreeBSD: devel/ChipmunkPhysics/Makefile 341656 2014-01-28 21:16:10Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	ChipmunkPhysics
 PORTVERSION=	6.2.1
