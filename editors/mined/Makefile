@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: editors/mined/Makefile 340978 2014-01-25 01:15:59Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mined
 PORTVERSION=	2012.23
