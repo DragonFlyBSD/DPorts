@@ -1,5 +1,5 @@
 # Created by: knu@FreeBSD.org
-# $FreeBSD: devel/cvsutils/Makefile 334080 2013-11-17 12:40:16Z mva $
+# $FreeBSD$
 
 PORTNAME=	cvsutils
 PORTVERSION=	0.2.6
