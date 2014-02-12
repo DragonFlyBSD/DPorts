@@ -1,5 +1,5 @@
 # Created by: Dryice Liu <dryice@liu.com.cn>
-# $FreeBSD: textproc/emacs-wiki/Makefile 341264 2014-01-26 19:51:15Z mat $
+# $FreeBSD$
 
 PORTNAME=	emacs-wiki
 PORTVERSION=	2.72
