@@ -1,5 +1,5 @@
 # Created by: Michael Schout <mschout@gkg.net>
-# $FreeBSD: security/pam_pwdfile/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	pam_pwdfile
 PORTVERSION=	0.99
