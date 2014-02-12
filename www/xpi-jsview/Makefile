@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/xpi-jsview/Makefile 341210 2014-01-26 15:11:22Z miwi $
+# $FreeBSD$
 
 PORTNAME=	jsview
 PORTVERSION=	2.0.8
