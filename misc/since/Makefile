@@ -1,5 +1,5 @@
 # Created by: Johann Visagie <wjv@FreeBSD.org>
-# $FreeBSD: misc/since/Makefile 331602 2013-10-25 15:52:40Z tabthorpe $
+# $FreeBSD$
 
 PORTNAME=	since
 PORTVERSION=	1.1
