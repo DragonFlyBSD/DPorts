@@ -1,5 +1,5 @@
 # Created by: siasia
-# $FreeBSD: textproc/tralics/Makefile 329630 2013-10-06 21:35:41Z danilo $
+# $FreeBSD$
 
 PORTNAME=	tralics
 PORTVERSION=	2.15.1
