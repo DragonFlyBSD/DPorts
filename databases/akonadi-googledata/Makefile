@@ -1,5 +1,5 @@
 # Created by: Troels Kofoed Jacobsen <tkjacobsen@gmail.com>
-# $FreeBSD: databases/akonadi-googledata/Makefile 336187 2013-12-11 18:08:52Z bapt $
+# $FreeBSD$
 
 PORTNAME=	akonadi-googledata
 PORTVERSION=	1.2.0
