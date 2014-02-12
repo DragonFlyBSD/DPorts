@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: devel/p5-File-Cache/Makefile 331943 2013-10-29 12:52:07Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	File-Cache
 PORTVERSION=	0.16
