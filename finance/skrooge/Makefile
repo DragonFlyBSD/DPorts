@@ -1,4 +1,4 @@
-# $FreeBSD: finance/skrooge/Makefile 342128 2014-02-01 12:17:42Z makc $
+# $FreeBSD$
 
 PORTNAME=	skrooge
 PORTVERSION=	1.7.1
