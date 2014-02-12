@@ -1,5 +1,5 @@
 # Created by: arved
-# $FreeBSD: security/matrixssl/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	matrixssl
 PORTVERSION=	3.3
