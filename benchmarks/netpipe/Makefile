@@ -1,5 +1,5 @@
 # Created by: jkoshy
-# $FreeBSD: benchmarks/netpipe/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	NetPIPE
 PORTVERSION=	3.7.1
