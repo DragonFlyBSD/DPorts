@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net-mgmt/p5-Xymon-Client/Makefile 338790 2014-01-05 15:52:33Z az $
+# $FreeBSD$
 
 PORTNAME=	Xymon-Client
 PORTVERSION=	0.08
