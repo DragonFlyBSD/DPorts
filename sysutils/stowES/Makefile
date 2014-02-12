@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: sysutils/stowES/Makefile 332475 2013-11-02 12:50:28Z wg $
+# $FreeBSD$
 
 PORTNAME=	stowES
 PORTVERSION=	0.5.7
