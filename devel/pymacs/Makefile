@@ -1,5 +1,5 @@
 # Created by: mwm@mired.org
-# $FreeBSD: devel/pymacs/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	Pymacs
 PORTVERSION=	0.25
