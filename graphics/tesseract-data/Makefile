@@ -1,5 +1,5 @@
 # Created by: bf <bf@FreeBSD.org>
-# $FreeBSD: graphics/tesseract-data/Makefile 340319 2014-01-19 15:54:18Z bapt $
+# $FreeBSD$
 
 PORTNAME=	tesseract-data
 PORTVERSION=	3.02
