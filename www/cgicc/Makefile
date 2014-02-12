@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: www/cgicc/Makefile 339887 2014-01-16 03:23:23Z danilo $
+# $FreeBSD$
 
 PORTNAME=	cgicc
 PORTVERSION=	3.2.12
