@@ -1,5 +1,5 @@
 # Created by: Kozlov Sergey <kozlov.sergey.404@gmail.com>
-# $FreeBSD: www/py-django-tinymce/Makefile 340286 2014-01-19 13:42:39Z mva $
+# $FreeBSD$
 
 PORTNAME=	django-tinymce
 PORTVERSION=	1.5.2
