@@ -1,5 +1,5 @@
 # Created by: Matthias Sund <m.sund@arcor.de>
-# $FreeBSD: devel/antlrworks/Makefile 331268 2013-10-22 13:52:24Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	antlrworks
 PORTVERSION=	1.4.2
