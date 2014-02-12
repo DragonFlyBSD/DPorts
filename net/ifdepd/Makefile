@@ -1,5 +1,5 @@
 # Created by: Alexander Hausner <alex@hugo.bmg.gv.at>
-# $FreeBSD: net/ifdepd/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ifdepd
 PORTVERSION=	20110412
