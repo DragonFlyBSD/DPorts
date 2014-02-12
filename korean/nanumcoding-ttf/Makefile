@@ -1,4 +1,4 @@
-# $FreeBSD: korean/nanumcoding-ttf/Makefile 339059 2014-01-08 00:06:49Z jkim $
+# $FreeBSD$
 
 PORTNAME=	nanumcoding
 PORTVERSION=	2.0
