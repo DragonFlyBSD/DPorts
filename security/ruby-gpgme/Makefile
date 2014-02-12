@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: security/ruby-gpgme/Makefile 331057 2013-10-20 19:20:15Z jhale $
+# $FreeBSD$
 
 PORTNAME=	gpgme
 PORTVERSION=	1.0.8
