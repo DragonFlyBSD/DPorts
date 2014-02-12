@@ -1,5 +1,5 @@
 # Created by: Rob Zinkov
-# $FreeBSD: lang/gambit-c/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	gambit-c
 DISTVERSION=	v4_6_6
