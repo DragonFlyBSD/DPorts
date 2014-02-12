@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: games/xpilot-ng-server/Makefile 337464 2013-12-25 23:29:34Z antoine $
+# $FreeBSD$
 
 PORTNAME=	xpilot-ng
 PORTVERSION=	4.7.3
