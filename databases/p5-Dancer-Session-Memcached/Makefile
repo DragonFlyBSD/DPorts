@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: databases/p5-Dancer-Session-Memcached/Makefile 329842 2013-10-08 22:40:02Z gblach $
+# $FreeBSD$
 
 PORTNAME=	Dancer-Session-Memcached
 PORTVERSION=	0.2.02
