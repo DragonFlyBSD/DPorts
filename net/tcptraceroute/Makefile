@@ -1,5 +1,5 @@
 # Created by: jeff@cetlink.net
-# $FreeBSD: net/tcptraceroute/Makefile 329615 2013-10-06 18:30:43Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	tcptraceroute
 PORTVERSION=	1.4
