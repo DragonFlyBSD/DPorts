@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan
-# $FreeBSD: security/p5-Digest-Whirlpool/Makefile 342150 2014-02-01 14:41:23Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Digest-Whirlpool
 PORTVERSION=	1.09
