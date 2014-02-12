@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: science/libkml/Makefile 337621 2013-12-26 21:48:54Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	libkml
 PORTVERSION=	1.2.0
