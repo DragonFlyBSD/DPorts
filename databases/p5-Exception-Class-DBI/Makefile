@@ -1,5 +1,5 @@
 # Created by: Rod Taylor <ports@rbt.ca>
-# $FreeBSD: databases/p5-Exception-Class-DBI/Makefile 332592 2013-11-03 06:53:54Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Exception-Class-DBI
 PORTVERSION=	1.01
