@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: head/devel/projectcenter/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	projectcenter
 PORTVERSION=	0.6.1
@@ -9,7 +9,7 @@ MASTER_SITE_SUBDIR=	dev-apps
 DISTNAME=	ProjectCenter-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A development environment for GNUstep
+COMMENT=	Development environment for GNUstep
 
 LICENSE=	GPLv2
 
