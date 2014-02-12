@@ -1,5 +1,5 @@
 # Created by: kchowksey@hss.hns.com
-# $FreeBSD: devel/elftoaout/Makefile 340765 2014-01-23 00:31:22Z bapt $
+# $FreeBSD$
 
 PORTNAME=	elftoaout
 PORTVERSION=	2.3
