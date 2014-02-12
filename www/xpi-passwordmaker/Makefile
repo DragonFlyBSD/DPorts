@@ -1,5 +1,5 @@
 # Created by: Anatoly Borodin <anatoly.borodin@gmail.com>
-# $FreeBSD: www/xpi-passwordmaker/Makefile 341212 2014-01-26 15:12:21Z miwi $
+# $FreeBSD$
 
 PORTNAME=	passwordmaker
 PORTVERSION=	1.7.8
