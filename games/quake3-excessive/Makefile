@@ -1,5 +1,5 @@
 # Created by: pat@databits.net
-# $FreeBSD: games/quake3-excessive/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	excessive
 PORTVERSION=	003
