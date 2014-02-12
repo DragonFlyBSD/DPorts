@@ -1,5 +1,5 @@
 # Created by: Frank Laszlo <laszlof@freebsdmatrix.net>
-# $FreeBSD: games/euchre/Makefile 331197 2013-10-21 21:40:50Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	euchre
 PORTVERSION=	0.8
