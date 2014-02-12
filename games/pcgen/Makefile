@@ -1,4 +1,4 @@
-# $FreeBSD: games/pcgen/Makefile 340920 2014-01-24 16:53:49Z eadler $
+# $FreeBSD$
 
 PORTNAME=	pcgen
 PORTVERSION=	6.02.0
@@ -22,6 +22,8 @@ DATAFILES=	batch-convert.jar characters data filepaths.ini lib \
 		logging.properties outputsheets pcgen.jar plugins preview system
 
 SUB_FILES=	pcgen.sh
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
