@@ -1,5 +1,5 @@
 # Created by: tundra
-# $FreeBSD: sysutils/tbku/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	tbku
 PORTVERSION=	1.117
