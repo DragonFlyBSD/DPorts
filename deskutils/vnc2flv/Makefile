@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/vnc2flv/Makefile 328649 2013-09-29 07:13:33Z mva $
+# $FreeBSD$
 
 PORTNAME=	vnc2flv
 PORTVERSION=	20100207
