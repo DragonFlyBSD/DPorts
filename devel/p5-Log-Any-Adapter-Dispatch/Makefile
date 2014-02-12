@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Log-Any-Adapter-Dispatch/Makefile 338872 2014-01-06 12:55:03Z az $
+# $FreeBSD$
 
 PORTNAME=	Log-Any-Adapter-Dispatch
 PORTVERSION=	0.06
