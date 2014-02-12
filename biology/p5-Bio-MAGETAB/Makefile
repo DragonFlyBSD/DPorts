@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: biology/p5-Bio-MAGETAB/Makefile 335098 2013-11-28 15:05:08Z jadawin $
+# $FreeBSD$
 
 PORTNAME=	Bio-MAGETAB
 PORTVERSION=	1.28
