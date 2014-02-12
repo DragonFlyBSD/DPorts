@@ -1,5 +1,5 @@
 # Created by: Matthew X. Economou <xenophon+fbsdports@irtnog.org>
-# $FreeBSD: www/py-django-filer/Makefile 341733 2014-01-29 13:21:31Z miwi $
+# $FreeBSD$
 
 PORTNAME=	django-filer
 PORTVERSION=	0.8.6
