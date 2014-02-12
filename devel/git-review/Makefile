@@ -1,4 +1,4 @@
-# $FreeBSD: devel/git-review/Makefile 341244 2014-01-26 16:43:29Z rm $
+# $FreeBSD$
 
 PORTNAME=	git-review
 PORTVERSION=	1.23
