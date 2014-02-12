@@ -1,5 +1,5 @@
 # Created by: Masahiro Teramoto <markun@onohara.to>
-# $FreeBSD: net/p5-POE-Component-Client-Twitter/Makefile 338799 2014-01-05 16:55:04Z az $
+# $FreeBSD$
 
 PORTNAME=	POE-Component-Client-Twitter
 PORTVERSION=	0.01
