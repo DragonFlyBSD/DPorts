@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: ftp/wxdfast/Makefile 327729 2013-09-20 17:23:18Z bapt $
+# $FreeBSD$
 
 PORTNAME=	wxdfast
 PORTVERSION=	0.6.0
@@ -25,9 +25,6 @@ AUTOMAKE_ARGS=	--add-missing --copy --force-missing --foreign
 LIBTOOLIZE_ARGS=--copy --force
 CONFIGURE_ENV=	WXRC="${WXRC_CMD}"
 
-MAN1=		wxdfast.1
-
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|pt_BR||' ${WRKSRC}/man/Makefile.am
