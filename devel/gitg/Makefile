@@ -1,5 +1,5 @@
 # Created by: kipz <somicide@gmail.com>
-# $FreeBSD: devel/gitg/Makefile 340405 2014-01-20 15:19:20Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	gitg
 PORTVERSION=	0.2.7
