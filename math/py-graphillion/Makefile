@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: math/py-graphillion/Makefile 335305 2013-11-30 15:54:37Z koobs $
+# $FreeBSD$
 
 PORTNAME=	graphillion
 PORTVERSION=	0.94
