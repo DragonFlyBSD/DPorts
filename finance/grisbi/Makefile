@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: finance/grisbi/Makefile 329305 2013-10-04 13:26:28Z jhale $
+# $FreeBSD$
 
 PORTNAME=	grisbi
 PORTVERSION=	0.8.9
@@ -28,6 +28,9 @@ CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS NLS 
+
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
