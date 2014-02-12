@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: finance/openerp-server/Makefile 340935 2014-01-24 22:12:02Z marino $
+# $FreeBSD$
 
 PORTNAME=	openerp-server
 PORTVERSION=	7.0
