@@ -1,5 +1,5 @@
 # Created by: bsam
-# $FreeBSD: mail/imaptools/Makefile 328205 2013-09-24 22:23:45Z bsam $
+# $FreeBSD$
 
 PORTNAME=	imaptools
 PORTVERSION=	1.135
