@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Perlbal-Plugin-PSGI/Makefile 338773 2014-01-05 13:41:52Z az $
+# $FreeBSD$
 
 PORTNAME=	Perlbal-Plugin-PSGI
 PORTVERSION=	0.03
