@@ -1,5 +1,5 @@
 # Created by: Dennis Herrmann <adox@mcx2.org>
-# $FreeBSD: www/p5-WWW-FreeProxy/Makefile 338769 2014-01-05 13:31:10Z az $
+# $FreeBSD$
 
 PORTNAME=	WWW-FreeProxy
 PORTVERSION=	0.04
