@@ -1,5 +1,5 @@
 # Created by: perlguy@perlguy.com
-# $FreeBSD: irc/infobot/Makefile 335950 2013-12-09 02:43:37Z adamw $
+# $FreeBSD$
 
 PORTNAME=	infobot
 PORTVERSION=	0.45.3
