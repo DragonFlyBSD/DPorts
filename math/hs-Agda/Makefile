@@ -1,5 +1,5 @@
 # Created by: Giuseppe Pilichi aka Jacula Modyun <jacula@gmail.com>
-# $FreeBSD: math/hs-Agda/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD$
 
 PORTNAME=	Agda
 PORTVERSION=	2.3.2
