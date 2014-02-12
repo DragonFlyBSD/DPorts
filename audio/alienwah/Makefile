@@ -1,5 +1,5 @@
 # Created by: Tilman Linneweh <arved@FreeBSD.org>
-# $FreeBSD: audio/alienwah/Makefile 336949 2013-12-19 19:27:21Z pawel $
+# $FreeBSD$
 
 PORTNAME=	alienwah
 PORTVERSION=	1.13
