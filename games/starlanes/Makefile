@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/starlanes/Makefile 333468 2013-11-11 01:34:05Z danilo $
+# $FreeBSD$
 
 PORTNAME=	starlanes
 PORTVERSION=	1.2.2
