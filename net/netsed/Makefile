@@ -1,30 +1,23 @@
 # Created by: Roman Shterenzon <roman@xpert.com>
-# $FreeBSD: net/netsed/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	netsed
-PORTVERSION=	0.01
-PORTREVISION=	1
+PORTVERSION=	1.2
 CATEGORIES=	net security
-MASTER_SITES=	# no original distfile site available
-DISTNAME=	${PORTNAME}
-EXTRACT_SUFX=	.tgz
+MASTER_SITES=	http://silicone.homelinux.org/release/netsed/
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	koue@chaosophia.net
 COMMENT=	Alters the contents of network packets in real time
 
+USES=		gmake
 MAKE_ARGS=	CFLAGS="${CFLAGS}"
-
-WRKSRC=		${WRKDIR}
 
 PLIST_FILES=	bin/${PORTNAME}
 PORTDOCS=	README
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCSDIR}
-.endif
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
