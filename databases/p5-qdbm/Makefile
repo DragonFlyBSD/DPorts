@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: databases/p5-qdbm/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD$
 
 PKGNAMEPREFIX=	p5-
 
