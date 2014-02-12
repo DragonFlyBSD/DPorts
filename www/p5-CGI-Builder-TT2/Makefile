@@ -1,5 +1,5 @@
 # Created by: Daniel Wijnands <daniel@itxl.nl>
-# $FreeBSD: www/p5-CGI-Builder-TT2/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	CGI-Builder-TT2
 PORTVERSION=	0.03
