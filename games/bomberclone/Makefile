@@ -1,5 +1,5 @@
 # Created by: Edwin Groothuis
-# $FreeBSD: games/bomberclone/Makefile 340228 2014-01-19 02:20:23Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	bomberclone
 PORTVERSION=	0.11.9
