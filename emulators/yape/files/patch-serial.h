@@ -1,5 +1,5 @@
 
-$FreeBSD: emulators/yape/files/patch-serial.h 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/emulators/yape/files/patch-serial.h 340725 2014-01-22 17:40:44Z mat $
 
 --- serial.h.orig
 +++ serial.h

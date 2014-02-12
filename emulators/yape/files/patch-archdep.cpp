@@ -1,5 +1,5 @@
 
-$FreeBSD: emulators/yape/files/patch-archdep.cpp 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/emulators/yape/files/patch-archdep.cpp 340725 2014-01-22 17:40:44Z mat $
 
 --- archdep.cpp.orig
 +++ archdep.cpp
