@@ -1,5 +1,5 @@
 # Created by: Timothy Bourke <timbob@bigpond.com>
-# $FreeBSD: misc/pspresent/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD$
 
 PORTNAME=	pspresent
 PORTVERSION=	1.3
