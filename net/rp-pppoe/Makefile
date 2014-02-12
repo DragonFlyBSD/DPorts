@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <liouxFreeBSD.org>
-# $FreeBSD: net/rp-pppoe/Makefile 336416 2013-12-14 01:51:48Z mandree $
+# $FreeBSD$
 
 PORTNAME=	rp-pppoe
 PORTVERSION=	3.11
