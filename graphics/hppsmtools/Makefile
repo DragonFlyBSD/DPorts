@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@fix.no>
-# $FreeBSD: graphics/hppsmtools/Makefile 340656 2014-01-21 20:42:02Z antoine $
+# $FreeBSD$
 
 PORTNAME=	hppsmtools
 PORTVERSION=	1.1
