@@ -1,5 +1,5 @@
 # Created by: andy
-# $FreeBSD: lang/ici/Makefile 332492 2013-11-02 14:48:57Z tijl $
+# $FreeBSD$
 
 PORTNAME=	ici
 PORTVERSION=	4.1.2
