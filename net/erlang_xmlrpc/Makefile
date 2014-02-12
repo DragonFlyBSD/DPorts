@@ -1,4 +1,4 @@
-# $FreeBSD: net/erlang_xmlrpc/Makefile 333116 2013-11-07 15:15:48Z olgeni $
+# $FreeBSD$
 
 PORTNAME=	erlang_xmlrpc
 PORTVERSION=	1.13
