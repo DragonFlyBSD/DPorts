@@ -1,5 +1,5 @@
 # Created by: Christoph Theis <theis@gmx.at>
-# $FreeBSD: www/cakephp21/Makefile 338513 2014-01-03 01:12:59Z bapt $
+# $FreeBSD$
 
 PORTNAME=	cakephp
 PORTVERSION=	2.1.3
