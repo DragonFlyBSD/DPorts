@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@NUXI.ucdavis.edu)
-# $FreeBSD: net-im/icb/Makefile 333699 2013-11-13 15:18:30Z gahr $
+# $FreeBSD$
 
 PORTNAME=	icb
 PORTVERSION=	5.1.0
@@ -20,6 +20,8 @@ CONFIGURE_ARGS=	--with-tclinclude=${TCL_INCLUDEDIR} \
 PORTEXAMPLES=	bartender confuse echofunctions sample.icbrc
 PLIST_FILES=	bin/icb %%DATADIR%%/icbserverdb
 PLIST_DIRS=	%%DATADIR%%
+
+OPTIONS_DEFINE=	EXAMPLES 
 
 .include <bsd.port.options.mk>
 
