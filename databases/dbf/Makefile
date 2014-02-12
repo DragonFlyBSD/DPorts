@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: databases/dbf/Makefile 337338 2013-12-24 12:33:44Z pawel $
+# $FreeBSD$
 
 PORTNAME=	dbf
 PORTVERSION=	0.9.0
