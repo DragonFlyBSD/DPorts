@@ -1,5 +1,5 @@
 # Created by: Eric A. Griff <eric@talesfromthereal.com>
-# $FreeBSD: textproc/p5-WDDX/Makefile 333056 2013-11-07 03:52:41Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	WDDX
 PORTVERSION=	1.02
