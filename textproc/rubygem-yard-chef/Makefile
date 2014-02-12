@@ -1,5 +1,5 @@
 # Created by: Douglas Thrift <douglas@douglasthrift.net>
-# $FreeBSD: textproc/rubygem-yard-chef/Makefile 334374 2013-11-20 03:15:07Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	yard-chef
 PORTVERSION=	1.0.0
