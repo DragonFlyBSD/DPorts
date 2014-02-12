@@ -1,8 +1,9 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: devel/py-crcmod/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	crcmod
 PORTVERSION=	1.7
+PORTREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}/ \
 		CHEESESHOP
@@ -13,17 +14,16 @@ COMMENT=	Module for Cyclic Redundancy Check (CRC) calculations
 
 LICENSE=	MIT
 
-# Python3 ready
-USE_PYTHON=	yes
+USE_PYTHON=		yes
 USE_PYDISTUTILS=	yes
-DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
+DOCSDIR=	${PREFIX}/share/doc/${PYTHON_PKGNAMEPREFIX}${PORTNAME}
+PORTDOCS=	*
+
 post-install:
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/changelog ${DOCSDIR}
-	cd ${WRKSRC}/docs && ${COPYTREE_SHARE} html ${DOCSDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/changelog ${STAGEDIR}${DOCSDIR}
+	(cd ${WRKSRC}/docs && ${COPYTREE_SHARE} html ${STAGEDIR}${DOCSDIR})
 
 .include <bsd.port.mk>
