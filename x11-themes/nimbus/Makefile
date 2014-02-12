@@ -1,5 +1,5 @@
 # Created by: Karsten Pedersen <kpedersen@opencde.org>
-# $FreeBSD: x11-themes/nimbus/Makefile 341351 2014-01-27 09:06:49Z miwi $
+# $FreeBSD$
 
 PORTNAME=		nimbus
 PORTVERSION=		0.1.7
