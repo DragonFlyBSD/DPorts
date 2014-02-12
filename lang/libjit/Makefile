@@ -1,5 +1,5 @@
 # Created by: michael johnson <ahze@ahze.net>
-# $FreeBSD: lang/libjit/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libjit
 PORTVERSION=	0.1.2
@@ -12,16 +12,13 @@ COMMENT=	Libjit implements Just-In-Time compilation functionality
 LICENSE=	LGPL21 LGPL3
 LICENSE_COMB=	dual
 
-USES=	pathfix
-USE_GMAKE=	yes
+USES=	pathfix gmake
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 CFLAGS+=	-O0
 
 INFO=		libjit
-MAN3=		libjit.3
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "ia64"
