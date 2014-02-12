@@ -1,5 +1,5 @@
 # Created by: Oleg Ukraincev <oleg@ht-systems.ru>
-# $FreeBSD: www/diamanda/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	diamanda
 PORTVERSION=	0.0.${SNAPSHOT:S/.//g}
