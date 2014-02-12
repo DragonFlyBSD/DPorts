@@ -1,5 +1,5 @@
 # Created by: G. Adam Stanislav <adam@whizkidtech.net>
-# $FreeBSD: chinese/muni/Makefile 338553 2014-01-03 15:59:41Z adamw $
+# $FreeBSD$
 
 PORTNAME=	muni
 PORTVERSION=	1.0
@@ -8,6 +8,8 @@ MASTER_SITES=	http://www.whizkidtech.redprince.net/i18n/muni/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Find Unicode values for Chinese characters
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
