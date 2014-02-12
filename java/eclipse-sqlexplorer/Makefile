@@ -1,5 +1,5 @@
 # Created by: sugimura@jp.FreeBSD.org
-# $FreeBSD: java/eclipse-sqlexplorer/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	sqlexplorer
 PORTVERSION=	2.2.4
