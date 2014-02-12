@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: ftp/ftpcopy/Makefile 329633 2013-10-06 22:06:43Z mandree $
+# $FreeBSD$
 
 PORTNAME=	ftpcopy
 PORTVERSION=	0.6.7
@@ -13,6 +13,8 @@ USES=		perl5
 USE_PERL5=	build
 
 WRKSRC=		${WRKDIR}/web/${DISTNAME}
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
