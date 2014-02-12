@@ -1,5 +1,5 @@
 # Created by: Paul Schmehl <pauls@utdallas.edu>
-# $FreeBSD: security/sancp/Makefile 329707 2013-10-07 14:11:44Z danilo $
+# $FreeBSD$
 
 PORTNAME=	sancp
 PORTVERSION=	1.6.1
