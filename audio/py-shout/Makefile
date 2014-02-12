@@ -1,5 +1,5 @@
 # Created by: Olivier Duchateau <duchateau.olivier@gmail.com>
-# $FreeBSD: audio/py-shout/Makefile 340852 2014-01-23 19:57:32Z mva $
+# $FreeBSD$
 
 PORTNAME=	shout
 PORTVERSION=	0.2.1
