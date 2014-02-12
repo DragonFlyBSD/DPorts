@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <tthomas@mail.dotcom.fr>
-# $FreeBSD: news/newsx/Makefile 335070 2013-11-27 22:33:26Z thierry $
+# $FreeBSD$
 
 PORTNAME=	newsx
 PORTVERSION=	1.6
