@@ -1,5 +1,5 @@
 # Created by: Cory McIntire (loon@noncensored.com)
-# $FreeBSD: security/lynis/Makefile 336483 2013-12-14 20:10:52Z antoine $
+# $FreeBSD$
 
 PORTNAME=	lynis
 PORTVERSION=	1.3.5
