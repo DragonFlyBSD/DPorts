@@ -1,5 +1,5 @@
 # Created by: Sebastian Schuetz <sschuetz@fhm.edu>
-# $FreeBSD: security/tpm-tools/Makefile 342012 2014-01-31 15:54:10Z miwi $
+# $FreeBSD$
 
 PORTNAME=	tpm-tools
 PORTVERSION=	1.3.5
