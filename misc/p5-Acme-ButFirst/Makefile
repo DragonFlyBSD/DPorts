@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: misc/p5-Acme-ButFirst/Makefile 332733 2013-11-04 14:41:18Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Acme-ButFirst
 PORTVERSION=	1.00
