@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/p5-JSON-RPC-Common/Makefile 332029 2013-10-30 01:50:57Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	JSON-RPC-Common
 PORTVERSION=	0.10
