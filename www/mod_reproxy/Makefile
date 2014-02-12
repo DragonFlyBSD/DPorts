@@ -1,4 +1,4 @@
-# $FreeBSD: www/mod_reproxy/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	mod_reproxy
 PORTVERSION=	0.02.20110826
