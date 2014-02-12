@@ -1,4 +1,4 @@
-# $FreeBSD: x11-clocks/asclock-gtk/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	asclock-gtk
 PORTVERSION=	2.1.10
