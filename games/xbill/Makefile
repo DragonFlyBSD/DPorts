@@ -1,5 +1,5 @@
 # Created by: asami
-# $FreeBSD: games/xbill/Makefile 329259 2013-10-04 02:00:37Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	xbill
 PORTVERSION=	2.1
