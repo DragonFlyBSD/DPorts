@@ -1,5 +1,5 @@
 # Created by: Travis Poppe <tlp@liquidx.org>
-# $FreeBSD: irc/irssistats/Makefile 335950 2013-12-09 02:43:37Z adamw $
+# $FreeBSD$
 
 PORTNAME=	irssistats
 PORTVERSION=	0.75
