@@ -1,5 +1,5 @@
 # Created by: Jean Milanez Melo <jmelo@FreeBSD.org>
-# $FreeBSD: www/admuser/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	admuser
 PORTVERSION=	2.3.2
@@ -8,6 +8,9 @@ MASTER_SITES=	http://sarg.sourceforge.net/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Handle your Squid or Web users and passwords using your browser
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-10
 
 HAS_CONFIGURE=	yes
 
