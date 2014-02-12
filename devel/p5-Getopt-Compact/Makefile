@@ -1,5 +1,5 @@
 # Created by: Evgeniy Kosov <evgeniy@kosov.su>
-# $FreeBSD: devel/p5-Getopt-Compact/Makefile 331953 2013-10-29 14:32:08Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Getopt-Compact
 PORTVERSION=	0.04
