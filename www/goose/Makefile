@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: www/goose/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	goose
 PORTVERSION=	0.5
