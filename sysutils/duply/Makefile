@@ -1,5 +1,5 @@
 # Created by: Michael Ranner <michael@ranner.eu>
-# $FreeBSD: sysutils/duply/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	duply
 PORTVERSION=	1.5.9
