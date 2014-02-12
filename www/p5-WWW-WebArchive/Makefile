@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/p5-WWW-WebArchive/Makefile 338767 2014-01-05 13:23:32Z az $
+# $FreeBSD$
 
 PORTNAME=	WWW-WebArchive
 PORTVERSION=	0.50
