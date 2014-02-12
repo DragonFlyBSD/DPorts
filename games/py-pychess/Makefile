@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: games/py-pychess/Makefile 330398 2013-10-15 12:56:39Z bapt $
+# $FreeBSD$
 
 PORTNAME=	pychess
 DISTVERSION=	0.10rc1
