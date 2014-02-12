@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: net/fspclient/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	fspclient
 PORTVERSION=	0.93.0
