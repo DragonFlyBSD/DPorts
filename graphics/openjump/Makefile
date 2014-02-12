@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: graphics/openjump/Makefile 333432 2013-11-10 19:48:22Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	OpenJUMP
 PORTVERSION=	1.6.3
@@ -58,6 +58,8 @@ do-install:
 	${LN} -sf ../${PORTNAME}/bin/openjump ${STAGEDIR}${PREFIX}/bin/openjump
 	${INSTALL_DATA} ${WRKSRC}/bin/default-plugins.xml ${TARGET_DIR}/bin/
 	${INSTALL_DATA} ${WRKSRC}/bin/log4j.xml ${TARGET_DIR}/bin/
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
