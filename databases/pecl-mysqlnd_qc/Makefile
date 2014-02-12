@@ -1,5 +1,5 @@
 # Created by: johnpupu <johnpupu@gmail.com>
-# $FreeBSD: databases/pecl-mysqlnd_qc/Makefile 340835 2014-01-23 16:00:14Z miwi $
+# $FreeBSD$
 
 PORTNAME=	mysqlnd_qc
 PORTVERSION=	1.2.0
