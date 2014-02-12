@@ -1,5 +1,5 @@
 # Created by: Mikolaj Golub <to.my.trociny@gmail.com>
-# $FreeBSD: sysutils/gather/Makefile 340349 2014-01-19 20:43:44Z trociny $
+# $FreeBSD$
 
 PORTNAME=	gather
 PORTVERSION=	0.4.1
