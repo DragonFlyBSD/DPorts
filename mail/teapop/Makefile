@@ -1,5 +1,5 @@
 # Created by: Jim Mock <jim@FreeBSD.org>
-# $FreeBSD: mail/teapop/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	teapop
 PORTVERSION=	0.3.8
@@ -9,6 +9,9 @@ MASTER_SITES=	ftp://ftp.toontown.org/pub/teapop/ \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Yet another RFC1939 compliant POP3 server
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-10
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--enable-flock
