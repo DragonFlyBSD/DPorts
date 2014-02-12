@@ -1,5 +1,5 @@
 # Created by: Yabu Tetsuro <yabu@uopmu.ees.osakafu-u.ac.jp>
-# $FreeBSD: japanese/t2ps/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	t2ps
 PORTVERSION=	1.6d
