@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <culot@FreeBSD.org>
-# $FreeBSD: devel/p5-Devel-GlobalDestruction-XS/Makefile 341711 2014-01-29 10:57:06Z az $
+# $FreeBSD$
 
 PORTNAME=	Devel-GlobalDestruction-XS
 PORTVERSION=	0.01
