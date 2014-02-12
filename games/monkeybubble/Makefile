@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger
-# $FreeBSD: games/monkeybubble/Makefile 332761 2013-11-04 19:34:25Z danilo $
+# $FreeBSD$
 
 PORTNAME=	monkeybubble
 PORTVERSION=	0.4.0
