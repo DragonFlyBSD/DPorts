@@ -1,5 +1,5 @@
 # Created by: Zane C, Bowers <vvelox@vvelox.net>
-# $FreeBSD: mail/p5-Mail-IMAPTalk-MailCache/Makefile 338791 2014-01-05 16:08:00Z az $
+# $FreeBSD$
 
 PORTNAME=	Mail-IMAPTalk-MailCache
 PORTVERSION=	0.0.1
