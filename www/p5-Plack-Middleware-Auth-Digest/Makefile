@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Plack-Middleware-Auth-Digest/Makefile 338763 2014-01-05 13:05:56Z az $
+# $FreeBSD$
 
 PORTNAME=	Plack-Middleware-Auth-Digest
 PORTVERSION=	0.04
