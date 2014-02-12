@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-HTML-Defaultify/Makefile 334402 2013-11-20 09:46:10Z jadawin $
+# $FreeBSD$
 
 PORTNAME=	HTML-Defaultify
 PORTVERSION=	1.01
