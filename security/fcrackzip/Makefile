@@ -1,5 +1,5 @@
 # Created by: Stefan Walter <sw@gegenunendlich.de>
-# $FreeBSD: security/fcrackzip/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	fcrackzip
 PORTVERSION=	1.0
