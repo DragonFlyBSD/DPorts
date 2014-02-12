@@ -1,7 +1,7 @@
 /*
  * This file is in the public domain.
  *
- * $FreeBSD: net/openntpd/files/compat.h 340872 2014-01-24 00:14:07Z mat $
+ * $FreeBSD: head/net/openntpd/files/compat.h 340872 2014-01-24 00:14:07Z mat $
  */
 
 #ifndef SA_LEN

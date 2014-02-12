@@ -1,4 +1,4 @@
-$FreeBSD: net/openntpd/files/patch-log.c 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/net/openntpd/files/patch-log.c 340725 2014-01-22 17:40:44Z mat $
 --- log.c.orig	2007-08-22 23:04:30.000000000 +0200
 +++ log.c	2009-08-01 22:08:01.000000000 +0200
 @@ -26,6 +26,10 @@

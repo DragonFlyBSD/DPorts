@@ -1,4 +1,4 @@
-$FreeBSD: net/openntpd/files/patch-parse.y 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/net/openntpd/files/patch-parse.y 340725 2014-01-22 17:40:44Z mat $
 --- parse.y.orig	2009-08-01 20:29:44.000000000 +0200
 +++ parse.y	2009-08-01 21:17:58.000000000 +0200
 @@ -200,6 +200,7 @@ main		: LISTEN ON address	{

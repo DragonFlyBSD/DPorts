@@ -1,4 +1,4 @@
-$FreeBSD: net/openntpd/files/patch-ntpd.h 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/net/openntpd/files/patch-ntpd.h 340725 2014-01-22 17:40:44Z mat $
 --- ntpd.h.orig	2009-11-23 20:37:40.000000000 +0100
 +++ ntpd.h	2009-11-23 20:38:12.000000000 +0100
 @@ -29,11 +29,12 @@
