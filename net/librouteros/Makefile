@@ -1,5 +1,5 @@
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD: net/librouteros/Makefile 341439 2014-01-27 18:17:15Z feld $
+# $FreeBSD$
 
 PORTNAME=	librouteros
 PORTVERSION=	1.1.2
@@ -23,6 +23,8 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 CFLAGS+=	-I${LOCALBASE}/include -Wno-error
 
 PORTDOCS=	AUTHORS COPYING ChangeLog INSTALL NEWS README
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
