@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: net/polyorb/Makefile 333410 2013-11-10 16:57:25Z marino $
+# $FreeBSD$
 
 PORTNAME=	polyorb
 PORTVERSION=	2.9.0
