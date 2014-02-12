@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: www/kannel/files/kannel.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/www/kannel/files/kannel.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: kannel_smsbox kannel_wapbox kannel_bearerbox
 # REQUIRE: NETWORKING SERVERS 

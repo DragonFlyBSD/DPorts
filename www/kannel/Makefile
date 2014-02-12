@@ -1,5 +1,5 @@
 # Created by: Domas Mituzas <midom@dammit.lt>
-# $FreeBSD: www/kannel/Makefile 341817 2014-01-30 08:58:12Z danfe $
+# $FreeBSD$
 
 PORTNAME=	kannel
 PORTVERSION=	1.5.0
