@@ -1,5 +1,5 @@
 # Created by: Motomichi Matsuzaki <mzaki@m.u-tokyo.ac.jp>
-# $FreeBSD: biology/velvet/Makefile 338550 2014-01-03 15:46:52Z adamw $
+# $FreeBSD$
 
 PORTNAME=	velvet
 PORTVERSION=	1.1.04
@@ -59,6 +59,8 @@ PLIST_FILES+=	%%SITE_PERL%%/${f:H:T}/${f:T}
 PORTDOCS=	ChangeLog Manual.pdf Columbus_manual.pdf
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
