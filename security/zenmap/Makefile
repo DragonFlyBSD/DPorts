@@ -1,5 +1,5 @@
 # Created by: Daniel Roethlisberger <daniel@roe.ch>
-# $FreeBSD: security/zenmap/Makefile 340075 2014-01-17 16:59:33Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	zenmap
 PORTVERSION=	6.40
