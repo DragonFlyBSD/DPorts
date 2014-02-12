@@ -1,5 +1,5 @@
 # Created by: Sergey A. Osokin <osa@FreeBSD.org>
-# $FreeBSD: benchmarks/wrk/Makefile 341985 2014-01-31 12:32:19Z miwi $
+# $FreeBSD$
 
 PORTNAME=	wrk
 PORTVERSION=	3.0.4
