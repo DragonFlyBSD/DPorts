@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: games/teg/Makefile 333474 2013-11-11 02:57:46Z danilo $
+# $FreeBSD$
 
 PORTNAME=	teg
 PORTVERSION=	0.11.2
