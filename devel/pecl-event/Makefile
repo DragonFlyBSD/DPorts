@@ -1,8 +1,8 @@
 # Created by: John Chen <johnpupu@gmail.com>
-# $FreeBSD: devel/pecl-event/Makefile 332601 2013-11-03 09:49:31Z antoine $
+# $FreeBSD$
 
 PORTNAME=	event
-PORTVERSION=	1.8.1
+PORTVERSION=	1.9.0
 CATEGORIES=	devel
 MASTER_SITES=	http://pecl.php.net/get/
 PKGNAMEPREFIX=	pecl-
