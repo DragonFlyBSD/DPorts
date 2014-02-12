@@ -1,5 +1,5 @@
 # Created by: Mikhail Teterin
-# $FreeBSD: mail/milter-skem/Makefile 342323 2014-02-02 16:02:58Z miwi $
+# $FreeBSD$
 
 PORTNAME=	skem
 PORTVERSION=	1.0.1
