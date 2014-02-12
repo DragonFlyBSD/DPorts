@@ -1,5 +1,5 @@
 # Created by: Sergey A. Osokin <osa@FreeBSD.org>
-# $FreeBSD: sysutils/ccd2iso/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ccd2iso
 PORTVERSION=	0.9
@@ -15,8 +15,7 @@ PLIST_FILES=	bin/ccd2iso
 
 GNU_CONFIGURE=	yes
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/ccd2iso ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/src/ccd2iso ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
