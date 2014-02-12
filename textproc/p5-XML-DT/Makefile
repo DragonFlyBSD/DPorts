@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: textproc/p5-XML-DT/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD$
 
 PORTNAME=	XML-DT
 PORTVERSION=	0.63
@@ -18,8 +18,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		mkdtskel.1 mkdtdskel.1 mkxmltype.1
-MAN3=		XML::DT.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
