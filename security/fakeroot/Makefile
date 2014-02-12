@@ -1,5 +1,5 @@
 # Created by: Meno Abels <meno.abels@adviser.com>
-# $FreeBSD: security/fakeroot/Makefile 330299 2013-10-14 11:25:59Z martymac $
+# $FreeBSD$
 
 PORTNAME=	fakeroot
 PORTVERSION=	1.20
