@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/gdesklets-recentlyused/Makefile 342225 2014-02-02 00:02:52Z antoine $
+# $FreeBSD$
 
 PORTNAME=	recentlyused
 PORTVERSION=	0.6
