@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: irc/ruby-rica/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	rica
 PORTVERSION=	0.10
@@ -25,6 +25,8 @@ MODULES=	rica.rb \
 
 DOCS=		CHANGES	README	classes_and_methods.txt	event.lst *.png
 EXAMPLES=	erica.* ricaco.rb rica-example.rb
+
+OPTIONS_DEFINE=	DOCS EXAMPLES 
 
 .include <bsd.port.options.mk>
 
