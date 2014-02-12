@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: audio/wxguitar/Makefile 332272 2013-10-31 18:56:50Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	wxguitar
 PORTVERSION=	1.01
