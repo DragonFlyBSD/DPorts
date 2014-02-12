@@ -1,5 +1,5 @@
 # Created by: Lars Koeller <lkoeller@cc.fh-lippe.de>
-# $FreeBSD: x11-clocks/tclock/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	tclock
 PORTVERSION=	1.0.1
