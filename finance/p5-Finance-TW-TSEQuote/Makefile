@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: finance/p5-Finance-TW-TSEQuote/Makefile 332619 2013-11-03 15:38:39Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Finance-TW-TSEQuote
 PORTVERSION=	0.2.8
