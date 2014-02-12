@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: french/facturier/files/pkg-deinstall.in 340719 2014-01-22 15:52:06Z mat $
+# $FreeBSD: head/french/facturier/files/pkg-deinstall.in 340719 2014-01-22 15:52:06Z mat $
 #
 # Try to restore httpd.conf when deinstalling Le Facturier
 

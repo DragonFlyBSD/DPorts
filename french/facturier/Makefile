@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: french/facturier/Makefile 327728 2013-09-20 17:21:20Z bapt $
+# $FreeBSD$
 
 PORTNAME=	facturier
 PORTVERSION=	2.1.2
