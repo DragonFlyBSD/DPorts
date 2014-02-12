@@ -1,5 +1,5 @@
 # Created by: Bob Willcox <bob@immure.com>
-# $FreeBSD: devel/tkmerge/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	tkmerge
 PORTVERSION=	0.85
