@@ -1,5 +1,5 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: games/sdl_jewels/Makefile 337394 2013-12-24 22:58:42Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	sdl_jewels
 PORTVERSION=	1.1.1
