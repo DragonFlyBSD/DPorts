@@ -1,4 +1,4 @@
-# $FreeBSD: www/rubygem-jquery-atwho-rails/Makefile 332055 2013-10-30 03:02:27Z swills $
+# $FreeBSD$
 
 PORTNAME=	jquery-atwho-rails
 PORTVERSION=	0.4.1
