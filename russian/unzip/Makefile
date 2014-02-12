@@ -1,5 +1,5 @@
 # Created by: den
-# $FreeBSD: russian/unzip/Makefile 338633 2014-01-04 09:04:21Z antoine $
+# $FreeBSD$
 
 CATEGORIES=	russian archivers
 
