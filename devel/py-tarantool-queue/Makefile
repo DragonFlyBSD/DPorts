@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: devel/py-tarantool-queue/Makefile 332280 2013-10-31 19:45:55Z vg $
+# $FreeBSD$
 
 PORTNAME=	tarantool-queue
 PORTVERSION=	0.1.0
