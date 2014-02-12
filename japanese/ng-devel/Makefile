@@ -1,5 +1,5 @@
 # Created by: Kawaguti Ginga <ginga-freebsd@ginganet.org>
-# $FreeBSD: japanese/ng-devel/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ng
 PORTVERSION=	1.5.b1
