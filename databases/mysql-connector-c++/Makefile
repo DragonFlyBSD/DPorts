@@ -1,8 +1,9 @@
 # Created by: gahr
-# $FreeBSD: databases/mysql-connector-c++/Makefile 336187 2013-12-11 18:08:52Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mysql-connector-c++
 PORTVERSION=	1.1.3
+PORTREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_MYSQL}
 MASTER_SITE_SUBDIR=	Connector-C++
@@ -15,8 +16,8 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	libboost_regex.so:${PORTSDIR}/devel/boost-libs
 
 USE_MYSQL=	51+
-USE_LDCONFIG=	yes
 USES=		cmake:outsource
+USE_LDCONFIG=	yes
 
 PLIST_SUB+=	PORTVERSION=${PORTVERSION}
 
@@ -52,5 +53,4 @@ regression-test: build
 	test/unit/classes/statement )
 .endif
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
