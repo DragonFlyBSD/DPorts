@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Plack-Middleware-AMF/Makefile 338778 2014-01-05 14:02:22Z az $
+# $FreeBSD$
 
 PORTNAME=	Plack-Middleware-AMF
 PORTVERSION=	0.02
