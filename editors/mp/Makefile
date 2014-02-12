@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: editors/mp/Makefile 338597 2014-01-03 23:42:10Z danilo $
+# $FreeBSD$
 
 PORTNAME=	mp
 PORTVERSION=	5.2.7
