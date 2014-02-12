@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: devel/libpeas/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 #   $MCom: ports/trunk/devel/libpeas/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	libpeas
