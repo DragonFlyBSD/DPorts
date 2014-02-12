@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: astro/p5-Astro-Hipparcos/Makefile 328612 2013-09-28 17:13:16Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Astro-Hipparcos
 PORTVERSION=	0.09
