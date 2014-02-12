@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <william88@gmail.com>
-# $FreeBSD: www/py-django-tastypie/Makefile 335613 2013-12-04 10:24:37Z wg $
+# $FreeBSD$
 
 PORTNAME=	django-tastypie
 PORTVERSION=	0.11.0
