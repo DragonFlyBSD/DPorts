@@ -1,5 +1,5 @@
 # Created by: Ganael Laplanche <ganael.laplanche@martymac.org>
-# $FreeBSD: net/grsync/Makefile 334487 2013-11-21 13:26:40Z martymac $
+# $FreeBSD$
 
 PORTNAME=	grsync
 PORTVERSION=	1.2.4
