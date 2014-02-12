@@ -1,5 +1,5 @@
 # Created by: FURUSAWA, Kazuhisa <kazu@jp.freebsd.org>
-# $FreeBSD: x11-clocks/mouseclock/Makefile 339424 2014-01-11 12:51:31Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	mouseclock
 PORTVERSION=	1.0
