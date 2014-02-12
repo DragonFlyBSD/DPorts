@@ -1,4 +1,4 @@
-# $FreeBSD: x11-fonts/consolamono-ttf/Makefile 332640 2013-11-03 19:23:18Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	consolamono-ttf
 PORTVERSION=	20130127
