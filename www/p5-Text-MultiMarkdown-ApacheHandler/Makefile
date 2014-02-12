@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: www/p5-Text-MultiMarkdown-ApacheHandler/Makefile 333137 2013-11-07 16:38:13Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Text-MultiMarkdown-ApacheHandler
 PORTVERSION=	0.01
