@@ -1,5 +1,5 @@
 # Created by: wosch
-# $FreeBSD: net/rshell/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	rshell
 PORTVERSION=	1.0
