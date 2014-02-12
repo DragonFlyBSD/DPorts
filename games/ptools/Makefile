@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: games/ptools/Makefile 331142 2013-10-21 14:12:26Z eadler $
+# $FreeBSD$
 
 PORTNAME=	ptools
 PORTVERSION=	1.1
@@ -24,6 +24,8 @@ ALL_TARGET=	mopt mts pname
 NO_WRKSUBDIR=	yes
 
 MAN6=		ptools-mopt.6 ptools-mts.6
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 post-build:
