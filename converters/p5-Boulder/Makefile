@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: converters/p5-Boulder/Makefile 341761 2014-01-29 17:00:41Z az $
+# $FreeBSD$
 
 PORTNAME=	Boulder
 PORTVERSION=	1.30
