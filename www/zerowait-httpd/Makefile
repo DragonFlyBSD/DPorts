@@ -1,5 +1,5 @@
 # Created by: Vsevolod Stakhov
-# $FreeBSD: www/zerowait-httpd/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	zerowait
 PORTVERSION=	0.8d
