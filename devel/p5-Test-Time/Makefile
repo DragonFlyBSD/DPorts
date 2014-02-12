@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Test-Time/Makefile 339787 2014-01-15 15:31:02Z kuriyama $
+# $FreeBSD$
 
 PORTNAME=	Test-Time
 PORTVERSION=	0.04
