@@ -1,5 +1,5 @@
 # Created by: Piotr Rybicki <meritus@innervision.pl>
-# $FreeBSD: www/pecl-amfext/Makefile 340828 2014-01-23 14:32:34Z miwi $
+# $FreeBSD$
 
 PORTNAME=	amfext
 PORTVERSION=	0.9.2
