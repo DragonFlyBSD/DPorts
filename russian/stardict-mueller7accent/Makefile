@@ -1,4 +1,4 @@
-# $FreeBSD: russian/stardict-mueller7accent/Makefile 333307 2013-11-09 16:00:36Z makc $
+# $FreeBSD$
 
 PORTNAME=	stardict-mueller7accent
 PORTVERSION=	2.4.2
