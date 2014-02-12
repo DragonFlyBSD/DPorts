@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: www/p5-CGI_Lite/Makefile 341805 2014-01-30 07:55:01Z miwi $
+# $FreeBSD$
 
 PORTNAME=	CGI-Lite
 PORTVERSION=	2.02
