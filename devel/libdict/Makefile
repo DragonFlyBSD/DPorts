@@ -1,5 +1,5 @@
 # Created by: Alex Semenyaka <alex@rinet.ru>
-# $FreeBSD: devel/libdict/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
+# $FreeBSD$
 
 PORTNAME=	libdict
 PORTVERSION=	0.2.1
