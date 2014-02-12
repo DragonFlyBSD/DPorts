@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: security/burpsuite/files/license.sh 307007 2012-11-05 12:51:58Z sbz $
+# $FreeBSD: head/security/burpsuite/files/license.sh 307007 2012-11-05 12:51:58Z sbz $
 
 # License agreement
 more << EOF_LICENSE

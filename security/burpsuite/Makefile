@@ -1,5 +1,5 @@
 # Created by: Niels Heinen
-# $FreeBSD: security/burpsuite/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	burpsuite
 PORTVERSION=	1.5
