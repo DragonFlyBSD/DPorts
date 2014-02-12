@@ -1,5 +1,5 @@
 
-$FreeBSD: databases/postgresql_autodoc/files/patch-Makefile 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/databases/postgresql_autodoc/files/patch-Makefile 340725 2014-01-22 17:40:44Z mat $
 
 --- Makefile.orig
 +++ Makefile

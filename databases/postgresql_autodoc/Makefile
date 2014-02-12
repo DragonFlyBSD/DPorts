@@ -1,4 +1,4 @@
-# $FreeBSD: databases/postgresql_autodoc/Makefile 333114 2013-11-07 15:09:17Z olgeni $
+# $FreeBSD$
 
 PORTNAME=	postgresql_autodoc
 PORTVERSION=	1.41
