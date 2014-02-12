@@ -1,5 +1,5 @@
 # Created by: Radim Kolar
-# $FreeBSD: benchmarks/forkbomb/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	forkbomb
 PORTVERSION=	1.4
