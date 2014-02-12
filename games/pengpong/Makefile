@@ -1,5 +1,5 @@
 # Created by: Patrick Li <pat@databits.net>
-# $FreeBSD: games/pengpong/Makefile 332793 2013-11-05 00:33:17Z danilo $
+# $FreeBSD$
 
 PORTNAME=	pengpong
 PORTVERSION=	0.3
