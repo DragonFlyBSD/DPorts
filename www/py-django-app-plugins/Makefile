@@ -1,5 +1,5 @@
 # Created by: Kevin Golding <ports@caomhin.org>
-# $FreeBSD: www/py-django-app-plugins/Makefile 341750 2014-01-29 15:27:52Z miwi $
+# $FreeBSD$
 
 PORTNAME=	django-app-plugins
 PORTVERSION=	0.1.1
