@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-google-api-python-client/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	google-api-python-client
 PORTVERSION=	1.1
