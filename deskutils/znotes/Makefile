@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: deskutils/znotes/Makefile 335113 2013-11-28 17:49:59Z makc $
+# $FreeBSD$
 
 PORTNAME=	znotes
 PORTVERSION=	0.4.5
@@ -23,8 +23,6 @@ DESKTOP_ENTRIES="zNotes" "Notes managment" \
 
 OPTIONS_DEFINE=		NLS
 OPTIONS_SUB=		yes
-
-.include <bsd.port.options.mk>
 
 post-patch:
 	@${REINPLACE_CMD} -e '/.path =/s|/usr|$$$$PREFIX|g' \
