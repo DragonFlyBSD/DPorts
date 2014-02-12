@@ -1,4 +1,4 @@
-# $FreeBSD: x11-themes/gnome-icons-jini/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD$
 
 PORTNAME=	jini
 PORTVERSION=	0.8
