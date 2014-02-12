@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: devel/pecl-vld/Makefile 334060 2013-11-17 08:26:25Z antoine $
+# $FreeBSD$
 
 PORTNAME=	vld
 PORTVERSION=	0.12.0
