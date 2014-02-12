@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: www/trac-advancedticketworkflow/Makefile 341180 2014-01-26 14:30:59Z miwi $
+# $FreeBSD$
 
 PORTNAME=	advancedticketworkflow
 PORTVERSION=	0.10.3940
