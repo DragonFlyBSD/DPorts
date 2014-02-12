@@ -1,5 +1,5 @@
 # Created by: Randall Hopper <aa8vb@ipass.net>
-# $FreeBSD: x11-clocks/glclock/Makefile 341531 2014-01-28 10:42:26Z danfe $
+# $FreeBSD$
 
 PORTNAME=	glclock
 DISTVERSION=	6.0b6.0
