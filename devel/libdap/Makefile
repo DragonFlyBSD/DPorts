@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/libdap/Makefile 331006 2013-10-20 11:48:50Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	libdap
 PORTVERSION=	3.12.1
