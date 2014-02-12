@@ -1,5 +1,5 @@
 # Created by: mig
-# $FreeBSD: security/ssh_askpass_gtk2/Makefile 336735 2013-12-17 15:57:48Z madpilot $
+# $FreeBSD$
 
 PORTNAME=	ssh_askpass_gtk2
 PORTVERSION=	0.4
