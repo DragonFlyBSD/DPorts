@@ -1,5 +1,5 @@
 #!/bin/sh
 #
-# $FreeBSD: java/jlex/files/jlex.sh.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/java/jlex/files/jlex.sh.in 340872 2014-01-24 00:14:07Z mat $
 
 "%%LOCALBASE%%/bin/java" -cp "%%JAVAJARDIR%%/jlex.jar" JLex.Main "$@"

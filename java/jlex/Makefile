@@ -1,5 +1,5 @@
 # Created by: jake@checker.org
-# $FreeBSD: java/jlex/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	jlex
 PORTVERSION=	1.2.6
