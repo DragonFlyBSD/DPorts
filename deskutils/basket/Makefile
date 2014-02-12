@@ -1,5 +1,5 @@
 # Created by: Markus Brueffer <brueffer@phoenix-systems.de>
-# $FreeBSD: deskutils/basket/Makefile 331057 2013-10-20 19:20:15Z jhale $
+# $FreeBSD$
 
 PORTNAME=	basket
 PORTVERSION=	1.81
