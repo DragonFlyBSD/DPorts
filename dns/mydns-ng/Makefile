@@ -1,5 +1,5 @@
 # Created by: Simon Dick <simond@irrelevant.org>
-# $FreeBSD: dns/mydns-ng/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mydns-ng
 PORTVERSION=	1.2.8.31
