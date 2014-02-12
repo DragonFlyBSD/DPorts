@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-BinaryData/Makefile 330991 2013-10-20 08:34:34Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Test-BinaryData
 PORTVERSION=	0.014
