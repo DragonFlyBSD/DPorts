@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@FreeBSD.org>
-# $FreeBSD: math/p5-Math-TrulyRandom/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Math-TrulyRandom
 PORTVERSION=	1.0
@@ -10,18 +10,21 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	anders@FreeBSD.org
 COMMENT=	Perl interface to a truly random number generator function
 
+LICENSE=	BSD3CLAUSE
+
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=		Math::TrulyRandom.3
+OPTIONS_DEFINE=	DOCS
 
-NO_STAGE=	yes
+PORTDOCS=	*
+
+.include <bsd.port.options.mk>
+
 post-install:
-.if !defined(NOPORTDOCS)
-	@${INSTALL} -d -m 0755 ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/COPYRIGHT ${DOCSDIR}/
-	${INSTALL_DATA} ${WRKSRC}/truerand.c ${DOCSDIR}/
-	${INSTALL_DATA} ${WRKSRC}/truerand.h ${DOCSDIR}/
-.endif
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/truerand.c ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/truerand.h ${STAGEDIR}${DOCSDIR}
+	${STRIP_CMD} ${STAGEDIR}${SITE_PERL}/${PERL_ARCH}/auto/Math/TrulyRandom/TrulyRandom.so
 
 .include <bsd.port.mk>
