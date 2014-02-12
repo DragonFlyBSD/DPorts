@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/mxflib/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
+# $FreeBSD$
 
 PORTNAME=	mxflib
 PORTVERSION=	1.0.1
