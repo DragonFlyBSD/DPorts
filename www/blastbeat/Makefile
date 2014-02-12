@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: www/blastbeat/Makefile 335619 2013-12-04 14:08:03Z koobs $
+# $FreeBSD$
 
 PORTNAME=	blastbeat
 PORTVERSION=	20121205
