@@ -1,5 +1,5 @@
 # Created by: hrkfrd@googlemail.com
-# $FreeBSD: audio/mpdas/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mpdas
 PORTVERSION=	0.3.0
