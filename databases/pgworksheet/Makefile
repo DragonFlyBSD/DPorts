@@ -1,5 +1,5 @@
 # Created by: Henri Michelon
-# $FreeBSD: databases/pgworksheet/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	pgworksheet
 PORTVERSION=	1.9
