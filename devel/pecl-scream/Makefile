@@ -1,5 +1,5 @@
 # Created by: Volodymyr Kostyrko <c.kworr@gmail.com>
-# $FreeBSD: devel/pecl-scream/Makefile 340830 2014-01-23 15:12:50Z miwi $
+# $FreeBSD$
 
 PORTNAME=	scream
 DISTVERSION=	0.1.0
