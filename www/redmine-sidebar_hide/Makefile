@@ -1,5 +1,5 @@
 # Created by: Kozlov Sergey <kozlov.sergey.404@gmail.com>
-# $FreeBSD: www/redmine-sidebar_hide/Makefile 342243 2014-02-02 03:46:48Z swills $
+# $FreeBSD$
 
 PORTNAME=	sidebar_hide
 PORTVERSION=	0.0.5
