@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
-# $FreeBSD: archivers/squsq/Makefile 330498 2013-10-16 11:27:24Z ak $
+# $FreeBSD$
 
 PORTNAME=	squsq
 PORTVERSION=	3.3
