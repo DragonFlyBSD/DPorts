@@ -1,5 +1,5 @@
 # Created by: Eygene Ryabinkin <rea-fbsd@codelabs.ru>
-# $FreeBSD: x11-themes/slim-themes/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	slim-themes
 PORTVERSION=	1.0.1
@@ -74,7 +74,6 @@ NEWTHEMES:=	${ALLTHEMES}	${n}
 ALLTHEMES:=	${NEWTHEMES}
 .endfor # t in ${THEMELIST}
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .for n in ${ALLTHEMES}
@@ -106,12 +105,12 @@ post-patch:
 
 # Install selected themes.  Another regexp voodoo, yay! \o/
 do-install:
-	${MKDIR} ${THEMEDIR}
+	${MKDIR} ${STAGEDIR}${THEMEDIR}
 .for n in ${ALLTHEMES}
 .if ${PORT_OPTIONS:M${n}}
-	${MKDIR} ${THEMEDIR}/${${n}_DDIR}
+	${MKDIR} ${STAGEDIR}${THEMEDIR}/${${n}_DDIR}
 	cd "${WRKSRC}/${${n}_SDIR}" && \
-	  ${COPYTREE_SHARE} . ${THEMEDIR}/${${n}_DDIR}
+	  ${COPYTREE_SHARE} . ${STAGEDIR}${THEMEDIR}/${${n}_DDIR}
 .endif # ${PORT_OPTIONS:M${n}}
 .endfor # t in ${THEMELIST}
 
