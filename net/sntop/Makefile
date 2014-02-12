@@ -1,5 +1,5 @@
 # Created by: Matt Emmerton <matt@gsicomp.on.ca>
-# $FreeBSD: net/sntop/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	sntop
 PORTVERSION=	1.4.3
