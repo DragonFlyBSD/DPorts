@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Module-Release/Makefile 339470 2014-01-12 03:52:00Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Module-Release
 PORTVERSION=	2.08
