@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann
-# $FreeBSD: security/courier-authlib/Makefile 330610 2013-10-17 06:45:11Z oliver $
+# $FreeBSD$
 
 PORTNAME=	courier-authlib
 PORTVERSION=	0.66.0
