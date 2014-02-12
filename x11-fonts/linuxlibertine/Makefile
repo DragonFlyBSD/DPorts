@@ -1,5 +1,5 @@
 # Created by: Björn König <bkoenig@alpha-tierchen.de>
-# $FreeBSD: x11-fonts/linuxlibertine/Makefile 332811 2013-11-05 06:46:58Z tabthorpe $
+# $FreeBSD$
 
 PORTNAME=	linuxlibertine
 PORTVERSION=	4.7.5
