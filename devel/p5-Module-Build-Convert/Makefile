@@ -1,5 +1,5 @@
 # Created by: clsung
-# $FreeBSD: devel/p5-Module-Build-Convert/Makefile 332120 2013-10-30 14:44:54Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Module-Build-Convert
 PORTVERSION=	0.49
