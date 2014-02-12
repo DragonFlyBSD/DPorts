@@ -1,5 +1,5 @@
 # Created by: petef@databits.net
-# $FreeBSD: textproc/p5-PDF-Create/Makefile 336163 2013-12-11 13:35:12Z jadawin $
+# $FreeBSD$
 
 PORTNAME=	PDF-Create
 PORTVERSION=	1.08
