@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/pmars-sdl/Makefile 332797 2013-11-05 00:53:19Z danilo $
+# $FreeBSD$
 
 PORTNAME=	pmars
 PORTVERSION=	0.9.2
