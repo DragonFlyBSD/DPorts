@@ -1,5 +1,5 @@
 # Created by: Clement Laforet <clement@FreeBSD.org>
-# $FreeBSD: www/mod_log_mysql/Makefile 340199 2014-01-18 17:58:42Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	mod_log_mysql
 PORTVERSION=	1.04
