@@ -1,5 +1,5 @@
 # Created by: "Choe, Cheng-Dae" <whitekid@netian.com>
-# $FreeBSD: www/py-clientform/Makefile 341732 2014-01-29 13:20:13Z miwi $
+# $FreeBSD$
 
 PORTNAME=	clientform
 PORTVERSION=	0.2.10
