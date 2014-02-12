@@ -1,5 +1,5 @@
 # Created by: babak@farrokhi.net
-# $FreeBSD: net-mgmt/sjitter/Makefile 341127 2014-01-25 22:18:46Z bapt $
+# $FreeBSD$
 
 PORTNAME=	sjitter
 PORTVERSION=	0.18.1b
