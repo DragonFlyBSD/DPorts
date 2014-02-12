@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: audio/shout/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	shout
 PORTVERSION=	0.8.0
