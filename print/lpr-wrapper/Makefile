@@ -1,5 +1,5 @@
 # Created by: e-masson@kisoft-services.com
-# $FreeBSD: print/lpr-wrapper/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	lpr-wrapper
 PORTVERSION=	0.7
