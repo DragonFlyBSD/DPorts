@@ -1,5 +1,5 @@
 # Created by: Pete Fritchman <petef@databits.net>
-# $FreeBSD: news/newsgrab/Makefile 337678 2013-12-27 10:01:32Z bapt $
+# $FreeBSD$
 
 PORTNAME=	newsgrab
 PORTVERSION=	0.4.0
