@@ -1,5 +1,5 @@
 # Created by: Ivan Dreckman <ivannashdreckman@fastmail.fm>
-# $FreeBSD: sysutils/zxfer/Makefile 333555 2013-11-12 09:30:57Z tijl $
+# $FreeBSD$
 
 PORTNAME=	zxfer
 PORTVERSION=	1.1.0
