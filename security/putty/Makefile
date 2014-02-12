@@ -1,4 +1,4 @@
-# $FreeBSD: security/putty/Makefile 328955 2013-10-01 14:53:25Z mandree $
+# $FreeBSD$
 
 PORTNAME=	putty
 PORTVERSION=	0.63
