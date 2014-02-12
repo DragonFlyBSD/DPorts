@@ -1,5 +1,5 @@
 # Created by: Paul Schmehl <pauls@utdallas.edu>
-# $FreeBSD: security/sguil-client/Makefile 332502 2013-11-02 16:45:44Z feld $
+# $FreeBSD$
 
 PORTNAME=	sguil-client
 PORTVERSION=	0.8.0
