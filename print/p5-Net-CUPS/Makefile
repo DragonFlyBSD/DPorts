@@ -1,5 +1,5 @@
 # Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: print/p5-Net-CUPS/Makefile 338799 2014-01-05 16:55:04Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-CUPS
 PORTVERSION=	0.61
