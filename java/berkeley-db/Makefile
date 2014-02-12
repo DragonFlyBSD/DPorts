@@ -1,5 +1,5 @@
 # Created by: Mikhail Teterin
-# $FreeBSD: java/berkeley-db/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	je
 PORTVERSION=	3.2.76
