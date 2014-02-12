@@ -1,8 +1,9 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: lang/parrot/Makefile 330902 2013-10-19 16:21:30Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	parrot
 PORTVERSION=	${PARROT_VERSION}
+PORTREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.parrot.org/pub/parrot/releases/stable/${PORTVERSION}/
 
