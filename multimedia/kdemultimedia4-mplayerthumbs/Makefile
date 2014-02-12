@@ -1,5 +1,5 @@
 # Created by: Raphael Kubo da Costa <rakuco@FreeBSD.org>
-# $FreeBSD: multimedia/kdemultimedia4-mplayerthumbs/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mplayerthumbs
 PORTVERSION=	${KDE4_VERSION}
