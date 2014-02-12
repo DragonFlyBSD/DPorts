@@ -1,4 +1,4 @@
-# $FreeBSD: www/rubygem-modernizr/Makefile 335499 2013-12-02 14:28:45Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	modernizr
 PORTVERSION=	2.6.2
