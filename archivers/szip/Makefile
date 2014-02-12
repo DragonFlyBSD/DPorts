@@ -1,5 +1,5 @@
 # Created by: Igor Pokrovsky <tiamat@telegraph.spb.ru>
-# $FreeBSD: archivers/szip/Makefile 330498 2013-10-16 11:27:24Z ak $
+# $FreeBSD$
 
 PORTNAME=	szip
 PORTVERSION=	1.12b
