@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: net-mgmt/nrpe/files/nrpe2.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/net-mgmt/nrpe/files/nrpe2.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: nrpe2
 # REQUIRE: LOGIN

@@ -1,5 +1,5 @@
 # Created by: Paul Dlug<paul@nerdlabs.com>
-# $FreeBSD: net-mgmt/nrpe/Makefile 329730 2013-10-07 20:10:58Z zeising $
+# $FreeBSD$
 
 PORTNAME=	nrpe
 DISTVERSION=	2.15
