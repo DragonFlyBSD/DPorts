@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/help_hannahs_horse/Makefile 337528 2013-12-26 14:47:29Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	help_hannahs_horse
 PORTVERSION=	1.0
