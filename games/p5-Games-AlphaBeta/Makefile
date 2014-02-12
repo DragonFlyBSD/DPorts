@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@daltons.ca>
-# $FreeBSD: games/p5-Games-AlphaBeta/Makefile 332736 2013-11-04 14:49:24Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Games-AlphaBeta
 PORTVERSION=	0.4.7
