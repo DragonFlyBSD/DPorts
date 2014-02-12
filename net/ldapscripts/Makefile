@@ -1,5 +1,5 @@
 # Created by: Ganael LAPLANCHE <ganael.laplanche@martymac.org>
-# $FreeBSD: net/ldapscripts/Makefile 335002 2013-11-27 07:36:27Z martymac $
+# $FreeBSD$
 
 PORTNAME=	ldapscripts
 PORTVERSION=	2.0.5
