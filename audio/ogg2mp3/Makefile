@@ -1,5 +1,5 @@
 # Created by: Aleksander Fafula <alex@bsdguru.org>
-# $FreeBSD: audio/ogg2mp3/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ogg2mp3
 PORTVERSION=	0.6.1
