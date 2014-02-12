@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: x11-fonts/sgifonts/Makefile 327781 2013-09-20 23:51:14Z bapt $
+# $FreeBSD$
 
 PORTNAME=	sgifonts
 PORTVERSION=	1.0.1
