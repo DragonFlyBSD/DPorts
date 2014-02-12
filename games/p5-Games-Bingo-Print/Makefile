@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lars@thegler.dk>
-# $FreeBSD: games/p5-Games-Bingo-Print/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Games-Bingo-Print
 PORTVERSION=	0.04
@@ -22,18 +22,17 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		bingo_print.pl.1
-MAN3=		Games::Bingo::Print.3
+OPTIONS_DEFINE=	EXAMPLES
 
-NO_STAGE=	yes
+PORTEXAMPLES=	bingo_print.pl
+
+.include <bsd.port.options.mk>
+
 post-install:
-.ifndef(NOPORTDOCS)
-	@${ECHO_MSG} "===>   Installing example for ${PKGNAME}"
-	@${MKDIR} ${EXAMPLESDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/bingo_print.pl ${EXAMPLESDIR}
-.endif
+	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/bingo_print.pl ${STAGEDIR}${EXAMPLESDIR}
 
-test:
-	@cd ${WRKSRC}; make test
+regression-test: build
+	@cd ${WRKSRC} && ${MAKE} -s test
 
 .include <bsd.port.mk>
