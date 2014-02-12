@@ -1,5 +1,5 @@
 # Created by: Jason Evans <jasone@FreeBSD.org>
-# $FreeBSD: editors/zile/Makefile 340977 2014-01-25 01:04:40Z bapt $
+# $FreeBSD$
 
 PORTNAME=	zile
 PORTVERSION=	2.4.9
