@@ -1,4 +1,4 @@
-# $FreeBSD: x11/tilda/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
+# $FreeBSD$
 
 PORTNAME=	tilda
 PORTVERSION=	0.9.6
