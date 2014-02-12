@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net/netmap/Makefile 340257 2014-01-19 09:28:21Z miwi $
+# $FreeBSD$
 
 PORTNAME=	netmap
 PORTVERSION=	0.1.3
