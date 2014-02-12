@@ -1,5 +1,5 @@
 # Created by: candy@kgc.co.jp
-# $FreeBSD: x11-clocks/xtimer/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xtimer
 PORTVERSION=	0.8089
