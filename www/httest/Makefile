@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: www/httest/Makefile 339326 2014-01-10 08:33:27Z bapt $
+# $FreeBSD$
 
 PORTNAME=	httest
 PORTVERSION=	2.4.9
