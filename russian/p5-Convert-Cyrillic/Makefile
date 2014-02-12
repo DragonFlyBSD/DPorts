@@ -1,5 +1,5 @@
 # Created by: Sergey Kandaurov <pluknet@gmail.com>
-# $FreeBSD: russian/p5-Convert-Cyrillic/Makefile 341813 2014-01-30 08:45:50Z az $
+# $FreeBSD$
 
 PORTNAME=	Convert-Cyrillic
 PORTVERSION=	1.05
