@@ -1,5 +1,5 @@
 # Created by: Wen heping <wenheping@gmail.com>
-# $FreeBSD: www/piwik/Makefile 339758 2014-01-15 07:19:32Z miwi $
+# $FreeBSD$
 
 PORTNAME=	piwik
 PORTVERSION=	2.0.3
