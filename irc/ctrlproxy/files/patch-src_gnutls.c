@@ -1,5 +1,5 @@
 
-$FreeBSD: irc/ctrlproxy/files/patch-src_gnutls.c 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/irc/ctrlproxy/files/patch-src_gnutls.c 340725 2014-01-22 17:40:44Z mat $
 
 --- src/gnutls.c.orig
 +++ src/gnutls.c
