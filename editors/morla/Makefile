@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: editors/morla/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	morla
 PORTVERSION=	0.16.1
