@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: games/falconseye/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD$
 
 PORTNAME=	falconseye
 PORTVERSION=	1.9.3
