@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: deskutils/aspostit/Makefile 338297 2013-12-31 13:10:24Z antoine $
+# $FreeBSD$
 
 PORTNAME=	aspostit
 PORTVERSION=	1.3
