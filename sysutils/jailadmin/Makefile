@@ -1,5 +1,5 @@
 # Created by: Kirk Strauser <kirk@strauser.com>
-# $FreeBSD: sysutils/jailadmin/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	jailadmin
 PORTVERSION=	1.8
