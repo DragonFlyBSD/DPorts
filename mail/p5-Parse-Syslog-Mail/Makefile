@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: mail/p5-Parse-Syslog-Mail/Makefile 338791 2014-01-05 16:08:00Z az $
+# $FreeBSD$
 
 PORTNAME=	Parse-Syslog-Mail
 PORTVERSION=	0.17
