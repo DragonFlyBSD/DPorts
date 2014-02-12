@@ -1,5 +1,5 @@
 # Created by: Andrey Slusar <anray@FreeBSD.org>
-# $FreeBSD: ukrainian/emacs-koi8u/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	koi8u
 PORTVERSION=	1.0
