@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@mj.0038.net>
-# $FreeBSD: textproc/dictionary/Makefile 341224 2014-01-26 15:31:04Z mat $
+# $FreeBSD$
 
 PORTNAME=	dictionary
 PORTVERSION=	1.8.7
