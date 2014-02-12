@@ -1,5 +1,5 @@
 # Created by: David Bushong <david@bushong.net>
-# $FreeBSD: audio/dtmfdial/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	dtmfdial
 PORTVERSION=	0.2
