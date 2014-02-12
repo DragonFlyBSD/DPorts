@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-CheckManifest/Makefile 340429 2014-01-20 17:24:48Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Test-CheckManifest
 PORTVERSION=	1.28
