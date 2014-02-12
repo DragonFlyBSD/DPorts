@@ -1,5 +1,5 @@
 # Created by: smace@FreeBSD.org
-# $FreeBSD: devel/libredblack/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
+# $FreeBSD$
 
 PORTNAME=	libredblack
 PORTVERSION=	1.3
