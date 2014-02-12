@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: sysutils/py-ezjailremote/Makefile 342102 2014-02-01 08:58:10Z koobs $
+# $FreeBSD$
 
 PORTNAME=	ezjailremote
 PORTVERSION=	0.2.2
