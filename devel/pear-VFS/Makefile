@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas (<thierry@FreeBSD.org>)
-# $FreeBSD: devel/pear-VFS/Makefile 333263 2013-11-08 21:41:53Z antoine $
+# $FreeBSD$
 
 PORTNAME=	VFS
 PORTVERSION=	0.3.0
