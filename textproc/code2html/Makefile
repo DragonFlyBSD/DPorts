@@ -1,5 +1,5 @@
 # Created by: Chris D. Faulhaber <jedgar@fxp.org>
-# $FreeBSD: textproc/code2html/Makefile 341161 2014-01-26 11:57:13Z mat $
+# $FreeBSD$
 
 PORTNAME=	code2html
 PORTVERSION=	0.9.1
