@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-# $FreeBSD: games/xdino/Makefile 333648 2013-11-13 02:40:08Z danilo $
+# $FreeBSD$
 
 PORTNAME=	xdino
 PORTVERSION=	5.5.2
