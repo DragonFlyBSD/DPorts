@@ -1,5 +1,5 @@
 # Created by: Pawel Pekala <pawel@FreeBSD.org>
-# $FreeBSD: multimedia/smtube/Makefile 339816 2014-01-15 20:41:46Z pawel $
+# $FreeBSD$
 
 PORTNAME=	smtube
 PORTVERSION=	1.8
