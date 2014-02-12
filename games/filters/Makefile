@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: games/filters/Makefile 331845 2013-10-28 12:13:18Z ehaupt $
+# $FreeBSD$
 
 PORTNAME=	filters
 PORTVERSION=	2.49
