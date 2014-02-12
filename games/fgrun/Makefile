@@ -1,5 +1,5 @@
 # Created by: buganini@gmail.com
-# $FreeBSD: games/fgrun/Makefile 334415 2013-11-20 13:26:34Z martymac $
+# $FreeBSD$
 
 PORTNAME=	fgrun
 PORTVERSION=	1.7.0
