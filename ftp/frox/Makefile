@@ -1,5 +1,5 @@
 # Created by: Sergey Matveychuk <sem@ciam.ru>
-# $FreeBSD: ftp/frox/Makefile 341092 2014-01-25 20:39:36Z bapt $
+# $FreeBSD$
 
 PORTNAME=	frox
 PORTVERSION=	0.7.18
