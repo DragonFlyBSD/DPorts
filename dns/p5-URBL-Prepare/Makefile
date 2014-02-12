@@ -1,5 +1,5 @@
 # Created by: Kurt Jaeger <fbsd-ports@opsec.eu>
-# $FreeBSD: dns/p5-URBL-Prepare/Makefile 342124 2014-02-01 11:54:13Z wg $
+# $FreeBSD$
 
 PORTNAME=	URBL-Prepare
 PORTVERSION=	0.09
