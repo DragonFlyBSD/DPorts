@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@FreeBSD.org>
-# $FreeBSD: net/boinc_curses/Makefile 337736 2013-12-27 14:54:45Z rene $
+# $FreeBSD$
 
 PORTNAME=	boinc_curses
 PORTVERSION=	0.2.2
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL} \
 		http://www.oook.cz/bsd/boinc_curses/
 MASTER_SITE_SUBDIR=rene
 
-MAINTAINER=	rene@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Console, ncurses based monitor and manager for BOINC
 
 BUILD_DEPENDS=	${LOCALBASE}/lib/libboinc.a:${PORTSDIR}/net/boinc-client
