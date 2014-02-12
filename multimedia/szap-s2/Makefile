@@ -1,5 +1,5 @@
 # Created by: Juergen Lock <nox@FreeBSD.org>
-# $FreeBSD: multimedia/szap-s2/Makefile 341876 2014-01-30 19:36:27Z nox $
+# $FreeBSD$
 
 PORTNAME=	szap_s2
 PORTVERSION=	20100129s
