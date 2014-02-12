@@ -1,4 +1,4 @@
-# $FreeBSD: irc/kvirc-qt4/Makefile 331383 2013-10-23 13:08:41Z makc $
+# $FreeBSD$
 
 PKGNAMESUFFIX=	-qt4
 
