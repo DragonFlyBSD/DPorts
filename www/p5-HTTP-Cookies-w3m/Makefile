@@ -1,5 +1,5 @@
 # Created by: Masahiro Teramoto <markun@onohara.to>
-# $FreeBSD: www/p5-HTTP-Cookies-w3m/Makefile 338769 2014-01-05 13:31:10Z az $
+# $FreeBSD$
 
 PORTNAME=	HTTP-Cookies-w3m
 PORTVERSION=	0.01
