@@ -1,4 +1,4 @@
-# $FreeBSD: x11-fonts/alegreya-sans/Makefile 340865 2014-01-23 22:03:42Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	alegreya-sans
 PORTVERSION=	1.002
