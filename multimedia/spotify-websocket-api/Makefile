@@ -1,5 +1,5 @@
 # Created by: rene@FreeBSD.org
-# $FreeBSD: multimedia/spotify-websocket-api/Makefile 341385 2014-01-27 12:14:09Z koobs $
+# $FreeBSD$
 
 PORTNAME=	SpotifyWebsocketAPI
 PORTVERSION=	0.2
