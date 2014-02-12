@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: graphics/cadubi/Makefile 339998 2014-01-16 23:34:36Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	cadubi
 PORTVERSION=	1.3
