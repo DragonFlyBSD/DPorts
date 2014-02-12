@@ -1,4 +1,4 @@
-# $FreeBSD: www/apache22-worker-mpm/Makefile 333336 2013-11-09 20:53:16Z ohauer $
+# $FreeBSD$
 
 MASTERDIR=		${.CURDIR}/../apache22
 
