@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: math/vtk5-data/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD$
 
 PORTNAME=	vtk
 PORTVERSION=	5.10.1
