@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <rpsfa@rit.edu>
-# $FreeBSD: dns/p5-Net-DNS-Check/Makefile 341813 2014-01-30 08:45:50Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-DNS-Check
 PORTVERSION=	0.45
