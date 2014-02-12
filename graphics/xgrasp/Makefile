@@ -1,5 +1,5 @@
 # Created by: asami
-# $FreeBSD: graphics/xgrasp/Makefile 337774 2013-12-27 18:29:14Z bapt $
+# $FreeBSD$
 
 PORTNAME=	xgrasp
 PORTVERSION=	1.7d
