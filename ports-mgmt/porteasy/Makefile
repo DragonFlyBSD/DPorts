@@ -1,4 +1,4 @@
-# $FreeBSD: ports-mgmt/porteasy/Makefile 327762 2013-09-20 22:36:49Z bapt $
+# $FreeBSD$
 
 PORTNAME=	porteasy
 PORTVERSION=	2.8.5
