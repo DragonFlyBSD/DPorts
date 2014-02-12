@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: vietnamese/vietunicode-hannom/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	vietunicode-hannom
 PORTVERSION=	2005.02.06
