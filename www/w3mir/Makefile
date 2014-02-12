@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: www/w3mir/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	w3mir
 PORTVERSION=	1.0.10
