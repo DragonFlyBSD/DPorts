@@ -1,4 +1,4 @@
-# $FreeBSD: security/py-fail2ban/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	fail2ban
 PORTVERSION=	0.8.11
