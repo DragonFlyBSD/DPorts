@@ -1,5 +1,5 @@
 # Created by: Sander Janssen <janssen@rendo.dekooi.nl>
-# $FreeBSD: audio/mp3rename/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	mp3rename
 PORTVERSION=	0.6
