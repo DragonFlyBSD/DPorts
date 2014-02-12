@@ -1,5 +1,5 @@
 # Created by: Tai-hwa Liang <avatar@www.mmlab.cse.yzu.edu.tw>
-# $FreeBSD: chinese/pine4/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	pine
 PORTVERSION=	4.64
@@ -28,6 +28,8 @@ NO_LATEST_LINK=	yes
 MAN1=		pine.1 pico.1 pilot.1
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
