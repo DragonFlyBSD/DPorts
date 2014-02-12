@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/py-rlcompleter2/Makefile 337713 2013-12-27 11:48:47Z wg $
+# $FreeBSD$
 
 PORTNAME=	rlcompleter2
 PORTVERSION=	0.98
