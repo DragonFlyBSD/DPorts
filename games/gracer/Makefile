@@ -1,5 +1,5 @@
 # Created by: nox@jelal.kn-bremen.de
-# $FreeBSD: games/gracer/Makefile 328500 2013-09-27 16:36:58Z nox $
+# $FreeBSD$
 
 PORTNAME=	gracer
 PORTVERSION=	0.1.5
