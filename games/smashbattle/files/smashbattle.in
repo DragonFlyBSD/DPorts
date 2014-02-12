@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: games/smashbattle/files/smashbattle.in 339646 2014-01-13 23:50:44Z nemysis $
+# $FreeBSD: head/games/smashbattle/files/smashbattle.in 339646 2014-01-13 23:50:44Z nemysis $
 #
 
 cd "%%DATADIR%%"

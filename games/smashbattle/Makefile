@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/smashbattle/Makefile 339646 2014-01-13 23:50:44Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	smashbattle
 PORTVERSION=	110224
