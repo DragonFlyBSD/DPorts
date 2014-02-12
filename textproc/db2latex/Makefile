@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/db2latex/Makefile 341164 2014-01-26 12:14:29Z mat $
+# $FreeBSD$
 
 PORTNAME=	db2latex
 PORTVERSION=	0.8p1
