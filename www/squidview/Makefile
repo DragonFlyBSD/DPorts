@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: www/squidview/Makefile 335254 2013-11-30 01:00:22Z danilo $
+# $FreeBSD$
 
 PORTNAME=	squidview
 PORTVERSION=	0.80
