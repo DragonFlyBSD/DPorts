@@ -1,5 +1,5 @@
 # Created by: olgeni@FreeBSD.org
-# $FreeBSD: java/netbeans/Makefile 339083 2014-01-08 10:11:20Z gahr $
+# $FreeBSD$
 
 PORTNAME=	netbeans
 PORTVERSION=	7.4
