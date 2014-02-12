@@ -1,5 +1,5 @@
 # Created by: smace
-# $FreeBSD: news/trn4/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	trn
 PORTVERSION=	4.0.b77

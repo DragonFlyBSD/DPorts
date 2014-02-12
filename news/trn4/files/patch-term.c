@@ -1,5 +1,5 @@
 
-$FreeBSD: news/trn4/files/patch-term.c 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/news/trn4/files/patch-term.c 340725 2014-01-22 17:40:44Z mat $
 
 --- term.c.orig
 +++ term.c
