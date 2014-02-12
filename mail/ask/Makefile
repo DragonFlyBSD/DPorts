@@ -1,5 +1,5 @@
 # Created by: Marcelo Araujo <araujobsd@gmail.com>
-# $FreeBSD: mail/ask/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ask
 PORTVERSION=	2.5.3
