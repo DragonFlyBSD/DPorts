@@ -1,5 +1,5 @@
 # Created by: Matthew Seaman
-# $FreeBSD: mail/sa-utils/Makefile 336102 2013-12-10 19:47:42Z bdrewery $
+# $FreeBSD$
 
 PORTNAME=	sa-utils
 PORTVERSION=	0.02

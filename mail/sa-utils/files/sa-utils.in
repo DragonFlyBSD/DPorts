@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: mail/sa-utils/files/sa-utils.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/mail/sa-utils/files/sa-utils.in 340872 2014-01-24 00:14:07Z mat $
 #
 # periodic(8) script that runs sa-update on a nightly basis, updating
 # SpamAssassin rules if needed. Relies on sa-update command.
