@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Monoceros/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	Monoceros
 PORTVERSION=	0.26
