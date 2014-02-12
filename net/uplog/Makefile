@@ -1,5 +1,5 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: net/uplog/Makefile 337794 2013-12-27 19:47:35Z jadawin $
+# $FreeBSD$
 
 PORTNAME=	uplog
 PORTVERSION=	0.3
@@ -15,6 +15,8 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 
 PORTDOCS=	README
 PLIST_FILES=	bin/uplog
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
