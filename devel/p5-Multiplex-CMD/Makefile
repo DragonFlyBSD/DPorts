@@ -1,5 +1,5 @@
 # Created by: Andrey Ignatov <rdna@rdna.ru>
-# $FreeBSD: devel/p5-Multiplex-CMD/Makefile 338866 2014-01-06 12:05:42Z az $
+# $FreeBSD$
 
 PORTNAME=	Multiplex-CMD
 PORTVERSION=	0.03
