@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-fastri/Makefile 332036 2013-10-30 02:32:53Z swills $
+# $FreeBSD$
 
 PORTNAME=	fastri
 PORTVERSION=	0.3.1.1
