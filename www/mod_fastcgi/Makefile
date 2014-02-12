@@ -1,5 +1,5 @@
 # Created by: JunSeon Oh <hollywar@mail.holywar.net>
-# $FreeBSD: www/mod_fastcgi/Makefile 336555 2013-12-15 16:45:38Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	mod_fastcgi
 PORTVERSION=	2.4.7
