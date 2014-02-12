@@ -1,4 +1,4 @@
-# $FreeBSD: x11-wm/compton/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	compton
 PORTVERSION=	20130625
