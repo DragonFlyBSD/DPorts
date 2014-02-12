@@ -1,5 +1,5 @@
 # Created by: Brett Taylor
-# $FreeBSD: x11-fonts/tkfont/Makefile 330329 2013-10-14 14:19:49Z gahr $
+# $FreeBSD$
 
 PORTNAME=	tkfont
 PORTVERSION=	1.1
