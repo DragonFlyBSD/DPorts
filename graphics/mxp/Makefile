@@ -1,5 +1,5 @@
 # Created by: NAKATA Maho <maho@FreeBSD.org>
-# $FreeBSD: graphics/mxp/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	mxp
 PORTVERSION=	1.3
@@ -21,6 +21,9 @@ PLIST_FILES=	bin/${PORTNAME} \
 PLIST_DIRS=	%%PORTDOCS%%%%DOCSDIR%%
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 post-extract:
