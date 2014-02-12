@@ -1,5 +1,5 @@
 # Created by: Allie Micka <allie@pajunas.com>
-# $FreeBSD: www/pglogd/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	pglogd
 PORTVERSION=	2.3
@@ -7,7 +7,7 @@ PORTREVISION=	2
 CATEGORIES=	www databases
 MASTER_SITES=	http://digitalstratum.com/download/
 
-MAINTAINER=	allie@pajunas.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Sends web server log entries to a PostgreSQL database
 
 USE_PGSQL=	yes
