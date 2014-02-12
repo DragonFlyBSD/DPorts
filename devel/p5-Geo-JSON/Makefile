@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Geo-JSON/Makefile 338318 2013-12-31 14:58:34Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Geo-JSON
 PORTVERSION=	0.006
