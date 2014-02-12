@@ -1,5 +1,5 @@
 # Created by: estith
-# $FreeBSD: devel/p5-Geo-ShapeFile/Makefile 341707 2014-01-29 09:19:35Z az $
+# $FreeBSD$
 
 PORTNAME=	Geo-ShapeFile
 PORTVERSION=	2.52
