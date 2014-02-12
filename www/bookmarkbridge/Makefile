@@ -1,5 +1,5 @@
 # Created by: Marco Molteni <molter@gufi.org>
-# $FreeBSD: www/bookmarkbridge/Makefile 337356 2013-12-24 14:23:21Z pawel $
+# $FreeBSD$
 
 PORTNAME=	bookmarkbridge
 PORTVERSION=	0.76
