@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: net/p5-POE-Component-Client-Telnet/Makefile 339909 2014-01-16 13:05:20Z zi $
+# $FreeBSD$
 
 PORTNAME=	POE-Component-Client-Telnet
 PORTVERSION=	0.06
