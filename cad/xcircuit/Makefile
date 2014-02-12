@@ -1,5 +1,5 @@
 # Created by: Pedro F. Giffuni <giffunip@asme.org>
-# $FreeBSD: cad/xcircuit/Makefile 336468 2013-12-14 18:35:58Z danilo $
+# $FreeBSD$
 
 PORTNAME=	xcircuit
 PORTVERSION=	3.7.55
