@@ -31,7 +31,7 @@
  *
  * Reliably print the entire contents of the proc filesystem's "map" files.
  *
- * $FreeBSD: sysutils/procmap/files/procmap.c 340872 2014-01-24 00:14:07Z mat $
+ * $FreeBSD: head/sysutils/procmap/files/procmap.c 340872 2014-01-24 00:14:07Z mat $
  *
  ****************************************************************************/
 
