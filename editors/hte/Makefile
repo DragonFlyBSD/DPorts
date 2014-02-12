@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao
-# $FreeBSD: editors/hte/Makefile 339976 2014-01-16 20:18:15Z mva $
+# $FreeBSD$
 
 PORTNAME=	hte
 PORTVERSION=	2.0.22
