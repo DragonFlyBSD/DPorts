@@ -1,5 +1,5 @@
 # Created by: James O'Gorman <james@netinertia.co.uk>
-# $FreeBSD: sysutils/boxbackup-devel/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	boxbackup
 PORTVERSION=	0.11.r${SVNVERSION:C/^[0-9\.]+_[a-z]+_([0-9]+)/\1/}
