@@ -1,5 +1,5 @@
 # Created by: Bo-Yi Wu <appleboy.tw@gmail.com>
-# $FreeBSD: chinese/phpbb3-tw/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	phpbb
 PORTVERSION=	3.0.11
@@ -40,6 +40,8 @@ NO_STAGE=	yes
 #
 PHPBBDIR=	${WWWDOCROOT}/${PHPBBURL}
 PKGOPTS=	${FILESDIR}/pkg-opts
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
