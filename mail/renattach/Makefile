@@ -1,5 +1,5 @@
 # Created by: Stefan A. Deutscher (sad@mailaps.org)
-# $FreeBSD: mail/renattach/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	renattach
 PORTVERSION=	1.2.4
