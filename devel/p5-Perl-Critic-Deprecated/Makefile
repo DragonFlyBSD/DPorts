@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-Perl-Critic-Deprecated/Makefile 332535 2013-11-02 19:55:49Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Perl-Critic-Deprecated
 PORTVERSION=	1.119
