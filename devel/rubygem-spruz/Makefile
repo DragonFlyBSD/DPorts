@@ -1,5 +1,5 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: devel/rubygem-spruz/Makefile 332042 2013-10-30 02:46:01Z swills $
+# $FreeBSD$
 
 PORTNAME=	spruz
 PORTVERSION=	0.2.13
