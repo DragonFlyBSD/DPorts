@@ -1,5 +1,5 @@
 # Created by: swills@
-# $FreeBSD: net/p5-Net-LDAP-Server-Test/Makefile 332868 2013-11-05 16:42:55Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Net-LDAP-Server-Test
 PORTVERSION=	0.19
