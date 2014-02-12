@@ -1,4 +1,4 @@
-# $FreeBSD: databases/postgresql91-plpython/Makefile 331888 2013-10-28 18:52:22Z sunpoet $
+# $FreeBSD$
 
 WANT_PGSQL_VER=	91
 
