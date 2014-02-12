@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: head/graphics/gimp-help/Makefile 342129 2014-02-01 12:49:26Z makc $
+# $FreeBSD$
 
 PORTNAME=	gimp-help
 PORTVERSION=	2.8.1
