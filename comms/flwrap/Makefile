@@ -1,5 +1,5 @@
 # Created by: Diane Bruce <db@db.net>
-# $FreeBSD: comms/flwrap/Makefile 338966 2014-01-07 01:16:36Z db $
+# $FreeBSD$
 
 PORTNAME=	flwrap
 PORTVERSION=	1.3.4
