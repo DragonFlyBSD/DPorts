@@ -1,5 +1,5 @@
 # Created by: Alexander Nedotsukov <bland@FreeBSD.org>
-# $FreeBSD: audio/goobox/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD$
 #   $MCom: ports/audio/goobox/Makefile,v 1.25 2007/08/15 03:03:09 mezz Exp $
 
 PORTNAME=	goobox
