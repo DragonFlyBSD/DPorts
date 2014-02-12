@@ -1,5 +1,5 @@
 # Created by: Radek Kozlowski <radek@raadradd.com>
-# $FreeBSD: deskutils/gnochm/Makefile 341884 2014-01-30 20:49:13Z antoine $
+# $FreeBSD$
 
 PORTNAME=	gnochm
 PORTVERSION=	0.9.11
