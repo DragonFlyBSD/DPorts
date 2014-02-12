@@ -1,5 +1,5 @@
 # Created by: aaron@FreeBSD.org
-# $FreeBSD: devel/libs11n/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	libs11n
 PORTVERSION=	1.2.10
