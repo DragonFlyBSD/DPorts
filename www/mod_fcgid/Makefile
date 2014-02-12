@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: www/mod_fcgid/Makefile 330031 2013-10-10 20:02:42Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	mod_fcgid
 PORTVERSION=	2.3.9
