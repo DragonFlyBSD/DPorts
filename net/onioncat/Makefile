@@ -1,5 +1,5 @@
 # Created by: <ports@c0decafe.net>
-# $FreeBSD: net/onioncat/Makefile 342038 2014-01-31 17:04:25Z antoine $
+# $FreeBSD$
 
 PORTNAME=	onioncat
 PORTVERSION=	0.2.2.r554
