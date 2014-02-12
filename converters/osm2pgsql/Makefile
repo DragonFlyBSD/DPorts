@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: converters/osm2pgsql/Makefile 330587 2013-10-17 01:16:42Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	osm2pgsql
 PORTVERSION=	r29250
