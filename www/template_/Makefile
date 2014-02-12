@@ -1,5 +1,5 @@
 # Created by: Mun-Kyo Seo <munggo@pmy.lv>
-# $FreeBSD: www/template_/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	template_
 PORTVERSION=	2.2.3
