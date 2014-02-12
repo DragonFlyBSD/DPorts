@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: math/jts/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	jts
 PORTVERSION=	1.13
@@ -22,6 +22,9 @@ VER=		${PORTVERSION:tl}
 JARFILES=	JTS_Test acme jts-${VER}
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 do-install:
