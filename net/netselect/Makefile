@@ -1,5 +1,5 @@
 # Created by: Timothy Redaelli <drizzt@gufi.org>
-# $FreeBSD: net/netselect/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	netselect
 PORTVERSION=	0.3
