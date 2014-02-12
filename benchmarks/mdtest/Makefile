@@ -1,5 +1,5 @@
 # Created by: Chao Shin <quakelee@cn.freebsd.org>
-# $FreeBSD: benchmarks/mdtest/Makefile 339931 2014-01-16 16:43:24Z danfe $
+# $FreeBSD$
 
 PORTNAME=	mdtest
 PORTVERSION=	1.9.3
