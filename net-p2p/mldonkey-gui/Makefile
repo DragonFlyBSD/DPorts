@@ -1,5 +1,5 @@
 # Created by: Holger Lamm <holger@e-gitt.net>
-# $FreeBSD: net-p2p/mldonkey-gui/Makefile 327758 2013-09-20 22:28:25Z bapt $
+# $FreeBSD$
 
 # build only the GUI
 WITHOUT_CORE=	yes
