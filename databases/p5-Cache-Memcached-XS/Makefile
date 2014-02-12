@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: databases/p5-Cache-Memcached-XS/Makefile 336187 2013-12-11 18:08:52Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Cache-Memcached-XS
 PORTVERSION=	0.01
