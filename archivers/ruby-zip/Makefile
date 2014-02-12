@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: archivers/ruby-zip/Makefile 338707 2014-01-05 00:21:37Z bapt $
+# $FreeBSD$
 
 PORTNAME=	zip
 PORTVERSION=	0.9.4
