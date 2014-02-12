@@ -1,5 +1,5 @@
 # Created by: Brad Walker <tha_walka@hotmail.com>
-# $FreeBSD: audio/rubygem-ruby-mp3info/Makefile 340899 2014-01-24 14:45:58Z miwi $
+# $FreeBSD$
 
 PORTNAME=	ruby-mp3info
 PORTVERSION=	0.8
