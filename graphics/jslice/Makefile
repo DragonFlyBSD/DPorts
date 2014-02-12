@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: graphics/jslice/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	jslice
 PORTVERSION=	1.0.0
