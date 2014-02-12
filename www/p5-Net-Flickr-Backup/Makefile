@@ -1,5 +1,5 @@
 # Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-# $FreeBSD: www/p5-Net-Flickr-Backup/Makefile 338785 2014-01-05 15:36:32Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-Flickr-Backup
 PORTVERSION=	3.1
@@ -19,7 +19,7 @@ BUILD_DEPENDS=	p5-File-Find-Rule>=0:${PORTSDIR}/devel/p5-File-Find-Rule \
 		p5-Net-Flickr-RDF>=2.2:${PORTSDIR}/www/p5-Net-Flickr-RDF \
 		p5-TimeDate>=1.16:${PORTSDIR}/devel/p5-TimeDate \
 		p5-Text-Unidecode>=0.04:${PORTSDIR}/converters/p5-Text-Unidecode \
-		p5-libwww>=1.38:${PORTSDIR}/www/libwww
+		p5-libwww>=1.38:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
