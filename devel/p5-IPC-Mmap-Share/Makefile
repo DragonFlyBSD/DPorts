@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: devel/p5-IPC-Mmap-Share/Makefile 338878 2014-01-06 13:41:40Z az $
+# $FreeBSD$
 
 PORTNAME=	IPC-Mmap-Share
 PORTVERSION=	0.03
