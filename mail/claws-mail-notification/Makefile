@@ -1,5 +1,5 @@
 # Created by: Pawel Pekala <c0rn@o2.pl>
-# $FreeBSD: mail/claws-mail-notification/Makefile 336489 2013-12-14 22:02:10Z pawel $
+# $FreeBSD$
 
 PORTNAME=	notification
 PORTREVISION=	0
