@@ -1,5 +1,5 @@
 # Created by: Marco P. Rodrigues <drkangel@drkangel.org>
-# $FreeBSD: net/lft/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	lft
 PORTVERSION=	3.33
