@@ -1,5 +1,5 @@
 # Created by: Edwin Groothuis (edwin@mavetju.org)
-# $FreeBSD: lang/tcl-manual/Makefile 328932 2013-10-01 10:31:12Z gahr $
+# $FreeBSD$
 
 PORTNAME=	tcl-manual
 PORTVERSION=	20131001
