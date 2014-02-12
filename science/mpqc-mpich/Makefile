@@ -1,5 +1,5 @@
 # Created by: Nakata Maho <chat95@mbox.kyoto-inet.or.jp>
-# $FreeBSD: science/mpqc-mpich/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 MASTERDIR=	${.CURDIR}/../mpqc
 
