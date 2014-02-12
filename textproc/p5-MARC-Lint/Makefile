@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: textproc/p5-MARC-Lint/Makefile 340622 2014-01-21 17:03:00Z mat $
+# $FreeBSD$
 
 PORTNAME=	MARC-Lint
 PORTVERSION=	1.46
