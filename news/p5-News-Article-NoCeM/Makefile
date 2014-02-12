@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: news/p5-News-Article-NoCeM/Makefile 338755 2014-01-05 12:30:05Z az $
+# $FreeBSD$
 
 PORTNAME=	News-Article-NoCeM
 PORTVERSION=	0.08
