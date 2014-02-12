@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: mail/squirrelmail-websearch-plugin/Makefile 336240 2013-12-12 01:32:34Z adamw $
+# $FreeBSD$
 
 PORTNAME=	web_search
 PORTVERSION=	0.1.6
