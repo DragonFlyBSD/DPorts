@@ -1,5 +1,5 @@
 # Created by: krion
-# $FreeBSD: dns/dnsflood/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD$
 
 PORTNAME=	dnsflood
 PORTVERSION=	1.20
