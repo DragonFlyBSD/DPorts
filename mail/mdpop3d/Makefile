@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <info@logvinov.com>
-# $FreeBSD: mail/mdpop3d/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mdpop3d
 PORTVERSION=	0.97
