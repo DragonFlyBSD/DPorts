@@ -1,4 +1,4 @@
-# $FreeBSD: devel/pear-Date_Holidays_Austria/Makefile 333263 2013-11-08 21:41:53Z antoine $
+# $FreeBSD$
 
 PORTNAME=	Date_Holidays_Austria
 PORTVERSION=	0.1.4
