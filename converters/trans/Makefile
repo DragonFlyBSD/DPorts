@@ -1,5 +1,5 @@
 # Created by: Andrey A. Chernov <ache@FreeBSD.org>
-# $FreeBSD: converters/trans/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	trans
 PORTVERSION=	1.20
