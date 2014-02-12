@@ -1,5 +1,5 @@
 # Created by: nobu@rd.isac.co.jp
-# $FreeBSD: math/ngraph/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ngraph
 PORTVERSION=	6.3.51
