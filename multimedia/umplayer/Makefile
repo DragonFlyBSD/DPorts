@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: multimedia/umplayer/Makefile 338904 2014-01-06 16:18:18Z makc $
+# $FreeBSD$
 
 PORTNAME=	umplayer
 DISTVERSION=	0.97
