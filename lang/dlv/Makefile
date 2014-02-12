@@ -1,5 +1,5 @@
 # Created by: arved
-# $FreeBSD: lang/dlv/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	dlv
 PORTVERSION=	20121217
