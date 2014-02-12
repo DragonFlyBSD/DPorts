@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net/rexx-sock/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	sock
 PORTVERSION=	1.4
