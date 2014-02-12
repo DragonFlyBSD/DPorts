@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: textproc/rnv/Makefile 338947 2014-01-06 21:55:38Z antoine $
+# $FreeBSD$
 
 PORTNAME=	rnv
 PORTVERSION=	1.7.11
