@@ -1,5 +1,5 @@
 # Created by: Edwin Groothuis
-# $FreeBSD: games/thevalley/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD$
 
 PORTNAME=	thevalley
 PORTVERSION=	0.98
