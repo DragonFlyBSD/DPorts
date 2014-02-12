@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: misc/xdg-menu/Makefile 333133 2013-11-07 16:13:47Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	xdg-menu
 PORTVERSION=	1.5
