@@ -1,5 +1,5 @@
 # Created by: Ruben van Staveren
-# $FreeBSD: devel/p5-Thread-Suspend/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Thread-Suspend
 PORTVERSION=	1.22
@@ -14,9 +14,6 @@ COMMENT=	Suspend and resume operations for threads
 USES=		perl5
 USE_PERL5=	configure
 
-MAN3=	Thread::Suspend.3
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 pre-everything::
