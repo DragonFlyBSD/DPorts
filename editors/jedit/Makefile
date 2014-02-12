@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: editors/jedit/Makefile 338817 2014-01-05 19:17:03Z danilo $
+# $FreeBSD$
 
 PORTNAME=	jedit
 PORTVERSION=	5.1.0
