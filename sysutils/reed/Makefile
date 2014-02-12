@@ -1,5 +1,5 @@
 # Created by: Pete Fritchman <petef@databits.net>
-# $FreeBSD: sysutils/reed/Makefile 338028 2013-12-29 17:08:28Z crees $
+# $FreeBSD$
 
 PORTNAME=	reed
 PORTVERSION=	5.4
