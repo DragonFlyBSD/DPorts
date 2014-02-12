@@ -1,5 +1,5 @@
 # Created by: Chia-Hsing Yu <me@davidyu.org>
-# $FreeBSD: science/libsvm/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	libsvm
 PORTVERSION=	3.10
