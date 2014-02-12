@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: games/quake2-psychomod/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	psychomod
 PORTVERSION=	3.1
