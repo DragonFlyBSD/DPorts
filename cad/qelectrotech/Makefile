@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: cad/qelectrotech/Makefile 334586 2013-11-22 12:55:00Z makc $
+# $FreeBSD$
 
 PORTNAME=	qelectrotech
 PORTVERSION=	0.3
