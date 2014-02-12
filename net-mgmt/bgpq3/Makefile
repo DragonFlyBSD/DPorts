@@ -1,5 +1,5 @@
 # Created by: Alexandre Snarskii <snar@snar.spb.ru>
-# $FreeBSD: net-mgmt/bgpq3/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	bgpq3
 PORTVERSION=	0.1.19
