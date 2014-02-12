@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/gtodo/Makefile 342282 2014-02-02 13:01:24Z antoine $
+# $FreeBSD$
 
 PORTNAME=	gtodo
 PORTVERSION=	0.14
