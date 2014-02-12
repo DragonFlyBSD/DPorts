@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@daltons.ca>
-# $FreeBSD: textproc/p5-Chess-PGN-Parse/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	Chess-PGN-Parse
 PORTVERSION=	0.19
