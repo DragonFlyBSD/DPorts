@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: net-im/telepathy-haze/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD$
 #   $MCom: ports/net-im/telepathy-haze/Makefile,v 1.7 2012/06/13 00:59:50 mezz Exp $
 
 PORTNAME=	telepathy-haze
