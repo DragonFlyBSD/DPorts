@@ -1,5 +1,5 @@
 # Created by: Oleg Pudeyev <oleg@bsdpower.com>
-# $FreeBSD: www/py-flask-flatpages/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	Flask-FlatPages
 PORTVERSION=	0.5
