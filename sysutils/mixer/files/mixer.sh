@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: sysutils/mixer/files/mixer.sh 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/sysutils/mixer/files/mixer.sh 340872 2014-01-24 00:14:07Z mat $
 
 MIXERSTATE=/var/db/mixer-state
 
