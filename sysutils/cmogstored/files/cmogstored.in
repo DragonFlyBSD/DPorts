@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: sysutils/cmogstored/files/cmogstored.in 336098 2013-12-10 19:42:07Z trociny $
+# $FreeBSD: head/sysutils/cmogstored/files/cmogstored.in 336098 2013-12-10 19:42:07Z trociny $
 #
 # PROVIDE: cmogstored
 # REQUIRE: LOGIN cleanvar
