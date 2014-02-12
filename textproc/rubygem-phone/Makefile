@@ -1,5 +1,5 @@
 # Created by: Douglas Thrift <douglas@douglasthrift.net>
-# $FreeBSD: textproc/rubygem-phone/Makefile 334373 2013-11-20 03:15:01Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	phone
 PORTVERSION=	1.2.3
