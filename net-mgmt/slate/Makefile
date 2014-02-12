@@ -1,5 +1,5 @@
 # Created by: Edwin Groothuis <edwin@mavetju.org>
-# $FreeBSD: net-mgmt/slate/Makefile 341126 2014-01-25 22:17:03Z bapt $
+# $FreeBSD$
 
 PORTNAME=	slate
 PORTVERSION=	5.0.1
