@@ -1,5 +1,5 @@
 # Created by: Max Khon
-# $FreeBSD: news/husky-hpt/Makefile 327759 2013-09-20 22:31:15Z bapt $
+# $FreeBSD$
 
 PORTNAME=	hpt
 PORTVERSION=	1.2.4
