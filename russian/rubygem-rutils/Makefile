@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: russian/rubygem-rutils/Makefile 332049 2013-10-30 02:56:33Z swills $
+# $FreeBSD$
 
 PORTNAME=	rutils
 PORTVERSION=	1.0.3
