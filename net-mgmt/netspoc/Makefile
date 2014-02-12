@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net-mgmt/netspoc/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	netspoc
 PORTVERSION=	3.2
