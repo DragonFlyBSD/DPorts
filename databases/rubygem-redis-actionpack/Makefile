@@ -1,4 +1,4 @@
-# $FreeBSD: databases/rubygem-redis-actionpack/Makefile 335329 2013-11-30 18:29:49Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	redis-actionpack
 PORTVERSION=	4.0.0
