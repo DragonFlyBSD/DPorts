@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: graphics/gimp-lqr-plugin/Makefile 332150 2013-10-30 16:31:42Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	gimp-lqr-plugin
 PORTVERSION=	0.7.1
