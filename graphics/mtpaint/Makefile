@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: graphics/mtpaint/Makefile 331272 2013-10-22 13:58:55Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	mtpaint
 PORTVERSION=	3.40
