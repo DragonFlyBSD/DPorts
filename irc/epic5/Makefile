@@ -1,5 +1,5 @@
 # Created by: Josh Paetzel <josh@tcbug.org>
-# $FreeBSD: irc/epic5/Makefile 340197 2014-01-18 16:47:31Z jpaetzel $
+# $FreeBSD$
 
 PORTNAME=	epic5
 PORTVERSION=	1.1.7
