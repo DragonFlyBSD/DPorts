@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: math/p5-Algorithm-CurveFit/Makefile 334605 2013-11-22 19:07:32Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Algorithm-CurveFit
 PORTVERSION=	1.05
