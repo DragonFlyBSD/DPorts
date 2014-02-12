@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: www/xpi-web_developer/Makefile 341220 2014-01-26 15:14:57Z miwi $
+# $FreeBSD$
 
 PORTNAME=	web_developer
 PORTVERSION=	1.2.2
