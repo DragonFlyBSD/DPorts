@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: irc/ircd-hybrid/files/ircd-hybrid.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/irc/ircd-hybrid/files/ircd-hybrid.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: ircd-hybrid
 # REQUIRE: DAEMON

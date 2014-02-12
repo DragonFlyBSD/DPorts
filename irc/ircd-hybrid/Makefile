@@ -1,5 +1,5 @@
 # Created by: David Taylor <davidt@yadt.co.uk>
-# $FreeBSD: irc/ircd-hybrid/Makefile 333398 2013-11-10 14:12:16Z wg $
+# $FreeBSD$
 
 PORTNAME=	ircd-hybrid
 PORTVERSION=	8.1.3
