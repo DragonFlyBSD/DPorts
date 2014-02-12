@@ -1,5 +1,5 @@
 # Created by: xaa@stack.nl
-# $FreeBSD: games/xboard/Makefile 339407 2014-01-11 08:49:31Z johans $
+# $FreeBSD$
 
 PORTNAME=	xboard
 PORTVERSION=	4.7.3
