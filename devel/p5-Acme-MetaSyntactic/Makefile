@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Acme-MetaSyntactic/Makefile 330918 2013-10-19 17:23:31Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Acme-MetaSyntactic
 PORTVERSION=	1.012
