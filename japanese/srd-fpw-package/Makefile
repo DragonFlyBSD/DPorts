@@ -1,5 +1,5 @@
 # Created by: Satoshi Taoka <taoka@FreeBSD.org>
-# $FreeBSD: japanese/srd-fpw-package/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD$
 
 PORTNAME=	srd-fpw-package
 PORTVERSION=	1.0.8
