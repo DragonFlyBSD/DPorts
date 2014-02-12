@@ -1,5 +1,5 @@
 # Created by: heiner Eichmann <h.eichmann@gmx.de>
-# $FreeBSD: x11-fonts/manu-gothica/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	manu-gothica
 DISTVERSION=	0
@@ -11,6 +11,9 @@ EXTRACT_SUFX=	.ttf
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Old German blackletter handwriting (Suetterlin)
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-10
 
 BUILD_DEPENDS=	fc-cache:${PORTSDIR}/x11-fonts/fontconfig
 RUN_DEPENDS:=	${BUILD_DEPENDS}
