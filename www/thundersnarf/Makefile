@@ -1,4 +1,4 @@
-# $FreeBSD: www/thundersnarf/Makefile 337336 2013-12-24 10:45:57Z antoine $
+# $FreeBSD$
 
 PORTNAME=	thundersnarf
 PORTVERSION=	1.3
