@@ -1,5 +1,5 @@
 # Created by: kiesel
-# $FreeBSD: sysutils/reoback/Makefile 333979 2013-11-16 04:15:28Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	reoback
 PORTVERSION=	1.0
