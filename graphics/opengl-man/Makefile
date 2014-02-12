@@ -1,5 +1,5 @@
 # Created by: cracauer@cons.org "Martin Cracauer"
-# $FreeBSD: graphics/opengl-man/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	opengl-man
 PORTVERSION=	657.2
