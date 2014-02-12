@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/black-box/Makefile 336179 2013-12-11 15:57:28Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	black-box
 PORTVERSION=	1.4.8
