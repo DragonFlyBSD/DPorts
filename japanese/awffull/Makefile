@@ -1,5 +1,5 @@
 # Created by: Norikatsu Shigemura <nork@FreeBSD.org>
-# $FreeBSD: japanese/awffull/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD$
 
 CATEGORIES=	japanese www
 
