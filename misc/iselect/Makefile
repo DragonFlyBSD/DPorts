@@ -1,5 +1,5 @@
 # Created by: Ralf S. Engelschall <rse@engelschall.com>
-# $FreeBSD: misc/iselect/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	iselect
 PORTVERSION=	1.4.0
