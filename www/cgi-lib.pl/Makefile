@@ -1,5 +1,5 @@
 # Created by: sada
-# $FreeBSD: www/cgi-lib.pl/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	cgi-lib_pl
 PORTVERSION=	2.18
