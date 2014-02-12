@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: astro/p5-Astro-Catalog/Makefile 335684 2013-12-05 20:25:34Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Astro-Catalog
 PORTVERSION=	4.2.9
