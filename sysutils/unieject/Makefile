@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: sysutils/unieject/Makefile 333994 2013-11-16 13:33:45Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	unieject
 PORTVERSION=	6
