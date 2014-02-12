@@ -1,5 +1,5 @@
 # Created by: Loic Pefferkorn <loic-freebsd@loicp.eu>
-# $FreeBSD: net/rubygem-amqp-utils/Makefile 340904 2014-01-24 14:53:03Z miwi $
+# $FreeBSD$
 
 PORTNAME=	amqp-utils
 PORTVERSION=	0.5.1
