@@ -1,5 +1,5 @@
 # Created by: Janos Mohacsi <janos.mohacsi@bsd.hu>
-# $FreeBSD: editors/cream/Makefile 331271 2013-10-22 13:57:35Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	cream
 PORTVERSION=	0.42
