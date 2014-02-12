@@ -1,5 +1,5 @@
 # Created by: bremner@unb.ca
-# $FreeBSD: net/lam/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	lam
 PORTVERSION=	7.1.5b2
