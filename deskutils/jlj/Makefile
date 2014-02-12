@@ -1,5 +1,5 @@
 # Created by: Pete Fritchman <petef@databits.net>
-# $FreeBSD: deskutils/jlj/Makefile 341875 2014-01-30 19:32:23Z antoine $
+# $FreeBSD$
 
 PORTNAME=	jlj
 PORTVERSION=	2.12
