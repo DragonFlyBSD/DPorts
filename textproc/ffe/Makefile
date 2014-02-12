@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: textproc/ffe/Makefile 341279 2014-01-26 20:29:57Z mat $
+# $FreeBSD$
 
 PORTNAME=	ffe
 PORTVERSION=	0.3.3
