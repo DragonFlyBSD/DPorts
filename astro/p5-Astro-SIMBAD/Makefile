@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: astro/p5-Astro-SIMBAD/Makefile 328614 2013-09-28 17:13:24Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Astro-SIMBAD
 PORTVERSION=	2.0.0
