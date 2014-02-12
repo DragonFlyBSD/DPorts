@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: games/defendguin/Makefile 335792 2013-12-06 23:31:35Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	defendguin
 PORTVERSION=	0.0.12
