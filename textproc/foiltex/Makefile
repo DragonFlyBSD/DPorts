@@ -1,5 +1,5 @@
 # Created by: Stefan Walter <sw@gegenunendlich.de>
-# $FreeBSD: textproc/foiltex/Makefile 341285 2014-01-26 20:51:45Z mat $
+# $FreeBSD$
 
 PORTNAME=	foiltex
 PORTVERSION=	2.1.4b
