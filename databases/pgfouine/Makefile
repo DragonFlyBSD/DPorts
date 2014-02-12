@@ -1,5 +1,5 @@
 # Created by: Pierre-Emmanuel Andre <pea@raveland.org>
-# $FreeBSD: databases/pgfouine/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	pgfouine
 PORTVERSION=	1.2
