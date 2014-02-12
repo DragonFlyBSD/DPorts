@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-Log-Log4perl-Appender-RabbitMQ/Makefile 338872 2014-01-06 12:55:03Z az $
+# $FreeBSD$
 
 PORTNAME=	Log-Log4perl-Appender-RabbitMQ
 PORTVERSION=	0.102220
