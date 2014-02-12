@@ -1,5 +1,5 @@
 # Created by: Jim Mock <jim@FreeBSD.org>
-# $FreeBSD: games/dopewars/Makefile 331975 2013-10-29 17:59:47Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	dopewars
 PORTVERSION=	1.5.12
