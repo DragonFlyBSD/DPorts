@@ -1,5 +1,5 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: security/regripperplugins/Makefile 334358 2013-11-19 22:24:58Z antoine $
+# $FreeBSD$
 
 PORTNAME=	regripperplugins
 PORTVERSION=	20130429
