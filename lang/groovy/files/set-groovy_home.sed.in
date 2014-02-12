@@ -1,4 +1,4 @@
-# $FreeBSD: lang/groovy/files/set-groovy_home.sed.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/lang/groovy/files/set-groovy_home.sed.in 340872 2014-01-24 00:14:07Z mat $
 14i\
 : ${GROOVY_HOME="%%DATADIR%%"}
 14i\
