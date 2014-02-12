@@ -1,5 +1,5 @@
 # Created by: Tilman Keskinoz <arved@FreeBSD.org>
-# $FreeBSD: deskutils/strigi/Makefile 333412 2013-11-10 17:28:44Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	strigi
 PORTVERSION=	${STRIGI_VERSION}
