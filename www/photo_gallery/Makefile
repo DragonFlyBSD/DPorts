@@ -1,5 +1,5 @@
 # Created by: Bob Bomar <bob@bomar.us>
-# $FreeBSD: www/photo_gallery/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=		photo_gallery
 PORTVERSION=		1.5
