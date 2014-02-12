@@ -1,5 +1,5 @@
 # Created by: mb@imp.ch
-# $FreeBSD: graphics/jpgtn/Makefile 342183 2014-02-01 16:21:45Z miwi $
+# $FreeBSD$
 
 PORTNAME=	jpgtn
 PORTVERSION=	2.06
