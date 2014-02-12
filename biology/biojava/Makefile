@@ -1,5 +1,5 @@
 # Created by: FreeBSD Bio porters (bio@freebsd.net)
-# $FreeBSD: biology/biojava/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	biojava
 DISTVERSION=	1.7
@@ -25,6 +25,8 @@ PORTEXAMPLES=	demos
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS EXAMPLES 
 
 .include <bsd.port.options.mk>
 
