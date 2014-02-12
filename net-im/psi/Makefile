@@ -1,5 +1,5 @@
 # Created by: Jonathan Chen <jonc@chen.org.nz>
-# $FreeBSD: net-im/psi/Makefile 334495 2013-11-21 14:29:32Z makc $
+# $FreeBSD$
 
 PORTNAME=	psi
 PORTVERSION=	0.15
