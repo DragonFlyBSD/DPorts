@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-Text-LTSV/Makefile 333177 2013-11-08 02:05:38Z kuriyama $
+# $FreeBSD$
 
 PORTNAME=	Text-LTSV
 PORTVERSION=	0.07
