@@ -1,5 +1,5 @@
 # Created by: hosokawa
-# $FreeBSD: converters/ish/Makefile 337009 2013-12-20 13:16:21Z pawel $
+# $FreeBSD$
 
 PORTNAME=	ish
 PORTVERSION=	2.01a5
