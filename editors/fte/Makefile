@@ -1,5 +1,5 @@
 # Created by: gelf
-# $FreeBSD: editors/fte/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=		fte
 PORTVERSION=		20051115
