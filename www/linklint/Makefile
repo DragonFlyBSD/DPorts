@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: www/linklint/Makefile 331494 2013-10-24 15:11:40Z ehaupt $
+# $FreeBSD$
 
 PORTNAME=	linklint
 DISTVERSION=	2.3.6.d
