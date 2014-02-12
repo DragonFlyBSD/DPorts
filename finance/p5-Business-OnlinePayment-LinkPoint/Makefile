@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: finance/p5-Business-OnlinePayment-LinkPoint/Makefile 332622 2013-11-03 16:08:07Z az $
+# $FreeBSD$
 
 PORTNAME=	Business-OnlinePayment-LinkPoint
 PORTVERSION=	0.10
