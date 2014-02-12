@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/datadraw/Makefile 341493 2014-01-28 00:17:56Z bapt $
+# $FreeBSD$
 
 PORTNAME=	datadraw
 PORTVERSION=	3.1.1
