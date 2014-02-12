@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: archivers/unalz/Makefile 334194 2013-11-18 13:45:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	unalz
 PORTVERSION=	0.65
