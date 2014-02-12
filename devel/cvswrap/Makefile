@@ -1,5 +1,5 @@
 # Created by: alfred
-# $FreeBSD: devel/cvswrap/Makefile 341477 2014-01-27 23:34:22Z bapt $
+# $FreeBSD$
 
 PORTNAME=	cvswrap
 PORTVERSION=	0.2
