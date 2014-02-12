@@ -1,5 +1,5 @@
 # Created by: Peter Jones <p@dancris.com>
-# $FreeBSD: graphics/chbg/Makefile 337392 2013-12-24 22:01:22Z pawel $
+# $FreeBSD$
 
 PORTNAME=	chbg
 PORTVERSION=	1.5
