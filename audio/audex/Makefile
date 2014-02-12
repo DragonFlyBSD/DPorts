@@ -1,4 +1,4 @@
-# $FreeBSD: audio/audex/Makefile 329869 2013-10-09 06:55:59Z jhale $
+# $FreeBSD$
 
 PORTNAME=	audex
 DISTVERSION=	0.77b1
