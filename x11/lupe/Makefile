@@ -1,5 +1,5 @@
 # Created by: FURUSAWA,Kazuhisa <kazu@jp.freebsd.org>
-# $FreeBSD: x11/lupe/Makefile 338756 2014-01-05 12:32:12Z antoine $
+# $FreeBSD$
 
 PORTNAME=	lupe
 PORTVERSION=	0.08c
