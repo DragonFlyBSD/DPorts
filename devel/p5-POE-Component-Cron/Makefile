@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: devel/p5-POE-Component-Cron/Makefile 332203 2013-10-31 06:20:32Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	POE-Component-Cron
 PORTVERSION=	0.021
