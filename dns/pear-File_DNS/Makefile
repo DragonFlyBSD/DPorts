@@ -1,5 +1,5 @@
 # Created by: Chris St Denis (<chris@ctgameinfo.com>)
-# $FreeBSD: dns/pear-File_DNS/Makefile 334871 2013-11-25 17:59:58Z antoine $
+# $FreeBSD$
 
 PORTNAME=	File_DNS
 PORTVERSION=	0.1.0
