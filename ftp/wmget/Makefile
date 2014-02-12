@@ -1,5 +1,5 @@
 # Created by: Ulrich Spoerlein <uspoerlein@gmail.com>
-# $FreeBSD: ftp/wmget/Makefile 341105 2014-01-25 21:12:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	wmget
 PORTVERSION=	0.6.0
