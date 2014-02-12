@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/doom-wolfendoom/Makefile 331975 2013-10-29 17:59:47Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	wolfendoom
 PORTVERSION=	1.0
