@@ -1,4 +1,4 @@
-# $FreeBSD: lang/gnat-aux/Makefile.common 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD$
 
 LIB_DEPENDS=		libgmp.so:${PORTSDIR}/math/gmp
 LIB_DEPENDS+=		libmpfr.so:${PORTSDIR}/math/mpfr

@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: lang/gnat-aux/Makefile 341146 2014-01-26 00:21:03Z marino $
+# $FreeBSD$
 
 PORTNAME=	gnat-aux
 PORTVERSION=	${SNAPSHOT}
