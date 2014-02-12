@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: sysutils/tkdvd/Makefile 339591 2014-01-13 12:00:43Z gahr $
+# $FreeBSD$
 
 PORTNAME=	tkdvd
 PORTVERSION=	4.0.9
