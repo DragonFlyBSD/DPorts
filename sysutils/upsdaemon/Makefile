@@ -1,5 +1,5 @@
 # Created by: Ederson de Moura <ederbs@ederbs.org>
-# $FreeBSD: sysutils/upsdaemon/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	upsdaemon
 PORTVERSION=	1.0
