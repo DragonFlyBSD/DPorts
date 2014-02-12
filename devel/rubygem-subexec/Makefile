@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/rubygem-subexec/Makefile 335229 2013-11-29 21:31:16Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	subexec
 PORTVERSION=	0.2.3
