@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: textproc/fcitx-m17n/Makefile 341277 2014-01-26 20:26:27Z mat $
+# $FreeBSD$
 
 PORTNAME=	fcitx-m17n
 PORTVERSION=	0.1.4
