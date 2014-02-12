@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: www/august/Makefile 330372 2013-10-15 08:50:37Z gahr $
+# $FreeBSD$
 
 PORTNAME=	august
 PORTVERSION=	0.63b
