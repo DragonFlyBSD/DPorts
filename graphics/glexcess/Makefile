@@ -1,5 +1,5 @@
 # Created by: Hernan Di Pietro <hernan.di.pietro@gmail.com>
-# $FreeBSD: graphics/glexcess/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	glexcess
 PORTVERSION=	1.0
