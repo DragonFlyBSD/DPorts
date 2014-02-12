@@ -1,5 +1,5 @@
 # Created by: Hideaki Ohmon <ohmon@tom.sfc.keio.ac.jp>
-# $FreeBSD: print/pkfonts300/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	pkfonts${RESOLUTION}
 PORTVERSION=	1.0
