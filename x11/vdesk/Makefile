@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: x11/vdesk/Makefile 336501 2013-12-15 00:02:59Z bapt $
+# $FreeBSD$
 
 PORTNAME=	vdesk
 PORTVERSION=	1.2
