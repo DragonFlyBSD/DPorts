@@ -1,5 +1,5 @@
 # Created by: Anish Mistry <amistry@am-productions.biz>
-# $FreeBSD: devel/p5-List-Permutor/Makefile 332046 2013-10-30 02:52:46Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	List-Permutor
 PORTVERSION=	0.022
