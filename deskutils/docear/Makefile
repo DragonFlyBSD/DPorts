@@ -1,5 +1,5 @@
 # Created by: Matthias Andree <mandree@FreeBSD.org>
-# $FreeBSD: deskutils/docear/Makefile 338199 2013-12-30 23:54:38Z mandree $
+# $FreeBSD$
 
 PORTNAME=	docear
 PORTVERSION=	1.0.2
