@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-Text-CSV-Simple/Makefile 340711 2014-01-22 14:35:55Z mat $
+# $FreeBSD$
 
 PORTNAME=	Text-CSV-Simple
 PORTVERSION=	1.00
