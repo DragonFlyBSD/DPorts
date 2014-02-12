@@ -1,4 +1,4 @@
-# $FreeBSD: misc/freecode-submit/Makefile 342054 2014-01-31 19:45:20Z cs $
+# $FreeBSD$
 
 PORTNAME=	freecode-submit
 PORTVERSION=	2.7
