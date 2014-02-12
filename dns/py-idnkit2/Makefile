@@ -1,5 +1,5 @@
 # Created by: Rafal Lesniak <fbsd@grid.einherjar.de>
-# $FreeBSD: dns/py-idnkit2/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD$
 
 PORTNAME=	idnkit-python
 PORTVERSION=	2.2
