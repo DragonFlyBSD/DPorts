@@ -1,5 +1,5 @@
 # Created by: Bas Kruit <baskruit@bsltwr.dhis.org>
-# $FreeBSD: dns/dhisd/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	dhisd
 PORTVERSION=	5.1
