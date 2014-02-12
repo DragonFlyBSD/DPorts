@@ -1,5 +1,5 @@
 # Created by: Alexander Brovikov <alexander@brovikov.ru>
-# $FreeBSD: net/libsrtp/Makefile 341962 2014-01-31 09:27:01Z miwi $
+# $FreeBSD$
 
 PORTNAME=	libsrtp
 PORTVERSION=	1.4.4
