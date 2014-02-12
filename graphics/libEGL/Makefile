@@ -1,5 +1,5 @@
 # Created by: kwm@FreeBSD.org
-# $FreeBSD: graphics/libEGL/Makefile 334972 2013-11-26 20:58:53Z kwm $
+# $FreeBSD$
 
 PORTNAME=	libEGL
 PORTVERSION=	${MESAVERSION}
