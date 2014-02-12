@@ -1,5 +1,5 @@
 
-$FreeBSD: graphics/wings/files/patch-plugins__src-accel-perlin__noise__drv.c 322840 2013-07-12 15:01:45Z amdmi3 $
+$FreeBSD: head/graphics/wings/files/patch-plugins__src-accel-perlin__noise__drv.c 322840 2013-07-12 15:01:45Z amdmi3 $
 
 --- plugins_src/accel/perlin_noise_drv.c.orig
 +++ plugins_src/accel/perlin_noise_drv.c

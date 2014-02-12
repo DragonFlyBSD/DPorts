@@ -1,5 +1,5 @@
 # Created by: olgeni@FreeBSD.org
-# $FreeBSD: graphics/wings/Makefile 339398 2014-01-11 02:49:32Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	wings
 PORTVERSION=	1.4.1
