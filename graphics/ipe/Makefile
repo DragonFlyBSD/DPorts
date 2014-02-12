@@ -1,5 +1,5 @@
 # Created by: bremner@unb.ca
-# $FreeBSD: graphics/ipe/Makefile 340291 2014-01-19 13:46:19Z miwi $
+# $FreeBSD$
 
 PORTNAME=	ipe
 PORTVERSION=	7.1.4
