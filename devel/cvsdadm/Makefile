@@ -1,5 +1,5 @@
 # Created by: Serge Gagnon <serge.gagnon.1@ulaval.ca>
-# $FreeBSD: devel/cvsdadm/Makefile 336120 2013-12-10 22:38:19Z bapt $
+# $FreeBSD$
 
 PORTNAME=	cvsdadm
 PORTVERSION=	0.3.2
