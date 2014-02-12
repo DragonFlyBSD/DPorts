@@ -1,5 +1,5 @@
 # Created by: Alex Kapranoff <kapr@crosswinds.net>
-# $FreeBSD: russian/p5-Lingua-RU-Charset/Makefile 341813 2014-01-30 08:45:50Z az $
+# $FreeBSD$
 
 PORTNAME=	Lingua-RU-Charset
 PORTVERSION=	0.02
