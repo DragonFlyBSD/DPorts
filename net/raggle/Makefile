@@ -1,5 +1,5 @@
 # Created by: gslin@ccca.nctu.edu.tw
-# $FreeBSD: net/raggle/Makefile 337795 2013-12-27 19:54:02Z jadawin $
+# $FreeBSD$
 
 PORTNAME=	raggle
 PORTVERSION=	0.4.4
@@ -20,6 +20,8 @@ MAN1=		raggle.1
 DOCS=		AUTHORS BUGS COPYING ChangeLog README TODO \
 		doc/default_config.rb doc/pauls_feeds.opml.gz \
 		doc/theme_documentation.txt
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
