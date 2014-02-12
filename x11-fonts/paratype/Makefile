@@ -1,5 +1,5 @@
 # Created by: Alexey Illarionov <littlesavage@rambler.ru>
-# $FreeBSD: x11-fonts/paratype/Makefile 332811 2013-11-05 06:46:58Z tabthorpe $
+# $FreeBSD$
 
 PORTNAME=	paratype
 PORTVERSION=	2.004
