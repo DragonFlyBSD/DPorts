@@ -1,5 +1,5 @@
 # Created by: Nick Hilliard <nick@foobar.org>
-# $FreeBSD: mail/phplist/Makefile 337462 2013-12-25 23:05:01Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	phplist
 PORTVERSION=	3.0.5
