@@ -1,5 +1,5 @@
 # Created by: dd
-# $FreeBSD: misc/figlet-fonts/Makefile 333141 2013-11-07 16:59:23Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	figlet-fonts
 PORTVERSION=	20121202
