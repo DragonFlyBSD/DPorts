@@ -1,9 +1,9 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: sysutils/vstrip/Makefile 331045 2013-10-20 18:08:52Z bapt $
+# $FreeBSD$
 
 PORTNAME=	vstrip
 DISTVERSION=	0.8f
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	sysutils
 MASTER_SITES=	http://files.digital-digest.com/downloads/files/encode/
 DISTNAME=	vStrip_${DISTVERSION:C/\.//g}
