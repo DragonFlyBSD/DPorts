@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/zaz/Makefile 341754 2014-01-29 16:08:46Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	zaz
 PORTVERSION=	1.0.0
