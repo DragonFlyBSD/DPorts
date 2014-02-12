@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adam@vectors.cx>
-# $FreeBSD: misc/wmtunlo/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	wmtunlo
 PORTVERSION=	0.1.3
