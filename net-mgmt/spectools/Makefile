@@ -1,5 +1,5 @@
 # Created by: Henrik Brix Andersen <henrik@brixandersen.dk>
-# $FreeBSD: net-mgmt/spectools/Makefile 339536 2014-01-12 19:22:13Z brix $
+# $FreeBSD$
 
 PORTNAME=	spectools
 PORTVERSION=	201108.r1
