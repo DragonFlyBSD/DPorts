@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@FreeBSD.org>
-# $FreeBSD: korean/nabi/Makefile 338971 2014-01-07 01:36:45Z jkim $
+# $FreeBSD$
 
 PORTNAME=	nabi
 PORTVERSION=	1.0.0
