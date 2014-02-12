@@ -1,5 +1,5 @@
 # Created by: David Gardner
-# $FreeBSD: sysutils/gkrelltop/Makefile 332412 2013-11-01 21:42:34Z pawel $
+# $FreeBSD$
 
 PORTNAME=	gkrelltop
 PORTVERSION=	2.2.13
