@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: www/p5-WWW-AtMovies-TV/Makefile 333137 2013-11-07 16:38:13Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	WWW-AtMovies-TV
 PORTVERSION=	0.04
