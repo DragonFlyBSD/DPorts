@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Plack-Server-POE/Makefile 329435 2013-10-05 10:26:17Z az $
+# $FreeBSD$
 
 PORTNAME=	Plack-Server-POE
 PORTVERSION=	0.4
