@@ -1,5 +1,5 @@
 # Created by: Andreas Kohn <andreas@syndrom23.de>
-# $FreeBSD: benchmarks/gtkperf/Makefile 338154 2013-12-30 17:45:54Z antoine $
+# $FreeBSD$
 
 PORTNAME=	gtkperf
 PORTVERSION=	0.40
@@ -15,6 +15,8 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 USES=		gmake pkgconfig
 GNU_CONFIGURE=	yes
 USE_GNOME=	gtk20 gnomeprefix
+
+OPTIONS_DEFINE=	NLS 
 
 .include <bsd.port.options.mk>
 
