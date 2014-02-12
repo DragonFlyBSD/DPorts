@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/tuxpaint-config/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD$
 
 PORTNAME=	tuxpaint-config
 PORTVERSION=	0.0.12
@@ -24,6 +24,8 @@ MAKE_ARGS=	PREFIX="${PREFIX}" \
 
 MANCOMPRESSED=	yes
 MAN1=		tuxpaint-config.1
+
+MAKE_JOBS_UNSAFE=yes
 
 .if defined(NOPORTDOCS)
 INSTALL_TARGET=	install-bin install-data install-man install-gettext
