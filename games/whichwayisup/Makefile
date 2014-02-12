@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: games/whichwayisup/Makefile 338265 2013-12-31 09:02:12Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	whichwayisup
 PORTVERSION=	0.7.9
