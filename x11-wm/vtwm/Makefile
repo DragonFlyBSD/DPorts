@@ -1,5 +1,5 @@
 # Created by: Bruce A. Mah <bmah@ca.sandia.gov>
-# $FreeBSD: x11-wm/vtwm/Makefile 335974 2013-12-09 12:32:44Z ak $
+# $FreeBSD$
 
 PORTNAME=	vtwm
 PORTVERSION=	5.4.99.20130906
