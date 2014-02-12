@@ -1,5 +1,5 @@
 # Created by: KOMATSU Shinichiro <koma2@jiro.c.u-tokyo.ac.jp>
-# $FreeBSD: japanese/skkinput3/Makefile 341525 2014-01-28 09:38:08Z danfe $
+# $FreeBSD$
 
 PORTNAME=	skkinput3
 PORTVERSION=	3.0.6
