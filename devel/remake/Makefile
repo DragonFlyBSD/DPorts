@@ -1,5 +1,5 @@
 # Created by: arved
-# $FreeBSD: devel/remake/Makefile 341317 2014-01-27 00:12:40Z bapt $
+# $FreeBSD$
 
 PORTNAME=	remake
 PORTVERSION=	0.9
