@@ -1,5 +1,5 @@
 # Created by: Jim Mock <jim@FreeBSD.org>
-# $FreeBSD: deskutils/wmpinboard/Makefile 342326 2014-02-02 16:04:41Z miwi $
+# $FreeBSD$
 
 PORTNAME=	wmpinboard
 PORTVERSION=	1.0
