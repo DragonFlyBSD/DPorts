@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: databases/p5-DBICx-Deploy/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD$
 
 PORTNAME=	DBICx-Deploy
 PORTVERSION=	0.02
@@ -21,8 +21,4 @@ RUN_DEPENDS=	p5-DBIx-Class>=0.07003:${PORTSDIR}/databases/p5-DBIx-Class \
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=	dbicdeploy.1
-MAN3=	DBICx::Deploy.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
