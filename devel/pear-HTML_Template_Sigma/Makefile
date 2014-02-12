@@ -1,5 +1,5 @@
 # Created by: Franz Klammer <klammer@webonaut.com>
-# $FreeBSD: devel/pear-HTML_Template_Sigma/Makefile 339739 2014-01-15 03:01:55Z miwi $
+# $FreeBSD$
 
 PORTNAME=	HTML_Template_Sigma
 PORTVERSION=	1.3.0
