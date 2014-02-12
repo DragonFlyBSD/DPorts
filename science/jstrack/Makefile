@@ -1,5 +1,5 @@
 # Created by: Chris Rees <utisoft@gmail.com>
-# $FreeBSD: science/jstrack/Makefile 339675 2014-01-14 10:30:24Z gahr $
+# $FreeBSD$
 
 PORTNAME=	jstrack
 PORTVERSION=	3.3.4
