@@ -1,5 +1,5 @@
 # Created by: pdseniura@techie.com
-# $FreeBSD: net/c3270/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	c3270
 PORTVERSION=	3.3.12ga13
