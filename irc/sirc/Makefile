@@ -1,4 +1,4 @@
-# $FreeBSD: irc/sirc/Makefile 327736 2013-09-20 18:44:49Z bapt $
+# $FreeBSD$
 
 PORTNAME=	sirc
 PORTVERSION=	2.211
