@@ -1,5 +1,5 @@
 # Created by: Yarema <yds@CoolRat.org>
-# $FreeBSD: net/courier-authlib-ldap/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PKGNAMESUFFIX=	-ldap
 
