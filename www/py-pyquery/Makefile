@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: www/py-pyquery/Makefile 332407 2013-11-01 20:59:26Z nivit $
+# $FreeBSD$
 
 PORTNAME=	pyquery
 PORTVERSION=	1.2.6
