@@ -1,5 +1,5 @@
 # Created by: Alex Povolotsky <tarkhil@over.ru>
-# $FreeBSD: www/cadaver/Makefile 341691 2014-01-29 07:59:00Z miwi $
+# $FreeBSD$
 
 PORTNAME=	cadaver
 PORTVERSION=	0.23.3
@@ -44,6 +44,8 @@ post-install:
 	#
 	#
 .endif
+
+OPTIONS_DEFINE=	NLS 
 
 .include <bsd.port.options.mk>
 
