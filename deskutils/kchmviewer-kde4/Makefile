@@ -1,5 +1,5 @@
 # Created by: Markus Brueffer <markus@FreeBSD.org>
-# $FreeBSD: deskutils/kchmviewer-kde4/Makefile 332142 2013-10-30 16:07:15Z makc $
+# $FreeBSD$
 
 PORTNAME=	kchmviewer
 PORTVERSION=	6.0
