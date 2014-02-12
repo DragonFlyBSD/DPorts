@@ -1,4 +1,4 @@
-# $FreeBSD: x11/gnome-clipboard-daemon/Makefile 337987 2013-12-29 14:01:09Z antoine $
+# $FreeBSD$
 
 PORTNAME=	gnome-clipboard-daemon
 PORTVERSION=	1.0
