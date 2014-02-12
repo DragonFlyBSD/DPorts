@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: graphics/p5-URI-GoogleChart/Makefile 341813 2014-01-30 08:45:50Z az $
+# $FreeBSD$
 
 PORTNAME=	URI-GoogleChart
 PORTVERSION=	1.02
