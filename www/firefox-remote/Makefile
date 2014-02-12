@@ -1,5 +1,5 @@
 # Created by: Franz Klammer <klammer@webonaut.com>
-# $FreeBSD: www/firefox-remote/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	firefox-remote
 PORTVERSION=	20040803
