@@ -1,5 +1,5 @@
 # Created by: jupengfei <jupengfei@gmail.com>
-# $FreeBSD: www/p5-Nginx-ReadBody/Makefile 333117 2013-11-07 15:22:45Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Nginx-ReadBody
 PORTVERSION=	0.07
