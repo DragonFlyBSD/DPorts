@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: mail/p5-Mail-Procmailrc/Makefile 332803 2013-11-05 02:54:53Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Mail-Procmailrc
 PORTVERSION=	1.09
