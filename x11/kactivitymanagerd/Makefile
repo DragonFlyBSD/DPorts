@@ -1,4 +1,4 @@
-# $FreeBSD: x11/kactivitymanagerd/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD$
 
 PORTNAME=	kactivitymanagerd
 PORTVERSION=	${KDE4_VERSION}
