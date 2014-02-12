@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/xdigger/Makefile 337040 2013-12-20 17:03:44Z pawel $
+# $FreeBSD$
 
 PORTNAME=	xdigger
 PORTVERSION=	1.0.10
