@@ -1,5 +1,5 @@
 # Created by: Stefan 'Steve' Tell <stefan.tell@crashmail.de>
-# $FreeBSD: german/bsdforen-firefox-searchplugin/Makefile 339307 2014-01-10 02:53:41Z tabthorpe $
+# $FreeBSD$
 
 PORTNAME=	bsdforen-firefox-searchplugin
 PORTVERSION=	0.3
