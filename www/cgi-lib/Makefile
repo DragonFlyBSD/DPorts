@@ -1,5 +1,5 @@
 # Created by: Sergey Samoyloff <gonza@techline.ru>
-# $FreeBSD: www/cgi-lib/Makefile 341680 2014-01-29 06:12:13Z miwi $
+# $FreeBSD$
 
 PORTNAME=	cgi-lib
 PORTVERSION=	1.4
