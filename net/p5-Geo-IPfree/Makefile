@@ -1,4 +1,4 @@
-# $FreeBSD: net/p5-Geo-IPfree/Makefile 338810 2014-01-05 17:53:15Z az $
+# $FreeBSD$
 
 PORTNAME=	Geo-IPfree
 PORTVERSION=	1.131650
