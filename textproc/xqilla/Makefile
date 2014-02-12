@@ -1,5 +1,5 @@
 # Created by: vanilla@
-# $FreeBSD: textproc/xqilla/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	xqilla
 PORTVERSION=	2.3.0
