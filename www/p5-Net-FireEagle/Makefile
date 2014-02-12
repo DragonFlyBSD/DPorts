@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@exit2shel.com>
-# $FreeBSD: www/p5-Net-FireEagle/Makefile 341724 2014-01-29 12:23:20Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Net-FireEagle
 PORTVERSION=	1.6
