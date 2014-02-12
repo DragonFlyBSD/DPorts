@@ -1,5 +1,5 @@
 # Created by: Sevan Janiyan <venture37@geeklan.co.uk>
-# $FreeBSD: databases/hashtypes/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD$
 
 PORTNAME=	hashtypes
 PORTVERSION=	0.1.1
