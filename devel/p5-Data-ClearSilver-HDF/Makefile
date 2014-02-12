@@ -1,5 +1,5 @@
 # Created by: Denis Pokataev <catone@cpan.org>
-# $FreeBSD: devel/p5-Data-ClearSilver-HDF/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Data-ClearSilver-HDF
 PORTVERSION=	0.04
@@ -20,9 +20,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=	cspage.1
-
-MAN3=	Data::ClearSilver::HDF.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
