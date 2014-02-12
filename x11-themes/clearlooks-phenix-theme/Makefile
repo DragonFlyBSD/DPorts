@@ -1,5 +1,5 @@
 # Created by: Olivier Duchateau
-# $FreeBSD: x11-themes/clearlooks-phenix-theme/Makefile 339273 2014-01-09 20:12:38Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	clearlooks-phenix
 PORTVERSION=	3.0.16
