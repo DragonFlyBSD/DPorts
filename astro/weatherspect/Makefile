@@ -1,5 +1,5 @@
 # Created by: Simon Olofsson <simon@olofsson.de>
-# $FreeBSD: astro/weatherspect/Makefile 327701 2013-09-20 13:14:04Z bapt $
+# $FreeBSD$
 
 PORTNAME=	weatherspect
 PORTVERSION=	1.9
