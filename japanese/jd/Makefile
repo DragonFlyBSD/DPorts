@@ -1,5 +1,5 @@
 # Created by: Takashi Kato <townwear@gmail.com>
-# $FreeBSD: japanese/jd/Makefile 340085 2014-01-17 17:27:17Z danilo $
+# $FreeBSD$
 
 PORTNAME=	jd
 PORTVERSION=	2.8.7
