@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: security/clamav-unofficial-sigs/pkg-deinstall 340719 2014-01-22 15:52:06Z mat $
+# $FreeBSD: head/security/clamav-unofficial-sigs/pkg-deinstall 340719 2014-01-22 15:52:06Z mat $
 
 PATH="/bin:/sbin:/usr/bin:/usr/sbin"
 
