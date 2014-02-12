@@ -1,4 +1,4 @@
-# $FreeBSD: devel/cgit/Makefile 331804 2013-10-27 20:39:56Z wg $
+# $FreeBSD$
 
 PORTNAME=	cgit
 PORTVERSION=	0.9.2
