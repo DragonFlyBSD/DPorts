@@ -1,5 +1,5 @@
 # Created by: J.R. Oldroyd <fbsd@opal.com>
-# $FreeBSD: sysutils/xfce4-power-manager/Makefile 330426 2013-10-15 18:42:26Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	xfce4-power-manager
 PORTVERSION=	1.2.0
