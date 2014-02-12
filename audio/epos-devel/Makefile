@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: audio/epos-devel/Makefile 336953 2013-12-19 19:49:49Z pawel $
+# $FreeBSD$
 
 PORTNAME=	epos
 PORTVERSION=	2.5.37
