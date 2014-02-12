@@ -1,5 +1,5 @@
 # Created by: geniusj@ods.org
-# $FreeBSD: head/dns/updatedd/Makefile 343489 2014-02-09 12:41:03Z antoine $
+# $FreeBSD$
 
 PORTNAME=	updatedd
 PORTVERSION=	2.6
