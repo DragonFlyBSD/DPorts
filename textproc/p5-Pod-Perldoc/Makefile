@@ -1,5 +1,5 @@
 # Created by: Ashish SHUKLA <wahjava@gmail.com>
-# $FreeBSD: textproc/p5-Pod-Perldoc/Makefile 339899 2014-01-16 07:27:23Z ashish $
+# $FreeBSD$
 
 PORTNAME=	Pod-Perldoc
 PORTVERSION=	3.21

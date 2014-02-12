@@ -1,5 +1,5 @@
 
-$FreeBSD: textproc/p5-Pod-Perldoc/files/patch-Makefile.PL 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/textproc/p5-Pod-Perldoc/files/patch-Makefile.PL 340725 2014-01-22 17:40:44Z mat $
 
 --- Makefile.PL.orig
 +++ Makefile.PL
