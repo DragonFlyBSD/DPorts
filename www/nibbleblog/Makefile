@@ -1,5 +1,5 @@
 # Created by: Marek Holienka	<marekholienka@gmail.com>
-# $FreeBSD: www/nibbleblog/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	nibbleblog
 PORTVERSION=	3.0.2
