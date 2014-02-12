@@ -1,5 +1,5 @@
 # Created by: Yinghong Liu <relaxbsd@gmail.com>
-# $FreeBSD: chinese/auto-cn-l10n/Makefile 329142 2013-10-03 06:40:58Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	auto-cn-l10n
 PORTVERSION=	1.1
