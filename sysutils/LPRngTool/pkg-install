@@ -6,7 +6,7 @@ MANDIR=/usr/man
 VERSION=1.3.1
 #
 # -- START --
-# $FreeBSD: sysutils/LPRngTool/pkg-install 340719 2014-01-22 15:52:06Z mat $
+# $FreeBSD: head/sysutils/LPRngTool/pkg-install 340719 2014-01-22 15:52:06Z mat $
 # $Id: postinstall.freebsd.sh,v 1.8 2000/11/27 20:09:31 papowell Exp papowell $
 #
 #  If you are building a PORT, see the

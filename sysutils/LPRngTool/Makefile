@@ -1,5 +1,5 @@
 # Created by: papowell@lprng.com
-# $FreeBSD: sysutils/LPRngTool/Makefile 339667 2014-01-14 09:12:21Z gahr $
+# $FreeBSD$
 
 PORTNAME=	LPRngTool
 PORTVERSION=	1.3.2
