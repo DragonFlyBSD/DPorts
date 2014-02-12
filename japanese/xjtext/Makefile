@@ -1,5 +1,5 @@
 # Created by: sada
-# $FreeBSD: japanese/xjtext/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD$
 
 PORTNAME=	xjtext
 PORTVERSION=	1.3
@@ -21,6 +21,9 @@ PORTEXAMPLES=	FSS README YAMA Ao.png Back2.png Brown.png Royal.png Royal2.png
 PLIST_FILES=	bin/xjtext
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS EXAMPLES 
+
 .include <bsd.port.options.mk>
 
 do-install:
