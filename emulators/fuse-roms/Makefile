@@ -1,5 +1,5 @@
 # Created by: Vladimir Kondratiev <wulf@mail.mipt.ru>
-# $FreeBSD: emulators/fuse-roms/Makefile 334671 2013-11-23 14:14:16Z ak $
+# $FreeBSD$
 
 PORTNAME=	fuse-roms
 PORTVERSION=	0.9.0
