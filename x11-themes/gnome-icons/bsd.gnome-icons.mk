@@ -1,5 +1,5 @@
 # Whom:					Tom McLaughlin <tmclaugh@sdf.lonestar.org>
-# $FreeBSD: x11-themes/gnome-icons/bsd.gnome-icons.mk 341362 2014-01-27 09:49:41Z miwi $
+# $FreeBSD$
 
 PKGNAMEPREFIX=	gnome-icons-
 
@@ -15,9 +15,11 @@ do-install: icon-do-install
 
 icon-do-install:
 	cd ${WRKDIR} && ${FIND} * -type d ! -empty \
+		! -path 'stage*' \
 		-exec ${MKDIR} -m 0755 \
 		${STAGEDIR}${PREFIX}/share/icons/"{}" \;
 	cd ${WRKDIR} && ${FIND} * ! -type d ! -name 'plist' ! -name '*.bak' \
 		! -name '${LICENSE}' \
+		! -path 'stage/*' \
 		-exec ${INSTALL_DATA} ${WRKDIR}/"{}" \
 		${STAGEDIR}${PREFIX}/share/icons/"{}" \;
