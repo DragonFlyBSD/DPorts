@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: devel/p5-DateTime-Format-DBI/Makefile 331394 2013-10-23 17:22:02Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	DateTime-Format-DBI
 PORTVERSION=	0.041
