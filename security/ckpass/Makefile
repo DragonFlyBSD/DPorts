@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: security/ckpass/Makefile 342159 2014-02-01 14:51:21Z miwi $
+# $FreeBSD$
 
 PORTNAME=	ckpass
 PORTVERSION=	0.2
