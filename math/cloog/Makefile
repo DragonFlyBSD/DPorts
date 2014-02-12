@@ -1,5 +1,5 @@
 # Created by: Danilo Egea Gondolfo <danilo@FreeBSD.org>
-# $FreeBSD: math/cloog/Makefile 333687 2013-11-13 14:15:03Z danilo $
+# $FreeBSD$
 
 PORTNAME=	cloog
 PORTVERSION=	0.18.1
