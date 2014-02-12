@@ -1,4 +1,4 @@
-# $FreeBSD: www/paros/Makefile 334286 2013-11-19 07:42:41Z bapt $
+# $FreeBSD$
 
 PORTNAME=	paros
 PORTVERSION=	3.2.13
