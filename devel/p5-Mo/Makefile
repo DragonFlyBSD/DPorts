@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Mo/Makefile 332261 2013-10-31 15:52:18Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Mo
 PORTVERSION=	0.38
