@@ -1,5 +1,5 @@
 # Created by: Alan Eldridge <alane@geeksrus.net>
-# $FreeBSD: print/cups/Makefile 335993 2013-12-09 14:49:08Z bsam $
+# $FreeBSD$
 
 PORTNAME=	cups
 PORTVERSION=	1.5.4
