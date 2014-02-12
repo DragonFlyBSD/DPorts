@@ -1,5 +1,5 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: x11-wm/obapps/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD$
 
 PORTNAME=	obapps
 PORTVERSION=	0.1.7
