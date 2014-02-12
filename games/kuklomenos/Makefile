@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: games/kuklomenos/Makefile 332558 2013-11-02 23:25:58Z danilo $
+# $FreeBSD$
 
 PORTNAME=	kuklomenos
 PORTVERSION=	0.4.5
