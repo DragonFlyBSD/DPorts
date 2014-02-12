@@ -1,4 +1,4 @@
-# $FreeBSD: www/trac-accountmanager/Makefile 341179 2014-01-26 14:30:44Z miwi $
+# $FreeBSD$
 
 PORTNAME=	accountmanager
 PORTVERSION=	0.5.${REV}
