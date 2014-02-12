@@ -1,5 +1,5 @@
 # Created by: Guy P.
-# $FreeBSD: www/p5-CGI-Response/Makefile 333070 2013-11-07 08:28:22Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	CGI-Response
 PORTVERSION=	0.03
