@@ -1,9 +1,9 @@
 # Created by: Max Kochubey <root@hangover.org.ru>
-# $FreeBSD: databases/firebird21-server/Makefile 336187 2013-12-11 18:08:52Z bapt $
+# $FreeBSD$
 
 PORTNAME=	firebird
 PORTVERSION=	2.1.5
-PORTREVISION?=	1
+PORTREVISION?=	2
 CATEGORIES?=	databases
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION}-Release/
 PKGNAMESUFFIX?=	${PORTVERSION:R:S/.//}-server
