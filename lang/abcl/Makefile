@@ -1,5 +1,5 @@
 # Created by: Frank Fischer
-# $FreeBSD: lang/abcl/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD$
 
 PORTNAME=	abcl
 PORTVERSION=	1.2.1
