@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: multimedia/gtk-youtube-viewer/Makefile 340359 2014-01-20 01:24:53Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	gtk-youtube-viewer
 PORTVERSION=	3.0.9
