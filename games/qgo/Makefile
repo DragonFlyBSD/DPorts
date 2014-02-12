@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: games/qgo/Makefile 334499 2013-11-21 16:09:47Z makc $
+# $FreeBSD$
 
 PORTNAME=	qgo
 PORTVERSION=	2.s764
