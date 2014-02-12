@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Qudo/Makefile 341761 2014-01-29 17:00:41Z az $
+# $FreeBSD$
 
 PORTNAME=	Qudo
 PORTVERSION=	0.0213
