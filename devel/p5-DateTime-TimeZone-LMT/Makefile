@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <mat@FreeBSD.org>
-# $FreeBSD: devel/p5-DateTime-TimeZone-LMT/Makefile 331933 2013-10-29 07:56:01Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	DateTime-TimeZone-LMT
 PORTVERSION=	1.00
