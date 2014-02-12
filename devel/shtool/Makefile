@@ -1,5 +1,5 @@
 # Created by: Ralf S. Engelschall
-# $FreeBSD: devel/shtool/Makefile 341340 2014-01-27 08:32:08Z bapt $
+# $FreeBSD$
 
 PORTNAME=	shtool
 PORTVERSION=	2.0.8
