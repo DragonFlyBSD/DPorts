@@ -1,5 +1,5 @@
 # Created by: Dmitry Afanasiev <KOT@MATPOCKuH.Ru>
-# $FreeBSD: audio/autocd/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	autocd
 PORTVERSION=	3.02.12b
@@ -19,6 +19,8 @@ PLIST_FILES=	sbin/autocd bin/acdplay bin/cdctl bin/pause bin/eject
 PORTDOCS=	README.rus.html
 
 USE_RC_SUBR=	autocd
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
