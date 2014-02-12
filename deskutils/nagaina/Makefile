@@ -1,5 +1,5 @@
 # Created by: Yinghong Liu <relaxbsd@gmail.com>
-# $FreeBSD: deskutils/nagaina/Makefile 334499 2013-11-21 16:09:47Z makc $
+# $FreeBSD$
 
 PORTNAME=	nagaina
 PORTVERSION=	0.1.2
