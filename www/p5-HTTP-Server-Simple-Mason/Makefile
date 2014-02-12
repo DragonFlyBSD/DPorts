@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: www/p5-HTTP-Server-Simple-Mason/Makefile 338767 2014-01-05 13:23:32Z az $
+# $FreeBSD$
 
 PORTNAME=	HTTP-Server-Simple-Mason
 PORTVERSION=	0.14
