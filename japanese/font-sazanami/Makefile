@@ -1,4 +1,4 @@
-# $FreeBSD: japanese/font-sazanami/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	sazanami
 PORTVERSION=	20040629
