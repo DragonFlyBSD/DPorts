@@ -1,4 +1,4 @@
-# $FreeBSD: databases/c3p0/Makefile 333236 2013-11-08 14:52:32Z olgeni $
+# $FreeBSD$
 
 PORTNAME=	c3p0
 PORTVERSION=	0.9.2
