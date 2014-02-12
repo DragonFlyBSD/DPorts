@@ -1,4 +1,4 @@
-# $FreeBSD: print/p5-Font-FreeType/Makefile 338799 2014-01-05 16:55:04Z az $
+# $FreeBSD$
 
 PORTNAME=	Font-FreeType
 PORTVERSION=	0.03
