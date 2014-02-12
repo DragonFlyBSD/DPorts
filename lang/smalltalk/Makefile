@@ -1,5 +1,5 @@
 # Created by: gpalmer
-# $FreeBSD: lang/smalltalk/Makefile 338039 2013-12-29 20:23:28Z johans $
+# $FreeBSD$
 
 PORTNAME=	smalltalk
 PORTVERSION=	3.2.5
