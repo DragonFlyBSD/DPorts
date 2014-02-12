@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: net/zebra-server/Makefile 340019 2014-01-17 09:18:48Z gahr $
+# $FreeBSD$
 
 PORTNAME=	zebra-server
 PORTVERSION=	2.0.55
