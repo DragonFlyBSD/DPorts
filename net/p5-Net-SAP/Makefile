@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@dragon2.net>
-# $FreeBSD: net/p5-Net-SAP/Makefile 332868 2013-11-05 16:42:55Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Net-SAP
 PORTVERSION=	0.10
