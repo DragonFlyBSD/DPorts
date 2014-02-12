@@ -1,5 +1,5 @@
 # Created by: petef@FreeBSD.org
-# $FreeBSD: games/eboard/Makefile 337970 2013-12-29 12:21:46Z johans $
+# $FreeBSD$
 
 PORTNAME=	eboard
 PORTVERSION=	1.1.1
