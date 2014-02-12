@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-django-devel/Makefile 331601 2013-10-25 15:48:30Z lwhsu $
+# $FreeBSD$
 
 PORTNAME=	django
 PORTVERSION=	${SNAPSHOTDATE}
