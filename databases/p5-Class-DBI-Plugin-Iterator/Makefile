@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-Class-DBI-Plugin-Iterator/Makefile 341762 2014-01-29 17:18:46Z az $
+# $FreeBSD$
 
 PORTNAME=	Class-DBI-Plugin-Iterator
 PORTVERSION=	0.13
