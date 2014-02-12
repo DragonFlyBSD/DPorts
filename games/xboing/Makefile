@@ -1,5 +1,5 @@
 # Created by: janek
-# $FreeBSD: games/xboing/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xboing
 PORTVERSION=	2.4
