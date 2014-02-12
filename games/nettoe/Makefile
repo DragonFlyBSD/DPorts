@@ -1,5 +1,5 @@
 # Created by: Christopher Preston <rbg@gayteenresource.org>
-# $FreeBSD: games/nettoe/Makefile 342055 2014-01-31 19:46:24Z cs $
+# $FreeBSD$
 
 PORTNAME=	nettoe
 PORTVERSION=	1.5
@@ -17,6 +17,8 @@ PLIST_FILES=	bin/nettoe man/man6/nettoe.6.gz
 USES=		gmake
 GNU_CONFIGURE=	yes
 PORTDOCS=	AUTHORS BUGS ChangeLog NEWS README TO-DO
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
