@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: graphics/mirage/Makefile 328532 2013-09-27 22:56:06Z pawel $
+# $FreeBSD$
 
 PORTNAME=	mirage
 PORTVERSION=	0.9.5.2
