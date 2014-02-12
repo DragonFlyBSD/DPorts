@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-enumerize/Makefile 332036 2013-10-30 02:32:53Z swills $
+# $FreeBSD$
 
 PORTNAME=	enumerize
 PORTVERSION=	0.7.0
