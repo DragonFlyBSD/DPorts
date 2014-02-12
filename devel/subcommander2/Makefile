@@ -1,9 +1,9 @@
 # Created by: Naram Qashat
-# $FreeBSD: devel/subcommander2/Makefile 336253 2013-12-12 10:53:38Z bapt $
+# $FreeBSD$
 
 PORTNAME=	subcommander
 PORTVERSION=	2.0.0.b5.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	DEBIAN
 DISTNAME=	${PORTNAME}_${PORTVERSION:R:S,.b,~b,}p${PORTVERSION:E}.orig
