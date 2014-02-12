@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/diacanvas2/Makefile 340642 2014-01-21 19:48:47Z antoine $
+# $FreeBSD$
 
 PORTNAME=	diacanvas2
 PORTVERSION=	0.15.4
