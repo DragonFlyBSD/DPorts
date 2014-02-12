@@ -1,5 +1,5 @@
 # Created by: Sheldon Hearn <sheldonh@FreeBSD.org>
-# $FreeBSD: mail/exim-ldap2/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PKGNAMESUFFIX=	-ldap2
 MASTERDIR=	${.CURDIR}/../exim
