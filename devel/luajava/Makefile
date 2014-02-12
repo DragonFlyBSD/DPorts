@@ -1,5 +1,5 @@
 # Created by: sunghyuk
-# $FreeBSD: devel/luajava/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	luajava
 PORTVERSION=	1.1
