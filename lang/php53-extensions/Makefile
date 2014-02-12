@@ -1,4 +1,4 @@
-# $FreeBSD: lang/php53-extensions/Makefile 332429 2013-11-01 23:49:56Z flo $
+# $FreeBSD$
 
 PORTNAME=	php53
 PORTVERSION=	1.6
