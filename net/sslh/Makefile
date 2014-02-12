@@ -1,5 +1,5 @@
 # Created by: Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
-# $FreeBSD: net/sslh/Makefile 333035 2013-11-06 19:42:20Z wg $
+# $FreeBSD$
 
 PORTNAME=	sslh
 PORTVERSION=	1.15
