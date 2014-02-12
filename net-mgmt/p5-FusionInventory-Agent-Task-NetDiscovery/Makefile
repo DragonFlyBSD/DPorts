@@ -1,5 +1,5 @@
 # Created by: Emil Smolenski <am@raisa.eu.org>
-# $FreeBSD: net-mgmt/p5-FusionInventory-Agent-Task-NetDiscovery/Makefile 333340 2013-11-09 21:46:22Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	FusionInventory-Agent-Task-NetDiscovery
 PORTVERSION=	2.1
