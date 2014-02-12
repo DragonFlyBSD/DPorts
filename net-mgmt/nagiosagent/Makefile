@@ -1,5 +1,5 @@
 # Created by: Eugene Mychlo <myc@barev.net>
-# $FreeBSD: net-mgmt/nagiosagent/Makefile 334603 2013-11-22 18:48:41Z makc $
+# $FreeBSD$
 
 PORTNAME=	NagiosAgent
 PORTVERSION=	1.2.0.1
