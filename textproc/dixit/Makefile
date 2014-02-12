@@ -1,5 +1,5 @@
 # Created by: Ion-Mihai "IOnut" Tetcu <itetcu@people.tecnik93.com>
-# $FreeBSD: textproc/dixit/Makefile 341238 2014-01-26 16:19:56Z mat $
+# $FreeBSD$
 
 PORTNAME=	dixit
 PORTVERSION=	11.11
