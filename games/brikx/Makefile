@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/brikx/Makefile 336655 2013-12-16 18:18:07Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	brikx
 PORTVERSION=	0.4.5
