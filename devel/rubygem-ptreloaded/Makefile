@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@rtfm.jp>
-# $FreeBSD: devel/rubygem-ptreloaded/Makefile 340902 2014-01-24 14:47:11Z miwi $
+# $FreeBSD$
 
 PORTNAME=	ptreloaded
 PORTVERSION=	0.0.1
