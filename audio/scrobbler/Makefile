@@ -1,5 +1,5 @@
 # Created by: arved
-# $FreeBSD: audio/scrobbler/Makefile 336349 2013-12-13 14:51:53Z bapt $
+# $FreeBSD$
 
 PORTNAME?=	scrobbler
 PORTVERSION=	0.3.8.1
