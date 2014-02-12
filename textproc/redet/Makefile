@@ -1,5 +1,5 @@
 # Created by: Vsevolod Stakhov <vsevolod@highsecure.ru>
-# $FreeBSD: textproc/redet/Makefile 330374 2013-10-15 09:11:14Z gahr $
+# $FreeBSD$
 
 PORTNAME=	redet
 PORTVERSION=	8.26
