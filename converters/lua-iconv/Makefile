@@ -1,5 +1,5 @@
 # Created by: vanilla@
-# $FreeBSD: converters/lua-iconv/Makefile 339574 2014-01-13 07:50:03Z bapt $
+# $FreeBSD$
 
 PORTNAME=	iconv
 PORTVERSION=	7
