@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: sysutils/healthd/files/healthd.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/sysutils/healthd/files/healthd.in 340872 2014-01-24 00:14:07Z mat $
 #
 # $Id: healthd.sh,v 1.1.2.7 2004/06/23 14:11:57 housley Exp $
 
