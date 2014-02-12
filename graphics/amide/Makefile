@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/amide/Makefile 341730 2014-01-29 13:11:37Z madpilot $
+# $FreeBSD$
 
 PORTNAME=	amide
 PORTVERSION=	1.0.5
