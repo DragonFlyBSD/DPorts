@@ -1,5 +1,5 @@
 # Created by: Dmitry Morozovsky <marck@FreeBSD.org>
-# $FreeBSD: textproc/p5-XML-Driver-HTML/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	XML-Driver-HTML
 PORTVERSION=	0.06
