@@ -1,5 +1,5 @@
 # Created by: Leland Wang <llwang@infor.org>
-# $FreeBSD: misc/dvorak7min/Makefile 336813 2013-12-18 10:38:33Z koobs $
+# $FreeBSD$
 
 PORTNAME=	dvorak7min
 PORTVERSION=	1.6.1
@@ -8,6 +8,9 @@ MASTER_SITES=	http://www.linalco.com/ragnar/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	An ncurses-based Dvorak typing tutor
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-10
 
 NO_STAGE=	yes
 .include <bsd.port.pre.mk>
