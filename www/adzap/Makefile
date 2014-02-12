@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: www/adzap/Makefile 333287 2013-11-09 13:13:30Z wg $
+# $FreeBSD$
 
 PORTNAME=	adzap
 PORTVERSION=	20110915
