@@ -1,5 +1,5 @@
 # Created by: Sugimoto Sadahiro <ixtl@utmc.or.jp>
-# $FreeBSD: japanese/latex2html/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD$
 
 PORTNAME=	latex2html
 PORTVERSION=	${VERSION}j${JP_VERSION}
