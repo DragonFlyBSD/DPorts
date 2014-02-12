@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan@mail2000.com.tw>
-# $FreeBSD: security/gwee/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gwee
 PORTVERSION=	1.36
