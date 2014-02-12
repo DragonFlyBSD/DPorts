@@ -1,5 +1,5 @@
 # Created by: Phillip Neumann <pneumann@gmail.com>
-# $FreeBSD: x11-themes/ubuntulooks/Makefile 341350 2014-01-27 09:06:26Z miwi $
+# $FreeBSD$
 
 PORTNAME=	ubuntulooks
 PORTVERSION=	0.9.12
