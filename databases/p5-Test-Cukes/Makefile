@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: databases/p5-Test-Cukes/Makefile 341764 2014-01-29 17:31:52Z az $
+# $FreeBSD$
 
 PORTNAME=	Test-Cukes
 PORTVERSION=	0.10
