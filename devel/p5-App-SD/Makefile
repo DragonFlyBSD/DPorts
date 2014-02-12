@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-App-SD/Makefile 331780 2013-10-27 15:12:16Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	App-SD
 PORTVERSION=	0.75
