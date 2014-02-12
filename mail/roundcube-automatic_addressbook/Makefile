@@ -1,4 +1,4 @@
-# $FreeBSD: mail/roundcube-automatic_addressbook/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	automatic_addressbook
 PORTVERSION=	0.4
