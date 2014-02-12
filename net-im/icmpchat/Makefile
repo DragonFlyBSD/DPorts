@@ -1,5 +1,5 @@
 # Created by: Matthew West <mwest@uct.ac.za>
-# $FreeBSD: net-im/icmpchat/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	icmpchat
 PORTVERSION=	0.6
