@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/empire/Makefile 339794 2014-01-15 17:19:34Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	empire
 PORTVERSION=	1.10
