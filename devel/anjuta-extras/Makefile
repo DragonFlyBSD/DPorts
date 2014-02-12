@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: devel/anjuta-extras/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 #   $MCom: ports/devel/anjuta-extras/Makefile,v 1.11 2010/09/29 12:14:23 kwm Exp $
 
 PORTNAME=	anjuta-extras
