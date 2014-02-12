@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: lang/p5-Parse-Perl/Makefile 332724 2013-11-04 14:20:04Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Parse-Perl
 PORTVERSION=	0.007
