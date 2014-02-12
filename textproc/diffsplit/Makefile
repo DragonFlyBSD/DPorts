@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: textproc/diffsplit/Makefile 341227 2014-01-26 15:33:13Z mat $
+# $FreeBSD$
 
 PORTNAME=	diffsplit
 PORTVERSION=	1.0
