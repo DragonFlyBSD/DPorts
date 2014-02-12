@@ -1,5 +1,5 @@
 # Created by: Alexander V. Ribchansky <triosoft@triosoft.com.ua>
-# $FreeBSD: www/xpi-imglikeopera/Makefile 341207 2014-01-26 15:10:29Z miwi $
+# $FreeBSD$
 
 PORTNAME=	imglikeopera
 PORTVERSION=	0.6.20
