@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin (gslin@ccca.nctu.edu.tw)
-# $FreeBSD: sysutils/logmon/Makefile 333873 2013-11-15 14:58:59Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	logmon
 PORTVERSION=	0.4.4
@@ -9,6 +9,9 @@ DISTNAME=	LogMon-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Ncurses-based split window log monitoring program
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-10
 
 LICENSE=	ART10
 
