@@ -1,4 +1,4 @@
-# $FreeBSD: net/p5-Net-STOMP-Client/Makefile 338813 2014-01-05 18:05:39Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-STOMP-Client
 PORTVERSION=	2.0
