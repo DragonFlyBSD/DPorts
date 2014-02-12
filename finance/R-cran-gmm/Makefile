@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: finance/R-cran-gmm/Makefile 338352 2014-01-01 03:43:00Z tota $
+# $FreeBSD$
 
 PORTNAME=	gmm
 DISTVERSION=	1.5-0
