@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: devel/viewvc/Makefile 339820 2014-01-15 20:53:05Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	viewvc
 PORTVERSION=	1.1.22
