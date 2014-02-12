@@ -1,5 +1,5 @@
 # Created by: Yonatan <onatan@gmail.com>
-# $FreeBSD: security/httprint/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	httprint
 PORTVERSION=	301
