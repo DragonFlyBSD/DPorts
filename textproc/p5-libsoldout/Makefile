@@ -1,5 +1,5 @@
 # Created by: Rodrigo OSORIO <rodrigo@FreeBSD.org>
-# $FreeBSD: textproc/p5-libsoldout/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
+# $FreeBSD$
 
 PORTNAME=	libsoldout
 PORTVERSION=	0.02
