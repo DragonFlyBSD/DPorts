@@ -1,5 +1,5 @@
 # Created by: Andrew L. Neporada <andrew@chg.ru>
-# $FreeBSD: math/pspp/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD$
 
 PORTNAME=	pspp
 PORTVERSION=	0.6.2
