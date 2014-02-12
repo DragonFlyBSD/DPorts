@@ -1,5 +1,5 @@
 # Created by: Rodrigo OSORIO <rodrigo@FreeBSD.org>
-# $FreeBSD: multimedia/podcastdl/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
+# $FreeBSD$
 
 PORTNAME=	podcastdl
 PORTVERSION=	0.3.1
