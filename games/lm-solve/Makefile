@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: games/lm-solve/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD$
 
 PORTNAME=	lm-solve
 PORTVERSION=	0.8.4
