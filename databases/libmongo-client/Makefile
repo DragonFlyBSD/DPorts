@@ -1,5 +1,5 @@
 # Created by: Denis Generalov <gd.workbox@gmail.com>
-# $FreeBSD: databases/libmongo-client/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	libmongo-client
 PORTVERSION=	0.1.6.3
