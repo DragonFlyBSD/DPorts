@@ -1,5 +1,5 @@
 # Created by: Ivan Voras <ivoras@FreeBSD.org>
-# $FreeBSD: databases/php-mdcached/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	mdcached
 PORTVERSION=	1.0.9
