@@ -1,5 +1,5 @@
 # Created by: Abel Chow <abel_chow@yahoo.com>
-# $FreeBSD: databases/rdb/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD$
 
 PORTNAME=	rdb
 PORTVERSION=	2.6d
