@@ -1,5 +1,5 @@
 # Created by: Marc Fonvieille <blackend@FreeBSD.org>
-# $FreeBSD: emulators/minivmac/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	minivmac
 PORTVERSION=	3.0.0
