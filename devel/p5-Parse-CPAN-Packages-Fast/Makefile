@@ -1,5 +1,5 @@
 # Created by: jupengfei <jupengfei@gmail.com>
-# $FreeBSD: devel/p5-Parse-CPAN-Packages-Fast/Makefile 328380 2013-09-26 16:46:57Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Parse-CPAN-Packages-Fast
 PORTVERSION=	0.07
