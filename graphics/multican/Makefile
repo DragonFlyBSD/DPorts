@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: graphics/multican/Makefile 338635 2014-01-04 09:07:29Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	multican
 DISTVERSION=	0.0.5
