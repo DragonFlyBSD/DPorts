@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: games/castlevox/files/CastleVox.in 313626 2013-03-08 08:34:49Z rene $
+# $FreeBSD: head/games/castlevox/files/CastleVox.in 313626 2013-03-08 08:34:49Z rene $
 
 export JAVA_VERSION="%%JAVA_VERSION%%"
 

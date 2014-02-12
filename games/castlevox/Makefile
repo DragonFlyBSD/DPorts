@@ -1,5 +1,5 @@
 # Created by: Martin Otto
-# $FreeBSD: games/castlevox/Makefile 338511 2014-01-03 00:46:47Z bapt $
+# $FreeBSD$
 
 PORTNAME=	CastleVox
 PORTVERSION=	1.2
@@ -26,6 +26,9 @@ DESKTOP_ENTRIES="Castle Vox" "${COMMENT}" \
 		"${PORTNAME}" "Game;StrategyGame;" false
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 do-install:
