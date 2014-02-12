@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Ark/Makefile 338784 2014-01-05 15:30:10Z az $
+# $FreeBSD$
 
 PORTNAME=	Ark
 PORTVERSION=	0.1.r1
