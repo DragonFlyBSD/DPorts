@@ -1,5 +1,5 @@
 # Created by: torstenb@FreeBSD.org
-# $FreeBSD: misc/mc/Makefile 335794 2013-12-06 23:49:35Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	mc
 PORTVERSION=	4.8.11
