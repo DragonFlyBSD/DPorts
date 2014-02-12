@@ -1,5 +1,5 @@
 # Created by: Phil Phillips
-# $FreeBSD: net-mgmt/p5-Zenoss/Makefile 338790 2014-01-05 15:52:33Z az $
+# $FreeBSD$
 
 PORTNAME=	Zenoss
 PORTVERSION=	1.11
