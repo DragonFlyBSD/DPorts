@@ -1,5 +1,5 @@
 # Created by: Warren Toomey <wkt@cs.adfa.edu.au>
-# $FreeBSD: security/pktsuckers/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	pktsuckers
 PORTVERSION=	1.2
