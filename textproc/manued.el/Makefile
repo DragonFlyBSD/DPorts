@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@mj.0038.net>
-# $FreeBSD: textproc/manued.el/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	manued.el
 PORTVERSION=	0.9.5
@@ -9,6 +9,9 @@ DISTNAME=	manued-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Emacs minor mode for manued proofreading method
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-10
 
 NO_BUILD=	yes
 
