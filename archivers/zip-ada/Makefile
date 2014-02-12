@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: archivers/zip-ada/Makefile 333370 2013-11-10 10:16:54Z marino $
+# $FreeBSD$
 
 PORTNAME=	zip-ada
 PORTVERSION=	45
