@@ -1,5 +1,5 @@
 # Created by: delphij@FreeBSD.org
-# $FreeBSD: mail/libvmime/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libvmime
 PORTVERSION=	0.9.1
