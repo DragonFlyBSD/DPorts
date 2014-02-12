@@ -1,5 +1,5 @@
 # Created by: Robert Gogolok <gogo@cs.uni-sb.de>
-# $FreeBSD: games/xye/Makefile 334276 2013-11-18 23:37:36Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	xye
 PORTVERSION=	0.12.2
