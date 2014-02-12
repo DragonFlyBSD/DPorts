@@ -1,5 +1,5 @@
 # Created by: girald@etcom.ufrgs.br
-# $FreeBSD: security/scannedonly/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	scannedonly
 PORTVERSION=	0.21
