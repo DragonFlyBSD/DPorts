@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: converters/p5-Encode-DoubleEncodedUTF8/Makefile 341761 2014-01-29 17:00:41Z az $
+# $FreeBSD$
 
 PORTNAME=	Encode-DoubleEncodedUTF8
 PORTVERSION=	0.05
