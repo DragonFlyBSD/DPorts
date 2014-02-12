@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/p5-Search-Odeum/Makefile 340672 2014-01-21 23:21:10Z mat $
+# $FreeBSD$
 
 PORTNAME=	Search-Odeum
 PORTVERSION=	0.02
