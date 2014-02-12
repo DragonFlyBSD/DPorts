@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: security/pear-Crypt_MicroID/Makefile 334871 2013-11-25 17:59:58Z antoine $
+# $FreeBSD$
 
 PORTNAME=	Crypt_MicroID
 PORTVERSION=	0.1.0
