@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@mj.0038.net>
-# $FreeBSD: japanese/p5-Date-Japanese-Era/Makefile 332802 2013-11-05 01:40:32Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Date-Japanese-Era
 PORTVERSION=	0.06
