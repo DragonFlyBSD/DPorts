@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: science/R-cran-e1071/Makefile 339497 2014-01-12 12:19:47Z tota $
+# $FreeBSD$
 
 PORTNAME=	e1071
 DISTVERSION=	1.6-2
