@@ -1,5 +1,5 @@
 # Created by: Lars Eggert <lars@eggert.org>
-# $FreeBSD: benchmarks/spp/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	spp
 PORTVERSION=	0.3.4
