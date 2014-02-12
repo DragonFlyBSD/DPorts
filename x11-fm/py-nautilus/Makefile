@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: x11-fm/py-nautilus/Makefile 327780 2013-09-20 23:49:39Z bapt $
+# $FreeBSD$
 #   $MCom: ports/x11-fm/py-nautilus/Makefile,v 1.11 2009/04/07 17:54:12 marcus Exp $
 
 PORTNAME=	nautilus
