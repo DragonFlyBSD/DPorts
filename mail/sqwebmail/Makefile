@@ -1,5 +1,5 @@
 # Created by: Neil Blakey-Milner
-# $FreeBSD: mail/sqwebmail/Makefile 341596 2014-01-28 15:30:02Z bapt $
+# $FreeBSD$
 
 PORTNAME=	sqwebmail
 PORTVERSION=	5.7.0
