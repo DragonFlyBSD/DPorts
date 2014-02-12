@@ -1,5 +1,5 @@
 # Created by: bms
-# $FreeBSD: sysutils/pc-sysinstall/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	pc-sysinstall
 PORTVERSION=	9.1r${PSVN_REV}
