@@ -1,4 +1,4 @@
-# $FreeBSD: x11-clocks/plasma-applet-adjustableclock/Makefile 336969 2013-12-20 01:18:29Z jhale $
+# $FreeBSD$
 
 PORTNAME=	adjustableclock
 PORTVERSION=	4.1.4
