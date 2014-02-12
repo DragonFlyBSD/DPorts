@@ -1,5 +1,5 @@
 # Created by: Josef El-Rayes <j.el-rayes@daemon.li>
-# $FreeBSD: www/swiggle/Makefile 341086 2014-01-25 20:22:11Z lme $
+# $FreeBSD$
 
 PORTNAME=	swiggle
 PORTVERSION=	0.4
