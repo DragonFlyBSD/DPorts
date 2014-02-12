@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/stransball2/Makefile 337141 2013-12-21 12:53:21Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	stransball2
 PORTVERSION=	1.5
