@@ -1,5 +1,5 @@
 # Created by: Anes Mukhametov <anes@anes.su>
-# $FreeBSD: net/p5-Net-Google-PicasaWeb/Makefile 334248 2013-11-18 19:24:53Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Net-Google-PicasaWeb
 PORTVERSION=	0.11
