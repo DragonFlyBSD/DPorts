@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-Text-MicroTemplate-Extended/Makefile 340915 2014-01-24 15:52:12Z mat $
+# $FreeBSD$
 
 PORTNAME=	Text-MicroTemplate-Extended
 PORTVERSION=	0.17
