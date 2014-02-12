@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/kajaani-kombat/Makefile 337517 2013-12-26 14:28:51Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	kajaani-kombat
 PORTVERSION=	0.7
