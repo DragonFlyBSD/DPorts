@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: audio/mp3check/Makefile 337246 2013-12-23 14:02:02Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	mp3check
 PORTVERSION=	1.6
