@@ -1,5 +1,5 @@
 # Created by: Konstantin Tokarev <annulen@yandex.ru>
-# $FreeBSD: games/openpref/Makefile 334603 2013-11-22 18:48:41Z makc $
+# $FreeBSD$
 
 PORTNAME=	openpref
 PORTVERSION=	0.1.3
