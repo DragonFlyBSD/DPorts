@@ -1,5 +1,5 @@
 # Created by: Denis Pokataev <catone@cpan.org>
-# $FreeBSD: textproc/p5-XML-Atom-Ext-OpenSearch/Makefile 341765 2014-01-29 17:46:33Z az $
+# $FreeBSD$
 
 PORTNAME=	XML-Atom-Ext-OpenSearch
 PORTVERSION=	0.03
