@@ -1,5 +1,5 @@
 # Created by: Yevgen Drachenko <geka@sippysoft.com>
-# $FreeBSD: devel/py-wsgi_xmlrpc/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	wsgi_xmlrpc
 PORTVERSION=	0.2.8
