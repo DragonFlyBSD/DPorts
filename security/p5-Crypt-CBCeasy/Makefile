@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: security/p5-Crypt-CBCeasy/Makefile 332949 2013-11-06 07:39:31Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Crypt-CBCeasy
 PORTVERSION=	0.24
