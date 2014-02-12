@@ -1,5 +1,5 @@
 # Created by: Frederic Cambus
-# $FreeBSD: security/gsfv/Makefile 337089 2013-12-20 20:50:14Z pawel $
+# $FreeBSD$
 
 PORTNAME=	gsfv
 PORTVERSION=	0.2.1
