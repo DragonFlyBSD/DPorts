@@ -1,5 +1,5 @@
 # Created by: clutton mbsd@isgroup.com.ua
-# $FreeBSD: www/xpi-pentadactyl/Makefile 341213 2014-01-26 15:12:42Z miwi $
+# $FreeBSD$
 
 PORTNAME=	pentadactyl
 PORTVERSION=	20130808
