@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Net-STF-Client/Makefile 338785 2014-01-05 15:36:32Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-STF-Client
 PORTVERSION=	1.01
