@@ -1,4 +1,4 @@
-# $FreeBSD: security/rcracki_mt/Makefile 341795 2014-01-29 23:55:29Z pawel $
+# $FreeBSD$
 
 PORTNAME=	rcracki_mt
 PORTVERSION=	0.7.0
