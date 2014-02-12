@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-georuby/Makefile 332037 2013-10-30 02:34:55Z swills $
+# $FreeBSD$
 
 PORTNAME=	GeoRuby
 PORTVERSION=	1.3.4
