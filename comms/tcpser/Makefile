@@ -1,5 +1,5 @@
 # Created by: Edward Tomasz Napierala <trasz@FreeBSD.org>
-# $FreeBSD: comms/tcpser/Makefile 334194 2013-11-18 13:45:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	tcpser
 DISTVERSION=	1.0rc12
