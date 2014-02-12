@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: java/eclipse-pydev/Makefile 327738 2013-09-20 19:48:32Z bapt $
+# $FreeBSD$
 
 PORTNAME=	pydev
 PORTVERSION=	2.8.1
