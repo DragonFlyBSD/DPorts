@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-ExtUtils-Install/Makefile 338875 2014-01-06 13:26:14Z az $
+# $FreeBSD$
 
 PORTNAME=	ExtUtils-Install
 PORTVERSION=	1.54
