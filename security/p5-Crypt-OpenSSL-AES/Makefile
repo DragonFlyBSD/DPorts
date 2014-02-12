@@ -1,5 +1,5 @@
 # Created by: John Ferrell <jdferrell3@yahoo.com>
-# $FreeBSD: security/p5-Crypt-OpenSSL-AES/Makefile 341821 2014-01-30 09:08:26Z az $
+# $FreeBSD$
 
 PORTNAME=	Crypt-OpenSSL-AES
 PORTVERSION=	0.02
