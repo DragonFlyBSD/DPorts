@@ -1,5 +1,5 @@
 # Created by: John Chen <johnpupu@gmail.com>
-# $FreeBSD: www/pecl-yar/Makefile 338629 2014-01-04 08:24:48Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	yar
 PORTVERSION=	1.2.3
