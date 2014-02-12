@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-Template-Semantic/Makefile 340711 2014-01-22 14:35:55Z mat $
+# $FreeBSD$
 
 PORTNAME=	Template-Semantic
 PORTVERSION=	0.09
