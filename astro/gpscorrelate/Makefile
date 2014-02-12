@@ -1,5 +1,5 @@
 # Created by: Lukas Maly
-# $FreeBSD: astro/gpscorrelate/Makefile 338424 2014-01-02 08:42:08Z antoine $
+# $FreeBSD$
 
 PORTNAME=	gpscorrelate
 PORTVERSION=	1.6.1
