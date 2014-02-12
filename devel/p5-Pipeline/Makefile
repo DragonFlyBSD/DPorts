@@ -1,5 +1,5 @@
 # Created by: Rouslan Iskhakov <rouslan@rshell.net>
-# $FreeBSD: devel/p5-Pipeline/Makefile 341711 2014-01-29 10:57:06Z az $
+# $FreeBSD$
 
 PORTNAME=	Pipeline
 PORTVERSION=	3.12
