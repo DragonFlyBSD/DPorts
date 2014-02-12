@@ -1,5 +1,5 @@
 # Created by: tobez@FreeBSD.org
-# $FreeBSD: security/p5-Authen-Captcha/Makefile 332949 2013-11-06 07:39:31Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Authen-Captcha
 PORTVERSION=	1.023
