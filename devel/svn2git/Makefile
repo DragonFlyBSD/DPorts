@@ -1,5 +1,5 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: devel/svn2git/Makefile 334873 2013-11-25 18:01:01Z makc $
+# $FreeBSD$
 
 PORTNAME=	svn2git
 DISTVERSION=	1.0.10
