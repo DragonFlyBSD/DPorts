@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: devel/p5-SVN-Hooks/Makefile 338293 2013-12-31 13:04:47Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	SVN-Hooks
 PORTVERSION=	1.23
