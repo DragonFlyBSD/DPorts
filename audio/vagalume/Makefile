@@ -1,5 +1,5 @@
 # Created by: Bernhard Fröhlich <decke@bluelife.at>
-# $FreeBSD: audio/vagalume/Makefile 330737 2013-10-18 11:40:34Z decke $
+# $FreeBSD$
 
 PORTNAME=	vagalume
 PORTVERSION=	0.8.5
