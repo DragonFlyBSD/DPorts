@@ -1,5 +1,5 @@
 # Created by: Diane Bruce <db@db.net>
-# $FreeBSD: cad/basicdsp/Makefile 338046 2013-12-29 21:32:15Z db $
+# $FreeBSD$
 
 PORTNAME=	basicdsp
 PORTVERSION=	1.01
