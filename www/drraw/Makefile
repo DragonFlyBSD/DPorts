@@ -1,5 +1,5 @@
 # Created by: Jim Riggs <ports@christianserving.org>
-# $FreeBSD: www/drraw/Makefile 331141 2013-10-21 14:07:30Z mat $
+# $FreeBSD$
 
 PORTNAME=	drraw
 DISTVERSION=	2.2b2
