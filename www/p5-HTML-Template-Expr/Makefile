@@ -1,5 +1,5 @@
 # Created by: nork@cityfujisawa.ne.jp
-# $FreeBSD: www/p5-HTML-Template-Expr/Makefile 332617 2013-11-03 15:16:25Z az $
+# $FreeBSD$
 
 PORTNAME=	HTML-Template-Expr
 PORTVERSION=	0.07
