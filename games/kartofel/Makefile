@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/kartofel/Makefile 328738 2013-09-29 21:46:22Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	kartofel
 PORTVERSION=	1.2
