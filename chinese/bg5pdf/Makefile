@@ -1,5 +1,5 @@
 # Created by: Shen Chuan-Hsing
-# $FreeBSD: chinese/bg5pdf/Makefile 336173 2013-12-11 14:58:29Z bapt $
+# $FreeBSD$
 
 PORTNAME=	bg5pdf
 PORTVERSION=	1.0.0
