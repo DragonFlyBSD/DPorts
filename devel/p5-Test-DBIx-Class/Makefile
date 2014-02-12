@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-DBIx-Class/Makefile 340791 2014-01-23 03:28:23Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Test-DBIx-Class
 PORTVERSION=	0.41
