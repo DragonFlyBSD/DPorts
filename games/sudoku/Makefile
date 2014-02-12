@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: games/sudoku/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	sudoku
 PORTVERSION=	1.0.2
@@ -19,6 +19,9 @@ PLIST_DIRS=	share/sudoku
 MAN6=	sudoku.6
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
