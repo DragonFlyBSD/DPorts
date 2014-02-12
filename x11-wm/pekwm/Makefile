@@ -1,5 +1,5 @@
 # Created by: anders@hack.org
-# $FreeBSD: x11-wm/pekwm/Makefile 336648 2013-12-16 17:26:49Z bapt $
+# $FreeBSD$
 
 PORTNAME=	pekwm
 PORTVERSION=	0.1.17
