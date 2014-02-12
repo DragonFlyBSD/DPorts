@@ -1,8 +1,8 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: net/httping/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	httping
-PORTVERSION=	2.3.3
+PORTVERSION=	2.3.4
 CATEGORIES=	net
 MASTER_SITES=	http://www.vanheusden.com/httping/ \
 		CRITICAL
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Ping-like tool for HTTP requests
+
+LICENSE=	GPLv2
 
 USES=		gmake gettext
 
