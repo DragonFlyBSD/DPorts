@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/libva-vdpau-driver/Makefile 328673 2013-09-29 10:55:55Z madpilot $
+# $FreeBSD$
 
 PORTNAME=	libva-vdpau-driver
 PORTVERSION=	0.7.4
