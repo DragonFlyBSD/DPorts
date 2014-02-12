@@ -1,5 +1,5 @@
 # Created by: Ed Schouten <ed@fxq.nl>
-# $FreeBSD: net/freedbd/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	freedbd
 PORTVERSION=	0.1
