@@ -1,5 +1,5 @@
 # Created by: gslin <gslin@gslin.org>
-# $FreeBSD: net-mgmt/p5-MRTG-Parse/Makefile 338788 2014-01-05 15:44:11Z az $
+# $FreeBSD$
 
 PORTNAME=	MRTG-Parse
 PORTVERSION=	0.03
