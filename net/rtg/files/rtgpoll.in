@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: net/rtg/files/rtgpoll.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/net/rtg/files/rtgpoll.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: rtgpoll
 # REQUIRE: LOGIN mysql
