@@ -1,5 +1,5 @@
 # Created by: Philippe Audeoud <jadawin@tuxaco.net>
-# $FreeBSD: net/p5-Net-Proxy/Makefile 337794 2013-12-27 19:47:35Z jadawin $
+# $FreeBSD$
 
 PORTNAME=	Net-Proxy
 PORTVERSION=	0.12
