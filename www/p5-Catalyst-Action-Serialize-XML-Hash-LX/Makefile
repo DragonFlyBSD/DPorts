@@ -1,5 +1,5 @@
 # Created by: Anes Mukhametov <anes@anes.su>
-# $FreeBSD: www/p5-Catalyst-Action-Serialize-XML-Hash-LX/Makefile 334250 2013-11-18 19:26:56Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Catalyst-Action-Serialize-XML-Hash-LX
 PORTVERSION=	0.06
