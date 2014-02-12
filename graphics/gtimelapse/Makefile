@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: graphics/gtimelapse/Makefile 337065 2013-12-20 18:34:20Z pawel $
+# $FreeBSD$
 
 PORTNAME=	gtimelapse
 DISTVERSION=	0.1
