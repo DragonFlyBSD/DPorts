@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: finance/p5-Finance-YahooQuote/Makefile 342154 2014-02-01 14:42:18Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Finance-YahooQuote
 PORTVERSION=	0.24
