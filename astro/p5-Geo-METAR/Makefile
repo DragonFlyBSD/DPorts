@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: astro/p5-Geo-METAR/Makefile 331586 2013-10-25 14:04:57Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Geo-METAR
 PORTVERSION=	1.15
