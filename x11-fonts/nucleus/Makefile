@@ -1,4 +1,4 @@
-# $FreeBSD: x11-fonts/nucleus/Makefile 327781 2013-09-20 23:51:14Z bapt $
+# $FreeBSD$
 
 PORTNAME=	nucleus
 PORTVERSION=	0.77
