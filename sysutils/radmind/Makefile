@@ -1,5 +1,5 @@
 # Created by: Paul Dlug <paul@aps.org>
-# $FreeBSD: sysutils/radmind/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	radmind
 PORTVERSION=	1.14.1
