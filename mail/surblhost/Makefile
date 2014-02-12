@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: mail/surblhost/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	surblhost
 PORTVERSION=	0.8.0
@@ -11,8 +11,7 @@ COMMENT=	Check if a hostname is blacklisted
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-PLIST_FILES=	bin/${PORTNAME}
-MAN1=		${PORTNAME}.1
+PLIST_FILES=	bin/${PORTNAME} \
+		man/man1/surblhost.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
