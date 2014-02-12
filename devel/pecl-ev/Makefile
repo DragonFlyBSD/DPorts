@@ -1,5 +1,5 @@
 # Created by: John Chen <johnpupu@gmail.com>
-# $FreeBSD: devel/pecl-ev/Makefile 328043 2013-09-23 20:26:01Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	ev
 PORTVERSION=	0.2.10
