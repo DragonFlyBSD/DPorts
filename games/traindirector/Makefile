@@ -1,4 +1,4 @@
-# $FreeBSD: games/traindirector/Makefile 328679 2013-09-29 11:18:05Z madpilot $
+# $FreeBSD$
 
 PORTNAME=	traindirector
 PORTVERSION=	3.6
