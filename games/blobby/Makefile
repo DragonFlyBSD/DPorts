@@ -1,5 +1,5 @@
 # Created by: Ganael Laplanche <ganael.laplanche@martymac.org>
-# $FreeBSD: games/blobby/Makefile 336059 2013-12-10 11:58:56Z martymac $
+# $FreeBSD$
 
 PORTNAME=	blobby
 PORTVERSION=	1.0r3
