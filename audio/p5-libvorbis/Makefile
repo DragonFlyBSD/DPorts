@@ -1,5 +1,5 @@
 # Created by: Dominic Mitchell <dom@happygiraffe.net>
-# $FreeBSD: audio/p5-libvorbis/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libvorbis
 PORTVERSION=	0.05
