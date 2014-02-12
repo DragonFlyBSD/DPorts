@@ -1,4 +1,4 @@
-# $FreeBSD: archivers/lha-ac/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	lha
 PORTVERSION=	1.14i
@@ -20,6 +20,8 @@ PLIST_FILES=	bin/lha-ac
 MANLANG=	ja
 MAN1_JA=	lha-ac.1
 PLIST_FILES+=	${__MANPAGES}
+
+OPTIONS_DEFINE=	NLS 
 
 .include <bsd.port.options.mk>
 
