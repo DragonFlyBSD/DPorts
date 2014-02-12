@@ -1,5 +1,5 @@
 # Created by: Alexander V. Ribchansky <triosoft@triosoft.com.ua>
-# $FreeBSD: www/xpi-locale-switcher/Makefile 341211 2014-01-26 15:11:55Z miwi $
+# $FreeBSD$
 
 PORTNAME=	locale-switcher
 PORTVERSION=	2.1
