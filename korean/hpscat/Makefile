@@ -1,5 +1,5 @@
 # Created by: Junho CHOI <junho.choi@gmail.com>
-# $FreeBSD: korean/hpscat/Makefile 327739 2013-09-20 19:49:59Z bapt $
+# $FreeBSD$
 
 PORTNAME=	hpscat
 PORTVERSION=	1.3.1
