@@ -1,4 +1,4 @@
-# $FreeBSD: databases/postgresql-odbc/Makefile 336187 2013-12-11 18:08:52Z bapt $
+# $FreeBSD$
 
 PORTNAME=	postgresql
 PORTVERSION=	09.01.0200
@@ -37,6 +37,9 @@ PKGNAMESUFFIX=	-iodbc
 .endif
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 DATADIR_1=	${DATADIR}/odbc
