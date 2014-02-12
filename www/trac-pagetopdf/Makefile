@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: www/trac-pagetopdf/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	pagetopdf
 PORTVERSION=	0.2
@@ -11,6 +11,9 @@ DISTNAME=	pagetopdfplugin-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Export trac wiki pages as PDFs
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-10
 
 RUN_DEPENDS+=	tracd:${PORTSDIR}/www/trac \
 		htmldoc:${PORTSDIR}/textproc/htmldoc
