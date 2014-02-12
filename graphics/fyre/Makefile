@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: graphics/fyre/Makefile 334422 2013-11-20 14:25:28Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	fyre
 PORTVERSION=	1.0.1
