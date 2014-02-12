@@ -1,5 +1,5 @@
 # Created by: Marco Steinbach <coco@webdev.c0c0.intra>
-# $FreeBSD: net/sqtop/Makefile 341938 2014-01-31 08:08:07Z miwi $
+# $FreeBSD$
 
 PORTNAME=	sqtop
 DISTVERSION=	2011-11-01
