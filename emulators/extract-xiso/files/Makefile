@@ -1,5 +1,5 @@
 #
-# $FreeBSD: emulators/extract-xiso/files/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 #
 
 LIBFTP_DIR=libftp-5.0.1.modified.by.in
