@@ -1,5 +1,5 @@
 # Created by: rossiya
-# $FreeBSD: math/ltl/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ltl
 PORTVERSION=	1.9.1
