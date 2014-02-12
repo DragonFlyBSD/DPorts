@@ -1,5 +1,5 @@
 # Created by: Russell A. Jackson <raj@csub.edu>
-# $FreeBSD: deskutils/wyrd/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD$
 
 PORTNAME=	wyrd
 PORTVERSION=	1.4.6
