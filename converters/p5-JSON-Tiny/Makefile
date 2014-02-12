@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: converters/p5-JSON-Tiny/Makefile 340412 2014-01-20 17:02:25Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	JSON-Tiny
 PORTVERSION=	0.40
