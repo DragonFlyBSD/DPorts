@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: textproc/pear-Structures_DataGrid_Renderer_XML/Makefile 334871 2013-11-25 17:59:58Z antoine $
+# $FreeBSD$
 
 PORTNAME=	Structures_DataGrid_Renderer_XML
 PORTVERSION=	0.1.3
