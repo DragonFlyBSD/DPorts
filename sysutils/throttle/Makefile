@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: sysutils/throttle/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	throttle
 PORTVERSION=	1.2
@@ -8,6 +8,9 @@ MASTER_SITES=	http://klicman.org/throttle/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A pipe bandwidth throttling utility
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-10
 
 GNU_CONFIGURE=	yes
 
