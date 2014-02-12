@@ -1,5 +1,5 @@
 # Created by: Travis Campbell <hcoyote@ghostar.org>
-# $FreeBSD: www/oscommerce/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	oscommerce
 DISTVERSION=	2.3.3.4
@@ -16,6 +16,8 @@ WANT_PHP_WEB=	yes
 NO_BUILD=	yes
 SUB_FILES=	pkg-message
 DOCS=		CHANGELOG LICENSE STANDARD release_notes.pdf documentation.pdf
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
