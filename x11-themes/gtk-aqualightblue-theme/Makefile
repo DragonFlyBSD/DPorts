@@ -1,5 +1,5 @@
 # Created by: Philip Paeps <philip@paeps.cx>
-# $FreeBSD: x11-themes/gtk-aqualightblue-theme/Makefile 341354 2014-01-27 09:23:58Z miwi $
+# $FreeBSD$
 
 PORTNAME=	gtk-aqualightblue-theme
 PORTVERSION=	0.1
