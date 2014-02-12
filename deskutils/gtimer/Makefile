@@ -1,5 +1,5 @@
 # Created by: Chris Piazza <cpiazza@FreeBSD.org>
-# $FreeBSD: deskutils/gtimer/Makefile 341867 2014-01-30 18:10:28Z antoine $
+# $FreeBSD$
 
 PORTNAME=	gtimer
 PORTVERSION=	2.0.0
