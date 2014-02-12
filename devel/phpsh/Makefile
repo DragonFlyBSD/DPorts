@@ -1,5 +1,5 @@
 # Created by: Ashish SHUKLA <ashish@FreeBSD.org>
-# $FreeBSD: devel/phpsh/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	phpsh
 PORTVERSION=	20110513

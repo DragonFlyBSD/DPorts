@@ -1,5 +1,5 @@
 
-$FreeBSD: devel/phpsh/files/patch-README.md 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/devel/phpsh/files/patch-README.md 340725 2014-01-22 17:40:44Z mat $
 
 --- README.md.orig
 +++ README.md

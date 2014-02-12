@@ -1,5 +1,5 @@
 
-$FreeBSD: devel/phpsh/files/patch-src_phpsh.py 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/devel/phpsh/files/patch-src_phpsh.py 340725 2014-01-22 17:40:44Z mat $
 
 --- src/phpsh.py.orig
 +++ src/phpsh.py
