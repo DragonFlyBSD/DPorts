@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <culot@FreeBSD.org>
-# $FreeBSD: textproc/p5-Text-TestBase/Makefile 340915 2014-01-24 15:52:12Z mat $
+# $FreeBSD$
 
 PORTNAME=	Text-TestBase
 PORTVERSION=	0.12
