@@ -1,4 +1,4 @@
-# $FreeBSD: editors/bless/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	bless
 PORTVERSION=	0.6.0
