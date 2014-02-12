@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@FreeBSD.org>
-# $FreeBSD: games/daimonin/Makefile 337626 2013-12-26 22:21:46Z rene $
+# $FreeBSD$
 
 PORTNAME=	daimonin
 PORTVERSION=	0.10.5
