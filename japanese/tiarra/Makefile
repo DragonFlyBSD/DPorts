@@ -1,5 +1,5 @@
 # Created by: Hajimu UMEMOTO <ume@FreeBSD.org>
-# $FreeBSD: japanese/tiarra/Makefile 338295 2013-12-31 13:05:08Z ume $
+# $FreeBSD$
 
 PORTNAME=	tiarra
 PORTVERSION=	20100212
