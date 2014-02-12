@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@csie.nctu.edu.tw>
-# $FreeBSD: games/gma/Makefile 337358 2013-12-24 15:04:04Z pawel $
+# $FreeBSD$
 
 PORTNAME=	gma
 PORTVERSION=	0.6
