@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: devel/matreshka/Makefile 333388 2013-11-10 12:31:47Z marino $
+# $FreeBSD$
 
 PORTNAME=	matreshka
 PORTVERSION=	0.5.0
