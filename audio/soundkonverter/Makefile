@@ -1,5 +1,5 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: audio/soundkonverter/Makefile 337944 2013-12-29 08:34:11Z dbn $
+# $FreeBSD$
 
 PORTNAME=	soundkonverter
 DISTVERSION=	2.0.5
