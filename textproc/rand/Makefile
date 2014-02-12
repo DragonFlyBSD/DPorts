@@ -1,5 +1,5 @@
 # Created by: domi@saargate.de
-# $FreeBSD: textproc/rand/Makefile 328891 2013-09-30 22:47:41Z danilo $
+# $FreeBSD$
 
 PORTNAME=	rand
 PORTVERSION=	1.9
