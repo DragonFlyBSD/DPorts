@@ -1,5 +1,5 @@
 # Created by: knu@FreeBSD.org
-# $FreeBSD: devel/cvs2cl/Makefile 334065 2013-11-17 09:33:51Z mva $
+# $FreeBSD$
 
 PORTNAME=	cvs2cl
 PORTVERSION=	2.73
