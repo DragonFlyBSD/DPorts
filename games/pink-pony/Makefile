@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/pink-pony/Makefile 341657 2014-01-28 21:21:09Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	pink-pony
 PORTVERSION=	1.3.1
