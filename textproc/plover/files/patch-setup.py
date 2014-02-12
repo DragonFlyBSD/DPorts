@@ -1,5 +1,5 @@
 
-$FreeBSD: textproc/plover/files/patch-setup.py 306923 2012-11-03 16:42:40Z olgeni $
+$FreeBSD: head/textproc/plover/files/patch-setup.py 306923 2012-11-03 16:42:40Z olgeni $
 
 --- setup.py.orig
 +++ setup.py
