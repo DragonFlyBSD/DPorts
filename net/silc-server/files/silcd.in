@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: net/silc-server/files/silcd.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/net/silc-server/files/silcd.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: silcd
 # REQUIRE: NETWORKING
