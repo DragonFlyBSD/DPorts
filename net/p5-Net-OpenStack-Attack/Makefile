@@ -1,4 +1,4 @@
-# $FreeBSD: net/p5-Net-OpenStack-Attack/Makefile 341948 2014-01-31 09:01:28Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Net-OpenStack-Attack
 PORTVERSION=	1.0500
