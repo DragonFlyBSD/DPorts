@@ -1,5 +1,5 @@
 # Created by: lukin
-# $FreeBSD: x11-fm/filerunner/Makefile 330368 2013-10-15 07:43:07Z gahr $
+# $FreeBSD$
 
 PORTNAME=	filerunner
 PORTVERSION=	13.07.25.13
