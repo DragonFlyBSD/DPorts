@@ -1,5 +1,5 @@
 # Created by: Sergey V. Dyatko <sergey.dyatko@gmail.com>
-# $FreeBSD: devel/p5-interface/Makefile 341707 2014-01-29 09:19:35Z az $
+# $FreeBSD$
 
 PORTNAME=	interface
 PORTVERSION=	0.03
