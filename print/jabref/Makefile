@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: print/jabref/Makefile 336433 2013-12-14 10:09:24Z mandree $
+# $FreeBSD$
 
 PORTNAME=	jabref
 PORTVERSION=	2.9.2
