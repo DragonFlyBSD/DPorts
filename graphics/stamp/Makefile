@@ -1,5 +1,5 @@
 # Created by: Bill Fumerola <billf@chc-chimes.com>
-# $FreeBSD: graphics/stamp/Makefile 342301 2014-02-02 14:41:42Z miwi $
+# $FreeBSD$
 
 PORTNAME=	stamp
 PORTVERSION=	2.0.8
