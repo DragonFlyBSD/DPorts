@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: databases/skytools/Makefile 335883 2013-12-08 13:10:57Z mva $
+# $FreeBSD$
 
 PORTNAME=	skytools
 PORTVERSION=	2.1.12
