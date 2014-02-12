@@ -1,5 +1,5 @@
 # Created by: Dirk Froemberg <dirk@FreeBSD.org>
-# $FreeBSD: www/httrack/Makefile 330146 2013-10-12 16:42:36Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	httrack
 PORTVERSION=	3.47.27
