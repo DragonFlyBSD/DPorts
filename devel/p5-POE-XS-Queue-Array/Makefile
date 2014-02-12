@@ -1,5 +1,5 @@
 # Created by: Zach Thompson <hideo@lastamericanempire.com>
-# $FreeBSD: devel/p5-POE-XS-Queue-Array/Makefile 332203 2013-10-31 06:20:32Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	POE-XS-Queue-Array
 PORTVERSION=	0.006
