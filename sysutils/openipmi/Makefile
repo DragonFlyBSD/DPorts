@@ -1,5 +1,5 @@
 # Created by: Alex Deiter <alex.deiter@gmail.com>
-# $FreeBSD: sysutils/openipmi/Makefile 339593 2014-01-13 12:18:11Z gahr $
+# $FreeBSD$
 
 PORTNAME=	openipmi
 PORTVERSION=	2.0.19
