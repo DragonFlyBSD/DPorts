@@ -1,4 +1,4 @@
-# $FreeBSD: www/pebble/files/pebble.properties.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/www/pebble/files/pebble.properties.in 340872 2014-01-24 00:14:07Z mat $
 
 # the location where your Pebble data is stored, default is ${pebble.home}/pebble
 dataDirectory=%%PEBBLE_HOME%%
