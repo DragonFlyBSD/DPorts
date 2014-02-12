@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: net/gwhois/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gwhois
 PORTVERSION=	20120626
