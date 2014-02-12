@@ -1,5 +1,5 @@
 # Created by: Yoichi Asai <yatt@msc.biglobe.ne.jp>
-# $FreeBSD: japanese/timidity++-slang/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD$
 
 PKGNAMESUFFIX=	-slang
 
