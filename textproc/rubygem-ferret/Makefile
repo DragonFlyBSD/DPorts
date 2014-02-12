@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: textproc/rubygem-ferret/Makefile 332051 2013-10-30 02:58:22Z swills $
+# $FreeBSD$
 
 PORTNAME=	ferret
 PORTVERSION=	0.11.8.5
