@@ -1,5 +1,5 @@
 # Created by: BluePex Security Solutions <freebsd-ports@bluepex.com>
-# $FreeBSD: net-mgmt/p5-SNMP-Simple/Makefile 338754 2014-01-05 12:20:02Z az $
+# $FreeBSD$
 
 PORTNAME=	SNMP-Simple
 PORTVERSION=	0.02
