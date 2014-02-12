@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: graphics/guilib/Makefile 342302 2014-02-02 14:55:49Z miwi $
+# $FreeBSD$
 
 PORTNAME=	guilib
 PORTVERSION=	1.2.1
