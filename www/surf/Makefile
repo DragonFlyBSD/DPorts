@@ -1,5 +1,5 @@
 # Created by: Christopher Knaust <jigboe@gmx.de>
-# $FreeBSD: www/surf/Makefile 329095 2013-10-02 18:34:38Z bapt $
+# $FreeBSD$
 
 PORTNAME=	surf
 PORTVERSION=	0.6
