@@ -1,5 +1,5 @@
 # Created by: Foxfair Hu <foxfair@FreeBSD.org>
-# $FreeBSD: textproc/p5-XML-RSS-JavaScript/Makefile 329221 2013-10-03 18:38:00Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	XML-RSS-JavaScript
 PORTVERSION=	0.65
