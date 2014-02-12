@@ -1,4 +1,4 @@
-# $FreeBSD: net-mgmt/2ping/Makefile 341118 2014-01-25 21:58:31Z bapt $
+# $FreeBSD$
 
 PORTNAME=	2ping
 PORTVERSION=	2.0
