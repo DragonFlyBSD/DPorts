@@ -1,5 +1,5 @@
 # Created by: dom@happygiraffe.net
-# $FreeBSD: graphics/cthumb/Makefile 342354 2014-02-02 18:39:59Z antoine $
+# $FreeBSD$
 
 PORTNAME=	cthumb
 PORTVERSION=	4.2
