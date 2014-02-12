@@ -1,5 +1,5 @@
 
-$FreeBSD: audio/gqmpeg/files/patch-aclocal.m4 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/audio/gqmpeg/files/patch-aclocal.m4 340725 2014-01-22 17:40:44Z mat $
 
 --- aclocal.m4.orig	Wed Jul 17 20:48:30 2002
 +++ aclocal.m4	Thu Jul 18 16:38:49 2002
