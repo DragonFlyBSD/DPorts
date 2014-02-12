@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: comms/atslog/Makefile 327714 2013-09-20 16:03:29Z bapt $
+# $FreeBSD$
 
 PORTNAME=	atslog
 PORTVERSION=	2.1.1
