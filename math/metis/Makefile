@@ -1,5 +1,5 @@
 # Created by: Pedro Giffuni <giffunip@asme.org>
-# $FreeBSD: math/metis/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	metis
 PORTVERSION=	5.1.0
