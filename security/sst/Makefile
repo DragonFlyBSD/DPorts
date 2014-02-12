@@ -1,5 +1,5 @@
 # Created by: Mikhail Teterin <mi@aldan.algebra.com>
-# $FreeBSD: security/sst/Makefile 342003 2014-01-31 15:23:50Z miwi $
+# $FreeBSD$
 
 PORTNAME=	sst
 PORTVERSION=	1.0
