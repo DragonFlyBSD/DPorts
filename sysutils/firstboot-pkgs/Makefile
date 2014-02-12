@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/firstboot-pkgs/Makefile 336602 2013-12-16 02:36:23Z cperciva $
+# $FreeBSD$
 
 PORTNAME=	firstboot-pkgs
 PORTVERSION=	1.3

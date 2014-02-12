@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: sysutils/firstboot-pkgs/files/firstboot_pkgs.in 336602 2013-12-16 02:36:23Z cperciva $
+# $FreeBSD: head/sysutils/firstboot-pkgs/files/firstboot_pkgs.in 336602 2013-12-16 02:36:23Z cperciva $
 # KEYWORD: firstboot
 # PROVIDE: firstboot_pkgs
 # REQUIRE: NETWORKING
