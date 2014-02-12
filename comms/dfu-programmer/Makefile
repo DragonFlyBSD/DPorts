@@ -1,5 +1,5 @@
 # Created by: elbarto@ArcadeBSD.org
-# $FreeBSD: comms/dfu-programmer/Makefile 327714 2013-09-20 16:03:29Z bapt $
+# $FreeBSD$
 
 PORTNAME=	dfu-programmer
 PORTVERSION=	0.5.5
@@ -19,6 +19,9 @@ MAN1=		dfu-programmer.1
 PORTDOCS=	*
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 do-install:
