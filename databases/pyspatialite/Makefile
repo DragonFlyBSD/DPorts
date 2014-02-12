@@ -1,5 +1,5 @@
 # Created by: lbartoletti <coder@tuxfamily.org>
-# $FreeBSD: databases/pyspatialite/Makefile 336187 2013-12-11 18:08:52Z bapt $
+# $FreeBSD$
 
 PORTNAME=	pyspatialite
 PORTVERSION=	3.0.1
