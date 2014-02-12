@@ -1,4 +1,4 @@
-# $FreeBSD: www/rubygem-turbolinks/Makefile 332057 2013-10-30 03:04:19Z swills $
+# $FreeBSD$
 
 PORTNAME=	turbolinks
 PORTVERSION=	1.3.0
