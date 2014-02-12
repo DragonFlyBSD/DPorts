@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: mail/spamstats/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	spamstats
 PORTVERSION=	0.6c
@@ -25,6 +25,8 @@ NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -i '' -e 's|mail.log|maillog|g' \
 		${WRKSRC}/${PORTNAME}${PORTVERSION}.pl
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
