@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: net/pear-Net_Geo/Makefile 334871 2013-11-25 17:59:58Z antoine $
+# $FreeBSD$
 
 PORTNAME=	Net_Geo
 PORTVERSION=	1.0.5
