@@ -1,14 +1,14 @@
 # Created by: Ilya A. Arkhipov <rum1cro@yandex.ru>
-# $FreeBSD: ports-mgmt/dialog4ports/Makefile 341617 2014-01-28 16:24:00Z mat $
+# $FreeBSD$
 
 PORTNAME=	dialog4ports
 PORTVERSION=	0.1.5
 PORTREVISION?=	2
 CATEGORIES=	ports-mgmt
-MASTER_SITES=	http://m1cro.tk/dialog4ports/ \
+MASTER_SITES=	http://m1cro.me/dialog4ports/ \
 		http://files.etoilebsd.net/dialog4ports/ \
 		http://mirror.shatow.net/freebsd/${PORTNAME}/ \
-		http://m1cro.tk/dialog4ports/:dialog \
+		http://m1cro.me/dialog4ports/:dialog \
 		http://files.etoilebsd.net/dialog4ports/:dialog \
 		ftp://invisible-island.net/dialog/:dialog \
 		http://mirror.shatow.net/freebsd/${PORTNAME}/:dialog
