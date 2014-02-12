@@ -1,5 +1,5 @@
 # Created by: rv@FreeBSD.org
-# $FreeBSD: devel/cons-test/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD$
 
 PORTNAME=	cons-test
 PORTVERSION=	2.2.0
