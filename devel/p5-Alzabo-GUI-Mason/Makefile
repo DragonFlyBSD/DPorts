@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: devel/p5-Alzabo-GUI-Mason/Makefile 331301 2013-10-22 16:57:44Z mat $
+# $FreeBSD$
 
 PORTNAME=	Alzabo-GUI-Mason
 PORTVERSION=	0.12.01
