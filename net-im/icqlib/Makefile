@@ -1,5 +1,5 @@
 # Created by: Pavel Andreev
-# $FreeBSD: net-im/icqlib/Makefile 341116 2014-01-25 21:47:47Z bapt $
+# $FreeBSD$
 
 PORTNAME=	icqlib
 PORTVERSION=	1.0.0
