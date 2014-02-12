@@ -1,4 +1,4 @@
-# $FreeBSD: head/www/rsskit/Makefile 341633 2014-01-28 16:47:27Z miwi $
+# $FreeBSD$
 
 PORTNAME=	rsskit
 PORTVERSION=	0.4
