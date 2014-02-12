@@ -1,5 +1,5 @@
 # Created by: Bill Fumerola <billf@chc-chimes.com>
-# $FreeBSD: graphics/qiv/Makefile 337008 2013-12-20 13:13:31Z danilo $
+# $FreeBSD$
 
 PORTNAME=	qiv
 PORTVERSION=	2.3.1
