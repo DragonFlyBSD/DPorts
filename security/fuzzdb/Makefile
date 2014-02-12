@@ -1,5 +1,5 @@
 # Created by: Niels Heinen
-# $FreeBSD: security/fuzzdb/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	fuzzdb
 PORTVERSION=	1.09
@@ -17,6 +17,9 @@ PORTDIRS=	attack-payloads wordlists-misc Discovery \
 		web-backdoors wordlists-user-passwd regex
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 do-install:
