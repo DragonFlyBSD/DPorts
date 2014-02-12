@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/apache-solr3/Makefile 341120 2014-01-25 22:03:15Z mat $
+# $FreeBSD$
 
 PORTNAME=	apache-solr
 PORTVERSION=	3.6.2
