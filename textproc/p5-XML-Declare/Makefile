@@ -1,5 +1,5 @@
 # Created by: Anes Mukhametov <anes@anes.su>
-# $FreeBSD: textproc/p5-XML-Declare/Makefile 334251 2013-11-18 19:27:31Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	XML-Declare
 PORTVERSION=	0.06
