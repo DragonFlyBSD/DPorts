@@ -1,5 +1,5 @@
 # Created by: TERAMOTO Masahiro <markun@onohara.to>
-# $FreeBSD: textproc/p5-XML-Feed-Deduper/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	XML-Feed-Deduper
 PORTVERSION=	0.06
