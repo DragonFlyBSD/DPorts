@@ -1,5 +1,5 @@
 # Created by: giffunip
-# $FreeBSD: math/laspack/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	laspack
 PORTVERSION=	1.12.2
