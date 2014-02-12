@@ -1,5 +1,5 @@
 # Created by: dbader@eece.unm.edu
-# $FreeBSD: print/bibview/Makefile 342327 2014-02-02 16:05:24Z miwi $
+# $FreeBSD$
 
 PORTNAME=	bibview
 PORTVERSION=	2.2
