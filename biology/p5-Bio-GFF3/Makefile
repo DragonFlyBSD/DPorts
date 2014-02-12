@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: biology/p5-Bio-GFF3/Makefile 340794 2014-01-23 03:28:37Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Bio-GFF3
 PORTVERSION=	1.9
