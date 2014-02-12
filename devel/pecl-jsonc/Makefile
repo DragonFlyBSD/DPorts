@@ -1,5 +1,5 @@
 # Created by: Gasol Wu <gasol.wu@gmail.com>
-# $FreeBSD: devel/pecl-jsonc/Makefile 333990 2013-11-16 12:50:57Z antoine $
+# $FreeBSD$
 
 PORTNAME=	jsonc
 PORTVERSION=	1.3.1
