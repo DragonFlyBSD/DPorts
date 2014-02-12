@@ -1,5 +1,5 @@
 # Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-# $FreeBSD: net/p5-Net-FS-Flickr/Makefile 341922 2014-01-31 07:17:51Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Net-FS-Flickr
 PORTVERSION=	0.1
