@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: finance/p5-Finance-QuoteTW/Makefile 332594 2013-11-03 08:05:18Z az $
+# $FreeBSD$
 
 PORTNAME=	Finance-QuoteTW
 PORTVERSION=	0.09
