@@ -1,5 +1,5 @@
 # Created by: faulkner@mpd.tandem.com
-# $FreeBSD: audio/rsynth/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	rsynth
 PORTVERSION=	2.0
