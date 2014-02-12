@@ -1,5 +1,5 @@
 # Created by: Kurt Lidl <kurt.lidl@cello.com>
-# $FreeBSD: devel/p5-TheSchwartz-Simple/Makefile 332245 2013-10-31 14:31:30Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	TheSchwartz-Simple
 PORTVERSION=	0.05
