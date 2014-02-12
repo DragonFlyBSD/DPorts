@@ -1,5 +1,5 @@
 # Created by: dom@happygiraffe.net
-# $FreeBSD: www/p5-ApacheBench/Makefile 332678 2013-11-04 09:57:54Z az $
+# $FreeBSD$
 
 PORTNAME=	ApacheBench
 PORTVERSION=	0.73
