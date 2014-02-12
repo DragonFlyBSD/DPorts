@@ -1,5 +1,5 @@
 # Created by: Dryice Dong Liu <dryice@dryice.name>
-# $FreeBSD: databases/py-sqlalchemy-devel/Makefile 334676 2013-11-23 15:18:03Z nivit $
+# $FreeBSD$
 
 PORTNAME=	sqlalchemy
 PORTVERSION=	0.8.2
