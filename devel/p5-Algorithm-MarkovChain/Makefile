@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: devel/p5-Algorithm-MarkovChain/Makefile 331766 2013-10-27 12:17:59Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Algorithm-MarkovChain
 PORTVERSION=	0.06
