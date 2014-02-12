@@ -1,5 +1,5 @@
 # Created by: Cristiano Rolim Pereira <cristianorolim@outlook.com>
-# $FreeBSD: sysutils/loganalyzer/Makefile 340091 2014-01-17 18:07:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	loganalyzer
 PORTVERSION=	3.6.3
