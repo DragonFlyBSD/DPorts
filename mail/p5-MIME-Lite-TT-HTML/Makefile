@@ -1,5 +1,5 @@
 # Created by: Tuc <freebsd-ports@t-b-o-h.net>
-# $FreeBSD: mail/p5-MIME-Lite-TT-HTML/Makefile 342157 2014-02-01 14:42:58Z miwi $
+# $FreeBSD$
 
 PORTNAME=	MIME-Lite-TT-HTML
 PORTVERSION=	0.04
