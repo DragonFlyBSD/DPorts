@@ -1,5 +1,5 @@
 # Created by: Seiichirou Hiraoka <flathill@flathill.gr.jp>
-# $FreeBSD: games/fkiss/Makefile 341809 2014-01-30 08:27:55Z danfe $
+# $FreeBSD$
 
 PORTNAME=	fkiss
 PORTVERSION=	0.33a
