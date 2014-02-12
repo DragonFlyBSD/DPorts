@@ -1,5 +1,5 @@
 # Created by: Anes Mukhametov <anes@anes.su>
-# $FreeBSD: graphics/p5-Image-ObjectDetect/Makefile 335601 2013-12-04 02:51:00Z jhale $
+# $FreeBSD$
 
 PORTNAME=	Image-ObjectDetect
 PORTVERSION=	0.12
