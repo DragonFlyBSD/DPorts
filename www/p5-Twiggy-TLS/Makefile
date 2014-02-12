@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Twiggy-TLS/Makefile 338785 2014-01-05 15:36:32Z az $
+# $FreeBSD$
 
 PORTNAME=	Twiggy-TLS
 PORTVERSION=	0.0019
