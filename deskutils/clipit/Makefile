@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/clipit/Makefile 327718 2013-09-20 16:21:37Z bapt $
+# $FreeBSD$
 
 PORTNAME=	clipit
 PORTVERSION=	1.4.2
