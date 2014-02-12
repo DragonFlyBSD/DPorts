@@ -1,5 +1,5 @@
 # Created by: Zach Thompson <lin-chi@lastamericanempire.com>
-# $FreeBSD: databases/p5-POE-Component-EasyDBI/Makefile 332592 2013-11-03 06:53:54Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	POE-Component-EasyDBI
 PORTVERSION=	1.23
