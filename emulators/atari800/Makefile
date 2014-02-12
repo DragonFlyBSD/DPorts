@@ -1,5 +1,5 @@
 # Created by: Joel Sutton <jsutton@webnet.com.au>
-# $FreeBSD: emulators/atari800/Makefile 327721 2013-09-20 16:43:52Z bapt $
+# $FreeBSD$
 
 PORTNAME=	atari800
 PORTVERSION=	2.0.3
