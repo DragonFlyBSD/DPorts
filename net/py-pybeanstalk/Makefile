@@ -1,4 +1,4 @@
-# $FreeBSD: net/py-pybeanstalk/Makefile 337865 2013-12-28 11:38:37Z wg $
+# $FreeBSD$
 
 PORTNAME=	pybeanstalk
 PORTVERSION=	0.11.1
