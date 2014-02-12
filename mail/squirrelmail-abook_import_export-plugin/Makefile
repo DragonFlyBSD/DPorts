@@ -1,5 +1,5 @@
 # Created by: Scott Lambert <lambert@lambertfam.org>
-# $FreeBSD: mail/squirrelmail-abook_import_export-plugin/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	abook_import_export
 PORTVERSION=	1.1
