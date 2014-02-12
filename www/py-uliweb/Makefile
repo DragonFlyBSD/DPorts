@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: www/py-uliweb/Makefile 338865 2014-01-06 12:04:12Z wen $
+# $FreeBSD$
 
 PORTNAME=	uliweb
 PORTVERSION=	0.2.3
