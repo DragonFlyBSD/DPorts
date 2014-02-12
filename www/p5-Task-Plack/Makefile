@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Task-Plack/Makefile 341688 2014-01-29 07:58:06Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Task-Plack
 PORTVERSION=	0.25
