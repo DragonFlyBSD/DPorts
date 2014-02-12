@@ -1,5 +1,5 @@
 # Created by: Dylan Simon <dylan@dylex.net>
-# $FreeBSD: math/orpie/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD$
 
 PORTNAME=	orpie
 PORTVERSION=	1.5.1
