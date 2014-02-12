@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-Text-MicroMason/Makefile 340908 2014-01-24 14:59:10Z mat $
+# $FreeBSD$
 
 PORTNAME=	Text-MicroMason
 PORTVERSION=	2.13
