@@ -1,4 +1,4 @@
-# $FreeBSD: games/kajongg/Makefile 335877 2013-12-08 12:04:07Z mva $
+# $FreeBSD$
 
 PORTNAME=	kajongg
 PORTVERSION=	${KDE4_VERSION}
