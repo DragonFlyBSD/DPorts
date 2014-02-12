@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: science/clhep/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD$
 
 PORTNAME=	clhep
 PORTVERSION=	2.1.0.1
