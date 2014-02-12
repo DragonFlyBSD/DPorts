@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: devel/rubygem-graf/Makefile 332037 2013-10-30 02:34:55Z swills $
+# $FreeBSD$
 
 PORTNAME=	graf
 PORTVERSION=	0.0.3
