@@ -1,5 +1,5 @@
 # Created by: Tz-Huan Huang <tzhuan@csie.org>
-# $FreeBSD: math/fann/Makefile 342300 2014-02-02 14:33:37Z miwi $
+# $FreeBSD$
 
 PORTNAME=	fann
 PORTVERSION=	2.2.0
