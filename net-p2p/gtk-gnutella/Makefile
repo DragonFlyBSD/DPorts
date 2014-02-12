@@ -1,5 +1,5 @@
 # Created by: rbt@zort.on.ca
-# $FreeBSD: head/net-p2p/gtk-gnutella/Makefile 340048 2014-01-17 14:43:16Z miwi $
+# $FreeBSD$
 
 #
 # A quick note on configurable make symbols:
