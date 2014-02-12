@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: databases/p5-Dancer-Plugin-Database/Makefile 338217 2013-12-31 02:54:19Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Dancer-Plugin-Database
 PORTVERSION=	2.09
