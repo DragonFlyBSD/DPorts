@@ -1,4 +1,4 @@
-# $FreeBSD: x11/viewres/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	viewres
 PORTVERSION=	1.0.4
