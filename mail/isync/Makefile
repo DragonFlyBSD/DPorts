@@ -1,5 +1,5 @@
 # Created by: eivind
-# $FreeBSD: mail/isync/Makefile 342313 2014-02-02 15:10:39Z ehaupt $
+# $FreeBSD$
 
 PORTNAME=	isync
 PORTVERSION=	1.0.6
