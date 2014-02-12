@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: graphics/icat/Makefile 336824 2013-12-18 11:59:14Z ehaupt $
+# $FreeBSD$
 
 PORTNAME=	icat
 PORTVERSION=	0.4
