@@ -1,5 +1,5 @@
 # Created by: Jonathan Pater <cowboyneal@gmail.com>
-# $FreeBSD: www/p5-WWW-Shorten-Googl/Makefile 338767 2014-01-05 13:23:32Z az $
+# $FreeBSD$
 
 PORTNAME=	WWW-Shorten-Googl
 PORTVERSION=	1.02
