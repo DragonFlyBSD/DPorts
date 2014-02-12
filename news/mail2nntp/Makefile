@@ -1,5 +1,5 @@
 # Created by: gary@hayers.org
-# $FreeBSD: news/mail2nntp/Makefile 337690 2013-12-27 10:20:38Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mail2nntp
 PORTVERSION=	1.0
