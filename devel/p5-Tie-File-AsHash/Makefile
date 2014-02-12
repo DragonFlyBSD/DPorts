@@ -1,5 +1,5 @@
 # Created by: Ruben de Groot <rdg@bzerk.org>
-# $FreeBSD: devel/p5-Tie-File-AsHash/Makefile 338856 2014-01-06 11:00:15Z az $
+# $FreeBSD$
 
 PORTNAME=	Tie-File-AsHash
 PORTVERSION=	0.08
