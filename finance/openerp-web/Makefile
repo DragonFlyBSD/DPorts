@@ -1,5 +1,5 @@
 # Created by: Borja Lopez<borja@pexego.es>
-# $FreeBSD: finance/openerp-web/Makefile 327727 2013-09-20 17:18:38Z bapt $
+# $FreeBSD$
 
 PORTNAME=	openerp-web
 PORTVERSION=	5.0.11
