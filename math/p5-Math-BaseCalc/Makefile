@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: math/p5-Math-BaseCalc/Makefile 337727 2013-12-27 13:08:28Z jadawin $
+# $FreeBSD$
 
 PORTNAME=	Math-BaseCalc
 PORTVERSION=	1.017
