@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: audio/gmusicbrowser/Makefile 340045 2014-01-17 14:27:39Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gmusicbrowser
 PORTVERSION=	1.1.10
