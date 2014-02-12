@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: databases/gosqlite3/Makefile 339441 2014-01-11 17:46:33Z jlaffaye $
+# $FreeBSD$
 
 PORTNAME=	gosqlite3
 PORTVERSION=	20120330
