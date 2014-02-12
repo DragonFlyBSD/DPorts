@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <wg@FreeBSD.org>
-# $FreeBSD: textproc/py-sphinxcontrib-httpdomain/Makefile 337536 2013-12-26 15:17:10Z wg $
+# $FreeBSD$
 
 PORTNAME=	sphinxcontrib-httpdomain
 PORTVERSION=	1.2.0
