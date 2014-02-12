@@ -1,8 +1,8 @@
 # Created by: Mikolaj Golub <to.my.trociny@gmail.com>
-# $FreeBSD: devel/lmdbg/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	lmdbg
-PORTVERSION=	1.2.0
+PORTVERSION=	1.2.1
 CATEGORIES=	devel
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
@@ -33,5 +33,8 @@ do-build:
 do-install:
 	${SETENV} ${MKCMAKE_ENV} DESTDIR=${STAGEDIR} \
 		${MKCMAKE} -C ${WRKSRC} ${INSTALL_TARGET}
+
+regression-test: build
+	${SETENV} ${MKCMAKE_ENV} ${MKCMAKE} -C ${WRKSRC} test
 
 .include <bsd.port.mk>
