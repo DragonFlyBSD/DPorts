@@ -1,5 +1,5 @@
 # Created by: Manuel Rabade Garica <mig@mig-29.net>
-# $FreeBSD: sysutils/xfce4-wavelan-plugin/Makefile 341971 2014-01-31 10:07:24Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	xfce4-wavelan-plugin
 PORTVERSION=	0.5.11
