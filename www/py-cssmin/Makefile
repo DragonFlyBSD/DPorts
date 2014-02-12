@@ -1,4 +1,4 @@
-# $FreeBSD: www/py-cssmin/Makefile 341745 2014-01-29 15:04:46Z miwi $
+# $FreeBSD$
 
 PORTNAME=	cssmin
 PORTVERSION=	0.1.4
