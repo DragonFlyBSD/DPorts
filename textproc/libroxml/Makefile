@@ -1,5 +1,5 @@
 # Created by: Hung-Yi Chen <gaod@hychen.org>
-# $FreeBSD: textproc/libroxml/Makefile 328967 2013-10-01 16:49:54Z wg $
+# $FreeBSD$
 
 PORTNAME=	libroxml
 PORTVERSION=	2.2.2
