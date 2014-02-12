@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Log-Dispatch-Screen-Color/Makefile 338878 2014-01-06 13:41:40Z az $
+# $FreeBSD$
 
 PORTNAME=	Log-Dispatch-Screen-Color
 PORTVERSION=	0.04
