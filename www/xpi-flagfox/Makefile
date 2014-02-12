@@ -1,5 +1,5 @@
 # Created by: Oleg Sidorkin <osidorkin@gmail.com>
-# $FreeBSD: www/xpi-flagfox/Makefile 341203 2014-01-26 15:09:17Z miwi $
+# $FreeBSD$
 
 PORTNAME=	flagfox
 PORTVERSION=	4.2.15
