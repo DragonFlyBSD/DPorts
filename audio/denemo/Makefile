@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: audio/denemo/Makefile 337044 2013-12-20 17:23:44Z wg $
+# $FreeBSD$
 
 PORTNAME=	denemo
 PORTVERSION=	1.1.0
