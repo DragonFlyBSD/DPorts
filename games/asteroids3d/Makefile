@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/asteroids3d/Makefile 331343 2013-10-23 02:35:53Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	asteroids3d
 PORTVERSION=	0.5.1
