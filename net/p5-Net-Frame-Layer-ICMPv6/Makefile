@@ -1,5 +1,5 @@
 # Created by: Mars G Miro <spry@anarchy.in.the.ph>
-# $FreeBSD: net/p5-Net-Frame-Layer-ICMPv6/Makefile 338808 2014-01-05 17:43:05Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-Frame-Layer-ICMPv6
 PORTVERSION=	1.08
