@@ -1,5 +1,5 @@
 # Created by: Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
-# $FreeBSD: devel/pecl-uuid/Makefile 340830 2014-01-23 15:12:50Z miwi $
+# $FreeBSD$
 
 PORTNAME=	uuid
 PORTVERSION=	1.0.2
