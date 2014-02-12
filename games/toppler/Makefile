@@ -1,5 +1,5 @@
 # Created by: Dom Mitchell <dom@happygiraffe.net>
-# $FreeBSD: games/toppler/Makefile 331402 2013-10-23 18:18:43Z makc $
+# $FreeBSD$
 
 PORTNAME=	toppler
 PORTVERSION=	1.1.5
