@@ -1,5 +1,5 @@
 # Created by: rooneg@electricjellyfish.net
-# $FreeBSD: devel/subversion17/Makefile 342334 2014-02-02 16:40:08Z ohauer $
+# $FreeBSD$
 
 MAINTAINER=	ohauer@FreeBSD.org
 COMMENT=	Version control system
