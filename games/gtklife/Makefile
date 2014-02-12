@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: games/gtklife/Makefile 335812 2013-12-07 05:34:49Z eadler $
+# $FreeBSD$
 
 PORTNAME=	gtklife
 PORTVERSION=	5.1
