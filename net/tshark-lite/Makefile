@@ -1,5 +1,5 @@
 # Created by: Bill Fumerola <billf@mu.org>
-# $FreeBSD: net/tshark-lite/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 LITE=		yes
 PKGNAMESUFFIX=	-lite
