@@ -1,5 +1,5 @@
 # Created by: jhay
-# $FreeBSD: net/p5-Net-SMPP/Makefile 338810 2014-01-05 17:53:15Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-SMPP
 PORTVERSION=	1.19
