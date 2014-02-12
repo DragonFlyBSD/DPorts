@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: www/trac-iniadmin/Makefile 341185 2014-01-26 14:32:17Z miwi $
+# $FreeBSD$
 
 PORTNAME=	iniadmin
 PORTVERSION=	0.2.3915
