@@ -1,4 +1,4 @@
-# $FreeBSD: x11-fm/rox-mime-editor/Makefile 327780 2013-09-20 23:49:39Z bapt $
+# $FreeBSD$
 
 PORTNAME=	rox-mime-editor
 PORTVERSION=	0.6
