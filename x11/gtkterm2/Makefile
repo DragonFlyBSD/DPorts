@@ -1,5 +1,5 @@
 # Created by: michael johnson <ahze@ahze.net>
-# $FreeBSD: x11/gtkterm2/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	gtkterm2
 PORTVERSION=	0.2.3
@@ -22,6 +22,8 @@ PLIST_DIRS=	%%DATADIR%%/pixmaps %%DATADIR%%
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
