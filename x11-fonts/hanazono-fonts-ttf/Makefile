@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: x11-fonts/hanazono-fonts-ttf/Makefile 332811 2013-11-05 06:46:58Z tabthorpe $
+# $FreeBSD$
 
 PORTNAME=	hanazono-fonts-ttf
 PORTVERSION=	20120421
