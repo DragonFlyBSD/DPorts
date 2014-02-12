@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: misc/umodunpack/Makefile 336009 2013-12-09 17:00:20Z danilo $
+# $FreeBSD$
 
 PORTNAME=	umodunpack
 PORTVERSION=	0.4
