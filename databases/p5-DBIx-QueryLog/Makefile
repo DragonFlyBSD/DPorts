@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-DBIx-QueryLog/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	DBIx-QueryLog
 PORTVERSION=	0.37
@@ -20,9 +20,6 @@ TEST_DEPENDS=	\
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=	DBIx::QueryLog.3
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 501400
