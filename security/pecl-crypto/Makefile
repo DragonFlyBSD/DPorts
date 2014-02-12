@@ -1,5 +1,5 @@
 # Created by: Gasol Wu <gasol.wu@gmail.com>
-# $FreeBSD: security/pecl-crypto/Makefile 338894 2014-01-06 15:11:54Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	crypto
 PORTVERSION=	0.1.1
