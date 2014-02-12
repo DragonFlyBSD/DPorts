@@ -1,5 +1,5 @@
 # Created by: M.Indlekofer@gmx.de
-# $FreeBSD: converters/cmios9/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	cmios9
 PORTVERSION=	2.1
