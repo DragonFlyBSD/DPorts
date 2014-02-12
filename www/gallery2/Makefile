@@ -1,5 +1,5 @@
 # Created by: Alex Varju <freebsd-ports@varju.ca>
-# $FreeBSD: www/gallery2/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gallery2
 PORTVERSION=	2.3.2
