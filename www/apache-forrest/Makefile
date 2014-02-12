@@ -1,5 +1,5 @@
 # Created by: nivit@users.sourceforge.net
-# $FreeBSD: www/apache-forrest/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=		apache-forrest
 PORTVERSION=		0.8
