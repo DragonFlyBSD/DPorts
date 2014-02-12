@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: www/p5-CGI-Compress-Gzip/Makefile 341689 2014-01-29 07:58:24Z miwi $
+# $FreeBSD$
 
 PORTNAME=	CGI-Compress-Gzip
 PORTVERSION=	1.03
