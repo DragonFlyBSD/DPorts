@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: sysutils/zfs-stats/Makefile 337776 2013-12-27 18:33:31Z bapt $
+# $FreeBSD$
 
 PORTNAME=	zfs-stats
 PORTVERSION=	1.2.2
