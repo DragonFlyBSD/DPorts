@@ -1,5 +1,5 @@
 # Created by: nrg milk <bsdports@gmail.com>
-# $FreeBSD: x11-fonts/gnu-unifont-ttf/Makefile 341305 2014-01-26 23:15:37Z thierry $
+# $FreeBSD$
 
 PORTNAME=	gnu-unifont-ttf
 PORTVERSION=	20131020
