@@ -1,5 +1,5 @@
 # Created by: Lars Engels <lars.engels@0x20.net>
-# $FreeBSD: misc/tvbrowser/Makefile 331270 2013-10-22 13:56:27Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	tvbrowser
 PORTVERSION=	3.3.2
