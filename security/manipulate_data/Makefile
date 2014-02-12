@@ -1,5 +1,5 @@
 # Created by: Vaida Bogdan <vaida.bogdan@gmail.com>
-# $FreeBSD: security/manipulate_data/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	manipulate_data
 PORTVERSION=	1.3
