@@ -1,5 +1,5 @@
 # Created by: Zane C. Bowers
-# $FreeBSD: dns/ldnsm/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ldnsm
 PORTVERSION=	0.2.1
