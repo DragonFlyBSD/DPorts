@@ -1,5 +1,5 @@
 # Created by: Thomas Dreibholz <dreibh@iem.uni-due.de>
-# $FreeBSD: net/subnetcalc/Makefile 334601 2013-11-22 16:57:06Z jgh $
+# $FreeBSD$
 
 PORTNAME=	subnetcalc
 PORTVERSION=	2.2.0
