@@ -1,5 +1,5 @@
 # Created by: Krasimir Nachev krasi@it-sys.org
-# $FreeBSD: sysutils/realsync/Makefile 340070 2014-01-17 16:54:52Z danilo $
+# $FreeBSD$
 
 PORTNAME=	realsync
 PORTVERSION=	0.1
