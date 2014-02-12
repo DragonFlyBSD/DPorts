@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/libafterbase/Makefile 341671 2014-01-28 23:13:26Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libafterbase
 PORTVERSION=	0.92
