@@ -1,5 +1,5 @@
 # Created by: Alexander Botero-Lowry <alexbl@FreeBSD.org>
-# $FreeBSD: devel/py-magic/Makefile 341108 2014-01-25 21:23:07Z antoine $
+# $FreeBSD$
 
 PORTNAME=	magic
 PORTVERSION=	5.16
