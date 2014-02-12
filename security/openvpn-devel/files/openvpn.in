@@ -7,7 +7,7 @@
 # with multi-instance contribution from Denis Shaposhnikov, Gleb Kozyrev
 # and Vasil Dimov
 #
-# $FreeBSD: security/openvpn-devel/files/openvpn.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/security/openvpn-devel/files/openvpn.in 340872 2014-01-24 00:14:07Z mat $
 # 
 # This program is free software; you can redistribute it and/or modify it under
 # the terms of the GNU General Public License as published by the Free Software
