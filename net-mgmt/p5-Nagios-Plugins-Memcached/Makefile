@@ -1,4 +1,4 @@
-# $FreeBSD: net-mgmt/p5-Nagios-Plugins-Memcached/Makefile 332836 2013-11-05 12:02:05Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Nagios-Plugins-Memcached
 PORTVERSION=	0.02
