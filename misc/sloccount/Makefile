@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: misc/sloccount/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD$
 
 PORTNAME=	sloccount
 PORTVERSION=	2.26
