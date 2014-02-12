@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: devel/rubygem-activemessaging/Makefile 338387 2014-01-01 19:15:59Z swills $
+# $FreeBSD$
 
 PORTNAME=	activemessaging
 PORTVERSION=	0.12.1
