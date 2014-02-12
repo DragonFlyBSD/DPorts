@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: www/p5-HTML-GenToc/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	HTML-GenToc
 PORTVERSION=	3.20
