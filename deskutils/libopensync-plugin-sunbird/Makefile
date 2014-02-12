@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: deskutils/libopensync-plugin-sunbird/Makefile 342227 2014-02-02 00:17:35Z antoine $
+# $FreeBSD$
 
 PORTNAME=	libopensync-plugin-sunbird
 PORTVERSION=	0.22
