@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: sysutils/hploscripts/Makefile 331353 2013-10-23 07:14:05Z ehaupt $
+# $FreeBSD$
 
 PORTNAME=	hploscripts
 PORTVERSION=	3.0
