@@ -1,5 +1,5 @@
 # Created by: cjh@FreeBSD.org
-# $FreeBSD: misc/linm/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD$
 
 PORTNAME=	linm
 DISTVERSION=	0.8.1-1
