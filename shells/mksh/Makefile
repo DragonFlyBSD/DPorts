@@ -1,5 +1,5 @@
 # Created by: Andreas Kohn <andreas@syndrom23.de>
-# $FreeBSD: shells/mksh/Makefile 340583 2014-01-21 08:54:06Z ehaupt $
+# $FreeBSD$
 
 PORTNAME=	mksh
 DISTVERSION=	R49
@@ -13,6 +13,8 @@ MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	MirBSD Korn Shell
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
+
+OPTIONS_DEFINE=	EXAMPLES 
 
 .include <bsd.port.options.mk>
 
