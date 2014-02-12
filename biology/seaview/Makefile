@@ -1,5 +1,5 @@
 # Created by: frankch@waru.life.nthu.edu.tw
-# $FreeBSD: biology/seaview/Makefile 336171 2013-12-11 14:43:51Z bapt $
+# $FreeBSD$
 
 PORTNAME=	seaview
 PORTVERSION=	4.4.2
