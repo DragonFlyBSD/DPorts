@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Test-LoadAllModules/Makefile 338870 2014-01-06 12:43:03Z az $
+# $FreeBSD$
 
 PORTNAME=	Test-LoadAllModules
 PORTVERSION=	0.022
