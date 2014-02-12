@@ -1,5 +1,5 @@
 # Created by: Michael L. Hostbaek (mich@freebsdcluster.org)
-# $FreeBSD: www/p5-WWW-IMDb/Makefile 338763 2014-01-05 13:05:56Z az $
+# $FreeBSD$
 
 PORTNAME=	IMDb
 PORTVERSION=	0.01
