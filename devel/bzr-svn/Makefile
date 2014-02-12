@@ -1,5 +1,5 @@
 # Created by: Carlo Strub
-# $FreeBSD: devel/bzr-svn/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	bzr-svn
 PORTVERSION=	1.2.2
