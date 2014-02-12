@@ -1,5 +1,5 @@
 # Created by: Marc Fonvieille <blackend@FreeBSD.org>
-# $FreeBSD: cad/atlc/Makefile 341079 2014-01-25 19:32:14Z antoine $
+# $FreeBSD$
 
 PORTNAME=	atlc
 PORTVERSION=	4.6.1
