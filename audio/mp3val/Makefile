@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-# $FreeBSD: audio/mp3val/Makefile 334834 2013-11-25 11:33:38Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	mp3val
 PORTVERSION=	0.1.8
