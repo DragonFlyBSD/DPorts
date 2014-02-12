@@ -1,5 +1,5 @@
 # Created by: Jing-Tang Keith Jang <keith@FreeBSD.org>
-# $FreeBSD: lang/mmix/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	mmix
 PORTVERSION=	20110831
