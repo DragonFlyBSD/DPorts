@@ -1,5 +1,5 @@
 # Created by: camson@bilateral.com.au
-# $FreeBSD: biology/artemis/Makefile 340486 2014-01-20 23:06:48Z bapt $
+# $FreeBSD$
 
 PORTNAME=	artemis
 PORTVERSION=	9
