@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: sysutils/jailrc/files/jailrc.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/sysutils/jailrc/files/jailrc.in 340872 2014-01-24 00:14:07Z mat $
 #
 
 # PROVIDE: jail
