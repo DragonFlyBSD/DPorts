@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-FCGI-Client/Makefile 338788 2014-01-05 15:44:11Z az $
+# $FreeBSD$
 
 PORTNAME=	FCGI-Client
 PORTVERSION=	0.08
