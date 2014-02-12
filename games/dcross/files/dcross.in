@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: games/dcross/files/dcross.in 336720 2013-12-17 13:01:12Z nemysis $
+# $FreeBSD: head/games/dcross/files/dcross.in 336720 2013-12-17 13:01:12Z nemysis $
 #
 
 cd "%%DATADIR%%"

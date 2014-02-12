@@ -1,5 +1,5 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: games/dcross/Makefile 336720 2013-12-17 13:01:12Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	dcross
 PORTVERSION=	2.0
