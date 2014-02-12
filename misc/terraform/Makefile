@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: misc/terraform/Makefile 336100 2013-12-10 19:42:51Z danilo $
+# $FreeBSD$
 
 PORTNAME=	terraform
 PORTVERSION=	0.9.5
