@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Type-Tie/Makefile 329419 2013-10-05 06:06:08Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Type-Tie
 PORTVERSION=	0.006
