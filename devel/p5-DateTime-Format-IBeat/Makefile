@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: devel/p5-DateTime-Format-IBeat/Makefile 331933 2013-10-29 07:56:01Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	DateTime-Format-IBeat
 PORTVERSION=	0.16.1
