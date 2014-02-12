@@ -1,5 +1,5 @@
 # Created by: nicolai@catpipe.net
-# $FreeBSD: net-mgmt/snmp++/Makefile 341254 2014-01-26 18:22:35Z rm $
+# $FreeBSD$
 
 PORTNAME=	snmp++
 PORTVERSION=	3.3.0
