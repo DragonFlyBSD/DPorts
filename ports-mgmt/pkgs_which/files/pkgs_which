@@ -433,7 +433,7 @@ L<pkg_info>(8), L<portmaster>(8), L<portupgrade>(8), L<pkg_which>(8)
 
 The current CVS Version tag is:
 
- $FreeBSD: ports-mgmt/pkgs_which/files/pkgs_which 335075 2013-11-28 01:09:09Z mandree $
+ $FreeBSD: head/ports-mgmt/pkgs_which/files/pkgs_which 335075 2013-11-28 01:09:09Z mandree $
 
 =head1 AUTHORS
 

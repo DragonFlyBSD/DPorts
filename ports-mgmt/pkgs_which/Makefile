@@ -1,5 +1,5 @@
 # Created by: Matthias Andree <mandree@FreeBSD.org>
-# $FreeBSD: ports-mgmt/pkgs_which/Makefile 335075 2013-11-28 01:09:09Z mandree $
+# $FreeBSD$
 
 PORTNAME=	pkgs_which
 PORTVERSION=	0.4.0
@@ -15,6 +15,8 @@ LICENSE=	GPLv3
 USES=		perl5
 NO_BUILD=	yes
 PLIST_FILES=	bin/${PORTNAME}
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
