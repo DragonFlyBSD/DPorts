@@ -1,5 +1,5 @@
 # Created by: Christopher Boumenot <boumenot@gmail.com>
-# $FreeBSD: devel/p5-Algorithm-Bucketizer/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Algorithm-Bucketizer
 PORTVERSION=	0.13
@@ -20,8 +20,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		bucketize.1
-MAN3=		Algorithm::Bucketizer.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
