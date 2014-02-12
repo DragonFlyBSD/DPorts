@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: x11-wm/oroborus/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	oroborus
 PORTVERSION=	2.0.18
@@ -15,11 +15,7 @@ COMMENT=	A small and simple GNOME-compatible window manager
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 USE_XORG=	xpm
-USE_GMAKE=	yes
+USES=		gmake
 GNU_CONFIGURE=	yes
 
-MAN1=		oroborus.1
-MAN5=		oroborusrc.5
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
