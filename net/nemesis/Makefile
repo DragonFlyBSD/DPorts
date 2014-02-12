@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@NUXI.com)
-# $FreeBSD: net/nemesis/Makefile 341915 2014-01-31 06:48:18Z miwi $
+# $FreeBSD$
 
 PORTNAME=	nemesis
 PORTVERSION=	1.4
