@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-POE-Component-IKC/Makefile 333431 2013-11-10 19:48:17Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	POE-Component-IKC
 PORTVERSION=	0.2305
