@@ -1,4 +1,4 @@
-# $FreeBSD: audio/libcoverart/Makefile 329872 2013-10-09 07:04:18Z jhale $
+# $FreeBSD$
 
 PORTNAME=	libcoverart
 PORTVERSION=	1.0.0
