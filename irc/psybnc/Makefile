@@ -1,5 +1,5 @@
 # Created by: Mina Naguib <webmaster@topfx.com>
-# $FreeBSD: irc/psybnc/Makefile 335138 2013-11-29 02:53:49Z eadler $
+# $FreeBSD$
 
 PORTNAME=	psybnc
 DISTVERSION=	2.3.2-9
