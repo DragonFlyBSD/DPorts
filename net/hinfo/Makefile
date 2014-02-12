@@ -1,5 +1,5 @@
 # Created by: Mark Linimon <linimon@lonesome.com>
-# $FreeBSD: net/hinfo/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	hinfo
 PORTVERSION=	1.0
