@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Log-Any-Adapter-Callback/Makefile 333878 2013-11-15 15:46:57Z tj $
+# $FreeBSD$
 
 PORTNAME=	Log-Any-Adapter-Callback
 PORTVERSION=	0.07
