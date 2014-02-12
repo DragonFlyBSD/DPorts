@@ -1,5 +1,5 @@
 # Created by: db
-# $FreeBSD: comms/locator/Makefile 338058 2013-12-30 01:20:55Z db $
+# $FreeBSD$
 
 PORTNAME=	locator
 PORTVERSION=	0.1
