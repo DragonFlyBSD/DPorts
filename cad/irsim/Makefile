@@ -1,5 +1,5 @@
 # Created by: swallace
-# $FreeBSD: cad/irsim/Makefile 328255 2013-09-25 05:28:35Z danilo $
+# $FreeBSD$
 
 PORTNAME=	irsim
 PORTVERSION=	9.7.82
