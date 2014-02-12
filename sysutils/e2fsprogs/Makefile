@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: head/sysutils/e2fsprogs/Makefile 338962 2014-01-07 00:00:23Z mandree $
+# $FreeBSD$
 
 PORTNAME=	e2fsprogs
 PORTVERSION=	1.42.9
