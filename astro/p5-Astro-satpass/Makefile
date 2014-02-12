@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: astro/p5-Astro-satpass/Makefile 338200 2013-12-31 00:59:08Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Astro-satpass
 PORTVERSION=	0.060
