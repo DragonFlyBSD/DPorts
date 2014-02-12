@@ -1,5 +1,5 @@
 # Created by: Dominic Marks <dom@goodforbusiness.co.uk>
-# $FreeBSD: www/mod_proxy_xml/Makefile 336589 2013-12-15 22:11:20Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	mod_proxy_xml
 PORTVERSION=	0.1
