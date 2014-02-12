@@ -1,5 +1,5 @@
 # Created by: Lev Serebryakov <lev@FreeBSD.org>
-# $FreeBSD: graphics/nip2/Makefile 336038 2013-12-10 01:26:12Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	nip2
 PORTVERSION=	7.26.3
