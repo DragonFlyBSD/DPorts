@@ -1,5 +1,5 @@
 # Created by: Edson Brandi <ebrandi.home@uol.com.br> 
-# $FreeBSD: sysutils/livecd/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	livecd
 PORTVERSION=	1.2.4b
