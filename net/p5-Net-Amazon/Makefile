@@ -1,5 +1,5 @@
 # Created by: clsung@dragon2.net
-# $FreeBSD: net/p5-Net-Amazon/Makefile 332868 2013-11-05 16:42:55Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Net-Amazon
 PORTVERSION=	0.62
