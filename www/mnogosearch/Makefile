@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: www/mnogosearch/Makefile 337160 2013-12-21 19:47:22Z crees $
+# $FreeBSD$
 
 PORTNAME=	mnogosearch
 PORTVERSION=	3.4.0
