@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: security/pbc/Makefile 342017 2014-01-31 16:25:56Z miwi $
+# $FreeBSD$
 
 PORTNAME=	pbc
 PORTVERSION=	0.5.14
