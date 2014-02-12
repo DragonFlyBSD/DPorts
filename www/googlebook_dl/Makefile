@@ -1,4 +1,4 @@
-# $FreeBSD: www/googlebook_dl/Makefile 336102 2013-12-10 19:47:42Z bdrewery $
+# $FreeBSD$
 
 PORTNAME=	googlebook_dl
 PORTVERSION=	20120817
