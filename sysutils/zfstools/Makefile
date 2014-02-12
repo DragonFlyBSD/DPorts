@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/zfstools/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	zfstools
 PORTVERSION=	0.3.1
@@ -21,6 +21,8 @@ USE_RUBY=	yes
 NO_BUILD=	yes
 
 SUB_FILES=	pkg-message
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
