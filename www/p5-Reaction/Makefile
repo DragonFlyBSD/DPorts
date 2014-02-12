@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/p5-Reaction/Makefile 333117 2013-11-07 15:22:45Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Reaction
 PORTVERSION=	0.002005
