@@ -1,5 +1,5 @@
 # Created by: Zhen REN <bg1tpt@gmail.com>
-# $FreeBSD: www/phpbb3/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	phpbb
 PORTVERSION=	3.0.11
