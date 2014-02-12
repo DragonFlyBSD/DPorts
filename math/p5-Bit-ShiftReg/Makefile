@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: math/p5-Bit-ShiftReg/Makefile 329378 2013-10-04 20:22:22Z az $
+# $FreeBSD$
 
 PORTNAME=	Bit-ShiftReg
 PORTVERSION=	2.0
