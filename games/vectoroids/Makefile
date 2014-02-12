@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: games/vectoroids/Makefile 337234 2013-12-23 10:01:16Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	vectoroids
 PORTVERSION=	1.1.0
