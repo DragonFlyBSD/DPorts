@@ -1,5 +1,5 @@
 # Created by: Russell A. Jackson <rjackson@cserv62.csub.edu>
-# $FreeBSD: net-mgmt/sdig/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	sdig
 PORTVERSION=	0.45
