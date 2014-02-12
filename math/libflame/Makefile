@@ -1,5 +1,5 @@
 # Created by: bf@FreeBSD.org
-# $FreeBSD: math/libflame/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	libflame
 DISTVERSION=	r7421
