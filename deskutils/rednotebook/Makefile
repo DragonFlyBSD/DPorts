@@ -1,5 +1,5 @@
 # Created by: Hon-Yu Lawrence Cheung (cheunghonyu@gmail.com)
-# $FreeBSD: deskutils/rednotebook/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	rednotebook
 PORTVERSION=	1.8.0
