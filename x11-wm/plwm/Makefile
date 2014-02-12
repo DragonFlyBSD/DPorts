@@ -1,5 +1,5 @@
 # Created by: Mike Meyer <mwm@mired.org>
-# $FreeBSD: x11-wm/plwm/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	plwm
 PORTVERSION=	2.5
