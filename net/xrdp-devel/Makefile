@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: net/xrdp-devel/Makefile 341067 2014-01-25 17:42:42Z swills $
+# $FreeBSD$
 
 PORTNAME=	xrdp
 PORTVERSION=	0.7.0.b20130912
