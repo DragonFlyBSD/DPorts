@@ -1,9 +1,9 @@
 # Created by: Matthias Andree <matthias.andree@gmx.de>
-# $FreeBSD: audio/squash/Makefile 336430 2013-12-14 09:52:41Z mandree $
+# $FreeBSD$
 
 PORTNAME=		squash
 PORTVERSION=		1.0
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SAVANNAH}
 MASTER_SITE_SUBDIR=	${PORTNAME}
@@ -23,6 +23,8 @@ USE_BZIP2=	yes
 USES=		gmake
 USE_RUBY=	yes
 MAKE_ARGS=	CC=${CC}
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
