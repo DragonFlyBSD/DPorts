@@ -1,5 +1,5 @@
 # Created by: Jason Helfman <jgh@FreeBSD.org>
-# $FreeBSD: textproc/lucene4/Makefile 342349 2014-02-02 17:45:19Z mva $
+# $FreeBSD$
 
 PORTNAME=	lucene
 PORTVERSION=	4.6.1
