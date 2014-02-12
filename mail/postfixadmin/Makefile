@@ -1,5 +1,5 @@
 # Created by: Rob Evers <rob@debank.tv>
-# $FreeBSD: mail/postfixadmin/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	postfixadmin
 PORTVERSION=	2.3.6
@@ -25,6 +25,9 @@ MYSQLI_DESC=	MySQL 4.1+ back-end (use mysqli PHP extension)
 OPTIONS_DEFAULT=	MYSQL
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 USE_PHP=	pcre session mbstring spl xmlrpc
