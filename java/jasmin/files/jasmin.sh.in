@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: java/jasmin/files/jasmin.sh.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/java/jasmin/files/jasmin.sh.in 340872 2014-01-24 00:14:07Z mat $
 
 JAVA_VERSION="%%JAVA_VERSION%%" \
 	exec "%%LOCALBASE%%/bin/java" -jar "%%JAVAJARDIR%%/jasmin.jar" "$@"
