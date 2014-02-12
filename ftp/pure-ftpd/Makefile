@@ -1,5 +1,5 @@
 # Created by: Frank DENIS
-# $FreeBSD: ftp/pure-ftpd/Makefile 335344 2013-11-30 20:03:06Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	pure-ftpd
 PORTVERSION=	1.0.36

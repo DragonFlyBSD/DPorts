@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: ftp/pure-ftpd/files/pure-ftpd.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/ftp/pure-ftpd/files/pure-ftpd.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: pureftpd
 # REQUIRE: NETWORKING SERVERS
