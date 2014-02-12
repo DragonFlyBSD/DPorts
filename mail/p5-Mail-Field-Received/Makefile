@@ -1,5 +1,5 @@
 # Created by: Andrea Venturoli <freebsd@netfence.it>
-# $FreeBSD: mail/p5-Mail-Field-Received/Makefile 338799 2014-01-05 16:55:04Z az $
+# $FreeBSD$
 
 PORTNAME=	Mail-Field-Received
 PORTVERSION=	0.26
