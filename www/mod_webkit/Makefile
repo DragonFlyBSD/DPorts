@@ -1,5 +1,5 @@
 # Created by: Choe, Cheng-Dae
-# $FreeBSD: www/mod_webkit/Makefile 336555 2013-12-15 16:45:38Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	mod_webkit
 PORTVERSION=	1.1.1
