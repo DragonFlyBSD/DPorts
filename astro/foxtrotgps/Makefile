@@ -1,5 +1,5 @@
 # Created by: crwhipp@gmail.com
-# $FreeBSD: astro/foxtrotgps/Makefile 341893 2014-01-30 22:09:03Z antoine $
+# $FreeBSD$
 
 PORTNAME=	foxtrotgps
 PORTVERSION=	1.1.1
