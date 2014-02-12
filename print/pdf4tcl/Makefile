@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: print/pdf4tcl/Makefile 332960 2013-11-06 09:31:51Z gahr $
+# $FreeBSD$
 
 PORTNAME=	pdf4tcl
 PORTVERSION=	0.8
