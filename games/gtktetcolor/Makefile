@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: games/gtktetcolor/Makefile 334621 2013-11-22 22:12:39Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	gtktetcolor
 DISTVERSION=	0.6.5pre3
