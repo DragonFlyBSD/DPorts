@@ -1,4 +1,4 @@
-# $FreeBSD: net-mgmt/irrtoolset/Makefile 339011 2014-01-07 16:10:48Z jgh $
+# $FreeBSD$
 
 PORTNAME=	irrtoolset
 PORTVERSION=	5.0.1
