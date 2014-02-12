@@ -1,5 +1,5 @@
 # Created by: lofi@FreeBSD.org
-# $FreeBSD: textproc/wv2/Makefile 338995 2014-01-07 10:28:35Z fluffy $
+# $FreeBSD$
 
 PORTNAME=	wv2
 PORTVERSION=	0.4.2
