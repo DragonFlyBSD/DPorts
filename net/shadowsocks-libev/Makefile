@@ -1,5 +1,5 @@
 # Created by: Xiaoding Liu <xiaoding+freebsd@xiaoding.org>
-# $FreeBSD: net/shadowsocks-libev/Makefile 335066 2013-11-27 22:04:32Z delphij $
+# $FreeBSD$
 
 PORTNAME=	shadowsocks-libev
 PORTVERSION=	1.4.0
