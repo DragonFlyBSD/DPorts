@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: devel/p5-FSA-Rules/Makefile 330940 2013-10-19 21:37:19Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	FSA-Rules
 PORTVERSION=	0.32
