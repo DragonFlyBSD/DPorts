@@ -1,5 +1,5 @@
 # Created by: Dan Caescu <daniel at freebsd.ro>
-# $FreeBSD: net/traff/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	traff
 PORTVERSION=	0.7
