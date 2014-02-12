@@ -1,5 +1,5 @@
 # Created by: Kay Abendroth <kay.abendroth@raxion.net>
-# $FreeBSD: mail/p5-Email-Reply/Makefile 341169 2014-01-26 12:34:45Z antoine $
+# $FreeBSD$
 
 PORTNAME=	Email-Reply
 PORTVERSION=	1.202
