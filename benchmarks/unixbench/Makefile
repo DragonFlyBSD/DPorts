@@ -1,5 +1,5 @@
 # Created by: se
-# $FreeBSD: benchmarks/unixbench/Makefile 331446 2013-10-23 23:05:52Z eadler $
+# $FreeBSD$
 
 PORTNAME=	unixbench
 PORTVERSION=	4.1.0
