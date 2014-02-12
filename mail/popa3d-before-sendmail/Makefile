@@ -1,4 +1,4 @@
-# $FreeBSD: mail/popa3d-before-sendmail/Makefile 342300 2014-02-02 14:33:37Z miwi $
+# $FreeBSD$
 
 CATEGORIES=	mail
 
