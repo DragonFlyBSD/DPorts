@@ -1,4 +1,4 @@
-# $FreeBSD: security/scanhill/Makefile 332317 2013-10-31 23:44:49Z garga $
+# $FreeBSD$
 
 PORTNAME=	scanhill
 DISTVERSION=	0.5-p1
