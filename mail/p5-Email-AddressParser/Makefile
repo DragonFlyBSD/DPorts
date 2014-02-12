@@ -1,5 +1,5 @@
 # Created by: dliakh
-# $FreeBSD: mail/p5-Email-AddressParser/Makefile 338797 2014-01-05 16:33:44Z az $
+# $FreeBSD$
 
 PORTNAME=	Email-AddressParser
 PORTVERSION=	0.04
