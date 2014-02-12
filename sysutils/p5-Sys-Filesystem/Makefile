@@ -1,5 +1,5 @@
 # Created by: Jim Pirzyk <pirzyk@FreeBSD.org>
-# $FreeBSD: sysutils/p5-Sys-Filesystem/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	Sys-Filesystem
 PORTVERSION=	1.401
@@ -21,22 +21,8 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		Sys::Filesystem::Mswin32.3 \
-		Sys::Filesystem.3 \
-		Sys::Filesystem::Linux.3 \
-		Sys::Filesystem::Darwin.3 \
-		Sys::Filesystem::Cygwin.3 \
-		Sys::Filesystem::Aix.3 \
-		Sys::Filesystem::Unix.3 \
-		Sys::Filesystem::Dummy.3 \
-		Sys::Filesystem::Freebsd.3 \
-		Sys::Filesystem::Solaris.3 \
-		Sys::Filesystem::Hpux.3 \
-		Sys::Filesystem::Netbsd.3
-
 CONFIGURE_ENV+=	PATH_FSTAB=${WRKDIR}/fstab.phony
 
-NO_STAGE=	yes
 pre-configure:
 	@${TOUCH} ${WRKDIR}/fstab.phony
 
