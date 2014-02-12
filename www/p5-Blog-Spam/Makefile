@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/p5-Blog-Spam/Makefile 341690 2014-01-29 07:58:41Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Blog-Spam
 PORTVERSION=	1.0.2
