@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-# $FreeBSD: audio/mp3-archive-tools/Makefile 331313 2013-10-22 20:11:41Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	mp3-archive-tools
 PORTVERSION=	0.9
