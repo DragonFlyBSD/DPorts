@@ -1,4 +1,4 @@
-# $FreeBSD: print/splix/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD$
 
 PORTNAME=	splix
 PORTVERSION=	2.0.0
