@@ -1,5 +1,5 @@
 # Created by: Ilja Dejs <ilja.dejs@gmail.com>
-# $FreeBSD: net-im/imspector/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD$
 
 PORTNAME=	imspector
 PORTVERSION=	20111108
