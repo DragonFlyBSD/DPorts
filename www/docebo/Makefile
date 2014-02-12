@@ -1,5 +1,5 @@
 # Created by: Wen heping <wenheping@gmail.com>
-# $FreeBSD: www/docebo/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	docebo
 PORTVERSION=	4.0.2
