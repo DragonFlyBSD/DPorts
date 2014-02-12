@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: chinese/fcitx-sunpinyin/Makefile 336173 2013-12-11 14:58:29Z bapt $
+# $FreeBSD$
 
 PORTNAME=	fcitx-sunpinyin
 PORTVERSION=	0.3.9
