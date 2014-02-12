@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/password-store/Makefile 340549 2014-01-21 05:12:40Z milki $
+# $FreeBSD$
 
 PORTNAME=	password-store
 PORTVERSION=	1.4.2
