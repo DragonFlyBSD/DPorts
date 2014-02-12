@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-cucumber/Makefile 338484 2014-01-02 20:06:07Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	cucumber
 PORTVERSION=	1.3.10
