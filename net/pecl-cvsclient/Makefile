@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: net/pecl-cvsclient/Makefile 340828 2014-01-23 14:32:34Z miwi $
+# $FreeBSD$
 
 PORTNAME=	cvsclient
 PORTVERSION=	0.2
