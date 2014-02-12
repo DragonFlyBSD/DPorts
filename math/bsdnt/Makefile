@@ -1,4 +1,4 @@
-# $FreeBSD: math/bsdnt/Makefile 338583 2014-01-03 21:37:23Z swills $
+# $FreeBSD$
 
 PORTNAME=	bsdnt
 PORTVERSION=	1.0
