@@ -1,5 +1,5 @@
 # Created by: Janik Galasso <janik@hikarihq.com>
-# $FreeBSD: audio/mangler/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mangler
 PORTVERSION=	1.2.3
