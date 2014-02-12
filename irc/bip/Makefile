@@ -1,5 +1,5 @@
 # Created by: Chess Griffin <chess@chessgriffin.com>
-# $FreeBSD: irc/bip/Makefile 342339 2014-02-02 17:02:36Z swills $
+# $FreeBSD$
 
 PORTNAME=	bip
 PORTVERSION=	0.8.8
