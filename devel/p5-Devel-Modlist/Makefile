@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: devel/p5-Devel-Modlist/Makefile 331933 2013-10-29 07:56:01Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Devel-Modlist
 PORTVERSION=	0.801
