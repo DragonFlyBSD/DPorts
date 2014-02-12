@@ -1,5 +1,5 @@
 # Created by: Nosov Artem <chip-set@mail.ru>
-# $FreeBSD: sysutils/zisofs-tools/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	zisofs-tools
 PORTVERSION=	1.0.8
