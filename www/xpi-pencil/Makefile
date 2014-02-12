@@ -1,5 +1,5 @@
 # Created by: Ashish Shukla <wahjava@gmail.com>
-# $FreeBSD: www/xpi-pencil/Makefile 341213 2014-01-26 15:12:42Z miwi $
+# $FreeBSD$
 
 PORTNAME=	pencil
 DISTVERSION=	2.0-3
