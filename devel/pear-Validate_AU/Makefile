@@ -1,5 +1,5 @@
 # Created by: Ditesh Shashikant Gathani <ditesh@gathani.org>
-# $FreeBSD: devel/pear-Validate_AU/Makefile 333263 2013-11-08 21:41:53Z antoine $
+# $FreeBSD$
 
 PORTNAME=	Validate_AU
 PORTVERSION=	0.1.4
