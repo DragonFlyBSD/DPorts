@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: finance/p5-Finance-QuoteHist/Makefile 329898 2013-10-09 13:23:57Z culot $
+# $FreeBSD$
 
 PORTNAME=	Finance-QuoteHist
 PORTVERSION=	1.20
