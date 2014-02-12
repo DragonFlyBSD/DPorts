@@ -1,5 +1,5 @@
 # Created by: Oliver Eikemeier
-# $FreeBSD: mail/swaks/Makefile 340457 2014-01-20 19:39:18Z beat $
+# $FreeBSD$
 
 PORTNAME=	swaks
 PORTVERSION=	20130209.0
