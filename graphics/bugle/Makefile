@@ -1,5 +1,5 @@
 # Created by: Erik Greenwald <erik@smluc.org>
-# $FreeBSD: graphics/bugle/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	bugle
 PORTVERSION=	0.0.20091026
