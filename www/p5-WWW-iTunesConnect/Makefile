@@ -1,5 +1,5 @@
 # Created by: Brandon Fosdick <bfoz@bfoz.net>
-# $FreeBSD: www/p5-WWW-iTunesConnect/Makefile 341687 2014-01-29 07:57:45Z miwi $
+# $FreeBSD$
 
 PORTNAME=	WWW-iTunesConnect
 PORTVERSION=	1.16
