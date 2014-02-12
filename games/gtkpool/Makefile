@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: games/gtkpool/Makefile 333050 2013-11-07 01:59:58Z danilo $
+# $FreeBSD$
 
 PORTNAME=	gtkpool
 PORTVERSION=	0.5.0
