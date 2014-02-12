@@ -1,5 +1,5 @@
 # Created by: krion
-# $FreeBSD: x11/xtermcontrol/Makefile 339339 2014-01-10 09:32:14Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	xtermcontrol
 PORTVERSION=	2.10
