@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: www/squid32/pkg-deinstall 317862 2013-05-11 10:59:52Z tmseck $
+# $FreeBSD: head/www/squid32/pkg-deinstall 317862 2013-05-11 10:59:52Z tmseck $
 #
 
 PATH=/bin:/usr/bin:/usr/sbin

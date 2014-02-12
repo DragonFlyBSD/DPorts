@@ -1,5 +1,5 @@
 # Created by: Thomas-Martin Seck <tmseck@FreeBSD.org>
-# $FreeBSD: www/squid32/Makefile 335658 2013-12-05 11:10:49Z mat $
+# $FreeBSD$
 
 PORTNAME=	squid
 PORTVERSION=	3.2.${SQUID_STABLE_VER}
