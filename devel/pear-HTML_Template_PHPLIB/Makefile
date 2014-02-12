@@ -1,5 +1,5 @@
 # Created by: Alex Miller (<asm@asm.kiev.ua>)
-# $FreeBSD: devel/pear-HTML_Template_PHPLIB/Makefile 333263 2013-11-08 21:41:53Z antoine $
+# $FreeBSD$
 
 PORTNAME=	HTML_Template_PHPLIB
 PORTVERSION=	1.5.2
