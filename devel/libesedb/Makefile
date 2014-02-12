@@ -1,5 +1,5 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: devel/libesedb/Makefile 334650 2013-11-23 09:21:43Z antoine $
+# $FreeBSD$
 
 PORTNAME=	libesedb
 DISTVERSION=	alpha-20120102
