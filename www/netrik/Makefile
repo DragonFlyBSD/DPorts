@@ -1,5 +1,5 @@
 # Created by: Alan Eldridge <alane@FreeBSD.org>
-# $FreeBSD: www/netrik/Makefile 341562 2014-01-28 13:45:46Z miwi $
+# $FreeBSD$
 
 PORTNAME=	netrik
 PORTVERSION=	1.16.1
