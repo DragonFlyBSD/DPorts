@@ -1,4 +1,4 @@
-# $FreeBSD: www/fswiki/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	fswiki
 PORTVERSION=	3.6.2
