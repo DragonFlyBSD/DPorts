@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: databases/libgda4-reference/Makefile 336013 2013-12-09 18:41:16Z antoine $
+# $FreeBSD$
 
 PORTREVISION=	0
 
