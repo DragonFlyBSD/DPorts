@@ -1,5 +1,5 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: net/gtknetcat/Makefile 329644 2013-10-06 23:52:26Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	gtknetcat
 PORTVERSION=	0.1
