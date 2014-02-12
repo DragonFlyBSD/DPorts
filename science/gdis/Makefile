@@ -1,4 +1,4 @@
-# $FreeBSD: science/gdis/Makefile 329747 2013-10-07 23:40:23Z marino $
+# $FreeBSD$
 
 PORTNAME=	gdis
 PORTVERSION=	0.90
