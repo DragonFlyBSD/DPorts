@@ -1,5 +1,5 @@
 # Created by: Jeremy Lea <reg@shale.csir.co.za>
-# $FreeBSD: games/gnomechess/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	gnomechess
 PORTVERSION=	3.10.2
@@ -28,6 +28,8 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 MAKE_ARGS=	XML_I18N_UPDATE="${TRUE}" XML_I18N_EXTRACT="${TRUE}"
 DATADIR=	${PREFIX}/share/gnome-chess
+
+OPTIONS_DEFINE=	NLS 
 
 .include <bsd.port.options.mk>
 
