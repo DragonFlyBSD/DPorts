@@ -1,5 +1,5 @@
 # Created by: Sakai Hiroaki <sakai@seki.ee.kagu.sut.ac.jp>
-# $FreeBSD: games/xfireworks/Makefile 333690 2013-11-13 14:27:33Z danilo $
+# $FreeBSD$
 
 PORTNAME=	xfireworks
 PORTVERSION=	1.4
