@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: games/pachi/pkg-install 340719 2014-01-22 15:52:06Z mat $
+# $FreeBSD: head/games/pachi/pkg-install 340719 2014-01-22 15:52:06Z mat $
 
 SCOREDIR="/var/games/pachi"
 SCOREFILE="/var/games/pachi/scores.dat"

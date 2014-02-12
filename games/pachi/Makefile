@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/pachi/Makefile 332147 2013-10-30 16:22:48Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	pachi
 PORTVERSION=	1.0
