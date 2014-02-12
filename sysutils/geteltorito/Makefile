@@ -1,5 +1,5 @@
 # Created by: Valerio Daelli <valerio.daelli@gmail.com>
-# $FreeBSD: sysutils/geteltorito/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	geteltorito
 PORTVERSION=	1.0
