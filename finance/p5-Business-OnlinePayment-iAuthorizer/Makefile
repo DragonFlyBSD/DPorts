@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: finance/p5-Business-OnlinePayment-iAuthorizer/Makefile 332619 2013-11-03 15:38:39Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Business-OnlinePayment-iAuthorizer
 PORTVERSION=	0.2.1
