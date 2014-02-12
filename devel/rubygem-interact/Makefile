@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-interact/Makefile 332038 2013-10-30 02:36:45Z swills $
+# $FreeBSD$
 
 PORTNAME=	interact
 PORTVERSION=	0.5.2
