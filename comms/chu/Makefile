@@ -1,5 +1,5 @@
 # Created by: Diane Bruce <db@db.net>
-# $FreeBSD: comms/chu/Makefile 337882 2013-12-28 17:13:30Z bapt $
+# $FreeBSD$
 
 PORTNAME=	chu
 PORTVERSION=	0.1.29
