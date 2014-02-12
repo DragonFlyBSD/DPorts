@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: www/p5-CGI-Cache/Makefile 332617 2013-11-03 15:16:25Z az $
+# $FreeBSD$
 
 PORTNAME=	CGI-Cache
 PORTVERSION=	1.42.01
