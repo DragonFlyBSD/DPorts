@@ -1,5 +1,5 @@
 # Created by: Ada T Lim <ada@not-enough.bandwidth.org>
-# $FreeBSD: chinese/hztty/Makefile 329142 2013-10-03 06:40:58Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	hztty
 PORTVERSION=	2.0
