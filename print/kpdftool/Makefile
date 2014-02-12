@@ -1,5 +1,5 @@
 # Created by: Yuan, Jue <yuanjue@yuanjue.net>
-# $FreeBSD: print/kpdftool/Makefile 334497 2013-11-21 15:41:06Z makc $
+# $FreeBSD$
 
 PORTNAME=	kpdftool
 PORTVERSION=	0.23.1
