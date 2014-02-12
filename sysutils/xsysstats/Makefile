@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/xsysstats/Makefile 334050 2013-11-17 02:58:44Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	xsysstats
 PORTVERSION=	1.51
