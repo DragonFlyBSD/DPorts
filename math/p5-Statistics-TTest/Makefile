@@ -1,5 +1,5 @@
 # Created by: dawe <daweonline@gmail.com>
-# $FreeBSD: math/p5-Statistics-TTest/Makefile 332813 2013-11-05 06:56:18Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Statistics-TTest
 PORTVERSION=	1.1.0
