@@ -1,4 +1,4 @@
-# $FreeBSD: math/algotutor/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD$
 
 PORTNAME=	algotutor
 PORTVERSION=	0.8.6
