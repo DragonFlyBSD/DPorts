@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: net-mgmt/nagiosql/files/pkg-install.in 313373 2013-03-03 19:56:48Z ohauer $
+# $FreeBSD: head/net-mgmt/nagiosql/files/pkg-install.in 313373 2013-03-03 19:56:48Z ohauer $
 
 WWWOWN=%%WWWOWN%%
 WWWGRP=%%WWWGRP%%

@@ -1,5 +1,5 @@
 # Created by: Chris St Denis <chris@smartt.com>
-# $FreeBSD: net-mgmt/nagiosql/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	nagiosql
 PORTVERSION=	3.2.0
