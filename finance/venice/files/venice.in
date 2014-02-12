@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: finance/venice/files/venice.in 329485 2013-10-05 17:58:04Z nemysis $
+# $FreeBSD: head/finance/venice/files/venice.in 329485 2013-10-05 17:58:04Z nemysis $
 #
 
 export JAVA_VERSION="%%JAVA_VERSION%%"

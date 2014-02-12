@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: finance/venice/Makefile 329485 2013-10-05 17:58:04Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	venice
 DISTVERSION=	0.751beta
