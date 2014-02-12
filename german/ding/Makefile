@@ -1,5 +1,5 @@
 # Created by: n@nectar.com
-# $FreeBSD: german/ding/Makefile 327732 2013-09-20 18:30:00Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ding
 PORTVERSION=	1.7
