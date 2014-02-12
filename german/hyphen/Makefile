@@ -1,4 +1,4 @@
-# $FreeBSD: german/hyphen/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	hyphen
 PORTVERSION=	2007.02.17
