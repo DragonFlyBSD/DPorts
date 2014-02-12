@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/nomacs/Makefile 341289 2014-01-26 21:20:03Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	nomacs
 PORTVERSION=	1.6.2
