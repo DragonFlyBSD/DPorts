@@ -1,5 +1,5 @@
 # Created by: Meno Abels <meno.abels@adviser.com>
-# $FreeBSD: textproc/libtext-wrapi18n-perl/Makefile 341765 2014-01-29 17:46:33Z az $
+# $FreeBSD$
 
 PORTNAME=	libtext-wrapi18n-perl
 PORTVERSION=	0.06
