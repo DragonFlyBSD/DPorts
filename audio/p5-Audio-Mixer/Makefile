@@ -1,5 +1,5 @@
 # Created by: Dennis Herrmann <adox@mcx2.org>
-# $FreeBSD: audio/p5-Audio-Mixer/Makefile 341813 2014-01-30 08:45:50Z az $
+# $FreeBSD$
 
 PORTNAME=	Audio-Mixer
 PORTVERSION=	0.7
