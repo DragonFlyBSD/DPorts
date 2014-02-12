@@ -1,5 +1,5 @@
 # Created by: Amir Husaini <amir.husaini@bsdit.com>
-# $FreeBSD: www/zikula/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	zikula
 PORTVERSION=	1.3.5
