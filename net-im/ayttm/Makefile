@@ -1,5 +1,5 @@
 # Created by: Jim Mock <jim@FreeBSD.org>
-# $FreeBSD: net-im/ayttm/Makefile 338590 2014-01-03 22:59:56Z danilo $
+# $FreeBSD$
 
 PORTNAME=	ayttm
 PORTVERSION=	0.6.3
