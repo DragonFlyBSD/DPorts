@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-slim/Makefile 335496 2013-12-02 14:28:26Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	slim
 PORTVERSION=	2.0.2
