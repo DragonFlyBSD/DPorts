@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Class-StateMachine/Makefile 331856 2013-10-28 13:46:25Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Class-StateMachine
 PORTVERSION=	0.23
