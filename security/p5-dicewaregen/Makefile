@@ -1,5 +1,5 @@
 # Created by: Aldis Berjoza <aldis@bsdroot.lv>
-# $FreeBSD: security/p5-dicewaregen/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	dicewaregen
 PORTVERSION=	1.3
@@ -21,8 +21,8 @@ NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/dicewaregen-${REV}
 REV=		20c777eac1db
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/dicewaregen.pl ${PREFIX}/bin/${PORTNAME}
+	${INSTALL_SCRIPT} ${WRKSRC}/dicewaregen.pl \
+		${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 
 .include <bsd.port.mk>
