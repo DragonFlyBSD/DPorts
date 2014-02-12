@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: x11/fluxbg/Makefile 328370 2013-09-26 14:53:55Z jgh $
+# $FreeBSD$
 
 PORTNAME=	fluxbg
 PORTVERSION=	0.7
