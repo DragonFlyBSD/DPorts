@@ -1,9 +1,9 @@
 # Created by: Doug Barton <dougb@FreeBSD.org>
-# $FreeBSD: net-p2p/qbittorrent/Makefile 342089 2014-01-31 22:54:48Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	qbittorrent
-PORTVERSION=	3.1.5
-PORTREVISION?=	0
+PORTVERSION=	3.1.8
+PORTREVISION?=	1
 CATEGORIES=	net-p2p ipv6
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}/
 
@@ -45,7 +45,7 @@ USE_QT4+=	dbus
 do-configure:
 .if defined(SLAVE_PORT) && ${SLAVE_PORT:tl} == "no"
 	@cd ${WRKSRC} ; ${SETENV} ${CONFIGURE_ENV} \
-		./configure --prefix=${PREFIX}
+		./configure --prefix=${PREFIX} --enable-debug
 .else
 	@cd ${WRKSRC} ; ${SETENV} ${CONFIGURE_ENV} \
 		./configure --prefix=${PREFIX} --disable-gui
