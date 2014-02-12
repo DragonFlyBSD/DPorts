@@ -1,4 +1,4 @@
-# $FreeBSD: games/warzone2100/Makefile 339168 2014-01-08 20:05:12Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	warzone2100
 PORTVERSION=	3.1.1
