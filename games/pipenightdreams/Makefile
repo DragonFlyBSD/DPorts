@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: games/pipenightdreams/Makefile 342229 2014-02-02 00:24:43Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	pipenightdreams
 PORTVERSION=	0.10.0
