@@ -1,5 +1,5 @@
 # Created by: Olivier Duchateau
-# $FreeBSD: x11-themes/numix-theme/Makefile 339342 2014-01-10 09:55:58Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	numix
 PORTVERSION=	2.1
