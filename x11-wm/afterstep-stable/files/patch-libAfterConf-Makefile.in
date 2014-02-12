@@ -1,4 +1,4 @@
-$FreeBSD: x11-wm/afterstep-stable/files/patch-libAfterConf-Makefile.in 322466 2013-07-07 23:05:22Z glewis $
+$FreeBSD: head/x11-wm/afterstep-stable/files/patch-libAfterConf-Makefile.in 322466 2013-07-07 23:05:22Z glewis $
 
 --- libAfterConf/Makefile.in.orig	Sat Jun 24 22:04:08 2006
 +++ libAfterConf/Makefile.in	Sat Jun 24 22:04:21 2006

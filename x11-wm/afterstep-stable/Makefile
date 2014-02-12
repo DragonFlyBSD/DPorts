@@ -1,5 +1,5 @@
 # Created by: Brett Taylor <brett@peloton.physics.montana.edu>
-# $FreeBSD: x11-wm/afterstep-stable/Makefile 327786 2013-09-21 00:01:16Z bapt $
+# $FreeBSD$
 
 PORTNAME=	afterstep
 PORTVERSION=	2.2.12

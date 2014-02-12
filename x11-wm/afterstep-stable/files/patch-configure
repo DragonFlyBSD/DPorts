@@ -1,4 +1,4 @@
-$FreeBSD: x11-wm/afterstep-stable/files/patch-configure 322465 2013-07-07 23:01:43Z glewis $
+$FreeBSD: head/x11-wm/afterstep-stable/files/patch-configure 322465 2013-07-07 23:01:43Z glewis $
 
 --- configure	Sat Jun 24 21:55:24 2006
 +++ configure.orig	Sat Jun 24 21:54:41 2006

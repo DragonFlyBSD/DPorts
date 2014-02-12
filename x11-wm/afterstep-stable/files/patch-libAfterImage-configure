@@ -1,4 +1,4 @@
-$FreeBSD: x11-wm/afterstep-stable/files/patch-libAfterImage-configure 322466 2013-07-07 23:05:22Z glewis $
+$FreeBSD: head/x11-wm/afterstep-stable/files/patch-libAfterImage-configure 322466 2013-07-07 23:05:22Z glewis $
 
 --- libAfterImage/configure.orig	Thu Jun 22 21:27:08 2006
 +++ libAfterImage/configure	Thu Jun 22 21:27:53 2006

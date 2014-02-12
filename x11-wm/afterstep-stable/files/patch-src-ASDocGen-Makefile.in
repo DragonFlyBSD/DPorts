@@ -1,4 +1,4 @@
-$FreeBSD: x11-wm/afterstep-stable/files/patch-src-ASDocGen-Makefile.in 322466 2013-07-07 23:05:22Z glewis $
+$FreeBSD: head/x11-wm/afterstep-stable/files/patch-src-ASDocGen-Makefile.in 322466 2013-07-07 23:05:22Z glewis $
 
 --- src/ASDocGen/Makefile.in.orig	2008-03-24 23:58:23.000000000 -0700
 +++ src/ASDocGen/Makefile.in	2008-03-25 00:01:05.000000000 -0700

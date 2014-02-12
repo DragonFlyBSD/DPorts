@@ -1,4 +1,4 @@
-$FreeBSD: x11-wm/afterstep-stable/files/patch-libAfterBase-configure 322466 2013-07-07 23:05:22Z glewis $
+$FreeBSD: head/x11-wm/afterstep-stable/files/patch-libAfterBase-configure 322466 2013-07-07 23:05:22Z glewis $
 
 --- libAfterBase/configure.orig	Thu Jul 12 15:39:55 2007
 +++ libAfterBase/configure	Sun Oct 28 20:22:55 2007

@@ -1,4 +1,4 @@
-$FreeBSD: x11-wm/afterstep-stable/files/patch-src-WinCommand-WinCommand.c 322466 2013-07-07 23:05:22Z glewis $
+$FreeBSD: head/x11-wm/afterstep-stable/files/patch-src-WinCommand-WinCommand.c 322466 2013-07-07 23:05:22Z glewis $
 
 --- src/WinCommand/WinCommand.c.orig	Sat Jun 24 22:08:22 2006
 +++ src/WinCommand/WinCommand.c	Sat Jun 24 22:09:07 2006

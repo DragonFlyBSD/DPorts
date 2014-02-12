@@ -1,4 +1,4 @@
-$FreeBSD: x11-wm/afterstep-stable/files/patch-afterstep-Makefile.in 322466 2013-07-07 23:05:22Z glewis $
+$FreeBSD: head/x11-wm/afterstep-stable/files/patch-afterstep-Makefile.in 322466 2013-07-07 23:05:22Z glewis $
 
 --- afterstep/Makefile.in.orig	Tue Jul 10 22:25:39 2007
 +++ afterstep/Makefile.in	Tue Jul 10 22:26:53 2007
