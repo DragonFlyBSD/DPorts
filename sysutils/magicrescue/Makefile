@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: sysutils/magicrescue/Makefile 331656 2013-10-26 07:52:07Z ehaupt $
+# $FreeBSD$
 
 PORTNAME=	magicrescue
 PORTVERSION=	1.1.9
