@@ -1,5 +1,5 @@
 # Created by: kris@FreeBSD.org
-# $FreeBSD: converters/dumpasn1/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	dumpasn1
 PORTVERSION=	20130805
