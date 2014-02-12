@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acm@FreeBSD.org>
-# $FreeBSD: x11-toolkits/qt4pas/Makefile 334873 2013-11-25 18:01:01Z makc $
+# $FreeBSD$
 
 PORTNAME=	qt4pas
 PORTVERSION=	2.5
