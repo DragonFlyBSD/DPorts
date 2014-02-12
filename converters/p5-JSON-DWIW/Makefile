@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: converters/p5-JSON-DWIW/Makefile 332379 2013-11-01 14:20:56Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	JSON-DWIW
 PORTVERSION=	0.47
