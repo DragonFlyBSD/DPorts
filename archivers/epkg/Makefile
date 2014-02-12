@@ -1,5 +1,5 @@
 # Created by: Jim Pirzyk <pirzyk@FreeBSD.org>
-# $FreeBSD: archivers/epkg/Makefile 337546 2013-12-26 16:19:08Z bapt $
+# $FreeBSD$
 
 PORTNAME=	epkg
 PORTVERSION=	2.3.9
