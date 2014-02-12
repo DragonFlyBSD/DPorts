@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: mail/batv-milter/files/milter-batv.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/mail/batv-milter/files/milter-batv.in 340872 2014-01-24 00:14:07Z mat $
 #
 
 # PROVIDE: milter-batv
