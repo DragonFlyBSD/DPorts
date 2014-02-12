@@ -1,5 +1,5 @@
 # Created by: Meno Abels <meno.abels@adviser.com>
-# $FreeBSD: net/ucarp/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ucarp
 PORTVERSION=	1.5.2
@@ -32,8 +32,8 @@ PLIST_FILES=	sbin/ucarp
 PLIST_FILES+=	sbin/ucarp-up \
 		sbin/ucarp-down
 post-install:
-		${INSTALL_SCRIPT} ${WRKSRC}/examples/bsd/vip-up.sh ${PREFIX}/sbin/ucarp-up
-		${INSTALL_SCRIPT} ${WRKSRC}/examples/bsd/vip-down.sh ${PREFIX}/sbin/ucarp-down
+		${INSTALL_SCRIPT} ${WRKSRC}/examples/bsd/vip-up.sh ${STAGEDIR}${PREFIX}/sbin/ucarp-up
+		${INSTALL_SCRIPT} ${WRKSRC}/examples/bsd/vip-down.sh ${STAGEDIR}${PREFIX}/sbin/ucarp-down
 .endif
 
 .include <bsd.port.mk>
