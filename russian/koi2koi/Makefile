@@ -1,5 +1,5 @@
 # Created by: Dmitry Morozovsky <marck@rinet.ru>
-# $FreeBSD: russian/koi2koi/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	koi2koi
 PORTVERSION=	1998.04.16
@@ -15,9 +15,7 @@ NO_WRKSUBDIR=	yes
 MAKEFILE=	${PKGDIR}/src/Makefile
 MAKE_ENV=	PKGDIR="${PKGDIR}"
 
-MAN1=		koi2koi.1
-MANCOMPRESSED=	yes
-PLIST_FILES=	bin/koi2koi
+PLIST_FILES=	bin/koi2koi \
+		man/man1/koi2koi.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
