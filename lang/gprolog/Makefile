@@ -1,5 +1,5 @@
 # Created by: Douglas Anestad <yotta@dougdidit.com>
-# $FreeBSD: lang/gprolog/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gprolog
 PORTVERSION=	1.4.1
