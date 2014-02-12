@@ -1,5 +1,5 @@
 # Created by: Thinker K.F. Li <thinker@eeebox.branda.to>
-# $FreeBSD: devel/d-feet/Makefile 341491 2014-01-28 00:13:11Z bapt $
+# $FreeBSD$
 
 PORTNAME=	d-feet
 PORTVERSION=	0.1.12
