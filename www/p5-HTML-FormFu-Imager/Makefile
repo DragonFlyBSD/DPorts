@@ -1,5 +1,5 @@
 # Created by: gugu
-# $FreeBSD: www/p5-HTML-FormFu-Imager/Makefile 338235 2013-12-31 05:14:59Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	HTML-FormFu-Imager
 PORTVERSION=	1.00
