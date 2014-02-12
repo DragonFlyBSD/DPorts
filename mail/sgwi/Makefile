@@ -1,5 +1,5 @@
 # Created by: Lukasz Wasikowski <lukasz@wasikowski.net>
-# $FreeBSD: mail/sgwi/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	sgwi
 PORTVERSION=	1.1.6
