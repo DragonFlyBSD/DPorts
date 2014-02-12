@@ -1,4 +1,4 @@
-# $FreeBSD: databases/percona-toolkit/Makefile 340323 2014-01-19 16:32:34Z flo $
+# $FreeBSD$
 
 PORTNAME=	percona-toolkit
 PORTVERSION=	2.2.6
