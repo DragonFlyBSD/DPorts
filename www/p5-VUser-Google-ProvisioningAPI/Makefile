@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: www/p5-VUser-Google-ProvisioningAPI/Makefile 338763 2014-01-05 13:05:56Z az $
+# $FreeBSD$
 
 PORTNAME=	VUser-Google-ProvisioningAPI
 PORTVERSION=	0.24
