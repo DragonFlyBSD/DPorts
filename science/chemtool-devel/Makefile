@@ -1,5 +1,5 @@
 # Created by: NAKATA, Maho <maho@FreeBSD.org>
-# $FreeBSD: science/chemtool-devel/Makefile 337459 2013-12-25 22:08:13Z marino $
+# $FreeBSD$
 
 PORTNAME=	chemtool
 PORTVERSION=	1.7.20050716
