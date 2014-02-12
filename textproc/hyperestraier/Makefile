@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: textproc/hyperestraier/Makefile 341631 2014-01-28 16:47:07Z mat $
+# $FreeBSD$
 #    $MCom: ports-stable/textproc/hyperestraier/Makefile,v 1.3 2006/10/17 11:45:45 ahze Exp $
 
 PORTNAME=	hyperestraier
