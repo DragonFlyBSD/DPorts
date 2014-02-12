@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: devel/svnkit/files/svnsync.sh.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/devel/svnkit/files/svnsync.sh.in 340872 2014-01-24 00:14:07Z mat $
 
 SVNKIT_HOME=${SVNKIT_HOME:-"%%DATADIR%%"}
 SVNKIT_CP=${SVNKIT_HOME}/svnkit.jar:${SVNKIT_HOME}/svnkit-cli.jar:${SVNKIT_HOME}/ganymed.jar
