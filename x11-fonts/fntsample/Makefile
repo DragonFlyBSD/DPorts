@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: x11-fonts/fntsample/Makefile 327781 2013-09-20 23:51:14Z bapt $
+# $FreeBSD$
 
 PORTNAME?=	fntsample
 PORTVERSION=	3.2
