@@ -1,4 +1,4 @@
-# $FreeBSD: mail/squirrelmail-askuserinfo-plugin/Makefile 336240 2013-12-12 01:32:34Z adamw $
+# $FreeBSD$
 
 PORTNAME=	askuserinfo
 PORTVERSION=	1.1
