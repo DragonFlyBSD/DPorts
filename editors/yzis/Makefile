@@ -1,5 +1,5 @@
 # Created by: Ganael Laplanche <ganael.laplanche@martymac.org>
-# $FreeBSD: editors/yzis/Makefile 335568 2013-12-03 14:08:04Z martymac $
+# $FreeBSD$
 
 PORTNAME=	yzis
 PORTVERSION=	1.0.a.1
