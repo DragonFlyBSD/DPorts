@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: net/py-oauth/Makefile 341960 2014-01-31 09:25:28Z miwi $
+# $FreeBSD$
 
 PORTNAME=	oauth
 PORTVERSION=	1.0.1
