@@ -1,5 +1,5 @@
 # Created by: Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
-# $FreeBSD: chinese/p5-Encode-HanConvert/Makefile 328366 2013-09-26 14:35:04Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Encode-HanConvert
 PORTVERSION=	0.35
