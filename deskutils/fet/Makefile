@@ -1,5 +1,5 @@
 # Created by: Leinier Cruz Salfran <salfrancl@yahoo.es>
-# $FreeBSD: deskutils/fet/Makefile 334872 2013-11-25 18:00:55Z makc $
+# $FreeBSD$
 
 PORTNAME=	fet
 PORTVERSION=	5.20.1
