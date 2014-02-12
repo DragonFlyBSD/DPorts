@@ -1,5 +1,5 @@
 # Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-# $FreeBSD: sysutils/p5-Sys-Hostname-FQDN/Makefile 338850 2014-01-06 09:24:24Z az $
+# $FreeBSD$
 
 PORTNAME=	Sys-Hostname-FQDN
 PORTVERSION=	0.11
