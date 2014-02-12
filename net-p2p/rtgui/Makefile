@@ -1,4 +1,4 @@
-# $FreeBSD: net-p2p/rtgui/Makefile 337733 2013-12-27 14:47:58Z jadawin $
+# $FreeBSD$
 
 PORTNAME=	rtgui
 PORTVERSION=	0.2.81
