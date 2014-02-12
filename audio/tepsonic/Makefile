@@ -1,5 +1,5 @@
 # Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: audio/tepsonic/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD$
 
 PORTNAME=	tepsonic
 PORTVERSION=	0.98.2
