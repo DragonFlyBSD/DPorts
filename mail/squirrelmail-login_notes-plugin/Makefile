@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: mail/squirrelmail-login_notes-plugin/Makefile 336240 2013-12-12 01:32:34Z adamw $
+# $FreeBSD$
 
 PORTNAME=	login_notes
 PORTVERSION=1.2
