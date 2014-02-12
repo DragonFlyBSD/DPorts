@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: accessibility/gnopernicus/Makefile 336152 2013-12-11 09:51:36Z bapt $
+# $FreeBSD$
 #   $MCom: ports/accessibility/gnopernicus/Makefile,v 1.85 2007/07/23 19:03:49 mezz Exp $
 
 PORTNAME=	gnopernicus
