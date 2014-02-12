@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: irc/p5-IRC-Bot-Hangman/Makefile 332729 2013-11-04 14:28:11Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	IRC-Bot-Hangman
 PORTVERSION=	0.1
