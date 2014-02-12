@@ -1,8 +1,9 @@
 # Created by: myst3r10n <myst3r10n@rocketmail.com>
-# $FreeBSD: net-p2p/digitalcoin/Makefile 340216 2014-01-18 21:02:36Z swills $
+# $FreeBSD$
 
 PORTNAME=	digitalcoin
 PORTVERSION=	1.0.0.0b
+PORTREVISION=	1
 CATEGORIES=	net-p2p
 
 MAINTAINER=	myst3r10n@rocketmail.com
