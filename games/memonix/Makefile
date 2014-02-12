@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/memonix/Makefile 330822 2013-10-19 02:00:04Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	memonix
 PORTVERSION=	1.6.070713
