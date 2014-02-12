@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@daltons.ca>
-# $FreeBSD: www/p5-W3C-LinkChecker/Makefile 333128 2013-11-07 15:56:48Z jadawin $
+# $FreeBSD$
 
 PORTNAME=	W3C-LinkChecker
 PORTVERSION=	4.81
