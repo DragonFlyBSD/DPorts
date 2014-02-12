@@ -1,5 +1,5 @@
 # Created by: Denise H. G. <darcsis@gmail.com>
-# $FreeBSD: devel/tig/Makefile 339427 2014-01-11 15:04:03Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	tig
 PORTVERSION=	1.2.1
