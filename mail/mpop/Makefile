@@ -1,5 +1,5 @@
 # Created by: Sylvio Cesar <sylvio@FreeBSD.org>
-# $FreeBSD: mail/mpop/Makefile 332552 2013-11-02 23:09:33Z wg $
+# $FreeBSD$
 
 PORTNAME=	mpop
 PORTVERSION=	1.0.28
