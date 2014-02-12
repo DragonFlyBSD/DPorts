@@ -1,5 +1,5 @@
 # Created by: Christian Brueffer <chris@unixpages.org>
-# $FreeBSD: deskutils/mencal/Makefile 332485 2013-11-02 14:17:45Z wg $
+# $FreeBSD$
 
 PORTNAME=	mencal
 PORTVERSION=	3.0
