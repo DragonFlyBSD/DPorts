@@ -1,5 +1,5 @@
 # Created by: Ed Schouten <ed@fxq.nl>
-# $FreeBSD: net/kissd/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	kissd
 PORTVERSION=	0.3
