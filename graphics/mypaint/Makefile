@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: graphics/mypaint/Makefile 333306 2013-11-09 15:57:18Z wg $
+# $FreeBSD$
 
 PORTNAME=	mypaint
 PORTVERSION=	1.1.0
