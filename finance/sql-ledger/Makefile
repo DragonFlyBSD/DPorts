@@ -1,5 +1,5 @@
 # Created by: lth@FreeBSD.org
-# $FreeBSD: finance/sql-ledger/Makefile 327727 2013-09-20 17:18:38Z bapt $
+# $FreeBSD$
 
 PORTNAME=	sql-ledger
 PORTVERSION=	3.0.4
