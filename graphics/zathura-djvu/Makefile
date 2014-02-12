@@ -1,5 +1,5 @@
 # Created by: Alexander Y. Grigoryev <alexander.4mail@gmail.com>
-# $FreeBSD: graphics/zathura-djvu/Makefile 335121 2013-11-28 21:08:38Z madpilot $
+# $FreeBSD$
 
 PORTNAME=	zathura-djvu
 PORTVERSION=	0.2.3
