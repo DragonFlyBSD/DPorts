@@ -1,4 +1,4 @@
-# $FreeBSD: games/abuse_sdl/Makefile 331317 2013-10-22 20:38:29Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	abuse_sdl
 PORTVERSION=	0.8
