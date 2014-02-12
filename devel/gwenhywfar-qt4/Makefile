@@ -1,4 +1,4 @@
-# $FreeBSD: devel/gwenhywfar-qt4/Makefile 329953 2013-10-10 00:58:16Z jhale $
+# $FreeBSD$
 
 PORTREVISION=	0
 PKGNAMESUFFIX=	-${SLAVEPORT}
