@@ -1,5 +1,5 @@
 # Created by: Andreas Kohn <andreas@syndrom23.de>
-# $FreeBSD: net/sobby/Makefile 339710 2014-01-14 19:50:57Z antoine $
+# $FreeBSD$
 
 PORTNAME=	sobby
 PORTVERSION=	0.4.8
