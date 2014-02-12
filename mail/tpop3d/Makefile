@@ -1,5 +1,5 @@
 # Created by: chris@shagged.org
-# $FreeBSD: mail/tpop3d/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	tpop3d
 PORTVERSION=	1.5.5
