@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: audio/xmms-sid/Makefile 338586 2014-01-03 22:40:22Z danilo $
+# $FreeBSD$
 
 PORTNAME=	xmms-sid
 PORTVERSION=	0.9.2
