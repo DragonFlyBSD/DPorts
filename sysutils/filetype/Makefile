@@ -1,5 +1,5 @@
 # Created by: ismail.yenigul@endersys.com.tr
-# $FreeBSD: sysutils/filetype/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	filetype
 PORTVERSION=	0.1.3
