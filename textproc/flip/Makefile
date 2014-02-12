@@ -1,5 +1,5 @@
 # Created by: Radim Kolar <hsn@sanatana.dharma>
-# $FreeBSD: textproc/flip/Makefile 341283 2014-01-26 20:43:55Z mat $
+# $FreeBSD$
 
 PORTNAME=	flip
 PORTVERSION=	1.19
