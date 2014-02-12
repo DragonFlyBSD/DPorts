@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: mail/p5-Mail-Bulkmail/Makefile 342155 2014-02-01 14:42:33Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Mail-Bulkmail
 PORTVERSION=	3.12
