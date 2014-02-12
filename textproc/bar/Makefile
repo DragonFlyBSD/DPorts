@@ -1,5 +1,5 @@
 # Created by: Erik Greenwald <erik@smluc.org>
-# $FreeBSD: textproc/bar/Makefile 341143 2014-01-26 00:03:51Z mat $
+# $FreeBSD$
 
 PORTNAME=	bar
 PORTVERSION=	1.4
