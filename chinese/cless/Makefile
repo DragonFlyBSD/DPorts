@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@cs.ucdavis.edu)
-# $FreeBSD: chinese/cless/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	cless
 PORTVERSION=	290
@@ -12,6 +12,8 @@ COMMENT=	A better pager utility (and it speaks Chinese)
 GNU_CONFIGURE=	yes
 CFLAGS+=	-DHANZI # LDFLAGS=-s datadir=/usr/local/lib/less
 CPP=		#
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
