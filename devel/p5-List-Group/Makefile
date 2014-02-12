@@ -1,5 +1,5 @@
 # Created by: Tillman Hodgson <tillman@seekingfire.com>
-# $FreeBSD: devel/p5-List-Group/Makefile 341711 2014-01-29 10:57:06Z az $
+# $FreeBSD$
 
 PORTNAME=	List-Group
 PORTVERSION=	1.3
