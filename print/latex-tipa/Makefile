@@ -1,5 +1,5 @@
 # Created by: Andreas Braml
-# $FreeBSD: print/latex-tipa/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	latex-tipa
 PORTVERSION=	1.3
