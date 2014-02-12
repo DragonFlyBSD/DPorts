@@ -1,5 +1,5 @@
 # Created by: Martin Kammerhofer
-# $FreeBSD: textproc/perl2html/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=		perl2html
 PORTVERSION=		0.9.2
