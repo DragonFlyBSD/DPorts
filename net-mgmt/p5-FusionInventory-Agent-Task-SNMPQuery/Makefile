@@ -1,5 +1,5 @@
 # Created by: Emil Smolenski <am@raisa.eu.org>
-# $FreeBSD: net-mgmt/p5-FusionInventory-Agent-Task-SNMPQuery/Makefile 339734 2014-01-15 02:41:00Z tabthorpe $
+# $FreeBSD$
 
 PORTNAME=	FusionInventory-Agent-Task-SNMPQuery
 PORTVERSION=	1.3
