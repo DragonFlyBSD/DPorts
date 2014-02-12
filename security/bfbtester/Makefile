@@ -1,5 +1,5 @@
 # Created by: Mike Heffner <mheffner@vt.edu>
-# $FreeBSD: security/bfbtester/Makefile 342015 2014-01-31 16:24:42Z miwi $
+# $FreeBSD$
 
 PORTNAME=	bfbtester
 PORTVERSION=	2.0.1
