@@ -1,7 +1,8 @@
-# $FreeBSD: games/wesnoth/Makefile 336255 2013-12-12 11:14:49Z bapt $
+# $FreeBSD$
 
 PORTNAME=	wesnoth
 PORTVERSION=	1.10.7
+PORTREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-${PORTVERSION:R}/${PORTNAME}-${PORTVERSION} \
 		http://files.wesnoth.org/
