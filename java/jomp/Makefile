@@ -1,5 +1,5 @@
 # Created by: Christian Brueffer <brueffer@FreeBSD.org>
-# $FreeBSD: java/jomp/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	jomp
 PORTVERSION=	1.0b
