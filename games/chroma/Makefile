@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/chroma/Makefile 328537 2013-09-28 00:38:48Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	chroma
 PORTVERSION=	1.08
