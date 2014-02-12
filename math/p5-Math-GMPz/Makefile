@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: math/p5-Math-GMPz/Makefile 336324 2013-12-13 08:03:53Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Math-GMPz
 PORTVERSION=	0.37
