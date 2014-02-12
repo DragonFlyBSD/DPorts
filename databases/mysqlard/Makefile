@@ -1,5 +1,5 @@
 # Created by: Greg Albrecht <gregoryba@gmail.com>
-# $FreeBSD: databases/mysqlard/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	mysqlard
 PORTVERSION=	1.0.0
@@ -9,6 +9,9 @@ MASTER_SITES=	http://gert.sos.be/downloads/mysqlar/
 
 MAINTAINER=	gregoryba@gmail.com
 COMMENT=	A tool to collect and graph database statistics from MySQL
+
+DEPRECATED=	Abandonware
+EXPIRATION_DATE=2014-03-05
 
 BUILD_DEPENDS=	rrdtool:${PORTSDIR}/databases/rrdtool
 RUN_DEPENDS:=	${BUILD_DEPENDS}
