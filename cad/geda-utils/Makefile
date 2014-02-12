@@ -1,5 +1,5 @@
 # Created by: bruno schwander <bruno@tinkerbox.org>
-# $FreeBSD: cad/geda-utils/Makefile 338179 2013-12-30 21:57:05Z antoine $
+# $FreeBSD$
 
 PORTNAME=	utils
 PORTVERSION=	1.4.3
