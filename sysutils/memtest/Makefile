@@ -1,5 +1,5 @@
 # Created by: Mario S F Ferreira <lioux@linf.unb.br> et al.
-# $FreeBSD: sysutils/memtest/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	memtester
 PORTVERSION=	4.3.0
