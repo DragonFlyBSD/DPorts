@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-DBIx-Class-Tree-NestedSet/Makefile 341762 2014-01-29 17:18:46Z az $
+# $FreeBSD$
 
 PORTNAME=	DBIx-Class-Tree-NestedSet
 PORTVERSION=	0.10
