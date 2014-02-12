@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: games/xcowsay/Makefile 333643 2013-11-13 02:20:24Z danilo $
+# $FreeBSD$
 
 PORTNAME=	xcowsay
 PORTVERSION=	1.3
