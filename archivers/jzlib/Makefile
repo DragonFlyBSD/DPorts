@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: archivers/jzlib/Makefile 328317 2013-09-25 21:15:17Z danilo $
+# $FreeBSD$
 
 PORTNAME=	jzlib
 PORTVERSION=	1.1.1
