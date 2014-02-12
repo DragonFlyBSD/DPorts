@@ -1,4 +1,4 @@
-/* $FreeBSD: lang/pcc/files/ccconfig.h 340872 2014-01-24 00:14:07Z mat $ */
+/* $FreeBSD: head/lang/pcc/files/ccconfig.h 340872 2014-01-24 00:14:07Z mat $ */
 /*	$Id: ccconfig.h,v 1.2 2004/12/02 21:32:25 ragge Exp $	*/
 
 /*

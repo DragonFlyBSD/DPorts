@@ -1,5 +1,5 @@
 # Created by: David O'Brien <obrien@NUXI.org>
-# $FreeBSD: lang/pcc/Makefile 342317 2014-02-02 15:21:20Z miwi $
+# $FreeBSD$
 
 PORTNAME=	pcc
 PORTVERSION=	1.0.0
