@@ -1,5 +1,5 @@
 # Created by: Jacek Serwatynski <tutus@trynet.eu.org>
-# $FreeBSD: security/ADMsmb/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ADMsmb
 PORTVERSION=	0.3
@@ -14,14 +14,13 @@ COMMENT=	Security scanner for Samba
 USES=		gmake
 MAKE_ARGS=	CC="${CC}" FLAGS1="${CFLAGS}"
 
-NO_STAGE=	yes
 post-patch:
 	@${FIND} ${WRKSRC} -name "*.o" -delete
 	@${REINPLACE_CMD} -e 's|-O3|${CFLAGS}|' ${WRKSRC}/Makefile
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/ADMsmb ${PREFIX}/bin
-	@${MKDIR} ${PREFIX}/share/ADMsmb
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/ADMsmb
+	${INSTALL_PROGRAM} ${WRKSRC}/ADMsmb ${STAGEDIR}${PREFIX}/bin
+	@${MKDIR} ${STAGEDIR}${PREFIX}/share/ADMsmb
+	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${PREFIX}/share/ADMsmb
 
 .include <bsd.port.mk>
