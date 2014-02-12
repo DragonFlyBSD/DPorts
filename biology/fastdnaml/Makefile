@@ -1,5 +1,5 @@
 # Created by: Motomichi Matsuzaki <mzaki@e-mail.ne.jp>
-# $FreeBSD: biology/fastdnaml/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	fastdnaml
 PORTVERSION=	1.2.2
