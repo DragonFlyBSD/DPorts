@@ -1,5 +1,5 @@
 # Created by: HONDA Yasuhiro <honda@kashio.info.mie-u.ac.jp>
-# $FreeBSD: japanese/yc.el/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	yc.el
 PORTVERSION=	5.2.1
