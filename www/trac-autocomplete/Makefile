@@ -1,5 +1,5 @@
 # Created by: Eygene Ryabinkin <rea-fbsd@codelabs.ru>
-# $FreeBSD: www/trac-autocomplete/Makefile 341181 2014-01-26 14:31:18Z miwi $
+# $FreeBSD$
 
 PORTNAME=	autocomplete
 PORTVERSION=	0.4.1
