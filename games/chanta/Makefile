@@ -1,5 +1,5 @@
 # Created by: Charlie & <root@HellFire.BSD.org.pe>
-# $FreeBSD: games/chanta/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	chanta
 PORTVERSION=	0.15
