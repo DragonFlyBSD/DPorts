@@ -1,5 +1,5 @@
 # Created by: Pete Fritchman <petef@databits.net>
-# $FreeBSD: benchmarks/iperf/Makefile 337617 2013-12-26 21:40:49Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	iperf
 PORTVERSION=	2.0.5
