@@ -1,5 +1,5 @@
 # Created by: SADA Kenji <sada@FreeBSD.org>
-# $FreeBSD: japanese/w3m/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD$
 
 CATEGORIES=	japanese
 
