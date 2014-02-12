@@ -1,5 +1,5 @@
 # Created by: Daichi GOTO <daichi@FreeBSD.org>
-# $FreeBSD: japanese/ibus-anthy/Makefile 329962 2013-10-10 03:46:18Z daichi $
+# $FreeBSD$
 
 PORTNAME=	ibus-anthy
 PORTVERSION=	1.2.7
