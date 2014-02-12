@@ -1,4 +1,4 @@
-# $FreeBSD: www/rt38/Makefile 335145 2013-11-29 06:50:30Z matthew $
+# $FreeBSD$
 
 NO_STAGE=	yes
 # TODO:
