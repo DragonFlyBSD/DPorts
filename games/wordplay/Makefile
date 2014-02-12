@@ -1,5 +1,5 @@
 # Created by: Ben Smithurst <ben@scientia.demon.co.uk>
-# $FreeBSD: games/wordplay/Makefile 338264 2013-12-31 08:51:35Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	wordplay
 PORTVERSION=	7.22
