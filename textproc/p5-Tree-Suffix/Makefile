@@ -1,5 +1,5 @@
 # Created by: clsung
-# $FreeBSD: textproc/p5-Tree-Suffix/Makefile 338751 2014-01-05 12:07:20Z az $
+# $FreeBSD$
 
 PORTNAME=	Tree-Suffix
 PORTVERSION=	0.21
