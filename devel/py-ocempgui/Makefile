@@ -1,5 +1,5 @@
 # Created by: Alexander Botero-Lowry <alex@foxybanana.com>
-# $FreeBSD: devel/py-ocempgui/Makefile 340589 2014-01-21 10:13:35Z mva $
+# $FreeBSD$
 
 PORTNAME=	ocempgui
 PORTVERSION=	0.2.9
