@@ -1,5 +1,5 @@
 # Created by: Daniel Nebdal <dnebdal@gmail.com>
-# $FreeBSD: multimedia/bangarang/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD$
 
 PORTNAME=	bangarang
 PORTVERSION=	2.1
