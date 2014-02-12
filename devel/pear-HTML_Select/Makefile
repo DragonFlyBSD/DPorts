@@ -1,5 +1,5 @@
 # Created by: Michael Schout <mschout@gkg.net>
-# $FreeBSD: devel/pear-HTML_Select/Makefile 333263 2013-11-08 21:41:53Z antoine $
+# $FreeBSD$
 
 PORTNAME=	HTML_Select
 PORTVERSION=	1.3.1
