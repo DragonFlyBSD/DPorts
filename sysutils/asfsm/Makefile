@@ -1,5 +1,5 @@
 # Created by: jack
-# $FreeBSD: sysutils/asfsm/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	asfsm
 PORTVERSION=	1.0.p15
@@ -10,6 +10,9 @@ DISTNAME=	asfsm-1.0pre15
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	File-system monitor for the AfterStep window manager
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-07
 
 USE_XORG=	xpm x11 sm ice xext xaw xt
 GNU_CONFIGURE=	yes
