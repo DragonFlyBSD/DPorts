@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: graphics/nathive/Makefile 336538 2013-12-15 14:14:52Z mva $
+# $FreeBSD$
 
 PORTNAME=	nathive
 PORTVERSION=	0.924
