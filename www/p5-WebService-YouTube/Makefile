@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: www/p5-WebService-YouTube/Makefile 332617 2013-11-03 15:16:25Z az $
+# $FreeBSD$
 
 PORTNAME=	WebService-YouTube
 PORTVERSION=	1.0.3
