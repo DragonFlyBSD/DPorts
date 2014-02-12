@@ -1,5 +1,5 @@
 # Created by: Vivek Khera <vivek@khera.org>
-# $FreeBSD: mail/p5-Mail-Verp/Makefile 338791 2014-01-05 16:08:00Z az $
+# $FreeBSD$
 
 PORTNAME=	Mail-Verp
 PORTVERSION=	0.06
