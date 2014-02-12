@@ -1,5 +1,5 @@
 # Created by: George V. Neville-Neil <gnn@FreeBSD.org>
-# $FreeBSD: ftp/uftp/Makefile 335723 2013-12-06 06:09:25Z demon $
+# $FreeBSD$
 
 PORTNAME=	uftp
 PORTVERSION=	4.1.4
