@@ -1,5 +1,5 @@
 # Created by: Lewis Thompson <purple@lewiz.net>
-# $FreeBSD: news/nzbget/Makefile 340301 2014-01-19 14:18:17Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	nzbget
 PORTVERSION=	12.0
