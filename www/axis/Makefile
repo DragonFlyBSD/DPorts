@@ -1,5 +1,5 @@
 # Created by: Kensaku MASUDA <greg@greg.rim.or.jp>
-# $FreeBSD: www/axis/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=		axis
 PORTVERSION=		1.4
