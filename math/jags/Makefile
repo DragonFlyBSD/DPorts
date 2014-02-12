@@ -1,5 +1,5 @@
 # Created by: Eric van Gyzen <vangyzen@stat.duke.edu>
-# $FreeBSD: math/jags/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD$
 
 PORTNAME=	mcmc-jags
 PORTVERSION=	3.4.0
@@ -33,6 +33,9 @@ PLIST_SUB=	MODULEVERSION=${S}
 S=		${PORTVERSION:C|\..*||}
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS EXAMPLES 
+
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS} || make(makesum)
