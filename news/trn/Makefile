@@ -1,5 +1,5 @@
 # Created by: smace
-# $FreeBSD: news/trn/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	trn
 PORTVERSION=	3.6
@@ -15,22 +15,15 @@ RUN_DEPENDS=	munpack:${PORTSDIR}/converters/mpack
 CONFLICTS_INSTALL=trn-4.[0-9]*
 
 WRKSRC=		${WRKDIR}/trn-3.6
-MAN1=		trn.1 Pnews.1 Rnmail.1 newsetup.1 newsgroups.1
 
 HAS_CONFIGURE=	Yes
 CONFIGURE_SCRIPT=	Configure
 CONFIGURE_ENV=	PREFIX="${PREFIX}"
 CONFIGURE_ARGS=	-S
 
-NO_STAGE=	yes
-post-install:
-.if !defined(BATCH)
-	@${ECHO_MSG} ""
-	@${ECHO_MSG} "############################################################################"
-	@${ECHO_MSG} "# Please edit lines 48 through 69 in ${PREFIX}/bin/Pnews                   #"
-	@${ECHO_MSG} "# to customize news posting for your site.                                 #"
-	@${ECHO_MSG} "# Remember to set the NNTPSERVER environment variable to your news server. #"
-	@${ECHO_MSG} "############################################################################"
-.endif
+SUB_FILES=	pkg-message
+
+post-patch:
+	${REINPLACE_CMD} 's/$$install/\\$${DESTDIR}&/' ${WRKSRC}/Makefile.SH
 
 .include <bsd.port.mk>
