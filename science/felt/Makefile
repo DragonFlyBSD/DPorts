@@ -1,5 +1,5 @@
 # Created by: Pedro Giffuni
-# $FreeBSD: science/felt/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD$
 
 PORTNAME=	felt
 PORTVERSION=	3.07
