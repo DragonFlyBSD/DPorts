@@ -1,5 +1,5 @@
 # Created by: Henrik Andersen
-# $FreeBSD: sysutils/bontmia/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	bontmia
 PORTVERSION=	0.14
