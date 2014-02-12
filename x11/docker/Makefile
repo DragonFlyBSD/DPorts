@@ -1,5 +1,5 @@
 # Created by: Samy Al Bahra <samy@kerneled.org>
-# $FreeBSD: x11/docker/Makefile 330198 2013-10-13 01:53:23Z eadler $
+# $FreeBSD$
 
 PORTNAME=	docker
 PORTVERSION=	1.5
