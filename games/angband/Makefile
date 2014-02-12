@@ -1,5 +1,5 @@
 # Created by: Matthew Hunt <mph@pobox.com>
-# $FreeBSD: games/angband/Makefile 338604 2014-01-04 00:22:33Z danilo $
+# $FreeBSD$
 
 PORTNAME=	angband
 PORTVERSION=	3.5.0
