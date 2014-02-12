@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-# $FreeBSD: www/extsm/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	extsm
 PORTVERSION=	1.1
@@ -10,6 +10,9 @@ DISTNAME=	xsm-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Extensible Site Manager (XSM)
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-10
 
 RUN_DEPENDS=	mvn:${PORTSDIR}/devel/maven2
 
