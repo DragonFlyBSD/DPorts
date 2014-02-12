@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: security/p5-Crypt-TripleDES/Makefile 341821 2014-01-30 09:08:26Z az $
+# $FreeBSD$
 
 PORTNAME=	Crypt-TripleDES
 PORTVERSION=	0.24
