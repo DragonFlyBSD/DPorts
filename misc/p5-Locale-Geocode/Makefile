@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: misc/p5-Locale-Geocode/Makefile 332594 2013-11-03 08:05:18Z az $
+# $FreeBSD$
 
 PORTNAME=	Locale-Geocode
 PORTVERSION=	1.20
