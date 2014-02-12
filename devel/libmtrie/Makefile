@@ -1,5 +1,5 @@
 # Created by: alfred@FreeBSD.org
-# $FreeBSD: devel/libmtrie/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
+# $FreeBSD$
 
 PORTNAME=	libmtrie
 PORTVERSION=	1.0.3
