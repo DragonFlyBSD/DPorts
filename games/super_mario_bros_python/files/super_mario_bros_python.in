@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: games/super_mario_bros_python/files/super_mario_bros_python.in 335925 2013-12-08 19:08:56Z nemysis $
+# $FreeBSD: head/games/super_mario_bros_python/files/super_mario_bros_python.in 335925 2013-12-08 19:08:56Z nemysis $
 #
 
 cd "%%DATADIR%%"
