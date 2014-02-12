@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@exit2shell.com>
-# $FreeBSD: www/xpi-httpfox/Makefile 341207 2014-01-26 15:10:29Z miwi $
+# $FreeBSD$
 
 PORTNAME=	httpfox
 PORTVERSION=	0.8.10
