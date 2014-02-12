@@ -1,5 +1,5 @@
 # Created by: "Waitman Gobble" <uzimac@da3m0n8t3r.com>
-# $FreeBSD: graphics/multiraw/Makefile 339672 2014-01-14 09:44:54Z mandree $
+# $FreeBSD$
 # New ports collection makefile for: multiraw
 # Date created: 29 March 2013
 
