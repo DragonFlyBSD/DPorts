@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: net/service-discovery-applet/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD$
 #   $MCom: ports/net/service-discovery-applet/Makefile,v 1.5 2007/08/06 16:57:53 mezz Exp $
 
 PORTNAME=	service-discovery-applet
