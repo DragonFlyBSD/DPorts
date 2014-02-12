@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-devise-async/Makefile 334440 2013-11-20 18:32:30Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	devise-async
 PORTVERSION=	0.9.0
