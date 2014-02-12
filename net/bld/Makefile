@@ -1,5 +1,5 @@
 # Created by: ob
-# $FreeBSD: net/bld/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	bld
 PORTVERSION=	0.3.4
