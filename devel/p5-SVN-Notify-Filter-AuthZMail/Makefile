@@ -1,5 +1,5 @@
 # Created by: glarkin@
-# $FreeBSD: devel/p5-SVN-Notify-Filter-AuthZMail/Makefile 341710 2014-01-29 10:33:57Z az $
+# $FreeBSD$
 
 PORTNAME=	SVN-Notify-Filter-AuthZMail
 PORTVERSION=	1.01
