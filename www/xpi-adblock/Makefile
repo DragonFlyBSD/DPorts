@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/xpi-adblock/Makefile 341198 2014-01-26 15:07:21Z miwi $
+# $FreeBSD$
 
 PORTNAME=	adblock
 PORTVERSION=	0.5.3.043
