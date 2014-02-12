@@ -1,5 +1,5 @@
 # Created by: Lapo Luchini <lapo@lapo.it>
-# $FreeBSD: www/xpi-cutemenus-crystalsvg/Makefile 341199 2014-01-26 15:07:37Z miwi $
+# $FreeBSD$
 
 PORTNAME=	cutemenus-crystalsvg
 PORTVERSION=	1.9.3
