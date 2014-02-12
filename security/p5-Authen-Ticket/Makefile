@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: security/p5-Authen-Ticket/Makefile 332949 2013-11-06 07:39:31Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Authen-Ticket
 PORTVERSION=	0.02
