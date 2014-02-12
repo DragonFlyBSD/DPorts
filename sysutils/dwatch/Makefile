@@ -1,5 +1,5 @@
 # Created by: Andrew Turner <zombie@i4free.co.nz>
-# $FreeBSD: sysutils/dwatch/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	dwatch
 PORTVERSION=	0.1.1
