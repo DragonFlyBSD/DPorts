@@ -1,5 +1,5 @@
 # Created by: Matt Peterson <matt@peterson.org>
-# $FreeBSD: devel/wand-libconfig/Makefile 340951 2014-01-24 23:52:36Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libconfig
 PORTVERSION=	1.0.5
