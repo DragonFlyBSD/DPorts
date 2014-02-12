@@ -1,5 +1,5 @@
 # Created by: Sahil Tandon <sahil@tandon.net>
-# $FreeBSD: www/p5-WWW-Shorten-NotLong/Makefile 338773 2014-01-05 13:41:52Z az $
+# $FreeBSD$
 
 PORTNAME=	WWW-Shorten-NotLong
 PORTVERSION=	2.00
