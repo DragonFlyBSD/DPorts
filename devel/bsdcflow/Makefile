@@ -1,4 +1,4 @@
-# $FreeBSD: devel/bsdcflow/Makefile 339727 2014-01-14 22:02:45Z mva $
+# $FreeBSD$
 
 PORTNAME=	bsdcflow
 PORTVERSION=	0.0.6
