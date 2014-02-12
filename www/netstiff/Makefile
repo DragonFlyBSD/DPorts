@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: www/netstiff/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	netstiff
 PORTVERSION=	20080331
