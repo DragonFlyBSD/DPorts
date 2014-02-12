@@ -1,5 +1,5 @@
 # Created by: Norikatsu Shigemura <nork@FreeBSD.org>
-# $FreeBSD: www/xpi-default_full_zoom_level/Makefile 341200 2014-01-26 15:07:51Z miwi $
+# $FreeBSD$
 
 PORTNAME=	default_full_zoom_level
 PORTVERSION=	4.3
