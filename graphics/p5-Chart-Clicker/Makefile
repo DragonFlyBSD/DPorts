@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: graphics/p5-Chart-Clicker/Makefile 332801 2013-11-05 01:33:02Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Chart-Clicker
 PORTVERSION=	2.86
