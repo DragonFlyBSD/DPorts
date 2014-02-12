@@ -1,5 +1,5 @@
 # Created by: Andrea Cervesato <andrea@cervesato.it>
-# $FreeBSD: www/mod_qos/Makefile 336589 2013-12-15 22:11:20Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	mod_qos
 PORTVERSION=	10.15
