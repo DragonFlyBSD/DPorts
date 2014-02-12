@@ -1,9 +1,9 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: x11/gtk-theme-switch/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gtk-theme-switch
 PORTVERSION=	1.0.1
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	x11
 MASTER_SITES=	http://www.muhri.net/
 PKGNAMESUFFIX=	1
@@ -14,15 +14,14 @@ COMMENT=	Command line tool for switching GTK+ themes
 USE_GNOME=	gtk12
 USES=		gmake
 
-MAN1=		gtk-theme-switch.1
+OPTIONS_DEFINE=	DOCS 
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
 post-install:
-	${MKDIR} ${PREFIX}/share/gtk-theme-switch
-	${INSTALL_MAN} ${WRKSRC}/readme ${PREFIX}/share/gtk-theme-switch/README
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_MAN} ${WRKSRC}/readme ${STAGEDIR}${DOCSDIR}/README
 .endif
 
 .include <bsd.port.mk>
