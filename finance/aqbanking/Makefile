@@ -1,4 +1,4 @@
-# $FreeBSD: finance/aqbanking/Makefile 332573 2013-11-03 01:25:36Z jhale $
+# $FreeBSD$
 
 PORTNAME=	aqbanking
 PORTVERSION=	5.0.25
