@@ -1,4 +1,4 @@
-# $FreeBSD: cad/gdt/Makefile 327711 2013-09-20 15:58:41Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gdt
 PORTVERSION=	4.0
