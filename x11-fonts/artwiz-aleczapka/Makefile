@@ -1,5 +1,5 @@
 # Created by: Matt Lancereau <matt@rimasec.net>
-# $FreeBSD: x11-fonts/artwiz-aleczapka/Makefile 332331 2013-10-31 23:55:01Z garga $
+# $FreeBSD$
 
 PORTNAME=	artwiz-aleczapka-en
 PORTVERSION=	1.3
