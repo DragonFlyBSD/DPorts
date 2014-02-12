@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: archivers/grzip/Makefile 331191 2013-10-21 20:54:28Z danilo $
+# $FreeBSD$
 
 PORTNAME=	grzip
 PORTVERSION=	0.3.0
