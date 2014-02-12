@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: net/DarwinStreamingServer/pkg-install 340719 2014-01-22 15:52:06Z mat $
+# $FreeBSD: head/net/DarwinStreamingServer/pkg-install 340719 2014-01-22 15:52:06Z mat $
 
 PATH=/bin:/usr/sbin
 

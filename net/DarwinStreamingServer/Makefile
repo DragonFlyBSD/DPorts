@@ -1,5 +1,5 @@
 # Created by: steve@stevenwills.com
-# $FreeBSD: net/DarwinStreamingServer/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	DarwinStreamingServer
 PORTVERSION=	6.0.3

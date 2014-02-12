@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: net/DarwinStreamingServer/files/darwin_streaming_server.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/net/DarwinStreamingServer/files/darwin_streaming_server.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: darwin_streaming_server
 # REQUIRE: streamingadminserver
