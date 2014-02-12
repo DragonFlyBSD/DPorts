@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@FreeBSD.org>
-# $FreeBSD: audio/istream/Makefile 337908 2013-12-28 20:36:37Z antoine $
+# $FreeBSD$
 
 PORTNAME=	istream
 PORTVERSION=	0.10
