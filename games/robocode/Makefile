@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: games/robocode/Makefile 329983 2013-10-10 12:10:24Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	robocode
 PORTVERSION=	1.8.3.0

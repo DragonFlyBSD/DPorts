@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: games/robocode/files/robocode-sh.in 329983 2013-10-10 12:10:24Z nemysis $
+# $FreeBSD: head/games/robocode/files/robocode-sh.in 329983 2013-10-10 12:10:24Z nemysis $
 #
 
 export JAVA_VERSION="%%JAVA_VERSION%%"
