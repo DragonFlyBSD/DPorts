@@ -1,5 +1,5 @@
 # Created by: Yi-Hsuan Hsin <mhsin@mhsin.org>
-# $FreeBSD: net/p5-Net-Google-Calendar/Makefile 341948 2014-01-31 09:01:28Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Net-Google-Calendar
 PORTVERSION=	1.01
