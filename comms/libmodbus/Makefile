@@ -1,4 +1,4 @@
-# $FreeBSD: comms/libmodbus/Makefile 334508 2013-11-21 18:35:48Z bsam $
+# $FreeBSD$
 
 PORTNAME=	libmodbus
 PORTVERSION=	3.1.1
