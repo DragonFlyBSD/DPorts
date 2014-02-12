@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/align/Makefile 341120 2014-01-25 22:03:15Z mat $
+# $FreeBSD$
 
 PORTNAME=	align
 PORTVERSION=	1.7.2
