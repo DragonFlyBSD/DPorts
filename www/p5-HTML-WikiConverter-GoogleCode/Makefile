@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: www/p5-HTML-WikiConverter-GoogleCode/Makefile 332678 2013-11-04 09:57:54Z az $
+# $FreeBSD$
 
 PORTNAME=	HTML-WikiConverter-GoogleCode
 PORTVERSION=	0.12
