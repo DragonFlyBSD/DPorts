@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: www/tivoka/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	tivoka
 PORTVERSION=	3.0.1
