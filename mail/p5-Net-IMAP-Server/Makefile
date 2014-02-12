@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: mail/p5-Net-IMAP-Server/Makefile 338794 2014-01-05 16:20:40Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-IMAP-Server
 PORTVERSION=	1.34
