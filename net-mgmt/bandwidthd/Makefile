@@ -1,5 +1,5 @@
 # Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
-# $FreeBSD: net-mgmt/bandwidthd/Makefile 332837 2013-11-05 12:07:07Z bdrewery $
+# $FreeBSD$
 
 PORTNAME=	bandwidthd
 PORTVERSION=	2.0.1
