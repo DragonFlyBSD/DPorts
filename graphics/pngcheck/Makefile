@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: graphics/pngcheck/Makefile 338792 2014-01-05 16:12:13Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	pngcheck
 PORTVERSION=	2.3.0
