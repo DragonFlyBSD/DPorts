@@ -1,5 +1,5 @@
 # Created by: <trasz@FreeBSD.org>
-# $FreeBSD: audio/calf/Makefile 340242 2014-01-19 09:26:25Z miwi $
+# $FreeBSD$
 
 PORTNAME=	calf
 PORTVERSION=	0.0.19
