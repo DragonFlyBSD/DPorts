@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: net-im/p5-Net-Stomp/Makefile 332816 2013-11-05 07:49:09Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Net-Stomp
 PORTVERSION=	0.45
