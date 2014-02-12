@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: devel/pychecker/Makefile 339802 2014-01-15 18:44:42Z mva $
+# $FreeBSD$
 
 PORTNAME=	pychecker
 PORTVERSION=	0.8.19
