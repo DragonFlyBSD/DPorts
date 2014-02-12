@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/rsstool/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	rsstool
 DISTVERSION=	1.0.0
@@ -10,24 +10,18 @@ MASTER_SITES=	BERLIOS
 MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	Read, parse, merge and write RSS and Atom feeds
 
-USES=		iconv
+USES=		iconv gmake
 USE_GNOME=	libxml2
-USE_GMAKE=	yes
 BUILD_WRKSRC=	${WRKSRC}/src
 CONFIGURE_WRKSRC=	${WRKSRC}/src
 HAS_CONFIGURE=	yes
 
-NO_STAGE=	yes
 post-patch:
 	@cd ${BUILD_WRKSRC}/&&${REINPLACE_CMD} -e 's|gcc|${CC}|' Makefile
 
 do-install:
-	@${INSTALL_PROGRAM} ${BUILD_WRKSRC}/${PORTNAME} ${PREFIX}/bin/
-.ifndef NOPORTDOCS
-	@cd ${WRKSRC}/&&${COPYTREE_SHARE} "*html images" ${DOCSDIR}/
-.endif
-.ifndef NOPORTEXAMPLES
-	@cd ${WRKSRC}/contrib/&&${COPYTREE_SHARE} . ${EXAMPLESDIR}/
-.endif
+	@${INSTALL_PROGRAM} ${BUILD_WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/
+	@cd ${WRKSRC}/&&${COPYTREE_SHARE} "*html images" ${STAGEDIR}${DOCSDIR}/
+	@cd ${WRKSRC}/contrib/&&${COPYTREE_SHARE} . ${STAGEDIR}${EXAMPLESDIR}/
 
 .include <bsd.port.mk>
