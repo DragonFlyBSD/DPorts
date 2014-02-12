@@ -1,5 +1,5 @@
 # Created by: Scott Flatman <sf@dsinw.com>
-# $FreeBSD: benchmarks/stream/Makefile 338720 2014-01-05 00:44:53Z bapt $
+# $FreeBSD$
 
 PORTNAME=	stream
 PORTVERSION=	5.10
