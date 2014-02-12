@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/glark/Makefile 341454 2014-01-27 21:18:21Z mat $
+# $FreeBSD$
 
 PORTNAME=	glark
 PORTVERSION=	1.8.0
