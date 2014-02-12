@@ -1,5 +1,5 @@
 # Created by: Sean Chittenden <seanc@FreeBSD.org>
-# $FreeBSD: databases/wfb2sql/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD$
 
 PORTNAME=	wfb2sql
 PORTVERSION=	0.6
