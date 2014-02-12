@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: net/irrd/files/irrd.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/net/irrd/files/irrd.in 340872 2014-01-24 00:14:07Z mat $
 
 # PROVIDE: irrd
 # REQUIRE: DAEMON
