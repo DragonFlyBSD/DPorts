@@ -1,5 +1,5 @@
 # Created by: Dennis Herrmann <dhn@FreeBSD.org>
-# $FreeBSD: x11-wm/i3/Makefile 341139 2014-01-25 23:44:40Z bapt $
+# $FreeBSD$
 
 PORTNAME=	i3
 DISTVERSION=	4.7.2
