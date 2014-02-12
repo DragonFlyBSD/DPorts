@@ -1,5 +1,5 @@
 # Created by: Patrick Gardella <patrick@FreeBSD.org>
-# $FreeBSD: comms/xlog/Makefile 334143 2013-11-18 04:45:57Z danilo $
+# $FreeBSD$
 
 PORTNAME=	xlog
 PORTVERSION=	2.0.11
