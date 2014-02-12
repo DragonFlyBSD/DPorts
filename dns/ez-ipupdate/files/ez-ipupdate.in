@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: dns/ez-ipupdate/files/ez-ipupdate.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/dns/ez-ipupdate/files/ez-ipupdate.in 340872 2014-01-24 00:14:07Z mat $
 #
 
 # PROVIDE: ez-ipupdate
