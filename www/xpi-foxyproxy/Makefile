@@ -1,5 +1,5 @@
 # Created by: Ashish Shukla <wahjava@gmail.com>
-# $FreeBSD: www/xpi-foxyproxy/Makefile 341205 2014-01-26 15:09:46Z miwi $
+# $FreeBSD$
 
 PORTNAME=	foxyproxy
 PORTVERSION=	4.1.1
