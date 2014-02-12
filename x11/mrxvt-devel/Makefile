@@ -1,5 +1,5 @@
 # Created by: Lars Engels <lars.engels@0x20.net>
-# $FreeBSD: x11/mrxvt-devel/Makefile 338165 2013-12-30 20:10:26Z lme $
+# $FreeBSD$
 
 PORTNAME=	mrxvt-devel
 PORTVERSION=	0.5.4
