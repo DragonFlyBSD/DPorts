@@ -1,5 +1,5 @@
 # Created by: Remington Lang <MrL0Lz@gmail.com>
-# $FreeBSD: deskutils/superswitcher/Makefile 341871 2014-01-30 18:58:26Z antoine $
+# $FreeBSD$
 
 PORTNAME=	superswitcher
 PORTVERSION=	0.6
