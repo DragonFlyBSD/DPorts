@@ -1,4 +1,4 @@
-# $FreeBSD: net/libosip2/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
+# $FreeBSD$
 
 PORTNAME=	libosip2
 PORTVERSION=	4.0.0
