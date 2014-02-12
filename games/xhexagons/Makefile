@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: games/xhexagons/Makefile 333696 2013-11-13 15:01:13Z danilo $
+# $FreeBSD$
 
 PORTNAME=	xhexagons
 PORTVERSION=	5.5.2
