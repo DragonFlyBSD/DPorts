@@ -1,5 +1,5 @@
 # Created by: vshankar
-# $FreeBSD: www/mod_flickr/Makefile 336589 2013-12-15 22:11:20Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	mod_flickr
 PORTVERSION=	1.0
