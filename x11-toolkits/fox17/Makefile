@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: x11-toolkits/fox17/Makefile 339150 2014-01-08 15:29:32Z gahr $
+# $FreeBSD$
 
 PORTNAME=	fox
 PORTVERSION=	1.7.45
