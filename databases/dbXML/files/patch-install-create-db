@@ -1,4 +1,4 @@
-$FreeBSD: databases/dbXML/files/patch-install-create-db 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/databases/dbXML/files/patch-install-create-db 340725 2014-01-22 17:40:44Z mat $
 
 --- install/create-db.orig	2011-06-03 19:41:59.000000000 -0700
 +++ install/create-db	2011-06-03 19:43:04.000000000 -0700
