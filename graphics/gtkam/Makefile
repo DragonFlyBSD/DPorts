@@ -1,5 +1,5 @@
 # Created by: ports@FreeBSD.org
-# $FreeBSD: graphics/gtkam/Makefile 340074 2014-01-17 16:56:53Z miwi $
+# $FreeBSD$
 
 PORTNAME=	gtkam
 PORTVERSION=	0.2.0
