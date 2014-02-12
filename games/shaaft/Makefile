@@ -1,5 +1,5 @@
 # Created by: Kirill Ponomarew <krion@FreeBSD.org>
-# $FreeBSD: games/shaaft/Makefile 336995 2013-12-20 10:42:42Z pawel $
+# $FreeBSD$
 
 PORTNAME=	shaaft
 PORTVERSION=	0.5.0
