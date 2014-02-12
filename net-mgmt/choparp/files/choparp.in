@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: net-mgmt/choparp/files/choparp.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/net-mgmt/choparp/files/choparp.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: choparp
 # REQUIRE: LOGIN
