@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer
-# $FreeBSD: www/rubygem-rfacebook/Makefile 332057 2013-10-30 03:04:19Z swills $
+# $FreeBSD$
 
 PORTNAME=	rfacebook
 PORTVERSION=	0.9.8
