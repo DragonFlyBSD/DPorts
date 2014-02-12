@@ -1,5 +1,5 @@
 # Created by: Yoshiro MIHIRA <sanpei@sanpei.org>
-# $FreeBSD: textproc/cdif/Makefile 341161 2014-01-26 11:57:13Z mat $
+# $FreeBSD$
 
 PORTNAME=		cdif
 PORTVERSION=		1.19
