@@ -1,4 +1,4 @@
-# $FreeBSD: editors/rox-edit/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	rox-edit
 PORTVERSION=	2.2
