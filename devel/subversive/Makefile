@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: devel/subversive/Makefile 340897 2014-01-24 13:55:43Z ale $
+# $FreeBSD$
 
 PORTNAME=	subversive
 PORTVERSION=	1.1.2
