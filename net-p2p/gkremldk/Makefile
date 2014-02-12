@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: net-p2p/gkremldk/Makefile 327758 2013-09-20 22:28:25Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gkremldk
 PORTVERSION=	0.9.8
