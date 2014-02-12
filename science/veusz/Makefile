@@ -1,5 +1,5 @@
 # Created by: Stas Timokhin <devel@stasyan.com>
-# $FreeBSD: science/veusz/Makefile 337192 2013-12-22 14:33:44Z makc $
+# $FreeBSD$
 
 PORTNAME=	veusz
 PORTVERSION=	1.19.1
