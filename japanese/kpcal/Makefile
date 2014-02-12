@@ -1,5 +1,5 @@
 # Created by: Yoichi NAKAYAMA <yoichi@eken.phys.nagoya-u.ac.jp>
-# $FreeBSD: japanese/kpcal/Makefile 336902 2013-12-19 13:30:13Z pawel $
+# $FreeBSD$
 
 PORTNAME=	kpcal
 PORTVERSION=	2.0
