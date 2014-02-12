@@ -1,5 +1,5 @@
 # Created by: Yinghong.Liu <liu_yinghong@yahoo.com.cn>
-# $FreeBSD: devel/qdevelop/Makefile 334926 2013-11-26 12:58:55Z makc $
+# $FreeBSD$
 
 PORTNAME=	qdevelop
 PORTVERSION=	0.28
