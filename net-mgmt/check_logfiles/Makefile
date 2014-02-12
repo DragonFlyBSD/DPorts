@@ -1,4 +1,4 @@
-# $FreeBSD: net-mgmt/check_logfiles/Makefile 341123 2014-01-25 22:09:37Z bapt $
+# $FreeBSD$
 
 PORTNAME=	check_logfiles
 PORTVERSION=	3.4.3.1
