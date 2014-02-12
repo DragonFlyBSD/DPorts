@@ -1,5 +1,5 @@
 # Created by: Gasol Wu <gasol.wu@gmail.com>
-# $FreeBSD: devel/pecl-inotify/Makefile 338891 2014-01-06 15:08:43Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	inotify
 PORTVERSION=	0.1.6
