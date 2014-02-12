@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: games/moonlander/Makefile 330841 2013-10-19 03:04:34Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	moonlander
 PORTVERSION=	1.0
