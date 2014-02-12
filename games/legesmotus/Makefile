@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/legesmotus/Makefile 330826 2013-10-19 02:11:45Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	legesmotus
 PORTVERSION=	0.4.0
