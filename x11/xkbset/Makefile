@@ -1,5 +1,5 @@
 # Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-# $FreeBSD: x11/xkbset/Makefile 341304 2014-01-26 23:12:29Z stephen $
+# $FreeBSD$
 
 PORTNAME=	xkbset
 PORTVERSION=	0.5
