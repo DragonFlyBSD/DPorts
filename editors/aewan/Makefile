@@ -1,5 +1,5 @@
 # Created by: krion
-# $FreeBSD: editors/aewan/Makefile 340979 2014-01-25 01:19:27Z bapt $
+# $FreeBSD$
 
 PORTNAME=	aewan
 PORTVERSION=	1.0.01
