@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: textproc/p5-Text-HikiDoc/Makefile 340908 2014-01-24 14:59:10Z mat $
+# $FreeBSD$
 
 PORTNAME=	Text-HikiDoc
 PORTVERSION=	1.021
