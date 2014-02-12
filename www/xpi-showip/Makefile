@@ -1,5 +1,5 @@
 # Created by: Barbara Guida <bar@FreeBSD.org>
-# $FreeBSD: www/xpi-showip/Makefile 341216 2014-01-26 15:13:24Z miwi $
+# $FreeBSD$
 
 PORTNAME=	showip
 PORTVERSION=	2.0
