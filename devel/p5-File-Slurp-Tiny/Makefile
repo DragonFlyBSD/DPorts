@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-File-Slurp-Tiny/Makefile 340777 2014-01-23 03:27:14Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	File-Slurp-Tiny
 PORTVERSION=	0.003
