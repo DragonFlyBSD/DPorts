@@ -1,5 +1,5 @@
 # Created by: Johannes Meixner <xmj@chaot.net>
-# $FreeBSD: math/py-fastcluster/Makefile 336815 2013-12-18 11:12:40Z wg $
+# $FreeBSD$
 
 PORTNAME=	fastcluster
 PORTVERSION=	1.1.13
