@@ -1,5 +1,5 @@
 # Created by: Yuichiro AIZAWA <yaizawa@mdbl.sfc.keio.ac.jp>
-# $FreeBSD: print/p5-PDF-Template/Makefile 338799 2014-01-05 16:55:04Z az $
+# $FreeBSD$
 
 PORTNAME=	PDF-Template
 PORTVERSION=	0.22
