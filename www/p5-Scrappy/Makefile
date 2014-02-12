@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Scrappy/Makefile 341724 2014-01-29 12:23:20Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Scrappy
 PORTVERSION=	0.94112090
