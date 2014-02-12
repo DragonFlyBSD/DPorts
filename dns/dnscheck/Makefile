@@ -1,5 +1,5 @@
 # Created by: Jarrod Sayers <jarrod@netleader.com.au>
-# $FreeBSD: dns/dnscheck/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD$
 
 PORTNAME=	dnscheck
 PORTVERSION=	1.3
