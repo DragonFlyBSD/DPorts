@@ -1,5 +1,5 @@
 # Created by: Eric Turgeon <ericturgeon.bsd at gmail.com>
-# $FreeBSD: audio/lxmusic/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD$
 
 PORTNAME=	lxmusic
 PORTVERSION=	0.4.5
