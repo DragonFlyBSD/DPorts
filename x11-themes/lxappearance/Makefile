@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: x11-themes/lxappearance/Makefile 331959 2013-10-29 15:08:43Z pawel $
+# $FreeBSD$
 
 PORTNAME=	lxappearance
 PORTVERSION=	0.5.3
