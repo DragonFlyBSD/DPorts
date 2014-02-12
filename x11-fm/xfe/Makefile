@@ -1,5 +1,5 @@
 # Created by: ptiJo
-# $FreeBSD: x11-fm/xfe/Makefile 337385 2013-12-24 21:22:21Z kwm $
+# $FreeBSD$
 
 PORTNAME=	xfe
 PORTVERSION=	1.37
