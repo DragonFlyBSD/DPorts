@@ -1,5 +1,5 @@
 # Created by: Thorsten Greiner <thorsten.greiner@web.de>
-# $FreeBSD: sysutils/xfce4-battery-plugin/Makefile 341838 2014-01-30 14:06:32Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	xfce4-battery-plugin
 PORTVERSION=	1.0.5
