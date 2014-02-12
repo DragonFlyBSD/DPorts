@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: games/tomatoes/Makefile 330715 2013-10-18 01:20:48Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	tomatoes
 PORTVERSION=	1.5
