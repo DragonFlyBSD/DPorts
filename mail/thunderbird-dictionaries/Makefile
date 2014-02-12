@@ -1,5 +1,5 @@
 # Created by: Matthew Luckie <mjl@luckie.org.nz>
-# $FreeBSD: mail/thunderbird-dictionaries/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD$
 
 PORTNAME=	thunderbird-dictionaries
 PORTVERSION=	20060220

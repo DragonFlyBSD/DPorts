@@ -1,5 +1,5 @@
 # This file lists the options to not bloat Makefile
-# $FreeBSD: mail/thunderbird-dictionaries/Makefile.options 320028 2013-06-05 21:46:49Z jgh $
+# $FreeBSD$
 
 OPTIONS_MULTI=	DICT
 OPTIONS_MULTI_DICT=	ALL AF_ZA BG CA HR CS DA NL EN_AU EN_CA \

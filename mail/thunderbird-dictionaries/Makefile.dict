@@ -1,5 +1,5 @@
 # This file lists the Dictionary files to not bloat Makefile
-# $FreeBSD: mail/thunderbird-dictionaries/Makefile.dict 320028 2013-06-05 21:46:49Z jgh $
+# $FreeBSD$
 
 AF_ZA_FILE=	spell-af-ZA.xpi
 BG_FILE=	spell-bg.xpi
