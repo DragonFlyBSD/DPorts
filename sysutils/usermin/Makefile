@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/usermin/Makefile 339681 2014-01-14 11:26:38Z olgeni $
+# $FreeBSD$
 
 PORTNAME=	usermin
 PORTVERSION=	1.580
