@@ -1,5 +1,5 @@
 # Created by: Jerry Hicks
-# $FreeBSD: archivers/9e/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
+# $FreeBSD$
 
 PORTNAME=	9e
 PORTVERSION=	1.0
