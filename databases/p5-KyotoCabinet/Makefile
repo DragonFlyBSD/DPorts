@@ -1,5 +1,5 @@
 # Created by: Geraud CONTINSOUZAS <geraud@gcu.info>
-# $FreeBSD: databases/p5-KyotoCabinet/Makefile 341762 2014-01-29 17:18:46Z az $
+# $FreeBSD$
 
 PORTNAME=	KyotoCabinet
 PORTVERSION=	1.18
