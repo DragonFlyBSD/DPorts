@@ -1,5 +1,5 @@
 # Created by: Michael Nottebrock <lofi@FreeBSD.org>
-# $FreeBSD: security/pinentry/Makefile 333418 2013-11-10 17:49:59Z makc $
+# $FreeBSD$
 
 PORTNAME=	pinentry
 PORTVERSION=	0.8.3
