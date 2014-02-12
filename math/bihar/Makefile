@@ -1,5 +1,5 @@
 # Created by: Pedro Giffuni S.
-# $FreeBSD: math/bihar/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	bihar
 PORTVERSION=	1.0
