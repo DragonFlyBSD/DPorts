@@ -1,5 +1,5 @@
 # Created by: James Bailie <jimmy@mammothcheese.ca>
-# $FreeBSD: devel/libdombey/Makefile 329801 2013-10-08 16:01:12Z tabthorpe $
+# $FreeBSD$
 
 PORTNAME=	libdombey
 PORTVERSION=	2.7
