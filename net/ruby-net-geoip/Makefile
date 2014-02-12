@@ -1,5 +1,5 @@
 # Created by: Sean Chittenden <seanc@FreeBSD.org>
-# $FreeBSD: net/ruby-net-geoip/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	net-geoip
 PORTVERSION=	0.07
