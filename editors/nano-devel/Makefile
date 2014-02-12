@@ -1,4 +1,4 @@
-# $FreeBSD: editors/nano-devel/Makefile 328632 2013-09-28 23:56:01Z eadler $
+# $FreeBSD$
 
 PORTNAME=	nano
 PORTVERSION=	2.3.2
@@ -19,6 +19,8 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--docdir=${DOCSDIR}
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+
+OPTIONS_DEFINE=	DOCS NLS 
 
 .include <bsd.port.options.mk>
 
