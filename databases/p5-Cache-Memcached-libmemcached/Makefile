@@ -1,5 +1,5 @@
 # Created by: Dmitry Liakh <dliakh@ukr.net>
-# $FreeBSD: databases/p5-Cache-Memcached-libmemcached/Makefile 341762 2014-01-29 17:18:46Z az $
+# $FreeBSD$
 
 PORTNAME=	Cache-Memcached-libmemcached
 PORTVERSION=	0.02011
