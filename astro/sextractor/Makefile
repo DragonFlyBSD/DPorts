@@ -1,5 +1,5 @@
 # Created by: Mathias Monnerville <mathias@monnerville.com>
-# $FreeBSD: astro/sextractor/Makefile 327701 2013-09-20 13:14:04Z bapt $
+# $FreeBSD$
 
 PORTNAME=	sextractor
 PORTVERSION=	2.5.0
