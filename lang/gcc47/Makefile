@@ -1,5 +1,5 @@
 # Created by: Gerald Pfeifer <gerald@FreeBSD.org>
-# $FreeBSD: lang/gcc47/Makefile 341744 2014-01-29 14:54:52Z danfe $
+# $FreeBSD$
 
 PORTNAME=	gcc47
 PORTVERSION=	4.7.4.20140118
