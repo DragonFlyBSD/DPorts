@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: www/p5-WWW-Robot/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	WWW-Robot
 PORTVERSION=	0.026
