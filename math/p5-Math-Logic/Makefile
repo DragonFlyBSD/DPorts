@@ -1,5 +1,5 @@
 # Created by: Mario S F Ferreira <lioux@linf.unb.br> et al.
-# $FreeBSD: math/p5-Math-Logic/Makefile 332813 2013-11-05 06:56:18Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Math-Logic
 PORTVERSION=	1.19
