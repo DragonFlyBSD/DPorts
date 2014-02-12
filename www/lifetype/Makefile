@@ -1,5 +1,5 @@
 # Created by: clsung
-# $FreeBSD: www/lifetype/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	lifetype
 PORTVERSION=	1.2.11
