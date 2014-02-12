@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: games/barbie_seahorse_adventures/files/barbie_seahorse_adventures.in 335793 2013-12-06 23:38:48Z nemysis $
+# $FreeBSD: head/games/barbie_seahorse_adventures/files/barbie_seahorse_adventures.in 335793 2013-12-06 23:38:48Z nemysis $
 #
 
 cd "%%DATADIR%%"

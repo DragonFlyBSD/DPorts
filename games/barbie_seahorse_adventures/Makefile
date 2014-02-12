@@ -1,5 +1,5 @@
 # Created by: nemysis@gmx.ch
-# $FreeBSD: games/barbie_seahorse_adventures/Makefile 335793 2013-12-06 23:38:48Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	barbie_seahorse_adventures
 PORTVERSION=	1.0
