@@ -1,5 +1,5 @@
 # Created by: David K. Gerry
-# $FreeBSD: accessibility/eflite/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	eflite
 PORTVERSION=	0.4.1
