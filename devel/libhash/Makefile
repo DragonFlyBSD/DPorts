@@ -1,5 +1,5 @@
 # Created by: Andrew <andrew@ugh.net.au>
-# $FreeBSD: devel/libhash/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
+# $FreeBSD$
 
 PORTNAME=	libhash
 PORTVERSION=	1.0.3
