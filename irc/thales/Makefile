@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <tux@pinguru.net>
-# $FreeBSD: irc/thales/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	thales
 PORTVERSION=	1.0
