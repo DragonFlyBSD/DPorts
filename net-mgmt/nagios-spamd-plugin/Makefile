@@ -1,5 +1,5 @@
 # Created by: arved
-# $FreeBSD: net-mgmt/nagios-spamd-plugin/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	nagios-spamd-plugin
 PORTVERSION=	1.4
