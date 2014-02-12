@@ -1,4 +1,4 @@
-# $FreeBSD: lang/clojure-contrib/Makefile 327741 2013-09-20 19:53:09Z bapt $
+# $FreeBSD$
 
 PORTNAME=	clojure-contrib
 PORTVERSION=	1.2.0
