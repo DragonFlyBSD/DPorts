@@ -1,5 +1,5 @@
 # Created by: clive@FreeBSD.org
-# $FreeBSD: databases/p5-DBD-ODBC/Makefile 339866 2014-01-15 23:42:56Z bapt $
+# $FreeBSD$
 
 PORTNAME=	DBD-ODBC
 PORTVERSION=	1.45
