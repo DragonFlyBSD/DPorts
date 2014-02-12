@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: sysutils/rej/Makefile 331353 2013-10-23 07:14:05Z ehaupt $
+# $FreeBSD$
 
 PORTNAME=	rej
 PORTVERSION=	0.16
