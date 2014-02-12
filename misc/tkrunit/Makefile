@@ -1,5 +1,5 @@
 # Created by: Stephen Farrell <steve@farrell.org>
-# $FreeBSD: misc/tkrunit/Makefile 333002 2013-11-06 15:13:25Z gahr $
+# $FreeBSD$
 
 PORTNAME=	tkRunIt
 PORTVERSION=	0.94.1
