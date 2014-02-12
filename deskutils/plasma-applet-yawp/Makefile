@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/plasma-applet-yawp/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD$
 
 PORTNAME=	yawp
 PORTVERSION=	0.4.5
