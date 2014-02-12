@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: converters/p5-Convert-Morse/Makefile 332379 2013-11-01 14:20:56Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Convert-Morse
 PORTVERSION=	0.06
