@@ -1,5 +1,5 @@
 # Created by: Eygene Ryabinkin <rea-fbsd@codelabs.ru>
-# $FreeBSD: www/trac-datefield/Makefile 341181 2014-01-26 14:31:18Z miwi $
+# $FreeBSD$
 
 PORTNAME=	datefield
 PORTVERSION=	1.0.1
