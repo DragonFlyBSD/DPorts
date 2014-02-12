@@ -1,5 +1,5 @@
 # Created by: Stanislav Sedov <stas@FreeBSD.org>
-# $FreeBSD: graphics/djview4/Makefile 334503 2013-11-21 16:55:54Z makc $
+# $FreeBSD$
 
 PORTNAME=	djview
 PORTVERSION=	4.9
