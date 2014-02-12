@@ -1,5 +1,5 @@
 # Created by: Alexander Timoshenko <gonzo@univ.kiev.ua>
-# $FreeBSD: net-im/tkabber/Makefile 340024 2014-01-17 10:23:28Z gahr $
+# $FreeBSD$
 
 PORTNAME=	tkabber
 PORTVERSION=	0.11.1
