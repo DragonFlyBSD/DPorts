@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-DBIx-Skinny-InflateColumn-DateTime/Makefile 341765 2014-01-29 17:46:33Z az $
+# $FreeBSD$
 
 PORTNAME=	DBIx-Skinny-InflateColumn-DateTime
 PORTVERSION=	0.06
