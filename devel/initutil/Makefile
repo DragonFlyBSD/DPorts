@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/initutil/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	initutil
 PORTVERSION=	2.1.b
