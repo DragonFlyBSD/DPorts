@@ -1,5 +1,5 @@
 # Created by: Matthew Will <mwill@spingen.com>
-# $FreeBSD: devel/cvschangelogbuilder/Makefile 336656 2013-12-16 18:24:49Z glarkin $
+# $FreeBSD$
 
 PORTNAME=	cvschangelogbuilder
 PORTVERSION=	2.5
