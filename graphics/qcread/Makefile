@@ -1,5 +1,5 @@
 # Created by: Bill Fumerola <billf@chc-chimes.com>
-# $FreeBSD: graphics/qcread/Makefile 336931 2013-12-19 15:55:19Z pawel $
+# $FreeBSD$
 
 PORTNAME=	qcread
 PORTVERSION=	0.3
