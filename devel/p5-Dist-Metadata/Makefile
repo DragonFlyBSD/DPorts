@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Dist-Metadata/Makefile 338870 2014-01-06 12:43:03Z az $
+# $FreeBSD$
 
 PORTNAME=	Dist-Metadata
 PORTVERSION=	0.925
