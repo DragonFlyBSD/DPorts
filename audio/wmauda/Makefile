@@ -1,4 +1,4 @@
-# $FreeBSD: audio/wmauda/Makefile 332294 2013-10-31 23:29:56Z garga $
+# $FreeBSD$
 
 PORTNAME=	wmauda
 PORTVERSION=	0.9
