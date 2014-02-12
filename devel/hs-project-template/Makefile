@@ -1,4 +1,4 @@
-# $FreeBSD: devel/hs-project-template/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD$
 
 PORTNAME=	project-template
 PORTVERSION=	0.1.3
