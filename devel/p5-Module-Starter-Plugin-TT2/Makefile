@@ -1,5 +1,5 @@
 # Created by: George Hartzell <hartzell@alerce.com>
-# $FreeBSD: devel/p5-Module-Starter-Plugin-TT2/Makefile 332120 2013-10-30 14:44:54Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Module-Starter-Plugin-TT2
 PORTVERSION=	0.125
