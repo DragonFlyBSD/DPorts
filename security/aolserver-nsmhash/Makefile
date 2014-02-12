@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: security/aolserver-nsmhash/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	nsmhash
 PORTVERSION=	1.1
@@ -19,6 +19,9 @@ WRKSRC=		${WRKDIR}
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
+
+DEPRECATED=	abandonware, messing up on clusters
+EXPIRATION_DATE=	2014-04-03
 
 AOLSERVERBASE?=	aolserver
 LIB_DEPENDS+=	mhash.2:${PORTSDIR}/security/mhash
