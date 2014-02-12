@@ -1,4 +1,4 @@
-# $FreeBSD: cad/logisim/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	logisim
 PORTVERSION=	2.7.1
