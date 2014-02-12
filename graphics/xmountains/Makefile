@@ -1,5 +1,5 @@
 # Created by: proff@iq.org
-# $FreeBSD: graphics/xmountains/Makefile 328263 2013-09-25 10:31:36Z ak $
+# $FreeBSD$
 
 PORTNAME=	xmountains
 PORTVERSION=	2.9
