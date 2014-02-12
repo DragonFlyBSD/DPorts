@@ -1,5 +1,5 @@
 # Created by: Paul Dlug <paul@aps.org>
-# $FreeBSD: net/p5-OAI-Harvester/Makefile 328846 2013-09-30 19:12:58Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	OAI-Harvester
 PORTVERSION=	1.15
