@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Amon2-Plugin-LogDispatch/Makefile 338769 2014-01-05 13:31:10Z az $
+# $FreeBSD$
 
 PORTNAME=	Amon2-Plugin-LogDispatch
 PORTVERSION=	0.01
