@@ -1,5 +1,5 @@
 
-$FreeBSD: astro/wmsun/files/patch-wmSun.c 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/astro/wmsun/files/patch-wmSun.c 340725 2014-01-22 17:40:44Z mat $
 
 --- wmSun.c.orig	Thu Aug 15 18:04:04 2002
 +++ wmSun.c	Thu Aug 15 18:06:24 2002
