@@ -1,4 +1,4 @@
-# $FreeBSD: japanese/postgresql82-man/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD$
 
 PORTNAME=	postgresql82
 PORTVERSION=	8.2.4
