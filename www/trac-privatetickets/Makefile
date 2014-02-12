@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
-# $FreeBSD: www/trac-privatetickets/Makefile 341186 2014-01-26 14:32:32Z miwi $
+# $FreeBSD$
 
 PORTNAME=	privatetickets
 PORTVERSION=	2.0.2
