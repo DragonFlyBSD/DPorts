@@ -1,5 +1,5 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: net/ptunnel/Makefile 341972 2014-01-31 10:10:53Z ehaupt $
+# $FreeBSD$
 
 PORTNAME=	ptunnel
 PORTVERSION=	0.72
