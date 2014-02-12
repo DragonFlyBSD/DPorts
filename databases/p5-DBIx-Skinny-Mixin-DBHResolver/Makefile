@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-DBIx-Skinny-Mixin-DBHResolver/Makefile 341762 2014-01-29 17:18:46Z az $
+# $FreeBSD$
 
 PORTNAME=	DBIx-Skinny-Mixin-DBHResolver
 PORTVERSION=	0.04
