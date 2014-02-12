@@ -1,5 +1,5 @@
 # Created by: Lars Köller <Lars.Koeller@Uni-Bielefeld.DE>
-# $FreeBSD: sysutils/apcupsd/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	apcupsd
 PORTVERSION=	3.14.10
