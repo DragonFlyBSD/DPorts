@@ -1,4 +1,4 @@
-# $FreeBSD: www/coppermine/Makefile 339279 2014-01-09 21:13:02Z danilo $
+# $FreeBSD$
 
 PORTNAME=	coppermine
 PORTVERSION=	1.5.26
