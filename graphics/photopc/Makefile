@@ -1,5 +1,5 @@
 # Created by: Douglas Carmichael <dcarmich@mcs.com>
-# $FreeBSD: graphics/photopc/Makefile 338836 2014-01-06 01:17:01Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	photopc
 PORTVERSION=	3.07
