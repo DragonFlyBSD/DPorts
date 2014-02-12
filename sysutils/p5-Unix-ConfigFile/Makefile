@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: sysutils/p5-Unix-ConfigFile/Makefile 332957 2013-11-06 08:54:17Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Unix-ConfigFile
 PORTVERSION=	0.06
