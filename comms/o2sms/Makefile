@@ -1,5 +1,5 @@
 # Created by: Conor McDermottroe <ports@mcdermottroe.com>
-# $FreeBSD: comms/o2sms/Makefile 327714 2013-09-20 16:03:29Z bapt $
+# $FreeBSD$
 
 PORTNAME=	o2sms
 PORTVERSION=	3.36
