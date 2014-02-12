@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: biology/p5-Bio-NEXUS/Makefile 341989 2014-01-31 12:47:06Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Bio-NEXUS
 PORTVERSION=	0.78
