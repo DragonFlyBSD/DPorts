@@ -1,5 +1,5 @@
 # Created by: torstenb@FreeBSD.org
-# $FreeBSD: editors/joe2/Makefile 341543 2014-01-28 12:56:56Z bapt $
+# $FreeBSD$
 
 PORTNAME=	joe
 PORTVERSION=	2.9.8
