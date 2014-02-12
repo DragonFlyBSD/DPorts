@@ -1,5 +1,5 @@
 # Created by: Masahiro Teramoto <markun@onohara.to>
-# $FreeBSD: textproc/p5-Hatena-Keyword/Makefile 340610 2014-01-21 14:03:59Z mat $
+# $FreeBSD$
 
 PORTNAME=	Hatena-Keyword
 PORTVERSION=	0.05
