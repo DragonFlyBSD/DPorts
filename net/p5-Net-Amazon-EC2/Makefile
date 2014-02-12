@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: net/p5-Net-Amazon-EC2/Makefile 338460 2014-01-02 16:23:36Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Net-Amazon-EC2
 PORTVERSION=	0.24
