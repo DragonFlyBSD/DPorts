@@ -1,5 +1,5 @@
 # Created by: clsung@dragon2.net
-# $FreeBSD: www/p5-CGI-Kwiki/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	CGI-Kwiki
 PORTVERSION=	0.18
