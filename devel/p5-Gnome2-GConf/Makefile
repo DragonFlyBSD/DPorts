@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: devel/p5-Gnome2-GConf/Makefile 331953 2013-10-29 14:32:08Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Gnome2-GConf
 PORTVERSION=	1.044
