@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: graphics/gx/Makefile 340655 2014-01-21 20:38:23Z antoine $
+# $FreeBSD$
 
 PORTNAME=	gx
 PORTVERSION=	0.4.0
