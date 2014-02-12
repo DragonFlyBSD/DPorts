@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: irc/xchat-mircryption/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 #    $MCom: ports/irc/xchat-mircryption/Makefile,v 1.2 2006/10/10 20:22:11 mezz Exp $
 
 PORTNAME=	mircryption
@@ -30,6 +30,8 @@ PLIST_FILES=	lib/xchat/plugins/mircryption.so
 
 PORTDOCS=	README.txt
 PORTEXAMPLES=	mcps_masterkey_on_start.pl
+
+OPTIONS_DEFINE=	DOCS EXAMPLES 
 
 .include <bsd.port.options.mk>
 
