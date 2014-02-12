@@ -1,5 +1,5 @@
 # Created by: Marco Steinbach <coco@executive-computing.de>
-# $FreeBSD: www/redaxo/Makefile 334994 2013-11-27 03:08:05Z danilo $
+# $FreeBSD$
 
 PORTNAME=	redaxo
 PORTVERSION=	4.5.1

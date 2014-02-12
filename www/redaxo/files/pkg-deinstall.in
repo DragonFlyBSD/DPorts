@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: www/redaxo/files/pkg-deinstall.in 322252 2013-07-03 20:13:37Z lippe $
+# $FreeBSD: head/www/redaxo/files/pkg-deinstall.in 322252 2013-07-03 20:13:37Z lippe $
 if [ "$2" == "DEINSTALL" ]; then
 if [ -d %%WWWDIR%% ]; then
 if [ -z "${BATCH}" ]; then
