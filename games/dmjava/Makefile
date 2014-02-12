@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <lehmann@ans-netz.de>
-# $FreeBSD: games/dmjava/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	dmjava
 PORTVERSION=	1.05
