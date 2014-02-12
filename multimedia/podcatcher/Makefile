@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: multimedia/podcatcher/Makefile 330898 2013-10-19 16:06:34Z bapt $
+# $FreeBSD$
 
 PORTNAME=	podcatcher
 PORTVERSION=	3.1.6
