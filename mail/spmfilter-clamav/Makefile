@@ -1,5 +1,5 @@
 # Created by: Axel Steiner <ast@treibsand.com>
-# $FreeBSD: mail/spmfilter-clamav/Makefile 342010 2014-01-31 15:50:37Z pawel $
+# $FreeBSD$
 
 PORTNAME=	spmfilter-clamav
 PORTVERSION=	0.2.3
