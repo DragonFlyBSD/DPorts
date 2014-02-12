@@ -1,5 +1,5 @@
 # Created by: giffunip@asme.org
-# $FreeBSD: devel/flick/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	flick
 PORTVERSION=	2.1
@@ -22,6 +22,9 @@ GNU_CONFIGURE=	yes
 MAKEFILE=	GNUmakefile
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 post-patch:
