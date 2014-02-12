@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-LeakTrace/Makefile 328870 2013-09-30 20:41:25Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Test-LeakTrace
 PORTVERSION=	0.14
