@@ -1,5 +1,5 @@
 # Created by: Brian Somers <brian@FreeBSD.org>
-# $FreeBSD: news/leafnode/Makefile 332195 2013-10-31 02:22:14Z mandree $
+# $FreeBSD$
 
 PORTNAME=	leafnode
 DISTVERSION=	1.11.10
