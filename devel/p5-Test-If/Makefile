@@ -1,5 +1,5 @@
 # Created by: Anes Mukhametov <anes@anes.su>
-# $FreeBSD: devel/p5-Test-If/Makefile 333887 2013-11-15 16:41:49Z mat $
+# $FreeBSD$
 
 PORTNAME=	Test-If
 PORTVERSION=	0.01
