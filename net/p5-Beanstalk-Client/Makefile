@@ -1,4 +1,4 @@
-# $FreeBSD: net/p5-Beanstalk-Client/Makefile 338810 2014-01-05 17:53:15Z az $
+# $FreeBSD$
 
 PORTNAME=	Beanstalk-Client
 PORTVERSION=	1.06
