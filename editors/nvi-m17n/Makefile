@@ -1,5 +1,5 @@
 # Created by: Jun-ichiro itojun Itoh <itojun@itojun.org>
-# $FreeBSD: editors/nvi-m17n/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	nvi
 PORTVERSION=	1.79.20040608
