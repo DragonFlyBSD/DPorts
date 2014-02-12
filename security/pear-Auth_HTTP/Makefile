@@ -1,4 +1,4 @@
-# $FreeBSD: security/pear-Auth_HTTP/Makefile 334871 2013-11-25 17:59:58Z antoine $
+# $FreeBSD$
 
 PORTNAME=	Auth_HTTP
 PORTVERSION=	2.1.8
