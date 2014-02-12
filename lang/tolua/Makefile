@@ -1,5 +1,5 @@
 # Created by: Edwin Groothuis <edwin@mavetju.org>
-# $FreeBSD: lang/tolua/Makefile 341134 2014-01-25 23:07:49Z bapt $
+# $FreeBSD$
 
 PORTNAME=	tolua
 PORTVERSION=	5.2.0
