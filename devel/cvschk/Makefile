@@ -1,5 +1,5 @@
 # Created by: Matthias Andree <matthias.andree@gmx.de>
-# $FreeBSD: devel/cvschk/Makefile 336430 2013-12-14 09:52:41Z mandree $
+# $FreeBSD$
 
 PORTNAME=	cvschk
 PORTVERSION=	1.12
