@@ -1,5 +1,5 @@
 # Created by: Shaun Amott <shaun@FreeBSD.org>
-# $FreeBSD: emulators/x49gp/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 # Note: sdcard64.tar.gz contains just an empty 64MB FAT-16 disk image
 
