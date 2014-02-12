@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov <andy@FreeBSD.org>
-# $FreeBSD: textproc/chpp/Makefile 334157 2013-11-18 08:09:05Z bsam $
+# $FreeBSD$
 
 PORTNAME=	chpp
 PORTVERSION=	0.3.5
