@@ -1,5 +1,5 @@
 # Created by: Gabor Kovesdan
-# $FreeBSD: audio/gnuitar/Makefile 339955 2014-01-16 18:23:42Z antoine $
+# $FreeBSD$
 
 PORTNAME=	gnuitar
 PORTVERSION=	0.3.2
