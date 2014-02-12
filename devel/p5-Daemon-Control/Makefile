@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Daemon-Control/Makefile 328856 2013-09-30 19:58:55Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Daemon-Control
 PORTVERSION=	0.001.000
