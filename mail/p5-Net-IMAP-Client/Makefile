@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: mail/p5-Net-IMAP-Client/Makefile 340795 2014-01-23 03:28:42Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Net-IMAP-Client
 PORTVERSION=	0.9504
