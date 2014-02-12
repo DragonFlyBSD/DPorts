@@ -1,5 +1,5 @@
 # Created by: Lars Engels <lme@FreeBSD.org>
-# $FreeBSD: sysutils/quicksynergy/Makefile 342204 2014-02-01 19:02:12Z antoine $
+# $FreeBSD$
 
 PORTNAME=	quicksynergy
 PORTVERSION=	0.9.0
