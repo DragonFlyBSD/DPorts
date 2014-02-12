@@ -1,5 +1,5 @@
 # Created by: Ganael Laplanche <ganael.laplanche@martymac.org>
-# $FreeBSD: games/triplane/Makefile 332085 2013-10-30 07:54:59Z martymac $
+# $FreeBSD$
 
 PORTNAME=	triplane
 PORTVERSION=	1.08.r20130224
