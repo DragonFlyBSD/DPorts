@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: net/mosh/Makefile 339703 2014-01-14 17:46:52Z zi $
+# $FreeBSD$
 
 PORTNAME=	mosh
 PORTVERSION=	1.2.4
