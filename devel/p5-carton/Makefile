@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-carton/Makefile 340317 2014-01-19 15:46:51Z kuriyama $
+# $FreeBSD$
 
 PORTNAME=	carton
 PORTVERSION=	1.0.12
