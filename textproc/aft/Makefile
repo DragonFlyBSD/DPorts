@@ -1,5 +1,5 @@
 # Created by: Alan Eldridge <alane@FreeBSD.org>
-# $FreeBSD: textproc/aft/Makefile 341120 2014-01-25 22:03:15Z mat $
+# $FreeBSD$
 
 PORTNAME=	aft
 PORTVERSION=	5.098
