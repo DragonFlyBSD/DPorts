@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/sam2p/Makefile 330098 2013-10-11 19:59:27Z danilo $
+# $FreeBSD$
 
 PORTNAME=	sam2p
 PORTVERSION=	0.49.2
