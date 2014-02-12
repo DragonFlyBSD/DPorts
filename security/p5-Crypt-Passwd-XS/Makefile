@@ -1,4 +1,4 @@
-# $FreeBSD: security/p5-Crypt-Passwd-XS/Makefile 334254 2013-11-18 19:31:36Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Crypt-Passwd-XS
 PORTVERSION=	0.601
