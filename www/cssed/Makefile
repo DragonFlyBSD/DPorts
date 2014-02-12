@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: www/cssed/Makefile 336963 2013-12-19 21:33:08Z pawel $
+# $FreeBSD$
 
 PORTNAME=	cssed
 PORTVERSION=	0.4.0
