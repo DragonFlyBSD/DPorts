@@ -1,5 +1,5 @@
 # Created by: Khairil Yusof <kaeru@inigo-tech.com>
-# $FreeBSD: deskutils/tagutils/Makefile 342182 2014-02-01 16:16:16Z miwi $
+# $FreeBSD$
 
 PORTNAME=	tagutils
 PORTVERSION=	0.3.0
