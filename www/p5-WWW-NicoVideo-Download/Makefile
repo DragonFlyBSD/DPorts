@@ -1,5 +1,5 @@
 # Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
-# $FreeBSD: www/p5-WWW-NicoVideo-Download/Makefile 338767 2014-01-05 13:23:32Z az $
+# $FreeBSD$
 
 PORTNAME=	WWW-NicoVideo-Download
 PORTVERSION=	0.06
