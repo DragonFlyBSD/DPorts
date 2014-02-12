@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: devel/p5-Pod-Coverage-Moose/Makefile 338221 2013-12-31 04:26:02Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Pod-Coverage-Moose
 PORTVERSION=	0.05
