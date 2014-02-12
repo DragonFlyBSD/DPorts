@@ -1,5 +1,5 @@
 # Created by: buganini@gmail.com
-# $FreeBSD: security/chntpw/Makefile 335103 2013-11-28 15:48:46Z jadawin $
+# $FreeBSD$
 
 PORTNAME=	chntpw
 PORTVERSION=	110511
