@@ -1,5 +1,5 @@
 # Created by: dchapes@ddm.on.ca
-# $FreeBSD: emulators/vice/Makefile 335674 2013-12-05 17:11:14Z dinoex $
+# $FreeBSD$
 
 PORTNAME=	vice
 PORTVERSION=	2.4
