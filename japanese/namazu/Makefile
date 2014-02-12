@@ -1,5 +1,5 @@
 # Created by: Seiichirou Hiraoka
-# $FreeBSD: japanese/namazu/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD$
 
 PORTNAME=	namazu
 PORTVERSION=	1.3.0.11
