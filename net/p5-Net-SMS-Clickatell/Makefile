@@ -1,5 +1,5 @@
 # Created by: John Bayly <freebsd.ports@tipstrade.net>
-# $FreeBSD: net/p5-Net-SMS-Clickatell/Makefile 338754 2014-01-05 12:20:02Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-SMS-Clickatell
 PORTVERSION=	0.05
