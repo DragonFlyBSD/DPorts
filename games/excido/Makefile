@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/excido/Makefile 337464 2013-12-25 23:29:34Z antoine $
+# $FreeBSD$
 
 PORTNAME=	excido
 PORTVERSION=	0.1.5c
