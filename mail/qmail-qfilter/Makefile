@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@FreeBSD.org>
-# $FreeBSD: mail/qmail-qfilter/Makefile 341864 2014-01-30 17:50:25Z pawel $
+# $FreeBSD$
 
 PORTNAME=	qmail-qfilter
 PORTVERSION=	2.1
