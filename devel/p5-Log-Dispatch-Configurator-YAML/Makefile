@@ -1,5 +1,5 @@
 # Created by: Oleg Mamontov <oleg@mamontov.net>
-# $FreeBSD: devel/p5-Log-Dispatch-Configurator-YAML/Makefile 339224 2014-01-09 13:14:30Z az $
+# $FreeBSD$
 
 PORTNAME=	Log-Dispatch-Configurator-YAML
 PORTVERSION=	0.03
