@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: benchmarks/bonnie++/Makefile 335728 2013-12-06 09:50:50Z martymac $
+# $FreeBSD$
 
 PORTNAME=	bonnie++
 PORTVERSION=	1.97
@@ -22,6 +22,8 @@ SHEBANG_FILES=	bon_csv2txt.in
 WRKSRC=	${WRKDIR}/${PORTNAME}-1.97.1
 
 PORTDOCS=	readme.html
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
