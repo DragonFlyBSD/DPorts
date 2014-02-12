@@ -1,5 +1,5 @@
 # Created by: Rodrigo Graeff <delphus@gmail.com>
-# $FreeBSD: converters/ytnef/Makefile 339246 2014-01-09 14:49:45Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ytnef
 PORTVERSION=	2.6
