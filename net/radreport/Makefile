@@ -1,5 +1,5 @@
 # Created by: Kelly Yancey <kbyanc@posi.net>
-# $FreeBSD: net/radreport/Makefile 342041 2014-01-31 17:08:19Z antoine $
+# $FreeBSD$
 
 PORTNAME=	radreport
 PORTVERSION=	1.3
