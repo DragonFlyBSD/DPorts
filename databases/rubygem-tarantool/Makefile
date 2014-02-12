@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: databases/rubygem-tarantool/Makefile 338470 2014-01-02 19:43:39Z swills $
+# $FreeBSD$
 
 PORTNAME=	tarantool
 PORTVERSION=	0.4.3.3
