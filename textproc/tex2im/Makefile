@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/tex2im/Makefile 342331 2014-02-02 16:27:35Z pawel $
+# $FreeBSD$
 
 PORTNAME=	tex2im
 PORTVERSION=	1.8
