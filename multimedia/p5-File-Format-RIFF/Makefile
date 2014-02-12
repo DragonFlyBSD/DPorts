@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: multimedia/p5-File-Format-RIFF/Makefile 332815 2013-11-05 07:28:38Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	File-Format-RIFF
 DISTVERSION=	1.0.1
