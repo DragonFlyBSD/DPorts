@@ -1,5 +1,5 @@
 # Created by: Marcelo/Porks Rossi <marcelorossi@gmail.com>
-# $FreeBSD: www/monast/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	monast
 PORTVERSION=	1.4
