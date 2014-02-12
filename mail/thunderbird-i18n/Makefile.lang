@@ -1,4 +1,4 @@
-# $FreeBSD: mail/thunderbird-i18n/Makefile.lang 336446 2013-12-14 13:42:06Z flo $
+# $FreeBSD$
 
 THUNDERBIRD_I18N_ALL_=	ar ast be bg bn-BD br ca cs da de el en-GB en-US es-AR \
 			es-ES et eu fi fr fy-NL ga-IE gd gl he hr hu hy-AM id  \

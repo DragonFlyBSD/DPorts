@@ -1,4 +1,4 @@
-# $FreeBSD: mail/thunderbird-i18n/Makefile.option 336446 2013-12-14 13:42:06Z flo $
+# $FreeBSD$
 
 OPTIONS_DEFINE=	LANG_AR \
 		LANG_AST \
