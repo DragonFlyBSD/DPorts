@@ -1,4 +1,4 @@
-# $FreeBSD: mail/missey/files/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 SRCS_M	=	main.c pop3d.c auth.c plcat.c mydaemon.c listen.c mylog.c cfg.c checkip.c
 SRCS_B	=	bent.c
@@ -17,8 +17,8 @@ $(MPS):	$(OBJS_M)
 $(BENT):	$(OBJS_B)
 	$(CC) ${CFLAGS} ${PTHREAD_CFLAGS} -o $(BENT) $(SRCS_B) ${PTHREAD_LIBS}
 install:
-	@${MKDIR} -p $(PREFIX)/etc/mps/
-	${INSTALL_DATA} $(WRKSRC)/pop3d.conf $(PREFIX)/etc/mps/pop3d.conf-dist
-	${INSTALL_PROGRAM} $(WRKSRC)/$(MPS) $(PREFIX)/sbin/$(MPS)
-	${INSTALL_PROGRAM} $(WRKSRC)/$(BENT) $(PREFIX)/sbin/$(BENT)
+	@${MKDIR} -p $(DESTDIR)$(PREFIX)/etc/mps/
+	${INSTALL_DATA} $(WRKSRC)/pop3d.conf $(DESTDIR)$(PREFIX)/etc/mps/pop3d.conf-dist
+	${INSTALL_PROGRAM} $(WRKSRC)/$(MPS) $(DESTDIR)$(PREFIX)/sbin/$(MPS)
+	${INSTALL_PROGRAM} $(WRKSRC)/$(BENT) $(DESTDIR)$(PREFIX)/sbin/$(BENT)
 

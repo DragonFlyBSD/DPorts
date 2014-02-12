@@ -1,5 +1,5 @@
 # Created by: delphij@FreeBSD.org.cn
-# $FreeBSD: mail/missey/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	missey
 PORTVERSION=	1.2.0
@@ -23,7 +23,6 @@ PLIST_DIRS=	etc/mps
 
 USE_RC_SUBR=	mps
 
-NO_STAGE=	yes
 post-extract:
 	@${MV} ${WRKDIR}/mps/src ${WRKSRC}
 	@${RM} -r ${WRKDIR}/mps
