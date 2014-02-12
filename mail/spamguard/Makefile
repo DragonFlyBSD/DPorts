@@ -1,5 +1,5 @@
 # Created by: Omer Faruk Sen <ofsen@enderunix.org>
-# $FreeBSD: mail/spamguard/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	spamguard
 PORTVERSION=	1.8
