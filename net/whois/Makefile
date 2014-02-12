@@ -1,5 +1,5 @@
 # Created by: Filippo Natali <filippo@widestore.net>
-# $FreeBSD: net/whois/Makefile 340716 2014-01-22 15:21:59Z madpilot $
+# $FreeBSD$
 
 PORTNAME=	whois
 PORTVERSION=	5.0.23
