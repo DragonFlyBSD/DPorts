@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/openxcom/Makefile 334273 2013-11-18 23:06:27Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	openxcom
 PORTVERSION=	0.9.0
