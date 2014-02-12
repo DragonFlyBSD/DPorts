@@ -1,4 +1,4 @@
-# $FreeBSD: www/rubygem-lighthouse-api/Makefile 332055 2013-10-30 03:02:27Z swills $
+# $FreeBSD$
 
 PORTNAME=	lighthouse-api
 PORTVERSION=	2.0
