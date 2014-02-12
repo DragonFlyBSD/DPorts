@@ -1,5 +1,5 @@
 # Created by: Vsevolod Stakhov <vsevolod@highsecure.ru>
-# $FreeBSD: irc/irssi-devel/Makefile 327736 2013-09-20 18:44:49Z bapt $
+# $FreeBSD$
 
 PORTNAME=	irssi
 PORTVERSION=	20130915
