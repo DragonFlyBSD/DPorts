@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@csie.nctu.edu.tw>
-# $FreeBSD: www/p5-WWW-Scraper-ISBN-Amazon_Driver/Makefile 333353 2013-11-09 22:35:40Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	WWW-Scraper-ISBN-Amazon_Driver
 PORTVERSION=	0.32
