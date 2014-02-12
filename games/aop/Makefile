@@ -1,5 +1,5 @@
 # Created by: Aaron Zauner <az_mail@gmx.at>
-# $FreeBSD: games/aop/Makefile 335616 2013-12-04 10:30:24Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	aop
 PORTVERSION=	0.6
