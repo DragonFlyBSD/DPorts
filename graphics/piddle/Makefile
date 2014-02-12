@@ -1,5 +1,5 @@
 # Created by: dom@happygiraffe.net
-# $FreeBSD: graphics/piddle/Makefile 341885 2014-01-30 20:57:05Z antoine $
+# $FreeBSD$
 
 PORTNAME=	piddle
 PORTVERSION=	1.0.15
