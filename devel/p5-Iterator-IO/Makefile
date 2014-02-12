@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: devel/p5-Iterator-IO/Makefile 332028 2013-10-30 01:38:24Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Iterator-IO
 PORTVERSION=	0.02
