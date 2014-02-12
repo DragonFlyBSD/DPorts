@@ -1,5 +1,5 @@
 # Created by: Antonio Querubin <tony@lava.net>
-# $FreeBSD: net/dbeacon/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	dbeacon
 PORTVERSION=	0.3.9.1

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: net/dbeacon/files/dbeacon.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/net/dbeacon/files/dbeacon.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: dbeacon
 # REQUIRE: DAEMON
