@@ -1,5 +1,5 @@
 # Created by: mich@FreeBSD.org
-# $FreeBSD: net-mgmt/rate/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	rate
 PORTVERSION=	0.9
