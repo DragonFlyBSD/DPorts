@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/rubygem-abstract/Makefile 332033 2013-10-30 02:26:17Z swills $
+# $FreeBSD$
 
 PORTNAME=	abstract
 PORTVERSION=	1.0.0
