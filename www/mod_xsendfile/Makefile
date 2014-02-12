@@ -1,5 +1,5 @@
 # Created by: Andrew T. Bennett <potatosaladx@gmail.com>
-# $FreeBSD: www/mod_xsendfile/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	mod_xsendfile
 PORTVERSION=	0.12
