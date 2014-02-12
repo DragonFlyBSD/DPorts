@@ -1,5 +1,5 @@
 # Created by: Dmitry Pryadko <d.pryadko@rambler-co.ru>
-# $FreeBSD: dns/py-publicsuffix/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	publicsuffix
 PORTVERSION=	1.0.2
