@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: mail/elmo/Makefile 331057 2013-10-20 19:20:15Z jhale $
+# $FreeBSD$
 
 PORTNAME=	elmo
 PORTVERSION=	1.3.0
@@ -26,8 +26,6 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-MAN1=		elmo.1 elmoconf.pl.1
-
 NLS_CONFIGURE_ON=	--with-libintl-prefix="${LOCALBASE}"
 NLS_CONFIGURE_OFF=	--disable-nls
 NLS_USES=	gettext
@@ -36,7 +34,6 @@ OPTIONS_SUB=	yes
 .if exists(${LOCALBASE}/lib/libgpgme.so) || defined(WITH_GPGME)
 LIB_DEPENDS+=	libgpgme.so:${PORTSDIR}/security/gpgme
 .else
-NO_STAGE=	yes
 pre-everything::
 	@${ECHO_CMD}
 	@${ECHO_CMD} "Define WITH_GPGME=yes to build with gpgme support."
