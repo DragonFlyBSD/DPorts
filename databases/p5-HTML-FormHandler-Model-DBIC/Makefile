@@ -1,5 +1,5 @@
 # Created by: Vladimir Timofeev <vovkasm@gmail.com>
-# $FreeBSD: databases/p5-HTML-FormHandler-Model-DBIC/Makefile 341063 2014-01-25 17:25:11Z antoine $
+# $FreeBSD$
 
 PORTNAME=	HTML-FormHandler-Model-DBIC
 PORTVERSION=	0.19
