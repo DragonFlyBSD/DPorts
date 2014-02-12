@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/doclifter/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	doclifter
 PORTVERSION=	2.13
