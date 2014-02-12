@@ -1,5 +1,5 @@
 # Created by: Philip M. Gollucci
-# $FreeBSD: databases/rubygem-bigrecord/Makefile 332031 2013-10-30 02:20:20Z swills $
+# $FreeBSD$
 
 PORTNAME=	bigrecord
 PORTVERSION=	0.1.1
