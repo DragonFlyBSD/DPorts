@@ -1,5 +1,5 @@
 # Created by: Peter Pentchev <roam@FreeBSD.org>
-# $FreeBSD: textproc/bomstrip/Makefile 341143 2014-01-26 00:03:51Z mat $
+# $FreeBSD$
 
 PORTNAME=	bomstrip
 PORTVERSION=	9
