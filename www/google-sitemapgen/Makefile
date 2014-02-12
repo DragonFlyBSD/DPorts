@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/google-sitemapgen/Makefile 341718 2014-01-29 11:51:50Z miwi $
+# $FreeBSD$
 
 PORTNAME=	google-sitemapgen
 PORTVERSION=	1.5
