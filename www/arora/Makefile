@@ -1,5 +1,5 @@
 # Created by: Andy Fawcett <andy@athame.co.uk>
-# $FreeBSD: www/arora/Makefile 334912 2013-11-26 01:46:40Z makc $
+# $FreeBSD$
 
 PORTNAME=	arora
 PORTVERSION=	0.11.0
