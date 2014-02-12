@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: www/xpi-gdata_provider/Makefile 341205 2014-01-26 15:09:46Z miwi $
+# $FreeBSD$
 
 PORTNAME=	gdata_provider
 PORTVERSION=	0.25
