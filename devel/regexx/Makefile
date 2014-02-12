@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: devel/regexx/Makefile 337440 2013-12-25 19:35:30Z pawel $
+# $FreeBSD$
 
 PORTNAME=	regexx
 PORTVERSION=	0.98.1
