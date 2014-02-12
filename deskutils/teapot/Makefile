@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: deskutils/teapot/Makefile 341870 2014-01-30 18:50:14Z antoine $
+# $FreeBSD$
 
 PORTNAME=	teapot
 PORTVERSION=	2.3.0
