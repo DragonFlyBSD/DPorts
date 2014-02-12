@@ -1,5 +1,5 @@
 # Created by: Shuichi Tanaka
-# $FreeBSD: japanese/gtkicq/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gtkicq
 PORTVERSION=	0.60
@@ -13,6 +13,9 @@ PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Icq clone for Japanese user
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-10
 
 BUILD_DEPENDS=	${LOCALBASE}/lib/libjcode.a:${PORTSDIR}/japanese/libjcode
 
