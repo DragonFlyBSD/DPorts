@@ -1,5 +1,5 @@
 # Created by: NAKATA Maho <maho@FreeBSD.org>
-# $FreeBSD: science/abinit/Makefile 336523 2013-12-15 12:49:28Z wg $
+# $FreeBSD$
 
 PORTNAME=	abinit
 PORTVERSION=	5.7.3
