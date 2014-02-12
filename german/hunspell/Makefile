@@ -1,4 +1,4 @@
-# $FreeBSD: german/hunspell/Makefile 341534 2014-01-28 11:30:55Z bapt $
+# $FreeBSD$
 
 PORTNAME=	hunspell
 PORTVERSION=	20131206
