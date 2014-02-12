@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: math/p5-Statistics-R/Makefile 337426 2013-12-25 15:08:07Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Statistics-R
 PORTVERSION=	0.32
