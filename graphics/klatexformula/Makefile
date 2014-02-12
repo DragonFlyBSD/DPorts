@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/klatexformula/Makefile 331377 2013-10-23 12:06:27Z makc $
+# $FreeBSD$
 
 PORTNAME=	klatexformula
 PORTVERSION=	3.2.7
