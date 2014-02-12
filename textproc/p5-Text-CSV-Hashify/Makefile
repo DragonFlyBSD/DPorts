@@ -1,5 +1,5 @@
 # Created by: tj@FreeBSD.org
-# $FreeBSD: textproc/p5-Text-CSV-Hashify/Makefile 340711 2014-01-22 14:35:55Z mat $
+# $FreeBSD$
 
 PORTNAME=	Text-CSV-Hashify
 PORTVERSION=	0.05
