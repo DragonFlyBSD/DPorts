@@ -1,4 +1,4 @@
-# $FreeBSD: print/rubygem-prawn-flexible-table/Makefile 332048 2013-10-30 02:54:59Z swills $
+# $FreeBSD$
 
 PORTNAME=	prawn-flexible-table
 PORTVERSION=	0.1.2
