@@ -1,5 +1,5 @@
 # Created by: George Reid <greid@ukug.uk.freebsd.org>
-# $FreeBSD: deskutils/bigyear/Makefile 342219 2014-02-01 23:41:51Z antoine $
+# $FreeBSD$
 
 PORTNAME=	bigyear
 PORTVERSION=	20010226
