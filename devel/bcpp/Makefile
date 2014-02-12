@@ -1,5 +1,5 @@
 # Created by: Mike Buchanon <buchanon@msu.edu>
-# $FreeBSD: devel/bcpp/Makefile 336115 2013-12-10 21:08:32Z bapt $
+# $FreeBSD$
 
 PORTNAME=	bcpp
 PORTVERSION=	20120318
