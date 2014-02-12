@@ -1,5 +1,5 @@
 # Created by: James Howard <howardj@wam.umd.edu>
-# $FreeBSD: games/cursive/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	cursive
 PORTVERSION=	1.0
