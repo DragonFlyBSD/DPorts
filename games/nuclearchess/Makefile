@@ -1,5 +1,5 @@
 # Created by: Shaun Amott <shaun@inerd.com>
-# $FreeBSD: games/nuclearchess/Makefile 338055 2013-12-30 00:09:32Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	nuclearchess
 PORTVERSION=	1.0.0
