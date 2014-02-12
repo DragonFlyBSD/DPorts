@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Router-Boom/Makefile 339780 2014-01-15 15:04:56Z kuriyama $
+# $FreeBSD$
 
 PORTNAME=	Router-Boom
 PORTVERSION=	1.00
