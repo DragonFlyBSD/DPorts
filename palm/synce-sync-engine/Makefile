@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: palm/synce-sync-engine/Makefile 327760 2013-09-20 22:33:41Z bapt $
+# $FreeBSD$
 
 PORTNAME?=	sync-engine
 PORTVERSION=	0.14
@@ -9,6 +9,9 @@ DISTNAME=	synce-sync-engine-${PORTVERSION}
 
 MAINTAINER?=	ports@FreeBSD.org
 COMMENT?=	Synchronization Engine for Windows Mobile devices
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-10
 
 RUN_DEPENDS+=	${PYTHON_SITELIBDIR}/dbus/__init__.py:${PORTSDIR}/devel/py-dbus \
 		${PYTHON_SITELIBDIR}/libxslt.py:${PORTSDIR}/textproc/py-libxslt \
