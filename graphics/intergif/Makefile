@@ -1,5 +1,5 @@
 # Created by: jamie
-# $FreeBSD: graphics/intergif/Makefile 340740 2014-01-22 22:13:48Z antoine $
+# $FreeBSD$
 
 PORTNAME=	interGif
 PORTVERSION=	6.15
