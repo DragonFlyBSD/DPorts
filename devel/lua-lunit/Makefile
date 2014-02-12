@@ -1,5 +1,5 @@
 # Created by: Sergey V. Dyatko <sergey.dyatko@gmail.com>
-# $FreeBSD: devel/lua-lunit/Makefile 339334 2014-01-10 09:01:16Z bapt $
+# $FreeBSD$
 
 PORTNAME=	lunit
 PORTVERSION=	0.5
