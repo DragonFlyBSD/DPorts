@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/xpi-colorfultabs/Makefile 341199 2014-01-26 15:07:37Z miwi $
+# $FreeBSD$
 
 PORTNAME=	colorfultabs
 PORTVERSION=	19.0
