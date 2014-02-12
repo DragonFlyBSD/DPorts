@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: www/p5-WWW-Mechanize-Plugin-phpBB/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	WWW-Mechanize-Plugin-phpBB
 PORTVERSION=	0.02
