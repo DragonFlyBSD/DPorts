@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: www/vdradmin-am/files/vdradmind.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/www/vdradmin-am/files/vdradmind.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: vdradmind
 # REQUIRE: LOGIN
