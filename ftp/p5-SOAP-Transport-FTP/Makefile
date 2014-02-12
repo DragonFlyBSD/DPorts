@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: ftp/p5-SOAP-Transport-FTP/Makefile 328863 2013-09-30 20:20:27Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	SOAP-Transport-FTP
 PORTVERSION=	0.711
