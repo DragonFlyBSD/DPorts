@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: irc/ruby-rice/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	rice
 PORTVERSION=	0.0.0.2
