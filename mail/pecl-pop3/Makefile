@@ -1,5 +1,5 @@
 # Created by: buganini@gmail.com
-# $FreeBSD: mail/pecl-pop3/Makefile 340835 2014-01-23 16:00:14Z miwi $
+# $FreeBSD$
 
 PORTNAME=	pop3
 PORTVERSION=	1.0.2
