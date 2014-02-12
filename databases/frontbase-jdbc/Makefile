@@ -1,5 +1,5 @@
 # Created by: Quinton Dolan <q@onthenet.com.au>
-# $FreeBSD: databases/frontbase-jdbc/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	frontbase
 PORTVERSION=	2.5.6
