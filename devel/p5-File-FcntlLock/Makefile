@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-File-FcntlLock/Makefile 338866 2014-01-06 12:05:42Z az $
+# $FreeBSD$
 
 PORTNAME=	File-FcntlLock
 PORTVERSION=	0.14
