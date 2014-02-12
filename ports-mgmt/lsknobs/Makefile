@@ -1,5 +1,5 @@
 # Created by: Gabriel Linder <linder.gabriel@gmail.com>
-# $FreeBSD: ports-mgmt/lsknobs/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	lsknobs
 PORTVERSION=	1.0
