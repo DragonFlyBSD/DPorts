@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: archivers/bzip/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	bzip
 PORTVERSION=	0.21
@@ -8,6 +8,9 @@ MASTER_SITES=	http://ftp.riken.jp/FreeBSD/distfiles/RESTRICTED/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Block-sorting file compressor
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-07
 
 RESTRICTED=	may be covered by patents
 USE_CSTD=	gnu89
