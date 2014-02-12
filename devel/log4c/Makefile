@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/log4c/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
+# $FreeBSD$
 
 PORTNAME=	log4c
 PORTVERSION=	1.2.3
