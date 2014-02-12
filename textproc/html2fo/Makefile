@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/html2fo/Makefile 341602 2014-01-28 15:49:30Z mat $
+# $FreeBSD$
 
 PORTNAME=	html2fo
 PORTVERSION=	0.4.2
