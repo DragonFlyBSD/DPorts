@@ -1,5 +1,5 @@
 # Created by: igor@zynaps.ru
-# $FreeBSD: mail/cucipop/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 # NOTE: APOP works only for virtual hosts as designed!
 #       Virtual hosts works only with Berkeley DB2.
