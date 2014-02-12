@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: www/mod_python3/Makefile 330969 2013-10-20 03:59:52Z koobs $
+# $FreeBSD$
 
 PORTNAME=	mod_python
 PORTVERSION=	3.3.1
