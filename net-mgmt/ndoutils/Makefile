@@ -1,4 +1,4 @@
-# $FreeBSD: net-mgmt/ndoutils/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ndoutils
 PORTVERSION=	1.4b8
