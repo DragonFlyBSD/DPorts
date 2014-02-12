@@ -1,5 +1,5 @@
 # Created by: Sergei Barbarash <sgt@outline.ru>
-# $FreeBSD: net/wmlj/Makefile 341965 2014-01-31 09:46:10Z miwi $
+# $FreeBSD$
 
 PORTNAME=	wmlj
 PORTVERSION=	0.4.0
