@@ -1,5 +1,5 @@
 # Created by: Alexey V. Degtyarev
-# $FreeBSD: net-mgmt/nagios-snmp-plugins-extras/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	nagios-snmp-plugins-extras
 PORTVERSION=	1.1.2
