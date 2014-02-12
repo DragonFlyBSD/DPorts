@@ -1,4 +1,4 @@
-# $FreeBSD: archivers/gcpio/Makefile 336736 2013-12-17 16:01:38Z naddy $
+# $FreeBSD$
 
 PORTNAME=	cpio
 PORTVERSION=	2.11
