@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: x11-fonts/gbdfed/Makefile 327781 2013-09-20 23:51:14Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gbdfed
 PORTVERSION=	1.6
