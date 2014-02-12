@@ -1,5 +1,5 @@
 # Created by: Matthew West <mwest@uct.ac.za>
-# $FreeBSD: irc/gruftistats/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	gruftistats
 PORTVERSION=	0.2.4
