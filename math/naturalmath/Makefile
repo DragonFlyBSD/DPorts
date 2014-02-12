@@ -1,5 +1,5 @@
 # Created by: Stephen Montgomery-Smith
-# $FreeBSD: math/naturalmath/Makefile 341302 2014-01-26 23:00:43Z stephen $
+# $FreeBSD$
 
 PORTNAME=	naturalmath
 PORTVERSION=	0.5
