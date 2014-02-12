@@ -1,5 +1,5 @@
 
-$FreeBSD: devel/oserl/files/patch-Makefile 318430 2013-05-18 13:06:47Z olgeni $
+$FreeBSD: head/devel/oserl/files/patch-Makefile 318430 2013-05-18 13:06:47Z olgeni $
 
 --- Makefile.orig
 +++ Makefile

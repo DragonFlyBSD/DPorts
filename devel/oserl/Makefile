@@ -1,4 +1,4 @@
-# $FreeBSD: devel/oserl/Makefile 333096 2013-11-07 13:47:05Z olgeni $
+# $FreeBSD$
 
 PORTNAME=	oserl
 PORTVERSION=	3.2.4
