@@ -1,5 +1,5 @@
 # Created by: Scott Sanders <scott@jssjr.com>
-# $FreeBSD: textproc/rubygem-escape_utils/Makefile 338340 2014-01-01 00:08:13Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	escape_utils
 PORTVERSION=	1.0.0
