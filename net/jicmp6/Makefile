@@ -1,4 +1,4 @@
-# $FreeBSD: net/jicmp6/Makefile 329314 2013-10-04 14:27:25Z danilo $
+# $FreeBSD$
 
 PORTNAME=	jicmp6
 PORTVERSION=	1.2.2
