@@ -1,4 +1,4 @@
-# $FreeBSD: audio/xoscope/Makefile 332930 2013-11-05 23:28:09Z db $
+# $FreeBSD$
 
 PORTNAME=	xoscope
 PORTVERSION=	2.0
