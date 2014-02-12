@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: sysutils/p5-Filesys-DfPortable/Makefile 338850 2014-01-06 09:24:24Z az $
+# $FreeBSD$
 
 PORTNAME=	Filesys-DfPortable
 PORTVERSION=	0.85
