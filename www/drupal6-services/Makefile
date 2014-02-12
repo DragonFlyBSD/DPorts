@@ -1,5 +1,5 @@
 # Created by: whitekid@gmail.com
-# $FreeBSD: www/drupal6-services/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	services
 DISTVERSION=	6.x-2.2
