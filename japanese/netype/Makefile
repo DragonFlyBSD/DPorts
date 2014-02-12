@@ -1,5 +1,5 @@
 # Created by: Takeshi MUTOH <mutoh@info.nara-k.ac.jp>
-# $FreeBSD: japanese/netype/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	netype
 PORTVERSION=	0.1.1
