@@ -1,5 +1,5 @@
 # Created by: Bill Fenner <fenner@FreeBSD.org>
-# $FreeBSD: net-mgmt/p5-SNMP-Util/Makefile 338754 2014-01-05 12:20:02Z az $
+# $FreeBSD$
 
 PORTNAME=	SNMP-Util
 PORTVERSION=	1.8
