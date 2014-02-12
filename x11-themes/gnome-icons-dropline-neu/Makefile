@@ -1,4 +1,4 @@
-# $FreeBSD: x11-themes/gnome-icons-dropline-neu/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD$
 
 PORTNAME=	dropline-neu
 PORTVERSION=	0.6
