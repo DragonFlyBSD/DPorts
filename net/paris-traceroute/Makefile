@@ -1,5 +1,5 @@
 # Created by: dikshie@sfc.wide.ad.jp
-# $FreeBSD: net/paris-traceroute/Makefile 341941 2014-01-31 08:44:50Z miwi $
+# $FreeBSD$
 
 PORTNAME=	paris-traceroute
 PORTVERSION=	0.92
