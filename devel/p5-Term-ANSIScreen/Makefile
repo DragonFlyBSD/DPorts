@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: devel/p5-Term-ANSIScreen/Makefile 328865 2013-09-30 20:25:25Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Term-ANSIScreen
 PORTVERSION=	1.50
