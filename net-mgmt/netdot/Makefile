@@ -1,5 +1,5 @@
 # Created by: Nick Hilliard
-# $FreeBSD: net-mgmt/netdot/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	netdot
 PORTVERSION=	1.0.4
