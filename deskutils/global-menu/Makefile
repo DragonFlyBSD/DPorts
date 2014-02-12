@@ -1,5 +1,5 @@
 # Created by: Gustavo Perez
-# $FreeBSD: deskutils/global-menu/Makefile 339873 2014-01-15 23:52:25Z bapt $
+# $FreeBSD$
 
 PORTNAME=		gnome-globalmenu
 PORTVERSION=		0.7.10
