@@ -1,5 +1,5 @@
 # Created by: Roman Bogorodskiy <novel@FreeBSD.org>
-# $FreeBSD: devel/p5-Gtk2-Notify/Makefile 334255 2013-11-18 19:35:09Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Gtk2-Notify
 PORTVERSION=	0.05
