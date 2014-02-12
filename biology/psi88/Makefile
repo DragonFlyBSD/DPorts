@@ -1,5 +1,5 @@
 # Created by: Ryo MIYAMOTO
-# $FreeBSD: biology/psi88/Makefile 336845 2013-12-18 16:23:08Z tijl $
+# $FreeBSD$
 
 PORTNAME=	psi88
 PORTVERSION=	1.0
