@@ -1,4 +1,4 @@
-# $FreeBSD: mail/sendmail/Makefile 341324 2014-01-27 04:46:57Z dinoex $
+# $FreeBSD$
 
 PORTNAME=	sendmail
 PORTVERSION=	8.14.8
