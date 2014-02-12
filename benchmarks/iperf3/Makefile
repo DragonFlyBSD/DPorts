@@ -1,5 +1,5 @@
 # Created by: Bruce A. Mah <bmah@FreeBSD.org>
-# $FreeBSD: benchmarks/iperf3/Makefile 340548 2014-01-21 04:56:03Z bmah $
+# $FreeBSD$
 
 PORTNAME=	iperf
 PORTVERSION=	3.0.1
