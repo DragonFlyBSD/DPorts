@@ -1,5 +1,5 @@
 # Created by: Tzanetos Balitsaris <tzabal@it.teithe.gr>
-# $FreeBSD: net-im/jitsi/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD$
 
 PORTNAME=	jitsi
 PORTVERSION=	2.3
