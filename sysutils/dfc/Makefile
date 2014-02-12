@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/dfc/Makefile 336648 2013-12-16 17:26:49Z bapt $
+# $FreeBSD$
 
 PORTNAME=	dfc
 PORTVERSION=	3.0.4
