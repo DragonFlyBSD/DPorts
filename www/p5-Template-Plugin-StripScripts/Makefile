@@ -1,5 +1,5 @@
 # Created by: Anes Mukhametov <anes@anes.su>
-# $FreeBSD: www/p5-Template-Plugin-StripScripts/Makefile 334253 2013-11-18 19:29:06Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Template-Plugin-StripScripts
 PORTVERSION=	0.02
