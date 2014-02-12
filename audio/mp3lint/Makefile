@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-# $FreeBSD: audio/mp3lint/Makefile 331312 2013-10-22 20:03:01Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	mp3lint
 PORTVERSION=	0.9
