@@ -1,4 +1,4 @@
-# $FreeBSD: editors/gobby/Makefile 327720 2013-09-20 16:36:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gobby
 PORTVERSION=	0.4.13
