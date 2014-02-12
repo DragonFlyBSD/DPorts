@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: www/htmlobject/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	htmlobject
 PORTVERSION=	2.29
