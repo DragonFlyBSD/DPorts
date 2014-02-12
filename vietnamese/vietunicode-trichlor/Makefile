@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: vietnamese/vietunicode-trichlor/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	vietunicode-trichlor
 PORTVERSION=	2004.04.30
