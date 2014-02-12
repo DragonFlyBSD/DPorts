@@ -1,4 +1,4 @@
-# $FreeBSD: net-mgmt/icli/Makefile 328858 2013-09-30 20:05:10Z lme $
+# $FreeBSD$
 
 PORTNAME=	icli
 DISTVERSION=	0.46
