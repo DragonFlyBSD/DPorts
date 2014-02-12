@@ -1,5 +1,5 @@
 # Created by: mi@aldan.ziplink.net
-# $FreeBSD: deskutils/xmdiary/Makefile 336245 2013-12-12 05:13:52Z eadler $
+# $FreeBSD$
 
 PORTNAME=	xmdiary
 PORTVERSION=	3.0.3
