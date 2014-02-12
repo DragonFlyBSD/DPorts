@@ -1,4 +1,4 @@
-$FreeBSD: multimedia/castpodder/files/patch-CastPodder.sh 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/multimedia/castpodder/files/patch-CastPodder.sh 340725 2014-01-22 17:40:44Z mat $
 
 --- CastPodder.sh	Sat Apr 29 16:39:22 2006
 +++ CastPodder.sh.port	Mon May  1 18:33:50 2006
