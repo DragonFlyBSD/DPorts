@@ -1,5 +1,5 @@
 # Created by: Fritz Heinrichmeyer
-# $FreeBSD: editors/nxml/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	nxml-mode
 PORTVERSION=	${NXML_VER}
