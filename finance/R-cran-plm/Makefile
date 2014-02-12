@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: finance/R-cran-plm/Makefile 338351 2014-01-01 03:42:16Z tota $
+# $FreeBSD$
 
 PORTNAME=	plm
 DISTVERSION=	1.4-0
