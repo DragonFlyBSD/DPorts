@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@rtfm.jp>
-# $FreeBSD: www/rubygem-scrubyt/Makefile 340906 2014-01-24 14:56:38Z miwi $
+# $FreeBSD$
 
 PORTNAME=	scrubyt
 PORTVERSION=	0.4.11
