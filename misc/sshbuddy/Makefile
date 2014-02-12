@@ -1,5 +1,5 @@
 # Created by: Dan Moschuk <dan@FreeBSD.org>
-# $FreeBSD: misc/sshbuddy/Makefile 338338 2013-12-31 23:48:41Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	sshbuddy
 PORTVERSION=	1.05
