@@ -1,5 +1,5 @@
 # Created by: Steve Atwell
-# $FreeBSD: sysutils/slack/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	slack
 PORTVERSION=	0.15.2
