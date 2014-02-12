@@ -1,5 +1,5 @@
 # Created by: Kevin Lo<kevlo@FreeBSD.org>
-# $FreeBSD: net-im/vicq/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD$
 
 PORTNAME=	vicq
 PORTVERSION=	0.4.2
