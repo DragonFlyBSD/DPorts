@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: net/redir/Makefile 342042 2014-01-31 17:09:15Z antoine $
+# $FreeBSD$
 
 PORTNAME=	redir
 PORTVERSION=	2.2.1

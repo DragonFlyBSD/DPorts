@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: net/redir/files/redir.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/net/redir/files/redir.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: redir
 # REQUIRE: DAEMON
