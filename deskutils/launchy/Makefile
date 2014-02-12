@@ -1,9 +1,9 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: deskutils/launchy/Makefile 334499 2013-11-21 16:09:47Z makc $
+# $FreeBSD$
 
 PORTNAME=	launchy
 PORTVERSION=	2.5
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	deskutils
 MASTER_SITES=	SF/${PORTNAME}/Launchy%20on%20Linux/${PORTVERSION}
 
@@ -16,6 +16,7 @@ RUN_DEPENDS=	${LOCALBASE}/bin/xdg-open:${PORTSDIR}/devel/xdg-utils
 USES=		dos2unix qmake
 DOS2UNIX_FILES=	readme.lyx readme.txt
 USE_QT4=	moc_build rcc_build uic_build gui network
+LDFLAGS+=	-lX11
 PORTDOCS=	*
 
 MAKE_JOBS_UNSAFE=	yes
