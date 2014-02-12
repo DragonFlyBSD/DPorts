@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: games/p5-Games-Tournament-RoundRobin/Makefile 332736 2013-11-04 14:49:24Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Games-Tournament-RoundRobin
 PORTVERSION=	0.02
