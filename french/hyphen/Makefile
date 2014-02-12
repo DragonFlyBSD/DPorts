@@ -1,4 +1,4 @@
-# $FreeBSD: french/hyphen/Makefile 334117 2013-11-17 19:20:15Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	hyphen
 PORTVERSION=	3.0
