@@ -1,5 +1,5 @@
 # Created by: Victor Popov <v.a.popov@gmail.com>
-# $FreeBSD: security/p5-Crypt-PBKDF2/Makefile 335299 2013-11-30 15:37:18Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Crypt-PBKDF2
 PORTVERSION=	0.133330
