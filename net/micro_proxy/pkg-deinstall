@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: net/micro_proxy/pkg-deinstall 340719 2014-01-22 15:52:06Z mat $
+# $FreeBSD: head/net/micro_proxy/pkg-deinstall 340719 2014-01-22 15:52:06Z mat $
 #
 
 case $2 in
