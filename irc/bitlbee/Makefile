@@ -1,4 +1,4 @@
-# $FreeBSD: irc/bitlbee/Makefile 341208 2014-01-26 15:10:50Z antoine $
+# $FreeBSD$
 
 PORTNAME=	bitlbee
 PORTVERSION=	3.2.1
