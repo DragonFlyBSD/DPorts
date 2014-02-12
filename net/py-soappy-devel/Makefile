@@ -1,5 +1,5 @@
 # Created by: Alexander Leidinger
-# $FreeBSD: net/py-soappy-devel/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=		soappy
 PORTVERSION=		0.12.0
