@@ -1,9 +1,9 @@
 # Created by: Igor Pokrovsky <tiamat@comset.net>
-# $FreeBSD: games/vavoom/Makefile 339530 2014-01-12 18:50:44Z bar $
+# $FreeBSD$
 
 PORTNAME=	vavoom
 PORTVERSION=	1.33
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/Vavoom-source/${PORTVERSION}
 
