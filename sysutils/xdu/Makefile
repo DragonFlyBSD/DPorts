@@ -1,5 +1,5 @@
 # Created by: asami
-# $FreeBSD: sysutils/xdu/Makefile 334050 2013-11-17 02:58:44Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	xdu
 PORTVERSION=	3.0
