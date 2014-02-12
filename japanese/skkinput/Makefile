@@ -1,5 +1,5 @@
 # Created by: Murata Shuuichirou <mrt@mickey.ai.kyutech.ac.jp>
-# $FreeBSD: japanese/skkinput/Makefile 341523 2014-01-28 09:25:02Z danfe $
+# $FreeBSD$
 
 PORTNAME=	skkinput
 PORTVERSION=	2.06.4
