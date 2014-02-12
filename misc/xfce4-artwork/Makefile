@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: misc/xfce4-artwork/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xfce4-artwork
 PORTVERSION=	0.0.4
