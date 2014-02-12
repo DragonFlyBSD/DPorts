@@ -1,5 +1,5 @@
 # Created by: Charlie Kester <corky1951@comcast.net>
-# $FreeBSD: audio/mcplay/Makefile 336946 2013-12-19 19:00:39Z pawel $
+# $FreeBSD$
 
 PORTNAME=	mcplay
 DISTVERSION=	0.3i
