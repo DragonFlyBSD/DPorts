@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: www/p5-POE-Component-Server-SOAP/Makefile 338763 2014-01-05 13:05:56Z az $
+# $FreeBSD$
 
 PORTNAME=	POE-Component-Server-SOAP
 PORTVERSION=	1.14
