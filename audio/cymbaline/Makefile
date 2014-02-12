@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: audio/cymbaline/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	cymbaline
 PORTVERSION=	1.3e
@@ -17,6 +17,8 @@ USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 
 PLIST_FILES=	bin/cymbaline
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
