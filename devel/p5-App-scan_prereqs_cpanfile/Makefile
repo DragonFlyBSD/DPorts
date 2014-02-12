@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-App-scan_prereqs_cpanfile/Makefile 339256 2014-01-09 15:41:57Z kuriyama $
+# $FreeBSD$
 
 PORTNAME=	App-scan_prereqs_cpanfile
 PORTVERSION=	0.08
