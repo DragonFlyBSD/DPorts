@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: net/ssltunnel-server/files/ssltunnel.in 338025 2013-12-29 16:29:03Z crees $
+# $FreeBSD: head/net/ssltunnel-server/files/ssltunnel.in 338025 2013-12-29 16:29:03Z crees $
 #
 # PROVIDE: ssltunnel
 # REQUIRE: LOGIN
