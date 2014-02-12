@@ -1,4 +1,4 @@
-# $FreeBSD: misc/p5-Geo-Coder-Multiple/Makefile 338755 2014-01-05 12:30:05Z az $
+# $FreeBSD$
 
 PORTNAME=	Geo-Coder-Multiple
 PORTVERSION=	0.60
