@@ -1,5 +1,5 @@
 # Created by: TAOKA Fumiyoshi
-# $FreeBSD: japanese/p5-Mail-SpamAssassin/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD$
 
 PORTREVISION=	4
 CATEGORIES=	japanese mail perl5
