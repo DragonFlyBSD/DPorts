@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: devel/p5-DateTime-Calendar-FrenchRevolutionary/Makefile 331933 2013-10-29 07:56:01Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	DateTime-Calendar-FrenchRevolutionary
 PORTVERSION=	0.11
