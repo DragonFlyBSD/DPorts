@@ -1,5 +1,5 @@
 # Created by: IWASHITA Yoji <shuna@pop16.odn.ne.jp>
-# $FreeBSD: japanese/mutt-devel/Makefile 335785 2013-12-06 21:31:48Z mandree $
+# $FreeBSD$
 
 # WITH_MUTT_CYRUS_SASL2:	if defined, 'Cyrus sasl' support.
 #
