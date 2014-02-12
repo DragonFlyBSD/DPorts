@@ -1,5 +1,5 @@
 # Created by: Jeremy Shaffner <jeremy@external.org>
-# $FreeBSD: audio/p5-Xmms/Makefile 332336 2013-11-01 02:28:24Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Xmms
 PORTVERSION=	0.12
