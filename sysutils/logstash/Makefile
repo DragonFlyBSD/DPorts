@@ -1,5 +1,5 @@
 # Created by: Daniel Solsona <daniel@ish.com.au>, Guido Falsi <madpilot@FreeBSD.org>
-# $FreeBSD: sysutils/logstash/Makefile 334480 2013-11-21 12:35:12Z madpilot $
+# $FreeBSD$
 
 PORTNAME=	logstash
 PORTVERSION=	1.2.1

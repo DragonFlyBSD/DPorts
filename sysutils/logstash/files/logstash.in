@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: sysutils/logstash/files/logstash.in 334480 2013-11-21 12:35:12Z madpilot $
+# $FreeBSD: head/sysutils/logstash/files/logstash.in 334480 2013-11-21 12:35:12Z madpilot $
 #
 # PROVIDE: logstash
 # REQUIRE: LOGIN
