@@ -1,5 +1,5 @@
 # Created by: Shen Chuan-Hsing
-# $FreeBSD: chinese/qe/Makefile 329467 2013-10-05 15:18:44Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	qe
 PORTVERSION=	0.1.1
