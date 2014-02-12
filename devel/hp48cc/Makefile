@@ -1,5 +1,5 @@
 # Created by: Patrick Li <pat@databits.net>
-# $FreeBSD: devel/hp48cc/Makefile 341508 2014-01-28 08:03:33Z bapt $
+# $FreeBSD$
 
 PORTNAME=	hp48cc
 PORTVERSION=	1.3
