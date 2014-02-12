@@ -1,5 +1,5 @@
 # Created by: Xin LI <delphij@FreeBSD.org>
-# $FreeBSD: textproc/fixrtf/Makefile 341282 2014-01-26 20:42:34Z mat $
+# $FreeBSD$
 
 PORTNAME=	fixrtf
 PORTVERSION=	0.1.20060303
