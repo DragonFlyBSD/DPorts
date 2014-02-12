@@ -1,5 +1,5 @@
 # Created by: Oleksii Tsai <oleksii.tsai@googlemail.com>
-# $FreeBSD: devel/llnextgen/Makefile 340087 2014-01-17 17:33:56Z danilo $
+# $FreeBSD$
 
 PORTNAME=	LLnextgen
 PORTVERSION=	0.5.5
