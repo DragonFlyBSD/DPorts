@@ -1,5 +1,5 @@
 # Created by: R.I.Pienaar <rip@devco.net>
-# $FreeBSD: mail/msmtp/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	msmtp
 PORTVERSION=	1.4.31
