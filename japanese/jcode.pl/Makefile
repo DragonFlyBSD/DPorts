@@ -1,5 +1,5 @@
 # Created by: sada
-# $FreeBSD: japanese/jcode.pl/Makefile 335434 2013-12-01 19:48:36Z antoine $
+# $FreeBSD$
 
 PORTNAME=	jcode.pl
 PORTVERSION=	2.13
