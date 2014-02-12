@@ -1,5 +1,5 @@
 # Created by: marck@FreeBSD.org
-# $FreeBSD: net/arpdig/Makefile 341940 2014-01-31 08:09:29Z miwi $
+# $FreeBSD$
 
 PORTNAME=	arpdig
 PORTVERSION=	0.5.6
