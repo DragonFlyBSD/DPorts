@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: x11/avant-window-navigator/Makefile 340033 2014-01-17 13:22:17Z bapt $
+# $FreeBSD$
 
 PORTNAME=	avant-window-navigator
 PORTVERSION=	0.3.2.1
