@@ -1,5 +1,5 @@
 # Created by: Bruce M. Simpson <bms@FreeBSD.org>
-# $FreeBSD: devel/urjtag/Makefile 337328 2013-12-24 09:51:50Z jadawin $
+# $FreeBSD$
 
 PORTNAME=	urjtag
 PORTVERSION=	0.10
