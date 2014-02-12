@@ -1,5 +1,5 @@
 # Created by: Kris Moore
-# $FreeBSD: multimedia/kmplayer-kde4/Makefile 332495 2013-11-02 15:09:22Z wg $
+# $FreeBSD$
 
 PORTNAME=	kmplayer
 PORTVERSION=	0.11.3d
