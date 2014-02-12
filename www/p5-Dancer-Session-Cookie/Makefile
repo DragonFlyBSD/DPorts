@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Dancer-Session-Cookie/Makefile 338785 2014-01-05 15:36:32Z az $
+# $FreeBSD$
 
 PORTNAME=	Dancer-Session-Cookie
 PORTVERSION=	0.22
