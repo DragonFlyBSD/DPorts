@@ -1,5 +1,5 @@
 # Created by: Martin Wilke (miwi@FreeBSD.org)
-# $FreeBSD: devel/pear-Testing_Selenium/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	Testing_Selenium
 PORTVERSION=	0.4.4
