@@ -1,5 +1,5 @@
 # Created by: Lapo Luchini <lapo@lapo.it>
-# $FreeBSD: www/xpi-tagzilla/Makefile 341218 2014-01-26 15:14:03Z miwi $
+# $FreeBSD$
 
 PORTNAME=	tagzilla
 PORTVERSION=	0.066.2
