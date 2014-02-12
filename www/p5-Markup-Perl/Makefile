@@ -1,5 +1,5 @@
 # Created by: Jeremy Chadwick <koitsu@FreeBSD.org>
-# $FreeBSD: www/p5-Markup-Perl/Makefile 333112 2013-11-07 15:07:21Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Markup-Perl
 PORTVERSION=	0.5
