@@ -1,5 +1,5 @@
 # Created by: Andreas Fehlner <fehlner@gmx.de>
-# $FreeBSD: science/gramps/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	gramps
 PORTVERSION=	3.3.0
