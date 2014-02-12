@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net/rfbproxy/Makefile 341981 2014-01-31 12:14:30Z miwi $
+# $FreeBSD$
 
 PORTNAME=	rfbproxy
 PORTVERSION=	1.1.1
