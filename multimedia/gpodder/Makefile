@@ -1,5 +1,5 @@
 # Created by: Chess Griffin <chess@chessgriffin.com>
-# $FreeBSD: multimedia/gpodder/Makefile 337400 2013-12-25 05:58:39Z rm $
+# $FreeBSD$
 
 PORTNAME=	gpodder
 PORTVERSION=	3.5.2
