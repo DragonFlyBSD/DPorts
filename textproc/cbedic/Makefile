@@ -1,5 +1,5 @@
 # Created by: Peter Pentchev <roam@FreeBSD.org>
-# $FreeBSD: textproc/cbedic/Makefile 341161 2014-01-26 11:57:13Z mat $
+# $FreeBSD$
 
 PORTNAME=	cbedic
 PORTVERSION=	1.2
