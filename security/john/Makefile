@@ -1,5 +1,5 @@
 # Created by: David O'Brien <obrien@FreeBSD.org>
-# $FreeBSD: security/john/Makefile 338280 2013-12-31 10:45:48Z mat $
+# $FreeBSD$
 
 PORTNAME=	john
 DISTVERSION=	1.7.9-jumbo-7
