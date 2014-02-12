@@ -1,5 +1,5 @@
 # Created by: krion@FreeBSD.org
-# $FreeBSD: games/openmortal/Makefile 333201 2013-11-08 11:29:56Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	openmortal
 PORTVERSION=	0.7
