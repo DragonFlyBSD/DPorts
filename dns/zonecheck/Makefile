@@ -1,5 +1,5 @@
 # Created by: Janos.Mohacsi@bsd.hu
-# $FreeBSD: dns/zonecheck/Makefile 333571 2013-11-12 13:32:54Z mat $
+# $FreeBSD$
 
 PORTNAME=	zonecheck
 PORTVERSION=	3.0.5
