@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: graphics/xmms-fishmatic/Makefile 340233 2014-01-19 08:56:58Z miwi $
+# $FreeBSD$
 
 PORTNAME=	xmms-fishmatic
 PORTVERSION=	0.0.1
