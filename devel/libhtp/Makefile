@@ -1,4 +1,4 @@
-# $FreeBSD: devel/libhtp/Makefile 334657 2013-11-23 10:51:45Z koobs $
+# $FreeBSD$
 
 PORTNAME=	libhtp
 PORTVERSION=	0.5.9
