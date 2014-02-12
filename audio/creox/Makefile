@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: audio/creox/Makefile 337308 2013-12-23 23:21:07Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	creox
 PORTVERSION=	0.3.0
