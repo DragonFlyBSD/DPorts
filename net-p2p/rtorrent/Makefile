@@ -1,4 +1,4 @@
-# $FreeBSD: net-p2p/rtorrent/Makefile 332632 2013-11-03 17:39:09Z az $
+# $FreeBSD$
 
 PORTNAME?=	rtorrent
 PORTVERSION=	0.9.2
