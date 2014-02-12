@@ -1,5 +1,5 @@
 # Created by: Olivier Cochard-Labbe <olivier@cochard.me>
-# $FreeBSD: x11/wbarconf/Makefile 341900 2014-01-30 23:26:26Z jgh $
+# $FreeBSD$
 
 PORTNAME=	wbarconf
 PORTVERSION=	0.7.2.2
