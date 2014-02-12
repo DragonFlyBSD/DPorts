@@ -1,4 +1,4 @@
-# $FreeBSD: math/liborigin/Makefile 331383 2013-10-23 13:08:41Z makc $
+# $FreeBSD$
 
 PORTNAME=	liborigin
 PORTVERSION=	2.0.0
