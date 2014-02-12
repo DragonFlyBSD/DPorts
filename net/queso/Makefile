@@ -1,5 +1,5 @@
 # Created by: Wu Ching-hong <woju@freebsd.ee.ntu.edu.tw>
-# $FreeBSD: net/queso/Makefile 342040 2014-01-31 17:07:01Z antoine $
+# $FreeBSD$
 
 PORTNAME=	queso
 PORTVERSION=	980922
