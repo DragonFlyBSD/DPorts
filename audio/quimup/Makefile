@@ -1,5 +1,5 @@
 # Created by: Cezary Morga <cm@therek.net>
-# $FreeBSD: audio/quimup/Makefile 336857 2013-12-18 18:58:09Z danilo $
+# $FreeBSD$
 
 PORTNAME=	quimup
 PORTVERSION=	1.3.1
