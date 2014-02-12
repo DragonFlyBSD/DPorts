@@ -1,5 +1,5 @@
 # Created by: Zane C. Bowers
-# $FreeBSD: shells/shell-include/Makefile 337659 2013-12-27 09:15:03Z bapt $
+# $FreeBSD$
 
 PORTNAME=	shell-include
 PORTVERSION=	0.1.2
