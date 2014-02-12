@@ -1,5 +1,5 @@
 # Created by: Gerard Seibert <gerard@seibercom.net>
-# $FreeBSD: security/scamp/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	scamp
 PORTVERSION=	5.6
