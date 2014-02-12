@@ -1,5 +1,5 @@
 # Created by: Goran Tal
-# $FreeBSD: net/gnu-dico/Makefile 341042 2014-01-25 15:17:56Z antoine $
+# $FreeBSD$
 
 PORTNAME=	dico
 PORTVERSION=	2.2
