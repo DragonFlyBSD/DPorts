@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: x11-wm/aewm/Makefile 334780 2013-11-24 19:44:16Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	aewm
 PORTVERSION=	1.2.7
