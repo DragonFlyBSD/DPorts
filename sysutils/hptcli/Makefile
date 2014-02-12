@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <wg@FreeBSD.org>
-# $FreeBSD: sysutils/hptcli/Makefile 339005 2014-01-07 13:31:52Z wg $
+# $FreeBSD$
 
 PORTNAME=	hptcli
 PORTVERSION=	3.6
