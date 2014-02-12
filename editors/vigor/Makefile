@@ -1,5 +1,5 @@
 # Created by: Bill Fumerola <billf@chc-chimes.com>
-# $FreeBSD: editors/vigor/Makefile 332863 2013-11-05 16:14:47Z gahr $
+# $FreeBSD$
 
 PORTNAME=	vigor
 PORTVERSION=	0.016
