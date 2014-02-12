@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/svgfig/Makefile 342301 2014-02-02 14:41:42Z miwi $
+# $FreeBSD$
 
 PORTNAME=	SVGFig
 PORTVERSION=	1.1.6
