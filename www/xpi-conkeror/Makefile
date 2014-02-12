@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/xpi-conkeror/Makefile 335489 2013-12-02 14:02:20Z ashish $
+# $FreeBSD$
 
 PORTNAME=	conkeror
 PORTVERSION=	20131117
