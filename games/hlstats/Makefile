@@ -1,5 +1,5 @@
 # Created by: Hideki Machida <hido@neojapangz.com>
-# $FreeBSD: games/hlstats/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD$
 
 PORTNAME=	hlstats
 PORTVERSION=	1.62
@@ -9,6 +9,9 @@ DISTNAME=	HLStats-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A real-time statistics generator for Half-Life and its mods
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-07
 
 LICENSE=	CDDL
 
