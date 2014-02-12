@@ -1,5 +1,5 @@
 # Created by: Dennis Herrmann <dhn@FreeBSD.org>
-# $FreeBSD: x11/i3lock/Makefile 329986 2013-10-10 12:46:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	i3lock
 PORTVERSION=	2.5
