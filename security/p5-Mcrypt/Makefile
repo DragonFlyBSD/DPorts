@@ -1,5 +1,5 @@
 # Created by: Tatsuki Makino <tatsuki_makino@hotmail.com>
-# $FreeBSD: security/p5-Mcrypt/Makefile 341049 2014-01-25 16:30:47Z mat $
+# $FreeBSD$
 
 PORTNAME=	Mcrypt
 PORTVERSION=	2.5.7.0
