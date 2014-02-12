@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: lang/p5-Pugs-Compiler-Rule/Makefile 332724 2013-11-04 14:20:04Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Pugs-Compiler-Rule
 PORTVERSION=	0.37
