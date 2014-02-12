@@ -1,5 +1,5 @@
 # Created by: Göran Runfeldt <goranrunfeldt@home.se>
-# $FreeBSD: games/xtux/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xtux
 PORTVERSION=	2003.03.06
@@ -20,6 +20,8 @@ MAKE_ENV=	CPP="${CC} -E"
 CFLAGS+=	-DDATADIR=\\\"${DATADIR}\\\"
 
 OPTIONS_DEFINE=	DOCS
+
+MAKE_JOBS_UNSAFE=yes
 
 post-patch:
 	@${FIND} ${WRKSRC}/src -name "Makefile" | ${XARGS} ${REINPLACE_CMD} -e \
