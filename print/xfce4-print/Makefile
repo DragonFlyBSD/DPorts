@@ -1,5 +1,5 @@
 # Created by: James Earl <jdearl@telus.net>
-# $FreeBSD: print/xfce4-print/Makefile 332728 2013-11-04 14:27:23Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	xfce4-print
 PORTVERSION=	4.6.1
