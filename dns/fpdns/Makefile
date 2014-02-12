@@ -1,5 +1,5 @@
 # Created by: Edwin Groothuis <edwin@mavetju.org>
-# $FreeBSD: dns/fpdns/Makefile 333874 2013-11-15 15:08:12Z ehaupt $
+# $FreeBSD$
 
 PORTNAME=	fpdns
 PORTVERSION=	0.10.0.${GH_TAGNAME}
