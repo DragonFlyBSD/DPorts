@@ -1,5 +1,5 @@
 # Created by: Anton Karpov <toxa@toxahost.ru>
-# $FreeBSD: sysutils/graveman/Makefile 333735 2013-11-14 01:23:48Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	graveman
 PORTVERSION=	0.3.12.5
