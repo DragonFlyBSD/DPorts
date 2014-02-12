@@ -1,5 +1,5 @@
 # Created by: Lapo Luchini <lapo@lapo.it>
-# $FreeBSD: www/xpi-delicious/Makefile 341200 2014-01-26 15:07:51Z miwi $
+# $FreeBSD$
 
 PORTNAME=	delicious
 PORTVERSION=	1.3
