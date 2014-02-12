@@ -1,5 +1,5 @@
 # Created by: Rick & Samu
-# $FreeBSD: security/sniff/Makefile 337082 2013-12-20 19:31:11Z pawel $
+# $FreeBSD$
 
 PORTNAME=	sniff
 PORTVERSION=	1.0
