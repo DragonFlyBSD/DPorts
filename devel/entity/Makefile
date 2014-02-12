@@ -1,5 +1,5 @@
 # Created by: Jesse McConnell <jesse@cylant.com>
-# $FreeBSD: devel/entity/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD$
 
 PORTNAME=	entity
 PORTVERSION=	0.7.2
