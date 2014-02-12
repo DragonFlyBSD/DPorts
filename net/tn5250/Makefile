@@ -1,5 +1,5 @@
 # Created by: Elias Mandouvalos <ocean@compulink.gr>
-# $FreeBSD: net/tn5250/Makefile 341925 2014-01-31 07:18:28Z miwi $
+# $FreeBSD$
 
 PORTNAME=	tn5250
 PORTVERSION=	0.17.4
