@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-# $FreeBSD: audio/libfishsound/Makefile 336301 2013-12-13 00:54:49Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	libfishsound
 PORTVERSION=	1.0.0
