@@ -1,5 +1,5 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: databases/rubygem-amalgalite/Makefile 332031 2013-10-30 02:20:20Z swills $
+# $FreeBSD$
 
 PORTNAME=	amalgalite
 PORTVERSION=	1.1.2
