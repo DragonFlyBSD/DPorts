@@ -1,5 +1,5 @@
 # Created by: Mirko Zinn <mail@derzinn.de>
-# $FreeBSD: devel/py-mongokit/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	mongokit
 PORTVERSION=	0.8.3
