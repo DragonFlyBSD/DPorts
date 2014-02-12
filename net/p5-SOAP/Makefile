@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: net/p5-SOAP/Makefile 332868 2013-11-05 16:42:55Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	SOAP
 PORTVERSION=	0.28
