@@ -1,5 +1,5 @@
 # Created by: M. L. Dodson, <bdodson@scms.utmb.edu>
-# $FreeBSD: math/gri/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gri
 PORTVERSION=	2.12.23
@@ -32,6 +32,9 @@ PLIST_FILES=	bin/gri bin/gri_merge bin/gri_unpage \
 PLIST_DIRS=	%%DATADIR%%
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS EXAMPLES 
+
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS} || ${PORT_OPTIONS:MEXAMPLES}
