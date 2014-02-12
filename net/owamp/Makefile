@@ -1,4 +1,4 @@
-# $FreeBSD: net/owamp/Makefile 341981 2014-01-31 12:14:30Z miwi $
+# $FreeBSD$
 
 PORTNAME=	owamp
 PORTVERSION=	3.3
