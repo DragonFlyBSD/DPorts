@@ -1,5 +1,5 @@
 # Created by: Zach Thompson <lin-chi@lastamericanempire.com>
-# $FreeBSD: www/p5-POE-Component-Server-HTTPServer/Makefile 338763 2014-01-05 13:05:56Z az $
+# $FreeBSD$
 
 PORTNAME=	POE-Component-Server-HTTPServer
 PORTVERSION=	0.9.2
