@@ -1,5 +1,5 @@
 # Created by: andreas
-# $FreeBSD: mail/kbiff/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	kbiff
 PORTVERSION=	4.0
