@@ -1,5 +1,5 @@
 # Created by: Hajimu UMEMOTO <ume@FreeBSD.org>
-# $FreeBSD: shells/tcsh_nls/Makefile 329354 2013-10-04 18:15:16Z ume $
+# $FreeBSD$
 
 PORTNAME=	tcsh_nls
 PORTVERSION=	1.0
