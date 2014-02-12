@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <martin@matuska.org>
-# $FreeBSD: www/p5-Apache-Clean2/Makefile 333065 2013-11-07 06:19:38Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Apache-Clean
 PORTVERSION=	2.00
