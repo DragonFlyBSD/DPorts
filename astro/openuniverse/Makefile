@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD: astro/openuniverse/Makefile 336154 2013-12-11 10:31:41Z bapt $
+# $FreeBSD$
 
 PORTNAME=	openuniverse
 DISTVERSION=	1.0beta3

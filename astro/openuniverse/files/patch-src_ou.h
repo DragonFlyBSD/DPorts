@@ -1,4 +1,4 @@
-$FreeBSD: astro/openuniverse/files/patch-src_ou.h 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/astro/openuniverse/files/patch-src_ou.h 340725 2014-01-22 17:40:44Z mat $
 
 --- src/ou.h.orig	Sun Jun  4 12:35:09 2000
 +++ src/ou.h	Tue Nov  5 12:17:24 2002
