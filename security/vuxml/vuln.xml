@@ -28,7 +28,7 @@ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION,
 EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-  $FreeBSD: security/vuxml/vuln.xml 342294 2014-02-02 13:52:18Z zi $
+  $FreeBSD: head/security/vuxml/vuln.xml 343170 2014-02-06 23:05:06Z flo $
 
 
 QUICK GUIDE TO ADDING A NEW ENTRY
@@ -51,6 +51,158 @@ Note:  Please add new entries to the beginning of this file.
 
 -->
 <vuxml xmlns="http://www.vuxml.org/apps/vuxml-1">
+  <vuln vid="4dd575b8-8f82-11e3-bb11-0025905a4771">
+    <topic>phpmyfaq -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>phpmyfaq</name>
+	<range><lt>2.8.6</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The phpMyFAQ team reports:</p>
+	<blockquote cite="http://www.phpmyfaq.de/advisory_2014-02-04.php">
+	  <p> An arbitrary script may be executed on the user's Internet
+	    Explorer when using an older version of the browser. If a user views
+	    a malicious page while logged in, settings may be changed
+	    unintentionally.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-0813</cvename>
+      <cvename>CVE-2014-0814</cvename>
+      <url>http://www.phpmyfaq.de/advisory_2014-02-04.php</url>
+    </references>
+    <dates>
+      <discovery>2014-02-04</discovery>
+      <entry>2014-02-06</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="b7a7576d-8e0a-11e3-9976-9c4e36909cc0">
+    <topic>linux-flashplugin -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>linux-f10-flashplugin</name>
+	<range><lt>11.2r202.336</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Adobe reports:</p>
+	<blockquote cite="http://www.adobe.com/support/security/bulletins/apsb14-04.html">
+	  <p>These updates address vulnerabilities that could cause a crash
+	    and potentially allow an attacker to take control of the affected system.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-0497</cvename>
+      <url>http://www.adobe.com/support/security/bulletins/apsb14-04.html</url>
+    </references>
+    <dates>
+      <discovery>2014-02-04</discovery>
+      <entry>2014-02-04</entry>
+      <modified>2014-02-05</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="1753f0ff-8dd5-11e3-9b45-b4b52fce4ce8">
+    <topic>mozilla -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>firefox</name>
+	<range><gt>25.0,1</gt><lt>27.0,1</lt></range>
+	<range><lt>24.3.0,1</lt></range>
+      </package>
+      <package>
+	<name>linux-firefox</name>
+	<range><lt>27.0,1</lt></range>
+      </package>
+      <package>
+	<name>linux-seamonkey</name>
+	<range><lt>2.24</lt></range>
+      </package>
+      <package>
+	<name>linux-thunderbird</name>
+	<range><lt>24.3.0</lt></range>
+      </package>
+      <package>
+	<name>seamonkey</name>
+	<range><lt>2.24</lt></range>
+      </package>
+      <package>
+	<name>thunderbird</name>
+	<range><lt>24.3.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Mozilla Project reports:</p>
+	<blockquote cite="http://www.mozilla.org/security/known-vulnerabilities/">
+	  <p>MFSA 2014-01 Miscellaneous memory safety hazards
+	    (rv:27.0 / rv:24.3)</p>
+	  <p>MFSA 2014-02 Clone protected content with XBL scopes</p>
+	  <p>MFSA 2014-03 UI selection timeout missing on download
+	    prompts</p>
+	  <p>MFSA 2014-04 Incorrect use of discarded images by
+	    RasterImage</p>
+	  <p>MFSA 2014-05 Information disclosure with *FromPoint on
+	    iframes</p>
+	  <p>MFSA 2014-06 Profile path leaks to Android system log</p>
+	  <p>MFSA 2014-07 XSLT stylesheets treated as styles in Content
+	    Security Policy</p>
+	  <p>MFSA 2014-08 Use-after-free with imgRequestProxy and image
+	    proccessing</p>
+	  <p>MFSA 2014-09 Cross-origin information leak through web
+	    workers</p>
+	  <p>MFSA 2014-10 Firefox default start page UI content invokable
+	    by script</p>
+	  <p>MFSA 2014-11 Crash when using web workers with asm.js</p>
+	  <p>MFSA 2014-12 NSS ticket handling issues</p>
+	  <p>MFSA 2014-13 Inconsistent JavaScript handling of access to
+	    Window objects</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-1477</cvename>
+      <cvename>CVE-2014-1478</cvename>
+      <cvename>CVE-2014-1479</cvename>
+      <cvename>CVE-2014-1480</cvename>
+      <cvename>CVE-2014-1481</cvename>
+      <cvename>CVE-2014-1482</cvename>
+      <cvename>CVE-2014-1483</cvename>
+      <cvename>CVE-2014-1484</cvename>
+      <cvename>CVE-2014-1485</cvename>
+      <cvename>CVE-2014-1486</cvename>
+      <cvename>CVE-2014-1487</cvename>
+      <cvename>CVE-2014-1488</cvename>
+      <cvename>CVE-2014-1489</cvename>
+      <cvename>CVE-2014-1490</cvename>
+      <cvename>CVE-2014-1491</cvename>
+      <url>https://www.mozilla.org/security/announce/2014/mfsa2014-01.html</url>
+      <url>https://www.mozilla.org/security/announce/2014/mfsa2014-02.html</url>
+      <url>https://www.mozilla.org/security/announce/2014/mfsa2014-03.html</url>
+      <url>https://www.mozilla.org/security/announce/2014/mfsa2014-04.html</url>
+      <url>https://www.mozilla.org/security/announce/2014/mfsa2014-05.html</url>
+      <url>https://www.mozilla.org/security/announce/2014/mfsa2014-06.html</url>
+      <url>https://www.mozilla.org/security/announce/2014/mfsa2014-07.html</url>
+      <url>https://www.mozilla.org/security/announce/2014/mfsa2014-08.html</url>
+      <url>https://www.mozilla.org/security/announce/2014/mfsa2014-09.html</url>
+      <url>https://www.mozilla.org/security/announce/2014/mfsa2014-10.html</url>
+      <url>https://www.mozilla.org/security/announce/2014/mfsa2014-11.html</url>
+      <url>https://www.mozilla.org/security/announce/2014/mfsa2014-12.html</url>
+      <url>http://www.mozilla.org/security/known-vulnerabilities/</url>
+    </references>
+    <dates>
+      <discovery>2014-02-04</discovery>
+      <entry>2014-02-04</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="111f1f84-1d14-4ff2-a9ea-cf07119c0d3b">
     <topic>libyaml heap overflow resulting in possible code execution</topic>
     <affects>
@@ -127,11 +279,13 @@ Note:  Please add new entries to the beginning of this file.
   </vuln>
 
   <vuln vid="c7b5d72b-886a-11e3-9533-60a44c524f57">
-    <topic>otrs -- SQL injection issue</topic>
+    <topic>otrs -- multiple vulnerabilities</topic>
     <affects>
       <package>
 	<name>otrs</name>
-	<range><lt>3.2.14</lt></range>
+	<range><lt>3.1.19</lt></range>
+	<range><gt>3.2.*</gt><lt>3.2.14</lt></range>
+	<range><gt>3.3.*</gt><lt>3.3.4</lt></range>
       </package>
     </affects>
     <description>
@@ -140,29 +294,6 @@ Note:  Please add new entries to the beginning of this file.
 	<blockquote cite="https://www.otrs.com/security-advisory-2014-02-sql-injection-issue/">
 	  <p>SQL injection issue</p>
 	</blockquote>
-      </body>
-    </description>
-    <references>
-      <cvename>CVE-2014-1471</cvename>
-      <url>https://www.otrs.com/security-advisory-2014-02-sql-injection-issue/</url>
-    </references>
-    <dates>
-      <discovery>2014-01-28</discovery>
-      <entry>2014-01-28</entry>
-    </dates>
-  </vuln>
-
-  <vuln vid="080c5370-886a-11e3-9533-60a44c524f57">
-    <topic>otrs -- CSRF issue in customer web interface</topic>
-    <affects>
-      <package>
-	<name>otrs</name>
-	<range><lt>3.2.14</lt></range>
-      </package>
-    </affects>
-    <description>
-      <body xmlns="http://www.w3.org/1999/xhtml">
-	<p>The OTRS Project reports:</p>
 	<blockquote cite="https://www.otrs.com/security-advisory-2014-01-csrf-issue-customer-web-interface/">
 	  <p>An attacker that managed to take over the session of a logged in customer
 	    could create tickets and/or send follow-ups to existing tickets due to
@@ -171,12 +302,19 @@ Note:  Please add new entries to the beginning of this file.
       </body>
     </description>
     <references>
+      <cvename>CVE-2014-1471</cvename>
+      <url>https://www.otrs.com/security-advisory-2014-02-sql-injection-issue/</url>
       <url>https://www.otrs.com/security-advisory-2014-01-csrf-issue-customer-web-interface/</url>
     </references>
     <dates>
       <discovery>2014-01-28</discovery>
       <entry>2014-01-28</entry>
+      <modified>2014-02-06</modified>
     </dates>
+  </vuln>
+
+  <vuln vid="080c5370-886a-11e3-9533-60a44c524f57">
+    <cancelled superseded="c7b5d72b-886a-11e3-9533-60a44c524f57"/>
   </vuln>
 
   <vuln vid="f9810c43-87a5-11e3-9214-00262d5ed8ee">
