@@ -1,5 +1,5 @@
 # Created by: Dan Caescu <daniel@freebsd.ro>
-# $FreeBSD: mail/vqregister/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	vqregister
 PORTVERSION=	2.6
@@ -22,6 +22,8 @@ MAKE_ENV=	VDIR=${VPOPMAIL_DIR} WWWDIR=${STAGEDIR}${WWWDIR}
 NEED_ROOT=	yes
 
 DOCS=		CONFIG CONTRIBUTORS FORM HISTORY TEMPLATE
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
