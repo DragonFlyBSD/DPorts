@@ -1,5 +1,5 @@
 # Created by: Ilya A. Arhipov <admin@gorodkirov.ru>
-# $FreeBSD: games/openmsx/Makefile 338619 2014-01-04 01:05:19Z bapt $
+# $FreeBSD$
 
 PORTNAME=	openmsx
 PORTVERSION=	0.3.1
