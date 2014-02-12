@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: sysutils/pecl-fileinfo/Makefile 340835 2014-01-23 16:00:14Z miwi $
+# $FreeBSD$
 
 PORTNAME=	fileinfo
 PORTVERSION=	1.0.4
