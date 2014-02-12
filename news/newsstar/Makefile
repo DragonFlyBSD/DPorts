@@ -1,5 +1,5 @@
 # Created by: Andrey Slusar <anray@FreeBSD.org>
-# $FreeBSD: news/newsstar/Makefile 332191 2013-10-31 00:38:31Z mandree $
+# $FreeBSD$
 
 PORTNAME=	newsstar
 PORTVERSION=	1.5.6
