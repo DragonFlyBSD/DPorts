@@ -1,5 +1,5 @@
 # Created by: Vaidas Zlotkus <r2@music.lt>
-# $FreeBSD: audio/xmms-mp3cue/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xmms-mp3cue
 PORTVERSION=	0.94
@@ -8,7 +8,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://brianvictor.tripod.com/
 DISTNAME=	XMMS-mp3cue-${PORTVERSION}
 
-MAINTAINER=	r2@music.lt
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	XMMS mp3cue adds cue file support to XMMS
 
 LIB_DEPENDS=	libxmms.so:${PORTSDIR}/multimedia/xmms
