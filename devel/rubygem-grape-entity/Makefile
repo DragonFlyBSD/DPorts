@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-grape-entity/Makefile 332037 2013-10-30 02:34:55Z swills $
+# $FreeBSD$
 
 PORTNAME=	grape-entity
 PORTVERSION=	0.3.0
