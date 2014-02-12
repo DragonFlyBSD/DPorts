@@ -1,4 +1,4 @@
-# $FreeBSD: x11-themes/qtcurve-kde4/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD$
 
 PORTNAME=	qtcurve
 PORTVERSION=	1.8.14
