@@ -1,5 +1,5 @@
 # Created by: Alex Deiter <tiamat@komi.mts.ru>
-# $FreeBSD: mail/imapsync/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	imapsync
 PORTVERSION=	1.580
