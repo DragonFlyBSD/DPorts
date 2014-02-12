@@ -1,5 +1,5 @@
 # Created by: Yinghong.Liu <relaxbsd@gmail.com>
-# $FreeBSD: math/speedcrunch/Makefile 331383 2013-10-23 13:08:41Z makc $
+# $FreeBSD$
 
 PORTNAME=	speedcrunch
 DISTVERSION=	0.10.1
