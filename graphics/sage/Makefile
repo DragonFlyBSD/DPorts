@@ -1,5 +1,5 @@
 # Created by: Janni
-# $FreeBSD: graphics/sage/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	sage
 PORTVERSION=	0.2.0
@@ -17,11 +17,8 @@ USES=	pathfix
 USE_LDCONFIG=	yes
 USE_SDL=	sdl
 
-MAN3=		sage.3 sage_init.3
-
 CFLAGS+=	-I${LOCALBASE}/include
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|sdl-config|${SDL_CONFIG}|g' ${WRKSRC}/configure
 
