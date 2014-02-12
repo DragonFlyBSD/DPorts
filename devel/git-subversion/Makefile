@@ -1,4 +1,4 @@
-# $FreeBSD: devel/git-subversion/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD$
 
 PKGNAMESUFFIX=	-subversion
 
