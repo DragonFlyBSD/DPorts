@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: devel/tcl-signal/Makefile 327726 2013-09-20 17:17:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	tcl-signal
 PORTVERSION=	1.4.0.1
