@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: textproc/p5-LaTeX-Driver/Makefile 332605 2013-11-03 11:29:15Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	LaTeX-Driver
 PORTVERSION=	0.20.02
