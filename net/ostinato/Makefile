@@ -1,5 +1,5 @@
 # Created by: Niclas Zeising <zeising@FreeBSD.org>
-# $FreeBSD: net/ostinato/Makefile 334586 2013-11-22 12:55:00Z makc $
+# $FreeBSD$
 
 PORTNAME=	ostinato
 PORTVERSION=	0.5.1
