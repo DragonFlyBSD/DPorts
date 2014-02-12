@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: graphics/SciPlot/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	SciPlot
 PORTVERSION=	1.36

@@ -1,7 +1,7 @@
 --- Imakefile.orig	Thu Sep  5 04:32:58 1996
 +++ Imakefile	Sun Nov 28 18:14:34 2004
 @@ -1,3 +1,4 @@
-+# $FreeBSD: graphics/SciPlot/files/patch-Imakefile 326044 2013-09-02 17:47:54Z thierry $
++# $FreeBSD: head/graphics/SciPlot/files/patch-Imakefile 326044 2013-09-02 17:47:54Z thierry $
  XCOMM Imakefile for widget demo programs
  
  #ifdef LinuxArchitecture
