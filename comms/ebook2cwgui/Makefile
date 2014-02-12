@@ -1,4 +1,4 @@
-# $FreeBSD: comms/ebook2cwgui/Makefile 337155 2013-12-21 16:58:34Z db $
+# $FreeBSD$
 
 PORTNAME=	ebook2cwgui
 PORTVERSION=	0.1.2
