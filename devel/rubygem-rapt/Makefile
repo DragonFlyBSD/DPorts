@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/rubygem-rapt/Makefile 332040 2013-10-30 02:40:36Z swills $
+# $FreeBSD$
 
 PORTNAME=	rapt
 PORTVERSION=	0.2.2
