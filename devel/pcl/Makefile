@@ -1,5 +1,5 @@
 # Created by: Manuel Giraud <manuel.giraud@gmail.com>
-# $FreeBSD: devel/pcl/Makefile 340993 2014-01-25 07:46:02Z danfe $
+# $FreeBSD$
 
 PORTNAME=	pcl
 PORTVERSION=	1.6
