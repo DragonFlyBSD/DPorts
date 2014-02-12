@@ -1,5 +1,5 @@
 # Created by: J Han <hjh@best.com>
-# $FreeBSD: x11-clocks/t3d/Makefile 339424 2014-01-11 12:51:31Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	t3d
 PORTVERSION=	1.1
