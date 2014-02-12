@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann (oliver@FreeBSD.org)
-# $FreeBSD: textproc/xfce4-dict-plugin/Makefile 330424 2013-10-15 18:36:02Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	xfce4-dict
 PORTVERSION=	0.7.0
