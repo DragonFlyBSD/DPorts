@@ -1,5 +1,5 @@
 # Created by: joseph@randomnetworks.com
-# $FreeBSD: sysutils/adtool/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	adtool
 PORTVERSION=	1.3.3
