@@ -1,5 +1,5 @@
 # Created by: Kurt Jaeger <fbsd-ports@opsec.eu>
-# $FreeBSD: biology/seqtools/Makefile 337375 2013-12-24 17:23:23Z wg $
+# $FreeBSD$
 
 PORTNAME=	seqtools
 PORTVERSION=	4.24
