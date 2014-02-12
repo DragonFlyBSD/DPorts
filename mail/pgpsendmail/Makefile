@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: mail/pgpsendmail/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	pgpsendmail
 PORTVERSION=	1.4
