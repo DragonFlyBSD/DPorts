@@ -1,5 +1,5 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: games/oneisenough/Makefile 339733 2014-01-15 00:31:27Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	oneisenough
 PORTVERSION=	0.4.0
