@@ -1,5 +1,5 @@
 # Created by: minoura@netbsd.org
-# $FreeBSD: x11-fm/xcruise/Makefile 341177 2014-01-26 14:07:33Z miwi $
+# $FreeBSD$
 
 PORTNAME=	xcruiser
 PORTVERSION=	0.30
