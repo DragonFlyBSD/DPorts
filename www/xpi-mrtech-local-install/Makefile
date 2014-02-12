@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: www/xpi-mrtech-local-install/Makefile 341212 2014-01-26 15:12:21Z miwi $
+# $FreeBSD$
 
 PORTNAME=	mrtech-local-install
 DISTVERSION=	5.3.2.3
