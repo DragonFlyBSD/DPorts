@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: archivers/pecl-lzf/Makefile 338694 2014-01-04 23:46:38Z bapt $
+# $FreeBSD$
 
 PORTNAME=	lzf
 PORTVERSION=	1.6.2
