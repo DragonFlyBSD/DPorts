@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-POE-Loop-Tk/Makefile 328860 2013-09-30 20:16:07Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	POE-Loop-Tk
 PORTVERSION=	1.305
