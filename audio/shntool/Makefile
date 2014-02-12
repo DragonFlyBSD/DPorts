@@ -1,5 +1,5 @@
 # Created by: Bill Fenner <fenner@FreeBSD.org>
-# $FreeBSD: audio/shntool/Makefile 341855 2014-01-30 16:05:12Z miwi $
+# $FreeBSD$
 
 PORTNAME=	shntool
 PORTVERSION=	3.0.10
