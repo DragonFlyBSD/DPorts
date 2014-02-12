@@ -1,5 +1,5 @@
 # Created by: vanilla
-# $FreeBSD: textproc/pecl-ctemplate/Makefile 340835 2014-01-23 16:00:14Z miwi $
+# $FreeBSD$
 
 PORTNAME=	cTemplate
 PORTVERSION=	1.11
