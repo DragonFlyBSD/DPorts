@@ -1,5 +1,5 @@
 # Created by: Foxfair Hu <foxfair@FreeBSD.org>
-# $FreeBSD: www/MT/Makefile 338047 2013-12-29 21:48:08Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	MT
 PORTVERSION=	5.2.9
