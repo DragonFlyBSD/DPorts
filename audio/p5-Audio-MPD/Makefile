@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: audio/p5-Audio-MPD/Makefile 332336 2013-11-01 02:28:24Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Audio-MPD
 PORTVERSION=	1.120610
