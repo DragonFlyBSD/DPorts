@@ -1,5 +1,5 @@
 # Created by: John von Essen
-# $FreeBSD: www/privoxy/Makefile 341050 2014-01-25 16:39:52Z ak $
+# $FreeBSD$
 
 PORTNAME=	privoxy
 PORTVERSION=	3.0.21
