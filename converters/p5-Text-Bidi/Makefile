@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: converters/p5-Text-Bidi/Makefile 331007 2013-10-20 11:48:55Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Text-Bidi
 PORTVERSION=	2.08
