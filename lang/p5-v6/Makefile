@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: lang/p5-v6/Makefile 332724 2013-11-04 14:20:04Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	v6
 PORTVERSION=	0.017
