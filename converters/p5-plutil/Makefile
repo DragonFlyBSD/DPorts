@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: converters/p5-plutil/Makefile 331422 2013-10-23 20:30:50Z ehaupt $
+# $FreeBSD$
 
 PORTNAME=	plutil
 PORTVERSION=	1.7
