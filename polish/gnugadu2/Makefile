@@ -1,5 +1,5 @@
 # Created by: smyru@heron.pl
-# $FreeBSD: polish/gnugadu2/Makefile 333231 2013-11-08 14:31:40Z kwm $
+# $FreeBSD$
 
 PORTNAME=	gnugadu2
 PORTVERSION=	2.3.0
