@@ -1,5 +1,5 @@
 # Created by: Camson Huynh <chuynh@biolateral.com.au>
-# $FreeBSD: biology/gff2ps/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	gff2ps
 PORTVERSION=	0.98d
