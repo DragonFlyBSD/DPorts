@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: science/p5-Geo-BUFR/Makefile 332938 2013-11-06 01:32:11Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Geo-BUFR
 PORTVERSION=	1.25
