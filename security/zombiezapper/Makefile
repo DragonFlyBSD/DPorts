@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: security/zombiezapper/Makefile 334307 2013-11-19 12:52:15Z ehaupt $
+# $FreeBSD$
 
 PORTNAME=	zombiezapper
 PORTVERSION=	1.2
