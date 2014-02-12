@@ -1,5 +1,5 @@
 # Created by: Kevin Golding <ports@caomhin.org>
-# $FreeBSD: www/py-django-extensions/Makefile 341751 2014-01-29 15:39:37Z miwi $
+# $FreeBSD$
 
 PORTNAME=	django-extensions
 PORTVERSION=	1.2.0
