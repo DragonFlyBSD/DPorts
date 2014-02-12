@@ -1,5 +1,5 @@
 # Created by: torstenb
-# $FreeBSD: irc/ircII/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ircii
 PORTVERSION=	20111115
