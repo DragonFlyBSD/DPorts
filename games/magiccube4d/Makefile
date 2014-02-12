@@ -1,5 +1,5 @@
 # Created by: Jeremy <karlj000@unbc.ca>
-# $FreeBSD: games/magiccube4d/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	magiccube4d
 PORTVERSION=	2.2
