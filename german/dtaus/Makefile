@@ -1,4 +1,4 @@
-# $FreeBSD: german/dtaus/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	dtaus
 PORTVERSION=	0.9
@@ -14,6 +14,8 @@ ALL_TARGET=	dtaus
 PLIST_FILES=	bin/dtaus man/man1/dtaus.1.gz man/man5/dtaus.5.gz
 PORTDOCS=	ChangeLog README TODO dtaus.txt
 PORTEXAMPLES=	dtaus.cls sample.ctl
+
+OPTIONS_DEFINE=	DOCS EXAMPLES 
 
 .include <bsd.port.options.mk>
 
