@@ -1,5 +1,5 @@
 # Created by: Miguel Mendez <flynn@energyhq.es.eu.org>
-# $FreeBSD: games/adonthell/Makefile 341704 2014-01-29 09:17:41Z rodrigo $
+# $FreeBSD$
 #    $MCom: ports/games/adonthell/Makefile,v 1.1 2006/10/04 20:13:33 ahze Exp $
 
 PORTNAME=	adonthell
