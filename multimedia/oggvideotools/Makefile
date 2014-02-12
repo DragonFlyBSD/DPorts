@@ -1,5 +1,5 @@
 # Created by: Jille Timmermans (jille@quis.cx)
-# $FreeBSD: multimedia/oggvideotools/Makefile 341157 2014-01-26 09:01:55Z riggs $
+# $FreeBSD$
 
 PORTNAME=	oggvideotools
 PORTVERSION=	0.8a
