@@ -1,5 +1,5 @@
 # Created by: Jim Pirzyk <pirzyk@FreeBSD.org>
-# $FreeBSD: sysutils/psgconf/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	psgconf
 PORTVERSION=	3.3
