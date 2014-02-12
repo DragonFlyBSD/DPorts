@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: x11-fonts/py-bdflib/Makefile 333049 2013-11-07 01:31:09Z danfe $
+# $FreeBSD$
 
 PORTNAME=	bdflib
 PORTVERSION=	1.0.0
