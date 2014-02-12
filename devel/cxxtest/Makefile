@@ -1,5 +1,5 @@
 # Created by: andrew morton
-# $FreeBSD: devel/cxxtest/Makefile 341476 2014-01-27 23:33:18Z bapt $
+# $FreeBSD$
 
 PORTNAME=	cxxtest
 PORTVERSION=	3.10.1
