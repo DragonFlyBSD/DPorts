@@ -1,5 +1,5 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: mail/rubygem-larch/Makefile 335801 2013-12-07 01:02:19Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	larch
 PORTVERSION=	1.1.2
