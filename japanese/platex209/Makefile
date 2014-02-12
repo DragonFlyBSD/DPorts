@@ -1,5 +1,5 @@
 # Created by: Makoto WATANABE <watanabe@zlab.phys.nagoya-u.ac.jp>
-# $FreeBSD: japanese/platex209/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	platex209
 PORTVERSION=	1.0
