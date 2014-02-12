@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/pushover/Makefile 341137 2014-01-25 23:25:14Z bapt $
+# $FreeBSD$
 
 PORTNAME=	pushover
 PORTVERSION=	0.0.5
