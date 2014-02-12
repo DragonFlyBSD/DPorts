@@ -1,4 +1,4 @@
-# $FreeBSD: devel/pecl-dio/Makefile 332434 2013-11-02 00:05:49Z flo $
+# $FreeBSD$
 
 PORTNAME=	dio
 DISTVERSION=	0.0.7
