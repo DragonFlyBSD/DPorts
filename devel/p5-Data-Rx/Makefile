@@ -1,5 +1,5 @@
 # Created by: Kurt Lidl <kurt.lidl@cello.com>
-# $FreeBSD: devel/p5-Data-Rx/Makefile 337351 2013-12-24 13:17:14Z jadawin $
+# $FreeBSD$
 
 PORTNAME=	Data-Rx
 PORTVERSION=	0.200005
