@@ -1,5 +1,5 @@
 # Created by: Alex Kiesel <kiesel@schlund.de>
-# $FreeBSD: devel/pecl-svn/Makefile 340830 2014-01-23 15:12:50Z miwi $
+# $FreeBSD$
 
 PORTNAME=	svn
 PORTVERSION=	1.0.2
