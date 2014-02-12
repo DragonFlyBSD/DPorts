@@ -1,5 +1,5 @@
 # Created by: Lars Engels <lars.engels@0x20.net>
-# $FreeBSD: games/freesynd/Makefile 329473 2013-10-05 16:09:08Z madpilot $
+# $FreeBSD$
 
 PORTNAME=	freesynd
 PORTVERSION=	0.7.1
