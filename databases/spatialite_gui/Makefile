@@ -1,5 +1,5 @@
 # Created by: lbartoletti <coder@tuxfamily.org>
-# $FreeBSD: databases/spatialite_gui/Makefile 335383 2013-12-01 13:58:50Z wg $
+# $FreeBSD$
 
 PORTNAME=	spatialite_gui
 PORTVERSION=	1.7.1
