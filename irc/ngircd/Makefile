@@ -1,5 +1,5 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: irc/ngircd/Makefile 333229 2013-11-08 14:17:56Z wg $
+# $FreeBSD$
 
 PORTNAME=	ngircd
 PORTVERSION=	21
