@@ -1,5 +1,5 @@
 #
-# $FreeBSD: games/qccx/files/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 OBJS =	cmdlib.o hash.o pr_comp.o pr_lex.o qcc.o
 
