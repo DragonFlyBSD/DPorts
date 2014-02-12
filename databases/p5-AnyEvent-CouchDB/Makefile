@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: databases/p5-AnyEvent-CouchDB/Makefile 328811 2013-09-30 15:27:05Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	AnyEvent-CouchDB
 PORTVERSION=	1.31
