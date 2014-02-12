@@ -1,5 +1,5 @@
 # Created by: msmith@gsoft.com.au
-# $FreeBSD: lang/bwbasic/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	bwbasic
 PORTVERSION=	2.60
