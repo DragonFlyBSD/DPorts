@@ -1,5 +1,5 @@
 # Created by: Robert Gogolok <gogo@cs.uni-sb.de>
-# $FreeBSD: databases/tablelog/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	tablelog
 PORTVERSION=	0.4.4
@@ -15,6 +15,8 @@ WRKSRC=		${WRKDIR}/table_log-${DISTVERSION}
 USES=		gmake
 USE_PGSQL=	yes
 MAKE_ARGS=	USE_PGXS=1
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
