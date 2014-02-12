@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: graphics/asciio/Makefile 331573 2013-10-25 13:07:04Z ehaupt $
+# $FreeBSD$
 
 PORTNAME=	asciio
 PORTVERSION=	1.02.71
