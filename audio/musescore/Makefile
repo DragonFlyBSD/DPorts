@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: audio/musescore/Makefile 331825 2013-10-28 03:03:46Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	musescore
 PORTVERSION=	1.3
