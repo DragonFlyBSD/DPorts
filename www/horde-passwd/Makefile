@@ -1,4 +1,4 @@
-# $FreeBSD: www/horde-passwd/Makefile 341402 2014-01-27 13:30:28Z miwi $
+# $FreeBSD$
 
 PORTNAME=	passwd
 PORTVERSION=	5.0.1
