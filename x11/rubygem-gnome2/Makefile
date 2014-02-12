@@ -1,4 +1,4 @@
-# $FreeBSD: x11/rubygem-gnome2/Makefile 332058 2013-10-30 03:05:18Z swills $
+# $FreeBSD$
 
 PORTNAME=	gnome2
 PORTVERSION=	2.0.2
