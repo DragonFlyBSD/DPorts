@@ -1,4 +1,4 @@
-# $FreeBSD: converters/p5-Unicode-RecursiveDowngrade/Makefile 341761 2014-01-29 17:00:41Z az $
+# $FreeBSD$
 
 PORTNAME=	Unicode-RecursiveDowngrade
 PORTVERSION=	0.04
