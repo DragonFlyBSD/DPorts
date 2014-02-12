@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: www/p5-FAQ-OMatic/Makefile 333347 2013-11-09 21:46:56Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	FAQ-OMatic
 PORTVERSION=	2.719
