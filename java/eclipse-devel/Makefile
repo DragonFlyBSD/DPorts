@@ -1,5 +1,5 @@
 # Created by: various members of freebsd-java
-# $FreeBSD: java/eclipse-devel/Makefile 327738 2013-09-20 19:48:32Z bapt $
+# $FreeBSD$
 
 PORTNAME=	eclipse-devel
 PORTVERSION=	4.2.0

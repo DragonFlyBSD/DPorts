@@ -4,7 +4,7 @@
 #
 # See: http://www.eclipse.org
 #
-# $FreeBSD: java/eclipse-devel/files/eclipse.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/java/eclipse-devel/files/eclipse.in 340872 2014-01-24 00:14:07Z mat $
 #
 DEFAULT_JAVA_HOME=%%JAVA_HOME%%
 ECLIPSE_HOME=%%ECLIPSE_HOME%%

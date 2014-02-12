@@ -1,4 +1,4 @@
-$FreeBSD: java/eclipse-devel/files/patch-eclipse-build 304543 2012-09-19 19:58:38Z glewis $
+$FreeBSD: head/java/eclipse-devel/files/patch-eclipse-build 304543 2012-09-19 19:58:38Z glewis $
 
 --- eclipse-build-0.5.0.orig/build.properties	2009-09-30 14:07:21.000000000 -0400
 +++ eclipse-build-0.5.0/build.properties	2009-12-23 16:23:06.355139641 -0500

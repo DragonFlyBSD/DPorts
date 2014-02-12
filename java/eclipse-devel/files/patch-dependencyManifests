@@ -1,4 +1,4 @@
-$FreeBSD: java/eclipse-devel/files/patch-dependencyManifests 304543 2012-09-19 19:58:38Z glewis $
+$FreeBSD: head/java/eclipse-devel/files/patch-dependencyManifests 304543 2012-09-19 19:58:38Z glewis $
 
 --- eclipse-build-914dc6de2bfc5ee5819a229cf4877f7043040a92/dependencyManifests/org.apache.commons.el_1.0.0.v200806031608.jar/META-INF/MANIFEST.MF~	Mon Dec 19 16:40:57 2011
 +++ eclipse-build-914dc6de2bfc5ee5819a229cf4877f7043040a92/dependencyManifests/org.apache.commons.el_1.0.0.v200806031608.jar/META-INF/MANIFEST.MF	Wed Feb 29 16:33:20 2012
