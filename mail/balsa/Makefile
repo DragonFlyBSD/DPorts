@@ -1,5 +1,5 @@
 # Created by: Glenn Johnson <gljohns@bellsouth.net>
-# $FreeBSD: mail/balsa/Makefile 331057 2013-10-20 19:20:15Z jhale $
+# $FreeBSD$
 #   $MCom: ports-stable/mail/balsa/Makefile,v 1.3 2007/12/02 19:18:50 marcus Exp $
 
 PORTNAME=	balsa
