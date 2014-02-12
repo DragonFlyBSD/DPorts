@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: multimedia/clive/Makefile 342317 2014-02-02 15:21:20Z miwi $
+# $FreeBSD$
 
 PORTNAME=	clive
 PORTVERSION=	2.3.3
