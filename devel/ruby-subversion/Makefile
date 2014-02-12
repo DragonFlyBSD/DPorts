@@ -1,5 +1,5 @@
 # Created by: Hiroyuki Iwatsuki <don@na.rim.or.jp>
-# $FreeBSD: devel/ruby-subversion/Makefile 330360 2013-10-14 20:56:34Z ohauer $
+# $FreeBSD$
 
 PKGNAMEPREFIX=	ruby-
 
