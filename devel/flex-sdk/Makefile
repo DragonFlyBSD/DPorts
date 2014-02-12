@@ -1,4 +1,4 @@
-# $FreeBSD: devel/flex-sdk/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	flex-sdk
 PORTVERSION=	4.6.0.23201
