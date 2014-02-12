@@ -1,5 +1,5 @@
 # Created by: Joey Mingrone <joey@mingrone.org>
-# $FreeBSD: deskutils/parcellite/Makefile 338324 2013-12-31 15:13:19Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	parcellite
 PORTVERSION=	1.1.7
