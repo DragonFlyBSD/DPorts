@@ -1,5 +1,5 @@
 # Created by: grog
-# $FreeBSD: sysutils/dirdiff/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	dirdiff
 PORTVERSION=	2.1
