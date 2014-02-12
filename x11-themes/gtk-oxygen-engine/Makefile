@@ -1,4 +1,4 @@
-# $FreeBSD: x11-themes/gtk-oxygen-engine/Makefile 341196 2014-01-26 15:06:04Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	oxygen
 PORTVERSION=	1.4.3
