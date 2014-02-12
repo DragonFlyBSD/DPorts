@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: audio/sonice/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	sonice
 PORTVERSION=	2.0
