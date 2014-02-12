@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: editors/impress/Makefile 330620 2013-10-17 09:36:36Z gahr $
+# $FreeBSD$
 
 PORTNAME=	impress
 PORTVERSION=	1.1b9
