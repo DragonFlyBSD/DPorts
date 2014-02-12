@@ -1,5 +1,5 @@
 # Created by: Anes Mukhametov <anes@anes.su>
-# $FreeBSD: databases/p5-AnyEvent-Memcached/Makefile 333891 2013-11-15 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	AnyEvent-Memcached
 PORTVERSION=	0.05
