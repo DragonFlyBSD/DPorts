@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: games/penguin-command/Makefile 330502 2013-10-16 12:55:25Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	penguin-command
 PORTVERSION=	1.6.11
