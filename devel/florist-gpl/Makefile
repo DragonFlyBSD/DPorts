@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: devel/florist-gpl/Makefile 333375 2013-11-10 11:01:09Z marino $
+# $FreeBSD$
 
 PORTNAME=	florist-gpl
 PORTVERSION=	2012
