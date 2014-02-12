@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: editors/scite/Makefile 331271 2013-10-22 13:57:35Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	scite
 PORTVERSION=	3.3.5
