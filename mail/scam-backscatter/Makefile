@@ -1,5 +1,5 @@
 # Created by: Janne Snabb <snabb@epipe.com>
-# $FreeBSD: mail/scam-backscatter/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	scam-backscatter
 PORTVERSION=	1.5.1
