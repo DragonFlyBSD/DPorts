@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: x11-wm/evilwm/Makefile 327786 2013-09-21 00:01:16Z bapt $
+# $FreeBSD$
 
 PORTNAME=	evilwm
 PORTVERSION=	1.1.0
