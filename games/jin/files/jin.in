@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: games/jin/files/jin.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/games/jin/files/jin.in 340872 2014-01-24 00:14:07Z mat $
 cd %%DATADIR%%
 JAVA_VERSION="%%JAVA_VERSION%%"	\
 exec "%%LOCALBASE%%/bin/java" -jar %%DATADIR%%/%%JINJAR%% "$@"
