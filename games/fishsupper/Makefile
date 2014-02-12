@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/fishsupper/Makefile 329253 2013-10-04 01:36:13Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	fishsupper
 PORTVERSION=	0.1.6
@@ -30,6 +30,8 @@ DESKTOP_ENTRIES="Fish Supper" \
 		"fishsupper" \
 		"Game;ArcadeGame;" \
 		false
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
