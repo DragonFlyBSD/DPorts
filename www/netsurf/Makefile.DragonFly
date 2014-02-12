@@ -1,2 +1,0 @@
-LIB_DEPENDS+=	ssl:${PORTSDIR}/security/openssl
-BUILD_DEPENDS+=	gperf:${PORTSDIR}/devel/gperf

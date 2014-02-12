@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/netsurf/Makefile 341558 2014-01-28 13:35:50Z miwi $
+# $FreeBSD$
 
 PORTNAME=	netsurf
 PORTVERSION=	3.0
@@ -39,6 +39,11 @@ WEBP_LIB_DEPENDS=	libwebp.so:${PORTSDIR}/graphics/webp
 
 .if ${PORT_OPTIONS:MGSTREAMER}
 USE_GSTREAMER=	yes
+.endif
+
+.if ${OPSYS} == DragonFly
+LIB_DEPENDS+=	libssl.so:${PORTSDIR}/security/openssl
+BUILD_DEPENDS+=	gperf:${PORTSDIR}/devel/gperf
 .endif
 
 post-patch:
