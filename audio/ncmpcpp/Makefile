@@ -1,5 +1,5 @@
 # Created by: Dennis Herrmann <adox@mcx2.org>
-# $FreeBSD: audio/ncmpcpp/Makefile 337961 2013-12-29 11:31:22Z dhn $
+# $FreeBSD$
 
 PORTNAME=	ncmpcpp
 PORTVERSION=	0.5.10
