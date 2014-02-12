@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: graphics/viewnior/Makefile 336202 2013-12-11 19:00:07Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	viewnior
 PORTVERSION=	1.3
