@@ -1,4 +1,4 @@
-# $FreeBSD: www/cowboy/Makefile 333103 2013-11-07 14:33:57Z olgeni $
+# $FreeBSD$
 
 PORTNAME=	cowboy
 PORTVERSION=	0.8.6
