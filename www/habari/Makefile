@@ -1,5 +1,5 @@
 # Created by: Ayumi M <ayu@commun.jp>
-# $FreeBSD: www/habari/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	habari
 PORTVERSION=	0.8
