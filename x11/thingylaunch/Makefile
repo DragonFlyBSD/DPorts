@@ -1,5 +1,5 @@
 # Created by: Pietro Cerutti <gahr@FreeBSD.org>
-# $FreeBSD: x11/thingylaunch/Makefile 339414 2014-01-11 10:03:45Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	thingylaunch
 PORTVERSION=	1.1.5
