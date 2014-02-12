@@ -1,5 +1,5 @@
 # Created by: Sugimoto Sadahiro <ixtl@utmc.or.jp>
-# $FreeBSD: games/mindfocus/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	mindfocus
 PORTVERSION=	0.88
@@ -18,6 +18,9 @@ RESTRICTED=	'contains commercial character data'
 DOCSDIR=	${PREFIX}/share/doc/ja/${PORTNAME}
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 post-install:
