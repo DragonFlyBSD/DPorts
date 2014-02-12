@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-Reporter-Transport-Metabase/Makefile 338856 2014-01-06 11:00:15Z az $
+# $FreeBSD$
 
 PORTNAME=	Test-Reporter-Transport-Metabase
 PORTVERSION=	1.999008
