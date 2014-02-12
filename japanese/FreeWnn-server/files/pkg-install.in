@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: japanese/FreeWnn-server/files/pkg-install.in 340719 2014-01-22 15:52:06Z mat $
+# $FreeBSD: head/japanese/FreeWnn-server/files/pkg-install.in 340719 2014-01-22 15:52:06Z mat $
 
 case $2 in
 POST-INSTALL)
