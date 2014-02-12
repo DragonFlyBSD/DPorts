@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/springgraph/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	springgraph
 PORTVERSION=	0.88
