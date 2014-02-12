@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: www/gecko-mediaplayer/Makefile 335784 2013-12-06 20:56:46Z jkim $
+# $FreeBSD$
 
 PORTNAME=	gecko-mediaplayer
 DISTVERSION=	1.0.9a
