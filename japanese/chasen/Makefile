@@ -1,5 +1,5 @@
 # Created by: kuriyama
-# $FreeBSD: japanese/chasen/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	chasen
 PORTVERSION=	2.4.4
