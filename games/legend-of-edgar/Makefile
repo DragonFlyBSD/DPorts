@@ -1,5 +1,5 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: games/legend-of-edgar/Makefile 339798 2014-01-15 18:18:55Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	edgar
 DISTVERSION=	1.14-1
