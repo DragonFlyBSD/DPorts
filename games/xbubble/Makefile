@@ -1,5 +1,5 @@
 # Created by: Klaus Goger <klaus.goger@reflex.at>
-# $FreeBSD: games/xbubble/Makefile 333640 2013-11-13 02:06:26Z danilo $
+# $FreeBSD$
 
 PORTNAME=	xbubble
 PORTVERSION=	0.5.8
