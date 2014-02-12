@@ -1,5 +1,5 @@
 # Created by: Johannes Meixner <xmj@chaot.net>
-# $FreeBSD: devel/py-snackwich/Makefile 336920 2013-12-19 14:55:32Z wg $
+# $FreeBSD$
 
 PORTNAME=	snackwich
 PORTVERSION=	1.3.18
