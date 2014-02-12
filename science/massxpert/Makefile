@@ -1,5 +1,5 @@
 # Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-# $FreeBSD: science/massxpert/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD$
 
 PORTNAME=	massxpert
 PORTVERSION=	3.4.0
