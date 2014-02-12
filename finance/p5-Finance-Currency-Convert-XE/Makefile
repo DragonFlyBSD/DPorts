@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: finance/p5-Finance-Currency-Convert-XE/Makefile 334748 2013-11-24 17:40:44Z mat $
+# $FreeBSD$
 
 PORTNAME=	Finance-Currency-Convert-XE
 PORTVERSION=	0.25
