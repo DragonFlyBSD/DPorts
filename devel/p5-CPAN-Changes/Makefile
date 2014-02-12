@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/p5-CPAN-Changes/Makefile 338204 2013-12-31 00:59:25Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	CPAN-Changes
 PORTVERSION=	0.27
