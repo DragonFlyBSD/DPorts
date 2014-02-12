@@ -1,4 +1,4 @@
-# $FreeBSD: ports-mgmt/fastest_sites/Makefile 327762 2013-09-20 22:36:49Z bapt $
+# $FreeBSD$
 
 PORTNAME=	fastest_sites
 PORTVERSION=	20110317
