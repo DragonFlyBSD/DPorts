@@ -1,5 +1,5 @@
 # Created by: Attila Nagy <bra@fsn.hu>
-# $FreeBSD: mail/p5-Mail-CheckUser/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Mail-CheckUser
 PORTVERSION=	1.21
@@ -17,8 +17,4 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 
-MAN1=		cufilter.1
-MAN3=           Mail::CheckUser.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
