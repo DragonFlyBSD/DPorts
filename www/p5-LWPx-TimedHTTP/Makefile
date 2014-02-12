@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: www/p5-LWPx-TimedHTTP/Makefile 328848 2013-09-30 19:25:55Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	LWPx-TimedHTTP
 PORTVERSION=	1.8
