@@ -1,5 +1,5 @@
 # Created by: vanilla
-# $FreeBSD: graphics/epeg/Makefile 342305 2014-02-02 14:56:09Z miwi $
+# $FreeBSD$
 
 PORTNAME=	epeg
 PORTVERSION=	0.9.1.042
