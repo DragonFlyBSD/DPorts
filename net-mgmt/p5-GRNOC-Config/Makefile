@@ -1,5 +1,5 @@
 # Created by: Muhammad Moinur Rahman <5u623l20@gmail.com>
-# $FreeBSD: net-mgmt/p5-GRNOC-Config/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	GRNOC-Config
 PORTVERSION=	1.0.9
@@ -18,12 +18,11 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USE_PERL5=	configure
 USES=		perl5
 
-MAN3=		GRNOC::Config.3
 PLIST_FILES=	%%SITE_PERL%%/GRNOC/Config.pm \
+		%%PERL5_MAN3%%/GRNOC::Config.3.gz \
 		%%SITE_PERL%%/%%PERL_ARCH%%/auto/GRNOC/Config/.packlist
 PLIST_DIRSTRY=	%%SITE_PERL%%/%%PERL_ARCH%%/auto/GRNOC/Config \
 		%%SITE_PERL%%/%%PERL_ARCH%%/auto/GRNOC \
 		%%SITE_PERL%%/GRNOC
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
