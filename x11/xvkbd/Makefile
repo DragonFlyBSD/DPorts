@@ -1,5 +1,5 @@
 # Created by: roam@FreeBSD.org
-# $FreeBSD: x11/xvkbd/Makefile 336378 2013-12-13 23:12:00Z bapt $
+# $FreeBSD$
 
 PORTNAME=	xvkbd
 PORTVERSION=	3.5
