@@ -1,5 +1,5 @@
 # Created by: Juergen Lock <nox@FreeBSD.org>
-# $FreeBSD: games/latrine/Makefile 332559 2013-11-02 23:29:18Z danilo $
+# $FreeBSD$
 
 PORTNAME=	latrine
 PORTVERSION=	1.0.0
