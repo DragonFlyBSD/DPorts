@@ -1,5 +1,5 @@
 # Created by: Peter Pentchev <roam@FreeBSD.org>
-# $FreeBSD: dns/p5-Stanford-DNSserver/Makefile 332593 2013-11-03 07:46:27Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Stanford-DNSserver
 PORTVERSION=	1.2.0
