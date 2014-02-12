@@ -1,5 +1,5 @@
 # Created by: Ilya Bakulin <webmaster@kibab.com>
-# $FreeBSD: net/wpa_gui/Makefile 334586 2013-11-22 12:55:00Z makc $
+# $FreeBSD$
 
 PORTNAME=	wpa_gui
 PORTVERSION=	0.7.3
