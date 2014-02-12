@@ -1,5 +1,5 @@
 # Created by: Leo Vandewoestijne <freebsd@dns-lab.com>
-# $FreeBSD: dns/knot/Makefile 337542 2013-12-26 16:02:50Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	knot
 DISTVERSION=	1.3.3
