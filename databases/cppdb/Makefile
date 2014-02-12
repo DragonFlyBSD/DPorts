@@ -1,5 +1,5 @@
 # Created by: Mohammad S. Babaei <info@babaei.net>
-# $FreeBSD: databases/cppdb/Makefile 336187 2013-12-11 18:08:52Z bapt $
+# $FreeBSD$
 
 PORTNAME=       cppdb
 PORTVERSION=    0.3.1
