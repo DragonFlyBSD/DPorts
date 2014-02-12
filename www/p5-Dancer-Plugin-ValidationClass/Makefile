@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Dancer-Plugin-ValidationClass/Makefile 338773 2014-01-05 13:41:52Z az $
+# $FreeBSD$
 
 PORTNAME=	Dancer-Plugin-ValidationClass
 PORTVERSION=	0.120490
