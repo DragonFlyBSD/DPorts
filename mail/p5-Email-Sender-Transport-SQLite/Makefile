@@ -1,5 +1,5 @@
 # Created by: Bill Brinzer <bill.brinzer@gmail.com>
-# $FreeBSD: mail/p5-Email-Sender-Transport-SQLite/Makefile 338794 2014-01-05 16:20:40Z az $
+# $FreeBSD$
 
 PORTNAME=	Email-Sender-Transport-SQLite
 PORTVERSION=	0.092000
