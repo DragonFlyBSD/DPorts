@@ -1,5 +1,5 @@
 # Created by: Tommy Scheunemann <net@arrishq.net>
-# $FreeBSD: www/mod_auth_form/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mod_auth_form
 PORTVERSION=	2.05
