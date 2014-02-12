@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: deskutils/qrfcview/Makefile 336650 2013-12-16 17:40:13Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	qrfcview
 PORTVERSION=	0.62
