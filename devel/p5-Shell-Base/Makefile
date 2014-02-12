@@ -1,5 +1,5 @@
 # Created by: Christopher Nehren <apeiron@comcast.net>
-# $FreeBSD: devel/p5-Shell-Base/Makefile 332205 2013-10-31 07:36:25Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Shell-Base
 PORTVERSION=	0.05
