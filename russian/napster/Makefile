@@ -1,5 +1,5 @@
 # Created by: Roman Y. Bogdanov <sam@brj.pp.ru>
-# $FreeBSD: russian/napster/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	nap
 CATEGORIES=	russian
