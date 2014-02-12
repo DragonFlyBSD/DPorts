@@ -1,5 +1,5 @@
 # Created by: Piotr Florczyk <pf@itwf.pl>
-# $FreeBSD: net/lualdap/Makefile 339453 2014-01-11 20:37:29Z bapt $
+# $FreeBSD$
 
 PORTNAME=	lualdap
 PORTVERSION=	1.1.0
