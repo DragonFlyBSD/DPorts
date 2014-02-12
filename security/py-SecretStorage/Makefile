@@ -1,5 +1,5 @@
 # Created by: Douglas Thrift <douglas@douglasthrift.net>
-# $FreeBSD: security/py-SecretStorage/Makefile 334655 2013-11-23 10:26:14Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	SecretStorage
 PORTVERSION=	1.1.0
