@@ -1,5 +1,5 @@
 # Created by: Matt Peterson <matt@peterson.org>
-# $FreeBSD: sysutils/sortu/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	sortu
 PORTVERSION=	2.1.2
@@ -19,6 +19,9 @@ PLIST_FILES=	bin/sortu
 ALL_TARGET=	sortu
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 do-install:
