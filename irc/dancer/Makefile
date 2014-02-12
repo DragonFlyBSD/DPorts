@@ -1,5 +1,5 @@
 # Created by: Dominic Marks <dom@cus.org.uk>
-# $FreeBSD: irc/dancer/Makefile 330474 2013-10-16 03:09:48Z eadler $
+# $FreeBSD$
 
 PORTNAME=	dancer
 PORTVERSION=	4.16
