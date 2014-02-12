@@ -1,5 +1,5 @@
 # Created by: Christopher Boumenot <boumenot@gmail.com>
-# $FreeBSD: finance/p5-Finance-Amortization/Makefile 332619 2013-11-03 15:38:39Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Finance-Amortization
 PORTVERSION=	0.5
