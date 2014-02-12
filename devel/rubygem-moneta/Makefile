@@ -1,5 +1,5 @@
 # Created by: renchap@cocoa-x.com
-# $FreeBSD: devel/rubygem-moneta/Makefile 340902 2014-01-24 14:47:11Z miwi $
+# $FreeBSD$
 
 PORTNAME=	moneta
 PORTVERSION=	0.7.19
