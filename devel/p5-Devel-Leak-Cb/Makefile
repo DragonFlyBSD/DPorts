@@ -1,5 +1,5 @@
 # Created by: Anes Mukhametov <anes@anes.su>
-# $FreeBSD: devel/p5-Devel-Leak-Cb/Makefile 333889 2013-11-15 16:52:58Z mat $
+# $FreeBSD$
 
 PORTNAME=	Devel-Leak-Cb
 PORTVERSION=	0.04
