@@ -1,5 +1,5 @@
 # Created by: Dominic Marks <dom@goodforbusiness.co.uk>
-# $FreeBSD: www/mod_line_edit/Makefile 336555 2013-12-15 16:45:38Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	mod_line_edit
 PORTVERSION=	1.0.0
