@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: mail/p3scan/files/p3scan.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/mail/p3scan/files/p3scan.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: p3scan
 # REQUIRE: DAEMON
