@@ -1,4 +1,4 @@
-# $FreeBSD: audio/mp3unicode/Makefile 331383 2013-10-23 13:08:41Z makc $
+# $FreeBSD$
 
 PORTNAME=	mp3unicode
 PORTVERSION=	1.2
