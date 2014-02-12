@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: biology/jalview/Makefile 340487 2014-01-20 23:10:10Z bapt $
+# $FreeBSD$
 
 PORTNAME=	jalview
 PORTVERSION=	2.07

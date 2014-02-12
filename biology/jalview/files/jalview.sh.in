@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: biology/jalview/files/jalview.sh.in 340851 2014-01-23 19:55:14Z mat $
+# $FreeBSD: head/biology/jalview/files/jalview.sh.in 340851 2014-01-23 19:55:14Z mat $
 
 # Shell script to launch jalview using our javavm wrapper
 
