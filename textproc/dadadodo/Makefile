@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: textproc/dadadodo/Makefile 341163 2014-01-26 12:08:06Z mat $
+# $FreeBSD$
 
 PORTNAME=	dadadodo
 PORTVERSION=	1.04
