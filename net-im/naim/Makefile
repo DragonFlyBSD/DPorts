@@ -1,5 +1,5 @@
 # Created by: Michael Haro <mharo@area51.fremont.ca.us>
-# $FreeBSD: net-im/naim/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	naim
 PORTVERSION=	0.11.8.3.2
