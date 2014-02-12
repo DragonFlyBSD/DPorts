@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: cad/leocad/Makefile 336011 2013-12-09 17:59:17Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	leocad
 PORTVERSION=	0.80.1
