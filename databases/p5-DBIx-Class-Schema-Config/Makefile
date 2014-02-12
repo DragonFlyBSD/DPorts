@@ -1,5 +1,5 @@
 # Created by: Espen Tagestad <espen@tagestad.no>
-# $FreeBSD: databases/p5-DBIx-Class-Schema-Config/Makefile 341764 2014-01-29 17:31:52Z az $
+# $FreeBSD$
 
 PORTNAME=	DBIx-Class-Schema-Config
 PORTVERSION=	0.001008
