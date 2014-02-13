@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/argouml/Makefile 328702 2013-09-29 14:52:55Z rene $
+# $FreeBSD$
 
 PORTNAME=	argouml
 PORTVERSION=	0.34
