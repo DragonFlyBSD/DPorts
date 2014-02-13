@@ -1,5 +1,5 @@
 # Created by: Benoit Calvez <benoit@litchis.org>
-# $FreeBSD: devel/py-pytemplate/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	pytemplate
 PORTVERSION=	1.5.1
