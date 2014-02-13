@@ -1,5 +1,5 @@
 # Created by: Andrey Lykhin <lan31@inbox.ru>
-# $FreeBSD: comms/bfhist/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	bfhist
 PORTVERSION=	0.4
