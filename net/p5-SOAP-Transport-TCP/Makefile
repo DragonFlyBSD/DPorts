@@ -1,4 +1,4 @@
-# $FreeBSD: net/p5-SOAP-Transport-TCP/Makefile 332868 2013-11-05 16:42:55Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	SOAP-Transport-TCP
 PORTVERSION=	0.717
