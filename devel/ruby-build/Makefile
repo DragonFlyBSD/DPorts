@@ -1,4 +1,4 @@
-# $FreeBSD: devel/ruby-build/Makefile 341909 2014-01-31 04:48:11Z swills $
+# $FreeBSD$
 
 PORTNAME=	ruby-build
 PORTVERSION=	20140110.1
