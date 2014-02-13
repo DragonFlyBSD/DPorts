@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/re_graph/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD$
 
 PORTNAME=	re_graph
 PORTVERSION=	0.2
