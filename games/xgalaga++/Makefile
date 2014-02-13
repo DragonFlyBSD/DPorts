@@ -1,5 +1,5 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: games/xgalaga++/Makefile 340924 2014-01-24 19:04:50Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	xgalaga++
 PORTVERSION=	0.8.4
