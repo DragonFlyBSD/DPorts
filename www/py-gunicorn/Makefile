@@ -1,5 +1,5 @@
 # Created by: Kristaps Kulis <kristaps.kulis@gmail.com>
-# $FreeBSD: www/py-gunicorn/Makefile 339338 2014-01-10 09:29:28Z koobs $
+# $FreeBSD$
 
 PORTNAME=	gunicorn
 PORTVERSION=	18.0
