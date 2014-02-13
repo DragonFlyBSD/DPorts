@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/ebnf2yacc/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ebnf2yacc
 PORTVERSION=	0.1.1
