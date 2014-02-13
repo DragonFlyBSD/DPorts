@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/sdom/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	sdom
 PORTVERSION=	0.5.1
