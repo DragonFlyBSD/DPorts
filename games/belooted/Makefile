@@ -1,5 +1,5 @@
 # Created by: Yinghong Liu <relaxbsd@gmail.com>
-# $FreeBSD: games/belooted/Makefile 334558 2013-11-22 08:47:08Z martymac $
+# $FreeBSD$
 
 PORTNAME=	belooted
 PORTVERSION=	0.1.4.1
