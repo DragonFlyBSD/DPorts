@@ -1,5 +1,5 @@
 # Created by: Matt Braithwaite <mab@red-bean.com>
-# $FreeBSD: deskutils/xwrits/Makefile 336697 2013-12-17 08:08:59Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	xwrits
 PORTVERSION=	2.26
