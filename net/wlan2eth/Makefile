@@ -1,5 +1,5 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: net/wlan2eth/Makefile 330548 2013-10-16 21:37:38Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	wlan2eth
 PORTVERSION=	1.3
