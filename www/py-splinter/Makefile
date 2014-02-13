@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <wg@FreeBSD.org>
-# $FreeBSD: www/py-splinter/Makefile 336859 2013-12-18 20:20:49Z wg $
+# $FreeBSD$
 
 PORTNAME=	splinter
 PORTVERSION=	0.5.4
