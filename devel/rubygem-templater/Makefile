@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/rubygem-templater/Makefile 332042 2013-10-30 02:46:01Z swills $
+# $FreeBSD$
 
 PORTNAME=	templater
 PORTVERSION=	1.0.0
