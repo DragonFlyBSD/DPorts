@@ -1,5 +1,5 @@
 # Created by: Mars G Miro <spry@anarchy.in.the.ph>
-# $FreeBSD: net/p5-Net-Frame-Layer-IPv6/Makefile 338810 2014-01-05 17:53:15Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-Frame-Layer-IPv6
 PORTVERSION=	1.05
