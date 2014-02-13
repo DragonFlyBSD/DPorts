@@ -1,5 +1,5 @@
 # Created by: Matt Peterson <matt@peterson.org>
-# $FreeBSD: net/libtrace/Makefile 341949 2014-01-31 09:02:06Z miwi $
+# $FreeBSD$
 
 PORTNAME=	libtrace
 PORTVERSION=	3.0.15
