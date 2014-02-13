@@ -1,5 +1,5 @@
 # Created by: milki <milki@rescomp.berkeley.edu>
-# $FreeBSD: textproc/p5-SQL-Tokenizer/Makefile 340672 2014-01-21 23:21:10Z mat $
+# $FreeBSD$
 
 PORTNAME=	SQL-Tokenizer
 PORTVERSION=	0.24
