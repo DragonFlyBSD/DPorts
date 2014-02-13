@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: games/p5-Acme-GuessNumber/Makefile 332736 2013-11-04 14:49:24Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Acme-GuessNumber
 PORTVERSION=	0.04
