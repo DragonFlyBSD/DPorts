@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: textproc/bbe/Makefile 341143 2014-01-26 00:03:51Z mat $
+# $FreeBSD$
 
 PORTNAME=	bbe
 PORTVERSION=	0.2.2
