@@ -1,5 +1,5 @@
 # Created by: Anatoliy Dmytriyev <tolid@plab.ku.dk>
-# $FreeBSD: devel/p5-VCS-CVS/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	VCS-CVS
 PORTVERSION=	2.06
@@ -16,7 +16,5 @@ BUILD_DEPENDS=	p5-Test-Pod>=0:${PORTSDIR}/devel/p5-Test-Pod
 
 USES=		perl5
 USE_PERL5=	modbuild
-MAN3=		VCS::CVS.3
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
