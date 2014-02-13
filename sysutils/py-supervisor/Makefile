@@ -1,5 +1,5 @@
 # Created by: Hizbulin Ildar <hizel@vyborg.ru>
-# $FreeBSD: sysutils/py-supervisor/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	supervisor
 PORTVERSION=	3.0
