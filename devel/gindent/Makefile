@@ -1,5 +1,5 @@
 # Created by: Kapil Chowksey <kchowksey@hss.hns.com>
-# $FreeBSD: devel/gindent/Makefile 339878 2014-01-16 00:01:37Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gindent
 PORTVERSION=	2.2.10
