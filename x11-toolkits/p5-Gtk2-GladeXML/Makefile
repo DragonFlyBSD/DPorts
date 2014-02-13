@@ -1,5 +1,5 @@
 # Created by: Paul Schmehl <pauls@utdallas.edu>
-# $FreeBSD: x11-toolkits/p5-Gtk2-GladeXML/Makefile 338755 2014-01-05 12:30:05Z az $
+# $FreeBSD$
 
 PORTNAME=	Gtk2-GladeXML
 PORTVERSION=	1.007
