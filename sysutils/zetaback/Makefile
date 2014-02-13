@@ -1,5 +1,5 @@
 # Created by: Cy Schubert <cy@FreeBSD.org>
-# $FreeBSD: sysutils/zetaback/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	zetaback
 PORTVERSION=	1.0.4
