@@ -1,5 +1,5 @@
 # Created by: Tony Maher <tonym@biolateral.com.au>
-# $FreeBSD: devel/p5-Class-ObjectTemplate-DB/Makefile 331856 2013-10-28 13:46:25Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Class-ObjectTemplate-DB
 PORTVERSION=	0.27
