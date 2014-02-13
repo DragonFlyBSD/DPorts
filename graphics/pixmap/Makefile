@@ -1,5 +1,5 @@
 # Created by: jmz
-# $FreeBSD: graphics/pixmap/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	pixmap
 PORTVERSION=	2.6
