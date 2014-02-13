@@ -1,5 +1,5 @@
 # Created by: Daniel O'Connor <darius@dons.net.au>
-# $FreeBSD: games/ptkei/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ptkei
 PORTVERSION=	1.18.1
