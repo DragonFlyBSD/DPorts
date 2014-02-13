@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/xpi-stylish/Makefile 341217 2014-01-26 15:13:43Z miwi $
+# $FreeBSD$
 
 PORTNAME=	stylish
 PORTVERSION=	1.2.5
