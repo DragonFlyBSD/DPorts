@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: multimedia/xtheater/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xtheater
 PORTVERSION=	1.0.0.p1
@@ -19,14 +19,13 @@ USE_SDL=	sdl
 USE_BZIP2=	yes
 USE_GNOME=	gtk12
 USE_GL=		yes
-USE_GMAKE=	yes
+USES=		gmake
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-gl
 
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|$${CONFIG_SHELL-/bin/sh} $$ac_aux_dir|$$ac_aux_dir|' \
 		${WRKSRC}/configure
