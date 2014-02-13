@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: misc/dvorakng/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	dvorakng
 PORTVERSION=	0.5.0
@@ -17,6 +17,9 @@ MAKE_ARGS=	CC="${CC}" CXX="${CXX}" CFLAGS="${CFLAGS} ${CPPFLAGS}" \
 		CXXFLAGS="${CXXFLAGS} ${CPPFLAGS}" LDFLAGS="${LDFLAGS}"
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 PLIST_FILES=	bin/dvorakng
