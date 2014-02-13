@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-BSD-stat/Makefile 339403 2014-01-11 08:07:39Z culot $
+# $FreeBSD$
 
 PORTNAME=	BSD-stat
 PORTVERSION=	1.35
