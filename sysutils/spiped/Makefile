@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/spiped/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	spiped
 PORTVERSION=	1.3.1
@@ -29,6 +29,9 @@ PLIST_FILES=	bin/spiped bin/spipe
 USE_RC_SUBR=	spiped
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 post-install:
