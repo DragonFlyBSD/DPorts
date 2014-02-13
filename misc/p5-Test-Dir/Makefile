@@ -1,5 +1,5 @@
 # Created by: Xavier Beaudouin <kiwi@oav.net>
-# $FreeBSD: misc/p5-Test-Dir/Makefile 338755 2014-01-05 12:30:05Z az $
+# $FreeBSD$
 
 PORTNAME=	Test-Dir
 PORTVERSION=	1.014
