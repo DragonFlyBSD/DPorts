@@ -1,5 +1,5 @@
 # Created by: Satoshi TAOKA <taoka@FreeBSD.org>
-# $FreeBSD: x11-fonts/intlfonts/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	intlfonts
 PORTVERSION=	1.2.1
