@@ -1,5 +1,5 @@
 # Created by: Marcelo Araujo <araujo@bsdmail.org>
-# $FreeBSD: www/netoffice/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	netoffice
 PORTVERSION=	2.6.0b2
