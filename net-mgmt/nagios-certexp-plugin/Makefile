@@ -1,5 +1,5 @@
 # Created by: ecronin@gizmolabs.org
-# $FreeBSD: net-mgmt/nagios-certexp-plugin/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	nagios-certexp-plugin
 PORTVERSION=	1.1
