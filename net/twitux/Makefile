@@ -1,5 +1,5 @@
 # Created by: Arnaud Berthomier
-# $FreeBSD: net/twitux/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=		twitux
 PORTVERSION=	0.69
