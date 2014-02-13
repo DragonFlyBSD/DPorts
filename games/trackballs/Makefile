@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: games/trackballs/Makefile 334564 2013-11-22 09:43:43Z martymac $
+# $FreeBSD$
 
 PORTNAME=	trackballs
 PORTVERSION=	1.1.4
