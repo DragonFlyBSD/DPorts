@@ -1,5 +1,5 @@
 # Created by: Rod Taylor <rod@zort.on.ca>
-# $FreeBSD: audio/xhippo/Makefile 338153 2013-12-30 17:38:29Z antoine $
+# $FreeBSD$
 
 PORTNAME=	xhippo
 PORTVERSION=	3.5
