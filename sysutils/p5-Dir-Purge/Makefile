@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: sysutils/p5-Dir-Purge/Makefile 331567 2013-10-25 11:20:05Z ehaupt $
+# $FreeBSD$
 
 PORTNAME=	Dir-Purge
 PORTVERSION=	1.02
