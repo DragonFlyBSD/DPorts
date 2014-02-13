@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: net-mgmt/nfsen/files/nfsen.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/net-mgmt/nfsen/files/nfsen.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: nfsen
 # REQUIRE: LOGIN

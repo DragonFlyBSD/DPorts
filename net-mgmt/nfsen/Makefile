@@ -1,5 +1,5 @@
 # Created by: janos.mohacsi@bsd.hu
-# $FreeBSD: net-mgmt/nfsen/Makefile 335027 2013-11-27 15:57:39Z feld $
+# $FreeBSD$
 
 PORTNAME=	nfsen
 PORTVERSION=	1.3.6p1
