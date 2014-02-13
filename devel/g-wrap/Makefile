@@ -1,5 +1,5 @@
 # Created by: Matthew Condell (mcondell@alum.mit.edu)
-# $FreeBSD: devel/g-wrap/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD$
 #    $MCom: ports/devel/g-wrap/Makefile,v 1.6 2006/12/24 18:45:08 ahze Exp $
 
 PORTNAME=	g-wrap
