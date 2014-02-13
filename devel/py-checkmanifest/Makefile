@@ -1,5 +1,5 @@
 # Created by: Johannes Meixner <xmj@chaot.net>
-# $FreeBSD: devel/py-checkmanifest/Makefile 342254 2014-02-02 08:46:40Z koobs $
+# $FreeBSD$
 
 PORTNAME=	checkmanifest
 PORTVERSION=	0.18
