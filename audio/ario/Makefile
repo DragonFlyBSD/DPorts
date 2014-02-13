@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: audio/ario/Makefile 328504 2013-09-27 17:36:31Z gblach $
+# $FreeBSD$
 
 PORTNAME=	ario
 PORTVERSION=	1.5.1
