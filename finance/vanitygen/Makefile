@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: finance/vanitygen/Makefile 339025 2014-01-07 19:54:20Z antoine $
+# $FreeBSD$
 
 PORTNAME=	vanitygen
 PORTVERSION=	0.21
