@@ -1,5 +1,5 @@
 # Created by: Espen Tagestad <espen@tagestad.no>
-# $FreeBSD: textproc/p5-Excel-Template/Makefile 340610 2014-01-21 14:03:59Z mat $
+# $FreeBSD$
 
 PORTNAME=	Excel-Template
 PORTVERSION=	0.34
