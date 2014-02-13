@@ -1,5 +1,5 @@
 # Created by: Mikhail Teterin
-# $FreeBSD: devel/insight/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD$
 
 PORTREVISION=	1
 
