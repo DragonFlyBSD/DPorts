@@ -1,4 +1,4 @@
-# $FreeBSD: security/openssh-portable-base/Makefile 336685 2013-12-17 01:23:09Z bdrewery $
+# $FreeBSD$
 
 PORTNAME=	openssh
 PKGNAMESUFFIX=	-portable-base
