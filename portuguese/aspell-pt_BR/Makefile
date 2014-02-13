@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: portuguese/aspell-pt_BR/Makefile 341532 2014-01-28 10:58:01Z bapt $
+# $FreeBSD$
 
 PORTNAME=	aspell
 DISTVERSION=	6-pt_BR-20090702-0
