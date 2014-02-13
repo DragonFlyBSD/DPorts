@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/twirssi/Makefile 332311 2013-10-31 23:41:47Z garga $
+# $FreeBSD$
 
 PORTNAME=	twirssi
 PORTVERSION=	2.6.0
