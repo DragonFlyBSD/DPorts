@@ -1,5 +1,5 @@
 # Created by: Wen Heping<wenheping@gmail.com>
-# $FreeBSD: devel/rubygem-sequel3/Makefile 335800 2013-12-07 01:02:15Z sunpoet $
+# $FreeBSD$
 
 # legacy for rubygem-larch
 
