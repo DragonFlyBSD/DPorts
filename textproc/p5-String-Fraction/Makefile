@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: textproc/p5-String-Fraction/Makefile 340593 2014-01-21 10:39:04Z mat $
+# $FreeBSD$
 
 PORTNAME=	String-Fraction
 PORTVERSION=	0.30
