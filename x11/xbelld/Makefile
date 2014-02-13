@@ -1,5 +1,5 @@
 # Created by: Nosov Artem <chip-set@mail.ru>
-# $FreeBSD: x11/xbelld/Makefile 333231 2013-11-08 14:31:40Z kwm $
+# $FreeBSD$
 
 PORTNAME=	xbelld
 PORTVERSION=	0.2b2
