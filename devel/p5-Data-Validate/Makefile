@@ -1,5 +1,5 @@
 # Created by: Steven Kreuzer <skreuzer@exit2shell.com>
-# $FreeBSD: devel/p5-Data-Validate/Makefile 338884 2014-01-06 14:40:31Z az $
+# $FreeBSD$
 
 PORTNAME=	Data-Validate
 PORTVERSION=	0.08
