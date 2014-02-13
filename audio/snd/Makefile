@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: audio/snd/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD$
 
 PORTNAME=	snd
 PORTVERSION=	13.0
