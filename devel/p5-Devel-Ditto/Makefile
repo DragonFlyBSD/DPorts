@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: devel/p5-Devel-Ditto/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Devel-Ditto
 PORTVERSION=	0.06
@@ -16,7 +16,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS}
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=	Devel::Ditto.3 Devel::Ditto::Color.3 Devel::Ditto::Colour.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
