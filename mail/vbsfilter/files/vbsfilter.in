@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: mail/vbsfilter/files/vbsfilter.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/mail/vbsfilter/files/vbsfilter.in 340872 2014-01-24 00:14:07Z mat $
 
 # Start or stop vbsfilter
 
