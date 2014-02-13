@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
-# $FreeBSD: net/py-amqplib/Makefile 341957 2014-01-31 09:23:34Z miwi $
+# $FreeBSD$
 
 PORTNAME=	amqplib
 PORTVERSION=	1.0.2
