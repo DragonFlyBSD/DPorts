@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/rox-memo/Makefile 333245 2013-11-08 16:23:42Z olgeni $
+# $FreeBSD$
 
 PORTNAME=	rox-memo
 PORTVERSION=	2.1
