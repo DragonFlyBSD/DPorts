@@ -1,5 +1,5 @@
 # Created by: Travis Poppe <tlp@liquidx.org>
-# $FreeBSD: games/alienwave/Makefile 331988 2013-10-29 20:02:18Z danilo $
+# $FreeBSD$
 
 PORTNAME=	alienwave
 PORTVERSION=	0.4.0
