@@ -1,5 +1,5 @@
 # Created by: Julien Laffaye <kimelto@gmail.com>
-# $FreeBSD: www/wadcomblog/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	WadcomBlog
 PORTVERSION=	0.3
