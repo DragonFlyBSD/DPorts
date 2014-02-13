@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: textproc/p5-Template-Plugin-Filter-Minify-CSS-XS/Makefile 328854 2013-09-30 19:41:57Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Template-Plugin-Filter-Minify-CSS-XS
 PORTVERSION=	0.95
