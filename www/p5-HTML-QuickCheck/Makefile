@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: www/p5-HTML-QuickCheck/Makefile 333099 2013-11-07 13:55:25Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	HTML-QuickCheck
 PORTVERSION=	1.0b1
