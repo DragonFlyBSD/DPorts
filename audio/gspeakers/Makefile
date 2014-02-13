@@ -1,5 +1,5 @@
 # Created by: Vincent Tantardini <vinc@freebsd-fr.org>
-# $FreeBSD: audio/gspeakers/Makefile 336166 2013-12-11 14:35:36Z bapt $
+# $FreeBSD$
 #    $MCom: ports/audio/gspeakers/Makefile,v 1.6 2007/05/30 17:08:11 mezz Exp $
 
 PORTNAME=	gspeakers
