@@ -1,5 +1,5 @@
 # Created by: Hirohisa Yamaguchi <umq@ueo.co.jp>
-# $FreeBSD: net/samba-nmblookup/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTREVISION=		0
 PORTEPOCH=		0
