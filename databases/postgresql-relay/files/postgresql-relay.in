@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: databases/postgresql-relay/files/postgresql-relay.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/databases/postgresql-relay/files/postgresql-relay.in 340872 2014-01-24 00:14:07Z mat $
 #
 
 # PROVIDE: postgresql-relay
