@@ -1,5 +1,5 @@
 # Created by: Doug Barton <dougb@FreeBSD.org>
-# $FreeBSD: net-p2p/qbittorrent-nox11/Makefile 332987 2013-11-06 12:55:31Z nemysis $
+# $FreeBSD$
 
 PKGNAMESUFFIX=	-nox11
 
