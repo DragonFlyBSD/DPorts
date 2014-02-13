@@ -1,4 +1,4 @@
-# $FreeBSD: net-mgmt/check_mysql_health/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	check_mysql_health
 PORTVERSION=	2.1.5.1
