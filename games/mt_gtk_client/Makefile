@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: games/mt_gtk_client/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD$
 
 PORTNAME=		mt_gtk_client
 PORTVERSION=		0.1.98
