@@ -1,5 +1,5 @@
 # Created by: Jonathan McGee <mcgee@wam.umd.edu>
-# $FreeBSD: misc/uf-view/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	uf-view
 PORTVERSION=	2.4
