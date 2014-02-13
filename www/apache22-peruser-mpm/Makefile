@@ -1,4 +1,4 @@
-# $FreeBSD: www/apache22-peruser-mpm/Makefile 333336 2013-11-09 20:53:16Z ohauer $
+# $FreeBSD$
 
 # Apache 2.2.X with peruser mpm 0.3.0-dc3
 # Peruser main url:		http://telana.com/peruser.php
