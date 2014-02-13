@@ -1,5 +1,5 @@
 # Created by: Alexandre Snarskii <snar@paranoia.ru>
-# $FreeBSD: net-mgmt/cdpd/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	cdpd
 PORTVERSION=	1.0.4.1
