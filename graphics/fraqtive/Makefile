@@ -1,5 +1,5 @@
 # Created by: Markus Brueffer <markus@FreeBSD.org>
-# $FreeBSD: graphics/fraqtive/Makefile 329881 2013-10-09 10:08:19Z makc $
+# $FreeBSD$
 
 PORTNAME=	fraqtive
 PORTVERSION=	0.4.6
