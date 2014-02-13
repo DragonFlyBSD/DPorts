@@ -1,5 +1,5 @@
 # Created by: Nick Hilliard <nick@foobar.org>
-# $FreeBSD: deskutils/sugarcrm/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	sugarcrm
 PORTVERSION=	6.5.15
