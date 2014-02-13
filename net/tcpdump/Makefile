@@ -1,5 +1,5 @@
 # Created by: Bruce M Simpson <bms@FreeBSD.org>
-# $FreeBSD: net/tcpdump/Makefile 338042 2013-12-29 20:44:20Z wxs $
+# $FreeBSD$
 
 PORTNAME=	tcpdump
 PORTVERSION=	4.5.1
