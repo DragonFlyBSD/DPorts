@@ -1,5 +1,5 @@
 # Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-# $FreeBSD: www/p5-WWW-Shorten-0rz/Makefile 329367 2013-10-04 19:43:20Z az $
+# $FreeBSD$
 
 PORTNAME=	WWW-Shorten-0rz
 PORTVERSION=	0.07
