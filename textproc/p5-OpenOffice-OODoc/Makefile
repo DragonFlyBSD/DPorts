@@ -1,5 +1,5 @@
 # Created by: meyser@xenet.de
-# $FreeBSD: textproc/p5-OpenOffice-OODoc/Makefile 340149 2014-01-18 08:09:08Z culot $
+# $FreeBSD$
 
 PORTNAME=	OpenOffice-OODoc
 PORTVERSION=	2.125
