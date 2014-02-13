@@ -1,5 +1,5 @@
 # Created by: RaRa Rasputin <rasputin@submonkey.net>
-# $FreeBSD: security/steghide/Makefile 338427 2014-01-02 09:03:39Z arved $
+# $FreeBSD$
 
 PORTNAME=	steghide
 PORTVERSION=	0.5.1
