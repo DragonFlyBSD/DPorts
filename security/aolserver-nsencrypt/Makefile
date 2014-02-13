@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: security/aolserver-nsencrypt/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	aolserver-nsencrypt
 PORTVERSION=	0.4
@@ -14,6 +14,9 @@ COMMENT=	OpenSSL data encryption module for AOLserver
 
 LICENSE=	GPLv1 MPL
 LICENSE_COMB=	dual
+
+DEPRECATED=	abandonware, messing up on clusters
+EXPIRATION_DATE=	2014-04-03
 
 WRKSRC=		${WRKDIR}/nsencrypt-${PORTVERSION}
 
