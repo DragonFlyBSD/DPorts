@@ -1,5 +1,5 @@
 # Created by: James Earl
-# $FreeBSD: textproc/xmlroff/Makefile 332531 2013-11-02 18:11:29Z hrs $
+# $FreeBSD$
 
 PORTNAME=	xmlroff
 PORTVERSION=	0.6.2
