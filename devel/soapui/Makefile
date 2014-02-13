@@ -1,5 +1,5 @@
 # Created by: arved
-# $FreeBSD: devel/soapui/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	soapui
 PORTVERSION=	4.6.4
