@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: databases/mysql51-scripts/Makefile 336733 2013-12-17 15:00:17Z ale $
+# $FreeBSD$
 
 PORTNAME=	mysql
 PKGNAMESUFFIX=	51-scripts
