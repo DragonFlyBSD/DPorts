@@ -1,5 +1,5 @@
 # Created by: Roland van Laar <roland@micite.net>
-# $FreeBSD: devel/py-pycalendar/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	pycalendar
 PORTVERSION=	2.0
