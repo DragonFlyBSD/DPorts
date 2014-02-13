@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/py-cxx/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	cxx
 PORTVERSION=	6.0.0
