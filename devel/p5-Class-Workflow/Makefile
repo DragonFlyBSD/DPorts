@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: devel/p5-Class-Workflow/Makefile 331856 2013-10-28 13:46:25Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Class-Workflow
 PORTVERSION=	0.11
