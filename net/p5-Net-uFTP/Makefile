@@ -1,5 +1,5 @@
 # Created by: Jase Thew <freebsd@beardz.net>
-# $FreeBSD: net/p5-Net-uFTP/Makefile 338813 2014-01-05 18:05:39Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-uFTP
 PORTVERSION=	0.161
