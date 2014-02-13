@@ -1,5 +1,5 @@
 # Created by: Jean Milanez Melo <jmelo@FreeBSD.org>
-# $FreeBSD: devel/libepp-nicbr/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libepp-nicbr
 PORTVERSION=	1.13
