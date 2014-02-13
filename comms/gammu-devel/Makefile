@@ -1,5 +1,5 @@
 # Created by: Sylvio Cesar Teixeira <sylvio@FreeBSD.org>
-# $FreeBSD: comms/gammu-devel/Makefile 338555 2014-01-03 16:06:00Z adamw $
+# $FreeBSD$
 
 PORTNAME=	gammu
 PORTVERSION=	1.31.90
@@ -26,6 +26,8 @@ USE_BZIP2=	yes
 USE_LDCONFIG=	yes
 
 PORTDOCS=	*
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
