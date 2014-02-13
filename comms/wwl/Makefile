@@ -1,5 +1,5 @@
 # Created by: db
-# $FreeBSD: comms/wwl/Makefile 337833 2013-12-28 05:03:44Z db $
+# $FreeBSD$
 
 PORTNAME=	wwl
 PORTVERSION=	1.3
