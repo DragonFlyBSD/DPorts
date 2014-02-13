@@ -1,4 +1,4 @@
-# $FreeBSD: net/turnserver/Makefile 339463 2014-01-12 00:58:18Z tabthorpe $
+# $FreeBSD$
 
 PORTNAME=	turnserver
 PORTVERSION=	3.2.1.4
