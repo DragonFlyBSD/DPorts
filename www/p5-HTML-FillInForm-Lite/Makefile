@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-HTML-FillInForm-Lite/Makefile 341722 2014-01-29 12:20:24Z miwi $
+# $FreeBSD$
 
 PORTNAME=	HTML-FillInForm-Lite
 PORTVERSION=	1.13
