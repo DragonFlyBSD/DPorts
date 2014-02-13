@@ -1,5 +1,5 @@
 # Created by: domi@saargate.de
-# $FreeBSD: x11/gmessage/Makefile 339339 2014-01-10 09:32:14Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	gmessage
 PORTVERSION=	0.2
