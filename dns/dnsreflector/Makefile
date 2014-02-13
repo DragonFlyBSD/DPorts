@@ -1,5 +1,5 @@
 # Created by: ismail.yenigul@endersys.com.tr
-# $FreeBSD: dns/dnsreflector/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	dnsreflector
 PORTVERSION=	1.02
