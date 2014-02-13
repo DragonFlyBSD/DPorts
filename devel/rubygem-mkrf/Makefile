@@ -1,5 +1,5 @@
 # Created by: Steve Wills <steve@meatwad.mouf.net>
-# $FreeBSD: devel/rubygem-mkrf/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	mkrf
 PORTVERSION=	0.2.3
