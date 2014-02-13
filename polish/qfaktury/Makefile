@@ -1,5 +1,5 @@
 # Created by: Piotr Rybicki (meritus@innervision.pl)
-# $FreeBSD: polish/qfaktury/Makefile 334586 2013-11-22 12:55:00Z makc $
+# $FreeBSD$
 
 PORTNAME=	qfaktury
 PORTVERSION=	0.6.2
