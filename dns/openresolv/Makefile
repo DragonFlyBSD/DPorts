@@ -1,5 +1,5 @@
 # Created by: Roy Marples <roy@marples.name>
-# $FreeBSD: dns/openresolv/Makefile 327719 2013-09-20 16:31:57Z bapt $
+# $FreeBSD$
 
 PORTNAME=	openresolv
 PORTVERSION=	1.1
