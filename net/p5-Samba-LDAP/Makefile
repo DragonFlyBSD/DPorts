@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net/p5-Samba-LDAP/Makefile 332868 2013-11-05 16:42:55Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Samba-LDAP
 PORTVERSION=	0.05
