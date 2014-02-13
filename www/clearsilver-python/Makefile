@@ -1,5 +1,5 @@
 # Created by: thinker <thinker@branda.to>
-# $FreeBSD: www/clearsilver-python/Makefile 341701 2014-01-29 09:02:29Z miwi $
+# $FreeBSD$
 
 WITH_PYTHON=	yes
 
