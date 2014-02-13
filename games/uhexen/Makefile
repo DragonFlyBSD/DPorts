@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: games/uhexen/Makefile 331675 2013-10-26 11:45:17Z danfe $
+# $FreeBSD$
 
 PORTNAME=	uhexen
 PORTVERSION=	0.601
