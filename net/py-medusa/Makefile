@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@fallin.lv>
-# $FreeBSD: net/py-medusa/Makefile 337861 2013-12-28 11:32:57Z wg $
+# $FreeBSD$
 
 PORTNAME=	medusa
 PORTVERSION=	0.5.4
