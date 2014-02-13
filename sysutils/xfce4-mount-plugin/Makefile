@@ -1,5 +1,5 @@
 # Created by: Olivier Duchateau <duchateau.olivier@gmail.com>
-# $FreeBSD: sysutils/xfce4-mount-plugin/Makefile 341838 2014-01-30 14:06:32Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	xfce4-mount-plugin
 PORTVERSION=	0.6.4
