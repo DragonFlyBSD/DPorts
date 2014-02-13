@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: japanese/p5-Text-ChaSen/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Text-ChaSen
 PORTVERSION=	1.03
