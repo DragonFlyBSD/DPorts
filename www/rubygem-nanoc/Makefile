@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: www/rubygem-nanoc/Makefile 340905 2014-01-24 14:55:44Z miwi $
+# $FreeBSD$
 
 PORTNAME=	nanoc
 PORTVERSION=	3.6.5
