@@ -1,5 +1,5 @@
 # Created by: Bob Eager <rde@ml1.org.uk>
-# $FreeBSD: textproc/ml1/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ml1
 PORTVERSION=	4.10
