@@ -1,4 +1,4 @@
-# $FreeBSD: devel/colormake/Makefile 338137 2013-12-30 16:41:07Z arved $
+# $FreeBSD$
 
 PORTNAME=	colormake
 PORTVERSION=	0.9
