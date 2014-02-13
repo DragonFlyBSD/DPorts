@@ -1,5 +1,5 @@
 # Created by: jon@witchspace.com
-# $FreeBSD: sysutils/jdiskreport/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	jdiskreport
 PORTVERSION=	1.4.0
