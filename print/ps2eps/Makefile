@@ -1,5 +1,5 @@
 # Created by: Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
-# $FreeBSD: print/ps2eps/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ps2eps
 PORTVERSION=	1.64
