@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: www/p5-WWW-Mediawiki-Client/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	WWW-Mediawiki-Client
 PORTVERSION=	0.31
