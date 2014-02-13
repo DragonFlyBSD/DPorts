@@ -1,5 +1,5 @@
 # Created by: Clement Laforet <clement@FreeBSD.org>
-# $FreeBSD: www/mod_rpaf2/Makefile 341554 2014-01-28 13:34:27Z miwi $
+# $FreeBSD$
 
 PORTNAME=	mod_rpaf2
 PORTVERSION=	0.6
