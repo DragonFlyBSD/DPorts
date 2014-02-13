@@ -1,5 +1,5 @@
 # Created by: Rich Neswold <rneswold@mcs.net>
-# $FreeBSD: x11-clocks/wmtime/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	wmtime
 PORTVERSION=	1.0b2
