@@ -1,5 +1,5 @@
 # Created by: Marc G. Fournier
-# $FreeBSD: www/p5-Maypole-Component/Makefile 341689 2014-01-29 07:58:24Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Maypole-Component
 PORTVERSION=	0.03
