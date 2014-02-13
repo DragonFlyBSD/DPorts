@@ -1,5 +1,5 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: x11-fonts/code2000/Makefile 327781 2013-09-20 23:51:14Z bapt $
+# $FreeBSD$
 
 PORTNAME=	code2000
 PORTVERSION=	1.171
