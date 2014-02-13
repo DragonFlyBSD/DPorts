@@ -1,5 +1,5 @@
 # Created by: vanilla
-# $FreeBSD: www/p5-Apache-Session-SharedMem/Makefile 333065 2013-11-07 06:19:38Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Apache-Session-SharedMem
 PORTVERSION=	0.6
