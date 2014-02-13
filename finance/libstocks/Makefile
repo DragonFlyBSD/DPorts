@@ -1,5 +1,5 @@
 # Created by: Mikhail Teterin
-# $FreeBSD: finance/libstocks/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	libstocks
 PORTVERSION=	0.5.0
