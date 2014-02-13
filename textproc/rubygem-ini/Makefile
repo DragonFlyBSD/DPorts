@@ -1,5 +1,5 @@
 # Created by: Yarema <yds@CoolRat.org>
-# $FreeBSD: textproc/rubygem-ini/Makefile 332051 2013-10-30 02:58:22Z swills $
+# $FreeBSD$
 
 PORTNAME=	ini
 PORTVERSION=	0.1.1
