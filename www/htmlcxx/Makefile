@@ -1,4 +1,4 @@
-# $FreeBSD: www/htmlcxx/Makefile 341718 2014-01-29 11:51:50Z miwi $
+# $FreeBSD$
 
 PORTNAME=	htmlcxx
 PORTVERSION=	0.85
