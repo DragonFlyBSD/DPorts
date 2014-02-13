@@ -1,5 +1,5 @@
 # Created by: Marcin Cieslak <saper@system.pl>
-# $FreeBSD: net-mgmt/flow-extract/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	flow-extract
 PORTVERSION=	2.61
