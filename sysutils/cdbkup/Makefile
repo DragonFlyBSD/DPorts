@@ -1,5 +1,5 @@
 # Created by: Kay Lehmann
-# $FreeBSD: sysutils/cdbkup/Makefile 333238 2013-11-08 15:06:28Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	cdbkup
 PORTVERSION=	1.0
