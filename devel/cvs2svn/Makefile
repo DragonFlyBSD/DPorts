@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: devel/cvs2svn/Makefile 335888 2013-12-08 13:24:03Z mva $
+# $FreeBSD$
 
 PORTNAME=	cvs2svn
 PORTVERSION=	2.4.0
