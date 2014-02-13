@@ -1,5 +1,5 @@
 # Created by: Simon Olofsson <simon@olofsson.de>
-# $FreeBSD: www/xpi-forecastfox/Makefile 341203 2014-01-26 15:09:17Z miwi $
+# $FreeBSD$
 
 PORTNAME=	forecastfox
 PORTVERSION=	2.2.1
