@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: games/ttt/Makefile 337982 2013-12-29 13:35:32Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	ttt
 PORTVERSION=	2011.04
