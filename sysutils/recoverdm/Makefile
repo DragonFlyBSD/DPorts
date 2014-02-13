@@ -1,5 +1,5 @@
 # Created by: Jeffrey H. Johnson <CPE1704TKS@bellsouth.net>
-# $FreeBSD: sysutils/recoverdm/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	recoverdm
 PORTVERSION=	0.20
