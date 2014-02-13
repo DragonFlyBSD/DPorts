@@ -1,5 +1,5 @@
 # Created by: jeh@FreeBSD.org
-# $FreeBSD: www/mgstat/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	mgstat
 PORTVERSION=	0.12
