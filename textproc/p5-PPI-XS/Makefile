@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-PPI-XS/Makefile 340668 2014-01-21 22:29:50Z mat $
+# $FreeBSD$
 
 PORTNAME=	PPI-XS
 PORTVERSION=	0.902
