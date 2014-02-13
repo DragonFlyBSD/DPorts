@@ -1,5 +1,5 @@
 
-$FreeBSD: net/py-xmlrpc/files/patch-src_rpcDate.c 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/net/py-xmlrpc/files/patch-src_rpcDate.c 340725 2014-01-22 17:40:44Z mat $
 
 --- src/rpcDate.c
 +++ src/rpcDate.c
