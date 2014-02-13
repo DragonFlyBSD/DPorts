@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@oook.cz>
-# $FreeBSD: audio/cue2toc/Makefile 334782 2013-11-24 19:48:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	cue2toc
 PORTVERSION=	0.1
