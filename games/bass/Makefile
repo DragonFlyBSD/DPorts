@@ -1,5 +1,5 @@
 # Created by: Alex Trull <freebsd.alex@trull.org>
-# $FreeBSD: games/bass/Makefile 329369 2013-10-04 19:47:15Z lme $
+# $FreeBSD$
 
 PORTNAME=	bass
 PORTVERSION=	1.2
