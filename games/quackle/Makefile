@@ -1,5 +1,5 @@
 # Created by: shoemaker@bluebottle.com (Jonathan Shoemaker)
-# $FreeBSD: games/quackle/Makefile 334688 2013-11-23 17:42:04Z makc $
+# $FreeBSD$
 
 PORTNAME=	quackle
 PORTVERSION=	0.97
