@@ -1,5 +1,5 @@
 # Created by: George Reid <greid@ukug.uk.freebsd.org>
-# $FreeBSD: shells/osh/Makefile 339295 2014-01-09 22:34:50Z mat $
+# $FreeBSD$
 
 PORTNAME=	osh
 DISTVERSION=	20120604
