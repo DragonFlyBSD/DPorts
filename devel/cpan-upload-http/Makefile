@@ -1,4 +1,4 @@
-# $FreeBSD: devel/cpan-upload-http/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD$
 
 PORTNAME=	cpan-upload-http
 PORTVERSION=	2.4
