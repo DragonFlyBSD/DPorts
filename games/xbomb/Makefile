@@ -1,10 +1,10 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD: games/xbomb/Makefile 333639 2013-11-13 02:01:23Z danilo $
+# $FreeBSD$
 
 PORTNAME=	xbomb
 PORTVERSION=	2.2a
 CATEGORIES=	games
-MASTER_SITES=	http://www.gedanken.demon.co.uk/download-xbomb/
+MASTER_SITES=	http://www.gedanken.org.uk/software/xbomb/download/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	ports@FreeBSD.org
