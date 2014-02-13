@@ -1,4 +1,4 @@
-# $FreeBSD: www/webmachine/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	webmachine
 PORTVERSION=	1.10.5
