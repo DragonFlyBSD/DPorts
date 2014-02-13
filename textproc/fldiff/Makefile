@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: textproc/fldiff/Makefile 340749 2014-01-22 23:37:53Z mandree $
+# $FreeBSD$
 
 PORTNAME=	fldiff
 PORTVERSION=	1.1
