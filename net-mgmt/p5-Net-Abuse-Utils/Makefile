@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net-mgmt/p5-Net-Abuse-Utils/Makefile 331692 2013-10-26 14:28:24Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Net-Abuse-Utils
 PORTVERSION=	0.23
