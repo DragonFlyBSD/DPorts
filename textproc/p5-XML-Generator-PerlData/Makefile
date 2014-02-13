@@ -1,5 +1,5 @@
 # Created by: Hansjoerg Pehofer <hansjoerg.pehofer@uibk.ac.at>
-# $FreeBSD: textproc/p5-XML-Generator-PerlData/Makefile 333056 2013-11-07 03:52:41Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	XML-Generator-PerlData
 PORTVERSION=	0.91
