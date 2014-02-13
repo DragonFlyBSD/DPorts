@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-Jinja2-doc/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PKGNAMESUFFIX=	-doc
 
