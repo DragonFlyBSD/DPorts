@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: sysutils/rubygem-SyslogLogger/Makefile 332049 2013-10-30 02:56:33Z swills $
+# $FreeBSD$
 
 PORTNAME=	SyslogLogger
 PORTVERSION=	2.0
