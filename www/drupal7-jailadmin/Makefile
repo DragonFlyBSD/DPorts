@@ -1,5 +1,5 @@
 # Created by: Shawn Webb <bsdports@wayfair.com>
-# $FreeBSD: www/drupal7-jailadmin/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	jailadmin
 DISTVERSION=	7.x-0.6.2
