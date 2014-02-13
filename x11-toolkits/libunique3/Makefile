@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: x11-toolkits/libunique3/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libunique
 PORTVERSION=	3.0.2
