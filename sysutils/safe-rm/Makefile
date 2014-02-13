@@ -1,5 +1,5 @@
 # Created by: Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
-# $FreeBSD: sysutils/safe-rm/Makefile 338513 2014-01-03 01:12:59Z bapt $
+# $FreeBSD$
 
 PORTNAME=	safe-rm
 PORTVERSION=	0.10
