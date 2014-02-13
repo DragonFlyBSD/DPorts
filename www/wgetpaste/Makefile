@@ -1,5 +1,5 @@
 # Created by: Anonymous
-# $FreeBSD: www/wgetpaste/Makefile 328381 2013-09-26 16:47:01Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	wgetpaste
 PORTVERSION=	2.23
