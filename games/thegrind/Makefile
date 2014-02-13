@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/thegrind/Makefile 335911 2013-12-08 16:39:45Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	thegrind
 PORTVERSION=	0.1.2
