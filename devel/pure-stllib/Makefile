@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: devel/pure-stllib/Makefile 333095 2013-11-07 13:44:01Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	pure-stllib
 PORTVERSION=	0.5
