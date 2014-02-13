@@ -1,5 +1,5 @@
 # Created by: tiger@whitetigersd.com
-# $FreeBSD: devel/p5-Algorithm-LCS/Makefile 331766 2013-10-27 12:17:59Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Algorithm-LCS
 PORTVERSION=	1.04
