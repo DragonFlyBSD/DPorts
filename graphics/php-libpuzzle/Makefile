@@ -1,5 +1,5 @@
 # Created by: Naram Qashat <cyberbotx@cyberbotx.com>
-# $FreeBSD: graphics/php-libpuzzle/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libpuzzle
 PORTVERSION=	0.11
