@@ -1,5 +1,5 @@
 # Created by: luigi@FreeBSD.org
-# $FreeBSD: sysutils/kldpatch/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	kldpatch
 PORTVERSION=	20090116
