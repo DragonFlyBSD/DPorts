@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Catalyst-View-XML-Simple/Makefile 338784 2014-01-05 15:30:10Z az $
+# $FreeBSD$
 
 PORTNAME=	Catalyst-View-XML-Simple
 PORTVERSION=	0.01
