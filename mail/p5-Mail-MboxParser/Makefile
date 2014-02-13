@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: mail/p5-Mail-MboxParser/Makefile 338797 2014-01-05 16:33:44Z az $
+# $FreeBSD$
 
 PORTNAME=	Mail-MboxParser
 PORTVERSION=	0.55
