@@ -1,5 +1,5 @@
 # Created by: tiger <tiger@whitetigersd.com>
-# $FreeBSD: devel/p5-SSN-Validate/Makefile 332205 2013-10-31 07:36:25Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	SSN-Validate
 PORTVERSION=	0.18
