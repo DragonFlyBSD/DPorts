@@ -1,5 +1,5 @@
 # Created by: koma2@lovepeers.org
-# $FreeBSD: sysutils/topless/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	topless
 PORTVERSION=	1.52
