@@ -1,5 +1,5 @@
 # Created by: Dmitry Liakh <dliakh@ukr.net>
-# $FreeBSD: mail/p5-MIME-AltWords/Makefile 338791 2014-01-05 16:08:00Z az $
+# $FreeBSD$
 
 PORTNAME=	MIME-AltWords
 PORTVERSION=	0.12
