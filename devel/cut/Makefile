@@ -1,5 +1,5 @@
 # Created by: Sergei Gnezdov <sergeiga@yahoo.com>
-# $FreeBSD: devel/cut/Makefile 341490 2014-01-28 00:10:08Z bapt $
+# $FreeBSD$
 
 PORTNAME=	cut
 PORTVERSION=	2.6
