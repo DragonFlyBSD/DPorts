@@ -1,5 +1,5 @@
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD: net-mgmt/unifi3/Makefile 338564 2014-01-03 16:47:12Z feld $
+# $FreeBSD$
 
 PORTNAME=	unifi3
 PORTVERSION=	3.1.9
