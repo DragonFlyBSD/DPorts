@@ -1,5 +1,5 @@
 # Created by: Aaron VonderHaar <avh4@usa.net>
-# $FreeBSD: head/games/gnurobots/Makefile 342296 2014-02-02 14:08:17Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	gnurobots
 PORTVERSION=	1.2.0
