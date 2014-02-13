@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: net/xrdp/files/xrdp.in 321348 2013-06-20 03:56:14Z swills $
+# $FreeBSD: head/net/xrdp/files/xrdp.in 321348 2013-06-20 03:56:14Z swills $
 #
 # REQUIRE: DAEMON
 # PROVIDE: xrdp xrdp_sesman
