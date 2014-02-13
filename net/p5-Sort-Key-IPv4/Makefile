@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: net/p5-Sort-Key-IPv4/Makefile 341953 2014-01-31 09:15:24Z az $
+# $FreeBSD$
 
 PORTNAME=	Sort-Key-IPv4
 PORTVERSION=	0.03
