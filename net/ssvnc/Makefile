@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alepulver@FreeBSD.org>
-# $FreeBSD: net/ssvnc/Makefile 335682 2013-12-05 19:58:01Z antoine $
+# $FreeBSD$
 
 PORTNAME=	ssvnc
 PORTVERSION=	1.0.29
