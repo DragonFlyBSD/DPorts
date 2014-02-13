@@ -1,5 +1,5 @@
 # Created by: janek
-# $FreeBSD: x11/x3270/Makefile 330403 2013-10-15 15:53:46Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	x3270
 PORTVERSION=	3.3.13
