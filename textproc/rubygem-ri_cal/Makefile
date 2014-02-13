@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/rubygem-ri_cal/Makefile 332052 2013-10-30 02:59:10Z swills $
+# $FreeBSD$
 
 PORTNAME=	ri_cal
 PORTVERSION=	0.8.8
