@@ -1,5 +1,5 @@
 # Created by: Joe Clarke <marcus@marcuscom.com
-# $FreeBSD: net-mgmt/p5-SNMP-MIB-Compiler/Makefile 338791 2014-01-05 16:08:00Z az $
+# $FreeBSD$
 
 PORTNAME=	SNMP-MIB-Compiler
 PORTVERSION=	0.06
