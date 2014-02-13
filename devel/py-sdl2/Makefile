@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-sdl2/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	sdl2
 PORTVERSION=	0.8.0
