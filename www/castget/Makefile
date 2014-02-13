@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/castget/Makefile 338017 2013-12-29 16:03:47Z antoine $
+# $FreeBSD$
 
 PORTNAME=	castget
 PORTVERSION=	1.0.1
