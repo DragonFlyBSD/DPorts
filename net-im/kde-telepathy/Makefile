@@ -1,4 +1,4 @@
-# $FreeBSD: net-im/kde-telepathy/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	kde-telepathy
 PORTVERSION=	${KTP_VERSION}
