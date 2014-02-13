@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-HTTPD-Log-Filter/Makefile 341687 2014-01-29 07:57:45Z miwi $
+# $FreeBSD$
 
 PORTNAME=	HTTPD-Log-Filter
 PORTVERSION=	1.08
