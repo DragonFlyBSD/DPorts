@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/link-grammar/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD$
 
 PORTNAME=	link-grammar
 PORTVERSION=	4.7.4
