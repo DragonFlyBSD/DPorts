@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@daltons.ca>
-# $FreeBSD: devel/p5-AI-Pathfinding-AStar/Makefile 331766 2013-10-27 12:17:59Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	AI-Pathfinding-AStar
 PORTVERSION=	0.10
