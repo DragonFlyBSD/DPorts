@@ -1,5 +1,5 @@
 # Created by: Sergey Matveychuk <sem@FreeBSD.org>
-# $FreeBSD: devel/omniNotify/Makefile 339922 2014-01-16 15:43:27Z sem $
+# $FreeBSD$
 
 PORTNAME=	omniNotify
 PORTVERSION=	2.1.01
