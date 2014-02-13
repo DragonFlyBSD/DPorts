@@ -1,5 +1,5 @@
 # Created by: Maciek Korzen <eaquer@ceti.pl>
-# $FreeBSD: polish/tleenx2/Makefile 337793 2013-12-27 19:40:54Z pawel $
+# $FreeBSD$
 
 PORTNAME=	tleenx2
 PORTVERSION=	20040214
