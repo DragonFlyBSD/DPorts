@@ -1,4 +1,4 @@
-# $FreeBSD: net/p5-Net-SSH-Mechanize/Makefile 341934 2014-01-31 08:05:15Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Net-SSH-Mechanize
 PORTVERSION=	0.1.3
