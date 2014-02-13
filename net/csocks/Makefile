@@ -1,5 +1,5 @@
 # Created by: Raffaele De Lorenzo - raffaele.delorenzo@libero.it
-# $FreeBSD: net/csocks/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	csocks
 PORTVERSION=	1.5
