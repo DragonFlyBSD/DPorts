@@ -1,5 +1,5 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: games/sudoku-sensei/Makefile 339661 2014-01-14 04:16:00Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	sudoku-sensei
 PORTVERSION=	02.00

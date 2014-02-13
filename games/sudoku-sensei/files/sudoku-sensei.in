@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: games/sudoku-sensei/files/sudoku-sensei.in 339661 2014-01-14 04:16:00Z nemysis $
+# $FreeBSD: head/games/sudoku-sensei/files/sudoku-sensei.in 339661 2014-01-14 04:16:00Z nemysis $
 #
 
 cd "%%DATADIR%%"
