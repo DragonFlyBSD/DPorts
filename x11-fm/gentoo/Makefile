@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@fix.no>
-# $FreeBSD: x11-fm/gentoo/Makefile 338691 2014-01-04 23:40:44Z antoine $
+# $FreeBSD$
 
 PORTNAME=	gentoo
 PORTVERSION=	0.19.13
