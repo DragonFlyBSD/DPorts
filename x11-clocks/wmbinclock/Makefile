@@ -1,5 +1,5 @@
 # Created by: Harold Gutch <logix@foobar.franken.de>
-# $FreeBSD: x11-clocks/wmbinclock/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	wmbinclock
 PORTVERSION=	0.3
