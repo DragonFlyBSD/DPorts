@@ -1,5 +1,5 @@
 # Created by: Douglas K. Rand (rand@meridian-enviro.com)
-# $FreeBSD: math/p5-NetCDF/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD$
 
 PORTNAME=	NetCDF
 PORTVERSION=	1.2.4
