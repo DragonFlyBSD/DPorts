@@ -1,5 +1,5 @@
 # Created by: Jacob Frelinger <jacob.frelinger@duke.edu>
-# $FreeBSD: x11-toolkits/py-traitsgui/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	traitsgui
 PORTVERSION=	3.1.0
