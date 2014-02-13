@@ -1,5 +1,5 @@
 # Created by: uri@keves.org
-# $FreeBSD: sysutils/fonteditfs/Makefile 341040 2014-01-25 14:38:47Z marino $
+# $FreeBSD$
 
 PORTNAME=	fonteditfs
 PORTVERSION=	1.2
