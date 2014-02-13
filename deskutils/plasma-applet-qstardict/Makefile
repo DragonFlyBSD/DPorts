@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/plasma-applet-qstardict/Makefile 331383 2013-10-23 13:08:41Z makc $
+# $FreeBSD$
 
 PORTNAME=	qstardict
 PORTVERSION=	1.0.1
