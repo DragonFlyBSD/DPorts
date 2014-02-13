@@ -1,5 +1,5 @@
 # Created by: alex@kapranoff.ru
-# $FreeBSD: www/p5-HTML-Template-JIT/Makefile 341724 2014-01-29 12:23:20Z miwi $
+# $FreeBSD$
 
 PORTNAME=	HTML-Template-JIT
 PORTVERSION=	0.05
