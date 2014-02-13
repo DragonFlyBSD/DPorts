@@ -1,5 +1,5 @@
 # Created by: Max Khon
-# $FreeBSD: databases/pgadmin3/Makefile 337266 2013-12-23 17:36:48Z fjoe $
+# $FreeBSD$
 
 PORTNAME=	pgadmin3
 PORTVERSION=	1.18.1
