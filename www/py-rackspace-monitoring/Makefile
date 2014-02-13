@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: www/py-rackspace-monitoring/Makefile 341732 2014-01-29 13:20:13Z miwi $
+# $FreeBSD$
 
 PORTNAME=	rackspace-monitoring
 PORTVERSION=	0.5.2
