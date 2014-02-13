@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@fallin.lv>
-# $FreeBSD: graphics/py-gd/Makefile 337762 2013-12-27 17:35:27Z wg $
+# $FreeBSD$
 
 PORTNAME=	gd
 PORTVERSION=	0.58
