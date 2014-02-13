@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: www/trac-email2trac/Makefile 341183 2014-01-26 14:31:44Z miwi $
+# $FreeBSD$
 
 PORTNAME=	email2trac
 PORTVERSION=	2.6.2
