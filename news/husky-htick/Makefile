@@ -1,5 +1,5 @@
 # Created by: Max Khon
-# $FreeBSD: news/husky-htick/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	htick
 PORTVERSION=	1.0.4
