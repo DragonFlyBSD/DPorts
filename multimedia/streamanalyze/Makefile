@@ -1,9 +1,9 @@
 # Created by: Heiner Eichmann
-# $FreeBSD: multimedia/streamanalyze/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	streamanalyze
 PORTVERSION=	0.4
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	multimedia
 MASTER_SITES=	CENKES LOCAL/beech
 
