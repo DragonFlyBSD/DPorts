@@ -1,5 +1,5 @@
 # Created by: sumikawa@FreeBSD.org
-# $FreeBSD: misc/lv/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	lv
 PORTVERSION=	4.51
