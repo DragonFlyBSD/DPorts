@@ -1,5 +1,5 @@
 # Created by: Nick Sayer
-# $FreeBSD: net-mgmt/airport/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	airport
 PORTVERSION=	2.0.1
@@ -14,6 +14,9 @@ DISTFILES=	configurator_${PORTVERSION:S/.0.1/01/g}${EXTRACT_SUFX} \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Apple Airport / Lucent RG-1000 configuration program
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-10
 
 RUN_DEPENDS=	java:${PORTSDIR}/java/javavmwrapper
 
