@@ -1,4 +1,4 @@
-# $FreeBSD: french/mythes/Makefile 334121 2013-11-17 21:01:59Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	mythes
 PORTVERSION=	2.3
