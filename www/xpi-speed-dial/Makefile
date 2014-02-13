@@ -1,5 +1,5 @@
 # Created by: Harald Schmalzbauer <h.schmalzbauer@omnisec.de>
-# $FreeBSD: www/xpi-speed-dial/Makefile 341217 2014-01-26 15:13:43Z miwi $
+# $FreeBSD$
 
 PORTNAME=	speed-dial
 PORTVERSION=	0.9.5.9
