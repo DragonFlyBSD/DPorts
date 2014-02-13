@@ -1,5 +1,5 @@
 # Created by: Tim Bishop <tim@bishnet.net>
-# $FreeBSD: graphics/jalbum/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	jalbum
 PORTVERSION=	10.10.7
