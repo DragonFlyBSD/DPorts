@@ -1,5 +1,5 @@
 # Created by: erich@rrnet.com
-# $FreeBSD: editors/xcoral/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xcoral
 PORTVERSION=	3.47
@@ -16,14 +16,12 @@ MAKE_JOBS_UNSAFE=	yes
 
 PLIST_SUB=	VERSION="${PORTVERSION}"
 
-NO_STAGE=	yes
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/xcoral ${PREFIX}/bin
-	@${MKDIR} ${DATADIR}
-	${INSTALL_DATA} ${WRKSRC}/SmacLib/* ${DATADIR}
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/Doc/* ${DOCSDIR}
-.endif
+	${INSTALL_PROGRAM} ${WRKSRC}/xcoral ${STAGEDIR}${PREFIX}/bin
+	${MKDIR} ${STAGEDIR}${DATADIR}
+	${INSTALL_DATA} ${WRKSRC}/SmacLib/* ${STAGEDIR}${DATADIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/Doc/* ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
