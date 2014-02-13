@@ -1,5 +1,5 @@
 # Created by: Yuan-Chung Hsiao <ychsiao@gmail.com>
-# $FreeBSD: devel/py-tw.forms/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	tw.forms
 PORTVERSION=	0.9.9
