@@ -1,4 +1,4 @@
-# $FreeBSD: x11-clocks/plasma-applet-geekclock/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD$
 
 PORTNAME=	geekclock
 PORTVERSION=	1.0
