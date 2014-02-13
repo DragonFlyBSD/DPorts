@@ -1,5 +1,5 @@
 # Created by: Ulrich Spoerlein <uqs@FreeBSD.org>
-# $FreeBSD: textproc/groff/Makefile 342052 2014-01-31 19:42:17Z uqs $
+# $FreeBSD$
 
 PORTNAME=	groff
 PORTVERSION=	1.22.2
