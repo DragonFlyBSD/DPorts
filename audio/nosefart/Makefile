@@ -1,5 +1,5 @@
 # Created by: Seth Kingsley <sethk@osd.bsdi.com>
-# $FreeBSD: audio/nosefart/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	nosefart
 PORTVERSION=	1.92f
