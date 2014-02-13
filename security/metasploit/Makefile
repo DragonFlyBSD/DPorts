@@ -1,5 +1,5 @@
 # Created by: Yonatan <onatan@gmail.com>
-# $FreeBSD: security/metasploit/Makefile 337948 2013-12-29 09:42:39Z antoine $
+# $FreeBSD$
 
 PORTNAME=	metasploit
 DISTVERSION=	4.8.2
