@@ -1,4 +1,4 @@
-# $FreeBSD: security/p5-Digest-MurmurHash/Makefile 341825 2014-01-30 09:42:48Z az $
+# $FreeBSD$
 
 PORTNAME=	Digest-MurmurHash
 PORTVERSION=	0.11
