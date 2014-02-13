@@ -1,5 +1,5 @@
 # Created by: David O'Brien (obrien@FreeBSD.org)
-# $FreeBSD: chinese/hc/Makefile 336487 2013-12-14 21:12:23Z antoine $
+# $FreeBSD$
 
 PORTNAME=	hc
 PORTVERSION=	3.0
