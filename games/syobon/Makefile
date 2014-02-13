@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: games/syobon/Makefile 339684 2014-01-14 13:20:13Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	syobon
 PORTVERSION=	1.0.1
