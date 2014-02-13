@@ -1,4 +1,4 @@
-# $FreeBSD: x11/dri3proto/Makefile 336621 2013-12-16 11:11:09Z zeising $
+# $FreeBSD$
 
 PORTNAME=	dri3proto
 PORTVERSION=	1.0
