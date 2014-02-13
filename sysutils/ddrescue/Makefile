@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: sysutils/ddrescue/Makefile 333043 2013-11-06 22:19:18Z wg $
+# $FreeBSD$
 
 PORTNAME=	ddrescue
 PORTVERSION=	1.17
