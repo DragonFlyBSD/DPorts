@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: textproc/p5-Sort-Fields/Makefile 340672 2014-01-21 23:21:10Z mat $
+# $FreeBSD$
 
 PORTNAME=	Sort-Fields
 PORTVERSION=	0.90
