@@ -1,5 +1,5 @@
 # Created by: Nick Hilliard <nick@foobar.org>
-# $FreeBSD: www/pear-Structures_DataGrid_Renderer_Smarty/Makefile 334871 2013-11-25 17:59:58Z antoine $
+# $FreeBSD$
 
 PORTNAME=	Structures_DataGrid_Renderer_Smarty
 PORTVERSION=	0.1.5
