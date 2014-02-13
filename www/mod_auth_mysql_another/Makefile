@@ -1,5 +1,5 @@
 # Created by: mbr@FreeBSD.org
-# $FreeBSD: www/mod_auth_mysql_another/Makefile 336589 2013-12-15 22:11:20Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	mod_auth_mysql
 PORTVERSION=	3.0.0
