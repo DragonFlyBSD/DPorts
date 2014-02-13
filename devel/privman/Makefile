@@ -1,5 +1,5 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: devel/privman/Makefile 329885 2013-10-09 12:07:12Z bdrewery $
+# $FreeBSD$
 
 PORTNAME=	privman
 PORTVERSION=	0.9.3
