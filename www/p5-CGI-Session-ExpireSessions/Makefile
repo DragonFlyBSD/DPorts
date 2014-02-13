@@ -1,5 +1,5 @@
 # Created by: Gerard Seibert <gerard@seibercom.net>
-# $FreeBSD: www/p5-CGI-Session-ExpireSessions/Makefile 338778 2014-01-05 14:02:22Z az $
+# $FreeBSD$
 
 PORTNAME=	CGI-Session-ExpireSessions
 PORTVERSION=	1.12
