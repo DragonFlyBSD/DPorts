@@ -1,5 +1,5 @@
 # Created by: ports@c0decafe.net <ports@c0decafe.net>
-# $FreeBSD: devel/p5-File-Path-Tiny/Makefile 329422 2013-10-05 07:16:45Z culot $
+# $FreeBSD$
 
 PORTNAME=	File-Path-Tiny
 PORTVERSION=	0.7
