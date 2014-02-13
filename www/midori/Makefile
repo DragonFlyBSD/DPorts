@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: www/midori/Makefile 339896 2014-01-16 05:27:36Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	midori
 PORTVERSION=	0.5.7
