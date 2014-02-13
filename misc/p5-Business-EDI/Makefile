@@ -1,5 +1,5 @@
 # Created by: Martin Neubauer <m.ne@gmx.net>
-# $FreeBSD: misc/p5-Business-EDI/Makefile 338755 2014-01-05 12:30:05Z az $
+# $FreeBSD$
 
 PORTNAME=	Business-EDI
 PORTVERSION=	0.05
