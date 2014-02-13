@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: www/pecl-http/Makefile 341245 2014-01-26 16:45:01Z miwi $
+# $FreeBSD$
 
 PORTNAME=	http
 PORTVERSION=	1.7.6
