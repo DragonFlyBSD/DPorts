@@ -1,5 +1,5 @@
 # Created by: Daniel Gerzo <danger@rulez.sk>
-# $FreeBSD: www/mod_domaintree/Makefile 336589 2013-12-15 22:11:20Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	mod_domaintree
 PORTVERSION=	1.6
