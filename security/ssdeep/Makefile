@@ -1,5 +1,5 @@
 # Created by: Nobutaka Mantani <nobutaka@FreeBSD.org>
-# $FreeBSD: security/ssdeep/Makefile 342012 2014-01-31 15:54:10Z miwi $
+# $FreeBSD$
 
 PORTNAME=	ssdeep
 PORTVERSION=	2.10
