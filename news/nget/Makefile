@@ -1,5 +1,5 @@
 # Created by: George Sorsby <george@crackpipe.net>
-# $FreeBSD: news/nget/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	nget
 PORTVERSION=	0.27.1
