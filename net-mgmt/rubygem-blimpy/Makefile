@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: net-mgmt/rubygem-blimpy/Makefile 331717 2013-10-26 16:25:23Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	blimpy
 PORTVERSION=	0.6.7
