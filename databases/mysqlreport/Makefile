@@ -1,5 +1,5 @@
 # Created by: Alexander Zhuravlev <zaa@zaa.pp.ru>
-# $FreeBSD: databases/mysqlreport/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mysqlreport
 PORTVERSION=	3.5
