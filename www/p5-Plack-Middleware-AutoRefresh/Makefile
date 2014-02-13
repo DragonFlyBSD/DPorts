@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Plack-Middleware-AutoRefresh/Makefile 342150 2014-02-01 14:41:23Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Plack-Middleware-AutoRefresh
 PORTVERSION=	0.08
