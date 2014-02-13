@@ -1,5 +1,5 @@
 # Created by: andrew@scoop.co.nz
-# $FreeBSD: devel/p5-Algorithm-Numerical-Shuffle/Makefile 331766 2013-10-27 12:17:59Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Algorithm-Numerical-Shuffle
 PORTVERSION=	2009110301
