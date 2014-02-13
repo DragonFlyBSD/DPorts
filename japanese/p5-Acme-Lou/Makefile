@@ -1,5 +1,5 @@
 # Created by: Masahiro Teramoto <markun@onohara.to>
-# $FreeBSD: japanese/p5-Acme-Lou/Makefile 341762 2014-01-29 17:18:46Z az $
+# $FreeBSD$
 
 PORTNAME=	Acme-Lou
 PORTVERSION=	0.03
