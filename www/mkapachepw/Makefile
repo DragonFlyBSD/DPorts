@@ -1,5 +1,5 @@
 # Created by: tundra
-# $FreeBSD: www/mkapachepw/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	mkapachepw
 PORTVERSION=	1.121
