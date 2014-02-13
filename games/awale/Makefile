@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: games/awale/Makefile 336033 2013-12-09 23:27:44Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	awale
 PORTVERSION=	1.5
