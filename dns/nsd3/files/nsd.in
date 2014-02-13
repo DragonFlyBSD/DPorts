@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: dns/nsd3/files/nsd.in 312942 2013-02-25 21:59:11Z beech $
+# $FreeBSD: head/dns/nsd3/files/nsd.in 312942 2013-02-25 21:59:11Z beech $
 #
 # PROVIDE: nsd
 # REQUIRE: DAEMON
