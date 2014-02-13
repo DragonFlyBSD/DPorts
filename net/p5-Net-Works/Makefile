@@ -1,5 +1,5 @@
 # Created by: Kurt Jaeger <fbsd-ports@opsec.eu>
-# $FreeBSD: net/p5-Net-Works/Makefile 339251 2014-01-09 15:16:47Z wg $
+# $FreeBSD$
 
 PORTNAME=	Net-Works
 PORTVERSION=	0.16
