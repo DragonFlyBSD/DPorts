@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/electrix/Makefile 341434 2014-01-27 17:14:55Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	electrix
 PORTVERSION=	0.2.0
