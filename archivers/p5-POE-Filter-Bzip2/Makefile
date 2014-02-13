@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: archivers/p5-POE-Filter-Bzip2/Makefile 328602 2013-09-28 17:12:34Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	POE-Filter-Bzip2
 PORTVERSION=	1.5.8
