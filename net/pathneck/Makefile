@@ -1,5 +1,5 @@
 # Created by: Babak Farrokhi <babak@farrokhi.net>
-# $FreeBSD: net/pathneck/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	pathneck
 PORTVERSION=	1.3
