@@ -1,5 +1,5 @@
 # Created by: Koji Yokota <yokota@res.otaru-uc.ac.jp>
-# $FreeBSD: www/firefox-esr-i18n/Makefile.lang 336446 2013-12-14 13:42:06Z flo $
+# $FreeBSD$
 
 FIREFOX_I18N_ALL_=	ach af ak ar as ast be bg bn-BD bn-IN br bs ca cs csb  \
 			cy da de el en-GB en-US en-ZA eo es-AR es-CL es-ES     \
