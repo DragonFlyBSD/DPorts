@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: math/p5-Math-NumberCruncher/Makefile 332813 2013-11-05 06:56:18Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Math-NumberCruncher
 PORTVERSION=	5.00
