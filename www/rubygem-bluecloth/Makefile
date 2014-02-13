@@ -1,4 +1,4 @@
-# $FreeBSD: www/rubygem-bluecloth/Makefile 332053 2013-10-30 03:00:33Z swills $
+# $FreeBSD$
 
 PORTNAME=	bluecloth
 PORTVERSION=	1.0.1
