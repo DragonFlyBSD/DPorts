@@ -1,5 +1,5 @@
 # Created by: Alexander Botero-Lowry <alex@foxybanana.com>
-# $FreeBSD: audio/py-xmms2/Makefile 328665 2013-09-29 10:41:24Z madpilot $
+# $FreeBSD$
 
 PORTREVISION=	5
 
