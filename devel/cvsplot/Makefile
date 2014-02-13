@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/cvsplot/Makefile 341479 2014-01-27 23:37:59Z bapt $
+# $FreeBSD$
 
 PORTNAME=	cvsplot
 PORTVERSION=	1.7.4
