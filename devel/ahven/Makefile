@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: devel/ahven/Makefile 333372 2013-11-10 10:54:38Z marino $
+# $FreeBSD$
 
 PORTNAME=	ahven
 PORTVERSION=	2.3
