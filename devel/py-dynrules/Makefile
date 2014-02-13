@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-dynrules/Makefile 340203 2014-01-18 18:58:32Z mva $
+# $FreeBSD$
 
 PORTNAME=	dynrules
 PORTVERSION=	0.1.0
