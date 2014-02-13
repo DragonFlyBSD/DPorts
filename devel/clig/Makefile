@@ -1,5 +1,5 @@
 # Created by: Bill Fumerola <billf@chc-chimes.com>
-# $FreeBSD: devel/clig/Makefile 328356 2013-09-26 13:36:23Z gahr $
+# $FreeBSD$
 
 PORTNAME=	clig
 PORTVERSION=	1.9.11.1
