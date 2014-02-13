@@ -1,5 +1,5 @@
 # Created by: Tim Vanderhoek <hoek@FreeBSD.org>
-# $FreeBSD: devel/cc65/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD$
 
 PORTNAME=	cc65
 PORTVERSION=	2.13.3
@@ -28,6 +28,9 @@ SHEBANG_FILES=	src/ca65html/ca65html \
 SUB_FILES=	pkg-message
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS EXAMPLES 
+
 .include <bsd.port.options.mk>
 
 post-patch:
