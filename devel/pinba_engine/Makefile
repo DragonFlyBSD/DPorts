@@ -1,5 +1,5 @@
 # Created by: raven428 <raven428@gmail.com>
-# $FreeBSD: devel/pinba_engine/Makefile 340051 2014-01-17 14:58:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	pinba_engine
 PORTVERSION=	2011.08.18
