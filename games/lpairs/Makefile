@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/lpairs/Makefile 330804 2013-10-18 23:46:45Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	lpairs
 PORTVERSION=	1.0.4
@@ -14,6 +14,8 @@ GNU_CONFIGURE=	yes
 USE_SDL=	sdl
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+
+OPTIONS_DEFINE=	NLS 
 
 .include <bsd.port.options.mk>
 
