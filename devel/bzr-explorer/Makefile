@@ -1,5 +1,5 @@
 # Created by: Carlo Strub
-# $FreeBSD: devel/bzr-explorer/Makefile 340120 2014-01-17 21:49:50Z antoine $
+# $FreeBSD$
 
 PORTNAME=	bzr-explorer
 PORTVERSION=	1.3.0
