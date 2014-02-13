@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: net-mgmt/p5-Tie-NetAddr-IP/Makefile 338790 2014-01-05 15:52:33Z az $
+# $FreeBSD$
 
 PORTNAME=	Tie-NetAddr-IP
 PORTVERSION=	1.51
