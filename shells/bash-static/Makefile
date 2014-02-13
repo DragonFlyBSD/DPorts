@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: shells/bash-static/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 MASTERDIR=	${.CURDIR}/../../shells/bash
 
