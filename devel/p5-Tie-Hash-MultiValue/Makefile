@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <frederic@culot.org>
-# $FreeBSD: devel/p5-Tie-Hash-MultiValue/Makefile 338867 2014-01-06 12:18:47Z az $
+# $FreeBSD$
 
 PORTNAME=	Tie-Hash-MultiValue
 PORTVERSION=	1.02
