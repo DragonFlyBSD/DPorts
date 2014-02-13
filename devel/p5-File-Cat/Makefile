@@ -1,5 +1,5 @@
 # Created by: Jason Heiss <jheiss@aput.biz>
-# $FreeBSD: devel/p5-File-Cat/Makefile 331943 2013-10-29 12:52:07Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	File-Cat
 PORTVERSION=	1.2
