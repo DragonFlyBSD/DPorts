@@ -1,5 +1,5 @@
 # Created by: Leland Wang <llwang@infor.org>
-# $FreeBSD: head/www/ump/Makefile 336813 2013-12-18 10:38:33Z koobs $
+# $FreeBSD$
 
 PORTNAME=	ump
 PORTVERSION=	1.10
