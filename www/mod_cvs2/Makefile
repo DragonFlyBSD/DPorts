@@ -1,5 +1,5 @@
 # Created by: Clement Laforet <clement@FreeBSD.org>
-# $FreeBSD: www/mod_cvs2/Makefile 333454 2013-11-10 23:11:59Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	mod_cvs
 PORTVERSION=	0.5.91
