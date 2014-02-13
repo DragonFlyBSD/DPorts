@@ -1,5 +1,5 @@
 # Created by: NECDET COKYAZICI <cokyazici@yahoo.co.uk>
-# $FreeBSD: misc/najitool/Makefile 341058 2014-01-25 16:57:05Z miwi $
+# $FreeBSD$
 
 PORTNAME=	najitool
 PORTVERSION=	0.8.4
