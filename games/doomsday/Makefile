@@ -1,5 +1,5 @@
 # Created by: Igor Pokrovsky <ip@doom.homeunix.org>
-# $FreeBSD: games/doomsday/Makefile 340208 2014-01-18 19:44:47Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	doomsday
 PORTVERSION=	1.12.2
