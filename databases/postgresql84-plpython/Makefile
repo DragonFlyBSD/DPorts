@@ -1,4 +1,4 @@
-# $FreeBSD: databases/postgresql84-plpython/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 USE_PYTHON=	2
 WANT_PGSQL_VER=	84
