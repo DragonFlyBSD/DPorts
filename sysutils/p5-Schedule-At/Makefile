@@ -1,5 +1,5 @@
 # Created by: kuriyama
-# $FreeBSD: sysutils/p5-Schedule-At/Makefile 338851 2014-01-06 09:44:19Z az $
+# $FreeBSD$
 
 PORTNAME=	Schedule-At
 PORTVERSION=	1.15
