@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: www/p5-Apache-Admin-Config/Makefile 333065 2013-11-07 06:19:38Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Apache-Admin-Config
 PORTVERSION=	0.95
