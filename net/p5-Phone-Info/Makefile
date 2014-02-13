@@ -1,5 +1,5 @@
 # Created by: Zane C. Bowers <vvelox@vvelox.net>
-# $FreeBSD: net/p5-Phone-Info/Makefile 338808 2014-01-05 17:43:05Z az $
+# $FreeBSD$
 
 PORTNAME=	Phone-Info
 PORTVERSION=	0.0.1
