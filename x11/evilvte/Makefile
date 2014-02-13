@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: x11/evilvte/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	evilvte
 PORTVERSION=	0.5.0
