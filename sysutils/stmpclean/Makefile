@@ -1,5 +1,5 @@
 # Created by: shalunov
-# $FreeBSD: sysutils/stmpclean/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	stmpclean
 PORTVERSION=	0.3
