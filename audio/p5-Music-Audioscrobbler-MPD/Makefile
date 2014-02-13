@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: audio/p5-Music-Audioscrobbler-MPD/Makefile 341861 2014-01-30 16:46:22Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Music-Audioscrobbler-MPD
 PORTVERSION=	0.13
