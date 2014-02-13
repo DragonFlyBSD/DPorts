@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: net/qadsl/files/qadsl.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/net/qadsl/files/qadsl.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: qadsl 
 # REQUIRE: NETWORK

@@ -1,5 +1,5 @@
 # Created by: Arne Lundberg <arlu@telia.com>
-# $FreeBSD: net/qadsl/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	qadsl
 PORTVERSION=	1.3.3
