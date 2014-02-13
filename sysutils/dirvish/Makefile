@@ -1,5 +1,5 @@
 # Created by: Loren M. Lang
-# $FreeBSD: sysutils/dirvish/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	dirvish
 PORTVERSION=	1.2.1
