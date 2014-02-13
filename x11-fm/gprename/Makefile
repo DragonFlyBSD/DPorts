@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: x11-fm/gprename/Makefile 327780 2013-09-20 23:49:39Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gprename
 PORTVERSION=	2.7
