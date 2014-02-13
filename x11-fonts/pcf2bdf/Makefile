@@ -1,5 +1,5 @@
 # Created by: nork@FreeBSD.org
-# $FreeBSD: x11-fonts/pcf2bdf/Makefile 336895 2013-12-19 12:51:46Z danilo $
+# $FreeBSD$
 
 PORTNAME=	pcf2bdf
 PORTVERSION=	1.04
