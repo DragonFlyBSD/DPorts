@@ -1,7 +1,7 @@
 #!/bin/sh
 # Start or stop widentd
 #
-# $FreeBSD: net/widentd/files/widentd.in 330870 2013-10-19 14:13:27Z tijl $
+# $FreeBSD: head/net/widentd/files/widentd.in 330870 2013-10-19 14:13:27Z tijl $
 #
 # PROVIDE: widentd
 # REQUIRE: DAEMON
