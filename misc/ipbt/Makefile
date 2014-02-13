@@ -1,5 +1,5 @@
 # Created by: Matt Mills <matt_mills@btopenworld.com>
-# $FreeBSD: misc/ipbt/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ipbt
 DISTVERSION=	r8765
