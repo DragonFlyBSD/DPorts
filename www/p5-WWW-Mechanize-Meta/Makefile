@@ -1,5 +1,5 @@
 # Created by: Oleg Mamontov <oleg@mamontov.net>
-# $FreeBSD: www/p5-WWW-Mechanize-Meta/Makefile 338765 2014-01-05 13:18:23Z az $
+# $FreeBSD$
 
 PORTNAME=	WWW-Mechanize-Meta
 PORTVERSION=	0.07
