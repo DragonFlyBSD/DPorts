@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: editors/lfhex/Makefile 334499 2013-11-21 16:09:47Z makc $
+# $FreeBSD$
 
 PORTNAME=	lfhex
 PORTVERSION=	0.42
