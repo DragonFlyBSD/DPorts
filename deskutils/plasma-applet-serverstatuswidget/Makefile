@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/plasma-applet-serverstatuswidget/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD$
 
 PORTNAME=	serverstatuswidget
 PORTVERSION=	1.5.1
