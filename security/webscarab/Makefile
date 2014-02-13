@@ -1,5 +1,5 @@
 # Created by: Niels Heinen
-# $FreeBSD: security/webscarab/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	webscarab
 PORTVERSION=	20090427

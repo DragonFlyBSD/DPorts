@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: security/webscarab/files/webscarab.sh 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/security/webscarab/files/webscarab.sh 340872 2014-01-24 00:14:07Z mat $
 #
 
 TEST=`/usr/bin/basename $0`
