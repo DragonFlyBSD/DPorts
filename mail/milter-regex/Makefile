@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: mail/milter-regex/Makefile 334995 2013-11-27 04:39:09Z dinoex $
+# $FreeBSD$
 
 PORTNAME=	milter-regex
 PORTVERSION=	2.0
