@@ -1,4 +1,4 @@
-# $FreeBSD: www/rubygem-bootstrap-sass/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	bootstrap-sass
 PORTVERSION=	3.0.2.1
