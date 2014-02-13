@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: net/py-ec2-cli-tools/Makefile 337030 2013-12-20 16:08:37Z swills $
+# $FreeBSD$
 
 PORTNAME=	ec2-cli-tools
 PORTVERSION=	1.4
