@@ -1,5 +1,5 @@
 # Created by: Shigeyuki Fukushima <shige@FreeBSD.org>
-# $FreeBSD: www/css-mode.el/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	css-mode-elisp
 PORTVERSION=	0.11
