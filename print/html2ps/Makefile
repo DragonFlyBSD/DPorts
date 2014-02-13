@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@FreeBSD.org>
-# $FreeBSD: print/html2ps/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD$
 
 PORTNAME=	html2ps
 DISTVERSION=	1.0b7
