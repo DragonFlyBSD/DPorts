@@ -1,5 +1,5 @@
 # Created by: Dryice Liu <dryice@dryice.name>
-# $FreeBSD: www/trac-gantt/Makefile 341184 2014-01-26 14:32:00Z miwi $
+# $FreeBSD$
 
 PORTNAME=	TracGantt
 PORTVERSION=	0.3.2a
@@ -18,6 +18,8 @@ USE_PYTHON=	2
 USE_PYDISTUTILS=	easy_install
 PYDISTUTILS_PKGNAME=	TracGantt
 PLIST_FILES=		%%PYTHON_SITELIBDIR%%/%%PYEASYINSTALL_EGG%%
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
