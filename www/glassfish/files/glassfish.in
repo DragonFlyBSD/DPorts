@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: www/glassfish/files/glassfish.in 342332 2014-02-02 16:28:54Z swills $
+# $FreeBSD: head/www/glassfish/files/glassfish.in 342332 2014-02-02 16:28:54Z swills $
 #
 # PROVIDE: glassfish
 # REQUIRE: LOGIN

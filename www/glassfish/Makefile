@@ -1,5 +1,5 @@
 # Created by: cjr@cruwe.de
-# $FreeBSD: www/glassfish/Makefile 342332 2014-02-02 16:28:54Z swills $
+# $FreeBSD$
 
 PORTNAME=	glassfish
 PORTVERSION=	3.1.2.2
