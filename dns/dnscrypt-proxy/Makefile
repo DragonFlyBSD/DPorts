@@ -1,5 +1,5 @@
 # Created by: Leo Vandewoestijne <freebsd@dns-lab.com>
-# $FreeBSD: dns/dnscrypt-proxy/Makefile 331598 2013-10-25 15:27:28Z danilo $
+# $FreeBSD$
 
 PORTNAME=	dnscrypt-proxy
 PORTVERSION=	1.3.3

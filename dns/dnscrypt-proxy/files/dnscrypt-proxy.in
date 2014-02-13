@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: dns/dnscrypt-proxy/files/dnscrypt-proxy.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/dns/dnscrypt-proxy/files/dnscrypt-proxy.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: dnscrypt-proxy
 # REQUIRE: SERVERS cleanvar
