@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: devel/buildbot/Makefile 341507 2014-01-28 07:47:57Z koobs $
+# $FreeBSD$
 
 PORTNAME=	buildbot
 PORTVERSION=	0.8.8
