@@ -1,5 +1,5 @@
 # Created by: Muhammad Moinur Rahman <5u623l20@gmail.com>
-# $FreeBSD: www/p5-Mason/Makefile 341690 2014-01-29 07:58:41Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Mason
 PORTVERSION=	2.20
