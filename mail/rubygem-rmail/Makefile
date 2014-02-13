@@ -1,5 +1,5 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: mail/rubygem-rmail/Makefile 332045 2013-10-30 02:50:05Z swills $
+# $FreeBSD$
 
 PORTNAME=	rmail
 PORTVERSION=	1.0.0
