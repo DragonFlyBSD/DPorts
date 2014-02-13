@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net-p2p/p5-Net-BitTorrent/Makefile 332839 2013-11-05 12:13:03Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Net-BitTorrent
 PORTVERSION=	0.052
