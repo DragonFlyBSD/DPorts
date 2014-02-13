@@ -1,5 +1,5 @@
 # Created by: Stephane Legrand <stephane@freebsd-fr.org>
-# $FreeBSD: www/jetty/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	jetty
 PORTVERSION=	8.1.11
