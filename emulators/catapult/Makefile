@@ -1,5 +1,5 @@
 # Created by: Martin Tournoij <carpetsmoker@xs4all.nl>
-# $FreeBSD: emulators/catapult/Makefile 339346 2014-01-10 12:14:56Z johans $
+# $FreeBSD$
 
 PORTNAME=	catapult
 PORTVERSION=	0.10.0
