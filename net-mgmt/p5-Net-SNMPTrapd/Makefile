@@ -1,5 +1,5 @@
 # Created by: Hung-Yi Chen <gaod@hychen.org>
-# $FreeBSD: net-mgmt/p5-Net-SNMPTrapd/Makefile 338895 2014-01-06 15:12:02Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Net-SNMPTrapd
 PORTVERSION=	0.12
