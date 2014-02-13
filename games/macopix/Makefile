@@ -1,5 +1,5 @@
 # Created by: Shinya Esu <esu@yk.rim.or.jp>
-# $FreeBSD: games/macopix/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD$
 
 PORTNAME=	macopix
 PORTVERSION=	1.7.4
