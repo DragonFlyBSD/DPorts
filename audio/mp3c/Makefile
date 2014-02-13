@@ -1,5 +1,5 @@
 # Created by: Joris Vandalon <joris@vandalon.nl>
-# $FreeBSD: audio/mp3c/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mp3c
 PORTVERSION=	0.31
@@ -22,6 +22,8 @@ CONFIGURE_ARGS=	"--prefix=${PREFIX}"
 NO_STAGE=	yes
 MAN1=		mp3c.1
 MANCOMPRESSED=	no
+
+OPTIONS_DEFINE=	NLS 
 
 .include <bsd.port.options.mk>
 
