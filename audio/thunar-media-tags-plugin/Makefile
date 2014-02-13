@@ -1,5 +1,5 @@
 # Created by: Martin Wilke (miwi@FreeBSD.org)
-# $FreeBSD: audio/thunar-media-tags-plugin/Makefile 331424 2013-10-23 20:48:36Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	thunar-media-tags-plugin
 PORTVERSION=	0.2.1
