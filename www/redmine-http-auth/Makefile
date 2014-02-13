@@ -1,5 +1,5 @@
 # Created by: Eygene Ryabinkin <rea-fbsd@codelabs.ru>
-# $FreeBSD: www/redmine-http-auth/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	http-auth
 PORTVERSION=	20100730
