@@ -1,5 +1,5 @@
 # Created by: Denis Shaposhnikov <dsh@bamus.cz>
-# $FreeBSD: mail/dovecot2-antispam-plugin/Makefile 342000 2014-01-31 15:07:46Z pawel $
+# $FreeBSD$
 
 PORTNAME=	dovecot2-antispam-plugin
 PORTVERSION=	20130429
