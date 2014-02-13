@@ -1,4 +1,4 @@
-# $FreeBSD: ftp/plasma-applet-ftpmonitor/Makefile 331383 2013-10-23 13:08:41Z makc $
+# $FreeBSD$
 
 PORTNAME=	ftpmonitor
 PORTVERSION=	1.1
