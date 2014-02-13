@@ -1,5 +1,5 @@
 # Created by: Herve Quiroz <hq@FreeBSD.org>
-# $FreeBSD: textproc/nux/Makefile 341065 2014-01-25 17:38:05Z antoine $
+# $FreeBSD$
 
 PORTNAME=	nux
 PORTVERSION=	1.6
