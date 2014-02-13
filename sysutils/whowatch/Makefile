@@ -1,5 +1,5 @@
 # Created by: Daniel Harris <dannyboy@subdimension.com>
-# $FreeBSD: sysutils/whowatch/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	whowatch
 PORTVERSION=	1.4
