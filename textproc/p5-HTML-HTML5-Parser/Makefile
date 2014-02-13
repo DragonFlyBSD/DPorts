@@ -1,5 +1,5 @@
 # Created by: jupengfei <jupengfei@gmail.com>
-# $FreeBSD: textproc/p5-HTML-HTML5-Parser/Makefile 340610 2014-01-21 14:03:59Z mat $
+# $FreeBSD$
 
 PORTNAME=	HTML-HTML5-Parser
 PORTVERSION=	0.301
