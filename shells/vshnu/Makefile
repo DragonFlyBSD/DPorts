@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: shells/vshnu/Makefile 337662 2013-12-27 09:24:39Z bapt $
+# $FreeBSD$
 
 PORTNAME=	vshnu
 PORTVERSION=	1.0305
