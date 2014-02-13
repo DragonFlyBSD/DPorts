@@ -1,5 +1,5 @@
 # Created by: <ports@c0decafe.net>
-# $FreeBSD: databases/p5-Dancer-Plugin-DBIC/Makefile 332824 2013-11-05 08:59:59Z jadawin $
+# $FreeBSD$
 
 PORTNAME=	Dancer-Plugin-DBIC
 PORTVERSION=	0.1803
