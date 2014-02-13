@@ -1,5 +1,5 @@
 # Created by: Andrew Dolgov <fox@furry.spb.ru>
-# $FreeBSD: comms/bforce-kst/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	bforce
 PORTVERSION=	0.22.8.7
