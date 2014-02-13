@@ -1,5 +1,5 @@
 # Created by: Noritaka Ishizumi <graphite@taurus.bekkoame.or.jp>
-# $FreeBSD: news/suck/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	suck
 PORTVERSION=	4.3.2
