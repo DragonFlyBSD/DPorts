@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: head/www/pecl-zendopcache/Makefile 341699 2014-01-29 08:52:13Z ale $
+# $FreeBSD$
 
 PORTNAME=	zendopcache
 PORTVERSION=	7.0.3
