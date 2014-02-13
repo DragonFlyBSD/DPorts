@@ -1,5 +1,5 @@
 # Created by: Rod Person <rodperson@rodperson.com>
-# $FreeBSD: sysutils/dunst/Makefile 337469 2013-12-26 00:05:15Z bapt $
+# $FreeBSD$
 
 PORTNAME=	dunst
 PORTVERSION=	1.0.0
