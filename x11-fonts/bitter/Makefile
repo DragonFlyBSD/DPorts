@@ -1,4 +1,4 @@
-# $FreeBSD: x11-fonts/bitter/Makefile 337780 2013-12-27 19:11:29Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	bitter
 PORTVERSION=	20130930
