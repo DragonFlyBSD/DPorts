@@ -1,5 +1,5 @@
 # Created by: grog
-# $FreeBSD: x11-servers/x2x/Makefile 337067 2013-12-20 18:41:56Z pawel $
+# $FreeBSD$
 
 PORTNAME=	x2x
 PORTVERSION=	1.27
