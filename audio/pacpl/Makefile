@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: audio/pacpl/Makefile 333356 2013-11-09 22:50:32Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	pacpl
 PORTVERSION=	4.0.5
