@@ -1,5 +1,5 @@
 # Created by: Narayan Newton <narayan_newton@yahoo.com>
-# $FreeBSD: multimedia/xmms-weasel/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xmms-weasel
 PORTVERSION=	0.0.1
