@@ -1,5 +1,5 @@
 # Created by: domi@saargate.de
-# $FreeBSD: misc/grun/Makefile 342326 2014-02-02 16:04:41Z miwi $
+# $FreeBSD$
 
 PORTNAME=	grun
 PORTVERSION=	0.8.1
