@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: textproc/pecl-xslcache/Makefile 340835 2014-01-23 16:00:14Z miwi $
+# $FreeBSD$
 
 PORTNAME=	xslcache
 PORTVERSION=	0.7.2
