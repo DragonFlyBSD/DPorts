@@ -1,5 +1,5 @@
 # Created by: Bartlomiej Rutkowski <r@robakdesign.com>
-# $FreeBSD: net-mgmt/pftabled/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	pftabled
 PORTVERSION=	1.09
