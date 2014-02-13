@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: audio/jmusic/Makefile 339960 2014-01-16 18:40:58Z antoine $
+# $FreeBSD$
 
 PORTNAME=	jmusic
 PORTVERSION=	1.6.4
