@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: x11/peeper/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	peeper
 PORTVERSION=	0.1
@@ -15,6 +15,8 @@ USES=		gmake
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS} `${IMLIB_CONFIG} --cflags-gdk`" \
 		LIBS="`${IMLIB_CONFIG} --libs-gdk`"
 ALL_TARGET=	peeper
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
