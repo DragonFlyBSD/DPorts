@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-utf8/Makefile 340247 2014-01-19 09:26:45Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Test-utf8
 PORTVERSION=	1.01
