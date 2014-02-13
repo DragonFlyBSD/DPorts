@@ -1,4 +1,4 @@
-# $FreeBSD: audio/hs-libmpd/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	libmpd
 PORTVERSION=	0.8.0.2
