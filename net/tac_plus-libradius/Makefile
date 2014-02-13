@@ -1,5 +1,5 @@
 # Created by: Martin Mersberger <gremlin@portal-to-web.de>
-# $FreeBSD: net/tac_plus-libradius/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	tac_plus-libradius
 PORTVERSION=	5.0.0
