@@ -1,5 +1,5 @@
 # Created by: Denise H. G. <darcsis@gmail.com>
-# $FreeBSD: chinese/fqterm/Makefile 339152 2014-01-08 15:47:09Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	fqterm
 PORTVERSION=	0.9.3
