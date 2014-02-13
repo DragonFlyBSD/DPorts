@@ -1,5 +1,5 @@
 # Created by: jabley@automagic.org
-# $FreeBSD: textproc/xml2rfc/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xml2rfc
 PORTVERSION=	2.4.5
