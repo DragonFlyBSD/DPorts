@@ -1,5 +1,5 @@
 # Created by: Peter Ankerstal <peter@pean.org>
-# $FreeBSD: sysutils/tss/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	tss
 PORTVERSION=	0.8.2
