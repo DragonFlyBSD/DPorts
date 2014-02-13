@@ -1,5 +1,5 @@
 # Created by: Brian Somers <brian@FreeBSD.org>
-# $FreeBSD: net-mgmt/arpwatch/Makefile 333622 2013-11-12 21:29:04Z antoine $
+# $FreeBSD$
 
 PORTNAME=	arpwatch
 PORTVERSION=	2.1.a15
