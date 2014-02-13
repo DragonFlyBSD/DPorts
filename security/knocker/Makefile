@@ -1,5 +1,5 @@
 # Created by: Patrick Li <pat@databits.net>
-# $FreeBSD: security/knocker/Makefile 342022 2014-01-31 16:48:03Z miwi $
+# $FreeBSD$
 
 PORTNAME=	knocker
 PORTVERSION=	0.7.1
