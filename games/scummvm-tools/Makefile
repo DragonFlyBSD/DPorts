@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: games/scummvm-tools/Makefile 329379 2013-10-04 20:29:31Z lme $
+# $FreeBSD$
 
 PORTNAME=	scummvm-tools
 DISTVERSION=	1.6.0
