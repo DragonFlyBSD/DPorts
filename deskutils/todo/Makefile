@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: deskutils/todo/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	todo
 PORTVERSION=	2.9
