@@ -1,5 +1,5 @@
 # Created by: Adrian Wontroba <aw1@stade.co.uk>
-# $FreeBSD: sysutils/xlogmaster/Makefile 331423 2013-10-23 20:45:10Z ak $
+# $FreeBSD$
 
 PORTNAME=	xlogmaster
 PORTVERSION=	1.6.2
