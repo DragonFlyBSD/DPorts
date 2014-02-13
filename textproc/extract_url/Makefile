@@ -1,5 +1,5 @@
 # Created by: Horia Racoviceanu <horia@racoviceanu.com>
-# $FreeBSD: textproc/extract_url/Makefile 331496 2013-10-24 15:39:27Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	extract_url
 PORTVERSION=	1.5.8
