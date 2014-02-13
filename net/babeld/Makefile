@@ -1,5 +1,5 @@
 # Created by: Hung-Yi Chen <gaod@hychen.org>
-# $FreeBSD: net/babeld/Makefile 334690 2013-11-23 18:20:40Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	babeld
 PORTVERSION=	1.4.3
