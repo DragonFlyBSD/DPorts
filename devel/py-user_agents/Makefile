@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: devel/py-user_agents/Makefile 341578 2014-01-28 14:26:43Z demon $
+# $FreeBSD$
 
 PORTNAME=	user_agents
 PORTVERSION=	0.2.0
