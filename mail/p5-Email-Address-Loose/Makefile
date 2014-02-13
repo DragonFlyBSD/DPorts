@@ -1,4 +1,4 @@
-# $FreeBSD: mail/p5-Email-Address-Loose/Makefile 338794 2014-01-05 16:20:40Z az $
+# $FreeBSD$
 
 PORTNAME=	Email-Address-Loose
 PORTVERSION=	0.10
