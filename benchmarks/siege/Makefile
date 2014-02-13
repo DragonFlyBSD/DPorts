@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: benchmarks/siege/Makefile 339921 2014-01-16 15:11:26Z miwi $
+# $FreeBSD$
 
 PORTNAME=	siege
 PORTVERSION=	3.0.6
