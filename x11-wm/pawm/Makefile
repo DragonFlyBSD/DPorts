@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: x11-wm/pawm/Makefile 338984 2014-01-07 08:27:10Z bapt $
+# $FreeBSD$
 
 PORTNAME=	pawm
 PORTVERSION=	2.3.0
