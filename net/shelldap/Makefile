@@ -1,5 +1,5 @@
 # Created by: Mahlon E. Smith <mahlon@martini.nu>
-# $FreeBSD: net/shelldap/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	shelldap
 PORTVERSION=	1.0.0
