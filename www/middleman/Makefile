@@ -1,5 +1,5 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD: www/middleman/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	middleman
 PORTVERSION=	1.9.1
