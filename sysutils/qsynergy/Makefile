@@ -1,5 +1,5 @@
 # Created by: Kevin Zheng <kevinz5000@gmail.com>
-# $FreeBSD: sysutils/qsynergy/Makefile 335666 2013-12-05 12:36:21Z makc $
+# $FreeBSD$
 
 PORTNAME=	qsynergy
 PORTVERSION=	0.9.1
