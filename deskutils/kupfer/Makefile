@@ -1,5 +1,5 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: deskutils/kupfer/Makefile 332359 2013-11-01 12:03:19Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	kupfer
 PORTVERSION=	208
