@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/codespell/Makefile 341161 2014-01-26 11:57:13Z mat $
+# $FreeBSD$
 
 PORTNAME=	codespell
 PORTVERSION=	1.6
