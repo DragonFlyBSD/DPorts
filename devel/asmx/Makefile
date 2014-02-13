@@ -1,5 +1,5 @@
 # Created by: elbarto
-# $FreeBSD: devel/asmx/Makefile 336113 2013-12-10 21:04:54Z bapt $
+# $FreeBSD$
 
 PORTNAME=	asmx
 PORTVERSION=	1.8.2
