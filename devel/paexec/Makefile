@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: devel/paexec/Makefile 329573 2013-10-06 14:34:00Z danilo $
+# $FreeBSD$
 
 PORTNAME=	paexec
 PORTVERSION=	0.19.1
