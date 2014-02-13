@@ -1,5 +1,5 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: games/impossible_mission_puzzle/Makefile 337373 2013-12-24 16:48:19Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	impossible_mission_puzzle
 PORTVERSION=	1.0.1
