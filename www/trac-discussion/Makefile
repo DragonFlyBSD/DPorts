@@ -1,4 +1,4 @@
-# $FreeBSD: www/trac-discussion/Makefile 341183 2014-01-26 14:31:44Z miwi $
+# $FreeBSD$
 
 PORTNAME=	${PYDISTUTILS_PKGNAME:S;^Trac;;S;Plugin$;;:tl}
 PORTVERSION=	0.7
