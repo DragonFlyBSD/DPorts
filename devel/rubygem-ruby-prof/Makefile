@@ -1,5 +1,5 @@
 # Created by: Robert Gogolok <gogo@cs.uni-sb.de>
-# $FreeBSD: devel/rubygem-ruby-prof/Makefile 340903 2014-01-24 14:49:29Z miwi $
+# $FreeBSD$
 
 PORTNAME=	ruby-prof
 PORTVERSION=	0.13.0
