@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: textproc/csvdiff/Makefile 341161 2014-01-26 11:57:13Z mat $
+# $FreeBSD$
 
 PORTNAME=	csvdiff
 PORTVERSION=	1.7
