@@ -1,5 +1,5 @@
 # Created by: Gerhard Häring <gh@ghaering.de>
-# $FreeBSD: sysutils/rdiff-backup/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	rdiff-backup
 PORTVERSION=	1.2.8
