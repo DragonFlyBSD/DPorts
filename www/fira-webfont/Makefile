@@ -1,5 +1,5 @@
 # Created by: Horia Racoviceanu <horia@racoviceanu.com>
-# $FreeBSD: www/fira-webfont/Makefile 340658 2014-01-21 20:47:06Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	fira
 PORTVERSION=	1.0
