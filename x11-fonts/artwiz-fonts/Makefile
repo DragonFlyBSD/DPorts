@@ -1,5 +1,5 @@
 # Created by: Dominic Marks <dominic.marks@btinternet.com>
-# $FreeBSD: x11-fonts/artwiz-fonts/Makefile 332332 2013-10-31 23:56:00Z garga $
+# $FreeBSD$
 
 PORTNAME=	artwiz-fonts
 PORTVERSION=	1.0
