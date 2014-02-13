@@ -1,5 +1,5 @@
 # Created by: janek
-# $FreeBSD: games/xminesweep/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xminesweep
 PORTVERSION=	3.0
