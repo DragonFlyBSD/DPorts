@@ -1,4 +1,4 @@
-# $FreeBSD: devel/cppi/Makefile 337920 2013-12-28 21:35:56Z johans $
+# $FreeBSD$
 
 PORTNAME=	cppi
 PORTVERSION=	1.18
