@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Plack-App-Proxy/Makefile 339432 2014-01-11 15:49:19Z kuriyama $
+# $FreeBSD$
 
 PORTNAME=	Plack-App-Proxy
 PORTVERSION=	0.29
