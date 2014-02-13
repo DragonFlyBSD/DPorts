@@ -1,5 +1,5 @@
 # Created by: johnpupu <johnpupu@gmail.com>
-# $FreeBSD: www/pecl-yaf/Makefile 340828 2014-01-23 14:32:34Z miwi $
+# $FreeBSD$
 
 PORTNAME=	yaf
 PORTVERSION=	2.2.9
