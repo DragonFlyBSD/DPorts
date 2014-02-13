@@ -1,5 +1,5 @@
 # Created by: John Alden + Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: devel/p5-Config-Wrest/Makefile 331856 2013-10-28 13:46:25Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Config-Wrest
 PORTVERSION=	1.036
