@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-ref/Makefile 332040 2013-10-30 02:40:36Z swills $
+# $FreeBSD$
 
 PORTNAME=	ref
 PORTVERSION=	1.0.5
