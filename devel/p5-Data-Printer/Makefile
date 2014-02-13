@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-Data-Printer/Makefile 328856 2013-09-30 19:58:55Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Data-Printer
 PORTVERSION=	0.30
