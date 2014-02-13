@@ -1,5 +1,5 @@
 # Created by: Anatoliy Dmytriyev <tolid@plab.ku.dk>
-# $FreeBSD: graphics/p5-Image-Grab/Makefile 341813 2014-01-30 08:45:50Z az $
+# $FreeBSD$
 
 PORTNAME=	Image-Grab
 PORTVERSION=	1.4.2
