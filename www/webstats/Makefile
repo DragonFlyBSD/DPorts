@@ -1,5 +1,5 @@
 # Created by: Kevin Golding <kevin@caomhin.demon.co.uk>
-# $FreeBSD: www/webstats/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	webstats
 PORTVERSION=	0.3
