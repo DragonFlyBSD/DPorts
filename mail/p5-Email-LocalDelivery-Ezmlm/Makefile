@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lars@thegler.dk>
-# $FreeBSD: mail/p5-Email-LocalDelivery-Ezmlm/Makefile 338794 2014-01-05 16:20:40Z az $
+# $FreeBSD$
 
 PORTNAME=	Email-LocalDelivery-Ezmlm
 PORTVERSION=	0.10
