@@ -1,5 +1,5 @@
 # Created by: Satoshi Asami (asami)
-# $FreeBSD: editors/e93/Makefile 333835 2013-11-15 10:12:26Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	e93
 PORTVERSION=	1.4.2
