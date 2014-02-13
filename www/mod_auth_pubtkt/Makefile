@@ -1,5 +1,5 @@
 # Created by: Manuel Kasper <mk@neon1.net>
-# $FreeBSD: www/mod_auth_pubtkt/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mod_auth_pubtkt
 PORTVERSION=	0.8
