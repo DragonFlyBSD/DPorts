@@ -1,5 +1,5 @@
 # Created by: Brad Davis <brd@FreeBSD.org>
-# $FreeBSD: net-mgmt/rubygem-visage-app/Makefile 338262 2013-12-31 08:31:04Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	visage-app
 PORTVERSION=	2.1.0
