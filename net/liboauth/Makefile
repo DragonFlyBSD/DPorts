@@ -1,4 +1,4 @@
-# $FreeBSD: net/liboauth/Makefile 338051 2013-12-29 22:08:48Z johans $
+# $FreeBSD$
 
 PORTNAME=	liboauth
 PORTVERSION=	1.0.1
