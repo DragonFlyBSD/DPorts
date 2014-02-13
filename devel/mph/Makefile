@@ -1,5 +1,5 @@
 # Created by: Chuck Swiger <chuck@pkix.net>
-# $FreeBSD: devel/mph/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	mph
 PORTVERSION=	1.2
