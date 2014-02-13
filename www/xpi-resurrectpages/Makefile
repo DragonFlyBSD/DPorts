@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/xpi-resurrectpages/Makefile 341214 2014-01-26 15:13:02Z miwi $
+# $FreeBSD$
 
 PORTNAME=	resurrectpages
 PORTVERSION=	2.0.7
