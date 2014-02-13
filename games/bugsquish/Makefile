@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: games/bugsquish/Makefile 339771 2014-01-15 10:24:58Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	bugsquish
 PORTVERSION=	0.0.6
