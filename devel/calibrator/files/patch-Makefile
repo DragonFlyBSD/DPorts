@@ -1,7 +1,7 @@
 --- Makefile.orig	Mon Oct 13 11:14:02 2003
 +++ Makefile	Mon Oct 13 11:16:20 2003
 @@ -0,0 +1,10 @@
-+# $FreeBSD: devel/calibrator/files/patch-Makefile 340725 2014-01-22 17:40:44Z mat $
++# $FreeBSD: head/devel/calibrator/files/patch-Makefile 340725 2014-01-22 17:40:44Z mat $
 +
 +PROG=	calibrator
 +SRCS=	calibrator.c
