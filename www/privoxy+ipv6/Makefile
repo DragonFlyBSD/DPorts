@@ -1,5 +1,5 @@
 # Created by: Lars Eggert
-# $FreeBSD: www/privoxy+ipv6/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	privoxy+ipv6
 PORTVERSION=	20030523
