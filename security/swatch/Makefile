@@ -1,5 +1,5 @@
 # Created by: jfitz
-# $FreeBSD: security/swatch/Makefile 342162 2014-02-01 14:54:17Z miwi $
+# $FreeBSD$
 
 PORTNAME=	swatch
 PORTVERSION=	3.2.3
