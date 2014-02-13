@@ -1,5 +1,5 @@
 # Created by: Oliver Eikemeier
-# $FreeBSD: sysutils/tenshi/Makefile 333222 2013-11-08 13:35:39Z jadawin $
+# $FreeBSD$
 
 PORTNAME=		tenshi
 PORTVERSION=		0.14
