@@ -1,5 +1,5 @@
 # Created by: Radim Kolar
-# $FreeBSD: archivers/advancecomp/Makefile 334086 2013-11-17 14:55:53Z danilo $
+# $FreeBSD$
 
 PORTNAME=	advancecomp
 PORTVERSION=	1.18
