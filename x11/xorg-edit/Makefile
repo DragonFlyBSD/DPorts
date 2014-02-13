@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: x11/xorg-edit/Makefile 336948 2013-12-19 19:16:55Z pawel $
+# $FreeBSD$
 
 PORTNAME=	xorg-edit
 PORTVERSION=	08.08.06
