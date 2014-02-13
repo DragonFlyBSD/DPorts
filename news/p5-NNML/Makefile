@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: news/p5-NNML/Makefile 327759 2013-09-20 22:31:15Z bapt $
+# $FreeBSD$
 
 PORTNAME=	NNML
 PORTVERSION=	1.14
@@ -15,14 +15,10 @@ USE_PERL5=	configure
 
 RESTRICTED=	License unknown
 
-MAN1=		nnmirror.1 nnsync.1 overview.1
-MAN3=		NNML::Server.3
-
 .if defined(BATCH)
 CONFIGURE_ARGS+=	< /dev/null
 .else
 IS_INTERACTIVE=	yes
 .endif
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
