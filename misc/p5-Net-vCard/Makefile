@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD: misc/p5-Net-vCard/Makefile 332594 2013-11-03 08:05:18Z az $
+# $FreeBSD$
 
 PORTNAME=		Net-vCard
 PORTVERSION=		0.5
