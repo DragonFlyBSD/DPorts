@@ -1,5 +1,5 @@
 # Created by: Jin-Sih Lin <linpct@gmail.com>
-# $FreeBSD: sysutils/rsyncrypto/Makefile 328180 2013-09-24 17:35:40Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	rsyncrypto
 PORTVERSION=	1.12
