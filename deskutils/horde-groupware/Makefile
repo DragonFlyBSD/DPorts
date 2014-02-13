@@ -1,4 +1,4 @@
-# $FreeBSD: deskutils/horde-groupware/Makefile 341399 2014-01-27 13:17:21Z miwi $
+# $FreeBSD$
 
 PORTNAME=	groupware
 PORTVERSION=	5.1.3
