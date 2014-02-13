@@ -1,5 +1,5 @@
 # Created by: Nikos Ntarmos <ntarmos@cs.uoi.gr>
-# $FreeBSD: x11-wm/awesome2/Makefile 336473 2013-12-14 19:09:34Z wg $
+# $FreeBSD$
 
 PORTNAME=	awesome2
 PORTVERSION=	2.3.6
