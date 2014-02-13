@@ -1,5 +1,5 @@
 # Created by: J Han <hjh@photino.com>
-# $FreeBSD: x11-wm/lwm/Makefile 327786 2013-09-21 00:01:16Z bapt $
+# $FreeBSD$
 
 PORTNAME=	lwm
 PORTVERSION=	1.2.3
