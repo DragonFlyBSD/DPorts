@@ -1,5 +1,5 @@
 # Created by: Jeroen Hogeveen <albast@xs4all.nl>
-# $FreeBSD: mail/ml/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ml
 PORTVERSION=	3.4
