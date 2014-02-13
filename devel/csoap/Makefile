@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: devel/csoap/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	csoap
 PORTVERSION=	1.1.0
