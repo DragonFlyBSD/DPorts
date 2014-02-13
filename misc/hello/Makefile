@@ -1,5 +1,5 @@
 # Created by: shipley@dis.org
-# $FreeBSD: misc/hello/Makefile 342324 2014-02-02 16:03:27Z miwi $
+# $FreeBSD$
 
 PORTNAME=	hello
 PORTVERSION=	2.9
@@ -15,6 +15,8 @@ USE_PERL5=	build
 GNU_CONFIGURE=	YES
 
 INFO=		hello
+
+OPTIONS_DEFINE=	NLS 
 
 .include <bsd.port.options.mk>
 
