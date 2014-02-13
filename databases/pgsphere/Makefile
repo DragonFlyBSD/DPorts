@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-# $FreeBSD: databases/pgsphere/Makefile 337637 2013-12-27 02:16:24Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	pgsphere
 PORTVERSION=	1.1.1
