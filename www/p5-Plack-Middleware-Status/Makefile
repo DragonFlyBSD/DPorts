@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Plack-Middleware-Status/Makefile 338767 2014-01-05 13:23:32Z az $
+# $FreeBSD$
 
 PORTNAME=	Plack-Middleware-Status
 PORTVERSION=	1.101150
