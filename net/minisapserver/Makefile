@@ -1,5 +1,5 @@
 # Created by: michael johnson <ahze@ahze.net>
-# $FreeBSD: net/minisapserver/Makefile 331042 2013-10-20 18:07:15Z bapt $
+# $FreeBSD$
 
 PORTNAME=	minisapserver
 PORTVERSION=	0.3.8
