@@ -1,5 +1,5 @@
 # Created by: Matt Emmerton <matt@gsicomp.on.ca>
-# $FreeBSD: misc/lifelines/Makefile 327745 2013-09-20 20:50:57Z bapt $
+# $FreeBSD$
 
 PORTNAME=	lifelines
 PORTVERSION=	3.0.51
@@ -17,6 +17,9 @@ USES=		bison iconv
 MAN1=		btedit.1 dbverify.1 llines.1
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS NLS 
+
 .include <bsd.port.options.mk>
 .if ${PORT_OPTIONS:MNLS}
 USES+=		gettext
