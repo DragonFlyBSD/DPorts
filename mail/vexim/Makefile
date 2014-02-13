@@ -1,5 +1,5 @@
 # Created by: John Oxley <john@yoafrica.com>
-# $FreeBSD: mail/vexim/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	vexim
 DISTVERSION=	2.2.2_rc1
@@ -9,6 +9,9 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Web interface for managing virtual domains for exim
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-10
 
 LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/LICENSE
