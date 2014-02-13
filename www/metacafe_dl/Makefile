@@ -1,5 +1,5 @@
 # Created by: Fernando Durango <fernando@secret.org>
-# $FreeBSD: www/metacafe_dl/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	metacafe_dl
 PORTVERSION=	2007.09.13
@@ -12,6 +12,9 @@ EXTRACT_ONLY=
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A program for downloading videos from metacafe.com
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-10
 
 NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
