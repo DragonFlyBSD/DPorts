@@ -1,5 +1,5 @@
 # Created by: Sean McLaughlin <sigma.zx@gmail.com>
-# $FreeBSD: devel/z80asm/Makefile 340948 2014-01-24 23:42:35Z bapt $
+# $FreeBSD$
 
 PORTNAME=	z80asm
 PORTVERSION=	1.8
