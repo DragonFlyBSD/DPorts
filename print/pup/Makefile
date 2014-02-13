@@ -1,5 +1,5 @@
 # Created by: Klaus Goger <klaus.goger@reflex.at>
-# $FreeBSD: print/pup/Makefile 337073 2013-12-20 18:57:13Z pawel $
+# $FreeBSD$
 
 PORTNAME=	pup
 PORTVERSION=	1.1
