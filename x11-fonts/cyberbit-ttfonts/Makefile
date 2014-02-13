@@ -1,5 +1,5 @@
 # Created by: NAKATA, Maho <maho@FreeBSD.org>
-# $FreeBSD: x11-fonts/cyberbit-ttfonts/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	cyberbit-ttfonts
 PORTVERSION=	2.0.20050220
