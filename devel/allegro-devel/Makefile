@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: devel/allegro-devel/Makefile 340454 2014-01-20 19:31:15Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	allegro
 DISTVERSION=	5.0.9
