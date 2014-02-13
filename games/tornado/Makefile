@@ -1,5 +1,5 @@
 # Created by: minter@lunenburg.org
-# $FreeBSD: games/tornado/Makefile 341059 2014-01-25 16:58:46Z miwi $
+# $FreeBSD$
 
 PORTNAME=	tornado
 PORTVERSION=	1.4
