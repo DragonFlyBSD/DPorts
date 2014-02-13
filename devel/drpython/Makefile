@@ -1,5 +1,5 @@
 # Created by: vsevolod
-# $FreeBSD: devel/drpython/Makefile 336442 2013-12-14 12:56:38Z wg $
+# $FreeBSD$
 
 PORTNAME=	drpython
 PORTVERSION=	3.11.3
