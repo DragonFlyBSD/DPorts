@@ -1,5 +1,5 @@
 # Created by: Michael Nottebrock <lofi@kiste>
-# $FreeBSD: net/libmxp/Makefile 338050 2013-12-29 22:06:33Z johans $
+# $FreeBSD$
 
 PORTNAME=	libmxp
 PORTVERSION=	0.2.4
