@@ -1,5 +1,5 @@
 # Created by: Felippe de Meirelles Motta <lippemail@gmail.com>
-# $FreeBSD: devel/p5-Test-YAML-Meta/Makefile 341710 2014-01-29 10:33:57Z az $
+# $FreeBSD$
 
 PORTNAME=	Test-YAML-Meta
 PORTVERSION=	0.20
