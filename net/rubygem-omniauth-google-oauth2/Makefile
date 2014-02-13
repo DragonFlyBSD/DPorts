@@ -1,4 +1,4 @@
-# $FreeBSD: net/rubygem-omniauth-google-oauth2/Makefile 338502 2014-01-02 20:59:28Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	omniauth-google-oauth2
 PORTVERSION=	0.2.2
