@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/p5-Pod-Tree/Makefile 333056 2013-11-07 03:52:41Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Pod-Tree
 PORTVERSION=	1.17
