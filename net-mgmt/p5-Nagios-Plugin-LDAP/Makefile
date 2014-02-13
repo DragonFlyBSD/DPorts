@@ -1,5 +1,5 @@
 # Created by: Alexander Kriventsov <avk@vl.ru>
-# $FreeBSD: net-mgmt/p5-Nagios-Plugin-LDAP/Makefile 338790 2014-01-05 15:52:33Z az $
+# $FreeBSD$
 
 PORTNAME=	Nagios-Plugin-LDAP
 PORTVERSION=	0.04
