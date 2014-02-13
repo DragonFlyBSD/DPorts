@@ -1,5 +1,5 @@
 # Created by: Dmitriy Limonov
-# $FreeBSD: net-p2p/ncdc/Makefile 333433 2013-11-10 19:48:27Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	ncdc
 PORTVERSION=	1.18.1
