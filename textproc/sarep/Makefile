@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: textproc/sarep/Makefile 338942 2014-01-06 21:35:19Z antoine $
+# $FreeBSD$
 
 PORTNAME=	sarep
 PORTVERSION=	1.1
