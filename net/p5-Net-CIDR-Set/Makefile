@@ -1,5 +1,5 @@
 # Created by: Anes Mukhametov <anes@anes.su>
-# $FreeBSD: net/p5-Net-CIDR-Set/Makefile 333872 2013-11-15 14:48:13Z mat $
+# $FreeBSD$
 
 PORTNAME=	Net-CIDR-Set
 PORTVERSION=	0.11
