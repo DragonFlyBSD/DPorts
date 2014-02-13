@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-jQuery-File-Upload/Makefile 339464 2014-01-12 01:49:19Z kuriyama $
+# $FreeBSD$
 
 PORTNAME=	jQuery-File-Upload
 PORTVERSION=	0.20
