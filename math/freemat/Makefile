@@ -1,8 +1,9 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: math/freemat/Makefile 337334 2013-12-24 10:37:31Z tijl $
+# $FreeBSD$
 
 PORTNAME=	FreeMat
 PORTVERSION=	4.2
+PORTREVISION=	1
 DISTVERSIONSUFFIX=	-Source
 CATEGORIES=	math science
 MASTER_SITES=	SF/freemat/FreeMat4
