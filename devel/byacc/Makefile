@@ -1,4 +1,4 @@
-# $FreeBSD: devel/byacc/Makefile 339071 2014-01-08 07:49:16Z bapt $
+# $FreeBSD$
 
 PORTNAME=	byacc
 PORTVERSION=	20140101
