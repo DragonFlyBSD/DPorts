@@ -1,5 +1,5 @@
 # Created by: Alexey Mikhailov <karma@ez.pereslavl.ru>
-# $FreeBSD: x11/xtrlock/Makefile 339339 2014-01-10 09:32:14Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	xtrlock
 PORTVERSION=	2.3
