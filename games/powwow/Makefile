@@ -1,5 +1,5 @@
 # Created by: Juraj Lutter <otis@sk.freebsd.org>
-# $FreeBSD: games/powwow/Makefile 328764 2013-09-30 03:16:24Z tabthorpe $
+# $FreeBSD$
 
 PORTNAME=	powwow
 PORTVERSION=	1.2.17
