@@ -1,5 +1,5 @@
 # Created by: Mamoru Sakaue / MwGhennndo
-# $FreeBSD: ports-mgmt/portsreinstall/Makefile 336481 2013-12-14 19:48:54Z danilo $
+# $FreeBSD$
 
 PORTNAME=	portsreinstall
 PORTVERSION=	3.0.5
