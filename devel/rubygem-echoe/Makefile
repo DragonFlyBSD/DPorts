@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-echoe/Makefile 332036 2013-10-30 02:32:53Z swills $
+# $FreeBSD$
 
 PORTNAME=	echoe
 PORTVERSION=	4.5
