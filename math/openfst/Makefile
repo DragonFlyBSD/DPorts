@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <mitya@yandex-team.ru>
-# $FreeBSD: math/openfst/Makefile 338554 2014-01-03 16:00:53Z demon $
+# $FreeBSD$
 
 PORTNAME=	openfst
 PORTVERSION=	1.3.4
