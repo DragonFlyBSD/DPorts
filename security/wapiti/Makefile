@@ -1,5 +1,5 @@
 # Created by: Philippe Audeoud <jadawin@tuxaco.net>
-# $FreeBSD: security/wapiti/Makefile 341385 2014-01-27 12:14:09Z koobs $
+# $FreeBSD$
 
 PORTNAME=	wapiti
 PORTVERSION=	2.3.0
