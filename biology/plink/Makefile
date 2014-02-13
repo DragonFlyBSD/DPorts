@@ -1,5 +1,5 @@
 # Created by: Jason Bacon <jwbacon@tds.net>
-# $FreeBSD: biology/plink/Makefile 336328 2013-12-13 09:34:40Z gerald $
+# $FreeBSD$
 
 PORTNAME=	plink
 PORTVERSION=	1.07
