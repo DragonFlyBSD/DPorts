@@ -1,5 +1,5 @@
 # Created by: Javier Martin Rueda <jmrueda@diatel.upm.es>
-# $FreeBSD: www/moodle24/Makefile 338391 2014-01-01 19:46:14Z jgh $
+# $FreeBSD$
 
 PORTNAME=	moodle
 PORTVERSION=	2.4.7
