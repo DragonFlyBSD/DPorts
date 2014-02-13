@@ -1,5 +1,5 @@
 # Created by: <ports@c0decafe.net>
-# $FreeBSD: net-im/p5-Net-Async-XMPP/Makefile 332816 2013-11-05 07:49:09Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Net-Async-XMPP
 PORTVERSION=	0.002
