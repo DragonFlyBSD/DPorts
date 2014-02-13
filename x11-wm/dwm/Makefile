@@ -1,5 +1,5 @@
 # Created by: Jeroen Schot <schot@a-eskwadraat.nl>
-# $FreeBSD: x11-wm/dwm/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	dwm
 PORTVERSION=	6.0
