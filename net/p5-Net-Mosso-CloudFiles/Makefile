@@ -1,5 +1,5 @@
 # Created by: glarkin
-# $FreeBSD: net/p5-Net-Mosso-CloudFiles/Makefile 341934 2014-01-31 08:05:15Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Net-Mosso-CloudFiles
 PORTVERSION=	0.44
