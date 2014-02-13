@@ -1,5 +1,5 @@
 # Created by: Nicolas de Bari Embriz <nbari@dalmp.com>
-# $FreeBSD: databases/dalmp/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD$
 
 PORTNAME=	dalmp
 PORTVERSION=	2.1
