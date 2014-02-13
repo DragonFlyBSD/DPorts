@@ -1,5 +1,5 @@
 # Created by: Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
-# $FreeBSD: deskutils/rubrica/Makefile 338516 2014-01-03 01:53:21Z bapt $
+# $FreeBSD$
 
 PORTNAME=	rubrica
 PORTVERSION=	2.0.12
