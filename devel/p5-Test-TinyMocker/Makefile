@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: devel/p5-Test-TinyMocker/Makefile 335198 2013-11-29 17:05:57Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Test-TinyMocker
 PORTVERSION=	0.05
