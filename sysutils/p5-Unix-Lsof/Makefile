@@ -1,5 +1,5 @@
 # Created by: George Cox <gjvc@gjvc.com>
-# $FreeBSD: sysutils/p5-Unix-Lsof/Makefile 338851 2014-01-06 09:44:19Z az $
+# $FreeBSD$
 
 PORTNAME=	Unix-Lsof
 PORTVERSION=	0.0.5
