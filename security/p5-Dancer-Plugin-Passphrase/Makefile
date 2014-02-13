@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: security/p5-Dancer-Plugin-Passphrase/Makefile 329845 2013-10-08 22:43:47Z gblach $
+# $FreeBSD$
 
 PORTNAME=	Dancer-Plugin-Passphrase
 PORTVERSION=	2.0.0
