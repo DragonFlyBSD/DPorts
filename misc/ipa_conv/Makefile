@@ -1,5 +1,5 @@
 # Created by: Andrey Simonenko
-# $FreeBSD: misc/ipa_conv/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ipa_conv
 PORTVERSION=	1.1
@@ -15,10 +15,9 @@ USE_BZIP2=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 
-PLIST_FILES=	lib/ipa_conv.la lib/ipa_conv.so
+PLIST_FILES=	lib/ipa_conv.la lib/ipa_conv.so \
+		man/man8/ipa_conv.8.gz \
+		man/ru.KOI8-R/man8/ipa_conv.8.gz
 
-MAN8=		ipa_conv.8
-MANLANG=	"" ru.KOI8-R
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
