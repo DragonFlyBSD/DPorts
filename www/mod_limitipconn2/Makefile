@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@ccca.nctu.edu.tw>
-# $FreeBSD: www/mod_limitipconn2/Makefile 342319 2014-02-02 15:57:13Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	mod_limitipconn
 PORTVERSION=	0.24
