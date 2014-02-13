@@ -1,5 +1,5 @@
 # Created by: Roman Bogorodskiy <bogorodskiy@inbox.ru>
-# $FreeBSD: audio/bmp-scrobbler/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	bmp-scrobbler
 PORTREVISION=	10
