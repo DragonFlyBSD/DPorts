@@ -1,5 +1,5 @@
 # Created by: Alan Eldridge <ports@geeksrus.net>
-# $FreeBSD: editors/leo/Makefile 334966 2013-11-26 20:25:32Z wg $
+# $FreeBSD$
 
 PORTNAME=	leo
 PORTVERSION=	4.11
