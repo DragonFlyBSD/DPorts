@@ -1,5 +1,5 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD: audio/specimen/Makefile 338146 2013-12-30 17:19:40Z antoine $
+# $FreeBSD$
 
 PORTNAME=	specimen
 DISTVERSION=	0.5.2-rc3
