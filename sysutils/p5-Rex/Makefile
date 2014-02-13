@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/p5-Rex/Makefile 338986 2014-01-07 08:55:04Z az $
+# $FreeBSD$
 
 PORTNAME=	Rex
 PORTVERSION=	0.43.7
