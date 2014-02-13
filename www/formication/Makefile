@@ -1,5 +1,5 @@
 # Created by: Michael Ranner <mranner@inode.at>
-# $FreeBSD: www/formication/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	formication
 PORTVERSION=	1.0.b1
