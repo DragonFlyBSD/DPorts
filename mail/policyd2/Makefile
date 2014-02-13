@@ -1,5 +1,5 @@
 # Created by: Chifeng QU <chifeng@gmail.com>
-# $FreeBSD: mail/policyd2/Makefile 341189 2014-01-26 14:34:24Z marino $
+# $FreeBSD$
 
 PORTNAME=	policyd2
 PORTVERSION=	2.0.12
