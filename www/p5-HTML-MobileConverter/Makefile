@@ -1,5 +1,5 @@
 # Created by: Dmitry Liakh <dliakh@ukr.net>
-# $FreeBSD: www/p5-HTML-MobileConverter/Makefile 338765 2014-01-05 13:18:23Z az $
+# $FreeBSD$
 
 PORTNAME=	HTML-MobileConverter
 PORTVERSION=	0.011
