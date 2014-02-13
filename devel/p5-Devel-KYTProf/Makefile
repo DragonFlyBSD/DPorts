@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Devel-KYTProf/Makefile 341707 2014-01-29 09:19:35Z az $
+# $FreeBSD$
 
 PORTNAME=	Devel-KYTProf
 PORTVERSION=	0.05
