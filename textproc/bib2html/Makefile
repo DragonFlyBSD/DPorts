@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/bib2html/Makefile 341143 2014-01-26 00:03:51Z mat $
+# $FreeBSD$
 
 PORTNAME=	bib2html
 DISTVERSION=	5.1-1
