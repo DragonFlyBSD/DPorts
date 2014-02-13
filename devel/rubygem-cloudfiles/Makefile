@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-cloudfiles/Makefile 338270 2013-12-31 10:09:08Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	cloudfiles
 PORTVERSION=	1.5.0.3
