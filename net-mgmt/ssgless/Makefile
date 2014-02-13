@@ -1,5 +1,5 @@
 # Created by: Pavel I Volkov
-# $FreeBSD: net-mgmt/ssgless/Makefile 341787 2014-01-29 22:03:24Z pawel $
+# $FreeBSD$
 
 PORTNAME=	ssgless
 PORTVERSION=	1.3
