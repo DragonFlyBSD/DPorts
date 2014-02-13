@@ -1,4 +1,4 @@
-# $FreeBSD: ports-mgmt/port-authoring-tools/Makefile 328338 2013-09-26 07:10:09Z jgh $
+# $FreeBSD$
 
 PORTNAME=	port-authoring-tools
 PORTVERSION=	1.0
