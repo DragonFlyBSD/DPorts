@@ -1,5 +1,5 @@
 # Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: x11-fonts/font-gost/Makefile 329066 2013-10-02 16:16:21Z vg $
+# $FreeBSD$
 
 PORTNAME=	gost
 PORTVERSION=	0.2
