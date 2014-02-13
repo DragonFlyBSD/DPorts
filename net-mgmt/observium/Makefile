@@ -1,5 +1,5 @@
 # Created by: rflynn@acsalaska.net
-# $FreeBSD: net-mgmt/observium/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	observium
 PORTVERSION=	0.11.5.2261
