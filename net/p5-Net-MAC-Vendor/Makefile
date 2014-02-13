@@ -1,5 +1,5 @@
 # Created by: Aaron Dalton <aaron@FreeBSD.org>
-# $FreeBSD: net/p5-Net-MAC-Vendor/Makefile 329348 2013-10-04 17:34:52Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Net-MAC-Vendor
 PORTVERSION=	1.2000
