@@ -1,5 +1,5 @@
 # Created by: Babak Farrokhi
-# $FreeBSD: net/tapidbus/Makefile 341954 2014-01-31 09:20:58Z miwi $
+# $FreeBSD$
 
 PORTNAME=	tapidbus
 PORTVERSION=	0.2.1
