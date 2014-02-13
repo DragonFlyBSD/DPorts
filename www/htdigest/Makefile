@@ -1,4 +1,4 @@
-# $FreeBSD: www/htdigest/Makefile 339541 2014-01-12 20:05:49Z crees $
+# $FreeBSD$
 
 PORTNAME=	htdigest
 PORTVERSION=	2.4.6
