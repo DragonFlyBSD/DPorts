@@ -1,5 +1,5 @@
 # Created by: Pedro Giffuni <giffunip@asme.org>
-# $FreeBSD: science/fasthenry/Makefile 327767 2013-09-20 22:48:30Z bapt $
+# $FreeBSD$
 
 PORTNAME=	fasthenry
 DISTVERSION=	3.0wr-021113
