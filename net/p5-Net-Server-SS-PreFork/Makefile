@@ -1,5 +1,5 @@
 # Created by: Denis Pokataev <catone@cpan.org>
-# $FreeBSD: net/p5-Net-Server-SS-PreFork/Makefile 338800 2014-01-05 17:15:11Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-Server-SS-PreFork
 PORTVERSION=	0.05
