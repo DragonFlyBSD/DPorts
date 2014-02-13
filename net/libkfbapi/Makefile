@@ -1,4 +1,4 @@
-# $FreeBSD: net/libkfbapi/Makefile 341153 2014-01-26 01:06:24Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	libkfbapi
 PORTVERSION=	1.0
