@@ -1,5 +1,5 @@
 # Created by: matusita@FreeBSD.org
-# $FreeBSD: mail/popfile/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	popfile
 PORTVERSION=	1.1.3

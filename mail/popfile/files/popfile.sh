@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: mail/popfile/files/popfile.sh 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/mail/popfile/files/popfile.sh 340872 2014-01-24 00:14:07Z mat $
 #
 case "${HOME}" in
 "")
