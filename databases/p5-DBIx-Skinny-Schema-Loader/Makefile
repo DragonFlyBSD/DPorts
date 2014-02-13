@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-DBIx-Skinny-Schema-Loader/Makefile 341764 2014-01-29 17:31:52Z az $
+# $FreeBSD$
 
 PORTNAME=	DBIx-Skinny-Schema-Loader
 PORTVERSION=	0.25
