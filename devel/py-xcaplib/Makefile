@@ -1,5 +1,5 @@
 # Created by: Eugene Grosbein <ports@grosbein.net>
-# $FreeBSD: devel/py-xcaplib/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xcaplib
 PORTVERSION=	1.0.16
