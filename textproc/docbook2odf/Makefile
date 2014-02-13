@@ -1,5 +1,5 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: textproc/docbook2odf/Makefile 332401 2013-11-01 18:52:03Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	docbook2odf
 PORTVERSION=	0.244
