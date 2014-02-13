@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: graphics/ruby-gd/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	gd
 PORTVERSION=	0.8.0
@@ -32,6 +32,8 @@ CONFIGURE_ARGS=	--with-gd-lib="${LOCALBASE}/lib" \
 		--with-gd-include="${LOCALBASE}/include"
 
 INSTALL_TARGET=	site-install
+
+OPTIONS_DEFINE=	DOCS EXAMPLES 
 
 .include <bsd.port.options.mk>
 
