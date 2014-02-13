@@ -1,5 +1,5 @@
 # Created by: Daniel Knaggs	<knaggsy2000@gmail.com>
-# $FreeBSD: sysutils/py-danzfs/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	danzfs
 PORTVERSION=	0.2.0
