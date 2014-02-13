@@ -1,5 +1,5 @@
 
-$FreeBSD: x11-wm/wmanager/files/patch-aa 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/x11-wm/wmanager/files/patch-aa 340725 2014-01-22 17:40:44Z mat $
 
 diff -urN -urN -x .svn ../vendor/wmanager/Makefile ./Makefile
 --- ../vendor/wmanager/Makefile	2007-12-11 12:42:04.000000000 +0200
