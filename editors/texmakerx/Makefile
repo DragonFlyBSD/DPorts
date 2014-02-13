@@ -1,5 +1,5 @@
 # Created by: lx
-# $FreeBSD: editors/texmakerx/Makefile 337749 2013-12-27 16:54:21Z kwm $
+# $FreeBSD$
 
 PORTNAME=	texmakerx
 PORTVERSION=	2.1
