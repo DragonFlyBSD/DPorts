@@ -1,5 +1,5 @@
 # Created by: Philip M. Gollucci <philip@p6m7g8.com>
-# $FreeBSD: databases/p5-DBIx-Browse/Makefile 332592 2013-11-03 06:53:54Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	DBIx-Browse
 PORTVERSION=	2.09
