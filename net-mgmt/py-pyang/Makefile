@@ -1,5 +1,5 @@
 # Created by: Bruce Simpson
-# $FreeBSD: net-mgmt/py-pyang/Makefile 333924 2013-11-15 20:52:32Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	pyang
 PORTVERSION=	1.4.1
