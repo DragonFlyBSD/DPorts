@@ -1,5 +1,5 @@
 # Created by: Eygene Ryabinkin <rea@FreeBSD.org>
-# $FreeBSD: www/trac-tickettemplate/Makefile 341187 2014-01-26 14:32:48Z miwi $
+# $FreeBSD$
 
 PORTNAME=	tickettemplate
 PORTVERSION=	0.7
