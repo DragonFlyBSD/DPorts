@@ -1,5 +1,5 @@
 # Created by: Colin Percival
-# $FreeBSD: sysutils/ec2-scripts/Makefile 338903 2014-01-06 16:17:31Z cperciva $
+# $FreeBSD$
 
 PORTNAME=	ec2-scripts
 PORTVERSION=	1.8
