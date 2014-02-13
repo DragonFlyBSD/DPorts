@@ -1,5 +1,5 @@
 # Created by: melifaro@ipfw.ru
-# $FreeBSD: net/nss-pam-ldapd/Makefile 333272 2013-11-09 00:23:44Z zi $
+# $FreeBSD$
 
 PORTNAME=		nss-pam-ldapd
 PORTVERSION=		0.8.13

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: net/nss-pam-ldapd/files/nslcd.in 333272 2013-11-09 00:23:44Z zi $
+# $FreeBSD: head/net/nss-pam-ldapd/files/nslcd.in 333272 2013-11-09 00:23:44Z zi $
 #
 # PROVIDE: nslcd
 # REQUIRE: NETWORKING ldconfig resolv
