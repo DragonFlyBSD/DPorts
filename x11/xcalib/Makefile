@@ -1,5 +1,5 @@
 # Created by: Petr Holub <hopet@ics.muni.cz>
-# $FreeBSD: x11/xcalib/Makefile 336399 2013-12-13 23:52:55Z bapt $
+# $FreeBSD$
 
 PORTNAME=	xcalib
 PORTVERSION=	0.8
