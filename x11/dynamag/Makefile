@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: x11/dynamag/Makefile 338766 2014-01-05 13:20:35Z antoine $
+# $FreeBSD$
 
 PORTNAME=	dynamag
 PORTVERSION=	1.1
