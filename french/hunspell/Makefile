@@ -1,4 +1,4 @@
-# $FreeBSD: french/hunspell/Makefile 340417 2014-01-20 17:02:49Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	hunspell
 PORTVERSION=	5.0.2
