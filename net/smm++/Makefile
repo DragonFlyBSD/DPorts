@@ -1,5 +1,5 @@
 # Created by: Edwin Groothuis (edwin@mavetju.org)
-# $FreeBSD: net/smm++/Makefile 339701 2014-01-14 16:59:44Z gahr $
+# $FreeBSD$
 
 PORTNAME=	smm++
 PORTVERSION=	6.1.1
