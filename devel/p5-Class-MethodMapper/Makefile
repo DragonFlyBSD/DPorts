@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Class-MethodMapper/Makefile 338866 2014-01-06 12:05:42Z az $
+# $FreeBSD$
 
 PORTNAME=	Class-MethodMapper
 PORTVERSION=	1.0
