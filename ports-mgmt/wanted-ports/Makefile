@@ -1,5 +1,5 @@
 # Created by: Matthew Seaman <m.seaman@infracaninophile.co.uk>
-# $FreeBSD: ports-mgmt/wanted-ports/Makefile 335945 2013-12-08 22:38:52Z matthew $
+# $FreeBSD$
 
 PORTNAME=	wanted-ports
 PORTVERSION=	0.2

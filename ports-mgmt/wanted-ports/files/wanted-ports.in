@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports-mgmt/wanted-ports/files/wanted-ports.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/ports-mgmt/wanted-ports/files/wanted-ports.in 340872 2014-01-24 00:14:07Z mat $
 
 # Copyright 2010,2012 Matthew Seaman. All rights reserved.
 # 
