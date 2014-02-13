@@ -1,5 +1,5 @@
 # Created by: nemysis <nemysis@gmx.ch>
-# $FreeBSD: graphics/founts/Makefile 331206 2013-10-21 23:09:11Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	founts
 PORTVERSION=	13
