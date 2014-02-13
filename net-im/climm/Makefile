@@ -1,5 +1,5 @@
 # Created by: mph
-# $FreeBSD: net-im/climm/Makefile 341271 2014-01-26 20:09:03Z antoine $
+# $FreeBSD$
 
 PORTNAME=	climm
 PORTVERSION=	0.7.1
