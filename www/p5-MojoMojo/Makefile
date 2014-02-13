@@ -1,5 +1,5 @@
 # Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-# $FreeBSD: www/p5-MojoMojo/Makefile 332637 2013-11-03 18:17:33Z rene $
+# $FreeBSD$
 
 PORTNAME=	MojoMojo
 PORTVERSION=	1.10
