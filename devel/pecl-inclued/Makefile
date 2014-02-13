@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: devel/pecl-inclued/Makefile 340830 2014-01-23 15:12:50Z miwi $
+# $FreeBSD$
 
 PORTNAME=	inclued
 PORTVERSION=	0.1.3
