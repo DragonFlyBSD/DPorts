@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/p5-CSS-Compressor/Makefile 340601 2014-01-21 11:52:07Z mat $
+# $FreeBSD$
 
 PORTNAME=	CSS-Compressor
 PORTVERSION=	0.02
