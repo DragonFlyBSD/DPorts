@@ -1,5 +1,5 @@
 # Created by: Pawel Pekala <c0rn@o2.pl>
-# $FreeBSD: mail/claws-mail-attach_warner/Makefile 329440 2013-10-05 11:25:29Z pawel $
+# $FreeBSD$
 
 PORTNAME=	attach_warner
 PORTREVISION=	0
