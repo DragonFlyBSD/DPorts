@@ -1,4 +1,4 @@
-# $FreeBSD: dns/p5-pgeodns/Makefile 332593 2013-11-03 07:46:27Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	pgeodns
 PORTVERSION=	1.41
