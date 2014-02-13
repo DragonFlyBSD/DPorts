@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/seamonkey-i18n/Makefile 336446 2013-12-14 13:42:06Z flo $
+# $FreeBSD$
 
 PORTNAME=	seamonkey-i18n
 PORTVERSION=	2.23

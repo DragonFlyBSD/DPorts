@@ -1,5 +1,5 @@
 # Created by: Koji Yokota <yokota@res.otaru-uc.ac.jp>
-# $FreeBSD: www/seamonkey-i18n/Makefile.lang 336446 2013-12-14 13:42:06Z flo $
+# $FreeBSD$
 
 SEAMONKEY_I18N_ALL_=	be ca cs de en-GB en-US es-AR es-ES fi fr gl hu it  \
 			ja-JP-mac ja lt nb-NO nl pl pt-PT ru sk sv-SE tr uk \

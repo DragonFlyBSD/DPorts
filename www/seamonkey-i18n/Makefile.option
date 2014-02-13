@@ -1,5 +1,5 @@
 # Created by: Koji Yokota <yokota@res.otaru-uc.ac.jp>
-# $FreeBSD: www/seamonkey-i18n/Makefile.option 336446 2013-12-14 13:42:06Z flo $
+# $FreeBSD$
 
 OPTIONS_DEFINE=	LANG_BE \
 		LANG_CA \
