@@ -1,4 +1,4 @@
-# $FreeBSD: science/pyteomics/Makefile 335169 2013-11-29 11:57:18Z makc $
+# $FreeBSD$
 
 PORTNAME=	pyteomics
 PORTVERSION=	2.2.1
