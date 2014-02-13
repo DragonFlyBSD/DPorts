@@ -1,5 +1,5 @@
 # Created by: Gabor Zahemszky <Gabor@Zahemszky.HU>
-# $FreeBSD: audio/aften/Makefile 337569 2013-12-26 17:36:30Z bapt $
+# $FreeBSD$
 
 PORTNAME=	aften
 PORTVERSION=	0.0.8
