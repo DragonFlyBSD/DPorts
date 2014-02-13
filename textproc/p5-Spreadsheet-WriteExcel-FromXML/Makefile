@@ -1,5 +1,5 @@
 # Created by: Bill Swingle <unfurl@FreeBSD.org>
-# $FreeBSD: textproc/p5-Spreadsheet-WriteExcel-FromXML/Makefile 333056 2013-11-07 03:52:41Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Spreadsheet-WriteExcel-FromXML
 PORTVERSION=	1.1
