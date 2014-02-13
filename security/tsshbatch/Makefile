@@ -1,5 +1,5 @@
 # Created by: Tim Daneliuk <tsshbatch@tundraware.com>
-# $FreeBSD: security/tsshbatch/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	tsshbatch
 PORTVERSION=	1.171
