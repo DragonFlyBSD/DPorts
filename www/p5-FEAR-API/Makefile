@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: www/p5-FEAR-API/Makefile 333072 2013-11-07 08:51:16Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	FEAR-API
 PORTVERSION=	0.489
