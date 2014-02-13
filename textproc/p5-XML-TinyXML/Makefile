@@ -1,5 +1,5 @@
 # Created by: Rick van der Zwet <info@rickvanderzwet.nl>
-# $FreeBSD: textproc/p5-XML-TinyXML/Makefile 341765 2014-01-29 17:46:33Z az $
+# $FreeBSD$
 
 PORTNAME=	XML-TinyXML
 PORTVERSION=	0.30
