@@ -1,5 +1,5 @@
 # Created by: Thomas Kempka <t.kempka@web.de>
-# $FreeBSD: misc/wminfo/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	wminfo
 PORTVERSION=	1.51
