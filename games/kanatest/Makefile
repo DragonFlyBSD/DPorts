@@ -1,5 +1,5 @@
 # Created by: S H A N <shanali@yahoo.com>
-# $FreeBSD: games/kanatest/Makefile 332490 2013-11-02 14:31:27Z danilo $
+# $FreeBSD$
 
 PORTNAME=	kanatest
 PORTVERSION=	0.4.8
