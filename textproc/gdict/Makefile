@@ -1,5 +1,5 @@
 # Created by: domi@saargate.de
-# $FreeBSD: textproc/gdict/Makefile 341449 2014-01-27 20:48:13Z mat $
+# $FreeBSD$
 
 PORTNAME=	gdict
 PORTVERSION=	0.7
