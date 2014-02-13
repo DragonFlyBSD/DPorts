@@ -1,4 +1,4 @@
-# $FreeBSD: devel/py-pytest/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	pytest
 PORTVERSION=	2.5.1
