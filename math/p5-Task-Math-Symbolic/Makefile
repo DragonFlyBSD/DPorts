@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: math/p5-Task-Math-Symbolic/Makefile 332813 2013-11-05 06:56:18Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Task-Math-Symbolic
 PORTVERSION=	1.01
