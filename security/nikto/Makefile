@@ -1,5 +1,5 @@
 # Created by: pandzilla
-# $FreeBSD: security/nikto/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	nikto
 PORTVERSION=	2.1.5
