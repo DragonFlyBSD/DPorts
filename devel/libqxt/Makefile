@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: devel/libqxt/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libqxt
 PORTVERSION=	0.6.2
@@ -10,7 +10,6 @@ DISTNAME=	v${PORTVERSION}
 MAINTAINER=	gahr@FreeBSD.org
 COMMENT=	Extension library for Qt
 
-LIB_DEPENDS=	dns_sd:${PORTSDIR}/net/avahi-libdns
 BUILD_DEPENDS=	bash:${PORTSDIR}/shells/bash
 
 USE_BDB=	44+
@@ -24,11 +23,12 @@ HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	-prefix ${PREFIX} \
 		-libdir ${PREFIX}/lib/qxt \
 		-qmake-bin ${QMAKE} \
-		-featuredir ${PREFIX}/share/qt4/mkspecs/features \
+		-featuredir ${PREFIX}/${QT_MKSPECDIR_REL}/features \
 		-I ${BDB_INCLUDE_DIR} \
 		-I ${LOCALBASE}/include/avahi-compat-libdns_sd \
 		-L ${BDB_LIB_DIR} \
 		-verbose
+DESTDIRNAME=	INSTALL_ROOT
 
 COMMIT=		dadc327c2a6a
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTNAME}-${COMMIT}
@@ -37,13 +37,22 @@ PLIST_SUB+=	SHVER_1=${PORTVERSION} \
     		SHVER_2=${PORTVERSION:R} \
 		SHVER_3=${PORTVERSION:R:R}
 
-NO_STAGE=	yes
+OPTIONS_DEFAULT=	AVAHI
+OPTIONS_SINGLE=		ZEROCONF
+OPTIONS_SINGLE_ZEROCONF=	AVAHI MDNSRESPONDER
+AVAHI_LIB_DEPENDS=	libdns_sd.so:${PORTSDIR}/net/avahi-libdns
+MDNSRESPONDER_LIB_DEPENDS=	libdns_sd.so:${PORTSDIR}/net/mDNSResponder
+
+STRIP_FILES=	lib/qxt/lib*.so.${PORTVERSION} \
+		${QT_PLUGINDIR_REL}/designer/libQxtDesignerPlugins.so
+
 post-patch:
 	${REINPLACE_CMD} -e '\
-	    s|%%PREFIX%%|${PREFIX}|g; \
 	    s|/bin/bash|${LOCALBASE}/bin/bash|g; \
 	    /^QXT_MODULES/s|docs||g' \
-	    ${WRKSRC}/configure \
+	    ${WRKSRC}/configure
+	${REINPLACE_CMD} -e \
+	    's,$$$$\[QT_INSTALL_PLUGINS\],${PREFIX}/${QT_PLUGINDIR_REL},' \
 	    ${WRKSRC}/src/designer/designer.pro
 	${REINPLACE_CMD} -e '\
 	    s|ldb|l${BDB_LIB_NAME} -L${BDB_LIB_DIR}|g; \
@@ -54,5 +63,8 @@ regression-test:
 	cd ${WRKSRC}/tests && \
 	    ${QMAKE} tests.pro && ${MAKE} && \
 	    ${FIND} unit -type f -perm -0755 -exec {} \;
+
+post-install:
+	${STRIP_CMD} ${STRIP_FILES:S,^,${STAGEDIR}${PREFIX}/,}
 
 .include <bsd.port.mk>
