@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Test-PerlTidy/Makefile 338880 2014-01-06 13:53:21Z az $
+# $FreeBSD$
 
 PORTNAME=	Test-PerlTidy
 PORTVERSION=	20130104
