@@ -1,5 +1,5 @@
 # Created by: Sofian Brabez <sbrabez@gmail.com>
-# $FreeBSD: net/hexinject/Makefile 332200 2013-10-31 04:17:29Z eadler $
+# $FreeBSD$
 
 PORTNAME=	hexinject
 PORTVERSION=	1.5
