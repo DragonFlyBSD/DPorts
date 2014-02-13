@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: games/palomino/Makefile 338572 2014-01-03 18:59:37Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	palomino
 PORTVERSION=	20131231
