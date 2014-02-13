@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: textproc/irstlm/Makefile 331843 2013-10-28 11:19:20Z demon $
+# $FreeBSD$
 
 PORTNAME=	irstlm
 PORTVERSION=	5.80.03
