@@ -1,5 +1,5 @@
 # Created by: Alex Kapranoff <kapr@crosswinds.net>
-# $FreeBSD: textproc/xslint/Makefile 333832 2013-11-15 10:08:00Z ehaupt $
+# $FreeBSD$
 
 PORTNAME=	xslint
 PORTVERSION=	005
@@ -23,6 +23,8 @@ SHEBANG_FILES=	xslint.pl
 
 PLIST_FILES=	bin/xslint
 PORTDOCS=	README xslint.html xslint.xml
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
