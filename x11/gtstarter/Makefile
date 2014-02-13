@@ -1,5 +1,5 @@
 # Created by: Franz Klammer <klammer@webonaut.com>
-# $FreeBSD: x11/gtstarter/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gtstarter
 PORTVERSION=	0.4.6.3
