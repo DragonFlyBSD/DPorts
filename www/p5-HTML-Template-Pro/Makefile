@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-HTML-Template-Pro/Makefile 338771 2014-01-05 13:37:37Z az $
+# $FreeBSD$
 
 PORTNAME=	HTML-Template-Pro
 PORTVERSION=	0.9510
