@@ -1,5 +1,5 @@
 # Created by: bms
-# $FreeBSD: net/jpcap/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	jpcap
 PORTVERSION=	0.7
@@ -9,6 +9,9 @@ MASTER_SITES=	http://netresearch.ics.uci.edu/kfujii/Jpcap/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	JNI wrapper around libpcap
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-10
 
 LIB_DEPENDS=	pcap.1:${PORTSDIR}/net/libpcap
 
