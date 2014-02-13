@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero
-# $FreeBSD: www/p5-Catalyst-Plugin-FormBuilder/Makefile 333070 2013-11-07 08:28:22Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Catalyst-Plugin-FormBuilder
 PORTVERSION=	1.07
