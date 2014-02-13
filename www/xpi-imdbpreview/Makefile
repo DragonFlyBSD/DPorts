@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: www/xpi-imdbpreview/Makefile 341207 2014-01-26 15:10:29Z miwi $
+# $FreeBSD$
 
 PORTNAME=	imdbpreview
 DISTVERSION=	0.5
