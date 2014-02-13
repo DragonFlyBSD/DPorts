@@ -1,4 +1,4 @@
-# $FreeBSD: net-mgmt/pancho/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	pancho
 PORTVERSION=	9.3.9
