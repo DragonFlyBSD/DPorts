@@ -1,5 +1,5 @@
 # Created by: chinsan <chisnan.tw@gmail.com>
-# $FreeBSD: www/pear-Services_Delicious/Makefile 334871 2013-11-25 17:59:58Z antoine $
+# $FreeBSD$
 
 PORTNAME=	Services_Delicious
 PORTVERSION=	0.6.0
