@@ -1,5 +1,5 @@
 # Created by: Will Andrews <andrews@technologist.com>
-# $FreeBSD: games/rubix/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	rubix
 PORTVERSION=	1.0.6
@@ -24,6 +24,9 @@ PLIST_FILES=	bin/rubix
 DOCFILES=	AUTHORS BUGS INSTALL README TODO
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 do-install:
