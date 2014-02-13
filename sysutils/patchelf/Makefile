@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <wg@FreeBSD.org>
-# $FreeBSD: sysutils/patchelf/Makefile 328192 2013-09-24 20:58:58Z wg $
+# $FreeBSD$
 
 PORTNAME=	patchelf
 PORTVERSION=	0.6
