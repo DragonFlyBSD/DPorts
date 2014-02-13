@@ -1,7 +1,7 @@
 # Custom Makefile to build all firmware utilities. OpenWrt has its own build
 # system for these which would be overkill to replicate here.
 #
-# $FreeBSD: devel/firmware-utils/files/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 #
 
 SIMPLES=	add_header addpattern airlink dgfirmware encode_crc \
