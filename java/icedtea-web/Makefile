@@ -1,8 +1,7 @@
-# $FreeBSD: java/icedtea-web/Makefile 333597 2013-11-12 18:22:05Z jkim $
+# $FreeBSD$
 
 PORTNAME=	icedtea-web
-PORTVERSION=	1.4.1
-PORTREVISION=	2
+PORTVERSION=	1.4.2
 CATEGORIES=	java www
 MASTER_SITES=	http://icedtea.wildebeest.org/download/source/ \
 		http://icedtea.classpath.org/download/source/
