@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net/p5-Net-Gnats/Makefile 332868 2013-11-05 16:42:55Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Net-Gnats
 PORTVERSION=	0.06
