@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: devel/mm-common/Makefile 328852 2013-09-30 19:32:38Z kwm $
+# $FreeBSD$
 #   $MCom: ports/trunk/devel/mm-common/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	mm-common
