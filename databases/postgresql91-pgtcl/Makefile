@@ -1,4 +1,4 @@
-# $FreeBSD: databases/postgresql91-pgtcl/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD$
 
 WANT_PGSQL_VER=	91
 PKGNAMESUFFIX=	-postgresql${WANT_PGSQL_VER}
