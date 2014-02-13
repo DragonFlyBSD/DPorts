@@ -1,5 +1,5 @@
 # Created by: Hung-Yi Chen <gaod@hychen.org>
-# $FreeBSD: www/trac-subtickets/Makefile 341187 2014-01-26 14:32:48Z miwi $
+# $FreeBSD$
 
 PORTNAME=	subtickets
 PORTVERSION=	0.2.0.${GITDATE}
