@@ -1,5 +1,5 @@
 # Created by: David O'Brien <obrien@FreeBSD.org>
-# $FreeBSD: security/bro/Makefile 338927 2014-01-06 19:31:52Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	bro
 PORTVERSION=	2.2
