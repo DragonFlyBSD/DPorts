@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: www/p5-Apache-AuthTicket/Makefile 332617 2013-11-03 15:16:25Z az $
+# $FreeBSD$
 
 PORTNAME=	Apache-AuthTicket
 PORTVERSION=	0.93
