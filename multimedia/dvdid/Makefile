@@ -1,5 +1,5 @@
 # Created by: Christopher Key <cjk32@cam.ac.uk>
-# $FreeBSD: multimedia/dvdid/Makefile 339023 2014-01-07 19:48:48Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	dvdid
 PORTVERSION=	0.2.0a
