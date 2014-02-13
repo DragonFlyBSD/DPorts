@@ -1,5 +1,5 @@
 # Created by: johans
-# $FreeBSD: deskutils/ljclive/Makefile 331468 2013-10-24 08:45:30Z johans $
+# $FreeBSD$
 
 PORTNAME=	ljclive
 PORTVERSION=	0.4.10
