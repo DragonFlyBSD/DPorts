@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: x11/terminology/Makefile 331629 2013-10-25 19:58:18Z gblach $
+# $FreeBSD$
 
 PORTNAME=	terminology
 PORTVERSION=	0.3.0
