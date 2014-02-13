@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Test-POE-Client-TCP/Makefile 338867 2014-01-06 12:18:47Z az $
+# $FreeBSD$
 
 PORTNAME=	Test-POE-Client-TCP
 PORTVERSION=	1.12
