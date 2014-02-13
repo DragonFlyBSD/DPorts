@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: devel/pylint/Makefile 339383 2014-01-10 20:38:05Z mva $
+# $FreeBSD$
 
 PORTNAME=	pylint
 PORTVERSION=	1.1.0
