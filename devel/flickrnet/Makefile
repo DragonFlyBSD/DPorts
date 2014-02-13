@@ -1,5 +1,5 @@
 # Created by: Romain Tartiere <romain@blogreen.org>
-# $FreeBSD: devel/flickrnet/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	flickrnet
 PORTVERSION=	2.2.0
