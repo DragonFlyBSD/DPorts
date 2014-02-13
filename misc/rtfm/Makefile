@@ -1,5 +1,5 @@
 # Created by: Chris Costello <chris@FreeBSD.org>
-# $FreeBSD: misc/rtfm/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	rtfm
 PORTVERSION=	1.0
