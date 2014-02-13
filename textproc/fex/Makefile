@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <zi@FreeBSD.org>
-# $FreeBSD: textproc/fex/Makefile 341278 2014-01-26 20:27:24Z mat $
+# $FreeBSD$
 
 PORTNAME=	fex
 PORTVERSION=	2.0.0
