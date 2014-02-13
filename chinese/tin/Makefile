@@ -1,5 +1,5 @@
 # Created by: Yen-Shuo Su <yssu@CCCA.NCTU.edu.tw>
-# $FreeBSD: chinese/tin/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 # Don't reset PORTREVISION and keep bumping it even if PORTVERSION is changed.
 PORTREVISION=	6
