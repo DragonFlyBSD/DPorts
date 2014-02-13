@@ -1,5 +1,5 @@
 # Created by: salexanov@gmail.com
-# $FreeBSD: net-mgmt/fetchconfig/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	fetchconfig
 PORTVERSION=	0.22
