@@ -1,5 +1,5 @@
 # Created by: Tom Sparks <tsparks@appliedops.net>
-# $FreeBSD: textproc/yali/Makefile 340556 2014-01-21 07:14:53Z mat $
+# $FreeBSD$
 
 PORTNAME=	yali
 PORTVERSION=	1.1
