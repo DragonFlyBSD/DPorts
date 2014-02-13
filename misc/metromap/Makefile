@@ -1,5 +1,5 @@
 # Created by: Vsevolod Stakhov <vsevolod@highsecure.ru>
-# $FreeBSD: misc/metromap/Makefile 336650 2013-12-16 17:40:13Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	metromap
 PORTVERSION=	0.1.4
