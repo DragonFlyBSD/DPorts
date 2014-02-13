@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: graphics/ristretto/Makefile 330424 2013-10-15 18:36:02Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	ristretto
 PORTVERSION=	0.6.3
