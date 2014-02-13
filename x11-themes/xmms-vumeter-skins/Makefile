@@ -1,5 +1,5 @@
 # Created by: Alejandro Pulver <alejandro@varnet.biz>
-# $FreeBSD: x11-themes/xmms-vumeter-skins/Makefile 341376 2014-01-27 11:38:19Z miwi $
+# $FreeBSD$
 
 PORTNAME=	xmms-vumeter-skins
 PORTVERSION=	0.9.1
