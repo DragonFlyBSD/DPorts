@@ -1,4 +1,4 @@
-# $FreeBSD: www/mod_extract_forwarded/files/extra-patch-yoshfuji 340725 2014-01-22 17:40:44Z mat $
+# $FreeBSD: head/www/mod_extract_forwarded/files/extra-patch-yoshfuji 340725 2014-01-22 17:40:44Z mat $
 diff --git a/INSTALL b/INSTALL
 index fa06d8a..d1f6d56 100644
 --- a/INSTALL
