@@ -1,5 +1,5 @@
 # Created by: Yoshihiko Sarumaru <mistral@imasy.or.jp>
-# $FreeBSD: x11-fonts/bdfresize/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	bdfresize
 PORTVERSION=	1.5
@@ -11,8 +11,7 @@ MAINTAINER=	sarumaru@jp.FreeBSD.org
 COMMENT=	A tool for resizing BDF format font
 
 GNU_CONFIGURE=	yes
-MAN1=		bdfresize.1
-PLIST_FILES=	bin/bdfresize
+PLIST_FILES=	bin/bdfresize \
+		man/man1/bdfresize.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
