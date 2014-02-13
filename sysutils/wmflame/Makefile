@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
-# $FreeBSD: sysutils/wmflame/Makefile 333997 2013-11-16 13:50:53Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	wmflame
 PORTVERSION=	0.60
