@@ -1,4 +1,4 @@
-# $FreeBSD: devel/rubygem-gitlab-pygments.rb/Makefile 338343 2014-01-01 00:08:35Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	gitlab-pygments.rb
 PORTVERSION=	0.5.4
