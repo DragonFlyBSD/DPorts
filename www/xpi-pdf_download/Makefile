@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: www/xpi-pdf_download/Makefile 341213 2014-01-26 15:12:42Z miwi $
+# $FreeBSD$
 
 PORTNAME=	pdf_download
 PORTVERSION=	3.0.0.3
