@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: x11/gdkxft/Makefile 339339 2014-01-10 09:32:14Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	gdkxft
 PORTVERSION=	1.5
@@ -24,6 +24,8 @@ CFLAGS+=	`pkg-config xft --cflags`
 CONFIGURE_ARGS=	--sbindir=${PREFIX}/bin \
 		--without-gnome
 USE_LDCONFIG=	yes
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
