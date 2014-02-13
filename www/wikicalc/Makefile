@@ -1,4 +1,4 @@
-# $FreeBSD: www/wikicalc/Makefile 332532 2013-11-02 18:26:36Z hrs $
+# $FreeBSD$
 
 PORTNAME=	wikicalc
 PORTVERSION=	1.0
