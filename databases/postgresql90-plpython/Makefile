@@ -1,4 +1,4 @@
-# $FreeBSD: databases/postgresql90-plpython/Makefile 331888 2013-10-28 18:52:22Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	postgresql
 CATEGORIES=	databases python
