@@ -1,5 +1,5 @@
 # Created by: Janos.Mohacsi@bsd.hu
-# $FreeBSD: net/tcpreen/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	tcpreen
 PORTVERSION=	1.4.4
@@ -17,6 +17,9 @@ MAN1=		tcpreen.1
 DOC_FILES=	AUTHORS NEWS README THANKS TODO
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS NLS 
+
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
