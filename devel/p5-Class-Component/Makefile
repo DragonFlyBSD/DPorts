@@ -1,5 +1,5 @@
 # Created by: Tomoyuki Sakurai <cherry@trombik.org>
-# $FreeBSD: devel/p5-Class-Component/Makefile 331856 2013-10-28 13:46:25Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Class-Component
 PORTVERSION=	0.17
