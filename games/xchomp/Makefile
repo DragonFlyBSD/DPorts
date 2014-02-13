@@ -1,5 +1,5 @@
 # Created by: swallace
-# $FreeBSD: games/xchomp/Makefile 333642 2013-11-13 02:12:36Z danilo $
+# $FreeBSD$
 
 PORTNAME=	xchomp
 PORTVERSION=	pl1
