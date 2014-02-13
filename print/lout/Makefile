@@ -1,5 +1,5 @@
 # Created by: oly@world.std.com
-# $FreeBSD: print/lout/Makefile 328909 2013-10-01 00:03:57Z danilo $
+# $FreeBSD$
 
 PORTNAME=	lout
 PORTVERSION=	3.40
