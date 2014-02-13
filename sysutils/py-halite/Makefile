@@ -1,5 +1,5 @@
 # Created by: Christer Edwards <christer.edwards@gmail.com>
-# $FreeBSD: sysutils/py-halite/Makefile 342247 2014-02-02 07:46:00Z koobs $
+# $FreeBSD$
 
 PORTNAME=	halite
 PORTVERSION=	0.1.15
