@@ -1,5 +1,5 @@
 # Created by: Peter Ankerstal <peter@pean.org>
-# $FreeBSD: sysutils/zfs-periodic/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	zfs-periodic
 PORTVERSION=	1.0.20130213
