@@ -1,5 +1,5 @@
 # Created by: sumikawa@FreeBSD.org
-# $FreeBSD: textproc/p5-Plagger/Makefile 340665 2014-01-21 21:45:44Z mat $
+# $FreeBSD$
 
 PORTNAME=	Plagger
 PORTVERSION=	0.7.17
