@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: textproc/dictfmt/Makefile 341191 2014-01-26 14:45:54Z mat $
+# $FreeBSD$
 
 PORTNAME=	dictfmt
 PORTVERSION=	1.12.1
