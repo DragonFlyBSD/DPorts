@@ -1,5 +1,5 @@
 # Created by: chris
-# $FreeBSD: mail/spampd/Makefile 340396 2014-01-20 13:44:34Z mat $
+# $FreeBSD$
 
 PORTNAME=	spampd
 PORTVERSION=	2.30
