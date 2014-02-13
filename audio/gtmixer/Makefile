@@ -1,5 +1,5 @@
 # Created by: Putrya Statislav
-# $FreeBSD: audio/gtmixer/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gtmixer
 PORTVERSION=	1.0.2
