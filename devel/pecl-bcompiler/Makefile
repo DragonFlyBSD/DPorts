@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan@FreeBSD.org>
-# $FreeBSD: devel/pecl-bcompiler/Makefile 340830 2014-01-23 15:12:50Z miwi $
+# $FreeBSD$
 
 PORTNAME=	bcompiler
 PORTVERSION=	1.0.2
