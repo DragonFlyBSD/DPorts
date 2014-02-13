@@ -1,5 +1,5 @@
 # Created by: Andy Fawcett <andy@athame.co.uk>
-# $FreeBSD: sysutils/uptimed/Makefile 342198 2014-02-01 18:24:35Z antoine $
+# $FreeBSD$
 
 PORTNAME=	uptimed
 PORTVERSION=	0.3.17
