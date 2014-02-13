@@ -1,5 +1,5 @@
 # Created by: Marcello Coutinho
-# $FreeBSD: security/p5-GnuPG/Makefile 342032 2014-01-31 16:50:53Z miwi $
+# $FreeBSD$
 
 PORTNAME=	GnuPG
 PORTVERSION=	0.19
