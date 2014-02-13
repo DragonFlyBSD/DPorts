@@ -1,5 +1,5 @@
 # Created by: Alan E <alane@FreeBSD.org>
-# $FreeBSD: misc/kenny/Makefile 336102 2013-12-10 19:47:42Z bdrewery $
+# $FreeBSD$
 
 PORTNAME=	kenny
 PORTVERSION=	1.7
