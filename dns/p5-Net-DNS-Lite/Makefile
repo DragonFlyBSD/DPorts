@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: dns/p5-Net-DNS-Lite/Makefile 333763 2013-11-14 15:19:03Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Net-DNS-Lite
 PORTVERSION=	0.11
