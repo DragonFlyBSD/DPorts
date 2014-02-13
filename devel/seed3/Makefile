@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <avl@FreeBSD.org>
-# $FreeBSD: devel/seed3/Makefile 335039 2013-11-27 17:14:27Z kwm $
+# $FreeBSD$
 #   $MCom: ports/trunk/devel/seed3/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	seed
