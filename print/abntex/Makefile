@@ -1,5 +1,5 @@
 # Created by: Hammurabi Mendes <hmendes@brturbo.com>
-# $FreeBSD: print/abntex/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	abntex
 PORTVERSION=	0.8.2
@@ -11,6 +11,9 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Both classes and styles for both LaTex and bibtex for ABNT rules
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-10
 
 USE_TEX=	latex
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION:R}
