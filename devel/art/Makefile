@@ -1,5 +1,5 @@
 # Created by: Vladimir Gorelov <virtual.lark@gmail.com>
-# $FreeBSD: devel/art/Makefile 337600 2013-12-26 19:16:54Z bapt $
+# $FreeBSD$
 
 PORTNAME=	art
 PORTVERSION=	0.9.01
