@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/cvsadmin/Makefile 341485 2014-01-27 23:57:31Z bapt $
+# $FreeBSD$
 
 PORTNAME=	cvsadmin
 PORTVERSION=	1.0.3
