@@ -1,5 +1,5 @@
 # Created by: Greg Lewis <glewis@FreeBSD.org>
-# $FreeBSD: textproc/html-pretty/Makefile 341601 2014-01-28 15:48:57Z mat $
+# $FreeBSD$
 
 PORTNAME=	html-pretty
 PORTVERSION=	1.01
