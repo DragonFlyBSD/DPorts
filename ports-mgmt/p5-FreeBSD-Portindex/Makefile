@@ -1,5 +1,5 @@
 # Created by: Matthew Seaman
-# $FreeBSD: ports-mgmt/p5-FreeBSD-Portindex/Makefile 337628 2013-12-26 22:41:02Z matthew $
+# $FreeBSD$
 
 PORTNAME=	FreeBSD-Portindex
 PORTVERSION=	3.3

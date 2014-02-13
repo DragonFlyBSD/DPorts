@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports-mgmt/p5-FreeBSD-Portindex/files/pkg-install.in 337628 2013-12-26 22:41:02Z matthew $
+# $FreeBSD: head/ports-mgmt/p5-FreeBSD-Portindex/files/pkg-install.in 337628 2013-12-26 22:41:02Z matthew $
 #
 
 PATH=/usr/sbin:/usr/bin:/bin ; export PATH
