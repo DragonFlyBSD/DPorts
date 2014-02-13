@@ -1,5 +1,5 @@
 # Created by: "Waitman Gobble" <uzimac@da3m0n8t3r.com>
-# $FreeBSD: ports-mgmt/prhistory/Makefile 327762 2013-09-20 22:36:49Z bapt $
+# $FreeBSD$
 
 PORTNAME=	prhistory
 PORTVERSION=	1.0
@@ -29,6 +29,9 @@ SUB_FILES=	pkg-message
 PORTDOCS=	*
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 post-install:
