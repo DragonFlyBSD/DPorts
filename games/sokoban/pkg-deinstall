@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: games/sokoban/pkg-deinstall 314610 2013-03-18 23:48:12Z bdrewery $
+# $FreeBSD: head/games/sokoban/pkg-deinstall 314610 2013-03-18 23:48:12Z bdrewery $
 
 FILE="/var/games/sokoban"
 
