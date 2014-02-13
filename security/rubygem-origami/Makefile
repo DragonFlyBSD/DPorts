@@ -1,4 +1,4 @@
-# $FreeBSD: security/rubygem-origami/Makefile 331730 2013-10-26 20:01:39Z antoine $
+# $FreeBSD$
 
 PORTNAME=	origami
 PORTVERSION=	1.2.6
