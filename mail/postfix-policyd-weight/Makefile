@@ -1,5 +1,5 @@
 # Created by: Robert Felber <robtone@ek-muc.de>
-# $FreeBSD: mail/postfix-policyd-weight/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	policyd-weight
 PORTVERSION=	0.1.15.1
