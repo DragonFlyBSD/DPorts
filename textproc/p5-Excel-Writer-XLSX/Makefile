@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: textproc/p5-Excel-Writer-XLSX/Makefile 338455 2014-01-02 16:23:08Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Excel-Writer-XLSX
 PORTVERSION=	0.76
