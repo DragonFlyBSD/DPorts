@@ -1,5 +1,5 @@
 # Created by: Yinghong Liu <relaxbsd@gmail.com>
-# $FreeBSD: graphics/luminance/Makefile 341289 2014-01-26 21:20:03Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	luminance-hdr
 PORTREVISION=	5
