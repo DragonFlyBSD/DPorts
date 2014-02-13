@@ -1,5 +1,5 @@
 # Created by: Ross Timson <ross@rosstimson.com>
-# $FreeBSD: devel/chruby/Makefile 338423 2014-01-02 08:16:44Z jgh $
+# $FreeBSD$
 
 PORTNAME=	chruby
 PORTVERSION=	0.3.8
