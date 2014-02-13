@@ -1,5 +1,5 @@
 # Created by: Steve Franks <stevefranks@ieee.org>
-# $FreeBSD: devel/lpc21isp/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	lpc21isp
 PORTVERSION=	1.85
