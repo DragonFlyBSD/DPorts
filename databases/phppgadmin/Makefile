@@ -1,5 +1,5 @@
 # Created by: nbm
-# $FreeBSD: databases/phppgadmin/Makefile 334998 2013-11-27 06:09:40Z dinoex $
+# $FreeBSD$
 
 PORTNAME=	phppgadmin
 PORTVERSION=	5.1
