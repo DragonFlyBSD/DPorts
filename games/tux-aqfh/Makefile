@@ -1,5 +1,5 @@
 # Created by: Alexander Langer <alex@FreeBSD.org>
-# $FreeBSD: games/tux-aqfh/Makefile 337627 2013-12-26 22:28:10Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	tux_aqfh
 PORTVERSION=	1.0.14
