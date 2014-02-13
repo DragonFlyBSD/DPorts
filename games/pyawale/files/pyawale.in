@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: games/pyawale/files/pyawale.in 309452 2012-12-24 09:28:10Z mva $
+# $FreeBSD: head/games/pyawale/files/pyawale.in 309452 2012-12-24 09:28:10Z mva $
 #
 
 cd "%%DATADIR%%"

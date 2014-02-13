@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: games/pyawale/Makefile 334467 2013-11-21 00:50:01Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	pyawale
 PORTVERSION=	0.4.0
