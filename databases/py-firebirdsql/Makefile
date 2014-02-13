@@ -1,5 +1,5 @@
 # Created by: Jose Jachuf <jjachuf@gmail.com>
-# $FreeBSD: databases/py-firebirdsql/Makefile 335941 2013-12-08 21:07:33Z wg $
+# $FreeBSD$
 
 PORTNAME=	firebirdsql
 PORTVERSION=	0.8.1
