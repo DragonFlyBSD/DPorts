@@ -1,5 +1,5 @@
 # Created by: Martin Kammerhofer <mkamm@gmx.net>
-# $FreeBSD: sysutils/cvsweb-converters/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	cvsweb-converters
 PORTVERSION=	0.3.4
