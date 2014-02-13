@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: archivers/zipmix/Makefile 337556 2013-12-26 16:55:34Z bapt $
+# $FreeBSD$
 
 PORTNAME=	zipmix
 DISTVERSION=	20070221
