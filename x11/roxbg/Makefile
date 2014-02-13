@@ -1,5 +1,5 @@
 # Created by: Zane C. Bowers
-# $FreeBSD: x11/roxbg/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	roxbg
 PORTVERSION=	1.0.0
