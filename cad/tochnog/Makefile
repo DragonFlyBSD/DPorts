@@ -1,5 +1,5 @@
 # Created by: Pedro Giffuni <giffunip@asme.org>
-# $FreeBSD: cad/tochnog/Makefile 337146 2013-12-21 13:40:18Z tijl $
+# $FreeBSD$
 
 PORTNAME=	tochnog
 PORTVERSION=	20010211
@@ -10,6 +10,9 @@ DISTNAME=	${PORTNAME}_feb11_2001
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Free explicit/implicit Finite Element Program
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-07
 
 BUILD_DEPENDS=	${LOCALBASE}/lib/libf2c.a:${PORTSDIR}/lang/f2c
 
