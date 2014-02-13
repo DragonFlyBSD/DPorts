@@ -1,5 +1,5 @@
 # Created by: Aron Schlesinger <as@bsdgroup.de>
-# $FreeBSD: www/groupoffice/Makefile 339909 2014-01-16 13:05:20Z zi $
+# $FreeBSD$
 
 PORTNAME=	groupoffice
 DISTVERSIONPREFIX=	com-
