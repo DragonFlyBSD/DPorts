@@ -1,4 +1,4 @@
-# $FreeBSD: audio/xmms-wavpack/Makefile 328596 2013-09-28 16:59:55Z naddy $
+# $FreeBSD$
 
 PORTNAME=	xmms-wavpack
 PORTVERSION=	1.0.3
