@@ -1,5 +1,5 @@
 # Created by: Bob Bomar <bob@bomar.us>
-# $FreeBSD: net-im/pork/Makefile 341954 2014-01-31 09:20:58Z miwi $
+# $FreeBSD$
 
 PORTNAME=		pork
 PORTVERSION=		0.99.8.1
