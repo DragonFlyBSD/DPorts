@@ -1,5 +1,5 @@
 # Created by: Motoyuki Kasahara <m-kasahr@sra.co.jp>
-# $FreeBSD: japanese/ebnetd/Makefile 328365 2013-09-26 14:18:25Z wg $
+# $FreeBSD$
 
 PORTNAME=	ebnetd
 PORTVERSION=	1.0
