@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: graphics/scale2x/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	scale2x
 PORTVERSION=	3.0
