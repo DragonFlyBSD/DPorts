@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net/py-iplib/Makefile 341929 2014-01-31 07:52:04Z miwi $
+# $FreeBSD$
 
 PORTNAME=	iplib
 PORTVERSION=	1.1
