@@ -1,5 +1,5 @@
 # Created by: Julien Laffaye <kimelto@gmail.com>
-# $FreeBSD: textproc/discount/Makefile 341233 2014-01-26 15:57:52Z mat $
+# $FreeBSD$
 
 PORTNAME=	discount
 DISTVERSION=	2.1.5a
