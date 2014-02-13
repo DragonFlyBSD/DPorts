@@ -1,5 +1,5 @@
 # Created by: Klaus T. Aehlig <aehlig@linta.de>
-# $FreeBSD: math/ocamlgsl/Makefile 336358 2013-12-13 15:35:19Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ocamlgsl
 PORTVERSION=	0.6.0
