@@ -1,5 +1,5 @@
 # Created by: Mosconi <mosconi.rmg@gmail.com>
-# $FreeBSD: security/p5-Crypt-OpenSSL-CA/Makefile 341953 2014-01-31 09:15:24Z az $
+# $FreeBSD$
 
 PORTNAME=	Crypt-OpenSSL-CA
 PORTVERSION=	0.23
