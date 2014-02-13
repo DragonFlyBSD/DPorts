@@ -1,5 +1,5 @@
 # Created by: Miguel Mendez <flynn@energyhq.homeip.net>
-# $FreeBSD: sysutils/thefish/Makefile 333992 2013-11-16 13:25:19Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	thefish
 PORTVERSION=	0.6.6
