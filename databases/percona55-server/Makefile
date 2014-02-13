@@ -1,4 +1,4 @@
-# $FreeBSD: databases/percona55-server/Makefile 340348 2014-01-19 20:21:00Z flo $
+# $FreeBSD$
 
 PORTNAME?=	percona
 DISTVERSION=	5.5.35-33.0

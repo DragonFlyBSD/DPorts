@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: databases/percona55-server/files/mysql-server.in 316637 2013-04-26 20:47:28Z flo $
+# $FreeBSD: head/databases/percona55-server/files/mysql-server.in 316637 2013-04-26 20:47:28Z flo $
 #
 
 # PROVIDE: mysql
