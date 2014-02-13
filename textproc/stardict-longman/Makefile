@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/stardict-longman/Makefile 333307 2013-11-09 16:00:36Z makc $
+# $FreeBSD$
 
 PORTNAME=	stardict-longman
 PORTVERSION=	2.4.2
