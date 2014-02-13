@@ -1,4 +1,4 @@
-# $FreeBSD: comms/predict/files/Makefile 337931 2013-12-29 00:01:51Z db $
+# $FreeBSD$
 
 PREFIX=		%%PREFIX%%
 STAGEDIR=	%%STAGEDIR%%
