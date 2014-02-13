@@ -1,5 +1,5 @@
 # Created by: Chifeng QU <chifeng@gmail.com>
-# $FreeBSD: mail/extmail/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	extmail
 PORTVERSION=	1.2
