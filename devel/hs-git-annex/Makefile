@@ -1,5 +1,5 @@
 # Created by: frase@frase.id.au
-# $FreeBSD: devel/hs-git-annex/Makefile 339286 2014-01-09 21:32:12Z pgj $
+# $FreeBSD$
 
 PORTNAME=	git-annex
 PORTVERSION=	4.20130601
