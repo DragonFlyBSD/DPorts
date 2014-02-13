@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net/gsk/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gsk
 PORTVERSION=	1.0.63
