@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: deskutils/xfce4-generic-slider/Makefile 331422 2013-10-23 20:30:50Z ehaupt $
+# $FreeBSD$
 
 PORTNAME=	xfce4-generic-slider
 PORTVERSION=	0.0.20100827
