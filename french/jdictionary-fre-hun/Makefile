@@ -1,5 +1,5 @@
 # Created by: janos.mohacsi@bsd.hu
-# $FreeBSD: french/jdictionary-fre-hun/Makefile 327728 2013-09-20 17:21:20Z bapt $
+# $FreeBSD$
 
 PORTNAME=	jdictionary-fre-hun
 PORTVERSION=	1.0
