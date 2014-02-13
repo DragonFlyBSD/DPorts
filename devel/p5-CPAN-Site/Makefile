@@ -1,5 +1,5 @@
 # Created by: Anes Mukhametov <anes@anes.su>
-# $FreeBSD: devel/p5-CPAN-Site/Makefile 333885 2013-11-15 16:28:54Z mat $
+# $FreeBSD$
 
 PORTNAME=	CPAN-Site
 PORTVERSION=	1.11
