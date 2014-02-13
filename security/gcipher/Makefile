@@ -1,5 +1,5 @@
 # Created by: Shannon -jj Behrens <jjinux@yahoo.com>
-# $FreeBSD: security/gcipher/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	gcipher
 PORTVERSION=	1.1
