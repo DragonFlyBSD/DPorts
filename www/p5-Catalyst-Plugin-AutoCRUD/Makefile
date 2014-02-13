@@ -1,5 +1,5 @@
 # Created by: gugu
-# $FreeBSD: www/p5-Catalyst-Plugin-AutoCRUD/Makefile 333070 2013-11-07 08:28:22Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Catalyst-Plugin-AutoCRUD
 PORTVERSION=	2.131.210
