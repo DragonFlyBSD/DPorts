@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@tobez.org>
-# $FreeBSD: textproc/p5-Text-FixedLength-Extra/Makefile 340907 2014-01-24 14:56:48Z mat $
+# $FreeBSD$
 
 PORTNAME=	Text-FixedLength-Extra
 PORTVERSION=	1.1
