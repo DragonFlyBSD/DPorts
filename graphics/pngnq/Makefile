@@ -1,5 +1,5 @@
 # Created by: stb@lassitu.de
-# $FreeBSD: graphics/pngnq/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	pngnq
 PORTVERSION=	1.1
