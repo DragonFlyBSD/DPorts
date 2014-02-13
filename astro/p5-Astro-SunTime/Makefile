@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: astro/p5-Astro-SunTime/Makefile 331586 2013-10-25 14:04:57Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Astro-SunTime
 PORTVERSION=	0.01
