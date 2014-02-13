@@ -1,5 +1,5 @@
 # Created by: William Grzybowski <william88@gmail.com>
-# $FreeBSD: devel/py-flake8/Makefile 333333 2013-11-09 19:24:58Z wg $
+# $FreeBSD$
 
 PORTNAME=	flake8
 PORTVERSION=	2.1.0
