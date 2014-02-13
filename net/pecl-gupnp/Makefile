@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: net/pecl-gupnp/Makefile 334526 2013-11-21 21:14:50Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	gupnp
 PORTVERSION=	1.0.0
