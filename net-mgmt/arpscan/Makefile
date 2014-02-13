@@ -1,5 +1,5 @@
 # Created by: David Yeske <dyeske@gmail.com>
-# $FreeBSD: net-mgmt/arpscan/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	arpscan
 PORTVERSION=	0.5
@@ -8,6 +8,9 @@ MASTER_SITES=	GOOGLE_CODE
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple arp scanner
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-07
 
 LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/LICENSE
