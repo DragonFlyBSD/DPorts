@@ -1,5 +1,5 @@
 # Created by: vanilla@
-# $FreeBSD: www/p5-Test-Nginx/Makefile 338515 2014-01-03 01:48:58Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Test-Nginx
 PORTVERSION=	0.22
