@@ -1,5 +1,5 @@
 # Created by: FUJISHIMA Satsuki <sf@FreeBSD.org>
-# $FreeBSD: japanese/navi2ch/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	navi2ch
 PORTVERSION=	1.8.4
