@@ -1,5 +1,5 @@
 # Created by: Anish Mistry (<amistry@am-productions.biz>)
-# $FreeBSD: devel/pear-Validate_Finance/Makefile 333263 2013-11-08 21:41:53Z antoine $
+# $FreeBSD$
 
 PORTNAME=	Validate_Finance
 PORTVERSION=	0.5.6
