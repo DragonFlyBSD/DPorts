@@ -1,5 +1,5 @@
 # Created by: Anonymous <swell.k@gmail.com>
-# $FreeBSD: multimedia/vdpauinfo/Makefile 331501 2013-10-24 16:49:44Z madpilot $
+# $FreeBSD$
 
 PORTNAME=	vdpauinfo
 PORTVERSION=	0.1
