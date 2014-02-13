@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: misc/p5-Array-IntSpan/Makefile 332594 2013-11-03 08:05:18Z az $
+# $FreeBSD$
 
 PORTNAME=	Array-IntSpan
 PORTVERSION=	2.002
