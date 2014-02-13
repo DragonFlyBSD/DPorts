@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-Test-Filename/Makefile 341711 2014-01-29 10:57:06Z az $
+# $FreeBSD$
 
 PORTNAME=	Test-Filename
 PORTVERSION=	0.03
