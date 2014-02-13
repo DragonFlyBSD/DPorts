@@ -1,5 +1,5 @@
 # Created by: dterry@digifonica.com
-# $FreeBSD: net/sip_scenario/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	sip_scenario
 PORTVERSION=	1.2.7
