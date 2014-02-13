@@ -1,5 +1,5 @@
 # Created by: Olivier Duchateau
-# $FreeBSD: textproc/py-rst2html5/Makefile 340894 2014-01-24 13:34:31Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	rst2html5
 PORTVERSION=	1.0
