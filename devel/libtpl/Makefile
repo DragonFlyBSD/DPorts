@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <frederic@culot.org>
-# $FreeBSD: devel/libtpl/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	libtpl
 PORTVERSION=	1.6
