@@ -1,4 +1,4 @@
-# $FreeBSD: devel/npth/Makefile 328226 2013-09-25 00:54:08Z bdrewery $
+# $FreeBSD$
 
 PORTNAME=	npth
 PORTVERSION=	0.91
