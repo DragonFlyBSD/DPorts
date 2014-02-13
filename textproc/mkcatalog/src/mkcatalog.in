@@ -5,7 +5,7 @@
 # Created:  20001015  Shigeyuki Fukushima <shige@FreeBSD.org>.
 # Modified: 20001019  Hiroki Sato <hrs@FreeBSD.org>.
 #
-# $FreeBSD: textproc/mkcatalog/src/mkcatalog.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/textproc/mkcatalog/src/mkcatalog.in 340872 2014-01-24 00:14:07Z mat $
 #
 sh_basename ()
 {
