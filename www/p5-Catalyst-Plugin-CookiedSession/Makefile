@@ -1,5 +1,5 @@
 # Created by: Denis Pokataev <catone@cpan.org>
-# $FreeBSD: www/p5-Catalyst-Plugin-CookiedSession/Makefile 338773 2014-01-05 13:41:52Z az $
+# $FreeBSD$
 
 PORTNAME=	Catalyst-Plugin-CookiedSession
 PORTVERSION=	0.35
