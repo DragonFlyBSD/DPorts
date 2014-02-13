@@ -1,5 +1,5 @@
 # Created by: ubique
-# $FreeBSD: www/mod_tsa/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mod_tsa
 PORTVERSION=	1.0
