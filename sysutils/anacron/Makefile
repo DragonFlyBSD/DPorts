@@ -1,5 +1,5 @@
 # Created by: Derik van Zuetphen <dz@426.ch>
-# $FreeBSD: sysutils/anacron/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	anacron
 PORTVERSION=	2.3
