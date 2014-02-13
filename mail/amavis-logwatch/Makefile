@@ -1,5 +1,5 @@
 # Created by: Masaki TAGAWA <masaki@club.kyutech.ac.jp>
-# $FreeBSD: mail/amavis-logwatch/Makefile 327742 2013-09-20 19:59:12Z bapt $
+# $FreeBSD$
 
 PORTNAME=	amavis-logwatch
 PORTVERSION=	1.51.02
