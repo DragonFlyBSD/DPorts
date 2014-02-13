@@ -1,5 +1,5 @@
 # Created by: Seamus Venasse <svenasse@polaris.ca>
-# $FreeBSD: databases/p5-DBIx-XHTML_Table/Makefile 332592 2013-11-03 06:53:54Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	DBIx-XHTML_Table
 PORTVERSION=	1.36
