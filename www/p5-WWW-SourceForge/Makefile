@@ -1,5 +1,5 @@
 # Created by: Yuan-Chung Hsiao <ychsiao@ychsiao.idv.tw>
-# $FreeBSD: www/p5-WWW-SourceForge/Makefile 341272 2014-01-26 20:15:15Z antoine $
+# $FreeBSD$
 
 PORTNAME=	WWW-SourceForge
 PORTVERSION=	0.70
