@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: archivers/star/Makefile 327699 2013-09-20 13:11:20Z bapt $
+# $FreeBSD$
 
 PORTNAME=	star
 DISTVERSION=	1.5.2
@@ -29,6 +29,8 @@ MAKE_ENV+=	MAKEFLAGS=${MAKEFLAGS}
 PORTDOCS=	README README.crash README.mtio README.pattern STARvsGNUTAR \
 		README.ACL README.largefiles README.otherbugs \
 		README.posix-2001
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
