@@ -1,4 +1,4 @@
-# $FreeBSD: databases/p5-DBIx-Class-InflateColumn-Authen-Passphrase/Makefile 341762 2014-01-29 17:18:46Z az $
+# $FreeBSD$
 
 PORTNAME=	DBIx-Class-InflateColumn-Authen-Passphrase
 PORTVERSION=	0.01
