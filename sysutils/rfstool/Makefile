@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: sysutils/rfstool/Makefile 333979 2013-11-16 04:15:28Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	rfstool
 PORTVERSION=	0.14
