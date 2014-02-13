@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD: deskutils/xfce4-notification-daemon/Makefile 336190 2013-12-11 18:28:10Z bapt $
+# $FreeBSD$
 
 PORTNAME=	notification-daemon
 PORTVERSION=	0.3.7
