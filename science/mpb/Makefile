@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: science/mpb/Makefile 337810 2013-12-27 21:28:47Z tijl $
+# $FreeBSD$
 
 PORTNAME=	mpb
 PORTVERSION=	1.4.2
