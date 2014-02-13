@@ -1,4 +1,4 @@
-# $FreeBSD: textproc/p5-String-Urandom/Makefile 340706 2014-01-22 11:47:22Z mat $
+# $FreeBSD$
 
 PORTNAME=	String-Urandom
 PORTVERSION=	0.16
