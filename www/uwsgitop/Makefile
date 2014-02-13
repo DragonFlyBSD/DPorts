@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: www/uwsgitop/Makefile 340825 2014-01-23 12:32:36Z demon $
+# $FreeBSD$
 
 PORTNAME=	uwsgitop
 PORTVERSION=	0.6.2
