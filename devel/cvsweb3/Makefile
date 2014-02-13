@@ -1,5 +1,5 @@
 # Created by: SADA Kenji <sada@FreeBSD.org>
-# $FreeBSD: devel/cvsweb3/Makefile 329692 2013-10-07 11:09:05Z bapt $
+# $FreeBSD$
 
 PORTNAME=	cvsweb
 PORTVERSION=	3.0.6
