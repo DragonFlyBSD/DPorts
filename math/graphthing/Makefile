@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: math/graphthing/Makefile 327746 2013-09-20 20:55:04Z bapt $
+# $FreeBSD$
 
 PORTNAME=	graphthing
 PORTVERSION=	1.3.2
