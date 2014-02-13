@@ -1,5 +1,5 @@
 # Created by: Makoto Matsushita <matusita@FreeBSD.org>
-# $FreeBSD: textproc/ruby-diff/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD$
 
 PORTNAME=		diff
 PORTVERSION=		0.4
