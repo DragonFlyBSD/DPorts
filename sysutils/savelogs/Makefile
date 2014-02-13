@@ -1,5 +1,5 @@
 # Created by: ports@c0decafe.net
-# $FreeBSD: sysutils/savelogs/Makefile 328946 2013-10-01 12:51:53Z danilo $
+# $FreeBSD$
 
 PORTNAME=	savelogs
 PORTVERSION=	1.98
