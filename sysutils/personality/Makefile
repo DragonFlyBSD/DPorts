@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@FreeBSD.org>
-# $FreeBSD: sysutils/personality/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	personality
 PORTVERSION=	1.0
