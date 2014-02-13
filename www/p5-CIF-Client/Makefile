@@ -1,5 +1,5 @@
 # Created by: pauls@utdallas.edu
-# $FreeBSD: www/p5-CIF-Client/Makefile 338763 2014-01-05 13:05:56Z az $
+# $FreeBSD$
 
 PORTNAME=	CIF-Client
 PORTVERSION=	0.21
