@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-HTTP-Session2/Makefile 339841 2014-01-15 22:47:12Z kuriyama $
+# $FreeBSD$
 
 PORTNAME=	HTTP-Session2
 PORTVERSION=	0.04
