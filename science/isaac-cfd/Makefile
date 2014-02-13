@@ -1,5 +1,5 @@
 # Created by: Pedro F. Giffuni
-# $FreeBSD: science/isaac-cfd/Makefile 337799 2013-12-27 20:26:21Z tijl $
+# $FreeBSD$
 
 PORTNAME=	isaac
 PORTVERSION=	4.2
