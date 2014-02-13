@@ -1,5 +1,5 @@
 # Created by: Anes Mukhametov <anes@anes.su>
-# $FreeBSD: graphics/p5-Image-LibExif/Makefile 334252 2013-11-18 19:28:22Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Image-LibExif
 PORTVERSION=	0.04
