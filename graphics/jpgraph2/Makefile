@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org:
-# $FreeBSD: graphics/jpgraph2/Makefile 327764 2013-09-20 22:43:35Z bapt $
+# $FreeBSD$
 
 PORTNAME=	jpgraph
 PORTVERSION=	3.0.7
