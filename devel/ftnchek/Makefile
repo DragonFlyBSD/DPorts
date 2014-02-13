@@ -1,5 +1,5 @@
 # Created by: kargl@apl.washington.edu
-# $FreeBSD: devel/ftnchek/Makefile 327723 2013-09-20 17:04:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ftnchek
 PORTVERSION=	3.3.1
