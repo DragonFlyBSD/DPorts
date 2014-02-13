@@ -1,5 +1,5 @@
 # Created by: Lars Engels <lme@FreeBSD.org>
-# $FreeBSD: security/fcheck/Makefile 342278 2014-02-02 12:25:24Z lme $
+# $FreeBSD$
 
 PORTNAME=	fcheck
 PORTVERSION=	2.07.59
