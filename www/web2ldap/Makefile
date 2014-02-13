@@ -1,5 +1,5 @@
 # Created by: Oddbjorn Steffensen <oddbjorn@tricknology.org>
-# $FreeBSD: www/web2ldap/Makefile 340884 2014-01-24 09:29:00Z bsam $
+# $FreeBSD$
 
 PORTNAME=	web2ldap
 PORTVERSION=	1.1.47
