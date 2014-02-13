@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/replex/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	replex
 PORTVERSION=	0.1.6.8
@@ -14,6 +14,8 @@ USES=		gmake
 MAKE_ARGS=	CFLAGS="${CFLAGS}" DEFINES="${CPPFLAGS} -DO_LARGEFILE=0 \
 		-DVERSION=\\\"$(PORTVERSION)\\\"" LIBS="${LDFLAGS}"
 PLIST_FILES=	bin/replex
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
