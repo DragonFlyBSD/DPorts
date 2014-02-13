@@ -1,5 +1,5 @@
 # Created by: Gustavo Fukao <gustavofukao@gmail.com>
-# $FreeBSD: www/xpi-bookmarkdd/Makefile 341198 2014-01-26 15:07:21Z miwi $
+# $FreeBSD$
 
 PORTNAME=	bookmarkdd
 PORTVERSION=	0.7.5
