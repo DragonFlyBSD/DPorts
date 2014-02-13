@@ -1,5 +1,5 @@
 # Created by: Benjamin Lutz
-# $FreeBSD: ports-mgmt/psearch/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	psearch
 PORTVERSION=	2.0.2
