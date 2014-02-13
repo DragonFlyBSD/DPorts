@@ -1,5 +1,5 @@
 # Created by: buganini@gmail.com
-# $FreeBSD: chinese/bsdconv-opencc/Makefile 339152 2014-01-08 15:47:09Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	opencc
 PORTVERSION=	11.1
