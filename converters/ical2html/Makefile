@@ -1,5 +1,5 @@
 # Created by: keiichi@iijlab.net
-# $FreeBSD: converters/ical2html/Makefile 339537 2014-01-12 19:48:11Z kwm $
+# $FreeBSD$
 
 PORTNAME=	ical2html
 PORTVERSION=	2.0
