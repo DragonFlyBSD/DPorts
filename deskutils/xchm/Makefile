@@ -1,5 +1,5 @@
 # Created by: Pav Lucistnik <pav@oook.cz>
-# $FreeBSD: deskutils/xchm/Makefile 340602 2014-01-21 12:06:04Z rm $
+# $FreeBSD$
 
 PORTNAME=	xchm
 PORTVERSION=	1.23
