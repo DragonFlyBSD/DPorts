@@ -1,5 +1,5 @@
 # Created by: Daniel Baker <dbaker@FreeBSD.org> <dbaker@cuckoo.com>
-# $FreeBSD: net/datapipe/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	datapipe
 PORTVERSION=	1.0
