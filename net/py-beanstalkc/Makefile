@@ -1,5 +1,5 @@
 # Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
-# $FreeBSD: net/py-beanstalkc/Makefile 342119 2014-02-01 11:38:17Z koobs $
+# $FreeBSD$
 
 PORTNAME=	beanstalkc
 PORTVERSION=	0.3.0
