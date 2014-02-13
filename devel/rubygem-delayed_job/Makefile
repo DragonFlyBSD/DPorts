@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz <rpsfa@rit.edu>
-# $FreeBSD: devel/rubygem-delayed_job/Makefile 332035 2013-10-30 02:31:04Z swills $
+# $FreeBSD$
 
 PORTNAME=	delayed_job
 PORTVERSION=	3.0.5
