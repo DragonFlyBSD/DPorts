@@ -1,5 +1,5 @@
 # Created by: Andrey Slusar <anray@FreeBSD.org>
-# $FreeBSD: www/xpi-sessionmanager/Makefile 341216 2014-01-26 15:13:24Z miwi $
+# $FreeBSD$
 
 PORTNAME=	sessionmanager
 PORTVERSION=	0.6.3.5
