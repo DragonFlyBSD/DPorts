@@ -1,5 +1,5 @@
 # Created by: Martin Wilke (miwi@FreeBSD.org)
-# $FreeBSD: x11/xfce4-verve-plugin/Makefile 341743 2014-01-29 14:51:57Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	verve-plugin
 PORTVERSION=	1.0.0
