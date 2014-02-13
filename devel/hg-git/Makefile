@@ -1,5 +1,5 @@
 # Created by: Marco Broeder <marco.broeder@gmx.eu>
-# $FreeBSD: devel/hg-git/Makefile 337220 2013-12-22 21:21:24Z antoine $
+# $FreeBSD$
 
 PORTNAME=	hg-git
 PORTVERSION=	0.5.0
