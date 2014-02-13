@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: net/p5-Net-Amazon-Signature/Makefile 338754 2014-01-05 12:20:02Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-Amazon-Signature
 PORTVERSION=	0.03
