@@ -1,5 +1,5 @@
 # Created by: dikshie@sfc.wide.ad.jp
-# $FreeBSD: net/iffinder/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	iffinder
 PORTVERSION=	1.37
