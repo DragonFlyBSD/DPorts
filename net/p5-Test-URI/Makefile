@@ -1,5 +1,5 @@
 # Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
-# $FreeBSD: net/p5-Test-URI/Makefile 338808 2014-01-05 17:43:05Z az $
+# $FreeBSD$
 
 PORTNAME=	Test-URI
 PORTVERSION=	1.08
