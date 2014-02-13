@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Catalyst-Model-LDAP/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	Catalyst-Model-LDAP
 PORTVERSION=	0.17
