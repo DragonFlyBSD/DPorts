@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: www/mod_hosts_access/Makefile 338168 2013-12-30 20:55:18Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	mod_hosts_access
 PORTVERSION=	1.1.0
