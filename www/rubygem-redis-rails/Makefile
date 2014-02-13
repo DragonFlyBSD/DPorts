@@ -1,4 +1,4 @@
-# $FreeBSD: www/rubygem-redis-rails/Makefile 335416 2013-12-01 17:56:14Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	redis-rails
 PORTVERSION=	4.0.0
