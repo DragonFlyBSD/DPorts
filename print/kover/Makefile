@@ -1,5 +1,5 @@
 # Created by: Markus Brueffer <brueffer@phoenix-systems.de>
-# $FreeBSD: print/kover/Makefile 342126 2014-02-01 12:15:59Z makc $
+# $FreeBSD$
 
 PORTNAME=	kover
 PORTVERSION=	6
