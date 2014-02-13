@@ -1,5 +1,5 @@
 # Created by: Pascal Vizeli <pvizeli@yahoo.de>
-# $FreeBSD: multimedia/gpac-mp4box/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	mp4box
 DISTVERSION=	0.5.0
