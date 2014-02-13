@@ -1,5 +1,5 @@
 # Created by: Jeffrey H. Johnson <CPE1704TKS@bellsouth.net>
-# $FreeBSD: sysutils/vils/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	vils
 PORTVERSION=	20020228
@@ -9,6 +9,9 @@ DISTFILES=	vils
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Use your favorite editor to rename files
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-10
 
 BUILD_DEPENDS=	zsh:${PORTSDIR}/shells/zsh
 RUN_DEPENDS:=	${BUILD_DEPENDS}
