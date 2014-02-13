@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/testdisk/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	testdisk
 PORTVERSION=	6.13
