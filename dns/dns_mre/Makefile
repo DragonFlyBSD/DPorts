@@ -1,5 +1,5 @@
 # Created by: Tomoyuki Sakurai <cherry@trombik.org>
-# $FreeBSD: dns/dns_mre/Makefile 339521 2014-01-12 16:40:58Z mat $
+# $FreeBSD$
 
 PORTNAME=	dns_mre
 PORTVERSION=	1.0
@@ -10,6 +10,9 @@ DISTNAME=	${PORTNAME}-v${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	DNS Cache Poisoner/Overwriter
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-10
 
 NO_WRKSUBDIR=	Yes
 
