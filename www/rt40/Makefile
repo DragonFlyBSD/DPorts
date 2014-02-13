@@ -1,4 +1,4 @@
-# $FreeBSD: www/rt40/Makefile 340312 2014-01-19 14:34:39Z matthew $
+# $FreeBSD$
 
 PORTNAME=	rt
 PORTVERSION=	4.0.19
