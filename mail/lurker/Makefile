@@ -1,4 +1,4 @@
-# $FreeBSD: mail/lurker/Makefile 328398 2013-09-26 17:30:13Z wg $
+# $FreeBSD$
 
 PORTNAME=	lurker
 PORTVERSION=	2.3
