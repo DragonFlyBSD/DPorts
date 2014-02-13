@@ -1,5 +1,5 @@
 # Created by: torstenb
-# $FreeBSD: x11-wm/ctwm/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ctwm
 PORTVERSION=	3.8.1
