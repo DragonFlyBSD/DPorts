@@ -1,5 +1,5 @@
 # Created by: Aaron Zauner <az_mail@gmx.at>
-# $FreeBSD: net/ipgrab/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ipgrab
 PORTVERSION=	0.9.10
@@ -24,6 +24,9 @@ PORTDOCS=	README AUTHORS COPYING ChangeLog DEVELOPER-HOWTO \
 		INSTALL NEWS TODO
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
+
 .include <bsd.port.options.mk>
 
 do-install:
