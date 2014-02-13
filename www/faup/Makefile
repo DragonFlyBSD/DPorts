@@ -1,5 +1,5 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD: www/faup/Makefile 339804 2014-01-15 18:59:01Z antoine $
+# $FreeBSD$
 
 PORTNAME=	faup
 PORTVERSION=	1.4
