@@ -1,5 +1,5 @@
 # Created by: Hiroki Sato <hrs@FreeBSD.org>
-# $FreeBSD: textproc/heirloom-doctools/Makefile 341568 2014-01-28 14:08:16Z mat $
+# $FreeBSD$
 
 PORTNAME=	heirloom-doctools
 PORTVERSION=	0.0.080407
