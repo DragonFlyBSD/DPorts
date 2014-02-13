@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: x11-fm/xdiskusage/Makefile 338012 2013-12-29 15:44:50Z antoine $
+# $FreeBSD$
 
 PORTNAME=	xdiskusage
 PORTVERSION=	1.48
