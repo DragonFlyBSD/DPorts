@@ -1,5 +1,5 @@
 # Created by: Aleksandar Pejic <alex@vts.su.ac.rs>
-# $FreeBSD: www/mod_antiloris/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mod_antiloris
 PORTVERSION=	0.4
