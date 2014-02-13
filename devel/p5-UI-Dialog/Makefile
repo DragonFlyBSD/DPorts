@@ -1,5 +1,5 @@
 # Created by: Dmitry Karasik <dmitry@karasik.eu.org>
-# $FreeBSD: devel/p5-UI-Dialog/Makefile 332248 2013-10-31 15:02:49Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	UI-Dialog
 PORTVERSION=	1.09
