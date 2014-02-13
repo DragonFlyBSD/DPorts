@@ -1,5 +1,5 @@
 # Created by: Cyrille Lefevre <clefevre@citeweb.net>
-# $FreeBSD: devel/gengetopt/Makefile 337071 2013-12-20 18:49:51Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	gengetopt
 PORTVERSION=	2.22.6
