@@ -1,5 +1,5 @@
 # Created by: Hsin-Han You <hhyou@cs.nctu.edu.tw>
-# $FreeBSD: net-mgmt/p5-Net-SNMP-Util/Makefile 338790 2014-01-05 15:52:33Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-SNMP-Util
 PORTVERSION=	1.04
