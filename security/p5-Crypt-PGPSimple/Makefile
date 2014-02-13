@@ -1,5 +1,5 @@
 # Created by: Matjaz Prelog <rachek@si.freebsd.org>
-# $FreeBSD: security/p5-Crypt-PGPSimple/Makefile 332949 2013-11-06 07:39:31Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Crypt-PGPSimple
 PORTVERSION=	0.13
