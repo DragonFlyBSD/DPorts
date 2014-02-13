@@ -1,5 +1,5 @@
 
-$FreeBSD: devel/distel/files/patch-elisp_erl-service.el 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/devel/distel/files/patch-elisp_erl-service.el 340725 2014-01-22 17:40:44Z mat $
 
 --- elisp/erl-service.el.orig
 +++ elisp/erl-service.el

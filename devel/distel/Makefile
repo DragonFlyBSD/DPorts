@@ -1,4 +1,4 @@
-# $FreeBSD: devel/distel/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD$
 
 PORTNAME=	distel
 PORTVERSION=	2012.05.28
