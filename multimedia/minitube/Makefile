@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/minitube/Makefile 334926 2013-11-26 12:58:55Z makc $
+# $FreeBSD$
 
 PORTNAME=	minitube
 PORTVERSION=	2.0
