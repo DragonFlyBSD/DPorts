@@ -1,5 +1,5 @@
 # Created by: Dima Sivachenko
-# $FreeBSD: misc/quotes/Makefile 335982 2013-12-09 13:35:01Z danilo $
+# $FreeBSD$
 
 PORTNAME=	quotes
 DISTVERSION=	1.7-2
