@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: devel/rubygem-bioruby/Makefile 332034 2013-10-30 02:29:22Z swills $
+# $FreeBSD$
 
 PORTNAME=	bioruby
 PORTVERSION=	1.4.3.0001
