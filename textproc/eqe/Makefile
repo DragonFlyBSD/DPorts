@@ -1,5 +1,5 @@
 # Created by: chinsan
-# $FreeBSD: textproc/eqe/Makefile 341266 2014-01-26 20:00:44Z mat $
+# $FreeBSD$
 
 PORTNAME=	eqe
 PORTVERSION=	1.3.0
