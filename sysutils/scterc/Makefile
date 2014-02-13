@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: sysutils/scterc/Makefile 342057 2014-01-31 19:48:26Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	scterc
 PORTVERSION=	0.0.1
