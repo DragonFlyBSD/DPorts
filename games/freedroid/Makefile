@@ -1,5 +1,5 @@
 # Created by: <benlutz@datacomm.ch>
-# $FreeBSD: games/freedroid/Makefile 341423 2014-01-27 16:29:18Z decke $
+# $FreeBSD$
 
 PORTNAME=	freedroid
 PORTVERSION=	1.0.2
