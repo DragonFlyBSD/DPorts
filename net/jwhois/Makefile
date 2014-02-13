@@ -1,5 +1,5 @@
 # Created by: matusita@jp.FreeBSD.org
-# $FreeBSD: net/jwhois/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	jwhois
 PORTVERSION=	4.0
@@ -20,6 +20,9 @@ LDFLAGS+=	-L${PREFIX}/lib
 CONFIGURE_ARGS=	--localstatedir=${PREFIX}/var/jwhois
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	NLS 
+
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
