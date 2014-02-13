@@ -1,5 +1,5 @@
 # Created by: ports@c0decafe.net
-# $FreeBSD: net-im/pidgin-guifications/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD$
 
 PORTNAME=	pidgin-guifications
 PORTVERSION=	2.16
@@ -12,6 +12,9 @@ COMMENT=	Plugin to add msn style "toaster" popups to Pidgin
 
 BUILD_DEPENDS=	${LOCALBASE}/include/pidgin/pidgin.h:${PORTSDIR}/net-im/pidgin
 RUN_DEPENDS=	pidgin:${PORTSDIR}/net-im/pidgin
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-10
 
 USE_BZIP2=	yes
 USES=        pathfix gettext gmake pkgconfig
