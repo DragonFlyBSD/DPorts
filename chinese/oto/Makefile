@@ -1,5 +1,5 @@
 # Created by: Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
-# $FreeBSD: chinese/oto/Makefile 338185 2013-12-30 22:21:35Z antoine $
+# $FreeBSD$
 
 PORTNAME=	oto
 PORTVERSION=	0.5
