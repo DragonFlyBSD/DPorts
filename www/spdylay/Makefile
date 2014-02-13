@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: www/spdylay/Makefile 340241 2014-01-19 09:26:22Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	spdylay
 PORTVERSION=	1.2.2
