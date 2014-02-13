@@ -1,5 +1,5 @@
 # Created by: Adriaan de Groot <groot@kde.org>
-# $FreeBSD: palm/libmal/Makefile 336692 2013-12-17 03:55:42Z fluffy $
+# $FreeBSD$
 
 PORTNAME=	libmal
 PORTVERSION=	0.44.1
