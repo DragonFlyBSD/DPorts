@@ -1,5 +1,5 @@
 # Created by: Julian C. Dunn <jdunn@aquezada.com>
-# $FreeBSD: net-im/ttytter/Makefile 327756 2013-09-20 22:13:34Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ttytter
 PORTVERSION=	2.1.00
