@@ -1,5 +1,5 @@
 # Created by: Ryan Steinmetz
-# $FreeBSD: net-mgmt/jnettop/Makefile 327888 2013-09-22 18:05:04Z bapt $
+# $FreeBSD$
 
 PORTNAME=	jnettop
 PORTVERSION=	0.13.0
