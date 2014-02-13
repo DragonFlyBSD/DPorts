@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/p5-Algorithm-Evolutionary/Makefile 340796 2014-01-23 03:28:47Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Algorithm-Evolutionary
 PORTVERSION=	0.79
