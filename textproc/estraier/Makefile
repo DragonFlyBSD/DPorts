@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: textproc/estraier/Makefile 341269 2014-01-26 20:05:55Z mat $
+# $FreeBSD$
 
 PORTNAME=	estraier
 PORTVERSION=	1.2.30
