@@ -1,4 +1,4 @@
-# $FreeBSD: x11-themes/clearlooks-themes-extras/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD$
 
 PORTNAME=	clearlooks-themes-extras
 PORTVERSION=	0.6
