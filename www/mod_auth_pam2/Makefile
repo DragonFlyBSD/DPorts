@@ -1,5 +1,5 @@
 # Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
-# $FreeBSD: www/mod_auth_pam2/Makefile 336534 2013-12-15 13:54:30Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	mod_auth_pam
 PORTVERSION=	1.1.1
