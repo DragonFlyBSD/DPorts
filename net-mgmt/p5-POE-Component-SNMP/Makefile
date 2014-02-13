@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: net-mgmt/p5-POE-Component-SNMP/Makefile 332836 2013-11-05 12:02:05Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	POE-Component-SNMP
 PORTVERSION=	1.1006
