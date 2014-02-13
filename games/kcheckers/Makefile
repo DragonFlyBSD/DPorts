@@ -1,5 +1,5 @@
 # Created by: arved
-# $FreeBSD: games/kcheckers/Makefile 334603 2013-11-22 18:48:41Z makc $
+# $FreeBSD$
 
 PORTNAME=	kcheckers
 PORTVERSION=	0.8.1
