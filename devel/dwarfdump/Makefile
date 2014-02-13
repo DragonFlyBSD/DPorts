@@ -1,5 +1,5 @@
 # Created by: joerg@FreeBSD.org
-# $FreeBSD: devel/dwarfdump/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	dwarfdump
 PORTVERSION=	20130207
