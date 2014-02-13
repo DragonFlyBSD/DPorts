@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: x11-themes/fluxbox-tenr-styles-pack/Makefile 341380 2014-01-27 11:46:37Z miwi $
+# $FreeBSD$
 
 PORTNAME=	fluxbox-tenr-styles-pack
 PORTVERSION=	20071215
