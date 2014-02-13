@@ -1,5 +1,5 @@
 # Created by: Palle Girgensohn <girgen@partitur.se>
-# $FreeBSD: databases/postgresql90-plperl/Makefile 330639 2013-10-17 13:39:36Z girgen $
+# $FreeBSD$
 
 PORTNAME=	postgresql
 CATEGORIES=	databases perl5
