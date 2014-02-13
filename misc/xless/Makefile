@@ -1,5 +1,5 @@
 # Created by: Conrad Sabatier <conrads@home.com>
-# $FreeBSD: misc/xless/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xless
 PORTVERSION=	1.7
