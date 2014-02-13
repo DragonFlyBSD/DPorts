@@ -1,5 +1,5 @@
 # Created by: thierry@pompo.net
-# $FreeBSD: textproc/spellutils/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD$
 
 PORTNAME=	spellutils
 PORTVERSION=	0.7
