@@ -1,5 +1,5 @@
 # Created by: Michael L. Hostbaek (mich@freebsdcluster.org)
-# $FreeBSD: devel/cvsdelta/Makefile 341483 2014-01-27 23:47:37Z bapt $
+# $FreeBSD$
 
 PORTNAME=	cvsdelta
 PORTVERSION=	1.7.0
