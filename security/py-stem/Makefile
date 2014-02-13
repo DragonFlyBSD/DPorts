@@ -1,5 +1,5 @@
 # Created by: Carlo Strub
-# $FreeBSD: security/py-stem/Makefile 333339 2013-11-09 21:34:47Z cs $
+# $FreeBSD$
 
 PORTNAME=	stem
 PORTVERSION=	1.1.1
