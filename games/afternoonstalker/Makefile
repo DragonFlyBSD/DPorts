@@ -1,5 +1,5 @@
 # Created by: Mark Pulford <mark@kyne.com.au>
-# $FreeBSD: games/afternoonstalker/Makefile 334489 2013-11-21 13:34:33Z martymac $
+# $FreeBSD$
 
 PORTNAME=	afternoonstalker
 PORTVERSION=	1.1.5
