@@ -1,4 +1,4 @@
-# $FreeBSD: devel/cowlib/Makefile 334517 2013-11-21 20:06:53Z olgeni $
+# $FreeBSD$
 
 PORTNAME=	cowlib
 PORTVERSION=	0.4.0
