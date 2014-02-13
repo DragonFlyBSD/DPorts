@@ -1,5 +1,5 @@
 # Created by: Dmitry Liakh <dliakh@ukr.net>
-# $FreeBSD: russian/p5-Lingua-DetectCyrillic/Makefile 341813 2014-01-30 08:45:50Z az $
+# $FreeBSD$
 
 PORTNAME=	Lingua-DetectCyrillic
 PORTVERSION=	0.02
