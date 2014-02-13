@@ -1,5 +1,5 @@
 # Created by: Eric Freeman <freebsdports@chillibear.com>
-# $FreeBSD: www/rubygem-domainatrix/Makefile 332054 2013-10-30 03:01:19Z swills $
+# $FreeBSD$
 
 PORTNAME=	domainatrix
 PORTVERSION=	0.0.11
