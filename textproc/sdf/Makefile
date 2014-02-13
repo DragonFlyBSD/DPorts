@@ -1,5 +1,5 @@
 # Created by: dannyman <dannyman@tellme.com>
-# $FreeBSD: textproc/sdf/Makefile 327773 2013-09-20 23:17:30Z bapt $
+# $FreeBSD$
 
 PORTNAME=	sdf
 PORTVERSION=	2.001
