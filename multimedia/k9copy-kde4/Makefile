@@ -1,5 +1,5 @@
 # Created by: Alexander V. Ribchansky <triosoft@triosoft.com.ua>
-# $FreeBSD: multimedia/k9copy-kde4/Makefile 341132 2014-01-25 22:41:42Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	k9copy
 PORTVERSION=	2.3.4
