@@ -1,4 +1,4 @@
-# $FreeBSD: graphics/skanlite/Makefile 340693 2014-01-22 08:20:56Z makc $
+# $FreeBSD$
 
 PORTNAME=	skanlite
 PORTVERSION=	1.1
