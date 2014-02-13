@@ -1,4 +1,4 @@
-# $FreeBSD: net-mgmt/check_multi/Makefile 329589 2013-10-06 15:19:24Z dinoex $
+# $FreeBSD$
 
 PORTNAME=	check_multi
 PORTVERSION=	0.19
