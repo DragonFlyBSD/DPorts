@@ -1,5 +1,5 @@
 # Created by: Roman Shterenzon <roman@xpert.com>
-# $FreeBSD: net/asfrecorder/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	asfrecorder
 PORTVERSION=	1.1.20010307
@@ -9,6 +9,9 @@ DISTNAME=	ASFRecorder
 
 MAINTAINER= 	ports@FreeBSD.org
 COMMENT=	Tool for downloading streaming media from the Internet
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-10
 
 USE_ZIP=	yes
 
