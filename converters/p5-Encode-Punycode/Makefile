@@ -1,5 +1,5 @@
 # Created by: Timur Bakeyev <timur@FreeBSD.org>
-# $FreeBSD: converters/p5-Encode-Punycode/Makefile 327715 2013-09-20 16:05:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Encode-Punycode
 PORTVERSION=	1.001
@@ -17,7 +17,4 @@ BUILD_DEPENDS:=	${RUN_DEPENDS} \
 USES=		perl5
 USE_PERL5=	modbuild
 
-MAN3=		Encode::Punycode.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
