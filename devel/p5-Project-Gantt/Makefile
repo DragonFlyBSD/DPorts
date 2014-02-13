@@ -1,5 +1,5 @@
 # Created by: clsung
-# $FreeBSD: devel/p5-Project-Gantt/Makefile 332203 2013-10-31 06:20:32Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Project-Gantt
 PORTVERSION=	1.03
