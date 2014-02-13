@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: x11-themes/beastie/Makefile 341327 2014-01-27 05:41:50Z miwi $
+# $FreeBSD$
 #    $MCom: ports/x11-themes/beastie/Makefile,v 1.10 2006/07/18 11:56:12 ahze Exp $
 
 PORTNAME=	beastie
