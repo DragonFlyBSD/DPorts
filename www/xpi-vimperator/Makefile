@@ -1,5 +1,5 @@
 # Created by: stas
-# $FreeBSD: www/xpi-vimperator/Makefile 341219 2014-01-26 15:14:34Z miwi $
+# $FreeBSD$
 
 PORTNAME=	vimperator
 PORTVERSION=	3.5
