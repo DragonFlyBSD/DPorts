@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net-mgmt/ipcalc/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ipcalc
 PORTVERSION=	0.41
