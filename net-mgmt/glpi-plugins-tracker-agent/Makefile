@@ -1,5 +1,5 @@
 # Created by: ddurieux <d.durieux@siprossii.com>
-# $FreeBSD: net-mgmt/glpi-plugins-tracker-agent/Makefile 327757 2013-09-20 22:24:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	agent
 DISTVERSION=	1.5.3
