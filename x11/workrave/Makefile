@@ -1,5 +1,5 @@
 # Created by: Koop Mast <einekoai@chello.nl>
-# $FreeBSD: x11/workrave/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD$
 
 PORTNAME=	workrave
 PORTVERSION=	1.9.4
