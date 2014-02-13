@@ -1,5 +1,5 @@
 # Created by: arved
-# $FreeBSD: games/qnetwalk/Makefile 334602 2013-11-22 18:48:31Z makc $
+# $FreeBSD$
 
 PORTNAME=	qnetwalk
 PORTVERSION=	1.4
