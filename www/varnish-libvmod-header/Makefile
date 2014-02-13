@@ -1,5 +1,5 @@
 # Created by: anders
-# $FreeBSD: www/varnish-libvmod-header/Makefile 341549 2014-01-28 13:33:05Z miwi $
+# $FreeBSD$
 
 PORTNAME=	libvmod-header
 DISTVERSION=	0.3-5
