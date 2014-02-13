@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: lang/treecc/Makefile 341989 2014-01-31 12:47:06Z miwi $
+# $FreeBSD$
 
 PORTNAME=	treecc
 PORTVERSION=	0.3.10
