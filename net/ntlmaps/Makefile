@@ -1,5 +1,5 @@
 # Created by: kevlo
-# $FreeBSD: net/ntlmaps/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ntlmaps
 PORTVERSION=	0.9.9.0.1
