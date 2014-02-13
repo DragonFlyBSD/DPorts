@@ -1,5 +1,5 @@
 # Created by: jkh
-# $FreeBSD: devel/xxgdb/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	xxgdb
 PORTVERSION=	1.12
