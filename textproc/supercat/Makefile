@@ -1,5 +1,5 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: textproc/supercat/Makefile 340839 2014-01-23 16:40:35Z miwi $
+# $FreeBSD$
 
 PORTNAME=	supercat
 PORTVERSION=	0.5.5
