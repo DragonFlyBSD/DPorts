@@ -1,5 +1,5 @@
 # Created by: Satoshi TAOKA <taoka@FreeBSD.org>
-# $FreeBSD: japanese/prn/Makefile 337355 2013-12-24 13:54:11Z pawel $
+# $FreeBSD$
 
 PORTNAME=	prn
 PORTVERSION=	1.0
