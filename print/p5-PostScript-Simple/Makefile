@@ -1,5 +1,5 @@
 # Created by: tobez
-# $FreeBSD: print/p5-PostScript-Simple/Makefile 332969 2013-11-06 12:12:45Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	PostScript-Simple
 PORTVERSION=	0.07
