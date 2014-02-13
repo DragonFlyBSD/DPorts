@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: x11/xfce4-xfapplet-plugin/Makefile 341743 2014-01-29 14:51:57Z olivierd $
+# $FreeBSD$
 
 PORTNAME=	xfce4-xfapplet-plugin
 PORTVERSION=	0.1.0
