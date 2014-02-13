@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: games/tecnoballz/Makefile 334268 2013-11-18 22:49:10Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	tecnoballz
 PORTVERSION=	0.92
