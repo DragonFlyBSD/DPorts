@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: games/evilfinder/Makefile 328323 2013-09-25 22:55:45Z ak $
+# $FreeBSD$
 
 PORTNAME=	evilfinder
 PORTVERSION=	1.00
