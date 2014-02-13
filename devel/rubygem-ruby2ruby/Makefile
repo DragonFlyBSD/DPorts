@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@rtfm.jp>
-# $FreeBSD: devel/rubygem-ruby2ruby/Makefile 332041 2013-10-30 02:42:34Z swills $
+# $FreeBSD$
 
 PORTNAME=	ruby2ruby
 PORTVERSION=	2.0.6
