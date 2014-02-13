@@ -1,5 +1,5 @@
 # Created by: bf <bf2006a@yahoo.com>
-# $FreeBSD: print/gsview/Makefile 327765 2013-09-20 22:43:59Z bapt $
+# $FreeBSD$
 
 PORTNAME=	gsview
 PORTVERSION=	4.9
