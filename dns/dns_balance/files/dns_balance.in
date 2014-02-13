@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: dns/dns_balance/files/dns_balance.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/dns/dns_balance/files/dns_balance.in 340872 2014-01-24 00:14:07Z mat $
 #
 # PROVIDE: dns_balance
 # REQUIRE: DAEMON
