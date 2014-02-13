@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: net/p5-Net-LimeLight-Purge/Makefile 338849 2014-01-06 09:14:19Z az $
+# $FreeBSD$
 
 PORTNAME=	Net-LimeLight-Purge
 PORTVERSION=	0.03
