@@ -1,5 +1,5 @@
 # Created by: John Chen <johnpupu@gmail.com>
-# $FreeBSD: devel/pecl-msgpack/Makefile 332892 2013-11-05 18:39:09Z antoine $
+# $FreeBSD$
 
 PORTNAME=	msgpack
 PORTVERSION=	0.5.5
