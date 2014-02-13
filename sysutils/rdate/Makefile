@@ -1,5 +1,5 @@
 # Created by: cracauer@cons.org "Martin Cracauer"
-# $FreeBSD: sysutils/rdate/Makefile 333979 2013-11-16 04:15:28Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	rdate
 PORTVERSION=	1.3
