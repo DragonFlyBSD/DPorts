@@ -1,5 +1,5 @@
 # Created by: Timur I. Bakeyev <timur@gnome.org>
-# $FreeBSD: textproc/stardict-quick/Makefile 334104 2013-11-17 16:45:44Z makc $
+# $FreeBSD$
 
 PORTNAME=	stardict-quick
 PORTVERSION=	2.4.2
