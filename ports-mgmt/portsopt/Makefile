@@ -1,5 +1,5 @@
 # Created by: Beat Gaetzi <beat@chruetertee.ch>
-# $FreeBSD: ports-mgmt/portsopt/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	portsopt
 PORTVERSION=	1.5
