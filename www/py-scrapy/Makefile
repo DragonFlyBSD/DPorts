@@ -1,5 +1,5 @@
 # Created by: Qing Feng <qingfeng@douban.com>
-# $FreeBSD: www/py-scrapy/Makefile 341733 2014-01-29 13:21:31Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Scrapy
 PORTVERSION=	0.16.5
