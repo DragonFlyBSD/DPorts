@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: textproc/the_silver_searcher/Makefile 339572 2014-01-13 07:23:43Z bapt $
+# $FreeBSD$
 
 PORTNAME=	the_silver_searcher
 PORTVERSION=	0.17
