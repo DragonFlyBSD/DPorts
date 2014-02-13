@@ -1,5 +1,5 @@
 # Created by: Emanuel Haupt <ehaupt@critical.ch>
-# $FreeBSD: textproc/colordiff/Makefile 331328 2013-10-22 21:51:59Z ehaupt $
+# $FreeBSD$
 
 PORTNAME=	colordiff
 PORTVERSION=	1.0.13
