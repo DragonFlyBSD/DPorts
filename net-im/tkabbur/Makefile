@@ -1,5 +1,5 @@
 # Created by: Dennis Herrmann <adox@mcx2.org>
-# $FreeBSD: net-im/tkabbur/Makefile 340023 2014-01-17 10:15:47Z gahr $
+# $FreeBSD$
 
 PORTNAME=	tkabbur
 PORTVERSION=	0.8
