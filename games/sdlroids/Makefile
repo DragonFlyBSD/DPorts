@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: games/sdlroids/Makefile 337412 2013-12-25 12:58:11Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	sdlroids
 PORTVERSION=	1.3.4
