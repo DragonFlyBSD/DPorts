@@ -1,5 +1,5 @@
 # Created by: Mikhail T. <m.tsatsenko@gmail.com>
-# $FreeBSD: security/openvpn-auth-radius/Makefile 342361 2014-02-02 19:06:30Z marino $
+# $FreeBSD$
 
 PORTNAME=	openvpn-auth-radius
 PORTVERSION=	2.1
