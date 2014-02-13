@@ -1,5 +1,5 @@
 # Created by: Tatsumi Hosokawa
-# $FreeBSD: x11/kb2mb2/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	kb2mb2
 PORTVERSION=	1.0
