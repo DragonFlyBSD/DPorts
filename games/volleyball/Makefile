@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: games/volleyball/Makefile 330714 2013-10-18 01:20:37Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	volleyball
 PORTVERSION=	0.8.6
