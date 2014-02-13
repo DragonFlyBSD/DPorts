@@ -1,5 +1,5 @@
 # Created by: Cy Schubert <cy@FreeBSD.org>
-# $FreeBSD: security/p5-File-KeePass-Agent/Makefile 342157 2014-02-01 14:42:58Z miwi $
+# $FreeBSD$
 
 PORTNAME=	File-KeePass-Agent
 PORTVERSION=	2.01
