@@ -1,5 +1,5 @@
 # Created by: Chris Piazza <cpiazza@FreeBSD.org>
-# $FreeBSD: irc/ninja/Makefile 333018 2013-11-06 17:52:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ninja
 PORTVERSION=	1.5.8.1
