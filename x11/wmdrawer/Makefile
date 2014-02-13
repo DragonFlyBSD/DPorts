@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: x11/wmdrawer/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	wmdrawer
 PORTVERSION=	0.10.5
@@ -13,6 +13,9 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Dockapp which provides a drawer to launch applications
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-10
 
 USE_GNOME=	gdkpixbuf
 USES=		pkgconfig gmake
