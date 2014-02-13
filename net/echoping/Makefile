@@ -1,5 +1,5 @@
 # Created by: peter
-# $FreeBSD: net/echoping/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	echoping
 PORTVERSION=	6.0.0
