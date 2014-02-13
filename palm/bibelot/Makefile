@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: palm/bibelot/Makefile 327760 2013-09-20 22:33:41Z bapt $
+# $FreeBSD$
 
 PORTNAME=	bibelot
 PORTVERSION=	0.9.4
