@@ -1,5 +1,5 @@
 # Created by: Andreas Kohn <andreas@syndrom23.de>
-# $FreeBSD: x11-toolkits/libsexymm/Makefile 339594 2014-01-13 12:25:37Z marino $
+# $FreeBSD$
 
 PORTNAME=	libsexymm
 PORTVERSION=	0.1.9
