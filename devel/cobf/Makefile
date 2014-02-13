@@ -1,5 +1,5 @@
 # Created by: Ed Schouten <ed@fxq.nl>
-# $FreeBSD: devel/cobf/Makefile 340758 2014-01-23 00:13:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	cobf
 PORTVERSION=	1.06
