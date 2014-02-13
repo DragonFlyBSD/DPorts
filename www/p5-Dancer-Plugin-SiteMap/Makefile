@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: www/p5-Dancer-Plugin-SiteMap/Makefile 339786 2014-01-15 15:27:45Z gblach $
+# $FreeBSD$
 
 PORTNAME=	Dancer-Plugin-SiteMap
 PORTVERSION=	0.12
