@@ -1,5 +1,5 @@
 # Created by: Dave Glowacki <dglo@ssec.wisc.edu> #
-# $FreeBSD: java/jakarta-regexp/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	jakarta-regexp
 PORTVERSION=	1.5
