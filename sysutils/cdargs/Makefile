@@ -1,4 +1,4 @@
-# $FreeBSD: sysutils/cdargs/Makefile 333238 2013-11-08 15:06:28Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	cdargs
 PORTVERSION=	1.35
