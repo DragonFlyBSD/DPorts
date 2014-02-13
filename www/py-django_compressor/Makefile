@@ -1,5 +1,5 @@
 # Created by: Lung-Pin Chang <changlp@cs.nctu.edu.tw>
-# $FreeBSD: www/py-django_compressor/Makefile 341752 2014-01-29 15:56:23Z miwi $
+# $FreeBSD$
 
 PORTNAME=	django_compressor
 PORTVERSION=	1.1.2
