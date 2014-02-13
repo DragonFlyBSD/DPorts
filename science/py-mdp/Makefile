@@ -1,5 +1,5 @@
 # Created by: Li-Lun Wang <llwang@infor.org>
-# $FreeBSD: science/py-mdp/Makefile 337962 2013-12-29 11:39:54Z wg $
+# $FreeBSD$
 
 PORTNAME=	mdp
 PORTVERSION=	3.2
