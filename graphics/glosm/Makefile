@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: graphics/glosm/Makefile 336650 2013-12-16 17:40:13Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	glosm
 PORTVERSION=	0.0.2
