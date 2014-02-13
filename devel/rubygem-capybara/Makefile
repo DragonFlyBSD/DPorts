@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-capybara/Makefile 335760 2013-12-06 15:23:57Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	capybara
 PORTVERSION=	2.2.0
