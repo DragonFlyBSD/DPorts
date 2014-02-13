@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@mj.0038.net>
-# $FreeBSD: devel/p5-VCS/Makefile 332248 2013-10-31 15:02:49Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	VCS
 PORTVERSION=	0.16
