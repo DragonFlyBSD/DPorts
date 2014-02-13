@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: security/authforce/Makefile 342029 2014-01-31 16:50:10Z miwi $
+# $FreeBSD$
 
 PORTNAME=	authforce
 PORTVERSION=	0.9.9
@@ -14,7 +14,7 @@ LICENSE=	GPLv2
 
 OPTIONS_DEFINE=	CURL NLS
 
-USES=		ncurses
+USES=		ncurses readline
 GNU_CONFIGURE=	yes
 USE_BZIP2=	yes
 NO_CCACHE=	yes
