@@ -1,5 +1,5 @@
 # Created by: Herve Quiroz <hq@FreeBSD.org>
-# $FreeBSD: dns/dnsjava/Makefile 330436 2013-10-15 19:25:47Z danilo $
+# $FreeBSD$
 
 PORTNAME=	dnsjava
 PORTVERSION=	2.1.6
