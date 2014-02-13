@@ -1,5 +1,5 @@
 # Created by: jkoshy
-# $FreeBSD: devel/cbrowser/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	cbrowser
 PORTVERSION=	0.8
