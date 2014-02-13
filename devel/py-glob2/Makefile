@@ -1,5 +1,5 @@
 # Created by: loader <loader@freebsdmall.com>
-# $FreeBSD: devel/py-glob2/Makefile 331727 2013-10-26 18:50:03Z wg $
+# $FreeBSD$
 
 PORTNAME=	glob2
 PORTVERSION=	0.4.1
