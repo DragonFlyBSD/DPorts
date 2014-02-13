@@ -1,5 +1,5 @@
 # Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-# $FreeBSD: sysutils/dmg2img/Makefile 341739 2014-01-29 14:19:31Z eadler $
+# $FreeBSD$
 
 PORTNAME=	dmg2img
 PORTVERSION=	1.6.5
