@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: games/hexalate/Makefile 334688 2013-11-23 17:42:04Z makc $
+# $FreeBSD$
 
 PORTNAME=	hexalate
 PORTVERSION=	1.0.2
