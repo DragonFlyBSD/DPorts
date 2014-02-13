@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@brutele.be>
-# $FreeBSD: audio/enscribe/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	enscribe
 PORTVERSION=	0.1.0
@@ -24,6 +24,8 @@ LICENSE=	GPLv2
 
 PORTDOCS=	README
 PLIST_FILES=	bin/enscribe
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
