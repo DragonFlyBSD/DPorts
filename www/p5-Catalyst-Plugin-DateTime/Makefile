@@ -1,5 +1,5 @@
 # Created by: Mikhail T. <michael@fun-box.ru>
-# $FreeBSD: www/p5-Catalyst-Plugin-DateTime/Makefile 332678 2013-11-04 09:57:54Z az $
+# $FreeBSD$
 
 PORTNAME=	Catalyst-Plugin-DateTime
 PORTVERSION=	0.03
