@@ -1,5 +1,5 @@
 
-$FreeBSD: security/duo/files/patch-login__duo_Makefile.in 321677 2013-06-24 11:55:42Z zi $
+$FreeBSD: head/security/duo/files/patch-login__duo_Makefile.in 321677 2013-06-24 11:55:42Z zi $
 
 --- login_duo/Makefile.in.orig
 +++ login_duo/Makefile.in
