@@ -1,5 +1,5 @@
 # Created by: Oleg A. Mamontov <oleg@mamontov.net>
-# $FreeBSD: sysutils/p5-Tail-Stat/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	Tail-Stat
 PORTVERSION=	0.21
