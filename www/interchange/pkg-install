@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: www/interchange/pkg-install 340719 2014-01-22 15:52:06Z mat $
+# $FreeBSD: head/www/interchange/pkg-install 340719 2014-01-22 15:52:06Z mat $
 #
 
 USER=interch

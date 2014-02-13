@@ -1,5 +1,5 @@
 # Created by: Seth Kingsley <sethk@meowfishies.com>
-# $FreeBSD: www/interchange/Makefile 327776 2013-09-20 23:36:50Z bapt $
+# $FreeBSD$
 
 PORTNAME=	interchange
 PORTVERSION=	5.6.1
