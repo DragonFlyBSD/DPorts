@@ -1,5 +1,5 @@
 # Created by: Loren M. Lang <loren@north-winds.org>
-# $FreeBSD: www/mozplugger/Makefile 335533 2013-12-02 19:29:49Z pawel $
+# $FreeBSD$
 
 PORTNAME=	mozplugger
 PORTVERSION=	2.1.4
