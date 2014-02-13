@@ -1,5 +1,5 @@
 # Created by: Romain Tartiere <romain@blogreen.org>
-# $FreeBSD: x11-themes/gtk-nodoka-engine/Makefile 341352 2014-01-27 09:07:25Z miwi $
+# $FreeBSD$
 
 PORTNAME=	gtk-nodoka-engine
 PORTVERSION=	0.7.5
