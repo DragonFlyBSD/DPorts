@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-# $FreeBSD: databases/p5-PostgreSQL-PLPerl-Call/Makefile 328823 2013-09-30 15:49:49Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	PostgreSQL-PLPerl-Call
 PORTVERSION=	1.006
