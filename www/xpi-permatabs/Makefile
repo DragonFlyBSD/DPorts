@@ -1,5 +1,5 @@
 # Created by: Anatoly Borodin <anatoly.borodin@gmail.com>
-# $FreeBSD: www/xpi-permatabs/Makefile 341213 2014-01-26 15:12:42Z miwi $
+# $FreeBSD$
 
 PORTNAME=	permatabs
 PORTVERSION=	1.7.0
