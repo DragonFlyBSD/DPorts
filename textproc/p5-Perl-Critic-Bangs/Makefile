@@ -1,5 +1,5 @@
 # Created by: Vany <ivan@serezhkin.com>
-# $FreeBSD: textproc/p5-Perl-Critic-Bangs/Makefile 340668 2014-01-21 22:29:50Z mat $
+# $FreeBSD$
 
 PORTNAME=	Perl-Critic-Bangs
 PORTVERSION=	1.08
