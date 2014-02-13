@@ -1,4 +1,4 @@
-# $FreeBSD: audio/praat/files/makefile.defs.freebsd.alsa 335363 2013-12-01 03:48:54Z danilo $
+# $FreeBSD: head/audio/praat/files/makefile.defs.freebsd.alsa 335363 2013-12-01 03:48:54Z danilo $
 # File: makefile.defs.linux.alsa
 
 # System: Linux

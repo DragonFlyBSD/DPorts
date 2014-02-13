@@ -1,5 +1,5 @@
 # Created by: Jason Bacon <jwbacon@tds.net>
-# $FreeBSD: audio/praat/Makefile 335363 2013-12-01 03:48:54Z danilo $
+# $FreeBSD$
 
 PORTNAME=	praat
 PORTVERSION=	5.3.59
