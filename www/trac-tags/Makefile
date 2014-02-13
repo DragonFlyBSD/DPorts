@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <gerrit.beine@gmx.de>
-# $FreeBSD: www/trac-tags/Makefile 341187 2014-01-26 14:32:48Z miwi $
+# $FreeBSD$
 
 PORTNAME=	tags
 DISTVERSION=	0.7.r${SVN_REV}
