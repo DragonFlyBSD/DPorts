@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@fix.no>
-# $FreeBSD: graphics/gphoto2/Makefile 340073 2014-01-17 16:56:15Z miwi $
+# $FreeBSD$
 
 PORTNAME=	gphoto2
 PORTVERSION=	2.5.3
