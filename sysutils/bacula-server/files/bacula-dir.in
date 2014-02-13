@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: sysutils/bacula-server/files/bacula-dir.in 323275 2013-07-19 09:44:58Z rm $
+# $FreeBSD: head/sysutils/bacula-server/files/bacula-dir.in 323275 2013-07-19 09:44:58Z rm $
 #
 # PROVIDE: bacula_dir
 # REQUIRE: DAEMON %%REQ_MYSQL%% %%REQ_PGSQL%%
