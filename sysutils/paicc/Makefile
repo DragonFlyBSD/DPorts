@@ -1,5 +1,5 @@
 # Created by: peter
-# $FreeBSD: sysutils/paicc/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	paicc
 PORTVERSION=	1.4
