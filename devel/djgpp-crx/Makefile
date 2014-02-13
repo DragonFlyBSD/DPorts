@@ -1,5 +1,5 @@
 # Created by: Peter Johnson <johnson.peter@gmail.com>
-# $FreeBSD: devel/djgpp-crx/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	crx
 PORTVERSION=	2.03
@@ -18,7 +18,6 @@ USE_ZIP=	yes
 NO_MTREE=	yes
 NO_WRKSUBDIR=	yes
 
-NO_STAGE=	yes
 post-extract:
 	@${CP} ${FILESDIR}/Makefile ${WRKDIR}
 
