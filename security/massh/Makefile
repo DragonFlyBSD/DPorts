@@ -1,5 +1,5 @@
 # Created by: Sascha Klauder <sklauder@trimind.de>
-# $FreeBSD: security/massh/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	massh
 PORTVERSION=	2.0.57
