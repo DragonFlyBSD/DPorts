@@ -1,5 +1,5 @@
 # Created by: Pierre Guinoiseau <geekounet@poildetroll.net>
-# $FreeBSD: multimedia/grake/Makefile 342317 2014-02-02 15:21:20Z miwi $
+# $FreeBSD$
 
 PORTNAME=	grake
 PORTVERSION=	0.1.0
