@@ -1,5 +1,5 @@
 # Created by: fenner@FreeBSD.org
-# $FreeBSD: textproc/idnits/Makefile 332508 2013-11-02 17:07:54Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	idnits
 PORTVERSION=	2.13.00
