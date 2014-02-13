@@ -1,5 +1,5 @@
 # Created by: Ekkehard 'Ekki' Gehm <gehm@physik.tu-berlin.de>
-# $FreeBSD: security/aespipe/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	aespipe
 DISTVERSION=	v2.3e
@@ -11,17 +11,17 @@ MASTER_SITES=	http://loop-aes.sourceforge.net/${PORTNAME}/ \
 MAINTAINER=	gehm@physik.tu-berlin.de
 COMMENT=	AES encrypting or decrypting pipe
 
-RUN_DEPENDS=	gpg:${PORTSDIR}/security/gnupg
+LICENSE=	GPLv2
 
-MAN1=		aespipe.1
+RUN_DEPENDS=	gpg:${PORTSDIR}/security/gnupg
 
 USE_BZIP2=	yes
 
 GNU_CONFIGURE=	yes
-PLIST_FILES=	bin/aespipe
+PLIST_FILES=	bin/aespipe man/man1/aespipe.1.gz
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
+
 ALL_TARGET=
 .if ${ARCH} == x86_64
 MAKE_ARGS=	amd64
@@ -33,4 +33,9 @@ MAKE_ARGS=	x86
 
 post-build:
 	cd ${WRKSRC} && make tests
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${STAGEDIR}${MANPREFIX}/man/man1
+
 .include <bsd.port.post.mk>
