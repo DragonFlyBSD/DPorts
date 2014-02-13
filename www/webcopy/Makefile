@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD: www/webcopy/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	webcopy
 PORTVERSION=	0.98b7
