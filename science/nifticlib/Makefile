@@ -1,5 +1,5 @@
 # Created by: Jason W. Bacon <jwbacon@tds.net>
-# $FreeBSD: science/nifticlib/Makefile 341786 2014-01-29 21:44:59Z thierry $
+# $FreeBSD$
 
 PORTNAME=	nifticlib
 PORTVERSION=	2.0.0
