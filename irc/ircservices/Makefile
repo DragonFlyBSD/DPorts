@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <sysadmin@alexdupre.com>
-# $FreeBSD: irc/ircservices/Makefile 339300 2014-01-09 23:23:17Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ircservices
 PORTVERSION=	5.1.18
