@@ -1,5 +1,5 @@
 # Created by: Roger Hardiman <roger@FreeBSD.org>
-# $FreeBSD: net/ohphone/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ohphone
 PORTVERSION=	1.4.5
