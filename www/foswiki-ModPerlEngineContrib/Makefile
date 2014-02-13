@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: www/foswiki-ModPerlEngineContrib/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ModPerlEngineContrib
 MASTER_SITES=	http://protey.ru/freebsd/distfiles/ \
