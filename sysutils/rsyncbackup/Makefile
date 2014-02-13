@@ -1,5 +1,5 @@
 # Created by: Daniel Bond
-# $FreeBSD: sysutils/rsyncbackup/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	rsyncbackup
 PORTVERSION=	1.0
