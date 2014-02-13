@@ -1,5 +1,5 @@
 # Created by: Jeremy Norris <ishmael127@home.com>
-# $FreeBSD: graphics/feh/Makefile 327733 2013-09-20 18:35:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	feh
 PORTVERSION=	2.9.3
