@@ -1,5 +1,5 @@
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD: www/radicale/Makefile 341385 2014-01-27 12:14:09Z koobs $
+# $FreeBSD$
 
 PORTNAME=		radicale
 PORTVERSION=		0.8
