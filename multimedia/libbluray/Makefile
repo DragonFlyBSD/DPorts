@@ -1,5 +1,5 @@
 # Created by: kamikaze@bsdforen.de
-# $FreeBSD: multimedia/libbluray/Makefile 327747 2013-09-20 20:57:48Z bapt $
+# $FreeBSD$
 
 PORTNAME=	libbluray
 PORTVERSION=	0.3.0
@@ -30,7 +30,6 @@ CONFIGURE_ARGS=	--prefix="${PREFIX}" \
 OPTIONS_DEFINE=	JAVA
 JAVA_DESC=	Enable Blu-Ray Java support
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MJAVA}
