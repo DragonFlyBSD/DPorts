@@ -1,5 +1,5 @@
 # Created by: Heiner <h.eichmann@gmx.de>
-# $FreeBSD: x11-fm/krusader2/Makefile 338803 2014-01-05 17:27:15Z rakuco $
+# $FreeBSD$
 
 PORTNAME=	krusader
 DISTVERSION=	2.4.0-beta3
