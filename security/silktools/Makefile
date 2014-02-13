@@ -1,5 +1,5 @@
 # Created by: David Thiel <lx@redundancy.redundancy.org>
-# $FreeBSD: security/silktools/Makefile 329919 2013-10-09 18:53:49Z lx $
+# $FreeBSD$
 
 PORTNAME=	silktools
 PORTVERSION=	3.7.2
