@@ -1,5 +1,5 @@
 # Created by: Jyun-Yan You <jyyou@cs.nctu.edu.tw>
-# $FreeBSD: textproc/ats-contrib-parcomb/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	parcomb
 PORTVERSION=	${ATS_VER}
