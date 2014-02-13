@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD: graphics/eos-movrec/Makefile 328505 2013-09-27 17:53:02Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	eos-movrec
 DISTVERSION=	0.3.2_beta
