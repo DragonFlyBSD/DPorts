@@ -1,4 +1,4 @@
-# $FreeBSD: games/chocolate-doom/Makefile 338949 2014-01-06 22:24:34Z pawel $
+# $FreeBSD$
 
 PORTNAME=	chocolate-doom
 PORTVERSION=	2.0.0
