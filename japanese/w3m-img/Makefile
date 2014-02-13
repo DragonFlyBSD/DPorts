@@ -1,5 +1,5 @@
 # Created by: MANTANI Nobutaka <nobutaka@nobutaka.com>
-# $FreeBSD: japanese/w3m-img/Makefile 327737 2013-09-20 18:47:54Z bapt $
+# $FreeBSD$
 
 CATEGORIES=	japanese
 PKGNAMESUFFIX=	-img
