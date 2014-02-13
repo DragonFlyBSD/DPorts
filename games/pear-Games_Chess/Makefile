@@ -1,5 +1,5 @@
 # Created by: Mark Huizer <xaa+ports@timewasters.nl>
-# $FreeBSD: games/pear-Games_Chess/Makefile 334871 2013-11-25 17:59:58Z antoine $
+# $FreeBSD$
 
 PORTNAME=	Games_Chess
 PORTVERSION=	1.0.1
