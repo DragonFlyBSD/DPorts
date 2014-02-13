@@ -1,5 +1,5 @@
 
-$FreeBSD: net/gopher/files/patch-gopher_form.c 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/net/gopher/files/patch-gopher_form.c 340725 2014-01-22 17:40:44Z mat $
 
 --- gopher/form.c.orig	Sun Aug 22 15:55:22 2004
 +++ gopher/form.c	Sun Aug 22 15:55:36 2004
