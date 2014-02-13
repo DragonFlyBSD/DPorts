@@ -1,5 +1,5 @@
 # Created by: gahr
-# $FreeBSD: head/deskutils/taskwarrior/Makefile 339903 2014-01-16 09:07:09Z gahr $
+# $FreeBSD$
 
 PORTNAME=	taskwarrior
 PORTVERSION=	2.3.0
