@@ -1,5 +1,5 @@
 # Created by: Toni Gundogdu <legatvs@gmail.com>
-# $FreeBSD: multimedia/umph/Makefile 334838 2013-11-25 11:33:54Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	umph
 PORTVERSION=	0.2.5
