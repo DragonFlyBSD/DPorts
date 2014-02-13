@@ -1,5 +1,5 @@
 # Created by: Nadelyaev Stanislav <funkblaster@n11.bmstu.ru>
-# $FreeBSD: audio/icegenerator/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD$
 
 PORTNAME=		icegenerator
 DISTVERSION=		0.5.5-pre2
