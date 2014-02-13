@@ -1,5 +1,5 @@
 # Created by: Aaron Straup Cope <ascope@cpan.org>
-# $FreeBSD: textproc/p5-Bloom-Filter/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	Bloom-Filter
 PORTVERSION=	1.0
