@@ -1,5 +1,5 @@
 # Created by: Joe Horn <joehorn@gmail.com>
-# $FreeBSD: www/pear-twig/Makefile 340616 2014-01-21 15:54:33Z lwhsu $
+# $FreeBSD$
 
 PORTNAME=	twig
 PORTVERSION=	1.15.0
