@@ -1,4 +1,4 @@
-# $FreeBSD: irc/rubygem-cinch/Makefile 336200 2013-12-11 18:49:49Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	cinch
 PORTVERSION=	2.0.11
