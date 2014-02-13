@@ -1,5 +1,5 @@
 # Created by: Frederic Cambus
-# $FreeBSD: editors/tetradraw/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	tetradraw
 PORTVERSION=	2.0.2
