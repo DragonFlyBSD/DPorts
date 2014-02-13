@@ -1,5 +1,5 @@
 # Created by: Eugene Furs <justas@mbank.lv>
-# $FreeBSD: textproc/sgmls/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	sgmls
 PORTVERSION=	1.1.91
