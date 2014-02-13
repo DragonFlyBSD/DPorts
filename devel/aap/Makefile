@@ -1,5 +1,5 @@
 # Created by: Bram Moolenaar <bram@a-a-p.org>
-# $FreeBSD: devel/aap/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	aap
 PORTVERSION=	1.093
