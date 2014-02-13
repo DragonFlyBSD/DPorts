@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
-# $FreeBSD: x11-toolkits/bakery/Makefile 327785 2013-09-20 23:57:47Z bapt $
+# $FreeBSD$
 #   $MCom: ports/x11-toolkits/bakery/Makefile,v 1.16 2009/01/09 22:07:11 kwm Exp $
 
 PORTNAME=	bakery
