@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: textproc/filepp/Makefile 341281 2014-01-26 20:37:49Z mat $
+# $FreeBSD$
 
 PORTNAME=	filepp
 PORTVERSION=	1.8.0
