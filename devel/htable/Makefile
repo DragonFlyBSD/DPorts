@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <frederic@culot.org>
-# $FreeBSD: devel/htable/Makefile 341516 2014-01-28 08:37:45Z bapt $
+# $FreeBSD$
 
 PORTNAME=	htable
 PORTVERSION=	1.2
