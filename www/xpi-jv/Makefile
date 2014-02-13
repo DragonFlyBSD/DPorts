@@ -1,5 +1,5 @@
 # Created by: Norikatsu Shigemura <nork@FreeBSD.org>
-# $FreeBSD: www/xpi-jv/Makefile 341210 2014-01-26 15:11:22Z miwi $
+# $FreeBSD$
 
 PORTNAME=	jv
 PORTVERSION=	0.51
