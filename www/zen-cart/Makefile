@@ -1,5 +1,5 @@
 # Created by: Beech Rintoul <beech@FreeBSD.org>
-# $FreeBSD: www/zen-cart/Makefile 339311 2014-01-10 03:14:45Z tabthorpe $
+# $FreeBSD$
 
 PORTNAME=	zen-cart
 PORTVERSION=	1.3.9h
