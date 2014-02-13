@@ -1,5 +1,5 @@
 # Created by: Alexey Degtyarev <alexey@renatasystems.org>
-# $FreeBSD: archivers/lz4/Makefile 337522 2013-12-26 14:37:37Z bapt $
+# $FreeBSD$
 
 PORTNAME=	lz4
 PORTVERSION=	r101
