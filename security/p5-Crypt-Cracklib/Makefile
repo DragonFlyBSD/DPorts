@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: security/p5-Crypt-Cracklib/Makefile 332949 2013-11-06 07:39:31Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Crypt-Cracklib
 PORTVERSION=	1.7
