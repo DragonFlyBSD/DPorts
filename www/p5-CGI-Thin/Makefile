@@ -1,5 +1,5 @@
 # Created by: Phil Phillips
-# $FreeBSD: www/p5-CGI-Thin/Makefile 338771 2014-01-05 13:37:37Z az $
+# $FreeBSD$
 
 PORTNAME=	CGI-Thin
 PORTVERSION=	0.52
