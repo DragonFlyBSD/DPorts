@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: graphics/grx/Makefile 342182 2014-02-01 16:16:16Z miwi $
+# $FreeBSD$
 
 PORTNAME=	grx
 PORTVERSION=	2.4.9
