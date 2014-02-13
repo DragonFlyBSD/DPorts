@@ -1,5 +1,5 @@
 # Created by: Francisco Gomez <francisco@gomezmarin.com>
-# $FreeBSD: mail/uebimiau/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	uebimiau
 PORTVERSION=	2.7.11
