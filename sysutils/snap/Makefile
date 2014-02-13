@@ -1,5 +1,5 @@
 # Created by: Wu Chin-Hao <wchunhao@cs.nctu.edu.tw>
-# $FreeBSD: sysutils/snap/Makefile 327772 2013-09-20 23:05:58Z bapt $
+# $FreeBSD$
 
 PORTNAME=	snap
 DISTVERSION=	1.01
