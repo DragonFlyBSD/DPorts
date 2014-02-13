@@ -1,5 +1,5 @@
 # Created by: Peter Schuller <peter.schuller@infidyne.com>
-# $FreeBSD: textproc/doc-mode.el/Makefile 341239 2014-01-26 16:22:29Z mat $
+# $FreeBSD$
 
 PORTNAME=	doc-mode.el
 PORTVERSION=	1.1
