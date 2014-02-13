@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: devel/p5-Lingua-JA-Fold/Makefile 332046 2013-10-30 02:52:46Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Lingua-JA-Fold
 PORTVERSION=	0.08
