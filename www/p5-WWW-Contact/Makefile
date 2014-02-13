@@ -1,5 +1,5 @@
 # Created by: Fred Cox
-# $FreeBSD: www/p5-WWW-Contact/Makefile 338776 2014-01-05 13:53:37Z az $
+# $FreeBSD$
 
 PORTNAME=	WWW-Contact
 PORTVERSION=	0.47
