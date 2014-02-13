@@ -1,5 +1,5 @@
 # Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-# $FreeBSD: dns/p5-POE-Component-Server-DNS/Makefile 332593 2013-11-03 07:46:27Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	POE-Component-Server-DNS
 PORTVERSION=	0.30
