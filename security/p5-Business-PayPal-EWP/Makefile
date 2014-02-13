@@ -1,5 +1,5 @@
 # Created by: Alfred Perlstein
-# $FreeBSD: security/p5-Business-PayPal-EWP/Makefile 341825 2014-01-30 09:42:48Z az $
+# $FreeBSD$
 
 PORTNAME=	Business-PayPal-EWP
 PORTVERSION=	1.03
