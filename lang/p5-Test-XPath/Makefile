@@ -1,4 +1,4 @@
-# $FreeBSD: lang/p5-Test-XPath/Makefile 342156 2014-02-01 14:42:45Z miwi $
+# $FreeBSD$
 
 PORTNAME=	Test-XPath
 PORTVERSION=	0.16
