@@ -1,5 +1,5 @@
 # Created by: Jason Helfman <jgh@FreeBSD.org>
-# $FreeBSD: sysutils/screenfetch/Makefile 333186 2013-11-08 07:37:04Z jgh $
+# $FreeBSD$
 
 PORTNAME=	screenFetch
 PORTVERSION=	3.2.0
