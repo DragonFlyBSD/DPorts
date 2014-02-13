@@ -1,4 +1,4 @@
-# $FreeBSD: games/bzflag/Makefile 327730 2013-09-20 17:36:33Z bapt $
+# $FreeBSD$
 
 PORTNAME=	bzflag
 PORTVERSION=	2.4.2
