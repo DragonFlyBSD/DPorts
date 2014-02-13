@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@FreeBSD.org>
-# $FreeBSD: dns/skadns/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	skadns
 PORTVERSION=	0.25
@@ -8,6 +8,9 @@ MASTER_SITES=	http://www.skarnet.org/software/${PORTNAME}/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Asynchronous DNS client software and library
+
+DEPRECATED=	No more public distfiles
+EXPIRATION_DATE=	2014-03-07
 
 BUILD_DEPENDS=	${LOCALBASE}/lib/skalibs/libstddjb.a:${PORTSDIR}/devel/skalibs
 
