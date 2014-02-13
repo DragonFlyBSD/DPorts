@@ -1,5 +1,5 @@
 # Created by: Romain Tartiere <romain@blogreen.org>
-# $FreeBSD: mail/jmba/Makefile 342322 2014-02-02 16:02:32Z miwi $
+# $FreeBSD$
 
 PORTNAME=	jmba
 PORTVERSION=	0.5.5
