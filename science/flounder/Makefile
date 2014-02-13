@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: science/flounder/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD$
 
 PORTNAME=	flounder
 PORTVERSION=	0.40
