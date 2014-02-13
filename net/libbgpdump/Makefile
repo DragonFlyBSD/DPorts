@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: net/libbgpdump/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	libbgpdump
 PORTVERSION=	1.4.99.13
