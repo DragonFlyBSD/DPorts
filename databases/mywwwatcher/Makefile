@@ -1,5 +1,5 @@
 # Created by: Petr Macek <pm@kostax.cz>
-# $FreeBSD: databases/mywwwatcher/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mywwwatcher
 PORTVERSION=	3.2
