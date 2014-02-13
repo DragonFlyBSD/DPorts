@@ -1,9 +1,9 @@
 # Created by: Mark Kane <mark@mkproductions.org>
-# $FreeBSD: audio/streamtranscoder/Makefile 338547 2014-01-03 15:26:06Z adamw $
+# $FreeBSD$
 
 PORTNAME=	streamtranscoder
 PORTVERSION=	1.2.8
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	audio
 MASTER_SITES=	http://www.oddsock.org/tools/streamTranscoder/
 
@@ -23,6 +23,8 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 PLIST_FILES=	bin/streamTranscoder
 PORTDOCS=	AUTHORS README
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
