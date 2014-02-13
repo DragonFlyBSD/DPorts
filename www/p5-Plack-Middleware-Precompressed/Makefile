@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-Plack-Middleware-Precompressed/Makefile 338784 2014-01-05 15:30:10Z az $
+# $FreeBSD$
 
 PORTNAME=	Plack-Middleware-Precompressed
 PORTVERSION=	1.101
