@@ -1,5 +1,5 @@
 # Created by: Robert Archer <freebsd@deathbeforedecaf.net>
-# $FreeBSD: security/ipfwcount/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	ipfwcount
 PORTVERSION=	0.2.1
