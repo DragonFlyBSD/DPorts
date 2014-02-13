@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: misc/p5-Geo-Coder-Many/Makefile 336196 2013-12-11 18:49:26Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Geo-Coder-Many
 PORTVERSION=	0.45
