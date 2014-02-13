@@ -1,4 +1,4 @@
-# $FreeBSD: devel/bzapi/Makefile 330676 2013-10-17 21:26:22Z ohauer $
+# $FreeBSD$
 
 PORTNAME=	bzapi
 DISTVERSION=	165:82e75bdd00be
