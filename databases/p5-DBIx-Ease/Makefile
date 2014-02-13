@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: databases/p5-DBIx-Ease/Makefile 332592 2013-11-03 06:53:54Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	DBIx-Ease
 PORTVERSION=	0.07
