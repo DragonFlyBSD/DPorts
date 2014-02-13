@@ -1,5 +1,5 @@
 # Created by: Dennis Herrmann <dhn@FreeBSD.org>
-# $FreeBSD: sysutils/rubygem-teamocil/Makefile 340905 2014-01-24 14:55:44Z miwi $
+# $FreeBSD$
 
 PORTNAME=	teamocil
 PORTVERSION=	0.4.4
