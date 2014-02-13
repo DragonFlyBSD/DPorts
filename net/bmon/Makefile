@@ -1,5 +1,5 @@
 # Created by: Jon Nistor <nistor@snickers.org>
-# $FreeBSD: net/bmon/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	bmon
 PORTVERSION=	2.1.0
