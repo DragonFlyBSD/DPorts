@@ -1,5 +1,5 @@
 # Created by: Sébastien Santoro <dereckson@gmail.com>
-# $FreeBSD: textproc/xmlgen/Makefile 339369 2014-01-10 16:40:31Z gahr $
+# $FreeBSD$
 
 PORTNAME=	xmlgen
 PORTVERSION=	1.4
