@@ -1,5 +1,5 @@
 # Created by: Franz Klammer <klammer@webonaut.com>
-# $FreeBSD: graphics/png2ico/Makefile 334849 2013-11-25 13:35:28Z ak $
+# $FreeBSD$
 
 PORTNAME=	png2ico
 PORTVERSION=	2002.12.08
