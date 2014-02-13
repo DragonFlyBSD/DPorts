@@ -1,5 +1,5 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: security/fpm2/Makefile 330553 2013-10-16 21:59:31Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	fpm2
 PORTVERSION=	0.79
