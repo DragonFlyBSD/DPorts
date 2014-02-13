@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: textproc/cwtext/Makefile 338195 2013-12-30 23:13:43Z db $
+# $FreeBSD$
 
 PORTNAME=	cwtext
 PORTVERSION=	0.96
