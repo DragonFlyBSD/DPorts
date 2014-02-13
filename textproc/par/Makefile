@@ -1,5 +1,5 @@
 # Created by: Mark R V Murray <mark@grondar.za>
-# $FreeBSD: textproc/par/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	par
 PORTVERSION=	1.52
@@ -8,21 +8,21 @@ CATEGORIES=	textproc
 MASTER_SITES=	http://www.nicemice.net/par/
 DISTNAME=	Par${PORTVERSION:S|.||}
 
-MAINTAINER=	mark@grondar.za
+MAINTAINER=	markm@FreeBSD.org
 COMMENT=	Paragraph reformatter for email
 
 CONFLICTS=	quake-par-[0-9]*
 
 ALL_TARGET=	#
 MAN1=		par.1
-PLIST_FILES=	bin/par
+PLIST_FILES=	bin/par \
+		man/man1/par.1.gz
 
-NO_STAGE=	yes
 do-configure:
 	(cd ${WRKSRC}; ${CP} protoMakefile Makefile)
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/par ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/par.1 ${MANPREFIX}/man/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/par ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/par.1 ${STAGEDIR}${MANPREFIX}/man/man1
 
 .include <bsd.port.mk>
