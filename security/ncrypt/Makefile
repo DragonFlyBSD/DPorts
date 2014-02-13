@@ -1,5 +1,5 @@
 # Created by: Frank Laszlo <laszlof@vonostingroup.com>
-# $FreeBSD: security/ncrypt/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ncrypt
 PORTVERSION=	0.7.0
