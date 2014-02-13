@@ -1,5 +1,5 @@
 # Created by: Norikatsu Shigemura <nork@FreeBSD.org>
-# $FreeBSD: www/xpi-firemobilesimulator/Makefile 341202 2014-01-26 15:08:55Z miwi $
+# $FreeBSD$
 
 PORTNAME=	firemobilesimulator
 PORTVERSION=	1.2.2
