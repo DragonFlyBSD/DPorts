@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/cvsd/Makefile 335179 2013-11-29 14:14:26Z wg $
+# $FreeBSD$
 
 PORTNAME=	cvsd
 PORTVERSION=	1.0.18
