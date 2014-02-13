@@ -1,5 +1,5 @@
 # Created by: rpsfa@rit.edu
-# $FreeBSD: devel/rubygem-simple_form/Makefile 332042 2013-10-30 02:46:01Z swills $
+# $FreeBSD$
 
 PORTNAME=		simple_form
 PORTVERSION=		2.1.0
