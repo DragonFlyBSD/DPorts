@@ -1,4 +1,4 @@
-# $FreeBSD: misc/xiphos/Makefile 339992 2014-01-16 21:13:20Z tabthorpe $
+# $FreeBSD$
 
 PORTNAME=	xiphos
 PORTVERSION=	3.1.6
