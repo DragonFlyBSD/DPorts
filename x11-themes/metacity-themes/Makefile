@@ -1,5 +1,5 @@
 # Created by: Remington Lang <MrL0L@charter.net>
-# $FreeBSD: x11-themes/metacity-themes/Makefile 333898 2013-11-15 17:55:22Z sunpoet $
+# $FreeBSD$
 
 # Port logic stolen from x11-themes/kde-icons-noia by
 # lioux@.
