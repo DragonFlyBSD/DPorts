@@ -1,5 +1,5 @@
 # Created by: Robin Gruyters <r.gruyters@yirdis.nl>
-# $FreeBSD: www/py-prewikka/Makefile 339634 2014-01-13 21:00:02Z rene $
+# $FreeBSD$
 
 PORTNAME=	prewikka
 PORTVERSION=	1.0.1p1
@@ -16,6 +16,8 @@ LIB_DEPENDS=	libprelude.so:${PORTSDIR}/security/libprelude \
 
 USE_PYTHON=		2
 USE_PYDISTUTILS=	yes
+
+OPTIONS_DEFINE=	NLS 
 
 .include <bsd.port.options.mk>
 
