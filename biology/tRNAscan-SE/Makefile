@@ -1,5 +1,5 @@
 # Created by: chuynh@biolateral.com.au
-# $FreeBSD: biology/tRNAscan-SE/Makefile 327709 2013-09-20 15:55:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	tRNAscan-SE
 PORTVERSION=	1.23
