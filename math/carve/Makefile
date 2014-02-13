@@ -1,9 +1,9 @@
 # Created by: gahr
-# $FreeBSD: math/carve/Makefile 336260 2013-12-12 13:01:40Z bapt $
+# $FreeBSD$
 
 PORTNAME=	carve
 PORTVERSION=	1.4.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 EXTRACT_SUFX=	.tgz
