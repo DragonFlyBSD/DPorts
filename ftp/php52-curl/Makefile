@@ -1,5 +1,5 @@
 # Created by: Alex Keda <admin@lissyara.su>
-# $FreeBSD: ftp/php52-curl/Makefile 327729 2013-09-20 17:23:18Z bapt $
+# $FreeBSD$
 
 CATEGORIES=	ftp
 PORTREVISION=	15
