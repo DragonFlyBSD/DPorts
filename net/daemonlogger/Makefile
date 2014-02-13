@@ -1,4 +1,4 @@
-# $FreeBSD: net/daemonlogger/Makefile 327755 2013-09-20 22:10:23Z bapt $
+# $FreeBSD$
 
 PORTNAME=	daemonlogger
 PORTVERSION=	1.2.1
