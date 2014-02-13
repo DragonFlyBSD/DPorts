@@ -1,5 +1,5 @@
 # Created by: Rui Paulo <rpaulo@FreeBSD.org>
-# $FreeBSD: devel/p5-App-SVN-Bisect/Makefile 331780 2013-10-27 15:12:16Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	App-SVN-Bisect
 PORTVERSION=	1.1
