@@ -1,5 +1,5 @@
 # Created by: Piet Delport <pjd@303.za.net>
-# $FreeBSD: databases/mrtg-mysql-load/Makefile 327717 2013-09-20 16:13:47Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mrtg-mysql-load
 PORTVERSION=	1.02
