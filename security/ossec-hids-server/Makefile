@@ -1,5 +1,5 @@
 # Created by: Valerio Daelli <valerio.daelli@gmail.com>
-# $FreeBSD: security/ossec-hids-server/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	ossec-hids
 PORTVERSION=	2.7
