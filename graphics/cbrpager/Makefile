@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: graphics/cbrpager/Makefile 338402 2014-01-01 23:40:47Z nemysis $
+# $FreeBSD$
 
 PORTNAME=	cbrpager
 PORTVERSION=	0.9.22
