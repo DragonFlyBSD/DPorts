@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: devel/codeworker/Makefile 337003 2013-12-20 12:26:23Z pawel $
+# $FreeBSD$
 
 PORTNAME=	codeworker
 PORTVERSION=	4.5.3
