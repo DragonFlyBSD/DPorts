@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: devel/p5-File-HomeDir-PathClass/Makefile 333761 2013-11-14 14:23:17Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	File-HomeDir-PathClass
 PORTVERSION=	1.112.060
