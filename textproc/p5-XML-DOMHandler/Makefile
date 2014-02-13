@@ -1,5 +1,5 @@
 # Created by: Stefan Pauly <stefan@fh-mainz.de>
-# $FreeBSD: textproc/p5-XML-DOMHandler/Makefile 341765 2014-01-29 17:46:33Z az $
+# $FreeBSD$
 
 PORTNAME=	XML-DOMHandler
 PORTVERSION=	1.0
