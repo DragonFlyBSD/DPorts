@@ -1,4 +1,4 @@
-# $FreeBSD: x11/urxvt-perls/Makefile 327777 2013-09-20 23:43:19Z bapt $
+# $FreeBSD$
 
 PORTNAME=	urxvt-perls
 PORTVERSION=	2.0
