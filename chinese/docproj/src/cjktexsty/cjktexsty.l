@@ -33,7 +33,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: chinese/docproj/src/cjktexsty/cjktexsty.l 340851 2014-01-23 19:55:14Z mat $");
+__FBSDID("$FreeBSD: head/chinese/docproj/src/cjktexsty/cjktexsty.l 340851 2014-01-23 19:55:14Z mat $");
 
 #include <err.h>
 #include <stdio.h>

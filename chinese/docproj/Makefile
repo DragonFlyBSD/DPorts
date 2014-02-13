@@ -1,5 +1,5 @@
 # Created by: Xin LI <delphij@FreeBSD.org>
-# $FreeBSD: chinese/docproj/Makefile 327713 2013-09-20 16:01:22Z bapt $
+# $FreeBSD$
 
 PORTNAME=	docproj
 PORTVERSION=	0.1.20060303
