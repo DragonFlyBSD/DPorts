@@ -1,5 +1,5 @@
 # Created by: Satoshi TAOKA
-# $FreeBSD: x11/xcoloredit/Makefile 336395 2013-12-13 23:49:07Z bapt $
+# $FreeBSD$
 
 PORTNAME=	xcoloredit
 PORTVERSION=	1.2
