@@ -1,5 +1,5 @@
 # Created by: Espen Tagestad <espen@tagestad.no>
-# $FreeBSD: www/p5-CGI-Application-Plugin-HTDot/Makefile 338769 2014-01-05 13:31:10Z az $
+# $FreeBSD$
 
 PORTNAME=	CGI-Application-Plugin-HTDot
 PORTVERSION=	0.07
