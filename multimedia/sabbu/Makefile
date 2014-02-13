@@ -1,4 +1,4 @@
-# $FreeBSD: multimedia/sabbu/Makefile 335604 2013-12-04 05:53:40Z dinoex $
+# $FreeBSD$
 
 PORTNAME=	sabbu
 PORTVERSION=	0.3.0
