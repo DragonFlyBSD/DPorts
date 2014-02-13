@@ -1,5 +1,5 @@
 # Created by: Dmitry Frolov <frolov@riss-telecom.ru>
-# $FreeBSD: sysutils/tw_cli/Makefile 340368 2014-01-20 07:32:06Z bapt $
+# $FreeBSD$
 
 PORTNAME=	tw_cli
 PORTVERSION=	9.5.4

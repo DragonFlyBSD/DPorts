@@ -4,7 +4,7 @@
 #
 # Authors: Bjoern A. Zeeb, Dmitry Frolov
 #
-# $FreeBSD: sysutils/tw_cli/files/407.status-3ware-raid.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/sysutils/tw_cli/files/407.status-3ware-raid.in 340872 2014-01-24 00:14:07Z mat $
 #
 
 # If there is a global system configuration file, suck it in.
