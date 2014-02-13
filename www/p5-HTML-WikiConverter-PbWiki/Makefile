@@ -1,5 +1,5 @@
 # Created by: chinsan <chinsan.tw@gmail.com>
-# $FreeBSD: www/p5-HTML-WikiConverter-PbWiki/Makefile 332678 2013-11-04 09:57:54Z az $
+# $FreeBSD$
 
 PORTNAME=	HTML-WikiConverter-PbWiki
 PORTVERSION=	0.01
