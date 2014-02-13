@@ -1,5 +1,5 @@
 # Created by: Alexey V. Degtyarev <alexey@renatasystems.org>
-# $FreeBSD: www/trac-wikigoodies/Makefile 341188 2014-01-26 14:33:08Z miwi $
+# $FreeBSD$
 
 PORTNAME=	wikigoodies
 PORTVERSION=	0.3.3522
