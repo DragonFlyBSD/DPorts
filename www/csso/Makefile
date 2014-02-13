@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: www/csso/Makefile 330937 2013-10-19 21:27:26Z nivit $
+# $FreeBSD$
 
 PORTNAME=	csso
 PORTVERSION=	1.3.9
