@@ -1,5 +1,5 @@
 # Created by: Johannes Meixner <xmj@chaot.net>
-# $FreeBSD: www/py-django-crispy-forms/Makefile 342248 2014-02-02 08:10:14Z koobs $
+# $FreeBSD$
 
 PORTNAME=	crispy-forms
 PORTVERSION=	1.4.0
