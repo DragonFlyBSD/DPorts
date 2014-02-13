@@ -1,5 +1,5 @@
 # Created by: wosch
-# $FreeBSD: textproc/info2html/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	info2html
 PORTVERSION=	2.0
