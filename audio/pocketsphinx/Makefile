@@ -1,5 +1,5 @@
 # Created by: Richard Neese
-# $FreeBSD: audio/pocketsphinx/Makefile 337922 2013-12-28 21:47:21Z antoine $
+# $FreeBSD$
 
 PORTNAME=	pocketsphinx
 PORTVERSION=	0.8
