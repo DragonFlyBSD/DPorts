@@ -1,5 +1,5 @@
 # Created by: Zhihao Yuan <lichray@gmail.com>
-# $FreeBSD: chinese/fcitx-chewing/Makefile 339153 2014-01-08 16:12:38Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	fcitx-chewing
 PORTVERSION=	0.1.3
