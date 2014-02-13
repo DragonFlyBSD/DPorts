@@ -1,5 +1,5 @@
 # Created by: Gerrit Beine <tux@pinguru.net>
-# $FreeBSD: deskutils/vym/Makefile 335415 2013-12-01 17:53:13Z makc $
+# $FreeBSD$
 
 PORTNAME=	vym
 PORTVERSION=	2.2.4
