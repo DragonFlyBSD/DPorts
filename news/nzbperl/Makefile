@@ -1,5 +1,5 @@
 # Created by: Tim Welch <ports@thepentagon.org>
-# $FreeBSD: news/nzbperl/Makefile 327759 2013-09-20 22:31:15Z bapt $
+# $FreeBSD$
 
 PORTNAME=	nzbperl
 PORTVERSION=	0.6.8
