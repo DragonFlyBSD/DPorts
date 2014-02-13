@@ -1,5 +1,5 @@
 # Created by: Daniel Gerzo <danger@FreeBSD.org>
-# $FreeBSD: textproc/sphinxsearch-devel/Makefile 335183 2013-11-29 14:53:25Z danger $
+# $FreeBSD$
 
 # Note: the Sphinx Storage Engine MySQL plugin is not supported by
 # this port.  You need a patched version of mysql server for that.
