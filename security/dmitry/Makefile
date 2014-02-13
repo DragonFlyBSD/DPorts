@@ -1,5 +1,5 @@
 # Created by: Vaida Bogdan
-# $FreeBSD: security/dmitry/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	dmitry
 PORTVERSION=	1.3a
