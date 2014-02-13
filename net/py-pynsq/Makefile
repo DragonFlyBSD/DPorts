@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: net/py-pynsq/Makefile 335316 2013-11-30 18:27:05Z koobs $
+# $FreeBSD$
 
 PORTNAME=	pynsq
 PORTVERSION=	0.5.1
