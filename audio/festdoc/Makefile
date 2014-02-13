@@ -1,5 +1,5 @@
 # Created by: trevor
-# $FreeBSD: audio/festdoc/Makefile 327706 2013-09-20 14:36:35Z bapt $
+# $FreeBSD$
 
 PORTNAME=	festdoc
 PORTVERSION=	1.4.0.1
