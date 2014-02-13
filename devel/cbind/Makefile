@@ -1,5 +1,5 @@
 # Created by: David Holm <david@realityrift.com>
-# $FreeBSD: devel/cbind/Makefile 341410 2014-01-27 14:32:46Z bapt $
+# $FreeBSD$
 
 PORTNAME=	cbind
 PORTVERSION=	6
