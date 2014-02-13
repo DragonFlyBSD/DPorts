@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: devel/obfuscatejs/files/obfuscatejs.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/devel/obfuscatejs/files/obfuscatejs.in 340872 2014-01-24 00:14:07Z mat $
 if [ "$1" != "Obfuscator" -a "$1" != "WeightWatch" -a "$1" != "BuildUtils" ]; then
     echo "Usage:"
     echo "obfuscatejs Obfuscator {src} {dest} {prefix}"
