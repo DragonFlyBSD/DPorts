@@ -1,5 +1,5 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD: astro/xglobe/Makefile 337253 2013-12-23 14:17:01Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	xglobe
 PORTVERSION=	0.5
