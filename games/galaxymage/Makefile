@@ -1,5 +1,5 @@
 # Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-# $FreeBSD: games/galaxymage/Makefile 335877 2013-12-08 12:04:07Z mva $
+# $FreeBSD$
 
 PORTNAME=	galaxymage
 PORTVERSION=	0.3.0
@@ -19,6 +19,8 @@ USES=		gettext twisted
 NO_BUILD=	yes
 
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
