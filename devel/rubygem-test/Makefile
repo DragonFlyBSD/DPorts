@@ -1,5 +1,5 @@
 # Created by: Steve Wills <swills@FreeBSD.org>
-# $FreeBSD: devel/rubygem-test/Makefile 332043 2013-10-30 02:47:06Z swills $
+# $FreeBSD$
 
 PORTNAME=	test
 PORTVERSION=	0.4.3
