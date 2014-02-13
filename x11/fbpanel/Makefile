@@ -1,5 +1,5 @@
 # Created by: Tobias Roth <ports@fsck.ch>
-# $FreeBSD: x11/fbpanel/Makefile 333664 2013-11-13 08:47:51Z bsam $
+# $FreeBSD$
 
 PORTNAME=	fbpanel
 PORTVERSION=	6.1
