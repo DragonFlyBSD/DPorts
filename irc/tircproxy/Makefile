@@ -1,5 +1,5 @@
 # Created by: Eugeny Kuzakov <CoreDumped@CoreDumped.null.ru>
-# $FreeBSD: irc/tircproxy/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	tircproxy
 PORTVERSION=	0.4.5
@@ -12,6 +12,8 @@ COMMENT=	IRC proxy server
 
 WRKSRC=		${WRKDIR}/tircproxy-0.4
 GNU_CONFIGURE=	YES
+
+OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
 
