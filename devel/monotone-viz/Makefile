@@ -1,5 +1,5 @@
 # Created by: Tarasov Alexey <master@preved.cn>
-# $FreeBSD: devel/monotone-viz/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 
 PORTNAME=	monotone-viz
 PORTVERSION=	1.0.2
