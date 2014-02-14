@@ -1,5 +1,5 @@
 # Created by: Mark A. Wicks <mwicks@kettering.edu>
-# $FreeBSD: devel/monotone/Makefile 341070 2014-01-25 18:06:08Z madpilot $
+# $FreeBSD$
 
 PORTNAME=	monotone
 PORTVERSION=	1.0
@@ -56,6 +56,8 @@ PLIST_FILES+=	man/man1/mtn.1.gz \
 		man/man1/mtnopt.1.gz
 .endif
 PORTDOCS=	*
+
+OPTIONS_DEFINE=	DOCS NLS 
 
 .include <bsd.port.options.mk>
 
