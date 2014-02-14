@@ -1,8 +1,9 @@
 # Created by: Damian Gerow
-# $FreeBSD: security/openconnect/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	openconnect
-PORTVERSION=	5.01
+PORTVERSION=	5.03
+PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.infradead.org/pub/openconnect/ \
 		http://mirrors.rit.edu/zi/
@@ -13,7 +14,7 @@ COMMENT=	Client for Cisco's AnyConnect SSL VPN
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING.LGPL
 
-LIB_DEPENDS=	xml2:${PORTSDIR}/textproc/libxml2
+LIB_DEPENDS=	libxml2.so:${PORTSDIR}/textproc/libxml2
 RUN_DEPENDS=	vpnc-script:${PORTSDIR}/sysutils/vpnc-scripts
 
 GNU_CONFIGURE=	yes
@@ -36,7 +37,6 @@ OPTIONS_DEFINE=	PROXY GNUTLS
 PROXY_DESC=	Enable automatic proxy configuratio via libproxy
 GNUTLS_DESC=	Use GnuTLS instead of OpenSSL(EXPERIMENTAL)
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGNUTLS}
@@ -55,8 +55,8 @@ LIB_DEPENDS+=	proxy:${PORTSDIR}/net/libproxy
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_MAN} ${WRKSRC}/TODO ${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_MAN} ${WRKSRC}/TODO ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.post.mk>
