@@ -1,4 +1,4 @@
-# $FreeBSD: devel/p5-CHI/Makefile 339224 2014-01-09 13:14:30Z az $
+# $FreeBSD$
 
 PORTNAME=	CHI
 PORTVERSION=	0.580
