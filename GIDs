@@ -1,4 +1,4 @@
-# $FreeBSD: head/GIDs 342481 2014-02-04 00:52:58Z amdmi3 $
+# $FreeBSD: head/GIDs 344310 2014-02-14 20:20:14Z zi $
 # Please keep this file sorted by GID!
 operator:*:5:amanda
 mail:*:6:postfix,clamav
@@ -140,6 +140,7 @@ prelude:*:281:
 spread:*:282:
 devmon:*:283:
 vnstat:*:284:
+exaddos:*:285:exaddos
 backuppc:*:300:
 _sphinx:*:312:
 dkfilter:*:325:
@@ -170,6 +171,7 @@ pgbouncer:*:534:
 redis:*:535:
 _flowd:*:542:
 ejabberd:*:543:
+knot:*:553:
 qtss:*:554:
 ircdru:*:555:
 messagebus:*:556:

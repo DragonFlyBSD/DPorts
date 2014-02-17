@@ -181,16 +181,6 @@ RUBY_PORTREVISION=	1
 RUBY_PORTEPOCH=		1
 RUBY_PATCHLEVEL=	484
 
-RUBY_VERSION?=		${RUBY_RELVERSION}.${RUBY_PATCHLEVEL}
-RUBY_DISTVERSION?=	${RUBY_RELVERSION}-p${RUBY_PATCHLEVEL}
-
-RUBY_WRKSRC=		${WRKDIR}/ruby-${RUBY_DISTVERSION}
-
-RUBY_CONFIGURE_ARGS+=	--with-rubyhdrdir="${PREFIX}/include/ruby-1.9/" \
-			--with-rubylibprefix="${PREFIX}/lib/ruby" \
-			--docdir="${RUBY_DOCDIR}" \
-			--with-soname=ruby19
-
 #
 # PLIST_SUB helpers
 #
@@ -206,22 +196,11 @@ RUBY_PORTREVISION=	4
 RUBY_PORTEPOCH=		1
 RUBY_PATCHLEVEL=	353
 
-RUBY_VERSION?=		${RUBY_RELVERSION}.${RUBY_PATCHLEVEL}
-RUBY_DISTVERSION?=	${RUBY_RELVERSION}-p${RUBY_PATCHLEVEL}
-
-RUBY_WRKSRC=		${WRKDIR}/ruby-${RUBY_DISTVERSION}
-
-RUBY_CONFIGURE_ARGS+=	--with-rubyhdrdir="${PREFIX}/include/ruby-2.0/" \
-			--with-rubylibprefix="${PREFIX}/lib/ruby" \
-			--docdir="${RUBY_DOCDIR}" \
-			--with-soname=ruby20
-
 #
 # PLIST_SUB helpers
 #
 RUBY19=			"@comment "
 RUBY20=			""
-
 
 . else
 #
@@ -230,6 +209,16 @@ RUBY20=			""
 IGNORE=	Only ruby 1.9 and 2.0 are supported
 . endif
 .endif # defined(RUBY_VER)
+
+RUBY_VERSION?=		${RUBY_RELVERSION}.${RUBY_PATCHLEVEL}
+RUBY_DISTVERSION?=	${RUBY_RELVERSION}-p${RUBY_PATCHLEVEL}
+
+RUBY_WRKSRC=		${WRKDIR}/ruby-${RUBY_DISTVERSION}
+
+RUBY_CONFIGURE_ARGS+=	--with-rubyhdrdir="${PREFIX}/include/ruby-${RUBY_VER}/" \
+			--with-rubylibprefix="${PREFIX}/lib/ruby" \
+			--docdir="${RUBY_DOCDIR}" \
+			--with-soname=ruby${RUBY_SUFFIX}
 
 CONFIGURE_TARGET?=	${ARCH}-portbld-${OPSYS:tl}${OSREL:C/\..*//}
 
@@ -344,7 +333,7 @@ PLIST_SUB+=		${PLIST_RUBY_DIRS:C,DIR="(${LOCALBASE}|${PREFIX})/,DIR=",} \
 			RUBY_NAME="${RUBY_NAME}" \
 			RUBY_DEFAULT_SUFFIX="${RUBY_DEFAULT_SUFFIX}" \
 			RUBY19=${RUBY19} \
-			RUBY20=${RUBY20} \
+			RUBY20=${RUBY20}
 
 .if defined(USE_RUBY_RDOC)
 MAKE_ENV+=	RUBY_RDOC=${RUBY_RDOC}

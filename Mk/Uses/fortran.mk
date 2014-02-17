@@ -21,6 +21,7 @@ RUN_DEPENDS+=	${LOCALBASE}/gcc-aux/bin/gfortran:${PORTSDIR}/lang/gcc-aux
 F77=		${LOCALBASE}/gcc-aux/bin/gfortran
 FC=		${LOCALBASE}/gcc-aux/bin/gfortran
 FFLAGS+=	-Wl,-rpath=${LOCALBASE}/gcc-aux/lib
+FCLAGS+=	-Wl,-rpath=${LOCALBASE}/gcc-aux/lib
 LDFLAGS+=	-Wl,-rpath=${LOCALBASE}/gcc-aux/lib \
 		-L${LOCALBASE}/gcc-aux/lib
 .elif ${fortran_ARGS} == ifort
@@ -32,7 +33,7 @@ FC=		${LOCALBASE}/intel_fc_80/bin/ifort
 IGNORE=		USES=fortran: invalid arguments: ${fortran_ARGS}
 .endif
 
-CONFIGURE_ENV+=	F77="${F77}" FC="${FC}" FFLAGS="${FFLAGS}"
-MAKE_ENV+=	F77="${F77}" FC="${FC}" FFLAGS="${FFLAGS}"
+CONFIGURE_ENV+=	F77="${F77}" FC="${FC}" FFLAGS="${FFLAGS}" FCFLAGS="${FCFLAGS}"
+MAKE_ENV+=	F77="${F77}" FC="${FC}" FFLAGS="${FFLAGS}" FCFLAGS="${FCFLAGS}"
 
 .endif

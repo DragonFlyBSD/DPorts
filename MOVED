@@ -1,7 +1,7 @@
 #
 # MOVED -- A list of (recently) moved or removed ports
 #
-# $FreeBSD: head/MOVED 343681 2014-02-10 20:48:33Z eadler $
+# $FreeBSD: head/MOVED 344589 2014-02-16 15:57:11Z danilo $
 #
 # Each entry consists of a single line containing the following four
 # fields in the order named, separated with the pipe (`|') character:
@@ -1506,3 +1506,10 @@ www/nscache||2014-02-07|Netscape doesn't exists anymore
 audio/bebocd||2014-02-08|Has expired: abandoned by mainstream
 www/runsomebrowser|www/webbrowser|2014-02-09|Name changed
 irc/trickyirc||2014-02-10|Abandonware, segfaults, no releases in 15 years
+databases/p5-DBD-mysql55|databases/p5-DBD-mysql|2014-02-12|If you need a different default MYSQL version, use DEFAULT_VERSIONS
+databases/p5-DBD-mysql56|databases/p5-DBD-mysql|2014-02-12|If you need a different default MYSQL version, use DEFAULT_VERSIONS
+textproc/p5-ElasticSearch|textproc/p5-ElasticSearch-legacy|2014-02-12|This version is depricated in favour of the offical client
+x11-fonts/cosmic-sans-neue-mono|x11-fonts/fantasque-sans-mono|2014-02-13|Renamed upstream
+mail/zmailer||2014-02-13|Broken since at least last August
+lang/gcc34|lang/gcc46|2014-02-13|Superseded by GCC 4.6 or later
+x11-toolkits/sakura|x11/sakura|2014-02-16|Moved to a better category
