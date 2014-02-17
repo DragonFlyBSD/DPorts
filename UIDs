@@ -1,4 +1,4 @@
-# $FreeBSD: head/UIDs 344319 2014-02-14 23:45:06Z zi $
+# $FreeBSD$
 # Please keep this file sorted by UID!
 operator:*:2:5::0:0:System &:/:/usr/sbin/nologin
 smmsp:*:25:25::0:0:Sendmail Submission User:/var/spool/clientmqueue:/usr/sbin/nologin

@@ -1,4 +1,4 @@
-# $FreeBSD: head/GIDs 344310 2014-02-14 20:20:14Z zi $
+# $FreeBSD$
 # Please keep this file sorted by GID!
 operator:*:5:amanda
 mail:*:6:postfix,clamav
