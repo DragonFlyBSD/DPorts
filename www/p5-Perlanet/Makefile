@@ -1,5 +1,5 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD: www/p5-Perlanet/Makefile 333117 2013-11-07 15:22:45Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	Perlanet
 PORTVERSION=	0.56
