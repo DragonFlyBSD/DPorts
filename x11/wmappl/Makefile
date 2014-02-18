@@ -19,10 +19,6 @@ GNU_CONFIGURE=	yes
 USE_XORG=	xpm x11 xext sm ice
 MAKE_ENV=	DATADIR="${DATADIR}"
 
-.if defined(.PARSEDIR)
-USES+=		gmake
-.endif
-
 OPTIONS_DEFINE=	DOCS 
 
 .include <bsd.port.options.mk>
