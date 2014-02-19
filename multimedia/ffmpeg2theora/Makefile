@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@FreeBSD.org>
-# $FreeBSD: multimedia/ffmpeg2theora/Makefile 331860 2013-10-28 14:37:33Z wg $
+# $FreeBSD$
 
 PORTNAME=	ffmpeg2theora
 PORTVERSION=	0.29
