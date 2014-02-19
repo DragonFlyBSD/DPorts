@@ -26,6 +26,7 @@ GNUstep/Local/Library/Headers/Performance/GSThreadPool.h
 GNUstep/Local/Library/Headers/Performance/GSThroughput.h
 GNUstep/Local/Library/Headers/Performance/GSTicker.h
 GNUstep/Local/Library/Libraries/libPerformance.so
+GNUstep/Local/Library/Libraries/libPerformance.so.0.4
 GNUstep/Local/Library/Libraries/libPerformance.so.0.4.0
 libdata/ldconfig/performance
 @dirrmtry GNUstep/Local/Library/Headers/Performance
