@@ -777,6 +777,7 @@ GNUstep/System/Library/Libraries/gnustep-gui/Versions/%%BASEVERSION%%/Resources/
 GNUstep/System/Library/Libraries/gnustep-gui/Versions/%%BASEVERSION%%/Resources/Spanish.lproj/GSToolbarCustomizationPalette.gorm/objects.gorm
 GNUstep/System/Library/Libraries/gnustep-gui/Versions/%%BASEVERSION%%/Resources/Spanish.lproj/Localizable.strings
 GNUstep/System/Library/Libraries/libgnustep-gui.so
+GNUstep/System/Library/Libraries/libgnustep-gui.so.%%BASEVERSION%%
 GNUstep/System/Library/Libraries/libgnustep-gui.so.%%VERSION%%
 GNUstep/System/Library/Makefiles/Additional/gui.make
 GNUstep/System/Library/PostScript/GSProlog.ps
