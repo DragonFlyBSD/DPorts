@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/net/exabgp/files/exabgp.in 336900 2013-12-19 13:27:24Z zi $
+# $FreeBSD: head/net/exabgp/files/exabgp.in 344220 2014-02-14 14:59:28Z zi $
 #
 # PROVIDE: exabgp
 # REQUIRE: LOGIN
@@ -48,7 +48,7 @@ exabgp_start()
 	${procname} ${command} --folder %%ETCDIR%% ${exabgp_conf}
 }
 
-exabgp_reload_all() {
+exabgp_reload_all()
 {
     	echo "Reloading exabgp configuration and processes."
 	kill -USR2 $rc_pid
