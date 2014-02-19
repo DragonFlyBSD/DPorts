@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wen@FreeBSD.org>
-# $FreeBSD: www/p5-Dancer2/Makefile 337237 2013-12-23 13:04:40Z wen $
+# $FreeBSD$
 
 PORTNAME=	Dancer2
 PORTVERSION=	0.11
