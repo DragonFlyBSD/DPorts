@@ -55,11 +55,13 @@ GNUstep/Local/Library/Frameworks/BioCocoa.framework/Versions/2/Resources/Info-gn
 GNUstep/Local/Library/Frameworks/BioCocoa.framework/Versions/2/Resources/aminoacids.plist
 GNUstep/Local/Library/Frameworks/BioCocoa.framework/Versions/2/Resources/nucleotides.plist
 GNUstep/Local/Library/Frameworks/BioCocoa.framework/Versions/2/libBioCocoa.so
+GNUstep/Local/Library/Frameworks/BioCocoa.framework/Versions/2/libBioCocoa.so.2
 GNUstep/Local/Library/Frameworks/BioCocoa.framework/Versions/2/libBioCocoa.so.2.2.2
 GNUstep/Local/Library/Frameworks/BioCocoa.framework/Versions/Current
 GNUstep/Local/Library/Frameworks/BioCocoa.framework/libBioCocoa.so
 GNUstep/Local/Library/Headers/BioCocoa
 GNUstep/Local/Library/Libraries/libBioCocoa.so
+GNUstep/Local/Library/Libraries/libBioCocoa.so.2
 GNUstep/Local/Library/Libraries/libBioCocoa.so.2.2.2
 @dirrmtry GNUstep/Local/Library/Frameworks/BioCocoa.framework/Versions/2/Resources
 @dirrmtry GNUstep/Local/Library/Frameworks/BioCocoa.framework/Versions/2/Headers
