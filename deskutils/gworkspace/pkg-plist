@@ -388,6 +388,7 @@ GNUstep/System/Library/Frameworks/FSNode.framework/Versions/0/Resources/Recycler
 GNUstep/System/Library/Frameworks/FSNode.framework/Versions/0/Resources/RecyclerFull.tiff
 GNUstep/System/Library/Frameworks/FSNode.framework/Versions/0/Resources/Workspace.tiff
 GNUstep/System/Library/Frameworks/FSNode.framework/Versions/0/libFSNode.so
+GNUstep/System/Library/Frameworks/FSNode.framework/Versions/0/libFSNode.so.0
 GNUstep/System/Library/Frameworks/FSNode.framework/Versions/0/libFSNode.so.0.1.0
 GNUstep/System/Library/Frameworks/FSNode.framework/Versions/Current
 GNUstep/System/Library/Frameworks/FSNode.framework/libFSNode.so
@@ -487,6 +488,7 @@ GNUstep/System/Library/Frameworks/Inspector.framework/Versions/0/Resources/switc
 GNUstep/System/Library/Frameworks/Inspector.framework/Versions/0/Resources/switchOn.tiff
 GNUstep/System/Library/Frameworks/Inspector.framework/Versions/0/Resources/tiffPboard.tiff
 GNUstep/System/Library/Frameworks/Inspector.framework/Versions/0/libInspector.so
+GNUstep/System/Library/Frameworks/Inspector.framework/Versions/0/libInspector.so.0
 GNUstep/System/Library/Frameworks/Inspector.framework/Versions/0/libInspector.so.0.1.0
 GNUstep/System/Library/Frameworks/Inspector.framework/Versions/Current
 GNUstep/System/Library/Frameworks/Inspector.framework/libInspector.so
@@ -502,6 +504,7 @@ GNUstep/System/Library/Frameworks/Operation.framework/Versions/1/Resources/Engli
 GNUstep/System/Library/Frameworks/Operation.framework/Versions/1/Resources/Info-gnustep.plist
 GNUstep/System/Library/Frameworks/Operation.framework/Versions/1/Resources/Operation.tiff
 GNUstep/System/Library/Frameworks/Operation.framework/Versions/1/libOperation.so
+GNUstep/System/Library/Frameworks/Operation.framework/Versions/1/libOperation.so.1
 GNUstep/System/Library/Frameworks/Operation.framework/Versions/1/libOperation.so.1.0.0
 GNUstep/System/Library/Frameworks/Operation.framework/Versions/Current
 GNUstep/System/Library/Frameworks/Operation.framework/libOperation.so
@@ -514,12 +517,16 @@ GNUstep/System/Library/Headers/FSNode
 GNUstep/System/Library/Headers/Inspector
 GNUstep/System/Library/Headers/Operation
 GNUstep/System/Library/Libraries/libDBKit.so
+GNUstep/System/Library/Libraries/libDBKit.so.0
 GNUstep/System/Library/Libraries/libDBKit.so.0.0.1
 GNUstep/System/Library/Libraries/libFSNode.so
+GNUstep/System/Library/Libraries/libFSNode.so.0
 GNUstep/System/Library/Libraries/libFSNode.so.0.1.0
 GNUstep/System/Library/Libraries/libInspector.so
+GNUstep/System/Library/Libraries/libInspector.so.0
 GNUstep/System/Library/Libraries/libInspector.so.0.1.0
 GNUstep/System/Library/Libraries/libOperation.so
+GNUstep/System/Library/Libraries/libOperation.so.1
 GNUstep/System/Library/Libraries/libOperation.so.1.0.0
 GNUstep/System/Library/Services/thumbnailer.service/Resources/Info-gnustep.plist
 GNUstep/System/Library/Services/thumbnailer.service/thumbnailer
