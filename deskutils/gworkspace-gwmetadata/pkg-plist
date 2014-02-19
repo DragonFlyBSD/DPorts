@@ -108,11 +108,13 @@ GNUstep/System/Library/Frameworks/MDKit.framework/Versions/0/Resources/switchOn.
 GNUstep/System/Library/Frameworks/MDKit.framework/Versions/0/Resources/whiteArrowDown.tiff
 GNUstep/System/Library/Frameworks/MDKit.framework/Versions/0/Resources/whiteArrowRight.tiff
 GNUstep/System/Library/Frameworks/MDKit.framework/Versions/0/libMDKit.so
+GNUstep/System/Library/Frameworks/MDKit.framework/Versions/0/libMDKit.so.0
 GNUstep/System/Library/Frameworks/MDKit.framework/Versions/0/libMDKit.so.0.1.0
 GNUstep/System/Library/Frameworks/MDKit.framework/Versions/Current
 GNUstep/System/Library/Frameworks/MDKit.framework/libMDKit.so
 GNUstep/System/Library/Headers/MDKit
 GNUstep/System/Library/Libraries/libMDKit.so
+GNUstep/System/Library/Libraries/libMDKit.so.0
 GNUstep/System/Library/Libraries/libMDKit.so.0.1.0
 GNUstep/System/Tools/MDFinder
 GNUstep/System/Tools/gmds
