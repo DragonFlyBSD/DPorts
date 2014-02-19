@@ -4,7 +4,7 @@
 # This sample configuration file is essentially equilivent to the stock
 # FreeBSD /etc/syslog.conf file.
 #
-# $FreeBSD: sysutils/syslog-ng-devel/files/syslog-ng.conf.sample 332945 2013-11-06 05:51:28Z cy $
+# $FreeBSD: head/sysutils/syslog-ng-devel/files/syslog-ng.conf.sample 340872 2014-01-24 00:14:07Z mat $
 #
 
 #
