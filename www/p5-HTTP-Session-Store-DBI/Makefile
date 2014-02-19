@@ -1,4 +1,4 @@
-# $FreeBSD: www/p5-HTTP-Session-Store-DBI/Makefile 338765 2014-01-05 13:18:23Z az $
+# $FreeBSD$
 
 PORTNAME=	HTTP-Session-Store-DBI
 PORTVERSION=	0.02
