@@ -1,9 +1,8 @@
 # Created by: Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
-# $FreeBSD: net/scribe/Makefile 333302 2013-11-09 15:28:21Z wg $
+# $FreeBSD$
 
 PORTNAME=	scribe
-DISTVERSION=	2.2.2012.01.07
-PORTREVISION=	4
+DISTVERSION=	2.2.2013.04.15
 CATEGORIES=	net
 MASTER_SITES=	https://github.com/facebook/scribe/tarball/${GITVERSION}/
 DISTNAME=	facebook-scribe-${GITVERSION}
@@ -20,8 +19,7 @@ RUN_DEPENDS=	p5-Class-Accessor>0:${PORTSDIR}/devel/p5-Class-Accessor \
 		p5-Thrift>0:${PORTSDIR}/devel/p5-Thrift \
 		${PYTHON_SITELIBDIR}/thrift/__init__.py:${PORTSDIR}/devel/py-thrift
 
-GITVERSION=	63e4824
-FETCH_ARGS=	-pRr
+GITVERSION=	7359a09
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
 ACLOCAL_ARGS=	-I ./aclocal
@@ -33,6 +31,9 @@ USE_AUTOTOOLS=	aclocal automake autoconf
 USE_PYTHON=	yes
 USE_RC_SUBR=	${PORTNAME}
 USES=		gmake perl5
+
+post-patch:
+	${REINPLACE_CMD} -e 's/^AM_INIT_AUTOMAKE/#/' ${WRKSRC}/configure.ac
 
 post-build:
 	${LOCALBASE}/bin/thrift -o ${WRKSRC} -I ${LOCALBASE}/share --gen "perl" ${WRKSRC}/if/scribe.thrift
