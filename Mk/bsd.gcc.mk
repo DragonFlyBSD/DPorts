@@ -76,7 +76,7 @@ _GCCVERSION_${v}_V=	${j}
 
 # Enable the clang-is-cc workaround.  Default to the last GCC imported
 # into base.
-_USE_GCC:=	${GCC_DEFAULT_VERSION}
+_USE_GCC:=	${GCC_DEFAULT}
 _GCC_ORLATER:=	false
 
 . else # ${USE_GCC} == any
@@ -177,7 +177,7 @@ MAKE_ENV+=		CCVER=gcc${DFLY_DEFAULT_VERSION}
 .if defined(_GCC_PORT_DEPENDS)
 BUILD_DEPENDS+=	${_GCC_PORT_DEPENDS}:${PORTSDIR}/lang/${_GCC_PORT}
 RUN_DEPENDS+=	${_GCC_PORT_DEPENDS}:${PORTSDIR}/lang/${_GCC_PORT}
-.  if ${_USE_GCC:S/.//} > ${GCC_DEFAULT_VERSION}
+.  if ${_USE_GCC:S/.//} > ${GCC_DEFAULT}
 # Later GCC ports already depend on binutils; make sure whatever we
 # build leverages this as well.
 USE_BINUTILS=	yes
