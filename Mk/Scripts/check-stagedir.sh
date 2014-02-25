@@ -1,6 +1,6 @@
 #!/bin/sh
 # ports/Mk/Scripts/check-stagedir.sh - called from ports/Mk/bsd.stage.mk
-# $FreeBSD: head/Mk/Scripts/check-stagedir.sh 343607 2014-02-10 09:19:28Z mat $
+# $FreeBSD: head/Mk/Scripts/check-stagedir.sh 345877 2014-02-24 16:35:43Z mat $
 
 set -e
 export LC_ALL=C
@@ -102,9 +102,9 @@ fi
 for i in $PLIST_SUB
 do
 	echo $i
-done | awk -F= '{print length($2), $1, $2 | "sort -nr" }' | while read l k v
+done | awk -F= '{sub(/^"/, "", $2); sub(/"$/, "", $2); print length($2), $1, $2 | "sort -nr" }' | while read l k v
 do
-	if [ $l -ne 0 ]
+	if [ $l -gt 1 ]
 	then
 		echo "s,${v},%%${k}%%,g;"
 	fi

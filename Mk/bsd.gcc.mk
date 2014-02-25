@@ -32,6 +32,8 @@
 
 GCC_Include_MAINTAINER=		gerald@FreeBSD.org
 
+.include "${PORTSDIR}/Mk/bsd.default-versions.mk"
+
 # All GCC versions supported by the ports framework.  Keep them in
 # ascending order and in sync with the table below. 
 GCCVERSIONS=	040200 040600 040700 040800 040900
@@ -45,15 +47,14 @@ GCCVERSION_040700=	300400 9999999 4.7
 GCCVERSION_040800=	     0       0 4.8
 GCCVERSION_040900=	     0       0 4.9
 
-GCC_DEFAULT_VERSION=	4.7
 DFLY_DEFAULT_VERSION=	47
-GCC_DEFAULT_V=	${GCC_DEFAULT_VERSION:S/.//}
+GCC_DEFAULT_V=	${GCC_DEFAULT:S/.//}
 
 # No configurable parts below this. ####################################
 #
 
 .if defined(USE_GCC) && ${USE_GCC} == yes
-USE_GCC=	${GCC_DEFAULT_VERSION}
+USE_GCC=	${GCC_DEFAULT}
 .endif
 
 # Extract the fields from GCCVERSION_...
@@ -133,8 +134,8 @@ _GCC_FOUND:=	${_GCCVERSION_${v}_V}
 
 . if defined(_GCC_FOUND)
 _USE_GCC:=	${_GCC_FOUND}
-. elif ${_USE_GCC} < ${GCC_DEFAULT_VERSION}
-_USE_GCC:=	${GCC_DEFAULT_VERSION}
+. elif ${_USE_GCC} < ${GCC_DEFAULT}
+_USE_GCC:=	${GCC_DEFAULT}
 . endif
 .endif # defined(_GCC_ORLATER)
 
@@ -150,7 +151,7 @@ _USE_GCC:=	${GCC_DEFAULT_VERSION}
 .  if ${DFLYVERSION} < ${_GCCVERSION_${v}_L} || ${DFLYVERSION} > ${_GCCVERSION_${v}_R}
 V:=			${_GCCVERSION_${v}_V:S/.//}
 _GCC_PORT_DEPENDS:=	gcc${V}
-.   if ${_USE_GCC} == ${GCC_DEFAULT_VERSION}
+.   if ${_USE_GCC} == ${GCC_DEFAULT}
 _GCC_PORT:=		gcc
 .   else
 _GCC_PORT:=		gcc${V}
@@ -162,9 +163,6 @@ _GCC_RUNTIME:=		${LOCALBASE}/lib/gcc${V}
 CFLAGS+=		-Wl,-rpath=${_GCC_RUNTIME}
 CXXFLAGS+=		-Wl,-rpath=${_GCC_RUNTIME}
 LDFLAGS+=		-Wl,-rpath=${_GCC_RUNTIME} -L${_GCC_RUNTIME}
-# The following is for the sakes of some ports which use this without
-# ever telling us; to be fixed.
-_GCC_BUILD_DEPENDS:=	${_GCC_PORT_DEPENDS}
 .  else # Use GCC in base.
 CC:=			gcc
 CXX:=			g++
