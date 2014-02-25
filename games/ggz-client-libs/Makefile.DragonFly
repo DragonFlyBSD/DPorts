@@ -1,5 +1,0 @@
-LDFLAGS+= -lexpat
-
-post-extract:
-	@${REINPLACE_CMD} -e 's|@LIB_GGZ@|@LIB_GGZ@ ../ggzcore/.libs/libggzcore.so|' \
-		${WRKSRC}/ggzwrap/Makefile.in
