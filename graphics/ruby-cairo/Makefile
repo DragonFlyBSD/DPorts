@@ -21,18 +21,23 @@ CONFIGURE_ARGS+=--ruby=${RUBY}
 
 DOCS=		AUTHORS COPYING GPL NEWS
 
+DEPRECATED=	Use rubygem-cairo instead
+EXPIRATION_DATE=2014-03-23
+
 NO_STAGE=	yes
 post-install:
-.if !defined(NOPORTEXAMPLES)
-	@${MKDIR} ${RUBY_MODEXAMPLESDIR}/agg
-	@${INSTALL_DATA} ${WRKSRC}/samples/*.rb ${RUBY_MODEXAMPLESDIR}/
-	@${INSTALL_DATA} ${WRKSRC}/samples/agg/*.rb ${RUBY_MODEXAMPLESDIR}/agg/
-.endif
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${RUBY_MODDOCDIR}
+	@${MKDIR} ${STAGEDIR}${RUBY_MODEXAMPLESDIR}/agg
+	@${INSTALL_DATA} ${WRKSRC}/samples/*.rb ${STAGEDIR}${RUBY_MODEXAMPLESDIR}/
+	@${INSTALL_DATA} ${WRKSRC}/samples/agg/*.rb ${STAGEDIR}${RUBY_MODEXAMPLESDIR}/agg/
+	@${MKDIR} ${STAGEDIR}${RUBY_MODDOCDIR}
 .for f in ${DOCS}
-	@${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_MODDOCDIR}/
+	@${INSTALL_DATA} ${WRKSRC}/${f} ${STAGEDIR}${RUBY_MODDOCDIR}/
 .endfor
+
+.include <bsd.port.pre.mk>
+
+.if ${RUBY_VER} != 1.9
+BROKEN=		 Does not work with Ruby 2.x
 .endif
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
