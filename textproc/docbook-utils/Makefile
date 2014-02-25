@@ -3,7 +3,7 @@
 
 PORTNAME=	docbook-utils
 PORTVERSION=	0.6.14
-PORTREVISION=	11
+PORTREVISION=	12
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEWARE}
 MASTER_SITE_SUBDIR=	docbook-tools/new-trials/SOURCES
@@ -11,7 +11,7 @@ MASTER_SITE_SUBDIR=	docbook-tools/new-trials/SOURCES
 MAINTAINER=	gabor@FreeBSD.org
 COMMENT=	Generates various output formats from DocBook SGML documents
 
-BUILD_DEPENDS+=	${LOCALBASE}/share/sgml/docbook/3.1:${PORTSDIR}/textproc/docbook-310 \
+BUILD_DEPENDS+=	${LOCALBASE}/share/sgml/docbook/3.1:${PORTSDIR}/textproc/docbook-sgml \
 		${LOCALBASE}/share/sgml/docbook/dsssl:${PORTSDIR}/textproc/dsssl-docbook-modular \
 		nsgmls:${PORTSDIR}/textproc/jade
 RUN_DEPENDS+=	${LOCALBASE}/share/sgml/docbook/dsssl:${PORTSDIR}/textproc/dsssl-docbook-modular \
@@ -21,29 +21,14 @@ RUN_DEPENDS+=	${LOCALBASE}/share/sgml/docbook/dsssl:${PORTSDIR}/textproc/dsssl-d
 
 CONFLICTS=	docbook2X-*
 
-USES=		perl5
+USES=		perl5 gmake
 USE_PERL5=	run
 USE_TEX=	jadetex
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 MAKE_ARGS+=	docdir="${DOCSDIR}" htmldir="${DOCSDIR}/html"
 
-MAN1=		jw.1 sgmldiff.1 docbook2man-spec.pl.1 docbook2texi-spec.pl.1
-MAN7=		backend-spec.7 frontend-spec.7
-MLINKS=		jw.1 docbook2dvi.1 \
-		jw.1 docbook2html.1 \
-		jw.1 docbook2man.1 \
-		jw.1 docbook2pdf.1 \
-		jw.1 docbook2ps.1 \
-		jw.1 docbook2rtf.1 \
-		jw.1 docbook2tex.1 \
-		jw.1 docbook2texi.1 \
-		jw.1 docbook2txt.1
-.if !defined(NOPORTDOCS)
 PORTDOCS=	*
-.endif
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/etc/sgml/catalog|${PREFIX}/share/sgml/catalog|g' \
 		${WRKSRC}/doc/HTML/Makefile.in
@@ -51,10 +36,6 @@ post-patch:
 			-e 's|/usr/bin/|${LOCALBASE}/bin/|g' \
 			${WRKSRC}/doc/refentry/*.sgml \
 			${WRKSRC}/backends/txt
-.if defined(NOPORTDOCS)
-	@${REINPLACE_CMD} -e 's|SUBDIRS = refentry man HTML|SUBDIRS = refentry man|' \
-			${WRKSRC}/doc/Makefile.in
-.endif
 
 pre-configure:
 	${RM} -f ${WRKSRC}/config.cache
