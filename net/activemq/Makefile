@@ -2,7 +2,7 @@
 
 PORTNAME=	activemq
 PORTVERSION=	5.9.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	net java
 MASTER_SITES=	http://www.sai.msu.su/apache/${MASTER_SITE_SUBDIR}/ \
 		${MASTER_SITE_APACHE}/${MASTER_SITE_SUBDIR}/
@@ -66,9 +66,12 @@ PLIST_SUB=	MQUSER="${MQUSER}" \
 		LVDBVERSION="${LVDBVERSION}" \
 		LVDBJNIVERSION="${LVDBJNIVERSION}"
 
-OPTIONS_DEFINE=	DOCS EXAMPLES 
+OPTIONS_DEFINE=	DOCS EXAMPLES
 
 .include <bsd.port.options.mk>
+
+post-patch:
+	 @${REINPLACE_CMD} -e 's|activemq.base}/data|activemq.logs}|g' ${WRKSRC}/conf/log4j.properties
 
 do-install:
 .if ${PORT_OPTIONS:MDOCS}
@@ -80,7 +83,6 @@ do-install:
 .endif
 
 	@${MKDIR} ${STAGEDIR}${MQDATA} ${STAGEDIR}${MQDATA}/bin ${STAGEDIR}${ETCDIR}
-	@${MKDIR} ${STAGEDIR}${MQDB}
 
 .if ${PORT_OPTIONS:MEXAMPLES}
 	@cd ${WRKSRC}/examples && ${COPYTREE_SHARE} . ${STAGEDIR}${EXAMPLESDIR}
