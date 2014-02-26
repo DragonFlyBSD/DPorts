@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	obfsproxy
-PORTVERSION=	0.2.4
+PORTVERSION=	0.2.6
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	security net python
 MASTER_SITES=	http://www.c-s.li/ports/
@@ -10,19 +11,18 @@ MASTER_SITES=	http://www.c-s.li/ports/
 MAINTAINER=	cs@FreeBSD.org
 COMMENT=	Pluggable transport proxy
 
-LICENSE=	BSD
+LICENSE=	BSD3CLAUSE
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pyptlib>=0.0.5:${PORTSDIR}/security/py-pyptlib \
 		${PYTHON_PKGNAMEPREFIX}argparse>0:${PORTSDIR}/devel/py-argparse \
-		${PYTHON_PKGNAMEPREFIX}pycrypto>=2.1:${PORTSDIR}/security/py-pycrypto
+		${PYTHON_PKGNAMEPREFIX}pycrypto>=2.1:${PORTSDIR}/security/py-pycrypto \
+		${PYTHON_PKGNAMEPREFIX}yaml>=0:${PORTSDIR}/devel/py-yaml
 
 USE_PYTHON=	yes
 USES=		twisted
-USE_PYDISTUTILS=easy_install
+USE_PYDISTUTILS=yes
 SUB_FILES=	pkg-message
 PYDISTUTILS_PKGNAME=obfsproxy
-
-NO_STAGE=	yes
 
 post-install:
 	${CAT} ${PKGMESSAGE}
