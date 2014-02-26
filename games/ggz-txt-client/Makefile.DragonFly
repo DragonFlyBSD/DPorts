@@ -1,6 +1,0 @@
-USES+=		readline
-LDFLAGS+=	-lexpat
-
-post-extract:
-	@${REINPLACE_CMD} -e 's|_LDADD =|_LDADD = $$(LIB_GGZCORE)|' \
-		${WRKSRC}/tttxt/Makefile.in
