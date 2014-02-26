@@ -12,6 +12,9 @@ MASTER_SITE_SUBDIR=	novel
 MAINTAINER=	novel@FreeBSD.org
 COMMENT=	System tray controller for beep-media-player
 
+DEPRECATED=	Abandonware, please consider using multimedia/audacious instead
+EXPIRATION_DATE=	2014-03-06
+
 BUILD_DEPENDS=	beep-media-player:${PORTSDIR}/multimedia/beep-media-player
 RUN_DEPENDS=	beep-media-player:${PORTSDIR}/multimedia/beep-media-player
 
@@ -25,7 +28,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 NO_STAGE=	yes
 
-OPTIONS_DEFINE=	NLS 
+OPTIONS_DEFINE=	NLS
 
 .include <bsd.port.options.mk>
 
