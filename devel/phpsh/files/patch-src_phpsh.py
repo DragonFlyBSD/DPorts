@@ -1,5 +1,5 @@
 
-$FreeBSD: head/devel/phpsh/files/patch-src_phpsh.py 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/devel/phpsh/files/patch-src_phpsh.py 345622 2014-02-22 10:48:08Z mva $
 
 --- src/phpsh.py.orig
 +++ src/phpsh.py
@@ -8,7 +8,7 @@ $FreeBSD: head/devel/phpsh/files/patch-src_phpsh.py 340725 2014-01-22 17:40:44Z 
  
      def read(self):
 -        config_files = ["/etc/phpsh/config"]
-+        config_files = ["%%PREFIX%%/etc/phpsh/config"]
++        config_files = ["%%ETCDIR%%/config"]
          home = os.getenv("HOME")
          if home:
              homestr = home.strip()

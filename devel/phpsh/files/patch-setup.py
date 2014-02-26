@@ -1,5 +1,5 @@
 
-$FreeBSD: head/devel/phpsh/files/patch-setup.py 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/devel/phpsh/files/patch-setup.py 345622 2014-02-22 10:48:08Z mva $
 
 --- setup.py.orig
 +++ setup.py
@@ -21,7 +21,7 @@ $FreeBSD: head/devel/phpsh/files/patch-setup.py 340725 2014-01-22 17:40:44Z mat 
  # something better than this?
  if os.getenv("USER") == "root":
 -    config_dir = "/etc/phpsh"
-+    config_dir = "%%PREFIX%%/etc/phpsh"
++    config_dir = "%%ETCDIR%%"
  else:
      config_dir = os.getenv("HOME") + "/.phpsh"
  

@@ -1,5 +1,5 @@
 
-$FreeBSD: head/devel/phpsh/files/patch-src_doc_phpsh.1.txt 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/devel/phpsh/files/patch-src_doc_phpsh.1.txt 345622 2014-02-22 10:48:08Z mva $
 
 --- src/doc/phpsh.1.txt.orig
 +++ src/doc/phpsh.1.txt
@@ -8,7 +8,7 @@ $FreeBSD: head/devel/phpsh/files/patch-src_doc_phpsh.1.txt 340725 2014-01-22 17:
  -c::
  --codebase-mode::
 -        Use "-c none" to load no codebase. See /etc/phpsh/phpshrc.php for
-+        Use "-c none" to load no codebase. See %%PREFIX%%/etc/phpsh/phpshrc.php for
++        Use "-c none" to load no codebase. See %%ETCDIR%%/phpshrc.php for
          other codebase modes.
  
  -t::
@@ -17,12 +17,12 @@ $FreeBSD: head/devel/phpsh/files/patch-src_doc_phpsh.1.txt 340725 2014-01-22 17:
  -------------
  Config file support was added in phpsh-1.2. When phpsh starts up it
 -tries to read its configuration from /etc/phpsh/config, then from
-+tries to read its configuration from %%PREFIX%%/etc/phpsh/config, then from
++tries to read its configuration from %%ETCDIR%%/config, then from
  $HOME/.phpsh/config. If either file is not present or not readable, it
  is ignored. Entries in the per-user config file $HOME/.phpsh/config
  override the corresponding entries in the host-wide config file
 -/etc/phpsh/config.
-+%%PREFIX%%/etc/phpsh/config.
++%%ETCDIR%%/config.
  
  The config file consists of sections containing key:value pairs.
  Lines starting with # are ignored. All settings are optional and have
