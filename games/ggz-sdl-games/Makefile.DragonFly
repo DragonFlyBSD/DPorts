@@ -1,7 +1,0 @@
-LDFLAGS+= -lexpat
-
-post-extract:
-	@${REINPLACE_CMD} -e 's|_LDADD =|_LDADD = -lggzcore -lggz|' \
-		${WRKSRC}/ttt3d/Makefile.in
-	@${REINPLACE_CMD} -e 's|_LDADD =|_LDADD = -lggzcore|' \
-		${WRKSRC}/geekgame/Makefile.in
