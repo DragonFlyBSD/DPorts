@@ -3,31 +3,32 @@
 
 PORTNAME=	autocd
 PORTVERSION=	3.02.12b
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	audio sysutils
 MASTER_SITES=	ftp://kot.spb.ru/pub/src/projects/autocd/
 
 MAINTAINER=	KOT@MATPOCKuH.Ru
 COMMENT=	Compact disc control utility
 
-NO_STAGE=	yes
 GNU_CONFIGURE=	yes
-MAN1=		cdctl.1 acdplay.1
-MAN8=		autocd.8
-MLINKS=		cdctl.1 eject.1 cdctl.1 pause.1
-PLIST_FILES=	sbin/autocd bin/acdplay bin/cdctl bin/pause bin/eject
+
 PORTDOCS=	README.rus.html
 
 USE_RC_SUBR=	autocd
 
-OPTIONS_DEFINE=	DOCS 
+OPTIONS_DEFINE=	DOCS
 
-.include <bsd.port.options.mk>
-
-post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/${PORTDOCS} ${DOCSDIR}
-.endif
+do-install:
+	@(cd ${WRKSRC} && ${INSTALL_PROGRAM} acdplay cdctl \
+		${STAGEDIR}${PREFIX}/bin/)
+	${INSTALL_PROGRAM} ${WRKSRC}/autocd ${STAGEDIR}${PREFIX}/sbin
+	@(cd ${STAGEDIR}${PREFIX}/bin && \
+		ln -s cdctl pause && \
+		ln -s cdctl eject)
+	@(cd ${WRKSRC} && ${INSTALL_MAN} acdplay.1 cdctl.1 \
+		${STAGEDIR}${PREFIX}/man/man1/)
+	${INSTALL_MAN} ${WRKSRC}/autocd.8 ${STAGEDIR}${PREFIX}/man/man8/
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${PORTDOCS} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
