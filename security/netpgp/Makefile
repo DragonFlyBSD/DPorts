@@ -1,11 +1,11 @@
-# $FreeBSD: security/netpgp/Makefile 327769 2013-09-20 22:55:24Z bapt $
+# $FreeBSD$
 
 PORTNAME=	netpgp
 PORTVERSION=	20101107
 CATEGORIES=	security
 MASTER_SITES=	NETBSD/LOCAL_PORTS
 
-MAINTAINER=	bapt@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	PGP signing, verification, encryption, and decryption program
 
 LICENSE=	BSD
@@ -14,13 +14,9 @@ USE_OPENSSL=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 
-CFLAGS+=	-DOPENSSL_NO_IDEA -Wno-error
+CFLAGS+=	-Wno-error
+.if !exists(/usr/include/openssl/idea.h)
+CFLAGS+=	-DOPENSSL_NO_IDEA
+.endif
 
-MAN1+=		netpgp.1 \
-		netpgpkeys.1 \
-		netpgpverify.1
-MAN3+=		libnetpgp.3 \
-		libmj.3
-
-NO_STAGE=	yes
 .include <bsd.port.mk>
