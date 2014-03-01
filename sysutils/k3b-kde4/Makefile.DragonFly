@@ -1,1 +1,1 @@
-BUILD_DEPENDS+= ${LOCALBASE}/bin/update-mime-database:${PORTSDIR}/misc/shared-mime-info
+MUSEPACK_CMAKE_ON=	-DMUSE_INCLUDE_DIR:STRING="${LOCALBASE}/include"
