@@ -11,19 +11,21 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	gahr@FreeBSD.org
 COMMENT=	The Fast Light Window Manager
 
-LIB_DEPENDS=	fltk.1:${PORTSDIR}/x11-toolkits/fltk
+LIB_DEPENDS=	libfltk.so:${PORTSDIR}/x11-toolkits/fltk-devel
 
 USE_XORG=	x11 xt
 GNU_CONFIGURE=	yes
+CONFIGURE_ENV+=	CXXFLAGS="-DFL_LIBRARY `${LOCALBASE}/bin/fltk-devel/fltk-config --cflags`"
 
-CFLAGS+=	-DFL_LIBRARY
+PLIST_FILES=	bin/flwm \
+		man/man1/flwm.1.gz
 
-MAN1=		flwm.1
-PLIST_FILES=	bin/flwm
-
-NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -e 's|/usr/X11R6|${LOCALBASE}|g; /^main/s|^|int |g' ${WRKSRC}/${CONFIGURE_SCRIPT}
-	${REINPLACE_CMD} -e 's|^LIBS =.*|LIBS = `fltk-config --ldflags`|' ${WRKSRC}/Makefile
+	${REINPLACE_CMD} -e 's|^LIBS =.*|LIBS = `${LOCALBASE}/bin/fltk-devel/fltk-config --ldflags`|' ${WRKSRC}/Makefile
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/flwm ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/flwm.1 ${STAGEDIR}${PREFIX}/man/man1
 
 .include <bsd.port.mk>
