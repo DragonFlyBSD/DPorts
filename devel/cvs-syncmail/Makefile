@@ -1,5 +1,5 @@
 # Created by: Greg Larkin <glarkin@FreeBSD.org>
-# $FreeBSD: devel/cvs-syncmail/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	cvs-syncmail
 PORTVERSION=	2.1
@@ -11,35 +11,25 @@ EXTRACT_SUFX=
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	CVS notification tool
 
-.if defined(WITH_CVSNT)
-# Use the CVSNT binary when generating diffs instead of the system CVS
-RUN_DEPENDS=	${LOCALBASE}/bin/cvsnt:${PORTSDIR}/devel/cvsnt
-.endif
-
+USES=		shebangfix
+SHEBANG_FILES=	${DISTNAME}
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 USE_PYTHON=	yes
 
 PLIST_FILES=	bin/${DISTNAME}
 
-NO_STAGE=	yes
-do-extract:
-	@${MKDIR} ${WRKSRC}
-	@${CP} ${DISTDIR}/${DISTNAME} ${WRKSRC}
+.include <bsd.port.pre.mk>
 
-do-patch:
-	@${REINPLACE_CMD} -e "s| /usr/bin/python|${PYTHON_CMD}|" \
-		${WRKSRC}/${DISTNAME}
-
-	@${REINPLACE_CMD} -e "s|cvs -fn update|/usr/bin/cvs -fn update|" \
-		${WRKSRC}/${DISTNAME}
-
-.if defined(WITH_CVSNT)
-	@${REINPLACE_CMD} -e "s|/usr/bin/cvs|${LOCALBASE}/bin/cvsnt|" \
-	    ${WRKSRC}/${DISTNAME}
+.if ${OPSYS} == FreeBSD
+RUN_DEPENDS=	cvs:${PORTSDIR}/devel/cvs
 .endif
 
-do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/${DISTNAME} ${PREFIX}/bin/${DISTNAME}
+do-extract:
+	@${MKDIR} ${WRKSRC}
+	${CP} ${DISTDIR}/${DISTNAME} ${WRKSRC}
 
-.include <bsd.port.mk>
+do-install:
+	${INSTALL_SCRIPT} ${WRKSRC}/${DISTNAME} ${STAGEDIR}${PREFIX}/bin/${DISTNAME}
+
+.include <bsd.port.post.mk>
