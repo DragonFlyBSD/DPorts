@@ -1,14 +1,21 @@
 # Created by: Johann Visagie <johann@egenetics.com>
-# $FreeBSD: biology/fasta3/Makefile 331982 2013-10-29 19:32:15Z pawel $
+# $FreeBSD$
 
 PORTNAME=	fasta3
 PORTVERSION=	36.3.6d
+PORTREVISION=	1
 CATEGORIES=	biology
 MASTER_SITES=	http://faculty.virginia.edu/wrpearson/fasta/fasta36/
 DISTNAME=	fasta-${PORTVERSION}
+DIST_SUBDIR=	fasta3/2014-01-29
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Collection of programs for searching DNA and protein databases
+
+LICENSE=	Fasta
+LICENSE_NAME=	Fasta program copyright W. Pearson and U.Virginia
+LICENSE_FILE=	${WRKSRC}/COPYRIGHT
+LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
