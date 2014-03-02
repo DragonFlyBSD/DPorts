@@ -1,5 +1,5 @@
 # Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-# $FreeBSD: biology/mafft/Makefile 327709 2013-09-20 15:55:44Z bapt $
+# $FreeBSD$
 
 PORTNAME=	mafft
 PORTVERSION=	6.903
@@ -65,7 +65,7 @@ do-install:
 .endfor
 	@${MKDIR} ${EXAMPLESDIR}
 	${INSTALL_DATA} ${WRKSRC}/test/* ${EXAMPLESDIR}
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/readme ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/license ${DOCSDIR}
