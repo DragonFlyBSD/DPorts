@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD: devel/cvs2html/Makefile 327722 2013-09-20 17:03:26Z bapt $
+# $FreeBSD$
 
 PORTNAME=	cvs2html
 PORTVERSION=	1.98
@@ -17,18 +17,22 @@ COMMENT=	Perl script to turn ``cvs log'' output into HTML
 LICENSE=	GPLv2
 
 PLIST_FILES=	bin/cvs2html
-USES=		perl5
+NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
+USES=		perl5 shebangfix
+SHEBANG_FILES=	${PORTNAME}
 
-NO_STAGE=	yes
+.include <bsd.port.pre.mk>
+
+.if ${OPSYS} == FreeBSD
+RUN_DEPENDS=	cvs:${PORTSDIR}/devel/cvs
+.endif
+
 do-extract:
-	@${MKDIR} ${WRKDIR}
-	@${CP} ${DISTDIR}/${PORTNAME} ${WRKDIR}
-
-post-patch:
-	${REINPLACE_CMD} -e '1s|\(#!\).*$$|\1${PERL}|' ${WRKDIR}/${PORTNAME}
+	@${MKDIR} ${WRKSRC}
+	@${CP} ${DISTDIR}/${PORTNAME} ${WRKSRC}
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME} ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
