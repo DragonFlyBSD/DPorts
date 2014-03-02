@@ -1,8 +1,7 @@
-# $FreeBSD: net-mgmt/xymon-client/Makefile 332848 2013-11-05 14:00:05Z feld $
+# $FreeBSD$
 
 PORTNAME=	xymon
-PORTVERSION=	4.3.12
-PORTREVISION=	1
+PORTVERSION=	4.3.17
 CATEGORIES=	net-mgmt www
 MASTER_SITES=	SF/xymon/Xymon/${PORTVERSION}
 PKGNAMESUFFIX=	-client${PKGNAMESUFFIX2}
@@ -38,8 +37,8 @@ do-configure:
 
 post-install:
 .for i in ${CONFIG_FILES}
-	${CP} -np ${STAGEDIR}${WWWDIR}/client/etc/${i}.DIST \
-		${STAGEDIR}${WWWDIR}/client/etc/${i} || ${TRUE}
+	${CP} -np ${STAGEDIR}${WWWDIR}/etc/${i}.DIST \
+		${STAGEDIR}${WWWDIR}/etc/${i} || ${TRUE}
 .endfor
 
 .include <bsd.port.mk>

@@ -1,5 +1,5 @@
 # Toplevel Makefile for Xymon
-# $FreeBSD: net-mgmt/xymon-client/files/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 BUILDTOPDIR=`pwd`
 CLIENTONLY = yes
 LOCALCLIENT = no
@@ -7,9 +7,7 @@ LOCALCLIENT = no
 # configure settings for Xymon
 #
 # Toplevel dir
-XYMONTOPDIR = ${PREFIX}/www/xymon
-# Server home dir for etc/, www/
-XYMONHOME = ${PREFIX}/www/xymon/client
+XYMONTOPDIR = ${PREFIX}/www/xymon/client
 
 # hobbit settings follows
 #
