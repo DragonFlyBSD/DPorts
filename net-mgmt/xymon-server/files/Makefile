@@ -1,5 +1,5 @@
 # Toplevel Makefile for Xymon
-# $FreeBSD: net-mgmt/xymon-server/files/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 BUILDTOPDIR=`pwd`
 
 # configure settings for Xymon
@@ -19,7 +19,7 @@ XYMONLOGDIR = /var/log/xymon
 # Where to install manpages
 MANROOT = ${PREFIX}/man
 # How to run fping or xymonping
-FPING = xymonping
+FPING = fping
 
 # Username running xymon
 #XYMONUSER = nobody
@@ -38,6 +38,12 @@ XYMONCGIURL = /xymon-cgi
 SECUREXYMONCGIURL = /xymon-seccgi
 # Webserver group-ID
 HTTPDGID=80
+
+# C-ARES settings
+SYSTEMCARES = yes
+CARESINCDIR = -I${LOCALBASE}/include
+CARESLIBS = -L${LOCALBASE}/lib -lcares
+RPATHVAL += ${LOCALBASE}/lib
 
 # PCRE settings
 PCREINCDIR = -I${LOCALBASE}/include
