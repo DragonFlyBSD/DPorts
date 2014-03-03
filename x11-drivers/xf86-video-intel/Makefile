@@ -48,7 +48,8 @@ PLIST_SUB+=	OLD="@comment "
 EXTRA_PATCHES+=	${PATCHDIR}/extra-src__sna__sna_threads.c \
 		${PATCHDIR}/extra-src_sna_kgem.c \
 		${PATCHDIR}/extra-clang \
-		${PATCHDIR}/extra-i915kms
+		${PATCHDIR}/extra-i915kms \
+		${DFLY_PATCHDIR}/extra-src_sna_sna__display.c
 LIB_DEPENDS+=	libxcb-util.so:${PORTSDIR}/x11/xcb-util
 .  endif
 .else
