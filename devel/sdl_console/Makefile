@@ -1,31 +1,25 @@
 # Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-# $FreeBSD: devel/sdl_console/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	sdl_console
 PORTVERSION=	2.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	SF/sdlconsole/sdlconsole-source/sdlconsole-${PORTVERSION}
 DISTNAME=	sdlconsole-${PORTVERSION}
 
 MAINTAINER=	leeym@FreeBSD.org
-COMMENT=	A drop down console that can be easily added to any SDL application
+COMMENT=	Drop down console that can be easily added to any SDL application
 
+USES=		libtool
 USE_SDL=	sdl
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
+INSTALL_TARGET=	install-strip
 
 OPTIONS_DEFINE=	SDL_IMAGE
 SDL_IMAGE_DESC=	SDL Image support
 
-NO_STAGE=	yes
-post-patch:
-	@${REINPLACE_CMD} -e '/objformat/s/aout/elf/' ${WRKSRC}/${CONFIGURE_SCRIPT}
-
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MSDL_IMAGE}
-USE_SDL+=	image
-.endif
+SDL_IMAGE_USE=	sdl=image
 
 .include <bsd.port.mk>
