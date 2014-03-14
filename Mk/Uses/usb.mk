@@ -1,4 +1,4 @@
-# $FreeBSD: Mk/Uses/iconv.mk 316636 2013-04-26 20:44:59Z mva $
+# $FreeBSD$
 #
 # handle dependency on libusb (DragonFly only)
 #
@@ -16,8 +16,13 @@ _INCLUDE_USES_USB_MK=	yes
 IGNORE=	USES=usb does not require args
 .endif
 
+.if ${DFLYVERSION} < 300703
 LIB_DEPENDS+=	usb:${PORTSDIR}/devel/libusb
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+DF_OLD_USB=	yes
+.else
+DF_NEW_USB=	yes
+.endif
 
 .endif

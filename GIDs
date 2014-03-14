@@ -85,6 +85,7 @@ audit:*:149:
 pgsql:*:150:
 rbldns:*:153:
 trircd:*:154:
+xorp:*:155:
 sfs:*:171:
 agk:*:172:
 polipo:*:173:
@@ -98,6 +99,7 @@ icinga:*:183:
 dnscache:*:184:
 tinydns:*:185:
 dnslog:*:186:
+swift:*:187:
 moinmoin:*:192:
 cups:*:193:
 saned:*:194:
