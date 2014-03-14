@@ -1,6 +1,0 @@
-#
-# $FreeBSD: head/multimedia/py-pybmp/files/setup.cfg.port 340872 2014-01-24 00:14:07Z mat $
-#
-[build_ext]
-include-dirs=%%LOCALBASE%%/include
-library-dirs=%%LOCALBASE%%/lib
