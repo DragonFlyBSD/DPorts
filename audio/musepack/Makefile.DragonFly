@@ -1,5 +1,0 @@
-post-patch:
-	@${REINPLACE_CMD} -e 's|/// \\|/// |g' \
-		${WRKSRC}/include/mpc/mpcdec.h \
-		${WRKSRC}/include/mpc/reader.h \
-		${WRKSRC}/include/mpc/streaminfo.h
