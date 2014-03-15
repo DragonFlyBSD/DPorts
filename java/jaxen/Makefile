@@ -8,7 +8,7 @@ CATEGORIES=	java textproc
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/1-0-FCS
 DISTNAME=	${PORTNAME}-${PORTVERSION}-FCS
 
-MAINTAINER=	hq@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Java XPath Engine
 
 USE_JAVA=	YES
@@ -18,24 +18,19 @@ NO_BUILD=	YES
 JARFILES=	jaxen-core.jar jaxen-dom.jar jaxen-dom4j.jar jaxen-exml.jar jaxen-full.jar jaxen-jdom.jar lib/saxpath.jar
 PLIST_FILES+=	${JARFILES:S,^lib/,,:S,^,%%JAVAJARDIR%%/,}
 
-.if !defined(NOPORTDOCS)
 DOCS=		default.css download.html faq.html index.html javadoc status.html style
 PORTDOCS=	LICENSE ${DOCS}
-.endif
 
-NO_STAGE=	yes
 do-install:
 	@${ECHO_MSG} -n ">> Installing JAR files in ${JAVAJARDIR}..."
-	@${MKDIR} ${JAVAJARDIR}
-	@cd ${WRKSRC} && ${INSTALL_DATA} ${JARFILES} ${JAVAJARDIR}/
+	@${MKDIR} ${STAGEDIR}${JAVAJARDIR}
+	@cd ${WRKSRC} && ${INSTALL_DATA} ${JARFILES} ${STAGEDIR}${JAVAJARDIR}/
 	@${ECHO_MSG} " [ DONE ]"
-.if !defined(NOPORTDOCS)
 	@${ECHO_MSG} -n ">> Installing documentation in ${DOCSDIR}..."
-	@${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	@cd ${WRKSRC}/doc && ${FIND} ${DOCS} \
-	  | ${CPIO} -pdmu -R ${SHAREOWN}:${SHAREGRP} ${DOCSDIR} > /dev/null 2>&1
-	@${INSTALL_DATA} ${WRKSRC}/LICENSE ${DOCSDIR}/LICENSE
+	  | ${CPIO} -pdmu -R ${SHAREOWN}:${SHAREGRP} ${STAGEDIR}${DOCSDIR} > /dev/null 2>&1
+	@${INSTALL_DATA} ${WRKSRC}/LICENSE ${STAGEDIR}${DOCSDIR}/LICENSE
 	@${ECHO_MSG} " [ DONE ]"
-.endif
 
 .include <bsd.port.mk>
