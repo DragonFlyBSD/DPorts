@@ -3,7 +3,7 @@
 
 PORTNAME=	vim
 PORTVERSION=	7.4.${PATCHLEVEL}
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES?=	editors
 MASTER_SITES=	VIM:source \
 		${MASTER_SITE_VIM:S|unix|patches/${PORTVERSION:R}|}:patch \
@@ -16,7 +16,7 @@ PATCH_SITES=	${MASTER_SITE_VIM:S|unix|patches/${PORTVERSION:R}|} \
 		LOCAL/sunpoet/${PORTNAME}
 
 MAINTAINER?=	sunpoet@FreeBSD.org
-COMMENT?=	Vi "workalike", with many additional features
+COMMENT?=	Improved version of the vi editor
 
 OPTIONS_DEFINE=	CSCOPE EXUBERANT_CTAGS LUA NLS PERL PYTHON RUBY TCL XTERM_SAVE
 OPTIONS_SINGLE=	UI
@@ -34,11 +34,10 @@ MAKE_ARGS+=	CC=${CC} CONF_ARGS="--prefix=${PREFIX} ${CSCOPE_ARG}" STRIP=${STRIP_
 MAKE_JOBS_UNSAFE=	yes
 PATCH_DIST_ARGS=--batch --directory ${WRKSRC} --forward --quiet --remove-empty-files ${PATCH_DIST_STRIP}
 REINPLACE_ARGS=	-i ''
-USE_BZIP2=	yes
-USES=		iconv pkgconfig shebangfix
+USES=		iconv pkgconfig shebangfix tar:bzip2
 WANT_GNOME=	yes
 
-PATCHLEVEL=	192
+PATCHLEVEL=	205
 PATCHFILES!=	/usr/bin/jot -s " " -w "%03d" ${PATCHLEVEL} 1 ${PATCHLEVEL}
 BADPATCHES=	064 087 147 # empty
 .for p in ${BADPATCHES}
@@ -125,10 +124,6 @@ PLIST_SUB+=	GUI=""
 CTAGS_CMD=	exctags -R .
 .else
 CTAGS_CMD=	${FIND} . -type f \\| ${XARGS} ctags
-.endif
-
-.if ${PORT_OPTIONS:MGNOME}
-PKGNAMESUFFIX+=	-gnome2
 .endif
 
 .include <bsd.port.pre.mk>
