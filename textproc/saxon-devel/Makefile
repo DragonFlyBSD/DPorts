@@ -11,7 +11,7 @@ PKGNAMESUFFIX=	-devel
 DISTFILES=	${PORTNAME}b${PORTVERSION:S,.,-,g}j.zip:binary	\
 		${PORTNAME}-resources9-1-0-1.zip:resources
 
-MAINTAINER=	hq@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	An XSLT 2.0 / XPath 2.0 / XQuery 1.0 processor for Java
 
 RUN_DEPENDS=	java:${PORTSDIR}/java/javavmwrapper
@@ -21,7 +21,7 @@ JDOM_DESC=	Jdom support
 DOM4J_DESC=	dom4j support
 XOM_DESC=	XOM support
 
-USE_ZIP=	yes
+USES=		zip
 USE_JAVA=	yes
 JAVA_VERSION=	1.6+
 NO_WRKSUBDIR=	yes
