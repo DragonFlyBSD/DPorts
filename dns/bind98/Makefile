@@ -1,11 +1,13 @@
 # $FreeBSD$
 
-PORTNAME=	bind98
+PORTNAME=	bind
 PORTVERSION=	9.8.7
+PORTREVISION=	3
 CATEGORIES=	dns net ipv6
 MASTER_SITES=	${MASTER_SITE_ISC}
 MASTER_SITE_SUBDIR=	bind9/${ISCVERSION}
-DISTNAME=	bind-${ISCVERSION}
+PKGNAMESUFFIX=	98
+DISTNAME=	${PORTNAME}-${ISCVERSION}
 
 MAINTAINER=	mat@FreeBSD.org
 COMMENT=	BIND DNS suite with updated DNSSEC and DNS64
@@ -15,18 +17,23 @@ LICENSE=	ISCL
 # ISC releases things like 9.8.0-P1, which our versioning doesn't like
 ISCVERSION=	9.8.7
 
+PORTSCOUT=	limit:^9.8.
+
 MAKE_JOBS_UNSAFE=	yes
+
+LIB_DEPENDS=	libxml2.so:${PORTSDIR}/textproc/libxml2
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--localstatedir=/var --disable-linux-caps \
 		--disable-symtable \
+		--with-libxml2=${LOCALBASE} \
 		--with-randomdev=/dev/random
 ETCDIR=		${PREFIX}/etc/namedb
 
 CONFLICTS=	bind9*-9.[45679].* bind9*-sdb-9.[45679].* bind-tools-9.*
 
-OPTIONS_DEFAULT=	IPV6 SSL XML THREADS GSSAPI
-OPTIONS_DEFINE=		SSL LINKS XML IDN REPLACE_BASE LARGE_FILE \
+OPTIONS_DEFAULT=	IPV6 SSL THREADS GSSAPI
+OPTIONS_DEFINE=		SSL LINKS IDN REPLACE_BASE LARGE_FILE \
 			FIXED_RRSET RPZ_NSIP RPZ_NSDNAME RPZRRL_PATCH \
 			SIGCHASE IPV6 THREADS GSSAPI FILTER_AAAA DOCS
 OPTIONS_GROUP=		DLZ
@@ -35,7 +42,6 @@ OPTIONS_GROUP_DLZ=	DLZ_POSTGRESQL DLZ_MYSQL DLZ_BDB \
 
 SSL_DESC=		Build with OpenSSL (Required for DNSSEC)
 LINKS_DESC=		Create conf file symlinks in ${PREFIX}
-XML_DESC=		Support for xml statistics output
 REPLACE_BASE_DESC=	Replace base BIND (FreeBSD 9.x and earlier)
 LARGE_FILE_DESC=	64-bit file support
 SIGCHASE_DESC=		dig/host/nslookup will do DNSSEC validation
@@ -55,10 +61,6 @@ DLZ_STUB_DESC=		DLZ stub driver
 SSL_CONFIGURE_ON=	--with-openssl=${OPENSSLBASE}
 SSL_USE=	openssl=yes
 SSL_CONFIGURE_OFF=	--disable-openssl-version-check --without-openssl
-
-XML_CONFIGURE_ON=	--with-libxml2=${LOCALBASE}
-XML_CONFIGURE_OFF=	--without-libxml2
-XML_LIB_DEPENDS=	libxml2.so:${PORTSDIR}/textproc/libxml2
 
 IDN_USES=		iconv
 IDN_CONFIGURE_ON=	--with-idn=${LOCALBASE} ${ICONV_CONFIGURE_BASE}
@@ -98,7 +100,12 @@ DLZ_FILESYSTEM_CONFIGURE_ON=	--with-dlz-filesystem=yes
 
 DLZ_STUB_CONFIGURE_ON=	--with-dlz-stub=yes
 
+.if defined(HEIMDAL_HOME)
+GSSAPI_CONFIGURE_ON=	--with-gssapi=${HEIMDAL_HOME}
+GSSAPI_CONFIGURE_OFF=	--without-gssapi
+.else
 GSSAPI_CONFIGURE_WITH=	gssapi
+.endif
 
 .include <bsd.port.options.mk>
 
@@ -114,10 +121,6 @@ PKGINSTALL=${NONEXISTENT}
 CONFIGURE_ARGS+=	--enable-threads
 .else
 CONFIGURE_ARGS+=	--disable-threads
-.endif
-
-.if ${PORT_OPTIONS:MGSSAPI}
-LIB_DEPENDS+=	libgssapi_krb5.so:${PORTSDIR}/security/krb5
 .endif
 
 .if ${PORT_OPTIONS:MREPLACE_BASE}

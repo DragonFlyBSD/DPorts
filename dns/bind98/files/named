@@ -1,10 +1,11 @@
 #!/bin/sh
 #
-# $FreeBSD: head/dns/bind98/files/named 338989 2014-01-07 09:55:06Z erwin $
+# $FreeBSD: head/dns/bind98/files/named 347281 2014-03-06 17:12:52Z mat $
 #
 
 # PROVIDE: named
-# REQUIRE: SERVERS FILESYSTEMS
+# REQUIRE: FILESYSTEMS defaultroute
+# BEFORE: NETWORKING
 # KEYWORD: shutdown
 
 . /etc/rc.subr
