@@ -2,7 +2,7 @@
 
 PORTNAME=	Products.ResourceRegistries
 PORTVERSION=	2.2.9
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel python zope
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -25,7 +25,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.component>=0:${PORTSDIR}/devel/py-zope.
 
 USE_PYTHON=		2
 USE_PYDISTUTILS=	yes
-USE_ZIP=		yes
-USES=			zope
+PYDISTUTILS_AUTOPLIST=	yes
+USES=			zope zip
 
 .include <bsd.port.mk>
