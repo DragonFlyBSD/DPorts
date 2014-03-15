@@ -2,14 +2,14 @@
 # $FreeBSD$
 
 PORTNAME=	mod_qos
-PORTVERSION=	10.15
+PORTVERSION=	10.29
 CATEGORIES=	www
 MASTER_SITES=	SF
-MASTER_SITE_SUBDIR= mod-qos
+MASTER_SITE_SUBDIR=	mod-qos
 DIST_SUBDIR=	apache2
 
-MAINTAINER=	andrea@cervesato.it
-COMMENT=	Qos for Apache
+MAINTAINER=	fax@nohik.ee
+COMMENT=	QoS for Apache
 
 LICENSE=	GPLv2
 
