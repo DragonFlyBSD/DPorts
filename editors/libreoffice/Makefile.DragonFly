@@ -1,0 +1,2 @@
+CONFIGURE_ARGS+=	--with-os-version=${DFLYVERSION} \
+			--with-vendor="DragonFly dports"
