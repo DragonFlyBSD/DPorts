@@ -10,17 +10,14 @@ DISTNAME=	xport
 MAINTAINER=	swills@FreeBSD.org
 COMMENT=	The xport Transport Stream Demuxer
 
-USE_ZIP=	yes
+USES=		zip
 NO_WRKSUBDIR=	yes
-PLIST_FILES=    bin/xporthdmv
+PLIST_FILES=	bin/xporthdmv
 
-NO_STAGE=	yes
 do-build:
-	cd ${WRKSRC} \
-	&& ${CC} ${CFLAGS} xport.c -o xporthdmv
+	${CC} ${CFLAGS} ${WRKSRC}/xport.c -o ${WRKSRC}/xporthdmv
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/xporthdmv ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/xporthdmv ${STAGEDIR}${PREFIX}/bin
 
-.include <bsd.port.pre.mk>
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
