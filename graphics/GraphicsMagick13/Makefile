@@ -3,6 +3,7 @@
 
 PORTNAME=	GraphicsMagick
 PORTVERSION=	1.3.19
+PORTREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	SF \
 		ftp://ftp.graphicsmagick.org/pub/GraphicsMagick/1.3/
@@ -29,7 +30,7 @@ USES=		iconv
 USE_GNOME=	libxml2
 USE_GHOSTSCRIPT=yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV=	PTHREAD_CFLAGS=" " PTHREAD_LIBS="-pthread"
+CONFIGURE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" PTHREAD_LIBS="${PTHREAD_LIBS}"
 CONFIGURE_ARGS=	--without-perl --enable-shared --enable-static \
 		--with-quantum-depth="${QD}" \
 		--with-windows-font-dir="${WINDOWS_FONT_DIR}"
@@ -43,7 +44,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 OPTIONS_DEFINE=		DOCS FPX OPENMP Q8BIT SSE TESTS WEBP X11
 OPTIONS_SINGLE=		X11
 OPTIONS_SINGLE_X11=	DPS
-OPTIONS_DEFAULT=	DPS OPENMP TESTS WEBP X11
+OPTIONS_DEFAULT=	DPS OPENMP WEBP X11
 
 DPS_DESC=		Enable Display Ghostscript support
 DPS_LIB_DEPENDS=	libdps.so:${PORTSDIR}/x11/dgs
@@ -92,12 +93,6 @@ LIBWMF_PORT=	libwmf-nox11
 
 .include <bsd.port.pre.mk>
 
-.if ${OSVERSION} >= 1000024
-.if ${PORT_OPTIONS:MFPX} && ${PORT_OPTIONS:MOPENMP}
-IGNORE=		Cause C++ ABI conflict between clang/libc++ and gcc/libstdc++
-.endif
-.endif
-
 .if !defined(WINDOWS_FONT_DIR)
 # Use fonts installed by x11-fonts/webfonts by default
 WINDOWS_FONT_DIR=${LOCALBASE}/lib/X11/fonts/webfonts
@@ -123,3 +118,6 @@ regression-test: do-build
 		${MAKEFILE} ${MAKE_ARGS} check)
 
 .include <bsd.port.post.mk>
+# The OPENMP option may select gcc as compiler but on architectures
+# that have switched to libc++ clang should be used for C++ code.
+CXX=		c++
