@@ -44,11 +44,17 @@ NLS_CONFIGURE_ENABLE=	nls
 XML_USE=		GNOME=libxml2
 XML_CONFIGURE_WITH=	libxml2
 
+USES+=	usb
+USBVER= usb1
+
 .include <bsd.port.options.mk>
 
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1000040
+.if (${OPSYS} == FreeBSD && ${OSVERSION} < 1000040) || (${OPSYS} == DragonFly && ${DFLYVERSION} < 300703)
 CONFIGURE_ENV+=	LIBUSB1_CFLAGS=" " LIBUSB1_LIBS="-lusb"
+USBVER= usb
 .endif
+
+PLIST_SUB+= USB=${USBVER}
 
 post-patch:
 .for i in configure libgphoto2_port/configure

@@ -229,9 +229,9 @@ lib/libgphoto2_port/%%VERSION_PORT%%/ptpip.so
 lib/libgphoto2_port/%%VERSION_PORT%%/serial.a
 lib/libgphoto2_port/%%VERSION_PORT%%/serial.la
 lib/libgphoto2_port/%%VERSION_PORT%%/serial.so
-lib/libgphoto2_port/%%VERSION_PORT%%/usb.a
-lib/libgphoto2_port/%%VERSION_PORT%%/usb.la
-lib/libgphoto2_port/%%VERSION_PORT%%/usb.so
+lib/libgphoto2_port/%%VERSION_PORT%%/%%USB%%.a
+lib/libgphoto2_port/%%VERSION_PORT%%/%%USB%%.la
+lib/libgphoto2_port/%%VERSION_PORT%%/%%USB%%.so
 lib/libgphoto2_port/%%VERSION_PORT%%/usbdiskdirect.a
 lib/libgphoto2_port/%%VERSION_PORT%%/usbdiskdirect.la
 lib/libgphoto2_port/%%VERSION_PORT%%/usbdiskdirect.so
