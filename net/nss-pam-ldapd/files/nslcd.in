@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net/nss-pam-ldapd/files/nslcd.in 333272 2013-11-09 00:23:44Z zi $
+# $FreeBSD: head/net/nss-pam-ldapd/files/nslcd.in 346906 2014-03-03 14:36:30Z zi $
 #
 # PROVIDE: nslcd
 # REQUIRE: NETWORKING ldconfig resolv
@@ -62,6 +62,7 @@ nslcd_status()
 		echo "${name} is running with PID ${mypid}.";
 	else
 		echo "${name} not running?";
+		return 1
 	fi
 }
 
