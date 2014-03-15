@@ -16,27 +16,21 @@ PROJECTHOST=	rsync-backup
 CONFIGSRC=	${WRKSRC}/config
 CONFIGFILES=	backupset.conf config.conf destinations.conf sources.conf
 
-USE_ZIP=	yes
-USES=		perl5
+USES=		perl5 zip
 NO_BUILD=	yes
 
 SUB_FILES=	pkg-message
 
-NO_STAGE=	yes
+OPTIONS_DEFINE=	DOCS
+
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${PREFIX}/bin/
-
-	${MKDIR} ${ETCDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+	@${MKDIR} ${STAGEDIR}${ETCDIR}
 .for configfile in ${CONFIGFILES}
-	${INSTALL_DATA} ${CONFIGSRC}/${configfile} ${ETCDIR}/${configfile}.example
+	${INSTALL_DATA} ${CONFIGSRC}/${configfile} \
+		${STAGEDIR}${ETCDIR}/${configfile}.example
 .endfor
-
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
-	(cd ${WRKSRC}/doc && ${COPYTREE_SHARE} \* ${DOCSDIR})
-.endif
-
-post-install:
-	@${CAT} ${PKGMESSAGE}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	(cd ${WRKSRC}/doc && ${COPYTREE_SHARE} \* ${STAGEDIR}${DOCSDIR})
 
 .include <bsd.port.mk>
