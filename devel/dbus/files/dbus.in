@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/devel/dbus/files/dbus.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/devel/dbus/files/dbus.in 347320 2014-03-06 20:39:24Z kwm $
 #
 # PROVIDE: dbus
 # REQUIRE: DAEMON
@@ -30,9 +30,7 @@ dbus_prestart()
     if [ ! -d /var/db/dbus ]; then
         mkdir -p /var/db/dbus
     fi
-    if [ ! -f /var/db/dbus/machine-id ]; then
-        %%PREFIX%%/bin/dbus-uuidgen > /var/db/dbus/machine-id
-    fi
+    %%PREFIX%%/bin/dbus-uuidgen --ensure
 
     mkdir -p $(dirname $pidfile)
 }
