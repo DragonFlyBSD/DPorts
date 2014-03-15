@@ -7,14 +7,14 @@ CATEGORIES=	textproc java
 MASTER_SITES=	SF/${PORTNAME}/saxon6/${PORTVERSION}
 DISTNAME=	${PORTNAME}${PORTVERSION:S/./-/g}
 
-MAINTAINER=	hq@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	An XSLT 1.0 processor for Java
 
 LICENSE=	MPL
 
 RUN_DEPENDS=	java:${PORTSDIR}/java/javavmwrapper
 
-USE_ZIP=	yes
+USES=		zip
 USE_JAVA=	yes
 JAVA_VERSION=	1.6+
 NO_WRKSUBDIR=	yes
