@@ -7,7 +7,6 @@ CATEGORIES=	devel
 MASTER_SITES=	ftp://invisible-island.net/${PORTNAME}/current/
 MASTER_SITE_SUBDIR=	${PORTNAME}/current
 DIST_SUBDIR=	${PORTNAME}
-EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	bapt@FreeBSD.org
 COMMENT=	Library for terminal-independent, full-screen output
@@ -40,7 +39,7 @@ TRACE_DESC=	Add trace() function to all models of ncurses
 CONFIGURE_ENV=	gnat_exists="no"
 
 USE_LDCONFIG=	yes
-USES=		pkgconfig
+USES=		pkgconfig tar:tgz
 
 WIDEC_WRKSRC=	${WRKSRC}/build.widec
 NOWIDEC_WRKSRC=	${WRKSRC}/build.nowidec
