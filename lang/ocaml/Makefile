@@ -22,8 +22,7 @@ PKGNAMESUFFIX=	${SFX}
 MAINTAINER?=	michael.grunewald@laposte.net
 COMMENT?=	The Objective Caml compiler and programming environment
 
-USES=		gmake
-USE_BZIP2=	yes
+USES=		gmake tar:bzip2
 REINPLACE_ARGS=	-i ""
 HAS_CONFIGURE=	yes
 ALL_TARGET=	world.opt
@@ -46,23 +45,11 @@ MODOPT=		camlp4o camlp4r ocamlc ocamldep ocamldoc ocamllex ocamlopt
 PATTERN=	[[:space:]]*(do|then)?[[:space:]]*)(\$$\(CP\)|cp)([[:space:]]
 
 NO_STAGE=	yes
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 .if !defined(NOPORTDOCS)
 PORTDOCS = htmlman/* ${DOCSDISTNAME}-refman.ps.gz ${DOCSDISTNAME}-refman.pdf
 .endif
-
-.if ${ARCH} == powerpc
-ARCH=	power
-.endif
-
-.if ${ARCH} == power
-PLIST_SUB+=	PROF="@comment "
-.else
-PLIST_SUB+=	PROF=""
-.endif
-
-.include "${FILESDIR}/manfiles"
 
 .if ${PORT_OPTIONS:MTHREADS}
 PLIST_SUB+=	THREADS=""
@@ -95,14 +82,17 @@ CONFLICTS+=	ocaml-[0-9]* ocaml-nox11-[0-9]*
 .endif
 CONFIGURE_ARGS+=-no-tk
 .else
-USE_TK=		84+
-INVALID_TK_VER =	86
-.include "${PORTSDIR}/Mk/bsd.tcl.mk"
+USES+=		tk:84,85
 PLIST_SUB+=	TK=""
 CONFLICTS+=	ocaml-nox11-[0-9]* ocaml-notk-[0-9]*
 CONFIGURE_ARGS+=	-tkdefs \
-			"-I${TCL_INCLUDEDIR} -I${TK_INCLUDEDIR} ${THR_CPP}"
+			"-I${TCL_INCLUDEDIR} -I${TK_INCLUDEDIR} ${THR_CPP}" \
+			-tklibs "-L${LOCALBASE}/lib -ltk${TK_SHLIB_VER} \
+			-ltcl${TCL_SHLIB_VER} ${THR_LD}"
 .endif
+
+.include <bsd.port.pre.mk>
+.include "${FILESDIR}/manfiles"
 
 OCAML_ARCH= ${ARCH:S/x86_64/amd64/}
 
