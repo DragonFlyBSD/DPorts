@@ -3,6 +3,7 @@
 
 PORTNAME=	worker
 PORTVERSION=	3.2.0
+PORTREVISION=	1
 CATEGORIES=	x11-fm
 MASTER_SITES=	http://www.boomerangsworld.de/cms/worker/downloads/
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
@@ -17,7 +18,7 @@ RUN_DEPENDS+=	bash:${PORTSDIR}/shells/bash
 GNU_CONFIGURE=	yes
 USE_XORG=	x11
 USE_BZIP2=	yes
-USE_GCC=	4.6+
+USE_GCC=	yes
 
 USES=	shebangfix
 SHEBANG_FILES=	${WRKSRC}/scripts/*.sh \
