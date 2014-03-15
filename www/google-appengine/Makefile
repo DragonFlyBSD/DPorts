@@ -26,8 +26,7 @@ OPTIONS_DEFAULT=	MYSQL
 PROJECTHOST=	googleappengine
 
 USE_PYTHON=	2
-USE_ZIP=	yes
-USES=		gettext
+USES=		gettext zip
 
 WRKSRC=	${WRKDIR}/${PORTNAME:S,-,_,}
 
@@ -64,7 +63,7 @@ do-install:
 .for D in ${GAEDATADIR}
 	@(cd ${WRKSRC} && ${COPYTREE_SHARE} ${D} ${STAGEDIR}${DATADIR})
 .endfor
-	@${MKDIR} ${EXAMPLESDIR}
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	(cd ${WRKSRC} && ${COPYTREE_SHARE} demos ${STAGEDIR}${EXAMPLESDIR})
 .for S in ${GAESCRIPTS}
 	${INSTALL_SCRIPT} ${WRKSRC}/${S} ${STAGEDIR}${DATADIR}
