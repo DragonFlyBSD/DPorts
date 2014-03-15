@@ -11,10 +11,9 @@ COMMENT=	Transforms bitmaps into vector graphics
 
 GNU_CONFIGURE=	yes
 
-.if !defined(NO_INSTALL_MANPAGES)
-MAN1=		potrace.1 mkbitmap.1
-.endif
-PLIST_FILES=	bin/potrace bin/mkbitmap
+PLIST_FILES=	bin/potrace bin/mkbitmap \
+		man/man1/potrace.1.gz \
+		man/man1/mkbitmap.1.gz
 
 OPTIONS_DEFINE=	METRIC A4
 OPTIONS_DEFAULT=METRIC A4
@@ -22,7 +21,6 @@ OPTIONS_DEFAULT=METRIC A4
 METRIC_DESC=	Use metric units (cm) as default
 A4_DESC=	Use A4 as the default papersize
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MA4}
@@ -34,11 +32,9 @@ CONFIGURE_ARGS+=	--enable-metric
 .endif
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/potrace ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/src/mkbitmap ${PREFIX}/bin
-.if !defined(NO_INSTALL_MANPAGES)
-	${INSTALL_MAN} ${WRKSRC}/doc/potrace.1 ${MAN1PREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/doc/mkbitmap.1 ${MAN1PREFIX}/man/man1
-.endif
+	${INSTALL_PROGRAM} ${WRKSRC}/src/potrace ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/src/mkbitmap ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/doc/potrace.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/mkbitmap.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
 
 .include <bsd.port.mk>
