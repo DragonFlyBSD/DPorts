@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/sysutils/daemontools/files/svscan.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/sysutils/daemontools/files/svscan.in 346913 2014-03-03 15:14:04Z feld $
 #
 
 # PROVIDE: svscan
@@ -15,7 +15,7 @@
 # svscan_enable		Set to "YES" to run svscan.
 # svscan_servicedir	The directory containing the various service.
 #			directories to be monitored.  Professor Daniel J.
-#			Bernstein recomments "/service", but the FreeBSD
+#			Bernstein recommends "/service", but the FreeBSD
 #			port has a default of "/var/service" instead, which
 #			is consistent with the FreeBSD filesystem hierarchy
 #			guidelines as described in the hier(7) manual page.
