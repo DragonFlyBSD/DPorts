@@ -1,7 +1,7 @@
 #!/bin/sh
-# Created by: Created by: KalleDK <plexmaintainer@k-moeller.dk>
+# Created by: KalleDK <plexmaintainer@k-moeller.dk>
 #
-# $FreeBSD: head/multimedia/plexmediaserver-plexpass/files/plexmediaserver_plexpass.in 346010 2014-02-25 14:39:29Z feld $
+# $FreeBSD: head/multimedia/plexmediaserver-plexpass/files/plexmediaserver_plexpass.in 347409 2014-03-07 17:29:28Z feld $
 #
 # PROVIDE: plexmediaserver_plexpass
 # REQUIRE: LOGIN
@@ -48,7 +48,6 @@ plex_precmd()
 	export PLEX_MEDIA_SERVER_MAX_PLUGIN_PROCS=${plexmediaserver_plexpass_maxplugins}
 	export PLEX_MEDIA_SERVER_APPLICATION_SUPPORT_DIR=${plexmediaserver_plexpass_support_path}
 	export PLEX_MEDIA_SERVER_PIDFILE=${pidfile}
-	if ${plexmediaserver_tmp}; then export PLEX_MEDIA_SERVER_TMPDIR=${plexmediaserver_plexpass_tmp}; fi
 	export PATH="${SCRIPTPATH}/Resources/Python/bin:${PATH}"
 	export LC_ALL="C"
 	export LANG="C"
@@ -60,6 +59,11 @@ plex_precmd()
 	
 	if [ ! -d "${plexmediaserver_plexpass_support_path}/Plex Media Server" ]; then
 		install -d -g ${plexmediaserver_plexpass_group} -o ${plexmediaserver_plexpass_user} "${plexmediaserver_plexpass_support_path}/Plex Media Server";
+	fi
+
+	if [ ${plexmediaserver_plexpass_tmp} ]; then 
+		export TMPDIR=${plexmediaserver_plexpass_tmp};
+		install -d -g ${plexmediaserver_plexpass_group} -o ${plexmediaserver_plexpass_user} "${plexmediaserver_plexpass_tmp}";
 	fi
 }
 
@@ -89,7 +93,6 @@ plex_stopcmd()
 		main_pid=$(cat ${pidfile});
 		child_pids=$(pgrep -P ${main_pid});
 		all_pids="${main_pid} ${child_pids}"
-		sig_stop=-QUIT;
 		kill ${sig_stop} ${all_pids};
 		wait_for_pids ${all_pids};
 		rm ${pidfile}
