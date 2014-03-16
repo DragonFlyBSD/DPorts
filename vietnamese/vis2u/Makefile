@@ -4,23 +4,21 @@
 PORTNAME=	vis2u
 PORTVERSION=	1.0
 CATEGORIES=	vietnamese textproc
-#MASTER_SITES=	http://www.geocities.com/~starkville/mozilla/
-MASTER_SITES=	${MASTER_SITE_LOCAL}
+MASTER_SITES=	LOCAL
 MASTER_SITE_SUBDIR=	obrien
 DISTNAME=	${PORTNAME}${PORTVERSION:S/.//g}
 
 MAINTAINER=	obrien@FreeBSD.org
 COMMENT=	VISCII->Unicode conversion
 
-USE_ZIP=	yes
+USES=		zip:infozip
 NO_WRKSUBDIR=	yes
 
-NO_STAGE=	yes
 do-build:
 	cd ${WRKSRC} ; make vis2u
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/vis2u ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/vis2u ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
 
