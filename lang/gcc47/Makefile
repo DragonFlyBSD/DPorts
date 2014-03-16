@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gcc47
-PORTVERSION=	4.7.4.20140215
+PORTVERSION=	4.7.4.20140222
 CATEGORIES=	lang java
 MASTER_SITES=	${MASTER_SITE_GCC}
 MASTER_SITE_SUBDIR=	snapshots/${DISTVERSION}
@@ -23,6 +23,8 @@ RUN_DEPENDS+=	${LOCALBASE}/bin/as:${PORTSDIR}/devel/binutils
 .if defined(MAINTAINER_MODE)
 BUILD_DEPENDS+=	runtest:${PORTSDIR}/misc/dejagnu
 .endif
+
+CONFLICTS=	gcc-4.7.*
 
 # DISTVERSION relates to downloads, GCC_VERSION and SUFFIX to names
 # of executables and directories once installed.  A PORTVERSION of
