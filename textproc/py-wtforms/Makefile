@@ -3,6 +3,7 @@
 
 PORTNAME=	WTForms
 PORTVERSION=	1.0.3
+PORTREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,10 +13,9 @@ COMMENT=	Forms validation and rendering library for python web development
 
 LICENSE=	BSD
 
-USE_ZIP=	yes
+USES=		zip
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	easy_install
-PYDISTUTILS_NOEGGINFO=	yes
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
