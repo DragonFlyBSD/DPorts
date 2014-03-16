@@ -43,11 +43,7 @@ USE_PYTHON=		yes
 PLIST_SUB+=		PYTHON="@comment "
 .endif
 
-.if ${OPSYS} == DragonFly
-USES+= usb
-.else
 EXTRA_PATCHES=	${FILESDIR}/extra-patch-configure.in
-.endif
 
 OPTIONS_DEFINE=		DOCS
 OPTIONS_DEFAULT=	DOCS
