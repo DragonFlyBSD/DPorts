@@ -3,11 +3,12 @@
 
 PORTNAME=	munin
 PORTVERSION=	${MUNIN_VERSION}
+PORTREVISION=	1
 CATEGORIES=	sysutils perl5
 MASTER_SITES=	${MUNIN_SITES}
 PKGNAMESUFFIX=	-node
 
-MAINTAINER=	flo@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Node-specific part of Munin
 
 BUILD_DEPENDS=	p5-Module-Build>=0:${PORTSDIR}/devel/p5-Module-Build \
@@ -82,6 +83,13 @@ post-patch:
 		${WRKSRC}/node/sbin/munin-node \
 		${WRKSRC}/node/sbin/munin-node-configure \
 		${WRKSRC}/node/sbin/munin-run
+	@${REINPLACE_CMD} \
+		-e 's|^\(BASH[[:space:]]*:=\).*|\1 ${bash_CMD}|' \
+		-e 's|^\(JAVARUN[[:space:]]*:=\).*|\1 ${java_CMD}|' \
+		-e 's|^\(PERL[[:space:]]*:=\).*|\1 ${perl_CMD}|' \
+		-e 's|^\(PYTHON[[:space:]]*:=\).*|\1 ${python_CMD}|' \
+		-e 's|^\(RUBY[[:space:]]*:=\).*|\1 ${ruby_CMD}|' \
+		${WRKSRC}/Makefile.config
 	@${FIND} ${WRKSRC}/node/sbin -type f -name "*.orig" -delete
 
 pre-su-install:
