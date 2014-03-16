@@ -15,14 +15,14 @@ COMMENT=	A Ruby library to repair unclosed tags in an HTML document
 RUN_DEPENDS=	${RUBY_SITELIBDIR}/htmlsplit.rb:${PORTSDIR}/textproc/ruby-htmlsplit
 
 PLIST_FILES=	%%RUBY_SITELIBDIR%%/htmlrepair.rb
-USE_ZIP=	yes
+USES=		zip
 USE_RUBY=	yes
 
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
-NO_STAGE=	yes
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/htmlrepair.rb ${RUBY_SITELIBDIR}/
+	${MKDIR} ${STAGEDIR}${RUBY_SITELIBDIR}
+	${INSTALL_DATA} ${WRKSRC}/htmlrepair.rb ${STAGEDIR}${RUBY_SITELIBDIR}/
 
 .include <bsd.port.mk>
