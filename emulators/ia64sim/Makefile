@@ -11,8 +11,7 @@ DISTNAME=	${PORTNAME}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	IA64 simulator (Intel(R) Architecture 64)
 
-USE_ZIP=	yes
-USES=		gmake
+USES=		gmake zip
 MAKEFILE=	makefile.unx
 MAKE_ARGS=	CC="${CC}"
 
@@ -23,17 +22,13 @@ PORTDOCS=	ia64user.txt readme
 
 OPTIONS_DEFINE=	DOCS
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
 pre-build:
 	${RM} -f ${WRKSRC}/obj/*.o ${WRKSRC}/ia64sim
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/ia64sim ${PREFIX}/bin
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/ia64user.txt ${WRKSRC}/readme ${DOCSDIR}
-.endif
+	${INSTALL_PROGRAM} ${WRKSRC}/ia64sim ${STAGEDIR}${PREFIX}/bin
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/ia64user.txt ${WRKSRC}/readme \
+		${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
