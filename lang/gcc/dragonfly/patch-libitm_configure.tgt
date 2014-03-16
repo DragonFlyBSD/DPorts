@@ -1,0 +1,10 @@
+--- libitm/configure.tgt.orig	2012-02-13 21:51:44.000000000 +0000
++++ libitm/configure.tgt
+@@ -129,6 +129,7 @@ case "${target}" in
+ 	;;
+ 
+   *-*-gnu* | *-*-k*bsd*-gnu \
++  | *-*-dragonfly* \
+   | *-*-netbsd* | *-*-freebsd* | *-*-openbsd* \
+   | *-*-solaris2* | *-*-sysv4* | *-*-irix6* | *-*-osf* | *-*-hpux11* \
+   | *-*-darwin* | *-*-aix*)
