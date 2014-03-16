@@ -7,14 +7,14 @@ PORTREVISION=	1
 CATEGORIES=	www java
 MASTER_SITES=	SF
 
-MAINTAINER=	hq@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Lightweight, open source, Java EE blogging tool
 
 PATCH_DEPENDS=	zip:${PORTSDIR}/archivers/zip \
 		unzip:${PORTSDIR}/archivers/unzip
 RUN_DEPENDS=	${LOCALBASE}/apache-tomcat-6.0/bin/catalina.sh:${PORTSDIR}/www/tomcat6
 
-USE_ZIP=	yes
+USES=		zip:infozip
 
 NO_BUILD=	yes
 
