@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/net-mgmt/nrpe/files/nrpe2.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/net-mgmt/nrpe/files/nrpe2.in 348129 2014-03-13 21:24:01Z mandree $
 #
 # PROVIDE: nrpe2
 # REQUIRE: LOGIN
@@ -37,7 +37,7 @@ find_pidfile()
 	[ -n "$nrpe2_pidfile" ] &&
 	    warn "No longer necessary to set nrpe2_pidfile in rc.conf[.local]"
 
-	if get_pidfile_from_conf pid_file %%PREFIX%%/etc/nrpe.cfg; then
+	if get_pidfile_from_conf pid_file ${nrpe2_configfile}; then
 		pidfile="$_pidfile_from_conf"
 	else
 		pidfile='%%PIDDIR%%/nrpe2.pid'
