@@ -8,7 +8,7 @@ CATEGORIES=	textproc java
 MASTER_SITES=	http://klomp.org/jaxup/
 DISTNAME=	${PORTNAME}-${PORTVERSION}-src
 
-MAINTAINER=	hq@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Java XUpdate engine
 
 BUILD_DEPENDS=	${JAR_DEPENDS}
@@ -19,7 +19,7 @@ JAR_DEPENDS=	${JAVALIBDIR}/jdom.jar:${PORTSDIR}/java/jdom \
 		${JAVALIBDIR}/jaxen-full.jar:${PORTSDIR}/java/jaxen \
 		${JAVALIBDIR}/xercesImpl.jar:${PORTSDIR}/textproc/xerces-j
 
-USE_ZIP=	yes
+USES=		zip
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 USE_JAVA=	yes
