@@ -2,17 +2,18 @@
 # $FreeBSD$
 
 PORTNAME=	klayout
-PORTVERSION=	0.21.19
+PORTVERSION=	0.23.3
 CATEGORIES=	cad
-MASTER_SITES=	http://www.klayout.de/
+MASTER_SITES=	http://178.77.72.242/downloads/
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	A Qt-based GDS2 Viewer
 
 LICENSE=	GPLv2
 
-USE_GMAKE=	yes
-USE_QT4=	corelib gui network moc_build sql uic_build \
+USES=		gmake
+USE_RUBY=	yes
+USE_QT4=	corelib designer gui network moc_build sql uic_build \
 		rcc_build qt3support xml
 PLIST_FILES=	bin/klayout \
 		bin/strm2cif \
@@ -22,22 +23,24 @@ PLIST_FILES=	bin/klayout \
 		bin/strm2txt \
 		bin/strmclip \
 		bin/strmcmp \
-		bin/strmxor
+		bin/strmxor \
+		lib/libklayout.so
+PLATFORMKEYWORD=freebsd-32-gcc-release
 
-PLATFORMKEYWORD=	freebsd-32-gcc-release
-
-NO_STAGE=	yes
 do-build:
 	cd ${WRKSRC} && \
-		${SH} build.sh -platform ${PLATFORMKEYWORD} \
-			-qtbin ${QT_PREFIX}/bin \
-			-qtinc ${QT_INCDIR} \
-			-qtlib ${QT_LIBDIR}
+	    ${SH} build.sh -platform ${PLATFORMKEYWORD} \
+		-qtbin ${QT_PREFIX}/bin \
+		-qtinc ${QT_INCDIR} \
+		-qtlib ${QT_LIBDIR}
 
 do-install:
 	cd ${WRKSRC}/bin.${PLATFORMKEYWORD} && \
-		${INSTALL_PROGRAM} ${PLIST_FILES:Mbin/*:S,^bin/,,} \
-		${PREFIX}/bin
+	    ${INSTALL_PROGRAM} ${PLIST_FILES:Mbin/*:S,^bin/,,} \
+	    ${STAGEDIR}${PREFIX}/bin
+	cd ${WRKSRC}/build.${PLATFORMKEYWORD}/main && \
+	    ${INSTALL_LIB} ${PLIST_FILES:Mlib/*:S,^lib/,,} \
+	    ${STAGEDIR}${PREFIX}/lib
 
 .include <bsd.port.pre.mk>
 
