@@ -3,6 +3,7 @@
 
 PORTNAME=	catapult
 PORTVERSION=	0.10.0
+PORTREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	SF/openmsx/openmsx/${PORTVERSION}
 DISTNAME=	openmsx-${PORTNAME}-${PORTVERSION}
@@ -18,7 +19,7 @@ RUN_DEPENDS=	openmsx:${PORTSDIR}/emulators/openmsx
 OPTIONS_DEFINE=	DEBUG DOCS
 
 USES=		gmake pkgconfig
-USE_GCC=	4.6+
+USE_GCC=	yes
 USE_CXXSTD=	gnu++0x
 USE_GNOME=	gtk20 libxml2
 USE_WX=		2.8+
