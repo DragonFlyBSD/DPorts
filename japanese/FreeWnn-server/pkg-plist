@@ -1,7 +1,10 @@
+@comment $FreeBSD: head/japanese/FreeWnn-server/pkg-plist 347859 2014-03-11 06:49:56Z hrs $
 bin/Wnn4/atod
 bin/Wnn4/atof
 bin/Wnn4/dtoa
+@owner wnn
 bin/Wnn4/jserver
+@owner root
 bin/Wnn4/oldatonewa
 bin/Wnn4/wddel
 bin/Wnn4/wdreg
