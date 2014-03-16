@@ -11,9 +11,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Greylisting daemon for Postfix
 
-DEPRECATED=	No more public distfiles
-EXPIRATION_DATE=	2014-03-10
-
 USE_RC_SUBR=	gld
 HAS_CONFIGURE=	yes
 
@@ -51,6 +48,9 @@ SUB_LIST+=	MYSQL=
 SUB_LIST+=	PGSQL=
 .	endif
 .endif
+
+post-extract:
+	@${RM} -f ${WRKSRC}/config.cache
 
 post-patch:
 	${REINPLACE_CMD} -e 's|\(@CC@\ \)-O2|\1${CFLAGS}|' \
