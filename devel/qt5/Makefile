@@ -10,12 +10,13 @@ EXTRACT_ONLY=	# empty
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Cross-platform application and UI framework (metaport)
 
-USE_QT5=	clucene concurrent core dbus declarative designer \
-		graphicaleffects gui help imageformats multimedia \
-		network opengl printsupport qml quick script \
-		scripttools sql svg testlib webkit widgets xml \
-		xmlpatterns
+#USE_QT5=	clucene concurrent core dbus declarative designer \
+#		graphicaleffects gui help imageformats multimedia \
+#		network opengl printsupport qml quick script \
+#		scripttools sql svg testlib webkit widgets xml \
+#		xmlpatterns
 
+IGNORE=		qt5 does not build yet
 NO_BUILD=	yes
 NO_MTREE=	yes
 
@@ -27,8 +28,8 @@ SQL_PLUGINS_USE=sql-ibase sql-mysql sql-odbc sql-pgsql sql-sqlite2 \
 		sql-sqlite3
 
 TOOLS_DESC=	Install Qt tools (qmake, moc, etc.)
-TOOLS_USE=	assistant buildtools linguist linguisttools \
-		pixeltool qdbus qdbusviewer qev qmake
+#TOOLS_USE=	assistant buildtools linguist linguisttools \
+#		pixeltool qdbus qdbusviewer qev qmake
 
 .for opt in ${OPTIONS_DEFINE}
 ${opt}_USE:=	${${opt}_USE:S/^/QT5=/}
