@@ -1,0 +1,15 @@
+#!/bin/sh
+#
+# $FreeBSD: head/devel/qt5/files/pkg-deinstall.in 346930 2014-03-03 16:50:32Z makc $
+
+case $2 in
+POST-DEINSTALL)
+  sed -i "" '/qconfig-%%QT_MODNAME%%\.h/ d' \
+    %%QT_INCDIR%%/QtCore/qconfig-modules.h 2>/dev/null || true
+  [ \! -e %%QT_INCDIR%%/QtCore/qconfig.h ] &&
+  [ \! -s %%QT_INCDIR%%/QtCore/qconfig-modules.h ] &&
+  ( rm -f %%QT_INCDIR%%/QtCore/qconfig-modules.h 2>/dev/null
+    rmdir %%QT_INCDIR%%/QtCore 2>/dev/null
+    rmdir %%QT_INCDIR%% 2>/dev/null ) || true
+  ;;
+esac
