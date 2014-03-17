@@ -10,7 +10,7 @@ MASTER_SITES=	http://static.audioscrobbler.com/plugins/ \
 DISTNAME=	xmms-scrobbler-${PORTVERSION}
 
 MAINTAINER?=	novel@FreeBSD.org
-COMMENT?=	XMMS/BMP plugin for Audioscrobbler.com
+COMMENT?=	XMMS plugin for Audioscrobbler.com
 
 LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl
 
@@ -27,9 +27,8 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 SLAVEDIRS=	audio/xmms-scrobbler audio/bmp-scrobbler
 
-.if !defined(WITH_XMMS) && !defined(WITH_BMP)
+.if !defined(WITH_XMMS)
 WITH_XMMS=	yes
-WITH_BMP=	yes
 .endif
 
 .if defined(WITH_XMMS)
@@ -40,13 +39,7 @@ PLIST_FILES+=	lib/xmms/General/libxmms_scrobbler.la \
 CONFIGURE_ARGS+=	--disable-xmms-plugin
 .endif
 
-.if defined(WITH_BMP)
-LIB_DEPENDS+=	libbeep.so:${PORTSDIR}/multimedia/beep-media-player
-PLIST_FILES+=	lib/bmp/General/libbmp_scrobbler.la \
-		lib/bmp/General/libbmp_scrobbler.so
-.else
 CONFIGURE_ARGS+=	--disable-bmp-plugin
-.endif
 
 .if defined(WITH_DEBUG)
 CONFIGURE_ARGS+=	--enable-debug
@@ -70,7 +63,6 @@ pre-everything::
 	@${ECHO_MSG} "You may specify the following on the command line:"
 	@${ECHO_MSG} " "
 	@${ECHO_MSG} "WITH_XMMS=yes to enable xmms support"
-	@${ECHO_MSG} "WITH_BMP=yes to enable beep-media-player support"
 	@${ECHO_MSG} "WITH_DEBUG=yes to turn on debug mode"
 	@${ECHO_MSG} "WITH_APE=yes to enable ape"
 	@${ECHO_MSG} "WITH_ENCODINGS_PATCH=yes to enable ID3 tags recoding support"
