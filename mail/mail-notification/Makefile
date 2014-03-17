@@ -28,9 +28,9 @@ INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 
 OPTIONS_DEFINE=	EVOLUTION GMAIL HOTMAIL IMAP MAILDIR MBOX MH MOZILLA \
-		POP3 SASL SSL SYLPHEED YAHOO
+		POP3 SASL SSL SYLPHEED
 OPTIONS_DEFAULT=	GMAIL HOTMAIL IMAP MAILDIR MBOX MH MOZILLA \
-			POP3 SASL SSL SYLPHEED YAHOO
+			POP3 SASL SSL SYLPHEED
 EVOLUTION_DESC=	Evolution support
 GMAIL_DESC=	Gmail support
 HOTMAIL_DESC=	Windows Live Hotmail support
@@ -41,7 +41,6 @@ MH_DESC=	MH support
 MOZILLA_DESC=	Mozilla products support
 POP3_DESC=	POP3 support
 SYLPHEED_DESC=	Sylpheed support
-YAHOO_DESC=	Yahoo! Mail support
 
 NO_STAGE=	yes
 .include <bsd.port.options.mk>
@@ -79,13 +78,8 @@ PLIST_SUB+=	HOTMAIL="@comment "
 RUN_DEPENDS+=	getlive:${PORTSDIR}/mail/getlive
 PLIST_SUB+=	HOTMAIL=""
 .endif
-.if ! ${PORT_OPTIONS:MYAHOO}
 JB_CONF_ARGS+=	yahoo=no
 PLIST_SUB+=	YAHOO="@comment "
-.else
-RUN_DEPENDS+=	fetchyahoo:${PORTSDIR}/mail/fetchyahoo
-PLIST_SUB+=	YAHOO=""
-.endif
 .if ! ${PORT_OPTIONS:MEVOLUTION}
 JB_CONF_ARGS+=	evolution=no
 PLIST_SUB+=	EVOLUTION="@comment "
@@ -109,8 +103,7 @@ JB_CONF_ARGS+=	sylpheed=no
 	|| ${PORT_OPTIONS:MIMAP} \
 	|| ${PORT_OPTIONS:MMOZILLA} \
 	|| ${PORT_OPTIONS:MSYLPHEED} \
-	|| ${PORT_OPTIONS:MHOTMAIL} \
-	|| ${PORT_OPTIONS:MYAHOO}
+	|| ${PORT_OPTIONS:MHOTMAIL}
 LIB_DEPENDS+=	gmime-2.0.4:${PORTSDIR}/mail/gmime2
 .endif
 .if ! ${PORT_OPTIONS:MSSL}
