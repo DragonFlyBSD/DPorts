@@ -3,6 +3,7 @@
 
 PORTNAME=	octave-forge-msh
 PORTVERSION=	1.0.10
+PORTREVISION=	1
 CATEGORIES=	math
 
 MAINTAINER=	stephen@FreeBSD.org
@@ -21,6 +22,9 @@ RUN_DEPENDS+=	${TARBALLS_DIR}/splines.tar.gz:${PORTSDIR}/math/octave-forge-splin
 RUN_DEPENDS+=	gmsh:${PORTSDIR}/cad/gmsh
 
 .include "${.CURDIR}/../../Mk/bsd.octave.mk"
+
+post-patch:
+	${REINPLACE_CMD} 's/ $$(LDFLAGS)//' ${WRKSRC}/Makefile.in
 
 post-build:
 	${RM} -f ${WRKSRC}/Makefile ${WRKSRC}/configure
