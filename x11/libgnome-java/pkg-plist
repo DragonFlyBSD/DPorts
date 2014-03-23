@@ -118,7 +118,6 @@ libdata/pkgconfig/gnome2-java.pc
 %%PORTDOCS%%%%DOCSDIR%%/api/overview-tree.html
 %%PORTDOCS%%%%DOCSDIR%%/api/package-list
 %%PORTDOCS%%%%DOCSDIR%%/api/packages.html
-%%PORTDOCS%%%%DOCSDIR%%/api/resources/inherit.gif
 %%PORTDOCS%%%%DOCSDIR%%/api/serialized-form.html
 %%PORTDOCS%%%%DOCSDIR%%/api/stylesheet.css
 %%PORTDOCS%%%%DOCSDIR%%/examples/app/AppExample.java
