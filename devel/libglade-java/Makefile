@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: devel/libglade-java/Makefile 327724 2013-09-20 17:13:42Z bapt $
+# $FreeBSD$
 #   $MCom: ports/devel/libglade-java/Makefile,v 1.8 2005/10/29 22:06:06 marcus Exp $
 
 PORTNAME=	libglade-java
