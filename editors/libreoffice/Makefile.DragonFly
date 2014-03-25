@@ -1,2 +1,5 @@
 CONFIGURE_ARGS+=	--with-os-version=${DFLYVERSION} \
 			--with-vendor="DragonFly dports"
+.if ${DFLYVERSION} < 300600
+EXTRA_PATCHES+= ${DFLY_FILESDIR}/extra-patch-solenv_gbuild_Deliver.mk
+.endif
