@@ -49,8 +49,11 @@ USBVER= usb1
 
 .include <bsd.port.options.mk>
 
-.if (${OPSYS} == FreeBSD && ${OSVERSION} < 1000040) || (${OPSYS} == DragonFly && ${DFLYVERSION} < 300703)
+.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1000040
 CONFIGURE_ENV+=	LIBUSB1_CFLAGS=" " LIBUSB1_LIBS="-lusb"
+.endif
+
+.if ${OPSYS} == DragonFly && ${DFLYVERSION} < 300703
 USBVER= usb
 .endif
 
