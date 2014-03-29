@@ -1,0 +1,1 @@
+LIB_DEPENDS+= libelf.so:${PORTSDIR}/devel/libelf
