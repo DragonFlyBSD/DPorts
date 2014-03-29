@@ -1,8 +1,10 @@
 # Created by: Greg Lewis <glewis@FreeBSD.org>
-# $FreeBSD: java/openjdk7/Makefile 335863 2013-12-08 04:11:54Z glewis $
+# $FreeBSD$
 
 PORTNAME=	openjdk
 PORTVERSION=	${JDK_MAJOR_VERSION}.${PORT_MINOR_VERSION}.${PORT_BUILD_NUMBER}
+PORTREVISION=	2
+PORTEPOCH=	1
 CATEGORIES=	java devel
 MASTER_SITES=	http://download.java.net/openjdk/jdk${JDK_MAJOR_VERSION}u${JDK_MINOR_VERSION}/promoted/b${JDK_BUILD_NUMBER}/ \
 		http://download.java.net/jaxp/1.4.5/:jaxp \
@@ -27,10 +29,10 @@ LICENSE=	GPLv2
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-EXTRACT_SUFX=	.zip
-USES=		iconv gmake
+USES=		iconv gmake zip
 USE_XORG+=	x11 xext xi xrender xt xtst
 MAKE_ARGS=	CC=${CC} CXX=${CXX} HOST_CC=${CC}
+MAKE_JOBS_UNSAFE=	yes
 USE_GCC=	any
 
 OPTIONS_DEFINE=		DEBUG POLICY TZUPDATE
@@ -39,8 +41,8 @@ DEBUG_DESC=		Enable extra debugging info
 POLICY_DESC=		Install the Unlimited Strength Policy Files
 TZUPDATE_DESC=		Update the time zone data
 
-PORT_MINOR_VERSION=	45
-PORT_BUILD_NUMBER=	18
+PORT_MINOR_VERSION=	51
+PORT_BUILD_NUMBER=	13
 JDK_MAJOR_VERSION=	7
 JDK_MINOR_VERSION=	40
 JDK_BUILD_NUMBER=	43
@@ -56,7 +58,7 @@ LATEST_LINK=		openjdk7
 LIB_DEPENDS+=	freetype:${PORTSDIR}/print/freetype2 \
 		asound:${PORTSDIR}/audio/alsa-lib
 BUILD_DEPENDS+=	zip:${PORTSDIR}/archivers/zip \
-		unzip:${PORTSDIR}/archivers/unzip \
+		${UNZIP_CMD}:${PORTSDIR}/archivers/unzip \
 		javavm:${PORTSDIR}/java/javavmwrapper \
 		${LOCALBASE}/include/cups/cups.h:${PORTSDIR}/print/cups-client
 RUN_DEPENDS+=	javavm:${PORTSDIR}/java/javavmwrapper \
@@ -74,7 +76,6 @@ NOPRECIOUSMAKEVARS=	yes
 
 ONLY_FOR_ARCHS=	i386 amd64
 
-FETCH_ARGS=	-Fpr
 MAKE_ENV+=	LANG="C" \
 		LC_ALL="C" \
 		JAVA_HOME="" \
@@ -107,6 +108,7 @@ MAKE_ENV+=	HOTSPOT_BUILD_JOBS=${MAKE_JOBS_NUMBER}
 MAKE_ENV+=	ALT_PARALLEL_COMPILE_JOBS=${MAKE_JOBS_NUMBER}
 
 NO_STAGE=	yes
+
 .include <bsd.port.options.mk>
 
 .if ${OPSYS} == DragonFly && ${DFLYVERSION} > 300500
@@ -121,19 +123,25 @@ BOOTSTRAP_DISTFILE= bootstrap-openjdk-7.25.15.dfly-3.5-${JDK_ARCH}.tar.xz
 MAKE_ENV+=	ALT_OBJCOPY="/nonexistent"
 .endif
 
+.if ${PORT_OPTIONS:MPOLICY}
+MAKE_ENV+=	UNLIMITED_CRYPTO=1
+.endif
+
 .if ${PORT_OPTIONS:MTZUPDATE}
 RUN_DEPENDS+=  ${LOCALBASE}/share/java/zi:${PORTSDIR}/java/java-zoneinfo
 .endif
 
 BOOTSTRAPJDKDIR=	${WRKDIR}/bootstrap
 
+.include <bsd.port.pre.mk>
+
+.if empty(ICONV_LIB)
+MAKE_ENV+=	EXTRA_CFLAGS=-DLIBICONV_PLUG
+.endif
+
 post-patch:
 	@${REINPLACE_CMD} "s|%%LOCALBASE%%|${LOCALBASE}|" \
 		${WRKSRC}/hotspot/src/os/bsd/vm/os_bsd.cpp
-.if ${PORT_OPTIONS:MPOLICY}
-	@${REINPLACE_CMD} 's|build-policy install-limited|build-policy install-unlimited|' \
-		${WRKSRC}/jdk/make/javax/crypto/Makefile
-.endif
 .if empty(ICONV_LIB)
 	@${REINPLACE_CMD} 's| -liconv||' \
 		${WRKSRC}/Makefile \
@@ -179,4 +187,4 @@ post-install:
 	# Register the VM
 	"${LOCALBASE}/bin/registervm" "${INSTALLDIR}/bin/java # OpenJDK${JDK_MAJOR_VERSION}"
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
