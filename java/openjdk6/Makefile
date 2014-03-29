@@ -1,9 +1,10 @@
 # Created by: Brian Gardner <brian@experts-exchange.com>
-# $FreeBSD: java/openjdk6/Makefile 337396 2013-12-24 23:11:15Z jkim $
+# $FreeBSD$
 
 PORTNAME=	openjdk6
-PORTVERSION=	b29
-PORTREVISION?=	0
+PORTVERSION=	b30
+PORTREVISION?=	3
+PORTEPOCH=	1
 CATEGORIES=	java devel
 MASTER_SITES=	${MASTER_SITE_APACHE:S,%SUBDIR%/,ant/binaries/:ant,} \
 		http://download.java.net/openjdk/jtreg/promoted/4.1/b05/:jtreg \
@@ -29,7 +30,7 @@ LIB_DEPENDS=	libfreetype.so:${PORTSDIR}/print/freetype2
 RUN_DEPENDS=	javavm:${PORTSDIR}/java/javavmwrapper \
 		${LOCALBASE}/lib/X11/fonts/dejavu:${PORTSDIR}/x11-fonts/dejavu
 
-OPENJDK_BUILDDATE=	05_dec_2013
+OPENJDK_BUILDDATE=	21_jan_2014
 
 OPTIONS_DEFINE=	ICEDTEA IPV6 POLICY SOUND TZUPDATE
 OPTIONS_DEFAULT=ICEDTEA IPV6 TZUPDATE
@@ -40,8 +41,9 @@ TZUPDATE_DESC=	Update the time zone data
 
 .if !defined(BUILD_JRE)
 OPTIONS_DEFINE+=TEST
-OPTIONS_RADIO=	Debugging
-OPTIONS_RADIO_Debugging=	DEBUG FASTDEBUG
+OPTIONS_RADIO=	DEVEL
+DEVEL_DESC=	Build for OpenJDK development
+OPTIONS_RADIO_DEVEL=	DEBUG FASTDEBUG
 DEBUG_DESC=	Enable legacy debugging support
 FASTDEBUG_DESC=	Include fastdebug build
 TEST_DESC=	Add support for running regression test
@@ -50,6 +52,7 @@ TEST_DESC=	Add support for running regression test
 PKGDEINSTALL=	${WRKDIR}/pkg-deinstall
 PKGINSTALL=	${WRKDIR}/pkg-install
 
+USE_XZ=		yes
 USES=		compiler gmake iconv motif
 
 .include <bsd.port.options.mk>
@@ -65,7 +68,7 @@ USE_XORG=	x11 xext xi xt xtst
 
 # do not depend on devel/apache-ant to avoid circular dependency, but
 # use .tar.bz2 distfile to avoid duplicated downloads
-ANTVERSION=	1.9.2
+ANTVERSION=	1.9.3
 ANTFILE=	apache-ant-${ANTVERSION}-bin.tar.bz2
 
 JTREG_BUILD=	b05_29_nov_2012
@@ -92,7 +95,6 @@ DISTFILES+=		${BOOTSTRAP_DISTFILE}:bootstrap
 EXTRACT_ONLY+=		${BOOTSTRAP_DISTFILE}
 BOOTSTRAPJDKDIR?=	${WRKDIR}/bootstrap
 
-FETCH_ARGS=	-Fpr
 MAKE_ENV=	LANG=C LC_ALL=C OS= \
 		ALT_JDK_IMPORT_PATH=${BOOTSTRAPJDKDIR} \
 		ALT_BOOTDIR=${BOOTSTRAPJDKDIR} \
@@ -173,20 +175,16 @@ COPYFILES=	\
 
 .include <bsd.port.pre.mk>
 
-.if ${ICONV_PREFIX} == "/usr"
-ICONV_INCLUDE=
-ICONV_LIBS=
+.if empty(ICONV_LIB)
+ICONV_CPPFLAGS=	-DLIBICONV_PLUG
 .else
-ICONV_INCLUDE=	-I${LOCALBASE}/include
-ICONV_LIBS=	-L${LOCALBASE}/lib ${ICONV_LIB}
+ICONV_CPPFLAGS=	-I${LOCALBASE}/include
+ICONV_LDFLAGS=	-L${LOCALBASE}/lib ${ICONV_LIB}
 .endif
-ZLIB_LIBS?=	-lz
+ZLIB_LDFLAGS?=	-lz
 
 .if ${COMPILER_TYPE} == "clang"
-MAKE_ENV+=	COMPILER_WARNINGS_FATAL=false DEBUG_CFLAGS/i486=-g
-.if empty(PORT_OPTIONS:MDEBUG) && empty(PORT_OPTIONS:MFASTDEBUG)
-MAKE_ENV+=	WARNINGS_ARE_ERRORS=-w
-.endif
+MAKE_ENV+=	USE_CLANG=true
 .endif
 
 post-extract:
@@ -216,7 +214,7 @@ post-extract:
 	    -e s/Linux/FreeBSD/g {} \;
 
 post-patch:
-	@${REINPLACE_CMD} -e "s|%%CXX_LIBS%%|${CXX_LIBS}|" \
+	@${REINPLACE_CMD} -e "s|%%CXX_LDFLAGS%%|${CXX_LDFLAGS}|" \
 	    ${WRKSRC}/corba/make/common/Defs-bsd.gmk \
 	    ${WRKSRC}/jdk/make/common/Defs-bsd.gmk
 .if ${COMPILER_TYPE} == "clang"
@@ -225,12 +223,12 @@ post-patch:
 	    ${WRKSRC}/hotspot/make/bsd/makefiles/amd64.make \
 	    ${WRKSRC}/jdk/make/common/Defs-bsd.gmk
 .endif
-	@${REINPLACE_CMD} -e "s|%%ICONV_INC%%|${ICONV_INCLUDE}|" \
-	    -e "s|%%ICONV_LIB%%|${ICONV_LIBS}|" \
+	@${REINPLACE_CMD} -e "s|%%ICONV_CPPFLAGS%%|${ICONV_CPPFLAGS}|" \
+	    -e "s|%%ICONV_LDFLAGS%%|${ICONV_LDFLAGS}|" \
 	    ${WRKSRC}/Makefile ${WRKSRC}/jdk/make/java/instrument/Makefile \
 	    ${WRKSRC}/jdk/make/java/npt/Makefile \
 	    ${WRKSRC}/jdk/make/sun/splashscreen/Makefile
-	@${REINPLACE_CMD} -e "s|%%ZLIB_LIBS%%|${ZLIB_LIBS}|" \
+	@${REINPLACE_CMD} -e "s|%%ZLIB_LDFLAGS%%|${ZLIB_LDFLAGS}|" \
 	    ${WRKSRC}/jdk/make/com/sun/java/pack/Makefile \
 	    ${WRKSRC}/jdk/make/common/Program.gmk \
 	    ${WRKSRC}/jdk/make/java/jli/Makefile \

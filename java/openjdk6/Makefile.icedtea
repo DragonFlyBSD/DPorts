@@ -1,4 +1,4 @@
-# $FreeBSD: java/openjdk6/Makefile.icedtea 337396 2013-12-24 23:11:15Z jkim $
+# $FreeBSD$
 
 _PATCHES=
 
