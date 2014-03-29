@@ -5,6 +5,8 @@ LDFLAGS+=		-R${PREFIX}/lib/thunderbird
 WITHOUT_DEBUG=yes
 .endif
 
+MOZ_OPTIONS+=	--host=${ARCH}-dports-${OPSYS:tl}${OSREL}
+
 post-extract:
 	@${REINPLACE_CMD} -e 's|_SAFE|_MUTABLE|g' \
 		${WRKSRC}/mozilla/netwerk/sctp/src/netinet/sctp_asconf.c \
