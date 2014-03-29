@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	opam
-PORTVERSION=	1.1.0
+PORTVERSION=	1.1.1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.ocamlpro.com/pub/
 PKGNAMEPREFIX=	ocaml-
@@ -18,5 +18,8 @@ BUILD_DEPENDS=	curl:${PORTSDIR}/ftp/curl
 USES=		gmake
 USE_OCAML=	yes
 GNU_CONFIGURE=	yes
+MAKE_ENV+=	TERM=xterm
+
+MAKE_JOBS_UNSAFE= yes
 
 .include <bsd.port.mk>
