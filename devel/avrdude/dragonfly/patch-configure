@@ -1,0 +1,11 @@
+--- configure.orig	2011-08-27 19:49:52.000000000 +0000
++++ configure
+@@ -5062,7 +5062,7 @@ fi
+ 
+ if test x$have_libusb_1_0 = xyes; then
+    case $target in
+-       *-*-freebsd*)
++       *-*-freebsd*|*-*-dragonfly*)
+                # FreeBSD 8+ has a native libusb-1.0 API compatible
+                # library offered by -lusb (which is also libusb-0.1
+                # compatible).  FreeBSD <8 does not have a libusb-1.0
