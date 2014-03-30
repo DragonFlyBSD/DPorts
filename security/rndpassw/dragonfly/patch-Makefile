@@ -1,0 +1,11 @@
+--- Makefile.intermediate	2014-03-30 08:59:29.484591000 +0000
++++ Makefile
+@@ -2,7 +2,7 @@ PREFIX?=$(DESTDIR)$(PREFIX)
+ 
+ CC?=	cc
+ CFLAGS?=-O2 -fno-strict-aliasing -pipe
+-CFLAGS+=-fPIC -std=iso9899:1999 -Werror -Wall -Wextra -Wmissing-prototypes -Isrc
++CFLAGS+=-fPIC -std=iso9899:1999 -Wall -Wextra -Wmissing-prototypes -Isrc
+ 
+ PROG=	rndpassw
+ 
