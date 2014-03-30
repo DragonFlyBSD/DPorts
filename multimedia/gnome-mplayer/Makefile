@@ -34,9 +34,6 @@ CONFIGURE_ARGS=	--disable-nautilus
 PORTDOCS=	AUTHORS COPYING ChangeLog INSTALL NEWS README \
 		dbus.txt keyboard_shortcuts.txt plugin-interaction.txt
 
-XXXGLIB_SCHEMAS=	apps.gecko-mediaplayer.preferences.gschema.xml \
-		apps.gnome-mplayer.preferences.enums.xml \
-		apps.gnome-mplayer.preferences.gschema.xml
 
 .include <bsd.port.options.mk>
 
