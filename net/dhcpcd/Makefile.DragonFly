@@ -1,0 +1,2 @@
+post-patch:
+	${REINPLACE_CMD} -e 's|which ntpd|which dntpd|' ${WRKSRC}/configure
