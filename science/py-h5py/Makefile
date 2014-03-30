@@ -1,33 +1,44 @@
 # Created by: TAOKA Fumiyoshi
-# $FreeBSD: science/py-h5py/Makefile 331644 2013-10-26 00:52:33Z gerald $
+# $FreeBSD$
 
 PORTNAME=	h5py
-PORTVERSION=	1.2.1
-PORTREVISION=	3
+PORTVERSION=	2.2.1
+PORTREVISION=	1
 CATEGORIES=	science python
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	fmysh@iijmio-mail.jp
-COMMENT=	A general-purpose Python interface to the HDF5 library
+MAINTAINER=	xmj@chaot.net
+COMMENT=	General-purpose Python interface to the HDF5 library
+
+LICENSE=	BSD
 
 BUILD_DEPENDS=	${PYNUMPY}
 RUN_DEPENDS=	${PYNUMPY}
+LIB_DEPENDS=	libhdf5.so:${PORTSDIR}/science/hdf5-18
 
-OPTIONS_DEFINE=	NEW_HDF5
-NEW_HDF5_DESC=	Use port science/hdf5-18 instead of science/hdf5
-OPTIONSFILE?=	${PORT_DBDIR}/py-${PORTNAME}/options
+USE_PYTHON=		yes
+USE_PYDISTUTILS=	yes
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-.if ${PORT_OPTIONS:MNEW_HDF5}
-LIB_DEPENDS=	hdf5:${PORTSDIR}/science/hdf5-18
-.else
-LIB_DEPENDS=	hdf5:${PORTSDIR}/science/hdf5
-.endif
+PYDISTUTILS_AUTOPLIST=	yes
 
-USE_PYTHON=		2.5+
-USE_PYDISTUTILS=	easy_install
-PYEASYINSTALL_ARCHDEP=	yes
+PORTDOCS=	README.rst
+PORTEXAMPLES=	multiprocessing_example.py \
+		threading_example.py
+
+OPTIONS_DEFINE=	DOCS EXAMPLES
+
+post-patch:
+	${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|' \
+		${WRKSRC}/setup.py
+
+post-install:
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${PORTEXAMPLES:S|^|${WRKSRC}/examples/|} ${STAGEDIR}${EXAMPLESDIR}
+
+regression-test: build
+	@cd ${WRKSRC} && ${PYTHON_CMD} ${PYSETUP} test
 
 .include <bsd.port.mk>
