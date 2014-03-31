@@ -1,23 +1,16 @@
 # Created by: Kiriyama Kazuhiko <kiri@kiri.toba-cmt.ac.jp>
-# $FreeBSD: ports/lang/ocaml/Makefile,v 1.79 2013/02/06 19:12:19 svnexp Exp $
+# $FreeBSD$
 
 PORTNAME=	ocaml
 PORTVERSION=	4.00.1
+PORTREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://caml.inria.fr/distrib/${DISTNAME:R}/ \
 		${MASTER_SITE_GENTOO}
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
-EXTRACT_ONLY=   ${DISTNAME}${EXTRACT_SUFX}
-.if !defined(NOPORTDOCS)
-DOCSDISTNAME=   ${DISTNAME:C/([[:digit:]]+)\.([[:digit:]]+)\.([[:digit:]]+)/\1.\2/}
-DISTFILES+= 	${DOCSDISTNAME}-refman-html.tar.gz \
-		${DOCSDISTNAME}-refman.ps.gz \
-		${DOCSDISTNAME}-refman.pdf
-.endif
-
-
 MASTER_SITE_SUBDIR=	distfiles
 PKGNAMESUFFIX=	${SFX}
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
+EXTRACT_ONLY=   ${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER?=	michael.grunewald@laposte.net
 COMMENT?=	The Objective Caml compiler and programming environment
@@ -31,24 +24,30 @@ SSP_UNSAFE=	yes
 MAKE_JOBS_UNSAFE=	yes
 
 CONFIGURE_ARGS=	-verbose -prefix "${PREFIX}" \
-                -cc "${CC} ${CFLAGS}" \
-                -as "${AS} ${ASFLAGS}" \
+		-cc "${CC} ${CFLAGS}" \
+		-as "${AS} ${ASFLAGS}" \
 		-aspp "${CC} -c" \
-                -partialld "${LD} -r"
-OPTIONS_DEFINE= X11 TK THREADS OPT_DEF
+		-partialld "${LD} -r"
+
+OPTIONS_DEFINE= X11 TK THREADS CMP_LIB OPT_DEF DOCS
 OPTIONS_DEFAULT=X11 TK THREADS
 TK_DESC=	LablTk library (requires X11 support)
 CMP_LIB_DESC=	Install compiler libraries
 OPT_DEF_DESC=	Use system-optimizes binaries by default
+PORTDOCS=	htmlman ${DOCSDISTNAME}-refman.ps.gz \
+		${DOCSDISTNAME}-refman.pdf
 
 MODOPT=		camlp4o camlp4r ocamlc ocamldep ocamldoc ocamllex ocamlopt
 PATTERN=	[[:space:]]*(do|then)?[[:space:]]*)(\$$\(CP\)|cp)([[:space:]]
+DOCSDISTNAME=   ${DISTNAME:C/([[:digit:]]+)\.([[:digit:]]+)\.([[:digit:]]+)/\1.\2/}
 
 NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
-.if !defined(NOPORTDOCS)
-PORTDOCS = htmlman/* ${DOCSDISTNAME}-refman.ps.gz ${DOCSDISTNAME}-refman.pdf
+.if ${PORT_OPTIONS:MDOCS}
+DISTFILES+= 	${DOCSDISTNAME}-refman-html.tar.gz \
+		${DOCSDISTNAME}-refman.ps.gz \
+		${DOCSDISTNAME}-refman.pdf
 .endif
 
 .if ${PORT_OPTIONS:MTHREADS}
@@ -94,10 +93,19 @@ CONFIGURE_ARGS+=	-tkdefs \
 .include <bsd.port.pre.mk>
 .include "${FILESDIR}/manfiles"
 
-OCAML_ARCH= ${ARCH:S/x86_64/amd64/}
+OCAML_ARCH= ${ARCH:S/x86_64/amd64/:S/powerpc/power/}
+
+.if ${OCAML_ARCH} == power
+PLIST_SUB+=	PROF="@comment "
+.else
+PLIST_SUB+=	PROF=""
+.endif
 
 post-extract:
-.if !defined(NOPORTDOCS)
+.if ${OCAML_ARCH} == power
+	${MV} ${WRKSRC}/asmrun/power-elf.S ${WRKSRC}/asmrun/power-bsd.S
+.endif
+.if ${PORT_OPTIONS:MDOCS}
 	@if ! (cd ${WRKDIR} && \
 	  ${TAR} xf ${_DISTDIR}${DOCSDISTNAME}-refman-html.tar.gz \
 	) \
@@ -150,6 +158,7 @@ check test: install
 
 post-install:
 	@${TOUCH} ${PREFIX}/lib/ocaml/ocamldoc/custom/.keep
+	@${CHMOD} 755 ${PREFIX}/lib/ocaml/expunge
 .if ${PORT_OPTIONS:MTK}
 	@${MKDIR} ${EXAMPLESDIR}
 	@(cd ${WRKSRC}/otherlibs/labltk && \
@@ -159,7 +168,7 @@ post-install:
 		"! -name .cvsignore")
 .endif
 
-.if !defined(NOPORTSDOC)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 	(cd ${WRKDIR} && ${COPYTREE_SHARE} htmlman ${DOCSDIR})
 	${INSTALL_DATA} ${_DISTDIR}${DOCSDISTNAME}-refman.ps.gz ${DOCSDIR}
@@ -175,10 +184,6 @@ post-install:
 # Fix permissions for ld.conf
 	@${CHMOD} 644 ${PREFIX}/lib/ocaml/ld.conf
 
-# Do we want to install documentation
-.if !defined(NOPORTDOCS)
-
-.endif
 # Do we want .opt version of tools to be the default ?
 .if ${PORT_OPTIONS:MOPT_DEF}
 . for module in ${MODOPT}
