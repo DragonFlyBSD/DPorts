@@ -1,6 +1,0 @@
-#!/bin/sh
-#
-# $FreeBSD: head/deskutils/lxshortcut/files/lxshortcut-start.in 329076 2013-10-02 17:03:26Z nemysis $
-#
-
-lxshortcut -o %U
