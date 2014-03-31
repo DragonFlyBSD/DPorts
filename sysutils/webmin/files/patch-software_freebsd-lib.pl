@@ -1,5 +1,5 @@
 
-$FreeBSD: head/sysutils/webmin/files/patch-software_freebsd-lib.pl 329458 2013-10-05 13:45:02Z olgeni $
+$FreeBSD: head/sysutils/webmin/files/patch-software_freebsd-lib.pl 348727 2014-03-21 06:07:03Z olgeni $
 
 --- software/freebsd-lib.pl.orig
 +++ software/freebsd-lib.pl
@@ -9,6 +9,6 @@ $FreeBSD: head/sysutils/webmin/files/patch-software_freebsd-lib.pl 329458 2013-1
  {
 -return 0 if (!-x "/usr/sbin/pkg");
 +return 0 if (!-e "/var/db/pkg/local.sqlite");
- local @lines = &backquote_command("/usr/sbin/pkg info 2>/dev/null </dev/null");
+ local @lines = split(/\n/, &backquote_command(
+ 			"/usr/sbin/pkg info 2>/dev/null </dev/null"));
  return @lines > 1 ? 1 : 0;
- }
