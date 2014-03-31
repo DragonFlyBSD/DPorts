@@ -1,9 +1,5 @@
-$NetBSD: patch-src_pngread.c,v 1.1 2011/08/07 20:36:20 wiz Exp $
-
-Fix build with png-1.5.
-
---- src/pngread.c.orig	2011-01-25 14:10:44.000000000 +0000
-+++ src/pngread.c	2011-04-17 13:35:40.000000000 +0000
+--- src/pngread.c.orig	2009-10-26 13:42:03.000000000 +0100
++++ src/pngread.c	2012-05-05 07:08:53.000000000 +0200
 @@ -69,7 +69,7 @@
    }
  
