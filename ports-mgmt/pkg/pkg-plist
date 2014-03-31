@@ -5,7 +5,9 @@ etc/periodic/security/410.pkg-audit
 etc/periodic/security/460.pkg-checksum
 etc/periodic/weekly/400.status-pkg
 etc/pkg.conf.sample
+@unexec if cmp -s %D/etc/pkg/repos/df-latest.conf.sample %D/etc/pkg/repos/df-latest.conf; then rm -f %D/etc/pkg/repos/df-latest.conf; fi
 etc/pkg/repos/df-latest.conf.sample
+@exec if [ ! -f %D/etc/pkg/repos/df-latest.conf ] ; then cp -p %D/%F %B/df-latest.conf; fi
 etc/pkg/repos/df-releases.conf.sample
 include/pkg.h
 lib/libpkg.a
