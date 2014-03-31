@@ -2,8 +2,6 @@
 #
 # Provide support to use perl5
 #
-# MAINTAINER: perl@FreeBSD.org
-#
 # PERL5			- Set to full path of perl5, either in the system or
 #				  installed from a port.
 # PERL			- Set to full path of perl5, either in the system or
@@ -30,6 +28,8 @@
 #				  It can also have configure, modbuild and modbuildtiny when
 #				  the port needs to run Makefile.PL, Build.PL and a
 #				  Module::Build::Tiny flavor of Build.PL.
+#
+# MAINTAINER: perl@FreeBSD.org
 
 .if !defined(_INCLUDE_USES_PERL5_MK)
 _INCLUDE_USES_PERL5_MK=	yes
@@ -93,6 +93,7 @@ SITE_PERL?=	${LOCALBASE}/${SITE_PERL_REL}
 
 PERL5=		${LOCALBASE}/bin/perl${PERL_VERSION}
 PERL=		${LOCALBASE}/bin/perl
+CONFIGURE_ENV+=	ac_cv_path_PERL=${PERL}
 
 # Define the want perl first if defined
 .if ${USE_PERL5:M5*}

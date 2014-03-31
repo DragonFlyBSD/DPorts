@@ -32,7 +32,7 @@
 # Others:
 # Chris Rees <crees@FreeBSD.org>
 #
-# $FreeBSD: head/Tools/scripts/rmport 340851 2014-01-23 19:55:14Z mat $
+# $FreeBSD: head/Tools/scripts/rmport 349064 2014-03-24 20:30:00Z crees $
 #
 # MAINTAINER=	crees@FreeBSD.org
 #
@@ -47,7 +47,7 @@ SED="sed -i .orig -E"
 SVNREPO=${SVNREPO:-svn+ssh://svn.FreeBSD.org/ports}
 
 if ! CDIFF=$(which cdiff) ; then
-	CDIFF=${EDITOR}
+	CDIFF=${PAGER}
 fi
 
 log()
@@ -529,7 +529,7 @@ answer=y
 while [ "${answer}" = "y" ] ; do
 	diffout=$(diff)
 
-	${CDIFF} ${diffout}
+	${CDIFF} < ${diffout}
 
 	echo "" >&2
 	echo "you can now edit files under ${codir}/ by hand" >&2
