@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/dns/nsd/files/nsd.in 343896 2014-02-12 10:46:24Z erwin $
+# $FreeBSD: head/dns/nsd/files/nsd.in 348987 2014-03-24 12:55:26Z madpilot $
 #
 # PROVIDE: nsd
 # REQUIRE: DAEMON
@@ -12,17 +12,18 @@
 # nsd_enable="YES"
 #
 
-: ${nsd_enable="NO"}
-
 . /etc/rc.subr
 
 name=nsd
 rcvar=nsd_enable
 
+# read settings, set default values
+load_rc_config "${name}"
+: ${nsd_enable="NO"}
+
 config=${nsd_config:=%%PREFIX%%/etc/nsd/nsd.conf}
 required_files=${config}
 pidfile=`%%PREFIX%%/sbin/nsd-checkconf -o pidfile ${config}`
-
 command="%%PREFIX%%/sbin/${name}"
 command_args="-c ${required_files}"
 extra_commands="reload"
