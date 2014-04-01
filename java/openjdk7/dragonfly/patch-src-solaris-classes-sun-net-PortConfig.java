@@ -7,7 +7,7 @@ $FreeBSD: head/java/openjdk7/files/patch-src-solaris-classes-sun-net-PortConfig.
                          defaultLower = 32768;
                          defaultUpper = 65535;
 -                    } else if (os.contains("OS X")) {
-+                    } else if (os.contains("OS X") || os.endsWith("BSD")) {
++                    } else if (os.contains("OS X") || os.contains("DragonFly") || os.endsWith("BSD")) {
                          defaultLower = 49152;
                          defaultUpper = 65535;
                      } else {
