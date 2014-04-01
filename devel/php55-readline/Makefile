@@ -7,6 +7,4 @@ MASTERDIR=	${.CURDIR}/../../lang/php55
 
 PKGNAMESUFFIX=	-readline
 
-USES+=		readline
-
 .include "${MASTERDIR}/Makefile"
