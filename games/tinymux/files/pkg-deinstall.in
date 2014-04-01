@@ -1,0 +1,20 @@
+#!/bin/sh
+#
+# $FreeBSD: head/games/tinymux/files/pkg-deinstall.in 349541 2014-03-29 15:30:52Z nemysis $
+#
+
+if [ "$2" = "POST-DEINSTALL" ]; then
+    echo ""
+    echo ""
+    echo "==============================================================================="
+    echo ""
+    echo "After deinstallation, some files may stay in %%DATADIR%% and"
+    echo "%%ETCDIR%%, you can delete them with"
+    echo ""
+    echo "    /bin/rm -fr %%DATADIR%%"
+    echo ""
+    echo "    /bin/rm -fr %%ETCDIR%%"
+    echo ""
+    echo "==============================================================================="
+    echo ""
+fi

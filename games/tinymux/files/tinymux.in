@@ -1,0 +1,7 @@
+#!/bin/sh
+#
+# $FreeBSD: head/games/tinymux/files/tinymux.in 349541 2014-03-29 15:30:52Z nemysis $
+#
+
+cd "%%DATADIR%%"
+exec ./Startmux "${@}"
