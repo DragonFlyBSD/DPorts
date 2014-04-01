@@ -1,9 +1,0 @@
-#!/bin/sh
-#
-# $FreeBSD: head/games/robocode/files/robocode-sh.in 329983 2013-10-10 12:10:24Z nemysis $
-#
-
-export JAVA_VERSION="%%JAVA_VERSION%%"
-
-cd "%%DATADIR%%" && exec "%%LOCALBASE%%/bin/java" -Djava.ext.dirs="%%DATADIR%%" \
--Djava.ext.dirs="%%DATADIR%%" -cp libs/robocode.jar robocode.Robocode "${@}"
