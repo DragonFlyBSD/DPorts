@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/graphics/mapyrus/files/mapyrus.in 320836 2013-06-13 20:18:12Z nivit $
+# $FreeBSD: head/graphics/mapyrus/files/mapyrus.in 349638 2014-03-30 15:43:49Z nivit $
 if [ -z "${DISPLAY}" ]; then
     JAVA_AWT_HEADLESS="-Djava.awt.headless=true"
 else
@@ -10,5 +10,5 @@ if [ -z "$1" ]; then
 else
     MAPYRUS_ARGS="$@"
 fi
-JAVA_VERSION="%%JAVAVERSION%%" \
+JAVA_VERSION="%%JAVA_VERSION%%" \
 	exec "%%LOCALBASE%%/bin/java" ${JAVA_AWT_HEADLESS} -jar "%%DATADIR%%/mapyrus.jar" ${MAPYRUS_ARGS}
