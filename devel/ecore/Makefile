@@ -13,6 +13,8 @@ MAINTAINER=	gblach@FreeBSD.org
 COMMENT=	Enlightenment core abstraction library (meta port)
 
 NO_BUILD=	yes
+NO_INSTALL=	yes
+NO_MTREE=	yes
 USE_EFL=	ecore
 
 OPTIONS_DEFINE=	CON EVAS FILE IMF IMF_EVAS INPUT INPUT_EVAS IPC SDL X11
@@ -22,16 +24,8 @@ OPTIONS_DEFAULT=CON EVAS FILE IMF IMF_EVAS INPUT INPUT_EVAS IPC X11
 ${NODE}_DESC=	Install ${NODE:tl} module
 .endfor
 
-NO_STAGE=	yes
-.include <bsd.port.options.mk>
-
 .for NODE in ${OPTIONS_DEFINE}
-.  if ${PORT_OPTIONS:M${NODE}}
-USE_EFL_ECORE+=	${NODE:tl}
-.  endif
+${NODE}_USE=	EFL_ECORE=${NODE:tl}
 .endfor
-
-do-install:
-	${DO_NADA}
 
 .include <bsd.port.mk>
