@@ -317,6 +317,7 @@ USE_PHP_BUILD=	yes
 .endif
 
 .if ${PHP_MODNAME} == "readline"
+USES+=		readline
 CONFIGURE_ARGS+=--with-readline=/usr
 .endif
 
