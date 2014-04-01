@@ -1,0 +1,26 @@
+#!/bin/sh
+# $FreeBSD: head/japanese/alias-fonts/pkg-deinstall 340719 2014-01-22 15:52:06Z mat $
+
+if [ $2 != "DEINSTALL" ]; then
+  exit 0
+fi
+
+dir="${PKG_PREFIX}/lib/X11/fonts/local";
+to="$dir/fonts.alias";
+from="$to.orig";
+
+if ! mv $to $from; then
+  echo "Couldn't rename $to."
+  exit 1
+fi
+
+IFS="
+"
+
+while read line; do
+  trimmed=${line# *}
+  case $trimmed in
+    -alias-*) ;;
+    *) echo $line;;
+  esac
+done < $from > $to
