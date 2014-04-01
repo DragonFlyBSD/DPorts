@@ -1,0 +1,21 @@
+#!/bin/sh -
+#
+# $FreeBSD: head/net/pwhois/files/512.pwhois-updatedb.in 348718 2014-03-20 20:07:10Z zi $
+#
+
+if [ -r /etc/defaults/periodic.conf ]; then
+	. /etc/defaults/periodic.conf
+	source_periodic_confs
+fi
+
+rc=0
+
+case "${daily_pwhois-updatedb_enable:-YES}" in
+	[Nn][Oo])
+	;;
+	*)
+	[ -x %%PREFIX%%/sbin/pwhois-updatedb ] && %%PREFIX%%/sbin/pwhois-updatedb 1>/dev/null
+	;;
+esac
+
+exit $rc
