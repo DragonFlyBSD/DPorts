@@ -1,14 +1,11 @@
 #!/bin/sh
 #
 # Under a BSDL license. Copyright by Mario S F Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: head/portuguese/irpf-pt_BR/files/wrapper.sh 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/portuguese/irpf-pt_BR/files/wrapper.sh 348906 2014-03-23 23:54:31Z lioux $
 
 export JAVA_VERSION
 
 PREFIX="%%PREFIX%%"
-# data
-DATADIR="%%DATADIR%%"
-DATA_FILES="%%DATA_FILES%%"
 # java
 JAVA_VERSION="%%JAVA_VERSION%%"
 JAVAVM="%%JAVAVM%%"
@@ -29,12 +26,6 @@ prepare_home_dir () {
   then
 	mkdir -p ${HOME_DIR}/lib 2>/dev/null
   fi
-  # link the data files
-  for data in ${DATA_FILES}
-  do
-	rm -f ${HOME_DIR}/${data} 2>/dev/null
-	cp -f ${DATADIR}/${data} ${HOME_DIR}/${data} 2>/dev/null
-  done
   # link the jar file
   rm -f ${HOME_DIR}/${JAR_FILE} 2>/dev/null
   cp -f ${PREFIX}/${JAR_DIR}/${JAR_FILE} ${HOME_DIR}/${JAR_FILE} 2>/dev/null
