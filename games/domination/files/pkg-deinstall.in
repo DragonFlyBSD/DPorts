@@ -1,0 +1,18 @@
+#!/bin/sh
+#
+# $FreeBSD: head/games/domination/files/pkg-deinstall.in 348910 2014-03-24 00:05:09Z nemysis $
+#
+
+if [ "$2" = "POST-DEINSTALL" ]; then
+    echo ""
+    echo ""
+    echo "==============================================================================="
+    echo ""
+    echo "After deinstallation, some files may stay in %%DATADIR%%,"
+    echo "you can delete them with"
+    echo ""
+    echo "    /bin/rm -fr %%DATADIR%%"
+    echo ""
+    echo "==============================================================================="
+    echo ""
+fi

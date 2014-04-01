@@ -1,9 +1,9 @@
 #!/bin/sh
 #
-# $FreeBSD: head/games/domination/files/domination-Increment1GUI.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/games/domination/files/domination-Increment1GUI.in 348910 2014-03-24 00:05:09Z nemysis $
 #
 
 export JAVA_VERSION="%%JAVA_VERSION%%"
 
-cd "%%DATADIR%%" && exec "%%LOCALBASE%%/bin/java" -Djava.ext.dirs="%%DATADIR%%" \
--Djava.ext.dirs="%%DATADIR%%" -cp Domination.jar net.yura.domination.ui.increment1gui.Increment1Frame "${@}"
+cd "%%DATADIR%%" && exec "%%LOCALBASE%%/bin/java" \
+-cp Domination.jar net.yura.domination.ui.increment1gui.Increment1Frame "${@}"
