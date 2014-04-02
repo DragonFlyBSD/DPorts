@@ -7,6 +7,8 @@ WITHOUT_DEBUG=yes
 
 MOZ_OPTIONS+=	--host=${ARCH}-dports-${OPSYS:tl}${OSREL}
 
+PULSEAUDIO_LIB_DEPENDS= libpulse.so:${PORTSDIR}/audio/pulseaudio
+
 post-extract:
 	@${REINPLACE_CMD} -e 's|_SAFE|_MUTABLE|g' \
 		${WRKSRC}/mozilla/netwerk/sctp/src/netinet/sctp_asconf.c \
