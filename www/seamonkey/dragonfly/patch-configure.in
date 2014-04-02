@@ -1,15 +1,6 @@
---- mozilla/configure.in.orig	2014-03-28 21:58:27.627198000 +0000
+--- mozilla/configure.in.orig	2013-11-04 22:30:05.000000000 +0000
 +++ mozilla/configure.in
-@@ -958,7 +958,7 @@ if test -n "$CROSS_COMPILE"; then
- else
-     OS_TARGET=`uname -s`
-     OS_ARCH=`uname -s | sed -e 's|/|_|g'`
--    OS_RELEASE=`uname -r`
-+    OS_RELEASE := $(shell awk '/^\#define[[:blank:]]__DragonFly_version/ {a=int($$3/100000); b=int(($$3-(a*100000))/100); print a "." b}' < /usr/include/sys/param.h)
- fi
- 
- # Before this used `uname -m` when not cross compiling
-@@ -2681,7 +2681,7 @@ dnl Checks for header files.
+@@ -2891,7 +2891,7 @@ dnl Checks for header files.
  dnl ========================================================
  AC_HEADER_DIRENT
  case "$target_os" in
@@ -18,7 +9,7 @@
  # for stuff like -lXshm
      CPPFLAGS="${CPPFLAGS} ${X_CFLAGS}"
      ;;
-@@ -2970,7 +2970,7 @@ then
+@@ -3180,7 +3180,7 @@ then
      fi
  
  	case "$target" in
@@ -27,7 +18,7 @@
  			AC_DEFINE(_REENTRANT)
  			AC_DEFINE(_THREAD_SAFE)
  			dnl -pthread links in -lpthread, so don't specify it explicitly.
-@@ -6940,7 +6940,7 @@ else
+@@ -7257,7 +7257,7 @@ else
    *-darwin*)
      AC_DEFINE(MOZ_MEMORY_DARWIN)
      ;;
@@ -36,7 +27,7 @@
      AC_DEFINE(MOZ_MEMORY_BSD)
      ;;
    *-android*|*-linuxandroid*)
-@@ -8862,6 +8862,9 @@ if test -n "$MOZ_LIBV4L2_LIBS"; then
+@@ -9149,6 +9149,9 @@ if test -n "$MOZ_LIBV4L2_LIBS"; then
     EXTRA_GYP_DEFINES="$EXTRA_GYP_DEFINES -D use_libv4l2=1"
  fi
  
