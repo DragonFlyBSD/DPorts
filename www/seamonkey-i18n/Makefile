@@ -1,9 +1,8 @@
 # Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD: head/www/seamonkey-i18n/Makefile 347809 2014-03-10 20:55:20Z gerald $
+# $FreeBSD$
 
 PORTNAME=	seamonkey-i18n
-PORTVERSION=	2.24
-PORTREVISION=	1
+PORTVERSION=	2.25
 CATEGORIES=	www mail news editors irc
 MASTER_SITES=	MOZILLA/${PORTNAME:S|-i18n||}/releases/${PORTVERSION}/langpack
 PKGNAMEPREFIX=
