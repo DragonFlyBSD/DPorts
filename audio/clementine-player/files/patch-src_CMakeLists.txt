@@ -1,0 +1,10 @@
+--- src/CMakeLists.txt.orig	2013-10-20 17:40:58.416968707 +0000
++++ src/CMakeLists.txt	2013-10-20 17:41:24.671967496 +0000
+@@ -1322,6 +1322,7 @@
+ 
+ if (${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
+   target_link_libraries(clementine execinfo)
++  set_target_properties(clementine PROPERTIES OUTPUT_NAME clementine-player)
+ endif (${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
+ 
+ target_link_libraries(clementine
