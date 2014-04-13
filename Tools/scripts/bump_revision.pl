@@ -1,9 +1,9 @@
 #!/usr/local/bin/perl -w
 
-# $FreeBSD: head/Tools/scripts/bump_revision.pl 340851 2014-01-23 19:55:14Z mat $
+# $FreeBSD: head/Tools/scripts/bump_revision.pl 350364 2014-04-06 15:11:09Z gerald $
 
 #
-# MAINTAINER=	edwin@freebsd.org
+# MAINTAINER=	gerald@FreeBSD.org
 #
 
 use Getopt::Std;
@@ -198,13 +198,15 @@ unless ($opt_n) {
 #
 # Commit the changes. Not automated.
 #
-print <<EOF;
-All PORTREVISIONs have been updated.  You are nearly done, only one thing
-remains:  The committing to the ports tree. This program is not going to do
-that for you, you have to do it manually.
+unless ($opt_c) {
+    print <<EOF;
+All PORTREVISIONs have been updated.  You are nearly done, only one
+thing remains:  Committing to the ports tree.  This program is not
+going to do that for you, you have to do it manually.
 
 \$ cd $TMPDIR
 \$ svn commit
-
+	
 Then, remove the temp directory ($TMPDIR).
 EOF
+}

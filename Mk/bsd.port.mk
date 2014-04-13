@@ -594,6 +594,16 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 # INSTALL_DATA	- A command to install sharable data.
 # INSTALL_MAN	- A command to install manpages.  May or not compress,
 #				  depending on the value of MANCOMPRESSED (see below).
+# COPYTREE_BIN
+# COPYTREE_SHARE
+#				- Similiar to INSTALL commands but working on whole
+#				  trees of directories, takes 3 arguments, last one is
+#				  find(1) arguments and optional.
+#				  Example use: 
+#				  cd ${WRKSRC}/doc && ${COPYTREE} . ${DOCSDIR} "! -name *.bak"
+#
+#				  Installs all directories and files from ${WRKSRC}/doc
+#				  to ${DOCSDIR} except sed backup files.
 #
 # Boolean to control whether manpages are installed.
 #
@@ -1130,8 +1140,9 @@ INDEXDIR?=		${PORTSDIR}
 SRC_BASE?=		/usr/src
 USESDIR?=		${PORTSDIR}/Mk/Uses
 SCRIPTSDIR?=	${PORTSDIR}/Mk/Scripts
-LIB_DIRS?=		/usr/lib ${LOCALBASE}/lib
+LIB_DIRS?=		/lib /usr/lib ${LOCALBASE}/lib
 NOTPHONY?=
+PKG_ENV+=		PORTSDIR=${PORTSDIR}
 
 .if defined(FORCE_STAGE)
 .undef NO_STAGE
@@ -1142,6 +1153,36 @@ NOPROFILE=		yes
 .export NOPROFILE
 
 .include "${PORTSDIR}/Mk/bsd.commands.mk"
+
+.if defined(X_BUILD_FOR)
+.if defined(NO_STAGE)
+IGNORE=	Cross building is only compatible with stagified ports
+.endif
+.if !defined(.PARSEDIR)
+IGNORE=	Cross building can only be done when using bmake(1) as make(1)
+.endif
+BUILD_DEPENDS=	${X_BUILD_FOR}-cc:${PORTSDIR}/devel/${X_BUILD_FOR}-xdev
+# Do not define CPP on purpose
+.if !defined(HCC)
+HCC:=	${CC}
+HCXX:=	${CXX}
+.endif
+.if !exists(/usr/${X_BUILD_FOR}/usr/bin/cc)
+CC=		${LOCALBASE}/${X_BUILD_FOR}/usr/bin/cc
+CXX=		${LOCALBASE}/${X_BUILD_FOR}/usr/bin/c++
+PKG_ENV+=	ABI_FILE=${LOCALBASE}/${X_BUILD_FOR}/usr/lib/crt1.o
+.else
+CC=		/usr/${X_BUILD_FOR}/usr/bin/cc
+CXX=	/usr/${X_BUILD_FOR}/usr/bin/c++
+PKG_ENV+=	ABI_FILE=/usr/${X_BUILD_FOR}/usr/lib/crt1.o
+.endif
+NM=		${X_BUILD_FOR}-nm
+STRIP_CMD=	${X_BUILD_FOR}-strip
+MAKE_ENV+=	NM=${NM} STRIPBIN=${X_BUILD_FOR}-strip
+# only bmake support the below
+STRIPBIN=	${STRIP_CMD}
+.export.env STRIPBIN
+.endif
 
 #
 # DESTDIR section to start a chrooted process if invoked with DESTDIR set
@@ -1386,6 +1427,7 @@ ETCDIR?=		${PREFIX}/etc/${PORTNAME}
 
 PACKAGES?=		/usr/packages
 TEMPLATES?=		${PORTSDIR}/Templates
+KEYWORDS?=		${PORTSDIR}/Keywords
 
 PATCHDIR?=		${MASTERDIR}/files
 FILESDIR?=		${MASTERDIR}/files
@@ -1465,7 +1507,7 @@ PKGCOMPATDIR?=		${LOCALBASE}/lib/compat/pkg
 .include "${PORTSDIR}/Mk/bsd.drupal.mk"
 .endif
 
-.if defined(WANT_GECKO) || defined(USE_GECKO) || defined(USE_FIREFOX) || defined(USE_FIREFOX_BUILD) || defined(USE_SEAMONKEY) || defined(USE_SEAMONKEY_BUILD) || defined(USE_THUNDERBIRD) || defined(USE_THUNDERBIRD_BUILD)
+.if defined(WANT_GECKO) || defined(USE_GECKO)
 .include "${PORTSDIR}/Mk/bsd.gecko.mk"
 .endif
 
@@ -2766,6 +2808,9 @@ GNU_CONFIGURE_PREFIX?=	${PREFIX}
 GNU_CONFIGURE_MANPREFIX?=	${MANPREFIX}
 CONFIG_SITE?=		${PORTSDIR}/Templates/config.site
 CONFIGURE_ARGS+=	--prefix=${GNU_CONFIGURE_PREFIX} $${_LATE_CONFIGURE_ARGS}
+.if defined(X_BUILD_FOR)
+CONFIGURE_ARGS+=	--host=${X_BUILD_FOR}
+.endif
 CONFIGURE_ENV+=		CONFIG_SITE=${CONFIG_SITE} lt_cv_sys_max_cmd_len=${CONFIGURE_MAX_CMD_LEN}
 HAS_CONFIGURE=		yes
 
@@ -3056,10 +3101,9 @@ IGNORECMD=	${DO_NADA}
 IGNORECMD=	${ECHO_MSG} "===>  ${PKGNAME} "${IGNORE:Q}.;exit 1
 .endif
 
-.if !defined(NO_STAGE)
-_TARGETS=	check-sanity fetch checksum extract patch configure all build stage restage install reinstall package
-.else
 _TARGETS=	check-sanity fetch checksum extract patch configure all build install reinstall package
+.if !defined(NO_STAGE)
+_TARGETS+=	stage restage
 .endif
 .for target in ${_TARGETS}
 .if !target(${target})
@@ -5618,6 +5662,8 @@ generate-plist:
 .endif
 .if !defined(WITH_PKGNG)
 	@cd ${.CURDIR} && { ${MAKE} pretty-print-config | fold -sw 120 | ${SED} -e 's/^/@comment OPTIONS:/'; } >> ${TMPPLIST}
+	@${AWK} -f ${KEYWORDS}/pkg_install.awk ${TMPPLIST} > ${TMPPLIST}.keyword && \
+	    ${MV} -f ${TMPPLIST}.keyword ${TMPPLIST}
 .endif
 .endif
 
@@ -5738,7 +5784,8 @@ add-plist-info:
 # If we're installing into a non-standard PREFIX, we need to remove that directory at
 # deinstall-time
 .if !target(add-plist-post)
-.if (${PREFIX} != ${LOCALBASE} && ${PREFIX} != ${LINUXBASE} && ${PREFIX} != "/usr")
+.if (${PREFIX} != ${LOCALBASE} && ${PREFIX} != ${LINUXBASE} && \
+    ${PREFIX} != "/usr" && !defined(NO_PREFIX_RMDIR))
 add-plist-post:
 	@${ECHO_CMD} "@unexec rmdir %D 2> /dev/null || true" >> ${TMPPLIST}
 .endif
@@ -5955,7 +6002,7 @@ _CHECK_CONFIG_ERROR=	true
 .if !target(check-config)
 check-config: _check-config
 .if !empty(_CHECK_CONFIG_ERROR)
-	@exit 1
+	@${FALSE}
 .endif
 .endif # check-config
 
@@ -6457,6 +6504,9 @@ _TARGETS_STAGES=	SANITY PKG FETCH EXTRACT PATCH CONFIGURE BUILD INSTALL PACKAGE
 _TARGETS_STAGES+=	STAGE
 .endif
 
+# Define the SEQ of actions to take when each target is ran, and which targets
+# it depends on before running its SEQ.
+
 _SANITY_SEQ=	post-chroot pre-everything check-makefile \
 				show-warnings show-dev-warnings show-dev-errors \
 				check-categories check-makevars check-desktop-entries \
@@ -6569,8 +6619,17 @@ _${_t}_REAL_SUSEQ+=	${s}
 .ORDER: ${_${_t}_DEP} ${_${_t}_REAL_SEQ}
 .endfor
 
+# Define all of the main targets which depend on a sequence of other targets.
+# See above *_SEQ and *_DEP. The _DEP will run before this defined target is
+# ran. The _SEQ will run as this target once _DEP is satisfied.
+
 .for target in extract patch configure build stage install package
 
+# Check if config dialog needs to show and execute it if needed. If is it not
+# needed (_OPTIONS_OK), then just depend on the cookie which is defined later
+# to depend on the *_DEP and execute the *_SEQ.
+# If options are required, execute config-conditional and then re-execute the
+# target noting that config is no longer needed.
 .if !target(${target}) && defined(_OPTIONS_OK)
 _PHONY_TARGETS+= ${target}
 ${target}: ${${target:tu}_COOKIE}
@@ -6582,38 +6641,42 @@ ${target}: config-conditional
 
 .if !exists(${${target:tu}_COOKIE})
 
+# Define the real target behavior. Depend on the target's *_DEP. Execute
+# the target's *_SEQ. Also handle su and USE_SUBMAKE needs.
 .if ${UID} != 0 && defined(_${target:tu}_REAL_SUSEQ) && !defined(INSTALL_AS_USER)
-.if defined(USE_SUBMAKE)
+.  if defined(USE_SUBMAKE)
 ${${target:tu}_COOKIE}: ${_${target:tu}_DEP}
 	@cd ${.CURDIR} && ${MAKE} ${_${target:tu}_REAL_SEQ}
-.else
+.  else  # !USE_SUBMAKE
 ${${target:tu}_COOKIE}: ${_${target:tu}_DEP} ${_${target:tu}_REAL_SEQ}
-.endif
+.  endif # USE_SUBMAKE
 	@${ECHO_MSG} "===>  Switching to root credentials for '${target}' target"
 	@cd ${.CURDIR} && \
 		${SU_CMD} "${MAKE} ${_${target:tu}_REAL_SUSEQ}"
 	@${ECHO_MSG} "===>  Returning to user credentials"
 	@${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
-.elif defined(USE_SUBMAKE)
+.else # No SU needed
+.  if defined(USE_SUBMAKE)
 ${${target:tu}_COOKIE}: ${_${target:tu}_DEP}
 	@cd ${.CURDIR} && \
 		${MAKE} ${_${target:tu}_REAL_SEQ} ${_${target:tu}_REAL_SUSEQ}
 	@${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
-.else
+.  else # !USE_SUBMAKE
 ${${target:tu}_COOKIE}: ${_${target:tu}_DEP} ${_${target:tu}_REAL_SEQ} ${_${target:tu}_REAL_SUSEQ}
 	@${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
-.endif
+.  endif # USE_SUBMAKE
+.endif # SU needed
 
-.else
+.else # exists(cookie)
 ${${target:tu}_COOKIE}::
 	@if [ -e ${.TARGET} ]; then \
 		${DO_NADA}; \
 	else \
 		cd ${.CURDIR} && ${MAKE} ${.TARGET}; \
 	fi
-.endif
+.endif # !exists(cookie)
 
-.endfor
+.endfor # foreach(targets)
 
 .PHONY: ${_PHONY_TARGETS} check-sanity fetch pkg
 
