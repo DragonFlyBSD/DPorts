@@ -343,11 +343,26 @@ PLIST_SUB+=		BACK_BDB="@comment " \
 			BACK_HDB="@comment "
 .else
 
-USE_BDB=		43+
-CONFIGURE_ARGS+=	--enable-bdb=${BACKEND_ENABLE}
-CONFIGURE_ARGS+=	--enable-hdb=${BACKEND_ENABLE}
-PLIST_SUB+=		BACK_BDB=${BACKEND_PLIST}
-PLIST_SUB+=		BACK_HDB=${BACKEND_PLIST}
+WITH_BDB_VER?=		46
+USE_BDB=		44+
+
+# XXX Can BDB 5.x use XY instead of X as version?
+.if ${WITH_BDB_VER} >= 43 || ${WITH_BDB_VER} == 5 || ${WITH_BDB_VER} == 6
+CONFIGURE_ARGS+=	--enable-bdb=${BACKEND_ENABLE} \
+			--enable-hdb=${BACKEND_ENABLE}
+PLIST_SUB+=		BACK_BDB=${BACKEND_PLIST} \
+			BACK_HDB=${BACKEND_PLIST}
+.elif ${WITH_BDB_VER} >= 4
+CONFIGURE_ARGS+=	--disable-bdb \
+			--enable-hdb=${BACKEND_ENABLE}
+PLIST_SUB+=		BACK_BDB="@comment " \
+			BACK_HDB=${BACKEND_PLIST}
+.elif ${WITH_BDB_VER} == 3
+CONFIGURE_ARGS+=	--disable-bdb \
+			--disable-hdb
+PLIST_SUB+=		BACK_BDB="@comment " \
+			BACK_HDB="@comment "
+.endif
 
 CPPFLAGS+=		-I${BDB_INCLUDE_DIR}
 CONFIGURE_SED+=		-e 's,ol_DB_LIB=$$,&-l${BDB_LIB_NAME:R},' \
