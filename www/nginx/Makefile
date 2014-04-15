@@ -3,7 +3,7 @@
 
 PORTNAME=	nginx
 PORTVERSION=	1.4.7
-PORTEPOCH=	1
+PORTEPOCH=	2
 CATEGORIES=	www
 MASTER_SITES=	http://nginx.org/download/
 MASTER_SITES+=	${MASTER_SITE_LOCAL}
@@ -647,7 +647,7 @@ CONFIGURE_ARGS+=--without-http_rewrite_module \
 .endif
 
 .if ${PORT_OPTIONS:MPASSENGER}
-PASSENGER_VERSION=	4.0.35
+PASSENGER_VERSION=	4.0.41
 MASTER_SITES+=	http://s3.amazonaws.com/phusion-passenger/releases/:passenger
 DISTFILES+=	passenger-${PASSENGER_VERSION}.tar.gz:passenger
 CONFIGURE_ARGS+=--add-module=${WRKDIR}/passenger-${PASSENGER_VERSION}/ext/nginx
@@ -850,8 +850,6 @@ USE_OPENSSL=	yes
 .if ${PORT_OPTIONS:MSPDY}
 .if ${OSVERSION} < 1000028
 WITH_OPENSSL_PORT=	yes
-.else
-WITH_OPENSSL_BASE=	yes
 .endif
 .endif
 .endif
