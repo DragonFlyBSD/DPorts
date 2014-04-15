@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	calibre
-PORTVERSION=	1.23.0
+PORTVERSION=	1.30.0
 CATEGORIES=	deskutils python
 MASTER_SITES=	SF/${PORTNAME}/${PORTVERSION}/
 
@@ -44,17 +44,15 @@ RUN_DEPENDS=	xdg-open:${PORTSDIR}/devel/xdg-utils \
 		${PYTHON_PKGNAMEPREFIX}netifaces>=0:${PORTSDIR}/net/py-netifaces \
 		${PYTHON_PKGNAMEPREFIX}cssselect>=0:${PORTSDIR}/www/py-cssselect \
 		${PYTHON_PKGNAMEPREFIX}apsw>=0:${PORTSDIR}/databases/py-apsw \
-		pdftohtml:${PORTSDIR}/graphics/poppler-utils \
-		lshal:${PORTSDIR}/sysutils/hal
+		pdftohtml:${PORTSDIR}/graphics/poppler-utils
 
 USE_RC_SUBR=	calibre
 EXTRACT_BEFORE_ARGS=	-x -s '/^calibre/~-src/' -f
 
-USES=		desktop-file-utils shared-mime-info shebangfix
+USES=		desktop-file-utils shared-mime-info shebangfix tar:xz
 SHEBANG_FILES=	src/calibre/ebooks/metadata/odt.py \
 		src/calibre/utils/*.py \
 		src/odf/*.py
-USE_XZ=		yes
 USE_PYTHON=	2
 USE_QT4=	dbus qmake_build moc_build
 INSTALLS_ICONS=	yes
@@ -68,18 +66,22 @@ MAKE_ENV+=	FC_INC_DIR="${LOCALBASE}/include/fontconfig" \
 		PODOFO_LIB_DIR="${LOCALBASE}/lib" \
 		PODOFO_INC_DIR="${LOCALBASE}/include/podofo" \
 		WITH_USB=yes \
-		XDG_DATA_DIRS=${STAGEDIR}${PREFIX}/share
+		XDG_DATA_DIRS=${STAGEDIR}${PREFIX}/share \
+		XDG_CONFIG_HOME=${STAGEDIR}/.config
 
 do-build:
 	@(cd ${BUILD_WRKSRC}; ${SETENV} ${MAKE_ENV} ${PYTHON_CMD} \
 		${PYSETUP} build)
 
 do-install:
+	${MKDIR} ${STAGEDIR}/.config
 .for dir in bash-completion desktop-directories gnome/apps mime/packages icons/hicolor/128x128/apps zsh/site-functions
 	${MKDIR} ${STAGEDIR}${PREFIX}/share/${dir}
 .endfor
 	${MKDIR} ${STAGEDIR}${PREFIX}/lib/${PYTHON_VERSION}/site-packages
 	@(cd ${BUILD_WRKSRC}; ${SETENV} ${MAKE_ENV} ${PYTHON_CMD} \
 		${PYSETUP} ${INSTALL} --prefix ${PREFIX} --staging-root ${STAGEDIR}${PREFIX})
+	@${RM} ${STAGEDIR}${PREFIX}/bin/calibre-uninstall
+	@${RM} -r ${STAGEDIR}/.config
 
 .include <bsd.port.mk>
