@@ -1,6 +1,6 @@
---- src/sweepform.ui.orig	2013-08-11 18:20:48.000000000 -0700
-+++ src/sweepform.ui	2013-08-11 18:20:55.000000000 -0700
-@@ -248,7 +248,6 @@
+--- src/widgets/freqform.ui.orig	2014-04-10 14:59:37.000000000 -0700
++++ src/widgets/freqform.ui	2014-04-10 14:59:45.000000000 -0700
+@@ -242,7 +242,6 @@
    </layout>
   </widget>
   <layoutdefault spacing="6" margin="11"/>
