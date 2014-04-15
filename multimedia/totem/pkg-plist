@@ -2,18 +2,18 @@ bin/totem
 bin/totem-audio-preview
 bin/totem-video-indexer
 bin/totem-video-thumbnailer
-%%BROWSER_PLUGINS%%%%WEBPLUGINS_DIR%%/libtotem-cone-plugin.a
-%%BROWSER_PLUGINS%%%%WEBPLUGINS_DIR%%/libtotem-cone-plugin.la
-%%BROWSER_PLUGINS%%%%WEBPLUGINS_DIR%%/libtotem-cone-plugin.so
-%%BROWSER_PLUGINS%%%%WEBPLUGINS_DIR%%/libtotem-gmp-plugin.a
-%%BROWSER_PLUGINS%%%%WEBPLUGINS_DIR%%/libtotem-gmp-plugin.la
-%%BROWSER_PLUGINS%%%%WEBPLUGINS_DIR%%/libtotem-gmp-plugin.so
-%%BROWSER_PLUGINS%%%%WEBPLUGINS_DIR%%/libtotem-mully-plugin.a
-%%BROWSER_PLUGINS%%%%WEBPLUGINS_DIR%%/libtotem-mully-plugin.la
-%%BROWSER_PLUGINS%%%%WEBPLUGINS_DIR%%/libtotem-mully-plugin.so
-%%BROWSER_PLUGINS%%%%WEBPLUGINS_DIR%%/libtotem-narrowspace-plugin.a
-%%BROWSER_PLUGINS%%%%WEBPLUGINS_DIR%%/libtotem-narrowspace-plugin.la
-%%BROWSER_PLUGINS%%%%WEBPLUGINS_DIR%%/libtotem-narrowspace-plugin.so
+%%BROWSER_PLUGINS%%%%WEBPLUGIN_DIR%%/libtotem-cone-plugin.a
+%%BROWSER_PLUGINS%%%%WEBPLUGIN_DIR%%/libtotem-cone-plugin.la
+%%BROWSER_PLUGINS%%%%WEBPLUGIN_DIR%%/libtotem-cone-plugin.so
+%%BROWSER_PLUGINS%%%%WEBPLUGIN_DIR%%/libtotem-gmp-plugin.a
+%%BROWSER_PLUGINS%%%%WEBPLUGIN_DIR%%/libtotem-gmp-plugin.la
+%%BROWSER_PLUGINS%%%%WEBPLUGIN_DIR%%/libtotem-gmp-plugin.so
+%%BROWSER_PLUGINS%%%%WEBPLUGIN_DIR%%/libtotem-mully-plugin.a
+%%BROWSER_PLUGINS%%%%WEBPLUGIN_DIR%%/libtotem-mully-plugin.la
+%%BROWSER_PLUGINS%%%%WEBPLUGIN_DIR%%/libtotem-mully-plugin.so
+%%BROWSER_PLUGINS%%%%WEBPLUGIN_DIR%%/libtotem-narrowspace-plugin.a
+%%BROWSER_PLUGINS%%%%WEBPLUGIN_DIR%%/libtotem-narrowspace-plugin.la
+%%BROWSER_PLUGINS%%%%WEBPLUGIN_DIR%%/libtotem-narrowspace-plugin.so
 lib/nautilus/extensions-2.0/libtotem-properties-page.a
 lib/nautilus/extensions-2.0/libtotem-properties-page.la
 lib/nautilus/extensions-2.0/libtotem-properties-page.so
@@ -111,6 +111,8 @@ lib/totem/plugins/youtube/youtube.totem-plugin
 lib/totem/plugins/youtube/youtube.ui
 %%BROWSER_PLUGINS%%libexec/totem-plugin-viewer
 libexec/totem/totem-bugreport.py
+man/man1/totem-video-thumbnailer.1.gz
+man/man1/totem.1.gz
 share/applications/totem.desktop
 %%DOCSDIR%%/BaconVideoWidget.html
 %%DOCSDIR%%/TotemCellRendererVideo.html
@@ -561,7 +563,7 @@ share/vala/vapi/totem.vapi
 @dirrm lib/totem/plugins/brasero-disc-recorder
 @dirrm lib/totem/plugins
 @dirrm lib/totem
-%%BROWSER_PLUGINS%%@dirrmtry %%WEBPLUGINS_DIR%%
+%%BROWSER_PLUGINS%%@dirrmtry %%WEBPLUGIN_DIR%%
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/xh/LC_MESSAGES
