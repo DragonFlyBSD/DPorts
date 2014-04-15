@@ -1,0 +1,2 @@
+%%DATADIR%%/zookeeper-api.php
+@dirrmtry %%DATADIR%%
