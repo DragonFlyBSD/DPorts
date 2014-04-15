@@ -10,7 +10,7 @@ MASTER_SITES=	ftp://ftp.hdfgroup.org/HDF5/current16/src/ \
 		ftp://ftp.hdfgroup.org/HDF5/prev-releases/hdf5-${PORTVERSION}/src/ \
 		LOCAL/chinsan
 
-MAINTAINER=	koziol@hdfgroup.org
+MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Hierarchical Data Format library (from NCSA)
 
 CONFLICTS=	hdf5-1.8.*
@@ -31,7 +31,6 @@ CONFIGURE_ARGS=	--disable-debug \
 ALL_TARGET=	lib progs
 MAKE_JOBS_UNSAFE=	yes
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if defined(WITH_FORTRAN)
@@ -67,7 +66,7 @@ post-patch:
 
 post-install:
 .for i in gif2h5 h52gif h5debug h5diff h5dump h5import h5jam h5ls h5repack h5repart h5unjam
-	@${STRIP_CMD} ${PREFIX}/bin/${i}
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${i}
 .endfor
 
 regression-test: build
