@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net-mgmt/icinga/files/icinga.in 337029 2013-12-20 16:05:51Z lme $
+# $FreeBSD: head/net-mgmt/icinga/files/icinga.in 350854 2014-04-10 21:08:03Z lme $
 #
 
 # PROVIDE: icinga
@@ -105,7 +105,7 @@ start_precmd() {
            "${icinga_logdir}" \
            "${icinga_logdir}/archives"; do
     if [ ! -d "${d}" ]; then
-      install -d -o "${icinga_user}" -g "${icinga_group}" "${icinga_dir}"/checkresults
+      install -d -o "${icinga_user}" -g "${icinga_group}" "${d}"
     fi
   done
 
