@@ -1,0 +1,7 @@
+#!/bin/sh
+#
+# $FreeBSD: head/games/robocalypto/files/robocalypto.in 350724 2014-04-09 16:15:39Z nemysis $
+#
+
+cd "%%DATADIR%%"
+exec %%PYTHON_CMD%% ./run_game.py "${@}"
