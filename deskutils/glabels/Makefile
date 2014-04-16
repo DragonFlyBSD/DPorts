@@ -12,7 +12,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A program to create labels and business cards
 
 USE_BZIP2=	yes
-USE_GNOME=	gnomehack gnomeprefix libgnomeui \
+USE_GNOME=	gnomehack gnomeprefix libgnomeui gnomedocutils \
 		desktopfileutils intlhack ltverhack
 WANT_GNOME=	yes
 USES=		gettext gmake pkgconfig
@@ -22,9 +22,6 @@ USE_AUTOTOOLS=	libtool
 CPPFLAGS+=	-I${LOCALBASE}/include -DGLIB_COMPILATION
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-MAN1=		glabels.1
-
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if ${HAVE_GNOME:Mevolutiondataserver}!=""
