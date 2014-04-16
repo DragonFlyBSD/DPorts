@@ -1,2 +1,2 @@
 CFLAGS+= -D__FreeBSD__=9
-LDFLAGS+= -lssl
+LDFLAGS+= -lssl -lcrypto
