@@ -15,7 +15,7 @@ COMMENT=	XMMS plugin for playing .psf files
 BUILD_DEPENDS=	xmms:${PORTSDIR}/multimedia/xmms
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USE_BZIP2=	yes
+USES=		tar:bzip2
 USE_GNOME=	gtk12
 USE_LDCONFIG=	yes
 
@@ -39,10 +39,10 @@ do-build:
 		-o ${WRKSRC}/libsexypsf.so -shared -lz
 
 do-install:
-	${MKDIR} ${STAGEDIR}${PREFIX}/lib/xmms/Input
+	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/xmms/Input
 	${INSTALL_PROGRAM} ${WRKSRC}/libsexypsf.so \
 		${STAGEDIR}${PREFIX}/lib/xmms/Input/libsexypsf.so
-	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for f in ${PORTDOCS}
 	${INSTALL_DATA} ${WRKSRC}/Docs/${f} ${STAGEDIR}${DOCSDIR}
 .endfor
