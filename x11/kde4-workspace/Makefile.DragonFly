@@ -1,1 +1,2 @@
-USES+= usb
+USES+=	  usb
+LDFLAGS+= -lz -lutil
