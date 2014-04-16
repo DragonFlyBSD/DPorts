@@ -1,1 +1,0 @@
-LDFLAGS+= -lz -L${LOCALBASE}/lib -lX11
