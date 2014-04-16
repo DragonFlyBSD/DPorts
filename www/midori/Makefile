@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	midori
-PORTVERSION=	0.5.7
+PORTVERSION=	0.5.8
+PORTREVISION=	2
 CATEGORIES=	www xfce
 MASTER_SITES=	http://www.midori-browser.org/downloads/
 DISTNAME=	${PORTNAME}_${PORTVERSION}_all_
@@ -16,30 +17,31 @@ LICENSE_COMB=	multi
 
 BUILD_DEPENDS=	rsvg-convert:${PORTSDIR}/graphics/librsvg2 \
 		valac:${PORTSDIR}/lang/vala
-LIB_DEPENDS=	libsqlite3.so:${PORTSDIR}/databases/sqlite3 \
-		libnotify.so:${PORTSDIR}/devel/libnotify \
+LIB_DEPENDS=	libnotify.so:${PORTSDIR}/devel/libnotify \
 		libsoup-gnome-2.4.so:${PORTSDIR}/devel/libsoup-gnome
 RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
 
-CPPFLAGS+=	-I${LOCALBASE}/include
+CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-CMAKE_ARGS=	-DUSE_GRANITE:BOOL=OFF \
-	-DUSE_GCR:BOOL=OFF
+CMAKE_ARGS=	-DUSE_GCR:BOOL=OFF
 
-WRKSRC=	${WRKDIR}/${DISTNAME:C/([a-z]*)_([0-9\.]*)(_all_)/\1-\2/}
-USE_BZIP2=	yes
+#WRKSRC=	${WRKDIR}/${DISTNAME:C/([a-z]*)_([0-9\.]*)(_all_)/\1-\2/}
+NO_WRKSUBDIR=	yes
 USE_GNOME=	glib20 intltool libxml2
 USE_XORG=	xscrnsaver
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
-USES=		desktop-file-utils pkgconfig cmake gettext
+USES=		desktop-file-utils pkgconfig cmake gettext tar:bzip2
+USE_SQLITE=	yes
 
 PLIST_SUB=	VERSION="${PORTVERSION:R}"
 
-OPTIONS_DEFINE=	DOCS ZEITGEIST
+OPTIONS_DEFINE=	DOCS GIR GRANITE ZEITGEIST
 OPTIONS_SINGLE=	GTK
 OPTIONS_SINGLE_GTK=	GTK2 GTK3
 OPTIONS_DEFAULT=	GTK2
+GIR_DESC=	GObject Introspection
+GRANITE_DESC=	Additional GTK widgets (require GTK3)
 ZEITGEIST_DESC=	User logs activities
 
 .include <bsd.port.options.mk>
@@ -61,6 +63,13 @@ CMAKE_ARGS+=	-DHALF_BRO_INCOM_WEBKIT2:BOOL=ON
 .else
 CMAKE_ARGS+=	-DHALF_BRO_INCOM_WEBKIT2:BOOL=OFF
 .endif
+
+.if ${PORT_OPTIONS:MGRANITE}
+LIB_DEPENDS+=	libgranite.so:${PORTSDIR}/x11-toolkits/granite
+CMAKE_ARGS+=	-DUSE_GRANITE:BOOL=ON
+.else
+CMAKE_ARGS+=	-DUSE_GRANITE:BOOL=OFF
+.endif
 .endif
 
 .if ${PORT_OPTIONS:MDOCS}
@@ -79,9 +88,17 @@ CMAKE_ARGS+=	-DUSE_ZEITGEIST:BOOL=ON
 CMAKE_ARGS+=	-DUSE_ZEITGEIST:BOOL=OFF
 .endif
 
+.if ${PORT_OPTIONS:MGIR}
+USE_GNOME+=	introspection:build
+CMAKE_ARGS+=	-DUSE_GIR:BOOL=ON
+PLIST_SUB+=	GIR=""
+.else
+CMAKE_ARGS+=	-DUSE_GIR:BOOL=OFF
+PLIST_SUB+=	GIR="@comment "
+.endif
+
 post-patch:
 # Avoid errors with CMake
-	@${RM} ${WRKSRC}/*.orig
 .for dir in config extensions
 	@${RM} ${WRKSRC}/${dir}/*.orig
 .endfor
