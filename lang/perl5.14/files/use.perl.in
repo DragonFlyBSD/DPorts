@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/lang/perl5.14/files/use.perl.in 343921 2014-02-12 13:46:07Z mat $
+# $FreeBSD: head/lang/perl5.14/files/use.perl.in 349811 2014-03-31 22:26:09Z mat $
 
 LINK_USRBIN="%%LINK_USRBIN%%"
 : ${OSVERSION:=`/sbin/sysctl -n kern.osreldate`};
@@ -54,6 +54,7 @@ do_cleanup_manpath()
 			{ if (s != 1) { mode = 0 } if (mode == 0) print }' /etc/manpath.config >/etc/manpath.config.new
 		/bin/mv /etc/manpath.config /etc/manpath.config.bak
 		/bin/mv /etc/manpath.config.new /etc/manpath.config
+		/bin/rm /etc/manpath.config.bak
 	fi
 }
 
