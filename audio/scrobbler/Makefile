@@ -3,69 +3,53 @@
 
 PORTNAME?=	scrobbler
 PORTVERSION=	0.3.8.1
-PORTREVISION=	15
+PORTREVISION=	16
 CATEGORIES=	audio
 MASTER_SITES=	http://static.audioscrobbler.com/plugins/ \
 		http://www.pipian.com/stuffforchat/
 DISTNAME=	xmms-scrobbler-${PORTVERSION}
 
 MAINTAINER?=	novel@FreeBSD.org
-COMMENT?=	XMMS plugin for Audioscrobbler.com
+COMMENT?=	XMMS/BMP plugin for Audioscrobbler.com
 
 LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl
 
-CONFLICTS=	bmp-scrobbler-[0-9]* \
-		xmms-scrobbler-[0-9]*
+CONFLICTS=	xmms-scrobbler-[0-9]*
 
 USES=		gmake pkgconfig
 USE_CSTD=	gnu89
-NO_STAGE=	yes
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-SLAVEDIRS=	audio/xmms-scrobbler audio/bmp-scrobbler
+SLAVEDIRS=	audio/xmms-scrobbler
 
-.if !defined(WITH_XMMS)
-WITH_XMMS=	yes
-.endif
+OPTIONS_DEFINE=	APE XMMS DEBUG ENCODINGS_PATCH
+OPTIONS_DEFAULT=XMMS
+XMMS_DESC=	Enable XMMS support
+ENCODINGS_PATCH_DESC=	Enable ID3 tags recoding support
 
-.if defined(WITH_XMMS)
-LIB_DEPENDS+=	libxmms.so:${PORTSDIR}/multimedia/xmms
-PLIST_FILES+=	lib/xmms/General/libxmms_scrobbler.la \
-		lib/xmms/General/libxmms_scrobbler.so
-.else
-CONFIGURE_ARGS+=	--disable-xmms-plugin
-.endif
+XMMS_LIB_DEPENDS=	libxmms.so:${PORTSDIR}/multimedia/xmms
+XMMS_PLIST_FILES=	lib/xmms/General/libxmms_scrobbler.la \
+			lib/xmms/General/libxmms_scrobbler.so
+XMMS_PLIST_DIRS=	lib/xmms/General lib/xmms
+XMMS_CONFIGURE_ENABLE=	xmms-plugin
 
 CONFIGURE_ARGS+=	--disable-bmp-plugin
 
-.if defined(WITH_DEBUG)
-CONFIGURE_ARGS+=	--enable-debug
-.endif
+DEBUG_CONFIGURE_ARGS=	debug
 
-.if defined(WITH_APE)
-CONFIGURE_ARGS+=	--enable-prefer-ape
-.endif
+APE_CONFIGURE_ENABLE=	prefer-ape
 
-.if defined(WITH_ENCODINGS_PATCH)
-USES+=	iconv
-.endif
+ENCODINGS_PATCH_USES=	iconv
+
+.include <bsd.port.options.mk>
 
 post-patch::
 	@${REINPLACE_CMD} -e 's|echo aout|echo elf|' ${WRKSRC}/configure
-.if defined(WITH_ENCODINGS_PATCH)
+.if ${PORT_OPTIONS:MENCODINGS_PATCH}
 	@${PATCH} ${PATCH_ARGS} -p1 < ${FILESDIR}/extra-encodings-patch
 .endif
-
-pre-everything::
-	@${ECHO_MSG} "You may specify the following on the command line:"
-	@${ECHO_MSG} " "
-	@${ECHO_MSG} "WITH_XMMS=yes to enable xmms support"
-	@${ECHO_MSG} "WITH_DEBUG=yes to turn on debug mode"
-	@${ECHO_MSG} "WITH_APE=yes to enable ape"
-	@${ECHO_MSG} "WITH_ENCODINGS_PATCH=yes to enable ID3 tags recoding support"
-	@${ECHO_MSG} " "
 
 .include <bsd.port.mk>
