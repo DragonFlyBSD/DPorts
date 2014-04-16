@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/textproc/elasticsearch/files/elasticsearch.in 343943 2014-02-12 16:48:32Z tj $
+# $FreeBSD: head/textproc/elasticsearch/files/elasticsearch.in 349955 2014-04-02 21:06:51Z tj $
 #
 # PROVIDE: elasticsearch
 # REQUIRE: NETWORKING SERVERS
@@ -68,7 +68,7 @@ start_precmd="elasticsearch_precmd"
 status_cmd="elasticsearch_status"
 stop_cmd="elasticsearch_stop"
 command="/usr/sbin/daemon"
-command_args="-f %%LOCALBASE%%/bin/java -Des.pidfile=${pidfile} ${elasticsearch_props} ${java_options} org.elasticsearch.bootstrap.ElasticSearch"
+command_args="-f %%LOCALBASE%%/bin/java -Des.pidfile=${pidfile} ${elasticsearch_props} ${java_options} org.elasticsearch.bootstrap.Elasticsearch"
 
 elasticsearch_precmd() {
         touch ${pidfile}
@@ -79,7 +79,7 @@ elasticsearch_precmd() {
 }
 
 elasticsearch_console () {
-	%%LOCALBASE%%/bin/java -Des.foreground=yes ${elasticsearch_props} ${java_options} org.elasticsearch.bootstrap.ElasticSearch
+	%%LOCALBASE%%/bin/java -Des.foreground=yes ${elasticsearch_props} ${java_options} org.elasticsearch.bootstrap.Elasticsearch
 }
 
 
@@ -121,7 +121,7 @@ elasticsearch_check_pidfile() {
 		debug "pid file ($_pidfile): no pid in file."
 		return
 	fi
-	if [ -n "`%%LOCALBASE%%/bin/jps -l | grep -e "^$_pid org.elasticsearch.bootstrap.ElasticSearch\$"`" ]; then
+	if [ -n "`%%LOCALBASE%%/bin/jps -l | grep -e "^$_pid org.elasticsearch.bootstrap.Elasticsearch\$"`" ]; then
 		echo -n $_pid
 	fi
 }
