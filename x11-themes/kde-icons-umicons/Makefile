@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: x11-themes/kde-icons-umicons/Makefile 327783 2013-09-20 23:54:03Z bapt $
+# $FreeBSD$
 
 PORTNAME=	umicons
 PORTVERSION=	2.0
