@@ -8,7 +8,7 @@ PKGNAMESUFFIX=	-lite
 
 COMMENT=	The "meta-port" of the GNOME desktop slimmed down for FreeBSD releases
 
-RUN_DEPENDS=	${LOCALBASE}/libexec/gweather-applet-2:${PORTSDIR}/x11/gnome-applets \
+RUN_DEPENDS=	\
     		gnome-audio-profiles-properties:${PORTSDIR}/audio/gnome-media \
 	 	gnome-dictionary:${PORTSDIR}/deskutils/gnome-utils \
 		eog:${PORTSDIR}/graphics/eog \
@@ -33,5 +33,4 @@ CONFLICTS=	gnome2-[0-9]*
 DESCR=		${.CURDIR}/pkg-descr
 PKGMESSAGE=	${.CURDIR}/pkg-message
 
-NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
