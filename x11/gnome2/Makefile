@@ -13,7 +13,7 @@ EXTRACT_ONLY=	# empty
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT?=	The "meta-port" for the GNOME 2 integrated X11 desktop
 
-RUN_DEPENDS?=	${LOCALBASE}/libexec/gweather-applet-2:${PORTSDIR}/x11/gnome-applets \
+RUN_DEPENDS?=	\
 		gnome-audio-profiles-properties:${PORTSDIR}/audio/gnome-media \
 	 	gnome-dictionary:${PORTSDIR}/deskutils/gnome-utils \
 		eog:${PORTSDIR}/graphics/eog \
@@ -85,7 +85,6 @@ RUN_DEPENDS+=	empathy:${PORTSDIR}/net-im/empathy \
 		vinagre:${PORTSDIR}/net/vinagre \
 		brasero:${PORTSDIR}/sysutils/brasero \
 		${LOCALBASE}/libexec/deskbar-applet/deskbar-applet:${PORTSDIR}/deskutils/deskbar-applet \
-		${LOCALBASE}/lib/hamster-applet/hamster-applet:${PORTSDIR}/deskutils/hamster-applet \
 		${LOCALBASE}/lib/gtk-2.0/modules/libatk-bridge.so:${PORTSDIR}/accessibility/at-spi
 .endif
 .endif
