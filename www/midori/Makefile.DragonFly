@@ -1,2 +1,1 @@
 LIB_DEPENDS+= libexecinfo.so:${PORTSDIR}/devel/libexecinfo
-LDFLAGS+= -lm -lz
