@@ -1,1 +1,1 @@
-LDFLAGS+= -lm -lutil -lcrypto
+LDFLAGS+= -lm
