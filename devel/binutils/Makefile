@@ -33,7 +33,6 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS+=	--with-system-zlib \
 			--with-sysroot=/ \
 			--disable-werror \
-			--with-lib-path=/lib:/usr/lib \
 			--with-gmp=${LOCALBASE} \
 			--with-mpfr=${LOCALBASE}
 
