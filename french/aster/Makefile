@@ -98,7 +98,7 @@ PLIST_SUB+=	ASTK_CLIENT=""  ASTKDIR=${ASTKDIR}
 PLIST_SUB+=	ASTK_CLIENT="@comment " ASTKDIR=""
 .endif
 .if !defined(WITHOUT_EFICAS)
-RUN_DEPENDS+=	${LOCALBASE}/apps/eficas:${PORTSDIR}/french/eficas
+#RUN_DEPENDS+=	${LOCALBASE}/apps/eficas:${PORTSDIR}/french/eficas
 PLIST_SUB+=	EFICAS=""
 .else
 PLIST_SUB+=	EFICAS="@comment "
