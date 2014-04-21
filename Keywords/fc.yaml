@@ -1,0 +1,9 @@
+# $FreeBSD: head/Keywords/fc.yaml 336886 2013-12-19 10:49:00Z zeising $
+#
+# MAINTAINER: x11@FreeBSD.org
+
+actions: [dirrmtry]
+post-install: |
+  fc-cache -s %D/%@ 2>/dev/null || true
+post-deinstall: |
+  fc-cache -s %D/%@ 2>/dev/null || true
