@@ -1,2 +1,0 @@
-post-extract:
-	${REINPLACE_CMD} -e 's|"FreeBSD"|"DragonFly"|g' ${WRKSRC}/build.xml
