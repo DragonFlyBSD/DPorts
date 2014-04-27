@@ -20,7 +20,11 @@ USES=		tar:xz uidfix
 # With no dependency at all
 NO_CCACHE=	yes
 USE_LDCONFIG=	yes
+.if defined(PACKAGE_BUILDING)
+MAKE_ARGS+=	PKG_PORTSDIR=/usr/dports
+.else
 MAKE_ARGS+=	PKG_PORTSDIR=${PORTSDIR}
+.endif
 
 MAKE_ENV+=	WITHOUT_PROFILE=yes __MAKE_CONF=/dev/null SRCCONF=/dev/null \
 		PORTREVISION=${PORTREVISION}
