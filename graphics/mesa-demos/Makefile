@@ -3,6 +3,7 @@
 
 PORTNAME=	mesa-demos
 PORTVERSION=	8.1.0
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/demos/${PORTVERSION}/
 DISTFILES=	mesa-demos-${PORTVERSION}${EXTRACT_SUFX}
@@ -17,6 +18,9 @@ USE_GL=		glu glut glew
 USE_XORG=	glproto x11 xext xi xxf86vm xdamage xfixes dri2proto
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
+
+CONFIGURE_ARGS+=--disable-egl --disable-gles2 --disable-wayland \
+		--disable-gbm --disable-vg --disable-osmesa
 
 DATADIR=	${PREFIX}/share/${PKGNAMEPREFIX}${PORTNAME}
 
