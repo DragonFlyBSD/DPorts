@@ -1,6 +1,6 @@
 #!/usr/local/bin/perl -w
 
-# $FreeBSD: head/Tools/scripts/bump_revision.pl 350364 2014-04-06 15:11:09Z gerald $
+# $FreeBSD: head/Tools/scripts/bump_revision.pl 351576 2014-04-18 23:37:53Z gerald $
 
 #
 # MAINTAINER=	gerald@FreeBSD.org
@@ -23,7 +23,7 @@ Usage: $0 [options] [<category>/]<portname>
     -u <username>   - Your freebsd.org username. Defaults to \$ENV{USER}.
     -i <filename>   - Use this for INDEX name. Defaults to /usr/ports/INDEX.
 
-Questions, suggestions etc -> edwin\@freebsd.org
+Improvements, suggestions,questions -> gerald\@FreeBSD.org
 EOF
 	exit 1;
 }

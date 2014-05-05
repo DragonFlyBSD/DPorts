@@ -444,6 +444,7 @@ lang/boo||2013-06-19|Has expired: BROKEN for more than 6 month
 math/petsc-mpich||2013-06-19|Has expired: BROKEN for more than 6 month
 databases/py-MySQLdb41||2013-06-19|Depends on databases/mysql41-client, which was removed
 databases/py-MySQLdb50||2013-06-19|Depends on databases/mysql50-client, which was removed
+devel/bugzilla|devel/bugzilla40|2013-06-20|Renamed
 emulators/fceu-server|emulators/fceux|2013-06-21|Has expired: Replaced by emulators/fceux
 graphics/py-graphillion|math/py-graphillion|2013-06-22|Correct category assignment
 net-im/mikutter003||2013-06-23|Obsolete: Use net-im/mikutter instead of this
@@ -2056,7 +2057,98 @@ graphics/svg2swf||2014-04-13|Has expired: Unmaintained since 2001
 devel/flick||2014-04-13|Has expired: Unmaintained since 2001
 mail/smail||2014-04-13|Has expired: Unmaintained since 2001
 net/net-http||2014-04-13|Has expired: Unmaintained since 2001
-security/cfv||2014-04-13|Has expired: Unmaintained since 2001
 graphics/camediaplay||2014-04-13|Has expired: Unmaintained since 2001
 math/umatrix||2014-04-13|Has expired: Unmaintained since 2001
 lang/f77||2014-04-13|Has expired: Unmaintained since 2001
+security/labrea||2014-04-14|Has expired: Unmaintained since 2003
+lang/dmd|lang/dmd1|2014-04-14|Upline no longer supports dmd 1.X, it is now the secondary dmd port
+www/mod_python3|www/mod_python33|2014-04-15|Port moved to reflect PKGNAMESUFFIX
+lang/dragonegg-devel46||2014-04-16|C++ library incompatibilities, unmainteined upstream
+ports-mgmt/pkgsearch||2014-04-18|Has expired: Upstream disappeared
+science/flounder||2014-04-18|Has expired: Unmaintained since 2002
+security/nbaudit||2014-04-18|Has expired: Unmaintained since 2002
+security/saint||2014-04-18|Has expired: Unmaintained since 2002
+graphics/gozer||2014-04-18|Has expired: Unmaintained since 2002
+misc/pdfmap||2014-04-18|Has expired: Unmaintained since 2002
+devel/showgrammar||2014-04-18|Has expired: Unmaintained since 2002
+biology/libgenome||2014-04-18|Has expired: Unmaintained since 2002
+deskutils/narval||2014-04-18|Has expired: Unmaintained since 2002
+devel/fampp||2014-04-18|Has expired: Unmaintained since 2002
+net-p2p/py-fngrab||2014-04-18|Has expired: Unmaintained since 2002
+misc/wmfirew||2014-04-18|Has expired: Unmaintained since 2002
+x11-wm/e16utils||2014-04-18|Has expired: Unmaintained since 2002
+misc/salias||2014-04-18|Has expired: Unmaintained since 2002
+print/latex2slides||2014-04-18|Has expired: Unmaintained since 2002
+lang/sxm||2014-04-18|Has expired: Unmaintained since 2002
+textproc/pybook||2014-04-18|Has expired: Unmaintained since 2002
+mail/mailcrypt||2014-04-18|Has expired: Unmaintained since 2002
+japanese/elvis||2014-04-18|Has expired: Unmaintained since 2002
+devel/prototype||2014-04-18|Has expired: Unmaintained since 2002
+print/wprint||2014-04-18|Has expired: Unmaintained since 2002
+science/euler||2014-04-18|Has expired: Unmaintained since 2002
+multimedia/gopchop||2014-04-18|Has expired: Unmaintained since 2002
+science/gdis||2014-04-18|Has expired: Unmaintained since 2002
+net/googolplex||2014-04-18|Has expired: Unmaintained since 2002
+lang/logo||2014-04-18|Has expired: Unmaintained since 2002
+textproc/roap||2014-04-18|Has expired: Unmaintained since 2002
+x11-wm/afterstep-i18n||2014-04-18|Has expired: Unmaintained since 2002
+games/yamsweeper||2014-04-18|Has expired: Unmaintained since 2002
+net-mgmt/echolot||2014-04-18|Has expired: Unmaintained since 2002
+security/pam_smb||2014-04-18|Has expired: Unmaintained since 2002
+devel/lua-redis-parser||2014-04-18|Has expired: Broken for more than 6 months
+biology/finchtv||2014-04-18|Has expired: Broken for more than 6 months
+net-im/ari-yahoo||2014-04-18|Has expired: Broken for more than 1 year (http://www.icculus.org/ari-yahoo/)
+www/sams||2014-04-21|Depends on PHP 4 which was removed two years ago
+x11-toolkits/vdkbuidler||2014-04-22|Abandonware, not stage friendly
+emulators/mupen64-sdlinput|emulators/mupen64plus-input-sdl|2014-04-24|Has expired: Use mupen64plus instead
+emulators/mupen64-sdlaudio|emulators/mupen64plus-audio-sdl|2014-04-24|Has expired: Use mupen64plus instead
+emulators/mupen64-tr64||2014-04-24|Has expired: Use mupen64plus instead
+emulators/mupen64-gln64||2014-04-24|Has expired: Use mupen64plus instead
+emulators/mupen64-sound||2014-04-24|Has expired: Use mupen64plus instead
+emulators/mupen64-rsp||2014-04-24|Has expired: Use mupen64plus instead
+emulators/mupen64-input||2014-04-24|Has expired: Use mupen64plus instead
+emulators/mupen64-glide|emulators/mupen64plus-video-glide64|2014-04-24|Has expired: Use mupen64plus instead
+emulators/mupen64|emulators/mupen64plus|2014-04-24|Has expired: Use mupen64plus instead
+emulators/mupen64-softgfx||2014-04-24|Has expired: Use mupen64plus instead
+emulators/mupen64-dummyaudio||2014-04-24|Has expired: Use mupen64plus instead
+emulators/mupen64-base|emulators/mupen64plus-core|2014-04-24|Has expired: Use mupen64plus instead
+x11/emu||2014-04-24|Has expired: Broken, not staged
+lang/ruby-doc-stdlib||2014-04-24|Has expired: Upstream rerolls frequently, online docs work well
+emulators/mupen64-rice|emulators/mupen64plus-video-rice|2014-04-24|Removed, part of removed mupen64
+devel/otrs|www/otrs|2014-04-28|OTRS is actually web based ticket system and it has nothing with development
+audio/cantus_3||2014-04-28|Broken for a while, does not build with modern compilers
+multimedia/xfce4-xmms-plugin||2014-04-28|Has expired: Abandonware, and can't select another player instead XMMS
+multimedia/xmms-weasel||2014-04-28|Has expired: Abandonware, please consider using multimedia/audacious instead
+audio/xmms-sexyspc||2014-04-28|Has expired: Abandonware, please consider using multimedia/audacious instead
+audio/libmusicbrainz4|audio/libmusicbrainz5|2014-04-28|Has expired: Please use audio/libmusicbrainz5 instead
+cad/kicad-library||2014-05-02|kicad-library is no more distributed separately
+science/hdf5-18|science/hdf5|2014-05-03|Use science/hdf5 instead
+science/netcdf-ftn|science/netcdf-fortran|2014-05-03|Use science/netcdf-fortran instead
+science/netcdf3-ftn|science/netcdf-fortran|2014-05-03|Use science/netcdf-fortran instead
+science/netcdf4|science/netcdf|2014-05-03|Use science/netcdf instead
+net/wackamole||2014-05-04|Has expired: Depends on expired www/spread
+x11-toolkits/gigi||2014-05-04|Has expired: Does not compile on 10 or higher
+net/asterisk-oh323||2014-05-04|Has expired: Depends on broken and unsupported asterisk14
+net/asterisk14||2014-05-04|Has expired: Broken and unsupported
+net/asterisk14-addons||2014-05-04|Has expired: Depends on broken and unsupported asterisk14
+ports-mgmt/pkg_install||2014-05-04|Has expired: Replaced by ports-mgmt/pkg
+x11-drivers/xf86-input-magictouch||2014-05-04|Has expired: Does not compile
+x11-drivers/xf86-video-cyrix||2014-05-04|Has expired: requires pciVideoPtr typedef
+x11-drivers/xf86-video-sis-intel||2014-05-04|Has expired: requires pciVideoPtr typedef
+net/py-spreadmodule||2014-05-04|Has expired: Depends on expired net/spread
+net/p5-Spread-Message||2014-05-04|Has expired: Depends on expired net/spread
+net/p5-POE-Component-Spread||2014-05-04|Has expired: Depends on expired net/spread
+net/p5-Spread-Session||2014-05-04|Has expired: Depends on expired net/spread
+sysutils/wmmemload||2014-05-04|Has expired: Broken
+lang/ml-pnet||2014-05-04|Has expired: Alpha-quality abandonware - Decommissioned Dec 2012 - Use mono
+lang/treecc||2014-05-04|Has expired: PNET dependency decommissioned Dec 2012
+lang/pnetlib||2014-05-04|Has expired: Alpha-quality abandonware - Decommissioned Dec 2012 - Use mono
+lang/pnet-base||2014-05-04|Has expired: Alpha-quality abandonware - Decommissioned Dec 2012 - Use mono
+benchmarks/pnetmark||2014-05-04|Has expired: PNET dependency decommissioned Dec 2012
+lang/pnet||2014-05-04|Has expired: Alpha-quality abandonware - Decommissioned Dec 2012 - Use mono
+x11-wm/stumpwm||2014-05-04|Has expired: Broken for more than 4 months
+sysutils/cpupowerd||2014-05-04|Has expired: Not maintained from upstream anymore and only supports ancient AMD K8.
+net/pchar||2014-05-04|Has expired: Obsolete, abandoned
+x11-fonts/texcm-ttf||2014-05-04|Has expired: Should be replaced by x11-fonts/stix-fonts
+devel/buildapp||2014-05-05|Has expired: Broken for more than 6 months
+converters/konwert||2014-05-05||Broken with modern compilers, not stage, no upstream

@@ -5,6 +5,132 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20140503:
+  AFFECTS: users of science/hdf5* and science/netcdf*
+  AUTHOR: sunpoet@FreeBSD.org
+
+  There are major version changes in HDF5 and NetCDF ports:
+  - science/hdf5: updated from 1.6.9 to 1.8.12
+  - science/hdf5-18: replaced by science/hdf5
+  - science/netcdf: updated from 3.6.3 to 4.3.2
+                    C++/Fortran binding moved into new ports (by upstream)
+  - science/netcdf-cxx: new port for C++ binding of NetCDF
+  - science/netcdf-fortran: new port for Fortran binding of NetCDF
+  - science/netcdf-ftn: replaced by science/netcdf-fortran
+  - science/netcdf3-ftn: replaced by science/netcdf-fortran
+  - science/netcdf4: replaced by science/netcdf
+
+  Please deinstall them before building the new versions.
+
+20140428:
+  AFFECTS: users of java/openjdk7
+  AUTHOR: glewis@FreeBSD.org
+
+  The previous version of openjdk7 had a bug that will prevent it from
+  being able to bootstrap itself.  Please deinstall openjdk7 before
+  building the new version.
+
+20140427:
+  AFFECTS: users of graphics/gdal
+  AUTHOR: sunpoet@FreeBSD.org
+
+  Due to changes in header files, please deinstall gdal first while updating
+  from 1.9.x/1.10.x to 1.11.x.
+
+20140420:
+  AFFECTS: users of net/samba4
+  AUTHOR: timur@FreeBSD.org
+
+  Samba4 port now re-uses the same logic and startup script as Samba41. So,
+  to get net/samba4 runing you need to rename samba4_enable in /etc/rc.conf
+  to the samba_sever_enable.
+
+  samba_server_enable="YES"
+
+  Startup script tries it's best to guess which out of samba/nmbd/smbd/winbindd
+  daemons have to be started, but you can fine tune this by specifying them in
+  rc.conf, just make sure that samba_server_enable is enabled(see entry for 20121022).
+
+20140416:
+  AFFECTS: users of x11/xorg graphics/dri graphics/libGL and related ports
+  AUTHOR: x11@FreeBSD.org
+
+  The default xorg version has been switched on FreeBSD 10-STABLE and
+  FreeBSD 9-STABLE.
+
+  To upgrade graphics/libGL, graphics/dri and related MESA ports, it is
+  necessary to first remove the old versions of those ports.
+  No special upgrade procedure is needed for xorg ports but it is
+  necessary to recompile all xorg drivers (xf86-*) and other ports that
+  depend on the xserver version, including
+  emulators/virtualbox-ose-additions.  Portrevisions have been bumped
+  where needed, but users of drivers not in the ports tree will need to
+  recompile those.
+
+  If it is important to stay on the old versions, it is possible to
+  specify WITHOUT_NEW_XORG= in /etc/make.conf to get the old xorg
+  distribution.
+
+  For users in need of working console when using KMS drivers (intel and
+  radeon graphics cards) please use the new vt(9) console driver.
+  For more information, see https://wiki.freebsd.org/Graphics and
+  https://wiki.freebsd.org/Newcons .
+
+  To update:
+
+  # pkg_delete -f libGL-\* dri-\*
+    or
+  # pkg delete -f libGL dri
+    followed by
+  # portmaster graphics/dri graphics/libGL
+    or
+  # portupgrade graphics/dri graphics/libGL
+    and then
+  # portmaster -a
+    or
+  # portupgrade -a
+
+20140416:
+  AFFECTS: users of print/freetype2 textproc/libxml2 x11/pixman 
+           x11/libxcb and graphics/freeglut
+  AUTHOR: x11@FreeBSD.org and gnome@FreeBSD.org
+
+  The library version of the above libraries has been brought in line
+  with what upstream expects. To do this all users of these ports need
+  to be rebuilt. Portrevisions have been bumped as a consequence.
+
+  # portmaster -r freetype2 -r libxml2 -r pixman -r freeglut -r libxcb
+  or
+  # portupgrade -rf freetype2 libxml2 pixman freeglut libxcb
+
+20140415:
+  AFFECTS: Users of mod_python3
+  AUTHOR: ohauer@FreeBSD.org
+
+  www/mod_python3 was renamed to www/mod_python33, additional www/mod_python35
+  with support for apache24 was added to the portstree.
+
+  To reflect the new port location use:
+
+  pkgng users:
+  # pkg set -o www/mod_python3:www/mod_python33
+
+  portmaster users:
+  # portmaster -o www/mod_python33 www/mod_python3
+
+  portupgrade users:
+  # portugrade -o www/mod_python33 www/mod_python3
+
+20140414:
+  AFFECTS: Users of dmd 1.X and dmd 2.x.
+  AUTHOR: cy@FreeBSD.org
+
+  lang/dmd and lang/dmd2 have switched places. Dmd 1.x is no longer supported
+  by digitalmars.com and is now the secondary dmd port in the collection.
+  Dmd2 is the primary port. What this means to dmd users is that dmd1 is now
+  used to invoke dmd 1.x and the dmd command (instead of dmd2) now invokes
+  dmd 2.x.
+
 20140413:
   AFFECTS: Users of Python and pkg >= 1.2.7_1
   AUTHOR: koobs@FreeBSD.org
@@ -73,8 +199,8 @@ you update your ports collection, before attempting any port upgrades.
   AFFECTS: users of textproc/elasticsearch
   AUTHOR: tj@FreeBSD.org
 
-  Elasticsearch has been updated to version 1.1.0. If you are updating 
-  from a version prior to 1.0.0 you will need to do a full cluster 
+  Elasticsearch has been updated to version 1.1.0. If you are updating
+  from a version prior to 1.0.0 you will need to do a full cluster
   shutdown for this update as it can not be performed in a rolling
   fashion.
 
@@ -109,13 +235,23 @@ you update your ports collection, before attempting any port upgrades.
   AUTHOR: ale@FreeBSD.org
 
   The Apache PHP module has been separated from the main PHP port.
-  If it is needed, install either www/mod_php5 or www/mod_php55.
+  If you had the APACHE OPTION selected, you have to perform the
+  following steps:
+
+  1) update your lang/php* options (i.e. 'make config')
+  2) rebuild lang/php* port
+  3) install www/mod_php* port
+
+  It is *mandatory* to build both ports with the same DEBUG and ZTS
+  options, so if you have a threaded Apache (i.e. worker or event MPM)
+  you have to select the ZTS option in lang/php* port.
 
 20140322:
   AFFECTS: users of devel/apr1
   AUTHOR: ohauer@FreeBSD.org
 
   APR was updated to 1.5.0, BDB requirement was bumped to 48+
+  It is necessary to first remove the old version of devel/apr1.
 
   Please rebuild all ports which are using functions from APR/APR-util
   such as Apache, Subversion, etc.
@@ -1047,7 +1183,7 @@ you update your ports collection, before attempting any port upgrades.
   AFFECTS: users of graphics/gdal
   AUTHOR: sunpoet@FreeBSD.org
 
-  Due to the changes in gdal.h, please deinstall gdal first while updating
+  Due to changes in header files, please deinstall gdal first while updating
   from 1.9.x to 1.10.x.
 
 20130830:
@@ -1687,62 +1823,4 @@ you update your ports collection, before attempting any port upgrades.
 
   * DVI ware
    - print/tex-xdvik: XDvi
-
-20130503:
-  AFFECTS: users of security/libgcrypt and any port that depends on it
-  AUTHOR: ehaupt@FreeBSD.org
-
-  The libgcrypt port has been updated to 1.5.2 and all shared libraries
-  versions have been bumped. So you need to rebuild all applications that
-  depend on libgcrypt. Do something like:
-
-  # portmaster -r libgcrypt
-    or
-  # portupgrade -rf libgcrypt
-
-  Alternatively, you may install sysutils/bsdadminscripts, run pkg_libchk and
-  rebuild all detected ports:
-
-  # pkg_libchk | tee /tmp/rebuild
-  # awk -F':' '/libgcrypt.so/ {print $1}' /tmp/rebuild | sort | uniq \
-	| xargs portmaster -D
-
-20130502:
-  AFFECTS: users of ports-mgmt/pkg, ports-mgmt/poudriere, ports-mgmt/tinderbox
-  AUTHOR: bdrewery@FreeBSD.org
-
-  This only affects people who are _building_ binary packages for pkgng. If you
-  are building from ports please ignore this. This step is optional.
-
-  It is recommended to rebuild all packages and then have your users run 'pkg
-  check -Ba' and 'pkg upgrade' on their servers once. This will allow the new
-  shlib tracking to reinstall packages that have changed shlib requirements.
-
-20130427:
-  AFFECTS: users of print/a2ps-{a4,letter}, print/c2ps-{a4,letter}, print/lprps-{a4,letter}, or graphics/jpeg2ps-{a4,letter}
-  AUTHOR: hrs@FreeBSD.org
-
-  The affected ports have been converted to use libpaper for the default paper
-  size as print/psutils did.  For more detail, see 20130424 below.
-
-20130424:
-  AFFECTS: users of print/psutils-a4 or print/psutils-letter
-  AUTHOR: hrs@FreeBSD.org
-
-  print/psutils-a4 and print/psutils-letter have been merged into a single port
-  print/psutils.  The default paper size in psnup(1), psresize(1), and
-  pstops(1) is now selected via an environment variable and/or a configuration
-  file of libpaper(3).  For more detail, see papersize(5) and paperconfig(8)
-  manual page.    If you prefer A4 or letter size by default as the old
-  version did, please install print/papersize-default-a4 or
-  print/papersize-default-letter, which installs a papersize configuration
-  file without manual configuration.
-
-20130423:
-  AFFECTS: users of mail/postfix
-  AUTHOR: sahil@FreeBSD.org
-
-  This is a significant update; so, please carefully review the
-  RELEASE_NOTES to identify which incompatible changes impact your
-  environment.
 
