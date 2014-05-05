@@ -1,7 +1,7 @@
 #!/usr/local/bin/perl -w
 
 #
-# $FreeBSD: head/Tools/scripts/distinfochecker 340851 2014-01-23 19:55:14Z mat $
+# $FreeBSD$
 #
 # Author: Edwin Groothuis <edwin@FreeBSD.org>
 #

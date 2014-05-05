@@ -1,4 +1,4 @@
-$FreeBSD: head/Tools/scripts/release/README 340851 2014-01-23 19:55:14Z mat $
+$FreeBSD$
 
 This directory contains the scripts that are used to break up the packages
 for a given release, so that they fit on a particular 4 CD set.  They rely

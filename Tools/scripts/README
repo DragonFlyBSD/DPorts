@@ -1,4 +1,4 @@
-$FreeBSD: head/Tools/scripts/README 336919 2013-12-19 14:43:58Z bapt $
+$FreeBSD$
 
 MOVEDlint.awk - checks MOVED for common errors
 ardiff	- compare two archives easily

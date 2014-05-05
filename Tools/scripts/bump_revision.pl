@@ -1,6 +1,6 @@
 #!/usr/local/bin/perl -w
 
-# $FreeBSD: head/Tools/scripts/bump_revision.pl 351576 2014-04-18 23:37:53Z gerald $
+# $FreeBSD$
 
 #
 # MAINTAINER=	gerald@FreeBSD.org

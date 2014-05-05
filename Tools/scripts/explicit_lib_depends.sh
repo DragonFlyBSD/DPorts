@@ -26,7 +26,7 @@
 # SUCH DAMAGE.
 #
 
-# $FreeBSD: head/Tools/scripts/explicit_lib_depends.sh 340851 2014-01-23 19:55:14Z mat $
+# $FreeBSD$
 
 #
 # The purpose of this script is to give the real dependency list of a

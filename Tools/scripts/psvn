@@ -26,7 +26,7 @@
 # LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 #
-# $FreeBSD: head/Tools/scripts/psvn 340523 2014-01-21 00:44:08Z mandree $
+# $FreeBSD$
 #
 # MAINTAINER=	mandree@FreeBSD.org
 # beat@ has implicit approval to change this script.

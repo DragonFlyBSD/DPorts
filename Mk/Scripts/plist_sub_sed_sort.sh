@@ -1,5 +1,5 @@
 #! /bin/sh
-# $FreeBSD: head/Mk/Scripts/plist_sub_sed_sort.sh 351658 2014-04-20 23:47:25Z antoine $
+# $FreeBSD$
 #
 # MAINTAINER: portmgr@FreeBSD.org
 #

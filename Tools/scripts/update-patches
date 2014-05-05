@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/Tools/scripts/update-patches 340851 2014-01-23 19:55:14Z mat $
+# $FreeBSD$
 # $OpenBSD: update-patches,v 1.3 2000/06/09 17:08:37 espie Exp $
 # Copyright (c) 2000
 # Marc Espie.  All rights reserved.

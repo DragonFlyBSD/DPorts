@@ -33,7 +33,7 @@
 #
 # Id: addport,v 1.2 2000/04/02 06:21:13 will Exp (original shell script)
 # Id: addport,v 1.5 2000/04/22 22:19:43 mharo Exp (perl conversion)
-# $FreeBSD: head/Tools/scripts/addport 319388 2013-05-29 19:20:52Z crees $
+# $FreeBSD$
 #
 # MAINTAINER=	crees@FreeBSD.org
 #

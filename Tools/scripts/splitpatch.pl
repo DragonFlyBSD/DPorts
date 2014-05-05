@@ -6,7 +6,7 @@
 # this stuff is worth it, you can buy me a beer in return.   Anton Berezin
 # ----------------------------------------------------------------------------
 #
-# $FreeBSD: head/Tools/scripts/splitpatch.pl 340851 2014-01-23 19:55:14Z mat $
+# $FreeBSD$
 use strict;
 
 # good tests:

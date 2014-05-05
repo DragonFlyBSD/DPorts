@@ -2,7 +2,7 @@
 #
 # MAINTAINER= miwi@FreeBSD.org
 #
-# $FreeBSD: head/Tools/scripts/getpr 340851 2014-01-23 19:55:14Z mat $
+# $FreeBSD$
 #
 
 use strict;

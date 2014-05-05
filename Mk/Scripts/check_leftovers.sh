@@ -1,5 +1,5 @@
 #! /bin/sh
-# $FreeBSD: head/Mk/Scripts/check_leftovers.sh 352936 2014-05-04 03:08:38Z bdrewery $
+# $FreeBSD$
 #
 # MAINTAINER: portmgr@FreeBSD.org
 #
