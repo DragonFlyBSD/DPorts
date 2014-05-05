@@ -1,9 +1,9 @@
-#!/usr/bin/perl
+#!/usr/bin/env perl
 #
 #  Script to populate a Qmail ~alias directory with entries from
 #  an [SZ]mail{er} or sendmail-like aliases file
 #
-# $FreeBSD: head/mail/qmail/files/mkaliasdir 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/mail/qmail/files/mkaliasdir 351447 2014-04-17 05:16:47Z bdrewery $
 #
 #  Dan Cross <tenser@spitfire.ecsel.psu.edu>
 #
