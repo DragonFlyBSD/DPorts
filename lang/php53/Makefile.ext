@@ -3,8 +3,8 @@ COMMENT=	The ${PHP_MODNAME} shared extension for php
 USE_PHP=	yes
 USE_PHPEXT=	yes
 PHP_MODNAME=	${PKGNAMESUFFIX:S/-//}
-DEFAULT_PHP_VER=53
-IGNORE_WITH_PHP=52 5
+PHP_DEFAULT=	53
+IGNORE_WITH_PHP=52 5 55
 
 EXTSUBDIR=	${DISTNAME}/ext/${PHP_MODNAME}
 WRKSRC=		${WRKDIR}/${EXTSUBDIR}
@@ -87,9 +87,9 @@ USE_OPENSSL=	yes
 .endif
 
 .if ${PHP_MODNAME} == "gd"
-LIB_DEPENDS=	libfreetype.so.9:${PORTSDIR}/print/freetype2 \
+LIB_DEPENDS=	libfreetype.so:${PORTSDIR}/print/freetype2 \
 		libpng15.so:${PORTSDIR}/graphics/png \
-		libjpeg.so.11:${PORTSDIR}/graphics/jpeg
+		libjpeg.so:${PORTSDIR}/graphics/jpeg
 
 CONFIGURE_ARGS+=--with-gd \
 		--with-freetype-dir=${LOCALBASE} \
