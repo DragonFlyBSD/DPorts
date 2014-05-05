@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	squirrelmail
-PORTVERSION=	20131229
-PORTREVISION=	1
+PORTVERSION=	20140420
 CATEGORIES=	mail www
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 MASTER_SITE_SUBDIR=	adamw/squirrelmail
@@ -22,8 +21,7 @@ LICENSE=	GPLv2
 USE_PHP=	session mhash gettext mbstring pcre openssl xml
 WANT_PHP_WEB=	yes
 
-USE_BZIP2=	yes
-USES=		gettext
+USES=		gettext tar:bzip2
 
 WRKSRC=		${WRKDIR}/${PORTNAME}.stable/${PORTNAME}
 
@@ -85,7 +83,7 @@ do-build:
 
 	@${ECHO} "left_refresh=300" >> ${WRKSRC}/data/default_pref
 	@${MV} ${WRKSRC}/config/config_local.php ${WRKSRC}/config/config_local.php.sample
-	@${MV} ${WRKSRC}/data/default_pref ${WRKSRC}/data/default_pref-dist
+	@${MV} ${WRKSRC}/data/default_pref ${WRKSRC}/data/default_pref.sample
 	@${MKDIR} ${WRKSRC}/attach
 	@${CP} -p ${WRKSRC}/data/.htaccess ${WRKSRC}/attach/.htaccess
 
@@ -99,13 +97,11 @@ do-install:
 	@${MKDIR} ${STAGEDIR}${SQUIRRELDIR}
 	${INSTALL_DATA} ${WRKSRC}/index.php ${STAGEDIR}${SQUIRRELDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/configure ${STAGEDIR}${SQUIRRELDIR}
-	cd ${WRKSRC} && \
+	(cd ${WRKSRC} && \
 		${FIND} attach class config data functions help images include locale plugins po scripts src themes \
-		| ${CPIO} -pdmu --quiet ${STAGEDIR}${SQUIRRELDIR}
-	${CHMOD} 730 ${STAGEDIR}${SQUIRRELDIR}/attach
-	${CHMOD} 750 ${STAGEDIR}${SQUIRRELDIR}/data
+		| ${CPIO} -pdmu --quiet ${STAGEDIR}${SQUIRRELDIR})
 
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
-	cd ${WRKSRC}/doc && ${FIND} . | ${CPIO} -pdmu --quiet ${STAGEDIR}${DOCSDIR}
+	(cd ${WRKSRC}/doc && ${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR})
 
 .include <bsd.port.mk>
