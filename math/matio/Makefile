@@ -3,6 +3,7 @@
 
 PORTNAME=	matio
 PORTVERSION=	1.5.2
+PORTREVISION=	2
 CATEGORIES=	math
 MASTER_SITES=	SF
 
@@ -12,7 +13,7 @@ COMMENT=	Library for reading and writing Matlab MAT files
 LICENSE=	BSD2CLAUSE
 
 GNU_CONFIGURE=	yes
-USES=		libtool pathfix
+USES=		libtool:keepla pathfix
 USE_LDCONFIG=	yes
 INSTALL_TARGET=	install-strip
 
@@ -20,7 +21,7 @@ OPTIONS_DEFINE=	HDF5
 OPTIONS_DEFAULT=	HDF5
 
 HDF5_DESC=	Support for MAT file version 7.3
-HDF5_LIB_DEPENDS=	libhdf5.so:${PORTSDIR}/science/hdf5-18
+HDF5_LIB_DEPENDS=	libhdf5.so:${PORTSDIR}/science/hdf5
 HDF5_CONFIGURE_ON=	--enable-mat73=yes \
 			--with-hdf5=${LOCALBASE}
 
