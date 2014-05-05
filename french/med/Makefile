@@ -3,6 +3,7 @@
 
 PORTNAME=	med
 DISTVERSION=	3.0.7
+PORTREVISION=	2
 CATEGORIES=	french science
 
 MAINTAINER=	thierry@FreeBSD.org
@@ -10,13 +11,13 @@ COMMENT=	Modelisation et Echanges de Donnees
 
 LICENSE=	GPLv3
 
-LIB_DEPENDS=	libhdf5.so.7:${PORTSDIR}/science/hdf5-18
+LIB_DEPENDS=	libhdf5.so:${PORTSDIR}/science/hdf5
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
-USES=		fortran gmake libtool tk
+USES=		fortran gmake libtool:keepla tk
 CONFIGURE_ARGS=	--disable-python --with-hdf5=${LOCALBASE}
 CONFIGURE_ENV=	WISH=${WISH}
 GNU_CONFIGURE=	yes
