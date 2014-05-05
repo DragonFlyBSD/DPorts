@@ -1,4 +1,3 @@
-@comment $FreeBSD: head/japanese/groff/pkg-plist 343288 2014-02-07 19:06:19Z hrs $
 bin/addftinfo
 bin/afmtodit
 bin/eqn
