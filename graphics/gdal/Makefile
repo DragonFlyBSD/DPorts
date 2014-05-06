@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	gdal
-PORTVERSION=	1.10.1
-PORTREVISION=	4
+PORTVERSION=	1.11.0
+PORTREVISION=	3
 CATEGORIES=	graphics geography
 MASTER_SITES=	http://download.osgeo.org/gdal/${PORTVERSION}/ \
 		ftp://ftp.remotesensing.org/pub/gdal/${PORTVERSION}/ \
@@ -32,6 +32,8 @@ MAKEFILE=	GNUmakefile
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 USES=		gmake
+
+PORTDATA=	*
 
 SLAVEDIRS=	graphics/p5-Geo-GDAL graphics/php-gdal graphics/py-gdal graphics/ruby-gdal
 
@@ -67,7 +69,7 @@ GTA_CONFIGURE_ON=	--with-gta=${LOCALBASE}
 GTA_LIB_DEPENDS=	libgta.so:${PORTSDIR}/devel/libgta
 HDF5_CONFIGURE_OFF=	--with-hdf5=no
 HDF5_CONFIGURE_ON=	--with-hdf5=${LOCALBASE}
-HDF5_LIB_DEPENDS=	libhdf5.so.7:${PORTSDIR}/science/hdf5-18
+HDF5_LIB_DEPENDS=	libhdf5.so:${PORTSDIR}/science/hdf5
 ICONV_CONFIGURE_OFF=	--with-libiconv-prefix=no
 ICONV_CONFIGURE_ON=	${ICONV_CONFIGURE_ARG}
 ICONV_LDFLAGS=		-L${ICONV_PREFIX}/lib ${ICONV_LIB}
@@ -89,7 +91,7 @@ MYSQL_CONFIGURE_ON=	--with-mysql=${LOCALBASE}/bin/mysql_config
 MYSQL_USE=		MYSQL=yes
 NETCDF_CONFIGURE_OFF=	--with-netcdf=no
 NETCDF_CONFIGURE_ON=	--with-netcdf=${LOCALBASE}
-NETCDF_LIB_DEPENDS=	libnetcdf.so.7:${PORTSDIR}/science/netcdf4
+NETCDF_LIB_DEPENDS=	libnetcdf.so:${PORTSDIR}/science/netcdf
 ODBC_CONFIGURE_OFF=	--with-odbc=no
 ODBC_CONFIGURE_ON=	--with-odbc=${LOCALBASE}
 ODBC_LIB_DEPENDS=	libodbc.so:${PORTSDIR}/databases/unixODBC
@@ -126,10 +128,11 @@ XERCES_LIB_DEPENDS=	libxerces-c.so:${PORTSDIR}/textproc/xerces-c3
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-lpthread|-pthread|g' ${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|$$(INST_LIB)/pkgconfig|${PREFIX}/libdata/pkgconfig|' ${WRKSRC}/GNUmakefile
 
 post-install:
 	${TOUCH} ${STAGEDIR}${PREFIX}/lib/gdalplugins/.keepme
 	${INSTALL_DATA} ${WRKSRC}/GDALmake.opt ${STAGEDIR}${DATADIR}/
-	-${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/* ${STAGEDIR}${PREFIX}/lib/libgdal.so.18
+	-${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/* ${STAGEDIR}${PREFIX}/lib/libgdal.so.19
 
 .include <bsd.port.mk>
