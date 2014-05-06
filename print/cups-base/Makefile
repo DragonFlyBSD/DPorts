@@ -2,9 +2,9 @@
 # $FreeBSD$
 
 PORTNAME=	cups
-PORTVERSION=	1.7.1
+PORTVERSION=	1.7.2
 DISTVERSIONSUFFIX=	-source
-PORTREVISION=	1
+#PORTREVISION=	defined further
 CATEGORIES=	print
 MASTER_SITES=	http://www.cups.org/software/${DISTVERSION}/ \
 		EASYSW/${PORTNAME}/${DISTVERSION}
@@ -33,7 +33,6 @@ CONFIGURE_ARGS+=	--localstatedir=/var			\
 			--with-cups-group=${GROUPS}		\
 			--with-system-groups=${CUPSSYSGRP}	\
 			--with-docdir=${DOCSDIR}		\
-			--with-icondir=${PREFIX}/share/icons	\
 			--with-menudir=${DESKTOPDIR}		\
 			--with-domainsocket=${CUPS_SOCKET}	\
 			--with-cachedir=${CUPS_CACHEDIR}	\
@@ -50,8 +49,6 @@ CUPSSYSGRP=	wheel
 GROUPS=	cups
 USERS=		cups
 
-USES+=		compiler
-
 # UNIQUENAME must be set before bsd.port.pre.mk so OPTIONSFILE can be included
 .if defined(CUPS_CLIENT)
 PORTREVISION=	0
@@ -64,14 +61,14 @@ CUPS_SUFFIX=	-image
 LICENSE=	LGPL21
 OPTIONS_DEFINE=	GNUTLS
 .else
-INSTALLS_ICONS=	yes
 PORTREVISION=	0
 CUPS_SUFFIX=	-base
-OPTIONS_DEFINE=	GNUTLS LIBPAPER PHP PYTHON PAM DBUS LIBUSB XDG_OPEN AVAHI MDNSRESPONDER
-OPTIONS_DEFAULT=	LIBPAPER
+OPTIONS_DEFINE=	GNUTLS LIBPAPER PHP PYTHON PAM DBUS LIBUSB XDG_OPEN AVAHI MDNSRESPONDER ICONS
+OPTIONS_DEFAULT=	LIBPAPER MDNSRESPONDER ICONS
 NO_OPTIONS_SORT=	yes
 .endif
 
+ICONS_DESC=		Desktop icons
 LIBUSB_DESC=		USB support
 XDG_OPEN_DESC=		Build with XDG_OPEN as browser
 
@@ -201,6 +198,15 @@ CONFIGURE_ARGS+=	--enable-libusb
 .else
 CONFIGURE_ARGS+=	--disable-libusb
 .endif
+
+.if !defined(CUPS_CLIENT) && !defined(CUPS_IMAGE) && ${PORT_OPTIONS:MICONS}
+INSTALLS_ICONS=	yes
+CONFIGURE_ARGS+=	--with-icondir=${PREFIX}/share/icons
+PLIST_SUB+=		WITH_ICONS=""
+.else
+PLIST_SUB+=		WITH_ICONS="@comment "
+.endif
+
 #CONFIGURE_ARGS+=	LIBS="-lssp_nonshared"
 
 .if ! defined(CUPS_CLIENT) && ! defined(CUPS_IMAGE)
@@ -212,7 +218,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|@PIEFLAGS@||' ${WRKSRC}/Makedefs.in
 .endif
 .if ${PORT_OPTIONS:MMDNSRESPONDER}
-	@${REINPLACE_CMD} -e 's|Darwin|FreeBSD|' \
+	@${REINPLACE_CMD} -e 's|Darwin|${OPSYS}|' \
 		${WRKSRC}/backend/Makefile
 .endif
 .if  ${PORT_OPTIONS:MXDG_OPEN}
@@ -303,13 +309,4 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/ulpt-cupsd.sh ${STAGEDIR}${PREFIX}/sbin/
 .endif
 
-# This is to workaround a CUPS bug. Should be fixed by 1.7.3.
-# pfg@ filed a bug report upstream: https://www.cups.org/str.php?L4397
-#
-.include <bsd.port.pre.mk>
-.if (defined(CUPS_CLIENT) || defined(CUPS_IMAGE)) && ${OPSYS} == "FreeBSD" && \
-	${OSVERSION} > 1000000 && ${COMPILER_TYPE} == clang
-CFLAGS+=	-fno-blocks
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
