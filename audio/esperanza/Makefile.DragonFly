@@ -1,2 +1,0 @@
-post-extract:
-	echo "QMAKE_LFLAGS= -lX11" >> /${WRKSRC}/src/ui/ui.pro
