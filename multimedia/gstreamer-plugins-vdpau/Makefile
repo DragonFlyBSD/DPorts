@@ -1,7 +1,7 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
 
-PORTREVISION=	0
+PORTREVISION=	2
 CATEGORIES=	multimedia
 
 COMMENT=	Gstreamer nvidia vdpau plugin
