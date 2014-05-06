@@ -98,8 +98,8 @@ post-build:
 	    | ${GREP} -v 'not a dynamic executable' \
 	    | ${GREP} '=>' \
 	    | ${AWK}  '{print $$3;}' \
-	    | ${EGREP} -v '^/usr/lib/libgcc(_s)?\.so\.' \
-	    | ${GREP} -v '^/usr/lib/libc\.so\.' || :)"; \
+	    | ${EGREP} -v 'lib/libgcc(_s)?\.so\.' \
+	    | ${GREP} -v 'lib/libc\.so\.' || :)"; \
 	if test "x$$a" = "x" ; then echo 'PASS' ; else \
 	    echo 'FAIL' ; echo '===>  e2fsck depends on:' ; echo "$$a" ; exit 1 ; fi
 # Update translation binary files
