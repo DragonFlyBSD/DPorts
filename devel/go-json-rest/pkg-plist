@@ -1,4 +1,3 @@
-@comment $FreeBSD: head/devel/go-json-rest/pkg-plist 347998 2014-03-12 19:33:50Z zi $
 %%GO_LIBDIR%%/github.com/ant0ine/go-json-rest.a
 %%GO_LIBDIR%%/%%GO_PKGNAME%%/trie.a
 %%GO_SRCDIR%%/%%GO_PKGNAME%%/LICENSE
