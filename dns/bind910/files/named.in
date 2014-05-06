@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/dns/bind910/files/named.in 350848 2014-04-10 20:43:50Z mat $
+# $FreeBSD: head/dns/bind910/files/named.in 352512 2014-04-28 15:42:06Z mat $
 #
 
 # PROVIDE: named
@@ -19,12 +19,12 @@ extra_commands=reload
 
 start_precmd=named_prestart
 start_postcmd=named_poststart
-reload_cmd="${command%/named}/rndc reload"
+reload_cmd=named_reload
 stop_cmd=named_stop
 
 named_enable=${named_enable:-"NO"}		# Run named, the DNS server (or NO).
 named_program=${named_program:-"%%PREFIX%%/sbin/named"}	# Path to named, if you want a different one.
-named_conf=${named_conf:-"%%BIND_DESTETC%%/named.conf"}	# Path to the configuration file
+named_conf=${named_conf:-"%%ETCDIR%%/named.conf"}	# Path to the configuration file
 named_flags=${named_flags:-""}			# Use this for flags OTHER than -u and -c
 named_uid=${named_uid:-"bind"}			# User to run named as
 named_wait=${named_wait:-"NO"}			# Wait for working name service before exiting
@@ -42,6 +42,13 @@ named_poststart()
 			sleep 1
 		done
 	fi
+}
+
+named_reload()
+{
+	# This is a one line function, but ${command} is not defined early
+	# enough to be there when the reload_cmd variable is defined up there.
+	${command%/named}/rndc reload
 }
 
 find_pidfile()
