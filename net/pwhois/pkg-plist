@@ -1,4 +1,3 @@
-@comment $FreeBSD: head/net/pwhois/pkg-plist 348718 2014-03-20 20:07:10Z zi $
 etc/periodic/daily/512.pwhois-updatedb
 sbin/pwhois-updatedb
 sbin/pwhoisd
