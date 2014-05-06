@@ -11,7 +11,6 @@ DIST_SUBDIR=	stardict
 MAINTAINER=	makc@FreeBSD.org
 COMMENT=	Dictionaries from www.mova.org for StarDict
 
-.MAKE.FreeBSD_UL=	yes
 NO_BUILD=	yes
 USE_BZIP2=	yes
 
