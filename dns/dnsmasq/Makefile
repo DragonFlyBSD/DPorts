@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	dnsmasq
-DISTVERSION=	2.69
+DISTVERSION=	2.70
 PORTEPOCH=	1
 CATEGORIES=	dns ipv6
 MASTER_SITES=	http://www.thekelleys.org.uk/dnsmasq/ \
@@ -71,8 +71,8 @@ LDFLAGS+=	`pkg-config --libs dbus-1`
 .if ${PORT_OPTIONS:MLUA}
 CPPFLAGS+=	-I${LUA_INCDIR}
 CFLAGS+=	-DHAVE_LUASCRIPT
-LDFLAGS+=	-L${LUA_LIBDIR} -llua
-USE_LUA=	5.1
+LDFLAGS+=	-L${LUA_LIBDIR} -llua-${LUA_VER}
+USES+=		lua
 .endif
 
 .if ${PORT_OPTIONS:MDNSSEC}
@@ -88,7 +88,7 @@ USE_RC_SUBR=	dnsmasq
 LDFLAGS+=	-L${LOCALBASE}/lib ${_intllibs} ${ICONV_LIB}
 
 post-patch:
-	${REINPLACE_CMD} -e "s/lua5\.1/lua-5.1/" ${WRKSRC}/Makefile
+	${REINPLACE_CMD} -e "s/lua5\.1/lua-${LUA_VER}/" ${WRKSRC}/Makefile
 
 pre-configure: pretty-print-config
 	@${PRINTF} "dns/libidn config: " ; ${MAKE} -C ${PORTSDIR}/dns/libidn pretty-print-config
