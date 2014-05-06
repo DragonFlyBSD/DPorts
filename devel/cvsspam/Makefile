@@ -3,6 +3,7 @@
 
 PORTNAME=	cvsspam
 PORTVERSION=	0.2.12
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.badgers-in-foil.co.uk/projects/cvsspam/releases/ \
 		CRITICAL
@@ -34,11 +35,7 @@ do-install:
 		${STAGEDIR}${PREFIX}/libexec/${PORTNAME}
 .endfor
 	${INSTALL_DATA} ${WRKSRC}/cvsspam.conf \
-		${STAGEDIR}${PREFIX}/etc/cvsspam.conf.default
-.if !exists(${STAGEDIR}${PREFIX}/etc/cvsspam.conf)
-	${INSTALL_DATA} ${WRKSRC}/cvsspam.conf \
-		${STAGEDIR}${PREFIX}/etc/cvsspam.conf
-.endif
+		${STAGEDIR}${PREFIX}/etc/cvsspam.conf.sample
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for f in ${PORTDOCS}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${STAGEDIR}${DOCSDIR}
