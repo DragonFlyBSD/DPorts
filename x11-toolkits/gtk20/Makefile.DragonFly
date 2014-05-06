@@ -1,7 +1,7 @@
 USE_XORG+=	pixman
 
-LIB_DEPENDS+=	png15:${PORTSDIR}/graphics/png
-LIB_DEPENDS+=	freetype.9:${PORTSDIR}/print/freetype2
-LIB_DEPENDS+=	fontconfig:${PORTSDIR}/x11-fonts/fontconfig
-LIB_DEPENDS+=	cairo:${PORTSDIR}/graphics/cairo
-LIB_DEPENDS+=	expat:${PORTSDIR}/textproc/expat2
+LIB_DEPENDS+=	libpng15.so:${PORTSDIR}/graphics/png
+LIB_DEPENDS+=	libfreetype.so:${PORTSDIR}/print/freetype2
+LIB_DEPENDS+=	libfontconfig.so:${PORTSDIR}/x11-fonts/fontconfig
+LIB_DEPENDS+=	libcairo.so:${PORTSDIR}/graphics/cairo
+LIB_DEPENDS+=	libexpat.so:${PORTSDIR}/textproc/expat2
