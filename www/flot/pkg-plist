@@ -2,8 +2,14 @@
 %%WWWDIR%%/excanvas.min.js
 %%WWWDIR%%/jquery.colorhelpers.js
 %%WWWDIR%%/jquery.colorhelpers.min.js
+%%WWWDIR%%/jquery.flot.canvas.js
+%%WWWDIR%%/jquery.flot.canvas.min.js
+%%WWWDIR%%/jquery.flot.categories.js
+%%WWWDIR%%/jquery.flot.categories.min.js
 %%WWWDIR%%/jquery.flot.crosshair.js
 %%WWWDIR%%/jquery.flot.crosshair.min.js
+%%WWWDIR%%/jquery.flot.errorbars.js
+%%WWWDIR%%/jquery.flot.errorbars.min.js
 %%WWWDIR%%/jquery.flot.fillbetween.js
 %%WWWDIR%%/jquery.flot.fillbetween.min.js
 %%WWWDIR%%/jquery.flot.image.js
@@ -24,6 +30,8 @@
 %%WWWDIR%%/jquery.flot.symbol.min.js
 %%WWWDIR%%/jquery.flot.threshold.js
 %%WWWDIR%%/jquery.flot.threshold.min.js
-%%WWWDIR%%/jquery.js
-%%WWWDIR%%/jquery.min.js
+%%WWWDIR%%/jquery.flot.time.js
+%%WWWDIR%%/jquery.flot.time.min.js
+%%JQUERY%%%%WWWDIR%%/jquery.js
+%%JQUERY%%%%WWWDIR%%/jquery.min.js
 @dirrmtry %%WWWDIR%%
