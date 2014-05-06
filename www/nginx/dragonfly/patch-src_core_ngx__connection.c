@@ -1,6 +1,6 @@
---- src/core/ngx_connection.c.orig	2013-07-17 12:51:21.000000000 +0000
+--- src/core/ngx_connection.c.orig	2014-04-24 12:52:25.000000000 +0000
 +++ src/core/ngx_connection.c
-@@ -268,18 +268,26 @@ ngx_set_inherited_sockets(ngx_cycle_t *c
+@@ -304,18 +304,26 @@ ngx_set_inherited_sockets(ngx_cycle_t *c
  ngx_int_t
  ngx_open_listening_sockets(ngx_cycle_t *cycle)
  {
@@ -28,7 +28,7 @@
      log = cycle->log;
  
      /* TODO: configurable try number */
-@@ -317,21 +325,43 @@ ngx_open_listening_sockets(ngx_cycle_t *
+@@ -353,21 +361,43 @@ ngx_open_listening_sockets(ngx_cycle_t *
                  return NGX_ERROR;
              }
  
@@ -83,10 +83,11 @@
              }
  
  #if (NGX_HAVE_INET6 && defined IPV6_V6ONLY)
-@@ -461,6 +491,38 @@ ngx_open_listening_sockets(ngx_cycle_t *
+@@ -496,6 +526,38 @@ ngx_open_listening_sockets(ngx_cycle_t *
+ }
  
  
- void
++void
 +ngx_shutdown_listening_sockets(ngx_cycle_t *cycle)
 +{
 +    ngx_uint_t        i;
@@ -118,48 +119,6 @@
 +}
 +
 +
-+void
+ void
  ngx_configure_listening_sockets(ngx_cycle_t *cycle)
  {
-     int                        keepalive;
-@@ -517,24 +579,36 @@ ngx_configure_listening_sockets(ngx_cycl
- #if (NGX_HAVE_KEEPALIVE_TUNABLE)
- 
-         if (ls[i].keepidle) {
-+            int val = ls[i].keepidle;
-+
-+#ifdef __DragonFly__
-+            val *= 1000;
-+#endif
-+
-             if (setsockopt(ls[i].fd, IPPROTO_TCP, TCP_KEEPIDLE,
--                           (const void *) &ls[i].keepidle, sizeof(int))
-+                           (const void *) &val, sizeof(int))
-                 == -1)
-             {
-                 ngx_log_error(NGX_LOG_ALERT, cycle->log, ngx_socket_errno,
-                               "setsockopt(TCP_KEEPIDLE, %d) %V failed, ignored",
--                              ls[i].keepidle, &ls[i].addr_text);
-+                              val, &ls[i].addr_text);
-             }
-         }
- 
-         if (ls[i].keepintvl) {
-+            int val = ls[i].keepintvl;
-+
-+#ifdef __DragonFly__
-+            val *= 1000; 
-+#endif
-+
-             if (setsockopt(ls[i].fd, IPPROTO_TCP, TCP_KEEPINTVL,
--                           (const void *) &ls[i].keepintvl, sizeof(int))
-+                           (const void *) &val, sizeof(int))
-                 == -1)
-             {
-                 ngx_log_error(NGX_LOG_ALERT, cycle->log, ngx_socket_errno,
-                              "setsockopt(TCP_KEEPINTVL, %d) %V failed, ignored",
--                             ls[i].keepintvl, &ls[i].addr_text);
-+                             val, &ls[i].addr_text);
-             }
-         }
- 

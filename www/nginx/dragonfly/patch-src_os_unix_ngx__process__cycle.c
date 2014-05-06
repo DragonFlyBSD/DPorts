@@ -1,4 +1,4 @@
---- src/os/unix/ngx_process_cycle.c.orig	2013-07-17 12:51:22.000000000 +0000
+--- src/os/unix/ngx_process_cycle.c.orig	2014-04-24 12:52:26.000000000 +0000
 +++ src/os/unix/ngx_process_cycle.c
 @@ -212,6 +212,9 @@ ngx_master_process_cycle(ngx_cycle_t *cy
  
@@ -10,7 +10,7 @@
                  if (ngx_close_socket(ls[n].fd) == -1) {
                      ngx_log_error(NGX_LOG_EMERG, cycle->log, ngx_socket_errno,
                                    ngx_close_socket_n " %V failed",
-@@ -350,18 +353,24 @@ ngx_single_process_cycle(ngx_cycle_t *cy
+@@ -350,8 +353,9 @@ ngx_single_process_cycle(ngx_cycle_t *cy
  static void
  ngx_start_worker_processes(ngx_cycle_t *cycle, ngx_int_t n, ngx_int_t type)
  {
@@ -21,6 +21,8 @@
 +    ngx_core_conf_t *ccf;
  
      ngx_log_error(NGX_LOG_NOTICE, cycle->log, 0, "start worker processes");
+ 
+@@ -359,11 +363,16 @@ ngx_start_worker_processes(ngx_cycle_t *
  
      ch.command = NGX_CMD_OPEN_CHANNEL;
  
@@ -37,7 +39,7 @@
          ch.pid = ngx_processes[ngx_process_slot].pid;
          ch.slot = ngx_process_slot;
          ch.fd = ngx_processes[ngx_process_slot].channel[0];
-@@ -844,13 +853,18 @@ ngx_worker_process_init(ngx_cycle_t *cyc
+@@ -853,13 +862,18 @@ ngx_worker_process_init(ngx_cycle_t *cyc
      ngx_core_conf_t  *ccf;
      ngx_listening_t  *ls;
  
