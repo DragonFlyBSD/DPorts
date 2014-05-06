@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/japanese/tiarra/files/tiarra.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/japanese/tiarra/files/tiarra.in 351488 2014-04-17 17:09:54Z ume $
 #
 
 # PROVIDE: tiarra
@@ -25,5 +25,6 @@ command_interpreter="/usr/bin/perl"
 required_dirs="${tiarra_chdir}"
 required_files="${tiarra_chdir}/${name}.conf"
 extra_commands="reload"
+sig_stop="${tiarra_sig_stop:-TERM}"
 
 run_rc_command "$1"
