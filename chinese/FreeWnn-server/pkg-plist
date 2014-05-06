@@ -1,4 +1,3 @@
-@comment $FreeBSD: head/chinese/FreeWnn-server/pkg-plist 347859 2014-03-11 06:49:56Z hrs $
 bin/cWnn4/catod
 bin/cWnn4/catof
 bin/cWnn4/cdtoa
