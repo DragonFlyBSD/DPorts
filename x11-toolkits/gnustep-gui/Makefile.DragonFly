@@ -1,4 +1,4 @@
-LIB_DEPENDS+=	xml2.5:${PORTSDIR}/textproc/libxml2 \
-		xslt.2:${PORTSDIR}/textproc/libxslt
+LIB_DEPENDS+=	libxml2.so:${PORTSDIR}/textproc/libxml2 \
+		libxslt.so:${PORTSDIR}/textproc/libxslt
 
 ADDITIONAL_LIB_DIRS+= -L${LOCALBASE}/libs
