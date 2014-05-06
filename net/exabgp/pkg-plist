@@ -1,4 +1,3 @@
-@comment $FreeBSD: head/net/exabgp/pkg-plist 348540 2014-03-18 13:24:51Z zi $
 @unexec if cmp -s %D/etc/exabgp/exabgp.env %D/etc/exabgp/exabgp.env.sample ; then rm -f %D/etc/exabgp/exabgp.env ; fi
 etc/exabgp/exabgp.env.sample
 @exec if [ ! -f %D/etc/exabgp/exabgp.env ]; then cp -p %D/%F %B/exabgp.env; fi
