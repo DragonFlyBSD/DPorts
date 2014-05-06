@@ -3,7 +3,7 @@
 
 PORTNAME=	libopensync
 PORTVERSION=	0.39
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://www.opensync.org/download/releases/${PORTVERSION}/
 
@@ -16,8 +16,7 @@ LIB_DEPENDS=	libexslt.so:${PORTSDIR}/textproc/libxslt
 CONFLICTS=	libopensync-0.22*
 
 USE_SQLITE=	3
-USE_BZIP2=	yes
-USES=		cmake pkgconfig
+USES=		cmake pkgconfig tar:bzip2
 CMAKE_ARGS+=	-Wno-dev
 USE_GNOME=	glib20 libxml2
 USE_PYTHON=	yes
