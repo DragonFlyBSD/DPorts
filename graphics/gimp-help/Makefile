@@ -12,8 +12,6 @@ COMMENT=	The meta port for GIMP User Manual
 
 LICENSE=	GFDL
 
-.MAKE.FreeBSD_UL=	yes
-
 NO_BUILD=	yes
 NO_INSTALL=	yes
 NO_MTREE=	yes
