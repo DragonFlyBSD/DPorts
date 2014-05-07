@@ -4,29 +4,29 @@
 
 PORTNAME=	gtksourceview
 PORTVERSION=	3.4.2
-PORTREVISION?=	0
+PORTREVISION?=	3
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX=	3
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	A text widget that adds syntax highlighting to the GtkTextView widget
+COMMENT=	Widget that adds syntax highlighting to GtkTextView
 
-USE_XZ=		yes
+USES=		tar:xz
 
 .if !defined(REFERENCE_PORT)
 
-USE_AUTOTOOLS=	libtool
+USES+=		gettext gmake libtool:keepla pathfix pkgconfig
 USE_LDCONFIG=	yes
-USES=		pathfix gettext gmake pkgconfig
-USE_GNOME=	gnomeprefix gtk30 libxml2 intlhack ltverhack referencehack
+USE_GNOME=	gnomeprefix gtk30 libxml2 intlhack referencehack
+GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-compile-warnings=no --enable-glade-catalog=no \
 		--enable-introspection
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+INSTALL_TARGET=	install-strip
 
-NO_STAGE=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|--warn-all||g' \
 		${WRKSRC}/gtksourceview/Makefile.in
