@@ -4,7 +4,7 @@
 
 PORTNAME=	gedit
 PORTVERSION=	2.30.4
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	editors gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -17,8 +17,9 @@ LIB_DEPENDS=	libenchant.so:${PORTSDIR}/textproc/enchant \
 		libsoup-2.4.so:${PORTSDIR}/devel/libsoup
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
 
-USE_XORG=	sm
-USES=		desktop-file-utils gettext gmake libtool pathfix pkgconfig tar:bzip2
+USES=		desktop-file-utils gettext gmake libtool:keepla  pathfix \
+		pkgconfig tar:bzip2
+USE_XORG=	ice sm
 INSTALLS_OMF=	yes
 INSTALL_TARGET=	install-strip
 USE_LDCONFIG=	yes
@@ -43,5 +44,9 @@ PLIST_SUB+=	PYTHON=""
 CONFIGURE_ARGS+=--disable-python
 PLIST_SUB+=	PYTHON="@comment "
 .endif
+
+post-patch:
+	${REINPLACE_CMD} '/EGG_SMCLIENT_LIBS =/s/$$/ -lICE/' \
+		${WRKSRC}/gedit/smclient/Makefile.in
 
 .include <bsd.port.post.mk>
