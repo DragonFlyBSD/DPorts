@@ -3,7 +3,7 @@
 
 PORTNAME=	gps
 PORTVERSION=	5.2.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	http://downloads.dragonlace.net/src/
 DISTNAME=	gps-5.2.1-1-src
@@ -124,7 +124,5 @@ post-install:
 	   -e 's/^/@dirrm /g' >> ${TMPPLIST}
 	@echo "@unexec rmdir %D/share/gps/plug-ins 2>/dev/null || true" >> ${TMPPLIST}
 	@echo "@unexec rmdir %D/share/gps 2>/dev/null || true" >> ${TMPPLIST}
-	@echo "@unexec rmdir %D/share/examples 2>/dev/null || true" >> ${TMPPLIST}
-	@echo "@unexec rmdir %D/share/doc 2>/dev/null || true" >> ${TMPPLIST}
 
 .include <bsd.port.mk>
