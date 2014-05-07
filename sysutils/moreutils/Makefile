@@ -3,6 +3,7 @@
 
 PORTNAME=	moreutils
 PORTVERSION=	0.51
+PORTREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	DEBIAN_POOL
 DISTNAME=	${PORTNAME}_${PORTVERSION}
@@ -23,6 +24,7 @@ USES=		perl5 shebangfix
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 CANNED_MANPAGES=errno.1 \
+		ifdata.1 \
 		ifne.1 \
 		isutf8.1 \
 		lckdo.1 \
@@ -39,6 +41,7 @@ PERL_MANPAGES=	chronic.1 \
 SHEBANG_FILES=	${PERL_MANPAGES:R}
 
 post-patch:
+	@${REINPLACE_CMD} -e 's|__APPLE__|__${OPSYS}__|' ${WRKSRC}/ifdata.c
 	@cd ${FILESDIR}/ && ${CP} ${CANNED_MANPAGES} ${WRKSRC}/
 
 post-build:
