@@ -19,8 +19,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}dbus>0:${PORTSDIR}/devel/py-dbus \
 		${LOCALBASE}/share/xml/docbook/4.5:${PORTSDIR}/textproc/docbook-xml \
 		yelp:${PORTSDIR}/x11/yelp
 
-USE_BZIP2=	yes
-USES=		gettext gmake shebangfix
+USES=		gettext gmake shebangfix tar:bzip2
 SHEBANG_FILES=	scribes.in
 USE_GNOME=	gnomeprefix pygnomeextras pygtksourceview gnomedocutils
 USE_PYTHON=	yes
