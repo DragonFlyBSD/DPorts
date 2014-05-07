@@ -9,7 +9,6 @@ DISTFILES=	# none
 MAINTAINER=	makc@FreeBSD.org
 COMMENT=	Geany plugins (meta port)
 
-.MAKE.FreeBSD_UL=	yes
 NO_BUILD=	yes
 NO_INSTALL=	yes
 NO_MTREE=	yes
