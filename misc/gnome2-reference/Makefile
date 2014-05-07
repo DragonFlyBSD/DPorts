@@ -53,8 +53,6 @@ NO_BUILD=	yes
 NO_INSTALL=	yes
 NO_MTREE=	yes
 
-.MAKE.FreeBSD_UL= yes
-
 REF_LIST_INC=	${.CURDIR}/Makefile.inc
 .include "${REF_LIST_INC}"
 
