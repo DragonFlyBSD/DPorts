@@ -1,0 +1,91 @@
+--- configure.intermediate	2014-05-07 00:59:09.992713000 +0000
++++ configure
+@@ -545,7 +545,8 @@ if test $withsharedlibs = "yes"; then
+       mksharedlib="$flexlink"
+       mkmaindll="$flexlink -maindll"
+       shared_libraries_supported=true;;
+-    *-*-linux-gnu|*-*-linux|*-*-freebsd[3-9]*|*-*-freebsd[1-9][0-9]*|*-*-openbsd*|*-*-netbsd*|*-*-gnu*)
++    *-*-linux-gnu|*-*-linux|*-*-freebsd[3-9]*|*-*-freebsd[1-9][0-9]*| \
++    *-*-dragonfly*|*-*-openbsd*|*-*-netbsd*|*-*-gnu*)
+       sharedcccompopts="-fPIC"
+       mksharedlib="$bytecc $bytecclinkopts $bytecclinkopts -shared"
+       bytecclinkopts="$bytecclinkopts -Wl,-E"
+@@ -650,7 +651,9 @@ if test $withsharedlibs = "yes"; then
+     i686-*-kfreebsd*)             natdynlink=true;;
+     x86_64-*-kfreebsd*)           natdynlink=true;;
+     i[345]86-*-freebsd*)          natdynlink=true;;
++    i[345]86-*-dragonfly*)        natdynlink=true;;
+     x86_64-*-freebsd*)            natdynlink=true;;
++    x86_64-*-dragonfly*)          natdynlink=true;;
+     i[345]86-*-openbsd*)          natdynlink=true;;
+     x86_64-*-openbsd*)            natdynlink=true;;
+     i[345]86-*-netbsd*)           natdynlink=true;;
+@@ -680,6 +683,7 @@ case "$host" in
+   sparc*-*-gnu*)                arch=sparc; system=gnu;;
+   i[3456]86-*-linux*)           arch=i386; system=linux_`sh ./runtest elf.c`;;
+   i[3456]86-*-*bsd*)            arch=i386; system=bsd_`sh ./runtest elf.c`;;
++  i[3456]86-*-dragonfly*)       arch=i386; system=bsd_elf;;
+   i[3456]86-*-nextstep*)        arch=i386; system=nextstep;;
+   i[3456]86-*-solaris*)         if $arch64; then
+                                   arch=amd64; system=solaris
+@@ -715,6 +719,7 @@ case "$host" in
+   x86_64-*-netbsd*)             arch=amd64; system=netbsd;;
+   x86_64-*-openbsd*)            arch=amd64; system=openbsd;;
+   x86_64-*-darwin*)             arch=amd64; system=macosx;;
++  x86_64-*-dragonfly*)          arch=amd64; system=freebsd;;
+ esac
+ 
+ # Some platforms exist both in 32-bit and 64-bit variants, not distinguished
+@@ -805,6 +810,7 @@ case "$arch,$model,$system" in
+   amd64,*,gnu) profiling='prof';;
+   arm,*,linux*) profiling='prof';;
+   *,*,freebsd) profiling='prof';;
++  *,*,dragonfly) profiling='prof';;
+   *) profiling='noprof';;
+ esac
+ 
+@@ -1206,7 +1212,8 @@ if test "$pthread_wanted" = "yes"; then
+   case "$host" in
+     *-*-solaris*)  pthread_link="-lpthread -lposix4"
+                    pthread_caml_link="-cclib -lpthread -cclib -lposix4";;
+-    *-*-freebsd*)  pthread_link="-pthread"
++    *-*-freebsd*|*-*-dragonfly*)
++		   pthread_link="-pthread"
+                    pthread_caml_link="-cclib -pthread";;
+     *-*-openbsd*)  pthread_link="-pthread"
+                    pthread_caml_link="-cclib -pthread";;
+@@ -1220,7 +1227,7 @@ if test "$pthread_wanted" = "yes"; then
+     bytecccompopts="$bytecccompopts -D_REENTRANT"
+     nativecccompopts="$nativecccompopts -D_REENTRANT"
+     case "$host" in
+-      *-*-freebsd*)
++      *-*-freebsd*|*-*-dragonfly*)
+           bytecccompopts="$bytecccompopts -D_THREAD_SAFE"
+           nativecccompopts="$nativecccompopts -D_THREAD_SAFE";;
+       *-*-openbsd*)
+@@ -1515,7 +1522,7 @@ if test $has_tk = true; then
+                    Tcl_DoOneEvent
+   then
+     case "$host" in
+-      *-*-*bsd*) tk_libs="-R/usr/pkg/lib -L/usr/pkg/lib $tk_libs $tk_x11_libs -ltk$tkmaj$tkmin -ltcl$tclmaj$tclmin -lpthread $tkauxlibs";;
++      *-*-*bsd*|*-*-dragonfly*) tk_libs="-R/usr/pkg/lib -L/usr/pkg/lib $tk_libs $tk_x11_libs -ltk$tkmaj$tkmin -ltcl$tclmaj$tclmin -lpthread $tkauxlibs";;
+       *) tk_libs="-L/usr/pkg/lib $tk_libs $tk_x11_libs -ltk$tkmaj$tkmin -ltcl$tclmaj$tclmin -lpthread $tkauxlibs";;
+     esac
+   else
+@@ -1529,14 +1536,14 @@ if test $has_tk = true; then
+     echo "Tcl/Tk libraries found."
+   elif sh ./hasgot -L/sw/lib $tk_libs $tk_x11_libs $tkauxlibs Tk_SetGrid; then
+     case "$host" in
+-      *-*-*bsd*) tk_libs="-R/sw/lib -L/sw/lib $tk_libs";;
++      *-*-*bsd*|*-*-dragonfly*) tk_libs="-R/sw/lib -L/sw/lib $tk_libs";;
+       *) tk_libs="-L/sw/lib $tk_libs";;
+     esac
+     echo "Tcl/Tk libraries found."
+   elif sh ./hasgot -L/usr/pkg/lib $tk_libs $tk_x11_libs $tkauxlibs \
+                    Tk_SetGrid; then
+     case "$host" in
+-      *-*-*bsd*) tk_libs="-R/usr/pkg/lib -L/usr/pkg/lib $tk_libs";;
++      *-*-*bsd*|*-*-dragonfly*) tk_libs="-R/usr/pkg/lib -L/usr/pkg/lib $tk_libs";;
+       *) tk_libs="-L/usr/pkg/lib $tk_libs";;
+     esac
+     echo "Tcl/Tk libraries found."
