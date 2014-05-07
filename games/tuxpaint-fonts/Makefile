@@ -29,9 +29,6 @@ CHINESE_SIMPLIFIED_CODE=	zh_cn
 KOREAN_CODE=			ko
 VIETNAMESE_CODE=		vi
 
-#Bmake compatibility
-.MAKE.FreeBSD_UL= yes
-
 # Generate options menu.
 .for l in ${LANGS}
 OPTIONS_DEFINE+=	${l:tu}
@@ -47,7 +44,6 @@ MASTER_SITES+=	SF/${PORTNAME}/${PORTNAME}-fonts/${${l:tu}_DISTNAME}:${l:tu}
 # Do not use the same OPTIONS directory as "games/tuxpaint".
 LATEST_LINK=	${PORTNAME}${PKGNAMESUFFIX}
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 # Set DISTFILES and PLIST_FILES according to OPTIONS.
@@ -63,16 +59,16 @@ PLIST_DIRS+=	%%DATADIR%%/fonts/locale/${${l:tu}_CODE}_docs
 
 # Install seleted fonts.
 do-install:
-	${MKDIR} ${DATADIR}/fonts/locale
+	@${MKDIR} ${STAGEDIR}${DATADIR}/fonts/locale
 .for l in ${LANGS}
 .	if ${PORT_OPTIONS:M${l:tu}}
 		${INSTALL_DATA} \
 			${WRKSRC}/${PORTNAME}-ttf-${${l:tu}_DISTNAME}/${${l:tu}_CODE}.ttf \
-			${DATADIR}/fonts/locale
-		${MKDIR} ${DATADIR}/fonts/locale/${${l:tu}_CODE}_docs
+			${STAGEDIR}${DATADIR}/fonts/locale
+		@${MKDIR} ${STAGEDIR}${DATADIR}/fonts/locale/${${l:tu}_CODE}_docs
 		${INSTALL_DATA} \
 			${WRKSRC}/${PORTNAME}-ttf-${${l:tu}_DISTNAME}/*.txt \
-			${DATADIR}/fonts/locale/${${l:tu}_CODE}_docs
+			${STAGEDIR}${DATADIR}/fonts/locale/${${l:tu}_CODE}_docs
 .	endif
 .endfor
 
