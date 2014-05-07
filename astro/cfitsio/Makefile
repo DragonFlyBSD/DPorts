@@ -37,7 +37,7 @@ SHLIB_MAJOR_VER=2
 SHLIB_MINOR_VER=${PORTVERSION:S/0$//}
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|$${ZLIB_SOURCES[:=a-z\.]*}||' ${WRKSRC}/Makefile.in
+	@${GREP} -lR "<malloc.\h>" ${WRKSRC} | ${XARGS} ${REINPLACE_CMD} -e 's|<malloc\.h>|<stdlib.h>|g'
 
 do-install:
 	cd ${WRKSRC}/ && ${INSTALL_DATA} drvrsmem.h fitsio.h fitsio2.h longnam.h ${STAGEDIR}${PREFIX}/include/
