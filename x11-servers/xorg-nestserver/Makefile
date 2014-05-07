@@ -22,6 +22,7 @@ CONFIGURE_ARGS=	--disable-dmx --disable-xvfb \
 SLAVE_PORT=	yes
 PLIST_FILES=	bin/Xnest man/man1/Xnest.1.gz
 
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/hw/xnest/Xnest ${STAGEDIR}${PREFIX}/bin/
 .if defined(WITH_NEW_XORG)
