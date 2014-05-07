@@ -1,0 +1,3 @@
+LIB_DEPENDS+= libfontconfig.so:${PORTSDIR}/x11-fonts/fontconfig
+LDFLAGS+= -lfontconfig -lXext
+USES_XORG+= xext
