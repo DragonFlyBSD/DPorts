@@ -1,0 +1,15 @@
+--- configure
++++ configure
+@@ -17018,9 +17018,11 @@
+ metadatadir=$datadir/compiz
+ 
+ 
+-COMPIZ_REQUIRES="xcomposite \
++COMPIZ_REQUIRES="x11        \
++		 xcomposite \
+ 		 xfixes	    \
+ 		 xdamage    \
++		 xext       \
+ 		 xrandr	    \
+ 		 xinerama   \
+ 		 ice	    \
