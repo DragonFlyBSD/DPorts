@@ -3,6 +3,8 @@ OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NALSA} PULSEAUDIO
 WITHOUT_DEBUG=yes
 .endif
 
+MOZ_OPTIONS+= --disable-webrtc
+
 PULSEAUDIO_LIB_DEPENDS= libpulse.so:${PORTSDIR}/audio/pulseaudio
 
 post-extract:

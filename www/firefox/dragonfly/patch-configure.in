@@ -1,6 +1,6 @@
---- configure.in.orig	2013-11-04 22:30:05.000000000 +0000
+--- configure.in.orig	2014-05-07 10:12:04.069959000 +0000
 +++ configure.in
-@@ -2891,7 +2891,7 @@ dnl Checks for header files.
+@@ -2585,7 +2585,7 @@ dnl Checks for header files.
  dnl ========================================================
  AC_HEADER_DIRENT
  case "$target_os" in
@@ -9,7 +9,7 @@
  # for stuff like -lXshm
      CPPFLAGS="${CPPFLAGS} ${X_CFLAGS}"
      ;;
-@@ -3180,7 +3180,7 @@ then
+@@ -2874,7 +2874,7 @@ then
      fi
  
  	case "$target" in
@@ -18,7 +18,7 @@
  			AC_DEFINE(_REENTRANT)
  			AC_DEFINE(_THREAD_SAFE)
  			dnl -pthread links in -lpthread, so don't specify it explicitly.
-@@ -7257,7 +7257,7 @@ else
+@@ -7012,7 +7012,7 @@ else
    *-darwin*)
      AC_DEFINE(MOZ_MEMORY_DARWIN)
      ;;
@@ -27,13 +27,3 @@
      AC_DEFINE(MOZ_MEMORY_BSD)
      ;;
    *-android*|*-linuxandroid*)
-@@ -9149,6 +9149,9 @@ if test -n "$MOZ_LIBV4L2_LIBS"; then
-    EXTRA_GYP_DEFINES="$EXTRA_GYP_DEFINES -D use_libv4l2=1"
- fi
- 
-+# internal video_capture and audio isn't getting detected so disable for now
-+EXTRA_GYP_DEFINES="$EXTRA_GYP_DEFINES -D include_internal_video_capture=0 -D include_internal_audio_device=0"
-+
- if test -n "$MOZ_WEBRTC"; then
-    AC_MSG_RESULT("generating WebRTC Makefiles...")
- 
