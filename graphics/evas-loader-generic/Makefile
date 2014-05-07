@@ -16,9 +16,6 @@ LICENSE=	BSD
 
 EVAS_GENERIC_LOADERS=	gst pdf ps raw svg xcf
 
-#bmake compatibility
-.MAKE.FreeBSD_UL= yes
-
 .for NODE in ${EVAS_GENERIC_LOADERS}
 OPTIONS_DEFINE+=	${NODE:tu}
 OPTIONS_DEFAULT+=	${NODE:tu}
