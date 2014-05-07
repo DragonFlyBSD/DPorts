@@ -3,9 +3,10 @@
 
 PORTNAME=	asteroid
 PORTVERSION=	1.2.1
+PORTREVISION=	1
 CATEGORIES=	games
 
-MAINTAINER=	nemysis@FreeBSD.org
+MAINTAINER=	games@FreeBSD.org
 COMMENT=	Modern version of the arcade classic Asteroid
 
 LICENSE=	GPLv3
