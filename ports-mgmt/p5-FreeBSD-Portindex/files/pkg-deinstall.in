@@ -1,0 +1,23 @@
+#!/bin/sh
+#
+# $FreeBSD: head/ports-mgmt/p5-FreeBSD-Portindex/files/pkg-deinstall.in 353039 2014-05-05 20:13:39Z matthew $
+#
+
+PATH=/usr/sbin:/usr/bin:/bin ; export PATH
+
+CACHE_DIR=%%CACHE_DIR%%
+
+case $2 in
+    
+    # Remove the cache directory, but only if it is empty.
+
+    POST-DEINSTALL)
+	if [ ! -d ${CACHE_DIR} ] ; then
+	    rmdir ${CACHE_DIR} >/dev/null 2>&1 || true
+	fi
+	;;
+esac
+
+#
+# That's All Folks!
+#
