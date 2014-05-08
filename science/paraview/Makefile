@@ -11,7 +11,7 @@ DISTNAME=	ParaView-${PORTVERSION}
 MAINTAINER=	devel@stasyan.com
 COMMENT=	Powerful scientific data visualization application
 
-LIB_DEPENDS=	hdf5.7:${PORTSDIR}/science/hdf5-18 \
+LIB_DEPENDS=	libhdf5.so:${PORTSDIR}/science/hdf5 \
 		png15:${PORTSDIR}/graphics/png \
 		jpeg.11:${PORTSDIR}/graphics/jpeg \
 		tiff.4:${PORTSDIR}/graphics/tiff \
