@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	demjson
-PORTVERSION=	1.6
-PORTREVISION=	1
+PORTVERSION=	2.0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP \
 		http://deron.meranda.us/python/demjson/dist/
@@ -17,8 +16,6 @@ LICENSE=	LGPL3
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_AUTOPLIST=	yes
-
-PLIST_FILES=		bin/jsonlint
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/jsonlint ${STAGEDIR}${PREFIX}/bin
