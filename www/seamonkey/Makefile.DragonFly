@@ -6,6 +6,7 @@ WITHOUT_DEBUG=yes
 .endif
 
 MOZ_OPTIONS+=	--host=${ARCH}-dports-${OPSYS:tl}${OSREL}
+MOZ_OPTIONS+= --disable-webrtc
 
 PULSEAUDIO_LIB_DEPENDS= libpulse.so:${PORTSDIR}/audio/pulseaudio
 
