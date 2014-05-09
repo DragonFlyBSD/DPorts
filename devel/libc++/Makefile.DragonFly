@@ -1,0 +1,1 @@
+CFLAGS+= -D__FreeBSD__ -D__FreeBSD__version=1000001
