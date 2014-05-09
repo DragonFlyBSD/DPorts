@@ -1,0 +1,2 @@
+pre-configure:
+	${REINPLACE_CMD} -e 's|FreeBSD|DragonFly|g' ${WRKSRC}/CMakeLists.txt
