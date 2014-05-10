@@ -1,1 +1,1 @@
-LIB_DEPENDS+=	usb:${PORTSDIR}/devel/libusb
+USES+= usb
