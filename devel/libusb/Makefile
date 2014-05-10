@@ -25,6 +25,12 @@ IGNORE=		has been already included into base system
 .endif
 .endif
 
+.if ${OPSYS} == DragonFly
+.if ${OSVERSION} >= 300703
+IGNORE=		has been already included into base system
+.endif
+.endif
+
 .if ${PORT_OPTIONS:MSGML}
 BUILD_DEPENDS+=	${LOCALBASE}/share/sgml/jade/catalog:${PORTSDIR}/textproc/jade \
 		${LOCALBASE}/share/sgml/docbook/dsssl/modular/catalog:${PORTSDIR}/textproc/dsssl-docbook-modular \
