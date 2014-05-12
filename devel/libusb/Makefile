@@ -26,7 +26,7 @@ IGNORE=		has been already included into base system
 .endif
 
 .if ${OPSYS} == DragonFly
-.if ${OSVERSION} >= 300703
+.if ${DFLYVERSION} >= 300703
 IGNORE=		has been already included into base system
 .endif
 .endif
