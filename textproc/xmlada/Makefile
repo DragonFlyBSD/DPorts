@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	xmlada
-PORTVERSION=	4.4.0.0
-PORTREVISION=	3
+PORTVERSION=	4.5.0.0
 CATEGORIES=	textproc
 MASTER_SITES=	http://downloads.dragonlace.net/src/
 
@@ -13,12 +12,10 @@ COMMENT=	Adacore XML suite for the Ada language
 LICENSE=	GPLv3
 
 GNU_CONFIGURE=	yes
-USE_BZIP2=	yes
-USES=		ada gmake
-NO_MTREE=	yes
-
-MAKE_JOBS_UNSAFE=	yes
-NO_LICENSES_INSTALL=	yes
+USES=		ada gmake tar:bzip2
+MAKE_ARGS+=	PROCESSORS=${MAKE_JOBS_NUMBER}
+ALL_TARGET=	static relocatable
+PLIST_SUB+=	LIBVER=4.5.0w
 
 OPTIONS_DEFINE=	DOCS
 
@@ -26,6 +23,7 @@ OPTIONS_DEFINE=	DOCS
 
 .if ${PORT_OPTIONS:MDOCS}
 BUILD_DEPENDS+=	sphinx-build:${PORTSDIR}/textproc/py-sphinx
+ALL_TARGET+=	docs
 .endif
 
 # Link options were added for sax, dom, schema, and input_sources libraries
@@ -41,20 +39,14 @@ post-patch:
 	  ${WRKSRC}/dom/dom.gpr \
 	  ${WRKSRC}/schema/schema.gpr \
 	  ${WRKSRC}/input_sources/input_sources.gpr
-.if ${PORT_OPTIONS:MDOCS}
-	@${REINPLACE_CMD} -e 's/^all: \(.*\)/all: \1 docs/g' ${WRKSRC}/Makefile.in
-.endif
+
+do-build:
+	# Override build target to avoid -jX getting passed to makefile
+	# Parallel builds are handled with PROCESSORS setting
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
+		${MAKE_CMD} ${MAKE_ARGS} ${ALL_TARGET}
 
 post-install:
 	${RM} -rf ${STAGEDIR}${PREFIX}/share/doc/xmlada/_sources
-	@cd ${STAGEDIR}${PREFIX}; ${FIND} * \( -type f -or -type l \) | \
-	   ${SORT} > ${TMPPLIST}
-	@cd ${STAGEDIR}${PREFIX}; ${FIND} * -type d | ${AWK} '/\//' | ${SORT} -r | \
-	   ${SED} -e '/lib\/gnat$$/d' -e '/share\/doc$$/d' -e '/share\/gps/d' \
-	   -e 's/^/@dirrm /g' >> ${TMPPLIST}
-	@echo "@unexec rmdir %D/lib/gnat 2>/dev/null || true" >> ${TMPPLIST}
-	@echo "@unexec rmdir %D/share/gps/plug-ins 2>/dev/null || true" >> ${TMPPLIST}
-	@echo "@unexec rmdir %D/share/gps 2>/dev/null || true" >> ${TMPPLIST}
-	@echo "@unexec rmdir %D/share/doc 2>/dev/null || true" >> ${TMPPLIST}
 
 .include <bsd.port.mk>
