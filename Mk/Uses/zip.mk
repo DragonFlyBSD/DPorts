@@ -21,7 +21,8 @@ EXTRACT_AFTER_ARGS?=	-d ${WRKDIR}
 EXTRACT_DEPENDS+=	${UNZIP_CMD}:${PORTSDIR}/archivers/unzip
 EXTRACT_CMD?=		${UNZIP_CMD}
 .elif ${zip_ARGS} == none
-EXTRACT_CMD?=		${UNZIP_NATIVE_CMD}
+EXTRACT_DEPENDS+=	${UNZIP_CMD}:${PORTSDIR}/archivers/unzip
+EXTRACT_CMD?=		${UNZIP_CMD}
 .else
 IGNORE=	Incorrect 'USES+=zip:${zip_ARGS}' expecting 'USES+=zip[:infozip]'
 .endif
