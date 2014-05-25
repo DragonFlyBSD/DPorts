@@ -1,0 +1,11 @@
+--- pdns/Makefile.in.intermediate	2014-05-25 10:59:35.269818000 +0000
++++ pdns/Makefile.in
+@@ -950,7 +950,7 @@ misc.cc unix_utility.cc qtype.cc
+ pdns_control_LDFLAGS = @THREADFLAGS@
+ TESTS_ENVIRONMENT = env BOOST_TEST_LOG_LEVEL=message
+ build_date = $(shell LC_TIME=C date '+%Y%m%d%H%M%S')
+-build_host = $(shell id -u -n)@$(shell hostname -f)
++build_host = $(shell id -u -n)@$(shell hostname)
+ # Do the test in shell, so we don't confuse automake with ifeq/ifneq.
+ @RELEASE_BUILD_FALSE@pdns_version = $(shell test -z "$(git_version)" && echo UNKNOWN || echo "git-$(git_version)")
+ @RELEASE_BUILD_TRUE@pdns_version = $(PACKAGE_VERSION)
