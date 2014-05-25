@@ -3,6 +3,7 @@
 
 PORTNAME=	curl
 PORTVERSION=	7.36.0
+PORTREVISION=	1
 CATEGORIES=	ftp www
 MASTER_SITES=	http://curl.haxx.se/download/ \
 		LOCAL/sunpoet
@@ -80,7 +81,7 @@ GSSAPI_BASE_CPPFLAGS=	-I${INCLUDEDIR}
 HEIMDAL_PORT_CONFIGURE_ON=	--with-gssapi=${HEIMDAL_HOME}
 HEIMDAL_PORT_CPPFLAGS=	-I${HEIMDAL_HOME}/include
 HEIMDAL_PORT_LDFLAGS=	-L${HEIMDAL_HOME}/lib
-HEIMDAL_PORT_LIB_DEPENDS=	libgssapi.so:${PORTSDIR}/security/heimdal
+HEIMDAL_PORT_LIB_DEPENDS=	libgssapi.so.3:${PORTSDIR}/security/heimdal
 HTTP2_CONFIGURE_OFF=	--without-nghttp2
 HTTP2_CONFIGURE_ON=	--with-nghttp2=${LOCALBASE}
 HTTP2_LIB_DEPENDS=	libnghttp2.so:${PORTSDIR}/www/nghttp2
@@ -94,7 +95,7 @@ IPV6_CONFIGURE_ON=	--enable-ipv6
 KRB5_PORT_CONFIGURE_ON=	--with-gssapi=${KRB5_HOME}
 KRB5_PORT_CPPFLAGS=	-I${KRB5_HOME}/include
 KRB5_PORT_LDFLAGS=	-L${KRB5_HOME}/lib
-KRB5_PORT_LIB_DEPENDS=	libgssapi_krb5.so:${PORTSDIR}/security/krb5
+KRB5_PORT_LIB_DEPENDS=	libgssapi_krb5.so.2:${PORTSDIR}/security/krb5
 LDAP_CONFIGURE_OFF=	--disable-ldap
 LDAP_CONFIGURE_ON=	--enable-ldap
 LDAP_CPPFLAGS=		-I${LOCALBASE}/include
@@ -106,8 +107,9 @@ LIBSSH2_CONFIGURE_OFF=	--without-libssh2
 LIBSSH2_CONFIGURE_ON=	--with-libssh2=${LOCALBASE}
 LIBSSH2_LIB_DEPENDS=	libssh2.so:${PORTSDIR}/security/libssh2
 NSS_CONFIGURE_OFF=	--without-nss
-NSS_CONFIGURE_ON=	--with-nss=${LOCALBASE}
+NSS_CONFIGURE_ON=	--with-nss=yes
 NSS_LIB_DEPENDS=	libnss3.so:${PORTSDIR}/security/nss
+NSS_USES=		pkgconfig
 OPENSSL_CONFIGURE_OFF=	--without-ssl
 OPENSSL_CONFIGURE_ON=	--with-ssl=${OPENSSLBASE}
 OPENSSL_CPPFLAGS=	-I${OPENSSLINC}
