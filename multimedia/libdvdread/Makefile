@@ -2,9 +2,9 @@
 # $FreeBSD$
 
 PORTNAME=	libdvdread
-PORTVERSION=	4.2.1
+PORTVERSION=	4.9.9
+PORTREVISION=	2
 CATEGORIES=	multimedia
-# Svn repository URL : svn://svn.mplayerhq.hu/dvdnav/trunk/libdvdread
 MASTER_SITES=	http://dvdnav.mplayerhq.hu/releases/ \
 		http://contribs.martymac.org/FreeBSD-ports/distfiles/ \
 		LOCAL/martymac
@@ -14,33 +14,19 @@ COMMENT=	MPlayer version of the libdvdread project
 
 LICENSE=	GPLv2
 
-HAS_CONFIGURE=	yes
-CONFIGURE_SCRIPT=	configure2
-CONFIGURE_ARGS=	--prefix="${PREFIX}" \
-		--libdir="${PREFIX}/lib" \
-		--libdatadir="${PREFIX}/libdata/pkgconfig" \
-		--shlibdir="${PREFIX}/lib" \
-		--incdir="${PREFIX}/include/dvdread" \
-		--disable-opts \
-		--cc="${CC}"
-USES=	tar:xz gmake
+GNU_CONFIGURE=	yes
+INSTALL_TARGET=	install-strip
+USES=		gmake libtool:oldver pathfix pkgconfig tar:xz
 USE_LDCONFIG=	yes
 
-OPTIONS_DEFINE=	DVDCSS DEBUG
+PORTDOCS=	AUTHORS COPYING ChangeLog NEWS README TODO
+
+OPTIONS_DEFINE=	DVDCSS
 .if !defined(PACKAGE_BUILDING)
 OPTIONS_DEFAULT=	DVDCSS
 .endif
-DEBUG_CONFIGURE_ON=	--enable-debug --disable-strip
-DEBUG_CONFIGURE_OFF=	--disable-debug --enable-strip
-DVDCSS_LIB_DEPENDS=	libdvdcss.so:${PORTSDIR}/multimedia/libdvdcss
 
 # DVDCSS version hardcoded in src/dvd_input.c (dlopen'ed)
-DVDCSS_LIBVERSION=	3
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|-ldl ||g' \
-		${WRKSRC}/Makefile
-	@${REINPLACE_CMD} -E -e 's|(libdvdcss.so)\.2|\1.${DVDCSS_LIBVERSION}|' \
-		${WRKSRC}/src/dvd_input.c
+DVDCSS_LIB_DEPENDS=	libdvdcss.so.2:${PORTSDIR}/multimedia/libdvdcss
 
 .include <bsd.port.mk>
