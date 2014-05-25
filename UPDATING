@@ -5,6 +5,37 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20140521:
+  AFFECTS: users of databases/mariadb55*
+  AUTHOR: grembo@FreeBSD.org
+
+  The mariadb55-client and mariadb55-server port have been changed to
+  respect hier(7) and behave like the mysql ports. Therefore mysql-server
+  and mysql monitor will refuse to start if my.cnf exists in /etc or
+  /etc/mysql.
+
+  In case you're affected, please move /etc/my.cnf to /usr/local/etc and/or
+  /etc/mysql/my.cnf to /usr/local/etc/mysql.
+
+20140520:
+  AFFECTS: users of security/dropbear
+  AUTHOR: ak@FreeBSD.org
+
+  security/dropbear port separator syntax was changed (again), now using
+  host^port instead of host%port.
+
+  You may need to update your config files while updating to 2014.63 from
+  the previous versions.
+
+20140511:
+  AFFECTS: users of databases/firebird*
+  AUTHOR: bapt@FreeBSD.org
+
+  The default version of databases/firebird* have been changed to support
+  DEFAULT_VERSIONS variable
+
+  DEFAULT_VERSIONS=firebird=2.5
+
 20140507:
   AFFECTS: users of lang/open-cobol
   AUTHOR: johans@FreeBSD.org
@@ -1753,77 +1784,4 @@ you update your ports collection, before attempting any port upgrades.
 
   If you are running with WITH_NEW_XORG= make sure to update and rebuild
   all installed drivers since xorg-server has been updated.
-
-20130520:
-  AFFECTS: users of textproc/elasticsearch
-  AUTHOR: tj@FreeBSD.org
-
-  This is the first stable release based on Lucene 4. We recommend testing
-  the upgrade before doing it in production.
-
-  Upgrading from 0.20 requires a full cluster restart.
-
-  In order to be able to downgrade, stop indexing new data, issue a flush
-  request, do the upgrade and only enable indexing of new data once you
-  are certain that you no longer need to downgrade.  Once new data has
-  been indexed, downgrading is no longer possible. To be extra safe, back
-  up your data before upgrading.
-
-20130519:
-  AFFECTS: users of net/activemq
-  AUTHOR: tj@FreeBSD.org
-
-  The JVM used by activemq has changed to OpenJDK 7. You will need to
-  make sure javavmwrapper is configured to use the installed
-  java/openjdk7 JVM.
-
-20130512:
-  AFFECTS: users of devel/hs-git-annex
-  AUTHOR: haskell@FreeBSD.org
-
-  On FreeBSD, git-annex incorrectly calculated SHA256 hashes for files
-  added to the annex repository due to the BSD-style output of
-  /sbin/sha256.  The result of this is silent data corruption.
-
-  This problem has been fixed, but every file stored in an annex
-  repository will fail a `git-annex fsck` after the upgrade.  Thus,
-  before updating, it is wise to issue the command below and restore the
-  files.
-
-  $ git-annex uninit
-
-  Corruptions can then be found by finding all files with the same hash.
-  Note that only files that were mishashed to the same location are a
-  problem.
-
-20130511:
-  AFFECTS: users of TeX
-  AUTHOR: hrs@FreeBSD.org
-
-  One can now choose TeXLive or teTeX by using TEX_DEFAULT.
-  Specifying TEX_DEFAULT=texlive, almost all of ports which use TeX
-  will install and depend on TeXLive-based ones.  Note that the
-  default value is still "tetex" and the two cannot coexist.  You need
-  to remove all of the TeX-related packages based on teTeX to try
-  TeXLive.
-
-20130507:
-  AFFECTS: users of comms/usbmuxd or comms/libimobiledevice
-  AUTHOR: avilla@FreeBSD.org
-
-  libusbmuxd and libimobiledevice versions have changed. Please, rebuild
-  all the ports that depend on them:
-
-  # portmaster -r usbmuxd
-    or
-  # portupgrade -fr comms/usbmuxd
-    or
-  # pkg install -fR comms/usbmuxd
-
-20130507:
-  AFFECTS: users of devel/libplist
-  AUTHOR: avilla@FreeBSD.org
-
-  libplist Python bindings were split from the main port. To get them you
-  need to install devel/py-libplist.
 

@@ -145,7 +145,7 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #				- Backup location(s) for distribution files and patch
 #				  files if not found locally and ${MASTER_SITES}/${PATCH_SITES}
 #				  Default:
-#				  ftp://ftp.FreeBSD.org/pub/FreeBSD/ports/distfiles/${DIST_SUBDIR}/
+#				  http://distcache.FreeBSD.org/ports-distfiles/${DIST_SUBDIR}/
 # MASTER_SITE_OVERRIDE
 #				- If set, override the MASTER_SITES setting with this
 #				  value.
@@ -1498,7 +1498,7 @@ PKGCOMPATDIR?=		${LOCALBASE}/lib/compat/pkg
 .include "${PORTSDIR}/Mk/bsd.drupal.mk"
 .endif
 
-.if defined(WANT_GECKO) || defined(USE_GECKO)
+.if defined(USE_GECKO)
 .include "${PORTSDIR}/Mk/bsd.gecko.mk"
 .endif
 
@@ -1967,7 +1967,7 @@ IGNORE=	Do not define STAGEDIR in command line
 .include "${PORTSDIR}/Mk/bsd.fpc.mk"
 .endif
 
-.if defined(WANT_GECKO) || defined(USE_GECKO)
+.if defined(USE_GECKO)
 .include "${PORTSDIR}/Mk/bsd.gecko.mk"
 .endif
 
@@ -2556,7 +2556,7 @@ PATCH_SITES_TMP=
 
 # The primary backup site.
 MASTER_SITE_BACKUP?=	\
-	ftp://ftp.FreeBSD.org/pub/FreeBSD/ports/distfiles/${DIST_SUBDIR}/
+	http://distcache.FreeBSD.org/ports-distfiles/${DIST_SUBDIR}/
 MASTER_SITE_BACKUP:=	${MASTER_SITE_BACKUP:S^\${DIST_SUBDIR}/^^}
 
 # If the user has MASTER_SITE_FREEBSD set, go to the FreeBSD repository
@@ -3344,6 +3344,9 @@ check-vulnerable:
 		if [ -n "${WITH_PKGNG}" ]; then \
 			if [ -x "${PKG_BIN}" ]; then \
 				vlist=`${PKG_BIN} audit "${PKGNAME}"`; \
+				if [ "$${vlist}" = "0 problem(s) in the installed packages found." ]; then \
+					vlist=""; \
+				fi; \
 			elif [ "${PORTNAME}" = "pkg" ]; then \
 				vlist=""; \
 			fi; \
@@ -4304,7 +4307,7 @@ security-check:
 	| ${XARGS} -0 -J % ${FIND} % -prune ! -type l -type f -print0 2> /dev/null \
 	| ${XARGS} -0 -n 1 ${OBJDUMP} -R 2> /dev/null > ${WRKDIR}/.PLIST.objdump; \
 	if \
-		! ${AWK} -v audit="$${PORTS_AUDIT}" -f ${PORTSDIR}/Tools/scripts/security-check.awk \
+		! ${AWK} -v audit="$${PORTS_AUDIT}" -f ${SCRIPTSDIR}/security-check.awk \
 		  ${WRKDIR}/.PLIST.flattened ${WRKDIR}/.PLIST.objdump ${WRKDIR}/.PLIST.setuid ${WRKDIR}/.PLIST.writable; \
 	then \
 		www_site=$$(cd ${.CURDIR} && ${MAKE} www-site); \
@@ -6565,7 +6568,7 @@ _EXTRACT_SEQ=	check-build-conflicts extract-message checksum extract-depends \
 				pre-extract pre-extract-script do-extract \
 				post-extract post-extract-script
 _PATCH_DEP=		extract
-_PATCH_SEQ=		ask-license patch-message patch-depends pathfix-pre-patch dos2unix fix-shebang \
+_PATCH_SEQ=		ask-license patch-message patch-depends pathfix dos2unix fix-shebang \
 				pre-patch \
 				pre-patch-script do-patch charsetfix-post-patch post-patch post-patch-script
 _CONFIGURE_DEP=	patch
