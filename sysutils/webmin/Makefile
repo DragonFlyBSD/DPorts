@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	webmin
-PORTVERSION=	1.680
+PORTVERSION=	1.690
+PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://download.webmin.com/updates/:up \
 		SF/webadmin/${PORTNAME}/${PORTVERSION}:sf \
@@ -56,12 +57,17 @@ post-patch:
 	@${FIND} ${WRKSRC} -name "*.bak" -delete
 	@${FIND} ${WRKSRC} -name "*.pyc" -delete
 
+.for module in ldap-server ldap-client ldap-useradmin logrotate status time webalizer
+	@${RM} ${WRKSRC}/${module}/config-\*-linux 
+.endfor
+
 	@${PRINTF} "g/^FreeBSD/m0\nwq\n" | ex ${WRKSRC}/os_list.txt
 
 do-build:
 	@${PYTHON_CMD} -mcompileall ${WRKSRC}/ajaxterm/ajaxterm/
 	@${PYTHON_CMD} -O -mcompileall ${WRKSRC}/ajaxterm/ajaxterm/
 	@${CC} ${CFLAGS} -o ${WRKSRC}/mount/freebsd-mounts-7 ${WRKSRC}/mount/freebsd-mounts-7.c
+	@${STRIP_CMD} ${WRKSRC}/mount/freebsd-mounts-7
 
 do-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/webmin
