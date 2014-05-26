@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	ipython
-PORTVERSION=	1.2.1
-PORTREVISION=	2
+PORTVERSION=	2.1.0
+PORTREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -17,10 +17,15 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pexpect>=2:${PORTSDIR}/misc/py-pexpect \
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=yes
-PYTHON_PY3K_PLIST_HACK=yes
+USE_GCC=        yes # To be removed - Needed as a work-around for numpy, see PR ports/188114
+PYDISTUTILS_AUTOPLIST=yes
 
 OPTIONS_DEFINE=	X11 HTML_NOTEBOOK ZMQ
 OPTIONS_DEFAULT=X11 ZMQ
+
+.if defined(PACKAGE_BUILDING)
+OPTIONS_DEFAULT+=	HTML_NOTEBOOK
+.endif
 
 HTML_NOTEBOOK_DESC=	HTML notebook support
 ZMQ_DESC=		ZMQ support (parallel computing, qt console, notebook)
@@ -46,13 +51,20 @@ post-install:
 .if ${PORT_OPTIONS:MEXAMPLES}
 	cd ${WRKSRC}/examples && ${COPYTREE_SHARE} \* ${STAGEDIR}${EXAMPLESDIR}
 .endif
+	@${ECHO_CMD} "/EASY-INSTALL"	> ${WRKDIR}/ex.script
+	@${ECHO_CMD} "a"		>> ${WRKDIR}/ex.script
+	@${ECHO_CMD} "import os"	>> ${WRKDIR}/ex.script
+	@${ECHO_CMD} "os.environ[\"LD_LIBRARY_PATH\"]=\"${_GCC_RUNTIME}\"" >> ${WRKDIR}/ex.script
+	@${ECHO_CMD} "."		>> ${WRKDIR}/ex.script
+	@${ECHO_CMD} "x!"		>> ${WRKDIR}/ex.script
+	@for file in ${STAGEDIR}${PREFIX}/bin/*; do \
+		ex $${file} < ${WRKDIR}/ex.script > /dev/null; \
+	done
 
 .include <bsd.port.pre.mk>
 
-.if ${PYTHON_MAJOR_VER} == "3"
-PLIST_SUB+=	IPYTHON_SUFFIX="3"
-.else
-PLIST_SUB+=	IPYTHON_SUFFIX=""
+.if ${PYTHON_VER} == "3.1" || ${PYTHON_VER} == "3.2"
+IGNORE=		only Python versions 2.7, 3.3 and 3.4 are supported
 .endif
 
 .include <bsd.port.post.mk>
