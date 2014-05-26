@@ -7,13 +7,13 @@ PORTREVISION?=	13
 CATEGORIES=	games
 MASTER_SITES?=	http://ioquake3.org/files/${DISTVERSION}/
 # Using zip this way enables slaves to override it.
+EXTRACT_SUFX?=	.zip
 
 MAINTAINER?=	kamikaze@bsdforen.de
 COMMENT?=	Cleaned-up and enhanced version of Quake 3
 
-USES=		pkgconfig gmake zip
+USES=		pkgconfig gmake
 
-NO_STAGE=	yes
 # Port configuration flags:
 # 	CLIENT SERVER TOOLS DLRENDERER GAMELIBS OPUS OPENGL2
 IOQ3?=		CLIENT TOOLS GAMELIBS
@@ -225,17 +225,12 @@ PLIST_FILES+=	${inst:C/.*;//}
 # Generate install target
 do-install: ${Q3INSTALL}
 .for dir in ${PLIST_DIRS}
-	${MKDIR} ${PREFIX}/${dir}
+	@${MKDIR} ${STAGEDIR}${PREFIX}/${dir}
 .endfor
 .for inst in ${IOQ3_INST}
 	${INSTALL_${inst:C/;.*//}} ${BUILDDIR}/${inst:C/[^;]*;//:C/;.*//} \
-		${PREFIX}/${inst:C/.*;//}
+		${STAGEDIR}${PREFIX}/${inst:C/.*;//}
 .endfor
-
-post-install:
-	@${JOT} -s '' -b= 78
-	@${CAT} ${PKGMESSAGE}
-	@${JOT} -s '' -b= 78
 
 .if !defined(Q3TOTALCONV)
 .include "${.CURDIR}/../quake3-data/Makefile.include"
