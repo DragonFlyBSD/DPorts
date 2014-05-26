@@ -4,7 +4,7 @@
 
 PORTNAME=	abiword
 PORTVERSION=	2.8.6
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	editors
 MASTER_SITES=	http://www.abisource.com/downloads/%SUBDIR%/${PORTVERSION}/source/
 MASTER_SITE_SUBDIR=	abiword
@@ -26,7 +26,7 @@ RUN_DEPENDS=	${LOCALBASE}/lib/X11/fonts/dejavu/DejaVuSerif.ttf:${PORTSDIR}/x11-f
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		desktop-file-utils gettext gmake iconv pathfix pkgconfig
+USES=		desktop-file-utils gettext gmake iconv libtool pathfix pkgconfig
 USE_GNOME=	libxml2 gtk20 librsvg2 libxslt
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
@@ -183,6 +183,21 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|glib/.*\.h>|glib.h>|g' \
 		${WRKSRC}/goffice-bits/goffice/app/goffice-app.h \
 		${WRKSRC}/src/af/util/xp/ut_go_file.h
-	@${REINPLACE_CMD} -e 's|" == "|" = "|g' ${WRKSRC}/configure
+# The following substitutions ensure that plugins are linked with libabiword
+# from the work or stage directory instead of a previously installed library.
+# In pseudo code:
+# s,PLUGIN_LIBS="$PLUGIN_LIBS -Lsrc -labiword",
+#   PLUGIN_LIBS="src/libabiword.la $PLUGIN_LIBS",
+# s,foo_LIBS="$foo_LIBS $PLUGIN_LIBS",
+#   foo_LIBS="$PLUGIN_LIBS $foo_LIBS",
+# The initial value of PLUGIN_LIBS may contain -L/usr/local/lib so it would
+# have to come after -Lsrc, but -Lsrc is not correct when libtool relinks
+# plugins during staging so use src/libabiword.la and let libtool figure out
+# what flags are needed.  Secondly, switch around foo_LIBS and PLUGIN_LIBS
+# because foo_LIBS may contain -L/usr/local/lib.
+	@${REINPLACE_CMD} \
+		-e "s,\$$PLUGIN_LIBS \"'-L\$${top_builddir}/src'\" -labiword-\$$ABIWORD_SERIES,\\\\\$${top_builddir}/src/libabiword-\$$ABIWORD_SERIES.la \$$PLUGIN_LIBS," \
+		-e "/_LIBS=/s,\"\\(.*\\)\"\\('\$${PLUGIN_LIBS}.*'\\),\\2\" \\1\"," \
+		-e 's|" == "|" = "|g' ${WRKSRC}/configure
 
 .include <bsd.port.mk>
