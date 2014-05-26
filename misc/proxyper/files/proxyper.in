@@ -1,0 +1,28 @@
+#!/bin/sh
+#
+# $FreeBSD: head/misc/proxyper/files/proxyper.in 340872 2014-01-24 00:14:07Z mat $
+#
+# PROVIDE: proxyper
+# REQUIRE: LOGIN
+# KEYWORD: shutdown
+
+proxyper_enable=${proxyper_enable:-"NO"}
+
+dir="%%BINDIR%%"
+user="nobody"
+
+. /etc/rc.subr
+
+name="proxyper"
+rcvar=proxyper_enable
+
+pidfile=${dir}/rc5desproxy.pid
+required_files=${dir}/${name}.ini
+
+proxyper_user=${user}
+
+command=${dir}/${name}
+command_args=">/dev/null 2>&1 &"
+
+load_rc_config $name
+run_rc_command "$1"
