@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	typo3
-PORTVERSION=	4.5.33
+PORTVERSION=	4.5.34
 CATEGORIES=	www
 MASTER_SITES=	SF/${PORTNAME}/TYPO3%20Source%20and%20Dummy/TYPO3%20${PORTVERSION}
 PKGNAMESUFFIX=	${TYPO3RELEASE}
@@ -11,6 +11,9 @@ MAINTAINER=	freebsd-ports@charlieroot.de
 COMMENT=	The typo3 content management system
 
 LICENSE=	GPLv2
+
+DEPRECATED=	Upgrade to www/typo3 or www/typo3-lts
+EXPIRATION_DATE=	2015-03-31
 
 PORTSCOUT=	limit:^4\.5\.
 
