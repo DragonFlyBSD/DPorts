@@ -1,3 +1,4 @@
+@comment $FreeBSD: head/korean/xpdf/pkg-plist 355072 2014-05-24 18:29:07Z hrs $
 %%DATADIR%%/korean/Adobe-Korea1.cidToUnicode
 %%DATADIR%%/korean/ISO-2022-KR.unicodeMap
 %%DATADIR%%/korean/README
