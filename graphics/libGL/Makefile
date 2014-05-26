@@ -19,7 +19,8 @@ SUB_FILES=	pkg-install pkg-deinstall
 .include <bsd.port.options.mk>
 
 .if defined(WITH_NEW_XORG)
-LIBGLREVISION=	0
+LIBGLREVISION=	1
+LIB_DEPENDS+=	libglapi.so:${PORTSDIR}/graphics/libglapi
 .else
 LIBGLREVISION=	4
 .endif
@@ -30,12 +31,17 @@ LIBGLREVISION=	4
 CONFIGURE_ARGS+=--disable-gallium-intel
 .endif
 
-.if !defined(WITH_NEW_XORG)
 post-install:
+	${RM} -f ${STAGEDIR}${PREFIX}/libdata/pkgconfig/dri.pc
+	${RM} -rf ${STAGEDIR}${PREFIX}/include/GL/internal
+.if defined(WITH_NEW_XORG)
+	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/.libGL
+	@${MV} ${STAGEDIR}${PREFIX}/lib/libGL* \
+		${STAGEDIR}${PREFIX}/lib/.libGL/
+	${RM} ${STAGEDIR}${PREFIX}/lib/libglapi*
+.else
 	${RM} ${STAGEDIR}${PREFIX}/include/GL/glu.h
 	${RM} ${STAGEDIR}${PREFIX}/include/GL/glu_mangle.h
-	${RM} ${STAGEDIR}${PREFIX}/include/GL/internal/dri_interface.h
-	${RM} ${STAGEDIR}${PREFIX}/libdata/pkgconfig/dri.pc
 .endif
 
 .include <bsd.port.mk>
