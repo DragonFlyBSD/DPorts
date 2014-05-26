@@ -5,6 +5,10 @@ bin/over
 bin/sliceprint
 bin/states
 etc/enscript.cfg
+man/man1/diffpp.1.gz
+man/man1/enscript.1.gz
+man/man1/sliceprint.1.gz
+man/man1/states.1.gz
 %%DATADIR%%/88591.enc
 %%DATADIR%%/885910.enc
 %%DATADIR%%/88592.enc
@@ -14,6 +18,7 @@ etc/enscript.cfg
 %%DATADIR%%/88597.enc
 %%DATADIR%%/88599.enc
 %%DATADIR%%/a2ps.hdr
+%%DATADIR%%/afm/MustRead.html
 %%DATADIR%%/afm/agd.afm
 %%DATADIR%%/afm/agdo.afm
 %%DATADIR%%/afm/agw.afm
@@ -84,6 +89,7 @@ etc/enscript.cfg
 %%DATADIR%%/hl/diffu.st
 %%DATADIR%%/hl/elisp.st
 %%DATADIR%%/hl/enscript.st
+%%DATADIR%%/hl/f90.st
 %%DATADIR%%/hl/fortran.st
 %%DATADIR%%/hl/fortran_pp.st
 %%DATADIR%%/hl/haskell.st
@@ -113,7 +119,6 @@ etc/enscript.cfg
 %%DATADIR%%/hl/pyrex.st
 %%DATADIR%%/hl/python.st
 %%DATADIR%%/hl/rfc.st
-%%DATADIR%%/hl/ruby.st
 %%DATADIR%%/hl/scheme.st
 %%DATADIR%%/hl/sh.st
 %%DATADIR%%/hl/skill.st
