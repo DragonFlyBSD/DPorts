@@ -1,5 +1,7 @@
-etc/portsnap.conf.sample
+@sample etc/portsnap.conf.sample
 libexec/make_index
 libexec/phttpget
+man/man5/portsnap.conf.5.gz
+man/man8/portsnap.8.gz
 sbin/portsnap
-@dirrmtry portsnap
+@exec mkdir -p %D/portsnap

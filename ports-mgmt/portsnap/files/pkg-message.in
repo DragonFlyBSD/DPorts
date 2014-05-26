@@ -4,9 +4,5 @@ them at /usr/ports.  These are useful to attempt to build ports not yet
 imported into dports.
 
 The default values of portsnap work fine in most cases, but it is possible to
-copy the same configuration file of
-	%%PREFIX%%/etc/portsnap.conf.sample
-to:
-	%%PREFIX%%/etc/portsnap.conf
-and modify it as desired.
+alter parameters at %%PREFIX%%/etc/portsnap.conf
 =============================================================================
