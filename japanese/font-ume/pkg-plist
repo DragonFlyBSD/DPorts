@@ -1,3 +1,4 @@
+@comment $FreeBSD: head/japanese/font-ume/pkg-plist 355059 2014-05-24 17:27:32Z hrs $
 %%DATADIR%%/ume-pgc4.ttf
 %%DATADIR%%/ume-pgc5.ttf
 %%DATADIR%%/ume-pgo4.ttf
