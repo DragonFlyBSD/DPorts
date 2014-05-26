@@ -4,7 +4,7 @@
 
 PORTNAME=	nautilus
 PORTVERSION=	2.32.2.1
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	x11-fm gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -12,7 +12,6 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT?=	File manager for the GNOME desktop
 
-BUILD_DEPENDS=	g-ir-compiler:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	libexif.so:${PORTSDIR}/graphics/libexif \
 		libunique-1.0.so:${PORTSDIR}/x11-toolkits/unique \
 		libexempi.so:${PORTSDIR}/textproc/exempi
@@ -23,7 +22,7 @@ INSTALLS_ICONS=	yes
 USES=		desktop-file-utils gettext gmake libtool:keepla pathfix \
 		pkgconfig shared-mime-info tar:bzip2
 USE_GNOME=	gnomeprefix intlhack gnomedesktop \
-		librsvg2 gvfs
+		librsvg2 gvfs introspection:build
 INSTALL_TARGET=	install-strip
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
