@@ -1,5 +1,4 @@
-@unexec if cmp -s %D/%%XAPPLRESDIR%%/Tgif.ja-dist %D/%%XAPPLRESDIR%%/Tgif; then rm %D/%%XAPPLRESDIR%%/Tgif; fi
-%%XAPPLRESDIR%%/Tgif.ja-dist
-@exec if ! test -r %D/%%XAPPLRESDIR%%/Tgif; then cp %D/%%XAPPLRESDIR%%/Tgif.ja-dist %D/%%XAPPLRESDIR%%/Tgif; fi
+@comment $FreeBSD: head/japanese/tgif/pkg-plist 355057 2014-05-24 17:20:50Z hrs $
+@sample %%XAPPLRESDIR%%/Tgif.sample
 @dirrmtry %%XAPPLRESDIR%%
 @dirrmtry lib/X11/ja_JP.eucJP
