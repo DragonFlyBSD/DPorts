@@ -3,7 +3,7 @@
 
 PORTNAME=	lutok
 PORTVERSION=	0.4
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 
@@ -13,13 +13,17 @@ COMMENT=	Lightweight C++ API for Lua
 LICENSE=	BSD3CLAUSE
 
 GNU_CONFIGURE=	yes
+INSTALL_TARGET=	install-strip
 USE_LDCONFIG=	yes
-USES=		pkgconfig lua
+USES=		libtool lua pkgconfig
 
 OPTIONS_DEFINE=	DOCS EXAMPLES TEST
 
 OPTIONS_SUB=		yes
 TEST_CONFIGURE_WITH=	atf
+TEST_BUILD_DEPENDS=	${PREFIX}/bin/atf-sh:${PORTSDIR}/devel/atf
+TEST_LIB_DEPENDS=	libatf-c++.so:${PORTSDIR}/devel/atf
+TEST_RUN_DEPENDS=	atf>=0.20:${PORTSDIR}/devel/atf
 
 .include <bsd.port.options.mk>
 
