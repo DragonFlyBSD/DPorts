@@ -1,7 +1,7 @@
 # Created by: Matthias Andree <matthias.andree@gmx.de>
 # $FreeBSD$
 
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	misc devel
 PKGNAMESUFFIX=	-libuuid
 
@@ -15,7 +15,6 @@ OPTIONS_EXCLUDE=	NLS
 OPTIONSFILE=	# works around optionsNG trouble
 MASTERDIR=	${.CURDIR}/../../sysutils/e2fsprogs
 MAKE_ARGS=	LIB_SUBDIRS=lib/uuid
-USES=		gmake
 USE_LDCONFIG=	yes
 ALL_TARGET=	libs
 INSTALL_TARGET=	install install-shlibs
@@ -46,5 +45,6 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/misc/uuidgen.1 ${STAGEDIR}${MAN8PREFIX}/man/man1/
 	${INSTALL_PROGRAM} ${WRKSRC}/misc/uuidd ${STAGEDIR}${PREFIX}/sbin/
 	${INSTALL_MAN} ${WRKSRC}/misc/uuidd.8 ${STAGEDIR}${MAN8PREFIX}/man/man8/
+	${MKDIR} ${STAGEDIR}/var/run/libuuid
 
 .include "${MASTERDIR}/Makefile"
