@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $FreeBSD: head/net/dhcprelay/files/dhcprelay.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/net/dhcprelay/files/dhcprelay.in 353666 2014-05-11 10:03:32Z edwin $
 #
 # PROVIDE: dhcprelay
 # REQUIRE: DAEMON
@@ -25,6 +25,6 @@ command_args="${dhcprelay_ifaces} ${dhcprelay_server}"
 
 load_rc_config ${name}
 
-dhcprelay_enable=${dhcprelay_enable:"NO"}
+dhcprelay_enable=${dhcprelay_enable:-"NO"}
 
 run_rc_command "$1"
