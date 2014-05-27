@@ -18,4 +18,4 @@ bin/scummvm-tools-cli
 %%DATADIR%%/scummvmtools_128.png
 %%DATADIR%%/tile.gif
 @dirrmtry %%DATADIR%%
-%%PORTDOCS%%@dirrmtry %%DOCSDIR%%
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
