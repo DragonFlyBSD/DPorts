@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	dnsmasq
-DISTVERSION=	2.70
+DISTVERSION=	2.71
 PORTEPOCH=	1
 CATEGORIES=	dns ipv6
 MASTER_SITES=	http://www.thekelleys.org.uk/dnsmasq/ \
@@ -77,6 +77,7 @@ USES+=		lua
 
 .if ${PORT_OPTIONS:MDNSSEC}
 CFLAGS+=	-DHAVE_DNSSEC
+USES+=		pkgconfig
 LIB_DEPENDS+=	libnettle.so:${PORTSDIR}/security/nettle
 LIB_DEPENDS+=	libgmp.so:${PORTSDIR}/math/gmp
 .endif
