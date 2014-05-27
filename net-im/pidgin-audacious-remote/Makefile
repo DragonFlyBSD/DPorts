@@ -3,11 +3,10 @@
 
 PORTNAME=	pidgin-audacious-remote
 PORTVERSION=	0.5
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	net-im
 MASTER_SITES=	http://pidginaudacious.sourceforge.net/files/ \
 		ftp://ftp.lissyara.su/users/gx_ua/distfiles/
-#DISTNAME=	${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	gnixua@gmail.com
 COMMENT=	Pidgin-Audacious-Remote is a plug-in for Pidgin 2
@@ -16,12 +15,9 @@ BUILD_DEPENDS=	audacious>=2.2:${PORTSDIR}/multimedia/audacious \
 		pidgin:${PORTSDIR}/net-im/pidgin
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USES=		pkgconfig
-USE_BZIP2=	yes
-
+USES=		libtool pkgconfig tar:bzip2
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	"--prefix=${PREFIX}"
+CONFIGURE_ARGS=	--disable-static
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
