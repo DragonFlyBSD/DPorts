@@ -1,10 +1,10 @@
 #!/bin/sh
 #
-# $FreeBSD: head/security/clamav/files/clamav-milter.in 353090 2014-05-06 13:04:05Z feld $
+# $FreeBSD: head/security/clamav/files/clamav-milter.in 354141 2014-05-15 15:40:25Z garga $
 #
 
 # PROVIDE: clamav_milter
-# REQUIRE: LOGIN clamd
+# REQUIRE: LOGIN clamav_clamd
 # BEFORE: mail
 # KEYWORD: shutdown
 

@@ -1,10 +1,10 @@
 #!/bin/sh
 #
-# $FreeBSD: head/security/clamav/files/clamav-freshclam.in 353008 2014-05-05 14:38:17Z feld $
+# $FreeBSD: head/security/clamav/files/clamav-freshclam.in 354141 2014-05-15 15:40:25Z garga $
 #
 
 # PROVIDE: clamav_freshclam
-# REQUIRE: LOGIN clamd
+# REQUIRE: LOGIN clamav_clamd
 # BEFORE: mail
 # KEYWORD: shutdown
 

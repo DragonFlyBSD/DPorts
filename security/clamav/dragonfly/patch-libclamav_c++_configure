@@ -1,0 +1,14 @@
+The USES=libtool is adding dragonfly to "freebsd*)" in unwanted places.
+This is an unintended side effect, block it with a hack for now.
+
+--- libclamav/c++/configure.orig	2014-05-06 18:59:37.000000000 +0000
++++ libclamav/c++/configure
+@@ -15642,7 +15642,7 @@ case "$target_os" in
+ freebsd[45]*)
+     THREAD_LIBS="-pthread -lc_r"
+     ;;
+-freebsd*)
++fre[e]bsd*)
+     THREAD_LIBS="-lthr"
+     ;;
+ darwin*)
