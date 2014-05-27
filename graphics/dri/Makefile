@@ -3,7 +3,7 @@
 
 PORTNAME=	dri
 PORTVERSION=	${MESAVERSION}
-PORTREVISION=	3
+PORTREVISION=	4
 PORTEPOCH=	2
 CATEGORIES=	graphics
 
@@ -21,12 +21,13 @@ USE_XORG=	glproto x11 xext xxf86vm xdamage xfixes dri2proto
 # We only care for 9.x and 8.x, not for old pre-clang default current.
 # This is for 0b0000 binary which gcc 4.3+ understands and is in the i965 driver.
 .if defined(WITH_NEW_XORG)
-. if ${OSVERSION} >= 901500 && ${OSVERSION} < 902502 \
-		&& (${ARCH} == i386 || ${ARCH} == x86_64)
+. if (${OSVERSION} >= 901500 && ${OSVERSION} < 1000000) \
+		&& ${ARCH} == x86_64
 CC=clang
 CXX=clang++
 CPP=clang-cpp
-. elif ${OSVERSION} < 901500
+# i386 triggers clang bug 19778. This happens with clang 3.4.1 and older.
+. elif ${OSVERSION} < 901500 || ${ARCH} == i386
 USE_GCC=yes
 . endif
 .endif
@@ -46,7 +47,7 @@ DRI_DRIVERS=	${ALL_DRI_DRIVERS}
 .endif
 
 .if defined(WITH_NEW_XORG)
-. if defined(WITH_GALLIUM) && (${ARCH} == i386 || ${ARCH} == x86_64)
+. if !defined(WITHOUT_GALLIUM) && (${ARCH} == i386 || ${ARCH} == x86_64)
 BUILD_DEPENDS+=	llvm-config33:${PORTSDIR}/devel/llvm33
 CONFIGURE_ENV+=	LLVM_CONFIG=${LOCALBASE}/bin/llvm-config33
 
@@ -96,6 +97,18 @@ pre-everything::
 	@${ECHO_MSG} "Please define WITH_GALLIUM in /etc/make.conf"
 	@${ECHO_MSG} "Note that gallium support is highly experimental."
 	@${ECHO_MSG} ""
+.endif
+
+post-install:
+.if defined(WITH_NEW_XORG)
+	@${RM} -f ${STAGEDIR}${PREFIX}/include/GL/*.h
+	@${RM} ${STAGEDIR}${PREFIX}/lib/libGL.*
+	@${RM} ${STAGEDIR}${PREFIX}/lib/libglapi.*
+	@${RM} -f ${STAGEDIR}${PREFIX}/libdata/pkgconfig/gl.pc	
+.else
+	@${RM} -f ${STAGEDIR}${PREFIX}/include/GL/*.h
+	@${RM} -rf ${STAGEDIR}${PREFIX}/lib/.libGL
+	@${RM} -f ${STAGEDIR}${PREFIX}/libdata/pkgconfig/gl.pc	
 .endif
 
 .include <bsd.port.mk>
