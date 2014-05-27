@@ -157,6 +157,7 @@ do-install:
 	@${MKDIR} ${STAGEDIR}${INSTALLDIR}
 	@cd ${WRKSRC}/build/${OPENJDK_OSARCH}/j2sdk-image && \
 		${PAX} -rw . ${STAGEDIR}${INSTALLDIR}
+	@cd ${STAGEDIR}${PREFIX}/openjdk7/include && ln -s dragonfly freebsd
 	@${INSTALL_DATA} ${WRKSRC}/build/${OPENJDK_OSARCH}/btjars/compilefontconfig.jar ${WRKSRC}/build/${OPENJDK_OSARCH}/btjars/javazic.jar ${STAGEDIR}${INSTALLDIR}/jre/lib/
 	@${INSTALL_DATA} ${FILESDIR}/cacerts ${STAGEDIR}${INSTALLDIR}/jre/lib/security/cacerts
 	@${ECHO} "@unexec ${LOCALBASE}/bin/unregistervm ${INSTALLDIR}/bin/java" >> ${TMPPLIST}
