@@ -1,20 +1,20 @@
---- SConstruct.intermediate	2013-03-28 14:41:24.000000000 +0000
+--- SConstruct.orig	2014-05-26 12:03:58.241044000 +0000
 +++ SConstruct
-@@ -343,7 +343,7 @@ elif has_option("clang"):
- if has_option( "cc" ):
-     env["CC"] = get_option( "cc" )
+@@ -73,6 +73,8 @@ elif "sunos5" == platform:
+     solaris = True
+ elif platform.startswith( "freebsd" ):
+     freebsd = True
++elif platform.startswith( "dragonfly" ):
++    freebsd = True
+ elif platform.startswith( "openbsd" ):
+     openbsd = True
+ elif "win32" == platform:
+@@ -554,7 +556,7 @@ if has_option( "cc" ):
+ if has_option( "ld" ):
+     env["LINK"] = get_option( "ld" )
  
 -if env['PYSYSPLATFORM'] in ('linux2', 'freebsd'):
 +if env['PYSYSPLATFORM'] in ('linux2', 'freebsd', 'dragonfly'):
      env['LINK_LIBGROUP_START'] = '-Wl,--start-group'
      env['LINK_LIBGROUP_END'] = '-Wl,--end-group'
      env['RELOBJ_LIBDEPS_START'] = '--whole-archive'
-@@ -531,7 +531,7 @@ elif "sunos5" == os.sys.platform:
-      env.Append( CPPDEFINES=[ "__sunos__" ] )
-      env.Append( LIBS=["socket","resolv"] )
- 
--elif os.sys.platform.startswith( "freebsd" ):
-+elif os.sys.platform.startswith( "freebsd" ) or os.sys.platform.startswith( "dragonfly" ):
-     nix = True
-     freebsd = True
-     env.Append( LIBS=[ "kvm" ] )
