@@ -3542,7 +3542,21 @@ do-extract:
 	@${RM} -rf ${WRKDIR}
 	@${MKDIR} ${WRKDIR}
 	@for file in ${EXTRACT_ONLY}; do \
-		if ! (cd ${WRKDIR} && ${EXTRACT_CMD} ${EXTRACT_BEFORE_ARGS} ${_DISTDIR}/$$file ${EXTRACT_AFTER_ARGS});\
+		_EXTRACT_CMD="${EXTRACT_CMD}" ; \
+		_EXTRACT_BEFORE_ARGS="${EXTRACT_BEFORE_ARGS}" ; \
+		_EXTRACT_AFTER_ARGS="${EXTRACT_AFTER_ARGS}" ; \
+		case $${file} in \
+		*.lzh)	_EXTRACT_CMD=${LHA_CMD} ; \
+				_EXTRACT_BEFORE_ARGS="$${LHA_EXTRACT_BEFORE_ARGS:=xfpw=${WRKDIR}}" ; \
+				_EXTRACT_AFTER_ARGS="$${LHA_EXTRACT_AFTER_ARGS:=}" ;; \
+		*.tar|*.tar.bz2|*.tbz|*.tgz|*.tar.lzma|*.tar.xz|*.txz|*.tar.Z)	_EXTRACT_CMD=${TAR} ; \
+				_EXTRACT_BEFORE_ARGS="$${TAR_EXTRACT_BEFORE_ARGS:=-xf}" ; \
+				_EXTRACT_AFTER_ARGS="$${TAR_EXTRACT_AFTER_ARGS:=--no-same-owner --no-same-permissions}" ;; \
+		*.zip)	_EXTRACT_CMD=${UNZIP_CMD} ; \
+				_EXTRACT_BEFORE_ARGS="$${ZIP_EXTRACT_BEFORE_ARGS:=-qo}" ; \
+				_EXTRACT_AFTER_ARGS="$${ZIP_EXTRACT_AFTER_ARGS:=-d ${WRKDIR}}" ;; \
+		esac ; \
+		if ! (cd ${WRKDIR} && $${_EXTRACT_CMD} $${_EXTRACT_BEFORE_ARGS} ${_DISTDIR}/$$file $${_EXTRACT_AFTER_ARGS});\
 		then \
 			exit 1; \
 		fi; \
