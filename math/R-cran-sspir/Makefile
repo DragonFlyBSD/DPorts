@@ -5,6 +5,7 @@ PORTNAME=	sspir
 PORTVERSION=	0.2.10
 PORTREVISION=	3
 CATEGORIES=	math
+MASTER_SITES=	http://cran.r-project.org/src/contrib/Archive/sspir/
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	skreuzer@FreeBSD.org
