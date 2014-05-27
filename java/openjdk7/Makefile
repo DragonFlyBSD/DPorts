@@ -3,7 +3,7 @@
 
 PORTNAME=	openjdk
 PORTVERSION=	${JDK_MAJOR_VERSION}.${PORT_MINOR_VERSION}.${PORT_BUILD_NUMBER}
-PORTREVISION=	4
+PORTREVISION=	5
 PORTEPOCH=	1
 CATEGORIES=	java devel
 MASTER_SITES=	http://download.java.net/openjdk/jdk${JDK_MAJOR_VERSION}u${JDK_MINOR_VERSION}/promoted/b${JDK_BUILD_NUMBER}/ \
@@ -31,7 +31,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 
 USES=		dos2unix iconv gmake zip
 USE_XORG+=	x11 xext xi xrender xt xtst
-MAKE_ARGS=	CC=${CC} CXX=${CXX} HOST_CC=${CC}
+MAKE_ARGS=	CC=${CC:Q} CXX=${CXX:Q} HOST_CC=${CC:Q}
 MAKE_JOBS_UNSAFE=	yes
 
 OPTIONS_DEFINE=		DEBUG POLICY TZUPDATE
@@ -106,9 +106,9 @@ MAKE_ENV+=	LANG="C" \
 MAKE_ENV+=	HOTSPOT_BUILD_JOBS=${MAKE_JOBS_NUMBER}
 MAKE_ENV+=	ALT_PARALLEL_COMPILE_JOBS=${MAKE_JOBS_NUMBER}
 
-DEBUG_MAKE_ENV=	ALT_OBJCOPY="/nonexistent"
+DEBUG_MAKE_ENV=	ALT_OBJCOPY=${NONEXISTENT}
 POLICY_MAKE_ENV=	UNLIMITED_CRYPTO=1
-TZUPDATE_RUN_DEPENDS=  ${LOCALBASE}/share/java/zi:${PORTSDIR}/java/java-zoneinfo
+TZUPDATE_RUN_DEPENDS=	${LOCALBASE}/share/java/zi:${PORTSDIR}/java/java-zoneinfo
 
 .include <bsd.port.options.mk>
 
@@ -130,7 +130,8 @@ MAKE_ENV+=	EXTRA_CFLAGS=-DLIBICONV_PLUG
 
 post-patch:
 	@${REINPLACE_CMD} "s|%%LOCALBASE%%|${LOCALBASE}|" \
-		${WRKSRC}/hotspot/src/os/bsd/vm/os_bsd.cpp
+		${WRKSRC}/hotspot/src/os/bsd/vm/os_bsd.cpp \
+		${WRKSRC}/jdk/src/share/classes/sun/print/PSPrinterJob.java
 .if empty(ICONV_LIB)
 	@${REINPLACE_CMD} 's| -liconv||' \
 		${WRKSRC}/Makefile \
