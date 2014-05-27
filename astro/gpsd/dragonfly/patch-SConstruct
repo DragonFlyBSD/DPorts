@@ -1,0 +1,21 @@
+--- SConstruct.intermediate	2014-05-26 17:43:06.664714000 +0000
++++ SConstruct
+@@ -451,6 +451,8 @@ if env['ncurses']:
+         ncurseslibs = ['!ncurses5-config --libs --cflags']
+     elif config.CheckExecutable('ncursesw5-config --version', 'ncursesw5-config'):
+         ncurseslibs = ['!ncursesw5-config --libs --cflags']
++    elif sys.platform.startswith('dragonfly'):
++        ncurseslibs= [ '-lncurses' ]
+     elif sys.platform.startswith('freebsd'):
+         ncurseslibs= [ '-lncurses' ]
+     elif sys.platform.startswith('openbsd'):
+@@ -468,6 +470,9 @@ if env['usb']:
+     elif sys.platform.startswith("freebsd"):
+         confdefs.append("#define HAVE_LIBUSB 1\n")
+         usblibs = [ "-lusb"]
++    elif sys.platform.startswith("dragonfly"):
++        confdefs.append("#define HAVE_LIBUSB 1\n")
++        usblibs = [ "-lusb"]
+     else:
+         confdefs.append("/* #undef HAVE_LIBUSB */\n")
+         usblibs = []
