@@ -159,7 +159,6 @@
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/contrib/extjs/locale/ext-lang-vn.js
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/contrib/extjs/locale/ext-lang-zh_CN.js
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/contrib/extjs/locale/ext-lang-zh_TW.js
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/contrib/extjs/resources/charts.swf
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/contrib/extjs/resources/css/debug.css
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/contrib/extjs/resources/css/ext-all-notheme.css
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/contrib/extjs/resources/css/ext-all.css
@@ -2245,6 +2244,7 @@
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Classes/Cache/Exception/InvalidCacheException.php
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Classes/Cache/Exception/InvalidDataException.php
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Classes/Cache/Exception/NoSuchCacheException.php
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Classes/Cache/Exception/NoSuchCacheGroupException.php
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Classes/Cache/Frontend/AbstractFrontend.php
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Classes/Cache/Frontend/FrontendInterface.php
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Classes/Cache/Frontend/PhpFrontend.php
@@ -2533,7 +2533,10 @@
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Migrations/Code/ClassAliasMap.php
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Migrations/Code/LegacyClassesForIde.php
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Resources/PHP/FileDumpEID.php
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Resources/PHP/TYPO3.Flow/Classes/TYPO3/Flow/Core/ClassLoader.php
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Resources/PHP/TYPO3.Flow/Classes/TYPO3/Flow/Exception.php
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Resources/PHP/TYPO3.Flow/Classes/TYPO3/Flow/Log/LoggerInterface.php
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Resources/PHP/TYPO3.Flow/Classes/TYPO3/Flow/Log/SystemLoggerInterface.php
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Resources/PHP/TYPO3.Flow/Classes/TYPO3/Flow/Package/Documentation.php
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Resources/PHP/TYPO3.Flow/Classes/TYPO3/Flow/Package/Documentation/Format.php
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Resources/PHP/TYPO3.Flow/Classes/TYPO3/Flow/Package/Exception.php
@@ -2612,7 +2615,6 @@
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Exception.php
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/Category/Collection/CategoryCollectionTest.php
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/AbstractDataHandlerActionTestCase.php
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/DataHandlerTest.php
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Framework/ActionService.php
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Framework/DataSet.php
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Group/AbstractActionTestCase.php
@@ -2637,97 +2639,103 @@
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Group/Modify/DataSet/modifyContentOfRelation.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Group/Modify/DataSet/modifyElementOfRelation.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Group/Modify/DataSet/moveContentOfRelationToDifferentPage.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/AbstractLocalizationTestCase.php
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/AbstractTestCase.php
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/AbstractActionTestCase.php
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/DataSet/Assertion/changeParentContentSorting.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/DataSet/Assertion/copyPage.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/DataSet/Assertion/copyPageWHotelBeforeParentContent.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/DataSet/Assertion/copyParentContent.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/DataSet/Assertion/createNCopyParentContentNHotelNOfferChildren.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/DataSet/Assertion/createNLocalizeParentContentNHotelNOfferChildren.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/DataSet/Assertion/createParentContent.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/DataSet/Assertion/createParentContentNHotelNOfferChildren.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/DataSet/Assertion/deletePage.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/DataSet/Assertion/deleteParentContent.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/DataSet/Assertion/localizeParentContent.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/DataSet/Assertion/modifyOnlyHotelChild.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/DataSet/Assertion/modifyPage.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/DataSet/Assertion/modifyParentContent.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/DataSet/Assertion/modifyParentNAddHotelChild.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/DataSet/Assertion/modifyParentNChangeHotelChildrenSorting.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/DataSet/Assertion/modifyParentNDeleteHotelChild.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/DataSet/Assertion/modifyParentNHotelChild.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/DataSet/Assertion/moveParentContentToDifferentPage.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/DataSet/Assertion/moveParentContentToDifferentPageNChangeSorting.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/DataSet/Scenario/LiveDefaultElements.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/DataSet/Scenario/LiveDefaultPages.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/LiveActionTest.php
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/Fixtures/MToNMMAsymmetric.xml
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/DataSet/LiveDefaultElements.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/DataSet/LiveDefaultPages.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/Modify/ActionTest.php
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/Modify/DataSet/changeParentContentSorting.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/Modify/DataSet/copyPage.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/Modify/DataSet/copyPageWHotelBeforeParentContent.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/Modify/DataSet/copyParentContent.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/Modify/DataSet/copyParentContentToDifferentPage.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/Modify/DataSet/createNCopyParentContentNHotelNOfferChildren.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/Modify/DataSet/createNLocalizeParentContentNHotelNOfferChildren.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/Modify/DataSet/createParentContent.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/Modify/DataSet/createParentContentNHotelNOfferChildren.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/Modify/DataSet/deletePage.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/Modify/DataSet/deleteParentContent.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/Modify/DataSet/localizeParentContentKeep.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/Modify/DataSet/localizeParentContentSelect.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/Modify/DataSet/localizeParentContentWAllChildrenKeep.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/Modify/DataSet/localizeParentContentWAllChildrenSelect.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/Modify/DataSet/modifyOnlyHotelChild.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/Modify/DataSet/modifyPage.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/Modify/DataSet/modifyParentContent.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/Modify/DataSet/modifyParentNAddHotelChild.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/Modify/DataSet/modifyParentNChangeHotelChildrenSorting.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/Modify/DataSet/modifyParentNDeleteHotelChild.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/Modify/DataSet/modifyParentNHotelChild.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/Modify/DataSet/moveParentContentToDifferentPage.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/Modify/DataSet/moveParentContentToDifferentPageNChangeSorting.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/AbstractActionTestCase.php
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/DataSet/Assertion/changeParentContentSorting.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/DataSet/Assertion/copyPage.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/DataSet/Assertion/copyPageWHotelBeforeParentContent.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/DataSet/Assertion/copyParentContent.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/DataSet/Assertion/createNCopyParentContentNHotelNOfferChildren.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/DataSet/Assertion/createNLocalizeParentContentNHotelNOfferChildren.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/DataSet/Assertion/createParentContent.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/DataSet/Assertion/createParentContentNHotelNOfferChildren.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/DataSet/Assertion/deletePage.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/DataSet/Assertion/deleteParentContent.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/DataSet/Assertion/localizeParentContent.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/DataSet/Assertion/modifyOnlyHotelChild.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/DataSet/Assertion/modifyPage.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/DataSet/Assertion/modifyParentContent.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/DataSet/Assertion/modifyParentNAddHotelChild.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/DataSet/Assertion/modifyParentNChangeHotelChildrenSorting.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/DataSet/Assertion/modifyParentNDeleteHotelChild.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/DataSet/Assertion/modifyParentNHotelChild.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/DataSet/Assertion/moveParentContentToDifferentPage.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/DataSet/Assertion/moveParentContentToDifferentPageNChangeSorting.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/DataSet/Scenario/LiveDefaultElements.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/DataSet/Scenario/LiveDefaultPages.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/LiveActionTest.php
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/MToNMMAsymmetricLocalizationKeepTest.php
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/MToNMMAsymmetricLocalizationSelectTest.php
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/DataSet/LiveDefaultElements.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/DataSet/LiveDefaultPages.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/ActionTest.php
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/changeParentContentSorting.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/copyPage.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/copyPageWHotelBeforeParentContent.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/copyParentContent.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/copyParentContentToDifferentPage.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/createNCopyParentContentNHotelNOfferChildren.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/createNLocalizeParentContentNHotelNOfferChildren.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/createParentContent.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/createParentContentNHotelNOfferChildren.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/deletePage.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/deleteParentContent.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/localizeParentContentKeep.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/localizeParentContentSelect.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/localizeParentContentWAllChildrenKeep.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/localizeParentContentWAllChildrenSelect.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/modifyOnlyHotelChild.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/modifyPage.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/modifyParentContent.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/modifyParentNAddHotelChild.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/modifyParentNChangeHotelChildrenSorting.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/modifyParentNDeleteHotelChild.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/modifyParentNHotelChild.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/moveParentContentToDifferentPage.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/moveParentContentToDifferentPageNChangeSorting.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/ManyToMany/AbstractActionTestCase.php
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/ManyToMany/DataSet/Assertion/addCategoryRelation.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/ManyToMany/DataSet/Assertion/changeCategoryRelationSorting.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/ManyToMany/DataSet/Assertion/copyCategoryOfRelation.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/ManyToMany/DataSet/Assertion/copyContentOfRelation.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/ManyToMany/DataSet/Assertion/copyPage.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/ManyToMany/DataSet/Assertion/deleteCategoryOfRelation.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/ManyToMany/DataSet/Assertion/deleteCategoryRelation.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/ManyToMany/DataSet/Assertion/deleteContentOfRelation.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/ManyToMany/DataSet/Assertion/localizeCategoryOfRelation.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/ManyToMany/DataSet/Assertion/localizeContentOfRelation.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/ManyToMany/DataSet/Assertion/modifyBothsOfRelation.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/ManyToMany/DataSet/Assertion/modifyCategoryOfRelation.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/ManyToMany/DataSet/Assertion/modifyContentOfRelation.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/ManyToMany/DataSet/Assertion/moveContentOfRelationToDifferentPage.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/ManyToMany/DataSet/Scenario/LiveDefaultElements.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/ManyToMany/DataSet/Scenario/LiveDefaultPages.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/ManyToMany/LiveActionTest.php
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/ManyToMany/DataSet/LiveDefaultElements.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/ManyToMany/DataSet/LiveDefaultPages.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/ManyToMany/Modify/ActionTest.php
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/ManyToMany/Modify/DataSet/addCategoryRelation.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/ManyToMany/Modify/DataSet/changeCategoryRelationSorting.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/ManyToMany/Modify/DataSet/copyCategoryOfRelation.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/ManyToMany/Modify/DataSet/copyContentOfRelation.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/ManyToMany/Modify/DataSet/copyPage.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/ManyToMany/Modify/DataSet/deleteCategoryOfRelation.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/ManyToMany/Modify/DataSet/deleteCategoryRelation.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/ManyToMany/Modify/DataSet/deleteContentOfRelation.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/ManyToMany/Modify/DataSet/localizeCategoryOfRelation.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/ManyToMany/Modify/DataSet/localizeContentOfRelation.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/ManyToMany/Modify/DataSet/modifyBothsOfRelation.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/ManyToMany/Modify/DataSet/modifyCategoryOfRelation.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/ManyToMany/Modify/DataSet/modifyContentOfRelation.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/ManyToMany/Modify/DataSet/moveContentOfRelationToDifferentPage.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Regular/AbstractActionTestCase.php
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Regular/DataSet/Assertion/changeContentSorting.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Regular/DataSet/Assertion/changePageSorting.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Regular/DataSet/Assertion/copyContent.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Regular/DataSet/Assertion/copyPage.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Regular/DataSet/Assertion/createContents.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Regular/DataSet/Assertion/createPage.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Regular/DataSet/Assertion/deleteContent.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Regular/DataSet/Assertion/deletePage.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Regular/DataSet/Assertion/localizeContent.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Regular/DataSet/Assertion/localizePage.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Regular/DataSet/Assertion/modifyContent.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Regular/DataSet/Assertion/modifyPage.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Regular/DataSet/Assertion/moveContentToDifferentPage.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Regular/DataSet/Assertion/moveContentToDifferentPageNChangeSorting.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Regular/DataSet/Assertion/movePageToDifferentPage.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Regular/DataSet/Assertion/movePageToDifferentPageNChangeSorting.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Regular/DataSet/Scenario/LiveDefaultElements.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Regular/DataSet/Scenario/LiveDefaultPages.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Regular/LiveActionTest.php
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Regular/DataSet/LiveDefaultElements.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Regular/DataSet/LiveDefaultPages.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Regular/Modify/ActionTest.php
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Regular/Modify/DataSet/changeContentSorting.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Regular/Modify/DataSet/changePageSorting.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Regular/Modify/DataSet/copyContent.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Regular/Modify/DataSet/copyPage.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Regular/Modify/DataSet/copyPasteContent.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Regular/Modify/DataSet/createContents.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Regular/Modify/DataSet/createPage.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Regular/Modify/DataSet/deleteContent.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Regular/Modify/DataSet/deletePage.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Regular/Modify/DataSet/localizeContent.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Regular/Modify/DataSet/localizePage.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Regular/Modify/DataSet/modifyContent.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Regular/Modify/DataSet/modifyPage.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Regular/Modify/DataSet/moveContentToDifferentPage.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Regular/Modify/DataSet/moveContentToDifferentPageNChangeSorting.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Regular/Modify/DataSet/movePageToDifferentPage.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Regular/Modify/DataSet/movePageToDifferentPageNChangeSorting.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Regular/Modify/DataSet/movePasteContentToDifferentPage.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Select/AbstractActionTestCase.php
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Select/DataSet/LiveDefaultElements.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Select/DataSet/LiveDefaultPages.csv
@@ -2799,10 +2807,6 @@
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/Framework/Frontend/ResponseContent.php
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/Framework/Scripts/Request.php
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/Page/PageRendererTest.php
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/Resource/BaseTestCase.php
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/Resource/Driver/LocalDriverTest.php
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/Resource/FolderTest.php
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/Resource/ResourceStorageTest.php
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/Utility/File/ExtendedFileUtilityTest.php
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/FunctionalTestCase.php
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/FunctionalTestCaseBootstrapUtility.php
@@ -2927,6 +2931,7 @@
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Unit/Utility/ClassNamingUtilityTest.php
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Unit/Utility/ClientUtilityTest.php
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Unit/Utility/ExtensionManagementUtilityTest.php
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Unit/Utility/Fixtures/GeneralUtilityFixture.php
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Unit/Utility/Fixtures/MathUtilityTestClassWithStringRepresentationFixture.php
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Unit/Utility/Fixtures/RuntimeException.php
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Unit/Utility/Fixtures/clear.gif
@@ -3088,15 +3093,11 @@
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/dbal/Documentation/To-doList/Oracle/Index.rst
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/dbal/Migrations/Code/ClassAliasMap.php
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/dbal/Resources/Private/Language/locallang_em.xlf
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/dbal/Tests/Functional/ClassImplementationRegistrationTest.php
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/dbal/Tests/Unit/Database/AbstractTestCase.php
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/dbal/Tests/Unit/Database/DatabaseConnectionMssqlTest.php
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/dbal/Tests/Unit/Database/DatabaseConnectionOracleTest.php
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/dbal/Tests/Unit/Database/DatabaseConnectionPostgresqlTest.php
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/dbal/Tests/Unit/Database/DatabaseConnectionTest.php
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/dbal/Tests/Unit/Database/FakeDatabaseConnection.php
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/dbal/Tests/Unit/Database/Fixtures/mssql.config.php
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/dbal/Tests/Unit/Database/Fixtures/oci8.config.php
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/dbal/Tests/Unit/Database/Fixtures/postgresql.config.php
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/dbal/Tests/Unit/Database/SqlParserTest.php
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/dbal/composer.json
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/dbal/ext_conf_template.txt
@@ -3506,13 +3507,6 @@
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/extbase/Tests/Fixture/SlotFixture.php
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/extbase/Tests/Fixture/TxClassWithGettersAndSetters.php
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/extbase/Tests/Fixture/ValueObject.php
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/extbase/Tests/Functional/BaseTestCase.php
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/extbase/Tests/Functional/Domain/Model/FileContextTest.php
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/extbase/Tests/Functional/Domain/Model/Fixture/FileContext.php
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/extbase/Tests/Functional/Domain/Model/Fixture/data_sys_file.xml
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/extbase/Tests/Functional/Domain/Model/Fixture/data_sys_file_collection.xml
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/extbase/Tests/Functional/Domain/Model/Fixture/data_sys_file_reference.xml
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/extbase/Tests/Functional/Domain/Model/Fixture/data_sys_file_storage.xml
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/extbase/Tests/Functional/Fixtures/Extensions/blog_example/Classes/Domain/Model/Administrator.php
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/extbase/Tests/Functional/Fixtures/Extensions/blog_example/Classes/Domain/Model/Blog.php
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/extbase/Tests/Functional/Fixtures/Extensions/blog_example/Classes/Domain/Model/Comment.php
@@ -3547,6 +3541,8 @@
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/extbase/Tests/Functional/Persistence/AddTest.php
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/extbase/Tests/Functional/Persistence/CountTest.php
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/extbase/Tests/Functional/Persistence/Fixtures/blogs.xml
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/extbase/Tests/Functional/Persistence/Fixtures/categories.xml
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/extbase/Tests/Functional/Persistence/Fixtures/category-mm.xml
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/extbase/Tests/Functional/Persistence/Fixtures/post-tag-mm.xml
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/extbase/Tests/Functional/Persistence/Fixtures/posts.xml
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/extbase/Tests/Functional/Persistence/Fixtures/tags.xml
@@ -5010,7 +5006,7 @@
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/indexed_search/Documentation/TechnicalDetails/UseOfHashes/Index.rst
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/indexed_search/Documentation/UserManual/Index.rst
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/indexed_search/Migrations/Code/ClassAliasMap.php
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/indexed_search/Resources/Private/Language/locallang.xml
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/indexed_search/Resources/Private/Language/locallang.xlf
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/indexed_search/Resources/Private/Language/locallang_em.xlf
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/indexed_search/Resources/Private/Partials/Rules.html
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/indexed_search/Resources/Private/Partials/Searchresult.html
@@ -5242,6 +5238,7 @@
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/install/Resources/Private/.htaccess
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/install/Resources/Private/FolderStructureTemplateFiles/fileadmin-temp-htaccess
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/install/Resources/Private/FolderStructureTemplateFiles/fileadmin-temp-index.html
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/install/Resources/Private/FolderStructureTemplateFiles/fileadmin-user_upload-temp-importexport-htaccess
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/install/Resources/Private/FolderStructureTemplateFiles/uploads-index.html
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/install/Resources/Private/Font/README.txt
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/install/Resources/Private/Font/vera.ttf
@@ -9230,8 +9227,6 @@
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/Group/PublishAll/DataSet/modifyContentOfRelation.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/Group/PublishAll/DataSet/modifyElementOfRelation.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/Group/PublishAll/DataSet/moveContentOfRelationToDifferentPage.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/AbstractOneToNTestCase.php
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/AbstractTestCase.php
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/AbstractActionTestCase.php
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/DataSet/LiveDefaultElements.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/DataSet/LiveDefaultPages.csv
@@ -9241,6 +9236,7 @@
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/Modify/DataSet/copyPage.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/Modify/DataSet/copyPageWHotelBeforeParentContent.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/Modify/DataSet/copyParentContent.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/Modify/DataSet/copyParentContentToDifferentPage.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/Modify/DataSet/createNCopyParentContentNHotelNOfferChildren.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/Modify/DataSet/createNCopyParentContentNHotelNOfferChildrenNDiscardCopiedParent.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/Modify/DataSet/createNLocalizeParentContentNHotelNOfferChildren.csv
@@ -9251,7 +9247,10 @@
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/Modify/DataSet/deletePage.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/Modify/DataSet/deleteParentContent.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/Modify/DataSet/deleteParentContentNDiscardDeletedParent.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/Modify/DataSet/localizeParentContent.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/Modify/DataSet/localizeParentContentKeep.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/Modify/DataSet/localizeParentContentSelect.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/Modify/DataSet/localizeParentContentWAllChildrenKeep.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/Modify/DataSet/localizeParentContentWAllChildrenSelect.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/Modify/DataSet/modifyNDiscardNModifyParentWHotelChild.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/Modify/DataSet/modifyOnlyHotelChild.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/Modify/DataSet/modifyPage.csv
@@ -9269,6 +9268,7 @@
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/Publish/DataSet/copyPage.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/Publish/DataSet/copyPageWHotelBeforeParentContent.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/Publish/DataSet/copyParentContent.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/Publish/DataSet/copyParentContentToDifferentPage.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/Publish/DataSet/createNCopyParentContentNHotelNOfferChildren.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/Publish/DataSet/createNCopyParentContentNHotelNOfferChildrenNDiscardCopiedParent.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/Publish/DataSet/createNLocalizeParentContentNHotelNOfferChildren.csv
@@ -9279,7 +9279,10 @@
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/Publish/DataSet/deletePage.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/Publish/DataSet/deleteParentContent.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/Publish/DataSet/deleteParentContentNDiscardDeletedParent.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/Publish/DataSet/localizeParentContent.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/Publish/DataSet/localizeParentContentKeep.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/Publish/DataSet/localizeParentContentSelect.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/Publish/DataSet/localizeParentContentWAllChildrenKeep.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/Publish/DataSet/localizeParentContentWAllChildrenSelect.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/Publish/DataSet/modifyNDiscardNModifyParentWHotelChild.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/Publish/DataSet/modifyOnlyHotelChild.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/Publish/DataSet/modifyPage.csv
@@ -9297,6 +9300,7 @@
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/PublishAll/DataSet/copyPage.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/PublishAll/DataSet/copyPageWHotelBeforeParentContent.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/PublishAll/DataSet/copyParentContent.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/PublishAll/DataSet/copyParentContentToDifferentPage.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/PublishAll/DataSet/createNCopyParentContentNHotelNOfferChildren.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/PublishAll/DataSet/createNCopyParentContentNHotelNOfferChildrenNDiscardCopiedParent.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/PublishAll/DataSet/createNLocalizeParentContentNHotelNOfferChildren.csv
@@ -9307,7 +9311,10 @@
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/PublishAll/DataSet/deletePage.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/PublishAll/DataSet/deleteParentContent.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/PublishAll/DataSet/deleteParentContentNDiscardDeletedParent.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/PublishAll/DataSet/localizeParentContent.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/PublishAll/DataSet/localizeParentContentKeep.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/PublishAll/DataSet/localizeParentContentSelect.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/PublishAll/DataSet/localizeParentContentWAllChildrenKeep.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/PublishAll/DataSet/localizeParentContentWAllChildrenSelect.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/PublishAll/DataSet/modifyNDiscardNModifyParentWHotelChild.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/PublishAll/DataSet/modifyOnlyHotelChild.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/PublishAll/DataSet/modifyPage.csv
@@ -9320,8 +9327,6 @@
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/PublishAll/DataSet/modifyParentNHotelChildNDiscardModifiedParent.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/PublishAll/DataSet/moveParentContentToDifferentPage.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/PublishAll/DataSet/moveParentContentToDifferentPageNChangeSorting.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/Fixtures/OneToNCSV.xml
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/Fixtures/OneToNForeignField.xml
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/AbstractActionTestCase.php
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/DataSet/LiveDefaultElements.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/DataSet/LiveDefaultPages.csv
@@ -9331,6 +9336,7 @@
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/copyPage.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/copyPageWHotelBeforeParentContent.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/copyParentContent.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/copyParentContentToDifferentPage.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/createNCopyParentContentNHotelNOfferChildren.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/createNCopyParentContentNHotelNOfferChildrenNDiscardCopiedParent.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/createNLocalizeParentContentNHotelNOfferChildren.csv
@@ -9341,7 +9347,10 @@
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/deletePage.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/deleteParentContent.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/deleteParentContentNDiscardDeletedParent.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/localizeParentContent.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/localizeParentContentKeep.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/localizeParentContentSelect.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/localizeParentContentWAllChildrenKeep.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/localizeParentContentWAllChildrenSelect.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/modifyNDiscardNModifyParentWHotelChild.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/modifyOnlyHotelChild.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/modifyPage.csv
@@ -9359,6 +9368,7 @@
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/Publish/DataSet/copyPage.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/Publish/DataSet/copyPageWHotelBeforeParentContent.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/Publish/DataSet/copyParentContent.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/Publish/DataSet/copyParentContentToDifferentPage.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/Publish/DataSet/createNCopyParentContentNHotelNOfferChildren.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/Publish/DataSet/createNCopyParentContentNHotelNOfferChildrenNDiscardCopiedParent.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/Publish/DataSet/createNLocalizeParentContentNHotelNOfferChildren.csv
@@ -9369,7 +9379,10 @@
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/Publish/DataSet/deletePage.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/Publish/DataSet/deleteParentContent.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/Publish/DataSet/deleteParentContentNDiscardDeletedParent.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/Publish/DataSet/localizeParentContent.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/Publish/DataSet/localizeParentContentKeep.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/Publish/DataSet/localizeParentContentSelect.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/Publish/DataSet/localizeParentContentWAllChildrenKeep.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/Publish/DataSet/localizeParentContentWAllChildrenSelect.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/Publish/DataSet/modifyNDiscardNModifyParentWHotelChild.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/Publish/DataSet/modifyOnlyHotelChild.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/Publish/DataSet/modifyPage.csv
@@ -9387,6 +9400,7 @@
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/PublishAll/DataSet/copyPage.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/PublishAll/DataSet/copyPageWHotelBeforeParentContent.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/PublishAll/DataSet/copyParentContent.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/PublishAll/DataSet/copyParentContentToDifferentPage.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/PublishAll/DataSet/createNCopyParentContentNHotelNOfferChildren.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/PublishAll/DataSet/createNCopyParentContentNHotelNOfferChildrenNDiscardCopiedParent.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/PublishAll/DataSet/createNLocalizeParentContentNHotelNOfferChildren.csv
@@ -9397,7 +9411,10 @@
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/PublishAll/DataSet/deletePage.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/PublishAll/DataSet/deleteParentContent.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/PublishAll/DataSet/deleteParentContentNDiscardDeletedParent.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/PublishAll/DataSet/localizeParentContent.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/PublishAll/DataSet/localizeParentContentKeep.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/PublishAll/DataSet/localizeParentContentSelect.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/PublishAll/DataSet/localizeParentContentWAllChildrenKeep.csv
+%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/PublishAll/DataSet/localizeParentContentWAllChildrenSelect.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/PublishAll/DataSet/modifyNDiscardNModifyParentWHotelChild.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/PublishAll/DataSet/modifyOnlyHotelChild.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/PublishAll/DataSet/modifyPage.csv
@@ -9410,9 +9427,6 @@
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/PublishAll/DataSet/modifyParentNHotelChildNDiscardModifiedParent.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/PublishAll/DataSet/moveParentContentToDifferentPage.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/PublishAll/DataSet/moveParentContentToDifferentPageNChangeSorting.csv
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/MToNMMTest.php
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/OneToNCSVTest.php
-%%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/OneToNForeignFieldTest.php
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/ManyToMany/AbstractActionTestCase.php
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/ManyToMany/DataSet/LiveDefaultElements.csv
 %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/ManyToMany/DataSet/LiveDefaultPages.csv
@@ -9641,7 +9655,6 @@
 @dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/Modify
 @dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/DataSet
 @dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField
-@dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/Fixtures
 @dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/PublishAll/DataSet
 @dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/PublishAll
 @dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/CSV/Publish/DataSet
@@ -11082,9 +11095,6 @@
 @dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/extbase/Tests/Functional/Fixtures/Extensions/blog_example
 @dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/extbase/Tests/Functional/Fixtures/Extensions
 @dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/extbase/Tests/Functional/Fixtures
-@dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/extbase/Tests/Functional/Domain/Model/Fixture
-@dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/extbase/Tests/Functional/Domain/Model
-@dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/extbase/Tests/Functional/Domain
 @dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/extbase/Tests/Functional
 @dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/extbase/Tests/Fixture
 @dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/extbase/Tests
@@ -11181,10 +11191,8 @@
 @dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/dbal/res/oracle
 @dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/dbal/res
 @dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/dbal/mod1
-@dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/dbal/Tests/Unit/Database/Fixtures
 @dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/dbal/Tests/Unit/Database
 @dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/dbal/Tests/Unit
-@dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/dbal/Tests/Functional
 @dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/dbal/Tests
 @dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/dbal/Resources/Private/Language
 @dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/dbal/Resources/Private
@@ -11351,8 +11359,6 @@
 @dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Integrity
 @dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/Utility/File
 @dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/Utility
-@dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/Resource/Driver
-@dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/Resource
 @dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/Page
 @dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/Framework/Scripts
 @dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/Framework/Frontend/Hook
@@ -11378,21 +11384,20 @@
 @dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Select/Modify
 @dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Select/DataSet
 @dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Select
-@dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Regular/DataSet/Scenario
-@dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Regular/DataSet/Assertion
+@dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Regular/Modify/DataSet
+@dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Regular/Modify
 @dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Regular/DataSet
 @dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/Regular
-@dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/ManyToMany/DataSet/Scenario
-@dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/ManyToMany/DataSet/Assertion
+@dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/ManyToMany/Modify/DataSet
+@dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/ManyToMany/Modify
 @dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/ManyToMany/DataSet
 @dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/ManyToMany
-@dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/DataSet/Scenario
-@dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/DataSet/Assertion
+@dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet
+@dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/Modify
 @dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/DataSet
 @dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField
-@dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/Fixtures
-@dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/DataSet/Scenario
-@dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/DataSet/Assertion
+@dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/Modify/DataSet
+@dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/Modify
 @dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV/DataSet
 @dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/CSV
 @dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Tests/Functional/DataHandling/IRRE
@@ -11420,6 +11425,8 @@
 @dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Resources/PHP/TYPO3.Flow/Classes/TYPO3/Flow/Package/Exception
 @dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Resources/PHP/TYPO3.Flow/Classes/TYPO3/Flow/Package/Documentation
 @dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Resources/PHP/TYPO3.Flow/Classes/TYPO3/Flow/Package
+@dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Resources/PHP/TYPO3.Flow/Classes/TYPO3/Flow/Log
+@dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Resources/PHP/TYPO3.Flow/Classes/TYPO3/Flow/Core
 @dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Resources/PHP/TYPO3.Flow/Classes/TYPO3/Flow
 @dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Resources/PHP/TYPO3.Flow/Classes/TYPO3
 @dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3/sysext/core/Resources/PHP/TYPO3.Flow/Classes
@@ -11865,3 +11872,5 @@
 @dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%/typo3
 @dirrmtry %%WWWDIR%%_src-%%PORTVERSION%%
 @dirrmtry %%WWWDIR%%-LTS
+@owner
+@group
