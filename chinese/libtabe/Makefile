@@ -3,16 +3,16 @@
 
 PORTNAME=	libtabe
 PORTVERSION=	0.2.6
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	chinese
 MASTER_SITES=	ftp://cle.linux.org.tw/pub/xcin/cvs/
 
 MAINTAINER=	clsung@FreeBSD.org
 COMMENT=	Unified library for Chinese text processing
 
+USES=		gmake
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-USES=		gmake
 USE_BDB=	yes
 OBSOLETE_BDB_VAR=	USE_DB2
 DATADIR=	${PREFIX}/share/tabe
@@ -26,14 +26,16 @@ CONFIGURE_ARGS=	--prefix=${PREFIX} \
 		--enable-shared
 MAKE_JOBS_UNSAFE=	yes
 
-NO_STAGE=	yes
-.include <bsd.port.pre.mk>
+OPTIONS_DEFINE=	DOCS X11
+OPTIONS_DEFAULT=	DOCS
 
-.if !defined(WITHOUT_X11)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MX11}
 USE_XORG=	x11
 PLIST_SUB+=	X11=""
 .else
-CONFIGURE_ARGS+=--without-x
+CONFIGURE_ARGS+=	--without-x
 PLIST_SUB+=	X11="@comment "
 .endif
 
@@ -50,21 +52,21 @@ pre-everything::
 
 post-patch:
 	${REINPLACE_CMD} -e '/objformat/s/echo aout/echo elf/' ${WRKSRC}/configure
-.if defined(WITHOUT_X11)
+.if !${PORT_OPTIONS:MX11}
 	${REINPLACE_CMD} -e '/all:/s/ bims//; /bims/d' ${WRKSRC}/src/Makefile.in
 .endif
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/tsi-src/README ${DOCSDIR}/README.tsi
-.if !defined(WITHOUT_X11)
-	${INSTALL_DATA} ${WRKSRC}/src/supports/bims/README ${DOCSDIR}/README.bims
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/tsi-src/README ${STAGEDIR}${DOCSDIR}/README.tsi
+.if ${PORT_OPTIONS:MX11}
+	${INSTALL_DATA} ${WRKSRC}/src/supports/bims/README ${STAGEDIR}${DOCSDIR}/README.bims
 .endif
 .for DOC in BoPoMoFo.shtml Changes Changes.pre-0.1 TODO ZuYinCode.txt \
 		et26.txt libtabe.sgml
-	${INSTALL_DATA} ${WRKSRC}/doc/${DOC} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/${DOC} ${STAGEDIR}${DOCSDIR}
 .endfor
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
