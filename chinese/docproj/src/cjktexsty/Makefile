@@ -4,10 +4,16 @@ PROG=	cjktexsty
 SRCS=	cjktexsty.l
 
 PREFIX?=	/usr/local
-BINDIR=	${PREFIX}/bin
-CFLAGS+=-I${PREFIX}/include
-LDADD=	-L${PREFIX}/lib -liconv
+LOCALBASE?=	${PREFIX}
+BINDIR=		${PREFIX}/bin
+CFLAGS+=	-I${LOCALBASE}/include
+LDADD=		-L${LOCALBASE}/lib -liconv
 NO_MAN=
 NOMAN=
+
+.if defined(BSD_INSTALL_PROGRAM)
+install:
+	${BSD_INSTALL_PROGRAM} ${PROG} ${DESTDIR}${BINDIR}/${PROGNAME}
+.endif
 
 .include <bsd.prog.mk>
