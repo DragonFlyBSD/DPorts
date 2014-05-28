@@ -3549,7 +3549,7 @@ do-extract:
 		*.lzh)	_EXTRACT_CMD=${LHA_CMD} ; \
 				_EXTRACT_BEFORE_ARGS="$${LHA_EXTRACT_BEFORE_ARGS:=xfpw=${WRKDIR}}" ; \
 				_EXTRACT_AFTER_ARGS="$${LHA_EXTRACT_AFTER_ARGS:=}" ;; \
-		*.tar|*.tar.bz2|*.tbz|*.tgz|*.tar.lzma|*.tar.xz|*.txz|*.tar.Z)	_EXTRACT_CMD=${TAR} ; \
+		*.tar|*.tar.bz2|*.tbz|*.tar.gz|*.tgz|*.tar.lzma|*.tar.xz|*.txz|*.tar.Z)	_EXTRACT_CMD=${TAR} ; \
 				_EXTRACT_BEFORE_ARGS="$${TAR_EXTRACT_BEFORE_ARGS:=-xf}" ; \
 				_EXTRACT_AFTER_ARGS="$${TAR_EXTRACT_AFTER_ARGS:=--no-same-owner --no-same-permissions}" ;; \
 		*.zip)	_EXTRACT_CMD=${UNZIP_CMD} ; \
