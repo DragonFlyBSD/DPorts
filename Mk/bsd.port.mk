@@ -2224,13 +2224,37 @@ PATCH_DIST_ARGS+=	--suffix .orig
 TAR?=	/usr/bin/tar
 
 # EXTRACT_SUFX is defined in .pre.mk section
-EXTRACT_CMD?=	${TAR}
-EXTRACT_BEFORE_ARGS?=	-xf
+ZIP_BEFORE_ARGS?=	-qo
+ZIP_AFTER_ARGS?=	-d ${WRKDIR}
+
+LHA_BEFORE_ARGS?=	xfpw=${WRKDIR}
+LHA_AFTER_ARGS?=
+
 .if defined(EXTRACT_PRESERVE_OWNERSHIP)
-EXTRACT_AFTER_ARGS?=
+TAR_AFTER_ARGS_DEFAULT=
 .else
-EXTRACT_AFTER_ARGS?=	--no-same-owner --no-same-permissions
+TAR_AFTER_ARGS_DEFAULT=	--no-same-owner --no-same-permissions
 .endif
+TAR_BEFORE_ARGS_DEFAULT= -xf
+
+.if !defined(TAR_BEFORE_ARGS)
+.  if defined(EXTRACT_BEFORE_ARGS)
+TAR_BEFORE_ARGS=	${EXTRACT_BEFORE_ARGS}
+.  else
+TAR_BEFORE_ARGS=	${TAR_BEFORE_ARGS_DEFAULT}
+.  endif
+.endif
+
+.if !defined(TAR_AFTER_ARGS)
+.  if defined(EXTRACT_AFTER_ARGS)
+TAR_AFTER_ARGS=		${EXTRACT_AFTER_ARGS}
+.  else
+TAR_AFTER_ARGS=		${TAR_AFTER_ARGS_DEFAULT}
+.  endif
+.endif
+
+EXTRACT_BEFORE_ARGS?=	${TAR_BEFORE_ARGS_DEFAULT}
+EXTRACT_AFTER_ARGS?=	${TAR_AFTER_ARGS_DEFAULT}
 
 # Figure out where the local mtree file is
 .if !defined(MTREE_FILE) && !defined(NO_MTREE)
@@ -3542,23 +3566,31 @@ do-extract:
 	@${RM} -rf ${WRKDIR}
 	@${MKDIR} ${WRKDIR}
 	@for file in ${EXTRACT_ONLY}; do \
-		_EXTRACT_CMD="${EXTRACT_CMD}" ; \
-		_EXTRACT_BEFORE_ARGS="${EXTRACT_BEFORE_ARGS}" ; \
-		_EXTRACT_AFTER_ARGS="${EXTRACT_AFTER_ARGS}" ; \
-		case $${file} in \
-		*.lzh)	_EXTRACT_CMD=${LHA_CMD} ; \
-				_EXTRACT_BEFORE_ARGS="$${LHA_EXTRACT_BEFORE_ARGS:=xfpw=${WRKDIR}}" ; \
-				_EXTRACT_AFTER_ARGS="$${LHA_EXTRACT_AFTER_ARGS:=}" ;; \
-		*.tar|*.tar.bz2|*.tbz|*.tar.gz|*.tgz|*.tar.lzma|*.tar.xz|*.txz|*.tar.Z)	_EXTRACT_CMD=${TAR} ; \
-				_EXTRACT_BEFORE_ARGS="$${TAR_EXTRACT_BEFORE_ARGS:=-xf}" ; \
-				_EXTRACT_AFTER_ARGS="$${TAR_EXTRACT_AFTER_ARGS:=--no-same-owner --no-same-permissions}" ;; \
-		*.zip)	_EXTRACT_CMD=${UNZIP_CMD} ; \
-				_EXTRACT_BEFORE_ARGS="$${ZIP_EXTRACT_BEFORE_ARGS:=-qo}" ; \
-				_EXTRACT_AFTER_ARGS="$${ZIP_EXTRACT_AFTER_ARGS:=-d ${WRKDIR}}" ;; \
-		esac ; \
-		if ! (cd ${WRKDIR} && $${_EXTRACT_CMD} $${_EXTRACT_BEFORE_ARGS} ${_DISTDIR}/$$file $${_EXTRACT_AFTER_ARGS});\
-		then \
-			exit 1; \
+		if [ -n "${EXTRACT_CMD}" ]; then \
+			if ! (cd ${WRKDIR} && ${EXTRACT_CMD} ${EXTRACT_BEFORE_ARGS} ${_DISTDIR}/$$file ${EXTRACT_AFTER_ARGS});\
+			then \
+				exit 1; \
+			fi; \
+		else \
+			case $${file} in \
+			*.tar|*.tbz|*.tgz|*.txz|*.tar.bz2|*.tar.gz|*.tar.lzma|*.tar.xz|*.tar.Z) \
+				_EXTRACT_CMD=${TAR} ; \
+					_EXTRACT_BEFORE_ARGS="${TAR_BEFORE_ARGS}" ; \
+					_EXTRACT_AFTER_ARGS="${TAR_AFTER_ARGS}" ;; \
+			*.lzh)	_EXTRACT_CMD=${LHA_CMD} ; \
+					_EXTRACT_BEFORE_ARGS="${LHA_BEFORE_ARGS}" ; \
+					_EXTRACT_AFTER_ARGS="${LHA_AFTER_ARGS}" ;; \
+			*.zip)	_EXTRACT_CMD=${UNZIP_CMD} ; \
+					_EXTRACT_BEFORE_ARGS="${ZIP_BEFORE_ARGS}" ; \
+					_EXTRACT_AFTER_ARGS="${ZIP_AFTER_ARGS}" ;; \
+			*)	_EXTRACT_CMD=${TAR} ; \
+					_EXTRACT_BEFORE_ARGS="${EXTRACT_BEFORE_ARGS}" ; \
+					_EXTRACT_AFTER_ARGS="${EXTRACT_AFTER_ARGS}" ;; \
+			esac ; \
+			if ! (cd ${WRKDIR} && $${_EXTRACT_CMD} $${_EXTRACT_BEFORE_ARGS} ${_DISTDIR}/$$file $${_EXTRACT_AFTER_ARGS});\
+			then \
+				exit 1; \
+			fi; \
 		fi; \
 	done
 .if !defined(EXTRACT_PRESERVE_OWNERSHIP)
