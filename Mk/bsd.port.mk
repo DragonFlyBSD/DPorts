@@ -2191,8 +2191,6 @@ PATCH_DIST_ARGS+=	--suffix .orig
 TAR?=	/usr/bin/tar
 
 # EXTRACT_SUFX is defined in .pre.mk section
-ZIP_BEFORE_ARGS?=	-qo
-ZIP_AFTER_ARGS?=	-d ${WRKDIR}
 
 LHA_BEFORE_ARGS?=	xfpw=${WRKDIR}
 LHA_AFTER_ARGS?=
@@ -2211,6 +2209,12 @@ TAR_BEFORE_ARGS=	${EXTRACT_BEFORE_ARGS}
 TAR_BEFORE_ARGS=	${TAR_BEFORE_ARGS_DEFAULT}
 .  endif
 .endif
+
+# ZIP_* variables are always defined by zip.mk, so ?= only kicks in USES+=zip
+# when does not exist.  In this case, assume $TAR is desired for zip archives
+ZIP_BEFORE_ARGS?=	${TAR_BEFORE_ARGS_DEFAULT}
+ZIP_AFTER_ARGS?=	${TAR_AFTER_ARGS_DEFAULT}
+ZIP_EXTRACT_CMD?=	${TAR}
 
 .if !defined(TAR_AFTER_ARGS)
 .  if defined(EXTRACT_AFTER_ARGS)
@@ -3547,7 +3551,7 @@ do-extract:
 			*.lzh)	_EXTRACT_CMD=${LHA_CMD} ; \
 					_EXTRACT_BEFORE_ARGS="${LHA_BEFORE_ARGS}" ; \
 					_EXTRACT_AFTER_ARGS="${LHA_AFTER_ARGS}" ;; \
-			*.zip|*.ZIP)	_EXTRACT_CMD=${UNZIP_CMD} ; \
+			*.zip|*.ZIP)	_EXTRACT_CMD=${ZIP_EXTRACT_CMD} ; \
 					_EXTRACT_BEFORE_ARGS="${ZIP_BEFORE_ARGS}" ; \
 					_EXTRACT_AFTER_ARGS="${ZIP_AFTER_ARGS}" ;; \
 			*)	_EXTRACT_CMD=${TAR} ; \

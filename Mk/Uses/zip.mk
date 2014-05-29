@@ -29,13 +29,13 @@ ZIP_AFTER_ARGS:= ${EXTRACT_AFTER_ARGS}
 
 .if ${zip_ARGS} == infozip
 EXTRACT_DEPENDS+=	${UNZIP_CMD}:${PORTSDIR}/archivers/unzip
-EXTRACT_CMD?=		${UNZIP_CMD}
+ZIP_EXTRACT_CMD?=	${UNZIP_CMD}
 .elif ${zip_ARGS} == none
 .  if ${OPSYS} == FreeBSD
-EXTRACT_CMD?=		${UNZIP_NATIVE_CMD}
+ZIP_EXTRACT_CMD?=	${UNZIP_NATIVE_CMD}
 .  else
 EXTRACT_DEPENDS+=	${UNZIP_CMD}:${PORTSDIR}/archivers/unzip
-EXTRACT_CMD?=		${UNZIP_CMD}
+ZIP_EXTRACT_CMD?=	${UNZIP_CMD}
 .  endif
 .else
 IGNORE=	Incorrect 'USES+=zip:${zip_ARGS}' expecting 'USES+=zip[:infozip]'
