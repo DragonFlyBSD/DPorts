@@ -8,7 +8,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://media.wnet.ua/~tipok/aacplus/:site1\
 		ftp://ftp.3gpp.org/Specs/archive/26_series/26.410/:site2\
 		http://www.3gpp.org/ftp/Specs/archive/26_series/26.410/:site2
-DISTFILES=	${PORTNAME}-${PORTVERSION}${EXTRACT_SUFX}:site1\
+DISTFILES=	${PORTNAME}-${PORTVERSION}.tar.gz:site1\
 		26410-800.zip:site2
 
 MAINTAINER=	takefu@airport.fm
@@ -24,7 +24,7 @@ RESTRICTED=	unclear legal status, probably need licenses from 3GPP, Via Licensin
 CONFLICTS=	aacplusenc-0*
 
 USE_CSTD=	gnu89
-USES=		pathfix pkgconfig libtool:keepla
+USES=		pathfix pkgconfig libtool:keepla zip
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtoolize aclocal autoheader automake
 PATHFIX_MAKEFILEIN=	Makefile.am
