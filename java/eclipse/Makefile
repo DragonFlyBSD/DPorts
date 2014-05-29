@@ -40,13 +40,11 @@ TESTS_DESC=	Build SDK test suite
 
 ONLY_FOR_ARCHS=	i386 amd64
 
-USES=		pkgconfig
+USES=		pkgconfig gmake tar:xz
 USE_ANT=	yes
 USE_GL=		glu
-USE_GMAKE=	yes
 USE_GNOME=	desktopfileutils gconf2 gtk20 gnomevfs2 libgnome libgnomeui
 USE_JAVA=	yes
-USE_XZ=		yes
 BZIP2_SUFX=	.tar.bz2
 ZIP_CMD?=	${LOCALBASE}/bin/zip
 
@@ -156,9 +154,9 @@ post-extract:
 .for f in ${ECLIPSE_JAR_BUNDLES} ${ECLIPSE_SAT4J_BUNDLES}
 	@${CP} ${DISTDIR}/${DIST_SUBDIR}/${f} ${BUILD_WRKSRC}/bundles/
 .endfor
-	@(${MKDIR} ${BUILD_WRKSRC}/generatedScripts && cd ${BUILD_WRKSRC}/generatedScripts && ${EXTRACT_CMD} ${EXTRACT_BEFORE_ARGS} ${BUILD_WRKSRC}/${ECLIPSE_GENERATED_BUILDSCRIPTS} ${EXTRACT_AFTER_ARGS})
+	@(${MKDIR} ${BUILD_WRKSRC}/generatedScripts && cd ${BUILD_WRKSRC}/generatedScripts && ${TAR} ${EXTRACT_BEFORE_ARGS} ${BUILD_WRKSRC}/${ECLIPSE_GENERATED_BUILDSCRIPTS} ${EXTRACT_AFTER_ARGS})
 
-	@(cd ${WRKDIR} && ${EXTRACT_CMD} ${EXTRACT_BEFORE_ARGS} ${_DISTDIR}/${ANT_SRCFILE} ${EXTRACT_AFTER_ARGS})
+	@(cd ${WRKDIR} && ${TAR} ${EXTRACT_BEFORE_ARGS} ${_DISTDIR}/${ANT_SRCFILE} ${EXTRACT_AFTER_ARGS})
 .for f in ${ANT_BUNDLES}
 	@${CP} ${WRKDIR}/apache-ant-${ANT_VERSION}/lib/${f} ${BUILD_WRKSRC}/bundles/
 .endfor
@@ -168,7 +166,7 @@ post-extract:
 	@${CP} ${WRKDIR}/junit/junit${JUNIT3_VERSION}/junit.jar ${BUILD_WRKSRC}/bundles/
 	@${CP} ${DISTDIR}/${DIST_SUBDIR}/${JUNIT4_SRCFILE} ${BUILD_WRKSRC}/bundles/junit4.jar
 
-	@(cd ${WRKDIR} && ${EXTRACT_CMD} ${EXTRACT_BEFORE_ARGS} ${_DISTDIR}/${TOMCAT_SRCFILES:Mapache-tomcat*.tar.gz} ${EXTRACT_AFTER_ARGS})
+	@(cd ${WRKDIR} && ${TAR} ${EXTRACT_BEFORE_ARGS} ${_DISTDIR}/${TOMCAT_SRCFILES:Mapache-tomcat*.tar.gz} ${EXTRACT_AFTER_ARGS})
 	@${CP} ${DISTDIR}/${DIST_SUBDIR}/${TOMCAT_SRCFILES:M*.jar} ${WRKDIR}/apache-tomcat-${TOMCAT_VERSION}/lib/
 .for f in ${TOMCAT_BUNDLES}
 	@${CP} ${WRKDIR}/apache-tomcat-${TOMCAT_VERSION}/lib/${f} ${BUILD_WRKSRC}/bundles/
