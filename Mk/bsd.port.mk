@@ -2238,7 +2238,7 @@ TAR_AFTER_ARGS_DEFAULT=	--no-same-owner --no-same-permissions
 TAR_BEFORE_ARGS_DEFAULT= -xf
 
 .if !defined(TAR_BEFORE_ARGS)
-.  if defined(EXTRACT_BEFORE_ARGS)
+.  if defined(EXTRACT_BEFORE_ARGS) && !defined(_INCLUDE_USES_ZIP_MK)
 TAR_BEFORE_ARGS=	${EXTRACT_BEFORE_ARGS}
 .  else
 TAR_BEFORE_ARGS=	${TAR_BEFORE_ARGS_DEFAULT}
@@ -2246,7 +2246,7 @@ TAR_BEFORE_ARGS=	${TAR_BEFORE_ARGS_DEFAULT}
 .endif
 
 .if !defined(TAR_AFTER_ARGS)
-.  if defined(EXTRACT_AFTER_ARGS)
+.  if defined(EXTRACT_AFTER_ARGS) && !defined(_INCLUDE_USES_ZIP_MK)
 TAR_AFTER_ARGS=		${EXTRACT_AFTER_ARGS}
 .  else
 TAR_AFTER_ARGS=		${TAR_AFTER_ARGS_DEFAULT}
@@ -3566,7 +3566,7 @@ do-extract:
 	@${RM} -rf ${WRKDIR}
 	@${MKDIR} ${WRKDIR}
 	@for file in ${EXTRACT_ONLY}; do \
-		if [ -n "${EXTRACT_CMD}" ]; then \
+		if [ -n "${EXTRACT_CMD}" -a -z "${_INCLUDE_USES_ZIP_MK}" ]; then \
 			if ! (cd ${WRKDIR} && ${EXTRACT_CMD} ${EXTRACT_BEFORE_ARGS} ${_DISTDIR}/$$file ${EXTRACT_AFTER_ARGS});\
 			then \
 				exit 1; \
