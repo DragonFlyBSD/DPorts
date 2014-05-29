@@ -3580,7 +3580,7 @@ do-extract:
 			*.lzh)	_EXTRACT_CMD=${LHA_CMD} ; \
 					_EXTRACT_BEFORE_ARGS="${LHA_BEFORE_ARGS}" ; \
 					_EXTRACT_AFTER_ARGS="${LHA_AFTER_ARGS}" ;; \
-			*.zip)	_EXTRACT_CMD=${UNZIP_CMD} ; \
+			*.zip|*.ZIP)	_EXTRACT_CMD=${UNZIP_CMD} ; \
 					_EXTRACT_BEFORE_ARGS="${ZIP_BEFORE_ARGS}" ; \
 					_EXTRACT_AFTER_ARGS="${ZIP_AFTER_ARGS}" ;; \
 			*)	_EXTRACT_CMD=${TAR} ; \
