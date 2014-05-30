@@ -3541,23 +3541,18 @@ do-extract:
 		else \
 			case $${file} in \
 			*.tar|*.tbz|*.tgz|*.txz|*.tar.bz2|*.tar.gz|*.tar.lzma|*.tar.xz|*.tar.Z) \
-				_EXTRACT_CMD=${TAR} ; \
-					_EXTRACT_BEFORE_ARGS="${TAR_BEFORE_ARGS}" ; \
-					_EXTRACT_AFTER_ARGS="${TAR_AFTER_ARGS}" ;; \
-			*.lzh)	_EXTRACT_CMD=${LHA_CMD} ; \
-					_EXTRACT_BEFORE_ARGS="${LHA_BEFORE_ARGS}" ; \
-					_EXTRACT_AFTER_ARGS="${LHA_AFTER_ARGS}" ;; \
-			*.zip|*.ZIP|*.xpi)	_EXTRACT_CMD=${ZIP_EXTRACT_CMD} ; \
-					_EXTRACT_BEFORE_ARGS="${ZIP_BEFORE_ARGS}" ; \
-					_EXTRACT_AFTER_ARGS="${ZIP_AFTER_ARGS}" ;; \
-			*)	_EXTRACT_CMD=${TAR} ; \
-					_EXTRACT_BEFORE_ARGS="${EXTRACT_BEFORE_ARGS}" ; \
-					_EXTRACT_AFTER_ARGS="${EXTRACT_AFTER_ARGS}" ;; \
+				if ! (cd ${WRKDIR} && ${TAR} ${TAR_BEFORE_ARGS} ${_DISTDIR}/$$file ${TAR_AFTER_ARGS}); \
+				then exit 1; fi; ;; \
+			*.lzh) \
+				if ! (cd ${WRKDIR} && ${LHA_CMD} ${LHA_BEFORE_ARGS} ${_DISTDIR}/$$file ${LHA_AFTER_ARGS}); \
+				then exit 1; fi; ;; \
+			*.zip|*.ZIP|*.xpi) \
+				if ! (cd ${WRKDIR} && ${ZIP_EXTRACT_CMD} ${ZIP_BEFORE_ARGS} ${_DISTDIR}/$$file ${ZIP_AFTER_ARGS}); \
+				then exit 1; fi; ;; \
+			*) \
+				if ! (cd ${WRKDIR} && ${TAR} ${EXTRACT_BEFORE_ARGS} ${_DISTDIR}/$$file ${EXTRA_AFTER_ARGS}); \
+				then exit 1; fi; ;; \
 			esac ; \
-			if ! (cd ${WRKDIR} && $${_EXTRACT_CMD} $${_EXTRACT_BEFORE_ARGS} ${_DISTDIR}/$$file $${_EXTRACT_AFTER_ARGS});\
-			then \
-				exit 1; \
-			fi; \
 		fi; \
 	done
 .if !defined(EXTRACT_PRESERVE_OWNERSHIP)
