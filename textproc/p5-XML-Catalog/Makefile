@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	XML-Catalog
-PORTVERSION=	1.0.1
+PORTVERSION=	1.0.2
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -20,8 +20,8 @@ BUILD_DEPENDS=	p5-URI>=0:${PORTSDIR}/net/p5-URI \
 		p5-libwww>=0:${PORTSDIR}/www/p5-libwww
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USES=		perl5
+USES=		dos2unix perl5
 USE_PERL5=	configure
-USE_DOS2UNIX=	Catalog.pm
+DOS2UNIX_GLOB=	Catalog.pm
 
 .include <bsd.port.mk>
