@@ -3,7 +3,7 @@
 
 PORTNAME=	perl
 PORTVERSION=	${PERL_VERSION}
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	lang devel perl5
 MASTER_SITES=	CPAN \
 		${MASTER_SITE_LOCAL:S/$/:local/} \
@@ -19,8 +19,10 @@ COMMENT=	Practical Extraction and Report Language
 
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
+LICENSE_FILE_ART10=	${WRKSRC}/Artistic
+LICENSE_FILE_GPLv1=	${WRKSRC}/Copying
 
-CONFLICTS_INSTALL=	perl5.14-* perl5.16-* perl5.18-*
+CONFLICTS_INSTALL=	perl5.*-*
 
 OPTIONS_DEFINE=	DEBUG GDBM PERL_64BITINT PTHREAD \
 		MULTIPLICITY SITECUSTOMIZE USE_PERL
@@ -54,11 +56,9 @@ THREADS_CONFIGURE_OFF=	-Dusethreads=n
 PERL_MALLOC_CONFIGURE_ON=	-Dusemymalloc=y
 PERL_MALLOC_CONFIGURE_OFF=	-Dusemymalloc=n
 
-# For the latest Perl port, this should be:
-PORTSCOUT=	limitw:1,even
-# For the older Perl ports, this should be:
-#PORTSCOUT=	limit:^${PERL_VER}.
+PORTSCOUT=	limit:^${PERL_VER}.
 
+# Remember to update Mk/Uses/perl5.mk too.
 PERL_VERSION=	5.18.2
 PERL_VER=	${PERL_VERSION:C/\.[0-9]+$//}
 PERL_ARCH=	mach
