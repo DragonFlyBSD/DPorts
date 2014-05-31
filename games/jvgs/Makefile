@@ -14,10 +14,9 @@ COMMENT=	A minimalistic platform game
 BUILD_DEPENDS=	swig:${PORTSDIR}/devel/swig13
 LIB_DEPENDS=	libfreetype.so:${PORTSDIR}/print/freetype2
 
-USES=		cmake
+USES=		cmake lua:51
 USE_SDL=	sdl mixer
 USE_GL=		gl glu
-USE_LUA=	5.1+
 
 SUB_FILES=	${PORTNAME}
 
