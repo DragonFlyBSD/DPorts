@@ -8,10 +8,10 @@ CATEGORIES=	audio
 MASTER_SITES=	http://www.eblong.com/zarf/boodler/
 DISTFILES=	boodler-153.tar.gz boodler-snd-021902.tar.gz
 
-MAINTAINER=	daniel+boodler@pelleg.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Programmable soundscape tool
 
-RESTRICTED=	no commercial use
+RESTRICTED=	Not for commercial use
 RESTRICTED_FILES=	boodler-snd-021902.tar.gz
 
 OPTIONS_DEFINE=	DOCS
