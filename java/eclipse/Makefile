@@ -21,7 +21,7 @@ DIST_SUBDIR=	eclipse
 EXTRACT_ONLY=	${ECLIPSE_BUILD_SRCFILE}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	An open extensible IDE for anything and nothing in particular
+COMMENT=	Open extensible IDE for anything and nothing in particular
 
 EXTRACT_DEPENDS=${LOCALBASE}/bin/unzip:${PORTSDIR}/archivers/unzip
 PATCH_DEPENDS=	ant:${PORTSDIR}/devel/apache-ant \
