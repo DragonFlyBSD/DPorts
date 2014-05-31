@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net/dtcp/files/dtcpc.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/net/dtcp/files/dtcpc.in 355644 2014-05-28 17:43:27Z ume $
 #
 
 # PROVIDE: dtcpc
@@ -32,4 +32,7 @@ extra_commands="reload"
 
 load_rc_config $name
 command_args="-u ${dtcpc_username} ${dtcpc_server}"
+if [ -n "${dtcpc_fib}" ]; then
+	command_args="-F ${dtcpc_fib} ${command_args}"
+fi
 run_rc_command "$1"
