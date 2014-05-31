@@ -14,7 +14,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}:aegisub ${FFMS_DISTFILE}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Cross-platform subtitle editor
 
-LICENSE=	BSD
+LICENSE=	BSD3CLAUSE
 
 LIB_DEPENDS=	libfontconfig.so:${PORTSDIR}/x11-fonts/fontconfig
 
@@ -132,9 +132,9 @@ CONFIGURE_ARGS+=	--without-hunspell
 .endif
 
 .if ${PORT_OPTIONS:MLUA}
-USE_LUA=	5.1+
+USES+=		lua:51
 CONFIGURE_ENV+=	LUA_CFLAGS="-I${LUA_INCDIR}" \
-		LUA_LDFLAGS="-L${LUA_LIBDIR} -llua"
+		LUA_LDFLAGS="-L${LUA_LIBDIR} -llua-${LUA_VER}"
 CPPFLAGS+=	-I${LUA_INCDIR}
 .else
 CONFIGURE_ARGS+=	--without-lua
