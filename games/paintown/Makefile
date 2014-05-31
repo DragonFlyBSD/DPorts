@@ -16,15 +16,10 @@ LIB_DEPENDS=	liballeg.so:${PORTSDIR}/devel/allegro \
 		libpng.so:${PORTSDIR}/graphics/png \
 		libfreetype.so:${PORTSDIR}/print/freetype2
 
-USE_BZIP2=	yes
-USE_SCONS=	yes
+USES=		dos2unix scons tar:bzip2
 USE_SDL=	yes
 INSTALLS_ICONS=	yes
-USE_DOS2UNIX=	yes
 DOS2UNIX_REGEX=	.*\.(c|cpp|h)
-
-SCONS_BUILDENV+=CPPPATH="${LOCALBASE}/include" \
-		LIBPATH="${LOCALBASE}/lib"
 
 DESKTOP_ENTRIES="Paintown" "Fighting game similar to Streets of Rage and TMNT" \
 		"${LOCALBASE}/share/icons/hicolor/32x32/apps/paintown.png" \
