@@ -28,7 +28,7 @@ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION,
 EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-  $FreeBSD: head/security/vuxml/vuln.xml 355040 2014-05-24 14:28:28Z kwm $
+  $FreeBSD: head/security/vuxml/vuln.xml 355712 2014-05-29 15:27:36Z feld $
 
 
 QUICK GUIDE TO ADDING A NEW ENTRY
@@ -57,6 +57,101 @@ Notes:
 
 -->
 <vuxml xmlns="http://www.vuxml.org/apps/vuxml-1">
+  <vuln vid="77e2e631-e742-11e3-9a25-5404a6a6412c">
+    <topic>mumble -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>mumble</name>
+	<range><ge>1.2.0</ge><lt>1.2.6</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Mumble reports:</p>
+	<blockquote cite="http://blog.mumble.info/mumble-1-2-6/">
+	  <p>SVG images with local file references could trigger client DoS</p>
+	  <p>The Mumble client did not properly HTML-escape some external strings
+	    before using them in a rich-text (HTML) context.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>http://mumble.info/security/Mumble-SA-2014-005.txt</url>
+      <url>http://mumble.info/security/Mumble-SA-2014-006.txt</url>
+    </references>
+    <dates>
+      <discovery>2014-04-16</discovery>
+      <entry>2014-05-29</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="c2c8c84b-e734-11e3-9a25-5404a6a6412c">
+    <topic>mumble -- NULL pointer dereference and heap-based buffer overflow</topic>
+    <affects>
+      <package>
+	<name>mumble</name>
+	<range><ge>1.2.4</ge><le>1.2.4_6</le></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Mumble reports:</p>
+	<blockquote cite="http://blog.mumble.info/mumble-1-2-5/">
+	  <p>A malformed Opus voice packet sent to a Mumble client could trigger
+	    a NULL pointer dereference or an out-of-bounds array access.</p>
+	  <p>A malformed Opus voice packet sent to a Mumble client could trigger a
+	    heap-based buffer overflow.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-0044</cvename>
+      <cvename>CVE-2014-0045</cvename>
+      <url>http://mumble.info/security/Mumble-SA-2014-001.txt</url>
+      <url>http://mumble.info/security/Mumble-SA-2014-002.txt</url>
+    </references>
+    <dates>
+      <discovery>2014-01-25</discovery>
+      <entry>2014-05-29</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="f99a4686-e694-11e3-9032-000c2980a9f3">
+    <cancelled/>
+  </vuln>
+
+  <vuln vid="688e73a2-e514-11e3-a52a-98fc11cdc4f5">
+    <topic>linux-flashplugin -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>linux-f10-flashplugin</name>
+	<range><lt>11.2r202.359</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Adobe reports:</p>
+	<blockquote cite="https://helpx.adobe.com/security/products/flash-player/apsb14-14.html">
+	  <p>These updates address vulnerabilities that could cause a crash
+	    and potentially allow an attacker to take control of the affected system.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-0510</cvename>
+      <cvename>CVE-2014-0516</cvename>
+      <cvename>CVE-2014-0517</cvename>
+      <cvename>CVE-2014-0518</cvename>
+      <cvename>CVE-2014-0519</cvename>
+      <cvename>CVE-2014-0520</cvename>
+      <url>https://helpx.adobe.com/security/products/flash-player/apsb14-14.html</url>
+    </references>
+    <dates>
+      <discovery>2014-03-13</discovery>
+      <entry>2014-05-26</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="02db20d7-e34a-11e3-bd92-bcaec565249c">
     <topic>openjpeg -- Multiple vulnabilities</topic>
     <affects>
