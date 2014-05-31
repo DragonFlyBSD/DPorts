@@ -1,0 +1,22 @@
+--- platform_build/bsd_ant/build.xml.intermediate	2014-04-01 16:31:22.610739000 +0000
++++ platform_build/bsd_ant/build.xml
+@@ -44,7 +44,7 @@
+ 
+     	<condition property="build.32bit.only">
+             <and>
+-                <os name="FreeBSD"/>
++                <os name="DragonFly"/>
+                 <equals arg1="${hwplatform}" arg2="i386"/>
+             </and>
+         </condition>
+@@ -52,8 +52,8 @@
+     	<!-- On linux, the 64 bit jre doesn't have the 32 bit libs -->
+     	<condition property="build.64bit.only">
+             <and>
+-                <os name="FreeBSD"/>
+-                <equals arg1="${hwplatform}" arg2="amd64"/>
++                <os name="DragonFly"/>
++                <equals arg1="${hwplatform}" arg2="x86_64"/>
+             </and>
+         </condition>
+ 
