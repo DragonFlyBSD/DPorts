@@ -3,6 +3,7 @@
 
 PORTNAME=	libxul
 DISTVERSION=	24.5.0
+PORTREVISION=	1
 CATEGORIES?=	www devel
 MASTER_SITES=	MOZILLA/firefox/releases/${DISTVERSION}esr/source \
 		https://ftp.mozilla.org/pub/mozilla.org/firefox/candidates/${DISTVERSION}esr-candidates/build1/source/
@@ -55,6 +56,7 @@ PLIST_DIRSTRY=	share/idl
 MOZ_PKGCONFIG_FILES=	libxul-embedding libxul mozilla-js \
 			mozilla-plugin
 
+NO_STAGE=	yes
 .include "${.CURDIR}/../../www/firefox/Makefile.options"
 .include <bsd.port.pre.mk>
 
