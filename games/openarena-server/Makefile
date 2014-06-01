@@ -1,5 +1,5 @@
 # Created by: Dominic Fandrey
-# $FreeBSD$
+# $FreeBSD: head/games/openarena-server/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	openarena
 PKGNAMESUFFIX=	-server
@@ -12,5 +12,4 @@ MASTERDIR=	${.CURDIR}/../${PORTNAME}
 
 IOQ3=		SERVER
 
-NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
