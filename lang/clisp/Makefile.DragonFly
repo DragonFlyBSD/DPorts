@@ -1,1 +1,1 @@
-CONFIGURE_ARGS:= ${CONFIGURE_ARGS:N--with-libiconv*} --without-libiconv
+USES:=	${USES:Niconv} iconv:wchar_t
