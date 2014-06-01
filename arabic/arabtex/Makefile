@@ -12,6 +12,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	TeX/LaTeX package to generate Arabic writing
 
+LICENSE=	LPPL10
 
 ARABTEXDIRS=	fonts tex
 
