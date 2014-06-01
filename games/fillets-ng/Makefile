@@ -14,12 +14,11 @@ MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	A wonderful puzzle game
 
 USE_SDL=	sdl mixer image ttf
-USE_LUA=	5.1
-USES=		gmake
+USES=		gmake lua:51
 GNU_CONFIGURE=	yes
-CPPFLAGS+=	-I${LUA_INCDIR}
-LDFLAGS+=	-L${LUA_LIBDIR}
-CONFIGURE_ARGS=	--datadir="${DATADIR}" --with-lua="${LOCALBASE}"
+CONFIGURE_ARGS=	--datadir="${DATADIR}"
+CONFIGURE_ENV=	LUA_LIBS="-L${LUA_LIBDIR} -llua-${LUA_VER}" \
+		LUA_CFLAGS="-I${LUA_INCDIR}"
 
 PLIST_FILES=	bin/fillets man/man6/fillets.6.gz
 
