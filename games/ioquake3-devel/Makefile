@@ -1,5 +1,5 @@
 # Created by: Dominic Fandrey
-# $FreeBSD$
+# $FreeBSD: head/games/ioquake3-devel/Makefile 327730 2013-09-20 17:36:33Z bapt $
 
 PORTNAME?=	ioquake3-devel
 DISTVERSION?=	GIT${GITREVISION}
@@ -18,11 +18,16 @@ PATCHDIR?=	${.CURDIR}/../${PORTNAME}/files
 DFLY_PATCHDIR?=	${.CURDIR}/../${PORTNAME}/dragonfly
 PKGMESSAGE?=	${.CURDIR}/../${PORTNAME}/pkg-message
 
-GITREVISION?=	2178
+GITREVISION?=	2390
 BINSUFFIX?=	-devel
 
 IOQ3?=		CLIENT TOOLS DLRENDERER GAMELIBS OPUS OPENGL2
 IOQ3ARCH?=	${ARCH:S/i386/x86/:S/amd64/x86_64/}
 
-NO_STAGE=	yes
+Q3DOCS?=	README.md \
+		id-readme.txt \
+		md4-readme.txt \
+		opengl2-readme.txt \
+		voip-readme.txt
+
 .include "${MASTERDIR}/Makefile"
