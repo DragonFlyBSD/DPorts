@@ -1,0 +1,10 @@
+--- configure.orig	2014-04-21 12:29:52.829260000 +0000
++++ configure
+@@ -19389,7 +19389,6 @@ rm -f core conftest.err conftest.$ac_obj
+   CFLAGS="$save_CFLAGS"
+ 
+   if test "X$flag_ok" = Xyes ; then
+-    CFLAGS="$CFLAGS -fdiagnostics-color=auto"
+ 
+     true
+   else
