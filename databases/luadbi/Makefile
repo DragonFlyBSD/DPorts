@@ -14,8 +14,7 @@ LICENSE=	MIT
 
 NO_WRKSUBDIR=	yes
 
-USE_LUA=	5.1
-USES=	gmake
+USES=		lua:51 gmake
 
 CFLAGS+=	-fpic -I${LOCALBASE}/include -I${LUA_INCDIR} -I. \
 		-I${LOCALBASE}/include/postgresql/server
@@ -45,7 +44,7 @@ PLIST_FILES+=	%%LUA_MODLIBDIR%%/dbdsqlite3.so
 .endif
 
 .if ${PORT_OPTIONS:MPGSQL}
-USE_PGSQL=	yes
+USES+=		pgsql
 ALL_TARGET+=	psql
 PLIST_FILES+=	%%LUA_MODLIBDIR%%/dbdpostgresql.so
 .endif
