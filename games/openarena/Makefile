@@ -1,5 +1,5 @@
 # Created by: Josh Tolbert
-# $FreeBSD$
+# $FreeBSD: head/games/openarena/Makefile 340722 2014-01-22 17:00:46Z mat $
 
 PORTNAME=	openarena
 PORTVERSION=	${GAMEVERSION}.s${SVNREVISION}
@@ -38,5 +38,4 @@ Q3DIR=		${DATADIR}
 # No icon included with OpenArena
 Q3ICON=
 
-NO_STAGE=	yes
 .include "${MASTERDIR}/Makefile"
