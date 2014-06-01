@@ -47,9 +47,9 @@ GTA_DESC=	GTA file format support
 VNC_DESC=	LibVNCServer support
 SDL_DESC=	Use SDL (joystick support in present3d)
 NVTT_DESC=	Use NVidia texture tools
-LUA_DESC=	Lua strict engine support
-V8_DESC=	V8 script  engine support
-PYTHON_DESC=	Python strict engine support
+LUA_DESC=	Lua script engine support
+V8_DESC=	V8 script engine support
+PYTHON_DESC=	Python script engine support
 
 OPTIONS_SUB=	yes
 
@@ -73,7 +73,7 @@ XRANDR_CMAKE_OFF=	-DOSGVIEWER_USE_XRANDR:BOOL=OFF
 QT4_USE=		QT4=corelib,gui,opengl,qmake_build,moc_build,uic_build,rcc_build
 QT4_CMAKE_ON=		-DOSG_USE_QT=ON
 QT4_CMAKE_OFF=		-DOSG_USE_QT=OFF
-LUA_USE=		LUA=5.1
+LUA_USES=		lua:51
 V8_LIB_DEPENDS=		libv8.so:${PORTSDIR}/lang/v8
 PYTHON_USE=		PYTHON=2
 
