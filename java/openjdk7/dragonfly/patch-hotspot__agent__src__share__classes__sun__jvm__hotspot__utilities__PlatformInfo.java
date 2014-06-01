@@ -4,7 +4,7 @@
        return "bsd";
      } else if (os.equals("Darwin") || os.contains("OS X")) {
        return "bsd";
-+    } else if (os.equals("DragonFly")) {
++    } else if (os.equals("DragonFlyBSD")) {
 +      return "bsd";
      } else if (os.startsWith("Windows")) {
        return "win32";
