@@ -1,8 +1,8 @@
 # Created by: Dominic Fandrey
-# $FreeBSD$
+# $FreeBSD: head/games/openarena-oax/Makefile 347760 2014-03-10 14:49:26Z bapt $
 
 PORTNAME=	oax
-PORTVERSION=	B50
+PORTVERSION=	B51
 CATEGORIES=	games
 MASTER_SITES=	http://files.poulsander.com/~poul19/public_files/eliminationSource/
 DISTNAME=	${PORTNAME}${PORTVERSION}
@@ -18,10 +18,9 @@ NO_BUILD=	yes
 
 OABASE=		${DISTNAME}
 
-NO_STAGE=	yes
 do-install:
-	${MKDIR} ${DATADIR}
-	(cd ${WRKSRC} && ${COPYTREE_SHARE} \* ${DATADIR})
+	${MKDIR} ${STAGEDIR}${DATADIR}
+	(cd ${WRKSRC} && ${COPYTREE_SHARE} \* ${STAGEDIR}${DATADIR})
 
 .include "../openarena/Makefile.include"
 
