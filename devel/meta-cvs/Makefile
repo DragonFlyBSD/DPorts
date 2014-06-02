@@ -34,7 +34,7 @@ post-patch:
 #	libc.so is now a symlink, let's find out the real name of the libc
 #	shared library. See:
 #	http://svnweb.freebsd.org/base/head/lib/libc/libc.ldscript?revision=251668&view=markup
-	rep=$$(${BASENAME} $$(${LDCONFIG} -r | ${AWK} '/libc.so/ { print $$3 }')); \
+	rep=$$(${REALPATH} '/usr/lib/libc.so' | ${XARGS} ${BASENAME}); \
 	    ${REINPLACE_CMD} -e "s|libc.so.6|$$rep|" ${WRKSRC}/code/clisp-ffi.lisp
 	${REINPLACE_CMD} -e '232s|make|${GMAKE}|g' ${WRKSRC}/configure
 	${REINPLACE_CMD} -e 's|type -P|which|g;s|$$(prefix)/lib|${DATADIR}|g' ${WRKSRC}/Makefile
