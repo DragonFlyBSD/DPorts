@@ -1,0 +1,11 @@
+--- gluegen/make/gluegen-cpptasks.xml.intermediate	2014-06-02 07:21:38.565261000 +0000
++++ gluegen/make/gluegen-cpptasks.xml
+@@ -159,7 +159,7 @@
+       </and>
+     </condition>
+     <condition property="isFreeBSD">
+-      <os name="FreeBSD" />
++      <os name="DragonFlyBSD" />
+     </condition>
+     <condition property="isFreeBSDamd64">
+       <and>
