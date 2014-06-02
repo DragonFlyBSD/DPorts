@@ -3,20 +3,22 @@
 
 PORTNAME=	aoi
 PORTVERSION=	3.0
+PORTREVISION=	2
 CATEGORIES=	graphics java
 MASTER_SITES=	SF/${PORTNAME}/ArtOfIllusion/${PORTVERSION} \
 		SF/${PORTNAME}/ArtOfIllusion-manual/${PORTVERSION}:docs
 DISTFILES=	${PORTNAME}${PORTVERSION:S/.//g}${EXTRACT_SUFX}
 DIST_SUBDIR=	${PORTNAME}
 
-MAINTAINER=	nemysis@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Open source Java written 3D modelling and rendering studio
 
 LICENSE=	GPLv2
 
+LIB_DEPENDS=	libjogl.so:${PORTSDIR}/graphics/jogl
 RUN_DEPENDS=	java:${PORTSDIR}/java/javavmwrapper
 
-USE_ZIP=	yes
+USES=		zip:infozip
 EXTRACT_BEFORE_ARGS=	-a -q
 USE_JAVA=	yes
 JAVA_VERSION=	1.6+
@@ -36,8 +38,7 @@ DOC_FILES2=	*
 
 OPTIONS_DEFINE= DOCS
 
-SUB_FILES=	${PORTNAME} \
-		pkg-message
+SUB_FILES=	${PORTNAME} pkg-deinstall pkg-message
 
 DESKTOP_ENTRIES="Art of Illusion" "3D modelling and rendering studio" \
 		"${PORTNAME}" "${PORTNAME}" "Graphics;3DGraphics;" ""
