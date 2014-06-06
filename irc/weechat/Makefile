@@ -3,7 +3,7 @@
 
 PORTNAME=	weechat
 PORTVERSION=	0.4.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	irc
 MASTER_SITES=	http://weechat.org/files/src/ \
 		http://perturb.me.uk/distfiles/weechat/:mandocs \
@@ -112,7 +112,7 @@ PLIST_SUB+=	TCL="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MLUA}
-USE_LUA=	5.1+
+USES+=		lua:51
 CMAKE_ARGS+=	-DBSD_LUA_LIBDIR=${LUA_LIBDIR} \
 		-DBSD_LUA_INCDIR=${LUA_INCDIR}
 PLIST_SUB+=	LUA=""
