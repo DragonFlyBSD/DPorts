@@ -14,18 +14,18 @@ LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 USE_JAVA=	yes
-JAVA_VERSION=	1.6+
-JDKMVERSION=	${JAVA_PORT_VERSION:C/^([0-9]\.[0-9])(.*)$/\1/}
+JAVA_VERSION=	1.6
 USE_ANT=	yes
-ALL_TARGET=	${JDKMVERSION}
+ALL_TARGET=	1.6
 
 PORTDOCS=	*
 
 PLIST_FILES=	%%JAVAJARDIR%%/${PORTNAME}.jar
 
-NO_STAGE=	yes
+.include <bsd.port.options.mk>
+
 post-patch:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${REINPLACE_CMD} "s|doc, jar, _zip|doc, jar|" ${WRKSRC}/build.xml
 .else
 	@${REINPLACE_CMD} "s|doc, jar, _zip|jar|" ${WRKSRC}/build.xml
@@ -33,15 +33,16 @@ post-patch:
 
 do-install:
 	@${ECHO_MSG} -n ">> Installing JAR file as ${JAVAJARDIR}/${PORTNAME}.jar..."
-	@${INSTALL_DATA} ${WRKSRC}/target/${PORTNAME}-${PORTVERSION}.jar ${JAVAJARDIR}/${PORTNAME}.jar
+	@${INSTALL_DATA} ${WRKSRC}/target/${PORTNAME}-${PORTVERSION}.jar \
+		${STAGEDIR}${JAVAJARDIR}/${PORTNAME}.jar
 	@${ECHO_MSG} " [DONE]"
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${ECHO_MSG} -n ">> Installing documentation..."
-	@${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	@cd ${WRKSRC} && ${FIND} index.html css \
-	  | ${CPIO} -pdmu -R ${SHAREOWN}:${SHAREGRP} ${DOCSDIR} > /dev/null 2>&1
+	  | ${CPIO} -pdmu -R ${SHAREOWN}:${SHAREGRP} ${STAGEDIR}${DOCSDIR} > /dev/null 2>&1
 	@cd ${WRKSRC}/target/site && ${FIND} apidocs \
-	  | ${CPIO} -pdmu -R ${SHAREOWN}:${SHAREGRP} ${DOCSDIR} > /dev/null 2>&1
+	  | ${CPIO} -pdmu -R ${SHAREOWN}:${SHAREGRP} ${STAGEDIR}${DOCSDIR} > /dev/null 2>&1
 	@${ECHO_MSG} " [DONE]"
 .endif
 
