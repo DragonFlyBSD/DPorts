@@ -1,0 +1,3 @@
+.if ${DFLYVERSION} < 300700
+DFLY_PATCHDIR=/dev/null
+.endif
