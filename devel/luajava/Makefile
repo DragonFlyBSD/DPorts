@@ -10,12 +10,8 @@ MASTER_SITES=	http://luaforge.net/frs/download.php/2105/
 MAINTAINER=	sunghyuk@gmail.com
 COMMENT=	Lua scripting tool for Java
 
-USES=		gmake dos2unix
-USE_LUA=	5.1
+USES=		gmake dos2unix lua:51
 LUA_COMPS=	lua
-.if ${USE_LUA} == 5.0
-LUA_COMPS+=	compat51
-.endif
 USE_JAVA=	yes
 USE_LDCONFIG=	yes
 MAKE_JOBS_UNSAFE=	yes
@@ -35,6 +31,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|%%LUA_DIR%%|${PREFIX}|' ${WRKSRC}/config
 	@${REINPLACE_CMD} -e 's|%%LUA_LIBDIR%%|${LUA_LIBDIR}|' ${WRKSRC}/config
 	@${REINPLACE_CMD} -e 's|%%LUA_INCDIR%%|${LUA_INCDIR}|' ${WRKSRC}/config
+	@${REINPLACE_CMD} -e 's|%%LUA_VER%%|${LUA_VER}|' ${WRKSRC}/config
 	@${REINPLACE_CMD} -e 's|%%JAVA_HOME%%|${JAVA_HOME}|' ${WRKSRC}/config
 	@${REINPLACE_CMD} -e 's|linux|freebsd|' ${WRKSRC}/config
 
