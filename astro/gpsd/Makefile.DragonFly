@@ -1,3 +1,4 @@
 .if ${DFLYVERSION} < 300700
-EXTRA_PATCHES+= ${DFLY_PATCHDIR}/extra-patch-SConstruct
+post-patch:
+	${REINPLACE_CMD} -e 's|"dragon"|"skipme"|' ${WRKSRC}/SConstruct
 .endif

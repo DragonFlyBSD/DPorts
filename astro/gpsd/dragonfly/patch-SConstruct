@@ -13,7 +13,7 @@
      elif sys.platform.startswith("freebsd"):
          confdefs.append("#define HAVE_LIBUSB 1\n")
          usblibs = [ "-lusb"]
-+    elif sys.platform.startswith("dragonfly"):
++    elif sys.platform.startswith("dragon"):
 +        confdefs.append("#define HAVE_LIBUSB 1\n")
 +        usblibs = [ "-lusb"]
      else:
