@@ -14,7 +14,7 @@ USE_XORG=	xf86driproto xineramaproto xf86miscproto glproto
 
 .include <bsd.port.options.mk>
 
-.if ${DFLYVERSION} < 300751 || !defined(WITH_NEW_XORG)
+.if ${DFLYVERSION} < 300951 || !defined(WITH_NEW_XORG)
 ATI_VERSION=	6.14.6
 ATI_REVISION=	3
 CONFIGURE_ARGS+=--disable-kms
