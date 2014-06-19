@@ -261,7 +261,7 @@ QMAKESPEC?=		${QT_MKSPECDIR}/freebsd-${QMAKE_COMPILER}
 # better to support custom settings. Dereferencing the detection allows to
 # avoid forking a shell on each inclusion of this file, and to catch any CXX
 # customization (via USE_GCC, etc.).
-QMAKE_COMPILER=	$$(ccver="$$(${CXX} --version)"; case "$$ccver" in *clang*) echo clang ;; *) echo g++ ;; esac)
+QMAKE_COMPILER=	g++
 
 # Import QMAKE_ENV and QMAKE_ARGS definitions.
 USES+=			qmake:_env
