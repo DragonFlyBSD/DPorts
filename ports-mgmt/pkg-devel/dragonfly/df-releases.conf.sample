@@ -1,0 +1,26 @@
+# If multiple repositories are enabled, packages are taken in order in which
+# the enabled repositories are listed.
+
+Avalon-Release: {
+	url		: http://mirror-master.dragonflybsd.org/dports/${ABI}/RELEASE,
+	mirror_type	: NONE,
+	signature_type	: NONE,
+	pubkey		: NONE,
+	fingerprints	: /usr/share/fingerprints,
+	enabled		: no
+}
+
+IRCAM-Release: {
+	url		: http://mirrors.ircam.fr/pub/DragonFlyBSD-dports/${ABI}/RELEASE,
+	enabled		: no
+}
+
+SchlundTech-Release: {
+	url		: http://dfly.schlundtech.de/dports/${ABI}/RELEASE,
+	enabled		: no
+}
+
+Wolfpond-Release: {
+	url		: http://pkg.wolfpond.org/${ABI}/RELEASE,
+	enabled		: no
+}

@@ -1,0 +1,13 @@
+post-stage:
+	${INSTALL_SCRIPT} ${WRKSRC}/scripts/periodic/411.pkg-backup \
+		${WRKSRC}/scripts/periodic/490.status-pkg-changes \
+		${STAGEDIR}${PREFIX}/etc/periodic/daily/
+	${INSTALL_SCRIPT} ${WRKSRC}/scripts/periodic/460.pkg-checksum \
+		${WRKSRC}/scripts/periodic/410.pkg-audit \
+		${STAGEDIR}${PREFIX}/etc/periodic/security/
+	${INSTALL_SCRIPT} ${WRKSRC}/scripts/periodic/400.status-pkg \
+		${STAGEDIR}${PREFIX}/etc/periodic/weekly/
+	${MKDIR} ${STAGEDIR}${PREFIX}/etc/pkg/repos
+	${INSTALL_DATA} ${DFLY_FILESDIR}/df-latest.conf.sample \
+		${DFLY_FILESDIR}/df-releases.conf.sample \
+		${STAGEDIR}${PREFIX}/etc/pkg/repos
