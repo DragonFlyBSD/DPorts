@@ -1,5 +1,5 @@
 
-$FreeBSD: head/lang/clang33/files/patch-tools_clang_lib_Headers_Makefile 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/lang/clang33/files/patch-tools_clang_lib_Headers_Makefile 358139 2014-06-17 15:55:27Z brooks $
 
 --- tools/clang/lib/Headers/Makefile.orig
 +++ tools/clang/lib/Headers/Makefile
@@ -8,7 +8,7 @@ $FreeBSD: head/lang/clang33/files/patch-tools_clang_lib_Headers_Makefile 340725 
  HeaderDir := $(PROJ_OBJ_ROOT)/$(BuildMode)/lib/clang/$(CLANG_VERSION)/include
  
 -HEADERS := $(notdir $(wildcard $(PROJ_SRC_DIR)/*.h))
-+HEADERS := $(notdir $(wildcard $(PROJ_SRC_DIR)/*intrin*.h) altivec.h cpuid.h mm3dnow.h mm_malloc.h)
++HEADERS := $(notdir $(wildcard $(PROJ_SRC_DIR)/*intrin*.h) altivec.h cpuid.h mm3dnow.h mm_malloc.h unwind.h)
  
  OBJHEADERS := $(addprefix $(HeaderDir)/, $(HEADERS))
  
