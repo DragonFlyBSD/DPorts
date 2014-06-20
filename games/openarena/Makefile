@@ -1,5 +1,5 @@
 # Created by: Josh Tolbert
-# $FreeBSD: head/games/openarena/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	openarena
 PORTVERSION=	${GAMEVERSION}.s${SVNREVISION}
