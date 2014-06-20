@@ -1,5 +1,5 @@
 # Created by: alepulver
-# $FreeBSD: head/games/urbanterror-data/Makefile 354818 2014-05-22 09:51:35Z ak $
+# $FreeBSD$
 
 PORTNAME=	data
 PORTVERSION=	4.2.018
