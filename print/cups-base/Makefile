@@ -22,10 +22,9 @@ UNIQUENAME=	${PORTNAME}${PKGNAMESUFFIX}
 USES+=		gmake pkgconfig iconv tar:bzip2
 DESTDIRNAME=	DSTROOT
 GNU_CONFIGURE=	yes
-CFLAGS+=	${PTHREAD_CFLAGS}
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib ${ICONV_LIB}
-DSOFLAGS=	-Wl,-rpath,${PREFIX}/lib -L${PREFIX}/lib ${LDFLAGS}
+DSOFLAGS=	-Wl,-rpath,${PREFIX}/lib ${LDFLAGS} ${LIBS}
 CONFIGURE_ENV=	DSOFLAGS="${DSOFLAGS}"
 CONFIGURE_ARGS+=	--localstatedir=/var			\
 			--disable-gssapi			\
@@ -190,8 +189,6 @@ RUN_DEPENDS+=		xdg-open:${PORTSDIR}/devel/xdg-utils
 .endif
 
 .if !defined(CUPS_CLIENT) && !defined(CUPS_IMAGE) && ${PORT_OPTIONS:MLIBUSB}
-CPPFLAGS+=		-I/usr/include
-LDFLAGS+=		-L/usr/lib
 USES+=			usb
 CONFIGURE_ARGS+=	--enable-libusb
 .else
@@ -206,7 +203,9 @@ PLIST_SUB+=		WITH_ICONS=""
 PLIST_SUB+=		WITH_ICONS="@comment "
 .endif
 
-#CONFIGURE_ARGS+=	LIBS="-lssp_nonshared"
+.if ${OSVERSION} < 1000036 && ${ARCH} == i386
+LIBS+=		-lssp_nonshared
+.endif
 
 .if ! defined(CUPS_CLIENT) && ! defined(CUPS_IMAGE)
 SUB_FILES+=	ulpt-cupsd.conf ulpt-cupsd.sh
