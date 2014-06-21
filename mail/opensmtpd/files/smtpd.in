@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/mail/opensmtpd/files/smtpd.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/mail/opensmtpd/files/smtpd.in 356418 2014-06-04 00:30:49Z ashish $
 #
 # PROVIDE: smtpd mail
 # REQUIRE: LOGIN
@@ -17,6 +17,11 @@
 #
 
 . /etc/rc.subr
+
+check_process()
+{
+	/bin/pgrep -f 'smtpd: \[priv\]'
+}
 
 name="smtpd"
 rcvar=smtpd_enable
