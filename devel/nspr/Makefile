@@ -2,25 +2,25 @@
 # $FreeBSD$
 
 PORTNAME=	nspr
-DISTVERSION=	4.10.4
+DISTVERSION=	4.10.6
 CATEGORIES=	devel
 MASTER_SITES=	MOZILLA/${PORTNAME}/releases/v${PORTVERSION}/src
 
 MAINTAINER=	gecko@FreeBSD.org
-COMMENT=	A platform-neutral API for system level and libc like functions
+COMMENT=	Platform-neutral API for system level and libc like functions
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/nspr/build
 
 USES=		gmake
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-USE_AUTOTOOLS=	autoconf213
+USE_AUTOTOOLS=	autoconf
 CONFIGURE_ARGS=	--srcdir=${WRKSRC:H}
 CONFIGURE_WRKSRC= ${WRKSRC}/..
 
 MAKE_ENV=	DIST=${WRKSRC}/dist
 
-LIBS=		libnspr4.so.1 libplc4.so.1 libplds4.so.1
+LIBRARIES=	libnspr4.so.1 libplc4.so.1 libplds4.so.1
 
 .include <bsd.port.pre.mk>
 
@@ -49,7 +49,7 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/config/nspr-config ${STAGEDIR}${PREFIX}/bin
 	${MKDIR} ${STAGEDIR}${PREFIX}/libdata/pkgconfig
 	${INSTALL_DATA} ${WRKSRC}/config/nspr.pc ${STAGEDIR}${PREFIX}/libdata/pkgconfig
-.for lib in ${LIBS}
+.for lib in ${LIBRARIES}
 .if defined(STRIP) && ${STRIP} != ""
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/${lib}
 .endif

@@ -1,6 +1,6 @@
---- ../configure.in.orig	2013-03-14 17:34:31.000000000 +0000
+--- ../configure.in.orig	2014-06-05 21:42:08.000000000 +0000
 +++ ../configure.in
-@@ -2151,6 +2151,20 @@ tools are selected during the Xcode/Deve
+@@ -2163,6 +2163,20 @@ tools are selected during the Xcode/Deve
      MKSHLIB='$(CC) $(DSO_LDOPTS) -o $@'
      ;;
  
@@ -21,7 +21,7 @@
  *-osf*)
      SHELL_OVERRIDE="SHELL		= /usr/bin/ksh"
      AC_DEFINE(XP_UNIX)
-@@ -2807,7 +2821,7 @@ if test -n "$USE_PTHREADS"; then
+@@ -2769,7 +2783,7 @@ if test -n "$USE_PTHREADS"; then
  	if test -z "`egrep -i '(unrecognize|unknown)' conftest.out | grep pthread`" && test -z "`egrep -i '(error|incorrect)' conftest.out`" ; then
  	    ac_cv_have_dash_pthread=yes
  		case "$target_os" in
@@ -30,7 +30,7 @@
  # Freebsd doesn't use -pthread for compiles, it uses them for linking
              ;;
  	    *)
-@@ -2872,6 +2886,13 @@ if test -n "$USE_PTHREADS"; then
+@@ -2834,6 +2848,13 @@ if test -n "$USE_PTHREADS"; then
              _PTHREAD_LDFLAGS=-pthread
          fi
          ;;
@@ -44,7 +44,7 @@
      *-linux*|*-gnu*|*-k*bsd*-gnu)
          AC_DEFINE(_REENTRANT)
          ;;
-@@ -2926,7 +2947,7 @@ case "$target" in
+@@ -2888,7 +2909,7 @@ case "$target" in
          AC_DEFINE(_PR_NEED_PTHREAD_INIT)
      fi
      ;;

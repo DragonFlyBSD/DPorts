@@ -1,4 +1,4 @@
---- ../pr/include/md/_pth.h.orig	2012-05-18 21:55:29.000000000 +0000
+--- ../pr/include/md/_pth.h.orig	2014-06-05 21:42:08.000000000 +0000
 +++ ../pr/include/md/_pth.h
 @@ -114,7 +114,7 @@
  #define _PT_PTHREAD_COPY_THR_HANDLE(st, dt)   (dt) = (st)

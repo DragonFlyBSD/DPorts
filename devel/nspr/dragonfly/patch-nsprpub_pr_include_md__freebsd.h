@@ -1,5 +1,5 @@
---- ../pr/include/md/_freebsd.h.intermediate	2012-12-27 20:11:52.328785000 +0100
-+++ ../pr/include/md/_freebsd.h	2012-12-27 20:13:06.578889000 +0100
+--- ../pr/include/md/_freebsd.h.intermediate	2014-06-20 12:34:59.566379000 +0000
++++ ../pr/include/md/_freebsd.h
 @@ -59,7 +59,7 @@
  #define _PR_HAVE_GETHOST_R
  #define _PR_HAVE_GETHOST_R_INT
