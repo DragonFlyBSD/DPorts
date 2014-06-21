@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/devel/distcc/files/distccd.in 343570 2014-02-10 01:39:25Z skreuzer $
+# $FreeBSD: head/devel/distcc/files/distccd.in 357545 2014-06-11 22:19:30Z skreuzer $
 #    $MCom: ports/devel/distcc/files/distccd.sh.in,v 1.1 2007/05/19 17:43:14 ahze Exp $
 
 # PROVIDE: distccd
@@ -27,7 +27,7 @@ command=%%PREFIX%%/sbin/${name}
 # extract pid file from distccd_flags (if any)
 pidfile="`echo ${distccd_flags} |sed -nE -e 's/^.*-P ([^ ]+).*$/\1/p'`"
 # set default value
-pidfile=${pidfile:-%%DISTCCD_PIDFILE%%}
+pidfile=${pidfile:-/var/run/distccd.pid}
 
 distccd_precmd()
 {
