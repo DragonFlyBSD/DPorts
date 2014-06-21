@@ -1,18 +1,9 @@
 
-$FreeBSD: head/lang/mit-scheme/files/patch-configure 310285 2013-01-12 16:58:37Z olgeni $
+$FreeBSD: head/lang/mit-scheme/files/patch-configure 356999 2014-06-08 10:12:58Z olgeni $
 
 --- configure.orig
 +++ configure
-@@ -3608,7 +3608,7 @@
-     vax)
- 	mit_scheme_native_code=vax
- 	;;
--    x86_64)
-+    x86_64|amd64)
- 	mit_scheme_native_code=x86-64
- 	;;
-     *)
-@@ -6160,7 +6160,7 @@
+@@ -3444,7 +3444,7 @@
      vax)
  	mit_scheme_native_code=vax
  	;;
