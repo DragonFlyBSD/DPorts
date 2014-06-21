@@ -1,5 +1,5 @@
 # Created by: Dominic Fandrey
-# $FreeBSD: head/games/openarena-oax/Makefile 347760 2014-03-10 14:49:26Z bapt $
+# $FreeBSD$
 
 PORTNAME=	oax
 PORTVERSION=	B51
