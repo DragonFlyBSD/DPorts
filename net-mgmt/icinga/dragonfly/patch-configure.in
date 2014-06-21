@@ -1,0 +1,11 @@
+--- configure.in.intermediate	2014-06-20 22:29:07.650497000 +0000
++++ configure.in
+@@ -913,7 +913,7 @@ if test x$USE_EVENTBROKER = xyes; then
+ 			MOD_CFLAGS="-fPIC"
+ 			INIT_OPTS="-o root -g root"
+ 		;;
+-		freebsd*)
++		freebsd*|dragonfly*)
+ 			MOD_LDFLAGS="-shared"
+ 			MOD_CFLAGS="-fPIC"
+ 			INIT_OPTS="-o root -g wheel"
