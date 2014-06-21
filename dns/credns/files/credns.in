@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/dns/credns/files/credns.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/dns/credns/files/credns.in 358326 2014-06-18 22:12:28Z wg $
 #
 # PROVIDE: credns
 # REQUIRE: DAEMON
@@ -35,6 +35,7 @@ stop_cmd="credns_stop"
 
 credns_precmd()
 {
+	/usr/bin/install -d -o %%CREDNSUSER%% -g %%CREDNSGROUP%% %%CREDNSDBDIR%% %%CREDNSRUNDIR%%
 	db=`%%PREFIX%%/sbin/credns-checkconf -o database %%PREFIX%%/etc/credns/credns.conf`
 	if [ ! -f "$db" ]; then
 		${command} rebuild
