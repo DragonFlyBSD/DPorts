@@ -1,4 +1,4 @@
---- configure.intermediate	2014-05-27 08:04:14.392793000 +0000
+--- configure.intermediate	2014-06-21 07:46:03.730567000 +0000
 +++ configure
 @@ -3977,13 +3977,13 @@ darwin* | rhapsody*)
    lt_cv_deplibs_check_method=pass_all
@@ -31,7 +31,7 @@
  
 -freebsd*)
 +dragonfly*|freebsd*)
-   objformat=elf
+   objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
    version_type=freebsd-$objformat
    case $version_type in
 @@ -10357,7 +10357,7 @@ if test -z "$aix_libpath"; then aix_libp
@@ -58,7 +58,7 @@
  
 -freebsd*)
 +dragonfly*|freebsd*)
-   objformat=elf
+   objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
    version_type=freebsd-$objformat
    case $version_type in
 @@ -14234,7 +14234,7 @@ if test -z "$aix_libpath"; then aix_libp
@@ -76,7 +76,7 @@
  
 -freebsd*)
 +dragonfly*|freebsd*)
-   objformat=elf
+   objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
    version_type=freebsd-$objformat
    case $version_type in
 @@ -16564,7 +16564,7 @@ if test -z "$aix_libpath"; then aix_libp
@@ -94,6 +94,6 @@
  
 -freebsd*)
 +dragonfly*|freebsd*)
-   objformat=elf
+   objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
    version_type=freebsd-$objformat
    case $version_type in
