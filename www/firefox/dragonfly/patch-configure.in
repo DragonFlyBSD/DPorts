@@ -9,15 +9,6 @@
  # for stuff like -lXshm
      CPPFLAGS="${CPPFLAGS} ${X_CFLAGS}"
      ;;
-@@ -2874,7 +2874,7 @@ then
-     fi
- 
- 	case "$target" in
--	    *-*-freebsd*)
-+	    *-*-freebsd*|*-*-dragonfly*)
- 			AC_DEFINE(_REENTRANT)
- 			AC_DEFINE(_THREAD_SAFE)
- 			dnl -pthread links in -lpthread, so don't specify it explicitly.
 @@ -7012,7 +7012,7 @@ else
    *-darwin*)
      AC_DEFINE(MOZ_MEMORY_DARWIN)

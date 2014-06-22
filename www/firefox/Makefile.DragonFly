@@ -11,19 +11,3 @@ post-extract:
 	@${SED} -e 's|@FIREFOX_ICON@|${FIREFOX_ICON}|' -e 's|@MOZILLA@|${MOZILLA}|' \
 		-e 's|@MOZILLA_NAME@|${MOZILLA_NAME}|' \
 		<${FILESDIR}/firefox.desktop.in >${WRKDIR}/${MOZILLA}.desktop
-	@${REINPLACE_CMD} -e 's|_SAFE|_MUTABLE|g' \
-		${WRKSRC}/netwerk/sctp/src/netinet/sctp_asconf.c \
-		${WRKSRC}/netwerk/sctp/src/netinet/sctp_bsd_addr.c \
-		${WRKSRC}/netwerk/sctp/src/netinet/sctp_indata.c \
-		${WRKSRC}/netwerk/sctp/src/netinet/sctp_input.c \
-		${WRKSRC}/netwerk/sctp/src/netinet/sctp_output.c \
-		${WRKSRC}/netwerk/sctp/src/netinet/sctp_pcb.c \
-		${WRKSRC}/netwerk/sctp/src/netinet/sctp_timer.c \
-		${WRKSRC}/netwerk/sctp/src/netinet/sctputil.c \
-		${WRKSRC}/media/mtransport/third_party/nICEr/src/ice/ice_component.c \
-		${WRKSRC}/media/mtransport/third_party/nICEr/src/ice/ice_ctx.c \
-		${WRKSRC}/media/mtransport/third_party/nICEr/src/ice/ice_peer_ctx.c \
-		${WRKSRC}/media/mtransport/third_party/nICEr/src/ice/ice_media_stream.c \
-		${WRKSRC}/media/mtransport/third_party/nICEr/src/ice/ice_socket.c \
-		${WRKSRC}/media/mtransport/third_party/nICEr/src/stun/nr_socket_buffered_stun.c \
-		${WRKSRC}/media/mtransport/third_party/nICEr/src/stun/stun_server_ctx.c
