@@ -6,6 +6,9 @@ WITHOUT_DEBUG=yes
 .endif
 
 MOZ_OPTIONS+=	--host=${ARCH}-dports-${OPSYS:tl}${OSREL}
+MOZ_MAKE_FLAGS+=-j${MAKE_JOBS_NUMBER}
+MOZ_EXPORT+=	MOZ_MAKE_FLAGS=${MOZ_MAKE_FLAGS:Q}
+MOZ_MK_OPTIONS+=MOZ_MAKE_FLAGS=${MOZ_MAKE_FLAGS:Q}
 
 PULSEAUDIO_LIB_DEPENDS= libpulse.so:${PORTSDIR}/audio/pulseaudio
 
@@ -18,10 +21,4 @@ post-extract:
 		${WRKSRC}/mozilla/netwerk/sctp/src/netinet/sctp_output.c \
 		${WRKSRC}/mozilla/netwerk/sctp/src/netinet/sctp_pcb.c \
 		${WRKSRC}/mozilla/netwerk/sctp/src/netinet/sctp_timer.c \
-		${WRKSRC}/mozilla/netwerk/sctp/src/netinet/sctputil.c \
-		${WRKSRC}/mozilla/media/mtransport/third_party/nICEr/src/ice/ice_component.c \
-		${WRKSRC}/mozilla/media/mtransport/third_party/nICEr/src/ice/ice_ctx.c \
-		${WRKSRC}/mozilla/media/mtransport/third_party/nICEr/src/ice/ice_peer_ctx.c \
-		${WRKSRC}/mozilla/media/mtransport/third_party/nICEr/src/ice/ice_media_stream.c \
-		${WRKSRC}/mozilla/media/mtransport/third_party/nICEr/src/ice/ice_socket.c \
-		${WRKSRC}/mozilla/media/mtransport/third_party/nICEr/src/stun/stun_server_ctx.c \
+		${WRKSRC}/mozilla/netwerk/sctp/src/netinet/sctputil.c
