@@ -12,10 +12,4 @@ post-extract:
 		${WRKSRC}/netwerk/sctp/src/netinet/sctp_output.c \
 		${WRKSRC}/netwerk/sctp/src/netinet/sctp_pcb.c \
 		${WRKSRC}/netwerk/sctp/src/netinet/sctp_timer.c \
-		${WRKSRC}/netwerk/sctp/src/netinet/sctputil.c \
-		${WRKSRC}/media/mtransport/third_party/nICEr/src/ice/ice_component.c \
-		${WRKSRC}/media/mtransport/third_party/nICEr/src/ice/ice_ctx.c \
-		${WRKSRC}/media/mtransport/third_party/nICEr/src/ice/ice_peer_ctx.c \
-		${WRKSRC}/media/mtransport/third_party/nICEr/src/ice/ice_media_stream.c \
-		${WRKSRC}/media/mtransport/third_party/nICEr/src/ice/ice_socket.c \
-		${WRKSRC}/media/mtransport/third_party/nICEr/src/stun/stun_server_ctx.c \
+		${WRKSRC}/netwerk/sctp/src/netinet/sctputil.c
