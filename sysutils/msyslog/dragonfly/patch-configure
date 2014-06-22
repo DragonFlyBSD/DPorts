@@ -1,0 +1,27 @@
+--- configure.intermediate	2014-06-22 12:55:44.438157000 +0000
++++ configure
+@@ -3728,6 +3728,15 @@ EOF
+ 
+ 	SHARED_PARAMS="-Bshareable"
+ 	DCCFLAGS="-fPIC"
++elif test "$UNAME" = "DragonFly" ; then
++	cat >>confdefs.h <<\EOF
++#define DLOPEN_FLAGS RTLD_LAZY
++#define SYMBOL_PREFIX ""
++EOF
++
++	SHARED_PARAMS="-Bshareable"
++	DCCFLAGS="-fPIC"
++	SYSLOGD_LIBS="$SYSLOGD_LIBS -Wl,-E"
+ elif test "$UNAME" = "FreeBSD" ; then
+ 	cat >>confdefs.h <<\EOF
+ #define DLOPEN_FLAGS RTLD_LAZY
+@@ -3855,7 +3864,7 @@ else
+ 
+ 	if test "$UNAME" = "OpenBSD" -o "$UNAME" = "NetBSD" \
+ 	    -o "$UNAME"  = "FreeBSD" -o "$UNAME" = "BSDi" \
+-	    -o "$UNAME"  = "386BSD"  -o "$UNAME" = "ArchBSD" \
++	    -o "$UNAME"  = "DragonFly"  -o "$UNAME" = "ArchBSD" \
+ 	    -o "$UNAME"  = "TrustedBSD" ; then
+ 		temp_res="yes";
+ 	fi
