@@ -1,0 +1,5 @@
+#!/bin/sh
+# $FreeBSD: head/mail/davmail/files/davmail.sh.in 356827 2014-06-06 18:01:10Z mandree $
+BASE="%%DATADIR%%"
+CLASSPATH="$BASE/lib/*"
+exec java -cp $BASE/davmail.jar:$CLASSPATH davmail.DavGateway $1
