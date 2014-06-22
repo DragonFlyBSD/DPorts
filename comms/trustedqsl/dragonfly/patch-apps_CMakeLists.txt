@@ -1,11 +1,11 @@
---- apps/CMakeLists.txt.intermediate	2014-02-09 22:01:53.885571000 +0000
+--- apps/CMakeLists.txt.orig	2014-06-22 07:25:41.095612000 +0000
 +++ apps/CMakeLists.txt
-@@ -123,6 +123,8 @@ install(TARGETS tqsl DESTINATION bin)
- install(DIRECTORY help DESTINATION share/TrustedQSL)
- if(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
-   install(FILES tqsl.5 DESTINATION man/man5)
-+elseif(CMAKE_SYSTEM_NAME STREQUAL "DragonFly")
-+  install(FILES tqsl.5 DESTINATION man/man5)
- else()
-   install(FILES tqsl.5 DESTINATION share/man/man5)
- endif()
+@@ -151,6 +151,8 @@ if(NOT APPLE AND NOT WIN32)
+ 	install(FILES ca-bundle.crt DESTINATION share/TrustedQSL)
+ 	if(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
+ 		install(FILES tqsl.5 DESTINATION man/man5)
++	elseif(CMAKE_SYSTEM_NAME STREQUAL "DragonFly")
++		install(FILES tqsl.5 DESTINATION man/man5)
+ 	else()
+ 		install(FILES tqsl.5 DESTINATION share/man/man5)
+ 	endif()
