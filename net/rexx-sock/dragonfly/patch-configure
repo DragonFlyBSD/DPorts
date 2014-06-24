@@ -1,0 +1,20 @@
+--- configure.orig	2003-12-27 10:36:34.000000000 +0000
++++ configure
+@@ -1549,7 +1549,7 @@ fi
+ 
+ 		fi
+ 		case "$target" in
+-			*freebsd*)
++			*freebsd*|*dragonfly*)
+ 				
+ 				REXX_LIBS="`echo ${REXX_LIBS} | sed -e s/-pthread//`"
+ 				;;
+@@ -2839,7 +2839,7 @@ case "$target" in
+ 		LD_RXLIB1="${CC} -shared"
+ 		LD_RXTRANSLIB1="$LD_RXLIB1"
+ 		;;
+-	*freebsd*)
++	*dragonfly*|*freebsd*)
+ 		LD_RXLIB1="ld -Bdynamic -Bshareable"
+ 		LD_RXTRANSLIB1="$LD_RXLIB1"
+ 		;;
