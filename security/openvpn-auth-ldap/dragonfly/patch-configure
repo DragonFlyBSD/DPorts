@@ -1,0 +1,11 @@
+--- configure.orig	2007-03-22 20:32:56.000000000 +0000
++++ configure
+@@ -4840,7 +4840,7 @@ rm -f confcache
+ 	    PLUGIN_LD="${CC} -shared"
+ 	    PLUGIN_LD_FLAGS=""
+ 	    PLUGIN_SUFFIX=".so"
+-	    LDFLAGS="-export-dynamic"
++	    LDFLAGS="-Wl,-export-dynamic"
+ 	    ;;
+     esac
+ 
