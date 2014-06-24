@@ -1,0 +1,2 @@
+CFLAGS+= -D__FreeBSD__=9
+CONFIGURE_ENV+= ac_cv_type_sa_family_t=yes
