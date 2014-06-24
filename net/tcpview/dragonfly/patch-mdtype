@@ -1,0 +1,14 @@
+--- mdtype.intermediate	2014-06-24 12:35:59.576401000 +0000
++++ mdtype
+@@ -9,10 +9,7 @@ if ( -f /bin/arch ) set mach=`/bin/arch`
+ if ($mach == "sparc") set mach=sun4
+ 
+ # Hack for FreeBSD
+-if ($mach == "UNKNOWN") then
+-	set temp=`uname|grep FreeBSD`
+-	if ($temp != "") set mach=386
+-endif
++set mach=386
+ 
+ echo $mach
+ if ($mach == "UNKNOWN") exit 1
