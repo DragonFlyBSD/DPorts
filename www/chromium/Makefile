@@ -4,7 +4,8 @@
 #TODO eadler: s/python/python2/g on a number of files, chromium does not build with python3
 
 PORTNAME=	chromium
-PORTVERSION=	35.0.1916.114
+PORTVERSION=	35.0.1916.153
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://commondatastorage.googleapis.com/chromium-browser-official/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
@@ -33,7 +34,8 @@ LIB_DEPENDS=	libcairo.so:${PORTSDIR}/graphics/cairo \
 		libcups.so:${PORTSDIR}/print/cups-client \
 		libevent-1.4.so:${PORTSDIR}/devel/libevent \
 		libgcrypt.so:${PORTSDIR}/security/libgcrypt \
-		libpci.so:${PORTSDIR}/devel/libpci
+		libpci.so:${PORTSDIR}/devel/libpci \
+		libdrm.so:${PORTSDIR}/graphics/libdrm
 
 LIB_DEPENDS+=	gssapi_krb5:${PORTSDIR}/security/krb5
 
