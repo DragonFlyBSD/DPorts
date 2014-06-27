@@ -1,0 +1,2 @@
+CFLAGS+= -D__FreeBSD__=9
+LDFLAGS+= -L${LOCALBASE}/lib
