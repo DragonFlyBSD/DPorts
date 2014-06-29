@@ -2,7 +2,7 @@
 
 .include "${.CURDIR}/Makefile.common"
 
-PORTREVISION=	1
+PORTREVISION=	0
 
 COMMENT=	Full integrated office productivity suite
 
@@ -18,6 +18,7 @@ BUILD_DEPENDS=	p5-Archive-Zip>=0:${PORTSDIR}/archivers/p5-Archive-Zip \
 		ucpp:${PORTSDIR}/devel/ucpp \
 		vigra-config:${PORTSDIR}/graphics/vigra \
 		bash:${PORTSDIR}/shells/bash \
+		${LOCALBASE}/bin/flex:${PORTSDIR}/textproc/flex \
 		gsed:${PORTSDIR}/textproc/gsed
 
 LIB_DEPENDS=	libicutu.so:${PORTSDIR}/devel/icu \
@@ -27,8 +28,9 @@ LIB_DEPENDS=	libicutu.so:${PORTSDIR}/devel/icu \
 		libcairo.so:${PORTSDIR}/graphics/cairo \
 		libgraphite2.so:${PORTSDIR}/graphics/graphite2 \
 		libjpeg.so:${PORTSDIR}/graphics/jpeg \
-		libcdr-0.0.so:${PORTSDIR}/graphics/libcdr \
 		liblcms2.so:${PORTSDIR}/graphics/lcms2 \
+		libcdr-0.0.so:${PORTSDIR}/graphics/libcdr \
+		libfreehand-0.0.so:${PORTSDIR}/graphics/libfreehand00 \
 		libwpg-0.2.so:${PORTSDIR}/graphics/libwpg \
 		libpng15.so:${PORTSDIR}/graphics/png \
 		libpoppler.so:${PORTSDIR}/graphics/poppler \
@@ -39,16 +41,18 @@ LIB_DEPENDS=	libicutu.so:${PORTSDIR}/devel/icu \
 		libnss3.so:${PORTSDIR}/security/nss \
 		libclucene-core.so:${PORTSDIR}/textproc/clucene \
 		libexpat.so:${PORTSDIR}/textproc/expat2 \
-		libmwaw-0.1.so:${PORTSDIR}/textproc/libmwaw \
-		libodfgen-0.0.so:${PORTSDIR}/textproc/libodfgen \
 		libhunspell-1.3.so:${PORTSDIR}/textproc/hunspell \
 		libhyphen.so:${PORTSDIR}/textproc/hyphen \
+		libabw-0.0.so:${PORTSDIR}/textproc/libabw00 \
+		libe-book-0.0.so:${PORTSDIR}/textproc/libe-book00 \
 		libexttextcat-2.0.so:${PORTSDIR}/textproc/libexttextcat \
+		libmwaw-0.2.so:${PORTSDIR}/textproc/libmwaw \
+		libodfgen-0.0.so:${PORTSDIR}/textproc/libodfgen \
 		libvisio-0.0.so:${PORTSDIR}/textproc/libvisio \
-		libxml2.so:${PORTSDIR}/textproc/libxml2 \
-		libxslt.so:${PORTSDIR}/textproc/libxslt \
 		libwpd-0.9.so:${PORTSDIR}/textproc/libwpd \
 		libwps-0.2.so:${PORTSDIR}/textproc/libwps \
+		libxml2.so:${PORTSDIR}/textproc/libxml2 \
+		libxslt.so:${PORTSDIR}/textproc/libxslt \
 		libmythes-1.2.so:${PORTSDIR}/textproc/mythes \
 		librdf.so:${PORTSDIR}/textproc/redland
 
@@ -58,8 +62,6 @@ RUN_DEPENDS=	${LOCALBASE}/lib/X11/fonts/Caladea/Caladea-Bold.ttf:${PORTSDIR}/x11
 		${LOCALBASE}/lib/X11/fonts/GentiumBasic/GenBasI.ttf:${PORTSDIR}/x11-fonts/gentium-basic \
 		${LOCALBASE}/lib/X11/fonts/Liberation/LiberationMono-Bold.ttf:${PORTSDIR}/x11-fonts/liberation-fonts-ttf \
 		${LOCALBASE}/lib/X11/fonts/LinLibertineG/LinLibertine_DR_G.ttf:${PORTSDIR}/x11-fonts/linuxlibertine-g
-
-CONFLICTS_INSTALL=	libreoffice-legacy-[0-9]*
 
 _MAKE_JOBS=	#
 
@@ -71,26 +73,30 @@ USE_PERL5=	build
 USE_PYTHON=	yes
 USE_QT4=	# empty but required
 USE_XORG=	xaw xrandr
-USES=		bison compiler:c++11-lang gmake perl5 pkgconfig tar:xz
+USES=		bison compiler:c++11-lang gmake perl5 pkgconfig shared-mime-info tar:xz
 WANT_GNOME=	yes
 
 DISTFILES+=	${PORTNAME}-${LOVERSION}${EXTRACT_SUFX}
 DISTFILES+=	${PORTNAME}-help-${LOVERSION}${EXTRACT_SUFX}
+
+EXTRA_PATCHES+=	${FILESDIR}/extra-fix-ldl:-p1
 
 EXTRACT_ONLY:=	${DISTFILES}
 
 DISTFILES+=	1f24ab1d39f4a51faf22244c94a6203f-xmlsec1-1.2.14.tar.gz:src
 
 DIST_SUBDIR=	libreoffice
-LODESTDIR=	${WRKDIR}/loinstall
 WRKSRC=		${WRKDIR}/${PORTNAME}-${LOVERSION}
 
 CONFIGURE_ENV=		DMAKE=${LOCALBASE}/bin/dmake \
 			GNUTAR=${TAR} \
 			GPERF=${LOCALBASE}/bin/gperf \
+			FLEX=${LOCALBASE}/bin/flex \
 			PYTHON_CFLAGS="`${PYTHON_VERSION}-config --cflags`" \
 			PYTHON_LIBS="`${PYTHON_VERSION}-config --libs`" \
-			TMPDIR=${WRKDIR}
+			TMPDIR=${WRKDIR} \
+			OPENSSL_CFLAGS="-I/usr/include" \
+			OPENSSL_LIBS="-lcrypto -lssl"
 
 CONFIGURE_ARGS+=	--disable-dependency-tracking \
 			--disable-fetch-external \
@@ -105,12 +111,13 @@ CONFIGURE_ARGS+=	--disable-dependency-tracking \
 			--with-vendor="FreeBSD ports ${PKGVERSION}"
 
 CONFIGURE_ARGS+=	--disable-epm \
+			--disable-firebird-sdbc \
 			--disable-gnome-vfs \
 			--disable-gstreamer \
 			--disable-kde \
 			--disable-kdeab \
-			--disable-linkoo \
 			--disable-mergelibs \
+			--disable-packagekit \
 			--enable-cairo-canvas \
 			--enable-graphite \
 			--enable-python=system \
@@ -132,9 +139,13 @@ CONFIGURE_ARGS+=	--disable-epm \
 			--with-system-icu \
 			--with-system-jpeg \
 			--with-system-lcms2 \
+			--with-system-libabw \
 			--with-system-libcdr \
 			--with-system-libcmis \
+			--with-system-libebook \
+			--with-system-libetonyek \
 			--with-system-libexttextcat \
+			--with-system-libfreehand \
 			--with-system-liblangtag \
 			--with-system-libmspub \
 			--with-system-libmwaw \
@@ -149,11 +160,13 @@ CONFIGURE_ARGS+=	--disable-epm \
 			--with-system-mdds \
 			--with-system-mesa-headers \
 			--with-system-mythes \
+			--with-system-neon \
 			--with-system-nss \
 			--with-system-openldap \
 			--with-system-openssl \
 			--with-system-orcus \
 			--with-system-poppler \
+			--with-system-postgresql \
 			--with-system-redland \
 			--with-system-ucpp \
 			--with-system-vigra \
@@ -162,6 +175,8 @@ CONFIGURE_ARGS+=	--disable-epm \
 			--without-fonts \
 			--without-myspell-dicts \
 			--without-system-npapi-headers
+
+#XXX add: --with-system-libeot or --with-system-libatomic_ops
 
 OPTIONS_DEFINE=	CUPS DEBUG GNOME GTK2 GTK3 JAVA KDE4 MMEDIA PGSQL SDK \
 		SYSTRAY TEST VERBOSE WEBDAV
@@ -176,63 +191,21 @@ TEST_DESC=	Run all regression tests
 VERBOSE_DESC=	Increase build verbosity
 WEBDAV_DESC=	Enable webdav protocol
 
-.include <bsd.port.options.mk>
+CUPS_LIB_DEPENDS=	libcups.so:${PORTSDIR}/print/cups-client
+CUPS_CONFIGURE_ENABLE=	cups
 
-.if ${PORT_OPTIONS:MCUPS}
-LIB_DEPENDS+=		libcups.so:${PORTSDIR}/print/cups-client
-CONFIGURE_ARGS+=	--enable-cups
-.else
-CONFIGURE_ARGS+=	--disable-cups
-.endif
+DEBUG_CONFIGURE_ON=	--enable-crashdump --enable-dbgutil --enable-debug
+DEBUG_CONFIGURE_OFF=	--enable-release-build
 
-.if ${PORT_OPTIONS:MDEBUG}
-IGNORE=			known as broken
-CONFIGURE_ARGS+=	--enable-debug \
-			--enable-dbgutil \
-			--enable-crashdump
-.else
-CONFIGURE_ARGS+=	--enable-release-build
-.endif
+GNOME_LIB_DEPENDS=	libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib
+GNOME_USE=	GNOME=gconf2
+GNOME_CONFIGURE_ENABLE=	dbus gconf gio lockdown
 
-.if ${PORT_OPTIONS:MDEBUG} || ${PORT_OPTIONS:MVERBOSE}
-CONFIGURE_ARGS+=	--enable-verbose
-.endif
+GTK3_USE=		GNOME=gtk30
+GTK3_CONFIGURE_ENABLE=	gtk3
 
-.if ${PORT_OPTIONS:MGNOME}
-LIB_DEPENDS+=		libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib
-USE_GNOME+=		gconf2
-CONFIGURE_ARGS+=	--enable-dbus --enable-gconf --enable-gio \
-			--enable-lockdown
-.else
-CONFIGURE_ARGS+=	--disable-dbus --disable-gconf --disable-gio \
-			--disable-lockdown
-.endif
-
-.if ${PORT_OPTIONS:MGNOME} || ${PORT_OPTIONS:MGTK2}
-USE_GNOME+=	gtk20
-CONFIGURE_ARGS+=	--enable-gtk
-.else
-CONFIGURE_ARGS+=	--disable-gtk
-.endif
-
-.if ${PORT_OPTIONS:MGTK3}
-USE_GNOME+=	gtk30
-CONFIGURE_ARGS+=	--enable-gtk3
-.else
-CONFIGURE_ARGS+=	--disable-gtk3
-.endif
-
-.if ${PORT_OPTIONS:MGNOME} || ${PORT_OPTIONS:MGTK2} || ${PORT_OPTIONS:MGTK3}
-USES+=		desktop-file-utils
-INSTALLS_ICONS=	yes
-.endif
-
-.if ${PORT_OPTIONS:MJAVA}
-# XXX jni.h from GNU classpath causes ABI conflicts.
-CONFLICTS_BUILD=	classpath-[0-9]*
-#additionnal distfiles needed for java
-DISTFILES+=	17410483b5b5f267aa18b7e00b65e6e0-hsqldb_1_8_0.zip:src \
-		2a177023f9ea8ec8bd00837605c5df1b-jakarta-tomcat-5.0.30-src.tar.gz:src \
+JAVA_CATEGORIES=	java
+JAVA_DISTFILES=	17410483b5b5f267aa18b7e00b65e6e0-hsqldb_1_8_0.zip:src \
 		2c9b0f83ed5890af02c0df1c1776f39b-commons-httpclient-3.1-src.tar.gz:src \
 		2e482c7567908d334785ce7d69ddfff7-commons-codec-1.6-src.tar.gz:src \
 		3404ab6b1792ae5f16bbd603bd1e1d03-libformula-1.1.7.zip:src \
@@ -252,79 +225,73 @@ DISTFILES+=	17410483b5b5f267aa18b7e00b65e6e0-hsqldb_1_8_0.zip:src \
 		ea570af93c284aa9e5621cd563f54f4d-bsh-2.0b1-src.tar.gz:src \
 		eeb2c7ddf0d302fba4bfc6e97eac9624-libbase-1.1.6.zip:src \
 		f94d9870737518e3b597f9265f4e9803-libserializer-1.1.6.zip:src
-
-# LibreOffice works only with Java 6 -- which may not be the default
-# if you specify the JAVA_VENDOR variable
-CATEGORIES+=	java
-USE_JAVA=	yes
-JAVA_BUILD=	yes
-JAVA_VERSION=	1.6
-BUILD_DEPENDS+=	ant:${PORTSDIR}/devel/apache-ant \
-		${JAVAJARDIR}/junit.jar:${PORTSDIR}/java/junit
-
-CONFIGURE_ARGS+=	--enable-ext-wiki-publisher \
+JAVA_BUILD_DEPENDS=	ant:${PORTSDIR}/devel/apache-ant \
+			${JAVAJARDIR}/junit.jar:${PORTSDIR}/java/junit
+# XXX jni.h from GNU classpath causes ABI conflicts.
+JAVA_CONFLICTS_BUILD=	classpath-[0-9]*
+JAVA_CONFIGURE_ON=	--enable-ext-wiki-publisher \
 			--enable-report-builder \
-			--enable-scripting-beanshell \
-			--enable-scripting-javascript \
-			--with-ant-home=${LOCALBASE}/share/java/apache-ant/ \
+			--with-ant-home=${LOCALBASE}/share/java/apache-ant \
 			--with-jdk-home=${JAVA_HOME} \
 			--with-junit=${JAVAJARDIR}/junit.jar
+JAVA_CONFIGURE_OFF=	--without-java
+# LibreOffice works only with Java 6 -- which may not be the default
+# if you specify the JAVA_VENDOR variable
+JAVA_BUILD=	yes
+JAVA_VERSION=	1.6
+JAVA_USE=	JAVA=yes
 
-.else
-CONFIGURE_ARGS+=	--without-java
+KDE4_USE=	KDE4=kdelibs QT4=moc_build QT4=qmake_build
+KDE4_CONFIGURE_ENABLE=	kde4
+KDE4_CONFIGURE_ENV=	KDE4DIR="${KDE4_PREFIX}" \
+			QT4DIR="${QT_PREFIX}" \
+			QT4INC="${QT_INCDIR}" \
+			QT4LIB="${QT_LIBDIR}"
+
+MMEDIA_USE=	GSTREAMER=yes
+MMEDIA_CONFIGURE_ENABLE=	gstreamer-0-10
+
+PGSQL_USES=	pgsql:90+
+PGSQL_CONFIGURE_ENABLE=	postgresql-sdbc
+PGSQL_CONFIGURE_WITH=	gssapi krb5
+
+SDK_DISTFILES=	185d60944ea767075d27247c3162b3bc-unowinreg.dll:ext
+SDK_BUILD_DEPENDS=	doxygen:${PORTSDIR}/devel/doxygen
+SDK_CONFIGURE_ENABLE=	odk
+SDK_CONFIGURE_ON=	--with-doxygen=${LOCALBASE}/bin/doxygen
+SDK_CONFIGURE_OFF=	--without-doxygen
+
+SYSTRAY_CONFIGURE_ENABLE=	systray
+
+TEST_CONFIGURE_ENABLE=	cve-tests
+
+WEBDAV_LIB_DEPENDS=	libneon.so:${PORTSDIR}/www/neon29
+WEBDAV_CONFIGURE_ENABLE=	neon
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MDEBUG}
+IGNORE=			is broken with DEBUG option
 .endif
 
-.if ${PORT_OPTIONS:MKDE4}
-USE_KDE4=	kdelibs
-USE_QT4+=	moc_build qmake_build
-CONFIGURE_ENV+=		QT4DIR="${QT_PREFIX}" QT4LIB="${QT_LIBDIR}" QT4INC="${QT_INCDIR}" KDE4DIR="${KDE4_PREFIX}"
-CONFIGURE_ARGS+=	--enable-kde4
-.else
-CONFIGURE_ARGS+=	--disable-kde4
+.if ${PORT_OPTIONS:MDEBUG} || ${PORT_OPTIONS:MVERBOSE}
+CONFIGURE_ARGS+=	--enable-verbose
 .endif
 
-.if ${PORT_OPTIONS:MMMEDIA}
-USE_GSTREAMER=	yes
-CONFIGURE_ARGS+=	--enable-gstreamer-0-10
+.if ${PORT_OPTIONS:MGNOME} || ${PORT_OPTIONS:MGTK2}
+USE_GNOME+=	gtk20
+CONFIGURE_ARGS+=	--enable-gtk
 .else
-CONFIGURE_ARGS+=	--disable-gstreamer-0-10
+CONFIGURE_ARGS+=	--disable-gtk
 .endif
 
-.if ${PORT_OPTIONS:MPGSQL}
-USE_PGSQL=	yes
-WANT_PGSQL_VER=	90+
-CONFIGURE_ARGS+=	--enable-postgresql-sdbc --with-system-postgresql
-.else
-CONFIGURE_ARGS+=	--disable-postgresql-sdbc \
-			--without-gssapi --without-krb5
+.if ${PORT_OPTIONS:MGNOME} || ${PORT_OPTIONS:MGTK2} || ${PORT_OPTIONS:MGTK3}
+USES+=		desktop-file-utils
+INSTALLS_ICONS=	yes
 .endif
 
-.if ${PORT_OPTIONS:MSDK}
-DISTFILES+=	185d60944ea767075d27247c3162b3bc-unowinreg.dll:ext
-BUILD_DEPENDS+=	doxygen:${PORTSDIR}/devel/doxygen
-CONFIGURE_ARGS+=	--enable-odk --with-doxygen=${LOCALBASE}/bin/doxygen
-.else
-CONFIGURE_ARGS+=	--disable-odk
-.endif
-
-.if ${PORT_OPTIONS:MSYSTRAY}
-CONFIGURE_ARGS+=	--enable-systray
-.else
-CONFIGURE_ARGS+=	--disable-systray
-.endif
-
-.if ${PORT_OPTIONS:MTEST}
-CONFIGURE_ARGS+=	--enable-cve-tests
-.else
+.if empty(PORT_OPTIONS:MTEST)
 EXTRA_PATCHES+=		${FILESDIR}/disable-cppunittester
-CONFIGURE_ARGS+=	--disable-cve-tests
-.endif
-
-.if ${PORT_OPTIONS:MWEBDAV}
-CONFIGURE_ARGS+=	--enable-neon --with-system-neon
-LIB_DEPENDS+=	libneon.so:${PORTSDIR}/www/neon29
-.else
-CONFIGURE_ARGS+=	--disable-neon
 .endif
 
 .include <bsd.port.pre.mk>
@@ -335,7 +302,8 @@ LDFLAGS=	-B${LOCALBASE}/bin
 .endif
 
 .if ${COMPILER_FEATURES:Mlibc++}
-EXTRA_PATCHES+=	${FILESDIR}/extra-patch-libc++
+EXTRA_PATCHES+=	${FILESDIR}/extra-libc++:-p1
+EXTRA_PATCHES+=	${FILESDIR}/extra-libc++.i386:-p0
 .endif
 
 .if ${OSVERSION} < 900506
@@ -351,49 +319,57 @@ MAKE_ENV+=	ENVLINKFLAGS="${LDFLAGS}"
 MAKE_ENV+=	LANG=C LC_ALL=C
 MAKE_ENV+=	SED="${LOCALBASE}/bin/gsed" USE_GMAKE=1
 
+INSTALL_TARGET= distro-pack-install
+
 pre-configure:
 	@${TOUCH} ${WRKSRC}/autogen.lastrun
 
 post-configure:
 	@${TOUCH} ${WRKSRC}/src.downloaded
 
-do-build:
-	@cd ${WRKSRC} && ${SETENV} DESTDIR="" ${MAKE_ENV} ${GMAKE}
-
-do-install:
-	@cd ${WRKSRC} && ${SETENV} DESTDIR="${LODESTDIR}" \
-	    ${GMAKE} distro-pack-install
-
-	@${RM} -f ${PLISTF} ${PLISTD}
+post-install:
+	@${RM} -f ${PLISTD} ${PLISTF}
 	# It seems that the empty directories are necessary for libreoffice keep them for now
-	@cd ${LODESTDIR}${PREFIX} && ${FIND} -d lib/libreoffice -type d \
+	@cd ${STAGEDIR}${PREFIX} && ${FIND} -d lib/libreoffice -type d \
 	    -empty -exec ${ECHO_CMD} "@exec ${MKDIR} %D/{}" \; >> ${PLISTD}
 
-	@cd ${LODESTDIR}${PREFIX} && ${FIND} -H -s bin lib man \
+	@cd ${STAGEDIR}${PREFIX} && ${FIND} -H -s bin etc lib man \
 	    \( -type f -o -type l \) -print >> ${PLISTF}
-	@cd ${LODESTDIR}${PREFIX} && ${FIND} -d lib/libreoffice -type d \
+	@cd ${STAGEDIR}${PREFIX} && ${FIND} -d lib/libreoffice -type d \
 	    -exec ${ECHO_CMD} "@dirrm {}" \; >> ${PLISTD}
-
-	@${ECHO_CMD} etc/bash_completion.d/libreoffice.sh >> ${PLISTF}
 	@${ECHO_CMD} "@dirrmtry etc/bash_completion.d" >> ${PLISTD}
 
-.for subdir in applications icons mime mimelnk
-	@cd ${LODESTDIR}${PREFIX} && ${FIND} -H -s share/${subdir} \
+	@cd ${STAGEDIR}${PREFIX} && ${FIND} -H -s share/applications \
 	    \( -type f -o -type l \) -print >> ${PLISTF}
-	@cd ${LODESTDIR}${PREFIX} && ${FIND} -d share/${subdir} -type d \
+.for subdir in icons mime mimelnk
+	@cd ${STAGEDIR}${PREFIX} && ${FIND} -H -s share/${subdir} \
+	    \( -type f -o -type l \) -print >> ${PLISTF}
+	@cd ${STAGEDIR}${PREFIX} && ${FIND} -d share/${subdir} -type d \
 	    -exec ${ECHO_CMD} "@dirrmtry {}" \; >> ${PLISTD}
 .endfor
 # do not add the subdir itself as dirrmtry
 .for subdir in application-registry mime-info
-	@cd ${LODESTDIR}${PREFIX} && ${FIND} -H -s share/${subdir} \
+	@cd ${STAGEDIR}${PREFIX} && ${FIND} -H -s share/${subdir} \
 	    \( -type f -o -type l \) -print >> ${PLISTF}
 .endfor
 
+# XXX INSTALLS_ICONS does not work here, i.e., it runs *before* post-install.
+.if defined(INSTALLS_ICONS)
+	@for i in `${GREP} "^share/icons/.*/" ${PLISTF} | ${CUT} -d / -f 1-3 | ${SORT} -u`; do \
+		${ECHO_CMD} "@unexec /bin/rm %D/$${i}/icon-theme.cache 2>/dev/null || /usr/bin/true" \
+			>> ${TMPPLIST}.icons1; \
+		${ECHO_CMD} "@exec ${LOCALBASE}/bin/gtk-update-icon-cache -q -f %D/$${i} 2>/dev/null || /usr/bin/true" \
+			>> ${TMPPLIST}; \
+		${ECHO_CMD} "@unexec ${LOCALBASE}/bin/gtk-update-icon-cache -q -f %D/$${i} 2>/dev/null || /usr/bin/true" \
+			>> ${TMPPLIST}; \
+	done
+.endif
+
 .if ${PORT_OPTIONS:MSDK}
 .for subdir in include share share/doc share/idl
-	@cd ${LODESTDIR}${PREFIX} && ${FIND} -H -s ${subdir}/libreoffice \
+	@cd ${STAGEDIR}${PREFIX} && ${FIND} -H -s ${subdir}/libreoffice \
 	    \( -type f -o -type l \) -print >> ${PLISTF}
-	@cd ${LODESTDIR}${PREFIX} && ${FIND} -d ${subdir}/libreoffice \
+	@cd ${STAGEDIR}${PREFIX} && ${FIND} -d ${subdir}/libreoffice \
 	    -type d -exec echo "@dirrm {}" \; >> ${PLISTD}
 .endfor
 	@${ECHO_CMD} "@dirrmtry share/idl" >> ${PLISTD}
@@ -404,10 +380,5 @@ do-install:
 	@${GREP} '^@dirrm ' ${PLISTD} | ${SORT} -ru >> ${TMPPLIST}
 	@${GREP} '^@dirrmtry ' ${PLISTD} | ${SORT} -ru | \
 	    ${SED} -e '${PLIST_REINPLACE_DIRRMTRY}' >> ${TMPPLIST}
-
-	@cd ${LODESTDIR}${PREFIX} ; ${PAX} -rw . ${STAGEDIR}${PREFIX}
-	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/bash_completion.d
-	@${INSTALL_SCRIPT} ${LODESTDIR}/etc/bash_completion.d/libreoffice.sh \
-	    ${STAGEDIR}${PREFIX}/etc/bash_completion.d
 
 .include <bsd.port.post.mk>

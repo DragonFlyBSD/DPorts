@@ -1,5 +1,10 @@
 CONFIGURE_ARGS+=	--with-os-version=${DFLYVERSION} \
 			--with-vendor="DragonFly dports"
-.if ${DFLYVERSION} < 300600
-EXTRA_PATCHES+= ${DFLY_FILESDIR}/extra-patch-solenv_gbuild_Deliver.mk
-.endif
+
+# Avoid stripping in /tmp, it takes too much space for poudriere
+# Also, ooinstall is fed wrong TMPDIR which is redefined a few times
+# So let's just hardcode it for now
+
+post-patch:
+	${REINPLACE_CMD} -e 's|$$ENV{TMPDIR};|"${WRKDIR}";|' \
+		${WRKSRC}/solenv/bin/ooinstall
