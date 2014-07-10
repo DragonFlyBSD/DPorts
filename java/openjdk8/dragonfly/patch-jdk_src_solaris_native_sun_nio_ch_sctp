@@ -1,0 +1,51 @@
+--- jdk/src/solaris/native/sun/nio/ch/sctp/Sctp.h.orig	2014-07-08 05:37:49.133212000 +0000
++++ jdk/src/solaris/native/sun/nio/ch/sctp/Sctp.h	2014-07-09 02:46:42.838001000 +0000
+@@ -319,7 +319,7 @@ typedef int sctp_freepaddrs_func(struct
+ typedef int sctp_bindx_func(int sd, struct sockaddr *addrs, int addrcnt, int flags);
+ typedef int sctp_peeloff_func(int sock, sctp_assoc_t id);
+ 
+-#elif defined(__FreeBSD__)
++#elif defined(__FreeBSD__) || defined(__DragonFly__)
+ 
+ #include <stdint.h>
+ #include <sys/types.h>
+@@ -331,7 +331,27 @@ typedef int sctp_peeloff_func(int sock,
+ 
+ #endif /* __linux__ */
+ 
+-#ifndef __FreeBSD__
++#if defined(__DragonFly__)
++
++#ifndef SCTP_EXPLICIT_EOR
++#define SCTP_EXPLICIT_EOR -1
++#endif
++
++#ifndef SCTP_FRAGMENT_INTERLEAVE
++#define SCTP_FRAGMENT_INTERLEAVE -1
++#endif
++
++#ifndef SCTP_EOF
++#define SCTP_EOF MSG_EOF
++#endif
++
++#ifndef SCTP_UNORDERED
++#define SCTP_UNORDERED MSG_UNORDERED
++#endif
++
++#endif
++
++#if !defined(__FreeBSD__) && !defined(__DragonFly__)
+ 
+ sctp_getladdrs_func* nio_sctp_getladdrs;
+ sctp_freeladdrs_func* nio_sctp_freeladdrs;
+--- jdk/src/solaris/native/sun/nio/ch/sctp/SctpNet.c.orig	2014-07-09 03:05:46.607217000 +0000
++++ jdk/src/solaris/native/sun/nio/ch/sctp/SctpNet.c	2014-07-09 03:07:02.048487000 +0000
+@@ -58,7 +58,7 @@ static int preCloseFD = -1;     /* File
+  */
+ jboolean loadSocketExtensionFuncs
+   (JNIEnv* env) {
+-#ifndef __FreeBSD__
++#if !defined(__FreeBSD__) && !defined(__DragonFly__)
+     if (dlopen(nativeSctpLib, RTLD_GLOBAL | RTLD_LAZY) == NULL) {
+         JNU_ThrowByName(env, "java/lang/UnsupportedOperationException",
+               dlerror());
