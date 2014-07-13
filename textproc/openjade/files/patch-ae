@@ -1,5 +1,5 @@
 
-$FreeBSD: head/textproc/openjade/files/patch-ae 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/textproc/openjade/files/patch-ae 360257 2014-07-02 20:33:20Z tijl $
 
 --- configure.orig	Sun Dec  1 17:18:40 2002
 +++ configure	Fri Feb 28 03:26:00 2003
@@ -21,11 +21,3 @@ $FreeBSD: head/textproc/openjade/files/patch-ae 340725 2014-01-22 17:40:44Z mat 
  echo "$as_me:$LINENO: checking for gettext" >&5
  echo $ECHO_N "checking for gettext... $ECHO_C" >&6
  if test "${ac_cv_func_gettext+set}" = set; then
-@@ -9792,6 +9796,7 @@
- 
- # This can be used to rebuild libtool when needed
- LIBTOOL_DEPS="$ac_aux_dir/ltmain.sh"
-+$ac_aux_dir/ltconfig $LIBTOOL_DEPS
- 
- # Always use our own libtool.
- LIBTOOL='$(SHELL) $(top_builddir)/libtool'
