@@ -1,2 +1,0 @@
-USE_FORTRAN= yes
-MAKE_JOBS_UNSAFE= yes
