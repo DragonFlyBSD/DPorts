@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	swig
-PORTVERSION=	2.0.11
-PORTREVISION=	1
+PORTVERSION=	2.0.12
 CATEGORIES=	devel
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
@@ -65,6 +64,6 @@ post-install:
 .endif
 
 regression-test: build
-	cd ${WRKSRC} && ${GMAKE} check
+	cd ${WRKSRC} && ${MAKE_CMD} check
 
 .include <bsd.port.post.mk>
