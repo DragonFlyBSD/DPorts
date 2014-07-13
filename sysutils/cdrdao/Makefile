@@ -20,6 +20,8 @@ MP3OGG_LIB_DEPENDS=	ao.4:${PORTSDIR}/audio/libao \
 			mad.2:${PORTSDIR}/audio/libmad \
 			vorbis.4:${PORTSDIR}/audio/libvorbis
 
+OPTIONS_DEFINE=	DOCS
+
 .if ${PORTNAME} == "gcdmaster"
 USES+=			pkgconfig
 USE_GNOME=		gnomehier
@@ -135,6 +137,7 @@ do-install:
 		${STAGEDIR}${LOCALBASE}/share/pixmaps
 	@${INSTALL_DATA} ${WRKSRC}/xdao/gcdmaster.schemas \
 		${STAGEDIR}${LOCALBASE}/etc/gconf/schemas
+	@${MKDIR} ${STAGEDIR}${LOCALBASE}/share/mime/packages
 	@${INSTALL_DATA} ${WRKSRC}/xdao/gcdmaster.xml \
 		${STAGEDIR}${LOCALBASE}/share/mime/packages
 	@${MKDIR} ${STAGEDIR}${DATADIR}
@@ -154,12 +157,10 @@ do-install:
 .if defined(WITH_TOC2MP3)
 	@${INSTALL_PROGRAM} ${WRKSRC}/utils/toc2mp3 ${STAGEDIR}{PREFIX}/bin
 .endif
-.if !defined(NOPORTDOCS)
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for i in CREDITS ChangeLog README README.PlexDAE
 	@${INSTALL_DATA} ${WRKSRC}/${i} ${STAGEDIR}${DOCSDIR}
 .endfor
-.endif
 .endif
 
 .include <bsd.port.post.mk>
