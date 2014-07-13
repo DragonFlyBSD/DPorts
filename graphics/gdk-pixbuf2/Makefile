@@ -4,6 +4,7 @@
 
 PORTNAME=	gdk-pixbuf
 PORTVERSION=	2.28.2
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX=	2
@@ -12,11 +13,9 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Graphic library for GTK+
 
-USE_XZ=		yes
 USE_XORG=	xt xi x11
-USE_AUTOTOOLS=	libtool
-USES=		gmake pathfix pkgconfig
-USE_GNOME+=	gnomehier glib20 ltverhack introspection:build
+USES=		gmake libtool:keepla pathfix pkgconfig tar:xz
+USE_GNOME+=	gnomehier glib20 introspection:build
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
@@ -69,7 +68,7 @@ PLIST_SUB+=	TIFF="@comment "
 .endif
 
 post-install:
-	@cd ${WRKSRC}/docs/reference/gdk-pixbuf && env DESTDIR=${STAGEDIR} ${GMAKE} install-man1
+	@cd ${WRKSRC}/docs/reference/gdk-pixbuf && env DESTDIR=${STAGEDIR} ${MAKE_CMD} install-man1
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libgdk_pixbuf*-2.0.so.0
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/gdk-pixbuf-2.0/${GTK2_VERSION}/loaders/lib*.so
 
