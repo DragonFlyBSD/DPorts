@@ -1,1 +1,0 @@
-USES:= ${USES:Nfmake} gmake
