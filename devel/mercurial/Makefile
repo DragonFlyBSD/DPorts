@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	mercurial
-PORTVERSION=	3.0.1
+PORTVERSION=	3.0.2
 CATEGORIES=	devel python
 MASTER_SITES=	http://mercurial.selenic.com/release/
 
@@ -10,14 +10,21 @@ MAINTAINER=	python@FreeBSD.org
 COMMENT=	Fast, lightweight source control management system
 
 LICENSE=	GPLv2
+LICENSE_FILE=	${WRKSRC}/COPYING
 
 USE_PYTHON=	2
 USE_PYDISTUTILS=yes
 
-OPTIONS_DEFINE=	CA_BUNDLE DATA DOCS EXAMPLES NLS
+OPTIONS_DEFINE=	CA_BUNDLE DATA DOCS EXAMPLES NLS FREEBSD
 OPTIONS_DEFAULT=DATA
 OPTIONS_SUB=	yes
-CA_BUNDLE_DESC=	Install CA Certificates
+
+CA_BUNDLE_DESC=		Install CA Certificates
+CA_BUNDLE_RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
+FREEBSD_DESC=		Patches used internally by the FreeBSD Project
+FREEBSD_EXTRA_PATCHES=	${FILESDIR}/extra-patch-authormapsuffix
+NLS_EXTRA_PATCHES_OFF=	${FILESDIR}/extra-patch-setup.py
+NLS_USES=		gettext
 
 CONTRIB_FILES=	bash_completion \
 		casesmash.py \
@@ -53,17 +60,10 @@ CONTRIB_FILES=	bash_completion \
 		vim/patchreview.vim
 DOCS=		CONTRIBUTORS README
 
-CA_BUNDLE_RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
-NLS_USES=		gettext
-
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDATA}
 SUB_FILES=	pkg-message
-.endif
-
-.if !${PORT_OPTIONS:MNLS}
-EXTRA_PATCHES+=	${FILESDIR}/extra-patch-setup.py
 .endif
 
 post-install:
