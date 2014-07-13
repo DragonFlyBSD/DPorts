@@ -11,11 +11,6 @@ PKGNAMESUFFIX=	-mpich
 .endif
 DISTNAME=	${PORTNAME}.${PORTVERSION}
 EXTRACT_SUFX=	.tgz
-.ifndef NOPORTDOCS
-DISTFILES+=	${DISTNAME}${EXTRACT_SUFX} AllInOne.ps.gz Eigen.ps.gz \
-	 	Install.ps.gz LinSol.ps.gz Ordering.ps.gz \
-		PP99.ps.gz ReferenceManual.ps.gz
-.endif
 DIST_SUBDIR=	spooles
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
@@ -40,6 +35,12 @@ CONFLICTS=	spooles-mpich-2*
 
 .include <bsd.port.pre.mk>
 
+.if ${PORT_OPTIONS:MDOCS}
+DISTFILES+=	${DISTNAME}${EXTRACT_SUFX} AllInOne.ps.gz Eigen.ps.gz \
+	 	Install.ps.gz LinSol.ps.gz Ordering.ps.gz \
+		PP99.ps.gz ReferenceManual.ps.gz
+.endif
+
 .if ${ARCH} == "sparc64"
 PICFLAG?=	-fPIC
 .else
@@ -47,6 +48,8 @@ PICFLAG?=	-fpic
 .endif
 
 .SILENT:
+
+OPTIONS_DEFINE=	DOCS
 
 pre-everything::
 .if !defined(WITH_MPI)
@@ -63,15 +66,15 @@ post-patch:
 
 do-build:
 .if defined(WITH_MPI)
-	@(cd ${WRKSRC}/MPI/src ; ${SETENV} ${MAKE_ENV} ${GMAKE} -f makeGlobalLib)
-	@(cd ${WRKSRC}_SHARED/MPI/src; ${SETENV} ${MAKE_ENV} ${GMAKE} -f makeGlobalLib)
+	@(cd ${WRKSRC}/MPI/src ; ${SETENV} ${MAKE_ENV} ${MAKE_CMD} -f makeGlobalLib)
+	@(cd ${WRKSRC}_SHARED/MPI/src; ${SETENV} ${MAKE_ENV} ${MAKE_CMD} -f makeGlobalLib)
 	@(cd ${WRKSRC}_SHARED ; ld -Bshareable -o libspooles.so.1 -x -soname libspooles.so.1 --whole-archive spooles.a )
 
 .else
-	@(cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${GMAKE} global -f makefile)
-	@(cd ${WRKSRC}/MT/src; ${SETENV} ${MAKE_ENV} ${GMAKE} -f makeGlobalLib)
-	@(cd ${WRKSRC}_SHARED; ${SETENV} ${MAKE_ENV} ${GMAKE} global -f makefile)
-	@(cd ${WRKSRC}_SHARED/MT/src; ${SETENV} ${MAKE_ENV} ${GMAKE} -f makeGlobalLib)
+	@(cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_CMD} global -f makefile)
+	@(cd ${WRKSRC}/MT/src; ${SETENV} ${MAKE_ENV} ${MAKE_CMD} -f makeGlobalLib)
+	@(cd ${WRKSRC}_SHARED; ${SETENV} ${MAKE_ENV} ${MAKE_CMD} global -f makefile)
+	@(cd ${WRKSRC}_SHARED/MT/src; ${SETENV} ${MAKE_ENV} ${MAKE_CMD} -f makeGlobalLib)
 	@(cd ${WRKSRC}_SHARED ; ld -Bshareable -o libspooles.so.1 -x -soname libspooles.so.1 --whole-archive spooles.a )
 .endif
 
