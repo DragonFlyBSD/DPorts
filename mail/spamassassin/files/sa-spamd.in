@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/mail/spamassassin/files/sa-spamd.in 349854 2014-04-01 14:06:57Z adamw $
+# $FreeBSD: head/mail/spamassassin/files/sa-spamd.in 358624 2014-06-20 18:28:41Z adamw $
 #
 
 # PROVIDE: spamd
@@ -40,6 +40,6 @@ load_rc_config $name
 pidfile=${spamd_pidfile:-"/var/run/${name}/${name}.pid"}
 command=%%PREFIX%%/bin/${name}
 command_args="-d -r ${pidfile}"
-required_dirs=%%PREFIX%%/share/spamassassin
+required_dirs="%%PREFIX%%/share/spamassassin /var/run/${name}"
 
 run_rc_command "$1"
