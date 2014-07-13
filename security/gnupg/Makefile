@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnupg
-PORTVERSION=	2.0.23
+PORTVERSION=	2.0.25
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNUPG}
 MASTER_SITE_SUBDIR=	gnupg
@@ -18,9 +18,9 @@ LICENSE_FILE_LGPL3=	${WRKSRC}/COPYING.LIB
 
 LIB_DEPENDS=	libassuan.so:${PORTSDIR}/security/libassuan \
 		libgcrypt.so:${PORTSDIR}/security/libgcrypt \
-		libgpg-error.so:${PORTSDIR}/security/libgpg-error \
 		libksba.so:${PORTSDIR}/security/libksba \
 		libpth.so:${PORTSDIR}/devel/pth
+BUILD_DEPENDS=	libgpg-error>=1.11:${PORTSDIR}/security/libgpg-error
 
 GNU_CONFIGURE=	YES
 USES=		gmake iconv tar:bzip2
@@ -46,7 +46,7 @@ GPGSM_RUN_DEPENDS=	dirmngr:${PORTSDIR}/security/dirmngr
 GPGSM_CONFIGURE_ENABLE=	gpgsm
 KDNS_LIB_DEPENDS=	libadns.so:${PORTSDIR}/dns/adns
 KDNS_CONFIGURE_ON=	--with-adns=${LOCALBASE}
-STD_SOCKET_CONFIGURE_ENABLE=	socket
+STD_SOCKET_CONFIGURE_ENABLE=	standard-socket
 NLS_USES=		gettext
 NLS_CONFIGURE_ENABLE=	nls
 SCDAEMON_CONFIGURE_ENABLE=	scdaemon
