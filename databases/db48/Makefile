@@ -3,14 +3,14 @@
 
 PORTNAME=	db48
 PORTVERSION=	4.8.30.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	databases
 MASTER_SITES=	http://download.oracle.com/berkeley-db/
 PKGNAMEPREFIX?=
 DISTNAME=	db-${PORTVERSION:R}
 DIST_SUBDIR=	bdb
 
-MAINTAINER=	gslin@gslin.org
+MAINTAINER=	mandree@FreeBSD.org
 # I allow all freebsd committer to do changes to this package without
 # my permission.
 COMMENT=	The Berkeley DB package, revision 4.8
