@@ -5,6 +5,116 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20140710:
+  AFFECTS: users of lang/rust
+  AUTHOR: robak@FreeBSD.org
+
+  The lang/rust port was updated to 0.11 and is now only working on FreeBSD
+  versions 10 and 11 - the 9.x support has been removed by upstream.
+
+20140709:
+  AFFECTS: users of security/pam-pgsql
+  AUTHOR: tijl@FreeBSD.org
+
+  The pam_pgsql.so module is now installed in PREFIX/lib (/usr/local/lib)
+  instead of /usr/lib.
+
+20140627:
+  AFFECTS: Users of Java
+  AUTHOR: swills@FreeBSD.org
+
+  The default version of OpenJDK has been updated from 1.6 to 1.7. To update,
+  users of Java will need to rebuild all ports that depend on Java:
+
+  If you use pkg (regardless of if you build ports from source or install
+  binary packages):
+  # pkg set -o java/openjdk6:java/openjdk7
+
+  If you use portmaster to build ports from source:
+
+  # portmaster -o java/openjdk7 openjdk6
+  # portmaster -R -r openjdk
+
+  If you use portupgrade to build ports from source:
+
+  # portupgrade -fo java/openjdk7 java/openjdk6
+
+  If you use pkg to install prebuilt binary packages:
+
+  # pkg install -fR java/openjdk7
+
+  If you wish to keep the 1.6 version as default, add the following lines to
+  your /etc/make.conf file:
+
+  #
+  # Keep OpenJDK 1.6 as default version.
+  #
+  JAVA_PREFERRED_PORTS=JAVA_PORT_NATIVE_OPENJDK_JDK_1_6
+
+20140627:
+  AFFECTS: users of security/amavisd-milter
+  AUTHOR: delphij@FreeBSD.org
+
+  The default working directory of security/amavisd-milter have been
+  changed to /var/run/amavis/.  Users will have to adjust path to the
+  milter socket.
+
+20140627:
+  AFFECTS: users of editors/emacs21 and editors/emacs22
+  AUTHOR: ashish@FreeBSD.org
+
+  editors/emacs21, and editors/emacs22 are removed as they were
+  unmaintained upstream for a while. Their dependent ports are removed
+  as well. Please switch to editors/emacs (Emacs 24 release), or
+  editors/emacs23 (Emacs 23 release), or editors/emacs-devel (Emacs
+  development branch) ports.
+
+20140626:
+  AFFECTS: users of mail/qmail-spamcontrol
+  AUTHOR: bdrewery@FreeBSD.org
+
+  Spamcontrol has been updated to the 2.7 release.
+
+  It is advised to read the release notes as some features were removed and
+  others reworked.
+
+  http://www.fehcom.de/qmail/spamcontrol/RELEASE_27.spamcontrol
+
+  2.7 manual: http://www.fehcom.de/qmail/spamcontrol/README_spamcontrol.html
+
+20140626:
+  AFFECTS: users of comms/smstools3
+  AUTHOR: madpilot@FreeBSD.org
+
+  The smstools3 startup screen has been modified to allow smsd to
+  change uid/gid by itself. The rc options smsd_logfile, smsd_user
+  and smsd_group are not supported anymore, user, group and log
+  filename should be specified in the configuration file.
+
+  The sample configuration file has been updated to have defaults
+  equivalent to the old ones.
+
+20140624:
+  AFFECTS: users of databases/p5-Bucardo
+  AUTHOR: mat@FreeBSD.org
+
+  The bucardo_ctl script has been renamed to bucardo, so, to follow the naming,
+  the bucardo_ctl_enable rc variable has been renamed to bucardo_enable.
+
+20140622:
+  AFFECTS: users of security/gpgme
+  AUTHOR: jhale@FreeBSD.org
+
+  If you have both security/gnupg AND security/gnupg1 installed, gpgme will
+  now automatically detect and use security/gnupg.  Specifically, it will
+  search for gpgconf(1) first and use the paths for the binaries provided
+  by it.  Failing that, it will search for a binary named "gpg".
+
+  It is no longer possible to specify the location of the gpg binary at
+  buildtime to differentiate between version 1.x and version 2.x.  The port
+  options GNUPG1 and GNUPG2 now merely add their respective versions of gnupg
+  as build and runtime dependencies.
+
 20140618:
   AFFECTS: users of devel/m17n-* textproc/*m17n*
   AUTHOR: Nikola Lecic <nikola.lecic@anthesphoria.net>
@@ -1574,208 +1684,4 @@ you update your ports collection, before attempting any port upgrades.
   # portmaster net/avahi-gtk
     or
   # portupgrade net/avahi-gtk
-
-20130711:
-  AFFECTS: users of dns/py-ldns
-  AUTHOR: mat@FreeBSD.org
-
-  The dns/py-ldns port now only installs the Python bits, and depends on
-  dns/ldns.  Because of that, you cannot just do a regular upgrade, it
-  would install dns/ldns overwriting existing files and removing them when
-  removing the old version of dns/py-ldns.
-
-  # pkg_delete -f py-ldns-\*
-  # cd /usr/ports/dns/py-ldns && make clean && make install clean
-    or
-  # pkg delete -fg py-ldns-\*
-  # pkg install -f dns/py-ldns
-
-20130707:
-  AFFECTS: users of www/ajaxplorer
-  AUTHOR: madpilot@FreeBSD.org
-
-  Ajaxplorer was updated to 5.0.1. This is a major update and some
-  manual intervention may be needed.
-
-  Before upgrading you should preserve the following files in WWWDIR
-  (defaults to PREFIX/www/ajaxplorer) if you have customized them:
-
-  conf/bootstrap_conf.php
-  conf/bootstrap_context.php
-  conf/bootstrap_plugins.php
-  conf/bootstrap_repositories.php
-
-  and put them back after the upgrade.
-
-  If you are using a database backend you will need to manually
-  update your database table using the sql script the port will
-  install at WWWDIR/conf/conf/4.2.3-5.0.0-db-upgrade.sql
-
-  Don't forget to check the documentation about upgrading from
-  version 4.x at:
-  http://ajaxplorer.info/ajaxplorer-5-0-0:/#Upgrade_from_4X_to_500
-
-20130706:
-  AFFECTS: users of devel/apr1
-  AUTHOR: ohauer@FreeBSD.org
-
-  APR was updated to 1.4.8 and APR-util was updated to 1.5.2.
-
-  Please rebuild all ports which are using functions from APR/APR-util
-  such as Apache, Subversion, etc.
-
-  # portmaster -r apr
-    or
-  # portupgrade -r devel/apr1
-    or
-  # pkg install -fR devel/apr1
-
-20130705:
-  AFFECTS: users of x11/kdelibs4
-  AUTHOR: kde@FreeBSD.org
-
-  The KDE Software Compilation 4.10.4 was committed a few days ago, and
-  version 4.10.5 was committed today.
-
-  They include better support for using clang as the compiler, but that
-  requires recompiling all KDE ports which depend on x11/kdelibs4. Most
-  ports which fall into this category are already part of the KDE Software
-  Compilation and have been updated to version 4.10.5, but those released
-  separately need to be rebuilt manually.
-
-  If you are building your KDE ports with clang, doing the following is
-  recommended:
-
-  # portmaster -r kdelibs-4\*
-    or
-  # portupgrade -fr x11/kdelibs4
-    or
-  # pkg install -fR x11/kdelibs4
-
-  Alternatively, to avoid rebuilding the ports which are part of the 4.10.5
-  update:
-
-  # portmaster -x \*-4.10.5\* -r kdelibs-4\*
-    or
-  # portupgrade -x \*-4.10.5\* -fr x11/kdelibs4
-
-20130703:
-  AFFECTS: users of comms/trustedqsl and comms/tqsllib
-  AUTHOR: db@FreeBSD.org
-
-  Upstream have removed the need for a separate port for the library
-  formerly found in comms/tqsllib. Please remove tqsllib before installing
-  trustedqsl
-
-20130627:
-  AFFECTS: users of ports-mgmt/portmaster
-  AUTHOR: bdrewery@FreeBSD.org
-
-  Since June 22nd, portmaster no longer relies on 'WITH_PKGNG' to be defined,
-  or ports to be checked out to enable pkgng support.
-
-  It now considers whether or not pkg is installed and registered with itself.
-
-  I.e., if this returns data, pkgng is considered in use:
-
-    # pkg info pkg
-
-  It's possible that you may have tested pkgng in the past, ran pkg2ng, and
-  never fully committed to it by setting WITH_PKGNG. If this is the case,
-  uninstall pkg with pkg_info/pkg_delete and also remove the stale database,
-  rm /var/db/pkg/local.sqlite.
-
-  This could manifest itself as portmaster -L showing the wrong versions, or
-  portmaster no longer detecting installed packages correctly.
-
-  Note that PORTS still require WITH_PKGNG=yes in make.conf if you are not
-  running CURRENT.
-
-20130627:
-  AFFECTS: users of net/samba36
-  AUTHOR: timur@FreeBSD.org
-
-  Samba has updated format of it's printing tdbs (ntprinting.tdb, ntforms.tdb,
-  ntdrivers.tdb) to include character encoding. When updating from Samba 3.5
-  or earlier to Samba 3.6 or 4.0 these tdbs need to be migrated to new registry
-  based printing management. This implies also character conversion.
-
-  You have to specify the correct code page for the conversion, see iconv -l.
-  The mostly used one is Windows Latin1 which is CP1252.
-
-  You can correctly view the tdb with:
-
-  # net printing dump encoding=CP1252 /path/to/ntprinters.tdb
-
-  or migrate it with e.g.:
-
-  # net printing migrate encoding=CP1252 /path/to/ntprinters.tdb
-
-  If you migrate printers it is suggest to do it in the following order:
-
-  ntforms.tdb
-  ntdrivers.tdb
-  ntprinting.tdb
-
-  Don't forget to rename, move or delete these files in /var/db/samba after
-  the migration.
-
-20130623:
-  AFFECTS: users of net-im/mikutter003
-  AUTHOR: tota@FreeBSD.org
-
-  net-im/mikutter003 has been removed from the ports tree because the
-  Twitter API version 1.0 was deprecated on 2013-05-07 and mikutter003,
-  which uses the API 1.0, won't work.
-  Please consider using net-im/mikutter instead of this.
-
-  1. deinstall mikutter003
-  2. upgrade Ruby to 1.9( or later) (see the entry 20130527)
-  3. install net-im/mikutter
-
-20130623:
-  AFFECTS: users of www/magento
-  AUTHOR: melvyn@magemana.nl
-
-  Magento has been updated to 1.7.0.2 on 2013-06-03. With it a stricter file
-  system policy is enforced on the port. If you (or your customer) rely heavily
-  on Magento Connect via the backend to install extensions, your quickfix is:
-
-  # chown -R www: ${PREFIX}/www/magento
-  # chmod -R u+w ${PREFIX}/www/magento
-
-  The more conservative approach:
-  # chown -R www: ${PREFIX}/www/magento/app/code/{local,community} \
-    ${PREFIX}/www/magento/app/{design,locale} \
-    ${PREFIX}/www/magento/{downloader,skin}
-
-  # chmod -R u+w ${PREFIX}/www/magento/app/code/{local,community} \
-    ${PREFIX}/www/magento/app/{design,locale} \
-    ${PREFIX}/www/magento/{downloader,skin}
-
-  The conservative approach will alert you to extensions that try to write in
-  Magento core, while allowing clean extensions to install properly (corner
-  cases may exist).
-
-20130619:
-  AFFECTS: users of devel/subversion
-  AUTHOR: ohauer@FreeBSD.org
-
-  devel/subversion has been upgraded from 1.7.10 to 1.8.0
-
-  If you want to upgrade, and use http/https access to repositories,
-  please check, that the SERF option is enabled, as NEON support
-  is gone. Also, mod_dontdothat and svnauthz_validate are
-  now enabled with one option TOOLS, among other new tools
-  and SVNMUCC is enabled always.
-
-  subversion-1.7.x is available as devel/subversion17
-
-  To stay on subversion-1.7.x set in /etc/make.conf
-  WITH_SUBVERSION_VER=17
-  and use the following command
-
-  # pkg set -o devel/subversion:devel/subversion17
-    or
-  # portmaster -o devel/subversion17 devel/subversion
 

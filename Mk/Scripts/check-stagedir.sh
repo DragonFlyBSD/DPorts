@@ -29,7 +29,7 @@ parse_plist() {
 		# make all ports use @ignore instead of @comment.
 		comment=
 		if [ ${makeplist} -eq 0 -a -z "${line%%@comment *}" ]; then
-			line="${line#@comment }"
+			line="${line##*@comment }"
 			# Remove @comment so it can be parsed as a file,
 			# but later prepend it again to create a list of
 			# all files commented and uncommented.
@@ -156,6 +156,14 @@ parse_mtree() {
 			listmtree "${GNOME_MTREE_FILE}" "${PREFIX}"
 		fi
 		unset MTREE_FILE GNOME_MTREE_FILE
+
+		# Add LOCALBASE
+		a=${LOCALBASE}
+		while :; do
+			echo ${a}
+			a=${a%/*}
+			[ -z "${a}" ] && break
+		done
 
 		# Add in PREFIX if this port wants it
 		if [ ${NO_PREFIX_RMDIR} -eq 0 ]; then
