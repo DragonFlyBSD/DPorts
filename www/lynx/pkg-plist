@@ -1,10 +1,6 @@
 bin/lynx
-@unexec if cmp -s %D/etc/lynx.cfg %D/etc/lynx.cfg.sample; then rm -f %D/etc/lynx.cfg; fi
-etc/lynx.cfg.sample
-@exec if [ ! -f %B/lynx.cfg ]; then cp -p %D/%F %B/lynx.cfg; fi
-@unexec if cmp -s %D/etc/lynx.lss %D/etc/lynx.lss.sample; then rm -f %D/etc/lynx.lss; fi
-etc/lynx.lss.sample
-@exec if [ ! -f %B/lynx.lss ]; then cp -p %D/%F %B/lynx.lss; fi
+@sample etc/lynx.cfg.sample
+@sample etc/lynx.lss.sample
 man/man1/lynx.1.gz
 @exec mkdir -p %D/%%PORTDOCS%%/share/lynx_help
 %%PORTDOCS%%%%DOCSDIR%%/CHANGES
@@ -12,8 +8,8 @@ man/man1/lynx.1.gz
 %%PORTDOCS%%%%DOCSDIR%%/COPYHEADER.asc
 @exec ln -sf %D/%F %D/%%PORTDOCS%%/share/lynx_help
 @unexec rm -f %D/%%PORTDOCS%%/share/lynx_help/COPYHEADER.asc
-%%PORTDOCS%%%%PORTDOCS%%%%DOCSDIR%%/COPYING
-%%PORTDOCS%%%%PORTDOCS%%%%DOCSDIR%%/COPYING.asc
+%%PORTDOCS%%%%DOCSDIR%%/COPYING
+%%PORTDOCS%%%%DOCSDIR%%/COPYING.asc
 @exec ln -sf %D/%F %D/%%PORTDOCS%%/share/lynx_help
 @unexec rm -f %D/%%PORTDOCS%%/share/lynx_help/COPYING.asc
 %%PORTDOCS%%%%DOCSDIR%%/PROBLEMS
@@ -45,6 +41,7 @@ man/man1/lynx.1.gz
 %%PORTDOCS%%%%DOCSDIR%%/docs/pdcurses.key
 %%PORTDOCS%%%%DOCSDIR%%/docs/slang.key
 %%PORTDOCS%%%%DOCSDIR%%/docs/win-386.announce.gz
+%%PORTDOCS%%%%DOCSDIR%%/docs/README.release
 %%PORTDOCS%%%%DOCSDIR%%/samples/blue-background.lss
 %%PORTDOCS%%%%DOCSDIR%%/samples/bright-blue.lss
 %%PORTDOCS%%%%DOCSDIR%%/samples/cernrules.txt
@@ -69,6 +66,7 @@ man/man1/lynx.1.gz
 %%PORTDOCS%%%%DOCSDIR%%/samples/mime.types
 %%PORTDOCS%%%%DOCSDIR%%/samples/oldlynx
 %%PORTDOCS%%%%DOCSDIR%%/samples/opaque.lss
+%%PORTDOCS%%%%DOCSDIR%%/samples/oldlynx.bat
 %%PORTDOCS%%%%DOCSDIR%%/test/ALT88592.html
 %%PORTDOCS%%%%DOCSDIR%%/test/ISO_LATIN1_test.html
 %%PORTDOCS%%%%DOCSDIR%%/test/README.txt
@@ -92,6 +90,9 @@ man/man1/lynx.1.gz
 %%PORTDOCS%%%%DOCSDIR%%/test/test-styles.html
 %%PORTDOCS%%%%DOCSDIR%%/test/unicode.html
 %%PORTDOCS%%%%DOCSDIR%%/test/utf-8-demo.html
+%%PORTDOCS%%%%DOCSDIR%%/test/circle.html
+%%PORTDOCS%%%%DOCSDIR%%/test/square.html
+%%PORTDOCS%%%%DOCSDIR%%/test/triangle.html
 %%PORTDOCS%%share/lynx_help/COPYHEADER
 %%PORTDOCS%%share/lynx_help/COPYING
 %%PORTDOCS%%share/lynx_help/Lynx_users_guide.html.gz
@@ -146,3 +147,4 @@ man/man1/lynx.1.gz
 %%NLS%%share/locale/uk/LC_MESSAGES/lynx.mo
 %%NLS%%share/locale/zh_CN/LC_MESSAGES/lynx.mo
 %%NLS%%share/locale/zh_TW/LC_MESSAGES/lynx.mo
+%%NLS%%share/locale/eo/LC_MESSAGES/lynx.mo
