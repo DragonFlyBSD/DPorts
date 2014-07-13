@@ -9,8 +9,8 @@ MASTER_SITES=	http://www.emaillab.org/mutt/tools/ \
 		http://www.actweb.ne.jp/k-yosino/
 DISTNAME=	slang-${VERSION}jp${JP_VERSION}
 
-MAINTAINER=	iwashita@cqmail.net
-COMMENT=	A library permits a programmer to develop software
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Library permits a programmer to develop software
 
 CONFLICTS=	libslang2-[0-9]* libslang-1.*[^j]*
 
