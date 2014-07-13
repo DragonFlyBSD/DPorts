@@ -3,7 +3,7 @@
 
 PORTNAME=	yum-metadata-parser
 PORTVERSION=	1.1.4
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel python
 MASTER_SITES=	http://yum.baseurl.org/download/${PORTNAME}/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -11,9 +11,9 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	afb@rpm5.org
 COMMENT=	Fast metadata parser for yum
 
-LIB_DEPENDS=	xml2:${PORTSDIR}/textproc/libxml2 \
-		sqlite3.8:${PORTSDIR}/databases/sqlite3 \
-		glib-2.0:${PORTSDIR}/devel/glib20
+LIB_DEPENDS=	libxml2.so:${PORTSDIR}/textproc/libxml2 \
+		libsqlite3.so:${PORTSDIR}/databases/sqlite3 \
+		libglib-2.0.so:${PORTSDIR}/devel/glib20
 
 USES=		pkgconfig
 USE_PYTHON=	yes
