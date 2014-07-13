@@ -11,7 +11,7 @@ MASTER_SITES=	GNU
 MAINTAINER=	johans@FreeBSD.org
 COMMENT=	GNU m4
 
-USES=		tar:bzip2
+USES=		makeinfo tar:bzip2
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--program-prefix=g
 CONFIGURE_ENV=	MAKEINFO="makeinfo --no-split"
@@ -20,8 +20,8 @@ INFO=	m4
 
 EXAMPLESDIR=	share/examples/gm4
 
-OPTIONS_DEFINE=		LIBSIGSEGV
-LIBSIGSEGV_DESC=	Use libsigsegv for better diagnostics
+OPTIONS_DEFINE=			LIBSIGSEGV
+LIBSIGSEGV_DESC=		Use alternative page fault handler (GNU libsigsegv)
 LIBSIGSEGV_LIB_DEPENDS=		libsigsegv.so:${PORTSDIR}/devel/libsigsegv
 LIBSIGSEGV_CONFIGURE_ON=	--with-libsigsegv-prefix=${LOCALBASE}
 LIBSIGSEGV_CONFIGURE_OFF=	--without-libsigsegv-prefix
