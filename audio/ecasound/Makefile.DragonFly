@@ -1,1 +1,0 @@
-CONFIGURE_ARGS:= ${CONFIGURE_ARGS:N--enable-sys-readline} --enable-sys-readline=no
