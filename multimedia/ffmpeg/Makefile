@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	ffmpeg
-PORTVERSION=	2.1.1
-PORTREVISION=	4
+PORTVERSION=	2.2.4
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	multimedia audio ipv6 net
 MASTER_SITES=	http://ffmpeg.org/releases/
@@ -20,9 +20,8 @@ BUILD_DEPENDS=	yasm:${PORTSDIR}/devel/yasm \
 
 HAS_CONFIGURE=	yes
 CONFIGURE_LOG=	config.err
-USES=		gmake pkgconfig perl5
+USES=		gmake pkgconfig perl5 tar:bzip2
 USE_PERL5=	build
-USE_BZIP2=	yes
 WANT_SDL=	yes
 
 OPTIONS_DEFINE=	AACPLUS ALSA AMR_NB AMR_WB ASS CDIO CELT DEBUG FAAC \
@@ -40,7 +39,6 @@ CDIO_DESC=	Audio CD grabbing with libcdio
 FDK_AAC_DESC=	AAC audio encoding via Fraunhofer FDK
 FFSERVER_DESC=	Build and install ffserver
 LIBV4L_DESC=	Video for Linux support
-OPUS_DESC=	Opus decoding with libopus
 X11GRAB_DESC=	Enable x11 grabbing
 
 # aacplus
@@ -376,7 +374,7 @@ post-install:
 .endfor
 .if ${PORT_OPTIONS:MFFSERVER}
 	${INSTALL_DATA} ${WRKSRC}/doc/ffserver.conf \
-		${STAGEDIR}${PREFIX}/etc/ffserver.conf-dist
+		${STAGEDIR}${PREFIX}/etc/ffserver.conf.sample
 .endif
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for FILE in ${DOC_FILES}
