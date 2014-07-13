@@ -2,15 +2,15 @@
 # $FreeBSD$
 
 PORTNAME=	db
-PORTVERSION=	20140425
+PORTVERSION=	20140706
 CATEGORIES=	print
-MASTER_SITES=	http://www.openprinting.org/download/foomatic/ \
-		ftp://ftp.wart.ru/pub/FreeBSD/ports/distfiles/foomatic/
+MASTER_SITES=	${MASTER_SITE_LOCAL}
+MASTER_SITE_SUBDIR=	danilo
+		
 PKGNAMEPREFIX=	foomatic-
 DISTNAME=	${PKGNAMEPREFIX}${PORTNAME}-${FOOMATICVER}-${PORTVERSION}
-DIST_SUBDIR=	foomatic
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	Database for integrating printer drivers with common spoolers
 
 LIB_DEPENDS=	libxml2.so:${PORTSDIR}/textproc/libxml2 \
