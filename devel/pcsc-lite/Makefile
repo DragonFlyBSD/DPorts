@@ -3,6 +3,7 @@
 
 PORTNAME=	pcsc-lite
 PORTVERSION=	1.8.11
+PORTREVISION=	1
 PORTEPOCH=	2
 CATEGORIES=	devel security
 MASTER_SITES=	https://alioth.debian.org/frs/download.php/file/3991/
@@ -10,19 +11,21 @@ MASTER_SITES=	https://alioth.debian.org/frs/download.php/file/3991/
 MAINTAINER=	arved@FreeBSD.org
 COMMENT=	Smartcard development library
 
-LICENSE=	BSD
+LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USES=		gmake perl5 pathfix pkgconfig
+USES=		gmake perl5 pathfix pkgconfig shebangfix tar:bzip2
 USE_PERL5=	build
 USE_RC_SUBR=	pcscd
+SHEBANG_FILES=	${WRKSRC}/src/spy/pcsc-spy
 
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-usbdropdir=${PREFIX}/lib/pcsc/drivers/
 
 PKGMESSAGE=	${WRKDIR}/pkg-message
+
+OPTIONS_DEFINE=	DOCS EXAMPLES
 
 .include <bsd.port.pre.mk>
 
@@ -46,7 +49,7 @@ post-patch:
 		s,libusb_strerror(ret),ret," ${WRKSRC}/configure \
 			${WRKSRC}/src/hotplug_libusb.c
 	${REINPLACE_CMD} -e "s,-ldl,," ${WRKSRC}/src/spy/Makefile.in
-.if defined(NOPORTDOCS)
+.if ! ${PORT_OPTIONS:MDOCS}
 	${REINPLACE_CMD} -e '/^install-data-am: / s|install-docDATA||' ${WRKSRC}/doc/Makefile.in
 .endif
 
@@ -69,5 +72,6 @@ post-install:
 	${TOUCH} ${STAGEDIR}${PREFIX}/lib/pcsc/services/.keep_me
 	@${SED} 's,%%PREFIX%%,${PREFIX},g' < ${FILESDIR}/pkg-message.in > \
 		${WRKDIR}/pkg-message
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libpcsclite.so.1 ${STAGEDIR}${PREFIX}/lib/libpcscspy.so.0
 
 .include <bsd.port.post.mk>
