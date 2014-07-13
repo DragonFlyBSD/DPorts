@@ -15,7 +15,8 @@ COMMENT?=	Multithreaded SQL database (server)
 LICENSE=	GPLv2
 
 SLAVEDIRS=	databases/mysql55-client
-USES=		cmake shebangfix readline
+USES=		cmake readline shebangfix
+CXXFLAGS+=	${CPPFLAGS}
 NO_OPTIONS_SORT=yes
 
 OPTIONS_DEFINE=	SSL FASTMTX
@@ -40,7 +41,7 @@ CMAKE_ARGS+=	-DINSTALL_DOCDIR="share/doc/mysql" \
 		-DINSTALL_SUPPORTFILESDIR="share/mysql" \
 		-DWITH_UNIT_TESTS=0 \
 		-DWITH_LIBEDIT=0 \
-		-DWITH_READLINE=1
+		-DWITH_LIBWRAP=1
 
 SHEBANG_FILES=	scripts/*.pl* scripts/*.sh
 
