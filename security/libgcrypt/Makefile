@@ -3,7 +3,7 @@
 
 PORTNAME=	libgcrypt
 PORTVERSION=	1.5.3
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNUPG}
 MASTER_SITE_SUBDIR=	${PORTNAME}
@@ -17,7 +17,7 @@ LICENSE_COMB=	multi
 BUILD_DEPENDS=	libgpg-error>=1.8:${PORTSDIR}/security/libgpg-error
 RUN_DEPENDS=	libgpg-error>=1.8:${PORTSDIR}/security/libgpg-error
 
-USES=		libtool:oldver tar:bzip2
+USES=		libtool:oldver makeinfo tar:bzip2
 USE_CSTD=	gnu89
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	MAKEINFO="makeinfo --no-split"
@@ -32,9 +32,6 @@ PORTDOCS=	*
 
 .if ${ARCH} == "powerpc"
 CONFIGURE_ARGS+=	--disable-asm
-
-.elif ${ARCH} == "armv6"
-USE_GCC=	any
 
 .elif ${ARCH} == "i386"
 .if (${OSVERSION} < 900033)
