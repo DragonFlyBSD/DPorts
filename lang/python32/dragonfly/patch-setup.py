@@ -6,7 +6,7 @@
  
 +        elif platform.startswith('dragonfly'):
 +            macros = dict()
-+            libraries = []
++            libraries = ['pthread']
 +
          elif platform in ('freebsd7', 'freebsd8', 'freebsd9', 'freebsd10'):
              # FreeBSD's P1003.1b semaphore support is very experimental
