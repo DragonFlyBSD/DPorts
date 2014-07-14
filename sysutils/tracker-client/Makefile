@@ -4,7 +4,7 @@
 
 PORTNAME=	tracker
 PORTVERSION=	0.6.95
-PORTREVISION=	18
+PORTREVISION=	21
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX?=	-client
@@ -16,7 +16,7 @@ LIB_DEPENDS=	libsqlite3.so:${PORTSDIR}/databases/sqlite3 \
 		libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
 		libpoppler-glib.so:${PORTSDIR}/graphics/poppler-glib \
 		libexif.so:${PORTSDIR}/graphics/libexif \
-		libwv-1.2.so:${PORTSDIR}/textproc/wv \
+		libwv.so:${PORTSDIR}/textproc/wv \
 		libgmime-2.0.so:${PORTSDIR}/mail/gmime2 \
 		libqdbm.so:${PORTSDIR}/databases/qdbm \
 		libexempi.so:${PORTSDIR}/textproc/exempi \
@@ -81,13 +81,17 @@ CONFIGURE_ARGS+=	--disable-libtrackergtk --disable-gui \
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|libpng|libpng15|' ${WRKSRC}/configure
+	@${REINPLACE_CMD} '/tracker_extract_LDADD =/s/=/= $$(DBUS_LIBS) $$(GIO_LIBS)/' \
+		${WRKSRC}/src/tracker-extract/Makefile.in
+	@${REINPLACE_CMD} '/tracker_status_LDADD =/s/$$/ $$(DBUS_LIBS)/' \
+		${WRKSRC}/src/tracker-utils/Makefile.in
 
 post-build:
 .if defined(TRACKER_SLAVE) && ${TRACKER_SLAVE}=="libtrackergtk"
 	@(cd ${WRKSRC}/src/tracker-extract && ${MAKE} libextract-msoffice.la)
 .elif defined(TRACKER_SLAVE) && ${TRACKER_SLAVE}=="gnome"
 . for dir in ${EXTRA_WRKSRC}
-	@(cd ${WRKSRC}/${dir}; ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} ${ALL_TARGET})
+	@(cd ${WRKSRC}/${dir}; ${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} ${ALL_TARGET})
 . endfor
 .endif
 
@@ -98,7 +102,7 @@ post-install:
 		${STAGEDIR}${PREFIX}/lib/tracker/extract-modules
 .elif defined(TRACKER_SLAVE) && ${TRACKER_SLAVE}=="gnome"
 . for dir in ${EXTRA_WRKSRC}
-	@(cd ${WRKSRC}/${dir} && ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} ${INSTALL_TARGET})
+	@(cd ${WRKSRC}/${dir} && ${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} ${INSTALL_TARGET})
 . endfor
 . for man in ${MAN}
 	@(cd ${WRKSRC} && ${INSTALL_DATA} docs/manpages/${man} ${STAGEDIR}${MAN1PREFIX}/man/man1/${man})
