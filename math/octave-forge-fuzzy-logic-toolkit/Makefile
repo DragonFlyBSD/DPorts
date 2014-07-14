@@ -2,14 +2,14 @@
 # $FreeBSD$
 
 PORTNAME=	octave-forge-fuzzy-logic-toolkit
-PORTVERSION=	0.4.2
-PORTREVISION=	3
+PORTVERSION=	0.4.5
 CATEGORIES=	math
 
 MAINTAINER=	stephen@FreeBSD.org
 COMMENT=	Octave-forge package ${OCTAVE_PKGNAME}
 
 LICENSE=	GPLv3
+LICENSE_FILE=	${WRKDIR}/${OCTSRC}/COPYING
 
 # OCTSRC is the name of the directory of the package.
 # It is usually ${OCTAVE_PKGNAME} or ${DISTNAME}.
