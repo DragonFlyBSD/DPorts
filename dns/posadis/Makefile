@@ -10,13 +10,16 @@ MASTER_SITES=	SF/${PORTNAME}/OldFiles
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Domain Name Server (DNS) implementation
 
-LIB_DEPENDS=	poslib.0:${PORTSDIR}/devel/poslib
+LIB_DEPENDS=	libposlib.so:${PORTSDIR}/devel/poslib
 
 USE_AUTOTOOLS=	autoconf libltdl libtool
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 NO_STAGE=	yes
+
+OPTIONS_DEFINE=	DOCS
+.include <bsd.port.options.mk>
 
 .if defined(WITH_FAM) || exists(${LOCALBASE}/lib/libfam.so)
 CONFIGURE_ARGS=	--enable-fam
@@ -34,7 +37,7 @@ MAN1=		getzone.1 posadis.1 posadis-getroots.1 posask.1 poshost.1
 MAN5=		posadisrc.5
 DOCS=		AUTHORS ChangeLog README TODO
 
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 post-install:
 	@${MKDIR} ${DOCSDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${DOCSDIR}
