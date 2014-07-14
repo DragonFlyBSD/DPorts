@@ -1,4 +1,4 @@
-# Created by: alepulver
+# Created by: Alejandro Pulver <alepulver@FreeBSD.org>
 # $FreeBSD$
 
 PORTNAME=	zaero
@@ -17,30 +17,25 @@ USES=		dos2unix zip
 DOS2UNIX_FILES=	*.[ch]
 NO_WRKSUBDIR=	yes
 
-OPTIONS_DEFINE=	DEMO DM
-DEMO_DESC=	Demo version of the game data
-DM_DESC=	Deathmatch maps
-
 DOCSDIR=	${PREFIX}/share/doc/${LATEST_LINK}
 
-NO_STAGE=	yes
-.include "${.CURDIR}/../quake2-data/Makefile.include"
+OPTIONS_DEFINE=	DEMO DM_MAPS DOCS
+OPTIONS_SUB=	yes
 
+DEMO_DESC=	Demo version of the game data
+DM_MAPS_DESC=	Install deathmatch maps
+
+.include "${.CURDIR}/../quake2-data/Makefile.include"
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDEMO}
 DISTFILES+=	zaerodemo${EXTRACT_SUFX}
-PLIST_SUB+=	DEMO=""
 .else
-PLIST_SUB+=	DEMO="@comment "
 SUB_FILES+=	pkg-message
 .endif
 
-.if ${PORT_OPTIONS:MDM}
+.if ${PORT_OPTIONS:MDM_MAPS}
 DISTFILES+=	zaerodm${EXTRACT_SUFX}
-PLIST_SUB+=	DM=""
-.else
-PLIST_SUB+=	DM="@comment "
 .endif
 
 post-extract:
@@ -50,27 +45,20 @@ post-patch:
 	@${REINPLACE_CMD} -e 's/__linux__/__unix__/' ${WRKSRC}/q_shared.[ch]
 
 do-install:
-	${MKDIR} ${Q2DIR}/${PORTNAME}
-	${INSTALL_PROGRAM} ${WRKSRC}/game.so ${Q2DIR}/${PORTNAME}
+	@${MKDIR} ${STAGEDIR}${Q2DIR}/${PORTNAME}
+	${INSTALL_PROGRAM} ${WRKSRC}/game.so ${STAGEDIR}${Q2DIR}/${PORTNAME}
 .if ${PORT_OPTIONS:MDEMO}
-	${INSTALL_DATA} ${WRKSRC}/zaero/pak0.pak ${Q2DIR}/${PORTNAME}
-	${MKDIR} ${Q2DIR}/${PORTNAME}/sprites
-	${INSTALL_DATA} ${WRKSRC}/zaero/sprites/* ${Q2DIR}/${PORTNAME}/sprites
+	${INSTALL_DATA} ${WRKSRC}/zaero/pak0.pak ${STAGEDIR}${Q2DIR}/${PORTNAME}
+	@${MKDIR} ${STAGEDIR}${Q2DIR}/${PORTNAME}/sprites
+	${INSTALL_DATA} ${WRKSRC}/zaero/sprites/* \
+		${STAGEDIR}${Q2DIR}/${PORTNAME}/sprites
 .endif
-	${INSTALL_DATA} ${WRKSRC}/pak1.pak ${Q2DIR}/${PORTNAME}
-.if ${PORT_OPTIONS:MDM}
-	${INSTALL_DATA} ${WRKSRC}/zaero/pak2.pak ${Q2DIR}/${PORTNAME}
+	${INSTALL_DATA} ${WRKSRC}/pak1.pak ${STAGEDIR}${Q2DIR}/${PORTNAME}
+.if ${PORT_OPTIONS:MDM_MAPS}
+	${INSTALL_DATA} ${WRKSRC}/zaero/pak2.pak \
+		${STAGEDIR}${Q2DIR}/${PORTNAME}
 .endif
-.if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/changelog.txt ${DOCSDIR}
-.endif
-
-.if ! ${PORT_OPTIONS:MDEMO}
-post-install:
-	@${ECHO_CMD}
-	@${CAT} ${PKGMESSAGE}
-	@${ECHO_CMD}
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/changelog.txt ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
