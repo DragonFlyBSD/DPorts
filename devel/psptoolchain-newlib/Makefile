@@ -9,7 +9,7 @@ MASTER_SITES=		ftp://sources.redhat.com/pub/ \
 MASTER_SITE_SUBDIR=	${PORTNAME}
 PKGNAMEPREFIX=		psptoolchain-
 
-MAINTAINER=		tphilipp@potion-studios.com
+MAINTAINER= ports@FreeBSD.org
 COMMENT=		PlayStation Portable development toolchain ${PORTNAME}
 
 PSP_GCC_STAGE_PREFIX=	psp/stage1
@@ -21,7 +21,7 @@ BUILD_DEPENDS+=		${LOCALBASE}/${PSP_SDK_STAGE_PREFIX}/sdk/include/pspsdk.h:${POR
 			psp-ld:${PORTSDIR}/devel/psptoolchain-binutils \
 			${LOCALBASE}/${PSP_GCC_STAGE_PREFIX}/bin/psp-gcc:${PORTSDIR}/devel/psptoolchain-gcc-stage1
 
-USES=		gmake
+USES=		gmake makeinfo
 HAS_CONFIGURE=		yes
 CONFIGURE_ENV=		PATH=${LOCALBASE}/${PSP_GCC_STAGE_PREFIX}/bin:${PATH}
 MAKE_ENV=		PATH=${LOCALBASE}/${PSP_GCC_STAGE_PREFIX}/bin:${PATH}
