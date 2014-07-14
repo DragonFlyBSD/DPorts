@@ -22,6 +22,7 @@ USES=		perl5
 MAKE_ARGS+=	PERL=0
 .endif
 
+USES+=		makeinfo
 MAN1=		hpt.1 hptlink.1 hpttree.1 txt2pkt.1
 MANCOMPRESSED=	yes
 INFO=		hpt
@@ -36,10 +37,10 @@ post-patch:
 		${WRKSRC}/man/txt2pkt.1
 
 post-build:
-	@cd ${WRKSRC}/doc && ${GMAKE} ${MAKE_ARGS} all
+	@cd ${WRKSRC}/doc && ${MAKE_CMD} ${MAKE_ARGS} all
 
 post-install:
-	@cd ${WRKSRC}/doc && ${GMAKE} ${MAKE_ARGS} install
+	@cd ${WRKSRC}/doc && ${MAKE_CMD} ${MAKE_ARGS} install
 
 .include "${.CURDIR}/../husky-base/Makefile.inc"
 .include <bsd.port.mk>
