@@ -3,7 +3,7 @@
 
 PORTNAME=	gmerlin
 PORTVERSION=	1.2.0
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	multimedia
 MASTER_SITES=	SF
 
@@ -16,7 +16,7 @@ LIB_DEPENDS=	libexif.so:${PORTSDIR}/graphics/libexif \
 		libgavl.so:${PORTSDIR}/multimedia/gavl \
 		libfontconfig.so:${PORTSDIR}/x11-fonts/fontconfig
 
-USES=		gettext pathfix pkgconfig
+USES=		gettext libtool makeinfo pathfix pkgconfig
 USE_GNOME=	gtk20 libxml2
 USE_XORG=	x11 xext xfixes xinerama xv
 USE_GL=		gl
@@ -29,7 +29,7 @@ USE_LDCONFIG=	yes
 INSTALL_ICONS=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+LDFLAGS+=	-L${LOCALBASE}/lib `pkg-config --libs gtk+-x11-2.0`
 
 INFO=		gmerlin
 
@@ -42,7 +42,7 @@ OPTIONS_SUB=		yes
 ALSA_LIB_DEPENDS=	libasound.so:${PORTSDIR}/audio/alsa-lib
 ALSA_CONFIGURE_OFF=	--disable-alsa --disable-alsamixer
 CDDB_LIB_DEPENDS=	libcddb.so:${PORTSDIR}/audio/libcddb
-CDDB_CONFIGURE_ARGS=	--disable-cddb
+CDDB_CONFIGURE_OFF=	--disable-cddb
 CDIO_LIB_DEPENDS=	libcdio.so:${PORTSDIR}/sysutils/libcdio
 CDIO_CONFIGURE_OFF=	--disable-libcdio
 ESOUND_USE=		gnome=esound
