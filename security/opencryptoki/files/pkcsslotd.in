@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/security/opencryptoki/files/pkcsslotd.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/security/opencryptoki/files/pkcsslotd.in 360949 2014-07-06 18:06:59Z tijl $
 #
 # PROVIDE: pkcsslotd
 # REQUIRE: LOGIN tcsd
@@ -21,7 +21,7 @@ command=%%PREFIX%%/sbin/${name}
 start_precmd=${name}_prestart
 
 pkcsslotd_prestart () {
-	[ -f %%PREFIX%%/var/lib/opencryptoki/pk_config_data ] || \
+	[ -f /var/lib/opencryptoki/pk_config_data ] || \
 		%%PREFIX%%/sbin/pkcs11_startup
 }
 
