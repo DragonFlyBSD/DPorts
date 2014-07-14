@@ -8,8 +8,11 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://www.balabit.com/downloads/files/syslog-ng/sources/2.0/src/
 PKGNAMESUFFIX=	2
 
-MAINTAINER=	ivan.lago@ifom.eu
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A powerful syslogd replacement
+
+DEPRECATED=	Fails to build with new utmpx
+EXPIRATION_DATE=	2014-07-23
 
 LIB_DEPENDS=	net:${PORTSDIR}/net/libnet \
 		evtlog.0:${PORTSDIR}/sysutils/eventlog
