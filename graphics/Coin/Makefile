@@ -3,7 +3,7 @@
 
 PORTNAME=	Coin
 PORTVERSION=	3.1.3
-PORTREVISION=	4
+PORTREVISION=	6
 CATEGORIES=	graphics
 MASTER_SITES=	http://ftp.coin3d.org/coin/src/all/ \
 		ftp://ftp.coin3d.org/pub/coin/src/all/
@@ -16,13 +16,13 @@ LICENSE=	BSD
 LIB_DEPENDS=	libsimage.so:${PORTSDIR}/graphics/simage
 
 USE_GCC=	any
-USES=		openal:al
+USES=		openal:al libtool
 USE_GL=		yes
 USE_XORG=	xt x11
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-pthread=yes --enable-threadsafe	\
 		--enable-3ds-import --enable-sound	\
-		--enable-javascript-api
+		--enable-javascript-api --enable-debug=no
 USE_LDCONFIG=	yes
 MAKE_ENV=	LANG=C
 
