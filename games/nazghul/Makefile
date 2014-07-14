@@ -7,16 +7,15 @@ PORTREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
-MAINTAINER=	acm@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Computer role-playing game engine
 
-LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
+LIB_DEPENDS=	libpng15.so:${PORTSDIR}/graphics/png
 
 USE_SDL=	sdl image mixer
 GNU_CONFIGURE=	yes
 USES=		gmake
 
-NO_STAGE=	yes
 post-patch:
 	${REINPLACE_CMD} -i "" 's|malloc.h|stdlib.h|g' ${WRKSRC}/src/scheme.c
 
