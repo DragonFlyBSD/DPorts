@@ -3,13 +3,14 @@
 
 PORTNAME=	asterisk
 PORTVERSION=	1.8.28.2
+PORTREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://downloads.asterisk.org/pub/telephony/asterisk/ \
 		http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/
 PKGNAMESUFFIX=	18
 
 MAINTAINER=	flo@FreeBSD.org
-COMMENT=	An Open Source PBX and telephony toolkit
+COMMENT=	Open Source PBX and telephony toolkit
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -56,7 +57,7 @@ OPTIONS_DEFINE_x86_64=	DAHDI
 OPTIONS_DEFINE_sparc64=	DAHDI
 
 OPTIONS_DEFAULT_i386=	DAHDI
-OPTIONS_DEFAULT_amd64=	DAHDI
+OPTIONS_DEFAULT_x86_64=	DAHDI
 OPTIONS_DEFAULT_sparc64=	DAHDI
 
 EXCHANGE_DESC?=	Exchange calendar support
@@ -272,7 +273,7 @@ post-patch:
 	${REINPLACE_CMD} -e 's|/var/lib|${PREFIX}/share|g' ${WRKSRC}/configs/musiconhold.conf.sample
 
 post-configure:
-	@cd ${WRKSRC} && ${GMAKE} menuselect.makeopts
+	@cd ${WRKSRC} && ${MAKE_CMD} menuselect.makeopts
 	@cd ${WRKSRC} && ./menuselect/menuselect --disable res_timing_kqueue menuselect.makeopts
 .if ${PORT_OPTIONS:MMYSQL}
 	@cd ${WRKSRC} && ./menuselect/menuselect --enable res_config_mysql menuselect.makeopts
