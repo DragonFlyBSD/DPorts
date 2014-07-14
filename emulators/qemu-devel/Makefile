@@ -3,7 +3,7 @@
 
 PORTNAME=	qemu
 PORTVERSION=	2.0.0
-PORTREVISION=	4
+PORTREVISION=	9
 CATEGORIES=	emulators
 MASTER_SITES=	http://wiki.qemu.org/download/:release \
 		LOCAL/nox:snapshot
@@ -68,6 +68,16 @@ EXTRA_PATCHES+=	${FILESDIR}/extra-patch-sysctl-0oldlen
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-bsd-user-mmap.c
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-sysctl-hw-pagesizes
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-bsd-user-x86_64-target_arch_vmparam.h
+EXTRA_PATCHES+=	${FILESDIR}/extra-patch-target_siginfo
+EXTRA_PATCHES+=	${FILESDIR}/extra-patch-bsd-user-arm-signal
+EXTRA_PATCHES+=	${FILESDIR}/extra-patch-getvfsbyname
+EXTRA_PATCHES+=	${FILESDIR}/extra-patch-kernproc
+EXTRA_PATCHES+=	${FILESDIR}/extra-patch-bsd-user-freebsd-target_os_stack.h
+EXTRA_PATCHES+=	${FILESDIR}/extra-patch-bsd-user-arm-target_arch_thread.h
+EXTRA_PATCHES+=	${FILESDIR}/extra-patch-bsd-user-sparc64-target_arch_cpu.h
+EXTRA_PATCHES+=	${FILESDIR}/extra-patch-bsd-user-trapsig
+EXTRA_PATCHES+=	${FILESDIR}/extra-patch-21927cffcc7bcacbb953155f778200846df9f60e
+EXTRA_PATCHES+=	${FILESDIR}/extra-patch-bsd-user-freebsd-os-sys.c
 .endif
 
 CONFIGURE_ARGS+=	--extra-ldflags=-L${LOCALBASE}/lib
@@ -220,6 +230,7 @@ RUN_DEPENDS+=	${LOCALBASE}/sbin/smbd:${PORTSDIR}/net/samba36
 
 .if ${PORT_OPTIONS:MDOCS}
 BUILD_DEPENDS+=	texi2html:${PORTSDIR}/textproc/texi2html
+USES+=		makeinfo
 .else
 MAKE_ARGS+=	NOPORTDOCS=1
 .endif
@@ -234,6 +245,10 @@ MAKE_ARGS+=	ARCH=x86_64
 
 .if ${ARCH} == "powerpc"
 MAKE_ARGS+=	ARCH=ppc
+.endif
+
+.if ${ARCH} == "powerpc64"
+MAKE_ARGS+=	ARCH=ppc64
 .endif
 
 .if ${ARCH} == "sparc64"
