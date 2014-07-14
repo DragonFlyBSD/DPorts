@@ -9,7 +9,7 @@ MASTER_SITES=	http://oldhome.schmorp.de/marc/data/ \
 DISTFILES=	${PORTNAME}-iso-8859-1.bdf.gz fonts.alias
 DIST_SUBDIR=	suxus
 
-MAINTAINER=	wxs@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	An x11 font designed to be small yet easily read
 
 BUILD_DEPENDS=	bdftopcf:${PORTSDIR}/x11-fonts/bdftopcf \
@@ -19,7 +19,6 @@ BUILD_DEPENDS=	bdftopcf:${PORTSDIR}/x11-fonts/bdftopcf \
 SUB_FILES=	pkg-message
 USE_XORG=	x11
 
-NO_STAGE=	yes
 do-extract:
 	@${MKDIR} ${WRKSRC}
 	@${CP} ${DISTDIR}/${DIST_SUBDIR}/${PORTNAME}-iso-8859-1.bdf.gz ${WRKSRC}
@@ -28,15 +27,9 @@ do-extract:
 
 do-build:
 	${PREFIX}/bin/bdftopcf -t ${WRKSRC}/suxus-iso-8859-1.bdf | ${GZIP_CMD} > ${WRKSRC}/suxus-iso-8859-1.pcf.gz
-	${PREFIX}/bin/mkfontdir ${WRKSRC}
 
 do-install:
-	@${MKDIR} ${PREFIX}/lib/X11/fonts/local/suxus
-	@${INSTALL_DATA} ${WRKSRC}/*.pcf.gz ${PREFIX}/lib/X11/fonts/local/suxus
-	@${INSTALL_DATA} ${WRKSRC}/fonts.dir ${PREFIX}/lib/X11/fonts/local/suxus
-	@${INSTALL_DATA} ${WRKSRC}/fonts.alias ${PREFIX}/lib/X11/fonts/local/suxus
-
-post-install:
-	@${CAT} ${PKGMESSAGE}
+	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/X11/fonts/local/suxus
+	@${INSTALL_DATA} ${WRKSRC}/*.pcf.gz ${STAGEDIR}${PREFIX}/lib/X11/fonts/local/suxus
 
 .include <bsd.port.mk>
