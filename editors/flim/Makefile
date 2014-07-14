@@ -16,6 +16,8 @@ LICENSE=	GPLv2
 
 PORTCLASS?=	master
 
+USES=		makeinfo
+
 # distfile version
 FLIM_VER=	${FLIM_TRUNK}.9
 FLIM_TRUNK=	1.14
@@ -39,11 +41,10 @@ OPTIONS_DEFAULT=	DOCS
 ALL_TARGET?=	elc
 # environments
 PLIST_SUB+=	FLIMDOCDIR=${FLIMDOCDIR} FLIM_COOKIE=${FLIM_COOKIE}
-MAKE_ARGS+=	PREFIX="${LOCALBASE}" \
-		LISPDIR="${FLIM_LISPDIR}" \
-		VERSION_SPECIFIC_LISPDIR="${FLIM_VERSION_SPECIFIC_LISPDIR}"
+MAKE_ARGS+=	PREFIX="${STAGEDIR}${LOCALBASE}" \
+		LISPDIR="${STAGEDIR}${FLIM_LISPDIR}" \
+		VERSION_SPECIFIC_LISPDIR="${STAGEDIR}${FLIM_VERSION_SPECIFIC_LISPDIR}"
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if defined(EMACS_PORT_NAME)
@@ -52,14 +53,14 @@ DEPPORT_SUFFIX=
 .else
 DEPPORT_SUFFIX=	-${EMACS_PORT_NAME}
 .endif
-.if (${EMACS_PORT_NAME} == "emacs21") || (${EMACS_PORT_NAME} == "emacs22") || (${EMACS_PORT_NAME} == "emacs23") || (${EMACS_PORT_NAME} == "emacs24") || (${EMACS_PORT_NAME} == "emacs-devel")
+.if (${EMACS_PORT_NAME} == "emacs23") || (${EMACS_PORT_NAME} == "emacs24") || (${EMACS_PORT_NAME} == "emacs-devel")
 PLIST=		${PKGDIR}/pkg-plist.emacs21
 .endif
 # depends on apel (case of xemacs-21.x or later)
 .if defined(EMACS_PACKAGESDIR)
 BUILD_DEPENDS+=	${LOCALBASE}/${EMACS_LIBDIR}/xemacs-packages/lisp/apel/emu.el:${PORTSDIR}/editors/xemacs-packages
 RUN_DEPENDS+=	${LOCALBASE}/${EMACS_LIBDIR}/xemacs-packages/lisp/apel/emu.el:${PORTSDIR}/editors/xemacs-packages
-MAKE_ARGS+=	PACKAGEDIR="${LOCALBASE}/${EMACS_PACKAGESDIR}"
+MAKE_ARGS+=	PACKAGEDIR="${STAGEDIR}${LOCALBASE}/${EMACS_PACKAGESDIR}"
 .else
 # depends on apel (case of gnu emacsen etc...)
 BUILD_DEPENDS+=	${LOCALBASE}/${EMACS_VERSION_SITE_LISPDIR}/emu/emu.el:${PORTSDIR}/editors/apel${DEPPORT_SUFFIX}
@@ -81,6 +82,13 @@ BUILD_DEPENDS+=	nkf:${PORTSDIR}/japanese/nkf
 MAKEINFO=		makeinfo --no-split --no-validate
 MAKEINFO_EMACS=		${EMACS_CMD} -no-site-file -no-init-file -batch
 MAKEINFO_EMACS_FLAGS=	-e texinfo-format-buffer -f save-buffer
+
+.if ! defined(EMACS_PACKAGESDIR) || ! defined(MANIFEST)
+INFO=		mime-en
+.if defined(EMACS_HAS_MULE) && (${EMACS_HAS_MULE} == "YES")
+INFO+=		mime-ja
+.endif
+.endif
 
 .if defined(EMACS_PACKAGESDIR) && defined(XEMACS_PKGNAME)
 pre-build: pkg-el-copy
@@ -150,34 +158,32 @@ pkg-el-copy:
 
 pkg-el-install:
 	@(if [ -f ${FILESDIR}/_pkg.el ] ; then \
-	${MKDIR} ${LOCALBASE}/${EMACS_PACKAGESDIR}/lisp/${XEMACS_PKGNAME} ;\
+	${MKDIR} ${STAGEDIR}${LOCALBASE}/${EMACS_PACKAGESDIR}/lisp/${XEMACS_PKGNAME} ;\
 	${INSTALL_DATA} ${FILESDIR}/_pkg.el \
-		${LOCALBASE}/${EMACS_PACKAGESDIR}/lisp/${XEMACS_PKGNAME}/_pkg.el ;\
+		${STAGEDIR}${LOCALBASE}/${EMACS_PACKAGESDIR}/lisp/${XEMACS_PKGNAME}/_pkg.el ;\
 	fi)
 
 mkdir-site-packages:
 	@(for i in ${EMACS_PACKAGES_SUBDIRS} ; do \
-		${MKDIR} ${LOCALBASE}/${EMACS_PACKAGESDIR}/$${i} ; \
+		${MKDIR} ${STAGEDIR}${LOCALBASE}/${EMACS_PACKAGESDIR}/$${i} ; \
 	done)
 
 doc-install:
-	@${MKDIR} ${LOCALBASE}/${FLIMDOCDIR}
+	@${MKDIR} ${STAGEDIR}${LOCALBASE}/${FLIMDOCDIR}
 	@(cd ${WRKSRC} ; \
 	for i in ChangeLog NEWS README.* VERSION ; do \
-		${INSTALL_DATA} $${i} ${LOCALBASE}/${FLIMDOCDIR}/ ; \
+		${INSTALL_DATA} $${i} ${STAGEDIR}${LOCALBASE}/${FLIMDOCDIR}/ ; \
 	done)
 
 info-install:
 	@(cd ${WRKSRC} ; \
 	for i in mime-en.info; do \
-		${INSTALL_DATA} ${WRKSRC}/$${i} ${LOCALBASE}/info ; \
-		install-info ${LOCALBASE}/info/$${i} ${LOCALBASE}/info/dir ; \
+		${INSTALL_DATA} ${WRKSRC}/$${i} ${STAGEDIR}${LOCALBASE}/info ; \
 	done)
 .if defined(EMACS_HAS_MULE) && (${EMACS_HAS_MULE} == "YES")
 	@(cd ${WRKSRC} ; \
 	for i in mime-ja.info; do \
-		${INSTALL_DATA} ${WRKSRC}/$${i} ${LOCALBASE}/info ; \
-		install-info ${LOCALBASE}/info/$${i} ${LOCALBASE}/info/dir ; \
+		${INSTALL_DATA} ${WRKSRC}/$${i} ${STAGEDIR}${LOCALBASE}/info ; \
 	done)
 .endif
 
@@ -185,12 +191,12 @@ info-package-install:
 	@(cd ${WRKSRC} ; \
 	for i in mime-en.info mime-ja.info; do \
 		${INSTALL_DATA} ${WRKSRC}/$${i} \
-				${LOCALBASE}/${EMACS_PACKAGESDIR}/info ; \
+				${STAGEDIR}${LOCALBASE}/${EMACS_PACKAGESDIR}/info ; \
 	done ; \
-	${MKDIR} ${LOCALBASE}/${EMACS_PACKAGESDIR}/man/flim ; \
+	${MKDIR} ${STAGEDIR}${LOCALBASE}/${EMACS_PACKAGESDIR}/man/flim ; \
 	for i in mime-en.texi mime-ja.texi; do \
 		${INSTALL_DATA} ${WRKSRC}/$${i} \
-				${LOCALBASE}/${EMACS_PACKAGESDIR}/man/flim ; \
+				${STAGEDIR}${LOCALBASE}/${EMACS_PACKAGESDIR}/man/flim ; \
 	done)
 
 manifest-install:
@@ -198,11 +204,11 @@ manifest-install:
 	@${CAT} ${PLIST} | ${GREP} -e "^%%EMACS_PACKAGESDIR%%" | \
 		${SED} -e "s;^%%EMACS_PACKAGESDIR%%/;;" > ${WRKDIR}/${MANIFEST}
 	@${INSTALL_DATA} ${WRKDIR}/${MANIFEST} \
-		${LOCALBASE}/${EMACS_PACKAGESDIR}/pkginfo/
+		${STAGEDIR}${LOCALBASE}/${EMACS_PACKAGESDIR}/pkginfo/
 
 pkgcookie-install:
 # install package-cookie
-	@${MKDIR} ${LOCALBASE}/share/flim
-	@${TOUCH} ${LOCALBASE}/share/flim/${FLIM_COOKIE}
+	@${MKDIR} ${STAGEDIR}${LOCALBASE}/share/flim
+	@${TOUCH} ${STAGEDIR}${LOCALBASE}/share/flim/${FLIM_COOKIE}
 
 .include <bsd.port.post.mk>
