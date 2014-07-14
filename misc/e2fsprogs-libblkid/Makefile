@@ -5,7 +5,7 @@ PORTREVISION=	1
 CATEGORIES=	misc devel
 PKGNAMESUFFIX=	-libblkid
 
-COMMENT=	A blkid library from e2fsprogs package
+COMMENT=	Blkid library from e2fsprogs package
 
 LIB_DEPENDS=	libuuid.so:${PORTSDIR}/misc/e2fsprogs-libuuid
 
@@ -22,10 +22,10 @@ PKGDIR=		${.CURDIR}
 
 pre-build:
 	${MKDIR} ${WRKSRC}/lib/blkid/elfshared
-	cd ${WRKSRC}/util && ${GMAKE} subst
+	cd ${WRKSRC}/util && ${MAKE_CMD} subst
 
 post-build:
-	cd ${WRKSRC}/lib/uuid && ${GMAKE}
-	cd ${INSTALL_WRKSRC} && ${GMAKE} check
+	cd ${WRKSRC}/lib/uuid && ${MAKE_CMD}
+	cd ${INSTALL_WRKSRC} && ${MAKE_CMD} check
 
 .include "${MASTERDIR}/Makefile"
