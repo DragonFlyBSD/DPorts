@@ -8,7 +8,7 @@ MASTER_SITES=	SF
 PKGNAMEPREFIX=	mingw32-
 DISTNAME=	PDCurses-${PORTVERSION}
 
-MAINTAINER=	ed@FreeBSD.org
+MAINTAINER= ports@FreeBSD.org
 COMMENT=	Curses and Panel terminal library for Windows
 
 BUILD_DEPENDS=	${PKGNAMEPREFIX}gcc:${PORTSDIR}/devel/${PKGNAMEPREFIX}gcc \
@@ -20,13 +20,14 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/win32
 MAKE_ARGS+=	CC=${PKGNAMEPREFIX}gcc LIBEXE=${PKGNAMEPREFIX}ar
 ALL_TARGET=	pdcurses.a
 
-NO_STAGE=	yes
 do-install:
+	@${MKDIR} ${STAGEDIR}${PREFIX}/mingw32/include
+	@${MKDIR} ${STAGEDIR}${PREFIX}/mingw32/lib
 .for f in curses.h curspriv.h panel.h term.h
-	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/$f ${PREFIX}/mingw32/include/$f
+	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/$f ${STAGEDIR}${PREFIX}/mingw32/include/$f
 .endfor
-	${INSTALL_DATA} ${WRKSRC}/pdcurses.a ${PREFIX}/mingw32/lib/libpdcurses.a
-	${LN} -sf libpdcurses.a ${PREFIX}/mingw32/lib/libcurses.a
-	${LN} -sf libpdcurses.a ${PREFIX}/mingw32/lib/libpanel.a
+	${INSTALL_DATA} ${WRKSRC}/pdcurses.a ${STAGEDIR}${PREFIX}/mingw32/lib/libpdcurses.a
+	${LN} -sf libpdcurses.a ${STAGEDIR}${PREFIX}/mingw32/lib/libcurses.a
+	${LN} -sf libpdcurses.a ${STAGEDIR}${PREFIX}/mingw32/lib/libpanel.a
 
 .include <bsd.port.mk>
