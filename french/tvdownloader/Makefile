@@ -19,13 +19,14 @@ RUN_DEPENDS=	msdl:${PORTSDIR}/multimedia/msdl	\
 		${PYTHON_SITELIBDIR}/Crypto/__init__.py:${PORTSDIR}/security/py-pycrypto\
 		${PYTHON_SITELIBDIR}/mechanize/_mechanize.py:${PORTSDIR}/www/py-mechanize
 
-MECHA_VER=	0.2.5
-MECHA_EGG=	mechanize-${MECHA_VER}-${PYTHON_VERSION:S/thon//}${PYEASYINSTALL_OSARCH}.egg
-
 USE_PYTHON=	yes
 USES=		shebangfix
 SHEBANG_FILES=	doc/installdox
 ALL_TARGET=	build
+
+OPTIONS_DEFINE=	DOCS
+
+.include <bsd.port.options.mk>
 
 pre-configure:
 	${REINPLACE_CMD} -e 's|@python|${PYTHON_CMD}|'	\
@@ -34,7 +35,7 @@ pre-configure:
 		${WRKSRC}/tvdownloader.sh
 	${REINPLACE_CMD} -e 's|/usr/share|${PREFIX}/share|'	\
 		${WRKSRC}/tvdownload.desktop
-.if defined(NOPORTDOCS)
+.if empty(PORT_OPTIONS:MDOCS)
 	${REINPLACE_CMD} -e 's|%%DOC%%|#|' ${WRKSRC}/Makefile
 .else
 	${REINPLACE_CMD} -e 's|%%DOC%%||' ${WRKSRC}/Makefile
