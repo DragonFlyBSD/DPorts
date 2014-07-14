@@ -7,7 +7,7 @@ CATEGORIES=	net python
 MASTER_SITES=	SF/pythondirector/pythondirector/pythondirector-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A TCP load balancer written in Python
+COMMENT=	TCP load balancer written in Python
 
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/twisted/__init__.py:${PORTSDIR}/devel/py-twisted
 
@@ -15,10 +15,10 @@ USE_PYTHON=		yes
 USE_PYDISTUTILS=	yes
 PORTDOCS=		*
 
+OPTIONS_DEFINE=	DOCS
+
 post-install:
-.if !defined(NOPORTDOCS)
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
-	@${INSTALL_DATA} ${WRKSRC}/doc/* ${STAGEDIR}${DOCSDIR}
-.endif
+	${INSTALL_DATA} ${WRKSRC}/doc/* ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
