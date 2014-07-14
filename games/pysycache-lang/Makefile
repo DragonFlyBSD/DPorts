@@ -10,7 +10,7 @@ PKGNAMEPREFIX=	pysycache-
 DISTFILES=	#
 DIST_SUBDIR=	pysycache
 
-MAINTAINER=	acm@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	The pysycache lang support
 
 RUN_DEPENDS=	pysycache.py:${PORTSDIR}/games/pysycache
@@ -29,7 +29,6 @@ SPANISH_DESC=	Spanish language support
 
 OPTIONS_DEFAULT=	FRENCH GERMAN ITALIAN PORTUGUESE SPANISH
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MFRENCH}
@@ -97,7 +96,7 @@ do-extract:
 
 do-install:
 	@cd ${WRKSRC} && \
-		${FIND} * -type d -exec ${MKDIR} "${DATADIR}/{}" \; && \
-		${FIND} * -type f -exec ${INSTALL_DATA} "{}" "${DATADIR}/{}" \;
+		${FIND} * -type d -exec ${MKDIR} "${STAGEDIR}${DATADIR}/{}" \; && \
+		${FIND} * -type f -exec ${INSTALL_DATA} "{}" "${STAGEDIR}${DATADIR}/{}" \;
 
 .include <bsd.port.mk>
