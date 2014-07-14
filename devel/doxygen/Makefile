@@ -17,13 +17,13 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	tmake:${PORTSDIR}/devel/tmake
-LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
+LIB_DEPENDS=	libpng15.so:${PORTSDIR}/graphics/png
 
 USES=		bison iconv perl5 gmake
 ALL_TARGET=	all
 HAS_CONFIGURE=	yes
 QT_NONSTANDARD=	yes	# non-standard configure arguments
-CONFIGURE_ARGS=	--prefix ${PREFIX} --perl ${PERL} --make ${GMAKE} \
+CONFIGURE_ARGS=	--prefix ${PREFIX} --perl ${PERL} --make ${MAKE_CMD} \
 		--install "${INSTALL}"
 REINPLACE_ARGS=	-i ''
 
@@ -86,7 +86,7 @@ post-configure:
 
 post-build:
 	cd ${BUILD_WRKSRC}/examples; \
-	${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} Makefile ${MAKE_ARGS} all
+	${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_FLAGS} Makefile ${MAKE_ARGS} all
 
 pre-install:
 	${RM} -rf ${TMPDOCDEST} ${PLIST}
