@@ -9,18 +9,21 @@ MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:PETERG
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	gslin@gslin.org
+MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Interface to Jquery, a language based on JavaScript
 
-RUN_DEPENDS=	p5-CGI-Application>=0:${PORTSDIR}/www/p5-CGI-Application \
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
+BUILD_DEPENDS=	p5-CGI-Application>=0:${PORTSDIR}/www/p5-CGI-Application \
 		p5-CSS>=0:${PORTSDIR}/textproc/p5-CSS \
 		p5-HTML-Table>=0:${PORTSDIR}/www/p5-HTML-Table \
 		p5-IO-String>=0:${PORTSDIR}/devel/p5-IO-String \
 		p5-XML-Writer>=0:${PORTSDIR}/textproc/p5-XML-Writer
-BUILD_DEPENDS:=	${RUN_DEPENDS}
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USES=		perl5 shebangfix
 USE_PERL5=	modbuild
+USES=		perl5 shebangfix
 
 SHEBANG_FILES=	lib/JQuery/cgi-bin/*.pl
 
