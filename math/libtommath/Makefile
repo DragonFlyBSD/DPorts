@@ -13,8 +13,7 @@ OPTIONS_DEFINE=	DOCS SHARED
 SHARED_DESC=	Build shared library
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
-USES=		gmake
-USE_BZIP2=	yes
+USES=		gmake tar:bzip2
 ALL_TARGET=	default
 CFLAGS+=	-fPIC
 PORTDOCS=	*
@@ -30,6 +29,7 @@ post-patch:
 
 .if ${PORT_OPTIONS:MSHARED}
 BUILD_DEPENDS=	libtool:${PORTSDIR}/devel/libtool
+USES+=		libtool:keepla
 USE_LDCONFIG=	yes
 PLIST_FILES+=	lib/libtommath.la lib/libtommath.so.0 lib/libtommath.so
 MAKEFILE=	makefile.shared
@@ -48,7 +48,7 @@ post-install:
 
 regression-test:
 	(cd ${WRKSRC}; \
-	 ${SETENV} ${MAKE_ENV} ${GMAKE} -f ${MAKEFILE} mtest test; \
+	 ${SETENV} ${MAKE_ENV} ${MAKE_CMD} -f ${MAKEFILE} mtest test; \
 	 ./mtest/mtest | ./test)
 
 .include <bsd.port.mk>
