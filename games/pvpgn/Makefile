@@ -3,6 +3,7 @@
 
 PORTNAME=	pvpgn
 PORTVERSION=	1.8.5
+PORTREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_BERLIOS}
 MASTER_SITE_SUBDIR=	pvpgn
@@ -10,7 +11,7 @@ DISTFILES=	${EXTRACT_ONLY} pvpgn-support-1.2.tar.gz
 DIST_SUBDIR=	pvpgn
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
-MAINTAINER=	mek@mek.uz.ua
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Free Blizzard Battle.net emulation software
 
 PKGINSTALL?=	${WRKDIR}/pkg-install
