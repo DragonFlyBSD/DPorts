@@ -3,7 +3,7 @@
 
 PORTNAME=	libcomprex
 PORTVERSION=	0.3.3
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	archivers
 MASTER_SITES=	SF/gnupdate/${PORTNAME}/${PORTVERSION}
 
@@ -20,9 +20,9 @@ USES=		libtool:keepla pathfix pkgconfig
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 
-NLS_USES+=	gettext
-NLS_CPPFLAGS+=	-I${LOCALBASE}/include
-NLS_LDFLAGS+=	-L${LOCALBASE}/lib -lintl
-NLS_CONFIGURE_ARGS=	nls
+NLS_USES=	gettext
+NLS_CPPFLAGS=	-I${LOCALBASE}/include
+NLS_LDFLAGS=	-L${LOCALBASE}/lib -lintl
+NLS_CONFIGURE_ENABLE=	nls
 
 .include <bsd.port.mk>
