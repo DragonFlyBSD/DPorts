@@ -3,7 +3,7 @@
 
 PORTNAME=	libsass
 PORTVERSION=	1.0.1
-#PORTREVISION=	0
+PORTREVISION=	2
 CATEGORIES=	textproc
 
 MAINTAINER=	nivit@FreeBSD.org
@@ -13,7 +13,7 @@ LICENSE=	MIT
 
 AUTOMAKE_ARGS=	--add-missing
 
-GH_ACCOUNT=	hcatlin
+GH_ACCOUNT=	sass
 GH_COMMIT=	0388a62
 GH_TAGNAME=	v${PORTVERSION}
 
@@ -21,9 +21,9 @@ INSTALL_TARGET=	install-strip
 
 PATHFIX_MAKEFILEIN=	Makefile.am
 
+USES=		libtool pathfix
 USE_AUTOTOOLS=	aclocal autoconf autoheader automake libtoolize
 USE_GITHUB=	yes
 USE_LDCONFIG=	yes
-USES=	pathfix
 
 .include <bsd.port.mk>
