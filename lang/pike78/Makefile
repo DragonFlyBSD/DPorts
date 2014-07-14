@@ -10,7 +10,7 @@ MASTER_SITES=	http://pike.ida.liu.se/pub/pike/all/${PORTVERSION}/ \
 DISTNAME=	Pike-v${PORTVERSION}
 
 MAINTAINER=	johans@FreeBSD.org
-COMMENT=	A dynamic programming language with a syntax similar to C++
+COMMENT=	Dynamic programming language with a syntax similar to C++
 
 LIB_DEPENDS=	libjpeg.so:${PORTSDIR}/graphics/jpeg \
 		libtiff.so:${PORTSDIR}/graphics/tiff \
@@ -101,7 +101,7 @@ post-patch:
 		${WRKSRC}/bin/install.pike
 
 do-install:
-	@cd ${WRKSRC} && ${GMAKE} ${INSTALL_TARGET} buildroot=${STAGEDIR}
+	@cd ${WRKSRC} && ${MAKE_CMD} ${INSTALL_TARGET} buildroot=${STAGEDIR}
 
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/pike/${PORTVERSION}/bin/pike
@@ -116,7 +116,7 @@ post-install:
 		) >> ${TMPPLIST}
 
 verify:
-	cd ${WRKSRC}; ${GMAKE} verify
+	cd ${WRKSRC}; ${MAKE_CMD} verify
 
 .include "Makefile.common"
 .include <bsd.port.mk>
