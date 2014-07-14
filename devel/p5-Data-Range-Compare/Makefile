@@ -7,10 +7,13 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	gslin@gslin.org
+MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Find gaps & intersections in lists of ranges
 
-USES=		perl5
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
 USE_PERL5=	configure
+USES=		perl5
 
 .include <bsd.port.mk>
