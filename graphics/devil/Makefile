@@ -19,6 +19,7 @@ AUTOMAKE_ARGS=	--add-missing --copy --force-missing
 CONFIGURE_ARGS=	--enable-ILU \
 		--disable-allegro --disable-directx8 --disable-directx9 \
 		--without-libsquish
+INSTALL_TARGET=	install-strip
 USE_LDCONFIG=	yes
 USE_GCC=	any
 
@@ -93,6 +94,8 @@ CONFIGURE_ARGS+=--disable-altivec --disable-sse --disable-sse2 --disable-sse3
 
 post-patch:
 	@${REINPLACE_CMD} -e '/^SUBDIRS/s|docs||g' ${WRKSRC}/Makefile.am
+	@${REINPLACE_CMD} -e '/^ilur_LDADD =/s|$$| $$(il_library)|' \
+		${WRKSRC}/bin/Makefile.am
 	@${REINPLACE_CMD} -e '/^pkgdir=/s|$$(libdir)/|$$(prefix)/libdata/|g' \
 		${WRKSRC}/data/Makefile.am
 	@${REINPLACE_CMD} -e 's|<malloc\.h>|<stdlib.h>|g' \
