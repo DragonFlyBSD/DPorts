@@ -10,15 +10,15 @@ EXTRACT_ONLY=
 USES=		gmake
 MAKE_ARGS=	DOC_MODULE=libxml2 EXAMPLES_DIR=${EXAMPLESDIR}
 
-.if !defined(NOPORTEXAMPLES)
+OPTIONS_DEFINE=	EXAMPLES
+
 EXAMPLES=	testHTML.c testSAX.c testXPath.c xmllint.c
-PLIST_FILES=	${EXAMPLES:S|^|%%EXAMPLESDIR%%/|}
-PLIST_DIRS=	%%EXAMPLESDIR%%
-.endif
+EXAMPLES_PLIST_FILES=	${EXAMPLES:S|^|%%EXAMPLESDIR%%/|}
+EXAMPLES_PLIST_DIRS=	%%EXAMPLESDIR%%
 
 do-install:
 .for d in . doc doc/examples
-	@cd ${PARENT_WRKSRC}/${d} && ${GMAKE} ${MAKE_ARGS} install-data-local
+	@cd ${PARENT_WRKSRC}/${d} && ${MAKE_CMD} ${MAKE_ARGS} install-data-local
 .endfor
 
 .include "${.CURDIR}/../../devel/glib20-reference/bsd.gnome-reference.mk"
