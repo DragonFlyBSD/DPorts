@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/security/shibboleth2-sp/files/shibboleth-sp.in 353234 2014-05-08 01:35:13Z girgen $
+# $FreeBSD: head/security/shibboleth2-sp/files/shibboleth-sp.in 359847 2014-06-30 14:13:28Z girgen $
 #
 # PROVIDE: shibboleth_sp
 # REQUIRE: DAEMON
@@ -23,7 +23,7 @@ keygen_cmd="shibboleth_sp_keygen"
 
 shibboleth_sp_user=%%SHIBD_USER%%
 shibboleth_sp_group=%%SHIBD_GROUP%%
-www_group=%%WWWGROUP%%
+www_group=%%WWWGRP%%
 
 load_rc_config $name
 
