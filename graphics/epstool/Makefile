@@ -16,7 +16,7 @@ USE_GHOSTSCRIPT_RUN=	yes
 
 USES=		gmake
 MAKEFILE=	makefile
-MAKE_ARGS=	MAKE="${GMAKE}" GSCDEBUG="" CC="${CC}" CCAUX="${CC}" \
+MAKE_ARGS=	MAKE="${MAKE_CMD}" GSCDEBUG="" CC="${CC}" CCAUX="${CC}" \
 		CLINK="${CC} ${LDFLAGS}" LINK="${CC} ${LDFLAGS}" EPSLIB="" \
 		GTKCFLAGS="" GTKLIBS="" LIBPNGCFLAGS="" LIBPNGLIBS=""
 ALL_TARGET=	${PORTNAME}
@@ -24,17 +24,15 @@ MAKE_JOBS_UNSAFE=	yes
 
 PLIST_FILES=	bin/epstool man/man1/epstool.1.gz
 
-.if !defined(NOPORTDOCS)
+OPTIONS_DEFINE=	DOCS
+
 PORTDOCS=	epstool.htm gsview.css
-.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/epstool ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/doc/epstool.1 ${STAGEDIR}${MANPREFIX}/man/man1
-.if !defined(NOPORTDOCS)
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/epstool.htm ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/gsview.css ${STAGEDIR}${DOCSDIR}
-.endif
 
 .include <bsd.port.mk>
