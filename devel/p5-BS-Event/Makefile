@@ -8,14 +8,21 @@ MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:ELMEX
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	gslin@gslin.org
+MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Class that provides an event callback interface
 
-USES=		perl5
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
+OPTIONS_DEFINE=	EXAMPLES
+
 USE_PERL5=	configure
+USES=		perl5
+
+PORTEXAMPLES=	simple_example
 
 post-install:
-	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/samples/simple_example ${STAGEDIR}${EXAMPLESDIR}
+	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/
+	${INSTALL_SCRIPT} ${WRKSRC}/samples/simple_example ${STAGEDIR}${EXAMPLESDIR}/
 
 .include <bsd.port.mk>
