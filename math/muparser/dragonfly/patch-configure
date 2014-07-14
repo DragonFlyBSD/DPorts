@@ -1,6 +1,6 @@
---- configure.orig	2013-08-17 21:00:48.154716000 +0000
+--- configure.orig	2014-07-14 00:53:26.552227000 +0000
 +++ configure
-@@ -6549,6 +6549,7 @@ EOF
+@@ -6558,6 +6558,7 @@ EOF
  
        powerpc-apple-macos* | \
        *-*-freebsd* | *-*-openbsd* | *-*-netbsd* | *-*-k*bsd*-gnu | \
@@ -8,3 +8,11 @@
        *-*-mirbsd* | \
        *-*-sunos4* | \
        *-*-osf* | \
+@@ -6599,6 +6600,7 @@ EOF
+ 
+     case "${BAKEFILE_HOST}" in
+       *-*-linux* | *-*-freebsd* | *-*-openbsd* | *-*-netbsd* | \
++      *-*-dragonfly* | \
+       *-*-k*bsd*-gnu | *-*-mirbsd* )
+         if test "x$SUNCXX" = "xyes"; then
+             SONAME_FLAG="-h "
