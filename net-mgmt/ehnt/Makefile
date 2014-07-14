@@ -8,7 +8,7 @@ CATEGORIES=	net-mgmt
 MASTER_SITES=	SF
 
 MAINTAINER=	marck@FreeBSD.org
-COMMENT=	A simple Cisco NetFlow data collector
+COMMENT=	Simple Cisco NetFlow data collector
 
 PLIST_FILES=	bin/ehnt etc/rc.d/ehntserv.sh.sample \
 		man/man1/ehnt.1.gz man/man8/ehntserv.8.gz \
@@ -17,6 +17,8 @@ PLIST_DIRS+=	share/ehnt
 
 PORTDOCS=	README
 STPREFIX=	${STAGEDIR}${PREFIX}
+
+OPTIONS_DEFINE=	DOCS
 
 post-extract:
 	${TOUCH} ${WRKSRC}/asnc.txt
@@ -29,9 +31,7 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/ehntserv.8 ${STPREFIX}/man/man8/
 	${MKDIR} ${STAGEDIR}${DATADIR}
 	${INSTALL_DATA} ${WRKSRC}/asnc.txt ${STAGEDIR}${DATADIR}/
-.if !defined(NOPORTDOCS)
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/${PORTDOCS} ${STAGEDIR}${DOCSDIR}/
-.endif
 
 .include <bsd.port.mk>
