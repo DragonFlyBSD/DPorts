@@ -9,8 +9,8 @@ CATEGORIES=	net-im python
 MASTER_SITES=	${MASTER_SITE_LOCAL:S,$,acm/${PORTNAME}/,} \
 		${MASTER_SITE_GOOGLE_CODE}
 
-MAINTAINER=	acm@FreeBSD.org
-COMMENT=	A MSN Messenger client written in python
+MAINTAINER= ports@FreeBSD.org
+COMMENT=	MSN Messenger client written in python
 
 BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/dbus/__init__.py:${PORTSDIR}/devel/py-dbus \
 		${PYTHON_SITELIBDIR}/gtk-2.0/pynotify/__init__.py:${PORTSDIR}/devel/py-notify
