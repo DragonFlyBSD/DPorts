@@ -14,8 +14,8 @@
 # bsd.port.mk.  There are significant differences in those so non-FreeBSD code
 # was removed.
 #
-# $FreeBSD: head/ports-mgmt/portlint/src/portlint.pl 351604 2014-04-19 18:39:10Z marcus $
-# $MCom: portlint/portlint.pl,v 1.314 2014/04/19 18:36:43 marcus Exp $
+# $FreeBSD: head/ports-mgmt/portlint/src/portlint.pl 361618 2014-07-12 14:52:49Z marcus $
+# $MCom: portlint/portlint.pl,v 1.325 2014/07/12 14:39:55 marcus Exp $
 #
 
 use strict;
@@ -45,12 +45,12 @@ $contblank = 1;
 $portdir = '.';
 
 @ALLOWED_FULL_PATHS = qw(/boot/loader.conf /compat/ /dev/null /etc/inetd.conf);
-@MASTERSITES_WHITELIST = qw(googlecode.com nodeload.github.com);
+@MASTERSITES_WHITELIST = qw(googlecode.com nodeload.github.com s3.amazonaws.com);
 
 # version variables
 my $major = 2;
 my $minor = 15;
-my $micro = 1;
+my $micro = 3;
 
 sub l { '[{(]'; }
 sub r { '[)}]'; }
@@ -700,6 +700,13 @@ sub checkplist {
 			} elsif ($_ eq "\@cwd") {
 				; # @cwd by itself means change directory back to the original
 				  # PREFIX.
+		  	} elsif ($_ =~ /^\@sample\s+(\S*)/) {
+				my $sl = $.;
+				if ($1 !~ /\.sample$/) {
+					&perror("WARN", $file, $sl, "\@sample directive references".
+						" file that does not end in ``.sample''.  Sample".
+						" files must end in ``.sample''.");
+				}
 			} else {
 				&perror("WARN", $file, $.,
 					"unknown pkg-plist directive \"$_\"");
@@ -1039,6 +1046,11 @@ sub checkpatch {
 		return;
 	}
 
+	if (length $file > 100) {
+		&perror("FATAL", $file, -1, "make sure patch file names contain no ".
+			"more than 100 characters.");
+	}
+
 	open(IN, "< $file") || return 0;
 	$whole = '';
 	while (<IN>) {
@@ -1145,7 +1157,7 @@ sub check_depends_syntax {
 			}
 
 			# check USES=gmake
-			if ($m{'dep'} =~ /^(gmake|\${GMAKE})$/) {
+			if ($m{'dep'} =~ /^(gmake|\${MAKE_CMD})$/) {
 				&perror("WARN", $file, -1, "dependency to $1 ".
 					"listed in $j. consider using ".
 					"USES[+]=gmake.");
@@ -1578,8 +1590,8 @@ sub checkmakefile {
 		if (!grep(/^$i$/, @opt, @aopt)) {
 			# skip global options
 			next if ($i eq 'DOCS' or $i eq 'NLS' or $i eq 'EXAMPLES' or $i eq 'IPV6' or $i eq 'X11');
-			&perror("WARN", $file, -1, "$i is appears in PORT_OPTIONS:M, ".
-				"but not listed in OPTIONS_DEFINE.");
+			&perror("WARN", $file, -1, "$i appears in PORT_OPTIONS:M, ".
+				"but is not listed in OPTIONS_DEFINE.");
 		}
 	}
 
@@ -1857,8 +1869,8 @@ ruby sed sdl-config sh sort sysctl touch tr which xargs xmkmf
 	$cmdnames{'strip'} = '${STRIP_CMD}';
 	$cmdnames{'unzip'} = '${UNZIP_CMD}';
 	$cmdnames{'pkg_create'} = '${PKG_CMD}';
-	foreach my $i (qw(aclocal autoconf autoheader automake autoreconf autoupdate autoscan ifnames libtool libtoolize)) {
-		$autocmdnames{$i} = "\$\{" . ( ( $i !~ /auto|aclocal|libtool/ ) ? "AUTO" : "" ) . "\U$i\E\}";
+	foreach my $i (qw(aclocal autoconf autoheader automake autoreconf autoupdate autoscan ifnames libtoolize)) {
+		$autocmdnames{$i} = "\$\{" . ( ( $i !~ /auto|aclocal/ ) ? "AUTO" : "" ) . "\U$i\E\}";
 	}
 	#
 	# ignore parameter string to echo command.
@@ -1882,6 +1894,7 @@ ruby sed sdl-config sh sort sysctl touch tr which xargs xmkmf
 			my $lineno = &linenumber($`);
 			if ($curline =~ /(?:^|\s)[\@\-]{0,2}$i(?:$|\s)/
 				&& $curline !~ /^[A-Z]+_TARGET[?+]?=[^\n]+$i/m
+				&& $curline !~ /^[A-Z]+_INSTALL_TARGET[?+]?=[^\n]+$i/m
 				&& $curline !~ /^IGNORE(.)?=[^\n]+$i/m
 				&& $curline !~ /^BROKEN(.)?=[^\n]+$i/m
 				&& $curline !~ /^RESTRICTED(.)?=[^\n]+$i/m
@@ -1928,6 +1941,11 @@ ruby sed sdl-config sh sort sysctl touch tr which xargs xmkmf
 						"instead and set according USE_AUTOTOOLS=<tool> macro");
 			}
 		}
+	}
+
+	if ($makevar{'USE_AUTOTOOLS'} =~ /\blibtool\b/) {
+		&perror("WARN", $file, -1, "USE_AUTOTOOLS=libtool is deprecated.  ".
+			"Use USES=libtool instead.");
 	}
 
 	#
@@ -2113,11 +2131,11 @@ ruby sed sdl-config sh sort sysctl touch tr which xargs xmkmf
 	}
 
 	#
-	# whole file: check for USE_ANT and USE_GMAKE both defined
+	# whole file: check for USE_ANT and USE_MAKE_CMD both defined
 	#
-	if ($use_ant && $whole =~ /^USE_GMAKE[?:]?=\s*(.*)$/m) {
+	if ($use_ant && $whole =~ /^USE_MAKE_CMD[?:]?=\s*(.*)$/m) {
 		&perror("WARN", $file, -1, "a port shall not define both USE_ANT ".
-			"and USE_GMAKE");
+			"and USE_MAKE_CMD");
 	}
 
 	#
@@ -2468,7 +2486,7 @@ DIST_SUBDIR EXTRACT_ONLY
 			"the main category for a port");
 	}
 
-	if ($committer && $makevar{'.CURDIR'} =~ m'${portsdir}/([^/]+)/[^/]+/?$') {
+	if ($committer && $makevar{'.CURDIR'} =~ m/\Q${portsdir}\E\/([^\/]+)\/[^\/]+\/?$/) {
 		if ($cat[0] ne $1 && $makevar{PKGCATEGORY} ne $1 ) {
 			&perror("FATAL", $file, -1, "category \"$1\" must be listed first");
 		}
@@ -2514,16 +2532,6 @@ DIST_SUBDIR EXTRACT_ONLY
 				&perror("WARN", $file, -1, "when you specify multiple categories, ".
 				"language specific category should come first.");
 			}
-		}
-	}
-
-	# check number of MASTER_SITES
-	if ($makevar{MASTER_SITES} ne '' &&
-		! grep {$makevar{MASTER_SITES} =~ m|$_|} @MASTERSITES_WHITELIST) {
-		my @sites = split(/\s+/, $makevar{MASTER_SITES});
-		if (scalar(@sites) == 1 && !&is_predefined($sites[0], undef)) {
-			&perror("WARN", $file, -1, "only one MASTER_SITE configured.  ".
-				"Consider adding additional mirrors.");
 		}
 	}
 
