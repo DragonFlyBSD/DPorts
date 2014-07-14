@@ -3,6 +3,7 @@
 
 PORTNAME=	monotone
 PORTVERSION=	1.1
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.monotone.ca/downloads/${PORTVERSION}/
 
@@ -19,7 +20,7 @@ LIB_DEPENDS=	libpcre.so:${PORTSDIR}/devel/pcre \
 		libbotan-1.10.so:${PORTSDIR}/security/botan110
 
 SUB_FILES=	pkg-message
-USES=		iconv pkgconfig gmake perl5 lua:51 tar:bzip2
+USES=		iconv pkgconfig gmake perl5 lua:51 tar:bzip2 makeinfo
 USE_PERL5=	build
 MAKE_JOBS_SAFE=	yes
 
@@ -44,6 +45,7 @@ PLIST_FILES=	bin/mtn bin/mtn-cleanup bin/mtnopt \
 		"@dirrmtry share/zsh" \
 		"@dirrmtry etc/bash_completion.d" \
 		"@dirrm share/monotone/hooks" \
+		"@dirrmtry share/zsh/site-functions" \
 		"@dirrm share/monotone/scripts" \
 		"@dirrm share/monotone"
 .if !defined(NO_INSTALL_MANPAGES)
