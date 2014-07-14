@@ -1,8 +1,0 @@
-BUILD_DEPENDS+= p5-ExtUtils-Depends>=0:${PORTSDIR}/devel/p5-ExtUtils-Depends
-BUILD_DEPENDS+=	p5-ExtUtils-PkgConfig>=0:${PORTSDIR}/devel/p5-ExtUtils-PkgConfig
-LIB_DEPENDS+=	freetype:${PORTSDIR}/print/freetype2
-LIB_DEPENDS+=	fontconfig:${PORTSDIR}/x11-fonts/fontconfig
-
-USE_XORG+=	xrender
-USE_GNOME+=	pango gtk20
-
