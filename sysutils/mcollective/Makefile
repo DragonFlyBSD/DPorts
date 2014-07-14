@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	mcollective
-PORTVERSION=	2.5.1
+PORTVERSION=	2.5.2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://downloads.puppetlabs.com/${PORTNAME}/
 
@@ -23,6 +23,8 @@ REINPLACE_ARGS=	-i ""
 SCRIPTS=	mco
 
 SUB_LIST+=	RUBY=${RUBY}
+
+OPTIONS_DEFINE=	DOCS
 
 do-patch:
 	@${REINPLACE_CMD} -e "s|/etc/mcollective|${ETCDIR}|" \
@@ -50,9 +52,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/etc/client.cfg.dist ${STAGEDIR}${ETCDIR}
 	${INSTALL_DATA} ${WRKSRC}/etc/server.cfg.dist ${STAGEDIR}${ETCDIR}
 
-.if !defined(NOPORTDOCS)
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	(cd ${WRKSRC}/doc && ${COPYTREE_SHARE} \* ${STAGEDIR}${DOCSDIR})
-.endif
 
 .include <bsd.port.mk>
