@@ -28,7 +28,7 @@ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION,
 EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-  $FreeBSD: head/security/vuxml/vuln.xml 358322 2014-06-18 22:02:27Z lx $
+  $FreeBSD: head/security/vuxml/vuln.xml 361678 2014-07-13 13:29:21Z rakuco $
 
 
 QUICK GUIDE TO ADDING A NEW ENTRY
@@ -57,6 +57,290 @@ Notes:
 
 -->
 <vuxml xmlns="http://www.vuxml.org/apps/vuxml-1">
+  <vuln vid="ff98087f-0a8f-11e4-b00b-5453ed2e2b49">
+    <topic>postfixadmin -- SQL injection vulnerability</topic>
+    <affects>
+      <package>
+	<name>postfixadmin</name>
+	<range><lt>2.3.7</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Thijs Kinkhorst reports:</p>
+	<blockquote cite="http://www.openwall.com/lists/oss-security/2014/03/26/6">
+	  <p>Postfixadmin has an SQL injection vulnerability. This
+	    vulnerability is only exploitable by authenticated users able to
+	    create new aliases.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-2655</cvename>
+      <bid>66455</bid>
+      <freebsdpr>189248</freebsdpr>
+      <mlist>http://www.openwall.com/lists/oss-security/2014/03/26/6</mlist>
+      <url>https://www.debian.org/security/2014/dsa-2889</url>
+    </references>
+    <dates>
+      <discovery>2014-03-28</discovery>
+      <entry>2014-07-13</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="e6a7636a-02d0-11e4-88b6-080027671656">
+    <topic>dbus -- multiple vulnabilities</topic>
+    <affects>
+      <package>
+	<name>dbus</name>
+	<range><lt>1.8.6</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Simon McVittie reports:</p>
+	<blockquote cite="http://lists.freedesktop.org/archives/dbus/2014-July/016235.html">
+	  <p>Alban Crequy at Collabora Ltd. discovered a bug in dbus-daemon's
+	    support for file descriptor passing. A malicious process could
+	    force system services or user applications to be disconnected
+	    from the D-Bus system bus by sending them a message containing
+	    a file descriptor, then causing that file descriptor to exceed
+	    the kernel's maximum recursion depth (itself introduced to fix
+	    a DoS) before dbus-daemon forwards the message to the victim
+	    process. Most services and applications exit when disconnected
+	    from the system bus, leading to a denial of service.</p>
+	  <p>Additionally, Alban discovered that bug fd.o#79694, a bug
+	    previously reported by Alejandro Martínez Suárez which was n
+	    believed to be security flaw, could be used for a similar denial
+	    of service, by causing dbus-daemon to attempt to forward invalid
+	    file descriptors to a victim process when file descriptors become
+	    associated with the wrong message.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-3532</cvename>
+      <cvename>CVE-2014-3533</cvename>
+      <url>http://lists.freedesktop.org/archives/dbus/2014-July/016235.html</url>
+    </references>
+    <dates>
+      <discovery>2014-07-02</discovery>
+      <entry>2014-07-03</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="17dfd984-feba-11e3-b938-5404a68ad561">
+    <topic>mencoder -- potential buffer overrun when processing malicious lzo compressed input</topic>
+    <affects>
+      <package>
+	<name>mencoder</name>
+	<range><lt>1.1.r20140418_1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Michael Niedermayer and Luca Barbato report in upstream ffmpeg:</p>
+	<blockquote>
+	  <p>avutil/lzo: Fix integer overflow</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>http://git.videolan.org/?p=ffmpeg.git;a=commitdiff;h=ccda51b14c0fcae2fad73a24872dce75a7964996</url>
+      <url>http://git.videolan.org/?p=ffmpeg.git;a=commitdiff;h=d6af26c55c1ea30f85a7d9edbc373f53be1743ee</url>
+      <cvename>CVE-2014-4610</cvename>
+    </references>
+    <dates>
+      <discovery>2014-06-24</discovery>
+      <entry>2014-06-28</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="9ab3a22c-feb8-11e3-b938-5404a68ad561">
+    <topic>mplayer -- potential buffer overrun when processing malicious lzo compressed input</topic>
+    <affects>
+      <package>
+	<name>mplayer</name>
+	<range><lt>1.1.r20140418_3</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Michael Niedermayer and Luca Barbato report in upstream ffmpeg:</p>
+	<blockquote>
+	  <p>avutil/lzo: Fix integer overflow</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>http://git.videolan.org/?p=ffmpeg.git;a=commitdiff;h=ccda51b14c0fcae2fad73a24872dce75a7964996</url>
+      <url>http://git.videolan.org/?p=ffmpeg.git;a=commitdiff;h=d6af26c55c1ea30f85a7d9edbc373f53be1743ee</url>
+      <cvename>CVE-2014-4610</cvename>
+    </references>
+    <dates>
+      <discovery>2014-06-24</discovery>
+      <entry>2014-06-28</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="d1f5e12a-fd5a-11e3-a108-080027ef73ec">
+    <topic>LZO -- potential buffer overrun when processing malicious input data</topic>
+    <affects>
+      <package>
+	<name>lzo2</name>
+	<range><lt>2.07</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Markus Franz Xaver Johannes Oberhumer reports, in the package's NEWS file:</p>
+	<blockquote>
+	  <p>Fixed a potential integer overflow condition in the "safe"
+	    decompressor variants which could result in a possible buffer
+	    overrun when processing maliciously crafted compressed input
+	    data.</p>
+
+	  <p>As this issue only affects 32-bit systems and also can only happen
+	    if you use uncommonly huge buffer sizes where you have to decompress
+	    more than 16 MiB (2^24 bytes) compressed bytes within a single
+	    function call, the practical implications are limited.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>http://www.oberhumer.com/opensource/lzo/download/lzo-2.07.tar.gz</url>
+    </references>
+    <dates>
+      <discovery>2014-06-25</discovery>
+      <entry>2014-06-26</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="1c840eb9-fb32-11e3-866e-b499baab0cbe">
+    <topic>gnupg -- possible DoS using garbled compressed data packets</topic>
+    <affects>
+      <package>
+	<name>gnupg1</name>
+	<range><lt>1.4.17</lt></range>
+      </package>
+      <package>
+	<name>gnupg</name>
+	<range><lt>2.0.24</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Werner Koch reports:</p>
+	<blockquote cite="http://lists.gnupg.org/pipermail/gnupg-announce/2014q2/000344.html">
+	  <p>This release includes a *security fix* to stop
+	    a possible DoS using garbled compressed data packets which can be used
+	    to put gpg into an infinite loop.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>http://lists.gnupg.org/pipermail/gnupg-announce/2014q2/000344.html</url>
+      <url>http://lists.gnupg.org/pipermail/gnupg-announce/2014q2/000345.html</url>
+    </references>
+    <dates>
+      <discovery>2014-06-23</discovery>
+      <entry>2014-06-23</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="6ad309d9-fb03-11e3-bebd-000c2980a9f3">
+    <topic>samba -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>samba36</name>
+	<range><lt>3.6.24</lt></range>
+      </package>
+      <package>
+	<name>samba4</name>
+	<range><lt>4.0.19</lt></range>
+      </package>
+      <package>
+	<name>samba41</name>
+	<range><lt>4.1.9</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The samba project reports:</p>
+	<blockquote cite="https://www.samba.org/samba/history/">
+	  <p>A malformed packet can cause the nmbd server to loop the CPU and
+	    prevent any further NetBIOS name service.</p>
+	  <p>Valid unicode path names stored on disk can cause smbd to
+	    crash if an authenticated client attempts to read them
+	    using a non-unicode request.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-0244</cvename>
+      <cvename>CVE-2014-3493</cvename>
+      <url>https://www.samba.org/samba/security/CVE-2014-0244</url>
+      <url>https://www.samba.org/samba/security/CVE-2014-3493</url>
+    </references>
+    <dates>
+      <discovery>2014-06-23</discovery>
+      <entry>2014-06-23</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="c4892644-f8c6-11e3-9f45-6805ca0b3d42">
+    <topic>phpMyAdmin -- two XSS vulnerabilities due to unescaped db/table names</topic>
+    <affects>
+      <package>
+	<name>phpMyAdmin</name>
+	<range><ge>4.1.0</ge><lt>4.2.4</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The phpMyAdmin development team reports:</p>
+	<blockquote cite="http://www.phpmyadmin.net/home_page/security/PMASA-2014-2.php">
+	  <p>Self-XSS due to unescaped HTML output in recent/favorite
+	    tables navigation.</p>
+
+	  <p>When marking a crafted database or table name as
+	    favorite or having it in recent tables, it is possible to
+	    trigger an XSS.</p>
+
+
+	  <p>This vulnerability can be triggered only by someone who
+	    logged in to phpMyAdmin, as the usual token protection
+	    prevents non-logged-in users from accessing the required
+	    form.</p>
+
+	</blockquote>
+	<blockquote cite="http://www.phpmyadmin.net/home_page/security/PMASA-2014-3.php">
+	  <p>Self-XSS due to unescaped HTML output in navigation items
+	    hiding feature.</p>
+
+	  <p>When hiding or unhiding a crafted table name in the
+	    navigation, it is possible to trigger an XSS.</p>
+
+	  <p>This vulnerability can be triggered only by someone who
+	    logged in to phpMyAdmin, as the usual token protection
+	    prevents non-logged-in users from accessing the required
+	    form.</p>
+	</blockquote>
+    </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-4348</cvename>
+      <cvename>CVE-2014-4349</cvename>
+      <url>http://www.phpmyadmin.net/home_page/security/PMASA-2014-2.php</url>
+      <url>http://www.phpmyadmin.net/home_page/security/PMASA-2014-3.php</url>
+    </references>
+    <dates>
+      <discovery>2014-06-20</discovery>
+      <entry>2014-06-20</entry>
+      <modified>2014-06-24</modified>
+    </dates>
+  </vuln>
+
   <vuln vid="0981958a-f733-11e3-8276-071f1604ef8a">
     <topic>iodined -- authentication bypass</topic>
     <affects>
@@ -210,8 +494,16 @@ Notes:
 	<range><lt>24.6.0,1</lt></range>
       </package>
       <package>
+	<name>seamonkey</name>
+	<range><lt>2.26.1</lt></range>
+      </package>
+      <package>
 	<name>linux-firefox</name>
 	<range><lt>30.0,1</lt></range>
+      </package>
+      <package>
+	<name>linux-seamonkey</name>
+	<range><lt>2.26.1</lt></range>
       </package>
       <package>
 	<name>linux-thunderbird</name>
