@@ -3,6 +3,7 @@
 
 PORTNAME=	thunderbird
 DISTVERSION=	24.6.0
+PORTREVISION=	1
 CATEGORIES=	mail news net-im ipv6
 MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}/source \
 		https://ftp.mozilla.org/pub/mozilla.org/${PORTNAME}/candidates/${DISTVERSION}-candidates/build2/source/
@@ -138,7 +139,7 @@ pre-configure:
 post-build:
 	cd ${WRKSRC}/mailnews/extensions/enigmail && \
 		./makemake -r -o ${MOZ_OBJDIR}
-	${SETENV} ${MAKE_ENV} ${GMAKE} -j${MAKE_JOBS_NUMBER} all xpi \
+	${SETENV} ${MAKE_ENV} ${MAKE_CMD} -j${MAKE_JOBS_NUMBER} all xpi \
 		-C ${MOZ_OBJDIR}/mailnews/extensions/enigmail
 .endif
 
