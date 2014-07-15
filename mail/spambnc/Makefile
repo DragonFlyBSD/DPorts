@@ -17,7 +17,6 @@ LICENSE=	GPLv2
 
 RUN_DEPENDS=	procmail:${PORTSDIR}/mail/procmail
 
-IGNOREFILES=	quickstart.shtml
 EXTRACT_DIR=	${WRKDIRPREFIX}${.CURDIR}/worktmp/${DISTNAME}
 EXTRACT_BEFORE_ARGS=	-C ${EXTRACT_DIR} -xf
 NO_BUILD=	yes
@@ -26,10 +25,13 @@ PLIST=		${WRKDIR}/.pkg-plist
 PKGMESSAGE=	${WRKDIR}/pkg-message
 SUB_FILES=	pkg-message
 
-.if !defined(NOPORTDOCS)
+OPTIONS_DEFINE=	DOCS
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MDOCS}
 MASTER_SITES+=	http://www.spambouncer.org/configure/:upg
 DISTFILES+=	upgrading.shtml:upg
-IGNOREFILES+=	upgrading.shtml
 PORTDOCS=	documentation.html upgrading.html loglevels.txt
 .endif
 
@@ -50,7 +52,7 @@ do-install:
 	${MKDIR} ${STAGEDIR}${DATADIR}
 	(cd ${WRKSRC} && ${COPYTREE_SHARE} \* ${STAGEDIR}${DATADIR})
 	${RM} -rf ${STAGEDIR}${DATADIR}/docs
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/quickstart.shtml \
 		${STAGEDIR}${DOCSDIR}/documentation.html
