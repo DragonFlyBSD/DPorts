@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.phenoelit-us.org/hp/
 DISTNAME=	libPJL-${PORTVERSION}-src
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	onatan@gmail.com
+MAINTAINER= ports@FreeBSD.org
 COMMENT=	Printer Job Language library and tool
 
 NO_WRKSUBDIR=	yes
@@ -23,7 +23,7 @@ post-patch:
 		${WRKSRC}/pft/Makefile
 
 post-build:
-	@(cd ${WRKSRC}/pft; ${SETENV} ${MAKE_ENV} ${GMAKE} pft)
+	@(cd ${WRKSRC}/pft; ${SETENV} ${MAKE_ENV} ${MAKE_CMD} pft)
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pft/pft ${PREFIX}/bin
