@@ -23,6 +23,7 @@ OPTIONS_DEFINE=	DOCS
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
+USES+=	makeinfo
 INFO=	ess
 .endif
 
@@ -45,13 +46,13 @@ post-patch: .SILENT
 
 .if ${PORT_OPTIONS:MDOCS}
 post-build:
-	@(cd ${WRKSRC}/doc; ${SETENV} ${MAKE_ENV} ${GMAKE} ${_MAKE_JOBS} \
+	@(cd ${WRKSRC}/doc; ${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${_MAKE_JOBS} \
 		${MAKE_ARGS} info)
 .endif
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	@(cd ${WRKSRC}/doc; ${SETENV} ${MAKE_ENV} ${GMAKE} ${_MAKE_JOBS} \
+	@(cd ${WRKSRC}/doc; ${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${_MAKE_JOBS} \
 		${MAKE_ARGS} install-info)
 .endif
 
