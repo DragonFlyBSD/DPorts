@@ -1,2 +1,0 @@
-post-extract:
-	${REINPLACE_CMD} -e 's| -module| |g' ${WRKSRC}/src/modsrc/Makefile.in
