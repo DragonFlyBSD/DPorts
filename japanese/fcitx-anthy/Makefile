@@ -7,17 +7,15 @@ CATEGORIES=	japanese
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 DIST_SUBDIR=	fcitx
 
-MAINTAINER=	lichray@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Anthy support for Fcitx
 
-LIB_DEPENDS=	fcitx-config:${PORTSDIR}/chinese/fcitx \
-		anthy:${PORTSDIR}/japanese/anthy
+LIB_DEPENDS=	libfcitx-config.so:${PORTSDIR}/chinese/fcitx \
+		libanthy.so:${PORTSDIR}/japanese/anthy
 
-USE_XZ=		yes
-USES=		cmake gettext pkgconfig
+USES=		cmake gettext pkgconfig tar:xz
 USE_GNOME=	intltool
 
 PROJECTHOST=	fcitx
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
