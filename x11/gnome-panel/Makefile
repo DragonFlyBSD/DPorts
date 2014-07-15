@@ -4,7 +4,7 @@
 
 PORTNAME=	gnome-panel
 PORTVERSION=	2.32.1
-PORTREVISION?=	6
+PORTREVISION?=	7
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -74,6 +74,8 @@ post-patch:
 		${WRKSRC}/help/fish/Makefile.in
 	@${REINPLACE_CMD} -e 's|python.* python2\.0|${PYTHON_VERSION}|g' \
 		${WRKSRC}/configure
+	@${REINPLACE_CMD} '/^panel_test_applets_LDADD =/s/=/= -lgmodule-2.0/' \
+		${WRKSRC}/gnome-panel/Makefile.in
 
 .include <bsd.port.mk>
 
