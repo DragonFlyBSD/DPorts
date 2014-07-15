@@ -1,1 +1,0 @@
-CONFIGURE_ENV+= LIBS="-L${LOCALBASE}/lib -lgtk-x11-2.0 -lgdk-x11-2.0 -lX11 -lpango-1.0 -lgobject-2.0 -lglib-2.0"
