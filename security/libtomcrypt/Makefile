@@ -13,13 +13,13 @@ COMMENT=	Comprehensive, modular, and portable cryptographic toolkit
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 MAKEFILE=	makefile
-MAKE_ARGS=	DESTDIR="${PREFIX}" LIBPATH="/lib" INCPATH="/include" \
-		DATAPATH="${DOCSDIR}/pdf"
+MAKE_ARGS=	DESTDIR="${STAGEDIR}" LIBPATH="${PREFIX}/lib" \
+		INCPATH="${PREFIX}/include" DATAPATH="${DOCSDIR}/pdf"
 
 USES=		gmake tar:bzip2
 ALL_TARGET=	library
 
-CFLAGS+=	-I${PREFIX}/include
+CFLAGS+=	-I${LOCALBASE}/include
 
 OPTIONS_DEFINE=	DOCS
 OPTIONS_DEFAULT=	LIBTOMMATH
@@ -28,7 +28,6 @@ OPTIONS_MULTI_MATH=	LIBTOMMATH TOMSFASTMATH GMP
 LIBTOMMATH_DESC=	Use LibTomMath
 TOMSFASTMATH_DESC=	Use TomsFastMath
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLIBTOMMATH}
@@ -56,21 +55,21 @@ MAKE_ARGS+=	NODOCS=yes
 .if defined(MAINTAINER_MODE)
 test:	build
 	@${ECHO_MSG} "Testing with -DUSE_TFM..."
-	(cd ${WRKSRC} && CFLAGS="${CFLAGS} -DUSE_TFM" EXTRALIBS="-L${PREFIX}/lib -ltfm" ${GMAKE} test && ${WRKSRC}/test)
+	(cd ${WRKSRC} && CFLAGS="${CFLAGS} -DUSE_TFM" EXTRALIBS="-L${PREFIX}/lib -ltfm" ${MAKE_CMD} test && ${WRKSRC}/test)
 
 	@${ECHO_MSG} "Cleaning up test binary..."
 	@${RM} ${WRKSRC}/test
 	@${RM} ${WRKSRC}/demos/test.o
 
 	@${ECHO_MSG} "Testing with -DUSE_LTM..."
-	(cd ${WRKSRC} && CFLAGS="${CFLAGS} -DUSE_LTM" EXTRALIBS="-L${PREFIX}/lib -ltommath" ${GMAKE} test && ${WRKSRC}/test)
+	(cd ${WRKSRC} && CFLAGS="${CFLAGS} -DUSE_LTM" EXTRALIBS="-L${PREFIX}/lib -ltommath" ${MAKE_CMD} test && ${WRKSRC}/test)
 
 	@${ECHO_MSG} "Cleaning up test binary..."
 	@${RM} ${WRKSRC}/test
 	@${RM} ${WRKSRC}/demos/test.o
 
 	@${ECHO_MSG} "Testing with -DUSE_GMP..."
-	(cd ${WRKSRC} && CFLAGS="${CFLAGS} -DUSE_GMP" EXTRALIBS="-L${PREFIX}/lib -lgmp" ${GMAKE} test && ${WRKSRC}/test)
+	(cd ${WRKSRC} && CFLAGS="${CFLAGS} -DUSE_GMP" EXTRALIBS="-L${PREFIX}/lib -lgmp" ${MAKE_CMD} test && ${WRKSRC}/test)
 .endif
 
 .include <bsd.port.mk>
