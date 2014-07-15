@@ -3,17 +3,18 @@
 
 PORTNAME=	lesspipe
 PORTVERSION=	1.55
+PORTREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	SF
 
 MAINTAINER=	slaven@rezic.de
-COMMENT=	A preprocessor for less
+COMMENT=	Preprocessor for less
 
 BUILD_DEPENDS=	bash:${PORTSDIR}/shells/bash
 
 .if defined(WITH_FANCY)
 BUILD_DEPENDS+=	zip:${PORTSDIR}/archivers/zip \
-		rpm:${PORTSDIR}/archivers/rpm \
+		rpm:${PORTSDIR}/archivers/rpm4 \
 		dpkg:${PORTSDIR}/archivers/dpkg \
 		antiword:${PORTSDIR}/textproc/antiword \
 		lynx:${PORTSDIR}/www/lynx \
