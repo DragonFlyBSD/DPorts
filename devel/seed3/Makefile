@@ -4,7 +4,7 @@
 
 PORTNAME=	seed
 PORTVERSION=	3.2.0
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX=	3
@@ -43,7 +43,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|reference||g' ${WRKSRC}/doc/Makefile.in
 
 pre-build:
-	cd ${WRKSRC}/extensions && ${SETENV} ${MAKE_ENV} ${GMAKE} \
+	cd ${WRKSRC}/extensions && ${SETENV} ${MAKE_ENV} ${MAKE_CMD} \
 	    	${MAKE_FLAGS} Makefile ${MAKE_ARGS} all
 	${CP} ${WRKSRC}/extensions/Seed.js ${WRKSRC}/extensions/Seed.js.sav
 	${CP} ${FILESDIR}/Seed.js ${WRKSRC}/extensions/Seed.js
