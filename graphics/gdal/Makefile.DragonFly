@@ -1,4 +1,0 @@
-# libiconv is not optional for DragonFly
-
-OPTIONS_DEFAULT+=	ICONV
-LDFLAGS+=		-L${LOCALBASE}/lib ${ICONV_LIB}

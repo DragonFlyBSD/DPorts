@@ -3,7 +3,7 @@
 
 PORTNAME=	gdal
 PORTVERSION=	1.11.0
-PORTREVISION=	4
+PORTREVISION=	6
 CATEGORIES=	graphics geography
 MASTER_SITES=	http://download.osgeo.org/gdal/${PORTVERSION}/ \
 		ftp://ftp.remotesensing.org/pub/gdal/${PORTVERSION}/ \
@@ -24,15 +24,17 @@ PCRE_DESC=	Regular expression support for SQLite
 
 CFLAGS+=	-fPIC
 CONFIGURE_ARGS=	--datadir=${DATADIR} \
-		--with-libz=/usr --with-liblzma=yes --with-threads=yes
+		--enable-static=yes \
+		--with-liblzma=yes --with-libz=/usr --with-threads=yes \
+
 GNU_CONFIGURE=	yes
 LDFLAGS+=	-L${LOCALBASE} -pthread
 MAKE_JOBS_UNSAFE=	yes
 MAKEFILE=	GNUmakefile
-USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 USES=		gmake
 
+PLIST_SUB=	PORTVERSION=${PORTVERSION}
 PORTDATA=	*
 
 SLAVEDIRS=	graphics/p5-Geo-GDAL graphics/php-gdal graphics/py-gdal graphics/ruby-gdal
@@ -126,13 +128,20 @@ XERCES_CONFIGURE_OFF=	--with-xerces=no
 XERCES_CONFIGURE_ON=	--with-xerces=${LOCALBASE}
 XERCES_LIB_DEPENDS=	libxerces-c.so:${PORTSDIR}/textproc/xerces-c3
 
+USES+=			libtool
+AGE!=			expr ${PORTVERSION:R:E} + 1
+
 post-patch:
+	@${REINPLACE_CMD} -e 's/^LIBGDAL_AGE.*/LIBGDAL_AGE := ${PORTVERSION:R:E}/' \
+		-e 's/^LIBGDAL_REV.*/LIBGDAL_REVISION := ${PORTVERSION:E}/' \
+		-e 's/^LIBGDAL_CUR.*/LIBGDAL_CURRENT := ${AGE}/' \
+		${WRKSRC}/GDALmake.opt.in
 	@${REINPLACE_CMD} -e 's|-lpthread|-pthread|g' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|$$(INST_LIB)/pkgconfig|${PREFIX}/libdata/pkgconfig|' ${WRKSRC}/GNUmakefile
 
 post-install:
 	${TOUCH} ${STAGEDIR}${PREFIX}/lib/gdalplugins/.keepme
 	${INSTALL_DATA} ${WRKSRC}/GDALmake.opt ${STAGEDIR}${DATADIR}/
-	-${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/* ${STAGEDIR}${PREFIX}/lib/libgdal.so.19
+	-${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/* ${STAGEDIR}${PREFIX}/lib/libgdal.so.${PORTVERSION}
 
 .include <bsd.port.mk>
