@@ -11,7 +11,7 @@ DISTNAME=	ProofGeneral-${PORTVERSION}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	beyert@cs.ucr.edu
-COMMENT=	A generic interface for proof assistants
+COMMENT=	Generic interface for proof assistants
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -30,7 +30,7 @@ NO_STAGE=	yes
 IGNORE=	the ProofGeneral developers no longer support XEmacs
 .endif
 
-MAKE_ARGS+=	PREFIX="${LOCALBASE}" DEST_PREFIX="${PREFIX}" MAKE="${GMAKE}" \
+MAKE_ARGS+=	PREFIX="${LOCALBASE}" DEST_PREFIX="${PREFIX}" MAKE="${MAKE_CMD}" \
 	DOCDIR="${DOCSDIR}" MANDIR="${PREFIX}/man/man1" INFODIR="${PREFIX}/info" \
 	BINDIR="${PREFIX}/bin" DESKTOP="${PREFIX}/share" \
 	ELISPP="${EMACS_SITE_LISPDIR}/ProofGeneral" \
