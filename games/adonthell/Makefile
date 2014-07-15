@@ -10,7 +10,7 @@ MASTER_SITES=	SAVANNAH
 DISTFILES=	${PORTNAME}-src-${PORTVERSION}${EXTRACT_SUFX} \
 	   	wastesedge-src-${WEDGE_VERSION}${EXTRACT_SUFX}
 
-MAINTAINER=	rodrigo@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Free role playing game
 
 LICENSE=	GPLv2
@@ -54,7 +54,7 @@ post-install:
 		&& ${SETENV} ${CONFIGURE_ENV} ./configure ${CONFIGURE_ARGS} \
 			--with-adonthell-binary=${PREFIX}/bin/${PORTNAME} \
 			${CONFIGURE_TARGET}
-	cd ${WRKDIR}/wastesedge-${WEDGE_VERSION} && ${GMAKE}
-	cd ${WRKDIR}/wastesedge-${WEDGE_VERSION} && ${GMAKE} install
+	cd ${WRKDIR}/wastesedge-${WEDGE_VERSION} && ${MAKE_CMD}
+	cd ${WRKDIR}/wastesedge-${WEDGE_VERSION} && ${MAKE_CMD} install
 
 .include <bsd.port.post.mk>
