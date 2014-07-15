@@ -5,13 +5,13 @@ PORTNAME=	sqlitejdbc
 PORTVERSION=	056
 DISTVERSIONPREFIX=	v
 DISTVERSIONSUFFIX=	-src
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	java databases
 MASTER_SITES=	http://files.zentus.com/sqlitejdbc/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	lapo@lapo.it
-COMMENT=	A Java JDBC driver for SQLite
+COMMENT=	Java JDBC driver for SQLite
 
 LIB_DEPENDS=	libsqlite3.so:${PORTSDIR}/databases/sqlite3
 
