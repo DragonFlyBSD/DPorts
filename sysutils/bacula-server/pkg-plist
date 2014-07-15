@@ -1,12 +1,35 @@
+@sample %%ETCDIR%%/bacula-barcodes.sample
+@group bacula
+@sample %%ETCDIR%%/bacula-dir.conf.sample
+@group wheel
+@sample %%ETCDIR%%/bacula-sd.conf.sample
 lib/libbaccats.la
 lib/libbaccats.so
-lib/libbaccats.so.%%MAJOR%%
+lib/libbaccats.so.5
+lib/libbaccats.so.5.0.2
 lib/libbaccats-%%DBTYPE%%.la
 lib/libbaccats-%%DBTYPE%%.so
-lib/libbaccats-%%DBTYPE%%.so.%%MAJOR%%
+lib/libbaccats-%%DBTYPE%%.so.5
+lib/libbaccats-%%DBTYPE%%.so.5.0.2
 lib/libbacsql.la
 lib/libbacsql.so
-lib/libbacsql.so.%%MAJOR%%
+lib/libbacsql.so.5
+lib/libbacsql.so.5.0.2
+man/man1/bacula-bwxconsole.1.gz
+man/man1/bacula-tray-monitor.1.gz
+man/man1/bsmtp.1.gz
+man/man8/bacula-dir.8.gz
+man/man8/bacula-sd.8.gz
+man/man8/bacula.8.gz
+man/man8/bcopy.8.gz
+man/man8/bextract.8.gz
+man/man8/bls.8.gz
+man/man8/bregex.8.gz
+man/man8/bscan.8.gz
+man/man8/btape.8.gz
+man/man8/btraceback.8.gz
+man/man8/bwild.8.gz
+man/man8/dbcheck.8.gz
 sbin/bacula
 sbin/bacula-dir
 sbin/bacula-sd
@@ -20,7 +43,9 @@ sbin/btape
 sbin/btraceback
 sbin/bwild
 sbin/chio-bacula
+@group bacula
 sbin/dbcheck
+@owner bacula
 %%DATADIR%%/bacula
 %%DATADIR%%/bacula-ctl-dir
 %%DATADIR%%/bacula-ctl-fd
@@ -50,8 +75,5 @@ sbin/dbcheck
 %%DATADIR%%/query.sql
 %%DATADIR%%/update_bacula_tables
 %%DATADIR%%/update_%%DBTYPE%%_tables
-@dirrm %%DATADIR%%
-@unexec /usr/bin/killall bacula-sd  > /dev/null 2>&1 || true
-@unexec /usr/bin/killall bacula-dir > /dev/null 2>&1 || true
-@exec mkdir -p %%BACULA_DIR%%
-@dirrmtry %%BACULA_DIR%%
+@owner root
+@group wheel
