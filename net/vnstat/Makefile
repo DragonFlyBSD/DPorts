@@ -3,13 +3,13 @@
 
 PORTNAME=	vnstat
 PORTVERSION=	1.11
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	net
 MASTER_SITES=	http://humdi.net/vnstat/ \
 		http://mirror.mcx2.org/
 
 MAINTAINER=	feld@FreeBSD.org
-COMMENT=	A console-based network traffic monitor
+COMMENT=	Console-based network traffic monitor
 
 MAKE_ARGS=	CC="${CC}" CFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
