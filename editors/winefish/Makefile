@@ -3,17 +3,17 @@
 
 PORTNAME=	winefish
 DISTVERSION=	1.3.3
-PORTREVISION=	13
+PORTREVISION=	14
 CATEGORIES=	editors print
 MASTER_SITES=	http://download.berlios.de/winefish/ \
 		http://nivi.interfree.it/distfiles/winefish/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	nivit@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	LaTeX editor based on BlueFish
 
-LIB_DEPENDS=	aspell.16:${PORTSDIR}/textproc/aspell \
-		pcre.3:${PORTSDIR}/devel/pcre
+LIB_DEPENDS=	libaspell.so:${PORTSDIR}/textproc/aspell \
+		libpcre.so:${PORTSDIR}/devel/pcre
 RUN_DEPENDS=	dos2unix:${PORTSDIR}/converters/unix2dos \
 		gv:${PORTSDIR}/print/gv \
 		tidy:${PORTSDIR}/www/tidy-lib \
