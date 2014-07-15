@@ -7,17 +7,15 @@ PORTREVISION=	1
 CATEGORIES=	japanese
 MASTER_SITES=	SF/scim/${PORTNAME}/${PORTVERSION}
 
-MAINTAINER=	lx@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	SCIM table based Japanese input methods
 
-BUILD_DEPENDS=	scim-make-table:${PORTSDIR}/textproc/scim-table-imengine
+BUILD_DEPENDS=	scim:${PORTSDIR}/textproc/scim \
+		scim-make-table:${PORTSDIR}/textproc/scim-table-imengine
 RUN_DEPENDS=	scim-make-table:${PORTSDIR}/textproc/scim-table-imengine
 
 USES=		pkgconfig gmake
 GNU_CONFIGURE=	yes
-
-NO_STAGE=	yes
-.include <bsd.port.pre.mk>
 
 CPPFLAGS+=	-I${LOCALBASE}/include -D__STDC_ISO_10646__
 
@@ -31,10 +29,4 @@ post-extract:
 	@${CP} ${FILESDIR}/T-Code.txt.in   ${WRKSRC}/tables/ja/
 	@${CP} ${FILESDIR}/TUT-Code.txt.in ${WRKSRC}/tables/ja/
 
-post-install:
-	@${CAT} ${PKGMESSAGE}
-	@${ECHO}
-	@${ECHO} To display this message again, type \`pkg_info -D ${PKGNAME}\'
-	@${ECHO}
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
