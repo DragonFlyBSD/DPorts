@@ -11,19 +11,18 @@ DISTNAME=	sippy-${PORTVERSION}
 MAINTAINER=	sobomax@FreeBSD.org
 COMMENT=	SIP Back-to-back user agent (B2BUA) server with Radius support
 
-USE_PYTHON=		yes
+USE_PYTHON=	yes
 USES=		twisted
 USE_PYDISTUTILS=	yes
-NO_STAGE=	yes
 PYDISTUTILS_PKGNAME=	sippy
 DOCSDIR=	${PREFIX}/share/doc/${PYDISTUTILS_PKGNAME}
 
 DOCS=		COPYING README
 
-.if !defined(NOPORTDOCS)
+OPTIONS_DEFINE=	DOCS
+
 post-install:
-	@${MKDIR} ${DOCSDIR}
-	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${DOCSDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
