@@ -6,7 +6,7 @@ PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.fefe.de/fnord/
 
-MAINTAINER=	flz@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Small and fast webserver with CGI-capability
 
 USES=		gmake tar:bzip2
@@ -78,7 +78,7 @@ post-patch:
 	@${REINPLACE_CMD} -e "/strip/d" ${WRKSRC}/Makefile
 
 do-build:
-	cd ${WRKSRC}; ${GMAKE} DIET=""
+	cd ${WRKSRC}; ${MAKE_CMD} DIET=""
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/fnord ${PREFIX}/bin/
