@@ -11,19 +11,13 @@ COMMENT=		Spot The Difference is a file integrity checker.
 USE_PYTHON=		yes
 USE_PYDISTUTILS=	yes
 
-.if !defined(NOPORTDOCS)
-PORTDOCS=	*
-.endif
+OPTIONS_DEFINE=	DOCS
 
-NO_STAGE=	yes
+PORTDOCS=	*
+
 post-install:
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
-	$(INSTALL_MAN) ${WRKSRC}/INSTALL.txt ${DOCSDIR}/
-	$(INSTALL_MAN) ${WRKSRC}/LICENSE.txt ${DOCSDIR}/
-	(cd ${WRKSRC}/ && ${COPYTREE_SHARE} docs ${DOCSDIR}/)
-.endif
-	@if [ ! -f ${PREFIX}/etc/stdiff.conf ]; then \
-		${CP} -p ${PREFIX}/etc/stdiff.conf.sample \
-		${PREFIX}/etc/stdiff.conf; fi
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	$(INSTALL_MAN) ${WRKSRC}/INSTALL.txt ${STAGEDIR}/${DOCSDIR}/
+	$(INSTALL_MAN) ${WRKSRC}/LICENSE.txt ${STAGEDIR}/${DOCSDIR}/
+	(cd ${WRKSRC}/ && ${COPYTREE_SHARE} docs ${STAGEDIR}${DOCSDIR}/)
 .include <bsd.port.mk>
