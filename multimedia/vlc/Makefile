@@ -3,7 +3,7 @@
 
 PORTNAME=	vlc
 DISTVERSION=	2.1.4
-PORTREVISION=	7
+PORTREVISION=	8
 PORTEPOCH=	4
 CATEGORIES=	multimedia audio ipv6 net www
 MASTER_SITES=	http://download.videolan.org/pub/videolan/${PORTNAME}/${DISTVERSION:S/a$//}/ \
@@ -75,7 +75,6 @@ GME_DESC=	Game Music Emu (libgme) support
 GOOM_DESC=	Goom visualisation plugin
 KATE_DESC=	Kate codec support
 LIBSSH2_DESC=	SCP/SFTP support via libssh2
-OPUS_DESC=	Opus audio format
 REALRTSP_DESC=	Real RTSP access module
 RUNROOT_DESC=	Enable running as root
 SIDPLAY_DESC=	C64 sid demux support
@@ -118,8 +117,8 @@ DVDNAV_CONFIGURE_ENABLE=dvdnav
 
 FAAD_LIB_DEPENDS=	libfaad.so:${PORTSDIR}/audio/faad
 FAAD_CONFIGURE_ENABLE=	faad
-FAAD_CONFIGURE_ENV=	CPPFLAGS_faad="-I/usr/local/include" \
-			LIBS_faad="-L/usr/local/lib"
+FAAD_CONFIGURE_ENV=	CPPFLAGS_faad="-I${LOCALBASE}/include" \
+			LIBS_faad="-L${LOCALBASE}/lib"
 
 FLAC_LIB_DEPENDS=	libFLAC.so:${PORTSDIR}/audio/flac
 FLAC_CONFIGURE_ENABLE=	flac
@@ -199,6 +198,7 @@ MTP_CONFIGURE_ENABLE=	mtp
 
 MUSEPACK_LIB_DEPENDS=	libmpcdec.so:${PORTSDIR}/audio/musepack
 MUSEPACK_CONFIGURE_ENABLE=	mpc
+MUSEPACK_CONFIGURE_ENV=		LIBS_mpc="-L${LOCALBASE}/lib -lmpcdec"
 
 NCURSES_USES=			ncurses
 NCURSES_CONFIGURE_ENV=		NCURSES_CFLAGS="-I${NCURSESINC}" \
