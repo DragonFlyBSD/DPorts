@@ -7,8 +7,8 @@ PORTREVISION=	6
 CATEGORIES=	mail net
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}%20%28stable%29/${PORTNAME}-${PORTVERSION}
 
-MAINTAINER=	edwin@mavetju.org
-COMMENT=	A transparent POP3-Proxy with virus-scanning capabilities
+MAINTAINER= ports@FreeBSD.org
+COMMENT=	Transparent POP3-Proxy with virus-scanning capabilities
 
 LIB_DEPENDS=	pcre.3:${PORTSDIR}/devel/pcre
 
@@ -18,7 +18,7 @@ PLIST_DIRS=	etc/p3scan
 
 USE_GCC=	any
 USES=		gmake
-MAKE_ENV=	_LDFLAGS="${LDFLAGS} -L${LOCALBASE}/lib" GMAKE=${GMAKE}
+MAKE_ENV=	_LDFLAGS="${LDFLAGS} -L${LOCALBASE}/lib" GMAKE=${MAKE_CMD}
 SCRIPTS_ENV=	PKG_PREFIX=${PREFIX} NONEXISTENT=${NONEXISTENT} PASSWD=/etc/passwd
 PKGMESSAGE=	${WRKDIR}/pkg-message
 
