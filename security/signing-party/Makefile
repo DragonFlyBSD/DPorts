@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	signing-party
-PORTVERSION=	1.1.7
+PORTVERSION=	1.1.8
 PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.stack.nl/pub/users/johans/signing-party/ \
@@ -46,7 +46,7 @@ post-patch:
 		${WRKSRC}/caff/caff
 	@${REINPLACE_CMD} -e 's|/usr/bin/pinentry-gtk-2|${LOCALBASE}/bin/pinentry-gtk-2|' \
 		${WRKSRC}/caff/README.gpg-agent
-	@${REINPLACE_CMD} -e 's|[[:<:]]make|${GMAKE}|' \
+	@${REINPLACE_CMD} -e 's|[[:<:]]make|${MAKE_CMD}|' \
 			-e '/^all/s|pgpring/pgpring||' \
 		${WRKSRC}/gpgwrap/Makefile \
 		${WRKSRC}/keyanalyze/Makefile
