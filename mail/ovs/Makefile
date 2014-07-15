@@ -7,8 +7,8 @@ CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.oav.net/openvisp/stats/ \
 		http://mirror.amdmi3.ru/distfiles/
 
-MAINTAINER=	kiwi@oav.net
-COMMENT=	A RRDtool frontend for mail statistics
+MAINTAINER= ports@FreeBSD.org
+COMMENT=	RRDtool frontend for mail statistics
 
 RUN_DEPENDS=	rrdtool>=0:${PORTSDIR}/databases/rrdtool	\
 		p5-File-Tail>=0:${PORTSDIR}/devel/p5-File-Tail
