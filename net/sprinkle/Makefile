@@ -6,8 +6,10 @@ DISTVERSION=	2007-08-07
 CATEGORIES=	net python
 MASTER_SITES=	http://www.thuswise.org/sprinkle/pub/
 
-MAINTAINER=	gslin@gslin.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Stomp messaging broker written in Python
+
+LICENSE=	GPLv3
 
 NO_BUILD=	yes
 USE_PYTHON=	yes
