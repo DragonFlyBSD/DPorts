@@ -6,8 +6,8 @@ PORTVERSION=	1.8.6
 CATEGORIES=	mail ruby
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME:S/-/%20/}/${PORTVERSION}
 
-MAINTAINER=	umq@ueo.co.jp
-COMMENT=	A super milter that can invoke several milters selectively
+MAINTAINER= ports@FreeBSD.org
+COMMENT=	Super milter that can invoke several milters selectively
 
 LICENSE=	AGPLv3 GFDL GPLv3 LGPL3
 LICENSE_COMB=	multi
