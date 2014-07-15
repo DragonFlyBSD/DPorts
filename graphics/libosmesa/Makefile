@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	libosmesa
-PORTVERSION=	10.2.1
+PORTVERSION=	10.2.3
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/${PORTVERSION}/
 DISTNAME=	MesaLib-${PORTVERSION}
@@ -16,7 +16,6 @@ BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/libxml2mod.so:${PORTSDIR}/textproc/py-libxml
 USES=		gmake pkgconfig tar:bzip2 libtool
 USE_LDCONFIG=	yes
 USE_PYTHON=	2
-USE_XORG=	x11 xext
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--enable-osmesa \
 		--disable-driglx-direct \
