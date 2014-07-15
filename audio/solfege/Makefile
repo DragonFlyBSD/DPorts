@@ -8,7 +8,7 @@ CATEGORIES=	audio
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-stable/${PORTVERSION}
 PKGNAMESUFFIX=	-nosound
 
-MAINTAINER=	dhn@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Free eartraining software
 
 BUILD_DEPENDS=	${STYLESHEET}:${PORTSDIR}/textproc/docbook-xsl \
@@ -18,7 +18,7 @@ USE_GNOME=	pygtk2
 NO_STAGE=	yes
 WANT_GNOME=	yes
 USE_PYTHON=	yes
-USES=		gettext gmake display pathfix pkgconfig
+USES=		display gettext gmake makeinfo pathfix pkgconfig
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	ac_cv_path_XML2PO=""
 CONFIGURE_ARGS=	--disable-oss-sound \
