@@ -5,16 +5,15 @@ PORTNAME=	xroach
 PORTVERSION=	4.4
 PORTREVISION=	2
 CATEGORIES=	games
-MASTER_SITES=	${MASTER_SITE_BACKUP}
+MASTER_SITES=	http://www.skysmurf.nl/comp/FreeBSD/distfiles/
 DISTNAME=	${PORTNAME}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	freebsd@skysmurf.nl
 COMMENT=	Cockroaches hide under your windows
 
 USE_XORG=	x11
 PLIST_FILES=	bin/xroach man/man6/xroach.6.gz
 
-IGNOREFILES=	${DISTFILES}
 WRKSRC=		${WRKDIR}/pub/bsd-sources/4.4BSD-Lite/usr/src/games/xroach
 
 do-install:
