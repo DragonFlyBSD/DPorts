@@ -8,8 +8,8 @@ CATEGORIES=	japanese x11-fonts
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	koma2@lovepeers.org
-COMMENT=	A meta-port which setups Japanese fonts
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Meta-port which setups Japanese fonts
 
 RUN_DEPENDS=	\
 		${FONTSDIR}/jpnhn4-iso.pcf.gz:${PORTSDIR}/japanese/elisa8x8 \
