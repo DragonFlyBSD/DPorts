@@ -10,8 +10,8 @@ MASTER_SITES=	http://www.enderunix.org/qsheff/ \
 
 DISTNAME=	${PORTNAME}-${PORTVERSION:S/.r/-r/}
 
-MAINTAINER=	ozkan@enderunix.org
-COMMENT=	A qmail-queue replacement to filter mail traffic
+MAINTAINER= ports@FreeBSD.org
+COMMENT=	Qmail-queue replacement to filter mail traffic
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/ripmime:${PORTSDIR}/mail/ripmime
 RUN_DEPENDS:=	${BUILD_DEPENDS}
