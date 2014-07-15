@@ -8,10 +8,13 @@ MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:MSCHWERN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	gslin@gslin.org
+MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Alias for __PACKAGE__
 
-USES=		perl5
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
 USE_PERL5=	configure
+USES=		perl5
 
 .include <bsd.port.mk>
