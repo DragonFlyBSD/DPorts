@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/net/iplog/files/iplog.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/net/iplog/files/iplog.in 358627 2014-06-20 18:41:00Z wg $
 #
 # PROVIDE: iplog
 # REQUIRE: LOGIN
@@ -18,6 +18,7 @@
 name="iplog"
 rcvar=iplog_enable
 
+start_precmd="install -d /var/run/${name}"
 command=%%PREFIX%%/sbin/${name}
 pidfile=/var/run/${name}/${name}.pid
 
