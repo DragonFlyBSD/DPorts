@@ -4,6 +4,7 @@
 PORTNAME=	fbreader
 PORTVERSION=	0.99.4
 DISTVERSIONPREFIX=	sources-
+PORTREVISION=	1
 CATEGORIES=	deskutils
 MASTER_SITES=	http://www.fbreader.org/files/desktop/ \
 		http://old.fbreader.org/
@@ -45,7 +46,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 MAKE_ENV+=	TARGET_ARCH=desktop UI_TYPE=${UI} TARGET_STATUS=${STATUS} \
 		ROOTDIR=${WRKSRC} INSTALLDIR=${PREFIX} LIBDIR=${PREFIX}/lib \
 		LD="${CXX}"
-MAKE_ARGS+=	MAKE=${GMAKE} LIBDIR=${PREFIX}/lib
+MAKE_ARGS+=	MAKE=${MAKE_CMD} LIBDIR=${PREFIX}/lib
 
 post-patch:
 	@${REINPLACE_CMD} -e '/^CFLAGS/s,-pipe.*$$,${CFLAGS} -DDO_ICONV_CAST -DLIBICONV_PLUG,' \
