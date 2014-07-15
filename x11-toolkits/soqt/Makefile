@@ -3,7 +3,7 @@
 
 PORTNAME=	SoQt
 PORTVERSION=	1.5.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	http://ftp.coin3d.org/coin/src/all/ \
 		ftp://ftp.coin3d.org/pub/coin/src/all/
@@ -23,7 +23,8 @@ USE_GL=		gl
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	QTDIR="${QT_PREFIX}" MOC="${MOC}"
 CONFIGURE_ARGS=	--with-pthread=yes --with-coin=${LOCALBASE} \
-		--with-qt=${QT_LIBDIR}
+		--with-qt=${QT_LIBDIR} \
+		--enable-debug=no
 USE_LDCONFIG=	yes
 
 CPPFLAGS+=	-I${QT_INCDIR}/Qt -I${QT_INCDIR} -I${LOCALBASE}/include
