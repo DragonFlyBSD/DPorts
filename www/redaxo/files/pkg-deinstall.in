@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/www/redaxo/files/pkg-deinstall.in 322252 2013-07-03 20:13:37Z lippe $
+# $FreeBSD: head/www/redaxo/files/pkg-deinstall.in 360335 2014-07-03 01:51:04Z danilo $
 if [ "$2" == "DEINSTALL" ]; then
 if [ -d %%WWWDIR%% ]; then
 if [ -z "${BATCH}" ]; then
@@ -14,7 +14,7 @@ if [ -z "${BATCH}" ]; then
 	echo ""
 	echo "For an upgrade, use REDAXOs built-in export functions for exporting all"
 	echo "your data to a safe place outside of the ports installation directory,"
-	echo "then delete the port, install the new version, and reimport youri data."
+	echo "then delete the port, install the new version, and reimport your data."
 	echo ""
 	echo "========================================================================="
 	echo ""
