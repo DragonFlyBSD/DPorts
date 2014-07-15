@@ -3,7 +3,7 @@
 
 PORTNAME=	ncs
 PORTVERSION=	2.0.4
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	science parallel
 MASTER_SITES=	http://research.edf.com/fichiers/fckeditor/Commun/Innovation/logiciels/code_saturne/Releases/
 DISTNAME=	${PORTNAME}-${PORTVERSION:S/.//g}
@@ -23,7 +23,7 @@ RUN_DEPENDS=	xmgrace:${PORTSDIR}/math/grace	\
 		xterm:${PORTSDIR}/x11/xterm	\
 		cs_preprocess:${PORTSDIR}/science/ecs
 
-USES=		fortran gettext gmake iconv zip shebangfix
+USES=		fortran gettext gmake iconv libtool shebangfix zip
 USE_GNOME=	libxml2
 USE_PYTHON=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
@@ -40,6 +40,10 @@ NEED_ROOT=	yes
 
 FORTRANLIBDIR=	`${DIRNAME} \\`${FC} -print-libgcc-file-name\\``
 FORTRANLIBDIR2=	`${DIRNAME} \\`${FC} -print-libgcc-file-name\\``/../../../
+
+OPTIONS_DEFINE=	DOCS EXAMPLES
+
+.include <bsd.port.options.mk>
 
 .if defined(PACKAGE_BUILDING)
 TERM=		vt100	# Force for pointyhat to override su
@@ -70,7 +74,7 @@ RUN_DEPENDS+=	${MPI_HOME}/bin/mpirun:${PORTSDIR}/net/mpich2
 MPI_LIBS=	-lmpich -lmpl ${PTHREAD_LIBS}
 .endif
 
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 USE_TEX=	tex:build
 BUILD_DEPENDS+=	fig2dev:${PORTSDIR}/print/transfig
 ALL_TARGET=	all pdf
@@ -107,11 +111,11 @@ pre-everything::
 	@${ECHO_MSG}
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${DOCS:C|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 .endif
-.if !defined(NOPORTEXAMPLES)
+.if ${PORT_OPTIONS:MEXAMPLES}
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	cd ${WRKSRC}/examples && ${COPYTREE_SHARE} \* ${STAGEDIR}${EXAMPLESDIR}
 .endif
