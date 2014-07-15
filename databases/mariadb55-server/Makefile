@@ -2,7 +2,7 @@
 
 PORTNAME?=	mariadb
 PORTVERSION=	5.5.38
-PORTREVISION?=	0
+PORTREVISION?=	2
 CATEGORIES=	databases ipv6
 MASTER_SITES=	http://ftp.osuosl.org/pub/mariadb/${PORTNAME}-${PORTVERSION}/source/ \
 		http://mirrors.supportex.net/mariadb/${PORTNAME}-${PORTVERSION}/source/ \
@@ -140,6 +140,8 @@ LIB_DEPENDS+=	libboost_system.so:${PORTSDIR}/devel/boost-libs
 .if ${PORT_OPTIONS:MMAXKEY}
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-include_my_compare.h
 .endif
+.else
+USES+=		readline
 .endif
 
 post-patch:
