@@ -31,11 +31,13 @@ post-extract:
 	@cd ${WRKSRC} && ${RM} -f .depend
 
 post-patch:
-	@${REINPLACE_CMD} '/^CC=/d; /^CFLAGS=/s/=/+=/' \
-		${WRKSRC}/Makefile ${WRKSRC}/bdb/Makefile
+	@${REINPLACE_CMD} -Ee '/^CC=/d; /^CFLAGS=/s/=/+=/' \
+		-e '/^install/,$$s/\$$\((PREFIX|MANDIR)\)/$$(DESTDIR)&/' \
+		-e '/patch/s/-p 0/-p0/' ${WRKSRC}/Makefile
+	@${REINPLACE_CMD} -e '/^CC=/d; /^CFLAGS=/s/=/+=/' ${WRKSRC}/bdb/Makefile
 
 pre-build:
-	@cd ${WRKSRC} && test -f .depend || ${GMAKE} dep
+	@cd ${WRKSRC} && test -f .depend || ${MAKE_CMD} dep
 
 post-install:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
