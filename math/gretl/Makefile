@@ -16,31 +16,27 @@ LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl \
 		libfftw3.so:${PORTSDIR}/math/fftw3
 
 GNU_CONFIGURE=	yes
-USE_BZIP2=	yes
 USE_LDCONFIG=	yes
-USES=		fortran gmake pathfix pkgconfig
+USES=		fortran gmake pathfix pkgconfig tar:bzip2
 WANT_GNOME=	yes
 
 ALL_TARGET=		# empty
-CONFIGURE_ARGS =	--enable-static --enable-shared --with-gmake \
+CONFIGURE_ARGS=	--enable-static --enable-shared --with-gmake \
 			--disable-xdg-utils
 CONFIGURE_ENV=		ac_cv_lib_dl_dlopen=""
 CPPFLAGS+=		-I${LOCALBASE}/include
 LDFLAGS+=		-L${LOCALBASE}/lib
 CONFIGURE_ENV=		LAPACK_LIBS="${LAPACK} ${BLAS}"
 
-MAN1=			gretl.1
+OPTIONS_DEFINE=	ATLAS GUI ODBC OPENMP R UNZIP
 
-OPTIONS_DEFINE =	ATLAS GUI ODBC OPENMP R UNZIP
-
-ATLAS_DESC =		Use ATLAS for BLAS and LAPACK
+ATLAS_DESC=		Use ATLAS for BLAS and LAPACK
 GUI_DESC=		Graphical user interface and plugins
 R_DESC=			libR support
 UNZIP_DESC=		UnZip compression support via libgsf
 
 OPTIONS_DEFAULT=	GUI OPENMP UNZIP
 
-NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MATLAS}
