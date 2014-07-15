@@ -10,7 +10,7 @@ MASTER_SITES=	http://convey.sourceforge.net/downloads/ \
 DISTNAME=	${PORTNAME}-src-${PORTVERSION}
 
 MAINTAINER=	nivit@FreeBSD.org
-COMMENT=	An Instant Message (IM) program using the Jabber protocol
+COMMENT=	Instant Message (IM) program using the Jabber protocol
 
 RUN_DEPENDS=	java:${PORTSDIR}/java/javavmwrapper
 
@@ -26,12 +26,9 @@ FIND_DIRS=	lib
 
 SUB_FILES=	convey.sh
 
-NO_STAGE=	yes
-.include <bsd.port.pre.mk>
-
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/convey.sh ${PREFIX}/bin/convey
-	cd ${WRKSRC} && ${FIND} ${FIND_DIRS} -type d -exec ${MKDIR} ${DATADIR}/{} \;
-	cd ${WRKSRC} && ${FIND} ${FIND_DIRS} -type f -exec ${INSTALL_DATA} {} ${DATADIR}/{} \;
+	${INSTALL_SCRIPT} ${WRKDIR}/convey.sh ${STAGEDIR}${PREFIX}/bin/convey
+	cd ${WRKSRC} && ${FIND} ${FIND_DIRS} -type d -exec ${MKDIR} ${STAGEDIR}${DATADIR}/{} \;
+	cd ${WRKSRC} && ${FIND} ${FIND_DIRS} -type f -exec ${INSTALL_DATA} {} ${STAGEDIR}${DATADIR}/{} \;
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
