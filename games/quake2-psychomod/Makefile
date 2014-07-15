@@ -1,11 +1,10 @@
-# Created by: alepulver
+# Created by: Alejandro Pulver <alepulver@FreeBSD.org>
 # $FreeBSD$
 
 PORTNAME=	psychomod
 PORTVERSION=	3.1
 CATEGORIES=	games
-MASTER_SITES=	${MASTER_SITE_LOCAL}
-MASTER_SITE_SUBDIR=	alepulver
+MASTER_SITES=	LOCAL/alepulver
 PKGNAMEPREFIX=	${Q2PKGNAMEPREFIX}
 
 MAINTAINER=	danfe@FreeBSD.org
@@ -18,23 +17,21 @@ ALL_TARGET=	release
 
 DOCSDIR=	${PREFIX}/share/doc/${LATEST_LINK}
 
-NO_STAGE=	yes
-.include "${.CURDIR}/../quake2-data/Makefile.include"
+OPTIONS_DEFINE=	DOCS
 
-.include <bsd.port.pre.mk>
+.include "${.CURDIR}/../quake2-data/Makefile.include"
 
 post-patch:
 	@${REINPLACE_CMD} -e 's/__linux__/__unix__/' \
 		${BUILD_WRKSRC}/q_shared.[ch]
 
 do-install:
-	${MKDIR} ${Q2DIR}/${PORTNAME}
+	@${MKDIR} ${STAGEDIR}${Q2DIR}/${PORTNAME}
 	${INSTALL_PROGRAM} ${BUILD_WRKSRC}/release/psychomod/game.so \
-		${Q2DIR}/${PORTNAME}
-	cd ${WRKSRC} && ${INSTALL_DATA} *.cfg pak0.pak ${Q2DIR}/${PORTNAME}
-.if !defined(NOPORTDOCS)
-	${MKDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/readme.txt ${DOCSDIR}
-.endif
+		${STAGEDIR}${Q2DIR}/${PORTNAME}
+	cd ${WRKSRC} && ${INSTALL_DATA} *.cfg pak0.pak \
+		${STAGEDIR}${Q2DIR}/${PORTNAME}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/readme.txt ${STAGEDIR}${DOCSDIR}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
