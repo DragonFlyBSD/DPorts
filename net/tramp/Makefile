@@ -13,7 +13,7 @@ COMMENT=	Transparent remote file access tool for emacsen
 
 USE_EMACS=	yes
 
-USES=		gmake
+USES=		gmake makeinfo
 USE_AUTOTOOLS=	autoconf
 
 TRAMP_LISPDIR=	${EMACS_VERSION_SITE_LISPDIR}/${PORTNAME}
@@ -40,13 +40,13 @@ PLIST_SUB+=	EMACS20_ONLY="@comment "
 
 pre-build:
 .if ${EMACS_PORT_NAME} == emacs20
-	(cd ${WRKSRC}/contrib; ${GMAKE})
+	(cd ${WRKSRC}/contrib; ${MAKE_CMD})
 .endif
 	${LN} -sf ../contrib/password.el ${WRKSRC}/lisp
 
 post-install:
 .if ${EMACS_PORT_NAME} == emacs20
-	(cd ${WRKSRC}/contrib; ${GMAKE} install)
+	(cd ${WRKSRC}/contrib; ${MAKE_CMD} install)
 .endif
 
 .include <bsd.port.post.mk>
