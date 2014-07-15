@@ -11,13 +11,12 @@ MASTER_SITES?=	ftp://ftp.opendesktop.org.tw/odp/ODOFonts/OpenFonts/ \
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Ming and Kai face of OpenDesktop fonts
 
-CONFLICTS=	zh-fireflyttf-*
+CONFLICTS=	zh-fireflyttf-[0-9]*
 DIST_SUBDIR=	OpenFonts
 NO_BUILD=	yes
 
 TTF=		odokai-ExtB.ttf odokai.ttf odosung-ExtB.ttf odosung.ttc
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if !defined(WITHOUT_X11)
@@ -36,13 +35,14 @@ post-patch:
 	@${FIND} ${WRKSRC} -name "*.bak" -delete
 
 do-install:
-	${MKDIR} ${FONTSDIR}
+	${MKDIR} ${STAGEDIR}${FONTSDIR}
 .for i in ${TTF}
-	${INSTALL_DATA} ${WRKSRC}/${i} ${FONTSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${i} ${STAGEDIR}${FONTSDIR}
 .endfor
-	${INSTALL_DATA} ${FILESDIR}/local.conf-odo ${FONTSDIR}
+	${INSTALL_DATA} ${FILESDIR}/local.conf-odo ${STAGEDIR}${FONTSDIR}
 .if !defined(WITHOUT_X11)
-	${INSTALL_DATA} ${FILESDIR}/local.conf-odo ${LOCALBASE}/etc/fonts/local.conf
+	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/fonts
+	${INSTALL_DATA} ${FILESDIR}/local.conf-odo ${STAGEDIR}${PREFIX}/etc/fonts/local.conf
 .endif
 
 .include "${PORTSDIR}/chinese/ttfm/Makefile.ttf"
