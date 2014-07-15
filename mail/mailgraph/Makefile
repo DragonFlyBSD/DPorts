@@ -9,7 +9,7 @@ MASTER_SITES=	http://mailgraph.schweikert.ch/pub/ \
 		http://mailgraph.schweikert.ch/pub/old/
 
 MAINTAINER=	rafan@FreeBSD.org
-COMMENT=	A RRDtool frontend for Postfix statistics
+COMMENT=	RRDtool frontend for Postfix statistics
 
 RUN_DEPENDS=	rrdtool>=0:${PORTSDIR}/databases/rrdtool	\
 		p5-File-Tail>=0:${PORTSDIR}/devel/p5-File-Tail
@@ -28,10 +28,10 @@ USE_RC_SUBR=	${PORTNAME}
 SUB_LIST+=	MAILGRAPH_USER=${MAILGRAPH_USER} MAILGRAPH_GROUP=${MAILGRAPH_GROUP}
 PLIST_SUB=	CGIDIR=${CGIDIR:S,${PREFIX}/,,} WWWROOT=${WWWROOT:S,${PREFIX}/,,}
 
+OPTIONS_DEFINE=	DOCS
+
 DOCS=		README CHANGES
-.if !defined(NOPORTDOCS)
 PORTDOCS=	${DOCS}
-.endif
 
 pre-everything::
 	@${ECHO_MSG} ""
@@ -52,11 +52,9 @@ do-install:
 	@${INSTALL_SCRIPT} ${WRKSRC}/mailgraph.pl ${STAGEDIR}${PREFIX}/sbin
 	@${INSTALL_SCRIPT} ${WRKSRC}/mailgraph.cgi ${STAGEDIR}${CGIDIR}
 	@${INSTALL_DATA} ${WRKSRC}/mailgraph.css ${STAGEDIR}${WWWROOT}/mailgraph
-.if !defined(NOPORTDOCS)
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	for f in ${DOCS}; do \
 	  ${INSTALL_DATA} ${WRKSRC}/$$f ${STAGEDIR}${DOCSDIR}; \
 	done
-.endif
 
 .include <bsd.port.mk>
