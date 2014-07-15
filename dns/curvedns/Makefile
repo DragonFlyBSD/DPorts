@@ -1,62 +1,44 @@
 # Created by: Leo Vandewoestijne <freebsd@dns-lab.com>
 # $FreeBSD$
 
-PORTNAME=		curvedns
-PORTVERSION=		0.88.b
-PORTREVISION=		2
-CATEGORIES=		dns
-MASTER_SITES=		http://curvedns.on2it.net/releases/
-DISTNAME=		curvedns-0.88-unstable
+PORTNAME=	curvedns
+PORTVERSION=	0.88.b
+PORTREVISION=	5
+CATEGORIES=	dns
+DISTNAME=	curvedns-0.88-unstable
 
-MAINTAINER=		freebsd@dns-lab.com
-COMMENT=		Forwarder adding DNSCurve to an authoritative nameserver
+MAINTAINER=	vsevolod@FreeBSD.org
+COMMENT=	Forwarder adding DNSCurve to an authoritative nameserver
 
-LIB_DEPENDS=		ev.4:${PORTSDIR}/devel/libev
-RUN_DEPENDS=		setuidgid:${PORTSDIR}/sysutils/daemontools
-BUILD_DEPENDS=		bash:${PORTSDIR}/shells/bash
+LIB_DEPENDS=	libev.so:${PORTSDIR}/devel/libev \
+		libsodium.so:${PORTSDIR}/security/libsodium \
+		libexecinfo.so:${PORTSDIR}/devel/libexecinfo
+RUN_DEPENDS=	setuidgid:${PORTSDIR}/sysutils/daemontools
+BUILD_DEPENDS=	bash:${PORTSDIR}/shells/bash
 
-HAS_CONFIGURE=		yes
-CONFIGURE_SCRIPT=	configure.nacl
-ALL_TARGET=		# yes, an empty target.
+USE_GITHUB=	yes
+GH_ACCOUNT=	vstakhov
+GH_TAGNAME=	0.87
+GH_COMMIT=	a88e27e
 
-USERS=			bind
-GROUPS=			bind
-CURVE_UID=		53
-CURVE_GID=		53
+ALL_TARGET=	targets
 
-SUB_FILES=		pkg-message
+CFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
-NO_STAGE=	yes
-.include <bsd.port.pre.mk>
+USERS=		bind
+GROUPS=		bind
+CURVE_UID=	53
+CURVE_GID=	53
 
-.if ${ARCH} == "ia64" || ${ARCH} == "powerpc" || ${ARCH} == "sparc64"
-BROKEN=		Does not compile on ia64, powerpc, or sparc64
-.endif
+SUB_FILES=	pkg-message
 
-post-patch:
-	@cd ${WRKSRC} && ${PATCH} --quiet < ${FILESDIR}/freebsd.patch
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/curvedns ${WRKSRC}/curvedns-keygen ${STAGEDIR}${PREFIX}/bin/
+	${MKDIR} ${STAGEDIR}${PREFIX}/etc/curvedns/log ${STAGEDIR}${PREFIX}/etc/curvedns/env
+	${INSTALL_SCRIPT} ${WRKSRC}/contrib/curvedns-run ${STAGEDIR}${PREFIX}/etc/curvedns/run.sample
+	${INSTALL_SCRIPT} ${WRKSRC}/contrib/curvedns-log-run ${STAGEDIR}${PREFIX}/etc/curvedns/log/run.sample
+	${ECHO_CMD} ${CURVE_UID} > ${STAGEDIR}${PREFIX}/etc/curvedns/env/UID
+	${ECHO_CMD} ${CURVE_GID} > ${STAGEDIR}${PREFIX}/etc/curvedns/env/GID
 
-pre-configure:
-	@${ECHO_MSG} "===>   configuring may take a couple of minutes"
-
-post-configure:
-.if ${ARCH} == "x86_64"
-	@cd ${WRKSRC} && ./configure.curvedns amd64
-.else
-	@cd ${WRKSRC} && ./configure.curvedns
-.endif
-
-post-install:
-	${CP} ${WRKSRC}/curvedns ${WRKSRC}/curvedns-keygen ${PREFIX}/bin/
-	${MKDIR} ${PREFIX}/etc/curvedns/log ${PREFIX}/etc/curvedns/env
-	${CP} ${WRKSRC}/contrib/curvedns-run ${PREFIX}/etc/curvedns/run.sample
-	${CP} ${WRKSRC}/contrib/curvedns-log-run ${PREFIX}/etc/curvedns/log/run.sample
-	${ECHO_CMD} ${CURVE_UID} > ${PREFIX}/etc/curvedns/env/UID
-	${ECHO_CMD} ${CURVE_GID} > ${PREFIX}/etc/curvedns/env/GID
-	${CHOWN} -R ${CURVE_UID}:${CURVE_GID} ${PREFIX}/etc/curvedns
-	${CHMOD} 755 ${PREFIX}/etc/curvedns/run.sample \
-		${PREFIX}/etc/curvedns/log/run.sample
-	${CHMOD} 0700 ${PREFIX}/etc/curvedns/env
-	@${CAT} ${PKGMESSAGE}
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
