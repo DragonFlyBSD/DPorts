@@ -3,11 +3,11 @@
 
 PORTNAME=	lbreakout2
 PORTVERSION=	2.6
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	games
 MASTER_SITES=	SF/lgames/${PORTNAME}/${PORTVERSION}
 
-MAINTAINER=	mmendez@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	The polished successor to LBreakout
 
 LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
