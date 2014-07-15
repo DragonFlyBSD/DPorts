@@ -8,7 +8,7 @@ CATEGORIES=	textproc net-im
 MASTER_SITES=	http://download.process-one.net/${PORTNAME}/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	gelraen.ua@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Fast and scalable library for XMPP written in Erlang/OTP
 
 BUILD_DEPENDS=	erlc:${PORTSDIR}/lang/erlang
@@ -38,6 +38,9 @@ CONFIGURE_ARGS+=	--enable-documentation
 .endif
 
 NO_STAGE=	yes
+
+MAKE_JOBS_UNSAFE=	yes
+
 pre-configure:
 	@cd ${WRKSRC} && ${AUTORECONF} -ivf
 
