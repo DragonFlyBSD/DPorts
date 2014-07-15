@@ -3,6 +3,7 @@
 
 PORTNAME=	rocksndiamonds
 PORTVERSION=	3.3.1.2
+PORTREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://www.artsoft.org/RELEASES/unix/rocksndiamonds/:game \
 		http://www.artsoft.org/RELEASES/rocksndiamonds/levels/:levels_artsoft \
@@ -29,7 +30,7 @@ EXTRACT_DEPENDS=${UNZIP_CMD}:${PORTSDIR}/archivers/unzip
 
 USES=		gmake iconv
 USE_SDL=	image mixer net sdl
-MAKE_ARGS=	CC="${CC}" MAKE="${GMAKE}" OPTIONS="${CFLAGS}" \
+MAKE_ARGS=	CC="${CC}" MAKE="${MAKE_CMD}" OPTIONS="${CFLAGS}" \
 		RO_GAME_DIR="${DATADIR}" \
 		X11_PATH="${LOCALBASE}"
 ALL_TARGET=	sdl
