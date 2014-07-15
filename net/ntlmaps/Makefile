@@ -8,12 +8,14 @@ CATEGORIES=	net
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	kevlo@FreeBSD.org
-COMMENT=	A proxy that authenticates the user using the NTLM protocol
+COMMENT=	Proxy that authenticates the user using the NTLM protocol
 
 USE_PYTHON=	yes
 USES=		dos2unix
 
 DOCS=		COPYING Install.txt changelog.txt readme.txt research.txt
+
+OPTIONS_DEFINE=	DOCS
 
 post-patch:
 	@${REINPLACE_CMD} -e \
@@ -25,12 +27,10 @@ do-build:
 	@${PYTHON_CMD} -O ${PYTHON_LIBDIR}/compileall.py ${WRKSRC}
 
 do-install:
-.if !defined(NOPORTDOCS)
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for file in ${DOCS}
 	${INSTALL_DATA} ${WRKSRC}/${file} ${STAGEDIR}${DOCSDIR}
 .endfor
-.endif
 	@${MKDIR} ${STAGEDIR}${PYTHON_SITELIBDIR}/${PORTNAME}
 	@${MKDIR} ${STAGEDIR}${PREFIX}/share/examples/ntlmaps
 	${INSTALL_DATA} ${WRKSRC}/*.py* \
