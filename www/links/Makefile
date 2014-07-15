@@ -21,7 +21,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 USE_OPENSSL=	yes
-USE_BZIP2=	yes
+USES=		tar:bzip2
 
 OPTIONS_DEFINE=	CIPHERSTRING DIRECTFB IPV6 SVGALIB THREADS TRANS UTF8 X11
 
@@ -35,6 +35,25 @@ X11_DESC=	X11 graphics support
 OPTIONS_DEFAULT=	IPV6 UTF8 X11
 
 PLIST_FILES=	bin/links man/man1/links.1.gz
+
+DIRECTFB_LIB_DEPENDS=	libdirectfb.so:${PORTSDIR}/devel/directfb
+DIRECTFB_CONFIGURE_WITH=directfb
+
+IPV6_CONFIGURE_WITH=	ipv6
+
+SVGALIB_LIB_DEPENDS=	libvga.so:${PORTSDIR}/graphics/svgalib
+SVGALIB_CONFIGURE_WITH=	svgalib
+
+THREADS_CFLAGS=	-DHAVE_PTHREADS
+THREADS_LDFLAGS=-pthread
+
+TRANS_EXTRA_PATCHES=	${FILESDIR}/extra-terminal.c.diff
+
+UTF8_CONFIGURE_ENABLE=	utf8
+
+X11_USE=	xorg=x11,xproto
+X11_CONFIGURE_WITH=	x
+X11_PLIST_FILES=	share/pixmaps/links.xpm
 
 .include <bsd.port.options.mk>
 
@@ -50,53 +69,13 @@ CONFIGURE_ARGS+=	--enable-graphics
 CONFIGURE_ARGS+=	--disable-graphics --without-libjpeg --without-libtiff
 .endif
 
-.if ${PORT_OPTIONS:MDIRECTFB}
-LIB_DEPENDS+=	libdirectfb.so:${PORTSDIR}/devel/directfb
-CONFIGURE_ARGS+=	--with-directfb
-.else
-CONFIGURE_ARGS+=	--without-directfb
-.endif
-
-.if ${PORT_OPTIONS:MIPV6}
-CONFIGURE_ARGS+=	--with-ipv6
-.else
-CONFIGURE_ARGS+=	--without-ipv6
-.endif
-
-.if ${PORT_OPTIONS:MSVGALIB}
-LIB_DEPENDS+=	libvga.so:${PORTSDIR}/graphics/svgalib
-CONFIGURE_ARGS+=	--with-svgalib
-.else
-CONFIGURE_ARGS+=	--without-svgalib
-.endif
-
-.if ${PORT_OPTIONS:MTHREADS}
-CFLAGS+=	-DHAVE_PTHREADS
-LDFLAGS+=	-pthread
-.endif
-
-.if ${PORT_OPTIONS:MTRANS}
-EXTRA_PATCHES+=		${FILESDIR}/extra-terminal.c.diff
-.endif
-
-.if ${PORT_OPTIONS:MUTF8}
-CONFIGURE_ARGS+=	--enable-utf8
-.else
-CONFIGURE_ARGS+=	--disable-utf8
-.endif
-
 .if ${PORT_OPTIONS:MX11}
-USE_XORG=	x11 xproto
-CONFIGURE_ARGS+=	--with-x
 DESKTOP_ENTRIES="links" \
 		"Lynx-like text WWW browser" \
 		"${PREFIX}/share/pixmaps/links.xpm" \
 		"links -g" \
 		"Network;WebBrowser;" \
 		false
-PLIST_FILES+=	share/pixmaps/links.xpm
-.else
-CONFIGURE_ARGS+=	--without-x
 .endif
 
 post-patch:
