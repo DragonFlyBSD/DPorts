@@ -8,12 +8,10 @@ MASTER_SITES=	http://www.bsd-geek.de/FreeBSD/distfiles/
 DISTNAME=	${PKGNAME}-src
 
 MAINTAINER=	lme@FreeBSD.org
-COMMENT=	An MPEG-I statistics gatherer
+COMMENT=	MPEG-I statistics gatherer
 
-MAN1=		mpeg_stat.1
-MANCOMPRESSED=	yes
-
+USES=		shebangfix
+SHEBANG_FILES= 	block2spec
 WRKSRC=		${WRKDIR}/mpeg_stat
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
