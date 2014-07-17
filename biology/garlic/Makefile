@@ -43,12 +43,9 @@ do-install:
 	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	${INSTALL_DATA}    ${WRKSRC}/*.pdb        ${STAGEDIR}${EXAMPLESDIR}
 	${INSTALL_DATA}    ${WRKSRC}/*.script     ${STAGEDIR}${EXAMPLESDIR}
-	@${MKDIR} ${STAGEDIR}${DOCSDIR}
-	@${MKDIR} ${WRKDIR}/doc
+	@${MKDIR} ${STAGEDIR}${DOCSDIR} ${WRKDIR}/doc
 	(cd ${WRKDIR}/doc ; ${TAR} -xzf ${DISTDIR}/${DISTNAME}-doc${EXTRACT_SUFX} )
 	${TAR} -C ${WRKDIR}/doc/${DISTNAME} -cf - .  | \
 		${TAR} -C ${STAGEDIR}${DOCSDIR} -xf -
-	${FIND} ${STAGEDIR}${DOCSDIR} | ${XARGS} ${CHOWN} ${SHAREOWN}:${SHAREGRP}
-	${FIND} ${STAGEDIR}${DOCSDIR} -type f | ${XARGS} ${CHMOD} ${SHAREMODE}
 
 .include <bsd.port.mk>
