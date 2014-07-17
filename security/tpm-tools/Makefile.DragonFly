@@ -1,1 +1,2 @@
 CFLAGS+= -Wno-unused-but-set-variable
+LDFLAGS+= -lcrypto
