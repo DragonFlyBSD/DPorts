@@ -3,13 +3,14 @@
 
 PORTNAME=	liborange
 PORTVERSION=	0.4
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	archivers
 MASTER_SITES=	SF/synce/Orange/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Library to extract CAB files from self-extracting installers
 
+LIB_DEPENDS=	libgsf-1.so:${PORTSDIR}/devel/libgsf
 RUN_DEPENDS=	cabextract:${PORTSDIR}/archivers/cabextract \
 		unzip:${PORTSDIR}/archivers/unzip
 
@@ -25,46 +26,38 @@ MSI_DESC=		Build with expermential MSI support
 GNU_CONFIGURE=	yes
 USES=		iconv libtool pathfix pkgconfig
 CFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+LDFLAGS+=	-L${LOCALBASE}/lib -lgsf-1
 USE_LDCONFIG=	yes
+
+CONFIGURE_ARGS+=		--with-libgsf
+
+LIBSYNCE_LIB_DEPENDS=		libsynce.so:${PORTSDIR}/palm/synce-libsynce
+LIBSYNCE_CONFIGURE_WITH=	libsynce
+
+LIBDYNAMITE_LIB_DEPENDS=	libdynamite.so:${PORTSDIR}/archivers/libdynamite
+LIBDYNAMITE_CONFIGURE_WITH=	libdynamite
+
+LIBUNSHIELD_LIB_DEPENDS=	libunshield.so:${PORTSDIR}/archivers/unshield
+LIBUNSHIELD_CONFIGURE_WITH=	libunshield
+
+INNO_CONFIGURE_ENABLE=		inno
+
+VISE_CONFIGURE_ENABLE=		vise
+
+MSI_CONFIGURE_ENABLE=		msi
 
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLIBSYNCE}
-CONFIGURE_ARGS+=	--without-libsynce
 REQUIRES+=	libsynce
-.else
-LIB_DEPENDS+=		libsynce.so:${PORTSDIR}/palm/synce-libsynce
-CONFIGURE_ARGS+=	--with-libsynce
 .endif
 
 .if ${PORT_OPTIONS:MLIBDYNAMITE}
-CONFIGURE_ARGS+=	--without-libdynamite
 REQUIRES+=	libdynamite
-.else
-LIB_DEPENDS+=		libdynamite.so:${PORTSDIR}/archivers/libdynamite
-CONFIGURE_ARGS+=	--with-libdynamite
 .endif
 
 .if ${PORT_OPTIONS:MLIBUNSHIELD}
-CONFIGURE_ARGS+=	--without-libunshield
 REQUIRES+=	libunshield
-.else
-LIB_DEPENDS+=		libunshield.so:${PORTSDIR}/archivers/unshield
-CONFIGURE_ARGS+=	--with-libunshield
-.endif
-
-.if ${PORT_OPTIONS:MINNO}
-CONFIGURE_ARGS+=	--enable-inno
-.endif
-
-.if ${PORT_OPTIONS:MVISE}
-CONFIGURE_ARGS+=	--enable-vise
-.endif
-
-.if ${PORT_OPTIONS:MMSI}
-CONFIGURE_ARGS+=	--enable-msi --with-libgsf
-LIB_DEPENDS+=		libgsf-1.so.114:${PORTSDIR}/devel/libgsf
 .endif
 
 post-patch:
