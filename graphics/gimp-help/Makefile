@@ -16,8 +16,8 @@ NO_BUILD=	yes
 NO_INSTALL=	yes
 NO_MTREE=	yes
 
-LANG_ALL_HTML=	ca da de en en_GB es fr it ja ko nl nn \
-		pt_BR ru sv zh_CN
+LANG_ALL_HTML=	ca da de el en en_GB es fr it ja ko nl nn \
+		pt_BR ru sl sv zh_CN
 
 de_PORT=	german/gimp-help
 fr_PORT=	french/gimp-help
