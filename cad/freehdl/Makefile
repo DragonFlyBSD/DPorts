@@ -1,5 +1,5 @@
 # Created by: lon_kamikaze@gmx.de
-# $FreeBSD: head/cad/freehdl/Makefile 359185 2014-06-25 05:35:31Z bapt $
+# $FreeBSD$
 
 PORTNAME=	freehdl
 PORTVERSION=	0.0.7
@@ -11,6 +11,7 @@ COMMENT=	Free VHDL simulator
 
 USE_LDCONFIG=	yes
 USES=		gmake perl5 pkgconfig
+USE_GCC=	any
 USE_GNOME=	gnomehack
 USE_AUTOTOOLS=	libtool
 HAS_CONFIGURE=	yes
