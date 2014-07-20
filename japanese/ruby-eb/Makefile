@@ -12,7 +12,7 @@ DIST_SUBDIR=	ruby
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Ruby bind of EB library
 
-LIB_DEPENDS=	eb:${PORTSDIR}/japanese/eb
+LIB_DEPENDS=	libeb.so:${PORTSDIR}/japanese/eb
 
 USE_RUBY=	yes
 USE_RUBY_EXTCONF=	yes
@@ -20,6 +20,8 @@ USE_RUBY_EXTCONF=	yes
 INSTALL_TARGET=	site-install
 
 EXAMPLES=	hook2.rb test.rb
+
+OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.pre.mk>
 
