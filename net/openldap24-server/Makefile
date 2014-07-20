@@ -192,7 +192,7 @@ CONFIGURE_ARGS+=	--without-fetch
 .endif
 
 .if ${PORT_OPTIONS:MSASL}
-LIB_DEPENDS+=		sasl2:${PORTSDIR}/security/cyrus-sasl2
+LIB_DEPENDS+=		libsasl2.so:${PORTSDIR}/security/cyrus-sasl2
 CONFIGURE_ARGS+=	--with-cyrus-sasl
 .else
 CONFIGURE_ARGS+=	--without-cyrus-sasl
@@ -471,7 +471,7 @@ PLIST_SUB+=		SLAPI="@comment "
 
 .if ${PORT_OPTIONS:MSLP}
 CONFIGURE_ARGS+=	--enable-slp
-LIB_DEPENDS+=		slp.1:${PORTSDIR}/net/openslp
+LIB_DEPENDS+=		libslp.so:${PORTSDIR}/net/openslp
 .endif
 
 # Include tcp-wrapper support
