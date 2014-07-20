@@ -3,7 +3,7 @@
 
 PORTNAME=	gnatsweb
 PORTVERSION=	4.00
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	databases devel www
 MASTER_SITES=	GNU
 
@@ -27,27 +27,22 @@ PORTDOCS=	CUSTOMIZE CUSTOMIZE.cb CUSTOMIZE.vars \
 
 PORTEXAMPLESS=	gnatsweb-site-example.pl
 
-NO_STAGE=	yes
+OPTIONS_DEFINE=	DOCS EXAMPLES
+
 do-install:
-	@${MKDIR} ${ETCDIR}/
-	@${INSTALL_DATA} ${WRKSRC}/gnatsweb-site.pl  ${ETCDIR}/gnatsweb-site.pl.default
-	@[ -f ${ETCDIR}/gnatsweb-site.pl ] || \
-		${INSTALL_DATA} ${WRKSRC}/gnatsweb-site.pl ${ETCDIR}/
-	@${MKDIR} ${CGI_DIR}/
-	@${INSTALL_SCRIPT} ${WRKSRC}/gnatsweb.pl ${CGI_DIR}/
-	@${LN} -s  ${ETCDIR}/gnatsweb-site.pl ${CGI_DIR}/
-	@${INSTALL_DATA} ${WRKSRC}/gnatsweb.html ${CGI_DIR}/
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${DOCSDIR}/
-	@for doc in ${PORTDOCS}; do \
-		${INSTALL_DATA} ${WRKSRC}/$${doc} ${DOCSDIR}/; \
+	@${MKDIR} ${STAGEDIR}${ETCDIR} ${STAGEDIR}${CGI_DIR} \
+		${STAGEDIR}${DOCSDIR} ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/gnatsweb-site.pl \
+		${STAGEDIR}${ETCDIR}/gnatsweb-site.pl.sample
+	${INSTALL_SCRIPT} ${WRKSRC}/gnatsweb.pl ${STAGEDIR}${CGI_DIR}
+	${LN} -s  ${ETCDIR}/gnatsweb-site.pl ${STAGEDIR}${CGI_DIR}
+	${INSTALL_DATA} ${WRKSRC}/gnatsweb.html ${STAGEDIR}${CGI_DIR}
+	for doc in ${PORTDOCS}; do \
+		${INSTALL_DATA} ${WRKSRC}/$${doc} ${STAGEDIR}${DOCSDIR}; \
 	done
-.endif
-.if !defined(NOPORTEXAMPLES)
-	@${MKDIR} ${EXAMPLESDIR}/
-	@for example in ${EXAMPLEFILES}; do \
-		${INSTALL_DATA} ${WRKSRC}/$${example} ${EXAMPLESDIR}/; \
+	for example in ${EXAMPLEFILES}; do \
+		${INSTALL_DATA} ${WRKSRC}/$${example} \
+			${STAGEDIR}${EXAMPLESDIR}; \
 	done
-.endif
 
 .include <bsd.port.mk>
