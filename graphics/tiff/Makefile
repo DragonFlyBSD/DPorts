@@ -83,6 +83,8 @@ MLNKS=	TIFFError.3tiff          TIFFSetErrorHandler.3tiff \
 	TIFFtile.3tiff           TIFFTileRowSize.3tiff \
 	TIFFtile.3tiff           TIFFVTileSize.3tiff
 
+OPTIONS_DEFINE=	DOCS
+
 .include <bsd.port.options.mk>
 
 .if !defined(BUILDING_INDEX)
