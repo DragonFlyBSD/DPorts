@@ -1,1 +1,2 @@
 CONFIGURE_ENV+=	ac_cv_header_net_pfvar_h=yes
+MAKE_JOBS_UNSAFE= yes
