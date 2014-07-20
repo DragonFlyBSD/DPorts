@@ -1,0 +1,11 @@
+--- configure.orig	2014-06-25 03:30:14.000000000 +0000
++++ configure
+@@ -6,7 +6,7 @@ VARSED=`which sed`
+ 
+ OS=`uname`
+ case "$OS" in
+-        FreeBSD)
++        DragonFly|FreeBSD)
+         ${VARSED} -i "" "s+VARETC+/usr/local/etc+g" Makefile
+         ${VARSED} -i "" "s+VARBIN+/usr/local/bin+g" Makefile
+         ${VARSED} -i "" "s+VARMAN+/usr/local/man+g" Makefile
