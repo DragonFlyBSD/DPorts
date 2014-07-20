@@ -26,6 +26,8 @@ SHEBANG_FILES=	*.pl
 
 PORTEXAMPLES=	portlintgrep
 
+OPTIONS_DEFINE=	EXAMPLES
+
 do-extract:
 	@${MKDIR} ${WRKSRC}
 	@${CP} ${SRC}/* ${WRKSRC}/
