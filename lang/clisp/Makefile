@@ -14,8 +14,8 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/GNU-GPL
 
 BUILD_DEPENDS=	${LOCALBASE}/lib/libavcall.a:${PORTSDIR}/devel/ffcall
-LIB_DEPENDS=	readline.6:${PORTSDIR}/devel/readline \
-		sigsegv.2:${PORTSDIR}/devel/libsigsegv
+LIB_DEPENDS=	libreadline.so.6:${PORTSDIR}/devel/readline \
+		libsigsegv.so:${PORTSDIR}/devel/libsigsegv
 
 DEPRECATED=	development has ceased, not staged
 EXPIRATION_DATE=	2014-07-28
@@ -106,17 +106,17 @@ CONFIGURE_ARGS+=--with-module=clx/new-clx
 .endif
 
 .if ${PORT_OPTIONS:MDBUS}
-LIB_DEPENDS+=	dbus-1.3:${PORTSDIR}/devel/dbus
+LIB_DEPENDS+=	libdbus-1.so:${PORTSDIR}/devel/dbus
 CONFIGURE_ARGS+=--with-module=dbus
 .endif
 
 .if ${PORT_OPTIONS:MFASTCGI}
-LIB_DEPENDS+=	fcgi.0:${PORTSDIR}/www/fcgi
+LIB_DEPENDS+=	libfcgi.so:${PORTSDIR}/www/fcgi
 CONFIGURE_ARGS+=--with-module=fastcgi
 .endif
 
 .if ${PORT_OPTIONS:MGDBM}
-LIB_DEPENDS+=	gdbm.4:${PORTSDIR}/databases/gdbm
+LIB_DEPENDS+=	libgdbm.so:${PORTSDIR}/databases/gdbm
 CONFIGURE_ARGS+=--with-module=gdbm
 .endif
 
@@ -126,12 +126,12 @@ CONFIGURE_ARGS+=--with-module=gtk2
 .endif
 
 .if ${PORT_OPTIONS:MPARI}
-LIB_DEPENDS+=	pari-gmp.2:${PORTSDIR}/math/pari
+LIB_DEPENDS+=	libpari-gmp.so:${PORTSDIR}/math/pari
 CONFIGURE_ARGS+=--with-module=pari
 .endif
 
 .if ${PORT_OPTIONS:MPCRE}
-LIB_DEPENDS+=	pcre.3:${PORTSDIR}/devel/pcre
+LIB_DEPENDS+=	libpcre.so:${PORTSDIR}/devel/pcre
 CONFIGURE_ARGS+=--with-module=pcre
 .endif
 
