@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.tcpdump.org/release/
 MAINTAINER=	wxs@FreeBSD.org
 COMMENT=	Ubiquitous network traffic analysis tool
 
-LIB_DEPENDS=	pcap:${PORTSDIR}/net/libpcap
+LIB_DEPENDS=	libpcap.so:${PORTSDIR}/net/libpcap
 
 GNU_CONFIGURE=		yes
 USES=		gmake
@@ -52,7 +52,7 @@ CONFIGURE_ARGS+=	--disable-smb
 .endif
 
 .if ${PORT_OPTIONS:MSMI}
-LIB_DEPENDS+=		smi:${PORTSDIR}/net-mgmt/libsmi
+LIB_DEPENDS+=		libsmi.so:${PORTSDIR}/net-mgmt/libsmi
 .else
 CONFIGURE_ARGS+=	--disable-smi
 .endif
