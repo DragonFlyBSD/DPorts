@@ -1689,13 +1689,3 @@ you update your ports collection, before attempting any port upgrades.
   The procedure involves rekeying the cell to a non-DES krb5 key, stored in
   a krb5 keytab named rxkad.keytab in PREFIX/etc/openafs/server/.
 
-20130720:
-  AFFECTS: users of japanese/mozc-server and japanese/mozc-el
-  AUTHOR: hrs@FreeBSD.org
-
-  The bin/mozc_emacs_helper program is now built and installed by
-  japanese/mozc-server because the build processes are heavily
-  overlapped with each other and the helper program does not depend on
-  most of what mozc-server does actually.  To upgrade them, please remove
-  mozc-el first to prevent a conflict with the installed bin/mozc_emacs_helper.
-
