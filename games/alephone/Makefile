@@ -3,7 +3,7 @@
 
 PORTNAME=	alephone
 PORTVERSION=	20120514
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	games
 MASTER_SITES=	SF/marathon/Aleph%20One/2012-05-14
 DISTNAME=	AlephOne-${PORTVERSION}
@@ -21,7 +21,7 @@ CONFIGURE_ARGS+=--disable-alsa --disable-sndfile
 
 DATADIR=	${PREFIX}/share/AlephOne
 
-OPTIONS_DEFINE=	MAD OGG SPEEX SMPEG TTF ZZIP
+OPTIONS_DEFINE=	MAD OGG SPEEX SMPEG TTF ZZIP DOCS
 SMPEG_DESC=	Use SMPEG for movie playback
 TTF_DESC=	Enable SDL_ttf font rendering
 ZZIP_DESC=	Enable zziplib support
