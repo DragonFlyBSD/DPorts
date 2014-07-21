@@ -30,6 +30,8 @@ PLIST_SUB=	SHLIBVER=${SHLIBVER}
 
 PORTDOCS=	*
 
+OPTIONS_DEFINE=	DOCS
+
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "x86_64"
