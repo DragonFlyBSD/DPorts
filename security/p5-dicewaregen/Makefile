@@ -8,9 +8,9 @@ MASTER_SITES=	http://files.bsdroot.lv/my/FreeBSD/distfiles/
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	graudeejs@gmail.com
-COMMENT=	A simple perl script to generate Diceware dictionaries for passwords
+COMMENT=	Simple perl script to generate Diceware dictionaries for passwords
 
-LIB_DEPENDS+=	aspell:${PORTSDIR}/textproc/aspell
+LIB_DEPENDS+=	libaspell.so:${PORTSDIR}/textproc/aspell
 
 USES=		perl5
 USE_PERL5=	run
