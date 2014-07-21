@@ -1,7 +1,7 @@
 USES+= iconv
 
-LIB_DEPENDS+=	curl:${PORTSDIR}/ftp/curl \
-		icuuc:${PORTSDIR}/devel/icu \
-		xml2:${PORTSDIR}/textproc/libxml2 \
-		xslt:${PORTSDIR}/textproc/libxslt \
-		yajl:${PORTSDIR}/devel/yajl
+LIB_DEPENDS+=	libcurl.so:${PORTSDIR}/ftp/curl \
+		libicuuc.so:${PORTSDIR}/devel/icu \
+		libxml2.so:${PORTSDIR}/textproc/libxml2 \
+		libxslt.so:${PORTSDIR}/textproc/libxslt \
+		libyajl.so:${PORTSDIR}/devel/yajl
