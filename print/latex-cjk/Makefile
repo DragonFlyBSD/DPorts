@@ -11,14 +11,14 @@ DISTNAME=	cjk-${PORTVERSION}
 DISTFILES=	${DISTNAME}.tar.gz
 
 MAINTAINER=	rafan@FreeBSD.org
-COMMENT=	A LaTeX2e macro package which enables the use of CJK scripts
+COMMENT=	LaTeX2e macro package which enables the use of CJK scripts
 
 RUN_DEPENDS=	zh-arphicttf>=0:${PORTSDIR}/chinese/arphicttf \
 		ttf2pk:${PORTSDIR}/print/freetype-tools
 BUILD_DEPENDS:=	${RUN_DEPENDS} \
 		${LOCALBASE}/share/ttf2pt1/maps/cugb.map:${PORTSDIR}/chinese/ttf2pt1 \
 		ttf2pt1:${PORTSDIR}/print/ttf2pt1
-LIB_DEPENDS=	ttf:${PORTSDIR}/print/freetype
+LIB_DEPENDS=	libttf.so:${PORTSDIR}/print/freetype
 
 USES=		gmake
 USE_TEX=	tetex latex
