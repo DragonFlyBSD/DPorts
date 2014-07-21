@@ -7,11 +7,11 @@ CATEGORIES=	security
 MASTER_SITES=	http://olivier.sessink.nl/scannedonly/
 
 MAINTAINER= ports@FreeBSD.org
-COMMENT=	A Samba VFS virus scanning daemon
+COMMENT=	Samba VFS virus scanning daemon
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	clamav:${PORTSDIR}/security/clamav
+LIB_DEPENDS=	libclamav.so:${PORTSDIR}/security/clamav
 RUN_DEPENDS=	${LOCALBASE}/bin/clamdscan:${PORTSDIR}/security/clamav \
 		smbd:${PORTSDIR}/${SAMBA_PORT}
 BUILD_DEPENDS+=	smbd:${PORTSDIR}/${SAMBA_PORT}
