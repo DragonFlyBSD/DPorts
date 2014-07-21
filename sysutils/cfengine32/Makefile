@@ -11,7 +11,7 @@ PKGNAMESUFFIX=	32
 
 MAINTAINER=	cy@FreeBSD.org
 #		gjb@FreeBSD.org is an alternate committer for this port
-COMMENT=	A systems administration tool for networks
+COMMENT=	Systems administration tool for networks
 
 LATEST_LINK=	cfengine32
 FETCH_BEFORE_ARGS=   -o ${DISTDIR}/${DISTFILES}
@@ -20,7 +20,7 @@ CONFLICTS=	cfengine-[2]* cfengine-3.[345]* cfengine-devel-*
 
 USE_RC_SUBR=	cf-execd cf-serverd
 
-LIB_DEPENDS=	pcre.3:${PORTSDIR}/devel/pcre
+LIB_DEPENDS=	libpcre.so:${PORTSDIR}/devel/pcre
 
 USES=		libtool
 WITH_BDB_VER?=	47
