@@ -56,7 +56,7 @@ BROKEN=		does not compile on sparc64 (invokes i386 asm)
 .endif
 
 .if ${PORT_OPTIONS:MDV}
-LIB_DEPENDS+=	dv:${PORTSDIR}/multimedia/libdv
+LIB_DEPENDS+=	libdv.so:${PORTSDIR}/multimedia/libdv
 CONFIGURE_ARGS+=--enable-dv
 PLIST_SUB+=	DV=""
 .else
@@ -66,7 +66,7 @@ PLIST_SUB+=	DV="@comment "
 
 .if ${PORT_OPTIONS:MFFMPEG} || ${PORT_OPTIONS:MVDPAU}
 FFMPEG_SUFX=
-LIB_DEPENDS+=	avformat${FFMPEG_SUFX}:${PORTSDIR}/multimedia/ffmpeg${FFMPEG_SUFX}
+LIB_DEPENDS+=	libavformat${FFMPEG_SUFX}.so:${PORTSDIR}/multimedia/ffmpeg${FFMPEG_SUFX}
 CONFIGURE_ARGS+=--enable-avformat --avformat-swscale \
 		--avformat-suffix="${FFMPEG_SUFX}"
 PLIST_SUB+=	FFMPEG=""
@@ -85,7 +85,7 @@ PLIST_SUB+=	FREI0R="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MGTK2}
-LIB_DEPENDS+=	exif:${PORTSDIR}/graphics/libexif
+LIB_DEPENDS+=	libexif.so:${PORTSDIR}/graphics/libexif
 USE_GNOME+=	gdkpixbuf2 gtk20 pango
 CONFIGURE_ARGS+=--enable-gtk2
 PLIST_SUB+=	GTK2=""
@@ -95,7 +95,7 @@ PLIST_SUB+=	GTK2="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MJACK}
-LIB_DEPENDS+=	jack:${PORTSDIR}/audio/jack
+LIB_DEPENDS+=	libjack.so:${PORTSDIR}/audio/jack
 BUILD_DEPENDS+=	${LOCALBASE}/include/ladspa.h:${PORTSDIR}/audio/ladspa
 CONFIGURE_ARGS+=--enable-jackrack
 PLIST_SUB+=	JACK=""
@@ -105,7 +105,7 @@ PLIST_SUB+=	JACK="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MQT4}
-LIB_DEPENDS+=	exif:${PORTSDIR}/graphics/libexif
+LIB_DEPENDS+=	libexif.so:${PORTSDIR}/graphics/libexif
 USE_QT4+=	corelib gui opengl svg xml
 CONFIGURE_ARGS+=--enable-qimage \
 		--qimage-includedir="${QT_INCDIR}" \
@@ -123,7 +123,7 @@ PLIST_SUB+=	QT4="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MQUICKTIME}
-LIB_DEPENDS+=	dv:${PORTSDIR}/multimedia/libdv \
+LIB_DEPENDS+=	libdv.so:${PORTSDIR}/multimedia/libdv \
 		quicktime:${PORTSDIR}/multimedia/libquicktime
 CONFIGURE_ARGS+=--enable-kino
 PLIST_SUB+=	QUICKTIME=""
@@ -133,7 +133,7 @@ PLIST_SUB+=	QUICKTIME="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MSAMPLERATE}
-LIB_DEPENDS+=	samplerate:${PORTSDIR}/audio/libsamplerate
+LIB_DEPENDS+=	libsamplerate.so:${PORTSDIR}/audio/libsamplerate
 CONFIGURE_ARGS+=--enable-resample
 PLIST_SUB+=	SAMPLERATE=""
 .else
@@ -142,7 +142,7 @@ PLIST_SUB+=	SAMPLERATE="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MSOX}
-LIB_DEPENDS+=	sox:${PORTSDIR}/audio/sox
+LIB_DEPENDS+=	libsox.so:${PORTSDIR}/audio/sox
 CONFIGURE_ARGS+=--enable-sox
 PLIST_SUB+=	SOX=""
 .else
@@ -151,7 +151,7 @@ PLIST_SUB+=	SOX="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MSWFDEC}
-LIB_DEPENDS+=	swfdec-0.8:${PORTSDIR}/graphics/swfdec
+LIB_DEPENDS+=	libswfdec-0.8.so:${PORTSDIR}/graphics/swfdec
 CONFIGURE_ARGS+=--enable-swfdec
 PLIST_SUB+=	SWFDEC=""
 .else
@@ -167,7 +167,7 @@ CONFIGURE_ARGS+=--avformat-no-vdpau
 .endif
 
 .if ${PORT_OPTIONS:MVORBIS}
-LIB_DEPENDS+=	vorbis:${PORTSDIR}/audio/libvorbis
+LIB_DEPENDS+=	libvorbis.so:${PORTSDIR}/audio/libvorbis
 CONFIGURE_ARGS+=--enable-vorbis
 PLIST_SUB+=	VORBIS=""
 .else
