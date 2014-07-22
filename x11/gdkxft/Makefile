@@ -11,8 +11,8 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Anti-aliased font support for gtk+
 
 LIB_DEPENDS=	libXft.so:${PORTSDIR}/x11-fonts/libXft
-LIB_DEPENDS+=	fontconfig:${PORTSDIR}/x11-fonts/fontconfig
-LIB_DEPENDS+=	freetype:${PORTSDIR}/print/freetype2
+LIB_DEPENDS+=	libfontconfig.so:${PORTSDIR}/x11-fonts/fontconfig
+LIB_DEPENDS+=	libfreetype.so:${PORTSDIR}/print/freetype2
 
 USE_GNOME=	gtk12
 USES=		iconv pkgconfig libtool gettext
