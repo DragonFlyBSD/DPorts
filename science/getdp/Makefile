@@ -10,10 +10,10 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-source
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	stephen@FreeBSD.org
-COMMENT=	A rather general finite element solver using mixed finite elements
+COMMENT=	Rather general finite element solver using mixed finite elements
 
-LIB_DEPENDS=	gsl:${PORTSDIR}/math/gsl	\
-		lapack.4:${PORTSDIR}/math/lapack
+LIB_DEPENDS=	libgsl.so:${PORTSDIR}/math/gsl	\
+		liblapack.so:${PORTSDIR}/math/lapack
 
 USES=		fortran gmake
 GNU_CONFIGURE=	yes
