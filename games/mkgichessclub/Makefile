@@ -11,7 +11,7 @@ DISTNAME=	MKGIChessClub-${PORTVERSION}
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Chess playing server with a pure web interface
 
-OPTIONS_DEFINE=	GNUCHESS PHALANX
+OPTIONS_DEFINE=	GNUCHESS PHALANX DOCS
 GNUCHESS_DESC=	Install gnuchess robot
 PHALANX_DESC=	Install phalanx robot
 
@@ -29,16 +29,12 @@ PHALANX_RUN_DEPENDS=	phalanx:${PORTSDIR}/games/phalanx
 
 WRKSRC=	${WRKDIR}/MKGIChessClub-${PORTVERSION}
 
-.include <bsd.port.options.mk>
-
 do-install:
 	${MKDIR} ${STAGEDIR}${DATADIR}; cd ${WRKSRC}; \
 	${INSTALL_DATA} database/* ${STAGEDIR}${DATADIR}; \
 	${MKDIR} ${STAGEDIR}${WWWDIR}; cd www; ${CP} -R . ${STAGEDIR}${WWWDIR}
 
-.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${STAGEDIR}${DOCSDIR}; \
 	${INSTALL_DATA} ${WRKSRC}/README.INSTALL ${STAGEDIR}${DOCSDIR}
-.endif
 
 .include <bsd.port.mk>
