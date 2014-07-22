@@ -1,0 +1,3 @@
+.if defined(DPORTS_BUILDER)
+FORCE_PACKAGE=yes
+.endif
