@@ -11,7 +11,7 @@ MASTER_SITE_SUBDIR=	brix
 PKGNAMEPREFIX=	latex-
 
 MAINTAINER=	brix@FreeBSD.org
-COMMENT=	A LaTeX package for Subversion support
+COMMENT=	LaTeX package for Subversion support
 
 USE_TEX=	latex
 PLIST_SUB=	MKTEXLSR=${MKTEXLSR} CLASSDIR=${CLASSDIR}
@@ -24,6 +24,8 @@ CLASSDIR=	${TEXMFLOCAL}/tex/latex/${PORTNAME}
 
 CLASS_FILES=	svninfo.sty svninfo.cfg
 PORTDOCS=	README svninfo.dvi
+
+OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.pre.mk>
 
