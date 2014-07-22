@@ -1,16 +1,15 @@
-# Created by: Simon Dick <simond@irrelevant.org>
 # $FreeBSD$
 
 PORTNAME=		libsrs_alt
 DISTVERSION=		1.0
+PORTREVISION=		2
 CATEGORIES=		mail
-MASTER_SITES=		http://srs.mirtol.com/
+MASTER_SITES=		http://opsec.eu/src/srs/
 
-MAINTAINER=		simond@irrelevant.org
+MAINTAINER=		pi@FreeBSD.org
 COMMENT=		Sender Rewriting Scheme C Implementation
 
-USE_AUTOTOOLS=	libtool
-USE_BZIP2=		yes
+USES=			libtool tar:bzip2
 USE_LDCONFIG=		yes
 SHLIB_MAJOR=		1
 GNU_CONFIGURE=		yes
@@ -29,5 +28,9 @@ CONFIGURE_ARGS+=	--with-base64compat
 post-patch:
 	@${REINPLACE_CMD} -E 's,^(test_LDFLAGS.*$$),\1 -lcompat,' \
 		${WRKSRC}/Makefile.in
+
+post-stage:
+	${MV} ${STAGEDIR}${PREFIX}/bin/srs ${STAGEDIR}${PREFIX}/bin/srs_alt
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libsrs_alt.so.1.0.0
 
 .include <bsd.port.mk>
