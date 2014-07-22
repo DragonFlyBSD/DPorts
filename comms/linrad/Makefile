@@ -14,7 +14,7 @@ MAINTAINER=	hamradio@FreeBSD.org
 COMMENT=	Amateur Radio DSP utility (SDR)
 
 LIB_DEPENDS=	librtlsdr.so:${PORTSDIR}/comms/rtl-sdr \
-		portaudio2/libportaudio.so:${PORTSDIR}/audio/portaudio2 \
+		libportaudio.so:${PORTSDIR}/audio/portaudio2 \
 		libftdi.so:${PORTSDIR}/devel/libftdi
 BUILD_DEPENDS=	nasm:${PORTSDIR}/devel/nasm
 
@@ -31,6 +31,8 @@ LINRAD_DOCFILES=	z_APM.txt z_BUFFERS.txt z_CALIBRATE.txt \
 			z_MORSE_DECODING.txt z_MOUSE.txt z_NETWORK.txt \
 			z_PARALLEL_PORT.txt z_SETTINGS.txt \
 			z_USERS_EXTRA.txt z_USERS_HWARE.txt
+
+OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.pre.mk>
 .if ${ARCH} == "i386"
