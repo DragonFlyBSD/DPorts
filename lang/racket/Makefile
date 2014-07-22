@@ -37,10 +37,10 @@ IGNORE=		requires X11; use lang/racket-textual instead
 .endif
 
 
-LIB_DEPENDS+=	ffi:${PORTSDIR}/devel/libffi		\
-		cairo:${PORTSDIR}/graphics/cairo	\
-		jpeg:${PORTSDIR}/graphics/jpeg	\
-		png15:${PORTSDIR}/graphics/png
+LIB_DEPENDS+=	libffi.so:${PORTSDIR}/devel/libffi		\
+		libcairo.so:${PORTSDIR}/graphics/cairo	\
+		libjpeg.so:${PORTSDIR}/graphics/jpeg	\
+		libpng15.so:${PORTSDIR}/graphics/png
 
 .if ${PORT_OPTIONS:MRACKET_PLACES}
 CONFIGURE_ARGS+=	--enable-places
