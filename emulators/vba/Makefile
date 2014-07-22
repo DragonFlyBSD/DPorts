@@ -14,7 +14,7 @@ COMMENT=	Open source Gameboy Advance emulator
 LICENSE=	GPLv2
 
 BUILD_DEPENDS=	nasm:${PORTSDIR}/devel/nasm
-LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png
+LIB_DEPENDS=	libpng15.so:${PORTSDIR}/graphics/png
 
 USES=		gettext gmake
 GNU_CONFIGURE=	yes
@@ -36,6 +36,7 @@ PROFILING_DESC=	Enable profiling
 
 GTK2_CONFIGURE_ON=	--enable-gtk=2.4
 GTK2_LIB_DEPENDS=	libglademm-2.4.so:${PORTSDIR}/devel/libglademm24
+GTK2_USES=		pkgconfig
 PROFILING_CONFIGURE_ENABLE=	profiling
 
 BROKEN_ia64=	Runaway cc1plus process
