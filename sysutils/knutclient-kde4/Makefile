@@ -10,9 +10,9 @@ MASTER_SITES=	ftp://ftp.buzuluk.cz/pub/alo/knutclient/stable/ \
 		http://www.vg.kernel.org/pub/mirrors/gentoo/source/distfiles/
 
 MAINTAINER=	rnejdl@ringofsaturn.com
-COMMENT=	A visual client for UPS system NUT
+COMMENT=	Visual client for UPS system NUT
 
-LIB_DEPENDS=	qimageblitz.4:${PORTSDIR}/x11/qimageblitz
+LIB_DEPENDS=	libqimageblitz.so:${PORTSDIR}/x11/qimageblitz
 
 CONFLICTS=	knutclient-0.*
 USES=		cmake gettext
