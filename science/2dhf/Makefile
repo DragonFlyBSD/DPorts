@@ -10,7 +10,7 @@ DISTNAME=	${PORTNAME}-05.05
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	maho@FreeBSD.org
-COMMENT=	A Numerical Hartree-Fock Program for Diatomic Molecules
+COMMENT=	Numerical Hartree-Fock Program for Diatomic Molecules
 
 BUILD_DEPENDS=	bash:${PORTSDIR}/shells/bash
 .if defined(WITH_INTEL)
@@ -24,11 +24,11 @@ USES+=		fortran
 WITH_ATLAS=	yes
 .endif
 .if defined(WITH_ATLAS)
-LIB_DEPENDS+=	atlas.2:${PORTSDIR}/math/atlas
+LIB_DEPENDS+=	libatlas.so${PORTSDIR}/math/atlas
 BLAS=		-lf77blas
 .else
-LIB_DEPENDS+=	blas.2:${PORTSDIR}/math/blas
-LIB_DEPENDS+=	lapack.4:${PORTSDIR}/math/lapack
+LIB_DEPENDS+=	libblas.so:${PORTSDIR}/math/blas
+LIB_DEPENDS+=	liblapack.so:${PORTSDIR}/math/lapack
 BLAS=		-lblas
 .endif
 
