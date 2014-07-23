@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	password-store
-PORTVERSION=	1.6.2
+PORTVERSION=	1.6.3
 PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://git.zx2c4.com/password-store/snapshot/
@@ -59,6 +59,7 @@ do-install:
 	@(cd ${WRKSRC}/contrib && ${COPYTREE_SHARE} . ${STAGEDIR}${DATADIR})
 	@(cd ${WRKSRC}/src/completion && ${COPYTREE_SHARE} . ${STAGEDIR}${DATADIR})
 .endif
+
 	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	@${INSTALL_MAN} ${WRKSRC}/man/example-filter.sh ${STAGEDIR}${EXAMPLESDIR}
 	@${INSTALL_MAN} ${WRKSRC}/man/pass.1 ${STAGEDIR}${MANPREFIX}/man/man1/pass.1
