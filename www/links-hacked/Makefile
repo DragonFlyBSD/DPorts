@@ -10,8 +10,8 @@ MASTER_SITES=	http://xray.sai.msu.ru/~karpov/links-hacked/downloads/ http://link
 MAINTAINER=	peter@vereshagin.org
 COMMENT=	Hacked version of a Links WWW browser
 
-LIB_DEPENDS+=	execinfo:${PORTSDIR}/devel/libexecinfo \
-		gdbm:${PORTSDIR}/databases/gdbm
+LIB_DEPENDS+=	libexecinfo.so:${PORTSDIR}/devel/libexecinfo \
+		libgdbm.so:${PORTSDIR}/databases/gdbm
 
 CONFLICTS=	links-[0-9]*
 
@@ -36,23 +36,23 @@ NO_STAGE=	yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSVGALIB} || ${PORT_OPTIONS:MX11} || ${PORT_OPTIONS:MDIRECTFB}
-LIB_DEPENDS+=	png15:${PORTSDIR}/graphics/png \
-		jpeg.11:${PORTSDIR}/graphics/jpeg \
-		tiff.4:${PORTSDIR}/graphics/tiff
+LIB_DEPENDS+=	libpng15.so:${PORTSDIR}/graphics/png \
+		libjpeg.so:${PORTSDIR}/graphics/jpeg \
+		libtiff.so:${PORTSDIR}/graphics/tiff
 CONFIGURE_ARGS+=	--enable-graphics
 .else
 CONFIGURE_ARGS+=	--disable-graphics --without-libjpeg --without-libtiff
 .endif
 
 .if ${PORT_OPTIONS:MSVGALIB}
-LIB_DEPENDS+=	vga.1:${PORTSDIR}/graphics/svgalib
+LIB_DEPENDS+=	libvga.so:${PORTSDIR}/graphics/svgalib
 CONFIGURE_ARGS+=	--with-svgalib
 .else
 CONFIGURE_ARGS+=	--without-svgalib
 .endif
 
 .if ${PORT_OPTIONS:MDIRECTFB}
-LIB_DEPENDS+=	directfb-1.4.5:${PORTSDIR}/devel/directfb
+LIB_DEPENDS+=	libdirectfb-1.4.so:${PORTSDIR}/devel/directfb
 CONFIGURE_ARGS+=	--with-directfb
 .else
 CONFIGURE_ARGS+=	--without-directfb
