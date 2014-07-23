@@ -9,9 +9,9 @@ PKGNAMEPREFIX=	pecl-
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	miwi@FreeBSD.org
-COMMENT=	A PECL extension to the libssh2 library
+COMMENT=	PECL extension to the libssh2 library
 
-LIB_DEPENDS=	ssh2:${PORTSDIR}/security/libssh2
+LIB_DEPENDS=	libssh2.so:${PORTSDIR}/security/libssh2
 
 USE_PHP=	yes
 USE_PHPEXT=	yes
@@ -21,9 +21,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib ${EXTRA_LIBS}
 
 CONFIGURE_ARGS=	--with-ssh2
 
-.include <bsd.port.pre.mk>
-
 post-patch:
 	@${REINPLACE_CMD} -e 's|\$$SSH2_DIR/lib|\$$SSH2_DIR/\$$PHP_LIBDIR|g' ${WRKSRC}/config.m4
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
