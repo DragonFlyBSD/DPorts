@@ -3,7 +3,7 @@
 
 PORTNAME=	parmgridgen
 PORTVERSION=	1.0
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	math science
 MASTER_SITES=	http://www.mgnet.org/mgnet/Codes/parmgridgen/ \
 		http://www-users.cs.umn.edu/~moulitsa/download/ \
@@ -18,6 +18,8 @@ ALL_TARGET=	parallel
 LIB_DEPENDS+=	libmpi.so:${PORTSDIR}/net/openmpi
 USES=		gmake
 MAKE_JOBS_UNSAFE=	yes
+
+OPTIONS_DEFINE=	DOCS
 
 post-patch:
 	@${REINPLACE_CMD} 's|make|$$(MAKE)|g' ${WRKSRC}/Makefile
