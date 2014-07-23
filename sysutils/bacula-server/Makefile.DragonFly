@@ -1,2 +1,2 @@
-LIB_DEPENDS+=		readline:${PORTSDIR}/devel/readline
+USES+=			readline
 CONFIGURE_ARGS+= 	--with-readline=${LOCALBASE}/include/readline
