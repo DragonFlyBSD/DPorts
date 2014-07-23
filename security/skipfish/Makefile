@@ -9,14 +9,14 @@ MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	zi@FreeBSD.org
-COMMENT=	A fully automated, active web application security reconnaissance tool
+COMMENT=	Fully automated, active web application security reconnaissance tool
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-LIB_DEPENDS=	idn:${PORTSDIR}/dns/libidn \
-    		pcre:${PORTSDIR}/devel/pcre
-    		
+LIB_DEPENDS=	libidn.so:${PORTSDIR}/dns/libidn \
+		libpcre.so:${PORTSDIR}/devel/pcre
+
 USES=		gmake
 SUB_FILES=	pkg-message
 
