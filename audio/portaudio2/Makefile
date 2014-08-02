@@ -3,11 +3,11 @@
 
 PORTNAME=	portaudio
 DISTVERSION=	19_20140130
+PORTREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://www.portaudio.com/archives/
 PKGNAMESUFFIX=	2
 DISTNAME=	pa_stable_v${DISTVERSION}
-EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	koalative@gmail.com
 COMMENT=	Portable cross-platform Audio API
@@ -22,7 +22,7 @@ CONFIGURE_ARGS+=PKG_CONFIG_LIBDIR=${PREFIX}/libdata/pkgconfig \
 			--libdir=${PREFIX}/lib/${PORTNAME}${PKGNAMESUFFIX} \
 			--includedir=${PREFIX}/include/${PORTNAME}${PKGNAMESUFFIX}
 
-USES=		gmake pathfix pkgconfig dos2unix
+USES=		dos2unix gmake libtool pathfix pkgconfig tar:tgz
 USE_LDCONFIG=	${PREFIX}/lib/${PORTNAME}${PKGNAMESUFFIX}
 
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
