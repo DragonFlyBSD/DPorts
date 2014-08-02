@@ -3,16 +3,15 @@
 
 PORTNAME=	ldapdiff
 PORTVERSION=	1.4.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://launchpadlibrarian.net/20391352/
 DISTNAME=	${PORTNAME}-${PORTVERSION}_src
-EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Utility for patching LDAP directories using LDIF files
 
-USES=		iconv
+USES=		iconv tar:tgz
 USE_OPENLDAP=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${LOCALBASE} \
