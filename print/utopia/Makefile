@@ -6,12 +6,15 @@ PORTVERSION=	1.1
 CATEGORIES=	print
 MASTER_SITES=	http://www.mammothcheese.ca/
 
-MAINTAINER=	jimmy@mammothcheese.ca
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Adobe Utopia typeface for Groff
 
-MAN7=	utopia_font.7
+MAKE_ARGS=	DEST=${STAGEDIR}${DATADIR}/devps \
+		INSTALL_DATA="${INSTALL_DATA}" \
+		INSTALL_MAN="${INSTALL_MAN}" \
+		PREFIX=${PREFIX}
 
-MANCOMPRESSED=	yes
+PLIST_FILES=	man/man7/utopia_font.7.gz
+PORTDATA=	*
 
-NO_STAGE=	yes
 .include <bsd.port.mk>
