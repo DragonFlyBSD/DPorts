@@ -2,17 +2,20 @@
 # $FreeBSD$
 
 PORTNAME=	libgmp
-PORTVERSION=	5.1.3
+PORTVERSION=	6.0.0
+PORTREVISION=	1
 CATEGORIES=	math devel
-MASTER_SITES=	ftp://ftp.gmplib.org/pub/gmp-${PORTVERSION}/
+MASTER_SITES=	GNU/gmp
 PKGNAMEPREFIX=	mingw32-
-DISTNAME=	gmp-${PORTVERSION}
+DISTNAME=	gmp-${DISTVERSION}a
 
 MAINTAINER=	cyberbotx@cyberbotx.com
 COMMENT=	Library for arbitrary precision arithmetic (MinGW32)
 
 BUILD_DEPENDS=	${PKGNAMEPREFIX}gcc:${PORTSDIR}/devel/${PKGNAMEPREFIX}gcc \
 		mingwm10.dll:${PORTSDIR}/devel/mingw32-bin-msvcrt
+
+WRKSRC=		${WRKDIR}/gmp-${PORTVERSION}
 
 USES=		makeinfo tar:bzip2
 GMP_TARG=	${PKGNAMEPREFIX:S/-$//}
@@ -21,7 +24,8 @@ CC=		${PKGNAMEPREFIX}gcc
 CXX=		${PKGNAMEPREFIX}c++
 CFLAGS+=	-I/usr/include
 CONFIGURE_ENV=	MAKEINFO="makeinfo --no-split" \
-		PREFIX="${PREFIX}/${GMP_TARG}"
+		PREFIX="${PREFIX}/${GMP_TARG}" \
+		M4="/usr/bin/m4"
 CONFIGURE_ARGS=	--enable-cxx --host=${GMP_TARG} \
 		--includedir=${PREFIX}/${GMP_TARG}/include \
 		--exec_prefix=${PREFIX}/${GMP_TARG} \
