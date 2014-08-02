@@ -2,18 +2,24 @@
 # $FreeBSD$
 
 PORTNAME=	qpdf
-PORTVERSION=	5.1.1
+PORTVERSION=	5.1.2
 PORTREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	SF
 
 MAINTAINER=	d.y.kazarov@mail.ru
-COMMENT=	Command-line tools for transforming and inspecting PDF files
+COMMENT=	Command-line tools for transforming and inspecting PDF documents
 
 LICENSE=	ART20
 
 BUILD_DEPENDS=	bash:${PORTSDIR}/shells/bash
 LIB_DEPENDS=	libpcre.so:${PORTSDIR}/devel/pcre
+
+OPTIONS_DEFINE=	SDK
+OPTIONS_DEFAULT=	SDK
+OPTIONS_SUB=	yes
+
+SDK_DESC=	Install header files.
 
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
