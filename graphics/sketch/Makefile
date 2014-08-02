@@ -5,16 +5,15 @@ PORTNAME=	sketch
 PORTVERSION=	0.3.7
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.frontiernet.net/~eugene.ressler/
-EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	joerg@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	3D Scene Description Translator
 
 LICENSE=	GPLv3
 
 MAKEFILE=	makefile
 ALL_TARGET=
-USES=		dos2unix gmake perl5
+USES=		dos2unix gmake perl5 tar:tgz
 USE_PERL5=	build
 
 PLIST_FILES=	bin/sketch
