@@ -3,6 +3,7 @@
 
 PORTNAME=	ldapenter
 PORTVERSION=	0.2.0
+PORTREVISION=	1
 CATEGORIES=	sysutils editors net
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 
@@ -12,9 +13,9 @@ COMMENT=	Add/Modify LDAP entries using template forms
 LICENSE=	BSD
 
 MAKEFILE=	BSDmakefile
-USE_BZIP2=	yes
+USES=	tar:bzip2
 USE_OPENLDAP=	24
-LDFLAGS+=	-L${LOCALBASE}/lib -llber-2.4
+LDFLAGS+=	-L${LOCALBASE}/lib -llber
 
 PLIST_FILES=	bin/ldapform \
 		bin/ldapedit \
