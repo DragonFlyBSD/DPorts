@@ -7,7 +7,6 @@ CATEGORIES=	benchmarks www
 MASTER_SITES=	http://www.web-polygraph.org/downloads/srcs/ \
 		http://people.bsdgroup.de/~as/freebsd/distfiles/
 DISTNAME=	${PORTNAME}-${PORTVERSION}-src
-EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Benchmarking tool for Web proxies
@@ -15,6 +14,7 @@ COMMENT=	Benchmarking tool for Web proxies
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+USES=		tar:tgz
 USE_GCC=	any
 GNU_CONFIGURE=	yes
 WRKSRC=	${WRKDIR}/${PORTNAME}-${PORTVERSION}
