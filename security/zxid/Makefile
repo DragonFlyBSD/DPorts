@@ -6,9 +6,8 @@ PORTVERSION=	1.05
 PORTREVISION=	1
 CATEGORIES=	security www
 MASTER_SITES=	http://zxid.org/
-EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	clsung@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Open Source IdM for the Masses - SAML SSO
 
 LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl
@@ -18,7 +17,7 @@ MAKE_JOBS_UNSAFE=	yes
 CFLAGS+=	-D_LSEEK_DECLARED -fPIC
 MAKE_ARGS=	CC="${CC}" CURL_ROOT="${LOCALBASE}" LD="${CC}" \
 		PREFIX="${PREFIX}" OPENSSL_ROOT="${OPENSSLBASE}"
-USES=		gmake
+USES=		gmake tar:tgz
 USE_CSTD=	gnu89
 USE_LDCONFIG=	yes
 USE_OPENSSL=	yes
