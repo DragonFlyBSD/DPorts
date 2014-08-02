@@ -11,10 +11,10 @@ PATCH_SITES=	http://people.FreeBSD.org/~avatar/ports/patches/pine/ \
 		ftp://www.mmlab.cse.yzu.edu.tw/pub/collect/patch/pine/
 PATCHFILES=	${PORTNAME}${PORTVERSION}.patch.gz
 
-MAINTAINER=	avatar@mmlab.cse.yzu.edu.tw
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Program for Internet News & Email with Chinese(BIG-5) support
 
-USE_BZIP2=	yes
+USES=	tar:bzip2
 
 .if defined(WITH_SSL)
 USE_OPENSSL=	yes
