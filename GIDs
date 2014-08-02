@@ -217,6 +217,7 @@ netdisco:*:840:
 munin:*:842:
 dahdi:*:843:asterisk
 fossy:*:901:www
+scanlogd:*:902:
 bacula:*:910:
 iserv:*:911:
 _sj3:*:912:
@@ -284,5 +285,7 @@ minetest:*:976:
 avenger:*:60149:
 cbsd:*:60150:
 ums:*:979:
+hbase:*:980:
+uvncrep:*:981:
 nogroup:*:65533:
 nobody:*:65534:

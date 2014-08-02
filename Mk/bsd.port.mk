@@ -1197,7 +1197,8 @@ STRIPBIN=	${STRIP_CMD}
 # ${FILEDIR}/patch-* files from them.
 
 .if !target(makepatch)
-makepatch: ${FILESDIR}
+makepatch:
+	@${MKDIR} ${FILESDIR}
 	@(cd ${PATCH_WRKSRC}; \
 		for i in `find . -type f -name '*.orig'`; do \
 			ORG=$$i; \
@@ -3286,7 +3287,7 @@ options-message:
 	@${ECHO_MSG} "===>  Found saved configuration for ${_OPTIONS_READ}"
 .endif
 
-${_DISTDIR} ${FILESDIR} ${PKG_DBDIR} ${PREFIX} ${WRKDIR} ${WRKSRC}:
+${PKG_DBDIR} ${PREFIX} ${WRKDIR} ${WRKSRC}:
 	@${MKDIR} ${.TARGET}
 
 # Warn user about deprecated packages.  Advisory only.
@@ -3360,7 +3361,8 @@ DISTINFO_DATA?=	if [ \( -n "${DISABLE_SIZE}" -a -n "${NO_CHECKSUM}" \) -o ! -f "
 # Fetch
 
 .if !target(do-fetch)
-do-fetch: ${_DISTDIR}
+do-fetch:
+	@${MKDIR} ${_DISTDIR}
 	@cd ${_DISTDIR};\
 	${_MASTER_SITES_ENV} ; \
 	for _file in ${DISTFILES}; do \
@@ -3445,7 +3447,7 @@ do-fetch: ${_DISTDIR}
 	    fi; \
 	 done
 .if defined(PATCHFILES)
-	@cd ${_DISTDIR};\
+	cd ${_DISTDIR};\
 	${_PATCH_SITES_ENV} ; \
 	for _file in ${PATCHFILES}; do \
 		file=`${ECHO_CMD} $$_file | ${SED} -E -e 's/:[^-:][^:]*$$//'` ; \
@@ -3521,7 +3523,7 @@ clean-wrkdir:
 	@${RM} -rf ${WRKDIR}
 
 .if !target(do-extract)
-do-extract: clean-wrkdir ${WRKDIR}
+do-extract:
 	@for file in ${EXTRACT_ONLY}; do \
 		if [ -n "${EXTRACT_CMD}" -a -z "${_INCLUDE_USES_ZIP_MK}" -a -z "${_INCLUDE_USES_LHA_MK}" ]; then \
 			if ! (cd ${WRKDIR} && ${EXTRACT_CMD} ${EXTRACT_BEFORE_ARGS} ${_DISTDIR}/$$file ${EXTRACT_AFTER_ARGS});\
@@ -4090,6 +4092,7 @@ install-ldconfig-file:
 		> ${STAGEDIR}${LOCALBASE}/${LDCONFIG_DIR}/${UNIQUENAME}
 	@${ECHO_CMD} "@cwd ${LOCALBASE}" >> ${TMPPLIST}
 	@${ECHO_CMD} ${LDCONFIG_DIR}/${UNIQUENAME} >> ${TMPPLIST}
+	@${ECHO_CMD} "@cwd ${PREFIX}" >> ${TMPPLIST}
 .endif
 .endif
 .endif
@@ -4106,12 +4109,13 @@ install-ldconfig-file:
 .if !defined(INSTALL_AS_USER)
 	@${ECHO_MSG} "===>   Installing 32-bit ldconfig configuration file"
 .if defined(NO_MTREE) || ${PREFIX} != ${LOCALBASE}
-	@${MKDIR} ${STAGEDIR}${LOCALBASE}/${LDCONFIG_32DIR}
+	@${MKDIR} ${STAGEDIR}${LOCALBASE}/${LDCONFIG32_DIR}
 .endif
 	@${ECHO_CMD} ${USE_LDCONFIG32} | ${TR} ' ' '\n' \
 		> ${STAGEDIR}${LOCALBASE}/${LDCONFIG32_DIR}/${UNIQUENAME}
 	@${ECHO_CMD} "@cwd ${LOCALBASE}" >> ${TMPPLIST}
 	@${ECHO_CMD} ${LDCONFIG32_DIR}/${UNIQUENAME} >> ${TMPPLIST}
+	@${ECHO_CMD} "@cwd ${PREFIX}" >> ${TMPPLIST}
 .endif
 .endif
 .if defined(INSTALLS_SHLIB)
@@ -4541,7 +4545,8 @@ delete-distfiles-list:
 # Prints out a list of files to fetch (useful to do a batch fetch)
 
 .if !target(fetch-list)
-fetch-list: ${_DISTDIR}
+fetch-list:
+	@${MKDIR} ${_DISTDIR}
 	@(cd ${_DISTDIR}; \
 	 ${_MASTER_SITES_ENV} ; \
 	 for _file in ${DISTFILES}; do \
@@ -4614,7 +4619,8 @@ fetch-list: ${_DISTDIR}
 .endif
 
 .if !target(fetch-url-list-int)
-fetch-url-list-int: ${_DISTDIR}
+fetch-url-list-int:
+	@${MKDIR} ${_DISTDIR}
 	@(cd ${_DISTDIR}; \
 	${_MASTER_SITES_ENV}; \
 	for _file in ${DISTFILES}; do \
@@ -5696,6 +5702,10 @@ add-plist-buildinfo:
 .if !target(add-plist-info)
 .if defined(INFO)
 add-plist-info:
+	@if ${EGREP} -qe '^@cw?d' ${TMPPLIST} && \
+		[ "`${SED} -En -e '/^@cw?d[ 	]*/s,,,p' ${TMPPLIST} | ${TAIL} -n 1`" != "${PREFIX}" ]; then \
+		${ECHO_CMD} "@cwd ${PREFIX}" >> ${TMPPLIST}; \
+	fi
 # Process GNU INFO files at package install/deinstall time
 .for i in ${INFO}
 .if defined(NO_STAGE)
@@ -6425,7 +6435,11 @@ show-dev-warnings:
 	@${ECHO_MSG} "${m}"
 .endfor
 	@${ECHO_MSG}
+.if defined(DEV_WARNING_FATAL)
+	@${FALSE}
+.else
 	@sleep ${DEV_WARNING_WAIT}
+.endif
 .endif
 
 .if defined(DEV_ERROR)
@@ -6465,7 +6479,7 @@ _FETCH_SEQ=		fetch-depends pre-fetch pre-fetch-script \
 				do-fetch fetch-specials post-fetch post-fetch-script
 _EXTRACT_DEP=	fetch
 _EXTRACT_SEQ=	check-build-conflicts extract-message checksum extract-depends \
-				pre-extract pre-extract-script clean-wrkdir do-extract \
+				clean-wrkdir ${WRKDIR} pre-extract pre-extract-script do-extract \
 				post-extract post-extract-script
 _PATCH_DEP=		extract
 _PATCH_SEQ=		ask-license patch-message patch-depends pathfix dos2unix fix-shebang \
