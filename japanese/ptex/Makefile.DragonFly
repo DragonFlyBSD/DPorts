@@ -1,7 +1,0 @@
-USE_TEX=tex
-
-post-patch:
-	@cd ${WRKDIR}; ${FIND} * -type f -name config.sub -exec \
-		${CP} ${PORTSDIR}/Templates/config.sub {} \;
-	@cd ${WRKDIR}; ${FIND} * -type f -name config.guess -exec \
-		${CP} ${PORTSDIR}/Templates/config.guess {} \;
