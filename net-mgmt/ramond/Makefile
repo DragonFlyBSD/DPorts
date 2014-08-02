@@ -7,14 +7,14 @@ PORTREVISION=	4
 CATEGORIES=	net-mgmt ipv6
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/_${PORTVERSION}/
 
-MAINTAINER=	jmohacsi@bsd.hu
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	On-link IPv6 router advertisement monitoring and reporting daemon
 
 LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
-USE_BZIP2=	YES
+USES=	tar:bzip2
 USE_GNOME=	libxml2
 USE_RC_SUBR=	ramon
 
