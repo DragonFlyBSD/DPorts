@@ -2,9 +2,10 @@
 # $FreeBSD$
 
 PORTNAME=	chicken
-PORTVERSION=	4.8.0.5
+PORTVERSION=	4.9.0.1
+PORTREVISION=	1
 CATEGORIES=	lang scheme
-MASTER_SITES=	http://code.call-cc.org/releases/4.8.0/
+MASTER_SITES=	http://code.call-cc.org/releases/4.9.0/
 
 MAINTAINER=	vmagerya@gmail.com
 COMMENT=	Scheme-to-C compiler
