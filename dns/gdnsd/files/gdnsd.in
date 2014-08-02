@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/dns/gdnsd/files/gdnsd.in 327654 2013-09-20 04:10:21Z tabthorpe $
+# $FreeBSD: head/dns/gdnsd/files/gdnsd.in 362860 2014-07-24 23:37:10Z danilo $
 #
 # PROVIDE: gdnsd
 # REQUIRE: DAEMON
@@ -26,7 +26,7 @@ load_rc_config $name
 : ${gdnsd_flags:=""}
 
 command="%%PREFIX%%/sbin/gdnsd"
-command_args="${gdnsd_flags} start"
+command_args="start"
 procname=${command}
 reload_cmd="gdnsd_reload"
 configtest_cmd="gdnsd_checkconf"
