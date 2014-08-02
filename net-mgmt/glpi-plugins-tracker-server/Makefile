@@ -9,7 +9,7 @@ MASTER_SITES=	https://forge.indepnet.net/attachments/download/512/ \
 PKGNAMEPREFIX=	glpi-plugins-tracker-
 DISTNAME=	glpi-tracker_server-2.1.3
 
-MAINTAINER=	d.durieux@siprossii.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Plugin of glpi to get information of networking devices by SNMP
 
 RUN_DEPENDS=	glpi>=0.72:${PORTSDIR}/www/glpi
@@ -18,24 +18,15 @@ USE_PHP=	zlib
 
 WRKSRC=		${WRKDIR}/tracker
 NO_BUILD=	yes
-PKGMESSAGE=	${WRKDIR}/pkg-message
-CPIOARGS=	--quiet -pdum -R
+CPIOARGS=	--quiet -pdum
+SUB_FILES=	pkg-message
+SUB_LIST=	GLPIPLUGINDIR="${GLPIPLUGINDIR}"
+PLIST_SUB=	WWWOWN="${WWWOWN}" WWWGRP="${WWWGRP}"
 
 GLPIPLUGINDIR?=	www/glpi/plugins/tracker
 
-NO_STAGE=	yes
-.include <bsd.port.pre.mk>
-
-post-configure:
-	@${SED} -e 's,%%PREFIX%%,${PREFIX},g' \
-	  -e 's,%%GLPIPLUGINDIR%%,${GLPIPLUGINDIR},g' pkg-message > ${PKGMESSAGE}
-
 do-install:
-	@${MKDIR} -m 0755 ${PREFIX}/${GLPIPLUGINDIR}
-	@cd ${WRKSRC} && ${FIND} * -print | ${CPIO} ${CPIOARGS} ${WWWOWN}:${WWWGRP} ${PREFIX}/${GLPIPLUGINDIR}
-	@${CHOWN} -R ${WWWOWN}:${WWWGRP} ${PREFIX}/${GLPIPLUGINDIR}
+	@${MKDIR} -m 0755 ${STAGEDIR}${PREFIX}/${GLPIPLUGINDIR}
+	@cd ${WRKSRC} && ${FIND} * -print | ${CPIO} ${CPIOARGS} ${STAGEDIR}${PREFIX}/${GLPIPLUGINDIR}
 
-post-install:
-	@${CAT} ${PKGMESSAGE}
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
