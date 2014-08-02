@@ -1,5 +1,5 @@
 
-$FreeBSD: head/textproc/openjade/files/patch-ae 360257 2014-07-02 20:33:20Z tijl $
+$FreeBSD: head/textproc/openjade/files/patch-configure 363336 2014-07-29 15:20:01Z adamw $
 
 --- configure.orig	Sun Dec  1 17:18:40 2002
 +++ configure	Fri Feb 28 03:26:00 2003
