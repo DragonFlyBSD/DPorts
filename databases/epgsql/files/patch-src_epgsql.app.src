@@ -1,0 +1,13 @@
+
+$FreeBSD: head/databases/epgsql/files/patch-src_epgsql.app.src 362698 2014-07-23 14:12:35Z olgeni $
+
+--- src/epgsql.app.src.orig
++++ src/epgsql.app.src
+@@ -1,6 +1,6 @@
+ {application, epgsql,
+  [{description, "PostgreSQL Client"},
+-  {vsn, git},
++  {vsn, "%%PORTVERSION%%"},
+   {modules, []},
+   {registered, []},
+   {applications, [kernel,
