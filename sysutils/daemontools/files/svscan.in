@@ -1,11 +1,12 @@
 #!/bin/sh
 #
-# $FreeBSD: head/sysutils/daemontools/files/svscan.in 346913 2014-03-03 15:14:04Z feld $
+# $FreeBSD: head/sysutils/daemontools/files/svscan.in 362918 2014-07-25 16:40:07Z bdrewery $
 #
 
 # PROVIDE: svscan
 # REQUIRE: %%SVSCAN_REQUIRE%%
 # BEFORE: %%SVSCAN_BEFORE%%
+# KEYWORD: shutdown
 
 # Define these svscan_* variables in one of these files:
 #       /etc/rc.conf
