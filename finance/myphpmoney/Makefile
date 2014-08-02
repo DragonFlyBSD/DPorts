@@ -8,14 +8,14 @@ CATEGORIES=		finance www
 MASTER_SITES=		SF/${PORTNAME}/MyPhpMoney/1.3RC3
 DISTNAME=		${PORTNAME}-${PORTVERSION:S/.r/RC/}
 
-MAINTAINER=		courou@users.sourceforge.net
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=		PHP script for managing your accounts
 
 WEBOWN?=		www
 WEBGRP?=		www
 APACHEDIR=		${PREFIX}/www/data
 INSTALLDIR=		${APACHEDIR}/myphpmoney
-USE_BZIP2=		yes
+USES=		tar:bzip2
 USE_PHP=		yes
 WANT_PHP_WEB=		yes
 NO_BUILD=		yes
