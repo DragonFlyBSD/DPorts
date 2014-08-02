@@ -1,11 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 # $FreeBSD$
-#
-# Do not forget to update p5-Module-Build-Tiny version in Mk/Uses/perl5.mk
-# while updating this port!
 
 PORTNAME=	Module-Build-Tiny
-PORTVERSION=	0.036
+PORTVERSION=	0.037
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
