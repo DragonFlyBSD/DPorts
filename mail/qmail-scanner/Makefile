@@ -6,7 +6,6 @@ PORTVERSION=	2.10
 PORTREVISION=	1
 CATEGORIES=	mail security
 MASTER_SITES=	SF
-EXTRACT_SUFX=	.tgz
 
 MAINTAINER= ports@FreeBSD.org
 COMMENT=	Content/Anti-virus Scanner for qmail
@@ -21,7 +20,7 @@ BUILD_DEPENDS+=	reformime:${PORTSDIR}/mail/maildrop \
 
 CONFLICTS=	qmail-scanner-1.* qmail-scanner1-*
 
-USES=		qmail perl5
+USES=		qmail perl5 tar:tgz
 
 SPOOLDIR?=	/var/spool/qscand
 PLIST_SUB=	SPOOLDIR=${SPOOLDIR}
@@ -55,7 +54,7 @@ CONTRIB=	mrtg-qmail-scanner.cfg check_AV_daemons logrotate.qmail-scanner \
 OPTIONS_DEFINE=	TNEF FIX_MIME REDUNDANT NORMALIZE CWRAPPER STPATCH
 OPTIONS_DEFAULT=TNEF REDUNDANT CWRAPPER STPATCH
 
-TNEF_DESC=	Mark Simpson\'s Patch (Recommended)
+TNEF_DESC=	Mark Simpson's Patch (Recommended)
 FIX_MIME_DESC=	Fix broken MIME messages
 REDUNDANT_DESC=	Scan attachments and body mails
 NORMALIZE_DESC=	Decode encoded headers per MIME Base64
