@@ -11,15 +11,14 @@ COMMENT=	SAP and SLP announcement for the VLC Media Player
 
 LICENSE=	GPLv2
 
-USE_XZ=		yes
-USES=		iconv
+USES=		iconv tar:xz
 GNU_CONFIGURE=	yes
 PLIST_FILES=	bin/sapserver etc/sap.cfg-dist man/man1/sapserver.1.gz
 USE_RC_SUBR=	sapserver
 SUB_FILES=	pkg-message
 
 OPTIONS_DEFINE=	SLP
-SLP_DESC=	"Enable SLP support via openslp"
+SLP_DESC=	Enable SLP support via openslp
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
