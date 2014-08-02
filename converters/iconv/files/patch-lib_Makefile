@@ -1,5 +1,5 @@
 
-$FreeBSD: head/converters/iconv/files/patch-ai 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/converters/iconv/files/patch-lib_Makefile 363172 2014-07-28 15:03:50Z adamw $
 
 --- lib/Makefile.orig	Tue Nov 28 01:33:49 2000
 +++ lib/Makefile	Mon Jun  3 14:16:50 2002
