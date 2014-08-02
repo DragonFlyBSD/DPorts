@@ -14,8 +14,8 @@
 # bsd.port.mk.  There are significant differences in those so non-FreeBSD code
 # was removed.
 #
-# $FreeBSD: head/ports-mgmt/portlint/src/portlint.pl 361618 2014-07-12 14:52:49Z marcus $
-# $MCom: portlint/portlint.pl,v 1.325 2014/07/12 14:39:55 marcus Exp $
+# $FreeBSD: head/ports-mgmt/portlint/src/portlint.pl 363150 2014-07-28 13:21:06Z marcus $
+# $MCom: portlint/portlint.pl,v 1.327 2014/07/28 13:15:56 marcus Exp $
 #
 
 use strict;
@@ -24,6 +24,7 @@ use warnings;
 use Getopt::Std;
 use File::Find;
 use IPC::Open2;
+use File::Basename;
 use POSIX qw(strftime);
 
 sub perror($$$$);
@@ -50,7 +51,7 @@ $portdir = '.';
 # version variables
 my $major = 2;
 my $minor = 15;
-my $micro = 3;
+my $micro = 4;
 
 sub l { '[{(]'; }
 sub r { '[)}]'; }
@@ -1046,7 +1047,9 @@ sub checkpatch {
 		return;
 	}
 
-	if (length $file > 100) {
+	my $bfile = basename($file);
+
+	if (length $bfile > 100) {
 		&perror("FATAL", $file, -1, "make sure patch file names contain no ".
 			"more than 100 characters.");
 	}
