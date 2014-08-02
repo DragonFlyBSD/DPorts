@@ -3,7 +3,7 @@
 
 PORTNAME=	heimdal
 PORTVERSION=	1.5.2
-PORTREVISION=	10
+PORTREVISION=	12
 CATEGORIES=	security ipv6
 MASTER_SITES=	http://www.h5l.org/dist/src/ \
 		http://ftp.pdc.kth.se/pub/heimdal/src/ \
@@ -103,8 +103,6 @@ post-patch:
 .endif
 	@${REINPLACE_CMD} -e 's|$$ac_cv_header_fnmatch_h|yes|' \
 		${WRKSRC}/configure
-	@${REINPLACE_CMD} '/^kgetcred_LDADD =/s/$$/ $$(LIB_libintl)/' \
-		${WRKSRC}/kuser/Makefile.in
 	@${REINPLACE_CMD} -e 's|@LDFLAGS@|@LDFLAGS@ \$$\(PTHREADS_LIBADD\)|g' \
 		${WRKSRC}/lib/ipc/Makefile.in
 
