@@ -1,3 +1,2 @@
-USES+=		readline ncurses
+USES+=		ncurses
 LDFLAGS+=	-L${LOCALBASE}/lib -lncurses
-CONFIGURE_ENV+=	config_TARGET_READLINE_INC="-I${LOCALBASE}/include"
