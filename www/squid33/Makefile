@@ -3,7 +3,7 @@
 
 PORTNAME=	squid
 PORTVERSION=	3.3.${SQUID_STABLE_VER}
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www ipv6
 MASTER_SITES=	ftp://ftp.squid-cache.org/pub/%SUBDIR%/ \
 		http://mirrors.ccs.neu.edu/Squid/ \
@@ -44,9 +44,8 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 SQUID_STABLE_VER=	11
 
 CONFLICTS_INSTALL=	squid-2.[0-9].* squid32-* cacheboy-[0-9]* lusca-head-[0-9]*
-USES=		perl5
+USES=		perl5 tar:bzip2
 GNU_CONFIGURE=	yes
-USE_BZIP2=	yes
 USE_RC_SUBR=	squid
 
 USERS=		squid
