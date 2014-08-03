@@ -3,7 +3,7 @@
 
 PORTNAME=	gtk-vnc
 PORTVERSION=	0.3.10
-PORTREVISION=	10
+PORTREVISION=	12
 CATEGORIES=	net gnome
 MASTER_SITES=	GNOME
 
@@ -26,9 +26,5 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--with-gtkglext=yes
 INSTALL_TARGET=	install-strip
-
-post-patch:
-	@${REINPLACE_CMD} '/LDADD/s/GTK_CFLAGS/GTK_LIBS/' \
-		${WRKSRC}/examples/Makefile.in
 
 .include <bsd.port.mk>
