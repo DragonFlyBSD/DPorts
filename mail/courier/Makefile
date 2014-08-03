@@ -3,7 +3,7 @@
 
 PORTNAME=	courier
 PORTVERSION=	0.65.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	mail ipv6
 MASTER_SITES=	SF
 
@@ -58,10 +58,9 @@ WITH_TRANSPORT=	local esmtp dsn
 
 AUTOMAKE_ARGS=	--add-missing
 USE_AUTOTOOLS=	libtool aclocal automake
-USE_BZIP2=	yes
 USE_OPENSSL=	yes
 USE_SUBMAKE=	yes
-USES=		fam gettext gmake perl5 pkgconfig
+USES=		fam gettext gmake perl5 pkgconfig tar:bzip2
 
 USE_RC_SUBR=	courier
 
