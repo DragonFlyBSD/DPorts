@@ -4,6 +4,7 @@
 
 PORTNAME=	gnumeric
 PORTVERSION=	1.12.11
+PORTREVISION=	2
 CATEGORIES=	math gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -19,9 +20,8 @@ LIB_DEPENDS=	libgoffice-0.10.so:${PORTSDIR}/devel/goffice010 \
 		libpsiconv.so:${PORTSDIR}/converters/psiconv
 RUN_DEPENDS=	rarian-sk-config:${PORTSDIR}/textproc/rarian
 
-USE_XZ=		yes
-USES=		desktop-file-utils gettext gmake pathfix pkgconfig \
-		shebangfix
+USES=		desktop-file-utils gettext gmake libtool pathfix pkgconfig \
+		shebangfix tar:xz
 USE_GNOME=	gnomehier gnomeprefix intlhack libgsf pygobject3
 USE_PYTHON=	2
 INSTALLS_OMF=	yes
@@ -56,7 +56,7 @@ CONFIGURE_ARGS+=	--without-perl
 PLIST_SUB+=		PERL="@comment "
 .endif
 
-.if defined(WITH_GDA)
+.if ${PORT_OPTIONS:MGDA}
 USE_GNOME+=		libgda5-ui
 CONFIGURE_ARGS+=	--with-gda
 PLIST_SUB+=		GDA=""
