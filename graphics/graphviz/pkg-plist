@@ -9,6 +9,7 @@ bin/dot
 bin/dot2gxl
 %%XPM%%bin/dotty
 bin/dot_builtins
+bin/edgepaint
 bin/fdp
 bin/gc
 bin/gml2gv
@@ -179,6 +180,7 @@ lib/graphviz/libgvpr.so.2
 %%PERL%%%%SITE_PERL%%/%%PERL_ARCH%%/gv.so
 %%PYTHON%%lib/graphviz/python/_gv.so
 %%PYTHON%%lib/graphviz/python/gv.py
+%%PYTHON%%lib/graphviz/python/libgv_python.la
 %%PYTHON%%lib/graphviz/python/libgv_python.so
 %%PYTHON%%%%PYTHON_LIBDIR%%/site-packages/_gv.so
 %%PYTHON%%%%PYTHON_LIBDIR%%/site-packages/gv.py
@@ -211,6 +213,7 @@ man/man1/diffimg.1.gz
 man/man1/dijkstra.1.gz
 man/man1/dot.1.gz
 %%XPM%%man/man1/dotty.1.gz
+man/man1/edgepaint.1.gz
 man/man1/gc.1.gz
 man/man1/graphml2gv.1.gz
 man/man1/gml2gv.1.gz
@@ -354,6 +357,7 @@ man/man7/graphviz.7.gz
 %%PORTDOCS%%%%DOCSDIR%%/html/html2.gif
 %%PORTDOCS%%%%DOCSDIR%%/html/html3.gif
 %%PORTDOCS%%%%DOCSDIR%%/html/html4.gif
+%%PORTDOCS%%%%DOCSDIR%%/html/internal_todo.html
 %%PORTDOCS%%%%DOCSDIR%%/html/invhouse.gif
 %%PORTDOCS%%%%DOCSDIR%%/html/invtrapezium.gif
 %%PORTDOCS%%%%DOCSDIR%%/html/invtriangle.gif
@@ -396,6 +400,7 @@ man/man7/graphviz.7.gz
 %%PORTDOCS%%%%DOCSDIR%%/pdf/dotguide.pdf
 %%PORTDOCS%%%%DOCSDIR%%/pdf/dotty.1.pdf
 %%PORTDOCS%%%%DOCSDIR%%/pdf/dottyguide.pdf
+%%PORTDOCS%%%%DOCSDIR%%/pdf/edgepaint.1.pdf
 %%PORTDOCS%%%%DOCSDIR%%/pdf/expr.3.pdf
 %%PORTDOCS%%%%DOCSDIR%%/pdf/fdp.1.pdf
 %%PORTDOCS%%%%DOCSDIR%%/pdf/gc.1.pdf
