@@ -3,6 +3,7 @@
 
 PORTNAME=	memcached
 PORTVERSION=	1.4.20
+PORTREVISION=	2
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE} \
 		${MASTER_SITE_GENTOO}
@@ -11,15 +12,16 @@ MASTER_SITE_SUBDIR=	distfiles
 MAINTAINER=	swills@FreeBSD.org
 COMMENT=	High-performance distributed memory object cache system
 
-LIB_DEPENDS=	libevent-2.0.so:${PORTSDIR}/devel/libevent2
+LICENSE=	BSD3CLAUSE
+LICENSE_FILE=	${WRKSRC}/COPYING
 
-TEST_DEPENDS=	prove:${PORTSDIR}/lang/${PERL_PORT} \
-		git:${PORTSDIR}/devel/git
+LIB_DEPENDS=	libevent.so:${PORTSDIR}/devel/libevent2
 
 CONFLICTS=	memcached-1.2*
 
 # Dtrace option disabled until it is fixed upstream
-OPTIONS_DEFINE=	SASL DOCS
+OPTIONS_DEFINE=	SASL DOCS DTRACE
+OPTIONS_DEFAULT=	SASL DOCS
 
 DTRACE_DESC=	Enable dtrace probes
 SASL_DESC=	Enable SASL Authentication
@@ -32,19 +34,10 @@ SHEBANG_FILES=	scripts/memcached-tool
 
 USE_CSTD=	c99
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--with-libevent=${LOCALBASE}/lib/event2 --program-prefix= \
+CONFIGURE_ARGS=	--with-libevent=${LOCALBASE} --program-prefix= \
 		--disable-coverage
 
-PLIST_FILES=	bin/memcached \
-		bin/memcached-tool \
-		include/memcached/protocol_binary.h \
-		man/man1/memcached.1.gz
-PLIST_DIRS=	include/memcached
-
-PORTDOCS=	protocol.txt readme.txt
-
 CFLAGS+=	-fstack-protector \
-		-I${LOCALBASE}/include/event2/compat \
 		-I${LOCALBASE}/include
 
 DTRACE_CONFIGURE_ENABLE=	dtrace
@@ -65,15 +58,19 @@ CONFIGURE_ARGS+=	--enable-64bit
 BROKEN=			DTRACE broken with gcc/clang - reported upstream
 .endif
 
-post-patch:
-	@${REINPLACE_CMD} -e "s,-levent,-levent-2.0,g" ${WRKSRC}/configure
+.if ${PORT_OPTIONS:MDOCS}
+BUILD_DEPENDS=	xml2rfc:${PORTSDIR}/textproc/xml2rfc
+.endif
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/memcached-tool ${STAGEDIR}${PREFIX}/bin
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
-.for i in ${PORTDOCS}
+.for i in protocol-binary-range.txt protocol-binary.txt protocol.txt \
+		readme.txt threads.txt
 	${INSTALL_DATA} ${WRKSRC}/doc/${i} ${STAGEDIR}${DOCSDIR}
 .endfor
+.endif
 
 regression-test: test
 test: build
