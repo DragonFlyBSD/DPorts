@@ -3,7 +3,7 @@
 
 PORTNAME=	ldap
 PORTVERSION=	0.9.10
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net ruby
 MASTER_SITES=	RF
 MASTER_SITE_SUBDIR=	ruby-${PORTNAME}
@@ -24,7 +24,7 @@ LIB_DEPENDS=	${LOCALBASE}/mozilla/directory/lib/libldap.so.1:${PORTSDIR}/net/lda
 USE_OPENLDAP=	yes
 .endif
 
-USE_BZIP2=	yes
+USES=	tar:bzip2
 USE_RUBY=	yes
 USE_RUBY_EXTCONF=	yes
 
