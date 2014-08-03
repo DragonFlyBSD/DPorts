@@ -1,4 +1,4 @@
-$FreeBSD: head/devel/antlr/files/patch-lib::cpp::antlr::CharBuffer.hpp 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/devel/antlr/files/patch-lib__cpp__antlr__CharBuffer.hpp 363362 2014-07-29 17:12:47Z adamw $
 
 --- lib/cpp/antlr/CharBuffer.hpp.orig	Mon Nov 15 16:35:21 2004
 +++ lib/cpp/antlr/CharBuffer.hpp	Mon Nov 15 16:36:04 2004

@@ -1,4 +1,4 @@
-$FreeBSD: head/devel/antlr/files/patch-lib::cpp::src::ASTFactory.cpp 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/devel/antlr/files/patch-lib__cpp__src__ASTFactory.cpp 363362 2014-07-29 17:12:47Z adamw $
 
 --- lib/cpp/src/ASTFactory.cpp.orig	Mon Nov 15 16:31:34 2004
 +++ lib/cpp/src/ASTFactory.cpp	Mon Nov 15 16:32:20 2004
