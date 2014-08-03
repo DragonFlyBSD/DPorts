@@ -1,3 +1,2 @@
 USE_GCC=	4.8
-USES+=		readline
 CONFIGURE_ENV:= ${CONFIGURE_ENV:C/^ac_cv_have_decl.*//}
