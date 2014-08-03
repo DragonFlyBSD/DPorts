@@ -4,7 +4,7 @@
 
 PORTNAME?=	libpurple
 PORTVERSION=	2.10.9
-PORTREVISION?=	5
+PORTREVISION?=	6
 CATEGORIES?=	net-im
 MASTER_SITES=	SF/pidgin/Pidgin/${PORTVERSION}
 DISTNAME=	pidgin-${PORTVERSION}
@@ -323,6 +323,12 @@ post-patch:
 .if defined(PIDGIN_SLAVE)
 	@${FIND} ${BUILD_WRKSRC} -name Makefile.in | ${XARGS} ${REINPLACE_CMD} -e \
 		's|$$(top_builddir)/libpurple/libpurple.la|-lpurple|'
+.endif
+
+.if ${PORT_OPTIONS:MPERL}
+post-stage:
+	@${SED} -i '' -e 's|^${STAGEDIR}||g' \
+		${STAGEDIR}${PREFIX}/lib/purple-2/perl/auto/Purple/.packlist
 .endif
 
 .include <bsd.port.post.mk>
