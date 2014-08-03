@@ -4,7 +4,7 @@
 
 PORTNAME=	gconf2
 PORTVERSION=	2.32.0
-PORTREVISION?=	4
+PORTREVISION?=	5
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/GConf/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -14,17 +14,17 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Configuration database system for GNOME
 
-USE_BZIP2=	yes
-
 LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING
+
+USES=		tar:bzip2
 
 .if !defined(REFERENCE_PORT)
 
 LIB_DEPENDS=	libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
 		libpolkit-gobject-1.so:${PORTSDIR}/sysutils/polkit
 
-USES=		pathfix gettext gmake pkgconfig
+USES+=		pathfix gettext gmake pkgconfig
 USE_GNOME=	gnomehier orbit2 gtk20 libxml2 ltverhack \
 		referencehack intlhack dconf introspection:build
 USE_LDCONFIG=	yes
