@@ -4,7 +4,7 @@
 
 PORTNAME=	libsoup
 PORTVERSION=	2.40.3
-PORTREVISION?=	5
+PORTREVISION?=	6
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -16,11 +16,11 @@ BUILD_DEPENDS=	glib-networking>=2.29.18:${PORTSDIR}/net/glib-networking
 LIB_DEPENDS=	libgcrypt.so:${PORTSDIR}/security/libgcrypt
 RUN_DEPENDS=	glib-networking>=2.29.18:${PORTSDIR}/net/glib-networking
 
-USE_XZ=		yes
+USES=		tar:xz
 
 .if !defined(REFERENCE_PORT)
 
-USES=		gettext gmake libtool:keepla pathfix pkgconfig
+USES+=		gettext gmake libtool:keepla pathfix pkgconfig
 USE_GNOME=	gnomehier glib20 libxml2 referencehack intltool
 USE_SQLITE=	3
 USE_LDCONFIG=	yes
