@@ -1,18 +1,19 @@
 # Created by: Joseph Koshy <jkoshy@FreeBSD.org>
 # $FreeBSD$
 
-PORTNAME=	racket-minimal
-PORTVERSION=	5.93
+PORTNAME=	racket
+PKGNAMESUFFIX=	-minimal
+PORTVERSION=	6.0.1
 CATEGORIES=	lang scheme
-MASTER_SITES=	http://download.racket-lang.org/installers/${PORTVERSION}/ \
-		http://www.eecs.northwestern.edu/racket/${PORTVERSION}/ \
+MASTER_SITES=	http://mirror.racket-lang.org/installers/${PORTVERSION}/ \
 		http://www.cs.utah.edu/plt/installers/${PORTVERSION}/ \
+		http://www.eecs.northwestern.edu/racket/${PORTVERSION}/ \
+		http://mirror.csclub.uwaterloo.ca/racket/racket-installers/${PORTVERSION}/ \
 		http://mirror.informatik.uni-tuebingen.de/mirror/racket/${PORTVERSION}/ \
-		ftp://infogroep.be/pub/racket/installers/${PORTVERSION}/ \
-		http://russell.cs.bilgi.edu.tr/racket-installers/${PORTVERSION}/
-DISTNAME=	${PORTNAME}-${PORTVERSION}-src
-EXTRACT_SUFX=	.tgz
-DIST_SUBDIR=	${PORTNAME}/${PORTVERSION}
+		http://racket.infogroep.be/${PORTVERSION}/
+
+DISTNAME=	${PORTNAME}${PKGNAMESUFFIX}-${PORTVERSION}-src
+DIST_SUBDIR=	${PORTNAME}${PKGNAMESUFFIX}/${PORTVERSION}
 
 MAINTAINER=	olgeni@FreeBSD.org
 COMMENT=	Interactive, integrated, graphical Scheme programming environment
@@ -48,13 +49,10 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 CPPFLAGS+=	-I${LOCALBASE}/include
 
 WRKSRC=		${WRKDIR}/racket-${PORTVERSION}/src
-USES+=		iconv
-USE_AUTOTOOLS=	libtool:env
+USES=		iconv libtool tar:tgz
 USE_LDCONFIG=	yes
 
 ONLY_FOR_ARCHS=	i386 amd64
-
-RACKET_PLIST=	${WRKDIR}/pkg-plist
 
 .include <bsd.port.pre.mk>
 
