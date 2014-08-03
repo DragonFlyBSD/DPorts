@@ -11,7 +11,7 @@ DISTNAME=	${PORTNAME:S/x/X/}-${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A drop in replacement for the "dialog" or "cdialog" programs
 
-USE_BZIP2=	yes
+USES=		tar:bzip2
 USE_GNOME=	gtk12
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
