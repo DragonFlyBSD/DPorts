@@ -1,5 +1,5 @@
 
-$FreeBSD: head/chinese/bg5ps/files/patch-aa 341071 2014-01-25 18:11:42Z johans $
+$FreeBSD: head/chinese/bg5ps/files/patch-Makefile 363162 2014-07-28 14:37:20Z adamw $
 
 --- Makefile.orig	2000-02-14 21:41:27.000000000 +0100
 +++ Makefile	2014-01-25 19:07:23.000000000 +0100
