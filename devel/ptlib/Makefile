@@ -3,6 +3,7 @@
 
 PORTNAME=	ptlib
 PORTVERSION=	2.10.10
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
 
@@ -15,8 +16,7 @@ LIB_DEPENDS=	libexpat.so:${PORTSDIR}/textproc/expat2
 
 CONFLICTS=	pwlib-1.*
 
-USE_XZ=		yes
-USES=		bison gmake pkgconfig
+USES=		bison gmake pkgconfig tar:xz
 USE_AUTOTOOLS=	autoconf:env automake:env
 GNU_CONFIGURE=	yes
 USE_OPENSSL=	yes
