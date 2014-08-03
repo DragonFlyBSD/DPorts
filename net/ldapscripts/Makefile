@@ -3,11 +3,10 @@
 
 PORTNAME=	ldapscripts
 PORTVERSION=	2.0.5
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION} \
 		http://contribs.martymac.org/ldapscripts/
-EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	martymac@FreeBSD.org
 COMMENT=	Scripts to manage posix accounts in an OpenLDAP directory
@@ -22,7 +21,7 @@ RUN_DEPENDS=	ldapadd:${PORTSDIR}/net/openldap${OPENLDAP_VER}-client \
 		ldappasswd:${PORTSDIR}/net/openldap${OPENLDAP_VER}-client
 
 USE_OPENLDAP=	yes
-USES=		iconv
+USES=		iconv tar:tgz
 LIBDIR=	${PREFIX}/lib/${PORTNAME}
 MAKE_ENV+=	MANDIR=${MANPREFIX}/man \
 		ETCDIR=${ETCDIR}
