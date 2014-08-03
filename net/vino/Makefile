@@ -4,7 +4,7 @@
 
 PORTNAME=	vino
 PORTVERSION=	2.32.2
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	net gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -16,8 +16,7 @@ LIB_DEPENDS=	libgnutls.so:${PORTSDIR}/security/gnutls \
 		libtelepathy-glib.so:${PORTSDIR}/net-im/telepathy-glib \
 		libunique-1.0.so:${PORTSDIR}/x11-toolkits/unique
 
-USE_BZIP2=	yes
-USES=		gettext gmake pkgconfig
+USES=		gettext gmake pkgconfig tar:bzip2
 USE_GNOME=	gnomeprefix intlhack gnomehack gnomepanel
 USE_XORG=	xtst
 GNOME_DESKTOP_VERSION=2
