@@ -1,0 +1,13 @@
+--- libpkg/pkg.h.in.orig	2014-07-29 09:17:01.000000000 +0000
++++ libpkg/pkg.h.in
+@@ -63,8 +63,9 @@
+ #define OSMAJOR	__FreeBSD__
+ #endif
+ 
++/* Not supported under DragonFly */
+ #ifdef __DragonFly__
+-#define OSMAJOR	__DragonFly__
++#undef OSMAJOR
+ #endif
+ 
+ #ifndef __DECONST
