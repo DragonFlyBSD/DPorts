@@ -8,14 +8,14 @@ CATEGORIES=	net-p2p
 MASTER_SITES=	GOOGLE_CODE
 DISTNAME=	eiskaltdcpp-${DISTVERSION}
 
-MAINTAINER=	fjoe@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Shared data for EiskaltDC++ GUIs
 
 LICENSE=	GPLv3
 
 PROJECTHOST=	eiskaltdc
 
-USE_XZ=		yes
+USES=		tar:xz
 NO_BUILD=	yes
 INSTALLS_ICONS=	yes
 
