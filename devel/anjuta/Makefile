@@ -4,7 +4,7 @@
 
 PORTNAME=	anjuta
 PORTVERSION=	2.32.1.1
-PORTREVISION=	12
+PORTREVISION=	13
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -30,7 +30,7 @@ RUN_DEPENDS=	bash:${PORTSDIR}/shells/bash \
 
 CONFLICTS=	anjuta-3.[0-9]*
 
-USES=		desktop-file-utils gmake gettext libtool:keepla pathfix \
+USES=		desktop-file-utils gmake gettext libtool pathfix \
 		perl5 pkgconfig shared-mime-info shebangfix tar:bzip2
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
@@ -93,15 +93,6 @@ PLIST_SUB+=	DEVHELP=""
 
 post-patch:
 	@${RM} ${WRKSRC}/plugins/debug-manager/anjuta-debug-manager.schemas
-	@${REINPLACE_CMD} '/^test_LDADD =/ \
-		s/=/= -lgtk-x11-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0 -lxml2 $$(INTLLIBS)/' \
-		${WRKSRC}/plugins/gbf-am/Makefile.in
-	@${REINPLACE_CMD} '/^gdbmi_test_LDADD =/s/$$/ -lgtk-x11-2.0 -lglib-2.0/' \
-		${WRKSRC}/plugins/gdb/Makefile.in
-	@${REINPLACE_CMD} -e '/^anjuta_LDADD =/s/=/= $$(ANJUTA_LIBS)/' \
-		-e '/^anjuta_shell_LDADD =/ \
-		s/=/= -lgtk-x11-2.0 -lgobject-2.0 -lglib-2.0 $$(INTLLIBS)/' \
-		${WRKSRC}/src/Makefile.in
 
 post-configure:
 	@${REINPLACE_CMD} -e 's|"make|"gmake|g' \
