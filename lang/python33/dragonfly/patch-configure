@@ -1,0 +1,11 @@
+--- configure.orig	2014-03-09 08:40:34.000000000 +0000
++++ configure
+@@ -5607,7 +5607,7 @@ $as_echo "#define Py_ENABLE_SHARED 1" >>
+ 	  BLDLIBRARY='-L. -lpython$(LDVERSION)'
+ 	  RUNSHARED=LD_LIBRARY_PATH=`pwd`:${LD_LIBRARY_PATH}
+ 	  case $ac_sys_system in
+-	      FreeBSD*)
++	      DragonFly*|FreeBSD*)
+ 		SOVERSION=`echo $SOVERSION|cut -d "." -f 1`
+ 		;;
+ 	  esac
