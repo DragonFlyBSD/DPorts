@@ -1,5 +1,5 @@
 
-$FreeBSD: head/audio/cdplay/files/patch-ae 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/audio/cdplay/files/patch-main.c 363157 2014-07-28 14:12:36Z adamw $
 
 --- ./main.c.orig	Mon May 19 15:44:41 2003
 +++ ./main.c	Mon May 19 15:55:24 2003
