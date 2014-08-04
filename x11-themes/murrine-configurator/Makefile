@@ -6,7 +6,6 @@ PORTVERSION=	0.5
 PORTREVISION=	7
 CATEGORIES=	x11-themes
 MASTER_SITES=	http://cimi.netsons.org/media/download_gallery/murrine/
-DISTNAME=	murrine-configurator-${PORTVERSION}
 
 MAINTAINER=	tstodgell@gmail.com
 COMMENT=	GUI gtkrc configuration tool for the Murrine GTK engine
@@ -16,14 +15,14 @@ RUN_DEPENDS=	${LOCALBASE}/bin/bash:${PORTSDIR}/shells/bash \
 		${LOCALBASE}/bin/zenity:${PORTSDIR}/x11/zenity
 
 NO_BUILD=	yes
-USE_BZIP2=	yes
+USES=	tar:bzip2
 USE_GNOME=	gtk20
 
 do-install:
-	@${INSTALL_SCRIPT} ${WRKSRC}/files/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
-	@${INSTALL_DATA} ${WRKSRC}/files/${PORTNAME}.png \
+	${INSTALL_SCRIPT} ${WRKSRC}/files/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/files/${PORTNAME}.png \
 		${STAGEDIR}${PREFIX}/share/pixmaps
-	@${INSTALL_DATA} ${WRKSRC}/files/${PORTNAME}.desktop \
+	${INSTALL_DATA} ${WRKSRC}/files/${PORTNAME}.desktop \
 		${STAGEDIR}${PREFIX}/share/applications
 
 .include <bsd.port.mk>
