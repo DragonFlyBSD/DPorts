@@ -1,5 +1,5 @@
 
-$FreeBSD: head/biology/povchem/files/patch-ab 312001 2013-02-10 07:55:45Z miwi $
+$FreeBSD: head/biology/povchem/files/patch-povchem.c 363159 2014-07-28 14:22:16Z adamw $
 
 --- povchem.c.orig	Fri Jul 11 11:49:07 2003
 +++ povchem.c	Fri Jul 11 11:59:23 2003
