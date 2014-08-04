@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	amarok
-PORTVERSION=	2.7.0
-PORTREVISION=	7
+PORTVERSION=	2.8.0
+PORTREVISION=	1
 CATEGORIES=	audio kde
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	stable/${PORTNAME}/${PORTVERSION}/src
@@ -32,8 +32,7 @@ USE_QT4=	corelib dbus designer gui network opengl \
 		phonon script sql svg webkit xml \
 		qmake_build moc_build rcc_build uic_build
 USE_XORG=	x11
-USE_BZIP2=	yes
-USES=		cmake pkgconfig shared-mime-info
+USES=		cmake pkgconfig shared-mime-info tar:bzip2
 USE_LDCONFIG=	yes
 
 BROKEN_sparc64=	does not build (GCC-related error)
