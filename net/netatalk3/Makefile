@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	netatalk
-PORTVERSION=	3.1.2
+PORTVERSION=	3.1.3
 PORTEPOCH=	1
 CATEGORIES=	net
 MASTER_SITES=	SF
@@ -15,7 +15,7 @@ COMMENT=	File server for Mac OS X
 LICENSE=	GPLv2
 
 LIB_DEPENDS=	libgcrypt.so:${PORTSDIR}/security/libgcrypt \
-    		libevent-2.0.so:${PORTSDIR}/devel/libevent2
+    		libevent.so:${PORTSDIR}/devel/libevent2
 
 USE_BDB=	5+
 USES=		iconv gmake pkgconfig perl5 libtool tar:bzip2
@@ -31,9 +31,9 @@ CONFIGURE_ARGS+=	--with-pkgconfdir=${PREFIX}/etc \
 			--localstatedir=/var \
 			--disable-bundled-libevent \
 			--with-libevent-header=${LOCALBASE}/include \
-			--with-libevent-lib=${LOCALBASE}/lib/event2
+			--with-libevent-lib=${LOCALBASE}/lib
 
-OPTIONS_DEFINE=PAM KRB5 LDAP SENDFILE KERBEROS DTRACE DBUS MYSQL ACL TCPWRAP
+OPTIONS_DEFINE=PAM KRB5 LDAP SENDFILE KERBEROS DBUS MYSQL ACL TCPWRAP
 OPTIONS_DEFAULT=KERBEROS DBUS TCPWRAP
 OPTIONS_RADIO=ZEROCONF
 OPTIONS_RADIO_ZEROCONF=AVAHI MDNSRESPONDER
@@ -41,7 +41,7 @@ OPTIONS_DEFAULT+=AVAHI
 
 NOZEROCONF_DESC=Disable Zeroconf(Bonjour) support
 KRB5_DESC=	Enable Kerberos V UAM
-DTRACE_DESC=	Enable DTrace support
+#DTRACE_DESC=	Enable DTrace support
 MYSQL_DESC=	Enable MySQL CNID backend support
 SENDFILE_DESC=	Enable Sendfile support
 ACL_DESC=	Enable ACL support
@@ -149,6 +149,10 @@ post-patch:
 	    	s|%%DB_LIB%%|-l${BDB_LIB_NAME}|g ; \
 		s|%%LOCALBASE%%|${LOCALBASE}|g' \
 		${WRKSRC}/configure
+
+post-stage:
+	@${RM} -f ${STAGEDIR}${PREFIX}/etc/afp.conf \
+		${STAGEDIR}${PREFIX}/etc/extmap.conf
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/contrib/macusers/macusers \

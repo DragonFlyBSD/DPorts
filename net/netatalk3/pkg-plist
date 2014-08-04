@@ -61,8 +61,8 @@ include/atalk/vfs.h
 include/atalk/volume.h
 lib/libatalk.a
 lib/libatalk.so
-lib/libatalk.so.14
-lib/libatalk.so.14.0.0
+lib/libatalk.so.15
+lib/libatalk.so.15.0.0
 man/man1/ad.1.gz
 man/man1/afpldaptest.1.gz
 man/man1/afppasswd.1.gz
@@ -88,7 +88,8 @@ sbin/netatalk
 share/aclocal/netatalk.m4
 @dirrm include/atalk
 @dirrm libexec/netatalk-uams
-@unexec rm -f /var/netatalk/CNID/README
-@unexec rm -f /var/netatalk/README
-@unexec rmdir /var/netatalk/CNID 2>/dev/null || true
-@unexec rmdir /var/netatalk 2>/dev/null || true
+@cwd /var
+netatalk/CNID/README
+netatalk/README
+@dirrmtry netatalk/CNID
+@dirrmtry netatalk
