@@ -1,4 +1,3 @@
-# Created by: Diane Bruce <db@db.net>
 # $FreeBSD$
 
 PORTNAME=	wsjt
@@ -10,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 MASTER_SITE_SUBDIR=	db
 DISTNAME=	wsjt-r${SVN_REV}
 
-MAINTAINER=	db@FreeBSD.org
+MAINTAINER=	hamradio@FreeBSD.org
 COMMENT=	Weak signal ham radio communication package
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}tkinter>0:${PORTSDIR}/x11-toolkits/py-tkinter \
@@ -22,8 +21,7 @@ BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/scipy:${PORTSDIR}/science/py-scipy \
 		${PYNUMPY}
 
 ALL_TARGET=	build
-USES=		fortran gmake
-USE_BZIP2=	yes
+USES=		fortran gmake tar:bzip2
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-gfortran --prefix=${LOCALBASE} \
 		--with-portaudio-include-dir=${LOCALBASE}/include/portaudio2 \
@@ -35,7 +33,6 @@ USE_AUTOTOOLS=	libtool
 PLIST_SUB=	PYVER=${PYTHON_VERSION:S/python//} \
 		VERSION=${VERSION}
 
-NO_STAGE=	yes
 .include <bsd.port.pre.mk>
 
 .if defined(BOOTSTRAP)
@@ -60,18 +57,14 @@ do-fetch:
 .endif
 .endif
 
+pre-patch:
+	@${CP}	${FILESDIR}/configure ${WRKSRC}
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for d in ${WRKSRC}/WSJT_Quick_Reference.pdf  ${WRKSRC}/WSJT_Source_Code.txt \
 	${WRKSRC}/WSJT_User_600.pdf ${WRKSRC}/UpdateHistory.txt \
 	${WRKSRC}/WSJT_Source_Code.txt ${WRKSRC}/LICENSE.TXT
-	${INSTALL_DATA} ${WRKSRC}/${d} ${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${d} ${STAGEDIR}${DOCSDIR}
 .endfor
-	@${ECHO}
-	@${ECHO} "docs installed in ${DOCSDIR}"
-	@${ECHO}
-.endif
-	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.post.mk>
