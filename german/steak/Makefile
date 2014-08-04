@@ -9,7 +9,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/Steak%20${PORTVERSION} \
 		http://www.tm.informatik.uni-frankfurt.de/%7Erazi/steak/program/
 DISTNAME=	Steak.${PORTVERSION}
 
-MAINTAINER=	conrads@cox.net
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	English <-> German dictionary under the GPL
 
 RUN_DEPENDS=	ispell:${PORTSDIR}/textproc/aspell-ispell
@@ -24,7 +24,7 @@ USE_GNOME=	gtk12
 MAKE_ARGS=	-D xsteak
 .endif
 WRKSRC=		${WRKDIR}/Steak
-USE_BZIP2=	yes
+USES=	tar:bzip2
 
 .if defined(WITHOUT_XSTEAK)
 PLIST_SUB+=	NOXSTEAK:="@comment "
