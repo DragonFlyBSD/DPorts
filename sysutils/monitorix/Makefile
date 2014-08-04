@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	monitorix
-PORTVERSION=	3.4.0
+PORTVERSION=	3.5.1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.monitorix.org/ \
 		http://www.monitorix.org/old_versions/ \
