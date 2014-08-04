@@ -9,6 +9,8 @@ CATEGORIES=	editors
 MAINTAINER=	gahr@FreeBSD.org
 COMMENT=	Advanced cross-platform text editor
 
+LICENSE=	GPLv3
+
 LIB_DEPENDS=	#
 
 OPTIONS_SINGLE=		FOX
@@ -26,7 +28,7 @@ USES=		gmake pkgconfig lua:51 desktop-file-utils
 USE_AUTOTOOLS=	aclocal autoconf automake
 ACLOCAL_ARGS=	--force -I m4
 AUTOMAKE_ARGS=	--gnu --add-missing --copy
-CXXFLAGS+=	-fPIC -Wno-invalid-source-encoding -Wno-format
+CXXFLAGS+=	-fPIC
 LDFLAGS+=	-L${LOCALBASE}/lib -lintl -lX11
 CONFIGURE_ARGS+=--with-system-lua \
 		--with-lua-pkg=lua-${LUA_VER}
