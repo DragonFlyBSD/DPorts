@@ -1,15 +1,15 @@
---- libtransmission/platform-quota.c.orig	2013-08-09 02:45:44.822416000 +0000
+--- libtransmission/platform-quota.c.orig	2014-07-01 17:08:59.714910000 +0000
 +++ libtransmission/platform-quota.c
-@@ -20,6 +20,8 @@
+@@ -17,6 +17,8 @@
   #include <sys/types.h> /* types needed by quota.h */
   #if defined(__FreeBSD__) || defined(__OpenBSD__)
    #include <ufs/ufs/quota.h> /* quotactl() */
 + #elif defined (__DragonFly__)
-+  #include <vfs/ufs/quota.h> /* quotactl */
-  #elif defined (__sun)
-   #include <sys/fs/ufs_quota.h> /* quotactl */
-  #else
-@@ -198,12 +200,17 @@ getblkdev (const char * path)
++  #include <vfs/ufs/quota.h> /* quotactl() */
+  #elif defined (__NetBSD__)
+   #include <sys/param.h>
+   #ifndef statfs
+@@ -241,12 +243,17 @@ getquota (const char * device)
  static int64_t
  getquota (const char * device)
  {
@@ -28,7 +28,7 @@
    if (quotactl(device, QCMD(Q_GETQUOTA, USRQUOTA), getuid(), (caddr_t) &dq) == 0)
      {
  #elif defined(__sun)
-@@ -235,7 +242,7 @@ getquota (const char * device)
+@@ -278,7 +285,7 @@ getquota (const char * device)
            /* No quota enabled for this user */
            return -1;
          }
