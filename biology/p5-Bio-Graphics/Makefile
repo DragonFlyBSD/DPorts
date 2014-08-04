@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	Bio-Graphics
-PORTVERSION=	2.37
+PORTVERSION=	2.38
 CATEGORIES=	biology perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -21,6 +21,6 @@ BUILD_DEPENDS=	p5-Bio-SCF>=1.01:${PORTSDIR}/biology/p5-Bio-SCF \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
-USE_PERL5=	configure
+USE_PERL5=	modbuild
 
 .include <bsd.port.mk>
