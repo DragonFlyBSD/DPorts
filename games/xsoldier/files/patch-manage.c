@@ -1,5 +1,5 @@
 
-$FreeBSD: head/games/xsoldier/files/patch-ab 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/games/xsoldier/files/patch-manage.c 363239 2014-07-28 19:39:50Z adamw $
 
 --- manage.c.orig
 +++ manage.c
