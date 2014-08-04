@@ -8,7 +8,7 @@ CATEGORIES=	net-p2p
 MASTER_SITES=	GOOGLE_CODE
 DISTNAME=	eiskaltdcpp-${DISTVERSION}
 
-MAINTAINER=	fjoe@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	EiskaltDC++ Direct Connect client GTK GUI
 
 LICENSE=	GPLv3
@@ -20,9 +20,8 @@ BUILD_DEPENDS+=	chrpath:${PORTSDIR}/devel/chrpath
 CMAKE_ARGS+=	-DBUILD_LIB:BOOL=OFF
 PROJECTHOST=	eiskaltdc
 
-USE_XZ=		yes
 USE_GCC=	yes
-USES=		cmake gettext
+USES=		cmake gettext tar:xz
 USE_OPENSSL=	yes
 
 MAN1=		${PORTNAME}.1
