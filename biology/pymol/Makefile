@@ -7,7 +7,7 @@ PORTREVISION=	3
 CATEGORIES=	biology python
 MASTER_SITES=	${MASTER_SITE_LOCAL:S|%SUBDIR%|maho/pymol|}
 
-MAINTAINER=	maho@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Free and Open-Source molecular modeling system
 
 BUILD_DEPENDS=	${PYNUMERIC}
@@ -19,10 +19,9 @@ LIB_DEPENDS=	libpng15.so:${PORTSDIR}/graphics/png \
 VERSION=	1.5.0.1
 SVNREVISION=	3978
 
-USE_BZIP2=	yes
 WRKSRC=		${WRKDIR}/pymol-${PORTVERSION}
 USE_GL=		glut glew
-USES=		gmake
+USES=		gmake tar:bzip2
 USE_PYTHON=	yes
 PLIST_SUB=	PYMOL_VER=${VERSION} PYTHON_VER=${PYTHON_VER}
 
