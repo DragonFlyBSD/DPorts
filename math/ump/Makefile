@@ -8,13 +8,12 @@ CATEGORIES=	math
 MASTER_SITES=	SF/u-m-p/u-m-p/${PORTVERSION}
 PKGNAMESUFFIX=	-math
 
-MAINTAINER=	nivit@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Graphical, easy to use math program
 
 CONFLICTS=	ump-1.[0-9]*
 
-USES=		gmake pkgconfig
-USE_BZIP2=	yes
+USES=		gmake pkgconfig tar:bzip2
 USE_GNOME=	gtk20
 USE_GL=		glu
 
