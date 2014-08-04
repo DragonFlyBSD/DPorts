@@ -1,5 +1,5 @@
 
-$FreeBSD: head/games/uhexen/files/patch-src::w_wad.c 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/games/uhexen/files/patch-src__w_wad.c 363362 2014-07-29 17:12:47Z adamw $
 
 --- src/w_wad.c	2003/02/10 14:47:45	1.1
 +++ src/w_wad.c	2003/02/10 14:47:58
