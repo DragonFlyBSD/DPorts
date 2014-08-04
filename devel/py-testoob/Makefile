@@ -16,10 +16,7 @@ OPTIONS_DEFINE=	TWISTED HTML
 TWISTED_DESC=	enable running in threads
 HTML_DESC=	enable HTML output
 
-# bypass infrastructure bug (taken from www/py-django)
-OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options
-
-USE_BZIP2=	yes
+USES=		tar:bzip2
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
 PYDISTUTILS_AUTOPLIST=	yes
