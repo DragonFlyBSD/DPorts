@@ -7,7 +7,7 @@ PORTREVISION=	11
 CATEGORIES=	graphics gnome
 MASTER_SITES=	http://download.gna.org/colorscheme/releases/
 
-MAINTAINER=	ps.ports@smyrak.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Color scheme builder for the GNOME desktop
 
 LIB_DEPENDS=	libglademm-2.4.so:${PORTSDIR}/devel/libglademm24 \
@@ -16,8 +16,7 @@ LIB_DEPENDS=	libglademm-2.4.so:${PORTSDIR}/devel/libglademm24 \
 # --disable-gnome option is broken in 0.4.2
 #OPTIONS=	GNOME	"Adds GNOME support"	on
 
-USE_BZIP2=	yes
-USES=		gettext gmake pkgconfig
+USES=		gettext gmake pkgconfig tar:bzip2
 USE_GNOME=	gnomeprefix gnomehack gnomedocutils intlhack
 GCONF_SCHEMAS=	agave.schemas
 INSTALLS_ICONS=	yes
