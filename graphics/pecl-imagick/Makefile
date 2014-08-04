@@ -7,7 +7,6 @@ PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://pecl.php.net/get/
 PKGNAMEPREFIX=	pecl-
-EXTRACT_SUFX=	.tgz
 DIST_SUBDIR=	PECL
 
 MAINTAINER=	mm@FreeBSD.org
@@ -15,13 +14,12 @@ COMMENT=	Provides a wrapper to the ImageMagick/GraphicsMagick library
 
 LICENSE=	PHP301
 
-.if !defined(WITHOUT_X11)
-LIB_DEPENDS=	libMagickWand-6.Q*.so:${PORTSDIR}/graphics/ImageMagick
-.else
-LIB_DEPENDS=	libMagickWand-6.Q*.so:${PORTSDIR}/graphics/ImageMagick-nox11
-.endif
+OPTIONS_DEFINE=	X11
 
-USES=		pkgconfig
+X11_LIB_DEPENDS=	libMagickWand-6.Q*.so:${PORTSDIR}/graphics/ImageMagick
+X11_LIB_DEPENDS_OFF=	libMagickWand-6.Q*.so:${PORTSDIR}/graphics/ImageMagick-nox11
+
+USES=		pkgconfig tar:tgz
 USE_PHP=	yes
 USE_PHPEXT=	yes
 
