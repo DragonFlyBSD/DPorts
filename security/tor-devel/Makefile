@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	tor
-DISTVERSION=	0.2.5.5-alpha
+DISTVERSION=	0.2.5.6-alpha
 CATEGORIES=	security net ipv6
 MASTER_SITES=	TOR
 PKGNAMESUFFIX=	-devel
@@ -16,8 +16,8 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 USES=		gmake
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-openssl-dir="${OPENSSLBASE}" --disable-asciidoc
-CONFIGURE_ENV=	TOR_CPPFLAGS_libevent="-I${LOCALBASE}/include/event2 -I${LOCALBASE}/include" \
-		TOR_LDFLAGS_libevent="-L${LOCALBASE}/lib/event2" \
+CONFIGURE_ENV=	TOR_CPPFLAGS_libevent="-I${LOCALBASE}/include" \
+		TOR_LDFLAGS_libevent="-L${LOCALBASE}/lib/" \
 		TOR_LIBEVENT_LIBS="${TOR_LIBEVENT_LIBS}"
 
 OPTIONS_DEFINE=	BUFFEREVENTS BUFFREELISTS INSTR_DOWNLOADS MEMPOOLS \
@@ -39,7 +39,7 @@ USE_OPENSSL=	yes
 USE_RC_SUBR=	tor
 SUB_FILES=	pkg-message
 
-GROUPS =	_tor
+GROUPS=		_tor
 USERS=		_tor
 
 CONFLICTS=	tor-[0-9]*
@@ -56,7 +56,6 @@ CONFIGURE_ARGS+=	--disable-gcc-hardening
 
 .if ${PORT_OPTIONS:MBUFFEREVENTS}
 CONFIGURE_ARGS+=	--enable-bufferevents
-BROKEN=	some functions are hidden from the test binaries that use them WITH_BUFFEREVENTS
 .else
 CONFIGURE_ARGS+=	--disable-bufferevents
 .endif
@@ -80,19 +79,19 @@ CONFIGURE_ARGS+=	--disable-mempools
 .endif
 
 .if ${PORT_OPTIONS:MSTATIC_TOR}
-BUILD_DEPENDS +=	${LOCALBASE}/lib/event2/libevent.a:${PORTSDIR}/devel/libevent2
-CONFIGURE_ARGS+=	--enable-static-tor --with-libevent-dir=${LOCALBASE}/lib/event2 \
+BUILD_DEPENDS +=	${LOCALBASE}/lib/libevent.a:${PORTSDIR}/devel/libevent2
+CONFIGURE_ARGS+=	--enable-static-tor \
 			--with-zlib-dir=/usr/lib --disable-linker-hardening
-TOR_LIBEVENT_LIBS=	${LOCALBASE}/lib/event2/libevent.a
+TOR_LIBEVENT_LIBS=	${LOCALBASE}/lib/libevent.a
 .if ${PORT_OPTIONS:MBUFFEREVENTS}
-TOR_LIBEVENT_LIBS:=	${LOCALBASE}/lib/event2/libevent_openssl.a ${TOR_LIBEVENT_LIBS}
+TOR_LIBEVENT_LIBS:=	${LOCALBASE}/lib/libevent_openssl.a ${TOR_LIBEVENT_LIBS}
 .endif
 .else
 CONFIGURE_ARGS+=	--enable-linker-hardening
-LIB_DEPENDS+=		libevent-2.0.so:${PORTSDIR}/devel/libevent2
-TOR_LIBEVENT_LIBS=	-levent-2.0
+LIB_DEPENDS+=		libevent.so:${PORTSDIR}/devel/libevent2
+TOR_LIBEVENT_LIBS=	-levent
 .if ${PORT_OPTIONS:MBUFFEREVENTS}
-TOR_LIBEVENT_LIBS:=	-levent_openssl-2.0 ${TOR_LIBEVENT_LIBS}
+TOR_LIBEVENT_LIBS:=	-levent_openssl ${TOR_LIBEVENT_LIBS}
 .endif
 .endif
 
