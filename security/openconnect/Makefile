@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	openconnect
-PORTVERSION=	5.03
-PORTREVISION=	4
+PORTVERSION=	6.00
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.infradead.org/pub/openconnect/ \
 		http://mirrors.rit.edu/zi/
@@ -35,13 +34,12 @@ PROXY_CONFIGURE_WITH=	libproxy
 
 GNUTLS_DESC=		Use GnuTLS instead of OpenSSL(EXPERIMENTAL)
 GNUTLS_LIB_DEPENDS=	libgnutls.so:${PORTSDIR}/security/gnutls
-GNUTLS_BUILD_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
-GNUTLS_RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
-GNUTLS_CONFIGURE_WITH=	gnutls system-cafile=${LOCALBASE}/share/certs/ca-root-nss.crt
+GNUTLS_CONFIGURE_WITH=	gnutls
 GNUTLS_USE_OFF=		OPENSSL=yes
 
 post-install:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/TODO ${STAGEDIR}${DOCSDIR}
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libopenconnect.so.3.3.0
 
 .include <bsd.port.mk>
