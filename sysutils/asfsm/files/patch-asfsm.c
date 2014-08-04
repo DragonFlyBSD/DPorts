@@ -1,5 +1,5 @@
 
-$FreeBSD: head/sysutils/asfsm/files/patch-aa 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/sysutils/asfsm/files/patch-asfsm.c 363335 2014-07-29 15:00:12Z adamw $
 
 --- asfsm.c.orig	Sun Oct 18 12:02:09 1998
 +++ asfsm.c	Thu Aug 15 23:19:02 2002
