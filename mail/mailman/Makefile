@@ -3,13 +3,12 @@
 
 PORTNAME=	mailman
 DISTVERSION=	2.1.18-1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GNU} \
 		SF/${PORTNAME}/Mailman%202.1%20%28stable%29/${PORTVERSION} \
 		https://launchpad.net/mailman/${DISTVERSION:R}/${DISTVERSION}/+download/
 MASTER_SITE_SUBDIR=	${PORTNAME}
-EXTRACT_SUFX=	.tgz
 DIST_SUBDIR=	mailman
 
 MAINTAINER=	mandree@FreeBSD.org
@@ -20,6 +19,7 @@ LICENSE_FILE=	${WRKSRC}/gnu-COPYING-GPL
 
 CONFLICTS=	ja-mailman-2.1.*
 
+USES=		tar:tgz
 USE_AUTOTOOLS=	autoconf
 USE_PYTHON=	2
 USE_RC_SUBR=	mailman
