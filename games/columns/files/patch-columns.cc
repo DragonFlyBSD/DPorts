@@ -1,5 +1,5 @@
 
-$FreeBSD: head/games/columns/files/patch-ab 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/games/columns/files/patch-columns.cc 363239 2014-07-28 19:39:50Z adamw $
 
 --- columns.cc.orig	2000-03-17 04:52:55.000000000 +0400
 +++ columns.cc	2013-06-13 15:21:46.472644056 +0400
