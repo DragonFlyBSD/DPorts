@@ -1,1 +1,1 @@
-ARGS+= -p freebsd-g++
+CONFIGURE_ARGS+= -p freebsd-g++
