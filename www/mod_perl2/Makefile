@@ -3,14 +3,20 @@
 
 PORTNAME=	mod_perl
 PORTVERSION=	2.0.8
+PORTREVISION=	2
 PORTEPOCH=	3
 CATEGORIES=	www perl5
 MASTER_SITES=	APACHE/perl
 PKGNAMEPREFIX=	${APACHE_PKGNAMEPREFIX}
 PKGNAMESUFFIX=	2
 
+PATCH_SITES=	${MASTER_SITE_LOCAL}
+PATCH_SITE_SUBDIR=	ohauer
+
 MAINTAINER=	apache@FreeBSD.org
 COMMENT=	Embeds a Perl interpreter in the Apache2 server
+
+LICENSE=	APACHE20
 
 BUILD_DEPENDS=	p5-BSD-Resource>=0:${PORTSDIR}/devel/p5-BSD-Resource
 RUN_DEPENDS:=	${BUILD_DEPENDS}
@@ -25,7 +31,16 @@ USE_CSTD=	gnu89
 .include <bsd.port.pre.mk>
 
 .if ${APACHE_VERSION} > 22
-BROKEN=	Does not build with apache24
+# patch shaped against upstream mod_perl
+# Last Changed Rev: 1602105
+PATCHREV=	1602105
+PATCHFILES+= 	${PORTNAME}-${PORTVERSION}-r${PATCHREV}.diff.gz
+PLIST_SUB+=	AP24=""
+PMSED=		's/%AP24%//'
+NO_PACKAGE=	yes
+.else
+PLIST_SUB+=	AP24="@comment "
+PMSED=		'/%AP24%/d'
 .endif
 
 # Using apxs in this way is problematic if apache2 is installed under a
@@ -66,7 +81,10 @@ post-configure:
 	${REINPLACE_CMD} -e 's/-pthread -Wl,-E//g' \
 		${PATCH_WRKSRC}/xs/APR/APR/Makefile
 
+
 post-install:
+# adjust pkg-message
+	${REINPLACE_CMD} -e ${PMSED} ${WRKDIR}/pkg-message
 	${MKDIR} ${STAGEDIR}${PREFIX}/${APACHEINCLUDEDIR}/modules/perl
 	${INSTALL_DATA} ${WRKSRC}/src/modules/perl/*.h \
 		${STAGEDIR}${PREFIX}/${APACHEINCLUDEDIR}/modules/perl
@@ -76,6 +94,11 @@ post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/modules/perl/mod_perl.so \
 		${STAGEDIR}${PREFIX}/${APACHEMODDIR}/mod_perl.so
 
+	-for f in `${FIND} ${STAGEDIR}${SITE_PERL}/${PERL_ARCH}/auto -name \*.so` ; do \
+		${CHMOD} u+w $${f}; \
+		${STRIP_CMD} $${f}; \
+		${CHMOD} u-w $${f}; \
+	done;
 
 test:	build
 	-@(${MAKE} test -C ${WRKSRC})
