@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	pkg
-DISTVERSION=	1.3.5
+DISTVERSION=	1.3.5.1
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	\
 		http://files.etoilebsd.net/${PORTNAME}/ \
@@ -21,6 +21,7 @@ NO_CCACHE=	yes
 USE_LDCONFIG=	yes
 USES=		libtool tar:xz
 GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--disable-maintainer-mode
 INSTALL_TARGET=	install-strip
 .if defined(PACKAGE_BUILDING)
 MAKE_ARGS+=	PKG_PORTSDIR=/usr/dports
