@@ -395,10 +395,6 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 # USE_OCAML		- If set, this port relies on the OCaml language.
 #				  Implies inclusion of bsd.ocaml.mk.  (Also see
 #				  that file for more information on USE_OCAML*).
-# USE_PYTHON	- If set, this port relies on the Python language.
-#				  Implies inclusion of bsd.python.mk. (Also see
-#				  that file for more information on USE_PYTHON_*
-#				  and USE_PYDISTUTILS).
 # USE_RUBY		- If set, this port relies on the Ruby language.
 #				  Implies inclusion of bsd.ruby.mk.  (Also see
 #				  that file for more information on USE_RUBY_*).
@@ -598,12 +594,6 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #				  Installs all directories and files from ${WRKSRC}/doc
 #				  to ${DOCSDIR} except sed backup files.
 #
-# Boolean to control whether manpages are installed.
-#
-# NO_INSTALL_MANPAGES
-#				- If set, this port doesn't want to install any manpages.
-#				  Default: not set, i.e. manpages are installed by default.
-#
 # Set the following to specify all manpages that your port installs.
 # These manpages will be automatically listed in ${PLIST}.  Depending
 # on the setting of NO_MANCOMPRESS, the make rules will compress the
@@ -640,8 +630,8 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #				  "maybe".  "yes" means manpages are installed
 #				  compressed; "no" means they are not; "maybe" means
 #				  it changes depending on the value of NO_MANCOMPRESS.
-#				  Default: "yes" if USES=imake is set and NO_INSTALL_MANPAGES
-#				  is not set, and "no" otherwise.
+#				  Default: "yes" if USES=imake is set without the noman
+#				  argument, and "no" otherwise.
 #
 # Set the following to specify all .info files your port installs.
 #
@@ -1457,7 +1447,7 @@ PKGCOMPATDIR?=		${LOCALBASE}/lib/compat/pkg
 .endif
 
 .if defined(USE_PYTHON) || defined(USE_PYTHON_BUILD) || defined(USE_PYTHON_RUN)
-.include "${PORTSDIR}/Mk/bsd.python.mk"
+USES+=	python
 .endif
 
 .if defined(USE_EFL) || defined(WANT_EFL) || defined(USE_EFL_ESMART)
@@ -1593,7 +1583,8 @@ CONFIGURE_WRKSRC?=	${WRKSRC}
 BUILD_WRKSRC?=	${WRKSRC}
 INSTALL_WRKSRC?=${WRKSRC}
 
-PLIST_SUB+=	OSREL=${OSREL} PREFIX=%D LOCALBASE=${LOCALBASE}
+PLIST_SUB+=	OSREL=${OSREL} PREFIX=%D LOCALBASE=${LOCALBASE} \
+			RESETPREFIX=${PREFIX}
 SUB_LIST+=	PREFIX=${PREFIX} LOCALBASE=${LOCALBASE} \
 		DATADIR=${DATADIR} DOCSDIR=${DOCSDIR} EXAMPLESDIR=${EXAMPLESDIR} \
 		WWWDIR=${WWWDIR} ETCDIR=${ETCDIR}
@@ -1605,7 +1596,7 @@ SUB_LIST+=	PREFIX=${PREFIX} LOCALBASE=${LOCALBASE} \
 #  Remove quotes
 #  Replace . with \. for later sed(1) usage
 PLIST_SUB_SED_MIN?=	2
-PLIST_SUB_SED?= ${PLIST_SUB:C/.*=.{1,${PLIST_SUB_SED_MIN}}$//g:NEXTRACT_SUFX=*:NOSREL=*:NLIB32DIR=*:NPREFIX=*:NLOCALBASE=*:N*="":N*="@comment*:C/([^=]*)="?([^"]*)"?/s!\2!%%\1%%!g;/g:C/\./\\./g}
+PLIST_SUB_SED?= ${PLIST_SUB:C/.*=.{1,${PLIST_SUB_SED_MIN}}$//g:NEXTRACT_SUFX=*:NOSREL=*:NLIB32DIR=*:NPREFIX=*:NLOCALBASE=*:NRESETPREFIX=*:N*="":N*="@comment*:C/([^=]*)="?([^"]*)"?/s!\2!%%\1%%!g;/g:C/\./\\./g}
 
 PLIST_REINPLACE+=	stopdaemon rmtry
 PLIST_REINPLACE_RMTRY=s!^@rmtry \(.*\)!@unexec rm -f %D/\1 2>/dev/null || true!
@@ -1908,10 +1899,6 @@ IGNORE=	Do not define STAGEDIR in command line
 
 .if defined(USE_PHP)
 .include "${PORTSDIR}/Mk/bsd.php.mk"
-.endif
-
-.if defined(USE_PYTHON)
-.include "${PORTSDIR}/Mk/bsd.python.mk"
 .endif
 
 .if defined(USE_WX) || defined(USE_WX_NOT)
@@ -5400,6 +5387,16 @@ missing:
 		_origin=$${dir##${PORTSDIR}/}; \
 		if ! $$(${ECHO_CMD} $${_origins} | ${GREP} -q $${_origin}); then \
 			${ECHO_CMD} $${_origin}; \
+		fi; \
+	done
+
+# shwo missing dependencies by name
+missing-packages:
+	@_packages=$$(${PKG_INFO} -aq); \
+	for dir in $$(${ALL-DEPENDS-LIST}); do \
+		_p=$$(cd $$dir; ${MAKE} -VPKGNAME); \
+		if ! $$(${ECHO_CMD} $${_packages} | ${GREP} -q $${_p}); then \
+			${ECHO_CMD} $${_p}; \
 		fi; \
 	done
 

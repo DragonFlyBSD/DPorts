@@ -88,6 +88,7 @@ pgsql:*:150:
 rbldns:*:153:
 trircd:*:154:
 xorp:*:155:
+monetdb:*:156:
 sfs:*:171:
 agk:*:172:
 polipo:*:173:
@@ -284,8 +285,12 @@ unifi:*:975:
 minetest:*:976:
 avenger:*:60149:
 cbsd:*:60150:
+sguil:*:978:
 ums:*:979:
 hbase:*:980:
 uvncrep:*:981:
+bro:*:982:
+syncthing:*:983:
+tvheadend:*:984:
 nogroup:*:65533:
 nobody:*:65534:

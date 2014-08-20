@@ -1475,6 +1475,7 @@ textproc/it-ispell|textproc/it-aspell|2014-01-29|Removed, consider using aspell 
 textproc/nl-ispell|textproc/nl-aspell|2014-01-29|Removed, consider using aspell instead
 textproc/sk-ispell|textproc/sk-aspell|2014-01-29|Removed, consider using aspell instead
 ukrainian/ispell|ukrainian/aspell|2014-01-29|Removed, consider using aspell instead
+databases/p5-DBD-mysql52|databases/p5-DBD-mysql|2014-01-29|Depends on expired MySQL version
 audio/gsi||2014-01-30|Removed, abandonware
 multimedia/kino||2014-01-31|Has expired: Not developed since 2009, declared dead 05.08.2013 on there website
 x11-drivers/xf86-video-imstt||2014-01-31|Has expired: Broken, unsupported and unmaintained upstream
@@ -2221,7 +2222,6 @@ sysutils/sysupdate||2014-06-21|Removed, no longer needed/relevant with FreeBSD i
 www/phpbb-devel|www/phpbb3|2014-06-22|Has expired: Use www/phpbb3 instead
 math/polymake||2014-06-22|Has expired: Does not build with any supported version of Perl
 www/phpsysinfo-dev|www/phpsysinfo|2014-06-22|Has expired: Use www/phpsysinfo instead
-sysutils/syslog-ng-devel|sysutils/syslog-ng|2014-06-23|Has expired: Use sysutils/syslog-ng instead
 print/pkg-texinfo|print/texinfo-minimal|2014-06-24|Has been renamed
 sysutils/pc-sysinstall|sysutils/pcbsd-utils|2014-06-24|Removed: pc-sysinstall is included in sysutils/pcbsd-utils
 print/texinfo-minimal|print/texinfo-lite|2014-06-24|Has been renamed
@@ -2258,7 +2258,7 @@ www/trac-TracDuplicates||2014-06-30|Has expired: Broken for more than 5 months
 mail/hotwayd||2014-06-30|Has expired: Protocol changed, software unusable
 mail/ilohamail-devel||2014-06-30|Has expired: Upstream disappeared
 games/tyrquake||2014-06-30|Has expired: Broken for more than 5 months
-net/gkrellmqst||2014-06-30|Has expired: GKrellM 1.X is no longer being developed, consider using 2.X.
+net/gkrellmqst||2014-06-30|Has expired: GKrellM 1.X is no longer being developed, consider using 2.X
 security/p5-Jifty-Plugin-OpenID||2014-06-30|Has expired: Broken for more than 5 months
 games/sumwars||2014-06-30|Has expired: Broken for more than 5 months
 audio/ruby-esound||2014-06-30|Has expired: Broken for more than 5 months
@@ -2267,21 +2267,21 @@ net-im/ysm||2014-06-30|Has expired: Broken for more than 5 months
 net-mgmt/send||2014-06-30|Has expired: Broken for more than 5 months
 net/p5-Jifty-Plugin-Authentication-Ldap||2014-06-30|Has expired: Broken for more than 5 months
 net-p2p/bittyrant||2014-06-30|Has expired: Broken for more than 5 months
-sysutils/gkrellm||2014-06-30|Has expired: GKrellM 1.X is no longer being developed, consider using 2.X.
-audio/gkrellmms||2014-06-30|Has expired: GKrellM 1.X is no longer being developed, consider using 2.X.
-audio/gkrellmvolume||2014-06-30|Has expired: GKrellM 1.X is no longer being developed, consider using 2.X.
-misc/gkrellmlaunch||2014-06-30|Has expired: GKrellM 1.X is no longer being developed, consider using 2.X.
-misc/gkrellmfmonitor||2014-06-30|Has expired: GKrellM 1.X is no longer being developed, consider using 2.X.
-misc/gkrellshoot||2014-06-30|Has expired: GKrellM 1.X is no longer being developed, consider using 2.X.
-polish/sms2||2014-06-30|Has expired: sms2 is no longer being developed, consider using alternative software.
+sysutils/gkrellm||2014-06-30|Has expired: GKrellM 1.X is no longer being developed, consider using 2.X
+audio/gkrellmms||2014-06-30|Has expired: GKrellM 1.X is no longer being developed, consider using 2.X
+audio/gkrellmvolume||2014-06-30|Has expired: GKrellM 1.X is no longer being developed, consider using 2.X
+misc/gkrellmlaunch||2014-06-30|Has expired: GKrellM 1.X is no longer being developed, consider using 2.X
+misc/gkrellmfmonitor||2014-06-30|Has expired: GKrellM 1.X is no longer being developed, consider using 2.X
+misc/gkrellshoot||2014-06-30|Has expired: GKrellM 1.X is no longer being developed, consider using 2.X
+polish/sms2||2014-06-30|Has expired: sms2 is no longer being developed, consider using alternative software
 x11-toolkits/py-wmdockapps||2014-06-30|Has expired: Crufty and nothing depends on this
 audio/tagger||2014-06-30|Has expired: Ancient, unmaintained
 www/mod_wsgi2|www/mod_wsgi3|2014-06-30|Has expired: No longer supported, please use www/mod_wsgi3 instead
 security/botan|security/botan110|2014-06-30|Has expired: Botan 1.8 have known bugs and is no longer supported upstream, migrate to security/botan110
 deskutils/checkrdf||2014-06-30|Removed: Abandonware, please consider using other software
 graphics/k3d||2014-06-30|Has expired: Broken for more than 5 months
-mail/cyrus-imapd2|mail/cyrus-imapd24|2014-06-30|Has expired: Cyrus IMAPd 2.1.X have been deprecated, consider using 2.4.X.
-mail/cyrus-imapd22|mail/cyrus-imapd24|2014-06-30|Has expired: No further releases of 2.2.X are planned, consider using 2.4.X.
+mail/cyrus-imapd2|mail/cyrus-imapd24|2014-06-30|Has expired: Cyrus IMAPd 2.1.X have been deprecated, consider using 2.4.X
+mail/cyrus-imapd22|mail/cyrus-imapd24|2014-06-30|Has expired: No further releases of 2.2.X are planned, consider using 2.4.X
 editors/xemacs||2014-06-30|Removed: unmaintained upstream
 editors/xemacs-devel||2014-06-30|Removed: unmaintained upstream
 chinese/xemacs||2014-06-30|Removed: unmaintained upstream
@@ -2377,13 +2377,12 @@ japanese/latex2html||2014-07-23|Depends on decomissioned teTeX
 japanese/platex209||2014-07-23|Depends on decomissioned teTeX
 japanese/platex-jsclasses||2014-07-23|Depends on decomissioned teTeX
 japanese/platex-otf||2014-07-23|Depends on decomissioned teTeX
-japanese/ptex|japaneses/tex-ptex|2014-07-23|Use TeXLive version
+japanese/ptex|japanese/tex-ptex|2014-07-23|Use TeXLive version
 japanese/dvipsk|print/tex-dvipsk|2014-07-23|Use TeXLive version
 print/dvipsk-tetex|print/tex-dvipsk|2014-07-23|Use TeXLive version
 print/dvipdfmx|print/tex-dvipdfmx|2014-07-23|Use TeXLive version
 print/jadetex|print/tex-jadetex|2014-07-23|Use TeXLive version
 japanese/teTeX|print/texlive-full|2014-07-23|Use TeXLive
-devel/libevent|devel/libevent2|2014-07-27|libevent2 replaced libevent
 chinese/big5con||2014-07-24|Has expired: Fails to build with new utmpx
 chinese/hztty||2014-07-24|Has expired: Fails to build with new utmpx
 irc/solid-ircd||2014-07-24|Has expired: Fails to build with new utmpx
@@ -2404,6 +2403,7 @@ sysutils/lookupd_ldap||2014-07-24|Has expired: Fails to build with new utmpx
 sysutils/p5-Sys-Utmp||2014-07-24|Has expired: Fails to build with new utmpx
 sysutils/syslog-ng2||2014-07-24|Has expired: Fails to build with new utmpx
 sysutils/yawho||2014-07-24|Has expired: Fails to build with new utmpx
+devel/libevent|devel/libevent2|2014-07-27|libevent2 replaced libevent
 devel/p5-MetaCPAN-API|devel/p5-MetaCPAN-Client|2014-07-27|Has expired: Use devel/p5-MetaCPAN-Client instead
 net-im/pidgin-facebookchat||2014-07-27|Has expired: obsolete, development has ceased, not staged
 net-im/gtkyahoo||2014-07-28|Has expired: Broken, unmaintained, unstaged, gtk12, i386 only
@@ -2429,7 +2429,7 @@ lang/sml-nj|lang/smlnj|2014-07-30|Use lang/smlnj as newer version
 www/ajaxplorer|www/pydio|2014-07-31|Project renamed
 converters/igbinary|converters/pecl-igbinary|2014-07-31|The project has been moved to PECL
 mail/postfix27||2014-07-31|Has expired: No longer supported by upstream
-misc/freecode-submit||2014-07-31|Has expired: This software is obsolete. Freecode does not accept updates anymore.
+misc/freecode-submit||2014-07-31|Has expired: This software is obsolete. Freecode does not accept updates anymore
 mail/exim-doc-info||2014-07-31|Has expired: yes
 misc/gman||2014-07-31|Has expired: Depends on expiring ghostview
 print/ghostview|print/gv|2014-07-31|Has expired: project dead nearly a decade ago; use print/gv instead
@@ -2438,3 +2438,105 @@ print/ifxetex||2014-08-01|Has expired: Very outdated and fully contained in texl
 lang/dragonegg46-33||2014-08-01|Has expired: Dead upstream, impractical to build on 10 and later
 lang/dragonegg47-33||2014-08-01|Has expired: Dead upstream, impractical to build on 10 and later
 print/freetype-tools|print/texlive-texmf|2014-08-01|Has been incorporated in TeXLive
+sysutils/readlink||2014-08-03|Has expired: All features implemented in the base system since FreeBSD 8.3
+net-mgmt/bsd-airtools||2014-08-04|Has expired: "broken by removal of wicontrol ioctls from if_wavelan_ieee.h; domain disappeared"
+www/moodle||2014-08-04|Has expired: Upstream support ended
+databases/bucardo|databases/p5-Bucardo|2014-08-04|Dupplicate
+security/p5-openxpki-client|security/p5-openxpki|2014-08-04|Has expired: now incorporated within security/p5-openxpki
+security/p5-openxpki-client-scep|security/p5-openxpki|2014-08-04|Has expired: now incorporated within security/p5-openxpki
+security/p5-openxpki-deployment|security/p5-openxpki|2014-08-04|Has expired: now incorporated within security/p5-openxpki
+news/husky-base-devel||2014-08-05|Has been incorporated into the build process of other husky-*-devel ports
+archivers/hs-zlib-conduit||2014-08-10|Removed: Deprecated in favor of conduit-extra
+devel/hs-IORefCAS||2014-08-10|Removed: Deprecated in favor of atomic-primops
+devel/hs-Tensor||2014-08-10|Removed: Deprecated
+devel/hs-StateVar||2014-08-10|Removed: Deprecated
+devel/hs-attempt||2014-08-10|Removed: Deprecated in favor of exceptions
+devel/hs-base64-conduit||2014-08-10|Removed: Deprecated in favor of conduit-combinators
+devel/hs-blaze-builder-conduit||2014-08-10|Removed: Deprecated in favor of conduit-extra
+devel/hs-drift|devel/hs-DrIFT|2014-08-10|Renamed: Converted to use the Cabal framework
+devel/hs-failure||2014-08-10|Removed: Deprecated in favor or exceptions
+devel/hs-filesystem-conduit||2014-08-10|Removed: Deprecated in favor of conduit-combinators
+devel/hs-haskeline||2014-08-10|Removed: Become part of GHC
+devel/hs-pool-conduit||2014-08-10|Removed: Deprecated in favor of resource-pool
+devel/hs-profunctor-extras||2014-08-10|The package has been absorbed into profunctors
+devel/hs-terminfo||2014-08-10|Removed: Become part of GHC
+devel/hs-transformers||2014-08-10|Removed: Become part of GHC
+math/hs-comonad-transformers||2014-08-10|Deprecated in favor of comonad
+math/hs-comonads-fd||2014-08-10|Deprecated in favor of comonad
+math/hs-groupoids||2014-08-10|Deprecated in favor of semigroupoids
+math/hs-semigroupoid-extras||2014-08-10|Deprecated in favor of semigroupoids
+net/hs-network-conduit||2014-08-10|Removed: Deprecated in favor of conduit-extra
+security/hs-tls-extra||2014-08-10|Removed: Deprecated in favor of tls
+textproc/hs-attoparsec-conduit||2014-08-10|Removed: Deprecated in favor of conduit-extra
+textproc/hs-xhtml||2014-08-10|Removed: Become part of GHC
+www/hs-hamlet||2014-08-10|Removed: Deprecated in favor of shakespeare
+www/hs-shakespeare-css||2014-08-10|Removed: Deprecated in favor of shakespeare
+www/hs-shakespeare-i18n||2014-08-10|Removed: Deprecated in favor of shakespeare
+www/hs-shakespeare-js||2014-08-10|Removed: Deprecated in favor of shakespeare
+www/hs-shakespeare-text||2014-08-10|Removed: Deprecated in favor of shakespeare
+www/hs-wai-test||2014-08-10|Removed: Deprecated in favor of wai-extra
+devel/rubygem-foreman_api||2014-08-11|Removed: Deprecated by upstream
+security/termlog||2014-08-11|Has expired: Fails to build with new utmpx, unstaged, maintainer timeout
+games/linux-americasarmy||2014-08-13|Removed: Unsupported by upstream, distfile unavailable
+net/rsmb|net/mosquitto|2014-08-13|Superseded by net/mosquitto
+devel/kyua-atf-compat|devel/kyua|2014-08-14|Upstream merged all components into devel/kyua
+devel/kyua-cli|devel/kyua|2014-08-14|Upstream merged all components into devel/kyua
+devel/kyua-testers|devel/kyua|2014-08-14|Upstream merged all components into devel/kyua
+devel/glib-java||2014-08-14|Has expired: Unmaintained, outdated not depend on
+www/phpgedview|www/webtrees|2014-08-15|Has expired: Superceded by www/webtrees
+graphics/luxrays||2014-08-15|Has expired: No longer needed as luxrender bundles its own verion now
+net-mgmt/cflowd||2014-08-15|Has expired: Unmaintained 10 years, requires dozens of patches, unverifiable
+archivers/unzip-iconv|archivers/unzip|2014-08-15|Merged with archivers/unzip as a new non-default option
+chinese/unzip|archivers/unzip|2014-08-15|Merged with archivers/unzip as a new non-default option
+korean/unzip|archivers/unzip|2014-08-15|Merged with archivers/unzip as a new non-default option
+russian/unzip|archivers/unzip|2014-08-15|Merged with archivers/unzip as a new non-default option
+mail/sendmail-sasl|mail/sendmail|2014-08-15|Removed: Use mail/sendmail instead
+print/cups-samba||2014-08-15|Removed: defunct for long, disappeared upstream
+security/sguil-client|security/sguil|2014-08-16|Merged into new port security/sguil
+security/sguil-sensor|security/sguil|2014-08-16|Merged into new port security/sguil
+security/sguil-server|security/sguil|2014-08-16|Merged into new port security/sguil
+databases/jasperserver||2014-08-18|Has expired: Unstaged, depends on expiring devel/maven2
+devel/maven2|devel/maven3|2014-08-18|Has expired: No longer supported by the Apache Foundation. Use 3.x instead
+x11-clocks/alarm-clock||2014-08-18|Removed: disappeared upstream
+mail/rss2email|mail/rss2email2|2014-08-19|Renamed to avoid ambiguity with mail/rss2email3
+news/husky-base||2014-08-19|Obsolete due to husky-*-devel => husky-* migration
+news/husky-bsopack||2014-08-19|Obsolete due to husky-*-devel => husky-* migration
+news/husky-hptkill||2014-08-19|Obsolete due to husky-*-devel => husky-* migration
+news/husky-hptsqfix||2014-08-19|Obsolete due to husky-*-devel => husky-* migration
+news/husky-hpucode||2014-08-19|Obsolete due to husky-*-devel => husky-* migration
+news/husky-msged||2014-08-19|Obsolete due to husky-*-devel => husky-* migration
+news/husky-nltools||2014-08-19|Obsolete due to husky-*-devel => husky-* migration
+news/husky-sqpack||2014-08-19|Obsolete due to husky-*-devel => husky-* migration
+deskutils/horde3-hermes||2014-08-20|Has expired: EOL in April 2012
+deskutils/horde3-klutz||2014-08-20|Has expired: EOL in April 2012
+deskutils/horde3-kronolith||2014-08-20|Has expired: EOL in April 2012
+deskutils/horde3-mnemo||2014-08-20|Has expired: EOL in April 2012
+devel/horde3-chora||2014-08-20|Has expired: EOL in April 2012
+ftp/horde3-gollem||2014-08-20|Has expired: EOL in April 2012
+games/linux-steam||2014-08-20|Has expired: Unmaintained interactive port
+games/linux-ut2004-demo||2014-08-20|Has expired: Unmaintained restricted ancient demo
+mail/horde3-dimp||2014-08-20|Has expired: EOL in April 2012
+mail/horde3-forwards||2014-08-20|Has expired: EOL in April 2012
+mail/horde3-ingo||2014-08-20|Has expired: EOL in April 2012
+mail/horde3-mimp||2014-08-20|Has expired: EOL in April 2012
+mail/horde3-vacation||2014-08-20|Has expired: EOL in April 2012
+net-mgmt/horde3-nic||2014-08-20|Has expired: EOL in April 2012
+net-mgmt/nocol||2014-08-20|Has expired: Unmaintained interactive port
+net-mgmt/ourmon||2014-08-20|Has expired: Unmaintained interactive port
+net/wowzamediaserverpro||2014-08-20|Has expired: Unmaintained interactive port
+news/p5-NNML||2014-08-20|Has expired: Unmaintained interactive port
+print/dvips||2014-08-20|Has expired: Unmaintained interactive port
+print/xdvi||2014-08-20|Has expired: Unmaintained interactive port
+security/horde3-jeta||2014-08-20|Has expired: EOL in April 2012
+security/hunch||2014-08-20|Has expired: Likely unused interactive port
+www/horde3-ansel||2014-08-20|Has expired: EOL in April 2012
+www/horde3-meta||2014-08-20|Has expired: EOL in April 2012
+www/horde3-passwd||2014-08-20|Has expired: EOL in April 2012
+www/horde3-trean||2014-08-20|Has expired: EOL in April 2012
+www/wwwcount||2014-08-20|Has expired: Ancient interactive port
+x11-clocks/xalarm||2014-08-20|Has expired: Unmaintained interactive port
+mail/horde3-turba||2014-08-20|Has expired: EOL in April 2012
+deskutils/horde3-nag||2014-08-20|Has expired: EOL in April 2012
+devel/horde3-whups||2014-08-20|Has expired: EOL in April 2012
+mail/horde3-imp||2014-08-20|Has expired: EOL in April 2012
+www/horde3-base||2014-08-20|Has expired: EOL in April 2012

@@ -93,6 +93,7 @@ ipv6mon:*:148:148::0:0:IPv6 Address Monitoring Daemon:/nonexistent:/usr/sbin/nol
 pgsql:*:150:150::0:0:PostgreSQL pseudo-user:/usr/local/pgsql:/bin/sh
 rbldns:*:153:153::0:0:rbldnsd pseudo-user:/nonexistent:/usr/sbin/nologin
 trircd:*:154:154::0:0:& user:/usr/local/etc/tr-ircd:/usr/sbin/nologin
+monetdb:*:156:156::0:0:MonetDB user:/usr/local/monetdb5:/bin/sh
 sfs:*:171:171::0:0:Self-Certifying File System:/nonexistent:/usr/sbin/nologin
 agk:*:172:172::0:0:AquaGateKeeper:/nonexistent:/nonexistent
 polipo:*:173:173::0:0:polipo web cache:/nonexistent:/usr/sbin/nologin
@@ -290,7 +291,11 @@ avenger:*:60149:60149::0:0:Mail Avenger:/var/spool/avenger:/usr/sbin/nologin
 cbsd:*:60150:150::0:0:Cbsd user:/nonexistent:/bin/sh
 tests:*:977:65534::0:0:Unprivileged user for tests:/nonexistent:/usr/sbin/nologin
 _dnscrypt-proxy:*:978:65534::0:0:dnscrypt-proxy user:/var/empty:/usr/sbin/nologin
+sguil:*:978:978::0:0:Sguil:/nonexistent:/usr/sbin/nologin
 ums:*:979:979::0:0:Universal Media Server:/nonexistent:/usr/sbin/nologin
 hbase:*:980:980::0:0:HBase user:/nonexistent:/usr/sbin/nologin
 uvncrep:*:981:981::0:0:UltraVNC Repeater daemon:/nonexistent:/usr/sbin/nologin
+bro:*:982:982::0:0:Bro Network Security Monitor:/nonexistent:/usr/sbin/nologin
+syncthing:*:983:983::0:0:Syncthing Daemon:/var/tmp/syncthing:/usr/sbin/nologin
+tvheadend:*:984:984::0:0:TV Headend:/usr/local/etc/tvheadend:/bin/sh
 nobody:*:65534:65534::0:0:Unprivileged user:/nonexistent:/usr/sbin/nologin
