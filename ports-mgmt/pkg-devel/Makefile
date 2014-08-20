@@ -1,10 +1,11 @@
 # $FreeBSD$
 
 PORTNAME=	pkg
-DISTVERSION=	1.4.0.pre-alpha4
+DISTVERSION=	1.4.0.pre-alpha11
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	\
 		http://highsecure.ru/distfiles/ \
+		http://mirror.shatow.net/freebsd/${PORTNAME}/ \
 		http://pkg.semmy.ru/
 PKGNAMESUFFIX=	-devel
 
@@ -21,6 +22,7 @@ CFLAGS+=	-O0 -g
 USE_LDCONFIG=	yes
 USES=		libtool tar:xz
 GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--disable-maintainer-mode
 .if defined(PACKAGE_BUILDING)
 MAKE_ARGS+=	PKG_PORTSDIR=/usr/dports
 .else
