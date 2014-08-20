@@ -27,7 +27,7 @@ MODULES_DESC=	Install Tcl common modules
 WRKSRC=		${WRKDIR}/${PORTNAME}${PORTVERSION}/unix
 
 ALL_TARGET=	all
-INSTALL_TARGET=	install install-libraries
+INSTALL_TARGET=	install-strip install-libraries
 
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
@@ -49,7 +49,7 @@ PLIST_SUB=	TCL_VER=${TCL_VER} \
 
 .include <bsd.port.options.mk>
 
-.if ${PORT_OPTIONS:MTCLMAN} && !defined(NO_INSTALL_MANPAGES)
+.if ${PORT_OPTIONS:MTCLMAN}
 INSTALL_TARGET+=install-doc
 PLIST_SUB+=	MAN=""
 .else
@@ -96,10 +96,6 @@ post-configure:
 	${REINPLACE_CMD} \
 		-e 's,-DNO_MEMMOVE=1,,' -e 's,-DNO_STRING_H=1,,' \
 		-e 's,^COMPAT_OBJS.*,,' ${WRKSRC}/Makefile
-
-post-install:
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/tclsh${TCL_VER}
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libtcl${SHORT_TCL_VER}.so.1
 
 regression-test:	build
 	cd ${WRKSRC} && LC_ALL=C ${MAKE} test
