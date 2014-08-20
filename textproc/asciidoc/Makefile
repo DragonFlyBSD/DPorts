@@ -3,7 +3,7 @@
 
 PORTNAME=	asciidoc
 PORTVERSION=	8.6.9
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	textproc
 MASTER_SITES=	SF
 
@@ -13,11 +13,8 @@ COMMENT=	Text document format for writing short documents and man pages
 LICENSE=	GPLv2 MIT
 LICENSE_COMB=	multi
 
-RUN_DEPENDS=	python2:${PORTSDIR}/lang/python2
-
 GNU_CONFIGURE=	yes
-USE_PYTHON=	2
-USES=		gmake shebangfix
+USES=		gmake python:2 shebangfix
 
 CONF_FILES=	asciidoc.conf docbook45.conf filters/code/code-filter.conf \
 		filters/graphviz/graphviz-filter.conf \
