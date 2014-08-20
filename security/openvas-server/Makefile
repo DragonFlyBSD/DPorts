@@ -3,7 +3,7 @@
 
 PORTNAME=	openvas-server
 PORTVERSION=	2.0.2
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	security
 MASTER_SITES=	http://wald.intevation.org/frs/download.php/593/
 
@@ -20,7 +20,5 @@ USE_RC_SUBR=	openvasd
 CONFIGURE_ARGS=	--localstatedir=/var
 CPPFLAGS+=	-I${LOCALBASE}/include
 LIBS+=		-L${LOCALBASE}/lib -lgcrypt
-
-PLIST_SUB=	RESETPREFIX=${PREFIX}
 
 .include <bsd.port.mk>
