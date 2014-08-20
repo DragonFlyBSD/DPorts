@@ -2,17 +2,19 @@
 # $FreeBSD$
 
 PORTNAME?=	subversion
-PORTVERSION=	1.8.9
-PORTREVISION?=	5
+PORTVERSION=	1.8.10
+PORTREVISION?=	1
 CATEGORIES+=	devel
 MASTER_SITES=	${MASTER_SITE_APACHE}
 DIST_SUBDIR=	subversion18
 MASTER_SITE_SUBDIR=	subversion
 
 GNU_CONFIGURE=	yes
-USES+=		tar:bzip2 pkgconfig libtool
+USES+=		tar:bzip2 pkgconfig libtool cpe
 
 LICENSE=	APACHE20
+
+CPE_VENDOR=	apache
 
 CONFLICTS_INSTALL+=	${PKGNAMEPREFIX}${PORTNAME}${PKGNAMESUFFIX}-1.[^8].[0-9]*
 
@@ -88,6 +90,11 @@ pre-everything::
 .endif
 .endif
 
+pre-patch:
+.if defined(SVN_BUILD_ADDONS)
+	@${CP} ${FILESDIR}/build-outputs.mk.addons ${WRKSRC}/build-outputs.mk
+.endif
+
 post-patch:
 .if ${PREFIX} != "/usr"
 	@${REINPLACE_CMD} "s#/etc/subversion#${ETCDIR}#g" ${WRKSRC}/subversion/libsvn_subr/config_file.c
@@ -95,9 +102,6 @@ post-patch:
 .endif
 	@${REINPLACE_CMD} "s#^swig_pydir =.*#swig_pydir = ${PYTHON_SITELIBDIR}/libsvn#" ${WRKSRC}/Makefile.in
 	@${REINPLACE_CMD} "s#^swig_pydir_extra =.*#swig_pydir_extra = ${PYTHON_SITELIBDIR}/svn#" ${WRKSRC}/Makefile.in
-.if defined(SVN_BUILD_ADDONS)
-	@${CP} ${FILESDIR}/build-outputs.mk ${WRKSRC}
-.endif
 .if ( ${PORT_OPTIONS:MFREEBSD_TEMPLATE} || !${OPTIONS_FILE_UNSET:MFREEBSD_TEMPLATE} ) && defined(ORGANIZATION)
 	@${ECHO_CMD} "#define ORGANIZATION_NAME \"${ORGANIZATION}\"" > ${WRKSRC}/subversion/freebsd-organization.h
 .endif
