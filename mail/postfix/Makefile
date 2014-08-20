@@ -3,7 +3,7 @@
 
 PORTNAME=	postfix
 PORTVERSION=	2.11.1
-PORTREVISION=	2
+PORTREVISION=	3
 PORTEPOCH=	1
 CATEGORIES=	mail ipv6
 MASTER_SITES=	ftp://ftp.porcupine.org/mirrors/postfix-release/official/ \
@@ -105,7 +105,7 @@ USE_RC_SUBR=	postfix
 PLIST_SUB+=	BASE="@comment " BMAN=""
 .endif
 
-PLIST_SUB+=	PFETC=${ETCDIR} RESETPREFIX=${PREFIX}
+PLIST_SUB+=	PFETC=${ETCDIR}
 
 .if ${PORT_OPTIONS:MDOCS}
 READMEDIR=	${DOCSDIR}
