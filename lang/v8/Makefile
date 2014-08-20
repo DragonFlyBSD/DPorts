@@ -6,30 +6,30 @@ PORTVERSION=	3.18.5
 CATEGORIES=	lang
 MASTER_SITES=	LOCAL/vanilla
 
-MAINTAINER=	vanilla@FreeBSD.org
-COMMENT=	Google's open source JavaScript engine
+MAINTAINER=	sunpoet@FreeBSD.org
+COMMENT=	Open source JavaScript engine by Google
 
 LICENSE=	BSD3CLAUSE
 
-BUILD_DEPENDS=	python:${PORTSDIR}/lang/python
-LIB_DEPENDS=	libexecinfo.so:${PORTSDIR}/devel/libexecinfo
+BUILD_DEPENDS=	${LOCALBASE}/bin/python:${PORTSDIR}/lang/python
 
-CONFLICTS=	v8-3.27.*
+CONFLICTS_INSTALL=	v8-devel-[0-9]*
 
-USES=		gmake compiler tar:xz
-USE_PYTHON=	2
-USE_LDCONFIG=	yes
 ALL_TARGET=	native
+MAKE_ENV=	CC.host=${CC} CXX.host=${CXX} LINK.host=${CXX} LINK.target=${CXX}
 MAKE_ENV+=	GYPFLAGS=-DOS=freebsd
 MAKE_ENV+=	library=shared
-MAKE_ENV+=	CC.host=${CC} CXX.host=${CXX} LINK.host=${CXX} LINK.target=${CXX}
 CFLAGS+=	-D__FreeBSD__=1
+USE_LDCONFIG=	yes
+USES=		compiler cpe execinfo gmake python:2 tar:xz
+
+CPE_VENDOR=	google
 
 .include <bsd.port.pre.mk>
 
 .if ${COMPILER_TYPE} == clang
-MAKE_ENV+=	LINK=clang++
 CFLAGS+=	-Wno-unused-private-field
+MAKE_ENV+=	LINK=clang++
 .if ${COMPILER_VERSION} >= 33
 CFLAGS+=	-Wno-nested-anon-types -Wno-unused-function
 .if ${COMPILER_VERSION} >= 34
@@ -49,14 +49,9 @@ post-patch:
 	@${REINPLACE_CMD} -e '1 s|${SETENV} python|&2|' ${WRKSRC}/build/gyp/gyp
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/out/native/d8 ${STAGEDIR}/${PREFIX}/bin/d8
-	${INSTALL_LIB} -m 755 ${WRKSRC}/out/native/lib.target/libv8.so ${STAGEDIR}/${PREFIX}/lib/libv8.so.1
-	${LN} -sf ${PREFIX}/lib/libv8.so.1 ${STAGEDIR}/${PREFIX}/lib/libv8.so
-	${INSTALL_DATA} ${WRKSRC}/include/v8.h ${STAGEDIR}/${PREFIX}/include
-	${INSTALL_DATA} ${WRKSRC}/include/v8-debug.h ${STAGEDIR}/${PREFIX}/include
-	${INSTALL_DATA} ${WRKSRC}/include/v8-preparser.h ${STAGEDIR}/${PREFIX}/include
-	${INSTALL_DATA} ${WRKSRC}/include/v8-profiler.h ${STAGEDIR}/${PREFIX}/include
-	${INSTALL_DATA} ${WRKSRC}/include/v8-testing.h ${STAGEDIR}/${PREFIX}/include
-	${INSTALL_DATA} ${WRKSRC}/include/v8stdint.h ${STAGEDIR}/${PREFIX}/include
+	${INSTALL_PROGRAM} ${WRKSRC}/out/native/d8 ${STAGEDIR}${PREFIX}/bin/d8
+	cd ${WRKSRC}/include/ && ${INSTALL_DATA} *.h ${STAGEDIR}${PREFIX}/include/
+	${INSTALL_LIB} ${WRKSRC}/out/native/lib.target/libv8.so ${STAGEDIR}${PREFIX}/lib/libv8.so.1
+	${LN} -fs ${PREFIX}/lib/libv8.so.1 ${STAGEDIR}${PREFIX}/lib/libv8.so
 
 .include <bsd.port.post.mk>
