@@ -1,8 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=		ldb
-PORTVERSION=		1.1.16
-PORTREVISION=		1
+PORTVERSION=		1.1.17
+PORTREVISION=		0
 PORTEPOCH=		0
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_SAMBA}
@@ -16,7 +16,7 @@ LICENSE=		GPLv3
 CONFLICTS=		*samba3[0-4]-3.*
 
 USES=			compiler pkgconfig
-USE_PYTHON_BUILD=	2
+USE_PYTHON=		2
 USE_LDCONFIG=		yes
 WAF_TOOL=		buildtools/bin/waf
 CONFIGURE_LOG=		bin/config.log
@@ -31,6 +31,9 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX} \
 			--infodir=${PREFIX}/${INFO_PATH}/${INFO_SUBDIR}
 # Support staging
 DESTDIRNAME=		--destdir
+
+OPTIONS_DEFINE=		MANPAGES
+MANPAGES_DESC=		Build and install manpages (requires textproc/docbook-xsl)
 
 .include <bsd.port.options.mk>
 
@@ -94,15 +97,11 @@ CONFIGURE_ARGS+=	--jobs=${MAKE_JOBS_NUMBER}
 _MAKE_JOBS+=		--jobs=${MAKE_JOBS_NUMBER}
 .endif
 
-USE_PYTHON_RUN=		yes
-
 PLIST_FILES+=		include/pyldb.h \
 			lib/libpyldb-util.so \
 			lib/libpyldb-util.so.1 \
 			%%PYTHON_SITELIBDIR%%/ldb.so \
 			%%PKGCONFIGDIR%%/pyldb-util.pc
-PLIST_DIRSTRY+=		%%PYTHON_SITELIBDIR%% \
-			%%PYTHON_LIBDIR%%
 
 LDB_MAN1=		man/man1/ldbadd.1.gz \
 			man/man1/ldbdel.1.gz \
