@@ -1,4 +1,4 @@
-/* $FreeBSD: head/devel/gdb/files/fbsd-threads.c 357297 2014-06-10 11:39:29Z tijl $ */
+/* $FreeBSD: head/devel/gdb/files/fbsd-threads.c 364713 2014-08-12 15:39:58Z tijl $ */
 /* FreeBSD libthread_db assisted debugging support.
    Copyright 1999, 2000, 2001 Free Software Foundation, Inc.
 
@@ -1296,7 +1296,7 @@ tsd_cb (thread_key_t key, void (*destructor)(void *), void *ignore)
   if (!bms.minsym)
     name = "???";
   else
-    name = SYMBOL_PRINT_NAME (bms.minsym);
+    name = MSYMBOL_PRINT_NAME (bms.minsym);
 
   printf_filtered ("Key %d, destructor %p <%s>\n", key, destructor, name);
   return 0;
@@ -1502,14 +1502,14 @@ ps_err_e
 ps_pglobal_lookup (struct ps_prochandle *ph, const char *obj,
    const char *name, psaddr_t *sym_addr)
 {
-  struct minimal_symbol *ms;
+  struct bound_minimal_symbol ms;
   CORE_ADDR addr;
 
   ms = lookup_minimal_symbol (name, NULL, NULL);
-  if (ms == NULL)
+  if (!ms.minsym) 
     return PS_NOSYM;
 
-  *sym_addr = SYMBOL_VALUE_ADDRESS (ms);
+  *sym_addr = BMSYMBOL_VALUE_ADDRESS (ms);
   return PS_OK;
 }
 
