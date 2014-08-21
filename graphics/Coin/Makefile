@@ -3,10 +3,9 @@
 
 PORTNAME=	Coin
 PORTVERSION=	3.1.3
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	graphics
-MASTER_SITES=	http://ftp.coin3d.org/coin/src/all/ \
-		ftp://ftp.coin3d.org/pub/coin/src/all/
+MASTER_SITES=	https://bitbucket.org/Coin3D/coin/downloads/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	C++ 3D graphics library based on the Open Inventor 2.1 API
@@ -29,5 +28,8 @@ MAKE_ENV=	LANG=C
 post-patch:
 	@${REINPLACE_CMD} -e 's|DATA install-data-local|DATA|g' ${WRKSRC}/Makefile.in
 	@${REINPLACE_CMD} -e 's|-pthread|${PTHREAD_LIBS}|g' ${WRKSRC}/configure
+
+post-build:
+	@${REINPLACE_CMD} -e '/^ldflags=/s|-R|-Wl,-rpath,|' ${WRKSRC}/coin-default.cfg
 
 .include <bsd.port.mk>
