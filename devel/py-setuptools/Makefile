@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	setuptools
-PORTVERSION=	5.4.1
+PORTVERSION=	5.5.1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,14 +12,16 @@ COMMENT=	Python packages installer
 
 LICENSE=	PSFL
 
+# This creates a dependency loop
+#TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>0:${PORTSDIR}/devel/py-pytest
+
 CONFLICTS_INSTALL=	${PYTHON_PKGNAMEPREFIX}distribute-[0-9]*
 
 PLIST_SUB=	PYVER=${PYTHON_VER} VERSION=${PORTVERSION} \
 		EASYINSTALL_PTH=${PYTHON_SITELIBDIR}/easy-install.pth
 
-USE_PYTHON=		yes
-USE_PYDISTUTILS=	yes
-PYDISTUTILS_AUTOPLIST=	yes
+USES=		python
+USE_PYTHON=	autoplist distutils
 PYDISTUTILS_SETUP=	${PYSETUP}
 
 SUB_LIST=	IF_DEFAULT=${IF_DEFAULT}
@@ -42,7 +44,7 @@ post-patch:
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/easy-install.pth.dist ${STAGEDIR}${PYTHON_SITELIBDIR}/
 
-regression-test: build
-	@cd ${WRKSRC} && ${PYTHON_CMD} ${PYSETUP} test
+#regression-test: build
+#	@cd ${WRKSRC} && ${PYTHON_CMD} ${PYSETUP} test
 
 .include <bsd.port.post.mk>
