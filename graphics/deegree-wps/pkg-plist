@@ -53,5 +53,8 @@
 @dirrm %%TOMCATDIR%%/webapps/deegree-wps/WEB-INF/classes
 @dirrm %%TOMCATDIR%%/webapps/deegree-wps/WEB-INF
 @dirrm %%TOMCATDIR%%/webapps/deegree-wps/META-INF
+@owner %%WWWOWN%%
+@group %%WWWGRP%%
 @dirrm %%TOMCATDIR%%/webapps/deegree-wps
-@dirrm %%TOMCATDIR%%/webapps
+@group wheel
+@group root
