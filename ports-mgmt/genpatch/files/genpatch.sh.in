@@ -62,7 +62,7 @@ PKGDIFF_FMT="-p --unified=3"
 
 # Strip out the date on the +++ line to reduce needless
 # differences in regenerated patches
-SEDPLUS='s:^\(+++ [^	]*\)	.*:\1:'
+SEDPLUS='/^---/s|\.[0-9]* +0000$| UTC| ; /^+++/s|\([[:blank:]][-0-9:.+]*\)*$||'
 
 if diff -q ${PKGDIFF_FMT} ${old} ${new} > /dev/null
 then

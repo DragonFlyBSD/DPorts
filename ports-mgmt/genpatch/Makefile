@@ -12,7 +12,7 @@
 #
 
 PORTNAME=	genpatch
-PORTVERSION=	1.20
+PORTVERSION=	1.30
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	# none
 DISTFILES=	# none
