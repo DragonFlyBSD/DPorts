@@ -1,5 +1,5 @@
---- ./scripts/ping.pl.orig	2011-10-26 09:31:56.000000000 -0400
-+++ ./scripts/ping.pl	2011-10-26 09:32:02.000000000 -0400
+--- ./scripts/ping.pl.orig	2014-08-15 15:39:56.000000000 +0200
++++ ./scripts/ping.pl	2014-08-15 15:40:35.000000000 +0200
 @@ -6,7 +6,7 @@
  
  # old linux version use "icmp_seq"
