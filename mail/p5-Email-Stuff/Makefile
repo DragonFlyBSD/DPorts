@@ -8,7 +8,7 @@ CATEGORIES=	mail perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	chifeng@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	More casual approach to creating and sending Email
 
 BUILD_DEPENDS=	p5-prefork>=1.01:${PORTSDIR}/devel/p5-prefork \
@@ -20,5 +20,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		perl5
 USE_PERL5=	configure
+
+DEPRECATED=	Deprecated in favour of mail/p5-Email-Stuffer
+EXPIRATION_DATE=	2014-10-15
 
 .include <bsd.port.mk>
