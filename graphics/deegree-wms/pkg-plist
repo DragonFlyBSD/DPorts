@@ -2069,5 +2069,8 @@
 @dirrm %%TOMCATDIR%%/webapps/deegree-wms/WEB-INF/classes
 @dirrm %%TOMCATDIR%%/webapps/deegree-wms/WEB-INF
 @dirrm %%TOMCATDIR%%/webapps/deegree-wms/META-INF
+@owner %%WWWOWN%%
+@group %%WWWGRP%%
 @dirrm %%TOMCATDIR%%/webapps/deegree-wms
-@dirrm %%TOMCATDIR%%/webapps
+@group wheel
+@group root
