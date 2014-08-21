@@ -2,6 +2,7 @@
 
 PORTNAME=	railties
 PORTVERSION=	3.2.19
+PORTREVISION=	1
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
@@ -13,7 +14,8 @@ LICENSE=	MIT
 RUN_DEPENDS=	rubygem-actionpack>=${PORTVERSION}:${PORTSDIR}/www/rubygem-actionpack \
 		rubygem-activesupport>=${PORTVERSION}:${PORTSDIR}/devel/rubygem-activesupport \
 		rubygem-thor>=0.19.0:${PORTSDIR}/devel/rubygem-thor \
-		rubygem-rack-ssl>=1.3.2:${PORTSDIR}/www/rubygem-rack-ssl
+		rubygem-rack-ssl>=1.3.2:${PORTSDIR}/www/rubygem-rack-ssl \
+		rubygem-rake>=0:${PORTSDIR}/devel/rubygem-rake
 
 USE_RUBY=	yes
 USE_RAKE=	yes
