@@ -2,7 +2,7 @@
 
 PORTNAME=	tilda
 PORTVERSION=	0.9.6
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	x11
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
@@ -26,6 +26,8 @@ post-patch:
 		${WRKSRC}/src/tilda.c
 	@${REINPLACE_CMD} -e 's|glib/.*\.h>|glib.h>|g' \
 		${WRKSRC}/src/tomboykeybinder.h
+	@${REINPLACE_CMD} -e 's|-R$$found_dir|-Wl,-rpath,$$found_dir|g' \
+		${WRKSRC}/configure
 
 post-install:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
