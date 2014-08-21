@@ -2,10 +2,9 @@
 # $FreeBSD$
 
 PORTNAME=	polipo
-PORTVERSION=	1.0.4.1
+PORTVERSION=	1.1.1
 CATEGORIES=	www
-MASTER_SITES=	http://freehaven.net/~chrisd/polipo/ \
-		http://www.sax.de/~frank/polipo4bsd/files/
+MASTER_SITES=	http://www.pps.univ-paris-diderot.fr/~jch/software/files/polipo/
 
 MAINTAINER=	frank@pinky.sax.de
 COMMENT=	Small and fast caching web proxy
@@ -27,7 +26,6 @@ SUB_FILES=	pkg-message pkg-install pkg-deinstall 400.polipo
 SUB_LIST+=	USER=${PUSER} GROUP=${PGRP} DESTDIR=${DESTDIR} PCONFIGDIR=${PCONFIGDIR} \
 		PCACHEDIR=${PCACHEDIR} PPIDDIR=${PPIDDIR} PPIDFILE=${PPIDFILE} \
 		PLOGFILE=${PLOGFILE}
-PLIST_SUB+=	RESETPREFIX=${PREFIX}
 
 # polipo installation options, propagated to install scripts
 PUSER?=		polipo
