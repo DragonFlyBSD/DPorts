@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/mail/milter-regex/files/milterregex.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/mail/milter-regex/files/milterregex.in 363850 2014-08-03 05:34:43Z dinoex $
 
 # Start or stop milterregex
 
@@ -35,8 +35,8 @@ stop_postcmd="milterregex_poststop"
 milterregex_prestart() {
 	if test ! -d "${spooldir}"
 	then
-		mkdir -m 700 -p "${spooldir}"
-		chown mailnull:daemon "${spooldir}"
+		mkdir -m 750 -p "${spooldir}"
+		chown mailnull:mail "${spooldir}"
 	fi
 }
 
