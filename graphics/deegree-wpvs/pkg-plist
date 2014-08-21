@@ -2215,5 +2215,8 @@
 @dirrm %%TOMCATDIR%%/webapps/deegree-wpvs/WEB-INF/classes
 @dirrm %%TOMCATDIR%%/webapps/deegree-wpvs/WEB-INF
 @dirrm %%TOMCATDIR%%/webapps/deegree-wpvs/META-INF
+@owner %%WWWOWN%%
+@group %%WWWGRP%%
 @dirrm %%TOMCATDIR%%/webapps/deegree-wpvs
-@dirrm %%TOMCATDIR%%/webapps
+@group wheel
+@group root
