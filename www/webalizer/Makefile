@@ -2,7 +2,7 @@
 
 PORTNAME=	webalizer
 PORTVERSION=	2.23.8
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES+=	www
 MASTER_SITES=	ftp://ftp.mrunix.net/pub/webalizer/:main \
 MASTER_SITES=	ftp://ftp.mrunix.net/pub/webalizer/geodb/:geodb \
@@ -13,7 +13,7 @@ DISTNAME=	${PORTNAME}-2.23-08-src
 DISTFILES=	${DISTNAME}.tgz:main
 
 MAINTAINER?=	dinoex@FreeBSD.org
-COMMENT=	A web server log file analysis program
+COMMENT=	Web server log file analysis program
 
 LICENSE=	GPLv2
 
