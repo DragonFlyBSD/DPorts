@@ -1,6 +1,5 @@
-$FreeBSD: head/graphics/glew/files/patch-config_Makefile.freebsd 340725 2014-01-22 17:40:44Z mat $
---- config/Makefile.freebsd.orig	2012-10-04 19:47:46.000000000 +0200
-+++ config/Makefile.freebsd	2012-10-04 19:49:06.000000000 +0200
+--- ./config/Makefile.freebsd.orig	2014-08-11 16:14:56.000000000 +0200
++++ ./config/Makefile.freebsd	2014-08-17 19:36:47.000000000 +0200
 @@ -1,22 +1,22 @@
  NAME = $(GLEW_NAME)
 -CC = cc
@@ -8,8 +7,8 @@ $FreeBSD: head/graphics/glew/files/patch-config_Makefile.freebsd 340725 2014-01-
 -LDFLAGS.EXTRA = -L/usr/X11R6/lib
 +CC ?= cc
 +LD ?= ld
-+LDFLAGS.EXTRA = -L${LOCALBASE}/lib
- LDFLAGS.GL = -lXmu -lXi -lGL -lXext -lX11
++LDFLAGS.EXTRA ?= -L${LOCALBASE}/lib
+ LDFLAGS.GL = -lGL -lX11
  LDFLAGS.STATIC = -Wl,-Bstatic
  LDFLAGS.DYNAMIC = -Wl,-Bdynamic
 -CFLAGS.EXTRA += -I/usr/X11R6/include
