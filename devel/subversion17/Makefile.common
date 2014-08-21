@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	subversion
-PORTVERSION=	1.7.17
-PORTREVISION?=	2
+PORTVERSION=	1.7.18
+PORTREVISION?=	0
 CATEGORIES+=	devel
 MASTER_SITES=	${MASTER_SITE_APACHE}
 DIST_SUBDIR=	subversion17
@@ -12,9 +12,11 @@ MASTER_SITE_SUBDIR=	subversion
 
 USE_KDE4=	# Used below if KWallet support is enabled
 GNU_CONFIGURE=	yes
-USES+=		tar:bzip2 pkgconfig libtool
+USES+=		tar:bzip2 pkgconfig libtool cpe
 
 LICENSE=	APACHE20
+
+CPE_VENDOR=	apache
 
 CONFLICTS_INSTALL+=	${PKGNAMEPREFIX}${PORTNAME}${PKGNAMESUFFIX}-1.[^7].[0-9]*
 
@@ -75,10 +77,6 @@ STATIC_CONFIGURE_ON=		--enable-all-static
 # ===============================================================
 .include <bsd.port.options.mk>
 
-.if ${PORT_OPTIONS:MMOD_DONTDOTHAT} && !${PORT_OPTIONS:MMOD_DAV_SVN}
-IGNORE=	to build mod_dontdothat OPTION mod_dav_svn is required
-.endif
-
 .if ${PORT_OPTIONS:MKDE_KWALLET} && !${PORT_OPTIONS:MNLS}
 IGNORE= KWallet requires OPTION NLS set to ON
 .endif
@@ -116,7 +114,7 @@ post-patch:
 	@${REINPLACE_CMD} "s#^swig_pydir =.*#swig_pydir = ${PYTHON_SITELIBDIR}/libsvn#" ${WRKSRC}/Makefile.in
 	@${REINPLACE_CMD} "s#^swig_pydir_extra =.*#swig_pydir_extra = ${PYTHON_SITELIBDIR}/svn#" ${WRKSRC}/Makefile.in
 .if defined(SVN_BUILD_BINDINGS)
-	@${CP} ${FILESDIR}/build-outputs.mk ${WRKSRC}
+	${CP} ${FILESDIR}/build-outputs.mk ${WRKSRC}
 .endif
 .if ${PORT_OPTIONS:MFREEBSD_TEMPLATE} && defined(ORGANIZATION)
 	@${ECHO_CMD} "#define ORGANIZATION_NAME \"${ORGANIZATION}\"" > ${WRKSRC}/subversion/freebsd-organization.h
