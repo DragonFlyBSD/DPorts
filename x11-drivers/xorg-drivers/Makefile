@@ -78,8 +78,8 @@ ${a:tu}_DESC=	Install ${a} ${type} driver
 OPTIONS_DEFINE_i386=	INTEL OPENCHROME
 OPTIONS_DEFAULT_i386=	INTEL OPENCHROME
 
-OPTIONS_DEFINE_x86_64:=	${OPTIONS_DEFINE_i386}
-OPTIONS_DEFAULT_x86_64:=	${OPTIONS_DEFAULT_i386}
+OPTIONS_DEFINE_x86_64:=	INTEL29 OPENCHROME
+OPTIONS_DEFAULT_amd64:=	INTEL29 OPENCHROME
 
 OPTIONS_DEFINE_sparc64=	SUNFFB
 OPTIONS_DEFAULT_sparc64=SUNFFB
@@ -88,6 +88,7 @@ OPTIONS_DEFINE_ia64=	OPENCHROME
 OPTIONS_DEFAULT_ia64=	OPENCHROME
 
 INTEL_DESC=		Install intel video driver
+INTEL29_DESC=		Install intel video driver
 OPENCHROME_DESC=	Install openchrome video driver
 SUNFFB_DESC=		Install sunffb video driver
 
@@ -97,8 +98,12 @@ QUIRKS=		keyboard:kbd
 .include <bsd.port.options.mk>
 
 # Manual add arch specific drivers so they be added to depend lines.
-.if ${ARCH}==i386 || ${ARCH}==x86_64
+.if ${ARCH}==i386
 VIDEO_DRIVERS+=	intel openchrome
+.endif
+
+.if ${ARCH}==x86_64
+VIDEO_DRIVERS+=	intel29 openchrome
 .endif
 
 .if ${ARCH}==sparc64
