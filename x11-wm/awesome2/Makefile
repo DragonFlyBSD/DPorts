@@ -3,13 +3,13 @@
 
 PORTNAME=	awesome2
 PORTVERSION=	2.3.6
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	x11-wm
 MASTER_SITES=	http://awesome.naquadah.org/download/
 DISTNAME=	awesome-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	A tiling window manager initially based on a dwm code rewriting
+COMMENT=	Tiling window manager initially based on a dwm code rewriting
 
 LICENSE=	GPLv2
 
