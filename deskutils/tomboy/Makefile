@@ -3,6 +3,7 @@
 
 PORTNAME=	tomboy
 PORTVERSION=	1.14.1
+PORTREVISION=	1
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -16,12 +17,13 @@ BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/dbus-sharp-glib-1.0.pc:${PORTSDIR}
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/dbus-sharp-glib-1.0.pc:${PORTSDIR}/devel/dbus-sharp-glib \
 		mautil:${PORTSDIR}/devel/mono-addins
 
-USES=		gettext gmake mono pathfix pkgconfig tar:xz
+USES=		gettext gmake libtool mono pathfix pkgconfig tar:xz
 USE_GNOME=	intlhack gnomeprefix gnomedesktopsharp20
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
+GCONF_SCHEMAS=	tomboy.schemas
 
 MAKE_JOBS_UNSAFE=yes
 
@@ -49,7 +51,7 @@ RUN_DEPENDS+=	${LOCALBASE}/lib/mono/gmime-sharp-2.6/gmime-sharp.dll:${PORTSDIR}/
 PLIST_SUB+=	EVOLUTION=""
 .else
 CONFIGURE_ARGS+=--disable-evolution
-PLIST_SUB+=	EVOLUTION="@comment"
+PLIST_SUB+=	EVOLUTION="@comment "
 .endif
 
 post-patch:

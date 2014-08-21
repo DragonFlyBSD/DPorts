@@ -1,6 +1,5 @@
 bin/tomboy
 %%APPLET%%bin/tomboy-panel
-etc/gconf/schemas/tomboy.schemas
 lib/tomboy/Tomboy.exe
 lib/tomboy/Tomboy.exe.config
 lib/tomboy/Tomboy.exe.mdb
@@ -39,7 +38,6 @@ lib/tomboy/addins/WebDavSyncService.dll
 lib/tomboy/addins/WebDavSyncService.dll.mdb
 lib/tomboy/addins/WebSyncServiceAddin.dll
 lib/tomboy/addins/WebSyncServiceAddin.dll.mdb
-lib/tomboy/libtomboy.la
 lib/tomboy/libtomboy.so
 %%APPLET%%libdata/bonobo/servers/GNOME_TomboyApplet.server
 libdata/pkgconfig/tomboy-addins.pc
