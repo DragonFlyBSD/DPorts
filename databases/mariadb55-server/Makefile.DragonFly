@@ -1,4 +1,4 @@
-LIB_DEPENDS+=		libexecinfo.so:${PORTSDIR}/devel/libexecinfo
+USES+=			execinfo
 
 CMAKE_ARGS+=		-DWITH_READLINE=1
 
