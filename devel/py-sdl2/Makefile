@@ -12,10 +12,9 @@ COMMENT=	Python bindings to the SDL2 libraries
 
 LICENSE=	ZLIB
 
-USE_SDL=		sdl2 gfx2 image2 ttf2 mixer2
-USE_PYTHON=		yes
-USE_PYDISTUTILS=	yes
-PYDISTUTILS_AUTOPLIST=	yes
+USES=		python
+USE_SDL=	sdl2 gfx2 image2 ttf2 mixer2
+USE_PYTHON=	autoplist distutils
 
 OPTIONS_DEFINE=	DOCS
 
