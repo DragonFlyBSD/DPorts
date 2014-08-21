@@ -1,2 +1,2 @@
-LIB_DEPENDS+= libexecinfo.so:${PORTSDIR}/devel/libexecinfo
+USES+= execinfo
 CFLAGS+= -D__FreeBSD__=9
