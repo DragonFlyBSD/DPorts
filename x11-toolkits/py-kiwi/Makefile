@@ -2,53 +2,34 @@
 # $FreeBSD$
 
 PORTNAME=	kiwi
-PORTVERSION=	1.9.29
-PORTREVISION=	1
+PORTVERSION=	1.9.38
+DISTVERSIONPREFIX=	gtk-
 CATEGORIES=	x11-toolkits python
-MASTER_SITES=	http://download.gnome.org/sources/${PORTNAME}/1.9/ \
-		http://nivi.interfree.it/distfiles/${PORTNAME}/
+MASTER_SITES=	CHEESESHOP/source/${DISTNAME:C/(.).*/\1/}/${PORTNAME}-gtk
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	python@FreeBSD.org
 COMMENT=	Framework and a set of enhanced widgets based on PyGTK
 
-BUILD_DEPENDS=	pygtk-codegen-2.0:${PORTSDIR}/x11-toolkits/py-gtk2
-RUN_DEPENDS=	pygtk-codegen-2.0:${PORTSDIR}/x11-toolkits/py-gtk2
+LICENSE=	LGPL21
 
-USES=		gettext tar:xz
-USE_GNOME=	libglade2
+NO_ARCH=	yes
+
+USES=		gettext uniquefiles:dirs
+USE_GNOME=	libglade2 pygtk2
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
 
-DOCSDIR=	${PREFIX}/share/doc/${PYTHON_PKGNAMEPREFIX}${PORTNAME}
-EXAMPLESDIR=	${PREFIX}/share/examples/${PYTHON_PKGNAMEPREFIX}${PORTNAME}
+PORTDOCS=	*
+PORTEXAMPLES=	*
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
-NO_STAGE=	yes
-
-.include <bsd.port.options.mk>
-
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
-	cd ${WRKSRC}/doc && ${COPYTREE_SHARE} . ${DOCSDIR}
-.endif
-.if ${PORT_OPTIONS:MEXAMPLES}
-	cd ${WRKSRC}/examples && ${COPYTREE_SHARE} . ${EXAMPLESDIR}
-.endif
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	cd ${WRKSRC}/doc && ${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	cd ${WRKSRC}/examples && ${COPYTREE_SHARE} . ${STAGEDIR}${EXAMPLESDIR}
 
-.include <bsd.port.pre.mk>
-
-.if defined (WITH_ZOPEINTERFACE)
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}zope.interface>=3.3.0:${PORTSDIR}/devel/py-zope.interface
-.endif
-
-.if defined (WITH_PYGOBJECT)
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}gobject>=2.14.2_2:${PORTSDIR}/devel/py-gobject
-.endif
-
-.if defined (WITH_PYSQLOBJECT)
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}sqlobject>=0.10.0_1:${PORTSDIR}/databases/py-sqlobject
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
