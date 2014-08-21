@@ -3,10 +3,9 @@
 
 PORTNAME=	deadbeef
 PORTVERSION=	0.6.2
+PORTREVISION=	1
 CATEGORIES=	audio
-MASTER_SITES=	SF/${PORTNAME}/${PORTVERSION}${PKGNAMESUFFIX}
-PKGNAMESUFFIX=	-rc5
-DISTNAME=	${PORTNAME}-${PORTVERSION}${PKGNAMESUFFIX}
+MASTER_SITES=	SF/${PORTNAME}/
 
 MAINTAINER=	vg@FreeBSD.org
 COMMENT=	Ultimate music player for Unix-like systems
@@ -15,12 +14,11 @@ LICENSE=	GPLv2 LGPL21
 LICENSE_COMB=	dual
 
 LIB_DEPENDS=	libsamplerate.so:${PORTSDIR}/audio/libsamplerate \
-		libmad.so:${PORTSDIR}/audio/libmad \
-		libexecinfo.so:${PORTSDIR}/devel/libexecinfo
+		libmad.so:${PORTSDIR}/audio/libmad
 
 GNU_CONFIGURE=	yes
 USES=		gmake pkgconfig gettext iconv shebangfix tar:bzip2 desktop-file-utils \
-		libtool
+		libtool execinfo
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--disable-alsa --disable-nullout --disable-gtk3
 CPPFLAGS+=	-I../dumb/dumb-kode54/include -I../../plugins/libmp4ff -I../../plugins/gme/game-music-emu-0.6pre -I${LOCALBASE}/include
@@ -73,7 +71,7 @@ OPTIONS_SUB=	yes
 PULSEAUDIO_LIB_DEPENDS=	libpulse.so:${PORTSDIR}/audio/pulseaudio
 PULSEAUDIO_CONFIGURE_OFF=	--disable-pulse
 
-GUI_USE=	GNOME="gtk20,glib20"
+GUI_USE=	gnome=gtk20,glib20
 GUI_CONFIGURE_OFF=	--disable-gtkui --disable-gtk3
 
 VFS_LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl
@@ -81,6 +79,11 @@ VFS_CONFIGURE_OFF=	--disable-vfs-curl
 
 LASTFM_LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl
 LASTFM_CONFIGURE_OFF=	--disable-lfm
+
+ART_LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl \
+			libImlib2.so:${PORTSDIR}/graphics/imlib2 \
+			libjpeg.so:${PORTSDIR}/graphics/jpeg
+ART_CONFIGURE_OFF=	--disable-artwork --disable-artwork-imlib2
 
 EQ_CONFIGURE_OFF=	--disable-supereq
 
@@ -154,6 +157,8 @@ DSP_CONFIGURE_OFF=	--disable-src
 
 MONO2STEREO_CONFIGURE_OFF=	--disable-mono2stereo
 
+CONVERTER_CONFIGURE_OFF=	--disable-converter
+
 VFS_ZIP_LIB_DEPENDS=	libzip.so:${PORTSDIR}/archivers/libzip
 VFS_ZIP_CONFIGURE_OFF=	--disable-vfs-zip
 
@@ -165,30 +170,12 @@ WMA_CONFIGURE_OFF=		--disable-wma
 
 .include <bsd.port.options.mk>
 
-.if ${PORT_OPTIONS:MART}
-.if ${PORT_OPTIONS:MVFS}
-CONFIGURE_ARTS+=	--disable-artwork-imlib2
-PLIST_SUB+=	ART=""
-LIB_DEPENDS+=	libcurl.so:${PORTSDIR}/ftp/curl \
-		libjpeg.so:${PORTSDIR}/graphics/jpeg
-.else
+.if ${PORT_OPTIONS:MART} && ! ${PORT_OPTIONS:MVFS}
 BROKEN=		VFS plugin required for album art loader, please rerun 'make config' and either disable ART or enable VFS
 .endif
-.else
-CONFIGURE_ARGS+=	--disable-artwork
-PLIST_SUB+=	ART="@comment "
-.endif
 
-.if ${PORT_OPTIONS:MCONVERTER}
-.if ${PORT_OPTIONS:MGUI}
-PLIST_SUB+=	CONVERTER=""
-USE_GNOME=	gtk20 glib20
-.else
+.if ${PORT_OPTIONS:MCONVERTER} && ! ${PORT_OPTIONS:MGUI}
 BROKEN=		CONVERTER plugin required for gui, please rerun 'make config' and either disable CONVERTER or enable GUI
-.endif
-.else
-CONFIGURE_ARGS+=	--disable-converter
-PLIST_SUB+=	CONVERTER="@comment "
 .endif
 
 post-patch:
