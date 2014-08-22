@@ -2,10 +2,10 @@
 # $FreeBSD$
 
 PORTNAME=	lmdb
-PORTVERSION=	0.9.11
+PORTVERSION=	0.9.13
 CATEGORIES=	databases
-MASTER_SITES=	https://gitorious.org/${GO_ACCOUNT}/${GO_PROJECT}/archive/${GO_TAGNAME}.tar.gz?dummy= \
-		LOCAL/delphij
+MASTER_SITES=	LOCAL/delphij
+# https://gitorious.org/${GO_ACCOUNT}/${GO_PROJECT}/archive/${GO_TAGNAME}.tar.gz?dummy= \
 
 MAINTAINER=	delphij@FreeBSD.org
 COMMENT=	OpenLDAP Lightning Memory-Mapped Database
