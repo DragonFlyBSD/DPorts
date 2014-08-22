@@ -6,19 +6,10 @@ WITHOUT_DEBUG=yes
 .endif
 
 MOZ_OPTIONS+=	--host=${ARCH}-dports-${OPSYS:tl}${OSREL}
-MOZ_MAKE_FLAGS+=-j${MAKE_JOBS_NUMBER}
-MOZ_EXPORT+=	MOZ_MAKE_FLAGS=${MOZ_MAKE_FLAGS:Q}
-MOZ_MK_OPTIONS+=MOZ_MAKE_FLAGS=${MOZ_MAKE_FLAGS:Q}
+#MOZ_MAKE_FLAGS+=-j${MAKE_JOBS_NUMBER}
+#MOZ_EXPORT+=	MOZ_MAKE_FLAGS=${MOZ_MAKE_FLAGS:Q}
+#MOZ_MK_OPTIONS+=MOZ_MAKE_FLAGS=${MOZ_MAKE_FLAGS:Q}
+
+MOZ_OPTIONS+= --disable-webrtc
 
 PULSEAUDIO_LIB_DEPENDS= libpulse.so:${PORTSDIR}/audio/pulseaudio
-
-post-extract:
-	@${REINPLACE_CMD} -e 's|_SAFE|_MUTABLE|g' \
-		${WRKSRC}/mozilla/netwerk/sctp/src/netinet/sctp_asconf.c \
-		${WRKSRC}/mozilla/netwerk/sctp/src/netinet/sctp_bsd_addr.c \
-		${WRKSRC}/mozilla/netwerk/sctp/src/netinet/sctp_indata.c \
-		${WRKSRC}/mozilla/netwerk/sctp/src/netinet/sctp_input.c \
-		${WRKSRC}/mozilla/netwerk/sctp/src/netinet/sctp_output.c \
-		${WRKSRC}/mozilla/netwerk/sctp/src/netinet/sctp_pcb.c \
-		${WRKSRC}/mozilla/netwerk/sctp/src/netinet/sctp_timer.c \
-		${WRKSRC}/mozilla/netwerk/sctp/src/netinet/sctputil.c
