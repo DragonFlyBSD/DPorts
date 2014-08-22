@@ -1,4 +1,4 @@
---- src/lj_alloc.c.orig	2013-06-03 19:00:00.000000000 +0000
+--- src/lj_alloc.c.orig	2014-03-12 12:10:00 UTC
 +++ src/lj_alloc.c
 @@ -188,6 +188,33 @@ static LJ_AINLINE void *CALL_MMAP(size_t
    return ptr;
@@ -31,6 +31,6 @@
 +  return CMFAIL;
 +}
 +
- #elif LJ_TARGET_OSX || defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__OpenBSD__) || defined(__sun__)
+ #elif LJ_TARGET_OSX || LJ_TARGET_PS4 || defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__sun__)
  
  /* OSX and FreeBSD mmap() use a naive first-fit linear search.
