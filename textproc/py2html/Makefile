@@ -11,9 +11,12 @@ PKGNAMESUFFIX=	-${PYTHON_PKGNAMEPREFIX:S/-//}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Python Highlighter for HTML
 
-USE_PYTHON=	yes
-MAKE_ENV=	PORTSDIR=${PORTSDIR}
-INSTALLS_EGGINFO=	yes
+USES=			shebangfix
+USE_PYTHON=		2
+USE_PYDISTUTILS=	yes
 
-NO_STAGE=	yes
+python_OLD_CMD=	/usr/bin/env python
+python_CMD=	${PYTHON_CMD}
+SHEBANG_FILES=	py2html
+
 .include <bsd.port.mk>
