@@ -1,6 +1,6 @@
---- src/widgets/gcs-schemebox.cc.orig	2006-12-16 17:57:06.000000000 +0000
+--- src/widgets/gcs-schemebox.cc.orig
 +++ src/widgets/gcs-schemebox.cc
-@@ -45,7 +45,7 @@ namespace gcs
+@@ -45,7 +45,7 @@
  
          SchemeBox::SchemeBox(Scheme schm)
          {
