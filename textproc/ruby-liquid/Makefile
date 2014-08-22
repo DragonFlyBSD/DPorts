@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tgz
 DIST_SUBDIR=	ruby
 
 MAINTAINER=	ruby@FreeBSD.org
-COMMENT=	A non evaling template engine for ruby
+COMMENT=	Non evaling template engine for ruby
 
 USE_RUBY=	yes
 NO_BUILD=	yes
@@ -19,6 +19,9 @@ SADIR=		${RUBY_SITELIBDIR}
 DOCS=		CHANGELOG README.txt History.txt
 
 OPTIONS_DEFINE=	DOCS
+
+DEPRECATED=	RubyForge shutdown May 15 2014
+EXPIRATION_DATE=	2014-09-20
 
 do-install:
 	${MKDIR} ${STAGEDIR}${SADIR}/liquid/tags ${STAGEDIR}${SADIR}/liquid/extras
