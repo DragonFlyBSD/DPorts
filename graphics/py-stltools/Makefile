@@ -14,10 +14,8 @@ LICENSE=		BSD2CLAUSE
 
 RUN_DEPENDS=		${PYNUMPY}
 
-USES=			zip
-USE_PYTHON=		YES
-PYTHON_VERSION=		python2.7
-USE_PYDISTUTILS=	YES
+USES=			zip python:2.7
+USE_PYTHON=		distutils
 
 DOCS=			README.txt
 EXAMPLES=		test/cube.stl test/cube_bin.stl
