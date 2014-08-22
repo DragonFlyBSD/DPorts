@@ -1,14 +1,14 @@
 
-$FreeBSD: head/www/cowboy/files/patch-Makefile 362444 2014-07-21 15:22:11Z olgeni $
+$FreeBSD: head/www/cowboy/files/patch-Makefile 363989 2014-08-04 10:49:26Z olgeni $
 
 --- Makefile.orig
 +++ Makefile
-@@ -13,7 +13,7 @@
+@@ -12,7 +12,7 @@
  
  # Dependencies.
  
 -DEPS = cowlib ranch
 +DEPS =
- dep_cowlib = pkg://cowlib 0.6.2
- dep_ranch = pkg://ranch 0.10.0
+ TEST_DEPS = ct_helper gun
+ dep_ct_helper = git https://github.com/extend/ct_helper.git master
  
