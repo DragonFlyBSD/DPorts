@@ -13,10 +13,9 @@ COMMENT=	Python package for creating encapsulated PostScript figures
 
 LICENSE=	GPLv2
 
-USE_PYTHON=		2
-USE_PYDISTUTILS=	yes
-PYDISTUTILS_AUTOPLIST=	yes
+USES=		python:2
 USE_TEX=	latex:build
+USE_PYTHON=	autoplist distutils
 
 OPTIONS_DEFINE=		T1CODE KPATHSEA
 OPTIONS_DEFAULT=	T1CODE KPATHSEA
