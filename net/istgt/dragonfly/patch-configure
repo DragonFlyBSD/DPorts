@@ -1,0 +1,11 @@
+--- configure.intermediate	2014-08-23 13:43:15.000000000 +0000
++++ configure
+@@ -3403,7 +3403,7 @@ $as_echo "#define _GNU_SOURCE 1" >>confd
+ 	rcdir='/etc/rc.d'
+ 
+ 	;;
+-*freebsd*)
++*dragonfly*|*freebsd*)
+ 	tmp="/usr/ports/emulators/virtualbox-ose/work/*/include"
+ 	if test -d "`echo $tmp`"; then
+ 	    vboxinc=$tmp
