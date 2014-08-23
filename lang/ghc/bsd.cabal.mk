@@ -22,7 +22,8 @@ NO_INSTALL=	yes
 NO_MTREE=	yes
 .endif # !METAPORT
 
-MAKE_ENV+=	LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 DESTDIR=${STAGEDIR}
+MAKE_ENV+=	LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 DESTDIR=${STAGEDIR} \
+		TMPDIR=${TMPDIR}
 
 SETUP_CMD?=	./setup
 
@@ -63,6 +64,7 @@ INSTALL_PORTDATA?=
 INSTALL_PORTEXAMPLES?=
 
 LOCALBASE?=	/usr/local
+TMPDIR?=	${WRKDIR}/tmp
 
 .if !defined(CABALOPTIONSMKINCLUDED)
 .include "bsd.cabal.options.mk"
@@ -208,6 +210,7 @@ _BUILD_SETUP=	${GHC_CMD} -o ${SETUP_CMD} -package Cabal --make
 .if !defined(METAPORT)
 .if !target(do-configure)
 do-configure:
+	@${MKDIR} ${TMPDIR}
 	@if [ -f ${WRKSRC}/Setup.hs ]; then \
 	    cd ${WRKSRC} && ${_BUILD_SETUP} Setup.hs; fi
 	@if [ -f ${WRKSRC}/Setup.lhs ]; then \
