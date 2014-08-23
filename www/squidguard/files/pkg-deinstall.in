@@ -1,0 +1,12 @@
+#!/bin/sh
+# $FreeBSD: head/www/squidguard/files/pkg-deinstall.in 329694 2013-10-07 11:45:08Z madpilot $
+
+if [ "$2" != "DEINSTALL" ]; then
+	exit 0
+fi
+
+# Remove database files created if the sample blacklists were
+# compiled.
+find %%EXAMPLESDIR%% -name '*.db' -delete 
+
+exit 0
