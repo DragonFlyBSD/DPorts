@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	syslog-ng
-PORTVERSION=	3.5.4.1
+PORTVERSION=	3.5.6
 PORTREVISION=	2
 CATEGORIES=	sysutils
 DISTVERSION=	$(PORTVERSION:S/a/alpha/:S/b/beta/:S/r/rc/)
@@ -42,6 +42,7 @@ USE_RC_SUBR=	syslog-ng
 GNU_CONFIGURE=	yes
 USE_GNOME=	glib20
 SUB_FILES=	pkg-message
+INSTALL_TARGET=	install-strip
 
 CONFIGURE_ARGS=	--sysconfdir=${LOCALBASE}/etc --localstatedir=/var/db \
 		--enable-dynamic-linking \
@@ -98,7 +99,7 @@ CONFIGURE_ARGS+=	--disable-pcre
 .if ${PORT_OPTIONS:MGEOIP}
 CONFIGURE_ARGS+=	--enable-geoip
 LIB_DEPENDS+=		libGeoIP.so:${PORTSDIR}/net/GeoIP
-CONFIGURE_ENV+=		GEOIP_LIBS="-lGeoIP"
+CONFIGURE_ENV+=		GEOIP_LIBS="-L${LOCALBASE}/lib -lGeoIP"
 PLIST_FILES+=		lib/syslog-ng/libtfgeoip.so
 .else
 CONFIGURE_ARGS+=	--disable-geoip
@@ -125,6 +126,7 @@ CONFIGURE_ARGS+=	--disable-smtp
 LIB_DEPENDS+=		libdbi.so:${PORTSDIR}/databases/libdbi
 CONFIGURE_ENV+=		LIBDBI_LIBS="-ldbi"
 CONFIGURE_ARGS+=	--enable-sql
+LDFLAGS+=		-L${LOCALBASE}/lib
 PLIST_FILES+=		lib/syslog-ng/libafsql.so
 .else
 CONFIGURE_ARGS+=	--disable-sql
@@ -143,9 +145,10 @@ CONFIGURE_ARGS+=        --disable-linux-caps
 .endif
 
 post-patch:
-	@${REINPLACE_CMD} -e 's:libnet-config:libnet11-config:g' ${WRKSRC}/configure
-	@${LN} ${WRKSRC}/scl/syslog-ng.conf ${WRKSRC}/scl/syslog-ng.conf.dist
-	@${LN} ${WRKSRC}/scl/scl.conf ${WRKSRC}/scl/scl.conf.dist
+	@${REINPLACE_CMD} -e 's:libnet-config:libnet11-config:g' \
+		${WRKSRC}/configure
+	@${CP} ${WRKSRC}/scl/syslog-ng.conf ${WRKSRC}/scl/syslog-ng.conf.dist
+	@${CP} ${WRKSRC}/scl/scl.conf ${WRKSRC}/scl/scl.conf.sample
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
@@ -157,9 +160,11 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/man/*.1 ${STAGEDIR}${PREFIX}/man/man1/
 	${INSTALL_MAN} ${WRKSRC}/doc/man/*.5 ${STAGEDIR}${PREFIX}/man/man5/
 	${INSTALL_MAN} ${WRKSRC}/doc/man/*.8 ${STAGEDIR}${PREFIX}/man/man8/
-	${INSTALL_DATA} ${FILESDIR}/syslog-ng.conf.sample ${STAGEDIR}${PREFIX}/etc
-	${INSTALL_DATA} ${WRKSRC}/scl/syslog-ng.conf.dist ${STAGEDIR}${PREFIX}/etc
-	${INSTALL_DATA} ${WRKSRC}/scl/scl.conf.dist ${STAGEDIR}${PREFIX}/etc
-	${INSTALL_DATA} ${WRKSRC}/lib/ivykis/src/include/iv*.h ${STAGEDIR}${PREFIX}/include/syslog-ng/
+	${INSTALL_DATA} ${FILESDIR}/syslog-ng.conf.sample \
+		${STAGEDIR}${PREFIX}/etc
+	${INSTALL_DATA} ${WRKSRC}/scl/syslog-ng.conf.dist \
+		${WRKSRC}/scl/scl.conf.sample ${STAGEDIR}${PREFIX}/etc
+	${INSTALL_DATA} ${WRKSRC}/lib/ivykis/src/include/iv*.h \
+		${STAGEDIR}${PREFIX}/include/syslog-ng/
 
 .include <bsd.port.mk>
