@@ -1,11 +1,11 @@
---- alsactl/Makefile.in.orig	2013-07-10 07:29:36.000000000 +0000
+--- alsactl/Makefile.in.orig	2014-06-13 17:24:25.000000000 +0000
 +++ alsactl/Makefile.in
-@@ -327,7 +327,7 @@ udevrules_DATA = \
+@@ -338,7 +338,7 @@ udevrules_DATA = \
  @HAVE_SYSTEMD_TRUE@	alsa-store.service
  
  edit = \
 -	$(SED) -r -e 's,@sbindir\@,$(sbindir),g' \
 +	$(SED) -E -e 's,@sbindir\@,$(sbindir),g' \
+ 		  -e 's,@mydatadir\@,$(mydatadir),g' \
  		  -e 's,@daemonswitch\@,$(ALSACTL_DAEMONSWITCH),g' \
  							< $< > $@ || rm $@
- 
