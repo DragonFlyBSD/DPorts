@@ -1,0 +1,14 @@
+--- configure.orig	2013-03-28 12:53:58 UTC
++++ configure
+@@ -2581,6 +2581,11 @@ echo $ECHO_N "checking C flags dependant
+     LIBS="$LIBS -ldl"
+     supported_os="sysv4"
+     ;;
++  dragonfly*)
++    CFLAGS="$CFLAGS -DOS_FREEBSD -DDSO_DLFCN -D_THREAD_SAFE"
++    LDFLAGS="-lpthread $LDFLAGS"
++    supported_os="freebsd"
++    ;;
+   freebsd*)
+     CFLAGS="$CFLAGS -DOS_FREEBSD -DDSO_DLFCN -D_THREAD_SAFE -pthread"
+     LDFLAGS="-pthread $LDFLAGS"
