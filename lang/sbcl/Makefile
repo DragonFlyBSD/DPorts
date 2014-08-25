@@ -56,14 +56,14 @@ do-build:
 		${WRKSRC}/doc/sbcl.1
 
 do-install:
-	${MKDIR} ${STAGEDIR}${SBCL_HOME}/
-	${INSTALL_PROGRAM} ${WRKSRC}/src/runtime/sbcl ${STAGEDIR}${PREFIX}/bin/
-	${INSTALL_DATA} ${WRKSRC}/output/sbcl.core ${STAGEDIR}${SBCL_HOME}/
-	${MKDIR} ${STAGEDIR}${SBCL_HOME}/contrib
-	${INSTALL_DATA} ${WRKSRC}/obj/sbcl-home/contrib/*fasl ${STAGEDIR}${SBCL_HOME}/contrib/
-	${INSTALL_DATA} ${WRKSRC}/obj/sbcl-home/contrib/*.asd ${STAGEDIR}${SBCL_HOME}/contrib/
-	${INSTALL_MAN} ${WRKSRC}/doc/sbcl.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
-	${MKDIR} ${STAGEDIR}${SBCL_HOME}/site-systems
+	@${MKDIR} ${STAGEDIR}${SBCL_HOME}/
+	@${INSTALL_PROGRAM} ${WRKSRC}/src/runtime/sbcl ${STAGEDIR}${PREFIX}/bin/
+	@${INSTALL_DATA} ${WRKSRC}/output/sbcl.core ${STAGEDIR}${SBCL_HOME}/
+	@${MKDIR} ${STAGEDIR}${SBCL_HOME}/contrib
+	@${INSTALL_DATA} ${WRKSRC}/obj/sbcl-home/contrib/*fasl ${STAGEDIR}${SBCL_HOME}/contrib/
+	@${INSTALL_DATA} ${WRKSRC}/obj/sbcl-home/contrib/*.asd ${STAGEDIR}${SBCL_HOME}/contrib/
+	@${INSTALL_MAN} ${WRKSRC}/doc/sbcl.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
+	@${MKDIR} ${STAGEDIR}${SBCL_HOME}/site-systems
 	@${TOUCH} ${STAGEDIR}${SBCL_HOME}/site-systems/.keep_me
 
 check regression-test test: build

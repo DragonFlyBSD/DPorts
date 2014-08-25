@@ -36,5 +36,6 @@ lib/sbcl/contrib/sb-mpfr.asd
 lib/sbcl/contrib/sb-mpfr.fasl
 lib/sbcl/sbcl.core
 lib/sbcl/site-systems/.keep_me
+man/man1/sbcl.1.gz
 @dirrm lib/sbcl/contrib
 @dirrm lib/sbcl
