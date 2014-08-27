@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	pkg
-DISTVERSION=	1.4.0.pre-alpha11
+DISTVERSION=	1.4.0.pre-alpha12
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	\
 		http://highsecure.ru/distfiles/ \
@@ -23,11 +23,7 @@ USE_LDCONFIG=	yes
 USES=		libtool tar:xz
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-maintainer-mode
-.if defined(PACKAGE_BUILDING)
-MAKE_ARGS+=	PKG_PORTSDIR=/usr/dports
-.else
-MAKE_ARGS+=	PKG_PORTSDIR=${PORTSDIR}
-.endif
+INSTALL_TARGET=	install-strip
 
 # Use a submake as 'deinstall install' needs to reevaluate PKG_CMD
 # so that pkg-static is used from the wrkdir
@@ -38,10 +34,6 @@ EXTRA_PATCHES=	${FILESDIR}/extra-patch-docs_pkg.8
 .endif
 
 .include <bsd.port.pre.mk>
-
-.if defined(WITH_DEBUG) && !defined(WITHOUT_DEBUG)
-MAKE_ARGS+=	DEBUG_FLAGS="${DEBUG_FLAGS}"
-.endif
 
 .if defined(WITH_PKGNG)
 .if ${WITH_PKGNG} != devel
@@ -99,6 +91,5 @@ PKG_BIN=	${WRKSRC}/src/pkg-static
 post-install:
 	@${MV} ${STAGEDIR}${PREFIX}/lib/libpkg_static.a \
 		${STAGEDIR}${PREFIX}/lib/libpkg.a
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libpkg.so.2
 
 .include <bsd.port.post.mk>

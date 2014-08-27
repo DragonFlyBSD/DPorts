@@ -1,0 +1,12 @@
+@@ -23,6 +23,11 @@
+ USES=		libtool tar:xz
+ GNU_CONFIGURE=	yes
+ CONFIGURE_ARGS=	--disable-maintainer-mode
++.if defined(PACKAGE_BUILDING)
++MAKE_ARGS+=	PKG_PORTSDIR=/usr/dports
++.else
++MAKE_ARGS+=	PKG_PORTSDIR=${PORTSDIR}
++.endif
+ 
+ # Use a submake as 'deinstall install' needs to reevaluate PKG_CMD
+ # so that pkg-static is used from the wrkdir
