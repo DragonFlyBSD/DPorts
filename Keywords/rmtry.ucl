@@ -1,0 +1,11 @@
+# $FreeBSD: head/Keywords/rmtry.ucl 367153 2014-09-03 05:16:13Z bapt $
+#
+# MAINTAINER:	portmgr@FreeBSD.org
+actions: []
+post-deinstall: <<EOD
+	case "%@" in
+	/*) f="%@" ;;
+	 *) f="%D/%@" ;;
+	esac
+	/bin/rm -f $f 2>/dev/null || /usr/bin/true
+EOD

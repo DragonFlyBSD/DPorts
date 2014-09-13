@@ -206,14 +206,14 @@ esound_CONFIGURE_ENV=	ESD_CONFIG="${ESD_CONFIG}"
 esound_MAKE_ENV=	ESD_CONFIG="${ESD_CONFIG}"
 esound_DETECT=		${ESD_CONFIG}
 
-GLIB_CONFIG?=		${LOCALBASE}/bin/glib12-config
-glib12_LIB_DEPENDS=	libglib-12.so:${PORTSDIR}/devel/glib12
+GLIB_CONFIG?=		${LOCALBASE}/bin/glib-config
+glib12_LIB_DEPENDS=	libglib.so:${PORTSDIR}/devel/glib12
 glib12_CONFIGURE_ENV=	GLIB_CONFIG="${GLIB_CONFIG}"
 glib12_MAKE_ENV=	GLIB_CONFIG="${GLIB_CONFIG}"
 glib12_DETECT=		${GLIB_CONFIG}
 
-GTK_CONFIG?=		${LOCALBASE}/bin/gtk12-config
-gtk12_LIB_DEPENDS=	libgtk-12.so:${PORTSDIR}/x11-toolkits/gtk12
+GTK_CONFIG?=		${LOCALBASE}/bin/gtk-config
+gtk12_LIB_DEPENDS=	libgtk.so:${PORTSDIR}/x11-toolkits/gtk12
 gtk12_CONFIGURE_ENV=	GTK_CONFIG="${GTK_CONFIG}"
 gtk12_MAKE_ENV=		GTK_CONFIG="${GTK_CONFIG}"
 gtk12_DETECT=		${GTK_CONFIG}
@@ -820,7 +820,7 @@ GNOME_PRE_PATCH+=	; ${${component}_PRE_PATCH}
 . endfor
 .endif
 
-. if defined(GCONF_SCHEMAS) && ! defined(NO_STAGE)
+. if defined(GCONF_SCHEMAS)
 MAKE_ENV+=	GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1
 . endif
 .endif
@@ -910,18 +910,13 @@ gnome-post-install:
 .  if defined(INSTALLS_ICONS)
 	@${RM} -f ${TMPPLIST}.icons1
 	@for i in `${GREP} "^share/icons/.*/" ${TMPPLIST} | ${CUT} -d / -f 1-3 | ${SORT} -u`; do \
-		${ECHO_CMD} "@unexec /bin/rm %D/$${i}/icon-theme.cache 2>/dev/null || /usr/bin/true" \
+		${ECHO_CMD} "@rmtry $${i}/icon-theme.cache" \
 			>> ${TMPPLIST}.icons1; \
 		${ECHO_CMD} "@exec ${LOCALBASE}/bin/gtk-update-icon-cache -q -f %D/$${i} 2>/dev/null || /usr/bin/true" \
 			>> ${TMPPLIST}; \
 		${ECHO_CMD} "@unexec ${LOCALBASE}/bin/gtk-update-icon-cache -q -f %D/$${i} 2>/dev/null || /usr/bin/true" \
 			>> ${TMPPLIST}; \
 	done
-.if defined(NO_STAGE)
-	@for i in `${GREP} "^share/icons/.*/" ${TMPPLIST} | ${CUT} -d / -f 1-3 | ${SORT} -u`; do \
-		${LOCALBASE}/bin/gtk-update-icon-cache -q -f ${PREFIX}/$${i} 2>/dev/null || ${TRUE}; \
-	done
-.endif
 	@if test -f ${TMPPLIST}.icons1; then \
 		${CAT} ${TMPPLIST}.icons1 ${TMPPLIST} > ${TMPPLIST}.icons2; \
 		${RM} -f ${TMPPLIST}.icons1; \

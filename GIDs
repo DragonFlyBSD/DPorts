@@ -122,6 +122,7 @@ git:*:211:
 hg:*:212:
 drizzle:*:213:
 opendnssec:*:215:
+nsd:*:216:
 bs:*:220:
 rtpproxy:*:222:
 postgrey:*:225:
@@ -292,5 +293,6 @@ uvncrep:*:981:
 bro:*:982:
 syncthing:*:983:
 tvheadend:*:984:
+puppetdb:*:985:
 nogroup:*:65533:
 nobody:*:65534:
