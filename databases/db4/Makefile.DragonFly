@@ -1,1 +1,0 @@
-CONFIGURE_ARGS+=	--with-mutex=x86/gcc-assembly

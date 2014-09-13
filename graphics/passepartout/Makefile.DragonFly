@@ -1,3 +1,0 @@
-BUILD_DEPENDS+=	docbook-xml>0:${PORTSDIR}/textproc/docbook-xml
-MAKE_ENV+=	LC_ALL=en_US.UTF-8
-

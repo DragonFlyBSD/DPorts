@@ -1,9 +1,0 @@
---- Makefile.intermediate	2013-03-20 12:25:31.581425000 +0000
-+++ Makefile
-@@ -1,5 +1,5 @@
- CFLAGS+=-Wall `pkg-config --cflags gtk+-2.0`
--LIBS=`pkg-config --libs gtk+-2.0`
-+LIBS=`pkg-config --libs gtk+-2.0` -lm
- bindir= ${PREFIX}/bin
- mandir= ${PREFIX}/man
- 
