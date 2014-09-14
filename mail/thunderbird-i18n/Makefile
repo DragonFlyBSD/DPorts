@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	thunderbird-i18n
-PORTVERSION=	31.0
+PORTVERSION=	31.1.0
+PORTREVISION=	1
 CATEGORIES=	mail news net-im
 MASTER_SITES=	MOZILLA/${PORTNAME:S|-i18n||}/releases/${PORTVERSION}/linux-i686/xpi
 PKGNAMEPREFIX=
@@ -12,7 +13,7 @@ DIST_SUBDIR=	xpi/${DISTNAME}
 MAINTAINER=	gecko@FreeBSD.org
 COMMENT=	Localized interface for Thunderbird
 
-USES=		gecko:thunderbird zip
+USES=		gecko:thunderbird,build zip
 USE_XPI=	thunderbird
 
 NO_BUILD=	yes
