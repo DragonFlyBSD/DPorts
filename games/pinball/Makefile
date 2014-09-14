@@ -3,7 +3,7 @@
 
 PORTNAME=	pinball
 PORTVERSION=	0.3.1
-PORTREVISION=	17
+PORTREVISION=	18
 CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
@@ -36,10 +36,10 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 DOCS=		README
 
-# For gmake>=3.82 + ranlib runs twice
+# For gmake>=3.82
 pre-configure:
 	${FIND} ${WRKSRC} -name Makefile.in -print | ${XARGS} \
-		${REINPLACE_CMD} -e 's,^dnl,# dnl,;/echo.*RANLIB/,+1d'
+		${REINPLACE_CMD} -e 's,^dnl,# dnl,'
 
 post-install:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
