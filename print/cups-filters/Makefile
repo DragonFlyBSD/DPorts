@@ -2,12 +2,15 @@
 
 PORTNAME=	cups-filters
 PORTVERSION=	1.0.57
+PORTREVISION=	3
 CATEGORIES=	print
 MASTER_SITES=	http://www.openprinting.org/download/cups-filters/
 
 MAINTAINER=	cyberbotx@cyberbotx.com
 COMMENT=	Backends, filters and other software (was part of the core CUPS)
 
+BUILD_DEPENDS=	pdftops:${PORTSDIR}/graphics/poppler-utils
+RUN_DEPENDS=	pdftops:${PORTSDIR}/graphics/poppler-utils
 LIB_DEPENDS=	libjpeg.so:${PORTSDIR}/graphics/jpeg \
 		libtiff.so:${PORTSDIR}/graphics/tiff \
 		libpng15.so:${PORTSDIR}/graphics/png \
@@ -44,6 +47,7 @@ AVAHI_LIB_DEPENDS=	libavahi-client.so:${PORTSDIR}/net/avahi-app
 
 post-patch:
 	@${REINPLACE_CMD} 's:-std=c++0x:-std=c++11:' ${WRKSRC}/Makefile.in
+	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' ${WRKSRC}/filter/pdftops.c
 
 post-configure:
 	@${REINPLACE_CMD} \
