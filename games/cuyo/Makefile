@@ -3,7 +3,7 @@
 
 PORTNAME=	cuyo
 PORTVERSION=	2.0.0
-PORTREVISION=	1
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	games
 MASTER_SITES=	SAVANNAH
@@ -22,13 +22,16 @@ USE_SDL=	mixer image
 USE_XORG=	xdmcp xau x11
 INSTALLS_ICONS=	yes
 
-PORTDOCS=	AUTHORS NEWS TODO
+PORTDOCS=	AUTHORS NEWS
 
 OPTIONS_DEFINE=	DOCS NLS
 OPTIONS_SUB=	yes
 
 NLS_CONFIGURE_ENABLE=	nls
 NLS_USES=	gettext:run
+
+# Do not use older versions
+PORTSCOUT=	skipv:2.~-1.2~beta1
 
 .include <bsd.port.options.mk>
 
