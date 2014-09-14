@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	smplayer
-DISTVERSION=	14.3.0
+DISTVERSION=	14.9.0
+PORTREVISION=	1
 CATEGORIES=	multimedia audio kde
 MASTER_SITES=	SF/${PORTNAME}/SMPlayer/${PORTVERSION}
 
@@ -15,7 +16,7 @@ RUN_DEPENDS=	mplayer:${PORTSDIR}/multimedia/mplayer \
 		smplayer-skins>=0:${PORTSDIR}/multimedia/smplayer-skins \
 		smplayer-themes>=0:${PORTSDIR}/multimedia/smplayer-themes
 
-USE_QT4=	gui network script xml moc_build rcc_build uic_build \
+USE_QT4=	gui dbus network script xml moc_build rcc_build uic_build \
 		uic3_build porting_build linguist_build
 
 ALL_TARGET=	src/smplayer
@@ -29,6 +30,9 @@ INSTALLS_ICONS=	yes
 PORTDOCS=	Changelog Not_so_obvious_things.txt Readme.txt \
 		Release_notes.txt Watching_TV.txt
 OPTIONS_DEFINE=	DOCS DEBUG
+
+# Do not use unstable versions
+PORTSCOUT= skipv:14.3.0.6306
 
 SUB_FILES=	pkg-message
 
