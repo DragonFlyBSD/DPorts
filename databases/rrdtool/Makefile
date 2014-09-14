@@ -3,7 +3,7 @@
 
 PORTNAME=	rrdtool
 PORTVERSION=	1.4.8
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	databases graphics
 MASTER_SITES=	http://oss.oetiker.ch/rrdtool/pub/
 
@@ -122,6 +122,9 @@ post-install:
 	@${ECHO_MSG} "############################################################################"
 	@${ECHO_MSG} "# See ${EXAMPLESDIR} for some demonstration code        #"
 	@${ECHO_MSG} "############################################################################"
+.endif
+.if ${PORT_OPTIONS:MPERL_MODULE}
+	${STRIP_CMD} ${STAGEDIR}${SITE_PERL}/${PERL_ARCH}/auto/RRDs/RRDs.so
 .endif
 
 .include <bsd.port.mk>
