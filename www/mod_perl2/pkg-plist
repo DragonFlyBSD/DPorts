@@ -223,7 +223,7 @@ bin/mp2bug
 %%SITE_PERL%%/%%PERL_ARCH%%/Apache2/PerlSections.pm
 %%SITE_PERL%%/%%PERL_ARCH%%/Apache2/PerlSections/Dump.pm
 %%SITE_PERL%%/%%PERL_ARCH%%/Apache2/Process.pm
-%%AP24%%%%SITE_PERL%%/%%PERL_ARCH%%/Apache2/Provider.pm
+%%AP22%%%%AP24%%%%SITE_PERL%%/%%PERL_ARCH%%/Apache2/Provider.pm
 %%SITE_PERL%%/%%PERL_ARCH%%/Apache2/Reload.pm
 %%SITE_PERL%%/%%PERL_ARCH%%/Apache2/RequestIO.pm
 %%SITE_PERL%%/%%PERL_ARCH%%/Apache2/RequestRec.pm
@@ -314,7 +314,7 @@ bin/mp2bug
 %%SITE_PERL%%/%%PERL_ARCH%%/auto/Apache2/MPM/MPM.so
 %%SITE_PERL%%/%%PERL_ARCH%%/auto/Apache2/Module/Module.so
 %%SITE_PERL%%/%%PERL_ARCH%%/auto/Apache2/Process/Process.so
-%%AP24%%%%SITE_PERL%%/%%PERL_ARCH%%/auto/Apache2/Provider/Provider.so
+%%AP22%%%%AP24%%%%SITE_PERL%%/%%PERL_ARCH%%/auto/Apache2/Provider/Provider.so
 %%SITE_PERL%%/%%PERL_ARCH%%/auto/Apache2/RequestIO/RequestIO.so
 %%SITE_PERL%%/%%PERL_ARCH%%/auto/Apache2/RequestRec/RequestRec.so
 %%SITE_PERL%%/%%PERL_ARCH%%/auto/Apache2/RequestUtil/RequestUtil.so
@@ -388,7 +388,7 @@ bin/mp2bug
 @dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Apache2/MPM
 @dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Apache2/Module
 @dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Apache2/Process
-%%AP24%%@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Apache2/Provider
+%%AP22%%%%AP24%%@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Apache2/Provider
 @dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Apache2/RequestIO
 @dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Apache2/RequestRec
 @dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Apache2/RequestUtil

@@ -30,10 +30,12 @@ USE_CSTD=	gnu89
 
 .include <bsd.port.pre.mk>
 
+# In case apache22 is in use and you want to test
+# the new mod_perl, change '> 22' to '>= 22'
 .if ${APACHE_VERSION} > 22
 # patch shaped against upstream mod_perl
 # Last Changed Rev: 1602105
-PATCHREV=	1602105
+PATCHREV=	1618150
 PATCHFILES+= 	${PORTNAME}-${PORTVERSION}-r${PATCHREV}.diff.gz
 PLIST_SUB+=	AP24=""
 PMSED=		's/%AP24%//'
@@ -41,6 +43,13 @@ NO_PACKAGE=	yes
 .else
 PLIST_SUB+=	AP24="@comment "
 PMSED=		'/%AP24%/d'
+.endif
+
+# Provider is build iff apache24 is in use
+.if ${APACHE_VERSION:M22}
+PLIST_SUB+=	AP22="@comment "
+.else
+PLIST_SUB+=	AP22=""
 .endif
 
 # Using apxs in this way is problematic if apache2 is installed under a
@@ -71,16 +80,15 @@ post-patch:
 	${REINPLACE_CMD} -e 's/APR_INLINE//g' \
 		${PATCH_WRKSRC}/src/modules/perl/modperl_common_util.h
 	${REINPLACE_CMD} -e "s|/usr/local/apache/bin/apxs|${APXS}|" \
-			-e "s|'bin', 'apxs'|'sbin', 'apxs'|" \
-			${WRKSRC}/lib/Apache2/Build.pm
+		-e "s|'bin', 'apxs'|'sbin', 'apxs'|" \
+		${WRKSRC}/lib/Apache2/Build.pm
 
 pre-configure:
-	@${FIND} ${WRKSRC} -type f \( -name \*.bak -o -name \*.orig \) -delete
+	${FIND} ${WRKSRC} -type f \( -name \*.bak -o -name \*.orig \) -delete
 
 post-configure:
 	${REINPLACE_CMD} -e 's/-pthread -Wl,-E//g' \
 		${PATCH_WRKSRC}/xs/APR/APR/Makefile
-
 
 post-install:
 # adjust pkg-message
