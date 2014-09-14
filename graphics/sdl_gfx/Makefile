@@ -3,6 +3,7 @@
 
 PORTNAME=	sdl_gfx
 PORTVERSION=	2.0.25
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.ferzkopp.net/Software/%SUBDIR%/
 MASTER_SITE_SUBDIR=	SDL_gfx-${PORTVERSION:R}
@@ -17,7 +18,6 @@ USES=		gmake libtool pathfix
 PATHFIX_MAKEFILEIN=	Makefile.am
 USE_AUTOTOOLS=	libtoolize aclocal autoconf automake
 AUTOMAKE_ARGS=	-a -c -f
-LIBTOOLIZE_ARGS=-i -c -f
 USE_SDL=	sdl
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--includedir=${PREFIX}/include
