@@ -19,7 +19,6 @@ GH_TAGNAME=     ${GH_COMMIT}
 GH_COMMIT=      4f28361
 GNU_CONFIGURE=	yes
 
-NO_STAGE=	yes
 USE_GNOME=      glib20
 USES+=		pkgconfig
 USE_AUTOTOOLS=	libtool autoconf automake
