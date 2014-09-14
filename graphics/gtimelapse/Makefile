@@ -3,7 +3,7 @@
 
 PORTNAME=	gtimelapse
 DISTVERSION=	0.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	SF/${PORTNAME}/Relase	# yes, this is not a typo (here)
 
@@ -21,7 +21,6 @@ USE_WX=		3.0
 WX_UNICODE=	yes
 WX_CONF_ARGS=	absolute
 USE_AUTOTOOLS=	libtoolize aclocal automake autoconf
-LIBTOOLIZE_ARGS=--copy --force
 AUTOMAKE_ARGS=	--add-missing --copy
 
 PLIST_FILES=	bin/${PORTNAME}
