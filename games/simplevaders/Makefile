@@ -3,7 +3,7 @@
 
 PORTNAME=	simplevaders
 PORTVERSION=	0.8
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	games
 MASTER_SITES=	http://dusted.dk/download/ \
 		http://mirror.amdmi3.ru/distfiles/
@@ -27,9 +27,9 @@ post-patch:
 	@${RM} ${WRKSRC}/data/*\~
 
 do-build:
-	cd ${WRKSRC} && ${CC} ${CFLAGS} main.cpp -o ${PORTNAME} \
-		`${SDL_CONFIG} --cflags --libs` -lSDL_ttf -lSDL_mixer \
-		-lSDL_image -lGL -lGLU -lm -lstdc++
+	(cd ${WRKSRC} && ${CXX} ${CPPFLAGS} ${CXXFLAGS} ${LDFLAGS} main.cpp \
+		-o ${PORTNAME} `${SDL_CONFIG} --cflags --libs` -lSDL_ttf \
+		-lSDL_mixer -lSDL_image -lGL -lGLU)
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
