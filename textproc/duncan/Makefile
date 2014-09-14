@@ -3,7 +3,7 @@
 
 PORTNAME=	duncan
 PORTVERSION=	0.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	textproc gnustep
 MASTER_SITES=	http://www.eskimo.com/~pburns/Dictionaries/files/ \
 		${MASTER_SITE_GNUSTEP_CH}
@@ -20,5 +20,9 @@ USE_GNUSTEP_BUILD=	yes
 USE_GNUSTEP_INSTALL=	yes
 
 WRKSRC=		${WRKDIR}/Duncan
+
+post-patch:
+	${REINPLACE_CMD} -e 's|^GNUSTEP_INSTALLATION_DIR|#GNUSTEP_INSTALLATION_DIR|' \
+		${WRKSRC}/GNUmakefile
 
 .include <bsd.port.mk>
