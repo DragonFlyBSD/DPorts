@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/japanese/alias-fonts/pkg-deinstall 340719 2014-01-22 15:52:06Z mat $
+# $FreeBSD: head/japanese/alias-fonts/pkg-deinstall 366038 2014-08-25 07:48:12Z marino $
 
 if [ $2 != "DEINSTALL" ]; then
   exit 0
@@ -24,3 +24,5 @@ while read line; do
     *) echo $line;;
   esac
 done < $from > $to
+
+rm -f $from

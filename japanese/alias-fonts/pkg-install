@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/japanese/alias-fonts/pkg-install 340719 2014-01-22 15:52:06Z mat $
+# $FreeBSD: head/japanese/alias-fonts/pkg-install 366038 2014-08-25 07:48:12Z marino $
 
 if [ $2 != "POST-INSTALL" ]; then
   exit 0
@@ -141,3 +141,5 @@ cat <<EOF >> $to
 -alias-mincho-bold-r-normal--20-190-75-75-c-200-jisx0213.2000-1 -kappa-mincho-bold-r-normal--20-190-75-75-c-200-jisx0213.2000-1
 -alias-mincho-bold-i-normal--20-190-75-75-c-200-jisx0213.2000-1 -kappa-mincho-bold-i-normal--20-190-75-75-c-200-jisx0213.2000-1
 EOF
+
+rm -f $from
