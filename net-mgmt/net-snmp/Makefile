@@ -15,11 +15,6 @@ COMMENT=	Extendable SNMP implementation
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-# pkg-1.2 cannot handle this dependency well.
-.if !defined(WITH_PKGNG)
-LIB_DEPENDS=	libpkg.so:${PORTSDIR}/ports-mgmt/pkg
-.endif
-
 OPTIONS_DEFINE=	IPV6 MFD_REWRITES PERL PERL_EMBEDDED PYTHON DUMMY TKMIB \
 		DMALLOC MYSQL AX_SOCKONLY UNPRIVILEGED SMUX DOCS
 OPTIONS_DEFAULT=IPV6 PERL PERL_EMBEDDED DUMMY SMUX
@@ -44,7 +39,7 @@ USE_LDCONFIG=	yes
 USES=		perl5 libtool
 USE_PERL5=	build run fixpacklist
 
-CFLAGS+=	-I${LOCALBASE}/include
+CFLAGS+=	-I${LOCALBASE}/include -I${PKG_PREFIX}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ENV+=	PERLPROG="${PERL}" PSPROG="${PS_CMD}" SED="${SED}"
 CONFIGURE_ARGS+=--enable-shared --enable-internal-md5 \
@@ -54,7 +49,7 @@ CONFIGURE_ARGS+=--enable-shared --enable-internal-md5 \
 		--with-logfile="${NET_SNMP_LOGFILE}" \
 		--with-persistent-directory="${NET_SNMP_PERSISTENTDIR}" \
 		--with-gnu-ld --with-libwrap \
-		--with-ldflags="-lm -lkvm -ldevstat -lpkg -L${LOCALBASE}/lib ${LCRYPTO}"
+		--with-ldflags="-lm -lkvm -ldevstat -lpkg -L${LOCALBASE}/lib -L${PKG_PREFIX}/lib ${LCRYPTO}"
 SUB_FILES=	pkg-message
 
 .if defined(BATCH)
