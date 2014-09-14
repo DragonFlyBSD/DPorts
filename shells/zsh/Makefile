@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	zsh
-PORTVERSION=	5.0.5
+PORTVERSION=	5.0.6
 PORTREVISION=	1
 CATEGORIES=	shells
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION} \
@@ -28,15 +28,15 @@ CPPFLAGS+=	-I${LOCALBASE}/include -DBOOL_DEFINED
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ENV+=	zsh_cv_sys_path_dev_fd=no
 CONFIGURE_ARGS=	--with-term-lib="ncursesw ncurses" --with-tcsetpgrp \
-		--enable-function-subdirs
+		--enable-function-subdirs --enable-multibyte
 
 EXTRA_PATCHES=	${FILESDIR}/extra-patch-bsdtar
 #EXTRA_COMPLETION_FILES=	_sockstat
 #EXTRA_COMPLETION_DIR=	Completion/BSD/Command
 
-OPTIONS_DEFINE=	GDBM MEM SECURE_FREE MAILDIR MULTIBYTE PCRE STATIC DOCS DEBUG \
+OPTIONS_DEFINE=	GDBM MEM SECURE_FREE MAILDIR PCRE STATIC DOCS DEBUG \
 		EXAMPLES
-OPTIONS_DEFAULT=	SECURE_FREE MAILDIR MULTIBYTE
+OPTIONS_DEFAULT=	SECURE_FREE MAILDIR
 
 GDBM_DESC=	Enable GDBM support (GPL)
 MEM_DESC=	Enable zsh-mem options
@@ -64,7 +64,6 @@ STATIC_LDFLAGS=		-static
 STATIC_CONFIGURE_ON=	--disable-dynamic
 STATIC_CONFIGURE_OFF=	--enable-dynamic
 DEBUG_CONFIGURE_ENABLE=	zsh-debug
-MULTIBYTE_CONFIGURE_ENABLE=	multibyte
 DOCS_USES=		makeinfo
 
 .include <bsd.port.pre.mk>
