@@ -4,7 +4,7 @@
 
 PORTNAME=	mutter
 PORTVERSION=	2.31.2
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	x11-wm
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -32,5 +32,7 @@ GCONF_SCHEMAS=	mutter.schemas
 post-patch:
 	@${REINPLACE_CMD} -e 's|-Werror||g' \
 	    	${WRKSRC}/configure
+	@${REINPLACE_CMD} '/^mutter_LDADD =/s/$$/ -lgmodule-2.0/' \
+		${WRKSRC}/src/Makefile.in
 
 .include <bsd.port.mk>
