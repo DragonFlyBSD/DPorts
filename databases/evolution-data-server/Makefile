@@ -4,7 +4,7 @@
 
 PORTNAME=	evolution-data-server
 PORTVERSION=	2.32.1
-PORTREVISION=	11
+PORTREVISION=	12
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -70,5 +70,11 @@ post-patch:
 		s|-Wl,--no-undefined||g ; \
 		s|-Wmissing-include-dirs||g' \
 			${WRKSRC}/configure
+	@${REINPLACE_CMD} '/g_thread_init/d' \
+		${WRKSRC}/calendar/backends/file/e-cal-backend-file.c \
+		${WRKSRC}/camel/camel-index-control.c \
+		${WRKSRC}/camel/providers/imapx/test-imapx.c \
+		${WRKSRC}/libedataserverui/test-name-selector.c \
+		${WRKSRC}/servers/groupwise/soap-test.c
 
 .include <bsd.port.mk>
