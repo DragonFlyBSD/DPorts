@@ -3,7 +3,7 @@
 
 PORTNAME=	sdl_mixer
 PORTVERSION=	1.2.12
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	audio
 MASTER_SITES=	http://www.libsdl.org/projects/SDL_mixer/release/
 DISTNAME=	SDL_mixer-${PORTVERSION}
@@ -62,5 +62,7 @@ post-patch:
 		${WRKSRC}/Makefile.in
 	@${REINPLACE_CMD} -e 's|%%CONFIG_FILE%%|${CONFIG_FILE}|g' \
 		${WRKSRC}/timidity/config.h
+	@${REINPLACE_CMD} -e 's|"modplug.h"|"libmodplug/modplug.h"|' \
+		${WRKSRC}/music_modplug.h
 
 .include <bsd.port.mk>
