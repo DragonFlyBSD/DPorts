@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/textproc/elasticsearch/files/elasticsearch.in 349955 2014-04-02 21:06:51Z tj $
+# $FreeBSD: head/textproc/elasticsearch/files/elasticsearch.in 367633 2014-09-08 14:39:09Z tj $
 #
 # PROVIDE: elasticsearch
 # REQUIRE: NETWORKING SERVERS
@@ -58,6 +58,7 @@ java_options=" 	-server \
 		-XX:CMSInitiatingOccupancyFraction=75 \
 		-XX:+UseCMSInitiatingOccupancyOnly \
 		-XX:+HeapDumpOnOutOfMemoryError \
+		-XX:+DisableExplicitGC \
 		-Delasticsearch	\
 		-Des.config=${elasticsearch_config} \
 		-cp ${ES_CLASSPATH}"
