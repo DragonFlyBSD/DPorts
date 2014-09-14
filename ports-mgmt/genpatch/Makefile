@@ -20,15 +20,17 @@ DISTFILES=	# none
 MAINTAINER=	draco@marino.st
 COMMENT=	Patch generator tool for dports
 
-NO_STAGE=	yes
 NO_BUILD=	yes
 SUB_FILES=	genpatch.sh dupe.sh portfix.sh
 SUB_LIST=	PREFIX=${PREFIX}
 PLIST_FILES=	bin/genpatch bin/dupe bin/portfix
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/genpatch.sh ${PREFIX}/bin/genpatch
-	${INSTALL_SCRIPT} ${WRKDIR}/dupe.sh ${PREFIX}/bin/dupe
-	${INSTALL_SCRIPT} ${WRKDIR}/portfix.sh ${PREFIX}/bin/portfix
+	${INSTALL_SCRIPT} ${WRKDIR}/genpatch.sh \
+		${STAGEDIR}${PREFIX}/bin/genpatch
+	${INSTALL_SCRIPT} ${WRKDIR}/dupe.sh \
+		${STAGEDIR}${PREFIX}/bin/dupe
+	${INSTALL_SCRIPT} ${WRKDIR}/portfix.sh \
+		${STAGEDIR}${PREFIX}/bin/portfix
 
 .include <bsd.port.mk>
