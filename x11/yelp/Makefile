@@ -4,7 +4,7 @@
 
 PORTNAME=	yelp
 PORTVERSION=	2.30.2
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=	x11 gnome
 MASTER_SITES=	LOCAL/kwm
 DISTNAME=	${PORTNAME}-webkit-${PORTVERSION}
@@ -38,5 +38,6 @@ post-patch:
 	@${REINPLACE_CMD} -e 's,[-/]unstable,,' \
 		-e 's/ --define-variable=includetype=unstable//' \
 		${WRKSRC}/configure
+	@${REINPLACE_CMD} '/g_thread_init/d' ${WRKSRC}/src/yelp-main.c
 
 .include <bsd.port.mk>
