@@ -4,7 +4,7 @@
 
 PORTNAME=	gnome-system-monitor
 PORTVERSION=	2.28.2
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -24,7 +24,7 @@ INSTALLS_OMF=	yes
 USE_GNOME=	gnomeprefix intlhack libwnck gnomevfs2 gnomedocutils librsvg2
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib -lutil
+LIBS+=		-L${LOCALBASE}/lib -lgmodule-2.0 -lutil
 
 GCONF_SCHEMAS=	gnome-system-monitor.schemas
 
