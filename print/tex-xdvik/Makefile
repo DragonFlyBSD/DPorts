@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	xdvik
-PORTVERSION=	22.86
+PORTVERSION=	22.87
 PORTREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	SF/xdvi/${PORTNAME}/${PORTVERSION}
@@ -16,14 +16,15 @@ LIB_DEPENDS=	libfreetype.so:${PORTSDIR}/print/freetype2 \
 		libpaper.so:${PORTSDIR}/print/libpaper
 
 USES=		iconv gmake motif
-USE_TEX=	texlive web2c kpathsea texmf texhash
-TEXHASHDIRS=	${TEXMFDIR}
-USE_XORG=	ice sm x11 xmu xpm xt
+USE_TEX=	web2c kpathsea texmf texhash
+TEXHASHDIRS=	${TEXMFDISTDIR}
+USE_XORG=	ice sm x11 xmu xpm xt xi
 WRKSRC=		${WRKDIR}/${DISTNAME}/texk/xdvik
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-shared \
 		--datarootdir=${LOCALBASE}/share \
 		--with-xdvi-x-toolkit=motif \
+		--enable-xi2-scrolling \
 		--with-iconv \
 		--with-xpm \
 		--with-system-kpathsea \
@@ -39,7 +40,7 @@ CONFIGURE_ENV=	INSTALL_SCRIPT="${INSTALL_SCRIPT}" \
 		INSTALL_DATA="${INSTALL_DATA}" \
 		INSTALL_PROGRAM="${INSTALL_PROGRAM}"
 CFLAGS+=	-I${LOCALBASE}/include -DHAVE_LIBPAPER -g -O0
-PLIST_SUB=	TEXMFDIR=${TEXMFDIR} TEXMFCONFIGDIR=${TEXMFDIR}-config
+PLIST_SUB=	TEXMFDISTDIR=${TEXMFDISTDIR}
 CONFLICTS_INSTALL=	xdvi-[0-9]* xdvi-*-[0-9]* *-xdvi-[0-9]* \
 			xdvik-[0-9]* ja-xdvik-*-[0-9]*
 
@@ -49,9 +50,13 @@ PORTDOCS=	BUGS CHANGES INSTALL README README.CVS README.coding \
 
 OPTIONS_DEFINE=	DOCS
 
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MDOCS}
 post-install:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	cd ${WRKDIR}/${DISTNAME} && \
 		${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}
+.endif
 
 .include <bsd.port.mk>
