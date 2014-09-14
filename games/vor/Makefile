@@ -3,7 +3,7 @@
 
 PORTNAME=	vor
 PORTVERSION=	0.5.5
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	games
 MASTER_SITES=	http://qualdan.com/vor/ \
 		http://mirror.amdmi3.ru/distfiles/
@@ -14,6 +14,7 @@ COMMENT=	Dodge the rocks until you die
 USES=		tar:bzip2 gmake
 USE_SDL=	mixer image sdl
 GNU_CONFIGURE=	yes
+LDFLAGS+=	-lm
 
 PLIST_FILES=	bin/${PORTNAME}
 PORTDOCS=	*
