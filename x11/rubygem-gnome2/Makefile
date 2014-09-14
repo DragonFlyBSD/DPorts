@@ -1,7 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	gnome2
-PORTVERSION=	2.1.0
+PORTVERSION=	2.2.0
+PORTREVISION=	1
 CATEGORIES=	x11 rubygems
 CATEGORIES=	x11 gnome rubygems
 MASTER_SITES=	# none
