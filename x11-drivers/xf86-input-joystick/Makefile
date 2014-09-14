@@ -14,10 +14,10 @@ XORG_CAT=	driver
 
 .if defined(WITH_NEW_XORG)
 JOYVER=		1.6.2
-JOYREVISION=	1
+JOYREVISION=	2
 .else
 JOYVER=		1.5.0
-JOYREVISION=	2
+JOYREVISION=	3
 .endif
 
 post-patch:
