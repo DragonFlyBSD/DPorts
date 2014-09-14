@@ -1,5 +1,5 @@
---- texk/ttf2pk/Makefile.in.orig	2012-04-26 20:02:04.000000000 +0900
-+++ texk/ttf2pk/Makefile.in	2013-05-22 14:39:41.000000000 +0900
+--- texk/ttf2pk2/Makefile.in.orig	2012-04-26 20:02:04.000000000 +0900
++++ texk/ttf2pk2/Makefile.in	2013-05-22 14:39:41.000000000 +0900
 @@ -88,9 +88,7 @@
  CONFIG_HEADER = c-auto.h
  CONFIG_CLEAN_FILES =
