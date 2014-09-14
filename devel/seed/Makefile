@@ -4,7 +4,7 @@
 
 PORTNAME=	seed
 PORTVERSION=	2.31.91
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -42,7 +42,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|reference||g' ${WRKSRC}/doc/Makefile.in
 #	@${FIND} ${WRKSRC}/examples -name Makefile.in -type f | ${XARGS} ${REINPLACE_CMD} -e \
 #		's|$$(datadir)/doc/seed/examples|${EXAMPLESDIR}|g'
-#.if defined(NOPORTEXAMPLES)
+#.if empty(PORT_OPTIONS:MEXAMPLES)
 #	@${REINPLACE_CMD} -e 's|examples||g' \
 #		${WRKSRC}/Makefile.in
 #.endif
