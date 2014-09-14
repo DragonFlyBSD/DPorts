@@ -1,4 +1,4 @@
-/* $FreeBSD: head/devel/gdb/files/fbsd-threads.c 364713 2014-08-12 15:39:58Z tijl $ */
+/* $FreeBSD: head/devel/gdb/files/fbsd-threads.c 365578 2014-08-21 18:35:52Z tijl $ */
 /* FreeBSD libthread_db assisted debugging support.
    Copyright 1999, 2000, 2001 Free Software Foundation, Inc.
 
@@ -325,6 +325,11 @@ get_current_thread (void)
   lwp = get_current_lwp (proc_handle.pid);
   tmp = BUILD_LWP (lwp, proc_handle.pid);
   ptid = thread_from_lwp (tmp, &th, &ti);
+  if (in_thread_list (inferior_ptid) )
+    {
+      struct thread_info * ti_inf = inferior_thread();
+      ti_inf->ptid = ptid;
+    }
   if (!in_thread_list (ptid))
     {
       attach_thread (ptid, &th, &ti, 1);
@@ -439,7 +444,6 @@ static void
 fbsd_thread_activate (void)
 {
   fbsd_thread_active = 1;
-  init_thread_list();
   if (target_has_execution)
     enable_thread_event_reporting ();
   fbsd_thread_find_new_threads (NULL);
