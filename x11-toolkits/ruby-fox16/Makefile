@@ -3,7 +3,7 @@
 
 PORTNAME=	fox
 PORTVERSION=	1.6.19
-PORTREVISION=	14
+PORTREVISION=	15
 CATEGORIES=	x11-toolkits ruby
 MASTER_SITES=	RF
 MASTER_SITE_SUBDIR=	fxruby
@@ -11,7 +11,7 @@ PKGNAMEPREFIX=	${RUBY_PKGNAMEPREFIX}
 DISTNAME=	FXRuby-${PORTVERSION}
 DIST_SUBDIR=	ruby
 
-MAINTAINER=	lercordeiro@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Ruby extension module to use FOX 1.6, aka FXRuby
 
 LIB_DEPENDS=	libFOX-1.6.so:${PORTSDIR}/x11-toolkits/fox16 \
