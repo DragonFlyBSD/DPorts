@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	roxterm
-PORTVERSION=	2.9.1
+PORTVERSION=	2.9.3
 CATEGORIES=	x11
 MASTER_SITES=	SF
 
@@ -14,15 +14,12 @@ LICENSE=	GPLv3
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}lockfile>0:${PORTSDIR}/devel/py-lockfile \
 		docbook-xsl>0:${PORTSDIR}/textproc/docbook-xsl \
 		itstool:${PORTSDIR}/textproc/itstool \
-		xsltproc:${PORTSDIR}/textproc/libxslt \
 		po4a:${PORTSDIR}/textproc/po4a
 LIB_DEPENDS=	libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib
 RUN_DEPENDS=	xdg-open:${PORTSDIR}/devel/xdg-utils
 
-USES=		gettext pkgconfig tar:bzip2
-USE_GNOME=	librsvg2
-USE_PYTHON_BUILD=	yes
-USE_AUTOTOOLS=	libtool:env
+USES=		gettext libtool:build pkgconfig python:build tar:bzip2
+USE_GNOME=	librsvg2:run libxslt:build
 INSTALLS_ICONS=	yes
 
 OPTIONS_DEFINE=		DOCS GTK3
@@ -60,8 +57,13 @@ do-install:
 .endfor
 	(cd ${WRKSRC}/build && ${INSTALL_MAN} *.1 \
 		${STAGEDIR}${MANPREFIX}/man/man1)
+.for i in es fr pt_BR ru uk
+	@${MKDIR} ${STAGEDIR}${MANPREFIX}/man/${i}/man1
+	(cd ${WRKSRC}/build/po4a/${i} && ${INSTALL_MAN} *.1 \
+		${STAGEDIR}${MANPREFIX}/man/${i}/man1)
+.endfor
 	@${MKDIR} ${STAGEDIR}${PREFIX}/share/appdata
-	(cd ${WRKSRC}/poxml && ${INSTALL_DATA} roxterm.appdata.xml \
+	(cd ${WRKSRC}/build && ${INSTALL_DATA} roxterm.appdata.xml \
 		${STAGEDIR}${PREFIX}/share/appdata)
 	(cd ${WRKSRC} && ${INSTALL_DATA} roxterm.desktop \
 		${STAGEDIR}${DESKTOPDIR})
@@ -76,9 +78,9 @@ do-install:
 .for i in AUTHORS ChangeLog README
 	(cd ${WRKSRC} && ${INSTALL_DATA} ${i} ${STAGEDIR}${DOCSDIR})
 .endfor
-	@${MKDIR} ${STAGEDIR}${DOCSDIR}/en
-	(cd ${WRKSRC}/Help/en && ${INSTALL_DATA} * ${STAGEDIR}${DOCSDIR}/en)
-	@${MKDIR} ${STAGEDIR}${DOCSDIR}/lib
-	(cd ${WRKSRC}/Help/lib && ${INSTALL_DATA} * ${STAGEDIR}${DOCSDIR}/lib)
+.for i in en es fr lib pt_BR ru uk
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}/${i}
+	(cd ${WRKSRC}/Help/${i} && ${INSTALL_DATA} * ${STAGEDIR}${DOCSDIR}/${i})
+.endfor
 
 .include <bsd.port.mk>
