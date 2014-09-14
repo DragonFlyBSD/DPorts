@@ -3,7 +3,7 @@
 
 PORTNAME=	fldiff
 PORTVERSION=	1.1
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	textproc
 MASTER_SITES=	CRITICAL
 DISTNAME=	${PORTNAME}-${PORTVERSION}-source
@@ -25,6 +25,7 @@ OPTIONS_DEFINE=	DOCS
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|@OPTIM@||' ${WRKSRC}/Makefile.in
+	@${REINPLACE_CMD} -e '/CXX="$$CC"/d' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|=Development|=Application;Development;|' \
 		${WRKSRC}/fldiff.desktop
 
