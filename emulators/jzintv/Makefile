@@ -3,7 +3,7 @@
 
 PORTNAME=	jzintv
 PORTVERSION=	1.0b4
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	emulators
 MASTER_SITES=	http://spatula-city.org/~im14u2c/intv/dl/
 DISTFILES=	${PORTNAME}-1.0-beta4-src${EXTRACT_SUFX} \
@@ -20,7 +20,7 @@ USES=	gmake zip
 USE_XORG=	x11 xau xdmcp
 USE_SDL=	sdl
 CPPFLAGS+=	-I${LOCALBASE}/include `${SDL_CONFIG} --cflags`
-LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS} `${SDL_CONFIG} --libs`
+LDFLAGS+=	-L${LOCALBASE}/lib `${SDL_CONFIG} --libs` -lm
 
 OPTIONS_DEFINE=	TOOLS DOCS EXAMPLES
 OPTIONS_SUB=	yes
