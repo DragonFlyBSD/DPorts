@@ -3,7 +3,7 @@
 
 PORTNAME=	caph
 PORTVERSION=	1.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	SF/caphgame/${PORTNAME}/caphgame-${PORTVERSION}/
 
@@ -41,8 +41,8 @@ CFLAGS+=	-O3 -ffast-math
 .endif
 
 do-build:
-	cd ${BUILD_WRKSRC} && ${CC} ${CFLAGS} -o caph -I../include *.c -lm \
-		`${SDL_CONFIG} --libs --cflags` -D_OPENGL -lGL -lpng ${ICONV_LIB}
+	cd ${BUILD_WRKSRC} && ${CC} ${CFLAGS} -o caph -I../include *.c \
+		`${SDL_CONFIG} --libs --cflags` -D_OPENGL -lGL -lpng -lm ${ICONV_LIB}
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|../share/caph|${DATADIR}|' ${BUILD_WRKSRC}/caph.c
