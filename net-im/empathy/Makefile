@@ -4,7 +4,7 @@
 
 PORTNAME=	empathy
 PORTVERSION=	2.34.0
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	net-im gnome
 MASTER_SITES=	GNOME
 
@@ -95,5 +95,11 @@ PLIST_SUB+=	MAP=""
 CONFIGURE_ARGS+=--disable-map
 PLIST_SUB+=	MAP="@comment "
 .endif
+
+post-patch:
+	@${REINPLACE_CMD} \
+		-e '/^empathy_av_LDADD =/s/$$/ -lm/' \
+		-e '/^empathy_call_LDADD =/s/$$/ -lm/' \
+		${WRKSRC}/src/Makefile.in
 
 .include <bsd.port.mk>
