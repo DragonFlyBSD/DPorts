@@ -3,7 +3,7 @@
 
 PORTNAME=	mnogosearch
 PORTVERSION=	3.4.0
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	www databases
 MASTER_SITES=	http://www.mnogosearch.org/Download/ \
 		http://www.bayofrum.net/dist/${PORTNAME}/
@@ -19,7 +19,7 @@ CONFLICTS=	dpsearch-[0-9]* udmsearch-[0-9]* mguesser-[0-9]*
 OPTIONS_DEFINE=	DOCS EXAMPLES THREADS SSL ASIAN SYSLOG
 
 OPTIONS_MULTI=	database
-OPTIONS_MULTI_database=	PGSQL MSQL MYSQL SQLITE2 SQLITE3
+OPTIONS_MULTI_database=	PGSQL MYSQL SQLITE2 SQLITE3
 
 OPTIONS_DEFAULT=	THREADS SSL SYSLOG SQLITE3
 
@@ -37,6 +37,9 @@ CONFIGURE_ARGS=	--sysconfdir=${ETCDIR} \
 		--datadir=${DATADIR}
 
 SUB_FILES+=	pkg-message
+
+PGSQL_USES=	pgsql
+PGSQL_CONFIGURE_ARGS+=	--with-pgsql=${LOCALBASE}
 
 .include <bsd.port.options.mk>
 
@@ -60,16 +63,6 @@ CONFIGURE_ARGS+=	--with-extra-charsets=all
 
 .if ! ${PORT_OPTIONS:MSYSLOG}
 CONFIGURE_ARGS+=	--disable-syslog
-.endif
-
-.if ${PORT_OPTIONS:MPGSQL}
-USE_PGSQL=		yes
-CONFIGURE_ARGS+=	--with-pgsql=${LOCALBASE}
-.endif
-
-.if ${PORT_OPTIONS:MMSQL}
-LIB_DEPENDS+=		libmsql.so:${PORTSDIR}/databases/msql
-CONFIGURE_ARGS+=	--with-msql=${LOCALBASE}
 .endif
 
 .if ${PORT_OPTIONS:MMYSQL}
