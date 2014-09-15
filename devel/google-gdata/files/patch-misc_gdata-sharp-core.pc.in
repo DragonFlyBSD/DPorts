@@ -1,6 +1,3 @@
-
-$FreeBSD: head/devel/google-gdata/files/patch-misc_gdata-sharp-core.pc.in 340725 2014-01-22 17:40:44Z mat $
-
 --- misc/gdata-sharp-core.pc.in.orig
 +++ misc/gdata-sharp-core.pc.in
 @@ -5,4 +5,4 @@
