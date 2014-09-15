@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	netcdf-fortran
-PORTVERSION=	4.4.0
+PORTVERSION=	4.4.1
 CATEGORIES=	science
 
 MAINTAINER=	sunpoet@FreeBSD.org
@@ -24,7 +24,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	Unidata
 GH_PROJECT=	${PORTNAME}
 GH_TAGNAME=	v${PORTVERSION}
-GH_COMMIT=	ccd65b4
+GH_COMMIT=	1d024df
 
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libnetcdff.so.6.0.1
