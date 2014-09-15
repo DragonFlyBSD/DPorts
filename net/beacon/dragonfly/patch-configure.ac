@@ -1,6 +1,6 @@
---- configure.orig	2011-02-05 03:32:41.000000000 +0000
-+++ configure
-@@ -5591,7 +5591,7 @@ done
+--- configure.ac.orig	2011-02-05 03:27:12 UTC
++++ configure.ac
+@@ -53,7 +53,7 @@ AC_CHECK_FUNCS([gethostbyaddr gethostbyn
  # If we're on FreeBSD, install the rc.d script
  case "${host_os}" in
  
