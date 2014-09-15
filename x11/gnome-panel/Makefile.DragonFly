@@ -1,1 +1,2 @@
 LIB_DEPENDS+=	krb5:${PORTSDIR}/security/krb5
+LDFLAGS+=	-lm
