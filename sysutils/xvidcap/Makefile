@@ -3,7 +3,7 @@
 
 PORTNAME=		xvidcap
 PORTVERSION=		1.1.7
-PORTREVISION=	1
+PORTREVISION=	2
 PORTEPOCH=		1
 CATEGORIES=		sysutils multimedia
 MASTER_SITES=		SF/${PORTNAME}/${PORTNAME}/${PORTVERSION}
@@ -43,12 +43,14 @@ OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.options.mk>
 
-pre-configure:
+post-patch:
 .if empty(PORT_OPTIONS:MDOCS)
 	${REINPLACE_CMD} -e 's|pkgdataDATA install-xvidcapdocDATA|pkgdataDATA|'	\
 		${WRKSRC}/Makefile.in
 .endif
 	${REINPLACE_CMD} -e 's|/bin/bash | /bin/sh|' ${WRKSRC}/ppm2mpeg.sh
+	@${REINPLACE_CMD} '/^xvidcap_LDADD =/s/$$/ -lXext -lX11/' \
+		${WRKSRC}/src/Makefile.in
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
