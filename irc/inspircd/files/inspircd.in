@@ -1,10 +1,10 @@
 #!/bin/sh
 #
-# $FreeBSD: head/irc/inspircd/files/inspircd.in 343571 2014-02-10 01:46:33Z feld $
+# $FreeBSD: head/irc/inspircd/files/inspircd.in 368050 2014-09-12 17:24:45Z feld $
 #
 # PROVIDE: inspircd
 # REQUIRE: DAEMON
-# BEFORE: LOGIN
+# BEFORE: LOGIN mysql postgresql
 # KEYWORD: shutdown
 
 #
