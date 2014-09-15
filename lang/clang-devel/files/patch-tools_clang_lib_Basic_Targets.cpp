@@ -1,14 +1,13 @@
 
-$FreeBSD: head/lang/clang-devel/files/patch-tools_clang_lib_Basic_Targets.cpp 332935 2013-11-06 00:13:02Z brooks $
+$FreeBSD: head/lang/clang-devel/files/patch-tools_clang_lib_Basic_Targets.cpp 365552 2014-08-21 12:43:41Z brooks $
 
 --- tools/clang/lib/Basic/Targets.cpp.orig
 +++ tools/clang/lib/Basic/Targets.cpp
-@@ -4981,6 +4981,8 @@
+@@ -5723,6 +5723,7 @@
      LongDoubleWidth = LongDoubleAlign = 128;
      LongDoubleFormat = &llvm::APFloat::IEEEquad;
      if (getTriple().getOS() == llvm::Triple::FreeBSD) {
 +      IntMaxType = SignedLong;
-+      UIntMaxType = UnsignedLong;
        LongDoubleWidth = LongDoubleAlign = 64;
        LongDoubleFormat = &llvm::APFloat::IEEEdouble;
      }
