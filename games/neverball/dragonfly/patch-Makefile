@@ -1,0 +1,13 @@
+--- Makefile.intermediate	2014-09-15 06:53:09 UTC
++++ Makefile
+@@ -42,6 +42,10 @@ ifeq ($(shell uname), FreeBSD)
+     FREEBSD := 1
+ endif
+ 
++ifeq ($(shell uname), DragonFly)
++    FREEBSD := 1
++endif
++
+ #------------------------------------------------------------------------------
+ # Optional flags (CFLAGS, CPPFLAGS, ...)
+ 

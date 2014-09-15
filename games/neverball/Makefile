@@ -2,7 +2,7 @@
 
 PORTNAME=	neverball
 PORTVERSION=	1.5.4
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	games
 MASTER_SITES=	http://offload1.icculus.org:9090/neverball/ \
 		http://offload2.icculus.org:9090/neverball/ \
@@ -26,8 +26,6 @@ USE_XORG=	x11
 
 PORTDOCS=	CHANGES COPYING README
 PORTDATA=	*
-
-LDFLAGS+=	-lX11 # calls X functions directly, but doesn't link libX11
 
 OPTIONS_DEFINE=	DOCS NLS
 
