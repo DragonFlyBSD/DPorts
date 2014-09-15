@@ -3,7 +3,7 @@
 
 PORTNAME=	ncmpcpp
 PORTVERSION=	0.5.10
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=	http://unkart.ovh.org/ncmpcpp/ \
 		http://mirror.mcx2.org/
@@ -18,9 +18,6 @@ USES=		iconv libtool ncurses pkgconfig tar:bzip2
 USE_GCC=	any
 GNU_CONFIGURE=	yes
 USE_GNOME=	glib20
-USE_AUTOTOOLS=	automake aclocal
-AUTOMAKE_ARGS=	--add-missing
-ACLOCAL_ARGS=	--automake-acdir=${ACLOCAL_DIR} -I ${LOCALBASE}/share/aclocal
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
