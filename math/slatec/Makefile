@@ -3,7 +3,7 @@
 
 PORTNAME=	slatec
 PORTVERSION=	4.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	math
 MASTER_SITES=	NL:slatec,blas
 MASTER_SITE_SUBDIR=	slatec/:slatec blas/:blas
@@ -17,7 +17,7 @@ EXTRACT_ONLY=	slatec_src.tgz slatec_chk.tgz
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	SLATEC Common Mathematical Library
 
-USES=		fortran
+USES=		fortran uidfix
 USE_LDCONFIG=	yes
 WRKSRC=		${WRKDIR}/src
 SHLIB_MAJOR=	1
