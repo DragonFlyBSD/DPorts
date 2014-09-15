@@ -3,7 +3,7 @@
 
 PORTNAME=	gnomebreakout
 PORTVERSION=	0.5.3
-PORTREVISION=	12
+PORTREVISION=	13
 CATEGORIES=	games gnome
 MASTER_SITES=	SF/${PORTNAME:S/eb/e-b/}/${PORTNAME:S/eb/e-b/}/${PORTVERSION}/ \
 		http://www.users.on.net/~mipearson/
@@ -14,11 +14,12 @@ COMMENT=	GNOME version of the classic breakout game
 
 USES=		pathfix pkgconfig
 USE_GNOME=	gnomeprefix libgnomeui
+USE_XORG=	x11
 GNU_CONFIGURE=	yes
 USE_GCC=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib -lm
+LIBS+=		-L${LOCALBASE}/lib -lX11 -lm
 
 PORTDOCS=	AUTHORS ChangeLog NEWS README
 
