@@ -15,6 +15,8 @@ BUILD_DEPENDS=	${LOCALBASE}/bin/python:${PORTSDIR}/lang/python
 
 CONFLICTS_INSTALL=	v8-devel-[0-9]*
 
+PORTSCOUT=	limit:^3.18.*
+
 ALL_TARGET=	native
 MAKE_ENV=	CC.host=${CC} CXX.host=${CXX} LINK.host=${CXX} LINK.target=${CXX}
 MAKE_ENV+=	GYPFLAGS=-DOS=freebsd
