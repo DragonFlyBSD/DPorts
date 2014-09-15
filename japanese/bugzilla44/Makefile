@@ -1,14 +1,14 @@
 # $FreeBSD$
 
 PORTNAME=	bugzilla
-PORTVERSION=	4.4.4
+PORTVERSION=	4.4.5
 CATEGORIES=	japanese
 MASTER_SITES=	http://bug-ja.org/releases/4.4/ \
 		LOCAL
 MASTER_SITE_SUBDIR=	tota/bugzilla-ja
 DISTNAME=	Bugzilla-ja-${PORTVERSION}-template
 
-MAINTAINER=	bugzilla@FreeBSD.org
+MAINTAINER=	bz-ports@FreeBSD.org
 COMMENT=	Japanese localization for Bugzilla
 
 RUN_DEPENDS=	bugzilla44>=${PORTVERSION}:${PORTSDIR}/devel/bugzilla44
