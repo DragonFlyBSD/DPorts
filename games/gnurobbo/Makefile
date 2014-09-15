@@ -3,7 +3,7 @@
 
 PORTNAME=	gnurobbo
 PORTVERSION=	0.66
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}%20${PORTVERSION:C/^([0-9]+\.[0-9]+)\..*$/\1/}/
 EXTRACT_SUFX=	-source.tar.gz
@@ -27,6 +27,7 @@ OPTIONS_DEFINE=	DOCS
 post-patch:
 	@${REINPLACE_CMD} -e '/define DEBUG_DUMP_VM_USAGE/ d' ${WRKSRC}/game.c
 	@${REINPLACE_CMD} -e '/^install:/,$$ s|$$([A-Z_]*DIR)|${STAGEDIR}&| g' \
+		-e '/^LIBS=/s/$$/ -lm/' \
 		${WRKSRC}/Makefile
 
 post-install:
