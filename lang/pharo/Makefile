@@ -3,6 +3,7 @@
 
 PORTNAME=	pharo
 DISTVERSION=	1.4
+PORTREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	https://gforge.inria.fr/frs/download.php/30620/
 DISTNAME=	Pharo-${DISTVERSION}-${SVNVERSION}
@@ -21,8 +22,6 @@ SVNVERSION=	14438
 NO_BUILD=	yes
 USES=		zip
 
-SHAREMODE=	644
-
 DIST_SUBDIR=	squeak
 
 FILES_DIR=	${WRKDIR}/Pharo-${DISTVERSION}-${SVNVERSION}/
@@ -35,8 +34,6 @@ PLIST_FILES=	lib/squeak/Pharo-${DISTVERSION}.image \
 
 do-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/squeak
-.for f in ${FILES_TO_INSTALL}
-	(cd ${FILES_DIR} && ${INSTALL_DATA} ${f} ${STAGEDIR}${PREFIX}/lib/squeak/)
-.endfor
+	${INSTALL_DATA} ${FILES_TO_INSTALL:S,^,${FILES_DIR}/,} ${STAGEDIR}${PREFIX}/lib/squeak
 
 .include <bsd.port.mk>
