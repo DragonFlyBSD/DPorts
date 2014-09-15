@@ -3,7 +3,7 @@
 
 PORTNAME=	kdewebdev
 PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www kde
 MASTER_SITES=	KDE/${KDE4_BRANCH}/${PORTVERSION}/src
 DIST_SUBDIR=	KDE/${PORTVERSION}
@@ -11,7 +11,7 @@ DIST_SUBDIR=	KDE/${PORTVERSION}
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Comprehensive html/website development environment
 
-LIB_DEPENDS=	libtidy-0.99.so:${PORTSDIR}/www/tidy-lib \
+LIB_DEPENDS=	libtidy.so:${PORTSDIR}/www/tidy-lib \
 		libboost_thread.so:${PORTSDIR}/devel/boost-libs
 
 USE_GNOME=	libxml2 libxslt
