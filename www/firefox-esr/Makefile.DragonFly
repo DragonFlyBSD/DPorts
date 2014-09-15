@@ -3,15 +3,6 @@ OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NALSA} PULSEAUDIO
 WITHOUT_DEBUG=yes
 .endif
 
-PULSEAUDIO_LIB_DEPENDS= libpulse.so:${PORTSDIR}/audio/pulseaudio
+MOZ_OPTIONS+= --disable-webrtc
 
-post-extract:
-	@${REINPLACE_CMD} -e 's|_SAFE|_MUTABLE|g' \
-		${WRKSRC}/netwerk/sctp/src/netinet/sctp_asconf.c \
-		${WRKSRC}/netwerk/sctp/src/netinet/sctp_bsd_addr.c \
-		${WRKSRC}/netwerk/sctp/src/netinet/sctp_indata.c \
-		${WRKSRC}/netwerk/sctp/src/netinet/sctp_input.c \
-		${WRKSRC}/netwerk/sctp/src/netinet/sctp_output.c \
-		${WRKSRC}/netwerk/sctp/src/netinet/sctp_pcb.c \
-		${WRKSRC}/netwerk/sctp/src/netinet/sctp_timer.c \
-		${WRKSRC}/netwerk/sctp/src/netinet/sctputil.c
+PULSEAUDIO_LIB_DEPENDS= libpulse.so:${PORTSDIR}/audio/pulseaudio
