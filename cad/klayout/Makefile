@@ -1,8 +1,8 @@
-# Created by: Hiroki Sato <hrs@FreeBSD.org>
 # $FreeBSD$
 
 PORTNAME=	klayout
-PORTVERSION=	0.23.3
+PORTVERSION=	0.23.6
+PORTREVISION=	1
 CATEGORIES=	cad
 MASTER_SITES=	http://178.77.72.242/downloads/
 
