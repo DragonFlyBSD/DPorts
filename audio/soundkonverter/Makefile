@@ -3,7 +3,7 @@
 
 PORTNAME=	soundkonverter
 DISTVERSION=	2.1.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	audio kde
 MASTER_SITES=	GH LOCAL/dbn/${PORTNAME}
 
@@ -102,7 +102,6 @@ SPEEX_RUN_DEPENDS=	speexenc:${PORTSDIR}/audio/speex
 TIMIDITY_DESC=		MIDI audio decoder
 TIMIDITY_RUN_DEPENDS=	timidity:${PORTSDIR}/audio/timidity
 
-TTA_DESC=		True Audio lossless audio codec
 TTA_RUN_DEPENDS=	ttaenv:${PORTSDIR}/audio/tta
 
 TWOLAME_RUN_DEPENDS=	twolame:${PORTSDIR}/audio/twolame
