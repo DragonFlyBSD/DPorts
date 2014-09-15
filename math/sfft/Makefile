@@ -3,7 +3,7 @@
 
 PORTNAME=	sfft
 PORTVERSION=	0.1.0
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	math
 MASTER_SITES=	http://spiral.net/software/sfft/ LOCAL/bf
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
@@ -16,7 +16,7 @@ LICENSE=	GPLv2
 
 LIB_DEPENDS=	libfftw3.so:${PORTSDIR}/math/fftw3
 
-USES=		zip
+USES=		uidfix zip
 USE_GCC=	yes
 USE_LDCONFIG=	yes
 
