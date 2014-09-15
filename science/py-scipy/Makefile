@@ -3,15 +3,16 @@
 
 PORTNAME=	scipy
 PORTVERSION=	0.14.0
+PORTREVISION=	4
 CATEGORIES=	science python
 MASTER_SITES=	http://docs.scipy.org/doc/${DISTNAME}/:doc \
 		SF:source
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}:source \
-		scipy-ref.pdf:doc
+		scipy-ref-${PORTVERSION}.pdf:doc
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
-MAINTAINER=	wen@FreeBSD.org
+MAINTAINER=	python@FreeBSD.org
 COMMENT=	Scientific tools for Python
 
 LICENSE=	BSD3CLAUSE
@@ -22,20 +23,15 @@ LIB_DEPENDS=	libfftw3.so:${PORTSDIR}/math/fftw3
 RUN_DEPENDS=	${PYNUMPY}	\
 		nosetests:${PORTSDIR}/devel/py-nose
 
-LATEST_LINK=	py-${PORTNAME}
-OPTIONSFILE=	${PORT_DBDIR}/py-numpy/options
-
-USES=		fortran
-USE_PYTHON=	yes
-USE_PYDISTUTILS=	yes
-PYDISTUTILS_AUTOPLIST=	yes
+USES=		fortran python
+USE_PYTHON=	distutils autoplist concurrent
 
 OPTIONS_DEFINE=	ATLAS DOCS SUITESPARSE
 OPTIONS_DEFAULT=SUITESPARSE
 ATLAS_DESC=	Use optimized blas library
 SUITESPARSE_DESC=	Use AMD and UMFPACK in SuiteSparse
 
-PORTDOCS=	scipy-ref.pdf
+PORTDOCS=	scipy-ref-${PORTVERSION}.pdf
 
 post-patch:
 	@${GREP} -lR "malloc\.h" ${WRKSRC} | ${XARGS} ${REINPLACE_CMD} \
@@ -62,12 +58,12 @@ PYDISTUTILS_CONFIGUREARGS+=	--fcompiler=gnu95
 PYDISTUTILS_BUILDARGS+=	--fcompiler=gnu95
 
 post-extract:
-	@${CP} ${DISTDIR}/scipy-ref.pdf ${WRKDIR}
+	@${CP} ${DISTDIR}/scipy-ref-${PORTVERSION}.pdf ${WRKDIR}
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
-	${INSTALL_DATA} ${WRKDIR}/scipy-ref.pdf ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKDIR}/scipy-ref-${PORTVERSION}.pdf ${STAGEDIR}${DOCSDIR}
 .endif
 
 .include <bsd.port.post.mk>
