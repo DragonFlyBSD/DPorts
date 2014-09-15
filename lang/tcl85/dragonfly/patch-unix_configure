@@ -1,11 +1,19 @@
---- configure.intermediate	2012-12-28 12:34:44.000000000 +0100
-+++ configure	2012-12-28 12:34:54.000000000 +0100
-@@ -7749,7 +7749,7 @@
- 		;;
- 	    esac
+--- configure.intermediate	2014-09-14 09:51:23 UTC
++++ configure
+@@ -7640,7 +7640,7 @@ fi
+ fi
+ 
  	    ;;
 -	FreeBSD-*)
 +	FreeBSD-*|DragonFly-*)
- 	    # This configuration from FreeBSD Ports.
- 	    SHLIB_CFLAGS="-fPIC"
- 	    SHLIB_LD="${CC} -shared"
+ 	    # Version numbers are dot-stripped by system policy.
+ 	    TCL_TRIM_DOTS=`echo ${VERSION} | tr -d .`
+ 	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.a'
+@@ -8843,6 +8843,7 @@ fi
+ 	    BSD/OS*) ;;
+ 	    CYGWIN_*|MINGW32_*) ;;
+ 	    IRIX*) ;;
++	    DragonFly-*) ;;
+ 	    NetBSD-*|FreeBSD-*|OpenBSD-*) ;;
+ 	    Darwin-*) ;;
+ 	    SCO_SV-3.2*) ;;
