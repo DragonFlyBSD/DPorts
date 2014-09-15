@@ -3,7 +3,7 @@
 
 PORTNAME=	openh323
 PORTVERSION=	1.19.0.1
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	net
 MASTER_SITES=	SF
 DISTNAME=	${PORTNAME}-v${PORTVERSION:S/./_/g}-src
@@ -14,6 +14,8 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	H323 Video Conferencing library
 
 LIB_DEPENDS=	libpt_r.so:${PORTSDIR}/devel/pwlib
+
+CONFLICTS=	h323plus-1.*
 
 WRKSRC=		${WRKDIR}/${PORTNAME}_v${PORTVERSION:S/./_/g}
 
