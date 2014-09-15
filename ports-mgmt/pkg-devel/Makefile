@@ -1,9 +1,11 @@
 # $FreeBSD$
 
 PORTNAME=	pkg
-DISTVERSION=	1.4.0.pre-alpha12
+DISTVERSION=	1.4.0.pre-alpha15
+_PKG_VERSION=	${DISTVERSION}
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	\
+		http://files.etoilebsd.net/pkg/ \
 		http://highsecure.ru/distfiles/ \
 		http://mirror.shatow.net/freebsd/${PORTNAME}/ \
 		http://pkg.semmy.ru/
@@ -33,13 +35,19 @@ USE_SUBMAKE=	yes
 EXTRA_PATCHES=	${FILESDIR}/extra-patch-docs_pkg.8
 .endif
 
+.if defined(PACKAGE_BUILDING)
+MAKE_ARGS+=	PKG_PORTSDIR=/usr/dports
+.else
+MAKE_ARGS+=	PKG_PORTSDIR=${PORTSDIR}
+.endif
+
 .include <bsd.port.pre.mk>
 
-.if defined(WITH_PKGNG)
-.if ${WITH_PKGNG} != devel
+.if defined(WITH_PKG)
+.if ${WITH_PKG} != devel
 NO_LATEST_LINK=	yes
 .	if !defined(PACKAGE_BUILDING)
-IGNORE=	WITH_PKGNG is not defined to 'devel', this version is the devel one
+IGNORE=	WITH_PKG is not defined to 'devel', this version is the devel one
 .	endif
 .else
 LATEST_LINK=	pkg
@@ -57,19 +65,12 @@ NB_NEWPKGS=	0
 .if ${NB_OLDPKGS} > 0 && ${NB_NEWPKGS} == 0
 
 pre-everything::
-	@${ECHO_CMD} "You are about to convert your system to pkgng while you have ports/packages"; \
+	@${ECHO_CMD} "You are about to convert your system to pkg while you have ports/packages"; \
 	 ${ECHO_CMD} "installed with the old pkg_install tools."; \
 	 ${ECHO_CMD} ""; \
-	 ${ECHO_CMD} "You can choose to: "; \
-	 ${ECHO_CMD} "- keep pkg_install as the package management system by adding this line to /etc/make.conf:"; \
-	 ${ECHO_CMD} ""; \
-	 ${ECHO_CMD} "    WITHOUT_PKGNG=yes" ; \
-	 ${ECHO_CMD} ""; \
-	 ${ECHO_CMD} "- switch to pkgng:"; \
-	 ${ECHO_CMD} "    1) Add WITHOUT_PKGNG to /etc/make.conf"; \
-	 ${ECHO_CMD} "    2) Install ports-mgmt/pkg"; \
-	 ${ECHO_CMD} "    3) Convert your package database by running pkg2ng"; \
-	 ${ECHO_CMD} "    4) Remove WITHOUT_PKGNG from /etc/make.conf"; \
+	 ${ECHO_CMD} "To switch to pkg:"; \
+	 ${ECHO_CMD} "    1) Install ports-mgmt/pkg"; \
+	 ${ECHO_CMD} "    2) Convert your package database by running pkg2ng"; \
 	 ${ECHO_CMD} ""; \
 	exit 1
 
@@ -80,12 +81,10 @@ LATEST_LINK=	pkg-devel
 .endif
 
 #define PKG_DEPENDS to nothing to avoid infinite loop looking for pkg :)
-.if defined(WITH_PKGNG)
 PKG_DEPENDS=
 .undef INSTALLS_DEPENDS
 .if !exists(${LOCALBASE}/sbin/pkg)
 PKG_BIN=	${WRKSRC}/src/pkg-static
-.endif
 .endif
 
 post-install:
