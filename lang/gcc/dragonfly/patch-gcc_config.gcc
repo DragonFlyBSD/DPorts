@@ -1,13 +1,6 @@
-$NetBSD: patch-gcc_config.gcc,v 1.3 2012/06/23 22:13:02 marino Exp $
-
-* Add t-crtstuff to tmake_file on NetBSD.
-* Add netbsd-stdint.h to tm_file on NetBSD.
-* wrap the system stdint.h on NetBSD.
-* Add DragonFly support.
-
---- gcc/config.gcc.orig	2012-03-05 10:43:22.000000000 +0000
+--- gcc/config.gcc.orig	2013-08-02 15:41:10.000000000 +0000
 +++ gcc/config.gcc
-@@ -589,6 +589,26 @@ case ${target} in
+@@ -625,6 +625,26 @@ case ${target} in
    # need_64bit_hwint=yes # system compiler has this for all arch!
    use_gcc_stdint=wrap
    ;;
@@ -34,18 +27,18 @@ $NetBSD: patch-gcc_config.gcc,v 1.3 2012/06/23 22:13:02 marino Exp $
  *-*-linux* | frv-*-*linux* | *-*-kfreebsd*-gnu | *-*-knetbsd*-gnu | *-*-gnu* | *-*-kopensolaris*-gnu)
    extra_options="$extra_options gnu-user.opt"
    gas=yes
-@@ -644,6 +664,7 @@ case ${target} in
-   esac
+@@ -684,6 +704,7 @@ case ${target} in
+   target_has_targetcm=yes
    ;;
  *-*-netbsd*)
 +  use_gcc_stdint=wrap
    tmake_file="t-slibgcc"
    gas=yes
    gnu_ld=yes
-@@ -1196,6 +1217,14 @@ i[34567]86-*-elf*)
- x86_64-*-elf*)
- 	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h newlib-stdint.h i386/i386elf.h i386/x86-64.h"
- 	;;
+@@ -1223,6 +1244,14 @@ x86_64-*-rdos*)
+     tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h newlib-stdint.h i386/i386elf.h i386/x86-64.h i386/rdos.h i386/rdos64.h"
+     tmake_file="i386/t-i386elf t-svr4"
+     ;;
 +i[34567]86-*-dragonfly*)
 +	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h dragonfly.h dragonfly-stdint.h i386/dragonfly.h"
 +	tmake_file="${tmake_file} i386/t-crtstuff"
@@ -57,7 +50,7 @@ $NetBSD: patch-gcc_config.gcc,v 1.3 2012/06/23 22:13:02 marino Exp $
  i[34567]86-*-freebsd*)
  	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h ${fbsd_tm_file} i386/freebsd.h"
  	;;
-@@ -1203,12 +1232,14 @@ x86_64-*-freebsd*)
+@@ -1230,12 +1259,14 @@ x86_64-*-freebsd*)
  	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h ${fbsd_tm_file} i386/x86-64.h i386/freebsd.h i386/freebsd64.h"
  	;;
  i[34567]86-*-netbsdelf*)
@@ -74,7 +67,7 @@ $NetBSD: patch-gcc_config.gcc,v 1.3 2012/06/23 22:13:02 marino Exp $
  	;;
  i[34567]86-*-openbsd2.*|i[34567]86-*openbsd3.[0123])
  	tm_file="i386/i386.h i386/unix.h i386/bsd.h i386/gas.h i386/gstabs.h openbsd-oldgas.h openbsd.h i386/openbsd.h"
-@@ -3518,6 +3549,8 @@ case ${target} in
+@@ -3710,6 +3741,8 @@ case ${target} in
  		;;
  	i[34567]86-*-cygwin* | i[34567]86-*-mingw* | x86_64-*-mingw*)
  		;;
