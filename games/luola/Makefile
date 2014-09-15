@@ -3,7 +3,7 @@
 
 PORTNAME=	luola
 PORTVERSION=	1.3.2
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	games
 MASTER_SITES=	http://mirror.amdmi3.ru/distfiles/ # master site gone
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
@@ -18,6 +18,7 @@ GNU_CONFIGURE=	yes
 USES=		gmake
 USE_SDL=	sdl image ttf
 CONFIGURE_ARGS=	--program-prefix=''
+LIBS+=		-lm
 
 PLIST_FILES=	bin/${PORTNAME} \
 		share/pixmaps/${PORTNAME}.png
