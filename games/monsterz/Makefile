@@ -3,7 +3,7 @@
 
 PORTNAME=	monsterz
 PORTVERSION=	0.7.1
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	games
 MASTER_SITES=	http://sam.zoy.org/monsterz/ \
 		SF/nemysisfreebsdp/:icons
@@ -17,7 +17,7 @@ COMMENT=	Monsterz - arcade puzzle game
 LICENSE=	WTFPL
 LICENSE_NAME=	Do What The [expletive] You Want To Public License, Version 2
 LICENSE_FILE=	${WRKSRC}/COPYING
-LICENSE_PERMS=	${_LICENSE_PERMS_DEFAULT}
+LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 RUN_DEPENDS=	${PYGAME}
 
