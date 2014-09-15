@@ -1,2 +1,1 @@
-LDFLAGS+=	-lm -lgmodule-2.0
 CFLAGS+=	-D__FreeBSD__=9
