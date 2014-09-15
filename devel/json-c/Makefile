@@ -27,7 +27,4 @@ GH_TAGNAME=	${PORTNAME}-${PORTVERSION}-20140410
 post-patch:
 	@${REINPLACE_CMD} -e 's| -Werror||g' ${WRKSRC}/Makefile.in
 
-post-patch:
-	@${REINPLACE_CMD} -e 's| -Werror||g' ${WRKSRC}/Makefile.in
-
 .include <bsd.port.mk>
