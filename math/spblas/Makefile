@@ -3,6 +3,7 @@
 
 PORTNAME=	spblas
 DISTVERSION=	1_02
+PORTREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	http://math.nist.gov/spblas/:1 LOCAL/bf/:1 NL/blas/blast-forum/:2
 DISTFILES=	nist_spblas_${DISTVERSION}.zip:1
@@ -10,7 +11,7 @@ DISTFILES=	nist_spblas_${DISTVERSION}.zip:1
 MAINTAINER=	bf@FreeBSD.org
 COMMENT=	NIST Sparse Basic Linear Algebra Subprograms (BLAS)
 
-USES=		dos2unix zip
+USES=		dos2unix uidfix zip
 USE_GCC=	yes
 USE_LDCONFIG=	yes
 
