@@ -1,6 +1,6 @@
---- mozilla/configure.in.orig	2014-05-07 10:12:04.069959000 +0000
+--- mozilla/configure.in.orig	2014-09-14 13:41:19 UTC
 +++ mozilla/configure.in
-@@ -2585,7 +2585,7 @@ dnl Checks for header files.
+@@ -2600,7 +2600,7 @@ dnl Checks for header files.
  dnl ========================================================
  AC_HEADER_DIRENT
  case "$target_os" in
@@ -9,16 +9,16 @@
  # for stuff like -lXshm
      CPPFLAGS="${CPPFLAGS} ${X_CFLAGS}"
      ;;
-@@ -2874,7 +2874,7 @@ then
+@@ -2881,7 +2881,7 @@ then
      fi
  
- 	case "$target" in
--	    *-*-freebsd*)
-+	    *-*-freebsd*|*-*-dragonfly*)
- 			AC_DEFINE(_REENTRANT)
- 			AC_DEFINE(_THREAD_SAFE)
- 			dnl -pthread links in -lpthread, so don't specify it explicitly.
-@@ -7012,7 +7012,7 @@ else
+     case "$target" in
+-        *-*-freebsd*)
++        *-*-freebsd*|*-*-dragonfly*)
+             AC_DEFINE(_REENTRANT)
+             AC_DEFINE(_THREAD_SAFE)
+             dnl -pthread links in -lpthread, so don't specify it explicitly.
+@@ -7229,7 +7229,7 @@ else
    *-darwin*)
      AC_DEFINE(MOZ_MEMORY_DARWIN)
      ;;
