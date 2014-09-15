@@ -4,7 +4,7 @@
 
 PORTNAME=	vinagre
 PORTVERSION=	2.30.3
-PORTREVISION=	4
+PORTREVISION=	6
 CATEGORIES=	net gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -20,7 +20,7 @@ LIB_DEPENDS=	libgtk-vnc-1.0.so:${PORTSDIR}/net/gtk-vnc \
 
 CONFLICTS=	vinagre-3.[0-9]*
 
-USES=		desktop-file-utils pathfix gettext gmake pkgconfig \
+USES=		desktop-file-utils pathfix gettext gmake libtool pkgconfig \
 		shared-mime-info tar:bzip2
 USE_GNOME=	gnomeprefix intlhack vte gconf2 gnomedocutils gnomepanel
 GNU_CONFIGURE=	yes
@@ -40,6 +40,10 @@ TELEPATHY_LIB_DEPENDS=	libtelepathy-glib.so:${PORTSDIR}/net-im/telepathy-glib
 TELEPATHY_CONFIGURE_ENABLE=	telepathy
 
 .include <bsd.port.options.mk>
+
+post-patch:
+	@${REINPLACE_CMD} '/^libvinagre_la_LIBADD =/s/$$/ -lgmodule-2.0/' \
+		${WRKSRC}/vinagre/Makefile.in
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
