@@ -3,7 +3,7 @@
 
 PORTNAME=	opal
 PORTVERSION=	3.10.10
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	net
 MASTER_SITES=	GNOME
 
@@ -53,7 +53,7 @@ RTPTEXT_DESC=	RFC4103 Text RTP payload support
 H450_DESC=	H.450 H.323 subset
 H460_DESC=	H.460 H.323 extension for NAT traversal
 H501_DESC=	H.501 H323 mobility extensions
-LID_DESC=	Light-Weight Identity (incl. xJack cards  and voicetronix vpb) support
+LID_DESC=	Light-Weight Identity (incl. xJack cards and voicetronix vpb) support
 UVIDEO_DESC=	RFC4175 uncompressed video RTP payload
 AEC_DESC=	Accoustic echo cancellation
 
@@ -211,7 +211,7 @@ CONFIGURE_ARGS+=	--disable-h281
 
 # keep version in lib_depend, to see the difference between spandsp-devel and normal
 .if ${PORT_OPTIONS:MFAX}
-LIB_DEPENDS+=	libspandsp.so.2:${PORTSDIR}/comms/spandsp-devel
+LIB_DEPENDS+=	libspandsp.so.2.0.0:${PORTSDIR}/comms/spandsp-devel
 CONFIGURE_ARGS+=	--enable-spandsp --enable-fax --enable-t38
 PLIST_SUB+=	FAX=""
 .else
