@@ -3,7 +3,7 @@
 
 PORTNAME=	logstalgia
 PORTVERSION=	1.0.3
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	sysutils www
 MASTER_SITES=	GOOGLE_CODE CRITICAL
 
@@ -21,6 +21,6 @@ GNU_CONFIGURE=	yes
 USES=		pkgconfig
 USE_SDL=	sdl image
 
-CFLAGS+=	-L/usr/local/lib -I/usr/local/include
+CFLAGS+=	-L${LOCALBASE}/lib
 
 .include <bsd.port.mk>
