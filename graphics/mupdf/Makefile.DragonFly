@@ -1,0 +1,6 @@
+CFLAGS+=	-I${LOCALBASE}/include/freetype2
+LDFLAGS+=	-lz -L${LOCALBASE}/lib -lfreetype -ljpeg -lopenjp2 \
+		-ljbig2dec
+
+pre-configure:
+	${REINPLACE_CMD} -e 's|FreeBSD|DragonFly|' ${WRKSRC}/Makerules
