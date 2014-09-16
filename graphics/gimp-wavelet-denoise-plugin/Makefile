@@ -3,7 +3,7 @@
 
 PORTNAME=	wavelet-denoise
 PORTVERSION=	0.3.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	http://registry.gimp.org/files/
 PKGNAMEPREFIX=	gimp-
@@ -39,6 +39,7 @@ CFLAGS+=	-O3
 post-patch:
 	@${REINPLACE_CMD} \
 		-e 's|gimptool-2.0|${LOCALBASE}/bin/gimptool-2.0|' \
+		-e '/^LIBS =/s/$$/ -lm/' \
 		${WRKSRC}/src/Makefile
 #
 ## l10n
