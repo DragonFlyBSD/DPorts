@@ -1,1 +1,1 @@
-LDFLAGS+= -L${LOCALBASE}/lib -lexecinfo
+USES+=	execinfo
