@@ -3,7 +3,7 @@
 
 PORTNAME=	bogofilter
 PORTVERSION=	1.2.4
-PORTREVISION?=	3
+PORTREVISION?=	4
 CATEGORIES?=	mail
 MASTER_SITES=	SF/bogofilter/bogofilter-current/bogofilter-${PORTVERSION}
 
@@ -12,7 +12,7 @@ COMMENT=	Fast, teachable, learning spam detector
 
 .if !defined(MASTERDIR) || ${MASTERDIR} == ${.CURDIR}
 # building master port
-USE_BDB=	44
+USE_BDB=	41+
 .endif
 
 OPTIONS_DEFINE=		GSL UNICODE DOCS
