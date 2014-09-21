@@ -122,6 +122,10 @@ lib/libheimbase.a
 lib/libheimbase.so
 lib/libheimbase.so.1
 lib/libheimbase.so.1.0.0
+lib/libheimedit.a
+lib/libheimedit.so
+lib/libheimedit.so.0
+lib/libheimedit.so.0.0.36
 lib/libheimntlm.a
 lib/libheimntlm.so
 lib/libheimntlm.so.0
