@@ -1,8 +1,12 @@
 etc/poudriere.conf.sample
+etc/poudriere.d/hooks/bulk.sh.sample
+etc/poudriere.d/hooks/pkgbuild.sh.sample
+etc/rc.d/poudriere
 bin/poudriere
 man/man8/poudriere.8.gz
 libexec/poudriere/dirwatch
 libexec/poudriere/dirempty
+share/poudriere/processonelog2.sh
 share/poudriere/status.sh
 share/poudriere/queue.sh
 share/poudriere/daemon.sh
@@ -60,3 +64,6 @@ share/poudriere/testport.sh
 @dirrm share/poudriere/html
 @dirrm share/poudriere/awk
 @dirrm share/poudriere
+@dirrm libexec/poudriere
+@dirrmtry etc/poudriere.d/hooks
+@dirrmtry etc/poudriere.d
