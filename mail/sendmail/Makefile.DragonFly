@@ -1,0 +1,1 @@
+IGNORE= only in tree because bsd.milter.mk, dependency doesn't build
