@@ -1,7 +1,7 @@
 # $FreeBSD: ports-mgmt/poudriere/Makefile 329590 2013-10-06 15:20:14Z bdrewery $
 
 PORTNAME=	poudriere
-PORTVERSION=	3.1.0.15
+PORTVERSION=	3.1.0.16
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	http://leaf.dragonflybsd.org/~marino/dports-src/boomsrc/
 DISTNAME=	${PORTNAME}-DF-${PORTVERSION}
