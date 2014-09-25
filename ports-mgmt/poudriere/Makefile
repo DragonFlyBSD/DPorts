@@ -2,6 +2,7 @@
 
 PORTNAME=	poudriere
 PORTVERSION=	3.1.0.16
+PORTREVISION=	1
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	http://leaf.dragonflybsd.org/~marino/dports-src/boomsrc/
 DISTNAME=	${PORTNAME}-DF-${PORTVERSION}
