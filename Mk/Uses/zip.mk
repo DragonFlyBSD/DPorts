@@ -7,10 +7,8 @@
 #
 # MAINTAINER: portmgr@FreeBSD.org
 
-.if !defined(_INCLUDE_USES_ZIP_Mk)
+.if !defined(_INCLUDE_USES_ZIP_MK)
 _INCLUDE_USES_ZIP_MK=	yes
-
-zip_ARGS?=	none
 
 EXTRACT_SUFX?=	.zip
 
@@ -27,17 +25,18 @@ ZIP_AFTER_ARGS:= ${EXTRACT_AFTER_ARGS}
 .undef EXTRACT_AFTER_ARGS
 .endif
 
-.if ${zip_ARGS} == infozip
-EXTRACT_DEPENDS+=	${UNZIP_CMD}:${PORTSDIR}/archivers/unzip
-ZIP_EXTRACT_CMD?=	${UNZIP_CMD}
-.elif ${zip_ARGS} == none
+.if empty(zip_ARGS)
 .  if ${OPSYS} == FreeBSD
 ZIP_EXTRACT_CMD?=	${UNZIP_NATIVE_CMD}
 .  else
 EXTRACT_DEPENDS+=	${UNZIP_CMD}:${PORTSDIR}/archivers/unzip
 ZIP_EXTRACT_CMD?=	${UNZIP_CMD}
 .  endif
+.elif ${zip_ARGS} == "infozip"
+EXTRACT_DEPENDS+=	${UNZIP_CMD}:${PORTSDIR}/archivers/unzip
+ZIP_EXTRACT_CMD?=	${UNZIP_CMD}
 .else
 IGNORE=	Incorrect 'USES+=zip:${zip_ARGS}' expecting 'USES+=zip[:infozip]'
 .endif
+
 .endif

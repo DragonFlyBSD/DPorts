@@ -581,8 +581,7 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 # INSTALL_SCRIPT
 #				- A command to install executable scripts.
 # INSTALL_DATA	- A command to install sharable data.
-# INSTALL_MAN	- A command to install manpages.  May or not compress,
-#				  depending on the value of MANCOMPRESSED (see below).
+# INSTALL_MAN	- A command to install manpages.
 # COPYTREE_BIN
 # COPYTREE_SHARE
 #				- Similiar to INSTALL_PROGRAM and INSTALL_DATA commands but
@@ -620,10 +619,6 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #				  Should not be set when no documentation files are
 #				  installed.
 #				  Useful for dynamically generated documentation.
-#				  NOTE: this may fail to generate @dirrm entries for
-#				  complex patterns. In such a case, please abstain from
-#				  using DOCSDIR and add files and @dirrm-directories to
-#				  pkg-plist instead (see make makeplist).
 #
 # Set the following to specify all documentation your port installs into
 # ${EXAMPLESDIR}
@@ -1112,6 +1107,7 @@ CO_ENV+=	STAGEDIR=${STAGEDIR} \
 			PLIST_SUB_SED="${PLIST_SUB_SED}" \
 			PORT_OPTIONS="${PORT_OPTIONS}" \
 			PORTSDIR="${PORTSDIR}"
+MINIMAL_PKG_VERSION=	1.3.8
 
 # Prevent dport from building profile libraries
 NOPROFILE=		yes
@@ -1220,6 +1216,16 @@ OSREL!=		${UNAME} -r | ${SED} -e 's/[-(].*//'
 
 # Only define tools here (for transition period with between pkg tools)
 .include "${PORTSDIR}/Mk/bsd.commands.mk"
+
+.if exists(${PKG_BIN})
+.if !defined(_PKG_VERSION)
+_PKG_VERSION!=	${PKG_BIN} -v
+.endif
+_PKG_STATUS!=	${PKG_BIN} version -t ${_PKG_VERSION:C/-.*//g} ${MINIMAL_PKG_VERSION}
+.if ${_PKG_STATUS} == "<"
+IGNORE=		pkg(8) must be version ${MINIMAL_PKG_VERSION} or greater, but you have ${_PKG_VERSION}. You must upgrade the ${PKG_ORIGIN} port first
+.endif
+.endif
 
 MASTERDIR?=	${.CURDIR}
 
@@ -1508,11 +1514,13 @@ QA_ENV+=	USESSHAREDMIMEINFO=yes
 
 # Loading features
 .for f in ${USES}
-_f=${f:C/\:.*//g}
-.if ${_f} != ${f}
-${_f}_ARGS:=	${f:C/^[^\:]*\://g}
+_f:=		${f:C/\:.*//}
+.if !defined(${_f}_ARGS)
+${_f}_ARGS:=	${f:C/^[^\:]*(\:|\$)//:S/,/ /g}
 .endif
-.include "${USESDIR}/${_f}.mk"
+.endfor
+.for f in ${USES}
+.include "${USESDIR}/${f:C/\:.*//}.mk"
 .endfor
 
 .if defined(USE_BZIP2)
@@ -1539,6 +1547,12 @@ CD_MOUNTPTS?=	/cdrom ${CD_MOUNTPT}
 # Owner and group of the WWW user
 WWWOWN?=	www
 WWWGRP?=	www
+
+# Keep PKGNG_ORIGIN/WITH_PKGNG for compat with scripts which are looking for it
+PKG_ORIGIN?=	ports-mgmt/pkg
+PKGNG_ORIGIN=	${PKG_ORIGIN}
+WITH_PKGNG?=	yes
+WITH_PKG?=	${WITH_PKGNG}
 
 .endif
 # End of pre-makefile section.
@@ -1639,17 +1653,6 @@ MAKE_SHELL?=	${SH}
 CONFIGURE_ENV+=	SHELL=${CONFIGURE_SHELL} CONFIG_SHELL=${CONFIGURE_SHELL}
 MAKE_ENV+=		SHELL=${MAKE_SHELL} NO_LINT=YES
 
-.if defined(MANCOMPRESSED)
-.if ${MANCOMPRESSED} != yes && ${MANCOMPRESSED} != no && \
-	${MANCOMPRESSED} != maybe
-check-makevars::
-	@${ECHO_MSG} "${PKGNAME}: Makefile error: value of MANCOMPRESSED (is \"${MANCOMPRESSED}\") can only be \"yes\", \"no\" or \"maybe\"".
-	@${FALSE}
-.endif
-.endif
-
-MANCOMPRESSED?=	no
-
 .if defined(PATCHFILES)
 .if ${PATCHFILES:M*.zip}x != x
 PATCH_DEPENDS+=		${LOCALBASE}/bin/unzip:${PORTSDIR}/archivers/unzip
@@ -1686,11 +1689,6 @@ IGNORE=		requires i386 (or compatible) platform to run
 LIB32DIR=	lib
 .endif
 PLIST_SUB+=	LIB32DIR=${LIB32DIR}
-
-PKG_ORIGIN?=	ports-mgmt/pkg
-# Keep WITH_PKGNG for compat with scripts which are looking for it
-WITH_PKGNG?=	yes
-WITH_PKG?=	${WITH_PKGNG}
 
 .if ${WITH_PKG} == devel
 PKG_ORIGIN=		ports-mgmt/pkg-devel
@@ -1777,7 +1775,9 @@ USE_LINUX=	${OVERRIDE_LINUX_BASE_PORT}
 LINUX_BASE_PORT=	${LINUXBASE}/bin/sh:${PORTSDIR}/emulators/linux_base-${USE_LINUX}
 .	else
 .		if ${USE_LINUX:tl} == "yes"
+USE_LINUX=	f10		# temporary default, set to c6 soon
 LINUX_BASE_PORT=	${LINUXBASE}/etc/fedora-release:${PORTSDIR}/emulators/linux_base-f10
+#LINUX_BASE_PORT=	${LINUXBASE}/etc/redhat-release:${PORTSDIR}/emulators/linux_base-c6
 .		else
 IGNORE=		cannot be built: there is no emulators/linux_base-${USE_LINUX}, perhaps wrong use of USE_LINUX or OVERRIDE_LINUX_BASE_PORT
 .		endif
@@ -1947,11 +1947,13 @@ USE_SUBMAKE=	yes
 
 # Loading features
 .for f in ${_USES_POST}
-_f=${f:C/\:.*//g}
-.if ${_f} != ${f}
-${_f}_ARGS:=	${f:C/^[^\:]*\://g}
+_f:=		${f:C/\:.*//}
+.if !defined(${_f}_ARGS)
+${_f}_ARGS:=	${f:C/^[^\:]*(\:|\$)//:S/,/ /g}
 .endif
-.include "${USESDIR}/${_f}.mk"
+.endfor
+.for f in ${_USES_POST}
+.include "${USESDIR}/${f:C/\:.*//}.mk"
 .endfor
 
 .if defined(USE_XORG)
@@ -2297,21 +2299,6 @@ TMPPLIST?=	${WRKDIR}/.PLIST.mktmp
 TMPPLIST_SORT?=	${WRKDIR}/.PLIST.mktmp.sorted
 TMPGUCMD?=	${WRKDIR}/.PLIST.gucmd
 
-.if !defined(PKG_ARGS)
-PKG_ARGS=		-v -c -${COMMENT:Q} -d ${DESCR} -f ${TMPPLIST} -p ${PREFIX} -P "`cd ${.CURDIR} && ${MAKE} actual-package-depends | ${GREP} -v -E ${PKG_IGNORE_DEPENDS} | ${SORT} -u -t : -k 2`" ${EXTRA_PKG_ARGS} $${_LATE_PKG_ARGS}
-.if !defined(NO_MTREE)
-PKG_ARGS+=		-m ${MTREE_FILE}
-.endif
-.if defined(PKGORIGIN)
-PKG_ARGS+=		-o ${PKGORIGIN}
-.endif
-.if defined(CONFLICTS) && !defined(DISABLE_CONFLICTS)
-PKG_ARGS+=		-C "${CONFLICTS}"
-.endif
-.if defined(CONFLICTS_INSTALL) && !defined(DISABLE_CONFLICTS)
-PKG_ARGS+=		-C "${CONFLICTS_INSTALL}"
-.endif
-.endif
 .if defined(PKG_NOCOMPRESS)
 PKG_SUFX?=		.tar
 .else
@@ -3194,7 +3181,7 @@ check-vulnerable:
 .if !defined(DISABLE_VULNERABILITIES) && !defined(PACKAGE_BUILDING)
 	@if [ -f "${AUDITFILE}" ]; then \
 		if [ -x "${PKG_BIN}" ]; then \
-			vlist=`${PKG_BIN} audit "${PKGNAME}"`; \
+			vlist=`${PKG_BIN} audit "${PKGNAME}" || :`; \
 			if [ "$${vlist}" = "0 problem(s) in the installed packages found." ]; then \
 				vlist=""; \
 			fi; \
@@ -3293,7 +3280,7 @@ do-fetch:
 						continue 2; \
 					else \
 						${ECHO_MSG} "=> Fetched file size mismatch (expected $${CKSIZE}, actual $${actual_size})"; \
-						if [ $${sites_remaining} -gt 1 ]; then \
+						if [ $${sites_remaining} -gt 0 ]; then \
 							${ECHO_MSG} "=> Trying next site"; \
 							${RM} -f $${file}; \
 						fi; \
@@ -3306,7 +3293,7 @@ do-fetch:
 	    fi; \
 	 done
 .if defined(PATCHFILES)
-	cd ${_DISTDIR};\
+	@cd ${_DISTDIR};\
 	${_PATCH_SITES_ENV} ; \
 	for _file in ${PATCHFILES}; do \
 		file=`${ECHO_CMD} $$_file | ${SED} -E -e 's/:[^-:][^:]*$$//'` ; \
@@ -3711,7 +3698,7 @@ do-package: ${TMPPLIST}
 	@if ${SETENV} ${PKG_ENV} FORCE_POST="${_FORCE_POST_PATTERNS}" ${PKG_CREATE} ${PKG_CREATE_ARGS} -f ${PKG_SUFX:S/.//} -o ${WRKDIR}/pkg ${PKGNAME}; then \
 		if [ -d ${PKGREPOSITORY} -a -w ${PKGREPOSITORY} ]; then \
 			${LN} -f ${WRKDIR}/pkg/${PKGNAME}${PKG_SUFX} ${PKGFILE} 2>/dev/null \
-				|| ${CP} -af ${WRKDIR}/pkg/${PKGNAME}${PKG_SUFX} ${PKGFILE}; \
+				|| ${CP} -f ${WRKDIR}/pkg/${PKGNAME}${PKG_SUFX} ${PKGFILE}; \
 			if [ "${PKGORIGIN}" = "ports-mgmt/pkg" -o "${PKGORIGIN}" = "ports-mgmt/pkg-devel" ]; then \
 				if [ ! -d ${PKGLATESTREPOSITORY} ]; then \
 					if ! ${MKDIR} ${PKGLATESTREPOSITORY}; then \
@@ -3741,8 +3728,8 @@ delete-package-list:
 	@${ECHO_CMD} "[ -f ${PKGFILE} ] && (${ECHO_CMD} deleting ${PKGFILE}; ${RM} -f ${PKGFILE})"
 .endif
 
-# Used if !defined(NO_STAGE) during install, or manually to install package
-# from local repository.
+# Used by scripts and users to install a package from local repository.
+# Poudriere -i uses this, please keep.
 .if !target(install-package)
 .if defined(FORCE_PKG_REGISTER)
 _INSTALL_PKG_ARGS=	-f
@@ -3794,39 +3781,8 @@ check-umask:
 .endif
 
 .if !target(install-mtree)
-install-mtree: ${PREFIX}
-	@if [ ${UID} != 0 ]; then \
-		if [ -w ${PREFIX}/ ]; then \
-			${ECHO_MSG} "Warning: not superuser, you may get some errors during installation."; \
-		else \
-			${ECHO_MSG} "Error: ${PREFIX}/ not writable."; \
-			${FALSE}; \
-		fi; \
-	fi
-.if !defined(NO_MTREE)
-	@if [ ${UID} = 0 ]; then \
-		if [ ! -f ${MTREE_FILE} ]; then \
-			${ECHO_MSG} "Error: mtree file \"${MTREE_FILE}\" is missing."; \
-			${ECHO_MSG} "Copy it from a suitable location (e.g., ${SRC_BASE}/etc/mtree) and try again."; \
-			exit 1; \
-		else \
-			${MTREE_CMD} ${MTREE_ARGS} ${PREFIX}/ >/dev/null; \
-			if [ ${PREFIX} = ${LOCALBASE} -a "${MTREE_FILE_DEFAULT}" = "yes" ]; then \
-				cd ${PREFIX}/share/nls; \
-				for link in POSIX en_US.US-ASCII; \
-				do \
-					if [ x"`${READLINK_CMD} $${link}`" != x"C" ]; \
-					then \
-						${LN} -shf C $${link}; \
-					fi; \
-				done; \
-			fi; \
-		fi; \
-	else \
-		${ECHO_MSG} "Warning: not superuser, can't run mtree."; \
-		${ECHO_MSG} "You may want to become root and try again to ensure correct permissions."; \
-	fi
-.endif
+install-mtree:
+	@${DO_NADA}
 .endif
 
 .if !target(install-ldconfig-file)
@@ -3842,9 +3798,7 @@ install-ldconfig-file:
 .endif
 	@${ECHO_CMD} ${USE_LDCONFIG} | ${TR} ' ' '\n' \
 		> ${STAGEDIR}${LOCALBASE}/${LDCONFIG_DIR}/${UNIQUENAME}
-	@${ECHO_CMD} "@cwd ${LOCALBASE}" >> ${TMPPLIST}
-	@${ECHO_CMD} ${LDCONFIG_DIR}/${UNIQUENAME} >> ${TMPPLIST}
-	@${ECHO_CMD} "@cwd ${PREFIX}" >> ${TMPPLIST}
+	@${ECHO_CMD} ${LOCALBASE}/${LDCONFIG_DIR}/${UNIQUENAME} >> ${TMPPLIST}
 .endif
 .endif
 .endif
@@ -3856,9 +3810,7 @@ install-ldconfig-file:
 .endif
 	@${ECHO_CMD} ${USE_LDCONFIG32} | ${TR} ' ' '\n' \
 		> ${STAGEDIR}${LOCALBASE}/${LDCONFIG32_DIR}/${UNIQUENAME}
-	@${ECHO_CMD} "@cwd ${LOCALBASE}" >> ${TMPPLIST}
-	@${ECHO_CMD} ${LDCONFIG32_DIR}/${UNIQUENAME} >> ${TMPPLIST}
-	@${ECHO_CMD} "@cwd ${PREFIX}" >> ${TMPPLIST}
+	@${ECHO_CMD} ${LOCALBASE}/${LDCONFIG32_DIR}/${UNIQUENAME} >> ${TMPPLIST}
 .endif
 .endif
 .if defined(INSTALLS_SHLIB)
@@ -5086,7 +5038,7 @@ missing:
 		fi; \
 	done
 
-# shwo missing dependencies by name
+# Show missing dependencies by name
 missing-packages:
 	@_packages=$$(${PKG_INFO} -aq); \
 	for dir in $$(${ALL-DEPENDS-LIST}); do \
@@ -5243,11 +5195,7 @@ generate-plist: ${WRKDIR}
 	@${ECHO_MSG} "===>   Generating temporary packing list"
 	@${MKDIR} `${DIRNAME} ${TMPPLIST}`
 	@if [ ! -f ${DESCR} ]; then ${ECHO_MSG} "** Missing pkg-descr for ${PKGNAME}."; exit 1; fi
-.if defined(NEED_ROOT)
 	@>${TMPPLIST}
-.else
-	@${ECHO_CMD} -e "@owner root\n@group wheel" >${TMPPLIST}
-.endif
 	@for file in ${PLIST_FILES}; do \
 		${ECHO_CMD} $${file} | ${SED} ${PLIST_SUB:S/$/!g/:S/^/ -e s!%%/:S/=/%%!/} >> ${TMPPLIST}; \
 	done
@@ -5255,11 +5203,8 @@ generate-plist: ${WRKDIR}
 		${SED} ${PLIST_SUB:S/$/!g/:S/^/ -e s!%%/:S/=/%%!/} ${PLIST} >> ${TMPPLIST}; \
 	fi
 
-.for dir in ${PLIST_DIRS}
-	@${ECHO_CMD} ${dir} | ${SED} ${PLIST_SUB:S/$/!g/:S/^/ -e s!%%/:S/=/%%!/} -e 's,^,@dirrm ,' >> ${TMPPLIST}
-.endfor
-.for dir in ${PLIST_DIRSTRY}
-	@${ECHO_CMD} ${dir} | ${SED} ${PLIST_SUB:S/$/!g/:S/^/ -e s!%%/:S/=/%%!/} -e 's,^,@dirrmtry ,' >> ${TMPPLIST}
+.for dir in ${PLIST_DIRS} ${PLIST_DIRSTRY}
+	@${ECHO_CMD} ${dir} | ${SED} ${PLIST_SUB:S/$/!g/:S/^/ -e s!%%/:S/=/%%!/} -e 's,^,@dir ,' >> ${TMPPLIST}
 .endfor
 
 .if defined(USE_LINUX_PREFIX)
@@ -5310,9 +5255,6 @@ add-plist-docs:
 .endfor
 	@${FIND} -P ${PORTDOCS:S/^/${STAGEDIR}${DOCSDIR}\//} ! -type d 2>/dev/null | \
 		${SED} -ne 's,^${STAGEDIR}${PREFIX}/,,p' >> ${TMPPLIST}
-	@${FIND} -P -d ${PORTDOCS:C,/[^/]*[*?\[][^/]*$,,:S/^/${STAGEDIR}${DOCSDIR}\//} -type d 2>/dev/null | \
-		${SED} -ne 's,^${STAGEDIR}${PREFIX}/,@dirrm ,p' >> ${TMPPLIST}
-	@${ECHO_CMD} "@dirrm ${DOCSDIR_REL}" >> ${TMPPLIST}
 .endif
 .endif
 
@@ -5332,9 +5274,6 @@ add-plist-examples:
 .endfor
 	@${FIND} -P ${PORTEXAMPLES:S/^/${STAGEDIR}${EXAMPLESDIR}\//} ! -type d 2>/dev/null | \
 		${SED} -ne 's,^${STAGEDIR}${PREFIX}/,,p' >> ${TMPPLIST}
-	@${FIND} -P -d ${PORTEXAMPLES:C,/[^/]*[*?\[][^/]*$,,:S/^/${STAGEDIR}${EXAMPLESDIR}\//} -type d 2>/dev/null | \
-		${SED} -ne 's,^${STAGEDIR}${PREFIX}/,@dirrm ,p' >> ${TMPPLIST}
-	@${ECHO_CMD} "@dirrm ${EXAMPLESDIR_REL}" >> ${TMPPLIST}
 .endif
 .endif
 
@@ -5354,9 +5293,6 @@ add-plist-data:
 .endfor
 	@${FIND} -P ${PORTDATA:S/^/${STAGEDIR}${DATADIR}\//} ! -type d 2>/dev/null | \
 		${SED} -ne 's,^${STAGEDIR}${PREFIX}/,,p' >> ${TMPPLIST}
-	@${FIND} -P -d ${PORTDATA:C,/[^/]*[*?\[][^/]*$,,:S/^/${STAGEDIR}${DATADIR}\//} -type d 2>/dev/null | \
-		${SED} -ne 's,^${STAGEDIR}${PREFIX}/,@dirrm ,p' >> ${TMPPLIST}
-	@${ECHO_CMD} "@dirrm ${DATADIR_REL}" >> ${TMPPLIST}
 .endif
 .endif
 
@@ -5378,13 +5314,10 @@ add-plist-info:
 .for i in ${INFO}
 	@${LS} ${STAGEDIR}${PREFIX}/${INFO_PATH}/$i.info* | ${SED} -e s:${STAGEDIR}${PREFIX}/:@info\ :g >> ${TMPPLIST}
 .endfor
-.if defined(INFO_SUBDIR)
-	@${ECHO_CMD} "@dirrmtry ${INFO_PATH}/${INFO_SUBDIR}" >> ${TMPPLIST}
-.endif
 .if (${PREFIX} != "/usr")
 	@${ECHO_CMD} "@unexec indexinfo %D/${INFO_PATH}" >> ${TMPPLIST}
 .if (${PREFIX} != ${LOCALBASE} && ${PREFIX} != ${LINUXBASE})
-	@${ECHO_CMD} "@dirrmtry ${INFO_PATH}" >> ${TMPPLIST}
+	@${ECHO_CMD} "@dir ${INFO_PATH}" >> ${TMPPLIST}
 .endif
 .endif
 .endif
@@ -5396,7 +5329,7 @@ add-plist-info:
 .if (${PREFIX} != ${LOCALBASE} && ${PREFIX} != ${LINUXBASE} && \
     ${PREFIX} != "/usr" && !defined(NO_PREFIX_RMDIR))
 add-plist-post:
-	@${ECHO_CMD} "@dirrmtry ${PREFIX}" >> ${TMPPLIST}
+	@${ECHO_CMD} "@dir ${PREFIX}" >> ${TMPPLIST}
 .endif
 .endif
 
@@ -6140,8 +6073,8 @@ _PATCH_SEQ=		ask-license patch-message patch-depends pathfix dos2unix fix-sheban
 _CONFIGURE_DEP=	patch
 _CONFIGURE_SEQ=	build-depends lib-depends configure-message run-autotools-fixup \
 				configure-autotools pre-configure pre-configure-script \
-				run-autotools patch-libtool do-configure post-configure \
-				post-configure-script
+				run-autotools do-autoreconf patch-libtool do-configure \
+				post-configure post-configure-script
 _BUILD_DEP=		configure
 _BUILD_SEQ=		build-message pre-build pre-build-script do-build \
 				post-build post-build-script
@@ -6151,9 +6084,8 @@ _STAGE_SEQ=		stage-message stage-dir run-depends lib-depends apply-slist pre-ins
 				pre-su-install
 .if defined(NEED_ROOT)
 _STAGE_SUSEQ=	create-users-groups do-install \
-				kmod-post-install shared-mime-post-install \
+				kmod-post-install \
 				webplugin-post-install post-install post-install-script \
-				desktop-file-post-install \
 				move-uniquefiles patch-lafiles post-stage compress-man \
 				install-rc-script install-ldconfig-file install-license \
 				install-desktop-entries add-plist-info add-plist-docs \
@@ -6164,9 +6096,8 @@ _STAGE_SUSEQ+=	stage-qa
 .endif
 .else
 _STAGE_SEQ+=	create-users-groups do-install \
-				kmod-post-install shared-mime-post-install \
+				kmod-post-install \
 				webplugin-post-install post-install post-install-script \
-				desktop-file-post-install \
 				move-uniquefiles patch-lafiles post-stage compress-man \
 				install-rc-script install-ldconfig-file install-license \
 				install-desktop-entries add-plist-info add-plist-docs \

@@ -4,12 +4,9 @@
 #
 # Feature:	libtool
 # Usage:	USES=libtool or USES=libtool:args
-# Valid args:	keepla	Normally libtool libraries (*.la) are not installed.
-#			With this option they are.  This is needed as long
-#			as there are dependent ports with .la libraries that
-#			refer to .la libraries in this port.  As soon as all
-#			those dependent ports have some form of USES=libtool
-#			keepla can be removed.
+# Valid args:	keepla	Don't remove libtool libraries (*.la) from the stage
+#			directory.  Some ports need them at runtime (e.g. ports
+#			that call lt_dlopen from libltdl).
 #		build	Add a build dependency on devel/libtool.  This can
 #			be used when a port does not generate its own libtool
 #			script and relies on the system to provide one.
@@ -19,7 +16,6 @@
 .if !defined(_INCLUDE_USES_LIBTOOL_MK)
 _INCLUDE_USES_LIBTOOL_MK=	yes
 _USES_POST+=	libtool
-libtool_ARGS:=	${libtool_ARGS:C/,/ /}
 
 .if ${libtool_ARGS:Mbuild}
 BUILD_DEPENDS+=	libtool:${PORTSDIR}/devel/libtool
@@ -77,7 +73,7 @@ patch-lafiles:
 		${XARGS} ${SED} -i '' -e "/dependency_libs=/s/=.*/=''/"
 .else
 	@${FIND} ${STAGEDIR} -type l -exec ${SH} -c			\
-		'case `${REALPATH} "{}"` in			\
+		'case `${REALPATH} -q "{}"` in				\
 			*.la) ${ECHO_CMD} "{}" ;; esac' \; |		\
 		${XARGS} ${GREP} -l 'libtool library' | ${XARGS} ${RM}
 	@${FIND} ${STAGEDIR} -type f -name '*.la' |			\

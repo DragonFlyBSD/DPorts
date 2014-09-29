@@ -46,8 +46,9 @@ GCCVERSION_040700=	300400 9999999 4.7
 GCCVERSION_040800=	     0       0 4.8
 GCCVERSION_040900=	     0       0 4.9
 
+# Version of lang/gcc
+GCC_DEFAULT_V=	4.8
 DFLY_DEFAULT_VERSION=	47
-GCC_DEFAULT_V=	${GCC_DEFAULT:S/.//}
 
 # No configurable parts below this. ####################################
 #
@@ -150,7 +151,7 @@ _USE_GCC:=	${GCC_DEFAULT}
 .  if ${DFLYVERSION} < ${_GCCVERSION_${v}_L} || ${DFLYVERSION} > ${_GCCVERSION_${v}_R}
 V:=			${_GCCVERSION_${v}_V:S/.//}
 _GCC_PORT_DEPENDS:=	gcc${V}
-.   if ${_USE_GCC} == ${GCC_DEFAULT}
+.   if ${_USE_GCC} == ${GCC_DEFAULT_V}
 _GCC_PORT:=		gcc
 .   else
 _GCC_PORT:=		gcc${V}

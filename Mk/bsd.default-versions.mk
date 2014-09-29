@@ -10,6 +10,9 @@
 #
 #   DEFAULT_VERSIONS=	perl5=5.18 ruby=2.0
 
+# Use DragonFly base compiler instead of ports gcc 4.8
+GCC_DEFAULT=	4.7
+
 .if !defined(_INCLUDE_BSD_DEFAULT_VERSIONS_MK)
 _INCLUDE_BSD_DEFAULT_VERSIONS_MK=	yes
 
@@ -20,7 +23,7 @@ ${_l:tu}_DEFAULT=	${lang:C/.*=//g}
 
 APACHE_DEFAULT?=	2.4
 FPC_DEFAULT?=		2.6.4
-GCC_DEFAULT?=		4.7
+GCC_DEFAULT?=		4.8
 LUA_DEFAULT?=		5.2
 MYSQL_DEFAULT?=		5.5
 PERL5_DEFAULT?=		5.16

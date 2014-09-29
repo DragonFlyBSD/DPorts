@@ -5,6 +5,119 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20140929:
+  AFFECTS: users of comms/usbmuxd
+  AUTHOR: avilla@FreeBSD.org
+
+  libusbmuxd.so was split from comms/usbmuxd into comms/libusbmuxd.
+  Remove usbmuxd before upgrading to avoid conflicts:
+
+  # pkg delete -f usbmuxd
+
+  If you need the daemon usbmuxd(1), you can reinstall the package
+  after the upgrade.
+
+20140928:
+  AFFECTS: users of deskutils/calibre
+  AUTHOR: madpilot@FreeBSD.org
+
+  The dependency on graphics/py-imaging in calibre has been changed
+  to using the graphics/py-pillow port.
+
+  Due to this change automatic updating of the port will not work
+  correctly.
+
+  It is suggested to remove calibre and py-imaging from the system
+  and then reinstall calibre again using binary packages or ports.
+
+20140927:
+  AFFECTS: users of net/foreman-proxy
+  AUTHOR: mm@FreeBSD.org
+
+  In version 1.6 Foreman Smart Proxy splits its configuration into multiple
+  ruby files located in PREFIX/etc/foreman-proxy/settings.d.
+  The configuration of each service (dhcp, dhs, bmc, etc.) has been moved
+  into a dedicated file. 
+
+  You can use a bundled script to convert your old settings to new settings:
+  PREFIX/share/foreman/extra/migrate_settings.rb
+
+20140926:
+  AFFECTS: users of shells/bash
+  AUTHOR: bdrewery@FreeBSD.org
+
+  Bash supports a feature of exporting functions in the environment with
+  export -f.  Running bash with exported functions in the environment will
+  then import those functions into the environment of the script being ran.
+  This resulted in security issues CVE-2014-6271 and CVE-2014-7169, commonly
+  known as "shellshock".  It also can result in poorly written scripts being
+  tricked into running arbitrary commands.  
+
+  To fully mitigate against this sort of attack we have applied a non-upstream
+  patch to disable this functionality by default.  You can execute bash
+  with --import-functions to allow it to import functions from the
+  environment.  The default can also be changed in the port by selecting the
+  IMPORTFUNCTIONS option.
+
+20140926:
+  AFFECTS: users of net/asterisk and net/asterisk11
+  AUTHOR: madpilot@FreeBSD.org
+
+  The asterisk ports have been modified to have the LUA option
+  turned on by default to make such functionality available to users
+  of binary packages.
+
+  Some care should be taken before upgrading by people not using lua
+  to avoid the sample extensions.lua file from being loaded on reload
+  after updating the asterisk port/pkg.
+
+  Users compiling from ports not interested in LUA support are advised
+  to disable the option before updating.
+
+  People using binary packages(or not wanting to disable the LUA
+  option in the port) not using the lua functionality should add:
+
+  noload => pbx_lua.so 
+
+  to the PREFIX/etc/asterisk/modules.conf file, if using the
+  autoload=yes option in that same file. People not autoloading
+  modules don't need to perform any special action.
+
+  If asterisk is rebooted and the pbx_lua module gets loaded on a
+  system were it should not, it will load the example extensions.lua
+  configuration file adding unexpected logic to your dialplan. In
+  such a case following the above steps and reloading asterisk will
+  fix the problem.
+
+20140922:
+  AFFECTS: users of emulators/linux_base-f10 and emulators/linux_base-c6
+  AUTHOR: xmj@FreeBSD.org
+
+  The complete drop-in replacement linux-c6 port infrastructure is in ports 
+  and will shortly replace the current linux-f10- ports as default.
+
+  To switch to the linux-c6 infrastructure you should:
+
+  0. Backup all your vital information!
+  1. Remove the current linux base port and all linux-f10- ports.
+  2. Add the following lines to /etc/make.conf:
+       OVERRIDE_LINUX_BASE_PORT=c6
+       OVERRIDE_LINUX_NONBASE_PORTS=c6
+  3. Make sure no linux application is running.
+  4. Set appropriate sysctl (compat.linux.osrelease=2.6.18).
+  5. Install emulators/linux-c6.
+
+  That should be enough in most circumstances. If you experience difficulties,
+  please be sure to expand step 1 to:
+
+  1a. Remove all ports which depend on linux base port.
+  1b. Remove linux base port.
+  1c. Clean /compat/linux/ directory.
+
+  Should you encounter any other difficulties not fixed by these extended
+  steps, please submit an issue report in Bugzilla and send an email to FreeBSD's
+  emulation@ mailing list.
+
 20140909:
   AFFECTS: users seeing build errors about missing *.la files
   AUTHOR: tijl@FreeBSD.org
@@ -1765,73 +1878,4 @@ you update your ports collection, before attempting any port upgrades.
   # pkg delete -f libGL dri
     followed by
   # portmaster -a
-
-20130925:
-  AFFECTS: Users of print/qpdf
-  AUTHOR: d.y.kazarov@mail.ru
-
-  Due to the changes in libqpdf.so, please deinstall qpdf first if you
-  are updating from 4.0.0 to 4.0.1+
-
-20130920:
-  AFFECTS: Users of ptlib, opal and/or ekiga
-  AUTHOR: kwm@FreeBSD.org
-
-  The ptlib26, opal3 and ekiga3 ports where updated to the latest version
-  and moved to the location of the old ports. If the ekiga (2.0) port is
-  installed the same line as for ekiga3 can be used except without the 3 at
-  the end.
-
-  # portmaster -o devel/ptlib devel/ptlib26
-  # portmaster -o net/opal net/opal3
-  # portmaster -o net/ekiga3 net-im/ekiga
-    or
-  # portupgrade -fo devel/ptlib devel/ptlib26
-  # portupgrade -fo net/opal net/opal3
-  # portupgrade -fo net/ekiga3 net-im/ekiga
-    or
-  # pkg set -o devel/ptlib26 devel/ptlib
-  # pkg set -o net/opal3 net/opal
-  # pkg set -o net/ekiga3 net-im/ekiga
-
-20130920:
-  AFFECTS: Users of ports
-  AUTHOR: bapt@FreeBSD.org
-
-  New way to override the default version of a language in the ports
-  tree.
-
-  The make variable, DEFAULT_VERSIONS, allows users to override the
-  default version defined by the ports tree.
-
-  For example, to declare specific versions for Perl, Ruby and Tcl/Tk,
-  it would be defined as:
-
-	DEFAULT_VERSIONS=	perl5=5.18 ruby=2.0 tcltk=8.6
-
-  Today, this only is supported by Perl, Ruby, and Tcl/Tk.
-
-20130920:
-  AFFECTS: Users of ports
-  AUTHOR: bdrewery@FreeBSD.org
-
-  Optional Stack Protector [1] support has been added with the WITH_SSP_PORTS
-  knob.
-
-  WITH_SSP_PORTS=	yes
-
-  This currently is only supported on FreeBSD 10 amd64/i386 and earlier
-  releases on amd64.
-
-  The default SSP_CLFAGS is -fstack-protector, but -fstack-protector-all
-  may optionally be set instead.
-
-  To enable support, add WITH_SSP_PORTS=yes to your make.conf and rebuild all
-  ports.
-
-  # portmaster -af
-    or
-  # portupgrade -af
-
-  [1] https://en.wikipedia.org/wiki/Buffer_overflow_protection
 

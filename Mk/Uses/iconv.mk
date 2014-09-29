@@ -13,8 +13,6 @@
 .if !defined(_INCLUDE_USES_ICONV_MK)
 _INCLUDE_USES_ICONV_MK=	yes
 
-iconv_ARGS:=	${iconv_ARGS:S/,/ /g}
-
 .if ${DFLYVERSION} < 300503 || ${iconv_ARGS:Mwchar_t} || ${iconv_ARGS:Mtranslit}
 
 ICONV_CMD=	${LOCALBASE}/bin/iconv
