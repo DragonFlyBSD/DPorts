@@ -3,6 +3,7 @@
 
 PORTNAME=	squid
 PORTVERSION=	3.3.${SQUID_STABLE_VER}
+PORTREVISION=	2
 CATEGORIES=	www ipv6
 MASTER_SITES=	http://www.squid-cache.org/Versions/v3/${PORTVERSION:R}/ \
 		http://www2.us.squid-cache.org/Versions/v3/${PORTVERSION:R}/ \
@@ -20,19 +21,25 @@ PATCH_SITES=	http://www.squid-cache.org/%SUBDIR%/ \
 		http://www1.jp.squid-cache.org/%SUBDIR%/ \
 		http://master.squid-cache.org/~amosjeffries/patches/:nosid
 PATCH_SITE_SUBDIR=	Versions/v3/${PORTVERSION:R}/changesets
-PATCHFILES=	FreeBSD_silence_nosuid_mk1.patch:nosid
+PATCHFILES=	FreeBSD_silence_nosuid_mk1.patch:nosid \
+		squid-3.3-12682.patch \
+		squid-3.3-12683.patch
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	HTTP Caching Proxy
+
+DEPRECATED=	Reached EOL on 28 August 2014, use www/squid (v3.4) instead
+EXPIRATION_DATE=2015-01-31
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 SQUID_STABLE_VER=	13
 
-CONFLICTS_INSTALL=	squid-2.[0-9].* squid32-* cacheboy-[0-9]* lusca-head-[0-9]*
+CONFLICTS_INSTALL=	squid-3*
 
-USES=		perl5 tar:bzip2 shebangfix
+USES=		cpe perl5 tar:bzip2 shebangfix
+CPE_VENDOR=	squid-cache
 SHEBANG_FILES=	scripts/*.pl contrib/*.pl src/*.pl tools/*.pl\
 		helpers/external_acl/kerberos_ldap_group/cert_tool
 GNU_CONFIGURE=	yes
@@ -118,7 +125,7 @@ CACHE_DIGESTS_DESC=	Use cache digests
 DEBUG_DESC=		Build with extended debugging support
 DELAY_POOLS_DESC=	Delay pools (bandwidth limiting)
 DNS_HELPER_DESC=	Use external dnsserver processes for DNS
-ECAP_DESC=		Loadable content adaptation modules (broken on FreeBSD 10+)
+ECAP_DESC=		Loadable content adaptation modules
 ESI_DESC=		ESI support
 FOLLOW_XFF_DESC=	Support for the X-Following-For header
 FS_AUFS_DESC=		AUFS (async-io) support
@@ -224,7 +231,7 @@ negotiate_auth=	kerberos wrapper
 .  if ${OPSYS} == DragonFly
 LIB_DEPENDS+=	libkrb5.so:${PORTSDIR}/security/krb5
 .  endif
-# the kerberos_ldap_group external helper depends on LDAP and SASL:
+# the kerberos_ldap_group external helper also depends on LDAP and SASL:
 . if ${PORT_OPTIONS:MAUTH_LDAP} && ${PORT_OPTIONS:MAUTH_SASL}
 external_acl+=	kerberos_ldap_group
 . endif
@@ -280,17 +287,6 @@ CONFIGURE_ARGS+=	--enable-url-rewrite-helpers="${rewrite_helpers}"
 CONFIGURE_ARGS+=	--with-openssl="${OPENSSLBASE}"
 CFLAGS+=		-I${OPENSSLINC}
 LDFLAGS+=		-L${OPENSSLLIB}
-.endif
-
-.if ${PORT_OPTIONS:MECAP}
-.if ${OPSYS} == FreeBSD && ${OSVERSION} > 1000000
-# re-evaluate on FreeBSD 10+ with the next release
-# http://www.squid-cache.org/mail-archive/squid-users/201402/0324.html
-BROKEN=		ECAP and clang are not friendly
-.endif
-LIB_DEPENDS+=	libecap.so:${PORTSDIR}/www/libecap
-CFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
 .endif
 
 .if ${PORT_OPTIONS:MSTACKTRACES}
