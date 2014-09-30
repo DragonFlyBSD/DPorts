@@ -2,7 +2,7 @@
 
 PORTNAME=	apache22
 PORTVERSION=	2.2.29
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	www ipv6
 MASTER_SITES=	${MASTER_SITE_APACHE_HTTPD}
 DISTNAME=	httpd-${PORTVERSION}
@@ -24,7 +24,6 @@ USES=		tar:bzip2 iconv perl5 libtool cpe
 USE_PERL5=	run
 USE_AUTOTOOLS=	autoconf
 USE_RC_SUBR=	apache22 htcacheclean
-LIBTOOLFILES=	configure.in
 
 CPE_VENDOR=	apache
 CPE_PRODUCT=	http_server
@@ -177,10 +176,9 @@ post-install:
 # place for module configuration samples
 	@${MKDIR} ${STAGEDIR}/${EXAMPLESDIR}/modules.d
 	${INSTALL_DATA} ${FILESDIR}/README_modules.d ${STAGEDIR}${EXAMPLESDIR}/modules.d
-
-# suppress warning for non binary files
-	-@${STRIP_CMD} ${STAGEDIR}${PREFIX}/sbin/* \
-		${STAGEDIR}${PREFIX}/libexec/apache22/*.so 2>/dev/null
+# strip returns an error for non binary files, but we have a big mix
+	-${STRIP_CMD} ${STAGEDIR}${PREFIX}/sbin/* 2>/dev/null
+	-${STRIP_CMD} ${STAGEDIR}${PREFIX}/libexec/apache22/mod_*.so
 .if ${PORT_OPTIONS:MLOG_FORENSIC}
 	@${INSTALL_SCRIPT} ${WRKSRC}/support/check_forensic ${STAGEDIR}${PREFIX}/sbin
 .endif
