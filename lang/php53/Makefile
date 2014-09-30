@@ -3,7 +3,7 @@
 
 PORTNAME=	php53
 PORTVERSION=	5.3.29
-PORTREVISION?=	1
+PORTREVISION?=	2
 CATEGORIES?=	lang devel www
 MASTER_SITES=	${MASTER_SITE_PHP}
 MASTER_SITE_SUBDIR=	distributions
@@ -15,12 +15,11 @@ COMMENT=	PHP Scripting Language
 LATEST_LINK=	${PKGNAMEPREFIX}${PORTNAME}${PKGNAMESUFFIX}
 
 USES=		tar:bzip2 cpe
+CPE_PRODUCT=	php
 .if !defined(PKGNAMESUFFIX)
 USE_AUTOTOOLS=	autoconf
 
 LIB_DEPENDS=	libpcre.so:${PORTSDIR}/devel/pcre
-
-CPE_PRODUCT=	php
 
 CONFIGURE_ARGS=	\
 		--with-layout=GNU \
