@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/security/amavisd-new/files/pkg-deinstall.in 340719 2014-01-22 15:52:06Z mat $
+# $FreeBSD: head/security/amavisd-new/files/pkg-deinstall.in 368225 2014-09-14 20:38:48Z antoine $
 #
 
 USER=%%AMAVISUSER%%
@@ -9,14 +9,6 @@ DIR=%%AMAVISDIR%%
 QUARANTINE=%%AMAVISQUARANTINE%%
 
 if [ "$2" = "POST-DEINSTALL" ]; then
-
-    if /usr/sbin/pw group show "${GROUP}" 2>&1 >/dev/null; then
-	echo "You should manually remove the \"${GROUP}\" group."
-    fi
-
-    if /usr/sbin/pw user show "${USER}" 2>&1 >/dev/null; then
-	echo "You should manually remove the \"${USER}\" user."
-    fi
 
     if [ -e ${DIR} ]; then
 	echo "You should manually remove the \"${DIR}\" directory."
