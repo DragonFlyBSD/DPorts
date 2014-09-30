@@ -10,7 +10,8 @@ MASTER_SITES=	http://www.graphviz.org/pub/graphviz/ARCHIVE/
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Graph Visualization Software from AT&T and Bell Labs
 
-LIB_DEPENDS+=	libjpeg.so:${PORTSDIR}/graphics/jpeg \
+LIB_DEPENDS=	libltdl.so:${PORTSDIR}/devel/libltdl \
+		libjpeg.so:${PORTSDIR}/graphics/jpeg \
 		libpng15.so:${PORTSDIR}/graphics/png \
 		libfreetype.so:${PORTSDIR}/print/freetype2 \
 		libfontconfig.so:${PORTSDIR}/x11-fonts/fontconfig \
@@ -18,7 +19,6 @@ LIB_DEPENDS+=	libjpeg.so:${PORTSDIR}/graphics/jpeg \
 		libgd.so:${PORTSDIR}/${GD_PORT}
 
 USES=		gmake bison libtool:oldver pkgconfig pathfix shebangfix
-USE_AUTOTOOLS=	libltdl
 GNU_CONFIGURE=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib
 CPPFLAGS+=	-I${LOCALBASE}/include
@@ -197,8 +197,8 @@ PLIST_SUB+=	TCL_VER="${TCL_VER}"
 .endif
 
 .if ${PORT_OPTIONS:MICONV}
-CONFIGURE_ARGS+=	--with-iconvlibdir=${LOCALBASE}/lib
-CONFIGURE_ARGS+=	--with-iconvincludedir=${LOCALBASE}/include
+CONFIGURE_ARGS+=	--with-iconvlibdir=${ICONV_PREFIX}/lib
+CONFIGURE_ARGS+=	--with-iconvincludedir=${ICONV_PREFIX}/include
 .else
 CONFIGURE_ARGS+=	--without-libiconv-prefix
 .endif
