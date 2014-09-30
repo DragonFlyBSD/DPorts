@@ -6,7 +6,7 @@ CATEGORIES=	games java
 MASTER_SITES=	SF/${PORTNAME}/PCGen%20Stable/${PORTVERSION}
 DISTNAME=	pcgen${PORTVERSION:S/.//g}_full
 
-MAINTAINER=	eadler@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Java-based RPG character generator and maintenance program
 
 RUN_DEPENDS=	java:${PORTSDIR}/java/javavmwrapper
@@ -22,6 +22,10 @@ DATAFILES=	batch-convert.jar characters data filepaths.ini lib \
 		logging.properties outputsheets pcgen.jar plugins preview system
 
 SUB_FILES=	pcgen.sh
+
+PLIST_FILES=	bin/pcgen
+PORTDATA=	*
+PORTDOCS=	*
 
 OPTIONS_DEFINE=	DOCS
 
