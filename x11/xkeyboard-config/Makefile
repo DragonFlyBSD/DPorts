@@ -11,8 +11,10 @@ COMMENT=	X Keyboard Configuration Database
 LICENSE=	MIT
 
 BUILD_DEPENDS=	xkbcomp:${PORTSDIR}/x11/xkbcomp
+
 XORG_CAT=	data
 
+NO_ARCH=	yes
 USES=		gmake pathfix perl5 tar:bzip2
 USE_GNOME=	intlhack libxslt:build
 USE_PERL5=	build
@@ -22,7 +24,7 @@ INSTALL_TARGET=	install-strip
 CONFIGURE_ARGS=	--with-xkb-base=${PREFIX}/share/X11/xkb \
 		--with-xkb-rules-symlink=xorg
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+LIBS+=		-L${LOCALBASE}/lib
 
 OPTIONS_DEFINE=	ETERSOFT
 ETERSOFT_DESC=	Add pre-1918 Russian letters to typographic layout
@@ -44,7 +46,7 @@ post-patch:
 		${WRKSRC}/rules/merge.sh
 
 post-install:
-	${MKDIR} ${STAGEDIR}/var/lib/xkb
-	${LN} -sf /var/lib/xkb ${STAGEDIR}${PREFIX}/share/X11/xkb/compiled
+	@${MKDIR} ${STAGEDIR}/var/lib/xkb
+	@${LN} -sf /var/lib/xkb ${STAGEDIR}${PREFIX}/share/X11/xkb/compiled
 
 .include <bsd.port.mk>
