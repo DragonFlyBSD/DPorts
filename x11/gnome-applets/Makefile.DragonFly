@@ -1,0 +1,1 @@
+LDFLAGS+= -lm -lz -lutil -lcrypto -lkvm
