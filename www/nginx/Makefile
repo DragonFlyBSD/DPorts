@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	nginx
-PORTVERSION=	1.6.1
-PORTREVISION=	1
+PORTVERSION=	1.6.2
 PORTEPOCH=	2
 CATEGORIES=	www
 MASTER_SITES=	http://nginx.org/download/
@@ -18,7 +17,7 @@ LICENSE=	BSD
 
 USES+=		cpe
 
-CPE_VENDOR=	igor_sysoev
+CPE_VENDOR=	nginx
 CPE_PRODUCT=	nginx
 
 NO_OPTIONS_SORT=	yes
@@ -109,8 +108,8 @@ OPTIONS_DEFINE=	\
 	XSS \
 	VIDEO
 
-OPTIONS_SINGLE=		VIDEO
-OPTIONS_SINGLE_VIDEO=	HTTP_MP4 HTTP_MP4_H264
+OPTIONS_RADIO=		VIDEO
+OPTIONS_RADIO_VIDEO=	HTTP_MP4 HTTP_MP4_H264
 OPTIONS_DEFAULT=	IPV6 HTTP HTTP_CACHE HTTP_REWRITE HTTP_SSL HTTP_STATUS WWW
 
 DEBUGLOG_DESC=			Enable debug log (--with-debug)
@@ -700,10 +699,11 @@ CONFIGURE_ARGS+=--add-module=${WRKDIR}/openresty-redis2-nginx-module-${GIT_REDIS
 .endif
 
 .if ${PORT_OPTIONS:MRTMP}
-NGINX_RTMP_VERSION=	1.1.4
+NGINX_RTMP_VERSION=	1.1.5
 MASTER_SITES+=	https://github.com/arut/nginx-rtmp-module/archive/v${NGINX_RTMP_VERSION}/:rtmp
 DISTFILES+=	rtmp-nginx-module-v${NGINX_RTMP_VERSION}.tar.gz:rtmp
 CONFIGURE_ARGS+=--add-module=${WRKDIR}/nginx-rtmp-module-${NGINX_RTMP_VERSION}
+EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-arut-rtmp-module
 .endif
 
 .if ${PORT_OPTIONS:MSET_MISC}
