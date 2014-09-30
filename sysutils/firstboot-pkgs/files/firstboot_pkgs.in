@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/sysutils/firstboot-pkgs/files/firstboot_pkgs.in 336602 2013-12-16 02:36:23Z cperciva $
+# $FreeBSD: head/sysutils/firstboot-pkgs/files/firstboot_pkgs.in 368591 2014-09-19 19:02:33Z cperciva $
 # KEYWORD: firstboot
 # PROVIDE: firstboot_pkgs
 # REQUIRE: NETWORKING
@@ -32,12 +32,14 @@ firstboot_pkgs_run()
 
 	# Bootstrap if necessary
 	if ! pkg -N 2>/dev/null; then
-		env ASSUME_ALWAYS_YES=YES pkg bootstrap
+		env ASSUME_ALWAYS_YES=YES pkg bootstrap |
+		    cat
 	fi
 
 	# Install requested packages, if any
 	if ! [ -z "$firstboot_pkgs_list" ]; then
-		env ASSUME_ALWAYS_YES=YES pkg install $firstboot_pkgs_list </dev/null
+		env ASSUME_ALWAYS_YES=YES pkg install $firstboot_pkgs_list </dev/null |
+		    cat
 	fi
 
 	# Count rc.d scripts again
