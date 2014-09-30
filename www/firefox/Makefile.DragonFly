@@ -6,8 +6,3 @@ WITHOUT_DEBUG=yes
 MOZ_OPTIONS+= --disable-webrtc
 
 PULSEAUDIO_LIB_DEPENDS= libpulse.so:${PORTSDIR}/audio/pulseaudio
-
-post-extract:
-	@${SED} -e 's|@FIREFOX_ICON@|${FIREFOX_ICON}|' -e 's|@MOZILLA@|${MOZILLA}|' \
-		-e 's|@MOZILLA_NAME@|${MOZILLA_NAME}|' \
-		<${FILESDIR}/firefox.desktop.in >${WRKDIR}/${MOZILLA}.desktop
