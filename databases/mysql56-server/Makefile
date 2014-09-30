@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME?=	mysql
-PORTVERSION=	5.6.20
+PORTVERSION=	5.6.21
 PORTREVISION?=	0
 CATEGORIES=	databases ipv6
 MASTER_SITES=	${MASTER_SITE_MYSQL}
@@ -68,10 +68,4 @@ CMAKE_ARGS+=	-DWITH_EMBEDDED_SERVER="ON"
 post-patch:
 	@${REINPLACE_CMD} 's/*.1/${MAN1}/' ${WRKSRC}/man/CMakeLists.txt
 
-.include <bsd.port.pre.mk>
-
-.if ${ARCH} == "arm"
-BROKEN=		Does not compile on arm
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
