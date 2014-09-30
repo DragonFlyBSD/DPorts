@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/www/spawn-fcgi/files/spawn-fcgi.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/www/spawn-fcgi/files/spawn-fcgi.in 368670 2014-09-20 17:53:26Z marino $
 #
 # PROVIDE: spawn_fcgi
 # REQUIRE: %%REQUIRE%%
@@ -14,6 +14,7 @@
 # spawn_fcgi_bindsocket
 # spawn_fcgi_web_server_addrs
 # spawn_fcgi_allowed_env
+# spawn_fcgi_command_interpreter
 
 . /etc/rc.subr
 
@@ -48,6 +49,10 @@ if [ -n "${spawn_fcgi_chroot_dir}" ]; then
     _spawn_fcgi_chroot="-c ${spawn_fcgi_chroot_dir}"
 else
     _spawn_fcgi_chroot=""
+fi
+
+if [ -n "${spawn_fcgi_command_interpreter}" ]; then
+  command_interpreter=${spawn_fcgi_command_interpreter}
 fi
 
 command="/usr/local/bin/spawn-fcgi"
