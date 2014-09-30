@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	asterisk
-PORTVERSION=	1.8.30.0
-PORTREVISION=	2
+PORTVERSION=	1.8.31.0
 CATEGORIES=	net
 MASTER_SITES=	http://downloads.asterisk.org/pub/telephony/asterisk/ \
 		http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/
@@ -27,7 +26,8 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 CPPFLAGS+=	-I${LOCALBASE}/include -I${LOCALBASE}/include/openh323
 USE_GCC=	yes
 USE_GNOME=	libxml2
-USES=		bison gmake shebangfix
+USES=		bison cpe gmake shebangfix
+CPE_VENDOR=	digium
 SHEBANG_FILES=	agi/agi-test.agi \
 		agi/jukebox.agi
 STRIP=
@@ -49,7 +49,7 @@ CONFLICTS_INSTALL=	asterisk*-1.4* asterisk*-1.6* asterisk*-10*
 OPTIONS_DEFINE=	VORBIS PGSQL MYSQL ODBC RADIUS SNMP H323 FREETDS JABBER SQLITE GSM \
 		CURL SPANDSP EXCHANGE NEWG711 SRTP LUA LDAP OOH323
 OPTIONS_DEFAULT=	VORBIS ODBC PGSQL RADIUS SNMP H323 FREETDS JABBER GSM \
-		SQLITE CURL
+		SQLITE CURL LUA
 
 OPTIONS_DEFINE_i386=	DAHDI
 OPTIONS_DEFINE_x86_64=	DAHDI
@@ -77,11 +77,11 @@ DAHDI_LIB_DEPENDS=	libpri.so:${PORTSDIR}/misc/libpri \
 			libopenr2.so:${PORTSDIR}/misc/openr2
 ODBC_CONFIGURE_WITH=	unixodbc
 ODBC_CONFIGURE_ON=	--with-ltdl
-ODBC_USE=		AUTOTOOLS=libltdl
-ODBC_LIB_DEPENDS=	libodbc.so:${PORTSDIR}/databases/unixODBC
+ODBC_LIB_DEPENDS=	libodbc.so:${PORTSDIR}/databases/unixODBC \
+			libltdl.so:${PORTSDIR}/devel/libltdl
 FREETDS_CONFIGURE_ON=	--with-tds=${LOCALBASE}
 FREETDS_CONFIGURE_OFF=	--without-tds
-FREETDS_LIB_DEPENDS=	libtds.so:${PORTSDIR}/databases/freetds
+FREETDS_LIB_DEPENDS=	libsybdb.so:${PORTSDIR}/databases/freetds
 PGSQL_CONFIGURE_WITH=	postgres
 PGSQL_USES=		pgsql
 MYSQL_CONFIGURE_WITH=	mysqlclient
@@ -104,7 +104,7 @@ CURL_CONFIGURE_ON=	--with-libcurl
 CURL_CONFIGURE_OFF=	--with-libcurl=no
 CURL_LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl
 SPANDSP_CONFIGURE_WITH=	spandsp
-SPANDSP_LIB_DEPENDS=	libspandsp.so.2.0.0:${PORTSDIR}/comms/spandsp-devel
+SPANDSP_LIB_DEPENDS=	libspandsp.so.2:${PORTSDIR}/comms/spandsp-devel
 EXCHANGE_CONFIGURE_OFF=	--without-neon --without-neon29
 EXCHANGE_LIB_DEPENDS=	libneon.so:${PORTSDIR}/www/neon29
 SRTP_CONFIGURE_WITH=	srtp
