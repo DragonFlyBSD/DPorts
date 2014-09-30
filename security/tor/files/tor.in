@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/security/tor/files/tor.in 324351 2013-08-07 12:54:37Z bf $
+# $FreeBSD: head/security/tor/files/tor.in 368512 2014-09-18 19:40:36Z bf $
 #
 # PROVIDE: tor
 # REQUIRE: NETWORKING SERVERS USR
@@ -39,7 +39,7 @@ required_dirs=${tor_datadir}
 pidfile=${tor_pidfile}
 command="%%PREFIX%%/bin/${name}"
 command_args="-f ${tor_conf} --PidFile ${tor_pidfile} --RunAsDaemon 1 --DataDirectory ${tor_datadir} --+Log ${tor_loglevel}\ file\ ${tor_logfile}"
-extra_commands="log"
+extra_commands="log reload"
 log_cmd="${name}_log"
 
 tor_log() {
