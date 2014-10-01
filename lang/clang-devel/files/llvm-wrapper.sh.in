@@ -1,10 +1,11 @@
 #!/bin/sh
-# $FreeBSD: head/lang/clang-devel/files/llvm-wrapper.sh.in 332935 2013-11-06 00:13:02Z brooks $
+# $FreeBSD: head/lang/clang-devel/files/llvm-wrapper.sh.in 369336 2014-09-26 20:05:54Z brooks $
 
 LLVM_PREFIX="%%LLVM_PREFIX%%"
 LLVM_SUFFIX="%%LLVM_SUFFIX%%"
 
 tool=$(basename $0)
 tool="${LLVM_PREFIX}/bin/${tool%${LLVM_SUFFIX}}"
+PYTHONPATH="${PYTHONPATH:+${PYTHONPATH}:}${LLVM_PREFIX}/lib/python" \
 LD_LIBRARY_PATH="${LD_LIBRARY_PATH:+${LD_LIBRARY_PATH}:}${LLVM_PREFIX}/lib" \
     "${tool}" "${@}"
