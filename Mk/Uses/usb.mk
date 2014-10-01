@@ -12,7 +12,7 @@
 .if !defined(_INCLUDE_USES_USB_MK)
 _INCLUDE_USES_USB_MK=	yes
 
-.if defined(usb_ARGS)
+.if !empty(usb_ARGS)
 IGNORE=	USES=usb does not require args
 .endif
 
