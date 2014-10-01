@@ -28,7 +28,7 @@ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION,
 EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-  $FreeBSD: head/security/vuxml/vuln.xml 367938 2014-09-11 14:09:43Z brd $
+  $FreeBSD: head/security/vuxml/vuln.xml 369332 2014-09-26 17:34:26Z xmj $
 
 
 QUICK GUIDE TO ADDING A NEW ENTRY
@@ -57,6 +57,385 @@ Notes:
 
 -->
 <vuxml xmlns="http://www.vuxml.org/apps/vuxml-1">
+  <vuln vid="ca44b64c-4453-11e4-9ea1-c485083ca99c">
+    <topic>Flash player -- Multiple security vulnerabilities in www/linux-*-flashplugin11</topic>
+    <affects>
+      <package>
+	<name>flashplugin11</name>
+	<range><lt>11.2r202.400</lt></range>
+      </package>
+      <package>
+	<name>linux-c6-flashplugin11</name>
+	<range><lt>11.2r202.400</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Adobe reports:</p>
+	<blockquote cite="https://helpx.adobe.com/security/products/flash-player/apsb14-21.html">
+	  <p>These updates address vulnerabilities that could cause a crash
+	    and potentially allow an attacker to take control of the affected system.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-0547</cvename>
+      <cvename>CVE-2014-0548</cvename>
+      <cvename>CVE-2014-0549</cvename>
+      <cvename>CVE-2014-0550</cvename>
+      <cvename>CVE-2014-0551</cvename>
+      <cvename>CVE-2014-0552</cvename>
+      <cvename>CVE-2014-0553</cvename>
+      <cvename>CVE-2014-0554</cvename>
+      <cvename>CVE-2014-0555</cvename>
+      <cvename>CVE-2014-0556</cvename>
+      <cvename>CVE-2014-0557</cvename>
+      <cvename>CVE-2014-0559</cvename>
+      <url>http://helpx.adobe.com/security/products/flash-player/apsb14-21.html</url>
+    </references>
+    <dates>
+      <discovery>2014-09-09</discovery>
+      <entry>2014-09-25</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="48108fb0-751c-4cbb-8f33-09239ead4b55">
+    <topic>NSS -- RSA Signature Forgery</topic>
+    <affects>
+      <package>
+	<name>linux-firefox</name>
+	<range><lt>32.0.3,1</lt></range>
+      </package>
+      <package>
+	<name>linux-thunderbird</name>
+	<range><lt>31.1.2</lt></range>
+      </package>
+      <package>
+	<name>linux-seamonkey</name>
+	<range><lt>2.29.1</lt></range>
+      </package>
+      <package>
+	<name>nss</name>
+	<range><lt>3.17.1</lt></range>
+      </package>
+      <package>
+	<name>linux-c6-nss</name>
+	<range><lt>3.16.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Mozilla Project reports:</p>
+	<blockquote cite="https://www.mozilla.org/security/announce/2014/mfsa2014-73.html">
+	  <p>Antoine Delignat-Lavaud discovered that NSS is vulnerable
+	  to a variant of a signature forgery attack previously
+	  published by Daniel Bleichenbacher.  This is due to lenient
+	  parsing of ASN.1 values involved in a signature and could
+	  lead to the forging of RSA certificates.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-1568</cvename>
+      <url>https://www.mozilla.org/security/announce/2014/mfsa2014-73.html</url>
+    </references>
+    <dates>
+      <discovery>2014-09-23</discovery>
+      <entry>2014-09-25</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="bd2ef267-4485-11e4-b0b7-00262d5ed8ee">
+    <topic>chromium -- RSA signature malleability in NSS</topic>
+    <affects>
+      <package>
+	<name>chromium</name>
+	<range><lt>37.0.2062.124</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Google Chrome Releases reports:</p>
+	<blockquote cite="http://googlechromereleases.blogspot.nl/">
+	  <p>[414124] RSA signature malleability in NSS (CVE-2014-1568).
+	    Thanks to Antoine Delignat-Lavaud of Prosecco/INRIA, Brian Smith
+	    and Advanced Threat Research team at Intel Security</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-1568</cvename>
+      <url>http://googlechromereleases.blogspot.nl/</url>
+    </references>
+    <dates>
+      <discovery>2014-09-24</discovery>
+      <entry>2014-09-25</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="fb25333d-442f-11e4-98f3-5453ed2e2b49">
+    <topic>krfb -- Multiple security issues in bundled libvncserver</topic>
+    <affects>
+      <package>
+	<name>krfb</name>
+	<range><lt>4.12.5_4</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Martin Sandsmark reports:</p>
+	<blockquote cite="http://lists.kde.org/?l=kde-announce&amp;m=141153917319769&amp;w=2">
+	  <p>krfb 4.14 [and earlier] embeds libvncserver which has had
+	    several security issues.</p>
+	  <p>Several remotely exploitable security issues have been
+	    uncovered in libvncserver, some of which might allow a
+	    remote authenticated user code execution or application
+	    crashes.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-6055</cvename>
+      <mlist>http://lists.kde.org/?l=kde-announce&amp;m=141153917319769&amp;w=2</mlist>
+    </references>
+    <dates>
+      <discovery>2014-09-23</discovery>
+      <entry>2014-09-25</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="71ad81da-4414-11e4-a33e-3c970e169bc2">
+    <topic>bash -- remote code execution vulnerability</topic>
+    <affects>
+      <package>
+	<name>bash</name>
+	<name>bash-static</name>
+	<range><gt>3.0</gt><le>3.0.17</le></range>
+	<range><gt>3.1</gt><le>3.1.18</le></range>
+	<range><gt>3.2</gt><le>3.2.52</le></range>
+	<range><gt>4.0</gt><le>4.0.39</le></range>
+	<range><gt>4.1</gt><le>4.1.12</le></range>
+	<range><gt>4.2</gt><le>4.2.48</le></range>
+	<range><gt>4.3</gt><lt>4.3.25_1</lt></range>
+      </package>
+      <package>
+	<name>linux_base-c6</name>
+	<range><lt>6.5_1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Chet Ramey reports:</p>
+	<blockquote cite="https://lists.gnu.org/archive/html/bug-bash/2014-09/msg00081.html">
+	  <p>Under certain circumstances, bash will execute user code
+	    while processing the environment for exported function
+	    definitions.</p>
+	</blockquote>
+	<p>The original fix released for CVE-2014-6271 was not adequate. A
+	  similar vulnerability was discovered and tagged as CVE-2014-7169.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-6271</cvename>
+      <cvename>CVE-2014-7169</cvename>
+      <url>https://securityblog.redhat.com/2014/09/24/bash-specially-crafted-environment-variables-code-injection-attack/</url>
+      <url>https://lists.gnu.org/archive/html/bug-bash/2014-09/msg00081.html</url>
+      <url>http://seclists.org/oss-sec/2014/q3/690</url>
+    </references>
+    <dates>
+      <discovery>2014-09-24</discovery>
+      <entry>2014-09-24</entry>
+      <modified>2014-09-25</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="e60d9e65-3f6b-11e4-ad16-001999f8d30b">
+    <topic>asterisk -- Remotely triggered crash</topic>
+    <affects>
+      <package>
+	<name>asterisk11</name>
+	<range><lt>11.12.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Asterisk project reports:</p>
+	<blockquote cite="https://www.asterisk.org/security">
+	  <p>When an out of call message - delivered by either the
+	    SIP or PJSIP channel driver or the XMPP stack - is handled
+	    in Asterisk, a crash can occur if the channel servicing
+	    the message is sent into the ReceiveFax dialplan application
+	    while using the res_fax_spandsp module.</p>
+	  <p>Note that this crash does not occur when using the
+	    res_fax_digium module.  While this crash technically
+	    occurs due to a configuration issue, as attempting to
+	    receive a fax from a channel driver that only contains
+	    textual information will never succeed, the likelihood
+	    of having it occur is sufficiently high as to warrant
+	    this advisory.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>http://downloads.asterisk.org/pub/security/AST-2014-010.pdf</url>
+      <url>https://issues.asterisk.org/jira/browse/ASTERISK-24301</url>
+      <url>https://www.asterisk.org/security</url>
+    </references>
+    <dates>
+      <discovery>2014-09-05</discovery>
+      <entry>2014-09-18</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="d3324c55-3f11-11e4-ad16-001999f8d30b">
+    <topic>squid -- Buffer overflow in SNMP processing</topic>
+    <affects>
+      <package>
+	<name>squid</name>
+	<range><lt>3.4.8</lt></range>
+      </package>
+      <package>
+	<name>squid32</name>
+	<range><gt>0</gt></range>
+      </package>
+      <package>
+	<name>squid33</name>
+	<range><lt>3.3.13_2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The squid-cache project reports:</p>
+	<blockquote cite="http://www.squid-cache.org/Advisories/SQUID-2014_3.txt">
+	  <p>Due to incorrect buffer management Squid can be caused
+	  by an attacker to write outside its allocated SNMP buffer.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>http://www.squid-cache.org/Advisories/SQUID-2014_3.txt</url>
+      <cvename>CVE-2014-6270</cvename>
+    </references>
+    <dates>
+      <discovery>2014-09-15</discovery>
+      <entry>2014-09-18</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="38242d51-3e58-11e4-ac2f-bcaec565249c">
+    <topic>dbus -- multiple vulnabilities</topic>
+    <affects>
+      <package>
+	<name>dbus</name>
+	<range><lt>1.8.8</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Simon McVittie reports:</p>
+	<blockquote cite="http://lists.freedesktop.org/archives/dbus/2014-September/016343.html">
+	  <p>Do not accept an extra fd in the padding of a cmsg message,
+	     which could lead to a 4-byte heap buffer overrun
+	     (CVE-2014-3635).</p>
+	  <p>Reduce default for maximum Unix file descriptors passed per
+	     message from 1024 to 16, preventing a uid with the default
+	     maximum number of connections from exhausting the system
+	     bus' file descriptors under Linux's default rlimit
+	     (CVE-2014-3636).</p>
+	  <p>Disconnect connections that still have a fd pending
+	     unmarshalling after a new configurable limit,
+	     pending_fd_timeout (defaulting to 150 seconds), removing
+	     the possibility of creating an abusive connection that
+	     cannot be disconnected by setting up a circular reference
+	     to a connection's file descriptor (CVE-2014-3637).</p>
+	  <p>Reduce default for maximum pending replies per connection
+	     from 8192 to 128, mitigating an algorithmic complexity
+	     denial-of-service attack (CVE-2014-3638).</p>
+	  <p>Reduce default for authentication timeout on the system
+	     bus from 30 seconds to 5 seconds, avoiding denial of service
+	     by using up all unauthenticated connection slots; and when
+	     all unauthenticated connection slots are used up, make new
+	     connection attempts block instead of disconnecting them
+	     (CVE-2014-3639).</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-3635</cvename>
+      <cvename>CVE-2014-3636</cvename>
+      <cvename>CVE-2014-3637</cvename>
+      <cvename>CVE-2014-3638</cvename>
+      <cvename>CVE-2014-3639</cvename>
+      <url>http://lists.freedesktop.org/archives/dbus/2014-September/016343.html</url>
+    </references>
+    <dates>
+      <discovery>2014-09-16</discovery>
+      <entry>2014-09-17</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="77b784bb-3dc6-11e4-b191-f0def16c5c1b">
+    <topic>nginx -- inject commands into SSL session vulnerability</topic>
+    <affects>
+      <package>
+	<name>nginx</name>
+	<range><ge>0.6.0</ge><lt>1.6.2,2</lt></range>
+      </package>
+      <package>
+	<name>nginx-devel</name>
+	<range><ge>0.5.6</ge><lt>1.7.5</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The nginx project reports:</p>
+	<blockquote cite="http://mailman.nginx.org/pipermail/nginx-announce/2014/000147.html">
+	  <p>Security: it was possible to reuse SSL sessions in unrelated contexts
+	     if a shared SSL session cache or the same TLS session ticket key was
+	     used for multiple "server" blocks (CVE-2014-3616).</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-3616</cvename>
+      <url>http://mailman.nginx.org/pipermail/nginx-announce/2014/000147.html</url>
+    </references>
+    <dates>
+      <discovery>2014-09-16</discovery>
+      <entry>2014-09-16</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="cc627e6c-3b89-11e4-b629-6805ca0b3d42">
+    <topic>phpMyAdmin -- XSRF/CSRF due to DOM based XSS in the micro history feature</topic>
+    <affects>
+      <package>
+	<name>phpMyAdmin</name>
+	<range><ge>4.2.0</ge><lt>4.2.8.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The phpMyAdmin development team reports:</p>
+	<blockquote cite="http://www.phpmyadmin.net/home_page/security/PMASA-2014-10.php">
+	  <p>XSRF/CSRF due to DOM based XSS in the micro history feature.</p>
+	  <p>By deceiving a logged-in user to click on a crafted URL,
+	    it is possible to perform remote code execution and in some
+	    cases, create a root account due to a DOM based XSS
+	    vulnerability in the micro history feature.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>http://www.phpmyadmin.net/home_page/security/PMASA-2014-10.php</url>
+      <cvename>CVE-2014-6300</cvename>
+    </references>
+    <dates>
+      <discovery>2014-09-13</discovery>
+      <entry>2014-09-13</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="36858e78-3963-11e4-ad84-000c29f6ae42">
     <topic>security/ossec-hids-* -- root escalation via temp files</topic>
     <affects>
