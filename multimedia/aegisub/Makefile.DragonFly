@@ -1,0 +1,5 @@
+# There is a compiler bug tickled in libaegisub/dispatch:116
+# Check again when DragonFly compiler is at 4.7.4
+# https://gcc.gnu.org/bugzilla/show_bug.cgi?id=56388
+
+USE_GCC=4.8+
