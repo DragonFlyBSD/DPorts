@@ -1,2 +1,0 @@
-CONFIGURE_ENV+=	MPI_CFLAGS="-I${LOCALBASE}/include"
-CFLAGS+=	-I${LOCALBASE}/include
