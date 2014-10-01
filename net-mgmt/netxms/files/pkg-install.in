@@ -1,0 +1,18 @@
+#! /bin/sh
+
+# $FreeBSD: head/net-mgmt/netxms/files/pkg-install.in 354981 2014-05-24 06:22:20Z sunpoet $
+
+PATH=/bin:/usr/sbin
+TSHOME=${PKG_PREFIX}/share/netxms
+
+USER=netxms
+GROUP=${USER}
+
+case "$2" in
+PRE-INSTALL)
+	;;
+POST-INSTALL)
+	chown -R ${USER}:${GROUP} ${TSHOME}
+	chmod -R u+w,o-rx ${TSHOME}
+	;;
+esac

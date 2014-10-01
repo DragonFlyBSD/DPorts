@@ -1,0 +1,30 @@
+#!/bin/sh
+#
+# $FreeBSD: head/net-mgmt/netxms/files/netxmsd.in 340872 2014-01-24 00:14:07Z mat $
+#
+# PROVIDE: netxmsd
+# REQUIRE: DAEMON
+# KEYWORD: shutdown
+#
+#
+#
+# Add the following line to /etc/rc.conf[.local] to enable netxmsd
+#
+# netxmsd_enable (bool):        Set to "NO" by default.
+#                               Set it to "YES" to enable netxmsd.
+#
+
+. /etc/rc.subr
+
+name="netxmsd"
+rcvar=netxmsd_enable
+
+load_rc_config $name
+
+: ${netxmsd_enable="NO"}
+
+command="%%PREFIX%%/bin/netxmsd"
+required_files="%%PREFIX%%/etc/netxmsd.conf"
+command_args="-c %%PREFIX%%/etc/netxmsd.conf -d -e"
+
+run_rc_command "$1"
