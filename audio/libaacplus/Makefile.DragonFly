@@ -1,0 +1,2 @@
+USES+= zip
+EXTRACT_SUFX= .tar.gz
