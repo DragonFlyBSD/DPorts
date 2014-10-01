@@ -297,5 +297,6 @@ puppetdb:*:985:
 kamailio:*:986:
 avenger:*:60149:
 cbsd:*:60150:
+spark:*:987:
 nogroup:*:65533:
 nobody:*:65534:

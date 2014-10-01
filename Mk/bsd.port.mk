@@ -1199,6 +1199,11 @@ ARCH!=	${UNAME} -p
 OPSYS!=	${UNAME} -s
 .endif
 
+UNAMER!=${UNAME} -r
+
+# Get the operating system revision
+OSREL?=	${UNAMER:C/-.*//}
+
 # Get __FreeBSD_version
 .if !defined(OSVERSION)
 OSVERSION=	9999999
