@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/games/inform7/files/i7.sh.in 360141 2014-07-02 06:44:38Z az $
+# $FreeBSD: head/games/inform7/files/i7.sh.in 368338 2014-09-16 17:35:08Z az $
 
 #
 #  Copyright (c) 2010-2014 Andy Kosela <akosela@andykosela.com>
@@ -29,14 +29,14 @@
 
 inform=%%PREFIX%%/bin/inform6
 ni=%%PREFIX%%/bin/ni
-rules=%%DATADIR%%/Extensions
+rules=%%DATADIR%%/Internal
 
 main()
 {
 	pkg=`basename $story | cut -d. -f1 2>/dev/null`
 	mkdir -p $pkg.inform/Build $pkg.inform/Source $pkg.inform/Index
 	cp $story $pkg.inform/Source/story.ni
-	$ni --release --rules $rules --extension=$zsuf --package $pkg.inform
+	$ni --release --internal $rules --format=$zsuf --project $pkg.inform
 	mv "$pkg.inform/Build/Debug log.txt" debug.log
 	if [ -s $pkg.inform/Build/auto.inf ]; then
 		echo ""
