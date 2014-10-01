@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/security/courier-authlib/files/courier-authdaemond.in 367564 2014-09-07 16:12:36Z tijl $
+# $FreeBSD: head/security/courier-authlib/files/courier-authdaemond.in 368413 2014-09-17 19:37:26Z oliver $
 #
 # PROVIDE: courier_authdaemond
 # REQUIRE: DAEMON mysql ldconfig
@@ -29,10 +29,13 @@ name="courier_authdaemond"
 rcvar=courier_authdaemond_enable
 
 command="${sbindir}/authdaemond"
+procname="${sbindir}/courierlogger"
 pidfile="${authdaemonvar}/pid"
 socket="${authdaemonvar}/socket"
 
+start_precmd="echo 'Starting ${name}.'"
 start_cmd="${command} start"
+stop_precmd="echo 'Stopping ${name}.'"
 stop_cmd="${command} stop"
 stop_postcmd="rm -f ${pidfile} ${pidfile}.lock ${socket}"
 required_dirs="${authdaemonvar}"
