@@ -1,8 +1,8 @@
-# $FreeBSD: head/Keywords/fontsdir.ucl 362833 2014-07-24 17:10:57Z bapt $
+# $FreeBSD: head/Keywords/fontsdir.ucl 369819 2014-10-02 12:39:57Z mat $
 #
 # MAINTAINER: x11@FreeBSD.org
 
-actions: [dirrmtry]
+actions: [dir]
 post-install: <<EOD
   mkfontscale %D/%@ 2>/dev/null || true
   mkfontdir %D/%@ 2>/dev/null || true

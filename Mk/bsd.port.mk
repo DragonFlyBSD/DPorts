@@ -1214,8 +1214,7 @@ OSVERSION=	9999999
 DFLYVERSION!=	${AWK} '/^\#define[[:blank:]]__DragonFly_version/ {print $$3}' < /usr/include/sys/param.h
 OSREL!=		${ECHO} ${DFLYVERSION} | ${AWK} '{a=int($$1/100000); b=int(($$1-(a*100000))/100); print a "." b}'
 .  else
-DFLYVERSION!=	${SYSCTL} -n kern.osreldate
-OSREL!=		${UNAME} -r | ${SED} -e 's/[-(].*//'
+.error Unable to determine OS version.  Either define OSVERSION, install /usr/include/sys/param.h or define SRC_BASE.
 .  endif
 .endif
 
@@ -1558,6 +1557,11 @@ PKG_ORIGIN?=	ports-mgmt/pkg
 PKGNG_ORIGIN=	${PKG_ORIGIN}
 WITH_PKGNG?=	yes
 WITH_PKG?=	${WITH_PKGNG}
+
+.if defined(BUNDLE_LIBS)
+PKG_NOTES+=	no_provide_shlib
+PKG_NOTE_no_provide_shlib=	yes
+.endif
 
 .endif
 # End of pre-makefile section.

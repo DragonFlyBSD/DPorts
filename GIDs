@@ -295,8 +295,8 @@ syncthing:*:983:
 tvheadend:*:984:
 puppetdb:*:985:
 kamailio:*:986:
+spark:*:987:
 avenger:*:60149:
 cbsd:*:60150:
-spark:*:987:
 nogroup:*:65533:
 nobody:*:65534:
