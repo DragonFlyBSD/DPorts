@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/sysutils/volman/files/volmand.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/sysutils/volman/files/volmand.in 369568 2014-09-30 02:13:58Z amdmi3 $
 #
 # PROVIDE: volmand
 # REQUIRE: LOGIN
@@ -15,7 +15,10 @@ load_rc_config $name
 
 : ${volmand_enable:="NO"}
 
-command="%%PREFIX%%/sbin/volmand"
 pidfile="/var/run/volmand.pid"
 
+command_interpreter="/bin/sh"
+command="%%PREFIX%%/sbin/volmand"
+
 run_rc_command "$1"
+
