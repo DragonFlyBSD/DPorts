@@ -1,0 +1,16 @@
+#!/bin/sh
+# $FreeBSD: head/sysutils/symon/files/symux.in 340872 2014-01-24 00:14:07Z mat $
+
+# PROVIDE: symux
+# REQUIRE: NETWORKING SERVERS
+
+. /etc/rc.subr
+
+name="symux"
+rcvar=symux_enable
+command="%%PREFIX%%/bin/symux"
+symux_enable=${symux_enable:-"NO"}
+
+load_rc_config $name
+run_rc_command "$1"
+
