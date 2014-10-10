@@ -1,0 +1,2 @@
+pre-configure:
+	ln -s Make.rules.FreeBSD ${WRKSRC}/cpp/config/Make.rules.DragonFly
