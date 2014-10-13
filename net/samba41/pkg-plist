@@ -17,7 +17,6 @@ bin/regpatch
 bin/regshell
 bin/regtree
 bin/rpcclient
-bin/samba-regedit
 bin/samba-tool
 bin/sharesec
 bin/smbcacls
@@ -181,6 +180,8 @@ lib/libndr.so
 lib/libndr.so.0
 lib/libnetapi.so
 lib/libnetapi.so.0
+lib/libnss_wins.so
+lib/libnss_wins.so.2
 lib/libpdb.so
 lib/libpdb.so.0
 lib/libregistry.so
@@ -261,7 +262,6 @@ lib/samba/libinterfaces.so
 lib/samba/libkdc-samba4.so.2
 lib/samba/libkrb5-samba4.so.26
 lib/samba/libkrb5samba.so
-lib/samba/libldb-cmdline.so
 lib/samba/libldbsamba.so
 lib/samba/liblibcli_lsa3.so
 lib/samba/liblibcli_netlogon3.so
@@ -388,8 +388,8 @@ lib/shared-modules/service/wrepl.so
 lib/shared-modules/vfs/acl_tdb.so
 lib/shared-modules/vfs/acl_xattr.so
 lib/shared-modules/vfs/aio_fork.so
-@comment vfs_aio_posix lib/shared-modules/vfs/aio_posix.so
-@comment vfs_aio_pthread lib/shared-modules/vfs/aio_pthread.so
+lib/shared-modules/vfs/aio_posix.so
+lib/shared-modules/vfs/aio_pthread.so
 lib/shared-modules/vfs/audit.so
 lib/shared-modules/vfs/cap.so
 lib/shared-modules/vfs/catia.so
@@ -404,7 +404,7 @@ lib/shared-modules/vfs/full_audit.so
 lib/shared-modules/vfs/linux_xfs_sgid.so
 lib/shared-modules/vfs/media_harmony.so
 lib/shared-modules/vfs/netatalk.so
-@comment vfs_notify_fam lib/shared-modules/vfs/notify_fam.so
+lib/shared-modules/vfs/notify_fam.so
 lib/shared-modules/vfs/posix_eadb.so
 lib/shared-modules/vfs/preopen.so
 lib/shared-modules/vfs/readahead.so

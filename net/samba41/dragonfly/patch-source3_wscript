@@ -1,0 +1,13 @@
+--- source3/wscript.intermediate	2014-10-13 07:36:29 UTC
++++ source3/wscript
+@@ -1704,8 +1704,8 @@ main() {
+ 
+     if PTHREAD_LDFLAGS == 'error':
+         if conf.CHECK_FUNCS_IN('pthread_attr_init', 'pthread'):
+-            PTHREAD_CFLAGS='-pthread'
+-            PTHREAD_LDFLAGS='-pthread'
++            PTHREAD_CFLAGS='-D_REENTRANT -D_POSIX_PTHREAD_SEMANTICS'
++            PTHREAD_LDFLAGS='-lpthread'
+ 
+     if PTHREAD_CFLAGS != 'error' and PTHREAD_LDFLAGS != 'error':
+         conf.ADD_CFLAGS(PTHREAD_CFLAGS)
