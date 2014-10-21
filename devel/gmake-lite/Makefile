@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	make
-PORTVERSION=	3.82
+PORTVERSION=	4.1
 CATEGORIES=	devel ports-mgmt
 MASTER_SITES=	GNU
 PKGNAMEPREFIX=	g
@@ -31,4 +31,3 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/make.1 ${STAGEDIR}${PREFIX}/man/man1/gmake-lite.1
 
 .include <bsd.port.mk>
-
