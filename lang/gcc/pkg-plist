@@ -15,7 +15,7 @@ bin/gcc-nm%%SUFFIX%%
 bin/gcc-ranlib%%SUFFIX%%
 bin/gcov%%SUFFIX%%
 bin/gfortran%%SUFFIX%%
-info/gcc%%SUFFIX%%/dir
+@comment info/gcc%%SUFFIX%%/dir
 man/man1/cpp%%SUFFIX%%.1.gz
 man/man1/g++%%SUFFIX%%.1.gz
 man/man1/gcc%%SUFFIX%%.1.gz
@@ -23,14 +23,9 @@ man/man1/gcov%%SUFFIX%%.1.gz
 man/man1/gfortran%%SUFFIX%%.1.gz
 %%JAVA%%share/gcc-%%GCC_VERSION%%/python/libjava/aotcompile.py
 %%JAVA%%share/gcc-%%GCC_VERSION%%/python/libjava/classfile.py
-%%JAVA%%@dirrm share/gcc-%%GCC_VERSION%%/python/libjava
 share/gcc-%%GCC_VERSION%%/python/libstdcxx/__init__.py
 share/gcc-%%GCC_VERSION%%/python/libstdcxx/v6/__init__.py
 share/gcc-%%GCC_VERSION%%/python/libstdcxx/v6/printers.py
-@dirrm share/gcc-%%GCC_VERSION%%/python/libstdcxx/v6
-@dirrm share/gcc-%%GCC_VERSION%%/python/libstdcxx
-@dirrm share/gcc-%%GCC_VERSION%%/python
-@dirrm share/gcc-%%GCC_VERSION%%
 %%JAVA%%bin/%%GNU_HOST%%-gcj%%SUFFIX%%
 %%JAVA%%bin/aot-compile%%SUFFIX%%
 %%JAVA%%bin/gappletviewer%%SUFFIX%%
