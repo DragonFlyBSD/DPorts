@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	dbh
-PORTVERSION=	5.0.15
+PORTVERSION=	5.0.16
 CATEGORIES=	databases
 MASTER_SITES=	SF
 DISTNAME=	libdbh2-${PORTVERSION}
@@ -14,8 +14,9 @@ LICENSE=	GPLv3
 
 CONFLICTS=	dbh-[0-4]*
 
-USES=		pathfix pkgconfig
 GNU_CONFIGURE=	yes
+INSTALL_TARGET=	install-strip
+USES=		libtool pkgconfig
 USE_LDCONFIG=	yes
 
 OPTIONS_DEFINE=	GTKDOC
@@ -42,8 +43,5 @@ post-patch:
 .if empty(PORT_OPTIONS:MGTKDOC)
 	@${REINPLACE_CMD} -e 's|^\(SUBDIRS = src man\).*|\1|' ${WRKSRC}/Makefile.in
 .endif
-
-post-install:
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libdbh.so.2
 
 .include <bsd.port.mk>

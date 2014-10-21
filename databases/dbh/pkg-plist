@@ -2,6 +2,7 @@ include/dbh/dbh.h
 lib/libdbh.a
 lib/libdbh.so
 lib/libdbh.so.2
+lib/libdbh.so.2.0.1
 libdata/pkgconfig/dbh2.pc
 man/man3/dbh.3.gz
 man/man3/dbh.h.3.gz
@@ -52,8 +53,3 @@ man/man3/dbh_writeheader.3.gz
 %%GTKDOC%%share/gtk-doc/html/dbh/right.png
 %%GTKDOC%%share/gtk-doc/html/dbh/style.css
 %%GTKDOC%%share/gtk-doc/html/dbh/up.png
-%%GTKDOC%%@dirrm share/gtk-doc/html/dbh
-%%GTKDOC%%@dirrmtry share/gtk-doc/html
-%%GTKDOC%%@dirrmtry share/gtk-doc
-@dirrmtry %%DATADIR%%
-@dirrm include/dbh
