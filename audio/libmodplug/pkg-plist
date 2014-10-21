@@ -1,4 +1,3 @@
-lib/libmodplug.la
 lib/libmodplug.so
 lib/libmodplug.so.1
 lib/libmodplug.so.1.0.0
@@ -7,4 +6,3 @@ include/libmodplug/stdafx.h
 include/libmodplug/sndfile.h
 include/libmodplug/it_defs.h
 include/libmodplug/modplug.h
-@dirrm include/libmodplug
