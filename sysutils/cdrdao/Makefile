@@ -12,8 +12,7 @@ DISTNAME=	cdrdao-${PORTVERSION}
 MAINTAINER=	marius@FreeBSD.org
 COMMENT?=	Record CD-R[W]s in disk-at-once mode
 
-USE_BZIP2=	yes
-USES=		gmake
+USES=		alias gmake tar:bzip2
 GNU_CONFIGURE=	yes
 
 MP3OGG_LIB_DEPENDS=	libao.so:${PORTSDIR}/audio/libao \
@@ -84,6 +83,7 @@ pre-everything::
 .endif
 
 post-extract:
+	@(cd ${WRKSRC}/scsilib/RULES && ${CP} os-freebsd.id os-dragonfly.id)
 .if ${SCSILIBTARGET} != "i386-freebsd-cc"
 	@${LN} -sf ${WRKSRC}/scsilib/RULES/i386-freebsd-cc.rul \
 		${WRKSRC}/scsilib/RULES/${SCSILIBTARGET}.rul
