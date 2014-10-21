@@ -1,12 +1,13 @@
 # $FreeBSD$
 
 PORTNAME=	Horde_ActiveSync
-PORTVERSION=	2.19.0
+PORTVERSION=	2.19.3
 CATEGORIES=	comms www pear
 
 MAINTAINER=	horde@FreeBSD.org
 COMMENT=	Horde ActiveSync Server Library
 
+USES=	horde
 USE_HORDE_RUN=	Horde_Compress \
 		Horde_Date \
 		Horde_Exception \
@@ -17,6 +18,4 @@ USE_HORDE_RUN=	Horde_Compress \
 		Horde_Support \
 		Horde_Util
 
-.include <bsd.port.pre.mk>
-.include "${PORTSDIR}/devel/pear-channel-horde/bsd.horde.mk"
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
