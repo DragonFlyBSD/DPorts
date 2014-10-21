@@ -1,4 +1,4 @@
-/* $FreeBSD: head/devel/gdb/files/fbsd-threads.c 365578 2014-08-21 18:35:52Z tijl $ */
+/* $FreeBSD: head/devel/gdb/files/fbsd-threads.c 370292 2014-10-07 10:25:42Z tijl $ */
 /* FreeBSD libthread_db assisted debugging support.
    Copyright 1999, 2000, 2001 Free Software Foundation, Inc.
 
@@ -1188,9 +1188,9 @@ fbsd_find_lwp_name(long lwpid, struct private_thread_info *info)
                 }
             }
 
-          len = strlen(kipp->ki_ocomm);
+          len = strlen(kipp->ki_ocomm) + 1;
           lwpstr = xmalloc(len);
-          strcpy(lwpstr, kipp->ki_ocomm);
+          strncpy(lwpstr, kipp->ki_ocomm, len);
           info->lwp_name = lwpstr;
           break;
         }
