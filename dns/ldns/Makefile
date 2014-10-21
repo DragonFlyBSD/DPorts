@@ -14,8 +14,8 @@ COMMENT=	Library for programs conforming to DNS RFCs and drafts
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+GNU_CONFIGURE=	yes
 USES=		gmake libtool
-USE_AUTOTOOLS=	libtoolize
 USE_OPENSSL=	yes
 USE_LDCONFIG=	yes
 
@@ -41,7 +41,7 @@ OPTIONS_SUB=	yes
 .include <bsd.port.options.mk>
 
 .if defined(BUILD_PYLDNS)
-USE_PYTHON=	yes
+USES+=		python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 ALL_TARGET=	pyldns
 INSTALL_TARGET=	install-pyldns
@@ -108,15 +108,18 @@ CONFIGURE_ARGS+=	--enable-rrtype-ta
 .if ! (defined(BUILD_PYLDNS) || defined(BUILD_P5PERL))
 
 post-configure:
+# ac_cv_prog_libtool=../libtool => Always use bundled libtool
 .if ${PORT_OPTIONS:MEXAMPLES}
 	@(cd ${WRKSRC}/examples; ./configure --prefix=${PREFIX} \
 		--infodir=${PREFIX}/${INFO_PATH} --mandir=${MANPREFIX}/man \
-		--build=${CONFIGURE_TARGET} ${NO_GOST} ${NO_SHA2})
+		--build=${CONFIGURE_TARGET} ${NO_GOST} ${NO_SHA2} \
+		ac_cv_prog_libtool=../libtool)
 .endif
 .if ${PORT_OPTIONS:MDRILL}
 	@(cd ${WRKSRC}/drill; ./configure --prefix=${PREFIX} \
 		--mandir=${MANPREFIX}/man \
-		--build=${CONFIGURE_TARGET})
+		--build=${CONFIGURE_TARGET} \
+		ac_cv_prog_libtool=../libtool)
 .endif
 
 post-build:
