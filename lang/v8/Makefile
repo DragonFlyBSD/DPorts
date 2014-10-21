@@ -21,9 +21,8 @@ ALL_TARGET=	native
 MAKE_ENV=	CC.host=${CC} CXX.host=${CXX} LINK.host=${CXX} LINK.target=${CXX}
 MAKE_ENV+=	GYPFLAGS=-DOS=freebsd
 MAKE_ENV+=	library=shared
-CFLAGS+=	-D__FreeBSD__=1
 USE_LDCONFIG=	yes
-USES=		compiler cpe execinfo gmake python:2 tar:xz
+USES=		alias compiler cpe execinfo gmake python:2 tar:xz
 
 CPE_VENDOR=	google
 
