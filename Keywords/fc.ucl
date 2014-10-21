@@ -1,11 +1,19 @@
-# $FreeBSD: head/Keywords/fc.ucl 369819 2014-10-02 12:39:57Z mat $
+# $FreeBSD: head/Keywords/fc.ucl 370490 2014-10-08 21:39:47Z ak $
 #
 # MAINTAINER: x11@FreeBSD.org
 
 actions: [dir]
 post-install: <<EOD
-  fc-cache -s %D/%@ 2>/dev/null || true
+  case "%@" in
+  /*) fontsdir="%@" ;;
+  *) fontsdir="%D/%@" ;;
+  esac
+  fc-cache -s ${fontsdir} 2>/dev/null || true
 EOD
 post-deinstall: <<EOD
-  fc-cache -s %D/%@ 2>/dev/null || true
+  case "%@" in
+  /*) fontsdir="%@" ;;
+  *) fontsdir="%D/%@" ;;
+  esac
+  fc-cache -s ${fontsdir} 2>/dev/null || true
 EOD

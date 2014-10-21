@@ -1,5 +1,7 @@
 # $FreeBSD$
 # Please keep this file sorted by GID!
+# Please pick an empty slot when available and also consider base values from
+# /usr/src/etc/group
 daemon:*:1:
 operator:*:5:amanda
 mail:*:6:postfix,clamav
@@ -63,7 +65,6 @@ fetchmail:*:124:
 postfix:*:125:
 maildrop:*:126:
 nav:*:127:
-vchat:*:128:
 vlock:*:129:
 _bgpd:*:130:
 _ospfd:*:131:
@@ -149,6 +150,7 @@ spread:*:282:
 devmon:*:283:
 vnstat:*:284:
 exaddos:*:285:exaddos
+rancid:*:286:
 backuppc:*:300:
 _sphinx:*:312:
 dkfilter:*:325:
@@ -258,10 +260,8 @@ teamspeak:*:942:
 dnetfold:*:943:
 bbs:*:944:
 dbxml:*:945:
-sybase:*:946:
 gnokii:*:947:
 dnrd:*:948:
-zenoss:*:949:
 conquest:*:950:
 openerpd:*:951:
 bitten-slave:*:952:

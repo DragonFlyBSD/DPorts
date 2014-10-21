@@ -7,6 +7,15 @@
 WARNING+=	"WITHOUT_NLS is deprecated use OPTIONS_UNSET=NLS instead"
 .endif
 
+#.if defined(PKGORIGIN)
+#.for _c in ${CATEGORIES}
+#_CAT?=	${_c}
+#.endfor
+#.if ${.CURDIR:H:T} != ${_CAT}
+#DEV_ERROR+=	"The first entry in CATEGORIES should be the directory where the port lives"
+#.endif
+#.endif
+
 #.if defined(WITHOUT_X11)
 #WARNING+=	"WITHOUT_X11 is deprecated use X11 option instead"
 #.endif
@@ -53,6 +62,10 @@ DEV_WARNING+=	"USE_GNOME=gnomehack is deprecated, please use USES=pathfix"
 
 .if defined(USE_GNOME) && ${USE_GNOME:Mdesktopfileutils}
 DEV_WARNING+=	"USE_GNOME=desktopfileutils is deprecated, please use USES=desktop-file-utils"
+.endif
+
+.if defined(USE_KDE4) && ${USE_KDE4:Mkdehier}
+DEV_WARNING+=	"USE_KDE4=kdehier is deprecated, please use USE_KDE4=kdeprefix"
 .endif
 
 .if defined(LIB_DEPENDS) && ${LIB_DEPENDS:Nlib*}
@@ -140,7 +153,8 @@ DEV_ERROR+=	"INSTALLS_EGGINFO is no longer supported, please add the entry direc
 SANITY_UNSUPPORTED=	USE_OPENAL USE_FAM USE_MAKESELF USE_ZIP USE_LHA USE_CMAKE \
 		USE_READLINE USE_ICONV PERL_CONFIGURE PERL_MODBUILD \
 		USE_PERL5_BUILD USE_PERL5_RUN USE_DISPLAY USE_FUSE \
-		USE_GETTEXT USE_GMAKE USE_SCONS USE_DRUPAL NO_INSTALL_MANPAGES
+		USE_GETTEXT USE_GMAKE USE_SCONS USE_DRUPAL NO_INSTALL_MANPAGES \
+		INSTALLS_SHLIB
 SANITY_DEPRECATED=	USE_XZ USE_BZIP2 USE_PYDISTUTILS PYTHON_CONCURRENT_INSTALL \
 		PYDISTUTILS_AUTOPLIST PYTHON_PY3K_PLIST_HACK PYDISTUTILS_NOEGGINFO \
 		USE_PYTHON_PREFIX PYTHON_PKGNAMESUFFIX
@@ -166,6 +180,7 @@ USE_GETTEXT_ALT=	USES=gettext
 USE_SCONS_ALT=		USES=scons
 USE_DRUPAL_ALT=		USES=drupal
 USE_PYDISTUTILS_ALT=		USE_PYTHON=distutils
+INSTALLS_SHLIB_ALT=	USE_LDCONFIG
 PYTHON_CONCURRENT_INSTALL_ALT=	USE_PYTHON=concurrent
 PYDISTUTILS_AUTOPLIST_ALT=	USE_PYTHON=autoplist
 PYTHON_PY3K_PLIST_HACK_ALT=	USE_PYTHON=py3kplist

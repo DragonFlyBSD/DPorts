@@ -1,13 +1,19 @@
-# $FreeBSD: head/Keywords/info.ucl 362833 2014-07-24 17:10:57Z bapt $
+# $FreeBSD: head/Keywords/info.ucl 370410 2014-10-07 23:26:28Z bapt $
 #
 # MAINTAINER: portmgr@FreeBSD.org
 
 actions: [file]
 post-install: <<EOD
-  file=%D/%@
+  case "%@" in
+  /*) file="%@" ;;
+   *) file="%D/%@" ;;
+  esac
   indexinfo ${file%/*}
 EOD
 post-deinstall: <<EOD
-  file=%D/%@
+  case "%@" in
+  /*) file="%@" ;;
+   *) file="%D/%@" ;;
+  esac
   indexinfo ${file%/*}
 EOD

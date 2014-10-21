@@ -1,4 +1,4 @@
-# $FreeBSD: head/Keywords/shell.ucl 362833 2014-07-24 17:10:57Z bapt $
+# $FreeBSD: head/Keywords/shell.ucl 370490 2014-10-08 21:39:47Z ak $
 #
 # MAINTAINER: portmgr@FreeBSD.org
 #
@@ -13,12 +13,20 @@
 
 actions: [file]
 post-install: <<EOD
+  case "%@" in
+  /*) file="%@" ;;
+  *) file="%D/%@" ;;
+  esac
         cp /etc/shells /etc/shells.bak
-        (grep -v %D/%@ /etc/shells.bak; echo %D/%@) > /etc/shells
+        (grep -v ${file} /etc/shells.bak; echo ${file}) > /etc/shells
         rm -f /etc/shells.bak
 EOD
 pre-deinstall: <<EOD
+  case "%@" in
+  /*) file="%@" ;;
+  *) file="%D/%@" ;;
+  esac
         cp /etc/shells /etc/shells.bak
-        grep -v %D/%@ /etc/shells.bak > /etc/shells
+        grep -v ${file} /etc/shells.bak > /etc/shells
         rm -f /etc/shells.bak
 EOD

@@ -984,7 +984,6 @@ misc/kde4-l10n-csb||2013-09-10|No longer part of KDE4
 misc/kde4-l10n-eo||2013-09-10|No longer part of KDE4
 misc/kde4-l10n-fy||2013-09-10|No longer part of KDE4
 misc/kde4-l10n-gu||2013-09-10|No longer part of KDE4
-misc/kde4-l10n-id||2013-09-10|No longer part of KDE4
 misc/kde4-l10n-kn||2013-09-10|No longer part of KDE4
 misc/kde4-l10n-mai||2013-09-10|No longer part of KDE4
 misc/kde4-l10n-mk||2013-09-10|No longer part of KDE4
@@ -2744,7 +2743,6 @@ mail/emh||2014-09-01|Not staged
 mail/extmail||2014-09-01|Not staged
 mail/extman||2014-09-01|Not staged
 mail/ezmlm-web||2014-09-01|Not staged
-mail/filtermail||2014-09-01|Not staged
 mail/firemime||2014-09-01|Not staged
 mail/firepay||2014-09-01|Not staged
 mail/ftrack||2014-09-01|Not staged
@@ -2893,7 +2891,6 @@ net/silc-server||2014-09-01|Not staged
 net/skyfish||2014-09-01|Not staged
 net/skystar2||2014-09-01|Not staged
 net/tac_plus-libradius||2014-09-01|Not staged
-net/tcptraceroute-devel||2014-09-01|Not staged
 net/ushare||2014-09-01|Not staged
 net/v6eval||2014-09-01|Not staged
 net/vchat||2014-09-01|Not staged
@@ -2964,7 +2961,6 @@ sysutils/clockspeed-conf||2014-09-01|Not staged
 sysutils/comconsole||2014-09-01|Not staged
 sysutils/comiccron||2014-09-01|Not staged
 sysutils/contool||2014-09-01|Not staged
-sysutils/createrepo||2014-09-01|Not staged
 sysutils/cromwell||2014-09-01|Not staged
 sysutils/cvsweb-converters||2014-09-01|Not staged
 sysutils/eroaster||2014-09-01|Not staged
@@ -3187,13 +3183,13 @@ devel/ruby-fastri||2014-09-20|Has expired: RubyForge shutdown May 15 2014
 devel/ri-emacs||2014-09-20|Has expired: RubyForge shutdown May 15 2014
 security/p5-openxpki-client-html-mason||2014-09-20|Has expired: security/p5-openxpki-0.15+ abandoned Mason UI technology in favor of FastCGI
 math/ruby-narray_miss||2014-09-20|Removed, depended on deleted math/ruby-narray
-games/gnomechess|games/gnome-chess|2014-09-20|Renamed to match port name.
+games/gnomechess|games/gnome-chess|2014-09-20|Renamed to match port name
 www/ruby-fcgi||2014-09-20|Has expired: RubyForge shutdown May 15 2014
 databases/ruby-dbi|databases/rubygem-dbi|2014-09-21|Replaced by rubygem-dbi
 databases/ruby-dbd_mysql|databases/rubygem-dbd-mysql|2014-09-21|Replaced by rubygem-dbd-mysql
 databases/ruby-dbd_pg|databases/rubygem-dbd-pg|2014-09-21|Replaced by rubygem-dbd-pg
 databases/ruby-dbd_sqlite|databases/rubygem-dbd-sqlite3|2014-09-21|Replaced by rubygem-dbd-sqlite3
-textproc/ruby-amatch/textproc/rubygem-amatch||2014-09-21|Replaced by textproc/rubygem-amatch
+textproc/ruby-amatch|textproc/rubygem-amatch|2014-09-21|Replaced by textproc/rubygem-amatch
 graphics/libggi||2014-09-22|Has expired: Unmaintained upstream
 devel/libgii||2014-09-22|Has expired: Unmaintained upstream
 graphics/fpc-ggi||2014-09-22|Has expired: Unmaintained upstream
@@ -3224,3 +3220,22 @@ security/py-otr||2014-09-30|Has expired: Abandoned upstream
 net-p2p/cdonkey||2014-09-30|Has expired: depends on deprecated db41 version
 www/rubygem-puma16||2014-10-02|Has expired: Old version no longer needed
 x11-toolkits/gnome-desktop-sharp20||2014-10-02|Removed, no users and depends on gnome-panel which will be removed
+x11-toolkits/eel||2014-10-03|Removed, doesn't build with updated gnome-desktop
+deskutils/gnome-main-menu||2014-10-03|Removed, because x11-toolkits/eel was removed
+editors/mlview||2014-10-03|Removed, because x11-toolkits/eel was removed
+textproc/gnome-translate||2014-10-03|Removed, because x11-toolkits/eel was removed
+x11/avant-window-navigator-gnome||2014-10-03|Removed doesn't build with update gnome-desktop
+www/moodle25||2014-10-05|Has expired: Upstream support ended
+ports-mgmt/portaudit||2014-10-13|portaudit expired when pkg_tools did, use pkg audit
+ports-mgmt/portaudit-db||2014-10-13|portaudit expired
+ports-mgmt/kports-qt4||2014-10-13|portaudit expired
+net-mgmt/check_snmp_pkgvuln||2014-10-13|portaudit expired
+mail/p5-Email-Stuff|mail/p5-Email-Stuffer|2014-10-15|Has expired: Deprecated in favour of mail/p5-Email-Stuffer
+security/krb5-maint|security/krb5-111|2014-10-16|MIT now supports two maintenance releases of which 1.11 is the older of the two
+devel/rubygem-rspec-spies||2014-10-17|Has expired: Same syntax available in rspec 2.14 and later
+graphics/libfreehand00|graphics/libfreehand|2014-10-17|Replaced by newer version
+graphics/libcdr|graphics/libcdr01|2014-10-17|Replaced by newer version
+print/libmspub|print/libmspub01|2014-10-17|Replaced by newer version
+devel/py-olefileio_pl|devel/py-olefile|2014-10-17|Upstream name change
+audio/mad||2014-10-20|Directly use audio/libmad or audio/madplay
+mail/dspam-devel|mail/dspam|2014-10-20|Merged into mail/dspam

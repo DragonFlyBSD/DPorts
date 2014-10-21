@@ -59,7 +59,7 @@ WEB_AUTH=			nvu
 
 # Non-version specific components
 _LINUX_APPS_ALL=	allegro alsalib alsa-plugins-oss alsa-plugins-pulseaudio \
-					arts aspell atk cairo cups-libs curl dri devtools esound expat \
+					arts aspell atk avahi-libs cairo cups-libs curl dri devtools esound expat \
 					flac fontconfig freealut gdkpixbuf gnutls gtk2 hicontheme imlib jpeg libaudiofile \
 					libasyncns libg2c libgcrypt libglade2 libglu libgpg-error libmng libogg \
 					libpciaccess libsigcpp20 libsndfile libtasn1 libtheora libvorbis libxml2 mikmod \
@@ -120,6 +120,10 @@ atk_f10_FILE=		${LINUXBASE}/usr/lib/libatk-1.0.so.0.2409.1
 atk_c6_FILE=		${LINUXBASE}/usr/lib/libatk-1.0.so.0.3009.1
 atk_DETECT=			${atk${LINUX_DIST_SUFFIX:S/-/_/}_FILE}
 atk_PORT=			${PORTSDIR}/accessibility/linux${LINUX_DIST_SUFFIX}-atk
+
+avahi-libs_c6_FILE=	${LINUXBASE}/usr/lib/libavahi-client.so.3.2.5
+avahi-libs_DETECT=	${avahi-libs${LINUX_DIST_SUFFIX:S/-/_/}_FILE}
+avahi-libs_PORT=	${PORTSDIR}/net/linux${LINUX_DIST_SUFFIX}-avahi-libs
 
 blt_f10_FILE=		${LINUXBASE}/usr/lib/libBLT24.so # FIXME: deprecated, merged into tcl/tk85
 blt_DETECT=		${blt${LINUX_DIST_SUFFIX:S/-/_/}_FILE}
@@ -252,6 +256,7 @@ libglade2_DETECT=	${libglade2${LINUX_DIST_SUFFIX:S/-/_/}_FILE}
 libglade2_PORT=		${PORTSDIR}/devel/linux${LINUX_DIST_SUFFIX}-libglade2
 
 libglu_f10_FILE=	${LINUXBASE}/usr/lib/libGLU.so.1
+libglu_c6_FILE=		${LINUXBASE}/usr/lib/libGLU.so.1
 libglu_DETECT=		${libglu${LINUX_DIST_SUFFIX:S/-/_/}_FILE}
 libglu_PORT=		${PORTSDIR}/graphics/linux${LINUX_DIST_SUFFIX}-libGLU
 

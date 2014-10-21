@@ -5,6 +5,65 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20141019:
+  AFFECTS: users of x11/kde4-runtime
+  AUTHOR: kde@FreeBSD.org
+
+  KDE SC ports have been updated to 4.14.2. Several files have been
+  moved between packages, therefore the following action is required
+  before running any pkg/port upgrade utility:
+
+  # pkg delete -f kde-runtime-4\*
+
+20141008:
+  AFFECTS: users of lang/ruby19
+  AUTHOR: swills@FreeBSD.org
+
+  The default ruby version has been updated from 1.9 to 2.0.
+
+  If you compile your own ports you may keep 1.9 as the default version by
+  adding the following lines to your /etc/make.conf file:
+
+  #
+  # Keep ruby 1.9 as default version
+  #
+  DEFAULT_VERSIONS+=ruby=1.9
+
+  If you wish to update to the new default version, you need to first stop any
+  software that uses ruby. Then, you will need to follow these steps, depending
+  upon how you manage your system.
+
+  If you use pkgng, simply upgrade:
+  # pkg upgrade
+
+  If you use portmaster, install new ruby, then rebuild all ports that depend
+  on ruby:
+  # portmaster -o lang/ruby20 lang/ruby19
+  # portmaster -R -r ruby-2.0
+
+  If you use portupgrade, install new ruby, then rebuild all ports that depend
+  on ruby:
+
+  # pkg delete -f ruby ruby-iconv portupgrade
+  # make -C /usr/ports/ports-mgmt/portupgrade install clean
+  # pkg set -o lang/ruby19:lang/ruby20
+  # portupgrade -x ruby-2.0.\* -fr lang/ruby20
+
+20141003:
+  AFFECTS: xorg users
+  AUTHOR: bapt@FreeBSD.org
+
+  The WITH_NEW_XORG setting has been activated by default on all versions
+  of FreeBSD, which allows us to have packages for xorg 1.12 and kde4.
+
+  Please be aware that on systems that only support syscons
+  switching virtual terminals or exiting X
+  results in a black screen or the last image of their desktop
+  (like a screenshot) being presented.  Commands can still be typed blindly.
+
+  Most, if not all, systems should be using vt(4) and this can be enabled
+  by setting kern.vty=vt in /boot/loader.conf and reboot to activate.
+
 20141001:
   AFFECTS: xorg users
   AUTHOR: bapt@FreeBSD.org
@@ -34,18 +93,6 @@ you update your ports collection, before attempting any port upgrades.
   on the system.
 
   Please check your configuration.
-
-20140930:
-  AFFECTS: users of finance/gnucash
-  AUTHOR: madpilot@FreeBSD.org
-
-  The new version of gnucsh requires guile 2.0. If the update fails
-  because the old guile 1.8 library is still present you will need
-  to manally remove gnucash, guile and, if installed, boehm-gc:
-
-  # pkg delete gnucash guile boehm-gc
-
-  and then install gnucash again the usual way.
 
 20140929:
   AFFECTS: users of comms/usbmuxd
@@ -79,7 +126,7 @@ you update your ports collection, before attempting any port upgrades.
   In version 1.6 Foreman Smart Proxy splits its configuration into multiple
   ruby files located in PREFIX/etc/foreman-proxy/settings.d.
   The configuration of each service (dhcp, dhs, bmc, etc.) has been moved
-  into a dedicated file. 
+  into a dedicated file.
 
   You can use a bundled script to convert your old settings to new settings:
   PREFIX/share/foreman/extra/migrate_settings.rb
@@ -93,7 +140,7 @@ you update your ports collection, before attempting any port upgrades.
   then import those functions into the environment of the script being ran.
   This resulted in security issues CVE-2014-6271 and CVE-2014-7169, commonly
   known as "shellshock".  It also can result in poorly written scripts being
-  tricked into running arbitrary commands.  
+  tricked into running arbitrary commands.
 
   To fully mitigate against this sort of attack we have applied a non-upstream
   patch to disable this functionality by default.  You can execute bash
@@ -119,7 +166,7 @@ you update your ports collection, before attempting any port upgrades.
   People using binary packages(or not wanting to disable the LUA
   option in the port) not using the lua functionality should add:
 
-  noload => pbx_lua.so 
+  noload => pbx_lua.so
 
   to the PREFIX/etc/asterisk/modules.conf file, if using the
   autoload=yes option in that same file. People not autoloading
@@ -223,7 +270,7 @@ you update your ports collection, before attempting any port upgrades.
   a drop-in replacement for libjpeg.so. The drop-in replacement has been
   split off into graphics/jpeg-turbo; libjpeg-turbo now installs only
   libturbojpeg.so.
-  
+
   If you were using the libjpeg.so from graphics/libjpeg-turbo, you
   should install graphics/jpeg-turbo AFTER upgrading the libjpeg-turbo
   port.
@@ -1830,71 +1877,4 @@ you update your ports collection, before attempting any port upgrades.
 
   Note: If the "perl-" glob matches more than one port you will need to specify
         the name of the Perl directory in /var/db/pkg explicitly.
-
-20131020:
-  AFFECTS: users of mail/squirrelmail
-  AUTHOR: adamw@adamw.org
-
-  The default location for user data files and attachments has changed.
-  This will only affect new installations, and upgrading SquirrelMail
-  WILL NOT break your current installation.
-
-  To make use of the new locations, do the following:
-
-  # cp -rp /var/spool/squirrelmail/pref/* /usr/local/www/squirrelmail/data
-  # cp -rp /var/spool/squirrelmail/attach/* /usr/local/www/squirrelmail/attach
-
-  and then run /usr/local/www/squirrelmail/configure and tell SM about
-  it ("Data Directory" and "Attachment Directory" under "General Options").
-
-  This version of SquirrelMail is a SNAPSHOT that brings in PHP 5.4 and 5.5
-  compatibility.
-
-20131020:
-  AFFECTS: users of security/gpgme
-  AUTHOR: jhale@FreeBSD.org
-
-  The library version of security/gpgme has changed, and PORTREVISION has
-  been bumped in all dependent ports.  If you have external software that
-  depends on gpgme, this software needs to be recompiled.
-  To recompile all software dependent on gpgme, run:
-
-  # portmaster -r gpgme
-    or
-  # portupgrade -rf gpgme
-
-20131008:
-  AFFECTS: all users
-  AUTHOR: bapt@FreeBSD.org
-
-  A new USES has been added: compiler.mk, this uses allows porters to
-  select a compiler for a given port based on the features the port needs
-  By default this will always try to find Clang > 3.3.
-  If the user prefers using GCC then the following macro should be added
-  to user's make.conf: FAVORITE_COMPILER=gcc
-
-20131004:
-  AFFECTS: users of net-mgmt/nrpe2
-  AUTHOR: ohauer@FreeBSD.org
-
-  The port nrpe2 was updated and moved to nrpe
-
-  # portmaster -o net-mgmt/nrpe net-mgmt/nrpe2
-    or
-  # portupgrade -fo net-mgmt/nrpe net-mgmt/nrpe2
-    or
-  # pkg set -o net-mgmt/nrpe2:net-mgmt/nrpe
-
-20131003:
-  AFFECTS: users of lang/python* and ports
-  AUTHOR: mva@FreeBSD.org
-
-  The default versions of lang/python* have been changed to support the
-  new DEFAULT_VERSIONS variable.
-
-  PYTHON_DEFAULT_VERSION, PYTHON2_DEFAULT_VERSION and
-  PYTHON3_DEFAULT_VERSION are deprecated. If you have set them in your
-  make.conf, you should change them something like
-
-  DEFAULT_VERSIONS=python=2.7 python2=2.7 python3=3.3
 
