@@ -1,6 +1,7 @@
 # $FreeBSD$
 
 LIB=		inotify
+NOINSTALLLIB=	true
 SHLIB_MAJOR=	0
 
 DPADD=		${LIBPTHREAD}
