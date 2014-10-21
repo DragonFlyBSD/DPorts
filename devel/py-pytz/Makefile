@@ -13,8 +13,8 @@ COMMENT=	World Timezone Definitions for Python
 
 LICENSE=	MIT
 
-USES=		tar:bzip2
-USE_PYTHON=	autoplist concurrent distutils
+USES=		python tar:bzip2
+USE_PYTHON=	autoplist distutils
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|=True|=False|' ${WRKSRC}/${PYSETUP}
