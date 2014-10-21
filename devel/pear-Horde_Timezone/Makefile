@@ -2,16 +2,15 @@
 # $FreeBSD$
 
 PORTNAME=	Horde_Timezone
-PORTVERSION=	1.0.7
+PORTVERSION=	1.0.8
 CATEGORIES=	devel www pear
 
 MAINTAINER=	horde@FreeBSD.org
 COMMENT=	Horde timezone library
 
+USES=	horde
 USE_HORDE_RUN=	Horde_Date \
 		Horde_Icalendar \
 		Horde_Vfs
 
-.include <bsd.port.pre.mk>
-.include "${PORTSDIR}/devel/pear-channel-horde/bsd.horde.mk"
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
