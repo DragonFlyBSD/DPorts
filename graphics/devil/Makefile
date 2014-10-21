@@ -3,9 +3,8 @@
 
 PORTNAME=	devil
 PORTVERSION=	1.7.8
-PORTREVISION=	36
+PORTREVISION=	18
 PORTEPOCH=	1
-PORTREVISION=	17
 CATEGORIES=	graphics
 MASTER_SITES=	SF/openil/DevIL/${PORTVERSION}
 DISTNAME=	DevIL-${PORTVERSION}
@@ -13,7 +12,7 @@ DISTNAME=	DevIL-${PORTVERSION}
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Full featured cross-platform image library
 
-USES=		autoreconf pkgconfig libtool
+USES=		alias autoreconf libtool pkgconfig
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-ILU \
 		--disable-allegro --disable-directx8 --disable-directx9 \
