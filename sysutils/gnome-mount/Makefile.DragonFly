@@ -1,3 +1,0 @@
-# Cheap fix
-
-CFLAGS+=	-D__FreeBSD__=1
