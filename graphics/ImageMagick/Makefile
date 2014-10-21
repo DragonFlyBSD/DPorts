@@ -2,6 +2,7 @@
 
 PORTNAME=	ImageMagick
 DISTVERSION=	6.8.9-8
+PORTREVISION=	3
 PORTEPOCH=	1
 CATEGORIES=	graphics perl5
 MASTER_SITES=	http://www.imagemagick.org/download/ \
@@ -33,7 +34,8 @@ COMMENT=	Image processing tools
 
 #LICENSE=	APACHE20
 
-LIB_DEPENDS=	libltdl.so:${PORTSDIR}/devel/libltdl
+LIB_DEPENDS=	libltdl.so:${PORTSDIR}/devel/libltdl \
+		liblqr-1.so:${PORTSDIR}/graphics/liblqr-1
 
 # This port uses .la files, keep libtool:keepla! (magick/module.c)
 USES=		gmake libtool:keepla pathfix perl5 pkgconfig shebangfix tar:xz
@@ -57,7 +59,7 @@ PLIST_SUB=	PORTVERSION=${PORTVERSION:R}
 OPTIONS_DEFINE=	BZIP2 DOCS DJVU FFTW FONTCONFIG FPX FREETYPE \
 		GRAPHVIZ GSLIB JPEG2000 JBIG JPEG LCMS2 LZMA LQR MODULES \
 		OPENEXR OPENMP PANGO PDF PERL PNG SVG TESTS TIFF WEBP WMF \
-		THREADS X11
+		THREADS X11 SIMD
 OPTIONS_DEFAULT=	16BIT_PIXEL BZIP2 FFTW FONTCONFIG FPX FREETYPE \
 		JPEG2000 JBIG JPEG LCMS2 LZMA LQR MODULES PDF PERL PNG SVG \
 		TIFF WEBP WMF THREADS X11
@@ -72,6 +74,7 @@ GSLIB_DESC=		libgs (Postscript SHLIB) support
 HDRI_DESC=		High dynamic range images support
 MODULES_DESC=		Modules support
 TESTS_DESC=		Run bundled self-tests after build
+SIMD_CONFIGURE_WITH=	gcc-arch
 
 .include <bsd.port.options.mk>
 
