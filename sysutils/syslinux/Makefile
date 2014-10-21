@@ -3,10 +3,11 @@
 
 PORTNAME=	syslinux
 PORTVERSION=	6.02
+PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	KERNEL_ORG/linux/utils/boot/syslinux
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	uffe@uffe.org
 COMMENT=	Boot loader for the Linux operating system
 
 LICENSE=	GPLv2
@@ -20,9 +21,10 @@ USE_PERL5=	build
 MAKE_ARGS=	CC="${CC}"
 ALL_TARGET=	bios
 
-#.include <bsd.port.pre.mk>
+PLIST_FILES=	bin/syslinux \
+		man/man1/syslinux.1.gz
+PORTDATA=	*
 
-# convert elf_i386 to elf_i386_fbsd
 pre-patch:
 	@(cd ${WRKSRC}; 						\
 	${FIND} . -type f -exec ${GREP} -le 'elf_i386' \{\} \; | 	\
