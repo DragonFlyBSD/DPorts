@@ -3,7 +3,7 @@
 
 PORTNAME=	cvm
 PORTVERSION=	0.96
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	http://untroubled.org/${PORTNAME}/ \
 		http://untroubled.org/${PORTNAME}/archive/
@@ -24,17 +24,19 @@ BGLIBS_LIB=	${LOCALBASE}/lib/bglibs
 
 DOCS=		NEWS README TODO *.html
 
+ALL_TARGET=	all
+
 OPTIONS_DEFINE=	DOCS VCHKPW
+
 OPTIONS_SUB=	yes
+
 VCHKPW_DESC=	Compile cvm-vchkpw
 
-VCHKPW_BUILD_DEPENDS+=	${LOCALBASE}/vpopmail/lib/libvpopmail.a:${PORTSDIR}/mail/vpopmail
+VCHKPW_ALL_TARGET=	cvm-vchkpw
+
+VCHKPW_BUILD_DEPENDS=	${LOCALBASE}/vpopmail/lib/libvpopmail.a:${PORTSDIR}/mail/vpopmail
 
 .include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MVCHKPW}
-ALL_TARGET+=	cvm-vchkpw
-.endif
 
 do-configure:
 	${ECHO_CMD} "${PREFIX}"		> ${WRKSRC}/conf-home
