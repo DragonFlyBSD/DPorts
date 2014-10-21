@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnutls
-PORTVERSION=	3.2.18
+PORTVERSION=	3.2.19
 CATEGORIES=	security net
 MASTER_SITES=	GNUPG/gnutls/v3.2
 
@@ -55,6 +55,8 @@ INFO=		gnutls gnutls-guile
 
 post-patch:
 	@${RM} ${WRKSRC}/doc/*.info*
+	${SED} -i '' -e 's|^+_NORETURN_H|_NORETURN_H|' \
+	  ${WRKSRC}/src/libopts/Makefile.in
 
 post-install:
 	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
