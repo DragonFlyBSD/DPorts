@@ -52,7 +52,7 @@ include/GeographicLib/Utility.hpp
 lib/libGeographic.a
 lib/libGeographic.so
 lib/libGeographic.so.13
-lib/libGeographic.so.13.0.0
+lib/libGeographic.so.13.0.1
 %%PYTHON_SITELIBDIR%%/geographiclib/__init__.py
 %%PYTHON_SITELIBDIR%%/geographiclib/accumulator.py
 %%PYTHON_SITELIBDIR%%/geographiclib/constants.py
@@ -68,6 +68,8 @@ libexec/GeographicLib/matlab/ecc2flat.m
 libexec/GeographicLib/matlab/eqdazim_fwd.m
 libexec/GeographicLib/matlab/eqdazim_inv.m
 libexec/GeographicLib/matlab/flat2ecc.m
+libexec/GeographicLib/matlab/gedistance.m
+libexec/GeographicLib/matlab/gedoc.m
 libexec/GeographicLib/matlab/geocentricforward.cpp
 libexec/GeographicLib/matlab/geocentricforward.m
 libexec/GeographicLib/matlab/geocentricreverse.cpp
@@ -86,6 +88,7 @@ libexec/GeographicLib/matlab/geodreckon.m
 libexec/GeographicLib/matlab/geographiclibinterface.m
 libexec/GeographicLib/matlab/geoidheight.cpp
 libexec/GeographicLib/matlab/geoidheight.m
+libexec/GeographicLib/matlab/gereckon.m
 libexec/GeographicLib/matlab/gnomonic_fwd.m
 libexec/GeographicLib/matlab/gnomonic_inv.m
 libexec/GeographicLib/matlab/localcartesianforward.cpp
@@ -139,12 +142,13 @@ man/man1/MagneticField.1.gz
 man/man1/Planimeter.1.gz
 man/man1/RhumbSolve.1.gz
 man/man1/TransverseMercatorProj.1.gz
+man/man8/geographiclib-get-geoids.8.gz
+man/man8/geographiclib-get-gravity.8.gz
+man/man8/geographiclib-get-magnetic.8.gz
 sbin/geographiclib-get-geoids
 sbin/geographiclib-get-gravity
 sbin/geographiclib-get-magnetic
-%%DATADIR%%/geoids/.keep
-%%DATADIR%%/gravity/.keep
-%%DATADIR%%/magnetic/.keep
+share/cmake/GeographicLib/FindGeographicLib.cmake
 %%GEOID_EGM2008_1%%%%DATADIR%%/geoids/egm2008-1.pgm
 %%GEOID_EGM2008_1%%%%DATADIR%%/geoids/egm2008-1.pgm.aux.xml
 %%GEOID_EGM2008_1%%%%DATADIR%%/geoids/egm2008-1.wld
@@ -172,6 +176,8 @@ sbin/geographiclib-get-magnetic
 %%GRAVITY_EGM84%%%%DATADIR%%/gravity/egm84.egm.cof
 %%GRAVITY_EGM96%%%%DATADIR%%/gravity/egm96.egm
 %%GRAVITY_EGM96%%%%DATADIR%%/gravity/egm96.egm.cof
+%%GRAVITY_GRS80%%%%DATADIR%%/gravity/grs80.egm
+%%GRAVITY_GRS80%%%%DATADIR%%/gravity/grs80.egm.cof
 %%GRAVITY_WGS84%%%%DATADIR%%/gravity/wgs84.egm
 %%GRAVITY_WGS84%%%%DATADIR%%/gravity/wgs84.egm.cof
 %%MAGNETIC_EMM2010%%%%DATADIR%%/magnetic/emm2010.wmm
@@ -180,15 +186,3 @@ sbin/geographiclib-get-magnetic
 %%MAGNETIC_IGRF11%%%%DATADIR%%/magnetic/igrf11.wmm.cof
 %%MAGNETIC_WMM2010%%%%DATADIR%%/magnetic/wmm2010.wmm
 %%MAGNETIC_WMM2010%%%%DATADIR%%/magnetic/wmm2010.wmm.cof
-share/cmake/GeographicLib/FindGeographicLib.cmake
-@dirrm include/GeographicLib
-@dirrm %%PYTHON_SITELIBDIR%%/geographiclib
-@dirrm libexec/GeographicLib/matlab/private
-@dirrm libexec/GeographicLib/matlab
-@dirrm libexec/GeographicLib
-@dirrm %%DATADIR%%/geoids
-@dirrm %%DATADIR%%/gravity
-@dirrm %%DATADIR%%/magnetic
-@dirrm %%DATADIR%%
-@dirrm share/cmake/GeographicLib
-@dirrmtry share/cmake
