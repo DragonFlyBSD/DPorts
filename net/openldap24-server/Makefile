@@ -353,6 +353,7 @@ PLIST_SUB+=		BACK_BDB="@comment " \
 .else
 
 USE_BDB=		48+
+INVALID_BDB_VER=	6
 
 CONFIGURE_ARGS+=	--enable-bdb=${BACKEND_ENABLE} \
 			--enable-hdb=${BACKEND_ENABLE}
@@ -514,12 +515,14 @@ test: build
 post-build:
 	@${DO_NADA}
 .if ${PORT_OPTIONS:MSMBPWD}
-	@(cd ${BUILD_WRKSRC}/contrib/slapd-modules/smbk5pwd && ${SETENV} ${MAKE_ENV} \
-		${MAKE_CMD} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} DEFS="-DDO_SAMBA" all)
+	@(cd ${BUILD_WRKSRC}/contrib/slapd-modules/smbk5pwd && \
+		${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_FLAGS} ${MAKEFILE} \
+		${MAKE_ARGS} DEFS="-DDO_SAMBA" prefix="${PREFIX}" all)
 .endif
 .if ${PORT_OPTIONS:MSHA2}
-	@(cd ${BUILD_WRKSRC}/contrib/slapd-modules/passwd/sha2 && ${SETENV} ${MAKE_ENV} \
-		${MAKE_CMD} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} all)
+	@(cd ${BUILD_WRKSRC}/contrib/slapd-modules/passwd/sha2 && \
+		${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_FLAGS} ${MAKEFILE} \
+		${MAKE_ARGS} prefix="${PREFIX}" all)
 .endif
 .endif
 
@@ -542,13 +545,15 @@ post-install:
 .else
 	@${MKDIR} ${STAGEDIR}${LDAP_RUN_DIR}
 .if ${PORT_OPTIONS:MSMBPWD}
-	@(cd ${WRKSRC}/contrib/slapd-modules/smbk5pwd && ${SETENV} ${MAKE_ENV} \
-		${MAKE_CMD} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} install)
+	@(cd ${WRKSRC}/contrib/slapd-modules/smbk5pwd && \
+		${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_FLAGS} ${MAKEFILE} \
+		${MAKE_ARGS} prefix="${PREFIX}" install)
 	${RM} ${STAGEDIR}${PREFIX}/libexec/openldap/smbk5pwd.a
 .endif
 .if ${PORT_OPTIONS:MSHA2}
-	@(cd ${WRKSRC}/contrib/slapd-modules/passwd/sha2 && ${SETENV} ${MAKE_ENV} \
-		${MAKE_CMD} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} install)
+	@(cd ${WRKSRC}/contrib/slapd-modules/passwd/sha2 && \
+		${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_FLAGS} ${MAKEFILE} \
+		${MAKE_ARGS} prefix="${PREFIX}" install)
 	${RM} ${STAGEDIR}${PREFIX}/libexec/openldap/pw-sha2.a
 .endif
 .if ${PORT_OPTIONS:MDYNAMIC_BACKENDS} || ${PORT_OPTIONS:MSMBPWD} || ${PORT_OPTIONS:MSHA2}
