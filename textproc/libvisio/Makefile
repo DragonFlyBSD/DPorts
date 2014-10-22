@@ -2,9 +2,9 @@
 
 PORTNAME=	libvisio
 PORTVERSION=	0.0.31
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	textproc devel
-MASTER_SITES=	http://dev-www.libreoffice.org/src/
+MASTER_SITES=	LODEV
 
 MAINTAINER=	office@FreeBSD.org
 COMMENT=	Library and tools for parsing the visio file format structure
@@ -22,12 +22,10 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 USE_PERL5=	build
-USES=		gmake libtool pathfix perl5 pkgconfig tar:xz
+USES=		gmake gperf libtool pathfix perl5 pkgconfig tar:xz
 INSTALL_TARGET=	install-strip
 
-.include <bsd.port.pre.mk>
+post-stage:
+	@${RM} -f ${STAGEDIR}${PREFIX}/bin/vs*
 
-BUILD_DEPENDS+=	${LOCALBASE}/bin/gperf:${PORTSDIR}/devel/gperf
-CONFIGURE_ENV+=	GPERF=${LOCALBASE}/bin/gperf
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
