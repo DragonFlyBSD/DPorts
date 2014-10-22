@@ -1,6 +1,3 @@
-BUILD_DEPENDS+= ${LOCALBASE}/bin/gperf:${PORTSDIR}/devel/gperf
-MAKE_ARGS+= GPERF=${PREFIX}/bin/gperf
-
 pre-configure:
 	${MKDIR} ${WRKSRC}/trans
 	${REINPLACE_CMD} -e 's|sed -r|sed -E|g' \
