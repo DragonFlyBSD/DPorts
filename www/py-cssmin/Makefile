@@ -1,17 +1,15 @@
 # $FreeBSD$
 
 PORTNAME=	cssmin
-PORTVERSION=	0.1.4
-PORTREVISION=	1
+PORTVERSION=	0.2.0
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	loader@freebsdmall.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Python port of the YUI CSS compression algorithm
 
-USE_PYTHON=	yes
-USE_PYDISTUTILS=	yes
-PYDISTUTILS_AUTOPLIST=	yes
+USES=		python
+USE_PYTHON=	autoplist distutils
 
 .include <bsd.port.mk>
