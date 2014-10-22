@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net-mgmt/xymon-server/files/xymon-server.in 346221 2014-02-26 18:09:20Z feld $
+# $FreeBSD: head/net-mgmt/xymon-server/files/xymon-server.in 370391 2014-10-07 19:43:33Z feld $
 #
 
 # PROVIDE: xymon_server
@@ -27,6 +27,12 @@ xymon_prestart()
 	if [ ! -d /var/log/xymon ]; then
 		install -d -o xymon /var/log/xymon
 	fi
+
+	for i in critical.cfg critical.cfg.bak ; do
+		if [ ! -f ${i} ]; then
+			install -o xymon -g xymon /dev/null %%WWWDIR%%/server/etc/${i} ;
+		fi
+	done
 }
 
 run_rc_command "$1"
