@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	redis
-DISTVERSION=	3.0.0-beta8
+DISTVERSION=	3.0.0-rc1
 CATEGORIES=	databases
 MASTER_SITES=	https://github.com/antirez/redis/archive/
 PKGNAMESUFFIX=	-devel
@@ -93,6 +93,9 @@ do-install:
 	${INSTALL_PROGRAM} ${BIN_FILES:C!^!${WRKSRC}/src/!} ${STAGEDIR}${PREFIX}/bin/
 	${INSTALL_DATA} ${WRKDIR}/redis.conf ${STAGEDIR}${PREFIX}/etc/redis.conf.sample
 	${INSTALL_DATA} ${WRKSRC}/sentinel.conf ${STAGEDIR}${PREFIX}/etc/sentinel.conf.sample
+	${MKDIR} ${STAGEDIR}${REDIS_LOGDIR} \
+		${STAGEDIR}${REDIS_DBDIR} \
+		${STAGEDIR}${REDIS_RUNDIR}
 
 regression-test: build
 	@cd ${WRKSRC} && ${TCLSH} tests/test_helper.tcl

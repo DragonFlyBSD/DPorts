@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/databases/redis-devel/files/redis.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/databases/redis-devel/files/redis.in 369898 2014-10-03 13:27:09Z gahr $
 #
 
 # PROVIDE: redis
@@ -16,7 +16,7 @@
 . /etc/rc.subr
 
 name="redis"
-rcvar=`set_rcvar`
+rcvar="${name}_enable"
 
 extra_commands="reload"
 
