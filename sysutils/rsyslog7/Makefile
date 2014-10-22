@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	rsyslog
-PORTVERSION=	7.6.6
+PORTVERSION=	7.6.7
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.rsyslog.com/files/download/rsyslog/
 
@@ -35,7 +35,7 @@ RFC3195_DESC=	RFC3195 input support for rsyslog
 SNMP_DESC=	SNMP trap sender for rsyslog
 UUID_DESC=	Support for generating a UUID per log message
 
-USES=		libtool pkgconfig
+USES=		alias libtool pkgconfig
 
 .include <bsd.port.options.mk>
 
