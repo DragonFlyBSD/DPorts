@@ -1,6 +1,6 @@
 #!/bin/csh
 #
-# $FreeBSD: head/devel/opengrok/files/opengrok.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/devel/opengrok/files/opengrok.in 370625 2014-10-11 07:28:56Z marino $
 
 set JAVA = "%%LOCALBASE%%/bin/java"
 set LIBFILES = "%%LIBFILES%%"
@@ -12,4 +12,4 @@ else
 	set CLASSPATH = ""
 endif
 
-exec "${JAVA}" -cp "${CLASSPATH}" -jar %%JARFILE%% -c %%LOCALBASE%%/bin/exctags $*
+exec "${JAVA}" -cp "${CLASSPATH}" -jar %%JARFILE%% -c %%LOCALBASE%%/bin/exctags -w opengrok $*
