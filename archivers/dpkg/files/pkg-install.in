@@ -1,0 +1,17 @@
+#!/bin/sh
+# $FreeBSD: head/archivers/dpkg/files/pkg-install.in 340719 2014-01-22 15:52:06Z mat $
+
+LOCALBASE="%%LOCALBASE%%"
+DPKGDIR="%%DPKGDIR%%"
+
+case $2 in
+POST-INSTALL)
+	if [ -d ${LOCALBASE}/var/dpkg -a ${LOCALBASE}/var/dpkg != ${DPKGDIR} ]; then
+		echo ""
+		echo "If you wish to keep the databases from a previous dpkg"
+		echo "installation, move the contents of ${LOCALBASE}/var/dpkg"
+		echo "to ${DPKGDIR}."
+		echo ""
+	fi
+	;;
+esac

@@ -1,0 +1,17 @@
+#!/bin/sh
+# $FreeBSD: head/archivers/dpkg/files/pkg-deinstall.in 340719 2014-01-22 15:52:06Z mat $
+
+DPKGDIR="%%DPKGDIR%%"
+
+case $2 in
+DEINSTALL)
+	# Delete available, diversions, statoverride, and status in ${DPKGDIR} 
+	# if they are empty files.
+	for file in available diversions statoverride status; do
+		path=${DPKGDIR}/$file
+		if [ -e $path -a ! -s $path ]; then
+			rm -f $path
+		fi
+	done
+	;;
+esac
