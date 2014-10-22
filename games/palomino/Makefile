@@ -16,10 +16,11 @@ MAINTAINER=	games@FreeBSD.org
 COMMENT=	Action flight simulation computer program using OSG
 
 LICENSE=	GPLv2
+LICENSE_FILE=	${WRKSRC}/LICENSE_GNU_GPL_2.txt
 
 LIB_DEPENDS=	libosg.so:${PORTSDIR}/graphics/osg
 
-USES=		cmake tar:xz lua:51
+USES=		alias cmake lua:51 tar:xz
 USE_GL=		gl
 
 MISC_VER=	20091027
