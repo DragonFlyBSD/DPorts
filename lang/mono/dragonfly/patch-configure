@@ -1,6 +1,6 @@
---- configure.orig	2013-08-25 14:42:14.669977000 +0000
+--- configure.orig	2014-10-23 00:53:41.102814000 +0000
 +++ configure
-@@ -3845,7 +3845,7 @@ $as_echo "#define PLATFORM_NO_SYMLINKS 1
+@@ -4027,7 +4027,7 @@ $as_echo "#define PLATFORM_NO_SYMLINKS 1
  		mono_cv_clang=no
  		if test "x$cross_compiling" = "xno"; then
  			target_win32=yes
@@ -9,7 +9,7 @@
  
  $as_echo "#define TARGET_WIN32 1" >>confdefs.h
  
-@@ -3902,7 +3902,7 @@ $as_echo "#define MINGW_CROSS_COMPILE 1"
+@@ -4080,7 +4080,7 @@ $as_echo "#define MINGW_CROSS_COMPILE 1"
  		with_sigaltstack=no
  		use_sigposix=yes
  		;;
@@ -18,7 +18,7 @@
  		host_win32=no
  		if test "x$PTHREAD_CFLAGS" = "x"; then
  			CPPFLAGS="$CPPFLAGS -DGC_FREEBSD_THREADS"
-@@ -3918,7 +3918,8 @@ $as_echo "#define MINGW_CROSS_COMPILE 1"
+@@ -4096,7 +4096,8 @@ $as_echo "#define MINGW_CROSS_COMPILE 1"
  			LDFLAGS="$LDFLAGS $PTHREAD_LIBS -L/usr/local/lib"
  			libmono_ldflags="$PTHREAD_LIBS"
  		fi
@@ -28,8 +28,8 @@
  		need_link_unlink=yes
  
  $as_echo "#define PTHREAD_POINTER_ID 1" >>confdefs.h
-@@ -16999,6 +17000,9 @@ i?86-*-linux*|x86_64-*-linux*|powerpc-*-
- |amd64-*-freebsd*|i?86-*-freebsd*|ia64-*-freebsd*|arm*-*-linux*|sparc*-*-linux*|mips*-*-linux*|x86_64-apple-darwin*)
+@@ -17270,6 +17271,9 @@ i?86-*-linux*|i?86-apple-darwin*|x86_64-
+ |amd64-*-freebsd*|i?86-*-freebsd*|ia64-*-freebsd*|arm*-*-linux*|sparc*-*-linux*|mips*-*-linux*|x86_64-apple-darwin*|aarch64*)
      pic_options='-fPIC'
      ;;
 +*-*-dragonfly*)
@@ -38,27 +38,27 @@
  ?86-pc-cygwin*|i?86-pc-cygwin*)
      pic_options='-DDLL_EXPORT'
      ;;
-@@ -24638,6 +24642,9 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -25108,6 +25112,9 @@ rm -f core conftest.err conftest.$ac_obj
  			sgen_supported=true
  			AOT_SUPPORTED="yes"
  			;;
 +		  dragonfly*)
-+		  	sggen_supported=true
-+		  	;;
- 		  darwin*|openbsd*|freebsd*)
++			sgen_supported=true
++		        ;;
+ 		  openbsd*|freebsd*|kfreebsd-gnu*)
  			sgen_supported=true
  		        ;;
-@@ -24658,6 +24665,9 @@ $as_echo "#define __mono_ilp32__ 1" >>co
+@@ -25132,6 +25139,9 @@ $as_echo "#define __mono_ilp32__ 1" >>co
  			sgen_supported=true
  			AOT_SUPPORTED="yes"
  			;;
 +		  dragonfly*)
-+		  	sgen_supported=true
-+		  	;;
- 		  darwin*|openbsd*|freebsd*)
++			sgen_supported=true
++			;;
+ 		  openbsd*|freebsd*|kfreebsd-gnu*)
  			sgen_supported=true
  			;;
-@@ -25146,7 +25156,7 @@ case "$host" in
+@@ -25669,7 +25679,7 @@ case "$host" in
  	SQLITE="libsqlite.so"
  	SQLITE3="libsqlite3.so"
  	;;
