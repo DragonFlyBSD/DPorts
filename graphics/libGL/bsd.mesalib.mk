@@ -21,6 +21,7 @@ WITH_NEW_MESA=1
 .endif
 
 .if ${OPSYS} == DragonFly && ${DFLYVERSION} >= 300901
+DFLY_PATCHDIR=		${MASTERDIR}/dragonfly
 WITH_NEW_MESA=1
 .endif
 
@@ -84,7 +85,6 @@ CONFIGURE_ARGS+=	--disable-dri3
 .else
 PATCHDIR=		${MASTERDIR}/files-old
 .endif
-DFLY_PATCHDIR=		${MASTERDIR}/dragonfly
 DESCR=			${.CURDIR}/pkg-descr
 PLIST=			${.CURDIR}/pkg-plist
 WRKSRC=			${WRKDIR}/Mesa-${MESADISTVERSION}
