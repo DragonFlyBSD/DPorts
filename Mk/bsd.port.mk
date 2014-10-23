@@ -2057,7 +2057,7 @@ DISTINFO_FILE?=		${MASTERDIR}/distinfo
 MAKE_FLAGS?=	-f
 MAKEFILE?=		Makefile
 MAKE_CMD?=		/usr/bin/make
-PLIST_SUB+=		PROFILE="@comment "
+PLIST_SUB:=		${PLIST_SUB:NPROFILE=*} PROFILE="@comment "
 MAKE_ENV+=		PREFIX=${PREFIX} \
 			LOCALBASE=${LOCALBASE} \
 			LIBDIR="${LIBDIR}" \
