@@ -2,7 +2,6 @@
 
 PORTNAME=	pykdeuic4
 PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	2
 CATEGORIES=	devel kde python
 MASTER_SITES=	KDE/${KDE4_BRANCH}/${PORTVERSION}/src
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -13,10 +12,9 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Enhanced version of pyuic4
 
 USE_KDE4=	kdelibs automoc4 pykde4
-USE_PYTHON=	2
 USE_QT4=	moc_build qmake_build rcc_build uic_build
 DISTINFO_FILE=	${PORTSDIR}/devel/py-pykde4/distinfo
-USES=		cmake:outsource tar:xz
+USES=		cmake:outsource python:2 tar:xz
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/tools/${PORTNAME}
 
