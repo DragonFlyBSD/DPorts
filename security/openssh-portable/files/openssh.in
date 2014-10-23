@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/security/openssh-portable/files/openssh.in 342628 2014-02-05 03:06:08Z bdrewery $
+# $FreeBSD: head/security/openssh-portable/files/openssh.in 369931 2014-10-03 19:23:03Z bdrewery $
 #
 # PROVIDE: openssh
 # REQUIRE: DAEMON
@@ -144,9 +144,14 @@ openssh_check_same_ports(){
         base_sshd_port=22
     fi
 
-    if [ "${self_port}" -ne "${base_sshd_port}" ]; then 
-        return 1
-    fi
+    # self_port and base_sshd_port may have multiple values. Compare them all
+    for sport in ${self_port}; do
+	    for bport in ${base_sshd_port}; do
+		    [ ${sport} -eq ${bport} ] && return 0
+	    done
+    done
+
+    return 1
 }
 
 openssh_configtest()

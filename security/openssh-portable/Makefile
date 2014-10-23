@@ -3,7 +3,7 @@
 
 PORTNAME=	openssh
 DISTVERSION=	6.6p1
-PORTREVISION=	3
+PORTREVISION=	4
 PORTEPOCH=	1
 CATEGORIES=	security ipv6
 MASTER_SITES=	${MASTER_SITE_OPENBSD}
@@ -18,6 +18,7 @@ COMMENT=	The portable version of OpenBSD's OpenSSH
 
 CONFLICTS?=		openssh-3.* ssh-1.* ssh2-3.*
 
+USES=			alias
 USE_AUTOTOOLS=		autoconf autoheader
 USE_OPENSSL=		yes
 GNU_CONFIGURE=		yes
@@ -202,6 +203,9 @@ CONFIGURE_LIBS+=	-lldap
 EMPTYDIR=		/var/empty
 
 .if ${PORT_OPTIONS:MOVERWRITE_BASE}
+# XXX: Mark this BROKEN rather than remove the option to force people to notice for POLA.
+DEPRECATED=		Overwrite-base option/port/pkg will be removed. There is no real need for foot-shooting.
+EXPIRATION_DATE=	2015-01-01
 WITH_OPENSSL_BASE=	yes
 CONFIGURE_ARGS+=	--localstatedir=/var
 PREFIX=			/usr
