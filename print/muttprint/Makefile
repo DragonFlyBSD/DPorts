@@ -7,7 +7,7 @@ PORTREVISION=	10
 CATEGORIES?=	print mail
 MASTER_SITES=	SF/muttprint/muttprint/muttprint-${PORTVERSION}
 
-MAINTAINER?=	ports@FreeBSD.org
+MAINTAINER?=	guru@unixarea.de
 COMMENT?=	Utility to print mail for most any mail client
 
 RUN_DEPENDS=	psnup:${PORTSDIR}/print/psutils \
@@ -17,7 +17,7 @@ RUN_DEPENDS=	psnup:${PORTSDIR}/print/psutils \
 		p5-Text-Iconv>=0:${PORTSDIR}/converters/p5-Text-Iconv
 
 USES=		perl5 gmake
-USE_TEX=	texmf
+USE_TEX=	latex dvipsk
 
 NO_BUILD=	yes
 REINPLACE_ARGS=	-i ""
