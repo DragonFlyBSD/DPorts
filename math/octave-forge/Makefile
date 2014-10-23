@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	octave-forge
-PORTVERSION=	20140219
-PORTREVISION=	2
+PORTVERSION=	20141008
 CATEGORIES=	math
 MASTER_SITES=	#none
 DISTFILES=	#none
@@ -22,12 +21,12 @@ OPTIONS_DEFINE=	ACTUARIAL AD AUDIO BENCHMARK BIM BIOINFO CGI \
 		FINANCIAL FL_CORE FPL FUZZY_LOGIC_TOOLKIT GA GEOMETRY GENERAL \
 		GENERATE_HTML GNUPLOT GSL IDENT IMAGE \
 		INFORMATIONTHEORY INTEGRATION IO IRSA LINEAR_ALGEBRA LSSA \
-		LTFAT MAPPING MECHANICS MISCELLANEOUS MISSING_FUNCTIONS MSH \
+		MAPPING MECHANICS MISCELLANEOUS MISSING_FUNCTIONS MSH \
 		MULTICORE MVN NAN NCARRAY NETCDF NLWING2 NNET NURBS OCS \
 		OCT2MAT OCTCDF OCTCLIP OCTGPR OCTPROJ ODEBVP ODEPKG OPTIM \
 		OPTIMINTERP OUTLIERS PARALLEL PDB PLOT PT_BR QUATERNION \
 		QUEUEING SECS1D SECS2D SECS3D SIGNAL SIMP SOCKETS SPECFUN \
-		SPECIAL_MATRIX SPLINE_GCVSPL SPLINES STATISTICS STRINGS \
+		SPECIAL_MATRIX SPLINE_GCVSPL SPLINES STATISTICS STK STRINGS \
 		STRUCT SYMBAND SYMBOLIC TCL_OCTAVE TSA VIDEO XRAYLIB ZENITY
 
 ACTUARIAL_DESC=		Install package: actuarial
@@ -67,7 +66,8 @@ IO_DESC=		Install package: io
 IRSA_DESC=		Install package: irsa
 LINEAR_ALGEBRA_DESC=	Install package: linear-algebra
 LSSA_DESC=		Install package: lssa
-LTFAT_DESC=		Install package: ltfat
+# Do not reenable without testing first
+#LTFAT_DESC=		Install package: ltfat
 MAPPING_DESC=		Install package: mapping
 MECHANICS_DESC=		Install package: mechanics
 MISCELLANEOUS_DESC=	Install package: miscellaneous
@@ -109,6 +109,7 @@ SPECIAL_MATRIX_DESC=	Install package: special-matrix
 SPLINE_GCVSPL_DESC=	Install package: spline-gcvspl
 SPLINES_DESC=		Install package: splines
 STATISTICS_DESC=	Install package: statistics
+STK_DESC=		Install package: stk
 STRINGS_DESC=		Install package: strings
 STRUCT_DESC=		Install package: struct
 SYMBAND_DESC=		Install package: symband
@@ -234,9 +235,9 @@ RUN_DEPENDS+=	${TARBALLS_DIR}/linear-algebra.tar.gz:${PORTSDIR}/math/octave-forg
 .if ${PORT_OPTIONS:MLSSA}
 RUN_DEPENDS+=	${TARBALLS_DIR}/lssa.tar.gz:${PORTSDIR}/math/octave-forge-lssa
 .endif
-.if ${PORT_OPTIONS:MLTFAT}
-RUN_DEPENDS+=	${TARBALLS_DIR}/ltfat.tar.gz:${PORTSDIR}/math/octave-forge-ltfat
-.endif
+#.if ${PORT_OPTIONS:MLTFAT}
+#RUN_DEPENDS+=	${TARBALLS_DIR}/ltfat.tar.gz:${PORTSDIR}/math/octave-forge-ltfat
+#.endif
 .if ${PORT_OPTIONS:MMAPPING}
 RUN_DEPENDS+=	${TARBALLS_DIR}/mapping.tar.gz:${PORTSDIR}/math/octave-forge-mapping
 .endif
@@ -359,6 +360,9 @@ RUN_DEPENDS+=	${TARBALLS_DIR}/splines.tar.gz:${PORTSDIR}/math/octave-forge-splin
 .endif
 .if ${PORT_OPTIONS:MSTATISTICS}
 RUN_DEPENDS+=	${TARBALLS_DIR}/statistics.tar.gz:${PORTSDIR}/math/octave-forge-statistics
+.endif
+.if ${PORT_OPTIONS:MSTK}
+RUN_DEPENDS+=	${TARBALLS_DIR}/stk.tar.gz:${PORTSDIR}/math/octave-forge-stk
 .endif
 .if ${PORT_OPTIONS:MSTRINGS}
 RUN_DEPENDS+=	${TARBALLS_DIR}/strings.tar.gz:${PORTSDIR}/math/octave-forge-strings
