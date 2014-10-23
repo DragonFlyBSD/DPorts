@@ -14,13 +14,16 @@
  
  /*
   * Processor architecture
-@@ -200,7 +207,8 @@
+@@ -200,6 +207,12 @@
  #define PIPE_OS_ANDROID
  #endif
  
--#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
-+#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) \
-+ || defined(__DragonFly__)
++#if defined(__DragonFly__)
++#define PIPE_OS_DRAGONFLY
++#define PIPE_OS_BSD
++#define PIPE_OS_UNIX
++#endif
++
+ #if defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
  #define PIPE_OS_FREEBSD
  #define PIPE_OS_BSD
- #define PIPE_OS_UNIX
