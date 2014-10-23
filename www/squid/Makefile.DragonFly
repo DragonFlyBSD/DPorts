@@ -1,2 +1,1 @@
-LIB_DEPENDS+=	libkrb5.so:${PORTSDIR}/security/krb5
-CFLAGS+=	-I${LOCALBASE}/include
+CFLAGS+= -I${LOCALBASE}/include
