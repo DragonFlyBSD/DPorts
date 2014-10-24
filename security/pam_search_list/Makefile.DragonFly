@@ -1,2 +1,0 @@
-PLIST_FILES:= ${PLIST_FILES:Nlib/libpam_search_list_p.a}
-MAKE_ARGS+= SHLIB=pam_search_list
