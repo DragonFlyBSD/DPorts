@@ -36,7 +36,7 @@ USES=		desktop-file-utils gmake libtool mono pathfix perl5 \
 		pkgconfig shared-mime-info tar:xz
 USE_PERL5=	build
 GNU_CONFIGURE=	yes
-USE_GNOME=	gtksharp20 gnomesharp20
+USE_GNOME=	gtksharp20 gnomesharp20 gnomedocutils
 USE_GSTREAMER=	cdparanoia
 USE_LDCONFIG=	${PREFIX}/lib/${PORTNAME:C/-.*//}
 USE_XORG=	xrandr xxf86vm
