@@ -2,7 +2,7 @@
 
 PORTNAME=	gssapi
 PORTVERSION=	2.1.26
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	security ipv6
 MASTER_SITES=	ftp://ftp.cyrusimap.org/cyrus-sasl/ \
 		http://cyrusimap.org/releases/
@@ -22,7 +22,7 @@ DISTINFO_FILE=	${CYRUS_SASL2_DIR}/distinfo
 PATCHDIR=	${CYRUS_SASL2_DIR}/files
 INSTALL_WRKSRC=	${WRKSRC}/plugins
 
-USES=		libtool
+USES=		libtool:build
 USE_LDCONFIG=	yes
 USE_OPENSSL=	yes
 GNU_CONFIGURE=	yes
@@ -50,29 +50,21 @@ OPTIONS_SINGLE=		KERBEROS
 OPTIONS_SINGLE_KERBEROS=BASE HEIMDAL MIT
 OPTIONS_DEFAULT=	BASE
 BASE_DESC=		Use Heimdal in base
+BASE_USES=		gssapi
 BASE_CONFIGURE_ENABLE=	gssapi
 HEIMDAL_DESC=		Use Heimdal from ports
-HEIMDAL_CONFIGURE_ON=	--enable-gssapi=${HEIMDAL_HOME} \
+HEIMDAL_USES=		gssapi:heimdal
+HEIMDAL_CONFIGURE_ON=	--enable-gssapi="${GSSAPIBASEDIR}" \
 			--with-gss_impl=heimdal
-HEIMDAL_BUILD_DEPENDS=	${HEIMDAL_HOME}/lib/libgssapi.so:${PORTSDIR}/security/heimdal
-HEIMDAL_RUN_DEPENDS=	${HEIMDAL_BUILD_DEPENDS}
-HEIMDAL_LDFLAGS=	"-Wl,-rpath,${HEIMDAL_HOME}/lib"
 MIT_DESC=		Use MIT Kerberos V5
-MIT_CONFIGURE_ON=	--enable-gssapi=${KRB5_HOME} --with-gss_impl=mit
-MIT_LIB_DEPENDS=	libkrb5support.so:${PORTSDIR}/security/krb5
-MIT_LDFLAGS=		"-Wl,-rpath,${KRB5_HOME}/lib"
+MIT_USES=		gssapi:mit
+MIT_CONFIGURE_ON=	--enable-gssapi="${GSSAPIBASEDIR}" \
+			--with-gss_impl=mit
 
 PLIST_FILES=	lib/sasl2/libgssapiv2.a \
 		lib/sasl2/libgssapiv2.so \
 		lib/sasl2/libgssapiv2.so.3 \
 		lib/sasl2/libgssapiv2.so.3.0.0
-
-.if !defined(HEIMDAL_HOME)
-HEIMDAL_HOME=	${PREFIX}
-.endif
-.if !defined(KRB5_HOME)
-KRB5_HOME=	${PREFIX}
-.endif
 
 .include <bsd.port.pre.mk>
 
@@ -88,6 +80,13 @@ CONFIGURE_ARGS+=--with-openssl=yes
 .else
 CONFIGURE_ARGS+=--with-openssl=${OPENSSLBASE}
 .endif
+
+LIBTOOL=	${LOCALBASE}/bin/libtool
+
+post-patch:
+	@${REINPLACE_CMD} \
+		-e "/^LIBTOOL=/s|\$$(top_builddir)/libtool|${LIBTOOL}|g" \
+		${WRKSRC}/configure
 
 do-build:
 	cd ${WRKSRC}/include && ${MAKE}
