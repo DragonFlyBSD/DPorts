@@ -1,14 +1,13 @@
 
-$FreeBSD: head/net/rabbitmq/files/patch-rabbitmqctl 325310 2013-08-24 20:04:01Z olgeni $
+$FreeBSD: head/net/rabbitmq/files/patch-rabbitmqctl 371353 2014-10-22 10:51:27Z olgeni $
 
 --- scripts/rabbitmqctl.orig
 +++ scripts/rabbitmqctl
-@@ -26,7 +26,7 @@
- 
- ##--- End of overridden <var_name> variables
- 
--exec ${ERL_DIR}erl \
-+HOME=/var/db/rabbitmq exec ${ERL_DIR}erl \
+@@ -27,6 +27,7 @@
+ # (e.g. forget_cluster_node --offline) require us to impersonate the
+ # real node.
+ RABBITMQ_USE_LONGNAME=${RABBITMQ_USE_LONGNAME} \
++HOME=/var/db/rabbitmq \
+ exec ${ERL_DIR}erl \
      -pa "${RABBITMQ_HOME}/ebin" \
      -noinput \
-     -hidden \
