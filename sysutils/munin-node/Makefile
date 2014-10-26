@@ -36,6 +36,7 @@ DISTINFO_FILE=	${MUNIN_DISTINFO}
 EXTRA_PATCHES+=	${MUNIN_PATCHES}
 ALL_TARGET=	build-node build-plugins
 INSTALL_TARGET=	install-node-prime install-plugins-prime
+NO_ARCH=	yes
 
 OPTIONS_DEFINE=	SNMP JAVA
 OPTIONS_DEFAULT=	SNMP
