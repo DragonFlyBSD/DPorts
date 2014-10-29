@@ -29,11 +29,15 @@ MESAVERSION=	${MESABASEVERSION}${MESASUBVERSION:C/^(.)/.\1/}
 MESADISTVERSION=${MESABASEVERSION}${MESASUBVERSION:C/^(.)/-\1/}
 
 .if defined(WITH_NEW_MESA)
-MESABASEVERSION=	10.3.0
+MESABASEVERSION=	10.3.2
 # if there is a subversion, don't include the '-' between 7.11-rc2.
 MESASUBVERSION=	
 
+.if ${MESASUBVERSION} == "" && ${MESABASEVERSION:E} != 0
+MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/${MESABASEVERSION}/
+.else
 MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/${MESABASEVERSION:R}/
+.endif
 PLIST_SUB+=	OLD="@comment " NEW=""
 
 # work around libarchive bug?
@@ -127,6 +131,8 @@ CONFIGURE_ARGS+=--enable-vdpau
 .endif
 
 post-patch:
+	@${REINPLACE_CMD} -e 's,\*freebsd\*),*freebsd*|*dragonfly*),g' \
+		${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|/etc/|${PREFIX}/etc/|g' \
 		${WRKSRC}/src/mesa/drivers/dri/common/xmlconfig.c
 .if !defined(WITH_NEW_MESA)
