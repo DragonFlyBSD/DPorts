@@ -3,41 +3,20 @@ include/searpc-client.h
 include/searpc-server.h
 include/searpc-utils.h
 include/searpc.h
-include/searpc/json-glib/json-builder.h
-include/searpc/json-glib/json-enum-types.h
-include/searpc/json-glib/json-generator.h
-include/searpc/json-glib/json-glib.h
-include/searpc/json-glib/json-gobject.h
-include/searpc/json-glib/json-gvariant.h
-include/searpc/json-glib/json-parser.h
-include/searpc/json-glib/json-path.h
-include/searpc/json-glib/json-reader.h
-include/searpc/json-glib/json-types.h
-include/searpc/json-glib/json-version.h
-lib/libsearpc-json-glib.a
-lib/libsearpc-json-glib.la
-lib/libsearpc-json-glib.so
-lib/libsearpc-json-glib.so.1400
 lib/libsearpc.a
-lib/libsearpc.la
 lib/libsearpc.so
 lib/libsearpc.so.1
-lib/pkgconfig/libsearpc.pc
-lib/%%PYTHON_VERSION%%/site-packages/pysearpc/__init__.py
-lib/%%PYTHON_VERSION%%/site-packages/pysearpc/__init__.pyc
-lib/%%PYTHON_VERSION%%/site-packages/pysearpc/__init__.pyo
-lib/%%PYTHON_VERSION%%/site-packages/pysearpc/client.py
-lib/%%PYTHON_VERSION%%/site-packages/pysearpc/client.pyc
-lib/%%PYTHON_VERSION%%/site-packages/pysearpc/client.pyo
-lib/%%PYTHON_VERSION%%/site-packages/pysearpc/common.py
-lib/%%PYTHON_VERSION%%/site-packages/pysearpc/common.pyc
-lib/%%PYTHON_VERSION%%/site-packages/pysearpc/common.pyo
-lib/%%PYTHON_VERSION%%/site-packages/pysearpc/server.py
-lib/%%PYTHON_VERSION%%/site-packages/pysearpc/server.pyc
-lib/%%PYTHON_VERSION%%/site-packages/pysearpc/server.pyo
-@dirrm include/searpc/json-glib
-@dirrm include/searpc
-@dirrm lib/pkgconfig
-@dirrm lib/%%PYTHON_VERSION%%/site-packages/pysearpc
-@dirrm lib/%%PYTHON_VERSION%%/site-packages
-@dirrm lib/%%PYTHON_VERSION%%
+lib/libsearpc.so.1.0.2
+%%PYTHON_SITELIBDIR%%/pysearpc/__init__.py
+%%PYTHON_SITELIBDIR%%/pysearpc/__init__.pyc
+%%PYTHON_SITELIBDIR%%/pysearpc/__init__.pyo
+%%PYTHON_SITELIBDIR%%/pysearpc/client.py
+%%PYTHON_SITELIBDIR%%/pysearpc/client.pyc
+%%PYTHON_SITELIBDIR%%/pysearpc/client.pyo
+%%PYTHON_SITELIBDIR%%/pysearpc/common.py
+%%PYTHON_SITELIBDIR%%/pysearpc/common.pyc
+%%PYTHON_SITELIBDIR%%/pysearpc/common.pyo
+%%PYTHON_SITELIBDIR%%/pysearpc/server.py
+%%PYTHON_SITELIBDIR%%/pysearpc/server.pyc
+%%PYTHON_SITELIBDIR%%/pysearpc/server.pyo
+libdata/pkgconfig/libsearpc.pc
