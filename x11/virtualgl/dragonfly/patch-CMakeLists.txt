@@ -1,0 +1,19 @@
+--- CMakeLists.txt.orig	2013-09-27 05:10:02.000000000 +0000
++++ CMakeLists.txt
+@@ -111,7 +111,7 @@ message(STATUS "${BITS}-bit build (${CPU
+ # This ensures that we don't depend on libstdc++ or libgcc
+ if(CMAKE_COMPILER_IS_GNUCXX AND NOT APPLE AND NOT CYGWIN)
+ 	set(DEFAULT_VGL_BUILDSTATIC 1)
+-	if(CMAKE_SYSTEM_NAME MATCHES "FreeBSD")
++	if(CMAKE_SYSTEM_NAME MATCHES "FreeBSD" OR CMAKE_SYSTEM_NAME MATCHES "DragonFly")
+ 		set(DEFAULT_VGL_BUILDSTATIC 0)
+ 	endif()
+ 	option(VGL_BUILDSTATIC
+@@ -250,7 +250,6 @@ endif()
+ include(cmakescripts/FindTurboJPEG.cmake)
+ 
+ if(NOT CMAKE_SYSTEM_NAME MATCHES "FreeBSD")
+-	set(LIBDL dl)
+ endif()
+ 
+ 
