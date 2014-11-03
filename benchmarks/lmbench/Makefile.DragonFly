@@ -1,0 +1,3 @@
+post-patch:
+	${ECHO} "#!${SH}" > ${WRKSRC}/scripts/os
+	${ECHO} "echo ${ARCH}-${OPSYS:tl}${OSREL}" >> ${WRKSRC}/scripts/os
