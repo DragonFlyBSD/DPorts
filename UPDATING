@@ -5,6 +5,15 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20141029:
+  AFFECTS: users of devel/libvirt
+  AUTHOR: jgh@FreeBSD.org
+
+  Application state and resource information has been changed from older
+  path of /usr/local/var to /var. Users are advised to copy over contents
+  of old var directory to new location if they wish to preserve resources
+  from the old setup.
+
 20141019:
   AFFECTS: users of x11/kde4-runtime
   AUTHOR: kde@FreeBSD.org
@@ -1798,47 +1807,4 @@ you update your ports collection, before attempting any port upgrades.
   # portupgrade -fr security/libtasn1
     or
   # pkg install -fR security/libtasn1
-
-20131031:
-  AFFECTS: users of multimedia/rtmpdump
-  AUTHOR: hrs@FreeBSD.org
-
-  The library part of multimedia/rtmpdump is split into multimedia/librtmp.
-  multimedia/rtmpdump now depends on the library port.
-
-  A build error can occur if you built and installed old rtmpdump by
-  using stock OpenSSL, and then install security/openssl and try to build
-  multimedia/rtmpdump without deinstalling the installed one.  Please
-  make sure if the old rtmpdump is removed before building the new version.
-
-20131028:
-  AFFECTS: users of comms/dcf77pi
-  AUTHOR: rene@FreeBSD.org
-
-  As of version 1.0.5 the configuration file was renamed from
-  hardware.txt to config.txt and the format has been made more flexible.
-
-  If you have customized any parameters, be sure to copy them to
-  config.txt after which hardware.txt can be removed.
-
-20131028:
-  AFFECTS: users of multimedia/ffmpeg1 and multimedia/ffmpeg-devel
-  AUTHOR: wg@FreeBSD.org
-
-  The port ffmpeg was updated, ffmpeg1 and ffmpeg-devel were removed in
-  favor of ffmpeg.
-
-  # portmaster -o multimedia/ffmpeg multimedia/ffmpeg1
-    or
-  # portupgrade -fo multimedia/ffmpeg multimedia/ffmpeg1
-    or
-  # pkg set -o multimedia/ffmpeg1:multimedia/ffmpeg
-
-  and
-
-  # portmaster -o multimedia/ffmpeg multimedia/ffmpeg-devel
-    or
-  # portupgrade -fo multimedia/ffmpeg multimedia/ffmpeg-devel
-    or
-  # pkg set -o multimedia/ffmpeg-devel:multimedia/ffmpeg
 

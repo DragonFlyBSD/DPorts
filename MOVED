@@ -3241,3 +3241,10 @@ audio/mad||2014-10-20|Directly use audio/libmad or audio/madplay
 mail/dspam-devel|mail/dspam|2014-10-20|Merged into mail/dspam
 dns/bind98|dns/bind99|2014-10-21|BIND 9.8 EOL
 dns/powerdns-devel|dns/powerdns|2014-10-24|Older than dns/powerdns and no longer needed
+www/mod_authz_unixgroup|www/mod_authz_unixgroup22|2014-10-26|Reflect Apache version in portsdir
+lang/kroc||2014-10-28|Has expired: Broken for more than 6 months
+net/slirp||2014-10-28|Has expired: Broken for more than 6 months
+www/typo347||2014-10-30|Has expired: Upgrade to www/typo3 or www/typo3-lts
+deskutils/babytrans||2014-10-31|Has expired: Abandonware, dictionaries unavailable
+www/rt38||2014-10-31|Has expired: Has expired: End of Life March 2014
+textproc/libmwaw|textproc/libmwaw03|2014-10-31|Replaced by newer version
