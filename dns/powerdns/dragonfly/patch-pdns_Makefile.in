@@ -1,8 +1,8 @@
---- pdns/Makefile.in.intermediate	2014-05-25 10:59:35.269818000 +0000
+--- pdns/Makefile.in.orig	2014-11-03 08:27:46 UTC
 +++ pdns/Makefile.in
-@@ -950,7 +950,7 @@ misc.cc unix_utility.cc qtype.cc
- pdns_control_LDFLAGS = @THREADFLAGS@
- TESTS_ENVIRONMENT = env BOOST_TEST_LOG_LEVEL=message
+@@ -1172,7 +1172,7 @@ misc.cc unix_utility.cc qtype.cc
+ pdns_control_LDFLAGS = $(THREADFLAGS)
+ @UNIT_TESTS_TRUE@TESTS_ENVIRONMENT = env BOOST_TEST_LOG_LEVEL=message
  build_date = $(shell LC_TIME=C date '+%Y%m%d%H%M%S')
 -build_host = $(shell id -u -n)@$(shell hostname -f)
 +build_host = $(shell id -u -n)@$(shell hostname)
