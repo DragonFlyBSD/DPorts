@@ -53,7 +53,14 @@ post-install:
 
 # TODO: Print a message about the etc directory used for mdns.allow
 # being relative to ${PREFIX}.
-PLIST_FILES=	${INSTALLED_MODULES:C/^/lib\//:C/$/.so/} ${INSTALLED_MODULES:C/^/lib\//:C/$/.so.1/}
+PLIST_FILES=	lib/libnss_mdns.so.2 \
+		lib/libnss_mdns4.so.2 \
+		lib/libnss_mdns6.so.2 \
+		lib/libnss_mdns_minimal.so.2 \
+		lib/libnss_mdns4_minimal.so.2 \
+		lib/libnss_mdns6_minimal.so.2 \
+		lib/nss_mdns.so \
+		lib/nss_mdns_minimal.so
 PORTDOCS=	README README.html
 
 .include <bsd.port.mk>
