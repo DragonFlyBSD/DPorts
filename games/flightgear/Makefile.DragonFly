@@ -1,0 +1,2 @@
+USES+=		alias
+USE_GCC=	4.8+
