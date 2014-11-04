@@ -1,2 +1,1 @@
-USES+= usb
 LDFLAGS+= -lcam -lsbuf -lz -lm
