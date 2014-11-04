@@ -24,11 +24,8 @@ OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.options.mk>
 
-USES+=	usb
-.if ${OPSYS} == DragonFly && ${DFLYVERSION} > 300702
 CONFIGURE_ENV+=	LIBUSB_CFLAGS="-I/usr/include" \
 		LIBUSB_LIBS="-L/usr/lib -lusb"
-.endif
 
 post-patch:
 	@${REINPLACE_CMD} -i '' \
