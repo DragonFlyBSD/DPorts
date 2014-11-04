@@ -202,7 +202,6 @@ RUN_DEPENDS+=		xdg-open:${PORTSDIR}/devel/xdg-utils
 .endif
 
 .if !defined(CUPS_CLIENT) && !defined(CUPS_IMAGE) && ${PORT_OPTIONS:MLIBUSB}
-USES+=			usb
 CONFIGURE_ARGS+=	--enable-libusb
 .else
 CONFIGURE_ARGS+=	--disable-libusb
