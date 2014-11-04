@@ -1,5 +1,0 @@
-USES+= usb
-
-.if ${DFLYVERSION} < 300703
-.undef EXTRA_PATCHES
-.endif
