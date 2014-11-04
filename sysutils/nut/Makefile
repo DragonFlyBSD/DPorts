@@ -87,9 +87,6 @@ PLIST_SUB+=	NUT_SERIAL="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MUSB}
-.if ${OPSYS} == DragonFly
-USES+=		usb
-.endif
 #EXTRA_PATCHES=	${FILESDIR}/extra-patch-m4_nut_check_libusb.m4
 CONFIGURE_ARGS+=	--with-usb=auto
 PLIST_SUB+=	NUT_USB=""
