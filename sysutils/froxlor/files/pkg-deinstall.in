@@ -1,0 +1,23 @@
+#!/bin/sh
+# $FreeBSD: head/sysutils/froxlor/files/pkg-deinstall.in 351896 2014-04-23 01:03:16Z amdmi3 $
+
+if [ "$2" != "POST-DEINSTALL" ]; then
+	exit 0
+fi
+
+if [ -d %%WWWDIR%% ]; then
+	wf=`find %%WWWDIR%% -not -type d | wc -l`
+
+	if [ $wf -ne 0 ]; then
+		echo ""
+		echo "-------------------------------------------------------"
+		echo "Run the following command, if you plan to permanently"
+		echo "remove froxlor:"
+		echo ""
+		echo "  rm -rf %%WWWDIR%%"
+		echo "-------------------------------------------------------"
+		echo ""
+	fi
+fi
+
+exit 0
