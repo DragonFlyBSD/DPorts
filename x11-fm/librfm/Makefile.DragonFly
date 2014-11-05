@@ -1,1 +1,2 @@
-CONFIGURE_ARGS+= --with-pkglibdata
+CONFIGURE_ARGS+=	--with-pkglibdata
+MAKE_JOBS_UNSAFE=	yes
