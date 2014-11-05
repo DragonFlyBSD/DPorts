@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$FreeBSD: head/mail/postfix-current/files/pkg-install.in 361693 2014-07-13 16:24:44Z sahil $
+#	$FreeBSD: head/mail/postfix-current/files/pkg-install.in 372089 2014-11-02 21:09:26Z ohauer $
 #
 
 # If the POSTFIX_DEFAULT_MTA environment variable is set to YES, it
@@ -66,7 +66,6 @@ if [ "$2" = "POST-INSTALL" ]; then
 	done
 
         cmp ${DAEMONDIR}/main.cf.proto ${ETCDIR}/main.cf >/dev/null 2>&1 \
-	 && POSTARG="set-permissions" \
 	 || POSTARG="upgrade-package"
 
 	/bin/sh ${DAEMONDIR}/post-install tempdir=/tmp \
@@ -74,7 +73,7 @@ if [ "$2" = "POST-INSTALL" ]; then
 	 html_directory=${READMEDIR} \
 	 readme_directory=${READMEDIR} \
  	 meta_directory=${DAEMONDIR} \
-	 ${POSTARG}
+	 set-permissions ${POSTARG}
 fi
 
 if [ "$2" = "POST-INSTALL" -a -z "${PACKAGE_BUILDING}" -a -f "${MC}" ]; then
