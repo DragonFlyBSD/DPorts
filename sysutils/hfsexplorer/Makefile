@@ -21,7 +21,7 @@ DESKTOP_ENTRIES="hfsexplorer" "reader Mac-formatted harddisk" \
 
 USES=		zip
 USE_JAVA=	yes
-JAVA_VERSION=	1.6
+JAVA_VERSION=	1.6+
 OPTIONS_DEFINE= DOCS
 WRKSRC=		${WRKDIR}
 
