@@ -21,6 +21,7 @@ NEED_JAVAC=	yes
 GNU_CONFIGURE=	yes
 USES=		gmake
 MAKE_JOBS_UNSAFE=	yes
+BROKEN=		has not built in several weeks
 
 GETOPT_JAR=	${JAVALIBDIR}/java-getopt.jar
 CLASSLIB=	${JAVA_CLASSES}:${GETOPT_JAR}

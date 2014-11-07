@@ -1,2 +1,3 @@
+BROKEN= does not build with new version of libGL
 USES+= execinfo
 CFLAGS+= -D__FreeBSD__=9

@@ -19,6 +19,7 @@ OPTIONS_DEFINE=	DOCS EXAMPLES
 USES=		perl5
 USE_PERL5=	build
 MAKE_ENV=	SUBPRJ_DFLT="${SUBPRJ_DFLT}"
+BROKEN=		has not built in several weeks
 
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
