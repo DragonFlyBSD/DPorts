@@ -1,4 +1,0 @@
-MANUAL_PACKAGE_BUILD= huge
-.if defined(DPORTS_BUILDER)
-.undef MANUAL_PACKAGE_BUILD
-.endif
