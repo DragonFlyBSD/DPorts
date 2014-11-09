@@ -5,6 +5,16 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20141109:
+  AFFECTS: users of multimedia/mediabrowser
+  AUTHOR: woodsb02@gmail.com
+
+  The default MediaBrowser database/configuration/logs/media metadata
+  storage directory has moved from /usr/local/mediabrowser to
+  /var/db/mediabrowser. Users are advised either to move the contents of
+  the old directory to the new location, or to add a mediabrowser_data_dir
+  entry to /etc/rc.conf.
+
 20141029:
   AFFECTS: users of devel/libvirt
   AUTHOR: jgh@FreeBSD.org
@@ -1793,18 +1803,4 @@ you update your ports collection, before attempting any port upgrades.
   enabled by default, but still supported.  No other changes should
   affect those users, and updating without changing already set options
   will keep the system in the same state.
-
-20131103:
-  AFFECTS: users of security/libtasn1 and any port that depends on it
-  AUTHOR: novel@FreeBSD.org
-
-  libtasn1 has been updated to 3.3 and all shared libraries versions have
-  been bumped. So you need to rebuild all applications that depend on
-  libtasn1.
-
-  # portmaster -r libtasn1
-    or
-  # portupgrade -fr security/libtasn1
-    or
-  # pkg install -fR security/libtasn1
 
