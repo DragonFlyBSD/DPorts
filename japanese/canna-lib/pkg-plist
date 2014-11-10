@@ -1,4 +1,3 @@
-@comment $FreeBSD: head/japanese/canna-lib/pkg-plist 355055 2014-05-24 17:14:56Z hrs $
 include/canna/RK.h
 include/canna/jrkanji.h
 include/canna/keydef.h
