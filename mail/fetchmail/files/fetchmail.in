@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/mail/fetchmail/files/fetchmail.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/mail/fetchmail/files/fetchmail.in 372129 2014-11-04 00:24:44Z mandree $
 #
 
 # PROVIDE: fetchmail
@@ -54,7 +54,7 @@
 #
 # In any case, you will need a working fetchmailrc file. Please consult
 # the man page fetchmail(1), the documentation in %%PREFIX%%/share/doc/fetchmail/
-# and/or the material found at http://fetchmail.berlios.de/.
+# and/or the material found at <http://www.fetchmail.info/>.
 
 . /etc/rc.subr
 
