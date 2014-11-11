@@ -1,0 +1,42 @@
+#!/bin/sh
+
+# $FreeBSD$
+#
+# PROVIDE: %%PORTNAME%%
+# REQUIRE: LOGIN
+# KEYWORD: shutdown
+#
+# Add the following lines to /etc/rc.conf.local or /etc/rc.conf
+# to enable this service:
+#
+# %%PORTNAME%%_enable:	Set to YES to enable %%PORTNAME%%
+#			Default: NO
+# %%PORTNAME%%_data_dir:	Directory where %%PORTNAME%% configuration
+#			data is stored.
+#			Default: /var/db/%%PORTNAME%%
+
+. /etc/rc.subr
+name=%%PORTNAME%%
+rcvar=${name}_enable
+load_rc_config $name
+
+: ${%%PORTNAME%%_enable:="NO"}
+: ${%%PORTNAME%%_data_dir:="/var/db/%%PORTNAME%%"}
+
+pidfile="/var/run/%%PORTNAME%%.pid"
+command="/usr/sbin/daemon"
+procname="%%LOCALBASE%%/bin/mono"
+command_args="-f -u %%USER%% -p ${pidfile} ${procname} %%PREFIX%%/lib/mediabrowser/MediaBrowser.Server.Mono.exe -ffmpeg %%LOCALBASE%%/bin/ffmpeg -ffprobe %%LOCALBASE%%/bin/ffprobe -programdata ${%%PORTNAME%%_data_dir}"
+
+start_precmd=mediabrowser_precmd
+mediabrowser_precmd()
+{
+	export LC_ALL="C"
+	export LANG="C"
+
+	if [ ! -d "${%%PORTNAME%%_data_dir}" ]; then
+		install -d -g %%GROUP%% -o %%GROUP%% "${%%PORTNAME%%_data_dir}";
+	fi
+}
+
+run_rc_command "$1"
