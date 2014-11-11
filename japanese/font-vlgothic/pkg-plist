@@ -1,4 +1,3 @@
-@comment $FreeBSD: head/japanese/font-vlgothic/pkg-plist 355060 2014-05-24 17:31:34Z hrs $
 %%DATADIR%%/VL-PGothic-Regular.ttf
 %%DATADIR%%/VL-Gothic-Regular.ttf
 @dirrm %%DATADIR%%
