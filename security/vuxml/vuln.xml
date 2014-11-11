@@ -28,7 +28,7 @@ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION,
 EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-  $FreeBSD: head/security/vuxml/vuln.xml 371856 2014-10-31 15:38:00Z rea $
+  $FreeBSD: head/security/vuxml/vuln.xml 372299 2014-11-07 22:07:54Z rea $
 
 
 QUICK GUIDE TO ADDING A NEW ENTRY
@@ -57,6 +57,66 @@ Notes:
 
 -->
 <vuxml xmlns="http://www.vuxml.org/apps/vuxml-1">
+  <vuln vid="ee7b4f9d-66c8-11e4-9ae1-e8e0b722a85e">
+    <topic>wget -- path traversal vulnerability in recursive FTP mode</topic>
+    <affects>
+      <package>
+	<name>wget</name>
+	<range><lt>1.16</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>MITRE reports:</p>
+	<blockquote cite="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4877">
+	  <p>Absolute path traversal vulnerability in GNU Wget before
+	  1.16, when recursion is enabled, allows remote FTP servers
+	  to write to arbitrary files, and consequently execute
+	  arbitrary code, via a LIST response that references the same
+	  filename within two entries, one of which indicates that the
+	  filename is for a symlink. </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-4877</cvename>
+      <certvu>685996</certvu>
+    </references>
+    <dates>
+      <discovery>2014-10-27</discovery>
+      <entry>2014-11-08</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="0167f5ad-64ea-11e4-98c1-00269ee29e57">
+    <topic>Konversation -- out-of-bounds read on a heap-allocated array</topic>
+    <affects>
+      <package>
+	<name>konversation</name>
+	<range><lt>1.5.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Konversation developers report:</p>
+	<blockquote cite="https://www.kde.org/info/security/advisory-20141104-1.txt">
+	  <p>Konversation's Blowfish ECB encryption support assumes incoming blocks
+	  to be the expected 12 bytes. The lack of a sanity-check for the actual
+	  size can cause a denial of service and an information leak to the local
+	  user.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-8483</cvename>
+      <url>https://www.kde.org/info/security/advisory-20141104-1.txt</url>
+    </references>
+    <dates>
+      <discovery>2014-11-04</discovery>
+      <entry>2014-11-05</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="21ce1840-6107-11e4-9e84-0022156e8794">
     <topic>twiki -- remote Perl code execution</topic>
     <affects>
