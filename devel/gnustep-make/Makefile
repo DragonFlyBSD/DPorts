@@ -24,7 +24,6 @@ CONFIGURE_ARGS+=	--with-layout=gnustep
 CONFIGURE_ARGS+=	--enable-objc-nonfragile-abi --enable-native-objc-exceptions
 LDFLAGS+=	-L${LOCALBASE}/lib
 GNU_CONFIGURE_PREFIX=	${GNUSTEP_PREFIX}
-LIB_DEPENDS+=		libobjc.so:${PORTSDIR}/lang/libobjc2
 
 post-patch:
 	${REINPLACE_CMD} -e 's|/usr/local/|${LOCALBASE}/|' \
