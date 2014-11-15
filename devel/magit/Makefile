@@ -16,6 +16,7 @@ COMMENT=	Interface to Git for Emacs
 LICENSE=	GFDL GPLv3
 LICENSE_COMB=	multi
 
+BROKEN=		Will not build with latest emacs
 USES=		gmake
 USE_EMACS=	YES
 INFO=		magit

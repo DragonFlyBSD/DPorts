@@ -18,6 +18,7 @@ BUILD_DEPENDS+=	tla:${PORTSDIR}/devel/tla \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_EMACS=	yes
+BROKEN=		Will not build with latest emacs
 
 LISPDIR=	${STAGEDIR}${PREFIX}/${EMACS_VERSION_SITE_LISPDIR}/${PORTNAME}
 

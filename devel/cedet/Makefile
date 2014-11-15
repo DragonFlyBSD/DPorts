@@ -16,6 +16,7 @@ LICENSE=	GPLv2
 USE_EMACS=		yes
 USES=			gmake makeinfo
 MAKE_JOBS_UNSAFE=	yes
+BROKEN=			Will not build with latest emacs
 
 CEDET_LISPDIR=	${STAGEDIR}${PREFIX}/${EMACS_VERSION_SITE_LISPDIR}/${PORTNAME}
 

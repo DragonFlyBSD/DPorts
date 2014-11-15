@@ -14,6 +14,7 @@ COMMENT=	2ch.net and 2ch-like BBS navigator for Emacsen
 
 LICENSE=	GPLv2
 
+BROKEN=		Will not build with latest emacs
 USE_EMACS=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	EMACS="${EMACS_CMD}"
