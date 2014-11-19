@@ -5,6 +5,36 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20141119:
+  AFFECTS: users of x11/gnome2, graphics/clutter and lang/vala
+  AUTHOR: kwm@FreeBSD.org
+
+  GNOME 3.14 was imported. Because this is a big change some manual help is
+  needed. Please use the following instructions to update.
+
+  Delete the old and conflicting packages:
+  # pkg delete clutter gnome-utils gnome-panel gnome-keyring vala-vapigen \
+      guile gcalctool gnome-media libgnomekbd
+  # pkg delete gnome-screensaver gnome-applets bug-buddy \
+      evolution-exchange evolution-webcal gnome-system-tools \
+      seahorse-plugins gnome-control-center
+
+  For package users the following lines will be enough:
+  # pkg upgrade
+  # pkg install gnome3
+
+  For ports users should do the following:
+  # portmaster -a
+  # portmaster x11/gnome3
+
+20141117:
+  AFFECTS: users of security/openssh-portable
+  AUTHOR: bdrewery@FreeBSD.org
+
+  Most of the optional patches for OpenSSH do not apply to the 6.7 update yet.
+  The 6.6 version has been copied to security/openssh-portable66 if you require
+  the use of one of the optional ports.
+
 20141109:
   AFFECTS: users of multimedia/mediabrowser
   AUTHOR: woodsb02@gmail.com
@@ -1769,38 +1799,4 @@ you update your ports collection, before attempting any port upgrades.
   Note: The installed Perl package was named perl and is now named perl5, if
 	you have not updated your installation in a long time, you may need to
 	use "perl-" here.
-
-20131112:
-  AFFECTS: users of dns/nsd
-  AUTHOR: erwin@FreeBSD.org
-
-  dns/nsd was updated to the new 4.0.0 major release.
-
-  This version replaces the nsdc control program with nsd-control.
-  This requires some manual setup with nsd-control-setup and editing
-  of the config files. nsd-control is incompatible with nsdc so when
-  that is used in scripts, these should be adapted.  More information:
-  http://www.nlnetlabs.nl/svn/nsd/tags/NSD_4_0_0_REL/doc/NSD-4-features
-
-  NSD version 3 is still supported in dns/nsd3.  To keep the old
-  version:
-  # portmaster -o dns/nsd3 dns/nsd
-    or
-  # portupgrade -fo dns/nsd3 dns/nsd
-    or
-  # pkg set -o dns/nsd:dns/nsd3
-
-20131112:
-  AFFECTS: users of dns/bind9*
-  AUTHOR: erwin@FreeBSD.org
-
-  All bind9 ports have been updated to support FreeBSD 10.x after
-  BIND was removed from the base system.  It is now self-contained
-  in ${PREFIX}/etc/namedb, and chroot and symlinking options are
-  no longer supported out of the box.
-
-  For users of FreeBSD 9.x and earlier, the LINKS option is no longer
-  enabled by default, but still supported.  No other changes should
-  affect those users, and updating without changing already set options
-  will keep the system in the same state.
 
