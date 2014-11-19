@@ -1,4 +1,0 @@
-CPPFLAGS+=	-I${LOCALBASE}/include/libelf
-
-LIB_DEPENDS+=	elf:${PORTSDIR}/devel/libelf
-LIB_DEPENDS+=	krb5:${PORTSDIR}/security/krb5
