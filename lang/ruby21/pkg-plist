@@ -12491,6 +12491,7 @@ man/man1/%%RUBY_NAME%%.1.gz
 %%RDOC%%%%RUBY_RIDIR%%/REXML/Document/cdesc-Document.ri
 %%RDOC%%%%RUBY_RIDIR%%/REXML/Document/clone-i.ri
 %%RDOC%%%%RUBY_RIDIR%%/REXML/Document/doctype-i.ri
+%%RDOC%%%%RUBY_RIDIR%%/REXML/Document/document-i.ri
 %%RDOC%%%%RUBY_RIDIR%%/REXML/Document/encoding-i.ri
 %%RDOC%%%%RUBY_RIDIR%%/REXML/Document/entity_expansion_count-i.ri
 %%RDOC%%%%RUBY_RIDIR%%/REXML/Document/entity_expansion_limit%3d-c.ri
@@ -16907,3 +16908,9 @@ man/man1/%%RUBY_NAME%%.1.gz
 %%RDOC%%%%RUBY_RIDIR%%/syntax/page-precedence_rdoc.ri
 %%RDOC%%%%RUBY_RIDIR%%/syntax/page-refinements_rdoc.ri
 %%RDOC%%%%RUBY_RIDIR%%/unknown/cdesc-unknown.ri
+@dir %%RUBY_LIBDIR%%/racc/rdoc
+@dir %%RUBY_SITEARCHLIBDIR%%
+@dir %%RUBY_VENDORARCHLIBDIR%%
+@dir %%RUBY_EXAMPLESDIR%%/curses
+%%RDOC%%@dir %%RUBY_SITERIDIR%%
+%%CAPIDOCS%%@dir %%RUBY_RIDIR%%
