@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net-mgmt/icinga/files/ido2db.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/net-mgmt/icinga/files/ido2db.in 372771 2014-11-19 12:34:49Z lme $
 #
 
 # PROVIDE: ido2db 
@@ -10,7 +10,7 @@
 # Add the following lines to /etc/rc.conf to enable ido2db:
 # ido2db_enable (bool):    Set to "NO" by default.
 #                          Set it to "YES" to enable ido2db.
-# icinga_configfile (str): Set to "%%PREFIX%%/etc/icinga/ido2db.cfg" by default.
+# ido2db_configfile (str): Set to "%%PREFIX%%/etc/icinga/ido2db.cfg" by default.
 
 . /etc/rc.subr
 
