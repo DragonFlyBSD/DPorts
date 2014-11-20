@@ -1,5 +1,7 @@
-replaced roman numeral regular expression to address precedence issue
-https://bitbucket.org/kcartmell/marlowe/issue/1/roman-number-ii-interpreted-as-i
+Replaced roman numeral regular expression to address precedence issue
+
+Issue 1: roman number II interpreted as I
+https://bitbucket.org/kcartmell/marlowe/issue/1/
 
 --- include/roman_numbers.metaflex.orig	2001-10-18 12:34:31.000000000 +0000
 +++ include/roman_numbers.metaflex
