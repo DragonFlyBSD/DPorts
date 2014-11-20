@@ -84,7 +84,7 @@ _USE_GNOME_ALL+= atk atspi cairo desktopfileutils gal2 \
 		libbonoboui libgda4 libglade2 libgnome \
 		libgnomecanvas libgnomedb libgnomekbd libgnomeprint libgnomeprintui \
 		libgnomeui libgsf libgtkhtml libidl librsvg2 libwnck \
-		libxml2 libxslt libzvt linc \
+		libxml2 libxslt linc \
 		orbit2 pango pangox-compat pygnome2 pygobject pygtk2 \
 		pygtksourceview vte
 
@@ -95,7 +95,7 @@ _USE_GNOME_ALL+=dconf evolutiondataserver3 gnomecontrolcenter3 gnomedesktop3 \
 		pygobject3 vte3
 
 # C++ bindings
-_USE_GNOME_ALL+=atkmm cairomm gconfmm gconfmm26 glibmm gtkmm20 gtkmm24 \
+_USE_GNOME_ALL+=atkmm cairomm gconfmm26 glibmm gtkmm20 gtkmm24 \
 		gtkmm30 gtksourceviewmm3 libgdamm libgdamm5 \
 		libgtksourceviewmm libxml++26 libsigc++12 libsigc++20 \
 		pangomm
@@ -147,10 +147,6 @@ cairo_LIB_DEPENDS=	libcairo.so:${PORTSDIR}/graphics/cairo
 cairomm_DETECT=		${LOCALBASE}/libdata/pkgconfig/cairomm-1.0.pc
 cairomm_LIB_DEPENDS=	libcairomm-1.0.so:${PORTSDIR}/graphics/cairomm
 cairomm_USE_GNOME_IMPL=	cairo libxml++26
-
-gconfmm_DETECT=		${LOCALBASE}/libdata/pkgconfig/gconfmm-2.0.pc
-gconfmm_LIB_DEPENDS=	libgconfmm-2.0.so:${PORTSDIR}/devel/gconfmm
-gconfmm_USE_GNOME_IMPL=	gtkmm20 gconf2
 
 gconfmm26_DETECT=		${LOCALBASE}/libdata/pkgconfig/gconfmm-2.6.pc
 gconfmm26_LIB_DEPENDS=		libgconfmm-2.6.so:${PORTSDIR}/devel/gconfmm26
@@ -374,10 +370,6 @@ vte_USE_GNOME_IMPL=	gtk20
 vte3_LIB_DEPENDS=	libvte-2.91.so:${PORTSDIR}/x11-toolkits/vte3
 vte3_DETECT=		${LOCALBASE}/libdata/pkgconfig/vte-2.91.pc
 vte3_USE_GNOME_IMPL=	gtk30
-
-libzvt_LIB_DEPENDS=	libzvt-2.0.so:${PORTSDIR}/x11-toolkits/libzvt
-libzvt_DETECT=	${LOCALBASE}/libdata/pkgconfig/libzvt-2.0.pc
-libzvt_USE_GNOME_IMPL=	gtk20
 
 librsvg2_LIB_DEPENDS=	librsvg-2.so:${PORTSDIR}/graphics/librsvg2
 librsvg2_DETECT=	${LOCALBASE}/libdata/pkgconfig/librsvg-2.0.pc
