@@ -1,16 +1,14 @@
-TODO: Implement for DragonFly
-
---- sysdeps/freebsd/netload.c.intermediate	2014-11-03 08:58:10 UTC
+--- sysdeps/freebsd/netload.c.orig	2014-11-21 12:23:34 UTC
 +++ sysdeps/freebsd/netload.c
-@@ -72,6 +72,7 @@ void
+@@ -67,6 +67,7 @@ void
  glibtop_get_netload_p (glibtop *server, glibtop_netload *buf,
                         const char *interface)
  {
 +#ifndef __DragonFly__ /* TODO */
- 	static struct ifaddrs *ifap, *ifa;
+ 	struct ifaddrs *ifap, *ifa;
  
          glibtop_init_p (server, (1L << GLIBTOP_SYSDEPS_NETLOAD), 0);
-@@ -197,4 +198,5 @@ glibtop_get_netload_p (glibtop *server,
+@@ -192,4 +193,5 @@ glibtop_get_netload_p (glibtop *server,
  	}
  
  	freeifaddrs(ifap);

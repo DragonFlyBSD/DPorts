@@ -1,12 +1,10 @@
---- sysdeps/freebsd/open.c.intermediate	2013-01-11 16:21:23.000000000 +0100
-+++ sysdeps/freebsd/open.c	2013-01-11 16:22:42.000000000 +0100
-@@ -42,5 +42,9 @@
- 	sysctlbyname ("hw.ncpu", &ncpus, &len, NULL, 0);
+--- sysdeps/freebsd/open.c.orig	2014-04-28 21:09:24 UTC
++++ sysdeps/freebsd/open.c
+@@ -43,6 +43,6 @@ glibtop_open_s (glibtop *server, const c
  	server->real_ncpu = ncpus - 1;
  	server->ncpu = MIN(GLIBTOP_NCPU - 1, server->real_ncpu);
-+#ifdef __DragonFly__
+ 
+-	server->os_version_code = __FreeBSD_version;
 +	server->os_version_code = __DragonFly_version;
-+#else
- 	server->os_version_code = __FreeBSD_version;
-+#endif
+ 
  }
