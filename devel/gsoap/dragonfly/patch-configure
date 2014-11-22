@@ -1,0 +1,10 @@
+--- configure.orig	2014-11-22 10:46:52.445555000 +0100
++++ configure		2014-11-22 10:46:28.149993000 +0100
+@@ -5026,6 +5026,7 @@
+ 			SAMPLE_EXTRA_LIBS="-lws2_32 -lkernel32 -luser32 -lgdi32 -lm"
+ 			WSDL2H_EXTRA_LIBS="-lws2_32 -lkernel32 -luser32 -lgdi32 -lm"
+ 			;;
++	*-*-dragonfly*) platform=FREEBSD ;;
+         *-*-freebsd*)   platform=FREEBSD ;;
+         *-*-openbsd*)   platform=OPENBSD ;;
+         *-*-irix*)      platform=IRIX ;;
