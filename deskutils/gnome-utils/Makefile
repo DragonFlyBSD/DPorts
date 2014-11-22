@@ -14,6 +14,7 @@ COMMENT=	GNOME 3 support utilities
 
 RUN_DEPENDS=	baobab>=3.0:${PORTSDIR}/deskutils/baobab \
 		gnome-screenshot>=3.0:${PORTSDIR}/deskutils/gnome-screenshot \
+		gnote>=3.0:${PORTSDIR}/deskutils/gnote \
 		gnome-search-tool>=3.0:${PORTSDIR}/deskutils/gnome-search-tool \
 		gnome-dictionary>=3.0:${PORTSDIR}/deskutils/gnome-dictionary \
 		gnome-system-log>=3.0:${PORTSDIR}/deskutils/gnome-system-log \
@@ -24,7 +25,6 @@ RUN_DEPENDS=	baobab>=3.0:${PORTSDIR}/deskutils/baobab \
 		gnome-maps>=3.0:${PORTSDIR}/deskutils/gnome-maps \
 		gnome-weather>=3.0:${PORTSDIR}/deskutils/gnome-weather
 
-#		gnote>=3.0:${PORTSDIR}/deskutils/gnote \
 #		gnome-contacts>=3.0:${PORTSDIR}/deskutils/gnome-contacts \
 
 NO_BUILD=	yes
