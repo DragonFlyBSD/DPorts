@@ -32,6 +32,7 @@ RUN_DEPENDS?=	dconf-editor:${PORTSDIR}/devel/dconf-editor \
 		${LOCALBASE}/share/hal/fdi/information/10freedesktop/10-camera-ptp.fdi:${PORTSDIR}/sysutils/hal-info \
 		yelp>=3.0.0:${PORTSDIR}/x11/yelp \
 		zenity>=3.0.0:${PORTSDIR}/x11/zenity \
+		seahorse>=3.0.0:${PORTSDIR}/security/seahorse \
 		metacity>=2.34.0:${PORTSDIR}/x11-wm/metacity \
 		gnome-control-center>=3.0.0:${PORTSDIR}/sysutils/gnome-control-center \
 		${LOCALBASE}/share/gnome-background-properties/gnome-backgrounds.xml:${PORTSDIR}/x11-themes/gnome-backgrounds \
@@ -39,8 +40,6 @@ RUN_DEPENDS?=	dconf-editor:${PORTSDIR}/devel/dconf-editor \
 		${LOCALBASE}/share/help/C/gnome-help/index.page:${PORTSDIR}/misc/gnome-user-docs \
 		${LOCALBASE}/share/sounds/freedesktop/index.theme:${PORTSDIR}/audio/freedesktop-sound-theme \
 
-
-#		seahorse>=3.0.0:${PORTSDIR}/security/seahorse \
 #		ekiga:${PORTSDIR}/net-im/ekiga
 
 NO_BUILD=	yes
