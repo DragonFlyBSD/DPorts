@@ -1,4 +1,0 @@
-SHEBANG_FILES+=	plugins/tools/scripts/*.pl \
-		plugins/gbf-mkfile/gbf-mkfile-parse.in \
-		plugins/gbf-am/gbf-am-parse.in \
-		libanjuta/interfaces/anjuta-idl-compiler.pl
