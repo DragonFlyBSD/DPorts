@@ -1,0 +1,2 @@
+post-stage:
+	${RM} ${STAGED}${PREFIX}/man/man7/gnupg.7

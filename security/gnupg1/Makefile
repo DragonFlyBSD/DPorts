@@ -35,6 +35,9 @@ CURL_DESC=	use libcurl for the keyserver interface
 
 .if ${CC} == "clang" || ${OSVERSION} >= 1000024
 CFLAGS:=	${CFLAGS:S/$/ -std=c89/}
+.if (${ARCH} == "i386")
+CFLAGS:=	${CFLAGS:S/$/ -fheinous-gnu-extensions/}
+.endif
 .endif
 
 .if ${PORT_OPTIONS:MLIBICONV}
