@@ -9,6 +9,7 @@ MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Ruby binding for GLib2
 
 RUN_DEPENDS=	rubygem-pkg-config>=0:${PORTSDIR}/devel/rubygem-pkg-config
+BROKEN=		builds forever on DF with new glib
 
 USE_GNOME=	glib20
 USE_RUBY=	yes
