@@ -1,7 +1,6 @@
-# This option expects USB-1
-# Either patch makefile or disable option
-#OPTIONS_EXCLUDE+=	SCDAEMON
-
 # stage changed behavior.  Instead of excluding, set option to off by
 # default until stage can be fixed.
 OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NSCDAEMON}
+
+post-stage:
+	${RM} ${STAGEDIR}${PREFIX}/man/man1/gpg-zip.1
