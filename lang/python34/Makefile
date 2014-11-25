@@ -108,6 +108,9 @@ DISABLED_EXTENSIONS+=	nis
 PLIST_SUB+=	NO_NIS=""
 .endif
 
+post-patch:
+	@${REINPLACE_CMD} -e 's|`uname -r`|"${OSREL}"|g' ${WRKSRC}/configure
+
 post-install:
 .if ! ${PORT_OPTIONS:MDEBUG}
 	${RM} -f ${STAGEDIR}${PREFIX}/lib/libpython3.so						# Upstream Issue: http://bugs.python.org/issue17975
