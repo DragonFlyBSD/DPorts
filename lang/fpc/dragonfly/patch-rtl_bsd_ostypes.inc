@@ -48,24 +48,6 @@
      { Other }
      O_SHLOCK    =   $10;        { Open with shared file lock }
      O_EXLOCK    =   $20;        { Open with exclusive file lock }
-@@ -233,12 +258,12 @@ CONST
- {$endif}
- 
-     { mode_t possible values                                 }
--    S_IRUSR =  %0100000000;     { Read permission for owner   }
--    S_IWUSR =  %0010000000;     { Write permission for owner  }
-+    S_IRUSR =  %1000000000;     { Read permission for owner   }
-+    S_IWUSR =  %0100000000;     { Write permission for owner  }
-     S_IXUSR =  %0001000000;     { Exec  permission for owner  }
--    S_IRGRP =  %0000100000;     { Read permission for group   }
--    S_IWGRP =  %0000010000;     { Write permission for group  }
--    S_IXGRP =  %0000001000;     { Exec permission for group   }
-+    S_IRGRP =  %0001000000;     { Read permission for group   }
-+    S_IWGRP =  %0000100000;     { Write permission for group  }
-+    S_IXGRP =  %0000010000;     { Exec permission for group   }
-     S_IROTH =  %0000000100;     { Read permission for world   }
-     S_IWOTH =  %0000000010;     { Write permission for world  }
-     S_IXOTH =  %0000000001;     { Exec permission for world   }
 @@ -266,6 +291,13 @@ CONST
    F_SetLkW         = 13;          { F_SETLK; wait if blocked }
    F_SetLkRemote    = 14;          { debugging support for remote locks }
