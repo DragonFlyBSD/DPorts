@@ -97,6 +97,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's/disabled_module_list =[^]]*/&, "nis"/' \
 		${WRKSRC}/setup.py
 .endif
+	@${REINPLACE_CMD} -e 's|`uname -r`|"${OSREL}"|g' ${WRKSRC}/configure
 
 post-install:
 .if ! ${PORT_OPTIONS:MDEBUG}
