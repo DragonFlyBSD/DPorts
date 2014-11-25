@@ -117,6 +117,7 @@ post-patch:
 # Since side effects for other modules can't be foreseen, do not fix
 # it on a source level yet.
 	@${CHMOD} a-x ${WRKSRC}/Lib/keyword.py ${WRKSRC}/Lib/token.py
+	@${REINPLACE_CMD} -e 's|`uname -r`|"${OSREL}"|g' ${WRKSRC}/configure
 
 post-install:
 .if !${PORT_OPTIONS:MDEBUG}
