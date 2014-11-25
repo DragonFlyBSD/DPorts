@@ -114,6 +114,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's/disabled_module_list =[^]]*/&, "nis"/' \
 		${WRKSRC}/setup.py
 .endif
+	@${REINPLACE_CMD} -e 's|`uname -r`|"${OSREL}"|g' ${WRKSRC}/configure
 
 post-install:
 	for i in ${STAGEDIR}${PREFIX}/lib/python2.7/lib-dynload/*.so; do \
