@@ -5,6 +5,149 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20141130:
+  AFFECTS: users of devel/gettext (close to everyone)
+  AUTHOR: tijl@FreeBSD.org
+
+  The devel/gettext port has been split up in devel/gettext-runtime, a
+  lightweight package containing runtime libraries, and devel/gettext-tools,
+  a package containing developer tools.  The devel/gettext port still exists
+  as a metaport.
+
+  You must first delete the existing installation of gettext and then
+  reinstall it.  This will break sudo, so you *must* do this in a root
+  shell (sudo -i) if you use sudo.
+
+  # pkg delete -f gettext
+  # portmaster devel/gettext
+
+  Or for portupgrade users:
+
+  # pkg delete -f gettext
+  # portinstall devel/gettext
+
+20141127:
+  AFFECTS: users of lang/perl5.*
+  AUTHOR: mat@FreeBSD.org
+
+  There was a nasty bug introduced in the update below, it was introduced in
+  svn revision 373476 and corrected in 373485.  If you get errors looking like
+  this one:
+
+  ===>   Registering installation for p5-Params-Util-1.07_1 as automatic
+  pkg-static: lstat(/usr/ports/devel/p5-Params-Util/work/stage/usr/local/./usr/local/lib/perl5/site_perl/mach/5.16/auto/Params/Util/.packlist): No such file or directory
+  *** [fake-pkg] Error code 74
+
+  You will have to wipe your ports tree clean.  If using portsnap, with:
+
+    portsnap extract
+
+  If using subversion:
+
+    svn revert -R
+
+20141127:
+  AFFECTS: users of lang/perl5.*
+  AUTHOR: mat@FreeBSD.org
+
+  The .packlist files are back, if you upgraded all your p5- ports yesterday
+  and need them, you will need to reinstall them again, see yesterday's update
+  for instructions.
+
+20141126:
+  AFFECTS: users of multimedia/x264
+  AUTHOR: xmj@FreeBSD.org
+
+  With the recent split of multimedia/x264 in library and binary and library
+  components, if an application that uses libx264 is updated before x264 itself,
+  multimedia/libx264 will conflict with the existing x264 package. Delete
+  this package before continuing any update that depends on it: 
+  
+  # pkg delete -f x264
+  
+  Install the updated x264 and/or upgrade the other applications that
+  depend on libx264, such as ffmpeg.
+
+20141126:
+  AFFECTS: users of lang/perl5.*
+  AUTHOR: mat@FreeBSD.org
+
+  The directories where Perl modules are installed has changed.  All
+  affected ports' PORTREVISION have been bumped, so upgrading should
+  be as painless as possible.  The old directories have been kept in
+  the default Perl @INC to make it even more painless.
+
+  The default Perl has been switched to lang/perl5.18.  These examples
+  are for switching from lang/perl5.16, if you are running a different
+  version, replace lang/perl5.16 with the origin of the Perl you have
+  installed.
+
+  Binary package users:
+
+    # pkg upgrade -f
+
+  Portupgrade users:
+    0) Fix pkgdb.db (for safety):
+        pkgdb -Ff
+
+    1) Reinstall new version of Perl (5.18):
+        portupgrade -o lang/perl5.18 -f lang/perl5.16
+
+    2) Reinstall everything that depends on Perl:
+        portupgrade -fr lang/perl5.18
+
+  Portmaster users:
+        portmaster -o lang/perl5.18 lang/perl5.16
+
+        Conservative:
+        portmaster p5-
+
+        Comprehensive (but perhaps overkill):
+        portmaster -r perl5-
+
+  Note: If the "perl5-" glob matches more than one port you will need to specify
+        the name of the installed Perl package explicitly.  You can get its name
+        by running: pkg info perl5
+
+20141125:
+  AFFECTS: users of EFL libraries
+  AUTHOR: gblach@FreeBSD.org
+
+  EFL libraries has been merged into one port. Before installing devel/efl
+  you must deinstall old EFL libraries:
+
+  # pkg delete -f eina eet evas evas-\* ecore\* eio efreet embryo edje \
+      ethumb emotion
+  # make -C /usr/ports/devel/efl install clean
+
+20141125:
+  AFFECTS: users of x11-wm/e17-module*
+  AUTHOR: gblach@FreeBSD.org
+
+  Enlightenment has been updated to 0.19.1. Some of e-modules can't be build
+  with updated Enlightenment, these modules has been marked as broken.
+  E-modules which work with new Enlightenment has been renamed to
+  x11-wm/e-module-*. To update these modules you must call the following
+  commands (substituting the name of module in place *):
+
+  # portmaster -o x11-wm/e-module-* x11-wm/e17-module-*
+  # portmaster -o x11-wm/e-modules x11-wm/e17-modules
+  or
+  # portupgrade -fo x11-wm/e-module-* x11-wm/e17-module-*
+  # portupgrade -fo x11-wm/e-modules x11-wm/e17-modules
+
+20141123:
+  AFFECTS: users of security/heimdal
+  AUTHOR: hrs@FreeBSD.org
+
+  The header and library files have been moved from PREFIX/{include,lib} to
+  PREFIX/{include,lib}/heimdal at r373047 to fix a library dependency
+  confusion when software attempts to link a Heimdal library in base and
+  an external library in LOCALBASE/lib at the same time.
+
+  All of packages which depend on security/heimdal have to be recompiled
+  and reinstalled because of this library location change.
+
 20141119:
   AFFECTS: users of x11/gnome2, graphics/clutter and lang/vala
   AUTHOR: kwm@FreeBSD.org
@@ -1744,65 +1887,4 @@ you update your ports collection, before attempting any port upgrades.
   # portmaster -a
     or
   # portupgrade -a
-
-20131127:
-  AFFECTS: users of devel/py-distribute (i.e you)
-  AUTHOR: wg@FreeBSD.org
-
-  devel/py-distribute was replaced with devel/py-setuptools. Please do
-  the following according to package manager used. py-distribute port
-  will be removed shortly.
-
-  # portmaster -o devel/py-setuptools devel/py-distribute
-    or
-  # portupgrade -fo devel/py-setuptools devel/py-distribute
-    or
-  # pkg set -o devel/py-distribute:devel/py-setuptools
-  # pkg install -f devel/py-setuptools
-
-20131125:
-  AFFECTS: users of www/mod_wsgi
-  AUTHOR: ohauer@FreeBSD.org
-
-  The port www/mod_wsgi moved to www/mod_wsgi2 to reflect the port version.
-
-  # portmaster -o www/mod_wsgi2 www/mod_wsgi
-    or
-  # portupgrade -fo www/mod_wsgi2 www/mod_wsgi
-    or
-  # pkg set -o www/mod_wsgi:www/mod_wsgi2
-
-20131120:
-  AFFECTS: users of lang/perl5.12 lang/perl5.14 lang/perl5.16 and lang/perl5.18
-  AUTHOR: mat@FreeBSD.org
-
-  The THREADS option has been enabled by default in all Perl. If you're using
-  binary packages you need to do :
-
-    # pkg install -Rf perl5
-
-  If you're not using binary packages, and want to switch from non threaded
-  Perl to threaded Perl, you need to recompile and reinstall most ports
-  depending on Perl. Supposing you have Perl 5.16, you would do:
-
-  Portupgrade users:
-    0) Fix pkgdb.db (for safety):
-	pkgdb -Ff
-
-    1) Change the option in lang/perl5.16:
-        make -C /usr/ports/lang/perl5.16 config
-
-    2) Reinstall everything that depends on Perl:
-	portupgrade -fr lang/perl5.16
-
-  Portmaster users:
-    1) Change the option in lang/perl5.16:
-        make -C /usr/ports/lang/perl5.16 config
-
-    2) Reinstall everything that depends on Perl:
-	portmaster -r perl5-
-
-  Note: The installed Perl package was named perl and is now named perl5, if
-	you have not updated your installation in a long time, you may need to
-	use "perl-" here.
 
