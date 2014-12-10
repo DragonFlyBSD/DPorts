@@ -1,8 +1,17 @@
 
-$FreeBSD: head/multimedia/libvpx/files/patch-build_make_Makefile 336806 2013-12-18 09:05:36Z ashish $
+$FreeBSD: head/multimedia/libvpx/files/patch-build_make_Makefile 374255 2014-12-08 09:13:22Z ashish $
 
 --- build/make/Makefile.orig
 +++ build/make/Makefile
+@@ -158,7 +158,7 @@
+ 	$(qexec)$(AS) $(ASFLAGS) -o $@ $<
+ 
+ .PRECIOUS: %.c.S
+-%.c.S: CFLAGS += -DINLINE_ASM
++%.c.S: CFLAGS += -DINLINE_ASM $(CLANG_NO_IAS)
+ $(BUILD_PFX)%.c.S: %.c
+ 	$(if $(quiet),@echo "    [GEN] $@")
+ 	$(qexec)$(CC) -S $(CFLAGS) -o $@ $<
 @@ -230,8 +230,8 @@
  define install_map_template
  $(DIST_DIR)/$(1): $(2)
