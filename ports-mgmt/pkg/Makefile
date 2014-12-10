@@ -1,13 +1,12 @@
 # $FreeBSD$
 
 PORTNAME=	pkg
-DISTVERSION=	1.3.8
-PORTREVISION=	3
+DISTVERSION=	1.4.0
 _PKG_VERSION=	${DISTVERSION}
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	\
-		LOCAL/portmgr \
 		http://files.etoilebsd.net/${PORTNAME}/ \
+		LOCAL/portmgr \
 		http://mirror.shatow.net/freebsd/${PORTNAME}/ \
 
 MAINTAINER=	portmgr@FreeBSD.org
@@ -34,6 +33,7 @@ MAKE_ARGS+=	PKG_PORTSDIR=${PORTSDIR}
 # Use a submake as 'deinstall install' needs to reevaluate PKG_CMD
 # so that pkg-static is used from the wrkdir
 USE_SUBMAKE=	yes
+CFLAGS+=	-Wno-error
 
 .if !exists(/usr/include/jail.h)
 EXTRA_PATCHES=	${FILESDIR}/extra-patch-docs_pkg.8
