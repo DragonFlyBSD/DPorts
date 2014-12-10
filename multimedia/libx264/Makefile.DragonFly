@@ -1,0 +1,3 @@
+# Using assembly will cause floating point exception at least on phenoms
+
+OPTIONS_EXCLUDE+=	ASM
