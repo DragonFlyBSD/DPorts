@@ -5,6 +5,78 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20141209:
+  AFFECTS: users of emulators/linux_base-f10 and emulators/linux_base-c6
+  AUTHOR: xmj@freebsd.org
+
+  The CentOS ports infrastructure has replaced Fedora 10 as default.
+
+  1. Please delete all remaining f10 ports/packages:
+
+     # pkg delete -f linux_base-f10 linux-f10-\*
+
+  2. Persistently update the Linux kernel version in /etc/sysctl.conf:
+
+     compat.linux.osrelease=2.6.18
+
+    This step is necessary on all FreeBSD versions, apart from 11.0-CURRENT
+    (after revision 271982).
+
+  3. Reinstall all software depending on Linux emulation.
+     As an example, reinstall linux-firefox:
+
+     # portmaster -r linux-firefox
+       or
+     # portupgrade -f www/linux-firefox
+       or
+     # pkg install linux-firefox
+
+  If difficulties are encountered, please follow the UPDATING entry 20140922
+  but skip step 2 (OVERRIDE_LINUX_BASE_PORT and OVERRIDE_LINUX_NONBASE_PORTS
+  in /etc/make.conf). In case these steps do not fix the issues, please submit
+  an issue report in Bugzilla and send an email to FreeBSD's emulation@ mailing
+  list.
+
+  Users who need to continue using Fedora 10 base and userland should do the
+  following instead:
+  
+  1. Add these lines to /etc/make.conf:
+
+      OVERRIDE_LINUX_BASE_PORT=f10
+      OVERRIDE_LINUX_NONBASE_PORTS=f10
+
+  2. Downgrade the Linux kernel version in /etc/sysctl.conf on FreeBSD versions
+     newer than and including 11.0-CURRENT (after revision 271982).
+
+       compat.linux.osrelease=2.6.16
+
+  This is all that is needed to continue using an existing Fedora 10 Linux base
+  and userland.
+
+
+20141208:
+  AFFECTS: users of ports-mgmt/poudriere, ports-mgmt/poudriere-devel
+  AUTHOR: bdrewery@FreeBSD.org
+
+  8.4 jails created with Poudriere 3.1, or poudriere-devel-3.0.99.20141117
+  should be recreated with 'jail -d' and 'jail -c'. This fixes pkg(8)
+  crashes.
+
+20141205:
+  AFFECTS: users of polish/kadu
+  AUTHOR: pawel@FreeBSD.org
+
+  Before running kadu 1.x for the first time upstream developers
+  advise to backup your ~/.kadu directory.
+
+20141203:
+  AFFECTS: users of ports-mgmt/poudriere
+  AUTHOR: bdrewery@FreeBSD.org
+
+  Poudriere has been updated to 3.1.0. See the release notes at
+  https://github.com/freebsd/poudriere/wiki/release_notes_31 for
+  information on changed features and required setup.
+
 20141130:
   AFFECTS: users of devel/gettext (close to everyone)
   AUTHOR: tijl@FreeBSD.org
@@ -25,6 +97,11 @@ you update your ports collection, before attempting any port upgrades.
 
   # pkg delete -f gettext
   # portinstall devel/gettext
+
+  Or for binary users:
+
+  # pkg delete -f gettext
+  # pkg upgrade
 
 20141127:
   AFFECTS: users of lang/perl5.*
@@ -958,6 +1035,21 @@ you update your ports collection, before attempting any port upgrades.
 
   # pkg set -o databases/postgresql90-client:databases/postgresql92-client
 
+20141208:
+  AFFECTS: users of databases/postgresql??-(server|client)
+  AUTHOR: marino@FreeBSD.org
+
+  PostgreSQL version 9.3 is now the default. To upgrade from a version
+  lower than 9.3, follow the instructions on the PostgreSQL.org website.
+  http://www.postgresql.org/docs/9.3/interactive/upgrading.html
+  Please note that the pg_upgrade program is installed by the
+  databases/postgresql93-contrib port
+
+  When using binary packages, if you only use the client port, you can
+  issue the following command to follow the default version:
+
+  # pkg set -o databases/postgresql92-client:databases/postgresql93-client
+
 20140528:
   AFFECTS: users of security/calife & security/calife-devel
   AUTHOR: roberto@FreeBSD.org
@@ -1827,64 +1919,4 @@ you update your ports collection, before attempting any port upgrades.
 
   If you are interested in upgrading now already, we have instructions
   at <https://wiki.freebsd.org/Ports/BerkeleyDBCleanup>.
-
-20131209:
-  AFFECTS: users of dns/bind96, dns/bind98 and bind99 on FreeBSD 10.0
-  AUTHOR: erwin@FreeBSD.org
-
-  Bind versions before 9.6.3.2.ESV.R10_2, 9.8.6_2, and 9.9.4_2 on
-  FreeBSD 10.0 will replace named.conf on upgrade.  Make sure to
-  backup any local changes before upgrading to the _2 versions.
-
-20131208:
-  AFFECTS: users of java/subversion-java
-  AUTHOR: ohauer@FreeBSD.org
-
-  java/subversion-java was moved to java/java-subversion.
-  Please do the following according to package manager used.
-
-  # portmaster -o java/java-subversion java/subversion-java
-    or
-  # portupgrade -fo java/java-subversion java/subversion-java
-    or
-  # pkg set -o java/subversion-java:java/java-subversion
-
-20131208:
-  AFFECTS: users of x11-toolkits/vte
-  AUTHOR: kwm@FreeBSD.org
-
-  The gnome-pty-helper program has been split off from the vte package
-  to allow both vte and vte3 to be installed at the same time. To update
-  after this change please do the following:
-
-  # pkg_delete -f vte\*
-   or
-  # pkg delete -fg vte\*
-   followed by
-  # portmaster x11-toolkits/vte
-   or
-  # portupgrade x11-toolkits/vte
-
-20131207:
-  AFFECTS: users of mail/opensmtpd
-  AUTHOR: ashish@FreeBSD.org
-
-  There has been changes to the OpenSMTPD configuration. Please refer to
-  smtpd.conf(5), and use "smtpd -nf smtpd.conf" to validate.
-
-20131203:
-  AFFECTS: users of graphics/opencv, graphics/opencv-core
-  AUTHOR: jhale@FreeBSD.org
-
-  OpenCV has been updated to 2.4.7.  Due to movement of files between the
-  opencv port and the opencv-core port, it will be necessary to remove
-  both packages before updating.
-
-  # pkg_delete -f opencv\*
-    or
-  # pkg delete -fg opencv\*
-    followed by
-  # portmaster -a
-    or
-  # portupgrade -a
 

@@ -485,6 +485,7 @@ net/avahi-qt3||2013-07-13|Depends on the expired Qt 3.x port
 www/xpi-gwt-dev-plugin||2013-07-15|Has expired: Requires an ancient version of Firefox to build
 security/pyobfsproxy|security/obfsproxy|2013-07-15|Rename
 devel/kdevelop-custom-buildsystem||2013-07-17|Has expired: part of devel/kdevelop-kde4 now
+ftp/p5-curl|www/p5-WWW-Curl|2013-07-17|Duplicate
 editors/code-browser||2013-07-18|Removed
 lang/copper||2013-07-18|Removed
 x11-themes/linux-gtk-bluecurve-theme||2013-07-18|Removed, requires Linux FC3
@@ -1261,7 +1262,7 @@ x11-wm/fbpager||2013-11-18|Has expired: Broken for more than 6 month
 net/hf6to4||2013-11-18|Has expired: Broken for more than 6 month
 x11-themes/kde-icons-exquisite||2013-11-18|Has expired: Broken for more than 6 month
 x11-themes/kde-icons-marbles-translucent||2013-11-18|Has expired: Broken for more than 6 month
-security/dissembler||2013-11-18|Has expired: Broken for more than 6 month
+security/dissembler||2013-11-18|Has expired: Broken for more than 6 months, upstream disappeared
 net-mgmt/zenpack-apachemonitor||2013-11-18|Has expired: Broken for more than 6 month
 textproc/rst.el||2013-11-18|Has expired: Broken for more than 6 month
 net-mgmt/zenpack-ntpmonitor||2013-11-18|Has expired: Broken for more than 6 month
@@ -1377,7 +1378,6 @@ lang/slib-gauche||2013-12-22|Has expired: Broken for more than 6 month
 graphics/f-spot||2013-12-22|Has expired: Broken for more than 6 month
 sysutils/linux-megamgr||2013-12-22|Has expired: Broken for more than 6 month
 games/linux-savage-samuraiwars||2013-12-22|Has expired: Broken for more than 6 month
-ftp/gftp||2013-12-22|Has expired: Broken for more than 6 month
 devel/hs-DeepArrow||2013-12-22|Has expired: Broken for more than 6 month
 converters/py-svglib||2013-12-22|Has expired: Broken for more than 6 month
 converters/p5-Unicode-Lite||2013-12-22|Has expired: Broken for more than 6 month
@@ -1386,8 +1386,6 @@ finance/quantlib||2013-12-22|Has expired: Broken for more than 6 month
 games/xkobo||2013-12-22|Has expired: Broken for more than 6 month
 games/quake3-rq3||2013-12-22|Has expired: Broken for more than 6 month
 math/fbm||2013-12-22|Has expired: No new release since 2004, new supported upstream
-graphics/yukon||2013-12-22|Removed, depends on graphics/seom
-graphics/seom||2013-12-22|Has expired: Broken for more than 6 month
 deskutils/libopensync-plugin-python-devel||2013-12-22|Has expired: Broken for more than 6 month
 deskutils/libopensync-plugin-synce-devel||2013-12-22|Removed, unmaintained, depends on deskutils/libopensync-plugin-python-devel
 net-im/libmsn||2013-12-22|Has expired: Primary MSN Messenger service terminated 30 APR 2013
@@ -2210,7 +2208,7 @@ japanese/bugzilla42|japanese/bugzilla44|2014-06-21|Removed, localized version of
 russian/bugzilla40|russian/bugzilla44|2014-06-21|Removed, localized version of expired devel/bugzilla40
 russian/bugzilla42|russian/bugzilla44|2014-06-21|Removed, localized version of expired devel/bugzilla42
 mail/sastatd|sysutils/p5-Tail-Stat|2014-06-21|Has expired: Superseded by sysutils/p5-Tail-Stat
-www/mod_ruby||2014-06-21|Has expired: Only for threadless ruby
+www/mod_ruby||2014-06-21|Has expired: Only for threadless Ruby
 textproc/eruby|www/rubygem-erubis|2014-06-21|Has expired: Only for threadless ruby, use ruby-gem erubis instead
 mail/p5-FuzzyOcr|mail/p5-FuzzyOcr-devel|2014-06-21|Has expired: Unmaintained upstream, no ports depending on it. Use mail/p5-FuzzyOcr-devel instead
 devel/bugzilla40|devel/bugzilla44|2014-06-21|Has expired
@@ -2328,7 +2326,7 @@ sysutils/gtk-send-pr||2014-07-17|Has expired: Obsolete after migration to Bugzil
 lang/stklos||2014-07-20|Has expired: Fails testsuite on all platforms, unmaintained upstream
 lang/ikarus||2014-07-20|Has expired: Upstream project died in 2009
 security/pam_pgina||2014-07-20|Has expired: main site disappeared, no more public distfiles
-www/linux-opera-devel|www/opera|2014-07-20|Has expired: Not staged and multiple vulnerabilities. 
+www/linux-opera-devel|www/opera|2014-07-20|Has expired: Not staged and multiple vulnerabilities
 www/opera-devel|www/opera|2014-07-20|Has expired: Not staged, multiple vulnerabilities, older than non-devel
 accessibility/at-poke||2014-07-21|Has expired: Depends on expired libgailgnome
 misc/bigboard||2014-07-21|Has expired: gnome-panel will be updated to the 3.x version which is not compatible with 2.x
@@ -2435,9 +2433,9 @@ lang/dragonegg46-33||2014-08-01|Has expired: Dead upstream, impractical to build
 lang/dragonegg47-33||2014-08-01|Has expired: Dead upstream, impractical to build on 10 and later
 print/freetype-tools|print/texlive-texmf|2014-08-01|Has been incorporated in TeXLive
 sysutils/readlink||2014-08-03|Has expired: All features implemented in the base system since FreeBSD 8.3
-net-mgmt/bsd-airtools||2014-08-04|Has expired: "broken by removal of wicontrol ioctls from if_wavelan_ieee.h; domain disappeared"
+net-mgmt/bsd-airtools||2014-08-04|Has expired: broken by removal of wicontrol ioctls from if_wavelan_ieee.h; domain disappeared
 www/moodle||2014-08-04|Has expired: Upstream support ended
-databases/bucardo|databases/p5-Bucardo|2014-08-04|Dupplicate
+databases/bucardo|databases/p5-Bucardo|2014-08-04|Duplicate port removed
 security/p5-openxpki-client|security/p5-openxpki|2014-08-04|Has expired: now incorporated within security/p5-openxpki
 security/p5-openxpki-client-scep|security/p5-openxpki|2014-08-04|Has expired: now incorporated within security/p5-openxpki
 security/p5-openxpki-deployment|security/p5-openxpki|2014-08-04|Has expired: now incorporated within security/p5-openxpki
@@ -3303,7 +3301,7 @@ editors/emacs23|editors/emacs|2014-11-19|Has expired: Unmaintained upstream, use
 net-im/tg|net-im/telegram|2014-11-20|Renamed to more specific name
 net-mgmt/virtinst|deskutils/virt-manager|2014-11-20|Obsoleted by deskutils/virt-manager
 sysutils/firstboot-growfs||2014-11-23|Part of the base system
-graphics/linux-c6-gdk-pixbuf|graphics/linux-c6-gdk-pixbuf2|2014-11-24|Port renamed to align with upstream.
+graphics/linux-c6-gdk-pixbuf|graphics/linux-c6-gdk-pixbuf2|2014-11-24|Port renamed to align with upstream
 devel/libole2||2014-11-24|Abandoned upstream, incomplete, not depend on
 net/p5-SOAP-Transport-TCP|net/p5-SOAP-Lite|2014-11-24|Has been integrated into net/p5-SOAP-Lite
 www/chimera||2014-11-24|Has expired: Abandonware (last update in 1997), restrictive license
@@ -3378,7 +3376,6 @@ lang/ironpython||2014-11-29|Has expired: Broken for more than 6 months
 www/dpsearch||2014-11-29|Has expired: Broken for more than 6 months
 multimedia/y4mscaler||2014-11-29|Has expired: Broken for more than 6 months
 devel/rubygem-dep_selector||2014-11-29|Has expired: Broken for more than 6 months
-ports-mgmt/pkg-plist||2014-12-01|Has expired: Generate incorrect plists
 sysutils/rubygem-hiera-puppet||2014-12-01|Has expired: Has been incorporated into hiera
 sysutils/rubygem-hiera-json||2014-12-01|Has expired: Has been incorporated into hiera
 databases/memcachedb||2014-12-01|Has expired: Depends on deprecated Berkeley DB version, needs porting to DB_SITE
@@ -3387,3 +3384,10 @@ devel/creduce||2014-12-01|Has expired: Unmaintained and depends on ancient LLVM 
 lang/clay||2014-12-01|Has expired: No development since July 2013, depends on obsolete clang-3.2
 textproc/libodfgen|textproc/libodfgen01|2014-12-02|Replaced by newer version
 graphics/libetonyek|graphics/libetonyek01|2014-12-02|Replaced by newer version
+textproc/sw-hunspell|textproc/sv-hunspell|2014-12-02|Swedish is sv not sw
+deskutils/gnome-shell-extension-gtile||2014-12-03|Removed, doesn't work properly
+devel/rubygem-rb-readline||2014-12-05|Removed, not needed
+ports-mgmt/pib||2014-12-06|Has expired: Does not work with tcl/tk 8.4+, does not support pkgng
+editors/texmakerx|editors/texstudio|2014-12-06|The project has been renamed
+databases/postgresql93-plv8js|databases/postgresql-plv8js|2014-12-07|Breaks index when PGSQL_DEFAULT=9.3 and master port can be used for pgsql 9.3
+www/twig-php||2014-12-08|Removed, as it was replaced and conflicting with www/pear-twig and www/pecl-twig
