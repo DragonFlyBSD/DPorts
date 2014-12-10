@@ -462,6 +462,7 @@ libdata/pkgconfig/ecore.pc
 libdata/pkgconfig/edje.pc
 libdata/pkgconfig/eet.pc
 libdata/pkgconfig/efl.pc
+libdata/pkgconfig/efl-cxx.pc
 libdata/pkgconfig/efreet.pc
 libdata/pkgconfig/efreet-mime.pc
 libdata/pkgconfig/efreet-trash.pc
