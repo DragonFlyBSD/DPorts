@@ -1,10 +1,10 @@
 # $FreeBSD$
 
 PORTNAME=	gcc-arm-embedded
-PORTVERSION=	4.8.20140609
-PORTREVISION=	3
+PORTVERSION=	4.8.20140805
+PORTREVISION=	0
 CATEGORIES=	devel
-MASTER_SITES=	http://launchpad.net/gcc-arm-embedded/4.8/4.8-2014-q2-update/+download/
+MASTER_SITES=	http://launchpad.net/gcc-arm-embedded/4.8/4.8-2014-q3-update/+download/
 DISTNAME=	${ORIGINAL_PACKAGE_NAME}-src
 
 MAINTAINER=	lev@FreeBSD.org
@@ -13,11 +13,12 @@ COMMENT=	Complete gcc-based toolcahin for embedded ARM development
 LICENSE=	GPLv2 LGPL20 LGPL21 GPLv3 LGPL3
 LICENSE_COMB=	multi
 
-OPTIONS_DEFINE=	PURE EXAMPLES HTML PDF DOCS
+OPTIONS_DEFINE=	PURE EXAMPLES HTML PDF DOCS SILENT
 OPTIONS_DEFAULT=EXAMPLES
 PURE_DESC=	Use all libraries from bundle, do not depend on anything
 HTML_DESC=	Install HTML documentation
 PDF_DESC=	Install PDF documentation (requires TeX, it is huge)
+SILENT_DESC=	Don't spam screen with build logs
 
 PURE_EXTRA_PATCHES_OFF=	${PATCHDIR}/extra-patch-gcc-isl-0.13-compatibility
 PURE_LIB_DEPENDS_OFF=	\
@@ -40,7 +41,7 @@ PATCH_WRKSRC=		${WRKDIR}/${ORIGINAL_PACKAGE_NAME}
 
 BUILD_WRKSRC=	${WRKDIR}
 
-FULL_VERSION=		4_8-2014q2-20140609
+FULL_VERSION=		4_8-2014q3-20140805
 TARGET=			arm-none-eabi
 ORIGINAL_PACKAGE_NAME=	gcc-${TARGET}-${FULL_VERSION}
 
