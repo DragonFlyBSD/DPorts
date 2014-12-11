@@ -3,7 +3,7 @@
 
 PORTNAME=	mod_perl
 PORTVERSION=	2.0.8
-PORTREVISION=	2
+PORTREVISION=	4
 PORTEPOCH=	3
 CATEGORIES=	www perl5
 MASTER_SITES=	APACHE/perl
@@ -35,7 +35,7 @@ USE_CSTD=	gnu89
 .if ${APACHE_VERSION} > 22
 # patch shaped against upstream mod_perl
 # Last Changed Rev: 1602105
-PATCHREV=	1618150
+PATCHREV=	1638352
 PATCHFILES+= 	${PORTNAME}-${PORTVERSION}-r${PATCHREV}.diff.gz
 PLIST_SUB+=	AP24=""
 PMSED=		's/%AP24%//'
@@ -102,7 +102,7 @@ post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/modules/perl/mod_perl.so \
 		${STAGEDIR}${PREFIX}/${APACHEMODDIR}/mod_perl.so
 
-	-for f in `${FIND} ${STAGEDIR}${SITE_PERL}/${PERL_ARCH}/auto -name \*.so` ; do \
+	-for f in `${FIND} ${STAGEDIR}${PREFIX}/${SITE_ARCH_REL}/auto -name \*.so` ; do \
 		${CHMOD} u+w $${f}; \
 		${STRIP_CMD} $${f}; \
 		${CHMOD} u-w $${f}; \
