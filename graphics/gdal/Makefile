@@ -3,6 +3,7 @@
 
 PORTNAME=	gdal
 PORTVERSION=	1.11.1
+PORTREVISION=	2
 CATEGORIES=	graphics geography
 MASTER_SITES=	http://download.osgeo.org/gdal/${PORTVERSION}/ \
 		ftp://ftp.remotesensing.org/pub/gdal/${PORTVERSION}/ \
@@ -113,7 +114,7 @@ PCRE_CONFIGURE_ON=	--with-pcre=${LOCALBASE}
 PCRE_LIB_DEPENDS=	libpcre.so:${PORTSDIR}/devel/pcre
 PGSQL_CONFIGURE_OFF=	--with-pg=no
 PGSQL_CONFIGURE_ON=	--with-pg=${LOCALBASE}/bin/pg_config
-PGSQL_USE=		PGSQL=yes
+PGSQL_USES=		pgsql
 PNG_CONFIGURE_OFF=	--with-png=internal
 PNG_CONFIGURE_ON=	--with-png=${LOCALBASE}
 PNG_LIB_DEPENDS=	libpng15.so:${PORTSDIR}/graphics/png
