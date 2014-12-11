@@ -1,10 +1,10 @@
 # Created by: Vanilla I. Shu <vanilla@MinJe.com.TW>
 # $FreeBSD$
-#   $MCom: ports/trunk/x11-toolkits/gtk30/Makefile 19945 2014-10-15 05:41:04Z gusi $
+#   $MCom: ports/trunk/x11-toolkits/gtk30/Makefile 20051 2014-11-10 09:39:43Z gusi $
 # Please keep gtk30 and x11-themes/gnome-themes-standard minor version in sync
 
 PORTNAME=	gtk
-PORTVERSION=	3.14.3
+PORTVERSION=	3.14.5
 PORTREVISION?=	1
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
@@ -41,9 +41,10 @@ CONFIGURE_ARGS=	--enable-gtk2-dependency --disable-packagekit \
 		--enable-introspection
 CPPFLAGS+=	-I${LOCALBASE}/include -fno-omit-frame-pointer
 LIBS+=		-L${LOCALBASE}/lib
+INSTALLS_ICONS=	yes
 INSTALL_TARGET=	install-strip
 
-LIBVERSION=	0.1400.3
+LIBVERSION=	0.1400.5
 PLIST_SUB+=	LIBVERSION=${LIBVERSION}
 
 GLIB_SCHEMAS=	org.gtk.Demo.gschema.xml \
