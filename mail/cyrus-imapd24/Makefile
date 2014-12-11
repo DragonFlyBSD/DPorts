@@ -2,7 +2,7 @@
 
 PORTNAME=	cyrus-imapd
 PORTVERSION=	2.4.17
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=	mail ipv6
 MASTER_SITES=	ftp://ftp.cyrusimap.org/cyrus-imapd/ \
 		http://cyrusimap.org/releases/
@@ -24,7 +24,6 @@ PERLMAN=	${SITE_PERL_REL:S/site_perl\///}
 USE_RC_SUBR=	imapd
 
 USES=		perl5
-USE_PERL5=	run build fixpacklist
 USE_OPENSSL=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--sysconfdir=${PREFIX}/etc \
@@ -70,7 +69,7 @@ NETSCAPEHACK_DESC=	Enable X-NETSCAPE extensions
 NETSCAPEHACK_CONFIGURE_ENABLE=netscapehack
 NNTP_DESC=		Enable NNTP support
 NNTP_CONFIGURE_ENABLE=	nntp
-PGSQL_USE=		PGSQL=yes
+PGSQL_USES=		pgsql
 PGSQL_CONFIGURE_ON=	--with-pgsql=${LOCALBASE}
 REPLICATION_DESC=	Enable replication (experimental)
 REPLICATION_CONFIGURE_ENABLE=replication
