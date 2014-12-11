@@ -1,2 +1,0 @@
-post-stage:
-	${RM} ${STAGEDIR}${PREFIX}/man/man7/gnupg.*
