@@ -1,9 +1,4 @@
-USES+=			execinfo
-
-CMAKE_ARGS+=		-DWITH_READLINE=1
-
-#jemalloc (bundled) doesn't build on DragonFly OOTB
-CMAKE_ARGS+=		-DWITH_JEMALLOC="no"
+#CMAKE_ARGS+=		-DWITH_READLINE=1
 
 # CMake injects bad -Wl,-rpath,XX values in the link instructions to
 # suppress those.  Built-in rpath in gcc is enough.
