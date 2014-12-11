@@ -3,7 +3,7 @@
 #   $MCom: ports/trunk/x11-toolkits/vte3/Makefile 19957 2014-10-15 11:07:14Z gusi $
 
 PORTNAME?=	vte
-PORTVERSION=	0.38.0
+PORTVERSION=	0.38.2
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	GNOME
@@ -49,10 +49,16 @@ PLIST_SUB=	VERSION=2.91
 EXTRA_PATCHES+=		${FILESDIR}/extra-patch-gnome-pty-helper_gnome-utmp.c
 .endif
 
-.if ${VTE3_SLAVE} != yes
 post-patch:
+.if ${VTE3_SLAVE} != yes
 	@${REINPLACE_CMD} -e 's|-Wno-unused-but-set-variable||g' \
 		${WRKSRC}/src/Makefile.in
+.endif
+# borrowed osversion from bsd.ssp.mk
+.if ${OSVERSION} < 1000036 && ${ARCH} == i386
+	@${REINPLACE_CMD} -e 's|-fstack-protector-strong||g; \
+		s|-fstack-protector||g' \
+		${WRKSRC}/configure
 .endif
 
 .include <bsd.port.mk>
