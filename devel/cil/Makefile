@@ -3,7 +3,7 @@
 
 PORTNAME=	cil
 PORTVERSION=	1.7.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel lang
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}
 
@@ -75,21 +75,19 @@ pre-install:
 do-install:
 	(cd ${WRKSRC}/bin && ${INSTALL_SCRIPT} ${BINFILES} \
 		${STAGEDIR}${PREFIX}/bin)
-	@${MKDIR} ${STAGEDIR}${SITE_PERL}/CIL/App/Cilly
+	@${MKDIR} ${STAGEDIR}${PREFIX}/${SITE_PERL_REL}/CIL/App/Cilly
 	${INSTALL_DATA} ${WRKSRC}/lib/App/Cilly/CilConfig.pm \
-		${STAGEDIR}${SITE_PERL}
+		${STAGEDIR}${PREFIX}/${SITE_PERL_REL}
 	(cd ${WRKSRC}/lib && ${INSTALL_DATA} ${LIBFILES} \
-		${STAGEDIR}${SITE_PERL}/CIL/App/Cilly)
+		${STAGEDIR}${PREFIX}/${SITE_PERL_REL}/CIL/App/Cilly)
 	(cd ${WRKSRC}/lib && ${INSTALL_DATA} ${LIBAFILES} \
-		${STAGEDIR}${SITE_PERL}/CIL/App)
+		${STAGEDIR}${PREFIX}/${SITE_PERL_REL}/CIL/App)
 	(cd ${WRKSRC}/lib && ${INSTALL_DATA} ${LIBBINS} \
-		${STAGEDIR}${SITE_PERL}/CIL)
+		${STAGEDIR}${PREFIX}/${SITE_PERL_REL}/CIL)
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	@${RM} -rf ${WRKSRC}/doc/cilcode.tmp
 	(cd ${WRKSRC}/doc && ${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR})
-
-# Workaround bsd.ocaml.mk to fix packaging
-add-plist-post:
-	@${DO_NADA}
+# Remove orphan dir created by bsd.ocaml.mk
+	-@${RMDIR} -p ${STAGEDIR}${OCAMLFIND_DESTDIR}
 
 .include <bsd.port.mk>
