@@ -1,8 +1,3 @@
-OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NALSA} PULSEAUDIO
-.if ${ARCH} == i386
-WITHOUT_DEBUG=yes
-.endif
-
 MOZ_OPTIONS+= --disable-webrtc
 
 PULSEAUDIO_LIB_DEPENDS= libpulse.so:${PORTSDIR}/audio/pulseaudio
