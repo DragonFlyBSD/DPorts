@@ -88,7 +88,7 @@ MYSQL_USE=		MYSQL=yes
 MYSQL_CONFIGURE_WITH=	mysql
 MYSQL_RC_REQUIRE=	mysql
 
-PGSQL_USE=		PGSQL=yes
+PGSQL_USES=		pgsql
 PGSQL_CONFIGURE_WITH=	pgsql
 PGSQL_RC_REQUIRE=	postgresql
 
@@ -109,10 +109,6 @@ PORTDOCS=	*
 PORTEXAMPLES=	*
 
 .include <bsd.port.options.mk>
-
-.if ${ARCH} == "arm"
-BROKEN=		Does not build on arm
-.endif
 
 CPPFLAGS+=	-I${LOCALBASE}/include -I${OPENSSLINC}
 LDFLAGS+=	-L${LOCALBASE}/lib -I${OPENSSLLIB}
