@@ -1,9 +1,9 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/databases/evolution-data-server/Makefile 20029 2014-11-02 20:54:47Z kwm $
+#   $MCom: ports/trunk/databases/evolution-data-server/Makefile 20048 2014-11-10 09:19:46Z gusi $
 
 PORTNAME=	evolution-data-server
-PORTVERSION=	3.12.7
+PORTVERSION=	3.12.8
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -56,10 +56,12 @@ WEATHER_DESC=	Weather calendar backend
 
 .include <bsd.port.options.mk>
 
-.if ${PORT_OPTIONS:MKERBEROS}
+.if ${PORT_OPTIONS:MKERBEROS} && exists(/usr/bin/krb5-config)
 CONFIGURE_ARGS+=	--with-krb5=/usr
-KRB5_LIB=	`${LOCALBASE}/bin/krb5-config gssapi --libs`
-BUILD_DEPENDS+= krb5-config:${PORTSDIR}/security/krb5
+KRB5_LIB=		`${LOCALBASE}/bin/krb5-config gssapi --libs`
+BUILD_DEPENDS+=		krb5-config:${PORTSDIR}/security/krb5
+.else
+CONFIGURE_ARGS+=	--without-krb5
 .endif
 
 .if ${PORT_OPTIONS:MWEATHER}
