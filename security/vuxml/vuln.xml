@@ -28,7 +28,7 @@ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION,
 EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-  $FreeBSD: head/security/vuxml/vuln.xml 372740 2014-11-18 18:32:22Z rene $
+  $FreeBSD: head/security/vuxml/vuln.xml 374488 2014-12-10 21:31:56Z kwm $
 
 
 QUICK GUIDE TO ADDING A NEW ENTRY
@@ -57,6 +57,536 @@ Notes:
 
 -->
 <vuxml xmlns="http://www.vuxml.org/apps/vuxml-1">
+  <vuln vid="27b9b2f0-8081-11e4-b4ca-bcaec565249c">
+    <topic>xserver -- multiple issue with X client request handling</topic>
+    <affects>
+      <package>
+	<name>xorg-server</name>
+	<range><lt>1.12.4_10</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Alan Coopersmith reports:</p>
+	<blockquote cite="http://lists.x.org/archives/xorg-announce/2014-December/002500.html">
+	  <p>Ilja van Sprundel, a security researcher with IOActive, has
+	    discovered a large number of issues in the way the X server
+	    code base handles requests from X clients, and has worked
+	    with X.Org's security team to analyze, confirm, and fix
+	    these issues.</p>
+
+	  <p>The vulnerabilities could be exploited to cause the X server
+	    to access uninitialized memory or overwrite arbitrary memory
+	    in the X server process.  This can cause a denial of service
+	    (e.g., an X server segmentation fault), or could be exploited
+	    to achieve arbitrary code execution.</p>
+
+	  <p>The GLX extension to the X Window System allows an X client
+	    to send X protocol to the X server, to request that the X
+	    server perform OpenGL rendering on behalf of the X client.
+	    This is known as "GLX indirect rendering", as opposed to
+	    "GLX direct rendering" where the X client submits OpenGL
+	    rendering commands directly to the GPU, bypassing the X
+	    server and avoiding the X server code for GLX protocol
+	    handling.</p>
+
+	  <p>Most GLX indirect rendering implementations share some
+	    common ancestry, dating back to "Sample Implementation"
+	    code from Silicon Graphics, Inc (SGI), which SGI
+	    originally commercially licensed to other Unix workstation
+	    and graphics vendors, and later released as open source, so
+	    those vulnerabilities may affect other licensees of SGI's
+	    code base beyond those running code from the X.Org Foundation
+	    or the XFree86 Project.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>http://lists.x.org/archives/xorg-announce/2014-December/002500.html</url>
+      <cvename>CVE-2014-8091</cvename>
+      <cvename>CVE-2014-8092</cvename>
+      <cvename>CVE-2014-8093</cvename>
+      <cvename>CVE-2014-8094</cvename>
+      <cvename>CVE-2014-8095</cvename>
+      <cvename>CVE-2014-8096</cvename>
+      <cvename>CVE-2014-8097</cvename>
+      <cvename>CVE-2014-8098</cvename>
+      <cvename>CVE-2014-8099</cvename>
+      <cvename>CVE-2014-8100</cvename>
+      <cvename>CVE-2014-8101</cvename>
+      <cvename>CVE-2014-8102</cvename>
+    </references>
+    <dates>
+      <discovery>2014-12-09</discovery>
+      <entry>2014-12-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="10d73529-7f4b-11e4-af66-00215af774f0">
+    <topic>unbound -- can be tricked into following an endless series of delegations, this consumes a lot of resources</topic>
+    <affects>
+      <package>
+	<name>unbound</name>
+	<range><lt>1.5.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Unbound developer reports:</p>
+	<blockquote cite="http://unbound.net/downloads/CVE-2014-8602.txt">
+	  <p>The resolver can be tricked into following an endless series of
+	    delegations, this consumes a lot of resources.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>http://unbound.net/downloads/CVE-2014-8602.txt</url>
+      <cvename>CVE-2014-8602</cvename>
+    </references>
+    <dates>
+      <discovery>2014-12-08</discovery>
+      <entry>2014-12-09</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="567beb1e-7e0a-11e4-b9cc-bcaec565249c">
+    <topic>freetype -- Out of bounds stack-based read/write</topic>
+    <affects>
+      <package>
+	<name>freetype2</name>
+	<range><lt>2.5.4</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Werner LEMBERG reports:</p>
+	<blockquote cite="http://lists.nongnu.org/archive/html/freetype-announce/2014-12/msg00000.html">
+	  <p>The fix for CVE-2014-2240 was not 100% complete to fix the issue
+	    from the CVE completly.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>http://lists.nongnu.org/archive/html/freetype-announce/2014-12/msg00000.html</url>
+      <cvename>CVE-2014-2240</cvename>
+    </references>
+    <dates>
+      <discovery>2014-12-07</discovery>
+      <entry>2014-12-07</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="c9c46fbf-7b83-11e4-a96e-6805ca0b3d42">
+    <topic>phpMyAdmin -- XSS and DoS vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>phpMyAdmin</name>
+	<range><ge>4.2.0</ge><lt>4.2.13.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The phpMyAdmin development team reports:</p>
+	<blockquote cite="http://www.phpmyadmin.net/home_page/security/PMASA-2014-17.php">
+	  <p>DoS vulnerability with long passwords.</p>
+	  <p>With very long passwords it was possible to initiate a
+	    denial of service attack on phpMyAdmin.</p>
+	  <p>We consider this vulnerability to be serious.</p>
+	  <p>This vulnerability can be mitigated by configuring
+	    throttling in the webserver.</p>
+	</blockquote>
+
+	<blockquote cite="http://www.phpmyadmin.net/home_page/security/PMASA-2014-18.php">
+	  <p>XSS vulnerability in redirection mechanism.</p>
+	  <p>With a crafted URL it was possible to trigger an XSS in
+	    the redirection mechanism in phpMyAdmin.</p>
+	  <p>We consider this vulnerability to be non critical.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>http://www.phpmyadmin.net/home_page/security/PMASA-2014-17.php</url>
+      <url>http://www.phpmyadmin.net/home_page/security/PMASA-2014-18.php</url>
+      <cvename>CVE-2014-9218</cvename>
+      <cvename>CVE-2014-9219</cvename>
+    </references>
+    <dates>
+      <discovery>2014-12-03</discovery>
+      <entry>2014-12-04</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="7ae61870-9dd2-4884-a2f2-f19bb5784d09">
+    <topic>mozilla -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>firefox</name>
+	<range><lt>34.0,1</lt></range>
+      </package>
+      <package>
+	<name>firefox-esr</name>
+	<range><lt>31.3.0,1</lt></range>
+      </package>
+      <package>
+	<name>linux-firefox</name>
+	<range><lt>34.0,1</lt></range>
+      </package>
+      <package>
+	<name>linux-seamonkey</name>
+	<range><lt>2.31</lt></range>
+      </package>
+      <package>
+	<name>linux-thunderbird</name>
+	<range><lt>31.3.0</lt></range>
+      </package>
+      <package>
+	<name>seamonkey</name>
+	<range><lt>2.31</lt></range>
+      </package>
+      <package>
+	<name>thunderbird</name>
+	<range><lt>31.3.0</lt></range>
+      </package>
+      <package>
+	<name>libxul</name>
+	<range><lt>31.3.0</lt></range>
+      </package>
+      <package>
+	<name>nss</name>
+	<range><lt>3.17.3</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Mozilla Project reports:</p>
+	<blockquote cite="http://www.mozilla.org/security/known-vulnerabilities/">
+	  <p>ASN.1 DER decoding of lengths is too permissive, allowing
+	    undetected smuggling of arbitrary data</p>
+	  <p>MSFA-2014-90 Apple CoreGraphics framework on OS X 10.10
+	    logging input data to /tmp directory</p>
+	  <p>MSFA-2014-89 Bad casting from the BasicThebesLayer to
+	    BasicContainerLayer</p>
+	  <p>MSFA-2014-88 Buffer overflow while parsing media content</p>
+	  <p>MSFA-2014-87 Use-after-free during HTML5 parsing</p>
+	  <p>MSFA-2014-86 CSP leaks redirect data via violation reports</p>
+	  <p>MSFA-2014-85 XMLHttpRequest crashes with some input streams</p>
+	  <p>MSFA-2014-84 XBL bindings accessible via improper CSS
+	    declarations</p>
+	  <p>MSFA-2014-83 Miscellaneous memory safety hazards (rv:34.0
+	    / rv:31.3)</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-1587</cvename>
+      <cvename>CVE-2014-1588</cvename>
+      <cvename>CVE-2014-1589</cvename>
+      <cvename>CVE-2014-1590</cvename>
+      <cvename>CVE-2014-1591</cvename>
+      <cvename>CVE-2014-1592</cvename>
+      <cvename>CVE-2014-1593</cvename>
+      <cvename>CVE-2014-1594</cvename>
+      <cvename>CVE-2014-1595</cvename>
+      <cvename>CVE-2014-1569</cvename>
+      <url>https://www.mozilla.org/security/advisories/mfsa2014-83</url>
+      <url>https://www.mozilla.org/security/advisories/mfsa2014-84</url>
+      <url>https://www.mozilla.org/security/advisories/mfsa2014-85</url>
+      <url>https://www.mozilla.org/security/advisories/mfsa2014-86</url>
+      <url>https://www.mozilla.org/security/advisories/mfsa2014-87</url>
+      <url>https://www.mozilla.org/security/advisories/mfsa2014-88</url>
+      <url>https://www.mozilla.org/security/advisories/mfsa2014-89</url>
+      <url>https://www.mozilla.org/security/advisories/mfsa2014-90</url>
+      <url>https://www.mozilla.org/security/advisories/</url>
+    </references>
+    <dates>
+      <discovery>2014-12-01</discovery>
+      <entry>2014-12-02</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="23ab5c3e-79c3-11e4-8b1e-d050992ecde8">
+    <topic>OpenVPN -- denial of service security vulnerability</topic>
+    <affects>
+      <package>
+	<name>openvpn</name>
+	<range><lt>2.0.11</lt></range>
+	<range><ge>2.1.0</ge><lt>2.2.3</lt></range>
+	<range><ge>2.3.0</ge><lt>2.3.6</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The OpenVPN project reports:</p>
+	<blockquote cite="https://community.openvpn.net/openvpn/wiki/SecurityAnnouncement-97597e732b">
+	  <p>In late November 2014 Dragana Damjanovic notified OpenVPN
+	    developers of a critical denial of service security vulnerability
+	    (CVE-2014-8104). The vulnerability allows an tls-authenticated
+	    client to crash the server by sending a too-short control channel
+	    packet to the server.  In other words this vulnerability is denial
+	    of service only.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-8104</cvename>
+      <url>https://community.openvpn.net/openvpn/wiki/SecurityAnnouncement-97597e732b</url>
+    </references>
+    <dates>
+      <discovery>2014-12-01</discovery>
+      <entry>2014-12-02</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a33addf6-74e6-11e4-a615-f8b156b6dcc8">
+    <topic>flac -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>flac</name>
+	<range><lt>1.3.0_3</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Erik de Castro Lopo reports:</p>
+	<blockquote cite="http://lists.xiph.org/pipermail/flac-dev/2014-November/005226.html">
+	  <p>Google Security Team member, Michele Spagnuolo, recently
+	    found two potential problems in the FLAC code base. They are:</p>
+	  <ul>
+	  <li>CVE-2014-9028: Heap buffer write overflow.</li>
+	  <li>CVE-2014-8962: Heap buffer read overflow.</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://git.xiph.org/?p=flac.git;a=commit;h=5b3033a2b355068c11fe637e14ac742d273f076e</url>
+      <cvename>CVE-2014-8962</cvename>
+      <url>https://git.xiph.org/?p=flac.git;a=commit;h=fcf0ba06ae12ccd7c67cee3c8d948df15f946b85</url>
+      <cvename>CVE-2014-9028</cvename>
+    </references>
+    <dates>
+      <discovery>2014-11-25</discovery>
+      <entry>2014-11-25</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="7bfd797c-716d-11e4-b008-001999f8d30b">
+    <topic>asterisk -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>asterisk11</name>
+	<range><lt>11.14.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Asterisk project reports:</p>
+	<blockquote cite="http://www.asterisk.org/downloads/security-advisories">
+	  <p>AST-2014-014 - High call load may result in hung
+	  channels in ConfBridge.</p>
+	  <p>AST-2014-017 - Permission escalation through ConfBridge
+	  actions/dialplan functions.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>http://downloads.asterisk.org/pub/security/AST-2014-014.html</url>
+      <cvename>CVE-2014-8414</cvename>
+      <url>http://downloads.asterisk.org/pub/security/AST-2014-017.html</url>
+      <cvename>CVE-2014-8417</cvename>
+    </references>
+    <dates>
+      <discovery>2014-11-21</discovery>
+      <entry>2014-11-21</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a92ed304-716c-11e4-b008-001999f8d30b">
+    <topic>asterisk -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>asterisk</name>
+	<range><lt>1.8.32.1</lt></range>
+      </package>
+      <package>
+	<name>asterisk11</name>
+	<range><lt>11.14.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Asterisk project reports:</p>
+	<blockquote cite="https://www.asterisk.org/security">
+	  <p>AST-2014-012 - Mixed IP address families in access
+	  control lists may permit unwanted traffic.</p>
+	  <p>AST-2014-018 - AMI permission escalation through DB
+	  dialplan function.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>http://downloads.asterisk.org/pub/security/AST-2014-012.html</url>
+      <cvename>CVE-2014-8412</cvename>
+      <url>http://downloads.asterisk.org/pub/security/AST-2014-018.html</url>
+      <cvename>CVE-2014-8418</cvename>
+    </references>
+    <dates>
+      <discovery>2014-11-21</discovery>
+      <entry>2014-11-21</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a5d4a82a-7153-11e4-88c7-6805ca0b3d42">
+    <topic>phpMyAdmin -- XSS and information disclosure vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>phpMyAdmin</name>
+	<range><ge>4.2.0</ge><lt>4.2.12</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The phpMyAdmin development team reports:</p>
+	<blockquote cite="http://www.phpmyadmin.net/home_page/security/PMASA-2014-13.php">
+	  <ul>
+	    <li>With a crafted database, table or column name it is
+	      possible to trigger an XSS attack in the table browse
+	      page.</li>
+	    <li>With a crafted ENUM value it is possible to trigger
+	      XSS attacks in the table print view and zoom search
+	      pages.</li>
+	    <li>With a crafted value for font size it is possible to
+	      trigger an XSS attack in the home page.</li>
+	  </ul>
+	  <p>These vulnerabilities can be triggered only by someone
+	    who is logged in to phpMyAdmin, as the usual token
+	    protection prevents non-logged-in users from accessing the
+	    required pages. Moreover, exploitation of the XSS
+	    vulnerability related to the font size requires forgery of
+	    the pma_fontsize cookie.</p>
+	</blockquote>
+	<blockquote cite="http://www.phpmyadmin.net/home_page/security/PMASA-2014-14.php">
+	  <p> In the GIS editor feature, a parameter specifying the
+	    geometry type was not correcly validated, opening the door
+	    to a local file inclusion attack.</p>
+	  <p>This vulnerability can be triggered only by someone who
+	    is logged in to phpMyAdmin, as the usual token protection
+	    prevents non-logged-in users from accessing the required
+	    page.</p>
+	</blockquote>
+	<blockquote cite="http://www.phpmyadmin.net/home_page/security/PMASA-2014-15.php">
+	  <p>With a crafted file name it is possible to trigger an
+	    XSS in the error reporting page.</p>
+	  <p>This vulnerability can be triggered only by someone who
+	    is logged in to phpMyAdmin, as the usual token protection
+	    prevents non-logged-in users from accessing the required
+	    page.</p>
+	</blockquote>
+	<blockquote cite="http://www.phpmyadmin.net/home_page/security/PMASA-2014-16.php">
+	  <p>In the error reporting feature, a parameter specifying
+	    the file was not correctly validated, allowing the
+	    attacker to derive the line count of an arbitrary file</p>
+	  <p>This vulnerability can be triggered only by someone who
+	    is logged in to phpMyAdmin, as the usual token protection
+	    prevents non-logged-in users from accessing the required
+	    page.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>http://www.phpmyadmin.net/home_page/security/PMASA-2014-13.php</url>
+      <url>http://www.phpmyadmin.net/home_page/security/PMASA-2014-14.php</url>
+      <url>http://www.phpmyadmin.net/home_page/security/PMASA-2014-15.php</url>
+      <url>http://www.phpmyadmin.net/home_page/security/PMASA-2014-16.php</url>
+      <cvename>CVE-2014-8958</cvename>
+      <cvename>CVE-2014-8959</cvename>
+      <cvename>CVE-2014-8960</cvename>
+      <cvename>CVE-2014-8961</cvename>
+    </references>
+    <dates>
+      <discovery>2014-11-20</discovery>
+      <entry>2014-11-21</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="890b6b22-70fa-11e4-91ae-5453ed2e2b49">
+    <topic>kwebkitpart, kde-runtime -- insufficient input validation</topic>
+    <affects>
+      <package>
+	<name>kde-runtime</name>
+	<range><lt>4.14.2_2</lt></range>
+      </package>
+      <package>
+	<name>kwebkitpart</name>
+	<range><lt>1.3.2_4</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Albert Aastals Cid reports:</p>
+	<blockquote cite="https://www.kde.org/info/security/advisory-20141113-1.txt">
+	  <p>kwebkitpart and the bookmarks:// io slave were not sanitizing
+	    input correctly allowing to some javascript being executed on the
+	    context of the referenced hostname.</p>
+	  <p>Whilst in most cases, the JavaScript will be executed in an
+	    untrusted context, with the bookmarks IO slave, it will be executed
+	    in the context of the referenced hostname. It should however be
+	    noted that KDE mitigates this risk by attempting to ensure that
+	    such URLs cannot be embedded directly into Internet hosted
+	    content.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://www.kde.org/info/security/advisory-20141113-1.txt</url>
+      <cvename>CVE-2014-8600</cvename>
+    </references>
+    <dates>
+      <discovery>2014-11-13</discovery>
+      <entry>2014-11-20</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="5a35bc56-7027-11e4-a4a3-001999f8d30b">
+    <topic>yii -- Remote arbitrary PHP code execution</topic>
+    <affects>
+      <package>
+	<name>yii</name>
+	<range><lt>1.1.15</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Yii PHP Framework developers report:</p>
+	<blockquote cite="http://www.yiiframework.com/news/78/yii-1-1-15-is-released-security-fix/">
+	  <p>We are releasing Yii 1.1.15 to fix a security issue
+	  found in 1.1.14. We urge all 1.1.14 users to upgrade their
+	  Yii to this latest release. Note that the issue only
+	  affects 1.1.14. All previous releases are not affected.
+	  Upgrading to this release from 1.1.14 is very safe and
+	  will not break your existing code.</p>
+	  <p>The vulnerability is in the CDetailView widget. When
+	  a Yii application uses this widget and configures the
+	  "value" property of a CDetailView attribute using end
+	  user inputs, it may allow attackers to potentially execute
+	  arbitrary PHP scripts on the server. We are not showing
+	  how to exploit it here to allow users to upgrade before
+	  details about the exploit become publicly known. To our
+	  knowledge the details of this issue are only known to
+	  core team members.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-4672</cvename>
+      <url>http://www.yiiframework.com/news/78/yii-1-1-15-is-released-security-fix</url>
+    </references>
+    <dates>
+      <discovery>2014-07-03</discovery>
+      <entry>2014-11-19</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="d395e44f-6f4f-11e4-a444-00262d5ed8ee">
     <topic>chromium -- multiple vulnerabilities</topic>
     <affects>
