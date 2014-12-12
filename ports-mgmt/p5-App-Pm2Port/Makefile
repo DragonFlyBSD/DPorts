@@ -3,13 +3,16 @@
 
 PORTNAME=	App-Pm2Port
 PORTVERSION=	0.29
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	ports-mgmt perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Creating port from perl module
+
+DEPRECATED=	Does not know about USES=perl, generates incorrect pkg-plist
+EXPIRATION_DATE=	2015-01-06
 
 BUILD_DEPENDS=	p5-CPANPLUS>=0:${PORTSDIR}/devel/p5-CPANPLUS \
 		p5-FreeBSD-Ports-INDEXhash>=0:${PORTSDIR}/ports-mgmt/p5-FreeBSD-Ports-INDEXhash \
