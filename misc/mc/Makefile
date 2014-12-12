@@ -3,7 +3,7 @@
 
 PORTNAME=	mc
 PORTVERSION=	4.8.13
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	misc shells
 MASTER_SITES=	http://ftp.midnight-commander.org/ \
 		http://ftp.osuosl.org/pub/midnightcommander/ \
@@ -12,7 +12,7 @@ DISTFILES=	${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX} \
 		${PORTNAME}.png:icons
 EXTRACT_ONLY=	${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX}
 
-MAINTAINER=	nemysis@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Midnight Commander, a free Norton Commander Clone
 
 LICENSE=	GPLv3
