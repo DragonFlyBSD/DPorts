@@ -3,11 +3,12 @@
 
 PORTNAME=	Crypt-Tea_JS
 PORTVERSION=	2.23
+PORTREVISION=	1
 CATEGORIES=	security perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	adamw@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Next gen Tiny Encryption Algorithm in Perl and Javascript
 
 CONFLICTS=	p5-Crypt-T_e_a-[0-9]*
