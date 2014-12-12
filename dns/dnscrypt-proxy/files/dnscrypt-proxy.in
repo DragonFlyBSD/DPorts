@@ -1,10 +1,10 @@
 #!/bin/sh
 #
-# $FreeBSD: head/dns/dnscrypt-proxy/files/dnscrypt-proxy.in 356688 2014-06-05 19:30:58Z feld $
+# $FreeBSD: head/dns/dnscrypt-proxy/files/dnscrypt-proxy.in 373758 2014-12-02 09:21:49Z xmj $
 #
 # PROVIDE: dnscrypt_proxy
 # REQUIRE: SERVERS cleanvar
-# BEFORE: named
+# BEFORE: named local_unbound unbound
 # KEYWORD: shutdown
 #
 # Add the following lines to /etc/rc.conf to enable dnscrypt-proxy:
