@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	freeciv
-PORTVERSION=	2.4.3
-PORTREVISION=	2
+PORTVERSION=	2.4.4
+PORTREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	SF/freeciv/Freeciv%20${PORTVERSION:R}/${PORTVERSION}
 
@@ -31,7 +31,6 @@ SDL_USE=		SDL=sdl,image,ttf
 MYSQL_CONFIGURE_ON=	--enable-fcdb=mysql --with-mysql-prefix=${LOCALBASE}
 MYSQL_USE=		MYSQL=yes
 IPV6_CONFIGURE_EANBALE=	ipv6
-NLS_USES=		gettext
 
 .include <bsd.port.options.mk>
 
@@ -73,5 +72,6 @@ post-install:
 .endif
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libfreeciv*.so
 	-${RMDIR} ${STAGEDIR}${PREFIX}/lib/fcai
+	${RM} ${STAGEDIR}${PREFIX}/etc/ggz.modules
 
 .include <bsd.port.mk>
