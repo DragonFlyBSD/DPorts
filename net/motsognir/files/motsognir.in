@@ -1,9 +1,9 @@
 #!/bin/sh
 #
-# motsognir.sh for rc.d usage (c) 2013 Mateusz Viste.
+# motsognir.sh for rc.d usage (c) 2013-2014 Mateusz Viste.
 # $Id$
 
-# $FreeBSD: head/net/motsognir/files/motsognir.in 371787 2014-10-31 09:13:09Z robak $
+# $FreeBSD: head/net/motsognir/files/motsognir.in 374112 2014-12-06 14:27:35Z pawel $
 #
 # PROVIDE: motsognir
 # REQUIRE: DAEMON
