@@ -3,7 +3,7 @@
 
 PORTNAME=	scribe
 DISTVERSION=	2.2.2013.04.15
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	https://github.com/facebookarchive/scribe/tarball/${GITVERSION}/
 DISTNAME=	facebook-scribe-${GITVERSION}
@@ -46,4 +46,10 @@ post-install:
 	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	(cd ${WRKSRC}/examples && ${COPYTREE_SHARE} . ${STAGEDIR}${EXAMPLESDIR})
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1000000
+BROKEN=		Does not build on FreeBSD 10.0+
+.endif
+
+.include <bsd.port.post.mk>
