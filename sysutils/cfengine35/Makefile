@@ -49,7 +49,7 @@ TOKYOCABINET_DESC=	Enable TokyoCabinet database backend
 QDBM_DESC=	Enable QDBM database backend
 OPTIONS_DEFAULT=TOKYOCABINET
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MTOKYOCABINET}
 CONFIGURE_ARGS+=	--with-tokyocabinet=${LOCALBASE}
@@ -62,9 +62,8 @@ LIB_DEPENDS+=	libqdbm.so:${PORTSDIR}/databases/qdbm
 .endif
 
 .if ${PORT_OPTIONS:MPGSQL}
-USE_PGSQL=		yes
+USES+=			pgsql
 CONFIGURE_ARGS+=	--with-postgresql=${LOCALBASE}
-LIB_DEPENDS+=		libpq.so:${PORTSDIR}/databases/postgresql${PGSQL_VER}-client
 .endif
 
 .if ${PORT_OPTIONS:MMYSQL}
@@ -79,4 +78,4 @@ CONFIGURE_ARGS+=	--with-libvirt=${LOCALBASE}
 LIB_DEPENDS+=		libvirt.so:${PORTSDIR}/devel/libvirt
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
