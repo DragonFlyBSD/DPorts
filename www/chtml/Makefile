@@ -3,7 +3,7 @@
 
 PORTNAME=	chtml
 PORTVERSION=	0.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www devel lang
 MASTER_SITES=	http://people.delphiforums.com/gjc/
 DISTNAME=	chtml
@@ -18,5 +18,6 @@ USE_PERL5=	run
 MAKE_ENV=	SITE_PERL=${SITE_PERL}
 NO_WRKSUBDIR=	yes
 MAKEFILE=	makefile
+MAKE_JOBS_UNSAFE=	yes
 
 .include <bsd.port.mk>
