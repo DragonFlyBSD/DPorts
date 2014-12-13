@@ -1,0 +1,3 @@
+CPPFLAGS+=	-I${LOCALBASE}/include/heimdal
+CFLAGS+=	-I${LOCALBASE}/include/heimdal
+LDFLAGS+=	-L${LOCALBASE}/lib/heimdal
