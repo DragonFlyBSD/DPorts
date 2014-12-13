@@ -34,7 +34,7 @@
  static int proc_info_mib[4] = { -1, -1, -1, -1 };
  
  struct kinfo_proc *_proc_request (kvm_t *kd, int request, int param, int *pnr) {
-@@ -67,7 +71,7 @@
+@@ -67,7 +71,7 @@ struct kinfo_proc *_proc_request (kvm_t
      case 6:
          kip = kvm_getprocs(kd, KERN_PROC_RUID, param, pnr);
          break;
@@ -43,7 +43,7 @@
      case 10:
          kip = kvm_getprocs(kd, KERN_PROC_RGID, param, pnr);
          break;
-@@ -115,8 +119,49 @@
+@@ -115,8 +119,49 @@ void store_gid (HV *h, const char *field
      }
  }
  
@@ -90,12 +90,12 @@
 +#define UID_FIELD     kp_uid
 +#define WMESG_FIELD   kp_lwp.kl_wmesg
 +#define XSTAT_FIELD   kp_exitstat
-+#define KTHREAD_FLAG  P_KTHREADP
++#define KTHREAD_FLAG  P_SYSTEM
 +#elif __FreeBSD_version < 500000
  #define ACFLAG_FIELD  kp_proc.p_acflag
  #define COMM_FIELD    kp_proc.p_comm
  #define ESTCPU_FIELD  kp_proc.p_estcpu
-@@ -144,30 +189,52 @@
+@@ -144,30 +189,52 @@ void store_gid (HV *h, const char *field
  #else
  #define ACFLAG_FIELD  ki_acflag
  #define COMM_FIELD    ki_comm
@@ -148,7 +148,7 @@
  HV *_procinfo (struct kinfo_proc *kp, int resolve) {
      HV *h;
      const char *nlistf, *memf;
-@@ -179,7 +246,7 @@
+@@ -179,7 +246,7 @@ HV *_procinfo (struct kinfo_proc *kp, in
      struct group *gr;
      short g;
      AV *grlist;
@@ -157,7 +157,7 @@
      struct rusage *rp;
  #endif
  
-@@ -200,9 +267,9 @@
+@@ -200,9 +267,9 @@ HV *_procinfo (struct kinfo_proc *kp, in
      hv_store(h, "xstat",   5, newSViv(kp->XSTAT_FIELD),   0);
      hv_store(h, "slptime", 7, newSViv(kp->SLPTIME_FIELD), 0);
      hv_store(h, "swtime",  6, newSViv(kp->SWTIME_FIELD),  0);
@@ -169,7 +169,7 @@
      hv_store(h, "oncpu",   5, newSViv(kp->ONCPU_FIELD),   0);
      hv_store(h, "lastcpu", 7, newSViv(kp->LASTCPU_FIELD), 0);
      hv_store(h, "nice",    4, newSViv(kp->NICE_FIELD),    0);
-@@ -211,27 +278,27 @@
+@@ -211,27 +278,27 @@ HV *_procinfo (struct kinfo_proc *kp, in
      hv_store(h, "login",   5, newSVpv(kp->LOGIN_FIELD, 0), 0);
      hv_store(h, "comm",    4, newSVpv(kp->COMM_FIELD,  0), 0);
  
@@ -210,7 +210,7 @@
      /* not available in FreeBSD 4.x */
      hv_store(h, "args",   4, newSViv(-1), 0);
  #else
-@@ -271,64 +338,79 @@
+@@ -271,64 +338,79 @@ HV *_procinfo (struct kinfo_proc *kp, in
      }
  
      /* deal with groups array */
@@ -309,7 +309,7 @@
      hv_store(h, "utime",    5, newSVnv(NO_FREEBSD_4x(TIME_FRAC(rp->ru_utime))), 0);
      hv_store(h, "stime",    5, newSVnv(NO_FREEBSD_4x(TIME_FRAC(rp->ru_stime))), 0);
      hv_store(h, "time",     4, newSVnv(NO_FREEBSD_4x(
-@@ -349,11 +431,15 @@
+@@ -349,11 +431,15 @@ HV *_procinfo (struct kinfo_proc *kp, in
      hv_store(h, "nivcsw",   6, newSViv(NO_FREEBSD_4x(rp->ru_nivcsw)), 0);
  
      /* attributes available only in FreeBSD 6.x */
@@ -328,7 +328,7 @@
      hv_store(h, "utime_ch",     8, newSVnv(NO_FREEBSD_5x(TIME_FRAC(rp->ru_utime))), 0);
      hv_store(h, "stime_ch",     8, newSVnv(NO_FREEBSD_5x(TIME_FRAC(rp->ru_stime))), 0);
      hv_store(h, "time_ch",      7, newSVnv(NO_FREEBSD_5x(
-@@ -383,7 +469,9 @@
+@@ -383,7 +469,9 @@ PROTOTYPES: ENABLE
  short
  max_kernel_groups()
      CODE:
