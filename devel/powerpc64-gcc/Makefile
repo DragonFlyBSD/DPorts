@@ -22,8 +22,6 @@ PLIST_SUB=	TARGETARCH=${PKGNAMEPREFIX:C/-//g} \
 LIB_DEPENDS=	libgmp.so:${PORTSDIR}/math/gmp \
 		libmpfr.so:${PORTSDIR}/math/mpfr \
 		libmpc.so:${PORTSDIR}/math/mpc
-BUILD_DEPENDS=	${BU_PREFIX}-as:${PORTSDIR}/devel/${PKGNAMEPREFIX}binutils
-RUN_DEPENDS=	${BU_PREFIX}-as:${PORTSDIR}/devel/${PKGNAMEPREFIX}binutils
 
 PATCH_WRKSRC=	${WRKDIR}/${PORTNAME}-${PORTVERSION}
 WRKSRC=	${WRKDIR}/build-gcc
@@ -64,6 +62,9 @@ CONFIGURE_TARGET=	${ARCH}-portbld-${OPSYS:tl}${OSREL}
 
 .if ${PKGNAMEPREFIX} == powerpc64-
 IGNORE=	powerpc64 gcc does not build yet
+.else
+BUILD_DEPENDS=	${BU_PREFIX}-as:${PORTSDIR}/devel/${PKGNAMEPREFIX}binutils
+RUN_DEPENDS=	${BU_PREFIX}-as:${PORTSDIR}/devel/${PKGNAMEPREFIX}binutils
 .endif
 
 post-extract:
