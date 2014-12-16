@@ -1,8 +1,9 @@
 # Created by: Florent Thoumie <flz@FreeBSD.org>
 # $FreeBSD$
 
+#TODO bz@ : if you do undestand the gyp stuff, third_party/widevine/cdm/widevine_cdm.gyp talks about it (plz install libwidevinecdm.so)
 PORTNAME=	chromium
-PORTVERSION=	38.0.2125.111
+PORTVERSION=	39.0.2171.95
 CATEGORIES=	www
 MASTER_SITES=	http://commondatastorage.googleapis.com/chromium-browser-official/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
@@ -13,7 +14,7 @@ COMMENT=	Google web browser based on WebKit
 LICENSE=	BSD3CLAUSE LGPL21 MPL
 LICENSE_COMB=	multi
 
-CFLAGS+=	-fno-stack-protector -isystem${LOCALBASE}/include
+CFLAGS+=	-isystem${LOCALBASE}/include
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/gperf:${PORTSDIR}/devel/gperf \
 		bash:${PORTSDIR}/shells/bash \
@@ -172,7 +173,6 @@ EXTRA_PATCHES+=	${FILESDIR}/extra-patch-libusb-pc
 .if !exists(/usr/lib/libexecinfo.so)
 CFLAGS+=	-fno-omit-frame-pointer
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-fixup-ffmpeg
-PORTREVISION=	1
 .endif
 
 .if ${PORT_OPTIONS:MTEST}
@@ -201,6 +201,7 @@ MAKE_ARGS=	-C out/${BUILDTYPE}
 .if ${CHOSEN_COMPILER_TYPE} == gcc
 GYP_DEFINES+=	gcc_version=${CXX:S/g++//}
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-gcc
+CFLAGS+=	-fno-stack-protector # gcc 4.8 cannot find __stack_chk_fail_local
 .else
 GYP_DEFINES+=	clang=1
 CXXFLAGS+=	-D__float128=void -D_GLIBCXX_PERMIT_BACKWARD_HASH=1
@@ -283,6 +284,7 @@ pre-configure:
 		'third_party/dom_distiller_js' \
 		'third_party/dom_distiller_js/package/proto_gen/third_party/dom_distiller_js' \
 		'third_party/ffmpeg' \
+		'third_party/gardiner_mod' \
 		'third_party/fips181' \
 		'third_party/flot' \
 		'third_party/hunspell' \
