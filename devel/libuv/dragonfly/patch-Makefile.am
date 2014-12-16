@@ -1,0 +1,10 @@
+--- Makefile.am.orig	2014-12-16 02:24:38 UTC
++++ Makefile.am
+@@ -274,7 +274,6 @@ endif
+ 
+ if DRAGONFLY
+ include_HEADERS += include/uv-bsd.h
+-libuv_la_SOURCES += src/unix/kqueue.c src/unix/freebsd.c
+ endif
+ 
+ if FREEBSD
