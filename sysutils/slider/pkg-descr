@@ -1,0 +1,10 @@
+The HAMMER file system time slider utility is a tool for DragonFly's
+HAMMER Filesystem (version 1).  The utility is a curses-enabled,
+ user-friendly cross between "hammer history" and "undo".
+
+Time Slider enables the user to browse through all available versions of
+the given file stored in HAMMER history, view differences btween two
+versions, replace the current version with any previous version, restore
+a deleted file, and save any previous or deleted version to a new file.
+
+WWW: https://github.com/jrmarino/Slider
