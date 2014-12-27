@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	slider
-PORTVERSION=	1.01
+PORTVERSION=	2.00
 CATEGORIES=	sysutils
 
 MAINTAINER=	marino@FreeBSD.org
@@ -19,7 +19,7 @@ PLIST_FILES=	bin/slider
 USE_GITHUB=	yes
 GH_ACCOUNT=	jrmarino
 GH_PROJECT=	Slider
-GH_COMMIT=	3b83b6f
+GH_COMMIT=	8ff5bbb
 GH_TAGNAME=	${GH_COMMIT}
 
 post-patch:
