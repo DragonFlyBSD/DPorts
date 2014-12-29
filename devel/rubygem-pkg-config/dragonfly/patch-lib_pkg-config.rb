@@ -1,20 +1,20 @@
 --- lib/pkg-config.rb.orig	2014-12-29 12:49:13 UTC
 +++ lib/pkg-config.rb
-@@ -53,10 +53,6 @@ class PackageConfig
-         found_pkg_config = search_pkg_config_from_path(pkg_config)
+@@ -54,8 +54,7 @@ class PackageConfig
          pkg_config = found_pkg_config if found_pkg_config
        end
--      unless pkg_config.absolute?
+       unless pkg_config.absolute?
 -        found_pkg_config = search_pkg_config_by_dln_find_exe(pkg_config)
 -        pkg_config = found_pkg_config if found_pkg_config
--      end
++        pkg_config = "/usr/local/bin/pkg-config"
+       end
        pkg_config
      end
- 
-@@ -68,42 +64,6 @@ class PackageConfig
+@@ -67,42 +66,6 @@ class PackageConfig
+       end
        nil
      end
- 
+-
 -    def search_pkg_config_by_dln_find_exe(pkg_config)
 -      begin
 -        require "dl/import"
@@ -50,7 +50,6 @@
 -        Pathname(path.to_s)
 -      end
 -    end
--  end
+   end
  
    attr_reader :paths
-   attr_accessor :msvc_syntax
