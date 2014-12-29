@@ -4,7 +4,7 @@
 
 PORTNAME=	poppler
 PORTVERSION=	0.26.3
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	graphics print
 MASTER_SITES=	http://poppler.freedesktop.org/
 
@@ -15,7 +15,7 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libjpeg.so:${PORTSDIR}/graphics/jpeg \
-		libpng15.so:${PORTSDIR}/graphics/png \
+		libpng.so:${PORTSDIR}/graphics/png \
 		libtiff.so:${PORTSDIR}/graphics/tiff \
 		libfontconfig.so:${PORTSDIR}/x11-fonts/fontconfig \
 		liblcms2.so:${PORTSDIR}/graphics/lcms2 \
@@ -56,7 +56,7 @@ LIB_DEPENDS+=	libpoppler.so:${PORTSDIR}/graphics/poppler
 
 .if ${SLAVEPORT}==glib
 CONFIGURE_ARGS+=--enable-poppler-glib --enable-introspection=yes
-USE_GNOME+=	cairo gnomehier glib20 introspection:build
+USE_GNOME+=	cairo glib20 introspection:build
 BUILD_WRKSRC=	${WRKSRC}/glib
 INSTALL_WRKSRC=	${WRKSRC}/glib
 .else
