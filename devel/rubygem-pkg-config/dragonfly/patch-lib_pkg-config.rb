@@ -54,3 +54,13 @@
    end
  
    attr_reader :paths
+@@ -200,7 +160,8 @@ class PackageConfig
+     cflags_set += all_required_packages.collect do |package|
+       self.class.new(package, @options).cflags
+     end
+-    all_cflags = normalize_cflags(Shellwords.split(cflags_set.join(" ")))
++    #all_cflags = normalize_cflags(Shellwords.split(cflags_set.join(" ")))
++    all_cflags = Shellwords.split(cflags_set.join(" "))
+     path_flags, other_flags = all_cflags.partition {|flag| /\A-I/ =~ flag}
+     path_flags = remove_duplicated_include_paths(path_flags)
+     path_flags = path_flags.reject do |flag|
