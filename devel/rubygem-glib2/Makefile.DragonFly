@@ -1,3 +1,0 @@
-post-extract:
-	${REINPLACE_CMD} -e 's|/usr/local/|${PREFIX}|g' \
-		${WRKSRC}/ext/glib2/extconf.rb
