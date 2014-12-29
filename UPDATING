@@ -5,6 +5,155 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+
+20141225:
+  AFFECTS: users of graphics/png
+  AUTHOR: antoine@FreeBSD.org
+
+  The PNG library has been updated to version 1.6.16.  Please rebuild all
+  ports that depend on it.
+
+  If you use portmaster:
+        portmaster -r png
+  If you use portupgrade:
+        portupgrade -fr graphics/png
+
+20141224:
+  AFFECTS: users of lang/neon29
+  AUTHOR: ohauer@FreeBSD.org
+
+  The port www/neon29 was renamed to www/neon and updated to version 0.30.1
+
+  If you use pkg, simply upgrade:
+  # pkg upgrade
+
+  If you use portmaster, rebuild ports dependding on neon
+  # portmaster -o www/neon www/neon29
+  # portmaster -R -r neon
+
+20141219:
+  AFFECTS: users of x11/xorg and all xorg ports
+  AUTHOR: dumbbell@FreeBSD.org
+
+  The X.Org server (x11-servers/xorg-server) is updated to 1.14. All
+  ports which provide X.Org drivers must be updated simultaneously, i.e.
+  x11-drivers/xf86-*, emulators/virtualbox-ose-additions, net/tigervnc,
+  etc.
+
+  The input device autodetection backend is switched from HAL to devd.
+  If you configure your keyboard layout through HAL .fdi files, you need
+  to migrate this configuration to plain X.Org configuration files.
+
+  Up-to-date instructions and a description of the changes brought by
+  this update are detailed in a blog post:
+
+  http://blogs.freebsdish.org/graphics/2014/11/19/xserver-1-14-update-ready/
+
+20141219:
+  AFFECTS: users of net-mgmt/xymon-server
+  AUTHOR: feld@FreeBSD.org
+
+  Xymon has been updated to 4.3.18. A major change is the replacement of
+  the individual cgi shell scripts with symlinks to a cgi program written
+  in C. This is to mitigate shellshock on Linux systems where the
+  /bin/sh -> /bin/bash. FreeBSD users were not exposed except in the
+  most unusual and unsupported circumstances. However, this is an
+  important update for security. This change could break your
+  configuration as Henrik describes here:
+
+  > NOTE: Replacing the shell script wrappers means that the cgioptions.cfg
+  > file is no longer processed as a shell script. The new wrapper works
+  > fine with the default version of cgioptions.cfg, but it you have
+  > modified it in a way that it relies on being processed by a shell, then
+  > it will break.
+
+20141219:
+  AFFECTS: users of audio/abcde
+  AUTHOR: gblach@FreeBSD.org
+
+  In audio/abcde dependency has been changed from audio/py-eyed3-06
+  to audio/py-eyed3. Before updating audio/abcde to 2.6 you must manually
+  deinstall audio/py-eyed-06.
+
+  # pkg delete -f py\*-eyed3-06
+
+20141218:
+  AFFECTS: users of security/openssh-portable
+  AUTHOR: bdrewery@FreeBSD.org
+
+  OpenSSH 6.7 disables some insecure ciphers by default, such as arcfour
+  and blowfish. You may have clients using these over LAN where security is
+  considered less important for the connection. For these cases you may need
+  to update your Ciphers entry in your sshd_config to enable them again.
+
+  See http://mgalgs.github.io/2014/10/22/enable-arcfour-and-other-fast-ciphers-on-recent-versions-of-openssh.html
+
+20141217:
+  AFFECTS: users of lang/perl5.*
+  AUTHOR: mat@FreeBSD.org
+
+  Perl now links all .so it builds with libperl.so, it makes upgrading from one
+  Perl major version to another way easier.  For binary package users, it means
+  pkg upgrade will detect the libperl.so.x.yy change, and reinstall the
+  affected packages.  For users using ports, it will save rebuild time as it's
+  easier to detect what ports really need to be rebuilt.
+
+  Ports users are encouraged to rebuild ports that install files in SITE_ARCH.
+  If using Perl 5.18, run:
+
+  With portupgrade:
+
+    portupgrade -f `find /usr/local/lib/perl5/site_perl/mach/5.18 -name '*.so'|xargs pkg which -qo|sort -u`
+
+  With portmaster:
+
+    portmaster `find /usr/local/lib/perl5/site_perl/mach/5.18 -name '*.so'|xargs pkg which -qo|sort -u`
+
+20141216:
+  AFFECTS: users of security/openssh-portable, security/openssh-portable66
+  AUTHOR: bdrewery@FreeBSD.org
+
+  All patches have been fixed for version 6.7. It is no longer required to use
+  the security/openssh-portable66 port.
+
+  The LPK option was removed from security/openssh-portable as it has been
+  deprecated since May 2013. Use AuthorizedKeysCommand as a replacement.
+
+20141215:
+  AFFECTS: users of comms/spandsp-devel
+  AUTHOR: pawel@FreeBSD.org
+
+  comms/spandsp has been upgraded to version 0.0.6
+  comms/spandsp-devel is now deprecated and set for removal, all ports using
+  it were converted to use newer comms/spandsp. Before upgrade you must
+  remove comms/spandsp-devel so that ports can pick up new dependency.
+
+  # pkg delete -f spandsp-devel
+
+20141215:
+  AFFECTS: users of emulators/linux_base-f10 and emulators/linux_base-c6
+  AUTHOR: sbruno@freebsd.org
+
+  The CentOS ports are now the default for stable/10 (after revision 275807).
+  See UPDATING entry 20141209 for details on migration of systems.
+
+20141214:
+  AFFECTS: users of TeXLive
+  AUTHOR: hrs@FreeBSD.org
+
+  Several scripts in print/texlive-base have been moved to
+  devel/tex-kpathsea.  Upgrading them can fail because texlive-base
+  depends on tex-kpathsea, and the new tex-kpathsea tries to install
+  files which were installed by the old texlive-base.  The following
+  error message indicates this situation:
+
+    pkg-static: tex-kpathsea-6.2.0_1 conflicts with texlive-base-20140525_3 (installs files into the same place).  Problematic file: /usr/local/bin/kpsewhere
+
+  To solve this problem, remove both of tex-kpathsea and texlive-base first
+  and install the new versions:
+
+   # pkg delete -f tex-kpathsea texlive-base
+
 20141209:
   AFFECTS: users of emulators/linux_base-f10 and emulators/linux_base-c6
   AUTHOR: xmj@freebsd.org
@@ -39,7 +188,7 @@ you update your ports collection, before attempting any port upgrades.
 
   Users who need to continue using Fedora 10 base and userland should do the
   following instead:
-  
+
   1. Add these lines to /etc/make.conf:
 
       OVERRIDE_LINUX_BASE_PORT=f10
@@ -61,6 +210,21 @@ you update your ports collection, before attempting any port upgrades.
   8.4 jails created with Poudriere 3.1, or poudriere-devel-3.0.99.20141117
   should be recreated with 'jail -d' and 'jail -c'. This fixes pkg(8)
   crashes.
+
+20141208:
+  AFFECTS: users of databases/postgresql??-(server|client)
+  AUTHOR: marino@FreeBSD.org
+
+  PostgreSQL version 9.3 is now the default. To upgrade from a version
+  lower than 9.3, follow the instructions on the PostgreSQL.org website.
+  http://www.postgresql.org/docs/9.3/interactive/upgrading.html
+  Please note that the pg_upgrade program is installed by the
+  databases/postgresql93-contrib port
+
+  When using binary packages, if you only use the client port, you can
+  issue the following command to follow the default version:
+
+  # pkg set -o databases/postgresql92-client:databases/postgresql93-client
 
 20141205:
   AFFECTS: users of polish/kadu
@@ -108,7 +272,7 @@ you update your ports collection, before attempting any port upgrades.
   AUTHOR: mat@FreeBSD.org
 
   There was a nasty bug introduced in the update below, it was introduced in
-  svn revision 373476 and corrected in 373485.  If you get errors looking like
+  SVN revision 373476 and corrected in 373485.  If you get errors looking like
   this one:
 
   ===>   Registering installation for p5-Params-Util-1.07_1 as automatic
@@ -138,10 +302,10 @@ you update your ports collection, before attempting any port upgrades.
   With the recent split of multimedia/x264 in library and binary and library
   components, if an application that uses libx264 is updated before x264 itself,
   multimedia/libx264 will conflict with the existing x264 package. Delete
-  this package before continuing any update that depends on it: 
-  
-  # pkg delete -f x264
-  
+  this package before continuing any update that depends on it:
+
+	# pkg delete -f x264
+
   Install the updated x264 and/or upgrade the other applications that
   depend on libx264, such as ffmpeg.
 
@@ -237,7 +401,7 @@ you update your ports collection, before attempting any port upgrades.
 
   Delete the old and conflicting packages:
   # pkg delete clutter gnome-utils gnome-panel gnome-keyring vala-vapigen \
-      guile gcalctool gnome-media libgnomekbd
+      guile gcalctool gnome-media libgnomekbd gnome-themes at-spi
   # pkg delete gnome-screensaver gnome-applets bug-buddy \
       evolution-exchange evolution-webcal gnome-system-tools \
       seahorse-plugins gnome-control-center
@@ -431,7 +595,7 @@ you update your ports collection, before attempting any port upgrades.
   turned on by default to make such functionality available to users
   of binary packages.
 
-  Some care should be taken before upgrading by people not using lua
+  Some care should be taken before upgrading by people not using Lua
   to avoid the sample extensions.lua file from being loaded on reload
   after updating the asterisk port/pkg.
 
@@ -439,7 +603,7 @@ you update your ports collection, before attempting any port upgrades.
   to disable the option before updating.
 
   People using binary packages(or not wanting to disable the LUA
-  option in the port) not using the lua functionality should add:
+  option in the port) not using the Lua functionality should add:
 
   noload => pbx_lua.so
 
@@ -507,9 +671,9 @@ you update your ports collection, before attempting any port upgrades.
   (Replace libfoo\.la with the *.la file that is missing.)
 
   This command will print a list of *.la files that refer to the missing *.la
-  file and what package they belong to.  First, where it says "not found in the
-  datatbase", remove the *.la file.  After removing all such files, where it
-  says "installed by package X", rebuild X.  Eventually the list printed by
+  file and what package they belong to.  First, where it says "not found in
+  the database", remove the *.la file.  After removing all such files, where
+  it says "installed by package X", rebuild X.  Eventually the list printed by
   that command will be empty and the build error should be gone.
 
 20140826:
@@ -609,7 +773,7 @@ you update your ports collection, before attempting any port upgrades.
     or
   # portupgrade -fr graphics/ilmbase graphics/OpenEXR
 
-  The PORTREVISIONS of all ports that require ilmbase and/or OpenEXR
+  The PORTREVISIONs of all ports that require ilmbase and/or OpenEXR
   have been bumped.
 
 20140810:
@@ -1035,21 +1199,6 @@ you update your ports collection, before attempting any port upgrades.
 
   # pkg set -o databases/postgresql90-client:databases/postgresql92-client
 
-20141208:
-  AFFECTS: users of databases/postgresql??-(server|client)
-  AUTHOR: marino@FreeBSD.org
-
-  PostgreSQL version 9.3 is now the default. To upgrade from a version
-  lower than 9.3, follow the instructions on the PostgreSQL.org website.
-  http://www.postgresql.org/docs/9.3/interactive/upgrading.html
-  Please note that the pg_upgrade program is installed by the
-  databases/postgresql93-contrib port
-
-  When using binary packages, if you only use the client port, you can
-  issue the following command to follow the default version:
-
-  # pkg set -o databases/postgresql92-client:databases/postgresql93-client
-
 20140528:
   AFFECTS: users of security/calife & security/calife-devel
   AUTHOR: roberto@FreeBSD.org
@@ -1084,7 +1233,7 @@ you update your ports collection, before attempting any port upgrades.
 20140526:
   AFFECTS: users of lang/lua
 
-  lang/lua has been relaced by lang/lua51
+  lang/lua has been replaced by lang/lua51.
 
   For port builds system please follow the following instructions:
 
@@ -1808,115 +1957,4 @@ you update your ports collection, before attempting any port upgrades.
   AUTHOR: ohauer@FreeBSD.org
 
   The acronym for Apache Software License 2.0 was renamed to APACHE20
-
-20131226:
-  AFFECTS: users of security/cyrus-sasl2
-  AUTHOR: ume@FreeBSD.org
-
-  The SASL GSSAPI authentication plugin was removed from
-  security/cyrus-sasl2 port and divided into new
-  security/cyrus-sasl2-gssapi port.
-
-  If you are using the SASL GSSAPI authentication, please install
-  security/cyrus-sasl2-gssapi port, in addition to upgrading
-  security/cyrus-sasl2 port.
-
-20131218:
-  AFFECTS: users of news/cnews
-  AUTHOR: dinoex@FreeBSD.org
-
-  The default path for overview files has changed.
-  Rebuild your overview files after the update with:
-
-	su - news /usr/local/libexec/cnews/nov/initov
-
-20131217:
-  AFFECTS: users of databases/ruby-bdb or ports-mgmt/portupgrade and databases/db5 or databases/db6
-  AUTHOR: mandree@FreeBSD.org
-
-  databases/db5 and databases/db6 have recently been updated to fix
-  bugs. This changed their patchlevel version.
-
-  However, ruby-bdb used to break during the db[56] upgrade due to a bug
-  described in <http://www.freebsd.org/cgi/query-pr.cgi?pr=184921>.
-
-  THEREFORE, YOU MUST MANUALLY UPGRADE databases/ruby-bdb INDIVIDUALLY
-  TO 0.6.6_2 OR NEWER WHEN USING portupgrade AGAINST databases/db[56]
-  PORTS. To achieve that, type:
-
-  # portupgrade databases/ruby-bdb
-  or
-  # portmaster -x 'db*' databases/ruby-bdb
-
-  before proceeding with other upgrades.
-
-  Should you have corrupted the portupgrade databases, or if ruby-bdb
-  refuses to work with the upgraded db* port with errors such as "DB
-  needs compatible versions of libdb & db.h", then rebuild the ruby-bdb
-  port manually, and fix the portupgrade databases:
-
-  # make -C /usr/ports/databases/ruby-bdb all deinstall install clean
-  # pkgdb -fu
-  # portupgrade -f db5 db6
-
-  This should return portupgrade to normal operation.
-
-20131216:
-  AFFECTS: users of x11/xorg, graphics/libGL, graphics/dri, all xorg ports
-  AUTHOR: zeising@FreeBSD.org
-
-  The default xorg version has been switched on FreeBSD CURRENT.
-
-  To upgrade graphics/libGL, graphics/dri and related MESA ports, it is
-  necessary to first remove the old versions of those ports.
-  No special upgrade procedure is needed for xorg port but it is
-  necessary to recompile all xorg drivers (xf86-*) and other ports that
-  depend on the xserver version, including
-  emulators/virtualbox-ose-additions.  Portrevisions have been bumped
-  where needed, but users of drivers not in the ports tree will need to
-  recompile those.
-
-  If it is important to stay on the old versions, it is possible to
-  specify WITHOUT_NEW_XORG= in /etc/make.conf to get the old xorg
-  distribution.
-
-  To update:
-
-  # pkg_delete -f libGL-\* dri-\*
-    or
-  # pkg delete -f libGL dri
-    followed by
-  # portmaster graphics/dri graphics/libGL
-    or
-  # portupgrade graphics/dri graphics/libGL
-    and then
-  # portmaster -a
-    or
-  # portupgrade -a
-
-20131216:
-  AFFECTS: users of databases/db4*
-  AUTHOR: mandree@FreeBSD.org
-
-  Berkeley DB versions before and excluding 4.8 have been marked deprecated.
-  New port installations should be based on Berkeley DB 5 or 6.
-
-  Note that Oracle Berkeley DB 6 is under the more restrictive Affero GPL v3
-  license, be sure to review if using that fits your requirements.
-
-  You can add WITH_BDB_VER=5 or WITH_BDB_VER=6 to /etc/make.conf to have all
-  applications that get rebuilt use Oracle Berkeley DB 5 or 6, respectively.
-
-  DO NOT FORCE DELETE older BerkeleyDB packages, that breaks the upgrade
-  tools.  Instead, first rebuild the ports that depend on it, then
-  remove the old Berkeley DB versions.
-
-  Berkeley DB ports should be able to build/install with an older and a
-  newer version version both installed if WITH_BDB_VER is set.  If a
-  port then grabs the old Berkeley DB version, that is an issue with the
-  port that requires Berkeley DB, and should be reported to the
-  maintainer.
-
-  If you are interested in upgrading now already, we have instructions
-  at <https://wiki.freebsd.org/Ports/BerkeleyDBCleanup>.
 

@@ -384,9 +384,6 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #				  (libtool, autoconf, autoheader, automake et al.)
 #				  See bsd.autotools.mk for more details.
 ##
-# USE_EFL		- If set, this port use EFL libraries.
-#				  Implies inclusion of bsd.efl.mk.  (Also see
-#				  that file for more information on USE_EFL_*).
 # USE_FPC		- If set, this port relies on the Free Pascal language.
 # 				  Implies inclusion of bsd.fpc.mk.  (Also see
 #				  that file for more information on WANT_FPC_*).
@@ -775,19 +772,14 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #
 # For extract:
 #
-# EXTRACT_CMD	- Command for extracting archive: "bzip2" if USE_BZIP2
-#				  is set, "gzip" otherwise.
+# EXTRACT_CMD	- Command for extracting archive
+#				  Default: ${TAR}
 # EXTRACT_BEFORE_ARGS
 #				- Arguments to ${EXTRACT_CMD} before filename.
-#				  Default: "-dc"
+#				  Default: "-xf"
 # EXTRACT_AFTER_ARGS
 #				- Arguments to ${EXTRACT_CMD} following filename.
-#				  default: "| tar -xf -"
-# EXTRACT_PRESERVE_OWNERSHIP
-#				- Normally, when run as "root", the extract stage will
-#				  change the owner and group of all files under ${WRKDIR}
-#				  to 0:0.  Set this variable if you want to turn off this
-#				  feature.
+#				  Default: "--no-same-owner --no-same-permissions"
 # For patch:
 #
 # EXTRA_PATCHES	- Define this variable if you have patches not in
@@ -892,7 +884,6 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #				  Default: ${PORTSDIR}/Templates/BSD.local.dist or
 #				  /etc/mtree/BSD.usr.dist if ${PREFIX} == "/usr".
 # PLIST_DIRS	- Directories to be added to packing list
-# PLIST_DIRSTRY	- Directories to be added to packing list and try to remove them.
 # PLIST_FILES	- Files and symbolic links to be added to packing list
 #
 # PLIST			- Name of the `packing list' file.
@@ -1103,7 +1094,6 @@ CO_ENV+=	STAGEDIR=${STAGEDIR} \
 			WRKDIR=${WRKDIR} \
 			WRKSRC=${WRKSRC} \
 			MTREE_FILE=${MTREE_FILE} \
-			GNOME_MTREE_FILE=${GNOME_MTREE_FILE} \
 			TMPPLIST=${TMPPLIST} \
 			SCRIPTSDIR=${SCRIPTSDIR} \
 			PLIST_SUB_SED="${PLIST_SUB_SED}" \
@@ -1235,14 +1225,6 @@ OSREL!=		${ECHO} ${DFLYVERSION} | ${AWK} '{a=int($$1/100000); b=int(($$1-(a*1000
 .else
 .error Unable to determine OS version.  Either define OSVERSION, install /usr/include/sys/param.h or define SRC_BASE.
 .endif
-.endif
-
-# Enable new xorg for FreeBSD versions after Radeon KMS was imported unless
-# WITHOUT_NEW_XORG is set.
-.if !defined(WITHOUT_NEW_XORG)
-WITH_NEW_XORG?=	yes
-.else
-.undef WITH_NEW_XORG
 .endif
 
 # Only define tools here (for transition period with between pkg tools)
@@ -1442,10 +1424,6 @@ PKGCOMPATDIR?=		${LOCALBASE}/lib/compat/pkg
 
 .if defined(USE_PYTHON) || defined(USE_PYTHON_BUILD) || defined(USE_PYTHON_RUN)
 USES+=	python
-.endif
-
-.if defined(USE_EFL) || defined(WANT_EFL) || defined(USE_EFL_ESMART)
-.include "${PORTSDIR}/Mk/bsd.efl.mk"
 .endif
 
 .if defined(USE_FPC) || defined(WANT_FPC_BASE) || defined(WANT_FPC_ALL)
@@ -1885,10 +1863,6 @@ _FORCE_POST_PATTERNS=	rmdir kldxref mkfontscale mkfontdir fc-cache \
 .include "${PORTSDIR}/Mk/bsd.gstreamer.mk"
 .endif
 
-.if defined(USE_EFL) || defined(WANT_EFL) || defined(USE_EFL_ESMART)
-.include "${PORTSDIR}/Mk/bsd.efl.mk"
-.endif
-
 .if defined(USE_JAVA)
 .include "${PORTSDIR}/Mk/bsd.java.mk"
 .endif
@@ -2172,11 +2146,7 @@ TAR?=	/usr/bin/tar
 LHA_BEFORE_ARGS?=	xfpw=${WRKDIR}
 LHA_AFTER_ARGS?=
 
-.if defined(EXTRACT_PRESERVE_OWNERSHIP)
-TAR_AFTER_ARGS_DEFAULT=
-.else
 TAR_AFTER_ARGS_DEFAULT=	--no-same-owner --no-same-permissions
-.endif
 TAR_BEFORE_ARGS_DEFAULT= -xf
 
 .if !defined(TAR_BEFORE_ARGS)
@@ -3088,12 +3058,6 @@ build: configure
 	@${TOUCH} ${TOUCH_FLAGS} ${BUILD_COOKIE}
 .endif
 
-# Disable install
-.if defined(NO_INSTALL) && !target(do-install)
-do-install:
-	@${DO_NADA}
-.endif
-
 # Disable package
 .if defined(NO_PACKAGE) && !target(package)
 package:
@@ -3382,12 +3346,10 @@ do-extract:
 			esac ; \
 		fi; \
 	done
-.if !defined(EXTRACT_PRESERVE_OWNERSHIP)
 	@if [ ${UID} = 0 ]; then \
 		${CHMOD} -R ug-s ${WRKDIR}; \
 		${CHOWN} -R 0:0 ${WRKDIR}; \
 	fi
-.endif
 .endif
 
 # Patch
@@ -3662,9 +3624,9 @@ check-install-conflicts:
 
 # Install
 
-.if !target(do-install)
+.if !target(do-install) && !defined(NO_INSTALL)
 do-install:
-	@(cd ${INSTALL_WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} ${INSTALL_TARGET})
+	@(cd ${INSTALL_WRKSRC} && ${SETENV} ${MAKE_ENV} ${FAKEROOT} ${MAKE_CMD} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} ${INSTALL_TARGET})
 .endif
 
 # Package
@@ -4954,7 +4916,8 @@ create-manifest:
 		echo "}" ; \
 		echo "categories: [ ${CATEGORIES:u:S/$/,/} ]" ; \
 		l=${LICENSE_COMB} ; \
-		[ -n "${NO_ARCH}" ] && echo "arch : `${PKG_BIN} config abi | ${CUT} -d: -f1,2`:*" ; \
+		[ -n "${NO_ARCH}" ] && echo "arch : `${PKG_BIN} config abi | tr '[:upper:]' '[:lower:]' | ${CUT} -d: -f1,2`:*" ; \
+		[ -n "${NO_ARCH}" ] && echo "abi : `${PKG_BIN} config abi | ${CUT} -d: -f1,2`:*" ; \
 		echo "licenselogic: $${l:-single}" ; \
 		[ -z "${LICENSE}" ] || echo "licenses: [ ${LICENSE:u:S/$/,/} ]" ; \
 		[ -z "${USERS}" ] || echo "users: [ ${USERS:u:S/$/,/} ]" ; \
@@ -4996,9 +4959,6 @@ create-manifest:
 	[ -f ${PKGPOSTUPGRADE} ] && ${CP} ${PKGPOSTUPGRADE} ${METADIR}/+POST_UPGRADE; \
 	${CP} ${DESCR} ${METADIR}/+DESC; \
 	[ -f ${PKGMESSAGE} ] && ${CP} ${PKGMESSAGE} ${METADIR}/+DISPLAY || return 0
-.if !defined(NO_MTREE)
-	@[ -f ${MTREE_FILE} ] && ${CP} ${MTREE_FILE} ${METADIR}/+MTREE_DIRS || return 0
-.endif
 
 # Print out package names.
 
@@ -5190,6 +5150,7 @@ generate-plist: ${WRKDIR}
 		${SED} ${PLIST_SUB:S/$/!g/:S/^/ -e s!%%/:S/=/%%!/} ${PLIST} >> ${TMPPLIST}; \
 	fi
 
+# Keep PLIST_DIRSTRY as compatibility
 .for dir in ${PLIST_DIRS} ${PLIST_DIRSTRY}
 	@${ECHO_CMD} ${dir} | ${SED} ${PLIST_SUB:S/$/!g/:S/^/ -e s!%%/:S/=/%%!/} -e 's,^,@dir ,' >> ${TMPPLIST}
 .endfor
@@ -5581,24 +5542,22 @@ do-config:
 .if empty(ALL_OPTIONS) && empty(OPTIONS_SINGLE) && empty(OPTIONS_MULTI) && empty(OPTIONS_RADIO) && empty(OPTIONS_GROUP)
 	@${ECHO_MSG} "===> No options to configure"
 .else
-.if ${UID} != 0 && !defined(INSTALL_AS_USER)
-	@optionsdir=${OPTIONS_FILE}; optionsdir=$${optionsdir%/*}; \
-	oldoptionsdir=${OPTIONSFILE}; oldoptionsdir=$${oldoptionsdir%/*}; \
-	${ECHO_MSG} "===>  Switching to root credentials to create $${optionsdir}"; \
-	(${SU_CMD} "${SH} -c \"if [ -d $${oldoptionsdir} -a ! -d $${optionsdir} ]; then ${MV} $${oldoptionsdir} $${optionsdir}; elif [ -d $${oldoptionsdir} -a -d $${optionsdir} ]; then ${RM} -rf $${oldoptionsdir} ; fi ; ${MKDIR} $${optionsdir} 2> /dev/null\"") || \
-		(${ECHO_MSG} "===> Cannot create $${optionsdir}, check permissions"; exit 1); \
-	${ECHO_MSG} "===>  Returning to user credentials"
-.else
-	@optionsdir=${OPTIONS_FILE}; optionsdir=$${optionsdir%/*}; \
-	oldoptionsdir=${OPTIONSFILE}; oldoptionsdir=$${oldoptionsdir%/*}; \
+	@optionsdir=${OPTIONS_FILE:H}; \
+	oldoptionsdir=${OPTIONSFILE:H}; \
+	if [ ${UID} != 0 -a -z "${INSTALL_AS_USER}" -a ! -w "${PORT_DBDIR}" ] ; then \
+		${ECHO_MSG} "===>  Switching to root credentials to create $${optionsdir}"; \
+		(${SU_CMD} "${SH} -c \"if [ -d $${oldoptionsdir} -a ! -d $${optionsdir} ]; then ${MV} $${oldoptionsdir} $${optionsdir}; elif [ -d $${oldoptionsdir} -a -d $${optionsdir} ]; then ${RM} -rf $${oldoptionsdir} ; fi ; ${MKDIR} $${optionsdir} 2> /dev/null\"") || \
+			(${ECHO_MSG} "===> Cannot create $${optionsdir}, check permissions"; exit 1); \
+		${ECHO_MSG} "===>  Returning to user credentials" ; \
+	else \
 	if [ -d $${oldoptionsdir} -a ! -d $${optionsdir} ]; then \
 		${MV} $${oldoptionsdir} $${optionsdir}; \
 	elif [ -d $${oldoptionsdir} -a -d $${optionsdir} ]; then \
 		${RM} -rf $${oldoptionsdir} ; \
 	fi ; \
 	${MKDIR} $${optionsdir} 2> /dev/null || \
-	(${ECHO_MSG} "===> Cannot create $${optionsdir}, check permissions"; exit 1)
-.endif
+	(${ECHO_MSG} "===> Cannot create $${optionsdir}, check permissions"; exit 1) ; \
+	fi
 	@TMPOPTIONSFILE=$$(mktemp -t portoptions); \
 	trap "${RM} -f $${TMPOPTIONSFILE}; exit 1" 1 2 3 5 10 13 15; \
 	${SETENV} ${D4P_ENV} ${SH} ${SCRIPTSDIR}/dialog4ports.sh $${TMPOPTIONSFILE} || { \
@@ -5626,7 +5585,7 @@ do-config:
 			${ECHO_CMD} "OPTIONS_FILE_UNSET+=$${i}" >> $${TMPOPTIONSFILE}; \
 		fi; \
 	done; \
-	if [ ${UID} != 0 -a "x${INSTALL_AS_USER}" = "x" ]; then \
+	if [ ${UID} != 0 -a -z "${INSTALL_AS_USER}" -a ! -w "${OPTIONS_FILE:H}" ]; then \
 		${ECHO_MSG} "===>  Switching to root credentials to write ${OPTIONS_FILE}"; \
 		${SU_CMD} "${CAT} $${TMPOPTIONSFILE} > ${OPTIONS_FILE}"; \
 		${ECHO_MSG} "===>  Returning to user credentials"; \
@@ -5715,8 +5674,8 @@ showconfig-recursive:
 rmconfig:
 .if exists(${OPTIONSFILE})
 	-@${ECHO_MSG} "===> Removing user-configured options for ${PKGNAME}"; \
-	optionsdir=${OPTIONSFILE}; optionsdir=$${optionsdir%/*}; \
-	if [ ${UID} != 0 -a "x${INSTALL_AS_USER}" = "x" ]; then \
+	optionsdir=${OPTIONSFILE:H}; \
+	if [ ${UID} != 0 -a "x${INSTALL_AS_USER}" = "x" -a ! -w "${OPTIONSFILE}" ]; then \
 		${ECHO_MSG} "===> Switching to root credentials to remove ${OPTIONSFILE} and $${optionsdir}"; \
 		${SU_CMD} "${RM} -f ${OPTIONSFILE} ; \
 			${RMDIR} $${optionsdir}"; \
@@ -5728,8 +5687,8 @@ rmconfig:
 .endif
 .if exists(${OPTIONS_FILE})
 	-@${ECHO_MSG} "===> Removing user-configured options for ${PKGNAME}"; \
-	optionsdir=${OPTIONS_FILE}; optionsdir=$${optionsdir%/*}; \
-	if [ ${UID} != 0 -a "x${INSTALL_AS_USER}" = "x" ]; then \
+	optionsdir=${OPTIONS_FILE:H}; \
+	if [ ${UID} != 0 -a "x${INSTALL_AS_USER}" = "x" -a ! -w "${OPTIONS_FILE}" ]; then \
 		${ECHO_MSG} "===> Switching to root credentials to remove ${OPTIONS_FILE} and $${optionsdir}"; \
 		${SU_CMD} "${RM} -f ${OPTIONS_FILE} ; \
 			${RMDIR} $${optionsdir}"; \

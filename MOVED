@@ -2905,7 +2905,6 @@ print/latex-acm||2014-09-01|Not staged
 print/latex-auto-greek||2014-09-01|Not staged
 print/latex-timing||2014-09-01|Not staged
 print/latex||2014-09-01|Not staged
-print/lgrind||2014-09-01|Not staged
 print/pdfcolorsplit||2014-09-01|Not staged
 print/pdq||2014-09-01|Not staged
 print/phppdflib||2014-09-01|Not staged
@@ -2945,7 +2944,6 @@ security/tinysu||2014-09-01|Not staged
 sysutils/asapm||2014-09-01|Not staged
 sysutils/asr-utils||2014-09-01|Not staged
 sysutils/be_agent||2014-09-01|Not staged
-sysutils/boxbackup-devel||2014-09-01|Not staged
 sysutils/bubblemon-dockapp||2014-09-01|Not staged
 sysutils/clockspeed-conf||2014-09-01|Not staged
 sysutils/comconsole||2014-09-01|Not staged
@@ -3043,7 +3041,6 @@ devel/scsh-install-lib||2014-09-01|Not staged
 games/qix||2014-09-01|Not staged
 games/vdrift||2014-09-01|Not staged
 net-mgmt/zenpack-graphportlet||2014-09-01|Not staged
-sysutils/boxbackup||2014-09-01|Not staged
 www/webcalendar-devel|www/webcalendar|2014-09-04|Removed, use www/webcalendar instead
 devel/ruby-memoize||2014-09-06|Has expired: RubyForge shutdown May 15 2014
 www/oops||2014-09-06|Development stops long ago, domain has been expired
@@ -3300,7 +3297,6 @@ deskutils/splashsetter||2014-11-19|Abandonware, useless without gnome2
 editors/emacs23|editors/emacs|2014-11-19|Has expired: Unmaintained upstream, use editors/emacs
 net-im/tg|net-im/telegram|2014-11-20|Renamed to more specific name
 net-mgmt/virtinst|deskutils/virt-manager|2014-11-20|Obsoleted by deskutils/virt-manager
-sysutils/firstboot-growfs||2014-11-23|Part of the base system
 graphics/linux-c6-gdk-pixbuf|graphics/linux-c6-gdk-pixbuf2|2014-11-24|Port renamed to align with upstream
 devel/libole2||2014-11-24|Abandoned upstream, incomplete, not depend on
 net/p5-SOAP-Transport-TCP|net/p5-SOAP-Lite|2014-11-24|Has been integrated into net/p5-SOAP-Lite
@@ -3391,3 +3387,42 @@ ports-mgmt/pib||2014-12-06|Has expired: Does not work with tcl/tk 8.4+, does not
 editors/texmakerx|editors/texstudio|2014-12-06|The project has been renamed
 databases/postgresql93-plv8js|databases/postgresql-plv8js|2014-12-07|Breaks index when PGSQL_DEFAULT=9.3 and master port can be used for pgsql 9.3
 www/twig-php||2014-12-08|Removed, as it was replaced and conflicting with www/pear-twig and www/pecl-twig
+net/ntp-rc|net/ntp-devel|2014-12-11|Upline uses devel and release candidate interchangably
+textproc/xerces-c2|textproc/xerces-c3|2014-12-12|Unused, conflicting with xerces-c3
+textproc/xerces-c2-devel|textproc/xerces-c3|2014-12-12|Unused, conflicting with xerces-c3
+games/empire|games/vms-empire|2014-12-15|Moved to match upstream name
+devel/preps-gui||2014-12-15|Has expired: upstream disappeared
+devel/prepstools||2014-12-15|Has expired: upstream disappeared
+devel/llvm32||2014-12-18|Obsolete and unmaintained upstream
+lang/clang32||2014-12-18|Obsolete and unmaintained upstream
+x11-drivers/xf86-input-egalax||2014-12-19|Removed: Depends on removed xorg-server 1.7
+x11-drivers/xf86-video-newport||2014-12-19|Removed: Depends on removed xorg-server 1.12
+x11-drivers/xf86-video-tga||2014-12-19|Removed: Alpha support was removed in FreeBSD 7.0
+x11/nvidia-driver-71||2014-12-19|Removed: Not compatible with xserver 1.14
+x11/nvidia-driver-96||2014-12-19|Removed: Not compatible with xserver 1.14
+www/drupal7-jailadmin||2014-12-20|Removed per author's request; unmaintained
+www/drupal7-vulnscan||2014-12-20|Removed per author's request; unmaintained
+www/neon29|www/neon|2014-12-24|Rename to reflect upstream
+graphics/pornview||2014-12-24|No more upstream, no more public distfile, no proper support for modern png
+misc/gnomehier||2014-12-25|Not needed anymore
+graphics/corona||2014-12-25|Abandonware, no proper support for modern png
+graphics/libpano12|graphics/libpano13|2014-12-25|No proper support for modern png, newer version available as libpano13
+games/hex||2014-12-25|Abandonware, no support for moden graphics libraries
+graphics/bbrb||2014-12-25|Abandonware, depends on imlib
+graphics/gtkgraph||2014-12-25|Abandonware, depends on imlib
+graphics/imagesort||2014-12-25|Abandonware, depends on imlib
+graphics/picturebook||2014-12-25|Abandonware, depends on imlib
+graphics/show||2014-12-25|Abandonware, depends on imlib
+japanese/ebview|japanese/ebview-gtk2|2014-12-25|Use GTK2 version
+japanese/xjtext||2014-12-25|Abandonware, depends on imlib
+x11/peeper||2014-12-25|Abandonware, depends on imlib
+x11-toolkits/fpc-gnome1||2014-12-25|Depends on imlib
+graphics/fpc-imlib||2014-12-25|Depends on imlib
+graphics/imlib||2014-12-25|Does not handle modern graphics libraries
+games/secretmaryochronicles-music||2014-12-27|Has expired: Depends on expiring games/secretmaryochronicles
+science/mpb||2014-12-27|Has expired: Broken for more than 6 months
+x11-fm/pbi-thumbnailer||2014-12-27|Has expired: Broken for more than 6 months
+games/secretmaryochronicles||2014-12-27|Has expired: does not run, cegui 0.8 support still in development
+multimedia/ffmpeg24|multimedia/ffmpeg25|2014-12-27|ffmpeg upstream now points to 2.5.x series
+x11-wm/enlightenment-docs|x11-wm/e16-docs|2014-12-28|Renamed for better naming
+devel/py-checkmanifest|devel/py-check-manifest|2014-12-29|Use correct upstream PyPi name
