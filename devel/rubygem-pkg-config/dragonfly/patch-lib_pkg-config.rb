@@ -1,16 +1,17 @@
 --- lib/pkg-config.rb.orig	2014-12-29 12:49:13 UTC
 +++ lib/pkg-config.rb
-@@ -54,8 +54,7 @@ class PackageConfig
+@@ -53,10 +53,6 @@ class PackageConfig
+         found_pkg_config = search_pkg_config_from_path(pkg_config)
          pkg_config = found_pkg_config if found_pkg_config
        end
-       unless pkg_config.absolute?
+-      unless pkg_config.absolute?
 -        found_pkg_config = search_pkg_config_by_dln_find_exe(pkg_config)
 -        pkg_config = found_pkg_config if found_pkg_config
-+        pkg_config = "/usr/local/bin/pkg-config"
-       end
+-      end
        pkg_config
      end
-@@ -68,42 +67,6 @@ class PackageConfig
+ 
+@@ -68,42 +64,6 @@ class PackageConfig
        nil
      end
  
