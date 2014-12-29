@@ -1,0 +1,3 @@
+post-extract:
+	${REINPLACE_CMD} -e 's|/usr/local/|${PREFIX}|g' \
+		${WRKSRC}/ext/cairo/extconf.rb
