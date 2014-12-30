@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	git
-PORTVERSION=	2.1.2
-PORTREVISION=	1
+PORTVERSION=	2.2.1
 CATEGORIES=	devel
 MASTER_SITES=	KERNEL_ORG
 MASTER_SITE_SUBDIR=	software/scm/git
@@ -13,7 +12,7 @@ DISTFILES=	${PORTNAME}-${PORTVERSION}${EXTRACT_SUFX} \
 EXTRACT_ONLY=	${PORTNAME}-${PORTVERSION}${EXTRACT_SUFX} \
 		${PORTNAME}-manpages-${PORTVERSION}${EXTRACT_SUFX}
 
-MAINTAINER=	wxs@FreeBSD.org
+MAINTAINER=	garga@FreeBSD.org
 COMMENT?=	Distributed source code management tool
 
 CONFLICTS?=	git-subversion-[0-9]*
@@ -25,7 +24,7 @@ SUB_FILES=	pkg-message
 PKGMESSAGE=	${WRKDIR}/pkg-message
 
 GNU_CONFIGURE=	yes
-USES=		gmake shebangfix
+USES=		gmake shebangfix tar:xz
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 MAKE_ENV+=	V=1
