@@ -19,7 +19,7 @@ RUN_DEPENDS=	giftopnm:${PORTSDIR}/graphics/netpbm			\
 		gifsicle:${PORTSDIR}/graphics/gifsicle			\
 		gocr:${PORTSDIR}/graphics/gocr				\
 		ocrad:${PORTSDIR}/graphics/ocrad			\
-		gifasm:${PORTSDIR}/graphics/giflib			\
+		giftext:${PORTSDIR}/graphics/giflib			\
 		spamassassin:${PORTSDIR}/mail/spamassassin	\
 		p5-MLDBM>=0:${PORTSDIR}/databases/p5-MLDBM	\
 		p5-MLDBM-Sync>=0:${PORTSDIR}/databases/p5-MLDBM-Sync \
@@ -50,7 +50,6 @@ PLIST_FILES=	%%SITE_PERL%%/${SA_PLUGINDIR}/FuzzyOcr.pm		\
 		%%SITE_PERL%%/${SA_PLUGINDIR}/FuzzyOcr/Preprocessor.pm \
 		%%SITE_PERL%%/${SA_PLUGINDIR}/FuzzyOcr/Scanset.pm \
 		%%SITE_PERL%%/${SA_PLUGINDIR}/FuzzyOcr/Scoring.pm
-PLIST_DIRS=	%%SITE_PERL%%/${SA_PLUGINDIR}/FuzzyOcr
 
 #.if defined(WITH_OCRAD)
 #RUN_DEPENDS+=	ocrad:${PORTSDIR}/graphics/ocrad
