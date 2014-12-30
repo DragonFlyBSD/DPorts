@@ -10,7 +10,7 @@ MASTER_SITES=	http://doua.prabi.fr/software/seaview_data/ \
 		ftp://pbil.univ-lyon1.fr/pub/mol_phylogeny/seaview/archive/
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
-MAINTAINER=	5u623l20@gmail.com
+MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Multiple DNA/protein sequence alignment editor
 
 LIB_DEPENDS=	libfltk.so:${PORTSDIR}/x11-toolkits/fltk
@@ -29,7 +29,6 @@ ALL_TARGET=	${PORTNAME}
 
 PLIST_FILES=	bin/seaview man/man1/seaview.1.gz %%DATADIR%%/seaview.html \
 		share/pixmaps/seaview.xpm
-PLIST_DIRS=	%%DATADIR%%
 
 DESKTOP_ENTRIES="SeaView" "" "${PREFIX}/share/pixmaps/seaview.xpm" "seaview" \
 		"Biology;Science;" true
