@@ -1,5 +1,4 @@
-# Created by: olgeni@FreeBSD.org
-# $FreeBSD$
+# This port only builds on DragonFly BSD
 
 PORTNAME=	slider
 PORTVERSION=	2.00
