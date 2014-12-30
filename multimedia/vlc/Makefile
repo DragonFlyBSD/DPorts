@@ -3,7 +3,7 @@
 
 PORTNAME=	vlc
 DISTVERSION=	2.1.5
-PORTREVISION=	12
+PORTREVISION=	15
 PORTEPOCH=	4
 CATEGORIES=	multimedia audio ipv6 net www
 MASTER_SITES=	http://download.videolan.org/pub/videolan/${PORTNAME}/${DISTVERSION:S/a$//}/ \
@@ -222,7 +222,7 @@ OPTIMIZED_CFLAGS_CONFIGURE_ENABLE=	optimizations
 OPUS_LIB_DEPENDS=	libopus.so:${PORTSDIR}/audio/opus
 OPUS_CONFIGURE_ENABLE=	opus
 
-PNG_LIB_DEPENDS=	libpng15.so:${PORTSDIR}/graphics/png
+PNG_LIB_DEPENDS=	libpng.so:${PORTSDIR}/graphics/png
 PNG_CONFIGURE_ENABLE=	png
 
 PULSEAUDIO_LIB_DEPENDS=	libpulse.so:${PORTSDIR}/audio/pulseaudio
@@ -306,6 +306,10 @@ PORTDOCS=	*
 IGNORE=		Pulseaudio is unsupported with rtld prior to FreeBSD-9.x
 .endif
 
+.if ${PORT_OPTIONS:MX11}
+INSTALLS_ICONS=	yes
+.endif
+
 .if ${PORT_OPTIONS:MSKINS}
 .if ${PORT_OPTIONS:MQT4}
 LIB_DEPENDS+=	libminizip.so:${PORTSDIR}/archivers/minizip \
@@ -342,7 +346,5 @@ post-patch:
 post-install:
 	@(cd ${STAGEDIR}${PREFIX} && ${FIND} -s lib/vlc -not -name '*.la' \
 		-type f -o -type l >> ${TMPPLIST})
-	@(cd ${STAGEDIR}${PREFIX} && ${FIND} -s -d lib/vlc -type d | \
-		${SED} 's/^/@dirrm /' >> ${TMPPLIST})
 
 .include <bsd.port.mk>
