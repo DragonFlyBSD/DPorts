@@ -2,7 +2,7 @@
 
 PORTNAME=	kde-workspace
 PORTVERSION=	${KDE4_WORKSPACE_VERSION}
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11 kde
 MASTER_SITES=	KDE/${KDE4_BRANCH}/${KDE4_VERSION}/src
 DIST_SUBDIR=	KDE/${PORTVERSION}
@@ -20,7 +20,7 @@ LIB_DEPENDS=	libdbus-1.so:${PORTSDIR}/devel/dbus \
 		libdbusmenu-qt.so:${PORTSDIR}/devel/libdbusmenu-qt \
 		libfontconfig.so:${PORTSDIR}/x11-fonts/fontconfig \
 		libfreetype.so:${PORTSDIR}/print/freetype2 \
-		libpng15.so:${PORTSDIR}/graphics/png \
+		libpng.so:${PORTSDIR}/graphics/png \
 		libjpeg.so:${PORTSDIR}/graphics/jpeg \
 		libxcb-render-util.so:${PORTSDIR}/x11/xcb-util-renderutil \
 		libxcb-image.so:${PORTSDIR}/x11/xcb-util-image \
@@ -106,10 +106,6 @@ WALLPAPERS_RUN_DEPENDS=	${KDE4_PREFIX}/share/wallpapers/Horos/metadata.desktop:$
 			${KDE4_PREFIX}/share/wallpapers/stripes-freebsd-blue/metadata.desktop:${PORTSDIR}/x11-themes/kde4-wallpapers-freebsd
 
 .include <bsd.port.options.mk>
-
-.ifndef(WITH_NEW_XORG)
-IGNORE=		requires modern libGL. Please, set WITH_NEW_XORG and update your ports
-.endif
 
 .if !exists(/usr/lib/libutempter.so)
 LIB_DEPENDS+=	libutempter.so:${PORTSDIR}/sysutils/libutempter
