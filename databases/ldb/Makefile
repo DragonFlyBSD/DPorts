@@ -32,7 +32,7 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX} \
 DESTDIRNAME=		--destdir
 
 OPTIONS_DEFINE=		MANPAGES
-MANPAGES_DESC=		Build and install manpages (requires textproc/docbook-xsl)
+MANPAGES_DESC=		Build and install manpages(requires textproc/docbook-xsl)
 
 .include <bsd.port.options.mk>
 
@@ -54,10 +54,6 @@ CONFIGURE_ENV+=		XSLTPROC="true"
 BUILD_DEPENDS+=		${LOCALBASE}/share/xsl/docbook/manpages/docbook.xsl:${PORTSDIR}/textproc/docbook-xsl \
 			xsltproc:${PORTSDIR}/textproc/libxslt
 .endif
-
-PLIST_DIRSTRY=		lib/ldb \
-			lib/shared-modules/ldb \
-			lib/shared-modules
 
 PLIST_FILES=		bin/ldbedit \
 			bin/ldbmodify \
