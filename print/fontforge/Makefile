@@ -3,7 +3,7 @@
 
 PORTNAME=	fontforge
 DISTVERSION=	20120731-b
-PORTREVISION=	6
+PORTREVISION=	9
 CATEGORIES=	print
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-source \
 		SF/freetype/${PORTNAME}/${PORTVERSION}:freetype \
@@ -20,7 +20,7 @@ COMMENT=	Type 1/TrueType/OpenType/bitmap font editor
 LIB_DEPENDS=	libuninameslist.so:${PORTSDIR}/textproc/libuninameslist \
 		libtiff.so:${PORTSDIR}/graphics/tiff \
 		libjpeg.so:${PORTSDIR}/graphics/jpeg \
-		libpng15.so:${PORTSDIR}/graphics/png \
+		libpng.so:${PORTSDIR}/graphics/png \
 		libgif.so:${PORTSDIR}/graphics/giflib \
 		libxml2.so:${PORTSDIR}/textproc/libxml2 \
 		libspiro.so:${PORTSDIR}/graphics/libspiro
@@ -47,7 +47,7 @@ FREETYPE_CONFIGURE_WITH=	freetype-bytecode
 
 MULTILAYER_CONFIGURE_ENABLE=	type3
 
-PYTHON_USE=	PYTHON=yes
+PYTHON_USES=	python
 PYTHON_CONFIGURE_WITH=	python
 PYTHON_LDFLAGS=	-lutil
 
@@ -67,7 +67,7 @@ DISTFILES+=	${DOCFILES:C/$/:docs/}
 .endif
 
 .if ${PORT_OPTIONS:MFREETYPE}
-FREETYPE_VERSION=	2.5.3
+FREETYPE_VERSION=	2.5.4
 FREETYPE_SRC=	freetype-${FREETYPE_VERSION}.tar.bz2
 DISTFILES+=	${FREETYPE_SRC:C/$/:freetype/}
 CONFIGURE_ARGS+=	--with-freetype-src=${WRKDIR}/freetype-${FREETYPE_VERSION}
