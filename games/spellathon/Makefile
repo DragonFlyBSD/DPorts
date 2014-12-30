@@ -3,18 +3,18 @@
 
 PORTNAME=	spellathon
 PORTVERSION=	6.0
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/Spellathon%20${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Word game to test your English vocabulary skills
 
-LICENSE=	MIT
+LICENSE=	BSD2CLAUSE
 
 LIB_DEPENDS=	libpthread-stubs.so:${PORTSDIR}/devel/libpthread-stubs \
 		libpcre.so:${PORTSDIR}/devel/pcre \
-		libpng15.so:${PORTSDIR}/graphics/png \
+		libpng.so:${PORTSDIR}/graphics/png \
 		libfreetype.so:${PORTSDIR}/print/freetype2 \
 		libexpat.so:${PORTSDIR}/textproc/expat2 \
 		libfontconfig.so:${PORTSDIR}/x11-fonts/fontconfig
@@ -41,7 +41,7 @@ post-patch:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/spellathon ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/spellathon-cl ${STAGEDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/libspellathon.so.0.0 ${STAGEDIR}${PREFIX}/lib
+	${INSTALL_LIB} ${WRKSRC}/libspellathon.so.0.0 ${STAGEDIR}${PREFIX}/lib
 	${LN} -sf libspellathon.so.0.0 ${STAGEDIR}${PREFIX}/lib/libspellathon.so
 	${LN} -sf libspellathon.so.0.0 ${STAGEDIR}${PREFIX}/lib/libspellathon.so.0
 	@${MKDIR} ${STAGEDIR}${DATADIR}
