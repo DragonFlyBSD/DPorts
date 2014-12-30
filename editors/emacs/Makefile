@@ -3,7 +3,7 @@
 
 PORTNAME=	emacs
 PORTVERSION=	${EMACS_VER}
-PORTREVISION=	3
+PORTREVISION=	4
 PORTEPOCH=	3
 CATEGORIES=	editors ipv6
 MASTER_SITES=	${MASTER_SITE_GNU}
@@ -110,21 +110,6 @@ SVG_CONFIGURE_WITH=	rsvg
 X11_CONFIGURE_WITH=	x
 X11_USE=		XORG=x11
 X11_USES=		desktop-file-utils
-X11_PLIST_DIRSTRY_OFF=	share/icons/hicolor/scalable/mimetypes \
-			share/icons/hicolor/scalable/apps \
-			share/icons/hicolor/scalable \
-			share/icons/hicolor/48x48/apps \
-			share/icons/hicolor/48x48 \
-			share/icons/hicolor/32x32/apps \
-			share/icons/hicolor/32x32 \
-			share/icons/hicolor/24x24/apps \
-			share/icons/hicolor/24x24 \
-			share/icons/hicolor/16x16/apps \
-			share/icons/hicolor/16x16 \
-			share/icons/hicolor/128x128/apps \
-			share/icons/hicolor/128x128 \
-			share/icons/hicolor \
-			share/icons
 
 GTK2_USE=		GNOME=gtk20
 GTK2_CONFIGURE_ON=	--with-x-toolkit=gtk2
@@ -152,7 +137,7 @@ TIFF_CONFIGURE_WITH=	tiff
 GIF_LIB_DEPENDS=	libgif.so:${PORTSDIR}/graphics/giflib
 GIF_CONFIGURE_WITH=	gif
 
-PNG_LIB_DEPENDS+=	libpng15.so:${PORTSDIR}/graphics/png
+PNG_LIB_DEPENDS+=	libpng.so:${PORTSDIR}/graphics/png
 PNG_CONFIGURE_WITH=	png
 
 XPM_USE=		XORG=xpm
