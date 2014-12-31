@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	sugarcrm
-PORTVERSION=	6.5.18
-PORTREVISION=	1
+PORTVERSION=	6.5.20
 CATEGORIES=	deskutils www
 MASTER_SITES=	SF
 MASTER_SITE_SUBDIR=	${PORTNAME}/1%20-%20SugarCRM%206.5.X/SugarCommunityEdition-6.5.X
@@ -14,7 +13,7 @@ COMMENT=	Web based customer relationship management suite
 
 USES=		zip
 USE_PHP=	gd mysql session pcre xml zlib mbstring curl imap spl posix \
-		json ctype zip
+		json ctype zip tokenizer
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/SugarCE-Full-${PORTVERSION}
 
