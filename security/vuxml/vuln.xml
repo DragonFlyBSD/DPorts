@@ -28,7 +28,7 @@ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION,
 EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-  $FreeBSD: head/security/vuxml/vuln.xml 374488 2014-12-10 21:31:56Z kwm $
+  $FreeBSD: head/security/vuxml/vuln.xml 375358 2014-12-23 21:24:55Z rea $
 
 
 QUICK GUIDE TO ADDING A NEW ENTRY
@@ -40,7 +40,7 @@ QUICK GUIDE TO ADDING A NEW ENTRY
 4. fix any errors
 5. profit!
 
-Addtional tests can be done this way:
+Additional tests can be done this way:
  $ env PKG_DBDIR=/usr/ports/security/vuxml pkg audit py26-django-1.6
  $ env PKG_DBDIR=/usr/ports/security/vuxml pkg audit py27-django-1.6.1
 
@@ -57,12 +57,364 @@ Notes:
 
 -->
 <vuxml xmlns="http://www.vuxml.org/apps/vuxml-1">
+  <vuln vid="c3d43001-8064-11e4-801f-0022156e8794">
+    <topic>mutt -- denial of service via crafted mail message</topic>
+    <affects>
+      <package>
+	<name>mutt</name>
+	<range><ge>1.5.22</ge><lt>1.5.23_7</lt></range>
+      </package>
+      <package>
+	<name>ja-mutt</name>
+	<range><ge>1.5.22</ge><lt>1.5.23_7</lt></range>
+      </package>
+      <package>
+	<name>zh-mutt</name>
+	<range><ge>1.5.22</ge><lt>1.5.23_7</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>NVD reports:</p>
+	<blockquote cite="https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-9116">
+	  <p>The write_one_header function in mutt 1.5.23 does not
+	  properly handle newline characters at the beginning of a
+	  header, which allows remote attackers to cause a denial of
+	  service (crash) via a header with an empty body, which
+	  triggers a heap-based buffer overflow in the mutt_substrdup
+	  function.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <bid>71334</bid>
+      <cvename>CVE-2014-9116</cvename>
+      <url>https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=771125</url>
+      <url>http://dev.mutt.org/trac/ticket/3716</url>
+    </references>
+    <dates>
+      <discovery>2014-11-26</discovery>
+      <entry>2014-12-23</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="4033d826-87dd-11e4-9079-3c970e169bc2">
+    <topic>ntp -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>ntp</name>
+	<name>ntp-devel</name>
+	<range><lt>4.2.8</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>CERT reports:</p>
+	<blockquote cite="http://www.kb.cert.org/vuls/id/852879">
+	  <p>The Network Time Protocol (NTP) provides networked
+	    systems with a way to synchronize time for various
+	    services and applications. ntpd version 4.2.7 and
+	    pervious versions allow attackers to overflow several
+	    buffers in a way that may allow malicious code to
+	    be executed. ntp-keygen prior to version 4.2.7p230
+	    also uses a non-cryptographic random number generator
+	    when generating symmetric keys.</p>
+	  <p>The buffer overflow vulnerabilities in ntpd may
+	    allow a remote unauthenticated attacker to execute
+	    arbitrary malicious code with the privilege level
+	    of the ntpd process. The weak default key and
+	    non-cryptographic random number generator in
+	    ntp-keygen may allow an attacker to gain
+	    information regarding the integrity checking
+	    and authentication encryption schemes.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-9293</cvename>
+      <cvename>CVE-2014-9294</cvename>
+      <cvename>CVE-2014-9295</cvename>
+      <cvename>CVE-2014-9296</cvename>
+      <url>http://www.kb.cert.org/vuls/id/852879</url>
+    </references>
+    <dates>
+      <discovery>2014-12-19</discovery>
+      <entry>2014-12-20</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="1d567278-87a5-11e4-879c-000c292ee6b8">
+    <topic>git -- Arbitrary command execution on case-insensitive filesystems</topic>
+    <affects>
+      <package>
+	<name>git</name>
+	<range><lt>2.2.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Git Project reports:</p>
+	<blockquote cite="http://article.gmane.org/gmane.linux.kernel/1853266">
+	  <p>When using a case-insensitive filesystem an attacker can
+	    craft a malicious Git tree that will cause Git to overwrite
+	    its own .git/config file when cloning or checking out a
+	    repository, leading to arbitrary command execution in the
+	    client machine.  If you are a hosting service whose users
+	    may fetch from your service to Windows or Mac OS X machines,
+	    you are strongly encouraged to update to protect such users
+	    who use existing versions of Git.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-9390</cvename>
+      <url>https://github.com/blog/1938-git-client-vulnerability-announced</url>
+      <url>http://article.gmane.org/gmane.linux.kernel/1853266</url>
+    </references>
+    <dates>
+      <discovery>2014-12-19</discovery>
+      <entry>2014-12-19</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="0c5cf7c4-856e-11e4-a089-60a44c524f57">
+    <topic>otrs -- Incomplete Access Control</topic>
+    <affects>
+      <package>
+	<name>otrs</name>
+	<range><gt>3.2.*</gt><lt>3.2.17</lt></range>
+	<range><gt>3.3.*</gt><lt>3.3.11</lt></range>
+	<range><gt>4.0.*</gt><lt>4.0.3</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The OTRS project reports:</p>
+	<blockquote cite="http://www.otrs.com/security-advisory-2014-06-incomplete-access-control/">
+	  <p>An attacker with valid OTRS credentials could access and manipulate ticket data
+	     of other users via the GenericInterface, if a ticket webservice is configured
+	     and not additionally secured.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>http://www.otrs.com/security-advisory-2014-06-incomplete-access-control/</url>
+      <cvename>CVE-2014-9324</cvename>
+    </references>
+    <dates>
+      <discovery>2014-12-16</discovery>
+      <entry>2014-12-16</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="f5561ade-846c-11e4-b7a7-20cf30e32f6d">
+    <topic>subversion -- DoS vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>mod_dav_svn</name>
+	<range><ge>1.8.0</ge><lt>1.8.11</lt></range>
+      </package>
+      <package>
+	<name>subversion16</name>
+	<range><ge>1.0.0</ge><lt>1.7.19</lt></range>
+      </package>
+      <package>
+	<name>subversion17</name>
+	<range><ge>1.0.0</ge><lt>1.7.19</lt></range>
+      </package>
+      <package>
+	<name>subversion</name>
+	<range><ge>1.0.0</ge><lt>1.7.19</lt></range>
+	<range><ge>1.8.0</ge><lt>1.8.11</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Subversion Project reports:</p>
+	<blockquote cite="http://subversion.apache.org/security/">
+	  <p>Subversion's mod_dav_svn Apache HTTPD server module will crash when it
+	     receives a REPORT request for some invalid formatted special URIs.</p>
+	  <p>Subversion's mod_dav_svn Apache HTTPD server module will crash when it
+	     receives a request for some invalid formatted special URIs.</p>
+	  <p>We consider this to be a medium risk vulnerability.  Repositories which
+	     allow for anonymous reads will be vulnerable without authentication.
+	     Unfortunately, no special configuration is required and all mod_dav_svn
+	     servers are vulnerable.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-3580</cvename>
+      <cvename>CVE-2014-8108</cvename>
+      <url>http://subversion.apache.org/security/CVE-2014-3580-advisory.txt</url>
+      <url>http://subversion.apache.org/security/CVE-2014-8108-advisory.txt</url>
+    </references>
+    <dates>
+      <discovery>2014-12-13</discovery>
+      <entry>2014-12-15</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="fdf72a0e-8371-11e4-bc20-001636d274f3">
+    <topic>NVIDIA UNIX driver -- remote denial of service or arbitrary code execution</topic>
+    <affects>
+      <package>
+	<name>nvidia-driver</name>
+	<range><lt>340.65</lt></range>
+      </package>
+      <package>
+	<name>nvidia-driver-304</name>
+	<range><lt>304.125</lt></range>
+      </package>
+      <package>
+	<name>nvidia-driver-173</name>
+	<range><le>173.14.35_3</le></range>
+      </package>
+      <package>
+	<name>nvidia-driver-96</name>
+	<range><le>96.43.23_2</le></range>
+      </package>
+      <package>
+	<name>nvidia-driver-71</name>
+	<range><le>71.86.15_4</le></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>NVIDIA Unix security team reports:</p>
+	<blockquote cite="http://nvidia.custhelp.com/app/answers/detail/a_id/3610">
+	  <p>The GLX indirect rendering support supplied on NVIDIA products
+	     is subject to the recently disclosed X.Org vulnerabilities
+	     (CVE-2014-8093, CVE-2014-8098) as well as internally identified
+	     vulnerabilities (CVE-2014-8298).</p>
+	  <p>Depending on how it is configured, the X server typically runs
+	     with raised privileges, and listens for GLX indirect rendering
+	     protocol requests from a local socket and potentially a TCP/IP
+	     port.  The vulnerabilities could be exploited in a way that
+	     causes the X server to access uninitialized memory or overwrite
+	     arbitrary memory in the X server process.  This can cause a
+	     denial of service (e.g., an X server segmentation fault), or
+	     could be exploited to achieve arbitrary code execution.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-8298</cvename>
+      <cvename>CVE-2014-8093</cvename>
+      <cvename>CVE-2014-8098</cvename>
+    </references>
+    <dates>
+      <discovery>2014-12-03</discovery>
+      <entry>2014-12-14</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="ab3e98d9-8175-11e4-907d-d050992ecde8">
+    <topic>bind -- denial of service vulnerability</topic>
+    <affects>
+      <package>
+	<name>bind99</name>
+	<name>bind99-base</name>
+	<range><lt>9.9.6</lt></range>
+      </package>
+      <package>
+	<name>bind98</name>
+	<name>bind98-base</name>
+	<name>bind96</name>
+	<name>bind96-base</name>
+	<range><gt>0</gt></range>
+      </package>
+      <package>
+	<name>FreeBSD</name>
+	<range><gt>9.3</gt><lt>9.3_6</lt></range>
+	<range><gt>9.2</gt><lt>9.2_16</lt></range>
+	<range><gt>9.1</gt><lt>9.1_23</lt></range>
+	<range><gt>8.4</gt><lt>8.4_20</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>ISC reports:</p>
+	<blockquote cite="https://www.isc.org/blogs/important-security-advisory-posted/">
+	  <p>We have today posted updated versions of 9.9.6 and 9.10.1
+	    to address a significant security vulnerability in DNS
+	    resolution. The flaw was discovered by Florian Maury of
+	    ANSSI, and applies to any recursive resolver that does not
+	    support a limit on the number of recursions. [<a href="http://cert.ssi.gouv.fr/site/CERTFR-2014-AVI-512/index.html">CERTFR-2014-AVI-512</a>],
+	    [USCERT <a href="www.kb.cert.org/vuls/id/264212">VU#264212</a>]</p>
+	  <p>A flaw in delegation handling could be exploited to put named
+	    into an infinite loop, in which each lookup of a name server
+	    triggered additional lookups of more name servers.  This has
+	    been addressed by placing limits on the number of levels of
+	    recursion named will allow (default 7), and on the number of
+	    queries that it will send before terminating a recursive query
+	    (default 50).  The recursion depth limit is configured via the
+	    max-recursion-depth option, and the query limit via the
+	    max-recursion-queries option.  For more information, see the
+	    security advisory at <a href="https://kb.isc.org/article/AA-01216/">https://kb.isc.org/article/AA-01216/</a>.
+	    <a href="https://kb.isc.org/article/AA-01216/">[CVE-2014-8500]</a>
+	    [RT #37580]</p>
+	  <p>In addition, we have also corrected a potential security
+	    vulnerability in the GeoIP feature in the 9.10.1 release only.
+	    For more information on this issue, see the security advisory
+	    at <a href="https://kb.isc.org/article/AA-01217">https://kb.isc.org/article/AA-01217</a>.
+	    <a href="https://kb.isc.org/article/AA-01217">[CVE-2014-8680]</a></p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-8500</cvename>
+      <cvename>CVE-2014-8680</cvename>
+      <url>https://www.isc.org/blogs/important-security-advisory-posted/</url>
+    </references>
+    <dates>
+      <discovery>2014-12-08</discovery>
+      <entry>2014-12-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="94268da0-8118-11e4-a180-001999f8d30b">
+    <topic>asterisk -- Remote Crash Vulnerability in WebSocket Server</topic>
+    <affects>
+      <package>
+	<name>asterisk11</name>
+	<range><lt>11.14.2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Asterisk project reports:</p>
+	<blockquote cite="http://www.asterisk.org/downloads/security-advisories">
+	  <p>When handling a WebSocket frame the res_http_websocket
+	  module dynamically changes the size of the memory used
+	  to allow the provided payload to fit. If a payload length
+	  of zero was received the code would incorrectly attempt
+	  to resize to zero. This operation would succeed and end
+	  up freeing the memory but be treated as a failure. When
+	  the session was subsequently torn down this memory would
+	  get freed yet again causing a crash.</p>
+	  <p>Users of the WebSocket functionality also did not take
+	  into account that provided text frames are not guaranteed
+	  to be NULL terminated. This has been fixed in chan_sip
+	  and chan_pjsip in the applicable versions.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>http://downloads.asterisk.org/pub/security/AST-2014-019.html</url>
+    </references>
+    <dates>
+      <discovery>2014-10-30</discovery>
+      <entry>2014-12-11</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="27b9b2f0-8081-11e4-b4ca-bcaec565249c">
     <topic>xserver -- multiple issue with X client request handling</topic>
     <affects>
       <package>
 	<name>xorg-server</name>
-	<range><lt>1.12.4_10</lt></range>
+	<range><lt>1.12.4_10,1</lt></range>
       </package>
     </affects>
     <description>
@@ -2519,11 +2871,16 @@ Notes:
     <topic>subversion -- several vulnerabilities</topic>
     <affects>
       <package>
+	<name>subversion16</name>
+	<range><ge>1.0.0</ge><lt>1.7.18</lt></range>
+      </package>
+      <package>
 	<name>subversion17</name>
-	<range><ge>1.7.0</ge><lt>1.7.18</lt></range>
+	<range><ge>1.0.0</ge><lt>1.7.18</lt></range>
       </package>
       <package>
 	<name>subversion</name>
+	<range><ge>1.0.0</ge><lt>1.7.18</lt></range>
 	<range><ge>1.8.0</ge><lt>1.8.10</lt></range>
       </package>
     </affects>
@@ -6148,10 +6505,6 @@ Notes:
 	<name>subversion17</name>
 	<range><ge>1.3.0</ge><lt>1.7.16</lt></range>
       </package>
-      <package>
-	<name>subversion18</name>
-	<range><ge>1.8.0</ge><lt>1.8.8</lt></range>
-      </package>
     </affects>
     <description>
       <body xmlns="http://www.w3.org/1999/xhtml">
@@ -7998,9 +8351,8 @@ JavaScript code would be executed.</p>
     <affects>
       <package>
 	<name>subversion</name>
+	<range><ge>1.4.0</ge><lt>1.7.14</lt></range>
 	<range><ge>1.8.0</ge><lt>1.8.5</lt></range>
-	<range><ge>1.7.0</ge><lt>1.7.14</lt></range>
-	<range><ge>1.6.0</ge><lt>1.6.24</lt></range>
       </package>
     </affects>
     <description>
@@ -13144,7 +13496,7 @@ affected..</p>
       <package>
 	<name>subversion</name>
 	<range><ge>1.7.0</ge><lt>1.7.9</lt></range>
-	<range><ge>1.6.0</ge><lt>1.6.21</lt></range>
+	<range><ge>1.0.0</ge><lt>1.6.21</lt></range>
       </package>
     </affects>
     <description>
