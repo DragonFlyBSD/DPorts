@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/mail/mailman/files/mailman.in 325637 2013-08-29 22:58:07Z mandree $
+# $FreeBSD: head/mail/mailman/files/mailman.in 375670 2014-12-27 01:19:30Z mandree $
 #
 # PROVIDE: mailman
 # REQUIRE: LOGIN
@@ -27,6 +27,7 @@ status_cmd=${name}_status
 extra_commands="reload status"
 
 mailman_start() {
+	env LC_ALL=C %%MAILMANDIR%%/bin/check_perms
 	%%MAILMANDIR%%/bin/mailmanctl -s -q start
 }
 
