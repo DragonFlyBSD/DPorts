@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	afl
-PORTVERSION=	0.61b
+PORTVERSION=	1.05b
 CATEGORIES=	security
 MASTER_SITES=	http://lcamtuf.coredump.cx/afl/releases/
 
@@ -11,9 +11,16 @@ COMMENT=	Fast instrumented fuzzer
 
 USES=		compiler gmake tar:tgz
 
-OPTIONS_DEFINE=			DEBUG DOCS TEST_INSTRUMENTATION
+OPTIONS_DEFINE=			DEBUG DOCS MINIMIZE_CORPUS \
+				PLOT_SUPPORT TEST_INSTRUMENTATION
+MINIMIZE_CORPUS_DESC=	Install minimize_corpus.sh (bash dependency).
+PLOT_SUPPORT_DESC=	Support progress plotting. Adds Gnuplot dependency
 TEST_INSTRUMENTATION_DESC=	Execute tests expected to fail in jails
-OPTIONS_DEFAULT=		DOCS
+OPTIONS_DEFAULT=		MINIMIZE_CORPUS PLOT_SUPPORT
+
+OPTIONS_SUB=	yes
+
+PORTSCOUT=	ignore:1
 
 ONLY_FOR_ARCHS=		amd64 i386
 ONLY_FOR_ARCHS_REASON=	Uses binary instrumentation
@@ -28,6 +35,14 @@ BUILD_DEPENDS +=	${LOCALBASE}/bin/as:${PORTSDIR}/devel/binutils
 RUN_DEPENDS +=		${LOCALBASE}/bin/as:${PORTSDIR}/devel/binutils
 .endif
 
+.if ${PORT_OPTIONS:MMINIMIZE_CORPUS}
+RUN_DEPENDS+=	${LOCALBASE}/bin/bash:${PORTSDIR}/shells/bash
+.endif
+
+.if ${PORT_OPTIONS:MPLOT_SUPPORT}
+RUN_DEPENDS+=	gnuplot:${PORTSDIR}/math/gnuplot
+.endif
+
 post-patch:
 .if ! ${PORT_OPTIONS:MTEST_INSTRUMENTATION}
 # afl needs shmget() which usually isn't available in jails. Disabling
@@ -37,7 +52,7 @@ post-patch:
 .endif
 	${REINPLACE_CMD} -e 's@ -O3@@; s@ -g@@' \
 		-e 's@install -m 755@${INSTALL_PROGRAM}@' \
-		${WRKSRC}/Makefile
+		-e 's@ afl-plot @ @' ${WRKSRC}/Makefile
 .if (${COMPILER_TYPE} == "clang" && ${ARCH} == "i386")
 	${REINPLACE_CMD} -e 's@\(  as_params\[0\] = "\)@\1${LOCALBASE}/bin/@' \
 		${WRKSRC}/afl-as.c
@@ -49,8 +64,12 @@ post-patch:
 		${WRKSRC}/afl-as.h
 
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
 	${INSTALL_DATA} ${WRKSRC}/docs/COPYING ${STAGEDIR}${DOCSDIR}/
+	${INSTALL_SCRIPT} ${WRKSRC}/afl-plot ${STAGEDIR}${LOCALBASE}/bin/
+.if ${PORT_OPTIONS:MMINIMIZE_CORPUS}
+	${INSTALL_SCRIPT} \
+		${WRKSRC}/experimental/minimization_script/minimize_corpus.sh \
+		${STAGEDIR}${LOCALBASE}/bin/
 .endif
 
 .include <bsd.port.post.mk>
