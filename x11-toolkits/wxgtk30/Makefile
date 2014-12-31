@@ -2,16 +2,16 @@
 
 PORTNAME=	wx
 PORTVERSION=	3.0.2
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	SF/wxwindows/${PORTVERSION}
 PKGNAMESUFFIX=	30-gtk2
 DISTNAME=	wxWidgets-${PORTVERSION}
 
-MAINTAINER=	gahr@FreeBSD.org
+MAINTAINER=	portmaster@bsdforge.com
 COMMENT=	The wxWidgets GUI toolkit with GTK+ bindings
 
-LIB_DEPENDS+=	libpng15.so:${PORTSDIR}/graphics/png\
+LIB_DEPENDS+=	libpng.so:${PORTSDIR}/graphics/png\
 		libjpeg.so:${PORTSDIR}/graphics/jpeg\
 		libtiff.so:${PORTSDIR}/graphics/tiff\
 		libexpat.so:${PORTSDIR}/textproc/expat2\
