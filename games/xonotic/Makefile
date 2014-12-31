@@ -3,7 +3,7 @@
 
 PORTNAME=	xonotic
 PORTVERSION=	0.7.0
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	games
 MASTER_SITES=	http://nl.dl.xonotic.org/ \
 		http://mirror.bitmissile.com/xonotic/releases/
@@ -15,7 +15,7 @@ LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl \
 		libpng.so:${PORTSDIR}/graphics/png \
 		libjpeg.so:${PORTSDIR}/graphics/jpeg
 
-MANUAL_PACKAGE_BUILD=	huge
+MANUAL_PACKAGE_BUILD=	huge (930M)
 
 USES=		zip
 WRKSRC=		${WRKDIR}/Xonotic/source/darkplaces
@@ -87,10 +87,10 @@ do-install:
 	${FIND} ${STAGEDIR}${DATADIR}/server -type f -name *.sh -o -name rcon*.pl | \
 		${XARGS} ${CHMOD} +x
 .endif
-.if ${PORT_OPTIONS:MENCRYPTION}
-	${INSTALL_DATA} ${WRKDIR}/Xonotic/key_0.d0pk ${STAGEDIR}${PREFIX}/share/${PORTNAME}
-.endif
 	${MKDIR} ${STAGEDIR}${DATADIR}/data
 	${INSTALL_DATA} ${WRKDIR}/Xonotic/data/*.pk3 ${STAGEDIR}${DATADIR}/data/
+.if ${PORT_OPTIONS:MENCRYPTION}
+	${INSTALL_DATA} ${WRKDIR}/Xonotic/key_0.d0pk ${STAGEDIR}${DATADIR}/
+.endif
 
 .include <bsd.port.mk>
