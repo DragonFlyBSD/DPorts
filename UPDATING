@@ -5,6 +5,16 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20141230:
+  AFFECTS: users of deskutils/xpad
+  AUTHOR: jgh@FreeBSD.org
+
+  deskutils/xpad has been moved to deskutils/xpad3, since 4.x has been around
+  for a while.
+
+  Should you wish to stick with legacy branch at this time;
+
+  # portmaster -o deskutils/xpad deskutils/xpad3
 
 20141225:
   AFFECTS: users of graphics/png
@@ -1951,10 +1961,4 @@ you update your ports collection, before attempting any port upgrades.
   The RAR decompression codec, whose source code has a more restrictive
   license that forbids its use for creating RAR archives, has been moved to
   a separate port, archivers/p7zip-codec-rar.
-
-20131230:
-  AFFECTS: ports using Apache Software License 2.0
-  AUTHOR: ohauer@FreeBSD.org
-
-  The acronym for Apache Software License 2.0 was renamed to APACHE20
 
