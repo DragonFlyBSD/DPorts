@@ -1,7 +1,6 @@
 USES:=			${USES:Nzip} zip:infozip
 
-CONFIGURE_ARGS+=	--disable-collada \
-			--with-os-version=${DFLYVERSION} \
+CONFIGURE_ARGS+=	--with-os-version=${DFLYVERSION} \
 			--with-vendor="DragonFly dports"
 
 # Avoid stripping in /tmp, it takes too much space for poudriere
