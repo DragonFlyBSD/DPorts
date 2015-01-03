@@ -18,16 +18,16 @@ TOOLCHAIN_PREFIX=	x86_64-
 .else
 TOOLCHAIN_PREFIX=	${PKGNAMEPREFIX}
 .endif
-XCC?=		${TOOLCHAIN_PREFIX}portbld-${OPSYS:tl}${OSREL}-gcc
-XCXX?=		${TOOLCHAIN_PREFIX}portbld-${OPSYS:tl}${OSREL}-g++
-XCPP?=		${TOOLCHAIN_PREFIX}portbld-${OPSYS:tl}${OSREL}-cpp
+XCC?=		${TOOLCHAIN_PREFIX}portbld-freebsd10-gcc
+XCXX?=		${TOOLCHAIN_PREFIX}portbld-freebsd10-g++
+XCPP?=		${TOOLCHAIN_PREFIX}portbld-freebsd10-cpp
 X_COMPILER_TYPE?=	${PKGNAMESUFFIX:C/-//g}
 
 RUN_DEPENDS?=	${XCC}:${PORTSDIR}/devel/${PKGNAMEPREFIX}${X_COMPILER_TYPE}
 
 SUB_FILES=	xtoolchain.mk
 SUB_LIST=	TARGETARCH=${TOOLCHAIN_PREFIX:C/-//g} \
-		OPSYS=${OPSYS:tl} \
+		OPSYS=freebsd \
 		XCC=${XCC} \
 		XCXX=${XCXX} \
 		XCPP=${XCPP} \
