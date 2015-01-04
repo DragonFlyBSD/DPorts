@@ -2,11 +2,12 @@
 # $FreeBSD$
 
 PORTNAME=	yacas
-PORTVERSION=	1.3.4
+PORTVERSION=	1.3.6
+PORTREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-source/${PORTVERSION:R}/
 
-MAINTAINER=	gahr@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Yet Another Computer Algebra System
 
 LICENSE=	GPLv2
@@ -14,8 +15,9 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 OPTIONS_DEFINE=	DOCS
 
-#USES=		gmake
 GNU_CONFIGURE=	yes
+USES=		libtool
+INSTALL_TARGET=	install-strip
 
 .include <bsd.port.options.mk>
 
@@ -37,6 +39,8 @@ post-patch:
 #	times in the file.
 	@${REINPLACE_CMD} -e 's| /bin/bash| ${LOCALBASE}/bin/bash|g' \
 	    ${WRKSRC}/tests/test-yacas
+	@${REINPLACE_CMD} -e 's|%%DATADIR%%|${DATADIR}|' \
+	    ${WRKSRC}/src/yacasmain.cpp
 
 regression-test: build
 #	This requires bash. I don't add it as a dependency to the port, as it's
