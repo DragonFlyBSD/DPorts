@@ -1,6 +1,6 @@
---- src/sysdeps/dragonfly.c.orig	2014-01-13 14:18:10.914643000 +0000
+--- src/sysdeps/dragonfly.c.orig	2015-01-07 00:50:43 UTC
 +++ src/sysdeps/dragonfly.c
-@@ -0,0 +1,1167 @@
+@@ -0,0 +1,1171 @@
 +/* GKrellM
 +|  Copyright (C) 1999-2010 Bill Wilson
 +|
@@ -325,18 +325,13 @@
 +	void *so_begin, *so_end;
 +	struct xtcpcb *xtp;
 +	struct inpcb *inp;
-+	struct xsocket *so;
-+	const char *varname, *protoname;
++	const char *varname;
 +	size_t len;
 +	void *buf;
-+	int vflag;
 +	ActiveTCP	tcp;
 +	gint		tcp_status;
 +
 +	varname = "net.inet.tcp.pcblist";
-+	protoname = "tcp";
-+
-+	vflag = INP_IPV4 | INP_IPV6;
 +
 +	buf = NULL;
 +	len = 0;
@@ -360,17 +355,26 @@
 +		if (xtp->xt_len != sizeof *xtp)
 +			goto out;
 +		inp = &xtp->xt_inp;
-+		so = &xtp->xt_socket;
-+		if ((inp->inp_vflag & vflag) == 0)
-+			continue;
++#ifdef in6p_vflag
 +		if (inp->inp_vflag & INP_IPV4) {
++#else
++		if (INP_ISIPV4(inp)) {
++#endif
 +			tcp.remote_addr.s_addr = inp->inp_faddr.s_addr;
 +			tcp.family = AF_INET;
-+		} else if (inp->inp_vflag & INP_IPV6) {
-+			memcpy(&tcp.remote_addr6,
-+			       &inp->in6p_faddr,
-+			       sizeof(struct in6_addr));
++		} else {
++#ifdef in6p_vflag
++			if (inp->inp_vflag & INP_IPV6) {
++#else
++			if (INP_ISIPV6(inp)) {
++#endif
++				memcpy(&tcp.remote_addr6,
++					&inp->in6p_faddr,
++					sizeof(struct in6_addr));
 +				tcp.family = AF_INET6;
++			} else {
++				continue;
++			}
 +		}
 +
 +		tcp.remote_port = ntohs(inp->inp_fport);
