@@ -4,7 +4,7 @@
 #TODO bz@ : if you do undestand the gyp stuff, third_party/widevine/cdm/widevine_cdm.gyp talks about it (plz install libwidevinecdm.so)
 PORTNAME=	chromium
 PORTVERSION=	39.0.2171.95
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://commondatastorage.googleapis.com/chromium-browser-official/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
@@ -52,7 +52,7 @@ LIB_DEPENDS=	libcairo.so:${PORTSDIR}/graphics/cairo \
 		libxml2.so:${PORTSDIR}/textproc/libxml2 \
 		libwebp.so:${PORTSDIR}/graphics/webp
 
-LIB_DEPENDS+=	gssapi_krb5:${PORTSDIR}/security/krb5
+LIB_DEPENDS+=	libgssapi_krb5.so:${PORTSDIR}/security/krb5
 
 RUN_DEPENDS=	${LOCALBASE}/lib/alsa-lib/libasound_module_pcm_oss.so:${PORTSDIR}/audio/alsa-plugins \
 		${LOCALBASE}/lib/X11/fonts/Droid/fonts.dir:${PORTSDIR}/x11-fonts/droid-fonts-ttf \
