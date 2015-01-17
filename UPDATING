@@ -5,6 +5,48 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20150113:
+  AFFECTS: users of pecl-http
+  AUTHOR: vanilla@FreeBSD.org
+
+  The pecl-http has been upgraded to version 2.1.4, and the new version is
+  not compatible with the old. If you need the "old" 1.7.6, you can find it
+  in www/pecl-http1.
+
+20150111:
+  AFFECTS: users of python3
+  AUTHOR: demon@FreeBSD.org
+
+  The default version of python3 has changed from 3.3 to 3.4.
+  If you wish to stick with older version, add "python3=3.3" to your
+  DEFAULT_VERSIONS variable in /etc/make.conf.  To upgrade:
+
+  If using portupgrade:
+  # portupgrade -o lang/python34 lang/python33
+
+  If using portmaster:
+  # portmaster -o lang/python34 lang/python33
+
+20150109:
+  AFFECTS: users of audio/speex
+  AUTHOR: tijl@FreeBSD.org
+
+  The audio/speex port has been updated to 1.2rc2 and one of the libraries
+  it installed has been split off into a new port audio/speexdsp.  Before
+  you can update audio/speex you must first delete the old package using
+  "pkg del -f speex".
+
+20150101:
+  AFFECTS: users of net/unison and net/unison-nox11
+  AUTHOR: madpilot@FreeBSD.org
+
+  Unison has been upgraded to version 2.48, which uses a different wire
+  protocol than 2.40 did.  In order to support synchronization with
+  other computers where Unison is still at version 2.40, a new port
+  net/unison240 has been created.  It provides unison240 and if that is
+  GTK2-enabled, also unison240-text.  This unison240 port can be
+  installed in parallel with the existing net/unison port.
+
 20141230:
   AFFECTS: users of deskutils/xpad
   AUTHOR: jgh@FreeBSD.org
@@ -1878,87 +1920,4 @@ you update your ports collection, before attempting any port upgrades.
   To update the existing user on your system, run:
 
   # pw usermod zabbix -s /bin/sh
-
-20140114:
-  AFFECTS: users of www/mod_authnz_external
-  AUTHOR: ohauer@FreeBSD.org
-
-  www/mod_authnz_external was moved to www/mod_authnz_external22
-  Please do the following according to package manager used.
-
-  # portmaster -o www/mod_authnz_external22 www/mod_authnz_external
-    or
-  # portupgrade -fo www/mod_authnz_external22 www/mod_authnz_external
-    or
-  # pkg set -o www/mod_authnz_external:www/mod_authnz_external22
-
-20140113:
-  AFFECTS: users of net/samba41
-  AUTHOR: timur@FreeBSD.org
-
-  With the introduction of Samba 4.1 corresponding port lost SWAT support
-  and made WINBIND support mandatory. As samba4 introduced additional 'samba'
-  daemon to the tripplet of nmbd/smbd/winbindd to avoid confusion startup
-  script for samba41 was renamed to 'samba_server'. To start the whole band
-  up it's enough to add to the rc.conf:
-
-  samba_server_enable="YES"
-
-  Startup script tries it's best to guess which out of samba/nmbd/smbd/winbindd
-  daemons have to be started, but you can fine tune this by specifying them in
-  rc.conf, just make sure that samba_server_enable is enabled(see entry for 20121022).
-
-20140112:
-  AFFECTS: users of devel/libical
-  AUTHOR: kwm@FreeBSD.org
-
-  The libical port was updated to 1.0.0. Due to the shared library bump
-  and the removal of the .la file, all ports that use libical need to be
-  rebuilt.
-
-  # portmaster -r libical
-   or
-  # portupgrade -fr libical
-   or
-  # pkg install -fR libical
-
-20140111:
-  AFFECTS: users of lang/go
-  AUTHOR: jlaffaye@FreeBSD.org
-
-  Third party Go packages installed via the ports tree are no longer installed
-  in GOROOT (PREFIX/go) but in a specific path: PREFIX/share/go
-
-  Affected ports had their PORTREVISION bumped.
-  To reinstall these packages via the ports tree, it is needed to deinstall
-  them first (the build will fail if the `go` command detects that they
-  already exists in GOROOT).
-
-  If you are using these third party Go packages for local Go development,
-  you have to add this new path to your GOPATH environment variable.
-
-20140107:
-  AFFECTS: users of Qt 4 ports
-  AUTHOR: makc@FreeBSD.org
-
-  Qt 4 ports framework has been reworked, several ports have been renamed.
-  To ease upgrading run the following set of commands:
-
-  # pkg set -o devel/qt4-declarative:x11-toolkits/qt4-declarative
-  # pkg set -o devel/qt4-qtestlib:devel/qt4-testlib
-  # pkg set -o textproc/qt4-clucene:textproc/clucene-qt4
-  # pkg set -o www/qt4-webkit:www/webkit-qt4
-  # pkg set -o x11/qt4-opengl:graphics/qt4-opengl
-
-20140102:
-  AFFECTS: users of archivers/p7zip
-  AUTHOR: rakuco@FreeBSD.org
-
-  The MINIMAL and MODULES options have been removed from archivers/p7zip,
-  which now unconditionally installs the 7z, 7za and 7zr, as if the MINIMAL
-  option was previously unset.
-
-  The RAR decompression codec, whose source code has a more restrictive
-  license that forbids its use for creating RAR archives, has been moved to
-  a separate port, archivers/p7zip-codec-rar.
 
