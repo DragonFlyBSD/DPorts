@@ -4,6 +4,7 @@
 
 PORTNAME=	orca
 PORTVERSION=	3.14.3
+PORTREVISION=	1
 CATEGORIES=	accessibility gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -31,6 +32,8 @@ INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+
+PLIST_SUB+=	PYVER=${PYTHON_VER:S/.//}
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g' \
