@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	vips
-PORTVERSION=	7.42.0
-PORTREVISION=	1
+PORTVERSION=	7.42.1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.vips.ecs.soton.ac.uk/supported/${PORTVERSION:R}/
 
@@ -49,5 +48,7 @@ OPTIONS_SUB=		yes
 DOCS_CONFIGURE_ENABLE=	docs
 PYTHON_USES=		python
 PYTHON_CONFIGURE_WITH=	python
+PYTHON_CONFIGURE_ENABLE=	pyvips8
+PYTHON_USE=			GNOME=pygobject3
 
 .include <bsd.port.mk>
