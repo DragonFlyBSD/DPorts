@@ -4,7 +4,7 @@
 
 PORTNAME=	atspi
 PORTVERSION=	2.12.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	accessibility x11-toolkits python
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/pyatspi/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -24,5 +24,7 @@ USE_GNOME=	intlhack py3gobject3
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+
+PLIST_SUB+=	PYVER=${PYTHON_VER:S/.//}
 
 .include <bsd.port.mk>
