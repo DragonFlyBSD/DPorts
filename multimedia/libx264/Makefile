@@ -5,7 +5,7 @@
 
 PORTNAME=	libx264
 PORTVERSION=	0.${X264_BUILD}.${X264_REV}
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	multimedia
 MASTER_SITES=	ftp://ftp.videolan.org/pub/videolan/x264/snapshots/ \
 		http://samples.mplayerhq.hu/yuv4mpeg2/:pgo
@@ -49,6 +49,8 @@ CONFIGURE_ARGS+=	--extra-cflags="-I${LOCALBASE}/include" \
 			--enable-static --enable-shared \
 			--disable-opencl
 
+CFLAGS_armv6+=		-mcpu=arm1136jf-s
+
 PATHFIX_MAKEFILEIN=	Makefile
 PLIST_SUB+=		X264_BUILD=${X264_BUILD}
 
@@ -62,8 +64,8 @@ USE_GCC=	any
 
 .if ${PORT_OPTIONS:MPGO}
 # y4m sample video
-Y4M_VIDEO=example.y4m
-Y4M_VIDEO_DISTFILE=example.y4m.bz2
+Y4M_VIDEO=		example.y4m
+Y4M_VIDEO_DISTFILE=	example.y4m.bz2
 
 DISTFILES+=	${Y4M_VIDEO_DISTFILE}:pgo
 ALL_TARGET=	fprofiled
