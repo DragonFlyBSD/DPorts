@@ -476,6 +476,7 @@ share/git-core/templates/info/exclude
 %%GUI%%share/gitk/lib/msgs/pt_br.msg
 %%GUI%%share/gitk/lib/msgs/ru.msg
 %%GUI%%share/gitk/lib/msgs/sv.msg
+%%GUI%%share/gitk/lib/msgs/vi.msg
 %%HTMLDOCS%%%%DOCSDIR%%/git-add.html
 %%HTMLDOCS%%%%DOCSDIR%%/git-am.html
 %%HTMLDOCS%%%%DOCSDIR%%/git-annotate.html
@@ -611,7 +612,7 @@ share/git-core/templates/info/exclude
 %%HTMLDOCS%%%%DOCSDIR%%/git-status.html
 %%HTMLDOCS%%%%DOCSDIR%%/git-stripspace.html
 %%HTMLDOCS%%%%DOCSDIR%%/git-submodule.html
-%%HTMLDOCS%%%%DOCSDIR%%/git-subtree.html
+%%CONTRIB%%%%HTMLDOCS%%%%DOCSDIR%%/git-subtree.html
 %%HTMLDOCS%%%%DOCSDIR%%/git-svn.html
 %%HTMLDOCS%%%%DOCSDIR%%/git-symbolic-ref.html
 %%HTMLDOCS%%%%DOCSDIR%%/git-tag.html
@@ -1211,11 +1212,13 @@ share/git-core/templates/info/exclude
 %%HTMLDOCS%%%%DOCSDIR%%/RelNotes/2.1.4.txt
 %%HTMLDOCS%%%%DOCSDIR%%/RelNotes/2.2.0.txt
 %%HTMLDOCS%%%%DOCSDIR%%/RelNotes/2.2.1.txt
+%%HTMLDOCS%%%%DOCSDIR%%/RelNotes/2.2.2.txt
 %%GITWEB%%%%EXAMPLESDIR%%/gitweb/gitweb.cgi
 %%GITWEB%%%%EXAMPLESDIR%%/gitweb/static/gitweb.js
 %%GITWEB%%%%EXAMPLESDIR%%/gitweb/static/gitweb.css
 %%GITWEB%%%%EXAMPLESDIR%%/gitweb/static/git-favicon.png
 %%GITWEB%%%%EXAMPLESDIR%%/gitweb/static/git-logo.png
+%%CONTRIB%%share/git-core/contrib/contacts/Makefile
 %%CONTRIB%%share/git-core/contrib/contacts/git-contacts
 %%CONTRIB%%share/git-core/contrib/contacts/git-contacts.txt
 %%CONTRIB%%share/git-core/contrib/README
