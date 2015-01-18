@@ -4,6 +4,7 @@
 
 PORTNAME=	gnome-desktop
 PORTVERSION=	3.14.2
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -12,6 +13,8 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Additional UI API for GNOME 3
 
 USES=		tar:xz
+
+PORTSCOUT=	limitw:1,even
 
 .if !defined(REFERENCE_PORT)
 
