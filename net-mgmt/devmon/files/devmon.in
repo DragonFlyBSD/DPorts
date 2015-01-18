@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/net-mgmt/devmon/files/devmon.in 353886 2014-05-12 18:15:08Z feld $
+# $FreeBSD: head/net-mgmt/devmon/files/devmon.in 376298 2015-01-05 13:18:58Z marino $
 # PROVIDE: devmon
 # REQUIRE: LOGIN
 # KEYWORD: shutdown
@@ -19,7 +19,7 @@ load_rc_config ${name}
 
 command="%%PREFIX%%/devmon/devmon"
 command_args="-c ${devmon_config} -d ${devmon_db}"
-command_interpreter=/usr/local/bin/perl
+command_interpreter="%%PREFIX%%/bin/perl"
 pidfile=${devmon_pid}
 
 start_precmd=devmon_startprecmd
