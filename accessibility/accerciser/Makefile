@@ -4,6 +4,7 @@
 
 PORTNAME=	accerciser
 PORTVERSION=	3.14.0
+PORTREVISION=	1
 CATEGORIES=	accessibility gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -26,5 +27,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 SHEBANG_FILES=	plugins/ipython_view.py
 
 GLIB_SCHEMAS=	org.a11y.Accerciser.gschema.xml
+
+PLIST_SUB+=	PYVER=${PYTHON_VER:S/.//}
 
 .include <bsd.port.mk>
