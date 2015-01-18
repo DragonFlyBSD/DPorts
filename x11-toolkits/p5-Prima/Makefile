@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	Prima
-PORTVERSION=	1.40
-PORTREVISION=	3
+PORTVERSION=	1.41
+PORTREVISION=	1
 CATEGORIES=	x11-toolkits graphics perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -38,6 +38,8 @@ XFT_CONFIGURE_ON=	WITH_XFT=1
 XFT_USE=		XORG=xft
 
 post-install:
+	${CHMOD} u+w ${STAGEDIR}${PREFIX}/${SITE_ARCH_REL}/auto/Prima/Prima.so
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/${SITE_ARCH_REL}/auto/Prima/Prima.so
+	${CHMOD} u-w ${STAGEDIR}${PREFIX}/${SITE_ARCH_REL}/auto/Prima/Prima.so
 
 .include <bsd.port.mk>
