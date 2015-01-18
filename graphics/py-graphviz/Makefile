@@ -2,15 +2,14 @@
 # $FreeBSD$
 
 PORTNAME=	graphviz
-PORTVERSION=	1.1
-PORTREVISION=	1
+PORTVERSION=	1.2
 CATEGORIES=	graphics python
 MASTER_SITES=	CHEESESHOP \
 		http://networkx.lanl.gov/download/pygraphviz/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	pygraphviz-${PORTVERSION}
 
-MAINTAINER=	rafan@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Python interface to GraphViz agraph
 
 BUILD_DEPENDS=	dot:${PORTSDIR}/graphics/graphviz
