@@ -1,4 +1,4 @@
---- src/gldit/cairo-dock-file-manager.c.orig	2015-01-03 15:46:42 UTC
+--- src/gldit/cairo-dock-file-manager.c.orig	2014-10-15 14:16:34 UTC
 +++ src/gldit/cairo-dock-file-manager.c
 @@ -21,7 +21,11 @@
  #include <string.h>      // memset
