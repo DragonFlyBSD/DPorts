@@ -4,6 +4,7 @@
 
 PORTNAME=	libpeas
 PORTVERSION=	1.12.1
+PORTREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -33,5 +34,7 @@ SEED_LIB_DEPENDS=	libseed-gtk3.so:${PORTSDIR}/devel/seed
 SEED_CONFIGURE_ENABLE=	seed	
 PYTHON_USE=	GNOME=py3gobject3
 PYTHON_CONFIGURE_ENABLE=	python3
+
+PLIST_SUB+=	PYVER=${PYTHON_VER:S/.//}
 
 .include <bsd.port.mk>
