@@ -3,7 +3,7 @@
 
 PORTNAME=	osg
 PORTVERSION=	3.3.2
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	http://trac.openscenegraph.org/downloads/developer_releases/ \
 		http://mirror.amdmi3.ru/distfiles/
@@ -75,7 +75,7 @@ QT4_CMAKE_ON=		-DOSG_USE_QT=ON
 QT4_CMAKE_OFF=		-DOSG_USE_QT=OFF
 LUA_USES=		lua:52
 V8_LIB_DEPENDS=		libv8.so:${PORTSDIR}/lang/v8
-PYTHON_USE=		PYTHON=2
+PYTHON_USES=		python:2
 
 .include <bsd.port.options.mk>
 
