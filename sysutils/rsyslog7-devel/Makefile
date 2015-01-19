@@ -2,12 +2,15 @@
 
 PORTNAME=	rsyslog
 PORTVERSION=	7.5.8
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.rsyslog.com/files/download/rsyslog/
 
 MAINTAINER=	brd@FreeBSD.org
 COMMENT=	Syslogd supporting SQL, TCP, and TLS
+
+DEPRECATED=	EoL, use sysutils/rsyslog8
+EXPIRATION_DATE=	2015-02-13
 
 BUILD_DEPENDS=	libgcrypt-config:${PORTSDIR}/security/libgcrypt
 
