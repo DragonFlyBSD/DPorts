@@ -1,6 +1,6 @@
---- ./lib/blkid/getsize.c.orig	2013-12-16 06:32:00.000000000 +0000
-+++ ./lib/blkid/getsize.c
-@@ -46,6 +46,9 @@
+--- lib/blkid/getsize.c.orig	2015-01-19 14:43:35 UTC
++++ lib/blkid/getsize.c
+@@ -42,6 +42,9 @@
  #include <sys/stat.h>
  #endif
  
@@ -10,7 +10,7 @@
  
  #if defined(__linux__) && defined(_IO) && !defined(BLKGETSIZE)
  #define BLKGETSIZE _IO(0x12,96)	/* return device size */
-@@ -123,6 +126,13 @@ blkid_loff_t blkid_get_dev_size(int fd)
+@@ -119,6 +122,13 @@ blkid_loff_t blkid_get_dev_size(int fd)
  		return (off_t)size64;
  #endif /* DIOCGMEDIASIZE */
  
@@ -24,12 +24,12 @@
  #ifdef FDGETPRM
  	{
  		struct floppy_struct this_floppy;
-@@ -131,7 +141,7 @@ blkid_loff_t blkid_get_dev_size(int fd)
+@@ -127,7 +137,7 @@ blkid_loff_t blkid_get_dev_size(int fd)
  			return (blkid_loff_t)this_floppy.size << 9;
  	}
  #endif
--#ifdef HAVE_SYS_DISKLABEL_H
-+#if defined(HAVE_SYS_DISKLABEL_H) && !defined(__DragonFly__)
+-#if defined(HAVE_SYS_DISKLABEL_H) && defined(DIOCGDINFO)
++#if defined(HAVE_SYS_DISKLABEL_H) && defined(DIOCGDINFO) && !defined(__DragonFly__)
  	{
  		int part = -1;
  		struct disklabel lab;
