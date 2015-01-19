@@ -1,11 +1,11 @@
---- tools/gyp/pylib/gyp/common.py.orig	2013-02-25 21:07:25.000000000 +0000
+--- tools/gyp/pylib/gyp/common.py.orig	2014-12-22 21:22:32 UTC
 +++ tools/gyp/pylib/gyp/common.py
-@@ -369,6 +369,8 @@ def GetFlavor(params):
-     return flavors[sys.platform]
-   if sys.platform.startswith('sunos'):
+@@ -415,6 +415,8 @@ def GetFlavor(params):
      return 'solaris'
-+  if sys.platform.startswith('dragonfly'):
-+    return 'freebsd'
    if sys.platform.startswith('freebsd'):
      return 'freebsd'
- 
++  if sys.platform.startswith('dragon'):
++    return 'freebsd'
+   if sys.platform.startswith('openbsd'):
+     return 'openbsd'
+   if sys.platform.startswith('aix'):

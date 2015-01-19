@@ -1,8 +1,8 @@
---- tools/install.py.orig	2013-02-25 21:07:25.000000000 +0000
+--- tools/install.py.orig	2014-12-22 21:22:32 UTC
 +++ tools/install.py
-@@ -203,7 +203,7 @@ def files(action):
-   # with dtrace support now (oracle's "unbreakable" linux)
-   action(['src/node.d'], 'lib/dtrace/')
+@@ -132,7 +132,7 @@ def files(action):
+   if 'true' == variables.get('node_use_dtrace'):
+     action(['out/Release/node.d'], 'lib/dtrace/node.d')
  
 -  if 'freebsd' in sys.platform or 'openbsd' in sys.platform:
 +  if 'freebsd' in sys.platform or 'dragonfly' in sys.platform:
