@@ -1,5 +1,5 @@
---- libv4lconvert/libv4lsyscall-priv.h.orig	2012-04-14 19:33:44.000000000 +0200
-+++ libv4lconvert/libv4lsyscall-priv.h	2012-12-29 11:02:58.304153000 +0100
+--- libv4lconvert/libv4lsyscall-priv.h.orig	2012-04-14 17:33:44 UTC
++++ libv4lconvert/libv4lsyscall-priv.h
 @@ -49,7 +49,7 @@
  #endif
  #endif
@@ -9,7 +9,17 @@
  #include <sys/time.h>
  #include <sys/syscall.h>
  #include <sys/types.h>
-@@ -83,7 +83,7 @@
+@@ -57,7 +57,9 @@
+ #define	_IOC_NR(cmd) ((cmd) & 0xFF)
+ #define	_IOC_TYPE(cmd) IOCGROUP(cmd)
+ #define	_IOC_SIZE(cmd) IOCPARM_LEN(cmd)
++# ifndef  MAP_ANONYMOUS
+ #define	MAP_ANONYMOUS MAP_ANON
++# endif
+ #define	MMAP2_PAGE_SHIFT 0
+ typedef off_t __off_t;
+ #endif
+@@ -83,7 +85,7 @@ typedef off_t __off_t;
  #define SYS_WRITE(fd, buf, len) \
  	syscall(SYS_write, (int)(fd), (void *)(buf), (size_t)(len));
  
