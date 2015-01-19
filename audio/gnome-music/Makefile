@@ -4,6 +4,7 @@
 
 PORTNAME=	gnome-music
 PORTVERSION=	3.14.2
+PORTREVISION=	1
 CATEGORIES=	audio gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -29,5 +30,7 @@ MAKE_ENV=	XDG_CACHE_HOME=${WRKDIR}
 INSTALL_TARGET=	install-strip
 
 GLIB_SCHEMAS=	org.gnome.Music.gschema.xml
+
+PLIST_SUB+=	PYVER=${PYTHON_VER:S/.//}
 
 .include <bsd.port.mk>
