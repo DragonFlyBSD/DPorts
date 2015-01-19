@@ -28,7 +28,7 @@ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION,
 EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-  $FreeBSD: head/security/vuxml/vuln.xml 375358 2014-12-23 21:24:55Z rea $
+  $FreeBSD: head/security/vuxml/vuln.xml 377155 2015-01-16 08:18:13Z ehaupt $
 
 
 QUICK GUIDE TO ADDING A NEW ENTRY
@@ -57,6 +57,531 @@ Notes:
 
 -->
 <vuxml xmlns="http://www.vuxml.org/apps/vuxml-1">
+  <vuln vid="d9360908-9d52-11e4-87fd-10bf48e1088e">
+    <topic>unzip -- input sanitization errors</topic>
+    <affects>
+      <package>
+	<name>unzip</name>
+	<range><le>6.0_2</le></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>oCERT reports:</p>
+	<blockquote cite="http://www.ocert.org/advisories/ocert-2014-011.html">
+	  <p>The UnZip tool is an open source extraction utility for archives
+	    compressed in the zip format.</p>
+	  <p>The unzip command line tool is affected by heap-based buffer
+	    overflows within the CRC32 verification, the test_compr_eb() and
+	    the getZip64Data() functions. The input errors may result in
+	    arbitrary code execution.</p>
+	  <p>A specially crafted zip file, passed to unzip -t, can be used to
+	    trigger the vulnerability.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-8139</cvename>
+      <cvename>CVE-2014-8140</cvename>
+      <cvename>CVE-2014-8141</cvename>
+      <url>http://www.info-zip.org/UnZip.html</url>
+      <url>https://bugzilla.redhat.com/show_bug.cgi?id=1174844</url>
+      <url>https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2014-8140</url>
+      <url>https://bugzilla.redhat.com/show_bug.cgi?id=1174856</url>
+    </references>
+    <dates>
+      <discovery>2014-12-03</discovery>
+      <entry>2015-01-16</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="d4f45676-9d33-11e4-8275-000c292e4fd8">
+    <topic>samba -- Elevation of privilege to Active Directory Domain Controller</topic>
+    <affects>
+      <package>
+	<name>samba4</name>
+	<range><ge>4.0.0</ge><lt>4.0.23</lt></range>
+      </package>
+      <package>
+	<name>samba41</name>
+	<range><ge>4.1.0</ge><lt>4.1.15</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Samba team reports:</p>
+	<blockquote cite="https://www.samba.org/samba/security/CVE-2014-8143">
+	  <p>In Samba's AD DC we neglected to ensure that
+	  attempted modifications of the userAccountControl attribute
+	  did not allow the UF_SERVER_TRUST_ACCOUNT bit to be set.
+	  </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-8143</cvename>
+      <url>https://www.samba.org/samba/security/CVE-2014-8143</url>
+    </references>
+    <dates>
+      <discovery>2015-01-15</discovery>
+      <entry>2015-01-16</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="7a8a74d1-9c34-11e4-a40b-5453ed2e2b49">
+    <topic>kde-runtime -- incorrect CBC encryption handling</topic>
+    <affects>
+      <package>
+	<name>kde-runtime</name>
+	<range><lt>4.12_3</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Valentin Rusu reports:</p>
+	<blockquote cite="https://www.kde.org/info/security/advisory-20150109-1.txt">
+	  <p>Until KDE Applications 14.12.0, kwalletd incorrectly handled CBC
+	    encryption blocks when encrypting secrets in kwl files. The secrets
+	    were still encrypted, but the result binary data corresponded to an
+	    ECB encrypted block instead of CBC.</p>
+	  <p>The ECB encryption algorithm, even if it'll scramble user data,
+	    will produce same encrypted byte sequence for the same input text.
+	    As a result, attackers may eventually find-out the encrypted
+	    text.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-7252</cvename>
+      <url>https://www.kde.org/info/security/advisory-20150109-1.txt</url>
+    </references>
+    <dates>
+      <discovery>2015-01-09</discovery>
+      <entry>2015-01-14</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="bd62c640-9bb9-11e4-a5ad-000c297fb80f">
+    <topic>mozilla -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>firefox</name>
+	<range><lt>35.0,1</lt></range>
+      </package>
+      <package>
+	<name>firefox-esr</name>
+	<range><lt>31.4.0,1</lt></range>
+      </package>
+      <package>
+	<name>linux-firefox</name>
+	<range><lt>35.0,1</lt></range>
+      </package>
+      <package>
+	<name>linux-seamonkey</name>
+	<range><lt>2.32</lt></range>
+      </package>
+      <package>
+	<name>linux-thunderbird</name>
+	<range><lt>31.4.0</lt></range>
+      </package>
+      <package>
+	<name>seamonkey</name>
+	<range><lt>2.32</lt></range>
+      </package>
+      <package>
+	<name>thunderbird</name>
+	<range><lt>31.4.0</lt></range>
+      </package>
+      <package>
+	<name>libxul</name>
+	<range><lt>31.4.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Mozilla Project reports:</p>
+	<blockquote cite="https://www.mozilla.org/en-US/security/known-vulnerabilities/">
+	  <p>MSFA-2015-01 Miscellaneous memory safety hazards (rv:35.0
+	    / rv:31.4)</p>
+	  <p>MSFA-2015-02 Uninitialized memory use during bitmap
+	    rendering</p>
+	  <p>MSFA-2015-03 sendBeacon requests lack an Origin header</p>
+	  <p>MSFA-2015-04 Cookie injection through Proxy Authenticate
+	    responses</p>
+	  <p>MSFA-2015-05 Read of uninitialized memory in Web Audio</p>
+	  <p>MSFA-2015-06 Read-after-free in WebRTC</p>
+	  <p>MSFA-2015-07 Gecko Media Plugin sandbox escape</p>
+	  <p>MSFA-2015-08 Delegated OCSP responder certificates failure
+	    with id-pkix-ocsp-nocheck extension</p>
+	  <p>MSFA-2015-09 XrayWrapper bypass through DOM objects</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-8634</cvename>
+      <cvename>CVE-2014-8635</cvename>
+      <cvename>CVE-2014-8637</cvename>
+      <cvename>CVE-2014-8638</cvename>
+      <cvename>CVE-2014-8639</cvename>
+      <cvename>CVE-2014-8640</cvename>
+      <cvename>CVE-2014-8641</cvename>
+      <cvename>CVE-2014-8642</cvename>
+      <cvename>CVE-2014-8643</cvename>
+      <cvename>CVE-2014-8636</cvename>
+      <url>https://www.mozilla.org/en-US/security/advisories/mfsa2015-01/</url>
+      <url>https://www.mozilla.org/en-US/security/advisories/mfsa2015-02/</url>
+      <url>https://www.mozilla.org/en-US/security/advisories/mfsa2015-03/</url>
+      <url>https://www.mozilla.org/en-US/security/advisories/mfsa2015-04/</url>
+      <url>https://www.mozilla.org/en-US/security/advisories/mfsa2015-05/</url>
+      <url>https://www.mozilla.org/en-US/security/advisories/mfsa2015-06/</url>
+      <url>https://www.mozilla.org/en-US/security/advisories/mfsa2015-07/</url>
+      <url>https://www.mozilla.org/en-US/security/advisories/mfsa2015-08/</url>
+      <url>https://www.mozilla.org/en-US/security/advisories/mfsa2015-09/</url>
+      <url>https://www.mozilla.org/security/advisories/</url>
+    </references>
+    <dates>
+      <discovery>2015-01-13</discovery>
+      <entry>2015-01-14</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="daa8a49b-99b9-11e4-8f66-3085a9a4510d">
+    <topic>libevent -- integer overflow in evbuffers</topic>
+    <affects>
+      <package>
+	<name>libevent</name>
+	<range><lt>1.4.15</lt></range>
+      </package>
+      <package>
+	<name>libevent2</name>
+	<range><lt>2.0.22</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Debian Security Team reports:</p>
+	<blockquote cite="https://www.debian.org/security/2015/dsa-3119">
+	  <p>Andrew Bartlett of Catalyst reported a defect affecting certain
+	     applications using the Libevent evbuffer API. This defect leaves
+	     applications which pass insanely large inputs to evbuffers open
+	     to a possible heap overflow or infinite loop. In order to exploit
+	     this flaw, an attacker needs to be able to find a way to provoke
+	     the program into trying to make a buffer chunk larger than what
+	     will fit into a single size_t or off_t.
+	 </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-6272</cvename>
+      <url>https://www.debian.org/security/2015/dsa-3119</url>
+    </references>
+    <dates>
+      <discovery>2015-01-05</discovery>
+      <entry>2015-01-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="caa98ffd-0a92-40d0-b234-fd79b429157e">
+    <topic>cURL -- URL request injection vulnerability</topic>
+    <affects>
+      <package>
+	<name>curl</name>
+	<range><lt>7.40.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>cURL reports:</p>
+	<blockquote cite="http://curl.haxx.se/docs/adv_20150108B.html">
+	  <p>When libcurl sends a request to a server via a HTTP proxy, it
+	    copies the entire URL into the request and sends if off.
+	    If the given URL contains line feeds and carriage returns those will
+	    be sent along to the proxy too, which allows the program to for
+	    example send a separate HTTP request injected embedded in the URL.
+	    Many programs allow some kind of external sources to set the URL or
+	    provide partial pieces for the URL to ask for, and if the URL as
+	    received from the user is not stripped good enough this flaw allows
+	    malicious users to do additional requests in a way that was not
+	    intended, or just to insert request headers into the request that
+	    the program didn't intend.
+	    We are not aware of any exploit of this flaw.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-8150</cvename>
+      <url>http://curl.haxx.se/docs/adv_20150108B.html</url>
+    </references>
+    <dates>
+      <discovery>2014-12-25</discovery>
+      <entry>2015-01-09</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="e9ccdb28-9802-11e4-9d9c-bcaec565249c">
+    <topic>WebKit-gtk -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>webkit-gtk2</name>
+	<range><lt>1.4.8</lt></range>
+      </package>
+      <package>
+	<name>webkit-gtk3</name>
+	<range><lt>1.4.8</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Webkit release team reports:</p>
+	<blockquote cite="http://webkitgtk.org/2015/01/07/webkitgtk2.4.8-released.html">
+	  <p>This release fixes the following security issues:
+	    CVE-2014-1344, CVE-2014-1384, CVE-2014-1385, CVE-2014-1386,
+	    CVE-2014-1387, CVE-2014-1388, CVE-2014-1389, CVE-2014-1390.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>http://webkitgtk.org/2015/01/07/webkitgtk2.4.8-released.html</url>
+      <cvename>CVE-2014-1344</cvename>
+      <cvename>CVE-2014-1384</cvename>
+      <cvename>CVE-2014-1385</cvename>
+      <cvename>CVE-2014-1386</cvename>
+      <cvename>CVE-2014-1387</cvename>
+      <cvename>CVE-2014-1388</cvename>
+      <cvename>CVE-2014-1389</cvename>
+      <cvename>CVE-2014-1390</cvename>
+    </references>
+    <dates>
+      <discovery>2015-01-07</discovery>
+      <entry>2015-01-09</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="4e536c14-9791-11e4-977d-d050992ecde8">
+    <topic>OpenSSL -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>openssl</name>
+	<range><ge>1.0.1</ge><lt>1.0.1_17</lt></range>
+      </package>
+      <package>
+	<name>mingw32-openssl</name>
+	<range><ge>1.0.1</ge><lt>1.0.1k</lt></range>
+      </package>
+      <package>
+	<name>linux-c6-openssl</name>
+	<range><gt>0</gt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>OpenSSL project reports:</p>
+	<blockquote cite="https://www.openssl.org/news/secadv_20150108.txt">
+	  <p>DTLS segmentation fault in dtls1_get_record (CVE-2014-3571)</p>
+	  <p>DTLS memory leak in dtls1_buffer_record (CVE-2015-0206)</p>
+	  <p>no-ssl3 configuration sets method to NULL (CVE-2014-3569)</p>
+	  <p>ECDHE silently downgrades to ECDH [Client] (CVE-2014-3572)</p>
+	  <p>RSA silently downgrades to EXPORT_RSA [Client] (CVE-2015-0204)</p>
+	  <p>DH client certificates accepted without verification [Server] (CVE-2015-0205)</p>
+	  <p>Certificate fingerprints can be modified (CVE-2014-8275)</p>
+	  <p>Bignum squaring may produce incorrect results (CVE-2014-3570)</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-3569</cvename>
+      <cvename>CVE-2014-3570</cvename>
+      <cvename>CVE-2014-3571</cvename>
+      <cvename>CVE-2014-3572</cvename>
+      <cvename>CVE-2014-8275</cvename>
+      <cvename>CVE-2015-0204</cvename>
+      <cvename>CVE-2015-0205</cvename>
+      <cvename>CVE-2015-0206</cvename>
+      <url>https://www.openssl.org/news/secadv_20150108.txt</url>
+    </references>
+    <dates>
+      <discovery>2015-01-08</discovery>
+      <entry>2015-01-08</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="5e135178-8aeb-11e4-801f-0022156e8794">
+    <topic>wordpress -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>wordpress</name>
+	<range><lt>3.7.5,1</lt></range>
+	<range><ge>3.8,1</ge><lt>3.8.5,1</lt></range>
+	<range><ge>3.9,1</ge><lt>3.9.3,1</lt></range>
+	<range><ge>4.0,1</ge><lt>4.0.1,1</lt></range>
+      </package>
+      <package>
+	<name>zh-wordpress</name>
+	<range><lt>3.7.5</lt></range>
+	<range><ge>3.8</ge><lt>3.8.5</lt></range>
+	<range><ge>3.9</ge><lt>3.9.3</lt></range>
+	<range><ge>4.0</ge><lt>4.0.1</lt></range>
+      </package>
+      <package>
+	<name>de-wordpress</name>
+	<range><lt>3.7.5</lt></range>
+	<range><ge>3.8</ge><lt>3.8.5</lt></range>
+	<range><ge>3.9</ge><lt>3.9.3</lt></range>
+	<range><ge>4.0</ge><lt>4.0.1</lt></range>
+      </package>
+      <package>
+	<name>ja-wordpress</name>
+	<range><lt>3.7.5</lt></range>
+	<range><ge>3.8</ge><lt>3.8.5</lt></range>
+	<range><ge>3.9</ge><lt>3.9.3</lt></range>
+	<range><ge>4.0</ge><lt>4.0.1</lt></range>
+      </package>
+      <package>
+	<name>ru-wordpress</name>
+	<range><lt>3.7.5</lt></range>
+	<range><ge>3.8</ge><lt>3.8.5</lt></range>
+	<range><ge>3.9</ge><lt>3.9.3</lt></range>
+	<range><ge>4.0</ge><lt>4.0.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>MITRE reports:</p>
+	<blockquote cite="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-9039">
+	  <p>wp-login.php in WordPress before 3.7.5, 3.8.x before
+	    3.8.5, 3.9.x before 3.9.3, and 4.x before 4.0.1 might allow
+	    remote attackers to reset passwords by leveraging access to
+	    an e-mail account that received a password-reset message.</p>
+	</blockquote>
+	<blockquote cite="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-9038">
+	  <p>wp-includes/http.php in WordPress before 3.7.5, 3.8.x
+	    before 3.8.5, 3.9.x before 3.9.3, and 4.x before 4.0.1
+	    allows remote attackers to conduct server-side request
+	    forgery (SSRF) attacks by referring to a 127.0.0.0/8
+	    resource.</p>
+	</blockquote>
+	<blockquote cite="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-9037">
+	  <p>WordPress before 3.7.5, 3.8.x before 3.8.5, 3.9.x before
+	    3.9.3, and 4.x before 4.0.1 might allow remote attackers to
+	    obtain access to an account idle since 2008 by leveraging an
+	    improper PHP dynamic type comparison for an MD5 hash.</p>
+	</blockquote>
+	<blockquote cite="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-9036">
+	  <p>Cross-site scripting (XSS) vulnerability in WordPress
+	    before 3.7.5, 3.8.x before 3.8.5, 3.9.x before 3.9.3, and
+	    4.x before 4.0.1 allows remote attackers to inject arbitrary
+	    web script or HTML via a crafted Cascading Style Sheets
+	    (CSS) token sequence in a post.</p>
+	</blockquote>
+	<blockquote cite="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-9035">
+	  <p>Cross-site scripting (XSS) vulnerability in Press This in
+	    WordPress before 3.7.5, 3.8.x before 3.8.5, 3.9.x before
+	    3.9.3, and 4.x before 4.0.1 allows remote attackers to
+	    inject arbitrary web script or HTML via unspecified
+	    vectors</p>
+	</blockquote>
+	<blockquote cite="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-9034">
+	  <p>wp-includes/class-phpass.php in WordPress before 3.7.5,
+	    3.8.x before 3.8.5, 3.9.x before 3.9.3, and 4.x before 4.0.1
+	    allows remote attackers to cause a denial of service (CPU
+	    consumption) via a long password that is improperly handled
+	    during hashing, a similar issue to CVE-2014-9016.</p>
+	</blockquote>
+	<blockquote cite="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-9033">
+	  <p>Cross-site request forgery (CSRF) vulnerability in
+	    wp-login.php in WordPress 3.7.4, 3.8.4, 3.9.2, and 4.0
+	    allows remote attackers to hijack the authentication of
+	    arbitrary users for requests that reset passwords.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-9033</cvename>
+      <cvename>CVE-2014-9034</cvename>
+      <cvename>CVE-2014-9035</cvename>
+      <cvename>CVE-2014-9036</cvename>
+      <cvename>CVE-2014-9037</cvename>
+      <cvename>CVE-2014-9038</cvename>
+      <cvename>CVE-2014-9039</cvename>
+    </references>
+    <dates>
+      <discovery>2014-11-25</discovery>
+      <entry>2015-01-05</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="c564f9bd-8ba7-11e4-801f-0022156e8794">
+    <topic>png -- heap overflow for 32-bit builds</topic>
+    <affects>
+      <package>
+	<name>png</name>
+	<range><ge>1.2.6</ge><lt>1.5.21</lt></range>
+	<range><ge>1.6</ge><lt>1.6.16</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>32-bit builds of PNG library are vulnerable to an unsigned
+	  integer overflow that is triggered by a crafted wide
+	  interlaced images.
+	  Overflow results in a heap corruption that will crash the
+	  application and may lead to the controlled overwrite of a
+	  selected portions of process address space.</p>
+      </body>
+    </description>
+    <references>
+      <url>http://tfpwn.com/files/libpng_heap_overflow_1.6.15.txt</url>
+      <url>http://codelabs.ru/security/vulns/analysis/libpng/2014-dec-libpng-1.6.15/</url>
+    </references>
+    <dates>
+      <discovery>2014-12-23</discovery>
+      <entry>2015-01-05</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="9575259a-92d5-11e4-bce6-d050992ecde8">
+    <topic>file -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>file</name>
+	<range><lt>5.21</lt></range>
+      </package>
+      <system>
+	<name>FreeBSD</name>
+	<range><ge>8.4</ge><lt>8.4_20</lt></range>
+	<range><ge>9.1</ge><lt>9.1_23</lt></range>
+	<range><ge>9.2</ge><lt>9.2_16</lt></range>
+	<range><ge>9.3</ge><lt>9.3_6</lt></range>
+	<range><ge>10.0</ge><lt>10.0_13</lt></range>
+	<range><ge>10.1</ge><lt>10.1_1</lt></range>
+      </system>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>RedHat reports:</p>
+	<blockquote cite="http://seclists.org/oss-sec/2014/q4/1056">
+	  <p>Thomas Jarosch of Intra2net AG reported a number of
+	    denial of service issues (resource consumption) in
+	    the ELF parser used by file(1). These issues were
+	    fixed in the 5.21 release of file(1), but by mistake
+	    are missing from the changelog.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-3710</cvename>
+      <cvename>CVE-2014-8116</cvename>
+      <cvename>CVE-2014-8117</cvename>
+      <freebsdsa>FreeBSD-SA-14:28.file</freebsdsa>
+      <url>http://seclists.org/oss-sec/2014/q4/1056</url>
+    </references>
+    <dates>
+      <discovery>2014-12-16</discovery>
+      <entry>2015-01-02</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="c3d43001-8064-11e4-801f-0022156e8794">
     <topic>mutt -- denial of service via crafted mail message</topic>
     <affects>
@@ -2337,7 +2862,7 @@ Notes:
   </vuln>
 
   <vuln vid="38242d51-3e58-11e4-ac2f-bcaec565249c">
-    <topic>dbus -- multiple vulnabilities</topic>
+    <topic>dbus -- multiple vulnerabilities</topic>
     <affects>
       <package>
 	<name>dbus</name>
@@ -3713,7 +4238,7 @@ Notes:
   </vuln>
 
   <vuln vid="e6a7636a-02d0-11e4-88b6-080027671656">
-    <topic>dbus -- multiple vulnabilities</topic>
+    <topic>dbus -- multiple vulnerabilities</topic>
     <affects>
       <package>
 	<name>dbus</name>
@@ -3814,6 +4339,10 @@ Notes:
 	<name>lzo2</name>
 	<range><lt>2.07</lt></range>
       </package>
+      <package>
+	<name>busybox</name>
+	<range><lt>1.22.1_2</lt></range>
+      </package>
     </affects>
     <description>
       <body xmlns="http://www.w3.org/1999/xhtml">
@@ -3833,10 +4362,12 @@ Notes:
     </description>
     <references>
       <url>http://www.oberhumer.com/opensource/lzo/download/lzo-2.07.tar.gz</url>
+      <cvename>CVE-2014-4608</cvename>
     </references>
     <dates>
       <discovery>2014-06-25</discovery>
       <entry>2014-06-26</entry>
+      <modified>2015-01-06</modified>
     </dates>
   </vuln>
 
@@ -4391,7 +4922,7 @@ Notes:
   </vuln>
 
   <vuln vid="02db20d7-e34a-11e3-bd92-bcaec565249c">
-    <topic>openjpeg -- Multiple vulnabilities</topic>
+    <topic>openjpeg -- Multiple vulnerabilities</topic>
     <affects>
       <package>
 	<name>openjpeg</name>
@@ -5409,7 +5940,7 @@ Notes:
       <body xmlns="http://www.w3.org/1999/xhtml">
 	<p>Google Chrome Releases reports:</p>
 	<blockquote cite="http://googlechromereleases.blogspot.nl/">
-	  <p>31 vulnerabilies fixed in this release, including:</p>
+	  <p>31 vulnerabilities fixed in this release, including:</p>
 	  <ul>
 	    <li>[354123] High CVE-2014-1716: UXSS in V8. Credit to
 	      Anonymous.</li>
@@ -5961,7 +6492,7 @@ Notes:
   </vuln>
 
   <vuln vid="a70966a1-ac22-11e3-8d04-00262d5ed8ee">
-    <topic>www/chromium -- multiple vulnerabities</topic>
+    <topic>www/chromium -- multiple vulnerabilities</topic>
     <affects>
       <package>
 	<name>chromium</name>
@@ -5972,7 +6503,7 @@ Notes:
       <body xmlns="http://www.w3.org/1999/xhtml">
 	<p>Google Chrome Releases reports:</p>
 	<blockquote cite="http://googlechromereleases.blogspot.nl/">
-	  <p>New vulnerabilites after the Pwn2Own competition:</p>
+	  <p>New vulnerabilities after the Pwn2Own competition:</p>
 	  <ul>
 	    <li>[352369] Code execution outside sandbox. Credit to VUPEN.
 	      <ul>
@@ -20107,7 +20638,7 @@ executed in your Internet Explorer while displaying the email.</p>
   </vuln>
 
   <vuln vid="6dd5e45c-f084-11e1-8d0f-406186f3d89d">
-    <topic>coppermine -- Multiple vulnerabilites</topic>
+    <topic>coppermine -- Multiple vulnerabilities</topic>
     <affects>
       <package>
 	<name>coppermine</name>
@@ -28426,7 +28957,7 @@ executed in your Internet Explorer while displaying the email.</p>
   </vuln>
 
   <vuln vid="f08e2c15-ffc9-11e0-b0f3-bcaec565249c">
-    <topic>cacti -- Multiple vulnabilites</topic>
+    <topic>cacti -- Multiple vulnerabilities</topic>
     <affects>
       <package>
 	<name>cacti</name>
@@ -33492,7 +34023,7 @@ executed in your Internet Explorer while displaying the email.</p>
   </vuln>
 
   <vuln vid="06a12e26-142e-11e0-bea2-0015f2db7bde">
-    <topic>webkit-gtk2 -- Multiple vulnabilities</topic>
+    <topic>webkit-gtk2 -- Multiple vulnerabilities</topic>
     <affects>
       <package>
 	<name>webkit-gtk2</name>
@@ -36436,7 +36967,7 @@ executed in your Internet Explorer while displaying the email.</p>
   </vuln>
 
   <vuln vid="9bcfd7b6-bcda-11df-9a6a-0015f2db7bde">
-    <topic>webkit-gtk2 -- Multiple vulnabilities</topic>
+    <topic>webkit-gtk2 -- Multiple vulnerabilities</topic>
     <affects>
       <package>
 	<name>webkit-gtk2</name>
@@ -37400,7 +37931,7 @@ executed in your Internet Explorer while displaying the email.</p>
   </vuln>
 
   <vuln vid="19419b3b-92bd-11df-b140-0015f2db7bde">
-    <topic>webkit-gtk2 -- Multiple vulnabilities</topic>
+    <topic>webkit-gtk2 -- Multiple vulnerabilities</topic>
     <affects>
       <package>
 	<name>webkit-gtk2</name>
@@ -42818,7 +43349,7 @@ executed in your Internet Explorer while displaying the email.</p>
   </vuln>
 
   <vuln vid="f59dda75-5ff4-11de-a13e-00e0815b8da8">
-    <topic>tor-devel -- DNS resolution vulnerabiliity</topic>
+    <topic>tor-devel -- DNS resolution vulnerability</topic>
     <affects>
       <package>
 	<name>tor-devel</name>
@@ -45296,7 +45827,7 @@ executed in your Internet Explorer while displaying the email.</p>
   </vuln>
 
   <vuln vid="78f5606b-f9d1-11dd-b79c-0030843d3802">
-    <topic>tor -- multiple vulnerabilites</topic>
+    <topic>tor -- multiple vulnerabilities</topic>
     <affects>
       <package>
 	<name>tor</name>
@@ -50452,7 +50983,7 @@ executed in your Internet Explorer while displaying the email.</p>
   </vuln>
 
   <vuln vid="35e54755-54e4-11dd-ad8b-0030843d3802">
-    <topic>phpmyadmin -- cross site request forgery vulnerabilites</topic>
+    <topic>phpmyadmin -- cross site request forgery vulnerabilities</topic>
     <affects>
       <package>
 	<name>phpMyAdmin</name>
@@ -55455,7 +55986,7 @@ executed in your Internet Explorer while displaying the email.</p>
   </vuln>
 
   <vuln vid="a5f667db-7596-11dc-8b7a-0019b944b34e">
-    <topic>xfs -- multiple vulnerabilites</topic>
+    <topic>xfs -- multiple vulnerabilities</topic>
     <affects>
       <package>
 	<name>xfs</name>
@@ -70038,7 +70569,7 @@ executed in your Internet Explorer while displaying the email.</p>
 	    the webserver process are subject to disclosure.
 	    The vulnerability is *not* restricted to the webserver's
 	    document root but extends to the whole server file space.</p>
-	  <p>The vulnerabilty may be used by any anonymous user,
+	  <p>The vulnerability may be used by any anonymous user,
 	    there is no login to the application required.</p>
 	</blockquote>
       </body>
@@ -73618,7 +74149,7 @@ executed in your Internet Explorer while displaying the email.</p>
 	<blockquote cite="http://www.gentoo.org/security/en/glsa/glsa-200506-04.xml">
 	  <p>Due to a lack of input validation, WordPress is
 	    vulnerable to SQL injection and XSS attacks.</p>
-	  <p>An attacker could use the SQL injection vulnerabilites to
+	  <p>An attacker could use the SQL injection vulnerabilities to
 	    gain information from the database. Furthermore the
 	    cross-site scripting issues give an attacker the ability
 	    to inject and execute malicious script code or to steal
@@ -75179,7 +75710,7 @@ executed in your Internet Explorer while displaying the email.</p>
     </affects>
     <description>
       <body xmlns="http://www.w3.org/1999/xhtml">
-	<p>Erik Sjölund discovered a vulnerabilitiy in Sympa.  The
+	<p>Erik Sjölund discovered a vulnerability in Sympa.  The
 	  <code>queue</code> application processes messages received via
 	  aliases.  It contains a buffer overflow in the usage of
 	  <code>sprintf</code>.  In some configurations, it may allow an
@@ -77808,7 +78339,7 @@ executed in your Internet Explorer while displaying the email.</p>
     </affects>
     <description>
       <body xmlns="http://www.w3.org/1999/xhtml">
-	<p>Two separate SQL injection vulnerabilites have been
+	<p>Two separate SQL injection vulnerabilities have been
 	   identified in the PostNuke PHP content management
 	   system. An attacker can use this vulnerability to
 	   potentially insert executable PHP code into the content
