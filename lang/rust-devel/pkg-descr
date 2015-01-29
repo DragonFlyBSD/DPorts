@@ -1,0 +1,18 @@
+Rust is a systems programming language that runs blazingly fast, prevents
+almost all crashes, and eliminates data races. Some of its features:
+
+  - Zero-cost abstractions
+  - Move semantics
+  - Guaranteed memory safety
+  - Threads without data races
+  - Trait-based generics
+  - Pattern matching
+  - Type inference
+  - Minimal runtime
+  - Efficient C binding
+
+Rust is currently work-in-progress.  Its development is driven by Mozilla
+with help of a large open source community.
+
+WWW: http://www.rust-lang.org/
+
