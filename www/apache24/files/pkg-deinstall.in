@@ -1,0 +1,19 @@
+#!/bin/sh
+#
+# $FreeBSD: head/www/apache24/files/pkg-deinstall.in 378215 2015-01-31 15:22:51Z ohauer $
+#
+
+MPM_FALLBACK="%%ETCDIR%%/modules.d/%%MPMF%%"
+
+_cleanup(){
+	if [ -f ${MPM_FALLBACK} ]; then
+		echo -n "remove fallback MPM : "
+		/bin/rm -vf ${MPM_FALLBACK}
+	fi
+}
+
+# run only if build with modular MPM
+if [ "x$2" = "xDEINSTALL" ]; then
+	%%MPM_FALLBACK_CHECK%%_cleanup
+fi
+
