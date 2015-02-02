@@ -14,12 +14,13 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	OISF
 GH_COMMIT=	4cb1b99
 
-USES=		autoreconf libtool pkgconfig pathfix iconv
+USES=		autoreconf iconv:translit libtool pathfix pkgconfig
 USE_LDCONFIG=	yes
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	${ICONV_CONFIGURE_ARG}
 MAKE_ARGS=	LIBS="-lz ${ICONV_LIB}"
+LDFLAGS=	-L${LOCALBASE}/lib
 
 PATHFIX_MAKEFILEIN=	Makefile.am
 
