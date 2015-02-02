@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/sysutils/cfengine36/files/cf-monitord.in 349879 2014-04-01 19:06:05Z gjb $
+# $FreeBSD: head/sysutils/cfengine36/files/cf-monitord.in 377628 2015-01-21 22:33:58Z skreuzer $
 #
 # PROVIDE: cf-monitord
 # REQUIRE: LOGIN
@@ -18,6 +18,8 @@
 
 name="cf_monitord"
 rcvar=cf_monitord_enable
+
+command="%%PREFIX%%/sbin/cf-monitord"
 
 load_rc_config $name
 
