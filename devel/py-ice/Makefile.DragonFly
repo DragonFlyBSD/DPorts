@@ -1,0 +1,7 @@
+# This port fails FREQUENTLY on the first pass on pkgbox64 but always
+# passes under -1 option.  However, it locks up showing a stuck process in
+# ps so I'm not sure this is really a -j1 issue or not.  Until we know,
+# keep this a local patch (iow commit to the real makefile for a while)
+
+MAKE_JOBS_UNSAFE=yes
+
