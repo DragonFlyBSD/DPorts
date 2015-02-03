@@ -70,6 +70,13 @@ include/pinot/filters/HtmlFilter.h
 include/pinot/filters/HtmlParser.h
 include/pinot/filters/TextFilter.h
 include/pinot/filters/XmlFilter.h
+include/pinot/xdgmime/xdgmime.c
+include/pinot/xdgmime/xdgmimealias.c
+include/pinot/xdgmime/xdgmimecache.c
+include/pinot/xdgmime/xdgmimeglob.c
+include/pinot/xdgmime/xdgmimeint.c
+include/pinot/xdgmime/xdgmimemagic.c
+include/pinot/xdgmime/xdgmimeparent.c
 include/pinot/xdgmime/xdgmime.h
 include/pinot/xdgmime/xdgmimealias.h
 include/pinot/xdgmime/xdgmimecache.h

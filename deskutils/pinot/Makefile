@@ -31,7 +31,7 @@ LIB_DEPENDS=	libxapian.so:${PORTSDIR}/databases/xapian-core		\
 RUN_DEPENDS=	update-mime-database:${PORTSDIR}/misc/shared-mime-info	\
 		antiword:${PORTSDIR}/textproc/antiword			\
 		xdg-open:${PORTSDIR}/devel/xdg-utils			\
-		pdftotext${PORTSDIR}/graphics/poppler-utils		\
+		pdftotext:${PORTSDIR}/graphics/poppler-utils		\
 		catppt:${PORTSDIR}/textproc/catdoc			\
 		unzip:${PORTSDIR}/archivers/unzip			\
 		unrtf:${PORTSDIR}/textproc/unrtf			\
