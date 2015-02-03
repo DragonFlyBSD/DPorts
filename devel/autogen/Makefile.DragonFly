@@ -1,4 +1,0 @@
-USE_PERL5=	yes
-
-post-patch:
-	@printf "all:\n\ninstall:\n" > ${WRKSRC}/autoopts/test/Makefile.in
