@@ -46,7 +46,6 @@ post-build:
 		${MAKEFILE} ${_MAKE_JOBS} ${MAKE_ARGS} prepare_install)
 	@${ECHO_MSG} "Please 'make regression-test' to run regression tests"
 
-
 regression-test: build
 	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
 		${MAKE_CMD} ${_MAKE_JOBS} ${MAKE_ARGS} check)
