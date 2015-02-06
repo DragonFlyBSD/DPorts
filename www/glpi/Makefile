@@ -1,8 +1,8 @@
 # Created by: Mathias Monnerville <mathias@monnerville.com>
-# $FreeBSD$
+# $FreeBSD: head/www/glpi/Makefile 343904 2014-02-12 11:20:14Z rm $
 
 PORTNAME=	glpi
-PORTVERSION=	0.84.4
+PORTVERSION=	0.85.1
 PORTEPOCH=	1
 CATEGORIES=	www
 MASTER_SITES=	http://droidng.free.fr/freebsd/ \
@@ -13,7 +13,7 @@ COMMENT=	Free IT and asset management software
 
 LICENSE=	GPLv2
 
-USE_PHP=	mysqli mbstring pcre session xml json ctype
+USE_PHP=	mysqli mbstring pcre session xml json ctype gd
 WANT_PHP_WEB=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
@@ -40,7 +40,7 @@ post-extract:
 	@${FIND} ${WRKSRC} -name '*~' -delete
 
 do-install:
-	@${MKDIR} ${STAGEDIR}${WWWDIR}
-	${CP} -R ${WRKSRC}/* ${STAGEDIR}${WWWDIR}
+	${MKDIR} ${STAGEDIR}${WWWDIR}
+	(cd ${WRKSRC} && ${COPYTREE_SHARE} . ${STAGEDIR}${WWWDIR})
 
 .include <bsd.port.mk>
