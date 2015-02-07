@@ -2,10 +2,10 @@
 # $FreeBSD$
 
 PORTNAME=	rust
-PORTVERSION=	1.0.0.20150128
+PORTVERSION=	1.0.0.20150206
 CATEGORIES=	lang
 MASTER_SITES=	http://www.ntecs.de/downloads/rust/:bootstrap \
-		http://static.rust-lang.org/dist/2015-01-28/:rust \
+		http://static.rust-lang.org/dist/2015-02-06/:rust \
 PKGNAMESUFFIX=	-dragonfly
 DISTFILES=	${RUST_BOOT}:bootstrap \
 		${RUST_SOURCE}:rust
@@ -24,7 +24,8 @@ BUILD_DEPENDS=	curl:${PORTSDIR}/ftp/curl
 
 RUST_SOURCE=	rustc-nightly-src.tar.gz
 RUST_BOOT=	rust-stage0-${RUST_BOOT_SIG}.tar.bz2
-RUST_BOOT_SIG=	2015-01-20-9006c3c-dragonfly-x86_64-0bb1d3eedbcd0b36ab01e4ac0539fb8a393c348d
+RUST_BOOT_SIG=	2015-02-04-ac134f7-dragonfly-x86_64-5293f11d5c4e6ece17fc6df0f3b08db553e0ac4a
+PLIST_SUB=	DIGEST=4e7c5e5c
 
 USES=		gmake perl5 python:2
 WRKSRC=		${WRKDIR}/rustc-nightly
