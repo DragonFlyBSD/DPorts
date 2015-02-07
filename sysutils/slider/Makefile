@@ -1,7 +1,7 @@
 # This port only builds on DragonFly BSD
 
 PORTNAME=	slider
-PORTVERSION=	2.05
+PORTVERSION=	2.06
 CATEGORIES=	sysutils
 
 MAINTAINER=	marino@FreeBSD.org
@@ -18,7 +18,7 @@ PLIST_FILES=	bin/slider
 USE_GITHUB=	yes
 GH_ACCOUNT=	jrmarino
 GH_PROJECT=	Slider
-GH_COMMIT=	2a71080
+GH_COMMIT=	7bf0423
 GH_TAGNAME=	${GH_COMMIT}
 
 post-patch:
