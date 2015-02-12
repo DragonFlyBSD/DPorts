@@ -1693,8 +1693,13 @@ PKG_DEPENDS+=	${LOCALBASE}/sbin/pkg:${PORTSDIR}/${PKG_ORIGIN}
 .include "${PORTSDIR}/Mk/bsd.gcc.mk"
 .else
 .  if !defined(USE_GNUSTEP)
+.    if ${DFLYVERSION} >= 400103
+CONFIGURE_ENV+= 	CCVER=gcc50
+MAKE_ENV+=		CCVER=gcc50
+.    else
 CONFIGURE_ENV+= 	CCVER=gcc47
 MAKE_ENV+=		CCVER=gcc47
+.    endif
 .  endif
 .endif
 
