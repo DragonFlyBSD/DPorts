@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/dns/nsd/files/nsd.in 348987 2014-03-24 12:55:26Z madpilot $
+# $FreeBSD: head/dns/nsd/files/nsd.in 378628 2015-02-08 02:42:51Z erwin $
 #
 # PROVIDE: nsd
 # REQUIRE: DAEMON
@@ -23,7 +23,7 @@ load_rc_config "${name}"
 
 config=${nsd_config:=%%PREFIX%%/etc/nsd/nsd.conf}
 required_files=${config}
-pidfile=`%%PREFIX%%/sbin/nsd-checkconf -o pidfile ${config}`
+pidfile=`%%PREFIX%%/sbin/nsd-checkconf -f -o pidfile ${config}`
 command="%%PREFIX%%/sbin/${name}"
 command_args="-c ${required_files}"
 extra_commands="reload"
