@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/ftp/proftpd/files/proftpd.in 349374 2014-03-27 23:31:52Z mm $
+# $FreeBSD: head/ftp/proftpd/files/proftpd.in 378282 2015-02-01 22:25:50Z mm $
 #
 
 # PROVIDE: proftpd
@@ -22,8 +22,10 @@
 name=proftpd
 rcvar=proftpd_enable
 
-proftpd_enable=${proftpd_enable:="NO"}
-proftpd_config=${proftpd_config:="%%PREFIX%%/etc/proftpd.conf"}
+load_rc_config $name
+
+: ${proftpd_enable:="NO"}
+: ${proftpd_config:="%%PREFIX%%/etc/proftpd.conf"}
 
 command=%%PREFIX%%/sbin/proftpd
 command_args="-c ${proftpd_config}"
@@ -37,5 +39,4 @@ stop_postcmd()
   rm -f $pidfile
 }
 
-load_rc_config $name
 run_rc_command "$1"
