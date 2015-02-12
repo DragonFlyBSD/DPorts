@@ -1,0 +1,17 @@
+# Created by: clive
+# $FreeBSD$
+
+PORTNAME=	bitchx
+CATEGORIES=	chinese
+
+MAINTAINER=	chris@bsdjunk.com
+COMMENT=	Zh-tw cursor movement friendly, wrapping clean BitchX
+
+MASTERDIR=	${.CURDIR}/../../irc/bitchx
+EXTRA_PATCHES=	${.CURDIR}/files/patch-source__input.c \
+		${.CURDIR}/files/patch-include__config.h \
+		${.CURDIR}/files/patch-source__screen.c
+
+OPTIONS_SLAVE=	LATIN
+
+.include "${MASTERDIR}/Makefile"
