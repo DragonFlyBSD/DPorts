@@ -28,7 +28,7 @@ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION,
 EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-  $FreeBSD: head/security/vuxml/vuln.xml 378218 2015-01-31 16:09:37Z olgeni $
+  $FreeBSD: head/security/vuxml/vuln.xml 378717 2015-02-09 08:23:50Z girgen $
 
 
 QUICK GUIDE TO ADDING A NEW ENTRY
@@ -57,6 +57,256 @@ Notes:
 
 -->
 <vuxml xmlns="http://www.vuxml.org/apps/vuxml-1">
+  <vuln vid="a0c45e53-ae51-11e4-8ac7-d050992ecde8">
+    <topic>openldap -- two remote denial of service vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>openldap-server</name>
+	<range><lt>2.4.40_3</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Ryan Tandy reports:</p>
+	<blockquote cite="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=776988">
+	  <p>With the deref overlay enabled, ldapsearch with '-E deref=member:'
+	    causes slapd to crash.</p>
+	</blockquote>
+	<blockquote cite="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=776991">
+	  <p>Bill MacAllister discovered that certain queries cause slapd
+	    to crash while freeing operation controls.  This is a 2.4.40 regression.
+	    Earlier releases are not affected.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=776988</url>
+      <url>https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=776991</url>
+    </references>
+    <dates>
+      <discovery>2015-02-02</discovery>
+      <entry>2015-02-06</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a6eb239f-adbe-11e4-9fce-080027593b9a">
+    <topic>chromium -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>chromium</name>
+	<range><lt>40.0.2214.111</lt></range>
+      </package>
+      <package>
+	<name>chromium-pulse</name>
+	<range><lt>40.0.2214.111</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Chrome Releases reports:</p>
+	<blockquote cite="http://googlechromereleases.blogspot.nl">
+	  <p>11 security fixes in this release, including:</p>
+	  <ul>
+	    <li>[447906] High CVE-2015-1209: Use-after-free in DOM. Credit to
+	      Maksymillian.</li>
+	    <li>[453979] High CVE-2015-1210: Cross-origin-bypass in V8
+	      bindings. Credit to anonymous.</li>
+	    <li>[453982] High CVE-2015-1211: Privilege escalation using service
+	      workers. Credit to anonymous.</li>
+	    <li>[455225] CVE-2015-1212: Various fixes from internal audits,
+	      fuzzing and other initiatives.</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-1209</cvename>
+      <cvename>CVE-2015-1210</cvename>
+      <cvename>CVE-2015-1211</cvename>
+      <cvename>CVE-2015-1212</cvename>
+      <url>http://googlechromereleases.blogspot.nl</url>
+    </references>
+    <dates>
+      <discovery>2015-02-05</discovery>
+      <entry>2015-02-06</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="3b40bf2c-ad83-11e4-a2b2-0026551a22dc">
+    <topic>PostgreSQL -- multiple buffer overflows and memory issues</topic>
+    <affects>
+      <package>
+	<name>postgresql90-server</name>
+	<range><ge>9.0.0</ge><lt>9.0.19</lt></range>
+      </package>
+      <package>
+	<name>postgresql91-server</name>
+	<range><ge>9.1.0</ge><lt>9.1.15</lt></range>
+      </package>
+      <package>
+	<name>postgresql92-server</name>
+	<range><ge>9.2.0</ge><lt>9.2.10</lt></range>
+      </package>
+      <package>
+	<name>postgresql93-server</name>
+	<range><ge>9.3.0</ge><lt>9.3.6</lt></range>
+      </package>
+      <package>
+	<name>postgresql94-server</name>
+	<range><ge>9.4.0</ge><lt>9.4.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>PostgreSQL Project reports:</p>
+	<blockquote cite="http://www.postgresql.org/about/news/1569/">
+	  <p>This update fixes multiple security issues reported in PostgreSQL
+	    over the past few months.  All of these issues require prior
+	    authentication, and some require additional conditions, and as such
+	    are not considered generally urgent.  However, users should examine
+	    the list of security holes patched below in case they are particularly
+	    vulnerable.</p>
+	  <ol>
+	    <li>CVE-2015-0241 Buffer overruns in "to_char" functions.</li>
+	    <li>CVE-2015-0242 Buffer overrun in replacement printf family of
+		functions.</li>
+	    <li>CVE-2015-0243 Memory errors in functions in the pgcrypto extension.</li>
+	    <li>CVE-2015-0244 An error in extended protocol message reading.</li>
+	    <li>CVE-2014-8161 Constraint violation errors can cause display of values in columns
+		which the user would not normally have rights to see.</li>
+	  </ol>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-0241</cvename>
+      <cvename>CVE-2015-0242</cvename>
+      <cvename>CVE-2015-0243</cvename>
+      <cvename>CVE-2015-0244</cvename>
+      <cvename>CVE-2014-8161</cvename>
+    </references>
+    <dates>
+      <discovery>2015-02-05</discovery>
+      <entry>2015-02-05</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="24ce5597-acab-11e4-a847-206a8a720317">
+    <topic>krb5 -- Vulnerabilities in kadmind, libgssrpc, gss_process_context_token VU#540092</topic>
+    <affects>
+      <package>
+	<name>krb5</name>
+	<range><lt>1.13_1</lt></range>
+      </package>
+      <package>
+	<name>krb5-112</name>
+	<range><lt>1.12.2_1</lt></range>
+      </package>
+      <package>
+	<name>krb5-111</name>
+	<range><lt>1.11.5_4</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>SO-AND-SO reports:</p>
+	<blockquote cite="http://web.mit.edu/kerberos/advisories/MITKRB5-SA-2015-001.txt">
+	  <p>CVE-2014-5352: In the MIT krb5 libgssapi_krb5 library, after
+	     gss_process_context_token() is used to process a valid context
+	     deletion token, the caller is left with a security context handle
+	     containing a dangling pointer.  Further uses of this handle will
+	     result in use-after-free and double-free memory access violations.
+	     libgssrpc server applications such as kadmind are vulnerable as
+	     they can be instructed to call gss_process_context_token().</p>
+	  <p>CVE-2014-9421: If the MIT krb5 kadmind daemon receives invalid XDR
+	     data from an authenticated user, it may perform use-after-free and
+	     double-free memory access violations while cleaning up the partial
+	     deserialization results.  Other libgssrpc server applications may
+	     also be vulnerable if they contain insufficiently defensive XDR
+	     functions.</p>
+	  <p>CVE-2014-9422: The MIT krb5 kadmind daemon incorrectly accepts
+	     authentications to two-component server principals whose first
+	     component is a left substring of "kadmin" or whose realm is a left
+	     prefix of the default realm.</p>
+	  <p>CVE-2014-9423: libgssrpc applications including kadmind output
+	     four or eight bytes of uninitialized memory to the network as
+	     part of an unused "handle" field in replies to clients.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-5352</cvename>
+      <cvename>CVE-2014-9421</cvename>
+      <cvename>CVE-2014-9422</cvename>
+      <cvename>CVE-2014-9423</cvename>
+      <url>http://web.mit.edu/kerberos/advisories/MITKRB5-SA-2015-001.txt</url>
+    </references>
+    <dates>
+      <discovery>2015-02-03</discovery>
+      <entry>2015-02-04</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="e543c6f8-abf2-11e4-8ac7-d050992ecde8">
+    <topic>unzip -- out of boundary access issues in test_compr_eb</topic>
+    <affects>
+      <package>
+	<name>unzip</name>
+	<range><lt>6.0_4</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Ubuntu Security Notice USN-2489-1 reports:</p>
+	<blockquote cite="http://www.ubuntu.com/usn/usn-2489-1/">
+	  <p>Michal Zalewski discovered that unzip incorrectly handled
+	    certain malformed zip archives. If a user or automated system
+	    were tricked into processing a specially crafted zip archive,
+	    an attacker could possibly execute arbitrary code.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-9636</cvename>
+      <url>http://www.ubuntu.com/usn/usn-2489-1/</url>
+      <url>http://people.canonical.com/~ubuntu-security/cve/2014/CVE-2014-9636.html</url>
+      <url>http://seclists.org/oss-sec/2014/q4/489</url>
+      <url>http://www.info-zip.org/phpBB3/viewtopic.php?f=7&amp;t=450</url>
+    </references>
+    <dates>
+      <discovery>2014-11-02</discovery>
+      <entry>2015-02-03</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="1c7cfd05-aaee-11e4-83b4-14dae9d210b8">
+    <topic>Xymon -- buffer overrun</topic>
+    <affects>
+      <package>
+	<name>xymon-server</name>
+	<range><ge>4.3.4</ge><lt>4.3.18</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Debian reports:</p>
+	<blockquote cite="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=776007">
+	  <p>web/acknowledge.c uses a string twice in a format string, but only
+	    allocates memory for one copy.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>http://www.openwall.com/lists/oss-security/2015/01/31/4</url>
+      <url>https://security-tracker.debian.org/tracker/CVE-2015-1430</url>
+      <cvename>CVE-2015-1430</cvename>
+    </references>
+    <dates>
+      <discovery>2014-09-28</discovery>
+      <entry>2015-02-02</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="8469d41c-a960-11e4-b18e-bcaec55be5e5">
     <topic>rabbitmq -- Security issues in management plugin</topic>
     <affects>
@@ -240,6 +490,14 @@ Notes:
 	<name>linux_base-f10</name>
 	<range><ge>0</ge></range>
       </package>
+      <package>
+	<name>linux-c6-devtools</name>
+	<range><lt>6.6_3</lt></range>
+      </package>
+      <package>
+	<name>linux-f10-devtools</name>
+	<range><ge>0</ge></range>
+      </package>
     </affects>
     <description>
       <body xmlns="http://www.w3.org/1999/xhtml">
@@ -266,6 +524,7 @@ Notes:
     <dates>
       <discovery>2015-01-27</discovery>
       <entry>2015-01-28</entry>
+      <modified>2015-02-02</modified>
     </dates>
   </vuln>
 
