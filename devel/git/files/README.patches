@@ -1,8 +1,0 @@
-  $FreeBSD: head/devel/git/files/README.patches 373602 2014-11-29 06:48:20Z alfred $
-  
-  These two patches: 
-      patch-git-svn.perl
-      patch-perl_Git_SVN_Editor.pm
-  Are forward ported from: http://marc.info/?l=git&m=125259772625008&w=2
-  Updated here: https://github.com/splbio/git/tree/v2.1.2-git-svn-propset
-
