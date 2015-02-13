@@ -1,6 +1,6 @@
 USES:= ${USES:Nbison}
 OPTIONS_EXCLUDE_x86_64+= JAVA
 OPTIONS_EXCLUDE_i386+= JAVA
-.if ${DFLYVERSION} >= 400103
-OPTIONS_DEFAULT+=	BOOTSTRAP
-.endif
+
+# gcc5 can't build stage 1 with -pedantic anymore
+USE_GCC=	4.7
