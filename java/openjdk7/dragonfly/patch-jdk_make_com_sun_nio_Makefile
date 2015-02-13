@@ -1,0 +1,11 @@
+--- jdk/make/com/sun/nio/Makefile.intermediate	2015-02-13 11:07:06 UTC
++++ jdk/make/com/sun/nio/Makefile
+@@ -29,8 +29,6 @@
+ 
+ BUILDDIR = ../../..
+ include $(BUILDDIR)/common/Defs.gmk
+-include $(BUILDDIR)/common/Subdirs.gmk
+-SUBDIRS = sctp
+ 
+ all build clean clobber::
+ 	$(SUBDIRS-loop)
