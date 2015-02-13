@@ -1,5 +1,5 @@
 # Created by: Mathias Monnerville <mathias@monnerville.com>
-# $FreeBSD: head/www/glpi/Makefile 343904 2014-02-12 11:20:14Z rm $
+# $FreeBSD$
 
 PORTNAME=	glpi
 PORTVERSION=	0.85.1
