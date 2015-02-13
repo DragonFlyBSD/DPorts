@@ -11,7 +11,11 @@
 #   DEFAULT_VERSIONS=	perl5=5.18 ruby=2.0
 
 # Use DragonFly base compiler instead of ports gcc 4.8
+.if defined(NO_GCC50) || ${DFLYVERSION} < 400103 || !defined(DPORTS_BUILDER)
 GCC_DEFAULT=	4.7
+.else
+GCC_DEFAULT=	5
+.endif
 
 .if !defined(_INCLUDE_BSD_DEFAULT_VERSIONS_MK)
 _INCLUDE_BSD_DEFAULT_VERSIONS_MK=	yes

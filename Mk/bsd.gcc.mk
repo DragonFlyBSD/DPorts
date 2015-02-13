@@ -42,10 +42,16 @@ GCCVERSIONS=	040200 040600 040700 040800 040900 050000
 # The third field is the version as USE_GCC would use.
 GCCVERSION_040200=	     0       0 4.2 42
 GCCVERSION_040600=	     0       0 4.6 43
-GCCVERSION_040700=	300400  400102 4.7 47
 GCCVERSION_040800=	     0       0 4.8 48
 GCCVERSION_040900=	     0       0 4.9 49
+
+.if defined(NO_GCC50) || !defined(DPORTS_BUILDER)
+GCCVERSION_040700=	300400 9999999 4.7 47
+GCCVERSION_050000=	     0       0 5   50
+.else
+GCCVERSION_040700=	300400  400102 4.7 47
 GCCVERSION_050000=	400103 9999999 5   50
+.endif
 
 # No configurable parts below this. ####################################
 #
@@ -65,7 +71,7 @@ _GCCVERSION_${v}_VV=	${j}
 . endfor
 .endfor
 
-.if ${DFLYVERSION} >= ${_GCCVERSION_050000_L}
+.if defined(DPORTS_BUILDER) && !defined(NO_GCC50) && ${DFLYVERSION} >= ${_GCCVERSION_050000_L}
 LASTBASE=		5
 DFLY_DEFAULT_VERSION=	50
 .else
