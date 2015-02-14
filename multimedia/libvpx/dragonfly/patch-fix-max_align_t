@@ -1,0 +1,26 @@
+Fix build on modern gcc which defines max_align_t for C11
+It renames the locale definition to avoid the name clash.
+
+--- nestegg/halloc/src/align.h.orig	2015-02-13 18:52:27.000000000 +0200
++++ nestegg/halloc/src/align.h	2015-02-13 19:09:17.000000000 +0200
+@@ -30,7 +30,7 @@
+ 	void (*q)(void);
+ };
+ 
+-typedef union max_align max_align_t;
++typedef union max_align halloc_max_align_t;
+ 
+ #endif
+ 
+--- nestegg/halloc/src/halloc.c.orig	2015-02-13 19:05:53.000000000 +0200
++++ nestegg/halloc/src/halloc.c	2015-02-13 19:06:12.000000000 +0200
+@@ -30,7 +30,7 @@
+ #endif
+ 	hlist_item_t  siblings; /* 2 pointers */
+ 	hlist_head_t  children; /* 1 pointer  */
+-	max_align_t   data[1];  /* not allocated, see below */
++	halloc_max_align_t   data[1];  /* not allocated, see below */
+ 	
+ } hblock_t;
+ 
+
