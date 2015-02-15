@@ -3496,3 +3496,6 @@ deskutils/currtime|sysutils/currtime|2015-02-03|Move to sysutils category
 sysutils/pcbsd-utils-qt4|sysutils/pcbsd-utils-qt5|2015-02-03|Renamed to pcbsd-utils-qt5
 devel/ntopng-zmq||2015-02-05|Has expired: No longer required after net/ntopng 1.1
 devel/py-pylib|devel/py-py|2015-02-11|Rename to match upstream (PyPi) name
+sysutils/brebis|sysutils/backupchecker|2015-02-12|Renamed to backupchecker
+sysutils/rsyslog7-devel|sysutils/rsyslog7|2015-02-13|Has expired: EoL, use sysutils/rsyslog7
+sysutils/rsyslog8-devel|sysutils/rsyslog8|2015-02-13|Has expired: EoL, use sysutils/rsyslog8
