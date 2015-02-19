@@ -89,9 +89,11 @@ include/mysql/typelib.h
 lib/mysql/libmysqlclient.a
 lib/mysql/libmysqlclient.so
 lib/mysql/libmysqlclient.so.18
+lib/mysql/libmysqlclient.so.18.1.0
 lib/mysql/libmysqlclient_r.a
 lib/mysql/libmysqlclient_r.so
 lib/mysql/libmysqlclient_r.so.18
+lib/mysql/libmysqlclient_r.so.18.1.0
 lib/mysql/libmysqlservices.a
 man/man1/comp_err.1.gz
 man/man1/msql2mysql.1.gz
