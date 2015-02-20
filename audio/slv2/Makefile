@@ -1,5 +1,5 @@
 # Created by: xaimus <xaimus@gmail.com>
-# $FreeBSD$
+# $FreeBSD: head/audio/slv2/Makefile 371170 2014-10-19 07:33:09Z mva $
 
 PORTNAME=	slv2
 PORTVERSION=	0.6.6
@@ -38,16 +38,18 @@ post-patch:
 		's|^#define _XOPEN_SOURCE .*||' ${WRKSRC}/src/plugin.c
 
 do-configure:
-	@(cd ${WRKSRC} && ${PYTHON_CMD} waf ${WAF_VERBOSE} --prefix=${PREFIX} configure)
+	(cd ${WRKSRC} && ${PYTHON_CMD} \
+		waf ${WAF_VERBOSE} --prefix=${PREFIX} configure)
 
 do-build:
-	@(cd ${WRKSRC} && ${PYTHON_CMD} waf ${WAF_VERBOSE} ${WAF_JOBS} build)
+	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PYTHON_CMD} \
+		waf ${WAF_VERBOSE} ${WAF_JOBS} build)
 
 do-install:
-	@(cd ${WRKSRC} && ${PYTHON_CMD} waf ${WAF_VERBOSE} \
-		--destdir=${STAGEDIR} install)
+	(cd ${WRKSRC} && ${PYTHON_CMD} \
+		waf ${WAF_VERBOSE} --destdir=${STAGEDIR} install)
 .for file in lv2_inspect lv2_jack_host lv2_list lv2_simple_jack_host
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${file}
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${file}
 .endfor
 
 .include <bsd.port.post.mk>
