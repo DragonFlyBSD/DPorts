@@ -1,6 +1,6 @@
 PORTNAME=	xf86-video-intel
 PORTVERSION=	2.99.916
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11-drivers
 
 MAINTAINER=	ftigeot@wolfpond.org
@@ -25,6 +25,7 @@ USE_XORG=	glproto \
 CONFIGURE_ENV+=	xorg_cv_cc_flag__Wno_maybe_uninitialized=no
 CONFIGURE_ARGS+=	--disable-glamor
 LIB_DEPENDS+=	libxcb-util.so:${PORTSDIR}/x11/xcb-util
+CFLAGS+=	-D_WITH_GETLINE=1
 
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libIntelXvMC.so.1
