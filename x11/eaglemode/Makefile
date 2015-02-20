@@ -3,6 +3,7 @@
 
 PORTNAME=	eaglemode
 PORTVERSION=	0.87.0
+PORTREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
@@ -75,7 +76,8 @@ post-patch:
 .endif
 
 do-build:
-	cd ${WRKSRC} && ${PERL} make.pl build ${BUILD_ARGS}
+	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
+		${PERL} make.pl build ${BUILD_ARGS})
 
 do-install:
 	${MKDIR} ${STAGEDIR}${DATADIR}
