@@ -1,0 +1,11 @@
+--- configure.intermediate	2015-02-20 15:23:52 UTC
++++ configure
+@@ -7717,7 +7717,7 @@ case "$XPLATFORM" in
+     *-g++*)
+ 	# Check gcc's version
+ 	case "$(${QMAKE_CONF_COMPILER} -dumpversion)" in
+-	    4*|3.4*)
++	    5*|4*|3.4*)
+ 		;;
+             3.3*)
+                 canBuildWebKit="no"
