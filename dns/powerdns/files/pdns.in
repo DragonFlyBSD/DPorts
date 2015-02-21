@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/dns/powerdns/files/pdns.in 371076 2014-10-17 20:08:32Z pi $
+# $FreeBSD: head/dns/powerdns/files/pdns.in 378861 2015-02-12 02:21:02Z brd $
 #
 
 # PROVIDE: pdns_server
@@ -27,6 +27,7 @@ command=%%PREFIX%%/sbin/pdns_server
 
 pdns_enable=${pdns_enable:-"NO"}
 pdns_conf=${pdns_conf:-"%%PREFIX%%/etc/pdns/pdns.conf"}
+pdns_flags=${pdns_flags:-"--daemon=yes --guardian=yes"}
 
 load_rc_config ${name}
 
