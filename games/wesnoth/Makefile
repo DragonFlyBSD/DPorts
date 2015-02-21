@@ -1,4 +1,4 @@
-# $FreeBSD: head/games/wesnoth/Makefile 375598 2014-12-25 20:54:41Z bapt $
+# $FreeBSD$
 
 PORTNAME=	wesnoth
 PORTVERSION=	1.12.0
