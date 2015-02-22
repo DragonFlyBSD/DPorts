@@ -1,5 +1,5 @@
 # Created by: Sofian Brabez <sbrabez@gmail.com>
-# $FreeBSD$
+# $FreeBSD: head/security/honggfuzz/Makefile 363374 2014-07-29 19:11:51Z adamw $
 
 PORTNAME=	honggfuzz
 PORTVERSION=	0.3
@@ -18,7 +18,8 @@ OPTIONS_DEFINE=	EXAMPLES
 # inplace replacement to remove relative binary path in examples scripts
 post-patch:
 	${REINPLACE_CMD} -i "" -E "s,\.\./,," ${WRKSRC}/examples/*.sh
-	${REINPLACE_CMD} -i "" -E 's,gcc,${CC},' ${WRKSRC}/Makefile
+	${REINPLACE_CMD} -i "" -e 's,gcc,${CC},' \
+		-e 's| -Werror||' ${WRKSRC}/Makefile
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
