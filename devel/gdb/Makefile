@@ -3,6 +3,7 @@
 
 PORTNAME=	gdb
 PORTVERSION=	7.8.2
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	GNU
 
@@ -69,17 +70,12 @@ TUI_CONFIGURE_ENABLE=	tui
 EXCLUDE+=	readline
 .endif
 
-.if ${PORT_OPTIONS:MTHREADS}
-EXTRA_PATCHES+=	${FILESDIR}/extrapatch-gdb-configure.tgt \
-		${FILESDIR}/extrapatch-gdb-Makefile.in
-.endif
-
 post-patch:
 	@${REINPLACE_CMD} -e 's|$$| [GDB v${PORTVERSION} for ${OPSYS}]|' \
 		${WRKSRC}/gdb/version.in
-
 .if ${PORT_OPTIONS:MTHREADS}
 	@${CP} ${FILESDIR}/fbsd-threads.c ${WRKSRC}/gdb/
+	@${PATCH} ${PATCH_ARGS} < ${FILESDIR}/extrapatch-threads
 .endif
 
 do-install:
