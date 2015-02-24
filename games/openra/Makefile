@@ -2,7 +2,7 @@
 
 PORTNAME=	openra
 PORTVERSION=	20141029
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	games
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -28,7 +28,7 @@ MAKE_ARGS=	VERSION="${GH_TAGNAME}"
 INSTALL_TARGET=	install-all install-linux-shortcuts
 DATADIR=	${PREFIX}/lib/${PORTNAME}
 PORTDATA=	*
-PORTDOCS=	*
+PORTDOCS=	*.html
 
 OPTIONS_DEFINE=	DOCS TEST ZENITY
 OPTIONS_DEFAULT=ZENITY
@@ -47,6 +47,7 @@ ZENITY_DESC=	Use native crash dialog
 
 post-patch:
 	${REINPLACE_CMD} -e 's/Linux/${OPSYS}/' \
+		-e '/CP_R/s,hicolor/,hicolor,' \
 		-e 's/crashdialog/gamemonitor/' \
 		-e '/^mods:/s/$$/ version/' \
 		-e '/^docs:/s/$$/ all/' \
@@ -71,8 +72,8 @@ post-build:
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-	@${MKDIR} ${STAGEDIR}${DOCSDIR}
-	${INSTALL_MAN} ${WRKSRC}/*.html ${STAGEDIR}${DOCSDIR}
+	(cd ${WRKSRC} && ${COPYTREE_SHARE} \
+		"${PORTDOCS}" ${STAGEDIR}${DOCSDIR})
 .endif
 
 .include <bsd.port.mk>
