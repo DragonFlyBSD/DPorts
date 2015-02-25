@@ -1,0 +1,3 @@
+# will not currently build using gcc-5
+
+USE_GCC= 4.7
