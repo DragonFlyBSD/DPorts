@@ -1,1 +1,4 @@
 USE_XORG+= xrandr
+
+pre-configure:
+	${REINPLACE_CMD} -e '/latomic/d' ${WRKSRC}/OgreMain/CMakeLists.txt
