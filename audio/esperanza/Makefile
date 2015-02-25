@@ -23,7 +23,7 @@ QT_NONSTANDARD=	yes
 USES=		gmake pkgconfig tar:bzip2
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX} --disable-growl
-MAKE_ARGS+=	INSTALL_ROOT="${STAGEDIR}"
+MAKE_ARGS=	INSTALL_ROOT="${STAGEDIR}"
 
 PLIST_FILES=	bin/esperanza
 DESKTOP_ENTRIES="Esperanza" "" "" "${PORTNAME}" "Audio;Player;" false
