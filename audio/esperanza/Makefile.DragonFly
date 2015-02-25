@@ -1,5 +1,0 @@
-post-extract:
-	echo "QMAKE_CC=${CC}" >> ${WRKSRC}/config.pri
-	echo "QMAKE_CXX=${CXX}" >> ${WRKSRC}/config.pri
-	echo "QMAKE_CFLAGS=${CFLAGS}" >> ${WRKSRC}/config.pri
-	echo "QMAKE_CXXFLAGS=${CXXFLAGS}" >> ${WRKSRC}/config.pri

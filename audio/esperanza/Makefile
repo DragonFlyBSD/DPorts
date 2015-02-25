@@ -5,7 +5,6 @@ PORTNAME=	esperanza
 PORTVERSION=	0.4.0.20091017
 PORTREVISION=	2
 CATEGORIES=	audio
-#MASTER_SITES=	http://exodus.xmms.se/~tru/esperanza/0.4/
 MASTER_SITES=	DEBIAN
 DISTNAME=	${PORTNAME}_${PORTVERSION:R}+git${PORTVERSION:E}.orig
 
@@ -24,12 +23,16 @@ QT_NONSTANDARD=	yes
 USES=		gmake pkgconfig tar:bzip2
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX} --disable-growl
-MAKE_ARGS=	INSTALL_ROOT="${STAGEDIR}"
+MAKE_ARGS+=	INSTALL_ROOT="${STAGEDIR}"
 
 PLIST_FILES=	bin/esperanza
 DESKTOP_ENTRIES="Esperanza" "" "" "${PORTNAME}" "Audio;Player;" false
 
 post-patch:
-	@${ECHO} "QMAKE_LFLAGS= -lX11" >> /${WRKSRC}/src/ui/ui.pro
+	@${ECHO} "QMAKE_LFLAGS= -lX11"        >> ${WRKSRC}/src/ui/ui.pro
+	@${ECHO} "QMAKE_CC=${CC}"             >> ${WRKSRC}/config.pri
+	@${ECHO} "QMAKE_CXX=${CXX}"           >> ${WRKSRC}/config.pri
+	@${ECHO} "QMAKE_CFLAGS=${CFLAGS}"     >> ${WRKSRC}/config.pri
+	@${ECHO} "QMAKE_CXXFLAGS=${CXXFLAGS}" >> ${WRKSRC}/config.pri
 
 .include <bsd.port.mk>
