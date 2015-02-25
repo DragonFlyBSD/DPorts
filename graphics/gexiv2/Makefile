@@ -19,7 +19,7 @@ LIB_DEPENDS=	libexiv2.so:${PORTSDIR}/graphics/exiv2
 USES=		gmake libtool:build pkgconfig tar:xz
 USE_GNOME=	glib20 introspection:build
 USE_LDCONFIG=	yes
-MAKE_ARGS=	ENABLE_INTROSPECTION=1
+MAKE_ARGS=	REQUIRED_CFLAGS="" ENABLE_INTROSPECTION=1
 WRKSRC=		${WRKDIR}/lib${PORTNAME}-${PORTVERSION}
 
 post-patch:
