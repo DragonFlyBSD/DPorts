@@ -1,9 +1,8 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/graphics/evas_generic_loaders-pdf/Makefile 378810 2015-02-11 02:55:24Z gblach $
 
 PORTNAME=	pdf
-PORTVERSION=	1.12.0
-PORTREVISION=	1
+PORTVERSION=	1.13.0
 CATEGORIES=	graphics enlightenment
 MASTER_SITES=	http://download.enlightenment.org/rel/libs/${PKGNAMEPREFIX:S/-//}/
 PKGNAMEPREFIX=	evas_generic_loaders-
@@ -27,9 +26,9 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 BINSRC=		${WRKSRC}/src/bin/${PORTNAME}
 
 do-build:
-	${MAKE} ${MAKE_ARGS} -C ${BINSRC}
+	${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_ARGS} -C ${BINSRC}
 
 do-install:
-	${MAKE} ${MAKE_ARGS} -C ${BINSRC} install
+	${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_ARGS} -C ${BINSRC} install
 
 .include <bsd.port.mk>
