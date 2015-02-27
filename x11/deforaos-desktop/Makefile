@@ -19,6 +19,7 @@ RUN_DEPENDS=	${LOCALBASE}/bin/keyboard:${PORTSDIR}/x11/deforaos-keyboard \
 		${LOCALBASE}/bin/locker:${PORTSDIR}/x11/deforaos-locker \
 		${LOCALBASE}/bin/pdfviewer:${PORTSDIR}/print/deforaos-pdfviewer \
 		${LOCALBASE}/bin/mailer:${PORTSDIR}/mail/deforaos-mailer \
+		${LOCALBASE}/bin/surfer:${PORTSDIR}/www/deforaos-surfer \
 		${LOCALBASE}/bin/todo:${PORTSDIR}/deskutils/deforaos-todo \
 		${LOCALBASE}/bin/player:${PORTSDIR}/multimedia/deforaos-player \
 		${LOCALBASE}/bin/mixer:${PORTSDIR}/audio/deforaos-mixer \
