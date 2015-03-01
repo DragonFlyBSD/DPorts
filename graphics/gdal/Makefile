@@ -132,7 +132,6 @@ XERCES_LIB_DEPENDS=	libxerces-c.so:${PORTSDIR}/textproc/xerces-c3
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|$$(INST_LIB)/pkgconfig|${PREFIX}/libdata/pkgconfig|' ${WRKSRC}/GNUmakefile
-	@${REINPLACE_CMD} -e 's|-lpthread|-pthread|g' ${WRKSRC}/configure
 # Cleanup bundled libraries
 	@${RM} -fr ${WRKSRC}/frmts/gif/giflib/
 	@${RM} -fr ${WRKSRC}/frmts/gtiff/libgeotiff/
