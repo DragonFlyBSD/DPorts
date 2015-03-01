@@ -1,0 +1,3 @@
+# gprolog locks up hard when built by gcc 5.0
+
+USE_GCC= 4.7
