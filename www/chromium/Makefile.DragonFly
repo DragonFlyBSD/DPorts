@@ -1,2 +1,5 @@
 USES+= 		alias
-USE_GCC=	4.8+
+
+# change from 4.8+ to 4.8 temporarily because due to fixed narrowing
+# error in 3rd party s/w, chromium does not build on gcc 5
+USE_GCC=	4.8
