@@ -1,1 +1,7 @@
 MAKE_ENV+=	DONT_ENABLE_IPV6="YES"
+
+# OpenJDK built by gcc5 is demonstrating strange behavior, and several
+# ports no longer build (jboss72, eclipse, openjdk8, etc)
+# Temporarily limit to building by gcc47 only
+
+USE_GCC=	4.7
