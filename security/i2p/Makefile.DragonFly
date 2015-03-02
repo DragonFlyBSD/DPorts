@@ -1,0 +1,3 @@
+# locks up badly with gcc50
+
+USE_GCC= 4.7
