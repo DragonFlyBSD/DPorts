@@ -1,5 +1,5 @@
 # Created by: Grzegorz Blach <gblach@FreeBSD.org>
-# $FreeBSD: head/graphics/evas_generic_loaders-pdf/Makefile 378810 2015-02-11 02:55:24Z gblach $
+# $FreeBSD$
 
 PORTNAME=	pdf
 PORTVERSION=	1.13.0
