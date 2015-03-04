@@ -1,5 +1,5 @@
 # Created by: xaimus <xaimus@gmail.com>
-# $FreeBSD: head/audio/slv2/Makefile 371170 2014-10-19 07:33:09Z mva $
+# $FreeBSD$
 
 PORTNAME=	slv2
 PORTVERSION=	0.6.6
