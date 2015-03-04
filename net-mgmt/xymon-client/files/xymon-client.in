@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net-mgmt/xymon-client/files/xymon-client.in 379535 2015-02-21 16:50:30Z feld $
+# $FreeBSD: head/net-mgmt/xymon-client/files/xymon-client.in 380044 2015-02-26 18:11:38Z feld $
 #
 
 # PROVIDE: xymon_client
@@ -21,7 +21,7 @@ command=%%WWWDIR%%/client/bin/xymonlaunch
 command_args="--config=%%WWWDIR%%/client/etc/clientlaunch.cfg --log=%%WWWDIR%%/client/logs/clientlaunch.log --pidfile=${pidfile}"
 start_precmd=xymon_precmd
 # Clean up leftover children
-stop_postcmd="pkill -U ${xymon_client_user}"
+stop_postcmd="pkill -U ${xymon_client_user} vmstat"
 
 xymon_precmd()
 {
@@ -35,7 +35,7 @@ xymon_precmd()
 
 	# Default settings for this client
 	MACHINEDOTS="`uname -n`"
-	SERVEROSTYPE="`uname -s | tr '[ABCDEFGHIJKLMNOPQRSTUVWXYZ/]' '[abcdefghijklmnopqrstuvwxyz_]'"`
+	SERVEROSTYPE="`uname -s | tr '[ABCDEFGHIJKLMNOPQRSTUVWXYZ/]' '[abcdefghijklmnopqrstuvwxyz_]'`"
 	XYMONOSSCRIPT="xymonclient-$SERVEROSTYPE.sh"
 	XYMONCLIENTHOME="%%WWWDIR%%/client"
 
