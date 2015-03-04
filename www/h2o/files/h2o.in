@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/www/h2o/files/h2o.in 379201 2015-02-18 08:47:39Z az $
+# $FreeBSD: head/www/h2o/files/h2o.in 380250 2015-03-02 11:51:56Z az $
 #
 
 # PROVIDE: h2o
@@ -15,7 +15,6 @@
 #
 # h2o_config    (string): Optional full path for h2o config file
 # h2o_user      (user):   Set to h2o by default.
-# h2o_group     (group):  Set to h2o by default.
 
 . /etc/rc.subr
 
@@ -25,7 +24,6 @@ rcvar=h2o_enable
 # defaults
 : ${h2o_enable:="NO"}
 : ${h2o_user:="%%H2O_USER%%"}
-: ${h2o_group:="%%H2O_GROUP%%"}
 : ${h2o_config:="%%PREFIX%%/etc/${name}/${name}.conf"}
 : ${h2o_options:=" --conf ${h2o_config}"}
 
