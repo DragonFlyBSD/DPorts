@@ -5,6 +5,74 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20150301:
+  AFFECTS: users of lang/ruby20
+  AUTHOR: swills@FreeBSD.org
+
+  The default ruby version has been updated from 2.0 to 2.1.
+
+  If you compile your own ports you may keep 2.0 as the default version by
+  adding the following lines to your /etc/make.conf file:
+
+  #
+  # Keep ruby 2.0 as default version
+  #
+  DEFAULT_VERSIONS+=ruby=2.0
+
+  If you wish to update to the new default version, you need to first stop any
+  software that uses ruby. Then, you will need to follow these steps, depending
+  upon how you manage your system.
+
+  If you use pkgng, simply upgrade:
+  # pkg upgrade -f
+
+  If you use portmaster, install new ruby, then rebuild all ports that depend
+  on ruby:
+  # portmaster -o lang/ruby21 lang/ruby20
+  # portmaster -R -r ruby-2.1
+
+  If you use portupgrade, install new ruby, then rebuild all ports that depend
+  on ruby:
+
+  # pkg delete -f ruby portupgrade
+  # make -C /usr/ports/ports-mgmt/portupgrade install clean
+  # pkg set -o lang/ruby20:lang/ruby21
+  # portupgrade -x ruby-2.1.\* -fr lang/ruby21
+
+20150227:
+  AFFECTS: Users of games/trigger
+  AUTHOR: makc@FreeBSD.org
+
+  games/trigger has been split and renamed to games/trigger-rally
+  and games/trigger-data ports. Deinstall previous version
+  before upgrading.
+
+20150224:
+  AFFECTS: Users of devel/qt4-linguist
+  AUTHOR: makc@FreeBSD.org
+
+  Linguist tools have been moved from qt4-linguist port to new
+  devel/qt4-linguisttools port. Deinstall qt4-linguist before
+  upgrading.
+
+20150224:
+  AFFECTS: Users of lang/ruby19
+
+  lang/ruby19 has reached its end-of-life and has been removed.  The
+  default version has been 2.0 for a while.  Other available versions
+  are Ruby 2.1 and Ruby 2.2.
+
+  Users who have DEFAULT_VERSIONS=ruby=1.9 in their /etc/make.conf are
+  encouraged to remove it or change it to an available version.
+
+20150224:
+  AFFECTS: Users of net-p2p/bitcoin (cli utilities)
+
+  The bitcoin-cli and bitcoin-tx utilities have been re-packaged into
+  a separate port. If you require these programs, or use the bitcoin-cli
+  program to access the daemon or the GUI, install net-p2p/bitcoin-utils
+  to reinstall them.
+
 20150220:
   AFFECTS: users of PHP
 
@@ -1853,20 +1921,4 @@ you update your ports collection, before attempting any port upgrades.
   manually:
 
   # pkg set -o security/kwallet:security/kwalletmanager
-
-20140302:
-  AFFECTS: users of sysutils/ansible
-  AUTHOR: rm@FreeBSD.org
-
-  This is an major update and changes were introduced in ansible 1.5, that
-  are not backward compatible. Please refer changelog there before update:
-  https://raw.github.com/ansible/ansible/v1.5.0/CHANGELOG.md
-
-20140223:
-  AFFECTS: users of net-mgmt/mk-livestatus
-  AUTHOR: ohauer@FreeBSD.org
-
-  livecheck was removed in 1.2.3.i5. It never was really stable, Nagios4
-  has something similar built in.
-  Please remove the "livecheck=..." directive from etc/nagios/nagios.cfg.
 
