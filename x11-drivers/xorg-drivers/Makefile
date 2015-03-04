@@ -30,8 +30,7 @@ INPUT_DRIVERS=		mouse \
 			void \
 			wacom
 
-VIDEO_DRIVERS=		ati \
-			mach64 \
+VIDEO_DRIVERS=		mach64 \
 			nv \
 			r128 \
 			vesa \
@@ -60,7 +59,6 @@ VIDEO_DRIVERS=		ati \
 
 OPTIONS_DEFAULT=	MOUSE \
 			KEYBOARD \
-			ATI \
 			MACH64 \
 			NV \
 			R128 \
@@ -73,11 +71,11 @@ ${a:tu}_DESC=	Install ${a} ${type} driver
 . endfor
 .endfor
 
-OPTIONS_DEFINE_i386=	INTEL OPENCHROME
-OPTIONS_DEFAULT_i386=	INTEL OPENCHROME
+OPTIONS_DEFINE_i386=	ATI INTEL OPENCHROME
+OPTIONS_DEFAULT_i386=	ATI INTEL OPENCHROME
 
-OPTIONS_DEFINE_x86_64:=	INTEL29 OPENCHROME
-OPTIONS_DEFAULT_x86_64:=	INTEL29 OPENCHROME
+OPTIONS_DEFINE_x86_64:=	ATI INTEL29 OPENCHROME
+OPTIONS_DEFAULT_x86_64:=	ATI INTEL29 OPENCHROME
 
 OPTIONS_DEFINE_sparc64=	SUNFFB
 OPTIONS_DEFAULT_sparc64=SUNFFB
@@ -85,6 +83,7 @@ OPTIONS_DEFAULT_sparc64=SUNFFB
 OPTIONS_DEFINE_ia64=	OPENCHROME
 OPTIONS_DEFAULT_ia64=	OPENCHROME
 
+ATI_DESC=		Install ati video driver
 INTEL_DESC=		Install intel video driver
 INTEL29_DESC=		Install intel video driver
 OPENCHROME_DESC=	Install openchrome video driver
@@ -97,11 +96,11 @@ QUIRKS=		keyboard:kbd
 
 # Manual add arch specific drivers so they be added to depend lines.
 .if ${ARCH}==i386
-VIDEO_DRIVERS+=	intel openchrome
+VIDEO_DRIVERS+=	ati intel openchrome
 .endif
 
 .if ${ARCH}==x86_64
-VIDEO_DRIVERS+=	intel29 openchrome
+VIDEO_DRIVERS+=	ati intel29 openchrome
 .endif
 
 .if ${ARCH}==sparc64
