@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/mail/opensmtpd/files/smtpd.in 366721 2014-08-31 04:13:16Z ashish $
+# $FreeBSD: head/mail/opensmtpd/files/smtpd.in 378922 2015-02-13 11:52:22Z ashish $
 #
 # PROVIDE: smtpd mail
 # REQUIRE: LOGIN
@@ -26,6 +26,11 @@ check_process()
 name="smtpd"
 rcvar=smtpd_enable
 
+start_precmd="smtpd_precmd"
+restart_precmd="smtpd_checkconfig"
+configtest_cmd="smtpd_checkconfig"
+extra_commands="configtest"
+
 load_rc_config $name
 
 : ${smtpd_enable:="NO"}
@@ -36,5 +41,16 @@ load_rc_config $name
 command=${smtpd_procname}
 
 procname=${smtpd_procname}
+
+smtpd_checkconfig()
+{
+    echo "Performing sanity check on smtpd configuration:"
+    eval ${command} ${smtpd_flags} -n
+}
+
+smtpd_precmd()
+{
+    smtpd_checkconfig
+}
 
 run_rc_command "$1"
