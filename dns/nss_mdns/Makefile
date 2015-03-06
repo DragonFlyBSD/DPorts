@@ -43,7 +43,7 @@ CONFIGURE_ARGS+=	--enable-search-domains
 
 post-install:
 .for INSTALLED_MODULE in ${INSTALLED_MODULES}
-	${LN} -s ${INSTALLED_MODULE}.so.1 ${STAGEDIR}${PREFIX}/lib/${INSTALLED_MODULE}.so
+	${LN} -s lib${INSTALLED_MODULE}.so.2 ${STAGEDIR}${PREFIX}/lib/${INSTALLED_MODULE}.so
 .endfor
 .if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${STAGEDIR}${DOCSDIR}/
