@@ -1,33 +1,13 @@
----------------------------------------------------
+-------------------------------------------------------------------------
 
-you should add in /etc/make.conf:
-SENDMAIL_CF_DIR=	%%PREFIX%%/share/sendmail/cf
+These notes assume "%%PREFIX%%" is "/usr/local"
+DF Handbook: http://www.dragonflybsd.com/docs/docs/newhandbook/mta/
 
-To deliver all local mail to your mailhub, edit the last line of submit.mc:
-FEATURE(`msp','[mailhub.do.main]`)dnl
+To deliver all local mail to your mailhub, edit the last line of 
+/etc/mail/<hostname>.submit.mc:
+FEATURE(`msp','[mailhub.do.main]`)
 
-To update your configuration look at %%PREFIX%%/share/sendmail/cf/README.
----------------------------------------------------
-To use the binaries supplied by the port you should add the following lines
-to your sendmail.mc file before any mailer or feature definition:
+To update your configuration look at DF handbook and /etc/mail/Makefile 
+To activate sendmail as default mailer, refer to DF handbook
 
-define(`confEBINDIR', `%%PREFIX%%/libexec')dnl
-define(`UUCP_MAILER_PATH', `%%LOCALBASE%%/bin/uux')dnl
-
----------------------------------------------------
-To activate sendmail as your default mailer, call the target 'mailer.conf':
-$ cd %%PORTSDIR%%/mail/sendmail && make mailer.conf
-
-Your '/etc/mail/mailer.conf' should look like this:
-#
-# Execute the "real" sendmail program, named /usr/libexec/sendmail/sendmail
-#
-sendmail	%%PREFIX%%/sbin/sendmail
-send-mail	%%PREFIX%%/sbin/sendmail
-mailq		%%PREFIX%%/sbin/sendmail
-newaliases	%%PREFIX%%/sbin/sendmail
-hoststat	%%PREFIX%%/sbin/sendmail
-purgestat	%%PREFIX%%/sbin/sendmail
-
-You may also need to update /etc/rc.conf.
----------------------------------------------------
+-------------------------------------------------------------------------

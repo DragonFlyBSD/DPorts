@@ -14,6 +14,9 @@ COMMENT=	Reliable, highly configurable mail transfer agent with utilities
 CONFLICTS?=	courier-0.* postfix-1.* postfix-2.* smail-3.* zmailer-2.* opensmtpd-*
 NEED_ROOT=	yes
 
+USERS=		smmsp
+GROUPS=		smmsp
+
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 WCONF=		${WRKSRC}/devtools/Site
 SITE=		${FILESDIR}/site.config.m4.pre4
@@ -210,14 +213,8 @@ pre-install:
 .if ${PORT_OPTIONS:MMILTER}
 	@${CAT} ${FILESDIR}/pkg-milter >>${PLIST}
 .endif
-	if ! pw groupshow smmsp; then pw groupadd smmsp -g 25; fi
-	if ! pw usershow smmsp; then pw useradd smmsp -g smmsp -u 25 \
-		-h - -d /nonexistent -s /nonexistent -c "Sendmail Queue"; fi
 	@cd ${WRKSRC} && ${FIND} cf -type f | \
 	${AWK} '{print "share/sendmail/" $$1}' >>${PLIST}
-	@cd ${WRKSRC} && ${FIND} -d cf -type d | \
-	${AWK} '{print "@dirrm share/sendmail/" $$1}' >>${PLIST}
-	@${ECHO_CMD} "@dirrm share/sendmail" >>${PLIST}
 .if ${PORT_OPTIONS:MDOCS}
 .for i in ${DOCS}
 	@${ECHO_CMD} `${BASENAME} ${i}` | \
@@ -226,7 +223,6 @@ pre-install:
 .if ${PORT_OPTIONS:MCYRUSLOOKUP}
 	@${ECHO_CMD} "share/doc/sendmail/CYRUS_LOOKUP" >>${PLIST}
 .endif
-	@${ECHO_CMD} "@dirrm %%DOCSDIR%%" >>${PLIST}
 .endif
 
 # We want mail.local and rmail for our system.
@@ -283,6 +279,7 @@ post-install:
 	${INSTALL_DATA} ${FILESDIR}/CYRUS_LOOKUP ${STAGEDIR}${DOCSDIR}/CYRUS_LOOKUP
 .endif
 .endif
+	${RM} ${STAGEDIR}${PREFIX}/man/cat*/*
 
 mailer.base:
 	@${SED} \
