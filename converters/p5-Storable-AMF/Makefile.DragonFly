@@ -1,0 +1,3 @@
+# restrict to gcc 4.7 because this locks up on gcc 5.0!
+
+USE_GCC=4.7
