@@ -1,4 +1,21 @@
+PROBLEM_FILES=	${WRKSRC}/libpkg/pkg_config.c \
+		${WRKSRC}/src/pkg.conf.sample \
+		${WRKSRC}/docs/pkg-create.8 \
+		${WRKSRC}/docs/pkg-set.8 \
+		${WRKSRC}/docs/pkg-repo.8 \
+		${WRKSRC}/docs/pkg.conf.5 \
+		${WRKSRC}/docs/pkg-version.8 \
+		${WRKSRC}/docs/pkg.8
+
+post-patch:
+.if defined(PACKAGE_BUILDING)
+	@${REINPLACE_CMD} -e "s|/usr/ports|/usr/dports|g" ${PROBLEM_FILES}
+.else
+	@${REINPLACE_CMD} -e "s|/usr/ports|${PORTSDIR}|g" ${PROBLEM_FILES}
+.endif
+
 post-stage:
+	${RM} ${STAGEDIR}${PREFIX}/sbin/pkg2ng
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/periodic/411.pkg-backup \
 		${WRKSRC}/scripts/periodic/490.status-pkg-changes \
 		${STAGEDIR}${PREFIX}/etc/periodic/daily/
