@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	pkg
-DISTVERSION=	1.4.99.12
+DISTVERSION=	1.4.99.13
 _PKG_VERSION=	${DISTVERSION}
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	\
@@ -33,12 +33,6 @@ USE_SUBMAKE=	yes
 
 .if !exists(/usr/include/jail.h)
 EXTRA_PATCHES=	${FILESDIR}/extra-patch-docs_pkg.8
-.endif
-
-.if defined(PACKAGE_BUILDING)
-MAKE_ARGS+=	PKG_PORTSDIR=/usr/dports
-.else
-MAKE_ARGS+=	PKG_PORTSDIR=${PORTSDIR}
 .endif
 
 .include <bsd.port.pre.mk>
