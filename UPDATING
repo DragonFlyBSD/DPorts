@@ -5,6 +5,49 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20150313:
+  AFFECTS: users of net/serviio
+  AUTHOR: netchild@FreeBSD.org
+
+  The Java Polling Watch Service used in Serviio 1.5.1 is fixed. If you
+  unchecked "Keep library automatically updated" with 1.5 (as recommended
+  in the 20150206 entry) you can enable it again.
+
+20150305:
+  AFFECTS: users of x11-wm/xfce4 and multimedia/xfce4-parole
+  AUTHOR: olivierd@FreeBSD.org
+
+  Xfce 4.12 has been imported. Please use the following instructions to
+  upgrade.
+
+  For package users:
+  # pkg upgrade
+
+  For ports users:
+  # portmaster -a
+  # portmaster x11-wm/xfce4
+
+  GStreamer 1.0 is enabled by default in Parole media player.
+
+  Xfce 4.12 now depends of Adwaita icon theme. If you are upgrading from
+  Xfce 4.10 you probably still have the Tango or GNOME theme selected.
+  Open the Settings Manager and select Appearance. Inside dialog box switch
+  to the Icons tag and select the "Adwaita" entry in the list.
+
+20150304:
+  AFFECTS: users of security/libressl
+  AUTHOR: vsevolod@highsecure.ru
+
+  After upgrading of libressl you should manually update all packages that
+  depending on this library since its version has been changed. Normally,
+  you could obtain the list of dependent software by running the following
+  command:
+
+  pkg query -e '%n = libressl' %ro
+
+  Then you should rebuild all ports depending on libressl to avoid dangling
+  shared library dependencies.
+
 20150301:
   AFFECTS: users of lang/ruby20
   AUTHOR: swills@FreeBSD.org
@@ -1837,88 +1880,4 @@ you update your ports collection, before attempting any port upgrades.
   # portupgrade -fo misc/p5-OSSP-uuid misc/ossp-uuid-perl
     or
   # pkg set -o misc/p5-OSSP-uuid:misc/ossp-uuid-perl
-
-20140312:
-  AFFECTS: users of net/openistgt
-  AUTHOR: jpaetzel@FreeBSD.org
-
-  Between istgt supporting target reload, and iscsid using CTL there is no
-  point to this port.  As such it has been deleted without warning, since
-  the support for it is as best questionable.
-
-  pkgng users:
-
-  # pkg set -o net/openistgt:net/istgt
-
-  portmaster users:
-
-  # portmaster -o net/istgt net/openistgt
-  # portmaster -r istgt
-
-  portupgrade users:
-
-  # portupgrade -o net/istgt -f net/openistgt
-  # portupgrade -fr net/istgt
-
-20140310:
-  AFFECTS: users of mail/p5-Mail-SpamAssassin and japanese/p5-Mail-SpamAssassin
-  AUTHOR: ohauer@FreeBSD.org
-
-  The port mail/p5-Mail-SpamAssassin was renamed to mail/spamassassin and
-  the port japanese/p5-Mail-SpamAssassin was renamed to japanese/spamassassin.
-  To ease upgrading run the following set of commands:
-
-  pkgng users:
-
-  # pkg set -o mail/p5-Mail-SpamAssassin:mail/spamassassin
-  # pkg set -o japanese/p5-Mail-SpamAssassin:japanese/spamassassin
-
-  portmaster users:
-
-  # portmaster -o mail/spamassassin mail/p5-Mail-SpamAssassin
-  # portmaster -o japanese/spamassassin japanese/p5-Mail-SpamAssassin
-
-20140307:
-  AFFECTS: users of devel/py-setuptools dependent ports
-  AUTHOR: sunpoet@FreeBSD.org
-
-  devel/py-setuptools is being used for every python ports (if USE_PYDISTUTILS
-  defined) since r336553. Due to PKGORIGIN limitation, we cannot build one
-  python port with python27 and the other with python33 since they require
-  different setuptools versions which have same PKGORIGIN. With the addition
-  of py-setuptools{27,32,33}, we could now have py27-foo and py33-bar coexist
-  in one system.
-
-  Note that this is only a short-term solution. It does not help if you need
-  coexistence of one port with different python versions, e.g. py27-foo and
-  py33-foo.
-
-  Please rebuild all ports that depend on devel/py-setuptools and use
-  devel/py-setuptools{27,32,33} instead.
-
-  XX represents python version (27, 32 or 33) in the following steps.
-
-  pkgng users:
-
-  # pkg set -o devel/py-setuptools:devel/py-setuptoolsXX
-
-  portmaster users:
-
-  # portmaster -o devel/py-setuptoolsXX devel/py-setuptools
-  # portmaster -r py\*setuptools
-
-  portupgrade users:
-
-  # portupgrade -o devel/py-setuptoolsXX -f devel/py-setuptools
-  # portupgrade -fr devel/py-setuptools
-
-20140304:
-  AFFECTS: users of security/kwallet
-  AUTHOR: kde@FreeBSD.org
-
-  KDE SC ports have been updated to 4.12.3. kwallet package has been renamed
-  to match upstream naming. pkgng users need to update package origin
-  manually:
-
-  # pkg set -o security/kwallet:security/kwalletmanager
 
