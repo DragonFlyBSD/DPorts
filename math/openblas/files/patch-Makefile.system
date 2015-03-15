@@ -1,0 +1,43 @@
+--- Makefile.system.orig	2014-12-04 00:14:21.000000000 +0900
++++ Makefile.system	2015-02-23 05:27:11.000000000 +0900
+@@ -199,6 +199,7 @@
+ endif
+ 
+ ifeq ($(OSNAME), FreeBSD)
++EXTRALIB	+= -lm %%LDFLAGS%%
+ MD5SUM = md5 -r
+ endif
+ 
+@@ -981,15 +982,6 @@
+ LIBSUFFIX = a
+ endif
+ 
+-ifneq ($(DYNAMIC_ARCH), 1)
+-ifndef SMP
+-LIBNAME		= $(LIBPREFIX)_$(LIBCORE)$(REVISION).$(LIBSUFFIX)
+-LIBNAME_P	= $(LIBPREFIX)_$(LIBCORE)$(REVISION)_p.$(LIBSUFFIX)
+-else
+-LIBNAME		= $(LIBPREFIX)_$(LIBCORE)p$(REVISION).$(LIBSUFFIX)
+-LIBNAME_P	= $(LIBPREFIX)_$(LIBCORE)p$(REVISION)_p.$(LIBSUFFIX)
+-endif
+-else
+ ifndef SMP
+ LIBNAME		= $(LIBPREFIX)$(REVISION).$(LIBSUFFIX)
+ LIBNAME_P	= $(LIBPREFIX)$(REVISION)_p.$(LIBSUFFIX)
+@@ -997,7 +989,6 @@
+ LIBNAME		= $(LIBPREFIX)p$(REVISION).$(LIBSUFFIX)
+ LIBNAME_P	= $(LIBPREFIX)p$(REVISION)_p.$(LIBSUFFIX)
+ endif
+-endif
+ 
+ 
+ LIBDLLNAME   = $(LIBPREFIX).dll
+@@ -1028,7 +1019,7 @@
+ endif
+ 
+ export OSNAME
+-export ARCH
++export ARCH_
+ export CORE
+ export LIBCORE
+ export PGCPATH
