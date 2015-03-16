@@ -2,6 +2,7 @@
 
 PORTNAME=	slider
 PORTVERSION=	2.06
+PORTREVISION=	1
 CATEGORIES=	sysutils
 
 MAINTAINER=	marino@FreeBSD.org
@@ -11,7 +12,7 @@ LICENSE=	BSD2CLAUSE   # actually ISC
 
 BUILD_DEPENDS=	adacurses-config:${PORTSDIR}/devel/adacurses
 
-USES=		ada ncurses:port
+USES=		ada ncurses
 MAKE_ENV=	mode=release
 PLIST_FILES=	bin/slider
 
