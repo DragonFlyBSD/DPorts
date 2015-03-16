@@ -1,9 +1,9 @@
 #!/bin/sh
 #
-# $FreeBSD: head/security/tor-devel/files/tor.in 368512 2014-09-18 19:40:36Z bf $
+# $FreeBSD: head/security/tor-devel/files/tor.in 380776 2015-03-08 15:51:58Z bf $
 #
 # PROVIDE: tor
-# REQUIRE: NETWORKING SERVERS USR
+# REQUIRE: DAEMON FILESYSTEMS
 # BEFORE: LOGIN
 #
 # Add the following lines to /etc/rc.conf to enable tor.
