@@ -3,6 +3,7 @@
 
 PORTNAME=	newsbeuter
 PORTVERSION=	2.9
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://newsbeuter.org/downloads/
 
@@ -21,7 +22,7 @@ OPTIONS_DEFAULT=PODCAST
 OPTIONS_SUB=	yes
 PODCAST_DESC=	Podcast client (podbeuter)
 
-USES=		compiler:c++11-lang gettext gmake iconv:translit ncurses perl5 pkgconfig shebangfix
+USES=		compiler:c++11-lib gettext gmake iconv:translit ncurses perl5 pkgconfig shebangfix
 USE_CXXSTD=	gnu++11
 USE_PERL5=	build
 SHEBANG_FILES=	txt2h.pl
@@ -29,10 +30,6 @@ USE_SQLITE=	yes
 USE_GNOME=	libxml2
 
 .include <bsd.port.pre.mk>
-
-.if ${OSVERSION} < 1000000
-USES+=		compiler:gcc-c++11-lib
-.endif
 
 post-patch:
 	${REINPLACE_CMD} -e "s,share/man,man,; \
