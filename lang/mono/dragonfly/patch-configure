@@ -1,6 +1,6 @@
---- configure.orig	2014-10-23 00:53:41.102814000 +0000
+--- configure.orig	2015-03-15 22:43:31 UTC
 +++ configure
-@@ -4027,7 +4027,7 @@ $as_echo "#define PLATFORM_NO_SYMLINKS 1
+@@ -4021,7 +4021,7 @@ $as_echo "#define PLATFORM_NO_SYMLINKS 1
  		mono_cv_clang=no
  		if test "x$cross_compiling" = "xno"; then
  			target_win32=yes
@@ -9,7 +9,7 @@
  
  $as_echo "#define TARGET_WIN32 1" >>confdefs.h
  
-@@ -4080,7 +4080,7 @@ $as_echo "#define MINGW_CROSS_COMPILE 1"
+@@ -4074,7 +4074,7 @@ $as_echo "#define MINGW_CROSS_COMPILE 1"
  		with_sigaltstack=no
  		use_sigposix=yes
  		;;
@@ -18,7 +18,7 @@
  		host_win32=no
  		if test "x$PTHREAD_CFLAGS" = "x"; then
  			CPPFLAGS="$CPPFLAGS -DGC_FREEBSD_THREADS"
-@@ -4096,7 +4096,8 @@ $as_echo "#define MINGW_CROSS_COMPILE 1"
+@@ -4090,7 +4090,8 @@ $as_echo "#define MINGW_CROSS_COMPILE 1"
  			LDFLAGS="$LDFLAGS $PTHREAD_LIBS -L/usr/local/lib"
  			libmono_ldflags="$PTHREAD_LIBS"
  		fi
@@ -28,17 +28,17 @@
  		need_link_unlink=yes
  
  $as_echo "#define PTHREAD_POINTER_ID 1" >>confdefs.h
-@@ -17270,6 +17271,9 @@ i?86-*-linux*|i?86-apple-darwin*|x86_64-
+@@ -17264,6 +17265,9 @@ i?86-*-linux*|i?86-apple-darwin*|x86_64-
  |amd64-*-freebsd*|i?86-*-freebsd*|ia64-*-freebsd*|arm*-*-linux*|sparc*-*-linux*|mips*-*-linux*|x86_64-apple-darwin*|aarch64*)
      pic_options='-fPIC'
      ;;
 +*-*-dragonfly*)
 +    pic_options='-fPIC'
 +    ;;
- ?86-pc-cygwin*|i?86-pc-cygwin*)
+ ?86-pc-cygwin*|i?86-pc-cygwin*|i?86-pc-mingw32*)
      pic_options='-DDLL_EXPORT'
      ;;
-@@ -25108,6 +25112,9 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -25117,6 +25121,9 @@ rm -f core conftest.err conftest.$ac_obj
  			sgen_supported=true
  			AOT_SUPPORTED="yes"
  			;;
@@ -48,7 +48,7 @@
  		  openbsd*|freebsd*|kfreebsd-gnu*)
  			sgen_supported=true
  		        ;;
-@@ -25132,6 +25139,9 @@ $as_echo "#define __mono_ilp32__ 1" >>co
+@@ -25140,6 +25147,9 @@ $as_echo "#define __mono_ilp32__ 1" >>co
  			sgen_supported=true
  			AOT_SUPPORTED="yes"
  			;;
@@ -58,7 +58,7 @@
  		  openbsd*|freebsd*|kfreebsd-gnu*)
  			sgen_supported=true
  			;;
-@@ -25669,7 +25679,7 @@ case "$host" in
+@@ -25665,7 +25675,7 @@ case "$host" in
  	SQLITE="libsqlite.so"
  	SQLITE3="libsqlite3.so"
  	;;
