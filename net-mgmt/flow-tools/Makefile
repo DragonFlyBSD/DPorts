@@ -59,6 +59,7 @@ post-patch:
 	 -e 's|@localstatedir@/sym/|${PREFIX}/share/flow-tools/|' \
 	 -e 's|@localstatedir@/cfg/|${PREFIX}/etc/flow-tools/|' \
 	  ${WRKSRC}/docs/flow-*.1.in ${WRKSRC}/docs/flow-*.html.in
+	${REINPLACE_CMD} -e 's|inline ||' ${WRKSRC}/lib/ftfil.c 
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/docs/*.1 ${STAGEDIR}${PREFIX}/man/man1/
