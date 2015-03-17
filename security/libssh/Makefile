@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: head/security/libssh/Makefile 376062 2015-01-02 18:46:33Z pi $
+# $FreeBSD$
 
 PORTNAME=	libssh
 DISTVERSION=	0.6.3
