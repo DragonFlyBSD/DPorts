@@ -24,7 +24,7 @@ LICENSE_PERMS_COMMERCIAL=	dist-mirror dist-sell pkg-mirror pkg-sell no-auto-acce
 
 ONLY_FOR_ARCHS=	i386 amd64
 
-USES=		zip
+USES=		zip compiler:c++0x
 USE_LDCONFIG=	yes
 
 EXTRACT_BEFORE_ARGS=	-j -L -q
@@ -58,10 +58,10 @@ post-patch:
 		${WRKSRC}/${BUILDCMD}
 .endif
 # Don't error when files not found
-# Fix mrmuldv.cc not existing
+# Fix mrmuldv.cc not existing due to s/gcc/CC/ replacement above.
 	@${REINPLACE_CMD} -E \
 		-e 's|^rm |${RM} -f |' \
-		-e 's|^cp mrmuldv\.cc mrmuldv\.c|${CP} mrmuldv.gcc mrmuldv.c|' \
+		-e 's|^cp mrmuldv\.${CC} mrmuldv\.c|${CP} mrmuldv.gcc mrmuldv.c|' \
 		${WRKSRC}/${BUILDCMD}
 
 do-build:
