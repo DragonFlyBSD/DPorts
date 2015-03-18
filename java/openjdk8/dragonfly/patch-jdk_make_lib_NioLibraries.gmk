@@ -1,11 +1,11 @@
---- jdk/make/lib/NioLibraries.gmk.orig	2015-01-18 19:54:21 UTC
+--- jdk/make/lib/NioLibraries.gmk.orig	2015-03-18 10:16:42 UTC
 +++ jdk/make/lib/NioLibraries.gmk
-@@ -187,7 +187,7 @@ $(BUILD_LIBNIO): $(BUILD_LIBNET)
- 
+@@ -188,7 +188,7 @@ $(BUILD_LIBNIO): $(BUILD_LIBNET)
  ifeq ($(OPENJDK_TARGET_OS_API), posix)
  
--  ifeq (, $(filter $(OPENJDK_TARGET_OS), macosx aix))
-+  ifeq (, $(filter $(OPENJDK_TARGET_OS), macosx aix bsd))
+   ifeq (, $(filter $(OPENJDK_TARGET_OS), macosx aix))
+-  ifneq ($(shell uname -s), NetBSD)	# Not for NetBSD
++  ifneq ($(shell uname -s), DragonFly)	# Not for DragonFly
  
      # Suppress unused parameters required by exported JNI functions.
      SCTP_WERROR := -Werror -Wno-error=unused-parameter
