@@ -1,4 +1,4 @@
-# $FreeBSD: head/lang/gcc5-aux/Makefile.version 381365 2015-03-15 23:09:13Z marino $
+# $FreeBSD$
 
 GCC_BRANCH=		5
 GCC_POINT=		0.0
