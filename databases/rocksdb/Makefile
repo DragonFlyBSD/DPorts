@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: head/databases/rocksdb/Makefile 379487 2015-02-21 08:38:49Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	rocksdb
 PORTVERSION=	3.9.1
