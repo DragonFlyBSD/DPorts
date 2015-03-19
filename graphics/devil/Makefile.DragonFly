@@ -1,0 +1,3 @@
+# does not build with gcc50
+
+USE_GCC= 4.7
