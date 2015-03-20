@@ -1,0 +1,11 @@
+--- configure.ac.orig	2007-05-12 14:54:24 UTC
++++ configure.ac
+@@ -85,7 +85,7 @@ AC_CHECK_FUNCS([gethostbyaddr gethostbyn
+ 
+ # FreeBSD has a slightly different NSS interface
+ case ${host} in
+-     *-freebsd*) freebsd="yes" ;;
++     *-dragonfly*|*-freebsd*) freebsd="yes" ;;
+ esac
+ 
+ AM_CONDITIONAL([FREEBSD_NSS], [test "x$freebsd" = "xyes"])
