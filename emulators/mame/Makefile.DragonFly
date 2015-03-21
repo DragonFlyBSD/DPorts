@@ -1,0 +1,4 @@
+# with gcc5
+#  src/emu/cpu/m68000/m68k_in.c, near or on line 2718
+
+USE_GCC= 4.7
