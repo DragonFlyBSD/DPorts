@@ -5,7 +5,7 @@
        QStringList stringList = line.split (">", QString::SkipEmptyParts);
        
 -      if (!stringList.size () == 2)
-+      if (!stringList.size () == false)
++      if (stringList.size () != 2)
  	{
  	  QMessageBox::warning (this,
  				tr ("Sequence Manipulation Tools Plugin"),
