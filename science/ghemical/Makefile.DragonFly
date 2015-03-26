@@ -1,1 +1,1 @@
-MAKE_ARGS+=	itlocaledir=${PREFIX}/share/locale
+#MAKE_ARGS+=	itlocaledir=${PREFIX}/share/locale
