@@ -29,7 +29,7 @@ USE_AUTOTOOLS=	aclocal autoconf automake
 ACLOCAL_ARGS=	--force -I m4
 AUTOMAKE_ARGS=	--gnu --add-missing --copy
 CXXFLAGS+=	-fPIC
-LDFLAGS+=	-L${LOCALBASE}/lib -lintl -lX11
+LDFLAGS+=	-L${LOCALBASE}/lib -lintl
 CONFIGURE_ARGS+=--with-system-lua \
 		--with-lua-pkg=lua-${LUA_VER}
 CONFIGURE_ENV+=	FOX_CFLAGS="${FOX_CFLAGS}" \
