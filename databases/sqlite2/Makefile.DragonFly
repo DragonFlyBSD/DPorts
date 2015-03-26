@@ -1,2 +1,2 @@
-USES+=		ncurses
-LDFLAGS+=	-L${LOCALBASE}/lib -lncurses
+#USES+=		ncurses
+#LDFLAGS+=	-L${LOCALBASE}/lib -lncurses
