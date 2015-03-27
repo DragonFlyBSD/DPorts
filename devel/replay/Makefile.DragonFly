@@ -1,2 +1,0 @@
-#CFLAGS+= -Wno-unused-but-set-variable
-MAKE_ENV+=	NO_WERROR="defined"
