@@ -1,0 +1,3 @@
+# binutils fails to build (-Werror probably) with gcc50
+
+USE_GCC=4.8
