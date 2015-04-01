@@ -1,21 +1,21 @@
 # Created by: Dirk-Willem van Gulik / dirkx@webweaving.org
-# $FreeBSD$
+# $FreeBSD: head/net/widentd/Makefile 380353 2015-03-03 11:08:32Z robak $
 
 PORTNAME=	widentd
-PORTVERSION=	1.03
-PORTREVISION=	2
+PORTVERSION=	1.04
 CATEGORIES=	net ipv6
-MASTER_SITES=	http://www.webweaving.org/widentd/
-EXTRACT_SUFX=	.tgz
+MASTER_SITES=	http://BSDforge.com/projects/source/net/widentd/
 
-MAINTAINER=	dirkx@webweaving.org
-COMMENT=	RFC1413 auth/identd daemon with fixed fake reply
+MAINTAINER=	portmaster@BSDforge.com
+COMMENT=	RFC1413 auth/identd daemon providing a fixed fake reply
 
-USES=		uidfix
+LICENSE=	BSD3CLAUSE
+
+USES=		uidfix tar:xz
 MAKE_ENV+=	BINDIR="${PREFIX}/sbin" MANDIR="${PREFIX}/man/man"
+MAKE_ENV+=	NO_WERROR="defined"
 
-PLIST_FILES=	sbin/widentd \
-		man/man8/widentd.8.gz
+PLIST_FILES=	sbin/widentd man/man8/widentd.8.gz
 USE_RC_SUBR=	widentd
 
 BROKEN_powerpc=		Does not compile on powerpc

@@ -1,7 +1,7 @@
 #!/bin/sh
 # Start or stop widentd
 #
-# $FreeBSD: head/net/widentd/files/widentd.in 330870 2013-10-19 14:13:27Z tijl $
+# $FreeBSD: head/net/widentd/files/widentd.in 380353 2015-03-03 11:08:32Z robak $
 #
 # PROVIDE: widentd
 # REQUIRE: DAEMON
@@ -17,12 +17,11 @@
 # e.g. 
 #       widentd_enable="YES"
 #
-# see the man page at widentd(8) for
-# some additional flags to set the IP address
-# beeing bound to, or how to set a differernt
-# fake user id beeing replied as.
+# see the widentd(8) man page for some additional options;
+# such as flags to set the IP address widentd is bound to,
+# or how to set a differernt, or fake user id being sent as a reply.
 #
-# DO NOT CHANGE THESE DEFAULT VALUES HERE
+# DO NOT CHANGE THE FOLLOWING DEFAULT VALUES HERE
 #
 widentd_enable=${widentd_enable-"NO"}
 
