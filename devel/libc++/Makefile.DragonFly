@@ -1,2 +1,9 @@
 USES+=		alias:10
 CFLAGS+=	-D__FreeBSD__version=1000001
+
+# won't build on gcc5:
+# /wrkdirs/devel/libc++/work/libc++-208080/include/cstdio:112:38:
+#   error: inlining failed in call to always_inline
+#          'int __libcpp_getc(FILE*)': function not inlinable
+
+USE_GCC=4.7
