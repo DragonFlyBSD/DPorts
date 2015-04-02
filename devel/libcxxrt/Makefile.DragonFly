@@ -1,0 +1,6 @@
+# Invalid c++ for gcc5
+# /wrkdirs/devel/libcxxrt/work/pathscale-libcxxrt-2f150a6/src/exception.cc:
+#   1185:43: error: declaration of 'void* __cxa_begin_catch(void*)' has a 
+#   different exception specifier
+
+USE_GCC=4.7
