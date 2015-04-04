@@ -1,0 +1,2 @@
+USES+=	compiler:c++11-lib
+CXXFLAGS+=	-std=c++11
