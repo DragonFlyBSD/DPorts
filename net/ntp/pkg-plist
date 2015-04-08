@@ -1,6 +1,5 @@
 man/man5/ntp.conf.5.gz
 man/man5/ntp.keys.5.gz
-man/man1/calc_tickadj.1.gz
 man/man1/ntp-keygen.1.gz
 %%PERL_UTILS%%man/man1/ntp-wait.1.gz
 man/man1/ntpd.1.gz
@@ -9,8 +8,9 @@ man/man1/ntpq.1.gz
 %%PERL_UTILS%%man/man1/ntptrace.1.gz
 %%NTPSNMPD%%man/man1/ntpsnmpd.1.gz
 man/man1/sntp.1.gz
+man/man1/calc_tickadj.1.gz
+man/man1/update-leap.1.gz
 bin/calc_tickadj
-bin/tickadj
 %%SSL%%bin/ntp-keygen
 %%PERL_UTILS%%bin/ntp-wait
 bin/ntpd
@@ -21,6 +21,8 @@ bin/ntpq
 bin/ntptime
 %%PERL_UTILS%%bin/ntptrace
 bin/sntp
+bin/tickadj
+bin/update-leap
 %%PERL_UTILS%%share/ntp/lib/NTP/Util.pm
 %%PORTDOCS%%%%DOCSDIR%%/access.html
 %%PORTDOCS%%%%DOCSDIR%%/accopt.html
@@ -487,6 +489,7 @@ bin/sntp
 %%PORTDOCS%%%%DOCSDIR%%/sntp.html
 %%PORTDOCS%%%%DOCSDIR%%/stats.html
 %%PORTDOCS%%%%DOCSDIR%%/tickadj.html
+%%PORTDOCS%%%%DOCSDIR%%/update-leap.html
 %%PORTDOCS%%%%DOCSDIR%%/warp.html
 %%PORTDOCS%%%%DOCSDIR%%/xleave.html
 %%PORTDOCS%%share/doc/sntp/sntp.html
