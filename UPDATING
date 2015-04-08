@@ -5,6 +5,113 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20150406:
+  AFFECTS: User of emulators/xen emulators/xl and sysutils/xen-tools
+  AUTHOR: bapt@FreeBSD.org
+
+  sysutils/xen-tools has been renamed sysutils/xen-guest-tools
+  emulators/xl has been renamed sysutils/xen-tools
+  emulators/xen has been renamed emulators/xen-kernel
+  A new emulators/xen has been introduced, it is a metaport that depends on
+  emulators/xen-kernel and sysutils/xen-tools
+
+20150403:
+  AFFECTS: Users of irc/rbot
+  AUTHOR: bdrewery@FreeBSD.org
+
+  Ruby Bot now has a new upstream maintainer.  The project has been updated
+  to work with Ruby 2.0+.  Some migration is needed to move away from
+  BDB regristry files.  The guide for that is at
+  https://github.com/ruby-rbot/rbot/wiki/MigrationGuide
+
+  rbotdb can be used to backup a BDB database and then restore it to a working
+  format for the new rbot. Update your conf.yaml after with 'core.db: tc'
+  once converted.
+
+20150331:
+AUTHOR: ohauer@FreeBSD.org
+
+  Subversion modules are no longer activated in httpd.conf!
+  To activate the subversion apache modules a dedicated file
+  will be installed as modules.d/220_subversion.conf
+
+20150324:
+  AFFECTS: Users of dns/bind9*
+  AUTHOR: mat@FreeBSD.org
+
+  This is only for FreeBSD 10.0+.
+
+  BIND auto chroot has been added back to the named rc script.  As enabling it
+  by default would most certainly break people's setup, it is not.  To enable
+  it, and chroot it in /var/named, add the following line to your rc.conf file:
+
+  named_chrootdir="/var/named"
+
+  On first launch, the rc script will move the /usr/local/etc/namedb directory
+  into the chroot, and create a symlink to it.
+
+  Note that, if you're running from within a jail, you need to have a
+  /var/named/dev devfs created beforehand, with the null and random devices.
+
+20150323:
+  AFFECTS: Users of net/asterisk* and net/pjsip ports
+  AUTHOR: madpilot@FreeBSD.org
+
+  Due to conflicts between base OpenSSL and ports provided OpenSSL
+  library, which is required by net/libsrtp, the srtp support has
+  to be removed from the default asterisk13 port configuration,
+  otherwise a a not working binary would be generated.
+
+  To get SRTP support working in the asterisk ports it is needed
+  to build all other required ports with WITH_OPENSSL_PORT=yes. For
+  asterisk13 it is also needed to enable the EXTSRTP option in the
+  pjsip port.
+
+  If the CURL option is enabled also make sure the ftp/curl port
+  is using one of the HEIMDAL_PORT or KRB5_PORT options, otherwise
+  the curl module will cause asterisk to fail on startup due to
+  mixing calls to OpenSSL from base and from ports.
+
+20150322:
+  AFFECTS: Users of security/openssh-portable
+  AUTHOR: bdrewery@FreeBSD.org
+
+  The port now uses VersionAddendum for the port version string. Setting
+  the value to "none" in your sshd_config and restarting openssh will allow
+  removing the version from the banner.
+
+20150321:
+  AFFECTS: Users of x11-servers/xorg-server and other X servers
+  AUTHOR: bapt@FreeBSD.org
+
+  All fonts ports have been modified to respect XDG and install in
+  share/fonts
+
+  The Xorg servers now are looking there by default
+
+  If you experience font related issues, view the output of
+
+  # fc-list
+
+  If the list appears incomplete or has fonts still pointing to
+  /usr/local/lib/X11/fonts you may forcibly update the font cache:
+
+  # fc-cache -fs
+
+20150317:
+  AFFECTS: users of editors/openoffice-4 and editors/openoffice-devel
+  AUTHOR: truckman@FreeBSD.org
+
+  Contrary to what is stated in pkg-message, openoffice-4 and
+  openoffice-devel have stored user settings in ~/.openoffice.org-devel/4
+  since r325370 (2013-08-25). This update expects user settings to reside
+  in the more standard ~/.openoffice.org/4.
+
+  To preserve your user settings, rename or copy them from
+  ~/.openoffice.org-devel/4 to ~/.openoffice.org/4. when installing this
+  update to apache-openoffice-4.1.1_7 or
+  apache-openoffice-devel-4.2.1652526_2,3.
+
 20150313:
   AFFECTS: users of net/serviio
   AUTHOR: netchild@FreeBSD.org
@@ -1779,115 +1886,4 @@ you update your ports collection, before attempting any port upgrades.
   ALTER TABLE `limits` MODIFY `maxmsgcount` BIGINT UNSIGNED NOT NULL DEFAULT 0;
   ALTER TABLE `limits` MODIFY `defaultquota` BIGINT UNSIGNED NOT NULL DEFAULT 0;
   ALTER TABLE `limits` MODIFY `defaultmaxmsgcount` BIGINT UNSIGNED NOT NULL DEFAULT 0;
-
-20140403:
-  AFFECTS: users of net/rabbitmq
-  AUTHOR: olgeni@FreeBSD.org
-
-  This release changes the behaviour of the default "guest" user.
-
-  Previously the guest user could be accessed from any network
-  location. In RabbitMQ 3.3.0 and later, the guest user can only
-  be accessed via localhost by default.
-
-  Any other users you create will not (by default) be restricted
-  in this way.
-
-  See http://www.rabbitmq.com/access-control.html for more information.
-
-20140403:
-  AFFECTS: users of net/kdnssd
-  AUTHOR: kde@FreeBSD.org
-
-  KDE SC ports have been updated to 4.12.4. kdnssd package has been renamed
-  to match upstream naming. pkgng users need to update package origin
-  manually:
-
-  # pkg set -o net/kdnssd:net/zeroconf-ioslave
-
-20140402:
-  AFFECTS: users of textproc/elasticsearch
-  AUTHOR: tj@FreeBSD.org
-
-  Elasticsearch has been updated to version 1.1.0. If you are updating
-  from a version prior to 1.0.0 you will need to do a full cluster
-  shutdown for this update as it can not be performed in a rolling
-  fashion.
-
-20140401:
-  AFFECTS: users of security/gnutls3
-  AUTHOR: bdrewery@FreeBSD.org
-
-  Libdane support is no longer enabled by default.  Rebuild the port with
-  the LIBDANE option if danetool is desired.
-
-20140331:
-  AFFECTS: users of print/cups-client and print/cups-image
-  AUTHOR: bsam@FreeBSD.org
-
-  CUPS ports have been updated to version 1.7.1. A file has migrated from
-  cups-image port to cups-client. Before upgrading you should force the
-  removal of cups-image port, otherwise it will conflict with the new one.
-
-  pkg users:
-  # pkg delete -f cups-image\*
-
-  other users:
-  # pkg_delete -f cups-image\*
-
-  2. Install/upgrade other cups* packages.
-
-  If cups-filters complains about a missing cups/raster.h include,
-  try reinstalling the cups-client package.
-
-20140327:
-  AFFECTS: users of lang/php5 and lang/php55 with Apache module
-  AUTHOR: ale@FreeBSD.org
-
-  The Apache PHP module has been separated from the main PHP port.
-  If you had the APACHE OPTION selected, you have to perform the
-  following steps:
-
-  1) update your lang/php* options (i.e. 'make config')
-  2) rebuild lang/php* port
-  3) install www/mod_php* port
-
-  It is *mandatory* to build both ports with the same DEBUG and ZTS
-  options, so if you have a threaded Apache (i.e. worker or event MPM)
-  you have to select the ZTS option in lang/php* port.
-
-20140322:
-  AFFECTS: users of devel/apr1
-  AUTHOR: ohauer@FreeBSD.org
-
-  APR was updated to 1.5.0, BDB requirement was bumped to 48+
-  It is necessary to first remove the old version of devel/apr1.
-
-  Please rebuild all ports which are using functions from APR/APR-util
-  such as Apache, Subversion, etc.
-
-  # portmaster -r apr
-    or
-  # portupgrade -r devel/apr1
-
-20140318:
-  AFFECTS: users of net/openldap24-server
-  AUTHOR: delphij@FreeBSD.org
-
-  Please note that Berkeley DB backend is now deprecated and will be removed
-  in a future version.  Existing users should migrate data to the new MDB
-  backend when possible.
-
-20140317:
-  AFFECTS: users of misc/ossp-uuid-perl
-  AUTHOR: culot@FreeBSD.org
-
-  misc/ossp-uuid-perl was replaced by misc/p5-OSSP-uuid. Please do the
-  following according to package manager used.
-
-  # portmaster -o misc/p5-OSSP-uuid misc/ossp-uuid-perl
-    or
-  # portupgrade -fo misc/p5-OSSP-uuid misc/ossp-uuid-perl
-    or
-  # pkg set -o misc/p5-OSSP-uuid:misc/ossp-uuid-perl
 

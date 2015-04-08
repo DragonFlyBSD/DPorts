@@ -15,14 +15,9 @@ WARNING+=	"WITH_NEW_XORG and WITHOUT_NEW_XORG knobs were removed and have no eff
 WARNING+=	"WITH_KMS was removed and has no effect"
 .endif
 
-#.if defined(PKGORIGIN)
-#.for _c in ${CATEGORIES}
-#_CAT?=	${_c}
-#.endfor
-#.if ${.CURDIR:H:T} != ${_CAT}
-#DEV_ERROR+=	"The first entry in CATEGORIES should be the directory where the port lives"
-#.endif
-#.endif
+.if ${.CURDIR:H:T} != ${PKGCATEGORY}
+DEV_ERROR+=	"The first entry in CATEGORIES should be the directory where the port lives"
+.endif
 
 #.if defined(WITHOUT_X11)
 #WARNING+=	"WITHOUT_X11 is deprecated use X11 option instead"
@@ -64,6 +59,10 @@ DEV_ERROR+=	"USE_GNOME=pkgconfig is unsupported, please use USES=pkgconfig"
 DEV_ERROR+=	"USE_ZOPE=yes is unsupported, please use USES=zope instead"
 .endif
 
+.if defined(USE_GITHUB) && defined(GH_COMMIT)
+DEV_WARNING+=	"GH_COMMIT is deprecated, please convert GHL-\>GH in MASTER_SITES and set GH_TAGNAME to tag or commit hash and remove GH_COMMIT"
+.endif
+
 .if defined(USE_GNOME) && ${USE_GNOME:Mgnomehack}
 DEV_WARNING+=	"USE_GNOME=gnomehack is deprecated, please use USES=pathfix"
 .endif
@@ -73,7 +72,7 @@ DEV_WARNING+=	"USE_GNOME=desktopfileutils is deprecated, please use USES=desktop
 .endif
 
 .if defined(LIB_DEPENDS) && ${LIB_DEPENDS:Nlib*}
-DEV_ERROR+=	"All LIB_DEPENDS should use the new format and start out with lib.  (libfoo.so vs foo.so)"
+DEV_ERROR+=	"All LIB_DEPENDS should use the new format and start out with lib.  \(libfoo.so vs foo.so\)"
 .endif
 
 .if defined(USE_TCL) || defined(USE_TCL_BUILD) || defined(USE_TCL_RUN) || defined(USE_TCL_WRAPPER) || \
@@ -152,8 +151,8 @@ SANITY_UNSUPPORTED=	USE_OPENAL USE_FAM USE_MAKESELF USE_ZIP USE_LHA USE_CMAKE \
 		USE_GETTEXT USE_GMAKE USE_SCONS USE_DRUPAL NO_INSTALL_MANPAGES \
 		INSTALLS_SHLIB USE_PYDISTUTILS PYTHON_CONCURRENT_INSTALL \
 		PYDISTUTILS_AUTOPLIST PYTHON_PY3K_PLIST_HACK PYDISTUTILS_NOEGGINFO \
-		USE_PYTHON_PREFIX
-SANITY_DEPRECATED=	USE_XZ USE_BZIP2 PYTHON_PKGNAMESUFFIX
+		USE_PYTHON_PREFIX USE_BZIP2 USE_XZ USE_PGSQL
+SANITY_DEPRECATED=	PYTHON_PKGNAMESUFFIX
 
 USE_OPENAL_ALT=		USES=openal
 USE_FAM_ALT=		USES=fam
@@ -176,6 +175,7 @@ USE_GETTEXT_ALT=	USES=gettext
 USE_SCONS_ALT=		USES=scons
 USE_DRUPAL_ALT=		USES=drupal
 USE_PYDISTUTILS_ALT=		USE_PYTHON=distutils
+USE_PGSQL_ALT=		USES=pgsql
 INSTALLS_SHLIB_ALT=	USE_LDCONFIG
 PYTHON_CONCURRENT_INSTALL_ALT=	USE_PYTHON=concurrent
 PYDISTUTILS_AUTOPLIST_ALT=	USE_PYTHON=autoplist

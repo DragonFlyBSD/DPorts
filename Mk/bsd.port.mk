@@ -94,8 +94,8 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #				  Default: ${DISTNAME}${EXTRACT_SUFX}
 # EXTRACT_SUFX	- Suffix for archive names
 #				  You never have to set both DISTFILES and EXTRACT_SUFX.
-#				  Default: .tar.bz2 if USE_BZIP2 is set, .tar.xz if USE_XZ is set,
-#				  .tar.gz otherwise).
+#				  Default: .tar.bz2 if USES=tar:bzip2 is set, .tar.xz if
+#				  USES=tar:xz USE_XZ is set, .tar.gz otherwise).
 # MASTER_SITES	- Primary location(s) for distribution files if not found
 #				  locally.  See bsd.sites.mk for common choices for
 #				  MASTER_SITES.
@@ -146,11 +146,9 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #				  Default:
 #				  http://distcache.FreeBSD.org/ports-distfiles/${DIST_SUBDIR}/
 # MASTER_SITE_OVERRIDE
-#				- If set, override the MASTER_SITES setting with this
-#				  value.
+#				- If set, prepend the MASTER_SITES setting with this value.
 # MASTER_SITE_FREEBSD
-#				- If set, only use ${MASTER_SITE_BACKUP} for
-#				  MASTER_SITES.
+#				- If set, prepend ${MASTER_SITE_BACKUP} in MASTER_SITES.
 # CD_MOUNTPTS	- List of CDROM mountpoints to look for distfiles under.
 #				  This variable supercedes CD_MOUNTPT, which is
 #				  obsolete.
@@ -327,10 +325,6 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #				  if a port breaks with it (it should be
 #				  extremely rare).
 #
-# USE_BZIP2		- If set, this port tarballs use bzip2, not gzip, for
-#				  compression.
-# USE_XZ		- If set, this port tarballs use xz (or lzma)
-#				  for compression
 # USE_GCC		- If set, this port requires this version of gcc, either in
 #				  the system or installed from a port.
 # USE_CSTD		- Override the default C language standard (gnu89, gnu99)
@@ -521,6 +515,11 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #				    - PREFIX has to be an absolute path.
 #				    - PREFIX can't have a trailing slash.
 #
+# BUNDLE_LIBS	  Teach pkg(8) to not automatically add all shared libraries
+# 				  installed by a port as a "provided" shared libraries provided
+# 				  for other packages (prevent them from being exposed in the
+# 				  solver). This has to be used for ports that bundles third
+# 				  party libraries for internal usage.
 # MASTERDIR		- Where the port finds patches, package files, etc.  Define
 #				  this is you have two or more ports that share most of the
 #				  files.
@@ -1075,30 +1074,6 @@ SCRIPTSDIR?=	${PORTSDIR}/Mk/Scripts
 LIB_DIRS?=		/lib /usr/lib ${LOCALBASE}/lib
 STAGEDIR?=	${WRKDIR}/stage
 NOTPHONY?=
-PKG_ENV+=		PORTSDIR=${PORTSDIR}
-CONFIGURE_ENV+=	XDG_DATA_HOME=${WRKDIR} \
-				XDG_CONFIG_HOME=${WRKDIR} \
-				HOME=${WRKDIR}
-MAKE_ENV+=		XDG_DATA_HOME=${WRKDIR} \
-				XDG_CONFIG_HOME=${WRKDIR} \
-				HOME=${WRKDIR}
-QA_ENV+=	STAGEDIR=${STAGEDIR} \
-			PREFIX=${PREFIX} \
-			LINUXBASE=${LINUXBASE} \
-			LOCALBASE=${LOCALBASE} \
-			"STRIP=${STRIP}" \
-			TMPPLIST=${TMPPLIST}
-CO_ENV+=	STAGEDIR=${STAGEDIR} \
-			PREFIX=${PREFIX} \
-			LOCALBASE=${LOCALBASE} \
-			WRKDIR=${WRKDIR} \
-			WRKSRC=${WRKSRC} \
-			MTREE_FILE=${MTREE_FILE} \
-			TMPPLIST=${TMPPLIST} \
-			SCRIPTSDIR=${SCRIPTSDIR} \
-			PLIST_SUB_SED="${PLIST_SUB_SED}" \
-			PORT_OPTIONS="${PORT_OPTIONS}" \
-			PORTSDIR="${PORTSDIR}"
 MINIMAL_PKG_VERSION=	1.3.8
 
 # make sure bmake treats -V as expected
@@ -1106,21 +1081,14 @@ MINIMAL_PKG_VERSION=	1.3.8
 
 .include "${PORTSDIR}/Mk/bsd.commands.mk"
 
-.if defined(NO_STAGE)
-BROKEN=				Not staged.
-DEPRECATED?=		Not staged. See http://lists.freebsd.org/pipermail/freebsd-ports-announce/2014-May/000080.html
-EXPIRATION_DATE?=	2014-08-31
-.endif
-
 .if defined(X_BUILD_FOR)
 .if !defined(.PARSEDIR)
 IGNORE=	Cross building can only be done when using bmake(1) as make(1)
 .endif
-BUILD_DEPENDS=	${X_BUILD_FOR}-cc:${PORTSDIR}/devel/${X_BUILD_FOR}-xdev
 # Do not define CPP on purpose
-.if !defined(HCC)
-HCC:=	${CC}
-HCXX:=	${CXX}
+.if !defined(HOSTCC)
+HOSTCC:=	${CC}
+HOSTCXX:=	${CXX}
 .endif
 .if !exists(/usr/${X_BUILD_FOR}/usr/bin/cc)
 X_SYSROOT=	${LOCALBASE}/${X_BUILD_FOR}
@@ -1129,11 +1097,8 @@ X_SYSROOT=	/usr/${X_BUILD_FOR}
 .endif
 CC=		${X_SYSROOT}/usr/bin/cc
 CXX=	${X_SYSROOT}/usr/bin/c++
-PKG_ENV+=	ABI_FILE=${X_SYSROOT}/usr/lib/crt1.o
 NM=		${X_BUILD_FOR}-nm
 STRIP_CMD=	${X_BUILD_FOR}-strip
-MAKE_ENV+=	NM=${NM} STRIPBIN=${X_BUILD_FOR}-strip PKG_CONFIG_SYSROOT_DIR="${X_SYSROOT}"
-CONFIGURE_ENV+=	PKG_CONFIG_SYSROOT_DIR="${X_SYSROOT}"
 # only bmake support the below
 STRIPBIN=	${STRIP_CMD}
 .export.env STRIPBIN
@@ -1315,13 +1280,6 @@ UNIQUENAME?=	${PKGNAMEPREFIX}${PORTNAME}
 TMPDIR?=	/tmp
 .endif # defined(PACKAGE_BUILDING)
 
-# Respect TMPDIR passed via make.conf or similar and pass it down
-# to configure and make.
-.if defined(TMPDIR)
-MAKE_ENV+=	TMPDIR="${TMPDIR}"
-CONFIGURE_ENV+=	TMPDIR="${TMPDIR}"
-.endif # defined(TMPDIR)
-
 .if defined(WITH_DEBUG_PORTS)
 .if ${WITH_DEBUG_PORTS:M${PKGORIGIN}}
 WITH_DEBUG=	yes
@@ -1333,7 +1291,9 @@ WITH_DEBUG=	yes
 # Start of pre-makefile section.
 .if !defined(AFTERPORTMK) && !defined(INOPTIONSMK)
 
+.if defined(PORTNAME)
 .include "${PORTSDIR}/Mk/bsd.sanity.mk"
+.endif
 
 _PREMKINCLUDED=	yes
 
@@ -1358,7 +1318,12 @@ _SUF2=	,${PORTEPOCH}
 
 PKGVERSION=	${PORTVERSION:C/[-_,]/./g}${_SUF1}${_SUF2}
 PKGNAME=	${PKGNAMEPREFIX}${PORTNAME}${PKGNAMESUFFIX}-${PKGVERSION}
-DISTNAME?=	${PORTNAME}-${DISTVERSIONPREFIX}${DISTVERSION:C/:(.)/\1/g}${DISTVERSIONSUFFIX}
+DISTVERSIONFULL=	${DISTVERSIONPREFIX}${DISTVERSION:C/:(.)/\1/g}${DISTVERSIONSUFFIX}
+.if defined(USE_GITHUB) && defined(GH_TAGNAME) && !defined(GH_COMMIT)
+DISTNAME?=	${GH_ACCOUNT}-${GH_PROJECT}-${DISTVERSIONFULL}-${GH_TAGNAME_SANITIZED}
+.else
+DISTNAME?=	${PORTNAME}-${DISTVERSIONFULL}
+.endif
 
 INDEXFILE?=		INDEX-${DFLYVERSION:C/([0-9]*)[0-9]{5}/\1/}
 
@@ -1484,16 +1449,6 @@ UID!=	${ID} -u
 
 DESTDIRNAME?=	DESTDIR
 
-.if !empty(USES:Mdesktop-file-utils)
-QA_ENV+=	USESDESKTOPFILEUTILS=yes
-.endif
-.if !empty(USES:Mlibtool*)
-QA_ENV+=	USESLIBTOOL=yes
-.endif
-.if !empty(USES:Mshared-mime-info)
-QA_ENV+=	USESSHAREDMIMEINFO=yes
-.endif
-
 # Loading features
 .for f in ${USES}
 _f:=		${f:C/\:.*//}
@@ -1505,13 +1460,7 @@ ${_f}_ARGS:=	${f:C/^[^\:]*(\:|\$)//:S/,/ /g}
 .include "${USESDIR}/${f:C/\:.*//}.mk"
 .endfor
 
-.if defined(USE_BZIP2)
-EXTRACT_SUFX?=			.tar.bz2
-.elif defined(USE_XZ)
-EXTRACT_SUFX?=			.tar.xz
-.else
 EXTRACT_SUFX?=			.tar.gz
-.endif
 
 # You can force skipping these test by defining IGNORE_PATH_CHECKS
 .if !defined(IGNORE_PATH_CHECKS)
@@ -1536,11 +1485,6 @@ PKGNG_ORIGIN=	${PKG_ORIGIN}
 WITH_PKGNG?=	yes
 WITH_PKG?=	${WITH_PKGNG}
 
-.if defined(BUNDLE_LIBS)
-PKG_NOTES+=	no_provide_shlib
-PKG_NOTE_no_provide_shlib=	yes
-.endif
-
 .endif
 # End of pre-makefile section.
 
@@ -1554,9 +1498,73 @@ DEV_ERROR+=	"${PKGNAME}: Makefile error: you cannot include bsd.port[.post].mk t
 
 _POSTMKINCLUDED=	yes
 
+.if defined(BUNDLE_LIBS)
+PKG_NOTES+=	no_provide_shlib
+PKG_NOTE_no_provide_shlib=	yes
+.endif
+
+PKG_ENV+=		PORTSDIR=${PORTSDIR}
+CONFIGURE_ENV+=	XDG_DATA_HOME=${WRKDIR} \
+				XDG_CONFIG_HOME=${WRKDIR} \
+				HOME=${WRKDIR}
+MAKE_ENV+=		XDG_DATA_HOME=${WRKDIR} \
+				XDG_CONFIG_HOME=${WRKDIR} \
+				HOME=${WRKDIR}
+# Respect TMPDIR passed via make.conf or similar and pass it down
+# to configure and make.
+.if defined(TMPDIR)
+MAKE_ENV+=		TMPDIR="${TMPDIR}"
+CONFIGURE_ENV+=	TMPDIR="${TMPDIR}"
+.endif # defined(TMPDIR)
+
+QA_ENV+=		STAGEDIR=${STAGEDIR} \
+				PREFIX=${PREFIX} \
+				LINUXBASE=${LINUXBASE} \
+				LOCALBASE=${LOCALBASE} \
+				"STRIP=${STRIP}" \
+				TMPPLIST=${TMPPLIST}
+.if !empty(USES:Mdesktop-file-utils)
+QA_ENV+=		USESDESKTOPFILEUTILS=yes
+.endif
+.if !empty(USES:Mlibtool*)
+QA_ENV+=		USESLIBTOOL=yes
+.endif
+.if !empty(USES:Mshared-mime-info)
+QA_ENV+=		USESSHAREDMIMEINFO=yes
+.endif
+
+CO_ENV+=		STAGEDIR=${STAGEDIR} \
+				PREFIX=${PREFIX} \
+				LOCALBASE=${LOCALBASE} \
+				WRKDIR=${WRKDIR} \
+				WRKSRC=${WRKSRC} \
+				MTREE_FILE=${MTREE_FILE} \
+				TMPPLIST=${TMPPLIST} \
+				SCRIPTSDIR=${SCRIPTSDIR} \
+				PLIST_SUB_SED="${PLIST_SUB_SED}" \
+				PORT_OPTIONS="${PORT_OPTIONS}" \
+				PORTSDIR="${PORTSDIR}"
+
+.if defined(X_BUILD_FOR)
+BUILD_DEPENDS+=	${X_BUILD_FOR}-cc:${PORTSDIR}/devel/${X_BUILD_FOR}-xdev
+PKG_ENV+=		ABI_FILE=${X_SYSROOT}/usr/lib/crt1.o
+MAKE_ENV+=		NM=${NM} \
+				STRIPBIN=${X_BUILD_FOR}-strip \
+				PKG_CONFIG_SYSROOT_DIR="${X_SYSROOT}"
+CONFIGURE_ENV+=	PKG_CONFIG_SYSROOT_DIR="${X_SYSROOT}"
+.endif
+
 WRKDIR?=		${WRKDIRPREFIX}/${.CURDIR:H:T}/${.CURDIR:T}/work
 .if !defined(IGNORE_MASTER_SITE_GITHUB) && defined(USE_GITHUB)
+.  if defined(GH_COMMIT)
 WRKSRC?=		${WRKDIR}/${GH_ACCOUNT}-${GH_PROJECT}-${GH_COMMIT}
+.  else
+.    if defined(GH_TAGNAME)
+WRKSRC?=		${WRKDIR}/${GH_PROJECT}-${GH_TAGNAME_EXTRACT}
+.    else
+WRKSRC?=		${WRKDIR}/${GH_PROJECT}-${DISTVERSION}
+.    endif
+.  endif
 .endif
 .if defined(NO_WRKSUBDIR)
 WRKSRC?=		${WRKDIR}
@@ -2024,7 +2032,7 @@ DISTINFO_FILE?=		${MASTERDIR}/distinfo
 
 MAKE_FLAGS?=	-f
 MAKEFILE?=		Makefile
-MAKE_CMD?=		/usr/bin/make
+MAKE_CMD?=		${BSDMAKE}
 PLIST_SUB:=		${PLIST_SUB:NPROFILE=*} PROFILE="@comment "
 MAKE_ENV+=		PREFIX=${PREFIX} \
 			LOCALBASE=${LOCALBASE} \
@@ -2077,9 +2085,6 @@ BUILD_FAIL_MESSAGE+=	Try to set MAKE_JOBS_UNSAFE=yes and rebuild before reportin
 .endif
 
 .include "${PORTSDIR}/Mk/bsd.ccache.mk"
-
-PTHREAD_CFLAGS?=
-PTHREAD_LIBS?=		-pthread
 
 FETCH_ENV?=		SSL_NO_VERIFY_PEER=1 SSL_NO_VERIFY_HOSTNAME=1
 FETCH_BINARY?=	/usr/bin/fetch
@@ -2220,18 +2225,6 @@ MAKE_ENV+=	${INSTALL_MACROS}
 SCRIPTS_ENV+=	${INSTALL_MACROS}
 
 # Macro for copying entire directory tree with correct permissions
-.if ${UID} == 0
-COPYTREE_BIN=	${SH} -c '(${FIND} -d $$0 $$2 | ${CPIO} -dumpl $$1 >/dev/null \
-					2>&1) && \
-					${CHOWN} -Rh ${BINOWN}:${BINGRP} $$1 && \
-					${FIND} -d $$0 $$2 -type d -exec chmod 755 $$1/{} \; && \
-					${FIND} -d $$0 $$2 -type f -exec chmod ${BINMODE} $$1/{} \;' --
-COPYTREE_SHARE=	${SH} -c '(${FIND} -d $$0 $$2 | ${CPIO} -dumpl $$1 >/dev/null \
-					2>&1) && \
-					${CHOWN} -Rh ${SHAREOWN}:${SHAREGRP} $$1 && \
-					${FIND} -d $$0 $$2 -type d -exec chmod 755 $$1/{} \; && \
-					${FIND} -d $$0 $$2 -type f -exec chmod ${SHAREMODE} $$1/{} \;' --
-.else
 COPYTREE_BIN=	${SH} -c '(${FIND} -d $$0 $$2 | ${CPIO} -dumpl $$1 >/dev/null \
 					2>&1) && \
 					${FIND} -d $$0 $$2 -type d -exec chmod 755 $$1/{} \; && \
@@ -2240,7 +2233,6 @@ COPYTREE_SHARE=	${SH} -c '(${FIND} -d $$0 $$2 | ${CPIO} -dumpl $$1 >/dev/null \
 					2>&1) && \
 					${FIND} -d $$0 $$2 -type d -exec chmod 755 $$1/{} \; && \
 					${FIND} -d $$0 $$2 -type f -exec chmod ${SHAREMODE} $$1/{} \;' --
-.endif
 
 # The user can override the NO_PACKAGE by specifying this from
 # the make command line
@@ -2714,6 +2706,7 @@ LATEST_LINK?=		${PKGBASE}
 PKGLATESTFILE=		${PKGLATESTREPOSITORY}/${LATEST_LINK}${PKG_SUFX}
 
 CONFIGURE_SCRIPT?=	configure
+CONFIGURE_CMD?=		./${CONFIGURE_SCRIPT}
 CONFIGURE_TARGET?=	${ARCH}-portbld-${OPSYS:tl}${OSREL}
 CONFIGURE_TARGET:=	${CONFIGURE_TARGET:S/--build=//}
 CONFIGURE_LOG?=		config.log
@@ -3498,7 +3491,7 @@ do-configure:
 	    INSTALL_LIB="${INSTALL_LIB}" \
 	    INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 	    INSTALL_SCRIPT="${INSTALL_SCRIPT}" \
-	    ${CONFIGURE_ENV} ./${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}; then \
+	    ${CONFIGURE_ENV} ${CONFIGURE_CMD} ${CONFIGURE_ARGS}; then \
 			 ${ECHO_MSG} "===>  Script \"${CONFIGURE_SCRIPT}\" failed unexpectedly."; \
 			 (${ECHO_CMD} ${CONFIGURE_FAIL_MESSAGE}) | ${FMT} 75 79 ; \
 			 ${FALSE}; \
