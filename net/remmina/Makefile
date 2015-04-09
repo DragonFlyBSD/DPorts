@@ -1,5 +1,5 @@
 # Created by: Alexander Logvinov <ports@logvinov.com>
-# $FreeBSD: head/net/remmina/Makefile 382278 2015-03-25 23:51:05Z marino $
+# $FreeBSD$
 
 PORTNAME=	remmina
 PORTVERSION=	1.0.0
