@@ -1,7 +1,9 @@
-# Needed in the case of gcc50 building lang/gcc5 when the world was built
-# by gcc47.  Using the normal c++ flags will break the build.
+# $FreeBSD$
 
-CXXFLAGS:= ${CXXFLAGS:N-D_GLIBCXX_USE_CXX11_ABI*}
+# The following modification to CXXFLAGS is needed in the case of DragonFly
+# 4.1+ building lang/gcc5 with the gcc50 base compiler when the system
+# libraries were built by the gcc47 base compiler.  The sys.mk file
+# automatically adds -D_GLIBCXX_USE_CXX11_ABI=0 to CXXFLAGS in that case,
+# which will break the build.
 
-# Contents of ports Makefile.DragonFly (oops)
-OPTIONS_EXCLUDE= JAVA
+CXXFLAGS:=	${CXXFLAGS:N-D_GLIBCXX_USE_CXX11_ABI*}
