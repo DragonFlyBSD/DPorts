@@ -1,5 +1,5 @@
 # Created by: Glenn Johnson <glennpj@charter.net>
-# $FreeBSD: head/finance/libofx/Makefile 372523 2014-11-13 14:32:39Z antoine $
+# $FreeBSD$
 
 PORTNAME=	libofx
 PORTVERSION=	0.9.10
