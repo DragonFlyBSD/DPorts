@@ -1,4 +1,4 @@
-# $FreeBSD: head/lang/sbcl/Makefile 381890 2015-03-22 08:16:55Z marino $
+# $FreeBSD$
 
 PORTNAME=	sbcl
 PORTVERSION=	1.2.9
