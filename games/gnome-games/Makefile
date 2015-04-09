@@ -6,12 +6,11 @@ PORTNAME=	gnome-games
 PORTVERSION=	3.14.0
 PORTREVISION=	1
 CATEGORIES=	games gnome
-MASTER_SITES=	# empty
-DISTFILES=	# empty
-EXTRACT_ONLY=	# empty
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Gnome games meta port
+
+USES=		metaport
 
 RUN_DEPENDS=	five-or-more:${PORTSDIR}/games/five-or-more \
 		four-in-a-row:${PORTSDIR}/games/four-in-a-row \
@@ -29,9 +28,5 @@ RUN_DEPENDS=	five-or-more:${PORTSDIR}/games/five-or-more \
 		quadrapassel:${PORTSDIR}/games/quadrapassel \
 		swell-foop:${PORTSDIR}/games/swell-foop \
 		tali:${PORTSDIR}/games/tali
-
-NO_BUILD=	yes
-NO_INSTALL=	yes
-NO_MTREE=	yes
 
 .include <bsd.port.mk>
