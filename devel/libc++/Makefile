@@ -1,15 +1,14 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD: head/devel/libc++/Makefile 376020 2015-01-01 18:33:14Z bapt $
+# $FreeBSD$
 
 PORTNAME?=	libc++
 DISTNAME=	libc++-${PORTVERSION}
 PORTVERSION=	${SVN_REV}
-PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://files.etoilebsd.net/libc++/ \
 		LOCAL/bapt
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	dim@FreeBSD.org
 COMMENT?=	LLVM C++ standard library with c++11 support
 
 USES=		tar:xz
