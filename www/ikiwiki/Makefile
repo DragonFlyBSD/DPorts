@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	ikiwiki
-PORTVERSION=	3.20141016.1
-PORTREVISION=	1
+PORTVERSION=	3.20141016.2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_DEBIAN_POOL} \
 		http://kitenet.net/~joey/debian/unstable/ \
@@ -36,7 +35,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS} \
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-USES=		gettext perl5 gmake
+USES=		gettext perl5 gmake cpe
 USE_PERL5=	configure
 
 CONFIGURE_ARGS=	PERL=${PERL} FULLPERL=${PERL}
