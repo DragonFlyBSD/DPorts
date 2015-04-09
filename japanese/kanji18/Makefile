@@ -3,30 +3,25 @@
 
 PORTNAME=	kanji
 PORTVERSION?=	1.0
-PORTREVISION?=	5
+PORTREVISION?=	6
 CATEGORIES=	japanese x11-fonts
 MASTER_SITES=   http://leaf.dragonflybsd.org/~marino/dports-src/
 PKGNAMESUFFIX?=	18
 DISTNAME=	${PORTNAME}${PKGNAMESUFFIX}
 DISTFILES=	${DISTNAME}-${PORTVERSION}${EXTRACT_SUFX}
-EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	sanpei@FreeBSD.org
 COMMENT=	X11 ${PKGNAMESUFFIX}-dot Kanji font
 
+USES=		fonts tar:bz2
 BUILD_DEPENDS=	mkbold:${PORTSDIR}/x11-fonts/mkbold-mkitalic \
-		bdftopcf:${PORTSDIR}/x11-fonts/bdftopcf \
-		mkfontdir:${PORTSDIR}/x11-fonts/mkfontdir \
-		mkfontscale:${PORTSDIR}/x11-fonts/mkfontscale
-RUN_DEPENDS=	mkfontdir:${PORTSDIR}/x11-fonts/mkfontdir
+		bdftopcf:${PORTSDIR}/x11-fonts/bdftopcf
 
-FONTSDIR=	lib/X11/fonts/local
 NO_WRKSUBDIR=	yes
 
 PKGINSTALL=	${WRKSRC}/INSTALL
 PKGDEINSTALL=	${WRKSRC}/DEINSTALL
-MAKE_ENV=	FONTSDIR=${FONTSDIR}
-PLIST_SUB=	FONTSDIR=${FONTSDIR}
+MAKE_ENV=	FONTSDIR=${FONTSDIR:S,${PREFIX},,}
 RESIZESED_FILE?=	18to16.sed
 RESIZED_ALIAS_FILE?=	kanji16.alias
 
