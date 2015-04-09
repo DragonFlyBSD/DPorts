@@ -2,10 +2,10 @@
 # $FreeBSD$
 
 PORTNAME=	mpv
-PORTVERSION=	0.8.2
+PORTVERSION=	0.8.3
 PORTEPOCH=	1
 CATEGORIES=	multimedia audio
-MASTER_SITES=	GH:0 GHC:0 http://ftp.waf.io/pub/release/:1 \
+MASTER_SITES=	GHL:0 http://ftp.waf.io/pub/release/:1 \
 		http://www.freehackers.org/~tnagy/release/:1
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}:0 waf-${WAF_VERSION}:1
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
@@ -24,11 +24,11 @@ BUILD_DEPENDS=	rst2man:${PORTSDIR}/textproc/py-docutils
 USE_GITHUB=	yes
 GH_ACCOUNT=	mpv-player
 GH_TAGNAME=	v${PORTVERSION}
-GH_COMMIT=	7fe9126
+GH_COMMIT=	ff4c1cc
 
-WAF_VERSION=	1.8.6
+WAF_VERSION=	1.8.7
 
-USES=		compiler:c11 desktop-file-utils iconv pkgconfig python:build
+USES=		compiler:c11 desktop-file-utils iconv pkgconfig python:build waf
 USE_XORG=	x11 xv xxf86vm
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
@@ -126,8 +126,6 @@ JACK_CONFIGURE_ENABLE=		jack
 PULSEAUDIO_LIB_DEPENDS=		libpulse.so:${PORTSDIR}/audio/pulseaudio
 PULSEAUDIO_CONFIGURE_ENABLE=	pulse
 
-.include <bsd.port.options.mk>
-
 post-extract:
 	${CP} ${DISTDIR}/waf-${WAF_VERSION} ${WRKSRC}/waf
 	@${CHMOD} +x ${WRKSRC}/waf
@@ -137,18 +135,6 @@ post-patch:
 		${WRKSRC}/wscript_build.py
 	@${FIND} ${WRKSRC}/DOCS/man -name '*.rst' | ${XARGS} ${REINPLACE_CMD} \
 		-e 's|/usr/local|${PREFIX}|g'
-
-do-configure:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PYTHON_CMD} \
-		waf configure ${_MAKE_JOBS} ${CONFIGURE_ARGS}
-
-do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PYTHON_CMD} \
-		waf build ${_MAKE_JOBS}
-
-do-install:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PYTHON_CMD} \
-		waf install --destdir=${STAGEDIR}
 
 post-stage:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/mpv
