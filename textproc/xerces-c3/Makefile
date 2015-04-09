@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	xerces-c
-PORTVERSION=	3.1.1
-PORTREVISION=	4
+PORTVERSION=	3.1.2
 CATEGORIES=	textproc
 MASTER_SITES=	APACHE/xerces/c/3/sources
 PKGNAMESUFFIX=	3
@@ -22,9 +21,12 @@ GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
 MAKE_ENV=	XERCESCROOT=${WRKSRC}
 USE_LDCONFIG=	yes
-USES=		gmake libtool pathfix
+USES=		cpe gmake libtool pathfix
 
 PLIST_SUB=	MAJOR_VER=${PORTVERSION:R}
+
+CPE_PRODUCT=	xerces-c++
+CPE_VENDOR=	apache
 
 post-install:
 	${LN} -s libxerces-c-${PORTVERSION:R}.so ${STAGEDIR}${PREFIX}/lib/libxerces-c.so.${PORTVERSION:R:R}
