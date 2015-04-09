@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	libva
-PORTVERSION=	1.5.0
+PORTVERSION=	1.5.1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://cgit.freedesktop.org/${PORTNAME}/snapshot/
 
@@ -54,9 +54,5 @@ post-patch:	.SILENT
 	${REINPLACE_CMD} '/^export VA_HEADER_/d' \
 		${WRKSRC}/doc/Makefile.am
 	${REINPLACE_CMD} 's/-ldl//' ${WRKSRC}/va/Makefile.am
-
-post-configure:	.SILENT
-	${REINPLACE_CMD} 's/-lpthread/${PTHREAD_LIBS}/' \
-		${WRKSRC}/test/putsurface/Makefile
 
 .include <bsd.port.post.mk>
