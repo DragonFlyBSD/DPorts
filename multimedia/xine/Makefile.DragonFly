@@ -1,2 +1,0 @@
-# DPorts is not currently catering to i386-only ports and options
-OPTIONS_EXCLUDE_i386+=	WIN32_CODECS
