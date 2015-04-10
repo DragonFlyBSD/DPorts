@@ -1,4 +1,4 @@
-$FreeBSD: head/databases/rdfdb/files/patch-makefile 340725 2014-01-22 17:40:44Z mat $
+$FreeBSD: head/databases/rdfdb/files/patch-makefile 382201 2015-03-25 09:33:52Z marino $
 
 --- makefile.orig	Sun Aug 20 15:48:46 2000
 +++ makefile	Sat Jun  8 20:25:04 2002
@@ -9,7 +9,7 @@ $FreeBSD: head/databases/rdfdb/files/patch-makefile 340725 2014-01-22 17:40:44Z 
 -CPPFLAGS = $(INCLUDES) -L  /usr/local/BerkeleyDB.3.1/lib/
 +CC ?= gcc -g 
 +INCLUDES = -I %%BDB_INCLUDE_DIR%% -I expat/xmltok -I expat/xmlparse
-+LIBS     = -l%%BDB_LIB_NAME%% %%PTHREAD_LIBS%%
++LIBS     = -l%%BDB_LIB_NAME%% -lpthread
 +CPPFLAGS += ${CFLAGS} $(INCLUDES) -L  %%LOCALBASE%%/lib
  
  OBJS =  utils/hash.o \
