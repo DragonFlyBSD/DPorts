@@ -1,11 +1,11 @@
 #!/bin/sh
-# $FreeBSD: head/japanese/alias-fonts/pkg-install 366038 2014-08-25 07:48:12Z marino $
+# $FreeBSD: head/japanese/alias-fonts/pkg-install 381876 2015-03-21 23:05:19Z bapt $
 
 if [ $2 != "POST-INSTALL" ]; then
   exit 0
 fi
 
-dir="${PKG_PREFIX}/lib/X11/fonts/local";
+dir="${PKG_PREFIX}/share/fonts/local";
 to="$dir/fonts.alias";
 from="$to.orig";
 
