@@ -1,6 +1,2 @@
-USES:= ${USES:Nbison}
-OPTIONS_EXCLUDE_x86_64+= JAVA
-OPTIONS_EXCLUDE_i386+= JAVA
-
 # gcc5 can't build stage 1 with -pedantic anymore
 USE_GCC=	4.7
