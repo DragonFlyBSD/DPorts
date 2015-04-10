@@ -3,7 +3,7 @@
 
 PORTNAME=	snmp
 PORTVERSION=	5.7.3
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	net-mgmt ipv6
 MASTER_SITES=	SF/net-${PORTNAME}/net-${PORTNAME}/${PORTVERSION}
 PKGNAMEPREFIX=	net-
@@ -51,6 +51,7 @@ CONFIGURE_ARGS+=--enable-shared --enable-internal-md5 \
 		--with-logfile="${NET_SNMP_LOGFILE}" \
 		--with-persistent-directory="${NET_SNMP_PERSISTENTDIR}" \
 		--with-gnu-ld --with-libwrap \
+		--with-libs="-lssp_nonshared" \
 		--with-ldflags="-lm -lkvm -ldevstat -L${PKG_PREFIX}/lib -L${LOCALBASE}/lib ${LCRYPTO}"
 SUB_FILES=	pkg-message
 
@@ -147,16 +148,12 @@ NET_SNMP_LOGFILE?=	/var/log/snmpd.log
 NET_SNMP_PERSISTENTDIR?=/var/net-snmp
 NET_SNMP_WITH_MIB_MODULE_LIST+=	host disman/event-mib mibII/mta_sendmail mibII/tcpTable ucd-snmp/diskio
 
-.if ${OSVERSION} >= 700028
-NET_SNMP_WITH_MIB_MODULE_LIST+=	sctp-mib
-.endif
-
-.if ${OSVERSION} >= 800000
-CONFIGURE_ARGS+=	--with-libs="-lssp_nonshared"
-.endif
-
-.if ${OSVERSION} >= 1000000
+.if ${OSVERSION} >= 1000000 && ${OSVERSION} < 1100062
 CFLAGS+=	-D_WANT_IFADDR
+.endif
+
+.if ${OSVERSION} >= 1100062
+CONFIGURE_ARGS+=	--with-out-mib-modules="mibII/ipv6"
 .endif
 
 .if ${PORT_OPTIONS:MMFD_REWRITES}
