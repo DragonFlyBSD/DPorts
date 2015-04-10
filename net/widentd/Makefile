@@ -1,5 +1,5 @@
 # Created by: Dirk-Willem van Gulik / dirkx@webweaving.org
-# $FreeBSD: head/net/widentd/Makefile 380353 2015-03-03 11:08:32Z robak $
+# $FreeBSD$
 
 PORTNAME=	widentd
 PORTVERSION=	1.04
