@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/env perl -w
 #-
 # Copyright (c) 2000-2011 Dag-Erling Coïdan Smørgrav
 # All rights reserved.
@@ -25,7 +25,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: head/ports-mgmt/porteasy/src/porteasy.pl 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/ports-mgmt/porteasy/src/porteasy.pl 383540 2015-04-07 21:03:46Z des $
 #
 
 use strict;
