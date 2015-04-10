@@ -1,5 +1,5 @@
 # Created by: Hirohisa Yamaguchi <umq@ueo.co.jp>
-# $FreeBSD: head/mail/batv-milter/Makefile 361099 2014-07-07 15:31:01Z olgeni $
+# $FreeBSD$
 
 PORTNAME=	batv-milter
 PORTVERSION=	0.5.0
