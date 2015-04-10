@@ -1,20 +1,19 @@
---- configure.orig	2008-03-19 22:37:51.000000000 +0000
+--- configure.orig	2014-12-08 19:10:28 UTC
 +++ configure
-@@ -8195,7 +8195,7 @@ echo "${ECHO_T}$tcl_cv_ld_elf" >&6
- 	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.a'
- 	    TCL_LIB_VERSIONS_OK=nodots
+@@ -8268,7 +8268,7 @@ fi
+ 		;;
+ 	    esac
  	    ;;
 -	FreeBSD-*)
 +	DragonFly-*|FreeBSD-*)
- 	    # FreeBSD 3.* and greater have ELF.
+ 	    # This configuration from FreeBSD Ports.
  	    SHLIB_CFLAGS="-fPIC"
- 	    SHLIB_LD="ld -Bshareable -x"
-@@ -8900,7 +8900,7 @@ fi;
- 		    ;;
- 		IRIX*)
- 		    ;;
--		NetBSD-*|FreeBSD-*)
-+		NetBSD-*|DragonFly-*|FreeBSD-*)
- 		    ;;
- 		Darwin-*)
- 		    ;;
+ 	    SHLIB_LD="${CC} -shared"
+@@ -9105,6 +9105,7 @@ fi
+ 	    CYGWIN_*) ;;
+ 	    IRIX*) ;;
+ 	    NetBSD-*|FreeBSD-*|OpenBSD-*) ;;
++	    DragonFly-*) ;;
+ 	    Darwin-*) ;;
+ 	    SCO_SV-3.2*) ;;
+ 	    windows) ;;
