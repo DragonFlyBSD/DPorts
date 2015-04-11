@@ -1,11 +1,12 @@
---- lib/sendmsg.c.orig	2014-01-07 11:16:14.000000000 +0000
+--- lib/sendmsg.c.orig	2015-02-25 03:49:26 UTC
 +++ lib/sendmsg.c
-@@ -605,7 +605,7 @@ void sendmessage_finish_local(void)
+@@ -606,7 +606,8 @@ void sendmessage_finish_local(void)
  sendresult_t sendmessage_local(char *msg)
  {
  	int n, done = 0;
--	msglen_t msglen;
-+	unsigned long msglen;
- 
- 	if (backfeedqueue == -1) {
- 		return sendmessage(msg, NULL, XYMON_TIMEOUT, NULL);
+-	#if defined(__OpenBSD__) || defined(__dietlibc__)
++	#if defined(__OpenBSD__) || defined(__dietlibc__) \
++	 || defined(__DragonFly__)
+ 		unsigned long msglen;
+ 	#else
+ 		msglen_t msglen;
