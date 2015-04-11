@@ -130,9 +130,6 @@ LDFLAGS+=		-L${LOCALBASE}/lib -Wl,-rpath,${PREFIX}/lib/${MOZILLA}
 
 # use jemalloc 3.0.0 API for stats/tuning
 MOZ_EXPORT+=	MOZ_JEMALLOC3=1
-.if ${OSVERSION} < 1000012 || ${MOZILLA_VER:R:R} >= 37
-MOZ_OPTIONS+=	--enable-jemalloc
-.endif
 
 # Standard depends
 _ALL_DEPENDS=	cairo event ffi graphite harfbuzz hunspell icu jpeg nspr nss opus png pixman soundtouch sqlite vorbis vpx
