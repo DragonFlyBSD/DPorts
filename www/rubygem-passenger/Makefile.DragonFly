@@ -1,3 +1,0 @@
-post-extract:
-	cands=`grep -rl __FreeBSD__ ${WRKSRC}`; \
-	${REINPLACE_CMD} 's|__FreeBSD__|__DragonFly__|g' $${cands}
