@@ -5,7 +5,7 @@ PORTNAME=	pdf2svg
 PORTVERSION=	0.2.2
 PORTREVISION=	3
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.cityinthesky.co.uk/_media/opensource/
+MASTER_SITES=	http://www.cityinthesky.co.uk/wp-content/uploads/2013/10/
 
 MAINTAINER=	martin.dieringer@gmx.de
 COMMENT=	Convert PDF to SVG
