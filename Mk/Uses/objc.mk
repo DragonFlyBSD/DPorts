@@ -14,13 +14,7 @@ _INCLUDE_USES_OBJC_MK=	yes
 IGNORE=	USES=objc takes no arguments
 .endif
 
-_CCVERSION!=	${CC} --version
-COMPILER_VERSION=	${_CCVERSION:M[0-9].[0-9]*:C/([0-9]).([0-9]).*/\1\2/g}
-.if ${_CCVERSION:Mclang}
-COMPILER_TYPE=	clang
-.else
 COMPILER_TYPE=	gcc
-.endif
 
 ALT_COMPILER_VERSION=	0
 ALT_COMPILER_TYPE=	none

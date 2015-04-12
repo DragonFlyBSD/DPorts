@@ -5,6 +5,21 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20150409:
+  AFFECTS: User of security/sguil
+  AUTHOR: feld@FreeBSD.org
+
+  security/sguil was erroneously provisioned a UID that conflicted with
+  the dns/dnscrypt-proxy port. A new UID and GID of 991 has been issued.
+
+  Existing users will be able to upgrade the sguil packages without
+  issue. The existing UID will continue to be used. If you do a clean
+  install of security/sguil on a new server and migrate files or
+  intentionally delete the sguil user and group and reinstall you may
+  run into permissions issues.
+
+  Examples include the /var/run/sguild and /usr/local/etc/sguild directories.
+
 20150406:
   AFFECTS: User of emulators/xen emulators/xl and sysutils/xen-tools
   AUTHOR: bapt@FreeBSD.org
@@ -1874,16 +1889,4 @@ AUTHOR: ohauer@FreeBSD.org
   More information is available here:
 
     http://lists.freebsd.org/pipermail/freebsd-ports/2014-April/091618.html
-
-20140410:
-  AFFECTS: users of mail/vpopmail
-  AUTHOR: bdrewery@FreeBSD.org
-
-  If you are storing limits in MySQL, the following schema changes must be made:
-
-  ALTER TABLE `limits` ADD `disable_maildrop` TINYINT(1) DEFAULT '0' NOT NULL AFTER `disable_spamassassin`;
-  ALTER TABLE `limits` MODIFY `diskquota` BIGINT UNSIGNED NOT NULL DEFAULT 0;
-  ALTER TABLE `limits` MODIFY `maxmsgcount` BIGINT UNSIGNED NOT NULL DEFAULT 0;
-  ALTER TABLE `limits` MODIFY `defaultquota` BIGINT UNSIGNED NOT NULL DEFAULT 0;
-  ALTER TABLE `limits` MODIFY `defaultmaxmsgcount` BIGINT UNSIGNED NOT NULL DEFAULT 0;
 

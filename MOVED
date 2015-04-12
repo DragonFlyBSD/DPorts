@@ -3538,3 +3538,6 @@ sysutils/puppet27||2015-04-07|Has expired: Does not work with Ruby 2.x
 www/rubygem-form_data|www/rubygem-http-form_data|2015-04-07|Has expired: Use www/rubygem-http-form_data instead (renamed by upstream)
 www/typo345||2015-04-07|Has expired: Upgrade to www/typo3 or www/typo3-lts
 multimedia/mediabrowser|multimedia/emby-server|2015-04-08|Project renamed
+deskutils/preferencepanes|deskutils/systempreferences|2015-04-08|preferencepanes merged into systempreferences
+games/airstrike||2015-04-10|Has expired: never completed, alpha quality, dev site and repo do not resolve
+www/trac-batchmodify||2015-04-10|Has expired: This functionality was merged into Trac since version 1.0
