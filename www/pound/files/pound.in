@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/www/pound/files/pound.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/www/pound/files/pound.in 383730 2015-04-10 14:31:00Z danfe $
 #
 
 # PROVIDE: %%NAME%%
@@ -10,7 +10,7 @@
 
 # Add the following line to /etc/rc.conf to enable `%%NAME%%':
 #
-#%%NAME%%_enable="YES"
+# %%NAME%%_enable="YES"
 #
 # and be sure to configure %%PREFIX%%/etc/%%NAME%%.conf
 
