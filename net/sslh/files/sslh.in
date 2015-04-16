@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/net/sslh/files/sslh.in 352837 2014-05-02 18:28:34Z marius $
+# $FreeBSD: head/net/sslh/files/sslh.in 381066 2015-03-12 08:43:18Z vanilla $
 #
 # sslh startup script
 #
@@ -53,6 +53,6 @@ for value in listening openvpntarget sshtarget sshtimeout ssltarget \
 done
 
 command="%%PREFIX%%/sbin/${name}-${sslh_mode}"
-command_args="-F %%PREFIX%%/etc/${name}.conf"
+command_args="-F%%PREFIX%%/etc/${name}.conf"
 
 run_rc_command "$1"
