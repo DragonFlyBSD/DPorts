@@ -27,6 +27,8 @@ PORTDATA=	*
 
 OPTIONS_DEFINE=	DOCS
 
+MAKE_JOBS_UNSAFE=	yes
+
 post-extract:
 	@${FIND} ${WRKSRC}/Data -name '._*' -delete
 
