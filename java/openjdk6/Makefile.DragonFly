@@ -1,0 +1,3 @@
+# same as openjdk7 and openjdk8
+
+USE_GCC=4.7
