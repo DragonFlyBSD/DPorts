@@ -25,8 +25,8 @@ OPTIONS_DEFINE=	DOCS
 post-build:
 	# Building sample applications:
 .for a in ${UDT_APPS}
-	${CXX} ${CXXFLAGS} ${WRKSRC:H}/app/$a.cpp -o ${WRKSRC:H}/app/udt-$a \
-	    -I${WRKSRC} -L${WRKSRC} -ludt -pthread
+	${SETENV} ${MAKE_ENV} ${CXX} ${CXXFLAGS} ${WRKSRC:H}/app/$a.cpp \
+	-o ${WRKSRC:H}/app/udt-$a -I${WRKSRC} -L${WRKSRC} -ludt -pthread
 .endfor
 
 .include <bsd.port.options.mk>
