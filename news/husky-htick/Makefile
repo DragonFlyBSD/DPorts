@@ -17,12 +17,11 @@ PLIST_FILES=	bin/htick man/man1/htick.1.gz
 MASTERDIR=      ${.CURDIR}/../husky
 COMPONENT_SUBDIR=       htick
 
-.include <bsd.port.pre.mk>
 # The texi files are too old for the ports texinfo
 # The correct fix is to update the texi file so modern texinfo can use it
 # Until then, disable installation of info page on FreeBSD 11 and DragonFly
 # to unbreak the build on those platforms.
-.if ${OPSYS} == DragonFly || (${OPSYS} == FreeBSD && ${OSVERSION} > 1100000)
+.if !exists(/usr/bin/makeinfo)
 .else
 USES+=			makeinfo
 ALL_TARGET+=		doc
@@ -36,4 +35,4 @@ post-patch:
 	${REINPLACE_CMD} -e 's^/fido/etc/config^${PREFIX}/etc/fido/config^' \
 		${WRKSRC}/man/htick.1
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
