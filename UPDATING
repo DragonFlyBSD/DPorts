@@ -5,6 +5,13 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20150417:
+  AFFECTS: Users of audio/bcg729
+  AUTHOR: tijl@FreeBSD.org
+
+  The Mediastreamer plugin included in this package has been separated into
+  a new port audio/msbcg729.
+
 20150409:
   AFFECTS: User of security/sguil
   AUTHOR: feld@FreeBSD.org
@@ -1782,84 +1789,4 @@ AUTHOR: ohauer@FreeBSD.org
   Startup script tries it's best to guess which out of samba/nmbd/smbd/winbindd
   daemons have to be started, but you can fine tune this by specifying them in
   rc.conf, just make sure that samba_server_enable is enabled(see entry for 20121022).
-
-20140416:
-  AFFECTS: users of x11/xorg graphics/dri graphics/libGL and related ports
-  AUTHOR: x11@FreeBSD.org
-
-  The default xorg version has been switched on FreeBSD 10-STABLE and
-  FreeBSD 9-STABLE.
-
-  To upgrade graphics/libGL, graphics/dri and related MESA ports, it is
-  necessary to first remove the old versions of those ports.
-  No special upgrade procedure is needed for xorg ports but it is
-  necessary to recompile all xorg drivers (xf86-*) and other ports that
-  depend on the xserver version, including
-  emulators/virtualbox-ose-additions.  Portrevisions have been bumped
-  where needed, but users of drivers not in the ports tree will need to
-  recompile those.
-
-  If it is important to stay on the old versions, it is possible to
-  specify WITHOUT_NEW_XORG= in /etc/make.conf to get the old xorg
-  distribution.
-
-  For users in need of working console when using KMS drivers (intel and
-  radeon graphics cards) please use the new vt(9) console driver.
-  For more information, see https://wiki.freebsd.org/Graphics and
-  https://wiki.freebsd.org/Newcons .
-
-  To update:
-
-  # pkg_delete -f libGL-\* dri-\*
-    or
-  # pkg delete -f libGL dri
-    followed by
-  # portmaster graphics/dri graphics/libGL
-    or
-  # portupgrade graphics/dri graphics/libGL
-    and then
-  # portmaster -a
-    or
-  # portupgrade -a
-
-20140416:
-  AFFECTS: users of print/freetype2 textproc/libxml2 x11/pixman
-           x11/libxcb and graphics/freeglut
-  AUTHOR: x11@FreeBSD.org and gnome@FreeBSD.org
-
-  The library version of the above libraries has been brought in line
-  with what upstream expects. To do this all users of these ports need
-  to be rebuilt. Portrevisions have been bumped as a consequence.
-
-  # portmaster -r freetype2 -r libxml2 -r pixman -r freeglut -r libxcb
-  or
-  # portupgrade -rf freetype2 libxml2 pixman freeglut libxcb
-
-20140415:
-  AFFECTS: Users of mod_python3
-  AUTHOR: ohauer@FreeBSD.org
-
-  www/mod_python3 was renamed to www/mod_python33, additional www/mod_python35
-  with support for apache24 was added to the portstree.
-
-  To reflect the new port location use:
-
-  pkgng users:
-  # pkg set -o www/mod_python3:www/mod_python33
-
-  portmaster users:
-  # portmaster -o www/mod_python33 www/mod_python3
-
-  portupgrade users:
-  # portugrade -o www/mod_python33 www/mod_python3
-
-20140414:
-  AFFECTS: Users of dmd 1.X and dmd 2.x.
-  AUTHOR: cy@FreeBSD.org
-
-  lang/dmd and lang/dmd2 have switched places. Dmd 1.x is no longer supported
-  by digitalmars.com and is now the secondary dmd port in the collection.
-  Dmd2 is the primary port. What this means to dmd users is that dmd1 is now
-  used to invoke dmd 1.x and the dmd command (instead of dmd2) now invokes
-  dmd 2.x.
 
