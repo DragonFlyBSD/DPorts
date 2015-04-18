@@ -1,2 +1,0 @@
-# uses experimental TR1 shared_ptr
-USE_GCC=4.7
