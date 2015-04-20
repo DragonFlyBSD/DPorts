@@ -20,7 +20,6 @@ RUN_DEPENDS=	five-or-more:${PORTSDIR}/games/five-or-more \
 		gnome-mines:${PORTSDIR}/games/gnome-mines \
 		gnome-nibbles:${PORTSDIR}/games/gnome-nibbles \
 		gnome-robots:${PORTSDIR}/games/gnome-robots \
-		gnome-sudoku:${PORTSDIR}/games/gnome-sudoku \
 		gnome-tetravex:${PORTSDIR}/games/gnome-tetravex \
 		hitori:${PORTSDIR}/games/hitori \
 		iagno:${PORTSDIR}/games/iagno \
