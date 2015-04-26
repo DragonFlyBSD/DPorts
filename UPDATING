@@ -5,6 +5,25 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20150420:
+  AFFECTS: users of devel/icu
+  AUTHOR: bapt@FreeBSD.org
+
+  icu has been updated to 55.1. Please rebuild all ports that depends on it
+
+  If you use portmaster:
+        portmaster -w -r icu
+  If you use portupgrade:
+        portupgrade -fr devel/icu
+
+20150419
+  AFFECTS: Users of emulators/wine-devel
+  AUTHOR: gerald@FreeBSD.org
+
+
+  The COMPHOLIO option in emulators/wine-devel has been renamed to
+  STAGING to align with the upstream evolution of that project.
+
 20150417:
   AFFECTS: Users of audio/bcg729
   AUTHOR: tijl@FreeBSD.org
@@ -1775,18 +1794,4 @@ AUTHOR: ohauer@FreeBSD.org
 
   Due to changes in header files, please deinstall gdal first while updating
   from 1.9.x/1.10.x to 1.11.x.
-
-20140420:
-  AFFECTS: users of net/samba4
-  AUTHOR: timur@FreeBSD.org
-
-  Samba4 port now re-uses the same logic and startup script as Samba41. So,
-  to get net/samba4 runing you need to rename samba4_enable in /etc/rc.conf
-  to the samba_sever_enable.
-
-  samba_server_enable="YES"
-
-  Startup script tries it's best to guess which out of samba/nmbd/smbd/winbindd
-  daemons have to be started, but you can fine tune this by specifying them in
-  rc.conf, just make sure that samba_server_enable is enabled(see entry for 20121022).
 

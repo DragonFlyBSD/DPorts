@@ -306,6 +306,7 @@ spark:*:987:
 emby:*:989:
 oozie:*:990:
 sguil:*:991:
+hive:*:992:
 ebnetd:*:999:
 avenger:*:60149:
 cbsd:*:60150:
