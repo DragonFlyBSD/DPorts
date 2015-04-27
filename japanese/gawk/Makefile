@@ -1,5 +1,5 @@
 # Created by: Nobuhiro Yasutomi <nobu@psrc.isac.co.jp>
-# $FreeBSD: head/japanese/gawk/Makefile 362018 2014-07-16 02:29:34Z adamw $
+# $FreeBSD$
 
 PORTNAME=	gawk
 PORTVERSION=	3.0.6
