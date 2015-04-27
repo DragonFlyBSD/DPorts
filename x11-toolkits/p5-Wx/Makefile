@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	Wx
-PORTVERSION=	0.99.23
-PORTREVISION=	2
+PORTVERSION=	0.99.27
 CATEGORIES=	x11-toolkits perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -31,14 +30,12 @@ CONFIGURE_ENV=	CXX=${CXX}
 
 .include <bsd.port.pre.mk>
 
-.if ${PERL_LEVEL} < 501508
-BUILD_DEPENDS+=	p5-ExtUtils-ParseXS>=3.15:${PORTSDIR}/devel/p5-ExtUtils-ParseXS
-RUN_DEPENDS+=	p5-ExtUtils-ParseXS>=3.15:${PORTSDIR}/devel/p5-ExtUtils-ParseXS
+.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1000000
+BROKEN=		does not build
 .endif
-
 
 post-configure:
 	@${FIND} ${WRKSRC} -name "Makefile" -type f | ${XARGS} \
-		${REINPLACE_CMD} -e 's/^CCFLAGS = .*$$/CCFLAGS = ${CXXFLAGS}/'
+		${REINPLACE_CMD} -e 's|^CCFLAGS = .*$$|CCFLAGS = ${CXXFLAGS}|'
 
 .include <bsd.port.post.mk>
