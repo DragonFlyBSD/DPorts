@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	rlvm
-PORTVERSION=	0.14
+PORTVERSION=	0.14.0.20150425
 CATEGORIES=	devel games
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -14,16 +14,12 @@ BUILD_DEPENDS=	${LOCALBASE}/include/utf8.h:${PORTSDIR}/devel/utf8cpp
 LIB_DEPENDS=	libvorbisfile.so:${PORTSDIR}/audio/libvorbis \
 		libboost_serialization.so:${PORTSDIR}/devel/boost-libs \
 		libguichan.so:${PORTSDIR}/devel/guichan \
-		libGLEW.so:${PORTSDIR}/graphics/glew \
-		libjpeg.so:${PORTSDIR}/graphics/jpeg \
-		libpng.so:${PORTSDIR}/graphics/png \
-		libsmpeg.so:${PORTSDIR}/multimedia/smpeg
-RUN_DEPENDS=	${LOCALBASE}/lib/X11/fonts/dejavu/DejaVuSans.ttf:${PORTSDIR}/x11-fonts/dejavu
+		libGLEW.so:${PORTSDIR}/graphics/glew
+RUN_DEPENDS=	${LOCALBASE}/share/fonts/dejavu/DejaVuSans.ttf:${PORTSDIR}/x11-fonts/dejavu
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	eglaysher
-GH_TAGNAME=	release-${PORTVERSION}
-GH_COMMIT=	b88bfe0
+GH_TAGNAME=	373a3db # release-${PORTVERSION}
 
 USES=		compiler:c++11-lib pkgconfig scons
 USE_GL=		yes
@@ -46,11 +42,11 @@ OPTIONS_SUB=	yes
 
 JAPANESE_FONT_DESC=msgothic.ttc alternatives with verified metrics (unless --font)
 KOCHI_DESC=	kochi-gothic-subst.ttf from japanese/font-kochi
-KOCHI_RUN_DEPENDS=${LOCALBASE}/lib/X11/fonts/TTF/kochi-gothic-subst.ttf:${PORTSDIR}/japanese/font-kochi
+KOCHI_RUN_DEPENDS=${LOCALBASE}/share/fonts/TTF/kochi-gothic-subst.ttf:${PORTSDIR}/japanese/font-kochi
 MONA_DESC=	mona.ttf from japanese/monafonts-ttf
-MONA_RUN_DEPENDS=${LOCALBASE}/lib/X11/fonts/TrueType/mona.ttf:${PORTSDIR}/japanese/monafonts-ttf
+MONA_RUN_DEPENDS=${LOCALBASE}/share/fonts/TrueType/mona.ttf:${PORTSDIR}/japanese/monafonts-ttf
 SAZANAMI_DESC=	sazanami-gothic.ttf from japanese/font-sazanami
-SAZANAMI_RUN_DEPENDS=${LOCALBASE}/lib/X11/fonts/TTF/sazanami-gothic.ttf:${PORTSDIR}/japanese/font-sazanami
+SAZANAMI_RUN_DEPENDS=${LOCALBASE}/share/fonts/TTF/sazanami-gothic.ttf:${PORTSDIR}/japanese/font-sazanami
 
 DEBUG_MAKE_ARGS_OFF=--release
 NLS_USES=	gettext
@@ -70,7 +66,6 @@ post-patch:
 	@${GREP} -Flr '/usr/share' ${WRKSRC} | ${XARGS} ${REINPLACE_CMD} \
 		-i .bak.paths \
 		-e 's,/usr/share,${PREFIX}/share,' \
-		-e 's,share/fonts,lib/X11/fonts,' \
 		-e 's,truetype/ttf-dejavu,dejavu,' \
 		-e 's,truetype/mona,TrueType,' \
 		-e 's,truetype/[^/"]*,TTF,'
@@ -97,10 +92,8 @@ do-install:
 		. ${STAGEDIR}${PREFIX}/share/locale)
 .endif
 .if ${PORT_OPTIONS:MDOCS}
-	${MKDIR} ${STAGEDIR}${DOCSDIR}
-. for f in ${PORTDOCS:Nnotes}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${STAGEDIR}${DOCSDIR}
-. endfor
+	(cd ${WRKSRC} && ${COPYTREE_SHARE} \
+		"${PORTDOCS:Nnotes}" ${STAGEDIR}${DOCSDIR})
 	(cd ${WRKSRC}/doc && ${COPYTREE_SHARE} \
 		notes ${STAGEDIR}${DOCSDIR})
 .endif
