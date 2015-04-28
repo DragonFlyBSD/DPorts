@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/lang/gcc5-aux/Makefile 384038 2015-04-15 08:20:27Z tijl $
 
 PORTNAME=	gcc5-aux
 PORTVERSION=	${SNAPSHOT}
@@ -27,6 +27,8 @@ BLD_TARGET=		${GARCH}-aux-${OPSYS:tl}${OSREL}
 FULL_GNATGCC=		NOT_SET
 OS_LABEL4VERS=		[${OPSYS}${GARCH:M*64:S/amd_//:S/x86_//}]
 NO_MTREE=		yes
+CPPFLAGS+=		-I${LOCALBASE}/include
+LDFLAGS+=		-L${LOCALBASE}/lib
 
 OPTIONS_GROUP=		Standard Bootstrap
 OPTIONS_GROUP_Standard=	FORT OBJC NLS TESTSUITE STATIC
@@ -135,7 +137,7 @@ APPLY_DIFFS+=	gcc-testsuite
 .endif
 
 .if ${PORT_OPTIONS:MNLS} && !${PORT_OPTIONS:MBOOTSTRAP}
-USES+=		gettext-tools
+USES+=		gettext
 EXTRA_CONFIG+=	--enable-nls
 .else
 EXTRA_CONFIG+=	--disable-nls
@@ -156,6 +158,10 @@ EXTRA_CONFIG+=		--with-boot-ldflags=-static
 # Establish Ada-aware compiler for use
 ADA_CONFIGURE_ENV+=	CC=${FULL_GNATGCC}
 ADA_CONFIGURE_ENV+=	CXX=${FULL_GNATGXX}
+ADA_CONFIGURE_ENV+=	CFLAGS="${CFLAGS}"
+ADA_CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
+ADA_CONFIGURE_ENV+=	CXXFLAGS="${CXXFLAGS}"
+ADA_CONFIGURE_ENV+=	LDFLAGS="${LDFLAGS}"
 ADA_CONFIGURE_ENV+=	PATH=${FULL_PATH}
 ADA_MAKE_ENV+=		PATH=${FULL_PATH}
 ADA_MAKE_ENV+=		LD_LIBRARY_PATH=${BUILDDIR}/gcc
