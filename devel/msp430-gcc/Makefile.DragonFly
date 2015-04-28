@@ -1,3 +1,0 @@
-# Even with zrj patch, gcc5 can not currently compile without segfaulting
-
-USE_GCC=	4.7
