@@ -1,6 +1,6 @@
 #!/bin/sh -
 #
-# $FreeBSD: head/net/pwhois/files/512.pwhois-updatedb.in 348718 2014-03-20 20:07:10Z zi $
+# $FreeBSD: head/net/pwhois/files/512.pwhois-updatedb.in 384496 2015-04-22 16:07:52Z zi $
 #
 
 if [ -r /etc/defaults/periodic.conf ]; then
@@ -10,11 +10,12 @@ fi
 
 rc=0
 
-case "${daily_pwhois-updatedb_enable:-YES}" in
+case "${daily_pwhois_updatedb_enable:-YES}" in
 	[Nn][Oo])
 	;;
-	*)
-	[ -x %%PREFIX%%/sbin/pwhois-updatedb ] && %%PREFIX%%/sbin/pwhois-updatedb 1>/dev/null
+	[Yy][Ee][Ss])
+	rm /tmp/.pwhois-updatedb.LCK
+	su -fm pwhois -c 'lockf -t0 /tmp/.pwhois-updatedb.lock %%PREFIX%%/sbin/pwhois-updatedb' 1>/dev/null
 	;;
 esac
 
