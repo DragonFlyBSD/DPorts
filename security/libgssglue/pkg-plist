@@ -1,5 +1,0 @@
-lib/libgssglue.la
-lib/libgssglue.so
-lib/libgssglue.so.1
-libdata/pkgconfig/libgssglue.pc
-include/gssglue/gssapi/gssapi.h

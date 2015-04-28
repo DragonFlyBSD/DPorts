@@ -1,3 +1,0 @@
-The libgssglue library exports a gssapi interface, but doesn't
-implement any gssapi mechanisms itself; instead it calls gssapi
-routines in other libraries, depending on the mechanism.
