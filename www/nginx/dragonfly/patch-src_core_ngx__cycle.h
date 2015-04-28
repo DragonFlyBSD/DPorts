@@ -1,11 +1,11 @@
---- src/core/ngx_cycle.h.orig	2013-07-17 12:51:21.000000000 +0000
+--- src/core/ngx_cycle.h.orig	2015-04-21 14:11:59 UTC
 +++ src/core/ngx_cycle.h
-@@ -101,6 +101,8 @@ typedef struct {
+@@ -102,6 +102,8 @@ typedef struct {
+ 
       ngx_array_t              env;
       char                   **environment;
- 
-+     unsigned                 so_reuseport:1;
 +
- #if (NGX_THREADS)
++     unsigned                 so_reuseport:1;
+ 
+ #if (NGX_OLD_THREADS)
       ngx_int_t                worker_threads;
-      size_t                   thread_stack_size;
