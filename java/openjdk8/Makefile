@@ -6,10 +6,12 @@ PORTREVISION=	3
 CATEGORIES=	java devel
 MASTER_SITES=	http://download.java.net/openjdk/jdk${JDK_MAJOR_VERSION}/promoted/b${DIST_BUILD_NUMBER}/:jdk \
 		https://adopt-openjdk.ci.cloudbees.com/job/jtreg/${JTREG_JENKINS_BUILD}/artifact/:jtreg \
+		http://dl.wolfpond.org/openjdk8/:bootstrap \
+		http://leaf.dragonflybsd.org/~marino/dports-src/:bootstrap \
 		LOCAL/jkim:jdk,jtreg
 PKGNAMESUFFIX?=	${JDK_MAJOR_VERSION}
 DISTNAME=	${PORTNAME}-${JDK_MAJOR_VERSION}-src-b${DIST_BUILD_NUMBER}-03_mar_2014
-DISTFILES=	${DISTNAME}.zip:jdk
+DISTFILES=	${DISTNAME}.zip:jdk ${BOOTSTRAP_DISTFILE}
 
 MAINTAINER=	java@FreeBSD.org
 COMMENT?=	Java Development Kit ${JDK_MAJOR_VERSION}
@@ -74,7 +76,7 @@ _MAKE_JOBS=	#
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 MAKE_ENV=	LANG="C" LC_ALL="C"
-MAKE_ENV+=	CLASSPATH="" JAVA_HOME="" LD_LIBRARY_PATH="" MAKEFLAGS=""
+MAKE_ENV+=	CLASSPATH="" JAVA_HOME="" MAKEFLAGS=""
 MAKE_ENV+=	IGNORE_OLD_CONFIG=true
 MAKE_ENV+=	COMPILER_WARNINGS_FATAL="false"
 
@@ -179,8 +181,15 @@ BOOTSTRAPJDKDIR=	${BJDK}
 
 # if no valid jdk found, set dependency
 .if !defined(BOOTSTRAPJDKDIR)
+.  if ${OSREL:S/.//} < 41
 BOOTSTRAPJDKDIR?=	${LOCALBASE}/openjdk7
 BUILD_DEPENDS+=		${BOOTSTRAPJDKDIR}/bin/javac:${PORTSDIR}/java/openjdk7
+MAKE_ENV+=		LD_LIBRARY_PATH=""
+.  else
+BOOTSTRAPJDKDIR=	${WRKDIR}/bootstrap
+BOOTSTRAP_DISTFILE=	bootstrap-openjdk8-8.40.25.tar.xz:bootstrap
+MAKE_ENV+=		LD_LIBRARY_PATH="${BOOTSTRAPJDKDIR}/jre/lib/amd64"
+.  endif
 .endif
 
 .if ${COMPILER_TYPE} == clang

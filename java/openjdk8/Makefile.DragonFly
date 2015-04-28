@@ -1,3 +1,0 @@
-# Must be same as openjdk7, which is limited to gcc-4.7 for now
-
-USE_GCC=4.7
