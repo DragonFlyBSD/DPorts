@@ -1,5 +1,0 @@
---- libgcc/config/i386/t-dragonfly.orig	2013-09-12 14:44:03.000000000 +0000
-+++ libgcc/config/i386/t-dragonfly
-@@ -0,0 +1,2 @@
-+# Add support for the introduction of 128-bit long double.
-+SHLIB_MAPFILES += $(srcdir)/config/i386/libgcc-bsd.ver
