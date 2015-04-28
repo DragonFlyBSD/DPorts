@@ -1,9 +1,9 @@
---- erts/configure.orig	2014-12-09 20:11:07 UTC
-+++ erts/configure
-@@ -37978,7 +37978,7 @@ case $host_os in
+--- erts/configure.in.orig	2015-03-31 12:32:52 UTC
++++ erts/configure.in
+@@ -3848,7 +3848,7 @@ case $host_os in
  			DED_LDFLAGS="-m32 $DED_LDFLAGS"
  		fi
- 	;;
+ 	;;	
 -	freebsd*)
 +	dragonfly*|freebsd*)
  		DED_LD="$CC"
