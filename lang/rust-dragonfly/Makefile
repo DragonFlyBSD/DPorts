@@ -35,6 +35,7 @@ CONFIGURE_ARGS=	--disable-docs --mandir=${MANPREFIX}/man
 MAKE_ENV=	SNAPSHOT_FILE=${DISTDIR}/${DIST_SUBDIR}/${RUST_BOOT}
 USE_LDCONFIG=	yes
 USE_PERL5=	build
+USE_GCC=	4.7	# specified in README, possibly by bootstrap too
 
 .if defined(VERBOSE) || defined(DPORTS_BUILDER)
 MAKE_ARGS+=	VERBOSE=1
