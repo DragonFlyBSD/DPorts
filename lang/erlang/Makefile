@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	erlang
-PORTVERSION=	17.5.1
+PORTVERSION=	17.5.2
+PORTREVISION=	1
 PORTEPOCH=	3
 CATEGORIES=	lang parallel java
 MASTER_SITES=	http://www.erlang.org/download/:erlangorg		\
@@ -47,8 +48,7 @@ OPTIONS_EXCLUDE_DragonFly=	SCTP
 
 ERL_RELEASE=	17.5
 
-USES=		gmake perl5
-USE_AUTOTOOLS=	autoconf:env
+USES=		autoreconf gmake perl5
 USE_PERL5=	build
 USE_RC_SUBR=	epmd
 GNU_CONFIGURE=	yes
@@ -207,8 +207,12 @@ post-install:
 	${TAR} --unlink -xzpf ${DISTDIR}/${DIST_SUBDIR}/${ERLANG_DOCS} \
 		-C ${STAGEDIR}${PREFIX}/lib/${ERLANG_LIB}
 
+	${MV} ${STAGEDIR}${PREFIX}/lib/${ERLANG_LIB}/lib/inets-5.10.6/* \
+		${STAGEDIR}${PREFIX}/lib/${ERLANG_LIB}/lib/inets-5.10.7
+	${RMDIR} ${STAGEDIR}${PREFIX}/lib/${ERLANG_LIB}/lib/inets-5.10.6
+
 	${MV} ${STAGEDIR}${PREFIX}/lib/${ERLANG_LIB}/lib/ssh-3.2/* \
-		${STAGEDIR}${PREFIX}/lib/${ERLANG_LIB}/lib/ssh-3.2.1
+		${STAGEDIR}${PREFIX}/lib/${ERLANG_LIB}/lib/ssh-3.2.2
 	${RMDIR} ${STAGEDIR}${PREFIX}/lib/${ERLANG_LIB}/lib/ssh-3.2
 
 	${INSTALL_DATA} ${WRKSRC}/lib/dialyzer/doc/*.txt \
