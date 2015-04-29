@@ -17,6 +17,8 @@
 PORT_COMPILER=4.8
 .   elif ${USE_GCC} == 4.9 || ${USE_GCC} == 4.9+
 PORT_COMPILER=4.9
+.   elif ${USE_GCC} == DEFAULT_NOT5
+PORT_COMPILER=${LANG_GCC_IS}
 .   else
 BASE_COMPILER=gcc47
 .   endif
@@ -24,7 +26,7 @@ BASE_COMPILER=gcc47
 .   if ${USE_GCC} == 4.8 || ${USE_GCC} == 4.9
 PORT_COMPILER=${USE_GCC}
 .   else
-.      if ${USE_GCC:tu} == NOT5
+.      if ${USE_GCC:tu} == NOT5 || ${USE_GCC:tu} == DEFAULT_NOT5
 PORT_COMPILER=${LANG_GCC_IS}
 .      else
 BASE_COMPILER=gcc50
