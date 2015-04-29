@@ -38,8 +38,13 @@ BASE_COMPILER=gcc50
 
 USE_BINUTILS=		yes
 V:=			${PORT_COMPILER:S/.//}
+.  if PORT_COMPILER == "${LANG_GCC_IS}"
+BUILD_DEPENDS+=		gcc${V}:${PORTSDIR}/lang/gcc
+RUN_DEPENDS+=		gcc${V}:${PORTSDIR}/lang/gcc
+.  else
 BUILD_DEPENDS+=		gcc${V}:${PORTSDIR}/lang/gcc${V}
 RUN_DEPENDS+=		gcc${V}:${PORTSDIR}/lang/gcc${V}
+.  endif
 _GCC_RUNTIME:=		${LOCALBASE}/lib/gcc${V}
 
 CC:=			gcc${V}
