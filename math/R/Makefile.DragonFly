@@ -1,2 +1,2 @@
-USE_GCC=	4.8
+USE_GCC=	DEFAULT_NOT5
 CONFIGURE_ENV:= ${CONFIGURE_ENV:C/^ac_cv_have_decl.*//}
