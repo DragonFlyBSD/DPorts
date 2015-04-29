@@ -6,4 +6,4 @@ CFLAGS+=	-D__FreeBSD__version=1000001
 #   error: inlining failed in call to always_inline
 #          'int __libcpp_getc(FILE*)': function not inlinable
 
-USE_GCC=4.7
+USE_GCC=	NOT5
