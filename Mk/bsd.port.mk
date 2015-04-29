@@ -1319,8 +1319,14 @@ _SUF2=	,${PORTEPOCH}
 PKGVERSION=	${PORTVERSION:C/[-_,]/./g}${_SUF1}${_SUF2}
 PKGNAME=	${PKGNAMEPREFIX}${PORTNAME}${PKGNAMESUFFIX}-${PKGVERSION}
 DISTVERSIONFULL=	${DISTVERSIONPREFIX}${DISTVERSION:C/:(.)/\1/g}${DISTVERSIONSUFFIX}
-.if defined(USE_GITHUB) && defined(GH_TAGNAME) && !defined(GH_COMMIT)
+.if defined(USE_GITHUB) && !defined(GH_COMMIT) && empty(MASTER_SITES:MGHC)
+# Only add in DISTVERSIONFULL if GH_TAGNAME if set by port. Otherwise
+# GH_TAGNAME defaults to DISTVERSIONFULL; Avoid adding DISTVERSIONFULL in twice.
+.  if defined(GH_TAGNAME)
 DISTNAME?=	${GH_ACCOUNT}-${GH_PROJECT}-${DISTVERSIONFULL}-${GH_TAGNAME_SANITIZED}
+.  else
+DISTNAME?=	${GH_ACCOUNT}-${GH_PROJECT}-${GH_TAGNAME_SANITIZED}
+.  endif
 .else
 DISTNAME?=	${PORTNAME}-${DISTVERSIONFULL}
 .endif
@@ -1690,10 +1696,10 @@ PKG_DEPENDS+=	${LOCALBASE}/sbin/pkg:${PORTSDIR}/${PKG_ORIGIN}
 .endif
 
 .if defined(USE_GCC)
-.include "${PORTSDIR}/Mk/bsd.gcc.mk"
+.include "${PORTSDIR}/Mk/bsd.df.gcc.mk"
 .else
 .  if !defined(USE_GNUSTEP)
-.    if ${DFLYVERSION} < 400103
+.    if ${DFLYVERSION} < 400105
 CONFIGURE_ENV+= 	CCVER=gcc47
 MAKE_ENV+=		CCVER=gcc47
 .    else
@@ -4536,7 +4542,9 @@ ${deptype:tl}-depends:
 			fi; \
 		fi; \
 		if [ $$notfound != 0 ]; then \
-			anynotfound=1; \
+			if [ "$$prog" != "${NONEXISTENT}" ]; then \
+				anynotfound=1; \
+			fi; \
 			${ECHO_MSG} "===>    Verifying $$target for $$prog in $$dir"; \
 			if [ ! -d "$$dir" ]; then \
 				${ECHO_MSG} "     => No directory for $$prog.  Skipping.."; \

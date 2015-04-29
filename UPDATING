@@ -5,6 +5,21 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20150427:
+  AFFECTS: users of mail/opensmtpd
+  AUTHOR: ashish@FreeBSD.org
+
+  Following OPTIONS are being removed in 5.4.5p1:
+
+  - LDAP
+  - SQLITE
+  - MYSQL
+  - PGSQL
+  - REDIS 
+ 
+  They are disabled/removed in upstream since 5.4.4p1, but did not get removed
+  from port.
+
 20150420:
   AFFECTS: users of devel/icu
   AUTHOR: bapt@FreeBSD.org
@@ -1779,19 +1794,4 @@ AUTHOR: ohauer@FreeBSD.org
   - science/netcdf4: replaced by science/netcdf
 
   Please deinstall them before building the new versions.
-
-20140428:
-  AFFECTS: users of java/openjdk7
-  AUTHOR: glewis@FreeBSD.org
-
-  The previous version of openjdk7 had a bug that will prevent it from
-  being able to bootstrap itself.  Please deinstall openjdk7 before
-  building the new version.
-
-20140427:
-  AFFECTS: users of graphics/gdal
-  AUTHOR: sunpoet@FreeBSD.org
-
-  Due to changes in header files, please deinstall gdal first while updating
-  from 1.9.x/1.10.x to 1.11.x.
 
