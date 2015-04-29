@@ -3,7 +3,7 @@
 
 PORTNAME=	gdb
 PORTVERSION=	6.6
-PORTREVISION?=	2
+PORTREVISION?=	3
 CATEGORIES=	devel
 MASTER_SITES=   ${MASTER_SITE_GNU:S,$,:gdb,}	\
 		http://aldan.algebra.com/~mi/:gdbtk
@@ -36,6 +36,10 @@ VER=		${PORTVERSION:S/.//}
 PLIST_SUB=	VER=${VER}
 
 .include <bsd.port.options.mk>
+
+.if !exists(/usr/lib/libreadline.so)
+CFLAGS+=	-Dreadline_echoing_p=_rl_echoing_p
+.endif
 
 .if ${PORT_OPTIONS:MINSIGHT}
 PKGNAMESUFFIX=	-insight
@@ -74,8 +78,6 @@ CONFLICTS+=	gdb-insight*
 .for a in ia64 powerpc
 BROKEN_${a}=	Does not configure on ia64 or powerpc
 .endfor
-
-
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gdb/gdb ${STAGEDIR}${PREFIX}/bin/gdb${VER}
