@@ -1,3 +1,3 @@
 # won't build libast with gcc50
 
-USE_GCC= 4.7
+USE_GCC=	NOT5
