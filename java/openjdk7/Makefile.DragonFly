@@ -4,4 +4,4 @@ MAKE_ENV+=	DONT_ENABLE_IPV6="YES"
 # ports no longer build (jboss72, eclipse, openjdk8, etc)
 # Temporarily limit to building by gcc47 only
 
-USE_GCC=	4.7
+USE_GCC=	NOT5
