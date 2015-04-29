@@ -3,4 +3,4 @@
 #   1185:43: error: declaration of 'void* __cxa_begin_catch(void*)' has a 
 #   different exception specifier
 
-USE_GCC=4.7
+USE_GCC=	NOT5
