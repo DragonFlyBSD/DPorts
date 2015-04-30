@@ -1,0 +1,3 @@
+# Eclipse builds forever on gcc5-built openjdk8
+
+USE_GCC=	NOT5
