@@ -1,2 +1,0 @@
-# gcc5 can't build stage 1 with -pedantic anymore
-USE_GCC=	4.7
