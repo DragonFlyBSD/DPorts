@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: head/lang/gcc5-aux/Makefile 384038 2015-04-15 08:20:27Z tijl $
+# $FreeBSD$
 
 PORTNAME=	gcc5-aux
 PORTVERSION=	${SNAPSHOT}
@@ -31,7 +31,7 @@ CPPFLAGS+=		-I${LOCALBASE}/include
 LDFLAGS+=		-L${LOCALBASE}/lib
 
 OPTIONS_GROUP=		Standard Bootstrap
-OPTIONS_GROUP_Standard=	FORT OBJC NLS TESTSUITE STATIC
+OPTIONS_GROUP_Standard=	FORT OBJC NLS TESTSUITE ALLSTAGES STATIC
 OPTIONS_GROUP_Bootstrap=BOOTSTRAP
 OPTIONS_DEFAULT=	FORT OBJC
 NO_OPTIONS_SORT=	yes
@@ -39,6 +39,7 @@ NO_OPTIONS_SORT=	yes
 FORT_DESC=		Fortran language support
 OBJC_DESC=		Objective-C language support
 TESTSUITE_DESC=		Activate test support
+ALLSTAGES_DESC=		Build compiler with itself (twice, brings in libcc1)
 STATIC_DESC=		Link compilers and drivers statically
 BOOTSTRAP_DESC=		Create bootstrap compiler (overrides other options)
 
@@ -50,6 +51,7 @@ BOOTSTRAP_DESC=		Create bootstrap compiler (overrides other options)
 .include <bsd.port.options.mk>
 
 .if ${OPSYS} == FreeBSD
+ONLY_FOR_ARCHS=		amd64 i386
 MODERN_BINUTILS=	yes
 .  if ${OSVERSION} < 900000
 BOOTSTRAP_COMPILER=	ada-bootstrap.${GARCH}.freebsd.84.tar.bz2
@@ -58,7 +60,8 @@ BOOTSTRAP_COMPILER=	ada-bootstrap.${GARCH}.freebsd.100B.tar.bz2
 .  endif
 .endif
 .if ${OPSYS} == DragonFly
-BOOTSTRAP_COMPILER=	ada-bootstrap.${GARCH}.dragonfly.36A.tar.bz2
+ONLY_FOR_ARCHS=		x86_64
+BOOTSTRAP_COMPILER=	ada-bootstrap.${GARCH}.dragonfly.41.tar.bz2
 .endif
 
 .if defined(MODERN_BINUTILS)
@@ -109,10 +112,9 @@ DISTFILES+=	${BOOTSTRAP_COMPILER}:boot
 .if defined(PLUS_BOOTSTRAPS)
 DISTFILES=	\
    ${IDENTIFICATION}.tar.bz2 \
-   ada-bootstrap.i386.dragonfly.36A.tar.bz2:boot \
    ada-bootstrap.i386.freebsd.84.tar.bz2:boot \
    ada-bootstrap.i386.freebsd.100B.tar.bz2:boot \
-   ada-bootstrap.x86_64.dragonfly.36A.tar.bz2:boot \
+   ada-bootstrap.x86_64.dragonfly.41.tar.bz2:boot \
    ada-bootstrap.x86_64.freebsd.84.tar.bz2:boot \
    ada-bootstrap.x86_64.freebsd.100B.tar.bz2:boot
 .endif
@@ -151,8 +153,14 @@ EXTRA_CONFIG+=		--with-stage1-ldflags=-static
 EXTRA_CONFIG+=		--disable-shared --disable-lto
 EXTRA_CONFIG+=		--with-boot-ldflags=-static
 .else
-# For some reason, libcc1.a can't be build with bootstrap (only) in poudriere
-#EXTRA_CONFIG+=		--disable-bootstrap
+.  if !${PORT_OPTIONS:MALLSTAGES}
+#  For reasons unknown, build fails at libcc1 when the compiler is not
+#  not bootstrapping.  It appears to be an upstream error.  LibCC1 is used
+#  for gdb 7.9 exclusively, so it's not really needed.  Let's disable it
+#  by default, but let people that want it suffer a 3-stage build.
+EXTRA_CONFIG+=		--disable-bootstrap --disable-libcc1
+.  endif
+USES+=			iconv
 .endif
 
 # Establish Ada-aware compiler for use
@@ -162,9 +170,10 @@ ADA_CONFIGURE_ENV+=	CFLAGS="${CFLAGS}"
 ADA_CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
 ADA_CONFIGURE_ENV+=	CXXFLAGS="${CXXFLAGS}"
 ADA_CONFIGURE_ENV+=	LDFLAGS="${LDFLAGS}"
+ADA_CONFIGURE_ENV+=	build_configargs="CPPFLAGS=\"${CPPFLAGS}\""
+ADA_CONFIGURE_ENV+=	host_configargs="CPPFLAGS=\"${CPPFLAGS}\""
 ADA_CONFIGURE_ENV+=	PATH=${FULL_PATH}
 ADA_MAKE_ENV+=		PATH=${FULL_PATH}
-ADA_MAKE_ENV+=		LD_LIBRARY_PATH=${BUILDDIR}/gcc
 
 # The standard configuration options
 ADA_CONFIG_ARGS=	--enable-languages=${LANGS:Q}
