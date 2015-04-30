@@ -1,3 +1,3 @@
 # currently segfaults using gcc5
 
-USE_GCC= 4.7
+USE_GCC=	NOT5
