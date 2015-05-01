@@ -4,6 +4,7 @@
 PORTNAME=	rust
 RUST_SNAP_DATE=	2015-03-08
 PORTVERSION=	1.0.0.${RUST_SNAP_DATE:S/-//g}
+PORTREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://www.ntecs.de/downloads/rust/:bootstrap \
 		http://static.rust-lang.org/dist/${RUST_SNAP_DATE}/:rust \
