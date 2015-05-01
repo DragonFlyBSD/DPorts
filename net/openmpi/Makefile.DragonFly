@@ -1,0 +1,7 @@
+CONFIGURE_ARGS+=	--enable-mpi-fortran=usempi
+
+PLIST_FILES+=	${MPIDIR}/lib/libmpi_usempi_ignore_tkr.la \
+		${MPIDIR}/lib/libmpi_usempi_ignore_tkr.so \
+		${MPIDIR}/lib/libmpi_usempi_ignore_tkr.so.0 \
+		${MPIDIR}/lib/libmpi_usempi_ignore_tkr.so.0.1.0 \
+		${MPIDIR}/lib/mpi_ext.mod
