@@ -1,6 +1,15 @@
---- device/usb/usb_device_handle_impl.cc.intermediate	2014-12-16 03:49:08 UTC
+--- device/usb/usb_device_handle_impl.cc.intermediate	2015-04-30 14:25:59 UTC
 +++ device/usb/usb_device_handle_impl.cc
-@@ -111,18 +111,6 @@ static UsbTransferStatus ConvertTransfer
+@@ -2,6 +2,8 @@
+ // Use of this source code is governed by a BSD-style license that can be
+ // found in the LICENSE file.
+ 
++#define __STDC_LIMIT_MACROS
++#include <stdint.h>
+ #include "device/usb/usb_device_handle_impl.h"
+ 
+ #include <algorithm>
+@@ -111,18 +113,6 @@ static UsbTransferStatus ConvertTransfer
  
  }  // namespace
  
