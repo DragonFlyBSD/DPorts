@@ -38,6 +38,14 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|unix.conf|freebsd.conf|' \
 		${WRKSRC}/mkspecs/freebsd-icc/qmake.conf
 
+# Remove gold linker flag from DF 4.0 and lower.
+# It has gold but gcc47 doesn't know -fuse-gold
+
+.if !defined(.MAKE.BUILT.BY) || ${.MAKE.BUILT.BY:Mgcc47}
+	@${REINPLACE_CMD} -e '/QMAKE_LFLAGS_USE_GOLD/d' \
+		${WRKSRC}/mkspecs/common/gcc-base-unix.conf
+.endif
+
 # Add mkspec for Clang. For now, this means adjusting the existing
 # unsupported/freebsd-clang mkspec while we get it into shape upstream.
 	@${MV} ${WRKSRC}/mkspecs/unsupported/freebsd-clang \
