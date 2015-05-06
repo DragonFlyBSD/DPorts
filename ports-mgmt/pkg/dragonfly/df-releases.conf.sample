@@ -24,3 +24,8 @@ Wolfpond-Release: {
 	url		: http://pkg.wolfpond.org/${ABI}/RELEASE,
 	enabled		: no
 }
+
+NYCBUG-Release: {
+	url		: http://mirrors.nycbug.org/pub/DragonflyBSD/dports/${ABI}/RELEASE,
+	enabled		: no
+}

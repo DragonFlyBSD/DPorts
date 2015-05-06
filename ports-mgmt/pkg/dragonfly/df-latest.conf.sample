@@ -24,3 +24,8 @@ Wolfpond: {
 	url		: http://pkg.wolfpond.org/${ABI}/LATEST,
 	enabled		: no
 }
+
+NYCBUG: {
+	url		: http://mirrors.nycbug.org/pub/DragonflyBSD/dports/${ABI}/LATEST,
+	enabled		: no
+}
