@@ -5,6 +5,46 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20150510:
+  AFFECTS: users of mail/postfix mail/postfix-current
+  AUTHOR: ohauer@FreeBSD.org
+
+  The following OPTIONS where renamed to match the default used in most all other ports
+  - SASL2 -> SASL
+  - OPENLDAP -> LDAP
+
+  If any of the old OPTIONS was enabled before, please re-run "make config".
+
+20150508:
+  AFFECTS: users of www/iojs
+  AUTHOR: linpct@gmail.com
+
+  iojs has been updated to 2.0.0. The binary modules may need to be
+  rebuilt due to V8 version ABI change.
+
+20150506:
+  AFFECTS: users of net/asterisk13 with PJSIP (default on) and SRTP (default off) options enabled
+  AUTHOR: madpilot@FreeBSD.org
+
+  This applies ONLY TO USERS COMPILING FROM PORTS:
+  To avoid dependency problems, you must remove the pjsip port
+  before upgrading asterisk13.
+
+    # pkg delete pjsip
+    # portmaster -a
+
+  These steps are unnecessary for those using binary packages.
+
+  Please see the 20150323 entry for background about this problem.
+
+20150501:
+  AFFECTS: users of graphics/qgis
+  AUTHOR: brd@FreeBSD.org
+
+  Following OPTIONS have been renamed in 2.8.1_1 to match upstream:
+
+  - MAPSERVER to SERVER
+
 20150427:
   AFFECTS: users of mail/opensmtpd
   AUTHOR: ashish@FreeBSD.org
@@ -116,17 +156,25 @@ AUTHOR: ohauer@FreeBSD.org
   Due to conflicts between base OpenSSL and ports provided OpenSSL
   library, which is required by net/libsrtp, the srtp support has
   to be removed from the default asterisk13 port configuration,
-  otherwise a a not working binary would be generated.
+  otherwise a not working binary would be generated.
 
-  To get SRTP support working in the asterisk ports it is needed
-  to build all other required ports with WITH_OPENSSL_PORT=yes. For
-  asterisk13 it is also needed to enable the EXTSRTP option in the
-  pjsip port.
+  To get SRTP support working in the asterisk ports make sure all
+  dependencies are linked against the same SSL library implementation
+  to avoid runtime conflicts. On 10.1 everything will work fine
+  unless ports SSL libraries are explicitly installed. On older OS
+  versions(10.0 and earlier) you will need to compile all ports
+  with WITH_OPENSSL_PORT=yes.
+
+  To get working SRTP support in asterisk13 with the pjsip backend
+  it is also needed to enable the EXTSRTP option in the pjsip port.
 
   If the CURL option is enabled also make sure the ftp/curl port
-  is using one of the HEIMDAL_PORT or KRB5_PORT options, otherwise
-  the curl module will cause asterisk to fail on startup due to
-  mixing calls to OpenSSL from base and from ports.
+  is using a GSSAPI implementation linking to the same SSL
+  implementation the other ports are using (BASE or NONE if you're
+  using base OpenSSL, GSSAPI_HEIMDAL GSSAPI_MIT otherwise). If an
+  incompatible option is being used the curl module will cause
+  asterisk to fail on startup due to mixing calls to OpenSSL from
+  base and from ports.
 
 20150322:
   AFFECTS: Users of security/openssh-portable
@@ -1720,78 +1768,4 @@ AUTHOR: ohauer@FreeBSD.org
 
   You may need to update your config files while updating to 2014.63 from
   the previous versions.
-
-20140511:
-  AFFECTS: users of databases/firebird*
-  AUTHOR: bapt@FreeBSD.org
-
-  The default version of databases/firebird* have been changed to support
-  DEFAULT_VERSIONS variable
-
-  DEFAULT_VERSIONS=firebird=2.5
-
-20140507:
-  AFFECTS: users of lang/open-cobol
-  AUTHOR: johans@FreeBSD.org
-
-  lang/open-cobol was moved to lang/gnu-cobol to match the new package
-  name. Please do the following according to package manager used.
-
-  # portmaster -o lang/gnu-cobol lang/open-cobol
-    or
-  # portupgrade -fo lang/gnu-cobol lang/open-cobol
-    or
-  # pkg set -o lang/open-cobol:lang/gnu-cobol
-
-20140506:
-  AFFECTS: users of ports-mgmt/portshaker
-  AUTHOR: romain@FreeBSD.org
-
-  ports-mgmt/portshaker was updated to avoid creating an aditional 'ports'
-  subdirectory when merging to a poudriere_tree without ZFS, so that
-  portshaker's default location matches poudriere's default location.
-
-  Users of poudriere on non-ZFS systems should not anymore have to pass extra
-  options to poudriere for it to find the ports tree.
-
-20140506:
-  AFFECTS: users of security/yassl
-  AUTHOR: gahr@FreeBSD.org
-
-  security/yassl was moved to security/cyassl to match the original package
-  name.  Please do the following according to package manager used.
-
-  # portmaster -o security/cyassl security/yassl
-    or
-  # portupgrade -fo security/cyassl security/yassl
-    or
-  # pkg set -o security/yassl:security/cyassl
-
-20140505:
-  AFFECTS: users of databases/libiodbc
-  AUTHOR: bapt@FreeBSD.org
-
-  libiodbc no longer provide the odbc compatibility
-
-  Rebuild all ports that are linked to libiodbc
-  # portmaster -r libiodbc
-  or
-  # portupgrade -r databases/libiodbc
-
-20140503:
-  AFFECTS: users of science/hdf5* and science/netcdf*
-  AUTHOR: sunpoet@FreeBSD.org
-
-  There are major version changes in HDF5 and NetCDF ports:
-  - science/hdf5: updated from 1.6.9 to 1.8.12
-  - science/hdf5-18: replaced by science/hdf5
-  - science/netcdf: updated from 3.6.3 to 4.3.2
-                    C++/Fortran binding moved into new ports (by upstream)
-  - science/netcdf-cxx: new port for C++ binding of NetCDF
-  - science/netcdf-fortran: new port for Fortran binding of NetCDF
-  - science/netcdf-ftn: replaced by science/netcdf-fortran
-  - science/netcdf3-ftn: replaced by science/netcdf-fortran
-  - science/netcdf4: replaced by science/netcdf
-
-  Please deinstall them before building the new versions.
 
