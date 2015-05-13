@@ -142,7 +142,7 @@ post-extract:
 .endfor
 
 post-patch:
-	${REINPLACE_CMD} -e 's," PLATFORM ",FreeBSD,' ${WRKSRC}/server/core.c
+	${REINPLACE_CMD} -e 's," PLATFORM ",DragonFly,' ${WRKSRC}/server/core.c
 	${REINPLACE_CMD} -e 's|logs/error_log|/var/log/httpd-error.log|' \
 		${WRKSRC}/include/httpd.h
 	${REINPLACE_CMD} -e 's|perlbin=.*|perlbin=${PERL}|' \
