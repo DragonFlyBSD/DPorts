@@ -1,7 +1,4 @@
-
-$FreeBSD: head/sysutils/webmin/files/patch-software_freebsd-lib.pl 348727 2014-03-21 06:07:03Z olgeni $
-
---- software/freebsd-lib.pl.orig
+--- software/freebsd-lib.pl.orig	2015-03-13 23:51:49 UTC
 +++ software/freebsd-lib.pl
 @@ -21,7 +21,7 @@
  

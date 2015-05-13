@@ -1,7 +1,4 @@
-
-$FreeBSD: head/sysutils/webmin/files/patch-ajaxterm_ajaxterm_qweb.py 300971 2012-07-16 19:01:18Z olgeni $
-
---- ajaxterm/ajaxterm/qweb.py.orig
+--- ajaxterm/ajaxterm/qweb.py.orig	2015-03-13 23:52:34 UTC
 +++ ajaxterm/ajaxterm/qweb.py
 @@ -128,12 +128,12 @@
          r=None
