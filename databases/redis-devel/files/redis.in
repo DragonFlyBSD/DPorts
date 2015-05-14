@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/databases/redis-devel/files/redis.in 369898 2014-10-03 13:27:09Z gahr $
+# $FreeBSD: head/databases/redis-devel/files/redis.in 385499 2015-05-06 01:24:13Z osa $
 #
 
 # PROVIDE: redis
@@ -21,14 +21,14 @@ rcvar="${name}_enable"
 extra_commands="reload"
 
 command="%%PREFIX%%/bin/redis-server"
-config_file="%%PREFIX%%/etc/$name.conf"
-command_args="${config_file}"
 pidfile="%%REDIS_RUNDIR%%/$name.pid"
-required_files="${config_file}"
 
 # read configuration and set defaults
 load_rc_config "$name"
 : ${redis_enable="NO"}
 : ${redis_user="%%REDIS_USER%%"}
+: ${redis_config="%%PREFIX%%/etc/$name.conf"}
 
+command_args="${redis_config}"
+required_files="${redis_config}"
 run_rc_command "$1"
