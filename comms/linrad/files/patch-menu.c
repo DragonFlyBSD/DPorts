@@ -1,9 +1,11 @@
-Please check if index is within constaints *BEFORE* using it.
-This error was caught by GCC5 diagnostics
-
 --- menu.c.orig	2014-11-04 10:25:00 UTC
 +++ menu.c
-@@ -968,8 +968,8 @@ if(parnum == SECOND_FFT_ATT_N)
+@@ -965,11 +965,13 @@ if(parnum == SECOND_FFT_ATT_N)
+   {
+   k[0]=fft2_n-2;
+   }
++// Please check if index is within constaints *BEFORE* using it.
++// This error was caught by GCC5 diagnostics marino@FreeBSD.org
  if(parnum == SECOND_FFT_VERNR)
    {
    i=0;
