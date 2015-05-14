@@ -3,6 +3,7 @@
 
 PORTNAME=	nginx
 PORTVERSION=	1.8.0
+PORTREVISION=	1
 PORTEPOCH=	2
 CATEGORIES=	www
 MASTER_SITES=	http://nginx.org/download/
@@ -55,7 +56,6 @@ OPTIONS_DEFINE=	\
 	THREADS \
 	WWW \
 	CACHE_PURGE \
-	CTPP2 \
 	ECHO \
 	HEADERS_MORE \
 	HTTP_ACCEPT_LANGUAGE \
@@ -139,7 +139,6 @@ SPDY_DESC=			Enable SPDY protocol support (SSL req.)
 THREADS_DESC=			Enable threads support
 WWW_DESC=			Enable html sample files
 CACHE_PURGE_DESC=		3rd party cache_purge module
-CTPP2_DESC=			3rd party CT++ module
 ECHO_DESC=			3rd party echo module
 HEADERS_MORE_DESC=		3rd party headers_more module
 HTTP_ACCEPT_LANGUAGE_DESC=	3rd party accept_language module
@@ -510,7 +509,7 @@ CONFIGURE_ARGS+=--add-module=${WRKDIR}/nginx-goodies-nginx-sticky-module-ng-c825
 .endif
 
 .if ${PORT_OPTIONS:MHTTP_XSLT}
-USE_GNOME=	libxml2 libxslt
+USE_GNOME+=	libxml2 libxslt
 CONFIGURE_ARGS+=--with-http_xslt_module
 .endif
 
@@ -594,7 +593,7 @@ LIB_DEPENDS+=	libpcre.so:${PORTSDIR}/devel/pcre \
 		libcurl.so:${PORTSDIR}/ftp/curl \
 		libyajl.so:${PORTSDIR}/devel/yajl
 USE_APACHE=	22+
-USE_GNOME=	libxml2
+USE_GNOME+=	libxml2
 MASTER_SITES+=	http://www.modsecurity.org/tarball/${NGINX_MODSECURITY_VERSION}/:modsecurity
 DISTFILES+=	modsecurity-${NGINX_MODSECURITY_VERSION}.tar.gz:modsecurity
 CONFIGURE_ARGS+=--add-module=${WRKDIR}/modsecurity-${NGINX_MODSECURITY_VERSION}/nginx/modsecurity
@@ -618,7 +617,7 @@ CONFIGURE_ARGS+=--without-http_rewrite_module \
 .endif
 
 .if ${PORT_OPTIONS:MPASSENGER}
-PASSENGER_VERSION=	5.0.6
+PASSENGER_VERSION=	5.0.7
 MASTER_SITES+=	http://s3.amazonaws.com/phusion-passenger/releases/:passenger
 DISTFILES+=	passenger-${PASSENGER_VERSION}.tar.gz:passenger
 CONFIGURE_ARGS+=--add-module=${WRKDIR}/passenger-${PASSENGER_VERSION}/ext/nginx
@@ -861,12 +860,6 @@ post-patch:
 	@${REINPLACE_CMD} \
 		's!%%PREFIX%%!${LOCALBASE}!g' \
 		${WRKDIR}/nginx-sflow-module-${NGINX_SFLOW_VERSION}/ngx_http_sflow_config.h
-.endif
-.if ${PORT_OPTIONS:MSPDY}
-.if ${PORT_OPTIONS:MLUA}
-	@${REINPLACE_CMD} '464d' \
-		${WRKDIR}/openresty-lua-nginx-module-${GIT_LUA_VERSION:S/^0-g//}/src/ngx_http_lua_socket_tcp.c
-.endif
 .endif
 .if ${PORT_OPTIONS:MICONV}
 	@${REINPLACE_CMD} \
