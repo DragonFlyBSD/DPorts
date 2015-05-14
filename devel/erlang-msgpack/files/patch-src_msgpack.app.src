@@ -1,0 +1,13 @@
+
+$FreeBSD: head/devel/erlang-msgpack/files/patch-src_msgpack.app.src 385455 2015-05-05 10:01:06Z olgeni $
+
+--- src/msgpack.app.src.orig
++++ src/msgpack.app.src
+@@ -1,6 +1,6 @@
+ {application, msgpack,
+  [{description, "MessagePack serializer/deserializer"},
+-  {vsn, git},
++  {vsn, "%%PORTVERSION%%"},
+   {modules, 
+    [msgpack]
+   },
