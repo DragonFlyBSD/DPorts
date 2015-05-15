@@ -78,8 +78,6 @@ include/opentoken/opentoken-token-enumerated-identifier.adb
 include/opentoken/opentoken-token-enumerated-identifier.ads
 include/opentoken/opentoken-token-enumerated-integer.adb
 include/opentoken/opentoken-token-enumerated-integer.ads
-include/opentoken/opentoken-token-enumerated-list-print.adb
-include/opentoken/opentoken-token-enumerated-list-print.ads
 include/opentoken/opentoken-token-enumerated-list.adb
 include/opentoken/opentoken-token-enumerated-list.ads
 include/opentoken/opentoken-token-enumerated-nonterminal.adb
@@ -151,7 +149,6 @@ lib/opentoken/opentoken-text_feeder.ali
 lib/opentoken/opentoken-token-enumerated-analyzer.ali
 lib/opentoken/opentoken-token-enumerated-identifier.ali
 lib/opentoken/opentoken-token-enumerated-integer.ali
-lib/opentoken/opentoken-token-enumerated-list-print.ali
 lib/opentoken/opentoken-token-enumerated-list.ali
 lib/opentoken/opentoken-token-enumerated-nonterminal.ali
 lib/opentoken/opentoken-token-enumerated-real.ali
