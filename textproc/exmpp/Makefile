@@ -3,6 +3,7 @@
 
 PORTNAME=	exmpp
 PORTVERSION=	0.9.9
+DISTVERSIONPREFIX=	v
 PORTREVISION=	1
 CATEGORIES=	textproc net-im
 
@@ -18,9 +19,6 @@ LIB_DEPENDS=	libexpat.so:${PORTSDIR}/textproc/expat2 \
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	processone
-GH_PROJECT=	exmpp
-GH_COMMIT=	829cdc2
-GH_TAGNAME=	v${PORTVERSION}
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--enable-static=yes \
@@ -34,7 +32,8 @@ CONFIGURE_ARGS+=--enable-static=yes \
 		--enable-escaping-using-cdata
 GNU_CONFIGURE_PREFIX=	"${PREFIX}/lib/erlang/lib"
 PLIST_SUB=	VERSION=${PORTVERSION}
-USES=		autoreconf libtool pkgconfig
+USES=		autoreconf cpe libtool pkgconfig
+CPE_VENDOR=	process-one
 USE_OPENSSL=	yes
 
 .include <bsd.port.options.mk>
