@@ -1,7 +1,4 @@
-
-$FreeBSD: head/sysutils/usermin/files/patch-setup.sh 340725 2014-01-22 17:40:44Z mat $
-
---- setup.sh.orig
+--- setup.sh.orig	2015-02-15 03:16:25 UTC
 +++ setup.sh
 @@ -15,16 +15,8 @@
  srcdir=$wadir
