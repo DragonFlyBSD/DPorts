@@ -1,6 +1,6 @@
 #!/bin/sh
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD: head/www/radicale/files/radicale.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/www/radicale/files/radicale.in 385065 2015-04-30 20:22:39Z feld $
 #
 
 # PROVIDE: radicale
@@ -30,7 +30,7 @@ load_rc_config $name
 pidfile=/var/run/radicale/radicale.pid
 command=%%PREFIX%%/bin/radicale
 command_args="-d -p ${pidfile} -C ${radicale_config}"
-command_interpreter=python
+command_interpreter=%%PYTHON_CMD%%
 required_files=${radicale_config}
 start_precmd=do_precmd
 
