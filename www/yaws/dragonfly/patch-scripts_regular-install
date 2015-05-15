@@ -1,0 +1,11 @@
+--- scripts/regular-install.orig	2014-10-17 15:18:20 UTC
++++ scripts/regular-install
+@@ -40,6 +40,8 @@ elif [ $os = "Darwin" -a $(id -u) = 0 ];
+     os="darwin"
+ elif [ $os = "FreeBSD" ]; then
+     os="freebsd"
++elif [ $os = "DragonFly" ]; then
++    os="freebsd"
+ elif [ $os = "NetBSD" ]; then
+     os="netbsd"
+ else
