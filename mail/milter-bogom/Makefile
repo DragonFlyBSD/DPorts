@@ -1,5 +1,5 @@
 # Created by: Victor Balada Diaz <victor@bsdes.net>
-# $FreeBSD: head/mail/milter-bogom/Makefile 361961 2014-07-15 16:14:15Z adamw $
+# $FreeBSD$
 
 PORTNAME=	bogom
 PORTVERSION=	1.9.2
@@ -16,11 +16,12 @@ RUN_DEPENDS=	bogofilter:${PORTSDIR}/mail/bogofilter
 
 .if !exists(/usr/lib/libmilter.so)
 LIB_DEPENDS=	libmilter.so:${PORTSDIR}/mail/sendmail
-LDFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
+CFLAGS+=	-I${LOCALBASE}/include
 .endif
 
-MAKE_ARGS=	CPPFLAGS="-DDEF_CONF=\\\"${PREFIX}/etc/bogom.conf\\\" ${PTHREAD_CFLAGS}" \
-		LIBS="-lmilter ${PTHREAD_LIBS}" LDFLAGS="${LDFLAGS}"
+MAKE_ARGS=	CPPFLAGS="-DDEF_CONF=\\\"${PREFIX}/etc/bogom.conf\\\"" \
+		LIBS="-lmilter -lpthread" LDFLAGS="${LDFLAGS}"
 
 USE_RC_SUBR=	milter-bogom
 SUB_FILES=	pkg-message

@@ -1,5 +1,0 @@
-.if !exists(/usr/lib/libmilter.so)
-LIB_DEPENDS=	libmilter.so:${PORTSDIR}/mail/sendmail
-CFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
-.endif
