@@ -1,3 +1,0 @@
-# seems not to be c++11 compatible
-
-USE_GCC= 4.7
