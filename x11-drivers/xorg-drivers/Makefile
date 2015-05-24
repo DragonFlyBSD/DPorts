@@ -81,13 +81,12 @@ OPTIONS_DEFINE_ia64=	OPENCHROME
 OPTIONS_DEFAULT_ia64=	OPENCHROME
 
 ATI_DESC=		Install ati video driver
-INTEL_DESC=		Install intel video driver
 INTEL29_DESC=		Install intel video driver
 OPENCHROME_DESC=	Install openchrome video driver
 SUNFFB_DESC=		Install sunffb video driver
 
 # these drivers have a different module name compared to the plugin they install
-QUIRKS=		keyboard:kbd
+QUIRKS=		keyboard:kbd intel29:intel
 
 .include <bsd.port.options.mk>
 
