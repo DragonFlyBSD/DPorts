@@ -31,9 +31,19 @@ MAME_RUN_DEPENDS=	mame>=0.154:${PORTSDIR}/emulators/mame
 SNES9X_RUN_DEPENDS=	snes9x:${PORTSDIR}/emulators/snes9x
 ZSNES_RUN_DEPENDS=	zsnes:${PORTSDIR}/emulators/zsnes
 
+.include <bsd.port.options.mk>
+
+.if ${ARCH:Mamd64}
+MAMENAME=	mame64
+.else
+MAMENAME=	mame
+.endif
+
 post-patch:
-	${REINPLACE_CMD} -i '' -e 's|/usr/bin/env python|${PYTHON_CMD}|' \
+	@${REINPLACE_CMD} -i '' -e 's|/usr/bin/env python|${PYTHON_CMD}|' \
 		${WRKSRC}/scripts/loemu \
 		${WRKSRC}/scripts/loemu-builder	
+	@${REINPLACE_CMD} -i '' -e 's|sdlmame|${MAMENAME}|' \
+		${WRKSRC}/config/sdlmame.conf
 
 .include <bsd.port.mk>
