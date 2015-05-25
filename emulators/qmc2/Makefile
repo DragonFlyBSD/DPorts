@@ -2,15 +2,15 @@
 # $FreeBSD$
 
 PORTNAME=	qmc2
-PORTVERSION=	0.50
+PORTVERSION=	0.51
 CATEGORIES=	emulators
 MASTER_SITES=	SF
 
 MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	Qt4 based UNIX MAME/MESS frontend
 
-RUN_DEPENDS=	mame:${PORTSDIR}/emulators/mame \
-		mess:${PORTSDIR}/emulators/mess
+RUN_DEPENDS=	mame>=0.154:${PORTSDIR}/emulators/mame \
+		mess>=0.154:${PORTSDIR}/emulators/mess
 
 OPTIONS_DEFINE=	DOCS
 
