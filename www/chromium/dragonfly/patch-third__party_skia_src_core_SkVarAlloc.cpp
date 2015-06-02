@@ -1,4 +1,4 @@
---- third_party/skia/src/core/SkVarAlloc.cpp.intermediate	2015-04-30 12:00:47 UTC
+--- third_party/skia/src/core/SkVarAlloc.cpp.intermediate	2015-06-02 12:46:09 UTC
 +++ third_party/skia/src/core/SkVarAlloc.cpp
 @@ -3,6 +3,8 @@
  // We use non-standard malloc diagnostic methods to make sure our allocations are sized well.
@@ -15,6 +15,6 @@
      return malloc_size(p);
 +#elif defined(__DragonFly__)
 +    return 0;  // Not implemented on DF 
- #elif defined(SK_BUILD_FOR_UNIX)
+ #elif defined(SK_BUILD_FOR_UNIX) && !defined(__UCLIBC__)
      return malloc_usable_size(p);
  #elif defined(SK_BUILD_FOR_WIN32)

@@ -15,14 +15,14 @@ it has been).  Let us see (surely Google will have to fix this though)
          SHOW_ELEMENT                   = 0x00000001,
          SHOW_ATTRIBUTE                 = 0x00000002,
          SHOW_TEXT                      = 0x00000004,
---- third_party/WebKit/Source/core/dom/NodeFilter.idl.orig	2015-02-20 04:50:08 UTC
+--- third_party/WebKit/Source/core/dom/NodeFilter.idl.orig	2015-05-25 19:01:25 UTC
 +++ third_party/WebKit/Source/core/dom/NodeFilter.idl
-@@ -28,7 +28,7 @@
-     const short               FILTER_SKIP                    = 3;
+@@ -32,7 +32,7 @@
+     const short FILTER_SKIP = 3;
  
      // Constants for whatToShow
--    const unsigned long       SHOW_ALL                       = 0xFFFFFFFF;
-+    const unsigned long       SHOW_ALL                       = 0x7FFFFFFF;
-     const unsigned long       SHOW_ELEMENT                   = 0x00000001;
-     const unsigned long       SHOW_ATTRIBUTE                 = 0x00000002;
-     const unsigned long       SHOW_TEXT                      = 0x00000004;
+-    const unsigned long SHOW_ALL = 0xFFFFFFFF;
++    const unsigned long SHOW_ALL = 0x7FFFFFFF;
+     const unsigned long SHOW_ELEMENT = 0x1;
+     const unsigned long SHOW_ATTRIBUTE = 0x2; // historical
+     const unsigned long SHOW_TEXT = 0x4;
