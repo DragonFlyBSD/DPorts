@@ -7,8 +7,7 @@ PORTREVISION=	1
 CATEGORIES=	lang haskell
 MASTER_SITES=	http://www.haskell.org/ghc/dist/${PORTVERSION}/:source \
 		http://leaf.dragonflybsd.org/~marino/dports-src/:dflyboot \
-		${MASTER_SITE_LOCAL:S/$/:boot/}
-MASTER_SITE_SUBDIR=	pgj/:boot
+		LOCAL/pgj/:boot
 DISTFILES=	ghc-${PORTVERSION}-src${EXTRACT_SUFX}:source
 
 MAINTAINER=	haskell@FreeBSD.org
