@@ -1,6 +1,3 @@
-
-$FreeBSD: head/converters/iconv/files/patch-util__Makefile 363362 2014-07-29 17:12:47Z adamw $
-
 --- util/Makefile.orig	Sun Sep  3 22:33:15 2000
 +++ util/Makefile	Sun Mar 17 13:08:59 2002
 @@ -1,11 +1,14 @@
