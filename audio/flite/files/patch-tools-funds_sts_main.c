@@ -1,6 +1,3 @@
-
-$FreeBSD: head/audio/flite/files/patch-tools-funds_sts_main.c 340725 2014-01-22 17:40:44Z mat $
-
 Tags: for-upstream
 
 The standard headers must be included before the behavior gets undefined

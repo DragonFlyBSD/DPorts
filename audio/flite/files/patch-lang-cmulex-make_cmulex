@@ -1,6 +1,3 @@
-
-$FreeBSD: head/audio/flite/files/patch-lang-cmulex-make_cmulex 340725 2014-01-22 17:40:44Z mat $
-
 --- lang/cmulex/make_cmulex.orig
 +++ lang/cmulex/make_cmulex
 @@ -36,7 +36,7 @@
