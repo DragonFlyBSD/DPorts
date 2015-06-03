@@ -156,6 +156,7 @@ rancid:*:286:
 backuppc:*:300:
 _sphinx:*:312:
 dkfilter:*:325:
+smfs:*:326:
 daapd:*:337:
 murmur:*:338:
 wildfire:*:340:
@@ -308,6 +309,7 @@ emby:*:989:
 oozie:*:990:
 sguil:*:991:
 hive:*:992:
+kannel:*:993:
 ebnetd:*:999:
 avenger:*:60149:
 cbsd:*:60150:

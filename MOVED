@@ -380,6 +380,7 @@ x11-toolkits/linux-openmotif||2013-05-30|Has expired: Only used on FreeBSD 7, wh
 x11-toolkits/linux-pango||2013-05-30|Has expired: Only used on FreeBSD 7, which is end-of-life
 x11-toolkits/linux-qt33||2013-05-30|Has expired: Only used on FreeBSD 7, which is end-of-life
 irc/bitchx-devel|irc/bitchx|2013-05-31|Release finally cut
+www/rubygem-selnium-webdriver|www/rubygem-selenium-webdriver|2013-06-01|Fix typo in port name
 mail/p5-vpopmail||2013-06-03|Has expired: Broken for more than 6 month
 mail/vodmr||2013-06-03|Has expired: depends on expired mail/p5-vpopmail
 devel/libzrtp||2013-06-03|Has expired: No more public distfiles
@@ -1674,7 +1675,6 @@ audio/fmio||2014-03-08|Has expired: No more public distfiles
 audio/libmtp|multimedia/libmtp|2014-03-09|Moved from audio to multimedia
 mail/p5-Mail-SpamAssassin-Alt|mail/p5-Mail-SpamAssassin|2014-03-09|Retired; please use mail/p5-Mail-SpamAssassin
 mail/fetchyahoo||2014-03-10|Has expired: Yahoo classic mail interface is discontinued, so this port is permanently broken
-audio/beep||2014-03-10|Has expired: No more public distfiles
 audio/p5-Audio-Beep||2014-03-10|Has expired: Depends on expiring audio/beep
 multimedia/beep-media-player|multimedia/audacious|2014-03-10|Has expired: Abandonware, please consider using multimedia/audacious instead
 graphics/jumpgis-postgis||2014-03-10|Has expired: Depends on expiring graphics/jumpgis
@@ -2750,7 +2750,6 @@ mail/rabl_server||2014-09-01|Not staged
 mail/relay-ctrl||2014-09-01|Not staged
 mail/reply-o-matic||2014-09-01|Not staged
 mail/sccmilter||2014-09-01|Not staged
-mail/smfsav||2014-09-01|Not staged
 mail/softfail||2014-09-01|Not staged
 mail/spmfilter-spamassassin||2014-09-01|Not staged
 mail/synonym||2014-09-01|Not staged
@@ -3608,7 +3607,6 @@ devel/php53-pcntl||2015-04-17|Has expired: security EOL reached 14 Aug 2014
 archivers/php53-bz2||2015-04-17|Has expired: security EOL reached 14 Aug 2014
 net/php53-sockets||2015-04-17|Has expired: security EOL reached 14 Aug 2014
 lang/php53||2015-04-17|Has expired: security EOL reached 14 Aug 2014
-devel/pecl-uuid||2015-04-17|Has expired: requires php53, security EOL reached 14 Aug 2014
 lang/php53-extensions||2015-04-17|Has expired: security EOL reached 14 Aug 2014
 german/pecl-konto_check||2015-04-17|Has expired: requires php53, security EOL reached 14 Aug 2014
 www/moodle26|www/moodle27|2015-04-17|Has expired: Deprecated by upstream, use www/moodle2{7,8} instead
@@ -3646,7 +3644,6 @@ devel/p5-Devel-Profiler|devel/p5-Devel-NYTProf|2015-04-24|Devel::DProf was remov
 audio/filter_audio|audio/libfilteraudio|2015-04-27|audio/filter-audio is renamed into audio/libfilteraudio
 www/p5-Google-Code-Upload||2015-04-30|Has expired: Google Code will be shutting down (http://google-opensource.blogspot.tw/2015/03/farewell-to-google-code.html)
 games/wmfortune||2015-04-30|Has expired: Broken for more than 6 months
-games/springlobby||2015-04-30|Has expired: Depends on expiring games/spring
 devel/p5-base||2015-04-30|Has expired: this port is outdated and base 2.18+ is already in all supported Perl releases
 security/py-certify|security/py-certifi|2015-05-01|security/py-certify is renamed into security/py-certifi
 devel/rubygem-mini_portile||2015-05-03|Has expired: Unneeded port
@@ -3657,3 +3654,33 @@ archivers/lz4|archivers/liblz4|2015-05-08|Superseded by archivers/liblz4
 deskutils/libopensync-plugin-python||2015-05-09|Has expired: Unfetchable, devices are not produced anymore
 deskutils/msynctool||2015-05-09|Has expired: Unfetchable, devices are not produced anymore
 devel/ruby-flexmock|devel/rubygem-flexmock|2015-05-10|Rename to match our rubygems naming
+lang/pypy-devel|lang/pypy|2015-05-17|Superseded by lang/pypy
+databases/my2cego|databases/cegobridge|2015-05-19|Superseded by databases/cegobridge
+emulators/wine-compholio|emulators/wine-staging|2015-05-23|Renamed
+emulators/i386-wine-compholio|emulators/i386-wine-staging|2015-05-23|Renamed
+devel/rubygem-bioruby|devel/rubygem-bio|2015-05-23|Rename to match our rubygems naming
+www/rubygem-taggable|www/rubygem-acts_as_taggable|2015-05-23|Rename to match our rubygems naming
+security/rubygem-meterpreter_bins|security/rubygem-metasploit-payloads|2015-05-23|Renamed upstream
+textproc/rubygem-augeas|textproc/rubygem-ruby-augeas|2015-05-23|Rename to match our rubygems naming
+textproc/rubygem-xslt|textproc/rubygem-ruby-xslt|2015-05-24|Rename to match our rubygems naming
+net-mgmt/glpi-plugins-tracker-agent|net-mgmt/glpi-plugins-fusioninventory-server|2015-05-24|Has expired: superceded by net-mgmt/glpi-plugins-fusioninventory-server
+net-mgmt/glpi-plugins-tracker-server|net-mgmt/glpi-plugins-fusioninventory-server|2015-05-24|Has expired: superceded by net-mgmt/glpi-plugins-fusioninventory-server
+science/rubygem-netcdf|science/rubygem-ruby-netcdf|2015-05-24|Rename to match our rubygems naming
+security/rubygem-rc4|security/rubygem-ruby-rc4|2015-05-24|Rename to match our rubygems naming
+print/rubygem-colortools|print/rubygem-color-tools|2015-05-24|Rename to match our rubygems naming
+security/qtkeychain|security/qtkeychain-qt5|2015-05-24|Renamed to indicate supported QT version
+www/rubygem-layout-yullio|www/rubygem-layout_yullio_generator|2015-05-27|Rename to match our rubygems naming
+net/rubygem-rightaws|net/rubygem-right_aws|2015-05-27|Rename to match our rubygems naming
+net/rubygem-rightflexiscale|net/rubygem-right_flexiscale|2015-05-27|Rename to match our rubygems naming
+net/rubygem-rightgogrid|net/rubygem-right_gogrid|2015-05-27|Rename to match our rubygems naming
+net/rubygem-righthttpconnection|net/rubygem-right_http_connection|2015-05-27|Rename to match our rubygems naming
+net/rubygem-rightslicehost|net/rubygem-right_slicehost|2015-05-27|Rename to match our rubygems naming
+audio/rubygem-shout|audio/rubygem-ruby-shout|2015-05-27|Rename to match our rubygems naming
+devel/rubygem-test|devel/rubygem-rubygems-test|2015-05-29|Rename to match our rubygems naming
+devel/rubygem-deeptest|devel/rubygem-deep_test|2015-05-30|Rename to match our rubygems naming
+audio/portaudio2|audio/portaudio|2015-05-30|Merged into the main port
+net/rubygem-yadis|net/rubygem-ruby-yadis|2015-05-30|Rename to match our rubygems naming
+ports-mgmt/porteasy||2015-06-01|Has expired: Does not support pkgng
+textproc/hgrep||2015-06-01|Has expired: Not needed any more, base grep has coloring support
+www/diamanda||2015-06-01|Has expired: Broken for more than 6 months
+devel/py-ScriptTest|devel/py-scripttest|2015-06-01|Renamed upstream
