@@ -1,6 +1,3 @@
-
-$FreeBSD: head/audio/faad/files/patch-frontend_main.c 340725 2014-01-22 17:40:44Z mat $
-
 --- frontend/main.c.orig
 +++ frontend/main.c
 @@ -137,6 +137,31 @@
