@@ -2,7 +2,6 @@ bin/asn1Coding
 bin/asn1Decoding
 bin/asn1Parser
 include/libtasn1.h
-info/libtasn1.info
 lib/libtasn1.a
 lib/libtasn1.so
 lib/libtasn1.so.6
@@ -58,4 +57,3 @@ man/man3/asn1_write_value.3.gz
 %%PORTDOCS%%%%DOCSDIR%%/libtasn1.html
 %%PORTDOCS%%%%DOCSDIR%%/libtasn1.pdf
 %%PORTDOCS%%%%DOCSDIR%%/libtasn1.ps
-%%PORTDOCS%%@dirrm %%DOCSDIR%%
