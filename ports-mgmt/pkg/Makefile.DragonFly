@@ -13,6 +13,7 @@ post-patch:
 .else
 	@${REINPLACE_CMD} -e "s|/usr/ports|${PORTSDIR}|g" ${PROBLEM_FILES}
 .endif
+	${RM} ${WRKSRC}/external/libelf/libelf_convert.c
 
 post-stage:
 	${RM} ${STAGEDIR}${PREFIX}/sbin/pkg2ng
