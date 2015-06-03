@@ -1,5 +1,3 @@
-$FreeBSD: head/textproc/jade/files/patch-TeXFOTBuilder.cxx 340725 2014-01-22 17:40:44Z mat $
-
 --- jade/TeXFOTBuilder.cxx.orig	2011-09-24 14:17:02.000000000 +0000
 +++ jade/TeXFOTBuilder.cxx	2011-09-24 14:19:42.000000000 +0000
 @@ -83,6 +83,8 @@
