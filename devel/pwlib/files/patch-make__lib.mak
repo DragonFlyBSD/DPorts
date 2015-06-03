@@ -1,6 +1,3 @@
-
-$FreeBSD: head/devel/pwlib/files/patch-make__lib.mak 363362 2014-07-29 17:12:47Z adamw $
-
 --- make/lib.mak
 +++ make/lib.mak
 @@ -130,12 +127,18 @@
