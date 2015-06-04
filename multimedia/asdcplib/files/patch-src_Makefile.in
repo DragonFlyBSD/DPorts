@@ -1,6 +1,3 @@
-
-$FreeBSD: head/multimedia/asdcplib/files/patch-src_Makefile.in 313121 2013-02-28 17:35:18Z olgeni $
-
 --- src/Makefile.in.orig
 +++ src/Makefile.in
 @@ -480,7 +480,7 @@
