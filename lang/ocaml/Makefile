@@ -7,7 +7,6 @@ PORTVERSION=	4.02.1
 CATEGORIES=	lang
 MASTER_SITES=	http://caml.inria.fr/pub/distrib/${DISTNAME:R}/ GENTOO \
 		http://caml.inria.fr/pub/distrib/${DISTNAME:R}/:docs
-MASTER_SITE_SUBDIR=	distfiles
 PKGNAMESUFFIX=	${SFX}
 
 MAINTAINER=	michipili@gmail.com
@@ -18,6 +17,10 @@ LICENSE_COMB=		multi
 LICENSE_NAME_QPL10=	Q Public License, Version 1.0
 LICENSE_FILE_QPL10=	${WRKSRC}/LICENSE
 LICENSE_PERMS_QPL10=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
+
+BROKEN_sparc64=	ocamlc.opt seg-faults, please try to fix
+BROKEN_mips64=	No ASM support
+BROKEN_mips=	No ASM support
 
 USES=		cpe gmake tar:xz
 CPE_VENDOR=	inria
@@ -63,7 +66,7 @@ PLIST_SUB+=	DOC="@comment "
 .endif
 
 .if ${ARCH} == armv6
-CONFIGURE_ARGS+= -as "${AS} ${ASFLAGS} -mfpu=softvfp -meabi=5"
+CONFIGURE_ARGS+= -as "${AS} ${ASFLAGS} -meabi=5"
 .else
 CONFIGURE_ARGS+= -as "${AS} ${ASFLAGS}"
 .endif
@@ -94,14 +97,11 @@ CONFIGURE_ARGS+=-no-graph
 
 OCAML_ARCH= ${ARCH:S/x86_64/amd64/:S/powerpc/power/:S/armv6/arm/}
 
-.if defined(NO_PROFILE) || ${OCAML_ARCH:Mpower} || ${OCAML_ARCH:Mamd64}
+.if defined(NO_PROFILE) || ${OCAML_ARCH:Mpower} || ${OCAML_ARCH:Mamd64} \
+	|| ${OCAML_ARCH:Marm}
 PLIST_SUB+=	PROF="@comment "
 .else
 PLIST_SUB+=	PROF=""
-.endif
-
-.if ${OCAML_ARCH} == sparc64
-BROKEN=	ocamlc.opt seg-faults on ${ARCH}, please try to fix
 .endif
 
 post-extract:
