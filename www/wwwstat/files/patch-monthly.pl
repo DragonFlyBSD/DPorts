@@ -1,5 +1,3 @@
-$FreeBSD: head/www/wwwstat/files/patch-monthly.pl 340725 2014-01-22 17:40:44Z mat $
-
 --- monthly.pl.orig	Thu Jul 17 14:24:55 2003
 +++ monthly.pl	Thu Jul 17 14:26:02 2003
 @@ -66,11 +66,13 @@
