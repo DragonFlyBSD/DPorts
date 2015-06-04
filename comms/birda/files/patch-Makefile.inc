@@ -1,6 +1,3 @@
-
-$FreeBSD: head/comms/birda/files/patch-Makefile.inc 340725 2014-01-22 17:40:44Z mat $
-
 --- Makefile.inc	2002/07/16 17:28:32	1.1
 +++ Makefile.inc	2002/07/16 17:28:40
 @@ -1,5 +1,3 @@
