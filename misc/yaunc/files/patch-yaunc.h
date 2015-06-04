@@ -1,6 +1,3 @@
-
-$FreeBSD: head/misc/yaunc/files/patch-yaunc.h 340725 2014-01-22 17:40:44Z mat $
-
 --- yaunc.h.orig	Fri Mar 14 07:14:11 2003
 +++ yaunc.h	Sun Apr 27 19:15:49 2003
 @@ -107,8 +107,6 @@
