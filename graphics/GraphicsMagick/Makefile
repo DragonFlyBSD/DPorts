@@ -3,12 +3,11 @@
 
 PORTNAME=	GraphicsMagick
 PORTVERSION=	1.3.20
-PORTREVISION=	3
+PORTREVISION=	4
 PORTEPOCH=	1
 CATEGORIES=	graphics
 MASTER_SITES=	SF \
 		ftp://ftp.graphicsmagick.org/pub/GraphicsMagick/1.3/
-MASTER_SITE_SUBDIR=	${PORTNAME:tl}/${PORTNAME:tl}/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Fast image processing tools based on ImageMagick
@@ -31,6 +30,7 @@ CONFIGURE_ENV=	PTHREAD_LIBS="-lpthread"
 CONFIGURE_ARGS=	--without-perl --enable-shared --enable-static \
 		--with-quantum-depth="${QD}" \
 		--with-windows-font-dir="${WINDOWS_FONT_DIR}"
+INSTALL_TARGET=	install-strip
 USE_LDCONFIG=	yes
 
 PLIST_SUB=	Q="${QD}"
