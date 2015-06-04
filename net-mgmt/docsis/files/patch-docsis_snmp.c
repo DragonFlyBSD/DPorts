@@ -1,4 +1,3 @@
-# $FreeBSD: head/net-mgmt/docsis/files/patch-docsis_snmp.c 340725 2014-01-22 17:40:44Z mat $
 --- src/docsis_snmp.c.orig	Wed Oct 12 07:30:20 2005
 +++ src/docsis_snmp.c	Sun Jun 10 18:25:36 2007
 @@ -20,6 +20,8 @@
