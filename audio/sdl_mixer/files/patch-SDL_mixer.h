@@ -1,6 +1,3 @@
-
-$FreeBSD: head/audio/sdl_mixer/files/patch-SDL_mixer.h 340725 2014-01-22 17:40:44Z mat $
-
 --- SDL_mixer.h	2001/05/08 07:44:56	1.1
 +++ SDL_mixer.h	2001/05/08 07:48:13
 @@ -222,6 +222,8 @@
