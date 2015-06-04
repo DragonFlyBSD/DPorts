@@ -1,6 +1,3 @@
-
-$FreeBSD: head/multimedia/mxflib/files/patch-mxflib_smartptr.h 340035 2014-01-17 13:31:29Z olgeni $
-
 --- mxflib/smartptr.h.orig
 +++ mxflib/smartptr.h
 @@ -503,7 +503,7 @@
