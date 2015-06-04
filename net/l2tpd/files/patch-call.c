@@ -1,6 +1,3 @@
-
-$FreeBSD: head/net/l2tpd/files/patch-call.c 340725 2014-01-22 17:40:44Z mat $
-
 --- call.c.orig	Sat Aug 10 03:47:25 2002
 +++ call.c	Thu Oct 16 23:13:51 2003
 @@ -14,9 +14,6 @@

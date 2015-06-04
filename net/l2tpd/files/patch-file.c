@@ -1,6 +1,3 @@
-
-$FreeBSD: head/net/l2tpd/files/patch-file.c 340725 2014-01-22 17:40:44Z mat $
-
 --- file.c.orig	Sat Aug 10 03:55:14 2002
 +++ file.c	Wed Apr 16 16:07:19 2003
 @@ -18,10 +18,7 @@
