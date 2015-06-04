@@ -1,6 +1,3 @@
-
-$FreeBSD: head/lang/erlang-runtime17/files/patch-Makefile.in 350789 2014-04-10 08:57:56Z olgeni $
-
 --- Makefile.in.orig
 +++ Makefile.in
 @@ -59,7 +59,7 @@
