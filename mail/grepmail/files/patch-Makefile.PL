@@ -1,6 +1,3 @@
-
-$FreeBSD: head/mail/grepmail/files/patch-Makefile.PL 340725 2014-01-22 17:40:44Z mat $
-
 --- Makefile.PL.orig
 +++ Makefile.PL
 @@ -44,10 +44,6 @@
