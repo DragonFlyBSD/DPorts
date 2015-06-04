@@ -1,6 +1,3 @@
-
-$FreeBSD: head/textproc/xlhtml/files/patch-xlhtml__xlhtml.c 363336 2014-07-29 15:20:01Z adamw $
-
 --- xlhtml/xlhtml.c	2002/02/27 18:10:01	1.1
 +++ xlhtml/xlhtml.c	2002/02/27 18:12:58
 @@ -746,8 +746,13 @@
