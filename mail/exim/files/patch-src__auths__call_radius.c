@@ -1,6 +1,3 @@
-
-$FreeBSD: head/mail/exim/files/patch-src__auths__call_radius.c 363362 2014-07-29 17:12:47Z adamw $
-
 --- src/auths/call_radius.c
 +++ src/auths/call_radius.c
 @@ -38,7 +38,11 @@
