@@ -1,6 +1,3 @@
-
-$FreeBSD: head/converters/iconv-extra/files/patch-ces__iso-2022-cn.c 363362 2014-07-29 17:12:47Z adamw $
-
 --- ces/iso-2022-cn.c	2002/03/17 11:15:25	1.1
 +++ ces/iso-2022-cn.c	2002/03/17 11:15:46
 @@ -31,7 +31,7 @@
