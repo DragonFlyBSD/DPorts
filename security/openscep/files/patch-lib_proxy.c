@@ -1,6 +1,3 @@
-
-$FreeBSD: head/security/openscep/files/patch-lib_proxy.c 340725 2014-01-22 17:40:44Z mat $
-
 --- lib/proxy.c.orig
 +++ lib/proxy.c
 @@ -10,6 +10,7 @@
