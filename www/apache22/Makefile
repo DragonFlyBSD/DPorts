@@ -2,9 +2,9 @@
 
 PORTNAME=	apache22
 PORTVERSION=	2.2.29
-PORTREVISION?=	2
+PORTREVISION?=	5
 CATEGORIES=	www ipv6
-MASTER_SITES=	${MASTER_SITE_APACHE_HTTPD}
+MASTER_SITES=	APACHE_HTTPD
 DISTNAME=	httpd-${PORTVERSION}
 DIST_SUBDIR=	apache22
 
@@ -20,9 +20,9 @@ CONFLICTS_INSTALL=	caudium14-1.* \
 		apache-*-2.4.* apache24-*-2.4.*
 
 USE_APACHE=	common22
-USES=		tar:bzip2 iconv perl5 libtool cpe
+USES=		tar:bzip2 iconv perl5 libtool cpe autoreconf
 USE_PERL5=	run
-USE_AUTOTOOLS=	autoconf
+GNU_CONFIGURE=	yes
 USE_RC_SUBR=	apache22 htcacheclean
 
 CPE_VENDOR=	apache
@@ -95,11 +95,12 @@ CONFIGURE_ARGS+=--prefix=${PREFIX} \
 		--with-apr=${APR_CONFIG} \
 		--with-apr-util=${APU_CONFIG}
 
-CONFIGURE_ENV=	LOCALBASE="${LOCALBASE}"
+CONFIGURE_ENV=	CONFIG_SHELL="${SH}" \
+		LOCALBASE="${LOCALBASE}"
 
 MAKE_ENV+=	EXPR_COMPAT=yes \
 		INSTALL_MAN="${INSTALL_MAN}" \
-		EXAMPLESDIR=${EXAMPLESDIR}
+		DATADIR=${DATADIR}
 
 #=====================================================
 # CONFIGURE_ARGS will be handled in Makefile.modules,
@@ -131,7 +132,7 @@ post-extract:
 # remove possible leftover .svn directories in the sources
 	@${FIND} ${WRKSRC} -type d -name .svn -print | ${XARGS} ${RM} -rf
 # limit grep results ...
-	@${FIND} ${WRKSRC} -type f \( -name 'NWGNU*' -o -name '*.ds?' -o -name '*.dep' -o -name '*.mak' -o -name '*.win' \) -delete
+	${FIND} ${WRKSRC} -type f \( -name 'NWGNU*' -o -name '*.ds?' -o -name '*.dep' -o -name '*.mak' -o -name '*.win' -o -name '*.vbs' -o -name '*.wsf' \) -delete
 
 # make qa script happy, it complains on empty dirs even 'PORTDOCS=*' is set
 # use RMDIR in case upstream ever place some files into this dirs
@@ -173,13 +174,17 @@ post-configure:
 	@${REINPLACE_CMD} -e "s,%%WWWOWN%%,${WWWOWN}," -e "s,%%WWWGRP%%,${WWWGRP}," ${WRKSRC}/docs/conf/httpd.conf
 	@${REINPLACE_CMD} -e "s,%%PREFIX%%,${PREFIX}," ${WRKSRC}/support/envvars-std
 
+pre-build:
+.if ${PORT_OPTIONS:MSSL}
+	@${ECHO_MSG}    "===>  Generating unique DH group to mitigate Logjam attack (this will take a while)"
+	(cd ${WRKSRC}/modules/ssl && ${SETENV} HOME=${WRKDIR} ${PERL} ssl_engine_dh.c)
+.endif
+
 post-install:
 	@${MKDIR} ${ETC_SUBDIRS:S|^|${STAGEDIR}${ETCDIR}/|}
 	${INSTALL_DATA} ${FILESDIR}/no-accf.conf ${STAGEDIR}${ETCDIR}/Includes/
 # place for 3rd party module configuration
 	${INSTALL_DATA} ${FILESDIR}/README_modules.d ${STAGEDIR}${ETCDIR}/modules.d/
-	@${MKDIR} ${STAGEDIR}/${EXAMPLESDIR}/modules.d
-	${INSTALL_DATA} ${FILESDIR}/README_modules.d ${STAGEDIR}${EXAMPLESDIR}/modules.d
 # strip returns an error for non binary files, but we have a big mix
 	-${STRIP_CMD} ${STAGEDIR}${PREFIX}/sbin/* 2>/dev/null
 	-${STRIP_CMD} ${STAGEDIR}${PREFIX}/libexec/apache22/mod_*.so
