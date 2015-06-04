@@ -1,6 +1,3 @@
-
-$FreeBSD: head/comms/tits/files/patch-listener.c 340725 2014-01-22 17:40:44Z mat $
-
 --- listener.c.orig
 +++ listener.c
 @@ -189,10 +189,6 @@
