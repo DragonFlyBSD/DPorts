@@ -1,6 +1,3 @@
-
-$FreeBSD: head/net-p2p/libbt/files/patch-src_btlist.c 340725 2014-01-22 17:40:44Z mat $
-
 --- src/btlist.c.orig
 +++ src/btlist.c
 @@ -13,6 +13,7 @@
