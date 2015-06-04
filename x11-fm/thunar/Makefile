@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	Thunar
-PORTVERSION=	1.6.8
+PORTVERSION=	1.6.10
 CATEGORIES=	x11-fm xfce
 MASTER_SITES=	XFCE/src/xfce/${PORTNAME:tl}/${PORTVERSION:R}
 DIST_SUBDIR=	xfce4
@@ -57,8 +57,7 @@ OPTIONS_SUB=	yes
 
 CONFIGURE_ARGS+=--enable-gio-unix \
 		--disable-gudev \
-		--enable-dbus \
-		--without-html-dir
+		--enable-dbus
 
 post-patch:
 	${REINPLACE_CMD} -e 's|internet-mail|mail-send|' \
