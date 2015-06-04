@@ -1,5 +1,3 @@
-$FreeBSD: head/audio/festival/files/patch-speech_tools_install.mak 340725 2014-01-22 17:40:44Z mat $
-
 author:  Tod McQuillin
 
 --- speech_tools/config/rules/install.mak~	Sun May 30 22:51:10 1999
