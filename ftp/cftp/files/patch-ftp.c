@@ -1,6 +1,3 @@
-
-$FreeBSD: head/ftp/cftp/files/patch-ftp.c 340725 2014-01-22 17:40:44Z mat $
-
 --- ftp.c.orig	Tue Sep 17 16:58:18 2002
 +++ ftp.c	Sat Sep 28 15:49:05 2002
 @@ -311,7 +311,7 @@
