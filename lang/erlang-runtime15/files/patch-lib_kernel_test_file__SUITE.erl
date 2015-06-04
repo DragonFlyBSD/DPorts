@@ -1,6 +1,3 @@
-
-$FreeBSD: head/lang/erlang-runtime15/files/patch-lib_kernel_test_file__SUITE.erl 310183 2013-01-10 14:42:50Z olgeni $
-
 --- lib/kernel/test/file_SUITE.erl.orig
 +++ lib/kernel/test/file_SUITE.erl
 @@ -60,7 +60,8 @@

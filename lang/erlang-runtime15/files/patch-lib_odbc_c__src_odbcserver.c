@@ -1,6 +1,3 @@
-
-$FreeBSD: head/lang/erlang-runtime15/files/patch-lib_odbc_c__src_odbcserver.c 307013 2012-11-05 14:53:00Z olgeni $
-
 --- lib/odbc/c_src/odbcserver.c.orig
 +++ lib/odbc/c_src/odbcserver.c
 @@ -1150,7 +1150,7 @@

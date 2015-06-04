@@ -1,6 +1,3 @@
-
-$FreeBSD: head/lang/erlang-runtime15/files/patch-lib_gs_src_tool__utils.erl 340725 2014-01-22 17:40:44Z mat $
-
 --- lib/gs/src/tool_utils.erl.orig
 +++ lib/gs/src/tool_utils.erl
 @@ -27,6 +27,9 @@

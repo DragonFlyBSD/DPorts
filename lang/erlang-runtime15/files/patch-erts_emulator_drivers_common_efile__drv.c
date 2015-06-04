@@ -1,6 +1,3 @@
-
-$FreeBSD: head/lang/erlang-runtime15/files/patch-erts_emulator_drivers_common_efile__drv.c 384637 2015-04-24 13:15:00Z olgeni $
-
 --- erts/emulator/drivers/common/efile_drv.c.orig
 +++ erts/emulator/drivers/common/efile_drv.c
 @@ -311,6 +311,18 @@
