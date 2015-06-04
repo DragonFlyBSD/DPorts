@@ -1,6 +1,3 @@
-
-$FreeBSD: head/www/bozohttpd/files/patch-Makefile 332145 2013-10-30 16:20:58Z pawel $
-
 --- Makefile.orig
 +++ Makefile
 @@ -19,30 +19,34 @@
