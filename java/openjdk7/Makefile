@@ -10,10 +10,10 @@ MASTER_SITES=	http://download.java.net/openjdk/jdk${JDK_MAJOR_VERSION}u${JDK_MIN
 		http://icedtea.classpath.org/download/drops/:jaxp \
 		http://download.java.net/glassfish/components/jax-ws/openjdk/jdk7/:jaxws \
 		http://icedtea.classpath.org/download/drops/:jaxws \
+		http://dl.wolfpond.org/openjdk7/:bootstrap \
 		https://java.net/downloads/jax-ws/JDK7/:jaf \
 		http://icedtea.classpath.org/download/drops/:jaf \
-		http://dl.wolfpond.org/openjdk7/:bootstrap \
-		${MASTER_SITE_APACHE:S,%SUBDIR%/,ant/binaries/:ant,}
+		APACHE/ant/binaries/:ant
 DISTFILES=	${JDK_SRC_DISTFILE}${EXTRACT_SUFX} \
 		${BOOTSTRAP_DISTFILE}:bootstrap \
 		${ANT_DISTFILE}${EXTRACT_SUFX}:ant
