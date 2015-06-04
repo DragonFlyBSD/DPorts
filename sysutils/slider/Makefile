@@ -2,7 +2,7 @@
 
 PORTNAME=	slider
 PORTVERSION=	2.06
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	sysutils
 
 MAINTAINER=	marino@FreeBSD.org
@@ -19,8 +19,7 @@ PLIST_FILES=	bin/slider
 USE_GITHUB=	yes
 GH_ACCOUNT=	jrmarino
 GH_PROJECT=	Slider
-GH_COMMIT=	7bf0423
-GH_TAGNAME=	${GH_COMMIT}
+GH_TAGNAME=	7bf0423
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local/lib/gnat/||' ${WRKSRC}/slider.gpr
