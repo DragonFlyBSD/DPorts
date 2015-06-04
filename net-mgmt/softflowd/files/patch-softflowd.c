@@ -1,6 +1,3 @@
-
-$FreeBSD: head/net-mgmt/softflowd/files/patch-softflowd.c 340725 2014-01-22 17:40:44Z mat $
-
 --- softflowd.c.orig
 +++ softflowd.c
 @@ -91,6 +91,9 @@
