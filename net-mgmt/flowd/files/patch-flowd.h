@@ -1,6 +1,3 @@
-
-$FreeBSD: head/net-mgmt/flowd/files/patch-flowd.h 340725 2014-01-22 17:40:44Z mat $
-
 --- flowd.h.orig
 +++ flowd.h
 @@ -34,7 +34,7 @@
