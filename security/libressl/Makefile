@@ -3,14 +3,15 @@
 
 PORTNAME=	libressl
 PORTVERSION=	2.1.6
+PORTREVISION=	1
 CATEGORIES=	security devel
-MASTER_SITES=	${MASTER_SITE_OPENBSD}
-MASTER_SITE_SUBDIR=	LibreSSL
+MASTER_SITES=	OPENBSD/LibreSSL
 
 MAINTAINER=	vsevolod@FreeBSD.org
 COMMENT=	Free version of the SSL/TLS protocol forked from OpenSSL
 
 LICENSE=	BSD4CLAUSE
+
 CPE_VENDOR=	openbsd
 
 CONFLICTS?=	openssl-*
