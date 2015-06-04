@@ -1,6 +1,3 @@
-
-$FreeBSD: head/net/mad_fcl/files/patch-alclib_linux__ssm.h 340725 2014-01-22 17:40:44Z mat $
-
 --- alclib/linux_ssm.h.orig	Fri Jul 30 14:15:54 2004
 +++ alclib/linux_ssm.h	Mon Aug  2 11:50:48 2004
 @@ -33,12 +33,12 @@
