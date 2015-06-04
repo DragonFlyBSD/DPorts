@@ -37,7 +37,4 @@ LIB_DEPENDS+=	libutempter.so:${PORTSDIR}/sysutils/libutempter
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-post-install:
-	@${CAT} ${PKGMESSAGE}
-
 .include <bsd.port.post.mk>
