@@ -1,4 +1,3 @@
-$FreeBSD: head/misc/figlet/files/patch-run-tests.sh 308256 2012-12-04 17:34:12Z obrien $
 --- run-tests.sh.orig	2012-06-01 05:51:10.000000000 -0700
 +++ run-tests.sh	2012-12-04 09:28:49.000000000 -0800
 @@ -7 +7 @@ TESTDIR=tests
