@@ -1,5 +1,3 @@
-$FreeBSD: head/sysutils/squashfs-tools/files/patch-squashfs-tools_unsquashfs.c 378697 2015-02-08 22:32:50Z ashish $
-
 --- unsquashfs.c.orig
 +++ unsquashfs.c
 @@ -31,7 +31,14 @@
