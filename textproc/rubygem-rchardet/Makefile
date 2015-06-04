@@ -2,15 +2,17 @@
 # $FreeBSD$
 
 PORTNAME=	rchardet
-PORTVERSION=	1.4.2
+PORTVERSION=	1.6.0
 CATEGORIES=	textproc rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Character encoding auto-detection in Ruby
 
-USE_RUBY=		yes
-USE_RUBYGEMS=		yes
+LICENSE=	LGPL21
+
+USE_RUBY=	yes
+USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
 
 .include <bsd.port.mk>
