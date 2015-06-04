@@ -1,6 +1,3 @@
-
-$FreeBSD: head/net-mgmt/rate/files/patch-rate.c 340725 2014-01-22 17:40:44Z mat $
-
 --- rate.c.orig
 +++ rate.c
 @@ -74,6 +74,7 @@
