@@ -1,36 +1,46 @@
-# genpatch is similar to pkgsrc's pkgdiff
-# 
-# The main difference is that it will automatically generate a patch file
-# with an appropriate name if it detects itself to be in the WRKDIR.
-# Thus patches must be generated from ${WRKSRC} so the port can properly
-# apply them.  Note that really only one argument is needed:
-# 
-# genpatch path/to/modified file.
-#
-# However, there must be a modified.orig or modified.intermediate file
-# in the same location for that to work.  -- John Marino
-#
+# Created by: John Marino <marino@FreeBSD.org>
+# $FreeBSD$
 
 PORTNAME=	genpatch
-PORTVERSION=	1.30
+PORTVERSION=	1.40
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	# none
 DISTFILES=	# none
 
-MAINTAINER=	draco@marino.st
-COMMENT=	Patch generator tool for dports
+MAINTAINER=	marino@FreeBSD.org
+COMMENT=	Single patch generator tool compatible with makepatch format
+
+LICENSE=	BSD2CLAUSE
 
 NO_BUILD=	yes
-SUB_FILES=	genpatch.sh dupe.sh portfix.sh
-SUB_LIST=	PREFIX=${PREFIX}
-PLIST_FILES=	bin/genpatch bin/dupe bin/portfix
+SUB_FILES=	genpatch portfix
+SUB_LIST=	WORKPATH=${PORTWORK}
+PLIST_FILES=	bin/dupe \
+		bin/genpatch \
+		bin/portfix \
+		man/man1/dupe.1.gz \
+		man/man1/genpatch.1.gz \
+		man/man1/portfix.1.gz
+
+.if defined(PACKAGE_BUILDING) # use known default values, poudriere overrides
+.  if defined(.MAKE.BUILT.BY) # DragonFly!
+PORTWORK=	/usr/obj/dports
+.  else
+PORTWORK=	/usr/ports
+.  endif
+.else 
+.  if defined(WRKDIRPREFIX) && !empty(WRKDIRPREFIX)
+PORTWORK=	${WRKDIRPREFIX}
+.  else
+PORTWORK=	${PORTSDIR}
+.  endif
+.endif
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/genpatch.sh \
-		${STAGEDIR}${PREFIX}/bin/genpatch
-	${INSTALL_SCRIPT} ${WRKDIR}/dupe.sh \
-		${STAGEDIR}${PREFIX}/bin/dupe
-	${INSTALL_SCRIPT} ${WRKDIR}/portfix.sh \
-		${STAGEDIR}${PREFIX}/bin/portfix
+	${INSTALL_SCRIPT} ${FILESDIR}/dupe   ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKDIR}/genpatch ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKDIR}/portfix  ${STAGEDIR}${PREFIX}/bin
+	(cd ${FILESDIR} && ${INSTALL_MAN} dupe.1 genpatch.1 portfix.1 \
+		${STAGEDIR}${MANPREFIX}/man/man1)
 
 .include <bsd.port.mk>

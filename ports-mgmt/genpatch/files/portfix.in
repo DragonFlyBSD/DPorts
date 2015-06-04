@@ -32,8 +32,6 @@ else
 	MYPORTEDITOR=/usr/bin/vi
 fi
 
-echo your editors is $MYPORTEDITOR
-
 %%PREFIX%%/bin/dupe ${old}
 ${MYPORTEDITOR} ${old}
 if [ $? -eq 0 ]; then

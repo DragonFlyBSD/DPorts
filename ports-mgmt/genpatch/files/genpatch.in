@@ -50,12 +50,18 @@ then
 		old="$1.orig"
 		new="$1"
 	else
-		echo $0: need at least one argument >&2
+		echo $0: need at least one valid argument >&2
 		exit 1;
 	fi
 else
-	old="$1"
-	new="$2"
+	if [ $# -eq 2 ]
+	then
+		old="$1"
+		new="$2"
+	else
+		echo $0: more than two arguments detected >&2
+		exit 1;
+	fi
 fi
 
 PKGDIFF_FMT="-p --unified=3"
@@ -69,7 +75,11 @@ then
 	exit 0
 fi
 
-objpath=$(realpath /usr/obj/dports)
+if [ -n "${WORKTREE}" ]; then
+objpath=${WORKTREE}
+else
+objpath=$(realpath %%WORKPATH%%)
+fi
 cnt1=$(echo ${objpath} | wc -c)
 objcount=$(expr $cnt1 - 1)
 fullpath=$(dirname `realpath ${old}`)

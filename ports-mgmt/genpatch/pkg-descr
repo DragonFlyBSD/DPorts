@@ -1,15 +1,11 @@
-genpatch is a simple tool written in sh(1) for generating patches for use
-in dports.  If only passed one path, it will automatically look for a
-similar file with .intermediate or .orig extension and use them (in that
-order) as the original file of which to be compared.
+This is a set of three simple tools written in sh(1) for generating single
+patches for use in Ports.  This set is ideal for creating a new patch when
+it is inconvenient or undesirable to use the "make makepatch" utility.
 
-If the path is inside the WRKDIR, then genpatch assumes that the current
-directory is $WRKSRC and will create a patch with the proper name rather
-than sending the results to stdout.  These patches can be used directly
-in the files or dragonfly directories of dports.
+The first tool is "dupe" which is a quick copy utility.  The second tool
+is "genpatch" which creates patches in the standards diff format and
+using the standard file name conventions.  The last tool is "portfix"
+which runs "dupe", an editor of choice, and "genpatch" serially as a
+macro as a convenient and quick way to create port patches.
 
-The "dupe" program quickly makes a properly named copy.
-The "portfix" wrapper will run dupe, editor, and genpatch in sequence.
-
-The editor is determined by PORTEDITOR or EDITOR environment variables,
-and fails back to vi if neither are set.
+Please see the dupe, genpatch, and portfix man pages for details.
