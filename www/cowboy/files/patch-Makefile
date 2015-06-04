@@ -1,6 +1,3 @@
-
-$FreeBSD: head/www/cowboy/files/patch-Makefile 363989 2014-08-04 10:49:26Z olgeni $
-
 --- Makefile.orig
 +++ Makefile
 @@ -12,7 +12,7 @@
