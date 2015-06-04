@@ -2,7 +2,7 @@
 
 PORTNAME=	sendmail
 PORTVERSION=	8.15.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	mail ipv6
 MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/
 PKGNAMESUFFIX?=	${TLS_SUFFIX}${SASL_SUFFIX}${LDAP_SUFFIX}${BDB_SUFFIX}${PKGNAMESUFFIX2}
@@ -12,12 +12,18 @@ MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Reliable, highly configurable mail transfer agent with utilities
 
 CONFLICTS?=	courier-0.* postfix-1.* postfix-2.* smail-3.* zmailer-2.* opensmtpd-*
-NEED_ROOT=	yes
 
 USERS=		smmsp
 GROUPS=		smmsp
 
-USES=		cpe
+MAKE_ARGS=	UBINOWN=${UID} UBINGRP=${GID} \
+		SBINOWN=${UID} SBINGRP=${GID} \
+		GBINOWN=${UID} GBINGRP=${GID} \
+		MANOWN=${UID} MANGRP=${GID} \
+		LIBMODE=0644 UBINMODE=0755 \
+		GBINMODE=2755
+
+USES=		cpe uidfix
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 DOCS=		KNOWNBUGS LICENSE PGPKEYS README RELEASE_NOTES \
 		sendmail/TRACEFLAGS sendmail/SECURITY sendmail/TUNING
@@ -242,7 +248,7 @@ post-install:
 	 ${WRKSRC}/obj.`${WRKSRC}/devtools/bin/Build -A`/libmilter/libmilter.a \
 	 ${STAGEDIR}${PREFIX}/lib/
 .if ${PORT_OPTIONS:MMILTER_SHARED}
-	${INSTALL_SCRIPT} \
+	${INSTALL_LIB} \
 	 ${WRKSRC}/obj.`${WRKSRC}/devtools/bin/Build -A`/libsharedmilter/libmilter.so \
 	 ${STAGEDIR}${PREFIX}/lib/libmilter.so.${MILTER_SOVER}
 	${LN} -sf libmilter.so.${MILTER_SOVER} \
@@ -281,6 +287,10 @@ post-install:
 .endif
 .endif
 	${RM} ${STAGEDIR}${PREFIX}/man/cat*/*
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/vacation
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/rmail
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/sbin/*
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/libexec/*
 
 mailer.base:
 	@${SED} \
