@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: head/graphics/generic_image_decoder/Makefile 364316 2014-08-07 19:27:42Z marino $
+# $FreeBSD$
 
 PORTNAME=	generic_image_decoder
 PORTVERSION=	04
