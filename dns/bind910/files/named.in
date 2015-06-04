@@ -1,11 +1,11 @@
 #!/bin/sh
 #
-# $FreeBSD: head/dns/bind910/files/named.in 385049 2015-04-30 14:43:04Z mat $
+# $FreeBSD: head/dns/bind910/files/named.in 388211 2015-06-01 10:13:58Z mat $
 #
 
 # PROVIDE: named
-# REQUIRE: FILESYSTEMS defaultroute ldconfig
-# BEFORE: NETWORKING
+# REQUIRE: %%NAMED_REQUIRE%%
+# BEFORE: %%NAMED_BEFORE%%
 # KEYWORD: shutdown
 
 #
