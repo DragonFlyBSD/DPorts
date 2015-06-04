@@ -1,6 +1,3 @@
-
-$FreeBSD: head/net/erlang_xmlrpc/files/patch-src_xmlrpc.erl 340725 2014-01-22 17:40:44Z mat $
-
 --- src/xmlrpc.erl.orig	Fri May 23 10:47:55 2003
 +++ src/xmlrpc.erl	Fri May 23 10:47:57 2003
 @@ -164,7 +164,14 @@
