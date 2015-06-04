@@ -3,10 +3,9 @@
 
 PORTNAME=	octave
 PORTVERSION=	3.8.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	math
-MASTER_SITES=	${MASTER_SITE_GNU}
-MASTER_SITE_SUBDIR=	octave
+MASTER_SITES=	GNU
 
 MAINTAINER=	maho@FreeBSD.org
 COMMENT=	High-level interactive language for numerical computations
