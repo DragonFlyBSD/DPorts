@@ -1,6 +1,3 @@
-
-$FreeBSD: head/net/stund/files/patch-stun.cxx 340725 2014-01-22 17:40:44Z mat $
-
 --- stun.cxx
 +++ stun.cxx
 @@ -648,55 +648,13 @@

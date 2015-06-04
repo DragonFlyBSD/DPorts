@@ -1,6 +1,3 @@
-
-$FreeBSD: head/net/stund/files/patch-server.cxx 340725 2014-01-22 17:40:44Z mat $
-
 --- server.cxx.orig
 +++ server.cxx
 @@ -6,10 +6,14 @@
