@@ -1,5 +1,3 @@
-$FreeBSD: head/games/unnethack/files/patch-unixconf.h 340725 2014-01-22 17:40:44Z mat $
-
 --- include/unixconf.h.good	Wed Nov 22 23:42:39 2000
 +++ include/unixconf.h	Wed Nov 22 23:43:42 2000
 @@ -206,7 +206,7 @@
