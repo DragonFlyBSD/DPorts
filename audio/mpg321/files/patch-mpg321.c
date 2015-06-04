@@ -1,6 +1,3 @@
-
-$FreeBSD: head/audio/mpg321/files/patch-mpg321.c 340725 2014-01-22 17:40:44Z mat $
-
 --- mpg321.c.orig
 +++ mpg321.c
 @@ -188,7 +188,7 @@
