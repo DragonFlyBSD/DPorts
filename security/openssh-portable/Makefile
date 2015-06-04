@@ -3,11 +3,10 @@
 
 PORTNAME=	openssh
 DISTVERSION=	6.8p1
-PORTREVISION=	6
+PORTREVISION=	7
 PORTEPOCH=	1
 CATEGORIES=	security ipv6
-MASTER_SITES=	${MASTER_SITE_OPENBSD}
-MASTER_SITE_SUBDIR=	OpenSSH/portable
+MASTER_SITES=	OPENBSD/OpenSSH/portable
 PKGNAMESUFFIX?=	-portable
 
 MAINTAINER=	bdrewery@FreeBSD.org
@@ -16,7 +15,7 @@ COMMENT=	The portable version of OpenBSD's OpenSSH
 #LICENSE=      BSD2,BSD3,MIT,public domain,BSD-Style,BEER-WARE,"any purpose with notice intact",ISC-Style
 #LICENSE_FILE= ${WRKSRC}/LICENCE
 
-CONFLICTS?=		openssh-3.* ssh-1.* ssh2-3.*
+CONFLICTS?=		openssh-3.* ssh-1.* ssh2-3.* openssh-portable-devel-*
 
 USES=			alias
 USE_AUTOTOOLS=		autoconf autoheader
@@ -94,8 +93,7 @@ EXTRA_PATCHES:=		${EXTRA_PATCHES:N${TCP_WRAPPERS_EXTRA_PATCHES}}
 PORTDOCS+=		HPN-README
 HPN_VERSION=		14v5
 HPN_DISTVERSION=	6.7p1
-#PATCH_SITES+=		${MASTER_SITE_SOURCEFORGE:S/$/:hpn/}
-#PATCH_SITE_SUBDIR+=	hpnssh/HPN-SSH%20${HPN_VERSION}%20${HPN_DISTVERSION}/:hpn
+#PATCH_SITES+=		SOURCEFORGE/hpnssh/HPN-SSH%20${HPN_VERSION}%20${HPN_DISTVERSION}/:hpn
 #PATCHFILES+=		${PORTNAME}-${HPN_DISTVERSION}-hpnssh${HPN_VERSION}.diff.gz:-p1:hpn
 EXTRA_PATCHES+=		${FILESDIR}/extra-patch-hpn:-p2
 .endif
