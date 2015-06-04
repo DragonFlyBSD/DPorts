@@ -1,6 +1,3 @@
-
-$FreeBSD: head/devel/llvm33/files/patch-utils_llvm-build_llvmbuild_main.py 369259 2014-09-25 14:30:24Z brooks $
-
 --- utils/llvm-build/llvmbuild/main.py.orig
 +++ utils/llvm-build/llvmbuild/main.py
 @@ -660,7 +660,17 @@
