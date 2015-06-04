@@ -1,6 +1,3 @@
-
-$FreeBSD: head/net/zebra/files/patch-ioctl.c 340725 2014-01-22 17:40:44Z mat $
-
 --- zebra/ioctl.c.orig	Tue Oct 23 11:31:29 2001
 +++ zebra/ioctl.c	Fri Oct  4 19:45:04 2002
 @@ -349,6 +349,7 @@
