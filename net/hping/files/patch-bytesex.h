@@ -1,6 +1,3 @@
-
-$FreeBSD: head/net/hping/files/patch-bytesex.h 340725 2014-01-22 17:40:44Z mat $
-
 --- bytesex.h.orig	Tue Sep 14 15:22:45 2004
 +++ bytesex.h	Tue Sep 14 15:21:50 2004
 @@ -8,10 +8,12 @@
