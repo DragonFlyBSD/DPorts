@@ -1,11 +1,20 @@
---- configure.orig	2013-12-12 05:06:36.000000000 -0500
+--- configure.orig	2015-05-17 15:24:50 UTC
 +++ configure
-@@ -21503,7 +21503,7 @@ echo $ECHO_N "checking target operating
+@@ -2122,7 +2122,7 @@ test -n "$target_alias" &&
+ 
+ 
+ case $target_os in
+-freebsd* | netbsd*)
++freebsd* | dragonfly* | netbsd*)
+         LDFLAGS="$LDFLAGS -L/usr/local/lib"
+         CPPFLAGS="$CPPFLAGS -I/usr/local/include"
+         ;;
+@@ -21515,7 +21515,7 @@ echo $ECHO_N "checking target operating
        LIBBURN_ARCH_LIBS=
        LIBBURNIA_LDCONFIG_CMD=ldconfig
        ;;
--    freebsd*)
-+    freebsd*|dragonfly*)
+-    *-*-freebsd*)
++    *-*-freebsd*|*-*-dragonfly*)
        ARCH=freebsd
        LIBBURN_ARCH_LIBS=-lcam
        LIBBURNIA_PKGCONFDIR=$(echo "$libdir" | sed 's/\/lib$/\/libdata/')/pkgconfig
