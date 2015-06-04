@@ -1,6 +1,3 @@
-
-$FreeBSD: head/www/webresolve/files/patch-webresolve.c 340725 2014-01-22 17:40:44Z mat $
-
 --- webresolve.c	2001/03/14 14:44:11	1.1
 +++ webresolve.c	2001/03/14 14:44:26
 @@ -24,6 +24,7 @@
