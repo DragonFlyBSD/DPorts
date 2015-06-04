@@ -1,6 +1,3 @@
-
-$FreeBSD: head/net-mgmt/ehnt/files/patch-ehnt__client.c 340725 2014-01-22 17:40:44Z mat $
-
 --- ehnt_client.c.orig
 +++ ehnt_client.c
 @@ -27,6 +27,11 @@

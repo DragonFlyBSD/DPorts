@@ -1,6 +1,3 @@
-
-$FreeBSD: head/net-mgmt/ehnt/files/patch-ehnt__processflow.c 340725 2014-01-22 17:40:44Z mat $
-
 --- ehnt_processflow.c.orig	Thu Oct  4 22:18:29 2001
 +++ ehnt_processflow.c	Wed Jun 23 14:35:08 2004
 @@ -81,6 +81,8 @@
