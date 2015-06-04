@@ -1,6 +1,3 @@
-
-$FreeBSD: head/lang/mit-scheme/files/patch-configure 356999 2014-06-08 10:12:58Z olgeni $
-
 --- configure.orig
 +++ configure
 @@ -3444,7 +3444,7 @@

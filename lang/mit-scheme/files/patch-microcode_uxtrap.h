@@ -1,6 +1,3 @@
-
-$FreeBSD: head/lang/mit-scheme/files/patch-microcode_uxtrap.h 310285 2013-01-12 16:58:37Z olgeni $
-
 --- microcode/uxtrap.h.orig
 +++ microcode/uxtrap.h
 @@ -413,6 +413,14 @@
