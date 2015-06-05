@@ -1,6 +1,3 @@
-
-$FreeBSD: head/net/py-xmlrpc/files/patch-src_rpcSource.c 340725 2014-01-22 17:40:44Z mat $
-
 --- src/rpcSource.c
 +++ src/rpcSource.c
 @@ -61,7 +61,7 @@
