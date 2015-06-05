@@ -1,6 +1,3 @@
-
-$FreeBSD: head/security/pssh/files/patch-psshlib_psshutil.py 340725 2014-01-22 17:40:44Z mat $
-
 --- psshlib/psshutil.py.orig
 +++ psshlib/psshutil.py
 @@ -27,7 +27,10 @@
