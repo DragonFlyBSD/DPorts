@@ -1,6 +1,3 @@
-
-$FreeBSD: head/devel/oserl/files/patch-Makefile 318430 2013-05-18 13:06:47Z olgeni $
-
 --- Makefile.orig
 +++ Makefile
 @@ -10,6 +10,13 @@

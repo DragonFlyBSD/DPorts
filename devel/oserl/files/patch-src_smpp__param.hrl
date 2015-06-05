@@ -1,6 +1,3 @@
-
-$FreeBSD: head/devel/oserl/files/patch-src_smpp__param.hrl 362059 2014-07-16 12:26:39Z olgeni $
-
 --- src/smpp_param.hrl.orig
 +++ src/smpp_param.hrl
 @@ -159,7 +159,7 @@
