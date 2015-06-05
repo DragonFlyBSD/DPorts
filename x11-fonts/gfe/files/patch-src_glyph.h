@@ -1,6 +1,3 @@
-
-$FreeBSD: head/x11-fonts/gfe/files/patch-src_glyph.h 340725 2014-01-22 17:40:44Z mat $
-
 --- src/glyph.h.orig	Sat Nov 30 02:01:40 2002
 +++ src/glyph.h	Sat Nov 30 02:06:16 2002
 @@ -20,7 +20,7 @@
