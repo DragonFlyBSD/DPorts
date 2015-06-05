@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/www/varnish4/files/varnishncsa.in 382013 2015-03-23 16:27:36Z feld $
+# $FreeBSD: head/www/varnish4/files/varnishncsa.in 387610 2015-05-27 14:34:42Z feld $
 #
 
 # PROVIDE: varnishncsa
@@ -37,18 +37,17 @@
 
 . /etc/rc.subr
 
-name="varnishncsa"
+name=varnishncsa
 rcvar=varnishncsa_enable
 
-command="%%PREFIX%%/bin/${name}"
-
-# read configuration and set defaults
 load_rc_config ${name}
-: ${varnishncsa_enable:="NO"}
-: ${varnishncsa_pidfile:="/var/run/${name}.pid"}
-: ${varnishncsa_file:="/var/log/${name}.log"}
-: ${varnishncsa_logformat:=""}
-: ${varnishncsa_flags:="-P ${varnishncsa_pidfile} -D -a -c -w ${varnishncsa_file}${varnishncsa_logformat:+ -F \"$varnishncsa_logformat\"}"}
 
+: ${varnishncsa_enable:=NO}
+: ${varnishncsa_pidfile=/var/run/${name}.pid}
+: ${varnishncsa_file=/var/log/${name}.log}
+: ${varnishncsa_flags="-P ${varnishncsa_pidfile} -D -a -c -w ${varnishncsa_file}${varnishncsa_logformat:+ -F \"$varnishncsa_logformat\"}"}
+
+command="%%PREFIX%%/bin/${name}"
 pidfile=${varnishncsa_pidfile}
+
 run_rc_command "$1"
