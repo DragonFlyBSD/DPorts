@@ -1,6 +1,3 @@
-
-$FreeBSD: head/devel/py-dialog/files/patch-dialog.py 340725 2014-01-22 17:40:44Z mat $
-
 --- dialog.py.orig
 +++ dialog.py
 @@ -214,6 +214,10 @@
