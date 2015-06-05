@@ -1,5 +1,3 @@
-$FreeBSD: head/astro/gpsman/files/patch-gpsman.tcl 340725 2014-01-22 17:40:44Z mat $
-
 diff -ruN gpsman.tcl gpsman.tcl
 --- gpsman.tcl	Tue May  9 02:37:24 2006
 +++ gpsman.tcl	Wed May 10 17:56:02 2006
