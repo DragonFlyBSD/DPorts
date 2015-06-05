@@ -3,8 +3,7 @@
 PORTNAME=	python-tools
 PORTVERSION=	${PYTHON_PORTVERSION}
 CATEGORIES=	lang python devel
-MASTER_SITES=	PYTHON
-MASTER_SITE_SUBDIR=	ftp/python/${PORTVERSION}
+MASTER_SITES=	PYTHON/ftp/python/${PORTVERSION}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	Python-${PORTVERSION}
 
@@ -38,7 +37,7 @@ UNIQUE_SUFFIX_FILES=	${SCRIPT_FILES:C/^.*/bin\/&/g} \
 
 .include <bsd.port.pre.mk>
 
-.if ${PYTHON_REL} < 320
+.if ${PYTHON_REL} < 3200
 SCRIPT_FILES+=	logmerge
 python_OLD_CMD=	/usr/bin/env python
 .else
