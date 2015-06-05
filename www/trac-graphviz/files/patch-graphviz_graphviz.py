@@ -1,6 +1,3 @@
-
-$FreeBSD: head/www/trac-graphviz/files/patch-graphviz_graphviz.py 340725 2014-01-22 17:40:44Z mat $
-
 --- graphviz/graphviz.py.orig
 +++ graphviz/graphviz.py
 @@ -16,11 +16,11 @@
