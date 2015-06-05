@@ -1,6 +1,3 @@
-
-$FreeBSD: head/lang/clang36/files/patch-tools_clang_lib_Analysis_PrintfFormatString.cpp 377636 2015-01-21 23:47:28Z brooks $
-
 --- tools/clang/lib/Analysis/PrintfFormatString.cpp.orig
 +++ tools/clang/lib/Analysis/PrintfFormatString.cpp
 @@ -208,7 +208,7 @@

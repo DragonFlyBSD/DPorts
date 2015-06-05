@@ -1,6 +1,3 @@
-
-$FreeBSD: head/lang/clang36/files/patch-tools_clang_lib_Sema_SemaChecking.cpp 363768 2014-08-01 22:38:44Z brooks $
-
 --- tools/clang/lib/Sema/SemaChecking.cpp.orig
 +++ tools/clang/lib/Sema/SemaChecking.cpp
 @@ -1511,6 +1511,39 @@

@@ -1,6 +1,3 @@
-
-$FreeBSD: head/lang/clang36/files/patch-tools_clang_lib_Headers_Makefile 341489 2014-01-28 00:04:46Z brooks $
-
 --- tools/clang/lib/Headers/Makefile.orig
 +++ tools/clang/lib/Headers/Makefile
 @@ -19,7 +19,7 @@
