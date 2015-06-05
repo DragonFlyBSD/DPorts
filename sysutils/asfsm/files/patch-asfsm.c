@@ -1,6 +1,3 @@
-
-$FreeBSD: head/sysutils/asfsm/files/patch-asfsm.c 363335 2014-07-29 15:00:12Z adamw $
-
 --- asfsm.c.orig	Sun Oct 18 12:02:09 1998
 +++ asfsm.c	Thu Aug 15 23:19:02 2002
 @@ -2,10 +2,10 @@
