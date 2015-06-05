@@ -1,6 +1,3 @@
-
-$FreeBSD: head/math/py-gsl/files/patch-src_init_initmodule.c 340725 2014-01-22 17:40:44Z mat $
-
 --- src/init/initmodule.c.orig
 +++ src/init/initmodule.c
 @@ -83,7 +83,7 @@
