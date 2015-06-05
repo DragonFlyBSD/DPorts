@@ -5,8 +5,7 @@ PORTNAME=	kicad
 DISTVERSION=	r${BZR_SRC_REV}
 PORTREVISION=	1
 CATEGORIES=	cad
-MASTER_SITES=	${MASTER_SITE_LOCAL}
-MASTER_SITE_SUBDIR=	mr
+MASTER_SITES=	LOCAL/mr
 PKGNAMESUFFIX=	-devel
 DIST_SUBDIR=		${PORTNAME}
 
@@ -178,4 +177,10 @@ build-plist:
 			-e 's|${STAGEDIR}${DOCSDIR}|%%DOCSDIR%%|' \
 			-e 's|^|@dirrm |' >> ${PLIST}
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if ${OPSYS} == FreeBSD && ${OSVERSION} < 900000
+BROKEN=		does not build: absence of strtoll(3)
+.endif
+
+.include <bsd.port.post.mk>
