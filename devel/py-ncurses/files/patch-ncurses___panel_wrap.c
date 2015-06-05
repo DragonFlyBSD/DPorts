@@ -1,6 +1,3 @@
-
-$FreeBSD: head/devel/py-ncurses/files/patch-ncurses___panel_wrap.c 363362 2014-07-29 17:12:47Z adamw $
-
 --- ncurses/_panel_wrap.c	2001/03/13 17:00:02	1.1
 +++ ncurses/_panel_wrap.c	2001/03/13 17:00:26
 @@ -588,8 +588,8 @@
