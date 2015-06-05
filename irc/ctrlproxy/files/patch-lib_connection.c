@@ -1,6 +1,3 @@
-
-$FreeBSD: head/irc/ctrlproxy/files/patch-lib_connection.c 340725 2014-01-22 17:40:44Z mat $
-
 --- lib/connection.c.orig
 +++ lib/connection.c
 @@ -676,8 +676,12 @@
