@@ -1,6 +1,3 @@
-
-$FreeBSD: head/www/trac-wikinotification/files/patch-WikiNotification__notification.py 340725 2014-01-22 17:40:44Z mat $
-
 --- ./WikiNotification/notification.py.orig
 +++ ./WikiNotification/notification.py
 @@ -14,14 +14,13 @@
