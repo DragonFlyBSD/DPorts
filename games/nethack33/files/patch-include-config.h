@@ -1,5 +1,3 @@
-$FreeBSD: head/games/nethack33/files/patch-include-config.h 359727 2014-06-29 05:33:59Z glewis $
-
 --- include/config.h.orig	Sat Jul 22 10:13:51 2000
 +++ include/config.h	Sat May 18 06:27:54 2002
 @@ -110,7 +110,7 @@

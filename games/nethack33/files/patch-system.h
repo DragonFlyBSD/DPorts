@@ -1,5 +1,3 @@
-$FreeBSD: head/games/nethack33/files/patch-system.h 340725 2014-01-22 17:40:44Z mat $
-
 --- include/system.h.orig	Mon Apr 19 23:27:53 2004
 +++ include/system.h	Mon Apr 19 23:31:54 2004
 @@ -86,7 +86,7 @@
