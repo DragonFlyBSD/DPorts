@@ -1,5 +1,3 @@
-$FreeBSD: head/graphics/grads/files/patch-src_bufrscan.c 340725 2014-01-22 17:40:44Z mat $
-
 --- src/bufrscan.c.orig	2009-01-20 21:16:09.000000000 -0800
 +++ src/bufrscan.c	2009-01-20 21:16:20.000000000 -0800
 @@ -5,6 +5,7 @@

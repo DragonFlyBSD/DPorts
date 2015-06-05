@@ -1,5 +1,3 @@
-$FreeBSD: head/graphics/grads/files/patch-src_gxhpng.c 340725 2014-01-22 17:40:44Z mat $
-
 --- src/gxhpng.c.orig	Fri Mar 25 15:23:06 2005
 +++ src/gxhpng.c	Fri Mar 25 15:23:48 2005
 @@ -377,7 +377,11 @@

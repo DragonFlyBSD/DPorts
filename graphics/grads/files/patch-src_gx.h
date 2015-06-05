@@ -1,5 +1,3 @@
-$FreeBSD: head/graphics/grads/files/patch-src_gx.h 340725 2014-01-22 17:40:44Z mat $
-
 --- src/gx.h.orig	Fri Mar 25 15:37:16 2005
 +++ src/gx.h	Fri Mar 25 15:37:53 2005
 @@ -45,7 +45,7 @@
