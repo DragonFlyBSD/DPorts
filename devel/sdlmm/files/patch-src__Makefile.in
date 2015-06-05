@@ -1,6 +1,3 @@
-
-$FreeBSD: head/devel/sdlmm/files/patch-src__Makefile.in 363362 2014-07-29 17:12:47Z adamw $
-
 --- src/Makefile.in	2001/09/03 14:43:41	1.1
 +++ src/Makefile.in	2001/09/03 14:43:55
 @@ -99,7 +99,7 @@
