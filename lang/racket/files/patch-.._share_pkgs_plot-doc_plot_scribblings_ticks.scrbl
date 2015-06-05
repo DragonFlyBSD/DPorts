@@ -1,6 +1,3 @@
-
-$FreeBSD: head/lang/racket/files/patch-.._share_pkgs_plot-doc_plot_scribblings_ticks.scrbl 341390 2014-01-27 12:37:06Z olgeni $
-
 --- ../share/pkgs/plot-doc/plot/scribblings/ticks.scrbl.orig
 +++ ../share/pkgs/plot-doc/plot/scribblings/ticks.scrbl
 @@ -183,22 +183,6 @@

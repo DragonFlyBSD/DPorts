@@ -1,6 +1,3 @@
-
-$FreeBSD: head/lang/racket/files/patch-racket_src_port.c 385204 2015-05-02 18:59:17Z olgeni $
-
 --- racket/src/port.c.orig
 +++ racket/src/port.c
 @@ -10996,7 +10996,7 @@

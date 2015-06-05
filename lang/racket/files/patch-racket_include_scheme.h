@@ -1,6 +1,3 @@
-
-$FreeBSD: head/lang/racket/files/patch-racket_include_scheme.h 341390 2014-01-27 12:37:06Z olgeni $
-
 --- racket/include/scheme.h.orig
 +++ racket/include/scheme.h
 @@ -63,10 +63,12 @@

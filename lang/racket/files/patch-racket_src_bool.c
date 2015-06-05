@@ -1,6 +1,3 @@
-
-$FreeBSD: head/lang/racket/files/patch-racket_src_bool.c 385204 2015-05-02 18:59:17Z olgeni $
-
 --- racket/src/bool.c.orig
 +++ racket/src/bool.c
 @@ -203,6 +203,9 @@
