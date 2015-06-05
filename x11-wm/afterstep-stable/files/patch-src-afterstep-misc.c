@@ -1,5 +1,3 @@
-$FreeBSD: head/x11-wm/afterstep-stable/files/patch-src-afterstep-misc.c 351234 2014-04-13 17:46:59Z glewis $
-
 --- src/afterstep/misc.c.orig	2014-04-12 12:28:58.000000000 -0700
 +++ src/afterstep/misc.c	2014-04-12 12:29:10.000000000 -0700
 @@ -32,13 +32,13 @@

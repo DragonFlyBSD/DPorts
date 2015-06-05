@@ -1,5 +1,3 @@
-$FreeBSD: head/x11-wm/afterstep-stable/files/patch-src-afterstep-asinternals.h 351234 2014-04-13 17:46:59Z glewis $
-
 --- src/afterstep/asinternals.h.orig	2014-04-12 12:29:08.000000000 -0700
 +++ src/afterstep/asinternals.h	2014-04-12 12:28:35.000000000 -0700
 @@ -689,8 +689,8 @@

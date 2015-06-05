@@ -1,5 +1,3 @@
-$FreeBSD: head/x11-wm/afterstep-stable/files/patch-libAfterStep-mylook.h 351234 2014-04-13 17:46:59Z glewis $
-
 --- libAfterStep/mylook.h.orig	2014-04-12 12:24:55.000000000 -0700
 +++ libAfterStep/mylook.h	2014-04-12 12:25:46.000000000 -0700
 @@ -411,9 +411,9 @@

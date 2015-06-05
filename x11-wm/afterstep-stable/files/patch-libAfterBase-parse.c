@@ -1,5 +1,3 @@
-$FreeBSD: head/x11-wm/afterstep-stable/files/patch-libAfterBase-parse.c 351234 2014-04-13 17:46:59Z glewis $
-
 --- libAfterBase/parse.c.orig	2014-04-12 10:22:32.000000000 -0700
 +++ libAfterBase/parse.c	2014-04-11 06:31:13.000000000 -0700
 @@ -1027,7 +1027,7 @@

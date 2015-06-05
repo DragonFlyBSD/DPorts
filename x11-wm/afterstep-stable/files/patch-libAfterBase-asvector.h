@@ -1,5 +1,3 @@
-$FreeBSD: head/x11-wm/afterstep-stable/files/patch-libAfterBase-asvector.h 351234 2014-04-13 17:46:59Z glewis $
-
 --- libAfterBase/asvector.h.orig	2014-04-12 12:22:00.000000000 -0700
 +++ libAfterBase/asvector.h	2014-04-12 12:22:37.000000000 -0700
 @@ -38,7 +38,7 @@

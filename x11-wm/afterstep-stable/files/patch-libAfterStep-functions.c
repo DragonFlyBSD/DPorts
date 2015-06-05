@@ -1,5 +1,3 @@
-$FreeBSD: head/x11-wm/afterstep-stable/files/patch-libAfterStep-functions.c 351234 2014-04-13 17:46:59Z glewis $
-
 --- libAfterStep/functions.c.orig	2014-04-12 10:22:40.000000000 -0700
 +++ libAfterStep/functions.c	2014-04-11 06:32:05.000000000 -0700
 @@ -307,7 +307,7 @@
