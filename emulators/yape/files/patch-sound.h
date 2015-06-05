@@ -1,6 +1,3 @@
-
-$FreeBSD: head/emulators/yape/files/patch-sound.h 340725 2014-01-22 17:40:44Z mat $
-
 --- sound.h.orig
 +++ sound.h
 @@ -1,7 +1,7 @@

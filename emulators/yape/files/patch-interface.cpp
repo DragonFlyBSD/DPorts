@@ -1,6 +1,3 @@
-
-$FreeBSD: head/emulators/yape/files/patch-interface.cpp 340725 2014-01-22 17:40:44Z mat $
-
 --- interface.cpp.orig
 +++ interface.cpp
 @@ -10,7 +10,7 @@
