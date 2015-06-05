@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	ilias
-PORTVERSION=	5.0.1
+PORTVERSION=	5.0.2
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www
 
@@ -25,6 +25,7 @@ RUN_DEPENDS=	convert:${PORTSDIR}/graphics/ImageMagick \
 LIB_DEPENDS=	libjpeg.so:${PORTSDIR}/graphics/jpeg \
 		libpng.so:${PORTSDIR}/graphics/png
 
+USES=		cpe
 NO_BUILD=		yes
 PLIST=			${WRKDIR}/plist
 SUB_FILES=		pkg-message
