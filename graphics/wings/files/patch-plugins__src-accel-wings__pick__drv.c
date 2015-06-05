@@ -1,6 +1,3 @@
-
-$FreeBSD: head/graphics/wings/files/patch-plugins__src-accel-wings__pick__drv.c 322840 2013-07-12 15:01:45Z amdmi3 $
-
 --- plugins_src/accel/wings_pick_drv.c.orig
 +++ plugins_src/accel/wings_pick_drv.c
 @@ -20,14 +20,19 @@
