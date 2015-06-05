@@ -1,6 +1,3 @@
-
-$FreeBSD: head/x11-wm/wmanager/files/patch-Makefile 363358 2014-07-29 16:36:06Z adamw $
-
 diff -urN -urN -x .svn ../vendor/wmanager/Makefile ./Makefile
 --- ../vendor/wmanager/Makefile	2007-12-11 12:42:04.000000000 +0200
 +++ ./Makefile	2008-05-21 18:21:47.000000000 +0300
