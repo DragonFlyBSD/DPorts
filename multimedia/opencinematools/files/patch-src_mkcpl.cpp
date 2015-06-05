@@ -1,6 +1,3 @@
-
-$FreeBSD: head/multimedia/opencinematools/files/patch-src_mkcpl.cpp 340725 2014-01-22 17:40:44Z mat $
-
 --- src/mkcpl.cpp.orig
 +++ src/mkcpl.cpp
 @@ -589,7 +589,7 @@
