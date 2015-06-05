@@ -1,6 +1,3 @@
-
-$FreeBSD: head/devel/phpsh/files/patch-src_manual.py 345622 2014-02-22 10:48:08Z mva $
-
 --- src/manual.py.orig
 +++ src/manual.py
 @@ -69,7 +69,7 @@

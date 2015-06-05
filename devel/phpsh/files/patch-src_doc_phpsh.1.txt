@@ -1,6 +1,3 @@
-
-$FreeBSD: head/devel/phpsh/files/patch-src_doc_phpsh.1.txt 345622 2014-02-22 10:48:08Z mva $
-
 --- src/doc/phpsh.1.txt.orig
 +++ src/doc/phpsh.1.txt
 @@ -51,7 +51,7 @@

@@ -1,6 +1,3 @@
-
-$FreeBSD: head/devel/phpsh/files/patch-README.md 345622 2014-02-22 10:48:08Z mva $
-
 --- README.md.orig
 +++ README.md
 @@ -25,7 +25,7 @@

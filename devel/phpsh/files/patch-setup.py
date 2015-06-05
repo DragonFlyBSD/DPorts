@@ -1,6 +1,3 @@
-
-$FreeBSD: head/devel/phpsh/files/patch-setup.py 345622 2014-02-22 10:48:08Z mva $
-
 --- setup.py.orig
 +++ setup.py
 @@ -7,15 +7,15 @@
