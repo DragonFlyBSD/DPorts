@@ -1,6 +1,3 @@
-
-$FreeBSD: head/games/xsoldier/files/patch-xsoldier.h 340725 2014-01-22 17:40:44Z mat $
-
 --- xsoldier.h.orig
 +++ xsoldier.h
 @@ -33,8 +33,8 @@

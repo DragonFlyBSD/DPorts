@@ -1,6 +1,3 @@
-
-$FreeBSD: head/games/xsoldier/files/patch-main.c 363239 2014-07-28 19:39:50Z adamw $
-
 --- main.c.orig
 +++ main.c
 @@ -33,7 +33,6 @@

@@ -1,6 +1,3 @@
-
-$FreeBSD: head/games/xsoldier/files/patch-manage.c 363239 2014-07-28 19:39:50Z adamw $
-
 --- manage.c.orig
 +++ manage.c
 @@ -17,7 +17,6 @@

@@ -1,6 +1,3 @@
-
-$FreeBSD: head/games/xsoldier/files/patch-opening.c 340725 2014-01-22 17:40:44Z mat $
-
 --- opening.c.orig
 +++ opening.c
 @@ -95,10 +95,10 @@
