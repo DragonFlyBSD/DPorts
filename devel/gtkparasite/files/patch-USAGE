@@ -1,6 +1,3 @@
-
-$FreeBSD: head/devel/gtkparasite/files/patch-USAGE 340725 2014-01-22 17:40:44Z mat $
-
 --- USAGE.orig
 +++ USAGE
 @@ -0,0 +1,23 @@
