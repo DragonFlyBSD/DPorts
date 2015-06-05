@@ -1,6 +1,3 @@
-
-$FreeBSD: head/lang/clang33/files/patch-tools_clang_include_clang_Analysis_Analyses_FormatString.h 340725 2014-01-22 17:40:44Z mat $
-
 --- tools/clang/include/clang/Analysis/Analyses/FormatString.h.orig
 +++ tools/clang/include/clang/Analysis/Analyses/FormatString.h
 @@ -117,7 +117,7 @@

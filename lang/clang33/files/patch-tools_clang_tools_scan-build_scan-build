@@ -1,6 +1,3 @@
-
-$FreeBSD: head/lang/clang33/files/patch-tools_clang_tools_scan-build_scan-build 369352 2014-09-27 01:25:57Z brooks $
-
 --- tools/clang/tools/scan-build/scan-build.orig
 +++ tools/clang/tools/scan-build/scan-build
 @@ -410,7 +410,7 @@
