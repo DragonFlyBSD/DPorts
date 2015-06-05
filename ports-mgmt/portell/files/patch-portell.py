@@ -1,6 +1,3 @@
-
-$FreeBSD: head/ports-mgmt/portell/files/patch-portell.py 383584 2015-04-08 17:19:21Z mich $
-
 --- portell.py.orig
 +++ portell.py
 @@ -6,7 +6,7 @@
