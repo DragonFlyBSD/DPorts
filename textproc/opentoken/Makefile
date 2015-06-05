@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: head/textproc/opentoken/Makefile 348229 2014-03-14 13:43:26Z marino $
+# $FreeBSD$
 
 PORTNAME=	opentoken
 PORTVERSION=	6.0b
