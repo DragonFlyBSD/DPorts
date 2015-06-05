@@ -1,11 +1,15 @@
 #!/usr/bin/env python
-# $FreeBSD: head/security/vuxml/files/extra-validation.py 321330 2013-06-19 21:20:50Z eadler $
+# $FreeBSD: head/security/vuxml/files/extra-validation.py 386985 2015-05-22 07:04:28Z delphij $
 
 import datetime
 import xml.etree.ElementTree as ET
 import sys
 
-tree = ET.parse('vuln.xml')
+if len(sys.argv) != 2:
+    print "Usage: %s vuln.xml" % (sys.argv[0])
+    sys.exit(1)
+
+tree = ET.parse(sys.argv[1])
 root = tree.getroot()
 
 namespace = "{http://www.vuxml.org/apps/vuxml-1}"
