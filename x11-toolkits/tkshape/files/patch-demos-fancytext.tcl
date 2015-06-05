@@ -1,4 +1,3 @@
-$FreeBSD: head/x11-toolkits/tkshape/files/patch-demos-fancytext.tcl 340725 2014-01-22 17:40:44Z mat $
 --- demos/fancytext.tcl	Mon Sep 11 12:01:58 2000
 +++ demos/fancytext.tcl.new	Sun Mar 14 14:36:43 2004
 @@ -32,9 +32,9 @@

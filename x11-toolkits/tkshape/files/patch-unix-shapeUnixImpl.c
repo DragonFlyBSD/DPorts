@@ -1,4 +1,3 @@
-$FreeBSD: head/x11-toolkits/tkshape/files/patch-unix-shapeUnixImpl.c 340725 2014-01-22 17:40:44Z mat $
 diff -ur unix/shapeUnixImpl.c unix/shapeUnixImpl.c.new
 --- unix/shapeUnixImpl.c	Mon Sep 11 16:27:28 2000
 +++ unix/shapeUnixImpl.c	Sat Mar 13 11:25:54 2004
