@@ -1,5 +1,3 @@
-$FreeBSD: head/audio/spiralsynth/files/patch-GUI_Widgets_Fl_Knob.cxx 340725 2014-01-22 17:40:44Z mat $
-
 --- GUI/Widgets/Fl_Knob.cxx.orig	Mon Sep 11 19:52:03 2000
 +++ GUI/Widgets/Fl_Knob.cxx	Mon Feb  9 13:22:13 2004
 @@ -4,7 +4,7 @@

@@ -1,5 +1,3 @@
-$FreeBSD: head/audio/spiralsynth/files/patch-GUI_MixerGUI.C 340725 2014-01-22 17:40:44Z mat $
-
 --- GUI/MixerGUI.C.orig	Sun Nov 26 15:52:40 2000
 +++ GUI/MixerGUI.C	Mon Feb  9 12:08:25 2004
 @@ -24,8 +24,10 @@ MixerGUI::MixerGUI(Mixer *o)
