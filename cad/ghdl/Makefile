@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: head/cad/ghdl/Makefile 388310 2015-06-02 09:13:42Z marino $
+# $FreeBSD$
 
 PORTNAME=	ghdl
 PORTVERSION=	0.32
@@ -64,6 +64,8 @@ PLIST_SUB=		DRAGONFLY="" FREEBSD="@comment "
 OPTIONS_DEFAULT=	GCC
 PLIST_SUB=		DRAGONFLY="@comment " FREEBSD=""
 .endif
+
+MAKE_JOBS_UNSAFE=	yes
 
 .include <bsd.port.options.mk>
 
