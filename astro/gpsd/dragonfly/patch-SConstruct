@@ -1,21 +1,21 @@
---- SConstruct.intermediate	2014-05-26 17:43:06.664714000 +0000
+--- SConstruct.orig	2015-06-06 06:21:40 UTC
 +++ SConstruct
-@@ -451,6 +451,8 @@ if env['ncurses']:
-         ncurseslibs = ['!ncurses5-config --libs --cflags']
-     elif config.CheckExecutable('ncursesw5-config --version', 'ncursesw5-config'):
-         ncurseslibs = ['!ncursesw5-config --libs --cflags']
-+    elif sys.platform.startswith('dragonfly'):
-+        ncurseslibs= [ '-lncurses' ]
-     elif sys.platform.startswith('freebsd'):
-         ncurseslibs= [ '-lncurses' ]
-     elif sys.platform.startswith('openbsd'):
-@@ -468,6 +470,9 @@ if env['usb']:
-     elif sys.platform.startswith("freebsd"):
-         confdefs.append("#define HAVE_LIBUSB 1\n")
-         usblibs = [ "-lusb"]
-+    elif sys.platform.startswith("dragon"):
-+        confdefs.append("#define HAVE_LIBUSB 1\n")
-+        usblibs = [ "-lusb"]
-     else:
-         confdefs.append("/* #undef HAVE_LIBUSB */\n")
-         usblibs = []
+@@ -545,6 +545,8 @@ else:
+             ncurseslibs = ['!ncurses5-config --libs --cflags']
+         elif WhereIs('ncursesw5-config'):
+             ncurseslibs = ['!ncursesw5-config --libs --cflags']
++        elif sys.platform.startswith('dragonfly'):
++            ncurseslibs= [ '-lncurses' ]
+         elif sys.platform.startswith('freebsd'):
+             ncurseslibs= [ '-lncurses' ]
+         elif sys.platform.startswith('openbsd'):
+@@ -561,6 +563,9 @@ else:
+             except OSError:
+                 announce("pkg_config is confused about the state of libusb-1.0.")
+                 usblibs = []
++        elif sys.platform.startswith("dragonfly"):
++            confdefs.append("#define HAVE_LIBUSB 1\n")
++            usblibs = [ "-lusb"]
+         elif sys.platform.startswith("freebsd"):
+             confdefs.append("#define HAVE_LIBUSB 1\n")
+             usblibs = [ "-lusb"]
