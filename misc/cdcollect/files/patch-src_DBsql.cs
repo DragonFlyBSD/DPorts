@@ -1,6 +1,3 @@
-
-$FreeBSD: head/misc/cdcollect/files/patch-src_DBsql.cs 340725 2014-01-22 17:40:44Z mat $
-
 --- src/DBsql.cs.orig
 +++ src/DBsql.cs
 @@ -958,10 +958,10 @@
