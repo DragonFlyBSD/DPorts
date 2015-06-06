@@ -22,6 +22,8 @@ CPE_VENDOR=	python
 CPE_PRODUCT=	${CPE_VENDOR}
 CPE_VERSION=	${PORTVERSION}
 
+MAKE_JOBS_UNSAFE=	yes
+
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ENV+=		ac_cv_opt_olimit_ok=no OPT=""				# Null out OPT to respect user CFLAGS and remove optimizations
 
