@@ -70,6 +70,7 @@ ALL_TARGET=	chrome
 INSTALLS_ICONS=	yes
 
 USES+=		alias
+USE_GCC=	4.8+
 #TODO bz@ : if you do undestand the gyp stuff, third_party/widevine/cdm/widevine_cdm.gyp talks about it (plz install libwidevinecdm.so)
 # See build/common.gypi for all the available variables.
 GYP_DEFINES+=	\
