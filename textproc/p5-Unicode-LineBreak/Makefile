@@ -3,7 +3,7 @@
 
 PORTNAME=	Unicode-LineBreak
 PORTVERSION=	2014.06
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -26,10 +26,16 @@ USE_PERL5=	configure
 CONFIGURE_ARGS=	--with-bundled-sombok
 
 OPTIONS_DEFINE=	THAI
+OPTIONS_DEFAULT=THAI
 
 THAI_DESC=	Thai word segmentation support through libthai
 THAI_USES=	pkgconfig
 THAI_LIB_DEPENDS=	libthai.so:${PORTSDIR}/devel/libthai
 THAI_CONFIGURE_OFF=	--disable-libthai
+
+post-install:
+	${CHMOD} u+w ${STAGEDIR}${PREFIX}/${SITE_ARCH_REL}/auto/Unicode/LineBreak/LineBreak.so
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/${SITE_ARCH_REL}/auto/Unicode/LineBreak/LineBreak.so
+	${CHMOD} u-w ${STAGEDIR}${PREFIX}/${SITE_ARCH_REL}/auto/Unicode/LineBreak/LineBreak.so
 
 .include <bsd.port.mk>
