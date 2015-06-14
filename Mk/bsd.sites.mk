@@ -695,7 +695,7 @@ MASTER_SITE_GNU+= \
 	ftp://ftp.gnu.org/gnu/%SUBDIR%/ \
 	http://www.gtlib.gatech.edu/pub/gnu/gnu/%SUBDIR%/ \
 	http://mirrors.kernel.org/gnu/%SUBDIR%/ \
-	ftp://ftp.kddlabs.co.jp/GNU/%SUBDIR%/ \
+	ftp://ftp.kddlabs.co.jp/GNU/gnu/%SUBDIR%/ \
 	ftp://ftp.dti.ad.jp/pub/GNU/%SUBDIR%/ \
 	ftp://ftp.mirrorservice.org/sites/ftp.gnu.org/gnu/%SUBDIR%/ \
 	ftp://ftp.informatik.hu-berlin.de/pub/gnu/gnu/%SUBDIR%/ \
@@ -718,6 +718,7 @@ MASTER_SITE_GNUPG+= \
 	ftp://ftp.sunet.se/pub/security/gnupg/%SUBDIR%/ \
 	ftp://mirror.switch.ch/mirror/gnupg/%SUBDIR%/ \
 	http://www.mirrorservice.org/sites/ftp.gnupg.org/gcrypt/%SUBDIR%/ \
+	http://www.ring.gr.jp/pub/net/gnupg/%SUBDIR%/ \
 	ftp://ftp.gnupg.org/gcrypt/%SUBDIR%/
 .endif
 
@@ -873,43 +874,18 @@ MASTER_SITE_MOZDEV+= \
 	http://ftp.osuosl.org/pub/mozdev/%SUBDIR%/
 .endif
 
-# releases.mozilla.org mirror sites
-#
-# For the full list, see the following:
-#
-#	http://www.mozilla.org/mirrors.html
-#
 .if !defined(IGNORE_MASTER_SITE_MOZILLA)
 MASTER_SITE_MOZILLA+= \
-	https://ftp.mozilla.org/pub/mozilla.org/%SUBDIR%/ \
-	http://mirror3.mirrors.tds.net/pub/mozilla.org/%SUBDIR%/ \
-	http://mozilla.isc.org/pub/mozilla.org/%SUBDIR%/ \
 	http://releases.mozilla.org/pub/mozilla.org/%SUBDIR%/ \
-	http://kyoto-mz-dl.sinet.ad.jp/pub/mozilla.org/%SUBDIR%/ \
-	http://jp-nii01.mozilla.org/pub/mozilla.org/%SUBDIR%/ \
-	http://jp-nii02.mozilla.org/pub/mozilla.org/%SUBDIR%/ \
-	http://mirror.internode.on.net/pub/mozilla/%SUBDIR%/ \
-	http://ftp.acc.umu.se/pub/mozilla.org/%SUBDIR%/ \
-	http://mozilla.c3sl.ufpr.br/releases/%SUBDIR%/ \
-	http://www.gtlib.gatech.edu/pub/mozilla.org/%SUBDIR%/ \
-	ftp://ftp.mozilla.org/pub/mozilla.org/%SUBDIR%/ \
-	ftp://ftp.fh-wolfenbuettel.de/pub/www/mozilla/%SUBDIR%/ \
-	ftp://ftp.informatik.rwth-aachen.de/pub/mirror/ftp.mozilla.org/pub/%SUBDIR%/ \
-	http://ftp.twaren.net/Unix/Mozilla/%SUBDIR%/
-.endif
-
-.if !defined(IGNORE_MASTER_SITE_BUGZILLA)
-MASTER_SITE_BUGZILLA+= \
 	https://ftp.mozilla.org/pub/mozilla.org/%SUBDIR%/ \
 	http://ftp.mozilla.org/pub/mozilla.org/%SUBDIR%/ \
-	ftp://ftp.mozilla.org/pub/mozilla.org/%SUBDIR%/ \
-	http://mirror.internode.on.net/pub/mozilla/%SUBDIR%/
+	ftp://ftp.mozilla.org/pub/mozilla.org/%SUBDIR%/
 .endif
 
-.if !defined(IGNORE_MASTER_SITE_MOZILLA_EXTENDED)
-MASTER_SITE_MOZILLA_EXTENDED+= \
-	http://releases.mozilla.org/pub/mozilla.org/%SUBDIR%/ \
-	${MASTER_SITE_MOZILLA}
+.if !defined(IGNORE_MASTER_SITE_MOZILLA_ADDONS)
+MASTER_SITE_MOZILLA_ADDONS+= \
+	https://addons.cdn.mozilla.net/user-media/%SUBDIR%/ \
+	http://kyoto-mz-dl.sinet.ad.jp/pub/mozilla.org/%SUBDIR%/
 .endif
 
 .if !defined(IGNORE_MASTER_SITE_MPLAYERHQ)
@@ -1259,7 +1235,6 @@ MASTER_SITE_SUNSITE+= \
 	ftp://ftp.nvg.ntnu.no/pub/mirrors/metalab.unc.edu/%SUBDIR%/ \
 	ftp://ftp.icm.edu.pl/pub/Linux/sunsite/%SUBDIR%/ \
 	ftp://ftp.cse.cuhk.edu.hk/pub4/Linux/%SUBDIR%/ \
-	ftp://ftp.kddlabs.co.jp/Linux/metalab.unc.edu/%SUBDIR%/ \
 	ftp://ftp.chg.ru/pub/Linux/sunsite/%SUBDIR%/ \
 	ftp://ftp.sun.ac.za/pub/mirrors/sunsite.unc.edu/pub/Linux/%SUBDIR%/
 .endif
