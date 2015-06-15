@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/www/madsonic-standalone/files/madsonic.in 382797 2015-03-31 06:50:29Z jlh $
+# $FreeBSD: head/www/madsonic-standalone/files/madsonic.in 389352 2015-06-13 12:21:51Z jlh $
 #
 
 # PROVIDE: subsonic
@@ -51,18 +51,7 @@
 
 . /etc/rc.subr
 
-case $0 in
-/etc/rc*)
-	# during boot (shutdown) $0 is /etc/rc (/etc/rc.shutdown),
-	# so get the name of the script from $_file
-	name=$_file
-	;;
-*)
-	name=$0
-	;;
-esac
-
-name=${0##*/}
+name=madsonic
 rcvar=${name}_enable
 procname="%%JAVA%%"
 
