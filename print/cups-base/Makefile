@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	cups
-PORTVERSION=	1.7.3
+PORTVERSION=	2.0.3
 DISTVERSIONSUFFIX=	-source
 #PORTREVISION=	defined further
 CATEGORIES=	print
@@ -15,16 +15,19 @@ COMMENT=	Common UNIX Printing System: ${COMMENT2}
 
 LICENSE=	GPLv2
 
+LIB_DEPENDS=	libgnutls.so:${PORTSDIR}/security/gnutls \
+		libgcrypt.so:${PORTSDIR}/security/libgcrypt
+
 CONFLICTS=	LPRng-[0-9]*
 
 UNIQUENAME=	${PORTNAME}${PKGNAMESUFFIX}
 
-USES+=		cpe gmake pkgconfig iconv tar:bzip2
+USES+=		cpe gmake iconv pkgconfig tar:bzip2
 CPE_VENDOR=	apple
 DESTDIRNAME=	DSTROOT
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib ${ICONV_LIB}
+LDFLAGS+=	-L${LOCALBASE}/lib
 DSOFLAGS=	-Wl,-rpath,${PREFIX}/lib ${LDFLAGS} ${LIBS}
 CONFIGURE_ENV=	DSOFLAGS="${DSOFLAGS}"
 CONFIGURE_ARGS+=	--localstatedir=/var			\
@@ -37,7 +40,7 @@ CONFIGURE_ARGS+=	--localstatedir=/var			\
 			--with-domainsocket=${CUPS_SOCKET}	\
 			--with-cachedir=${CUPS_CACHEDIR}	\
 			--with-pam-module="unix"		\
-			--enable-ssl
+			--enable-gnutls
 
 CUPS_CACHEDIR?=	/var/db/cups
 CUPS_SPOOLDIR=	/var/spool/cups
@@ -50,23 +53,20 @@ GROUPS=	cups
 USERS=		cups
 
 # UNIQUENAME must be set before bsd.port.pre.mk so OPTIONSFILE can be included
-OPTIONS_SINGLE=		SSL
-OPTIONS_SINGLE_SSL=	GNUTLS OPENSSL
-OPTIONS_DEFAULT=	OPENSSL
 OPTIONS_SUB=		yes
 .if defined(CUPS_CLIENT)
-PORTREVISION=	4
+PORTREVISION=	2
 LICENSE=	LGPL21
 CUPS_SUFFIX=	-client
 OPTIONS_RADIO=		ZEROCONF
 OPTIONS_RADIO_ZEROCONF=	AVAHI MDNSRESPONDER
 OPTIONS_DEFAULT+=	MDNSRESPONDER
 .elif defined(CUPS_IMAGE)
-PORTREVISION=	3
+PORTREVISION=	2
 CUPS_SUFFIX=	-image
 LICENSE=	LGPL21
 .else
-PORTREVISION=	4
+PORTREVISION=	3
 CUPS_SUFFIX=	-base
 # No DOCS option.  Files are needed by web interface.
 OPTIONS_DEFINE=		DBUS ICONS LIBPAPER LIBUSB PAM XDG_OPEN
@@ -85,14 +85,11 @@ ZEROCONF_DESC=		Zeroconf support
 
 .include <bsd.port.options.mk>
 
-.if !empty(ICONV_LIB)
-CONFIGURE_ENV+=	ac_cv_search_iconv_open=-liconv
-.endif
-
 .if defined(CUPS_CLIENT)
 COMMENT2=	Library cups
 INSTALL_WRKSRC=	${WRKSRC}/cups
 PLIST=		${MASTERDIR}/pkg-plist.client
+LIBS+=		${ICONV_LIB}
 USE_LDCONFIG=	yes
 PKGMESSAGE=	${NONEXISTENT}
 DESCR=		${MASTERDIR}/pkg-descr.client
@@ -127,17 +124,6 @@ CONFIGURE_ARGS+=	--with-printcap=/etc/printcap
 .else
 PLIST_SUB+=		OVERWRITE="@comment "
 CONFIGURE_ARGS+=	--with-printcap=${PREFIX}/etc/printcap
-.endif
-
-.if ${PORT_OPTIONS:MGNUTLS}
-CONFIGURE_ARGS+=	--disable-openssl --enable-gnutls
-LIB_DEPENDS+=		libgcrypt.so:${PORTSDIR}/security/libgcrypt \
-			libgnutls.so:${PORTSDIR}/security/gnutls
-.endif
-
-.if ${PORT_OPTIONS:MOPENSSL}
-USE_OPENSSL=		yes
-CONFIGURE_ARGS+=	--disable-gnutls --enable-openssl
 .endif
 
 # Don't use CONFIGURE_ARGS+=--without-* to disable web interpreters because it
@@ -189,8 +175,10 @@ RUN_DEPENDS+=		xdg-open:${PORTSDIR}/devel/xdg-utils
 
 . if ${PORT_OPTIONS:MLIBUSB}
 CONFIGURE_ARGS+=	--enable-libusb
+PLIST_SUB+=		LIBUSB=""
 . else
 CONFIGURE_ARGS+=	--disable-libusb
+PLIST_SUB+=		LIBUSB="@comment "
 . endif
 
 . if ${PORT_OPTIONS:MICONS}
@@ -222,6 +210,12 @@ SUB_LIST+=		ZEROCONF=""
 
 .if ${OSVERSION} < 1000036 && ${ARCH} == i386
 LIBS+=		-lssp_nonshared
+.endif
+
+.include <bsd.port.pre.mk>
+
+.if empty(ICONV_LIB)
+CONFIGURE_ENV+=	ac_cv_search_libiconv_open=no
 .endif
 
 post-patch:
@@ -322,4 +316,4 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/ulpt-cupsd.sh ${STAGEDIR}${PREFIX}/sbin/
 .endif
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
