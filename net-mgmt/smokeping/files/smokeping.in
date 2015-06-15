@@ -1,7 +1,7 @@
 #!/bin/sh
 # Created by: Sean McAfee <smcafee@collaborativefusion.com>
 
-# $FreeBSD: head/net-mgmt/smokeping/files/smokeping.in 379624 2015-02-22 19:37:33Z rodrigo $
+# $FreeBSD: head/net-mgmt/smokeping/files/smokeping.in 389609 2015-06-14 09:16:57Z rodrigo $
 
 # PROVIDE: smokeping
 # REQUIRE: LOGIN
@@ -51,7 +51,7 @@ smokeping_startprecmd()
 
 smokeping_status()
 {
-	rc_pid=$(check_pidfile $pidfile $command)
+	rc_pid=$(check_pidfile $pidfile $command $command_interpreter)
 	if [ -z "$rc_pid" ]; then
 		_run_rc_notrunning
 	else
@@ -71,7 +71,7 @@ smokeping_reload()
 
 smokeping_stop()
 {
-	rc_pid=$(check_pidfile $pidfile $command)
+	rc_pid=$(check_pidfile $pidfile $command $command_interpreter)
 	if [ -z "$rc_pid" ]; then
 		_run_rc_notrunning
 	else
