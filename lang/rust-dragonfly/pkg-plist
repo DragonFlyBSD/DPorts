@@ -11,6 +11,7 @@ lib/librbml-%%DIGEST%%.so
 lib/librustc-%%DIGEST%%.so
 lib/librustc_back-%%DIGEST%%.so
 lib/librustc_borrowck-%%DIGEST%%.so
+lib/librustc_data_structures-%%DIGEST%%.so
 lib/librustc_driver-%%DIGEST%%.so
 lib/librustc_lint-%%DIGEST%%.so
 lib/librustc_llvm-%%DIGEST%%.so
@@ -25,6 +26,7 @@ lib/libsyntax-%%DIGEST%%.so
 lib/libterm-%%DIGEST%%.so
 lib/libtest-%%DIGEST%%.so
 lib/rustlib/components
+lib/rustlib/etc/debugger_pretty_printers_common.py
 lib/rustlib/etc/gdb_load_rust_pretty_printers.py
 lib/rustlib/etc/gdb_rust_pretty_printing.py
 lib/rustlib/install.log
@@ -54,6 +56,7 @@ lib/rustlib/x86_64-unknown-dragonfly/lib/librustc-%%DIGEST%%.so
 lib/rustlib/x86_64-unknown-dragonfly/lib/librustc_back-%%DIGEST%%.so
 lib/rustlib/x86_64-unknown-dragonfly/lib/librustc_bitflags-%%DIGEST%%.rlib
 lib/rustlib/x86_64-unknown-dragonfly/lib/librustc_borrowck-%%DIGEST%%.so
+lib/rustlib/x86_64-unknown-dragonfly/lib/librustc_data_structures-%%DIGEST%%.so
 lib/rustlib/x86_64-unknown-dragonfly/lib/librustc_driver-%%DIGEST%%.so
 lib/rustlib/x86_64-unknown-dragonfly/lib/librustc_lint-%%DIGEST%%.so
 lib/rustlib/x86_64-unknown-dragonfly/lib/librustc_llvm-%%DIGEST%%.so
@@ -61,6 +64,7 @@ lib/rustlib/x86_64-unknown-dragonfly/lib/librustc_privacy-%%DIGEST%%.so
 lib/rustlib/x86_64-unknown-dragonfly/lib/librustc_resolve-%%DIGEST%%.so
 lib/rustlib/x86_64-unknown-dragonfly/lib/librustc_trans-%%DIGEST%%.so
 lib/rustlib/x86_64-unknown-dragonfly/lib/librustc_typeck-%%DIGEST%%.so
+lib/rustlib/x86_64-unknown-dragonfly/lib/librustc_unicode-%%DIGEST%%.rlib
 lib/rustlib/x86_64-unknown-dragonfly/lib/librustdoc-%%DIGEST%%.so
 lib/rustlib/x86_64-unknown-dragonfly/lib/libserialize-%%DIGEST%%.rlib
 lib/rustlib/x86_64-unknown-dragonfly/lib/libserialize-%%DIGEST%%.so
@@ -71,7 +75,6 @@ lib/rustlib/x86_64-unknown-dragonfly/lib/libterm-%%DIGEST%%.rlib
 lib/rustlib/x86_64-unknown-dragonfly/lib/libterm-%%DIGEST%%.so
 lib/rustlib/x86_64-unknown-dragonfly/lib/libtest-%%DIGEST%%.rlib
 lib/rustlib/x86_64-unknown-dragonfly/lib/libtest-%%DIGEST%%.so
-lib/rustlib/x86_64-unknown-dragonfly/lib/libunicode-%%DIGEST%%.rlib
 man/man1/rustc.1.gz
 man/man1/rustdoc.1.gz
 %%PORTDOCS%%%%DOCSDIR%%/COPYRIGHT
