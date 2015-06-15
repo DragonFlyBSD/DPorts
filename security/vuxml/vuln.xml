@@ -28,7 +28,7 @@ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION,
 EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-  $FreeBSD: head/security/vuxml/vuln.xml 388313 2015-06-02 09:44:25Z marino $
+  $FreeBSD: head/security/vuxml/vuln.xml 389270 2015-06-12 14:10:38Z brd $
 
 
 QUICK GUIDE TO ADDING A NEW ENTRY
@@ -57,6 +57,446 @@ Notes:
 
 -->
 <vuxml xmlns="http://www.vuxml.org/apps/vuxml-1">
+  <vuln vid="c470db07-1098-11e5-b6a8-002590263bf5">
+    <topic>security/ossec-hids-* -- root escalation via syscheck feature</topic>
+    <affects>
+      <package>
+	<name>ossec-hids-server</name>
+	<name>ossec-hids-client</name>
+	<name>ossec-hids-local</name>
+	<range><ge>2.7</ge><lt>2.8.2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>OSSEC reports:</p>
+	<blockquote cite="http://www.ossec.net/?p=1198">
+	  <p>The CVE-2015-3222 vulnerability, which allows for root escalation
+	    via sys check has been fixed in OSSEC 2.8.2.  This issue does not
+	    affect agents.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-3222</cvename>
+      <freebsdpr>ports/200801</freebsdpr>
+      <url>http://www.ossec.net/?p=1198</url>
+      <url>https://github.com/ossec/ossec-hids/releases/tag/2.8.2</url>
+    </references>
+    <dates>
+      <discovery>2015-06-11</discovery>
+      <entry>2015-06-12</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="8305e215-1080-11e5-8ba2-000c2980a9f3">
+    <topic>openssl -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>openssl</name>
+	<range><lt>1.0.2_2</lt></range>
+      </package>
+      <package>
+	<name>mingw32-openssl</name>
+	<range><ge>1.0.1</ge><lt>1.0.2b</lt></range>
+      </package>
+      <package>
+	<name>linux-c6-openssl</name>
+	<range><lt>1.0.2b</lt></range>
+      </package>
+      <package>
+	<name>libressl</name>
+	<range><lt>2.1.7</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The OpenSSL team reports:</p>
+	<blockquote cite="https://www.openssl.org/news/secadv_20150611.txt">
+	  <ul>
+	    <li>Missing DHE man-in-the-middle protection (Logjam)
+	      (CVE-2015-4000)</li>
+	    <li>Malformed ECParameters causes infinite loop (CVE-2015-1788)</li>
+	    <li>Exploitable out-of-bounds read in X509_cmp_time
+	      (CVE-2015-1789)</li>
+	    <li>iPKCS7 crash with missing EnvelopedContent (CVE-2015-1790)</li>
+	    <li>CMS verify infinite loop with unknown hash function
+	      (CVE-2015-1792)</li>
+	    <li>Race condition handling NewSessionTicket (CVE-2015-1791)</li>
+	    <li>Invalid free in DTLS (CVE-2014-8176)</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-8176</cvename>
+      <cvename>CVE-2015-1788</cvename>
+      <cvename>CVE-2015-1789</cvename>
+      <cvename>CVE-2015-1790</cvename>
+      <cvename>CVE-2015-1791</cvename>
+      <cvename>CVE-2015-1792</cvename>
+      <url>https://www.openssl.org/news/secadv_20150611.txt</url>
+    </references>
+    <dates>
+      <discovery>2015-06-11</discovery>
+      <entry>2015-06-11</entry>
+      <modified>2015-06-11</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="1e63db88-1050-11e5-a4df-c485083ca99c">
+    <topic>Adobe Flash Player -- critical vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>linux-c6-flashplugin11</name>
+	<range><lt>11.2r202.466</lt></range>
+      </package>
+      <package>
+	<name>linux-f10-flashplugin11</name>
+	<range><lt>11.2r202.466</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Adobe reports:</p>
+	<blockquote cite="https://helpx.adobe.com/security/products/flash-player/apsb15-11.html">
+	  <p>
+	    Adobe has released security updates for Adobe Flash Player for
+	    Windows, Macintosh and Linux.  These updates address vulnerabilities
+	    that could potentially allow an attacker to take control of the
+	    affected system.
+	  </p>
+	  <p>
+	    These updates resolve a vulnerability (CVE-2015-3096) that could be
+	    exploited to bypass the fix for CVE-2014-5333.
+	  </p>
+	  <p>
+	    These updates improve memory address randomization of the Flash heap
+	    for the Window 7 64-bit platform (CVE-2015-3097).
+	  </p>
+	  <p>
+	    These updates resolve vulnerabilities that could be exploited to
+	    bypass the same-origin-policy and lead to information disclosure
+	    (CVE-2015-3098, CVE-2015-3099, CVE-2015-3102).
+	  </p>
+	  <p>
+	    These updates resolve a stack overflow vulnerability that could lead
+	    to code execution (CVE-2015-3100).
+	  </p>
+	  <p>
+	    These updates resolve a permission issue in the Flash broker for
+	    Internet Explorer that could be exploited to perform privilege
+	    escalation from low to medium integrity level (CVE-2015-3101).
+	  </p>
+	  <p>
+	    These updates resolve an integer overflow vulnerability that could
+	    lead to code execution (CVE-2015-3104).
+	  </p>
+	  <p>
+	    These updates resolve a memory corruption vulnerability that could
+	    lead to code execution (CVE-2015-3105).
+	  </p>
+	  <p>
+	    These updates resolve use-after-free vulnerabilities that could lead
+	    to code execution (CVE-2015-3103, CVE-2015-3106, CVE-2015-3107).
+	  </p>
+	  <p>
+	    These updates resolve a memory leak vulnerability that could be used
+	    to bypass ASLR (CVE-2015-3108).
+	  </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://helpx.adobe.com/security/products/flash-player/apsb15-11.html</url>
+      <cvename>CVE-2015-3096</cvename>
+      <cvename>CVE-2015-3097</cvename>
+      <cvename>CVE-2015-3098</cvename>
+      <cvename>CVE-2015-3099</cvename>
+      <cvename>CVE-2015-3100</cvename>
+      <cvename>CVE-2015-3101</cvename>
+      <cvename>CVE-2015-3102</cvename>
+      <cvename>CVE-2015-3103</cvename>
+      <cvename>CVE-2015-3104</cvename>
+      <cvename>CVE-2015-3105</cvename>
+      <cvename>CVE-2015-3106</cvename>
+      <cvename>CVE-2015-3107</cvename>
+      <cvename>CVE-2015-3108</cvename>
+    </references>
+    <dates>
+      <discovery>2015-06-09</discovery>
+      <entry>2015-06-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="10a6d0aa-0b1c-11e5-bb90-002590263bf5">
+    <topic>libzmq4 -- V3 protocol handler vulnerable to downgrade attacks</topic>
+    <affects>
+      <package>
+	<name>libzmq4</name>
+	<range><ge>4.0.0</ge><lt>4.0.6</lt></range>
+	<range><ge>4.1.0</ge><lt>4.1.1</lt></range>
+      </package>
+    </affects>
+    <description>
+       <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Pieter Hintjens reports:</p>
+	<blockquote cite="https://github.com/zeromq/libzmq/issues/1273">
+	  <p>It is easy to bypass the security mechanism in 4.1.0 and 4.0.5 by
+	    sending a ZMTP v2 or earlier header. The library accepts such
+	    connections without applying its security mechanism.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-9721</cvename>
+      <url>https://github.com/zeromq/libzmq/issues/1273</url>
+      <mlist>http://www.openwall.com/lists/oss-security/2015/05/07/8</mlist>
+      <freebsdpr>200502</freebsdpr>
+    </references>
+    <dates>
+      <discovery>2014-12-04</discovery>
+      <entry>2015-06-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="8fbd4187-0f18-11e5-b6a8-002590263bf5">
+    <topic>pgbouncer -- remote denial of service</topic>
+    <affects>
+      <package>
+	<name>pgbouncer</name>
+	<range><lt>1.5.5</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>PgBouncer reports:</p>
+	<blockquote cite="https://pgbouncer.github.io/2015/04/pgbouncer-1-5-5/">
+	  <p>Fix remote crash - invalid packet order causes lookup of NULL pointer. Not
+	    exploitable, just DoS.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-4054</cvename>
+      <url>https://pgbouncer.github.io/2015/04/pgbouncer-1-5-5/</url>
+      <mlist>http://www.openwall.com/lists/oss-security/2015/05/21/2</mlist>
+      <freebsdpr>200507</freebsdpr>
+    </references>
+    <dates>
+      <discovery>2015-04-08</discovery>
+      <entry>2015-06-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a40ec970-0efa-11e5-90e4-d050996490d0">
+    <topic>cups -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>cups-base</name>
+	<range><lt>2.0.3</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>CUPS development team reports:</p>
+	<blockquote cite="https://cups.org/blog.php?L1082">
+	  <p>The new release addresses two security vulnerabilities,
+	    add localizations for German and Russian, and includes
+	    several general bug fixes. Changes include:</p>
+	  <p>Security: Fixed CERT VU #810572/CVE-2015-1158/CVE-2015-1159
+	    exploiting the dynamic linker (STR #4609)</p>
+	  <p>Security: The scheduler could hang with malformed
+	    gzip data (STR #4602)</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-1158</cvename>
+      <cvename>CVE-2015-1159</cvename>
+      <url>https://cups.org/blog.php?L1082</url>
+      <url>https://www.kb.cert.org/vuls/id/810572</url>
+    </references>
+    <dates>
+      <discovery>2015-06-09</discovery>
+      <entry>2015-06-09</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="55363e65-0e71-11e5-8027-00167671dd1d">
+    <topic>strongswan -- Denial-of-service and potential remote code execution vulnerability</topic>
+    <affects>
+      <package>
+	<name>strongswan</name>
+	<range><ge>5.2.2</ge><lt>5.3.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>trongSwan Project reports</p>
+	<blockquote cite="https://www.strongswan.org/blog/2015/06/01/strongswan-vulnerability-(cve-2015-3991).html">
+	  <p>A denial-of-service and potential remote code execution vulnerability
+	    triggered by crafted IKE messages was discovered in strongSwan. Versions
+	    5.2.2 and 5.3.0 are affected.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-3991</cvename>
+      <url>https://www.strongswan.org/blog/2015/06/01/strongswan-vulnerability-(cve-2015-3991).html</url>
+    </references>
+    <dates>
+      <discovery>2015-05-15</discovery>
+      <entry>2015-06-09</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="10d14955-0e45-11e5-b6a8-002590263bf5">
+    <topic>strongswan -- Information Leak Vulnerability</topic>
+    <affects>
+      <package>
+	<name>strongswan</name>
+	<range><ge>4.3.0</ge><lt>5.3.2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>strongSwan Project reports:</p>
+	<blockquote cite="http://www.strongswan.org/blog/2015/06/08/strongswan-5.3.2-released.html">
+	  <p>An information leak vulnerability was fixed that, in certain IKEv2
+	    setups, allowed rogue servers with a valid certificate accepted by
+	    the client to trick it into disclosing user credentials (even plain
+	    passwords if the client accepts EAP-GTC). This was caused because
+	    constraints against the server's authentication were enforced too
+	    late. All versions since 4.3.0 are affected.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-4171</cvename>
+      <url>http://www.strongswan.org/blog/2015/06/08/strongswan-5.3.2-released.html</url>
+    </references>
+    <dates>
+      <discovery>2015-06-08</discovery>
+      <entry>2015-06-09</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="838fa84a-0e25-11e5-90e4-d050996490d0">
+    <topic>redis -- EVAL Lua Sandbox Escape</topic>
+    <affects>
+      <package>
+	<name>redis</name>
+	<name>redis-devel</name>
+	<range><ge>2.6.0</ge><lt>2.8.21</lt></range>
+	<range><ge>3.0</ge><lt>3.0.2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Ben Murphy reports:</p>
+	<blockquote cite="http://benmmurphy.github.io/blog/2015/06/04/redis-eval-lua-sandbox-escape/">
+	  <p>It is possible to break out of the Lua sandbox in
+	    Redis and execute arbitrary code.</p>
+	  <p>This shouldn’t pose a threat to users under the
+	    trusted Redis security model where only trusted
+	    users can connect to the database. However, in real
+	    deployments there could be databases that can be
+	    accessed by untrusted users. The main deployments
+	    that are vulnerable are developers machines, places
+	    where redis servers can be reached via SSRF attacks
+	    and cloud hosting.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-4335</cvename>
+      <url>http://benmmurphy.github.io/blog/2015/06/04/redis-eval-lua-sandbox-escape/</url>
+    </references>
+    <dates>
+      <discovery>2015-06-04</discovery>
+      <entry>2015-06-08</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="bd1ab7a5-0e01-11e5-9976-a0f3c100ae18">
+    <topic>tidy -- heap-buffer-overflow</topic>
+    <affects>
+      <package>
+	<name>tidy4</name>
+	<range><le>20000804_3</le></range>
+      </package>
+      <package>
+	<name>tidy-devel</name>
+	<range><le>090315.c_2</le></range>
+      </package>
+      <package>
+	<name>tidy-lib</name>
+	<range><le>090315.c_2</le></range>
+      </package>
+      <package>
+	<name>tidy-html5</name>
+	<range><lt>4.9.31</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Geoff McLane reports:</p>
+	<blockquote cite="http://seclists.org/oss-sec/2015/q2/633">
+	  <p>tidy is affected by a write out of bounds when processing malformed html files.</p>
+	  <p>This issue could be abused on server side applications that use php-tidy extension with user input.</p>
+	  <p>The issue was confirmed, analysed and fixed by the tidy5 maintainer.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://github.com/htacg/tidy-html5/issues/217</url>
+      <url>http://seclists.org/oss-sec/2015/q2/633</url>
+    </references>
+    <dates>
+      <discovery>2015-06-03</discovery>
+      <entry>2015-06-08</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="e69af246-0ae2-11e5-90e4-d050996490d0">
+    <topic>pcre -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>pcre</name>
+	<range><lt>8.37_1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Venustech ADLAB reports:</p>
+	<blockquote cite="https://bugs.exim.org/show_bug.cgi?id=1636">
+	  <p>PCRE library is prone to a vulnerability which leads
+	    to Heap Overflow. During the compilation of a malformed
+	    regular expression, more data is written on the malloced
+	    block than the expected size output by compile_regex.</p>
+	</blockquote>
+	<blockquote cite="https://bugs.exim.org/show_bug.cgi?id=1638">
+	  <p>PCRE library is prone to a vulnerability which leads to
+	    Stack Overflow. Without enough bound checking inside
+	    match(), the stack memory could be overflowed via a
+	    crafted regular expression.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-3210</cvename>
+      <cvename>CVE-2015-3217</cvename>
+      <url>https://bugs.exim.org/show_bug.cgi?id=1636</url>
+      <url>https://bugs.exim.org/show_bug.cgi?id=1638</url>
+    </references>
+    <dates>
+      <discovery>2015-05-29</discovery>
+      <entry>2015-06-04</entry>
+      <modified>2015-06-07</modified>
+    </dates>
+  </vuln>
+
   <vuln vid="bbc0db92-084c-11e5-bb90-002590263bf5">
     <topic>hostapd and wpa_supplicant -- multiple vulnerabilities</topic>
     <affects>
@@ -886,18 +1326,6 @@ Notes:
 	<name>pcre</name>
 	<range><lt>8.37</lt></range>
       </package>
-      <package>
-	<name>php5</name>
-	<range><lt>5.4.41</lt></range>
-      </package>
-      <package>
-	<name>php55</name>
-	<range><lt>5.5.25</lt></range>
-      </package>
-      <package>
-	<name>php56</name>
-	<range><lt>5.6.9</lt></range>
-      </package>
     </affects>
     <description>
       <body xmlns="http://www.w3.org/1999/xhtml">
@@ -929,6 +1357,7 @@ Notes:
     <dates>
       <discovery>2015-04-28</discovery>
       <entry>2015-05-22</entry>
+      <modified>2015-06-07</modified>
     </dates>
   </vuln>
 
@@ -1373,11 +1802,19 @@ Notes:
   </vuln>
 
   <vuln vid="57325ecf-facc-11e4-968f-b888e347c638">
-    <topic>kodi, rawstudio, and ufraw -- integer overflow condition</topic>
+    <topic>dcraw, kodi, libraw, rawstudio, and ufraw -- integer overflow condition</topic>
     <affects>
+      <package>
+	<name>dcraw</name>
+	<range><ge>7.00</ge><lt>9.26</lt></range>
+      </package>
       <package>
 	<name>kodi</name>
 	<range><lt>14.2_1</lt></range>
+      </package>
+      <package>
+	<name>libraw</name>
+	<range><lt>0.16.1</lt></range>
       </package>
       <package>
 	<name>rawstudio</name>
@@ -1407,11 +1844,12 @@ Notes:
       <cvename>CVE-2015-3885</cvename>
       <url>http://www.ocert.org/advisories/ocert-2015-006.html</url>
       <url>https://github.com/rawstudio/rawstudio/commit/983bda1f0fa5fa86884381208274198a620f006e</url>
+      <url>https://github.com/LibRaw/LibRaw/commit/4606c28f494a750892c5c1ac7903e62dd1c6fdb5</url>
     </references>
     <dates>
       <discovery>2015-04-24</discovery>
       <entry>2015-05-15</entry>
-      <modified>2015-06-01</modified>
+      <modified>2015-06-06</modified>
     </dates>
   </vuln>
 
