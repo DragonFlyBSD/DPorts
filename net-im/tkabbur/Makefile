@@ -7,12 +7,15 @@ CATEGORIES=	net-im
 MASTER_SITES=	GOOGLE_CODE
 DISTNAME=	${PORTNAME}-${PORTVERSION}.src
 
-MAINTAINER=	dhn@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Is a modification of XMPP/Jabber client Tkabber
 
 RUN_DEPENDS=	dtplite:${PORTSDIR}/devel/tcllib \
 		tcltls>0:${PORTSDIR}/devel/tcltls \
 		${LOCALBASE}/lib/bwidget/pkgIndex.tcl:${PORTSDIR}/x11-toolkits/bwidget
+
+DEPRECATED=	Upstream development ceased since 2008
+EXPIRATION_DATE=	2015-07-07
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 USES=		tar:bzip2 tk:run
