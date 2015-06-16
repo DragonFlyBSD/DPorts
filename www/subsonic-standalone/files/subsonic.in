@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/www/subsonic-standalone/files/subsonic.in 381942 2015-03-22 18:04:48Z jlh $
+# $FreeBSD: head/www/subsonic-standalone/files/subsonic.in 389352 2015-06-13 12:21:51Z jlh $
 #
 
 # PROVIDE: subsonic
@@ -47,18 +47,7 @@
 
 . /etc/rc.subr
 
-case $0 in
-/etc/rc*)
-	# during boot (shutdown) $0 is /etc/rc (/etc/rc.shutdown),
-	# so get the name of the script from $_file
-	name=$_file
-	;;
-*)
-	name=$0
-	;;
-esac
-
-name=${0##*/}
+name=subsonic
 rcvar=${name}_enable
 procname="%%JAVA%%"
 
