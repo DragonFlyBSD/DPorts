@@ -1,6 +1,6 @@
 /* Native-dependent code for DragonFly/amd64.
 
-   Copyright (C) 2003-2013 Free Software Foundation, Inc.
+   Copyright (C) 2003-2015 Free Software Foundation, Inc.
 
    This file is part of GDB.
 
@@ -31,12 +31,13 @@
 #include <sys/ptrace.h>
 #include <sys/sysctl.h>
 #include <machine/reg.h>
+#include <machine/segments.h>
 
 #include "fbsd-nat.h"
 #include "amd64-tdep.h"
 #include "amd64-nat.h"
 #include "amd64bsd-nat.h"
-#include "i386-nat.h"
+#include "x86-nat.h"
 
 
 /* Offset in `struct reg' where MEMBER is stored.  */
@@ -76,10 +77,10 @@ static int amd64dfly64_r_reg_offset[] =
 
 /* Mapping between the general-purpose registers in DragonFly/amd64
    `struct reg' format and GDB's register cache layout for
-   DragonFly/i386.
+   DragonFly/x86.
 
    Note that most DragonFly/amd64 registers are 64-bit, while the
-   DragonFly/i386 registers are all 32-bit, but since we're
+   DragonFly/x86 registers are all 32-bit, but since we're
    little-endian we get away with that.  */
 
 /* From <machine/reg.h>.  */
@@ -192,9 +193,53 @@ static void
 amd64dfly_mourn_inferior (struct target_ops *ops)
 {
 #ifdef HAVE_PT_GETDBREGS
-  i386_cleanup_dregs ();
+  x86_cleanup_dregs ();
 #endif
   super_mourn_inferior (ops);
+}
+
+/* Implement the to_read_description method.  */
+
+static const struct target_desc *
+amd64fbsd_read_description (struct target_ops *ops)
+{
+#ifdef PT_GETXSTATE_INFO
+  static int xsave_probed;
+  static uint64_t xcr0;
+#endif
+  struct reg regs;
+  int is64;
+
+  if (ptrace (PT_GETREGS, ptid_get_pid (inferior_ptid),
+	      (PTRACE_TYPE_ARG3) &regs, 0) == -1)
+    perror_with_name (_("Couldn't get registers"));
+  is64 = (regs.r_cs == GSEL (GUCODE_SEL, SEL_UPL));
+#ifdef PT_GETXSTATE_INFO
+  if (!xsave_probed)
+    {
+      struct ptrace_xstate_info info;
+
+      if (ptrace (PT_GETXSTATE_INFO, ptid_get_pid (inferior_ptid),
+		  (PTRACE_TYPE_ARG3) &info, sizeof (info)) == 0)
+	{
+	  amd64bsd_xsave_len = info.xsave_len;
+	  xcr0 = info.xsave_mask;
+	}
+      xsave_probed = 1;
+    }
+
+  if (amd64bsd_xsave_len != 0)
+    {
+      if (is64)
+	return amd64_target_description (xcr0);
+      else
+	return i386_target_description (xcr0);
+    }
+#endif
+  if (is64)
+    return tdesc_amd64;
+  else
+    return tdesc_i386;
 }
 
 /* Provide a prototype to silence -Wmissing-prototypes.  */
@@ -209,28 +254,28 @@ _initialize_amd64dfly_nat (void)
   amd64_native_gregset32_reg_offset = amd64dfly32_r_reg_offset;
   amd64_native_gregset64_reg_offset = amd64dfly64_r_reg_offset;
 
-  /* Add some extra features to the common *BSD/i386 target.  */
+  /* Add some extra features to the common *BSD/x86 target.  */
   t = amd64bsd_target ();
 
 #ifdef HAVE_PT_GETDBREGS
 
-  i386_use_watchpoints (t);
+  x86_use_watchpoints (t);
 
-  i386_dr_low.set_control = amd64bsd_dr_set_control;
-  i386_dr_low.set_addr = amd64bsd_dr_set_addr;
-  i386_dr_low.get_addr = amd64bsd_dr_get_addr;
-  i386_dr_low.get_status = amd64bsd_dr_get_status;
-  i386_dr_low.get_control = amd64bsd_dr_get_control;
-  i386_set_debug_register_length (8);
+  x86_dr_low.set_control = amd64bsd_dr_set_control;
+  x86_dr_low.set_addr = amd64bsd_dr_set_addr;
+  x86_dr_low.get_addr = amd64bsd_dr_get_addr;
+  x86_dr_low.get_status = amd64bsd_dr_get_status;
+  x86_dr_low.get_control = amd64bsd_dr_get_control;
+  x86_set_debug_register_length (8);
 
 #endif /* HAVE_PT_GETDBREGS */
 
   super_mourn_inferior = t->to_mourn_inferior;
   t->to_mourn_inferior = amd64dfly_mourn_inferior;
+  t->to_read_description = amd64fbsd_read_description;
 
   t->to_pid_to_exec_file = fbsd_pid_to_exec_file;
   t->to_find_memory_regions = fbsd_find_memory_regions;
-  t->to_make_corefile_notes = fbsd_make_corefile_notes;
   add_target (t);
 
 #ifdef DFLY_PCB_SUPPLY
