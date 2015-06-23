@@ -30,7 +30,18 @@ repository to indicate a good build, and then another script will generate
 the DPort, place it here, and commit the change.  Theoretically, every
 single DPort should build on DragonFly.
 
-Please report issues of and submit patches for DPorts here:
+Please report generic issues (those that affect FreeBSD and DragonFly) at:
+https://bugs.freebsd.org/bugzilla/
+
+Please report DragonFly-specific issues here:
 https://github.com/DragonFlyBSD/DPorts/issues/
+
+If you are confident in a DragonFly-specific fix, please initiate a github
+Pull Request here:
+https://github.com/DragonFlyBSD/DeltaPorts
+
+Note that since DPorts is generated, GitHub Pull Requests against DPorts
+can not be accepted.  Only the DeltaPorts overlay or the FreeBSD ports
+base can be modified.
 
 This project was conceived and implemented by John Marino.
