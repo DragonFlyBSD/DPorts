@@ -20,8 +20,8 @@ OPTIONS_DEFAULT=TEXTURE
 
 OPTIONS_DEFINE_i386=	GALLIUM
 OPTIONS_DEFAULT_i386=	GALLIUM
-OPTIONS_DEFINE_x86_64=	GALLIUM
-OPTIONS_DEFAULT_x86_64=	GALLIUM
+OPTIONS_DEFINE_x86_64=	GALLIUM VDPAU
+OPTIONS_DEFAULT_x86_64=	GALLIUM VDPAU
 
 GALLIUM_DESC=	Gallium (llvm backed) dri drivers
 TEXTURE_DESC=	Enable texture-float support (patent encumbered)
@@ -79,7 +79,7 @@ PLIST_SUB+=	GALLIUM="@comment "
 CONFIGURE_ARGS+=--enable-texture-float
 .endif
 
-.if 0 #${PORT_OPTIONS:MVDPAU}
+.if ${PORT_OPTIONS:MVDPAU}
 .if ${PORT_OPTIONS:MGALLIUM} == ""
 IGNORE=	VDPAU option requires GALLIUM support to be enabled
 .endif
