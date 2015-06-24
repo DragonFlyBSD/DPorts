@@ -311,6 +311,8 @@ oozie:*:990:
 sguil:*:991:
 hive:*:992:
 kannel:*:993:
+rcynic:*:994:
+rpkirtr:*:995:
 ebnetd:*:999:
 avenger:*:60149:
 cbsd:*:60150:

@@ -1669,7 +1669,6 @@ graphics/enfle||2014-03-08|Has expired: No more public distfiles
 audio/oggsplit||2014-03-08|Has expired: No more public distfiles
 devel/picasm||2014-03-08|Has expired: No more public distfiles
 databases/mysql-udf-preg||2014-03-08|Has expired: No more public distfiles
-devel/py-gitpython||2014-03-08|Has expired: No more public distfiles
 net/mars_nwe||2014-03-08|Has expired: No more public distfiles
 audio/fmio||2014-03-08|Has expired: No more public distfiles
 audio/libmtp|multimedia/libmtp|2014-03-09|Moved from audio to multimedia
@@ -3714,3 +3713,8 @@ databases/postgresql84-server||2015-06-10|Has expired: "EOL was reached in July 
 ftp/ncftp1||2015-06-12|Unfetchable
 multimedia/avidemux2||2015-06-13|Branch no longer maintained upstream, use multimedia/avidemux26
 multimedia/avidemux26|multimedia/avidemux|2015-06-13|Renamed
+editors/zim|deskutils/zim|2015-06-18|Move to more appropriate category
+net/py-ldap2|net/py-ldap|2015-06-18|Rename to better match upstream name
+devel/erlang-mustache|devel/erlang-bbmustache|2015-06-21|Renamed upstream
+security/py-backports.ssl_match_hostname||2015-06-23|This functionality was backported to python 2.7.9
+dns/maradns1|dns/maradns|2015-06-23|Has expired: MaraDNS 1 end-of-life: June 21, 2015, use dns/maradns
