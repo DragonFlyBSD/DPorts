@@ -5,30 +5,31 @@ DragonFly Ports is a derivative of FreeBSD's Ports Collection.  It serves
 the same purpose for DragonFly as the Ports Collection does for FreeBSD,
 which is to provide instructions on how to build software on DragonFly BSD.
 The products of DPorts are executable software which are manipulated by
-Baptiste Daroussin's pkgng binary package manager.
+Baptiste Daroussin's pkg(8) binary package manager.
 
-The traditional pkg_* tools seen previously on FreeBSD, DragonFly, and
-currently with pkgsrc will not be offered.  They are antiquated and have
-reached End-Of-Life on FreeBSD.
-
-While anyone could clone this repository and build a DPort from source,
-this will not be generally encouraged.  Unlike pkgsrc, the binary packages
-will be built and made available continuously as opposed to quarterly sets.
-Using pkgng to keep a system current will be recommended.
+Building a DPort from source is not generally encouraged.  It is suggested
+to use the official pre-built binaries instead.  However, in the case the
+binaries have a undesirable option selection or a bug that is fixed in the
+sources, then building the DPort from source is the only option.  Of
+course, it is possible to build all desired DPorts from source.
 
 This repository is actually generated.  Starting with the Ports Collection
-as a basis, DragonFly-specific patches and/or files are applied as necessary
-to create a modified port that builds on DragonFly.  If the FreeBSD port is
-updated in a way that either causes the patches to no longer apply, or just
-plain fail to build on DragonFly, the update will not be carried forward.
-The last working DPort will remain in place until a manual fix is provided
-that allows the FreeBSD update to work on DragonFly as well.
+as a basis, DragonFly-specific patches and/or files are applied as
+necessary to create a modified port that builds on DragonFly.  If the
+FreeBSD port is updated in a way that either causes the patches to no
+longer apply, or just outright fails to build on DragonFly, the update will
+not be carried forward.  The last working DPort will remain in place until
+a manual fix is provided that allows the FreeBSD update to work on
+DragonFly as well.
 
-Another project of Baptiste's, Poudriere, will be used to confirm good
-builds.  Upon the event of successly build, a hook will update the patches
+Poudriere, from ports-mgmt/poudriere-devel, is used to confirm good builds.
+Upon the event of successly build, a hook will update the patches
 repository to indicate a good build, and then another script will generate
 the DPort, place it here, and commit the change.  Theoretically, every
-single DPort should build on DragonFly.
+single DPort should build on DragonFly.  In practice, ports may build only
+on the dev branch of DragonFly, so the older the release is, the more
+DPorts that won't build (only the two 2 releases are checked).  Usually
+less than 10 failures occur on "master".
 
 Please report generic issues (those that affect FreeBSD and DragonFly) at:
 https://bugs.freebsd.org/bugzilla/
@@ -36,11 +37,11 @@ https://bugs.freebsd.org/bugzilla/
 Please report DragonFly-specific issues here:
 https://github.com/DragonFlyBSD/DPorts/issues/
 
-If you are confident in a DragonFly-specific fix, please initiate a github
+If you are confident in a DragonFly-specific fix, please initiate a Github
 Pull Request here:
 https://github.com/DragonFlyBSD/DeltaPorts
 
-Note that since DPorts is generated, GitHub Pull Requests against DPorts
+Note that since DPorts is generated, Github Pull Requests against DPorts
 can not be accepted.  Only the DeltaPorts overlay or the FreeBSD ports
 base can be modified.
 
