@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	vim
-PORTVERSION=	7.4.738
+DISTVERSIONPREFIX=	v
+DISTVERSION=	7-4-752
 CATEGORIES?=	editors
 
 MAINTAINER?=	sunpoet@FreeBSD.org
@@ -34,7 +35,6 @@ PORTDATA=	${VIM_VER}
 
 VIM_VER=	${PORTNAME}${PORTVERSION:R:S/.//g}
 
-GH_TAGNAME=	29a5011
 USE_GITHUB=	yes
 
 CPE_VERSION=	${PORTVERSION:R}
@@ -162,6 +162,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/runtime/keymap/* ${STAGEDIR}${DATADIR}/${VIM_VER}/keymap/
 .endif
 	${INSTALL_DATA} ${FILESDIR}/vietnamese_viscii.vim ${STAGEDIR}${DATADIR}/${VIM_VER}/keymap/
-	${TOUCH} ${STAGEDIR}${DATADIR}/${VIM_VER}/lang/.keepme
 
 .include <bsd.port.post.mk>
