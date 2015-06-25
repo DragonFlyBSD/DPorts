@@ -1,7 +1,7 @@
 #!/bin/sh
 # This script is in the public domain.  Original author: Garrett Wollman
 #
-# $FreeBSD: head/sysutils/smartmontools/files/smart.in 305739 2012-10-11 19:55:47Z nox $
+# $FreeBSD: head/sysutils/smartmontools/files/smart.in 389829 2015-06-16 09:36:09Z tijl $
 #
 
 if [ -r /etc/defaults/periodic.conf ]; then
@@ -42,7 +42,7 @@ case "${daily_status_smart_enable}" in
 			device="${device#/dev/}"
 			devflags=""
 			case ${device} in
-			tw[ae]*) devflags="-d3ware,${device##tw[ae][0-9]*,}"
+			tw[aes]*) devflags="-d3ware,${device##tw[aes][0-9]*,}"
 				device="/dev/${device%,[0-9]*}"
 				;;
 			ciss*)  devflags="-dcciss,${device##ciss[0-9]*,}"
