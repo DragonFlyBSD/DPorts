@@ -1,12 +1,12 @@
 #!/usr/bin/env python
-# $FreeBSD: head/security/vuxml/files/extra-validation.py 386985 2015-05-22 07:04:28Z delphij $
+# $FreeBSD: head/security/vuxml/files/extra-validation.py 389986 2015-06-17 17:35:58Z sunpoet $
 
 import datetime
 import xml.etree.ElementTree as ET
 import sys
 
 if len(sys.argv) != 2:
-    print "Usage: %s vuln.xml" % (sys.argv[0])
+    print("Usage: %s vuln.xml" % (sys.argv[0]))
     sys.exit(1)
 
 tree = ET.parse(sys.argv[1])
