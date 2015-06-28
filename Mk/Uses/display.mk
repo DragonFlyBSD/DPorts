@@ -35,7 +35,7 @@ start-display:
 	daemon -p ${XVFBPIDFILE} Xvfb :${XVFBPORT}
 
 stop-display:
-	kill -15 `cat ${XVFBPIDFILE}`
+	pkill -15 -F ${XVFBPIDFILE}
 
 .endif
 .endif
