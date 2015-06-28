@@ -1,0 +1,4 @@
+lib/%%DISTNAME%%/lib%%DISTNAME%%.so
+lib/%%DISTNAME%%/tktable.py
+lib/%%DISTNAME%%/tkTable.tcl
+lib/%%DISTNAME%%/pkgIndex.tcl
