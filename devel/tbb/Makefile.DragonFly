@@ -1,0 +1,26 @@
+pre-patch:
+	@${REINPLACE_CMD} -e 's/__FreeBSD__/(__FreeBSD__||__DragonFly__)/g' \
+		${WRKSRC}/include/tbb/tbb_config.h 			\
+		${WRKSRC}/include/tbb/machine/mic_common.h		\
+		${WRKSRC}/include/tbb/tbb_machine.h			\
+		${WRKSRC}/src/test/harness_concurrency.h		\
+		${WRKSRC}/src/test/harness_dynamic_libs.h		\
+		${WRKSRC}/src/test/harness_defs.h			\
+		${WRKSRC}/src/tbb/tbb_misc.h				\
+		${WRKSRC}/src/tbb/cache_aligned_allocator.cpp		\
+		${WRKSRC}/src/perf/perf.cpp				\
+		${WRKSRC}/src/tbbmalloc/MapMemory.h			\
+		${WRKSRC}/src/tbbmalloc/tbbmalloc.cpp			\
+		${WRKSRC}/src/tbbmalloc/proxy.h				\
+		${WRKSRC}/src/tbbmalloc/tbbmalloc_internal.h		\
+		${WRKSRC}/src/tbbmalloc/frontend.cpp			\
+		${WRKSRC}/src/rml/client/rml_factory.h			\
+		${WRKSRC}/examples/parallel_for/tachyon/src/types.h
+#		${WRKSRC}/src/tbb/tbb_misc_ex.cpp
+#	@${REINPLACE_CMD} -e 's|gcc|${CC}|g' -e 's|g++|${CXX}|g' \
+#		${WRKSRC}/build/Dragonfly.${CC}.inc
+
+pre-install:
+	cd ${WRKSRC}/build; \
+		${LN} -sf DragonFly*release FreeBSD_dummy_release;	\
+		${LN} -sf DragonFly*debug FreeBSD_dummy_debug
