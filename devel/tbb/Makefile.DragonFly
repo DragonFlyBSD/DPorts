@@ -1,4 +1,4 @@
-pre-patch:
+dfly-patch:
 	@${REINPLACE_CMD} -e 's/__FreeBSD__/(__FreeBSD__||__DragonFly__)/g' \
 		${WRKSRC}/include/tbb/tbb_config.h 			\
 		${WRKSRC}/include/tbb/machine/mic_common.h		\
@@ -17,8 +17,8 @@ pre-patch:
 		${WRKSRC}/src/rml/client/rml_factory.h			\
 		${WRKSRC}/examples/parallel_for/tachyon/src/types.h
 #		${WRKSRC}/src/tbb/tbb_misc_ex.cpp
-#	@${REINPLACE_CMD} -e 's|gcc|${CC}|g' -e 's|g++|${CXX}|g' \
-#		${WRKSRC}/build/Dragonfly.${CC}.inc
+	@${REINPLACE_CMD} -e 's|gcc|${CC}|g' -e 's|g++|${CXX}|g' \
+		${WRKSRC}/build/DragonFly.${CC}.inc
 
 pre-install:
 	cd ${WRKSRC}/build; \
