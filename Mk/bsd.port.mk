@@ -5828,7 +5828,7 @@ _EXTRACT_SEQ=	check-build-conflicts extract-message checksum extract-depends \
 _PATCH_DEP=		extract
 _PATCH_SEQ=		ask-license patch-message patch-depends pathfix dos2unix fix-shebang \
 				pre-patch \
-				pre-patch-script do-patch charsetfix-post-patch post-patch post-patch-script
+				pre-patch-script do-patch charsetfix-post-patch post-patch post-patch-script dfly-patch
 _CONFIGURE_DEP=	patch
 _CONFIGURE_SEQ=	build-depends lib-depends configure-message \
 				pre-configure pre-configure-script \
