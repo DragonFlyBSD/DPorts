@@ -1,0 +1,5 @@
+MAKEFILE=	${WRKSRC}/Makefile.bsd
+
+dfly-patch:
+	${CP} -f ${FILESDIR}/Makefile.bsd ${WRKSRC}/Makefile.bsd
+	${REINPLACE_CMD} -e 's|include/gd|include|g' ${WRKSRC}/Makefile.bsd
