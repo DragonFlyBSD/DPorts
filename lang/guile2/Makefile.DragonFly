@@ -1,0 +1,5 @@
+CONFIGURE_ARGS+=	ac_cv_func_clock_getcpuclockid=no
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/define HAVE_POSIX_CPUTIME/d' \
+		${WRKSRC}/libguile/stime.c
