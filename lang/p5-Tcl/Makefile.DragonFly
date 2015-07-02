@@ -1,0 +1,2 @@
+dfly-patch:
+	${REINPLACE_CMD} -e "s@eq 'freebsd'@=~/freebsd|dragonfly/@g" ${WRKSRC}/Makefile.PL
