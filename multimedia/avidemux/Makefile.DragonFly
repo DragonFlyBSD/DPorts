@@ -1,0 +1,11 @@
+# has a bug, ffmpeg is C so should not be treated as non C
+CFLAGS+=	-D__STDC_CONSTANT_MACROS
+USES+=	alias execinfo
+
+#CMAKE_ARGS+=   -DLIBEXECINFO_INCLUDE_DIR=/usr/local/include
+#CMAKE_ARGS+=   -DLIBEXECINFO_LIBRARY_DIR=/usr/local/lib
+#CMAKE_ARGS+=	-DHAVE_EXECINFO:BOOL=1
+
+dfly-patch:
+	${ECHO_MSG} 'target_link_libraries(ADM_core6 "-L/usr/local/lib -lexecinfo")' >> \
+		${WRKSRC}/avidemux_core/ADM_core/src/CMakeLists.txt
