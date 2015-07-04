@@ -13,7 +13,7 @@
 .if !defined(_INCLUDE_USES_ICONV_MK)
 _INCLUDE_USES_ICONV_MK=	yes
 
-.if ${DFLYVERSION} < 300503 || ${iconv_ARGS:Mwchar_t} || ${iconv_ARGS:Mtranslit}
+.if ${iconv_ARGS:Mwchar_t} || ${iconv_ARGS:Mtranslit}
 
 ICONV_CMD=	${LOCALBASE}/bin/iconv
 ICONV_LIB=	-liconv
@@ -37,13 +37,15 @@ ICONV_PREFIX=	/usr
 ICONV_CONFIGURE_ARG=
 ICONV_CONFIGURE_BASE=
 
-.if ${OPSYS} == DragonFly || (${OPSYS} == FreeBSD && (${OSVERSION} < 1001514 \
+.if (${OPSYS} == DragonFly && ${DFLYVERSION} < 400301) \
+ || (${OPSYS} == FreeBSD && (${OSVERSION} < 1001514 \
  || (${OSVERSION} >= 1100000 && ${OSVERSION} < 1100069))) \
  || exists(${LOCALBASE}/include/iconv.h)
 BUILD_DEPENDS+=	libiconv>=1.14_8:${PORTSDIR}/converters/libiconv
 CPPFLAGS+=	-DLIBICONV_PLUG
 CFLAGS+=	-DLIBICONV_PLUG
 CXXFLAGS+=	-DLIBICONV_PLUG
+OBJCFLAGS+=	-DLIBICONV_PLUG
 .endif
 
 .endif
