@@ -16,7 +16,7 @@ _INCLUDE_USES_ICONV_MK=	yes
 .if !exists(/usr/include/iconv.h) || ${iconv_ARGS:Mwchar_t} || ${iconv_ARGS:Mtranslit}
 
 ICONV_CMD=	${LOCALBASE}/bin/iconv
-ICONV_LIB=	-liconv
+ICONV_LIB?=	-liconv
 ICONV_PREFIX=	${LOCALBASE}
 ICONV_CONFIGURE_ARG=	--with-libiconv-prefix=${LOCALBASE}
 ICONV_CONFIGURE_BASE=	--with-libiconv=${LOCALBASE}
@@ -32,7 +32,7 @@ LIB_DEPENDS+=	libiconv.so:${PORTSDIR}/converters/libiconv
 .else
 
 ICONV_CMD=	/usr/bin/iconv
-ICONV_LIB=
+ICONV_LIB?=
 ICONV_PREFIX=	/usr
 ICONV_CONFIGURE_ARG=
 ICONV_CONFIGURE_BASE=
