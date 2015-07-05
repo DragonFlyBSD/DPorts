@@ -1,2 +1,0 @@
-USES+=			readline ncurses
-CONFIGURE_ARGS+=	--with-readline=bsd
