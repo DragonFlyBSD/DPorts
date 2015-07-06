@@ -1,4 +1,6 @@
 MAKE_ARGS+= COMPILE_PLATFORM=freebsd
 
-# gcc5 can't build ioquake
 USE_GCC=4.7
+.if exists (/usr/include/c++/5.0)
+BROKEN=	does not build with gcc > 4.7
+.endif
