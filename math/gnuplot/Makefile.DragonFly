@@ -1,4 +1,0 @@
-# glib pulls in ports libiconv unconditionally
-# We always need to link with it
-
-ICONV_LIB=	-liconv
