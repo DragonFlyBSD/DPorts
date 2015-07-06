@@ -1,3 +1,0 @@
-# desktop-file-utils pulls in glib which is built with port libiconv
-
-LDFLAGS+=	-liconv
