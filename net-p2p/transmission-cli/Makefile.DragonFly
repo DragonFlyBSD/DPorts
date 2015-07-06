@@ -1,0 +1,6 @@
+# glib pulls in ports libiconv unconditionally (-gtk through file-desktop-utils)
+# We always need to link with it
+
+.if ${SLAVEPORT} == gtk
+ICONV_LIB=	-liconv
+.endif
