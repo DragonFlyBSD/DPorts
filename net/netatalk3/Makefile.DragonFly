@@ -1,3 +1,4 @@
 OPTIONS_EXCLUDE+=	KERBEROS
 
-CONFIGURE_ARGS+=	--with-lockfile=/var/spool/lock/netalock
+CONFIGURE_ARGS+=	--with-lockfile=/var/spool/lock/netatalk
+
