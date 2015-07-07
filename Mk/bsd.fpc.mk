@@ -49,11 +49,11 @@ IGNORE=	incompatible fpc ${FPC_CURRENT_VER} compiler, please install ${FPC_VER} 
 
 .if ${ARCH} == "i386"
 PPNAME=			ppc386
-.elif ${ARCH} == "amd64"
+.elif ${ARCH} == "x86_64"
 PPNAME=			ppcx64
 .else
 PPNAME=			ppc_not_yet_ported
-ONLY_FOR_ARCHS=		i386 amd64
+ONLY_FOR_ARCHS=		i386 amd64 x86_64
 ONLY_FOR_ARCHS_REASON=	not yet ported to anything other than i386 and amd64
 .endif
 
