@@ -1,0 +1,4 @@
+# 300 seconds is an eternity for a timeout default.  Drop this to 20
+
+dfly-patch:
+	${REINPLACE_CMD} -e "s|300|20|" ${WRKSRC}/config/unix.exp
