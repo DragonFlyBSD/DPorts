@@ -1,3 +1,5 @@
+MAKE_ENV+=     DONT_ENABLE_IPV6="YES"
+
 # Eclipse builds forever on gcc5-built openjdk8
 
 USE_GCC=	NOT5
