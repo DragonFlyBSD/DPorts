@@ -115,7 +115,9 @@ bin/%%HACKNAME%%
 %%DATADIR%%/oracle.lev
 %%DATADIR%%/oracles
 %%DATADIR%%/orcus.lev
+@mode 664
 %%DATADIR%%/perm
+@mode
 %%DATADIR%%/pet_mark.xbm
 %%DATADIR%%/quest.dat
 @mode 664
