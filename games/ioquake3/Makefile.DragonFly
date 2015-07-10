@@ -1,5 +1,7 @@
 MAKE_ARGS+= COMPILE_PLATFORM=freebsd
 
-.if exists (/usr/include/c++/5.0)
-BROKEN=	does not build with gcc > 4.7
-.endif
+#allow this one to fail! Makefile is reused in other ports
+dfly-patch:
+	-${REINPLACE_CMD} -e 's@#ifndef MACOS_X@#if \!defined(MACOS_X) || \!defined(__DragonFly__)@g'	\
+		${WRKSRC}/code/tools/lcc/cpp/unix.c
+	-${REINPLACE_CMD} -e 's/-DMAP_ANONYMOUS=MAP_ANON//g' -e 's/-O2/-O1/g' ${WRKSRC}/Makefile
