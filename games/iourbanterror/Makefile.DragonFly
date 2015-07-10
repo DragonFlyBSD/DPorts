@@ -1,0 +1,3 @@
+# Does not build on gcc5
+
+USE_GCC=	NOT5
