@@ -5,6 +5,63 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20150711:
+  AFFECTS: users of graphics/gdal
+  AUTHOR: sunpoet@FreeBSD.org
+
+  Due to changes in header files, please deinstall gdal first while updating
+  from 1.x to 2.0.
+
+20150708:
+  AFFECTS: users of security/libressl
+  AUTHOR: brnrd@FreeBSD.org
+
+  After upgrading to 2.2.1, manually update all packages that depend on
+  any of the libraries provided by LibreSSL (libssl, libcrypto and
+  libtls) since the versions of these libraries have changed. Normally,
+  you can obtain the list of dependent software by running the following
+  command:
+
+  pkg query -e '%n = libressl' %ro
+
+  Then you should rebuild all ports depending on libressl to avoid dangling
+  shared library dependencies.
+
+20150707:
+  AFFECTS: users of net-mgmt/netmagis-*
+  AUTHOR: pgollucci@FreeBSD.org
+
+  Netmagis-* ports have been upgraded to 2.3.0. Upgrading from
+  previous version require a database schema upgrade.
+  See http://netmagis.org/upgrade.html
+
+20150702:
+  AFFECTS: users of multimedia/ffmpeg
+  AUTHOR: riggs@FreeBSD.org
+
+  ffmpeg has been updated to the latest version from the 2.7 branch.
+  If you are using binary pkg, 'pkg upgrade' will do the right thing.
+  Users of portmaster/portupgrade must rebuild all ports that depend
+  on it.
+
+  Portmaster users:
+      portmaster -w -r ffmpeg
+  Portupgrade users:
+      portupgrade -fr multimedia/ffmpeg
+
+20150702:
+  AFFECTS: users of net/ptpd2-devel
+  AUTHOR: skreuzer@FreeBSD.org
+
+  net/ptpd2 has been upgraded to version 2.3.1
+  net/ptpd2-devel is now deprecated and has been removed
+
+  If using portupgrade:
+  # portupgrade -o net/ptpd2 net/ptpd2-devel
+
+  If using portmaster:
+  # portmaster -o net/ptpd2 net/ptpd2-devel
+
 20150628:
   AFFECTS: users of www/varnish, www/pecl-varnish,
   www/varnish-libvmod-header, www/varnish-nagios
@@ -1617,18 +1674,4 @@ AUTHOR: ohauer@FreeBSD.org
   use the following command to keep apache22 as default.
 
   # echo "DEFAULT_VERSIONS+=apache=2.2" >> /etc/make.conf
-
-20140710:
-  AFFECTS: users of lang/rust
-  AUTHOR: robak@FreeBSD.org
-
-  The lang/rust port was updated to 0.11 and is now only working on FreeBSD
-  versions 10 and 11 -- the 9.x support has been removed by upstream.
-
-20140709:
-  AFFECTS: users of security/pam-pgsql
-  AUTHOR: tijl@FreeBSD.org
-
-  The pam_pgsql.so module is now installed in PREFIX/lib (/usr/local/lib)
-  instead of /usr/lib.
 
