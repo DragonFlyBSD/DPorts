@@ -1,5 +1,3 @@
-USES+=	alias
-
 dfly-patch:
 	${REINPLACE_CMD} -e '/= EOWNERDEAD/d' -e '/= ENOTRECOVERABLE/d' \
 		${WRKSRC}/tests/test-errno.c
