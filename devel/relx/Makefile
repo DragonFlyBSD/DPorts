@@ -1,14 +1,14 @@
 # $FreeBSD$
 
 PORTNAME=	relx
-PORTVERSION=	3.0.0
+PORTVERSION=	3.3.1
+DISTVERSIONPREFIX=	v
 PORTREVISION=	1
-DISTVERSIONPREFIX=v
 CATEGORIES=	devel
 MASTER_SITES+=	http://olgeni.olgeni.com/~olgeni/distfiles/:deps \
 		LOCAL/olgeni:deps
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
-		relx-cache-2.tar.gz:deps
+		relx-cache-4.tar.gz:deps
 
 MAINTAINER=	olgeni@FreeBSD.org
 COMMENT=	Sane, simple release creation for Erlang
@@ -28,6 +28,8 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 PLIST_SUB=	VERSION="${PORTVERSION}"
 
+# Use either erlware or tsloughter, depending on who actually
+# published the package on hex.pm
 USE_GITHUB=	yes
 GH_ACCOUNT=	erlware
 
@@ -42,10 +44,10 @@ pre-build:
 	@${MKDIR} ${WRKSRC}/_build/default/lib
 	@${MKDIR} ${WRKSRC}/_build/default/plugins
 .for lib in bbmustache erlware_commons getopt providers
-	@${LN} -s ${PREFIX}/lib/erlang/lib/$(lib)-* ${WRKSRC}/_build/default/lib/$(lib)
+	@${LN} -s ${PREFIX}/lib/erlang/lib/${lib}-* ${WRKSRC}/_build/default/lib/${lib}
 .endfor
 .for plugin in jsx rebar3_hex ssl_verify_hostname
-	@${LN} -s ${PREFIX}/lib/erlang/lib/$(plugin)-* ${WRKSRC}/_build/default/plugins/$(plugin)
+	@${LN} -s ${PREFIX}/lib/erlang/lib/${plugin}-* ${WRKSRC}/_build/default/plugins/${plugin}
 .endfor
 
 do-build:
@@ -53,6 +55,9 @@ do-build:
 	@cd ${WRKSRC} && HOME=${WRKDIR} rebar3 compile
 	@${RM} ${WRKSRC}/rebar.lock
 	@cd ${WRKSRC} && HOME=${WRKDIR} rebar3 escriptize
+
+post-build:
+	@${LN} -s ${WRKSRC}/_build/dev/lib/${PORTNAME}/ebin ${WRKSRC}
 
 do-install:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
@@ -67,5 +72,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/_build/default/lib/relx/ebin/* ${STAGEDIR}${PREFIX}/lib/erlang/lib/${PORTNAME}-${PORTVERSION}/ebin
 	cd ${WRKSRC}/priv && ${COPYTREE_SHARE} \* ${STAGEDIR}${PREFIX}/lib/erlang/lib/${PORTNAME}-${PORTVERSION}/priv
 	${INSTALL_SCRIPT} ${WRKSRC}/_build/default/bin/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/examples/* ${STAGEDIR}${EXAMPLESDIR}
 
 .include <bsd.port.mk>
