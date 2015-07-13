@@ -1,10 +1,10 @@
 #!/bin/sh
 #
-# $FreeBSD: head/sysutils/puppet/files/puppetmaster.in 332664 2013-11-04 02:27:13Z swills $
+# $FreeBSD: head/sysutils/puppet/files/puppetmaster.in 391663 2015-07-09 16:30:40Z mmoll $
 #
 
 # PROVIDE: puppetmaster
-# REQUIRE: NETWORK
+# REQUIRE: LOGIN
 
 # Add the following lines to /etc/rc.conf to enable the puppetmaster:
 #
