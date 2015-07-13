@@ -1,5 +1,4 @@
 USE_CXXSTD=	c++11
-USES+=		alias
 
 # workaround with X11 clipboard support
 dfly-patch:
