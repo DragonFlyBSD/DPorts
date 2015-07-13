@@ -1,11 +1,9 @@
-$NetBSD: patch-libstdc++-v3_config_os_bsd_dragonfly_os__defines.h,v 1.1 2012/06/23 22:13:02 marino Exp $
-
---- libstdc++-v3/config/os/bsd/dragonfly/os_defines.h.orig	2012-06-22 10:35:30.000000000 +0000
+--- /dev/null
 +++ libstdc++-v3/config/os/bsd/dragonfly/os_defines.h
-@@ -0,0 +1,41 @@
+@@ -0,0 +1,37 @@
 +// Specific definitions for BSD  -*- C++ -*-
 +
-+// Copyright (C) 2000, 2009, 2010 Free Software Foundation, Inc.
++// Copyright (C) 2014-2015 Free Software Foundation, Inc.
 +//
 +// This file is part of the GNU ISO C++ Library.  This library is free
 +// software; you can redistribute it and/or modify it under the
@@ -34,13 +32,9 @@ $NetBSD: patch-libstdc++-v3_config_os_bsd_dragonfly_os__defines.h,v 1.1 2012/06/
 +// System-specific #define, typedefs, corrections, etc, go here.  This
 +// file will come before all others.
 +
-+/*  FreeBSD approach, likely a mistake for DragonFly.
 +#define _GLIBCXX_USE_C99_CHECK 1
 +#define _GLIBCXX_USE_C99_DYNAMIC (!(__ISO_C_VISIBLE >= 1999))
 +#define _GLIBCXX_USE_C99_LONG_LONG_CHECK 1
 +#define _GLIBCXX_USE_C99_LONG_LONG_DYNAMIC (_GLIBCXX_USE_C99_DYNAMIC || !defined __LONG_LONG_SUPPORTED)
-+#define _GLIBCXX_USE_C99_FLOAT_TRANSCENDENTALS_CHECK 1
-+#define _GLIBCXX_USE_C99_FLOAT_TRANSCENDENTALS_DYNAMIC defined _XOPEN_SOURCE
-+*/
 +
 +#endif
