@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/devel/fossil/files/fossil.in 350456 2014-04-07 10:45:23Z bapt $
+# $FreeBSD: head/devel/fossil/files/fossil.in 391730 2015-07-11 09:26:43Z gahr $
 #
 # fossil startup script
 #
@@ -55,6 +55,7 @@ esac
 [ -z "${fossil_listenall}" ] && fossil_args="${fossil_args} --localhost"
 [ -n "${fossil_files}" ] && fossil_args="${fossil_args} --files '${fossil_files}'"
 [ -n "${fossil_notfound}" ] && fossil_args="${fossil_args} --notfound \"${fossil_notfound}\""
+[ -n "${fossil_repolist}" ] && fossil_args="${fossil_args} --repolist"
 
 command_args="-f -p ${pidfile} ${procname} server -P ${fossil_port} ${fossil_args} ${fossil_directory}"
 
