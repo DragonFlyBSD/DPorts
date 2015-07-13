@@ -1,6 +1,6 @@
---- configure.orig	2013-01-04 13:44:35.495441000 +0100
-+++ configure	2013-01-04 13:46:15.875581000 +0100
-@@ -5606,7 +5606,7 @@
+--- configure.orig	2015-07-12 17:26:45 UTC
++++ configure
+@@ -6127,7 +6127,7 @@ LDIR_FLAGS="$LDFLAGS"
  # This is just for configuring. Later, in config.make, INCLUDE_FLAGS
  # goes in CONFIG_SYSTEM_INCL and LIBS goes in CONFIG_SYSTEM_LIBS
  case "$target_os" in
@@ -9,11 +9,11 @@
  	        CPPFLAGS="$CPPFLAGS -I/usr/local/include"
  		LDFLAGS="$LDFLAGS -L/usr/local/lib";;
    netbsd*)	CPPFLAGS="$CPPFLAGS -I/usr/pkg/include"
-@@ -21758,6 +21758,7 @@
+@@ -23778,6 +23778,7 @@ if test "$enable_pass_arguments" = "no";
    case "$target_os" in
      freebsd2*)	enable_fake_main=yes;;
      freebsd*)	;;
 +    dragonfly*) ;;
+     kfreebsd*)	enable_fake_main=yes;;
      netbsd*)	enable_fake_main=yes;;
      openbsd*)	enable_fake_main=yes;;
-     *sysv*)	enable_fake_main=yes;;
