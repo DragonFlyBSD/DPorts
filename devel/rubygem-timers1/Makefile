@@ -12,6 +12,11 @@ COMMENT=	Pure Ruby one-shot and periodic timers
 
 LICENSE=	MIT
 
+DEPRECATED=	not used by other ports anymore
+EXPIRATION_DATE=	2015-07-20
+
+NO_ARCH=	yes
+
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
