@@ -1,7 +1,7 @@
 #!/bin/sh
 # Created by: Sean McAfee <smcafee@collaborativefusion.com>
 
-# $FreeBSD: head/net-mgmt/smokeping/files/smokeping.in 390934 2015-06-29 19:39:24Z rodrigo $
+# $FreeBSD: head/net-mgmt/smokeping/files/smokeping.in 391348 2015-07-05 08:13:10Z rodrigo $
 
 # PROVIDE: smokeping
 # REQUIRE: LOGIN
@@ -65,7 +65,7 @@ smokeping_start()
 	fi
 
 	echo "Starting ${name}."
-	${command} ${smokeping_flags} ${command_args}
+	su -m ${smokeping_user} -c "sh -c '${command} ${smokeping_flags} ${command_args}'"
 }
 
 smokeping_status()
