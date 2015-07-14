@@ -2,7 +2,7 @@
 
 PORTNAME=	gitlab-grack
 PORTVERSION=	2.0.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
@@ -12,6 +12,8 @@ COMMENT=	Ruby/Rack Git Smart-HTTP Server Handler
 LICENSE=	MIT
 
 RUN_DEPENDS=	rubygem-rack15>=1.5.1:${PORTSDIR}/www/rubygem-rack15
+
+NO_ARCH=	yes
 
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
