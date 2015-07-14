@@ -12,7 +12,12 @@ COMMENT=	Facilitate programmatic generation of XML markup
 
 LICENSE=	MIT
 
+DEPRECATED=	not used by other ports anymore
+EXPIRATION_DATE=	2015-07-20
+
 PORTSCOUT=	limit:^3.1
+
+NO_ARCH=	yes
 
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
