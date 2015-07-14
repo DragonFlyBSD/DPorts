@@ -13,6 +13,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	xjflyttp@gmail.com
 COMMENT=	FTP daemon that aims to be "very secure". Extended build
 
+BROKEN_FreeBSD_9_i386=	does not link
+
 LICENSE=	GPLv2
 
 UPSTREAMVERSION=3.0.2
@@ -42,6 +44,9 @@ CONFLICTS=	vsftpd-3* vsftpd${SSL_SUFFIX}${PKGNAMESUFFIX2}-3*
 .if ${OPSYS} == FreeBSD && ${OSVERSION} < 902001
 BUILD_DEPENDS+=	clang33:${PORTSDIR}/lang/clang33
 CC=		clang33
+.if ${ARCH} == i386
+BROKEN=		does not build on 9.x i386
+.endif
 .endif
 
 .if ${PORT_OPTIONS:MRC_SCRIPT}
