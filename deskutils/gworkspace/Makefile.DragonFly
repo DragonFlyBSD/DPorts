@@ -1,0 +1,4 @@
+# overriding configure doesn't work, it's globally cached
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/SYS_STATVFS/d' ${WRKSRC}/FSNode/config.h.in
