@@ -1,0 +1,21 @@
+#!/bin/sh
+#
+# PROVIDE: hostapd
+# REQUIRE: mountcritremote
+# KEYWORD: nojail shutdown
+
+. /etc/rc.subr
+
+name="hostapd"
+command="%%PREFIX%%/sbin/hostapd"
+rcvar=`set_rcvar`
+
+conf_file="%%PREFIX%%/etc/hostapd.conf"
+pidfile="/var/run/hostapd.pid"
+
+command_args="-P ${pidfile} -B ${conf_file}"
+required_files="${conf_file}"
+extra_commands="reload"
+
+load_rc_config hostapd
+run_rc_command "$1"
