@@ -3,7 +3,7 @@
 
 PORTNAME?=	gimp-app
 PORTVERSION=	2.8.14
-PORTREVISION?=	2
+PORTREVISION?=	3
 PORTEPOCH?=	1
 CATEGORIES?=	graphics gnome
 MASTER_SITES=	GIMP/gimp/v${PORTVERSION:R}
@@ -93,7 +93,7 @@ CONFIGURE_ARGS+=	--without-dbus
 .endif
 
 .if ${PORT_OPTIONS:MGHOSTSCRIPT}
-USE_GHOSTSCRIPT=	yes
+USES+=			ghostscript
 CONFIGURE_ARGS+=	--with-gs
 PLIST_SUB+=		GS=""
 .else
