@@ -5,6 +5,32 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20150802:
+  AFFECTS: users of mail/opensmtpd
+  AUTHOR: ashish@FreeBSD.org
+
+  After upgrading, you will need to review all your configuration, as
+  there are some configuration changes between 5.4.x and 5.7.1.
+
+20150726:
+  AFFECTS: users of ukrainian/monacofonts
+  AUTHOR: mi@aldan.algebra.com
+
+  The destination-directory used by monacofonts port was altered.
+  The fonts-location changed from koi8u-monaco/ to koi8-u-monaco/
+
+  Users are advised to modify the path set in their xorg.conf files.
+
+20150720:
+  AFFECTS: users of print/texlive-base and other TeXLive packages
+  AUTHOR: hrs@FreeBSD.org
+
+  TeXLive in Ports Collection has been updated to TL2015.  To upgrade
+  installed old packages, upgrading of "tex-*" packages is required.
+
+  If you have a problem with upgrading, please send it to
+  freebsd-tex@FreeBSD.org and/or file a PR.
+
 20150711:
   AFFECTS: users of graphics/gdal
   AUTHOR: sunpoet@FreeBSD.org
@@ -1481,197 +1507,4 @@ AUTHOR: ohauer@FreeBSD.org
   # pkg query "%ro" > ghc-pkgs.txt
   # pkg delete -y lang/ghc
   # pkg install -y `cat ghc-pkgs.txt | grep -Ev "/hs-(haskeline|terminfo|transformers|xhtml)"
-
-20140803:
-  AFFECTS: users of security/p5-openxpki
-  AUTHOR: wg@FreeBSD.org
-
-  The following ports have been integrated into security/p5-openxpki:
-    security/p5-openxpki-client
-    security/p5-openxpki-client-scep
-    security/p5-openxpki-deployment
-
-  Before update make sure to remove the old packages:
-
-  # pkg remove security/p5-openxpki-client
-  # pkg remove security/p5-openxpki-client-scep
-  # pkg remove security/p5-openxpki-deployment
-
-20140802:
-  AFFECTS: users of astro/stellarium
-  AUTHOR: danfe@FreeBSD.org
-
-  Stellarium was updated to version 0.13.0.  It's a new major release, and
-  it is based on Qt version 5 now.  For those who are not comfortable with
-  upgrading to the new Qt, previous Stellarium version (0.12.4) was copied
-  over to `astro/stellarium-qt4' port.
-
-20140731:
-  AFFECTS: users of www/ajaxplorer
-  AUTHOR: madpilot@FreeBSD.org
-
-  The ajaxplorer project was renamed to pydio.
-
-  Due to this update some manual steps will need to be performed
-  after updating the port.
-
-  IMPORTANT: Perform a backup of the ajaxplorer installation and
-  the databases backing it(if you're using that feature).
-
-  First manually remove the ajaxplorer port and install www/pydio
-  afterwards.
-
-  Further steps will be available in the pkg-message, which can
-  be shown with these commands:
-
-	# pkg info -D pydio
-
-  Please also read the upgrading notes at:
-
-	http://pyd.io/pydio-core-5.2.0#Upgrading
-
-20140728:
-  AFFECTS: users of net/GeoIP
-  AUTHOR: adamw@FreeBSD.org
-
-  GeoIP no longer ships with the GeoIP database. To continue using GeoIP,
-  you MUST fetch the database after upgrading by running geoipupdate.sh.
-
-20140727:
-  AFFECTS: users of comms/qpage
-  AUTHOR: marino@FreeBSD.org
-
-  The default configure file location has changed from
-  ${LOCALBASE}/etc/qpage.cf to ${LOCALBASE}/etc/qpage.conf
-  You will likely want to move the old configure file to the new location
-  after updating if it contains custom settings.
-
-20140725:
-  AFFECTS: users of cad/netgen
-  AUTHOR: stephen@FreeBSD.org
-
-  Before you update this port the old one should be removed.  (This is
-  because the build may try to link to libraries that are in
-  ${LOCALBASE}/lib rather than in ${WRKSRC}.)
-
-20140724:
-  AFFECTS: users of dns/mydns-ng
-  AUTHOR: danilo@FreeBSD.org
-
-  The dns/mydns-ng port no longer has the suffix (-mysql|-pgsql). Before
-  you update this port the old one must be removed:
-
-  pkg remove mydns-ng-mysql
-    or
-  pkg remove mysql-ng-pgsql
-
-20140723:
-  AFFECTS: users of devel/libevent
-
-  libevent1 has been replaced by libevent2 via the compatibility layer.
-  All applications that used libevent1 must be rebuilt.
-
-  Please remove libevent1 before upgrading, by running:
-
-	pkg delete -f libevent
-
-20140723:
-  AFFECTS: users of security/scanlogd
-  AUTHOR: tgyurci@gmail.com
-
-  The security/scanlogd port now creates scanlogd user and group. Previous
-  scanlogd user and group must be removed before updating to not conflict
-  with the one created by the port:
-
-	pw userdel scanlogd
-	pw groupdel scanlogd
-
-20140723:
-  AFFECTS: users of TeX
-  AUTHOR: bapt@FreeBSD.org
-
-  TeXLive is now the default teX provider.
-  Please remove all TeX-related packages based on teTeX.
-
-20140722:
-  AFFECTS: users of mail/exim
-  AUTHOR: vsevolod@FreeBSD.org
-
-  The behaviour of expansion of arguments to math comparison functions (<,
-  <=, =, =>, >) was unexpected, expanding the values twice. Please update
-  your configuration if you have relied on such an expansion.
-
-20140722:
-  AFFECTS: users of multimedia/mediainfo
-  AUTHOR: sunpoet@FreeBSD.org
-
-  mediainfo has been split into 3 ports: libzen, libmediainfo and mediainfo.
-  Please uninstall mediainfo before you update this port.
-
-20140722:
-  AFFECTS: users of games/bsdgames
-  AUTHOR: adamw@FreeBSD.org
-
-  Please disregard any prior instructions about moving your game data to
-  /usr/local/var/games. If you have done this, please move it back to
-  /var/games.
-
-20140714:
-  AFFECTS: users of databases/db6
-  AUTHOR: mandree@FreeBSD.org
-
-  Oracle Berkeley DB 6 has been upgraded to version 6.1.19.  Since the
-  previous 6.0 version, the log file format has changed in 6.1.
-  Depending on applications used, you may need to take action BEFORE you
-  upgrade.  For details, please see the online upgrade manual at
-  <http://docs.oracle.com/cd/E17076_04/html/upgrading/upgrade_process.html>
-  <http://docs.oracle.com/cd/E17076_04/html/installation/upgrade_61_toc.html>
-
-  Note: if you've got Apache installed and depending on db6, you may
-  need to upgrade it separately BEFORE upgrading other ports, such as
-  Apache modules.
-
-  After that, you must rebuild all applications that link to db6 because
-  the shared library name has changed with the upgrade.  To do that:
-
-  If you use portmaster:
-        portmaster -w -r db6-
-  If you use portupgrade:
-        portupgrade -fr databases/db6
-
-20140714:
-  AFFECTS: users of net/linphone-base
-  AUTHOR: tijl@FreeBSD.org
-
-  Linphone has been updated to version 3.7.0 and the linphone-base port
-  has been split into separate components.  You must first delete the
-  linphone-base package before you can update ports that depend on it.
-
-  pkg del -f linphone-base
-    or
-  pkg_delete -f linphone-base\*
-
-20140713:
-  AFFECTS: users of mail/postfix-current
-  AUTHOR: sahil@FreeBSD.org
-
-  This is a significant update; so, please carefully review the
-  RELEASE_NOTES to identify which incompatible changes impact your
-  environment. Of particular note are changes to the Postfix
-  build/install procedure.
-
-  Please backup main.cf, master.cf and any other important files
-  associated with your Postfix setup before updating.
-
-20140713:
-  AFFECTS: users of www/apache22
-  AUTHOR: ohauer@FreeBSD.org
-
-  The default version was changed from www/apache22 to www/apache24,
-  pre-build apache modules and web applications will also reflect this!
-
-  In case ports are build by yourself and apache22 is required
-  use the following command to keep apache22 as default.
-
-  # echo "DEFAULT_VERSIONS+=apache=2.2" >> /etc/make.conf
 
