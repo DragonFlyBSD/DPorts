@@ -5,9 +5,6 @@
 PORTNAME=	gnome3
 PORTVERSION=	3.14.2
 CATEGORIES?=	x11 gnome
-MASTER_SITES=	# empty
-DISTFILES=	# empty
-EXTRACT_ONLY=	# empty
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT?=	The "meta-port" for the GNOME 3 integrated X11 desktop
@@ -41,8 +38,7 @@ RUN_DEPENDS?=	dconf-editor:${PORTSDIR}/devel/dconf-editor \
 
 #		ekiga:${PORTSDIR}/net-im/ekiga
 
-NO_BUILD=	yes
-NO_MTREE=	yes
+USES=		metaport
 
 .if ${.CURDIR:T}!="gnome3-lite"
 OPTIONS_DEFINE+=MAPI
@@ -83,7 +79,5 @@ RUN_DEPENDS+=	empathy>=3.0.0:${PORTSDIR}/net-im/empathy \
 RUN_DEPENDS+=	evolution-mapi>=3.0.0:${PORTSDIR}/mail/evolution-mapi
 .endif
 .endif # !gnome3-lite section
-
-do-install:	# empty
 
 .include <bsd.port.mk>
