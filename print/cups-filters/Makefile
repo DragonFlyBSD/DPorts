@@ -2,6 +2,7 @@
 
 PORTNAME=	cups-filters
 PORTVERSION=	1.0.71
+PORTREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	http://www.openprinting.org/download/cups-filters/
 
@@ -23,11 +24,11 @@ LIB_DEPENDS=	libtiff.so:${PORTSDIR}/graphics/tiff \
 		libpoppler.so:${PORTSDIR}/graphics/poppler
 
 MAKE_JOBS_UNSAFE=YES
-USES=		compiler:c++11-lib cpe jpeg libtool pathfix pkgconfig shebangfix tar:xz
+USES=		compiler:c++11-lib cpe ghostscript jpeg libtool pathfix \
+		pkgconfig shebangfix tar:xz
 CPE_VENDOR=	linuxfoundation
 SHEBANG_FILES=	filter/textonly
 USE_GNOME=	glib20
-USE_GHOSTSCRIPT=	yes
 USE_RC_SUBR=	cups_browsed
 GNU_CONFIGURE=	yes
 CUPS_SOCKET?=	/var/run/cups.sock
