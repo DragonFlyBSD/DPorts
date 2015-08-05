@@ -3,6 +3,7 @@
 
 PORTNAME=		crits
 PORTVERSION=		3.1.0
+PORTREVISION=		1
 DISTVERSIONPREFIX=	v
 PORTREVISION=		1
 CATEGORIES=		security
@@ -34,7 +35,7 @@ RUN_DEPENDS+=	7z:${PORTSDIR}/archivers/p7zip     \
 		${PYTHON_PKGNAMEPREFIX}curl>0:${PORTSDIR}/ftp/py-curl                 \
 		${PYTHON_PKGNAMEPREFIX}pydot>=0:${PORTSDIR}/graphics/py-pydot         \
 		${PYTHON_PKGNAMEPREFIX}yaml>0:${PORTSDIR}/devel/py-yaml               \
-		${PYTHON_PKGNAMEPREFIX}setuptools${PYTHON_SUFFIX}>0:${PORTSDIR}/devel/py-setuptools \
+		${PYTHON_PKGNAMEPREFIX}setuptools${PYTHON_SUFFIX}>0:${PORTSDIR}/devel/py-setuptools${PYTHON_SUFFIX} \
 		${PYTHON_PKGNAMEPREFIX}numpy>0:${PORTSDIR}/math/py-numpy                   \
 		${PYTHON_PKGNAMEPREFIX}matplotlib>0:${PORTSDIR}/math/py-matplotlib         \
 		${PYTHON_PKGNAMEPREFIX}lxml>0:${PORTSDIR}/devel/py-lxml                    \
@@ -64,7 +65,7 @@ RUN_DEPENDS+=	7z:${PORTSDIR}/archivers/p7zip     \
 		${PYTHON_PKGNAMEPREFIX}mimeparse>=0.1.4:${PORTSDIR}/devel/py-mimeparse     \
 		${PYTHON_PKGNAMEPREFIX}cybox>=2.1.0.5:${PORTSDIR}/security/py-cybox        \
 		${PYTHON_PKGNAMEPREFIX}stix>=1.1.1.0:${PORTSDIR}/security/py-stix          \
-		${APACHE_PKGNAMEPREFIX}mod_wsgi3>=3.3:${PORTSDIR}/www/mod_wsgi3            \
+		${APACHE_PKGNAMEPREFIX}mod_wsgi4>=4.4.13:${PORTSDIR}/www/mod_wsgi4
 
 NO_BUILD=	YES
 
