@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net-mgmt/icinga2/files/icinga2.in 372772 2014-11-19 12:38:24Z lme $
+# $FreeBSD: head/net-mgmt/icinga2/files/icinga2.in 392046 2015-07-14 18:42:54Z lme $
 #
 
 # PROVIDE: icinga2
@@ -78,18 +78,22 @@ reload_precmd() {
 }
 
 start_precmd() {
-  # Create necessary directories / change ownership
-  for d in "${icinga2_logdir}" "${icinga2_logdir}/compat" \
-           "${icinga2_logdir}/compat/archives" "${icinga2_libdir}" \
-           "${icinga2_spooldir}" "${icinga2_spooldir}/tmp" \
-           "${icinga2_rundir}" "${icinga2_cachedir}"; do
-      install -d -o ${icinga2_user} -g ${icinga2_group} "${d}"
-  done
-
-  install -d -o ${icinga2_user} -g %%WWWGRP%% "${icinga2_rundir}/cmd" 
-
-  chown -R ${icinga2_user}:${icinga2_user} "${icinga2_libdir}"
-  chown -R ${icinga2_user}:${icinga2_user} "${icinga2_spooldir}"
+#  # Create necessary directories / change ownership
+#  for d in "${icinga2_logdir}" "${icinga2_logdir}/compat" \
+#           "${icinga2_logdir}/compat/archives" "${icinga2_libdir}" \
+#           "${icinga2_spooldir}" "${icinga2_spooldir}/tmp" \
+#           "${icinga2_rundir}" "${icinga2_cachedir}"; do
+#      if [ ! -d "${d}" ]; then
+#        install -d -o ${icinga2_user} -g ${icinga2_group} "${d}"
+#      else
+#        chown ${icinga2_user}:${icinga2_group} "${d}"
+#      fi
+#  done
+#
+#  install -d -o ${icinga2_user} -g %%WWWGRP%% "${icinga2_rundir}/cmd" 
+#
+#  chown -R ${icinga2_user}:${icinga2_user} "${icinga2_libdir}"
+#  chown -R ${icinga2_user}:${icinga2_user} "${icinga2_spooldir}"
 
   if ! icinga2_checkconfig; then
     return 1
