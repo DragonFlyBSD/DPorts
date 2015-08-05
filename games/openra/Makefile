@@ -3,6 +3,7 @@
 PORTNAME=	openra
 PORTVERSION=	20150614
 DISTVERSIONPREFIX=	release-
+PORTREVISION=	3
 CATEGORIES=	games
 # XXX Convert to USES=nuget or package dependencies instead
 MASTER_SITES=	https://nuget.org/api/v2/package/StyleCopPlus.MSBuild/4.7.49.5?dummy=/:StyleCopPlus \
@@ -48,9 +49,9 @@ USE_GITHUB=	yes
 GH_PROJECT=	OpenRA
 
 NO_ARCH=	yes
-USES=		gmake lua:51,run mono openal:soft
+USES=		gmake lua:51,run mono openal:soft shebangfix
+SHEBANG_FILES=	launch-dedicated.sh
 USE_SDL=	sdl2
-INSTALLS_ICONS=	yes
 MAKE_ENV=	prefix="${PREFIX}"
 MAKE_ARGS=	VERSION="${GH_TAGNAME}"
 INSTALL_TARGET=	install-all install-linux-shortcuts
@@ -70,8 +71,6 @@ TEST_ALL_TARGET=test
 ZENITY_RUN_DEPENDS=xdg-open:${PORTSDIR}/devel/xdg-utils \
 		zenity:${PORTSDIR}/x11/zenity
 ZENITY_DESC=	Use native crash dialog
-
-.include <bsd.port.options.mk>
 
 post-extract:
 	@${MKDIR} ${WRKSRC}/thirdparty/download
@@ -102,19 +101,15 @@ post-patch:
 	${REINPLACE_CMD} -e 's/"BSD"/"${OPSYS}"/' \
 		${WRKSRC}/OpenRA.Game/Platform.cs
 
-post-build:
-.if ${PORT_OPTIONS:MDOCS}
+post-build-DOCS-on:
 	@${ECHO_MSG} Generating HTML documentation...
 	@for f in ${WRKSRC}/*.md; do \
 		${ECHO_MSG} markdown $$f -\> $${f%.md}.html; \
 		markdown $$f >$${f%.md}.html; \
 	done
-.endif
 
-post-install:
-.if ${PORT_OPTIONS:MDOCS}
+post-install-DOCS-on:
 	(cd ${WRKSRC} && ${COPYTREE_SHARE} \
 		"${PORTDOCS}" ${STAGEDIR}${DOCSDIR})
-.endif
 
 .include <bsd.port.mk>
