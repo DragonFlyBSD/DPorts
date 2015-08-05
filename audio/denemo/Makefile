@@ -3,7 +3,7 @@
 
 PORTNAME=	denemo
 PORTVERSION=	1.2.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	GNU
 
@@ -24,7 +24,7 @@ LIB_DEPENDS=	libaubio.so:${PORTSDIR}/audio/aubio \
 RUN_DEPENDS=	xdg-open:${PORTSDIR}/devel/xdg-utils
 
 USES=		bison gettext gmake pkgconfig
-USE_GNOME=	librsvg2 libxml2
+USE_GNOME=	intltool librsvg2 libxml2
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-jack \
 		--disable-alsa \
