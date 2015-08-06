@@ -1,5 +1,5 @@
 
-$FreeBSD: head/net-im/ejabberd/files/patch-ejabberdctl.template 390878 2015-06-29 04:45:14Z ashish $
+$FreeBSD: head/net-im/ejabberd/files/patch-ejabberdctl.template 392911 2015-07-26 08:31:21Z ashish $
 
 --- ejabberdctl.template.orig
 +++ ejabberdctl.template
@@ -12,7 +12,7 @@ $FreeBSD: head/net-im/ejabberd/files/patch-ejabberdctl.template 390878 2015-06-2
  fi
  if [ "$SPOOL_DIR" = "" ] ; then
 -    SPOOL_DIR={{localstatedir}}/lib/ejabberd
-+    SPOOLDIR=/var/spool/ejabberd
++    SPOOL_DIR=/var/spool/ejabberd
  fi
  if [ "$EJABBERD_DOC_PATH" = "" ] ; then
      EJABBERD_DOC_PATH={{docdir}}
