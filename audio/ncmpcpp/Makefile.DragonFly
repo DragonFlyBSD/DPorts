@@ -1,0 +1,1 @@
+CURL_LDFLAGS+= -L${LOCALBASE}/lib -lcom_err
