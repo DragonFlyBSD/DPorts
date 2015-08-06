@@ -1,0 +1,11 @@
+--- mozilla/xpcom/reflect/xptcall/md/unix/moz.build.orig	2015-04-03 02:30:08 UTC
++++ mozilla/xpcom/reflect/xptcall/md/unix/moz.build
+@@ -26,7 +26,7 @@ if CONFIG['OS_ARCH'] == 'GNU':
+             'xptcstubs_gcc_x86_unix.cpp'
+         ]
+ 
+-if CONFIG['OS_ARCH'] in ('Linux', 'FreeBSD', 'NetBSD', 'OpenBSD') or \
++if CONFIG['OS_ARCH'] in ('Linux', 'FreeBSD', 'NetBSD', 'OpenBSD', 'DragonFly') or \
+    CONFIG['OS_ARCH'].startswith('GNU_'):
+     if CONFIG['OS_TEST'] == 'x86_64':
+         SOURCES += [

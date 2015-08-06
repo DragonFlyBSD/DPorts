@@ -1,11 +1,9 @@
 OPTIONS_EXCLUDE+=	ENIGMAIL
 LDFLAGS+=		-R${PREFIX}/lib/thunderbird
+MAKE_ENV+=		AR=/usr/bin/ar LD=/usr/bin/ld \
+			STRIP=${STRIP_CMD} STRIP_FLAGS=
 
 MOZ_OPTIONS+=	--host=${ARCH}-dports-${OPSYS:tl}${OSREL}
-#MOZ_MAKE_FLAGS+=-j${MAKE_JOBS_NUMBER}
-#MOZ_EXPORT+=	MOZ_MAKE_FLAGS=${MOZ_MAKE_FLAGS:Q}
-#MOZ_MK_OPTIONS+=MOZ_MAKE_FLAGS=${MOZ_MAKE_FLAGS:Q}
-
-MOZ_OPTIONS+= --disable-webrtc
+MOZ_OPTIONS+=	--disable-webrtc
 
 PULSEAUDIO_LIB_DEPENDS= libpulse.so:${PORTSDIR}/audio/pulseaudio
