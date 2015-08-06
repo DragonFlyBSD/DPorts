@@ -1,0 +1,10 @@
+--- tools/lld/lib/Driver/CMakeLists.txt.orig	2015-07-21 05:54:30 UTC
++++ tools/lld/lib/Driver/CMakeLists.txt
+@@ -37,6 +37,7 @@ add_llvm_library(lldDriver
+     LLVMObject
+     LLVMOption
+     LLVMSupport
++    pthread
+   )
+ 
+ add_dependencies(lldDriver DriverOptionsTableGen)

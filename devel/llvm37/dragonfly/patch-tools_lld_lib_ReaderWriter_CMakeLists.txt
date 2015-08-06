@@ -1,0 +1,8 @@
+--- tools/lld/lib/ReaderWriter/CMakeLists.txt.orig	2015-07-21 05:54:30 UTC
++++ tools/lld/lib/ReaderWriter/CMakeLists.txt
+@@ -16,4 +16,5 @@ add_llvm_library(lldReaderWriter
+     lldYAML
+     LLVMObject
+     LLVMSupport
++    pthread
+   )
