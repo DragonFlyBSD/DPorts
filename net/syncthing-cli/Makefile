@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	syncthing-cli
-PORTVERSION=	0.1.0.2015062701
+PORTVERSION=	0.1.0.2015070301
 PORTREVISION=	1
 CATEGORIES=	net
 
@@ -14,9 +14,9 @@ BUILD_DEPENDS=	${LOCALBASE}/bin/go:${PORTSDIR}/lang/go
 USE_GITHUB=	yes
 GH_ACCOUNT=	syncthing AudriusButkevicius:audrius
 GH_PROJECT=	syncthing:st cli:audrius
-GH_TAGNAME=	eba2fb7 v${SYNCTHING_VER}:st 7f561c7:audrius
+GH_TAGNAME=	2707f77 v${SYNCTHING_VER}:st 7f561c7:audrius
 
-SYNCTHING_VER=	0.11.13
+SYNCTHING_VER=	0.11.18
 
 PLIST_FILES=	bin/syncthing-cli
 
