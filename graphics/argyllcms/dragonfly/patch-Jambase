@@ -1,0 +1,11 @@
+--- Jambase.orig	2014-01-31 04:08:42 UTC
++++ Jambase
+@@ -880,7 +880,7 @@ else if $(UNIX)
+ 
+ 	# UNIX defaults
+ 
+-	CCFLAGS			?= -DUNIX -D_THREAD_SAFE -pipe ;
++	CCFLAGS			?= -DUNIX -D__FreeBSD__ -D_THREAD_SAFE -pipe ;
+ 	CCOPTFLAG		?= -O2 ;		
+ 	CCDEBUGFLAG		?= -g ;		
+ 	CCPROFFLAG		?= ;		
