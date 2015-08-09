@@ -1,0 +1,11 @@
+--- Makefile.old	2015-08-08 00:58:23.536605000 +0200
++++ Makefile	2015-08-08 01:00:24.325711000 +0200
+@@ -20,7 +20,7 @@
+     TARGET = $(BASE_NAME).$(SHARED_EXT).$(VERSION)
+     SHARED_LIB = $(BASE_NAME).$(SHARED_EXT).$(shell echo $(VERSION) | rev | cut -d "." -f 1 | rev)
+     LDFLAGS += -Wl,-soname=$(SHARED_LIB)
+-else ifeq ($(UNAME_S), FreeBSD)
++else ifneq (, $(shell echo $(UNAME_S) | grep -E 'FreeBSD|DragonFly'))
+     SHARED_EXT = so
+     TARGET = $(BASE_NAME).$(SHARED_EXT).$(VERSION)
+     SHARED_LIB = $(BASE_NAME).$(SHARED_EXT).$(shell echo $(VERSION) | rev | cut -d "." -f 1 | rev)
