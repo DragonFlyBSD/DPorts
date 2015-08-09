@@ -1,6 +1,8 @@
 USE_CXXSTD=	c++11
 
 # workaround with X11 clipboard support
-dfly-patch:
-	${ECHO_MSG} 'target_link_libraries(fgfs "-L/usr/local/lib -lX11")' >> \
-		${WRKSRC}/src/Main/CMakeLists.txt
+#dfly-patch:
+#	${ECHO_MSG} 'target_link_libraries(fgfs "-L/usr/local/lib -lX11")' >> \
+#		${WRKSRC}/src/Main/CMakeLists.txt
+
+LDFLAGS+=	-L${LOCALBASE}/lib
