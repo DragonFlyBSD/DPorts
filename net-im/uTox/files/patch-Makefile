@@ -1,0 +1,21 @@
+--- Makefile.orig	2015-06-13 00:14:56 UTC
++++ Makefile
+@@ -16,10 +16,6 @@ ifeq ($(V4LCONVERT), 1)
+     DEPS += libv4lconvert
+ endif
+ 
+-ifeq ($(FILTER_AUDIO), 1)
+-    DEPS += filteraudio
+-endif
+-
+ ifeq ($(UNITY), 1)
+     DEPS += messaging-menu unity
+ endif
+@@ -41,6 +37,7 @@ endif
+ 
+ ifeq ($(FILTER_AUDIO), 1)
+     CFLAGS += -DAUDIO_FILTERING
++    LDFLAGS += -lfilteraudio
+ endif
+ 
+ ifeq ($(UNITY), 1)
