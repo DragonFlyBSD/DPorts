@@ -375,10 +375,12 @@ STRIP=
 MOZ_OPTIONS+=	--disable-dtrace
 .endif
 
+.if ${MOZILLA_VER:R:R} < 40
 .if ${PORT_OPTIONS:MLOGGING} || ${PORT_OPTIONS:MDEBUG}
 MOZ_OPTIONS+=	--enable-logging
 .else
 MOZ_OPTIONS+=	--disable-logging
+.endif
 .endif
 
 .if ${PORT_OPTIONS:MPROFILE}
