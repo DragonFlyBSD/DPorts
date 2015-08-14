@@ -24,7 +24,7 @@
      }
 +    /* There might by a script component, e.g. sr_Cyrl_RS@UTF-8.  We can't assume all legal locale
 +       names are in the form <lang>_<country code>.<encoding>.  If the script component is here,
-+       skip it to define the region properly (e.g. "sr" instead of "sr_Cyrl") */
++       skip it to define the language properly (e.g. "sr" instead of "sr_Cyrl") */
 +    script = strchr ((const char *) s, '_');
 +    if (script)
 +    {
