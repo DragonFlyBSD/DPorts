@@ -8,12 +8,14 @@
      size_t llen, tlen = 0, mlen = 0;
  
      if (!lang || !*lang)
-@@ -242,14 +243,20 @@ FcLangNormalize (const FcChar8 *lang)
+@@ -241,26 +242,32 @@ FcLangNormalize (const FcChar8 *lang)
+ 	    modifier = encoding;
  	}
      }
-     territory = strchr ((const char *) s, '_');
+-    territory = strchr ((const char *) s, '_');
 -    if (!territory)
 -	territory = strchr ((const char *) s, '-');
++    territory = strrchr ((const char *) s, '_');
      if (territory)
      {
  	*territory = 0;
@@ -31,3 +33,18 @@
      llen = strlen ((const char *) s);
      if (llen < 2 || llen > 3)
      {
+-	fprintf (stderr, "Fontconfig warning: ignoring %s: not a valid language tag\n",
+-		 lang);
++	fprintf (stderr, "Fontconfig warning: ignoring %s: not a valid language tag (%s)\n",
++		 s, lang);
+ 	goto bail0;
+     }
+     if (territory && (tlen < 2 || tlen > 3))
+     {
+-	fprintf (stderr, "Fontconfig warning: ignoring %s: not a valid region tag\n",
+-		 lang);
++	fprintf (stderr, "Fontconfig warning: ignoring %s: not a valid region tag (%s)\n",
++		 territory, lang);
+ 	goto bail0;
+     }
+     if (territory)
