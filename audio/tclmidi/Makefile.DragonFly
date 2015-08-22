@@ -1,6 +1,0 @@
-CXXFLAGS+=	-Wno-unused-but-set-variable
-MAKEFILE=	${WRKSRC}/BSDmakefile
-
-dfly-patch:
-	${CP} ${FILESDIR}/BSDmakefile ${WRKSRC}/BSDmakefile
-	${ECHO_CMD} 'CFLAGS+= -Wno-old-style-definition' >> ${WRKSRC}/BSDmakefile
