@@ -1,6 +1,6 @@
---- include/krb5/krb5.hin.orig	2014-01-16 00:44:15.000000000 +0000
+--- include/krb5/krb5.hin.orig	2015-05-08 23:27:02 UTC
 +++ include/krb5/krb5.hin
-@@ -105,7 +105,7 @@
+@@ -106,7 +106,7 @@
  
  KRB5INT_BEGIN_DECLS
  
@@ -9,7 +9,7 @@
  #    pragma pack(push,2)
  #endif
  
-@@ -8179,7 +8179,7 @@ krb5_set_trace_callback(krb5_context con
+@@ -8161,7 +8161,7 @@ krb5_set_trace_callback(krb5_context con
  krb5_error_code KRB5_CALLCONV
  krb5_set_trace_filename(krb5_context context, const char *filename);
  

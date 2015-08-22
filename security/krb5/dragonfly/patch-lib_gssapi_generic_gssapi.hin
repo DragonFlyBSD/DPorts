@@ -1,4 +1,4 @@
---- lib/gssapi/generic/gssapi.hin.orig	2014-01-16 00:44:15.000000000 +0000
+--- lib/gssapi/generic/gssapi.hin.orig	2015-05-08 23:27:02 UTC
 +++ lib/gssapi/generic/gssapi.hin
 @@ -39,7 +39,7 @@
  extern "C" {
@@ -9,7 +9,7 @@
  #    pragma pack(push,2)
  #endif
  
-@@ -813,7 +813,7 @@ gss_set_neg_mechs(
+@@ -815,7 +815,7 @@ gss_set_neg_mechs(
      gss_cred_id_t,      /* cred_handle */
      const gss_OID_set); /* mech_set */
  

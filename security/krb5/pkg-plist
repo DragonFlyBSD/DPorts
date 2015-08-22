@@ -64,7 +64,7 @@ include/profile.h
 include/verto-module.h
 include/verto.h
 lib/libcom_err.so
-lib/libcom_err.so.3
+lib/libcom_err.so.P3
 lib/libgssapi_krb5.so
 lib/libgssapi_krb5.so.2
 lib/libgssrpc.so
