@@ -5,7 +5,7 @@
  #include "lua52compat.h"
  
 -#ifdef __FreeBSD__
-+#if defined(__FreeBSD__) || defined(__DragonFly__)
++#if defined __FreeBSD__ || defined __DragonFly__
  #define	O_DSYNC	O_SYNC
  #endif
  
