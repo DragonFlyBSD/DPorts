@@ -1,2 +1,0 @@
-dfly-patch:
-	cd ${WRKSRC}/preconf && ${LN} -sf X11ccFreeBSD X11ccDragonFly
