@@ -136,7 +136,6 @@ MOZ_EXPORT+=	MOZ_JEMALLOC3=1
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-bug1125514
 . endif
 .elif ${OPSYS} != FreeBSD || ${OSVERSION} < 1000012 || ${MOZILLA_VER:R:R} >= 37
-MOZ_OPTIONS+=	--enable-jemalloc
 .endif
 
 # Standard depends
