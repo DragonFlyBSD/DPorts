@@ -1,5 +1,3 @@
-OPTIONS_DEFAULT_x86_64:=	${OPTIONS_DEFAULT:NOPENMP}
-
 dfly-patch:
 .if ${DFLYVERSION} >= 400105 || (!defined(NO_GCC50) && ${DFLYVERSION} >= 400103)
 	${REINPLACE_CMD} -e 's|gcc47|gcc50|g' -e 's|4.7"|5.0"|' \
