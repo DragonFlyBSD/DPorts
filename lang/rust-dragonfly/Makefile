@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	rust
-RUST_SNAP_DATE=	2015-06-13
-PORTVERSION=	1.2.0.${RUST_SNAP_DATE:S/-//g}
+RUST_SNAP_DATE=	2015-07-14
+PORTVERSION=	1.3.0.${RUST_SNAP_DATE:S/-//g}
 PORTREVISION=	0
 CATEGORIES=	lang
 MASTER_SITES=	http://www.ntecs.de/downloads/rust/:bootstrap \
@@ -29,13 +29,13 @@ RUN_DEPENDS=	llc36:${PORTSDIR}/devel/llvm36
 RUST_SOURCE=	rustc-nightly-src.tar.gz
 RUST_BOOT=	rust-stage0-${RUST_BOOT_SIG}.tar.bz2
 RUST_BOOT_SIG=	2015-06-12-50ab23d-dragonfly-x86_64-54171b3357723941a1025da60d090ca84634cdac
-PLIST_SUB=	DIGEST=d8ace771
+PLIST_SUB=	DIGEST=7e44814b
 
 USES=		gmake perl5 python:2
 WRKSRC=		${WRKDIR}/rustc-nightly
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-docs --mandir=${MANPREFIX}/man \
-		--llvm-root=${LOCALBASE}
+		--llvm-root=${LOCALBASE}/llvm36
 MAKE_ENV=	SNAPSHOT_FILE=${DISTDIR}/${DIST_SUBDIR}/${RUST_BOOT}
 USE_LDCONFIG=	yes
 USE_PERL5=	build
