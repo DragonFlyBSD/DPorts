@@ -9,7 +9,7 @@ MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:FRANCKC
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	geistteufel@yahoo.fr
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Dancer::Debug - Extend Plack::Middleware::Debug
 
 RUN_DEPENDS=	p5-Class-Method-Modifiers>=0:${PORTSDIR}/devel/p5-Class-Method-Modifiers \
@@ -18,5 +18,6 @@ RUN_DEPENDS=	p5-Class-Method-Modifiers>=0:${PORTSDIR}/devel/p5-Class-Method-Modi
 
 USES=		perl5
 USE_PERL5=	configure
+NO_ARCH=	yes
 
 .include <bsd.port.mk>
