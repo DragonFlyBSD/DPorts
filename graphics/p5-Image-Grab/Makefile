@@ -8,7 +8,7 @@ CATEGORIES=	graphics perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	tolid@plab.ku.dk
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Perl extension for Grabbing images off the Internet
 
 BUILD_DEPENDS=	p5-URI>=0:${PORTSDIR}/net/p5-URI \
@@ -20,5 +20,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 USES=		perl5
 USE_PERL5=	configure
 CONFIGURE_ENV=	${ECHO_CMD} "N" |
+NO_ARCH=	yes
 
 .include <bsd.port.mk>
