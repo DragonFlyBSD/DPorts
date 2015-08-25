@@ -1,0 +1,12 @@
+--- Makefile.in.orig	2013-03-28 14:23:00.000000000 +0000
++++ Makefile.in
+@@ -672,6 +672,9 @@ CFLAGS += -fp:precise
+ endif
+ endif # WINNT
+ 
++ifeq ($(OS_ARCH),DragonFly)
++EXTRA_LIBS	+= -pthread
++endif
+ ifeq ($(OS_ARCH),FreeBSD)
+ EXTRA_LIBS	+= -pthread
+ endif
