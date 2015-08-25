@@ -6,10 +6,11 @@ PORTREVISION=	1
 CATEGORIES=	net-mgmt
 MASTER_SITES=	http://labs.consol.de/wp-content/uploads/2011/04/
 
-MAINTAINER=	ssanders@taximagic.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Nagios plugin to check various parameters of a MySQL database
 
 LICENSE=	GPLv2
+LICENSE_FILE=	${WRKSRC}/COPYING
 
 RUN_DEPENDS=	p5-DBD-mysql>=0:${PORTSDIR}/databases/p5-DBD-mysql
 
@@ -23,6 +24,7 @@ CONFIGURE_ARGS=	--with-statefiles-dir=${NAGIOSDIR} \
 		--with-perl=${PERL}
 
 USES=		perl5
+NO_ARCH=	yes
 
 NAGIOSUSER?=	nagios
 NAGIOSGROUP?=	nagios
