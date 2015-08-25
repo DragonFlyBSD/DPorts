@@ -8,10 +8,11 @@ CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	groovis@groovis.net
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Process HTML templates with loops, conditionals, macros and more
 
 USES=		perl5
 USE_PERL5=	configure
+NO_ARCH=	yes
 
 .include <bsd.port.mk>
