@@ -1,0 +1,11 @@
+--- warp.cabal.intermediate	2015-08-26 21:49:57 UTC
++++ warp.cabal
+@@ -91,7 +91,7 @@ Library
+ 
+   if flag(warp-debug)
+       Cpp-Options:   -DWARP_DEBUG
+-  if (os(linux) || os(freebsd) || os(darwin)) && flag(allow-sendfilefd)
++  if (os(linux) || os(freebsd) || os(dragonfly)) && flag(allow-sendfilefd)
+       Cpp-Options:   -DSENDFILEFD
+       Build-Depends: hashable
+       Other-modules: Network.Wai.Handler.Warp.MultiMap
