@@ -30,6 +30,8 @@ USES+=		readline
 CPPFLAGS+=	-I${LOCALBASE}/include/readline -I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+CONFIGURE_ENV+=		ac_cv_header_regex_h=no
+
 OPTIONS_DEFINE?=	SQLITE3 MYSQL PGSQL MTX PYTHON NLS OPENSSL
 OPTIONS_DEFAULT?=	NLS OPENSSL PGSQL
 MTX_DESC=		Install mtx for control of autochanger devices
