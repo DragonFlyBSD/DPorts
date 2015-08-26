@@ -15,5 +15,7 @@ USE_CABAL=	blaze-builder>=0.3.3 case-insensitive>=0.2 hashable \
 		simple-sendfile>=0.2.7 streaming-commons>=0.1.2 text \
 		unix-compat>=0.2 void wai>=3.0
 
+BROKEN=		failed to update for 7.10 so manually broken
+
 .include "${.CURDIR}/../../lang/ghc/bsd.cabal.mk"
 .include <bsd.port.mk>
