@@ -17,9 +17,10 @@ LIB_DEPENDS=	libgcr-3.so:${PORTSDIR}/security/gcr \
 		libclutter-gst-2.0.so:${PORTSDIR}/multimedia/clutter-gst \
 		libwebkit2gtk-4.0.so:${PORTSDIR}/www/webkit2-gtk3 \
 		libmusicbrainz5.so:${PORTSDIR}/audio/libmusicbrainz5 \
-		libevdocument3.so:${PORTSDIR}/graphics/evince \
-		libxslt.so:${PORTSDIR}/textproc/libxslt
+		libevdocument3.so:${PORTSDIR}/graphics/evince
 RUN_DEPENDS=	nautilus:${PORTSDIR}/x11-fm/nautilus
+
+PORTSCOUT=	limitw:1,even
 
 USES=		gettext gmake libtool pathfix pkgconfig tar:xz
 INSTALLS_ICONS=	yes
