@@ -1,2 +1,3 @@
 USES+=			readline
 CONFIGURE_ARGS+= 	--with-readline=${LOCALBASE}/include/readline
+CONFIGURE_ENV+=		ac_cv_header_regex_h=no
