@@ -1,0 +1,5 @@
+# Configure does not check for <locale.h> as it should and as a result
+# setlocale() is defined which clashes with real definition pulled in by
+# <xlocale.h> through <regex.h>
+
+CFLAGS+= -DHAVE_LOCALE_H
