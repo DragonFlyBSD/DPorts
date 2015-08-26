@@ -1,0 +1,3 @@
+dfly-patch:
+	${CP} ${WRKSRC}/panels/datetime/data/timezone_8.75.png \
+		${WRKSRC}/panels/datetime/data/timezone_8.5.png
