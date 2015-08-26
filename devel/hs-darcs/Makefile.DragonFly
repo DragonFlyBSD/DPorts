@@ -1,3 +1,0 @@
-.if ${ARCH} == "x86_64"
-EXTRA_PATCHES= ${DFLY_PATCHDIR}/nopatch-src_Encoding_IConv.hsc
-.endif

@@ -1,0 +1,11 @@
+--- darcs.cabal.orig	2015-07-09 16:48:56 UTC
++++ darcs.cabal
+@@ -488,7 +488,7 @@ Library
+       if flag(pkgconfig)
+         pkgconfig-depends: libcurl
+       else
+-        extra-libraries:   curl
++        extra-libraries:   curl com_err
+         includes:          curl/curl.h
+ 
+     if flag(http)
