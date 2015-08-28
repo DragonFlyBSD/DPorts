@@ -1,6 +1,13 @@
 --- src/share/poudriere/include/common.sh.dragonfly.orig	2015-04-30 09:40:15 UTC
 +++ src/share/poudriere/include/common.sh.dragonfly
-@@ -119,7 +119,6 @@ jail_start() {
+@@ -113,13 +113,13 @@ jail_start() {
+ 
+ 	cat >> "${MASTERMNT}/etc/make.conf" <<-EOF
+ 	USE_PACKAGE_DEPENDS=yes
++	PKG_CREATE_VERBOSE=yes
+ 	BATCH=yes
+ 	WRKDIRPREFIX=/wrkdirs
+ 	PORT_DBDIR=/options
  	PORTSDIR=/usr/ports
  	PACKAGES=/packages
  	DISTDIR=/distfiles
