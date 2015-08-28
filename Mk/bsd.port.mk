@@ -3545,6 +3545,9 @@ do-install:
 
 .if !target(do-package)
 PKG_CREATE_ARGS=	-r ${STAGEDIR} -m ${METADIR} -p ${TMPPLIST}
+.if defined(PKG_CREATE_VERBOSE)
+PKG_CREATE_ARGS+=	-v
+.endif
 do-package: create-manifest
 do-package: ${TMPPLIST}
 	@if [ -d ${PACKAGES} ]; then \
