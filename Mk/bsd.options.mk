@@ -100,6 +100,8 @@
 #				get enabled too.
 # ${opt}_PREVENTS		When opt is enabled, if any options in PREVENTS are
 #				also enabled, it will produce an error.
+# ${opt}_PREVENTS_MSG		Provides a message explaining why the options
+#				cannot be selected together.
 #
 # ${opt}_USE=	FOO=bar		When option is enabled, it will  enable
 #				USE_FOO+= bar
@@ -108,12 +110,21 @@
 # ${opt}_USE_OFF=	FOO=bar	When option is disabled, it will enable
 #				USE_FOO+= bar
 #
+# ${opt}_VARS=	FOO=bar		When option is enabled, it will set
+#				FOO= bar
+# ${opt}_VARS=	FOO+=bar	When option is enabled, it will append
+#				FOO+= bar
+# ${opt}_VARS_OFF=    FOO=bar	When option is disabled, it will set
+#				FOO= bar
+# ${opt}_VARS_OFF=    FOO+=bar	When option is disabled, it will append
+#				FOO+= bar
+#
 # For each of:
 # ALL_TARGET BROKEN CATEGORIES CFLAGS CONFIGURE_ENV CONFLICTS CONFLICTS_BUILD
-# CONFLICTS_INSTALL CPPFLAGS CXXFLAGS DISTFILES EXTRA_PATCHES EXTRACT_ONLY
-# GH_ACCOUNT GH_PROJECT GH_TAGNAME IGNORE INFO INSTALL_TARGET LDFLAGS LIBS
-# MAKE_ARGS MAKE_ENV PATCHFILES PATCH_SITES PLIST_DIRS PLIST_DIRSTRY
-# PLIST_FILES PLIST_SUB PORTDOCS SUB_FILES SUB_LIST USES,
+# CONFLICTS_INSTALL CPPFLAGS CXXFLAGS DESKTOP_ENTRIES DISTFILES EXTRA_PATCHES
+# EXTRACT_ONLY GH_ACCOUNT GH_PROJECT GH_TAGNAME IGNORE INFO INSTALL_TARGET
+# LDFLAGS LIBS MAKE_ARGS MAKE_ENV PATCHFILES PATCH_SITES PLIST_DIRS
+# PLIST_DIRSTRY PLIST_FILES PLIST_SUB PORTDOCS SUB_FILES SUB_LIST USES,
 # defining ${opt}_${variable} will add its content to the actual variable when
 # the option is enabled.  Defining ${opt}_${variable}_OFF will add its content
 # to the actual variable when the option is disabled.
@@ -135,11 +146,12 @@ OPTIONS_NAME?=	${PKGORIGIN:S/\//_/}
 OPTIONS_FILE?=	${PORT_DBDIR}/${OPTIONS_NAME}/options
 
 _OPTIONS_FLAGS=	ALL_TARGET BROKEN CATEGORIES CFLAGS CONFIGURE_ENV CONFLICTS \
-		CONFLICTS_BUILD CONFLICTS_INSTALL CPPFLAGS CXXFLAGS DISTFILES \
-		EXTRA_PATCHES EXTRACT_ONLY GH_ACCOUNT GH_PROJECT GH_TAGNAME \
-		IGNORE INFO INSTALL_TARGET LDFLAGS LIBS MAKE_ARGS MAKE_ENV \
-		PATCHFILES PATCH_SITES PLIST_DIRS PLIST_DIRSTRY PLIST_FILES \
-		PLIST_SUB PORTDOCS SUB_FILES SUB_LIST USES
+		CONFLICTS_BUILD CONFLICTS_INSTALL CPPFLAGS CXXFLAGS \
+		DESKTOP_ENTRIES DISTFILES EXTRA_PATCHES EXTRACT_ONLY \
+		GH_ACCOUNT GH_PROJECT GH_TAGNAME IGNORE INFO INSTALL_TARGET \
+		LDFLAGS LIBS MAKE_ARGS MAKE_ENV PATCHFILES PATCH_SITES \
+		PLIST_DIRS PLIST_DIRSTRY PLIST_FILES PLIST_SUB PORTDOCS \
+		SUB_FILES SUB_LIST USES
 _OPTIONS_DEPENDS=	PKG FETCH EXTRACT PATCH BUILD LIB RUN
 
 # The format here is target_family:priority:target-type
@@ -461,6 +473,16 @@ _u=		${option:C/=.*//g}
 USE_${_u:tu}+=	${option:C/.*=//g:C/,/ /g}
 .      endfor
 .    endif
+.    if defined(${opt}_VARS)
+.      for var in ${${opt}_VARS}
+_u=		${var:C/=.*//}
+.        if ${_u:M*+}
+${_u:C/.$//:tu}+=	${var:C/[^+]*\+=//:C/^"(.*)"$$/\1/}
+.        else
+${_u:tu}=	${var:C/[^=]*=//:C/^"(.*)"$$/\1/}
+.        endif
+.      endfor
+.    endif
 .    if defined(${opt}_CONFIGURE_ENABLE)
 .      for iopt in ${${opt}_CONFIGURE_ENABLE}
 CONFIGURE_ARGS+=	--enable-${iopt}
@@ -497,6 +519,16 @@ _OPTIONS_${_target}:=	${_OPTIONS_${_target}} ${_prio}:${_type}-${_target}-${opt}
 .      for option in ${${opt}_USE_OFF}
 _u=		${option:C/=.*//g}
 USE_${_u:tu}+=	${option:C/.*=//g:C/,/ /g}
+.      endfor
+.    endif
+.    if defined(${opt}_VARS_OFF)
+.      for var in ${${opt}_VARS_OFF}
+_u=		${var:C/=.*//}
+.        if ${_u:M*+}
+${_u:C/.$//:tu}+=	${var:C/[^+]*\+=//:C/^"(.*)"$$/\1/}
+.        else
+${_u:tu}=	${var:C/[^=]*=//:C/^"(.*)"$$/\1/}
+.        endif
 .      endfor
 .    endif
 .    if defined(${opt}_CONFIGURE_ENABLE)
