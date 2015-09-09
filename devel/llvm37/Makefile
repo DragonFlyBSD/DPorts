@@ -1,8 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	llvm
-DISTVERSION=	3.7.0rc2
-PORTREVISION=	1
+DISTVERSION=	3.7.0
+PORTREVISION=	2
 CATEGORIES=	devel lang
 MASTER_SITES=	http://llvm.org/${PRE_}releases/${LLVM_RELEASE}/${RCDIR}
 DISTNAME=	${PORTNAME}-${DISTVERSION}.src
@@ -30,20 +30,23 @@ SUB_LIST=	LLVM_PREFIX="${LLVM_PREFIX}" LLVM_SUFFIX="${LLVM_SUFFIX}"
 CMAKE_INSTALL_PREFIX=	${LLVM_PREFIX}
 CMAKE_ARGS=	-DBUILD_SHARED_LIBS=ON
 
-OPTIONS_DEFINE=	CLANG DOCS GOLD LIT LLD LLDB
+OPTIONS_DEFINE=	CLANG COMPILER_RT DOCS GOLD LIT LLD LLDB
 OPTIONS_DEFINE_x86_64=	OPENMP
 OPTIONS_DEFAULT=	CLANG GOLD LIT LLD
+OPTIONS_DEFAULT_i386=	COMPILER_RT
 OPTIONS_SUB=	yes
 
 CLANG_DESC=	Build clang
 CLANG_EXTRA_PATCHES= \
+		${PATCHDIR}/clang-patch-fformat_extensions.diff \
 		${PATCHDIR}/clang-patch-tools_clang_lib_Headers_CMakeLists.txt \
-		${PATCHDIR}/clang-patch-svn-244209 \
-		${PATCHDIR}/clang-patch-svn-245041
+		${PATCHDIR}/clang-patch-tools_clang_tools_clang-format_clang-format.py
 CLANG_CONFLICTS_INSTALL=	clang-devel-3.[1234567]*
 CLANG_DISTFILES=	cfe-${DISTVERSION}.src${EXTRACT_SUFX}
 CLANG_CMAKE_ON=		-DCLANG_DEFAULT_OPENMP_RUNTIME=libomp
 CLANG_PORTDOCS=		clang
+COMPILER_RT_DESC=	Build compiler-rt (sanitizers)
+COMPILER_RT_DISTFILES=	compiler-rt-${DISTVERSION}.src${EXTRACT_SUFX}
 DOCS_PORTDOCS=		llvm
 DOCS_CMAKE_ON=		-DLLVM_ENABLE_SPHINX=ON \
 			-DSPHINX_WARNINGS_AS_ERRORS=OFF \
@@ -62,7 +65,7 @@ GOLD_CMAKE_ON=		-DLLVM_BINUTILS_INCDIR=${LOCALBASE}/include
 GOLD_BUILD_DEPENDS=	ld.gold:${PORTSDIR}/devel/binutils
 
 # Emulate USE_GITHUB's ${WRKSRC_tag} to reduce diffs to ../llvm-devel
-.for option in CLANG LLD LLDB OPENMP
+.for option in CLANG COMPILER_RT LLD LLDB OPENMP
 WRKSRC_${option:tl}=		${WRKDIR}/${${option}_DISTFILES:S/${EXTRACT_SUFX}//}
 .endfor
 
@@ -121,6 +124,49 @@ COMMANDS+=	clang \
 MAN1SRCS+=	clang.1
 .endif
 
+.if ${PORT_OPTIONS:MCOMPILER_RT}
+SAN_LIBDIR=${LLVM_PREFIX}/lib/clang/${LLVM_RELEASE}/lib/freebsd
+.if ${ARCH} == "x86_64"
+# Disable i386 variants on amd64.
+EXTRA_PATCHES+= \
+    ${PATCHDIR}/compiler-rt-patch-tools_compiler-rt_cmake_config-ix.cmake
+PLIST_FILES+=	\
+	${SAN_LIBDIR}/libclang_rt.asan-preinit-x86_64.a \
+	${SAN_LIBDIR}/libclang_rt.asan-x86_64.a \
+	${SAN_LIBDIR}/libclang_rt.asan-x86_64.a.syms \
+	${SAN_LIBDIR}/libclang_rt.asan-x86_64.so \
+	${SAN_LIBDIR}/libclang_rt.asan_cxx-x86_64.a \
+	${SAN_LIBDIR}/libclang_rt.asan_cxx-x86_64.a.syms \
+	${SAN_LIBDIR}/libclang_rt.builtins-x86_64.a \
+	${SAN_LIBDIR}/libclang_rt.dd-x86_64.a \
+	${SAN_LIBDIR}/libclang_rt.dyndd-x86_64.so \
+	${SAN_LIBDIR}/libclang_rt.lsan-x86_64.a \
+	${SAN_LIBDIR}/libclang_rt.profile-x86_64.a \
+	${SAN_LIBDIR}/libclang_rt.safestack-x86_64.a \
+	${SAN_LIBDIR}/libclang_rt.tsan-x86_64.a \
+	${SAN_LIBDIR}/libclang_rt.tsan-x86_64.a.syms \
+	${SAN_LIBDIR}/libclang_rt.tsan_cxx-x86_64.a \
+	${SAN_LIBDIR}/libclang_rt.tsan_cxx-x86_64.a.syms \
+	${SAN_LIBDIR}/libclang_rt.ubsan_standalone-x86_64.a \
+	${SAN_LIBDIR}/libclang_rt.ubsan_standalone-x86_64.a.syms \
+	${SAN_LIBDIR}/libclang_rt.ubsan_standalone_cxx-x86_64.a \
+	${SAN_LIBDIR}/libclang_rt.ubsan_standalone_cxx-x86_64.a.syms
+.elif ${ARCH} == "i386"
+PLIST_FILES+=	\
+	${SAN_LIBDIR}/libclang_rt.asan-i386.a \
+	${SAN_LIBDIR}/libclang_rt.asan-i386.so \
+	${SAN_LIBDIR}/libclang_rt.asan-preinit-i386.a \
+	${SAN_LIBDIR}/libclang_rt.asan_cxx-i386.a \
+	${SAN_LIBDIR}/libclang_rt.builtins-i386.a \
+	${SAN_LIBDIR}/libclang_rt.profile-i386.a \
+	${SAN_LIBDIR}/libclang_rt.safestack-i386.a \
+	${SAN_LIBDIR}/libclang_rt.ubsan_standalone-i386.a \
+	${SAN_LIBDIR}/libclang_rt.ubsan_standalone_cxx-i386.a
+.else
+BROKEN=	no packaging data for sanitizers on ${ARCH}.  Disable COMPILER_RT.
+.endif
+.endif
+
 .if ${PORT_OPTIONS:MLIT}
 MAN1SRCS+=	lit.1 FileCheck.1
 _USES_PYTHON=	python
@@ -167,6 +213,9 @@ PLIST_SUB:=	${PLIST_SUB:NLLDB=*} LLDB="@comment "
 
 post-extract-CLANG-on:
 	${MV} ${WRKSRC_clang} ${PATCH_WRKSRC}/tools/clang
+
+post-extract-COMPILER_RT-on:
+	${MV} ${WRKSRC_compiler_rt} ${PATCH_WRKSRC}/tools/compiler-rt
 
 post-extract-LLD-on:
 	${MV} ${WRKSRC_lld} ${PATCH_WRKSRC}/tools/lld
@@ -260,7 +309,7 @@ build-plist:
 	${FIND} ${STAGEDIR}${PYTHON_SITELIBDIR}/lit${LLVM_SUFFIX} -type f | \
 	    ${SED} -e 's|${STAGEDIR}${PYTHON_SITELIBDIR}|%%LIT%%%%PYTHON_SITELIBDIR%%|' | \
 	    ${SORT} >> ${PLIST}.tmp
-	awk '{if ($$0 ~ /clang/ && $$0 !~ /omp.h/) {printf "%%%%CLANG%%%%"} if ($$0 ~ /lld/ && $$0 !~ /lldb/) {printf "%%%%LLD%%%%"} if ($$0 ~ /(argdumper|lldb)/) {printf "%%%%LLDB%%%%"} if ($$0 ~ /lib.*omp/) {printf "%%%%OPENMP%%%%"} if ($$0 ~ /LLVMgold/) {printf "%%%%GOLD%%%%"} print}' ${PLIST}.tmp >> ${PLIST}
+	awk '{if ($$0 ~ /clang/ && $$0 !~ /(omp.h|libclang_rt|sanitizer|blacklist.txt)/) {printf "%%%%CLANG%%%%"} if ($$0 ~ /(sanitizer|blacklist.txt)/) {printf "%%%%COMPILER_RT%%%%"} if ($$0 ~ /lld/ && $$0 !~ /lldb/) {printf "%%%%LLD%%%%"} if ($$0 ~ /(argdumper|lldb)/) {printf "%%%%LLDB%%%%"} if ($$0 ~ /lib.*omp/) {printf "%%%%OPENMP%%%%"} if ($$0 ~ /LLVMgold/) {printf "%%%%GOLD%%%%"} if ($$0 !~ /libclang_rt/) {print}}' ${PLIST}.tmp >> ${PLIST}
 	${RM} -f ${PLIST}.tmp
 
 check-commands:
