@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/dns/bind910/files/named.in 388211 2015-06-01 10:13:58Z mat $
+# $FreeBSD: head/dns/bind910/files/named.in 395660 2015-08-31 10:06:27Z mat $
 #
 
 # PROVIDE: named
@@ -232,10 +232,10 @@ named_stop()
 named_poststop()
 {
 	if [ -n "${named_chrootdir}" -a -c ${named_chrootdir}/dev/null ]; then
-		# unmount OpenSSL engines, if they were not mounted but only
-		# copied, do nothing.
-		if [ `${SYSCTL_N} security.jail.jailed` -eq 0 -o `${SYSCTL_N} security.jail.mount_allowed` -eq 1 ]; then
-			umount ${named_chrootdir}${_openssl_engines}
+		# if using OpenSSL from ports, unmount OpenSSL engines, if they
+		# were not mounted but only copied, do nothing.
+		if [ -d ${_openssl_engines} -a \( `${SYSCTL_N} security.jail.jailed` -eq 0 -o `${SYSCTL_N} security.jail.mount_allowed` -eq 1 \) ]; then
+		  umount ${named_chrootdir}${_openssl_engines}
 		fi
 		# unmount /dev
 		if [ `${SYSCTL_N} security.jail.jailed` -eq 0 ]; then
