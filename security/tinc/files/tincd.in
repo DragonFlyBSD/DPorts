@@ -1,9 +1,9 @@
 #!/bin/sh
 
-# $FreeBSD: head/security/tinc/files/tincd.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/security/tinc/files/tincd.in 396171 2015-09-05 13:29:18Z dinoex $
 #
 # PROVIDE: tincd
-# REQUIRE: ipfilter FILESYSTEMS sysctl netif
+# REQUIRE: ipfilter FILESYSTEMS sysctl netif ldconfig
 # BEFORE:  SERVERS routing
 # KEYWORD: nojail
 #
@@ -39,7 +39,7 @@ tincd_start()
 		for cfg in ${tincd_cfg}
 		do
 			echo "Starting tincd for: ${cfg}"
-			$command -n $cfg
+			$command -n $cfg $tincd_flags
 		done
 	fi
 # code deliberately borrowed from /etc/rc.d/netif
