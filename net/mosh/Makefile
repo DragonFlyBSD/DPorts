@@ -28,10 +28,4 @@ CONFLICTS_INSTALL=	mosh-0.[2-9].*
 PLIST_FILES=	bin/mosh bin/mosh-server bin/mosh-client \
 		man/man1/mosh-client.1.gz man/man1/mosh-server.1.gz man/man1/mosh.1.gz
 
-.include <bsd.port.pre.mk>
-
-LIB_DEPENDS+=	libutempter.so:${PORTSDIR}/sysutils/libutempter
-CFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
