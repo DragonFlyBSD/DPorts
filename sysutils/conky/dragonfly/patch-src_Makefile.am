@@ -1,0 +1,29 @@
+--- src/Makefile.am.orig	2012-05-04 00:08:27.000000000 +0300
++++ src/Makefile.am
+@@ -70,6 +70,7 @@ solaris = solaris.c
+ freebsd = freebsd.c freebsd.h
+ netbsd = netbsd.c netbsd.h
+ openbsd = openbsd.c openbsd.h
++dragonfly = dragonfly.c dragonfly.h
+ port_monitors = libtcp-portmon.c libtcp-portmon.h \
+                 tcp-portmon.c tcp-portmon.h
+ x11 = x11.c x11.h fonts.c fonts.h
+@@ -86,7 +87,7 @@ iconv = iconv_tools.c iconv_tools.h
+ 
+ # make sure the files from above are always included in the distfile
+ EXTRA_DIST = $(audacious) $(bmpx) $(ibm) $(mpd) $(moc) $(xmms2) $(linux) \
+-             $(solaris) $(freebsd) $(netbsd) $(openbsd) $(port_monitors) \
++             $(solaris) $(freebsd) $(netbsd) $(openbsd) $(dragonfly) $(port_monitors) \
+              $(x11) $(hddtemp) $(eve) $(ccurl_thread) $(rss) $(weather) \
+              $(lua) $(nvidia) $(imlib2) $(apcupsd)
+ 
+@@ -125,6 +126,9 @@ endif
+ if BUILD_OPENBSD
+ optional_sources += $(openbsd)
+ endif
++if BUILD_DRAGONFLY
++optional_sources += $(dragonfly)
++endif
+ if BUILD_PORT_MONITORS
+ optional_sources += $(port_monitors)
+ endif

@@ -1,0 +1,21 @@
+--- configure.ac.in.orig	2012-05-04 00:34:47.000000000 +0300
++++ configure.ac.in
+@@ -77,6 +77,10 @@ case $uname in
+ #    WANT_KSTAT=yes
+ #    ;;
+ 
++  DragonFly*)
++    WANT_KVM=yes
++    ;;
++
+   *)
+     echo "Your operating system $uname isn't supported"
+     echo "Feel free to help. :P"
+@@ -89,6 +93,7 @@ AM_CONDITIONAL(BUILD_LINUX, test x$uname
+ AM_CONDITIONAL(BUILD_FREEBSD, test x$uname = xFreeBSD -o x$uname = xGNU/kFreeBSD)
+ #AM_CONDITIONAL(BUILD_NETBSD, test x$uname = xNetBSD)
+ AM_CONDITIONAL(BUILD_OPENBSD, test x$uname = xOpenBSD)
++AM_CONDITIONAL(BUILD_DRAGONFLY, test x$uname = xDragonFly)
+ 
+ BUILD_DATE=$(LANG=en_US LC_ALL=en_US LOCALE=en_US date)
+ BUILD_ARCH="$(uname -sr) ($(uname -m))"

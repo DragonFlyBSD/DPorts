@@ -1,0 +1,6 @@
+USES+=  autoreconf:build libtool
+
+CFLAGS+= -Dstatfs64=statfs -Wno-maybe-uninitialized
+
+pre-configure:
+	cd ${WRKSRC} && ./autogen.sh

@@ -1,0 +1,83 @@
+--- src/Makefile.in.orig	2012-05-04 00:47:40.000000000 +0300
++++ src/Makefile.in
+@@ -94,6 +94,7 @@ bin_PROGRAMS = conky$(EXEEXT)
+ #optional_sources += $(netbsd)
+ #endif
+ @BUILD_OPENBSD_TRUE@am__append_9 = $(openbsd)
++@BUILD_DRAGONFLY_TRUE@am__append_99 = $(dragonfly)
+ @BUILD_PORT_MONITORS_TRUE@am__append_10 = $(port_monitors)
+ @BUILD_X11_TRUE@am__append_11 = $(x11)
+ @BUILD_HDDTEMP_TRUE@am__append_12 = $(hddtemp)
+@@ -126,7 +127,7 @@ am__conky_SOURCES_DIST = defconfig.h con
+ 	audacious.c audacious.h bmpx.c bmpx.h ibm.c ibm.h smapi.c \
+ 	smapi.h mpd.c mpd.h libmpdclient.c libmpdclient.h moc.c moc.h \
+ 	xmms2.c xmms2.h linux.c linux.h users.c sony.c sony.h i8k.c \
+-	i8k.h freebsd.c freebsd.h openbsd.c openbsd.h libtcp-portmon.c \
++	i8k.h freebsd.c freebsd.h openbsd.c openbsd.h dragonfly.c dragonfly.h libtcp-portmon.c \
+ 	libtcp-portmon.h tcp-portmon.c tcp-portmon.h x11.c x11.h \
+ 	fonts.c fonts.h hddtemp.c hddtemp.h eve.c eve.h ccurl_thread.c \
+ 	ccurl_thread.h rss.c rss.h prss.c prss.h weather.c weather.h \
+@@ -163,6 +164,8 @@ am__objects_19 = conky-openbsd.$(OBJEXT)
+ @BUILD_OPENBSD_TRUE@am__objects_20 = $(am__objects_19)
+ am__objects_21 = conky-libtcp-portmon.$(OBJEXT) \
+ 	conky-tcp-portmon.$(OBJEXT)
++am__objects_98 = conky-dragonfly.$(OBJEXT)
++@BUILD_DRAGONFLY_TRUE@am__objects_99 = $(am__objects_98)
+ @BUILD_PORT_MONITORS_TRUE@am__objects_22 = $(am__objects_21)
+ am__objects_23 = conky-x11.$(OBJEXT) conky-fonts.$(OBJEXT)
+ @BUILD_X11_TRUE@am__objects_24 = $(am__objects_23)
+@@ -429,6 +432,7 @@ solaris = solaris.c
+ freebsd = freebsd.c freebsd.h
+ netbsd = netbsd.c netbsd.h
+ openbsd = openbsd.c openbsd.h
++dragonfly = dragonfly.c dragonfly.h
+ port_monitors = libtcp-portmon.c libtcp-portmon.h \
+                 tcp-portmon.c tcp-portmon.h
+ 
+@@ -446,7 +450,7 @@ iconv = iconv_tools.c iconv_tools.h
+ 
+ # make sure the files from above are always included in the distfile
+ EXTRA_DIST = $(audacious) $(bmpx) $(ibm) $(mpd) $(moc) $(xmms2) $(linux) \
+-             $(solaris) $(freebsd) $(netbsd) $(openbsd) $(port_monitors) \
++             $(solaris) $(freebsd) $(netbsd) $(openbsd) $(dragonfly) $(port_monitors) \
+              $(x11) $(hddtemp) $(eve) $(ccurl_thread) $(rss) $(weather) \
+              $(lua) $(nvidia) $(imlib2) $(apcupsd)
+ 
+@@ -458,7 +462,7 @@ optional_sources = $(am__append_1) $(am_
+ 	$(am__append_10) $(am__append_11) $(am__append_12) \
+ 	$(am__append_13) $(am__append_14) $(am__append_15) \
+ 	$(am__append_16) $(am__append_17) $(am__append_18) \
+-	$(am__append_19) $(am__append_20) $(am__append_21)
++	$(am__append_19) $(am__append_20) $(am__append_21) $(am__append_98) $(am__append_99)
+ @BUILD_LINUX_FALSE@PTHREAD_LIBS = -pthread
+ 
+ # linux takes the standard to the max
+@@ -592,6 +596,7 @@ distclean-compile:
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/conky-exec.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/conky-fonts.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/conky-freebsd.Po@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/conky-dragonfly.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/conky-fs.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/conky-hddtemp.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/conky-i8k.Po@am__quote@
+@@ -849,6 +854,20 @@ conky-freebsd.obj: freebsd.c
+ @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+ @am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(conky_CFLAGS) $(CFLAGS) -c -o conky-freebsd.obj `if test -f 'freebsd.c'; then $(CYGPATH_W) 'freebsd.c'; else $(CYGPATH_W) '$(srcdir)/freebsd.c'; fi`
+ 
++conky-dragonfly.o: dragonfly.c
++@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(conky_CFLAGS) $(CFLAGS) -MT conky-dragonfly.o -MD -MP -MF $(DEPDIR)/conky-dragonfly.Tpo -c -o conky-dragonfly.o `test -f 'dragonfly.c' || echo '$(srcdir)/'`dragonfly.c
++@am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/conky-dragonfly.Tpo $(DEPDIR)/conky-dragonfly.Po
++@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='dragonfly.c' object='conky-dragonfly.o' libtool=no @AMDEPBACKSLASH@
++@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
++@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(conky_CFLAGS) $(CFLAGS) -c -o conky-dragonfly.o `test -f 'dragonfly.c' || echo '$(srcdir)/'`dragonfly.c
++
++conky-dragonfly.obj: dragonfly.c
++@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(conky_CFLAGS) $(CFLAGS) -MT conky-dragonfly.obj -MD -MP -MF $(DEPDIR)/conky-dragonfly.Tpo -c -o conky-dragonfly.obj `if test -f 'dragonfly.c'; then $(CYGPATH_W) 'dragonfly.c'; else $(CYGPATH_W) '$(srcdir)/dragonfly.c'; fi`
++@am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/conky-dragonfly.Tpo $(DEPDIR)/conky-dragonfly.Po
++@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='dragonfly.c' object='conky-dragonfly.obj' libtool=no @AMDEPBACKSLASH@
++@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
++@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(conky_CFLAGS) $(CFLAGS) -c -o conky-dragonfly.obj `if test -f 'dragonfly.c'; then $(CYGPATH_W) 'dragonfly.c'; else $(CYGPATH_W) '$(srcdir)/dragonfly.c'; fi`
++
+ conky-openbsd.o: openbsd.c
+ @am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(conky_CFLAGS) $(CFLAGS) -MT conky-openbsd.o -MD -MP -MF $(DEPDIR)/conky-openbsd.Tpo -c -o conky-openbsd.o `test -f 'openbsd.c' || echo '$(srcdir)/'`openbsd.c
+ @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/conky-openbsd.Tpo $(DEPDIR)/conky-openbsd.Po
