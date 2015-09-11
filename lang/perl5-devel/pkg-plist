@@ -32,7 +32,7 @@ bin/shasum
 bin/splain
 bin/xsubpp
 bin/zipdetails
-%%MANCONF%%etc/man.d/perl%%PERL_VER%%.conf
+etc/man.d/perl%%PERL_VER%%.conf
 etc/perl5_version
 %%PRIV_LIB%%/AnyDBM_File.pm
 %%PRIV_LIB%%/App/Cpan.pm
@@ -763,6 +763,7 @@ etc/perl5_version
 %%ARCH_LIB%%/File/DosGlob.pm
 %%ARCH_LIB%%/File/Glob.pm
 %%ARCH_LIB%%/File/Spec.pm
+%%ARCH_LIB%%/File/Spec/AmigaOS.pm
 %%ARCH_LIB%%/File/Spec/Cygwin.pm
 %%ARCH_LIB%%/File/Spec/Epoc.pm
 %%ARCH_LIB%%/File/Spec/Functions.pm
@@ -1060,6 +1061,7 @@ etc/perl5_version
 %%MAN3%%/File::GlobMapper.3.gz
 %%MAN3%%/File::Path.3.gz
 %%MAN3%%/File::Spec.3.gz
+%%MAN3%%/File::Spec::AmigaOS.3.gz
 %%MAN3%%/File::Spec::Cygwin.3.gz
 %%MAN3%%/File::Spec::Epoc.3.gz
 %%MAN3%%/File::Spec::Functions.3.gz
@@ -1449,6 +1451,7 @@ etc/perl5_version
 %%PRIV_LIB%%/pod/perl5230delta.pod
 %%PRIV_LIB%%/pod/perl5231delta.pod
 %%PRIV_LIB%%/pod/perl5232delta.pod
+%%PRIV_LIB%%/pod/perl5233delta.pod
 %%PRIV_LIB%%/pod/perl561delta.pod
 %%PRIV_LIB%%/pod/perl56delta.pod
 %%PRIV_LIB%%/pod/perl581delta.pod
@@ -2116,6 +2119,7 @@ man/man1/perl5220delta.1.gz
 man/man1/perl5230delta.1.gz
 man/man1/perl5231delta.1.gz
 man/man1/perl5232delta.1.gz
+man/man1/perl5233delta.1.gz
 man/man1/perl561delta.1.gz
 man/man1/perl56delta.1.gz
 man/man1/perl581delta.1.gz
