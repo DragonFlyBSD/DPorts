@@ -4,7 +4,7 @@
  
  # Using map files currently break compilation on FreeBSD during shared library
  # checks for some of the AWT native libraries.
-+ifeq ($(OS_VENDOR), DragonFly)
++ifeq ($(OS_VENDOR), DragonFlyBSD)
 +LDNOMAP=true
 +endif
 +
@@ -15,7 +15,7 @@
  # DPS (Displayable PostScript) is available on Solaris machines
  HAVE_DPS = no
  
-+ifeq ($(OS_VENDOR), DragonFly)
++ifeq ($(OS_VENDOR), DragonFlyBSD)
 +  SYSTEM_ZLIB = true
 +endif
 +

@@ -12,15 +12,25 @@ MASTER_SITES=	http://download.java.net/openjdk/jdk${JDK_MAJOR_VERSION}u${JDK_MIN
 		http://download.java.net/glassfish/components/jax-ws/openjdk/jdk7/:jaxws \
 		http://icedtea.classpath.org/download/drops/:jaxws \
 		http://dl.wolfpond.org/openjdk7/:bootstrap \
+		http://leaf.dragonflybsd.org/~marino/dports-src/:bootstrap \
 		https://java.net/downloads/jax-ws/JDK7/:jaf \
 		http://icedtea.classpath.org/download/drops/:jaf \
 		APACHE/ant/binaries/:ant
+PATCH_SITES=	LOCAL/glewis/openjdk7
 DISTFILES=	${JDK_SRC_DISTFILE}${EXTRACT_SUFX} \
 		${BOOTSTRAP_DISTFILE}:bootstrap \
 		${ANT_DISTFILE}${EXTRACT_SUFX}:ant
 EXTRACT_ONLY=	${JDK_SRC_DISTFILE}${EXTRACT_SUFX} \
 		${BOOTSTRAP_DISTFILE} \
 		${ANT_DISTFILE}${EXTRACT_SUFX}
+PATCHFILES=	patch-7u45-b30.xz \
+		patch-7u51-b30.xz \
+		patch-7u55-b31.xz \
+		patch-7u60-b30.xz \
+		patch-7u65-b31.xz \
+		patch-7u71-b14.xz \
+		patch-7u76-b31.xz \
+		patch-7u80-b32.xz
 
 MAINTAINER?=	glewis@FreeBSD.org
 COMMENT?=	Java Development Kit 7
@@ -75,7 +85,6 @@ DOS2UNIX_FILES=	jdk/src/share/classes/com/sun/org/apache/xml/internal/security/r
 JDK_ARCH=	${ARCH:S/x86_64/amd64/}
 OPENJDK_OSARCH=	bsd-${JDK_ARCH:S/i386/i586/}
 
-BOOTSTRAP_DISTFILE=	bootstrap-openjdk-7.9.05_2.dfly-3.3-${JDK_ARCH}.tar.xz
 BOOTSTRAP_LIBDIRS=	${BOOTSTRAPJDKDIR}/jre/lib/${JDK_ARCH}
 NOPRECIOUSMAKEVARS=	yes
 
@@ -120,11 +129,12 @@ TZUPDATE_RUN_DEPENDS=	java-zoneinfo>0:${PORTSDIR}/java/java-zoneinfo
 
 .include <bsd.port.options.mk>
 
-.if ${OPSYS} == DragonFly && ${DFLYVERSION} > 300500
-.  if ${DFLYVERSION} < 300503
-BOOTSTRAP_DISTFILE= bootstrap-openjdk-7.21.11.dfly-3.5-${JDK_ARCH}.tar.xz
-.  else
+.if ${OPSYS} == DragonFly
+.  if ${DFLYVERSION} < 400303 # after verification, openjdk6 can be used for all DF versions
 BOOTSTRAP_DISTFILE= bootstrap-openjdk-7.25.15.dfly-3.5-${JDK_ARCH}.tar.xz
+.  else
+BOOTSTRAP_DISTFILE= bootstrap-openjdk6-6.0.tar.xz
+BUILD_DEPENDS+=	gcc48:${PORTSDIR}/lang/gcc
 .  endif
 .endif
 

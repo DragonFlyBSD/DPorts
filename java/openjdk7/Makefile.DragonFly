@@ -1,7 +1,7 @@
 MAKE_ENV+=	DONT_ENABLE_IPV6="YES"
+MAKE_ENV+=	USE_PRECOMPILED_HEADER=0
 
 # OpenJDK built by gcc5 is demonstrating strange behavior, and several
-# ports no longer build (jboss72, eclipse, openjdk8, etc)
-# Temporarily limit to building by gcc47 only
+# ports no longer build or freeze during building
 
 USE_GCC=	NOT5
