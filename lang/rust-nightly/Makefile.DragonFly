@@ -1,0 +1,3 @@
+MASTER_SITES=  http://www.ntecs.de/downloads/rust/:bootstrap
+MAKE_JOBS_UNSAFE=yes
+RUST_BOOT_SIG=  2015-06-12-50ab23d-dragonfly-x86_64-54171b3357723941a1025da60d090ca84634cdac
