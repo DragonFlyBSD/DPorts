@@ -1,0 +1,11 @@
+--- src/CMakeLists.txt.orig	2014-11-24 19:24:31.000000000 +0200
++++ src/CMakeLists.txt
+@@ -287,7 +287,7 @@ if(BUILD_CLIENT AND ENABLE_GLES)
+ endif()
+ 
+ if(USE_FREETYPE)
+-	if(${CMAKE_SYSTEM} MATCHES "FreeBSD")
++	if(${CMAKE_SYSTEM} MATCHES "(FreeBSD|DragonFly)")
+ 		#PkgConfig not worked. result: /usr/bin/ld: cannot find -lfreetype
+ 	elseif(UNIX)
+ 		include(FindPkgConfig)
