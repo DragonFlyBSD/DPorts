@@ -1,0 +1,9 @@
+--- src/xqf.map.orig	2006-01-04 21:00:20 UTC
++++ src/xqf.map
+@@ -1,6 +1,4 @@
+ {
+   global:
+     *_xpm;
+-  local:
+-    *;
+ };
