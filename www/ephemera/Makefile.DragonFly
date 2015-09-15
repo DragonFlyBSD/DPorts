@@ -1,0 +1,4 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/malloc_np.h/d'	\
+		${WRKSRC}/data.c
