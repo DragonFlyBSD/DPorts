@@ -1,0 +1,5 @@
+USES+= alias:11
+
+CXXFLAGS+= -D__FreeBSD_version=1300000 -std=gnu++11
+
+CMAKE_ARGS+= -DUSE_CPP11:BOOL=ON
