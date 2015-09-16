@@ -1,0 +1,5 @@
+
+dfly-patch:
+# this one to avoid adding "x86_64" directly to CFLAGS (instead of -D__BSD__)
+	${REINPLACE_CMD} -e 's@\(\*-\*-\*bsd\*\))@\1|*-*-dragonfly*)@g'	\
+		${WRKSRC}/configure
