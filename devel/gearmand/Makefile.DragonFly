@@ -1,0 +1,3 @@
+USES+= alias:11
+
+CONFIGURE_ARGS+= ac_cv_msg_nosignal=yes

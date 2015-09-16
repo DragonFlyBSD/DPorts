@@ -1,0 +1,20 @@
+--- configure.bak	2015-09-16 12:45:16.000000000 +0300
++++ configure
+@@ -16111,7 +16111,7 @@ $as_echo "#define TARGET_OS_WINDOWS 1" >
+ $as_echo "#define EAI_SYSTEM 11" >>confdefs.h
+ 
+          ;; #(
+-  *freebsd*) :
++  *freebsd*|*dragonfly*) :
+ 
+ $as_echo "#define TARGET_OS_FREEBSD 1" >>confdefs.h
+ 
+@@ -23705,7 +23705,7 @@ _ACEOF
+ $as_echo_n "checking if more special flags are required for pthreads... " >&6; }
+         flag=no
+         case ${host_os} in
+-            aix* | freebsd* | darwin*) flag="-D_THREAD_SAFE";;
++            aix* | freebsd* | dragonfly*| darwin*) flag="-D_THREAD_SAFE";;
+             osf* | hpux*) flag="-D_REENTRANT";;
+             solaris*)
+             if test "$GCC" = "yes"; then
