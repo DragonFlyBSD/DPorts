@@ -1,5 +1,5 @@
---- bridges/source/cpp_uno/gcc3_linux_intel/share.hxx.orig	2014-09-16 16:10:41.000000000 -0400
-+++ bridges/source/cpp_uno/gcc3_linux_intel/share.hxx	2014-10-10 18:08:14.000000000 -0400
+--- bridges/source/cpp_uno/gcc3_linux_intel/share.hxx.orig	2015-08-22 06:41:35 UTC
++++ bridges/source/cpp_uno/gcc3_linux_intel/share.hxx
 @@ -32,10 +32,34 @@
  #include <uno/any2.h>
  #include "uno/mapping.h"
@@ -14,7 +14,8 @@
 +        explicit __class_type_info( const char *__n ) : type_info( __n ) { }
 +        virtual ~__class_type_info();
 +    };
-+
+ 
+-void dummy_can_throw_anything( char const * );
 +    struct __si_class_type_info : public __class_type_info
 +    {
 +        explicit __si_class_type_info( const char *__n, const __class_type_info *__b ) :
@@ -22,8 +23,7 @@
 +        virtual ~__si_class_type_info();
 +        const __class_type_info *__base_type;
 +    };
- 
--void dummy_can_throw_anything( char const * );
++
 +extern "C" void *__cxa_allocate_exception( std::size_t thrown_size ) _NOEXCEPT;
 +
 +extern "C" _LIBCPP_NORETURN void __cxa_throw(
@@ -37,13 +37,16 @@
  
  // ----- following decl from libstdc++-v3/libsupc++/unwind-cxx.h and unwind.h
  
-@@ -104,16 +128,23 @@
+@@ -104,6 +128,8 @@ extern "C" void __cxa_throw(
      __attribute__((noreturn));
  }
  #endif
 +}
 +#endif
  
+ extern "C" void privateSnippetExecutorGeneral();
+ extern "C" void privateSnippetExecutorVoid();
+@@ -115,12 +141,17 @@ extern "C" void privateSnippetExecutorCl
  namespace CPPU_CURRENT_NAMESPACE
  {
  
@@ -62,23 +65,3 @@
  }
  
  namespace x86
---- bridges/source/cpp_uno/gcc3_linux_intel/uno2cpp.cxx.orig	2014-09-16 16:10:41.000000000 -0400
-+++ bridges/source/cpp_uno/gcc3_linux_intel/uno2cpp.cxx	2014-10-10 17:59:01.000000000 -0400
-@@ -203,10 +203,17 @@
-      catch (...)
-      {
-          // fill uno exception
-+#ifdef _LIBCPP_VERSION
-+         CPPU_CURRENT_NAMESPACE::fillUnoException(
-+             reinterpret_cast< __cxxabiv1::__cxa_eh_globals * >(
-+                 __cxxabiv1::__cxa_get_globals())->caughtExceptions,
-+             *ppUnoExc, pThis->getBridge()->getCpp2Uno());
-+#else
-          fillUnoException(
-              reinterpret_cast< CPPU_CURRENT_NAMESPACE::__cxa_eh_globals * >(
-                  __cxxabiv1::__cxa_get_globals())->caughtExceptions,
-              *ppUnoExc, pThis->getBridge()->getCpp2Uno());
-+#endif
- 
-         // temporary params
-         for ( ; nTempIndices--; )

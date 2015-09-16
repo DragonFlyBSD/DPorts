@@ -1,5 +1,5 @@
---- solenv/bin/concat-deps.c.orig	2014-09-16 16:10:41.000000000 -0400
-+++ solenv/bin/concat-deps.c	2014-10-14 14:55:14.000000000 -0400
+--- solenv/bin/concat-deps.c.orig	2015-08-22 06:41:35 UTC
++++ solenv/bin/concat-deps.c
 @@ -33,9 +33,7 @@
  #define CORE_LITTLE_ENDIAN
  #endif /* Def _MSC_VER */

@@ -1,6 +1,6 @@
---- chart2/Library_chartcore.mk.orig	2014-11-10 06:52:56.000000000 -0500
-+++ chart2/Library_chartcore.mk	2014-11-25 16:17:07.000000000 -0500
-@@ -261,6 +261,11 @@
+--- chart2/Library_chartcore.mk.orig	2015-08-22 06:41:35 UTC
++++ chart2/Library_chartcore.mk
+@@ -254,6 +254,11 @@ else ifeq ($(OS),MACOSX)
  $(eval $(call gb_Library_use_system_darwin_frameworks,chartcore,\
  	OpenGL \
  ))

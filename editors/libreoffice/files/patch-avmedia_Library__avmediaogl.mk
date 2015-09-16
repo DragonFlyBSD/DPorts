@@ -1,6 +1,6 @@
---- avmedia/Library_avmediaogl.mk.orig	2014-11-10 06:52:56.000000000 -0500
-+++ avmedia/Library_avmediaogl.mk	2014-11-25 15:42:07.000000000 -0500
-@@ -53,7 +53,7 @@
+--- avmedia/Library_avmediaogl.mk.orig	2015-08-22 06:41:35 UTC
++++ avmedia/Library_avmediaogl.mk
+@@ -52,7 +52,7 @@ else ifeq ($(OS),MACOSX)
  $(eval $(call gb_Library_use_system_darwin_frameworks,avmediaogl,\
  	OpenGL \
  ))

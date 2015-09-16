@@ -1,6 +1,6 @@
---- sal/osl/unx/backtrace.c.orig	2014-09-16 16:10:41.000000000 -0400
-+++ sal/osl/unx/backtrace.c	2014-10-14 15:52:40.000000000 -0400
-@@ -177,15 +177,15 @@
+--- sal/osl/unx/backtrace.c.orig	2015-08-22 06:41:35 UTC
++++ sal/osl/unx/backtrace.c
+@@ -177,15 +177,15 @@ void backtrace_symbols_fd( void **buffer
                  if ( dli.dli_fname && dli.dli_fbase )
                  {
                      offset = (ptrdiff_t)*pFramePtr - (ptrdiff_t)dli.dli_fbase;

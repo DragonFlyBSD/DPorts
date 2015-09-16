@@ -1,6 +1,6 @@
---- i18npool/CustomTarget_breakiterator.mk.orig	2014-09-16 16:10:41.000000000 -0400
-+++ i18npool/CustomTarget_breakiterator.mk	2014-10-08 17:23:21.000000000 -0400
-@@ -98,7 +98,7 @@
+--- i18npool/CustomTarget_breakiterator.mk.orig	2015-08-22 06:41:35 UTC
++++ i18npool/CustomTarget_breakiterator.mk
+@@ -98,7 +98,7 @@ $(i18npool_BIDIR)/%.brk : $(i18npool_BID
  #   sed substitution...
  $(i18npool_BIDIR)/%.txt : \
  	$(SRCDIR)/i18npool/source/breakiterator/data/%.txt | $(i18npool_BIDIR)/.dir

@@ -1,5 +1,5 @@
---- sal/osl/unx/system.h.orig	2014-09-16 16:10:41.000000000 -0400
-+++ sal/osl/unx/system.h	2014-10-14 14:31:50.000000000 -0400
+--- sal/osl/unx/system.hxx.orig	2015-08-22 06:41:35 UTC
++++ sal/osl/unx/system.hxx
 @@ -113,7 +113,9 @@
  #endif
  
