@@ -1,0 +1,5 @@
+USES+= alias:11
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/lib64/d'	\
+		${WRKSRC}/CMakeLists.txt
