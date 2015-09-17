@@ -1,0 +1,11 @@
+--- Makefile.bak	2015-09-17 17:10:59.000000000 +0300
++++ Makefile
+@@ -1240,7 +1240,7 @@ endif
+ #	See HOWTO.INSTALL for more information.                        #
+ ########################################################################
+ 
+-ifeq ($(target),FreeBSD)
++ifeq ($(target),$(filter $(target), FreeBSD DragonFly))
+ #
+ BLD_TYPE= calc-dynamic-only
+ #
