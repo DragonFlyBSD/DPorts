@@ -1,0 +1,22 @@
+--- test/SingletonDll/Makefile.bak	2015-09-16 17:05:24.000000000 +0300
++++ test/SingletonDll/Makefile
+@@ -10,6 +10,11 @@ ifeq ($(OS),FreeBSD)
+   LIB2 := libsingletondll.so
+   SHARED_LIB_FLAG := --shared -fPIC
+ else
++ifeq ($(OS),DragonFly)
++  LIB1 := libfoo.so
++  LIB2 := libsingletondll.so
++  SHARED_LIB_FLAG := --shared -fPIC
++else
+ ifeq ($(OS),Linux)
+   LIB1 := libfoo.so
+   LIB2 := libsingletondll.so
+@@ -21,6 +26,7 @@ else
+ endif
+ endif
+ endif
++endif
+ 
+ BIN1 := client$(BIN_SUFFIX)
+ SRC1 := client.cpp
