@@ -1,0 +1,21 @@
+#!/bin/sh
+# $FreeBSD: head/audio/firefly/files/mt-daapd.in 373158 2014-11-23 15:30:28Z antoine $
+
+# PROVIDE: firefly
+# REQUIRE: LOGIN
+
+. /etc/rc.subr
+
+: ${firefly_enable=NO}
+
+name="firefly"
+rcvar=firefly_enable
+
+command="%%PREFIX%%/sbin/mt-daapd"
+command_args="-c %%PREFIX%%/etc/firefly/mt-daapd.conf"
+pidfile="/var/run/mt-daapd.pid"
+required_dirs="%%DAAPD_DBDIR%%"
+required_files="%%PREFIX%%/etc/firefly/mt-daapd.conf"
+
+load_rc_config "$name"
+run_rc_command "$1"
