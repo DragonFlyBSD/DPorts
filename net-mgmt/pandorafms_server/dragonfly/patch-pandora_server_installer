@@ -1,0 +1,15 @@
+Contains some strange "if true;else" logic thus simply overriding
+
+--- pandora_server_installer.bak	2015-09-16 14:51:35.000000000 +0300
++++ pandora_server_installer
+@@ -42,6 +42,10 @@ set_global_vars () {
+ 	LINUX=NO
+ 	OS_VERSION=`uname -r`
+ 	DISTRO=`uname -s`
++	if [ "$DISTRO" = "DragonFly" ]
++	then
++		DISTRO=FreeBSD
++	fi
+ 
+ 	# set corret value for LINUX_DISTRO
+ 	case $DISTRO in
