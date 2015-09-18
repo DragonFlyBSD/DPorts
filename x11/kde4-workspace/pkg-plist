@@ -28,6 +28,7 @@ bin/ksysguard
 bin/ksystraycmd
 bin/kwin
 %%GLES%%bin/kwin_gles
+bin/kwrited
 bin/oxygen-demo
 bin/oxygen-settings
 bin/oxygen-shadow-demo
@@ -428,6 +429,7 @@ lib/libweather_ion.so
 lib/libweather_ion.so.6
 lib/libweather_ion.so.6.0.0
 lib/strigi/strigita_font.so
+share/autostart/kwrited-autostart.desktop
 share/applications/kde4/kdesystemsettings.desktop
 share/applications/kde4/kfontview.desktop
 share/applications/kde4/kinfocenter.desktop
