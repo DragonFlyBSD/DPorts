@@ -13,7 +13,7 @@ USES=		metaport
 PATCHDIR=	${MASTERDIR}/none
 
 OPTIONS_DEFINE=	GTK2 KDE4 QT4 QT5
-OPTIONS_DEFAULT:=	GTK2 KDE4
+OPTIONS_DEFAULT:=	${OPTIONS_DEFINE}
 
 GTK2_RUN_DEPENDS=	gtk2-qtcurve-theme>=1.8.18:${PORTSDIR}/x11-themes/qtcurve-gtk2
 KDE4_RUN_DEPENDS=	kde4-style-qtcurve>=1.8.18:${PORTSDIR}/x11-themes/qtcurve-kde4
