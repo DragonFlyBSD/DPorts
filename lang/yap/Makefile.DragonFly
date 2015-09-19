@@ -1,0 +1,2 @@
+# zrj: not sure if worth it thus
+CONFIGURE_ARGS+= --with-gmp=no

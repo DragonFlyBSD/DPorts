@@ -1,0 +1,34 @@
+Upstream patch for building with gcc-5
+
+--- packages/swi-minisat2/C/Solver.C.orig	2010-10-18 11:48:21.000000000 +0300
++++ packages/swi-minisat2/C/Solver.C
+@@ -120,7 +120,7 @@ bool Solver::addClause(vec<Lit>& ps)
+         uncheckedEnqueue(ps[0]);
+         return ok = (propagate() == NULL);
+     }else{
+-        Clause* c = Clause_new(ps, false);
++        Clause* c = Clause::Clause_new(ps, false);
+         clauses.push(c);
+         attachClause(*c);
+     }
+@@ -599,7 +599,7 @@ lbool Solver::search(int nof_conflicts,
+             if (learnt_clause.size() == 1){
+                 uncheckedEnqueue(learnt_clause[0]);
+             }else{
+-                Clause* c = Clause_new(learnt_clause, true);
++                Clause* c = Clause::Clause_new(learnt_clause, true);
+                 learnts.push(c);
+                 attachClause(*c);
+                 claBumpActivity(*c);
+
+--- packages/swi-minisat2/C/SolverTypes.h.orig	2010-10-18 11:48:21.000000000 +0300
++++ packages/swi-minisat2/C/SolverTypes.h
+@@ -119,7 +119,7 @@ public:
+ 
+     // -- use this function instead:
+     template<class V>
+-    friend Clause* Clause_new(const V& ps, bool learnt = false) {
++    static Clause* Clause_new(const V& ps, bool learnt = false) {
+         assert(sizeof(Lit)      == sizeof(uint32_t));
+         assert(sizeof(float)    == sizeof(uint32_t));
+         void* mem = malloc(sizeof(Clause) + sizeof(uint32_t)*(ps.size()));
