@@ -1,0 +1,11 @@
+--- src/Makefile.bak	2015-09-19 19:34:12.000000000 +0300
++++ src/Makefile
+@@ -32,7 +32,7 @@ ifeq (${PLATFORM},darwin)
+   BINARY = gtkevemon
+ endif
+ 
+-ifeq (${PLATFORM},freebsd)
++ifeq (${PLATFORM},$(filter ${PLATFORM}, freebsd dragonfly))
+   CXX ?= g++
+   PTH_LIBS = -pthread
+   LDFLAGS = ${GTK_LIBS} ${PTH_LIBS} ${XML_LIBS} ${ZLIB_LIBS} ${SSL_LIBS}
