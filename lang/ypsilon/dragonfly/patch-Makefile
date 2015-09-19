@@ -1,0 +1,19 @@
+--- Makefile.bak	2015-09-19 14:45:03.000000000 +0300
++++ Makefile
+@@ -74,6 +74,16 @@ ifneq (, $(findstring FreeBSD, $(UNAME))
+   LDLIBS = -pthread
+ endif
+ 
++ifneq (, $(findstring DragonFly, $(UNAME)))
++  CPPFLAGS += -D__LITTLE_ENDIAN__
++    CPPFLAGS += -DDEFAULT_HEAP_LIMIT=64
++    CXXFLAGS += -m64
++    LDFLAGS = -m64
++    ASFLAGS = --64
++    SRCS += ffi_stub_freebsd64.s
++  LDLIBS = -pthread
++endif
++
+ ifneq (, $(findstring OpenBSD, $(UNAME)))
+   ifeq ($(shell $(CXX) -dumpspecs | grep 'march=native'), )
+     ifeq ($(DATAMODEL), ILP32)  
