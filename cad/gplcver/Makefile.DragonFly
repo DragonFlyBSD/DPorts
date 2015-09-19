@@ -1,0 +1,1 @@
+MAKE_ENV+= ARCHFLGS=-D__FreeBSD__
