@@ -1,0 +1,13 @@
+--- Makefile.orig	2014-05-13 02:18:13.000000000 +0300
++++ Makefile
+@@ -119,6 +119,10 @@ ifeq ($(CONFIG_TARGET_OS), NetBSD)
+   LIBS	 += -lpthread -lrt
+   LDFLAGS += -rdynamic
+ endif
++ifeq ($(CONFIG_TARGET_OS), DragonFly)
++  LIBS	 += -lpthread -lrt
++  LDFLAGS += -rdynamic
++endif
+ ifeq ($(CONFIG_TARGET_OS), AIX)
+   LIBS	 += -lpthread -ldl -lrt
+   CPPFLAGS += -D_LARGE_FILES -D__ppc__
