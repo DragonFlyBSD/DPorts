@@ -1,7 +1,8 @@
 PORTNAME=	xf86-video-intel
-PORTVERSION=	2.99.917
+PORTVERSION=	2.99.2015.09.09
 PORTEPOCH=	1
 CATEGORIES=	x11-drivers
+MASTER_SITES=	http://dl.wolfpond.org/distfiles/
 
 MAINTAINER=	ftigeot@wolfpond.org
 COMMENT=	Driver for Intel integrated graphics chipsets
@@ -26,6 +27,11 @@ CONFIGURE_ENV+=	xorg_cv_cc_flag__Wno_maybe_uninitialized=no
 CONFIGURE_ARGS+=	--disable-glamor
 LIB_DEPENDS+=	libxcb-util.so:${PORTSDIR}/x11/xcb-util
 CFLAGS+=	-D_WITH_GETLINE=1
+
+USES=	autoreconf:build libtool
+
+pre-configure:
+	cd ${WRKDIR}/${PORTNAME}-${PORTVERSION} && ./autogen.sh
 
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libIntelXvMC.so.1

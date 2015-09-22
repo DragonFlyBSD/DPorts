@@ -9,3 +9,14 @@
  #define DBG_NO_SEMAPHORES 0
  #define DBG_NO_MADV 0
  #define DBG_NO_UPLOAD_CACHE 0
+@@ -3198,7 +3198,9 @@
+ 	if (rq) {
+ 		struct kgem_request *tmp;
+ 
+-		if (__kgem_busy(kgem, rq->bo->handle)) {
++		if (rq->bo == NULL)
++			fprintf(stderr, "__kgem_ring_is_idle: rq->bo == NULL\n");
++		if (rq->bo && __kgem_busy(kgem, rq->bo->handle)) {
+ 			DBG(("%s: last fence handle=%d still busy\n",
+ 			     __FUNCTION__, rq->bo->handle));
+ 			return false;
