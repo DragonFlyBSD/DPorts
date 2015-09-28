@@ -5,18 +5,94 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20150921:
+  AFFECTS: users of mail/rspamd
+  AUTHOR: vsevolod@FreeBSD.org
+
+  rspamd has been updated to the version 1.0.
+  For migration from the previous releases, please read the following document:
+  https://rspamd.com/doc/migration.html
+
+20150919:
+  AFFECTS: users of multimedia/ffmpeg
+  AUTHOR: riggs@FreeBSD.org
+
+  ffmpeg has been updated to the version 2.8.
+  If you are using binary pkg, 'pkg upgrade' will do the right thing.
+  Users of portmaster/portupgrade must rebuild all ports which depend
+  on ffmpeg.
+
+  Portmaster users:
+      portmaster -w -r ffmpeg
+  Portupgrade users:
+      portupgrade -fr multimedia/ffmpeg
+
+20150916:
+  AFFECTS: users of graphics/jpeg
+  AUTHOR: antoine@FreeBSD.org
+
+  Default implementation of jpeg has been switched from graphics/jpeg to
+  graphics/jpeg-turbo.  To perform the upgrade, use instructions below.
+
+  If using binary packages: 'pkg upgrade' will do the right thing.  If it
+  doesn't and complains about 'Cannot solve problem using SAT solver', run
+  'pkg delete -f jpeg' before 'pkg upgrade'.
+
+  If using portmaster:
+  # portmaster -o graphics/jpeg-turbo graphics/jpeg
+
+  If using portupgrade:
+  # portupgrade -f -o graphics/jpeg-turbo graphics/jpeg
+
+  If you compile your ports and want to keep using IJG's jpeg implementation,
+  add this line to your /etc/make.conf file:
+  JPEG_PORT=graphics/jpeg
+
+20150914:
+  AFFECTS: users of lang/perl5*
+  AUTHOR: mat@FreeBSD.org
+
+  Binary package users can ignore this.
+
+  The way lang/perl5* ports install themselves has changed.  From now on, only
+  the default Perl port (currently 5.20), or the version listed in
+  DEFAULT_VERSIONS, will install /usr/local/bin/perl.
+
+  If you are NOT using the default version of Perl (as of right now, it is
+  5.20) you MUST add a line setting the version you are using to your
+  /etc/make.conf, to preserve /usr/local/bin/perl:
+
+  DEFAULT_VERSIONS+=	perl5=5.xx
+
+  If your Perl package name is not called perl5-5.xx.y but perl5.xx-5.xx.y,
+  you will need to rename it so that portupgrade and portmaster do not get
+  confused:
+
+    pkg set -n perl5.xx:perl5
+
+  After this date, to migrate from one Perl version to the other, you must
+  first put the DEFAULT_VERSIONS line in your make.conf, and then, for example,
+  if you want to move from 5.20 to 5.22, do:
+
+	pkg set -o lang/perl5.20:lang/perl5.22
+	portmaster `pkg shlib -qR libperl.so.5.20`
+
+  If you do not do that, you will replace your default Perl 5.20 installation
+  (one that has /usr/local/bin/perl) with an installation that does not have
+  /usr/local/bin/perl, and it will break everything.
+
 20150908:
   AFFECTS: users of print/texlive-base
   AUTHOR: hrs@FreeBSD.org
 
- pdfclose and pdfopen utilities in print/texlive-base are now in a separate
- port print/xpdfopen.  While upgrading print/texlive-base, a conflict may
- occur between pdfclose utility installed by an old print/texlive-base and
- one being installed by print/xpdfopen.  If it occurred on your system,
- remove the installed print/texlive-base first by using the following
- command:
+  pdfclose and pdfopen utilities in print/texlive-base are now in a separate
+  port print/xpdfopen.  While upgrading print/texlive-base, a conflict may
+  occur between pdfclose utility installed by an old print/texlive-base and
+  one being installed by print/xpdfopen.  If it occurred on your system,
+  remove the installed print/texlive-base first by using the following
+  command:
 
-  # pkg delete -f texlive-base
+   # pkg delete -f texlive-base
 
 20150901:
   AFFECTS: users of editors/libreoffice
@@ -31,22 +107,22 @@ you update your ports collection, before attempting any port upgrades.
   AFFECTS: users of print/ghostscript*
   AUTHOR: hrs@FreeBSD.org
 
- print/ghostscript{7,8,9,9-agpl} have been split into
- print/ghostscript{7,8,9,9-agpl}-{base,x11}.
- print/ghostscript*-nox11 ports have been removed.
+  print/ghostscript{7,8,9,9-agpl} have been split into
+  print/ghostscript{7,8,9,9-agpl}-{base,x11}.
+  print/ghostscript*-nox11 ports have been removed.
 
- The -base installs Ghostscript binaries, libgs, and other data files
- and it depends on no X11 library.  The -x11 installs a small shared
- library to enable x11* devices in the installed -base package.
+  The -base installs Ghostscript binaries, libgs, and other data files
+  and it depends on no X11 library.  The -x11 installs a small shared
+  library to enable x11* devices in the installed -base package.
 
- In most cases, Ghostscript is installed as a dependency.  A port/package
- which requires Ghostscript will automatically pick up -base, and
- when x11* devices required it will pick up -x11 in addition.
+  In most cases, Ghostscript is installed as a dependency.  A port/package
+  which requires Ghostscript will automatically pick up -base, and
+  when x11* devices required it will pick up -x11 in addition.
 
- If one wants to install Ghostscript manually and full compatibility
- with the previous versions, just install -x11 because it installs
- -base as a dependency.  Combination of the two provides the same
- functionality as before.
+  If one wants to install Ghostscript manually and full compatibility
+  with the previous versions, just install -x11 because it installs
+  -base as a dependency.  Combination of the two provides the same
+  functionality as before.
 
 20150821:
   AFFECTS: users of security/openssh-portable
@@ -1468,122 +1544,4 @@ AUTHOR: ohauer@FreeBSD.org
 
   It is suggested to remove calibre and py-imaging from the system
   and then reinstall calibre again using binary packages or ports.
-
-20140927:
-  AFFECTS: users of net/foreman-proxy
-  AUTHOR: mm@FreeBSD.org
-
-  In version 1.6 Foreman Smart Proxy splits its configuration into multiple
-  ruby files located in PREFIX/etc/foreman-proxy/settings.d.
-  The configuration of each service (dhcp, dhs, bmc, etc.) has been moved
-  into a dedicated file.
-
-  You can use a bundled script to convert your old settings to new settings:
-  PREFIX/share/foreman/extra/migrate_settings.rb
-
-20140926:
-  AFFECTS: users of shells/bash
-  AUTHOR: bdrewery@FreeBSD.org
-
-  Bash supports a feature of exporting functions in the environment with
-  export -f.  Running bash with exported functions in the environment will
-  then import those functions into the environment of the script being ran.
-  This resulted in security issues CVE-2014-6271 and CVE-2014-7169, commonly
-  known as "shellshock".  It also can result in poorly written scripts being
-  tricked into running arbitrary commands.
-
-  To fully mitigate against this sort of attack we have applied a non-upstream
-  patch to disable this functionality by default.  You can execute bash
-  with --import-functions to allow it to import functions from the
-  environment.  The default can also be changed in the port by selecting the
-  IMPORTFUNCTIONS option.
-
-20140926:
-  AFFECTS: users of net/asterisk and net/asterisk11
-  AUTHOR: madpilot@FreeBSD.org
-
-  The asterisk ports have been modified to have the LUA option
-  turned on by default to make such functionality available to users
-  of binary packages.
-
-  Some care should be taken before upgrading by people not using Lua
-  to avoid the sample extensions.lua file from being loaded on reload
-  after updating the asterisk port/pkg.
-
-  Users compiling from ports not interested in LUA support are advised
-  to disable the option before updating.
-
-  People using binary packages(or not wanting to disable the LUA
-  option in the port) not using the Lua functionality should add:
-
-	noload => pbx_lua.so
-
-  to the PREFIX/etc/asterisk/modules.conf file, if using the
-  autoload=yes option in that same file. People not autoloading
-  modules don't need to perform any special action.
-
-  If asterisk is rebooted and the pbx_lua module gets loaded on a
-  system were it should not, it will load the example extensions.lua
-  configuration file adding unexpected logic to your dialplan. In
-  such a case following the above steps and reloading asterisk will
-  fix the problem.
-
-20140922:
-  AFFECTS: users of emulators/linux_base-f10 and emulators/linux_base-c6
-  AUTHOR: xmj@FreeBSD.org
-
-  The complete drop-in replacement linux-c6 port infrastructure is in
-  ports and will shortly replace the current linux-f10- ports as default.
-
-  To switch to the linux-c6 infrastructure:
-
-  0. Back up all your vital information!
-  1. Remove the current linux base port and all linux-f10- ports:
-       # pkg delete -f linux_base-f10 linux-f10-\*
-  2. Add these lines to /etc/make.conf:
-       OVERRIDE_LINUX_BASE_PORT=c6
-       OVERRIDE_LINUX_NONBASE_PORTS=c6
-  3. Make sure no Linux application is running.
-  4. Update the Linux kernel version in /etc/sysctl.conf:
-       compat.linux.osrelease=2.6.18
-     Make it take effect immediately:
-       # sysctl compat.linux.osrelease=2.6.18
-  5. Install emulators/linux-c6.
-
-  These steps are usually sufficient. If there are difficulties, expand
-  step 1 to:
-
-  1a. Remove all ports which depend on the linux base port.
-  1b. Remove the linux base port.
-  1c. Clean the /compat/linux/ directory.
-
-  If there are any other difficulties not fixed by these extended steps,
-  please submit an issue report in Bugzilla and send an email to
-  FreeBSD's emulation@ mailing list.
-
-20140909:
-  AFFECTS: users seeing build errors about missing *.la files
-  AUTHOR: tijl@FreeBSD.org
-
-  We are in the process of adjusting or, if possible, removing libtool archives
-  (*.la files) from all ports because they can otherwise cause overlinking
-  between packages.  This is the problem where in the dependency chain A->B->C
-  an extra link is added from A to C even if A does not use C directly.  This
-  makes some updates to port C expensive because then both A and B have to be
-  rebuilt instead of just B.
-
-  This is mostly behind the scenes work that you won't notice.  In fact most
-  ports have already been converted.  You may however run into build errors
-  about missing *.la files if a port update in the past went wrong and left
-  behind *.la files with references to other *.la files that are no longer
-  there.  In this case, please run the following command:
-
-  find /usr/local/lib -name '*.la' | xargs grep -l 'libfoo\.la' | xargs pkg which
-  (Replace libfoo\.la with the *.la file that is missing.)
-
-  This command will print a list of *.la files that refer to the missing *.la
-  file and what package they belong to.  First, where it says "not found in
-  the database", remove the *.la file.  After removing all such files, where
-  it says "installed by package X", rebuild X.  Eventually the list printed by
-  that command will be empty and the build error should be gone.
 

@@ -213,7 +213,6 @@ net-mgmt/zabbix-frontend|net-mgmt/zabbix2-frontend|2013-03-15|Has expired: no lo
 net-mgmt/zabbix-proxy|net-mgmt/zabbix2-proxy|2013-03-15|Has expired: no longer supported by upstream
 net-mgmt/zabbix-server|net-mgmt/zabbix2-server|2013-03-15|Has expired: no longer supported by upstream
 dns/h2n||2013-03-17|Removed: legally questionable and obsolete
-sysutils/facter|sysutils/rubygem-facter|2013-03-17|Renamed to match naming convention for rubygems
 french/gibi||2013-03-18|Removed: IGNORE for more than 6 months
 finance/pfpro||2013-03-18|Removed: upstream no longer exists
 finance/p5-PFProAPI||2013-03-18|Removed: upstream no longer exists
@@ -3797,7 +3796,7 @@ security/rubygem-net-ssh27||2015-07-20|Has expired: not used by other ports anym
 graphics/kuickshow-kde4||2015-07-21|Has expired: Broken for more than 6 months
 graphics/sng||2015-07-21|Has expired: Broken for more than 6 months
 japanese/netype||2015-07-21|Has expired: Broken for more than 6 months
-databases/p5-DBD-Pg32|databases/p5-DBD-Pg|2015-07-22|Has expired: Use databases/p5-DBD-Pg instead, compatability probles are fixed
+databases/p5-DBD-Pg32|databases/p5-DBD-Pg|2015-07-22|Has expired: Use databases/p5-DBD-Pg instead, compatibility probles are fixed
 textproc/py-asciinema|textproc/asciinema|2015-07-23|Has expired: use textproc/asciinema instead
 devel/libiomp5-devel|devel/llvm-devel|2015-07-24|Merged with devel/llvm-devel
 devel/amd64-binutils||2015-07-25|No real use
@@ -3934,3 +3933,32 @@ games/linux-gorky17-demo||2015-09-01|Has expired: Broken for more than 6 months
 sysutils/syslog-ng33||2015-09-01|Has expired: No longer supported by Balabit cince November 2014.
 textproc/ruby-xmlconfigfile|textproc/ruby-xml-configfile|2015-09-03|Rename to match our ruby naming
 net/mcast-tools|net/pim6-tools|2015-09-07|Rename
+www/p5-Dancer-Session-Memcached|databases/p5-Dancer-Session-Memcached|2015-09-09|Duplicate port
+devel/cloudabi-cloudlibc||2015-09-12|Moved to the CloudABI Ports Collection
+devel/cloudabi-compiler-rt||2015-09-12|Moved to the CloudABI Ports Collection
+devel/cloudabi-libc++||2015-09-12|Moved to the CloudABI Ports Collection
+devel/cloudabi-libc++abi||2015-09-12|Moved to the CloudABI Ports Collection
+devel/cloudabi-libunwind||2015-09-12|Moved to the CloudABI Ports Collection
+japanese/marumoji-fonts|japanese/font-marumoji|2015-09-13|Renamed
+www/asp-php||2015-09-13|Unmaintained upstream, generate unsupported php
+textproc/py-xmltools||2015-09-15|Remove port marked broken for six months: fetch failed
+security/krb5-111|security/krb5-112|2015-09-15|krb5-1.11 EOLed by MIT in December 2014
+textproc/py-xml||2015-09-16|Remove: this package is available in standard python library since 2.2
+x11-toolkits/wxgtk28-unicode|x11-toolkits/wxgtk28|2015-09-16|Make wxGTK now only unicode
+x11-toolkits/wxgtk28-unicode-contrib|x11-toolkits/wxgtk28-contrib|2015-09-16|Make wxGTK now only unicode
+x11-toolkits/py-wxPython28-unicode|x11-toolkits/py-wxPython28|2015-09-16|Make wxGTK now only unicode
+japanese/font-mplus|japanese/font-mplus-outline|2015-09-21|Renamed
+www/iojs|www/node|2015-09-23|io.js has been merged back to Node.js
+japanese/k10|japanese/font-naga10|2015-09-25|Renamed
+japanese/k12|japanese/font-kaname12|2015-09-25|Renamed
+japanese/elisa8x8|japanese/font-elisa8|2015-09-25|Renamed
+japanese/kanji18|japanese/font-kanji18|2015-09-25|Renamed
+japanese/kanji26|japanese/font-kanji26|2015-09-25|Renamed
+japanese/kappa20|japanese/font-kappa20|2015-09-25|Renamed
+japanese/mikachan-ttfonts|japanese/font-mikachan|2015-09-25|Renamed
+japanese/monafonts-ttf|japanese/font-mona-ttf|2015-09-25|Renamed
+japanese/monafonts|japanese/font-mona|2015-09-25|Renamed
+chinese/joe|editors/joe|2015-09-26|Regular joe's editor now support chinese
+net/linc||2015-09-27|Has expired: Last release in 2003, not used by anything anymore.
+net/linc-reference||2015-09-27|Has expired: Last release in 2003, not used by anything anymore.
+x11/xlogout||2015-09-27|Has expired: Useless cruft from 1989
