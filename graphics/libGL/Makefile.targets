@@ -3,7 +3,7 @@
 # this file holds common targets
 
 post-patch:
-	@${REINPLACE_CMD} \
+	@${REINPLACE_CMD} -e "/\>\/\// s|/-|/ -|; s|\\\>||" \
 		-e 's|python2 python|python2disabled pythondisabled|g' \
 		${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|/etc/|${PREFIX}/etc/|g' \
