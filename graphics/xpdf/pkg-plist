@@ -1,9 +1,10 @@
 %%X11%%libexec/xpdf/xpdf
 %%X11%%bin/xpdf
-etc/xpdfrc
+etc/man.d/xpdf.conf
 %%X11%%%%DATADIR%%/man/man1/xpdf.1.gz
 %%DATADIR%%/man/man5/xpdfrc.5.gz
 %%PORTDOCS%%%%DOCSDIR%%/ANNOUNCE
 %%PORTDOCS%%%%DOCSDIR%%/CHANGES
 %%PORTDOCS%%%%DOCSDIR%%/README
 %%PORTDOCS%%%%DOCSDIR%%/hello.pdf
+@sample etc/xpdfrc.sample
