@@ -1,16 +1,17 @@
 #!/bin/sh
-# $FreeBSD: head/japanese/font-shinonome/files/pkg-install.in 381876 2015-03-21 23:05:19Z bapt $
-
-FONTSDIR=%%FONTSDIR%%
+# $FreeBSD: head/japanese/font-shinonome/files/pkg-install.in 396783 2015-09-12 22:26:35Z hrs $
 
 case "$2" in
 POST-INSTALL)
+	cd %%FONTSDIR%%
 	touch fonts.alias
 	grep -v -- "-shinonome-" fonts.alias > fonts.alias.tmp
-	(cat fonts.alias.tmp; grep -v "^!!" %%FONTSALIAS%%) > fonts.alias
+	(cat fonts.alias.tmp; grep -- "-shinonome-" %%FONTSALIAS%%) \
+	    > fonts.alias
 	rm -f fonts.alias.tmp
 	;;
 POST-DEINSTALL)
+	cd %%FONTSDIR%%
 	touch fonts.alias
 	grep -v -- "-shinonome-" fonts.alias > fonts.alias.tmp
 	if [ -s fonts.alias.tmp ]; then
