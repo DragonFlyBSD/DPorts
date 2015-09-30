@@ -1,0 +1,3 @@
+USES+= alias
+
+CFLAGS+= -D__FreeBSD_version=1300000
