@@ -1,9 +1,9 @@
 #!/bin/sh
 #
-# $FreeBSD: head/dns/dnscrypt-proxy/files/dnscrypt-proxy.in 395430 2015-08-27 15:15:20Z feld $
+# $FreeBSD: head/dns/dnscrypt-proxy/files/dnscrypt-proxy.in 397925 2015-09-26 02:39:09Z junovitch $
 #
 # PROVIDE: dnscrypt_proxy
-# REQUIRE: SERVERS cleanvar
+# REQUIRE: SERVERS cleanvar ldconfig
 # BEFORE: named local_unbound unbound
 # KEYWORD: shutdown
 #
