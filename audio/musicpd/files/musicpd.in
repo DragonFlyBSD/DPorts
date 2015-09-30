@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/audio/musicpd/files/musicpd.in 362323 2014-07-20 14:48:53Z crees $
+# $FreeBSD: head/audio/musicpd/files/musicpd.in 396924 2015-09-14 18:46:25Z crees $
 #
 # PROVIDE: musicpd
 # REQUIRE: mixer LOGIN avahi_daemon oss
@@ -14,6 +14,7 @@
 
 name=musicpd
 rcvar=musicpd_enable
+desc="Music Player Daemon"
 
 load_rc_config $name
 
