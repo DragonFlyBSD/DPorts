@@ -15,6 +15,7 @@ GEANY_PLUGINS_ALL=	addons \
 			geanypy \
 			gendoc \
 			geniuspaste \
+			git-changebar \
 			insertnum \
 			latex \
 			lipsum \
