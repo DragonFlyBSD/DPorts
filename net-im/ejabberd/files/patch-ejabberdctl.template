@@ -1,6 +1,3 @@
-
-$FreeBSD: head/net-im/ejabberd/files/patch-ejabberdctl.template 392911 2015-07-26 08:31:21Z ashish $
-
 --- ejabberdctl.template.orig
 +++ ejabberdctl.template
 @@ -71,10 +71,10 @@
