@@ -1,0 +1,4 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@Linux\|\*BSD)@Linux|DragonFly|*BSD)@g'	\
+		${WRKSRC}/configure
