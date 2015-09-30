@@ -9,19 +9,18 @@ CATEGORIES=	audio
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Music collection manager and player
 
-LICENSE=	GPLv3
+LICENSE=	GPLv3 # or later
+LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libtag.so:${PORTSDIR}/audio/taglib \
 		libdbus-1.so:${PORTSDIR}/devel/dbus \
-		libGLEW.so:${PORTSDIR}/graphics/glew \
 		libexpat.so:${PORTSDIR}/textproc/expat2 \
 		libFOX-1.7.so:${PORTSDIR}/x11-toolkits/fox17
 
 USE_GITHUB=	yes
-GH_ACCOUNT=	${PORTNAME}
-WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 USES=		compiler:c++0x desktop-file-utils gmake pkgconfig
+USE_GL=		glew
 USE_SQLITE=	yes
 HAS_CONFIGURE=	yes
 CONFIGURE_ENV=	LINK="${CXX}" \
@@ -110,11 +109,13 @@ pre-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/share/icons/hicolor/scalable/apps
 
 post-install:
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/gogglesmm/libgap_*.so
+
+post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for f in ${PORTDOCS}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${STAGEDIR}${DOCSDIR}
 .endfor
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/gogglesmm/libgap_*.so
 
 .include <bsd.port.mk>
