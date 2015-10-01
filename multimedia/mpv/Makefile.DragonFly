@@ -1,0 +1,5 @@
+OPTIONS_DEFAULT+= VAAPI VDPAU OPENGL
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(\.stop_screensaver = \)1@\10@g'	\
+		${WRKSRC}/options/options.c
