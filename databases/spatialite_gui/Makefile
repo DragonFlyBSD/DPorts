@@ -3,7 +3,7 @@
 
 PORTNAME=	spatialite_gui
 PORTVERSION=	1.7.1
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	databases geography
 MASTER_SITES=	http://www.gaia-gis.it/gaia-sins/
 
@@ -18,7 +18,7 @@ LIB_DEPENDS=	libgaiagraphics.so:${PORTSDIR}/graphics/libgaiagraphics \
 		libspatialite.so:${PORTSDIR}/databases/spatialite
 
 USE_WX=		2.8
-WANT_UNICODE=	yes
+WX_UNICODE=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	libxml2
 USES=		gmake pkgconfig iconv
