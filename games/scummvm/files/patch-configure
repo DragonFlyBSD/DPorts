@@ -8,8 +8,8 @@
 -		LDFLAGS="$LDFLAGS -L/usr/local/lib"
 -		CXXFLAGS="$CXXFLAGS -I/usr/local/include"
 +	dragonfly*|freebsd*)
-+		LDFLAGS="$LDFLAGS -L/usr/local/lib"
-+		CXXFLAGS="$CXXFLAGS -I/usr/local/include"
++		LDFLAGS="$LDFLAGS -L$(prefix)/lib"
++		CXXFLAGS="$CXXFLAGS -I$(prefix)/include"
  		;;
  	gamecube)
  		_optimization_level=-Os
