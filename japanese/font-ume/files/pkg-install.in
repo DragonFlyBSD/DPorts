@@ -1,7 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/japanese/font-ume/files/pkg-install.in 381876 2015-03-21 23:05:19Z bapt $
-
-FONTSDIR=%%FONTSDIR%%/
+# $FreeBSD: head/japanese/font-ume/files/pkg-install.in 396873 2015-09-13 23:36:45Z hrs $
 
 catfontsdir ()
 {
@@ -80,7 +78,7 @@ nfonts ()
 
 case "$2" in
 POST-INSTALL)
-	cd ${FONTSDIR}
+	cd %%FONTSDIR%%
 	touch fonts.dir
 	exec < fonts.dir; rm -f fonts.dir
 	(catfontsdir; addentries) > fonts.dir
@@ -90,7 +88,7 @@ POST-INSTALL)
 	chmod 0444 fonts.dir
 	;;
 DEINSTALL)
-	cd ${FONTSDIR}
+	cd %%FONTSDIR%%
 	exec < fonts.dir; rm -f fonts.dir
 	catfontsdir > fonts.dir
 	_num=`nfonts fonts.dir`
