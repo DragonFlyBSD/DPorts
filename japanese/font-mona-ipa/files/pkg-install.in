@@ -1,7 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/japanese/font-mona-ipa/files/pkg-install.in 381876 2015-03-21 23:05:19Z bapt $
-
-FONTSDIR=%%FONTSDIR%%/TTF
+# $FreeBSD: head/japanese/font-mona-ipa/files/pkg-install.in 396873 2015-09-13 23:36:45Z hrs $
 
 catfontsdir ()
 {
@@ -75,7 +73,7 @@ nfonts ()
 
 case "$2" in
 POST-INSTALL)
-	cd ${FONTSDIR}
+	cd %%FONTSDIR%%
 	touch fonts.dir
 	(catfontsdir < fonts.dir; addentries) > fonts.dir.tmp
 	nfonts < fonts.dir.tmp > fonts.dir
@@ -83,7 +81,7 @@ POST-INSTALL)
 	rm -f fonts.dir.tmp
 	;;
 POST-DEINSTALL)
-	cd ${FONTSDIR}
+	cd %%FONTSDIR%%
 	catfontsdir < fonts.dir > fonts.dir.tmp
 	nfonts < fonts.dir.tmp > fonts.dir
 	cat fonts.dir.tmp >> fonts.dir
