@@ -1,0 +1,15 @@
+--- Makefile.bak	2015-09-22 13:05:15.000000000 +0300
++++ Makefile
+@@ -31,6 +31,12 @@ unicos60 unicos61:
+ 		DEFINES="-DWAIT3CODE -DNO_ISO" \
+ 		LIBS="" OPT="-O"
+ 
++DragonFly:
++	$(MAKE) objs \
++		INCLUDE="" \
++		DEFINES="-DWAIT3CODE -DBSD44 -DNAMEDPIPES -DNO_ISO" \
++		OPT="-O" LIBS="-lcompat"
++
+ FreeBSD:
+ 	$(MAKE) objs \
+ 		INCLUDE="" \
