@@ -1,0 +1,5 @@
+# zrj: needed for lib/clc/oland-r600--.bc dep
+RUN_DEPENDS+=	libclc>=0:${PORTSDIR}/devel/libclc
+
+LIB_DEPENDS+= libelf.so:${PORTSDIR}/devel/libelf
+CFLAGS+= -I${LOCALBASE}/include/libelf
