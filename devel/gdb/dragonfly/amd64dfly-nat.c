@@ -274,9 +274,7 @@ _initialize_amd64dfly_nat (void)
   t->to_mourn_inferior = amd64dfly_mourn_inferior;
   t->to_read_description = amd64fbsd_read_description;
 
-  t->to_pid_to_exec_file = fbsd_pid_to_exec_file;
-  t->to_find_memory_regions = fbsd_find_memory_regions;
-  add_target (t);
+  dfly_nat_add_target (t);
 
 #ifdef DFLY_PCB_SUPPLY
   /* Support debugging kernel virtual memory images.  */
