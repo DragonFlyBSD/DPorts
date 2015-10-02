@@ -1,7 +1,3 @@
-#CONFIGURE_ARGS+=	--enable-mpi-fortran=usempi
-
-#PLIST_FILES+=	${MPIDIR}/lib/libmpi_usempi_ignore_tkr.la \
-#		${MPIDIR}/lib/libmpi_usempi_ignore_tkr.so \
-#		${MPIDIR}/lib/mpi_ext.mod
-
 OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NSLURM}
+CONFIGURE_ARGS+=	--enable-mpi-fortran=usempi \
+			ompi_cv_fortran_ignore_tkr_data=0
