@@ -1,0 +1,3 @@
+USES+= alias
+
+CONFIGURE_ARGS+= nxconf_cv_freebsd=yes
