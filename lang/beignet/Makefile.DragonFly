@@ -1,0 +1,19 @@
+USE_CXXSTD=	c++11
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/\(defined(__FreeBSD__)\)/(\1||defined(__DragonFly__))/g'	\
+			 -e '/#include <malloc_np.h>/d'					\
+		${WRKSRC}/backend/src/sys/alloc.cpp
+	${REINPLACE_CMD} -e 's/#ifndef __FreeBSD__/#if !defined(__FreeBSD__) \&\& !defined(__DragonFly__)/g'	\
+		${WRKSRC}/src/cl_alloc.c									\
+		${WRKSRC}/src/cl_device_id.c									\
+		${WRKSRC}/utests/builtin_exp.cpp
+	${REINPLACE_CMD} -e 's/[[:<:]]isinf[[:>:]]/std::isinf/g'	\
+			 -e 's/[[:<:]]isnan[[:>:]]/std::isnan/g'	\
+		${WRKSRC}/utests/utest_generator.py			\
+		${WRKSRC}/utests/compiler_half.cpp			\
+		${WRKSRC}/utests/compiler_math.cpp			\
+		${WRKSRC}/utests/builtin_tgamma.cpp			\
+		${WRKSRC}/utests/builtin_pow.cpp			\
+		${WRKSRC}/utests/builtin_exp.cpp			\
+		${WRKSRC}/utests/builtin_acos_asin.cpp

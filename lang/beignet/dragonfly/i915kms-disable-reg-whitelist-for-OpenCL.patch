@@ -1,0 +1,26 @@
+From aa30863437b5a54fc3e0df4475c3f55ee960a342 Mon Sep 17 00:00:00 2001
+From: zrj <rimvydas.jasinskas@gmail.com>
+Date: Sat, 3 Oct 2015 09:59:50 +0300
+Subject: drm/i915: disable reg whitelist for OpenCL
+
+Only temp workaround to use _LOCAL on Haswells
+---
+ sys/dev/drm/i915/i915_gem_execbuffer.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/sys/dev/drm/i915/i915_gem_execbuffer.c b/sys/dev/drm/i915/i915_gem_execbuffer.c
+index 65e9aaf..0da7040 100644
+--- a/sys/dev/drm/i915/i915_gem_execbuffer.c
++++ b/sys/dev/drm/i915/i915_gem_execbuffer.c
+@@ -1260,7 +1260,7 @@ i915_gem_do_execbuffer(struct drm_device *dev, void *data,
+ 	if (ret)
+ 		return ret;
+ 
+-	flags = 0;
++	flags = 0 | I915_DISPATCH_SECURE; /* XXX disable security for OpenCL on Haswell */
+ 	if (args->flags & I915_EXEC_SECURE) {
+ 		flags |= I915_DISPATCH_SECURE;
+ 	}
+-- 
+2.5.3
+

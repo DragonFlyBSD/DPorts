@@ -1,0 +1,19 @@
+--- backend/src/sys/platform.hpp.orig	2015-04-15 06:42:55.000000000 +0300
++++ backend/src/sys/platform.hpp
+@@ -77,6 +77,16 @@
+ #  endif
+ #endif
+ 
++/* detect DragonFly BSD platform */
++#if defined(__DragonFly__) || defined(__DRAGONFLY__)
++#  if !defined(__DRAGONFLY__)
++#     define __DRAGONFLY__
++#  endif
++#  if !defined(__UNIX__)
++#     define __UNIX__
++#  endif
++#endif
++
+ /* detect FreeBSD platform */
+ #if defined(__FreeBSD__) || defined(__FREEBSD__)
+ #  if !defined(__FREEBSD__)

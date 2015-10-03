@@ -1,0 +1,20 @@
+--- utests/CMakeLists.txt.bak	2015-07-17 09:23:30.000000000 +0300
++++ utests/CMakeLists.txt
+@@ -2,7 +2,7 @@ INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOUR
+                     ${CMAKE_CURRENT_SOURCE_DIR}/../include)
+ 
+ ##### Math Function Part:
+-EXECUTE_PROCESS(COMMAND mkdir generated -p WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
++EXECUTE_PROCESS(COMMAND mkdir -p generated WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
+ EXECUTE_PROCESS(COMMAND ${PYTHON_EXECUTABLE} utest_math_gen.py WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} OUTPUT_VARIABLE GEN_MATH_STRING)
+ string(REGEX REPLACE " " ";" ADDMATHFUNC ${GEN_MATH_STRING})
+ 
+@@ -250,7 +250,7 @@ ADD_CUSTOM_TARGET(kernel_bin.bin
+     DEPENDS ${kernel_bin}.bin)
+ 
+ add_custom_command(OUTPUT ${CMAKE_CURRENT_SOURCE_DIR}/generated
+-    COMMAND mkdir ${CMAKE_CURRENT_SOURCE_DIR}/generated -p
++    COMMAND mkdir -p ${CMAKE_CURRENT_SOURCE_DIR}/generated
+     COMMAND ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/utest_math_gen.py > /dev/null 2>&1
+     COMMAND echo ${KERNEL_GITIGNORE_LIST} |sed 's/ /\\n/g' > ${CMAKE_CURRENT_SOURCE_DIR}/../kernels/.gitignore
+     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
