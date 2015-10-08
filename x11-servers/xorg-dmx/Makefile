@@ -21,6 +21,7 @@ CONFIGURE_ARGS=	--disable-xvfb --disable-xnest \
 		--enable-dmx --localstatedir=/var --without-dtrace
 
 SLAVE_PORT=	yes
+USE_XORG+=	presentproto
 
 do-install:
 	cd ${WRKSRC}/hw/dmx; DESTDIR=${STAGEDIR} ${MAKE} install
