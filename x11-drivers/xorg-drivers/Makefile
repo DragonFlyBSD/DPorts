@@ -27,13 +27,10 @@ INPUT_DRIVERS=		mouse \
 			void \
 			wacom
 
-VIDEO_DRIVERS=		mach64 \
-			nv \
-			r128 \
+VIDEO_DRIVERS=		nv \
 			vesa \
 			apm \
 			ark \
-			chips \
 			cyrix \
 			dummy \
 			fbdev \
@@ -41,24 +38,26 @@ VIDEO_DRIVERS=		mach64 \
 			i128 \
 			i740 \
 			mga \
+			s3 \
+			tdfx \
+			trident \
+			tseng \
+			vmware
+
+VIDEO_DRIVERS_REMOVED=	mach64 \
+			r128 \
+			chips \
 			neomagic \
 			rendition \
-			s3 \
 			s3virge \
 			savage \
 			siliconmotion \
 			sis \
-			tdfx \
-			trident \
-			tseng \
-			vmware \
 			voodoo
 
 OPTIONS_DEFAULT=	MOUSE \
 			KEYBOARD \
-			MACH64 \
 			NV \
-			R128 \
 			VESA
 
 .for type in input video
