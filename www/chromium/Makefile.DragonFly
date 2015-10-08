@@ -1,0 +1,4 @@
+# fix Release 4.2
+.if exists(/usr/include/bus/u4b/usb_freebsd.h)
+CFLAGS+=	-D__STDC_LIMIT_MACROS
+.endif
