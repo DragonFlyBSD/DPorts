@@ -20,8 +20,9 @@ RUN_DEPENDS=	xkeyboard-config>=2.5:${PORTSDIR}/x11/xkeyboard-config \
 		xkbcomp:${PORTSDIR}/x11/xkbcomp
 
 BUILD_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/epoxy.pc:${PORTSDIR}/graphics/libepoxy
-LIB_DEPENDS+=	libgbm.so:${PORTSDIR}/graphics/gbm	\
-		libEGL.so:${PORTSDIR}/graphics/libEGL
+BUILD_DEPENDS+=	libEGL>0:${PORTSDIR}/graphics/libEGL
+RUN_DEPENDS+=	libEGL>0:${PORTSDIR}/graphics/libEGL
+LIB_DEPENDS+=	libgbm.so:${PORTSDIR}/graphics/gbm
 
 XORG_CAT=	xserver
 SLAVE_PORT?=	no
