@@ -20,6 +20,12 @@ CONFIGURE_ARGS=	--enable-kdrive --enable-xephyr	--disable-dmx --disable-xvfb \
 
 SLAVE_PORT=	yes
 PLIST_FILES=	bin/Xephyr man/man1/Xephyr.1.gz
+USE_XORG+=	presentproto xcb
+BUILD_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/xcb-renderutil.pc:${PORTSDIR}/x11/xcb-util-renderutil \
+		${LOCALBASE}/libdata/pkgconfig/xcb-icccm.pc:${PORTSDIR}/x11/xcb-util-wm \
+		${LOCALBASE}/libdata/pkgconfig/xcb-keysyms.pc:${PORTSDIR}/x11/xcb-util-keysyms \
+		${LOCALBASE}/libdata/pkgconfig/xcb-image.pc:${PORTSDIR}/x11/xcb-util-image \
+
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/hw/kdrive/ephyr/Xephyr ${STAGEDIR}${PREFIX}/bin/
