@@ -1,0 +1,3 @@
+
+# zrj: enable radeonsi support(requires glamor support in Xorg)
+CONFIGURE_ARGS:= ${CONFIGURE_ARGS:N--disable-glamor} --enable-glamor
