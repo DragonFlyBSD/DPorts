@@ -20,9 +20,6 @@ RUN_DEPENDS=	xkeyboard-config>=2.5:${PORTSDIR}/x11/xkeyboard-config \
 		xkbcomp:${PORTSDIR}/x11/xkbcomp
 
 BUILD_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/epoxy.pc:${PORTSDIR}/graphics/libepoxy
-BUILD_DEPENDS+=	libEGL>0:${PORTSDIR}/graphics/libEGL
-RUN_DEPENDS+=	libEGL>0:${PORTSDIR}/graphics/libEGL
-LIB_DEPENDS+=	libgbm.so:${PORTSDIR}/graphics/gbm
 
 XORG_CAT=	xserver
 SLAVE_PORT?=	no
@@ -42,7 +39,7 @@ OPTIONS_EXCLUDE_sparc64=	HAL
 
 USES=		gmake libtool perl5 tar:bzip2
 USE_PERL5=	build
-USE_GL=		gl
+USE_GL=		egl gbm gl
 USE_XORG?=	xf86driproto glproto xdmcp x11 xkbfile xxf86misc xxf86vm xaw7 \
 		xmu xt xpm xext randrproto renderproto fixesproto damageproto \
 		dri2proto xcmiscproto xextproto xproto xtrans \
