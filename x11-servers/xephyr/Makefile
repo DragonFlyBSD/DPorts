@@ -24,8 +24,7 @@ USE_XORG+=	presentproto xcb
 BUILD_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/xcb-renderutil.pc:${PORTSDIR}/x11/xcb-util-renderutil \
 		${LOCALBASE}/libdata/pkgconfig/xcb-icccm.pc:${PORTSDIR}/x11/xcb-util-wm \
 		${LOCALBASE}/libdata/pkgconfig/xcb-keysyms.pc:${PORTSDIR}/x11/xcb-util-keysyms \
-		${LOCALBASE}/libdata/pkgconfig/xcb-image.pc:${PORTSDIR}/x11/xcb-util-image \
-
+		${LOCALBASE}/libdata/pkgconfig/xcb-image.pc:${PORTSDIR}/x11/xcb-util-image
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/hw/kdrive/ephyr/Xephyr ${STAGEDIR}${PREFIX}/bin/
