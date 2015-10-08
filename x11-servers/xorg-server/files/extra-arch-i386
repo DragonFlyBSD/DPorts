@@ -1,11 +1,11 @@
---- hw/xfree86/common/compiler.h.orig	2012-05-17 19:09:03.000000000 +0200
-+++ hw/xfree86/common/compiler.h	2013-01-18 13:59:18.366436857 +0100
-@@ -1335,7 +1335,7 @@
- 
- #if !defined(__SUNPRO_C)
- #if !defined(FAKEIT) && !defined(__mc68000__) && !defined(__arm__) && !defined(__sh__) && !defined(__hppa__) && !defined(__s390__) && !defined(__m32r__)
+--- hw/xfree86/common/compiler.h.orig	2014-12-09 22:02:34.000000000 +0100
++++ hw/xfree86/common/compiler.h	2014-12-21 23:12:36.432293324 +0100
+@@ -1356,7 +1356,7 @@
+     !defined(__sh__) && !defined(__hppa__) && !defined(__s390__) && \
+     !defined(__m32r__) && !defined(__aarch64__) && !defined(__arc__) && \
+     !defined(__xtensa__)
 -#ifdef GCCUSESGAS
-+#if defined(GCCUSESGAS) || defined(__clang__)
++#ifdef GCCUSESGAS || defined(__clang__)
  
  /*
   * If gcc uses gas rather than the native assembler, the syntax of these
