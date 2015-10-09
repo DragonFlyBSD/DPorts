@@ -1,0 +1,4 @@
+lib/xorg/modules/drivers/cirrus_alpine.so
+lib/xorg/modules/drivers/cirrus_drv.so
+lib/xorg/modules/drivers/cirrus_laguna.so
+man/man4/cirrus.4x.gz

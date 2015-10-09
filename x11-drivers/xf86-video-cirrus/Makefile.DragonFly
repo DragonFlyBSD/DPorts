@@ -1,0 +1,5 @@
+
+# zrj: patch from LFS blfs ticket/6177
+dfly-patch:
+	${REINPLACE_CMD} -e 's@PCITAG@CARD32@g' \
+		${WRKSRC}/src/cir.h
