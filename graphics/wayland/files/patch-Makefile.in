@@ -1,0 +1,37 @@
+--- Makefile.in.orig	2015-09-22 03:59:52 +0200
++++ Makefile.in
+@@ -777,6 +777,7 @@
+ ECHO_N = @ECHO_N@
+ ECHO_T = @ECHO_T@
+ EGREP = @EGREP@
++EVENT_LIBS = @EVENT_LIBS@
+ EXEEXT = @EXEEXT@
+ EXPAT_CFLAGS = @EXPAT_CFLAGS@
+ EXPAT_LIBS = @EXPAT_LIBS@
+@@ -900,7 +901,7 @@
+ 	protocol/wayland.xml			\
+ 	protocol/wayland.dtd
+ 
+-pkgconfigdir = $(libdir)/pkgconfig
++pkgconfigdir = $(prefix)/libdata/pkgconfig
+ pkgconfig_DATA = src/wayland-scanner.pc $(am__append_2)
+ wayland_scanner_SOURCES = src/scanner.c
+ wayland_scanner_CFLAGS = $(EXPAT_CFLAGS) $(AM_CFLAGS)
+@@ -937,7 +938,7 @@
+ @ENABLE_LIBRARIES_TRUE@	protocol/wayland-client-protocol.h
+ 
+ @ENABLE_LIBRARIES_TRUE@libwayland_server_la_CFLAGS = $(FFI_CFLAGS) $(AM_CFLAGS) -pthread
+-@ENABLE_LIBRARIES_TRUE@libwayland_server_la_LIBADD = $(FFI_LIBS) libwayland-private.la libwayland-util.la -lrt -lm
++@ENABLE_LIBRARIES_TRUE@libwayland_server_la_LIBADD = $(EVENT_LIBS) $(FFI_LIBS) libwayland-private.la libwayland-util.la -lrt -lm
+ @ENABLE_LIBRARIES_TRUE@libwayland_server_la_LDFLAGS = -version-info 1:0:1
+ @ENABLE_LIBRARIES_TRUE@libwayland_server_la_SOURCES = \
+ @ENABLE_LIBRARIES_TRUE@	src/wayland-server.c			\
+@@ -1035,7 +1036,7 @@
+ 
+ @ENABLE_CPP_TEST_TRUE@@ENABLE_LIBRARIES_TRUE@cpp_compile_test_SOURCES = tests/cpp-compile-test.cpp
+ @ENABLE_LIBRARIES_TRUE@fixed_benchmark_SOURCES = tests/fixed-benchmark.c
+-@ENABLE_LIBRARIES_TRUE@fixed_benchmark_LDADD = libtest-runner.la
++@ENABLE_LIBRARIES_TRUE@fixed_benchmark_LDADD = libtest-runner.la $(EVENT_LIBS)
+ @ENABLE_LIBRARIES_TRUE@os_wrappers_test_SOURCES = tests/os-wrappers-test.c
+ @ENABLE_LIBRARIES_TRUE@os_wrappers_test_LDADD = libtest-runner.la
+ @ENABLE_LIBRARIES_TRUE@exec_fd_leak_checker_SOURCES = tests/exec-fd-leak-checker.c

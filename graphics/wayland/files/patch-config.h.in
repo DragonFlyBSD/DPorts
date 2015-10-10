@@ -1,0 +1,18 @@
+--- config.h.in.orig	2015-09-28 23:45:59 +0200
++++ config.h.in
+@@ -36,9 +36,15 @@
+ /* Define to 1 if you have the <string.h> header file. */
+ #undef HAVE_STRING_H
+ 
++/* Define to 1 if you have the <sys/param.h> header file. */
++#undef HAVE_SYS_PARAM_H
++
+ /* Define to 1 if you have the <sys/stat.h> header file. */
+ #undef HAVE_SYS_STAT_H
+ 
++/* Define to 1 if you have the <sys/ucred.h> header file. */
++#undef HAVE_SYS_UCRED_H
++
+ /* Define to 1 if you have the <sys/types.h> header file. */
+ #undef HAVE_SYS_TYPES_H
+ 

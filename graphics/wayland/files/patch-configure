@@ -1,0 +1,143 @@
+--- configure.orig	2015-09-22 03:59:52.000000000 +0200
++++ configure	2015-09-29 00:20:30.491789000 +0200
+@@ -718,6 +718,7 @@
+ ENABLE_LIBRARIES_TRUE
+ USE_HOST_SCANNER_FALSE
+ USE_HOST_SCANNER_TRUE
++EVENT_LIBS
+ GCC_CFLAGS
+ PKG_CONFIG_LIBDIR
+ PKG_CONFIG_PATH
+@@ -861,6 +862,7 @@
+ enable_libtool_lock
+ enable_libraries
+ with_host_scanner
++with_libevent
+ enable_documentation
+ with_icondir
+ '
+@@ -1526,6 +1528,7 @@
+                         (or the compiler's sysroot if not specified).
+   --with-host-scanner     Use installed wayland-scanner from host PATH during
+                           build
++  --with-libevent=<dir>      Use libevent from here
+   --with-icondir=<dir>    Look for cursor icons here
+ 
+ Some influential environment variables:
+@@ -15564,6 +15567,87 @@
+ fi
+ 
+ 
++# libevent2
++
++# Check whether --with-libevent was given.
++if test "${with_libevent+set}" = set; then :
++  withval=$with_libevent;  libevent=$withval
++		     CPPFLAGS="$CPPFLAGS -I$withval/include"
++		     LDFLAGS="$LDFLAGS -L$withval/lib"
++fi
++
++{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for event_new in -levent" >&5
++$as_echo_n "checking for event_new in -levent... " >&6; }
++if ${ac_cv_lib_event_event_new+:} false; then :
++  $as_echo_n "(cached) " >&6
++else
++  ac_check_lib_save_LIBS=$LIBS
++LIBS="-levent  $LIBS"
++cat confdefs.h - <<_ACEOF >conftest.$ac_ext
++/* end confdefs.h.  */
++
++/* Override any GCC internal prototype to avoid an error.
++   Use char because int might match the return type of a GCC
++   builtin and then its argument prototype would still apply.  */
++#ifdef __cplusplus
++extern "C"
++#endif
++char event_new ();
++int
++main ()
++{
++return event_new ();
++  ;
++  return 0;
++}
++_ACEOF
++if ac_fn_c_try_link "$LINENO"; then :
++  ac_cv_lib_event_event_new=yes
++else
++  ac_cv_lib_event_event_new=no
++fi
++rm -f core conftest.err conftest.$ac_objext \
++    conftest$ac_exeext conftest.$ac_ext
++LIBS=$ac_check_lib_save_LIBS
++fi
++{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_event_event_new" >&5
++$as_echo "$ac_cv_lib_event_event_new" >&6; }
++if test "x$ac_cv_lib_event_event_new" = xyes; then :
++  EVENT_LIBS="-levent -levent_pthreads"
++fi
++
++
++
++# Credential support on FreeBSD and DragonFly.
++for ac_header in sys/ucred.h
++do :
++  ac_fn_c_check_header_mongrel "$LINENO" "sys/ucred.h" "ac_cv_header_sys_ucred_h" "$ac_includes_default"
++if test "x$ac_cv_header_sys_ucred_h" = xyes; then :
++  cat >>confdefs.h <<_ACEOF
++#define HAVE_SYS_UCRED_H 1
++_ACEOF
++
++fi
++
++done
++
++
++
++# Defines __FreeBSD__ if we're on FreeBSD, __DragonFly__ if we're on DragonFly.
++for ac_header in sys/param.h
++do :
++  ac_fn_c_check_header_mongrel "$LINENO" "sys/param.h" "ac_cv_header_sys_param_h" "$ac_includes_default"
++if test "x$ac_cv_header_sys_param_h" = xyes; then :
++  cat >>confdefs.h <<_ACEOF
++#define HAVE_SYS_PARAM_H 1
++_ACEOF
++
++fi
++
++done
++
++
++
+ # Check whether --enable-documentation was given.
+ if test "${enable_documentation+set}" = set; then :
+   enableval=$enable_documentation;
+@@ -15692,22 +15776,12 @@
+ $as_echo "yes" >&6; }
+ 
+ fi
+-	ac_fn_c_check_decl "$LINENO" "SFD_CLOEXEC" "ac_cv_have_decl_SFD_CLOEXEC" "#include <sys/signalfd.h>
+-"
+-if test "x$ac_cv_have_decl_SFD_CLOEXEC" = xyes; then :
+-
+-else
+-  as_fn_error $? "\"SFD_CLOEXEC is needed to compile wayland libraries\"" "$LINENO" 5
+-fi
+-
+-	ac_fn_c_check_decl "$LINENO" "TFD_CLOEXEC" "ac_cv_have_decl_TFD_CLOEXEC" "#include <sys/timerfd.h>
+-"
+-if test "x$ac_cv_have_decl_TFD_CLOEXEC" = xyes; then :
+-
+-else
+-  as_fn_error $? "\"TFD_CLOEXEC is needed to compile wayland libraries\"" "$LINENO" 5
+-fi
+-
++#	AC_CHECK_DECL(SFD_CLOEXEC,[],
++#		      [AC_MSG_ERROR("SFD_CLOEXEC is needed to compile wayland libraries")],
++#		      [[#include <sys/signalfd.h>]])
++#	AC_CHECK_DECL(TFD_CLOEXEC,[],
++#		      [AC_MSG_ERROR("TFD_CLOEXEC is needed to compile wayland libraries")],
++#		      [[#include <sys/timerfd.h>]])
+ 	ac_fn_c_check_decl "$LINENO" "CLOCK_MONOTONIC" "ac_cv_have_decl_CLOCK_MONOTONIC" "#include <time.h>
+ "
+ if test "x$ac_cv_have_decl_CLOCK_MONOTONIC" = xyes; then :
