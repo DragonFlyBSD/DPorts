@@ -1,0 +1,5 @@
+UNZIP_NATIVE_CMD=${UNZIP_CMD}
+
+pre-configure:
+	@${SED} -e 's|freebsd|dragonfly|g' ${WRKSRC}/make_freebsd.mak \
+		> ${WRKSRC}/make_dragonfly.mak
