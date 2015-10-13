@@ -5,6 +5,45 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20151013:
+  AFFECTS: users of security/sshguard-ipfw
+  AUTHOR: feld@FreeBSD.org
+
+  The sshguard update to 1.6.2 introduces a rewritten IPFW backend. The
+  previous approach was to insert individual block rules with a
+  predefined  numbered range. This does not scale well and is not
+  flexible so the design was scrapped. The new approach utilizes IPFW
+  tables. The sshguard IPFW backend now inserts offenders into hardcoded
+  table 22.
+
+  To continue blocking the attackers effectively you will need to add a
+  block rule like the following:
+
+  ipfw add deny all from 'table(22)' to any
+  
+  The release announcement can be found here:
+    http://sourceforge.net/p/sshguard/mailman/message/34534861/
+
+20151011:
+  AFFECTS: users of emulators/qemu-sbruno, emulators/qemu-user-static
+  AUTHOR: sbruno@FreeBSD.org
+
+  The Jemalloc update at svn r286871 introduced some TLS enhancements
+  for MIPS targets that require a bit of workaround.  Users who want 
+  to build MIPS packages should update their host systems past r286871
+  prior to upgrading their qemu-user-static/qemu-sbruno ports.
+  
+  Discussion about this can be found here:
+    https://lists.freebsd.org/pipermail/freebsd-mips/2015-October/004018.html
+
+20151006:
+  AFFECTS: users of www/firefox, www/seamonkey
+  AUTHOR: gecko@FreeBSD.org
+
+  Firefox since 41.0 and SeaMonkey since 2.38 require databases/sqlite3
+  port built with DBSTAT option enabled (default). Re-run "make config"
+  if the port(s) fail to build as described in ports/200853.
+
 20150921:
   AFFECTS: users of mail/rspamd
   AUTHOR: vsevolod@FreeBSD.org
@@ -1440,108 +1479,4 @@ AUTHOR: ohauer@FreeBSD.org
   before running any pkg/port upgrade utility:
 
 	# pkg delete -f kde-runtime-4\*
-
-20141008:
-  AFFECTS: users of lang/ruby19
-  AUTHOR: swills@FreeBSD.org
-
-  The default ruby version has been updated from 1.9 to 2.0.
-
-  If you compile your own ports you may keep 1.9 as the default version by
-  adding the following lines to your /etc/make.conf file:
-
-  #
-  # Keep ruby 1.9 as default version
-  #
-  DEFAULT_VERSIONS+=ruby=1.9
-
-  If you wish to update to the new default version, you need to first stop any
-  software that uses ruby. Then, you will need to follow these steps, depending
-  upon how you manage your system.
-
-  If you use pkgng, simply upgrade:
-  # pkg upgrade
-
-  If you use portmaster, install new ruby, then rebuild all ports that depend
-  on ruby:
-  # portmaster -o lang/ruby20 lang/ruby19
-  # portmaster -R -r ruby-2.0
-
-  If you use portupgrade, install new ruby, then rebuild all ports that depend
-  on ruby:
-
-  # pkg delete -f ruby ruby-iconv portupgrade
-  # make -C /usr/ports/ports-mgmt/portupgrade install clean
-  # pkg set -o lang/ruby19:lang/ruby20
-  # portupgrade -x ruby-2.0.\* -fr lang/ruby20
-
-20141003:
-  AFFECTS: xorg users
-  AUTHOR: bapt@FreeBSD.org
-
-  The WITH_NEW_XORG setting has been activated by default on all versions
-  of FreeBSD, which allows us to have packages for xorg 1.12 and kde4.
-
-  Please be aware that on systems that only support syscons
-  switching virtual terminals or exiting X
-  results in a black screen or the last image of their desktop
-  (like a screenshot) being presented.  Commands can still be typed blindly.
-
-  Most, if not all, systems should be using vt(4) and this can be enabled
-  by setting kern.vty=vt in /boot/loader.conf and reboot to activate.
-
-20141001:
-  AFFECTS: xorg users
-  AUTHOR: bapt@FreeBSD.org
-
-  The WITH_NEW_XORG setting has been activated by default on FreeBSD 10.0
-  and above, which allows us to have packages for xorg 1.12 and kde4.
-
-  Please be aware that on systems that only support syscons
-  switching virtual terminals or exiting X
-  results in a black screen or the last image of their desktop
-  (like a screenshot) being presented.  Commands can still be typed blindly.
-
-  Most, if not all, systems should be using vt(4) and this can be enabled
-  by setting kern.vty=vt in /boot/loader.conf and reboot to activate.
-
-20140930:
-  AFFECTS: users of mail/maildrop
-  AUTHOR: madpilot@FreeBSD.org
-
-  Due to the way pkg works please note that the configuration
-  variables MAILDROP_SUID and MAILDROP_SGID, despite keeping their
-  old names, are now required to contain a valid username and
-  groupname existing on the system in which the package will be
-  installed, while in the past numeric uids and gids worked fine.
-
-  Wrong values will cause pkg to skip installing the setuid binaries
-  on the system.
-
-  Please check your configuration.
-
-20140929:
-  AFFECTS: users of comms/usbmuxd
-  AUTHOR: avilla@FreeBSD.org
-
-  libusbmuxd.so was split from comms/usbmuxd into comms/libusbmuxd.
-  Remove usbmuxd before upgrading to avoid conflicts:
-
-	# pkg delete -f usbmuxd
-
-  If you need the daemon usbmuxd(1), you can reinstall the package
-  after the upgrade.
-
-20140928:
-  AFFECTS: users of deskutils/calibre
-  AUTHOR: madpilot@FreeBSD.org
-
-  The dependency on graphics/py-imaging in calibre has been changed
-  to using the graphics/py-pillow port.
-
-  Due to this change automatic updating of the port will not work
-  correctly.
-
-  It is suggested to remove calibre and py-imaging from the system
-  and then reinstall calibre again using binary packages or ports.
 

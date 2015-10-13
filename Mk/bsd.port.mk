@@ -1178,16 +1178,18 @@ MAINTAINER?=	ports@FreeBSD.org
 .if !defined(ARCH)
 ARCH!=	${UNAME} -p
 .endif
+_EXPORTED_VARS+=	ARCH
 
 # Get the operating system type
 .if !defined(OPSYS)
 OPSYS!=	${UNAME} -s
 .endif
+_EXPORTED_VARS+=	OPSYS
 
-UNAMER!=${UNAME} -r
-
-# Get the operating system revision
-OSREL?=	${UNAMER:C/-.*//}
+.if !defined(_OSRELEASE)
+_OSRELEASE!=	${UNAME} -r
+.endif
+_EXPORTED_VARS+=	_OSRELEASE
 
 # Get __FreeBSD_version
 .if !defined(OSVERSION)
@@ -1195,18 +1197,15 @@ OSVERSION=	9999999
 .endif
 
 .if !defined(DFLYVERSION)
-.if exists(/usr/include/sys/param.h)
 DFLYVERSION!=	${AWK} '/^\#define[[:blank:]]__DragonFly_version/ {print $$3}' < /usr/include/sys/param.h
 OSREL!=		${ECHO} ${DFLYVERSION} | ${AWK} '{a=int($$1/100000); b=int(($$1-(a*100000))/100); print a "." b}'
-.else
-.error Unable to determine OS version.  Either define OSVERSION, install /usr/include/sys/param.h or define SRC_BASE.
 .endif
-.endif
+_EXPORTED_VARS+=	OSVERSION DFLYVERSION OSREL
 
 # Only define tools here (for transition period with between pkg tools)
 .include "${PORTSDIR}/Mk/bsd.commands.mk"
 
-.if exists(${PKG_BIN})
+.if !defined(_PKG_CHECKED) && !defined(PACKAGE_BUILDING) && exists(${PKG_BIN})
 .if !defined(_PKG_VERSION)
 _PKG_VERSION!=	${PKG_BIN} -v
 .endif
@@ -1214,7 +1213,9 @@ _PKG_STATUS!=	${PKG_BIN} version -t ${_PKG_VERSION:C/-.*//g} ${MINIMAL_PKG_VERSI
 .if ${_PKG_STATUS} == "<"
 IGNORE=		pkg(8) must be version ${MINIMAL_PKG_VERSION} or greater, but you have ${_PKG_VERSION}. You must upgrade the ${PKG_ORIGIN} port first
 .endif
+_PKG_CHECKED=	1
 .endif
+_EXPORTED_VARS+=	_PKG_CHECKED
 
 MASTERDIR?=	${.CURDIR}
 
@@ -1542,6 +1543,9 @@ QA_ENV+=		USESLIBTOOL=yes
 .if !empty(USES:Mshared-mime-info)
 QA_ENV+=		USESSHAREDMIMEINFO=yes
 .endif
+.if !empty(USES:Mterminfo)
+QA_ENV+=		USESTERMINFO=yes
+.endif
 
 CO_ENV+=		STAGEDIR=${STAGEDIR} \
 				PREFIX=${PREFIX} \
@@ -1668,6 +1672,7 @@ HAVE_COMPAT_IA32_KERN!= if ${SYSCTL} -n compat.ia32.maxvmem >/dev/null 2>&1; the
 .endif
 .endif
 .endif
+_EXPORTED_VARS+=	HAVE_COMPAT_IA32_KERN
 
 .if defined(IA32_BINARY_PORT) && ${ARCH} != "i386"
 .if ${ARCH} == "amd64" || ${ARCH} == "ia64"
@@ -1753,6 +1758,7 @@ USE_LINUX?=	yes
 .  if !defined(LINUX_OSRELEASE)
 LINUX_OSRELEASE!=	${ECHO_CMD} `${SYSCTL} -n compat.linux.osrelease 2>/dev/null`
 .  endif
+_EXPORTED_VARS+=	LINUX_OSRELEASE
 
 # install(1) also does a brandelf on strip, so don't strip with FreeBSD tools.
 STRIP=
@@ -2040,7 +2046,11 @@ MAKE_JOBS_NUMBER=	1
 .if defined(MAKE_JOBS_NUMBER)
 _MAKE_JOBS_NUMBER:=	${MAKE_JOBS_NUMBER}
 .else
+.if !defined(_SMP_CPUS)
 _MAKE_JOBS_NUMBER!=	${SYSCTL} -n hw.ncpu
+.endif
+_EXPORTED_VARS+=	_SMP_CPUS
+_MAKE_JOBS_NUMBER=	${_SMP_CPUS}
 .endif
 .if defined(MAKE_JOBS_NUMBER_LIMIT) && ( ${MAKE_JOBS_NUMBER_LIMIT} < ${_MAKE_JOBS_NUMBER} )
 MAKE_JOBS_NUMBER=	${MAKE_JOBS_NUMBER_LIMIT}
@@ -2149,7 +2159,6 @@ MTREE_FILE=	/etc/mtree/BSD.usr.dist
 .else
 MTREE_FILE=	${PORTSDIR}/Templates/BSD.local.dist
 .endif
-MTREE_FILE_DEFAULT=yes
 .endif
 MTREE_CMD?=	/usr/sbin/mtree
 MTREE_ARGS?=	-U ${MTREE_FOLLOWS_SYMLINKS} -f ${MTREE_FILE} -d -e -p
@@ -2656,6 +2665,7 @@ CONFIGURE_FAIL_MESSAGE?=	"Please report the problem to ${MAINTAINER} [maintainer
 .if !defined(CONFIGURE_MAX_CMD_LEN)
 CONFIGURE_MAX_CMD_LEN!=	${SYSCTL} -n kern.argmax
 .endif
+_EXPORTED_VARS+=	CONFIGURE_MAX_CMD_LEN
 GNU_CONFIGURE_PREFIX?=	${PREFIX}
 GNU_CONFIGURE_MANPREFIX?=	${MANPREFIX}
 CONFIG_SITE?=		${PORTSDIR}/Templates/config.site
@@ -3076,7 +3086,6 @@ check-deprecated:
 # Check if the port is listed in the vulnerability database
 
 AUDITFILE?=		${PKG_DBDIR}/vuln.xml
-_EXTRACT_AUDITFILE=	${CAT} "${AUDITFILE}"
 
 check-vulnerable:
 .if !defined(DISABLE_VULNERABILITIES) && !defined(PACKAGE_BUILDING)
@@ -3715,33 +3724,38 @@ install-mtree:
 
 .if !target(install-ldconfig-file)
 install-ldconfig-file:
-.if defined(USE_LDCONFIG) || defined(USE_LDCONFIG32)
-.if defined(USE_LDCONFIG)
-.if defined(USE_LINUX_PREFIX)
-.else
-.if ${USE_LDCONFIG} != "${LOCALBASE}/lib" && !defined(INSTALL_AS_USER)
+.  if defined(USE_LDCONFIG) || defined(USE_LDCONFIG32)
+.    if defined(USE_LDCONFIG)
+.      if !defined(USE_LINUX_PREFIX)
+.        if ${USE_LDCONFIG} != "${LOCALBASE}/lib" && !defined(INSTALL_AS_USER)
 	@${ECHO_MSG} "===>   Installing ldconfig configuration file"
-.if defined(NO_MTREE) || ${PREFIX} != ${LOCALBASE}
+.          if defined(NO_MTREE) || ${PREFIX} != ${LOCALBASE}
 	@${MKDIR} ${STAGEDIR}${LOCALBASE}/${LDCONFIG_DIR}
-.endif
+.          endif
 	@${ECHO_CMD} ${USE_LDCONFIG} | ${TR} ' ' '\n' \
 		> ${STAGEDIR}${LOCALBASE}/${LDCONFIG_DIR}/${PKGBASE}
 	@${ECHO_CMD} ${LOCALBASE}/${LDCONFIG_DIR}/${PKGBASE} >> ${TMPPLIST}
-.endif
-.endif
-.endif
-.if defined(USE_LDCONFIG32)
-.if !defined(INSTALL_AS_USER)
+.          if ${PREFIX} != ${LOCALBASE}
+	@${ECHO_CMD} "@dir ${LOCALBASE}/${LDCONFIG_DIR}" >> ${TMPPLIST}
+.          endif
+.        endif
+.      endif
+.    endif
+.    if defined(USE_LDCONFIG32)
+.      if !defined(INSTALL_AS_USER)
 	@${ECHO_MSG} "===>   Installing 32-bit ldconfig configuration file"
-.if defined(NO_MTREE) || ${PREFIX} != ${LOCALBASE}
+.        if defined(NO_MTREE) || ${PREFIX} != ${LOCALBASE}
 	@${MKDIR} ${STAGEDIR}${LOCALBASE}/${LDCONFIG32_DIR}
-.endif
+.        endif
 	@${ECHO_CMD} ${USE_LDCONFIG32} | ${TR} ' ' '\n' \
 		> ${STAGEDIR}${LOCALBASE}/${LDCONFIG32_DIR}/${PKGBASE}
 	@${ECHO_CMD} ${LOCALBASE}/${LDCONFIG32_DIR}/${PKGBASE} >> ${TMPPLIST}
-.endif
-.endif
-.endif
+.        if ${PREFIX} != ${LOCALBASE}
+	@${ECHO_CMD} "@dir ${LOCALBASE}/${LDCONFIG32_DIR}" >> ${TMPPLIST}
+.        endif
+.      endif
+.    endif
+.  endif
 .endif
 
 .if !target(create-users-groups)
@@ -4453,7 +4467,7 @@ ALL-DEPENDS-LIST= \
 			dp_MAKE="${MAKE}" \
 			dp_PKGNAME="${PKGNAME}" \
 			dp_SCRIPTSDIR="${SCRIPTSDIR}" \
-			${SH} ${SCRIPTSDIR}/all-depends-list.sh
+			${SH} ${SCRIPTSDIR}/depends-list.sh -r
 
 CLEAN-DEPENDS-LIST= \
 	${SETENV} dp_ALLDEPENDS="${_UNIFIED_DEPENDS}" \
@@ -4523,6 +4537,10 @@ fetch-recursive-list:
 #	-mi
 FETCH_LIST?=	for i in $$deps; do \
 		prog=$${i%%:*}; dir=$${i\#*:}; \
+		case $$dir in \
+		/*) ;; \
+		*) dir=${PORTSDIR}/$$dir ;; \
+		esac; \
 		case $$dir in	\
 		*:*) if [ $$prog != $${prog\#/} -o ! -e $$prog ]; then	\
 				dir=$${dir%%:*};	\
@@ -4916,7 +4934,7 @@ ${i:S/-//:tu}=	${WRKDIR}/${SUB_FILES:M${i}*}
 .if !target(generate-plist)
 generate-plist: ${WRKDIR}
 	@${ECHO_MSG} "===>   Generating temporary packing list"
-	@${MKDIR} `${DIRNAME} ${TMPPLIST}`
+	@${MKDIR} ${TMPPLIST:H}
 	@if [ ! -f ${DESCR} ]; then ${ECHO_MSG} "** Missing pkg-descr for ${PKGNAME}."; exit 1; fi
 	@>${TMPPLIST}
 	@for file in ${PLIST_FILES}; do \
@@ -5138,13 +5156,11 @@ ${_t}:
 
 .if !defined(NOPRECIOUSMAKEVARS)
 # These won't change, so we can pass them through the environment
-.MAKEFLAGS: \
-	ARCH="${ARCH:S/"/"'"'"/g:S/\$/\$\$/g:S/\\/\\\\/g}" \
-	OPSYS="${OPSYS:S/"/"'"'"/g:S/\$/\$\$/g:S/\\/\\\\/g}" \
-	OSREL="${OSREL:S/"/"'"'"/g:S/\$/\$\$/g:S/\\/\\\\/g}" \
-	OSVERSION="${OSVERSION:S/"/"'"'"/g:S/\$/\$\$/g:S/\\/\\\\/g}" \
-	DFLYVERSION="${DFLYVERSION:Q}" \
-	SYSTEMVERSION="${SYSTEMVERSION:S/"/"'"'"/g:S/\$/\$\$/g:S/\\/\\\\/g}"
+.for var in ${_EXPORTED_VARS}
+.if empty(.MAKEFLAGS:M${var}=*) && !empty(${var})
+.MAKEFLAGS:	${var}=${${var}:Q}
+.endif
+.endfor
 .endif
 
 .if !target(pre-check-config)
@@ -5383,7 +5399,7 @@ config-conditional:
 .endif
 .endif # config-conditional
 
-.if !target(showconfig)
+.if !target(showconfig) && (make(*config*) || (!empty(.MAKEFLAGS:M-V) && !empty(.MAKEFLAGS:M*_DESC)))
 .include "${PORTSDIR}/Mk/bsd.options.desc.mk"
 MULTI_EOL=	: you have to choose at least one of them
 SINGLE_EOL=	: you have to select exactly one of them

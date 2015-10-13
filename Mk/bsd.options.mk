@@ -125,7 +125,7 @@
 # EXTRACT_ONLY GH_ACCOUNT GH_PROJECT GH_TAGNAME IGNORE INFO INSTALL_TARGET
 # LDFLAGS LIBS MAKE_ARGS MAKE_ENV PATCHFILES PATCH_SITES PLIST_DIRS
 # PLIST_DIRSTRY PLIST_FILES PLIST_SUB PORTDOCS PORTEXAMPLES SUB_FILES SUB_LIST
-# USES,
+# TEST_TARGET USES,
 # defining ${opt}_${variable} will add its content to the actual variable when
 # the option is enabled.  Defining ${opt}_${variable}_OFF will add its content
 # to the actual variable when the option is disabled.
@@ -152,7 +152,7 @@ _OPTIONS_FLAGS=	ALL_TARGET BROKEN CATEGORIES CFLAGS CONFIGURE_ENV CONFLICTS \
 		GH_ACCOUNT GH_PROJECT GH_TAGNAME IGNORE INFO INSTALL_TARGET \
 		LDFLAGS LIBS MAKE_ARGS MAKE_ENV PATCHFILES PATCH_SITES \
 		PLIST_DIRS PLIST_DIRSTRY PLIST_FILES PLIST_SUB PORTDOCS \
-		PORTEXAMPLES SUB_FILES SUB_LIST USES
+		PORTEXAMPLES SUB_FILES SUB_LIST TEST_TARGET USES
 _OPTIONS_DEPENDS=	PKG FETCH EXTRACT PATCH BUILD LIB RUN
 
 # The format here is target_family:priority:target-type
@@ -187,6 +187,10 @@ PORT_OPTIONS+=	EXAMPLES
 OPTIONS_WARNINGS+=		"NOPORTEXAMPLES"
 WITHOUT+=			EXAMPLES
 OPTIONS_WARNINGS_UNSET+=	EXAMPLES
+.endif
+
+.if defined(DEVELOPER)
+PORT_OPTIONS+=	TEST
 .endif
 
 PORT_OPTIONS+=	IPV6
@@ -476,12 +480,12 @@ USE_${_u:tu}+=	${option:C/.*=//g:C/,/ /g}
 .      endfor
 .    endif
 .    if defined(${opt}_VARS)
-.      for var in ${${opt}_VARS}
-_u=		${var:C/=.*//}
+.      for var in ${${opt}_VARS:C/=.*//:O:u}
+_u=			${var}
 .        if ${_u:M*+}
-${_u:C/.$//:tu}+=	${var:C/[^+]*\+=//:C/^"(.*)"$$/\1/}
+${_u:C/.$//:tu}+=	${${opt}_VARS:M${var}=*:C/[^+]*\+=//:C/^"(.*)"$$/\1/}
 .        else
-${_u:tu}=	${var:C/[^=]*=//:C/^"(.*)"$$/\1/}
+${_u:tu}=		${${opt}_VARS:M${var}=*:C/[^=]*=//:C/^"(.*)"$$/\1/}
 .        endif
 .      endfor
 .    endif
@@ -524,12 +528,12 @@ USE_${_u:tu}+=	${option:C/.*=//g:C/,/ /g}
 .      endfor
 .    endif
 .    if defined(${opt}_VARS_OFF)
-.      for var in ${${opt}_VARS_OFF}
-_u=		${var:C/=.*//}
+.      for var in ${${opt}_VARS_OFF:C/=.*//:O:u}
+_u=			${var}
 .        if ${_u:M*+}
-${_u:C/.$//:tu}+=	${var:C/[^+]*\+=//:C/^"(.*)"$$/\1/}
+${_u:C/.$//:tu}+=	${${opt}_VARS_OFF:M${var}=*:C/[^+]*\+=//:C/^"(.*)"$$/\1/}
 .        else
-${_u:tu}=	${var:C/[^=]*=//:C/^"(.*)"$$/\1/}
+${_u:tu}=		${${opt}_VARS_OFF:M${var}=*:C/[^=]*=//:C/^"(.*)"$$/\1/}
 .        endif
 .      endfor
 .    endif
