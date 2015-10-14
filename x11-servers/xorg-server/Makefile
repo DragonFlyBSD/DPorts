@@ -14,12 +14,10 @@ COMMENT?=	X.Org X server and related programs
 
 LICENSE=	MIT
 
-LIB_DEPENDS=	libdrm.so:${PORTSDIR}/graphics/libdrm \
+LIB_DEPENDS+=	libdrm.so:${PORTSDIR}/graphics/libdrm \
 		libepoxy.so:${PORTSDIR}/graphics/libepoxy
-RUN_DEPENDS=	xkeyboard-config>=2.5:${PORTSDIR}/x11/xkeyboard-config \
+RUN_DEPENDS+=	xkeyboard-config>=2.5:${PORTSDIR}/x11/xkeyboard-config \
 		xkbcomp:${PORTSDIR}/x11/xkbcomp
-
-BUILD_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/epoxy.pc:${PORTSDIR}/graphics/libepoxy
 
 XORG_CAT=	xserver
 SLAVE_PORT?=	no
@@ -39,7 +37,7 @@ OPTIONS_EXCLUDE_sparc64=	HAL
 
 USES=		gmake libtool perl5 tar:bzip2
 USE_PERL5=	build
-USE_GL=		egl gbm gl
+USE_GL=		gbm egl gl
 USE_XORG?=	xf86driproto glproto xdmcp x11 xkbfile xxf86misc xxf86vm xaw7 \
 		xmu xt xpm xext randrproto renderproto fixesproto damageproto \
 		dri2proto xcmiscproto xextproto xproto xtrans \
@@ -82,11 +80,6 @@ CONFIGURE_ARGS+=	--enable-config-hal=no
 
 # We handle Xorg setuid in the plist. This allows to build xorg-server as a user.
 CONFIGURE_ARGS+=--disable-install-setuid
-
-.if ${ARCH} == armv6
-EXTRA_PATCHES+=	${FILESDIR}/extra-arm-patch-hw__xfree86__os-support__bsd__Makefile.in
-EXTRA_PATCHES+=	${FILESDIR}/extra-arm-patch-include__servermd.h
-.endif
 
 .if ${ARCH} == i386
 EXTRA_PATCHES+=	${FILESDIR}/extra-arch-i386

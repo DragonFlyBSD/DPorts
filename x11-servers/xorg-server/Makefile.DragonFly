@@ -1,4 +1,2 @@
-# freebsd-ports-graphics/xserver-next
-
 # Disable HAL as a default option, use UDEV instead
 OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NHAL} UDEV
