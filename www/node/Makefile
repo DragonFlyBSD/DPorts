@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	node
-PORTVERSION=	4.1.1
+PORTVERSION=	4.1.2
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www
 MASTER_SITES=	http://nodejs.org/dist/v${PORTVERSION}/
@@ -18,7 +18,7 @@ USES=		compiler execinfo gmake python:2
 HAS_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
-CONFLICTS_INSTALL=	node-0.[02-9][0-9]* node-devel-0.[0-9]* node010-[0-9]* iojs-[0-9]*
+CONFLICTS_INSTALL=	node-0.[02-9][0-9]* node-devel-0.[0-9]* node010-[0-9]* node012-[0-9]* iojs-[0-9]*
 
 ONLY_FOR_ARCHS=	i386 amd64
 CONFIGURE_ARGS=	--prefix=${PREFIX_RELDEST} --without-npm --shared-zlib
@@ -39,7 +39,7 @@ CFLAGS+=	-Wno-unused-const-variable
 .endif
 .else
 MAKE_ARGS+=	strictaliasing=off
-USE_GCC=	any
+USE_GCC=	4.8+
 .endif
 
 post-patch:
