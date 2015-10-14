@@ -4,6 +4,11 @@ PORTNAME=	xephyr
 
 COMMENT=	X server from X.Org based on kdrive
 
+LIB_DEPENDS+=	libxcb-image.so:${PORTSDIR}/x11/xcb-util-image \
+		libxcb-icccm.so:${PORTSDIR}/x11/xcb-util-wm \
+		libxcb-keysyms.so:${PORTSDIR}/x11/xcb-util-keysyms \
+		libxcb-render-util.so:${PORTSDIR}/x11/xcb-util-renderutil
+
 MASTERDIR=	${.CURDIR}/../xorg-server
 DESCR=		${.CURDIR}/pkg-descr
 USE_XORG=	x11 xf86driproto glproto randrproto renderproto fixesproto \
@@ -12,7 +17,7 @@ USE_XORG=	x11 xf86driproto glproto randrproto renderproto fixesproto \
 		resourceproto fontsproto videoproto \
 		compositeproto trapproto recordproto \
 		xineramaproto xinerama evieproto xkbfile xfont \
-		xau xdmcp xext fontenc xv pixman
+		xau xdmcp xext fontenc xv pixman presentproto
 
 CONFIGURE_ARGS=	--enable-kdrive --enable-xephyr	--disable-dmx --disable-xvfb \
 		--without-xmlto --disable-docs --disable-devel-docs \
@@ -20,11 +25,6 @@ CONFIGURE_ARGS=	--enable-kdrive --enable-xephyr	--disable-dmx --disable-xvfb \
 
 SLAVE_PORT=	yes
 PLIST_FILES=	bin/Xephyr man/man1/Xephyr.1.gz
-USE_XORG+=	presentproto xcb
-BUILD_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/xcb-renderutil.pc:${PORTSDIR}/x11/xcb-util-renderutil \
-		${LOCALBASE}/libdata/pkgconfig/xcb-icccm.pc:${PORTSDIR}/x11/xcb-util-wm \
-		${LOCALBASE}/libdata/pkgconfig/xcb-keysyms.pc:${PORTSDIR}/x11/xcb-util-keysyms \
-		${LOCALBASE}/libdata/pkgconfig/xcb-image.pc:${PORTSDIR}/x11/xcb-util-image
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/hw/kdrive/ephyr/Xephyr ${STAGEDIR}${PREFIX}/bin/
