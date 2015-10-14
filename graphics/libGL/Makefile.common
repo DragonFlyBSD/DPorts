@@ -139,6 +139,8 @@ PLIST_SUB+=     VDPAU="@comment "
 CONFIGURE_ARGS+=--disable-vdpau
 .else
 CONFIGURE_ARGS+=--enable-vdpau
+LIB_DEPENDS+=   libvdpau.so:${PORTSDIR}/multimedia/libvdpau
+PLIST_SUB+=     VDPAU=""
 .endif
 
 ALL_DRI_DRIVERS=I915 I965 R200 RADEON SWRAST
