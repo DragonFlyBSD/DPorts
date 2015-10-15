@@ -11,6 +11,9 @@ PKGNAMESUFFIX?=	51-server
 MAINTAINER=	ale@FreeBSD.org
 COMMENT?=	Multithreaded SQL database (server)
 
+DEPRECATED=	EOL upstream, use mysql55 or mysql56 instead
+EXPIRATION_DATE=	2015-11-10
+
 SLAVEDIRS=	databases/mysql51-client databases/mysql51-scripts
 GNU_CONFIGURE=	yes
 
@@ -162,7 +165,7 @@ post-patch:
 .if defined(CLIENT_ONLY)
 CONFLICTS_INSTALL=	mysql5[02-9]-client-* \
 			mariadb*-client-* \
-			percona*-client-* 
+			percona*-client-*
 
 MAN1=		mysql_config.1 mysql_upgrade.1 mysql.1 mysqladmin.1 \
 		mysqlbinlog.1 mysqlbug.1 mysqlcheck.1 \
