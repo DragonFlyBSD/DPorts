@@ -14,14 +14,13 @@ USE_XORG=	x11 xf86driproto glproto randrproto renderproto fixesproto \
 		compositeproto trapproto recordproto resourceproto \
 		xineramaproto xinerama evieproto xkbfile xfont fontenc xkbui \
 		xxf86misc xxf86vm xaw7 xmu xpm xext xrender xfixes xi dmxproto \
-		xau dmx xtst xres pixman xtrans
+		xau dmx xtst xres pixman xtrans presentproto
 
 CONFIGURE_ARGS=	--disable-xvfb --disable-xnest \
 		--without-xmlto	--disable-docs --disable-devel-docs \
 		--enable-dmx --localstatedir=/var --without-dtrace
 
 SLAVE_PORT=	yes
-USE_XORG+=	presentproto
 
 do-install:
 	cd ${WRKSRC}/hw/dmx; DESTDIR=${STAGEDIR} ${MAKE} install
