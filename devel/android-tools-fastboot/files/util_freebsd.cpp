@@ -25,6 +25,8 @@
  * SUCH DAMAGE.
  */
 
+#include "fastboot.h"
+
 #include <unistd.h>
 #include <limits.h>
 

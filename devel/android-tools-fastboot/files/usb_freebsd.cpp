@@ -41,11 +41,11 @@ struct usb_handle {
 };
 
 static int 
-probe(struct usb_handle *h, ifc_match_func callback)
+probe(usb_handle *h, ifc_match_func callback)
 {
-	struct usb_ifc_info info;
-	struct libusb_device_descriptor ddesc;
-	struct libusb_config_descriptor *pcfg;
+	usb_ifc_info info;
+	libusb_device_descriptor ddesc;
+	libusb_config_descriptor *pcfg;
 	int i, j;
 
 	if (libusb_open(h->dev, &h->handle) < 0)
@@ -129,7 +129,7 @@ enumerate(ifc_match_func callback)
 	ssize_t ndev;
 	ssize_t x;
 
-	h = malloc(sizeof(*h));
+	h = reinterpret_cast<usb_handle*>(malloc(sizeof(*h)));
 	if (h == NULL)
 		return (h);
 
@@ -159,7 +159,8 @@ usb_write(usb_handle * h, const void *_data, int len)
 {
 	int actlen;
 
-	if (libusb_bulk_transfer(h->handle, h->ep_out, (void *)(long)_data, len, &actlen, 0) < 0)
+	if (libusb_bulk_transfer(h->handle, h->ep_out,
+				 (unsigned char *)_data, len, &actlen, 0) < 0)
 		return (-1);
 	return (actlen);
 }
@@ -169,7 +170,8 @@ usb_read(usb_handle * h, void *_data, int len)
 {
 	int actlen;
 
-	if (libusb_bulk_transfer(h->handle, h->ep_in, _data, len, &actlen, 0) < 0)
+	if (libusb_bulk_transfer(h->handle, h->ep_in,
+				 (unsigned char *)_data, len, &actlen, 0) < 0)
 		return (-1);
 	return (actlen);
 }
