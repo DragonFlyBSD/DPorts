@@ -1,6 +1,6 @@
---- configure.orig	2014-09-05 04:28:09.000000000 +0900
-+++ configure	2014-09-05 04:29:09.000000000 +0900
-@@ -13046,7 +13046,7 @@
+--- configure.orig	2015-08-11 18:52:18 UTC
++++ configure
+@@ -13782,7 +13782,7 @@ case "$host" in #(
    *-*-linux*|*-*-cygwin*|*-gnu*) :
      WM_OSDEP="linux" ; CPPFLAGS="$CPPFLAGS -D_XOPEN_SOURCE=600" ;; #(
    *-*-freebsd*|*-k*bsd-gnu*) :
