@@ -1,0 +1,4 @@
+.if !defined(QTCURVE_SLAVE)
+# There is no NO_PATCH
+DFLY_PATCHDIR=	${MASTERDIR}/none
+.endif
