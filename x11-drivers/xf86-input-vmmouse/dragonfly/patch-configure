@@ -1,0 +1,20 @@
+--- configure.orig	2015-06-25 13:27:50.000000000 +0300
++++ configure
+@@ -18024,7 +18024,7 @@ done
+ $as_echo "#define VMMOUSE_OS_GENERIC 1" >>confdefs.h
+ 
+      ;;
+-     *bsd*)
++     *bsd*|dragonfly*)
+ 
+ $as_echo "#define VMMOUSE_OS_BSD 1" >>confdefs.h
+ 
+@@ -18073,7 +18073,7 @@ case $host_cpu in
+ 	;;
+      x86_64*|amd64*)
+ 	case $host_os in
+-		*freebsd*)
++		*freebsd*|*dragonfly*)
+ $as_echo "#define USE_DEV_IO 1" >>confdefs.h
+  ;;
+ 		*netbsd*)
