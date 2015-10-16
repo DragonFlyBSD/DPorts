@@ -1,0 +1,8 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(defined(__FreeBSD__)\)@\1 || defined(__DragonFly__)@g'		\
+		-e 's@ifdef __FreeBSD__@if defined(__FreeBSD__) || defined(__DragonFly__)@g'	\
+		${WRKSRC}/../../src/utils/os_unix.c
+#		${WRKSRC}/../../wpa_supplicant/ctrl_iface_unix.c	\
+#		${WRKSRC}/../../src/utils/os_internal.c
+
