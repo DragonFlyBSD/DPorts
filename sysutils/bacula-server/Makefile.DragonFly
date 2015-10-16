@@ -1,3 +1,6 @@
 USES+=			readline
-CONFIGURE_ARGS+= 	--with-readline=${LOCALBASE}/include/readline
 CONFIGURE_ENV+=		ac_cv_header_regex_h=no
+
+CONFIGURE_ARGS+=	--disable-xattr
+CPPFLAGS:=		-I${LOCALBASE}/include/readline ${CPPFLAGS}
+CFLAGS:=		-I${LOCALBASE}/include/readline ${CFLAGS}
