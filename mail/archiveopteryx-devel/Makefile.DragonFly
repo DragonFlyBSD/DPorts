@@ -1,0 +1,4 @@
+# zrj: not whole world is clang
+dfly-patch:
+	${REINPLACE_CMD} -e 's@CLANG@CLANG_NOT@g'	\
+		${WRKSRC}/Jamrules
