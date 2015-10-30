@@ -47,7 +47,7 @@ USE_XORG=	x11 xext xi xrender xt xtst
 BUILD_DEPENDS+=	${UNZIP_CMD}:${PORTSDIR}/archivers/unzip
 .endif
 
-ONLY_FOR_ARCHS=	amd64 armv6 i386
+ONLY_FOR_ARCHS=	amd64 armv6 armv6hf i386
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 DOS2UNIX_FILES= jdk/src/bsd/doc/man/appletviewer.1 \
@@ -191,8 +191,8 @@ JRE_IMAGEDIR=	${JDK_BUILDDIR}/images/j2sdk-image/jre
 .else
 JRE_IMAGEDIR=	${JDK_BUILDDIR}/images/j2re-image
 .endif
-JDK_JVMDIR=	lib/${ARCH:S/x86_64/amd64/:S/armv6/arm/}
-JDK_OSARCH=	bsd-${ARCH:S/amd64/x86_64/:S/armv6/arm/:S/i386/x86/}
+JDK_JVMDIR=	lib/${ARCH:S/x86_64/amd64/:C/armv6.*/arm/}
+JDK_OSARCH=	bsd-${ARCH:S/amd64/x86_64/:C/armv6.*/arm/:S/i386/x86/}
 INSTALLDIR=	${PREFIX}/${PKGBASE}
 
 NO_CCACHE=		yes
@@ -289,7 +289,7 @@ LIB_DEPENDS+=	libffi.so:${PORTSDIR}/devel/libffi
 .endif
 
 BOOTSTRAP_JDKS=	${LOCALBASE}/openjdk8
-.if ${ARCH} == "armv6"
+.if ${ARCH:Marmv6*}
 BOOTSTRAP_JDKS+= ${LOCALBASE}/bootstrap-openjdk
 .else
 BOOTSTRAP_JDKS+= ${LOCALBASE}/openjdk7
@@ -304,7 +304,7 @@ BOOTSTRAPJDKDIR=	${BJDK}
 
 # if no valid jdk found, set dependency
 .if !defined(BOOTSTRAPJDKDIR)
-.  if ${ARCH} == "armv6"
+.  if ${ARCH:Marmv6*}
 # bootstrap-openjdk is based on openjdk7 and can compile openjdk8
 BOOTSTRAPJDKDIR?=	${LOCALBASE}/bootstrap-openjdk
 BUILD_DEPENDS+=		${BOOTSTRAPJDKDIR}/bin/javac:${PORTSDIR}/java/bootstrap-openjdk
