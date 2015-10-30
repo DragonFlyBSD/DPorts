@@ -1,6 +1,6 @@
---- configure.orig	2014-03-21 20:46:31.000000000 +0000
+--- configure.orig	2015-09-21 18:48:41 UTC
 +++ configure
-@@ -22858,7 +22858,7 @@ case "$host_os" in
+@@ -14514,7 +14514,7 @@ case "$host_os" in
    linux*aout*)
      objfmt='a.out'
    ;;
@@ -9,7 +9,7 @@
      case "$host_cpu" in
        x86_64)
          objfmt='ELF64'
-@@ -23060,7 +23060,7 @@ case "$host_os" in
+@@ -14712,7 +14712,7 @@ case "$host_os" in
    linux*aout*)
      objfmt='a.out'
    ;;
