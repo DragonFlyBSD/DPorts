@@ -3763,13 +3763,18 @@ install-ldconfig-file:
 _UG_OUTPUT=	${WRKDIR}/users-groups.sh
 PKGPREINSTALL+=	${_UG_OUTPUT}
 create-users-groups:
+	@${RM} -f ${_UG_OUTPUT} || ${TRUE}
+.if ${OPSYS} != FreeBSD || ${OSVERSION} < 1002000
+	@${ECHO_CMD} "PW=${PW}" >> ${_UG_OUTPUT}
+.else
+	@${ECHO_CMD} -e "if [ -n \"\$${PKG_ROOTDIR}\" -a \"\$${PKG_ROOTDIR}\" != \"/\" ]; then PW=\"${PW} -R \$${PKG_ROOTDIR}\"; else PW=${PW}; fi" >> ${_UG_OUTPUT}
+.endif
 .if defined(GROUPS)
 .for _file in ${GID_FILES}
 .if !exists(${_file})
 	@${ECHO_CMD} "** ${_file} doesn't exist. Exiting."; exit 1
 .endif
 .endfor
-	@${RM} -f ${_UG_OUTPUT} || ${TRUE}
 	@${ECHO_MSG} "===> Creating users and/or groups."
 	@${ECHO_CMD} "echo \"===> Creating users and/or groups.\"" >> ${_UG_OUTPUT}
 .for _group in ${GROUPS}
@@ -3780,9 +3785,9 @@ create-users-groups:
 	fi
 	@IFS=":"; ${GREP} -h ^${_group}: ${GID_FILES} | head -n 1 | while read group foo gid members; do \
 		gid=$$(($$gid+${GID_OFFSET})); \
-		${ECHO_CMD} -e "if ! ${PW} groupshow $$group >/dev/null 2>&1; then \n \
+		${ECHO_CMD} -e "if ! \$${PW} groupshow $$group >/dev/null 2>&1; then \n \
 			echo \"Creating group '$$group' with gid '$$gid'.\" \n \
-			${PW} groupadd $$group -g $$gid; else echo \"Using existing group '$$group'.\"\nfi" >> ${_UG_OUTPUT}; \
+			\$${PW} groupadd $$group -g $$gid; else echo \"Using existing group '$$group'.\"\nfi" >> ${_UG_OUTPUT}; \
 	done
 .endfor
 .endif
@@ -3803,9 +3808,9 @@ create-users-groups:
 		gid=$$(($$gid+${GID_OFFSET})); \
 		class="$${class:+-L }$$class"; \
 		homedir=$$(echo $$homedir | sed "s|^/usr/local|${PREFIX}|"); \
-		${ECHO_CMD} -e "if ! ${PW} usershow $$login >/dev/null 2>&1; then \n \
+		${ECHO_CMD} -e "if ! \$${PW} usershow $$login >/dev/null 2>&1; then \n \
 			echo \"Creating user '$$login' with uid '$$uid'.\" \n \
-			${PW} useradd $$login -u $$uid -g $$gid $$class -c \"$$gecos\" -d $$homedir -s $$shell \n \
+			\$${PW} useradd $$login -u $$uid -g $$gid $$class -c \"$$gecos\" -d $$homedir -s $$shell \n \
 			else \necho \"Using existing user '$$login'.\" \nfi" >> ${_UG_OUTPUT}; \
 		case $$homedir in /|/nonexistent|/var/empty) ;; *) ${ECHO_CMD} "${INSTALL} -d -g $$gid -o $$uid $$homedir" >> ${_UG_OUTPUT};; esac; \
 	done
@@ -3818,9 +3823,9 @@ create-users-groups:
 		IFS=","; for _login in $$members; do \
 			for _user in ${USERS}; do \
 				if [ "x$${_user}" = "x$${_login}" ]; then \
-					${ECHO_CMD} -e "if ! ${PW} groupshow ${_group} | ${GREP} -qw $${_login}; then \n \
+					${ECHO_CMD} -e "if ! \$${PW} groupshow ${_group} | ${GREP} -qw $${_login}; then \n \
 						echo \"Adding user '$${_login}' to group '${_group}'.\" \n \
-						${PW} groupmod ${_group} -m $${_login} \nfi" >> ${_UG_OUTPUT}; \
+						\$${PW} groupmod ${_group} -m $${_login} \nfi" >> ${_UG_OUTPUT}; \
 				fi; \
 			done; \
 		done; \
@@ -3829,10 +3834,19 @@ create-users-groups:
 .endif
 .if defined(USERS)
 .for _user in ${USERS}
+.if ${OPSYS} != FreeBSD || ${OSVERSION} < 1002000
 	@if [ ! ${USERS_BLACKLIST:M${_user}} ]; then \
-		${ECHO_CMD} "@unexec if ${PW} usershow ${_user} >/dev/null 2>&1; then \
-		echo \"==> You should manually remove the \\\"${_user}\\\" user. \"; fi" >> ${TMPPLIST}; \
+		${ECHO_CMD} "@unexec PW=${PW}; \
+			if \$${PW} usershow ${_user} >/dev/null 2>&1; then \
+			echo \"==> You should manually remove the \\\"${_user}\\\" user. \"; fi" >> ${TMPPLIST}; \
 	fi
+.else
+	@if [ ! ${USERS_BLACKLIST:M${_user}} ]; then \
+		${ECHO_CMD} "@unexec if [ -n \"\$${PKG_ROOTDIR}\" -a \"\$${PKG_ROOTDIR}\" != \"/\" ]; then PW=\"${PW} -R \$${PKG_ROOTDIR}\"; else PW=${PW}; fi; \
+			if \$${PW} usershow ${_user} >/dev/null 2>&1; then \
+			echo \"==> You should manually remove the \\\"${_user}\\\" user. \"; fi" >> ${TMPPLIST}; \
+	fi
+.endif
 .endfor
 .endif
 .endif
@@ -4461,32 +4475,31 @@ _DEPEND_SPECIALS=	${_UNIFIED_DEPENDS:M*\:*\:*:C,^[^:]*:([^:]*):.*$,\1,}
 all-depends-list:
 	@${ALL-DEPENDS-LIST}
 
-ALL-DEPENDS-LIST= \
-	${SETENV} dp_ALLDEPENDS="${_UNIFIED_DEPENDS}" \
+# This script is shared among several dependency list variables.  See file for
+# usage.
+DEPENDS-LIST= \
+	${SETENV} \
 			dp_PORTSDIR="${PORTSDIR}" \
 			dp_MAKE="${MAKE}" \
 			dp_PKGNAME="${PKGNAME}" \
 			dp_SCRIPTSDIR="${SCRIPTSDIR}" \
-			${SH} ${SCRIPTSDIR}/depends-list.sh -r
+			${SH} ${SCRIPTSDIR}/depends-list.sh
 
-CLEAN-DEPENDS-LIST= \
-	${SETENV} dp_ALLDEPENDS="${_UNIFIED_DEPENDS}" \
-			dp_PORTSDIR="${PORTSDIR}" \
-			dp_MAKE="${MAKE}" \
-			dp_PKGNAME="${PKGNAME}" \
-			dp_SCRIPTSDIR="${SCRIPTSDIR}" \
-			${SH} ${SCRIPTSDIR}/clean-depends-list.sh
+ALL-DEPENDS-LIST=			${DEPENDS-LIST} -r ${_UNIFIED_DEPENDS:Q}
+TEST-DEPENDS-LIST=			${DEPENDS-LIST} ${TEST_DEPENDS:Q}
+CLEAN-DEPENDS-LIST=			${DEPENDS-LIST} -wr ${_UNIFIED_DEPENDS:Q} 
+CLEAN-DEPENDS-LIMITED-LIST=	${DEPENDS-LIST} -w ${_UNIFIED_DEPENDS:Q}
 
 .if !target(clean-depends)
 clean-depends:
-	@for dir in $$(${CLEAN-DEPENDS-LIST} full); do \
+	@for dir in $$(${CLEAN-DEPENDS-LIST}); do \
 		(cd $$dir; ${MAKE} NOCLEANDEPENDS=yes clean); \
 	done
 .endif
 
 .if !target(limited-clean-depends)
 limited-clean-depends:
-	@for dir in $$(${CLEAN-DEPENDS-LIST} limited); do \
+	@for dir in $$(${CLEAN-DEPENDS-LIMITED-LIST}); do \
 		(cd $$dir; ${MAKE} NOCLEANDEPENDS=yes clean); \
 	done
 .endif
@@ -4630,13 +4643,6 @@ test-depends-list:
 .if defined(TEST_DEPENDS)
 	@${TEST-DEPENDS-LIST}
 .endif
-
-TEST-DEPENDS-LIST= \
-	${SETENV} dp_ALLDEPENDS="${TEST_DEPENDS}" \
-			dp_PORTSDIR="${PORTSDIR}" \
-			dp_PKGNAME="${PKGNAME}" \
-			dp_SCRIPTSDIR="${SCRIPTSDIR}" \
-			${SH} ${SCRIPTSDIR}/depends-list.sh
 
 # Package (recursive runtime) dependency list.  Print out both directory names
 # and package names.
@@ -4805,12 +4811,12 @@ missing-packages:
 # first to avoid gratuitous breakage.
 
 . if !target(describe)
-_EXTRACT_DEPENDS=${EXTRACT_DEPENDS:C/^[^ :]+:([^ :]+)(:[^ :]+)?/\1/:O:u}
-_PATCH_DEPENDS=${PATCH_DEPENDS:C/^[^ :]+:([^ :]+)(:[^ :]+)?/\1/:O:u}
-_FETCH_DEPENDS=${FETCH_DEPENDS:C/^[^ :]+:([^ :]+)(:[^ :]+)?/\1/:O:u}
-_LIB_DEPENDS=${LIB_DEPENDS:C/^[^ :]+:([^ :]+)(:[^ :]+)?/\1/:O:u}
-_BUILD_DEPENDS=${BUILD_DEPENDS:C/^[^ :]+:([^ :]+)(:[^ :]+)?/\1/:O:u} ${_LIB_DEPENDS}
-_RUN_DEPENDS=${RUN_DEPENDS:C/^[^ :]+:([^ :]+)(:[^ :]+)?/\1/:O:u} ${_LIB_DEPENDS}
+_EXTRACT_DEPENDS=${EXTRACT_DEPENDS:C/^[^ :]+:([^ :]+)(:[^ :]+)?/\1/:O:u:C,(^[^/]),${PORTSDIR}/\1,}
+_PATCH_DEPENDS=${PATCH_DEPENDS:C/^[^ :]+:([^ :]+)(:[^ :]+)?/\1/:O:u:C,(^[^/]),${PORTSDIR}/\1,}
+_FETCH_DEPENDS=${FETCH_DEPENDS:C/^[^ :]+:([^ :]+)(:[^ :]+)?/\1/:O:u:C,(^[^/]),${PORTSDIR}/\1,}
+_LIB_DEPENDS=${LIB_DEPENDS:C/^[^ :]+:([^ :]+)(:[^ :]+)?/\1/:O:u:C,(^[^/]),${PORTSDIR}/\1,}
+_BUILD_DEPENDS=${BUILD_DEPENDS:C/^[^ :]+:([^ :]+)(:[^ :]+)?/\1/:O:u:C,(^[^/]),${PORTSDIR}/\1,} ${_LIB_DEPENDS}
+_RUN_DEPENDS=${RUN_DEPENDS:C/^[^ :]+:([^ :]+)(:[^ :]+)?/\1/:O:u:C,(^[^/]),${PORTSDIR}/\1,} ${_LIB_DEPENDS}
 . if exists(${DESCR})
 _DESCR=${DESCR}
 . else
