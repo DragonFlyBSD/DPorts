@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/www/varnish4/files/varnishlog.in 392997 2015-07-27 17:53:18Z feld $
+# $FreeBSD: head/www/varnish4/files/varnishlog.in 400150 2015-10-25 14:51:33Z feld $
 #
 
 # PROVIDE: varnishlog
@@ -40,7 +40,8 @@ load_rc_config ${name}
 : ${varnishlog_enable:=NO}
 : ${varnishlog_pidfile=/var/run/${name}.pid}
 : ${varnishlog_file=/var/log/varnish.log}
-: ${varnishlog_flags="-P ${varnishlog_pidfile} -D -a -w ${varnishlog_file}"}
+: ${varnishlog_flags="-P ${varnishlog_pidfile} -D -a -A -w ${varnishlog_file}"}
+: ${varnishlog_user=varnishlog}
 
 command="%%PREFIX%%/bin/${name}"
 pidfile=${varnishlog_pidfile}
@@ -48,6 +49,14 @@ start_precmd=precmd
 
 precmd()
 {
+	if [ ! -e ${pidfile} ]; then
+		install -o ${varnishlog_user} -g varnish /dev/null ${pidfile};
+	fi
+
+	if [ ! -e ${varnishlog_file} ]; then
+		install -o ${varnishlog_user} -g varnish /dev/null ${varnishlog_file};
+	fi
+
 	waitcount=0
 	vsm=%%PREFIX%%/varnish/$(hostname)/_.vsm
 	

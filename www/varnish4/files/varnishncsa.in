@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/www/varnish4/files/varnishncsa.in 392997 2015-07-27 17:53:18Z feld $
+# $FreeBSD: head/www/varnish4/files/varnishncsa.in 399688 2015-10-19 15:04:31Z feld $
 #
 
 # PROVIDE: varnishncsa
@@ -46,6 +46,7 @@ load_rc_config ${name}
 : ${varnishncsa_pidfile=/var/run/${name}.pid}
 : ${varnishncsa_file=/var/log/${name}.log}
 : ${varnishncsa_flags="-P ${varnishncsa_pidfile} -D -a -w ${varnishncsa_file}${varnishncsa_logformat:+ -F \"$varnishncsa_logformat\"}"}
+: ${varnishncsa_user=varnishlog}
 
 command="%%PREFIX%%/bin/${name}"
 pidfile=${varnishncsa_pidfile}
@@ -53,6 +54,14 @@ start_precmd=precmd
 
 precmd()
 {
+	if [ ! -e ${pidfile} ]; then
+		install -o ${varnishncsa_user} -g varnish /dev/null ${pidfile};
+	fi
+
+	if [ ! -e ${varnishncsa_file} ]; then
+		install -o ${varnishncsa_user} -g varnish /dev/null ${varnishncsa_file};
+	fi
+
 	waitcount=0
 	vsm=%%PREFIX%%/varnish/$(hostname)/_.vsm
 	
