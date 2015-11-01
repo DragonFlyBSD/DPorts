@@ -1,0 +1,9 @@
+USES += alias
+
+dfly-patch:
+	@${CP} ${WRKSRC}/src/osdep/freebsd.c ${WRKSRC}/src/osdep/dragonfly.c
+	@${CP} ${WRKSRC}/src/osdep/freebsd_tap.c ${WRKSRC}/src/osdep/dragonfly_tap.c
+	@${REINPLACE_CMD} \
+		-e 's/net80211/netproto\/802_11/g' \
+		-e 's/ieee80211_freebsd/ieee80211_dragonfly/' \
+			${WRKSRC}/src/osdep/dragonfly.c

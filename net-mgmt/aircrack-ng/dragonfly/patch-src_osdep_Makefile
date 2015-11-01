@@ -1,0 +1,22 @@
+--- src/osdep/Makefile.orig	2014-03-23 00:26:59.000000000 +0400
++++ src/osdep/Makefile	2015-10-31 07:35:17.684191000 +0300
+@@ -15,6 +15,7 @@
+ OBJS_OBSD	= $(OBJS) openbsd.o openbsd_tap.o
+ OBJS_NBSD	= $(OBJS) netbsd.o netbsd_tap.o
+ OBJS_FBSD	= $(OBJS) freebsd.o freebsd_tap.o
++OBJS_DFBSD	= $(OBJS) dragonfly.o dragonfly_tap.o
+ OBJS_LINUX	= $(OBJS) linux.o linux_tap.o radiotap/radiotap.o common.o
+ OBJS_DUMMY	= $(OBJS) dummy.o dummy_tap.o
+ OBJS_CYGWIN	= $(OBJS) cygwin.o cygwin_tap.o radiotap/radiotap.o
+@@ -42,6 +43,11 @@
+ 	$(RANLIB) $(LIB)
+ 	touch $(@)
+ 
++.os.DragonFly:  $(OBJS_DFBSD)
++	$(AR) cru $(LIB) $(OBJS_DFBSD)
++	$(RANLIB) $(LIB)
++	touch $(@)
++
+ .os.GNU-kFreeBSD: $(OBJS_FBSD)
+ 	$(AR) cru $(LIB) $(OBJS_FBSD)
+ 	$(RANLIB) $(LIB)
