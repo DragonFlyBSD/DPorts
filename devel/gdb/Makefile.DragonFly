@@ -1,7 +1,0 @@
-OPTIONS_EXCLUDE+= BASE_READLINE THREADS
-
-post-extract:
-	@${CP} ${DFLY_FILESDIR}/dfly64.mh ${WRKSRC}/gdb/config/i386/
-	@${CP} ${DFLY_FILESDIR}/dfly-nat.* ${WRKSRC}/gdb/
-	@${CP} ${DFLY_FILESDIR}/i386* ${WRKSRC}/gdb/
-	@${CP} ${DFLY_FILESDIR}/amd64* ${WRKSRC}/gdb/
