@@ -1,0 +1,7 @@
+OPTIONS_DEFAULT=	PROGRAMS
+
+# zrj: fix devq-lsdri on radeons
+dfly-patch:
+	${REINPLACE_CMD} -e 's@busid_format = "pci:%d:%d:%d.%d";@busid_format = "pci:%x:%x:%x.%d";@g'   \
+		${WRKSRC}/src/device.c
+
