@@ -1,6 +1,0 @@
-bin/cutgen
-bin/cutgen.py
-bin/cutgen_common.py
-bin/cutgen_lexer.py
-bin/cutgen_options.py
-bin/cutgen_parser.py
