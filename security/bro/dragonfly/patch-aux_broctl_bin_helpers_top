@@ -1,0 +1,10 @@
+--- aux/broctl/bin/helpers/top.orig	2015-09-06 22:43:34.000000000 +0300
++++ aux/broctl/bin/helpers/top
+@@ -9,6 +9,7 @@
+ . `dirname $0`/../broctl-config.sh
+ 
+ cmd_linux='top -b -n 1 | awk "/^ *[0-9]+ /{printf(\"%d %s %s %d %s\\n\", \$1, \$5, \$6, \$9, \$12)}"'
++cmd_dragonfly='top -u -b all | tail -n +5 | awk "/^ *[0-9]+ /{printf(\"%d %s %s %d %s\\n\", \$1, \$4, \$5, \$10, \$11)}"'
+ cmd_freebsd='top -u -b all | tail -n +5 | awk "/^ *[0-9]+ /{printf(\"%d %s %s %d %s\\n\", \$1, \$6, \$7, \$11, \$12)}"'
+ cmd_freebsd_nonsmp='top -u -b all | tail -n +5 | awk "/^ *[0-9]+ /{printf(\"%d %s %s %d %s\\n\", \$1, \$6, \$7, \$10, \$11)}"'
+ cmd_openbsd='top -u -b all | tail -n +5 | awk "/^ *[0-9]+ /{printf(\"%d %s %s %d %s\\n\", \$1, \$5, \$6, \$10, \$11)}"'
