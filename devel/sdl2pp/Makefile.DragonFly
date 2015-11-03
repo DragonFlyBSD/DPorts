@@ -1,0 +1,7 @@
+# don't cripple "special" languages on non-crippled systems
+CXXFLAGS:= ${CXXFLAGS:N-D_GLIBCXX_USE_C99}
+
+# since Werror and pedantic don't use non standard extensions [c++14 feauture]
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\[deprecated\]@[gnu::deprecated]@g'	\
+		${WRKSRC}/SDL2pp/Config.hh.in
