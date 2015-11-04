@@ -1,0 +1,4 @@
+
+dfly-patch:
+	${LN} -sv ${WRKSRC}/Godeps/_workspace/src/github.com/cznic/fileutil/fileutil_openbsd.go	\
+		  ${WRKSRC}/Godeps/_workspace/src/github.com/cznic/fileutil/fileutil_dragonfly.go
