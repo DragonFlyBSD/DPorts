@@ -1568,8 +1568,7 @@ MAKE_ENV+=		NM=${NM} \
 CONFIGURE_ENV+=	PKG_CONFIG_SYSROOT_DIR="${X_SYSROOT}"
 .endif
 
-CATPORTDIR=		${WRKDIRPREFIX}/${.CURDIR:H:T}/${.CURDIR:T}
-WRKDIR=			${CATPORTDIR}/work
+WRKDIR=			${WRKDIRPREFIX}/${.CURDIR:H:T}/${.CURDIR:T}
 .if !defined(IGNORE_MASTER_SITE_GITHUB) && defined(USE_GITHUB)
 WRKSRC?=		${WRKDIR}/${GH_PROJECT}-${GH_TAGNAME_EXTRACT}
 .endif
@@ -4034,12 +4033,12 @@ deinstall-all:
 
 .if !target(do-clean)
 do-clean:
-	@if [ -d ${CATPORTDIR} ]; then \
-		if [ -w ${CATPORTDIR} ]; then \
-			${RM} -rf ${CATPORTDIR}; \
-			${FIND} ${CATPORTDIR:H} -type d -empty -delete; \
+	@if [ -d ${WRKDIR} ]; then \
+		if [ -w ${WRKDIR} ]; then \
+			${RM} -rf ${WRKDIR}; \
+			${FIND} ${WRKDIR:H} -type d -empty -delete; \
 		else \
-			${ECHO_MSG} "===>   ${CATPORTDIR} not writable, skipping"; \
+			${ECHO_MSG} "===>   ${WRKDIR} not writable, skipping"; \
 		fi; \
 	fi
 .endif
