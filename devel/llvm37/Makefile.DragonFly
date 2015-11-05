@@ -1,10 +1,12 @@
+
+# zrj: allow to fail if -CLANG -EXTRAS
 dfly-patch:
 .if ${DFLYVERSION} >= 400105 || (!defined(NO_GCC50) && ${DFLYVERSION} >= 400103)
-	${REINPLACE_CMD} -e 's|gcc47|gcc50|g' -e 's|4.7"|5.0"|' \
+	-${REINPLACE_CMD} -e 's|gcc47|gcc50|g' -e 's|4.7"|5.0"|' \
 		${WRKSRC}/tools/clang/lib/Driver/ToolChains.cpp \
 		${WRKSRC}/tools/clang/lib/Driver/Tools.cpp \
 		${WRKSRC}/tools/clang/lib/Frontend/InitHeaderSearch.cpp
-	${REINPLACE_CMD} -E 's|gcc4{{\.\*}}|gcc50|g ; \
+	-${REINPLACE_CMD} -E 's|gcc4{{\.\*}}|gcc50|g ; \
 		s|=both"|=gnu" "--enable-new-dtags"|' \
 		${WRKSRC}/tools/clang/test/Driver/dragonfly.c
 .endif
