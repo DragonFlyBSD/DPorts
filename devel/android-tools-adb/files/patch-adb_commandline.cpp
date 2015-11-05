@@ -1,6 +1,6 @@
---- commandline.c.orig	2014-09-27 22:55:45.000000000 +0800
-+++ commandline.c	2014-09-27 22:58:14.000000000 +0800
-@@ -591,7 +591,7 @@
+--- adb/commandline.cpp.orig	2015-06-17 22:20:38 UTC
++++ adb/commandline.cpp
+@@ -637,7 +637,7 @@ static int ppp(int argc, const char** ar
  
          // copy args
          ppp_args = (const char **) alloca(sizeof(char *) * argc + 1);
@@ -9,7 +9,7 @@
          for (i = 2 ; i < argc ; i++) {
              //argv[2] and beyond become ppp_args[1] and beyond
              ppp_args[i - 1] = argv[i];
-@@ -605,10 +605,10 @@
+@@ -651,10 +651,10 @@ static int ppp(int argc, const char** ar
          adb_close(STDERR_FILENO);
          adb_close(fd);
  
