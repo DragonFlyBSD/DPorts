@@ -1,6 +1,7 @@
 PORTNAME=	xf86-video-intel
 PORTVERSION=	2.99.2015.09.09
-PORTEPOCH=	1
+PORTREVISION=	1
+PORTEPOCH=	2
 CATEGORIES=	x11-drivers
 MASTER_SITES=	http://dl.wolfpond.org/distfiles/
 
@@ -29,6 +30,12 @@ LIB_DEPENDS+=	libxcb-util.so:${PORTSDIR}/x11/xcb-util
 CFLAGS+=	-D_WITH_GETLINE=1
 
 USES=	autoreconf:build libtool
+
+.if ${OPSYS} == DragonFly && ${DFLYVERSION} < 400307
+EXTRA_PATCHES+=	${FILESDIR}/extra-src_intel__device.c.old
+.else
+EXTRA_PATCHES+= ${FILESDIR}/extra-src_intel__device.c.new
+.endif
 
 pre-configure:
 	cd ${WRKDIR}/${PORTNAME}-${PORTVERSION} && ./autogen.sh

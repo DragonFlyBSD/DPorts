@@ -1,0 +1,11 @@
+--- src/intel_device.c.orig	2015-09-09 05:41:54 UTC
++++ src/intel_device.c
+@@ -404,7 +404,7 @@ static int __intel_open_device__legacy(c
+ 		 pci->domain, pci->bus, pci->dev, pci->func);
+ 
+ 	ret = drmCheckModesettingSupported(id);
+-	if (ret) {
++	if (ret || 1) {
+ 		if (xf86LoadKernelModule("i915"))
+ 			ret = drmCheckModesettingSupported(id);
+ 		if (ret)
