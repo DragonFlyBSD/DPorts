@@ -5,6 +5,38 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20151105:
+  AFFECTS: users of deskutils/egroupware
+  AUTHOR: danilo@FreeBSD.org
+
+  EGroupware 1.8 was deprecated and removed from sourceforge.net.
+  To upgrade to the new version (14.3), make a backup of all files and
+  database, remove all files from ${PREFIX}/www/eg:
+  
+    # pkg remove egroupware
+    # rm -rf ${PREFIX}/www/eg
+
+  Install the new egroupware:
+    # pkg install egroupware
+   or
+    # make -C /usr/ports/deskutils/egroupware install clean
+
+  Access the setup page on your browser and run the upgrade process
+  (eg: http://<server>/eg/setup).
+
+20151101:
+  AFFECTS: users of www/codeigniter
+  AUTHOR: junovitch@FreeBSD.org
+
+  CodeIgniter has been updated to the 3.0.x release branch. End users
+  must ensure their web applications are compliant with the guidance
+  in the "Upgrading From a Previous Version" document.
+
+  http://www.codeigniter.com/user_guide/installation/upgrade_300.html
+
+  CodeIgniter 2.2.x has reached EOL as of 31 October 2015 but may be
+  installed in the interim from the www/codeigniter22 port.
+
 20151020:
   AFFECTS: users of security/keepassx2
 
@@ -1502,14 +1534,4 @@ AUTHOR: ohauer@FreeBSD.org
   Most of the optional patches for OpenSSH do not apply to the 6.7 update yet.
   The 6.6 version has been copied to security/openssh-portable66 if you require
   the use of one of the optional ports.
-
-20141109:
-  AFFECTS: users of multimedia/mediabrowser
-  AUTHOR: woodsb02@gmail.com
-
-  The default MediaBrowser database/configuration/logs/media metadata
-  storage directory has moved from /usr/local/mediabrowser to
-  /var/db/mediabrowser. Users are advised either to move the contents of
-  the old directory to the new location, or to add a mediabrowser_data_dir
-  entry to /etc/rc.conf.
 
