@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/sysutils/puppet/files/puppetmaster.in 391663 2015-07-09 16:30:40Z mmoll $
+# $FreeBSD: head/sysutils/puppet/files/puppetmaster.in 400710 2015-11-03 19:02:08Z mmoll $
 #
 
 # PROVIDE: puppetmaster
@@ -28,13 +28,13 @@ command_args="master ${puppetmaster_flags}"
 unset puppetmaster_flags
 
 pidfile="${puppetmaster_rundir}/master.pid"
-puppet_manifestdir="$($command config print manifestdir)"
+puppet_manifest="$($command config print manifest)"
 
 start_precmd="puppetmaster_checkconfig"
 restart_precmd="puppetmaster_checkconfig"
 puppetmaster_checkconfig() {
 	echo -n "Performing sanity check of ${name} configuration: "
-	if ! ${command} parser validate "${puppet_manifestdir}/site.pp"
+	if ! ${command} parser validate "${puppet_manifest}"
 	then
 		echo "FAILED"
 		return 1
