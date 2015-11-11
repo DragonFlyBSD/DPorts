@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/mail/qmail/files/qmailsmtpd.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/mail/qmail/files/qmailsmtpd.in 400559 2015-10-30 23:07:16Z bdrewery $
 #
 # PROVIDE: qmailsmtpd
 # REQUIRE: LOGIN cleanvar
@@ -36,7 +36,7 @@ load_rc_config $name
 start_cmd=qmailsmtpd_start
 start_precmd=qmailsmtpd_precmd
 pidfile=${qmailsmtpd_pidfile}
-procname=${qmailsmtpd_tcprules}
+procname=${qmailsmtpd_tcpserver}
 
 qmailsmtpd_start()
 {
