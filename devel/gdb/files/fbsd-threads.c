@@ -1,4 +1,4 @@
-/* $FreeBSD: head/devel/gdb/files/fbsd-threads.c 399717 2015-10-19 19:52:47Z tijl $ */
+/* $FreeBSD: head/devel/gdb/files/fbsd-threads.c 400860 2015-11-05 18:48:46Z tijl $ */
 /* FreeBSD libthread_db assisted debugging support.
    Copyright 1999, 2000, 2001 Free Software Foundation, Inc.
 
@@ -766,6 +766,7 @@ fbsd_thread_wait (struct target_ops *ops,
   ret = beneath->to_wait (beneath, ptid, ourstatus, options);
   if (GET_PID(ret) >= 0 &&
     ( ourstatus->kind == TARGET_WAITKIND_STOPPED ||
+      ourstatus->kind == TARGET_WAITKIND_VFORKED ||
       ourstatus->kind == TARGET_WAITKIND_FORKED ) )
     {
       lwp = get_current_lwp (GET_PID(ret));
