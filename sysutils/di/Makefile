@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	di
-PORTVERSION=	4.36
+PORTVERSION=	4.37
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.gentoo.com/di/ \
 		http://www.cyberbotx.com/di/
@@ -16,5 +16,8 @@ PLIST_SUB+=	NLS="@comment "
 
 post-patch:
 	@${REINPLACE_CMD} -e "s|zoneid_t|zoneId_t|g" ${WRKSRC}/C/di.c
+
+pre-install:
+	@${STRIP_CMD} ${WRKSRC}/C/di
 
 .include <bsd.port.mk>
