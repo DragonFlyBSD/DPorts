@@ -1,3 +1,8 @@
+# disable for everything except Release 4.0 (and earlier)
+.if !exists(/usr/libexec/binutils222)
+IGNORE=		please use editors/libreoffice instead
+.endif
+
 USES:=			${USES:Nzip} zip:infozip
 
 CONFIGURE_ARGS+=	--with-os-version=${DFLYVERSION} \
