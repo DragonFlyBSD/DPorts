@@ -3,7 +3,7 @@
 
 PORTNAME=	arabtex
 PORTVERSION=	3.11
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	arabic print
 MASTER_SITES=	ftp://ftp.informatik.uni-stuttgart.de/pub/${PORTNAME}/
 DISTNAME=	arab${PORTVERSION:S/.//}
@@ -24,11 +24,11 @@ PLIST_SUB=	MKTEXLSR=${LOCALBASE}/bin/mktexlsr
 OPTIONS_DEFINE=	DOCS
 
 do-install:
-	(cd ${WRKDIR} && ${COPYTREE_SHARE} "fonts tex" \
+	(cd ${WRKSRC} && ${COPYTREE_SHARE} "fonts tex" \
 		${STAGEDIR}${PREFIX}/${TEXMFLOCALDIR})
 
 do-install-DOCS-on:
-	(cd ${WRKDIR} && ${COPYTREE_SHARE} doc \
+	(cd ${WRKSRC} && ${COPYTREE_SHARE} doc \
 		${STAGEDIR}${PREFIX}/${TEXMFLOCALDIR})
 
 .include <bsd.port.mk>
