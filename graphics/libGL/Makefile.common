@@ -36,7 +36,7 @@ USES+=		compiler:c++11-lib gettext-tools gmake libtool \
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-isystem${LOCALBASE}/include
-LDFLAGS+=	-Wl,-Y${LOCALBASE}/lib
+LDFLAGS+=	-Wl,-Y/usr/lib:${LOCALBASE}/lib
 
 PKGINSTALL=	${.CURDIR}/pkg-install
 PKGDEINSTALL=	${.CURDIR}/pkg-deinstall
