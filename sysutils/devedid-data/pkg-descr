@@ -1,0 +1,6 @@
+This port supplies linux generic EDID firmware blobs for use to override
+monitor internal EDID one. Provided YYxYY.S files can be customized to
+match specific monitor better. For information how to convert fw.bin to
+usable kernel firmware module consult with firmware(9) and drm(4) or use
+gen-fw_module.sh script to do it automagically.
+
