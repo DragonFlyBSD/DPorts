@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	ImageMagick
-DISTVERSION=	6.9.2-4
+DISTVERSION=	6.9.2-6
 PORTEPOCH=	1
 CATEGORIES=	graphics perl5
 MASTER_SITES=	http://www.imagemagick.org/download/ \
@@ -52,7 +52,7 @@ USE_GNOME=	libxml2
 # make sure LOCALBASE is placed at the end of the compiler lookup so the configure
 # script can find openjpeg2 headers before the openjpeg15 headers
 CPPFLAGS+=	-isystem${LOCALBASE}/include
-LDFLAGS+=	-Wl,-Y${LOCALBASE}/lib
+LDFLAGS+=	-Wl,-Y/usr/lib:${LOCALBASE}/lib
 
 SAMPLE_FILES=	coder.xml colors.xml delegates.xml log.xml magic.xml mime.xml \
 		policy.xml quantization-table.xml thresholds.xml type-dejavu.xml \
@@ -417,15 +417,15 @@ pre-configure:
 	@${ECHO_CMD} NOTICE: SVG format support disabled, requires X11
 .endif
 
-post-install: test
+post-install:
 .for i in ${SAMPLE_FILES}
 	@${MV} ${STAGEDIR}${PREFIX}/etc/ImageMagick-6/${i} \
 		${STAGEDIR}${PREFIX}/etc/ImageMagick-6/${i}.sample
 .endfor
 
-test check:
-.if ${PORT_OPTIONS:MTESTS}
+post-install-TESTS-on: test
+
+do-test:
 	-cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} limits -m 20m ${MAKE} ${_MAKE_JOBS} check
-.endif
 
 .include <bsd.port.mk>
