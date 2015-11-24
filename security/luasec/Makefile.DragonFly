@@ -1,0 +1,3 @@
+dfly-patch:
+	${REINPLACE_CMD} -e '/BSD_LDFLAGS/ s|-O -fPIC||' \
+		${WRKSRC}/src/Makefile
