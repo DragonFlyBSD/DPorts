@@ -1,0 +1,4 @@
+# ld.gold: error: --add-needed is not supported but is required for
+#          libxcb.so.1 in /usr/local/lib/libX11.so
+CONFIGURE_ENV+=	LDVER=ld.bfd
+MAKE_ENV+=	LDVER=ld.bfd
