@@ -1,0 +1,3 @@
+# Unknown why gold linker causes c++11 errors to be thrown, keep using ld
+
+MAKE_ENV+=	LDVER=ld.bfd
