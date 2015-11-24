@@ -1,3 +1,5 @@
 # Override libgnuregex from FreeBSD
 CONFIGURE_ENV=	GMSGFMT="${LOCALBASE}/bin/msgfmt"
 .undef LIBS
+
+LDFLAGS+= -lm
