@@ -1,2 +1,2 @@
 CONFIGURE_ARGS+= --with-ldns=/usr
-LDFLAGS+= -lssl
+LDFLAGS+= -lssl -lcrypto
