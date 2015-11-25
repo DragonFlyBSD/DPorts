@@ -1,0 +1,4 @@
+# Under gold, this is another gnome app that doesn't have complete
+# linking.  It's not clear which library is unlinked (libgmodule-2.0?)
+# and adding it to LDFLAGS doesn't help, sokeep using ld.bfd for now
+MAKE_ENV+= LDVER=ld.bfd
