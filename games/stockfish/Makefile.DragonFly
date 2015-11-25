@@ -1,0 +1,2 @@
+# ld.gold: fatal error: -f/--auxiliary may not be used without -shared
+MAKE_ENV+= LDVER=ld.bfd
