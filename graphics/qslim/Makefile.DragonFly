@@ -1,0 +1,3 @@
+# With gold linker, there are missing references to symbols starting
+# with "gl" but -lGLU in LDFLAGS doesn't fix it. Use ld.bfd for now
+MAKE_ENV+= LDVER=ld.bfd
