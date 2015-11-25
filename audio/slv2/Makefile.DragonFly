@@ -1,0 +1,3 @@
+# Uses waf and fails to explicitly link to -lraptor causing gold failure
+# To hard to fix quickly, so use ld.bfd instead
+MAKE_ENV+= LDVER=ld.bfd
