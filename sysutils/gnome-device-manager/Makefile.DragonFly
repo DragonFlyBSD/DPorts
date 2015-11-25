@@ -1,0 +1,3 @@
+# There's a weird missing reference to ldbus-1 when gold linker is
+# used, so keep using ld.bfd for now.
+MAKE_ENV+= LDVER=ld.bfd
