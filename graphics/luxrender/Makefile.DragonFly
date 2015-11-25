@@ -1,1 +1,7 @@
 USES+= alias:11
+
+# with gold, build fails because it wants libpthread linked, but adding
+# that to LDFLAGS doesn't fix the build.
+.if ${DISTVERSION:M14}
+MAKE_ENV+= LDVER=ld.bfd
+.endif
