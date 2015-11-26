@@ -1,5 +1,10 @@
 USES:=			${USES:Nzip} zip:infozip
 
+# for now, disabled Firebird SQL support.  It emits
+# z->z_Magic == ZALLOC_SLAB_MAGIC in _slabfree when running
+# the CppunitTest_dbaccess_firebird_test unit test
+CONFIGURE_ARGS+=	--disable-firebird-sdbc
+
 CONFIGURE_ARGS+=	--with-os-version=${DFLYVERSION} \
 			--with-vendor="DragonFly dports"
 
@@ -46,25 +51,6 @@ REPLACE_LIST= \
 	vcl/unx/gtk/app/gtkdata.cxx \
 	vcl/unx/kde/kdedata.cxx
 
-KRB5LIST= \
-	svx/Executable_gengal.mk \
-	vcl/Executable_icontest.mk \
-	vcl/Executable_mtfdemo.mk \
-	vcl/Executable_ui-previewer.mk \
-	vcl/Executable_vcldemo.mk
-
-KRB5LIST2= \
-	connectivity/Executable_mork_helper.mk \
-	desktop/Executable_soffice_bin.mk \
-	desktop/Executable_unopkg_bin.mk \
-	filter/Executable_svg2odf.mk \
-	sdext/Executable_pdf2xml.mk \
-	svtools/Executable_langsupport.mk \
-	svx/Executable_pixelctl.mk \
-	vcl/Executable_svdemo.mk \
-	vcl/Executable_svpclient.mk \
-	vcl/Executable_svptest.mk
-
 # Avoid stripping in /tmp, it takes too much space for poudriere
 # Also, ooinstall is fed wrong TMPDIR which is redefined a few times
 # So let's just hardcode it for now
@@ -74,9 +60,3 @@ dfly-patch:
 		${WRKSRC}/solenv/bin/ooinstall
 	(cd ${WRKSRC} && \
 		${REINPLACE_CMD} -e 's|FREEBSD|DRAGONFLY|' ${REPLACE_LIST})
-	(cd ${WRKSRC} && \
-		${REINPLACE_CMD} -e 's|-lGL|-lGL -lcom_err|' ${KRB5LIST})
-.for XX in ${KRB5LIST2}
-	echo '$$(eval $$(call gb_Executable_add_libs,${XX:C/^.*Executable_//:S|.mk||},-lcom_err))' \
-		>> ${WRKSRC}/${XX}
-.endfor
