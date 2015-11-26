@@ -1,0 +1,11 @@
+--- configure.orig	2015-11-24 15:32:00.526222000 +0100
++++ configure	2015-11-24 15:32:15.566322000 +0100
+@@ -124,7 +124,7 @@ rm -f include.mk
+ case $TARGET in
+   Linux)
+   ;;
+-  OpenBSD|FreeBSD|NetBSD|GNU/kFreeBSD)
++  OpenBSD|FreeBSD|NetBSD|GNU/kFreeBSD|DragonFly)
+     CFLAGS=$CFLAGS' -I/usr/local/include'
+     LDFLAGS=$LDFLAGS' -L/usr/local/lib'
+   ;;
