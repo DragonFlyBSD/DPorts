@@ -1,0 +1,11 @@
+--- Makefile.unix.orig	2015-11-26 17:14:24.575481000 +0100
++++ Makefile.unix	2015-11-26 17:14:44.105676000 +0100
+@@ -14,7 +14,7 @@ CC ?= gcc
+ # you may need -L/usr/pkg/lib for older NetBSD versions
+ CFLAGS = -Wall -c -pipe -march=silvermont -pipe -Os -O2 -fno-strict-aliasing -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL
+ COUT = -o 
+-LN ?= ${CC}
++LN = ${CC}
+ LDFLAGS = -Wall -lpthread
+ # -lpthreads may be reuqired on some platforms instead of -pthreads
+ # -ldl or -lld may be required for some platforms
