@@ -1,0 +1,11 @@
+--- configure.in.orig	2015-11-26 10:55:45.561926000 +0100
++++ configure.in	2015-11-26 10:56:41.122455000 +0100
+@@ -38,7 +38,7 @@ case $host_os in
+ 
+         AC_CHECK_FUNCS([memset])
+         ;;
+-    *bsd*)
++    *bsd*|*dragonfly*)
+         AC_DEFINE(HAVE_BSD, 1, [Define to 1 if your build target is BSD.])
+         AM_CONDITIONAL(HAVE_BSD, true)
+         
