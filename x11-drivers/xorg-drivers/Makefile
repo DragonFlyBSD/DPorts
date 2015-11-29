@@ -19,7 +19,6 @@ INPUT_DRIVERS=		mouse \
 			elographics \
 			hyperpen \
 			joystick \
-			magictouch \
 			mutouch \
 			penmount \
 			synaptics \
@@ -31,7 +30,6 @@ VIDEO_DRIVERS=		nv \
 			vesa \
 			apm \
 			ark \
-			cyrix \
 			dummy \
 			fbdev \
 			glint \
@@ -46,7 +44,6 @@ VIDEO_DRIVERS=		nv \
 
 VIDEO_DRIVERS_REMOVED=	mach64 \
 			r128 \
-			chips \
 			neomagic \
 			rendition \
 			s3virge \
