@@ -36,7 +36,7 @@ PLIST_FILES=	include/FreeImage.h \
 
 .include <bsd.port.options.mk>
 
-.if ${ARCH} == x86_64
+.if ${ARCH} == x86_64 || ${ARCH} == powerpc
 USES+=		compiler:c++0x
 .endif
 
