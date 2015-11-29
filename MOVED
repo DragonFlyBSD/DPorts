@@ -2967,7 +2967,6 @@ textproc/sgmltools-lite||2014-09-01|Not staged
 textproc/sml-fxp||2014-09-01|Not staged
 textproc/tei-guidelines-p3||2014-09-01|Not staged
 textproc/tei-p3||2014-09-01|Not staged
-textproc/xalan-c||2014-09-01|Not staged
 vietnamese/vntex||2014-09-01|Not staged
 vietnamese/vnxfonts||2014-09-01|Not staged
 vietnamese/xvnkb||2014-09-01|Not staged
@@ -3979,7 +3978,6 @@ graphics/gdal-grass||2015-10-31|Has expired: Superseded by gdal-2.0.0
 graphics/picviz||2015-10-31|Has expired: Broken for more than 6 months
 irc/weechat-devel|irc/weechat|2015-10-31|Has expired: far behind stable irc/weechat (use it instead)
 mail/cucipop||2015-10-31|Has expired: Broken for more than 6 months
-math/rkward-kde4||2015-10-31|Has expired: Depends on deprecated math/R-cran-car
 multimedia/streamanalyze||2015-10-31|Has expired: Broken for more than 6 months
 net-mgmt/collectd|net-mgmt/collectd5|2015-10-31|Has expired: Please move to collectd5 - collect4 is not developed/patched
 sysutils/sdd||2015-10-31|Has expired: Broken for more than 6 months
@@ -4009,3 +4007,106 @@ databases/mysql51-scripts||2015-11-10|Has expired: EOL upstream, use mysql55 or 
 databases/mysql51-server||2015-11-10|Has expired: EOL upstream, use mysql55 or mysql56 instead
 databases/p5-DBD-mysql51|databases/p5-DBD-mysql|2015-11-10|Has expired: EOL upstream, use databases/p5-DBD-mysql instead
 databases/py-MySQLdb51||2015-11-10|Has expired: EOL upstream, use databases/py-MySQLdb instead
+deskutils/steadyflow||2015-11-13|Has expired: No new releases for years, consider using net/uget
+net/py-smb|net/py-pysmb|2015-11-14|Renamed to match upstream naming
+devel/py-asn1-modules|devel/py-pyasn1-modules|2015-11-14|Renamed to match upstream naming
+devel/py-experimental.cssselect||2015-11-15|The only consumer of this port switched to www/py-cssselect
+databases/mariadb-client||2015-11-18|Vulnerable, no updates expected, use mariadb55 or mariadb100 instead
+databases/mariadb-server||2015-11-18|Vulnerable, no updates expected, use mariadb55 or mariadb100 instead
+databases/mariadb-scripts||2015-11-18|Vulnerable, no updates expected, use mariadb55 or mariadb100 instead
+devel/py-asn1|devel/py-pyasn1|2015-11-18|Renamed to match upstream naming
+devel/py-pytz3|devel/py3-pytz|2015-11-19|Port Renamed
+devel/ocaml-typeconv|devel/ocaml-type_conv|2015-11-20|Renamed to match upstream naming
+www/py3-aiohttp|www/py-aiohttp|2015-11-21|Duplicate port
+textproc/kibana4|textproc/kibana41|2015-11-22|Distinguish from incompatible kibana42
+devel/qsvn||2015-11-23|Has expired: Development discontinued since 2009
+audio/pecl-id3||2015-11-28|Has expired: Broken for more than 6 months
+dns/geta||2015-11-28|Has expired: Broken for more than 6 months
+finance/openerp-web||2015-11-28|Has expired: Broken for more than 6 months
+devel/py-async||2015-11-28|Has expired: Further using of this module is not encouraged by upstream
+chinese/kon2||2015-11-28|Has expired: Depends on expiring chinese/cce
+games/linux-skulltag||2015-11-28|Has expired: Depends on expiring audio/linux-fmodapi
+archivers/wzip||2015-11-28|Has expired: Broken for more than 6 months
+databases/sybtcl||2015-11-28|Has expired: Broken for more than 6 months
+biology/povchem||2015-11-28|Has expired: Broken for more than 6 months
+audio/btc||2015-11-28|Has expired: Broken for more than 6 months
+astro/wmglobe||2015-11-28|Has expired: Broken for more than 6 months
+graphics/pyro||2015-11-28|Has expired: Broken for more than 6 months
+graphics/jpeg2ps||2015-11-28|Has expired: Broken for more than 6 months
+chinese/gugod-clean||2015-11-28|Has expired: Broken for more than 6 months
+comms/bforce||2015-11-28|Has expired: Broken for more than 6 months
+cad/geda-docs||2015-11-28|Has expired: Broken for more than 6 months
+chinese/cwtexttf||2015-11-28|Has expired: Broken for more than 6 months
+comms/zmtx-zmrx||2015-11-28|Has expired: Broken for more than 6 months
+astro/sky2000||2015-11-28|Has expired: Broken for more than 6 months
+deskutils/libopensync-plugin-file||2015-11-28|Has expired: Broken for more than 6 months
+databases/sqlite-ext-mobigroup||2015-11-28|Has expired: Broken for more than 6 months
+chinese/bg5ps||2015-11-28|Has expired: Broken for more than 6 months
+deskutils/x-tile||2015-11-28|Has expired: Broken for more than 6 months
+graphics/pure-gl||2015-11-28|Has expired: Broken for more than 6 months
+audio/dvda-author||2015-11-28|Has expired: Broken for more than 6 months
+chinese/oxim||2015-11-28|Has expired: Broken for more than 6 months
+editors/spe||2015-11-28|Has expired: Broken for more than 6 months
+audio/mpdscribble||2015-11-28|Has expired: Broken for more than 6 months
+cad/geda-symcheck||2015-11-28|Has expired: Broken for more than 6 months
+audio/linux-fmodapi||2015-11-28|Has expired: Broken for more than 6 months
+audio/pure-audio||2015-11-28|Has expired: Broken for more than 6 months
+editors/bpatch||2015-11-28|Has expired: Broken for more than 6 months
+benchmarks/geekbench||2015-11-28|Has expired: Broken for more than 6 months
+graphics/icoconvert||2015-11-28|Has expired: Broken for more than 6 months
+cad/geda-utils||2015-11-28|Has expired: Broken for more than 6 months
+deskutils/tomboy-plugin-wordcount||2015-11-28|Has expired: Broken for more than 6 months
+graphics/sketch||2015-11-28|Has expired: Broken for more than 6 months
+ftp/spegla||2015-11-28|Has expired: Broken for more than 6 months
+graphics/clutter-box2d||2015-11-28|Has expired: Broken for more than 6 months
+audio/scmpc||2015-11-28|Has expired: Broken for more than 6 months
+ftp/gnusget||2015-11-28|Has expired: Broken for more than 6 months
+comms/gpsk31||2015-11-28|Has expired: Broken for more than 6 months
+cad/geda-gschem||2015-11-28|Has expired: Broken for more than 6 months
+audio/ampache||2015-11-28|Has expired: Broken for more than 6 months
+cad/slffea||2015-11-28|Has expired: Broken for more than 6 months
+audio/cripple||2015-11-28|Has expired: Broken for more than 6 months
+cad/geda-gattrib||2015-11-28|Has expired: Broken for more than 6 months
+cad/findhier||2015-11-28|Has expired: Broken for more than 6 months
+biology/njplot||2015-11-28|Has expired: Broken for more than 6 months
+audio/wmmp||2015-11-28|Has expired: Broken for more than 6 months
+x11/avant-window-navigator||2015-11-28|Has expired: Broken for more than 6 months
+cad/geda-netlist||2015-11-28|Has expired: Broken for more than 6 months
+deskutils/libopensync-plugin-sunbird||2015-11-28|Has expired: Broken for more than 6 months
+biology/ortep3||2015-11-28|Has expired: Broken for more than 6 months
+astro/aa||2015-11-28|Has expired: Broken for more than 6 months
+french/belote||2015-11-28|Has expired: Broken for more than 6 months
+converters/p5-String-SetUTF8||2015-11-28|Has expired: Broken for more than 6 months
+cad/geda-examples||2015-11-28|Has expired: Broken for more than 6 months
+editors/yasnippet||2015-11-28|Has expired: Broken for more than 6 months
+audio/musica||2015-11-28|Has expired: Broken for more than 6 months
+graphics/rubyphoto||2015-11-28|Has expired: Broken for more than 6 months
+german/bsdpaste||2015-11-28|Has expired: Broken for more than 6 months
+audio/amrcoder||2015-11-28|Has expired: Broken for more than 6 months
+sysutils/bashburn||2015-11-28|Has expired: Broken for more than 6 months
+editors/e93||2015-11-28|Has expired: Broken for more than 6 months
+audio/tepsonic||2015-11-28|Has expired: Broken for more than 6 months
+astro/ephem||2015-11-28|Has expired: Broken for more than 6 months
+chinese/cce||2015-11-28|Has expired: Broken for more than 6 months
+graphics/qcread||2015-11-28|Has expired: Broken for more than 6 months
+databases/py-sqlkit||2015-11-28|Has expired: Broken for more than 6 months
+databases/usogres||2015-11-28|Has expired: Broken for more than 6 months
+cad/libgeda||2015-11-28|Has expired: Broken for more than 6 months
+chinese/p5-Lingua-ZH-BPMFConvert||2015-11-28|Has expired: Broken for more than 6 months
+french/alphabet_sounds_fr||2015-11-28|Has expired: Broken for more than 6 months
+deskutils/mrundlg||2015-11-28|Has expired: Broken for more than 6 months
+databases/erlang-mysql||2015-11-28|Has expired: Broken for more than 6 months
+graphics/linux-XnViewMP||2015-11-28|Has expired: Broken for more than 6 months
+deskutils/akamaru||2015-11-28|Has expired: Broken for more than 6 months
+dns/p5-Net-DNS-ZoneCheck||2015-11-28|Has expired: Broken for more than 6 months
+astro/dgpsip||2015-11-28|Has expired: Broken for more than 6 months
+databases/pecl-handlersocket||2015-11-28|Has expired: Broken for more than 6 months
+audio/cymbaline||2015-11-28|Has expired: Broken for more than 6 months
+french/dico||2015-11-28|Has expired: Broken for more than 6 months
+comms/qpage||2015-11-28|Has expired: Broken for more than 6 months
+audio/sonice||2015-11-28|Has expired: Broken for more than 6 months
+cad/geda-symbols||2015-11-28|Has expired: Broken for more than 6 months
+databases/java-mybatis||2015-11-28|Has expired: Broken for more than 6 months
+databases/openbase-jdbc||2015-11-28|Has expired: Broken for more than 6 months
+www/mediawiki119|www/mediawiki125|2015-11-28|Has expired: Please upgrade to mediawiki-1.25
+www/R-cran-Rpad||2015-11-28|Has expired: Unmaintained upstream

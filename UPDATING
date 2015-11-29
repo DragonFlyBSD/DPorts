@@ -5,6 +5,22 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20151122:
+  AFFECTS: users of audio/audacity
+  AUTHOR: riggs@FreeBSD.org
+
+  Audacity has been upgraded to version 2.1.1. Changes in its settings
+  processing may prevent it from starting. If this happens, removing its
+  user-specific configuration directory ~/.audacity-data resolves this.
+
+20151118:
+  AFFECTS: users of mail/rmilter
+  AUTHOR: vsevolod@FreeBSD.org
+
+  Rmilter now has switched from user postfix to user _rmilter for security
+  and sanity purposes. You might want to fix the ownership of
+  /var/run/rmilter to user _rmilter and group mail.
+
 20151105:
   AFFECTS: users of deskutils/egroupware
   AUTHOR: danilo@FreeBSD.org
@@ -12,7 +28,7 @@ you update your ports collection, before attempting any port upgrades.
   EGroupware 1.8 was deprecated and removed from sourceforge.net.
   To upgrade to the new version (14.3), make a backup of all files and
   database, remove all files from ${PREFIX}/www/eg:
-  
+
     # pkg remove egroupware
     # rm -rf ${PREFIX}/www/eg
 
@@ -75,18 +91,18 @@ you update your ports collection, before attempting any port upgrades.
 20151015:
   AFFECTS: users of devel/subversion, its bindings and www/mod_dav_svn
   AUTHOR: lev@FreeBSD.org
-  
+
   The subversion upgdate to 1.9 branch introduces new "old" subversion
   port devel/subversion18.
-  
+
   If you don't want to update your subversion installation, run
-  
-  	pkg set -n subversion:subversion18
-  	
+
+        pkg set -n subversion:subversion18
+
   and add
-  
+
         WITH_SUBVERSION_VER=18
-        
+
   to your /etc/make.conf
 
 20151013:
@@ -104,7 +120,7 @@ you update your ports collection, before attempting any port upgrades.
   block rule like the following:
 
   ipfw add deny all from 'table(22)' to any
-  
+
   The release announcement can be found here:
     http://sourceforge.net/p/sshguard/mailman/message/34534861/
 
@@ -113,10 +129,10 @@ you update your ports collection, before attempting any port upgrades.
   AUTHOR: sbruno@FreeBSD.org
 
   The Jemalloc update at svn r286871 introduced some TLS enhancements
-  for MIPS targets that require a bit of workaround.  Users who want 
+  for MIPS targets that require a bit of workaround.  Users who want
   to build MIPS packages should update their host systems past r286871
   prior to upgrading their qemu-user-static/qemu-sbruno ports.
-  
+
   Discussion about this can be found here:
     https://lists.freebsd.org/pipermail/freebsd-mips/2015-October/004018.html
 
@@ -290,11 +306,11 @@ you update your ports collection, before attempting any port upgrades.
   AFFECTS: users of sysutils/s6
   AUTHOR: Colin Booth <colin@heliocat.net>
 
-  s6-notifywhenup has been removed as of v2.2.0.0. Any run scripts 
-  using readyness notification must be updated to use a notification 
+  s6-notifywhenup has been removed as of v2.2.0.0. Any run scripts
+  using readyness notification must be updated to use a notification
   fd instead.
 
-  s6-svc options have changed for sending syncronous up/down timeouts. 
+  s6-svc options have changed for sending syncronous up/down timeouts.
   Any management or wrapper scripts using those options will need to
   be updated.
 
@@ -330,7 +346,7 @@ you update your ports collection, before attempting any port upgrades.
   be both used with Icinga 1.x and the Icinga 2 port (net-mgmt/icinga2).
   A new meta-port net-mgmt/icinga was added which depends on both new
   ports, so updating the Icinga port should be transparent.
-  
+
 20150812:
   AFFECTS: users of sysutils/moosefs-master and other moosefs packages
   AUTHOR: feld@FreeBSD.org
@@ -497,7 +513,7 @@ you update your ports collection, before attempting any port upgrades.
   to www/varnish4. The upgrade guide can be found here:
 
   https://www.varnish-cache.org/docs/trunk/whats-new/upgrade-4.0.html
-  
+
   www/varnish-libvmod-header and www/varnish-nagios have been updated to
   versions that work with Varnish 4.x. You should not lose access to
   this software.
@@ -536,7 +552,7 @@ you update your ports collection, before attempting any port upgrades.
   AUTHOR: brnrd@FreeBSD.org 
 
   After upgrading libressl, manually update all packages that depend on
-  this library since its version has changed. Normally, you can obtain the 
+  this library since its version has changed. Normally, you can obtain the
   list of dependent software by running the following command:
 
   pkg query -e '%n = libressl' %ro
@@ -678,8 +694,8 @@ you update your ports collection, before attempting any port upgrades.
   - SQLITE
   - MYSQL
   - PGSQL
-  - REDIS 
- 
+  - REDIS
+
   They are disabled/removed in upstream since 5.4.4p1, but did not get removed
   from port.
 
@@ -697,7 +713,6 @@ you update your ports collection, before attempting any port upgrades.
 20150419
   AFFECTS: Users of emulators/wine-devel
   AUTHOR: gerald@FreeBSD.org
-
 
   The COMPHOLIO option in emulators/wine-devel has been renamed to
   STAGING to align with the upstream evolution of that project.
@@ -1027,7 +1042,7 @@ AUTHOR: ohauer@FreeBSD.org
   #
   # Keep MySQL 5.5 as default version
   #
-  DEFAULT_VERSIONS+=mysql= 5.5 
+  DEFAULT_VERSIONS+=mysql= 5.5
 
   If you wish to update to the new default version, you need to first stop any
   running server instance. Then, you will need to follow these steps, depending
@@ -1376,162 +1391,4 @@ AUTHOR: ohauer@FreeBSD.org
 
   # pkg delete -f gettext
   # pkg upgrade
-
-20141127:
-  AFFECTS: users of lang/perl5.*
-  AUTHOR: mat@FreeBSD.org
-
-  There was a nasty bug introduced in the update below, it was introduced in
-  SVN revision 373476 and corrected in 373485.  If you get errors looking like
-  this one:
-
-  ===>   Registering installation for p5-Params-Util-1.07_1 as automatic
-  pkg-static: lstat(/usr/ports/devel/p5-Params-Util/work/stage/usr/local/./usr/local/lib/perl5/site_perl/mach/5.16/auto/Params/Util/.packlist): No such file or directory
-  *** [fake-pkg] Error code 74
-
-  You will have to wipe your ports tree clean.  If using portsnap, with:
-
-	portsnap extract
-
-  If using subversion:
-
-	svn revert -R
-
-20141127:
-  AFFECTS: users of lang/perl5.*
-  AUTHOR: mat@FreeBSD.org
-
-  The .packlist files are back, if you upgraded all your p5- ports yesterday
-  and need them, you will need to reinstall them again, see yesterday's update
-  for instructions.
-
-20141126:
-  AFFECTS: users of multimedia/x264
-  AUTHOR: xmj@FreeBSD.org
-
-  With the recent split of multimedia/x264 in library and binary and library
-  components, if an application that uses libx264 is updated before x264 itself,
-  multimedia/libx264 will conflict with the existing x264 package. Delete
-  this package before continuing any update that depends on it:
-
-	# pkg delete -f x264
-
-  Install the updated x264 and/or upgrade the other applications that
-  depend on libx264, such as ffmpeg.
-
-20141126:
-  AFFECTS: users of lang/perl5.*
-  AUTHOR: mat@FreeBSD.org
-
-  The directories where Perl modules are installed has changed.  All
-  affected ports' PORTREVISION have been bumped, so upgrading should
-  be as painless as possible.  The old directories have been kept in
-  the default Perl @INC to make it even more painless.
-
-  The default Perl has been switched to lang/perl5.18.  These examples
-  are for switching from lang/perl5.16, if you are running a different
-  version, replace lang/perl5.16 with the origin of the Perl you have
-  installed.
-
-  Binary package users:
-
-    # pkg upgrade -f
-
-  Portupgrade users:
-    0) Fix pkgdb.db (for safety):
-        pkgdb -Ff
-
-    1) Reinstall new version of Perl (5.18):
-        portupgrade -o lang/perl5.18 -f lang/perl5.16
-
-    2) Reinstall everything that depends on Perl:
-        portupgrade -fr lang/perl5.18
-
-  Portmaster users:
-        portmaster -o lang/perl5.18 lang/perl5.16
-
-        Conservative:
-        portmaster p5-
-
-        Comprehensive (but perhaps overkill):
-        portmaster -r perl5-
-
-  Note: If the "perl5-" glob matches more than one port you will need to specify
-        the name of the installed Perl package explicitly.  You can get its name
-        by running: pkg info perl5
-
-20141125:
-  AFFECTS: users of EFL libraries
-  AUTHOR: gblach@FreeBSD.org
-
-  EFL libraries has been merged into one port. Before installing devel/efl
-  you must deinstall old EFL libraries:
-
-  # pkg delete -f eina eet evas evas-\* ecore\* eio efreet embryo edje \
-      ethumb emotion
-  # make -C /usr/ports/devel/efl install clean
-
-20141125:
-  AFFECTS: users of x11-wm/e17-module*
-  AUTHOR: gblach@FreeBSD.org
-
-  Enlightenment has been updated to 0.19.1. Some of e-modules can't be build
-  with updated Enlightenment, these modules has been marked as broken.
-  E-modules which work with new Enlightenment has been renamed to
-  x11-wm/e-module-*. To update these modules you must call the following
-  commands (substituting the name of module in place *):
-
-  # portmaster -o x11-wm/e-module-* x11-wm/e17-module-*
-  # portmaster -o x11-wm/e-modules x11-wm/e17-modules
-  or
-  # portupgrade -fo x11-wm/e-module-* x11-wm/e17-module-*
-  # portupgrade -fo x11-wm/e-modules x11-wm/e17-modules
-
-20141123:
-  AFFECTS: users of security/heimdal
-  AUTHOR: hrs@FreeBSD.org
-
-  The header and library files have been moved from PREFIX/{include,lib} to
-  PREFIX/{include,lib}/heimdal at r373047 to fix a library dependency
-  confusion when software attempts to link a Heimdal library in base and
-  an external library in LOCALBASE/lib at the same time.
-
-  All of packages which depend on security/heimdal have to be recompiled
-  and reinstalled because of this library location change.
-
-20141119:
-  AFFECTS: users of x11/gnome2, graphics/clutter and lang/vala
-  AUTHOR: kwm@FreeBSD.org
-
-  GNOME 3.14 was imported. Because this is a big change some manual help is
-  needed. Please use the following instructions to update.
-
-  Make a list of the installed ports:
-  # pkg info > ~/installed-ports-list
-
-  Delete the old and conflicting packages:
-  # pkg delete clutter gnome-utils gnome-panel gnome-keyring vala-vapigen \
-      guile gcalctool gnome-media libgnomekbd gnome-themes at-spi
-  # pkg delete gnome-screensaver gnome-applets bug-buddy \
-      evolution-exchange evolution-webcal gnome-system-tools \
-      seahorse-plugins gnome-control-center
-
-  For package users the following lines will be enough:
-  # pkg upgrade
-  # pkg install gnome3
-
-  For ports users should do the following:
-  # portmaster -a
-  # portmaster x11/gnome3
-
-  After these steps, check with the list we made earlier if your favorite
-  ports are still installed, and reinstall them if needed.
-
-20141117:
-  AFFECTS: users of security/openssh-portable
-  AUTHOR: bdrewery@FreeBSD.org
-
-  Most of the optional patches for OpenSSH do not apply to the 6.7 update yet.
-  The 6.6 version has been copied to security/openssh-portable66 if you require
-  the use of one of the optional ports.
 
