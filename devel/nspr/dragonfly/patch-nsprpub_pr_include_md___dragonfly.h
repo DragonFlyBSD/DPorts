@@ -1,5 +1,5 @@
---- ../pr/include/md/_dragonfly.h.orig	2013-06-06 18:49:02.829118000 +0000
-+++ ../pr/include/md/_dragonfly.h
+--- pr/include/md/_dragonfly.h.orig	2013-06-06 18:49:02.829118000 +0000
++++ pr/include/md/_dragonfly.h
 @@ -0,0 +1,225 @@
 +/* -*- Mode: C++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 2 -*- */
 +/* This Source Code Form is subject to the terms of the Mozilla Public

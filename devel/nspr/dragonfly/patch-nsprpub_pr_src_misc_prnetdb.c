@@ -1,5 +1,5 @@
---- ../pr/src/misc/prnetdb.c.orig	2014-06-20 12:34:59.566379000 +0000
-+++ ../pr/src/misc/prnetdb.c
+--- pr/src/misc/prnetdb.c.orig	2014-06-20 12:34:59.566379000 +0000
++++ pr/src/misc/prnetdb.c
 @@ -78,6 +78,11 @@ PRLock *_pr_dnsLock = NULL;
  #define _PR_HAVE_GETPROTO_R_INT
  #endif

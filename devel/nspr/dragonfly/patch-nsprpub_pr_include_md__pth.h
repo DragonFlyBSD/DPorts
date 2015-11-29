@@ -1,5 +1,5 @@
---- ../pr/include/md/_pth.h.orig	2014-06-05 21:42:08.000000000 +0000
-+++ ../pr/include/md/_pth.h
+--- pr/include/md/_pth.h.orig	2014-06-05 21:42:08.000000000 +0000
++++ pr/include/md/_pth.h
 @@ -114,7 +114,7 @@
  #define _PT_PTHREAD_COPY_THR_HANDLE(st, dt)   (dt) = (st)
  #elif defined(IRIX) || defined(OSF1) || defined(AIX) || defined(SOLARIS) \
