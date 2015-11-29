@@ -15,11 +15,6 @@ IRCAM: {
 	enabled		: no
 }
 
-SchlundTech: {
-	url		: http://dfly.schlundtech.de/dports/${ABI}/LATEST,
-	enabled		: no
-}
-
 Wolfpond: {
 	url		: http://pkg.wolfpond.org/${ABI}/LATEST,
 	enabled		: no

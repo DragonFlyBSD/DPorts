@@ -15,11 +15,6 @@ IRCAM-Release: {
 	enabled		: no
 }
 
-SchlundTech-Release: {
-	url		: http://dfly.schlundtech.de/dports/${ABI}/RELEASE,
-	enabled		: no
-}
-
 Wolfpond-Release: {
 	url		: http://pkg.wolfpond.org/${ABI}/RELEASE,
 	enabled		: no
