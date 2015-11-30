@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/net/apinger/files/apinger.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/net/apinger/files/apinger.in 401241 2015-11-11 12:59:48Z mich $
 #
 # PROVIDE: apinger
 # REQUIRE: LOGIN
@@ -9,20 +9,20 @@
 # Add the following lines to /etc/rc.conf.local or /etc/rc.conf
 # to enable this service:
 #
-# apinger_enable (bool):   Set to NO by default.
-#               Set it to YES to enable apinger.
+# apinger_enable (bool):	Set to NO by default.
+#				Set it to YES to enable apinger.
 #
 
 . /etc/rc.subr
 
-name="apinger"
+name=apinger
 rcvar=apinger_enable
-
-command=%%PREFIX%%/sbin/${name}
-pidfile=/var/run/${name}.pid
 
 load_rc_config $name
 
-: ${apinger_enable="NO"}
+: ${apinger_enable:=NO}
+
+command=%%PREFIX%%/sbin/${name}
+pidfile=/var/run/${name}.pid
 
 run_rc_command "$1"
