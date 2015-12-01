@@ -61,7 +61,7 @@ STRIP?=	-s
 
 .if !defined(NOPRECIOUSMAKEVARS)
 .if !defined(ARCH)
-ARCH!=	${UNAME} -p
+ARCH=	x86_64
 .endif
 _EXPORTED_VARS+=	ARCH
 
@@ -70,13 +70,17 @@ OSVERSION=	9999999
 .endif
 
 .if !defined(DFLYVERSION)
-.  if exists(/usr/include/sys/param.h)
+.   if defined(.MAKE.DF.VERSION)
+DFLYVERSION=	${.MAKE.DF.VERSION}
+.   else
+.      if exists(/usr/include/sys/param.h)
 DFLYVERSION!=	${AWK} '/^\#define[[:blank:]]__DragonFly_version/ {print $$3}' < /usr/include/sys/param.h
-.  elif exists(${SRC_BASE}/sys/sys/param.h)
+.      elif exists(${SRC_BASE}/sys/sys/param.h)
 DFLYVERSION!=	${AWK} '/^\#define[[:blank:]]__DragonFly_version/ {print $$3}' < ${SRC_BASE}/sys/sys/param.h
-.  else
+.      else
 DFLYVERSION!=	${SYSCTL} -n kern.osreldate
-.  endif
+.      endif
+.   endif
 .endif
 _EXPORTED_VARS+=	OSVERSION DFLYVERSION
 
@@ -84,7 +88,11 @@ WITH_PKG=	yes
 WITH_PKGNG=	yes
 
 .if !defined(_OSRELEASE)
+.   if defined(.MAKE.DF.OSREL)
+_OSRELEASE=		${.MAKE.DF.OSREL}-DPORTS
+.   else
 _OSRELEASE!=		${UNAME} -r
+.   endif
 .endif
 _EXPORTED_VARS+=	_OSRELEASE
 .if !defined(OSREL)
@@ -93,25 +101,16 @@ OSREL=	${_OSRELEASE:C/[-(].*//}
 _EXPORTED_VARS+=	OSREL
 
 .if !defined(OPSYS)
-OPSYS!=	${UNAME} -s
+OPSYS=	DragonFly
 .endif
 _EXPORTED_VARS+=	OPSYS
 
-.if ${ARCH} == "amd64" || ${ARCH} =="ia64"
-.if !defined(HAVE_COMPAT_IA32_KERN)
-HAVE_COMPAT_IA32_KERN!= if ${SYSCTL} -n compat.ia32.maxvmem >/dev/null 2>&1; then echo YES; fi; echo
-.if empty(HAVE_COMPAT_IA32_KERN)
-.undef HAVE_COMPAT_IA32_KERN
-.endif
-.endif
-.endif
-_EXPORTED_VARS+=	HAVE_COMPAT_IA32_KERN
-
 .if !defined(CONFIGURE_MAX_CMD_LEN)
-CONFIGURE_MAX_CMD_LEN!= ${SYSCTL} -n kern.argmax
+CONFIGURE_MAX_CMD_LEN=	262144
 .endif
 _EXPORTED_VARS+=	CONFIGURE_MAX_CMD_LEN
 
+.if defined(USE_JAVA)
 .if !defined(_JAVA_VERSION_LIST_REGEXP)
 _JAVA_VERSION_LIST_REGEXP!=	${MAKE} -V _JAVA_VERSION_LIST_REGEXP USE_JAVA=1 -f ${PORTSDIR}/Mk/bsd.port.mk
 .endif
@@ -131,6 +130,13 @@ _EXPORTED_VARS+=	_JAVA_OS_LIST_REGEXP
 _JAVA_PORTS_INSTALLED!=		${MAKE} -V _JAVA_PORTS_INSTALLED USE_JAVA=1 -f ${PORTSDIR}/Mk/bsd.port.mk
 .endif
 _EXPORTED_VARS+=	_JAVA_PORTS_INSTALLED
+.else
+# export empty variables
+_EXPORTED_VARS+=        _JAVA_VERSION_LIST_REGEXP \
+			_JAVA_VENDOR_LIST_REGEXP \
+			_JAVA_OS_LIST_REGEXP \
+			_JAVA_PORTS_INSTALLED
+.endif
 
 .if !defined(UID)
 UID!=	${ID} -u

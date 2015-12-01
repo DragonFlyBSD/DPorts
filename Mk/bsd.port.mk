@@ -1144,18 +1144,22 @@ MAINTAINER?=	ports@FreeBSD.org
 
 # Get the architecture
 .if !defined(ARCH)
-ARCH!=	${UNAME} -p
+ARCH=	x86_64
 .endif
 _EXPORTED_VARS+=	ARCH
 
 # Get the operating system type
 .if !defined(OPSYS)
-OPSYS!=	${UNAME} -s
+OPSYS=	DragonFly
 .endif
 _EXPORTED_VARS+=	OPSYS
 
 .if !defined(_OSRELEASE)
+.   if defined(.MAKE.DF.OSREL)
+_OSRELEASE=	${.MAKE.DF.OSREL}-DPORTS
+.   else
 _OSRELEASE!=	${UNAME} -r
+.   endif
 .endif
 _EXPORTED_VARS+=	_OSRELEASE
 
@@ -1641,19 +1645,6 @@ PATCH_DEPENDS+=		${LOCALBASE}/bin/unzip:${PORTSDIR}/archivers/unzip
 .endif
 
 # Check the compatibility layer for amd64/ia64
-
-.if ${ARCH} == "amd64" || ${ARCH} =="ia64"
-.if exists(/usr/lib32)
-HAVE_COMPAT_IA32_LIBS?=  YES
-.endif
-.if !defined(HAVE_COMPAT_IA32_KERN)
-HAVE_COMPAT_IA32_KERN!= if ${SYSCTL} -n compat.ia32.maxvmem >/dev/null 2>&1; then echo YES; fi; echo
-.if empty(HAVE_COMPAT_IA32_KERN)
-.undef HAVE_COMPAT_IA32_KERN
-.endif
-.endif
-.endif
-_EXPORTED_VARS+=	HAVE_COMPAT_IA32_KERN
 
 .if defined(IA32_BINARY_PORT) && ${ARCH} != "i386"
 .if ${ARCH} == "amd64" || ${ARCH} == "ia64"
@@ -2643,7 +2634,7 @@ CONFIGURE_FAIL_MESSAGE?=	"Please report the problem to ${MAINTAINER} [maintainer
 .if defined(GNU_CONFIGURE)
 # Maximum command line length
 .if !defined(CONFIGURE_MAX_CMD_LEN)
-CONFIGURE_MAX_CMD_LEN!=	${SYSCTL} -n kern.argmax
+CONFIGURE_MAX_CMD_LEN=	262144
 .endif
 _EXPORTED_VARS+=	CONFIGURE_MAX_CMD_LEN
 GNU_CONFIGURE_PREFIX?=	${PREFIX}

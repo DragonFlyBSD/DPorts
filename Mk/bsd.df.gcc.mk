@@ -12,26 +12,18 @@
 .undef PORT_COMPILER
 .undef BASE_COMPILER
 
-.if ${DFLYVERSION} < 400105
-.   if ${USE_GCC} == 4.8 || ${USE_GCC} == 4.8+ 
-PORT_COMPILER=4.8
-.   elif ${USE_GCC} == 4.9 || ${USE_GCC} == 4.9+
-PORT_COMPILER=4.9
-.   elif ${USE_GCC} == DEFAULT_NOT5
-PORT_COMPILER=${LANG_GCC_IS}
-.   else
-BASE_COMPILER=gcc47
-.   endif
-.else  # v-- Release 4.2 and later --v
-.   if ${USE_GCC} == 4.8 || ${USE_GCC} == 4.9
+.if ${USE_GCC} == 4.8 || ${USE_GCC} == 4.9
 PORT_COMPILER=${USE_GCC}
-.   else
-.      if ${USE_GCC:tu} == NOT5 || ${USE_GCC:tu} == DEFAULT_NOT5
+.else
+.  if ${USE_GCC:M6*}
+PORT_COMPILER=6-devel
+.  else
+.    if ${USE_GCC:tu} == NOT5 || ${USE_GCC:tu} == DEFAULT_NOT5
 PORT_COMPILER=${LANG_GCC_IS}
-.      else
+.    else
 BASE_COMPILER=gcc50
-.      endif
-.   endif
+.    endif
+.  endif
 .endif
 
 .if defined (PORT_COMPILER)
