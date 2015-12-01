@@ -1,10 +1,6 @@
---- install.php.orig	2015-02-23 17:17:44.131719236 +0200
+--- install.php.orig	2015-10-15 12:02:06 UTC
 +++ install.php
-@@ -539,9 +539,13 @@ function install_step2() {
- 			$res += check_extension("zip","PHP Zip");
- 			$res += check_extension("zlib","PHP Zlib extension");
- 			$res += check_extension("curl","CURL (Client URL Library)");
-+
+@@ -559,6 +559,9 @@ function install_step2() {
  			if (PHP_OS == "FreeBSD") {
  				$res += check_exists ("/usr/local/bin/twopi","Graphviz Binary");
  			}
@@ -14,7 +10,7 @@
  			else if (PHP_OS == "NetBSD") {
  				$res += check_exists ("/usr/pkg/bin/twopi","Graphviz Binary");
  			}
-@@ -796,6 +800,10 @@ function install_step4() {
+@@ -816,6 +819,10 @@ function install_step4() {
  							
  							$step4 = parse_mysql_dump("pandoradb_data.sql");
  							check_generic ($step4, "Populating database");
@@ -25,27 +21,27 @@
  							if (PHP_OS == "FreeBSD") {
  								$step_freebsd = adjust_paths_for_freebsd ($engine);
  								check_generic ($step_freebsd, "Adjusting paths in database for FreeBSD");
-@@ -881,6 +889,11 @@ function install_step4() {
+@@ -901,6 +908,11 @@ function install_step4() {
  						
- 						check_generic ($step2, "Populating database");	
- 
+ 						check_generic ($step2, "Populating database");
+ 						
 +						if (PHP_OS == "DragonFly")
 +						{
 +							$step_freebsd = adjust_paths_for_freebsd ($engine, $connection);
 +							check_generic ($step_freebsd, "Adjusting paths in database for DragonFly");
 +						}
  						if (PHP_OS == "FreeBSD")
-  {
+ 						{
  							$step_freebsd = adjust_paths_for_freebsd ($engine, $connection);
-@@ -999,6 +1012,11 @@ function install_step4() {
+@@ -1019,6 +1031,11 @@ function install_step4() {
  						
  						check_generic ($step4, "Populating database");
- 
-+						if (PHP_OS == "DragonFly")
-+						{
+ 						
++						if (PHP_OS == "DragonFly") {
 +							$step_freebsd = adjust_paths_for_freebsd ($engine, $connection);
 +							check_generic ($step_freebsd, "Adjusting paths in database for DragonFly");
 +						}
- 						if (PHP_OS == "FreeBSD")
-  {
++
+ 						if (PHP_OS == "FreeBSD") {
  							$step_freebsd = adjust_paths_for_freebsd ($engine, $connection);
+ 							check_generic ($step_freebsd, "Adjusting paths in database for FreeBSD");
