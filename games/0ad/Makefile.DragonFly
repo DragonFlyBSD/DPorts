@@ -1,0 +1,6 @@
+.if defined(DPORTS_BUILDER)
+.undef MANUAL_PACKAGE_BUILD
+.endif
+
+USES+=		alias
+MAKE_ENV+=	MAKE=${MAKE_CMD}
