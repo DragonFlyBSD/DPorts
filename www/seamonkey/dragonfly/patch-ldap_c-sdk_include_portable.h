@@ -1,5 +1,5 @@
---- ldap/sdks/c-sdk/ldap/include/portable.h.orig	2013-10-23 22:09:34.000000000 +0000
-+++ ldap/sdks/c-sdk/ldap/include/portable.h
+--- ldap/c-sdk/include/portable.h.orig	2015-11-04 01:43:24 UTC
++++ ldap/c-sdk/include/portable.h
 @@ -122,7 +122,10 @@
   * some systems don't have the BSD re_comp and re_exec routines
   */
