@@ -1,9 +1,10 @@
---- src/libaudcore/vfs.h.orig	2015-05-30 22:27:01 UTC
+--- src/libaudcore/vfs.h.orig	2015-11-07 23:03:12 UTC
 +++ src/libaudcore/vfs.h
-@@ -66,6 +66,8 @@ constexpr VFSSeekType to_vfs_seek_type (
+@@ -66,6 +66,9 @@ constexpr VFSSeekType to_vfs_seek_type (
  
  #endif // WANT_VFS_STDIO_COMPAT
  
++#include <stdio.h>
 +#undef feof
 +
  class VFSImpl
