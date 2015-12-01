@@ -30,18 +30,19 @@ BASE_COMPILER=gcc50
 
 USE_BINUTILS=		yes
 V:=			${PORT_COMPILER:S/.//}
+X:=			${PORT_COMPILER:S/.//:S/-devel//}
 .  if "${PORT_COMPILER}" == "${LANG_GCC_IS}"
-BUILD_DEPENDS+=		gcc${V}:${PORTSDIR}/lang/gcc
-RUN_DEPENDS+=		gcc${V}:${PORTSDIR}/lang/gcc
+BUILD_DEPENDS+=		gcc${X}:${PORTSDIR}/lang/gcc
+RUN_DEPENDS+=		gcc${X}:${PORTSDIR}/lang/gcc
 .  else
-BUILD_DEPENDS+=		gcc${V}:${PORTSDIR}/lang/gcc${V}
-RUN_DEPENDS+=		gcc${V}:${PORTSDIR}/lang/gcc${V}
+BUILD_DEPENDS+=		gcc${X}:${PORTSDIR}/lang/gcc${V}
+RUN_DEPENDS+=		gcc${X}:${PORTSDIR}/lang/gcc${V}
 .  endif
 _GCC_RUNTIME:=		${LOCALBASE}/lib/gcc${V}
 
-CC:=			gcc${V}
-CXX:=			g++${V}
-CPP:=			cpp${V}
+CC:=			gcc${X}
+CXX:=			g++${X}
+CPP:=			cpp${X}
 CFLAGS+=		-Wl,-rpath=${_GCC_RUNTIME}
 CXXFLAGS+=		-Wl,-rpath=${_GCC_RUNTIME}
 LDFLAGS+=		-Wl,-rpath=${_GCC_RUNTIME} -L${_GCC_RUNTIME}
