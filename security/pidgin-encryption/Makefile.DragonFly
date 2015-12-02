@@ -1,0 +1,2 @@
+# zrj: should not hurt, also fixes nspr deps at configure
+LDFLAGS+=	-pthread
