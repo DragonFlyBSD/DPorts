@@ -1,0 +1,11 @@
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NPULSEAUDIO}
+
+V4L_BUILD_DEPENDS+=	${LOCALBASE}/include/linux/videodev2.h:${PORTSDIR}/multimedia/v4l_compat
+
+# hardcode python34 for now
+dfly-patch:
+	${REINPLACE_CMD} -e 's@[[:<:]]python3[[:>:]]@python3.4@g'	\
+		${WRKSRC}/libretro-common/glsym/glgen.py		\
+		${WRKSRC}/tools/cg2glsl.py
+	${REINPLACE_CMD} -e 's@[[:<:]]python3[[:>:]]@python-3.4@g'	\
+		${WRKSRC}/qb/config.libs.sh
