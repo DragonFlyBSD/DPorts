@@ -1,0 +1,11 @@
+--- BSDmakefile.orig	2013-11-29 22:14:31.000000000 +0200
++++ BSDmakefile
+@@ -57,6 +57,8 @@ UNIX_X11LIBPATH=/usr/X11R6/lib
+ # FreeBSD uses OSS
+ .if $(DP_ARCH) == "FreeBSD"
+ DEFAULT_SNDAPI=OSS
++.elif $(DP_ARCH) == "DragonFly"
++DEFAULT_SNDAPI=OSS
+ .else
+ DEFAULT_SNDAPI=BSD
+ .endif
