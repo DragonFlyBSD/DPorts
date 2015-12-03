@@ -1,0 +1,9 @@
+USES+= alias
+
+#CMAKE_ARGS+= -DCEGUI_BUILD_RENDERER_NULL=ON -DCEGUI_BUILD_TESTS=ON
+
+CXXFLAGS+= -I${LOCALBASE}/include
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@"\(FreeBSD\)"@"\1|DragonFly"@g'		\
+		${WRKSRC}/cegui/src/CMakeLists.txt
