@@ -1,3 +1,2 @@
-# does not build with gcc50
-
-USE_GCC=	NOT5
+# needed for my work
+OPTIONS_DEFAULT+= EXR
