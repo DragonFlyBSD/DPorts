@@ -1,0 +1,11 @@
+--- configure.ac.orig	2015-12-02 23:38:25.028379000 +0100
++++ configure.ac	2015-12-02 23:38:05.368193000 +0100
+@@ -212,7 +212,7 @@ AC_CHECK_HEADERS([sys/resource.h \
+                   netinet/in.h netinet/in_systm.h netinet/ip.h \
+                   paths.h poll.h pwd.h sys/poll.h \
+                   setjmp.h signal.h stddef.h syslog.h termios.h \
+-                  unistd.h util.h utime.h utmp.h],
++                  unistd.h util.h utime.h utmp.h utmpx.h],
+                   [], [], [$accheck_includes])
+ 
+ #
