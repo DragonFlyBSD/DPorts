@@ -6,7 +6,7 @@ PKGMESSAGE=	${DPMSG}
 
 dfly-patch:
 	@${ECHO} "########################################################" >> ${DPMSG}
-	@${ECHO} "# Build games/flightdata-gear from source to play this #" >> ${DPMSG}
+	@${ECHO} "# Build games/flightgear-data from source to play this #" >> ${DPMSG}
 	@${ECHO} "########################################################" >> ${DPMSG}
 
 .endif
