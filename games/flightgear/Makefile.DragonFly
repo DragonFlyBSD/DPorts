@@ -11,7 +11,8 @@ dfly-patch:
 	${ECHO_MSG} 'target_link_libraries(fgfs "-L/usr/local/lib -lX11")' >> \
 		${WRKSRC}/src/Main/CMakeLists.txt
 .if !defined(DPORTS_BUILDER) && defined(PACKAGE_BUILDING)
-	@${ECHO} "########################################################"  > ${DPMSG}
+	@${CP} ${.CURDIR}/pkg-message ${DPMSG}
+	@${ECHO} "########################################################" >> ${DPMSG}
 	@${ECHO} "# Build games/flightdata-gear from source to play this #" >> ${DPMSG}
 	@${ECHO} "########################################################" >> ${DPMSG}
 .endif
