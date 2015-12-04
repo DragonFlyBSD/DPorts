@@ -1,6 +1,17 @@
 USE_CXXSTD=	c++11
+DPMSG=		${WRKDIR}/dports-message
+
+.if !defined(DPORTS_BUILDER) && defined(PACKAGE_BUILDING)
+RUN_DEPENDS:=	${RUN_DEPENDS:N*flightgear-data}
+PKGMESSAGE=	${DPMSG}
+.endif
 
 # workaround with X11 clipboard support
 dfly-patch:
 	${ECHO_MSG} 'target_link_libraries(fgfs "-L/usr/local/lib -lX11")' >> \
 		${WRKSRC}/src/Main/CMakeLists.txt
+.if !defined(DPORTS_BUILDER) && defined(PACKAGE_BUILDING)
+	@${ECHO} "########################################################"  > ${DPMSG}
+	@${ECHO} "# Build games/flightdata-gear from source to play this #" >> ${DPMSG}
+	@${ECHO} "########################################################" >> ${DPMSG}
+.endif
