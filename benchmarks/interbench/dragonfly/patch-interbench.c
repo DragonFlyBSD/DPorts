@@ -15,7 +15,7 @@
  	ud.swap = swap / 1024;
 +#elif defined(__DragonFly__)
 +	long pagesize, numpages;
-+	long swap;
++	int swap;
 +	size_t len = sizeof(swap);
 +
 +	pagesize = sysconf(_SC_PAGESIZE);
