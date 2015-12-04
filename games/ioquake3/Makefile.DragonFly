@@ -1,7 +1,22 @@
 MAKE_ARGS+= COMPILE_PLATFORM=freebsd
 
+DPMSG=		${WRKDIR}/dports-message
+
+.if !defined(DPORTS_BUILDER) && defined(PACKAGE_BUILDING)
+RUN_DEPENDS:=	${RUN_DEPENDS:N*urbanterror-data}
+PKGMESSAGE=	${DPMSG}
+.endif
+
 #allow this one to fail! Makefile is reused in other ports
 dfly-patch:
 	-${REINPLACE_CMD} -e 's@#ifndef MACOS_X@#if \!defined(MACOS_X) || \!defined(__DragonFly__)@g'	\
 		${WRKSRC}/code/tools/lcc/cpp/unix.c
 	-${REINPLACE_CMD} -e 's/-DMAP_ANONYMOUS=MAP_ANON//g' -e 's/-O2/-O1/g' ${WRKSRC}/Makefile
+.if !defined(DPORTS_BUILDER) && defined(PACKAGE_BUILDING) && ${PORTNAME:Miourbanterror*}
+.  if exists(${.CURDIR}/pkg-message)
+	@${CP} ${.CURDIR}/pkg-message ${DPMSG}
+.  endif
+	@${ECHO} "#########################################################" >> ${DPMSG}
+	@${ECHO} "# Build games/urbanterror-data from source to play this #" >> ${DPMSG}
+	@${ECHO} "#########################################################" >> ${DPMSG}
+.endif
