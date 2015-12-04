@@ -1,0 +1,5 @@
+
+# zrj: freebsd has -r in xargs but it is dummy-op (for compat with gnu)
+dfly-patch:
+	${REINPLACE_CMD} -e 's@xargs -0r @xargs -0 @g'			\
+		${WRKSRC}/Makefile
