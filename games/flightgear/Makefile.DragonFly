@@ -13,6 +13,6 @@ dfly-patch:
 .if !defined(DPORTS_BUILDER) && defined(PACKAGE_BUILDING)
 	@${CP} ${.CURDIR}/pkg-message ${DPMSG}
 	@${ECHO} "########################################################" >> ${DPMSG}
-	@${ECHO} "# Build games/flightdata-gear from source to play this #" >> ${DPMSG}
+	@${ECHO} "# Build games/flightgear-data from source to play this #" >> ${DPMSG}
 	@${ECHO} "########################################################" >> ${DPMSG}
 .endif
