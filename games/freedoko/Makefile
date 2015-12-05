@@ -1,0 +1,59 @@
+# Created by: Thomas Gellekum <tg@FreeBSD.org>
+# $FreeBSD$
+
+PORTNAME=	freedoko
+PORTVERSION=	0.7.13
+CATEGORIES=	games
+MASTER_SITES=	SF/free-doko/FreeDoko%20source
+DISTNAME=	FreeDoko_${PORTVERSION}.src
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Play the card game Doppelkopf
+
+LICENSE=	GPLv2
+
+LIB_DEPENDS=	libgnet-2.0.so:${PORTSDIR}/net/gnet2
+
+WRKSRC=		${WRKDIR}/${DISTNAME:C/\.src$//}/src
+
+USES=		gmake pkgconfig zip:infozip
+USE_GNOME=	gtkmm24
+MAKE_ENV=	OS="${OPSYS}" DATADIR="${DATADIR}" DOCSDIR="${DOCSDIR}"
+
+DESKTOP_ENTRIES="FreeDoko" "" "${DATADIR}/icon.png" "FreeDoko" "" ""
+
+PORTDATA=	*
+PORTDOCS=	*
+PLIST_FILES=	bin/FreeDoko bin/freedoko
+
+OPTIONS_DEFINE=	DOCS
+
+post-patch:
+	@${FIND} ${WRKSRC} -name "*Makefile*" | ${XARGS} ${REINPLACE_CMD} -e \
+		's|\.\./data|$$(DATADIR)|g ; \
+		 s|\.\./doc/manual|$$(DOCSDIR)/manual|g ; \
+		 s|@echo $$(CXX)|@true $$(CXX)|g ; \
+		 s|@$$(CXX)|$$(CXX)|g ; \
+		 s|make -C|$$(MAKE) -C|g'
+	@${REINPLACE_CMD} -e '/\/X11\//d ; \
+		 s|/usr/local/|${LOCALBASE}/|g' ${WRKSRC}/misc/setting.cpp
+
+post-build:
+	@${FIND} ${WRKSRC}/../doc -empty -delete
+
+do-install:
+	(cd ${WRKSRC} && ${INSTALL_PROGRAM} FreeDoko \
+		${STAGEDIR}${PREFIX}/bin)
+	${LN} -sf FreeDoko ${STAGEDIR}${PREFIX}/bin/freedoko
+	@${MKDIR} ${STAGEDIR}${DATADIR}
+	(cd ${WRKSRC} && ${INSTALL_DATA} icon.png logo.png \
+		${STAGEDIR}${DATADIR})
+.for i in backgrounds cardsets rules translations
+	(cd ${WRKSRC}/../data && ${FIND} ${i} ! -name "*Makefile*" | \
+		${CPIO} --quiet -pdum ${STAGEDIR}${DATADIR})
+.endfor
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	@(cd ${WRKSRC}/../doc/manual && ${COPYTREE_SHARE} . \
+		${STAGEDIR}${DOCSDIR})
+
+.include <bsd.port.mk>
