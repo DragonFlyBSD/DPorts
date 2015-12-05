@@ -1,0 +1,9 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(defined (__FreeBSD__)\)@(\1 || defined(__DragonFly__))@g'	\
+		${WRKSRC}/src/io/filesystem/disk_filesystem.cc
+	${REINPLACE_CMD} -e 's@\(defined(__FreeBSD__)\)@(\1 || defined(__DragonFly__))@g'	\
+		${WRKSRC}/src/wlapplication.cc
+	${REINPLACE_CMD} -e 's@"\(FreeBSD\)"@"\1|DragonFly"@g'		\
+		${WRKSRC}/CMakeLists.txt				\
+		${WRKSRC}/src/CMakeLists.txt
