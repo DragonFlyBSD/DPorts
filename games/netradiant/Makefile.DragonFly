@@ -1,0 +1,11 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(Linux FreeBSD\)@\1 DragonFly@g'	\
+		${WRKSRC}/Makefile
+	${REINPLACE_CMD} -e 's@\(defined( __FreeBSD__ )\)@(\1 || defined(__DragonFly__))@g'	\
+		${WRKSRC}/radiant/url.cpp
+	${REINPLACE_CMD} -e 's@\(defined(__FreeBSD__)\)@(\1 || defined(__DragonFly__))@g'	\
+		${WRKSRC}/contrib/bobtoolz/misc.cpp
+	${REINPLACE_CMD} -e 's@\(defined ( __FreeBSD__ )\)@(\1 || defined(__DragonFly__))@g'	\
+		${WRKSRC}/radiant/mainframe.cpp				\
+		${WRKSRC}/radiant/watchbsp.cpp
