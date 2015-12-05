@@ -1,0 +1,12 @@
+--- binaries/r1q2ded/Makefile.bak	2015-12-05 19:03:22.000000000 +0200
++++ binaries/r1q2ded/Makefile
+@@ -24,6 +24,9 @@ endif
+ ifeq ($(shell uname),FreeBSD)
+ LDFLAGS+=-lexecinfo
+ endif
++ifeq ($(shell uname),DragonFly)
++LDFLAGS+=-lexecinfo
++endif
+ 
+ 
+ r1q2ded: $(r1q2ded_OBJ)

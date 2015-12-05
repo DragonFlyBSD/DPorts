@@ -1,0 +1,12 @@
+--- binaries/client/Makefile.bak	2015-12-05 19:03:22.000000000 +0200
++++ binaries/client/Makefile
+@@ -33,6 +33,9 @@ endif
+ ifeq ($(shell uname),FreeBSD)
+ LDFLAGS+=-lexecinfo
+ endif
++ifeq ($(shell uname),DragonFly)
++LDFLAGS+=-lexecinfo
++endif
+ 
+ 
+ quake2: $(quake2_OBJ)
