@@ -1,0 +1,4 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/uintmax_t/d'				\
+		${WRKSRC}/glob/config.h
