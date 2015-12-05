@@ -1,0 +1,12 @@
+--- Makefile.bak	2015-12-05 18:50:08.000000000 +0200
++++ Makefile
+@@ -62,6 +62,9 @@ NULL_DIR=$(MOUNT_DIR)/null
+ ifeq ($(OSTYPE),FreeBSD)
+   LDFLAGS=-lm -lz
+ endif
++ifeq ($(OSTYPE),DragonFly)
++  LDFLAGS=-lm -lz
++endif
+ ifeq ($(OSTYPE),Linux)
+   LDFLAGS=-lm -ldl -lz
+ endif
