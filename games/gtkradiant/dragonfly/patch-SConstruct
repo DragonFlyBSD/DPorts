@@ -1,0 +1,14 @@
+--- SConstruct.bak	2015-12-05 15:17:44.000000000 +0200
++++ SConstruct
+@@ -214,6 +214,11 @@ elif ( OS == 'FreeBSD' ):
+   CXXFLAGS += '-fPIC '
+   CPPPATH.append(LOCALBASE + '/include')
+   LINKFLAGS += '-L' + LOCALBASE + '/lib '
++elif ( OS == 'DragonFly' ):
++  CCFLAGS += '-fPIC '
++  CXXFLAGS += '-fPIC '
++  CPPPATH.append(LOCALBASE + '/include')
++  LINKFLAGS += '-L' + LOCALBASE + '/lib '
+ 
+ CPPPATH.append('libs')
+ 
