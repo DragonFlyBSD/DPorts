@@ -1,0 +1,11 @@
+--- Makefile.bak	2015-12-05 16:38:33.000000000 +0200
++++ Makefile
+@@ -117,6 +117,8 @@ else
+   # Debian and derivates use lua5.1, the rest of the world lua
+   ifneq ($(wildcard /etc/debian_version),)
+     lua = lua5.1
++  else ifeq ($(OS), DragonFly)
++    lua = lua-5.1
+   else ifeq ($(OS), FreeBSD)
+     lua = lua-5.1
+   else
