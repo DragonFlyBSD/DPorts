@@ -1,0 +1,21 @@
+--- Makefile.bak	2015-12-05 18:04:38.000000000 +0200
++++ Makefile
+@@ -99,6 +99,9 @@ WITH_CDAUDIO?=YES
+ ifeq ($(OSTYPE),freebsd)
+ CD_API=cd_freebsd.c
+ endif
++ifeq ($(OSTYPE),dragonfly)
++CD_API=cd_freebsd.c
++endif
+ ifeq ($(OSTYPE),linux)
+ CD_API=cd_linux.c
+ endif
+@@ -138,7 +141,7 @@ LOCALBASE?= /usr/local
+ GAMEBASE?=  $(PREFIX)
+ SYSBINDIR?= $(PREFIX)/bin
+ 
+-ifeq ($(OSTYPE),freebsd)
++ifeq (${OSTYPE},$(filter ${OSTYPE}, freebsd dragonfly))
+  DATADIR?= $(GAMEBASE)/share/quake2
+  LIBDIR?=  $(GAMEBASE)/lib/quake2
+ else
