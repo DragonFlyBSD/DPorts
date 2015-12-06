@@ -1,0 +1,21 @@
+--- Source/Lua/src/Makefile.orig	2012-10-27 11:18:51.000000000 +0300
++++ Source/Lua/src/Makefile
+@@ -25,7 +25,7 @@ MYLIBS=
+ 
+ # == END OF USER SETTINGS. NO NEED TO CHANGE ANYTHING BELOW THIS LINE =========
+ 
+-PLATS= aix ansi bsd freebsd generic linux macosx mingw posix solaris
++PLATS= aix ansi bsd dragonfly freebsd generic linux macosx mingw posix solaris
+ 
+ LUA_A=	liblua.a
+ CORE_O=	lapi.o lcode.o ldebug.o ldo.o ldump.o lfunc.o lgc.o llex.o lmem.o \
+@@ -94,6 +94,9 @@ ansi:
+ bsd:
+ 	$(MAKE) all MYCFLAGS="-DLUA_USE_POSIX -DLUA_USE_DLOPEN" MYLIBS="-Wl,-E"
+ 
++dragonfly:
++	$(MAKE) all MYCFLAGS="-DLUA_USE_LINUX" MYLIBS="-Wl,-E -lreadline"
++
+ freebsd:
+ 	$(MAKE) all MYCFLAGS="-DLUA_USE_LINUX" MYLIBS="-Wl,-E -lreadline"
+ 
