@@ -1,0 +1,11 @@
+--- configure.orig	2010-07-17 20:30:32.000000000 +0300
++++ configure
+@@ -43,7 +43,7 @@ EOF
+ 
+ case $OLDRUNNER_PLATFORM in
+ # ------------------------------------------------------------------------------
+-    OpenBSD|FreeBSD)
++    OpenBSD|FreeBSD|DragonFly)
+ 	cat <<EOF >>$CONFIG_H
+ #define HAVE_CURSES_H
+ #define HAVE_BZERO
