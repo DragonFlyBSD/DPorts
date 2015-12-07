@@ -1,0 +1,17 @@
+--- makefile.bak	2015-12-07 11:32:02.000000000 +0200
++++ makefile
+@@ -46,6 +46,14 @@ ifeq ($(OSTYPE),Linux)
+ LDFLAGS+=-ldl
+ endif
+ 
++ifeq ($(OSTYPE),DragonFly)
++# These variables are defined from the port, and passed by the environment.
++SHARED_FLAGS+=	-I$(LOCALBASE)/include \
++		-DDATADIR='\"$(Q2DIR)\"' -DLIBDIR='\"$(LIBDIR)\"'
++LDFLAGS+=	-L$(LOCALBASE)/lib
++X11_LDFLAGS+=	-lpthread
++endif
++
+ ifeq ($(OSTYPE),FreeBSD)
+ # These variables are defined from the port, and passed by the environment.
+ SHARED_FLAGS+=	-I$(LOCALBASE)/include \
