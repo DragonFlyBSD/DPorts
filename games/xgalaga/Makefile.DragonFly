@@ -1,0 +1,1 @@
+CONFIGURE_ARGS+= ac_cv_build=x86_64-unknown-dragonfly4
