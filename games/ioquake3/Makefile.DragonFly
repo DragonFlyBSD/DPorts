@@ -2,8 +2,13 @@ MAKE_ARGS+= COMPILE_PLATFORM=freebsd
 
 DPMSG=		${WRKDIR}/dports-message
 
-.if !defined(DPORTS_BUILDER) && defined(PACKAGE_BUILDING)
+.if !defined(DPORTS_BUILDER) && defined(PACKAGE_BUILDING) && ${PORTNAME:Miourbanterror*}
 RUN_DEPENDS:=	${RUN_DEPENDS:N*urbanterror-data}
+PKGMESSAGE=	${DPMSG}
+.endif
+
+.if !defined(DPORTS_BUILDER) && defined(PACKAGE_BUILDING) && ${PORTNAME:Mopenarena*}
+RUN_DEPENDS:=	${RUN_DEPENDS:N*openarena-data}
 PKGMESSAGE=	${DPMSG}
 .endif
 
@@ -19,4 +24,12 @@ dfly-patch:
 	@${ECHO} "#########################################################" >> ${DPMSG}
 	@${ECHO} "# Build games/urbanterror-data from source to play this #" >> ${DPMSG}
 	@${ECHO} "#########################################################" >> ${DPMSG}
+.endif
+.if !defined(DPORTS_BUILDER) && defined(PACKAGE_BUILDING) && ${PORTNAME:Mopenarena*}
+.  if exists(${.CURDIR}/pkg-message)
+	@${CP} ${.CURDIR}/pkg-message ${DPMSG}
+.  endif
+	@${ECHO} "#######################################################" >> ${DPMSG}
+	@${ECHO} "# Build games/openarena-data from source to play this #" >> ${DPMSG}
+	@${ECHO} "#######################################################" >> ${DPMSG}
 .endif
