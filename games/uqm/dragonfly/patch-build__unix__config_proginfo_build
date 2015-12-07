@@ -1,0 +1,11 @@
+--- build/unix/config_proginfo_build.bak	2015-12-07 13:42:32.000000000 +0200
++++ build/unix/config_proginfo_build
+@@ -222,7 +222,7 @@ echon_detect() {
+ ### GNU Make ###
+ PROG_make_NAME="Make"
+ case "$BUILD_SYSTEM" in
+-	FreeBSD|OpenBSD|SunOS)
++	DragonFly|FreeBSD|OpenBSD|SunOS)
+ 		PROG_make_FILE="gmake"
+ 		;;
+ 	*)

@@ -1,0 +1,11 @@
+--- build/unix/config_functions.orig	2011-05-20 22:25:22.000000000 +0300
++++ build/unix/config_functions
+@@ -1038,6 +1038,8 @@ set_host_system() {
+ 		case "$BUILD_HOST" in
+ 			[Ll][Ii][Nn][Uu][Xx])
+ 				HOST_SYSTEM="Linux" ;;
++			[Dd][Rr][Aa][Gg][Oo][Nn][Ff][Ll][Yy])
++				HOST_SYSTEM="FreeBSD" ;;
+ 			[Ff][Rr][Ee][Ee][Bb][Ss][Dd])
+ 				HOST_SYSTEM="FreeBSD" ;;
+ 			[Oo][Pp][Ee][Nn][Bb][Ss][Dd])
