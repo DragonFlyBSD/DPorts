@@ -1,0 +1,12 @@
+--- Makefile.bak	2015-12-07 13:35:44.000000000 +0200
++++ Makefile
+@@ -348,6 +348,9 @@ CD_API=		cd_linux
+ CD_API=		cd_null
+   endif
+ endif
++ifeq ($(OSTYPE),DragonFly)
++CD_API=		cd_freebsd
++endif
+ 
+ # Option detection and handling.
+ ifeq ($(OSTYPE),Linux)
