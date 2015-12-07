@@ -1,0 +1,13 @@
+--- Makefile.bak	2015-12-07 11:47:03.000000000 +0200
++++ Makefile
+@@ -443,6 +443,10 @@ else # ifeq mingw32
+ # SETUP AND BUILD -- FREEBSD
+ #############################################################################
+ 
++ifeq ($(PLATFORM),dragonfly)
++PLATFORM=freebsd
++endif
++
+ ifeq ($(PLATFORM),freebsd)
+ 
+   BASE_CFLAGS = -DARCH='\"$(ARCH)\"' -I$(LOCALBASE)/include -Wall -fno-strict-aliasing -Wimplicit -Wstrict-prototypes \
