@@ -1,0 +1,4 @@
+EXTRACT_CMD=${UNZIP_CMD}
+.if defined(DPORTS_BUILDER)
+.undef MANUAL_PACKAGE_BUILD
+.endif

@@ -1,0 +1,23 @@
+--- sources/darkplaces/makefile.orig	2009-07-20 11:30:38.000000000 +0300
++++ sources/darkplaces/makefile
+@@ -26,6 +26,10 @@ endif  # ifneq ($(filter %BSD,$(DP_ARCH)
+ endif  # ifdef windir
+ endif  # ifndef DP_MAKE_TARGET
+ 
++ifeq ($(DP_ARCH), DragonFly)
++	DP_MAKE_TARGET=bsd
++endif
++
+ # If we're not on compiling for Win32, we need additional information
+ ifneq ($(DP_MAKE_TARGET), mingw)
+ 	DP_ARCH:=$(shell uname)
+@@ -136,6 +140,9 @@ ifeq ($(DP_ARCH),FreeBSD)
+ else
+ 	DEFAULT_SNDAPI=BSD
+ endif
++ifeq ($(DP_ARCH),DragonFly)
++	DEFAULT_SNDAPI=OSS
++endif
+ 	OBJ_CD=$(OBJ_BSDCD)
+ 
+ 	OBJ_CL=$(OBJ_GLX)

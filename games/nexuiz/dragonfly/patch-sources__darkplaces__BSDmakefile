@@ -1,0 +1,11 @@
+--- sources/darkplaces/BSDmakefile.bak	2015-12-07 08:40:01.000000000 +0200
++++ sources/darkplaces/BSDmakefile
+@@ -18,6 +18,8 @@ UNIX_X11LIBPATH=/usr/local/lib
+ # FreeBSD uses OSS
+ .if $(DP_ARCH) == "FreeBSD"
+ DEFAULT_SNDAPI=OSS
++.elif $(DP_ARCH) == "DragonFly"
++DEFAULT_SNDAPI=OSS
+ .else
+ DEFAULT_SNDAPI=BSD
+ .endif
