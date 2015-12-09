@@ -1,6 +1,7 @@
 
 PORTNAME=	devedid-data
 PORTVERSION=	2
+PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	https://www.kernel.org/doc/Documentation/
 DISTFILES=	EDID/1024x768.S EDID/1280x1024.S EDID/1600x1200.S	\
