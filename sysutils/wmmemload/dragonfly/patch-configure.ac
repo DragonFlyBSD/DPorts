@@ -1,0 +1,11 @@
+--- configure.ac.orig	2015-12-09 16:48:21.366215000 +0100
++++ configure.ac	2015-12-09 16:47:47.625877000 +0100
+@@ -97,7 +97,7 @@ linux*)
+   ignore_buffers=yes
+   ignore_cached=yes
+   ;;
+-*freebsd*)
++*freebsd*|*dragonfly*)
+   OS=freebsd
+   ignore_wired=yes
+   ignore_cached=yes
