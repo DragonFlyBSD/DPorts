@@ -1,4 +1,21 @@
-USE_CXXSTD= c++11
+USE_CXXSTD= gnu++11
+DPMSG=		${WRKDIR}/dports-message
+PKGMESSAGE=	${DPMSG}
 
-# zrj: GAMEENGINE - not there yet
-OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NGAMEENGINE:NPLAYER}
+OPTIONS_DEFAULT+= RAYOPTIMIZATION MOD_OCEANSIM FFMPEG REDCODE CAMERATRACK
+OPTIONS_DEFAULT+= CYCLES
+
+# no libunwind
+CAMERATRACK_LIB_DEPENDS:=
+
+dfly-patch:
+	${REINPLACE_CMD} -e "s@ -liconv@ -L${LOCALBASE}/lib -liconv@g"	\
+		${WRKSRC}/CMakeLists.txt
+	-@${CP} ${.CURDIR}/pkg-message ${DPMSG}
+	@${ECHO} "########################################################" >> ${DPMSG}
+	@${ECHO} "# Currently BLENDER_RENDER engine is borked on dfly.   #" >> ${DPMSG}
+	@${ECHO} "# For the time being use CYCLES engine, that works.    #" >> ${DPMSG}
+	@${ECHO} "########################################################" >> ${DPMSG}
+
+## Tests
+#CMAKE_ARGS+= -DWITH_GTESTS:BOOL=ON -DWITH_TESTS_PERFORMANCE:BOOL=ON -DCMAKE_BUILD_TYPE=Debug
