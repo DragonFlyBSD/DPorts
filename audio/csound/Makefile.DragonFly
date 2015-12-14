@@ -1,0 +1,15 @@
+
+# cannot use alias, scons
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(defined(__FreeBSD__)\)@(\1 || defined(__DragonFly__))@g'	\
+		${WRKSRC}/Top/csound.c
+	${REINPLACE_CMD} -e 's@ifndef \(__FreeBSD__\)@if \!(defined(\1) || defined(__DragonFly__))@g'	\
+		${WRKSRC}/frontends/fltk_gui/CsoundPerformanceSettingsPanel.cpp		\
+		${WRKSRC}/frontends/csound/sched.c
+	${REINPLACE_CMD} -e 's@inline int csp_set_get_num@int csp_set_get_num@g'	\
+			 -e 's@inline int csp_set_count@int csp_set_count@g'		\
+		${WRKSRC}/H/cs_par_base.h				\
+		${WRKSRC}/Engine/cs_par_base.c
+	${REINPLACE_CMD} -e 's@inline int csp_dag_is_finished@int csp_dag_is_finished@g'	\
+		${WRKSRC}/H/cs_par_dispatch.h				\
+		${WRKSRC}/Engine/cs_par_dispatch.c
