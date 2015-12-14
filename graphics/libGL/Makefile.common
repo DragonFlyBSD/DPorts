@@ -18,7 +18,7 @@
 MESAVERSION=	${MESABASEVERSION}${MESASUBVERSION:C/^(.)/.\1/}
 MESADISTVERSION=${MESABASEVERSION}${MESASUBVERSION:C/^(.)/-\1/}
 
-MESABASEVERSION=	10.6.9
+MESABASEVERSION=	11.0.7
 # if there is a subversion, don't include the '-' between 7.11-rc2.
 MESASUBVERSION=
 
@@ -78,6 +78,9 @@ CONFIGURE_ARGS+=	--enable-gbm
 # libEGL, dri and clover need gallium enabled.
 # the third option in --with-egl-platforms is wayland.
 CONFIGURE_ARGS+=	--enable-egl --with-egl-platforms=x11,drm
+
+# we don't care about GLes v1
+CONFIGURE_ARGS+=	--disable-gles1
 
 CONFIGURE_ARGS+=	--enable-gles2
 
@@ -183,3 +186,10 @@ PLIST_SUB+=	${_gd}_GDRIVER="@comment "
 
 CONFIGURE_ARGS+=--with-gallium-drivers="${GALLIUM_DRIVERS:tl}"
 
+.if ${OPSYS} == DragonFly
+. if ${COMPONENT:Mdri} != "" || ${COMPONENT:Mclover} != "" || \
+	${COMPONENT:Mosmesa} != "" || ${COMPONENT:Mglapi} != ""
+LIB_DEPENDS+= libelf.so:${PORTSDIR}/devel/libelf
+CFLAGS+= -I${LOCALBASE}/include/libelf
+. endif
+.endif
