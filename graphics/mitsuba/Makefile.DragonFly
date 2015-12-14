@@ -1,0 +1,11 @@
+
+# zrj: uncriple MitsubaBuildOptions.cmake patches for gcc
+CXXFLAGS+= -march=core2
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(defined(__FreeBSD__)\)@(\1 || defined(__DragonFly__))@g'	\
+		${WRKSRC}/include/mitsuba/core/platform.h		\
+		${WRKSRC}/include/mitsuba/render/gkdtree.h		\
+		${WRKSRC}/src/libcore/thread.cpp
+	${REINPLACE_CMD} -e 's@ifndef \(__FreeBSD__\)@if !(defined(\1)||defined(__DragonFly__))@g'	\
+		${WRKSRC}/src/libcore/util.cpp
