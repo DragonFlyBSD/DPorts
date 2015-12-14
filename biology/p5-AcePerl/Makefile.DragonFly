@@ -1,0 +1,7 @@
+
+dfly-patch:
+	${SED} -e 's@FREEBSD@DRAGONFLY@g' 				\
+	       -e 's@XX__CC__XX@${CC} -DPIC -fPIC @g'			\
+	       -e "s@/usr/X11R6/@${LOCALBASE}/@g"			\
+	  < ${FILESDIR}/FREEBSD_DEF \
+	  > ${WRKSRC}/acelib/wmake/DRAGONFLY_DEF
