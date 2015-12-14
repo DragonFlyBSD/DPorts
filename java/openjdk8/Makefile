@@ -21,7 +21,8 @@ PATCHFILES=	patch-8u05-b13.xz \
 		patch-8u40-b25.xz \
 		patch-8u45-b14.xz \
 		patch-8u51-b16.xz \
-		patch-8u60-b23.xz
+		patch-8u60-b23.xz \
+		patch-8u66-b17.xz
 
 MAINTAINER=	java@FreeBSD.org
 COMMENT?=	Java Development Kit ${JDK_MAJOR_VERSION}
@@ -199,8 +200,8 @@ NO_CCACHE=		yes
 NOPRECIOUSMAKEVARS=	yes
 
 JDK_MAJOR_VERSION=	8
-JDK_UPDATE_VERSION=	60
-JDK_BUILD_NUMBER=	24
+JDK_UPDATE_VERSION=	66
+JDK_BUILD_NUMBER=	17
 DIST_BUILD_NUMBER=	132
 JTREG_VERSION=		4.1
 JTREG_BUILD_NUMBER=	b08
@@ -270,6 +271,12 @@ JDK_BUILD_TYPE=		release
 AUTOCONF_ARGS=	-I . -o generated-configure.sh generated-configure.ac
 
 .include <bsd.port.pre.mk>
+
+.if ${ARCH:Marmv6*} || ${ARCH} == "i386"
+# XXX We must limit max heap size for 32-bit targets.
+CONFIGURE_ARGS+=	--with-boot-jdk-jvmargs="-Xmx768m"
+MAKE_ENV+=	JAVADOC_CMD_MEM="-Xmx768m"
+.endif
 
 .if ${ARCH} == "armv6"
 # From NetBSD http://cvsweb.netbsd.org/bsdweb.cgi/pkgsrc/lang/openjdk7/hacks.mk
