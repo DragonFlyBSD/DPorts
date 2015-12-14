@@ -1,0 +1,11 @@
+--- configure.orig	2010-03-04 20:23:07.000000000 +0200
++++ configure
+@@ -2936,7 +2936,7 @@ cat >>confdefs.h <<_ACEOF
+ #define CRLIBM_TYPEOS_CYGWIN 1
+ _ACEOF
+ ;;
+-freebsd*|netbsd*|darwin*)
++freebsd*|dragonfly*|netbsd*|darwin*)
+ 
+ cat >>confdefs.h <<_ACEOF
+ #define CRLIBM_TYPEOS_BSD 1
