@@ -1,0 +1,11 @@
+--- configure.orig	2010-01-18 11:48:13.000000000 +0200
++++ configure
+@@ -5228,7 +5228,7 @@ case $host_os in *\ *) host_os=`echo "$h
+ 
+ 	case "$host_os" in
+ 		*irix* | *linux* |*solaris*) try_threads="linux";;
+-		*freebsd*)	try_threads="freebsd";;
++		*freebsd* | *dragonfly*)	try_threads="freebsd";;
+ 		*)		try_threads="other"; { echo "$as_me:$LINENO: WARNING: Unknown os $host_os. Maybe it's better to configure with --disable-pthread-test" >&5
+ echo "$as_me: WARNING: Unknown os $host_os. Maybe it's better to configure with --disable-pthread-test" >&2;};;
+ 	esac
