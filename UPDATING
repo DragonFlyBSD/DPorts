@@ -5,6 +5,94 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20151210:
+  AFFECTS: users of comms/gammu
+  AUTHOR: vanilla@FreeBSD.org
+
+  The python binding of comms/gammu were split from the main port. To get them you
+  need to install comms/py-gammu.
+
+20151206:
+  AFFECTS: users of mail/postfixadmin
+  AUTHOR: riggs@FreeBSD.org
+
+  Caveat when updating to version 2.93: If you have an existing
+  configuration and are NOT using the recommended practice of putting your
+  settings changes in config.local.php:
+
+  Copy config.inc.php to config.local.php prior to upgrading, then revise
+  config.local.php for the current version afterward.
+
+  Postfixadmin will not function correctly unless correct and complete
+  data structures are placed in config.inc.php. Therefore the file must be
+  upgraded as part of the package and any changes to config.inc.php will
+  be overwritten.
+
+  Detailed information regarding this procedure is provided in step 3 of
+  the installation instructions in ${DATADIR}/INSTALL.TXT (by default
+  /usr/local/share/postfixadmin/INSTALL.TXT).
+
+20151205:
+  AFFECTS: users of devel/ncurses
+  AUTHOR: bapt@FreeBSD.org
+
+  ncurses has been updated to 6.0.
+  If you are using binary pkg, 'pkg upgrade' will do the right thing.
+  Users of portmaster/portupgrade must rebuild all ports which depend
+  on ncurses.
+
+  Portmaster users:
+      portmaster -w -r ncurses
+  Portupgrade users:
+      portupgrade -fr devel/ncurses
+
+20151203:
+  AFFECTS: users of x11-toolkits/qt4-gui or x11-toolkits/qt5-gui
+  AUTHOR: kde@FreeBSD.org
+
+  Back in mid-2012, pkg-message was added to the port suggesting changes to the
+  default shared memory limits in loader.conf(5). Since then, the default
+  limits have been changed and the values suggested by the port are no longer
+  sensible. If you have changed the following values in loader.conf(5) due to
+  qt4-gui's or qt5-gui's pkg-message, please considering removing them and
+  using the default settings:
+  * kern.ipc.shmall
+  * kern.ipc.shmmni
+  * kern.ipc.shmseg
+  See base r209037 and ports PR 202927 for more context.
+
+20151203:
+  AFFECTS: users of sysutils/logstash
+  AUTHOR: junovitch@FreeBSD.org
+
+  Logstash has been updated to the 2.1.0 release. The embedded ElasticSearch
+  instance is no longer supported. If in use, end users must update
+  logstash.conf to point to the URL of an ElasticSearch instance.
+
+20151130:
+  AFFECTS: users of net/samba43
+  AUTHOR: timur@FreeBSD.org
+
+  A new version of Samba server that has better integration with Windows 10.
+  This is still experimental and there were reports that rolling upgrade from
+  previous version of Samba fails to work.
+
+  Please, backup all relevant files from /var/db/samba4/ directory, as well
+  as configuration files.
+
+  Follow https://wiki.samba.org/index.php/Updating_Samba for the upgrade path.
+
+20151130:
+  AFFECTS: users of net/samba4, net/samba41, net/samba42
+  AUTHOR: timur@FreeBSD.org
+
+  Recent versions of devel/talloc, devel/tevent, database/tdb, database/ldb
+  contained infinit recursive call to the strtol* set of replacement functions,
+  which lead to coredumps. Unofficial patch was added meanwhile, but now
+  official version of the fixed libs were released. If your version of
+  net/samba4 works fine you don't need to recompile it. Other ports were also
+  upgraded and some bugs were fixed in upstream.
+
 20151122:
   AFFECTS: users of audio/audacity
   AUTHOR: riggs@FreeBSD.org
@@ -549,7 +637,7 @@ you update your ports collection, before attempting any port upgrades.
 
 20150615:
   AFFECTS: users of security/libressl
-  AUTHOR: brnrd@FreeBSD.org 
+  AUTHOR: brnrd@FreeBSD.org
 
   After upgrading libressl, manually update all packages that depend on
   this library since its version has changed. Normally, you can obtain the
@@ -1257,7 +1345,7 @@ AUTHOR: ohauer@FreeBSD.org
 
 20141215:
   AFFECTS: users of emulators/linux_base-f10 and emulators/linux_base-c6
-  AUTHOR: sbruno@freebsd.org
+  AUTHOR: sbruno@FreeBSD.org
 
   The CentOS ports are now the default for stable/10 (after revision 275807).
   See UPDATING entry 20141209 for details on migration of systems.
@@ -1278,117 +1366,4 @@ AUTHOR: ohauer@FreeBSD.org
   and install the new versions:
 
 	# pkg delete -f tex-kpathsea texlive-base
-
-20141209:
-  AFFECTS: users of emulators/linux_base-f10 and emulators/linux_base-c6
-  AUTHOR: xmj@freebsd.org
-
-  The CentOS ports infrastructure has replaced Fedora 10 as default.
-
-  1. Please delete all remaining f10 ports/packages:
-
-     # pkg delete -f linux_base-f10 linux-f10-\*
-
-  2. Persistently update the Linux kernel version in /etc/sysctl.conf:
-
-     compat.linux.osrelease=2.6.18
-
-    This step is necessary on all FreeBSD versions, apart from 11.0-CURRENT
-    (after revision 271982).
-
-  3. Reinstall all software depending on Linux emulation.
-     As an example, reinstall linux-firefox:
-
-     # portmaster -r linux-firefox
-       or
-     # portupgrade -f www/linux-firefox
-       or
-     # pkg install linux-firefox
-
-  If difficulties are encountered, please follow the UPDATING entry 20140922
-  but skip step 2 (OVERRIDE_LINUX_BASE_PORT and OVERRIDE_LINUX_NONBASE_PORTS
-  in /etc/make.conf). In case these steps do not fix the issues, please submit
-  an issue report in Bugzilla and send an email to FreeBSD's emulation@ mailing
-  list.
-
-  Users who need to continue using Fedora 10 base and userland should do the
-  following instead:
-
-  1. Add these lines to /etc/make.conf:
-
-      OVERRIDE_LINUX_BASE_PORT=f10
-      OVERRIDE_LINUX_NONBASE_PORTS=f10
-
-  2. Downgrade the Linux kernel version in /etc/sysctl.conf on FreeBSD versions
-     newer than and including 11.0-CURRENT (after revision 271982).
-
-       compat.linux.osrelease=2.6.16
-
-  This is all that is needed to continue using an existing Fedora 10 Linux base
-  and userland.
-
-
-20141208:
-  AFFECTS: users of ports-mgmt/poudriere, ports-mgmt/poudriere-devel
-  AUTHOR: bdrewery@FreeBSD.org
-
-  8.4 jails created with Poudriere 3.1, or poudriere-devel-3.0.99.20141117
-  should be recreated with 'jail -d' and 'jail -c'. This fixes pkg(8)
-  crashes.
-
-20141208:
-  AFFECTS: users of databases/postgresql??-(server|client)
-  AUTHOR: marino@FreeBSD.org
-
-  PostgreSQL version 9.3 is now the default. To upgrade from a version
-  lower than 9.3, follow the instructions on the PostgreSQL.org website.
-  http://www.postgresql.org/docs/9.3/interactive/upgrading.html
-  Please note that the pg_upgrade program is installed by the
-  databases/postgresql93-contrib port
-
-  When using binary packages, if you only use the client port, you can
-  issue the following command to follow the default version:
-
-  # pkg set -o databases/postgresql92-client:databases/postgresql93-client
-
-20141205:
-  AFFECTS: users of polish/kadu
-  AUTHOR: pawel@FreeBSD.org
-
-  Before running kadu 1.x for the first time upstream developers
-  advise to backup your ~/.kadu directory.
-
-20141203:
-  AFFECTS: users of ports-mgmt/poudriere
-  AUTHOR: bdrewery@FreeBSD.org
-
-  Poudriere has been updated to 3.1.0. See the release notes at
-  https://github.com/freebsd/poudriere/wiki/release_notes_31 for
-  information on changed features and required setup.
-
-20141130:
-  AFFECTS: users of devel/gettext (close to everyone)
-  AUTHOR: tijl@FreeBSD.org
-
-  The devel/gettext port has been split up in devel/gettext-runtime, a
-  lightweight package containing runtime libraries, and devel/gettext-tools,
-  a package containing developer tools.  The devel/gettext port still exists
-  as a metaport.
-
-  You must first delete the existing installation of gettext and then
-  reinstall it.  This will break sudo, so you *must* do this in a root
-  shell (sudo -i) if you use sudo.
-
-  # pkg delete -f gettext
-  # portmaster devel/gettext
-
-  Or for portupgrade users:
-
-  # pkg delete -f gettext
-  # portinstall devel/gettext
-
-  Or for binary users:
-
-  # pkg delete -f gettext
-  # pkg upgrade
 
