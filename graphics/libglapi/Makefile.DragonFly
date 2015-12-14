@@ -1,2 +1,0 @@
-LIB_DEPENDS+= libelf.so:${PORTSDIR}/devel/libelf
-CFLAGS+= -I${LOCALBASE}/include/libelf
