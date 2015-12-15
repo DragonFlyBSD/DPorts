@@ -4,7 +4,7 @@
 #
 # See: http://www.eclipse.org
 #
-# $FreeBSD: head/java/eclipse/files/eclipse.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/java/eclipse/files/eclipse.in 402850 2015-12-02 19:57:29Z pi $
 #
 DEFAULT_JAVA_HOME=%%JAVA_HOME%%
 ECLIPSE_HOME=%%ECLIPSE_HOME%%
@@ -43,4 +43,4 @@ if [ ! -x "${ECLIPSE_HOME}/eclipse" ]; then
 	exit 1
 fi
 
-JAVA_VERSION="%%JAVA_VERSION%%" JAVA_OS="%%JAVA_OS%%" PATH=${JAVA_HOME}/bin:${PATH} exec "${ECLIPSE_HOME}/eclipse" $@
+JAVA_VERSION="%%JAVA_VERSION%%" JAVA_OS="%%JAVA_OS%%" PATH=${JAVA_HOME}/bin:${PATH} %%SWTGTK3OPT%% exec "${ECLIPSE_HOME}/eclipse" $@
