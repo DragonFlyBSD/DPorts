@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	zsh
-DISTVERSION=	5.1.1
+DISTVERSION=	5.2
+PORTREVISION=	1
 CATEGORIES=	shells
 MASTER_SITES=	\
 		http://www.zsh.org/pub/:doc \
@@ -11,7 +12,7 @@ MASTER_SITES=	\
 		SF/${PORTNAME}/${PORTNAME}-doc/${PORTVERSION}:doc
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
-MAINTAINER=	bapt@FreeBSD.org
+MAINTAINER=	adamw@FreeBSD.org
 COMMENT=	The Z shell
 
 LICENSE=	ZSH
@@ -35,6 +36,7 @@ SHEBANG_LANG=	zsh
 zsh_OLD_CMD=	/bin/zsh
 zsh_CMD=	${PREFIX}/bin/zsh
 GNU_CONFIGURE=	yes
+TEST_TARGET=	test
 
 CPPFLAGS+=	-I${LOCALBASE}/include -DBOOL_DEFINED
 LDFLAGS+=	-L${LOCALBASE}/lib -Wl,--as-needed
