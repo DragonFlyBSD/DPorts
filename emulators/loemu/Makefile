@@ -33,7 +33,7 @@ ZSNES_RUN_DEPENDS=	zsnes:${PORTSDIR}/emulators/zsnes
 
 .include <bsd.port.options.mk>
 
-.if ${ARCH:Mamd64}
+.if ${ARCH:Mx86_64}
 MAMENAME=	mame64
 .else
 MAMENAME=	mame
