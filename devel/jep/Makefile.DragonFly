@@ -1,2 +1,0 @@
-USES+= gettext
-LDFLAGS+= -L${LOCALBASE}/lib
