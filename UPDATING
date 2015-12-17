@@ -5,6 +5,29 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20151215:
+  AFFECTS: All users of www/node
+  AUTHOR: koobs
+
+  www/node has been updated to the latest 5.x stable release, and a new port
+  www/node4 has been created for the 4.x LTS branch.
+
+  Should users want to continue to use version 4.x, replace www/node with
+  www/node4 as follows:
+
+  Using packages:
+
+    # pkg delete node
+    # pkg install node4
+
+  Using ports:
+
+    # portupgrade -o www/node4 www/node
+
+  OR
+
+    # portmaster -o www/node4 www/node
+
 20151210:
   AFFECTS: users of comms/gammu
   AUTHOR: vanilla@FreeBSD.org
@@ -1321,49 +1344,4 @@ AUTHOR: ohauer@FreeBSD.org
   With portmaster:
 
     portmaster `find /usr/local/lib/perl5/site_perl/mach/5.18 -name '*.so'|xargs pkg which -qo|sort -u`
-
-20141216:
-  AFFECTS: users of security/openssh-portable, security/openssh-portable66
-  AUTHOR: bdrewery@FreeBSD.org
-
-  All patches have been fixed for version 6.7. It is no longer required to use
-  the security/openssh-portable66 port.
-
-  The LPK option was removed from security/openssh-portable as it has been
-  deprecated since May 2013. Use AuthorizedKeysCommand as a replacement.
-
-20141215:
-  AFFECTS: users of comms/spandsp-devel
-  AUTHOR: pawel@FreeBSD.org
-
-  comms/spandsp has been upgraded to version 0.0.6
-  comms/spandsp-devel is now deprecated and set for removal, all ports using
-  it were converted to use newer comms/spandsp. Before upgrade you must
-  remove comms/spandsp-devel so that ports can pick up new dependency:
-
-	# pkg delete -f spandsp-devel
-
-20141215:
-  AFFECTS: users of emulators/linux_base-f10 and emulators/linux_base-c6
-  AUTHOR: sbruno@FreeBSD.org
-
-  The CentOS ports are now the default for stable/10 (after revision 275807).
-  See UPDATING entry 20141209 for details on migration of systems.
-
-20141214:
-  AFFECTS: users of TeXLive
-  AUTHOR: hrs@FreeBSD.org
-
-  Several scripts in print/texlive-base have been moved to
-  devel/tex-kpathsea.  Upgrading them can fail because texlive-base
-  depends on tex-kpathsea, and the new tex-kpathsea tries to install
-  files which were installed by the old texlive-base.  The following
-  error message indicates this situation:
-
-    pkg-static: tex-kpathsea-6.2.0_1 conflicts with texlive-base-20140525_3 (installs files into the same place).  Problematic file: /usr/local/bin/kpsewhere
-
-  To solve this problem, remove both of tex-kpathsea and texlive-base first
-  and install the new versions:
-
-	# pkg delete -f tex-kpathsea texlive-base
 
