@@ -1,0 +1,4 @@
+
+# TESTS (far_regression, hbr_regression, osd_regression PASSED)
+#CMAKE_ARGS+= -DNO_REGRESSION:BOOL=OFF
+#LDFLAGS+= -L/usr/local/lib -lX11
