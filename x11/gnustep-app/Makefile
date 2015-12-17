@@ -24,8 +24,6 @@ RUN_DEPENDS=	aclock>0:${PORTSDIR}/x11-clocks/aclock \
 		cartotheque>0:${PORTSDIR}/deskutils/cartotheque \
 		cddb-bundle>0:${PORTSDIR}/audio/cddb-bundle \
 		gnustep-cdplayer>0:${PORTSDIR}/audio/gnustep-cdplayer \
-		cenon>0:${PORTSDIR}/graphics/cenon \
-		displaycalibrator>0:${PORTSDIR}/deskutils/displaycalibrator \
 		duncan>0:${PORTSDIR}/textproc/duncan \
 		easydiff>0:${PORTSDIR}/textproc/easydiff \
 		edenmath>0:${PORTSDIR}/math/edenmath \
