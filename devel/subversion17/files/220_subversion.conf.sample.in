@@ -1,4 +1,4 @@
-## $FreeBSD: head/devel/subversion17/files/220_subversion.conf.sample.in 393672 2015-08-06 20:41:07Z ohauer $
+## $FreeBSD: head/devel/subversion17/files/220_subversion.conf.sample.in 403807 2015-12-15 20:57:59Z ohauer $
 ## vim: set filetype=apache:
 ##
 ## module file for subversion
@@ -57,6 +57,11 @@
 ##
 ##<IfModule dav_svn_module>
 ##<Location /svn/>
+##	<ifModule mime_module>
+##		RemoveEncoding  .gz .tgz .Z
+##		RemoveType      .gz .tgz .Z
+##	</ifModule>
+##
 ##	# Enable Subversion
 ##	DAV svn
 ##
