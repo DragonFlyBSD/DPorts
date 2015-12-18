@@ -1,0 +1,13 @@
+--- configure.intermediate	2015-12-18 09:37:29.000000000 +0200
++++ configure
+@@ -28876,9 +28876,7 @@ $as_echo_n "checking Checking for up to
+ #ifdef __sun /* Solaris */
+ #include <sys/types.h>
+ #include <sys/videodev2.h>
+-#elif __FreeBSD__
+-#include <linux/videodev2.h>
+-#elif __FreeBSD__
++#elif defined(__FreeBSD__) || defined(__DragonFly__)
+ #include <linux/videodev2.h>
+ #else /* Linux */
+ #include <linux/types.h>
