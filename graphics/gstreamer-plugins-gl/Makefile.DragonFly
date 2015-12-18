@@ -1,0 +1,7 @@
+
+# just for the noise
+CFLAGS+= -Wno-deprecated-declarations
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@dragonflybsd@dragonfly@g'		\
+		${WRKSRC}/configure
