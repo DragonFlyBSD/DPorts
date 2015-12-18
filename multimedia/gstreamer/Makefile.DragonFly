@@ -1,0 +1,6 @@
+
+# warning: -Wformat-nonliteral ignored without -Wformat [-Wformat-nonliteral]
+CFLAGS+= -Wformat
+
+# just for the noise
+CFLAGS+= -Wno-deprecated-declarations
