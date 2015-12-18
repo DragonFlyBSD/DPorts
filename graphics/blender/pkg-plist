@@ -92,7 +92,6 @@ share/applications/blender.desktop
 %%NLS%%%%DATADIR%%/%%VER%%/datafiles/fonts/bmonofont-i18n.ttf.gz
 %%NLS%%%%DATADIR%%/%%VER%%/datafiles/fonts/droidsans.ttf.gz
 %%NLS%%%%DATADIR%%/%%VER%%/datafiles/locale/ar/LC_MESSAGES/blender.mo
-%%NLS%%%%DATADIR%%/%%VER%%/datafiles/locale/ar_raw/LC_MESSAGES/blender.mo
 %%NLS%%%%DATADIR%%/%%VER%%/datafiles/locale/ca/LC_MESSAGES/blender.mo
 %%NLS%%%%DATADIR%%/%%VER%%/datafiles/locale/cs/LC_MESSAGES/blender.mo
 %%NLS%%%%DATADIR%%/%%VER%%/datafiles/locale/de/LC_MESSAGES/blender.mo
@@ -100,10 +99,8 @@ share/applications/blender.desktop
 %%NLS%%%%DATADIR%%/%%VER%%/datafiles/locale/es/LC_MESSAGES/blender.mo
 %%NLS%%%%DATADIR%%/%%VER%%/datafiles/locale/es_ES/LC_MESSAGES/blender.mo
 %%NLS%%%%DATADIR%%/%%VER%%/datafiles/locale/fa/LC_MESSAGES/blender.mo
-%%NLS%%%%DATADIR%%/%%VER%%/datafiles/locale/fa_raw/LC_MESSAGES/blender.mo
 %%NLS%%%%DATADIR%%/%%VER%%/datafiles/locale/fr/LC_MESSAGES/blender.mo
 %%NLS%%%%DATADIR%%/%%VER%%/datafiles/locale/he/LC_MESSAGES/blender.mo
-%%NLS%%%%DATADIR%%/%%VER%%/datafiles/locale/he_raw/LC_MESSAGES/blender.mo
 %%NLS%%%%DATADIR%%/%%VER%%/datafiles/locale/hi/LC_MESSAGES/blender.mo
 %%NLS%%%%DATADIR%%/%%VER%%/datafiles/locale/hr/LC_MESSAGES/blender.mo
 %%NLS%%%%DATADIR%%/%%VER%%/datafiles/locale/hu/LC_MESSAGES/blender.mo
@@ -161,6 +158,7 @@ share/applications/blender.desktop
 %%DATADIR%%/%%VER%%/scripts/addons/add_mesh_extra_objects/add_mesh_vertex.py
 %%DATADIR%%/%%VER%%/scripts/addons/animation_add_corrective_shape_key.py
 %%DATADIR%%/%%VER%%/scripts/addons/animation_animall.py
+%%DATADIR%%/%%VER%%/scripts/addons/bone_selection_groups.py
 %%DATADIR%%/%%VER%%/scripts/addons/curve_simplify.py
 %%CYCLES%%%%DATADIR%%/%%VER%%/scripts/addons/cycles/__init__.py
 %%CYCLES%%%%DATADIR%%/%%VER%%/scripts/addons/cycles/engine.py
@@ -221,6 +219,7 @@ share/applications/blender.desktop
 %%CYCLES%%%%DATADIR%%/%%VER%%/scripts/addons/cycles/kernel/kernel_montecarlo.h
 %%CYCLES%%%%DATADIR%%/%%VER%%/scripts/addons/cycles/kernel/kernel_passes.h
 %%CYCLES%%%%DATADIR%%/%%VER%%/scripts/addons/cycles/kernel/kernel_path.h
+%%CYCLES%%%%DATADIR%%/%%VER%%/scripts/addons/cycles/kernel/kernel_path_branched.h
 %%CYCLES%%%%DATADIR%%/%%VER%%/scripts/addons/cycles/kernel/kernel_path_common.h
 %%CYCLES%%%%DATADIR%%/%%VER%%/scripts/addons/cycles/kernel/kernel_path_state.h
 %%CYCLES%%%%DATADIR%%/%%VER%%/scripts/addons/cycles/kernel/kernel_path_surface.h
@@ -297,6 +296,7 @@ share/applications/blender.desktop
 %%CYCLES%%%%DATADIR%%/%%VER%%/scripts/addons/cycles/kernel/svm/svm_value.h
 %%CYCLES%%%%DATADIR%%/%%VER%%/scripts/addons/cycles/kernel/svm/svm_vector_transform.h
 %%CYCLES%%%%DATADIR%%/%%VER%%/scripts/addons/cycles/kernel/svm/svm_voronoi.h
+%%CYCLES%%%%DATADIR%%/%%VER%%/scripts/addons/cycles/kernel/svm/svm_voxel.h
 %%CYCLES%%%%DATADIR%%/%%VER%%/scripts/addons/cycles/kernel/svm/svm_wave.h
 %%CYCLES%%%%DATADIR%%/%%VER%%/scripts/addons/cycles/kernel/svm/svm_wavelength.h
 %%CYCLES%%%%DATADIR%%/%%VER%%/scripts/addons/cycles/kernel/svm/svm_wireframe.h
@@ -543,6 +543,7 @@ share/applications/blender.desktop
 %%DATADIR%%/%%VER%%/scripts/addons/light_field_tools/__init__.py
 %%DATADIR%%/%%VER%%/scripts/addons/light_field_tools/light_field_tools.py
 %%DATADIR%%/%%VER%%/scripts/addons/mesh_bsurfaces.py
+%%DATADIR%%/%%VER%%/scripts/addons/mesh_custom_normals_tools.py
 %%DATADIR%%/%%VER%%/scripts/addons/mesh_f2.py
 %%DATADIR%%/%%VER%%/scripts/addons/mesh_inset/__init__.py
 %%DATADIR%%/%%VER%%/scripts/addons/mesh_inset/geom.py
@@ -676,15 +677,6 @@ share/applications/blender.desktop
 %%DATADIR%%/%%VER%%/scripts/addons/render_povray/render.py
 %%DATADIR%%/%%VER%%/scripts/addons/render_povray/ui.py
 %%DATADIR%%/%%VER%%/scripts/addons/render_povray/update_files.py
-%%DATADIR%%/%%VER%%/scripts/addons/render_renderfarmfi/__init__.py
-%%DATADIR%%/%%VER%%/scripts/addons/render_renderfarmfi/exceptions.py
-%%DATADIR%%/%%VER%%/scripts/addons/render_renderfarmfi/operators.py
-%%DATADIR%%/%%VER%%/scripts/addons/render_renderfarmfi/ore_session.py
-%%DATADIR%%/%%VER%%/scripts/addons/render_renderfarmfi/panels.py
-%%DATADIR%%/%%VER%%/scripts/addons/render_renderfarmfi/prepare.py
-%%DATADIR%%/%%VER%%/scripts/addons/render_renderfarmfi/rpc.py
-%%DATADIR%%/%%VER%%/scripts/addons/render_renderfarmfi/upload.py
-%%DATADIR%%/%%VER%%/scripts/addons/render_renderfarmfi/utils.py
 %%DATADIR%%/%%VER%%/scripts/addons/rigify/CREDITS
 %%DATADIR%%/%%VER%%/scripts/addons/rigify/README
 %%DATADIR%%/%%VER%%/scripts/addons/rigify/__init__.py
@@ -812,6 +804,7 @@ share/applications/blender.desktop
 %%DATADIR%%/%%VER%%/scripts/modules/bl_i18n_utils/utils_languages_menu.py
 %%DATADIR%%/%%VER%%/scripts/modules/bl_i18n_utils/utils_rtl.py
 %%DATADIR%%/%%VER%%/scripts/modules/bl_i18n_utils/utils_spell_check.py
+%%DATADIR%%/%%VER%%/scripts/modules/bl_previews_utils/bl_previews_render.py
 %%DATADIR%%/%%VER%%/scripts/modules/blend_render_info.py
 %%DATADIR%%/%%VER%%/scripts/modules/bpy/__init__.py
 %%DATADIR%%/%%VER%%/scripts/modules/bpy/ops.py
@@ -840,6 +833,7 @@ share/applications/blender.desktop
 %%DATADIR%%/%%VER%%/scripts/modules/graphviz_export.py
 %%DATADIR%%/%%VER%%/scripts/modules/keyingsets_utils.py
 %%DATADIR%%/%%VER%%/scripts/modules/nodeitems_utils.py
+%%DATADIR%%/%%VER%%/scripts/modules/progress_report.py
 %%DATADIR%%/%%VER%%/scripts/modules/rna_info.py
 %%DATADIR%%/%%VER%%/scripts/modules/rna_keymap_ui.py
 %%DATADIR%%/%%VER%%/scripts/modules/rna_prop_ui.py
@@ -1004,6 +998,7 @@ share/applications/blender.desktop
 %%DATADIR%%/%%VER%%/scripts/startup/bl_operators/anim.py
 %%DATADIR%%/%%VER%%/scripts/startup/bl_operators/clip.py
 %%DATADIR%%/%%VER%%/scripts/startup/bl_operators/console.py
+%%DATADIR%%/%%VER%%/scripts/startup/bl_operators/file.py
 %%DATADIR%%/%%VER%%/scripts/startup/bl_operators/freestyle.py
 %%DATADIR%%/%%VER%%/scripts/startup/bl_operators/image.py
 %%DATADIR%%/%%VER%%/scripts/startup/bl_operators/mask.py
