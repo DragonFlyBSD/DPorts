@@ -1,0 +1,4 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(DNCURSES\)@\1 -D__FreeBSD__@'		\
+		${WRKSRC}/Makefile

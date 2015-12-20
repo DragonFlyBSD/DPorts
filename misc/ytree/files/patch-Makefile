@@ -1,0 +1,13 @@
+--- Makefile.orig
++++ Makefile
+@@ -87,8 +87,8 @@
+ ###########################
+ # FreeBSD (Thanks to Peter Brevik)
+ ###########################
+-#CFLAGS      = -DCOLOR_SUPPORT -DNCURSES
+-#LDFLAGS     = -lncurses -lcompat
++CFLAGS      = -DCOLOR_SUPPORT -DNCURSES
++LDFLAGS     = -lncurses -lcompat
+ 
+ ###########################
+ # MAC OS X
