@@ -1,0 +1,2 @@
+# Requires for bootstrap compiler (v2.6.4)
+MAKE_ENV+= LDVER=ld.bfd
