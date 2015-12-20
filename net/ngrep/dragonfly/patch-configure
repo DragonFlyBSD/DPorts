@@ -1,0 +1,11 @@
+--- configure.orig	2006-11-15 05:40:56.000000000 +0200
++++ configure
+@@ -3743,7 +3743,7 @@ rm -f core conftest.err conftest.$ac_obj
+ 
+         ;;
+ 
+-*bsd*)
++*bsd*|*dragonfly*)
+ 	OS=BSD
+ 
+ 
