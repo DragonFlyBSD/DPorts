@@ -1,19 +1,11 @@
---- packages/fcl-net/fpmake.pp.orig	2014-02-25 11:05:54 UTC
+--- packages/fcl-net/fpmake.pp.orig	2015-11-13 21:15:29 UTC
 +++ packages/fcl-net/fpmake.pp
-@@ -52,14 +52,14 @@ begin
-     T.ResourceStrings := True;
- 
-     // HTTP Client
--    T:=P.Targets.AddUnit('fpsock.pp',[linux,freebsd,netbsd,openbsd]);
-+    T:=P.Targets.AddUnit('fpsock.pp',[linux,dragonfly,freebsd,netbsd,openbsd]);
-       with T.Dependencies do
-         begin
-           AddUnit('resolve');
+@@ -70,7 +70,7 @@ begin
          end;
      T.ResourceStrings := True;
  
 -    T:=P.Targets.AddUnit('cnetdb.pp',[linux,freebsd]);
-+    T:=P.Targets.AddUnit('cnetdb.pp',[linux,freebsd,dragonfly]);
++    T:=P.Targets.AddUnit('cnetdb.pp',[linux,dragonfly,freebsd]);
  
      P.ExamplePath.Add('examples');
      P.Targets.AddExampleProgram('examples/ip6test.pp');
