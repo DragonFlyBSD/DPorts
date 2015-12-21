@@ -1,0 +1,92 @@
+DFLY_FILESDIR= ${FILESDIR:S@/files$$@/dragonfly@}
+DFLY_PATCHDIR= ${PATCHDIR:S@/files$$@/dragonfly@}
+
+BUILD_DEPENDS+= ${LOCALBASE}/bin/fpcmake:${PORTSDIR}/lang/fpc
+MAKE_ENV+= FPCDIR="${LOCALBASE}/lib/fpc/3.0.0"
+# bootstrap dragonfly
+pre-build-script:
+	cd ${WRKDIR}/${PORTNAME}/packager/registration && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKDIR}/${PORTNAME}/components/lazutils && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKDIR}/${PORTNAME}/components/lazcontrols && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKDIR}/${PORTNAME}/components/ideintf && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKDIR}/${PORTNAME}/components/synedit && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKDIR}/${PORTNAME}/lcl/interfaces && \
+		${SETENV} ${MAKE_ENV} fpcmake
+.if defined(PKGNAMESUFFIX)
+.if ${PKGNAMESUFFIX} == "-lcl-nogui"
+	cd ${WRKDIR}/${PORTNAME}/lcl/interfaces/nogui && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKDIR}/${PORTNAME}/components/debuggerintf && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKDIR}/${PORTNAME}/components/lazdebuggergdbmi && \
+		${SETENV} ${MAKE_ENV} fpcmake
+.endif
+.if ${PKGNAMESUFFIX} == "-lcl-qt"
+	cd ${WRKDIR}/${PORTNAME}/lcl/interfaces/qt && \
+		${SETENV} ${MAKE_ENV} fpcmake
+.endif
+.else
+	cd ${WRKDIR}/${PORTNAME}/lcl/interfaces/nogui && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKDIR}/${PORTNAME}/components && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKDIR}/${PORTNAME}/components/rtticontrols && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKDIR}/${PORTNAME}/components/cairocanvas && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKDIR}/${PORTNAME}/components/printers && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKDIR}/${PORTNAME}/components/printers/design && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKDIR}/${PORTNAME}/components/turbopower_ipro && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKDIR}/${PORTNAME}/components/turbopower_ipro/design && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKDIR}/${PORTNAME}/components/fpcunit && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKDIR}/${PORTNAME}/components/fpcunit/ide && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKDIR}/${PORTNAME}/components/projecttemplates && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKDIR}/${PORTNAME}/components/leakview && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKDIR}/${PORTNAME}/components/memds && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKDIR}/${PORTNAME}/components/sdf && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKDIR}/${PORTNAME}/components/tachart && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKDIR}/${PORTNAME}/components/todolist && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKDIR}/${PORTNAME}/components/editortoolbar && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKDIR}/${PORTNAME}/components/datetimectrls && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKDIR}/${PORTNAME}/components/jcf2/IdePlugin/lazarus && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKDIR}/${PORTNAME}/components/chmhelp/packages/help && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKDIR}/${PORTNAME}/components/chmhelp/packages/idehelp && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKDIR}/${PORTNAME}/components/externhelp && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKDIR}/${PORTNAME}/components/chmhelp/lhelp && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKDIR}/${PORTNAME}/components/instantfpc && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKDIR}/${PORTNAME}/components/tdbf && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKDIR}/${PORTNAME}/components/macroscript && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKDIR}/${PORTNAME}/tools && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKDIR}/${PORTNAME}/components/debuggerintf && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKDIR}/${PORTNAME}/components/lazdebuggergdbmi && \
+		${SETENV} ${MAKE_ENV} fpcmake
+.endif
