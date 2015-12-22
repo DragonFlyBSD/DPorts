@@ -1,5 +1,3 @@
-# has a bug, ffmpeg is C so should not be treated as non C
-CFLAGS+=	-D__STDC_CONSTANT_MACROS
 USES+=	alias execinfo
 
 #CMAKE_ARGS+=   -DLIBEXECINFO_INCLUDE_DIR=/usr/local/include
