@@ -9,12 +9,15 @@
       else
         DynamicLinker:='';
     end;
-@@ -718,7 +720,7 @@ begin
+@@ -718,7 +720,10 @@ begin
    Replace(cmdstr,'$DYNLINK',DynLinkStr);
    if (target_info.system in systems_darwin) then
      Replace(cmdstr,'$PRTOBJ',GetDarwinPrtobjName(false));
 -  BinStr:=FindUtil(utilsprefix+BinStr);
-+  BinStr:='/usr/libexec/binutils225/elf/ld.bfd';
++  if target_info.system=system_x86_64_dragonfly then
++     BinStr:='/usr/libexec/binutils225/elf/ld.bfd'
++  else
++     BinStr:=FindUtil(utilsprefix+BinStr);
  
    { create dsym file? }
    extdbgbinstr:='';
