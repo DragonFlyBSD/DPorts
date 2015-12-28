@@ -18,7 +18,7 @@
 MESAVERSION=	${MESABASEVERSION}${MESASUBVERSION:C/^(.)/.\1/}
 MESADISTVERSION=${MESABASEVERSION}${MESASUBVERSION:C/^(.)/-\1/}
 
-MESABASEVERSION=	11.0.7
+MESABASEVERSION=	11.0.8
 # if there is a subversion, don't include the '-' between 7.11-rc2.
 MESASUBVERSION=
 
@@ -119,26 +119,14 @@ CONFIGURE_ARGS+=--enable-gallium-llvm \
 CONFIGURE_ARGS+=--enable-texture-float
 .endif
 
-# this is disabled because our kernel driver is too old
-# merge this and the one below when support does land.
-.if 0 #${PORT_OPTIONS:MVDPAU}
-.if ${PORT_OPTIONS:MGALLIUM} == ""
-IGNORE= VDPAU option requires GALLIUM support to be enabled
-.endif
+# only support on DragonFly. FreeBSD's drm doesn't support it.
+.if ${OPSYS} == DragonFly && ${COMPONENT:Mdri} != ""
 CONFIGURE_ARGS+=--enable-vdpau
 LIB_DEPENDS+=   libvdpau.so:${PORTSDIR}/multimedia/libvdpau
 PLIST_SUB+=     VDPAU=""
-# for now disable too .else
+.else
 CONFIGURE_ARGS+=--disable-vdpau
 PLIST_SUB+=     VDPAU="@comment "
-.endif
-
-.if ${COMPONENT:Mvdpau} == "" && ${COMPONENT:Mdri} == ""
-CONFIGURE_ARGS+=--disable-vdpau
-.else
-CONFIGURE_ARGS+=--enable-vdpau
-LIB_DEPENDS+=   libvdpau.so:${PORTSDIR}/multimedia/libvdpau
-PLIST_SUB+=     VDPAU=""
 .endif
 
 # VAAPI support?
@@ -187,9 +175,7 @@ PLIST_SUB+=	${_gd}_GDRIVER="@comment "
 CONFIGURE_ARGS+=--with-gallium-drivers="${GALLIUM_DRIVERS:tl}"
 
 .if ${OPSYS} == DragonFly
-. if ${COMPONENT:Mdri} != "" || ${COMPONENT:Mclover} != "" || \
-	${COMPONENT:Mosmesa} != "" || ${COMPONENT:Mglapi} != ""
 LIB_DEPENDS+= libelf.so:${PORTSDIR}/devel/libelf
 CFLAGS+= -I${LOCALBASE}/include/libelf
-. endif
 .endif
+

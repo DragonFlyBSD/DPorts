@@ -1,21 +1,33 @@
+Revert the following commit.
 
-This is partial revert of 69a1b9959
-pipe-loader: drop support for non-render node devices
+FreeBSD and DragonFly don't have the required render nodes.
 
-On DragonFly we're not there for render devices...
+-------
 
---- src/gallium/auxiliary/pipe-loader/pipe_loader_drm.c.orig	2015-12-07 15:59:47.000000000 +0200
-+++ src/gallium/auxiliary/pipe-loader/pipe_loader_drm.c
-@@ -77,6 +77,8 @@ pipe_loader_drm_probe_fd(struct pipe_loa
-    ddev->base.ops = &pipe_loader_drm_ops;
-    ddev->fd = fd;
- 
-+   /* XXX lets say we auth'ed */
-+
-    ddev->base.driver_name = loader_get_driver_for_fd(fd, _LOADER_GALLIUM);
-    if (!ddev->base.driver_name)
-       goto fail;
-@@ -90,6 +92,14 @@ pipe_loader_drm_probe_fd(struct pipe_loa
+From 69a1b9959e59653da262185c4e2cf57d24939b19 Mon Sep 17 00:00:00 2001
+From: Emil Velikov <emil.l.velikov@gmail.com>
+Date: Mon, 29 Jun 2015 12:36:45 +0100
+Subject: pipe-loader: drop support for non-render node devices
+
+Render nodes have been around for quite some time. Removing support via
+the master/primary node allows us to clean up the conditional
+compilation and simplify the build greatly.
+
+For example currently we the pipe-loader, which explicitly links against
+xcb and friends (for X auth) if found at compile-time. That
+would cause problems as one will be forced to use X/xcb, even if it's a
+headless system that is used for opencl.
+
+v2: Clarify the linking topic in the commit message.
+
+Cc: Tom Stellard <thomas.stellard@amd.com>
+Signed-off-by: Emil Velikov <emil.l.velikov@gmail.com>
+Reviewed-by: Francisco Jerez <currojerez@riseup.net>
+
+
+--- src/gallium/auxiliary/pipe-loader/pipe_loader_drm.c.orig	2015-12-21 10:05:52.000000000 +0100
++++ src/gallium/auxiliary/pipe-loader/pipe_loader_drm.c	2015-12-22 20:18:18.734280000 +0100
+@@ -90,6 +90,14 @@ pipe_loader_drm_probe_fd(struct pipe_loa
  }
  
  static int
@@ -23,14 +35,14 @@ On DragonFly we're not there for render devices...
 +{
 +   char path[PATH_MAX];
 +   snprintf(path, sizeof(path), DRM_DEV_NAME, DRM_DIR_NAME, minor);
-+   return loader_open_device(path);
++   return open(path, O_RDWR, 0);
 +}
 +
 +static int
  open_drm_render_node_minor(int minor)
  {
     char path[PATH_MAX];
-@@ -101,8 +111,15 @@ open_drm_render_node_minor(int minor)
+@@ -101,8 +109,15 @@ open_drm_render_node_minor(int minor)
  int
  pipe_loader_drm_probe(struct pipe_loader_device **devs, int ndev)
  {
@@ -47,7 +59,7 @@ On DragonFly we're not there for render devices...
     for (i = DRM_RENDER_NODE_MIN_MINOR, j = 0;
          i <= DRM_RENDER_NODE_MAX_MINOR; i++) {
        fd = open_drm_render_node_minor(i);
-@@ -115,6 +132,9 @@ pipe_loader_drm_probe(struct pipe_loader
+@@ -115,6 +130,9 @@ pipe_loader_drm_probe(struct pipe_loader
           continue;
        }
  
@@ -57,7 +69,7 @@ On DragonFly we're not there for render devices...
        if (j < ndev) {
           devs[j] = dev;
        } else {
-@@ -124,6 +144,46 @@ pipe_loader_drm_probe(struct pipe_loader
+@@ -124,6 +142,46 @@ pipe_loader_drm_probe(struct pipe_loader
        j++;
     }
  
