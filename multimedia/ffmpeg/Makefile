@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	ffmpeg
-PORTVERSION=	2.8.3
-PORTREVISION=	1
+PORTVERSION=	2.8.4
 PORTEPOCH=	1
 CATEGORIES=	multimedia audio ipv6 net
 MASTER_SITES=	http://ffmpeg.org/releases/
@@ -19,17 +18,18 @@ BUILD_DEPENDS=	yasm:${PORTSDIR}/devel/yasm \
 
 HAS_CONFIGURE=	yes
 CONFIGURE_LOG=	config.err
-USES=		compiler cpe gmake perl5 pkgconfig tar:bzip2
+USES=		compiler cpe gmake perl5 pkgconfig tar:bzip2 shebangfix
 USE_LDCONFIG=	yes
 USE_PERL5=	build
+SHEBANG_FILES=	doc/texi2pod.pl
 
 OPTIONS_DEFINE= AACPLUS ALSA AMR_NB AMR_WB ASS BS2B CACA CDIO CELT DC1394 \
 		DEBUG DOCS FAAC FDK_AAC FFSERVER FLITE FONTCONFIG \
 		FREETYPE FREI0R FRIBIDI GME GSM ICONV ILBC JACK LADSPA \
-		LAME LIBBLURAY LIBV4L MODPLUG OPENAL OPENCL OPENCV OPENGL \
+		LAME LIBBLURAY MODPLUG OPENAL OPENCL OPENCV OPENGL \
 		OPENH264 OPENJPEG OPTIMIZED_CFLAGS OPUS PULSEAUDIO QUVI \
 		RTCPU RTMP SCHROEDINGER SDL SMB SNAPPY SPEEX SSH \
-		THEORA TWOLAME VAAPI VDPAU VIDSTAB VORBIS VO_AACENC \
+		THEORA TWOLAME V4L VAAPI VDPAU VIDSTAB VORBIS VO_AACENC \
 		VO_AMRWBENC VPX WAVPACK WEBP X11GRAB X264 X265 XCB XVID \
 		XVIDEO ZMQ ZVBI
 
@@ -58,7 +58,6 @@ FLITE_DESC=	Voice synthesis support via libflite
 GME_DESC=	Game Music Emu demuxer
 GPL3_DESC=	Allow (L)GPL version 3 code(cs)
 ILBC_DESC=	Internet Low Bit Rate codec
-LIBV4L_DESC=	Video for Linux support
 LICENSE_DESC=	Licensing options
 NEON_DESC=	Enable Media Processing Engine instructions
 NONFREE_DESC=	Allow use of nonfree code
@@ -199,10 +198,10 @@ LIBBLURAY_LIB_DEPENDS=	libbluray.so:${PORTSDIR}/multimedia/libbluray
 LIBBLURAY_CONFIGURE_ENABLE=	libbluray
 
 # libv4l
-LIBV4L_BUILD_DEPENDS=	v4l_compat>0:${PORTSDIR}/multimedia/v4l_compat
-LIBV4L_LIB_DEPENDS=	libv4l2.so:${PORTSDIR}/multimedia/libv4l
-LIBV4L_CONFIGURE_ENABLE=	libv4l2
-LIBV4L_CONFIGURE_OFF=		--disable-indev=v4l2 \
+V4L_BUILD_DEPENDS=	v4l_compat>0:${PORTSDIR}/multimedia/v4l_compat
+V4L_LIB_DEPENDS=	libv4l2.so:${PORTSDIR}/multimedia/libv4l
+V4L_CONFIGURE_ENABLE=	libv4l2
+V4L_CONFIGURE_OFF=		--disable-indev=v4l2 \
 				--disable-outdev=v4l2
 
 # mmx support
@@ -448,8 +447,6 @@ post-patch:
 		-e 's|opencv opencv/cxcore.h|opencv-core opencv2/core/core_c.h|g' \
 		-e 's|freetype/freetype.h|freetype.h|g' \
 		${CONFIGURE_WRKSRC}/${CONFIGURE_SCRIPT}
-	@${REINPLACE_CMD} -e 's|/usr/bin/perl|${PERL5}|g' \
-		${WRKSRC}/doc/texi2pod.pl
 
 post-patch-SDL-on:
 	@${REINPLACE_CMD} -E \
