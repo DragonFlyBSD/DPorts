@@ -1,0 +1,2 @@
+pre-patch:
+	${REINPLACE_CMD} -e 's/freebsd\*/freebsd*|dragonfly*/g' ${WRKSRC}/configure
