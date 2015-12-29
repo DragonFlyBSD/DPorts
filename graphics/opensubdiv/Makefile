@@ -2,6 +2,7 @@
 
 PORTNAME=	opensubdiv
 PORTVERSION=	3.0.3
+PORTREVISION=	1
 CATEGORIES=	graphics devel
 
 MAINTAINER=	mva@FreeBSD.org
@@ -32,10 +33,8 @@ OPTIONS_DEFINE=	DOCS
 
 .if ${CHOSEN_COMPILER_TYPE:Mgcc}
 # OpenMP is available
-CMAKE_ARGS+=	-DNO_OMP:BOOL=OFF
 PLIST_SUB+=	OPENMP=""
 .else
-CMAKE_ARGS+=	-DNO_OMP:BOOL=ON
 PLIST_SUB+=	OPENMP="@comment "
 .endif
 
