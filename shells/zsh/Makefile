@@ -41,7 +41,7 @@ TEST_TARGET=	test
 CPPFLAGS+=	-I${LOCALBASE}/include -DBOOL_DEFINED
 LDFLAGS+=	-L${LOCALBASE}/lib -Wl,--as-needed
 CONFIGURE_ENV+=	zsh_cv_sys_path_dev_fd=no
-CONFIGURE_ARGS=	--with-term-lib="ncursesw ncurses" --with-tcsetpgrp \
+CONFIGURE_ARGS=	--with-tcsetpgrp \
 		--enable-function-subdirs --enable-multibyte \
 		--sysconfdir=${PREFIX}/etc
 
@@ -51,7 +51,7 @@ EXTRA_PATCHES=	${FILESDIR}/extra-patch-bsdtar
 
 OPTIONS_DEFINE=	GDBM MEM SECURE_FREE MAILDIR PCRE STATIC DOCS DEBUG \
 		EXAMPLES
-OPTIONS_DEFAULT=	SECURE_FREE MAILDIR
+OPTIONS_DEFAULT=SECURE_FREE MAILDIR
 
 GDBM_DESC=	Enable GDBM support (GPL)
 MEM_DESC=	Enable zsh-mem options
@@ -76,8 +76,8 @@ MEM_CONFIGURE_ENABLE=	zsh-mem
 SECURE_FREE_CONFIGURE_ENABLE=	zsh-secure-free
 MAILDIR_CONFIGURE_ENABLE=	maildir-support
 STATIC_LDFLAGS=		-static
-STATIC_CONFIGURE_ON=	--disable-dynamic
-STATIC_CONFIGURE_OFF=	--enable-dynamic
+STATIC_CONFIGURE_ON=	--disable-dynamic --with-term-lib="tinfow tinfo"
+STATIC_CONFIGURE_OFF=	--enable-dynamic  --with-term-lib="ncursesw ncurses"
 DEBUG_CONFIGURE_ENABLE=	zsh-debug
 
 .include <bsd.port.pre.mk>
@@ -112,28 +112,25 @@ post-build:
 	# Fix ".so" macro problem by using "soelim" command.
 	${LN} -sf ${WRKSRC}/Doc ${WRKSRC}/man1
 	${MV} ${WRKSRC}/Doc/zshall.1 ${WRKSRC}/Doc/zshall.1.source
-	cd ${WRKSRC} && ${SOELIM} ${WRKSRC}/Doc/zshall.1.source > \
-		${WRKSRC}/Doc/zshall.1
+	(cd ${WRKSRC} && ${SOELIM} -r ${WRKSRC}/Doc/zshall.1.source > \
+		${WRKSRC}/Doc/zshall.1)
 
 post-install:
 	${LN} -f ${STAGEDIR}${PREFIX}/bin/zsh ${STAGEDIR}${PREFIX}/bin/rzsh
-	${STAGEDIR}${PREFIX}/bin/zsh -fc ' \
+	(${STAGEDIR}${PREFIX}/bin/zsh -fc ' \
 		setopt extendedglob nomark_dirs; \
 		cd ${STAGEDIR}/${DATADIR}/${ZSH_VER} ; \
 		for i in functions/**/*(/) ; do \
 			zcompile -U -M $$i.zwc $$i/*~*.zwc(^/) ; \
 			${CHMOD} 644 $$i.zwc ; \
-		done'
+		done')
 
 post-install-EXAMPLES-on:
 	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
-	cd ${WRKSRC}/StartupFiles && ${INSTALL_DATA} ${PORTEXAMPLES} ${STAGEDIR}${EXAMPLESDIR}
+	(cd ${WRKSRC}/StartupFiles && ${INSTALL_DATA} ${PORTEXAMPLES} ${STAGEDIR}${EXAMPLESDIR})
 
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
-	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${STAGEDIR}${DOCSDIR}
-
-regression-test:
-	@cd ${WRKSRC}; ${SETENV} -i ${MAKE} check
+	(cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${STAGEDIR}${DOCSDIR})
 
 .include <bsd.port.post.mk>
