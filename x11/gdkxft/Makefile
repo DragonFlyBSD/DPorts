@@ -38,7 +38,9 @@ post-patch:
 		 s|la_LDFLAGS =.*$$|la_LDFLAGS = -module -avoid-version|g'
 
 post-install:
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libgdkxft.so
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libgdkxft.so
+
+post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
 
