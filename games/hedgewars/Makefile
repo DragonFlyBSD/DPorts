@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD: head/games/hedgewars/Makefile 404021 2015-12-19 15:15:29Z antoine $
+# $FreeBSD$
 
 PORTNAME=	hedgewars
 PORTVERSION=	0.9.22
@@ -16,9 +16,6 @@ LICENSE=	GPLv2 GFDL
 LICENSE_COMB=	multi
 
 LIB_DEPENDS=	libphysfs.so:${PORTSDIR}/devel/physfs
-
-ONLY_FOR_ARCHS=	i386 amd64
-ONLY_FOR_ARCHS_REASON=	depends on fpc which is only available for i386 and amd64
 
 USES=		cmake desktop-file-utils lua:51 tar:bzip2
 USE_SDL=	sdl mixer image ttf net
