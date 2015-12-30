@@ -176,6 +176,5 @@ CONFIGURE_ARGS+=--with-gallium-drivers="${GALLIUM_DRIVERS:tl}"
 
 .if ${OPSYS} == DragonFly
 LIB_DEPENDS+= libelf.so:${PORTSDIR}/devel/libelf
-CFLAGS+= -I${LOCALBASE}/include/libelf
 .endif
 
