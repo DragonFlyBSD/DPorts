@@ -2,12 +2,12 @@
 # $FreeBSD$
 
 PORTNAME=	django-overextends
-PORTVERSION=	0.4.0
+PORTVERSION=	0.4.1
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	rene@freebsd.org
+MAINTAINER=	rene@FreeBSD.org
 COMMENT=	Django reusable app enabling circular template inheritance
 
 LICENSE=	BSD2CLAUSE
