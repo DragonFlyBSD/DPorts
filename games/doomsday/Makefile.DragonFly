@@ -1,0 +1,4 @@
+
+# zrj: from devel/geany-plugin-devhelp/Makefile
+#      "Workaround for 9.x which doesn't have zlib.pc"
+LIBS+=	-lz
