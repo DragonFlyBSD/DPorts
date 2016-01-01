@@ -1,0 +1,5 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e "s@Wall@Wall -I${LOCALBASE}/include@g"	\
+			 -e "s@\(#define LDFLAGS\).*\"\"@\1 \"-L${LOCALBASE}/lib\"@g"	\
+		${WRKSRC}/INSTALL.im
