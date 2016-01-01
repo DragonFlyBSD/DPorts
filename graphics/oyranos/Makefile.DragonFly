@@ -1,0 +1,19 @@
+
+# zrj: avoid header conflict w/ kerberos (krb5) in internal "Elektra" redist
+dfly-patch:
+	${LN} -sv ${WRKSRC}/elektra-0.7.1/src/include/kdb.h		\
+		  ${WRKSRC}/elektra-0.7.1/src/include/kdb_oy.h
+	${REINPLACE_CMD} -e 's@<kdb.h>@<kdb_oy.h>@g'			\
+		${WRKSRC}/elektra-0.7.1/src/backends/winregistry/winregistry.h	\
+		${WRKSRC}/elektra-0.7.1/src/include/kdbbackend.h	\
+		${WRKSRC}/elektra-0.7.1/src/libelektra/kdb.c		\
+		${WRKSRC}/elektra-0.7.1/src/libelektra/kdbhandle.c	\
+		${WRKSRC}/elektra-0.7.1/src/libelektra/kdbhighlevel.c	\
+		${WRKSRC}/elektra-0.7.1/src/libelektra/key.c		\
+		${WRKSRC}/elektra-0.7.1/src/libelektra/keymeta.c	\
+		${WRKSRC}/elektra-0.7.1/src/libelektra/keyname.c	\
+		${WRKSRC}/elektra-0.7.1/src/libelektra/keyset.c		\
+		${WRKSRC}/elektra-0.7.1/src/libelektra/keytest.c	\
+		${WRKSRC}/elektra-0.7.1/src/libelektra/keyvalue.c	\
+		${WRKSRC}/src/liboyranos_config/oyranos_elektra.c	\
+		${WRKSRC}/src/tests/test2.cpp
