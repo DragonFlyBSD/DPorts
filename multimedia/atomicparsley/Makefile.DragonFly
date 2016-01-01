@@ -1,0 +1,5 @@
+
+# zrj: fix typo in files/patch-build
+dfly-patch:
+	${REINPLACE_CMD} -e 's@DragonflyBSD@DragonFly@g'		\
+		${WRKSRC}/build
