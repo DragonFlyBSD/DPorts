@@ -1,0 +1,5 @@
+LIB_DEPENDS+=	libmilter.so:${PORTSDIR}/mail/sendmail
+
+dfly-patch:
+	${REINPLACE_CMD} -e "s@Wall@Wall -I${LOCALBASE}/include -D_NSIG=NSIG@g"	\
+		${WRKSRC}/INSTALL.im
