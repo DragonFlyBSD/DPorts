@@ -1,0 +1,11 @@
+--- configure.bak	2015-12-31 21:01:49.000000000 +0200
++++ configure	2015-12-31 21:04:25.000000000 +0200
+@@ -366,7 +366,7 @@ else
+       DISTNAME=$UNAME_
+       OSUNAME=SunOS
+     else
+-      if [ $UNAME_ = "OpenBSD" ] || [ $UNAME_ = "NetBSD" ] || [ $UNAME_ = "FreeBSD" ]; then
++      if [ $UNAME_ = "OpenBSD" ] || [ $UNAME_ = "NetBSD" ] || [ $UNAME_ = "FreeBSD" ] || [ $UNAME_ = "DragonFly" ]; then
+         osuname="BSD = 1"
+         OS_EXT=.bsd
+         echo "#define BSD 1" >> $CONF_H

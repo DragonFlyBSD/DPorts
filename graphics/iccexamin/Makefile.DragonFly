@@ -1,0 +1,5 @@
+
+# zrj: quick workaround for 'make check-plist'
+dfly-patch:
+	${REINPLACE_CMD} -e '/mkdir .*\/mime\/packages\//d'		\
+		${WRKSRC}/makefile.in
