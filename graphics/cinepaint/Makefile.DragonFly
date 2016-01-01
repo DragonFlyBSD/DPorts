@@ -1,0 +1,10 @@
+
+# zrj: for now don't want to touch plugins logic, culprint - libhalf.so
+# thats what you get for rewriting libs into "modern" non-c
+LIBS+= -lm -lstdc++
+
+# zrj: fix unsafe sed "s/ -O. //" to safer, for fltk-config --cflags, that gives
+# c++: error: unrecognized command line option '-pipe-fno-strict-aliasing'
+dfly-patch:
+	${REINPLACE_CMD} -e 's@/ -O\. //@/ -O. / /@g'			\
+		${WRKSRC}/configure.in
