@@ -1,0 +1,5 @@
+USES+= alias
+
+EXTRACT_DEPENDS=${UNZIP_CMD}:${PORTSDIR}/archivers/unzip
+
+UNZIP_NATIVE_CMD:= ${UNZIP_CMD}
