@@ -1,0 +1,10 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e "s@/usr/share/darknock@${DATADIR}@g"	\
+		${WRKSRC}/src/aiselector.cpp
+
+PLIST_FILES+=%%DATADIR%%/data/input
+
+post-install:
+	@${MKDIR} ${STAGEDIR}${DATADIR}/data
+	${INSTALL_DATA} ${WRKSRC}/data/input ${STAGEDIR}${DATADIR}/data
