@@ -1254,25 +1254,3 @@ AUTHOR: ohauer@FreeBSD.org
   you can update audio/speex you must first delete the old package using
   "pkg del -f speex".
 
-20150101:
-  AFFECTS: users of net/unison and net/unison-nox11
-  AUTHOR: madpilot@FreeBSD.org
-
-  Unison has been upgraded to version 2.48, which uses a different wire
-  protocol than 2.40 did.  In order to support synchronization with
-  other computers where Unison is still at version 2.40, a new port
-  net/unison240 has been created.  It provides unison240 and if that is
-  GTK2-enabled, also unison240-text.  This unison240 port can be
-  installed in parallel with the existing net/unison port.
-
-20141230:
-  AFFECTS: users of deskutils/xpad
-  AUTHOR: jgh@FreeBSD.org
-
-  deskutils/xpad has been moved to deskutils/xpad3, since 4.x has been around
-  for a while.
-
-  Should you wish to stick with legacy branch at this time;
-
-  # portmaster -o deskutils/xpad deskutils/xpad3
-
