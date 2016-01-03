@@ -18,7 +18,7 @@ USE_GNOME=	gtk12
 
 MAKE_ARGS=	STAGEDIR="$(STAGEDIR)"
 
-pre-configure:
+post-extract:
 	@${CP} ${FILESDIR}/mntent* ${WRKSRC}
 
 post-patch:
