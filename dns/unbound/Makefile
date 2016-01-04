@@ -41,7 +41,7 @@ FILTER_AAAA_DESC=	Build with AAAA filter functionality (contrib)
 .include <bsd.port.options.mk>
 
 LIB_DEPENDS+=	libexpat.so:${PORTSDIR}/textproc/expat2 \
-		libldns.so:${PORTSDIR}/dns/ldns
+		libldns.so.1.6.17:${PORTSDIR}/dns/ldns
 
 STRIP_FILES=	.libs/libunbound.so unbound-checkconf unbound \
 		unbound-control .libs/unbound-host .libs/unbound-anchor
