@@ -1,0 +1,5 @@
+# There is a bad logic flaw in the main makefile.  DejaVU always gets
+# packaged because of it (and it's available in the jail) so just set
+# the option on so Synth doesn't trip on it.
+
+OPTIONS_DEFAULT+=	DEJAVU
