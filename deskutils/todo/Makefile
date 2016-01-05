@@ -3,15 +3,15 @@
 
 PORTNAME=	todo
 PORTVERSION=	2.10
-PORTREVISION=	1
+DISTVERSIONPREFIX=	v
+PORTREVISION=	2
 CATEGORIES=	deskutils
-MASTER_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/releases/download/${GH_TAGNAME}/
-DISTNAME=	todo.txt_cli-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Todo.txt Manager
 
 LICENSE=	GPLv3
+LICENSE_FILE=	${WRKSRC}/LICENSE
 
 RUN_DEPENDS=	bash:${PORTSDIR}/shells/bash
 
@@ -27,9 +27,12 @@ PLIST_FILES=	bin/todo \
 
 GH_ACCOUNT=	ginatrapani
 GH_PROJECT=	todo.txt-cli
-GH_TAGNAME=	v${PORTVERSION}
+USE_GITHUB=	yes
 
 SHEBANG_FILES=	todo.sh todo_completion
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|@DEV_VERSION@|${PORTVERSION}|' ${WRKSRC}/todo.sh
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/todo.sh ${STAGEDIR}${PREFIX}/bin/todo
