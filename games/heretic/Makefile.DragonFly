@@ -1,0 +1,6 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-I/usr/include/sys@@g'			\
+		${WRKSRC}/sndserv/Makefile
+	${REINPLACE_CMD} -e 's@\<soundcard.h\>@<sys/soundcard.h>@g'	\
+		${WRKSRC}/sndserv/linux.c
