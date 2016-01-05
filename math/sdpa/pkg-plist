@@ -1,0 +1,3 @@
+bin/sdpa
+%%DATADIR%%/param.sdpa
+%%PORTDOCS%%%%DOCSDIR%%/%%MANUALFILE%%
