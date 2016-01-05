@@ -1,0 +1,5 @@
+#!/bin/sh
+#
+# $FreeBSD: head/textproc/nux/files/fire-xquery.sh.in 340872 2014-01-24 00:14:07Z mat $
+
+JAVA_VERSION="%%JAVA_VERSION%%" exec "%%LOCALBASE%%/bin/java" -classpath "`%%LOCALBASE%%/bin/classpath`" nux.xom.tests.XQueryCommand "$@"
