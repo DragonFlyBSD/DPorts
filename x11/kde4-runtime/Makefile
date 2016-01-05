@@ -14,12 +14,12 @@ LIB_DEPENDS=	libIlmImf.so:${PORTSDIR}/graphics/OpenEXR \
 		libwebp.so:${PORTSDIR}/graphics/webp \
 		libslp.so:${PORTSDIR}/net/openslp \
 		libsmbclient.so:${PORTSDIR}/net/samba-libsmbclient \
-		libssh.so:${PORTSDIR}/security/libssh \
 		libqzeitgeist.so:${PORTSDIR}/sysutils/qzeitgeist
 # Explicitly depend on libssh to avoid interference with ssh.4 from
 # compat7x.
-BUILD_DEPENDS=	${LOCALBASE}/lib/libssh.so:${PORTSDIR}/security/libssh
-RUN_DEPENDS=	cagibid:${PORTSDIR}/net/cagibi
+BUILD_DEPENDS=	libssh>0.7:${PORTSDIR}/security/libssh
+RUN_DEPENDS=	libssh>0.7:${PORTSDIR}/security/libssh \
+		cagibid:${PORTSDIR}/net/cagibi
 
 USE_KDE4=	kactivities kdelibs kdeprefix oxygen \
 		attica automoc4 pimlibs strigi nepomuk-core
