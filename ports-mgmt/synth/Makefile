@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	synth
-PORTVERSION=	0.90
+PORTVERSION=	0.95
 CATEGORIES=	ports-mgmt
 
 MAINTAINER=	marino@FreeBSD.org
@@ -19,7 +19,7 @@ USES=		ada:6 ncurses:port
 USE_GITHUB=	yes
 GH_ACCOUNT=	jrmarino
 GH_PROJECT=	synth_external:bundle
-GH_TAGNAME=	v1.3:bundle 8b30862
+GH_TAGNAME=	v1.3:bundle 13ef2cd
 
 # When framework is moved to Ada6, the ada-util and ini-file-manager
 # libraries can be used as prebuilt (switch default.gpr url)
@@ -41,7 +41,8 @@ do-build:
 	(cd ${WRKSRC}/external/include/adacurses && ${SETENV} ${MAKE_ENV} \
 		gcc -I. -c ${csrc}.c -o ../../build/adacurses/${csrc}.o)
 .endfor
-	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} gnatmake -P synthexec)
+	(cd ${WRKSRC}/synthexec && ${SETENV} ${MAKE_ENV} \
+		gcc synthexec.c -o ../build/synthexec)
 	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} gnatmake -P default)
 
 do-install:
