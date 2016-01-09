@@ -3,7 +3,7 @@
 
 PORTNAME=	ncurses
 PORTVERSION=	6.0
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	http://invisible-mirror.net/archives/${PORTNAME}/ \
 		ftp://invisible-island.net/${PORTNAME}/
@@ -54,8 +54,8 @@ CONFIGURE_WRKSRC=	${NOWIDEC_WRKSRC}
 BUILD_WRKSRC=	${NOWIDEC_WRKSRC}
 INSTALL_WRKSRC=	${NOWIDEC_WRKSRC}
 
-PLIST_SUB+=	ABI_VER=${PORTVERSION:R} \
-		REL_VER=6.01 \
+PLIST_SUB+=	ABI_VER=6P \
+		REL_VER=6P.0 \
 		WIDEC_EXAMPLESDIR=${WIDEC_EXAMPLESDIR:S,${PREFIX}/,,} \
 		NOWIDEC_EXAMPLESDIR=${NOWIDEC_EXAMPLESDIR:S,${PREFIX}/,,}
 
@@ -127,10 +127,10 @@ post-install:
 
 	${RM} -f ${STAGEDIR}${PREFIX}/lib/libncurses.so \
 		${STAGEDIR}${PREFIX}/lib/libncursesw.so
-	${ECHO} "INPUT(libncurses.so.${PORTVERSION:R} AS_NEEDED(-ltinfo))" > ${STAGEDIR}${PREFIX}/lib/libncurses.so
-	${ECHO} "INPUT(libncursesw.so.${PORTVERSION:R} AS_NEEDED(-ltinfow))" > ${STAGEDIR}${PREFIX}/lib/libncursesw.so
+	${ECHO} "INPUT(libncurses.so.6P AS_NEEDED(-ltinfo))" > ${STAGEDIR}${PREFIX}/lib/libncurses.so
+	${ECHO} "INPUT(libncursesw.so.6P AS_NEEDED(-ltinfow))" > ${STAGEDIR}${PREFIX}/lib/libncursesw.so
 
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/*.so.6.01
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/*.so.6P.0
 
 	${MV} ${STAGEDIR}${PREFIX}/share/misc/terminfo.db \
 		${STAGEDIR}${PREFIX}/share/misc/terminfo.db.default
