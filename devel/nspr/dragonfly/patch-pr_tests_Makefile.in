@@ -1,0 +1,24 @@
+--- pr/tests/Makefile.in.intermediate	2016-01-08 16:56:54.000000000 +0200
++++ pr/tests/Makefile.in
+@@ -342,6 +342,12 @@ ifeq ($(OS_ARCH), UNIXWARE)
+ export LD_RUN_PATH = $(ABSOLUTE_LIB_DIR)
+ endif
+ 
++ifeq ($(OS_ARCH),DragonFly)
++ifeq ($(USE_PTHREADS),1)
++LDOPTS += -pthread
++endif
++endif
++
+ ifeq ($(OS_ARCH),FreeBSD)
+ ifeq ($(USE_PTHREADS),1)
+ LDOPTS += -pthread
+@@ -370,7 +376,7 @@ LIBPTHREAD = -lpthread
+ ifeq ($(OS_ARCH),AIX)
+ LIBPTHREAD = -lpthreads
+ endif
+-ifeq (,$(filter-out FreeBSD OpenBSD BSD_OS QNX Darwin OpenUNIX,$(OS_ARCH)))
++ifeq (,$(filter-out DragonFly FreeBSD OpenBSD BSD_OS QNX Darwin OpenUNIX,$(OS_ARCH)))
+ LIBPTHREAD =
+ endif
+ ifeq ($(OS_ARCH)$(basename $(OS_RELEASE)),HP-UXB.10)
