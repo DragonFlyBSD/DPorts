@@ -2,7 +2,7 @@
 
 PORTNAME=	openjdk
 PORTVERSION=	${JDK_MAJOR_VERSION}.${JDK_UPDATE_VERSION}.${JDK_BUILD_NUMBER:S/^0//}
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	java devel
 MASTER_SITES=	http://download.java.net/openjdk/jdk${JDK_MAJOR_VERSION}/promoted/b${DIST_BUILD_NUMBER}/:jdk \
 		https://adopt-openjdk.ci.cloudbees.com/job/jtreg/${JTREG_JENKINS_BUILD}/artifact/:jtreg \
@@ -338,10 +338,6 @@ BOOTSTRAP_DISTFILE=	bootstrap-openjdk8-8.40.25.tar.xz:bootstrap
 MAKE_ENV+=		LD_LIBRARY_PATH="${BOOTSTRAPJDKDIR}/jre/lib/amd64"
 .    endif
 .  endif
-.endif
-
-.if ${BOOTSTRAPJDKDIR} == ${LOCALBASE}/openjdk8
-CONFIGURE_ARGS+=	--enable-sjavac
 .endif
 
 # PR193009: work around the rtld bug
