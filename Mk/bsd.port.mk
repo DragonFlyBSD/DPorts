@@ -1946,27 +1946,6 @@ ${_f}_ARGS:=	${f:C/^[^\:]*(\:|\$)//:S/,/ /g}
 .include "${USESDIR}/${f:C/\:.*//}.mk"
 .endfor
 
-.undef (SELECTED_OPTIONS)
-.undef (DESELECTED_OPTIONS)
-.for opt in ${ALL_OPTIONS}
-.  if ${PORT_OPTIONS:M${opt}}
-SELECTED_OPTIONS:=	${opt} ${SELECTED_OPTIONS}
-.  else
-DESELECTED_OPTIONS:=	${opt} ${DESELECTED_OPTIONS}
-.  endif
-.endfor
-.for otype in MULTI GROUP SINGLE RADIO
-.  for m in ${OPTIONS_${otype}}
-.    for opt in ${OPTIONS_${otype}_${m}}
-.      if ${PORT_OPTIONS:M${opt}}
-SELECTED_OPTIONS:=	${opt} ${SELECTED_OPTIONS}
-.      else
-DESELECTED_OPTIONS:=	${opt} ${DESELECTED_OPTIONS}
-.      endif
-.    endfor
-.  endfor
-.endfor
-
 .if defined(USE_XORG)
 # Add explicit X options to avoid problems with false positives in configure
 .if defined(GNU_CONFIGURE)
