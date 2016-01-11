@@ -3,6 +3,7 @@
 
 PORTNAME=	dnsmasq
 DISTVERSION=	2.75
+PORTREVISION=	1	# leave this in even if 0 to avoid PORTEPOCH bumps
 PORTEPOCH=	1
 CATEGORIES=	dns ipv6
 MASTER_SITES=	http://www.thekelleys.org.uk/dnsmasq/ \
@@ -19,7 +20,7 @@ PORTDOCS=	CHANGELOG CHANGELOG.archive FAQ doc.html setup.html
 
 SUB_FILES=	pkg-message
 
-CFLAGS+=	-Wall -Wno-unused-value
+CFLAGS+=	-Wall -Wno-unused-value -Wno-unused-parameter
 CPPFLAGS+=	-I${LOCALBASE}/include
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" PREFIX="${PREFIX}" COPTS="${CFLAGS}" LIBS="${LDFLAGS}" RPM_OPT_FLAGS="${CPPFLAGS}"
 
