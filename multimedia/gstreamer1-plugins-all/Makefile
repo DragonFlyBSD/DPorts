@@ -3,11 +3,11 @@
 
 PORTNAME=	gstreamer1-plugins-all
 PORTVERSION=	${GST1_VERSION}
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	multimedia
 
 MAINTAINER=	multimedia@FreeBSD.org
-COMMENT=	Meta-port of all gstreamer 1.x plugins with options
+COMMENT=	Meta-port of all GStreamer 1.x plugins with options
 
 USES=		metaport
 USE_GSTREAMER1=	yes
@@ -40,5 +40,4 @@ OPTIONS_DEFAULT=	${DEF_PLUGINS:tu}
 OPTIONS_DEFINE_i386=	SPC
 OPTIONS_DEFAULT_i386=	SPC
 
-.include <bsd.port.options.mk>
 .include <bsd.port.mk>
