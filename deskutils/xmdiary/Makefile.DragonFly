@@ -1,1 +1,7 @@
-CFLAGS:=	${CFLAGS:S/-Werror//}
+
+# zrj: union wait removal
+dfly-patch:
+	${REINPLACE_CMD} -e 's@ifndef \(__FreeBSD__\)@if \!(defined(\1)||defined(__DragonFly__))@g'	\
+		${WRKSRC}/ndbm/xdndbm.c
+	${REINPLACE_CMD} -e 's@\(defined(__FreeBSD__)\)@(\1||defined(__DragonFly__))@g'	\
+		${WRKSRC}/tools/SigHandler.c
