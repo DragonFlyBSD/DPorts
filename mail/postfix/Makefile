@@ -60,7 +60,7 @@ PGSQL_USES=		pgsql
 SASLKMIT_LIB_DEPENDS=	libkrb5.so:${PORTSDIR}/security/krb5
 SASL_LIB_DEPENDS=	libsasl2.so:${PORTSDIR}/security/cyrus-sasl2
 SPF_LIB_DEPENDS=	libspf2.so:${PORTSDIR}/mail/libspf2
-SQLITE_USE=		SQLITE=yes
+SQLITE_USES=		sqlite
 TLS_USE=		OPENSSL=yes
 
 CDB_DESC=	CDB maps lookups
@@ -237,8 +237,8 @@ _REQUIRE+=		ypserv
 .endif
 
 .if ${PORT_OPTIONS:MVDA}
-PATCH_SITES+=		http://vda.sourceforge.net/VDA/:-p1:vda
-PATCHFILES+=		postfix-vda-v13-${VDAVERSION}.patch:vda
+PATCH_SITES+=		http://vda.sourceforge.net/VDA/:vda
+PATCHFILES+=		postfix-vda-v13-${VDAVERSION}.patch:-p1:vda
 .endif
 
 .if ${PORT_OPTIONS:MTEST}
