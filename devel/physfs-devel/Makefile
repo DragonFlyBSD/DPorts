@@ -5,11 +5,13 @@ PORTNAME=	physfs
 PORTVERSION=	1.1.1
 PORTREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=	http://offload1.icculus.org/${PORTNAME}/downloads/
+MASTER_SITES=	http://icculus.org/${PORTNAME}/downloads/
 PKGNAMESUFFIX=	-devel
 
 MAINTAINER=	oliver@FreeBSD.org
 COMMENT=	Library to provide abstract access to various archives
+
+CONFLICTS_INSTALL=	physfs-[0-9]*
 
 USES=		cmake
 USE_LDCONFIG=	yes
