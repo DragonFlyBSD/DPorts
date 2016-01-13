@@ -9,7 +9,8 @@ MASTER_SITES=	SF
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GTK+ terminal emulator with tabs
 
-LICENSE=	GPLv3
+LICENSE=	GPLv2+
+LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}lockfile>0:${PORTSDIR}/devel/py-lockfile \
 		docbook-xsl>0:${PORTSDIR}/textproc/docbook-xsl \
@@ -47,7 +48,7 @@ post-patch:
 
 do-configure:
 	@(cd ${WRKSRC} && ${SETENV} MAITCHFLAGS="${MAITCHFLAGS}" \
-		${PYTHON_CMD} mscript.py configure --disable-gettext)
+		${PYTHON_CMD} mscript.py configure)
 
 do-build:
 	@(cd ${WRKSRC} && ${PYTHON_CMD} mscript.py build)
@@ -76,6 +77,13 @@ do-install:
 	(cd ${WRKSRC}/src && ${INSTALL_DATA} roxterm-config.ui \
 		${STAGEDIR}${DATADIR})
 	@(cd ${WRKSRC} && ${COPYTREE_SHARE} Config ${STAGEDIR}${DATADIR})
+.for i in es fr pt_BR ru uk
+	@${MKDIR} ${STAGEDIR}${PREFIX}/share/locale/${i}/LC_MESSAGES
+	(cd ${WRKSRC}/build/po && ${INSTALL_DATA} ${i}.mo \
+		${STAGEDIR}${PREFIX}/share/locale/${i}/LC_MESSAGES/roxterm.mo)
+.endfor
+
+do-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for i in AUTHORS ChangeLog README
 	(cd ${WRKSRC} && ${INSTALL_DATA} ${i} ${STAGEDIR}${DOCSDIR})

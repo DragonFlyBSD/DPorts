@@ -50,6 +50,11 @@ share/applications/roxterm.desktop
 %%PORTDOCS%%%%DOCSDIR%%/uk/installation.html
 %%PORTDOCS%%%%DOCSDIR%%/uk/news.html
 share/icons/hicolor/scalable/apps/roxterm.svg
+share/locale/es/LC_MESSAGES/roxterm.mo
+share/locale/fr/LC_MESSAGES/roxterm.mo
+share/locale/pt_BR/LC_MESSAGES/roxterm.mo
+share/locale/ru/LC_MESSAGES/roxterm.mo
+share/locale/uk/LC_MESSAGES/roxterm.mo
 %%DATADIR%%/Config/Colours/GTK
 %%DATADIR%%/Config/Colours/Tango
 %%DATADIR%%/Config/Shortcuts/Default
