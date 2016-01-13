@@ -1,0 +1,7 @@
+
+# zrj: union wait removal
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(defined(__FreeBSD__)\)@(\1||defined(__DragonFly__))@g'	\
+		${WRKSRC}/command.c						\
+		${WRKSRC}/filemenu.c						\
+		${WRKSRC}/signals.c
