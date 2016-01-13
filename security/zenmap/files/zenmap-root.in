@@ -1,8 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/security/zenmap/files/zenmap-root.in 348998 2014-03-24 13:35:08Z nemysis $
+# $FreeBSD: head/security/zenmap/files/zenmap-root.in 405296 2016-01-05 15:46:38Z amdmi3 $
 #
 
-cd "%%DATADIR%%" && exec su-to-zenmap.sh zenmap
-
-
+exec %%DATADIR%%/su-to-zenmap.sh zenmap
