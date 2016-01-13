@@ -4,7 +4,7 @@
 PORTNAME=	portsnap
 PORTVERSION=	1.3
 CATEGORIES=	ports-mgmt
-MASTER_SITES=	http://leaf.dragonflybsd.org/~marino/dports-src/
+MASTER_SITES=	https://leaf.dragonflybsd.org/~marino/dports-src/
 
 MAINTAINER=	cperciva@daemonology.net
 COMMENT=	Provides secure snapshots of the ports directory
