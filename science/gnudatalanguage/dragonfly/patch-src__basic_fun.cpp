@@ -1,6 +1,6 @@
---- src/basic_fun.cpp.bak	2015-12-14 10:10:10.000000000 +0200
+--- src/basic_fun.cpp.bak	2016-01-13 18:37:20.000000000 +0200
 +++ src/basic_fun.cpp
-@@ -44,7 +44,7 @@
+@@ -48,7 +48,7 @@
  # define environ (*_NSGetEnviron())
  #endif
  
