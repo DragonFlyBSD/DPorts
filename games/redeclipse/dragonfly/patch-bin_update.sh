@@ -1,8 +1,8 @@
---- bin/update.sh.orig	2015-03-22 01:34:16.000000000 +0200
+--- bin/update.sh.orig	2015-07-18 05:54:17.000000000 +0300
 +++ bin/update.sh
-@@ -30,7 +30,7 @@ redeclipse_update_setup() {
-             Linux)
-                 REDECLIPSE_TARGET="linux"
+@@ -34,7 +34,7 @@ redeclipse_update_setup() {
+             Darwin)
+                 REDECLIPSE_TARGET="macosx"
                  ;;
 -            FreeBSD)
 +            FreeBSD|DragonFly)
