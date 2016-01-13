@@ -1,1 +1,4 @@
 USES+= alias
+
+# zrj: just like recent addition in MF add explicit -std=c++11 for nullptr
+CFLAGS+= -std=c++11
