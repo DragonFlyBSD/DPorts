@@ -1,3 +1,5 @@
+USE_CXXSTD= c++11
+
 dfly-patch:
 	@${REINPLACE_CMD} -e 's/__FreeBSD__/(__FreeBSD__||__DragonFly__)/g' \
 		${WRKSRC}/include/tbb/tbb_config.h 			\
