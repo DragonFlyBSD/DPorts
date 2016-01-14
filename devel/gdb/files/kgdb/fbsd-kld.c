@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/fbsd-kld.c 398712 2015-10-06 18:52:58Z jhb $");
+__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/fbsd-kld.c 405792 2016-01-11 17:36:13Z jhb $");
 
 #include <sys/param.h>
 #include <sys/stat.h>
@@ -385,9 +385,6 @@ static void
 kld_solib_create_inferior_hook (int from_tty)
 {
 	struct kld_info *info;
-
-	if (!have_partial_symbols())
-		return;
 
 	info = get_kld_info();
 	

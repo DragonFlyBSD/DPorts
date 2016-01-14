@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/sparc64fbsd-kern.c 398712 2015-10-06 18:52:58Z jhb $");
+__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/sparc64fbsd-kern.c 405792 2016-01-11 17:36:13Z jhb $");
 
 #include <sys/types.h>
 #ifdef __sparc64__
@@ -159,7 +159,7 @@ sparc64fbsd_trapframe_sniffer (const struct frame_unwind *self,
 
 static const struct frame_unwind sparc64fbsd_trapframe_unwind =
 {
-  NORMAL_FRAME,
+  SIGTRAMP_FRAME,
   default_frame_unwind_stop_reason,
   sparc64fbsd_trapframe_this_id,
   sparc64fbsd_trapframe_prev_register,
