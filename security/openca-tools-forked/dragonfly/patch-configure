@@ -1,0 +1,11 @@
+--- configure.orig	2014-06-25 20:04:58.000000000 +0300
++++ configure
+@@ -11456,7 +11456,7 @@ case "${build_os}" in
+  *linux*)       myarch=linux
+ 		shlext=so
+ 		;;
+- *bsd*)         myarch=bsd
++ *bsd*|*dragonfly*) myarch=bsd
+ 		shlext=so
+ 		;;
+  *iphone*)      myarch=iphone
