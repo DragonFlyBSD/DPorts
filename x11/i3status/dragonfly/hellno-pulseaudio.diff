@@ -1,0 +1,25 @@
+--- Makefile.intermediate	2016-01-15 15:40:01.000000000 +0200
++++ Makefile
+@@ -80,6 +80,11 @@ OBJS:=$(filter-out src/pulse.o, $(OBJS))
+ LIBS:=$(filter-out -lpulse, $(LIBS)) -lpthread
+ endif
+ 
++ifeq ($(OS),DragonFly)
++OBJS:=$(filter-out src/pulse.o, $(OBJS))
++LIBS:=$(filter-out -lpulse, $(LIBS)) -lpthread
++endif
++
+ src/%.o: src/%.c include/i3status.h
+ 	$(CC) $(CPPFLAGS) $(CFLAGS) -c -o $@ $<
+ 	@echo " CC $<"
+--- src/print_volume.c.intermediate	2016-01-15 15:40:01.000000000 +0200
++++ src/print_volume.c
+@@ -60,7 +60,7 @@ void print_volume(yajl_gen json_gen, cha
+         free(instance);
+     }
+ 
+-#if !defined(__OPENBSD__) && !defined(__FreeBSD__)
++#if !defined(__OPENBSD__) && !defined(__FreeBSD__) && !defined(__DragonFly__)
+     /* Try PulseAudio first */
+ 
+     /* If the device name has the format "pulse[:N]" where N is the
