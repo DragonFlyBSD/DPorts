@@ -1,0 +1,12 @@
+--- makefile.intermediate	2016-01-14 12:25:49.000000000 +0200
++++ makefile
+@@ -1620,6 +1620,9 @@ BSD/OS:
+ 	@make $(DEFINES) EXTRAOBJS="$(ASMOBJS)" CFLAGS="$(CFLAGS) -DUSE_ASM \
+ 		-fomit-frame-pointer -O3"
+ 
++DragonFly:
++	@make $(DEFINES) CFLAGS="$(CFLAGS) -fomit-frame-pointer -pthread"
++
+ FreeBSD:
+ 	@if uname -m | grep "i[3,4,5,6]86" > /dev/null; then \
+ 		./tools/buildasm.sh $(AS) $(OBJPATH) ; \
