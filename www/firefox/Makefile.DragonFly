@@ -1,3 +1,2 @@
 MOZ_OPTIONS+= --disable-webrtc
-
-PULSEAUDIO_LIB_DEPENDS= libpulse.so:${PORTSDIR}/audio/pulseaudio
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NPULSEAUDIO}
