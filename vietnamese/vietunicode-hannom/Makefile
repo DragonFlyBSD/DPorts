@@ -26,5 +26,6 @@ do-install:
 	@${MKDIR} ${STAGEDIR}${FONTSDIR}
 	(cd ${WRKSRC} && ${INSTALL_DATA} ${TTF} ${STAGEDIR}${FONTSDIR})
 
+.include <bsd.port.pre.mk>
 .include "${PORTSDIR}/chinese/ttfm/Makefile.ttf"
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
