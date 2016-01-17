@@ -17,7 +17,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 USES=		dos2unix scons
 USE_LDCONFIG=	yes
 
-MAKE_ARGS=	platform=linux-gcc
+MAKE_ARGS=	platform=linux-gcc VERBOSE=1
 
 do-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/include/jsoncpp
