@@ -5,7 +5,7 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
-201601XX:
+20160113:
   AFFECTS: users of sysutils/ansible
   AUTHOR: lifanov@mail.lifanov.com
 
@@ -1244,12 +1244,4 @@ AUTHOR: ohauer@FreeBSD.org
     - IPREAL option (to respect (pass on) "X-Forwarded-For" header) is now
       turned on by default: it is often required when thttpd is used as a
       CGI server behind nginx (http://wiki.nginx.org/ThttpdCGI).
-
-20150113:
-  AFFECTS: users of www/pecl-http
-  AUTHOR: vanilla@FreeBSD.org
-
-  The pecl-http has been upgraded to version 2.1.4, and the new version is
-  not compatible with the old one.  If you need the "old" 1.7.6, you can
-  find it in www/pecl-http1.
 
