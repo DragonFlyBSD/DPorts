@@ -1,0 +1,3 @@
+
+# sys/soundcard.h int64_t etc include stuff
+CONFIGURE_ARGS+= ac_cv_header_soundcard_h=yes
