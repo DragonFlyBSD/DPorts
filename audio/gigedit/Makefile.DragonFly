@@ -1,0 +1,2 @@
+# zrj: fix runtime
+LDFLAGS+= -Wl,-rpath=${LOCALBASE}/lib/linuxsampler
