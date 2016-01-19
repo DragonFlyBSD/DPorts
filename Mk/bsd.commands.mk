@@ -15,6 +15,9 @@ COMMANDS_Include_MAINTAINER=	portmgr@FreeBSD.org
 
 _COMMANDSMKINCLUDED=	yes
 
+.if ${AWK:Mawk}
+.undef AWK
+.endif
 AWK?=			/usr/bin/awk
 BASENAME?=		/usr/bin/basename
 BRANDELF?=		/usr/bin/brandelf
