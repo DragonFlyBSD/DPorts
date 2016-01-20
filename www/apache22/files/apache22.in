@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/www/apache22/files/apache22.in 349319 2014-03-27 05:28:11Z ohauer $
+# $FreeBSD: head/www/apache22/files/apache22.in 406606 2016-01-18 19:36:57Z ohauer $
 #
 
 # PROVIDE: apache22
@@ -51,8 +51,8 @@ envvars="%%PREFIX%%/sbin/envvars"
 apache22_accf() {
 
   if checkyesno apache22_http_accept_enable; then
-    /sbin/kldstat -v | grep accf_http > /dev/null 2>&1 || /sbin/kldload accf_http || return ${?}
-    /sbin/kldstat -v | grep accf_data > /dev/null 2>&1 || /sbin/kldload accf_data || return ${?}
+    /sbin/kldstat -qm accf_http || /sbin/kldload accf_http || return ${?}
+    /sbin/kldstat -qm accf_data || /sbin/kldload accf_data || return ${?}
   else
     apache22_flags="${apache22_flags} -DNOHTTPACCEPT"
   fi
