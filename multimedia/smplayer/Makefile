@@ -2,14 +2,14 @@
 # $FreeBSD$
 
 PORTNAME=	smplayer
-DISTVERSION=	15.11.0
+DISTVERSION=	16.1.0
 CATEGORIES=	multimedia audio kde
 MASTER_SITES=	SF/${PORTNAME}/SMPlayer/${PORTVERSION}
 
 MAINTAINER=	nemysis@FreeBSD.org
 COMMENT=	Complete front-end based on Qt4 for mplayer
 
-LICENSE=	GPLv2 # or later
+LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/Copying.txt
 
 RUN_DEPENDS=	mplayer:${PORTSDIR}/multimedia/mplayer \
