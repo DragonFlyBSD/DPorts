@@ -9,19 +9,20 @@
  #include <osreldate.h>
  #endif
  
-@@ -19,7 +19,10 @@
+@@ -19,7 +19,11 @@
  #include <sys/time.h>       /* struct clockinfo */
  #include <sys/vmmeter.h>    /* struct vmtotal */
  #include <sys/resource.h>   /* struct loadavg */
 -#if __FreeBSD_version < 1000000
 +#if (defined(__FreeBSD__) && __FreeBSD_version < 1000000) || defined(__DragonFly__)
 +#if defined(__DragonFly__)
++#include <sys/sensors.h>
 +#define _KERNEL_STRUCTURES
 +#endif
  #include <sys/mbuf.h>       /* struct mbstat (opaque mib) */
  #endif
  #include <sys/timex.h>      /* struct ntptimeval (opaque mib) */
-@@ -31,7 +34,7 @@
+@@ -31,7 +35,7 @@
  #include <netinet/in_systm.h>
  #include <netinet/ip.h>
  #include <netinet/ip_icmp.h>
@@ -30,7 +31,80 @@
  #include <netinet/tcp.h>  /* struct tcpstat prerequisite */
  #endif
  
-@@ -537,7 +540,7 @@
+@@ -250,6 +254,26 @@ _mib_info(const char *arg)
+         case 'S': {
+             if (strcmp(f,"S,clockinfo") == 0)    { fmt_type = FMT_CLOCKINFO; }
+             else if (strcmp(f,"S,loadavg") == 0) { fmt_type = FMT_LOADAVG; }
++#ifdef __DragonFly__
++            else if (strcmp(f,"S,timespec") == 0) { fmt_type = FMT_TIMESPEC; }
++            else if (strcmp(f,"S,sensor") == 0)   { fmt_type = FMT_SENSOR; }
++            else if (strcmp(f,"S,vmmeter") == 0)  { fmt_type = FMT_VMMETER; }
++            else if (strcmp(f,"S,vmstats") == 0)  { fmt_type = FMT_VMSTATS; }
++            else if (strcmp(f,"S,xtcpcb") == 0)   { fmt_type = FMT_XTCPCB; }
++            else if (strcmp(f,"S,xunpcb") == 0)   { fmt_type = FMT_XUNPCB; }
++
++            else if (strcmp(f,"S,ip_stats") == 0)  { fmt_type = FMT_IP_STATS; }
++            else if (strcmp(f,"S,tcp_stats") == 0) { fmt_type = FMT_TCP_STATS; }
++            else if (strcmp(f,"S,carpstats") == 0)    { fmt_type = FMT_CARPSTATS; }
++            else if (strcmp(f,"S,rtstatistics") == 0) { fmt_type = FMT_RTSTATISTICS; }
++
++            else if (strcmp(f,"S,nchstats") == 0)      { fmt_type = FMT_NCHSTATS; }
++            else if (strcmp(f,"S,cryptostats") == 0)   { fmt_type = FMT_CRYPTOSTATS; }
++            else if (strcmp(f,"S,tty") == 0)           { fmt_type = FMT_TTY; }
++            else if (strcmp(f,"S,file") == 0)          { fmt_type = FMT_FILE; }
++            else if (strcmp(f,"S,proc") == 0)          { fmt_type = FMT_PROC; }
++            else if (strcmp(f,"S,kinfo_cputime") == 0) { fmt_type = FMT_KINFO_CPUTIME; }
++#endif
+             else if (strcmp(f,"S,timeval") == 0) { fmt_type = FMT_TIMEVAL; }
+             else if (strcmp(f,"S,vmtotal") == 0) { fmt_type = FMT_VMTOTAL; }
+             /* now the opaque OIDs */
+@@ -276,6 +300,9 @@ _mib_info(const char *arg)
+             if (strcmp(f,"T,struct cdev *") == 0) {
+                 fmt_type = FMT_STRUCT_CDEV;
+             }
++            else if (strcmp(f,"T,udev_t") == 0) {
++                fmt_type = FMT_UDEV_T;
++            }
+             else {
+                 /* bleah */
+             }
+@@ -529,6 +556,35 @@ _mib_lookup(const char *arg)
+             av_store(c, 2, newSVnv((double)inf->ldavg[2]/scale));
+             break;
+         }
++#ifdef __DragonFly__
++        case FMT_TIMESPEC: {
++            struct timespec *inf = (struct timespec *)buf;
++            RETVAL = newSVnv(
++                (double)inf->tv_sec + ((double)inf->tv_nsec/1000000000)
++            );
++            break;
++        }
++        case FMT_SENSOR: {
++            struct sensor *inf = (struct sensor *)buf;
++            switch(inf->type) {
++            case SENSOR_TEMP:
++              RETVAL = newSVnv(
++                  (double)(inf->value - 273150000) / 1000000.0
++              );
++              break;
++            case SENSOR_WATTS:
++              RETVAL = newSVnv(
++                  (double)(inf->value / 1000000.0)
++              );
++              break;
++            default:
++               warn("unhandled sensor type");
++               XSRETURN_UNDEF;
++               break;
++           }
++           break;
++        }
++#endif
+         case FMT_TIMEVAL: {
+             struct timeval *inf = (struct timeval *)buf;
+             RETVAL = newSVnv(
+@@ -537,7 +593,7 @@ _mib_lookup(const char *arg)
              break;
          }
          /* the remaining custom formats are for opaque mibs */
@@ -39,7 +113,7 @@
          case FMT_MBSTAT: {
              HV *c = (HV *)sv_2mortal((SV *)newHV());
              struct mbstat *inf = (struct mbstat *)buf;
-@@ -550,12 +553,12 @@
+@@ -550,12 +606,12 @@ _mib_lookup(const char *arg)
              hv_store(c, "mbuflen",        7, newSVuv(inf->m_mlen), 0);
              hv_store(c, "mbufhead",       8, newSVuv(inf->m_mhlen), 0);
              hv_store(c, "drain",          5, newSVuv(inf->m_drain), 0);
@@ -54,7 +128,7 @@
              hv_store(c, "mbufs",          5, newSVpvn("", 0), 0);
              hv_store(c, "mclusts",        7, newSVpvn("", 0), 0);
              hv_store(c, "sfallocwait",   11, newSVpvn("", 0), 0);
-@@ -587,7 +590,7 @@
+@@ -587,7 +643,7 @@ _mib_lookup(const char *arg)
              RETVAL = newRV((SV *)c);
              hv_store(c, "devno",           5, newSViv(inf->device_number), 0);
              hv_store(c, "unitno",          6, newSViv(inf->unit_number), 0);
@@ -63,7 +137,7 @@
              hv_store(c, "sequence",        8, newSVpvn("", 0), 0);
              hv_store(c, "allocated",       9, newSVpvn("", 0), 0);
              hv_store(c, "startcount",     10, newSVpvn("", 0), 0);
-@@ -604,7 +607,7 @@
+@@ -604,7 +660,7 @@ _mib_lookup(const char *arg)
  #endif
              break;
          }
@@ -72,7 +146,7 @@
          case FMT_XVFSCONF: {
              HV *c = (HV *)sv_2mortal((SV *)newHV());
              struct xvfsconf *inf = (struct xvfsconf *)buf;
-@@ -636,7 +639,7 @@
+@@ -636,7 +692,7 @@ _mib_lookup(const char *arg)
              HV *c = (HV *)sv_2mortal((SV *)newHV());
              struct igmpstat *inf = (struct igmpstat *)buf;
              RETVAL = newRV((SV *)c);
@@ -81,7 +155,7 @@
              hv_store(c, "total",       5, newSVuv(inf->igps_rcv_total), 0);
              hv_store(c, "tooshort",    8, newSVuv(inf->igps_rcv_tooshort), 0);
              hv_store(c, "badsum",      6, newSVuv(inf->igps_rcv_badsum), 0);
-@@ -672,7 +675,11 @@
+@@ -672,7 +728,11 @@ _mib_lookup(const char *arg)
          }
          case FMT_TCPSTAT: {
              HV *c = (HV *)sv_2mortal((SV *)newHV());
@@ -93,7 +167,7 @@
              RETVAL = newRV((SV *)c);
              hv_store(c, "connattempt",      11, newSVuv(inf->tcps_connattempt), 0);
              hv_store(c, "accepts",           7, newSVuv(inf->tcps_accepts), 0);
-@@ -751,7 +758,7 @@
+@@ -751,7 +811,7 @@ _mib_lookup(const char *arg)
              hv_store(c, "zonefail",          8, newSVuv(inf->tcps_sc_zonefail), 0);
              hv_store(c, "sendcookie",       10, newSVuv(inf->tcps_sc_sendcookie), 0);
              hv_store(c, "recvcookie",       10, newSVuv(inf->tcps_sc_recvcookie), 0);
@@ -102,7 +176,7 @@
              hv_store(c, "minmssdrops",      11, newSVpvn("", 0), 0);
              hv_store(c, "sendrexmitbad",    13, newSVpvn("", 0), 0);
              hv_store(c, "hostcacheadd",     12, newSVpvn("", 0), 0);
-@@ -762,7 +769,7 @@
+@@ -762,7 +822,7 @@ _mib_lookup(const char *arg)
              hv_store(c, "hostcacheadd",     12, newSVuv(inf->tcps_hc_added), 0);
              hv_store(c, "hostcacheover",    13, newSVuv(inf->tcps_hc_bucketoverflow), 0);
  #endif
@@ -111,3 +185,27 @@
              hv_store(c, "badrst",            6, newSVpvn("", 0), 0);
              hv_store(c, "sackrecover",      11, newSVpvn("", 0), 0);
              hv_store(c, "sackrexmitsegs",   14, newSVpvn("", 0), 0);
+@@ -852,6 +912,23 @@ _mib_lookup(const char *arg)
+         case FMT_NFSRVSTATS:
+         case FMT_NFSSTATS:
+         case FMT_XINPCB:
++#ifdef __DragonFly__
++        case FMT_VMMETER:
++        case FMT_VMSTATS:
++        case FMT_XTCPCB:
++        case FMT_XUNPCB:
++        case FMT_IP_STATS:
++        case FMT_TCP_STATS:
++        case FMT_CARPSTATS:
++        case FMT_RTSTATISTICS:
++        case FMT_NCHSTATS:
++        case FMT_CRYPTOSTATS:
++        case FMT_KINFO_CPUTIME:
++        case FMT_TTY:
++        case FMT_FILE:
++        case FMT_PROC:
++        case FMT_UDEV_T:
++#endif
+         case FMT_STRUCT_CDEV:
+             /* don't know how to interpret the results */
+             SvREFCNT_dec(sv_buf);
