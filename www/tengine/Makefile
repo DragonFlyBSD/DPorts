@@ -7,7 +7,7 @@ DISTVERSIONPREFIX=	${PORTNAME}-
 PORTREVISION=	6
 CATEGORIES=	www
 
-MAINTAINER=	robak@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Robust and small WWW server forked from Nginx
 
 LICENSE=	BSD2CLAUSE
@@ -875,7 +875,6 @@ post-install:
 .if !empty(PORT_OPTIONS:MHTTP) && !empty(PORT_OPTIONS:MHTTP_PERL)
 	${ECHO_CMD} ${SITE_ARCH_REL}/auto/nginx/nginx.so >> ${TMPPLIST}
 	${ECHO_CMD} ${SITE_ARCH_REL}/nginx.pm >> ${TMPPLIST}
-	${ECHO_CMD} @dirrm ${SITE_ARCH_REL}/auto/nginx >> ${TMPPLIST}
 .endif
 	${INSTALL_MAN} ${WRKSRC}/objs/nginx.8 ${STAGEDIR}${MAN8PREFIX}/man/man8
 
