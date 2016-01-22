@@ -1,0 +1,10 @@
+#!/bin/sh
+#
+# $FreeBSD: head/games/robocode/files/robocode-TeamRumble.in 348860 2014-03-23 15:16:06Z nemysis $
+#
+
+export JAVA_VERSION="%%JAVA_VERSION%%"
+
+cd "%%DATADIR%%" && exec "%%LOCALBASE%%/bin/java" -Xmx512M \
+-cp "libs/robocode.jar:libs/roborumble.jar:libs/codesize-1.1.jar" \
+roborumble.RoboRumbleAtHome ./roborumble/roborumble.txt "${@}"
