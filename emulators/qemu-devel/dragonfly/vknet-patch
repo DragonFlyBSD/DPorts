@@ -1,5 +1,5 @@
---- a/qapi-schema.json.orig	2015-08-11 21:11:09.000000000 +0200
-+++ b/qapi-schema.json	2015-12-20 16:31:55.624678000 +0100
+--- qapi-schema.json.orig	2015-08-11 21:11:09.000000000 +0200
++++ qapi-schema.json	2015-12-20 16:31:55.624678000 +0100
 @@ -2063,7 +2063,7 @@
  # Add a network backend.
  #
@@ -37,8 +37,8 @@
      'dump':     'NetdevDumpOptions',
      'bridge':   'NetdevBridgeOptions',
      'hubport':  'NetdevHubPortOptions',
---- a/qemu-options.hx.orig	2015-08-11 21:11:09.000000000 +0200
-+++ b/qemu-options.hx	2015-12-21 11:14:38.507807000 +0100
+--- qemu-options.hx.orig	2015-08-11 21:11:09.000000000 +0200
++++ qemu-options.hx	2015-12-21 11:14:38.507807000 +0100
 @@ -1542,6 +1542,12 @@
      "                Use group 'groupname' and mode 'octalmode' to change default\n"
      "                ownership and permissions for communication port.\n"
@@ -62,8 +62,8 @@
  #ifdef CONFIG_NETMAP
      "netmap|"
  #endif
---- a/net/vknet.c.orig	2015-12-21 11:04:27.549350077 +0100
-+++ b/net/vknet.c	2015-12-21 11:06:54.790858000 +0100
+--- net/vknet.c.orig	2015-12-21 11:04:27.549350077 +0100
++++ net/vknet.c	2015-12-21 11:06:54.790858000 +0100
 @@ -0,0 +1,205 @@
 +/*
 + * QEMU System Emulator
@@ -256,8 +256,8 @@
 +    const NetdevVknetOptions *vknet;
 +    const char *path;
 +
-+    assert(opts->kind == NET_CLIENT_OPTIONS_KIND_VKNET);
-+    vknet = opts->vknet;
++    assert(opts->type == NET_CLIENT_OPTIONS_KIND_VKNET);
++    vknet = opts->u.vknet;
 +    if (vknet->sock == NULL)
 +        path = "/var/run/vknet";
 +    else
@@ -270,16 +270,16 @@
 +
 +    return 0;
 +}
---- a/net/Makefile.objs.orig	2015-12-20 14:05:42.282624000 +0100
-+++ b/net/Makefile.objs	2015-12-20 14:05:46.272686000 +0100
+--- net/Makefile.objs.orig	2015-12-20 14:05:42.282624000 +0100
++++ net/Makefile.objs	2015-12-20 14:05:46.272686000 +0100
 @@ -12,4 +12,5 @@
  common-obj-$(CONFIG_HAIKU) += tap-haiku.o
  common-obj-$(CONFIG_SLIRP) += slirp.o
  common-obj-$(CONFIG_VDE) += vde.o
 +common-obj-$(CONFIG_VKNET) += vknet.o
  common-obj-$(CONFIG_NETMAP) += netmap.o
---- a/net/net.c.orig	2015-12-20 14:05:04.642040000 +0100
-+++ b/net/net.c	2015-12-20 14:05:26.112373000 +0100
+--- net/net.c.orig	2015-12-20 14:05:04.642040000 +0100
++++ net/net.c	2015-12-20 14:05:26.112373000 +0100
 @@ -74,6 +74,9 @@
  #ifdef CONFIG_VDE
      "vde",
@@ -300,8 +300,8 @@
  #ifdef CONFIG_NETMAP
          [NET_CLIENT_OPTIONS_KIND_NETMAP]    = net_init_netmap,
  #endif
---- a/net/hub.c.orig	2015-08-11 21:11:09.000000000 +0200
-+++ b/net/hub.c	2015-12-20 17:52:40.141244000 +0100
+--- net/hub.c.orig	2015-08-11 21:11:09.000000000 +0200
++++ net/hub.c	2015-12-20 17:52:40.141244000 +0100
 @@ -321,6 +321,7 @@
              case NET_CLIENT_OPTIONS_KIND_TAP:
              case NET_CLIENT_OPTIONS_KIND_SOCKET:
@@ -310,8 +310,8 @@
              case NET_CLIENT_OPTIONS_KIND_VHOST_USER:
                  has_host_dev = 1;
                  break;
---- a/net/clients.h.orig	2015-08-11 21:11:09.000000000 +0200
-+++ b/net/clients.h	2015-12-20 14:06:37.663483000 +0100
+--- net/clients.h.orig	2015-08-11 21:11:09.000000000 +0200
++++ net/clients.h	2015-12-20 14:06:37.663483000 +0100
 @@ -54,6 +54,11 @@
                   NetClientState *peer, Error **errp);
  #endif
@@ -324,17 +324,17 @@
  #ifdef CONFIG_NETMAP
  int net_init_netmap(const NetClientOptions *opts, const char *name,
                      NetClientState *peer, Error **errp);
---- a/configure.orig	2015-12-20 19:05:56.747347000 +0100
-+++ b/configure	2015-12-20 19:06:44.058070000 +0100
-@@ -242,6 +242,7 @@
+--- configure.orig	2015-12-16 22:04:48 UTC
++++ configure
+@@ -245,6 +245,7 @@ vnc="yes"
  sparse="no"
  uuid=""
  vde=""
 +vknet=""
- vnc_tls=""
  vnc_sasl=""
  vnc_jpeg=""
-@@ -906,6 +907,10 @@
+ vnc_png=""
+@@ -915,6 +916,10 @@ for opt do
    ;;
    --enable-vde) vde="yes"
    ;;
@@ -345,7 +345,7 @@
    --disable-netmap) netmap="no"
    ;;
    --enable-netmap) netmap="yes"
-@@ -1349,6 +1354,7 @@
+@@ -1365,6 +1370,7 @@ disabled with --disable-FEATURE, default
    rdma            RDMA-based migration support
    uuid            uuid support
    vde             support for vde network
@@ -353,15 +353,15 @@
    netmap          support for netmap network
    linux-aio       Linux AIO support
    cap-ng          libcap-ng support
-@@ -4535,6 +4541,7 @@
- echo "GUEST_BASE        $guest_base"
+@@ -4787,6 +4793,7 @@ echo "bluez  support    $bluez"
+ echo "Documentation     $docs"
  echo "PIE               $pie"
  echo "vde support       $vde"
 +echo "vknet support     $vknet"
  echo "netmap support    $netmap"
  echo "Linux AIO support $linux_aio"
  echo "ATTR/XATTR support $attr"
-@@ -4699,6 +4706,9 @@
+@@ -4954,6 +4961,9 @@ fi
  if test "$vde" = "yes" ; then
    echo "CONFIG_VDE=y" >> $config_host_mak
  fi

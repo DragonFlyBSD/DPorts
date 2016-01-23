@@ -5,3 +5,6 @@ OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT} VKNET
 VKNET_DESC=		vknet network backend for simple userspace bridge
 VKNET_CONFIGURE_ENABLE=	vknet
 VKNET_EXTRA_PATCHES=	${DFLY_FILESDIR}/vknet-patch
+
+# zrj: dunno about this BSD_USER thingy but adding this flag fixes plist (and build warnings)
+CONFIGURE_ARGS+= --disable-bsd-user

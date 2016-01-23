@@ -1,6 +1,6 @@
---- coroutine-ucontext.c.orig	2015-12-15 23:02:28 +0100
-+++ coroutine-ucontext.c
-@@ -122,7 +122,15 @@
+--- util/coroutine-ucontext.c.orig	2015-12-16 22:04:53 UTC
++++ util/coroutine-ucontext.c
+@@ -122,7 +122,15 @@ Coroutine *qemu_coroutine_new(void)
                  2, arg.i[0], arg.i[1]);
  
      /* swapcontext() in, siglongjmp() back out */

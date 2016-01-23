@@ -1,5 +1,5 @@
---- a/hw/ppc/mac_newworld.c
-+++ b/hw/ppc/mac_newworld.c
+--- hw/ppc/mac_newworld.c
++++ hw/ppc/mac_newworld.c
 @@ -68,6 +68,11 @@
  #include "hw/usb.h"
  #include "blockdev.h"
