@@ -71,10 +71,14 @@ NCURSES_SHLIBVER?=	${NCURSES_SHLIBFILE:E}
 .endif
 
 NCURSES_PORT?=		devel/ncurses
+.if exists (/usr/lib/priv/libprivate_ncursesw.so)
 NCURSES_SHLIBVER?=	6
+.else
+NCURSES_SHLIBVER?=	6P
+.endif
 
-BUILD_DEPENDS+=		${LOCALBASE}/lib/libncurses.so.6P:${PORTSDIR}/${NCURSES_PORT}
-RUN_DEPENDS+=		${LOCALBASE}/lib/libncurses.so.6P:${PORTSDIR}/${NCURSES_PORT}
+BUILD_DEPENDS+=		${LOCALBASE}/lib/libncurses.so.${NCURSES_SHLIBVER}:${PORTSDIR}/${NCURSES_PORT}
+RUN_DEPENDS+=		${LOCALBASE}/lib/libncurses.so.${NCURSES_SHLIBVER}:${PORTSDIR}/${NCURSES_PORT}
 NCURSESRPATH=		${NCURSESBASE}/lib
 
 .else
