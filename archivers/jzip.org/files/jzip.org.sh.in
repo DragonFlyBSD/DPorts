@@ -1,5 +1,0 @@
-#!/bin/sh
-#
-# $FreeBSD: head/archivers/jzip.org/files/jzip.org.sh.in 340851 2014-01-23 19:55:14Z mat $
-
-JAVA_VERSION="%%JAVA_VERSION%%" "%%LOCALBASE%%/bin/java" -jar "%%JAVAJARDIR%%/jzip.org.jar" "$@"
