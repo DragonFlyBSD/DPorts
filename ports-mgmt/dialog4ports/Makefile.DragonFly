@@ -1,2 +1,12 @@
-USES+=		ncurses
-LDFLAGS+=	-L${LOCALBASE}/lib
+#USES+=		ncurses
+#LDFLAGS+=	-L${LOCALBASE}/lib
+#
+# temporarily until bundled libdialog can be used
+# -OR- dialog4ports is modified to not need ncurses at all,
+#      our libdialog is good
+
+.if exists(/usr/lib/priv/libprivate_ncursesw.so)
+dfly-patch:
+	${REINPLACE_CMD} -e "s@-lncursesw@-rpath /lib/priv -L/usr/lib/priv -lprivate_ncursesw@g" \
+		${WRKSRC}/Makefile
+.endif
