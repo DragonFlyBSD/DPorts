@@ -3,7 +3,7 @@
 
 PORTNAME=	ncurses
 PORTVERSION=	6.0
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	http://invisible-mirror.net/archives/${PORTNAME}/ \
 		ftp://invisible-island.net/${PORTNAME}/
@@ -35,7 +35,14 @@ CONFIGURE_ARGS=	--datadir=${PREFIX}/share/misc --disable-overwrite \
 		--with-pkg-config-libdir=${PREFIX}/libdata/pkgconfig
 MAKE_JOBS_UNSAFE=	yes
 
-OPTIONS_DEFINE=	TRACE DEBUG PROFILE EXAMPLES DOCS
+.if exists (/usr/lib/priv/libprivate_ncursesw.so)
+NCVER=6
+REL_VER=6.0
+.else
+NCVER=6P
+REL_VER=6P.0
+.endif
+
 TRACE_DESC=	Add trace() function to all models of ncurses
 
 CONFIGURE_ENV=	gnat_exists="no"
@@ -54,8 +61,9 @@ CONFIGURE_WRKSRC=	${NOWIDEC_WRKSRC}
 BUILD_WRKSRC=	${NOWIDEC_WRKSRC}
 INSTALL_WRKSRC=	${NOWIDEC_WRKSRC}
 
-PLIST_SUB+=	ABI_VER=6P \
-		REL_VER=6P.0 \
+PLIST_SUB+=	ABI_VER=${NCVER} \
+		REL_VER=${REL_VER} \
+		DEBUG="@comment " \
 		WIDEC_EXAMPLESDIR=${WIDEC_EXAMPLESDIR:S,${PREFIX}/,,} \
 		NOWIDEC_EXAMPLESDIR=${NOWIDEC_EXAMPLESDIR:S,${PREFIX}/,,}
 
@@ -86,8 +94,6 @@ DEBUG_CONFIGURE_WITH=	debug
 
 OPTIONS_SUB=yes
 
-.include <bsd.port.options.mk>
-
 post-extract:
 	@${MKDIR} ${WIDEC_WRKSRC}
 	@${MKDIR} ${NOWIDEC_WRKSRC}
@@ -95,6 +101,7 @@ post-extract:
 post-patch:
 	@${REINPLACE_CMD} -e 's,$$(INSTALL_PROG) ncurses-config,@INSTALL_SCRIPT@ ncurses-config,' ${WRKSRC}/misc/Makefile.in
 	@${REINPLACE_CMD} -e 's,/usr/include,${PREFIX}/include,g' ${WRKSRC}/misc/ncurses-config.in
+	${REINPLACE_CMD} -e '/^NCURSES_MAJOR/ s|6|${NCVER}|' ${WRKSRC}/dist.mk
 
 post-configure:
 	cd ${.CURDIR} && \
@@ -127,10 +134,10 @@ post-install:
 
 	${RM} -f ${STAGEDIR}${PREFIX}/lib/libncurses.so \
 		${STAGEDIR}${PREFIX}/lib/libncursesw.so
-	${ECHO} "INPUT(libncurses.so.6P AS_NEEDED(-ltinfo))" > ${STAGEDIR}${PREFIX}/lib/libncurses.so
-	${ECHO} "INPUT(libncursesw.so.6P AS_NEEDED(-ltinfow))" > ${STAGEDIR}${PREFIX}/lib/libncursesw.so
+	${ECHO} "INPUT(libncurses.so.${NCVER} AS_NEEDED(-ltinfo))" > ${STAGEDIR}${PREFIX}/lib/libncurses.so
+	${ECHO} "INPUT(libncursesw.so.${NCVER} AS_NEEDED(-ltinfow))" > ${STAGEDIR}${PREFIX}/lib/libncursesw.so
 
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/*.so.6P.0
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/*.so.${REL_VER}
 
 	${MV} ${STAGEDIR}${PREFIX}/share/misc/terminfo.db \
 		${STAGEDIR}${PREFIX}/share/misc/terminfo.db.default
