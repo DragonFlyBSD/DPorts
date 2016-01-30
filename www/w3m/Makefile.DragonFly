@@ -1,3 +1,5 @@
-
 # zrj: disable fb (framebuffer) no fb_cmap_get() etc functions implemented
 INLINE_IMAGE_CONFIGURE_ON:= ${INLINE_IMAGE_CONFIGURE_ON:S/fb,x11/x11/}
+
+USES+=		ncurses
+LDFLAGS+=	-L${LOCALBASE}/lib
