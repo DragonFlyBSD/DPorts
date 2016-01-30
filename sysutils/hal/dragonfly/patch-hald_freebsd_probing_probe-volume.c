@@ -1,5 +1,5 @@
 --- hald/freebsd/probing/probe-volume.c.intermediate	2012-12-21 19:26:23.418869000 +0100
-+++ hald/freebsd/probing/probe-volume.c	2012-12-21 19:40:08.842767000 +0100
++++ hald/freebsd/probing/probe-volume.c
 @@ -33,7 +33,11 @@
  #include <fcntl.h>
  #include <unistd.h>
@@ -24,7 +24,16 @@
  #include <isofs/cd9660/iso.h>
  #include <glib.h>
  #include <libvolume_id.h>
-@@ -332,6 +340,9 @@
+@@ -64,7 +72,7 @@
+ };
+ #define ISO_PATH_TABLE_ENTRY_SIZE         8
+ 
+-#if (__FreeBSD_version < 600101) && (__FreeBSD_kernel_version < 600101)
++#if (__FreeBSD_version < 600101) && (__FreeBSD_kernel_version < 600101) && !defined(__DragonFly__)
+ static uint32_t
+ isonum_731(unsigned char *p)
+ {
+@@ -332,6 +340,9 @@ main (int argc, char **argv)
    gboolean is_blank = FALSE;
    const char *usage;
    char *label;
