@@ -1,0 +1,2 @@
+USES+= ncurses
+MAKE_ARGS+=	LIBS="${LDFLAGS} -lncurses"
