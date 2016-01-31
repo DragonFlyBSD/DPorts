@@ -1,2 +1,1 @@
-# remove hardcoded -lthr
-LDFLAGS=
+LDFLAGS:=	${LDFLAGS:N-lthr}
