@@ -1,6 +1,6 @@
---- src/porting.cpp.orig	2015-02-18 19:50:37.000000000 +0200
+--- src/porting.cpp.orig	2015-08-20 02:02:00 UTC
 +++ src/porting.cpp
-@@ -25,7 +25,7 @@
+@@ -25,7 +25,7 @@ with this program; if not, write to the
  
  #include "porting.h"
  
@@ -9,7 +9,7 @@
  	#include <sys/types.h>
  	#include <sys/sysctl.h>
  #elif defined(_WIN32)
-@@ -149,7 +149,7 @@
+@@ -138,7 +138,7 @@ int getNumberOfProcessors()
  
  	return sysconf(_SC_NPROCESSORS_ONLN);
  
@@ -18,12 +18,3 @@
  
  	unsigned int len, count;
  	len = sizeof(count);
-@@ -401,7 +401,7 @@
- 	/*
- 		FreeBSD
- 	*/
--	#elif defined(__FreeBSD__)
-+	#elif defined(__FreeBSD__) || defined(__DragonFly__)
- 
- 	int mib[4];
- 	char buf[BUFSIZ];
