@@ -91,6 +91,6 @@ NCURSESLIB=	${NCURSESBASE}/lib
 .if defined(NCURSES_RPATH)
 CFLAGS+=	-Wl,-rpath,${NCURSESRPATH}
 .endif
-LDFLAGS+=	-rpath ${NCURSESRPATH}
+LDFLAGS+=	-rpath=${NCURSESRPATH}
 
 .endif
