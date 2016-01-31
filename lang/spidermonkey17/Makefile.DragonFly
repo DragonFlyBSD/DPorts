@@ -1,2 +1,0 @@
-USES+=		readline
-BUILD_DEPENDS+=	nspr>=4.9.3:${PORTSDIR}/devel/nspr
