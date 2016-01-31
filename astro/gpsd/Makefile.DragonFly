@@ -1,4 +1,0 @@
-.if ${DFLYVERSION} < 300700
-post-patch:
-	${REINPLACE_CMD} -e 's|"dragon"|"skipme"|' ${WRKSRC}/SConstruct
-.endif
