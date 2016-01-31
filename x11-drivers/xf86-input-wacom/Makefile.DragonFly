@@ -1,0 +1,3 @@
+
+# zrj: for now disable synthetic run dep on webcamd(no cuse4bsd on DragonFly)
+RUN_DEPENDS:= ${RUN_DEPENDS:Nwebcamd*}
