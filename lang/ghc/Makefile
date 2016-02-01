@@ -88,7 +88,11 @@ LIB_DEPENDS+=		libutil.so.9:${PORTSDIR}/misc/compat9x
 .elif ${OPSYS} == "DragonFly"
 
 BOOT_GHC_VERSION=	7.10.2
+.if exists (/usr/lib/priv/libprivate_ncursesw.so)
+DISTFILES+=		ghc-${BOOT_GHC_VERSION}-boot-${ARCH}-dragonfly2.tar.xz:dflyboot
+.else
 DISTFILES+=		ghc-${BOOT_GHC_VERSION}-boot-${ARCH}-dragonfly.tar.xz:dflyboot
+.endif
 CONFIGURE_TARGET=	${ARCH}-portbld-dragonfly
 CONFIGURE_ENV+=		BOOTDIR=${BOOT_DIR} LBASE=${LOCALBASE}
 

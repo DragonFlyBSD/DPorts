@@ -8,3 +8,5 @@ SHA256 (ghc-7.10.2-boot-amd64-freebsd.tar.xz) = 4af0ee0795537baa11a96fba23477f83
 SIZE (ghc-7.10.2-boot-amd64-freebsd.tar.xz) = 49833224
 SHA256 (ghc-7.10.2-boot-x86_64-dragonfly.tar.xz) = 7efa557d5439305403cdaf1b98c17d3e4d629bb2afee0a56b4189840e87c5537
 SIZE (ghc-7.10.2-boot-x86_64-dragonfly.tar.xz) = 40796384
+SHA256 (ghc-7.10.2-boot-x86_64-dragonfly2.tar.xz) = ac6c0e84d2032eb7d27c49ab94a3a7ba3a507d3bcccc01dcd9f18715a081fee2
+SIZE (ghc-7.10.2-boot-x86_64-dragonfly2.tar.xz) = 39114336

@@ -1,0 +1,38 @@
+BSPKGLOC?=	undefined
+DESTINO?=	/tmp
+BSNAME?=	${PKGNAME}-boot-${ARCH}-${OPSYS:tl}.tar.xz
+BSWRKAREA:=	${DESTINO}/bs_workarea
+dossier=	ghc ghc-pkg ghci runghc
+normal=		hpc hsc2hs
+mf=		${BSWRKAREA}/${PKGNAME}-boot/Makefile
+
+bootstrap-package:
+.if ${BSPKGLOC:Mundefined}
+	@${ECHO} "Please set BSPKGLOC to location of existing ghc package"
+.else
+	@${RM} -r ${BSWRKAREA}
+	@${MKDIR} ${BSWRKAREA}/${PKGNAME}-boot
+	@${TAR} -xf ${BSPKGLOC} -C ${BSWRKAREA}
+	${MV} ${BSWRKAREA}/usr/local/bin ${BSWRKAREA}/${PKGNAME}-boot/
+	${RM} ${BSWRKAREA}/${PKGNAME}-boot/bin/haddock*
+	@${ECHO} all:     >> ${mf}
+	@${ECHO}          >> ${mf}
+	@${ECHO} install: >> ${mf}
+	@${ECHO}          >> ${mf} 
+	${MV} ${BSWRKAREA}/usr/local/lib ${BSWRKAREA}/${PKGNAME}-boot/
+	${SED} -e 's|%PKGNAME%|${PKGNAME}|; s|%GVER%|${PORTVERSION}|g' \
+		${DFLY_FILESDIR}/bootstrap-configure \
+		> ${BSWRKAREA}/${PKGNAME}-boot/configure
+	${CHMOD} 755 ${BSWRKAREA}/${PKGNAME}-boot/configure 
+	(cd ${BSWRKAREA}/${PKGNAME}-boot/bin && \
+		perl -pi -e 's|/usr/local|%WRKDIR%|' \
+		${dossier:=-${PORTVERSION}} ${normal})
+	(cd ${BSWRKAREA}/${PKGNAME}-boot/bin && \
+		perl -pi -e 's|topdir" |topdir" -L"%LBASE%/lib" |' \
+		ghc-${PORTVERSION})
+	(cd ${BSWRKAREA}/${PKGNAME}-boot/lib/${PKGNAME}/ && \
+		perl -pi -e 's|/usr/local|%WRKDIR%|' package.conf.d/*)
+	@${ECHO} packing new bootstrap.
+	@(cd ${BSWRKAREA} && ${TAR} -cJf ${BSNAME} ${PKGNAME}-boot)
+	@${ECHO} the new bootstrap is here: ${BSWRKAREA}/${BSNAME}
+.endif
