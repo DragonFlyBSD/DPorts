@@ -1,12 +1,9 @@
-#CMAKE_ARGS+=		-DWITH_READLINE=1
-
 # CMake injects bad -Wl,-rpath,XX values in the link instructions to
 # suppress those.  Built-in rpath in gcc is enough.
-CMAKE_ARGS+=		-DCMAKE_SKIP_BUILD_RPATH:BOOL=YES
+CMAKE_ARGS+=	-DCMAKE_SKIP_BUILD_RPATH:BOOL=YES
 
 pre-configure:
 	cp ${WRKSRC}/cmake/os/FreeBSD.cmake \
 	   ${WRKSRC}/cmake/os/DragonFly.cmake
 	mkdir ${WRKSRC}/not-storage
 	mv ${WRKSRC}/storage/tokudb ${WRKSRC}/not-storage/
-
