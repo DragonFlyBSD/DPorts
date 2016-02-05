@@ -1,2 +1,7 @@
-USES+= alias
 CXXFLAGS+= -Wno-deprecated-declarations
+
+dfly-patch:
+.if exists(/lib/priv/libprivate_ncurses.so.59)
+	${REINPLACE_CMD} -e "s@ncursesw5-config@ncursesw6-config@g" \
+		${WRKSRC}/Makefile
+.endif
