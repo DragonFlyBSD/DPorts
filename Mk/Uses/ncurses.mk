@@ -64,33 +64,33 @@ NCURSES_INSTALLED!=	${PKG_BIN} ${PKGARGS} which -qo ${LOCALBASE}/lib/libncurses.
 .  endif
 NCURSES_INSTALLED?=
 
-.if ${NCURSES_INSTALLED} != ""
+.  if ${NCURSES_INSTALLED} != ""
 NCURSES_PORT=	${NCURSES_INSTALLED}
 NCURSES_SHLIBFILE!=	${PKG_INFO} -ql ${NCURSES_INSTALLED} | grep -m 1 "^`pkg query "%p" ${NCURSES_INSTALLED}`/lib/libncurses.so."
 NCURSES_SHLIBVER?=	${NCURSES_SHLIBFILE:E}
-.endif
+.  endif
 
 NCURSES_PORT?=		devel/ncurses
-.if exists (/usr/lib/priv/libprivate_ncursesw.so)
+.  if exists (/usr/lib/priv/libprivate_ncursesw.so)
 NCURSES_SHLIBVER?=	6
-.else
+.  else
 NCURSES_SHLIBVER?=	6P
-.endif
+.  endif
 
 BUILD_DEPENDS+=		${LOCALBASE}/lib/libncurses.so.${NCURSES_SHLIBVER}:${PORTSDIR}/${NCURSES_PORT}
 RUN_DEPENDS+=		${LOCALBASE}/lib/libncurses.so.${NCURSES_SHLIBVER}:${PORTSDIR}/${NCURSES_PORT}
 NCURSESRPATH=		${NCURSESBASE}/lib
-LDFLAGS+=		-L${NCURSESRPATH}
+LDFLAGS+=		-L${NCURSESRPATH} -Wl,-rpath=${NCURSESRPATH}
+CFLAGS+=		-I${NCURSESBASE}/include -I${NCURSESINC}
+
+.  if defined(NCURSES_RPATH)
+CFLAGS+=		-Wl,-rpath,${NCURSESRPATH}
+.  endif
 
 .else
 .error		USES=ncurses only accept 'port' and 'base' as arguments, got ${ncurses_ARGS}
 .endif
 
 NCURSESLIB=	${NCURSESBASE}/lib
-
-.if defined(NCURSES_RPATH)
-CFLAGS+=	-Wl,-rpath,${NCURSESRPATH}
-.endif
-LDFLAGS+=	-rpath=${NCURSESRPATH}
 
 .endif
