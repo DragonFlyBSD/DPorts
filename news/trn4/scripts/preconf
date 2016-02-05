@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 #	pre-configure script for Trn 4.0 port to FreeBSD
-# $FreeBSD: head/news/trn4/scripts/preconf 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/news/trn4/scripts/preconf 408195 2016-02-05 14:50:23Z marino $
 
 PortsDir=$1
   CurDir=$2
@@ -288,7 +288,7 @@ subscriptions=''
 sysman='/usr/share/man/man1'
 tail='/usr/bin/tail'
 tee=''
-termlib='-lcursus'
+termlib='-lncurses'
 test='/bin/test'
 threaddir='remote'
 tk='undef'
