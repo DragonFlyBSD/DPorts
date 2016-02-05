@@ -1,7 +1,7 @@
 #!/bin/sh -
 #
 #	pre-configure script for Trn port to FreeBSD 3.0
-# $FreeBSD: head/news/trn/scripts/pre-configure 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/news/trn/scripts/pre-configure 408193 2016-02-05 14:09:15Z marino $
 
 PortsDir=$PORTSDIR
   CurDir=$CURDIR
@@ -107,7 +107,7 @@ d_getpwent='define'
 d_getcwd='undef'
 d_getwd='define'
 d_havetlib='define'
-termlib='-ltermlib'
+termlib='-lncurses'
 d_ignoreorg='undef'
 d_internet='define'
 d_memcmp='define'
