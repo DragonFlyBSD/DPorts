@@ -63,7 +63,7 @@ pre-build-script:
 		${SETENV} ${MAKE_ENV} fpcmake
 	cd ${WRKDIR}/${PORTNAME}/components/todolist && \
 		${SETENV} ${MAKE_ENV} fpcmake
-	cd ${WRKDIR}/${PORTNAME}/components/editortoolbar && \
+#	cd ${WRKDIR}/${PORTNAME}/components/editortoolbar && \
 		${SETENV} ${MAKE_ENV} fpcmake
 	cd ${WRKDIR}/${PORTNAME}/components/datetimectrls && \
 		${SETENV} ${MAKE_ENV} fpcmake
