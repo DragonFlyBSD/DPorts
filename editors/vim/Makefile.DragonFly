@@ -1,3 +1,16 @@
 .if defined(LITE)
 PORT_OPTIONS+= CSCOPE EXUBERANT_CTAGS
 .endif
+
+# zrj: read src/osdef.sh, this is to prevent once full priv of ncurses happens:
+# osdef0.c:10:44: fatal error: termcap.h: No such file or directory
+#/usr/local/include/ncurses/termcap.h:66:28: error: conflicting types for 'tgetflag'
+# extern NCURSES_EXPORT(int) tgetflag (NCURSES_CONST char *);
+#                            ^
+#In file included from vim.h:319:0,
+#                 from term.c:26:
+#auto/osdef.h:116:12: note: previous declaration of 'tgetflag' was here
+# extern int tgetflag __ARGS((char *));
+.if exists(/usr/lib/priv/libprivate_ncursesw.so)
+MAKE_ARGS+= EXTRA_DEFS="${CFLAGS:M-I*}"
+.endif
