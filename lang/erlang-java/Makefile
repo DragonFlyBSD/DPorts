@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	erlang
-PORTVERSION=	18.2.2
+PORTVERSION=	18.2.3
 CATEGORIES=	lang parallel java
 MASTER_SITES=	http://www.erlang.org/download/:erlangorg		\
 		http://erlang.stacken.kth.se/download/:erlangorg	\
@@ -14,7 +14,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 PATCH_SITES=	http://olgeni.olgeni.com/~olgeni/distfiles/ \
 		LOCAL/olgeni
-PATCHFILES=	patch-otp-18.2.2
+PATCHFILES=	patch-otp-18.2.2 patch-otp-18.2.3
 
 MAINTAINER=	olgeni@FreeBSD.org
 COMMENT=	Erlang interface for Java
@@ -32,7 +32,7 @@ OPTIONS_DEFINE=	DOCS
 
 ERL_RELEASE=	18.2.1
 
-USES=		gmake perl5
+USES=		gmake ncurses perl5
 USE_PERL5=	build
 GNU_CONFIGURE=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib
