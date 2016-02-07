@@ -1,5 +1,0 @@
-CONFIGURE_ARGS+= --build=${TARGET_SDIR}
-
-# 23 FEB 2015 - freezes when built by gcc5 snapshot
-
-USE_GCC=	NOT5
