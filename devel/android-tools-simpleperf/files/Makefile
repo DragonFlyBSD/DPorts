@@ -72,7 +72,7 @@ TEST_CPPFLAGS+=	$$(${GTEST_CONFIG} --cppflags)
 CPPFLAGS.${f}+=	${TEST_CPPFLAGS}
 .endfor
 
-LDADD+=		$$(${LLVM_CONFIG} --system-libs --libs --ldflags)
+LDADD+=		-L${LOCALBASE}/lib $$(${LLVM_CONFIG} --system-libs --libs --ldflags)
 TEST_LDADD+=	$$(${GTEST_CONFIG} --libs --ldflags)
 
 TEST_OBJS+=	${TEST_SRCS:R:S/$/.o/}
