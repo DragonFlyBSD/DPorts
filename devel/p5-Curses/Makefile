@@ -14,18 +14,18 @@ COMMENT=	Perl5 module for terminal screen handling and optimization
 OPTIONS_DEFINE=	NCURSESW
 NCURSESW_DESC=	Wide-character-capable support by ncursesw library
 
-USES=		perl5 tar:tgz
+USES=		ncurses perl5 tar:tgz
 USE_PERL5=	configure
 CONFIGURE_ARGS=	PANELS MENUS FORMS
-CONFIGURE_ENV=	CURSES_CFLAGS="-I${WRKSRC}/usr/include/ncurses"
+CONFIGURE_ENV=	CURSES_CFLAGS="${CFLAGS:M-I*} -I${WRKSRC}/usr/include/ncurses"
 
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNCURSESW}
-CONFIGURE_ENV+=	CURSES_LDFLAGS="-L/usr/lib/ -lncursesw" \
+CONFIGURE_ENV+=	CURSES_LDFLAGS="${LDFLAGS:M-L*} -L/usr/lib/ -lncursesw" \
 		CURSES_LIBTYPE="ncursesw"
 .else
-CONFIGURE_ENV+=	CURSES_LDFLAGS="-L/usr/lib/ -lncurses"
+CONFIGURE_ENV+=	CURSES_LDFLAGS="${LDFLAGS:M-L*} -L/usr/lib/ -lncurses"
 .endif
 
 pre-configure:
