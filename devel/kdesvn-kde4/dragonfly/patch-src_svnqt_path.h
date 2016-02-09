@@ -1,11 +1,11 @@
---- src/svnqt/path.h.orig	2009-12-03 14:59:43.000000000 +0000
+--- src/svnqt/path.h.orig	2016-01-19 22:15:34.903195000 +0200
 +++ src/svnqt/path.h
-@@ -111,7 +111,7 @@ namespace svn
+@@ -112,7 +112,7 @@ public:
       * @return true if there is a path set
       */
      bool
 -    isset() const;
 +    path_isset() const;
  
- 
      /**
+      * adds a new URL component to the path
