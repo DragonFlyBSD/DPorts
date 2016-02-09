@@ -1,0 +1,8 @@
+USES+=		ncurses
+
+#disable static version for now. libtinfo.a issue
+PLIST_FILES:=${PLIST_FILES:Nbin/ah-tty.static}
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/bin_PROGRAMS/s@ah-tty.static@@g'	\
+		${WRKSRC}/Makefile.in
