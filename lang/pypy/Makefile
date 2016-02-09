@@ -34,7 +34,7 @@ ALL_TARGET=	pypy-c
 BUILD_WRKSRC=	${WRKDIR}/build/usession-release-${DISTVERSION}-0/testing_1
 MAKE_ENV+=	PYPY_LOCALBASE=${LOCALBASE}
 USE_LDCONFIG=	${PREFIX}/${PYPY_DIR}/bin
-USES=		gettext-runtime tar:bzip2
+USES=		gettext-runtime ncurses tar:bzip2
 WRKSRC=		${WRKDIR}/pypy-pypy-5f8302b8bf9f
 
 .include ".${CURDIR}/bsd.pypy.mk"
@@ -69,7 +69,7 @@ post-build:
 	${CP} ${BUILD_WRKSRC}/pypy-c ${BUILD_WRKSRC}/libpypy-c.so ${WRKSRC}/pypy/goal/
 
 do-install:
-	${SETENV} TMPDIR=${WRKDIR}/build \
+	${SETENV} ${MAKE_ENV} TMPDIR=${WRKDIR}/build \
 		${PYTHON_CMD} ${WRKSRC}/pypy/tool/release/package.py --builddir ${WRKDIR}/build --archive-name ${PYPY_DIR} \
 		--without-gdbm --without-sqlite3 --without-tk
 	${TAR} -C ${STAGEDIR}${PREFIX} -xf ${WRKDIR}/build/${PYPY_DIR}.tar.bz2

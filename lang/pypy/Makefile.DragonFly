@@ -3,3 +3,7 @@ dfly-patch:
 		${REINPLACE_CMD} -e "s|'freebsd'|'dragonfly'|")
 	(cd ${WRKSRC} && ${GREP} -rl '"freebsd"' * | ${XARGS} \
 		${REINPLACE_CMD} -e 's|"freebsd"|"dragonfly"|')
+.if !exists(/lib/priv/libprivate_ncurses.so.59)
+	${REINPLACE_CMD} -e 's|ncurses5-config|ncurses6-config|' \
+		${WRKSRC}/pypy/module/_minimal_curses/fficurses.py
+.endif
