@@ -1,2 +1,10 @@
-USES+= alias
-CFLAGS+= -DMAXNAMLEN=255
+USES+= alias ncurses
+CFLAGS+= -DMAXNAMLEN=255 -DUSETERMINFO
+
+dfly-patch:
+.if ${DFLYVERSION} > 400501
+	${REINPLACE_CMD} -e 's@LDFLAGS[[:space:]]=@LDFLAGS +=@g'	\
+		${WRKSRC}/Makefile.in
+	${REINPLACE_CMD} -e 's@-lcurses@-lncurses@g'	\
+		${WRKSRC}/machine.h
+.endif
