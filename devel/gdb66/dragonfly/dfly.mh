@@ -1,5 +1,0 @@
-# Host: DragonFly/i386
-NATDEPFILES= fork-child.o inf-ptrace.o \
-	fbsd-nat.o i386-nat.o i386bsd-nat.o i386dfly-nat.o \
-	gcore.o
-NAT_FILE= nm-fbsd.h
