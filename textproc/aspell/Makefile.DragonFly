@@ -1,2 +1,0 @@
-USES+=		ncurses
-LDFLAGS+=	-L${LOCALBASE}/lib
