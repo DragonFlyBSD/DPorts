@@ -129,6 +129,7 @@ yate:*:204:204::0:0:Yate:/nonexistent:/usr/sbin/nologin
 gnugk:*:205:205::0:0:GNU GateKeeper pseudo-user:/nonexistent:/usr/sbin/nologin
 gini:*:206:206::0:0:& streaming server:/var/log/gini:/usr/sbin/nologin
 _mixminion:*:207:207::0:0:Mixminion server:/nonexistent:/usr/sbin/nologin
+gogs:*:209:209::0:0:gogs user:/var/db/gogs/home:/bin/sh
 shoutcast:*:210:210::0:0:Shoutcast sandbox:/nonexistent:/bin/sh
 git:*:211:211::0:0:gitosis user:/usr/local/git:/bin/sh
 hg:*:212:212::0:0:mercurial-server user:/usr/local/hg:/bin/sh
@@ -251,6 +252,7 @@ munin:*:842:842::0:0:Munin:/var/munin:/usr/sbin/nologin
 subsonic:*:844:844::0:0:Subsonic standalone-server:/nonexistent:/usr/sbin/nologin
 sogod:*:846:846::0:0:SOGo groupware:/nonexistent:/usr/sbin/nologin
 domoticz:*:847:847::0:0:domoticz user:/nonexistent:/usr/sbin/nologin
+guacamole:*:899:899::0:0:Guacamole user:/nonexistent:/usr/sbin/nologin
 fossy:*:901:901::0:0:FOSSology user:/usr/local/share/fossology:/usr/local/bin/bash
 scanlogd:*:902:902::0:0:scanlogd user:/nonexistent:/usr/sbin/nologin
 _ocserv:*:903:903::0:0:ocserv user:/nonexistent:/usr/sbin/nologin

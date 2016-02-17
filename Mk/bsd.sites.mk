@@ -452,7 +452,6 @@ MASTER_SITE_GCC+= \
 	http://gcc.cybermirror.org/%SUBDIR%/ \
 	http://gcc-uk.internet.bs/%SUBDIR%/ \
 	http://www.netgull.com/gcc/%SUBDIR%/ \
-	http://mirrors.webhostinggeeks.com/gcc/%SUBDIR%/ \
 	http://robotlab.itk.ppke.hu/gcc/%SUBDIR%/ \
 	http://gcc.fyxm.net/%SUBDIR%/ \
 	http://gcc.igor.onlinedirect.bg/%SUBDIR%/ \
@@ -1124,8 +1123,7 @@ MASTER_SITE_RUBY+= \
 # See http://rubygems.org/pages/about
 .if !defined(IGNORE_MASTER_SITE_RUBYGEMS)
 MASTER_SITE_RUBYGEMS+= \
-	http://production.s3.rubygems.org/gems/%SUBDIR%/ \
-	http://production.cf.rubygems.org/gems/%SUBDIR%/
+	https://rubygems.global.ssl.fastly.net/gems/%SUBDIR%/
 .endif
 
 .if !defined(IGNORE_MASTER_SITE_SAMBA)

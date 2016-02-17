@@ -5,6 +5,35 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20160214:
+  AFFECTS: users of www/nginx-devel
+  AUTHOR: osa@FreeBSD.org
+
+  Dynamic modules support has been enabled for the following third-party
+  modules, in case of usage of these modules please update nginx
+  configuration file for load these modules:
+
+  load_module "modules/ngx_http_echo_module.so";
+  load_module "modules/ngx_http_headers_more_filter_module.so";
+  load_module "modules/ngx_http_eval_module.so";
+  load_module "modules/ngx_http_lua_module.so";
+  load_module "modules/ngx_http_set_misc_module.so";
+
+20160213:
+  AFFECTS: users of www/nginx-devel
+  AUTHOR: osa@FreeBSD.org
+
+  Dynamic modules support has been enabled.  In case of usage following
+  modules please update nginx configuration file for load these modules:
+
+  load_module "modules/ngx_http_geoip_module.so";
+  load_module "modules/ngx_http_image_filter_module.so";
+  load_module "modules/ngx_http_xslt_filter_module.so";
+  load_module "modules/ngx_mail_module.so";
+  load_module "modules/ngx_stream_module.so";
+
+  See https://www.nginx.com/blog/dynamic-modules-nginx-1-9-11/ for details.
+
 20160127:
   AFFECTS: users of net-im/uTox
   AUTHOR: amdmi3@FreeBSD.org
@@ -1183,68 +1212,4 @@ AUTHOR: ohauer@FreeBSD.org
 
   After the upgrade, check with such list if all your php extensions
   are still installed, and reinstall them if needed.
-
-20150213:
-  AFFECTS: users who upgraded from FreeBSD 7.x or older with "make world" but never ran "make delete-old"
-  AUTHOR: antoine@FreeBSD.org
-
-  Dependency registration has been reworked.
-  If you encounter the following error,  you may have stale magic files
-  for file(1):
-
-    ===>   bar-x depends on shared library: libfoo.so - not found
-
-  You can remove the stale /usr/share/misc/magic.mime{,.mgc} files
-  manually or run "make delete-old" in ${SRCDIR}.
-
-20150207:
-  AFFECTS: users of mail/opensmtpd-devel
-  AUTHOR: ashish@FreeBSD.org
-
-  MYSQL, PGSQL, LDAP, and REDIS options are removed from port, as
-  they're moved upstream to a separate project, which is yet to
-  release snapshots. If you need those options, then please install
-  "mail/opensmtpd" port instead. To do that:
-
-  If using portupgrade:
-  # portupgrade -o mail/opensmtpd mail/opensmtpd-devel
-
-  If using portmaster:
-  # portmaster -o mail/opensmtpd mail/opensmtpd-devel
-
-20150206:
-  AFFECTS: users of net/serviio
-  AUTHOR: netchild@FreeBSD.org
-
-  The java dependency changed from java 7 (java/openjdk7 if you haven't
-  installed another java 7 implementation) to java 8 (e.g. java/openjdk8).
-  If serviio is the only reason that java 7 is installed, you can delete
-  java 7 after the update to serviio 1.5.0.
-
-  The Java Polling Watch Service used in Serviio 1.5 aggressively searches
-  for file system updates. Until the Serviio poller is re-enabled in 1.5.1,
-  consider unchecking "Keep library automatically updated" if you have a
-  large media collection or are concerned about CPU/disk usage.
-
-20150204:
-  AFFECTS: users of databases/mysql55-(server|client)
-  AUTHOR: ale@FreeBSD.org
-
-  The default MySQL version has been updated from 5.5 to 5.6.
-
-  If you compile your own ports you may keep 5.5 as the default version by
-  adding the following lines to your /etc/make.conf file:
-
-  #
-  # Keep MySQL 5.5 as default version
-  #
-  DEFAULT_VERSIONS+=mysql= 5.5
-
-  If you wish to update to the new default version, you need to first stop any
-  running server instance. Then, you will need to follow these steps, depending
-  on installed packages.
-
-  # pkg set -o databases/mysql55-client:databases/mysql56-client
-  # pkg set -o databases/mysql55-server:databases/mysql56-server
-  # pkg upgrade
 

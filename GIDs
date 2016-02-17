@@ -124,6 +124,7 @@ yate:*:204:
 gnugk:*:205:
 gini:*:206:
 _mixminion:*:207:
+gogs:*:209:
 shoutcast:*:210:
 git:*:211:
 hg:*:212:
@@ -240,6 +241,7 @@ dahdi:*:843:asterisk
 subsonic:*:844:
 sogod:*:846:
 domoticz:*:847:
+guacamole:*:899:
 fossy:*:901:www
 scanlogd:*:902:
 _ocserv:*:903:
