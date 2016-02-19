@@ -47,6 +47,8 @@ OPTIONS_DEFAULT=	IPV6 LIBFFI NLS PYMALLOC THREADS
 OPTIONS_RADIO=		HASH
 OPTIONS_RADIO_HASH=	FNV SIPHASH
 OPTIONS_SUB=		yes
+OPTIONS_DEFINE+=	EXPAT
+OPTIONS_DEFAULT+=	EXPAT
 
 LIBFFI_DESC=		Use libffi from ports instead of bundled version
 NLS_DESC=		Enable gettext support for the locale module
@@ -56,7 +58,9 @@ TSC_DESC=		Enable processor timestamp counter profiling
 HASH_DESC=		Hash Algorithm (PEP-456)
 FNV_DESC=		Modified Fowler-Noll-Vo Algorithm
 SIPHASH_DESC=		SipHash24 Algorithm
+EXPAT_DESC=		Use expat from ports instead of bundled version
 
+EXPAT_CONFIGURE_ON=	--with-system-expat
 FNV_CONFIGURE_ON=	--with-hash-algorithm=fnv
 SIPHASH_CONFIGURE_ON=	--with-hash-algorithm=siphash24
 
@@ -65,6 +69,7 @@ IPV6_CONFIGURE_ENABLE=	ipv6
 
 LIBFFI_CONFIGURE_ON=	--with-system-ffi
 LIBFFI_LIB_DEPENDS=	libffi.so:${PORTSDIR}/devel/libffi
+EXPAT_LIB_DEPENDS=	libexpat.so:${PORTSDIR}/textproc/expat2
 
 # Use CPPFLAGS over CFLAGS due to -I ordering, causing elementtree and pyexpat
 # to break in Python 2.7, or preprocessor complaints in Python >= 3.3
@@ -118,7 +123,8 @@ PLIST_SUB+=	NO_NIS=""
 .endif
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|`uname -r`|"${OSREL}"|g' ${WRKSRC}/configure
+	${REINPLACE_CMD} -e 's|`uname -r`|"${_OSRELEASE}"|g' \
+		${WRKSRC}/configure
 
 post-install:
 .if ! ${PORT_OPTIONS:MDEBUG}
