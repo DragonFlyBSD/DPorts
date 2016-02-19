@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/news/nzbget/files/nzbget.in 387515 2015-05-26 22:32:22Z madpilot $
+# $FreeBSD: head/news/nzbget/files/nzbget.in 408947 2016-02-15 17:00:47Z rakuco $
 #
 # PROVIDE: nzbget
 # KEYWORD: shutdown
@@ -20,10 +20,10 @@ load_rc_config ${name}
 
 : ${nzbget_enable:=NO}
 
+command=%%PREFIX%%/bin/nzbget
 start_cmd="${name}_start"
 status_cmd="${command} -L S"
 stop_cmd="${name}_stop"
-command=%%PREFIX%%/bin/nzbget
 
 nzbget_start()
 {
