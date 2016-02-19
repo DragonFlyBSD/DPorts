@@ -28,7 +28,7 @@ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION,
 EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-  $FreeBSD: head/security/vuxml/vuln.xml 407433 2016-01-28 22:45:10Z matthew $
+  $FreeBSD: head/security/vuxml/vuln.xml 409054 2016-02-17 17:23:24Z feld $
 
 
 QUICK GUIDE TO ADDING A NEW ENTRY
@@ -55,9 +55,1337 @@ Help is also available from ports-security@freebsd.org.
 Notes:
   * Please add new entries to the beginning of this file.
   * Do not forget port variants (linux-f10-libxml2, libxml2, etc.)
-
 -->
 <vuxml xmlns="http://www.vuxml.org/apps/vuxml-1">
+  <vuln vid="dd563930-d59a-11e5-8fa8-14dae9d210b8">
+    <topic>adminer -- remote code execution</topic>
+    <affects>
+      <package>
+	<name>adminer</name>
+	<range><lt>4.2.4</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Jakub Vrana reports:</p>
+	<blockquote cite="https://github.com/vrana/adminer/commit/e5352cc5acad21513bb02677e2021b80bf7e7b8b">
+	  <p>Fix remote code execution in SQLite query</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://github.com/vrana/adminer/commit/e5352cc5acad21513bb02677e2021b80bf7e7b8b</url>
+    </references>
+    <dates>
+      <discovery>2016-02-06</discovery>
+      <entry>2016-02-17</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="18201a1c-d59a-11e5-8fa8-14dae9d210b8">
+    <topic>adminer -- XSS vulnerability</topic>
+    <affects>
+      <package>
+	<name>adminer</name>
+	<range><lt>4.2.3</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Jakub Vrana reports:</p>
+	<blockquote cite="https://github.com/vrana/adminer/commit/4be0b6655e0bf415960659db2a6dd4e60eebbd66">
+	  <p>Fix XSS in indexes (non-MySQL only)</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://github.com/vrana/adminer/commit/4be0b6655e0bf415960659db2a6dd4e60eebbd66</url>
+    </references>
+    <dates>
+      <discovery>2015-11-08</discovery>
+      <entry>2016-02-17</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="ad91ee9b-d599-11e5-8fa8-14dae9d210b8">
+    <topic>adminer -- XSS vulnerability</topic>
+    <affects>
+      <package>
+	<name>adminer</name>
+	<range><lt>4.2.2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Jakub Vrana reports:</p>
+	<blockquote cite="https://github.com/vrana/adminer/commit/596f8df373cd3efe5bcb6013858bd7a6bb5ecb2c">
+	  <p>Fix XSS in alter table</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://github.com/vrana/adminer/commit/596f8df373cd3efe5bcb6013858bd7a6bb5ecb2c</url>
+    </references>
+    <dates>
+      <discovery>2015-08-05</discovery>
+      <entry>2016-02-17</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="8cf54d73-d591-11e5-8fa8-14dae9d210b8">
+    <topic>adminer -- XSS vulnerability</topic>
+    <affects>
+      <package>
+	<name>adminer</name>
+	<range><lt>4.2.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Jakub Vrana reports:</p>
+	<blockquote cite="https://github.com/vrana/adminer/commit/c990de3b3ee1816afb130bd0e1570577bf54a8e5">
+	  <p>Fix XSS in login form</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://github.com/vrana/adminer/commit/c990de3b3ee1816afb130bd0e1570577bf54a8e5</url>
+      <url>https://sourceforge.net/p/adminer/bugs-and-features/436/</url>
+    </references>
+    <dates>
+      <discovery>2015-01-30</discovery>
+      <entry>2016-02-17</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="95b92e3b-d451-11e5-9794-e8e0b747a45a">
+    <topic>libgcrypt -- side-channel attack on ECDH</topic>
+    <affects>
+      <package>
+	<name>libgcrypt</name>
+	<range><lt>1.6.5</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>GnuPG reports:</p>
+	<blockquote cite="https://lists.gnupg.org/pipermail/gnupg-announce/2016q1/000384.html">
+	  <p>Mitigate side-channel attack on ECDH with Weierstrass curves.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-7511</cvename>
+      <url>https://lists.gnupg.org/pipermail/gnupg-announce/2016q1/000384.html</url>
+    </references>
+    <dates>
+      <discovery>2016-02-09</discovery>
+      <entry>2016-02-16</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="f1bf28c5-d447-11e5-b2bd-002590263bf5">
+    <topic>xdelta3 -- buffer overflow vulnerability</topic>
+    <affects>
+      <package>
+	<name>xdelta3</name>
+	<range><lt>3.0.9,1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Stepan Golosunov reports:</p>
+	<blockquote cite="http://www.openwall.com/lists/oss-security/2016/02/08/1">
+	  <p>Buffer overflow was found and fixed in xdelta3 binary diff tool
+	    that allows arbitrary code execution from input files at least on
+	    some systems.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-9765</cvename>
+      <url>http://www.openwall.com/lists/oss-security/2016/02/08/1</url>
+      <url>https://github.com/jmacd/xdelta-devel/commit/ef93ff74203e030073b898c05e8b4860b5d09ef2</url>
+    </references>
+    <dates>
+      <discovery>2014-10-08</discovery>
+      <entry>2016-02-16</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="172b22cb-d3f6-11e5-ac9e-485d605f4717">
+    <topic>firefox -- Same-origin-policy violation using Service Workers with plugins</topic>
+    <affects>
+      <package>
+	<name>firefox</name>
+	<range><lt>44.0.2,1</lt></range>
+      </package>
+      <package>
+	<name>linux-firefox</name>
+	<range><lt>44.0.2,1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Mozilla Foundation reports:</p>
+	<blockquote cite="https://www.mozilla.org/en-US/security/known-vulnerabilities/firefox/#firefox44.0.2">
+	  <p>MFSA 2016-13 Jason Pang of OneSignal reported that service workers intercept
+	    responses to plugin network requests made through the browser. Plugins which
+	    make security decisions based on the content of network requests can have these
+	    decisions subverted if a service worker forges responses to those requests. For
+	    example, a forged crossdomain.xml could allow a malicious site to violate the
+	    same-origin policy using the Flash plugin.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2016-1949</cvename>
+      <url>https://www.mozilla.org/en-US/security/advisories/mfsa2016-13/</url>
+    </references>
+    <dates>
+      <discovery>2016-02-11</discovery>
+      <entry>2016-02-15</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="07718e2b-d29d-11e5-a95f-b499baebfeaf">
+    <topic>nghttp2 -- Out of memory in nghttpd, nghttp, and libnghttp2_asio</topic>
+    <affects>
+      <package>
+	<name>nghttp2</name>
+	<range><lt>1.7.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Nghttp2 reports:</p>
+	<blockquote cite="https://nghttp2.org/blog/2016/02/11/nghttp2-v1-7-1/">
+	  <p>Out of memory in nghttpd, nghttp, and libnghttp2_asio applications
+	   due to unlimited incoming HTTP header fields.</p>
+	  <p>nghttpd, nghttp, and libnghttp2_asio applications do not limit the memory usage
+	   for the incoming HTTP header field. If peer sends specially crafted HTTP/2
+	   HEADERS frames and CONTINUATION frames, they will crash with out of memory
+	   error.</p>
+	  <p>Note that libnghttp2 itself is not affected by this vulnerability.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>http://nghttp2.org/blog/2016/02/11/nghttp2-v1-7-1/</url>
+      <cvename>CVE-2016-1544</cvename>
+    </references>
+    <dates>
+      <discovery>2016-02-03</discovery>
+      <entry>2016-02-13</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="3aa8b781-d2c4-11e5-b2bd-002590263bf5">
+    <topic>horde -- XSS vulnerabilies</topic>
+    <affects>
+      <package>
+	<name>horde</name>
+	<range><lt>5.2.9</lt></range>
+      </package>
+      <package>
+	<name>pear-Horde_Core</name>
+	<range><lt>2.22.6</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Horde Team reports:</p>
+	<blockquote cite="http://lists.horde.org/archives/announce/2016/001149.html">
+	  <p>Fixed XSS vulnerabilities in menu bar and form renderer.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-8807</cvename>
+      <cvename>CVE-2016-2228</cvename>
+      <url>https://github.com/horde/horde/commit/11d74fa5a22fe626c5e5a010b703cd46a136f253</url>
+      <url>https://bugs.horde.org/ticket/14213</url>
+      <url>https://github.com/horde/horde/commit/f03301cf6edcca57121a15e80014c4d0f29d99a0</url>
+      <url>https://github.com/horde/horde/commit/ab07a1b447de34e13983b4d7ceb18b58c3a358d8</url>
+      <url>http://www.openwall.com/lists/oss-security/2016/02/06/4</url>
+      <url>http://lists.horde.org/archives/announce/2016/001149.html</url>
+    </references>
+    <dates>
+      <discovery>2016-02-02</discovery>
+      <entry>2016-02-14</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="e8b6605b-d29f-11e5-8458-6cc21735f730">
+    <topic>PostgreSQL -- Security Fixes for Regular Expressions, PL/Java.</topic>
+    <affects>
+      <package>
+	<name>postgresql91-server</name>
+	<range><ge>9.1.0</ge><lt>9.1.20</lt></range>
+      </package>
+      <package>
+	<name>postgresql92-server</name>
+	<range><ge>9.2.0</ge><lt>9.2.15</lt></range>
+      </package>
+      <package>
+	<name>postgresql93-server</name>
+	<range><ge>9.3.0</ge><lt>9.3.11</lt></range>
+      </package>
+      <package>
+	<name>postgresql94-server</name>
+	<range><ge>9.4.0</ge><lt>9.4.6</lt></range>
+      </package>
+      <package>
+	<name>postgresql95-server</name>
+	<range><ge>9.5.0</ge><lt>9.5.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>PostgreSQL project reports:</p>
+	<blockquote cite="http://www.postgresql.org/about/news/1644/">
+	  <p>
+	  Security Fixes for Regular Expressions, PL/Java
+	  </p>
+	  <ul>
+	    <li>CVE-2016-0773: This release closes security hole CVE-2016-0773,
+	     an issue with regular expression (regex) parsing. Prior code allowed
+	     users to pass in expressions which included out-of-range Unicode
+	     characters, triggering a backend crash.  This issue is critical for
+	     PostgreSQL systems with untrusted users or which generate regexes
+	     based on user input.
+	    </li>
+	    <li>CVE-2016-0766: The update also fixes CVE-2016-0766, a privilege
+	     escalation issue for users of PL/Java.  Certain custom configuration
+	     settings (GUCS) for PL/Java will now be modifiable only by the
+	     database superuser
+	    </li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2016-0773</cvename>
+      <cvename>CVE-2016-0766</cvename>
+    </references>
+    <dates>
+      <discovery>2016-02-08</discovery>
+      <entry>2016-02-12</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="5d8e56c3-9e67-4d5b-81c9-3a409dfd705f">
+    <topic>flash -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>linux-c6-flashplugin</name>
+	<name>linux-f10-flashplugin</name>
+	<name>linux-c6_64-flashplugin</name>
+	<range><lt>11.2r202.569</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Adobe reports:</p>
+	<blockquote cite="https://helpx.adobe.com/security/products/flash-player/apsb16-04.html">
+	  <p>These updates resolve a type confusion vulnerability that
+	    could lead to code execution (CVE-2016-0985).</p>
+	  <p>These updates resolve use-after-free vulnerabilities that
+	    could lead to code execution (CVE-2016-0973, CVE-2016-0974,
+	    CVE-2016-0975, CVE-2016-0982, CVE-2016-0983, CVE-2016-0984).</p>
+	  <p>These updates resolve a heap buffer overflow vulnerability
+	    that could lead to code execution (CVE-2016-0971).</p>
+	  <p>These updates resolve memory corruption vulnerabilities
+	    that could lead to code execution (CVE-2016-0964,
+	    CVE-2016-0965, CVE-2016-0966, CVE-2016-0967, CVE-2016-0968,
+	    CVE-2016-0969, CVE-2016-0970, CVE-2016-0972, CVE-2016-0976,
+	    CVE-2016-0977, CVE-2016-0978, CVE-2016-0979, CVE-2016-0980,
+	    CVE-2016-0981).</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2016-0964</cvename>
+      <cvename>CVE-2016-0965</cvename>
+      <cvename>CVE-2016-0966</cvename>
+      <cvename>CVE-2016-0967</cvename>
+      <cvename>CVE-2016-0968</cvename>
+      <cvename>CVE-2016-0969</cvename>
+      <cvename>CVE-2016-0970</cvename>
+      <cvename>CVE-2016-0971</cvename>
+      <cvename>CVE-2016-0972</cvename>
+      <cvename>CVE-2016-0973</cvename>
+      <cvename>CVE-2016-0974</cvename>
+      <cvename>CVE-2016-0975</cvename>
+      <cvename>CVE-2016-0976</cvename>
+      <cvename>CVE-2016-0977</cvename>
+      <cvename>CVE-2016-0978</cvename>
+      <cvename>CVE-2016-0979</cvename>
+      <cvename>CVE-2016-0980</cvename>
+      <cvename>CVE-2016-0981</cvename>
+      <cvename>CVE-2016-0982</cvename>
+      <cvename>CVE-2016-0983</cvename>
+      <cvename>CVE-2016-0984</cvename>
+      <cvename>CVE-2016-0985</cvename>
+      <url>https://helpx.adobe.com/security/products/flash-player/apsb16-04.html</url>
+    </references>
+    <dates>
+      <discovery>2016-02-09</discovery>
+      <entry>2016-02-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="515b4327-cf8a-11e5-96d6-14dae9d210b8">
+    <topic>dnscrypt-proxy -- code execution</topic>
+    <affects>
+      <package>
+	<name>dnscrypt-proxy</name>
+	<range><ge>1.1.0</ge><lt>1.6.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Frank Denis reports:</p>
+	<blockquote cite="https://github.com/jedisct1/dnscrypt-proxy/blob/1d129f7d5f0d469308967cbe4eacb4a6919f1fa1/NEWS#L2-L8">
+	  <p>Malformed packets could lead to denial of service or code
+	    execution.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://github.com/jedisct1/dnscrypt-proxy/blob/1d129f7d5f0d469308967cbe4eacb4a6919f1fa1/NEWS#L2-L8</url>
+    </references>
+    <dates>
+      <discovery>2016-02-02</discovery>
+      <entry>2016-02-10</entry>
+      <modified>2016-02-14</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="36034227-cf81-11e5-9c2b-00262d5ed8ee">
+    <topic>chromium -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>chromium</name>
+	<name>chromium-npapi</name>
+	<name>chromium-pulse</name>
+	<range><lt>48.0.2564.109</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Google Chrome Releases reports:</p>
+	<blockquote cite="http://googlechromereleases.blogspot.nl/2016/02/stable-channel-update_9.html">
+	  <p>6 security fixes in this release, including:</p>
+	  <ul>
+	    <li>[546677] High CVE-2016-1622: Same-origin bypass in Extensions.
+	      Credit to anonymous.</li>
+	    <li>[577105] High CVE-2016-1623: Same-origin bypass in DOM. Credit
+	      to Mariusz Mlynski.</li>
+	    <li>[583607] High CVE-2016-1624: Buffer overflow in Brotli. Credit
+	      to lukezli.</li>
+	    <li>[509313] Medium CVE-2016-1625: Navigation bypass in Chrome
+	      Instant. Credit to Jann Horn.</li>
+	    <li>[571480] Medium CVE-2016-1626: Out-of-bounds read in PDFium.
+	      Credit to anonymous, working with HP's Zero Day Initiative.</li>
+	    <li>[585517] CVE-2016-1627: Various fixes from internal audits,
+	      fuzzing and other initiatives.</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2016-1622</cvename>
+      <cvename>CVE-2016-1623</cvename>
+      <cvename>CVE-2016-1624</cvename>
+      <cvename>CVE-2016-1625</cvename>
+      <cvename>CVE-2016-1626</cvename>
+      <cvename>CVE-2016-1627</cvename>
+      <url>http://googlechromereleases.blogspot.nl/2016/02/stable-channel-update_9.html</url>
+    </references>
+    <dates>
+      <discovery>2016-02-08</discovery>
+      <entry>2016-02-09</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="8f10fa04-cf6a-11e5-96d6-14dae9d210b8">
+    <topic>graphite2 -- code execution vulnerability</topic>
+    <affects>
+      <package>
+	<name>graphite2</name>
+	<range><lt>1.3.5</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Talos reports:</p>
+	<blockquote cite="http://blog.talosintel.com/2016/02/vulnerability-spotlight-libgraphite.html">
+	  <ul>
+	  <li><p>An exploitable denial of service vulnerability exists
+	    in the font handling of Libgraphite. A specially crafted font can cause
+	    an out-of-bounds read potentially resulting in an information leak or
+	    denial of service.</p></li>
+	  <li><p>A specially crafted font can cause a buffer overflow
+	    resulting in potential code execution.</p></li>
+	  <li><p>An exploitable NULL pointer dereference exists in the
+	    bidirectional font handling functionality of Libgraphite. A specially
+	    crafted font can cause a NULL pointer dereference resulting in a
+	    crash.</p></li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>http://blog.talosintel.com/2016/02/vulnerability-spotlight-libgraphite.html</url>
+      <cvename>CVE-2016-1521</cvename>
+      <cvename>CVE-2016-1522</cvename>
+      <cvename>CVE-2016-1523</cvename>
+      <cvename>CVE-2016-1526</cvename>
+    </references>
+    <dates>
+      <discovery>2016-02-05</discovery>
+      <entry>2016-02-09</entry>
+      <modified>2016-02-09</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="1cecd5e0-c372-11e5-96d6-14dae9d210b8">
+    <topic>xymon-server -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>xymon-server</name>
+	<range><lt>4.3.25</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>J.C. Cleaver reports:</p>
+	<blockquote cite="http://lists.xymon.com/pipermail/xymon/2016-February/042986.html">
+	  <ul>
+	  <li><p>CVE-2016-2054: Buffer overflow in xymond handling of
+	    "config" command</p></li>
+	  <li><p> CVE-2016-2055: Access to possibly confidential files
+	    in the Xymon configuration directory</p></li>
+	  <li><p>CVE-2016-2056: Shell command injection in the
+	    "useradm" and "chpasswd" web applications</p></li>
+	  <li><p>CVE-2016-2057: Incorrect permissions on IPC queues
+	    used by the xymond daemon can bypass IP access filtering</p></li>
+	  <li><p>CVE-2016-2058: Javascript injection in "detailed status
+	    webpage" of monitoring items; XSS vulnerability via malformed
+	    acknowledgment messages</p></li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>http://lists.xymon.com/pipermail/xymon/2016-February/042986.html</url>
+      <cvename>CVE-2016-2054</cvename>
+      <cvename>CVE-2016-2055</cvename>
+      <cvename>CVE-2016-2056</cvename>
+      <cvename>CVE-2016-2057</cvename>
+      <cvename>CVE-2016-2058</cvename>
+    </references>
+    <dates>
+      <discovery>2016-01-19</discovery>
+      <entry>2016-02-09</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="85eb4e46-cf16-11e5-840f-485d605f4717">
+    <topic>php -- pcre vulnerability</topic>
+    <affects>
+      <package>
+	<name>php55</name>
+	<range><lt>5.5.32</lt></range>
+      </package>
+      <package>
+	<name>php56</name>
+	<range><lt>5.6.18</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>PHP reports:</p>
+	<blockquote cite="http://php.net/ChangeLog-5.php#5.6.18">
+	  <ul><li>PCRE:
+	  <ul>
+	  <li>Upgraded bundled PCRE library to 8.38.(CVE-2015-8383,
+	   CVE-2015-8386, CVE-2015-8387, CVE-2015-8389, CVE-2015-8390,
+	   CVE-2015-8391, CVE-2015-8393, CVE-2015-8394)</li>
+	  </ul></li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-8383</cvename>
+      <cvename>CVE-2015-8386</cvename>
+      <cvename>CVE-2015-8387</cvename>
+      <cvename>CVE-2015-8389</cvename>
+      <cvename>CVE-2015-8390</cvename>
+      <cvename>CVE-2015-8391</cvename>
+      <cvename>CVE-2015-8393</cvename>
+      <cvename>CVE-2015-8394</cvename>
+      <url>http://php.net/ChangeLog-5.php#5.6.18</url>
+      <url>http://php.net/ChangeLog-5.php#5.5.32</url>
+    </references>
+    <dates>
+      <discovery>2016-02-04</discovery>
+      <entry>2016-02-09</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a8de962a-cf15-11e5-805c-5453ed2e2b49">
+    <topic>py-imaging, py-pillow -- Buffer overflow in PCD decoder</topic>
+    <affects>
+      <package>
+	<name>py27-pillow</name>
+	<name>py33-pillow</name>
+	<name>py34-pillow</name>
+	<name>py35-pillow</name>
+	<range><lt>2.9.0_1</lt></range>
+      </package>
+      <package>
+	<name>py27-imaging</name>
+	<range><lt>1.1.7_6</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Pillow maintainers report:</p>
+	<blockquote cite="https://pillow.readthedocs.org/en/3.1.x/releasenotes/3.1.1.html">
+	  <p>In all versions of Pillow, dating back at least to the last PIL
+	    1.1.7 release, PcdDecode.c has a buffer overflow error.</p>
+	  <p>The state.buffer for PcdDecode.c is allocated based on a 3 bytes
+	    per pixel sizing, where PcdDecode.c wrote into the buffer assuming
+	    4 bytes per pixel. This writes 768 bytes beyond the end of the
+	    buffer into other Python object storage. In some cases, this causes
+	    a segfault, in others an internal Python malloc error.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <mlist>http://openwall.com/lists/oss-security/2016/02/02/5</mlist>
+      <url>https://github.com/python-pillow/Pillow/commit/ae453aa18b66af54e7ff716f4ccb33adca60afd4</url>
+      <url>https://github.com/python-pillow/Pillow/issues/568</url>
+    </references>
+    <dates>
+      <discovery>2016-02-02</discovery>
+      <entry>2016-02-09</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="0519db18-cf15-11e5-805c-5453ed2e2b49">
+    <topic>py-pillow -- Integer overflow in Resample.c</topic>
+    <affects>
+      <package>
+	<name>py27-pillow</name>
+	<name>py33-pillow</name>
+	<name>py34-pillow</name>
+	<name>py35-pillow</name>
+	<range><lt>2.9.0_1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Pillow maintainers report:</p>
+	<blockquote cite="https://pillow.readthedocs.org/en/3.1.x/releasenotes/3.1.1.html">
+	  <p>If a large value was passed into the new size for an image, it is
+	    possible to overflow an int32 value passed into malloc, leading the
+	    malloc’d buffer to be undersized. These allocations are followed by
+	    a loop that writes out of bounds. This can lead to corruption on
+	    the heap of the Python process with attacker controlled float
+	    data.</p>
+	  <p>This issue was found by Ned Williamson.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://github.com/python-pillow/Pillow/commit/41fae6d9e2da741d2c5464775c7f1a609ea03798</url>
+      <url>https://github.com/python-pillow/Pillow/issues/1710</url>
+    </references>
+    <dates>
+      <discovery>2016-02-05</discovery>
+      <entry>2016-02-09</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="6ea60e00-cf13-11e5-805c-5453ed2e2b49">
+    <topic>py-imaging, py-pillow -- Buffer overflow in FLI decoding code</topic>
+    <affects>
+      <package>
+	<name>py27-pillow</name>
+	<name>py33-pillow</name>
+	<name>py34-pillow</name>
+	<name>py35-pillow</name>
+	<range><lt>2.9.0_1</lt></range>
+      </package>
+      <package>
+	<name>py27-imaging</name>
+	<range><lt>1.1.7_6</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Pillow maintainers report:</p>
+	<blockquote cite="https://pillow.readthedocs.org/en/3.1.x/releasenotes/3.1.1.html">
+	  <p>In all versions of Pillow, dating back at least to the last PIL
+	    1.1.7 release, FliDecode.c has a buffer overflow error.</p>
+	  <p>There is a memcpy error where x is added to a target buffer
+	    address. X is used in several internal temporary variable roles,
+	    but can take a value up to the width of the image. Im-&gt;image[y]
+	    is a set of row pointers to segments of memory that are the size of
+	    the row. At the max y, this will write the contents of the line off
+	    the end of the memory buffer, causing a segfault.</p>
+	  <p>This issue was found by Alyssa Besseling at Atlassian.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2016-0775</cvename>
+      <url>https://github.com/python-pillow/Pillow/commit/bcaaf97f4ff25b3b5b9e8efeda364e17e80858ec</url>
+    </references>
+    <dates>
+      <discovery>2016-02-05</discovery>
+      <entry>2016-02-09</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="53252879-cf11-11e5-805c-5453ed2e2b49">
+    <topic>py-pillow -- Buffer overflow in TIFF decoding code</topic>
+    <affects>
+      <package>
+	<name>py27-pillow</name>
+	<name>py33-pillow</name>
+	<name>py34-pillow</name>
+	<name>py35-pillow</name>
+	<range><lt>2.9.0_1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Pillow maintainers report:</p>
+	<blockquote cite="https://pillow.readthedocs.org/en/3.1.x/releasenotes/3.1.1.html">
+	  <p>Pillow 3.1.0 and earlier when linked against libtiff &gt;= 4.0.0 on
+	    x64 may overflow a buffer when reading a specially crafted tiff
+	    file.</p>
+	  <p>Specifically, libtiff &gt;= 4.0.0 changed the return type of
+	    TIFFScanlineSize from int32 to machine dependent int32|64. If the
+	    scanline is sized so that it overflows an int32, it may be
+	    interpreted as a negative number, which will then pass the size check
+	    in TiffDecode.c line 236. To do this, the logical scanline size has
+	    to be &gt; 2gb, and for the test file, the allocated buffer size is 64k
+	    against a roughly 4gb scan line size. Any image data over 64k is
+	    written over the heap, causing a segfault.</p>
+	  <p>This issue was found by security researcher FourOne.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2016-0740</cvename>
+      <url>https://github.com/python-pillow/Pillow/commit/6dcbf5bd96b717c58d7b642949da8d323099928e</url>
+    </references>
+    <dates>
+      <discovery>2016-02-04</discovery>
+      <entry>2016-02-09</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="6ac79ed8-ccc2-11e5-932b-5404a68ad561">
+    <topic>ffmpeg -- remote denial of service in JPEG2000 decoder</topic>
+    <affects>
+      <package>
+	<name>ffmpeg</name>
+	<range><lt>2.8.6,1</lt></range>
+      </package>
+      <package>
+	<name>mplayer</name>
+	<name>mencoder</name>
+	<range>
+	  <lt>1.2.r20151219_3</lt>
+	</range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>FFmpeg security reports:</p>
+	<blockquote cite="https://www.ffmpeg.org/security.html">
+	  <p>FFmpeg 2.8.6 fixes the following vulnerabilities:
+	    CVE-2016-2213</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2016-2213</cvename>
+      <url>https://www.ffmpeg.org/security.html</url>
+    </references>
+    <dates>
+      <discovery>2016-01-27</discovery>
+      <entry>2016-02-06</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="448047e9-030e-4ce4-910b-f21a3ad5d9a0">
+    <topic>shotwell -- not verifying certificates</topic>
+    <affects>
+      <package>
+	<name>shotwell</name>
+	<range><lt>0.22.0.99</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Michael Catanzaro reports:</p>
+	<blockquote cite="https://mail.gnome.org/archives/distributor-list/2016-January/msg00000.html">
+	  <p>Shotwell has a serious security issue ("Shotwell does not
+	    verify TLS certificates").  Upstream is no longer active and
+	    I do not expect any further upstream releases unless someone
+	    from the community steps up to maintain it.</p>
+
+	  <p>What is the impact of the issue? If you ever used any of
+	    the publish functionality (publish to Facebook, publish to
+	    Flickr, etc.), your passwords may have been stolen; changing
+	    them is not a bad idea.</p>
+
+	  <p>What is the risk of the update? Regressions. The easiest
+	    way to validate TLS certificates was to upgrade WebKit; it
+	    seems to work but I don't have accounts with the online
+	    services it supports, so I don't know if photo publishing
+	    still works properly on all the services.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://mail.gnome.org/archives/distributor-list/2016-January/msg00000.html</url>
+    </references>
+    <dates>
+      <discovery>2016-01-06</discovery>
+      <entry>2016-02-05</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="1091d2d1-cb2e-11e5-b14b-bcaec565249c">
+    <topic>webkit -- UI spoof</topic>
+    <affects>
+      <package>
+	<name>webkit-gtk2</name>
+	<name>webkit-gtk3</name>
+	<range><lt>2.4.9_1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>webkit reports:</p>
+	<blockquote cite="http://webkitgtk.org/security/WSA-2015-0002.html">
+	  <p>The ScrollView::paint function in platform/scroll/ScrollView.cpp
+	    in Blink, as used in Google Chrome before 35.0.1916.114, allows
+	    remote attackers to spoof the UI by extending scrollbar painting
+	    into the parent frame.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-1748</cvename>
+      <url>http://webkitgtk.org/security/WSA-2015-0002.html</url>
+    </references>
+    <dates>
+      <discovery>2015-12-28</discovery>
+      <entry>2016-02-04</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="e78bfc9d-cb1e-11e5-b251-0050562a4d7b">
+    <topic>py-rsa -- Bleichenbacher'06 signature forgery vulnerability</topic>
+    <affects>
+      <package>
+	<name>py27-rsa</name>
+	<name>py32-rsa</name>
+	<name>py33-rsa</name>
+	<name>py34-rsa</name>
+	<name>py35-rsa</name>
+	<range><lt>3.3</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Filippo Valsorda reports:</p>
+	<blockquote cite="https://blog.filippo.io/bleichenbacher-06-signature-forgery-in-python-rsa/">
+	  <p>
+	   python-rsa is vulnerable to a straightforward variant of the
+	   Bleichenbacher'06 attack against RSA signature verification
+	   with low public exponent.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2016-1494</cvename>
+      <url>https://blog.filippo.io/bleichenbacher-06-signature-forgery-in-python-rsa/</url>
+      <url>https://bitbucket.org/sybren/python-rsa/pull-requests/14/security-fix-bb06-attack-in-verify-by</url>
+      <url>https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2016-1494</url>
+      <url>http://www.openwall.com/lists/oss-security/2016/01/05/3</url>
+      <url>http://www.openwall.com/lists/oss-security/2016/01/05/1</url>
+    </references>
+    <dates>
+      <discovery>2016-01-05</discovery>
+      <entry>2016-02-04</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="559f3d1b-cb1d-11e5-80a4-001999f8d30b">
+    <topic>asterisk -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>asterisk</name>
+	<range><lt>1.8.32.3_5</lt></range>
+      </package>
+      <package>
+	<name>asterisk11</name>
+	<range><lt>11.21.1</lt></range>
+      </package>
+      <package>
+	<name>asterisk13</name>
+	<range><lt>13.7.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Asterisk project reports:</p>
+	<blockquote cite="http://www.asterisk.org/downloads/security-advisories">
+	  <p>AST-2016-001 - BEAST vulnerability in HTTP server</p>
+	  <p>AST-2016-002 - File descriptor exhaustion in chan_sip</p>
+	  <p>AST-2016-003 - Remote crash vulnerability when receiving UDPTL FAX data</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>http://downloads.asterisk.org/pub/security/AST-2016-001.html</url>
+      <url>http://downloads.asterisk.org/pub/security/AST-2016-002.html</url>
+      <url>http://downloads.asterisk.org/pub/security/AST-2016-003.html</url>
+    </references>
+    <dates>
+      <discovery>2016-02-03</discovery>
+      <entry>2016-02-04</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="0652005e-ca96-11e5-96d6-14dae9d210b8">
+    <topic>salt -- code execution</topic>
+    <affects>
+      <package>
+	<name>py27-salt</name>
+	<name>py32-salt</name>
+	<name>py33-salt</name>
+	<name>py34-salt</name>
+	<name>py35-salt</name>
+	<range><ge>2015.8.0</ge><lt>2015.8.4</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>SaltStack reports:</p>
+	<blockquote cite="https://docs.saltstack.com/en/latest/topics/releases/2015.8.4.html">
+	  <p>Improper handling of clear messages on the minion, which
+	    could result in executing commands not sent by the master.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://docs.saltstack.com/en/latest/topics/releases/2015.8.4.html</url>
+      <url>https://github.com/saltstack/salt/pull/30613/files</url>
+      <cvename>CVE-2016-1866</cvename>
+    </references>
+    <dates>
+      <discovery>2016-01-25</discovery>
+      <entry>2016-02-03</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="bb0ef21d-0e1b-461b-bc3d-9cba39948888">
+    <topic>rails -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>rubygem-actionpack</name>
+	<range><lt>3.2.22.1</lt></range>
+      </package>
+      <package>
+	<name>rubygem-actionpack4</name>
+	<range><lt>4.2.5.1</lt></range>
+      </package>
+      <package>
+	<name>rubygem-actionview</name>
+	<range><lt>4.2.5.1</lt></range>
+      </package>
+      <package>
+	<name>rubygem-activemodel4</name>
+	<range><lt>4.2.5.1</lt></range>
+      </package>
+      <package>
+	<name>rubygem-activerecord</name>
+	<range><lt>3.2.22.1</lt></range>
+      </package>
+      <package>
+	<name>rubygem-activerecord4</name>
+	<range><lt>4.2.5.1</lt></range>
+      </package>
+      <package>
+	<name>rubygem-rails</name>
+	<range><lt>3.2.22.1</lt></range>
+      </package>
+      <package>
+	<name>rubygem-rails-html-sanitizer</name>
+	<range><lt>1.0.3</lt></range>
+      </package>
+      <package>
+	<name>rubygem-rails4</name>
+	<range><lt>4.2.5.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Ruby on Rails blog:</p>
+	<blockquote cite="http://weblog.rubyonrails.org/2016/1/25/Rails-5-0-0-beta1-1-4-2-5-1-4-1-14-1-3-2-22-1-and-rails-html-sanitizer-1-0-3-have-been-released/">
+	  <p>Rails 5.0.0.beta1.1, 4.2.5.1, 4.1.14.1, and 3.2.22.1 have been
+	    released! These contain important security fixes, and it is
+	    recommended that users upgrade as soon as possible.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-7576</cvename>
+      <cvename>CVE-2015-7577</cvename>
+      <cvename>CVE-2015-7581</cvename>
+      <cvename>CVE-2016-0751</cvename>
+      <cvename>CVE-2016-0752</cvename>
+      <cvename>CVE-2016-0753</cvename>
+      <url>https://groups.google.com/d/msg/rubyonrails-security/ANv0HDHEC3k/mt7wNGxbFQAJ</url>
+      <url>https://groups.google.com/d/msg/rubyonrails-security/cawsWcQ6c8g/tegZtYdbFQAJ</url>
+      <url>https://groups.google.com/d/msg/rubyonrails-security/dthJ5wL69JE/YzPnFelbFQAJ</url>
+      <url>https://groups.google.com/d/msg/rubyonrails-security/9oLY_FCzvoc/w9oI9XxbFQAJ</url>
+      <url>https://groups.google.com/d/msg/rubyonrails-security/335P1DcLG00/OfB9_LhbFQAJ</url>
+      <url>https://groups.google.com/d/msg/rubyonrails-security/6jQVC1geukQ/8oYETcxbFQAJ</url>
+      <url>http://weblog.rubyonrails.org/2016/1/25/Rails-5-0-0-beta1-1-4-2-5-1-4-1-14-1-3-2-22-1-and-rails-html-sanitizer-1-0-3-have-been-released/</url>
+    </references>
+    <dates>
+      <discovery>2016-01-25</discovery>
+      <entry>2016-02-02</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a52a7172-c92e-11e5-96d6-14dae9d210b8">
+    <topic>socat -- diffie hellman parameter was not prime</topic>
+    <affects>
+      <package>
+	<name>socat</name>
+	<range><ge>1.7.2.5</ge><lt>1.7.3.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>socat reports:</p>
+	<blockquote cite="http://www.dest-unreach.org/socat/contrib/socat-secadv7.html">
+	  <p>In the OpenSSL address implementation the hard coded 1024
+	    bit DH p parameter was not prime. The effective cryptographic strength
+	    of a key exchange using these parameters was weaker than the one one
+	    could get by using a prime p. Moreover, since there is no indication of
+	    how these parameters were chosen, the existence of a trapdoor that makes
+	    possible for an eavesdropper to recover the shared secret from a key
+	    exchange that uses them cannot be ruled out.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>http://www.dest-unreach.org/socat/contrib/socat-secadv7.html</url>
+    </references>
+    <dates>
+      <discovery>2016-02-01</discovery>
+      <entry>2016-02-01</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="4f00dac0-1e18-4481-95af-7aaad63fd303">
+    <topic>mozilla -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>firefox</name>
+	<name>linux-firefox</name>
+	<range><lt>44.0,1</lt></range>
+      </package>
+      <package>
+	<name>seamonkey</name>
+	<name>linux-seamonkey</name>
+	<range><lt>2.41</lt></range>
+      </package>
+      <package>
+	<name>firefox-esr</name>
+	<range><lt>38.6.0,1</lt></range>
+      </package>
+      <package>
+	<name>libxul</name>
+	<name>thunderbird</name>
+	<name>linux-thunderbird</name>
+	<range><lt>38.6.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Mozilla Foundation reports:</p>
+	<blockquote cite="https://www.mozilla.org/en-US/security/known-vulnerabilities/firefox/#firefox44">
+	  <p>MFSA 2016-01 Miscellaneous memory safety hazards (rv:44.0
+	    / rv:38.6)</p>
+	  <p>MFSA 2016-02 Out of Memory crash when parsing GIF format
+	    images</p>
+	  <p>MFSA 2016-03 Buffer overflow in WebGL after out of memory
+	    allocation</p>
+	  <p>MFSA 2016-04 Firefox allows for control characters to be
+	    set in cookie names</p>
+	  <p>MFSA 2016-06 Missing delay following user click events in
+	    protocol handler dialog</p>
+	  <p>MFSA 2016-07 Errors in mp_div and mp_exptmod
+	    cryptographic functions in NSS</p>
+	  <p>MFSA 2016-09 Addressbar spoofing attacks</p>
+	  <p>MFSA 2016-10 Unsafe memory manipulation found through
+	    code inspection</p>
+	  <p>MFSA 2016-11 Application Reputation service disabled in
+	    Firefox 43</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-7208</cvename>
+      <cvename>CVE-2016-1930</cvename>
+      <cvename>CVE-2016-1931</cvename>
+      <cvename>CVE-2016-1933</cvename>
+      <cvename>CVE-2016-1935</cvename>
+      <cvename>CVE-2016-1937</cvename>
+      <cvename>CVE-2016-1938</cvename>
+      <cvename>CVE-2016-1939</cvename>
+      <cvename>CVE-2016-1942</cvename>
+      <cvename>CVE-2016-1943</cvename>
+      <cvename>CVE-2016-1944</cvename>
+      <cvename>CVE-2016-1945</cvename>
+      <cvename>CVE-2016-1946</cvename>
+      <cvename>CVE-2016-1947</cvename>
+      <url>https://www.mozilla.org/security/advisories/mfsa2016-01/</url>
+      <url>https://www.mozilla.org/security/advisories/mfsa2016-02/</url>
+      <url>https://www.mozilla.org/security/advisories/mfsa2016-03/</url>
+      <url>https://www.mozilla.org/security/advisories/mfsa2016-04/</url>
+      <url>https://www.mozilla.org/security/advisories/mfsa2016-06/</url>
+      <url>https://www.mozilla.org/security/advisories/mfsa2016-07/</url>
+      <url>https://www.mozilla.org/security/advisories/mfsa2016-09/</url>
+      <url>https://www.mozilla.org/security/advisories/mfsa2016-10/</url>
+      <url>https://www.mozilla.org/security/advisories/mfsa2016-11/</url>
+    </references>
+    <dates>
+      <discovery>2016-01-26</discovery>
+      <entry>2016-02-01</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="e00d8b94-c88a-11e5-b5fe-002590263bf5">
+    <topic>gdcm -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>gdcm</name>
+	<range><lt>2.6.2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>CENSUS S.A. reports:</p>
+	<blockquote cite="http://census-labs.com/news/2016/01/11/gdcm-buffer-overflow-imageregionreaderreadintobuffer/">
+	  <p>GDCM versions 2.6.0 and 2.6.1 (and possibly previous versions) are
+	    prone to an integer overflow vulnerability which leads to a buffer
+	    overflow and potentially to remote code execution.</p>
+	</blockquote>
+	<blockquote cite="http://census-labs.com/news/2016/01/11/gdcm-out-bounds-read-jpeglscodec-decodeextent/">
+	  <p>GDCM versions 2.6.0 and 2.6.1 (and possibly previous versions) are
+	    prone to an out-of-bounds read vulnerability due to missing checks.
+	    </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-8396</cvename>
+      <cvename>CVE-2015-8397</cvename>
+      <url>http://census-labs.com/news/2016/01/11/gdcm-buffer-overflow-imageregionreaderreadintobuffer/</url>
+      <url>http://census-labs.com/news/2016/01/11/gdcm-out-bounds-read-jpeglscodec-decodeextent/</url>
+    </references>
+    <dates>
+      <discovery>2015-12-23</discovery>
+      <entry>2016-02-01</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="c1c18ee1-c711-11e5-96d6-14dae9d210b8">
+    <topic>nginx -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>nginx</name>
+	<range><lt>1.8.1,2</lt></range>
+      </package>
+      <package>
+	<name>nginx-devel</name>
+	<range><lt>1.9.10</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Maxim Dounin reports:</p>
+	<blockquote cite="http://mailman.nginx.org/pipermail/nginx/2016-January/049700.html">
+	  <p>Several problems in nginx resolver were identified, which
+	    might allow an attacker to cause worker process crash, or might have
+	    potential other impact if the "resolver" directive
+	    is used in a configuration file.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>http://mailman.nginx.org/pipermail/nginx/2016-January/049700.html</url>
+      <cvename>CVE-2016-0742</cvename>
+      <cvename>CVE-2016-0746</cvename>
+      <cvename>CVE-2016-0747</cvename>
+    </references>
+    <dates>
+      <discovery>2016-01-26</discovery>
+      <entry>2016-01-30</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a0d77bc8-c6a7-11e5-96d6-14dae9d210b8">
+    <topic>typo3 -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>typo3</name>
+	<range><lt>7.6.1</lt></range>
+      </package>
+      <package>
+	<name>typo3-lts</name>
+	<range><lt>6.2.16</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>TYPO3 Security Team reports:</p>
+	<blockquote cite="http://lists.typo3.org/pipermail/typo3-announce/2015/000351.html">
+	  <p>It has been discovered that TYPO3 CMS is susceptible to
+	    Cross-Site Scripting and Cross-Site Flashing.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>http://lists.typo3.org/pipermail/typo3-announce/2015/000351.html</url>
+      <url>https://typo3.org/teams/security/security-bulletins/typo3-core/typo3-core-sa-2015-010/</url>
+      <url>https://typo3.org/teams/security/security-bulletins/typo3-core/typo3-core-sa-2015-011/</url>
+      <url>https://typo3.org/teams/security/security-bulletins/typo3-core/typo3-core-sa-2015-012/</url>
+      <url>https://typo3.org/teams/security/security-bulletins/typo3-core/typo3-core-sa-2015-013/</url>
+      <url>https://typo3.org/teams/security/security-bulletins/typo3-core/typo3-core-sa-2015-014/</url>
+      <url>https://typo3.org/teams/security/security-bulletins/typo3-core/typo3-core-sa-2015-015/</url>
+    </references>
+    <dates>
+      <discovery>2015-12-15</discovery>
+      <entry>2016-01-29</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="93eadedb-c6a6-11e5-96d6-14dae9d210b8">
+    <topic>nghttp2 -- use after free</topic>
+    <affects>
+      <package>
+	<name>nghttp2</name>
+	<range><lt>1.6.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>nghttp2 reports:</p>
+	<blockquote cite="https://nghttp2.org/blog/2015/12/23/nghttp2-v1-6-0/">
+	  <p>This release fixes heap-use-after-free bug in idle stream
+	    handling code. We strongly recommend to upgrade the older installation
+	    to this latest version as soon as possible.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://nghttp2.org/blog/2015/12/23/nghttp2-v1-6-0/</url>
+      <cvename>CVE-2015-8659</cvename>
+    </references>
+    <dates>
+      <discovery>2015-12-23</discovery>
+      <entry>2016-01-29</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="3166222b-c6a4-11e5-96d6-14dae9d210b8">
+    <topic>owncloud -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>owncloud</name>
+	<range><lt>8.2.2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Owncloud reports:</p>
+	<blockquote cite="https://owncloud.org/blog/owncloud-8-2-2-8-1-5-8-0-10-and-7-0-12-here-with-sharing-ldap-fixes/">
+	  <ul>
+	  <li><p>Reflected XSS in OCS provider discovery
+	    (oC-SA-2016-001)</p></li>
+	  <li><p>Information Exposure Through Directory Listing in the
+	    file scanner (oC-SA-2016-002)</p></li>
+	  <li><p>Disclosure of files that begin with ".v" due to
+	    unchecked return value (oC-SA-2016-003)</p></li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://owncloud.org/blog/owncloud-8-2-2-8-1-5-8-0-10-and-7-0-12-here-with-sharing-ldap-fixes/</url>
+      <url>https://owncloud.org/security/advisory/?id=oc-sa-2016-001</url>
+      <url>https://owncloud.org/security/advisory/?id=oc-sa-2016-002</url>
+      <url>https://owncloud.org/security/advisory/?id=oc-sa-2016-003</url>
+      <cvename>CVE-2016-1498</cvename>
+      <cvename>CVE-2016-1499</cvename>
+      <cvename>CVE-2016-1500</cvename>
+    </references>
+    <dates>
+      <discovery>2015-12-23</discovery>
+      <entry>2016-01-29</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="ff824eea-c69c-11e5-96d6-14dae9d210b8">
+    <topic>radicale -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>py27-radicale</name>
+	<name>py32-radicale</name>
+	<name>py33-radicale</name>
+	<name>py34-radicale</name>
+	<range><lt>1.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Radicale reports:</p>
+	<blockquote cite="http://www.openwall.com/lists/oss-security/2016/01/06/4">
+	  <p>The multifilesystem backend allows access to arbitrary
+	    files on all platforms.</p>
+	  <p>Prevent regex injection in rights management.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>http://www.openwall.com/lists/oss-security/2016/01/06/4</url>
+      <cvename>CVE-2015-8747</cvename>
+      <cvename>CVE-2015-8748</cvename>
+    </references>
+    <dates>
+      <discovery>2015-12-24</discovery>
+      <entry>2016-01-29</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="7a59e283-c60b-11e5-bf36-6805ca0b3d42">
     <topic>phpmyadmin -- XSS vulnerability in SQL editor</topic>
     <affects>
@@ -385,42 +1713,42 @@ Notes:
     <topic>openssl -- multiple vulnerabilities</topic>
     <affects>
       <package>
-        <name>openssl</name>
-        <range><lt>1.0.2_7</lt></range>
+	<name>openssl</name>
+	<range><lt>1.0.2_7</lt></range>
       </package>
       <package>
-        <name>mingw32-openssl</name>
-        <range><ge>1.0.1</ge><lt>1.0.2f</lt></range>
+	<name>mingw32-openssl</name>
+	<range><ge>1.0.1</ge><lt>1.0.2f</lt></range>
       </package>
     </affects>
     <description>
       <body xmlns="http://www.w3.org/1999/xhtml">
-        <p>OpenSSL project reports:</p>
-        <blockquote cite="https://www.openssl.org/news/secadv/20160128.txt">
-          <ol>
-            <li>Historically OpenSSL only ever generated DH parameters based on "safe"
-              primes. More recently (in version 1.0.2) support was provided for
-              generating X9.42 style parameter files such as those required for RFC 5114
-              support. The primes used in such files may not be "safe". Where an
-              application is using DH configured with parameters based on primes that are
-              not "safe" then an attacker could use this fact to find a peer's private
-              DH exponent. This attack requires that the attacker complete multiple
-              handshakes in which the peer uses the same private DH exponent. For example
-              this could be used to discover a TLS server's private DH exponent if it's
-              reusing the private DH exponent or it's using a static DH ciphersuite.
-              OpenSSL provides the option SSL_OP_SINGLE_DH_USE for ephemeral DH (DHE) in
-              TLS. It is not on by default. If the option is not set then the server
-              reuses the same private DH exponent for the life of the server process and
-              would be vulnerable to this attack. It is believed that many popular
-              applications do set this option and would therefore not be at risk.
-              (CVE-2016-0701)</li>
-            <li>A malicious client can negotiate SSLv2 ciphers that have been disabled on
-              the server and complete SSLv2 handshakes even if all SSLv2 ciphers have
-              been disabled, provided that the SSLv2 protocol was not also disabled via
-              SSL_OP_NO_SSLv2.
-              (CVE-2015-3197)</li>
-          </ol>
-        </blockquote>
+	<p>OpenSSL project reports:</p>
+	<blockquote cite="https://www.openssl.org/news/secadv/20160128.txt">
+	  <ol>
+	    <li>Historically OpenSSL only ever generated DH parameters based on "safe"
+	      primes. More recently (in version 1.0.2) support was provided for
+	      generating X9.42 style parameter files such as those required for RFC 5114
+	      support. The primes used in such files may not be "safe". Where an
+	      application is using DH configured with parameters based on primes that are
+	      not "safe" then an attacker could use this fact to find a peer's private
+	      DH exponent. This attack requires that the attacker complete multiple
+	      handshakes in which the peer uses the same private DH exponent. For example
+	      this could be used to discover a TLS server's private DH exponent if it's
+	      reusing the private DH exponent or it's using a static DH ciphersuite.
+	      OpenSSL provides the option SSL_OP_SINGLE_DH_USE for ephemeral DH (DHE) in
+	      TLS. It is not on by default. If the option is not set then the server
+	      reuses the same private DH exponent for the life of the server process and
+	      would be vulnerable to this attack. It is believed that many popular
+	      applications do set this option and would therefore not be at risk.
+	      (CVE-2016-0701)</li>
+	    <li>A malicious client can negotiate SSLv2 ciphers that have been disabled on
+	      the server and complete SSLv2 handshakes even if all SSLv2 ciphers have
+	      been disabled, provided that the SSLv2 protocol was not also disabled via
+	      SSL_OP_NO_SSLv2.
+	      (CVE-2015-3197)</li>
+	  </ol>
+	</blockquote>
       </body>
     </description>
     <references>
@@ -439,8 +1767,16 @@ Notes:
     <affects>
       <package>
 	<name>curl</name>
+	<range><ge>7.10.0</ge><lt>7.47.0</lt></range>
+      </package>
+      <package>
+	<name>linux-c6-curl</name>
+	<name>linux-c6_64-curl</name>
 	<range><ge>7.10.0</ge></range>
-	<range><lt>7.47.0</lt></range>
+      </package>
+      <package>
+	<name>linux-f10-curl</name>
+	<range><ge>0</ge></range>
       </package>
     </affects>
     <description>
@@ -461,6 +1797,7 @@ Notes:
     <dates>
       <discovery>2016-01-27</discovery>
       <entry>2016-01-27</entry>
+      <modified>2016-02-02</modified>
     </dates>
   </vuln>
 
@@ -2008,7 +3345,7 @@ Notes:
       <package>
 	<name>qemu-sbruno</name>
 	<name>qemu-user-static</name>
-	<range><ge>0</ge></range>
+	<range><lt>2.5.50.g20160213</lt></range>
       </package>
     </affects>
     <description>
@@ -2032,10 +3369,13 @@ Notes:
       <freebsdpr>ports/205814</freebsdpr>
       <url>http://www.openwall.com/lists/oss-security/2015/12/28/6</url>
       <url>https://lists.gnu.org/archive/html/qemu-devel/2015-12/msg04629.html</url>
+      <url>http://git.qemu.org/?p=qemu.git;a=commit;h=007cd223de527b5f41278f2d886c1a4beb3e67aa</url>
+      <url>https://github.com/seanbruno/qemu-bsd-user/commit/007cd223de527b5f41278f2d886c1a4beb3e67aa</url>
     </references>
     <dates>
       <discovery>2015-12-28</discovery>
       <entry>2016-01-03</entry>
+      <modified>2016-02-13</modified>
     </dates>
   </vuln>
 
@@ -2090,7 +3430,7 @@ Notes:
       <package>
 	<name>qemu-sbruno</name>
 	<name>qemu-user-static</name>
-	<range><ge>0</ge></range>
+	<range><lt>2.5.50.g20160213</lt></range>
       </package>
     </affects>
     <description>
@@ -2112,10 +3452,13 @@ Notes:
       <freebsdpr>ports/205814</freebsdpr>
       <url>http://www.openwall.com/lists/oss-security/2015/12/22/8</url>
       <url>https://lists.gnu.org/archive/html/qemu-devel/2015-12/msg02930.html</url>
+      <url>http://git.qemu.org/?p=qemu.git;a=commit;h=64ffbe04eaafebf4045a3ace52a360c14959d196</url>
+      <url>https://github.com/seanbruno/qemu-bsd-user/commit/64ffbe04eaafebf4045a3ace52a360c14959d196</url>
     </references>
     <dates>
       <discovery>2015-12-23</discovery>
       <entry>2016-01-03</entry>
+      <modified>2016-02-13</modified>
     </dates>
   </vuln>
 
@@ -2130,7 +3473,7 @@ Notes:
       <package>
 	<name>qemu-sbruno</name>
 	<name>qemu-user-static</name>
-	<range><ge>0</ge></range>
+	<range><lt>2.5.50.g20160213</lt></range>
       </package>
     </affects>
     <description>
@@ -2151,10 +3494,13 @@ Notes:
       <freebsdpr>ports/205814</freebsdpr>
       <url>http://www.openwall.com/lists/oss-security/2015/12/21/7</url>
       <url>https://lists.gnu.org/archive/html/qemu-devel/2015-12/msg03737.html</url>
+      <url>http://git.qemu.org/?p=qemu.git;a=commit;h=36fef36b91f7ec0435215860f1458b5342ce2811</url>
+      <url>https://github.com/seanbruno/qemu-bsd-user/commit/36fef36b91f7ec0435215860f1458b5342ce2811</url>
     </references>
     <dates>
       <discovery>2015-12-21</discovery>
       <entry>2016-01-03</entry>
+      <modified>2016-02-13</modified>
     </dates>
   </vuln>
 
@@ -2169,7 +3515,7 @@ Notes:
       <package>
 	<name>qemu-sbruno</name>
 	<name>qemu-user-static</name>
-	<range><ge>0</ge></range>
+	<range><lt>2.5.50.g20160213</lt></range>
       </package>
     </affects>
     <description>
@@ -2191,10 +3537,13 @@ Notes:
       <freebsdpr>ports/205814</freebsdpr>
       <url>http://www.openwall.com/lists/oss-security/2015/12/15/4</url>
       <url>https://lists.gnu.org/archive/html/qemu-devel/2015-12/msg02299.html</url>
+      <url>http://git.qemu.org/?p=qemu.git;a=commit;h=aa4a3dce1c88ed51b616806b8214b7c8428b7470</url>
+      <url>https://github.com/seanbruno/qemu-bsd-user/commit/aa4a3dce1c88ed51b616806b8214b7c8428b7470</url>
     </references>
     <dates>
       <discovery>2015-12-15</discovery>
       <entry>2016-01-03</entry>
+      <modified>2016-02-13</modified>
     </dates>
   </vuln>
 
@@ -2392,7 +3741,7 @@ Notes:
       <package>
 	<name>qemu-sbruno</name>
 	<name>qemu-user-static</name>
-	<range><ge>0</ge></range>
+	<range><lt>2.5.50.g20160213</lt></range>
       </package>
     </affects>
     <description>
@@ -2416,10 +3765,13 @@ Notes:
       <freebsdpr>ports/205814</freebsdpr>
       <url>http://www.openwall.com/lists/oss-security/2015/11/25/3</url>
       <url>https://lists.gnu.org/archive/html/qemu-devel/2015-10/msg03911.html</url>
+      <url>http://git.qemu.org/?p=qemu.git;a=commit;h=00837731d254908a841d69298a4f9f077babaf24</url>
+      <url>https://github.com/seanbruno/qemu-bsd-user/commit/00837731d254908a841d69298a4f9f077babaf24</url>
     </references>
     <dates>
       <discovery>2015-10-16</discovery>
       <entry>2016-01-03</entry>
+      <modified>2016-02-13</modified>
     </dates>
   </vuln>
 
@@ -3452,7 +4804,7 @@ Notes:
     <affects>
       <package>
 	<name>samba36</name>
-	<range><ge>3.6.0</ge><le>3.6.25</le></range>
+	<range><ge>3.6.0</ge><lt>3.6.25_2</lt></range>
       </package>
       <package>
 	<name>samba4</name>
@@ -3512,6 +4864,7 @@ Notes:
     <dates>
       <discovery>2015-12-16</discovery>
       <entry>2015-12-19</entry>
+      <modified>2016-02-05</modified>
     </dates>
   </vuln>
 
@@ -4681,7 +6034,7 @@ Notes:
       </package>
       <package>
 	<name>linux-c6-openssl</name>
-	<range><ge>0</ge></range>
+	<range><lt>1.0.1e_7</lt></range>
       </package>
     </affects>
     <description>
@@ -4713,6 +6066,7 @@ Notes:
     <dates>
       <discovery>2015-12-03</discovery>
       <entry>2015-12-05</entry>
+      <modified>2016-01-31</modified>
     </dates>
   </vuln>
 
@@ -10011,6 +11365,10 @@ Notes:
     <description>
       <body xmlns="http://www.w3.org/1999/xhtml">
 	<blockquote cite="http://www.openssh.com/txt/release-7.0">
+	  <p>OpenSSH 6.8 and 6.9 incorrectly set TTYs to be world-writable.
+	    Local attackers may be able to write arbitrary messages to
+	    logged-in users, including terminal escape sequences. Reported
+	    by Nikolay Edigaryev.</p>
 	  <p>Fixed a privilege separation
 	    weakness related to PAM support. Attackers who could successfully
 	    compromise the pre-authentication process for remote code
@@ -10025,11 +11383,14 @@ Notes:
     </description>
     <references>
       <url>http://www.openssh.com/txt/release-7.0</url>
+      <cvename>CVE-2015-6563</cvename>
+      <cvename>CVE-2015-6564</cvename>
+      <cvename>CVE-2015-6565</cvename>
     </references>
     <dates>
       <discovery>2015-08-11</discovery>
       <entry>2015-08-21</entry>
-      <modified>2016-01-15</modified>
+      <modified>2016-02-14</modified>
     </dates>
   </vuln>
 
@@ -14206,7 +15567,7 @@ Notes:
       </package>
       <package>
 	<name>linux-c6-libxml2</name>
-	<range><ge>*</ge></range>
+	<range><lt>2.7.6_5</lt></range>
       </package>
       <package>
 	<name>linux-f10-libxml2</name>
@@ -14232,7 +15593,7 @@ Notes:
     <dates>
       <discovery>2015-04-14</discovery>
       <entry>2015-07-01</entry>
-      <modified>2015-07-15</modified>
+      <modified>2016-01-31</modified>
     </dates>
   </vuln>
 
@@ -19320,11 +20681,11 @@ Notes:
       </package>
       <package>
 	<name>linux-c6-xorg-libs</name>
-	<range><ge>*</ge></range>
+	<range><lt>7.4_4</lt></range>
       </package>
       <package>
 	<name>linux-f10-xorg-libs</name>
-	<range><ge>*</ge></range>
+	<range><lt>7.4_4</lt></range>
       </package>
     </affects>
     <description>
@@ -19355,7 +20716,7 @@ Notes:
     <dates>
       <discovery>2015-03-17</discovery>
       <entry>2015-03-18</entry>
-      <modified>2015-07-15</modified>
+      <modified>2016-01-31</modified>
     </dates>
   </vuln>
 
