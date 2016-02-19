@@ -45,17 +45,22 @@ PLIST_SUB=		ABI=${ABIFLAGS} \
 OPTIONS_DEFINE=		DEBUG IPV6 LIBFFI NLS PYMALLOC THREADS TSC
 OPTIONS_DEFAULT=	IPV6 LIBFFI NLS PYMALLOC THREADS
 OPTIONS_SUB=		yes
+OPTIONS_DEFINE+=	EXPAT
+OPTIONS_DEFAULT+=	EXPAT
 
 LIBFFI_DESC=		Use libffi from ports instead of bundled version
 NLS_DESC=		Enable gettext support for the locale module
 PYMALLOC_DESC=		Enable specialized mallocs
 TSC_DESC=		Enable rocessor timestamp counter profiling
+EXPAT_DESC=		Use expat from ports instead of bundled version
 
+EXPAT_CONFIGURE_ON=	--with-system-expat
 DEBUG_CONFIGURE_WITH=	pydebug
 IPV6_CONFIGURE_ENABLE=	ipv6
 
 LIBFFI_CONFIGURE_ON=	--with-system-ffi
 LIBFFI_LIB_DEPENDS=	libffi.so:${PORTSDIR}/devel/libffi
+EXPAT_LIB_DEPENDS=	libexpat.so:${PORTSDIR}/textproc/expat2
 
 # Use CPPFLAGS over CFLAGS due to -I ordering, causing elementtree and pyexpat
 # to break in Python 2.7, or preprocessor complaints in Python >= 3.3
@@ -112,7 +117,8 @@ post-patch:
 	@${REINPLACE_CMD} -e 's/disabled_module_list =[^]]*/&, "nis"/' \
 		${WRKSRC}/setup.py
 .endif
-	@${REINPLACE_CMD} -e 's|`uname -r`|"${OSREL}"|g' ${WRKSRC}/configure
+	${REINPLACE_CMD} -e 's|`uname -r`|"${_OSRELEASE}"|g' \
+		${WRKSRC}/configure
 
 post-install:
 .if ! ${PORT_OPTIONS:MDEBUG}
