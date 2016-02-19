@@ -1,15 +1,15 @@
---- configure.intermediate	2014-09-14 09:51:23 UTC
+--- configure.orig	2016-02-18 12:15:03 UTC
 +++ configure
-@@ -7640,7 +7640,7 @@ fi
+@@ -7646,7 +7646,7 @@ fi
  fi
  
  	    ;;
 -	FreeBSD-*)
 +	FreeBSD-*|DragonFly-*)
- 	    # Version numbers are dot-stripped by system policy.
- 	    TCL_TRIM_DOTS=`echo ${VERSION} | tr -d .`
- 	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.a'
-@@ -8843,6 +8843,7 @@ fi
+ 	    # This configuration from FreeBSD Ports.
+ 	    SHLIB_CFLAGS="-fPIC"
+ 	    SHLIB_LD="${CC} -shared"
+@@ -8850,6 +8850,7 @@ fi
  	    BSD/OS*) ;;
  	    CYGWIN_*|MINGW32_*) ;;
  	    IRIX*) ;;
