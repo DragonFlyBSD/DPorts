@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome3
-PORTVERSION=	3.16.2
+PORTVERSION=	3.18.0
 CATEGORIES?=	x11 gnome
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -31,7 +31,7 @@ RUN_DEPENDS?=	dconf-editor:${PORTSDIR}/devel/dconf-editor \
 		${LOCALBASE}/share/gnome-background-properties/gnome-backgrounds.xml:${PORTSDIR}/x11-themes/gnome-backgrounds \
 		caribou>=0:${PORTSDIR}/accessibility/caribou \
 		${LOCALBASE}/share/sounds/freedesktop/index.theme:${PORTSDIR}/audio/freedesktop-sound-theme \
-#		ekiga:${PORTSDIR}/net-im/ekiga
+
 
 CONFLICTS?=	gnome3-lite-[0-9]*
 
@@ -71,8 +71,9 @@ RUN_DEPENDS+=	empathy>=3.0.0:${PORTSDIR}/net-im/empathy \
 		totem>=3.0.0:${PORTSDIR}/multimedia/totem \
 		gconf-editor>=3.0.0:${PORTSDIR}/sysutils/gconf-editor \
 		gdm>=3.0.0:${PORTSDIR}/x11/gdm \
+		gnome-color-manager>=0:${PORTSDIR}/graphics/gnome-color-manager \
 		evolution>=3.0.0:${PORTSDIR}/mail/evolution \
-		alacarte>=3.0.0:${PORTSDIR}/deskutils/alacarte
+
 
 .endif # !gnome3-lite section
 
