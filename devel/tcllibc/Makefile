@@ -9,7 +9,7 @@ BUILD_DEPENDS=	critcl:${PORTSDIR}/devel/critcl
 RUN_DEPENDS=	${PREFIX}/lib/tcllib/pkgIndex.tcl:${PORTSDIR}/devel/tcllib
 
 MASTERDIR=	${.CURDIR:H}/tcllib
-TMPPLIST=		${WRKDIR}/PLIST
+TMPPLIST=	${WRKDIR}/PLIST
 DESCR=		${.CURDIR}/pkg-descr
 ALL_TARGET=	critcl
 OPTIONS_DEFINE=
