@@ -1,0 +1,27 @@
+#!/bin/sh
+
+# If there is a global system configuration file, suck it in.
+#
+if [ -r /etc/defaults/periodic.conf ]
+then
+    . /etc/defaults/periodic.conf
+    source_periodic_confs
+fi
+
+case "$weekly_letsencrypt_enable" in
+    [Yy][Ee][Ss])
+	if [ -z "$weekly_letsencrypt_user" ]
+	then
+		%%PREFIX%%/bin/letsencrypt.sh -c
+	else
+		su -m "$weekly_letsencrypt_user" -c '%%PREFIX%%/bin/letsencrypt.sh -c'
+	fi
+	if [ -x "$weekly_letsencrypt_deployscript" ]
+	then
+		$weekly_letsencrypt_deployscript
+	fi
+        ;;
+    *)
+        ;;
+esac
+
