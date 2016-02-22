@@ -1,5 +1,4 @@
-BUILD_DEPENDS+=	${LOCALBASE}/include/libmilter/mfapi.h:${PORTSDIR}/mail/sendmail
-CFLAGS+=	-I${LOCALBASE}/include
+.include "${.CURDIR}/../sendmail/bsd.milter.mk"
 
 dfly-patch:
 	${REINPLACE_CMD} -e "s@/usr/lib@${LOCALBASE}/lib@g"		\
