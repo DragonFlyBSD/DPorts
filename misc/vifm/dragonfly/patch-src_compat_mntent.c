@@ -1,6 +1,6 @@
---- src/utils/mntent.c.orig	2015-07-09 16:00:42 UTC
-+++ src/utils/mntent.c
-@@ -125,7 +125,7 @@ flags2opts(int flags)
+--- src/compat/mntent.c.orig	2016-01-17 14:02:23 UTC
++++ src/compat/mntent.c
+@@ -131,7 +131,7 @@ flags2opts(int flags)
  	if(flags & MNT_SYNCHRONOUS) res = catopt(res, "sync");
  	if(flags & MNT_NOEXEC)      res = catopt(res, "noexec");
  	if(flags & MNT_NOSUID)      res = catopt(res, "nosuid");
