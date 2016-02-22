@@ -82,10 +82,7 @@ CONFIGURE_ARGS=	--libdir=${PREFIX}/lib \
 		--disable-dependency-tracking \
 		--enable-clamdtop
 CPPFLAGS+=	-I${LOCALBASE}/include
-
-# This port has a problem with -pthread,
-# force to use -lthr until it's not fixed.
-LDFLAGS+=	-lthr -L${LOCALBASE}/lib
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 CONFLICTS?=	clamav-milter-[0-9]*
 
@@ -150,7 +147,7 @@ LDFLAGS+=	-lldap
 . endif
 
 . if !exists(/usr/lib/libmilter.a) || exists(${LOCALBASE}/lib/libmilter.a)
-BUILD_DEPENDS+=	${LOCALBASE}/lib/libmilter.a:${PORTSDIR}/mail/sendmail
+.include "${.CURDIR}/../../mail/sendmail/bsd.milter.mk"
 CONFIGURE_ARGS+=--with-sendmail=${LOCALBASE}/sbin/sendmail
 LDFLAGS+=	-L${LOCALBASE}/lib
 . else

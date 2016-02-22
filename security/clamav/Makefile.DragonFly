@@ -1,1 +1,0 @@
-LDFLAGS:=	${LDFLAGS:N-lthr}
