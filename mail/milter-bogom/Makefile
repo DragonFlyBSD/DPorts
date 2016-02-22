@@ -13,13 +13,6 @@ MAINTAINER=	victor@bsdes.net
 COMMENT=	Simple sendmail milter to interface bogofilter
 
 RUN_DEPENDS=	bogofilter:${PORTSDIR}/mail/bogofilter
-
-.if !exists(/usr/lib/libmilter.so)
-LIB_DEPENDS=	libmilter.so:${PORTSDIR}/mail/sendmail
-LDFLAGS+=	-L${LOCALBASE}/lib
-CFLAGS+=	-I${LOCALBASE}/include
-.endif
-
 MAKE_ARGS=	CPPFLAGS="-DDEF_CONF=\\\"${PREFIX}/etc/bogom.conf\\\"" \
 		LIBS="-lmilter -lpthread" LDFLAGS="${LDFLAGS}"
 
@@ -33,6 +26,9 @@ PLIST_FILES=	sbin/bogom \
 PORTDOCS=	README CHANGELOG
 
 OPTIONS_DEFINE=	DOCS
+
+.include <bsd.port.options.mk>
+.include "${.CURDIR}/../sendmail/bsd.milter.mk"
 
 post-patch:
 	${REINPLACE_CMD} -e 's|/etc|${PREFIX}/etc|g' ${WRKSRC}/bogom.8
