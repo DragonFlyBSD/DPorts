@@ -15,16 +15,14 @@ COMMENT=	Python interface to Sendmail milter API
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-.if !exists(/usr/lib/libmilter.so)
-LIB_DEPENDS=	libmilter.so:${PORTSDIR}/mail/sendmail
-CFLAGS+=	-I${LOCALBASE}/include
-.endif
-
 PYPORTNAME=	${PKGNAMEPREFIX:C/[0-9]+-//}${PORTNAME}
 
 DIST_SUBDIR=	python
 USES=		python:2
 USE_PYTHON=	distutils autoplist
+
+.include <bsd.port.options.mk>
+.include "${.CURDIR}/../../mail/sendmail/bsd.milter.mk"
 
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/milter.so
