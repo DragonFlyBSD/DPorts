@@ -1,4 +1,4 @@
-LIB_DEPENDS+=	libmilter.so:${PORTSDIR}/mail/sendmail
+.include "${.CURDIR}/../../mail/sendmail/bsd.milter.mk"
 
 dfly-patch:
 	${REINPLACE_CMD} -e "s@Wall@Wall -I${LOCALBASE}/include -D_NSIG=NSIG@g"	\
