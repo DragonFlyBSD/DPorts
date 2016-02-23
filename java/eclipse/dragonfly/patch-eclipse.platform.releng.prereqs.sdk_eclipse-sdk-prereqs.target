@@ -1,0 +1,11 @@
+--- a/eclipse.platform.releng.prereqs.sdk/eclipse-sdk-prereqs.target.orig	2015-11-22 03:27:03 UTC
++++ b/eclipse.platform.releng.prereqs.sdk/eclipse-sdk-prereqs.target
+@@ -167,7 +167,7 @@
+     <location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
+       <unit id="org.aspectj.runtime" version="1.8.5.20150128171000"/>
+       <unit id="org.aspectj.weaver" version="1.8.5.20150128171000"/>
+-      <repository location="http://download.eclipse.org/tools/ajdt/45/dev/update/"/>
++      <repository location="http://download.eclipse.org/tools/ajdt/mars/update/"/>
+     </location>
+ 
+     <location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
