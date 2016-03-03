@@ -1,8 +1,8 @@
---- configure.intermediate	2012-12-28 13:20:04.000000000 +0100
-+++ configure	2012-12-28 13:20:23.000000000 +0100
-@@ -7909,7 +7909,7 @@
- 		;;
- 	    esac
+--- unix/configure.intermediate	2016-03-03 12:30:13 UTC
++++ unix/configure
+@@ -7594,7 +7594,7 @@ fi
+ fi
+ 
  	    ;;
 -	FreeBSD-*)
 +	FreeBSD-*|DragonFly-*)
