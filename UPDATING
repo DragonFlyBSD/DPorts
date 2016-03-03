@@ -5,6 +5,55 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20160302:
+  AFFECTS: audio/alsa-utils, www/firefox, www/firefox-esr, www/seamonkey
+  AUTHOR: jbeich@FreeBSD.org
+
+  ALSA backend in libcubeb as used by Firefox has an unresolved issue
+  with the OSS patch in audio/alsa-plugins. To avoid excessive CPU
+  usage when playing HTML5 videos rebuild the port with BUFSZ_P2
+  option enabled or reset options to default.
+
+  However, with BUFSZ_P2 enabled alsa-utils may crash:
+
+    $ aplay test.wav
+    Playing WAVE 'test.wav' : Signed 16 bit Little Endian, Rate 48000 Hz, Stereo
+    Assertion failed: (err >= 0), function set_params, file aplay.c, line 1289.
+    Aborted by signal Abort trap...
+
+20160229:
+  AFFECTS: users of security/openssh-portable-devel
+  AUTHOR: bdrewery@FreeBSD.org
+
+  openssh-portable-devel has been removed since it is stale, insecure and
+  not worth maintaining any longer.
+
+  Users should switch back to openssh-portable.
+
+  Using packages:
+
+    # pkg delete openssh-portable-devel
+    # pkg install openssh-portable
+
+  Using ports:
+
+    # portmaster -o security/openssh-portable openssh-portable-devel
+
+  OR
+
+    # portupgrade -o security/openssh-portable security/openssh-portable-devel
+
+20160217:
+  AFFECTS: users of www/nginx-devel
+  AUTHOR: osa@FreeBSD.org
+
+  Dynamic modules support has been enabled for the following third-party
+  modules, in case of usage of these modules please update nginx
+  configuration file for load these modules:
+
+  load_module "modules/ngx_dynamic_upstream_module.so";
+  load_module "modules/ngx_http_small_light_module.so";
+
 20160214:
   AFFECTS: users of www/nginx-devel
   AUTHOR: osa@FreeBSD.org
@@ -140,7 +189,7 @@ you update your ports collection, before attempting any port upgrades.
 
   OR
 
-    # portmaster -o www/node4 www/node
+    # portmaster -o www/node4 node
 
 20151210:
   AFFECTS: users of comms/gammu
@@ -403,7 +452,7 @@ you update your ports collection, before attempting any port upgrades.
   'pkg delete -f jpeg' before 'pkg upgrade'.
 
   If using portmaster:
-  # portmaster -o graphics/jpeg-turbo graphics/jpeg
+  # portmaster -o graphics/jpeg-turbo jpeg
 
   If using portupgrade:
   # portupgrade -f -o graphics/jpeg-turbo graphics/jpeg
@@ -1131,85 +1180,4 @@ AUTHOR: ohauer@FreeBSD.org
 
   Then you should rebuild all ports depending on libressl to avoid dangling
   shared library dependencies.
-
-20150301:
-  AFFECTS: users of lang/ruby20
-  AUTHOR: swills@FreeBSD.org
-
-  The default ruby version has been updated from 2.0 to 2.1.
-
-  If you compile your own ports you may keep 2.0 as the default version by
-  adding the following lines to your /etc/make.conf file:
-
-  #
-  # Keep ruby 2.0 as default version
-  #
-  DEFAULT_VERSIONS+=ruby=2.0
-
-  If you wish to update to the new default version, you need to first stop any
-  software that uses ruby. Then, you will need to follow these steps, depending
-  upon how you manage your system.
-
-  If you use pkgng, simply upgrade:
-  # pkg upgrade -f
-
-  If you use portmaster, install new ruby, then rebuild all ports that depend
-  on ruby:
-  # portmaster -o lang/ruby21 lang/ruby20
-  # portmaster -R -r ruby-2.1
-
-  If you use portupgrade, install new ruby, then rebuild all ports that depend
-  on ruby:
-
-  # pkg delete -f ruby portupgrade
-  # make -C /usr/ports/ports-mgmt/portupgrade install clean
-  # pkg set -o lang/ruby20:lang/ruby21
-  # portupgrade -x ruby-2.1.\* -fr lang/ruby21
-
-20150227:
-  AFFECTS: Users of games/trigger
-  AUTHOR: makc@FreeBSD.org
-
-  games/trigger has been split and renamed to games/trigger-rally
-  and games/trigger-data ports. Deinstall previous version
-  before upgrading.
-
-20150224:
-  AFFECTS: Users of devel/qt4-linguist
-  AUTHOR: makc@FreeBSD.org
-
-  Linguist tools have been moved from qt4-linguist port to new
-  devel/qt4-linguisttools port. Deinstall qt4-linguist before
-  upgrading.
-
-20150224:
-  AFFECTS: Users of lang/ruby19
-
-  lang/ruby19 has reached its end-of-life and has been removed.  The
-  default version has been 2.0 for a while.  Other available versions
-  are Ruby 2.1 and Ruby 2.2.
-
-  Users who have DEFAULT_VERSIONS=ruby=1.9 in their /etc/make.conf are
-  encouraged to remove it or change it to an available version.
-
-20150224:
-  AFFECTS: Users of net-p2p/bitcoin (cli utilities)
-
-  The bitcoin-cli and bitcoin-tx utilities have been re-packaged into
-  a separate port. If you require these programs, or use the bitcoin-cli
-  program to access the daemon or the GUI, install net-p2p/bitcoin-utils
-  to reinstall them.
-
-20150220:
-  AFFECTS: users of PHP
-
-  The default PHP version has been updated from 5.4 to 5.6.
-
-  If you use binary packages you should make a list of php packages
-  before running 'pkg upgrade':
-
-  # pkg info php5\* > ~/installed-php-ports-list
-
-  After the upgrade, check with such list if all your php extensions
-  are still installed, and reinstall them if needed.
 
