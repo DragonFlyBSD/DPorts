@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/www/h2o/files/h2o.in 397062 2015-09-16 12:29:56Z gblach $
+# $FreeBSD: head/www/h2o/files/h2o.in 408753 2016-02-12 20:22:15Z rakuco $
 #
 
 # PROVIDE: h2o
@@ -29,6 +29,9 @@ pidfile=`grep pid-file ${h2o_config} | cut -d' ' -f2`
 command="%%PREFIX%%/bin/${name}"
 command_args="-m daemon -c ${h2o_config}"
 procname="%%LOCALBASE%%/bin/perl"
+
+# support SIGHUP to reload configuration file
+extra_commands="reload"
 
 load_rc_config $name
 run_rc_command "$1"
