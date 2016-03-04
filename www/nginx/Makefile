@@ -378,14 +378,14 @@ CONFIGURE_ARGS+=--add-module=${WRKSRC_clojure}/src/c
 .endif
 
 .if ${PORT_OPTIONS:MCT}
-GIT_CT_VERSION=	1790ac0
+GIT_CT_VERSION=	f3cad5e
 GH_ACCOUNT+=	grahamedgecombe:ct
 GH_PROJECT+=	nginx-ct:ct
 GH_TAGNAME+=	${GIT_CT_VERSION}:ct
 CONFIGURE_ARGS+=--add-module=${WRKSRC_ct}
 NGINX_OPENSSL=	yes
 USE_HTTP_SSL=	yes
-USE_OPENSSL_PORT=	yes
+WITH_OPENSSL_PORT=	yes
 .endif
 
 .if ${PORT_OPTIONS:MECHO}
@@ -508,7 +508,7 @@ USES+=		perl5
 .endif
 
 .if ${PORT_OPTIONS:MHTTP_PUSH}
-GIT_PUSH_VERSION=	0.99.4
+GIT_PUSH_VERSION=	0.99.5
 GH_ACCOUNT+=	slact:push
 GH_PROJECT+=	nchan:push
 GH_TAGNAME+=	v${GIT_PUSH_VERSION}:push
@@ -532,7 +532,7 @@ CONFIGURE_ARGS+=--with-http_realip_module
 .endif
 
 .if ${PORT_OPTIONS:MHTTP_REDIS}
-NGINX_REDIS_VERSION=	0.3.7
+NGINX_REDIS_VERSION=	0.3.8
 MASTER_SITES+=	LOCAL/osa:redis
 DISTFILES+=	ngx_http_redis-${NGINX_REDIS_VERSION}.tar.gz:redis
 CONFIGURE_ARGS+=--add-module=${WRKDIR}/ngx_http_redis-${NGINX_REDIS_VERSION}
@@ -714,7 +714,7 @@ CONFIGURE_ARGS+=--without-http_rewrite_module \
 .endif
 
 .if ${PORT_OPTIONS:MPASSENGER}
-PASSENGER_VERSION=	5.0.24
+PASSENGER_VERSION=	5.0.26
 MASTER_SITES+=	http://s3.amazonaws.com/phusion-passenger/releases/:passenger
 DISTFILES+=	passenger-${PASSENGER_VERSION}.tar.gz:passenger
 CONFIGURE_ARGS+=--add-module=${WRKDIR}/passenger-${PASSENGER_VERSION}/src/nginx_module
@@ -801,7 +801,7 @@ CONFIGURE_ARGS+=--add-module=${WRKDIR}/ngx_slowfs_cache-${NGINX_SLOWFS_CACHE_VER
 .endif
 
 .if ${PORT_OPTIONS:MSMALL_LIGHT}
-NGINX_SMALL_LIGHT_VERSION=	0.6.9
+NGINX_SMALL_LIGHT_VERSION=	0.6.15
 LIB_DEPENDS+=	libMagickCore-6.so:${PORTSDIR}/graphics/ImageMagick \
 		libMagickWand-6.so:${PORTSDIR}/graphics/ImageMagick \
 		libpcre.so:${PORTSDIR}/devel/pcre
