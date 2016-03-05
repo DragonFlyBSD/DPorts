@@ -1,11 +1,16 @@
---- makedefs.intermediate	2013-06-14 12:34:31.353243000 +0000
+--- makedefs.intermediate	2015-02-02 19:39:00 UTC
 +++ makedefs
-@@ -139,6 +139,8 @@ case "$SYSTEM.$RELEASE" in
- 	      *) error "Seems to be UnixWare`uname -v`. Untested.";;
- 		esac
+@@ -245,6 +245,13 @@ case "$SYSTEM.$RELEASE" in
+ 		: ${PLUGIN_LD="${CC} -shared"}
  		;;
-+  DragonFly.*)	SYSTYPE=DRAGONFLY
-+		;;
-   FreeBSD.2*)	SYSTYPE=FREEBSD2
+  DragonFly.*)	SYSTYPE=DRAGONFLY
++		: ${CC=cc}
++		: ${SHLIB_SUFFIX=.so}
++		: ${SHLIB_CFLAGS=-fPIC}
++		: ${SHLIB_LD="${CC} -shared"' -Wl,-soname,${LIB}'}
++		: ${SHLIB_RPATH='-Wl,-rpath,${SHLIB_DIR}'}
++		: ${SHLIB_ENV="LD_LIBRARY_PATH=`pwd`/lib"}
++		: ${PLUGIN_LD="${CC} -shared"}
  		;;
-   FreeBSD.3*)	SYSTYPE=FREEBSD3
+   OpenBSD.2*)	SYSTYPE=OPENBSD2
+ 		;;
