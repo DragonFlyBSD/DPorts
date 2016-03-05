@@ -1,9 +1,10 @@
 #!/bin/sh
 #
-# $FreeBSD: head/x11-drivers/xf86-input-wacom/files/wacom.in 396550 2015-09-10 03:48:47Z jbeich $
+# $FreeBSD: head/x11-drivers/xf86-input-wacom/files/wacom.in 409737 2016-02-28 12:16:13Z jbeich $
 #
 # PROVIDE: wacom
 # REQUIRE: mountcritlocal
+# BEFORE:  devd
 # KEYWORD: nojail
 #
 # Add the following lines to /etc/rc.conf to enable this service:
