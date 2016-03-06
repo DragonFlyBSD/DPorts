@@ -1,5 +1,21 @@
 --- adb/sysdeps.h.orig	2015-09-05 00:01:27 UTC
 +++ adb/sysdeps.h
+@@ -61,11 +61,13 @@
+ #endif
+ #endif
+ 
+-#ifdef _WIN32
+-
++#if !defined(__clang__) || __clang_major__ < 3 || (__clang_major__ == 3 && __clang_minor__ < 7)
+ // Clang-only nullability specifiers
+ #define _Nonnull
+ #define _Nullable
++#endif
++
++#ifdef _WIN32
+ 
+ #include <ctype.h>
+ #include <direct.h>
 @@ -401,6 +401,11 @@ typedef std::unique_ptr<HANDLE, handle_d
  
  #include <string>
