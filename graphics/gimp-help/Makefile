@@ -24,6 +24,8 @@ pt_BR_PORT=	portuguese/gimp-help-pt_BR
 ru_PORT=	russian/gimp-help
 zh_CN_PORT=	chinese/gimp-help-zh_CN
 
+LANG_ALL_HTML:=	${LANG_ALL_HTML:Nsl}
+
 # you can find more in ${PORTSDIR}/misc/kde4-l10n/files/kde4-lang-names
 ca_NAME=	Catalan
 da_NAME=	Danish
