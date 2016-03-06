@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD$
+# $FreeBSD: head/multimedia/emby-server/files/emby-server.in 409735 2016-02-28 11:48:08Z riggs $
 #
 # PROVIDE: %%PORTNAME%%
 # REQUIRE: LOGIN
@@ -50,13 +50,6 @@ command_args="-f -p ${pidfile} ${procname} %%PREFIX%%/lib/emby-server/MediaBrows
 start_precmd=%%RC_NAME%%_precmd
 %%RC_NAME%%_precmd()
 {
-	: ${LC_ALL:="C"}
-	: ${LANG:="C"}
-	: ${TZ:="UTC"}
-	export LC_ALL
-	export LANG
-	export TZ
-
 	if [ ! -e "${pidfile}" ]; then
 		install -g ${%%RC_NAME%%_group} -o ${%%RC_NAME%%_user} -- /dev/null "${pidfile}";
 	fi
