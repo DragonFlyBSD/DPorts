@@ -1,11 +1,11 @@
---- setup.py.intermediate	2014-07-15 15:03:46.753455000 +0000
+--- setup.py.orig	2015-12-31 23:39:28 UTC
 +++ setup.py
-@@ -283,7 +283,7 @@ def determine_base_flags():
-                        'ApplicationServices.framework/Frameworks')
-         flags['extra_compile_args'] += ['-F%s' % sysroot]
-         flags['extra_link_args'] += ['-F%s' % sysroot]
+@@ -520,7 +520,7 @@ def determine_base_flags():
+         flags['include_dirs'] += [sysroot]
+         flags['extra_compile_args'] += ['-isysroot', sysroot]
+         flags['extra_link_args'] += ['-isysroot', sysroot]
 -    elif platform.startswith('freebsd'):
 +    elif platform.startswith('freebsd') or platform.startswith('dragonfly'):
-         flags['include_dirs'] += [join(environ.get('LOCALBASE', '/usr/local'), 'include')]
-         flags['extra_link_args'] += ['-L', join(environ.get('LOCALBASE', '/usr/local'), 'lib')]
-     return flags
+         flags['include_dirs'] += [join(
+             environ.get('LOCALBASE', '/usr/local'), 'include')]
+         flags['extra_link_args'] += ['-L', join(
