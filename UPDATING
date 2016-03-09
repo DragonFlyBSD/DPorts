@@ -5,6 +5,13 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20160306:
+  AFFECTS: net-mgmt/yaf
+  AUTHOR: pi@FreeBSD.org
+
+  YAF is updated to version 2.8.1 with many new OPTIONS. Please use
+  the default options to get same behavior as previous version.
+
 20160302:
   AFFECTS: audio/alsa-utils, www/firefox, www/firefox-esr, www/seamonkey
   AUTHOR: jbeich@FreeBSD.org
@@ -42,6 +49,20 @@ you update your ports collection, before attempting any port upgrades.
   OR
 
     # portupgrade -o security/openssh-portable security/openssh-portable-devel
+
+20160228:
+  AFFECTS: users of mail/postfix
+  AUTHOR: ohauer@FreeBSD.org
+
+   Postfix has been updated to version 3.1, VDA and native SPF is no
+   longer supported.
+
+   - if VDA support is needed, users should stay on mail/postfix211
+   - SPF support can be added to postfix via one of the mail/*spf* ports
+
+   The Dovecot SASL OPTION was removed, Dovecot SASL support is always given
+   from now on.  In addition, for each mail/postfix* port there is now a
+   mail/postfix*-sasl slave port providing Cyrus SASL as default.
 
 20160217:
   AFFECTS: users of www/nginx-devel
@@ -1145,39 +1166,4 @@ AUTHOR: ohauer@FreeBSD.org
   After upgrading, you will need to review all your configuration, as
   this new version won't read old config files.
   You'll be able to keep your data though netdisco-deploy command
-
-20150305:
-  AFFECTS: users of x11-wm/xfce4 and multimedia/xfce4-parole
-  AUTHOR: olivierd@FreeBSD.org
-
-  Xfce 4.12 has been imported. Please use the following instructions to
-  upgrade.
-
-  For package users:
-  # pkg upgrade
-
-  For ports users:
-  # portmaster -a
-  # portmaster x11-wm/xfce4
-
-  GStreamer 1.0 is enabled by default in Parole media player.
-
-  Xfce 4.12 now depends of Adwaita icon theme. If you are upgrading from
-  Xfce 4.10 you probably still have the Tango or GNOME theme selected.
-  Open the Settings Manager and select Appearance. Inside dialog box switch
-  to the Icons tag and select the "Adwaita" entry in the list.
-
-20150304:
-  AFFECTS: users of security/libressl
-  AUTHOR: vsevolod@highsecure.ru
-
-  After upgrading of libressl you should manually update all packages that
-  depending on this library since its version has been changed. Normally,
-  you could obtain the list of dependent software by running the following
-  command:
-
-  pkg query -e '%n = libressl' %ro
-
-  Then you should rebuild all ports depending on libressl to avoid dangling
-  shared library dependencies.
 
