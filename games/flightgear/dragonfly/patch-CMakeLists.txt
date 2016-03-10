@@ -1,11 +1,10 @@
---- CMakeLists.txt.intermediate	2015-05-01 15:32:46 UTC
+--- CMakeLists.txt.orig	2016-03-10 22:27:34 UTC
 +++ CMakeLists.txt
-@@ -99,7 +99,7 @@ IF(APPLE)
-     find_library(COCOA_LIBRARY Cocoa)
-     list(APPEND PLATFORM_LIBS ${COCOA_LIBRARY} ${CORESERVICES_LIBRARY})
- 
--elseif(${CMAKE_SYSTEM_NAME} MATCHES "Linux" OR
-+elseif(${CMAKE_SYSTEM_NAME} MATCHES "DragonFly" OR
+@@ -114,6 +114,7 @@ IF(APPLE)
+     SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -mmacosx-version-min=10.7")
+     SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -mmacosx-version-min=10.7")
+ elseif(${CMAKE_SYSTEM_NAME} MATCHES "Linux" OR
++        ${CMAKE_SYSTEM_NAME} MATCHES "DragonFly" OR
  	${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
-     set(USE_DBUS_DEFAULT 1)
- 
+     find_package(Threads REQUIRED)
+     find_package(X11 REQUIRED)
