@@ -2,7 +2,7 @@
 
 PORTNAME=	sdl2_mixer
 PORTVERSION=	2.0.0
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	audio
 MASTER_SITES=	http://www.libsdl.org/projects/SDL_mixer/release/
 DISTNAME=	SDL2_mixer-${PORTVERSION}
@@ -31,6 +31,7 @@ OPTIONS_DEFAULT+=	TREMOR
 OPTIONS_DEFAULT+=	VORBIS
 .endif
 
+MOD_DESC=	Tracker music support
 SMPEG_DESC=	MP3 audio support via SMPEG2
 
 MIKMOD_LIB_DEPENDS=		libmikmod.so:${PORTSDIR}/audio/libmikmod
@@ -54,7 +55,9 @@ VORBIS_LIB_DEPENDS=		libvorbis.so:${PORTSDIR}/audio/libvorbis
 VORBIS_CONFIGURE_ENABLE=	music-ogg
 
 TREMOR_LIB_DEPENDS=		libvorbisidec.so:${PORTSDIR}/audio/libtremor
-TREMOR_CONFIGURE_ENABLE=	music-ogg music-ogg-tremor
+TREMOR_CONFIGURE_ON=		--enable-music-ogg
+# TREMOR_CONFIGURE_OFF is handled by VORBIS=off
+TREMOR_CONFIGURE_ENABLE=	music-ogg-tremor
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|\($$(prefix)/libdata/pkgconfig\)|$$(DESTDIR)\1|' \
