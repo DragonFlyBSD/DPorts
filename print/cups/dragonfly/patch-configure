@@ -1,0 +1,56 @@
+--- configure.intermediate	2016-03-17 12:25:12 UTC
++++ configure
+@@ -5567,7 +5567,7 @@ fi
+ 
+ 
+ case $uname in
+-        Darwin* | *BSD*)
++        Darwin* | *BSD* | DragonFly*)
+                 ARFLAGS="-rcv"
+                 ;;
+         *)
+@@ -6232,7 +6232,7 @@ _ACEOF
+ # Locale data
+ if test "$localedir" = "\${datarootdir}/locale"; then
+ 	case "$uname" in
+-		Linux | GNU | *BSD* | Darwin*)
++		Linux | GNU | *BSD* | Darwin* | DragonFly*)
+ 			CUPS_LOCALEDIR="$datarootdir/locale"
+ 			;;
+ 
+@@ -6286,7 +6286,7 @@ _ACEOF
+ 
+ # Server executables...
+ case "$uname" in
+-	*BSD* | Darwin*)
++	*BSD* | Darwin* | DragonFly*)
+ 		# *BSD and Darwin (MacOS X)
+ 		INSTALL_SYSV=""
+ 		CUPS_SERVERBIN="$exec_prefix/libexec/cups"
+@@ -6348,7 +6348,7 @@ fi
+ 
+ if test "$mandir" = "\${prefix}/man" -a "$prefix" = "/"; then
+ 	case "$uname" in
+-        	Darwin* | Linux | GNU | *BSD*)
++        	Darwin* | Linux | GNU | *BSD* | DragonFly*)
+         		# Darwin, MacOS X, Linux, GNU HURD, and *BSD
+         		mandir="/usr/share/man"
+         		AMANDIR="/usr/share/man"
+@@ -6430,7 +6430,7 @@ if test x$enable_shared != xno; then
+ 			DSOXX="\$(CXX)"
+ 			DSOFLAGS="$DSOFLAGS -Wl,-h\`basename \$@\` -G \$(OPTIM)"
+ 			;;
+-		Linux | GNU | *BSD*)
++		Linux | GNU | *BSD* | DragonFly*)
+ 			LIBCUPS="lib$cupsbase.so.2"
+ 			LIBCUPSCGI="libcupscgi.so.1"
+ 			LIBCUPSIMAGE="libcupsimage.so.2"
+@@ -6526,7 +6526,7 @@ if test "$DSO" != ":"; then
+ 				EXPORT_LDFLAGS="-R$libdir"
+ 			fi
+ 			;;
+-                *BSD*)
++                *BSD* | DragonFly*)
+                         # *BSD...
+ 			if test $exec_prefix != /usr; then
+ 				DSOFLAGS="-Wl,-R$libdir $DSOFLAGS"
