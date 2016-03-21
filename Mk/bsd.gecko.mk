@@ -245,6 +245,7 @@ MOZ_TOOLKIT?=	cairo-gtk2
 MOZ_OPTIONS+=	\
 		--enable-chrome-format=${MOZ_CHROME} \
 		--enable-default-toolkit=${MOZ_TOOLKIT} \
+		--enable-pie \
 		--with-pthreads
 # Configure options for install
 .if !defined(MOZ_EXTENSIONS)
@@ -303,6 +304,10 @@ CFLAGS+=		-O3
 MOZ_EXPORT+=	MOZ_OPTIMIZE_FLAGS="${CFLAGS:M-O*}"
 MOZ_OPTIONS+=	--enable-optimize
 .else
+. if ${MOZILLA_VER:R:R} >= 45 && ${ARCH} == i386 && \
+  (${OSVERSION} >= 1000000 && ${OSVERSION} < 1003501)
+USES:=			compiler:c++14-lang ${USES:Ncompiler*c++11*} # XXX ports/207837
+. endif
 MOZ_OPTIONS+=	--disable-optimize
 .endif
 
