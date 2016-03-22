@@ -1,9 +1,9 @@
 #!/bin/sh
 
-# $FreeBSD: head/print/cups-filters/files/cups_browsed.in 354832 2014-05-22 12:48:42Z bsam $
+# $FreeBSD: head/print/cups-filters/files/cups_browsed.in 410825 2016-03-11 11:53:42Z tijl $
 #
 # PROVIDE: cups_browsed
-# REQUIRE: LOGIN
+# REQUIRE: cupsd %%AVAHI_DAEMON%%
 # KEYWORD: shutdown
 #
 # Add the following to /etc/rc.conf[.local] to enable this service
