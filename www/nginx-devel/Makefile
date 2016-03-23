@@ -87,6 +87,7 @@ OPTIONS_DEFINE=	\
 	HTTP_UPLOAD_PROGRESS \
 	HTTP_UPSTREAM_FAIR \
 	HTTP_UPSTREAM_STICKY \
+	HTTP_VIDEO_THUMBEXTRACTOR \
 	HTTP_ZIP \
 	ARRAYVAR \
 	BROTLI \
@@ -188,6 +189,7 @@ HTTP_UPLOAD_DESC=		3rd party upload module
 HTTP_UPLOAD_PROGRESS_DESC=	3rd party uploadprogress module
 HTTP_UPSTREAM_FAIR_DESC=	3rd party upstream fair module
 HTTP_UPSTREAM_STICKY_DESC=	3rd party upstream sticky module
+HTTP_VIDEO_THUMBEXTRACTOR_DESC=	3rd party video_thumbextractor module
 HTTP_ZIP_DESC=			3rd party http_zip module
 ARRAYVAR_DESC=			3rd party array_var module
 BROTLI_DESC=			3rd party brotli module
@@ -380,7 +382,7 @@ JAVA_VERSION=	1.8
 JAVA_VENDOR=	openjdk
 JAVA_BUILD=	yes
 JAVA_RUN=	yes
-NGINX_CLOJURE_VERSION=	0.4.3
+NGINX_CLOJURE_VERSION=	0.4.4
 GH_ACCOUNT+=	nginx-clojure:clojure
 GH_PROJECT+=	nginx-clojure:clojure
 GH_TAGNAME+=	v${NGINX_CLOJURE_VERSION}:clojure
@@ -514,12 +516,12 @@ EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-ngx_http_notice_module.c
 
 .if ${PORT_OPTIONS:MHTTP_PERL}
 CATEGORIES+=	perl5
-CONFIGURE_ARGS+=--with-http_perl_module
+CONFIGURE_ARGS+=--with-http_perl_module=dynamic
 USES+=		perl5
 .endif
 
 .if ${PORT_OPTIONS:MHTTP_PUSH}
-GIT_PUSH_VERSION=	0.99.5
+GIT_PUSH_VERSION=	0.99.8
 GH_ACCOUNT+=	slact:push
 GH_PROJECT+=	nchan:push
 GH_TAGNAME+=	v${GIT_PUSH_VERSION}:push
@@ -557,10 +559,10 @@ CONFIGURE_ARGS+=--add-module=${WRKDIR}/ngx_http_response-${NGINX_RESPONSE_VERSIO
 .endif
 
 .if ${PORT_OPTIONS:MHTTP_SUBS_FILTER}
-NGINX_HTTP_SUBS_FILTER_VERSION=	0.6.2
+NGINX_HTTP_SUBS_FILTER_VERSION=	0.6.4
 GH_ACCOUNT+=	yaoweibin:subs_filter
 GH_PROJECT+=	ngx_http_substitutions_filter_module:subs_filter
-GH_TAGNAME+=	${NGINX_HTTP_SUBS_FILTER_VERSION}:subs_filter
+GH_TAGNAME+=	v${NGINX_HTTP_SUBS_FILTER_VERSION}:subs_filter
 CONFIGURE_ARGS+=--add-module=${WRKSRC_subs_filter}
 .endif
 
@@ -620,6 +622,21 @@ NGINX_UPSTREAM_STICKY_VERSION=	1.2.4
 MASTER_SITES+=	https://bitbucket.org/nginx-goodies/nginx-sticky-module-ng/get/:upstreamsticky
 DISTFILES+=	${NGINX_UPSTREAM_STICKY_VERSION}.tar.gz:upstreamsticky
 CONFIGURE_ARGS+=--add-module=${WRKDIR}/nginx-goodies-nginx-sticky-module-ng-c825ea7c5c91/
+.endif
+
+.if ${PORT_OPTIONS:MHTTP_VIDEO_THUMBEXTRACTOR}
+NGINX_VIDEO_THUMBEXTRACTOR_VERSION=	0.7.0
+LIB_DEPENDS+= 	libjpeg.so:${PORTSDIR}/graphics/jpeg \
+		libavformat.so:${PORTSDIR}/multimedia/ffmpeg \
+		libavcodec.so:${PORTSDIR}/multimedia/ffmpeg \
+		libavutil.so:${PORTSDIR}/multimedia/ffmpeg \
+		libswscale.so:${PORTSDIR}/multimedia/ffmpeg \
+		libMagickWand-6.so:${PORTSDIR}/graphics/ImageMagick
+GH_ACCOUNT+=	wandenberg:vte
+GH_PROJECT+=	nginx-video-thumbextractor-module:vte
+GH_TAGNAME+=	${NGINX_VIDEO_THUMBEXTRACTOR_VERSION}:vte
+CONFIGURE_ARGS+=--add-module=${WRKSRC_vte} --with-cc-opt="-I ${LOCALBASE}/include \
+		-I ${LOCALBASE}/include/ImageMagick"
 .endif
 
 .if ${PORT_OPTIONS:MHTTP_XSLT}
@@ -705,7 +722,7 @@ CONFIGURE_ARGS+=--add-module=${WRKSRC_memc}
 .endif
 
 .if ${PORT_OPTIONS:MMODSECURITY}
-NGINX_MODSECURITY_VERSION=	2.9.1-RC1
+NGINX_MODSECURITY_VERSION=	2.9.1
 LIB_DEPENDS+=	libapr-1.so:${PORTSDIR}/devel/apr1 \
 		libcurl.so:${PORTSDIR}/ftp/curl \
 		libluajit-5.1.so:${PORTSDIR}/lang/luajit \
@@ -740,8 +757,9 @@ CONFIGURE_ARGS+=--without-http_rewrite_module \
 PASSENGER_VERSION=	5.0.26
 MASTER_SITES+=	http://s3.amazonaws.com/phusion-passenger/releases/:passenger
 DISTFILES+=	passenger-${PASSENGER_VERSION}.tar.gz:passenger
-CONFIGURE_ARGS+=--add-module=${WRKDIR}/passenger-${PASSENGER_VERSION}/src/nginx_module
-EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-passenger-build-nginx.rb
+CONFIGURE_ARGS+=--add-dynamic-module=${WRKDIR}/passenger-${PASSENGER_VERSION}/src/nginx_module
+EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-passenger-build-nginx.rb \
+		${PATCHDIR}/extra-patch-passenger-src-nginx_module-config
 .if empty(PORT_OPTIONS:MDEBUG)
 CONFIGURE_ENV+=	OPTIMIZE="yes"
 CFLAGS+=	-DNDEBUG
@@ -884,7 +902,7 @@ WITH_OPENSSL_PORT=	yes
 .if ${PORT_OPTIONS:MNJS}
 GH_ACCOUNT+=	nginx:njs
 GH_PROJECT+=	njs:njs
-GH_TAGNAME+=	dbd4181:njs
+GH_TAGNAME+=	4030015:njs
 CONFIGURE_ARGS+=--add-dynamic-module=${WRKSRC_njs}/nginx
 .endif
 
@@ -999,6 +1017,11 @@ post-patch:
 	@${REINPLACE_CMD} 's!%%HTTP_PORT%%!${HTTP_PORT}!; \
 		s!%%PREFIX%%!${PREFIX}!' \
 		${WRKSRC}/conf/nginx.conf
+.if ${PORT_OPTIONS:MHTTP_ACCESSKEY}
+	@${REINPLACE_CMD} \
+		'128s!NGX_OK!NGX_DECLINED!' \
+		${WRKDIR}/nginx-accesskey-${NGINX_ACCESSKEY_VERSION}/ngx_http_accesskey_module.c
+.endif
 .if ${PORT_OPTIONS:MHTTP_AUTH_KRB5}
 	@${REINPLACE_CMD} \
 		's!%%GSSAPILIBS%%!${GSSAPILIBS}!' \
@@ -1014,11 +1037,6 @@ post-patch:
 	@${REINPLACE_CMD} \
 		's!^inline!static inline!' \
 		${WRKDIR}/mod_zip-${NGINX_ZIP_VERSION}/ngx_http_zip_parsers.*
-.endif
-.if ${PORT_OPTIONS:MCLOJURE}
-	@${REINPLACE_CMD} \
-		'54,57d' \
-		${WRKSRC_clojure}/src/c/config
 .endif
 .if ${PORT_OPTIONS:MDRIZZLE}
 	@${REINPLACE_CMD} \
