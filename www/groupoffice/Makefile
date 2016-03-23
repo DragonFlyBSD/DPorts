@@ -3,12 +3,15 @@
 
 PORTNAME=	groupoffice
 DISTVERSIONPREFIX=	com-
-DISTVERSION=	6.1.61
+DISTVERSION=	6.1.80
 CATEGORIES=	www
 MASTER_SITES=	SF/group-office/${DISTVERSION:R}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	jochen@jochen-neumeister.de
 COMMENT=	Modular web application framework vor office
+
+LICENSE=	AGPLv3
+LICENSE_FILE=	${WRKSRC}/LICENSE.AGPL
 
 RESTRICTED=	Free for personal use only
 
