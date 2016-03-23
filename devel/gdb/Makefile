@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	gdb
-PORTVERSION=	7.10
-PORTREVISION=	5
+PORTVERSION=	7.11
+#PORTREVISION=
 CATEGORIES=	devel
 MASTER_SITES=	GNU
 
@@ -34,9 +34,9 @@ EXTRACT_AFTER_ARGS=	${EXCLUDE:S/^/--exclude /}
 VER=		${PORTVERSION:S/.//g}
 PLIST_SUB=	VER=${VER}
 
-ONLY_FOR_ARCHS=	i386 amd64 powerpc powerpc64	# untested elsewhere, might work
+ONLY_FOR_ARCHS=	i386 amd64 powerpc powerpc64 armv6	# untested elsewhere, might work
 
-OPTIONS_DEFINE=	DEBUG EXPAT GDB_LINK GUILE KGDB PYTHON THREADS TUI
+OPTIONS_DEFINE=	DEBUG EXPAT GDB_LINK GUILE KGDB PYTHON TUI
 
 OPTIONS_DEFAULT=	GDB_LINK TUI PORT_READLINE
 
@@ -76,25 +76,10 @@ EXCLUDE+=	readline
 post-patch:
 	@${REINPLACE_CMD} -e 's|$$| [GDB v${PORTVERSION} for ${OPSYS}]|' \
 		${WRKSRC}/gdb/version.in
-.if ${PORT_OPTIONS:MTHREADS}
-	@${CP} ${FILESDIR}/fbsd-threads.c ${WRKSRC}/gdb/
-	@${PATCH} ${PATCH_ARGS} < ${FILESDIR}/extrapatch-threads
-.endif
-.if ${PORT_OPTIONS:MKGDB}
+
+post-patch-KGDB-on:
 	@${CP} -r ${FILESDIR}/kgdb/*.[ch] ${WRKSRC}/gdb/
 	@${PATCH} ${PATCH_ARGS} < ${FILESDIR}/extrapatch-kgdb
-.if ${PORT_OPTIONS:MTHREADS}
-	@${PATCH} ${PATCH_ARGS} < \
-	    ${FILESDIR}/extrapatch-kgdb-configure.tgt-threads
-.else
-	@${PATCH} ${PATCH_ARGS} < \
-	    ${FILESDIR}/extrapatch-kgdb-configure.tgt-plain
-.endif
-.endif
-	@${CP} ${DFLY_FILESDIR}/dfly64.mh ${WRKSRC}/gdb/config/i386/
-	@${CP} ${DFLY_FILESDIR}/dfly-nat.* ${WRKSRC}/gdb/
-	@${CP} ${DFLY_FILESDIR}/i386* ${WRKSRC}/gdb/
-	@${CP} ${DFLY_FILESDIR}/amd64* ${WRKSRC}/gdb/
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gdb/gdb \
@@ -115,11 +100,17 @@ do-install-GDB_LINK-on:
 	${LN} -sf kgdb${VER} ${STAGEDIR}${PREFIX}/bin/kgdb
 .endif
 
+dfly-patch:
+	@${CP} ${DFLY_FILESDIR}/dfly64.mh ${WRKSRC}/gdb/config/i386/
+	@${CP} ${DFLY_FILESDIR}/dfly-nat.* ${WRKSRC}/gdb/
+	@${CP} ${DFLY_FILESDIR}/i386* ${WRKSRC}/gdb/
+	@${CP} ${DFLY_FILESDIR}/amd64* ${WRKSRC}/gdb/
+
 do-install-PYTHON-on:
 	(cd ${WRKSRC}/gdb; ${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} install-python )
 	(cd ${WRKSRC}/gdb/data-directory ; \
 		${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} install-python )
-. for f in gdb gdb/command gdb/function
+. for f in gdb gdb/command gdb/function gdb/printer
 	@(cd ${STAGEDIR}${PREFIX}/share/gdb${VER}/python/${f} ; ${CHMOD} 644 *.py* )
 . endfor
 

@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/fbsd-kvm.c 398712 2015-10-06 18:52:58Z jhb $");
+__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/fbsd-kvm.c 411099 2016-03-14 16:19:34Z tijl $");
 
 #include <sys/param.h>
 #include <sys/proc.h>
@@ -478,7 +478,7 @@ kgdb_switch_to_thread(int tid)
 	char buf[16];
 	int thread_id;
 
-	thread_id = pid_to_thread_id(fbsd_vmcore_ptid(tid));
+	thread_id = ptid_to_global_thread_id(fbsd_vmcore_ptid(tid));
 	if (thread_id == 0)
 		error ("invalid tid");
 	snprintf(buf, sizeof(buf), "%d", thread_id);
