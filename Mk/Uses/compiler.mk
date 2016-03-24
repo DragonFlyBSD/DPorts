@@ -196,10 +196,10 @@ CC=	clang
 CXX=	clang++
 CHOSEN_COMPILER_TYPE=	clang
 .else
-BUILD_DEPENDS+=	${LOCALBASE}/bin/clang34:${PORTSDIR}/lang/clang34
-CPP=	${LOCALBASE}/bin/clang-cpp34
-CC=	${LOCALBASE}/bin/clang34
-CXX=	${LOCALBASE}/bin/clang++34
+BUILD_DEPENDS+=	${LOCALBASE}/bin/clang38:${PORTSDIR}/lang/clang38
+CPP=	${LOCALBASE}/bin/clang-cpp38
+CC=	${LOCALBASE}/bin/clang38
+CXX=	${LOCALBASE}/bin/clang++38
 CHOSEN_COMPILER_TYPE=	clang
 .endif
 .endif
@@ -218,11 +218,11 @@ CC=	clang
 CXX=	clang++
 CHOSEN_COMPILER_TYPE=	clang
 .else
-BUILD_DEPENDS+=	${LOCALBASE}/bin/clang34:${PORTSDIR}/lang/clang34
+BUILD_DEPENDS+=	${LOCALBASE}/bin/clang38:${PORTSDIR}/lang/clang38
 CHOSEN_COMPILER_TYPE=	clang
-CPP=	${LOCALBASE}/bin/clang-cpp34
-CC=	${LOCALBASE}/bin/clang34
-CXX=	${LOCALBASE}/bin/clang++34
+CPP=	${LOCALBASE}/bin/clang-cpp38
+CC=	${LOCALBASE}/bin/clang38
+CXX=	${LOCALBASE}/bin/clang++38
 .endif
 .endif
 .endif
@@ -240,11 +240,11 @@ CC=	clang
 CXX=	clang++
 CHOSEN_COMPILER_TYPE=	clang
 .else
-BUILD_DEPENDS+=	${LOCALBASE}/bin/clang34:${PORTSDIR}/lang/clang34
+BUILD_DEPENDS+=	${LOCALBASE}/bin/clang38:${PORTSDIR}/lang/clang38
 CHOSEN_COMPILER_TYPE=	clang
-CPP=	${LOCALBASE}/bin/clang-cpp34
-CC=	${LOCALBASE}/bin/clang34
-CXX=	${LOCALBASE}/bin/clang++34
+CPP=	${LOCALBASE}/bin/clang-cpp38
+CC=	${LOCALBASE}/bin/clang38
+CXX=	${LOCALBASE}/bin/clang++38
 .endif
 .endif
 .endif
