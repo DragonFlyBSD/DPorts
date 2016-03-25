@@ -1,69 +1,42 @@
---- configure.orig	2015-03-15 22:43:31 UTC
+--- configure.orig	2016-03-24 19:52:53.000000000 +0200
 +++ configure
-@@ -4021,7 +4021,7 @@ $as_echo "#define PLATFORM_NO_SYMLINKS 1
- 		mono_cv_clang=no
- 		if test "x$cross_compiling" = "xno"; then
- 			target_win32=yes
--			if test "x$host" == "x$build" -a "x$host" == "x$target"; then
-+			if test "x$host" = "x$build" -a "x$host" = "x$target"; then
- 
- $as_echo "#define TARGET_WIN32 1" >>confdefs.h
- 
-@@ -4074,7 +4074,7 @@ $as_echo "#define MINGW_CROSS_COMPILE 1"
+@@ -4016,7 +4016,7 @@ $as_echo "#define PLATFORM_NO_SYMLINKS 1
  		with_sigaltstack=no
  		use_sigposix=yes
  		;;
 -	*-*-*freebsd*)
-+	*-*-*freebsd*|*-*-dragonfly*)
++	*-*-*freebsd*|*-*-*dragonfly*)
  		host_win32=no
  		if test "x$PTHREAD_CFLAGS" = "x"; then
  			CPPFLAGS="$CPPFLAGS -DGC_FREEBSD_THREADS"
-@@ -4090,7 +4090,8 @@ $as_echo "#define MINGW_CROSS_COMPILE 1"
- 			LDFLAGS="$LDFLAGS $PTHREAD_LIBS -L/usr/local/lib"
- 			libmono_ldflags="$PTHREAD_LIBS"
- 		fi
--		CPPFLAGS="$CPPFLAGS -DPLATFORM_BSD"
-+		CPPFLAGS="$CPPFLAGS -DPLATFORM_BSD -DPLATFORM_BSD6 -D_GNU_SOURCE -D_REENTRANT -DUSE_MMAP -DUSE_MUNMAP"
-+		libmono_cflags="$libmono_cflags -D_REENTRANT"
- 		need_link_unlink=yes
- 
- $as_echo "#define PTHREAD_POINTER_ID 1" >>confdefs.h
-@@ -17264,6 +17265,9 @@ i?86-*-linux*|i?86-apple-darwin*|x86_64-
- |amd64-*-freebsd*|i?86-*-freebsd*|ia64-*-freebsd*|arm*-*-linux*|sparc*-*-linux*|mips*-*-linux*|x86_64-apple-darwin*|aarch64*)
-     pic_options='-fPIC'
-     ;;
-+*-*-dragonfly*)
-+    pic_options='-fPIC'
-+    ;;
- ?86-pc-cygwin*|i?86-pc-cygwin*|i?86-pc-mingw32*)
-     pic_options='-DDLL_EXPORT'
-     ;;
-@@ -25117,6 +25121,9 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -21790,7 +21790,7 @@ $as_echo "no" >&6; }
+ # and libpthread does not exist
+ #
+ 	case "${host}" in
+-		*-*-*freebsd*)
++		*-*-*freebsd*|*-*-*dragonfly*)
+ 			{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for main in -lpthread" >&5
+ $as_echo_n "checking for main in -lpthread... " >&6; }
+ if ${ac_cv_lib_pthread_main+:} false; then :
+@@ -25434,7 +25434,7 @@ $as_echo "#define __mono_ilp32__ 1" >>co
  			sgen_supported=true
  			AOT_SUPPORTED="yes"
  			;;
-+		  dragonfly*)
-+			sgen_supported=true
-+		        ;;
- 		  openbsd*|freebsd*|kfreebsd-gnu*)
- 			sgen_supported=true
- 		        ;;
-@@ -25140,6 +25147,9 @@ $as_echo "#define __mono_ilp32__ 1" >>co
- 			sgen_supported=true
- 			AOT_SUPPORTED="yes"
- 			;;
-+		  dragonfly*)
-+			sgen_supported=true
-+			;;
- 		  openbsd*|freebsd*|kfreebsd-gnu*)
+-		  openbsd*|freebsd*|kfreebsd-gnu*)
++		  dragonfly*|openbsd*|freebsd*|kfreebsd-gnu*)
  			sgen_supported=true
  			;;
-@@ -25665,7 +25675,7 @@ case "$host" in
+ 		  mingw*)
+@@ -26046,6 +26046,12 @@ case "$host" in
+ 	INTL="libintl.so"
  	SQLITE="libsqlite.so"
  	SQLITE3="libsqlite3.so"
++	;;
++    *-*-*dragonfly*)
++    	LIBC="libc.so.8"
++	INTL="libintl.so"
++	SQLITE="libsqlite.so"
++	SQLITE3="libsqlite3.so"
  	;;
--    *-*-*openbsd*)
-+    *-*-*openbsd*|*-*-*dragonfly*)
+     *-*-*openbsd*)
      	LIBC="libc.so"
- 	INTL="libintl.so"
-         SQLITE="libsqlite.so"

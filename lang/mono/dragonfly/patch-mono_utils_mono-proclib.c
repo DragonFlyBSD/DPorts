@@ -1,22 +1,22 @@
---- mono/utils/mono-proclib.c.orig	2013-01-03 20:27:38.888535000 +0100
-+++ mono/utils/mono-proclib.c	2013-01-03 20:32:53.898975000 +0100
-@@ -22,7 +22,9 @@
- #include <sys/param.h>
- #include <sys/types.h>
- #include <sys/sysctl.h>
-+#ifndef __DragonFly__
+--- mono/utils/mono-proclib.c.orig	2015-11-12 11:00:29.000000000 +0200
++++ mono/utils/mono-proclib.c
+@@ -31,7 +31,7 @@
+ #endif
+ #include <sys/resource.h>
+ #endif
+-#if defined(__APPLE__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
++#if defined(__APPLE__) || (defined(__FreeBSD__) && !defined(__DragonFly__)) || defined(__OpenBSD__) || defined(__NetBSD__)
  #include <sys/proc.h>
-+#endif
  #if defined(__APPLE__)
  #include <mach/mach.h>
- #endif
-@@ -35,6 +37,9 @@
- #elif defined(__OpenBSD__)
- #    define kinfo_pid_member p_pid
- #    define kinfo_name_member p_comm
+@@ -43,6 +43,10 @@
+ #    define kinfo_starttime_member kp_proc.p_starttime
+ #    define kinfo_pid_member kp_proc.p_pid
+ #    define kinfo_name_member kp_proc.p_comm
 +#elif defined(__DragonFly__)
-+#define kinfo_pid_member kp_pid
-+#define kinfo_name_member kp_comm
- #else
- #define kinfo_pid_member ki_pid
- #define kinfo_name_member ki_comm
++#    define kinfo_starttime_member kp_start
++#    define kinfo_pid_member kp_pid
++#    define kinfo_name_member kp_comm
+ #elif defined(__OpenBSD__)
+ // Can not figure out how to get the proc's start time on OpenBSD
+ #    undef kinfo_starttime_member 
