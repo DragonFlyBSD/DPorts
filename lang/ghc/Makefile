@@ -29,7 +29,7 @@ EXAMPLESDIR=	${PREFIX}/share/examples/ghc-${GHC_VERSION}
 
 CONFLICTS=	ghc-7.4.* ghc-7.6.* ghc-7.8.*
 
-LIB_DEPENDS+=	libgmp.so:${PORTSDIR}/math/gmp
+LIB_DEPENDS+=	libgmp.so:math/gmp
 
 USE_PERL5=		build
 USES=			autoreconf gmake iconv:translit ncurses perl5 tar:xz
@@ -74,7 +74,7 @@ OPTIONS_DEFINE+=	BOOTH
 
 .if ${PORT_OPTIONS:MDYNAMIC}
 # The version number is needed as lang/gcc installs a different version
-LIB_DEPENDS+=	libffi.so.6:${PORTSDIR}/devel/libffi
+LIB_DEPENDS+=	libffi.so.6:devel/libffi
 .endif
 
 .if empty(PORT_OPTIONS:MBOOT)
@@ -102,8 +102,8 @@ IGNORE=		unsupported ${OPSYS} Operating System
 .endif # MBOOT
 
 .if ${PORT_OPTIONS:MPCLANG}
-BUILD_DEPENDS+=	${LOCALBASE}/bin/clang${LLVM_VERSION}:${PORTSDIR}/lang/clang${LLVM_VERSION}
-RUN_DEPENDS+=	${LOCALBASE}/bin/clang${LLVM_VERSION}:${PORTSDIR}/lang/clang${LLVM_VERSION}
+BUILD_DEPENDS+=	${LOCALBASE}/bin/clang${LLVM_VERSION}:lang/clang${LLVM_VERSION}
+RUN_DEPENDS+=	${LOCALBASE}/bin/clang${LLVM_VERSION}:lang/clang${LLVM_VERSION}
 CC=		${LOCALBASE}/bin/clang${LLVM_VERSION}
 CXX=		${LOCALBASE}/bin/clang++${LLVM_VERSION}
 CPP=		${LOCALBASE}/bin/clang-cpp${LLVM_VERSION}
@@ -150,8 +150,8 @@ CONFIGURE_ARGS+=	--with-system-libffi \
 .endif
 
 .if ${PORT_OPTIONS:MLLVM}
-BUILD_DEPENDS+=		${LOCALBASE}/bin/opt${LLVM_VERSION}:${PORTSDIR}/devel/llvm${LLVM_VERSION}
-RUN_DEPENDS+=		${LOCALBASE}/bin/opt${LLVM_VERSION}:${PORTSDIR}/devel/llvm${LLVM_VERSION}
+BUILD_DEPENDS+=		${LOCALBASE}/bin/opt${LLVM_VERSION}:devel/llvm${LLVM_VERSION}
+RUN_DEPENDS+=		${LOCALBASE}/bin/opt${LLVM_VERSION}:devel/llvm${LLVM_VERSION}
 
 CONFIGURE_ARGS+=	--with-opt=${LOCALBASE}/bin/opt${LLVM_VERSION} \
 			--with-llc=${LOCALBASE}/bin/llc${LLVM_VERSION}
@@ -212,8 +212,8 @@ CONFIGURE_ENV+=	PATH=${SLAVES_PREFIX}/bin:${PATH}
 
 .endif # MBOOTH
 
-BUILD_DEPENDS+=	docbook-xsl>0:${PORTSDIR}/textproc/docbook-xsl \
-		${LOCALBASE}/bin/xsltproc:${PORTSDIR}/textproc/libxslt
+BUILD_DEPENDS+=	docbook-xsl>0:textproc/docbook-xsl \
+		${LOCALBASE}/bin/xsltproc:textproc/libxslt
 PLIST_FILES+=	bin/haddock bin/haddock-ghc-${GHC_VERSION}
 .endif
 
