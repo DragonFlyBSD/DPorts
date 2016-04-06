@@ -5,6 +5,106 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20160406:
+  AFFECTS: All users of www/pecl-http
+  AUTHOR: bofh
+
+  www/pecl-http has been updated to the latest 3.x stable release, which 
+  supports php70+ and a new port www/pecl-http2 has been created for the
+  2.x branch.
+
+  Should users want to continue to use version 2.x, replace www/pecl-http with
+  www/pecl-http2 as follows:
+
+  Using packages:
+
+    # pkg delete pecl-http
+    # pkg install pecl-http2
+
+  Using ports:
+
+    # portupgrade -o www/pecl-http2 www/pecl-http
+
+  OR
+
+    # portmaster -o www/pecl-http2 www/pecl-http
+
+20160404:
+  AFFECTS: users of lang/ruby21
+  AUTHOR: swills@FreeBSD.org
+
+  The default ruby version has been updated from 2.1 to 2.2.
+
+  If you compile your own ports you may keep 2.1 as the default version by
+  adding the following lines to your /etc/make.conf file:
+
+  #
+  # Keep ruby 2.1 as default version
+  #
+  DEFAULT_VERSIONS+=ruby=2.1
+
+  If you wish to update to the new default version, you need to first stop any
+  software that uses ruby. Then, you will need to follow these steps, depending
+  upon how you manage your system.
+
+  If you use pkgng, simply upgrade:
+  # pkg upgrade
+
+  If you use portmaster, install new ruby, then rebuild all ports that depend
+  on ruby:
+  # portmaster -o lang/ruby22 lang/ruby21
+  # portmaster -R -r ruby-2.2
+
+  If you use portupgrade, install new ruby, then rebuild all ports that depend
+  on ruby:
+
+  # pkg delete -f ruby portupgrade
+  # make -C /usr/ports/ports-mgmt/portupgrade install clean
+  # pkg set -o lang/ruby21:lang/ruby22
+  # portupgrade -x ruby-2.2.\* -fr lang/ruby22
+
+20160404:
+  AFFECTS: mail/spamassassin
+  AUTHOR: adamw@FreeBSD.org
+
+  Support for SSLv3 has been removed from SpamAssassin, because
+  SSLv3 is a Bad Idea. No direct option is provided to re-enable it.
+  If your setup requires use of SSLv3, some instructions are available
+  in FreeBSD PR 208225.
+
+20160331:
+  AFFECTS: security/clamav-unofficial-sigs
+  AUTHOR: lukasz@wasikowski.net, sf@maxempire.com
+
+  This version of clamav-unofficial-sigs is eXtremeSHOK's fork.
+  Configuration file location has changed from
+  %PREFIX%/clamav-unofficial-sigs.conf to
+  %PREFIX%/clamav-unofficial-sigs/
+
+  master.conf and os.conf hold default values, local changes should
+  be placed in user.conf.
+
+20160324:
+  AFFECTS: print/ghostscript9-base
+  AUTHOR: tijl@FreeBSD.org
+
+  The default Ghostscript port has changed from print/ghostscript9-base,
+  which is no longer developed, to print/ghostscript9-agpl-base.  Package
+  users will upgrade automatically.  Ports users can stick with the old
+  port by adding "DEFAULT_VERSIONS+=ghostscript=9" to /etc/make.conf, or
+  move to the new port with:
+
+      portmaster -o print/ghostscript9-agpl-base ghostscript9-base
+  or: portupgrade -o print/ghostscript9-agpl-base print/ghostscript9-base
+
+  And if you have ghostscript9-x11 installed:
+
+      portmaster -o print/ghostscript9-agpl-x11 ghostscript9-x11
+  or: portupgrade -o print/ghostscript9-agpl-x11 print/ghostscript9-x11
+
+  Note that print/ghostscript9-agpl-base is licensed under the AGPLv3
+  while print/ghostscript9-base is licensed under the GPLv3.
+
 20160317:
   AFFECTS: security/openvas-client
   AUTHOR: tijl@FreeBSD.org
@@ -30,9 +130,18 @@ you update your ports collection, before attempting any port upgrades.
   AUTHOR: tijl@FreeBSD.org
 
   The cups-base, cups-client and cups-image packages have been combined
-  into one cups package.  If you build your own ports the easiest way to
-  update is to delete these packages first and then build and install
-  print/cups.
+  into one cups package.
+
+  If you build your own ports the easiest way to update is to delete these
+  packages first and then build and install print/cups.
+
+  If you are using binary packages, depending on the packages installed on
+  your system, pkg(8)'s solver might get confused. In this case do not proceed
+  with the upgrade but delete first the packages:
+
+  pkg delete -fg "cups*"
+
+  Then usual upgrade process: pkg upgrade
 
   The device URI of USB printers has changed so you have to adjust the
   printer configuration.  Go to http://localhost:631/printers/.  Click on
@@ -1088,95 +1197,4 @@ you update your ports collection, before attempting any port upgrades.
   emulators/xen has been renamed emulators/xen-kernel
   A new emulators/xen has been introduced, it is a metaport that depends on
   emulators/xen-kernel and sysutils/xen-tools
-
-20150403:
-  AFFECTS: Users of irc/rbot
-  AUTHOR: bdrewery@FreeBSD.org
-
-  Ruby Bot now has a new upstream maintainer.  The project has been updated
-  to work with Ruby 2.0+.  Some migration is needed to move away from
-  BDB regristry files.  The guide for that is at
-  https://github.com/ruby-rbot/rbot/wiki/MigrationGuide
-
-  rbotdb can be used to backup a BDB database and then restore it to a working
-  format for the new rbot. Update your conf.yaml after with 'core.db: tc'
-  once converted.
-
-20150331:
-AUTHOR: ohauer@FreeBSD.org
-
-  Subversion modules are no longer activated in httpd.conf!
-  To activate the subversion apache modules a dedicated file
-  will be installed as modules.d/220_subversion.conf
-
-20150324:
-  AFFECTS: Users of dns/bind9*
-  AUTHOR: mat@FreeBSD.org
-
-  This is only for FreeBSD 10.0+.
-
-  BIND auto chroot has been added back to the named rc script.  As enabling it
-  by default would most certainly break people's setup, it is not.  To enable
-  it, and chroot it in /var/named, add the following line to your rc.conf file:
-
-  named_chrootdir="/var/named"
-
-  On first launch, the rc script will move the /usr/local/etc/namedb directory
-  into the chroot, and create a symlink to it.
-
-  Note that, if you're running from within a jail, you need to have a
-  /var/named/dev devfs created beforehand, with the null and random devices.
-
-20150323:
-  AFFECTS: Users of net/asterisk* and net/pjsip ports
-  AUTHOR: madpilot@FreeBSD.org
-
-  Due to conflicts between base OpenSSL and ports provided OpenSSL
-  library, which is required by net/libsrtp, the srtp support has
-  to be removed from the default asterisk13 port configuration,
-  otherwise a not working binary would be generated.
-
-  To get SRTP support working in the asterisk ports make sure all
-  dependencies are linked against the same SSL library implementation
-  to avoid runtime conflicts. On 10.1 everything will work fine
-  unless ports SSL libraries are explicitly installed. On older OS
-  versions(10.0 and earlier) you will need to compile all ports
-  with WITH_OPENSSL_PORT=yes.
-
-  To get working SRTP support in asterisk13 with the pjsip backend
-  it is also needed to enable the EXTSRTP option in the pjsip port.
-
-  If the CURL option is enabled also make sure the ftp/curl port
-  is using a GSSAPI implementation linking to the same SSL
-  implementation the other ports are using (BASE or NONE if you're
-  using base OpenSSL, GSSAPI_HEIMDAL GSSAPI_MIT otherwise). If an
-  incompatible option is being used the curl module will cause
-  asterisk to fail on startup due to mixing calls to OpenSSL from
-  base and from ports.
-
-20150322:
-  AFFECTS: Users of security/openssh-portable
-  AUTHOR: bdrewery@FreeBSD.org
-
-  The port now uses VersionAddendum for the port version string. Setting
-  the value to "none" in your sshd_config and restarting openssh will allow
-  removing the version from the banner.
-
-20150321:
-  AFFECTS: Users of x11-servers/xorg-server and other X servers
-  AUTHOR: bapt@FreeBSD.org
-
-  All fonts ports have been modified to respect XDG and install in
-  share/fonts
-
-  The Xorg servers now are looking there by default
-
-  If you experience font related issues, view the output of
-
-  # fc-list
-
-  If the list appears incomplete or has fonts still pointing to
-  /usr/local/lib/X11/fonts you may forcibly update the font cache:
-
-  # fc-cache -fs
 

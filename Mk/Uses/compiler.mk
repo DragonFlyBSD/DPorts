@@ -174,7 +174,7 @@ CC=	clang
 CXX=	clang++
 CHOSEN_COMPILER_TYPE=	clang
 .else
-BUILD_DEPENDS+=	${LOCALBASE}/bin/clang36:${PORTSDIR}/lang/clang36
+BUILD_DEPENDS+=	${LOCALBASE}/bin/clang36:lang/clang36
 CPP=	${LOCALBASE}/bin/clang-cpp36
 CC=	${LOCALBASE}/bin/clang36
 CXX=	${LOCALBASE}/bin/clang++36
@@ -196,7 +196,7 @@ CC=	clang
 CXX=	clang++
 CHOSEN_COMPILER_TYPE=	clang
 .else
-BUILD_DEPENDS+=	${LOCALBASE}/bin/clang38:${PORTSDIR}/lang/clang38
+BUILD_DEPENDS+=	${LOCALBASE}/bin/clang38:lang/clang38
 CPP=	${LOCALBASE}/bin/clang-cpp38
 CC=	${LOCALBASE}/bin/clang38
 CXX=	${LOCALBASE}/bin/clang++38
@@ -218,7 +218,7 @@ CC=	clang
 CXX=	clang++
 CHOSEN_COMPILER_TYPE=	clang
 .else
-BUILD_DEPENDS+=	${LOCALBASE}/bin/clang38:${PORTSDIR}/lang/clang38
+BUILD_DEPENDS+=	${LOCALBASE}/bin/clang38:lang/clang38
 CHOSEN_COMPILER_TYPE=	clang
 CPP=	${LOCALBASE}/bin/clang-cpp38
 CC=	${LOCALBASE}/bin/clang38
@@ -240,7 +240,7 @@ CC=	clang
 CXX=	clang++
 CHOSEN_COMPILER_TYPE=	clang
 .else
-BUILD_DEPENDS+=	${LOCALBASE}/bin/clang38:${PORTSDIR}/lang/clang38
+BUILD_DEPENDS+=	${LOCALBASE}/bin/clang38:lang/clang38
 CHOSEN_COMPILER_TYPE=	clang
 CPP=	${LOCALBASE}/bin/clang-cpp38
 CC=	${LOCALBASE}/bin/clang38
@@ -256,7 +256,7 @@ CHOSEN_COMPILER_TYPE=	gcc
 .if ${COMPILER_FEATURES:Mlibc++}
 LDFLAGS+=	-L${LOCALBASE}/lib/c++
 CXXFLAGS+=	-nostdinc++ -isystem ${LOCALBASE}/include/c++/v1
-BUILD_DEPENDS+=	${LOCALBASE}/lib/c++/libstdc++.so:${PORTSDIR}/devel/libc++
+BUILD_DEPENDS+=	${LOCALBASE}/lib/c++/libstdc++.so:devel/libc++
 .endif
 .endif
 
