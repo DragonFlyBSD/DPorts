@@ -75,8 +75,8 @@ DEBUG_CONFIGURE_WITH=	pydebug
 IPV6_CONFIGURE_ENABLE=	ipv6
 
 LIBFFI_CONFIGURE_ON=	--with-system-ffi
-LIBFFI_LIB_DEPENDS=	libffi.so:${PORTSDIR}/devel/libffi
-EXPAT_LIB_DEPENDS=	libexpat.so:${PORTSDIR}/textproc/expat2
+LIBFFI_LIB_DEPENDS=	libffi.so:devel/libffi
+EXPAT_LIB_DEPENDS=	libexpat.so:textproc/expat2
 
 # Use CPPFLAGS over CFLAGS due to -I ordering, causing elementtree and pyexpat
 # to break in Python 2.7, or preprocessor complaints in Python >= 3.3
