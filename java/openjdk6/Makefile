@@ -20,12 +20,12 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
 LICENSE_DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
-BUILD_DEPENDS=	${LOCALBASE}/bin/zip:${PORTSDIR}/archivers/zip \
-		${LOCALBASE}/bin/unzip:${PORTSDIR}/archivers/unzip \
-		${LOCALBASE}/include/cups/cups.h:${PORTSDIR}/print/cups
-LIB_DEPENDS=	libfreetype.so:${PORTSDIR}/print/freetype2
-RUN_DEPENDS=	javavm:${PORTSDIR}/java/javavmwrapper \
-		dejavu>0:${PORTSDIR}/x11-fonts/dejavu
+BUILD_DEPENDS=	${LOCALBASE}/bin/zip:archivers/zip \
+		${LOCALBASE}/bin/unzip:archivers/unzip \
+		${LOCALBASE}/include/cups/cups.h:print/cups
+LIB_DEPENDS=	libfreetype.so:print/freetype2
+RUN_DEPENDS=	javavm:java/javavmwrapper \
+		dejavu>0:x11-fonts/dejavu
 
 OPENJDK_BUILDDATE=	20_jan_2016
 
@@ -76,7 +76,7 @@ CATEGORIES+=	ipv6
 .endif
 
 .if ${PORT_OPTIONS:MTZUPDATE}
-RUN_DEPENDS+=	java-zoneinfo>0:${PORTSDIR}/java/java-zoneinfo
+RUN_DEPENDS+=	java-zoneinfo>0:java/java-zoneinfo
 .endif
 
 # avoid ARCH in MAKEFLAGS, breaks build
@@ -136,8 +136,8 @@ MAKE_ENV+=	UNLIMITED_CRYPTO="YES"
 
 .if ${PORT_OPTIONS:MSOUND}
 EXTRA_PATCHES+=	${FILESDIR}/alsa-enable.patch
-LIB_DEPENDS+=	libasound.so:${PORTSDIR}/audio/alsa-lib
-RUN_DEPENDS+=	${LOCALBASE}/lib/alsa-lib/libasound_module_pcm_oss.so:${PORTSDIR}/audio/alsa-plugins
+LIB_DEPENDS+=	libasound.so:audio/alsa-lib
+RUN_DEPENDS+=	${LOCALBASE}/lib/alsa-lib/libasound_module_pcm_oss.so:audio/alsa-plugins
 .else
 EXTRA_PATCHES+=	${FILESDIR}/alsa-disable.patch
 .endif
@@ -145,7 +145,7 @@ EXTRA_PATCHES+=	${FILESDIR}/alsa-disable.patch
 .if ${PORT_OPTIONS:MTEST}
 DISTFILES+=	${JTREGFILE}:jtreg
 EXTRACT_ONLY+=	${JTREGFILE}
-BUILD_DEPENDS+=	dejavu>0:${PORTSDIR}/x11-fonts/dejavu
+BUILD_DEPENDS+=	dejavu>0:x11-fonts/dejavu
 USES+=		display:test
 .else
 EXTRA_PATCHES+=	${FILESDIR}/test_gamma-disable.patch
