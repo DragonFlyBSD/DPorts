@@ -11,12 +11,12 @@ COMMENT=	Advanced shading language for production GI renderers
 
 LICENSE=	BSD3CLAUSE
 
-BUILD_DEPENDS=	llvm-config35:${PORTSDIR}/devel/llvm35 \
-		clang35>=3.5:${PORTSDIR}/lang/clang35
-LIB_DEPENDS=	libboost_thread.so:${PORTSDIR}/devel/boost-libs \
-		libIlmImf.so:${PORTSDIR}/graphics/OpenEXR \
-		libOpenImageIO.so:${PORTSDIR}/graphics/openimageio
-RUN_DEPENDS=	llvm-config35:${PORTSDIR}/devel/llvm35
+BUILD_DEPENDS=	llvm-config35:devel/llvm35 \
+		clang35>=3.5:lang/clang35
+LIB_DEPENDS=	libboost_thread.so:devel/boost-libs \
+		libIlmImf.so:graphics/OpenEXR \
+		libOpenImageIO.so:graphics/openimageio
+RUN_DEPENDS=	llvm-config35:devel/llvm35
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	imageworks
@@ -36,7 +36,7 @@ USE_GCC=	yes
 .endif
 
 .if ${OSVERSION} < 1000033
-BUILD_DEPENDS+=	flex>=2.5.37:${PORTSDIR}/textproc/flex
+BUILD_DEPENDS+=	flex>=2.5.37:textproc/flex
 CMAKE_ARGS+=	-DFLEX_EXECUTABLE:STRING=${LOCALBASE}/bin/flex
 CXXFLAGS+=	-I${LOCALBASE}/include/flex
 .endif
