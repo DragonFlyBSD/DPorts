@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	hfm
-PORTVERSION=	1.1.3
+PORTVERSION=	1.2.3
 DISTVERSIONPREFIX=	v
 CATEGORIES=	sysutils
 
@@ -12,9 +12,9 @@ LICENSE=	BSD2CLAUSE
 
 # gb 0.4 includes FreeBSD-specific fixes that this port requires
 #   https://github.com/constabulary/gb/issues/506
-BUILD_DEPENDS=	go>=1.5:${PORTSDIR}/lang/go \
-		gb>=0.4:${PORTSDIR}/devel/gb \
-		${LOCALBASE}/lib/libucl.a:${PORTSDIR}/textproc/libucl
+BUILD_DEPENDS=	go>=1.5:lang/go \
+		gb>=0.4:devel/gb \
+		${LOCALBASE}/lib/libucl.a:textproc/libucl
 
 USES=		compiler:c++11-lang
 USE_GITHUB=	yes
