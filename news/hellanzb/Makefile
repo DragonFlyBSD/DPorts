@@ -12,11 +12,11 @@ COMMENT=	Nzb downloader and post processor
 
 LICENSE=	BSD3CLAUSE
 
-RUN_DEPENDS=	par2:${PORTSDIR}/archivers/par2cmdline \
-		flac:${PORTSDIR}/audio/flac \
-		shorten:${PORTSDIR}/audio/shorten \
-		${PYTHON_PKGNAMEPREFIX}yenc>=0:${PORTSDIR}/news/py-yenc \
-		mac:${PORTSDIR}/audio/mac
+RUN_DEPENDS=	par2:archivers/par2cmdline \
+		flac:audio/flac \
+		shorten:audio/shorten \
+		${PYTHON_PKGNAMEPREFIX}yenc>=0:news/py-yenc \
+		mac:audio/mac
 
 USE_PYTHON=	distutils
 USES=		python:2 twisted:run,web
@@ -27,7 +27,7 @@ OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.options.mk>
 
-RUN_DEPENDS+=	unrar:${PORTSDIR}/archivers/unrar
+RUN_DEPENDS+=	unrar:archivers/unrar
 
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
