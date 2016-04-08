@@ -23,22 +23,24 @@ PATCHFILES=	patch-8u05-b13.xz \
 		patch-8u51-b16.xz \
 		patch-8u60-b23.xz \
 		patch-8u66-b17-1.xz \
-		patch-8u72-b15.xz
+		patch-8u72-b15.xz \
+		patch-8u74-b02.xz \
+		patch-8u77-b03.xz
 
 MAINTAINER=	java@FreeBSD.org
 COMMENT?=	Java Development Kit ${JDK_MAJOR_VERSION}
 
 LICENSE=	GPLv2
 
-BUILD_DEPENDS=	zip:${PORTSDIR}/archivers/zip \
-		${LOCALBASE}/include/cups/cups.h:${PORTSDIR}/print/cups \
-		bash:${PORTSDIR}/shells/bash
-LIB_DEPENDS=	libasound.so:${PORTSDIR}/audio/alsa-lib \
-		libfontconfig.so:${PORTSDIR}/x11-fonts/fontconfig \
-		libfreetype.so:${PORTSDIR}/print/freetype2 \
-		libgif.so:${PORTSDIR}/graphics/giflib
-RUN_DEPENDS=	javavm:${PORTSDIR}/java/javavmwrapper \
-		dejavu>0:${PORTSDIR}/x11-fonts/dejavu
+BUILD_DEPENDS=	zip:archivers/zip \
+		${LOCALBASE}/include/cups/cups.h:print/cups \
+		bash:shells/bash
+LIB_DEPENDS=	libasound.so:audio/alsa-lib \
+		libfontconfig.so:x11-fonts/fontconfig \
+		libfreetype.so:print/freetype2 \
+		libgif.so:graphics/giflib
+RUN_DEPENDS=	javavm:java/javavmwrapper \
+		dejavu>0:x11-fonts/dejavu
 
 USES=		compiler:features dos2unix gmake iconv pkgconfig \
 		shebangfix
@@ -46,7 +48,7 @@ USE_AUTOTOOLS=	autoconf
 USE_XORG=	x11 xext xi xrender xt xtst
 
 .if !exists(/usr/bin/unzip)
-BUILD_DEPENDS+=	${UNZIP_CMD}:${PORTSDIR}/archivers/unzip
+BUILD_DEPENDS+=	${UNZIP_CMD}:archivers/unzip
 .endif
 
 ONLY_FOR_ARCHS=	amd64 armv6 armv6hf i386
@@ -201,8 +203,8 @@ NO_CCACHE=		yes
 NOPRECIOUSMAKEVARS=	yes
 
 JDK_MAJOR_VERSION=	8
-JDK_UPDATE_VERSION=	72
-JDK_BUILD_NUMBER=	15
+JDK_UPDATE_VERSION=	77
+JDK_BUILD_NUMBER=	03
 DIST_BUILD_NUMBER=	132
 JTREG_VERSION=		4.1
 JTREG_BUILD_NUMBER=	b08
@@ -237,7 +239,7 @@ POLICY_DESC=		Install the Unlimited Strength Policy Files
 TZUPDATE_DESC=		Update the time zone data
 
 POLICY_CONFIGURE_ENABLE=	unlimited-crypto
-TZUPDATE_RUN_DEPENDS=	java-zoneinfo>0:${PORTSDIR}/java/java-zoneinfo
+TZUPDATE_RUN_DEPENDS=	java-zoneinfo>0:java/java-zoneinfo
 
 JAVAVMS_COMMENT=	OpenJDK${JDK_MAJOR_VERSION}
 
@@ -254,7 +256,7 @@ TEST_DESC=		Run regression tests
 
 DEBUG_VARS=		JDK_BUILD_TYPE=slowdebug
 DEBUGFAST_VARS=		JDK_BUILD_TYPE=fastdebug
-RELEASE_BUILD_DEPENDS_OFF=	${LOCALBASE}/bin/objcopy:${PORTSDIR}/devel/binutils
+RELEASE_BUILD_DEPENDS_OFF=	${LOCALBASE}/bin/objcopy:devel/binutils
 RELEASE_CONFIGURE_ON=	--disable-debug-symbols
 RELEASE_VARS=		JDK_BUILD_TYPE=release
 RELEASE_VARS_OFF=	OBJCOPY=${LOCALBASE}/bin/objcopy
@@ -305,7 +307,7 @@ EXTRA_PATCHES=	${PATCHDIR}/armv6.patch
 JDK_BUILD_JVM=	server
 .else
 JDK_BUILD_JVM=	zero
-LIB_DEPENDS+=	libffi.so:${PORTSDIR}/devel/libffi
+LIB_DEPENDS+=	libffi.so:devel/libffi
 .endif
 
 BOOTSTRAP_JDKS=	${LOCALBASE}/openjdk8 \
@@ -326,11 +328,11 @@ BOOTSTRAPJDKDIR=	${BJDK}
 .  if ${ARCH:Marmv6*}
 # bootstrap-openjdk is based on openjdk7 and can compile openjdk8
 BOOTSTRAPJDKDIR?=	${LOCALBASE}/bootstrap-openjdk
-BUILD_DEPENDS+=		${BOOTSTRAPJDKDIR}/bin/javac:${PORTSDIR}/java/bootstrap-openjdk
+BUILD_DEPENDS+=		${BOOTSTRAPJDKDIR}/bin/javac:java/bootstrap-openjdk
 .  else
 .    if ${OSREL:S/.//} < 41
 BOOTSTRAPJDKDIR?=	${LOCALBASE}/openjdk7
-BUILD_DEPENDS+=		${BOOTSTRAPJDKDIR}/bin/javac:${PORTSDIR}/java/openjdk7
+BUILD_DEPENDS+=		${BOOTSTRAPJDKDIR}/bin/javac:java/openjdk7
 MAKE_ENV+=		LD_LIBRARY_PATH=""
 .    else
 BOOTSTRAPJDKDIR=	${WRKDIR}/bootstrap
