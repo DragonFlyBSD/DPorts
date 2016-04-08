@@ -13,8 +13,8 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 MAINTAINER=	erik@bz.bzflag.bz
 COMMENT=	Java-like Matrix C++ Templates
 
-BUILD_DEPENDS=	${LOCALBASE}/include/tnt/tnt.h:${PORTSDIR}/devel/tnt
-RUN_DEPENDS=	${LOCALBASE}/include/tnt/tnt.h:${PORTSDIR}/devel/tnt
+BUILD_DEPENDS=	${LOCALBASE}/include/tnt/tnt.h:devel/tnt
+RUN_DEPENDS=	${LOCALBASE}/include/tnt/tnt.h:devel/tnt
 
 USES=		zip
 NO_BUILD=	yes
@@ -25,12 +25,12 @@ DOCS_DISTFILES=	jama102doc.zip
 
 do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/include/tnt
-	${UNZIP_CMD} -o ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME}${EXTRACT_SUFX} \
+	${EXTRACT_CMD} ${EXTRACT_BEFORE_ARGS} ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME}${EXTRACT_SUFX} \
 		-d ${STAGEDIR}${PREFIX}/include/tnt
 	${MKDIR} ${WRKDIR}/doc ${STAGEDIR}${DOCSDIR}
 
 do-install-DOCS-on:
-	${UNZIP_CMD} -o ${DISTDIR}/${DIST_SUBDIR}/jama102doc.zip \
+	${EXTRACT_CMD} ${EXTRACT_BEFORE_ARGS} ${DISTDIR}/${DIST_SUBDIR}/jama102doc.zip \
 		-d ${WRKDIR}/doc
 	(cd ${WRKDIR}/doc/doxygen && ${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR})
 
