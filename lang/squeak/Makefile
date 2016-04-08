@@ -21,14 +21,13 @@ COMMENT=	Full Smalltalk 80 with portability to Unix, Mac, and Windows
 LICENSE=	APACHE20 MIT
 LICENSE_COMB=	multi
 
-BUILD_DEPENDS=	cmake:${PORTSDIR}/devel/cmake \
-		${UNZIP_CMD}:${PORTSDIR}/archivers/unzip \
-		v4l_compat>=1.0.20120501:${PORTSDIR}/multimedia/v4l_compat
-LIB_DEPENDS=	libaudio.so:${PORTSDIR}/audio/nas \
-		libffi.so:${PORTSDIR}/devel/libffi \
-		libasound.so:${PORTSDIR}/audio/alsa-lib \
-		libpulse-simple.so:${PORTSDIR}/audio/pulseaudio \
-		libv4l2.so:${PORTSDIR}/multimedia/libv4l
+BUILD_DEPENDS=	cmake:devel/cmake \
+		v4l_compat>=1.0.20120501:multimedia/v4l_compat
+LIB_DEPENDS=	libaudio.so:audio/nas \
+		libffi.so:devel/libffi \
+		libasound.so:audio/alsa-lib \
+		libpulse-simple.so:audio/pulseaudio \
+		libv4l2.so:multimedia/libv4l
 
 ONLY_FOR_ARCHS=	i386 amd64 powerpc
 
@@ -80,8 +79,8 @@ post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/squeak/${SQUEAK_LIB_DIR}/so.* \
 		${STAGEDIR}${PREFIX}/lib/squeak/${SQUEAK_LIB_DIR}/squeakvm \
 		${STAGEDIR}${PREFIX}/lib/squeak/${SQUEAK_LIB_DIR}/ckformat
-	${UNZIP_CMD} -u ${_DISTDIR}/${SQUEAK_SRC}.zip -d ${WRKDIR}
-	${UNZIP_CMD} -u ${_DISTDIR}/Squeak${IMAGE_FULL_VERSION}.zip \
+	${UNZIP_NATIVE_CMD} -u ${_DISTDIR}/${SQUEAK_SRC}.zip -d ${WRKDIR}
+	${UNZIP_NATIVE_CMD} -u ${_DISTDIR}/Squeak${IMAGE_FULL_VERSION}.zip \
 		-d ${WRKDIR}
 	${INSTALL_DATA} ${IMAGES:S,^,${WRKDIR}/,} \
 		${STAGEDIR}${PREFIX}/lib/squeak
