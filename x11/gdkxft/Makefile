@@ -13,9 +13,9 @@ COMMENT=	Anti-aliased font support for gtk+
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-LIB_DEPENDS=	libXft.so:${PORTSDIR}/x11-fonts/libXft
-LIB_DEPENDS+=	libfontconfig.so:${PORTSDIR}/x11-fonts/fontconfig \
-		libfreetype.so:${PORTSDIR}/print/freetype2
+LIB_DEPENDS=	libXft.so:x11-fonts/libXft
+LIB_DEPENDS+=	libfontconfig.so:x11-fonts/fontconfig \
+		libfreetype.so:print/freetype2
 
 USE_GNOME=	gtk12
 USES=		iconv pkgconfig libtool
