@@ -16,6 +16,7 @@ EXTRACT_ONLY=	${RUST_SOURCE}
 
 MAINTAINER=	mneumann@ntecs.de
 COMMENT=	Language with a focus on memory safety and concurrency
+IGNORE=		Use lang/rust now
 
 LICENSE=	APACHE20 MIT
 LICENSE_COMB=	dual
