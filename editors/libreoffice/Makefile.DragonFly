@@ -1,5 +1,3 @@
-USES:=			${USES:Nzip} zip:infozip
-
 # for now, disabled Firebird SQL support.  It emits
 # z->z_Magic == ZALLOC_SLAB_MAGIC in _slabfree when running
 # the CppunitTest_dbaccess_firebird_test unit test
