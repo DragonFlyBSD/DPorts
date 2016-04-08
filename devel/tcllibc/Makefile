@@ -5,8 +5,8 @@ PKGNAMESUFFIX=	c
 
 COMMENT=	Compiled implementations of some of the modules of Tcllib
 
-BUILD_DEPENDS=	critcl:${PORTSDIR}/devel/critcl
-RUN_DEPENDS=	${PREFIX}/lib/tcllib/pkgIndex.tcl:${PORTSDIR}/devel/tcllib
+BUILD_DEPENDS=	critcl:devel/critcl
+RUN_DEPENDS=	${PREFIX}/lib/tcllib/pkgIndex.tcl:devel/tcllib
 
 MASTERDIR=	${.CURDIR:H}/tcllib
 TMPPLIST=	${WRKDIR}/PLIST
