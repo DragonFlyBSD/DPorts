@@ -11,8 +11,8 @@ COMMENT=	Early experience HTTP/2 module for Apache httpd
 
 LICENSE=	APACHE20
 
-BUILD_DEPENDS=	nghttp2>=1.2:${PORTSDIR}/www/nghttp2
-LIB_DEPENDS=	libnghttp2.so:${PORTSDIR}/www/nghttp2
+BUILD_DEPENDS=	nghttp2>=1.2:www/nghttp2
+LIB_DEPENDS=	libnghttp2.so:www/nghttp2
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	icing
@@ -23,7 +23,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--program-prefix=ext-
 CONFIGURE_ENV=	CONFIG_SHELL=/bin/sh
 
-USE_APACHE=	24+
+USE_APACHE=	24
 MODULENAME=	${GH_PROJECT}
 
 CFLAGS+=	-I${LOCALBASE}/include
