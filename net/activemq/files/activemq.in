@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net/activemq/files/activemq.in 345533 2014-02-21 20:05:35Z tj $
+# $FreeBSD: head/net/activemq/files/activemq.in 411851 2016-03-25 15:29:56Z tj $
 #
 
 # PROVIDE: activemq
@@ -120,7 +120,7 @@ activemq_check_pidfile() {
 		debug "pid file ($_pidfile): no pid in file."
 		return
 	fi
-	if [ -n "`%%LOCALBASE%%/bin/jps -l | grep -e "^$_pid $jar_file\$"`" ]; then
+	if [ -n "`/usr/bin/su -m $activemq_user -c '%%LOCALBASE%%/bin/jps -l' | grep -e "^$_pid $jar_file\$"`" ]; then
 		echo -n $_pid
 	fi
 }
