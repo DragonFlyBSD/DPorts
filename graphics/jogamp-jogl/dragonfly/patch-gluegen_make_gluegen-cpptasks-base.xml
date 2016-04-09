@@ -1,0 +1,11 @@
+--- gluegen/make/gluegen-cpptasks-base.xml.orig	2014-10-10 13:20:51 UTC
++++ gluegen/make/gluegen-cpptasks-base.xml
+@@ -273,7 +273,7 @@
+       </and>
+     </condition>
+     <condition property="isFreeBSD">
+-      <os name="FreeBSD" />
++      <os name="DragonFlyBSD" />
+     </condition>
+     <condition property="isAndroid">
+       <os name="Android" />
