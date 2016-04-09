@@ -83,7 +83,7 @@ PLIST_SUB+=		GJDOC="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MGMP}
-LIB_DEPENDS+=		libgmp.so:${PORTSDIR}/math/gmp
+LIB_DEPENDS+=		libgmp.so:math/gmp
 CONFIGURE_ARGS+=	--with-gmp=${LOCALBASE}
 PLIST_SUB+=		GMP=""
 .else
