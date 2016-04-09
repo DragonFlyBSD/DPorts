@@ -1,5 +1,0 @@
-CFLAGS+= -DMAXNAMLEN=255
-
-dfly-patch:
-	${REINPLACE_CMD} -e 's@\(\*freebsd\*\))@\1|*dragonfly*)@g'	\
-		${WRKSRC}/configure
