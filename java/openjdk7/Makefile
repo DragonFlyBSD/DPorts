@@ -16,12 +16,12 @@ MASTER_SITES=	http://download.java.net/openjdk/jdk${JDK_MAJOR_VERSION}u${JDK_MIN
 		http://icedtea.classpath.org/download/drops/:jaf \
 		APACHE/ant/binaries/:ant
 PATCH_SITES=	LOCAL/glewis/openjdk7
-DISTFILES=	${JDK_SRC_DISTFILE}${EXTRACT_SUFX} \
+DISTFILES=	${JDK_SRC_DISTFILE}.zip \
 		${BOOTSTRAP_DISTFILE}:bootstrap \
-		${ANT_DISTFILE}${EXTRACT_SUFX}:ant
-EXTRACT_ONLY=	${JDK_SRC_DISTFILE}${EXTRACT_SUFX} \
+		${ANT_DISTFILE}.zip:ant
+EXTRACT_ONLY=	${JDK_SRC_DISTFILE}.zip \
 		${BOOTSTRAP_DISTFILE} \
-		${ANT_DISTFILE}${EXTRACT_SUFX}
+		${ANT_DISTFILE}.zip
 PATCHFILES=	patch-7u45-b30.xz \
 		patch-7u51-b30.xz \
 		patch-7u55-b31.xz \
@@ -41,7 +41,7 @@ LICENSE=	GPLv2
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-USES=		compiler dos2unix iconv gmake zip
+USES=		compiler dos2unix iconv gmake
 USE_XORG+=	x11 xext xi xrender xt xtst
 MAKE_ARGS=	CC=${CC:Q} CXX=${CXX:Q} HOST_CC=${CC:Q}
 
@@ -73,14 +73,14 @@ JDK_SRC_DISTFILE=	${PORTNAME}-${JDK_MAJOR_VERSION}u${JDK_MINOR_VERSION}-fcs-src-
 ANT_VERSION=		1.9.4
 ANT_DISTFILE=		apache-ant-${ANT_VERSION}-bin
 
-LIB_DEPENDS+=	libasound.so:${PORTSDIR}/audio/alsa-lib \
-		libfontconfig.so:${PORTSDIR}/x11-fonts/fontconfig \
-		libfreetype.so:${PORTSDIR}/print/freetype2
-BUILD_DEPENDS+=	zip:${PORTSDIR}/archivers/zip \
-		${UNZIP_CMD}:${PORTSDIR}/archivers/unzip \
-		${LOCALBASE}/include/cups/cups.h:${PORTSDIR}/print/cups
-RUN_DEPENDS+=	javavm:${PORTSDIR}/java/javavmwrapper \
-		dejavu>0:${PORTSDIR}/x11-fonts/dejavu
+LIB_DEPENDS+=	libasound.so:audio/alsa-lib \
+		libfontconfig.so:x11-fonts/fontconfig \
+		libfreetype.so:print/freetype2
+BUILD_DEPENDS+=	zip:archivers/zip \
+		${LOCALBASE}/include/cups/cups.h:print/cups
+RUN_DEPENDS+=	javavm:java/javavmwrapper \
+		dejavu>0:x11-fonts/dejavu
+EXTRACT_DEPENDS=	${UNZIP_CMD}:archivers/unzip
 
 DOS2UNIX_FILES=	jdk/src/share/classes/com/sun/org/apache/xml/internal/security/resource/xmlsecurity_en.properties
 
@@ -127,17 +127,13 @@ MAKE_ENV+=	ALT_PARALLEL_COMPILE_JOBS=${MAKE_JOBS_NUMBER}
 
 DEBUG_MAKE_ENV=	ALT_OBJCOPY=${NONEXISTENT}
 POLICY_MAKE_ENV=	UNLIMITED_CRYPTO=1
-TZUPDATE_RUN_DEPENDS=	java-zoneinfo>0:${PORTSDIR}/java/java-zoneinfo
+TZUPDATE_RUN_DEPENDS=	java-zoneinfo>0:java/java-zoneinfo
 
 .include <bsd.port.options.mk>
 
 .if ${OPSYS} == DragonFly
-.  if ${DFLYVERSION} < 400303 # after verification, openjdk6 can be used for all DF versions
-BOOTSTRAP_DISTFILE= bootstrap-openjdk-7.25.15.dfly-3.5-${JDK_ARCH}.tar.xz
-.  else
 BOOTSTRAP_DISTFILE= bootstrap-openjdk6-6.0.tar.xz
-BUILD_DEPENDS+=	gcc48:${PORTSDIR}/lang/gcc
-.  endif
+BUILD_DEPENDS+=	gcc48:lang/gcc
 .endif
 
 BOOTSTRAPJDKDIR=	${WRKDIR}/bootstrap
