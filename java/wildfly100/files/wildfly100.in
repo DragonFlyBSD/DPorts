@@ -2,7 +2,7 @@
 #
 # %%APP_SHORTNAME%% startup script.
 #
-# $FreeBSD: head/java/wildfly100/files/wildfly100.in 403945 2015-12-18 01:11:38Z junovitch $
+# $FreeBSD: head/java/wildfly100/files/wildfly100.in 411975 2016-03-27 01:58:45Z junovitch $
 #
 
 # PROVIDE: %%APP_SHORTNAME%%
@@ -51,6 +51,8 @@ export JAVA_VERSION
 		install -d -o ${%%APP_SHORTNAME%%_user} ${%%APP_SHORTNAME%%_logdir}
 	fi
 
+    echo "Making sure all writeable dirs belongs to proper user/group"
+    chown -R ${%%APP_SHORTNAME%%_user}:${%%APP_SHORTNAME%%_group} ${WILDFLY_HOME}/standalone
 	echo "Starting %%APP_SHORTNAME%%."
 	daemon -u ${%%APP_SHORTNAME%%_user} ${WILDFLY_HOME}/bin/standalone.sh ${%%APP_SHORTNAME%%_args} >> ${%%APP_SHORTNAME%%_log_stdout} 2>> ${%%APP_SHORTNAME%%_log_stderr}
 
