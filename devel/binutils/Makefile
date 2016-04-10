@@ -31,6 +31,9 @@ GNU_CONFIGURE=	yes
 .if !defined(BUTARGET)
 IGNORE=		target ${PKGNAMEPREFIX}${OPSYS:tl} will never build
 .endif
+.if defined(BUTARGET) && ${BUTARGET:M*-dragonfly}
+IGNORE=		target ${BUTARGET} will never build
+.endif
 BUTARGET?=	${PKGNAMEPREFIX}${OPSYS:tl}
 OPTIONS_EXCLUDE=	NLS
 INFO_PATH=	${PKGNAMEPREFIX:S/-$//}/info
