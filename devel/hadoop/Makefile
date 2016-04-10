@@ -81,7 +81,7 @@ ALL_TARGET=	compile-core-native compile-c++ compile-c++-libhdfs compile-c++-pipe
 .if ${ARCH} == "x86_64"
 _HADOOP_ARCH=	DragonFlyBSD-amd64-64
 .else
-_HADOOP_ARCH=	${OPSYS}-${ARCH}-32
+_HADOOP_ARCH=	FreeBSD-${ARCH}-32
 .endif
 PLIST_SUB+=	HADOOP_ARCH=${_HADOOP_ARCH}
 
