@@ -1,0 +1,11 @@
+--- configure.ac.intermediate	2016-04-10 14:17:20 UTC
++++ configure.ac
+@@ -81,7 +81,7 @@ case $host in
+ 	threads="pthreads"
+ 	LIBS="${LIBS} -framework IOKit -framework CoreFoundation"
+ 	;;
+-*-freebsd*)
++*-freebsd*|*-dragonfly*)
+ 	AC_MSG_RESULT([ (FreeBSD back-end)])
+ 	AC_DEFINE(OS_FREEBSD, 1, [FreeBSD implementation])
+ 	AC_SUBST(OS_FREEBSD)
