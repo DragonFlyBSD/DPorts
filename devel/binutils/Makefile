@@ -31,7 +31,7 @@ GNU_CONFIGURE=	yes
 .  if !defined(BUTARGET)
 IGNORE=		target ${PKGNAMEPREFIX}${OPSYS:tl} will never build
 .  else
-.    if ${BUTARGET:M*-${OPSYS}}
+.    if ${BUTARGET:M*-${OPSYS:tl}}
 IGNORE=		target ${BUTARGET} will never build
 .    endif
 .  endif
