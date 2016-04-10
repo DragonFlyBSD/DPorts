@@ -28,6 +28,9 @@ USES=		bison gmake libtool tar:bzip2 compiler:env
 GNU_CONFIGURE=	yes
 
 .if defined(PKGNAMEPREFIX)
+.if !defined(BUTARGET)
+IGNORE=		target ${PKGNAMEPREFIX}${OPSYS:tl} will never build
+.endif
 BUTARGET?=	${PKGNAMEPREFIX}${OPSYS:tl}
 OPTIONS_EXCLUDE=	NLS
 INFO_PATH=	${PKGNAMEPREFIX:S/-$//}/info
@@ -47,6 +50,7 @@ INFO=		as \
 .endif
 
 CONFIGURE_ARGS+=	--disable-werror \
+			--with-lib-path=/lib:/usr/lib \
 			--with-sysroot=/
 
 MAKE_ENV+=	ac_cv_func_sbrk=0

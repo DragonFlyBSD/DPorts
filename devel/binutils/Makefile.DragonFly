@@ -1,3 +1,0 @@
-.if ${DFLYVERSION} > 300702
-CONFIGURE_ARGS+= --with-lib-path=/lib:/usr/lib
-.endif
