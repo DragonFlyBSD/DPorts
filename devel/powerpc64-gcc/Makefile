@@ -23,9 +23,6 @@ LIB_DEPENDS=	libgmp.so:math/gmp \
 BUILD_DEPENDS=	${BU_PREFIX}-as:devel/${PKGNAMEPREFIX}binutils
 RUN_DEPENDS=	${BU_PREFIX}-as:devel/${PKGNAMEPREFIX}binutils
 
-PATCH_WRKSRC=	${WRKDIR}/${PORTNAME}-${PORTVERSION}
-WRKSRC=	${WRKDIR}/build-gcc
-
 .if empty(GCC_TARGET)
 # We are building for a FreeBSD target
 GCC_TARGET?=	${PKGNAMEPREFIX}portbld-freebsd10
@@ -43,6 +40,7 @@ PLIST_SUB+=	OPSYS=${OPSYS:tl} OSREL=${OSREL}
 CONFIGURE_ENV=	LC_ALL=C
 MAKE_ENV=	LC_ALL=C
 GNU_CONFIGURE=	yes
+CONFIGURE_OUTSOURCE=	yes
 CONFIGURE_ARGS+=--target=${GCC_TARGET} --disable-nls --enable-languages=c,c++ \
 		--without-headers \
 		--with-gmp=${LOCALBASE} \
@@ -50,8 +48,6 @@ CONFIGURE_ARGS+=--target=${GCC_TARGET} --disable-nls --enable-languages=c,c++ \
 		--with-system-zlib \
 		--with-as=${LOCALBASE}/bin/${BU_PREFIX}-as \
 		--with-ld=${LOCALBASE}/bin/${BU_PREFIX}-ld
-
-CONFIGURE_SCRIPT=	../${PORTNAME}-${PORTVERSION}/configure
 
 ALL_TARGET?=	all-gcc
 INSTALL_TARGET?=	install-gcc
@@ -64,9 +60,6 @@ CONFIGURE_TARGET=	x86_64-portbld-${OPSYS:tl}${OSREL}
 .else
 CONFIGURE_TARGET=	${ARCH}-portbld-${OPSYS:tl}${OSREL}
 .endif
-
-post-extract:
-	@${MKDIR} ${WRKSRC}
 
 post-install:
 	@if [ -f ${STAGEDIR}${PREFIX}/bin/cpp ] ; then \
