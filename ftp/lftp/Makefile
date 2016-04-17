@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	lftp
-PORTVERSION=	4.6.5
-PORTREVISION=	1
+PORTVERSION=	4.7.1
 CATEGORIES=	ftp ipv6
 MASTER_SITES=	http://lftp.yar.ru/ftp/ \
 		http://lftp.yar.ru/ftp/old/ \
@@ -23,6 +22,7 @@ LIB_DEPENDS=	libexpat.so:textproc/expat2
 
 USES=		charsetfix iconv libtool localbase readline shebangfix
 GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	ac_cv_type_max_align_t=yes
 
 PORTDOCS=	AUTHORS BUGS ChangeLog FAQ FEATURES INSTALL \
 		MIRRORS NEWS README README.debug-levels README.modules \
