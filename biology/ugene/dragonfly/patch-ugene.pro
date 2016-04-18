@@ -1,6 +1,6 @@
---- ugene.pro.orig	2014-12-12 19:48:25 UTC
+--- ugene.pro.intermediate	2016-04-18 09:07:54 UTC
 +++ ugene.pro
-@@ -30,7 +30,6 @@ SUBDIRS += \
+@@ -42,7 +42,6 @@ SUBDIRS += \
            src/plugins_checker \
            src/plugins_3rdparty/ball \
            src/plugins_3rdparty/sitecon \
