@@ -31,6 +31,7 @@ RUN_DEPENDS?=	dconf-editor:devel/dconf-editor \
 		${LOCALBASE}/share/gnome-background-properties/gnome-backgrounds.xml:x11-themes/gnome-backgrounds \
 		caribou>=0:accessibility/caribou \
 		${LOCALBASE}/share/sounds/freedesktop/index.theme:audio/freedesktop-sound-theme \
+		ekiga:net-im/ekiga
 
 CONFLICTS?=	gnome3-lite-[0-9]*
 
