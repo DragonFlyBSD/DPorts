@@ -1,0 +1,16 @@
+%%DATADIR%%/LICENSE.i915
+%%DATADIR%%/regen-firmware.sh
+%%DATADIR%%/remove-firmware.sh
+%%DATADIR%%/i915/bxt_dmc_ver1.bin
+%%DATADIR%%/i915/bxt_dmc_ver1_04.bin
+%%DATADIR%%/i915/bxt_dmc_ver1_05.bin
+%%DATADIR%%/i915/bxt_dmc_ver1_06.bin
+%%DATADIR%%/i915/skl_dmc_ver1.bin
+%%DATADIR%%/i915/skl_dmc_ver1_23.bin
+%%DATADIR%%/i915/skl_dmc_ver1_26.bin
+%%DATADIR%%/i915/skl_guc_ver1.bin
+%%DATADIR%%/i915/skl_guc_ver1_1059.bin
+%%DATADIR%%/i915/skl_guc_ver4.bin
+%%DATADIR%%/i915/skl_guc_ver4_3.bin
+%%DATADIR%%/i915/skl_guc_ver6.bin
+%%DATADIR%%/i915/skl_guc_ver6_1.bin
