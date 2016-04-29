@@ -1,0 +1,9 @@
+# remove installed firmware modules from /boot/modules.local
+
+PKG_PREFIX=${PKG_PREFIX:=/usr/local}
+
+case $2 in
+DEINSTALL)
+	sh "${PKG_PREFIX}/share/fw-radeon/remove-firmware.sh"
+;;
+esac

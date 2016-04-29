@@ -1,0 +1,10 @@
+# generate and install firmware modules for use by kldload
+# into /boot/modules.local
+
+PKG_PREFIX=${PKG_PREFIX:=/usr/local}
+
+case $2 in
+POST-INSTALL)
+	sh "${PKG_PREFIX}/share/fw-radeon/regen-firmware.sh"
+;;
+esac
