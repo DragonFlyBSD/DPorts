@@ -1,7 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	asterisk
-PORTVERSION=	13.8.1
+PORTVERSION=	13.8.2
+PORTREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://downloads.asterisk.org/pub/telephony/%SUBDIR%/:main,g729
 MASTER_SITE_SUBDIR=	asterisk/:main \
@@ -143,7 +144,7 @@ LUA_CFLAGS=		-I${LUA_INCDIR}
 LUA_LDFLAGS=		-L${LUA_LIBDIR}
 
 MYSQL_CONFIGURE_WITH=	mysqlclient
-MYSQL_USE=		MYSQL=yes
+MYSQL_USES=		mysql
 
 MP3PLAYER_RUN_DEPENDS=	mpg123:audio/mpg123
 
