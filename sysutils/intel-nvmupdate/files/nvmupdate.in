@@ -1,0 +1,4 @@
+#!/bin/sh
+# $FreeBSD: head/sysutils/intel-nvmupdate/files/nvmupdate.in 413650 2016-04-19 15:19:05Z sbruno $
+cd %%PREFIX%%/%%NVMUPDATE_DIR%%
+./nvmupdate64e $@
