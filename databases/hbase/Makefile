@@ -3,6 +3,7 @@
 
 PORTNAME=	hbase
 PORTVERSION=	1.2.1
+PORTREVISION=	1
 CATEGORIES=	databases java
 MASTER_SITES=	APACHE/${PORTNAME}/${PORTVERSION} \
 		http://kev009.com/freebsd/:maven
@@ -23,7 +24,7 @@ RUN_DEPENDS=	bash:shells/bash \
 USES=		cpe
 CPE_VENDOR=	apache
 USE_JAVA=	yes
-JAVA_VERSION=	1.7
+JAVA_VERSION=	1.7+
 MAKE_ENV+=	JAVA_HOME=${JAVA_HOME} MAVEN_OPTS="-XX:MaxPermSize=256m -Xmx3000m"
 
 OPTIONS_DEFINE=	DOCS
