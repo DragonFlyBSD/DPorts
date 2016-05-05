@@ -39,7 +39,7 @@ FWNAME=		amdgpufw
 FWFILE=		amdgpu-firmware-${FWVERSION}.tar.gz
 FWVERSION=	20160413
 
-NO_ARCH=
+NO_ARCH=	yes
 DATADIR=	${PREFIX}/share/fw-amdgpu
 
 USES=		uidfix
