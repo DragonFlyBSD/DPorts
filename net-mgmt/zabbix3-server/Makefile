@@ -2,14 +2,14 @@
 # $FreeBSD$
 
 PORTNAME=	zabbix3
-PORTVERSION=	3.0.1
-PORTREVISION?=	1
+PORTVERSION=	3.0.2
+PORTREVISION?=	0
 CATEGORIES=	net-mgmt
 MASTER_SITES=	SF/zabbix/ZABBIX%20Latest%20Stable/${PORTVERSION}
 PKGNAMESUFFIX?=	-server
 DISTNAME=	zabbix-${PORTVERSION}
 
-MAINTAINER=	pakhom@pakhom.spb.ru
+MAINTAINER=	pg@pakhom.spb.ru
 COMMENT=	Enterprise-class open source distributed monitoring (${PKGNAMESUFFIX:S/^-//}) LTS
 
 LICENSE=	GPLv2
@@ -99,7 +99,7 @@ PGSQL_CONFIGURE_WITH=	postgresql
 PGSQL_USES=		pgsql
 
 SQLITE_CONFIGURE_WITH=	sqlite3
-SQLITE_USE=		SQLITE=3
+SQLITE_USES=		sqlite:3
 
 ORACLE_CONFIGURE_WITH=	oracle
 
