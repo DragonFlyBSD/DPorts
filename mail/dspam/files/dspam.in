@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/mail/dspam/files/dspam.in 371290 2014-10-20 18:48:31Z pi $
+# $FreeBSD: head/mail/dspam/files/dspam.in 414374 2016-05-01 01:13:06Z junovitch $
 #
 
 # PROVIDE: dspam
@@ -25,7 +25,9 @@ load_rc_config $name
 #defaults
 : ${dspam_enable="NO"}
 : ${dspam_debug="NO"}
-: ${dspam_pidfile:-/var/run/dspam.pid}
+: ${dspam_pidfile:-/var/run/dspam/dspam.pid}
+: ${dspam_user="%%DSPAM_OWNER%%"}
+: ${dspam_group="%%DSPAM_GROUP%%"}
 
 command=%%PREFIX%%/bin/${name}
 

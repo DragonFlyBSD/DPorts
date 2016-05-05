@@ -1,5 +1,5 @@
 # $Tecnik: ports/mail/dspam/files/UPDATING,v 1.16 2006/06/07 23:45:21 itetcu Exp $
-# $FreeBSD: head/mail/dspam/files/UPDATING 371290 2014-10-20 18:48:31Z pi $
+# $FreeBSD: head/mail/dspam/files/UPDATING 414374 2016-05-01 01:13:06Z junovitch $
 #
 # for each PKGNAME or user option change an entry should be added in this file
 # each entry 
@@ -15,6 +15,19 @@ This file concetrate on the FreeBSD / port specific changes and one should read
 also the UPGRADING enclosed in the dspam distribution. You can see it by doing
 in the port directory:
 make extract;  more `find . -type f -maxdepth 2 -name UPGRADING`
+
+###########################################################################
+# dspam-3.10.2_2
+#
+
+Port Changes:
+- Runs as dspam:dspam instead of root:mail [1]
+- Default run directory is now /var/run/dspam [1]
+- Default daemon/client communication port is now 2424 [1]
+- New SETUID option to enable old insecure behavior [1]
+
+[1] Questionable ownership and security on mail/dspam (PR #115957)
+
 
 ###########################################################################
 # dspam-3.10.2
