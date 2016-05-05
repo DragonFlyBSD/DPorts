@@ -18,7 +18,7 @@ FWNAME=		i915fw
 FWFILE=		i915-firmware-${FWVERSION}.tar.gz
 FWVERSION=	20160311
 
-NO_ARCH=
+NO_ARCH=	yes
 DATADIR=	${PREFIX}/share/fw-i915
 
 USES=		uidfix
