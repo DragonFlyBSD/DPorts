@@ -14,3 +14,5 @@ bin/gen-fw_module.sh
 %%DATADIR%%/HOWTO.txt
 %%DATADIR%%/Makefile
 %%DATADIR%%/edid.S
+%%DATADIR%%/regen-firmware.sh
+%%DATADIR%%/remove-firmware.sh
