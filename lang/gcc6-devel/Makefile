@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gcc
-PORTVERSION=	6.0.0.s20160410
+PORTVERSION=	6.1.1.s20160428
 CATEGORIES=	lang java
 MASTER_SITES=	GCC/snapshots/${DISTVERSION}
 PKGNAMESUFFIX=	${SUFFIX}-devel
@@ -12,6 +12,8 @@ COMMENT=	GNU Compiler Collection 6
 
 LICENSE=	GPLv3 GPLv3RLE
 LICENSE_COMB=	multi
+
+BROKEN_powerpc64=	Does not build
 
 LIB_DEPENDS=	libgmp.so:math/gmp \
 		libmpfr.so:math/mpfr \
@@ -64,8 +66,6 @@ CONFIGURE_ARGS+=	--disable-multilib
 
 .if ${ARCH} == "x86_64"
 CONFIGURE_TARGET=	x86_64-portbld-${OPSYS:tl}${OSREL}
-.else
-CONFIGURE_TARGET=	${ARCH}-portbld-${OPSYS:tl}${OSREL}
 .endif
 
 .if ${ARCH} == powerpc64
