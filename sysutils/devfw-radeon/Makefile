@@ -78,7 +78,7 @@ FWNAME=		radeonfw
 FWFILE=		radeon-firmware-${FWVERSION}.tar.gz
 FWVERSION=	20160328
 
-NO_ARCH=
+NO_ARCH=	yes
 DATADIR=	${PREFIX}/share/fw-radeon
 
 USES=		uidfix
