@@ -1,6 +1,1 @@
-# currently segfaults using gcc5, use clang instead
-
-BUILD_DEPENDS+= ${LOCALBASE}/bin/clang36:${PORTSDIR}/lang/clang36
-CPP=		${LOCALBASE}/bin/clang-cpp36
-CC=		${LOCALBASE}/bin/clang36
-CXX=		${LOCALBASE}/bin/clang++36
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NACL}
