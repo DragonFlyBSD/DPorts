@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	simple_components
-PORTVERSION=	4.11
+PORTVERSION=	4.12
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.dmitry-kazakov.de/ada/
 DISTNAME=	components_${PORTVERSION:S/./_/}
