@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	dovecot-pigeonhole
-PORTVERSION=	0.4.13
-PORTREVISION=	1
+PORTVERSION=	0.4.14
 CATEGORIES=	mail
 MASTER_SITES=	http://pigeonhole.dovecot.org/releases/${DOVECOTVERSION}/
 DISTNAME=	${PORTNAME:C/-/-${DOVECOTVERSION}-/}-${PORTVERSION}
@@ -29,7 +28,13 @@ USES=		libtool
 USE_LDCONFIG=	${PREFIX}/lib/dovecot
 USE_OPENSSL=	yes
 
-OPTIONS_DEFINE=	DOCS
+OPTIONS_DEFINE=	DOCS MANAGESIEVE
+OPTIONS_DEFAULT=MANAGESIEVE
+OPTIONS_SUB=	yes
+
+MANAGESIEVE_DESC=		ManageSieve support
+MANAGESIEVE_CONFIGURE_WITH=	managesieve
+
 PORTDOCS=	sieve/extensions/* sieve/plugins/* sieve/locations/*
 
 post-patch:
