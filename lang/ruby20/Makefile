@@ -73,6 +73,9 @@ CPE_VENDOR=	ruby-lang
 CPE_VERSION=	${RUBY_RELVERSION}
 CPE_UPDATE=	p${RUBY_PATCHLEVEL}
 
+DEPRECATED=	Upstream support ended
+EXPIRATION_DATE=	2016-06-01
+
 .include <bsd.port.pre.mk>
 
 # PORTEPOCH/PORTREVISION hack
@@ -236,9 +239,9 @@ regression-test test:
 
 validate:
 	@${MKDIR} ${WRKSRC}/rubyspec
-	rm -rf ${WRKSRC}/rubyspec/*
+	${RM} -rf ${WRKSRC}/rubyspec/*
 	(cd ${WRKSRC}/rubyspec && git clone git://github.com/rubyspec/rubyspec.git)
 	(cd ${WRKSRC}/rubyspec && git clone git://github.com/rubyspec/mspec.git)
-	(cd ${WRKSRC}/rubyspec/rubyspec && env PATH=${WRKSRC}/rubyspec/mspec/bin:${PATH} mspec -t ${PREFIX}/bin/ruby${RUBY_SUFFIX} .)
+	(cd ${WRKSRC}/rubyspec/rubyspec && ${SETENV} PATH=${WRKSRC}/rubyspec/mspec/bin:${PATH} mspec -t ${PREFIX}/bin/ruby${RUBY_SUFFIX} .)
 
 .include <bsd.port.post.mk>
