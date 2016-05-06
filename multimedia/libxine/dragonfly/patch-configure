@@ -1,15 +1,42 @@
---- configure.intermediate	2013-10-23 15:51:17.797659000 +0000
+--- configure.orig	2016-05-05 10:08:20 UTC
 +++ configure
-@@ -26521,7 +26521,7 @@ fi
+@@ -20207,7 +20207,7 @@ fi
+ 
+ 
+ case "$host_or_hostalias" in
+-    *-freebsd*) ;;
++    *-freebsd*|*-dragonfly*) ;;
+ 
+                 *-*-mingw* | *-*-cygwin*)
+ 
+@@ -22906,7 +22906,7 @@ test x"$ac_cv_sys_large_files" != x"" &&
+             default_with_jack=yes
+             default_enable_oss=no
+             ;;
+-        freebsd*|kfreebsd*)
++        dragonfly*|freebsd*|kfreebsd*)
+             default_with_pulseaudio=yes
+             default_with_jack=yes
+             ;;
+@@ -23788,7 +23788,7 @@ fi
+             default_enable_macosx_video=yes
+             ;;
+ 
+-        freebsd*|kfreebsd*)
++        dragonfly*|freebsd*|kfreebsd*)
+             default_enable_vidix=yes
+             default_enable_vdpau=yes
+             ;;
+@@ -26784,7 +26784,7 @@ fi
              default_enable_gnomevfs=no
              default_enable_samba=no
              ;;
 -        freebsd*|kfreebsd*)
-+        freebsd*|kfreebsd*|dragonfly*)
++        dragonfly*|freebsd*|kfreebsd*)
              default_enable_vcdo=yes
              ;;
          netbsd* | openbsd*)
-@@ -26554,7 +26554,7 @@ fi
+@@ -26817,7 +26817,7 @@ fi
  
      if test x"$enable_dvb" != x"no"; then
          case "$host_os" in

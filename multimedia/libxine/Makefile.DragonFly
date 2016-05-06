@@ -1,2 +1,2 @@
-CONFIGURE_ARGS+= --enable-vdpau
-LDFLAGS+=	-lintl
+USES+= alias
+NLS_LDFLAGS=	-lintl
