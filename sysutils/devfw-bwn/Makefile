@@ -44,7 +44,7 @@ FWVERSION_LP=	4.178.10.4
 .if (!defined(DPORTS_BUILDER) && defined(PACKAGE_BUILDING)) && !defined(DEVELOPER)
 NO_PACKAGE=	this is a modified version of a restricted firmware
 .endif
-NO_ARCH=
+NO_ARCH=	yes
 DATADIR=	${PREFIX}/share/fw-bwn
 
 USES=		uidfix
