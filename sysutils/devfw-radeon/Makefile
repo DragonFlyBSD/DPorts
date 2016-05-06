@@ -1,6 +1,7 @@
 
 PORTNAME=	devfw-radeon
 PORTVERSION=	${FWVERSION}
+PORTREVISION=	1
 CATEGORIES=	sysutils graphics
 MASTER_SITES=	https://leaf.dragonflybsd.org/~zrj/dports/fw/
 
@@ -74,7 +75,13 @@ FIRMWARES_UV=								\
 	TAHITI_uvd BONAIRE_uvd TAHITI_vce BONAIRE_vce
 
 WRKSRC=		${WRKDIR}
-FWNAME=		radeonfw
+
+# afterthought: to preserve compatibility, case-insensitivity FS(like fat)
+# use "kmsfw" for all uppercase firmware like TAHITI
+# and "fw" for all lowercase firmware like hawaii
+FWNAME_OLD=		radeonkmsfw	# deprecated old format firmware(si,cik)
+FWNAME_KMS=		radeonkmsfw	# pre radeonsi asic firmware
+FWNAME_NEW=		radeonfw	# new format firmware (si,cik)
 FWFILE=		radeon-firmware-${FWVERSION}.tar.gz
 FWVERSION=	20160328
 
@@ -110,15 +117,15 @@ pre-patch:
 do-build:
 	${CP} ${FILESDIR}/regen-firmware.sh ${WRKSRC}/
 	${CP} ${FILESDIR}/remove-firmware.sh ${WRKSRC}/
-	${REINPLACE_CMD} -e "s@FIRMDIR@${DATADIR}@g"		\
-			 -e "s@FIRMS_OLD@radeonOLDfw_@g"	\
-			 -e "s@FIRMS_R100@${FWNAME}_@g"		\
-			 -e "s@FIRMS_R600@${FWNAME}_@g"		\
-			 -e "s@FIRMS_RCIK@${FWNAME}_@g"		\
-			 -e "s@FIRMS_RNI@${FWNAME}_@g"		\
-			 -e "s@FIRMS_RSI@${FWNAME}_@g"		\
-			 -e "s@FIRMS_UV@${FWNAME}_@g"		\
-		${WRKSRC}/regen-firmware.sh			\
+	${REINPLACE_CMD} -e "s@FIRMDIR@${DATADIR}@g"			\
+			 -e "s@FIRMS_OLD@${FWNAME_OLD}_@g"		\
+			 -e "s@FIRMS_R100@${FWNAME_KMS}_@g"		\
+			 -e "s@FIRMS_R600@${FWNAME_KMS}_@g"		\
+			 -e "s@FIRMS_RCIK@${FWNAME_NEW}_@g"		\
+			 -e "s@FIRMS_RNI@${FWNAME_KMS}_@g"		\
+			 -e "s@FIRMS_RSI@${FWNAME_NEW}_@g"		\
+			 -e "s@FIRMS_UV@${FWNAME_KMS}_@g"		\
+		${WRKSRC}/regen-firmware.sh				\
 		${WRKSRC}/remove-firmware.sh
 	cd ${WRKSRC} && \
 	tar xf ${DISTDIR}/${FWFILE}
