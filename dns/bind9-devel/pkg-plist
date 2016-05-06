@@ -369,6 +369,7 @@ man/man8/dnssec-dsfromkey.8.gz
 man/man8/dnssec-importkey.8.gz
 man/man8/dnssec-keyfromlabel.8.gz
 man/man8/dnssec-keygen.8.gz
+%%PYTHON%%man/man8/dnssec-keymgr.8.gz
 man/man8/dnssec-revoke.8.gz
 man/man8/dnssec-settime.8.gz
 man/man8/dnssec-signzone.8.gz
@@ -397,6 +398,7 @@ sbin/dnssec-dsfromkey
 sbin/dnssec-importkey
 sbin/dnssec-keyfromlabel
 sbin/dnssec-keygen
+%%PYTHON%%sbin/dnssec-keymgr
 sbin/dnssec-revoke
 sbin/dnssec-settime
 sbin/dnssec-signzone
