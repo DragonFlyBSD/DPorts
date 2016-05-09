@@ -41,7 +41,7 @@ FWFILE_LP=	broadcom-wl-${FWVERSION_LP}.tar.bz2
 FWVERSION_LP=	4.178.10.4
 
 # passthrough to dports
-.if (!defined(DPORTS_BUILDER) && defined(PACKAGE_BUILDING)) && !defined(DEVELOPER)
+.if !defined(DPORTS_BUILDER)
 NO_PACKAGE=	this is a modified version of a restricted firmware
 .endif
 NO_ARCH=	yes
