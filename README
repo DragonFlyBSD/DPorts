@@ -23,7 +23,7 @@ a manual fix is provided that allows the FreeBSD update to work on
 DragonFly as well.
 
 Poudriere, from ports-mgmt/poudriere-devel, is used to confirm good builds.
-Upon the event of successly build, a hook will update the patches
+If a build is successful, a hook will update the patches
 repository to indicate a good build, and then another script will generate
 the DPort, place it here, and commit the change.  Theoretically, every
 single DPort should build on DragonFly.  In practice, ports may build only
