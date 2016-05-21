@@ -5,6 +5,45 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20160511:
+  AFFECTS: Users of audio/clementine-player
+  AUTHOR: sbruno@FreeBSD.org
+
+  The audio/clementine-player port has been updated to v1.3.1, the latest
+  upstream release.  The music database code now has a hard dependency on
+  databases/sqlite having the FTS3_TOKENIZER option enabled.  This has 
+  been made the default option in databases/sqlite.
+
+  Without this option, clementine-player will crash on startup.
+
+20160510:
+  AFFECTS: Users of biology/seqan
+  AUTHOR: junovitch@FreeBSD.org
+
+  The biology/seqan port has been split into biology/seqan (only the
+  library) and biology/seqan-apps for the programs based on SeqAn. Both
+  ports are based on version 2.1.1 of the SeqAn repository. There is a new
+  biology/seqan1 port with version 1.3 of SeqAn for backwards compatibility,
+  but this port will likely be deprecated in the next year so please update
+  your software to SeqAn2.
+
+20160505:
+  AFFECTS: Users of www/node
+  AUTHOR: bradleythughes@fastmail.fm
+
+  The www/node port has been updated to node.js v6.0.0, the latest
+  upstream release. Users of node.js v5.x are encouraged to upgrade as
+  soon as possible, as upstream support will end two months from now.
+
+  The www/node5 port has been created to aid users transition. Use one of
+  the following commands to continue using node.js v5.x:
+
+  # pkg install node5
+    or
+  # portmaster -o www/node5 www/node
+    or
+  # portupgrade -o www/node5 www/node
+
 20160503:
   AFFECTS: users of security/libressl
   AUTHOR: brnrd@FreeBSD.org
@@ -1208,78 +1247,4 @@ you update your ports collection, before attempting any port upgrades.
   Before upgrading, you must stop xfce4-power-manager daemon:
 
     xfce4-power-manager --quit
-
-20150519:
-  AFFECTS: users of sysutils/webmin and sysutils/usermin
-  AUTHOR: olgeni@FreeBSD.org
-
-  After upgrading to Perl 5.20 the /usr/bin/perl link will no longer
-  be available. You will have to check your perl-path files and
-  change the path of the Perl interpreter to "/usr/local/bin/perl":
-
-    /usr/local/etc/webmin/perl-path
-    /usr/local/etc/usermin/perl-path
-
-20150513:
-  AFFECTS: users of lang/perl5*
-  AUTHOR: mat@FreeBSD.org
-
-  The default Perl version has been switched to Perl 5.20.  If you are using
-  binary packages to upgrade your system, you do not have anything to do, pkg
-  upgrade will do the right thing.  For the other people, assuming you are
-  migrating from 5.18 to 5.20, do:
-
-  Portupgrade users:
-	portupgrade -o lang/perl5.20 -f lang/perl5.18
-
-	portupgrade -f `pkg shlib -R libperl.so.5.18|tail +2`
-
-  Portmaster users:
-	portmaster -o lang/perl5.20 lang/perl5.18
-
-	portmaster -f `pkg shlib -R libperl.so.5.18|tail +2`
-
-  NOTE:
-    Perl has been removed from base more than ten years ago, so it was way past
-    time for the /usr/bin/perl symlink to be removed from the port.  If for
-    some strange reason, you still need it, you will have to create it
-    manually.
-
-  IMPORTANT:
-    In case you have not updated your system in a while, and specifically,
-    followed the 20141126 instructions regarding the new Perl layout, you
-    should follow those more extensive instructions rather than the
-    conservative presented here.
-
-20150510:
-  AFFECTS: users of mail/postfix mail/postfix-current
-  AUTHOR: ohauer@FreeBSD.org
-
-  The following OPTIONS where renamed to match the default used in most all other ports
-  - SASL2 -> SASL
-  - OPENLDAP -> LDAP
-
-  If any of the old OPTIONS was enabled before, please re-run "make config".
-
-20150508:
-  AFFECTS: users of www/iojs
-  AUTHOR: linpct@gmail.com
-
-  iojs has been updated to 2.0.0. The binary modules may need to be
-  rebuilt due to V8 version ABI change.
-
-20150506:
-  AFFECTS: users of net/asterisk13 with PJSIP (default on) and SRTP (default off) options enabled
-  AUTHOR: madpilot@FreeBSD.org
-
-  This applies ONLY TO USERS COMPILING FROM PORTS:
-  To avoid dependency problems, you must remove the pjsip port
-  before upgrading asterisk13.
-
-    # pkg delete pjsip
-    # portmaster -a
-
-  These steps are unnecessary for those using binary packages.
-
-  Please see the 20150323 entry for background about this problem.
 

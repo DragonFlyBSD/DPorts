@@ -7,6 +7,8 @@ if [ -z "${STAGEDIR}" -o -z "${PREFIX}" -o -z "${LOCALBASE}" ]; then
 	exit 1
 fi
 
+[ -n "${DEBUG_MK_SCRIPTS}" -o -n "${DEBUG_MK_SCRIPTS_QA}" ] && set -x
+
 LF=$(printf '\nX')
 LF=${LF%X}
 
@@ -255,16 +257,19 @@ libperl() {
 					;;
 				*0)
 					has_some_libperl_so=1
-					case "${found}" in
-						*1?)
-							warn "${f} does not have a rpath to ${LIBPERL}, not respecting lddlflags?"
-							;;
-					esac
-					case "${found}" in
-						1??)
-							warn "${f} does not have a runpath to ${LIBPERL}, not respecting lddlflags?"
-							;;
-					esac
+					# Older Perl did not USE_LDCONFIG.
+					if [ ! -f ${LOCALBASE}/${LDCONFIG_DIR}/perl5 ]; then
+						case "${found}" in
+							*1?)
+								warn "${f} does not have a rpath to ${LIBPERL}, not respecting lddlflags?"
+								;;
+						esac
+						case "${found}" in
+							1??)
+								warn "${f} does not have a runpath to ${LIBPERL}, not respecting lddlflags?"
+								;;
+						esac
+					fi
 					;;
 			esac
 		# Use heredoc to avoid losing rc from find|while subshell

@@ -1,4 +1,4 @@
-# $FreeBSD: head/Templates/config.site 400392 2015-10-28 14:23:51Z bdrewery $
+# $FreeBSD: head/Templates/config.site 414724 2016-05-06 20:57:55Z marino $
 # Do not add:
 #	- toolchain related
 #	- arch-dependent values
@@ -714,6 +714,9 @@
 : ${ac_cv_have_decl_wmemmove=yes}
 : ${ac_cv_have_decl_wmemset=yes}
 : ${ac_cv_have_decl_writev=yes}
+
+# long file name support test invasively touches localbase, always true
+: ${ac_cv_sys_long_file_names=yes}
 
 # function specific
 

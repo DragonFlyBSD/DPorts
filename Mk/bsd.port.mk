@@ -1524,6 +1524,7 @@ QA_ENV+=		STAGEDIR=${STAGEDIR} \
 				LOCALBASE=${LOCALBASE} \
 				"STRIP=${STRIP}" \
 				TMPPLIST=${TMPPLIST} \
+				LDCONFIG_DIR="${LDCONFIG_DIR}" \
 				PKGBASE=${PKGBASE}
 .if !empty(USES:Mdesktop-file-utils)
 QA_ENV+=		USESDESKTOPFILEUTILS=yes
@@ -1643,10 +1644,20 @@ INSTALL_TARGET:=	${INSTALL_TARGET:S/^install-strip$/install/g}
 
 # XXX PIE support to be added here
 MAKE_ENV+=	NO_PIE=yes
+# We prefer to pass MK_*=no but it was only supported after a certain
+# revision.  Passing WITHOUT_* may conflict with a make.conf or src.conf's
+# WITH_* value.  Note that ports *do* pull in src.conf.
+.if (${OSVERSION} >= 903510 && ${OSVERSION} < 1000000) || \
+    (${OSVERSION} >= 1003503 && ${OSVERSION} < 1100000) || \
+    ${OSVERSION} >= 1100000
 # We will control debug files.  Don't let builds that use /usr/share/mk
 # split out debug symbols since the plist won't know to expect it.
+MAKE_ENV+=	MK_DEBUG_FILES=no
+MAKE_ENV+=	MK_KERNEL_SYMBOLS=no
+.else
 MAKE_ENV+=	WITHOUT_DEBUG_FILES=yes
 MAKE_ENV+=	WITHOUT_KERNEL_SYMBOLS=yes
+.endif
 
 .if defined(NOPORTDOCS)
 PLIST_SUB+=		PORTDOCS="@comment "
@@ -4191,7 +4202,11 @@ checksum_init=\
 makesum: check-checksum-algorithms
 	@cd ${.CURDIR} && ${MAKE} fetch NO_CHECKSUM=yes \
 		DISABLE_SIZE=yes
-	@if [ -f ${DISTINFO_FILE} ]; then ${CAT} /dev/null > ${DISTINFO_FILE}; fi
+	@if [ -f ${DISTINFO_FILE} ]; then \
+		if ${GREP} -q "^TIMESTAMP " ${DISTINFO_FILE}; then \
+			${GREP} -v "^TIMESTAMP " ${DISTINFO_FILE} > ${DISTINFO_FILE}.sav; \
+		fi; \
+	fi
 	@( \
 		cd ${DISTDIR}; \
 		\
@@ -4202,11 +4217,16 @@ makesum: check-checksum-algorithms
 				eval alg_executable=\$$$$alg; \
 				\
 				if [ $$alg_executable != "NO" ]; then \
-					$$alg_executable $$file >> ${DISTINFO_FILE}; \
+					$$alg_executable $$file >> ${DISTINFO_FILE}.new; \
 				fi; \
 			done; \
-			${ECHO_CMD} "SIZE ($$file) = `${STAT} -f \"%z\" $$file`" >> ${DISTINFO_FILE}; \
-		done \
+			${ECHO_CMD} "SIZE ($$file) = `${STAT} -f \"%z\" $$file`" >> ${DISTINFO_FILE}.new; \
+		done; \
+		if [ ! -f ${DISTINFO_FILE}.sav ] || ! cmp -s ${DISTINFO_FILE}.sav ${DISTINFO_FILE}.new; then \
+			${ECHO_CMD} "TIMESTAMP = `date '+%s'`" > ${DISTINFO_FILE} ; \
+				${CAT} ${DISTINFO_FILE}.new >> ${DISTINFO_FILE} ; \
+		fi ; \
+		rm -f ${DISTINFO_FILE}.new ${DISTINFO_FILE}.sav ; \
 	)
 .endif
 
@@ -5272,7 +5292,8 @@ do-config:
 	@${ECHO_MSG} "===> No options to configure"
 .else
 	@optionsdir=${OPTIONS_FILE:H}; \
-	if [ ${UID} != 0 -a -z "${INSTALL_AS_USER}" -a ! -w "${PORT_DBDIR}" ] ; then \
+	if [ ! -w "${PORT_DBDIR}" -a "`stat -f %u ${PORT_DBDIR:H}`" = 0 ]; \
+	then \
 		${ECHO_MSG} "===>  Switching to root credentials to create $${optionsdir}"; \
 		(${SU_CMD} "${SH} -c \"${MKDIR} $${optionsdir} 2> /dev/null\"") || \
 			(${ECHO_MSG} "===> Cannot create $${optionsdir}, check permissions"; exit 1); \
@@ -5308,7 +5329,8 @@ do-config:
 			${ECHO_CMD} "OPTIONS_FILE_UNSET+=$${i}" >> $${TMPOPTIONSFILE}; \
 		fi; \
 	done; \
-	if [ ${UID} != 0 -a -z "${INSTALL_AS_USER}" -a ! -w "${OPTIONS_FILE:H}" ]; then \
+	if [ ! -w "${OPTIONS_FILE:H}" -a "`stat -f %u ${OPTIONS_FILE:H}`" != ${UID} ]; \
+	then \
 		${ECHO_MSG} "===>  Switching to root credentials to write ${OPTIONS_FILE}"; \
 		${SU_CMD} "${CAT} $${TMPOPTIONSFILE} > ${OPTIONS_FILE}"; \
 		${ECHO_MSG} "===>  Returning to user credentials"; \
