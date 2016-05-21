@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/emulators/tpm-emulator/files/tpmd.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/emulators/tpm-emulator/files/tpmd.in 415449 2016-05-18 13:53:45Z hrs $
 #
 # PROVIDE: tpmd
 # REQUIRE: SERVERS
@@ -16,14 +16,14 @@
 . /etc/rc.subr
 
 name=tpmd
-rcvar=tpmd_enable
+rcvar="${name}_enable"
 command="%%PREFIX%%/bin/${name}"
 
 load_rc_config $name
 
-tpmd_enable=${tpmd_enable-"NO"}
-tpmd_user=${tpmd_user-"%%USERS%%"}
-tpmd_group=${tpmd_group-"%%GROUPS%%"}
+: ${tpmd_enable:="NO"}
+: ${tpmd_user:="%%USERS%%"}
+: ${tpmd_group:="%%GROUPS%%"}
 
 command_args="-o ${tpmd_user} -g ${tpmd_group}"
 unset tpmd_user tpmd_group
