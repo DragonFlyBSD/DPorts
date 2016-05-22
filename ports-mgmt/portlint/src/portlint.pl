@@ -14,8 +14,8 @@
 # bsd.port.mk.  There are significant differences in those so non-FreeBSD code
 # was removed.
 #
-# $FreeBSD: head/ports-mgmt/portlint/src/portlint.pl 413367 2016-04-15 18:30:42Z marcus $
-# $MCom: portlint/portlint.pl,v 1.385 2016/04/15 18:20:46 jclarke Exp $
+# $FreeBSD: head/ports-mgmt/portlint/src/portlint.pl 415278 2016-05-15 18:43:43Z marcus $
+# $MCom: portlint/portlint.pl,v 1.388 2016/05/15 18:42:34 jclarke Exp $
 #
 
 use strict;
@@ -50,7 +50,7 @@ $portdir = '.';
 # version variables
 my $major = 2;
 my $minor = 17;
-my $micro = 0;
+my $micro = 2;
 
 # default setting - for FreeBSD
 my $portsdir = '/usr/ports';
@@ -391,10 +391,13 @@ sub checkdistinfo {
 	while (<IN>) {
 		if (/^\s*$/) {
 			&perror("FATAL", $file, $., "found blank line.");
+			next;
 		}
-		m/(\S+)\s+\((\S+)\)\s+=\s+(\S+)/;
-
-		if ($1 ne "" && $2 ne "" && $3 ne "") {
+		if (/^TIMESTAMP\s+=\s+\d+$/) {
+			# TIMESTAMP is a valid distinfo option
+			next;
+		}
+		if (/(\S+)\s+\((\S+)\)\s+=\s+(\S+)/) {
 			my ($tag, $path, $value) = ($1, $2, $3);
 			$records{$path}{$tag} = $value;
 
