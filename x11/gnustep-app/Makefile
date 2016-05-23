@@ -3,7 +3,7 @@
 
 PORTNAME=	gnustep-app
 PORTVERSION=	2.0.0
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	x11 gnustep
 
 MAINTAINER=	theraven@FreeBSD.org
