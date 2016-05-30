@@ -1,0 +1,11 @@
+--- contrib/ffmpeg/module.defs.bak	2016-05-30 17:00:05.000000000 +0300
++++ contrib/ffmpeg/module.defs
+@@ -80,6 +80,8 @@ else ifeq (1-mingw,$(BUILD.cross)-$(BUIL
+     FFMPEG.GCC.args.extra += -fno-common
+ else ifeq (freebsd,$(BUILD.system))
+     FFMPEG.CONFIGURE.extra += --enable-pthreads --disable-devices
++else ifeq (dragonfly,$(BUILD.system))
++    FFMPEG.CONFIGURE.extra += --enable-pthreads --disable-devices
+ else
+     FFMPEG.CONFIGURE.extra += --enable-pthreads
+ endif

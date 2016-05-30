@@ -1,0 +1,7 @@
+USES+= alias
+
+dfly-patch:
+	${LN} -v ${WRKSRC}/make/variant/gnu.defs		\
+		 ${WRKSRC}/make/variant/dragonfly.defs
+	-${REINPLACE_CMD} -e 's@&& __FreeBSD_version >= 470000@|| defined(__DragonFly__)@g'	\
+		${WRKSRC}/build/contrib/libdvdread/libdvdread-5.0.0-6-gcb1ae87/src/bswap.h
