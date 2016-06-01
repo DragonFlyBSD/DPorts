@@ -1,15 +1,15 @@
 # $FreeBSD$
 
 PORTNAME=	creduce
-DISTVERSION=	2.4.0
+DISTVERSION=	2.5.0
 CATEGORIES=	devel
 MASTER_SITES=	http://embed.cs.utah.edu/creduce/
 
 MAINTAINER=	swills@FreeBSD.org
 COMMENT=	Produces small test cases
 
-BUILD_DEPENDS=	llvm-config37:devel/llvm37
-RUN_DEPENDS=	llvm-config37:devel/llvm37 \
+BUILD_DEPENDS=	llvm-config38:devel/llvm38
+RUN_DEPENDS=	llvm-config38:devel/llvm38 \
 		topformflat:devel/delta \
 		astyle:devel/astyle \
 		p5-Benchmark-Timer>=0:devel/p5-Benchmark-Timer \
@@ -25,7 +25,7 @@ CONFIGURE_FLAGS=	--with-llvm=${LOCALBASE}
 USES=	gmake perl5
 
 dfly-patch:
-	${REINPLACE_CMD} 's,llvm-config,llvm-config37,g' ${WRKSRC}/configure
+	${REINPLACE_CMD} 's,llvm-config,llvm-config38,g' ${WRKSRC}/configure
 
 .include <bsd.port.pre.mk>
 
