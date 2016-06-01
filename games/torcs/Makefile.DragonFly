@@ -1,5 +1,5 @@
 .if !defined(DPORTS_BUILDER)
-MANUAL_PACKAGE_BUILD=	huge (323M packaged)
+MANUAL_PACKAGE_BUILD=	323M package (too big for mirrors)
 .endif
 
 dfly-patch:
