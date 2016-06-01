@@ -1,4 +1,3 @@
-EXTRACT_CMD=${UNZIP_CMD}
-.if defined(DPORTS_BUILDER)
-.undef MANUAL_PACKAGE_BUILD
+.if !defined(DPORTS_BUILDER)
+MANUAL_PACKAGE_BUILD=	879M package (too big for mirrors)
 .endif
