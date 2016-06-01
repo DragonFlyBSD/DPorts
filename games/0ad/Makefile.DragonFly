@@ -1,5 +1,5 @@
-.if defined(DPORTS_BUILDER)
-.undef MANUAL_PACKAGE_BUILD
+.if !defined(DPORTS_BUILDER)
+MANUAL_PACKAGE_BUILD=	570M package (too big for mirrors)
 .endif
 
 USES+=		alias
