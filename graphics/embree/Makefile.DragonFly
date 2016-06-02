@@ -1,0 +1,10 @@
+
+# zrj: just to avoid MAP_HUGETLB, MAP_POPULATE, MAP_PREFAULT_READ
+dfly-patch:
+	${REINPLACE_CMD} -e 's@MAP_ALIGNED_SUPER@0x0@g'	\
+		${WRKSRC}/common/sys/alloc.cpp
+	${REINPLACE_CMD} -e 's@MAP_POPULATE@0x0@g'	\
+			 -e 's@MAP_PREFAULT_READ@0x0@g'	\
+		${WRKSRC}/tests/benchmark.cpp
+	${REINPLACE_CMD} -e 's@\(defined(__FreeBSD__)\)@(\1||defined(__DragonFly__))@g'	\
+		${WRKSRC}/common/math/math.h
