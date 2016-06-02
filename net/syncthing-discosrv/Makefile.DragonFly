@@ -1,4 +1,4 @@
 
-dfly-patch:
-	${LN} -sv ${WRKSRC}/Godeps/_workspace/src/github.com/cznic/fileutil/fileutil_openbsd.go	\
-		  ${WRKSRC}/Godeps/_workspace/src/github.com/cznic/fileutil/fileutil_dragonfly.go
+post-extract:
+	${CP} -v ${WRKSRC}/vendor/github.com/cznic/fileutil/fileutil_openbsd.go	\
+		  ${WRKSRC}/vendor/github.com/cznic/fileutil/fileutil_dragonfly.go
