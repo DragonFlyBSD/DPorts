@@ -90,6 +90,7 @@
 + */
 +#include "config-host.h"
 +
++#include <qemu/osdep.h>
 +#include "net/net.h"
 +#include "clients.h"
 +#include "qemu-common.h"
@@ -220,7 +221,6 @@
 +static int net_vknet_init(NetClientState *peer, const char *model,
 +                          const char *name, const char *sock)
 +{
-+    NetClientState *nc;
 +    VKNETState *s;
 +    struct sockaddr_un sunx;
 +    int fd, len;
@@ -257,7 +257,7 @@
 +    const char *path;
 +
 +    assert(opts->type == NET_CLIENT_OPTIONS_KIND_VKNET);
-+    vknet = opts->u.vknet;
++    vknet = opts->u.vknet.data;
 +    if (vknet->sock == NULL)
 +        path = "/var/run/vknet";
 +    else
