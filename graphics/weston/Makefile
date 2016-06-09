@@ -44,5 +44,6 @@ CONFIGURE_ARGS+=	--disable-egl --enable-weston-launch
 CONFIGURE_ARGS+=	--enable-drm-compositor --disable-rpi-compositor
 CONFIGURE_ARGS+=	--disable-fbdev-compositor --disable-vaapi-recorder
 CONFIGURE_ARGS+=	--disable-dbus --enable-setuid-install
+CONFIGURE_ARGS+=	--with-xserver-path=${PREFIX}/bin/Xwayland
 
 .include <bsd.port.mk>
