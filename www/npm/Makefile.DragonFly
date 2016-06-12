@@ -1,3 +1,0 @@
-dfly-patch:
-	${REINPLACE_CMD} -e "s|'nobody'|'${:!/usr/bin/id -u nobody!}'|" \
-		${WRKSRC}/lib/config/defaults.js
