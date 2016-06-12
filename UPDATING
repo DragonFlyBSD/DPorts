@@ -5,6 +5,73 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20160611
+  AFFECTS: users of textproc/xmlroff
+  AUTHOR: hrs@FreeBSD.org
+
+  The library part of xmlroff has been separated into textproc/libfo.
+  Remove the installed xmlroff first when upgrading it because older
+  xmlroff than 0.6.2_6 have files which libfo installs.  A typical
+  error message is the following:
+
+  pkg-static: libfo-0.6.2 conflicts with xmlroff-0.6.2_5 (installs files into the same place).  Problematic file: /usr/local/include/libfo-0.6/libfo/area/fo-area.h
+
+20160610
+  AFFECTS: users of databases/postgresql-repmgr
+  AUTHOR: bofh@FreeBSD.org
+
+  The port has been repocopied to databases/postgresql-repmgr2 and current
+  post has been updated to 3.x series. If anyone is still looking forward
+  to use the 2.x please upgrade as following.
+
+  # portmaster -o databases/postgresql-repmgr2 databases/postgresql-repmgr
+    or
+  # portupgrade -o databases/postgresql-repmgr2 databases/postgresql-repmgr
+
+  Otherwise if you want to move on with 3.x series just use
+
+  # portmaster -r databases/postgresql-repmgr 
+    or
+  # portupgrade -fr databases/postgresql-repmgr
+
+20160605
+  AFFECTS: Users of www/h2o
+  AUTHOR: junovitch@FreeBSD.org
+
+  File paths no longer have a trailing / appended to them. This enables
+  directing specific paths to a file but may break existing configurations.
+  Refer to https://h2o.examp1e.net/configure/file_directives.html and
+  revise your yaml config appropriately.
+
+20160601
+  AFFECTS: users of security/libressl-devel
+  AUTHOR: brnrd@FreeBSD.org
+
+  The port has been updated to the latest "unstable" version of LibreSSL.
+  The shared library versions of the libraries have been bumped.
+  With this update, the patch for the OPENSSL_VERSION_NUMBER has been
+  removed. This causes issues with a number of ports. Patches for many of
+  these issues can be found on 
+  https://wiki.freebsd.org/LibreSSL/Ports#OPENSSL_VERSION_NUMBER
+
+  After upgrading to 2.4.0, manually update all packages that depend on
+  any of the libraries provided by LibreSSL (libssl, libcrypto and
+  libtls) since the versions of these libraries have changed. Normally,
+  you can obtain the list of dependent software by running the following
+  command:
+
+  # pkg info -r libressl-devel
+
+  Then you should rebuild all ports depending on libressl-devel to avoid
+  dangling shared library dependencies. Poudriere and pkg handle this
+  correctly, portmaster and portupgrade users can use the following to
+  rebuild all dependent ports.
+
+  Portmaster users:
+      portmaster -r libressl-devel
+  Portupgrade users:
+      portupgrade -fr security/libressl-devel
+
 20160527
   AFFECTS: Users of mail/opensmtpd-extras (any of them)
   AUTHOR: adamw@FreeBSD.org
@@ -1309,14 +1376,4 @@ you update your ports collection, before attempting any port upgrades.
       portmaster -o multimedia/avidemux multimedia/avidemux26
   Portupgrade users:
       portupgrade -o multimedia/avidemux multimedia/avidemux26
-
-20150610:
-  AFFECTS: users of databases/postgresql84-server
-  AUTHOR: girgen@FreeBSD.org
-
-  PostgreSQL-8.4 EOL was reached in July 2014. To upgrade to a later version of
-  choice, you need to do a dump+restore of the database.
-  Please follow the instructions at:
-
-     http://www.postgresql.org/docs/8.4/static/install-upgrading.html
 
