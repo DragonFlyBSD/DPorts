@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/dns/knot2/files/knot.in 408674 2016-02-11 02:40:57Z pi $
+# $FreeBSD: head/dns/knot2/files/knot.in 416499 2016-06-07 08:00:17Z pi $
 #
 # PROVIDE: knot
 # REQUIRE: SERVERS cleanvar
@@ -90,7 +90,7 @@ knot_prestart()
 	if [ ! -d /var/db/${name} ]; then
 		install -d -o ${diruser} -g ${dirgroup} /var/db/${name}
 	fi
-	${control} -c ${configfile} checkconf
+	${control} -c ${configfile} conf-check
 }
 
 knot_reload()
