@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/security/opencryptoki/files/pkcsslotd.in 415459 2016-05-18 17:22:59Z hrs $
+# $FreeBSD: head/security/opencryptoki/files/pkcsslotd.in 416685 2016-06-10 18:24:09Z hrs $
 #
 # PROVIDE: pkcsslotd
 # REQUIRE: LOGIN tcsd
@@ -23,7 +23,8 @@ start_precmd=${name}_prestart
 pkcsslotd_prestart () {
 	install -d -o %%USERS%% -g %%GROUPS%% -m 0755 \
 	    /var/run/opencryptoki/swtok \
-	    /var/run/opencryptoki/tpm
+	    /var/run/opencryptoki/tpm \
+	    /var/run/opencryptoki/icsf
 }
 
 load_rc_config $name
