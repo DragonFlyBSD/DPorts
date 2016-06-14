@@ -1,6 +1,6 @@
---- js/src/configure.in.intermediate	2013-11-04 00:39:24.000000000 +0000
-+++ js/src/configure.in
-@@ -2397,7 +2397,7 @@ dnl Checks for header files.
+--- js/src/old-configure.in.orig	2016-06-01 04:11:38 UTC
++++ js/src/old-configure.in
+@@ -2016,7 +2016,7 @@ dnl Checks for header files.
  dnl ========================================================
  AC_HEADER_DIRENT
  case "$target_os" in
@@ -9,7 +9,7 @@
  # for stuff like -lXshm
      CPPFLAGS="${CPPFLAGS} ${X_CFLAGS}"
      ;;
-@@ -2573,7 +2573,7 @@ then
+@@ -2179,7 +2179,7 @@ then
      fi
  
  	case "$target" in
@@ -18,7 +18,7 @@
  			AC_DEFINE(_REENTRANT)
  			AC_DEFINE(_THREAD_SAFE)
  			dnl -pthread links in -lpthread, so don't specify it explicitly.
-@@ -3367,7 +3367,7 @@ if test "$MOZ_MEMORY"; then
+@@ -2770,7 +2770,7 @@ if test "$MOZ_MEMORY"; then
    *-darwin*)
      AC_DEFINE(MOZ_MEMORY_DARWIN)
      ;;
