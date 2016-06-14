@@ -1,0 +1,10 @@
+--- src/snapshots.txt.intermediate	2016-06-13 07:56:21 UTC
++++ src/snapshots.txt
+@@ -8,6 +8,7 @@ S 2016-03-18 235d774
+   openbsd-x86_64 c5b6feda38138a12cd5c05574b585dadebbb5e87
+   freebsd-i386 b5a87e66e3e3eed5f0b68367ad22f25f0be2d4ea
+   freebsd-x86_64 390b9a9f60f3d0d6a52c04d939a0355f572d03b3
++  dragonfly-x86_64 e790279a7b286ddf2e716ccd3bb1b7f0a386a5c7
+ 
+ S 2016-02-17 4d3eebf
+   dragonfly-x86_64 765bb5820ad406e966ec0ac51c8070b656459b02
