@@ -1,14 +1,13 @@
---- src/framework/mlt_property.h.orig	2013-06-03 03:34:35.000000000 +0000
+--- src/framework/mlt_property.h.orig	2016-04-21 02:24:55 UTC
 +++ src/framework/mlt_property.h
-@@ -32,7 +32,10 @@
+@@ -30,7 +30,9 @@
  #include <sys/param.h>
  #endif
  
--#if defined(__GLIBC__) || defined(__DARWIN__) || (__FreeBSD_version >= 900506)
-+#if defined(__GLIBC__) || defined(__DARWIN__) \
-+ || (defined(__FreeBSD__) && __FreeBSD_version >= 900506) \
-+ || (defined(__DragonFly__) && __DragonFly_version > 300502)
+-#if defined(__GLIBC__) || defined(__APPLE__) || (__FreeBSD_version >= 900506)
++#if defined(__GLIBC__) || defined(__APPLE__) || defined __DragonFly__ \
++ || (defined(__FreeBSD__) && __FreeBSD_version >= 900506)
 +#include <wchar.h>
  #include <xlocale.h>
  #else
- typedef void* locale_t;
+ typedef char* locale_t;
