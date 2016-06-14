@@ -1,1 +1,1 @@
-LDFLAGS+= -lkvm -lkinfo -L${LOCALBASE}/lib -lgmodule-2.0 -lintl
+LDFLAGS+= -lkvm -lkinfo
