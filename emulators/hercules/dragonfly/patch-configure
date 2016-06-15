@@ -1,0 +1,11 @@
+--- configure.orig	2015-11-15 22:53:17.000000000 +0200
++++ configure
+@@ -20637,7 +20637,7 @@ case "$host_os" in
+         fi
+         ;;
+ 
+-    *bsd*)
++    *bsd*|*dragonfly*)
+         hc_cv_is_nix=yes
+         hc_cv_is_windows=no
+         hc_cv_is_mingw32=no
