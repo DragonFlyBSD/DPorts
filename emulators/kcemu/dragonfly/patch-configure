@@ -1,0 +1,11 @@
+--- configure.orig	2010-03-07 21:51:37.000000000 +0200
++++ configure
+@@ -6227,7 +6227,7 @@ _ACEOF
+ 		LDFLAGS="$LDFLAGS $use_ms_bitfields -mwindows"
+ 		;;
+ 
+-	freebsd*)
++	freebsd*|dragonfly*)
+ 		HOST_OS="FreeBSD"
+ 		HOST_OS_FREEBSD=1
+ 		 if true; then
