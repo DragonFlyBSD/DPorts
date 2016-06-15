@@ -1,0 +1,18 @@
+--- configure.ac.orig	2015-02-14 17:05:26.000000000 +0200
++++ configure.ac
+@@ -10,6 +10,7 @@ case $host in
+   *mingw*) desmume_arch=windows;;
+   *darwin*) desmume_arch=linux;;
+   *bsd*) desmume_arch=linux;;
++  *dragonfly*) desmume_arch=linux;;
+ esac
+ AC_SUBST(desmume_arch)
+ 
+@@ -291,6 +292,7 @@ esac
+ AS_CASE([$host],
+ 		[*linux*], [AC_DEFINE(HOST_LINUX)],
+ 		[*bsd*]  , [AC_DEFINE(HOST_BSD)],
++		[*dragonfly*]  , [AC_DEFINE(HOST_BSD)],
+ 		[*mingw*], [AC_DEFINE(HOST_WINDOWS)],
+ 		[*darwin*],[AC_DEFINE(HOST_DARWIN)],
+ 		[AC_DEFINE(HOST_UNK)]
