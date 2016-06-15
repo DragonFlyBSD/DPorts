@@ -1,0 +1,11 @@
+--- configure.bak	2016-06-15 16:52:54.000000000 +0300
++++ configure
+@@ -16113,7 +16113,7 @@ $as_echo "#define TARGET_OS_WINDOWS 1" >
+ $as_echo "#define EAI_SYSTEM 11" >>confdefs.h
+ 
+          ;; #(
+-  *freebsd*) :
++  *freebsd*|*dragonfly*) :
+ 
+ $as_echo "#define TARGET_OS_FREEBSD 1" >>confdefs.h
+ 
