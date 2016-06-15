@@ -1,0 +1,5 @@
+USES+= alias ncurses
+
+dfly-patch:
+	${REINPLACE_CMD} -e "s@\(-lncurses\)@-L${LOCALBASE}/lib \1@g"	\
+		${WRKSRC}/makefile
