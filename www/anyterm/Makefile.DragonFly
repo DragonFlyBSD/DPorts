@@ -1,0 +1,6 @@
+USES+= alias
+
+# zrj: links w/o libboost_system too
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-lboost_system@@g'	\
+		${WRKSRC}/common.mk
