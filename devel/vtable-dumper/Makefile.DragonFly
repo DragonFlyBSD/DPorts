@@ -1,0 +1,8 @@
+LIB_DEPENDS+= libelf.so:devel/libelf
+
+CFLAGS+= -I${LOCALBASE}/include -I${LOCALBASE}/include/libelf
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\( dump-vtable.c \)@ ${CFLAGS} \1@g'	\
+			 -e "s@-lelf@-L${LOCALBASE}/lib -lelf@g"	\
+		${WRKSRC}/Makefile
