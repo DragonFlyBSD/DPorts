@@ -1,0 +1,11 @@
+--- configure.ac.orig	2015-06-08 10:27:00.000000000 +0300
++++ configure.ac
+@@ -171,7 +171,7 @@ case "${host_os}" in
+         AC_DEFINE(CZMQ_HAVE_SOLARIS, 1, [Have Solaris OS])
+         CFLAGS="${CFLAGS} -lsocket -lssp"
+         ;;
+-    *freebsd*)
++    *freebsd*|*dragonfly*)
+         # Define on FreeBSD to enable all library features
+         CPPFLAGS="-D__BSD_VISIBLE $CPPFLAGS"
+         AC_DEFINE(CZMQ_HAVE_FREEBSD, 1, [Have FreeBSD OS])
