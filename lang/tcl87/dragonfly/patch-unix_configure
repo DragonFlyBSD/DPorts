@@ -1,0 +1,11 @@
+--- unix/configure.intermediate	2016-06-16 14:36:47 UTC
++++ unix/configure
+@@ -5822,7 +5822,7 @@ fi
+ 
+ fi
+ 	    ;;
+-	FreeBSD-*)
++	FreeBSD-*|DragonFly-*)
+ 	    # This configuration from FreeBSD Ports.
+ 	    SHLIB_CFLAGS="-fPIC"
+ 	    SHLIB_LD="${CC} -shared"
