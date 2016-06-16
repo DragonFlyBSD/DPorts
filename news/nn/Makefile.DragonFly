@@ -1,0 +1,13 @@
+USES+= alias ncurses
+
+# zrj: prevent line splitting and leaving line endings w/o "\" for makefile
+MAKE_ARGS+= CPP="${CC} -E -P"
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-ltermcap@-lncurses@g'	\
+		${WRKSRC}/conf/s-freebsd.h
+	${REINPLACE_CMD} -e '/extern int      errno/d'	\
+		${WRKSRC}/account.c			\
+		${WRKSRC}/global.c			\
+		${WRKSRC}/global.h			\
+		${WRKSRC}/execute.c
