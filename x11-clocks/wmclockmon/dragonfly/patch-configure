@@ -1,0 +1,11 @@
+--- configure.orig	2005-04-07 12:37:43.000000000 +0300
++++ configure
+@@ -4047,7 +4047,7 @@ linux*)
+   ignore_buffers=yes
+   ignore_cached=yes
+   ;;
+-freebsd*)
++freebsd*|dragonfly*)
+   OS=freebsd
+   ignore_wired=yes
+   ignore_cached=yes
