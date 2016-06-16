@@ -1,0 +1,11 @@
+--- configure.orig	2015-04-22 17:11:11.000000000 +0300
++++ configure
+@@ -497,7 +497,7 @@ else
+ 	echo_n "Checking hosttype... "
+ 	echo $_host_os
+ 	case $_host_os in
+-		linux* | openbsd* | freebsd* | kfreebsd* | netbsd* | bsd* | gnu0.* | sunos* | hpux* | beos*)
++		linux* | openbsd* | dragonfly* | freebsd* | kfreebsd* | netbsd* | bsd* | gnu0.* | sunos* | hpux* | beos*)
+ 			DEFINES="$DEFINES -DUNIX"
+ 			_host_os=unix
+ 			;;
