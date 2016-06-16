@@ -1,0 +1,3 @@
+
+# zrj: flock issue
+CFLAGS+= -DSYSV
