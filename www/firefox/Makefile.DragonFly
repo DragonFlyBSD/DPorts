@@ -1,2 +1,11 @@
 MOZ_OPTIONS+= --disable-webrtc
 OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NPULSEAUDIO}
+
+# zrj: override default options to "lite" mode (no dbus,gtk3,pulseaudio etc)
+.if defined(LITE)
+PKGNAMESUFFIX+=	-lite
+CONFLICTS_INSTALL+=	firefox-[0-9].*
+OPTIONS_DEFAULT= BUNDLED_CAIRO FFMPEG ALSA GTK2
+.else
+CONFLICTS_INSTALL+=	firefox-lite-[0-9].*
+.endif
