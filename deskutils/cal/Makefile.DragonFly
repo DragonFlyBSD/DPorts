@@ -1,0 +1,4 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@ifdef \(__FreeBSD__\)@if defined(\1) || defined(__DragonFly__)@g'	\
+		${WRKSRC}/cal.c
