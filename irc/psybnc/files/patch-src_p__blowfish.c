@@ -1,5 +1,5 @@
---- src/p_blowfish.c	2005-06-04 22:22:45.000000000 +0400
-+++ src/p_blowfish.c	2008-02-25 23:42:07.000000000 +0300
+--- src/p_blowfish.c.orig	2016-06-20 14:41:27 UTC
++++ src/p_blowfish.c
 @@ -27,16 +27,21 @@
  static char rcsid[] = "@(#)$Id: p_blowfish.c,v 1.3 2005/06/04 18:00:14 hisi Exp $";
  #endif
@@ -22,7 +22,7 @@
  
  unsigned char *hashstring(unsigned char *str,int len);
  unsigned char *unhashstring(unsigned char *str);
-@@ -478,10 +483,11 @@
+@@ -478,10 +483,11 @@ char * BLOWencrypt(unsigned char *str)
     char *p, *s, *dest, *d, *pt;
     char rim[5],ep[5],rep[5];
     int i;

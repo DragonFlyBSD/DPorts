@@ -1,7 +1,6 @@
- #ifndef SSLSEC
---- ./src/p_string.c	Fri Jul 19 09:01:52 2002
-+++ ../../psybnc.mina/src/p_string.c	Sun Nov 24 17:58:56 2002
-@@ -613,7 +613,7 @@
+--- src/p_string.c.orig	2016-06-20 14:41:27 UTC
++++ src/p_string.c
+@@ -616,7 +616,7 @@ int loadlanguage(char *langf)
      int msg;
      pcontext;
      clearlanguage();
