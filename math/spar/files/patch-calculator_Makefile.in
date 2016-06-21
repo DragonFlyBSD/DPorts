@@ -1,6 +1,6 @@
---- calculator/Makefile.in.orig	Sun Jul  1 02:55:42 2001
-+++ calculator/Makefile.in	Sun Jul  1 02:55:56 2001
-@@ -91,7 +91,7 @@
+--- calculator/Makefile.in.orig	2001-06-26 13:32:25 UTC
++++ calculator/Makefile.in
+@@ -91,7 +91,7 @@ PROGRAMS =  $(bin_PROGRAMS)
  DEFS = @DEFS@ -I. -I$(srcdir) -I..
  CPPFLAGS = @CPPFLAGS@
  LDFLAGS = @LDFLAGS@
