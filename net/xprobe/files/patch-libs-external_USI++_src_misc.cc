@@ -1,4 +1,4 @@
---- libs-external/USI++/src/misc.cc~
+--- libs-external/USI++/src/misc.cc.orig	2005-07-27 08:38:15 UTC
 +++ libs-external/USI++/src/misc.cc
 @@ -1,6 +1,7 @@
  #include "usi++/usi++"
