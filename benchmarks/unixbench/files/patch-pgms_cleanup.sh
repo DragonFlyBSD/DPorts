@@ -1,6 +1,6 @@
---- pgms/cleanup.sh.orig	Sun Dec 19 01:42:45 2004
-+++ pgms/cleanup.sh	Sun Dec 19 01:43:00 2004
-@@ -107,8 +107,8 @@
+--- pgms/cleanup.sh.orig	1997-09-13 02:01:19 UTC
++++ pgms/cleanup.sh
+@@ -107,8 +107,8 @@ do
  	;;
      
      -r) # reason for failure

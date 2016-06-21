@@ -1,6 +1,6 @@
---- src/execl.c.orig	Wed Jul 28 23:46:58 1999
-+++ src/execl.c	Fri Mar 23 09:20:36 2007
-@@ -88,7 +88,7 @@
+--- src/execl.c.orig	1999-07-28 21:46:58 UTC
++++ src/execl.c
+@@ -88,7 +88,7 @@ char	*argv[];
  		fprintf(stderr, "%lu loops\n", iter);
  		exit(0);
  		}
