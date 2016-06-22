@@ -1,2 +1,2 @@
-BINUTILS_DEP:=	${LOCALBASE}/bin/as:${PORTSDIR}/devel/binutils
+BINUTILS_DEP:=	${LOCALBASE}/bin/as:devel/binutils
 BUILD_DEPENDS:=	${BUILD_DEPENDS:S/${BINUTILS_DEP}//}
