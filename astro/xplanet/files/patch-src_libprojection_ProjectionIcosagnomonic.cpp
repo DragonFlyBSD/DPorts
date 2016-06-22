@@ -1,6 +1,6 @@
---- src/libprojection/ProjectionIcosagnomonic.cpp.orig	Tue Jun 14 22:10:36 2005
-+++ src/libprojection/ProjectionIcosagnomonic.cpp	Wed Jun 29 20:11:58 2005
-@@ -26,6 +26,19 @@
+--- src/libprojection/ProjectionIcosagnomonic.cpp.orig	2009-04-16 15:10:08 UTC
++++ src/libprojection/ProjectionIcosagnomonic.cpp
+@@ -26,6 +26,19 @@ using namespace std;
  #define THIGH 3
  #define RATIO (((THIGH)*sqrt(3.0)/2)/(TWIDE))
  

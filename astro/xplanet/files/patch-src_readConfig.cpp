@@ -1,6 +1,6 @@
---- src/readConfig.cpp.orig	Mon May 24 09:11:26 2004
-+++ src/readConfig.cpp	Mon May 24 09:11:45 2004
-@@ -2,6 +2,7 @@
+--- src/readConfig.cpp.orig	2012-03-03 03:20:05 UTC
++++ src/readConfig.cpp
+@@ -4,6 +4,7 @@
  #include <fstream>
  #include <sstream>
  #include <string>
