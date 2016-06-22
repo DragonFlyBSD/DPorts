@@ -1,5 +1,5 @@
 DXFILE=		${LOCALBASE}/share/xsl/docbook/VERSION
-BUILD_DEPENDS+=	xsltproc:${PORTSDIR}/textproc/libxslt \
-		${DXFILE}:${PORTSDIR}/textproc/docbook-xsl
+BUILD_DEPENDS+=	xsltproc:textproc/libxslt \
+		${DXFILE}:textproc/docbook-xsl
 MAKE_ENV+=	LC_ALL=en_US.UTF-8
 
