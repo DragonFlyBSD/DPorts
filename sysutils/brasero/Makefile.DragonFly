@@ -1,1 +1,1 @@
-LIB_DEPENDS+=	libltdl.so:${PORTSDIR}/devel/libltdl
+LIB_DEPENDS+=	libltdl.so:devel/libltdl
