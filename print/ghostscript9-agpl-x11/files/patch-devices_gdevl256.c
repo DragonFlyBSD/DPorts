@@ -1,6 +1,6 @@
---- devices/gdevl256.c.orig	2011-07-17 19:57:32.000000000 +0900
-+++ devices/gdevl256.c	2011-07-17 19:57:39.000000000 +0900
-@@ -302,12 +302,3 @@
+--- devices/gdevl256.c.orig	2015-03-30 08:21:24 UTC
++++ devices/gdevl256.c
+@@ -303,12 +303,3 @@ lvga256_draw_line(gx_device * dev, int x
      gl_line(x0, y0, x1, y1, color);
      return 0;
  }

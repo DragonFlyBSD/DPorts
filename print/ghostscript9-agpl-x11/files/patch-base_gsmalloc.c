@@ -1,6 +1,6 @@
---- base/gsmalloc.c.orig	2015-08-22 03:09:16.838614000 +0900
-+++ base/gsmalloc.c	2015-08-22 03:09:34.776354000 +0900
-@@ -178,7 +178,7 @@
+--- base/gsmalloc.c.orig	2015-03-30 08:21:24 UTC
++++ base/gsmalloc.c
+@@ -178,7 +178,7 @@ gs_heap_alloc_bytes(gs_memory_t * mem, u
      } else {
          uint added = size + sizeof(gs_malloc_block_t);
  

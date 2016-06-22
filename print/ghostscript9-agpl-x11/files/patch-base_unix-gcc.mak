@@ -1,5 +1,5 @@
---- base/unix-gcc.mak.orig	2014-03-26 21:53:47.000000000 +0900
-+++ base/unix-gcc.mak	2014-08-25 00:19:13.000000000 +0900
+--- base/unix-gcc.mak.orig	2015-03-30 08:21:24 UTC
++++ base/unix-gcc.mak
 @@ -22,19 +22,19 @@
  # source, generated intermediate file, and object directories
  # for the graphics library (GL) and the PostScript/PDF interpreter (PS).
@@ -32,7 +32,7 @@
  
  # Do not edit the next group of lines.
  
-@@ -53,11 +53,10 @@
+@@ -53,11 +53,10 @@ PSD=$(PSGENDIR)/
  # the directories also define the default search path for the
  # initialization files (gs_*.ps) and the fonts.
  
@@ -47,7 +47,7 @@
  exec_prefix = $(prefix)
  bindir = $(exec_prefix)/bin
  scriptdir = $(bindir)
-@@ -107,7 +106,7 @@
+@@ -107,7 +106,7 @@ GENOPT=
  #               This uses the more secure temporary file creation call
  #               Enable this if it is available on your platform.
  
@@ -56,7 +56,7 @@
  
  # Define the name of the executable file.
  
-@@ -142,7 +141,7 @@
+@@ -142,7 +141,7 @@ JSRCDIR=jpeg
  # some older JPEG streams that violate the standard. If the JPEG
  # library built from local sources, the patch will be applied.
  
@@ -65,7 +65,7 @@
  JPEG_NAME=jpeg
  
  # Define the directory where the PNG library sources are stored,
-@@ -156,13 +155,13 @@
+@@ -156,13 +155,13 @@ PNGSRCDIR=libpng
  # what its name is.
  # See gs.mak and Make.htm for more information.
  
@@ -81,7 +81,7 @@
  TIFFSRCDIR=tiff
  TIFFCONFDIR=tiff
  TIFFPLATFORM=unix
-@@ -180,12 +179,12 @@
+@@ -180,12 +179,12 @@ ZSRCDIR=zlib
  # what its name is (usually libz, but sometimes libgz).
  # See gs.mak and Make.htm for more information.
  
@@ -96,7 +96,7 @@
  JBIG2_LIB=jbig2dec
  JBIG2SRCDIR=jbig2dec
  
-@@ -225,7 +224,7 @@
+@@ -225,7 +224,7 @@ RANLIB=ranlib
  
  # Define the name of the C compiler.
  
@@ -105,7 +105,7 @@
  
  # Define the name of the linker for the final link step.
  # Normally this is the same as the C compiler.
-@@ -242,7 +241,7 @@
+@@ -242,7 +241,7 @@ GCFLAGS=-Wall -Wstrict-prototypes -Wmiss
  # Define the added flags for standard, debugging, profiling 
  # and shared object builds.
  
@@ -114,7 +114,7 @@
  CFLAGS_DEBUG=-g -O0
  CFLAGS_PROFILE=-pg -O2
  CFLAGS_SO=-fPIC
-@@ -258,7 +257,8 @@
+@@ -258,7 +257,8 @@ CFLAGS_SO=-fPIC
  # We don't include -ansi, because this gets in the way of the platform-
  #   specific stuff that <math.h> typically needs; nevertheless, we expect
  #   gcc to accept ANSI-style function prototypes and function definitions.
@@ -124,7 +124,7 @@
  
  CFLAGS=$(CFLAGS_STANDARD) $(GCFLAGS) $(XCFLAGS)
  
-@@ -269,7 +269,7 @@
+@@ -269,7 +269,7 @@ CFLAGS=$(CFLAGS_STANDARD) $(GCFLAGS) $(X
  #	-R /usr/local/xxx/lib:/usr/local/lib
  # giving the full path names of the shared library directories.
  # XLDFLAGS can be set from the command line.
@@ -133,7 +133,7 @@
  
  LDFLAGS=$(XLDFLAGS)
  
-@@ -280,7 +280,7 @@
+@@ -280,7 +280,7 @@ LDFLAGS=$(XLDFLAGS)
  # Solaris may need -lnsl -lsocket -lposix4.
  # (Libraries required by individual drivers are handled automatically.)
  
@@ -142,7 +142,7 @@
  
  # Define the standard libraries to search at the end of linking.
  # Most platforms require -lpthread for the POSIX threads library;
-@@ -302,7 +302,7 @@
+@@ -302,7 +302,7 @@ STDLIBS=-lm
  # Note that x_.h expects to find the header files in $(XINCLUDE)/X11,
  # not in $(XINCLUDE).
  
@@ -151,7 +151,7 @@
  
  # Define the directory/ies and library names for the X11 library files.
  # XLIBDIRS is for ld and should include -L; XLIBDIR is for LD_RUN_PATH
-@@ -317,29 +317,29 @@
+@@ -317,29 +317,29 @@ XINCLUDE=-I/usr/X11R6/include
  #XLIBS=Xt SM ICE Xext X11
  
  #XLIBDIRS=-L/usr/local/X/lib
@@ -186,7 +186,7 @@
  #FEATURE_DEVS=$(PSD)psl3.dev $(PSD)pdf.dev
  # The following is strictly for testing.
  FEATURE_DEVS_ALL=$(PSD)psl3.dev $(PSD)pdf.dev $(PSD)dpsnext.dev $(PSD)ttfont.dev $(PSD)rasterop.dev $(PSD)double.dev $(PSD)trapping.dev $(PSD)stocht.dev $(GLD)pipe.dev
-@@ -488,6 +488,7 @@
+@@ -488,6 +488,7 @@ include $(GLSRCDIR)/unixlink.mak
  include $(GLSRCDIR)/unix-dll.mak
  include $(GLSRCDIR)/unix-end.mak
  include $(GLSRCDIR)/unixinst.mak

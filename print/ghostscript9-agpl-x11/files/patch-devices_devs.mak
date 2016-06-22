@@ -1,6 +1,6 @@
---- devices/devs.mak.orig	2015-03-30 17:21:24.000000000 +0900
-+++ devices/devs.mak	2015-07-14 08:48:48.795797000 +0900
-@@ -546,7 +546,7 @@
+--- devices/devs.mak.orig	2015-03-30 08:21:24 UTC
++++ devices/devs.mak
+@@ -546,7 +546,7 @@ $(DEVOBJ)gdevxalt.$(OBJ) : $(DEVSRC)gdev
  ### NON PORTABLE, ONLY UNIX WITH GCC SUPPORT
  
  $(DEVOBJ)X11.so : $(x11alt_) $(x11_) $(MAKEDIRS)
