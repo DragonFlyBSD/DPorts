@@ -71,7 +71,7 @@ WEATHER_CONFIGURE_ENABLE=	weather
 .if ${PORT_OPTIONS:MKERBEROS} && exists(/usr/bin/krb5-config)
 CONFIGURE_ARGS+=	--with-krb5=/usr
 KRB5_LIB=		`${LOCALBASE}/bin/krb5-config gssapi --libs`
-BUILD_DEPENDS+=		krb5-config:${PORTSDIR}/security/krb5
+BUILD_DEPENDS+=		krb5-config:security/krb5
 .else
 CONFIGURE_ARGS+=	--without-krb5
 .endif
