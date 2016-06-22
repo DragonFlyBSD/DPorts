@@ -1,1 +1,1 @@
-LIB_DEPENDS+=	libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib
+LIB_DEPENDS+=	libdbus-glib-1.so:devel/dbus-glib
