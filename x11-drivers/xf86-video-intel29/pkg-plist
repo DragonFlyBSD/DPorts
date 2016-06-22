@@ -1,3 +1,40 @@
+%%TOOLS%%bin/intel-DrawSegments
+%%TOOLS%%bin/intel-basic-copyarea
+%%TOOLS%%bin/intel-basic-copyarea-size
+%%TOOLS%%bin/intel-basic-copyplane
+%%TOOLS%%bin/intel-basic-fillrect
+%%TOOLS%%bin/intel-basic-lines
+%%TOOLS%%bin/intel-basic-putimage
+%%TOOLS%%bin/intel-basic-rectangle
+%%TOOLS%%bin/intel-basic-stippledrect
+%%TOOLS%%bin/intel-basic-stress
+%%TOOLS%%bin/intel-basic-string
+%%TOOLS%%bin/intel-basic-tiledrect
+%%TOOLS%%bin/intel-cursor
+%%TOOLS%%bin/intel-cursor-test
+%%TOOLS%%bin/intel-dri2-race
+%%TOOLS%%bin/intel-dri2-speed
+%%TOOLS%%bin/intel-dri2-swap
+%%TOOLS%%bin/intel-dri2-test
+%%TOOLS%%bin/intel-dri3info
+%%TOOLS%%bin/intel-lowlevel-blt-bench
+%%TOOLS%%bin/intel-mixed-stress
+%%TOOLS%%bin/intel-present-race
+%%TOOLS%%bin/intel-present-speed
+%%TOOLS%%bin/intel-present-test
+%%TOOLS%%bin/intel-render-composite-solid
+%%TOOLS%%bin/intel-render-composite-solid-mask
+%%TOOLS%%bin/intel-render-copy-alphaless
+%%TOOLS%%bin/intel-render-copyarea
+%%TOOLS%%bin/intel-render-copyarea-mask
+%%TOOLS%%bin/intel-render-copyarea-size
+%%TOOLS%%bin/intel-render-fill
+%%TOOLS%%bin/intel-render-fill-copy
+%%TOOLS%%bin/intel-render-glyphs
+%%TOOLS%%bin/intel-render-trapezoid
+%%TOOLS%%bin/intel-render-trapezoid-image
+%%TOOLS%%bin/intel-render-triangle
+%%TOOLS%%bin/intel-shm-test
 lib/libI810XvMC.so
 lib/libI810XvMC.so.1
 lib/libI810XvMC.so.1.0.0
@@ -6,6 +43,3 @@ lib/libIntelXvMC.so
 lib/libIntelXvMC.so.1.0.0
 lib/xorg/modules/drivers/intel_drv.so
 man/man4/intel.4x.gz
-@dirrmtry lib/xorg/modules/drivers
-@dirrmtry lib/xorg/modules
-@dirrmtry lib/xorg
