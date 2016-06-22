@@ -1,5 +1,5 @@
---- contrib/japanese/gdevdmpr.c.orig	2014-03-26 21:53:47.000000000 +0900
-+++ contrib/japanese/gdevdmpr.c	2014-08-25 00:36:18.000000000 +0900
+--- contrib/japanese/gdevdmpr.c.orig	2015-03-30 08:21:24 UTC
++++ contrib/japanese/gdevdmpr.c
 @@ -32,7 +32,7 @@
  
  #include "gdevprn.h"
@@ -18,7 +18,7 @@
  #define LOCAL_DEBUG 0
  
  #define DEVICE_NAME "dmprt"
-@@ -402,8 +400,6 @@
+@@ -402,8 +400,6 @@ gdev_dmprt_put_params(gx_device *pdev, g
    if (pddev->dmprt.max_height>0 && pddev->dmprt.max_height<pddev->height)
      pddev->height = pddev->dmprt.max_height;
  
@@ -27,7 +27,7 @@
    return code;
  }
  
-@@ -422,8 +418,6 @@
+@@ -422,8 +418,6 @@ gdev_dmprt_put_dmprt_params(gx_device *p
    if (code < 0) return code;
    if (code == 0) pddev->dmprt.debug_f = vbool;
  
@@ -36,7 +36,7 @@
    code = param_read_bool(plist, "Verbose", &vbool);
    if (code < 0) return code;
    pddev->dmprt.verbose_f = vbool;
-@@ -846,13 +840,12 @@
+@@ -846,13 +840,12 @@ gdev_dmprt_dviprt_lib_fopen(const char *
    char *env;
  
    strcpy(fname,fnamebase);

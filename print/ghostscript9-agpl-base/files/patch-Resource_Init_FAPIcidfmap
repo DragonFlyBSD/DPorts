@@ -1,5 +1,5 @@
---- Resource/Init/FAPIcidfmap.orig	2006-06-01 00:29:52.000000000 +0900
-+++ Resource/Init/FAPIcidfmap	2009-05-15 03:27:31.000000000 +0900
+--- Resource/Init/FAPIcidfmap.orig	2015-03-30 08:21:24 UTC
++++ Resource/Init/FAPIcidfmap
 @@ -29,4 +29,59 @@
  %
  %  /Ryumin-Medium     << /Path (msgothic.ttc) /CIDFontType 0 /FAPI /UFST /CSI [(Japan1) 2] >> ;

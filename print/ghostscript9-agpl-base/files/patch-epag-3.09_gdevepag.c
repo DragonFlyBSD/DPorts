@@ -1,6 +1,6 @@
---- epag/gdevepag.c.orig	Sat Jul  8 13:33:09 2000
-+++ epag/gdevepag.c	Sat Nov 24 15:25:11 2007
-@@ -102,30 +102,30 @@
+--- epag-3.09/gdevepag.c.orig	2000-07-08 04:33:09 UTC
++++ epag-3.09/gdevepag.c
+@@ -102,30 +102,30 @@ typedef struct _epagBubble{
  } EpagBubble;
  
  /* The device descriptors */
@@ -50,7 +50,7 @@
  prn_params_procs(epag_open, gdev_prn_output_page, epag_close,
  		 epag_get_params, epag_put_params);
  gx_device_printer far_data gs_epag_device =
-@@ -140,13 +140,13 @@
+@@ -140,13 +140,13 @@ prn_device(prn_epag_procs, "epag", 
  static char *epson_remote_start = "\033\001@EJL \r\n";
  
  /* Open the printer, adjusting the margins if necessary. */
@@ -66,7 +66,7 @@
  epag_close(gx_device *pdev)
  {
    gdev_prn_open_printer(pdev, 1);
-@@ -163,7 +163,7 @@
+@@ -163,7 +163,7 @@ epag_close(gx_device *pdev)
    return gdev_prn_close(pdev);
  }
  
@@ -75,7 +75,7 @@
  epag_print_page(gx_device_printer *pdev, FILE *fp)
  {
    EpagPageCont cont;
-@@ -205,7 +205,7 @@
+@@ -205,7 +205,7 @@ static char can_inits[] ={
    GS, '2', 'a', 'b', 'P',          /* イメージ描画後下へ */
  };
  
@@ -84,7 +84,7 @@
  epag_printer_initialize(gx_device_printer *pdev, FILE *fp, int copies)
  {
    double xDpi,yDpi;
-@@ -260,7 +260,7 @@
+@@ -260,7 +260,7 @@ epag_printer_initialize(gx_device_printe
      fprintf(fp,"%c%dcoO",GS, copies < 256 ? copies : 255);
  }
  
@@ -93,7 +93,7 @@
  epag_get_params(gx_device *pdev, gs_param_list *plist)
  {
    int code;
-@@ -286,7 +286,7 @@
+@@ -286,7 +286,7 @@ epag_get_params(gx_device *pdev, gs_para
  }
  
  /* Put properties. */
@@ -102,7 +102,7 @@
  epag_put_params(gx_device *pdev, gs_param_list *plist)
  {
    param_read_int(plist, "cRowBuf", &epag_cont.cRowBuf);
-@@ -380,7 +380,7 @@
+@@ -380,7 +380,7 @@ void epag_paper_set(gx_device_printer *p
  /*
   * epag_bubble_flush_all: 残っている bubbleを全て出力する。
   */
@@ -111,7 +111,7 @@
  {
    int i;
    
-@@ -392,7 +392,7 @@
+@@ -392,7 +392,7 @@ private void epag_bubble_flush_all(EpagP
  /*
   * epag_page_cont_init: EpagPageContの初期化、バッファ確保等
   */
@@ -120,7 +120,7 @@
  				 EpagPageCont *cont)
  {
    int bpl;
-@@ -417,15 +417,15 @@
+@@ -417,15 +417,15 @@ private void epag_page_cont_init(gx_devi
    cont->maxY = epag_cont.cRowBuf / cont->bh * cont->bh ;
    if(cont->maxY < cont->bh) cont->maxY = cont->bh;
    
@@ -140,7 +140,7 @@
    bbtbl = (EpagBubble *)cont->bubbleBuffer;
    for(i=0;i<cont->maxBx-1;i++)
      bbtbl[i].next = &bbtbl[i+1];
-@@ -433,15 +433,15 @@
+@@ -433,15 +433,15 @@ private void epag_page_cont_init(gx_devi
    cont->freeBubbleList = &bbtbl[0];
  }
  
@@ -161,7 +161,7 @@
  epag_read_image(EpagPageCont *cont)
  {
    int bh = cont->bh;
-@@ -473,7 +473,7 @@
+@@ -473,7 +473,7 @@ epag_read_image(EpagPageCont *cont)
  /*
   *    bh行分のラスターデータを処理する
   */
@@ -170,7 +170,7 @@
  epag_process_line(EpagPageCont *cont)
  {
    int bh = cont->bh;
-@@ -502,7 +502,7 @@
+@@ -502,7 +502,7 @@ epag_process_line(EpagPageCont *cont)
    else epag_rect_add(cont, 0, cont->maxBx-1);
  }
  
@@ -179,7 +179,7 @@
  epag_is_black(EpagPageCont *cont, int bx)
  {
    int bh  = cont->bh;
-@@ -520,7 +520,7 @@
+@@ -520,7 +520,7 @@ epag_is_black(EpagPageCont *cont, int bx
    return 0;
  }
  
@@ -188,7 +188,7 @@
  epag_rect_add(EpagPageCont *cont,int start,int end)
  {
    int x0 = start * cont->bw;
-@@ -544,7 +544,7 @@
+@@ -544,7 +544,7 @@ epag_rect_add(EpagPageCont *cont,int sta
    }
  }
  
@@ -197,7 +197,7 @@
  epag_bubble_gen(EpagPageCont *cont, int x0, int x1, int y0, int y1)
  {
    EpagBubble *bbl;
-@@ -569,7 +569,7 @@
+@@ -569,7 +569,7 @@ epag_bubble_gen(EpagPageCont *cont, int 
    }
  }
  
@@ -206,7 +206,7 @@
  {
    int bx,bx0,bx1;
    
-@@ -588,7 +588,7 @@
+@@ -588,7 +588,7 @@ private void epag_bubble_flush(EpagPageC
  
  /* イメージを出力 */
  

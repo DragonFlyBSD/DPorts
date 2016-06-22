@@ -1,6 +1,6 @@
---- base/gsicc_create.c.orig	2011-08-05 20:12:20.000000000 +0900
-+++ base/gsicc_create.c	2011-12-06 15:23:14.000000000 +0900
-@@ -113,6 +113,7 @@
+--- base/gsicc_create.c.orig	2015-03-30 08:21:24 UTC
++++ base/gsicc_create.c
+@@ -116,6 +116,7 @@ Note: All profile data must be encoded a
  
     */
  

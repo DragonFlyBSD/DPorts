@@ -1,6 +1,6 @@
---- contrib/contrib.mak.orig	2014-03-26 21:53:47.000000000 +0900
-+++ contrib/contrib.mak	2014-08-25 00:49:19.000000000 +0900
-@@ -943,7 +943,7 @@
+--- contrib/contrib.mak.orig	2015-03-30 08:21:24 UTC
++++ contrib/contrib.mak
+@@ -943,7 +943,7 @@ $(DD)dmprt.dev : $(dmprt_) $(DD)page.dev
  $(DEVOBJ)gdevdmpr.$(OBJ) : $(JAPSRC)gdevdmpr.c $(JAPSRC)dviprlib.h $(PDEVH)
  	$(DEVCC) $(O_)$@ $(C_) $(JAPSRC)gdevdmpr.c
  
@@ -9,7 +9,7 @@
  	$(DEVCC) $(O_)$@ $(C_) $(JAPSRC)dviprlib.c
  
  extra-dmprt-install:
-@@ -1095,3 +1095,5 @@
+@@ -1095,3 +1095,5 @@ extra-upp-install:
  ### ------------ Build/Install special features ------------ ###
  
  install-contrib-extras: extra-dmprt-install extra-upp-install

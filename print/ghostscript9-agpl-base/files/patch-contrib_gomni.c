@@ -1,6 +1,6 @@
---- contrib/gomni.c.orig	2013-04-28 02:09:12.000000000 +0900
-+++ contrib/gomni.c	2013-04-28 02:09:14.000000000 +0900
-@@ -530,7 +530,7 @@
+--- contrib/gomni.c.orig	2015-03-30 08:21:24 UTC
++++ contrib/gomni.c
+@@ -530,7 +530,7 @@ CloseDevice (gx_device * pdev)
        && pDev->pcoreOmni->pszJobOptions
        )
     {
@@ -9,7 +9,7 @@
     }
  
     if (  pDev->pcoreOmni
-@@ -549,7 +549,7 @@
+@@ -549,7 +549,7 @@ CloseDevice (gx_device * pdev)
  
     if (pDev->pcoreOmni)
     {
@@ -18,7 +18,7 @@
        pDev->pcoreOmni = 0;
     }
  
-@@ -720,7 +720,7 @@
+@@ -720,7 +720,7 @@ SetupDevice (gx_device *pgxdev, gs_param
     {
        PDEVSTRUCT p;
  
@@ -27,7 +27,7 @@
        if (!p)
        {
            dprintf ("<<<<<<<<<<<<<<<<<<<<<< ERROR >>>>>>>>>>>>>>>>>>>>>>>\n\n");
-@@ -734,7 +734,7 @@
+@@ -734,7 +734,7 @@ SetupDevice (gx_device *pgxdev, gs_param
  
        memset (pDev, 0, sizeof (Omni_Dev));
  
@@ -36,7 +36,7 @@
  
        if (!pDev->pcoreOmni)
        {
-@@ -783,7 +783,7 @@
+@@ -783,7 +783,7 @@ SetupDevice (gx_device *pgxdev, gs_param
  
        for (i = 0; i < sizeof (apszLibraryPaths)/sizeof (apszLibraryPaths[0]) && !pDev->hmodOmni; i++)
        {
@@ -45,7 +45,7 @@
                                              strlen (cOmnilib)
                                              + strlen (apszLibraryPaths[i])
                                              + 1,
-@@ -796,7 +796,7 @@
+@@ -796,7 +796,7 @@ SetupDevice (gx_device *pgxdev, gs_param
  
                if (fDebugOutput) dprintf2 ("SetupDevice: Trying to load %s = %p\n", pszDeviceLib, pDev->hmodOmni);
            }
@@ -54,7 +54,7 @@
        }
  
        if (!pDev->hmodOmni)
-@@ -810,7 +810,7 @@
+@@ -810,7 +810,7 @@ SetupDevice (gx_device *pgxdev, gs_param
  
           for (i = 0; i < sizeof (apszLibraryPaths)/sizeof (apszLibraryPaths[0]) && !pDev->hmodOmni; i++)
           {
@@ -63,7 +63,7 @@
                                                 strlen (cOmnilib)
                                                 + strlen (apszLibraryPaths[i])
                                                 + 1,
-@@ -830,7 +830,7 @@
+@@ -830,7 +830,7 @@ SetupDevice (gx_device *pgxdev, gs_param
                      g_module_close (pModule);
                   }
               }
@@ -72,7 +72,7 @@
           }
  
           return 1;
-@@ -953,7 +953,7 @@
+@@ -953,7 +953,7 @@ SetupDevice (gx_device *pgxdev, gs_param
           )
        {
           if (!pDev->pcoreOmni->pszJobOptions)
@@ -81,7 +81,7 @@
           memcpy (pDev->pcoreOmni->pszJobOptions, fname.data, fname.size);
           pDev->pcoreOmni->pszJobOptions[fname.size] = '\0';
        }
-@@ -1044,7 +1044,7 @@
+@@ -1044,7 +1044,7 @@ SetupDevice (gx_device *pgxdev, gs_param
  
           for (i = 0; i < sizeof (apszLibraryPaths)/sizeof (apszLibraryPaths[0]) && !pModule; i++)
           {
@@ -90,7 +90,7 @@
                                                strlen (cDialogName)
                                                + strlen (apszLibraryPaths[i])
                                                + 1,
-@@ -1059,7 +1059,7 @@
+@@ -1059,7 +1059,7 @@ SetupDevice (gx_device *pgxdev, gs_param
  
                  pModule = g_module_open (pszDeviceLib, (GModuleFlags)0);
              }
@@ -99,7 +99,7 @@
           }
  
           if (!pModule)
-@@ -1070,7 +1070,7 @@
+@@ -1070,7 +1070,7 @@ SetupDevice (gx_device *pgxdev, gs_param
  
              for (i = 0; i < sizeof (apszLibraryPaths)/sizeof (apszLibraryPaths[0]) && !pModule; i++)
              {
@@ -108,7 +108,7 @@
                                                   strlen (cDialogName)
                                                   + strlen (apszLibraryPaths[i])
                                                   + 1,
-@@ -1092,7 +1092,7 @@
+@@ -1092,7 +1092,7 @@ SetupDevice (gx_device *pgxdev, gs_param
                        g_module_close (pModule);
                     }
                 }
@@ -117,7 +117,7 @@
              }
           }
           else
-@@ -1107,13 +1107,13 @@
+@@ -1107,13 +1107,13 @@ SetupDevice (gx_device *pgxdev, gs_param
  
                 if (pDev->pcoreOmni->pszJobOptions)
                 {
@@ -133,7 +133,7 @@
  
                 strcpy (pDev->pcoreOmni->pszJobOptions, pszSelectedJobProperties);
  
-@@ -1375,7 +1375,7 @@
+@@ -1375,7 +1375,7 @@ PrintPage (gx_device_printer *pgx_prt_de
        iBytesToAlloc += (iNumColors - 1) * sizeof (RGB2);
     }
  
@@ -142,7 +142,7 @@
     if (!pbmi)
     {
        eprintf("<<<<<<<<<<<<<<<<<<<<<< ERROR >>>>>>>>>>>>>>>>>>>>>>>\n\n");
-@@ -1481,7 +1481,7 @@
+@@ -1481,7 +1481,7 @@ PrintPage (gx_device_printer *pgx_prt_de
        }
     }
  
@@ -151,7 +151,7 @@
  
     if (pGSData == 0)
        /* can't allocate row buffer */
-@@ -1501,7 +1501,7 @@
+@@ -1501,7 +1501,7 @@ PrintPage (gx_device_printer *pgx_prt_de
                                  pasyncDev->pDev->iVertDots,
                                  8000*1024);                 /*eight meg buffer */
  
@@ -160,7 +160,7 @@
  
     if(!pBitmapMem)
     {
-@@ -1613,7 +1613,7 @@
+@@ -1613,7 +1613,7 @@ PrintPage (gx_device_printer *pgx_prt_de
              {
                 if (prtMode.iBitCount < 16)
                 {
@@ -169,7 +169,7 @@
  
                    if (pMonoData)
                    {
-@@ -1661,7 +1661,7 @@
+@@ -1661,7 +1661,7 @@ PrintPage (gx_device_printer *pgx_prt_de
                 /* We're done with the mono band */
                 /* now free up the mono buffer so we can get clean data buffer if more lines are to be */
                 /* gray-scaled */
@@ -178,7 +178,7 @@
  
                 pMonoData = NULL;
              }
-@@ -1709,11 +1709,11 @@
+@@ -1709,11 +1709,11 @@ PrintPage (gx_device_printer *pgx_prt_de
  
  done:
  

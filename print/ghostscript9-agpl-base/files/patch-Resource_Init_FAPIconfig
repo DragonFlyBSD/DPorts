@@ -1,5 +1,5 @@
---- Resource/Init/FAPIconfig.orig	2010-04-13 21:50:40.000000000 +0900
-+++ Resource/Init/FAPIconfig	2011-05-17 18:25:59.000000000 +0900
+--- Resource/Init/FAPIconfig.orig	2015-03-30 08:21:24 UTC
++++ Resource/Init/FAPIconfig
 @@ -12,3 +12,7 @@
  % and CID font resource files.
  % "Embedded fonts" are fonts and CID fonts being embedded into a document.

@@ -1,6 +1,6 @@
---- contrib/lips4/gdevlips.c.orig	2011-08-05 20:12:20.000000000 +0900
-+++ contrib/lips4/gdevlips.c	2011-12-06 15:31:38.000000000 +0900
-@@ -62,7 +62,15 @@
+--- contrib/lips4/gdevlips.c.orig	2015-03-30 08:21:24 UTC
++++ contrib/lips4/gdevlips.c
+@@ -62,7 +62,15 @@ lips_media_selection(int width, int heig
          height = tmp;
      }
      for (pt = lips_paper_table; pt->num_unit < 80; pt++)

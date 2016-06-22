@@ -1,8 +1,8 @@
---- contrib/lips4/gdevlips.h.orig	Thu Nov  2 12:09:18 2000
-+++ contrib/lips4/gdevlips.h	Tue Jan 13 01:23:47 2004
-@@ -188,6 +188,14 @@
+--- contrib/lips4/gdevlips.h.orig	2015-03-30 08:21:24 UTC
++++ contrib/lips4/gdevlips.h
+@@ -191,6 +191,14 @@
      bool faceup;\
-     char mediaType[LIPS_MEDIACHAR_MAX];
+     char mediaType[LIPS_MEDIACHAR_MAX]
  
 +/* added by shige 11/06 2003 */
 +#define USE_LIPS_SIZE_ERROR

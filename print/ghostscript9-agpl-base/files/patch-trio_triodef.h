@@ -1,5 +1,5 @@
---- trio/triodef.h.orig	2015-07-19 03:20:32.007345000 +0900
-+++ trio/triodef.h	2015-07-19 03:27:30.381863000 +0900
+--- trio/triodef.h.orig	2015-03-30 08:21:24 UTC
++++ trio/triodef.h
 @@ -185,12 +185,13 @@
  # endif
  #endif

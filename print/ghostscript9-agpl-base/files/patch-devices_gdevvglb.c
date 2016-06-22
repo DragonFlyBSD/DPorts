@@ -1,6 +1,6 @@
---- devices/gdevvglb.c.orig	2011-07-17 19:56:33.000000000 +0900
-+++ devices/gdevvglb.c	2011-07-17 19:57:10.000000000 +0900
-@@ -367,12 +367,3 @@
+--- devices/gdevvglb.c.orig	2015-03-30 08:21:24 UTC
++++ devices/gdevvglb.c
+@@ -368,12 +368,3 @@ vgalib_put_params(gx_device * dev, gs_pa
      }
      return 0;
  }

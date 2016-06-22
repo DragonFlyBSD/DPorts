@@ -1,6 +1,6 @@
---- base/gp_unix.c.orig	2015-08-22 03:07:24.257409000 +0900
-+++ base/gp_unix.c	2015-08-22 03:08:15.753173000 +0900
-@@ -52,6 +52,7 @@
+--- base/gp_unix.c.orig	2015-03-30 08:21:24 UTC
++++ base/gp_unix.c
+@@ -52,6 +52,7 @@ extern char *getenv(const char *);
   * and applied as a patch (preferable).
   */
  #include <sys/types.h>
@@ -8,7 +8,7 @@
  #include <dirent.h>
  #include <dlfcn.h>
  #include <string.h>
-@@ -61,26 +62,25 @@
+@@ -61,26 +62,25 @@ gp_init(void)
  {
    DIR*           dir = NULL;
    struct dirent* dirent;

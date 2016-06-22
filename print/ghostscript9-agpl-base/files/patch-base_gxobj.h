@@ -1,6 +1,6 @@
---- base/gxobj.h.orig	Tue Mar 14 01:18:19 2006
-+++ base/gxobj.h	Fri Mar 23 14:41:44 2007
-@@ -109,11 +109,15 @@
+--- base/gxobj.h.orig	2015-03-30 08:21:24 UTC
++++ base/gxobj.h
+@@ -144,11 +144,15 @@ typedef struct obj_header_data_s {
   * required by the hardware, regardless of the value of obj_align_mod.
   * See gsmemraw.h for more information about this.
   */

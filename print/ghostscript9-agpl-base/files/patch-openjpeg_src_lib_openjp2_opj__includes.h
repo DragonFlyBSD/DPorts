@@ -1,7 +1,7 @@
---- openjpeg/src/lib/openjp2/opj_includes.h.orig	2012-02-13 08:48:33.000000000 +0900
-+++ openjpeg/src/lib/openjp2/opj_includes.h	2012-02-13 08:50:41.000000000 +0900
-@@ -77,7 +77,7 @@
- #endif /* INLINE */
+--- openjpeg/src/lib/openjp2/opj_includes.h.orig	2015-03-30 08:21:24 UTC
++++ openjpeg/src/lib/openjp2/opj_includes.h
+@@ -109,7 +109,7 @@
+ 
  
  /* Are restricted pointers available? (C99) */
 -#if (__STDC_VERSION__ != 199901L)
