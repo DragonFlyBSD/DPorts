@@ -1,2 +1,2 @@
-LIB_DEPENDS+= 		libkrb5.so:${PORTSDIR}/security/krb5
+LIB_DEPENDS+= 		libkrb5.so:security/krb5
 OPTIONS_EXCLUDE_x86_64=	CHEESE
