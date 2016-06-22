@@ -1,2 +1,2 @@
 CONFIGURE_ENV+=	ac_cv_path_M4=${LOCALBASE}/bin/gm4
-RUN_DEPENDS=gm4:${PORTSDIR}/devel/m4
+RUN_DEPENDS=gm4:devel/m4
