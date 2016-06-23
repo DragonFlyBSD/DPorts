@@ -1,6 +1,6 @@
---- lib/mcast_leave.c-	Tue Feb  8 15:10:50 2000
-+++ lib/mcast_leave.c	Tue Feb  8 15:05:53 2000
-@@ -23,7 +23,7 @@
+--- lib/mcast_leave.c.orig	1997-06-18 19:50:58 UTC
++++ lib/mcast_leave.c
+@@ -23,7 +23,7 @@ mcast_leave(int sockfd, const SA *sa, so
  			   &((struct sockaddr_in6 *) sa)->sin6_addr,
  			   sizeof(struct in6_addr));
  		mreq6.ipv6mr_interface = 0;

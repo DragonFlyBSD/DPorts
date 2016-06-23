@@ -1,5 +1,5 @@
---- Makefile.in.orig	Fri Apr 11 18:42:26 1997
-+++ Makefile.in	Thu Sep 30 09:51:16 1999
+--- Makefile.in.orig	1997-04-11 22:42:26 UTC
++++ Makefile.in
 @@ -1,8 +1,13 @@
  include ./Make.defines
  

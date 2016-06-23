@@ -1,6 +1,6 @@
---- lib/wrapsock_r.c.orig	Thu Sep 30 12:04:02 1999
-+++ lib/wrapsock_r.c	Thu Sep 30 12:04:10 1999
-@@ -97,19 +97,6 @@
+--- lib/wrapsock_r.c.orig	2016-06-17 22:39:47 UTC
++++ lib/wrapsock_r.c
+@@ -97,19 +97,6 @@ Listen(int fd, int backlog)
  }
  /* end Listen */
  

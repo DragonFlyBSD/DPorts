@@ -1,6 +1,6 @@
---- lib/mcast_join.c-	Tue Feb  8 15:12:14 2000
-+++ lib/mcast_join.c	Tue Feb  8 15:12:37 2000
-@@ -56,7 +56,7 @@
+--- lib/mcast_join.c.orig	1997-06-19 03:15:06 UTC
++++ lib/mcast_join.c
+@@ -56,7 +56,7 @@ doioctl:
  		else
  			mreq6.ipv6mr_interface = 0;
  
