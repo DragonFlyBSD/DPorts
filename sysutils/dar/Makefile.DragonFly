@@ -1,1 +1,1 @@
-LIB_DEPENDS+= libelf.so:${PORTSDIR}/devel/libelf
+LIB_DEPENDS+= libelf.so:devel/libelf
