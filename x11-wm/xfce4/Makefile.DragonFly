@@ -1,1 +1,1 @@
-RUN_DEPENDS+=	dragonfly-wallpapers>0:${PORTSDIR}/x11-themes/dragonfly-wallpapers
+RUN_DEPENDS+=	dragonfly-wallpapers>0:x11-themes/dragonfly-wallpapers
