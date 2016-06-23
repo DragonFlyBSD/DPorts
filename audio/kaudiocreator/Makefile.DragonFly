@@ -1,6 +1,6 @@
 USE_KDE4+=	kdelibs libkcddb libkcompactdisc
 
-LIB_DEPENDS+=	libphonon.so:${PORTSDIR}/multimedia/phonon
+LIB_DEPENDS+=	libphonon.so:multimedia/phonon
 
 LDFLAGS+=	-L${LOCALBASE}/kde4/lib -lkio -lsolid
 LDFLAGS+=	-L${LOCALBASE}/lib -lphonon
