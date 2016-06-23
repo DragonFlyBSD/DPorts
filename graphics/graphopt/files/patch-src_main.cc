@@ -1,6 +1,6 @@
---- src/main.cc.orig	Fri Dec  5 22:57:02 2003
-+++ src/main.cc	Fri Dec  5 22:57:20 2003
-@@ -18,7 +18,7 @@
+--- src/main.cc.orig	2003-05-07 15:06:31 UTC
++++ src/main.cc
+@@ -18,7 +18,7 @@ int main (int argc, char *argv[]) {
     gtk_set_locale ();
     gtk_init (&argc, &argv);
  

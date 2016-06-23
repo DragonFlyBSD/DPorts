@@ -1,6 +1,6 @@
---- pixmaps/Makefile.in.orig	Fri Dec  5 23:02:55 2003
-+++ pixmaps/Makefile.in	Fri Dec  5 23:03:06 2003
-@@ -67,7 +67,7 @@
+--- pixmaps/Makefile.in.orig	2003-05-07 15:10:47 UTC
++++ pixmaps/Makefile.in
+@@ -67,7 +67,7 @@ PACKAGE = @PACKAGE@
  RANLIB = @RANLIB@
  VERSION = @VERSION@
  

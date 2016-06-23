@@ -1,7 +1,7 @@
---- src/classes/dotImporter.cc.orig
-+++ src/classes/dotImporter.cc
+--- src/classes/optFileReader.cc.orig	2003-03-20 07:42:59 UTC
++++ src/classes/optFileReader.cc
 @@ -1,5 +1,6 @@
- #include "dotImporter.h"
+ #include "optFileReader.h"
 -#include <string.h>
 +#include <cstdlib>
 +#include <cstring>
