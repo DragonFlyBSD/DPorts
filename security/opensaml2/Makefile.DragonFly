@@ -1,1 +1,1 @@
-LIB_DEPENDS+= libboost_thread.so:${PORTSDIR}/devel/boost-libs
+LIB_DEPENDS+= libboost_thread.so:devel/boost-libs
