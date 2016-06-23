@@ -1,2 +1,2 @@
-LIB_DEPENDS+=	libpcre.so:${PORTSDIR}/devel/pcre \
-		libpopt.so:${PORTSDIR}/devel/popt
+LIB_DEPENDS+=	libpcre.so:devel/pcre \
+		libpopt.so:devel/popt
