@@ -1,0 +1,4 @@
+LIB_DEPENDS+=	libelf.so:devel/libelf
+
+# to help find libelf
+LDFLAGS+=	-L${LOCALBASE}/lib
