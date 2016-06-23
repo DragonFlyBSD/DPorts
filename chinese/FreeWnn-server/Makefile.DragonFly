@@ -1,2 +1,2 @@
-BUILD_DEPENDS+=	tradcpp:${PORTSDIR}/devel/tradcpp
+BUILD_DEPENDS+=	tradcpp:devel/tradcpp
 CPP:=		tradcpp
