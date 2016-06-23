@@ -1,5 +1,5 @@
---- libdal/file.c.orig	Thu Dec 12 21:32:34 2002
-+++ libdal/file.c	Sat Aug 12 15:35:27 2006
+--- libdal/file.c.orig	2002-12-12 12:32:34 UTC
++++ libdal/file.c
 @@ -14,6 +14,7 @@
  
  #if defined(__freebsd__)
@@ -8,7 +8,7 @@
  #endif
  
  #ifndef DJGPP
-@@ -154,6 +155,15 @@
+@@ -154,6 +155,15 @@ static count_t file_len(dal_t *dal) {
      
  #endif
      

@@ -1,6 +1,6 @@
---- libreiserfs/journal.c	Thu Dec 12 13:32:35 2002
-+++ libreiserfs/journal.c.new	Thu May 13 00:01:43 2004
-@@ -482,7 +482,7 @@
+--- libreiserfs/journal.c.orig	2002-12-12 12:32:35 UTC
++++ libreiserfs/journal.c
+@@ -482,7 +482,7 @@ static int callback_journal_replay(reise
  blk_t reiserfs_journal_boundary_transactions(reiserfs_journal_t *journal,
      reiserfs_journal_trans_t *oldest, reiserfs_journal_trans_t *newest)
  {
