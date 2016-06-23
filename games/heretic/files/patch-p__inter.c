@@ -1,6 +1,6 @@
---- p_inter.c.ori	Sun Mar  4 15:38:51 2007
-+++ p_inter.c	Sun Mar  4 15:41:50 2007
-@@ -477,8 +477,10 @@
+--- p_inter.c.orig	2000-01-07 17:58:53 UTC
++++ p_inter.c
+@@ -477,8 +477,10 @@ boolean P_GiveArtifact(player_t *player,
  void P_SetDormantArtifact(mobj_t *arti)
  {
    arti->flags &= ~MF_SPECIAL;

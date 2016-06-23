@@ -1,5 +1,5 @@
---- opengl/gl_fonts.c	Sun Jan 30 05:58:21 2000
-+++ opengl/gl_fonts.c.new	Sun Feb 13 03:54:46 2000
+--- opengl/gl_fonts.c.orig	2000-05-01 19:17:31 UTC
++++ opengl/gl_fonts.c
 @@ -1,5 +1,5 @@
  #include <stdio.h>
 -#include <malloc.h>

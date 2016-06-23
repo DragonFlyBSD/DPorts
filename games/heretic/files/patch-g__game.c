@@ -1,6 +1,6 @@
---- g_game.c.ori	Sun Mar  4 15:44:07 2007
-+++ g_game.c	Sun Mar  4 15:50:29 2007
-@@ -91,6 +91,7 @@
+--- g_game.c.orig	2000-05-01 23:54:51 UTC
++++ g_game.c
+@@ -91,6 +91,7 @@ int             starttime;              
  boolean         viewactive;
  
  boolean         deathmatch;             /* only if started as net death */
@@ -8,7 +8,7 @@
  boolean         netgame;                /* only true if packets are broadcast */
  boolean         playeringame[MAXPLAYERS];
  player_t        players[MAXPLAYERS];
-@@ -122,6 +123,7 @@
+@@ -122,6 +123,7 @@ extern char* homedir;
  long            key_right, key_left, key_up, key_down;
  long            key_strafeleft, key_straferight;
  long            key_fire, key_use, key_strafe, key_speed;
@@ -16,7 +16,7 @@
  long            key_flyup, key_flydown, key_flycenter;
  long            key_lookup, key_lookdown, key_lookcenter;
  long            key_invleft, key_invright, key_useartifact;
-@@ -361,13 +363,34 @@
+@@ -361,13 +363,34 @@ void G_BuildTiccmd (ticcmd_t *cmd)
  	    }
  	}
      }

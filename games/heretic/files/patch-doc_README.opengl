@@ -1,6 +1,6 @@
---- doc/README.opengl.orig	2000-05-15 22:46:24.000000000 +0200
-+++ doc/README.opengl	2011-04-21 01:36:33.000000000 +0200
-@@ -71,6 +71,9 @@
+--- doc/README.opengl.orig	2000-05-15 20:46:24 UTC
++++ doc/README.opengl
+@@ -71,6 +71,9 @@ To start the game in windowed mode, use 
  7. -mlook
  With this switch you enable free mouse look in the game. Normaly it makes sense to use this switch together with the -grabmouse switch. Mouselook is enabled by default, but it can be switched inside the game.
  

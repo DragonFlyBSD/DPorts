@@ -1,6 +1,6 @@
---- d_main.c.ori	Sun Mar 11 16:31:49 2007
-+++ d_main.c	Sun Mar 11 16:33:46 2007
-@@ -690,6 +690,7 @@
+--- d_main.c.orig	2003-12-08 23:21:25 UTC
++++ d_main.c
+@@ -690,6 +690,7 @@ void D_DoomMain(void)
    setbuf(stdout, NULL);
    nomonsters = M_CheckParm("-nomonsters");
    respawnparm = M_CheckParm("-respawn");
@@ -8,7 +8,7 @@
    ravpic = M_CheckParm("-ravpic");
    noartiskip = M_CheckParm("-noartiskip");
    debugmode = M_CheckParm("-debug");
-@@ -778,7 +779,13 @@
+@@ -778,7 +779,13 @@ void D_DoomMain(void)
      {
        deathmatch = true;
      }

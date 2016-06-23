@@ -1,6 +1,6 @@
---- graphics/i_x11_fast.c.orig	Fri Dec 29 20:03:37 2006
-+++ graphics/i_x11_fast.c	Fri Dec 29 20:03:59 2006
-@@ -201,13 +201,9 @@
+--- graphics/i_x11_fast.c.orig	2003-12-08 22:48:58 UTC
++++ graphics/i_x11_fast.c
+@@ -201,13 +201,9 @@ int xlatekey(void)
        /* This is an ugly PC-ism. Better switch to XLookupKeysym() ? */
        case XK_KP_Insert:       rc = '0';       break;
        case XK_KP_End:          rc = '1';       break;

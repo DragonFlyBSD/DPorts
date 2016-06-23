@@ -1,5 +1,5 @@
---- i_udp.c.old Sun Oct 20 22:21:11 2002
-+++ i_udp.c     Sun Oct 20 22:21:26 2002
+--- i_udp.c.orig	2000-05-01 10:24:52 UTC
++++ i_udp.c
 @@ -31,7 +31,7 @@
  
  boolean server = 0;
