@@ -1,7 +1,7 @@
---- src/client/client/SecureID.cpp.orig	2008-03-03 00:47:36.000000000 +0600
-+++ src/client/client/SecureID.cpp	2009-09-29 14:13:58.000000000 +0700
-@@ -34,6 +34,47 @@
- 	return "0:0:0:0:0:0";
+--- src/client/client/SecureID.cpp.orig	2016-06-20 14:16:37 UTC
++++ src/client/client/SecureID.cpp
+@@ -71,6 +71,47 @@ std::string SecureID::GetPrivateKey(void
+ 	return result;
  }
  
 +#elif defined(__FreeBSD__)

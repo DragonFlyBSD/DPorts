@@ -1,6 +1,6 @@
---- src/client/client/LoadPNG.cpp.orig	2010-08-16 08:26:36.000000000 +0900
-+++ src/client/client/LoadPNG.cpp	2012-03-07 19:25:24.000000000 +0900
-@@ -28,6 +28,8 @@
+--- src/client/client/LoadPNG.cpp.orig	2016-06-20 14:16:37 UTC
++++ src/client/client/LoadPNG.cpp
+@@ -28,6 +28,8 @@ SDL_Surface *EXT_LoadPNG_RW(SDL_RWops *s
  	int row, i;
  	volatile int ckey = -1;
  	png_color_16 *transv;
@@ -9,7 +9,7 @@
  
  	if ( !src ) {
  		/* The error message has been set in SDL_RWFromFile */
-@@ -58,7 +60,7 @@
+@@ -58,7 +60,7 @@ SDL_Surface *EXT_LoadPNG_RW(SDL_RWops *s
  	 * the normal method of doing things with libpng).  REQUIRED unless you
  	 * set up your own error handlers in png_create_read_struct() earlier.
  	 */
@@ -18,7 +18,7 @@
  		error = "Error reading the PNG file.";
  		goto done;
  	}
-@@ -127,9 +129,9 @@
+@@ -127,9 +129,9 @@ SDL_Surface *EXT_LoadPNG_RW(SDL_RWops *s
  			Rmask = 0x000000FF;
  			Gmask = 0x0000FF00;
  			Bmask = 0x00FF0000;
@@ -30,7 +30,7 @@
  			Rmask = 0xFF000000 >> s;
  			Gmask = 0x00FF0000 >> s;
  			Bmask = 0x0000FF00 >> s;
-@@ -137,7 +139,7 @@
+@@ -137,7 +139,7 @@ SDL_Surface *EXT_LoadPNG_RW(SDL_RWops *s
  		}
  	}
  	surface = SDL_AllocSurface(SDL_SWSURFACE, width, height,
@@ -39,7 +39,7 @@
  	if ( surface == NULL ) {
  		error = "Out of memory";
  		goto done;
-@@ -185,12 +187,15 @@
+@@ -185,12 +187,15 @@ SDL_Surface *EXT_LoadPNG_RW(SDL_RWops *s
  		    palette->colors[i].g = i;
  		    palette->colors[i].b = i;
  		}
