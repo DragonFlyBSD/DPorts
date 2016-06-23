@@ -1,1 +1,1 @@
-BUILD_DEPENDS+= scim:${PORTSDIR}/textproc/scim
+BUILD_DEPENDS+= scim:textproc/scim
