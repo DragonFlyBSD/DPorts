@@ -6,7 +6,7 @@ LIB_DEPENDS+=	libdrm.so:graphics/libdrm \
 		libepoxy.so:graphics/libepoxy
 
 BUILD_DEPENDS=	wayland>=1.9.0:graphics/wayland \
-		${LOCALBASE}/include/linux/input.h:${PORTSDIR}/multimedia/v4l_compat
+		${LOCALBASE}/include/linux/input.h:multimedia/v4l_compat
 
 MASTERDIR=	${.CURDIR}/../xorg-server
 DESCR=		${.CURDIR}/pkg-descr
