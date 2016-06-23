@@ -1,6 +1,6 @@
---- base/gdevperm.c.orig	Tue Sep 25 22:31:24 2007
-+++ base/gdevperm.c	Sat Nov 24 15:11:12 2007
-@@ -286,7 +286,7 @@
+--- base/gdevperm.c.orig	2007-09-25 13:31:24 UTC
++++ base/gdevperm.c
+@@ -286,7 +286,7 @@ perm_get_color_mapping_procs(const gx_de
  	(strncmp((const char *)name, (const char *)str, name_size) == 0))
  
  static int

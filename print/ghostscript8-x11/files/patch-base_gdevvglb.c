@@ -1,6 +1,6 @@
---- base/gdevvglb.c.orig	2007-09-25 22:31:24.000000000 +0900
-+++ base/gdevvglb.c	2010-08-01 23:08:53.000000000 +0900
-@@ -149,10 +149,13 @@
+--- base/gdevvglb.c.orig	2007-09-25 13:31:24 UTC
++++ base/gdevvglb.c
+@@ -149,10 +149,13 @@ vgalib_close(gx_device * dev)
  }
  
  static gx_color_index
@@ -17,7 +17,7 @@
  }
  
  static int
-@@ -368,12 +371,3 @@
+@@ -368,12 +371,3 @@ vgalib_put_params(gx_device * dev, gs_pa
      }
      return 0;
  }

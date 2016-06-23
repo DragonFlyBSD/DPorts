@@ -1,6 +1,6 @@
---- base/unixinst.mak.orig	2009-11-19 09:09:15.000000000 +0900
-+++ base/unixinst.mak	2014-11-23 17:40:46.000000000 +0900
-@@ -44,7 +44,7 @@
+--- base/unixinst.mak.orig	2009-11-19 00:09:15 UTC
++++ base/unixinst.mak
+@@ -44,7 +44,7 @@ ps2ascii ps2epsi ps2pdf ps2pdf12 ps2pdf1
  wftopfa fixmswrd.pl lprsetup.sh pj-gs.sh pv.sh sysvlp.sh unix-lpr.sh ;\
  	do if ( test -f $(PSLIBDIR)/$$f ); then \
  	  (cat $(PSLIBDIR)/$$f | sed -e "s/GS_EXECUTABLE=gs/GS_EXECUTABLE=$(GS)/" > $(PSOBJDIR)/$$f); \
@@ -9,7 +9,7 @@
  	fi;\
  	done'
  
-@@ -128,7 +128,7 @@
+@@ -128,7 +128,7 @@ install-doc: $(PSDOCDIR)/News.htm
  	done'
  
  # install the man pages for each locale

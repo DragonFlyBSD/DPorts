@@ -8,10 +8,9 @@ Description: Allows gnu-ghostscript to compile against external libjasper.
 is 1.701 which is somewhat old.  Forward-ported to 8.64 (the structure of
 the file source tree has changed) by km.
 
-diff -Naur ghostscript-8.64.orig/base/sjpx.c ghostscript-8.64/base/sjpx.c
---- base/sjpx.c	2008-08-21 00:22:49.000000000 +0100
-+++ base/sjpx.c	2009-02-10 21:59:41.000000000 +0000
-@@ -34,14 +34,6 @@
+--- base/sjpx.c.orig	2009-06-18 05:16:48 UTC
++++ base/sjpx.c
+@@ -33,14 +33,6 @@ static void s_jpxd_set_defaults(stream_s
  private_st_jpxd_state(); /* creates a gc object for our state,
  			    defined in sjpx.h */
  
@@ -26,7 +25,7 @@ diff -Naur ghostscript-8.64.orig/base/sjpx.c ghostscript-8.64/base/sjpx.c
  /* initialize the steam.
     this involves allocating the stream and image structures, and
     initializing the decoder.
-@@ -59,7 +51,6 @@
+@@ -58,7 +50,6 @@ s_jpxd_init(stream_state * ss)
      }
  
      status = jas_init();

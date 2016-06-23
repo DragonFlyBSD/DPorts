@@ -1,6 +1,6 @@
---- base/gdevl256.c.orig	2007-09-25 22:31:24.000000000 +0900
-+++ base/gdevl256.c	2010-08-01 23:05:56.000000000 +0900
-@@ -143,9 +143,12 @@
+--- base/gdevl256.c.orig	2007-09-25 13:31:24 UTC
++++ base/gdevl256.c
+@@ -143,9 +143,12 @@ lvga256_close(gx_device * dev)
  /* for compatibility with the older display modes: */
  /* these are indexed as 0.0.R0.G0.B0.R1.G1.B1. */
  gx_color_index
@@ -15,7 +15,7 @@
  #define cv_bits(v,n) (v >> (gx_color_value_bits - n))
      ushort r5 = cv_bits(r, 5), g5 = cv_bits(g, 5), b5 = cv_bits(b, 5);
      static const byte cube_bits[32] =
-@@ -301,12 +304,3 @@
+@@ -301,12 +304,3 @@ lvga256_draw_line(gx_device * dev, int x
      gl_line(x0, y0, x1, y1, color);
      return 0;
  }

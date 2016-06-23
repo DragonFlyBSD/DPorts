@@ -1,6 +1,6 @@
---- base/lib.mak.orig	2009-12-30 07:18:01.000000000 +0900
-+++ base/lib.mak	2015-08-21 20:39:55.003384000 +0900
-@@ -895,7 +895,7 @@
+--- base/lib.mak.orig	2009-12-29 22:18:01 UTC
++++ base/lib.mak
+@@ -895,7 +895,7 @@ $(GLOBJ)gsparam.$(OBJ) : $(GLSRC)gsparam
  $(GLOBJ)gsparamx.$(OBJ) : $(GLSRC)gsparamx.c $(string__h)\
   $(gserror_h) $(gserrors_h) $(gsmemory_h) $(gsparam_h) $(gsparamx_h)\
   $(gstypes_h)
@@ -9,7 +9,7 @@
  
  # Future replacement for gsparams.c
  $(GLOBJ)gsparam2.$(OBJ) : $(GLSRC)gsparam2.c $(GXERR) $(memory__h)\
-@@ -2684,12 +2684,12 @@
+@@ -2684,12 +2684,12 @@ $(GLD)shadelib.dev : $(LIB_MAK) $(ECHOGS
  # This is used to access compressed, compiled-in support files
  gsiorom_h=$(GLSRC)gsiorom.h
  romfs_=$(GLOBJ)gsiorom.$(OBJ)

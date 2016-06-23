@@ -1,6 +1,6 @@
---- base/unix-dll.mak.orig	2009-10-20 05:24:53.000000000 +0900
-+++ base/unix-dll.mak	2010-04-03 12:22:35.000000000 +0900
-@@ -79,12 +79,11 @@
+--- base/unix-dll.mak.orig	2009-10-19 20:24:53 UTC
++++ base/unix-dll.mak
+@@ -79,12 +79,11 @@ $(GS_SO_MAJOR): $(GS_SO_MAJOR_MINOR)
  # Build the small Ghostscript loaders, with Gtk+ and without
  
  $(GSSOC_XE): $(GS_SO) $(PSSRC)$(SOC_LOADER)
