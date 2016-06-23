@@ -1,2 +1,2 @@
-RUN_DEPENDS+=	krb5-config:${PORTSDIR}/security/krb5
-BUILD_DEPENDS+=	krb5-config:${PORTSDIR}/security/krb5
+RUN_DEPENDS+=	krb5-config:security/krb5
+BUILD_DEPENDS+=	krb5-config:security/krb5
