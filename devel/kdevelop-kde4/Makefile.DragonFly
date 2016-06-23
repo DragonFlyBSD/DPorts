@@ -1,1 +1,1 @@
-BUILD_DEPENDS+= ${LOCALBASE}/bin/update-mime-database:${PORTSDIR}/misc/shared-mime-info
+BUILD_DEPENDS+= ${LOCALBASE}/bin/update-mime-database:misc/shared-mime-info
