@@ -1,9 +1,9 @@
 The code is using gnu C extensions. The following new patchfile under files/ fixes the issue:
 
 # cat files/patch-descriptors.c
---- a/descriptors.c       2012-10-03 12:39:42.000000000 +0200
-+++ b/descriptors.c       2012-10-03 12:39:56.000000000 +0200
-@@ -1000,6 +1000,16 @@
+--- descriptors.c.orig	2016-06-20 13:13:56 UTC
++++ descriptors.c
+@@ -1000,6 +1000,16 @@ void parse_T2_delivery_system_descriptor
                }
  }
  
@@ -20,7 +20,7 @@ The code is using gnu C extensions. The following new patchfile under files/ fix
  
  /* 300468 v011101 annex C, Conversion between time and date conventions
   * NOTE: These formulas are applicable between the inclusive dates 1900 March 1 to 2100 February 28.
-@@ -1011,16 +1021,6 @@
+@@ -1011,16 +1021,6 @@ struct tm modified_julian_date_to_utc(__
          int _M = (int) (MJD - 14956.1 - (int) (_Y * 365.25)) / 30.6001;
          int K = (_M == 14) ? 1 : (_M == 15) ? 1 : 0;
  
@@ -37,5 +37,3 @@ The code is using gnu C extensions. The following new patchfile under files/ fix
          memset(&utc, 0, sizeof(struct tm));
          utc.tm_mday = MJD - 14956 - (int) (_Y * 365.25) - (int) (_M * 30.6001);
          utc.tm_year = _Y + K;
- 
- 
