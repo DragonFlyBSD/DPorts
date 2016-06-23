@@ -10,7 +10,7 @@ COMMENT=	HAMMER file system time slider utility
 
 LICENSE=	BSD2CLAUSE   # actually ISC
 
-BUILD_DEPENDS=	adacurses-config:${PORTSDIR}/devel/adacurses
+BUILD_DEPENDS=	adacurses-config:devel/adacurses
 
 USES=		ada ncurses
 MAKE_ENV=	mode=release
