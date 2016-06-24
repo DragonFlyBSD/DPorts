@@ -15,27 +15,27 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 USE_XORG=	x11 xcb xcursor
 USE_GL=		egl gbm
 
-LIB_DEPENDS=	libxkbcommon.so:${PORTSDIR}/x11/libxkbcommon		\
-		libexecinfo.so:${PORTSDIR}/devel/libexecinfo		\
-		libpixman-1.so:${PORTSDIR}/x11/pixman			\
-		libcairo.so:${PORTSDIR}/graphics/cairo			\
-		libcolord.so:${PORTSDIR}/graphics/colord		\
-		libfontconfig.so:${PORTSDIR}/x11-fonts/fontconfig	\
-		libfreetype.so:${PORTSDIR}/print/freetype2		\
-		libwayland-server.so:${PORTSDIR}/graphics/wayland	\
-		libwayland-client.so:${PORTSDIR}/graphics/wayland	\
-		libwayland-cursor.so:${PORTSDIR}/graphics/wayland	\
-		libevent.so:${PORTSDIR}/devel/libevent2			\
-		libdrm.so:${PORTSDIR}/graphics/libdrm			\
-		libpng.so:${PORTSDIR}/graphics/png			\
-		libwebp.so:${PORTSDIR}/graphics/webp			\
-		libffi.so:${PORTSDIR}/devel/libffi
+LIB_DEPENDS=	libxkbcommon.so:x11/libxkbcommon		\
+		libexecinfo.so:devel/libexecinfo		\
+		libpixman-1.so:x11/pixman			\
+		libcairo.so:graphics/cairo			\
+		libcolord.so:graphics/colord			\
+		libfontconfig.so:x11-fonts/fontconfig		\
+		libfreetype.so:print/freetype2			\
+		libwayland-server.so:graphics/wayland		\
+		libwayland-client.so:graphics/wayland		\
+		libwayland-cursor.so:graphics/wayland		\
+		libevent.so:devel/libevent2			\
+		libdrm.so:graphics/libdrm			\
+		libpng.so:graphics/png				\
+		libwebp.so:graphics/webp			\
+		libffi.so:devel/libffi
 
 LIBS+=		-lexecinfo
 
-BUILD_DEPENDS=	${LOCALBASE}/include/linux/input.h:${PORTSDIR}/multimedia/v4l_compat
+BUILD_DEPENDS=	${LOCALBASE}/include/linux/input.h:multimedia/v4l_compat
 
-RUN_DEPENDS=	${LOCALBASE}/lib/libglapi.so.0:${PORTSDIR}/graphics/libglapi
+RUN_DEPENDS=	${LOCALBASE}/lib/libglapi.so.0:graphics/libglapi
 
 GNU_CONFIGURE=	YES
 
