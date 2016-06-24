@@ -1,5 +1,5 @@
---- sdts++/io/FormatParser.yy.orig	2002-10-08 05:44:24.000000000 +0900
-+++ sdts++/io/FormatParser.yy	2012-09-12 16:53:19.000000000 +0900
+--- sdts++/io/FormatParser.yy.orig	2002-10-07 20:44:24 UTC
++++ sdts++/io/FormatParser.yy
 @@ -71,6 +71,10 @@
  
  #include <iostream>
