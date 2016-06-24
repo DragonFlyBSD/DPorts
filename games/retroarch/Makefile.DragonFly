@@ -1,6 +1,6 @@
 OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NPULSEAUDIO}
 
-V4L_BUILD_DEPENDS+=	${LOCALBASE}/include/linux/videodev2.h:${PORTSDIR}/multimedia/v4l_compat
+V4L_BUILD_DEPENDS+=	${LOCALBASE}/include/linux/videodev2.h:multimedia/v4l_compat
 
 # hardcode python34 for now
 dfly-patch:
