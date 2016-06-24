@@ -8,8 +8,8 @@ OPTIONS_DEFAULT+= CYCLES
 # no libunwind
 CAMERATRACK_LIB_DEPENDS:=
 
-#BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}requests>=0:${PORTSDIR}/www/py-requests
-#RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}requests>=0:${PORTSDIR}/www/py-requests
+#BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}requests>=0:www/py-requests
+#RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}requests>=0:www/py-requests
 
 dfly-patch:
 	${REINPLACE_CMD} -e "s@ -liconv@ -L${LOCALBASE}/lib -liconv@g"	\
