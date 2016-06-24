@@ -1,2 +1,2 @@
 # zrj: needed for lib/clc/oland-r600--.bc dep
-RUN_DEPENDS+=	libclc>=0:${PORTSDIR}/devel/libclc
+RUN_DEPENDS+=	libclc>=0:devel/libclc
