@@ -1,1 +1,1 @@
-LIB_DEPENDS+=	libgssapi_krb5.so:${PORTSDIR}/security/krb5
+LIB_DEPENDS+=	libgssapi_krb5.so:security/krb5
