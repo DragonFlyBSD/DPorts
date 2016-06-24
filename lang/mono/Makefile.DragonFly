@@ -1,3 +1,6 @@
 USES+= alias
 
-MAKE_JOBS_UNSAFE= yes
+.if !defined(DPORTS_BUILDER)
+MANUAL_PACKAGE_BUILD=	Mono frequently sigaborts on pkgbox64; \
+	If you want Mono-based packages, build them yourself
+.endif
