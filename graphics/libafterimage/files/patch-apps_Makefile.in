@@ -1,6 +1,6 @@
---- ./apps/Makefile.in.orig	Thu Aug  2 07:09:02 2007
-+++ ./apps/Makefile.in	Sun Aug  5 21:11:50 2007
-@@ -13,14 +13,14 @@
+--- apps/Makefile.in.orig	2011-01-15 05:52:22 UTC
++++ apps/Makefile.in
+@@ -13,14 +13,14 @@ CP		= @CP@
  MV		= @MV@
  RM		= @RM@
  RMF		= @RM@ -f
@@ -18,7 +18,7 @@
  
  INCS_X		= @X_CFLAGS@
  INCS_PRIVATE    = 
-@@ -30,7 +30,7 @@
+@@ -30,7 +30,7 @@ USER_LD_FLAGS	= @user_ldflags@
  LIBS_X		= @x_libs@
  LIBS_XEXTS	=
  LIBS_AFTERIMAGE = @AFTERIMAGE_APPS_LIBS@
