@@ -1,6 +1,6 @@
---- base/lib.mak.orig	2015-08-21 12:20:36.687050000 +0900
-+++ base/lib.mak	2015-08-21 12:20:57.497755000 +0900
-@@ -990,7 +990,7 @@
+--- base/lib.mak.orig	2012-08-08 08:01:36 UTC
++++ base/lib.mak
+@@ -990,7 +990,7 @@ $(GLOBJ)gsparam.$(OBJ) : $(GLSRC)gsparam
  $(GLOBJ)gsparamx.$(OBJ) : $(AK) $(GLSRC)gsparamx.c $(string__h)\
   $(gserrors_h) $(gsmemory_h) $(gsparam_h) $(gsparamx_h)\
   $(gstypes_h) $(MAKEDIRS)

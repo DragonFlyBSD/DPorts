@@ -1,6 +1,6 @@
---- base/gs.mak.orig	2012-08-08 17:01:36.000000000 +0900
-+++ base/gs.mak	2012-10-14 02:29:03.000000000 +0900
-@@ -437,7 +437,7 @@
+--- base/gs.mak.orig	2012-08-08 08:01:36 UTC
++++ base/gs.mak
+@@ -437,7 +437,7 @@ GCONFIG_EXTRAS=
  ld_tr=$(GLGENDIR)$(D)ld.tr
  $(ld_tr) : \
    $(GS_MAK) $(TOP_MAKEFILES) $(GLSRCDIR)$(D)version.mak $(GENCONF_XE) $(ECHOGS_XE) $(devs_tr) $(DEVS_ALL) $(GLGENDIR)$(D)libcore.dev

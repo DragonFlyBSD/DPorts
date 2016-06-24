@@ -1,6 +1,6 @@
---- base/Makefile.in.orig	2012-08-08 17:01:36.000000000 +0900
-+++ base/Makefile.in	2015-08-21 12:42:47.554688000 +0900
-@@ -49,9 +49,9 @@
+--- base/Makefile.in.orig	2012-08-08 08:01:36 UTC
++++ base/Makefile.in
+@@ -49,9 +49,9 @@ PSD=$(PSGENDIR)/
  # the directories also define the default search path for the
  # initialization files (gs_*.ps) and the fonts.
  
@@ -13,7 +13,7 @@
  INSTALL_SHARED = @INSTALL_SHARED@
  
  prefix = @prefix@
-@@ -202,7 +202,7 @@
+@@ -202,7 +202,7 @@ JSRCDIR=@LIBJPEGDIR@
  # some older JPEG streams that violate the standard. If the JPEG
  # library built from local sources, the patch will be applied.
  
@@ -22,7 +22,7 @@
  JPEG_NAME=jpeg
  
  # Define the directory where the PNG library sources are stored,
-@@ -210,12 +210,12 @@
+@@ -210,12 +210,12 @@ JPEG_NAME=jpeg
  # You may need to change this if the libpng version changes.
  # See png.mak for more information.
  
@@ -37,7 +37,7 @@
  TIFFSRCDIR=@LIBTIFFDIR@
  TIFFPLATFORM=unix
  TIFFCONFIG_SUFFIX=
-@@ -224,7 +224,7 @@
+@@ -224,7 +224,7 @@ LIBTIFF_NAME=tiff
  # Define the directory where the zlib sources are stored.
  # See zlib.mak for more information.
  
@@ -46,7 +46,7 @@
  ZSRCDIR=@ZLIBDIR@
  #ZLIB_NAME=gz
  ZLIB_NAME=z
-@@ -251,7 +251,7 @@
+@@ -251,7 +251,7 @@ JBIG2_CFLAGS=@JBIG2_AUTOCONF_CFLAGS@
  JPX_LIB=@JPX_DECODER@
  SHARE_JPX=@SHARE_JPX@
  JPXSRCDIR=@JPXDIR@
@@ -55,7 +55,7 @@
  
  # uncomment the following three lines and one of the last two to
  # compile in the Luratech lwf_jp2 codec
-@@ -331,7 +331,7 @@
+@@ -331,7 +331,7 @@ GCFLAGS=@CPPFLAGS@ @GCFLAGS@ @CFLAGS@
  # Define the added flags for standard, debugging, profiling 
  # and shared object builds.
  
@@ -64,7 +64,7 @@
  CFLAGS_DEBUG=@DBG_CFLAGS@
  CFLAGS_PROFILE=-pg @OPT_CFLAGS@
  CFLAGS_SO=@DYNAMIC_CFLAGS@
-@@ -382,7 +382,7 @@
+@@ -382,7 +382,7 @@ LDFLAGS=@LDFLAGS@ $(AC_LDFLAGS) $(XLDFLA
  # Solaris may need -lnsl -lsocket -lposix4.
  # (Libraries required by individual drivers are handled automatically.)
  
@@ -73,7 +73,7 @@
  
  # Define the standard libraries to search at the end of linking.
  # Most platforms require -lpthread for the POSIX threads library;
-@@ -426,7 +426,7 @@
+@@ -426,7 +426,7 @@ XLIBS=@X_LIBS@
  # the pthread library. Otherwise use SYNC=nosync
  #SYNC=posync
  #SYNC=nosync
@@ -82,7 +82,7 @@
  
  # programs we use
  RM=rm -f
-@@ -518,27 +518,27 @@
+@@ -518,27 +518,27 @@ DISPLAY_DEV=$(DD)bbox.dev
  #DEVICE_DEVS20=$(DD)cljet5.dev $(DD)cljet5c.dev
  #DEVICE_DEVS21=$(DD)spotcmyk.dev $(DD)devicen.dev $(DD)xcf.dev $(DD)psdcmyk.dev $(DD)psdrgb.dev
  DEVICE_DEVS=$(DISPLAY_DEV) @X11_DEVS@
@@ -131,7 +131,7 @@
  
  
  # Shared library target to build.
-@@ -601,7 +601,6 @@
+@@ -601,7 +601,6 @@ include $(GLSRCDIR)/ldf_jb2.mak
  include $(GLSRCDIR)/lwf_jp2.mak
  include $(GLSRCDIR)/openjpeg.mak
  include $(GLSRCDIR)/icclib.mak

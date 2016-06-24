@@ -1,6 +1,6 @@
---- base/gdevperm.c.orig	2012-02-08 17:48:48.000000000 +0900
-+++ base/gdevperm.c	2012-02-13 00:44:23.000000000 +0900
-@@ -285,7 +285,7 @@
+--- base/gdevperm.c.orig	2012-08-08 08:01:36 UTC
++++ base/gdevperm.c
+@@ -287,7 +287,7 @@ perm_get_color_mapping_procs(const gx_de
          (strncmp((const char *)name, (const char *)str, name_size) == 0))
  
  static int
@@ -9,7 +9,7 @@
                                          int name_size, int component_type)
  {
      const gx_device_perm_t * const dev = (const gx_device_perm_t *)pdev;
-@@ -332,7 +332,6 @@
+@@ -334,7 +334,6 @@ static int
  perm_decode_color(gx_device *dev, gx_color_index color, gx_color_value *out)
  {
      int bpc = 8;

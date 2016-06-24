@@ -1,6 +1,6 @@
---- base/devs.mak.orig	2012-08-08 17:01:36.000000000 +0900
-+++ base/devs.mak	2015-08-21 12:18:59.546901000 +0900
-@@ -434,10 +434,10 @@
+--- base/devs.mak.orig	2012-08-08 08:01:36 UTC
++++ base/devs.mak
+@@ -434,10 +434,10 @@ $(GLOBJ)gdevvglb.$(OBJ) : $(GLSRC)gdevvg
  ### NON PORTABLE, ONLY UNIX WITH GCC SUPPORT
  
  $(GLOBJ)lvga256.so : $(lvga256_)
@@ -13,7 +13,7 @@
  
  ### -------------------------- The X11 device -------------------------- ###
  
-@@ -479,7 +479,7 @@
+@@ -479,7 +479,7 @@ $(GLOBJ)gdevxini.$(OBJ) : $(GLSRC)gdevxi
  # const/non-const cast required by the X headers that we can't work around.
  $(GLOBJ)gdevxres.$(OBJ) : $(GLSRC)gdevxres.c $(std_h) $(x__h)\
   $(gsmemory_h) $(gstypes_h) $(gxdevice_h) $(gdevx_h)
@@ -22,7 +22,7 @@
  
  # Alternate X11-based devices to help debug other drivers.
  # x11alpha pretends to have 4 bits of alpha channel.
-@@ -535,7 +535,7 @@
+@@ -535,7 +535,7 @@ $(GLOBJ)gdevxalt.$(OBJ) : $(GLSRC)gdevxa
  ### NON PORTABLE, ONLY UNIX WITH GCC SUPPORT
  
  $(GLOBJ)X11.so : $(x11alt_) $(x11_)
