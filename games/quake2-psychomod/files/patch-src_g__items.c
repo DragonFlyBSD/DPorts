@@ -1,6 +1,6 @@
---- ./src/g_items.c.orig	Wed Oct 10 12:53:12 2001
-+++ ./src/g_items.c	Wed Jan 10 19:11:41 2007
-@@ -21,9 +21,9 @@
+--- src/g_items.c.orig	2016-06-20 14:35:21 UTC
++++ src/g_items.c
+@@ -21,9 +21,9 @@ gitem_armor_t jacketarmor_info	= { 25,  
  gitem_armor_t combatarmor_info	= { 50, 100, .60, .30, ARMOR_COMBAT};
  gitem_armor_t bodyarmor_info	= {100, 200, .80, .60, ARMOR_BODY};
  
