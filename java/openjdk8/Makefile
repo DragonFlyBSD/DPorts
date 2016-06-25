@@ -2,6 +2,7 @@
 
 PORTNAME=	openjdk
 PORTVERSION=	${JDK_MAJOR_VERSION}.${JDK_UPDATE_VERSION}.${JDK_BUILD_NUMBER:S/^0//}
+PORTREVISION=	3
 CATEGORIES=	java devel
 MASTER_SITES=	http://download.java.net/openjdk/jdk${JDK_MAJOR_VERSION}/promoted/b${DIST_BUILD_NUMBER}/:jdk \
 		https://adopt-openjdk.ci.cloudbees.com/job/jtreg/${JTREG_JENKINS_BUILD}/artifact/:jtreg \
@@ -52,7 +53,7 @@ USE_XORG=	x11 xext xi xrender xt xtst
 BUILD_DEPENDS+=	${UNZIP_CMD}:archivers/unzip
 .endif
 
-ONLY_FOR_ARCHS=	amd64 armv6 armv6hf i386
+ONLY_FOR_ARCHS=	amd64 armv6 i386
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 DOS2UNIX_FILES= jdk/src/bsd/doc/man/appletviewer.1 \
@@ -196,8 +197,8 @@ JRE_IMAGEDIR=	${JDK_BUILDDIR}/images/j2sdk-image/jre
 .else
 JRE_IMAGEDIR=	${JDK_BUILDDIR}/images/j2re-image
 .endif
-JDK_JVMDIR=	lib/${ARCH:S/x86_64/amd64/:C/armv6.*/arm/}
-JDK_OSARCH=	bsd-${ARCH:S/amd64/x86_64/:C/armv6.*/arm/:S/i386/x86/}
+JDK_JVMDIR=	lib/${ARCH:S/x86_64/amd64/:C/armv6/arm/}
+JDK_OSARCH=	bsd-${ARCH:S/amd64/x86_64/:S/armv6/arm/:S/i386/x86/}
 INSTALLDIR=	${PREFIX}/${PKGBASE}
 
 NO_CCACHE=		yes
@@ -288,7 +289,7 @@ CONFIGURE_ARGS+=	--with-tools-dir="${TOOLS_DIR:u:S/ /:/g}"
 
 .include <bsd.port.pre.mk>
 
-.if ${ARCH:Marmv6*} || ${ARCH} == "i386"
+.if ${ARCH} == "armv6" || ${ARCH} == "i386"
 # XXX We must limit max heap size for 32-bit targets.
 CONFIGURE_ARGS+=	--with-boot-jdk-jvmargs="-Xmx768m"
 MAKE_ENV+=	JAVADOC_CMD_MEM="-Xmx768m"
@@ -313,7 +314,7 @@ LIB_DEPENDS+=	libffi.so:devel/libffi
 
 BOOTSTRAP_JDKS=	${LOCALBASE}/openjdk8 \
 		${LOCALBASE}/openjdk7
-.if ${ARCH:Marmv6*}
+.if ${ARCH} == "armv6"
 BOOTSTRAP_JDKS+=	${LOCALBASE}/bootstrap-openjdk
 .endif
 
@@ -326,7 +327,7 @@ BOOTSTRAPJDKDIR=	${BJDK}
 
 # if no valid jdk found, set dependency
 .if !defined(BOOTSTRAPJDKDIR)
-.  if ${ARCH:Marmv6*}
+.  if ${ARCH} == "armv6"
 # bootstrap-openjdk is based on openjdk7 and can compile openjdk8
 BOOTSTRAPJDKDIR?=	${LOCALBASE}/bootstrap-openjdk
 BUILD_DEPENDS+=		${BOOTSTRAPJDKDIR}/bin/javac:java/bootstrap-openjdk
