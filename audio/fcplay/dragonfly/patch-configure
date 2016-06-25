@@ -1,0 +1,11 @@
+--- configure.intermediate	2016-06-24 17:18:40.000000000 +0300
++++ configure
+@@ -1864,7 +1864,7 @@ EOF
+ 
+     echo "$ac_t""oss" 1>&6
+        ;;
+-  *freebsd*) cat >> confdefs.h <<\EOF
++  *freebsd*|*dragonfly*) cat >> confdefs.h <<\EOF
+ #define HAVE_FREEBSD 1
+ EOF
+ 
