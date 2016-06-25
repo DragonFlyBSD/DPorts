@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	chromium
-PORTVERSION=	49.0.2623.112
-PORTREVISION=	1
+PORTVERSION=	51.0.2704.103
 CATEGORIES=	www
 MASTER_SITES=	http://commondatastorage.googleapis.com/chromium-browser-official/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} # default, but needed to get distinfo correct if TEST is on
@@ -26,33 +25,33 @@ BUILD_DEPENDS=	${LOCALBASE}/bin/gperf:devel/gperf \
 		${PYTHON_PKGNAMEPREFIX}ply>0:devel/py-ply \
 		${PYTHON_PKGNAMEPREFIX}html5lib>0:www/py-html5lib
 
-LIB_DEPENDS=	libcairo.so:graphics/cairo \
+LIB_DEPENDS=	libasound.so:audio/alsa-lib \
+		libcairo.so:graphics/cairo \
+		libcups.so:print/cups \
 		libdbus-1.so:devel/dbus \
 		libdbus-glib-1.so:devel/dbus-glib \
-		libasound.so:audio/alsa-lib \
-		libfreetype.so:print/freetype2 \
-		libnss3.so:security/nss \
+		libdrm.so:graphics/libdrm \
+		libexpat.so:textproc/expat2 \
 		libFLAC.so:audio/flac \
+		libfreetype.so:print/freetype2 \
 		libgnome-keyring.so:security/libgnome-keyring \
 		libharfbuzz.so:print/harfbuzz \
-		libcups.so:print/cups \
 		libevent.so:devel/libevent2 \
 		libexif.so:graphics/libexif \
+		libfontconfig.so:x11-fonts/fontconfig \
 		libgcrypt.so:security/libgcrypt \
-		libpci.so:devel/libpci \
-		libdrm.so:graphics/libdrm \
 		libicuuc.so:devel/icu \
 		libjsoncpp.so:devel/jsoncpp \
 		libnspr4.so:devel/nspr \
+		libnss3.so:security/nss \
+		libpci.so:devel/libpci \
 		libpng.so:graphics/png \
 		libre2.so:devel/re2 \
 		libsnappy.so:archivers/snappy \
 		libspeechd.so:accessibility/speech-dispatcher \
 		libspeex.so:audio/speex \
-		libxml2.so:textproc/libxml2 \
-		libwebp.so:graphics/webp
-
-LIB_DEPENDS+=	libgssapi_krb5.so:security/krb5
+		libwebp.so:graphics/webp \
+		libxml2.so:textproc/libxml2
 
 RUN_DEPENDS=	${LOCALBASE}/lib/alsa-lib/libasound_module_pcm_oss.so:audio/alsa-plugins \
 		alsa-lib>=1.1.1_1:audio/alsa-lib \
@@ -62,30 +61,22 @@ RUN_DEPENDS=	${LOCALBASE}/lib/alsa-lib/libasound_module_pcm_oss.so:audio/alsa-pl
 ONLY_FOR_ARCHS=	i386 amd64
 USES=		bison cpe desktop-file-utils execinfo jpeg \
 		ninja perl5 pkgconfig python:2,build shebangfix tar:xz
-# chromium requires a recent compiler (C++11 capable, but clang 3.4 is
-# not able to build chromium. OTOH clang36 on FreeBSD 9.3 cannot build
-# chromium as the libc++ includes are not up to the task. USES flags
-# have to be set before bsd.ports.pre.mk and thereby cannot depend on
-# bsd.ports.pre.mk's variables, so I'm using a hack here.
-.if exists(/usr/lib/libc++.a)
+
 USES+=	compiler:c++14-lang
-.else
-USES+=	compiler:c++11-lib
-.endif
 
 CPE_VENDOR=	google
 CPE_PRODUCT=	chrome
 USE_PERL5=	build
-USE_XORG=	scrnsaverproto x11 xproto xscrnsaver xtst
+USE_XORG=	scrnsaverproto x11 xcomposite xcursor xext xdamage xfixes xi \
+		xproto xrandr xrender xscrnsaver xtst
 USE_GNOME=	atk glib20 gtk20 dconf libxslt
 MAKE_ARGS=	-C out/${BUILDTYPE}
 SHEBANG_FILES=	chrome/tools/build/linux/chrome-wrapper
 ALL_TARGET=	chrome
 INSTALLS_ICONS=	yes
 
-USES+=		alias
-USE_GCC=	4.8+
-#TODO bz@ : if you do undestand the gyp stuff, third_party/widevine/cdm/widevine_cdm.gyp talks about it (plz install libwidevinecdm.so)
+#TODO bz@ : install libwidevinecdm.so (see
+#   third_party/widevine/cdm/widevine_cdm.gyp)
 # See build/common.gypi for all the available variables.
 GYP_DEFINES+=	\
 		clang_use_chrome_plugins=0 \
@@ -94,12 +85,11 @@ GYP_DEFINES+=	\
 		linux_strip_binary=1 \
 		use_aura=1 \
 		test_isolation_mode=noop \
-		disable_fatal_linker_warnings=1 \
 		disable_nacl=1 \
 		enable_extensions=1 \
 		enable_one_click_signin=1 \
 		enable_openmax=1 \
-		enable_webrtc=1 \
+		enable_webrtc=0 \
 		werror= \
 		no_gc_sections=1 \
 		os_ver=${OSVERSION} \
@@ -137,6 +127,7 @@ GYP_DEFINES+=	\
 # allow removal of third_party/adobe
 GYP_DEFINES+=	flapper_version_h_file='${WRKSRC}/flapper_version.h'
 
+# XXX: technically for us these are a no-no
 # FreeBSD Chromium Api Key
 # Set up Google API keys, see http://www.chromium.org/developers/how-tos/api-keys .
 # Note: these are for FreeBSD use ONLY. For your own distribution,
@@ -182,7 +173,7 @@ GYP_DEFINES+=	use_pulseaudio=1
 GYP_DEFINES+=	use_pulseaudio=0
 .endif
 
-.if ! ${MACHINE_CPU:Msse2}
+.if empty(MACHINE_CPU:Msse2)
 GYP_DEFINES+=	disable_sse2=1
 .endif
 
@@ -213,18 +204,15 @@ CONFIGURE_ENV+=	CC="${CC}" \
 		GYP_GENERATORS=ninja \
 		GYP_DEFINES="${GYP_DEFINES}"
 MAKE_ENV+=	BUILDTYPE=${BUILDTYPE} \
-		GYPFLAGS=-DOS=freebsd \
 		GPERF="${LOCALBASE}/bin/gperf"
 
 .include <bsd.port.pre.mk>
 
 .if ${CHOSEN_COMPILER_TYPE} == gcc
-GYP_DEFINES+=	gcc_version=${CXX:S/g++//}
-EXTRA_PATCHES+=	${FILESDIR}/extra-patch-gcc
-CFLAGS+=	-fno-stack-protector # gcc 4.8 cannot find __stack_chk_fail_local
+GYP_DEFINES+=	gcc_version=5
+#GYP_DEFINES+=	gcc_version=${CXX:S/g++//}
 .else
 GYP_DEFINES+=	clang=1
-CXXFLAGS+=	-D__float128=void -D_GLIBCXX_PERMIT_BACKWARD_HASH=1
 CFLAGS+=	-Wno-unknown-warning-option \
 			-D_LIBCPP_TRIVIAL_PAIR_COPY_CTOR=1 # work around base r261801
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-clang
@@ -256,36 +244,12 @@ pre-everything::
 
 post-patch:
 	@${REINPLACE_CMD} -e "s|/usr/local|${LOCALBASE}|" \
-		${WRKSRC}/base/base_paths_posix.cc \
-		${WRKSRC}/base/process/process_handle_freebsd.cc \
 		${WRKSRC}/crypto/crypto.gyp \
 		${WRKSRC}/v8/tools/gyp/v8.gyp \
 		${WRKSRC}/v8/build/toolchain.gypi
 	@${REINPLACE_CMD} -e "s|/usr/local|${PREFIX}|" \
 		${WRKSRC}/chrome/common/chrome_paths.cc \
 		${WRKSRC}/base/base.gyp
-	@${FIND} ${WRKSRC} -type f -name \*\.gyp\* | \
-		${GREP} -vE "/v8/|libusb" | ${XARGS} ${GREP} -l '"freebsd"' | \
-		${XARGS} ${REINPLACE_CMD} -e 's|"freebsd"|"dragonfly"|g'
-	@${FIND} ${WRKSRC} -type f -name \*\.py | ${GREP} -v /v8/ | \
-		${XARGS} ${GREP} -l "'freebsd'" | \
-		${XARGS} ${REINPLACE_CMD} -e "s|'freebsd'|'dragonfly'|g"
-	@${REINPLACE_CMD} -e 's|"freebsd"|"dragonfly"|g' \
-		${WRKSRC}/v8/build/standalone.gypi \
-		${WRKSRC}/v8/build/toolchain.gypi \
-		${WRKSRC}/v8/src/d8.gyp \
-		${WRKSRC}/v8/tools/gyp/v8.gyp
-	@${REINPLACE_CMD} -e 's|0xFFFFFFFF|0x7FFFFFFF|' \
-		${WRKSRC}/third_party/mesa/src/include/GL/glext.h \
-		${WRKSRC}/third_party/mesa/src/src/mapi/glapi/gen/ARB_uniform_buffer_object.xml \
-		${WRKSRC}/third_party/mesa/src/chromium_gensrc/mesa/enums.c \
-		${WRKSRC}/third_party/khronos/GLES3/gl3.h \
-		${WRKSRC}/third_party/khronos/GLES3/gl31.h \
-		${WRKSRC}/third_party/khronos/noninclude/GL/glext.h \
-		${WRKSRC}/third_party/webgl/src/specs/latest/2.0/webgl2.idl \
-		${WRKSRC}/third_party/WebKit/public/platform/WebGraphicsContext3D.h \
-		${WRKSRC}/third_party/angle/include/GLES3/gl3.h \
-		${WRKSRC}/third_party/angle/src/libANGLE/renderer/gl/functionsgl_enums.h
 
 pre-configure:
 	# phajdan-jr: list of things *not* to remove, so maybe the script
@@ -346,8 +310,8 @@ pre-configure:
 		'third_party/libjingle' \
 		'third_party/libphonenumber' \
 		'third_party/libsrtp' \
-		'third_party/libvpx_new' \
-		'third_party/libvpx_new/source/libvpx/third_party/x86inc' \
+		'third_party/libvpx' \
+		'third_party/libvpx/source/libvpx/third_party/x86inc' \
 		'third_party/libwebm' \
 		'third_party/libxml/chromium' \
 		'third_party/libXNVCtrl' \
@@ -356,10 +320,9 @@ pre-configure:
 		'third_party/lzma_sdk' \
 		'third_party/markupsafe' \
 		'third_party/mesa' \
-		'third_party/mojo' \
 		'third_party/modp_b64' \
 		'third_party/mt19937ar' \
-		'third_party/npapi' \
+		'third_party/openh264' \
 		'third_party/openmax_dl' \
 		'third_party/opus' \
 		'third_party/ots' \
@@ -428,7 +391,8 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/out/${BUILDTYPE}/chrome \
 		${STAGEDIR}${DATADIR}
 	cd ${WRKSRC}/out/${BUILDTYPE} && \
-		${COPYTREE_SHARE} "locales resources" ${STAGEDIR}${DATADIR}
+		${COPYTREE_SHARE} "locales pseudo_locales resources" ${STAGEDIR}${DATADIR}
+	@${MKDIR} ${STAGEDIR}${DESKTOPDIR}
 	${INSTALL_DATA} ${WRKDIR}/chromium-browser.desktop \
 		${STAGEDIR}${DESKTOPDIR}
 	${INSTALL_SCRIPT} ${WRKDIR}/chrome ${STAGEDIR}${PREFIX}/bin

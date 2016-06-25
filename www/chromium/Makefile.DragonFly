@@ -2,3 +2,37 @@
 .if exists(/usr/include/bus/u4b/usb_freebsd.h)
 CFLAGS+=	-D__STDC_LIMIT_MACROS
 .endif
+
+KERBEROS_LIB_DEPENDS+=	libgssapi_krb5.so:security/krb5
+USES+=		alias
+
+GYP_DEFINES+=	target_arch=x64 OS=dragonfly disable_fatal_linker_warnings=1
+
+dfly-patch:
+	@${FIND} ${WRKSRC} -type f -name \*\.gyp\* | \
+		${GREP} -vE "/v8/|libusb" | ${XARGS} ${GREP} -l '"freebsd"' | \
+		${XARGS} ${REINPLACE_CMD} -e 's|"freebsd"|"dragonfly"|g'
+	@${FIND} ${WRKSRC} -type f -name \*\.gyp\* | \
+		${GREP} -vE "/v8/|libusb" | ${XARGS} ${GREP} -l '"freebsd"' | \
+		${XARGS} ${REINPLACE_CMD} -e 's|"freebsd"|"dragonfly"|g'
+	@${FIND} ${WRKSRC} -type f -name \*\.py | ${GREP} -v /v8/ | \
+		${XARGS} ${GREP} -l "'freebsd'" | \
+		${XARGS} ${REINPLACE_CMD} -e "s|'freebsd'|'dragonfly'|g"
+	@${REINPLACE_CMD} -e 's|"freebsd"|"dragonfly"|g' \
+		${WRKSRC}/v8/build/standalone.gypi \
+		${WRKSRC}/v8/build/toolchain.gypi \
+		${WRKSRC}/v8/src/d8.gyp \
+		${WRKSRC}/v8/tools/gyp/v8.gyp
+	@${REINPLACE_CMD} -e 's|0xFFFFFFFF|0x7FFFFFFF|' \
+		${WRKSRC}/third_party/mesa/src/include/GL/glext.h \
+		${WRKSRC}/third_party/mesa/src/src/mapi/glapi/gen/ARB_uniform_buffer_object.xml \
+		${WRKSRC}/third_party/mesa/src/chromium_gensrc/mesa/enums.c \
+		${WRKSRC}/third_party/khronos/GLES3/gl3.h \
+		${WRKSRC}/third_party/khronos/GLES3/gl31.h \
+		${WRKSRC}/third_party/khronos/noninclude/GL/glext.h \
+		${WRKSRC}/third_party/webgl/src/specs/latest/2.0/webgl2.idl \
+		${WRKSRC}/third_party/WebKit/public/platform/WebGraphicsContext3D.h \
+		${WRKSRC}/third_party/angle/include/GLES3/gl3.h \
+		${WRKSRC}/third_party/angle/src/libANGLE/renderer/gl/functionsgl_enums.h
+	${REINPLACE_CMD} -e "s|'freebsd'|'dragonfly'|g"	\
+		${WRKSRC}/v8/build/landmine_utils.py
