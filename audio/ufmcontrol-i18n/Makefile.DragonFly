@@ -1,0 +1,5 @@
+USES+= ncurses
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@ltermcap@lncurses@g'	\
+		${WRKSRC}/src/bin/Makefile
