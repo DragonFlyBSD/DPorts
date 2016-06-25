@@ -1,0 +1,11 @@
+USES+= alias
+
+# courtesy from boost
+USE_CXXSTD= c++11
+
+# enforce movq and friends is asm
+CFLAGS+= -DUSE_X86_64_ASM
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-DNO_POSIX_MEMALIGN@@g'	\
+		${WRKSRC}/SConstruct
