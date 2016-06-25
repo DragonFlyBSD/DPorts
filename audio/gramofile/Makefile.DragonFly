@@ -1,0 +1,10 @@
+USES+= ncurses
+
+# zrj: doesn't respect CFLAGS (partially) so manual
+dfly-patch:
+	${REINPLACE_CMD} -e 's@ifndef \(__FreeBSD__\)@if !defined(\1) \&\& !defined(__DragonFly__)@g'	\
+			 -e 's@ifdef \(__FreeBSD__\)@if defined(\1) || defined(__DragonFly__)@g'	\
+		${WRKSRC}/bplaysrc/*.c
+	${REINPLACE_CMD} -e "s@-lncurses@-L${LOCALBASE}/lib -lncurses@g"	\
+			 -e 's@-DUSEBUFFLOCK@@g'				\
+		${WRKSRC}/bplaysrc/Makefile # no SHM_LOCK emu on DragonFly
