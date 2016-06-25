@@ -1,0 +1,11 @@
+--- configure.orig	2014-12-06 12:06:59.000000000 +0200
++++ configure
+@@ -1983,7 +1983,7 @@ case "$target_os" in
+     dragonfly*)
+ 	targos=dragonfly
+ 	case "$target_cpu" in
+-	    i?86) targmach=i386 ;;
++	    x86_64) targmach=amd64 ;;
+ 	esac
+ 	;;
+ 
