@@ -1,14 +1,14 @@
---- src/event.c.orig	2015-09-07 14:04:22 UTC
+--- src/event.c.orig	2016-06-25 11:35:01 UTC
 +++ src/event.c
-@@ -547,6 +547,7 @@ event_callback(void *data, struct pkg_ev
- 	int *debug = data;
+@@ -573,6 +573,7 @@ event_callback(void *data, struct pkg_ev
+ 	int *debug = data, i;
  	struct pkg_event_conflict *cur_conflict;
- 	const char *filename;
+ 	const char *filename, *reponame;
 +	char trunc_filename[42] = { 0 };
  
  	if (msg_buf == NULL) {
  		msg_buf = sbuf_new_auto();
-@@ -604,9 +605,12 @@ event_callback(void *data, struct pkg_ev
+@@ -630,9 +631,12 @@ event_callback(void *data, struct pkg_ev
  			 */
  			filename = ev->e_fetching.url;
  		}
