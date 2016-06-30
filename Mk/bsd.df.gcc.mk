@@ -32,11 +32,11 @@ USE_BINUTILS=		yes
 V:=			${PORT_COMPILER:S/.//}
 X:=			${PORT_COMPILER:S/.//:S/-devel//}
 .  if "${PORT_COMPILER}" == "${LANG_GCC_IS}"
-BUILD_DEPENDS+=		gcc${X}:${PORTSDIR}/lang/gcc
-RUN_DEPENDS+=		gcc${X}:${PORTSDIR}/lang/gcc
+BUILD_DEPENDS+=		gcc${X}:lang/gcc
+RUN_DEPENDS+=		gcc${X}:lang/gcc
 .  else
-BUILD_DEPENDS+=		gcc${X}:${PORTSDIR}/lang/gcc${V}
-RUN_DEPENDS+=		gcc${X}:${PORTSDIR}/lang/gcc${V}
+BUILD_DEPENDS+=		gcc${X}:lang/gcc${V}
+RUN_DEPENDS+=		gcc${X}:lang/gcc${V}
 .  endif
 _GCC_RUNTIME:=		${LOCALBASE}/lib/gcc${V}
 

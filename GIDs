@@ -96,6 +96,7 @@ barman:*:157:
 pootle:*:158:
 nocat:*:159:
 _ypldap:*:160:
+tile38:*:170:
 sfs:*:171:
 agk:*:172:
 polipo:*:173:
@@ -191,10 +192,12 @@ slurm:*:468:
 consul:*:469:
 serf:*:470:
 vault:*:471:
+nomad:*:472:
 _bbstored:*:505:
 radmind:*:506:
 skkserv:*:507:
 pwhois:*:512:
+davmail:*:521:
 nullmail:*:522:
 freevo:*:523:
 dkimproxy:*:525:

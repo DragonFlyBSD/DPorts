@@ -1,4 +1,4 @@
-# $FreeBSD: head/Keywords/sample.ucl 398261 2015-10-01 08:39:44Z mat $
+# $FreeBSD: head/Keywords/sample.ucl 417335 2016-06-22 21:44:25Z bapt $
 #
 # MAINTAINER: portmgr@FreeBSD.org
 #
@@ -35,8 +35,7 @@ post-install: <<EOD
   *) target_file="%D/${target_file}" ;;
   esac
   if ! [ -f "${target_file}" ]; then
-    /bin/cp -p "${sample_file}" "${target_file}" && \
-      /bin/chmod u+w "${target_file}"
+    /bin/cp -p "${sample_file}" "${target_file}"
   fi
 EOD
 pre-deinstall: <<EOD

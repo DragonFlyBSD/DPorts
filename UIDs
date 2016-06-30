@@ -102,6 +102,7 @@ barman:*:157:157::0:0:Barman user:/var/barman:/bin/sh
 pootle:*:158:158::0:0:Pootle User:/var/db/pootle:/usr/sbin/nologin
 nocat:*:159:159::0:0:NoCat Daemon:/libexec/nocat:/sbin/nologin
 _ypldap:*:160:160::0:0:YP Ldap unprivileged user:/var/empty:/usr/sbin/nologin
+tile38:*:170:170::0:0:Tile38 User:/var/db/tile38:/usr/sbin/nologin
 sfs:*:171:171::0:0:Self-Certifying File System:/nonexistent:/usr/sbin/nologin
 agk:*:172:172::0:0:AquaGateKeeper:/nonexistent:/nonexistent
 polipo:*:173:173::0:0:polipo web cache:/nonexistent:/usr/sbin/nologin
@@ -198,10 +199,12 @@ slurm:*:468:468::0:0:SLURM Daemon:/home/slurm:/usr/sbin/nologin
 consul:*:469:469::0:0:Consul Daemon:/var/tmp/consul:/usr/sbin/nologin
 serf:*:470:470::0:0:Serf Daemon:/nonexistent:/usr/sbin/nologin
 vault:*:471:471::0:0:Vault Daemon:/nonexistent:/usr/sbin/nologin
+nomad:*:472:472::0:0:Nomad Daemon:/var/tmp/nomad:/usr/sbin/nologin
 _bbstored:*:505:505::0:0:Box Backup Store Daemon:/nonexistent:/usr/sbin/nologin
 radmind:*:506:506::0:0:radmind User:/var/radmind:/usr/sbin/nologin
 skkserv:*:507:507::0:0:skkserv User:/nonexistent:/usr/sbin/nologin
 pwhois:*:512:512::0:0:pwhoisd User:/nonexistent:/usr/sbin/nologin
+davmail:*:521:521::0:0:Davmail Exchange Gateway:/nonexistent:/usr/sbin/nologin
 nullmail:*:522:522::0:0:Nullmailer Mail System:/var/spool/nullmailer:/bin/sh
 freevo:*:523:523::0:0:Freevo User:/var/db/freevo:/bin/sh
 dkimproxy:*:525:525::0:0:DKIM Proxy Owner:/nonexistent:/usr/sbin/nologin
