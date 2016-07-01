@@ -1,0 +1,6 @@
+
+# zrj: cheat a little
+post-install:
+	if [ ! -f "${STAGEDIR}${PREFIX}/lib/libphk_p.a" ] ; then \
+		cp -v "${STAGEDIR}${PREFIX}/lib/libphk.a" "${STAGEDIR}${PREFIX}/lib/libphk_p.a" ; \
+	fi;
