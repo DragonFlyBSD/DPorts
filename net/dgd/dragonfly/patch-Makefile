@@ -1,0 +1,12 @@
+--- src/Makefile.intermediate	2016-06-29 15:41:53 UTC
++++ src/Makefile
+@@ -32,6 +32,9 @@ endif
+ ifeq ($(OS),OpenBSD)
+   HOST=FREEBSD
+ endif
++ifeq ($(OS),DragonFly)
++  HOST=FREEBSD
++endif
+ ifeq ($(OS),SunOS)
+   HOST=SOLARIS
+ endif
