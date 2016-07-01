@@ -1,0 +1,11 @@
+--- src/bin/sh.script.in.orig	2016-03-10 03:52:53.000000000 +0200
++++ src/bin/sh.script.in
+@@ -861,7 +861,7 @@ getpid() {
+                     # The ps statement below looks for the specific wrapper command running as
+                     #  the pid.  If it is not found then the pid file is considered to be stale.
+                     case "$DIST_OS" in
+-                        'freebsd')
++                        'freebsd'|'dragonfly')
+                             pidtest=`$PS_BIN -p $pid -o args | tail -1`
+                             if [ "X$pidtest" = "XCOMMAND" ]
+                             then 

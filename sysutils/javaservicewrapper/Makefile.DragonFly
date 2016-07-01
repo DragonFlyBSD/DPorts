@@ -1,0 +1,4 @@
+
+dfly-patch:
+	${LN} -sv ${WRKSRC}/src/c/Makefile-freebsd-x86-64.gmake \
+		  ${WRKSRC}/src/c/Makefile-dragonfly-x86-64.gmake

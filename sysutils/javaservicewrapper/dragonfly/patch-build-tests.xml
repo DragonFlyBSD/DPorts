@@ -1,0 +1,22 @@
+--- build-tests.xml.orig	2016-03-10 03:52:55.000000000 +0200
++++ build-tests.xml	2016-06-27 17:44:39.000000000 +0300
+@@ -108,6 +108,10 @@
+         <property name="is.Unix" value="true"/>
+         <property name="is.shell.sh" value="true"/>
+     </target>
++    <target name="init-dragonfly" if="is.DragonFlyBSD">
++        <property name="is.Unix" value="true"/>
++        <property name="is.shell.sh" value="true"/>
++    </target>
+     <target name="init-freebsd" if="is.FreeBSD">
+         <property name="is.Unix" value="true"/>
+         <property name="is.shell.sh" value="true"/>
+@@ -120,7 +124,7 @@
+     <!-- =================================================================== -->
+     <!-- Initialize build.                                                   -->
+     <!-- =================================================================== -->
+-    <target name="init" depends="init-windows, init-linux, init-solaris, init-aix, init-hpux, init-macosx, init-osf1, init-freebsd, init-irix">
++    <target name="init" depends="init-windows, init-linux, init-solaris, init-aix, init-hpux, init-macosx, init-osf1, init-dragonfly, init-freebsd, init-irix">
+     </target>
+ 
+     <!-- =================================================================== -->
