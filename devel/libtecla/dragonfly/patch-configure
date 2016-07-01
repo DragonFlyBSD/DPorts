@@ -1,0 +1,11 @@
+--- configure.orig	2014-11-10 00:15:29.000000000 +0200
++++ configure
+@@ -4237,7 +4237,7 @@ $as_echo "$tecla_cv_gnu_ld_script" >&6;
+   $as_echo "#define _OSF_SOURCE 1" >>confdefs.h
+ 
+   ;;
+-*freebsd*)
++*freebsd*|*dragonfly*)
+   SHARED_EXT=".so.${MAJOR_VER}"
+   SHARED_ALT=".so"
+   VERSION_OPT='--version-script=$$(srcdir)/libtecla.map'
