@@ -1,0 +1,8 @@
+
+# zrj: take atoi from cstdlib
+dfly-patch:
+	${REINPLACE_CMD} -e 's@stdlib\.h@cstdlib@g'		\
+		${WRKSRC}/src/openhbci/core/date.cpp		\
+		${WRKSRC}/src/openhbci/core/statusreport.cpp	\
+		${WRKSRC}/src/openhbci/core/updjob.cpp		\
+		${WRKSRC}/src/openhbci/simpleconfig.cpp
