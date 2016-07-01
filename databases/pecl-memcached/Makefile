@@ -24,14 +24,11 @@ IGBINARY_DESC=	Binary serializer support
 
 CONFIGURE_ARGS=	--with-libmemcached-dir=${LOCALBASE}
 IGNORE_WITH_PHP=70
-USE_PHP=	json session
-USE_PHPEXT=	yes
-USE_PHPIZE=	yes
-USE_PHP_BUILD=	yes
-USES=		pkgconfig tar:tgz
+USE_PHP=	json:build session:build
+USES=		php:ext pkgconfig tar:tgz
 
 IGBINARY_CONFIGURE_ENABLE=	memcached-igbinary
-IGBINARY_USE=		PHP=igbinary
+IGBINARY_USE=		PHP=igbinary:build
 SASL_CONFIGURE_ENABLE=	memcached-sasl
 SASL_LIB_DEPENDS=	libsasl2.so:security/cyrus-sasl2
 
