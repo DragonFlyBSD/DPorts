@@ -1,0 +1,9 @@
+USES+= alias
+
+dfly-patch:
+	${LN} -sv ${WRKSRC}/src/Makefile.FreeBSD ${WRKSRC}/src/Makefile.DragonFly
+	${LN} -sv ${WRKSRC}/wshare/Makefile.FreeBSD ${WRKSRC}/wshare/Makefile.DragonFly
+
+# to keep plist happy
+post-build:
+	-${RM} -f ${WRKSRC}/wshare/Makefile.DragonFly
