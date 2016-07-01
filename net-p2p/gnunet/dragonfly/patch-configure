@@ -1,0 +1,11 @@
+--- configure.intermediate	2016-06-28 13:29:14.00 UTC
++++ configure
+@@ -17638,7 +17638,7 @@ fi
+ fi
+ 
+      ;;
+-*freebsd*)
++*freebsd*|*dragonfly*)
+ 
+ cat >>confdefs.h <<_ACEOF
+ #define SOMEBSD 1
