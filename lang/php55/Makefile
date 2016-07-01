@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	php55
-PORTVERSION=	5.5.36
+PORTVERSION=	5.5.37
 PORTREVISION?=	0
 CATEGORIES?=	lang devel www
 MASTER_SITES=	PHP/distributions
@@ -93,7 +93,7 @@ IGNORE=		doesn't install the Apache module anymore:\
 .endif
 
 .if defined(PKGNAMEPREFIX)
-USE_PHP=	yes
+USES+=	php
 PHP_DEFAULT=	5.5
 IGNORE_WITH_PHP=53 54 5
 USE_APACHE=	22+
@@ -185,6 +185,8 @@ post-build:
 	@${ECHO_CMD} "PHP_VERSION=${PORTVERSION}" >> ${WRKDIR}/php.conf
 	@${ECHO_CMD} "PHP_SAPI=${PHP_SAPI}" >> ${WRKDIR}/php.conf
 	@${ECHO_CMD} "PHP_EXT_INC=pcre spl" >> ${WRKDIR}/php.conf
+	@${ECHO_CMD} -n "PHP_EXT_DIR=" >> ${WRKDIR}/php.conf
+	@${SH} ${WRKSRC}/scripts/php-config --extension-dir | sed -ne 's,^${PREFIX}/lib/php/,,p' >> ${WRKDIR}/php.conf
 
 test: build
 	@(cd ${WRKSRC} && ${MAKE} test)
