@@ -1,0 +1,11 @@
+--- configure.orig	1998-07-16 18:17:10.000000000 +0200
++++ configure
+@@ -1366,7 +1366,7 @@ EOF
+ 	OS_OPT=
+ 	
+         ;;
+-freebsd*)
++freebsd*|dragonfly*)
+ 	cat >> confdefs.h <<\EOF
+ #define FREEBSD 1
+ EOF

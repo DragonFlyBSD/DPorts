@@ -1,0 +1,4 @@
+sbin/sniffit
+man/man5/sniffit.5.gz
+man/man8/sniffit.8.gz
+%%PORTDOCS%%share/doc/sniffit/README.FIRST
