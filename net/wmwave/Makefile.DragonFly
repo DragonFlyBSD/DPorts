@@ -1,0 +1,4 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@net80211/@netproto/802_11/@g'	\
+		${WRKSRC}/wmwave.c
