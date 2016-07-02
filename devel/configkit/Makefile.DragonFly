@@ -1,0 +1,8 @@
+# disable warns (unused func and and missing include dirs..)
+MAKE_ARGS+= NO_WARNS=1
+
+# zrj: cheat a little
+post-install:
+	if [ ! -f "${STAGEDIR}${PREFIX}/lib/libconfigkit_p.a" ] ; then \
+		cp -v "${STAGEDIR}${PREFIX}/lib/libconfigkit.a" "${STAGEDIR}${PREFIX}/lib/libconfigkit_p.a" ; \
+	fi;
