@@ -1,0 +1,11 @@
+--- configure.orig	2000-02-01 09:11:24.000000000 +0200
++++ configure
+@@ -17,7 +17,7 @@ case $system in
+ 			echo "enabling proc stats reading";
+ 		fi	
+ 		;;
+-	FreeBSD)
++	FreeBSD|DragonFly)
+ 		os="freebsd";
+ 		;;
+ 	NetBSD)
