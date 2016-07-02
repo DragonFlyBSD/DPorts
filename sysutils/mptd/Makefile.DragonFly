@@ -1,0 +1,6 @@
+# zrj: took =15 from mptutil(8), not sys/conf.h =63 one
+CFLAGS+= -DSPECNAMELEN=15
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@dev/mpt/mpilib/@dev/disk/mpt/mpilib/@g'	\
+		${WRKSRC}/mptd.h
