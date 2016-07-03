@@ -1,0 +1,20 @@
+--- configure.orig	2014-09-23 18:41:34.000000000 +0300
++++ configure
+@@ -4444,7 +4444,7 @@ _ACEOF
+ 
+                 os_libs=''
+  ;;
+-        *-*-freebsd*|*-*-kfreebsd*-gnu*)
++        *-*-dragonfly*|*-*-freebsd*|*-*-kfreebsd*-gnu*)
+                 os_deps='sg_pt_freebsd.o'
+ 
+ 
+@@ -4522,7 +4522,7 @@ _ACEOF
+ esac
+ 
+ # Define platform-specific symbol.
+- if echo $host_os | grep 'freebsd' > /dev/null; then
++ if echo $host_os | grep -E 'freebsd|dragonfly' > /dev/null; then
+   OS_FREEBSD_TRUE=
+   OS_FREEBSD_FALSE='#'
+ else
