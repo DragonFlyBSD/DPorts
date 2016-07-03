@@ -1,0 +1,11 @@
+--- configure.orig	2005-02-09 21:09:28.000000000 +0200
++++ configure
+@@ -3050,7 +3050,7 @@ _ACEOF
+ 
+ 	scriptdir="linux"
+         ;;
+-freebsd*)
++freebsd*|dragonfly*)
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define FREEBSD 1
