@@ -1,0 +1,21 @@
+#!/bin/sh
+#
+# $FreeBSD: head/sysutils/mfid/files/mfid.in 416848 2016-06-13 15:46:41Z feld $
+
+# PROVIDE: mfid
+# REQUIRE: root ldconfig devfs syslogd mail
+# KEYWORD: nojail noyroot shutdown
+
+. /etc/rc.subr
+
+name=mfid
+rcvar=mfid_enable
+load_rc_config $name
+
+required_files=/dev/mfi0
+
+raid_alert_mailto=${mfid_alert_mailto:-"root@localhost"}
+command=%%PREFIX%%/sbin/mfid
+command_args=${raid_alert_mailto}
+
+run_rc_command "$1"

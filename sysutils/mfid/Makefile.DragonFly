@@ -1,0 +1,5 @@
+CFLAGS+= -DSPECNAMELEN=15
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@dev/mfi/@dev/raid/mfi/@g'	\
+		${WRKSRC}/mfid.c
