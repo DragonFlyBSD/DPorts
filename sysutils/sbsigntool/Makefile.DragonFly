@@ -1,0 +1,1 @@
+BUILD_DEPENDS+= ${LOCALBASE}/include/bfd.h:devel/binutils
