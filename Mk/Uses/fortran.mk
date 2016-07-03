@@ -17,6 +17,11 @@ fortran_ARGS=	gcc
 
 .if ${fortran_ARGS} == gcc
 _GCC_VER=	5
+. if defined(USE_GCC)
+.  if ${USE_GCC} == 4.8 || ${USE_GCC} == 4.9 || ${USE_GCC} == 6
+_GCC_VER=	${USE_GCC:S/.//}
+.  endif
+. endif
 BUILD_DEPENDS+=	gfortran${_GCC_VER}:lang/gcc${_GCC_VER}
 RUN_DEPENDS+=	gfortran${_GCC_VER}:lang/gcc${_GCC_VER}
 USE_BINUTILS=	yes
