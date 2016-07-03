@@ -1,0 +1,56 @@
+--- pandora_agent_installer.orig	2016-04-08 12:51:58.650895200 +0300
++++ pandora_agent_installer
+@@ -16,7 +16,7 @@ OS_NAME=`uname -s`
+ FORCE=0
+ LOG_TIMESTAMP=`date +"%Y/%m/%d %H:%M:%S"`
+ 
+-PREFIX=/usr
++PREFIX=/usr/local
+ if [ "$OS_NAME" = "FreeBSD" ] || [ "$OS_NAME" = "NetBSD" ]
+ then
+ 	PREFIX=/usr/local
+@@ -47,7 +47,7 @@ AIX)
+ HP-UX)
+ 	PANDORA_STARTUP=/sbin/init.d/pandora_agent_daemon
+ 	;;
+-FreeBSD)
++FreeBSD|DragonFly)
+ 	PANDORA_CFG=$PREFIX/etc/pandora
+ 	PANDORA_MAN=$PREFIX/man
+ 	PANDORA_STARTUP=$PREFIX/etc/rc.d/pandora_agent
+@@ -99,7 +99,7 @@ then
+ 	exit 2
+ fi
+ 
+-if [ -z "`echo Linux HP-UX SunOS AIX Solaris Darwin BSD bsd FreeBSD NetBSD | grep \"$OS_NAME\"`" ]
++if [ -z "`echo Linux HP-UX SunOS AIX Solaris Darwin BSD bsd DragonFly FreeBSD NetBSD | grep \"$OS_NAME\"`" ]
+ then
+ 	echo "This system: '$OS_NAME' is not supported by this script"
+ 	echo "Please make the install yourself as it's described in documentation"
+@@ -290,7 +290,7 @@ install () {
+ 		# Backup the configuration file
+ 		cp -f "$AGENT_CFG" "${AGENT_CFG}.bak"
+ 
+-		if [ "$OS_NAME" = "FreeBSD" ] || [ "$OS_NAME" = "NetBSD" ]
++		if [ "$OS_NAME" = "FreeBSD" ] || [ "$OS_NAME" = "NetBSD" ] || [ "$OS_NAME" = "DragonFly" ]
+ 		then
+ 			sed -e "\|^PATH=|s|=|=$PANDORA_BASE$PREFIX/bin:|" \
+ 				-e "s|/usr/local/etc/pandora|$PANDORA_BASE$PANDORA_CFG|g" \
+@@ -407,7 +407,7 @@ install () {
+ 	chmod 711 $PANDORA_BASE$PANDORA_LOG_DIR
+ 	chmod 640 $PANDORA_BASE$PANDORA_LOG_DIR/$PANDORA_LOG
+ 	chown $PANDORA_USER:0 $PANDORA_BASE$PANDORA_LOG_DIR/$PANDORA_LOG  2>/dev/null
+-	if [ "$OS_NAME" = "FreeBSD" ] || [ "$OS_NAME" = "NetBSD" ]
++	if [ "$OS_NAME" = "FreeBSD" ] || [ "$OS_NAME" = "NetBSD" ] || [ "$OS_NAME" = "DragonFly" ]
+ 	then
+ 		chown $PANDORA_USER:daemon $PANDORA_BASE$PANDORA_TEMP 2>/dev/null
+ 		chmod -R 770 $PANDORA_BASE$PANDORA_TEMP
+@@ -492,7 +492,7 @@ install () {
+ 	echo " "
+ 	echo "You also need to setup your $PANDORA_BASE$PANDORA_CFG/pandora_agent.conf config file"
+ 	echo " "
+-	if [ "$OS_NAME" = "FreeBSD" ]
++	if [ "$OS_NAME" = "FreeBSD" ] || [ "$OS_NAME" = "DragonFly" ]
+ 	then
+ 		echo "Define 'pandora_agent_enable=\"YES\"' in /etc/rc.conf to enable the daemon."
+ 	elif [ "$OS_NAME" = "NetBSD" ]

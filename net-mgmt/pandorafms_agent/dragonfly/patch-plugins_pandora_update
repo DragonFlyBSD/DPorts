@@ -1,0 +1,20 @@
+--- plugins/pandora_update.orig	2015-09-09 01:30:01.991007000 +0300
++++ plugins/pandora_update
+@@ -146,7 +146,7 @@ if (defined($ARGV[1])) {
+ 
+ # Unix 
+ my ($running_binary, $updated_binary, $conf_path);
+-if ($^O eq 'freebsd') {
++if ($^O eq 'freebsd' || $^O eq 'dragonfly') {
+ 	$running_binary = $opt_dir."/usr/local/bin/pandora_agent";
+ 	$updated_binary = $opt_dir."/usr/local/etc/pandora/collections/$fc_path/pandora_agent";
+ 	$conf_path = $opt_dir."/usr/local/etc/pandora";
+@@ -167,7 +167,7 @@ if ($^O eq 'freebsd') {
+ 
+ my $start_pandora;
+ my $stop_pandora;
+-if ($^O eq 'freebsd') {
++if ($^O eq 'freebsd' || $^O eq 'dragonfly') {
+ 	$start_pandora = $opt_dir."/usr/local/etc/rc.d/pandora_agent start";
+ 	$stop_pandora = $opt_dir."/usr/local/etc/rc.d/pandora_agent stop";
+ } else {

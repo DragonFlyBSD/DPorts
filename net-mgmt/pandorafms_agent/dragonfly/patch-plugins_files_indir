@@ -1,0 +1,11 @@
+--- plugins/files_indir.orig	2016-04-08 12:50:59.195613000 +0300
++++ plugins/files_indir
+@@ -13,7 +13,7 @@ then
+ fi
+ 
+ DIRE=$1
+-if [ `uname -s` = "FreeBSD" ];then
++if [ `uname -s` = "FreeBSD" ] || [ `uname -s` = "DragonFly" ];then
+ 	DIRETMP=`echo $DIRE | /sbin/md5`;
+ else
+ 	DIRETMP=`echo $DIRE | md5sum | awk '{ print $1 }'`

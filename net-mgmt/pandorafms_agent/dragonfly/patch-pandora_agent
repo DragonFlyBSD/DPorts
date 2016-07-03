@@ -1,0 +1,50 @@
+--- pandora_agent.orig	2016-04-08 12:51:58.778902000 +0300
++++ pandora_agent
+@@ -48,6 +48,7 @@ use constant TOTALMEMORY_CMDS => {
+ 	linux => 'cat /proc/meminfo | grep MemTotal: | awk \'{ print $2 }\'',
+ 	solaris => '/usr/sbin/prtconf | awk \'/Memory/ { print $3 * 1024 }\'',
+ 	hpux => 'swapinfo -t | grep memory | awk \'{print $2}\'',
++	dragonfly => '/sbin/sysctl hw.physmem | awk \'{print $2 / 1024}\'',
+ 	freebsd => '/sbin/sysctl hw.physmem | awk \'{print $2 / 1024}\'',
+ };
+ 
+@@ -56,6 +57,7 @@ use constant FREEMEMORY_CMDS => {
+ 	linux => 'cat /proc/meminfo | grep MemFree: | awk \'{ print $2 }\'',
+ 	solaris => 'vmstat 1 2 | tail -1 | awk \'{ print $5 }\'',
+ 	hpux => 'swapinfo -t | grep memory | awk \'{print $4}\'',
++	dragonfly => '/sbin/sysctl -n vm.stats.vm.v_page_size vm.stats.vm.v_free_count | tr "\n" " " | awk \'{ print $1 * $2 / 1024 }\'',
+ 	freebsd => '/sbin/sysctl -n vm.stats.vm.v_page_size vm.stats.vm.v_free_count | tr "\n" " " | awk \'{ print $1 * $2 / 1024 }\'',
+ };
+ 
+@@ -64,6 +66,7 @@ use constant CPUUSAGE_CMDS => {
+ 	linux => 'vmstat 1 2 | tail -1 | awk \'{ print $13 }\'',
+ 	solaris => 'vmstat 1 2 | tail -1 | awk \'{ print $21 }\'',
+ 	hpux => 'vmstat 1 2 | tail -1 | awk \'{ print $16 }\'',
++	dragonfly => 'vmstat -n 0 1 2 | tail -1 | awk \'{ print $15 }\'',
+ 	freebsd => 'vmstat -n 0 1 2 | tail -1 | awk \'{ print $15 }\''
+ };
+ 
+@@ -74,6 +77,7 @@ use constant PROC_CMDS => {
+ 	solaris => 'prstat 1 1 | awk \'NR > 1 {split ($10, ps, "/"); cpu = substr ($9, 1, length ($9) - 1); mem = substr ($3, 1, length ($3) - 1); print cpu, mem, ps[1]}\'',
+ 	hpux => 'ps -elf | awk \'NR > 1 {ps = ""; for (i = 15; i <= NF; ++i) {ps = (ps " " $i) }; print 0, $10, ps}\'',
+ 	aix => 'ps aux | awk \'NR > 1 {print $3, $6, $11}\'',
++	dragonfly => 'ps axww -o %cpu= -o %mem= -o command= | sed -e "s/^ *//"',
+ 	freebsd => 'ps axww -o %cpu= -o %mem= -o command= | sed -e "s/^ *//"',
+ };
+ 
+@@ -84,6 +88,7 @@ use constant PART_CMDS => {
+ 	solaris => 'df -k | awk \'NR > 1 {print $2, $4, $6}\'',
+ 	hpux => 'df -P | awk \'NR > 1 {print $2, $4, $6}\'',
+ 	aix => 'df -kP | awk \'NR > 1 {print $2, $4, $6}\'',
++	dragonfly => 'df -k | awk \'NR > 1 {print $2, $4, $6}\'',
+ 	freebsd => 'df -k | awk \'NR > 1 {print $2, $4, $6}\''
+ };
+ 
+@@ -94,6 +99,7 @@ use constant DF_CMDS => {
+ 	solaris => 'df -k',
+ 	hpux => 'df -P',
+ 	aix => 'df -kP',
++	dragonfly => 'df -k',
+ 	freebsd => 'df -k'
+ };
+ 	
