@@ -1,0 +1,19 @@
+--- configure.orig	2011-11-08 21:36:51.000000000 +0200
++++ configure
+@@ -4623,6 +4623,7 @@ fi
+ done
+ 
+ if test "x${OS}" = "xFreeBSD" || \
++   test "x${OS}" = "xDragonFly" || \
+    test "x${OS}" = "xOpenBSD" || \
+    test "x${OS}" = "xNetBSD"; then
+ 
+@@ -7186,7 +7187,7 @@ fi
+ done
+ 
+ fi
+-if test "x${OS}" = "xFreeBsd" ||
++if test "x${OS}" = "xFreeBsd" || test "x${OS}" = "xDragonFly" ||
+    test "x${OS}" = "xLinux"; then
+ 
+ for ac_header in sys/sysctl.h
