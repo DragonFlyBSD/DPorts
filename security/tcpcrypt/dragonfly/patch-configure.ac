@@ -1,0 +1,11 @@
+--- configure.ac.orig	2014-09-11 02:22:26 UTC
++++ configure.ac
+@@ -64,7 +64,7 @@ else
+   os_linux=0
+ fi
+ AM_CONDITIONAL(OS_LINUX, [test "$os_linux" -eq 1])
+-AM_CONDITIONAL(OS_BSD, [echo $host_os | grep -E 'darwin|freebsd'])
++AM_CONDITIONAL(OS_BSD, [echo $host_os | grep -E 'darwin|freebsd|dragonfly'])
+ AM_CONDITIONAL(OS_MINGW, [echo $host_os | grep mingw])
+ 
+ AS_IF([test "$os_linux" -eq 1],
