@@ -1,0 +1,11 @@
+--- configure.orig	2001-10-02 04:53:04.000000000 +0200
++++ configure
+@@ -1291,7 +1291,7 @@ EOF
+ 
+   RPCGEN="$RPCGEN -b"
+   ;;
+-  *-*-freebsd*)
++  *-*-freebsd*|*-*-dragonfly*)
+   cat >> confdefs.h <<\EOF
+ #define FREEBSD 1
+ EOF
