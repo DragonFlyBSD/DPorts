@@ -1,0 +1,8 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(FreeBSD|OpenBSD|NetBSD\))@\1|DragonFly)@g'	\
+		${WRKSRC}/make-buildlib.sh					\
+		${WRKSRC}/make-compile.sh					\
+		${WRKSRC}/make-link.sh						\
+		${WRKSRC}/make-machdep.h.sh
+
