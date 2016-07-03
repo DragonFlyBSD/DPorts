@@ -1,0 +1,5 @@
+
+# zrj: prevent installing into /usr/local/lib64
+dfly-patch:
+	${REINPLACE_CMD} -e '/LIB_SUFFIX = 64/d'	\
+		${WRKSRC}/src/config.inc
