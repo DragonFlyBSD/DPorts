@@ -16,7 +16,7 @@
 PORT_COMPILER=${USE_GCC}
 .else
 .  if ${USE_GCC:M6*}
-PORT_COMPILER=6-devel
+PORT_COMPILER=6
 .  else
 .    if ${USE_GCC:tu} == NOT5 || ${USE_GCC:tu} == DEFAULT_NOT5
 PORT_COMPILER=${LANG_GCC_IS}
