@@ -1,0 +1,12 @@
+--- tools/webjob-verify-binary/webjob-verify-binary.orig	2012-01-07 10:01:24.000000000 +0200
++++ tools/webjob-verify-binary/webjob-verify-binary
+@@ -117,6 +117,9 @@ WvbMain()
+   AIX)
+     WEBJOB_BINARY="webjob-${WEBJOB_VERSION}-aix"
+     ;;
++  DragonFly)
++    WEBJOB_BINARY="webjob-${WEBJOB_VERSION}-dragonfly"
++    ;;
+   FreeBSD)
+     WEBJOB_BINARY="webjob-${WEBJOB_VERSION}-freebsd"
+     ;;

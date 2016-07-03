@@ -1,0 +1,20 @@
+--- configure.orig	2012-05-01 18:49:48.000000000 +0300
++++ configure
+@@ -1464,7 +1464,7 @@ _ACEOF
+   ap_srcs="ap_snprintf.c"
+   ap_incs="ap_snprintf.h"
+   ;;
+-*bsd*)
++*bsd*|*dragonfly*)
+   OS_CFLAGS="-DUNIX"
+ 
+ cat >>confdefs.h <<\_ACEOF
+@@ -6408,7 +6408,7 @@ done
+ 
+ 
+ case "${target_os}" in
+-*bsd*)
++*bsd*|*dragonfly*)
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define HAVE_DIRFD 1

@@ -1,0 +1,13 @@
+--- tools/webjob-update-client/webjob-update-client.orig	2012-01-07 10:01:24.000000000 +0200
++++ tools/webjob-update-client/webjob-update-client
+@@ -155,6 +155,10 @@ WucMain()
+     WEBJOB_BINARY="webjob-${WEBJOB_VERSION}-aix"
+     WEBJOB_GROUP=system
+     ;;
++  DragonFly)
++    WEBJOB_BINARY="webjob-${WEBJOB_VERSION}-dragonfly"
++    WEBJOB_GROUP=wheel
++    ;;
+   FreeBSD)
+     WEBJOB_BINARY="webjob-${WEBJOB_VERSION}-freebsd"
+     WEBJOB_GROUP=wheel
