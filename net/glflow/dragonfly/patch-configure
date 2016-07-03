@@ -1,0 +1,11 @@
+--- configure.orig	2006-10-18 17:05:41.000000000 +0300
++++ configure
+@@ -1827,7 +1827,7 @@ _ACEOF
+ 
+ 		platform=linux
+ 		;;
+-	freebsd*)
++	freebsd*|dragonfly*)
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define _FREEBSD 1
