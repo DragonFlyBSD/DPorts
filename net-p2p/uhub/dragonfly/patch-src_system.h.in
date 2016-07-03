@@ -1,0 +1,13 @@
+--- src/system.h.in.orig	2014-08-06 21:56:07.000000000 +0300
++++ src/system.h.in
+@@ -168,6 +168,10 @@
+ #define OPSYS "NetBSD"
+ #endif
+ 
++#if defined(__DragonFly__)
++#define OPSYS "DragonFly"
++#endif
++
+ #if defined(__sun__)
+ #if defined(__SVR4) || defined(__svr4__)
+ #define OPSYS "Solaris"
