@@ -1,0 +1,4 @@
+USES+= alias
+
+dfly-patch:
+	${LN} -sv ${WRKSRC}/conf/init.freebsd ${WRKSRC}/conf/init.dragonfly
