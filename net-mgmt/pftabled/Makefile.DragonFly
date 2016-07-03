@@ -1,0 +1,5 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@net/pfvar.h@net/pf/pfvar.h@g'	\
+		${WRKSRC}/configure				\
+		${WRKSRC}/pftabled.c
