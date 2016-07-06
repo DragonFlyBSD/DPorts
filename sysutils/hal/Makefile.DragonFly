@@ -1,8 +1,11 @@
-USE_AUTOTOOLS+= autoconf
 PLIST_SUB+= USB2="@comment "
 
 # zrj: for cd9660/iso.h fixup compat for previous versions
 dfly-patch:
+	${REINPLACE_CMD} -e 's@\(\*-\*\-freebsd\*\)@\1|*-*-dragonfly*@g'	\
+		${WRKSRC}/configure
+	${REINPLACE_CMD} -e 's@-lufs@@g'	\
+		${WRKSRC}/hald/freebsd/probing/Makefile.in
 .if ${DFLYVERSION} < 400502
 	${REINPLACE_CMD} -e "/600101/s@(__DragonFly__)@ __dRAGONfLY__@g"	\
 		${WRKSRC}/hald/freebsd/probing/probe-volume.c
