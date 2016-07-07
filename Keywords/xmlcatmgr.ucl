@@ -1,7 +1,6 @@
-# $FreeBSD: head/Keywords/xmlcatmgr.ucl 415814 2016-05-24 22:32:49Z bapt $
+# $FreeBSD: head/Keywords/xmlcatmgr.ucl 417878 2016-07-01 13:09:49Z bapt $
 
 actions: [file]
-arguments: true
 post-install: <<EOD
   case "%@" in
   /*) cat="%@" ;;

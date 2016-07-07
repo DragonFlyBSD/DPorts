@@ -1361,7 +1361,7 @@ USES+=	ssl
 .include "${PORTSDIR}/Mk/bsd.emacs.mk"
 .endif
 
-.if defined(USE_PHP) && (!defined(USES) || ( defined(USES) && !${USES:Mphp} ))
+.if defined(USE_PHP) && (!defined(USES) || ( defined(USES) && !${USES:Mphp*} ))
 DEV_WARNING+=		"Using USE_PHP alone is deprecated, please use USES=php"
 USES+=	php
 .endif
@@ -1919,7 +1919,7 @@ _FORCE_POST_PATTERNS=	rmdir kldxref mkfontscale mkfontdir fc-cache \
 .include "${PORTSDIR}/Mk/bsd.sdl.mk"
 .endif
 
-.if defined(USE_PHP) && (!defined(USES) || ( defined(USES) && !${USES:Mphp} ))
+.if defined(USE_PHP) && (!defined(USES) || ( defined(USES) && !${USES:Mphp*} ))
 DEV_WARNING+=		"Using USE_PHP alone is deprecated, please use USES=php"
 _USES_POST+=	php
 .endif
@@ -4572,7 +4572,7 @@ add-plist-info:
 # deinstall-time
 .if !target(add-plist-post)
 .if (${PREFIX} != ${LOCALBASE} && ${PREFIX} != ${LINUXBASE} && \
-    ${PREFIX} != "/usr" && !defined(NO_PREFIX_RMDIR))
+    ${PREFIX} != "/usr" && ${PREFIX} != "/" && !defined(NO_PREFIX_RMDIR))
 add-plist-post:
 	@${ECHO_CMD} "@dir ${PREFIX}" >> ${TMPPLIST}
 .endif

@@ -69,7 +69,7 @@ _COMPILER_ARGS+=	features
 .if ${CC} == cc 
 # This is the DragonFly base compiler, we know it's gcc (for now)
 COMPILER_TYPE=		gcc
-COMPILER_VERSION=	52
+COMPILER_VERSION=	53
 .else
 _CCVERSION!=	${CC} --version
 .if defined(.PARSEDIR)
