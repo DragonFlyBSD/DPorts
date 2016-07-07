@@ -11,7 +11,7 @@ COMMENT=	Driver for Intel integrated graphics chipsets
 
 LIB_DEPENDS=	libxcb-util.so:x11/xcb-util
 # Needed to build tests
-LIB_DEPENDS+=	libpng.so:${PORTSDIR}/graphics/png
+LIB_DEPENDS+=	libpng.so:graphics/png
 
 ONLY_FOR_ARCHS=	amd64 i386
 USE_GL=		gl
