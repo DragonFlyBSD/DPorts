@@ -3,7 +3,7 @@
 #       python setup.py install
 #
 
-__version__ = "$FreeBSD: head/databases/py-sqlite3/files/setup.py 313167 2013-03-01 20:12:01Z lwhsu $"
+__version__ = "$FreeBSD: head/databases/py-sqlite3/files/setup.py 417946 2016-07-03 00:17:29Z wen $"
 
 try:
     import distutils
@@ -38,7 +38,7 @@ try:
 except AttributeError:
     macros.append(('SQLITE_OMIT_LOAD_EXTENSION', '1'))
 
-setup(name = "_sqlite3",
+setup(name = "sqlite3",
       description = "SQLite 3 extension to Python",
 
       ext_modules = [Extension('_sqlite3', sqlite_srcs,
