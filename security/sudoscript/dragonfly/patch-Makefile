@@ -1,0 +1,35 @@
+--- Makefile.bak	2016-07-04 11:07:32.000000000 +0300
++++ Makefile
+@@ -130,6 +130,24 @@ PKGMK=pkgmk
+ PKGTRANS=pkgtrans
+ 
+ else
++ifeq "$(OS)" "dragonfly"
++
++GROUP=wheel
++^PREFIX?=/usr/local
++MANPREFIX=$(PREFIX)/man
++ADMINSECT=8
++DOCPREFIX=$(PREFIX)/share/doc
++INIPREFIX=$(PREFIX)/etc/rc.d
++INSTININAME=$(SDSD).sh
++INITSCR=$(BSDINITSCR)
++PORTDIR=packages/dragonfly
++PLIST=$(PORTDIR)/pkg-plist
++PORTMK=$(PORTDIR)/Makefile
++DISTFILEDIR=/usr/ports/distfiles
++PKGOUT=$(PORTDIR)/$(DIST).tbz
++PKGSHIP=pkgout/$(DIST)-dragonfly-pkg.tbz
++
++else
+ ifeq "$(OS)" "freebsd"
+ 
+ GROUP=wheel
+@@ -193,6 +211,7 @@ SUPPORTED=0
+ endif
+ endif
+ endif
++endif
+ endif
+ endif
+ endif
