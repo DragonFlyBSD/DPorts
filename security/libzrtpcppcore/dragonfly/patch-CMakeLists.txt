@@ -1,0 +1,11 @@
+--- CMakeLists.txt.orig	2016-06-29 18:26:24.000000000 +0300
++++ CMakeLists.txt
+@@ -94,7 +94,7 @@ include(CheckFunctionExists)
+ if (NOT LIB_SUFFIX)
+     set(LIBDIRNAME "lib")
+     # this caused problems in debian where it has to always be lib....
+-    if (NOT EXISTS /etc/debian_version)
++    if (NOT EXISTS /etc/debian_version AND NOT ${CMAKE_SYSTEM_NAME} MATCHES "DragonFly")
+         if ( "${CMAKE_SYSTEM_PROCESSOR}" STREQUAL "x86_64" )
+             set(LIBDIRNAME "lib64")
+         endif()
