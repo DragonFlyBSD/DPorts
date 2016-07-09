@@ -1,0 +1,11 @@
+--- Makefile.intermediate	2016-07-04 12:16:48 UTC
++++ Makefile
+@@ -22,7 +22,7 @@ all: $(RC)
+ $(RC):
+ 	if [ "$(SYSTEM)" = "Darwin" ]; then \
+ 		sed "s/@logbase@/system.log/" $(IN) > $(RC) ; \
+-	elif [ "$(SYSTEM)" = "FreeBSD" ]; then \
++	elif [ "$(SYSTEM)" = "FreeBSD" -o "$(SYSTEM)" = "DragonFly" ]; then \
+ 		sed "s/@logbase@/security/" $(IN) > $(RC) ; \
+ 	fi
+ 

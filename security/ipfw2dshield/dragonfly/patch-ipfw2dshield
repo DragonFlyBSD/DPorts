@@ -1,0 +1,11 @@
+--- ipfw2dshield.intermediate	2016-07-04 12:16:48 UTC
++++ ipfw2dshield
+@@ -264,7 +264,7 @@ prog="`basename $0`"
+ [ `id -u` -eq 0 ] || bye "You need to be root to run this program."
+ 
+ uname=`uname`
+-[ "$uname" = "FreeBSD" -o "$uname" = "Darwin" ] || \
++[ "$uname" = "FreeBSD" -o "$uname" = "Darwin" -o "$uname" = "DragonFly"] || \
+     bye "You can't run this program on $uname." 
+ 
+ # Check if strpdate is installed.
