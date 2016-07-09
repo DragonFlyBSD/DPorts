@@ -1,0 +1,4 @@
+# must be invoked after autotools but before configure step
+pre-configure:
+	${REINPLACE_CMD} -e 's/FreeBSD-\*/FreeBSD-*|DragonFly-*/g' \
+		${WRKSRC}/tclconfig/tcl.m4
