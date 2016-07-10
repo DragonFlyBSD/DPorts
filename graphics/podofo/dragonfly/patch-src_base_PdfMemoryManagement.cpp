@@ -1,11 +1,10 @@
---- src/base/PdfMemoryManagement.cpp.intermediate	2016-06-25 01:24:58 UTC
+--- src/base/PdfMemoryManagement.cpp.intermediate	2016-07-08 17:11:03
 +++ src/base/PdfMemoryManagement.cpp
-@@ -44,7 +44,7 @@
- #endif
- #endif // _WIN32
+@@ -31,6 +31,7 @@
+  *   files in the program, then also delete it here.                       *
+  ***************************************************************************/
  
--#ifdef __FreeBSD__
-+#if defined __FreeBSD__ || defined __DragonFly__
- #if __WORDSIZE == 64
- #define SIZE_MAX UINT64_MAX
- #else
++#include <limits>
+ #include "PdfMemoryManagement.h"
+ #include "PdfDefinesPrivate.h"
+ 
