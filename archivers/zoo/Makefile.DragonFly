@@ -1,0 +1,5 @@
+CFLAGS+=-D__OpenBSD__
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@/varargs.h@/stdarg.h@g'	\
+		${WRKSRC}/makefile
