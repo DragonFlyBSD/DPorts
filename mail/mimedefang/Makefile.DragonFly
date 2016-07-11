@@ -1,0 +1,2 @@
+# zrj: libmilter/mfapi.h
+CFLAGS+= -I${LOCALBASE}/include
