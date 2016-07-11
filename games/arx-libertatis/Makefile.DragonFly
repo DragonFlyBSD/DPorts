@@ -1,0 +1,9 @@
+
+# zrj: for version string.. smth in cmake/VersionScript.h is bonkers
+dfly-patch:
+	${REINPLACE_CMD} -e 's@$${VERSION_COUNT}@5@g'		\
+			 -e 's@$${VERSION_0}@1.1.2@g'		\
+			 -e 's@$${VERSION_2}@10@g'		\
+			 -e 's@$${VERSION_4}@Rhaa Movis Z@g'	\
+			 -e 's@$${AUTHORS}@ARX LIBERTATIS CONTRIBUTORS@g'	\
+		${WRKSRC}/src/core/Version.cpp.in
