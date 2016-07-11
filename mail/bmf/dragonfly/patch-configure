@@ -1,0 +1,11 @@
+--- configure.intermediate	2016-07-09 20:34:05 UTC
++++ configure
+@@ -104,7 +104,7 @@ case "$UNAME_S" in
+     LIBDB_LIB="-ldb"
+     MYSQL_LIB="-lmysqlclient"
+     ;;
+-  FreeBSD)
++  FreeBSD|DragonFly)
+     case "$UNAME_R" in
+       2.*)
+         OSVER=20
