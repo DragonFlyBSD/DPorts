@@ -1,0 +1,8 @@
+# zrj: don't use ancient crap, use "modern"
+BUILD_DEPENDS:= ${BUILD_DEPENDS:Nclang*:Nllvm*} \
+		llvm-config37:devel/llvm37 \
+		clang37:lang/clang37
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@llvm-config35@llvm-config37@g'	\
+		${WRKSRC}/configure
