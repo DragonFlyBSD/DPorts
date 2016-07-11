@@ -1,0 +1,5 @@
+USES+= alias
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(FreeBSD:\*\))@\1|DragonFly:*)@g'	\
+		${WRKSRC}/../qt-fe194f9/configure
