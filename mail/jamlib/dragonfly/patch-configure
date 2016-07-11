@@ -1,0 +1,11 @@
+--- configure.orig	2003-03-18 09:07:09.000000000 +0200
++++ configure
+@@ -1943,7 +1943,7 @@ cat >>confdefs.h <<\_ACEOF
+ _ACEOF
+ 
+ 		;;
+-	freebsd*)
++	freebsd*|dragonfly*)
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define __UNIX__ 1
