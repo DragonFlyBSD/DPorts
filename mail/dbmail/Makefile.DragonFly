@@ -1,0 +1,4 @@
+USES+= alias
+
+# zrj: missing pkg-config on base thus manual
+LDFLAGS+= -lssl -lcrypto
