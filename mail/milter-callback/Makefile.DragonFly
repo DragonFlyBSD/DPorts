@@ -1,0 +1,5 @@
+.if !exists( /usr/include/libmilter/mfapi.h )
+BUILD_DEPENDS+=	${LOCALBASE}/include/libmilter/mfapi.h:mail/libmilter
+.endif
+
+LDFLAGS:= ${LDFLAGS:N-lthr}
