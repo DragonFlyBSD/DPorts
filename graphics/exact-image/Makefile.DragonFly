@@ -1,0 +1,4 @@
+USES+= alias
+
+dfly-patch:
+	${LN} -sv ${WRKSRC}/build/FreeBSD.make ${WRKSRC}/build/DragonFly.make
