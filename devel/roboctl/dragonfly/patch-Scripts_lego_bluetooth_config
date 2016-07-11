@@ -1,0 +1,11 @@
+--- Scripts/lego_bluetooth_config.orig	2012-12-19 18:46:04.000000000 +0200
++++ Scripts/lego_bluetooth_config
+@@ -109,7 +109,7 @@ if [ "`whoami`" != 'root' ]; then
+ fi
+ 
+ case `uname` in
+-FreeBSD)
++FreeBSD|DragonFly)
+     config_freebsd
+     ;;
+ *)
