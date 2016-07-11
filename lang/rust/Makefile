@@ -2,11 +2,10 @@
 # $FreeBSD$
 
 PORTNAME=	rust
-PORTVERSION?=	1.9.0
-PORTREVISION=	1
+PORTVERSION?=	1.10.0
 CATEGORIES=	lang
 MASTER_SITES=	http://static.rust-lang.org/dist/:src \
-		http://static.rust-lang.org/stage0-snapshots/:bootstrap \
+		http://static.rust-lang.org/dist/:bootstrap \
 		https://github.com/dhuseby/rust-manual-snapshots/raw/master/:bootstrap
 DISTNAME?=	${PORTNAME}c-${PORTVERSION}
 DISTFILES?=	${DISTNAME}-src${EXTRACT_SUFX}:src
@@ -36,11 +35,8 @@ CONFLICTS_BUILD?=	rust-nightly
 CONFLICTS_BUILD+=	${PKGBASE}
 CONFLICTS_INSTALL?=	rust-nightly
 
-RUST_BOOT=	rust-stage0-${RUST_BOOT_SIG_${ARCH}}.tar.bz2
-
-RUST_BOOT_SIG_x86_64?=	2016-03-18-235d774-dragonfly-x86_64-e790279a7b286ddf2e716ccd3bb1b7f0a386a5c7
-RUST_BOOT_SIG_amd64?=	2016-03-18-235d774-freebsd-x86_64-390b9a9f60f3d0d6a52c04d939a0355f572d03b3
-RUST_BOOT_SIG_i386?=	2016-03-18-235d774-freebsd-i386-b5a87e66e3e3eed5f0b68367ad22f25f0be2d4ea
+RUST_BOOT_VERSION=	1.9.0
+RUST_BOOT=	rustc-${RUST_BOOT_VERSION}-${RUST_TARGET}.tar.gz
 
 # Rust's libraries are named librustc_${component}-${RUST_VSN_HASH}.so.
 # The hash depends on Rust version and, if the channel is not "stable",
@@ -84,7 +80,7 @@ LLNEXTGEN_BUILD_DEPENDS=	LLnextgen:devel/llnextgen
 PORT_LLVM_DESC=	Build against devel/llvm${LLVM_VER} instead of bundled version
 PORT_LLVM_BUILD_DEPENDS=	${LLVM_PREFIX}/bin/FileCheck:devel/llvm${LLVM_VER}
 PORT_LLVM_CONFIGURE_ON=		--llvm-root=${LLVM_PREFIX}
-LLVM_VER?=			36 # XXX Move to DEFAULT_VERSIONS
+LLVM_VER?=			38
 LLVM_PREFIX=			${LOCALBASE}/llvm${LLVM_VER}
 
 # Note that make test does not work when rust is already installed
