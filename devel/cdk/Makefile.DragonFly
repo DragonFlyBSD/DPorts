@@ -1,0 +1,7 @@
+
+# zrj: workaround menu.h visibility between cdk and ncurses
+dfly-patch:
+	${MKDIR} ${WRKSRC}/include/cdk
+	${LN} -sv ${WRKSRC}/include/menu.h ${WRKSRC}/include/cdk/menu.h
+	${REINPLACE_CMD} -e 's@<menu\.h>@<cdk/menu.h>@g'	\
+		${WRKSRC}/include/cdk.h
