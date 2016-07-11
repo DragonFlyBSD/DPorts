@@ -1,0 +1,11 @@
+--- configure.intermediate	2016-07-08 15:56:08 UTC
++++ configure
+@@ -2757,7 +2757,7 @@ _ACEOF
+         { echo "$as_me:$LINENO: result: Linux" >&5
+ echo "${ECHO_T}Linux" >&6; }
+         ;;
+-      *-freebsd*|*-openbsd*|*-netbsd*|*-k*bsd*-gnu)
++      *-dragonfly*|*-freebsd*|*-openbsd*|*-netbsd*|*-k*bsd*-gnu)
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define OS_BSD
