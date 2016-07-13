@@ -1,0 +1,5 @@
+
+# too many files to patch
+dfly-patch:
+	${REINPLACE_CMD} -e 's@extern int errno;@#include <errno.h>@g'	\
+		${WRKSRC}/src/*.c
