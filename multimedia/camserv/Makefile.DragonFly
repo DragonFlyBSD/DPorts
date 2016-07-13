@@ -1,0 +1,6 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@bktr/ioctl_bt848\.h@video/bktr/ioctl_bt848.h@g'	\
+			 -e 's@bktr/ioctl_meteor\.h@video/meteor/ioctl_meteor.h@g'	\
+		${WRKSRC}/camserv/video_fbsd_bttv.c	\
+		${WRKSRC}/configure.in
