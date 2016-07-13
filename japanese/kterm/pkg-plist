@@ -1,0 +1,5 @@
+bin/kterm
+man/ja/man1/kterm.1.gz
+man/man1/kterm.1.gz
+lib/X11/app-defaults/KTerm
+%%VGAFONT%%%%FONTSDIR%%/vga.pcf.gz
