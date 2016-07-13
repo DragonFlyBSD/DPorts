@@ -1,0 +1,4 @@
+USES+= alias ncurses
+
+# zrj: fix for devel/libedit presence (histedit.h el_init() 3 args vs 4)
+CFLAGS+= -DSMALL
