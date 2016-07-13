@@ -1,0 +1,5 @@
+USES+= gettext localbase
+LDFLAGS+= -lintl
+
+# zrj: ncurses is not used on ddate
+CONFIGURE_ARGS+= --without-ncurses
