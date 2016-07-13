@@ -1,0 +1,8 @@
+USES+= ncurses
+
+MAKE_JOBS_UNSAFE=yes
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-lcurses@-lncurses@g'	\
+		${WRKSRC}/configure			\
+		${WRKSRC}/src/tools/Makefile.in
