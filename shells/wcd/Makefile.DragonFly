@@ -1,0 +1,4 @@
+
+dfly-patch:
+	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|' \
+		${WRKSRC}/src/Makefile

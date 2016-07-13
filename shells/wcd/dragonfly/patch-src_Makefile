@@ -1,0 +1,18 @@
+--- src/Makefile.orig	2016-07-13 11:38:41.000000000 +0300
++++ src/Makefile
+@@ -272,6 +272,15 @@ ifdef ENABLE_NLS
+ endif
+ endif
+ 
++ifeq (dragonfly,$(OS))
++	# Running under DragonFly
++ifdef ENABLE_NLS
++	CFLAGS_OS     = -I/usr/local/include
++	LDFLAGS_EXTRA = -L/usr/local/lib
++	LIBS_EXTRA    = -lintl
++endif
++endif
++
+ ifeq (freebsd,$(OS))
+ 	# Running under FreeBSD
+ ifdef ENABLE_NLS
