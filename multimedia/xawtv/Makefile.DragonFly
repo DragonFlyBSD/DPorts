@@ -1,0 +1,5 @@
+USES+= alias ncurses
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(OpenBSD | FreeBSD | NetBSD\))@\1 | DragonFly)@g'	\
+		${WRKSRC}/configure
