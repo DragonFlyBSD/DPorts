@@ -1,0 +1,17 @@
+--- configure.in.orig	2016-07-13 12:38:48.000000000 +0300
++++ configure.in
+@@ -369,6 +369,14 @@ elif test "$pl_system" = "Linux"; then
+   SO_EXT=".so"
+   ARCH_EXT=".a"
+   LINKER_FLAGS=""
++elif test "$pl_system" = "DragonFly"; then
++  LIBS="$LIBS"
++  OS_DEF="-DDRAGONFLY"
++  STATIC_FLAG="-static"
++  SO_FLAG="-shared"
++  SO_EXT=".so"
++  ARCH_EXT=".a"
++  LINKER_FLAGS=""
+ elif test "$pl_system" = "FreeBSD"; then
+   LIBS="$LIBS"
+   OS_DEF="-DFREEBSD"
