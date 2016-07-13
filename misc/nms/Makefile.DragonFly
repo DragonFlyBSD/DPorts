@@ -1,0 +1,6 @@
+USES+= ncurses
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-lncursesw@$$(LDFLAGS) -lncursesw@g'	\
+			 -e 's@CFLAGS =@CFLAGS ?=@g'	\
+		${WRKSRC}/Makefile
