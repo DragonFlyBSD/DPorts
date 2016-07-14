@@ -1,0 +1,11 @@
+USES+= alias
+
+.if !defined(DPORTS_BUILDER)
+MANUAL_PACKAGE_BUILD=	421M package (too big for mirrors)
+.endif
+
+# zrj: maybe x86_64 for -fPIC could be added to MF files/Makefile?
+#      builds long, prune in plist, keep for testing (huge deps!)
+dfly-patch:
+	${REINPLACE_CMD} -e 's@amd64@x86_64@g'	\
+		${WRKSRC}/Makefile
