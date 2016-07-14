@@ -1,0 +1,15 @@
+--- lmicdiusb/Makefile.orig	2014-12-01 12:26:29.000000000 +0200
++++ lmicdiusb/Makefile
+@@ -49,6 +49,12 @@ ifeq ($(shell uname),FreeBSD)
+ 	LIBUSB_LIBS := -lusb
+ endif
+ 
++ifeq ($(shell uname),DragonFly)
++	LIBUSB_CFLAGS :=
++	LIBUSB_LIBDIR := /usr/lib
++	LIBUSB_LIBS := -lusb
++endif
++
+ ifeq ($(shell uname),Linux)
+ 	LIBUSB_CFLAGS ?= $(shell pkg-config --cflags libusb-1.0)
+ 	LIBUSB_LIBDIR ?= $(shell pkg-config --variable=libdir libusb-1.0)
