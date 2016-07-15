@@ -6,6 +6,16 @@ You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
 
+20160708:
+  AFFECTS: users of sysutils/screen
+  AUTHOR: cy@FreeBSD.org
+
+  As of GNU Screen 4.4.0 (r417201):
+  
+  Note that there was fix to screen message structure field
+  responsible for $TERM handling, making it impossible
+  to attach to older versions.
+
 20160704:
   AFFECTS: users of databases/mysql57-*
   AUTHOR: riggs@FreeBSD.org
@@ -1341,34 +1351,4 @@ you update your ports collection, before attempting any port upgrades.
 
   If you have a problem with upgrading, please send it to
   freebsd-tex@FreeBSD.org and/or file a PR.
-
-20150711:
-  AFFECTS: users of graphics/gdal
-  AUTHOR: sunpoet@FreeBSD.org
-
-  Due to changes in header files, please deinstall gdal first while updating
-  from 1.x to 2.0.
-
-20150708:
-  AFFECTS: users of security/libressl
-  AUTHOR: brnrd@FreeBSD.org
-
-  After upgrading to 2.2.1, manually update all packages that depend on
-  any of the libraries provided by LibreSSL (libssl, libcrypto and
-  libtls) since the versions of these libraries have changed. Normally,
-  you can obtain the list of dependent software by running the following
-  command:
-
-  pkg query -e '%n = libressl' %ro
-
-  Then you should rebuild all ports depending on libressl to avoid dangling
-  shared library dependencies.
-
-20150707:
-  AFFECTS: users of net-mgmt/netmagis-*
-  AUTHOR: pgollucci@FreeBSD.org
-
-  Netmagis-* ports have been upgraded to 2.3.0. Upgrading from
-  previous version require a database schema upgrade.
-  See http://netmagis.org/upgrade.html
 
