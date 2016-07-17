@@ -14,8 +14,8 @@
 # bsd.port.mk.  There are significant differences in those so non-FreeBSD code
 # was removed.
 #
-# $FreeBSD: head/ports-mgmt/portlint/src/portlint.pl 415278 2016-05-15 18:43:43Z marcus $
-# $MCom: portlint/portlint.pl,v 1.388 2016/05/15 18:42:34 jclarke Exp $
+# $FreeBSD: head/ports-mgmt/portlint/src/portlint.pl 418192 2016-07-07 17:42:25Z marcus $
+# $MCom: portlint/portlint.pl,v 1.390 2016/07/07 17:40:43 jclarke Exp $
 #
 
 use strict;
@@ -50,7 +50,7 @@ $portdir = '.';
 # version variables
 my $major = 2;
 my $minor = 17;
-my $micro = 2;
+my $micro = 3;
 
 # default setting - for FreeBSD
 my $portsdir = '/usr/ports';
@@ -2005,8 +2005,8 @@ xargs xmkmf
 	my %pathnames = ();
 	print "OK: checking for paths that have macro replacements.\n"
 		if ($verbose);
-	$pathnames{'${PREFIX}/share/java/classes'} = 'JAVADIR';
-	$pathnames{'${PREFIX}/share/java'} = 'JAVASHAREDIR';
+	$pathnames{'$\{PREFIX\}/share/java/classes'} = 'JAVADIR';
+	$pathnames{'$\{PREFIX\}/share/java'} = 'JAVASHAREDIR';
 	foreach my $i (keys %pathnames) {
 		my $lineno = &linenumber($`);
 		if ($j =~ m|$i|gm) {
