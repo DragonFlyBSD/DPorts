@@ -27,7 +27,7 @@ LICENSE_COMB=	dual
 
 CONFLICTS=	dovecot-1.[0-9]*
 
-USES=		cpe iconv libtool ssl
+USES=		cpe iconv libtool
 USE_RC_SUBR=	dovecot
 
 GNU_CONFIGURE=	yes
@@ -75,12 +75,10 @@ CDB_CONFIGURE_WITH=	cdb
 CDB_LIB_DEPENDS=	libcdb.so:databases/tinycdb
 
 GSSAPI_NONE_CONFIGURE_ON=	--without-gssapi
+GSSAPI_NONE_CONFIGURE_OFF=	--with-gssapi ${GSSAPI_CONFIGURE_ARGS}
 GSSAPI_BASE_USES=		gssapi
-GSSAPI_BASE_CONFIGURE_ON=	--with-gssapi ${GSSAPI_CONFIGURE_ARGS}
 GSSAPI_HEIMDAL_USES=		gssapi:heimdal
-GSSAPI_HEIMDAL_CONFIGURE_ON=	--with-gssapi ${GSSAPI_CONFIGURE_ARGS}
 GSSAPI_MIT_USES=		gssapi:mit
-GSSAPI_MIT_CONFIGURE_ON=	--with-gssapi ${GSSAPI_CONFIGURE_ARGS}
 
 ICU_CONFIGURE_WITH=	icu
 ICU_LIB_DEPENDS=	libicui18n.so:devel/icu
@@ -112,6 +110,7 @@ SOLR_LIB_DEPENDS=	libexpat.so:textproc/expat2
 SQLITE_USES=		sqlite:3
 SQLITE_CONFIGURE_WITH=	sqlite
 
+SSL_USES=		ssl
 SSL_CONFIGURE_WITH=	ssl=openssl
 
 TEXTCAT_CONFIGURE_WITH=	textcat
@@ -144,7 +143,7 @@ WITH_OPENSSL_PORT=	yes
 .include <bsd.port.pre.mk>
 
 CPPFLAGS+=	-I${LOCALBASE}/include -I${OPENSSLINC}
-LDFLAGS+=	-L${LOCALBASE}/lib -I${OPENSSLLIB}
+LDFLAGS+=	-L${LOCALBASE}/lib -L${OPENSSLLIB}
 
 post-patch:
 	@${REINPLACE_CMD} -e 's,/etc/dovecot,${PREFIX}/etc/dovecot,g; \
@@ -152,7 +151,7 @@ post-patch:
 		${WRKSRC}/doc/example-config/*.conf ${WRKSRC}/doc/example-config/conf.d/*
 	@${REINPLACE_CMD} -e '/^LIBS =/s/$$/ @LTLIBICONV@/' \
 		${WRKSRC}/src/lib-mail/Makefile.in
-	# Install the sample config files into ETCDIR/example-config/
+# Install the sample config files into ETCDIR/example-config/
 	@${REINPLACE_CMD} -e '/^exampledir =/s|\$$(docdir)|${ETCDIR}|' \
 		${WRKSRC}/doc/example-config/Makefile.in \
 		${WRKSRC}/doc/example-config/conf.d/Makefile.in
