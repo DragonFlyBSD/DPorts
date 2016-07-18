@@ -1,0 +1,10 @@
+USES+= localbase
+
+DPMSG=		${WRKDIR}/dports-message
+PKGMESSAGE=	${DPMSG}
+dfly-patch:
+	@${ECHO} "##############################################################" >> ${DPMSG}
+	@${ECHO} "# Warning! sigueue(2) implemented as dummy to signal parents #" >> ${DPMSG}
+	@${ECHO} "##############################################################" >> ${DPMSG}
+	${REINPLACE_CMD} -e 's@\*bsd\*)@*bsd*|dragonfly*)@g' \
+		${WRKSRC}/configure.ac
