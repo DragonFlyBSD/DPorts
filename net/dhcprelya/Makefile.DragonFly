@@ -1,0 +1,8 @@
+CFLAGS+= -DSLIST_FOREACH_SAFE=SLIST_FOREACH_MUTABLE
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-lthr@-pthread@g'	\
+		${WRKSRC}/Makefile
+	${REINPLACE_CMD} -e '/sys\/mac\.h/d'	\
+		${WRKSRC}/dhcprelya.h	\
+		${WRKSRC}/net_utils.c
