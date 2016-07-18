@@ -1,0 +1,9 @@
+
+# zrj: doesn't honour the CFLAGS, thus manual
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(defined( __FreeBSD__ )\)@(\1||defined(__DragonFly__))@g'	\
+		${WRKSRC}/packages/clib/sha1/brg_endian.h
+	${REINPLACE_CMD} -e 's@\(defined __FreeBSD__ \)@(\1||defined __DragonFly__ )@g'	\
+		${WRKSRC}/src/pl-dict.c
+	${REINPLACE_CMD} -e 's@\(\*freebsd\*\))@\1|*dragonfly*)@g'	\
+		${WRKSRC}/src/configure
