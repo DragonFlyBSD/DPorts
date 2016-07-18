@@ -1,0 +1,20 @@
+--- configure.intermediate	2016-07-15 12:24:34 UTC
++++ configure
+@@ -12131,7 +12131,7 @@ if test -z "${LD_SHLIB}"; then
+    	fi
+         ;;
+ 
+-    *freebsd*)
++    *freebsd*|*dragonfly*)
+   	CFLAGS="$CFLAGS -fPIC"
+         ;;
+ 
+@@ -12268,7 +12268,7 @@ case "$target_os" in
+ 	PROXY_LIBS='-lnsl -lsocket -lthread'
+ 	;;
+ 
+-  *freebsd*)
++  *freebsd*|*dragonfly*)
+ 	PROXY_LIBS='-lpthread'
+         jni_os=freebsd
+ 	;;
