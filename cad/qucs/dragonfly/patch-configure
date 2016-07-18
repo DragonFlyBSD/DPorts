@@ -1,0 +1,20 @@
+--- configure.orig	2014-08-31 10:23:38.000000000 +0300
++++ configure
+@@ -5982,7 +5982,7 @@ fi
+ 
+ 
+ case $host_os in
+-  *linux* | *cygwin* | *mingw* | *bsd* )
++  *linux* | *cygwin* | *mingw* | *bsd* | *dragonfly* )
+ 
+         if test "$CXX -dM -E - < /dev/null | grep __clang__" ; then
+       CFLAGS="$CFLAGS -pipe"
+@@ -6045,7 +6045,7 @@ fi
+       QT_LIB="-lQtCore -lQtGui -lQtXml -lQt3Support -lQtSvg -lQtScript"
+       QT_INC="$QT_DEF -DQT3_SUPPORT -DQT_THREAD_SUPPORT -D_REENTRANT"
+       case $host_os in
+-        *freebsd*) QT_LIB="$QT_LIB -pthread" ;;
++        *freebsd*|*dragonfly*) QT_LIB="$QT_LIB -pthread" ;;
+         *mingw*) QT_INC="$QT_INC -mthreads"; QT_LDF="$QT_LDF -mthreads" ;;
+       esac
+       QT_MTS="multi-threaded"
