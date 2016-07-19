@@ -1,0 +1,4 @@
+.if !exists( /usr/include/libmilter/mfapi.h )
+USES+= localbase
+BUILD_DEPENDS+= ${LOCALBASE}/include/libmilter/mfapi.h:mail/libmilter
+.endif
