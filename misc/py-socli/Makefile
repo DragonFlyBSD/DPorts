@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	socli
-PORTVERSION=	1.8
+PORTVERSION=	2.2
 CATEGORIES=	misc python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -15,9 +15,9 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}beautifulsoup>=0:www/py-beautifulsoup \
 		${PYTHON_PKGNAMEPREFIX}requests>=0:www/py-requests
 
-USES=		python
+USES=		dos2unix python
 USE_GITHUB=	yes
-USE_PYTHON=	autoplist distutils
+USE_PYTHON=	autoplist concurrent distutils
 
 GH_ACCOUNT=	gautamkrishnar
 
