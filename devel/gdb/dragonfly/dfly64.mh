@@ -1,6 +1,6 @@
 # Host: DragonFly/amd64
 NATDEPFILES= fork-child.o inf-ptrace.o \
-	dfly-nat.o amd64-nat.o amd64bsd-nat.o amd64dfly-nat.o \
+	dfly-nat.o amd64-nat.o x86bsd-nat.o amd64bsd-nat.o amd64dfly-nat.o \
 	x86-nat.o x86-dregs.o
 
 LOADLIBES= -lkvm
