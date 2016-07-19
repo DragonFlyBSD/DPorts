@@ -1,0 +1,4 @@
+
+# zrj: fix profiled
+post-install:
+	${CP} ${STAGEDIR}${PREFIX}/lib/libab25.a ${STAGEDIR}${PREFIX}/lib/libab25_p.a
