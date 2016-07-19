@@ -1,11 +1,11 @@
 # $FreeBSD$
 
 PORTNAME=	kanboard
-PORTVERSION=	1.0.29
+PORTVERSION=	1.0.31
 CATEGORIES=	www
 MASTER_SITES=	http://kanboard.net/ \
 		https://bitbucket.org/if0/kanboard-archives/downloads/ \
-		https://github.com/freebsd-kanboard/archives/blob/master/
+		https://github.com/freebsd-kanboard/archives/raw/master/
 
 MAINTAINER=	bsd@if0.eu
 COMMENT=	Simple visual task board software
