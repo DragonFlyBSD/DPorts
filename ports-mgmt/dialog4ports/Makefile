@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	dialog4ports
-PORTVERSION=	0.1.5
-PORTREVISION?=	2
+PORTVERSION=	0.1.6
+PORTREVISION?=	0
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	http://m1cro.me/dialog4ports/ \
 		http://files.etoilebsd.net/dialog4ports/ \
@@ -49,7 +49,7 @@ DIALOGNAME=	dialog-1.1-20120706
 MAKE_ENV+=	DIALOGSOURCES=${WRKDIR}/${DIALOGNAME}
 
 do-configure:
-	@cd ${WRKDIR}/${DIALOGNAME}; ./configure
+	@cd ${WRKDIR}/${DIALOGNAME}; ./configure LDFLAGS="${LDFLAGS}"
 
 .endif
 

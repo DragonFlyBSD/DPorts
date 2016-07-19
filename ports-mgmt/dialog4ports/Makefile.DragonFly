@@ -6,6 +6,13 @@
 #      our libdialog is good
 
 .if exists(/usr/lib/priv/libprivate_ncursesw.so)
+.  if defined(D4P_SLAVE)
+LDFLAGS+= -L/usr/lib/priv
+pre-patch:
+	${REINPLACE_CMD} -e 's@\(ncurses curses cursesX\)@\1 private_ncursesw@g'			\
+		${WRKDIR}/${DIALOGNAME}/configure
+.  endif
+
 dfly-patch:
 	${REINPLACE_CMD} -e "s@-lncursesw@-rpath /lib/priv -L/usr/lib/priv -lprivate_ncursesw@g" \
 		${WRKSRC}/Makefile
