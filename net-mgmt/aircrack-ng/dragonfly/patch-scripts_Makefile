@@ -1,0 +1,11 @@
+--- scripts/Makefile.orig	2014-11-24 19:42:36.000000000 +0200
++++ scripts/Makefile
+@@ -14,7 +14,7 @@ install:
+ ifeq ($(OSNAME), Linux)
+ 	install -m 755 $(SCRIPTS_LNX) $(DESTDIR)$(sbindir)
+ endif
+-ifeq ($(filter FreeBSD GNU-kFreeBSD, $(OSNAME)),)
++ifeq ($(filter DragonFly FreeBSD GNU-kFreeBSD, $(OSNAME)),)
+ else
+ 	install -m 755 airmon-ng.freebsd $(DESTDIR)$(sbindir)/airmon-ng
+ endif

@@ -1,5 +1,8 @@
 USES += alias
 
+# zrj: we have /usr/lib/libpcap.so
+PLIST_FILES+= bin/besside-ng-crawler
+
 dfly-patch:
 	@${CP} ${WRKSRC}/src/osdep/freebsd.c ${WRKSRC}/src/osdep/dragonfly.c
 	@${CP} ${WRKSRC}/src/osdep/freebsd_tap.c ${WRKSRC}/src/osdep/dragonfly_tap.c
