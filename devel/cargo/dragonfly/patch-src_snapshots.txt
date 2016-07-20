@@ -1,0 +1,9 @@
+--- src/snapshots.txt.orig2	2016-07-16 13:20:45 UTC
++++ src/snapshots.txt
+@@ -1,3 +1,6 @@
++2016-07-16
++  dragonfly-x86_64 fdfdc059afab83aeea5b7fb63cc75500dbca8018
++  
+ 2016-04-10
+   freebsd-x86_64 8c459cbdc890cedb43c0952ad7f1ef0b7fcbe535
+ 

@@ -1,0 +1,4 @@
+MASTER_SITES=	http://www.ntecs.de/downloads/rust/:bootstrap \
+		LOCAL/jbeich:registry
+
+EXTRACT_SUFX=.tar.gz
