@@ -1,0 +1,14 @@
+--- external/FFmpeg/configure.intermediate	2016-07-20 09:49:01 UTC
++++ external/FFmpeg/configure
+@@ -3259,10 +3259,7 @@ case $target_os in
+         oss_indev_extralibs="-lossaudio"
+         oss_outdev_extralibs="-lossaudio"
+         ;;
+-    dragonfly)
+-        disable symver
+-        ;;
+-    freebsd)
++    freebsd|dragonfly)
+         ;;
+     bsd/os)
+         add_extralibs -lpoll -lgnugetopt
