@@ -1,0 +1,21 @@
+--- configure.ac.orig	2016-01-14 23:06:07.000000000 +0200
++++ configure.ac
+@@ -863,7 +863,7 @@ case "${host_cpu}-${host_os}" in
+ 		EXTRACFLAGS="$EXTRACFLAGS -D_XOPEN_SOURCE=500"
+ 		AC_MSG_RESULT([-D_XOPEN_SOURCE=500])
+ 	;;
+-	*-darwin* | *-netbsd*)
++	*-darwin* | *-netbsd* | *-dragonfly*)
+ 		AC_MSG_RESULT([no])
+ 	;;
+ 	*-freebsd* | *)
+@@ -876,6 +876,9 @@ esac
+ 
+ AC_MSG_CHECKING([if cflag _BSD_SOURCE is required])
+ case "${host_cpu}-${host_os}" in
++ 	*-dragonfly*)
++ 		AC_MSG_RESULT([no])
++ 	;;
+  	*-netbsd*)
+  		CFLAGS="$CFLAGS -D_NETBSD_SOURCE=1"
+  		EXTRACFLAGS="$EXTRACFLAGS -D_NETBSD_SOURCE=1"
