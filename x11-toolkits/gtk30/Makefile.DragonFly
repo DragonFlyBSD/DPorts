@@ -1,0 +1,13 @@
+
+# zrj: mark hidden dbus dependencies us such (respect users freedom!)
+# https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=194460
+
+BUILD_DEPENDS:=	${BUILD_DEPENDS:Nat-spi2-atk*}
+RUN_DEPENDS:=	${RUN_DEPENDS:Nat-spi2-atk*}
+
+OPTIONS_DEFINE+=	DBUS
+OPTIONS_DEFAULT+=	DBUS
+
+DBUS_CONFIGURE_WITH=atk-bridge
+DBUS_LIB_DEPENDS=libatk-bridge-2.0.so:${PORTSDIR}/accessibility/at-spi2-atk
+DBUS_DESC=	AT-SPI ATK bridge support (hidden depends on devel/dbus)
