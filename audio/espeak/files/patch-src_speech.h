@@ -1,6 +1,6 @@
---- ./src/speech.h.orig	2011-03-15 15:01:33.000000000 +0100
-+++ ./src/speech.h	2011-03-18 10:12:28.000000000 +0100
-@@ -57,7 +57,7 @@
+--- src/speech.h.orig	2014-03-04 16:47:15 UTC
++++ src/speech.h
+@@ -58,7 +58,7 @@
  
  // will look for espeak_data directory here, and also in user's home directory
  #ifndef PATH_ESPEAK_DATA
