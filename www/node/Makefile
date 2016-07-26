@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	node
-PORTVERSION=	6.3.0
+PORTVERSION=	6.3.1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www
 MASTER_SITES=	http://nodejs.org/dist/v${PORTVERSION}/
@@ -18,7 +18,7 @@ OPTIONS_SUB=	yes
 OPTIONS_DEFAULT=	BUNDLED_SSL
 
 BUNDLED_SSL_DESC=		Use node.js's bundled OpenSSL implementation
-BUNDLED_SSL_USES_OFF=		ssl:openssl
+BUNDLED_SSL_USES_OFF=		ssl
 BUNDLED_SSL_CONFIGURE_OFF+=	--shared-openssl
 
 NLS_CONFIGURE_ON=	--with-intl=system-icu
