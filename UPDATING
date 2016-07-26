@@ -5,6 +5,23 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20160722:
+  AFFECTS: users of games/stonesoup-*
+  AUTHOR: lifanov@mail.lifanov.com
+
+  The WIZARD option has been renamed to NOWIZARD and is now an opt-out to
+  better reflect the upstream. If you run a shared game server and would
+  like the Wizard mode support disabled, please update port options.
+
+20160718:
+  AFFECTS: users of www/awstats
+  AUTHOR: adamw@FreeBSD.org
+
+  The directory containing icons has changed from ".../icons" to ".../icon".
+  awstats has, in its suggested configuration file, contained an alias
+  from /awstatsicons. After applying the awstats-7.5 update, you must
+  update that alias to point to /usr/local/www/awstats/icon (just remove
+  the "s" at the end).
 
 20160708:
   AFFECTS: users of sysutils/screen
@@ -1341,14 +1358,4 @@ you update your ports collection, before attempting any port upgrades.
   The fonts-location changed from koi8u-monaco/ to koi8-u-monaco/
 
   Users are advised to modify the path set in their xorg.conf files.
-
-20150720:
-  AFFECTS: users of print/texlive-base and other TeXLive packages
-  AUTHOR: hrs@FreeBSD.org
-
-  TeXLive in Ports Collection has been updated to TL2015.  To upgrade
-  installed old packages, upgrading of "tex-*" packages is required.
-
-  If you have a problem with upgrading, please send it to
-  freebsd-tex@FreeBSD.org and/or file a PR.
 
