@@ -1,6 +1,6 @@
---- ./qztest/qztest.pro.orig	2014-02-09 12:36:57.000000000 +0100
-+++ ./qztest/qztest.pro	2014-03-30 05:01:44.000000000 +0200
-@@ -39,7 +39,10 @@
+--- qztest/qztest.pro.orig	2014-02-10 18:04:08 UTC
++++ qztest/qztest.pro
+@@ -40,7 +40,10 @@ MOC_DIR = .moc
  
  win32:CONFIG(release, debug|release): LIBS += -L$$OUT_PWD/../quazip/release/ -lquazip
  else:win32:CONFIG(debug, debug|release): LIBS += -L$$OUT_PWD/../quazip/debug/ -lquazip
