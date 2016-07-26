@@ -1,4 +1,4 @@
---- oss/ctl_oss.c.orig	2008-10-29 08:42:13.000000000 -0400
+--- oss/ctl_oss.c.orig	2016-07-26 13:27:23 UTC
 +++ oss/ctl_oss.c
 @@ -26,7 +26,11 @@
  #include <sys/ioctl.h>

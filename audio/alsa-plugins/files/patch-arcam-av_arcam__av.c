@@ -1,4 +1,4 @@
---- arcam-av/arcam_av.c.orig
+--- arcam-av/arcam_av.c.orig	2016-03-31 13:11:29 UTC
 +++ arcam-av/arcam_av.c
 @@ -27,6 +27,7 @@
  #include <signal.h>
@@ -8,7 +8,7 @@
  #include <termios.h>
  #include <unistd.h>
  
-@@ -37,6 +38,8 @@
+@@ -38,6 +39,8 @@
  #include <sys/socket.h>
  #include <sys/un.h>
  
