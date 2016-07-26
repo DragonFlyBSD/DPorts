@@ -1,6 +1,6 @@
---- ./linux_a.c.orig	1996-05-20 08:09:46.000000000 -0500
-+++ ./linux_a.c	2013-04-21 10:18:23.000000000 -0500
-@@ -71,12 +71,15 @@
+--- linux_a.c.orig	1996-05-20 13:09:46 UTC
++++ linux_a.c
+@@ -71,12 +71,15 @@ PlayMode dpm = {
     then 8-bit unsigned if it fails. If you have a sound device that
     can't handle either, let me know. */
  
@@ -17,7 +17,7 @@
    if (fd<0)
      {
        ctl->cmsg(CMSG_ERROR, VERB_NORMAL, "%s: %s",
-@@ -84,6 +87,23 @@
+@@ -84,6 +87,23 @@ static int open_output(void)
        return -1;
      }
  
@@ -41,7 +41,7 @@
    /* They can't mean these */
    dpm.encoding &= ~(PE_ULAW|PE_BYTESWAP);
  
-@@ -92,6 +112,29 @@
+@@ -92,6 +112,29 @@ static int open_output(void)
       the other one. */
  
    i=tmp=(dpm.encoding & PE_16BIT) ? 16 : 8;
@@ -71,7 +71,7 @@
    if (ioctl(fd, SNDCTL_DSP_SAMPLESIZE, &tmp)<0 || tmp!=i)
      {
        /* Try the other one */
-@@ -109,6 +152,7 @@
+@@ -109,6 +152,7 @@ static int open_output(void)
        dpm.encoding ^= PE_16BIT;
        warnings=1;
      }
@@ -79,7 +79,7 @@
    if (dpm.encoding & PE_16BIT)
      dpm.encoding |= PE_SIGNED;
    else
-@@ -163,6 +207,8 @@
+@@ -163,6 +207,8 @@ static int open_output(void)
    /* Set buffer fragments (in extra_param[0]) */
    
    tmp=AUDIO_BUFFER_BITS;
@@ -88,7 +88,7 @@
    if (!(dpm.encoding & PE_MONO)) tmp++;
    if (dpm.encoding & PE_16BIT) tmp++;
    tmp |= (dpm.extra_param[0]<<16);
-@@ -189,28 +235,35 @@
+@@ -189,28 +235,35 @@ static int open_output(void)
    return warnings;
  }
  
