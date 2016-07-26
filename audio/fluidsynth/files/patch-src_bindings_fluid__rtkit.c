@@ -1,5 +1,5 @@
---- src/bindings/fluid_rtkit.c.orig	2011-09-04 16:38:58.000000000 +0900
-+++ src/bindings/fluid_rtkit.c	2011-09-05 17:07:06.000000000 +0900
+--- src/bindings/fluid_rtkit.c.orig	2012-08-16 04:01:13 UTC
++++ src/bindings/fluid_rtkit.c
 @@ -34,7 +34,7 @@
  #include "fluid_rtkit.h"
  

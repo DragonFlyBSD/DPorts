@@ -1,5 +1,5 @@
---- src/drivers/fluid_oss.c.orig	2012-08-16 13:01:13.000000000 +0900
-+++ src/drivers/fluid_oss.c	2012-08-18 04:12:09.000000000 +0900
+--- src/drivers/fluid_oss.c.orig	2012-08-16 04:01:13 UTC
++++ src/drivers/fluid_oss.c
 @@ -45,9 +45,9 @@
  #define BUFFER_LENGTH 512
  
