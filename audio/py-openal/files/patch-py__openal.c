@@ -1,6 +1,6 @@
---- py_openal.c	Sat Jul 16 09:19:11 2005
-+++ py_openal.c	Mon Aug 21 01:33:49 2006
-@@ -1041,28 +1041,26 @@
+--- py_openal.c.orig	2005-07-16 14:19:11 UTC
++++ py_openal.c
+@@ -1041,28 +1041,26 @@ static PyObject *_wrap_alutExit(PyObject
  }
  
  
@@ -34,7 +34,7 @@
          return resultobj;
      }
  }
-@@ -2274,7 +2272,7 @@
+@@ -2274,7 +2272,7 @@ static PyMethodDef OpenALMethods[] = {
  */
  	 { (char *)"alutInit", (PyCFunction) _wrap_alutInit, METH_VARARGS },
  	 { (char *)"alutExit", (PyCFunction) _wrap_alutExit, METH_NOARGS },
