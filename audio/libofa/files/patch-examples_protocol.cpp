@@ -1,5 +1,5 @@
---- ./examples/protocol.cpp.orig	2011-03-18 11:01:22.000000000 -0400
-+++ ./examples/protocol.cpp	2011-03-18 11:01:22.000000000 -0400
+--- examples/protocol.cpp.orig	2016-07-26 15:10:24 UTC
++++ examples/protocol.cpp
 @@ -8,11 +8,11 @@
  -------------------------------------------------------------------*/
  #include <stdio.h>

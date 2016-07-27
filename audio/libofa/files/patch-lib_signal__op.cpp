@@ -1,5 +1,5 @@
---- ./lib/signal_op.cpp.orig	2011-03-18 11:01:22.000000000 -0400
-+++ ./lib/signal_op.cpp	2011-03-18 11:01:39.000000000 -0400
+--- lib/signal_op.cpp.orig	2016-07-26 15:10:24 UTC
++++ lib/signal_op.cpp
 @@ -13,6 +13,7 @@
  
  
