@@ -1,6 +1,6 @@
---- ./common/include/AL/alc.h.orig	Sat Feb 11 12:36:55 2006
-+++ ./common/include/AL/alc.h	Sat Jul 14 19:33:48 2007
-@@ -187,7 +187,7 @@
+--- common/include/AL/alc.h.orig	2006-02-11 09:36:55 UTC
++++ common/include/AL/alc.h
+@@ -187,7 +187,7 @@ ALC_API void            ALC_APIENTRY alc
  
  ALC_API void            ALC_APIENTRY alcDestroyContext( ALCcontext *context );
  
@@ -9,7 +9,7 @@
  
  ALC_API ALCdevice*      ALC_APIENTRY alcGetContextsDevice( ALCcontext *context );
  
-@@ -248,7 +248,7 @@
+@@ -248,7 +248,7 @@ typedef ALCboolean     (ALC_APIENTRY *LP
  typedef void           (ALC_APIENTRY *LPALCPROCESSCONTEXT)( ALCcontext *context );
  typedef void           (ALC_APIENTRY *LPALCSUSPENDCONTEXT)( ALCcontext *context );
  typedef void           (ALC_APIENTRY *LPALCDESTROYCONTEXT)( ALCcontext *context );

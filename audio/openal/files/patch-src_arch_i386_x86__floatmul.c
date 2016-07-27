@@ -1,6 +1,6 @@
---- src/arch/i386/x86_floatmul.c.orig	2005-12-21 22:06:35.000000000 +0300
-+++ src/arch/i386/x86_floatmul.c	2009-04-04 04:53:56.000000000 +0400
-@@ -46,7 +46,7 @@
+--- src/arch/i386/x86_floatmul.c.orig	2005-12-21 19:06:35 UTC
++++ src/arch/i386/x86_floatmul.c
+@@ -46,7 +46,7 @@ void _alFloatMul(ALshort *bpt, ALfloat s
  		v4hi temp;
  		
  		
