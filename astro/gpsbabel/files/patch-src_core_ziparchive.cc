@@ -1,4 +1,4 @@
---- src/core/ziparchive.cc.orig
+--- src/core/ziparchive.cc.orig	2016-01-03 02:09:17 UTC
 +++ src/core/ziparchive.cc
 @@ -23,7 +23,7 @@
  

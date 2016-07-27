@@ -1,4 +1,4 @@
---- jeeps/gpslibusb.cc.orig
+--- jeeps/gpslibusb.cc.orig	2016-01-03 02:09:17 UTC
 +++ jeeps/gpslibusb.cc
 @@ -20,8 +20,8 @@
   */
