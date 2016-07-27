@@ -1,5 +1,5 @@
---- cdda_d/if_flac.c.orig	2008-04-06 21:14:40.000000000 +0200
-+++ cdda_d/if_flac.c	2008-04-06 22:11:17.000000000 +0200
+--- cdda_d/if_flac.c.orig	2004-04-21 19:27:05 UTC
++++ cdda_d/if_flac.c
 @@ -57,7 +57,6 @@ typedef float			FLAC__real;
  #include <FLAC/format.h>
  #include <FLAC/metadata.h>

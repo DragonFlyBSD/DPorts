@@ -1,6 +1,6 @@
---- cddb_d/Imakefile.orig      Thu May 31 12:53:57 2007
-+++ cddb_d/Imakefile   Thu May 31 12:53:00 2007
-@@ -225,7 +225,7 @@
+--- cddb_d/Imakefile.orig	2004-04-21 19:27:05 UTC
++++ cddb_d/Imakefile
+@@ -225,7 +225,7 @@ KOBJ=	cddbkey1.o
  /*
   * Build rule for the CD Information Library
   */
@@ -8,4 +8,4 @@
 +NormalLibraryTarget(cddblocal,$(OBJS))
  NormalLibraryTarget(cddbkey1,$(KOBJ))
  DependTarget()
-
+ 

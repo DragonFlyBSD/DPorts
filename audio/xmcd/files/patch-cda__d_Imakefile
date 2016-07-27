@@ -1,6 +1,6 @@
---- cda_d/Imakefile.orig	Thu Apr 22 03:27:23 2004
-+++ cda_d/Imakefile	Fri Feb  2 04:44:17 2007
-@@ -145,7 +145,7 @@
+--- cda_d/Imakefile.orig	2004-04-21 19:27:23 UTC
++++ cda_d/Imakefile
+@@ -145,7 +145,7 @@ INCLUDES=-I..
  /*
   * Add needed libraries
   */
@@ -9,7 +9,7 @@
  LOCAL_LIBDIR= -L/usr/freeware/lib32 -L/usr/local/lib
  VORBLIB= -lvorbisenc -lvorbis -logg
  FLACLIB= -lFLAC
-@@ -193,7 +193,7 @@
+@@ -193,7 +193,7 @@ LOCAL_LIBRARIES=-L/usr/5lib -lcurses
  LOCAL_LIBRARIES=-lncurses
  #else
  #if defined(FreeBSDArchitecture)
@@ -18,7 +18,7 @@
  .if exists(/usr/include/camlib.h)
  LOCAL_LIBRARIES+= -lcam
  .endif
-@@ -231,6 +231,7 @@
+@@ -231,6 +231,7 @@ LOCAL_LIBRARIES=-lcurses
  #endif	/* LinuxArchitecture OpenBSDArchitecture */
  #endif	/* SunArchitecture */
  
