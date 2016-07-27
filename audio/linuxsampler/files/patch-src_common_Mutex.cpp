@@ -1,7 +1,7 @@
---- src/common/Mutex.cpp.orig	Tue Mar  6 20:42:00 2007
-+++ src/common/Mutex.cpp	Tue Mar  6 20:42:06 2007
-@@ -35,7 +35,6 @@
- 
+--- src/common/Mutex.cpp.orig	2007-11-15 00:23:37 UTC
++++ src/common/Mutex.cpp
+@@ -36,7 +36,6 @@
+ #if !defined(WIN32)
  #if !defined(_XOPEN_SOURCE) || _XOPEN_SOURCE < 500
  # undef _XOPEN_SOURCE
 -# define _XOPEN_SOURCE 500 /* to define PTHREAD_MUTEX_ERRORCHECK */

@@ -1,6 +1,6 @@
---- src/common/Pool.h.orig	2008-12-07 09:18:04.000000000 +0900
-+++ src/common/Pool.h	2012-10-13 04:19:19.000000000 +0900
-@@ -393,7 +393,7 @@
+--- src/common/Pool.h.orig	2008-12-07 00:18:04 UTC
++++ src/common/Pool.h
+@@ -393,7 +393,7 @@ class RTList : public RTListBase<T> {
          inline Iterator allocAppend() {
              if (pPool->poolIsEmpty()) return RTListBase<T>::begin();
              Iterator element = pPool->alloc();
