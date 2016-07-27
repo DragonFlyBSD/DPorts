@@ -1,5 +1,5 @@
---- czech.scm.orig	Wed Jun 21 09:32:07 2006
-+++ czech.scm	Sat Apr 28 23:28:07 2007
+--- czech.scm.orig	2006-06-21 07:32:07 UTC
++++ czech.scm
 @@ -917,7 +917,7 @@
  (lex.create "czech")
  (lex.set.phoneset "czech")
