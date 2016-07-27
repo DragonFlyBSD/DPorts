@@ -1,5 +1,5 @@
---- src/message.c.orig	2014-01-20 12:49:42.000000000 +0100
-+++ src/message.c	2014-12-03 23:02:28.000000000 +0100
+--- src/message.c.orig	2014-01-20 11:49:42 UTC
++++ src/message.c
 @@ -996,8 +996,8 @@ void lo_message_pp(lo_message m)
      putchar('\n');
      if (d != end) {

@@ -1,5 +1,5 @@
---- src/lo_types_internal.h.orig	2013-05-22 18:34:31.000000000 +0200
-+++ src/lo_types_internal.h	2013-06-24 01:54:53.000000000 +0200
+--- src/lo_types_internal.h.orig	2013-07-25 10:14:32 UTC
++++ src/lo_types_internal.h
 @@ -20,6 +20,7 @@
  #else
  #define closesocket close
@@ -8,7 +8,7 @@
  #include <arpa/inet.h>
  #endif
  
-@@ -33,6 +34,7 @@
+@@ -33,6 +34,7 @@ typedef __int32 int32_t;
  
  #ifdef ENABLE_THREADS
  #include <pthread.h>
