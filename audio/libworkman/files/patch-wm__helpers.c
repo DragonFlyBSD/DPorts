@@ -1,6 +1,6 @@
---- wm_helpers.c.orig	Sun Aug  8 21:05:58 1999
-+++ wm_helpers.c	Sun Aug  8 21:06:12 1999
-@@ -30,7 +30,7 @@
+--- wm_helpers.c.orig	1999-03-07 08:36:41 UTC
++++ wm_helpers.c
+@@ -30,7 +30,7 @@ static char wm_helpers_id[] = "$Id: wm_h
  
  #include <stdio.h>
  #include <string.h>

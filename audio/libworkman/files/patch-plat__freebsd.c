@@ -1,6 +1,6 @@
---- plat_freebsd.c.orig	Thu Jan 27 12:17:46 2000
-+++ plat_freebsd.c	Thu Jan 27 12:18:15 2000
-@@ -49,7 +49,6 @@
+--- plat_freebsd.c.orig	1999-03-07 08:36:40 UTC
++++ plat_freebsd.c
+@@ -49,7 +49,6 @@ static char freebsd_id[] = "$Id: plat_fr
  #include <sys/time.h>
  #include <sys/ioctl.h>
  #include <sys/cdio.h>
