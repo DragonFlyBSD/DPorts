@@ -1,6 +1,6 @@
---- src/oformat_parser.c.orig	2011-11-11 22:14:03.000000000 +0100
-+++ src/oformat_parser.c	2012-04-11 09:45:52.000000000 +0200
-@@ -301,7 +301,7 @@
+--- src/oformat_parser.c.orig	2014-10-02 22:46:20 UTC
++++ src/oformat_parser.c
+@@ -336,7 +336,7 @@ char splt_of_get_number_of_digits_from_t
    }
  
    long minutes = total_time / 100 / 60;
