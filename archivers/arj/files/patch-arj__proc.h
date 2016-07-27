@@ -1,5 +1,5 @@
---- arj_proc.h.orig	2004-01-25 08:39:30.000000000 -0200
-+++ arj_proc.h	2010-02-19 08:35:05.000000000 -0200
+--- arj_proc.h.orig	2004-01-25 10:39:30 UTC
++++ arj_proc.h
 @@ -8,15 +8,17 @@
  #ifndef ARJ_PROC_INCLUDED
  #define ARJ_PROC_INCLUDED
@@ -24,7 +24,7 @@
  #endif
  
  /* Prototypes */
-@@ -31,7 +33,7 @@
+@@ -31,7 +33,7 @@ void copy_bytes(unsigned long nbytes);
  int translate_path(char *name);
  void restart_proc(char *dest);
  int search_for_extension(char *name, char *ext_list);
@@ -33,7 +33,7 @@
  unsigned int check_multivolume(unsigned int increment);
  void store();
  void hollow_encode();
-@@ -61,10 +63,10 @@
+@@ -61,10 +63,10 @@ void unpack_mem(struct mempack *mempack)
  void strip_lf(char *str);
  char *ltrim(char *str);
  #ifdef WORDS_BIGENDIAN

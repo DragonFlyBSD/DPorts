@@ -1,6 +1,6 @@
---- arj_arcv.c	2005-06-21 22:53:12.000000000 +0300
-+++ arj_arcv.c	2005-11-24 02:50:31.000000000 +0200
-@@ -59,27 +59,27 @@
+--- arj_arcv.c.orig	2005-06-21 19:53:12 UTC
++++ arj_arcv.c
+@@ -59,27 +59,27 @@ static char idxid_fault[]="?";
  #define setup_hput(ptr) (tmp_hptr=(ptr))
  
  #define hget_byte() (*(tmp_hptr++)&0xFF)
@@ -35,7 +35,7 @@
   return result;
  }
  
-@@ -87,18 +87,18 @@
+@@ -87,18 +87,18 @@ static unsigned long hget_longword()
  
  /* Writes two bytes to the header, incrementing the pointer */
  
@@ -58,4 +58,3 @@
  }
  
  /* Calculates and stores the basic header size */
-diff -Naur -x .svn -x CVS arj-3.10.22.orig/arj_proc.c arj-3.10.22/arj_proc.c

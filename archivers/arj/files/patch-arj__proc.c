@@ -1,6 +1,6 @@
---- arj_proc.c	2005-11-24 02:50:19.000000000 +0200
-+++ arj_proc.c	2005-11-24 02:50:31.000000000 +0200
-@@ -585,7 +585,7 @@
+--- arj_proc.c.orig	2005-06-21 19:53:12 UTC
++++ arj_proc.c
+@@ -585,7 +585,7 @@ int search_for_extension(char *name, cha
  /* Returns the exact amount of data that could be safely written to the
     destination volume */
  
@@ -9,7 +9,7 @@
  {
   unsigned long pvol;
   unsigned int arjsec_overhead;
-@@ -605,7 +605,7 @@
+@@ -605,7 +605,7 @@ unsigned long get_volfree(unsigned int i
   remain=volume_limit-ftell(aostream)-pvol-(long)arjsec_overhead-
          (long)out_bytes-(long)cpos-(long)ext_voldata-
          MULTIVOLUME_RESERVE-t_volume_offset;
@@ -18,7 +18,7 @@
  }
  
  /* Performs various checks when multivolume data is packed to predict an
-@@ -2466,14 +2466,14 @@
+@@ -2466,14 +2466,14 @@ static int get_str_from_jq()
      *tsptr='\0';
    endptr=tsptr;
    tsptr=sptr;
@@ -36,8 +36,8 @@
       tsptr++;
     }
    }
-@@ -2901,9 +2901,9 @@
- #if (defined(WORDS_BIGENDIAN) || defined(ALIGN_POINTERS)) && !defined(ARJDISP) && !defined(REGISTER)
+@@ -2901,9 +2901,9 @@ char *ltrim(char *str)
+ #if defined(WORDS_BIGENDIAN)&&!defined(ARJDISP)&&!defined(REGISTER)
  /* Model-independent routine to get 2 bytes from far RAM */
  
 -unsigned int mget_word(char FAR *p)
@@ -48,7 +48,7 @@
  
   b0=mget_byte(p);
   b1=mget_byte(p+1);
-@@ -2912,9 +2912,9 @@
+@@ -2912,9 +2912,9 @@ unsigned int mget_word(char FAR *p)
  
  /* Model-independent routine to get 4 bytes from far RAM */
  
@@ -60,7 +60,7 @@
  
   w0=mget_word(p);
   w1=mget_word(p+2);
-@@ -2923,7 +2923,7 @@
+@@ -2923,7 +2923,7 @@ unsigned long mget_dword(char FAR *p)
  
  /* Model-independent routine to store 2 bytes in far RAM */
  
@@ -69,7 +69,7 @@
  {
   mput_byte(w&0xFF, p);
   mput_byte(w>>8  , p+1);
-@@ -2931,7 +2931,7 @@
+@@ -2931,7 +2931,7 @@ void mput_word(unsigned int w, char FAR 
  
  /* Model-independent routine to store 4 bytes in far RAM */
  
