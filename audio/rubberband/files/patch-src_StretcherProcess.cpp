@@ -1,6 +1,6 @@
---- src/StretcherProcess.cpp-dist	2012-01-08 17:24:27.535146749 +0100
-+++ src/StretcherProcess.cpp	2012-01-08 17:21:19.739152441 +0100
-@@ -26,7 +26,8 @@
+--- src/StretcherProcess.cpp.orig	2012-10-28 10:30:09 UTC
++++ src/StretcherProcess.cpp
+@@ -35,7 +35,8 @@
  #include "system/VectorOps.h"
  
  #ifndef _WIN32

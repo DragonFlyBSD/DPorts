@@ -1,5 +1,5 @@
---- src/system/sysutils.h-dist	2012-01-08 17:15:39.369149714 +0100
-+++ src/system/sysutils.h	2012-01-08 17:19:42.384145925 +0100
+--- src/system/sysutils.h.orig	2012-10-28 10:30:09 UTC
++++ src/system/sysutils.h
 @@ -41,7 +41,8 @@
  #include <malloc.h>
  #else
