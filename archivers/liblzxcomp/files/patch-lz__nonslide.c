@@ -1,4 +1,5 @@
-Index: lz_nonslide.c
+--- lz_nonslide.c.orig	2005-07-06 02:17:46 UTC
++++ lz_nonslide.c
 @@ -19,10 +19,11 @@
  /* 
   * Document here
