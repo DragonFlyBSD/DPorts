@@ -1,6 +1,6 @@
---- kstars/skyobjects/kscomet.cpp.orig	2014-09-15 23:02:14.160209962 +0200
-+++ kstars/skyobjects/kscomet.cpp	2014-09-15 23:03:33.261204279 +0200
-@@ -119,7 +119,7 @@
+--- kstars/skyobjects/kscomet.cpp.orig	2014-09-19 05:39:42 UTC
++++ kstars/skyobjects/kscomet.cpp
+@@ -119,7 +119,7 @@ KSComet::KSComet( const QString &_s, con
          qint64 fragment   = letterDesigToN( rePro.cap(6) );
  
          uidPart =
