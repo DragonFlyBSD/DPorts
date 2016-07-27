@@ -1,6 +1,6 @@
---- sleep_on_option.c.orig	Tue Jul 22 15:27:18 2003
-+++ sleep_on_option.c	Tue Jul 22 15:27:32 2003
-@@ -15,7 +15,7 @@
+--- sleep_on_option.c.orig	2006-01-05 17:36:27 UTC
++++ sleep_on_option.c
+@@ -15,7 +15,7 @@ void sleep_on_option(double time, double
  
      if ( time > samples / speed ) {
        reqst.tv_sec = (time_t) floor(time);
