@@ -1,5 +1,5 @@
---- liblash/lash.c.orig	Tue May 22 20:13:00 2007
-+++ liblash/lash.c	Tue May 22 20:13:13 2007
+--- liblash/lash.c.orig	2007-03-09 15:34:40 UTC
++++ liblash/lash.c
 @@ -23,6 +23,8 @@
  #include <strings.h>
  #include <pthread.h>

@@ -1,6 +1,6 @@
---- lashd/store.c.orig	Sat Jan 13 15:45:09 2007
-+++ lashd/store.c	Sat Jan 13 15:45:12 2007
-@@ -35,6 +35,31 @@
+--- lashd/store.c.orig	2007-01-13 22:08:54 UTC
++++ lashd/store.c
+@@ -36,6 +36,31 @@
  
  #define STORE_INFO_FILE ".store_info"
  

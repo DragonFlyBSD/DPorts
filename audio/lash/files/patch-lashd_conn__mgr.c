@@ -1,6 +1,6 @@
---- lashd/conn_mgr.c.orig	2008-01-02 20:26:00.000000000 +0100
-+++ lashd/conn_mgr.c	2008-01-02 20:27:11.000000000 +0100
-@@ -759,7 +759,11 @@
+--- lashd/conn_mgr.c.orig	2007-04-08 21:18:23 UTC
++++ lashd/conn_mgr.c
+@@ -759,7 +759,11 @@ conn_mgr_recv_run(void *data)
  
  			fprintf(stderr, "%s: error calling select(): %s\n", __FUNCTION__,
  					strerror(errno));
