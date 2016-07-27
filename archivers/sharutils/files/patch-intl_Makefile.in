@@ -1,6 +1,6 @@
---- intl/Makefile.in.orig	2013-06-11 08:30:00.000000000 -0300
-+++ intl/Makefile.in	2013-06-11 08:31:11.000000000 -0300
-@@ -447,7 +447,6 @@
+--- intl/Makefile.in.orig	2015-05-30 15:35:20 UTC
++++ intl/Makefile.in
+@@ -451,7 +451,6 @@ install-exec: all
  	  temp=$(DESTDIR)$(localedir)/t-locale.alias; \
  	  dest=$(DESTDIR)$(localedir)/locale.alias; \
  	  sed -f ref-add.sed $$orig > $$temp; \
@@ -8,7 +8,7 @@
  	  rm -f $$temp; \
  	else \
  	  : ; \
-@@ -556,11 +555,6 @@
+@@ -559,11 +558,6 @@ uninstall:
  	    temp=$(DESTDIR)$(localedir)/t-locale.alias; \
  	    dest=$(DESTDIR)$(localedir)/locale.alias; \
  	    sed -f ref-del.sed $$dest > $$temp; \
