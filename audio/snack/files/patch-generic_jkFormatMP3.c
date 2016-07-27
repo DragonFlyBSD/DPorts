@@ -1,5 +1,5 @@
---- ../generic/jkFormatMP3.c.orig	2005-12-14 11:29:38 UTC
-+++ ../generic/jkFormatMP3.c
+--- generic/jkFormatMP3.c.orig	2005-12-14 11:29:38 UTC
++++ generic/jkFormatMP3.c
 @@ -31,7 +31,6 @@ must retain this copyright notice.
  #include <string.h>
  #define FRAS2(is,a) ((is) > 0 ? t_43[(is)]*(a):-t_43[-(is)]*(a))
