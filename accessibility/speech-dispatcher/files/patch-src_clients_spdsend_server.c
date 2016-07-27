@@ -1,5 +1,5 @@
---- ./src/clients/spdsend/server.c.orig	2012-07-11 11:05:05.000000000 +0200
-+++ ./src/clients/spdsend/server.c	2013-11-15 08:44:05.105354858 +0100
+--- src/clients/spdsend/server.c.orig	2015-05-07 23:19:02 UTC
++++ src/clients/spdsend/server.c
 @@ -33,6 +33,7 @@
  
  #include <errno.h>
