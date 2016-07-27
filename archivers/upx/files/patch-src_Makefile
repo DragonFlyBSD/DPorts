@@ -1,6 +1,6 @@
---- src/Makefile.orig	Fri Apr 27 15:00:00 2007
-+++ src/Makefile	Wed May  9 22:55:18 2007
-@@ -52,7 +52,7 @@
+--- src/Makefile.orig	2013-09-30 15:51:00 UTC
++++ src/Makefile
+@@ -55,7 +55,7 @@ upx_OBJECTS := $(notdir $(upx_SOURCES:.c
  # we need UCL and zlib - you can set envvar UPX_UCLDIR
  ifneq ($(wildcard $(UPX_UCLDIR)/include/ucl/ucl.h),)
  INCLUDES += -I$(UPX_UCLDIR)/include
@@ -8,4 +8,4 @@
 +LIBS += -L$(UPX_UCLDIR)/lib
  endif
  LIBS += -lucl -lz
- # you should set envvar UPX_LZMADIR to point to your unpacked lzma443.tar.bz2
+ # you should set envvar UPX_LZMADIR to point to your unpacked LZMA SDK

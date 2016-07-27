@@ -1,6 +1,6 @@
---- src/packer.h.orig	2011-12-13 00:08:00.000000000 +0800
-+++ src/packer.h	2012-01-06 04:41:44.771998330 +0800
-@@ -235,7 +235,7 @@
+--- src/packer.h.orig	2013-09-30 15:51:00 UTC
++++ src/packer.h
+@@ -238,7 +238,7 @@ protected:
      void addLoader(C,C,C,C,C,C,C,C); void addLoader(C,C,C,C,C,C,C,C,C);
      void addLoader(C,C,C,C,C,C,C,C,C,C);
  #undef C
