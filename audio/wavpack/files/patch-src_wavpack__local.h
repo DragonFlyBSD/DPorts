@@ -1,5 +1,5 @@
---- ./src/wavpack_local.h.orig	2009-12-01 04:24:50.000000000 +0000
-+++ ./src/wavpack_local.h	2012-09-12 21:12:47.161974704 +0100
+--- src/wavpack_local.h.orig	2009-12-01 04:24:50 UTC
++++ src/wavpack_local.h
 @@ -11,6 +11,10 @@
  #ifndef WAVPACK_LOCAL_H
  #define WAVPACK_LOCAL_H
@@ -11,7 +11,7 @@
  #if defined(WIN32)
  #define FASTCALL __fastcall
  #else
-@@ -768,7 +772,7 @@
+@@ -768,7 +772,7 @@ typedef short __m64_16 __attribute__ ((_
  #define _m_paddd(m1, m2) __builtin_ia32_paddd (m1, m2)
  #define _m_pcmpeqd(m1, m2) __builtin_ia32_pcmpeqd (m1, m2)
  
