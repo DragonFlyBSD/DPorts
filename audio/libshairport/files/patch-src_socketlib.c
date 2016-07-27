@@ -1,6 +1,6 @@
---- src/socketlib.c.orig	2011-09-23 22:00:48.000000000 +0200
-+++ src/socketlib.c	2012-10-09 12:09:33.000000000 +0200
-@@ -48,7 +48,7 @@
+--- src/socketlib.c.orig	2011-09-23 20:00:48 UTC
++++ src/socketlib.c
+@@ -48,7 +48,7 @@ int common_setup(struct addrinfo *pAddrI
    if((tSock==-1) && (pAddrInfo->ai_family == AF_INET6) && (errno == EAFNOSUPPORT))
    {
      //Fallback to ipv4
@@ -9,7 +9,7 @@
      pAddrInfo->ai_family = AF_INET;
      tSock = socket(pAddrInfo->ai_family, pAddrInfo->ai_socktype, 0);
    }
-@@ -82,7 +82,7 @@
+@@ -82,7 +82,7 @@ int setup_client(struct addrinfo *server
        delay(RETRY_DELAY, &tRes);
      }
    }
@@ -18,7 +18,7 @@
    return ERROR;
  }
  
-@@ -102,7 +102,7 @@
+@@ -102,7 +102,7 @@ int getAddr(char *pHostname, char *pServ
    tError = getaddrinfo(pHostname, pService, &hints, pAddrInfo);
    if(tError != 0)
    {
@@ -27,7 +27,7 @@
    }
    return tError;
  }
-@@ -158,8 +158,8 @@
+@@ -158,8 +158,8 @@ int setupListenServer(struct addrinfo **
      sprintf(tService, "%d", pPort); // copies port to string
      int tFamily = AF_INET;
      #ifdef AF_INET6
@@ -38,7 +38,7 @@
      #else
      //printf("Listening on IPv4 Socket");
      #endif
-@@ -200,7 +200,7 @@
+@@ -200,7 +200,7 @@ static int getCorrectedEncodeSize(int pS
    else
    {
      // Invalid encoded data, no other cases are possible.
@@ -47,7 +47,7 @@
      return pSize;
    }
  }
-@@ -226,7 +226,7 @@
+@@ -226,7 +226,7 @@ char *decode_base64(unsigned char *pInpu
      memset(input, 0, length);
      memcpy(input, pInput, pLength);
      memset(input+pLength, '=', length-pLength);

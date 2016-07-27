@@ -1,5 +1,5 @@
---- src/shairport.c.orig	2011-08-21 01:57:56.000000000 +0200
-+++ src/shairport.c	2012-10-09 12:09:33.000000000 +0200
+--- src/shairport.c.orig	2011-08-20 23:57:56 UTC
++++ src/shairport.c
 @@ -31,6 +31,27 @@
  #include "shairport.h"
  #include "hairtunes.h"
@@ -28,7 +28,7 @@
  #ifndef TRUE
  #define TRUE (-1)
  #endif
-@@ -92,13 +113,26 @@
+@@ -92,13 +113,26 @@ static struct addrinfo *tAddrInfo;
  static char tPassword[56] = "";
  static char tHWID[HWID_SIZE] = {0,51,52,53,54,55};
  
@@ -56,7 +56,7 @@
    char tHWID_Hex[HWID_SIZE * 2 + 1];
    char tKnownHwid[32];
  
-@@ -177,22 +211,22 @@
+@@ -177,22 +211,22 @@ int shairport_main(int argc, char **argv
      }    
      else if(!strcmp(arg, "-h") || !strcmp(arg, "--help"))
      {
@@ -90,7 +90,7 @@
       return(0);
    }
  
-@@ -201,11 +235,11 @@
+@@ -201,11 +235,11 @@ int shairport_main(int argc, char **argv
      int tPid = fork();
      if(tPid < 0)
      {
@@ -104,7 +104,7 @@
      }
      else
      {
-@@ -246,10 +280,10 @@
+@@ -246,10 +280,10 @@ int shairport_main(int argc, char **argv
      sscanf(tHWID_Hex, "%02X%02X%02X%02X%02X%02X", &tHWID[0], &tHWID[1], &tHWID[2], &tHWID[3], &tHWID[4], &tHWID[5]);
    }
  
@@ -119,7 +119,7 @@
  
    if(tSimLevel >= 1)
    {
-@@ -263,12 +297,12 @@
+@@ -263,12 +297,12 @@ int shairport_main(int argc, char **argv
  #ifndef XBMC
      startAvahi(tHWID_Hex, tServerName, tPort);
  #endif
@@ -134,7 +134,7 @@
        return 0;
      }
  
-@@ -295,7 +329,7 @@
+@@ -295,7 +329,7 @@ int shairport_loop(void)
  
      int readsock;
  
@@ -143,7 +143,7 @@
  
      while(m_running)
      {
-@@ -327,7 +361,7 @@
+@@ -327,7 +361,7 @@ int shairport_loop(void)
          {
            freeaddrinfo(tAddrInfo);
            tAddrInfo = NULL;
@@ -152,7 +152,7 @@
            close(tServerSock);
            handleClient(tClientSock, tPassword, tHWID);
            //close(tClientSock);
-@@ -335,11 +369,11 @@
+@@ -335,11 +369,11 @@ int shairport_loop(void)
          }
          else
          {
@@ -166,7 +166,7 @@
        handleClient(tClientSock, tPassword, tHWID);
  #endif
        }
-@@ -349,7 +383,7 @@
+@@ -349,7 +383,7 @@ int shairport_loop(void)
        }
    }
  
@@ -175,7 +175,7 @@
    if(tAddrInfo != NULL)
    {
      freeaddrinfo(tAddrInfo);
-@@ -360,6 +394,7 @@
+@@ -360,6 +394,7 @@ int shairport_loop(void)
  void shairport_exit(void)
  {
    m_running = 0;
@@ -183,7 +183,7 @@
  }
  
  int shairport_is_running(void)
-@@ -407,7 +442,7 @@
+@@ -407,7 +442,7 @@ int findEnd(char *tReadBuf)
  
  void handleClient(int pSock, char *pPassword, char *pHWADDR)
  {
@@ -192,7 +192,7 @@
    fflush(stdout);
  
    socklen_t len;
-@@ -426,7 +461,7 @@
+@@ -426,7 +461,7 @@ void handleClient(int pSock, char *pPass
  
    // deal with both IPv4 and IPv6:
    if (addr.ss_family == AF_INET) {
@@ -201,7 +201,7 @@
        struct sockaddr_in *s = (struct sockaddr_in *)&addr;
        port = ntohs(s->sin_port);
        inet_ntop(AF_INET, &s->sin_addr, ipstr, sizeof ipstr);
-@@ -446,20 +481,20 @@
+@@ -446,20 +481,20 @@ void handleClient(int pSock, char *pPass
        if(memcmp(&addr.bin[0], "\x00\x00\x00\x00" "\x00\x00\x00\x00" "\x00\x00\xff\xff", 12) == 0)
        {
          // its ipv4...
@@ -226,7 +226,7 @@
  
    int tMoreDataNeeded = 1;
    struct keyring     tKeys;
-@@ -478,18 +513,19 @@
+@@ -478,18 +513,19 @@ void handleClient(int pSock, char *pPass
      while(1 == tMoreDataNeeded)
      {
        tError = readDataFromClient(pSock, &(tConn.recv));
@@ -250,7 +250,7 @@
            cleanup(&tConn);
            // pSock was already closed
            return;
-@@ -498,13 +534,13 @@
+@@ -498,13 +534,13 @@ void handleClient(int pSock, char *pPass
        }
        else
        {
@@ -266,7 +266,7 @@
      //tConn->resp.data[tConn->resp.current-1] = '\0';
      writeDataToClient(pSock, &(tConn.resp));
     // Finished reading one message...
-@@ -517,9 +553,9 @@
+@@ -517,9 +553,9 @@ void handleClient(int pSock, char *pPass
  
  void writeDataToClient(int pSock, struct shairbuffer *pResponse)
  {
@@ -278,7 +278,7 @@
  }
  
  int readDataFromClient(int pSock, struct shairbuffer *pClientBuffer)
-@@ -532,7 +568,7 @@
+@@ -532,7 +568,7 @@ int readDataFromClient(int pSock, struct
    while(tRetval > 0 && tEnd < 0)
    {
       // Read from socket until \n\n, \r\n\r\n, or \r\r is found
@@ -287,7 +287,7 @@
        fflush(stdout);
        tRetval = read(pSock, tReadBuf, MAX_SIZE);
        // if new buffer contains the end of request string, only copy partial buffer?
-@@ -543,40 +579,40 @@
+@@ -543,40 +579,40 @@ int readDataFromClient(int pSock, struct
          {
            pClientBuffer->marker = tEnd+1; // Marks start of content
          }
@@ -336,7 +336,7 @@
    char* tFound = strstr(pBufferPtr, pField);
    int tSize = 0;
    if(tFound != NULL)
-@@ -597,7 +633,7 @@
+@@ -597,7 +633,7 @@ char *getFromBuffer(char *pBufferPtr, co
      }
      
      tSize = (int) (tShortest - tFound);
@@ -345,7 +345,7 @@
      if(pReturnSize != NULL)
      {
        *pReturnSize = tSize;
-@@ -605,7 +641,7 @@
+@@ -605,7 +641,7 @@ char *getFromBuffer(char *pBufferPtr, co
    }
    else
    {
@@ -354,7 +354,7 @@
    }
    return tFound;
  }
-@@ -639,10 +675,10 @@
+@@ -639,10 +675,10 @@ int buildAppleResponse(struct connection
    {
      char tTrim[tFoundSize + 2];
      getTrimmed(tFound, tFoundSize, TRUE, TRUE, tTrim);
@@ -367,7 +367,7 @@
  
      int tCurSize = 0;
      unsigned char tChalResp[38];
-@@ -664,7 +700,7 @@
+@@ -664,7 +700,7 @@ int buildAppleResponse(struct connection
      }
  
      char *tTmp = encode_base64((unsigned char *)tChalResp, tCurSize);
@@ -376,7 +376,7 @@
      free(tTmp);
  
      // RSA Encrypt
-@@ -709,15 +745,15 @@
+@@ -709,15 +745,15 @@ int parseMessage(struct connection *pCon
    if(tContent != NULL)
    {
      int tContentSize = atoi(tContent);
@@ -396,7 +396,7 @@
          }
        }
        // check if value in tContent > 2nd read from client.
-@@ -726,7 +762,7 @@
+@@ -726,7 +762,7 @@ int parseMessage(struct connection *pCon
    }
    else
    {
@@ -405,7 +405,7 @@
    }
  
    // "Creates" a new Response Header for our response message
-@@ -739,7 +775,7 @@
+@@ -739,7 +775,7 @@ int parseMessage(struct connection *pCon
      {
        tLen = 20;
      }
@@ -414,7 +414,7 @@
    }
  
    if(pConn->password != NULL)
-@@ -749,7 +785,7 @@
+@@ -749,7 +785,7 @@ int parseMessage(struct connection *pCon
  
    if(buildAppleResponse(pConn, pIpBin, pIpBinLen, pHWID)) // need to free sig
    {
@@ -423,7 +423,7 @@
    }
  
    // Find option, then based on option, do different actions.
-@@ -769,14 +805,14 @@
+@@ -769,14 +805,14 @@ int parseMessage(struct connection *pCon
        int tKeySize = 0;
        char tEncodedAesIV[tSize + 2];
        getTrimmed(tHeaderVal, tSize, TRUE, TRUE, tEncodedAesIV);
@@ -440,7 +440,7 @@
        // remove base64 coding from key
        char *tDecodedAesKey = decode_base64((unsigned char*) tEncodedAesKey,
                                tKeySize, &tKeySize);  // Need to free DecodedAesKey
-@@ -785,7 +821,7 @@
+@@ -785,7 +821,7 @@ int parseMessage(struct connection *pCon
        int tFmtpSize = 0;
        char *tFmtp = getFromContent(tContent, "a=fmtp", &tFmtpSize);  // Don't need to free
        tFmtp = getTrimmedMalloc(tFmtp, tFmtpSize, TRUE, FALSE); // will need to free
@@ -449,7 +449,7 @@
  
        RSA *rsa = loadKey();
        // Decrypt the binary aes key
-@@ -794,11 +830,11 @@
+@@ -794,11 +830,11 @@ int parseMessage(struct connection *pCon
        if(RSA_private_decrypt(tKeySize, (unsigned char *)tDecodedAesKey, 
        (unsigned char*) tDecryptedKey, rsa, RSA_PKCS1_OAEP_PADDING) >= 0)
        {
@@ -463,7 +463,7 @@
        }
        free(tDecodedAesKey);
        RSA_free(rsa);
-@@ -814,13 +850,13 @@
+@@ -814,13 +850,13 @@ int parseMessage(struct connection *pCon
  //    struct comms *tComms = pConn->hairtunes;
  //   if (! (pipe(tComms->in) == 0 && pipe(tComms->out) == 0))
  //    {
@@ -479,7 +479,7 @@
  #ifndef XBMC
      int tPid = fork();
      if(tPid == 0)
-@@ -836,11 +872,11 @@
+@@ -836,11 +872,11 @@ int parseMessage(struct connection *pCon
        tFound = getFromSetup(pConn->recv.data, "timing_port", &tSize);
        getTrimmed(tFound, tSize, 1, 0, tTPortStr);
  
@@ -493,7 +493,7 @@
        char *tRtp = NULL;
        char *tPipe = NULL;
        char *tAoDriver = NULL;
-@@ -875,7 +911,7 @@
+@@ -875,7 +911,7 @@ int parseMessage(struct connection *pCon
                        tDataport, tRtp, tPipe, tAoDriver, tAoDeviceName, tAoDeviceId);
  #ifndef XBMC
        // Quit when finished.
@@ -502,7 +502,7 @@
        return -1;
      }
      else if(tPid >0)
-@@ -888,7 +924,7 @@
+@@ -888,7 +924,7 @@ int parseMessage(struct connection *pCon
        int tRead = read(tComms->out[0], tFromHairtunes, 80);
        if(tRead <= 0)
        {
@@ -511,7 +511,7 @@
        }
        else
        {
-@@ -900,7 +936,7 @@
+@@ -900,7 +936,7 @@ int parseMessage(struct connection *pCon
          }
          else
          {
@@ -520,7 +520,7 @@
          }
        }
  
-@@ -921,7 +957,7 @@
+@@ -921,7 +957,7 @@ int parseMessage(struct connection *pCon
      }
      else
      {
@@ -529,7 +529,7 @@
        return -1;
      }
  #endif
-@@ -933,7 +969,7 @@
+@@ -933,7 +969,7 @@ int parseMessage(struct connection *pCon
      propogateCSeq(pConn);
  #ifndef XBMC
      close(pConn->hairtunes->in[1]);
@@ -538,7 +538,7 @@
  #else
      hairtunes_cleanup();
  #endif
-@@ -954,21 +990,73 @@
+@@ -954,21 +990,73 @@ int parseMessage(struct connection *pCon
    {
      propogateCSeq(pConn);
      int tSize = 0;
@@ -616,7 +616,7 @@
      propogateCSeq(pConn);
    }
    addToShairBuffer(&(pConn->resp), "\r\n");
-@@ -1047,7 +1135,7 @@
+@@ -1047,7 +1135,7 @@ int startAvahi(const char *pHWStr, const
      char tName[100 + HWID_SIZE + 3];
      if(strlen(pServerName) > tMaxServerName)
      {
@@ -625,7 +625,7 @@
                "so we put a strncat in our command so we don't buffer overflow, while you listen to your flow.\n"
                "We just used the first %d characters.  Pick something shorter if you want\n", tMaxServerName);
      }
-@@ -1058,7 +1146,7 @@
+@@ -1058,7 +1146,7 @@ int startAvahi(const char *pHWStr, const
      strcat(tName, pHWStr);
      strcat(tName, "@");
      strncat(tName, pServerName, tMaxServerName);
@@ -634,7 +634,7 @@
      
      execlp("avahi-publish-service", "avahi-publish-service", tName,
           "_raop._tcp", tPort, "tp=UDP","sm=false","sv=false","ek=1","et=0,1",
-@@ -1070,12 +1158,12 @@
+@@ -1070,12 +1158,12 @@ int startAvahi(const char *pHWStr, const
              perror("error");
      }
  
@@ -650,7 +650,7 @@
    }
    return tPid;
  }
-@@ -1083,7 +1171,7 @@
+@@ -1083,7 +1171,7 @@ int startAvahi(const char *pHWStr, const
  
  void printBufferInfo(struct shairbuffer *pBuf, int pLevel)
  {
@@ -659,7 +659,7 @@
  }
  
  int getAvailChars(struct shairbuffer *pBuf)
-@@ -1164,7 +1252,8 @@
+@@ -1164,7 +1252,8 @@ void slog(int pLevel, char *pFormat, ...
    {
      va_list argp;
      va_start(argp, pFormat);
@@ -669,7 +669,7 @@
      va_end(argp);
    }
    //#endif
-@@ -1218,9 +1307,9 @@
+@@ -1218,9 +1307,9 @@ void initBuffer(struct shairbuffer *pBuf
  {
    if(pBuf->data != NULL)
    {
@@ -681,7 +681,7 @@
    }
    pBuf->current = 0;
    pBuf->marker = 0;
-@@ -1278,6 +1367,6 @@
+@@ -1278,6 +1367,6 @@ RSA *loadKey()
    BIO *tBio = BIO_new_mem_buf(AIRPORT_PRIVATE_KEY, -1);
    RSA *rsa = PEM_read_bio_RSAPrivateKey(tBio, NULL, NULL, NULL); //NULL, NULL, NULL);
    BIO_free(tBio);

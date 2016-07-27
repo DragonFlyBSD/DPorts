@@ -1,5 +1,5 @@
---- src/shairport.h.orig	2011-08-21 01:58:11.000000000 +0200
-+++ src/shairport.h	2012-10-09 12:09:33.000000000 +0200
+--- src/shairport.h.orig	2011-08-20 23:58:11 UTC
++++ src/shairport.h
 @@ -11,14 +11,22 @@
  #include <regex.h>
  #include <sys/types.h>
@@ -27,7 +27,7 @@
  
  struct shairbuffer
  {
-@@ -58,13 +66,21 @@
+@@ -58,13 +66,21 @@ extern "C"
  {
  #endif /* __cplusplus */
  
