@@ -1,5 +1,5 @@
---- ./mp3_check_misc.c.orig	2000-09-16 05:36:01.000000000 +0200
-+++ ./mp3_check_misc.c	2014-02-14 11:10:48.287957674 +0100
+--- mp3_check_misc.c.orig	2000-09-16 03:36:01 UTC
++++ mp3_check_misc.c
 @@ -11,7 +11,7 @@
  #include "support_functions.h"
  
@@ -9,7 +9,7 @@
  int			get_char_from_file(FILE *, unsigned int *header_value, gen_info *file_info, command_flags *flags, char *possible_mp3_tag);
  int			scan_file(FILE *, char *filename, meta_options *flag_options, command_flags *flags);
  int			parse_args(char **argv, meta_options *flag_options, command_flags *flags);
-@@ -670,7 +670,7 @@
+@@ -670,7 +670,7 @@ parse_args(argv, flag_options, flags)
  		return(PASS);
  }
  
