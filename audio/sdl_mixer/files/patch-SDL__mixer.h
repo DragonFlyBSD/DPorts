@@ -1,8 +1,8 @@
---- SDL_mixer.h	2001/05/08 07:44:56	1.1
-+++ SDL_mixer.h	2001/05/08 07:48:13
-@@ -222,6 +222,8 @@
+--- SDL_mixer.h.orig	2012-01-15 22:01:04 UTC
++++ SDL_mixer.h
+@@ -621,6 +621,8 @@ extern DECLSPEC Mix_Chunk * SDLCALL Mix_
  /* Close the mixer, halting all playing audio */
- extern DECLSPEC void Mix_CloseAudio(void);
+ extern DECLSPEC void SDLCALL Mix_CloseAudio(void);
  
 +extern DECLSPEC int Mix_GetMixerInfo(SDL_AudioSpec *, char *, int);
 +
