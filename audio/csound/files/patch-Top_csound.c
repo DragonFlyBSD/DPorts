@@ -1,6 +1,6 @@
---- Top/csound.c.orig	2011-10-16 22:59:03.000000000 +0900
-+++ Top/csound.c	2011-12-07 01:15:33.000000000 +0900
-@@ -70,11 +70,14 @@
+--- Top/csound.c.orig	2013-01-07 12:49:34 UTC
++++ Top/csound.c
+@@ -70,11 +70,14 @@ extern "C" {
   **** MAJOR PROBLEM: PTHREAD_SPINLOCK_INITIALIZER is not defined in
        Linux or Haiku */
  
@@ -16,7 +16,7 @@
  #if defined(USE_OPENMP)
  #include <omp.h>
  #endif /* USE_OPENMP */
-@@ -430,7 +433,7 @@
+@@ -430,7 +433,7 @@ extern "C" {
      NULL,           /*  csRandState         */
      0,              /*  randSeed1           */
      0,              /*  randSeed2           */
@@ -25,7 +25,7 @@
      PTHREAD_SPINLOCK_INITIALIZER,              /*  memlock           */
  #else
      0,              /*  memlock             */
-@@ -2914,7 +2917,7 @@
+@@ -2914,7 +2917,7 @@ void csoundNotifyFileOpened(CSOUND *csou
  /* ------------------------------------ */
  
  #if defined(HAVE_RDTSC)
@@ -34,7 +34,7 @@
  #undef HAVE_RDTSC
  #endif
  #endif
-@@ -2927,6 +2930,12 @@
+@@ -2927,6 +2930,12 @@ static double timeResolutionSeconds = -1
  static int getTimeResolution(void)
  {
  #if defined(HAVE_RDTSC)
@@ -47,7 +47,7 @@
      FILE    *f;
      char    buf[256];
  
-@@ -2967,9 +2976,14 @@
+@@ -2967,9 +2976,14 @@ static int getTimeResolution(void)
        }
      }
      fclose(f);

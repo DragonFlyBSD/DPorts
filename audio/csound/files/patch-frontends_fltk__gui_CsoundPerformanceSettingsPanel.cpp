@@ -1,5 +1,5 @@
---- frontends/fltk_gui/CsoundPerformanceSettingsPanel.cpp.orig	2012-08-31 15:40:35.000000000 +0200
-+++ frontends/fltk_gui/CsoundPerformanceSettingsPanel.cpp	2012-10-01 23:21:42.734591150 +0200
+--- frontends/fltk_gui/CsoundPerformanceSettingsPanel.cpp.orig	2013-01-07 12:49:35 UTC
++++ frontends/fltk_gui/CsoundPerformanceSettingsPanel.cpp
 @@ -4,9 +4,11 @@
  #endif
  
