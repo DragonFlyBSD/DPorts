@@ -1,4 +1,4 @@
---- aplay/aplay.c~
+--- aplay/aplay.c.orig	2016-03-31 14:37:02 UTC
 +++ aplay/aplay.c
 @@ -48,7 +48,6 @@
  #include <sys/time.h>
