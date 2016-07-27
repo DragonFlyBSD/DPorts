@@ -1,5 +1,5 @@
---- interface/cdda_interface.h.orig	Sat Mar 24 02:15:46 2001
-+++ interface/cdda_interface.h	Thu Jan  5 22:27:11 2006
+--- interface/cdda_interface.h.orig	2001-03-24 01:15:46 UTC
++++ interface/cdda_interface.h
 @@ -21,6 +21,11 @@
  #include <sys/types.h>
  #include <signal.h>
@@ -12,7 +12,7 @@
  #define MAXTRK 100
  
  typedef struct TOC {	/* structure of table of contents */
-@@ -47,13 +52,19 @@
+@@ -47,13 +52,19 @@ typedef struct cdrom_drive{
    int opened; /* This struct may just represent a candidate for opening */
  
    char *cdda_device_name;
@@ -34,7 +34,7 @@
    int interface;
    int bigendianp;
    int nsectors;
-@@ -83,9 +94,13 @@
+@@ -83,9 +94,13 @@ typedef struct cdrom_drive{
    int is_mmc;
  
    /* SCSI command buffer and offset pointers */

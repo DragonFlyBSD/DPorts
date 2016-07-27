@@ -3,9 +3,8 @@ Index: interface/common_interface.c
 RCS file: /home/cvs/cdparanoia/interface/common_interface.c,v
 retrieving revision 1.1.1.1
 retrieving revision 1.5
-diff -u -r1.1.1.1 -r1.5
---- interface/common_interface.c	2003/01/05 09:46:26	1.1.1.1
-+++ interface/common_interface.c	2003/01/06 21:39:53	1.5
+--- interface/common_interface.c.orig	2000-04-19 22:41:04 UTC
++++ interface/common_interface.c
 @@ -13,12 +13,19 @@
  #include "utils.h"
  #include "smallft.h"
@@ -26,7 +25,7 @@ diff -u -r1.1.1.1 -r1.5
      return(1); /* failure */
  
    return(0);
-@@ -26,6 +33,7 @@
+@@ -26,6 +33,7 @@ int ioctl_ping_cdrom(int fd){
  }
  
  
@@ -34,7 +33,7 @@ diff -u -r1.1.1.1 -r1.5
  /* Use the ioctl thingy above ping the cdrom; this will get model info */
  char *atapi_drive_info(int fd){
    /* Work around the fact that the struct grew without warning in
-@@ -46,6 +54,7 @@
+@@ -46,6 +54,7 @@ char *atapi_drive_info(int fd){
    free(id);
    return(ret);
  }
@@ -42,7 +41,7 @@ diff -u -r1.1.1.1 -r1.5
  
  int data_bigendianp(cdrom_drive *d){
    float lsb_votes=0;
-@@ -171,7 +180,9 @@
+@@ -171,7 +180,9 @@ int data_bigendianp(cdrom_drive *d){
     knows the leasoud/leadin size. */
  
  int FixupTOC(cdrom_drive *d,int tracks){
@@ -52,7 +51,7 @@ diff -u -r1.1.1.1 -r1.5
    int j;
    
    /* First off, make sure the 'starting sector' is >=0 */
-@@ -208,6 +219,8 @@
+@@ -208,6 +219,8 @@ int FixupTOC(cdrom_drive *d,int tracks){
    /* For a scsi device, the ioctl must go to the specialized SCSI
       CDROM device, not the generic device. */
  
@@ -61,7 +60,7 @@ diff -u -r1.1.1.1 -r1.5
    if (d->ioctl_fd != -1) {
      int result;
  
-@@ -231,6 +244,7 @@
+@@ -231,6 +244,7 @@ int FixupTOC(cdrom_drive *d,int tracks){
        return 1;
      }
    }

@@ -1,5 +1,5 @@
---- interface/scan_devices.c.orig	Mon Mar 26 07:44:01 2001
-+++ interface/scan_devices.c	Thu Jan  5 22:27:44 2006
+--- interface/scan_devices.c.orig	2001-03-26 05:44:01 UTC
++++ interface/scan_devices.c
 @@ -1,6 +1,8 @@
  /******************************************************************
   * CopyPolicy: GNU Public License 2 applies
@@ -18,7 +18,7 @@
  static char *scsi_cdrom_prefixes[]={
    "/dev/scd",
    "/dev/sr",
-@@ -49,6 +53,17 @@
+@@ -49,6 +53,17 @@ static char *cdrom_devices[]={
    "/dev/cm206cd",
    "/dev/gscd",
    "/dev/optcd",NULL};
@@ -36,7 +36,7 @@
  
  /* Functions here look for a cdrom drive; full init of a drive type
     happens in interface.c */
-@@ -75,10 +90,12 @@
+@@ -75,10 +90,12 @@ cdrom_drive *cdda_find_a_cdrom(int messa
  	if((d=cdda_identify(buffer,messagedest,messages)))
  	  return(d);
  	idmessage(messagedest,messages,"",NULL);
@@ -49,7 +49,7 @@
        }
      }else{
        /* Name.  Go for it. */
-@@ -117,8 +134,14 @@
+@@ -117,8 +134,14 @@ cdrom_drive *cdda_identify(const char *d
    }
  #endif
  
@@ -64,7 +64,7 @@
  
  #ifdef CDDA_TEST
    if(!d)d=cdda_identify_test(device,messagedest,messages);
-@@ -143,6 +166,7 @@
+@@ -143,6 +166,7 @@ char *test_resolve_symlink(const char *f
  
  }
  
@@ -72,7 +72,7 @@
  cdrom_drive *cdda_identify_cooked(const char *dev, int messagedest,
  				  char **messages){
  
-@@ -275,6 +299,61 @@
+@@ -275,6 +299,61 @@ cdrom_drive *cdda_identify_cooked(const 
    return(d);
  }
  
@@ -134,7 +134,7 @@
  struct  sg_id {
    long    l1; /* target | lun << 8 | channel << 16 | low_ino << 24 */
    long    l2; /* Unique id */
-@@ -390,6 +469,7 @@
+@@ -390,6 +469,7 @@ matchfail:
    if(dev!=-1)close(dev);
    return(NULL);
  }
@@ -142,7 +142,7 @@
  
  void strscat(char *a,char *b,int n){
    int i;
-@@ -401,6 +481,7 @@
+@@ -401,6 +481,7 @@ void strscat(char *a,char *b,int n){
    strcat(a," ");
  }
  
@@ -150,7 +150,7 @@
  /* At this point, we're going to punt compatability before SG2, and
     allow only SG2 and SG3 */
  static int verify_SG_version(cdrom_drive *d,int messagedest,
-@@ -653,6 +734,89 @@
+@@ -653,6 +734,89 @@ cdda_identify_scsi_fail:
    if(g_fd!=-1)close(g_fd);
    return(NULL);
  }

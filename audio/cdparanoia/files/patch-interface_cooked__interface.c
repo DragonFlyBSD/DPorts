@@ -1,5 +1,5 @@
---- interface/cooked_interface.c.orig	Wed Apr 19 15:41:04 2000
-+++ interface/cooked_interface.c	Fri Nov  7 17:16:03 2003
+--- interface/cooked_interface.c.orig	2000-04-19 22:41:04 UTC
++++ interface/cooked_interface.c
 @@ -1,6 +1,8 @@
  /******************************************************************
   * CopyPolicy: GNU Public License 2 applies
@@ -17,7 +17,7 @@
  static int cooked_readtoc (cdrom_drive *d){
    int i;
    int tracks;
-@@ -129,6 +132,142 @@
+@@ -129,6 +132,142 @@ static long cooked_read (cdrom_drive *d,
    return(sectors);
  }
  
@@ -160,7 +160,7 @@
  /* hook */
  static int Dummy (cdrom_drive *d,int Switch){
    return(0);
-@@ -193,6 +332,7 @@
+@@ -193,6 +332,7 @@ static void check_exceptions(cdrom_drive
  int cooked_init_drive (cdrom_drive *d){
    int ret;
  
@@ -168,7 +168,7 @@
    switch(d->drive_type){
    case MATSUSHITA_CDROM_MAJOR:	/* sbpcd 1 */
    case MATSUSHITA_CDROM2_MAJOR:	/* sbpcd 2 */
-@@ -243,6 +383,9 @@
+@@ -243,6 +383,9 @@ int cooked_init_drive (cdrom_drive *d){
    default:
      d->nsectors=40; 
    }

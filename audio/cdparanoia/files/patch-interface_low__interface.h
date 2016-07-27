@@ -3,9 +3,8 @@ Index: interface/low_interface.h
 RCS file: /home/cvs/cdparanoia/interface/low_interface.h,v
 retrieving revision 1.1.1.1
 retrieving revision 1.3
-diff -u -r1.1.1.1 -r1.3
---- interface/low_interface.h	2003/01/05 09:46:26	1.1.1.1
-+++ interface/low_interface.h	2003/01/06 21:26:23	1.3
+--- interface/low_interface.h.orig	2001-03-26 06:12:11 UTC
++++ interface/low_interface.h
 @@ -25,6 +25,8 @@
  #include <sys/time.h>
  #include <sys/types.h>

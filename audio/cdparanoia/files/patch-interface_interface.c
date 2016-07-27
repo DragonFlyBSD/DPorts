@@ -1,6 +1,6 @@
---- interface/interface.c.orig	Thu Apr 20 00:41:04 2000
-+++ interface/interface.c	Sat Jan  7 14:31:19 2006
-@@ -30,11 +30,24 @@
+--- interface/interface.c.orig	2000-04-19 22:41:04 UTC
++++ interface/interface.c
+@@ -30,11 +30,24 @@ int cdda_close(cdrom_drive *d){
  
      _clean_messages(d);
      if(d->cdda_device_name)free(d->cdda_device_name);

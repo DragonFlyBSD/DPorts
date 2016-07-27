@@ -1,6 +1,6 @@
---- paranoia/Makefile.in.orig
+--- paranoia/Makefile.in.orig	1999-12-14 04:28:04 UTC
 +++ paranoia/Makefile.in
-@@ -24,18 +24,14 @@
+@@ -24,18 +24,14 @@ OFILES = paranoia.o p_block.o overlap.o 
  LIBS = ../interface/libcdda_interface.a -lm
  export VERSION
  
