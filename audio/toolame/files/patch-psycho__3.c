@@ -1,6 +1,6 @@
---- psycho_3.c.orig	Thu Mar 27 16:46:02 2003
-+++ psycho_3.c	Thu Mar 27 16:51:53 2003
-@@ -131,10 +131,10 @@
+--- psycho_3.c.orig	2003-03-01 09:35:14 UTC
++++ psycho_3.c
+@@ -131,10 +131,10 @@ void psycho_3_fft(FLOAT sample[BLKSIZE],
    int i;
    static int init = 0;
    static FLOAT *window;
@@ -12,7 +12,7 @@
      for (i = 0; i < BLKSIZE; i++) {
        window[i] = sqrt_8_over_3 * 0.5 * (1 - cos (2.0 * PI * i / (BLKSIZE))) / BLKSIZE;
      }
-@@ -340,6 +340,7 @@
+@@ -340,6 +340,7 @@ void psycho_3_threshold(FLOAT *LTg, int 
    int i,j,k;
    FLOAT LTtm[SUBSIZE];
    FLOAT LTnm[SUBSIZE];
@@ -20,7 +20,7 @@
  
    for (i=0;i<SUBSIZE;i++) {
      LTtm[i] = DBMIN;
-@@ -353,10 +354,9 @@
+@@ -353,10 +354,9 @@ void psycho_3_threshold(FLOAT *LTg, int 
      if (tonelabel[k]==TONE) {
        for (j=0;j<SUBSIZE;j++) {
  	/* figure out how it masks the levels around it */  
@@ -33,7 +33,7 @@
  	  /* masking function for lower & upper slopes */
  	  if (dz < -1)
  	    vf = 17 * (dz + 1) - (0.4 * Xtm[k] + 6);
-@@ -434,6 +434,7 @@
+@@ -434,6 +434,7 @@ void psycho_3_smr(double *LTmin, double 
  void psycho_3_init(options *glopts) {
    int i;
    int cbase = 0; /* current base index for the bark range calculation */
@@ -41,7 +41,7 @@
  
    fft_buf = (D1408 *) mem_alloc ((long) sizeof (D1408) * 2, "fft_buf");
    
-@@ -441,7 +442,6 @@
+@@ -441,7 +442,6 @@ void psycho_3_init(options *glopts) {
    psycho_3_init_add_db();
    
    /* For each spectral line calculate the bark and the ATH (in dB) */

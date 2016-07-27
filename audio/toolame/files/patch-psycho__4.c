@@ -1,6 +1,6 @@
---- psycho_4.c.orig	Thu Mar 27 16:58:41 2003
-+++ psycho_4.c	Thu Mar 27 16:59:20 2003
-@@ -330,6 +330,8 @@
+--- psycho_4.c.orig	2003-03-02 00:50:48 UTC
++++ psycho_4.c
+@@ -330,6 +330,8 @@ void psycho_4 (short int *buffer, short 
  void psycho_4_init (double sfreq, options *glopts)
  {
    int i, j;
@@ -9,7 +9,7 @@
  
    /* Allocate memory for all the static variables */
    psycho_4_allocmem();
-@@ -365,8 +367,8 @@
+@@ -365,8 +367,8 @@ void psycho_4_init (double sfreq, option
       Starting from line 0, all lines within 0.33 of the starting
       bark are added to the same partition. When a line is greater
       by 0.33 of a bark, start a new partition.  */
