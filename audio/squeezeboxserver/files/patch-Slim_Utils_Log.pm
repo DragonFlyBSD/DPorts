@@ -1,15 +1,15 @@
---- Slim/Utils/Log.pm	2010-04-01 13:21:54.000000000 +0100
-+++ Slim/Utils/Log.pm	2010-06-07 09:08:34.000000000 +0100
-@@ -134,7 +134,7 @@
+--- Slim/Utils/Log.pm.orig	2011-01-24 15:15:39 UTC
++++ Slim/Utils/Log.pm
+@@ -134,7 +134,7 @@ sub init {
  	# Make sure recreate option is set if user has an existing log.conf
  	if ( !main::ISWINDOWS && !$ENV{NYTPROF} ) {
  		$config{'log4perl.appender.server.recreate'}              = 1;
 -		$config{'log4perl.appender.server.recreate_check_signal'} = 'USR1';
 +		$config{'log4perl.appender.server.recreate_check_signal'} = 'HUP';
  	}
- 	
- 	# Change to syslog if requested
-@@ -985,7 +985,7 @@
+ 	else {
+ 		$config{'log4perl.appender.server.recreate'}              = 0;
+@@ -989,7 +989,7 @@ sub _defaultAppenders {
  
  	if ( !main::ISWINDOWS && !$ENV{NYTPROF} ) {
  		$defaultAppenders{server}->{recreate}              = 1;
