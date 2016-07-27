@@ -1,6 +1,6 @@
---- src/hyperbolic_motion.c.orig	Tue Jul  5 11:09:22 2005
-+++ src/hyperbolic_motion.c	Sat Feb 18 02:17:12 2006
-@@ -69,12 +69,12 @@
+--- src/hyperbolic_motion.c.orig	2011-07-28 11:02:50 UTC
++++ src/hyperbolic_motion.c
+@@ -70,12 +70,12 @@ next_z:
                  F = Z1 * G1;
                  Q3 = Q3 + F;
                  if (Z > 100 || fabs(F) > 10000)

@@ -1,8 +1,8 @@
---- src/utility.c.orig	Wed Jan 17 08:16:02 2007
-+++ src/utility.c	Sat Feb 10 12:08:36 2007
-@@ -45,10 +45,6 @@
+--- src/utility.c.orig	2012-04-28 09:41:42 UTC
++++ src/utility.c
+@@ -44,10 +44,6 @@
  #include <ctype.h>
- #include <libnova/utility.h>
+ #include <libnova/libnova.h>
  
 -#ifndef __APPLE__
 -#include <malloc.h>
