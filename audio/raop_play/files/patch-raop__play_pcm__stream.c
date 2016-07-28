@@ -1,5 +1,5 @@
---- raop_play/pcm_stream.c~	Fri Dec 16 23:17:01 2005
-+++ raop_play/pcm_stream.c	Wed Jul  5 16:02:29 2006
+--- raop_play/pcm_stream.c.orig	2005-12-16 14:17:01 UTC
++++ raop_play/pcm_stream.c
 @@ -19,7 +19,7 @@
   *****************************************************************************/
  #include <unistd.h>

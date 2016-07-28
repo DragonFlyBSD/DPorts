@@ -1,5 +1,5 @@
---- rendezvous/Client.c.orig	Fri Dec 16 23:17:02 2005
-+++ rendezvous/Client.c	Wed Jul  5 16:32:45 2006
+--- rendezvous/Client.c.orig	2005-12-16 14:17:02 UTC
++++ rendezvous/Client.c
 @@ -83,8 +83,9 @@
  #include <string.h>
  #include <unistd.h>

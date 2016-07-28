@@ -1,5 +1,5 @@
---- raop_play/m4a_stream.c~	Thu Jul 28 04:43:17 2005
-+++ raop_play/m4a_stream.c	Fri Aug 12 09:32:06 2005
+--- raop_play/m4a_stream.c.orig	2005-12-16 14:17:01 UTC
++++ raop_play/m4a_stream.c
 @@ -20,7 +20,6 @@
  #include <stdio.h>
  #include <string.h>

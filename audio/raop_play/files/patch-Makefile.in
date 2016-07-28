@@ -1,5 +1,5 @@
---- Makefile.in-	Fri Aug 12 09:57:20 2005
-+++ Makefile.in	Fri Aug 12 09:57:58 2005
+--- Makefile.in.orig	2005-12-16 14:16:59 UTC
++++ Makefile.in
 @@ -1,9 +1,9 @@
  SUBDIRS = rendezvous raop_play aexcl
  

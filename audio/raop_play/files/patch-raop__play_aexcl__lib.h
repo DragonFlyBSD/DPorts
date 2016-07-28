@@ -1,5 +1,5 @@
---- raop_play/aexcl_lib.h.orig	2005-12-16 23:17:01.000000000 +0900
-+++ raop_play/aexcl_lib.h	2008-05-08 21:52:26.000000000 +0900
+--- raop_play/aexcl_lib.h.orig	2005-12-16 14:17:01 UTC
++++ raop_play/aexcl_lib.h
 @@ -1,5 +1,5 @@
  #include <stdio.h>
 -#include <asm/types.h>
@@ -17,7 +17,7 @@
  
  BEGIN_C_DECLS
  
-@@ -75,7 +78,6 @@
+@@ -75,7 +78,6 @@ static inline int realloc_memory(void **
  		}
  		n=n<<1;
  	}

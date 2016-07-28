@@ -1,5 +1,5 @@
---- raop_play/raop_client.c.orig	Thu Jul 28 04:43:18 2005
-+++ raop_play/raop_client.c	Fri Aug 12 09:31:35 2005
+--- raop_play/raop_client.c.orig	2005-12-16 14:17:01 UTC
++++ raop_play/raop_client.c
 @@ -24,7 +24,7 @@
  #include <openssl/rsa.h>
  #include <openssl/engine.h>
@@ -9,7 +9,7 @@
  #include "aexcl_lib.h"
  #include "rtsp_client.h"
  #include "raop_client.h"
-@@ -87,7 +87,7 @@
+@@ -93,7 +93,7 @@ static int rsa_encrypt(__u8 *text, int l
  	return size;
  }
  
@@ -18,7 +18,7 @@
  {
  	__u8 *buf;
  	//__u8 tmp[16];
-@@ -222,7 +222,7 @@
+@@ -260,7 +260,7 @@ int raopcl_send_sample(raopcl_t *p, __u8
  	raopcld->data[2]=len>>8;
  	raopcld->data[3]=len&0xff;
  	memcpy(raopcld->data+header_size,sample,count);

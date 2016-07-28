@@ -1,6 +1,6 @@
---- aexcl/Makefile.in.orig	2005-12-16 15:17:00.000000000 +0100
-+++ aexcl/Makefile.in	2014-10-01 17:14:38.124305107 +0200
-@@ -2,6 +2,7 @@
+--- aexcl/Makefile.in.orig	2005-12-16 14:17:00 UTC
++++ aexcl/Makefile.in
+@@ -2,6 +2,7 @@ SHELL = @SHELL@
  CC = @CC@
  CXX = @CXX@
  DEFS = @DEFS@
@@ -8,7 +8,7 @@
  LIBS = @LIBS@
  prefix = @prefix@
  exec_prefix = @exec_prefix@
-@@ -12,13 +13,12 @@
+@@ -12,13 +13,12 @@ top_srcdir = @top_srcdir@
  mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
  
  TARGET=aexcl_play
@@ -25,7 +25,7 @@
  
  ifdef GLIB_SUBST
    GLIB_SUBST_OBJ = ipod/glibsubst.o
-@@ -29,8 +29,8 @@
+@@ -29,8 +29,8 @@ endif
  
  all: $(TARGET)
  

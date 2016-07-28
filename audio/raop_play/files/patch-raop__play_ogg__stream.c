@@ -1,5 +1,5 @@
---- raop_play/aac_stream.c~	Thu Jul 28 04:43:16 2005
-+++ raop_play/aac_stream.c	Fri Aug 12 09:48:37 2005
+--- raop_play/ogg_stream.c.orig	2005-12-16 14:17:01 UTC
++++ raop_play/ogg_stream.c
 @@ -17,7 +17,7 @@
   * along with this program; if not, write to the Free Software
   * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111, USA.
