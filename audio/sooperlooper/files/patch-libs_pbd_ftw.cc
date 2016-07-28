@@ -1,5 +1,5 @@
---- libs/pbd/ftw.cc-dist	2012-01-08 20:15:45.901151819 +0100
-+++ libs/pbd/ftw.cc	2012-01-08 20:15:58.904148109 +0100
+--- libs/pbd/ftw.cc.orig	2012-05-15 13:18:56 UTC
++++ libs/pbd/ftw.cc
 @@ -33,7 +33,7 @@
  #include <sys/types.h> /* Because fts(3) says so */
  #include <sys/stat.h>
