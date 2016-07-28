@@ -1,6 +1,6 @@
---- ./src/frontends/uade123/Makefile.in.orig	2009-10-29 22:01:12.000000000 +0100
-+++ ./src/frontends/uade123/Makefile.in	2013-11-13 16:29:09.084723709 +0100
-@@ -2,7 +2,7 @@
+--- src/frontends/uade123/Makefile.in.orig	2009-10-29 21:01:12 UTC
++++ src/frontends/uade123/Makefile.in
+@@ -2,7 +2,7 @@ BINDIR = {PACKAGEPREFIX}{BINDIR}
  UADE123NAME = {UADE123NAME}
  
  CC = {CC}

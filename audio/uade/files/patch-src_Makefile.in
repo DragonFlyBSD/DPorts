@@ -1,6 +1,6 @@
---- ./src/Makefile.in.orig	2009-10-29 22:01:12.000000000 +0100
-+++ ./src/Makefile.in	2013-11-13 16:29:09.082723891 +0100
-@@ -8,7 +8,7 @@
+--- src/Makefile.in.orig	2009-10-29 21:01:12 UTC
++++ src/Makefile.in
+@@ -8,7 +8,7 @@ ARCHFLAGS = {ARCHFLAGS}
  ARCHLIBS = {ARCHLIBS}
  DEBUGFLAGS = {DEBUGFLAGS}
  

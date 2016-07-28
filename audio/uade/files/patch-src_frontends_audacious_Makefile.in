@@ -1,6 +1,6 @@
---- ./src/frontends/audacious/Makefile.in.orig	2009-10-29 22:01:12.000000000 +0100
-+++ ./src/frontends/audacious/Makefile.in	2013-11-13 16:29:09.083723765 +0100
-@@ -7,7 +7,7 @@
+--- src/frontends/audacious/Makefile.in.orig	2009-10-29 21:01:12 UTC
++++ src/frontends/audacious/Makefile.in
+@@ -7,7 +7,7 @@ DEBUGFLAGS={DEBUGFLAGS}
  AUDACIOUSFLAGS={AUDACIOUSFLAGS}
  AUDACIOUSLIBS={AUDACIOUSLIBS}
  SHAREDLIBRARYFLAGS={SHAREDLIBRARYFLAGS}

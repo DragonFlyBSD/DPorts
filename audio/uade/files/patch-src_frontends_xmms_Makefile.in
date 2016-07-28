@@ -1,6 +1,6 @@
---- ./src/frontends/xmms/Makefile.in.orig	2009-10-29 22:01:12.000000000 +0100
-+++ ./src/frontends/xmms/Makefile.in	2013-11-13 16:29:09.085725693 +0100
-@@ -8,7 +8,7 @@
+--- src/frontends/xmms/Makefile.in.orig	2009-10-29 21:01:12 UTC
++++ src/frontends/xmms/Makefile.in
+@@ -8,7 +8,7 @@ DEBUGFLAGS={DEBUGFLAGS}
  XMMSFLAGS={XMMSFLAGS}
  XMMSLIBS={XMMSLIBS}
  SHAREDLIBRARYFLAGS={SHAREDLIBRARYFLAGS}
