@@ -1,6 +1,6 @@
---- src/config_rw.c.orig	2008-01-28 06:00:09.000000000 +0100
-+++ src/config_rw.c	2008-02-21 19:01:31.000000000 +0100
-@@ -87,9 +87,9 @@
+--- src/config_rw.c.orig	2008-01-25 09:53:50 UTC
++++ src/config_rw.c
+@@ -87,9 +87,9 @@ static struct {
  	{ "Encoder::Plugin", config.encoder.plugin,
  		STRING, 0, "ripperX_plugin-lame" },
  	{ "CdPlayer::Play_command", config.cd_player.play_command,
