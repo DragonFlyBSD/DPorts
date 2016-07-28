@@ -1,6 +1,6 @@
---- src/sndhrdw/nes_apu.c.orig 2007-10-30 22:51:03.000000000 +0100
-+++ src/sndhrdw/nes_apu.c      2007-10-30 22:52:28.000000000 +0100
-@@ -980,6 +980,9 @@
+--- src/sndhrdw/nes_apu.c.orig	2003-05-04 18:39:04 UTC
++++ src/sndhrdw/nes_apu.c
+@@ -980,6 +980,9 @@ void apu_process(void *buffer, int num_s
     uint32 elapsed_cycles;
     static int32 prev_sample = 0;
     int32 next_sample, accum;
@@ -10,7 +10,7 @@
  
     ASSERT(apu);
  
-@@ -1035,9 +1038,9 @@
+@@ -1035,9 +1038,9 @@ void apu_process(void *buffer, int num_s
  
        /* signed 16-bit output, unsigned 8-bit */
        if (16 == apu->sample_bits)
