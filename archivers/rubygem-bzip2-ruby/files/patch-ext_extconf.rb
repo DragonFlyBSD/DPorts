@@ -1,6 +1,6 @@
---- ./ext/extconf.rb.orig	2013-12-12 21:55:36.054257218 +0000
-+++ ./ext/extconf.rb	2013-12-12 21:55:51.579256255 +0000
-@@ -11,11 +11,9 @@
+--- ext/extconf.rb.orig	2016-07-26 12:25:25 UTC
++++ ext/extconf.rb
+@@ -11,11 +11,9 @@ if have_library("bz2", "BZ2_bzWriteOpen"
       $static = nil
    end
    
