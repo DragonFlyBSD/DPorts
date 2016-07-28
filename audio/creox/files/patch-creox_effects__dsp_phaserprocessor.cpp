@@ -1,6 +1,6 @@
---- creox/effects_dsp/phaserprocessor.cpp.orig
+--- creox/effects_dsp/phaserprocessor.cpp.orig	2011-06-21 21:27:40 UTC
 +++ creox/effects_dsp/phaserprocessor.cpp
-@@ -156,7 +157,8 @@
+@@ -157,7 +157,8 @@ void PhaserProcessor::signalFlow_run(con
  			{
  				const float omega = 2.0f * float(M_PI) * m_stepFrequency / m_samplerate_d;
  				float sn, cs;
@@ -10,7 +10,7 @@
  				*(m_coefBuffPrelim++) = cs; // cs
  				*(m_coefBuffPrelim++) = sn / m_resonance; // alpha (m_resonance = 2.0*resonance)
  				m_stepFrequency *= m_expStep;
-@@ -231,7 +233,8 @@
+@@ -232,7 +233,8 @@ void PhaserProcessor::signalFlow_run(con
  			}
  
  			float sn, cs;
