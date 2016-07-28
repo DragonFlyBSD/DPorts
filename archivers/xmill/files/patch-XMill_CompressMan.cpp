@@ -1,6 +1,6 @@
---- XMill/CompressMan.cpp.orig	2009-03-13 19:11:05.000000000 +0100
-+++ XMill/CompressMan.cpp	2009-03-13 19:11:08.000000000 +0100
-@@ -423,7 +423,7 @@
+--- XMill/CompressMan.cpp.orig	2016-07-26 12:48:05 UTC
++++ XMill/CompressMan.cpp
+@@ -423,7 +423,7 @@ void BothCompressMan::DebugPrint()
     UserCompressorFactory *compressor=compressorlist;
     while(compressor!=NULL)
     {

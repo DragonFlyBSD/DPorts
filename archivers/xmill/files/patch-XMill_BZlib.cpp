@@ -1,6 +1,6 @@
---- XMill/BZlib.cpp.orig	2008-07-26 04:10:15.000000000 +0700
-+++ XMill/BZlib.cpp	2008-07-26 04:20:22.000000000 +0700
-@@ -44,7 +44,7 @@
+--- XMill/BZlib.cpp.orig	2016-07-26 12:48:05 UTC
++++ XMill/BZlib.cpp
+@@ -44,7 +44,7 @@ BZip::~BZip() 
  
  void BZip::initCompress() 
  {
@@ -9,7 +9,7 @@
  		throw new XMillException (XMILL_ERR_ZLIB, "Error while compressing container!");
  	}
  }
-@@ -60,19 +60,19 @@
+@@ -60,19 +60,19 @@ int BZip::doCompress(int flag)
  {
  	if (flag == -1)
  		flag = BZ_FINISH;
@@ -32,7 +32,7 @@
  		throw new XMillException (XMILL_ERR_ZLIB, "Error while uncompressing container!");
  	}
  }
-@@ -106,7 +106,7 @@
+@@ -106,7 +106,7 @@ char **BZip::getNextInPtr() 
  
  void BZip::endUncompress()
  {
@@ -41,7 +41,7 @@
  		throw new XMillException (XMILL_ERR_ZLIB, "Error while uncompressing container!");
  	}
  }
-@@ -138,22 +138,24 @@
+@@ -138,22 +138,24 @@ int* BZip::getAvailOutPtr()
  
  int BZip::getTotalOut()
  {

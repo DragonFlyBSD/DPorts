@@ -1,6 +1,6 @@
---- XMill/PPMDI.cpp.orig	2009-03-13 19:12:05.000000000 +0100
-+++ XMill/PPMDI.cpp	2009-03-13 19:12:29.000000000 +0100
-@@ -245,7 +245,7 @@
+--- XMill/PPMDI.cpp.orig	2016-07-26 12:48:05 UTC
++++ XMill/PPMDI.cpp
+@@ -245,7 +245,7 @@ int PPMDI::uncompress(unsigned char *dst
  
  cleanup:
     *outused = j;
