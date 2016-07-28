@@ -1,6 +1,6 @@
---- src/tX_dial.c.orig	2013-03-20 09:38:30.000000000 +0100
-+++ src/tX_dial.c	2013-03-20 09:38:43.000000000 +0100
-@@ -266,7 +266,7 @@
+--- src/tX_dial.c.orig	2011-01-30 21:01:30 UTC
++++ src/tX_dial.c
+@@ -266,7 +266,7 @@ static void gtk_tx_dial_size_allocate (G
  	}
  }
  

@@ -1,5 +1,5 @@
---- src/tX_mouse.h.orig	2011-01-31 06:01:32.000000000 +0900
-+++ src/tX_mouse.h	2011-03-18 02:55:38.000000000 +0900
+--- src/tX_mouse.h.orig	2011-01-30 21:01:32 UTC
++++ src/tX_mouse.h
 @@ -34,7 +34,7 @@
  #include <X11/extensions/XInput.h>
  #include <X11/keysym.h>

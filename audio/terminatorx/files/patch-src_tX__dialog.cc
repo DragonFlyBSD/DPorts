@@ -1,6 +1,6 @@
---- src/tX_dialog.cc.orig	2004-02-06 19:28:21.000000000 +0100
-+++ src/tX_dialog.cc	2010-08-14 22:00:50.000000000 +0200
-@@ -252,7 +252,11 @@
+--- src/tX_dialog.cc.orig	2011-01-30 21:01:30 UTC
++++ src/tX_dialog.cc
+@@ -252,7 +252,11 @@ GList *get_alsa_device_list() {
  #ifdef USE_OSS
  static GList *oss_devices=NULL;
  
