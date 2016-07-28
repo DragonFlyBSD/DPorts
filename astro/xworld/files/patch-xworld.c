@@ -1,5 +1,5 @@
---- xworld.c.orig	Wed Jul 28 17:39:11 1999
-+++ xworld.c	Sat Aug 11 21:23:01 2001
+--- xworld.c.orig	1999-07-28 15:39:11 UTC
++++ xworld.c
 @@ -63,6 +63,8 @@
  #define BORDER       5
  #define SLEEP      120
