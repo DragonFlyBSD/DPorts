@@ -1,5 +1,5 @@
---- man/Makefile.orig	Fri Jan  7 09:53:38 2005
-+++ man/Makefile	Fri Jan  7 09:53:54 2005
+--- man/Makefile.orig	2012-05-15 20:31:03 UTC
++++ man/Makefile
 @@ -1,6 +1,6 @@
 -RM = rm -f
 -INSTALL = install -m 755
