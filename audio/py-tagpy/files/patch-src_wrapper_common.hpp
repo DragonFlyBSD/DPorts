@@ -1,6 +1,6 @@
---- ./src/wrapper/common.hpp.orig	2013-03-22 10:46:55.000000000 +0100
-+++ ./src/wrapper/common.hpp	2013-03-22 10:47:04.000000000 +0100
-@@ -50,10 +50,7 @@
+--- src/wrapper/common.hpp.orig	2008-04-24 19:44:50 UTC
++++ src/wrapper/common.hpp
+@@ -50,10 +50,7 @@ using namespace std;
  
  
  
