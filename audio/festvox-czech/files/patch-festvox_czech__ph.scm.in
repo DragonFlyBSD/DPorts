@@ -1,5 +1,5 @@
---- festvox/czech_ph.scm.in.orig	Sun Apr 29 18:50:12 2007
-+++ festvox/czech_ph.scm.in	Sun Apr 29 18:50:41 2007
+--- festvox/czech_ph.scm.in.orig	2005-10-03 19:02:26 UTC
++++ festvox/czech_ph.scm.in
 @@ -10,4 +10,13 @@
    (czech-unisyn-init 'czech_ph czech-ph-unisyn-index)
    (set! czech-int-simple-params* czech-ph-int-params))
