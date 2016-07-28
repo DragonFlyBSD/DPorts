@@ -1,16 +1,16 @@
---- mpiosh/mpiosh.c.orig       Thu Nov 14 02:05:28 2002
-+++ mpiosh/mpiosh.c    Thu Jun 19 19:59:10 2003
+--- mpiosh/mpiosh.c.orig	2003-08-25 19:38:57 UTC
++++ mpiosh/mpiosh.c
 @@ -39,6 +39,8 @@
  #include "readline.h"
  #include "mpiosh.h"
-
+ 
 +#define SA_NOMASK     0
 +
  /* mpiosh core functions */
  void
  mpiosh_init(void)
-@@ -113,7 +115,9 @@
-
+@@ -121,7 +123,9 @@ main(int argc, char *argv[]) {
+ 
    while ((line = readline(mpiosh.prompt))) {
      if ((*line == '\0') || mpiosh_cancel) {
 +#if 0
