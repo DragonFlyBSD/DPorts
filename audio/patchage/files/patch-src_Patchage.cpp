@@ -1,5 +1,5 @@
---- src/Patchage.cpp.orig	2011-01-10 07:53:06.000000000 +0900
-+++ src/Patchage.cpp	2011-07-24 02:43:38.000000000 +0900
+--- src/Patchage.cpp.orig	2011-01-09 22:53:06 UTC
++++ src/Patchage.cpp
 @@ -21,6 +21,11 @@
  #include <fstream>
  #include <sstream>
