@@ -1,6 +1,6 @@
---- gtkdatabox-0.6.0.0/gtk/Makefile.am.orig	2012-11-04 10:55:25.000000000 -0500
-+++ gtkdatabox-0.6.0.0/gtk/Makefile.am	2012-11-04 10:55:48.000000000 -0500
-@@ -30,8 +30,4 @@
+--- gtkdatabox-0.6.0.0/gtk/Makefile.am.orig	2009-06-25 04:09:55 UTC
++++ gtkdatabox-0.6.0.0/gtk/Makefile.am
+@@ -30,8 +30,4 @@ INCLUDES		= \
  AM_CFLAGS			=\
  			-O2\
  			-Wall -pedantic\

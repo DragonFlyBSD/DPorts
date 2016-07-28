@@ -1,5 +1,5 @@
---- ser_unix.c.orig	2008-12-17 12:46:15.000000000 -0500
-+++ ser_unix.c	2013-11-05 18:03:15.000000000 -0500
+--- ser_unix.c.orig	2008-12-17 17:46:15 UTC
++++ ser_unix.c
 @@ -14,7 +14,14 @@
  #include <errno.h>
  #include <unistd.h>
@@ -27,7 +27,7 @@
  
  char serial_error[256];
  
-@@ -68,7 +79,11 @@
+@@ -68,7 +79,11 @@ void
  cleanup_serial(int fd)
  {
    if (fd > 0) {
@@ -39,7 +39,7 @@
        /* sprintf(serial_error, "Can't ioctl set device %s", device); */
        /* perror(error); */
      }
-@@ -86,12 +101,20 @@
+@@ -86,12 +101,20 @@ findscope(char *dev, int i)
      sprintf(serial_error, "%s %s", dev, strerror(errno));
      return(0);
    }
@@ -60,7 +60,7 @@
      sprintf(serial_error, "%s Can't ioctl TCSETA", dev);
      close(fd);
      return(0);
-@@ -101,7 +124,11 @@
+@@ -101,7 +124,11 @@ findscope(char *dev, int i)
      return (1);		/* serial port scope found! */
    }
  
