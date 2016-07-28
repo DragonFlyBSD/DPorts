@@ -1,6 +1,6 @@
---- src/main.c.orig	Sun Nov  6 21:26:45 2005
-+++ src/main.c	Sun Nov 13 02:57:57 2005
-@@ -115,6 +115,7 @@
+--- src/main.c.orig	2006-02-23 17:25:47 UTC
++++ src/main.c
+@@ -115,6 +115,7 @@ setup_wrappers(void)
    WrapperEntry *wrapent = NULL;
  
    home = g_strdup_printf("%s/.xarchive/wrappers", getenv("HOME"));
@@ -8,11 +8,11 @@
    char *dir[] = 
      { 
        home, 
-@@ -145,6 +146,7 @@
-   if (WRAPPER_ARRAY == NULL) 
+@@ -146,6 +147,7 @@ setup_wrappers(void)
    {
      g_print("No wrappers found\n");
-+  }
    }
++  }
  } 
  
+ extern gchar * 

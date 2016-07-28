@@ -1,6 +1,6 @@
---- src/widgets_gtk.c.orig	Tue Nov  8 20:39:01 2005
-+++ src/widgets_gtk.c	Sun Nov 13 03:03:53 2005
-@@ -1022,8 +1022,9 @@
+--- src/widgets_gtk.c.orig	2006-02-27 14:00:30 UTC
++++ src/widgets_gtk.c
+@@ -1131,8 +1131,9 @@ open_one_file(WrapperData *wrapper, gcha
  
    if (wrapper_cmd(AR_EXTRACT, wrapper->argv, wrapper->dir) == 0)
    {
