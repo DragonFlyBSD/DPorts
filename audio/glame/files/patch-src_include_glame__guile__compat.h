@@ -1,5 +1,5 @@
---- src/include/glame_guile_compat.h.orig	2008-03-02 13:59:02.000000000 -0500
-+++ src/include/glame_guile_compat.h	2008-03-02 13:59:41.000000000 -0500
+--- src/include/glame_guile_compat.h.orig	2004-10-23 13:09:27 UTC
++++ src/include/glame_guile_compat.h
 @@ -32,58 +32,10 @@
  
  #include <libguile.h>

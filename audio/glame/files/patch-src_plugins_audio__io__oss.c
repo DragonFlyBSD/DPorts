@@ -1,5 +1,5 @@
---- src/plugins/audio_io_oss.c	2003/07/01 12:26:28	1.1
-+++ src/plugins/audio_io_oss.c	2003/07/01 12:26:41
+--- src/plugins/audio_io_oss.c.orig	2005-03-27 12:29:48 UTC
++++ src/plugins/audio_io_oss.c
 @@ -26,9 +26,9 @@
  
  #ifdef HAVE_OSS_LINUX

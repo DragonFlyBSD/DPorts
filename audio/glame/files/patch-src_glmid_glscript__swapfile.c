@@ -1,5 +1,5 @@
---- src/glmid/glscript_swapfile.c.orig	2008-03-02 14:08:24.000000000 -0500
-+++ src/glmid/glscript_swapfile.c	2008-03-02 14:09:14.000000000 -0500
+--- src/glmid/glscript_swapfile.c.orig	2004-10-23 13:09:23 UTC
++++ src/glmid/glscript_swapfile.c
 @@ -374,6 +374,7 @@ int glscript_init_swapfile()
  	glame_reg_export ("swfd?", 1, 0, 0, gls_is_swfd);
  	glame_reg_export ("swdir?", 1, 0, 0, gls_is_swdir);
