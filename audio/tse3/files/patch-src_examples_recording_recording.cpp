@@ -1,5 +1,5 @@
---- src/examples/recording/recording.cpp.orig	2005-07-25 20:22:31.000000000 +0900
-+++ src/examples/recording/recording.cpp	2009-04-02 13:23:23.000000000 +0900
+--- src/examples/recording/recording.cpp.orig	2005-07-25 11:22:31 UTC
++++ src/examples/recording/recording.cpp
 @@ -27,6 +27,7 @@
       **************************************************************/
  
