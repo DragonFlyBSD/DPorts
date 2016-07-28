@@ -1,6 +1,6 @@
---- src/qm_config.cpp.orig	2016-02-28 04:52:29.000000000 -0500
-+++ src/qm_config.cpp	2016-06-02 13:28:13.722103000 -0400
-@@ -168,9 +168,9 @@
+--- src/qm_config.cpp.orig	2016-02-28 09:52:29 UTC
++++ src/qm_config.cpp
+@@ -168,9 +168,9 @@ void qm_config::load_config()
      version       	    = sts.value("version",			    "0.0" ).toString();  
      // server related values
      quitMPD_onquit    	= sts.value("quitMPD_onquit",		false ).toBool();

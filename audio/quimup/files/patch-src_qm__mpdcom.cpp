@@ -1,6 +1,6 @@
---- src/qm_mpdcom.cpp.orig	2016-02-28 04:52:46.000000000 -0500
-+++ src/qm_mpdcom.cpp	2016-06-02 13:24:56.493027000 -0400
-@@ -2500,17 +2500,10 @@
+--- src/qm_mpdcom.cpp.orig	2016-02-28 09:52:46 UTC
++++ src/qm_mpdcom.cpp
+@@ -2500,17 +2500,10 @@ bool qm_mpdCom::is_mpd_running()
      struct stat sts;
      bool b_isrunning = false;
  
