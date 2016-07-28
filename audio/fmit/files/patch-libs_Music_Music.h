@@ -1,6 +1,6 @@
---- libs/Music/Music.h.orig	2011-01-28 08:09:11.000000000 +0900
-+++ libs/Music/Music.h	2011-08-21 21:51:54.000000000 +0900
-@@ -285,7 +285,7 @@
+--- libs/Music/Music.h.orig	2014-05-30 11:38:46 UTC
++++ libs/Music/Music.h
+@@ -285,7 +285,7 @@ namespace Music
      // TODO cannot create a template so easily because the pow10 is not defined for all types
      inline double invlp(double value)
      {
