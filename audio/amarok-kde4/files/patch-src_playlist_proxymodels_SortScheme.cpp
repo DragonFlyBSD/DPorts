@@ -1,6 +1,6 @@
---- src/playlist/proxymodels/SortScheme.cpp.orig	2014-07-27 18:27:06.000000000 +0200
-+++ src/playlist/proxymodels/SortScheme.cpp	2014-07-27 18:27:44.000000000 +0200
-@@ -123,13 +123,13 @@
+--- src/playlist/proxymodels/SortScheme.cpp.orig	2013-08-14 20:22:52 UTC
++++ src/playlist/proxymodels/SortScheme.cpp
+@@ -123,13 +123,13 @@ SortScheme::trimToLevel( int lastLevel )
  SortScheme::const_iterator
  SortScheme::begin() const
  {

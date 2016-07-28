@@ -6,8 +6,8 @@ If this is not defined, libavutil/common.h fails because of this check:
 
 Not submitted upstream, as newer releases build with -std=c++0x, which always
 sets __STD_CONSTANT_MACROS by default.
---- src/musicbrainz/MusicDNSAudioDecoder.cpp.orig	2014-07-21 16:48:11.000000000 +0300
-+++ src/musicbrainz/MusicDNSAudioDecoder.cpp	2014-07-21 16:49:04.000000000 +0300
+--- src/musicbrainz/MusicDNSAudioDecoder.cpp.orig	2013-08-14 20:22:52 UTC
++++ src/musicbrainz/MusicDNSAudioDecoder.cpp
 @@ -14,6 +14,8 @@
   * this program.  If not, see <http://www.gnu.org/licenses/>.                           *
   ****************************************************************************************/
