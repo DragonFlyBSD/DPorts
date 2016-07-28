@@ -1,5 +1,5 @@
---- convolution_process.c.orig	Mon Apr  2 09:22:07 2007
-+++ convolution_process.c	Mon Apr  2 09:22:15 2007
+--- convolution_process.c.orig	2005-11-27 23:23:16 UTC
++++ convolution_process.c
 @@ -23,7 +23,7 @@
  #include <dsp/dspop.h>
  #endif

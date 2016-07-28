@@ -1,5 +1,5 @@
---- convolution_init.c.orig	Mon Nov 28 00:24:57 2005
-+++ convolution_init.c	Mon Apr  2 09:26:43 2007
+--- convolution_init.c.orig	2005-11-27 23:24:57 UTC
++++ convolution_init.c
 @@ -17,8 +17,19 @@
  */
  
@@ -21,7 +21,7 @@
  
  int convolution_init (convolution_t *conv,
                        int number_of_responses,
-@@ -47,12 +58,12 @@
+@@ -47,12 +58,12 @@ int convolution_init (convolution_t *con
  	// allocate FFT buffers
  	// as r2c stores only N/2+1 results, we don't need the padded size for this
  	// conv->fft_complex = (fftwf_complex*)malloc (sizeof(fftwf_complex) * (conv->chunk_length + 1));
@@ -36,7 +36,7 @@
  
  	// create fftw plans
  	conv->fft_plan_forward = fftwf_plan_dft_r2c_1d (2 * conv->chunk_length, 
-@@ -100,7 +111,7 @@
+@@ -100,7 +111,7 @@ int convolution_init (convolution_t *con
                                           * (conv->chunk_length + 1)
                                           * conv->fft_responses[index]->number_of_chunks);
  			*/
@@ -45,7 +45,7 @@
  			               16,
  			               sizeof(fftwf_complex) 
  			               * (conv->chunk_length + 1)
-@@ -169,7 +180,7 @@
+@@ -169,7 +180,7 @@ int convolution_init (convolution_t *con
  
  			// need to divide (integer divide) the index by number_of_responses to get
  			// a valid index into the list of responses.
@@ -54,7 +54,7 @@
  			               sizeof(fftwf_complex) * conv->fft_responses[index/conv->number_of_response_channels]->number_of_chunks
  			               * (conv->chunk_length + 1));
  
-@@ -189,7 +200,7 @@
+@@ -189,7 +200,7 @@ int convolution_init (convolution_t *con
  			    = (fftwf_complex*)malloc (sizeof(fftwf_complex) * conv->fft_responses[index]->number_of_chunks
  			                              * (conv->chunk_length + 1));
  			*/
@@ -63,7 +63,7 @@
  			               sizeof(fftwf_complex) * conv->fft_responses[index]->number_of_chunks
  			               * (conv->chunk_length + 1));
  
-@@ -222,7 +233,7 @@
+@@ -222,7 +233,7 @@ int convolution_init (convolution_t *con
  	for (index = 0; index < conv->number_of_response_channels; ++index) { 
  	
  		// conv->overlap_buffers[index] = (float*)malloc (sizeof(float) * conv->chunk_length);
