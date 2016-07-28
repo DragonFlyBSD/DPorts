@@ -1,6 +1,6 @@
---- app/track-editor.c.orig	Sat Feb 25 21:30:54 2006
-+++ app/track-editor.c	Sun Feb 26 13:08:32 2006
-@@ -603,6 +603,8 @@
+--- app/track-editor.c.orig	2006-02-25 12:30:54 UTC
++++ app/track-editor.c
+@@ -603,6 +603,8 @@ track_editor_handle_keys (int shift,
  		    }
  		    
                      if(!GUI_ENABLED && !ASYNCEDIT) { // Recording mode 
@@ -9,7 +9,7 @@
                          if(pressed){ // Insert note
  			    
                              for(c = 0; c < 32; c++){ // Cleanup
-@@ -624,7 +626,7 @@
+@@ -624,7 +626,7 @@ track_editor_handle_keys (int shift,
                              reckey[c].chn = t->cursor_ch;
                              reckey[c].act = TRUE;
                              
@@ -18,7 +18,7 @@
                              note->note = i;
                              note->instrument = gui_get_current_instrument();
                              tracker_redraw_current_row(t);
-@@ -645,7 +647,7 @@
+@@ -645,7 +647,7 @@ track_editor_handle_keys (int shift,
                             if (!insert_noteoff)
                                 goto fin_note;
                             

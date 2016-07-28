@@ -1,6 +1,6 @@
---- app/tracer.c.orig	Sat Feb 25 21:30:54 2006
-+++ app/tracer.c	Sun Feb 26 13:14:18 2006
-@@ -361,15 +361,19 @@
+--- app/tracer.c.orig	2006-02-25 12:30:54 UTC
++++ app/tracer.c
+@@ -361,15 +361,19 @@ static st_mixer mixer_tracer = {
  void 
  tracer_trace (int mixfreq, int songpos, int patpos)
  {
@@ -24,7 +24,7 @@
      
      if((stoppatpos -= 1) < 0){
  	stopsongpos -= 1;
-@@ -381,12 +385,13 @@
+@@ -381,12 +385,13 @@ tracer_trace (int mixfreq, int songpos, 
  
      while(1) {
  	double t;

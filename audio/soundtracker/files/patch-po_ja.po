@@ -1,5 +1,5 @@
---- po/ja.po.orig	Sat Feb 25 22:25:08 2006
-+++ po/ja.po	Sun Feb 26 13:55:01 2006
+--- po/ja.po.orig	2006-02-25 13:25:08 UTC
++++ po/ja.po
 @@ -2,14 +2,14 @@
  # Copyright (C) 1998-2000 Michael Krause <m.krause@tu-harburg.de>.
  # Translators: Atsushi Yamagata <yamagata@plathome.co.jp>, 1999, 2000.
@@ -17,7 +17,7 @@
  "Last-Translator: Junichi Uekawa <dancer@debian.org>\n"
  "Language-Team: Debian Japanese project <debian-japanese@lists.debian.org>\n"
  "MIME-Version: 1.0\n"
-@@ -553,6 +553,8 @@
+@@ -553,6 +553,8 @@ msgid ""
  "Odd pattern rows contain data which will be lost after shrinking.\n"
  "Do you want to continue anyway?"
  msgstr ""
@@ -26,7 +26,7 @@
  
  #: app/gui.c:506
  msgid ""
-@@ -560,6 +562,8 @@
+@@ -560,6 +562,8 @@ msgid ""
  "Some data at the end of the pattern will be lost.\n"
  "Do you want to continue anyway?"
  msgstr ""
@@ -35,7 +35,7 @@
  
  #: app/gui.c:555 app/instrument-editor.c:212 app/sample-editor.c:1719
  #: app/sample-editor.c:1915 app/sample-editor.c:1959
-@@ -1034,9 +1038,8 @@
+@@ -1034,9 +1038,8 @@ msgid "Transpose octave down"
  msgstr "オクターブ下げる"
  
  #: app/menubar.c:526
@@ -46,7 +46,7 @@
  
  #: app/menubar.c:531
  msgid "_Jazz Edit Mode"
-@@ -1087,14 +1090,12 @@
+@@ -1087,14 +1090,12 @@ msgid "L_oad Pattern"
  msgstr "パターンを読み込み(_o)"
  
  #: app/menubar.c:599

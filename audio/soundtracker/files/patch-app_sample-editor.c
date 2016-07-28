@@ -1,6 +1,6 @@
---- app/sample-editor.c.orig	Sat Feb 25 21:26:05 2006
-+++ app/sample-editor.c	Sun Feb 26 13:05:51 2006
-@@ -2647,13 +2647,15 @@
+--- app/sample-editor.c.orig	2006-02-25 12:26:05 UTC
++++ app/sample-editor.c
+@@ -2647,13 +2647,15 @@ sample_editor_trim(gboolean trbeg, gbool
  static void 
  sample_editor_crop()
  {

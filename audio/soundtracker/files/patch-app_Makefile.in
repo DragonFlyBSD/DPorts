@@ -1,6 +1,6 @@
---- app/Makefile.in.orig	Mon Jan 12 01:21:51 2004
-+++ app/Makefile.in	Thu Jan 29 19:28:09 2004
-@@ -230,9 +230,9 @@
+--- app/Makefile.in.orig	2006-02-25 13:37:15 UTC
++++ app/Makefile.in
+@@ -235,9 +235,9 @@ soundtracker_LDADD = drivers/libdrivers.
  
  stdir = $(datadir)/soundtracker
  
@@ -11,5 +11,5 @@
 +	-DLOCALEDIR=\"$(datadir)/locale\"
 +#INCLUDES = -DLOCALEDIR=\"$(datadir)/locale\"
  subdir = app
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
  mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
- CONFIG_HEADER = $(top_builddir)/config.h
