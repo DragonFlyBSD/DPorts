@@ -1,6 +1,6 @@
---- src/commandline.cpp.orig	2014-06-08 18:46:55.585823061 +0100
-+++ src/commandline.cpp	2014-06-08 18:47:13.735820885 +0100
-@@ -221,7 +221,7 @@
+--- src/commandline.cpp.orig	2004-12-02 03:43:43 UTC
++++ src/commandline.cpp
+@@ -221,7 +221,7 @@ int transcode_init(int argc, char **argv
  	return 1;
  }
  
