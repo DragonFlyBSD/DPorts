@@ -1,5 +1,5 @@
---- modules/archive/zip/header.c.orig	Sun Aug 15 18:08:32 2004
-+++ modules/archive/zip/header.c	Sun Aug 15 18:08:34 2004
+--- modules/archive/zip/header.c.orig	2003-01-01 06:22:34 UTC
++++ modules/archive/zip/header.c
 @@ -25,7 +25,7 @@
  #include "zip.h"
  
