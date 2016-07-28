@@ -1,5 +1,5 @@
---- iprintf/iprintf.c.orig	Thu Apr 23 16:23:14 1992
-+++ iprintf/iprintf.c	Sat Nov 22 04:11:33 2003
+--- iprintf/iprintf.c.orig	2016-07-26 13:07:24 UTC
++++ iprintf/iprintf.c
 @@ -13,7 +13,7 @@
  #if defined(ANSI)
  # include	<stdarg.h>
@@ -9,7 +9,7 @@
  #else
    Error : varargs.h or stdarg.h is required to compile this.
  #endif	/* ANSI or UNIX */
-@@ -52,44 +52,21 @@
+@@ -52,44 +52,21 @@ i_fputn(stream, string, count, total_cou
  }
  
  

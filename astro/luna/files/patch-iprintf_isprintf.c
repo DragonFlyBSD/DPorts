@@ -1,5 +1,5 @@
---- iprintf/isprintf.c.orig	Thu Apr 23 16:23:16 1992
-+++ iprintf/isprintf.c	Sat Nov 22 04:13:54 2003
+--- iprintf/isprintf.c.orig	2016-07-26 13:07:24 UTC
++++ iprintf/isprintf.c
 @@ -8,13 +8,7 @@
  
  
@@ -14,7 +14,7 @@
  
  
  #if defined(ANSI)
-@@ -49,47 +43,22 @@
+@@ -49,47 +43,22 @@ i_sputn(dest, string, count, total_count
  }
      
  
