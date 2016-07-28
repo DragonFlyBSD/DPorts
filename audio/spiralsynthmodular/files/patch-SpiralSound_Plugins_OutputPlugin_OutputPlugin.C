@@ -1,5 +1,5 @@
---- SpiralSound/Plugins/OutputPlugin/OutputPlugin.C.orig	Thu Dec 12 16:23:11 2002
-+++ SpiralSound/Plugins/OutputPlugin/OutputPlugin.C	Tue Jan  7 01:03:15 2003
+--- SpiralSound/Plugins/OutputPlugin/OutputPlugin.C.orig	2004-02-08 18:36:17 UTC
++++ SpiralSound/Plugins/OutputPlugin/OutputPlugin.C
 @@ -20,6 +20,7 @@
  #define	_ISOC9X_SOURCE	1
  #define _ISOC99_SOURCE	1

@@ -1,15 +1,15 @@
---- SpiralSound/PluginManager.C.orig	Mon Jan  6 01:17:04 2003
-+++ SpiralSound/PluginManager.C	Mon Jan  6 01:17:45 2003
-@@ -48,7 +48,7 @@
+--- SpiralSound/PluginManager.C.orig	2003-08-08 13:07:30 UTC
++++ SpiralSound/PluginManager.C
+@@ -49,7 +49,7 @@ PluginID PluginManager::LoadPlugin(const
      }
  		
  	// Link the neccesary functions 
 -	char *error;
 +	const char *error;
  	
- 	NewPlugin->CreateInstance  = (SpiralPlugin*(*)()) dlsym(NewPlugin->Handle, "CreateInstance"); 	
+ 	NewPlugin->CreateInstance  = (SpiralPlugin*(*)()) dlsym(NewPlugin->Handle, "SpiralPlugin_CreateInstance"); 	
  	
-@@ -89,7 +89,7 @@
+@@ -98,7 +98,7 @@ void PluginManager::UnLoadPlugin(PluginI
  	if (IsValid(ID))
      {
  		dlclose(GetPlugin(ID)->Handle);
@@ -18,7 +18,7 @@
  	    if ((error = dlerror()) != NULL)
  	    {
  			SpiralInfo::Alert("Error unlinking plugin: \n"+string(error));
-@@ -103,7 +103,7 @@
+@@ -112,7 +112,7 @@ void PluginManager::UnloadAll()
  		 i!=m_PluginVec.end(); i++)
  	{		
  		dlclose((*i)->Handle);
