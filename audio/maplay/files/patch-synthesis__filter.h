@@ -1,5 +1,5 @@
---- synthesis_filter.h.orig	Thu Nov 21 16:36:03 2002
-+++ synthesis_filter.h	Thu Nov 21 16:36:10 2002
+--- synthesis_filter.h.orig	1994-06-23 12:14:40 UTC
++++ synthesis_filter.h
 @@ -21,7 +21,7 @@
  #ifndef SYNTHESIS_FILTER_H
  #define SYNTHESIS_FILTER_H
