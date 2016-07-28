@@ -1,5 +1,5 @@
---- ./modplug/snd_gm.c.orig	2010-01-01 20:22:26.000000000 +0100
-+++ ./modplug/snd_gm.c	2011-12-09 21:50:22.000000000 +0100
+--- modplug/snd_gm.c.orig	2010-01-01 19:22:26 UTC
++++ modplug/snd_gm.c
 @@ -10,12 +10,14 @@
  #include "mplink.h" // for 'mp', which we shouldn't need
  #include "snd_gm.h"
