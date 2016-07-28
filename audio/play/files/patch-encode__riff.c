@@ -1,6 +1,6 @@
---- encode_riff.c.orig	Tue Mar 25 16:25:07 1997
-+++ encode_riff.c	Thu Aug 19 14:37:52 2004
-@@ -11,7 +11,7 @@
+--- encode_riff.c.orig	1997-03-25 15:25:07 UTC
++++ encode_riff.c
+@@ -11,7 +11,7 @@ static char rcsid[] =
  #include <signal.h>
  #include <err.h>
  
@@ -9,7 +9,7 @@
  
  #include "play.h"
  #include "encode_riff.h"
-@@ -74,7 +74,7 @@
+@@ -74,7 +74,7 @@ int play_riff(char *audio_file, riff_hea
      char *bufp;
      char *device;
      int devfd, filefd;
@@ -18,7 +18,7 @@
  
      if (!f_hasdsp) {
  	fprintf(stderr, "%s: %s: needs DSP for play\n", myname, audio_file);
-@@ -109,7 +109,12 @@
+@@ -109,7 +109,12 @@ int play_riff(char *audio_file, riff_hea
  	warn("%s", device);
  	stat = FAIL; goto failplay0;
      }
@@ -31,7 +31,7 @@
  	warn("%s", device);
  	stat = FAIL; goto failplay0;
      }
-@@ -121,11 +126,6 @@
+@@ -121,11 +126,6 @@ int play_riff(char *audio_file, riff_hea
  	warn("%s", device);
  	stat = FAIL; goto failplay0;
      }
@@ -43,7 +43,7 @@
      if (headerp->channels > 1) {
  	int ch = headerp->channels;
  	if (ioctl(devfd, SNDCTL_DSP_STEREO, &ch) < 0) {
-@@ -163,6 +163,8 @@
+@@ -163,6 +163,8 @@ int play_riff(char *audio_file, riff_hea
  	    warn("read");
  	    stat = FAIL; goto failplay2;
  	}
