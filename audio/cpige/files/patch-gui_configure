@@ -1,5 +1,5 @@
---- ./gui/configure.orig	2006-08-20 17:51:17.000000000 +0300
-+++ ./gui/configure	2008-05-01 11:15:42.000000000 +0300
+--- gui/configure.orig	2006-08-20 14:51:17 UTC
++++ gui/configure
 @@ -3,8 +3,6 @@
  PKG_CONFIG=`which pkg-config`
  
@@ -9,7 +9,7 @@
  
  if [ ! -x "$PKG_CONFIG" ]; then
    echo "cPige GUI requires pkg-config to build."
-@@ -12,7 +10,7 @@
+@@ -12,7 +10,7 @@ if [ ! -x "$PKG_CONFIG" ]; then
  fi
  
  for lib in $libs; do
