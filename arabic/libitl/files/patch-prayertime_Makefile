@@ -1,5 +1,5 @@
---- prayertime/Makefile.orig	2013-09-25 23:35:59.000000000 +0800
-+++ prayertime/Makefile	2013-09-25 23:36:20.000000000 +0800
+--- prayertime/Makefile.orig	2006-09-21 16:37:51 UTC
++++ prayertime/Makefile
 @@ -10,10 +10,10 @@ demo_prayer:
  
  install: all

@@ -1,5 +1,5 @@
---- hijri/Makefile.orig	2013-09-25 23:36:27.000000000 +0800
-+++ hijri/Makefile	2013-09-25 23:36:43.000000000 +0800
+--- hijri/Makefile.orig	2006-09-21 16:34:31 UTC
++++ hijri/Makefile
 @@ -10,10 +10,10 @@ demo_hijri:
  
  install: all
