@@ -1,6 +1,6 @@
---- ./tags/tags.c.orig	2005-02-20 13:08:42.000000000 -0500
-+++ ./tags/tags.c	2012-05-19 08:49:13.000000000 -0400
-@@ -141,37 +141,6 @@
+--- tags/tags.c.orig	2005-02-20 18:08:42 UTC
++++ tags/tags.c
+@@ -141,37 +141,6 @@ void tag_exists(metatag_t *meta, char *f
  	return;
  }
  
@@ -38,7 +38,7 @@
  static ape_t *fetchAPE(char *filename)
  {
  	ape_t *ape;
-@@ -693,8 +662,6 @@
+@@ -693,8 +662,6 @@ void get_tag_data(metatag_t *meta, char 
  {
  	if(track > 0)
  	{
@@ -47,7 +47,7 @@
  		return;
  	}
  	else
-@@ -801,8 +768,6 @@
+@@ -801,8 +768,6 @@ void metatag_delete(metatag_t *meta)
  		freeVorbis(meta->speex);
  	if(meta->itunes != NULL)
  		freeiTunes(meta->itunes);
