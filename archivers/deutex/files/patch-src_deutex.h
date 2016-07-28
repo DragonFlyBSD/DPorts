@@ -1,6 +1,6 @@
---- src/deutex.h.orig	1999-12-31 07:20:22.000000000 +0800
-+++ src/deutex.h	2012-02-12 16:53:51.000000000 +0800
-@@ -31,23 +31,13 @@
+--- src/deutex.h.orig	1999-12-30 23:20:22 UTC
++++ src/deutex.h
+@@ -31,23 +31,13 @@ Place, Suite 330, Boston, MA 02111-1307,
  #define DeuSF   for DOS .EXE  Unix Linux OS/2
  *********************************************/
  
