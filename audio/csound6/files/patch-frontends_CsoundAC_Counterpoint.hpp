@@ -1,4 +1,4 @@
---- frontends/CsoundAC/Counterpoint.hpp.orig	2015-04-25 19:06:23 UTC
+--- frontends/CsoundAC/Counterpoint.hpp.orig	2015-09-29 11:13:28 UTC
 +++ frontends/CsoundAC/Counterpoint.hpp
 @@ -102,8 +102,8 @@ public:
    Counterpoint();

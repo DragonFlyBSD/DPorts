@@ -1,4 +1,4 @@
---- Top/csound.c.orig	2015-04-25 19:06:23 UTC
+--- Top/csound.c.orig	2015-09-29 11:13:27 UTC
 +++ Top/csound.c
 @@ -60,10 +60,13 @@
  #include "cs_par_dispatch.h"
@@ -15,7 +15,7 @@
  #if defined(USE_OPENMP)
  #include <omp.h>
  #endif /* USE_OPENMP */
-@@ -3495,7 +3498,7 @@ void csoundNotifyFileOpened(CSOUND* csou
+@@ -3510,7 +3513,7 @@ void csoundNotifyFileOpened(CSOUND* csou
  /* ------------------------------------ */
  
  #if defined(HAVE_RDTSC)
@@ -24,7 +24,7 @@
  #undef HAVE_RDTSC
  #endif
  #endif
-@@ -3508,6 +3511,13 @@ static double timeResolutionSeconds = -1
+@@ -3523,6 +3526,13 @@ static double timeResolutionSeconds = -1
  static int getTimeResolution(void)
  {
  #if defined(HAVE_RDTSC)
@@ -38,7 +38,7 @@
      FILE    *f;
      char    buf[256];
  
-@@ -3543,9 +3553,14 @@ static int getTimeResolution(void)
+@@ -3558,9 +3568,14 @@ static int getTimeResolution(void)
        }
      }
      fclose(f);

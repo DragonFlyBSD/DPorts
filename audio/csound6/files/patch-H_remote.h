@@ -1,4 +1,4 @@
---- H/remote.h.orig	2015-04-25 19:06:22 UTC
+--- H/remote.h.orig	2015-09-29 11:13:27 UTC
 +++ H/remote.h
 @@ -42,7 +42,10 @@
      #ifdef MACOSX

@@ -1,4 +1,4 @@
---- frontends/CsoundAC/ChordSpace.hpp.orig	2015-04-25 19:06:23 UTC
+--- frontends/CsoundAC/ChordSpace.hpp.orig	2015-09-29 11:13:28 UTC
 +++ frontends/CsoundAC/ChordSpace.hpp
 @@ -29,6 +29,7 @@
  #include <climits>

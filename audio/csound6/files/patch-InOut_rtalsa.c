@@ -1,4 +1,4 @@
---- InOut/rtalsa.c.orig	2015-04-25 19:06:22 UTC
+--- InOut/rtalsa.c.orig	2015-09-29 11:13:27 UTC
 +++ InOut/rtalsa.c
 @@ -23,6 +23,7 @@
      02111-1307 USA

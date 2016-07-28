@@ -1,4 +1,4 @@
---- frontends/CsoundAC/Composition.cpp.orig	2015-04-25 19:06:23 UTC
+--- frontends/CsoundAC/Composition.cpp.orig	2015-09-29 11:13:28 UTC
 +++ frontends/CsoundAC/Composition.cpp
 @@ -22,6 +22,7 @@
  #endif

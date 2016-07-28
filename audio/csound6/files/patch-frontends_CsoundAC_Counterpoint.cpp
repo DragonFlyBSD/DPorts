@@ -1,4 +1,4 @@
---- frontends/CsoundAC/Counterpoint.cpp.orig	2015-04-25 19:06:23 UTC
+--- frontends/CsoundAC/Counterpoint.cpp.orig	2015-09-29 11:13:28 UTC
 +++ frontends/CsoundAC/Counterpoint.cpp
 @@ -217,8 +217,8 @@ void Counterpoint::toCsoundScore(std::st
      delete uniform_real_generator;
