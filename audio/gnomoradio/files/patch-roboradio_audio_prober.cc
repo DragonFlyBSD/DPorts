@@ -1,6 +1,6 @@
---- roboradio/audio/prober.cc.orig	2007-12-06 15:39:58.000000000 +0100
-+++ roboradio/audio/prober.cc	2007-12-06 15:40:19.000000000 +0100
-@@ -21,6 +21,30 @@
+--- roboradio/audio/prober.cc.orig	2004-10-17 01:40:36 UTC
++++ roboradio/audio/prober.cc
+@@ -21,6 +21,30 @@ extern "C" {
  #include "../mp3/esd-audio.h"
  }
  
@@ -31,7 +31,7 @@
  Roboradio::Audio::Prober::Prober ()
  	: activated(false)
  {
-@@ -31,24 +55,6 @@
+@@ -31,24 +55,6 @@ Roboradio::Audio::Prober::~Prober ()
  	stop_prober();
  }
  

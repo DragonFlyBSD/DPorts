@@ -1,6 +1,6 @@
---- rainbow/rdf-resource.cc.orig	Wed Dec 22 11:07:54 2004
-+++ rainbow/rdf-resource.cc	Wed Dec 22 11:09:33 2004
-@@ -35,7 +35,7 @@
+--- rainbow/rdf-resource.cc.orig	2004-10-17 04:06:10 UTC
++++ rainbow/rdf-resource.cc
+@@ -35,7 +35,7 @@ void Rainbow::RdfResource::get_and_do (c
  		resource = ref_ptr<RdfResource>(p->second);
  		if (resource->downloaded) { // already downloaded
  			map<Glib::ustring,xmlpp::Element*>::iterator el = resource->id_map.find(id);
@@ -9,7 +9,7 @@
  			sig.connect(slot);
  			sig(el != resource->id_map.end() ? el->second : 0, resource);
  			return;
-@@ -47,7 +47,7 @@
+@@ -47,7 +47,7 @@ void Rainbow::RdfResource::get_and_do (c
  		Glib::ustring host, file;
  		unsigned short port;
  		if (!HttpClient::parse_url(uri, host, port, file)) {
@@ -18,7 +18,7 @@
  			sig.connect(slot);
  			sig(0, resource);
  			return;
-@@ -55,14 +55,14 @@
+@@ -55,14 +55,14 @@ void Rainbow::RdfResource::get_and_do (c
  	}
  
  	// connect mem_fun to appropriate signal
@@ -35,7 +35,7 @@
  		signal_->connect(slot);
  		resource->signal_map.insert(make_pair(id, signal_));
  	}
-@@ -190,7 +190,7 @@
+@@ -190,7 +190,7 @@ void Rainbow::RdfResource::on_downloaded
  
   error:
  	// call all signals
@@ -44,7 +44,7 @@
  	for (signal = signal_map.begin(); signal != signal_map.end(); ++signal) {
  		map<Glib::ustring,xmlpp::Element*>::iterator el = id_map.find(signal->first);
  		signal->second->emit(el != id_map.end() ? el->second : 0, ref_ptr<RdfResource>(this));
-@@ -204,7 +204,7 @@
+@@ -204,7 +204,7 @@ void Rainbow::RdfResource::on_downloaded
  
  void Rainbow::RdfResource::clear_signal_map ()
  {
