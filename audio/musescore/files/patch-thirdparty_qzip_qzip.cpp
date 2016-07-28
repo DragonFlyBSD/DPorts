@@ -1,4 +1,4 @@
---- thirdparty/qzip/qzip.cpp.orig	2015-07-16 10:58:43 UTC
+--- thirdparty/qzip/qzip.cpp.orig	2015-07-16 21:02:34 UTC
 +++ thirdparty/qzip/qzip.cpp
 @@ -45,6 +45,9 @@
  #include "qzipreader_p.h"
