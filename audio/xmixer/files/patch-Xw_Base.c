@@ -1,6 +1,6 @@
---- Xw/Base.c.orig	Wed Jul 23 03:56:03 2003
-+++ Xw/Base.c	Wed Jul 23 03:56:43 2003
-@@ -89,8 +89,8 @@
+--- Xw/Base.c.orig	1999-02-05 16:30:23 UTC
++++ Xw/Base.c
+@@ -89,8 +89,8 @@ static XtActionsRec actions [] = {
   * default translation table
   */
  static char defaultTranslations [] = "\
