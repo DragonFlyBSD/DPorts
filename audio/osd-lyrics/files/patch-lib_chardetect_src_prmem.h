@@ -1,4 +1,4 @@
---- lib/chardetect/src/prmem.h.orig
+--- lib/chardetect/src/prmem.h.orig	2012-06-04 03:45:15 UTC
 +++ lib/chardetect/src/prmem.h
 @@ -37,7 +37,9 @@
  #ifndef nsDummyPrmem_h__
