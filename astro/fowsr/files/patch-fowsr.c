@@ -1,6 +1,6 @@
---- fowsr.c.orig	2010-07-18 18:06:30.000000000 +0200
-+++ fowsr.c	2010-09-01 10:59:58.004518772 +0200
-@@ -110,13 +110,17 @@
+--- fowsr.c.orig	2016-07-26 12:57:00 UTC
++++ fowsr.c
+@@ -110,13 +110,17 @@ int CUSB_Open(int vendor, int product)
  
  	signal(SIGTERM, release_usb_device);
  
@@ -18,7 +18,7 @@
  	ret = usb_claim_interface(devh, 0);
  	if (ret != 0) {
  		printf("claim failed with error %d\n", ret);
-@@ -159,12 +163,14 @@
+@@ -159,12 +163,14 @@ void CWS_Cache(char isStoring)
  	FILE* f;
  	if (isStoring == ISREADING) {
  		if (f=fopen(fname,"rb")) {
@@ -33,7 +33,7 @@
  			n=fwrite(&m_timestamp,sizeof(m_timestamp),1,f);
  			n=fwrite(m_buf,sizeof(m_buf[0]),WS_BUFFER_SIZE,f);
  		}
-@@ -566,6 +572,7 @@
+@@ -566,6 +572,7 @@ int CWF_Write(char arg,char* fname)
  
  	FILE* f;
  	if (f=fopen(fname,"a+s")) {
