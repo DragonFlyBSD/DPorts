@@ -1,4 +1,4 @@
---- src/libUnicorn/UnicornCommon.cpp.orig
+--- src/libUnicorn/UnicornCommon.cpp.orig	2016-07-26 15:06:09 UTC
 +++ src/libUnicorn/UnicornCommon.cpp
 @@ -29,6 +29,10 @@
  #include <QCoreApplication>

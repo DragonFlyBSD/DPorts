@@ -1,6 +1,6 @@
---- src/output/RtAudio/rtaudioplayback.cpp.orig	2007-09-13 13:46:07.000000000 +0200
-+++ src/output/RtAudio/rtaudioplayback.cpp	2007-09-14 20:54:41.000000000 +0200
-@@ -157,7 +157,7 @@
+--- src/output/RtAudio/rtaudioplayback.cpp.orig	2016-07-26 15:06:09 UTC
++++ src/output/RtAudio/rtaudioplayback.cpp
+@@ -158,7 +158,7 @@ RtAudioPlayback::soundSystems()
      #endif
  
      #ifdef Q_WS_X11
@@ -9,8 +9,8 @@
      #endif
  
      #ifdef Q_WS_MAC
-@@ -280,7 +280,7 @@
-         int card = internalSoundCardID( The::settings().soundCard() );
+@@ -284,7 +284,7 @@ RtAudioPlayback::initAudio(
+         int card = internalSoundCardID( m_deviceNum );
  
          #ifdef Q_WS_X11
 -        api = RtAudio::LINUX_ALSA;

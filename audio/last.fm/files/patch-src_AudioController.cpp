@@ -1,6 +1,6 @@
---- src/AudioController.cpp.orig	2007-12-18 15:18:20.000000000 +0100
-+++ src/AudioController.cpp	2009-11-04 19:22:00.000000000 +0100
-@@ -168,13 +168,7 @@
+--- src/AudioController.cpp.orig	2016-07-26 15:06:09 UTC
++++ src/AudioController.cpp
+@@ -168,13 +168,7 @@ AudioControllerThread::loadPlugins()
  
      m_transcode->setBufferCapacity( kDecodedBufferMinSize );
  

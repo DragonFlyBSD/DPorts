@@ -1,6 +1,6 @@
---- src/libUnicorn/Settings.h.orig	2011-08-28 17:30:32.000000000 +0200
-+++ src/libUnicorn/Settings.h	2011-08-28 17:31:03.000000000 +0200
-@@ -105,7 +105,7 @@
+--- src/libUnicorn/Settings.h.orig	2016-07-26 15:06:09 UTC
++++ src/libUnicorn/Settings.h
+@@ -105,7 +105,7 @@ protected:
      public:
          MyQSettings( const UserSettings* const s )
          {

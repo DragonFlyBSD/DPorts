@@ -1,6 +1,6 @@
---- src/wizardselectupdatespage.h.orig	2012-12-02 13:59:46.000000000 +0100
-+++ src/wizardselectupdatespage.h	2012-12-02 14:00:17.000000000 +0100
-@@ -58,7 +58,7 @@
+--- src/wizardselectupdatespage.h.orig	2016-07-26 15:06:09 UTC
++++ src/wizardselectupdatespage.h
+@@ -58,7 +58,7 @@ public:
      GetChecked(
          std::vector<CComponentInfo*>& vecChecked);
      

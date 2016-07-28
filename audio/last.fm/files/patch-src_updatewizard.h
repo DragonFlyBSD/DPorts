@@ -1,6 +1,6 @@
---- src/updatewizard.h.orig	2012-12-02 14:01:31.000000000 +0100
-+++ src/updatewizard.h	2012-12-02 14:01:42.000000000 +0100
-@@ -50,7 +50,7 @@
+--- src/updatewizard.h.orig	2016-07-26 15:06:09 UTC
++++ src/updatewizard.h
+@@ -50,7 +50,7 @@ public:
          CAutoUpdater& updater,
          QWidget*      parent = NULL);
  

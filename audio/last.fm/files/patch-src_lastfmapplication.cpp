@@ -1,4 +1,4 @@
---- src/lastfmapplication.cpp.orig
+--- src/lastfmapplication.cpp.orig	2016-07-26 15:06:09 UTC
 +++ src/lastfmapplication.cpp
 @@ -55,6 +55,10 @@
  #include <QTcpSocket>
