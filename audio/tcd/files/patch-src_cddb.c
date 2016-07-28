@@ -1,6 +1,6 @@
---- ./src/cddb.c.orig	2004-06-15 17:20:09.000000000 -0400
-+++ ./src/cddb.c	2012-03-05 13:42:25.000000000 -0500
-@@ -229,10 +229,11 @@
+--- src/cddb.c.orig	2004-06-15 21:20:09 UTC
++++ src/cddb.c
+@@ -229,10 +229,11 @@ static char *cddb_filename(unsigned long
      return concat_strings(get_home_dir(), "/.tcd/", cd_id, NULL);
  }
  

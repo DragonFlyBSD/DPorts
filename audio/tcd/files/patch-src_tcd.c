@@ -1,5 +1,5 @@
---- src/tcd.c.orig	2004-06-15 22:32:31.000000000 +0200
-+++ src/tcd.c	2008-07-25 13:25:50.000000000 +0200
+--- src/tcd.c.orig	2004-06-15 20:32:31 UTC
++++ src/tcd.c
 @@ -33,6 +33,7 @@
  #include <unistd.h>
  
@@ -8,7 +8,7 @@
  
  #include "cd-utils.h"
  #include "cddb.h"
-@@ -80,37 +81,40 @@
+@@ -80,37 +81,40 @@ static void handle_play(void)
  
  static void handle_next_track(void)
  {
@@ -69,7 +69,7 @@
  }
  
  static void handle_goto(void)
-@@ -134,11 +138,6 @@
+@@ -134,11 +138,6 @@ static void handle_method(void)
      }
  }
  
@@ -81,7 +81,7 @@
  static void handle_eject(void)
  {
      SDL_CDEject(state.cdrom);
-@@ -179,6 +178,26 @@
+@@ -179,6 +178,26 @@ static void handle_skip_back(void)
      }
  }
  
@@ -108,7 +108,7 @@
  static void init_SDL(int cdrom_num)
  {
      int err = SDL_Init(SDL_INIT_CDROM);
-@@ -218,10 +237,12 @@
+@@ -218,10 +237,12 @@ static void detect_disc_change(void)
  {
      unsigned long discid = cddb_discid(state.cdrom);
      if (discid != state.current_discid) {
@@ -124,7 +124,7 @@
          state.current_discid = discid;
      }
  }
-@@ -237,7 +258,7 @@
+@@ -237,7 +258,7 @@ int main(int argc, char **argv)
      state.play_method = NORMAL;
  
      init_SDL((argc > 1) ? strtol(argv[1], NULL, 0) : 0);
@@ -133,7 +133,7 @@
      tcd_ui_init();
      tcd_ui_update(&state);
      state.current_discid = cddb_discid(state.cdrom);
-@@ -255,14 +276,17 @@
+@@ -255,14 +276,17 @@ int main(int argc, char **argv)
              case '-': case '_': handle_prev_track(); break;
              case 'g': case 'G': handle_goto(); break;
              case 'c': case 'C': state.play_method = REPEAT_CD; break;

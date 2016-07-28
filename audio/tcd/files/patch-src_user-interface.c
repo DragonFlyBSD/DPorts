@@ -1,6 +1,6 @@
---- src/user-interface.c.orig	2008-06-27 22:55:46.000000000 +0200
-+++ src/user-interface.c	2008-06-27 22:55:49.000000000 +0200
-@@ -186,8 +186,10 @@
+--- src/user-interface.c.orig	2004-06-15 21:14:47 UTC
++++ src/user-interface.c
+@@ -186,8 +186,10 @@ static void draw_control_panel(struct tc
      phelp(3, 26, 'G', "- Go to track", playable);
      phelp(4, 26, ']', "- Skip ahead", playable);
      phelp(5, 26, '[', "- Skip back", playable);
