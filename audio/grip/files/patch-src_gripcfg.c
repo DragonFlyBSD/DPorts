@@ -1,6 +1,6 @@
---- src/gripcfg.c.orig	2013-05-12 21:29:57.498271858 +0100
-+++ src/gripcfg.c	2013-05-12 21:30:09.109272899 +0100
-@@ -791,7 +791,7 @@
+--- src/gripcfg.c.orig	2005-06-25 18:00:55 UTC
++++ src/gripcfg.c
+@@ -791,7 +791,7 @@ gboolean LoadRipperConfig(GripInfo *ginf
    };
  
  #ifdef CDPAR
