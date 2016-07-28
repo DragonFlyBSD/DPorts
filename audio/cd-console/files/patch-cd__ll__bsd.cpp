@@ -1,5 +1,5 @@
---- cd_ll_bsd.cpp.orig	Sat Aug 25 14:09:00 2001
-+++ cd_ll_bsd.cpp	Sat Oct 26 21:16:54 2002
+--- cd_ll_bsd.cpp.orig	2001-08-25 18:09:00 UTC
++++ cd_ll_bsd.cpp
 @@ -10,7 +10,9 @@
  #include "cd_ll_bsd.h"
  
