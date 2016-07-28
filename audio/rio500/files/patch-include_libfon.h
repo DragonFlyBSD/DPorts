@@ -1,5 +1,5 @@
---- include/libfon.h.orig	Tue Jan 17 14:07:33 2006
-+++ include/libfon.h	Tue Jan 17 14:08:42 2006
+--- include/libfon.h.orig	2000-05-21 23:01:46 UTC
++++ include/libfon.h
 @@ -34,6 +34,9 @@
  #define MZ_HEADER_MAGIC 0x5a4d
  #define NE_HEADER_MAGIC 0x454e
