@@ -1,6 +1,6 @@
---- ./src/cputest.c.orig	2005-02-28 01:26:01.000000000 +0100
-+++ ./src/cputest.c	2010-09-28 11:21:52.000000000 +0200
-@@ -31,18 +31,33 @@
+--- src/cputest.c.orig	2005-02-28 00:26:01 UTC
++++ src/cputest.c
+@@ -31,18 +31,33 @@ static int mm_support(void)
  {
  #ifdef ARCH_X86
      int rval;
@@ -36,7 +36,7 @@
                            "movl %0, %1\n\t"
                            
                            /* ... Toggle the ID bit in one copy and store */
-@@ -53,9 +68,6 @@
+@@ -53,9 +68,6 @@ static int mm_support(void)
                            
                            /* ... Get the (hopefully modified) EFLAGS */
                            "pushf\n\t"

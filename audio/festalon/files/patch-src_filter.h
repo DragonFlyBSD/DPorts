@@ -1,6 +1,6 @@
---- ./src/filter.h.orig	2010-09-28 11:22:11.000000000 +0200
-+++ ./src/filter.h	2010-09-28 11:22:33.000000000 +0200
-@@ -20,6 +20,8 @@
+--- src/filter.h.orig	2005-02-27 23:39:24 UTC
++++ src/filter.h
+@@ -20,6 +20,8 @@ typedef struct {
  
  	#ifdef ARCH_X86
  	int16 coeffs_i16[NCOEFFS] __attribute__ ((aligned (8)));
