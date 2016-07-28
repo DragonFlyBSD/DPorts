@@ -1,5 +1,5 @@
---- playmidi.h-dist.orig	Mon May 12 06:26:36 1997
-+++ playmidi.h-dist	Tue Aug 15 23:02:27 2000
+--- playmidi.h-dist.orig	1997-05-11 21:26:36 UTC
++++ playmidi.h-dist
 @@ -35,10 +35,10 @@
  #define MAXTRKS		128
  /* where to find fm patch libraries */
