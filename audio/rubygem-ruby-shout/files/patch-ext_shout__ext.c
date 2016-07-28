@@ -1,4 +1,4 @@
---- ext/shout_ext.c.orig	2015-05-27 15:58:04 UTC
+--- ext/shout_ext.c.orig	2016-07-26 15:50:39 UTC
 +++ ext/shout_ext.c
 @@ -250,7 +250,7 @@ static VALUE _sh_send(VALUE self, VALUE 
          shout_connection *s;
