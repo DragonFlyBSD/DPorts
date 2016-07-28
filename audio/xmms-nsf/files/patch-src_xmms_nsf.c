@@ -1,5 +1,5 @@
---- ./src/xmms/nsf.c.orig	Sun Jan  7 06:15:12 2001
-+++ ./src/xmms/nsf.c	Wed Jan 10 20:13:26 2007
+--- src/xmms/nsf.c.orig	2001-01-07 05:15:12 UTC
++++ src/xmms/nsf.c
 @@ -23,7 +23,8 @@
  
  #define VERSION  "0.0.3"
@@ -10,7 +10,7 @@
  
  #include "nsf.h"
  
-@@ -328,7 +329,7 @@
+@@ -328,7 +329,7 @@ nsf_configure()
  		widget = lookup_widget(nsf_configure_win, "spinbutton1");
  		gtk_spin_button_set_value(GTK_SPIN_BUTTON(widget), nsf_cfg.play_time);
  		widget = lookup_widget(nsf_configure_win, "spinbutton2");
@@ -19,7 +19,7 @@
  
  		gtk_widget_show(nsf_configure_win);
  	}else{
-@@ -357,7 +358,7 @@
+@@ -357,7 +358,7 @@ nsf_init(void)
  	nsf_win->dock_window_list = NULL;
  	
  	nsf_cfg.play_time = PLAYTIME;	         /* second */
@@ -28,7 +28,7 @@
  	nsf_cfg.player_shaded = FALSE;
  	nsf_cfg.easy_move = FALSE;
  	
-@@ -365,7 +366,7 @@
+@@ -365,7 +366,7 @@ nsf_init(void)
  	
  	if ((cfg = xmms_cfg_open_file(filename)) != 0){
  		xmms_cfg_read_int(cfg, "NSF", "play_time", &nsf_cfg.play_time);
@@ -37,7 +37,7 @@
  		xmms_cfg_free(cfg);
  	}
  }
-@@ -439,10 +440,11 @@
+@@ -439,10 +440,11 @@ play_loop(void *arg)
  {
  	char data[2048 * 2];
  	int bytes, blk_size, rate;
@@ -50,7 +50,7 @@
  	NESReset();
  	
  	//16bit/8bit * 1channel * 512 sample = 1024byte
-@@ -460,7 +462,15 @@
+@@ -460,7 +462,15 @@ play_loop(void *arg)
  				}
  				if (bytes > 0){
  					//read 1024byte = 512 sample * 2byte
@@ -67,7 +67,7 @@
  					nsf_ip.add_vis_pcm(nsf_ip.output->written_time(), (nsf_file->bits_per_sample == 16) ? FMT_S16_LE : FMT_U8,
  							   nsf_file->channels, bytes, data);
  					
-@@ -512,11 +522,14 @@
+@@ -512,11 +522,14 @@ play_file(char *filename)
  	if (!(nsf_file->file = fopen(filename, "rb"))){
  		return;
  	}

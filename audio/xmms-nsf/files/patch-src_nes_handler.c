@@ -1,5 +1,5 @@
---- ./src/nes/handler.c.orig	Sun Jan  7 05:17:57 2001
-+++ ./src/nes/handler.c	Wed Jan 10 20:10:34 2007
+--- src/nes/handler.c.orig	2001-01-07 04:17:57 UTC
++++ src/nes/handler.c
 @@ -10,9 +10,9 @@
  static NES_READ_HANDLER  *(nprh[0x10]) = { 0, };
  static NES_WRITE_HANDLER *(npwh[0x10]) = { 0, };
@@ -12,7 +12,7 @@
  	do \
  	{ \
  		if (ph->min <= A && A <= ph->max) \
-@@ -22,9 +22,9 @@
+@@ -22,9 +22,9 @@ static Uint __fastcall ExtRd##p##(Uint A
  	} while ((ph = ph->next) != 0); \
  	return 0; \
  } \

@@ -1,6 +1,6 @@
---- ./src/nes/audiosys.h.orig	Sun Jan  7 05:17:56 2001
-+++ ./src/nes/audiosys.h	Wed Jan 10 20:10:34 2007
-@@ -21,7 +21,7 @@
+--- src/nes/audiosys.h.orig	2001-01-07 04:17:56 UTC
++++ src/nes/audiosys.h
+@@ -21,7 +21,7 @@ typedef struct NES_VOLUME_HANDLER_TAG {
  } NES_VOLUME_HANDLER;
  
  

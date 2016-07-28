@@ -1,6 +1,6 @@
---- ./src/xmms/interface.c.orig	Sun Jul 23 11:41:14 2000
-+++ ./src/xmms/interface.c	Wed Jan 10 20:10:34 2007
-@@ -106,7 +106,7 @@
+--- src/xmms/interface.c.orig	2000-07-23 09:41:14 UTC
++++ src/xmms/interface.c
+@@ -106,7 +106,7 @@ create_configure (void)
    gtk_label_set_justify (GTK_LABEL (label2), GTK_JUSTIFY_LEFT);
    gtk_misc_set_alignment (GTK_MISC (label2), 0, 0.5);
  

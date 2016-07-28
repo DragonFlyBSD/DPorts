@@ -1,6 +1,6 @@
---- ./src/nes/km6502/km6502cd.h.orig	Sun Jan  7 05:18:05 2001
-+++ ./src/nes/km6502/km6502cd.h	Wed Jan 10 20:10:34 2007
-@@ -361,27 +361,27 @@
+--- src/nes/km6502/km6502cd.h.orig	2001-01-07 04:18:05 UTC
++++ src/nes/km6502/km6502cd.h
+@@ -361,27 +361,27 @@ static void OpsubCall KM_TST(__CONTEXT_ 
  
  /* --- ADC ---  */
  #if BUILD_HUC6280
@@ -40,7 +40,7 @@
  #endif
  DEF_ADC(61,NP,KA_INDX)	/* 61 - ADC - (Indirect,X) */
  DEF_ADC(65,ZP,KA_ZP)	/* 65 - ADC - Zero Page */
-@@ -397,17 +397,17 @@
+@@ -397,17 +397,17 @@ DEF_ADC(72,NP,KA_IND)	/* 72 - ADC - (Ind
  
  /* --- AND ---  */
  #if BUILD_HUC6280
@@ -64,7 +64,7 @@
  #endif
  DEF_AND(21,NP,KA_INDX)	/* 21 - AND - (Indirect,X) */
  DEF_AND(25,ZP,KA_ZP)	/* 25 - AND - Zero Page */
-@@ -422,10 +422,10 @@
+@@ -422,10 +422,10 @@ DEF_AND(32,NP,KA_IND)	/* 32 - AND - (Ind
  #endif
  
  /* --- ASL ---  */
@@ -77,7 +77,7 @@
  }
  DEF_ASL(06,ZP,KA_ZP)	/* 06 - ASL - Zero Page */
  DEF_ASL(0E,NP,KA_ABS)	/* 0E - ASL - Absolute */
-@@ -436,7 +436,7 @@
+@@ -436,7 +436,7 @@ static void OpcodeCall Opcode0A(__CONTEX
  
  #if BUILD_HUC6280
  /* --- BBRi --- */
@@ -86,7 +86,7 @@
  { \
  	Uword adr = KA_ZP(__THISP); \
  	Uword rel = K_READ(__THISP_ KA_IMM(__THISP)); \
-@@ -451,7 +451,7 @@
+@@ -451,7 +451,7 @@ DEF_BBR(5F,5)			/* 5F - BBR5 */
  DEF_BBR(6F,6)			/* 6F - BBR6 */
  DEF_BBR(7F,7)			/* 7F - BBR7 */
  /* --- BBSi --- */
@@ -95,7 +95,7 @@
  { \
  	Uword adr = KA_ZP(__THISP); \
  	Uword rel = K_READ(__THISP_ KA_IMM(__THISP)); \
-@@ -468,8 +468,8 @@
+@@ -468,8 +468,8 @@ DEF_BBS(FF,7)			/* FF - BBS7 */
  #endif
  
  /* --- BIT ---  */
@@ -106,7 +106,7 @@
  DEF_BIT(24,ZP,KA_ZP)	/* 24 - BIT - Zero Page */
  DEF_BIT(2C,NP,KA_ABS)	/* 2C - BIT - Absolute */
  #if BUILD_HUC6280 || BUILD_M65C02
-@@ -479,7 +479,7 @@
+@@ -479,7 +479,7 @@ DEF_BIT(89,NP,KA_IMM)	/* 89 - BIT - Imme
  #endif
  
  /* --- Bcc ---  */
@@ -115,7 +115,7 @@
  { \
  	Uword rel = K_READ(__THISP_ KA_IMM(__THISP)); \
  	if (a) KM_BRA(__THISP_ rel); \
-@@ -536,8 +536,8 @@
+@@ -536,8 +536,8 @@ static void OpcodeCall OpcodeB8(__CONTEX
  { __THIS__.P &= ~V_FLAG; }
  
  /* --- CMP --- */
@@ -126,7 +126,7 @@
  DEF_CMP(C1,NP,KA_INDX)	/* C1 - CMP - (Indirect,X) */
  DEF_CMP(C5,ZP,KA_ZP)	/* C5 - CMP - Zero Page */
  DEF_CMP(C9,NP,KA_IMM)	/* C9 - CMP - Immediate */
-@@ -551,24 +551,24 @@
+@@ -551,24 +551,24 @@ DEF_CMP(D2,NP,KA_IND)	/* D2 - CMP - (Ind
  #endif
  
  /* --- CPX --- */
@@ -157,7 +157,7 @@
  }
  DEF_DEC(C6,ZP,KA_ZP)	/* C6 - DEC - Zero Page */
  DEF_DEC(CE,NP,KA_ABS)	/* CE - DEC - Absolute */
-@@ -585,17 +585,17 @@
+@@ -585,17 +585,17 @@ static void OpcodeCall Opcode88(__CONTEX
  
  /* --- EOR ---  */
  #if BUILD_HUC6280
@@ -181,7 +181,7 @@
  #endif
  DEF_EOR(41,NP,KA_INDX)	/* 41 - EOR - (Indirect,X) */
  DEF_EOR(45,ZP,KA_ZP)	/* 45 - EOR - Zero Page */
-@@ -610,10 +610,10 @@
+@@ -610,10 +610,10 @@ DEF_EOR(52,NP,KA_IND)	/* 52 - EOR - (Ind
  #endif
  
  /* --- INC ---  */
@@ -194,7 +194,7 @@
  }
  DEF_INC(E6,ZP,KA_ZP)	/* E6 - INC - Zero Page */
  DEF_INC(EE,NP,KA_ABS)	/* EE - INC - Absolute */
-@@ -629,12 +629,12 @@
+@@ -629,12 +629,12 @@ static void OpcodeCall OpcodeC8(__CONTEX
  { __THIS__.Y = KM_INC(__THISP_ __THIS__.Y); }
  
  /* --- JMP ---  */
@@ -209,7 +209,7 @@
  { __THIS__.PC = KI_READWORDBUG(__THISP_ a(__THISP)); }
  #endif
  DEF_JMP(4C,KA_IMM16)	/* 4C - JMP - Immediate */
-@@ -653,8 +653,8 @@
+@@ -653,8 +653,8 @@ static void OpcodeCall Opcode20(__CONTEX
  }
  
  /* --- LDA --- */
@@ -220,7 +220,7 @@
  DEF_LDA(A1,NP,KA_INDX)	/* A1 - LDA - (Indirect,X) */
  DEF_LDA(A5,ZP,KA_ZP)	/* A5 - LDA - Zero Page */
  DEF_LDA(A9,NP,KA_IMM)	/* A9 - LDA - Immediate */
-@@ -668,8 +668,8 @@
+@@ -668,8 +668,8 @@ DEF_LDA(B2,NP,KA_IND)	/* B2 - LDA - (Ind
  #endif
  
  /* --- LDX ---  */
@@ -231,7 +231,7 @@
  DEF_LDX(A2,NP,KA_IMM)	/* A2 - LDX - Immediate */
  DEF_LDX(A6,ZP,KA_ZP)	/* A6 - LDX - Zero Page */
  DEF_LDX(AE,NP,KA_ABS)	/* AE - LDX - Absolute */
-@@ -677,8 +677,8 @@
+@@ -677,8 +677,8 @@ DEF_LDX(B6,ZP,KA_ZPY)	/* B6 - LDX - Zero
  DEF_LDX(BE,NP,KA_ABSY_)	/* BE - LDX - Absolute,Y */
  
  /* --- LDY ---  */
@@ -242,7 +242,7 @@
  DEF_LDY(A0,NP,KA_IMM)	/* A0 - LDY - Immediate */
  DEF_LDY(A4,ZP,KA_ZP)	/* A4 - LDY - Zero Page */
  DEF_LDY(AC,NP,KA_ABS)	/* AC - LDY - Absolute */
-@@ -686,10 +686,10 @@
+@@ -686,10 +686,10 @@ DEF_LDY(B4,ZP,KA_ZPX)	/* B4 - LDY - Zero
  DEF_LDY(BC,NP,KA_ABSX_)	/* BC - LDY - Absolute,X */
  
  /* --- LSR ---  */
@@ -255,7 +255,7 @@
  }
  DEF_LSR(46,ZP,KA_ZP)	/* 46 - LSR - Zero Page */
  DEF_LSR(4E,NP,KA_ABS)	/* 4E - LSR - Absolute */
-@@ -705,17 +705,17 @@
+@@ -705,17 +705,17 @@ static void OpcodeCall OpcodeEA(__CONTEX
  
  /* --- ORA ---  */
  #if BUILD_HUC6280
@@ -279,7 +279,7 @@
  #endif
  DEF_ORA(01,NP,KA_INDX)	/* 01 - ORA - (Indirect,X) */
  DEF_ORA(05,ZP,KA_ZP)	/* 05 - ORA - Zero Page */
-@@ -751,7 +751,7 @@
+@@ -751,7 +751,7 @@ static void OpcodeCall Opcode7A(__CONTEX
  
  #if BUILD_HUC6280
  /* --- RMBi --- */
@@ -288,7 +288,7 @@
  { \
  	Uword adr = KA_ZP(__THISP); \
  	K_WRITEZP(__THISP_ adr, (Uword)(K_READZP(__THISP_ adr) & (~(1 << y)))); \
-@@ -765,7 +765,7 @@
+@@ -765,7 +765,7 @@ DEF_RMB(57,5)	/* 57 - RMB5 */
  DEF_RMB(67,6)	/* 67 - RMB6 */
  DEF_RMB(77,7)	/* 77 - RMB7 */
  /* --- SMBi --- */
@@ -297,7 +297,7 @@
  { \
  	Uword adr = KA_ZP(__THISP); \
  	K_WRITEZP(__THISP_ adr, (Uword)(K_READZP(__THISP_ adr) | (1 << y))); \
-@@ -781,10 +781,10 @@
+@@ -781,10 +781,10 @@ DEF_SMB(F7,7)	/* F7 - SMB7 */
  #endif
  
  /* --- ROL ---  */
@@ -310,7 +310,7 @@
  }
  DEF_ROL(26,ZP,KA_ZP)	/* 26 - ROL - Zero Page */
  DEF_ROL(2E,NP,KA_ABS)	/* 2E - ROL - Absolute */
-@@ -794,10 +794,10 @@
+@@ -794,10 +794,10 @@ static void OpcodeCall Opcode2A(__CONTEX
  { __THIS__.A = KM_ROL(__THISP_ __THIS__.A); }
  
  /* --- ROR ---  */
@@ -323,7 +323,7 @@
  }
  DEF_ROR(66,ZP,KA_ZP)	/* 66 - ROR - Zero Page */
  DEF_ROR(6E,NP,KA_ABS)	/* 6E - ROR - Absolute */
-@@ -841,10 +841,10 @@
+@@ -841,10 +841,10 @@ static void OpcodeCall Opcode02(__CONTEX
  #endif
  
  /* --- SBC ---  */
@@ -338,7 +338,7 @@
  DEF_SBC(E1,NP,KA_INDX)	/* E1 - SBC - (Indirect,X) */
  DEF_SBC(E5,ZP,KA_ZP)	/* E5 - SBC - Zero Page */
  DEF_SBC(E9,NP,KA_IMM)	/* E9 - SBC - Immediate */
-@@ -883,8 +883,8 @@
+@@ -883,8 +883,8 @@ static void OpcodeCall Opcode23(__CONTEX
  #endif
  
  /* --- STA --- */
@@ -349,7 +349,7 @@
  DEF_STA(81,NP,KA_INDX)	/* 81 - STA - (Indirect,X) */
  DEF_STA(85,ZP,KA_ZP)	/* 85 - STA - Zero Page */
  DEF_STA(8D,NP,KA_ABS)	/* 8D - STA - Absolute */
-@@ -897,23 +897,23 @@
+@@ -897,23 +897,23 @@ DEF_STA(92,NP,KA_IND)	/* 92 - STA - (Ind
  #endif
  
  /* --- STX ---  */
@@ -379,7 +379,7 @@
  DEF_STZ(64,ZP,KA_ZP)	/* 64 - STZ - Zero Page */
  DEF_STZ(9C,NP,KA_ABS)	/* 9C - STZ - Absolute */
  DEF_STZ(74,ZP,KA_ZPX)	/* 74 - STZ - Zero Page,X */
-@@ -931,18 +931,18 @@
+@@ -931,18 +931,18 @@ static void OpcodeCall Opcode43(__CONTEX
  
  #if BUILD_HUC6280 || BUILD_M65C02
  /* --- TRB --- */
@@ -402,7 +402,7 @@
  }
  DEF_TSB(04,ZP,KA_ZP)	/* 04 - TSB - Zero Page */
  DEF_TSB(0C,NP,KA_ABS)	/* 0C - TSB - Absolute */
-@@ -950,10 +950,10 @@
+@@ -950,10 +950,10 @@ DEF_TSB(0C,NP,KA_ABS)	/* 0C - TSB - Abso
  
  #if BUILD_HUC6280
  /* --- TST --- */
