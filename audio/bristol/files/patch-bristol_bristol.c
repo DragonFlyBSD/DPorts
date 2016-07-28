@@ -1,5 +1,5 @@
---- bristol/bristol.c.orig	2012-04-27 13:04:28.000000000 +0200
-+++ bristol/bristol.c	2012-09-24 15:43:08.299853839 +0200
+--- bristol/bristol.c.orig	2012-04-27 11:04:28 UTC
++++ bristol/bristol.c
 @@ -27,7 +27,11 @@
  #include <unistd.h>
  #include <pthread.h>
