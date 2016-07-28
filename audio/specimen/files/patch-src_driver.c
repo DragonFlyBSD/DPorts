@@ -1,5 +1,5 @@
---- src/driver.c.orig	Tue Mar  6 13:09:22 2007
-+++ src/driver.c	Tue Mar  6 13:09:35 2007
+--- src/driver.c.orig	2007-01-30 20:58:57 UTC
++++ src/driver.c
 @@ -7,8 +7,7 @@
  
  /* available drivers */

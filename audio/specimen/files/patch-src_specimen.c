@@ -1,6 +1,6 @@
---- src/specimen.c.orig	Mon Mar 12 01:32:12 2007
-+++ src/specimen.c	Tue May 22 20:43:41 2007
-@@ -73,7 +73,6 @@
+--- src/specimen.c.orig	2007-03-12 00:32:12 UTC
++++ src/specimen.c
+@@ -73,7 +73,6 @@ int main(int argc, char *argv[])
       }
  
       /* start */
@@ -8,7 +8,7 @@
       driver_start(0, client_name);
  #ifdef HAVE_LASH
       lashdriver_start();
-@@ -81,7 +80,6 @@
+@@ -81,7 +80,6 @@ int main(int argc, char *argv[])
       gtk_main();
  
       /* stop */
