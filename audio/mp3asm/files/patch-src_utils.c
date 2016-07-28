@@ -1,5 +1,5 @@
---- src/utils.c.orig	Fri Jul 20 11:14:59 2001
-+++ src/utils.c	Fri Jul 20 11:15:37 2001
+--- src/utils.c.orig	2001-08-17 20:44:09 UTC
++++ src/utils.c
 @@ -25,6 +25,7 @@
  #include "utils.h"
  #include <unistd.h>
