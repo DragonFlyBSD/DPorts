@@ -1,6 +1,6 @@
---- src/endian.h.orig	Mon Nov  9 08:22:55 1998
-+++ src/endian.h	Fri Jun 30 19:49:16 2000
-@@ -16,7 +16,7 @@
+--- src/endian.h.orig	1998-11-08 23:22:55 UTC
++++ src/endian.h
+@@ -16,7 +16,7 @@ typedef unsigned short u_int16_t;
  #define big_endian 1
  #endif
  

@@ -1,6 +1,6 @@
---- src/record_dialog.c.orig	Mon Nov  9 08:22:55 1998
-+++ src/record_dialog.c	Fri Jun 30 19:49:18 2000
-@@ -524,7 +524,7 @@
+--- src/record_dialog.c.orig	1998-11-08 23:22:55 UTC
++++ src/record_dialog.c
+@@ -524,7 +524,7 @@ Boolean update_record(XtPointer client_d
      sprintf(MD->mw->messages,"%.2lf kbytes (%.2lfs)",
  	    (double)playsize/1024,recordtime);
      XtVaSetValues(label5,XtNlabel, MD->mw->messages, NULL);
