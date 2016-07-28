@@ -1,5 +1,5 @@
---- src/mixer.h.orig	Sat Jul 24 13:16:52 2004
-+++ src/mixer.h	Sat Jul 24 13:17:30 2004
+--- src/mixer.h.orig	2003-12-14 18:23:19 UTC
++++ src/mixer.h
 @@ -23,7 +23,7 @@
  #include <sys/types.h>
  #include <sys/stat.h>
