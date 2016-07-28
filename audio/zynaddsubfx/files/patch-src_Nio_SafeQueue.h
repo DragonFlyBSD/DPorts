@@ -1,5 +1,5 @@
---- src/Nio/SafeQueue.h~	2013-10-22 18:37:27.000000000 +0300
-+++ src/Nio/SafeQueue.h	2013-10-22 18:37:34.000000000 +0300
+--- src/Nio/SafeQueue.h.orig	2011-12-19 21:14:30 UTC
++++ src/Nio/SafeQueue.h
 @@ -2,6 +2,7 @@
  #ifndef SAFEQUEUE_H
  #define SAFEQUEUE_H

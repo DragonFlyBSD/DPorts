@@ -1,5 +1,5 @@
---- src/Misc/Master.h~	2013-10-22 18:41:37.000000000 +0300
-+++ src/Misc/Master.h	2013-10-22 18:41:53.000000000 +0300
+--- src/Misc/Master.h.orig	2012-06-16 04:02:12 UTC
++++ src/Misc/Master.h
 @@ -33,6 +33,8 @@
  
  #include "../Params/Controller.h"

@@ -1,6 +1,6 @@
---- src/Misc/Config.cpp.orig
+--- src/Misc/Config.cpp.orig	2011-12-19 21:14:30 UTC
 +++ src/Misc/Config.cpp
-@@ -84,10 +84,9 @@
+@@ -84,10 +84,9 @@ void Config::init()
          //banks
          cfg.bankRootDirList[0] = "~/banks";
          cfg.bankRootDirList[1] = "./";
@@ -14,7 +14,7 @@
      }
  
      if(cfg.presetsDirList[0].empty()) {
-@@ -95,8 +94,7 @@
+@@ -95,8 +94,7 @@ void Config::init()
          cfg.presetsDirList[0] = "./";
          cfg.presetsDirList[1] = "../presets";
          cfg.presetsDirList[2] = "presets";

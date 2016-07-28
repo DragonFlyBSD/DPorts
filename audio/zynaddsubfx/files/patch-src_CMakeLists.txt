@@ -1,6 +1,6 @@
---- src/CMakeLists.txt.orig	2014-10-16 15:33:19.000000000 +0200
-+++ src/CMakeLists.txt	2014-10-16 15:33:53.000000000 +0200
-@@ -127,6 +127,13 @@
+--- src/CMakeLists.txt.orig	2012-06-16 04:22:35 UTC
++++ src/CMakeLists.txt
+@@ -127,6 +127,13 @@ set (BuildOptionsDebug
  # From here on, the setting variables have  been prepared so concentrate
  # on the actual compiling.
  
@@ -14,7 +14,7 @@
  if(AlsaEnable)
  	list(APPEND AUDIO_LIBRARIES ${ASOUND_LIBRARY})
  	list(APPEND AUDIO_LIBRARY_DIRS ${ASOUND_LIBRARY_DIRS})
-@@ -143,13 +150,6 @@
+@@ -143,13 +150,6 @@ if(OssEnable)
  	add_definitions(-DOSS=1)
  endif(OssEnable)
  

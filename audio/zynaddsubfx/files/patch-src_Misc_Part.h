@@ -1,5 +1,5 @@
---- src/Misc/Part.h~	2013-10-22 18:39:58.000000000 +0300
-+++ src/Misc/Part.h	2013-10-22 18:40:09.000000000 +0300
+--- src/Misc/Part.h.orig	2012-06-14 14:35:03 UTC
++++ src/Misc/Part.h
 @@ -30,6 +30,7 @@
  #include "../Misc/Microtonal.h"
  
