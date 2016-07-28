@@ -499,6 +499,7 @@ etc/man.d/perl%%PKGNAMESUFFIX%%.conf
 %%PRIV_LIB%%/Test2/Event/Diag.pm
 %%PRIV_LIB%%/Test2/Event/Exception.pm
 %%PRIV_LIB%%/Test2/Event/Generic.pm
+%%PRIV_LIB%%/Test2/Event/Info.pm
 %%PRIV_LIB%%/Test2/Event/Note.pm
 %%PRIV_LIB%%/Test2/Event/Ok.pm
 %%PRIV_LIB%%/Test2/Event/Plan.pm
@@ -1353,6 +1354,7 @@ etc/man.d/perl%%PKGNAMESUFFIX%%.conf
 %%MAN3%%/Test2::Event::Diag.3.gz
 %%MAN3%%/Test2::Event::Exception.3.gz
 %%MAN3%%/Test2::Event::Generic.3.gz
+%%MAN3%%/Test2::Event::Info.3.gz
 %%MAN3%%/Test2::Event::Note.3.gz
 %%MAN3%%/Test2::Event::Ok.3.gz
 %%MAN3%%/Test2::Event::Plan.3.gz
@@ -1519,6 +1521,7 @@ etc/man.d/perl%%PKGNAMESUFFIX%%.conf
 %%PRIV_LIB%%/pod/perl5251delta.pod
 %%PRIV_LIB%%/pod/perl5252delta.pod
 %%PRIV_LIB%%/pod/perl5253delta.pod
+%%PRIV_LIB%%/pod/perl5254delta.pod
 %%PRIV_LIB%%/pod/perl561delta.pod
 %%PRIV_LIB%%/pod/perl56delta.pod
 %%PRIV_LIB%%/pod/perl581delta.pod
@@ -2206,6 +2209,7 @@ etc/man.d/perl%%PKGNAMESUFFIX%%.conf
 %%MAN1%%/perl5251delta.1.gz
 %%MAN1%%/perl5252delta.1.gz
 %%MAN1%%/perl5253delta.1.gz
+%%MAN1%%/perl5254delta.1.gz
 %%MAN1%%/perl561delta.1.gz
 %%MAN1%%/perl56delta.1.gz
 %%MAN1%%/perl581delta.1.gz
