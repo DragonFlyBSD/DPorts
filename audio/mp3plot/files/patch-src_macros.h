@@ -1,5 +1,5 @@
---- src/macros.h.orig	2009-04-14 11:21:18.000000000 +0900
-+++ src/macros.h	2009-05-10 02:55:54.000000000 +0900
+--- src/macros.h.orig	2009-04-14 02:21:18 UTC
++++ src/macros.h
 @@ -34,7 +34,7 @@
  // References of interest:
  // <http://sourcefrog.net/weblog/software/languages/C/unused.html>
