@@ -1,5 +1,5 @@
---- src/utility.h.orig	2006-02-14 07:57:01.000000000 +0300
-+++ src/utility.h	2013-09-12 07:09:46.054424472 +0400
+--- src/utility.h.orig	2006-02-14 04:57:01 UTC
++++ src/utility.h
 @@ -10,6 +10,7 @@
  #include <map>
  #include <string>
