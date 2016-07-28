@@ -1,5 +1,5 @@
---- test/run_tests.sh.orig	2013-05-09 19:20:50.000000000 +0400
-+++ test/run_tests.sh	2013-05-23 00:01:42.140354335 +0400
+--- test/run_tests.sh.orig	2013-05-09 15:20:50 UTC
++++ test/run_tests.sh
 @@ -10,8 +10,10 @@
  
  set -e
