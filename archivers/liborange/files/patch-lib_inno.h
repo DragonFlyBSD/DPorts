@@ -1,5 +1,5 @@
---- lib/inno.h.orig	2008-05-22 15:55:23.000000000 +1000
-+++ lib/inno.h	2008-05-22 15:57:49.000000000 +1000
+--- lib/inno.h.orig	2007-11-29 13:50:20 UTC
++++ lib/inno.h
 @@ -3,7 +3,7 @@
  #define __inno_h__
  
@@ -9,7 +9,7 @@
  #include <stdio.h>
  #include <zlib.h>
  
-@@ -99,7 +99,7 @@
+@@ -99,7 +99,7 @@ typedef struct
    uint32_t NumUninstallDeleteEntries; 
    uint32_t NumRunEntries; 
    uint32_t NumUninstallRunEntries;  
@@ -18,7 +18,7 @@
  } TSetupHeader;
  
  #define SETUP_HEADER_SIZE   0xd9
-@@ -143,9 +143,9 @@
+@@ -143,9 +143,9 @@ typedef enum
  
  typedef struct
  {
@@ -31,7 +31,7 @@
  } TSetupVersionData;
  
  #if 0
-@@ -172,12 +172,12 @@
+@@ -172,12 +172,12 @@ typedef struct
      char* InstallFontName;
      char* Components; 
      char* Tasks;
