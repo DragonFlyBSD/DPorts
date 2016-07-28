@@ -1,6 +1,6 @@
---- birnet/birnetcpu.cc.orig	2008-02-26 23:19:28.000000000 +0100
-+++ birnet/birnetcpu.cc	2008-02-26 23:25:30.000000000 +0100
-@@ -201,7 +201,7 @@
+--- birnet/birnetcpu.cc.orig	2013-01-19 00:23:42 UTC
++++ birnet/birnetcpu.cc
+@@ -174,7 +174,7 @@ get_x86_cpu_features (CPUInfo *ci,
        struct sigaction action, old_action;
        action.sa_handler = cpu_info_sigill_handler;
        sigemptyset (&action.sa_mask);
