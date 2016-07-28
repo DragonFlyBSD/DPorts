@@ -1,5 +1,5 @@
---- ./stsoundlib/digidrum.h.orig	2010-04-23 13:49:47.000000000 +0200
-+++ ./stsoundlib/digidrum.h	2010-04-23 13:50:07.000000000 +0200
+--- stsoundlib/digidrum.h.orig	2016-07-26 16:04:42 UTC
++++ stsoundlib/digidrum.h
 @@ -32,6 +32,8 @@
  #ifndef __DIGIDRUM__
  #define __DIGIDRUM__

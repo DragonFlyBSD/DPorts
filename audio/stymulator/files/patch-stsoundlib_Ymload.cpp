@@ -1,6 +1,6 @@
---- ./stsoundlib/Ymload.cpp.orig	2010-04-23 13:49:47.000000000 +0200
-+++ ./stsoundlib/Ymload.cpp	2010-04-23 13:50:07.000000000 +0200
-@@ -51,61 +51,98 @@
+--- stsoundlib/Ymload.cpp.orig	2016-07-26 16:04:42 UTC
++++ stsoundlib/Ymload.cpp
+@@ -51,61 +51,98 @@ static	void	signeSample(ymu8 *ptr,yms32 
  		}
  }
  
@@ -122,7 +122,7 @@
  	return v;
  }
  
-@@ -114,6 +151,13 @@
+@@ -114,6 +151,13 @@ unsigned char	*CYmMusic::depackFile(void
   lzhHeader_t *pHeader;
   ymu8	*pNew;
   ymu8	*pSrc;
@@ -136,7 +136,7 @@
  
  		pHeader = (lzhHeader_t*)pBigMalloc;
  
-@@ -123,8 +167,6 @@
+@@ -123,8 +167,6 @@ unsigned char	*CYmMusic::depackFile(void
  			return pBigMalloc;
  		}
  
@@ -145,7 +145,7 @@
  		if (pHeader->level != 0)					// NOTE: Endianness works because value is 0
  		{ // Compression LH5, header !=0 : Error.
  			free(pBigMalloc);
-@@ -133,7 +175,8 @@
+@@ -133,7 +175,8 @@ unsigned char	*CYmMusic::depackFile(void
  			return NULL;
  		}
  
@@ -155,7 +155,7 @@
  		pNew = (ymu8*)malloc(fileSize);
  		if (!pNew)
  		{
-@@ -144,10 +187,20 @@
+@@ -144,10 +187,20 @@ unsigned char	*CYmMusic::depackFile(void
  		}
  
  		pSrc = pBigMalloc+sizeof(lzhHeader_t)+pHeader->name_lenght;			// NOTE: Endianness works because name_lenght is a byte
@@ -177,7 +177,7 @@
  
  		// alloc space for depacker and depack data
  		CLzhDepacker *pDepacker = new CLzhDepacker;	
-@@ -229,19 +282,29 @@
+@@ -229,19 +282,29 @@ ymbool	CYmMusic::ymDecode(void)
   {
   ymu8 *pUD;
   ymu8	*ptr;
@@ -210,7 +210,7 @@
  				loopFrame = 0;
  				ymChip.setClock(ATARI_CLOCK);
  				setPlayerRate(50);
-@@ -256,9 +319,14 @@
+@@ -256,9 +319,14 @@ ymbool	CYmMusic::ymDecode(void)
  				pSongPlayer = mstrdup("YM-Chip driver.");
  				break;
  
@@ -226,7 +226,7 @@
  				loopFrame = 0;
  				ymChip.setClock(ATARI_CLOCK);
  				setPlayerRate(50);
-@@ -273,11 +341,24 @@
+@@ -273,11 +341,24 @@ ymbool	CYmMusic::ymDecode(void)
  				pSongPlayer = mstrdup("YM-Chip driver.");
  				break;
  
@@ -254,7 +254,7 @@
  				ymChip.setClock(ATARI_CLOCK);
  				setPlayerRate(50);
  				pDataStream = pBigMalloc+4;
-@@ -291,35 +372,62 @@
+@@ -291,35 +372,62 @@ ymbool	CYmMusic::ymDecode(void)
  				pSongPlayer = mstrdup("YM-Chip driver.");
  				break;
  
@@ -329,7 +329,7 @@
  							pDrumTab[i].pData = (ymu8*)malloc(pDrumTab[i].size);
  							memcpy(pDrumTab[i].pData,ptr,pDrumTab[i].size);
  							if (attrib&A_DRUM4BITS)
-@@ -328,23 +436,26 @@
+@@ -328,23 +436,26 @@ ymbool	CYmMusic::ymDecode(void)
  								ymu8 *pw = pDrumTab[i].pData;
  								for (j=0;j<pDrumTab[i].size;j++)
  								{
@@ -365,7 +365,7 @@
  				{
  					songType = YM_V6;
  					pSongType = mstrdup("YM 6");
-@@ -353,13 +464,28 @@
+@@ -353,13 +464,28 @@ ymbool	CYmMusic::ymDecode(void)
  				{
  					pSongType = mstrdup("YM 5");
  				}
@@ -395,7 +395,7 @@
  
  				if (strncmp((const char*)(pBigMalloc+4),"LeOnArD!",8))
  				{
-@@ -367,23 +493,50 @@
+@@ -367,23 +493,50 @@ ymbool	CYmMusic::ymDecode(void)
  					return YMFALSE;
  				}
  				ptr = pBigMalloc+12;
@@ -456,7 +456,7 @@
  
  				pBigSampleBuffer = (unsigned char*)malloc(sampleSize);
  				memcpy(pBigSampleBuffer,ptr,sampleSize);
-@@ -400,8 +553,8 @@
+@@ -400,8 +553,8 @@ ymbool	CYmMusic::ymDecode(void)
  
  				break;
  
@@ -467,7 +467,7 @@
  /*;
  ; Format du YM-Tracker-1
  ;
-@@ -418,33 +571,55 @@
+@@ -418,33 +571,55 @@ ymbool	CYmMusic::ymDecode(void)
  ; NT Music comment
  ; nb digi *
  */
@@ -537,7 +537,7 @@
  						}
  						if (pDrumTab[i].repLen>pDrumTab[i].size)
  						{
-@@ -453,19 +628,27 @@
+@@ -453,19 +628,27 @@ ymbool	CYmMusic::ymDecode(void)
  
  						if (pDrumTab[i].size)
  						{
@@ -570,7 +570,7 @@
  				{
  					ymTrackerFreqShift = (attrib>>28)&15;
  					attrib &= 0x0fffffff;
-@@ -476,18 +659,33 @@
+@@ -476,18 +659,33 @@ ymbool	CYmMusic::ymDecode(void)
  					pSongType = mstrdup("YM-T1");
  				}
  
@@ -606,7 +606,7 @@
  				return YMFALSE;
  				break;
  		}
-@@ -498,6 +696,25 @@
+@@ -498,6 +696,25 @@ ymbool	CYmMusic::ymDecode(void)
  		}
  
  		return YMTRUE;
@@ -632,7 +632,7 @@
   }
  
   
-@@ -645,12 +862,6 @@
+@@ -645,12 +862,6 @@ ymbool	CYmMusic::loadMemory(void *pBlock
  		return YMTRUE;
   }
  

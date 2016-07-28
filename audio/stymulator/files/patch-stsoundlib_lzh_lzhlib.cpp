@@ -1,6 +1,6 @@
---- ./stsoundlib/lzh/lzhlib.cpp.orig	2010-04-23 13:49:47.000000000 +0200
-+++ ./stsoundlib/lzh/lzhlib.cpp	2010-04-23 13:49:47.000000000 +0200
-@@ -413,10 +413,10 @@
+--- stsoundlib/lzh/lzhlib.cpp.orig	2016-07-26 16:04:42 UTC
++++ stsoundlib/lzh/lzhlib.cpp
+@@ -413,10 +413,10 @@ bool	CLzhDepacker::LzUnpack(void *pSrc,i
  
      decode_start ();
  

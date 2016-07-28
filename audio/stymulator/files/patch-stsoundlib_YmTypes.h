@@ -1,5 +1,5 @@
---- ./stsoundlib/YmTypes.h.orig	2010-04-23 13:49:47.000000000 +0200
-+++ ./stsoundlib/YmTypes.h	2010-04-23 13:49:47.000000000 +0200
+--- stsoundlib/YmTypes.h.orig	2016-07-26 16:04:42 UTC
++++ stsoundlib/YmTypes.h
 @@ -44,45 +44,44 @@
  // These settings are ok for Windows 32bits platform.
  
@@ -71,7 +71,7 @@
  
  #endif
  
-@@ -93,8 +92,8 @@
+@@ -93,8 +92,8 @@ typedef		char		ymchar;			// 8 bits char 
  //-----------------------------------------------------------
  // Multi-platform
  //-----------------------------------------------------------

@@ -1,6 +1,6 @@
---- ./stsoundlib/YmMusic.cpp.orig	2010-04-23 13:49:47.000000000 +0200
-+++ ./stsoundlib/YmMusic.cpp	2010-04-23 13:50:07.000000000 +0200
-@@ -167,12 +167,12 @@
+--- stsoundlib/YmMusic.cpp.orig	2016-07-26 16:04:42 UTC
++++ stsoundlib/YmMusic.cpp
+@@ -167,12 +167,12 @@ ymbool	CYmMusic::isSeekable(void)
  		return getAttrib()&A_TIMECONTROL;
  }
  
@@ -15,7 +15,7 @@
  {
  		return pLastError;
  }
-@@ -364,11 +364,14 @@
+@@ -364,11 +364,14 @@ void	CYmMusic::player(void)
  
  			if (ptr[12])
  			{
@@ -35,7 +35,7 @@
  			}
  		}
  	}
-@@ -612,7 +615,6 @@
+@@ -612,7 +615,6 @@ ymTrackerLine_t *pLine;
  	  	for (i=0;i<nbVoice;i++)
  		{
  			ymint n;
@@ -43,7 +43,7 @@
  			pVoice[i].sampleFreq = ((ymint)pLine->freqHigh<<8) | pLine->freqLow;
  			if (pVoice[i].sampleFreq)
  			{
-@@ -677,7 +679,7 @@
+@@ -677,7 +679,7 @@ double	step;
  #ifdef _LINEAR_OVRS
  			ymint vb = va;
  			if (samplePos < (sampleEnd-(1<<YMTPREC)))

@@ -1,5 +1,5 @@
---- ./stsoundlib/YmMusic.h.orig	2010-04-23 13:49:47.000000000 +0200
-+++ ./stsoundlib/YmMusic.h	2010-04-23 13:50:07.000000000 +0200
+--- stsoundlib/YmMusic.h.orig	2016-07-26 16:04:42 UTC
++++ stsoundlib/YmMusic.h
 @@ -38,8 +38,6 @@
  #include "Ymload.h"
  #include "digidrum.h"
@@ -9,7 +9,7 @@
  #define	YMTPREC		16
  #define	MAX_VOICE	8
  #define	PC_DAC_FREQ	44100
-@@ -143,7 +141,7 @@
+@@ -143,7 +141,7 @@ public:
  	int		getAttrib(void);
  	void	getMusicInfo(ymMusicInfo_t *pInfo);
  	void	setLoopMode(ymbool bLoop);
@@ -18,7 +18,7 @@
  	int		 readYmRegister(ymint reg)		{ return ymChip.readRegister(reg); }
  
  //-------------------------------------------------------------
-@@ -159,7 +157,7 @@
+@@ -159,7 +157,7 @@ private:
  
  	void	setPlayerRate(int rate);
  	void	setAttrib(int _attrib);
@@ -27,7 +27,7 @@
  	ymu8 *depackFile(void);
  	ymbool	deInterleave(void);
  	void	readYm6Effect(ymu8 *pReg,int code,int prediv,int count);
-@@ -168,7 +166,7 @@
+@@ -168,7 +166,7 @@ private:
  
  
  	CYm2149Ex	ymChip;

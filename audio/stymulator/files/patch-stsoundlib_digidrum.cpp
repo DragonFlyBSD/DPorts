@@ -1,5 +1,5 @@
---- ./stsoundlib/digidrum.cpp.orig	2010-04-23 13:49:47.000000000 +0200
-+++ ./stsoundlib/digidrum.cpp	2010-04-23 13:50:07.000000000 +0200
+--- stsoundlib/digidrum.cpp.orig	2016-07-26 16:04:42 UTC
++++ stsoundlib/digidrum.cpp
 @@ -30,6 +30,7 @@
  -----------------------------------------------------------------------------*/
  
@@ -8,7 +8,7 @@
  
  static ymu8	sample00[631]={
  		0xCC,0x84,0xB4,0x70,0x90,0x94,0x70,0x80,0x80,0xAC,
-@@ -2565,7 +2566,7 @@
+@@ -2565,7 +2566,7 @@ static ymu8	sample39[656]={
  		0x80,0x80,0x80,0x80,0x80,0x80,};
  /***********************************************************/
  
@@ -17,7 +17,7 @@
  		sample00,sample01,sample02,sample03,sample04,sample05,sample06,sample07,
  		sample08,sample09,sample10,sample11,sample12,sample13,sample14,sample15,
  		sample16,sample17,sample18,sample19,sample20,sample21,sample22,sample23,
-@@ -2574,7 +2575,7 @@
+@@ -2574,7 +2575,7 @@ ymu8 *sampleAdress[40] = {
  
  /***********************************************************/
  
