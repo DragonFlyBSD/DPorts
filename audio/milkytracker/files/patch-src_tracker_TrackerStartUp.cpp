@@ -1,5 +1,5 @@
---- src/tracker/TrackerStartUp.cpp.orig	2013-11-09 01:12:01.000000000 +0100
-+++ src/tracker/TrackerStartUp.cpp	2016-04-03 21:14:18.976681000 +0200
+--- src/tracker/TrackerStartUp.cpp.orig	2013-11-09 00:12:01 UTC
++++ src/tracker/TrackerStartUp.cpp
 @@ -126,7 +126,7 @@ void Tracker::showSplash()
  		screen->paintSplash(LogoBig::rawData, LogoBig::width, LogoBig::height, LogoBig::width*3, 3, (int)shade); 		
  #endif
