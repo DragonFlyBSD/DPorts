@@ -1,5 +1,5 @@
---- 7z/Portable.h.org	Mon Aug  7 10:54:35 2006
-+++ 7z/Portable.h	Mon Aug  7 10:54:55 2006
+--- 7z/Portable.h.orig	2012-12-08 22:16:47 UTC
++++ 7z/Portable.h
 @@ -2,7 +2,7 @@
  #define __PORTABLE_H
  
