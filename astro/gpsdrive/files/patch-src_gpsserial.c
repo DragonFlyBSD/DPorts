@@ -1,6 +1,6 @@
---- src/gpsserial.c.orig	Thu Feb 12 18:42:53 2004
-+++ src/gpsserial.c	Mon Sep  6 00:44:34 2004
-@@ -178,7 +178,9 @@
+--- src/gpsserial.c.orig	2004-02-12 17:42:53 UTC
++++ src/gpsserial.c
+@@ -178,7 +178,9 @@ readinput_init (void)
    CLOCAL  : local connection, no modem contol
    CREAD   : enable receiving characters
  */

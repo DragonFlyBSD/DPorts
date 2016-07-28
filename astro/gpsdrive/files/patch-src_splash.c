@@ -1,6 +1,6 @@
---- src/splash.c.orig	Mon Jun  7 09:55:30 2004
-+++ src/splash.c	Mon Jun  7 09:56:28 2004
-@@ -529,6 +529,24 @@
+--- src/splash.c.orig	2004-03-02 03:07:17 UTC
++++ src/splash.c
+@@ -529,6 +529,24 @@ insert_text (GtkTextBuffer * buffer)
  {
    GtkTextIter iter;
    GtkTextIter start, end;
@@ -25,7 +25,7 @@
  
    /* demo_find_file() looks in the the current directory first,
     * so you can run gtk-demo without installing GTK, then looks
-@@ -564,19 +582,7 @@
+@@ -564,19 +582,7 @@ insert_text (GtkTextBuffer * buffer)
  					    -1, "blue_foreground", NULL);
  
    gtk_text_buffer_insert (buffer, &iter, "\n", -1);
@@ -45,7 +45,7 @@
    gtk_text_buffer_insert (buffer, &iter, t1, -1);
  
    gtk_text_buffer_insert_with_tags_by_name (buffer, &iter,
-@@ -592,12 +598,6 @@
+@@ -592,12 +598,6 @@ insert_text (GtkTextBuffer * buffer)
  					    -1, "underline", NULL);
    gtk_text_buffer_insert (buffer, &iter, _(" letters in the button text.\n"),
  			  -1);
