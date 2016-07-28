@@ -1,5 +1,5 @@
---- ./include/play_flac.h.orig	2003-10-12 21:14:33.000000000 +0200
-+++ ./include/play_flac.h	2011-03-21 17:21:19.000000000 +0100
+--- include/play_flac.h.orig	2003-10-12 19:14:33 UTC
++++ include/play_flac.h
 @@ -32,7 +32,7 @@
   * Structures
   */
@@ -9,7 +9,7 @@
      char *buffer;
      int buffer_size;
      int channels;
-@@ -45,11 +45,11 @@
+@@ -45,11 +45,11 @@ typedef struct flac_data_s {
   * Prototypes
   */
  void *flac_open( char *filename, sound_format_t *sound_format );

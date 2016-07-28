@@ -1,6 +1,6 @@
---- ./src/display.c.orig	2003-12-07 22:20:41.000000000 +0100
-+++ ./src/display.c	2011-03-21 17:21:19.000000000 +0100
-@@ -179,6 +179,22 @@
+--- src/display.c.orig	2003-12-07 21:20:41 UTC
++++ src/display.c
+@@ -179,6 +179,22 @@ void *display_monitor( void *input_data 
      return (void *)NULL;
  }
  
@@ -23,7 +23,7 @@
  /*
   * Draw the screen,  This takes into account rebuilding all the
   * windows in case of screen resize, or if a window changes size.
-@@ -1567,7 +1583,7 @@
+@@ -1567,7 +1583,7 @@ void draw_info( void ) {
      }
  
      /* Clip filename */

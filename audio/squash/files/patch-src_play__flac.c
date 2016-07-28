@@ -1,5 +1,5 @@
---- ./src/play_flac.c.orig	2003-12-18 18:08:57.000000000 +0100
-+++ ./src/play_flac.c	2011-03-21 17:21:19.000000000 +0100
+--- src/play_flac.c.orig	2003-12-18 17:08:57 UTC
++++ src/play_flac.c
 @@ -24,7 +24,7 @@
  #include "database.h" /* for insert_meta_data */
  #include "play_flac.h"
@@ -9,7 +9,7 @@
      /* errors?  we don't need no stinking errors */
      return;
  }
-@@ -36,47 +36,26 @@
+@@ -36,47 +36,26 @@ void flac_error_callback(const FLAC__Fil
   */
  void *flac_open( char *filename, sound_format_t *sound_format ) {
      flac_data_t *flac_data;
@@ -63,7 +63,7 @@
              break;
      }
  
-@@ -86,7 +65,7 @@
+@@ -86,7 +65,7 @@ void *flac_open( char *filename, sound_f
      flac_data->sample_rate = -1;
      flac_data->duration = -1;
  
@@ -72,7 +72,7 @@
  
      sound_format->rate = flac_data->sample_rate;
      sound_format->channels = flac_data->channels;
-@@ -97,12 +76,12 @@
+@@ -97,12 +76,12 @@ void *flac_open( char *filename, sound_f
      return (void *)flac_data;
  }
  
@@ -87,7 +87,7 @@
      FLAC__StreamMetadata_VorbisComment comment = metadata->data.vorbis_comment;
      int i;
      char *start, *end, *key, *value;
-@@ -128,7 +107,7 @@
+@@ -128,7 +107,7 @@ void flac_metadata_callback_load_meta( c
      }
  }
  
@@ -96,7 +96,7 @@
      flac_data_t *flac_data = (flac_data_t *)client_data;
      int i, j, k;
  
-@@ -158,7 +137,7 @@
+@@ -158,7 +137,7 @@ FLAC__StreamDecoderWriteStatus flac_writ
      return FLAC__STREAM_DECODER_WRITE_STATUS_CONTINUE;
  }
  
@@ -105,7 +105,7 @@
      flac_data_t *flac_data = (flac_data_t *)client_data;
  
      if( metadata->type != FLAC__METADATA_TYPE_STREAMINFO ) {
-@@ -172,47 +151,29 @@
+@@ -172,47 +151,29 @@ void flac_metadata_callback_decode_frame
  }
  
  void flac_load_meta( void *data, char *filename ) {
@@ -164,7 +164,7 @@
  
      return;
  }
-@@ -223,29 +184,27 @@
+@@ -223,29 +184,27 @@ void flac_load_meta( void *data, char *f
  frame_data_t flac_decode_frame( void *data ) {
      flac_data_t *flac_data = (flac_data_t *)data;
      frame_data_t frame_data;
@@ -205,7 +205,7 @@
              break;
      }
  
-@@ -267,7 +226,7 @@
+@@ -267,7 +226,7 @@ long flac_calc_duration( void *data ) {
  void flac_seek( void *data, long seek_time, long duration ) {
      flac_data_t *flac_data = (flac_data_t *)data;
  
@@ -214,7 +214,7 @@
      return;
  }
  
-@@ -277,9 +236,9 @@
+@@ -277,9 +236,9 @@ void flac_seek( void *data, long seek_ti
  void flac_close( void *data ) {
      flac_data_t *flac_data = (flac_data_t *)data;
  

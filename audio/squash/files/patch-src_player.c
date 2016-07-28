@@ -1,6 +1,6 @@
---- ./src/player.c.orig	2003-12-18 22:53:12.000000000 +0100
-+++ ./src/player.c	2011-03-21 17:21:19.000000000 +0100
-@@ -118,6 +118,7 @@
+--- src/player.c.orig	2003-12-18 21:53:12 UTC
++++ src/player.c
+@@ -118,6 +118,7 @@ void *player( void *input_data ) {
      char *full_filename;
      long start_position;
  
