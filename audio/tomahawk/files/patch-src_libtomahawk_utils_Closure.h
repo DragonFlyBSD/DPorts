@@ -1,4 +1,4 @@
---- src/libtomahawk/utils/Closure.h.orig	2014-11-20 00:17:56 UTC
+--- src/libtomahawk/utils/Closure.h.orig	2015-04-15 04:41:40 UTC
 +++ src/libtomahawk/utils/Closure.h
 @@ -40,6 +40,10 @@ using std::tr1::function;
  #include <boost/noncopyable.hpp>
