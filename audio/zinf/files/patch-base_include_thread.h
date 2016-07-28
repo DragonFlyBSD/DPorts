@@ -1,6 +1,6 @@
---- base/include/thread.h.orig	Thu Feb  6 02:52:49 2003
-+++ base/include/thread.h	Mon Aug 18 17:33:09 2003
-@@ -26,7 +26,10 @@
+--- base/include/thread.h.orig	2003-09-16 17:34:53 UTC
++++ base/include/thread.h
+@@ -26,7 +26,10 @@ ________________________________________
  
  #include "config.h"
  

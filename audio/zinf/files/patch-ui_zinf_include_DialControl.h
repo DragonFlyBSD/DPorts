@@ -1,6 +1,6 @@
---- ui/zinf/include/DialControl.h.orig	Wed Sep 17 02:35:32 2003
-+++ ui/zinf/include/DialControl.h	Mon Feb 16 12:46:03 2004
-@@ -24,7 +24,9 @@
+--- ui/zinf/include/DialControl.h.orig	2003-09-16 17:35:32 UTC
++++ ui/zinf/include/DialControl.h
+@@ -24,7 +24,9 @@ ________________________________________
  #ifndef INCLUDED_DIALCONTROL_H__
  #define INCLUDED_DIALCONTROL_H__
  

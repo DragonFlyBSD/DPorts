@@ -1,6 +1,6 @@
---- base/src/utility.cpp.orig	Sun May 11 15:45:31 2003
-+++ base/src/utility.cpp	Mon Aug 18 18:57:01 2003
-@@ -52,7 +52,7 @@
+--- base/src/utility.cpp.orig	2004-02-10 18:20:22 UTC
++++ base/src/utility.cpp
+@@ -56,7 +56,7 @@ using namespace std;
  #include "win32impl.h"
  #include "browser.h"
  #include <unistd.h>
@@ -9,7 +9,7 @@
  #define MKDIR(z) mkdir(z, 0755)
  #define _stat stat
  #ifndef _S_IFDIR
-@@ -764,13 +764,13 @@
+@@ -825,13 +825,13 @@ SplitPath(const string& path)
  
          if (subpath.size()) {
  #ifndef WIN32

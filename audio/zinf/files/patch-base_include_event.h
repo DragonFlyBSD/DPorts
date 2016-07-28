@@ -1,6 +1,6 @@
---- base/include/event.h.orig	Wed Sep 17 02:34:53 2003
-+++ base/include/event.h	Mon Feb 16 12:15:13 2004
-@@ -24,7 +24,10 @@
+--- base/include/event.h.orig	2003-09-16 17:34:53 UTC
++++ base/include/event.h
+@@ -24,7 +24,10 @@ ________________________________________
  #ifndef INCLUDED_EVENT_H_
  #define INCLUDED_EVENT_H_
  

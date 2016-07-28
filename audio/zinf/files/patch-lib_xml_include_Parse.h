@@ -1,6 +1,6 @@
---- lib/xml/include/Parse.h.orig	Thu Feb 13 20:47:58 2003
-+++ lib/xml/include/Parse.h	Mon Aug 18 17:37:07 2003
-@@ -31,7 +31,10 @@
+--- lib/xml/include/Parse.h.orig	2003-09-16 17:35:11 UTC
++++ lib/xml/include/Parse.h
+@@ -31,7 +31,10 @@ ________________________________________
  #pragma warning(disable:4786)
  #endif
  

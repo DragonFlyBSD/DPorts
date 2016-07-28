@@ -1,6 +1,6 @@
---- base/src/registrar.cpp.orig	Sat Mar 15 10:01:46 2003
-+++ base/src/registrar.cpp	Mon Aug 18 18:54:16 2003
-@@ -28,7 +28,7 @@
+--- base/src/registrar.cpp.orig	2003-09-16 17:34:54 UTC
++++ base/src/registrar.cpp
+@@ -35,7 +35,7 @@ ________________________________________
  #include <stdlib.h>
  #include <unistd.h>
  #include <set>
@@ -9,7 +9,7 @@
  #endif // WIN32
  
  #include <stdio.h>
-@@ -79,13 +79,13 @@
+@@ -86,13 +86,13 @@ InitializeRegistry(Registry* registry, P
          dir = *di++;
  
  #ifndef WIN32

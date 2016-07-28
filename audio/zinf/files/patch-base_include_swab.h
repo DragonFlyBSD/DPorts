@@ -1,5 +1,5 @@
---- base/include/swab.h.orig	Tue Mar 18 03:53:31 2003
-+++ base/include/swab.h	Mon Aug 18 17:33:34 2003
+--- base/include/swab.h.orig	2003-09-16 17:34:53 UTC
++++ base/include/swab.h
 @@ -1,7 +1,10 @@
  #if !defined(_ZINF_SWAB_H)
  #define _ZINF_SWAB_H

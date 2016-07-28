@@ -1,5 +1,5 @@
---- ui/zinf/src/ThemeZip.cpp.orig	Wed Sep 17 02:36:22 2003
-+++ ui/zinf/src/ThemeZip.cpp	Mon Feb 16 13:39:03 2004
+--- ui/zinf/src/ThemeZip.cpp.orig	2003-09-16 17:36:22 UTC
++++ ui/zinf/src/ThemeZip.cpp
 @@ -21,11 +21,12 @@
     $Id: ThemeZip.cpp,v 1.8 2003/09/16 17:36:22 kgk Exp $
  ____________________________________________________________________________*/ 

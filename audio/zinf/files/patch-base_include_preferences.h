@@ -1,6 +1,6 @@
---- base/include/preferences.h.orig	Sat Mar 15 10:01:45 2003
-+++ base/include/preferences.h	Mon Aug 18 17:32:11 2003
-@@ -26,7 +26,10 @@
+--- base/include/preferences.h.orig	2003-09-16 17:34:53 UTC
++++ base/include/preferences.h
+@@ -26,7 +26,10 @@ ________________________________________
  
  #include <string>
  #include <vector>
