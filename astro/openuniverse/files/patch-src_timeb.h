@@ -1,6 +1,5 @@
-diff -ruN src/timeb.h.orig src/timeb.h
---- src/timeb.h.orig	Thu Jan  1 00:00:00 1970
-+++ src/timeb.h	Sat Jun 10 07:37:45 2000
+--- src/timeb.h.orig	2016-07-26 13:11:57 UTC
++++ src/timeb.h
 @@ -0,0 +1,46 @@
 +/* Copyright (C) 1994, 1995, 1996 Free Software Foundation, Inc.
 +   This file is part of the GNU C Library.

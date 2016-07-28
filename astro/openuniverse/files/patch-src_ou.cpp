@@ -1,6 +1,5 @@
-diff -ruN src/ou.cpp.orig src/ou.cpp
---- src/ou.cpp.orig	Sun Jun  4 21:29:29 2000
-+++ src/ou.cpp	Sat Jun 10 07:37:23 2000
+--- src/ou.cpp.orig	2000-06-04 21:29:29 UTC
++++ src/ou.cpp
 @@ -22,7 +22,7 @@
  #include <string.h>
  #include <math.h>
