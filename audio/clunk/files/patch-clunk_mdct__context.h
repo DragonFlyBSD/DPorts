@@ -1,6 +1,6 @@
---- clunk/mdct_context.h.orig	2014-09-29 10:48:48.000000000 +0400
-+++ clunk/mdct_context.h	2015-01-23 14:14:23.000000000 +0300
-@@ -61,7 +61,7 @@
+--- clunk/mdct_context.h.orig	2014-09-29 06:48:48 UTC
++++ clunk/mdct_context.h
+@@ -61,7 +61,7 @@ public:
  
  	T data[N];
  
