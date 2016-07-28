@@ -1,4 +1,4 @@
---- src/nnet/neural_parse.yy.orig
+--- src/nnet/neural_parse.yy.orig	2004-02-15 18:19:09 UTC
 +++ src/nnet/neural_parse.yy
 @@ -104,7 +104,7 @@ make_tree (TTypedValue val = TTypedValue
  /*                    SYMBOLS                        */
@@ -17,4 +17,4 @@
 +	shriek (812, fmt ("BISON:yyerror:bison_nnet parser: bison_row %i (not counting empty rows) '%s' is erroneous. %s\n", row_num, bison_row_buf.c_str(), s));
  	return -1;
  }
-
+  
