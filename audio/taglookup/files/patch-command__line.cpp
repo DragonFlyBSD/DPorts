@@ -1,6 +1,6 @@
---- ./command_line.cpp.orig	2007-10-01 21:09:46.000000000 +0200
-+++ ./command_line.cpp	2014-04-07 10:14:49.462722923 +0200
-@@ -105,7 +105,7 @@
+--- command_line.cpp.orig	2007-10-01 19:09:46 UTC
++++ command_line.cpp
+@@ -105,7 +105,7 @@ namespace TagLookup
      
      bool CommandLineArgumentsParser::parsePort()
      {
