@@ -1,5 +1,5 @@
---- src/lha.h.orig	Sun Sep 21 15:58:52 2003
-+++ src/lha.h	Thu Sep 23 07:10:33 2004
+--- src/lha.h.orig	2006-10-10 16:27:51 UTC
++++ src/lha.h
 @@ -16,6 +16,7 @@
  #endif
  
