@@ -1,6 +1,6 @@
---- src/modules/Covers.py.orig	2014-10-07 12:26:08 UTC
+--- src/modules/Covers.py.orig	2011-09-19 10:09:25 UTC
 +++ src/modules/Covers.py
-@@ -124,7 +124,7 @@
+@@ -124,7 +124,7 @@ class Covers(modules.ThreadedModule):
  
      def generateFullSizeCover(self, inFile, outFile, format):
          """ Resize inFile if needed, and write it to outFile (outFile and inFile may be equal) """
@@ -9,7 +9,7 @@
  
          try:
              # Open the image
-@@ -144,7 +144,7 @@
+@@ -144,7 +144,7 @@ class Covers(modules.ThreadedModule):
  
      def generateThumbnail(self, inFile, outFile, format):
          """ Generate a thumbnail from inFile (e.g., resize it) and write it to outFile (outFile and inFile may be equal) """
