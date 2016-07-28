@@ -1,4 +1,4 @@
---- lib-src/soundtouch/source/SoundTouch/Makefile.am.orig	2015-07-11 10:02:22 UTC
+--- lib-src/soundtouch/source/SoundTouch/Makefile.am.orig	2016-07-26 13:34:06 UTC
 +++ lib-src/soundtouch/source/SoundTouch/Makefile.am
 @@ -32,7 +32,7 @@ libSoundTouch_la_SOURCES=AAFilter.cpp FI
  
