@@ -1,6 +1,6 @@
---- lib/L3.h.orig	Sat Oct 27 23:05:42 2001
-+++ lib/L3.h	Mon Aug 18 20:18:00 2003
-@@ -39,6 +39,16 @@
+--- lib/L3.h.orig	2001-10-27 14:05:42 UTC
++++ lib/L3.h
+@@ -39,6 +39,16 @@ ________________________________________
  #define GLOBAL_GAIN_SCALE (4*15)
  /* #define GLOBAL_GAIN_SCALE 0 */
  
@@ -17,12 +17,12 @@
  #ifdef i386
  #define L_ENDIAN 1
  #endif
-@@ -53,6 +63,8 @@
- 
- #ifdef sparc
+@@ -55,6 +65,8 @@ ________________________________________
  #define L_ENDIAN 0
-+#endif
-+
  #endif
  
++#endif
++
  #ifndef L_ENDIAN
+ #error Layer III L_ENDIAN must be defined 0 or 1
+ #endif
