@@ -1,6 +1,6 @@
---- ui/gtk/gtk2_ui.cpp.orig	Mon Sep 20 14:04:50 2004
-+++ ui/gtk/gtk2_ui.cpp	Tue Sep 21 22:54:39 2004
-@@ -279,7 +279,7 @@
+--- ui/gtk/gtk2_ui.cpp.orig	2004-09-30 04:07:54 UTC
++++ ui/gtk/gtk2_ui.cpp
+@@ -285,7 +285,7 @@ gtk2_ui::gtk_interface()
  Info               chosen;
  Info               chosen2;
    
