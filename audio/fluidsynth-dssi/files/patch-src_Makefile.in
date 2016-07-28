@@ -1,6 +1,6 @@
---- src/Makefile.in.orig	Tue Jan 23 21:35:02 2007
-+++ src/Makefile.in	Tue Jan 23 21:35:52 2007
-@@ -697,12 +697,12 @@
+--- src/Makefile.in.orig	2009-01-04 23:43:52 UTC
++++ src/Makefile.in
+@@ -605,12 +605,12 @@ uninstall-am: uninstall-pluginLTLIBRARIE
  
  # create symlinks for the plugin to jack-dssi-host
  install-exec-hook:
