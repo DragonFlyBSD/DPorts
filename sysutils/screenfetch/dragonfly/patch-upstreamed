@@ -1,0 +1,82 @@
+From: Robin Hahling <robin.hahling@gw-computing.net>
+Subject: [PATCH 1/6] Add support for packages count for DragonFly BSD
+Subject: [PATCH 2/6] Use sysctl call to compute uptime for DragonFly BSD
+Subject: [PATCH 3/6] Detect shell on DragonFly BSD
+Subject: [PATCH 4/6] Fix memory detection for DragonFly BSD
+Subject: [PATCH 5/6] Fix GPU detection for DragonFly BSD
+Subject: [PATCH 6/6] Fix CPU detection for DragonFly BSD
+
+--- screenfetch-dev.orig	2015-07-14 15:32:02.000000000 +0300
++++ screenfetch-dev
+@@ -190,7 +190,7 @@ detectColors() {
+ }
+ 
+ supported_distros="Antergos, Arch Linux (Old and Current Logos), BLAG, CentOS, Chakra, Chapeau, CrunchBang, CRUX, Debian, Deepin, Dragora, elementary OS, Evolve OS, Fedora, Frugalware, Fuduntu, Funtoo, Gentoo, gNewSense, Jiyuu Linux, Kali Linux, KaOS, Korora, LinuxDeepin, Linux Mint, LMDE, Logos, Mageia, Mandriva/Mandrake, Manjaro, NixOS, openSUSE, Parabola GNU/Linux-libre, PeppermintOS, Raspbian, Red Hat Enterprise Linux, Sabayon, Scientific Linux, Slackware, Solus, TinyCore, Trisquel, Ubuntu, Viperr and Void."
+-supported_other="Dragonfly/Free/Open/Net BSD, Haiku, Mac OS X and Windows+Cygwin."
++supported_other="DragonFly/Free/Open/Net BSD, Haiku, Mac OS X and Windows+Cygwin."
+ supported_dms="KDE, Gnome, Unity, Xfce, LXDE, Cinnamon, MATE, CDE and RazorQt."
+ supported_wms="2bwm, 9wm, Awesome, Beryl, Blackbox, Cinnamon, Compiz, dminiwm, dwm, dtwm, E16, E17, echinus, Emerald, FluxBox, FVWM, herbstluftwm, IceWM, KWin, Metacity, monsterwm, Musca, Gala, Mutter, Muffin, Notion, OpenBox, PekWM, Ratpoison, Sawfish, ScrotWM, SpectrWM, StumpWM, subtle, WindowMaker, WMFS, wmii, Xfwm4, XMonad and i3."
+ 
+@@ -796,7 +796,7 @@ detectkernel () {
+ # Uptime Detection - Begin
+ detectuptime () {
+ 	unset uptime
+-	if [[ "${distro}" == "Mac OS X" || "${distro}" == "FreeBSD" ]]; then
++	if [[ "${distro}" == "Mac OS X" || "${distro}" == "FreeBSD" || "${distro}" == "DragonFlyBSD" ]]; then
+ 		boot=$(sysctl -n kern.boottime | cut -d "=" -f 2 | cut -d "," -f 1)
+ 		now=$(date +%s)
+ 		uptime=$(($now-$boot))
+@@ -873,7 +873,7 @@ detectpkgs () {
+ 				pkgs=$((${pkgs} + ${ports}))
+ 			fi
+ 		;;
+-		'FreeBSD')
++		'FreeBSD'|'DragonFlyBSD')
+ 			pkgs=$(if TMPDIR=/dev/null ASSUME_ALWAYS_YES=1 PACKAGESITE=file:///nonexistent pkg info pkg >/dev/null 2>&1; then 
+ 				pkg info | wc -l | awk '{print $1}'; else pkg_info | wc -l | awk '{sub(" ", "");print $1}'; fi)
+ 		;;
+@@ -914,7 +914,7 @@ detectcpu () {
+ 		else
+ 			cpu="Unknown"
+ 		fi
+-	elif [[ "$distro" == "FreeBSD" || "$distro" == "DragonflyBSD" ]]; then
++	elif [[ "$distro" == "FreeBSD" || "$distro" == "DragonFlyBSD" ]]; then
+ 		cpu=$(sysctl -n hw.model)
+ 	elif [ "$distro" == "OpenBSD" ]; then
+ 		cpu=$(sysctl -n hw.model | sed 's/@.*//')
+@@ -977,7 +977,7 @@ detectcpu () {
+ 
+ # GPU Detection - Begin (EXPERIMENTAL!)
+ detectgpu () {
+-	if [[ "${distro}" == "FreeBSD" ]]; then
++	if [[ "${distro}" == "FreeBSD" || "${distro}" == "DragonFlyBSD" ]]; then
+ 		gpu_info=$(pciconf -lv 2> /dev/null | grep -B 4 VGA)
+ 		gpu_info=$(grep -E 'device.*=.*' <<< "${gpu_info}")
+ 		gpu="${gpu_info##*device*= }"
+@@ -1064,7 +1064,7 @@ detectmem () {
+ 		free_mem=$(awk '/MemFree/ { print $2 }' /proc/meminfo)
+ 		used_mem=$((${total_mem} - ${free_mem}))
+ 		usedmem=$((${used_mem} / $human))
+-	elif [ "$distro" == "FreeBSD" ]; then
++	elif [ "$distro" == "FreeBSD" -o "$distro" == "DragonFlyBSD" ]; then
+ 		phys_mem=$(sysctl -n hw.physmem)
+ 		size_mem=$phys_mem
+ 		size_chip=1
+@@ -1169,7 +1169,7 @@ detectshell () {
+ 		else
+ 			if [[ "${OSTYPE}" == "linux-gnu" || "${OSTYPE}" == "linux" ]]; then
+ 				shell_type=$(ps -p $PPID -o cmd --no-heading)
+-			elif [[ "${distro}" == "Mac OS X" || "${distro}" == "FreeBSD" || "${distro}" == "OpenBSD" ]]; then
++			elif [[ "${distro}" == "Mac OS X" || "${distro}" == "DragonFlyBSD" || "${distro}" == "FreeBSD" || "${distro}" == "OpenBSD" ]]; then
+ 				shell_type=$(ps -p $PPID -o args | tail -1)
+ 			else
+ 				shell_type=$(ps -p $(ps -p $PPID | awk '$1 !~ /PID/ {print $1}') | awk 'FNR>1 {print $1}')
+@@ -3905,7 +3905,7 @@ infoDisplay () {
+ 	case ${myascii} in
+ 		"Arch Linux - Old"|"Fedora"|"Korora"|"Chapeau"|"Mandriva"|"Mandrake"|"Chakra"|"ChromeOS"|"Sabayon"|"Slackware"|"Mac OS X"|"Trisquel"|"Kali Linux"|"Jiyuu Linux"|"Antergos"|"KaOS"|"Logos"|"gNewSense"|"NixOS") labelcolor=$(getColor 'light blue');;
+ 		"Arch Linux"|"Frugalware"|"Mageia"|"Deepin"|"CRUX") labelcolor=$(getColor 'light cyan');;
+-		"Mint"|"LMDE"|"openSUSE"|"LinuxDeepin"|"DragonflyBSD"|"Manjaro"|"Manjaro-tree"|"Android"|"Void") labelcolor=$(getColor 'light green');;
++		"Mint"|"LMDE"|"openSUSE"|"LinuxDeepin"|"DragonFlyBSD"|"Manjaro"|"Manjaro-tree"|"Android"|"Void") labelcolor=$(getColor 'light green');;
+ 		"Ubuntu"|"FreeBSD"|"FreeBSD - Old"|"Debian"|"Raspbian"|"BSD"|"Red Hat Enterprise Linux"|"Peppermint"|"Cygwin"|"Fuduntu"|"NetBSD"|"Scientific Linux"|"DragonFlyBSD"|"BackTrack Linux") labelcolor=$(getColor 'light red');;
+ 		"CrunchBang"|"Solus"|"Viperr"|"elementary"*) labelcolor=$(getColor 'dark grey');;
+ 		"Gentoo"|"Parabola GNU/Linux-libre"|"Funtoo"|"Funtoo-text"|"BLAG") labelcolor=$(getColor 'light purple');;
