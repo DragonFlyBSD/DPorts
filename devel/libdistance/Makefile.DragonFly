@@ -1,0 +1,5 @@
+
+# zrj: just add symlinks for _p.a libs
+post-install:
+	(cd ${STAGEDIR}${PREFIX}/lib && ${LN} -s libdistance.a libdistance_p.a)
+	(cd ${STAGEDIR}${PREFIX}/lib && ${LN} -s libdistance_wrap.a libdistance_wrap_p.a)
