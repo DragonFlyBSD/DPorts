@@ -1,4 +1,4 @@
---- extern/Eigen3/Eigen/src/Core/util/Memory.h.orig	2015-06-24 08:15:43.000000000 +0300
+--- extern/Eigen3/Eigen/src/Core/util/Memory.h.orig	2016-03-23 10:49:43.000000000 +0200
 +++ extern/Eigen3/Eigen/src/Core/util/Memory.h
 @@ -56,6 +56,10 @@
    #define EIGEN_MALLOC_ALREADY_ALIGNED 0

@@ -1,5 +1,5 @@
---- extern/libmv/libmv/numeric/numeric.h.orig	2015-06-24 08:07:34.000000000 +0300
-+++ extern/libmv/libmv/numeric/numeric.h
+--- intern/libmv/libmv/numeric/numeric.h.orig	2016-03-23 10:49:49.000000000 +0200
++++ intern/libmv/libmv/numeric/numeric.h
 @@ -35,7 +35,7 @@
  
  #if !defined(__MINGW64__)

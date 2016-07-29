@@ -1,5 +1,5 @@
---- extern/libmv/libmv/base/aligned_malloc.cc.orig	2015-06-24 08:15:43.000000000 +0300
-+++ extern/libmv/libmv/base/aligned_malloc.cc
+--- intern/libmv/libmv/base/aligned_malloc.cc.orig	2016-03-23 10:49:49.000000000 +0200
++++ intern/libmv/libmv/base/aligned_malloc.cc
 @@ -21,7 +21,7 @@
  #include "libmv/base/aligned_malloc.h"
  #include "libmv/logging/logging.h"
