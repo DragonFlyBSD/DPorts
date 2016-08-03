@@ -1,0 +1,12 @@
+--- src/Makevars.orig	2015-08-03 21:49:59.000000000 +0300
++++ src/Makevars
+@@ -13,6 +13,9 @@ endif
+ ifeq ($(UNAME), FreeBSD)
+ PKG_LIBS += -lkvm
+ endif
++ifeq ($(UNAME), DragonFly)
++PKG_LIBS += -lkvm
++endif
+ 
+ PKG_CPPFLAGS = -I./libuv/include -I./http-parser -I./sha1 -I./base64
+ 
