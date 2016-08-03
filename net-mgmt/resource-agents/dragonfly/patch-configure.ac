@@ -1,0 +1,20 @@
+--- configure.ac.orig	2016-02-03 12:57:55.000000000 +0200
++++ configure.ac
+@@ -356,7 +356,7 @@ REBOOT_OPTIONS="-f"
+ POWEROFF_OPTIONS="-f"
+ 
+ case "$host_os" in
+-*bsd*)		LIBS="-L/usr/local/lib"
++*bsd*|*dragonfly*)		LIBS="-L/usr/local/lib"
+ 		CPPFLAGS="$CPPFLAGS -I/usr/local/include"
+ 		;;
+ *solaris*)
+@@ -808,7 +808,7 @@ dnl In lib/ais/Makefile.am there's a gcc
+ dnl System specific options
+ 
+ 	case "$host_os" in
+-  	*linux*|*bsd*)
++  	*linux*|*bsd*|*dragonfly*)
+ 		if test "${enable_fatal_warnings}" = "unknown"; then
+         		enable_fatal_warnings=yes
+         	fi

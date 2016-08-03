@@ -1,0 +1,11 @@
+--- heartbeat/IPsrcaddr.intermediate	2016-08-02 09:53:51 UTC
++++ heartbeat/IPsrcaddr
+@@ -342,7 +342,7 @@ ip_status() {
+ 
+   BASEIP="$1"
+   case "$SYSTYPE" in
+-    Darwin)
++    Darwin|DragonFly)
+ 	# Treat Darwin the same as the other BSD variants (matched as *BSD)
+ 	SYSTYPE="${SYSTYPE}BSD"
+ 	;;
