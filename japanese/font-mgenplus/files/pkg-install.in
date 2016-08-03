@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/japanese/font-mgenplus/files/pkg-install.in 418946 2016-07-23 06:33:10Z ume $
+# $FreeBSD: head/japanese/font-mgenplus/files/pkg-install.in 419176 2016-07-27 14:59:15Z ume $
 
 catfontsdir()
 {
@@ -27,6 +27,8 @@ make_xlfd()
 	_fname=$4
 	_poc=$5
 	_weight=$6
+
+	[ -r ${_file} ] || return
 
 	case "${_poc}:${_enc}" in
 	p:jisx0201.1976-*)	PFIX="bw=0.5" ;;
