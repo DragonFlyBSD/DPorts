@@ -1,6 +1,6 @@
---- IMB_declare.h.orig	Sun Nov 19 13:48:20 2006
-+++ IMB_declare.h	Sun Nov 19 13:48:36 2006
-@@ -69,7 +69,6 @@
+--- IMB_declare.h.orig	2016-07-27 14:58:51 UTC
++++ IMB_declare.h
+@@ -69,7 +69,6 @@ For more documentation than found here, 
  #include <stdio.h>
  #include <stdlib.h>
  #include <string.h>
