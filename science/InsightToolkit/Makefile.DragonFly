@@ -1,0 +1,16 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(defined( __FreeBSD__ )\)@(\1||defined(__DragonFly__))@g'	\
+			 -e 's@\(defined(__FreeBSD__)\)@(\1||defined(__DragonFly__))@g'		\
+		${WRKSRC}/Modules/Core/Common/src/itkMemoryUsageObserver.cxx			\
+		${WRKSRC}/Modules/Core/Common/include/itkMemoryUsageObserver.h			\
+		${WRKSRC}/Modules/Core/TestKernel/src/itkTestDriver.cxx				\
+		${WRKSRC}/Modules/ThirdParty/KWSys/src/KWSys/ProcessUNIX.c			\
+		${WRKSRC}/Modules/ThirdParty/GDCM/src/gdcm/Utilities/socketxx/socket++/local.h	\
+		${WRKSRC}/Modules/ThirdParty/GDCM/src/gdcm/Utilities/socketxx/socket++/sig.cpp	\
+		${WRKSRC}/Modules/ThirdParty/GDCM/src/gdcm/Utilities/socketxx/socket++/sockinet.cpp	\
+		${WRKSRC}/Modules/ThirdParty/GDCM/src/gdcm/Utilities/socketxx/socket++/sockstream.cpp	\
+		${WRKSRC}/Modules/ThirdParty/GDCM/src/gdcm/Utilities/socketxx/socket++/sockstream.h	\
+		${WRKSRC}/Modules/ThirdParty/GDCM/src/gdcm/Source/MediaStorageAndFileFormat/gdcmFileStreamer.cxx
+	${REINPLACE_CMD} -e 's@ifdef \(__FreeBSD__\)@if (defined(\1)||defined(__DragonFly__))@g'	\
+		${WRKSRC}/Modules/ThirdParty/VNL/src/vxl/v3p/netlib/libf2c/sysdep1.h0
