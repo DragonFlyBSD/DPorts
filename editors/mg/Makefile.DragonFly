@@ -1,0 +1,9 @@
+USES+= ncurses
+
+CFLAGS+= -DMAXNAMLEN=255
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g'	\
+			 -e 's@curses@ncurses@g'	\
+		${WRKSRC}/GNUmakefile			\
+		${WRKSRC}/Makefile
