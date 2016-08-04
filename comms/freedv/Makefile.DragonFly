@@ -1,0 +1,3 @@
+
+# zrj: libsox.a comes compiled with -fopenmp, it would not hurt to link with omp
+LDFLAGS+= -fopenmp
