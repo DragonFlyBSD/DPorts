@@ -16,7 +16,6 @@ USE_XORG=	x11 xcb xcursor
 USE_GL=		egl gbm
 
 LIB_DEPENDS=	libxkbcommon.so:x11/libxkbcommon		\
-		libexecinfo.so:devel/libexecinfo		\
 		libpixman-1.so:x11/pixman			\
 		libcairo.so:graphics/cairo			\
 		libcolord.so:graphics/colord			\
