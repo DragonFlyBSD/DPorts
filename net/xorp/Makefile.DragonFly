@@ -1,0 +1,3 @@
+USES+= alias ssl
+
+LDFLAGS+= -lcrypto

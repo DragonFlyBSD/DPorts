@@ -1,0 +1,30 @@
+--- SConstruct.intermediate	2016-08-02 17:45:02 UTC
++++ SConstruct
+@@ -594,6 +594,10 @@ if not env.GetOption('clean') and \
+         conf.Define('HOST_OS_LINUX')
+         conf.Define('HAVE_PROC_LINUX')
+         conf.Define('ENABLE_ADVANCED_MULTICAST_API')
++    elif fnmatch.fnmatch(host_os, 'dragonfly*'):
++	osname = "DragonFly"
++	conf.Define('HOST_OS_DRAGONFLYBSD')
++        conf.Define('ENABLE_ADVANCED_MULTICAST_API')
+     elif fnmatch.fnmatch(host_os, 'netbsd*'):
+ 	osname = "NetBSD"
+ 	conf.Define('HOST_OS_NETBSD')
+@@ -872,6 +876,7 @@ env.AppendUnique(CFLAGS = [
+     '-Wstrict-prototypes',
+     '-Wnested-externs',
+     '-Wno-unused-function',
++    '-Wno-maybe-uninitialized',
+     '-pipe',
+     ])
+ 
+@@ -883,7 +888,7 @@ env.AppendUnique(CXXFLAGS = [
+     '-Wpointer-arith',
+     '-Wcast-align',
+     '-Woverloaded-virtual',
+-    '-ftemplate-depth-25',
++    '-Wno-cast-qual',
+     '-pipe',
+     ])
+ 
