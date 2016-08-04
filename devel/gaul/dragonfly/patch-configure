@@ -1,0 +1,17 @@
+--- configure.orig	2005-04-20 19:09:35.000000000 +0300
++++ configure
+@@ -25786,10 +25786,14 @@ _EOF_
+ 
+     cat >> $tmpfile << _EOF_
+ 
++#ifdef __DragonFly__
++#include <errno.h>
++#else
+ #ifndef errno
+ /* Some sytems #define this! */
+ extern int errno;
+ #endif
++#endif
+ 
+ _EOF_
+ 
