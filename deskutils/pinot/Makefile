@@ -33,7 +33,6 @@ RUN_DEPENDS=	update-mime-database:misc/shared-mime-info	\
 		xdg-open:devel/xdg-utils			\
 		pdftotext:graphics/poppler-utils	\
 		catppt:textproc/catdoc			\
-		unzip:archivers/unzip			\
 		unrtf:textproc/unrtf			\
 		catdvi:print/catdvi				\
 		bash:shells/bash
