@@ -1,0 +1,14 @@
+--- host/libhackrf/CMakeLists.txt.intermediate	2016-08-03 13:50:20 UTC
++++ host/libhackrf/CMakeLists.txt
+@@ -72,9 +72,9 @@ set(libdir \${exec_prefix}/lib${LIB_SUFF
+ set(includedir \${prefix}/include)
+ set(libpkgdata "lib"${LIB_SUFFIX})
+ 
+-if(CMAKE_SYSTEM_NAME MATCHES "FreeBSD")
++if(CMAKE_SYSTEM_NAME MATCHES "FreeBSD|DragonFly")
+     set(libpkgdata "libdata")
+-endif(CMAKE_SYSTEM_NAME MATCHES "FreeBSD")
++endif(CMAKE_SYSTEM_NAME MATCHES "FreeBSD|DragonFly")
+ 
+ CONFIGURE_FILE(
+     ${CMAKE_CURRENT_SOURCE_DIR}/libhackrf.pc.in
