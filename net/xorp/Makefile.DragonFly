@@ -1,3 +1,4 @@
-USES+= alias ssl
+# don't use alias, conflicsts in libpcap headers
+USES+= ssl
 
 LDFLAGS+= -lcrypto
