@@ -1,0 +1,18 @@
+# /usr/libexec/binutils225/elf/ld.gold: error: ClientLogic.o: file is empty
+MAKE_JOBS_UNSAFE=yes
+
+# no sctp here
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NSCTP}
+OPTIONS_EXCLUDE+=	SCTP
+
+# zrj: keep as sed patches, we might need to switch back to configure
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(x\*BSD\))@\1|xDragonFly)@g'	\
+		${WRKSRC}/configure.ac
+	${REINPLACE_CMD} -e 's@defined[ ]*(\(__FreeBSD__\))@(defined(\1)||defined(__DragonFly__))@g'	\
+		${WRKSRC}/configure.ac			\
+		${WRKSRC}/modules/client/alsachan.cpp	\
+		${WRKSRC}/modules/client/osschan.cpp	\
+		${WRKSRC}/modules/server/cpuload.cpp	\
+		${WRKSRC}/engine/Mutex.cpp		\
+		${WRKSRC}/yateclass.h
