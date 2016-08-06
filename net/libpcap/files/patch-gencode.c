@@ -1,6 +1,4 @@
-Ehem. So... nobody tested w/o IPV6? No?
-
---- gencode.c.orig	2016-07-30 16:42:44.000000000 +0300
+--- gencode.c.orig	2016-07-30 13:42:44 UTC
 +++ gencode.c
 @@ -523,7 +523,8 @@ static struct block *gen_host6(compiler_
      struct in6_addr *, int, int, int);
