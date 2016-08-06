@@ -1,0 +1,4 @@
+
+.if ${PKGNAMESUFFIX} == "-client-static"
+USES+= gettext ncurses
+.endif
