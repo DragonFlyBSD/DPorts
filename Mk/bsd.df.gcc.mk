@@ -7,6 +7,9 @@
 # releases, the primary base compiler is gcc47.  The avoidance of the use of
 # the alternate compiler is intentional.
 
+.if !defined(_INCLUDE_BSD_DF_GCC_MK)
+_INCLUDE_BSD_DF_GCC_MK=	yes
+
 .include "${PORTSDIR}/Mk/bsd.default-versions.mk"
 
 .undef PORT_COMPILER
@@ -73,4 +76,6 @@ test-gcc:
 	@echo MAKE_ENV=${MAKE_ENV}
 	@echo "BUILD_DEPENDS=${BUILD_DEPENDS}"
 	@echo "RUN_DEPENDS=${RUN_DEPENDS}"
+.endif
+
 .endif
