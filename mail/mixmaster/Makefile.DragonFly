@@ -1,0 +1,11 @@
+USES+= ncurses
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(freebsd\):@\1 dragonfly:@g'	\
+		${WRKSRC}/Mix2.0/Src/Makefile-bsafe		\
+		${WRKSRC}/Mix2.0/Src/Makefile-dos		\
+		${WRKSRC}/Mix2.0/Src/Makefile-no-rx		\
+		${WRKSRC}/Mix2.0/Src/Makefile-rsaref		\
+		${WRKSRC}/Mix2.0/dos/build/makefile
+	${REINPLACE_CMD} -e 's@ -Wl @@g' -e 's@-ltermcap@@g'	\
+		${WRKSRC}/Mix/Src/Makefile
