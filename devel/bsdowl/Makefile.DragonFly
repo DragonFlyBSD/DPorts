@@ -1,0 +1,2 @@
+# zrj: fix configure logic
+CONFIGURE_ARGS+= ac_cv_prog_has_bmake=yes
