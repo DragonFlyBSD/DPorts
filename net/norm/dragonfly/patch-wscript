@@ -1,0 +1,11 @@
+--- wscript.orig	2015-06-30 18:02:38.000000000 +0300
++++ wscript
+@@ -38,7 +38,7 @@ def configure(ctx):
+     # Use this USE variable to add flags to NORM's compilation
+     ctx.env.USE_BUILD_NORM += ['BUILD_NORM', 'protolib']
+ 
+-    if system in ('linux', 'darwin', 'freebsd'):
++    if system in ('linux', 'darwin', 'freebsd', 'dragonfly'):
+         ctx.env.DEFINES_BUILD_NORM += ['ECN_SUPPORT']
+ 
+     if system == 'windows':

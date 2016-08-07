@@ -1,0 +1,38 @@
+--- protolib/wscript.orig	2015-06-27 19:08:57.000000000 +0300
++++ protolib/wscript
+@@ -55,7 +55,7 @@ def configure(ctx):
+     # Use this USE variable to add flags to protolib's compilation
+     ctx.env.USE_BUILD_PROTOLIB += ['BUILD_PROTOLIB']
+ 
+-    if system in ('linux', 'darwin', 'freebsd'):
++    if system in ('linux', 'darwin', 'freebsd', 'dragonfly'):
+         ctx.env.DEFINES_BUILD_PROTOLIB += ['UNIX', 'HAVE_DIRFD', 'HAVE_IPV6',
+                 'HAVE_ASSERT', 'HAVE_GETLOGIN']
+ 
+@@ -83,7 +83,7 @@ def configure(ctx):
+         ctx.check_cxx(lib='resolv')
+         ctx.env.USE_BUILD_PROTOLIB += ['RESOLV']
+ 
+-    if system == 'freebsd':
++    if system in ('freebsd', 'dragonfly'):
+         ctx.env.DEFINES_BUILD_PROTOLIB += ['HAVE_FLOCK']
+ 
+     if system == 'windows':
+@@ -172,7 +172,7 @@ def build(ctx):
+         ]]
+     )
+ 
+-    if system in ('linux', 'darwin', 'freebsd'):
++    if system in ('linux', 'darwin', 'freebsd', 'dragonfly'):
+         protolib.source.extend(['src/unix/{0}.cpp'.format(x) for x in [
+             'unixNet',
+             'unixSerial',
+@@ -194,7 +194,7 @@ def build(ctx):
+             protolib.source.append('src/linux/linuxDetour.cpp')
+             protolib.use.append('NETFILTER_QUEUE')
+ 
+-    if system in ('darwin', 'freebsd'):
++    if system in ('darwin', 'freebsd', 'dragonfly'):
+         protolib.source.extend(['src/bsd/{0}.cpp'.format(x) for x in [
+             'bsdDetour',
+             'bsdNet',
