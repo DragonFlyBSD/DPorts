@@ -1,0 +1,1 @@
+CFLAGS+=	-D__USE_ISOC99
