@@ -1,0 +1,13 @@
+--- Makefile.intermediate	2016-08-11 16:21:38 UTC
++++ Makefile
+@@ -73,6 +73,10 @@ ifeq (IRIX64,${SYSTEM})
+ SYSTEM        := IRIX
+ endif
+ 
++ifeq (DRAGONFLY,${SYSTEM})
++SOCKLEN	= socklen_t
++endif
++
+ ifeq (FREEBSD,${SYSTEM})
+ SOCKLEN	= socklen_t
+ endif
