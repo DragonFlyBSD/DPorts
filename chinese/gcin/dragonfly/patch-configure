@@ -1,0 +1,14 @@
+--- configure.intermediate	2016-08-12 09:17:47 UTC
++++ configure
+@@ -32,6 +32,11 @@ if [ $? = 0 ]; then
+   FREEBSD=1
+ fi
+ 
++uname | grep DragonFly > /dev/null 2> /dev/null
++if [ $? = 0 ]; then
++  FREEBSD=1
++fi
++
+ uname | grep OpenBSD > /dev/null 2> /dev/null
+ if [ $? = 0 ]; then
+   FREEBSD=1
