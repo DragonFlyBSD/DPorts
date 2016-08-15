@@ -54,6 +54,9 @@ CONFIGURE_ARGS?=--disable-dmx --disable-xvfb --disable-xnest \
 		--enable-glamor
 INSTALL_TARGET=	install-strip
 
+# Recommended by M.Dillon for sane security defaults
+CONFIGURE_ARGS+=	--enable-xcsecurity
+
 .if ${SLAVE_PORT} == "no"
 SUB_FILES=	pkg-install pkg-deinstall
 .else
