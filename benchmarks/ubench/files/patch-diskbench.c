@@ -1,6 +1,6 @@
---- diskbench.c.orig	2000-07-31 10:24:10.000000000 -0700
-+++ diskbench.c	2010-11-23 14:20:52.000000000 -0800
-@@ -103,7 +103,7 @@
+--- diskbench.c.orig	2000-07-31 17:24:10 UTC
++++ diskbench.c
+@@ -103,7 +103,7 @@ double cdt;
    return i;
  }
  /*****************************************************************************/
@@ -9,7 +9,7 @@
  {
    int sv[2],i;
    int d=0;
-@@ -115,7 +115,7 @@
+@@ -115,7 +115,7 @@ int diskbench()
        return 0;
      }
    cpu_score=0;
@@ -18,7 +18,7 @@
    switch ( (i=sigsetjmp(env,0xffff)) )
      {
        case 0:
-@@ -124,7 +124,7 @@
+@@ -124,7 +124,7 @@ int diskbench()
          for (i=0;i<child_number;i++) kill(child_pid[i],SIGALRM);
          if ( child ) exit(0);
  	close(sv[0]);
@@ -27,7 +27,7 @@
          dlt=dlt/(double )DISKREFSCORE;
          cpu_score=dlt;
  	fprintf(stdout,"Ubench DISK: %d\n",cpu_score);
-@@ -140,13 +140,13 @@
+@@ -140,13 +140,13 @@ int diskbench()
    itim=diskcalibrate(DISKREFTIME);
    if ( ONEflag )
      {

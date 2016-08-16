@@ -1,6 +1,6 @@
---- ubench.c.orig	2000-05-28 20:07:21.000000000 -0700
-+++ ubench.c	2010-11-23 14:20:52.000000000 -0800
-@@ -37,11 +37,11 @@
+--- ubench.c.orig	2000-05-29 03:07:21 UTC
++++ ubench.c
+@@ -37,11 +37,11 @@ extern char *_sys_errlist[];
  #define sys_errlist _sys_errlist
  #endif
  
@@ -16,7 +16,7 @@
  #endif
  void	signalSetup();
  
-@@ -66,10 +66,10 @@
+@@ -66,10 +66,10 @@ void print_usage()
  {
  #ifdef DISKNETYES
    fprintf(stderr,
@@ -29,7 +29,7 @@
  #endif
  }
  /*****************************************************************************/
-@@ -81,6 +81,7 @@
+@@ -81,6 +81,7 @@ char *argc[];
    int s			=	1;
    int k			=	1;
    int i			=	1;
@@ -37,7 +37,7 @@
    
    while ( argc[i] )
      if ( argc[i][0]=='-' )
-@@ -112,6 +113,17 @@
+@@ -112,6 +113,17 @@ prgs: switch ( argc[i][s] )
  	    s++;
  	    ONEflag=1;
  	    goto prgs;
@@ -55,7 +55,7 @@
            default:
  	    print_version();
  	    print_usage();
-@@ -156,11 +168,11 @@
+@@ -156,11 +168,11 @@ prgs: switch ( argc[i][s] )
  #endif
      }
    i=0;

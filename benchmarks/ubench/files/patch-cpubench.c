@@ -1,6 +1,6 @@
---- cpubench.c.orig	2000-05-28 20:21:13.000000000 -0700
-+++ cpubench.c	2010-11-23 14:20:52.000000000 -0800
-@@ -114,7 +114,7 @@
+--- cpubench.c.orig	2000-05-29 03:21:13 UTC
++++ cpubench.c
+@@ -114,7 +114,7 @@ double cdt;
    return i;
  }
  /*****************************************************************************/
@@ -9,7 +9,7 @@
  {
    int sv[2],i;
    int d=0;
-@@ -126,7 +126,7 @@
+@@ -126,7 +126,7 @@ int cpubench()
        return 0;
      }
    cpu_score=0;
@@ -18,7 +18,7 @@
    switch ( (i=sigsetjmp(env,0xffff)) )
      {
        case 0:
-@@ -136,7 +136,7 @@
+@@ -136,7 +136,7 @@ int cpubench()
          if ( child ) exit(0);
          child_number=0;
  	close(sv[0]);
@@ -27,7 +27,7 @@
          dlt=dlt/(double )CPUREFSCORE;
          cpu_score=dlt;
  	fprintf(stdout,"Ubench CPU: %8d\n",cpu_score);
-@@ -152,13 +152,13 @@
+@@ -152,13 +152,13 @@ int cpubench()
    itim=cpucalibrate(CPUREFTIME);
    if ( ONEflag )
      {

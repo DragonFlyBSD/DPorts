@@ -1,6 +1,6 @@
---- membench.c.orig	2000-07-31 10:23:27.000000000 -0700
-+++ membench.c	2010-11-23 14:20:52.000000000 -0800
-@@ -102,7 +102,7 @@
+--- membench.c.orig	2000-07-31 17:23:27 UTC
++++ membench.c
+@@ -102,7 +102,7 @@ double cdt;
    return i;
  }
  /*****************************************************************************/
@@ -9,7 +9,7 @@
  {
    int sv[2],i;
    int d=0;
-@@ -114,7 +114,7 @@
+@@ -114,7 +114,7 @@ int membench()
        return 0;
      }
    cpu_score=0;
@@ -18,7 +18,7 @@
    switch ( (i=sigsetjmp(env,0xffff)) )
      {
        case 0:
-@@ -123,7 +123,7 @@
+@@ -123,7 +123,7 @@ int membench()
          for (i=0;i<child_number;i++) kill(child_pid[i],SIGALRM);
          if ( child ) exit(0);
  	close(sv[0]);
@@ -27,7 +27,7 @@
          dlt=dlt/(double )MEMREFSCORE;
          cpu_score=dlt;
  	fprintf(stdout,"Ubench MEM: %8d\n",cpu_score);
-@@ -139,13 +139,13 @@
+@@ -139,13 +139,13 @@ int membench()
    itim=memcalibrate(MEMREFTIME);
    if ( ONEflag )
      {
