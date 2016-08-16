@@ -1,5 +1,5 @@
---- ./scripts/getpercent.orig	2009-06-25 13:59:43.000000000 -0400
-+++ ./scripts/getpercent	2009-06-25 14:04:59.000000000 -0400
+--- scripts/getpercent.orig	2005-09-04 11:04:28 UTC
++++ scripts/getpercent
 @@ -5,7 +5,7 @@
  # Hacked into existence by Larry McVoy (lm@sun.com now lm@sgi.com).
  # Copyright (c) 1994 Larry McVoy.  GPLed software.

@@ -1,6 +1,6 @@
---- ./results/Makefile.orig	2009-06-25 14:38:27.000000000 -0400
-+++ ./results/Makefile	2009-06-25 14:38:52.000000000 -0400
-@@ -121,10 +121,10 @@
+--- results/Makefile.orig	2005-09-04 11:04:28 UTC
++++ results/Makefile
+@@ -121,10 +121,10 @@ roff:
  	echo .ps 12	>> summary.roff
  	echo .po .35i	>> summary.roff
  	echo .sp .5i	>> summary.roff
@@ -13,7 +13,7 @@
  
  list:
  	@echo $(LIST)
-@@ -185,11 +185,11 @@
+@@ -185,11 +185,11 @@ paper:
  # XXX - this has to be made incremental, doing everything over from
  # scratch makes you want a Ghz machine.
  html: dirs
@@ -27,7 +27,7 @@
  	$(MK) LIST="$(LIST)" SIZE=  PRINT="$(PS)" \
  	    GMEM="$(GMEM) -cut -gthk1" GCTX="$(GCTX) -cut -gthk1" print
  	$(MK) LIST="$(LIST)" SIZE= NOOP=-noop PRINT="$(PS)" \
-@@ -207,11 +207,11 @@
+@@ -207,11 +207,11 @@ html: dirs
  	rm HTML/*.pbm HTML/___tmp*
  
  htmltest: dirs
