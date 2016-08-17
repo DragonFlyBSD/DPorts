@@ -1,5 +1,5 @@
---- ior_mach.h_orig	2013-01-27 01:03:32.000000000 +0200
-+++ ior_mach.h	2013-01-27 01:53:51.000000000 +0200
+--- ior_mach.h.orig	2011-11-03 15:50:06 UTC
++++ ior_mach.h
 @@ -142,7 +142,6 @@
  #define	IOR_MAX_SEEK		(HUGE)(4398046511104LL)	/* 4 TB */
  #endif
