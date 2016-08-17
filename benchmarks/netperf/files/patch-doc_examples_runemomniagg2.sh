@@ -1,5 +1,5 @@
---- doc/examples/runemomniagg2.sh.orig	2011-07-28 20:37:22.000000000 +0200
-+++ doc/examples/runemomniagg2.sh	2015-10-19 15:35:43.704236000 +0200
+--- doc/examples/runemomniagg2.sh.orig	2011-07-28 18:37:22 UTC
++++ doc/examples/runemomniagg2.sh
 @@ -1,4 +1,7 @@
  #set -x
 +
@@ -8,7 +8,7 @@
  # edit and add to this array as necessary
  # the hosts you will use should be contiguous
  # starting at index zero
-@@ -84,11 +87,11 @@
+@@ -84,11 +87,11 @@ echo four dl585 G5 clients rh5.2, each w
    echo TCP_STREAM
    for i in $concurrent_sessions; do
      j=0; 
@@ -22,7 +22,7 @@
        j=`expr $j + 1`;
      done;
      wait;
-@@ -99,11 +102,11 @@
+@@ -99,11 +102,11 @@ echo four dl585 G5 clients rh5.2, each w
    echo TCP_MAERTS
    for i in $concurrent_sessions; do
      j=0;
@@ -36,7 +36,7 @@
        j=`expr $j + 1`;
      done;
      wait;
-@@ -115,11 +118,11 @@
+@@ -115,11 +118,11 @@ echo four dl585 G5 clients rh5.2, each w
    HDR="-P 1"
    for i in $concurrent_sessions;
      do j=0;
@@ -50,7 +50,7 @@
        j=`expr $j + 1`;
      done;
      wait;
-@@ -130,14 +133,14 @@
+@@ -130,14 +133,14 @@ echo four dl585 G5 clients rh5.2, each w
    echo TCP_RR aggregates
    HDR="-P 1"
    for i in $concurrent_sessions; do

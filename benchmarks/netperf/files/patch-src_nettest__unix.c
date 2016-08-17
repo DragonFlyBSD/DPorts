@@ -1,6 +1,6 @@
---- src/nettest_unix.c.orig	2012-06-19 22:35:37.000000000 +0200
-+++ src/nettest_unix.c	2015-10-19 16:15:15.347526000 +0200
-@@ -2714,7 +2714,6 @@
+--- src/nettest_unix.c.orig	2012-06-19 20:35:37 UTC
++++ src/nettest_unix.c
+@@ -2714,7 +2714,6 @@ bytes  bytes  bytes   bytes  secs.   per
         that sort of rot... */
  
  #ifdef WANT_INTERVALS

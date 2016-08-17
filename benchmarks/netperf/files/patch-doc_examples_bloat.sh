@@ -1,5 +1,5 @@
---- doc/examples/bloat.sh.orig	2012-10-05 02:25:19.000000000 +0200
-+++ doc/examples/bloat.sh	2015-10-19 15:18:22.392273000 +0200
+--- doc/examples/bloat.sh.orig	2012-10-05 00:25:19 UTC
++++ doc/examples/bloat.sh
 @@ -3,12 +3,7 @@
  # buffer bloat on latency.  We assume that netperf has been compiled
  # with demo-mode enabled via ./configure --enable-demo
@@ -14,7 +14,7 @@
  
  CHUNK=60
  
-@@ -20,7 +15,7 @@
+@@ -20,7 +15,7 @@ echo "Starting netperf TCP_RR at $RR_STA
  # in more accurate demo intervals once the STREAM test kicks-in, but a
  # somewhat lower transaction rate.  not unlike enabling histogram
  # mode.
@@ -23,7 +23,7 @@
  
  # sleep CHUNK seconds
  sleep $CHUNK
-@@ -29,7 +24,7 @@
+@@ -29,7 +24,7 @@ sleep $CHUNK
  
  STREAM_START=`date +%s`
  echo "Starting netperf TCP_STREAM test at $STREAM_START" | tee -a bloat.log
