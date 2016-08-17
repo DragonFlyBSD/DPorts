@@ -1,0 +1,2 @@
+# zrj: in case of gcc we get extra pkgconfig file
+PLIST_FILES+= libdata/pkgconfig/clBLAS.pc

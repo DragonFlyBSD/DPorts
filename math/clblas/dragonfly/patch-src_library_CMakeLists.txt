@@ -1,0 +1,17 @@
+--- src/library/CMakeLists.txt.orig	2016-01-05 19:04:55.000000000 +0200
++++ src/library/CMakeLists.txt
+@@ -830,9 +830,13 @@ add_dependencies( GENERATE_CLT tplgen )
+ if( CMAKE_COMPILER_IS_GNUCC )
+     configure_file( ${CMAKE_CURRENT_SOURCE_DIR}/clBLAS.pc.in
+                     ${CMAKE_CURRENT_BINARY_DIR}/clBLAS.pc @ONLY )
+-
++  if (CMAKE_SYSTEM_NAME STREQUAL "DragonFly")
++    install( FILES ${CMAKE_CURRENT_BINARY_DIR}/clBLAS.pc
++             DESTINATION libdata/pkgconfig )
++  else ()
+     install( FILES ${CMAKE_CURRENT_BINARY_DIR}/clBLAS.pc
+              DESTINATION lib${SUFFIX_LIB}/pkgconfig )
++  endif( )
+ endif( )
+ 
+ # clBLAS to depend on AutoGemm
