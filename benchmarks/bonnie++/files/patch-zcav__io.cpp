@@ -1,6 +1,6 @@
---- zcav_io.cpp.orig	2009-08-24 07:36:02.677798155 +0000
-+++ zcav_io.cpp	2009-08-24 07:36:40.688614055 +0000
-@@ -83,7 +83,6 @@
+--- zcav_io.cpp.orig	2012-11-23 07:34:43 UTC
++++ zcav_io.cpp
+@@ -83,7 +83,6 @@ int ZcavRead::Read(int max_loops, int ma
    for(int loops = 0; !exiting && loops < max_loops; loops++)
    {
      int i = 0;
@@ -8,7 +8,7 @@
      if(start_offset)
      {
        OFF_TYPE real_offset = OFF_TYPE(start_offset) * OFF_TYPE(m_block_size) * OFF_TYPE(1<<20);
-@@ -96,7 +95,6 @@
+@@ -96,7 +95,6 @@ int ZcavRead::Read(int max_loops, int ma
        i = start_offset;
      }
      else
@@ -16,7 +16,7 @@
      if(lseek(m_fd, 0, SEEK_SET))
      {
        fprintf(stderr, "Can't lseek().\n");
-@@ -224,14 +222,12 @@
+@@ -224,14 +222,12 @@ ssize_t ZcavRead::access_all(int count)
  // Read/write a block of data
  double ZcavRead::access_data(int skip)
  {
