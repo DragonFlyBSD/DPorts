@@ -1,6 +1,6 @@
---- src/query.cc.orig	2005-04-30 09:51:29.000000000 -0400
-+++ src/query.cc	2007-07-26 20:47:03.000000000 -0400
-@@ -197,7 +197,7 @@
+--- src/query.cc.orig	2005-04-30 13:51:29 UTC
++++ src/query.cc
+@@ -197,7 +197,7 @@ void  Query_report::fd_send(int fd)
      {
        string s((*i).first);
        int str_len = (*i).first.length();
@@ -9,7 +9,7 @@
        {
          *p++ = (char) str_len;
  	const char* q_type_name = s.c_str();
-@@ -216,7 +216,7 @@
+@@ -216,7 +216,7 @@ void  Query_report::fd_send(int fd)
  	die(0, "report buffer overflow -- too many query types");
      }
    
