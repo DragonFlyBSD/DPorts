@@ -1,6 +1,6 @@
---- Platform.h	2015-03-30 17:28:57.000000000 -0400
-+++ Platform.h.new	2015-03-30 17:28:51.000000000 -0400
-@@ -39,6 +39,9 @@
+--- Platform.h.orig	2014-04-22 21:40:50 UTC
++++ Platform.h
+@@ -39,6 +39,9 @@ void SetAffinity ( int cpu );
  #else	//	defined(_MSC_VER)
  
  #include <stdint.h>

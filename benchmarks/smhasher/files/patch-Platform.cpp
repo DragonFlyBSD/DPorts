@@ -1,6 +1,6 @@
---- Platform.cpp	2015-03-30 17:26:46.000000000 -0400
-+++ Platform.cpp.new	2015-03-30 17:26:56.000000000 -0400
-@@ -19,6 +19,38 @@
+--- Platform.cpp.orig	2014-04-22 21:40:50 UTC
++++ Platform.cpp
+@@ -19,6 +19,38 @@ void SetAffinity ( int cpu )
    SetThreadPriority(GetCurrentThread(), THREAD_PRIORITY_HIGHEST);
  }
  
