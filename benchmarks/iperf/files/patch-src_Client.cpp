@@ -3,9 +3,9 @@
 # errno to ENOBUFS, which causes issues with the UDP bandwidth tests.
 # Check if errno != ENOBUFS after write(2).
 #
---- src/Client.cpp.orig	Wed Dec 13 11:22:18 2006
-+++ src/Client.cpp	Wed Dec 13 11:22:47 2006
-@@ -215,7 +215,7 @@
+--- src/Client.cpp.orig	2010-04-01 20:23:17 UTC
++++ src/Client.cpp
+@@ -157,7 +157,7 @@ void Client::RunTCP( void ) {
  
          // perform write 
          currLen = write( mSettings->mSock, mBuf, mSettings->mBufLen ); 
