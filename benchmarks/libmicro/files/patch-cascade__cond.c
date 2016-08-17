@@ -1,6 +1,6 @@
---- cascade_cond.c.orig	Sat Aug  6 14:12:15 2005
-+++ cascade_cond.c	Sat Aug  6 14:13:17 2005
-@@ -87,7 +87,6 @@
+--- cascade_cond.c.orig	2011-05-11 00:58:23 UTC
++++ cascade_cond.c
+@@ -83,7 +83,6 @@ benchmark_init()
  
  	(void) sprintf(lm_usage,
  	    "       [-o] (do signal outside mutex)\n"
@@ -8,7 +8,7 @@
  	    "notes: thread cascade using pthread_conds\n");
  
  	return (0);
-@@ -101,9 +100,6 @@
+@@ -97,9 +96,6 @@ benchmark_optswitch(int opt, char *optar
  	case 'o':
  		opto = 1;
  		break;
@@ -18,7 +18,7 @@
  	default:
  		return (-1);
  	}
-@@ -152,6 +148,7 @@
+@@ -148,6 +144,7 @@ benchmark_initrun()
  
  	(void) pthread_mutexattr_init(&ma);
  	(void) pthread_condattr_init(&ca);
@@ -26,7 +26,7 @@
  	if (lm_optP > 1 || opts) {
  		(void) pthread_mutexattr_setpshared(&ma,
  		    PTHREAD_PROCESS_SHARED);
-@@ -163,6 +160,7 @@
+@@ -159,6 +156,7 @@ benchmark_initrun()
  		(void) pthread_condattr_setpshared(&ca,
  		    PTHREAD_PROCESS_PRIVATE);
  	}

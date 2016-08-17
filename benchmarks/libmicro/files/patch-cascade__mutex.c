@@ -1,6 +1,6 @@
---- cascade_mutex.c.orig	Sat Aug  6 14:10:03 2005
-+++ cascade_mutex.c	Sat Aug  6 14:11:53 2005
-@@ -83,7 +83,6 @@
+--- cascade_mutex.c.orig	2011-05-11 00:58:23 UTC
++++ cascade_mutex.c
+@@ -79,7 +79,6 @@ benchmark_init()
  	lm_defN = "cscd_mutex";
  
  	(void) sprintf(lm_usage,
@@ -8,7 +8,7 @@
  	    "notes: thread cascade using pthread_mutexes\n");
  
  	return (0);
-@@ -94,9 +93,6 @@
+@@ -90,9 +89,6 @@ int
  benchmark_optswitch(int opt, char *optarg)
  {
  	switch (opt) {
@@ -18,7 +18,7 @@
  	default:
  		return (-1);
  	}
-@@ -123,6 +119,7 @@
+@@ -119,6 +115,7 @@ benchmark_initrun()
  	}
  
  	(void) pthread_mutexattr_init(&ma);
@@ -26,7 +26,7 @@
  	if (lm_optP > 1 || opts) {
  		(void) pthread_mutexattr_setpshared(&ma,
  		    PTHREAD_PROCESS_SHARED);
-@@ -130,6 +127,7 @@
+@@ -126,6 +123,7 @@ benchmark_initrun()
  		(void) pthread_mutexattr_setpshared(&ma,
  		    PTHREAD_PROCESS_PRIVATE);
  	}
