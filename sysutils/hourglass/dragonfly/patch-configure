@@ -1,0 +1,11 @@
+--- configure.intermediate	2016-08-16 16:59:33 UTC
++++ configure
+@@ -4126,7 +4126,7 @@ case "$build" in
+   on_unix='yes' ;
+   on_mach='no';
+   on_windows='no' ;;
+-*freebsd*)
++*freebsd*|*dragonfly*)
+   CFLAGS_sav=$CFLAGS ;
+   LDFLAGS_sav=$LDFLAGS ;
+   LDFLAGS="$LDFLAGS_sav -pthread" ;
