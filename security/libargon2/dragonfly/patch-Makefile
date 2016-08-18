@@ -1,0 +1,11 @@
+--- Makefile.orig	2016-05-30 08:36:13.000000000 +0300
++++ Makefile
+@@ -58,7 +58,7 @@ ifeq ($(findstring MSYS, $(KERNEL_NAME))
+ 	LIB_EXT := dll
+ 	LIB_CFLAGS := -shared -Wl,--out-implib,lib$(LIB_NAME).$(LIB_EXT).a
+ endif
+-ifeq ($(KERNEL_NAME), $(filter $(KERNEL_NAME),OpenBSD FreeBSD))
++ifeq ($(KERNEL_NAME), $(filter $(KERNEL_NAME),OpenBSD FreeBSD DragonFly))
+ 	LIB_EXT := so
+ 	LIB_CFLAGS := -shared -fPIC
+ endif
