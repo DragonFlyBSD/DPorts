@@ -1,0 +1,20 @@
+--- Make.intermediate	2016-08-16 13:06:35 UTC
++++ Make
+@@ -98,7 +98,7 @@ if [ "x$PREFIX" = "x" ]; then
+         SunOS:5.*)
+             PREFIX="/opt/REXXimc"
+             ;;
+-	FreeBSD:*)
++	FreeBSD:*|DragonFly:*)
+ 	    PREFIX="${PREFIX}"
+ 	    ;;
+         *|unknown)
+@@ -431,7 +431,7 @@ case $UNAME_S:$UNAME_R in
+                 ;;
+         esac
+         ;;
+-    FreeBSD:[5-9].*|FreeBSD:[1-9][0-9].*)
++    FreeBSD:[5-9].*|FreeBSD:[1-9][0-9].*|DragonFly:*)
+         REXXLIB="librexx.so"
+ 	SOLINK="librexx.so"
+         RANLIB=ranlib
