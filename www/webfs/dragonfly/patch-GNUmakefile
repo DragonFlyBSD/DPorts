@@ -1,0 +1,12 @@
+--- GNUmakefile.intermediate	2016-08-17 10:25:25 UTC
++++ GNUmakefile
+@@ -41,6 +41,9 @@ endif
+ ifeq ($(USE_THREADS)-$(SYSTEM),yes-freebsd)
+ CFLAGS	+= -DUSE_THREADS=1 -D_REENTRANT -pthread
+ endif
++ifeq ($(USE_THREADS)-$(SYSTEM),yes-dragonfly)
++CFLAGS	+= -DUSE_THREADS=1 -pthread
++endif
+ 
+ 
+ # OpenSSL yes/no
