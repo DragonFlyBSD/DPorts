@@ -1,15 +1,15 @@
---- configure.orig	2016-03-24 19:52:53.000000000 +0200
+--- configure.orig	2016-07-29 09:17:03 UTC
 +++ configure
-@@ -4016,7 +4016,7 @@ $as_echo "#define PLATFORM_NO_SYMLINKS 1
+@@ -4055,7 +4055,7 @@ $as_echo "#define PLATFORM_NO_SYMLINKS 1
  		with_sigaltstack=no
  		use_sigposix=yes
  		;;
 -	*-*-*freebsd*)
-+	*-*-*freebsd*|*-*-*dragonfly*)
- 		host_win32=no
++	*-*-*freebsd*|*-*-dragonfly*)
  		if test "x$PTHREAD_CFLAGS" = "x"; then
  			CPPFLAGS="$CPPFLAGS -DGC_FREEBSD_THREADS"
-@@ -21790,7 +21790,7 @@ $as_echo "no" >&6; }
+ 			libmono_cflags=
+@@ -21756,7 +21756,7 @@ $as_echo "no" >&6; }
  # and libpthread does not exist
  #
  	case "${host}" in
@@ -18,16 +18,16 @@
  			{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for main in -lpthread" >&5
  $as_echo_n "checking for main in -lpthread... " >&6; }
  if ${ac_cv_lib_pthread_main+:} false; then :
-@@ -25434,7 +25434,7 @@ $as_echo "#define __mono_ilp32__ 1" >>co
- 			sgen_supported=true
+@@ -25403,7 +25403,7 @@ $as_echo "#define __mono_ilp32__ 1" >>co
+ 		  darwin*)
  			AOT_SUPPORTED="yes"
  			;;
 -		  openbsd*|freebsd*|kfreebsd-gnu*)
-+		  dragonfly*|openbsd*|freebsd*|kfreebsd-gnu*)
- 			sgen_supported=true
++		  openbsd*|freebsd*|dragonfly*|kfreebsd-gnu*)
  			;;
  		  mingw*)
-@@ -26046,6 +26046,12 @@ case "$host" in
+ 			;;
+@@ -26017,6 +26017,12 @@ case "$host" in
  	INTL="libintl.so"
  	SQLITE="libsqlite.so"
  	SQLITE3="libsqlite3.so"
