@@ -1,0 +1,10 @@
+--- sope-core/NGStreams/configure.orig	2016-07-07 07:02:47.000000000 +0300
++++ sope-core/NGStreams/configure
+@@ -2611,6 +2611,7 @@ else
+   target_vendor=${host_vendor}
+ fi
+ case "x${target_os}" in
++  xdragonfly*) target_os=dragonfly;;
+   xfreebsd*) target_os=freebsd;;
+ esac
+ 
