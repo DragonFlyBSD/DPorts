@@ -1,0 +1,8 @@
+USES+= ncurses
+
+CONFIGURE_ENV+= ac_cv_lib_ncurses_main=yes
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@curses@ncurses@g'				\
+			 -e "/LIBS/s@\(-lncurses\)@-L${LOCALBASE}/lib \1@g"	\
+		${WRKSRC}/configure
