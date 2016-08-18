@@ -1,0 +1,18 @@
+--- configure.intermediate	2016-08-18 14:16:30 UTC
++++ configure
+@@ -3533,6 +3533,7 @@ case "$host_os" in
+   darwin10.*)   host_os_novers="darwin10.x" ;;
+   darwin11.*)   host_os_novers="darwin11.x" ;;
+   darwin12.*)   host_os_novers="darwin12.x" ;;
++  dragonfly*)   host_os_novers="dragonfly"  ;;
+   freebsd*)     host_os_novers="freebsd"    ;;
+   solaris2.*)   host_os_novers="solaris2.x" ;;
+   *)            host_os_novers="$host_os"   ;;
+@@ -23576,6 +23577,7 @@ done
+ ## of being copied depending upon the host.
+ case "$host" in
+   *-linux*)             BAR="linux"       ;;
++  *-dragonfly*)         BAR="fbsd"        ;;
+   *-freebsd*)           BAR="fbsd"        ;;
+   *-ibm-aix*)           BAR="aix"         ;;
+   sparc64-*-solaris2*)  BAR="solaris64"   ;;
