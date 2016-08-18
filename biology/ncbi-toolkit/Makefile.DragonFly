@@ -1,0 +1,4 @@
+
+dfly-patch:
+	${LN} -sv ${WRKSRC}/platform/freebsd.ncbi.mk	\
+		  ${WRKSRC}/platform/dragonfly.ncbi.mk
