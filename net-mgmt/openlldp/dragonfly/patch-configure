@@ -1,0 +1,13 @@
+--- configure.orig	2010-06-11 08:24:32.000000000 +0300
++++ configure
+@@ -4581,8 +4581,9 @@ $as_echo "$sysroot" >&6; }
+ fi
+    ;;
+ 
+-      *freebsd*)
++      *freebsd*|*dragonfly*)
+       framer="bpf"
++      platform="freebsd"
+       $as_echo "#define __BSD__ 1" >>confdefs.h
+ 
+       $as_echo "#define FREEBSD 1" >>confdefs.h
