@@ -1,0 +1,14 @@
+--- sope-core/NGExtensions/GNUmakefile.preamble.orig	2016-07-06 14:34:57.000000000 +0300
++++ sope-core/NGExtensions/GNUmakefile.preamble
+@@ -72,6 +72,11 @@ libNGExtensions_LIB_DIRS += -L/usr/local
+ libNGExtensions_LIBRARIES_DEPEND_UPON += -liconv
+ endif
+ 
++ifeq ($(GNUSTEP_TARGET_OS),dragonfly)
++libNGExtensions_LIB_DIRS += -L/usr/local/lib
++libNGExtensions_LIBRARIES_DEPEND_UPON += -liconv
++endif
++
+ # Foundation specific settings
+ 
+ ifeq ($(FOUNDATION_LIB),nx)
