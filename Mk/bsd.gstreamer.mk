@@ -73,7 +73,7 @@ _GSTREAMER_PLUGINS= \
 		cdparanoia dts dv faac faad flac flite \
 		gdkpixbuf gl gme gnonlin gsm jack jpeg lame libcaca \
 		libmms libvisual mad mpeg2dec mpeg2enc neon ogg \
-		opencv opus pango pulse resindvd schroedinger \
+		opencv opus pango resindvd schroedinger \
 		shout2 sidplay soundtouch soup speex taglib \
 		theora twolame v4l2 vorbis wavpack x264
 
