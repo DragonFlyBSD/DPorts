@@ -1,2 +1,17 @@
-LIB_DEPENDS+= 		libkrb5.so:security/krb5
-OPTIONS_EXCLUDE_x86_64=	CHEESE
+LIB_DEPENDS:= ${LIB_DEPENDS:Nlibpulse*} libkrb5.so:security/krb5
+OPTIONS_DEFAULT_x86_64:=
+
+# build without pulseaudio support
+# sound functionality has to be eliminated
+
+CONFIGURE_ENV+=	SOUND_PANEL_LIBS=dummy SOUND_PANEL_CFLAGS=dummy \
+		GVC_LIBS=dummy GVC_CFLAGS=dummy	
+
+dfly-patch:
+	${REINPLACE_CMD} \
+		-e "s|panels/soun.*/Makefile panels/info/Makefile|panels/info/Makefile|" \
+		${WRKSRC}/configure
+	${REINPLACE_CMD} -e "s| sound||" ${WRKSRC}/panels/Makefile.in
+	${REINPLACE_CMD} -e "/libsound.la/d" ${WRKSRC}/shell/Makefile.in
+	${REINPLACE_CMD} -e "/sound/d" ${WRKSRC}/shell/cc-panel-loader.c
+	${RM} -r ${WRKSRC}/panels/sound
