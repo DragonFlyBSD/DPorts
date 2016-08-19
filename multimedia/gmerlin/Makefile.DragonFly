@@ -2,3 +2,5 @@
 #          libxcb.so.1 in /usr/local/lib/libX11.so
 CONFIGURE_ENV+=	LDVER=ld.bfd
 MAKE_ENV+=	LDVER=ld.bfd
+
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NPULSEAUDIO}
