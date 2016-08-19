@@ -1,4 +1,3 @@
-
 # zrj: override default options to "lite" mode (no dbus,gtk3,pulseaudio etc)
 .if defined(LITE)
 PKGNAMESUFFIX+=	-lite
