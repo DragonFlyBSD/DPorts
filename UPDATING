@@ -1300,37 +1300,3 @@ you update your ports collection, before attempting any port upgrades.
 
   # pkg install -y `cat ghc-pkgs.txt`
 
-20150818:
-  AFFECTS: users of sysutils/s6
-  AUTHOR: Colin Booth <colin@heliocat.net>
-
-  s6-notifywhenup has been removed as of v2.2.0.0. Any run scripts
-  using readyness notification must be updated to use a notification
-  fd instead.
-
-  s6-svc options have changed for sending syncronous up/down timeouts.
-  Any management or wrapper scripts using those options will need to
-  be updated.
-
-20150817:
-  AFFECTS: everybody who still uses <UNIQUENAME>_SET/UNSET in make.conf
-  AUTHOR: mat@FreeBSD.org
-
-  The use of <UNIQUENAME>_SET/UNSET has been deprecated for a long time,
-  replaced by <OPTIONS_NAME>_SET/UNSET.  It is now not supported any more.
-  A warning will be issued telling you what to do, for example:
-
-    $ make
-    /!\ WARNING /!\
-    You are using perl_SET which is not supported any more, use:
-    lang_perl5.20_SET= DEBUG
-
-20150816:
-  AFFECTS: users of sysutils/s6
-  AUTHOR: Colin Booth <colin@heliocat.net>
-
-  s6-notifywhenup is deprecated and will be removed in the next version
-  of s6. Any run scripts depending on that program should be updated to
-  use an in-servicedir notification-fd file as described under
-  "Readyness notification support" in s6-supervise.html.
-
