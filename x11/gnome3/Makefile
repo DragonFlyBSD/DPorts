@@ -48,7 +48,7 @@ MAPI_RUN_DEPENDS=	evolution-mapi>=3.0.0:mail/evolution-mapi
 .include <bsd.port.options.mk>
 
 .if ${.CURDIR:T}!="gnome3-lite"
-RUN_DEPENDS+=	empathy>=3.0.0:net-im/empathy \
+RUN_DEPENDS+=	\
 		epiphany>=3.0.0:www/epiphany \
 		gucharmap>=3.0.0:deskutils/gucharmap \
 		gnome-characters>=3.0.0:deskutils/gnome-characters \
