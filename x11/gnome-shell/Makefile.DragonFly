@@ -1,0 +1,10 @@
+# build without pulseaudio support
+
+LIB_DEPENDS:=	${LIB_DEPENDS:Nlibpulse*}
+CONFIGURE_ENV+=	GVC_LIBS=dummy GVC_CFLAGS=dummy
+
+dfly-patch:
+	${REINPLACE_CMD} -e "s| src/gvc/Makefile||" ${WRKSRC}/configure
+	${REINPLACE_CMD} -e "s|gvc.libgvc.la||; /SUBDIRS = gvc/d" \
+		${WRKSRC}/src/Makefile.in
+	${RM} -r ${WRKSRC}/src/gvc
