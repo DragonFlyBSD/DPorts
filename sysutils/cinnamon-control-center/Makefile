@@ -25,7 +25,6 @@ LIB_DEPENDS=	libstartup-notification-1.so:x11/startup-notification \
 		libtelepathy-logger.so:net-im/telepathy-logger \
 		libgnomekbdui.so:x11/libgnomekbd \
 		libfolks.so:net-im/folks \
-		libpulse.so:audio/pulseaudio \
 		libcroco-0.6.so:textproc/libcroco \
 		libdbus-glib-1.so:devel/dbus-glib \
 		libclutter-glx-1.0.so:graphics/clutter \
