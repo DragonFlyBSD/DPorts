@@ -1,0 +1,16 @@
+# all this crap is to build gsd without pulseaudio support
+# Obviously functionality has to be eliminated
+
+LIB_DEPENDS:=	${LIB_DEPENDS:Nlibpulse*}
+CONFIGURE_ENV+=	MEDIA_KEYS_LIBS=dummy MEDIA_KEYS_CFLAGS=dummy \
+		SOUND_LIBS=dummy SOUND_CFLAGS=dummy
+
+dfly-patch:
+	${REINPLACE_CMD} \
+		-e "s|plugins/media-keys/Makefile||" \
+		-e "s|plugins/media-keys/cut-n-paste/Makefile||" \
+		-e "s|plugins/sound/Makefile||" ${WRKSRC}/configure.ac
+	${REINPLACE_CMD} -e "s|media-keys||; s|sound||" \
+		${WRKSRC}/plugins/Makefile.am
+	${RM} -r ${WRKSRC}/plugins/media-keys
+	${RM} -r ${WRKSRC}/plugins/sound
