@@ -16,7 +16,6 @@ bin/cinnamon2d
 etc/xdg/menus/cinnamon-applications.menu
 lib/cinnamon/Cinnamon-0.1.typelib
 lib/cinnamon/CinnamonJS-0.1.typelib
-lib/cinnamon/Gvc-1.0.typelib
 lib/cinnamon/St-1.0.typelib
 lib/cinnamon-desktop-editor/cinnamon-desktop-editor.py
 lib/cinnamon-desktop-editor/directory-editor.ui
