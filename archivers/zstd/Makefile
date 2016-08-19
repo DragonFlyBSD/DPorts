@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	zstd
-PORTVERSION=	0.8.0
+PORTVERSION=	0.8.1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	archivers
 
@@ -21,5 +21,7 @@ ALL_TARGET=	default
 MAKE_ARGS=	MANDIR="${PREFIX}/man/man1" \
 		LIBDIR="${PREFIX}/lib" \
 		INCLUDEDIR="${PREFIX}/include"
+
+BROKEN_FreeBSD_9=	missing builtin bswap32 and bswap64
 
 .include <bsd.port.mk>
