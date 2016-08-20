@@ -1,0 +1,11 @@
+--- SP/Makefile.orig	2015-12-26 16:21:49.000000000 +0200
++++ SP/Makefile
+@@ -734,7 +734,7 @@ else # ifdef MINGW
+ # SETUP AND BUILD -- FREEBSD
+ #############################################################################
+ 
+-ifeq ($(PLATFORM),freebsd)
++ifneq (,$(findstring "$(PLATFORM)", "dragonfly" "freebsd"))
+ 
+   # flags
+   BASE_CFLAGS = $(shell env MACHINE_ARCH=$(ARCH) make -f /dev/null -VCFLAGS) \
