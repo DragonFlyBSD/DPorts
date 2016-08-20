@@ -1,2 +1,24 @@
 OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT} PORT_LLVM
 CONFIGURE_ENV+=	CFG_DISABLE_LIBCPP=1
+
+# This creates a minimal bootstrap
+# It's geared for existing package in muscles output area
+
+PKGAREA?=	/build/boomdata/data/packages/bleeding-edge-potential/All
+LASTBUILT=	${PKGAREA}/${PKGNAME}.txz
+STRAPNAME=	${PKGNAME}-${ARCH}-unknown-${OPSYS:tl}
+XRC=		/tmp/explode/usr/local
+
+dfly-bootstrap:
+	${RM} -r /tmp/${STRAPNAME} /tmp/explode
+	${MKDIR} /tmp/${STRAPNAME}/rustc/lib/rustlib/etc /tmp/explode
+	(cd /tmp/explode && ${TAR} -xf ${LASTBUILT})
+	${MV} ${XRC}/bin /tmp/${STRAPNAME}/rustc
+	${MV} ${XRC}/lib/rustlib/components /tmp/${STRAPNAME}
+	${MV} ${XRC}/lib/rustlib/rust-installer-version /tmp/${STRAPNAME}
+	${MV} ${XRC}/lib/rustlib/etc/*.py /tmp/${STRAPNAME}/rustc/lib/rustlib/etc
+	${MV} ${XRC}/lib/*.so /tmp/${STRAPNAME}/rustc/lib
+	${ECHO} ${PKGNAME} > /tmp/${STRAPNAME}/version
+	(cd /tmp && ${TAR} -czf ${STRAPNAME}.tar.gz ${STRAPNAME})
+	@${ECHO} The new bootstrap is located at /tmp/${STRAPNAME}.tar.gz
+	@${RM} -r /tmp/${STRAPNAME} /tmp/explode
