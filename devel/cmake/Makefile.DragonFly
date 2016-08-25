@@ -1,5 +1,3 @@
-USES+= ncurses
-
 .if exists(/usr/lib/priv/libprivate_ncursesw.so)
 dfly-patch:
 	${REINPLACE_CMD} -e "s@CYGWIN@true@g" \
