@@ -1,1 +1,1 @@
-USES+= alias ncurses
+USES+= alias
