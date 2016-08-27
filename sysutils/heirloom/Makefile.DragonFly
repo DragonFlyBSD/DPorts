@@ -1,3 +1,0 @@
-USES+= ncurses
-
-MAKE_ARGS+= LCURS="-L${LOCALBASE}/lib -lncurses"
