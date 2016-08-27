@@ -1,4 +1,4 @@
---- include/die.h.orig	2004-12-18 06:29:19.000000000 +0200
+--- include/die.h.orig	2004-12-18 04:29:19 UTC
 +++ include/die.h
 @@ -1,6 +1,7 @@
  // Gubby
