@@ -1,5 +1,3 @@
-USES+= ncurses
-
 dfly-patch:
 	${REINPLACE_CMD} -e 's@net/ppp_defs\.h@net/ppp_layer/ppp_defs.h@g'	\
 		${WRKSRC}/lib/interfaces.c
