@@ -1,5 +1,3 @@
-USES+=		ncurses
-
 #disable static version for now. libtinfo.a issue
 PLIST_FILES:=${PLIST_FILES:Nbin/ah-tty.static}
 
