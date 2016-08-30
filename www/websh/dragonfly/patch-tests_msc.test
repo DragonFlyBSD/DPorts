@@ -1,0 +1,10 @@
+--- ../tests/msc.test.intermediate	2016-07-29 15:07:02 UTC
++++ ../tests/msc.test
+@@ -82,6 +82,7 @@ test tempfile-1.2 {web::tempfile reject
+ 	global tcl_platform
+ 	if {"$tcl_platform(platform)" == "unix"
+ 	    && ("$tcl_platform(os)" == "Darwin" ||
++		"$tcl_platform(os)" == "DragonFly" ||
+ 	    [string match *BSD "$tcl_platform(os)"])} {
+ 	    # BSD does not complain if directory does not exist
+ 	    # It just returns the nonexistig path anyway

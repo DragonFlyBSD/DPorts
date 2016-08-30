@@ -1,0 +1,11 @@
+--- configure.in.orig	2009-09-14 19:07:00.000000000 +0300
++++ configure.in
+@@ -264,7 +264,7 @@ case "`uname -s`" in
+     *aix* | *AIX* )
+ 	PLATFORM="AIX"
+     ;;
+-    *freebsd* | *FreeBSD* )
++    *freebsd* | *FreeBSD* | *DragonFly* )
+ 	PLATFORM="FREEBSD"
+     ;;
+     *bsd/os* | *BSD/OS* )
