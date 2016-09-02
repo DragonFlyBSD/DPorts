@@ -1,10 +1,11 @@
 --- src/ukengine/usrkeymap.cpp.orig	2006-04-09 02:31:40.000000000 +0300
 +++ src/ukengine/usrkeymap.cpp
-@@ -23,6 +23,7 @@
+@@ -23,6 +23,8 @@
  
  #include "stdafx.h"
  #include <iostream>
-+#include <cstring>
++#include <cstdio>  // for fprintf stderr
++#include <cstring> // for strcmp strlen
  using namespace std;
  
  #include <ctype.h>
