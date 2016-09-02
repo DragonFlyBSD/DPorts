@@ -1,10 +1,14 @@
---- lib/cpp/antlr/CharScanner.hpp.orig	2006-11-01 21:37:17.000000000 +0000
+--- lib/cpp/antlr/CharScanner.hpp.orig	2006-11-01 23:37:17.000000000 +0200
 +++ lib/cpp/antlr/CharScanner.hpp
-@@ -8,6 +8,7 @@
-  * $Id: //depot/code/org.antlr/release/antlr-2.7.7/lib/cpp/antlr/CharScanner.hpp#2 $
-  */
+@@ -18,6 +18,11 @@
+ #include <cctype>
+ #endif
  
-+#include <strings.h>
- #include <antlr/config.hpp>
- 
- #include <map>
++#include <cstdio>    // for EOF
++extern "C" {
++#include <strings.h> // for strcasecmp
++}
++
+ #if ( _MSC_VER == 1200 )
+ // VC6 seems to need this
+ // note that this is not a standard C++ include file.
