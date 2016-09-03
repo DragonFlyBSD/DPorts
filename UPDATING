@@ -5,6 +5,52 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20160829:
+  AFFECTS: users of x11/nvidia-driver
+  AUTHOR: cem@FreeBSD.org
+
+  The NVidia driver has been updated to version 367.35.  Starting with
+  version 358.09, new kernel module was added, nvidia-modeset.ko.  This
+  new driver component works in conjunction with the nvidia.ko kernel
+  module to program the display engine of the GPU.
+
+  Users that experience hangs when starting X11 server, or observe
+
+	(II) NVIDIA(0): Validated MetaModes:
+	(II) NVIDIA(0):     "NULL"
+
+  messages in their /var/log/Xorg.0.log file should replace ``nvidia''
+  with ``nvidia-modeset'' in /boot/loader.conf or /etc/rc.conf files,
+  depending on how they prefer to load NVidia driver kernel module.
+
+20160829:
+  AFFECTS: users of security/sshguard
+  AUTHOR: feld@FreeBSD.org
+
+  Sshguard has been updated to 1.7.0. There have been several changes to
+  this release. Notably the hosts and ipfilter backends are no longer
+  supported. If you need these backends to be supported and you missed
+  the survey sent out by upstream I urge you to contact upstream.
+
+  The hosts backend was previously served by security/sshguard directly.
+  The additional backends were slave ports with package name suffixes. I
+  have opted to keep the master/slave port relationship but not choose a
+  specific backend for security/sshguard. Instead it is now a metaport
+  which will prompt you for which backend you prefer. If no backend is
+  configured it will depend on security/sshguard-ipfw, which is the
+  native FreeBSD firewall. This my be surprising to users who depended
+  on security/sshguard which only provided hosts/TCP Wrappers blocking,
+  but there is no replacement at this time.
+
+  I would also like to document that sshguard no longer accepts the -e
+  argument which allowed external scripts to run when sshguard finds a
+  match. As a result the null backend can no longer be used to create
+  custom blocking functionality; it only serves as a detection backend.
+
+  If the removed backends return due to user demand they will be added
+  as slave ports for consistency. I apologize for any inconvenience and
+  lack of notice on the deprecation of these features.
+
 20160815:
   AFFECTS: users of mail/rspamd*
   AUTHOR: vsevolod@FreeBSD.org
@@ -19,12 +65,12 @@ you update your ports collection, before attempting any port upgrades.
   AFFECTS: users of dns/powerdns*
   AUTHOR: junovitch@FreeBSD.org
 
-  PowerDNS Authoritive Server and Recursor 4.0.0+ introduce significant
+  PowerDNS Authoritative Server and Recursor 4.0.0+ introduce significant
   changes to the configuration files, which need to be handled before
   restarting the services. As from the Recursor changelog, "The Lua hook
   infrastructure was redone using LuaWrapper; old scripts will no longer
   work, but new scripts are easier to write under the new interface."
-  
+
 20160811:
   AFFECTS: users of security/libressl
   AUTHOR: brnrd@FreeBSD.org
@@ -58,15 +104,15 @@ you update your ports collection, before attempting any port upgrades.
   AUTHOR: girgen@FreeBSD.org
 
   The ICU patch is added to the PostgreSQL-9.5 server. Please note that you
-  must never change between using the ICU patch and using system locale for the
-  same database cluster without REINDEXing all TEXT/VARCHAR columns or
-  dump+restore your database. Failing to do so will result in corrupted indexes
-  due to the differences between the locale definitions. ICU will always be the
-  better choice for speed and correctness. :) 
+  must never change between using the ICU patch and using system locale for
+  the same database cluster without REINDEXing all TEXT/VARCHAR columns, or
+  dump and restore your database. Failing to do so will result in corrupted
+  indexes due to the differences between the locale definitions. ICU will
+  always be the better choice for speed and correctness.
 
-  Also, the ICU patch used to support other unicode encodings than UTF-8, but
-  that has been removed due to lack of demand and the complicated testing
-  required. If you use another unicode encoding and rely on ICU for collation,
+  Also, the ICU patch used to support other Unicode encodings than UTF-8,
+  but that has been removed due to lack of demand and the complicated testing
+  required. If you use another Unicode encoding and rely on ICU for collation,
   please refrain from upgrading the postgresql server and instead contact the
   author named above.
 
@@ -102,11 +148,9 @@ you update your ports collection, before attempting any port upgrades.
   AFFECTS: users of sysutils/screen
   AUTHOR: cy@FreeBSD.org
 
-  As of GNU Screen 4.4.0 (r417201):
-  
-  Note that there was fix to screen message structure field
-  responsible for $TERM handling, making it impossible
-  to attach to older versions.
+  GNU Screen was updated to version 4.4.0 (r417201).  Note that there was
+  fix to screen message structure field responsible for $TERM handling,
+  making it impossible to attach to older versions.
 
 20160704:
   AFFECTS: users of databases/mysql57-*
@@ -189,7 +233,7 @@ you update your ports collection, before attempting any port upgrades.
   Previously, to tell the ports tree, you needed to set:
 
   WITH_OPENSSL_PORT=yes
-  
+
   And if you wanted a port that was not security/openssl, you needed to add,
   for example:
 
@@ -198,7 +242,7 @@ you update your ports collection, before attempting any port upgrades.
   Now, all you need to do is:
 
   DEFAULT_VERSIONS+=  ssl=libressl
-  
+
   Valid values are base, openssl, openssl-devel, libressl, and libressl-devel.
 
 20160614:
@@ -240,7 +284,7 @@ you update your ports collection, before attempting any port upgrades.
   # portupgrade -fr databases/postgresql-repmgr
 
 20160605:
-  AFFECTS: Users of www/h2o
+  AFFECTS: users of www/h2o
   AUTHOR: junovitch@FreeBSD.org
 
   File paths no longer have a trailing / appended to them. This enables
@@ -278,7 +322,7 @@ you update your ports collection, before attempting any port upgrades.
       portupgrade -fr security/libressl-devel
 
 20160527:
-  AFFECTS: Users of mail/opensmtpd-extras (any of them)
+  AFFECTS: users of mail/opensmtpd-extras (any of them)
   AUTHOR: adamw@FreeBSD.org
 
   The invocation for extras has changed. Some extras might fail unless
@@ -296,7 +340,7 @@ you update your ports collection, before attempting any port upgrades.
       And pass "-c /var/chroot/dnsbl" to the filter.
 
 20160526:
-  AFFECTS: Users of mail/opensmtpd
+  AFFECTS: users of mail/opensmtpd
   AUTHOR: brnrd@FreeBSD.org
 
   Due to changes to the rc-script you must stop smtpd prior to upgrading
@@ -306,17 +350,17 @@ you update your ports collection, before attempting any port upgrades.
 
   Then upgrade OpenSMTPD to version 5.9.2.
   Additionally version 5.9.2 changes the file mode bits for two directories.
-  To allow existing installations to start succesfully you must apply the
+  To allow existing installations to start successfully you must apply the
   following changes
 
   # chown -R root:_smtpq /var/spool/smtpd/offline
   # chmod -R 770 /var/spool/smtpd/offline
   # chmod -R 700 /var/spool/smtpd/purge
 
-  After applying the changes, the smtpd daemon can succesfully be started.
+  After applying the changes, the smtpd daemon can successfully be started.
 
 20160525:
-  AFFECTS: Users of devel/qtcreator
+  AFFECTS: users of devel/qtcreator
   AUTHOR: nolden@kde.org
 
   QBS (Qt Build System) was previously shipped as part of qtcreator, now
@@ -328,7 +372,7 @@ you update your ports collection, before attempting any port upgrades.
   The solution is to pkg remove qtcreator, then building works correctly.
 
 20160523:
-  AFFECTS: Users of databases/db6
+  AFFECTS: users of databases/db6
   AUTHOR: mandree@FreeBSD.org
 
   The databases/db6 port has been updated to release 6.2.23.
@@ -358,7 +402,7 @@ you update your ports collection, before attempting any port upgrades.
   db6- prefix that you need to add.
 
 20160511:
-  AFFECTS: Users of audio/clementine-player
+  AFFECTS: users of audio/clementine-player
   AUTHOR: sbruno@FreeBSD.org
 
   The audio/clementine-player port has been updated to v1.3.1, the latest
@@ -369,7 +413,7 @@ you update your ports collection, before attempting any port upgrades.
   Without this option, clementine-player will crash on startup.
 
 20160510:
-  AFFECTS: Users of biology/seqan
+  AFFECTS: users of biology/seqan
   AUTHOR: junovitch@FreeBSD.org
 
   The biology/seqan port has been split into biology/seqan (only the
@@ -380,7 +424,7 @@ you update your ports collection, before attempting any port upgrades.
   your software to SeqAn2.
 
 20160505:
-  AFFECTS: Users of www/node
+  AFFECTS: users of www/node
   AUTHOR: bradleythughes@fastmail.fm
 
   The www/node port has been updated to node.js v6.0.0, the latest
@@ -423,7 +467,7 @@ you update your ports collection, before attempting any port upgrades.
       portupgrade -fr security/libressl
 
 20160501:
-  AFFECTS: Users of mail/dspam
+  AFFECTS: users of mail/dspam
   AUTHOR: junovitch@FreeBSD.org
 
   dspam has been modified to no longer run as root:mail by default.
@@ -442,7 +486,7 @@ you update your ports collection, before attempting any port upgrades.
   nginx, i.e. ${PREFIX}/etc/nginx/nginx.conf.
 
 20160424:
-  AFFECTS: Users of net-mgmt/icinga2
+  AFFECTS: users of net-mgmt/icinga2
   AUTHOR: lme@FreeBSD.org
 
   The creation of Icinga2 directories and files in /var is now controlled
@@ -467,7 +511,7 @@ you update your ports collection, before attempting any port upgrades.
       portupgrade -fr audio/chromaprint
 
 20160414:
-  AFFECTS: Users of www/tt-rss
+  AFFECTS: users of www/tt-rss
   AUTHOR: thierry@FreeBSD.org
 
   Tiny Tiny RSS can use a database running on a separate server.
@@ -478,7 +522,7 @@ you update your ports collection, before attempting any port upgrades.
   in your /etc/rc.conf .
 
 20160414:
-  AFFECTS: Users of graphics/kipi-plugin-googledrive and graphics/kipi-plugin-picasaweb
+  AFFECTS: users of graphics/kipi-plugin-googledrive and graphics/kipi-plugin-picasaweb
   AUTHOR: kde@FreeBSD.org
 
   DigiKam and its related ports have been updated to 4.14.0, the latest
@@ -492,7 +536,7 @@ you update your ports collection, before attempting any port upgrades.
   should be used instead.
 
 20160413:
-  AFFECTS: All users of www/node-devel
+  AFFECTS: users of www/node-devel
   AUTHOR: bradleythughes@fastmail.fm
 
   www/node-devel was outdated and has been removed. Upstream no longer
@@ -516,7 +560,7 @@ you update your ports collection, before attempting any port upgrades.
   *** Error code 1
 
 20160412:
-  AFFECTS: Users of net/samba42 and net/samba/43
+  AFFECTS: users of net/samba42 and net/samba/43
   AUTHOR: timur@FreeBSD.org
 
   Samba 4.2.x and 4.3.x ports have been updated to address
@@ -541,7 +585,7 @@ you update your ports collection, before attempting any port upgrades.
      https://www.samba.org/samba/history/samba-4.2.11.html
 
 20160411:
-  AFFECTS: Users if databases/influxdb
+  AFFECTS: users of databases/influxdb
   AUTHOR: cheffo@freebsd-bg.org
 
   To upgrade to InfluxDB 0.12, you must be on version 0.10 and all shards must
@@ -555,8 +599,8 @@ you update your ports collection, before attempting any port upgrades.
   [2] https://docs.influxdata.com/influxdb/v0.12/administration/upgrading/
 
 20160406:
-  AFFECTS: All users of www/pecl-http
-  AUTHOR: bofh
+  AFFECTS: users of www/pecl-http
+  AUTHOR: bofh@FreeBSD.org
 
   www/pecl-http has been updated to the latest 3.x stable release, which
   supports php70+ and a new port www/pecl-http2 has been created for the
@@ -884,7 +928,7 @@ you update your ports collection, before attempting any port upgrades.
 
 20151217:
   AFFECTS: users of security/tor, security/tor-devel
-  AUTHOR: amdmi3
+  AUTHOR: amdmi3@FreeBSD.org
 
   Tor rc.d script no longer overrides or forces logfile configuration,
   you now need to setup logging by hand. To preserve old behavior, add
@@ -893,8 +937,8 @@ you update your ports collection, before attempting any port upgrades.
     Log notice file /var/log/tor
 
 20151215:
-  AFFECTS: All users of www/node
-  AUTHOR: koobs
+  AFFECTS: all users of www/node
+  AUTHOR: koobs@FreeBSD.org
 
   www/node has been updated to the latest 5.x stable release, and a new port
   www/node4 has been created for the 4.x LTS branch.
@@ -1230,13 +1274,4 @@ you update your ports collection, before attempting any port upgrades.
   command:
 
    # pkg delete -f texlive-base
-
-20150901:
-  AFFECTS: users of editors/libreoffice
-  AUTHOR: jkim@FreeBSD.org
-
-  editors/libreoffice has been updated to 5.0.1.  However, FreeBSD 9.x is
-  no longer supported because it requires C++11-capable library installed
-  in the base.  If you cannot upgrade your system or still want 4.3.x for
-  some reason, use editors/libreoffice4.
 
