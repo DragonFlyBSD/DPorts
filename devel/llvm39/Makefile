@@ -2,6 +2,7 @@
 
 PORTNAME=	llvm
 DISTVERSION=	3.9.0rc3
+PORTREVISION=	1
 CATEGORIES=	devel lang
 MASTER_SITES=	http://llvm.org/${PRE_}releases/${LLVM_RELEASE}/${RCDIR}
 DISTNAME=	${PORTNAME}-${DISTVERSION}.src
@@ -32,8 +33,8 @@ SUB_LIST=	LLVM_PREFIX="${LLVM_PREFIX}" LLVM_SUFFIX="${LLVM_SUFFIX}"
 CMAKE_INSTALL_PREFIX=	${LLVM_PREFIX}
 CMAKE_ARGS=
 
-OPTIONS_DEFINE=	CLANG DOCS EXTRAS GOLD LIT LLD LLDB
-OPTIONS_DEFINE_x86_64=	COMPILER_RT OPENMP
+OPTIONS_DEFINE=	CLANG DOCS EXTRAS LIT LLD LLDB
+OPTIONS_DEFINE_x86_64=	COMPILER_RT GOLD OPENMP
 OPTIONS_DEFINE_i386=	COMPILER_RT
 OPTIONS_DEFAULT=	CLANG EXTRAS LIT LLD
 OPTIONS_DEFAULT_x86_64=	GOLD OPENMP
@@ -182,6 +183,18 @@ COMMANDS+=	argdumper \
 _USES_PYTHON=	python
 .endif
 
+.if ! ${OPTIONS_DEFINE:MCOMPILER_RT}
+# Hack to disable COMPILER_RT in plist of unsupported architectures
+PLIST_SUB+=    COMPILER_RT="@comment "
+.else
+.endif
+
+.if ! ${OPTIONS_DEFINE:MGOLD}
+# Hack to disable GOLD in plist of unsupported architectures
+PLIST_SUB+=    GOLD="@comment "
+.else
+.endif
+
 .if ! ${OPTIONS_DEFINE:MOPENMP}
 # Hack to disable OPENMP in plist of unsupported architectures
 PLIST_SUB+=    OPENMP="@comment "
@@ -202,7 +215,7 @@ NOT_FOR_ARCH=	ia64
 
 .include <bsd.port.pre.mk>
 
-_CRTLIBDIR=    ${LLVM_PREFIX:S|${PREFIX}/||}/lib/clang/${LLVM_RELEASE}/lib
+_CRTLIBDIR=    ${LLVM_PREFIX:S|${PREFIX}/||}/lib/clang/${LLVM_RELEASE}/lib/freebsd
 .if ${ARCH} == "x86_64"
 _COMPILER_RT_LIBS= \
 	libclang_rt.asan-preinit-x86_64.a \
