@@ -1,0 +1,7 @@
+USES+= ncurses
+
+MAKE_ENV+= EXTRA_LDOPTIONS="-L${LOCALBASE}/lib"
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(terminfo curses\)@\1 ncurses@g'	\
+		${WRKSRC}/configure
