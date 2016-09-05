@@ -1,0 +1,11 @@
+--- configure.orig	2015-02-14 22:37:42.000000000 +0200
++++ configure
+@@ -16859,7 +16859,7 @@ fi
+ 
+ 
+ case $host in
+-  *-*-freebsd*)
++  *-*-freebsd*|*-*-dragonfly*)
+ 	 freebsd=true
+ 	 ;;
+   *)
