@@ -22,6 +22,8 @@ RUN_DEPENDS=	p5-Gtk2>=0:x11-toolkits/p5-Gtk2
 
 MAKE_JOBS_UNSAFE=	yes
 
+# blocked since 2010.  Remove to see if it works on all systems again
+#NO_PACKAGE=	Man page creation hangs on some systems for unknown reasons
 
 USES=		perl5
 USE_PERL5=	configure
