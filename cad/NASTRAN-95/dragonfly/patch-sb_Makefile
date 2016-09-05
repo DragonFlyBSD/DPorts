@@ -1,0 +1,14 @@
+Hardcoding gfortran versions we are? No? /usr/local too. No?
+Fix by contra patch of files/ one
+
+--- sb/Makefile.intermediate	2016-09-05 21:50:03 UTC
++++ sb/Makefile
+@@ -1,6 +1,6 @@
+ # Declaration of variables
+-FC = gfortran48
+-FFLAGS =  -O -fno-range-check -Wl,-rpath=/usr/local/lib/gcc48 -w -fno-range-check -fno-automatic -fcray-pointer -std=legacy 
++FC = %%FC%%
++FFLAGS =  %%FFLAGS%% -w -fno-range-check -fno-automatic -fcray-pointer -std=legacy 
+ 
+ # file names
+ EXEC=nastran.exe
