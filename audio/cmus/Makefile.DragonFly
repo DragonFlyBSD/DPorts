@@ -1,0 +1,5 @@
+
+#zrj: prevent passing -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 globally
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(NCURSES_CFLAGS=\).*@\1""@g'	\
+		${WRKSRC}/configure
