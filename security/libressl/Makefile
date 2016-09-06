@@ -24,7 +24,6 @@ CONFLICTS?=	libressl-devel-[0-9]* \
 		openssl-devel-[0-9]*
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--disable-silent-rules
 USES=		cpe libtool pathfix pkgconfig
 USE_LDCONFIG=	yes
 OPTIONS_SUB=	yes

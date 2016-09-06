@@ -1,0 +1,2 @@
+# let's see what is actually being compiled
+CONFIGURE_ARGS+= --disable-silent-rules
