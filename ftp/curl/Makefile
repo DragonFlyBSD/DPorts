@@ -19,7 +19,7 @@ OPTIONS_SINGLE=	GSSAPI
 OPTIONS_RADIO_RESOLV=	CARES THREADED_RESOLVER
 OPTIONS_RADIO_SSL=	GNUTLS NSS OPENSSL POLARSSL WOLFSSL
 OPTIONS_SINGLE_GSSAPI=	GSSAPI_BASE GSSAPI_HEIMDAL GSSAPI_MIT GSSAPI_NONE
-OPTIONS_DEFAULT=	CA_BUNDLE COOKIES OPENSSL PROXY RESOLV THREADED_RESOLVER TLS_SRP
+OPTIONS_DEFAULT=	CA_BUNDLE COOKIES OPENSSL PROXY RESOLV THREADED_RESOLVER
 CA_BUNDLE_DESC=		Install CA bundle for OpenSSL
 CA_BUNDLE_IMPLIES=	OPENSSL
 COOKIES_DESC=		Cookies support
@@ -31,12 +31,17 @@ RESOLV_DESC=		DNS resolving options
 THREADED_RESOLVER_DESC=	Threaded DNS resolver
 TLS_SRP_DESC=		TLS-SRP (Secure Remote Password) support
 
-.include <${.CURDIR}/../../Mk/bsd.default-versions.mk>
+OPTIONS_EXCLUDE=	GSSAPI_BASE
+OPTIONS_DEFAULT+=	GSSAPI_MIT
 
-.if ${SSL_DEFAULT} != base
-OPTIONS_DEFAULT+=	GSSAPI_NONE
+# SSL_DEFAULT only available here if defined in make.conf
+.if defined(SSL_DEFAULT) && ${SSL_DEFAULT:Nlibressl*}
+OPTIONS_DEFAULT+=	TLS_SRP
 .else
-OPTIONS_DEFAULT+=	GSSAPI_BASE
+# Maintain original option for pre-LibreSSL platforms
+.  if !exists(/usr/lib/priv/libprivate_ssl.so)
+OPTIONS_DEFAULT+=	TLS_SRP
+.  endif
 .endif
 
 CONFIGURE_ARGS+=--disable-werror \
@@ -139,7 +144,7 @@ TLS_SRP_CONFIGURE_ENABLE=	tls-srp
 WOLFSSL_CONFIGURE_WITH=	cyassl
 WOLFSSL_LIB_DEPENDS=	libwolfssl.so:security/wolfssl
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 .if !${PORT_OPTIONS:MGNUTLS} && !${PORT_OPTIONS:MOPENSSL} && ${PORT_OPTIONS:MTLS_SRP}
 IGNORE=		only supports TLS-SRP with either OpenSSL or GnuTLS
@@ -153,7 +158,7 @@ IGNORE=		only supports LDAPS with SSL
 IGNORE=		GSSAPI_BASE is not compatible with OpenSSL from ports. Use other GSSAPI options or OpenSSL from base system
 .endif
 
-.if ${SSL_DEFAULT} == libressl
+.if defined(SSL_DEFAULT) && ${SSL_DEFAULT:Mlibressl*}
 .if ${PORT_OPTIONS:MGSSAPI_BASE} && ${PORT_OPTIONS:MOPENSSL}
 IGNORE=		GSSAPI_BASE is not compatible with LibreSSL. Use other GSSAPI options
 .endif
@@ -189,4 +194,4 @@ pre-test-PROXY-off:
 	@${ECHO_MSG} "* This is being addressed.               *"
 	@${ECHO_MSG} "******************************************"
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
