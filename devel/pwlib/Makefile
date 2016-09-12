@@ -98,10 +98,6 @@ PLIST_SUB+=	DC1394="@comment "
 CFLAGS+=	-fPIC
 .endif
 
-.if (${ARCH} == "x86_64") || (${ARCH} == "i386") || (${ARCH} == "ia64") || (${ARCH} == "powerpc") || (${ARCH} == "sparc64")
-PLIST_SUB+=	BSDVIDEO=""
-.else
 PLIST_SUB+=	BSDVIDEO="@comment "
-.endif
 
 .include <bsd.port.post.mk>
