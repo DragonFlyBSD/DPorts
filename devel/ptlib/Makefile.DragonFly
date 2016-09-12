@@ -1,0 +1,2 @@
+BSDVIDEO_BROKEN=	bsdvideo plugin doesn't build on DragonFly
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NBSDVIDEO}
