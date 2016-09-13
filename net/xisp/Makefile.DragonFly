@@ -1,3 +1,0 @@
-USES+= alias
-
-CFLAGS+= -DUSE_OPENSSL
