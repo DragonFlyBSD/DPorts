@@ -1,1 +1,5 @@
-LDFLAGS+= -lcrypto
+# ridiculous hack needed for SSL_DEFAULT=base scenario (can't find -lcrypto)
+# We can't check SSL_DEFAULT without bsd.ports.pre.mk so just hardcode
+# it for all scenarios
+
+MAKE_ENV+= LDVER=ld.bfd
