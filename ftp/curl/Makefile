@@ -34,16 +34,6 @@ TLS_SRP_DESC=		TLS-SRP (Secure Remote Password) support
 OPTIONS_EXCLUDE=	GSSAPI_BASE
 OPTIONS_DEFAULT+=	GSSAPI_MIT
 
-# SSL_DEFAULT only available here if defined in make.conf
-.if defined(SSL_DEFAULT) && ${SSL_DEFAULT:Nlibressl*}
-OPTIONS_DEFAULT+=	TLS_SRP
-.else
-# Maintain original option for pre-LibreSSL platforms
-.  if !exists(/usr/lib/priv/libprivate_ssl.so)
-OPTIONS_DEFAULT+=	TLS_SRP
-.  endif
-.endif
-
 CONFIGURE_ARGS+=--disable-werror \
 		--enable-imap --enable-pop3 --enable-rtsp --enable-smtp \
 		--with-zsh-functions-dir=${LOCALBASE}/share/zsh/site-functions \
@@ -144,7 +134,17 @@ TLS_SRP_CONFIGURE_ENABLE=	tls-srp
 WOLFSSL_CONFIGURE_WITH=	cyassl
 WOLFSSL_LIB_DEPENDS=	libwolfssl.so:security/wolfssl
 
-.include <bsd.port.options.mk>
+.include <bsd.port.pre.mk>
+
+# SSL_DEFAULT only available here if defined in make.conf
+.if ${SSL_DEFAULT:Nlibressl*}
+OPTIONS_DEFAULT+=	TLS_SRP
+.else
+# Maintain original option for pre-LibreSSL platforms
+.  if !exists(/usr/lib/priv/libprivate_ssl.so)
+OPTIONS_DEFAULT+=	TLS_SRP
+.  endif
+.endif
 
 .if !${PORT_OPTIONS:MGNUTLS} && !${PORT_OPTIONS:MOPENSSL} && ${PORT_OPTIONS:MTLS_SRP}
 IGNORE=		only supports TLS-SRP with either OpenSSL or GnuTLS
@@ -158,7 +158,7 @@ IGNORE=		only supports LDAPS with SSL
 IGNORE=		GSSAPI_BASE is not compatible with OpenSSL from ports. Use other GSSAPI options or OpenSSL from base system
 .endif
 
-.if defined(SSL_DEFAULT) && ${SSL_DEFAULT:Mlibressl*}
+.if ${SSL_DEFAULT:Mlibressl*}
 .if ${PORT_OPTIONS:MGSSAPI_BASE} && ${PORT_OPTIONS:MOPENSSL}
 IGNORE=		GSSAPI_BASE is not compatible with LibreSSL. Use other GSSAPI options
 .endif
@@ -194,4 +194,4 @@ pre-test-PROXY-off:
 	@${ECHO_MSG} "* This is being addressed.               *"
 	@${ECHO_MSG} "******************************************"
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
