@@ -48,8 +48,6 @@ check-depends-ncurses:
 	@${FALSE}
 .  endif
 
-NCURSESRPATH=	/usr/lib:${LOCALBASE}/lib
-
 .elif ${ncurses_ARGS} == port
 NCURSESBASE=	${LOCALBASE}
 NCURSESINC=	${LOCALBASE}/include/ncurses

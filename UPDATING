@@ -5,6 +5,80 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20160914:
+  AFFECTS: users of www/nginx-devel
+  AUTHOR: osa@FreeBSD.org
+
+  Nginx now creates logs under /var/log/nginx/ and changes default log
+  names from "nginx-access.log" and "nginx-error.log" to "access.log" and
+  "error.log" respectively.  This is important for the error log because
+  the location is encoded and touched by nginx during startup regardless
+  of the configured location for the error log.
+
+  See http://trac.nginx.org/nginx/ticket/147 for additional information
+  on why this happens.
+
+20160914:
+  AFFECTS: users of deskutils/xfce4-volumed-pulse
+  AUTHOR: olivierd@FreeBSD.org
+
+  The port has been updated to the latest stable version 0.2.2.
+  Support of xfce4-mixer has been removed, so you can delete
+  its properties with the following command:
+
+  xfconf-query -c xfce4-mixer -p / -rR
+
+20160910:
+  AFFECTS: users of security/letsencrypt.sh
+  AUTHOR: riggs@FreeBSD.org
+
+  The config filename has been changed upstream from "config.sh"
+  to "config". Users must rename the current config file manually.
+  In addition, the default WELLKNOWN location has been changed to
+  %%PREFIX%%/www/letsencrypt. In order to use the previous default
+  location, the config file must be updated manually as well.
+
+20160907:
+  AFFECTS: users of math/galculator
+  AUTHOR: woodsb02@FreeBSD.org
+
+  galculator now uses GTK3 by default. An option exists in the port to revert
+  to GTK2 if desired.
+
+20160906:
+  AFFECTS: uses of www/nginx
+  AUTHOR: marino@FreeBSD.org
+
+  Nginx now creates logs under /var/log/nginx/ and changes default log
+  names from "nginx-access.log" and "nginx-error.log" to "access.log" and
+  "error.log" respectively.  This is important for the error log because
+  the location is encoded and touched by nginx during startup regardless
+  of the configured location for the error log.
+
+  See http://trac.nginx.org/nginx/ticket/147 for additional information
+  on why this happens.
+
+20160905:
+  AFFECTS: users of databases/postgresql96-server
+  AUTHOR: girgen@FreeBSD.org
+
+  The default unix user used by the PostgreSQL daemon has changed to
+  `postgres' to reflect the long time upstream's convention. Any scripts
+  you have using the old `pgsql' unix user should be modified when upgrading to
+  PostgreSQL version 9.6. Older versions of PostgreSQL will continue using
+  `pgsql' until their end-of-life.
+
+  For users with UTF-8 locales in the database: The ICU patch is *activated by
+  default* for the PostgreSQL-9.6 server. For previous versions it was optional
+  and default off, but this has changed. Please read the entry here below from
+  20160811 and understand the consequences of changing between ICU and system
+  locale for database collation (short version: don't). pg_upgrade requires the
+  collation method to be the same (or a reindex), while pg_dump/restore does not.
+
+  Also, the default home directory for the postgres user is now
+  /var/db/postgres, and the default data directory for PostgreSQL 9.6 is
+  /var/db/postgres/data96.
+
 20160829:
   AFFECTS: users of x11/nvidia-driver
   AUTHOR: cem@FreeBSD.org
@@ -1207,71 +1281,4 @@ you update your ports collection, before attempting any port upgrades.
       portmaster -w -r ffmpeg
   Portupgrade users:
       portupgrade -fr multimedia/ffmpeg
-
-20150916:
-  AFFECTS: users of graphics/jpeg
-  AUTHOR: antoine@FreeBSD.org
-
-  Default implementation of jpeg has been switched from graphics/jpeg to
-  graphics/jpeg-turbo.  To perform the upgrade, use instructions below.
-
-  If using binary packages: 'pkg upgrade' will do the right thing.  If it
-  doesn't and complains about 'Cannot solve problem using SAT solver', run
-  'pkg delete -f jpeg' before 'pkg upgrade'.
-
-  If using portmaster:
-  # portmaster -o graphics/jpeg-turbo jpeg
-
-  If using portupgrade:
-  # portupgrade -f -o graphics/jpeg-turbo graphics/jpeg
-
-  If you compile your ports and want to keep using IJG's jpeg implementation,
-  add this line to your /etc/make.conf file:
-  JPEG_PORT=graphics/jpeg
-
-20150914:
-  AFFECTS: users of lang/perl5*
-  AUTHOR: mat@FreeBSD.org
-
-  Binary package users can ignore this.
-
-  The way lang/perl5* ports install themselves has changed.  From now on, only
-  the default Perl port (currently 5.20), or the version listed in
-  DEFAULT_VERSIONS, will install /usr/local/bin/perl.
-
-  If you are NOT using the default version of Perl (as of right now, it is
-  5.20) you MUST add a line setting the version you are using to your
-  /etc/make.conf, to preserve /usr/local/bin/perl:
-
-  DEFAULT_VERSIONS+=	perl5=5.xx
-
-  If your Perl package name is not called perl5-5.xx.y but perl5.xx-5.xx.y,
-  you will need to rename it so that portupgrade and portmaster do not get
-  confused:
-
-    pkg set -n perl5.xx:perl5
-
-  After this date, to migrate from one Perl version to the other, you must
-  first put the DEFAULT_VERSIONS line in your make.conf, and then, for example,
-  if you want to move from 5.20 to 5.22, do:
-
-	pkg set -o lang/perl5.20:lang/perl5.22
-	portmaster `pkg shlib -qR libperl.so.5.20`
-
-  If you do not do that, you will replace your default Perl 5.20 installation
-  (one that has /usr/local/bin/perl) with an installation that does not have
-  /usr/local/bin/perl, and it will break everything.
-
-20150908:
-  AFFECTS: users of print/texlive-base
-  AUTHOR: hrs@FreeBSD.org
-
-  pdfclose and pdfopen utilities in print/texlive-base are now in a separate
-  port print/xpdfopen.  While upgrading print/texlive-base, a conflict may
-  occur between pdfclose utility installed by an old print/texlive-base and
-  one being installed by print/xpdfopen.  If it occurred on your system,
-  remove the installed print/texlive-base first by using the following
-  command:
-
-   # pkg delete -f texlive-base
 
