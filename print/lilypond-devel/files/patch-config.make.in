@@ -1,0 +1,11 @@
+--- config.make.in.orig	2016-08-30 10:23:53 UTC
++++ config.make.in
+@@ -67,7 +67,7 @@ sharedstatedir = @sharedstatedir@
+ stepmake = @stepmake@
+ 
+ package_datadir = $(datadir)/$(package)
+-package_infodir = $(infodir)/$(package)
++package_infodir = $(infodir)
+ package_libdir = $(libdir)/$(package)
+ package_docdir = $(docdir)/$(package)
+ package_omfdir = $(omfdir)/$(package)

@@ -1,0 +1,14 @@
+--- Documentation/GNUmakefile.orig	2016-08-30 10:23:53 UTC
++++ Documentation/GNUmakefile
+@@ -73,9 +73,9 @@ source-links = $(outdir)/source\
+ MAIN_INFO_DOC = lilypond-web
+ INFO_DOCS = lilypond-usage lilypond-changes lilypond-contributor lilypond-internals \
+  lilypond-essay lilypond-learning lilypond-notation music-glossary \
+- lilypond-web lilypond-extending
++ lilypond-web lilypond-extending lilypond-snippets internals
+ ifeq ($(out),www)
+-INFO_DOCS += lilypond-snippets
++INFO_DOCS += 
+ endif
+ INFO_FILES = $(INFO_DOCS:%=$(outdir)/%.info)
+ 
