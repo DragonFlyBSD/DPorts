@@ -5,7 +5,7 @@ PORTNAME=	uim
 PORTVERSION=	1.8.6
 PORTREVISION?=	2
 CATEGORIES?=	textproc
-MASTER_SITES=	GOOGLE_CODE
+MASTER_SITES=	https://github.com/uim/uim/releases/download/${PORTNAME}-${PORTVERSION}/
 .if !defined(UIM_SLAVE) && defined(WITHOUT_X11)
 PKGNAMESUFFIX=	-nox11
 .endif
