@@ -5,7 +5,8 @@ PORTNAME=	txt2tags
 PORTVERSION=	2.6
 PORTREVISION=	1
 CATEGORIES=	textproc
-MASTER_SITES=	GOOGLE_CODE
+MASTER_SITES=	https://launchpad.net/ubuntu/+archive/primary/+files/
+DISTNAME=	txt2tags_${PORTVERSION}.orig
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Convert simply formatted text into markup (e.g., HTML)
@@ -13,7 +14,7 @@ COMMENT=	Convert simply formatted text into markup (e.g., HTML)
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		python:2 shebangfix tar:tgz
+USES=		python:2 shebangfix
 SHEBANG_FILES=	extras/html-update.sh txt2tags
 NO_BUILD=	yes
 NO_ARCH=	yes
@@ -21,6 +22,7 @@ NO_ARCH=	yes
 PLIST_FILES=	bin/${PORTNAME}
 PORTDOCS=	*
 PORTEXAMPLES=	*
+WRKSRC=		${WRKDIR}/txt2tags-${PORTVERSION}
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
