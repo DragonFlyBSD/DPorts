@@ -2,9 +2,9 @@
 # $FreeBSD$
 
 PORTNAME=	inspircd
-PORTVERSION=	2.0.20
+PORTVERSION=	2.0.23
 DISTVERSIONPREFIX=	v
-PORTREVISION=	1
+PORTREVISION=	0
 CATEGORIES=	irc
 
 MAINTAINER=	feld@FreeBSD.org
@@ -33,7 +33,7 @@ SUB_LIST+=	PORTNAME=${PORTNAME} \
 		GROUPS=${GROUPS}
 
 # Configure script is written in perl
-USES=		cpe perl5
+USES=		cpe perl5 pkgconfig
 USE_PERL5=	build
 
 CPE_VENDOR=	inspire_ircd
@@ -114,10 +114,8 @@ PLIST_SUB+=	GNUTLS="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MOPENSSL}
-USES+=			pkgconfig
-USE_OPENSSL=		yes
-WITH_OPENSSL_PORT=	yes
-CONFIGURE_ARGS+=	--enable-freebsd-ports-openssl
+USES+=	ssl
+CONFIGURE_ARGS+=	--enable-openssl
 EXTRAS:=${EXTRAS},m_ssl_openssl.cpp
 PLIST_SUB+=	OPENSSL=""
 .else
