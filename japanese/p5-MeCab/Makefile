@@ -5,7 +5,7 @@ PORTNAME=	MeCab
 PORTVERSION=	0.996
 PORTREVISION=	2
 CATEGORIES=	japanese textproc perl5
-MASTER_SITES=	GOOGLE_CODE
+MASTER_SITES=	https://drive.google.com/uc?export=download&id=0B4y35FiV1wh7VUNlczBWVDZJbE0&dummy=/
 PROJECTHOST=	${PORTNAME:tl}
 DISTNAME=	${PORTNAME:tl}-perl-${PORTVERSION}
 
