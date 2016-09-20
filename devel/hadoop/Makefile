@@ -80,6 +80,8 @@ ALL_TARGET=	compile-core-native compile-c++ compile-c++-libhdfs compile-c++-pipe
 
 .include <bsd.port.pre.mk>
 
+# The ssl.mk helper can augment MAKE_ARGS and break the build.  Filter out
+# the OPENSSL_CFLAGS if it exists to prevent that from happening.
 MAKE_ARGS:=	${MAKE_ARGS:NOPENSSL_CFLAGS=*}
 
 .if ${ARCH} == "x86_64"
