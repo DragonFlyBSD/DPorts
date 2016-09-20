@@ -52,7 +52,7 @@ post-configure:
 	${REINPLACE_CMD} -e 's,tclstub,tcl,'	\
 		-e 's,-DPACKAGE_[^=]*=."[^"]*",,g' ${WRKSRC}/Makefile
 
-post-build test:
+test:
 	${SETENV} LANG=C HOME=${WRKDIR} ${MAKE_CMD} -C ${WRKSRC} test | ${AWK} '\
 		/Failed/ && $$NF {failed=1}	\
 		END {exit failed}	\
