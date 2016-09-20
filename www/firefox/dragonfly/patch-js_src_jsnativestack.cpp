@@ -1,6 +1,6 @@
---- js/src/jsnativestack.cpp.orig	2013-09-11 03:22:33.000000000 +0000
+--- js/src/jsnativestack.cpp.orig	2016-05-12 17:13:19 UTC
 +++ js/src/jsnativestack.cpp
-@@ -114,7 +114,8 @@ js::GetNativeStackBaseImpl()
+@@ -102,7 +102,8 @@ js::GetNativeStackBaseImpl()
      pthread_attr_init(&sattr);
  #  if defined(__OpenBSD__)
      stack_t ss;
