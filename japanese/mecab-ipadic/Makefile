@@ -5,7 +5,7 @@ PORTNAME=	mecab-ipadic
 DISTVERSION=	2.7.0-20070801
 PORTREVISION=	1
 CATEGORIES=	japanese textproc
-MASTER_SITES=	GOOGLE_CODE
+MASTER_SITES=	https://drive.google.com/uc?export=download&id=0B4y35FiV1wh7MWVlSDBCSXZMTXM&dummy=/
 PROJECTHOST=	mecab
 
 MAINTAINER=	yasu@utahime.org
