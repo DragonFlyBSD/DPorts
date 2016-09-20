@@ -1,3 +1,0 @@
-# Currently neither gcc50 or clang36 can build this
-
-USE_GCC=	NOT5
