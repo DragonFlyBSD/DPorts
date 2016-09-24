@@ -1,5 +1,6 @@
 # qt5-docs are highly unstable and currently don't build, remove this option
-OPTIONS_EXCLUDE=DOCS
+# qt5-examples requires qt5-docs DISTINFO file, so remove it as well
+OPTIONS_EXCLUDE=DOCS EXAMPLES
 
 # some conflict between qmljslexer_p.h and glslparsertable_p.h
 dfly-patch:
