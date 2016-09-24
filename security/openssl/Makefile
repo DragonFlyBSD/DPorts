@@ -2,16 +2,14 @@
 # $FreeBSD$
 
 PORTNAME=	openssl
-PORTVERSION=	1.0.2
-DISTVERSIONSUFFIX=	h
-PORTREVISION=	15
+PORTVERSION=	1.0.2i
 PORTEPOCH=	1
 CATEGORIES=	security devel
 MASTER_SITES=	http://www.openssl.org/source/ \
 		ftp://ftp.cert.dfn.de/pub/tools/net/openssl/source/
 DIST_SUBDIR=	${DISTNAME}
 
-MAINTAINER=	dinoex@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	SSL and crypto library
 
 LICENSE=	OpenSSL
@@ -19,11 +17,11 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 MAKE_JOBS_UNSAFE=	yes
 CPE_VERSION=	${PORTVERSION}${DISTVERSIONSUFFIX}
-CONFLICTS=	libressl-[0-9]* \
-		libressl-devel-[0-9]* \
-		openssl-devel-[0-9]*
+CONFLICTS_INSTALL=	libressl-[0-9]* \
+			libressl-devel-[0-9]* \
+			openssl-devel-[0-9]*
 
-OPTIONS_DEFINE=	SHARED THREADS SSE2 PADLOCK ZLIB SCTP SSL2 SSL3 RFC3779 MD2 RC5 EXPCIPHERS DOCS MAN3
+OPTIONS_DEFINE=	SHARED THREADS SSE2 ASM PADLOCK ZLIB SCTP SSL2 SSL3 RFC3779 MD2 RC5 EXPCIPHERS DOCS MAN3
 OPTIONS_DEFAULT=SHARED THREADS SSE2 SCTP SSL2 SSL3 MD2 MAN3
 OPTIONS_DEFINE_i386=	I386
 OPTIONS_DEFINE_x86_64=	EC
@@ -38,6 +36,7 @@ OPTIONS_DEFAULT_mips=	EC
 NO_OPTIONS_SORT=yes
 OPTIONS_SUB=	yes
 I386_DESC?=	Optimize for i386 (instead of i486+)
+ASM_DESC?=	optimized Assembler code
 SSE2_DESC?=	runtime SSE2 detection
 PADLOCK_DESC?=	VIA Padlock support
 SHARED_DESC?=	build of shared libs
@@ -84,7 +83,11 @@ EXTRACONFIGURE+=	386
 EXTRACONFIGURE+=	no-sse2
 .endif
 
+.if ${PORT_OPTIONS:MASM}
+BROKEN_sparc64=		option ASM generates illegal instructions
+.else
 EXTRACONFIGURE+=	no-asm
+.endif
 
 .if ${PORT_OPTIONS:MTHREADS}
 EXTRACONFIGURE+=	threads
@@ -166,7 +169,6 @@ pre-everything::
 	@${ECHO_CMD} "# please use DEFAULT_VERSIONS+= ssl=base instead."
 	@${ECHO_CMD} "#"
 	@${FALSE}
-
 .endif
 
 post-patch:
