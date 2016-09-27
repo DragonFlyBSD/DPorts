@@ -1,2 +1,7 @@
 OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NENIGMAIL}
 LDFLAGS+=		-R${PREFIX}/lib/seamonkey
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/^UNAME_RELEASE=/ \
+		s/^UNAME_RELEASE=.*/UNAME_RELEASE=${.MAKE.DF.OSREL}/' \
+		${WRKSRC}/mozilla/build/autoconf/config.guess
