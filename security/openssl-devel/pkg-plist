@@ -33,7 +33,6 @@ include/openssl/evp.h
 include/openssl/hmac.h
 include/openssl/kdf.h
 %%IDEA%%include/openssl/idea.h
-%%JPAKE%%include/openssl/jpake.h
 include/openssl/lhash.h
 %%MD2%%include/openssl/md2.h
 %%MD4%%include/openssl/md4.h
@@ -1506,7 +1505,10 @@ man/man3/OCSP_RESPBYTES_new.3.gz
 man/man3/OCSP_RESPDATA_free.3.gz
 man/man3/OCSP_RESPDATA_new.3.gz
 man/man3/OCSP_RESPID_free.3.gz
+man/man3/OCSP_RESPID_match.3.gz
 man/man3/OCSP_RESPID_new.3.gz
+man/man3/OCSP_RESPID_set_by_key.3.gz
+man/man3/OCSP_RESPID_set_by_name.3.gz
 man/man3/OCSP_RESPONSE_free.3.gz
 man/man3/OCSP_RESPONSE_new.3.gz
 man/man3/OCSP_REVOKEDINFO_free.3.gz
