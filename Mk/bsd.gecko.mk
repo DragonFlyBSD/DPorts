@@ -106,7 +106,7 @@ MOZSRC?=	${WRKSRC}
 WRKSRC?=	${WRKDIR}/mozilla
 PLISTF?=	${WRKDIR}/plist_files
 
-MOZ_OBJDIR?=	${WRKSRC}/obj-${ARCH:C/amd64/x86_64/}-unknown-${OPSYS:tl}${OSREL}
+MOZ_OBJDIR?=	${WRKSRC}/obj-${ARCH:C/amd64/x86_64/}-portbld-${OPSYS:tl}${.MAKE.DF.OSREL}
 
 MOZ_PIS_DIR?=		lib/${MOZILLA}/init.d
 

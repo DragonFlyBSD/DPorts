@@ -4712,3 +4712,17 @@ x11-toolkits/qtada||2016-09-13|Has expired: No development since 2012, usefulnes
 security/letsencrypt.sh|security/dehydrated|2016-09-13|Upstream renamed the project
 devel/py-dogpile.core|devel/py-dogpile.cache|2016-09-13|EOL upstream. Merged into devel/py-dogpile.cache since 0.6.0
 korean/imhangul||2016-09-15|Split into korean/imhangul-gtk2 and korean/imhangul-gtk3
+devel/poco-devel|devel/poco|2016-09-18|Has expired: older than stable devel/poco
+databases/pglogical-output|databases/pglogical|2016-09-22|databases/pglogical-output merged into databases/pglogical
+mail/gml||2016-09-23|Has expired: Deprecated upstream. Use native gmail tools to import
+net/nats|net/gnatsd|2016-09-24|Switched to upstream naming
+devel/py-unittest2||2016-09-26|Has expired: Was only required for Pythons lesser than 2.7
+graphics/evas_generic_loaders|devel/efl|2016-09-27|Merged into devel/efl
+graphics/evas_generic_loaders-gst|devel/efl|2016-09-27|Merged into devel/efl
+graphics/evas_generic_loaders-pdf|devel/efl|2016-09-27|Merged into devel/efl
+graphics/evas_generic_loaders-ps|devel/efl|2016-09-27|Merged into devel/efl
+graphics/evas_generic_loaders-raw|devel/efl|2016-09-27|Merged into devel/efl
+graphics/evas_generic_loaders-svg|devel/efl|2016-09-27|Merged into devel/efl
+graphics/evas_generic_loaders-xcf|devel/efl|2016-09-27|Merged into devel/efl
+multimedia/emotion_generic_players-vlc|devel/efl|2016-09-27|Merged into devel/efl
+x11-toolkits/elementary|devel/efl|2016-09-27|Merged into devel/efl

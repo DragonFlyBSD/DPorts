@@ -5,6 +5,52 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20160927:
+  AFFECTS: emulators/ppsspp
+  AUTHOR:  jbeich@FreeBSD.org
+
+  Qt* GUI was split into separate ports:
+
+      emulators/ppsspp-qt4
+      emulators/ppsspp-qt5
+
+20160927:
+  AFFECTS: sysutils/android-file-transfer
+  AUTHOR:  jbeich@FreeBSD.org
+
+  Qt* GUI was split into separate ports:
+
+      sysutils/android-file-transfer-qt4
+      sysutils/android-file-transfer-qt5
+
+20160922:
+  AFFECTS: users of databases/pglogical, databases/pglogical-output
+  AUTHOR:  matthew@FreeBSD.org
+
+  As of version 1.2.0, databases/pglogical-output has been merged into
+  databases/pglogical.  portmaster or portupgrade users should delete
+  pglogical-output manually before upgrading.
+
+20160921:
+  AFFECTS: users of mail/sieve-connect
+  AUTHOR: alexey@renatasystems.org
+
+  Version 0.88 contains two breaking changes:
+  1.  If the Sieve server does not offer STARTTLS, then connections should now
+      fail.
+  2.  When deriving a remote script name from the local filename, use the
+      basename and strip off directories.
+
+  For additional information see:
+  http://mail.globnix.net/pipermail/sieve-connect-announce/2016/000012.html
+
+20160919:
+  AFFECTS: users of net/vtun
+  AUTHOR: cy@FreeBSD.org
+
+  The VTUN_EXTENDED_MODE option has been replaced by -e command line
+  option.
+
 20160914:
   AFFECTS: users of www/nginx-devel
   AUTHOR: osa@FreeBSD.org
@@ -1259,26 +1305,4 @@ you update your ports collection, before attempting any port upgrades.
   Firefox since 41.0 and SeaMonkey since 2.38 require databases/sqlite3
   port built with DBSTAT option enabled (default). Re-run "make config"
   if the port(s) fail to build as described in ports/200853.
-
-20150921:
-  AFFECTS: users of mail/rspamd
-  AUTHOR: vsevolod@FreeBSD.org
-
-  rspamd has been updated to the version 1.0.
-  For migration from the previous releases, please read the following document:
-  https://rspamd.com/doc/migration.html
-
-20150919:
-  AFFECTS: users of multimedia/ffmpeg
-  AUTHOR: riggs@FreeBSD.org
-
-  ffmpeg has been updated to the version 2.8.
-  If you are using binary pkg, 'pkg upgrade' will do the right thing.
-  Users of portmaster/portupgrade must rebuild all ports which depend
-  on ffmpeg.
-
-  Portmaster users:
-      portmaster -w -r ffmpeg
-  Portupgrade users:
-      portupgrade -fr multimedia/ffmpeg
 
