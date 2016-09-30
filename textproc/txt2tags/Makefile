@@ -18,11 +18,11 @@ USES=		python:2 shebangfix
 SHEBANG_FILES=	extras/html-update.sh txt2tags
 NO_BUILD=	yes
 NO_ARCH=	yes
+WRKSRC=		${WRKDIR}/txt2tags-${PORTVERSION}
 
 PLIST_FILES=	bin/${PORTNAME}
 PORTDOCS=	*
 PORTEXAMPLES=	*
-WRKSRC=		${WRKDIR}/txt2tags-${PORTVERSION}
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
