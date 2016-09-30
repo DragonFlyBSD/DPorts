@@ -60,8 +60,7 @@ CONFIGURE_ARGS+=	--enable-${ZABBIX_BUILD} \
 .if ${ZABBIX_BUILD} != "agent"
 USES+=		execinfo
 
-CPPFLAGS+=	${EXECINFO_CPPFLAGS}
-LDFLAGS+=	${EXECINFO_LDFLAGS}
+CPPFLAGS+=	-I${LOCALBASE}/include
 
 SUB_FILES=	pkg-message
 
@@ -90,13 +89,13 @@ OPTIONS_SINGLE_ODBC=	IODBC UNIXODBC
 OPTIONS_SINGLE_SSL=	OPENSSL GNUTLS POLARSSL
 
 MYSQL_CONFIGURE_WITH=	mysql
-USES+=	mysql
+MYSQL_USES+=	mysql
 
 PGSQL_CONFIGURE_WITH=	postgresql
-USES+=	pgsql
+PGSQL_USES+=	pgsql
 
 SQLITE_CONFIGURE_WITH=	sqlite3
-USES+=	sqlite:3
+SQLITE_USES+=	sqlite:3
 
 ORACLE_CONFIGURE_WITH=	oracle
 
@@ -150,7 +149,7 @@ POLARSSL_LIB_DEPENDS=	libmbedtls.so:security/polarssl13
 .include <bsd.port.pre.mk>
 
 .if ${SSL_DEFAULT} == base
-IGNORE_FreeBSD_9=	Requires newer OpenSSL (set SSL_DEFAULT=openssl)
+IGNORE_FreeBSD_9=	Requires newer OpenSSL (set DEFAULT_VERSIONS+=ssl=openssl)
 .endif
 
 .if ${SSL_DEFAULT:Mlibressl*}
