@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $FreeBSD: head/net-im/tox/files/tox-bootstrapd.in 370885 2014-10-14 20:55:19Z thierry $
+# $FreeBSD: head/net-im/tox/files/tox-bootstrapd.in 422827 2016-09-27 19:49:31Z thierry $
 #
 
 # PROVIDE: tox_bootstrapd
@@ -27,7 +27,7 @@ pidfile=${tox_bootstrapd_pidfile:="$_pidprefix/tox-bootstrapd.pid"}
 long_name="Tox DHT bootstrap daemon."
 tox_bootstrapd_user="%%TOXDHT%%"
 command="%%PREFIX%%/bin/tox-bootstrapd"
-command_args="${tox_bootstrapd_config}"
+command_args="--config ${tox_bootstrapd_config}"
 
 stop_cmd=${name}_stop
 
