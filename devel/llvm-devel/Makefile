@@ -80,7 +80,7 @@ OPENMP_GH_PROJECT=	openmp:openmp
 OPENMP_GH_TAGNAME=	${OPENMP_COMMIT}:openmp
 GOLD_DESC=		Build the LLVM Gold plugin for LTO
 GOLD_CMAKE_ON=		-DLLVM_BINUTILS_INCDIR=${LOCALBASE}/include
-GOLD_BUILD_DEPENDS=	ld.gold:devel/binutils
+GOLD_BUILD_DEPENDS=	${LOCALBASE}/bin/ld.gold:devel/binutils
 
 OPTIONS_SUB=	yes
 
