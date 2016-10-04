@@ -186,6 +186,8 @@ SUB_LIST+=	NOBASE="@comment " BASE=""
 
 PKGDEINSTALL=	${PKGINSTALL}
 
+MAKE_JOBS_UNSAFE=	yes
+
 PORTDOCS=	*
 
 .include <bsd.port.pre.mk>
