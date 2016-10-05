@@ -1,0 +1,2 @@
+LIB_DEPENDS:=	${LIB_DEPENDS:N*libunwind}
+PLIST_FILES+=	share/doc/gperftools/heap_checker.html
