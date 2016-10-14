@@ -4544,7 +4544,6 @@ math/libneural||2016-07-04|Has expired: Broken for more than 6 months
 math/open-axiom||2016-07-04|Has expired: Broken for more than 6 months
 irc/nefarious||2016-07-04|Has expired: Broken for more than 6 months
 irc/slirc||2016-07-04|Has expired: Broken for more than 6 months
-irc/ratbox-respond||2016-07-04|Has expired: Broken for more than 6 months
 irc/qwebirc||2016-07-04|Has expired: Broken for more than 6 months
 biology/platon||2016-07-04|Has expired: Broken for more than 6 months
 news/slnr||2016-07-04|Has expired: Broken for more than 6 months
@@ -4580,7 +4579,6 @@ mail/mailtray||2016-07-04|Has expired: Broken for more than 6 months
 mail/pflogstats||2016-07-04|Has expired: Broken for more than 6 months
 mail/exact||2016-07-04|Has expired: Broken for more than 6 months
 mail/wmpop3||2016-07-04|Has expired: Broken for more than 6 months
-mail/qmail-conf||2016-07-04|Has expired: Broken for more than 6 months
 mail/gld||2016-07-04|Has expired: Broken for more than 6 months
 mail/dsbl-testers||2016-07-04|Has expired: Broken for more than 6 months
 mail/vqregister||2016-07-04|Has expired: Broken for more than 6 months
@@ -4728,3 +4726,34 @@ multimedia/emotion_generic_players-vlc|devel/efl|2016-09-27|Merged into devel/ef
 x11-toolkits/elementary|devel/efl|2016-09-27|Merged into devel/efl
 devel/google-sparsehash|devel/sparsehash|2016-09-30|Moved to GitHub under a different name
 games/fgrun||2016-09-30|Incompatible with latest flightgear
+math/why3-spark||2016-09-30|Has expired: Only useful for deprecated lang/spark
+lang/spark||2016-09-30|Has expired: Broken for more than 6 months
+math/alt-ergo-spark||2016-09-30|Has expired: Only useful for deprecate lang/spark
+security/nessus-libnasl||2016-09-30|Has expired: Abandoned, consider using OpenVAS
+security/nessus||2016-09-30|Has expired: Abandoned, consider using OpenVAS
+security/nessus-libraries||2016-09-30|Has expired: Abandoned, consider using OpenVAS
+security/nessus-plugins||2016-09-30|Has expired: Abandoned, consider using OpenVAS
+www/node010||2016-10-01|Has expired: Upstream has placed 0.10.x in maintenance mode, see https://github.com/nodejs/LTS
+databases/postgresql91-contrib||2016-10-01|Has expired: End-of-life is near
+databases/postgresql91-plpython||2016-10-01|Has expired: End-of-life is near
+databases/postgresql91-plperl||2016-10-01|Has expired: End-of-life is near
+databases/postgresql91-pltcl||2016-10-02|Has expired: End-of-life is near
+databases/postgresql91-docs||2016-10-02|Has expired: End-of-life is near
+www/mediawiki125||2016-10-02|Has expired: EOL upstream
+graphics/opencv|graphics/opencv2|2016-10-03|Renamed
+graphics/opencv-core|graphics/opencv2-core|2016-10-03|Renamed
+graphics/opencv-java|graphics/opencv2-java|2016-10-03|Renamed
+graphics/py-opencv|graphics/py-opencv2|2016-10-03|Renamed
+databases/postgresql91-client||2016-10-03|Has expired: End-of-life is near
+databases/postgresql91-pgtcl||2016-10-03|Has expired: Depends on expired PostgreSQL 9.1
+databases/postgresql91-server||2016-10-03|Has expired: End-of-life is near
+databases/postgresql-pllua||2016-10-03|Has expired: Depends on expired PostgreSQL 9.1
+multimedia/kvazaar-devel|multimedia/kvazaar|2016-10-05|Out of date: use multimedia/kvazaar for now
+emulators/virtualbox-ose-lite|emulators/virtualbox-ose-nox11|2016-10-05|Renamed
+audio/squeezeboxserver|audio/logitechmediaserver|2016-10-05|Squeezebox Server renamed to Logitech Media Server
+audio/squeezeboxserver-dynamicplaylist|audio/logitechmediaserver-dynamicplaylist|2016-10-05|Squeezebox Server renamed to Logitech Media Server
+audio/squeezeboxserver-lazysearch|audio/logitechmediaserver-lazysearch|2016-10-05|Squeezebox Server renamed to Logitech Media Server
+audio/squeezeboxserver-sqlplaylist|audio/logitechmediaserver-sqlplaylist|2016-10-05|Squeezebox Server renamed to Logitech Media Server
+audio/squeezeboxserver-superdatetime|audio/logitechmediaserver-superdatetime|2016-10-05|Squeezebox Server renamed to Logitech Media Server
+audio/squeezeboxserver-trackstat|audio/logitechmediaserver-trackstat|2016-10-05|Squeezebox Server renamed to Logitech Media Server
+net/py-uritemplate.py|net/py-uritemplate|2016-10-12|Upstream has consolidated on net/py-uritemplate

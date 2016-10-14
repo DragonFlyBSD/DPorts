@@ -5,6 +5,59 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20161011:
+  AFFECTS: Users of net-im/ejabberd
+  AUTHOR: ashish@FreeBSD.org
+
+  Before upgrading ejabberd to 16.09, please make sure to backup your 
+  ejabberd data using:
+ 
+     % sudo -u ejabberd -H ejabberdctl backup /path/to/backup/file
+
+  In some cases, ejabberd may fail to start, for which a workaround is to 
+  remove the schema.DAT file from /var/spool/ejabberd before starting, and
+  then restoring everything from the backup using:
+     
+     % sudo -u ejabberd -H ejabberdctl restore /path/to/backup/file
+
+  For more details:
+
+  https://github.com/processone/ejabberd/issues/1305
+
+20161005:
+  AFFECTS: Users of audio/squeezeboxserver (now audio/logitechmediaserver)
+  AUTHOR: woodsb02@FreeBSD.org
+
+  With the rename of the audio/squeezeboxserver port to
+  audio/logitechmediaserver, the server and database are now installed in
+  different locations by default (/usr/local/share/logitechmediaserver and
+  /var/db/logitechmediaserver respectively).
+
+  If you were an existing user of audio/squeezeboxserver, you should
+  consider backing up you server configuration files and database before
+  upgrading to audio/logitechmediaserver. If you wish to override the
+  default locations for storing the server and database, you can set the
+  SLIMDIR and SLIMDBDIR variables in your /etc/make.conf when building
+  the audio/logitechmediaserver port.
+
+20161004:
+  AFFECTS: mail/roundcube-carddav
+  AUTHOR:  gahr@FreeBSD.org
+
+  There is no upgrade path from the 1.0 version. You'll need to:
+
+  1. Log off from Roundcube.
+  2. Manually drop all carddav_* tables from your db backend.
+  3. Upgrade the mail/roundcube-carddav port.
+
+  The new tables will be created upon login. The CardDAV plugin will need to be
+  reconfigured.
+
+  If you are running php < 7.0.0, you'll need to set the plugin option:
+  $prefs['_GLOBAL']['suppress_version_warning'] = true;
+
+  See https://github.com/blind-coder/rcmcarddav/issues/165 for details.
+
 20160927:
   AFFECTS: emulators/ppsspp
   AUTHOR:  jbeich@FreeBSD.org
@@ -1266,43 +1319,4 @@ you update your ports collection, before attempting any port upgrades.
         WITH_SUBVERSION_VER=18
 
   to your /etc/make.conf
-
-20151013:
-  AFFECTS: users of security/sshguard-ipfw
-  AUTHOR: feld@FreeBSD.org
-
-  The sshguard update to 1.6.2 introduces a rewritten IPFW backend. The
-  previous approach was to insert individual block rules with a
-  predefined  numbered range. This does not scale well and is not
-  flexible so the design was scrapped. The new approach utilizes IPFW
-  tables. The sshguard IPFW backend now inserts offenders into hardcoded
-  table 22.
-
-  To continue blocking the attackers effectively you will need to add a
-  block rule like the following:
-
-  ipfw add deny all from 'table(22)' to any
-
-  The release announcement can be found here:
-    http://sourceforge.net/p/sshguard/mailman/message/34534861/
-
-20151011:
-  AFFECTS: users of emulators/qemu-sbruno, emulators/qemu-user-static
-  AUTHOR: sbruno@FreeBSD.org
-
-  The Jemalloc update at svn r286871 introduced some TLS enhancements
-  for MIPS targets that require a bit of workaround.  Users who want
-  to build MIPS packages should update their host systems past r286871
-  prior to upgrading their qemu-user-static/qemu-sbruno ports.
-
-  Discussion about this can be found here:
-    https://lists.freebsd.org/pipermail/freebsd-mips/2015-October/004018.html
-
-20151006:
-  AFFECTS: users of www/firefox, www/seamonkey
-  AUTHOR: gecko@FreeBSD.org
-
-  Firefox since 41.0 and SeaMonkey since 2.38 require databases/sqlite3
-  port built with DBSTAT option enabled (default). Re-run "make config"
-  if the port(s) fail to build as described in ports/200853.
 
