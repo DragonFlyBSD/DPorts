@@ -15,9 +15,9 @@
 +    $as_echo "#define HAVE_SOCKLEN_T 1" >>confdefs.h
 +
 +    CFLAGS="$CFLAGS $(DSO_CFLAGS) -ansi -Wall"
-+    if test -z "$MOZILLA_CLIENT"; then
-+        DLL_SUFFIX=so.1
-+    fi
++    
++    
++    
 +    MKSHLIB='$(CC) $(DSO_LDOPTS) -o $@'
 +    DSO_CFLAGS=-fPIC
 +    DSO_LDOPTS='-shared -Wl,-soname -Wl,$(notdir $@)'
