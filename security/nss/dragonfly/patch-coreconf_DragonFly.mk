@@ -42,7 +42,7 @@
 +
 +ARCH			= freebsd
 +MOZ_OBJFORMAT		= elf
-+DLL_SUFFIX		= so.1
++DLL_SUFFIX		= so
 +
 +MKSHLIB			= $(CC) $(DSO_LDOPTS)
 +ifdef MAPFILE
