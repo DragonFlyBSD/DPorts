@@ -2,11 +2,11 @@
 # $FreeBSD$
 
 PORTNAME=	extra-cmake-modules
-PORTVERSION=	5.26.0
+PORTVERSION=	5.27.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	devel
 
-MAINTAINER=	yuri@rawbw.com
+MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Extra modules and scripts for CMake
 
 LICENSE=	BSD3CLAUSE
