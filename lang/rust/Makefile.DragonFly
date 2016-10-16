@@ -6,7 +6,7 @@ CONFIGURE_ENV+=	CFG_DISABLE_LIBCPP=1
 
 PKGAREA?=	/build/boomdata/data/packages/bleeding-edge-potential/All
 LASTBUILT=	${PKGAREA}/${PKGNAME}.txz
-STRAPNAME=	${PKGNAME}-${ARCH}-unknown-${OPSYS:tl}
+STRAPNAME=	rustc-${PKGVERSION}-${ARCH}-unknown-${OPSYS:tl}
 XRC=		/tmp/explode/usr/local
 
 dfly-bootstrap:
