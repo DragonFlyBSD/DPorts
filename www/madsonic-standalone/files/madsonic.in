@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/www/madsonic-standalone/files/madsonic.in 420614 2016-08-22 13:27:51Z jlh $
+# $FreeBSD: head/www/madsonic-standalone/files/madsonic.in 423413 2016-10-06 16:04:52Z jlh $
 #
 
 # PROVIDE: subsonic
@@ -74,7 +74,7 @@ if checkyesno madsonic_ssl; then
 	fi
 fi
 
-start_precmd="export LC_CTYPE='UTF-8'"
+start_precmd="export LC_CTYPE='en_US.UTF-8'"
 madsonic_chdir="%%DATADIR%%"
 command="/usr/sbin/daemon"
 command_args="-f ${procname} \
