@@ -1,5 +1,5 @@
 # Created by: James Bailie <jimmy@mammothcheese.ca>
-# $FreeBSD: head/www/drood/Makefile 422873 2016-09-28 13:35:08Z mat $
+# $FreeBSD$
 
 PORTNAME=	drood
 PORTVERSION=	5.37
