@@ -1,8 +1,5 @@
-#USE_GCC=	NOT5
-CFLAGS+= -fno-builtin-malloc # yay it is still needed :D (calloc opt)
-
 OPTIONS_DEFINE+=	GNULS
-OPTIONS_DEFAULT+=	GNULS
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NACL} GNULS
 
 GNULS_DESC=		Use gnu ls 'gls' for --dired flag support
 GNULS_EXTRA_PATCHES_OFF=	${FILESDIR}/../dragonfly/extra-ls_lisp_dired.el
