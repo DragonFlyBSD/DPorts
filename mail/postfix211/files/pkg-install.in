@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$FreeBSD: /tmp/pcvs/ports/mail/postfix/files/pkg-install.in,v 1.6 2012-02-11 05:14:34 sahil Exp $
+#	$FreeBSD: head/mail/postfix211/files/pkg-install.in 423107 2016-10-02 09:22:09Z ohauer $
 #
 
 # If the POSTFIX_DEFAULT_MTA environment variable is set to YES, it
