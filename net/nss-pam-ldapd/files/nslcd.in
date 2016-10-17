@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net/nss-pam-ldapd/files/nslcd.in 391305 2015-07-04 12:48:52Z ohauer $
+# $FreeBSD: head/net/nss-pam-ldapd/files/nslcd.in 423225 2016-10-03 20:52:58Z zi $
 #
 # PROVIDE: nslcd
 # REQUIRE: NETWORKING ldconfig resolv
@@ -23,6 +23,7 @@ load_rc_config ${name}
 : ${nslcd_supervisor=NO}
 
 command="/usr/sbin/daemon";
+pidfile="%%NSLCD_PIDFILE%%"
 start_precmd=nslcd_prestart
 start_cmd=nslcd_start
 status_cmd=nslcd_status
