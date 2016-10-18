@@ -1,0 +1,10 @@
+--- src/3rdParty/salomesmesh/CMakeLists.txt.orig	2016-09-27 17:42:46 UTC
++++ src/3rdParty/salomesmesh/CMakeLists.txt
+@@ -198,6 +198,7 @@ if(WIN32)
+ endif(WIN32)
+ 
+ 
++TARGET_LINK_LIBRARIES(DriverSTL execinfo)
+ #TARGET_LINK_LIBRARIES(DriverSTL TKernel TKMath Driver SMDS)
+ #IF(WIN32)
+ #  SET_TARGET_PROPERTIES(DriverSTL PROPERTIES COMPILE_FLAGS "-DMESHDRIVERSTL_EXPORTS")
