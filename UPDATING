@@ -5,6 +5,18 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20161018:
+  AFFECTS: users of x11/xfce4-terminal
+  AUTHOR: olivierd@FreeBSD.org
+
+  The port has been updated to the latest stable version 0.8.0.
+  A warning appears each time we open new tab:
+
+  Gtk-WARNING **: gtk_widget_size_allocate(): attempt to allocate
+  widget with...
+
+  This issue will disappear with Gtk > 3.21.
+
 20161014:
   AFFECTS: users of lang/python3
   AUTHOR: antoine@FreeBSD.org
@@ -1316,21 +1328,4 @@ you update your ports collection, before attempting any port upgrades.
   using multiple -a arguments. In rc.conf it would look like this:
 
   varnishd_listen="x.x.x.x:80 -a y.y.y.y:80"
-
-20151015:
-  AFFECTS: users of devel/subversion, its bindings and www/mod_dav_svn
-  AUTHOR: lev@FreeBSD.org
-
-  The subversion upgdate to 1.9 branch introduces new "old" subversion
-  port devel/subversion18.
-
-  If you don't want to update your subversion installation, run
-
-        pkg set -n subversion:subversion18
-
-  and add
-
-        WITH_SUBVERSION_VER=18
-
-  to your /etc/make.conf
 
