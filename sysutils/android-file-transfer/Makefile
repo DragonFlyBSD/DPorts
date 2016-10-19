@@ -16,7 +16,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	whoozle
 GH_PROJECT=	${PORTNAME}-linux
 
-USES=		cmake compiler:c++11-lib localbase pkgconfig
+USES=		cmake compiler:c++11-lib localbase:ldflags pkgconfig
 CMAKE_ARGS=	-DUSB_BACKEND_LIBUSB=on -DBUILD_QT_UI=off
 
 OPTIONS_DEFAULT=CLI FUSE
@@ -24,7 +24,7 @@ OPTIONS_MULTI=	COMP
 OPTIONS_MULTI_COMP=	CLI FUSE
 OPTIONS_RADIO=	GUI
 OPTIONS_RADIO_GUI=	QT4 QT5
-OPTIONS_EXCLUDE?=${OPTIONS_RADIO_GUI}
+OPTIONS_EXCLUDE:=	${OPTIONS_EXCLUDE} ${OPTIONS_RADIO_GUI}
 # XXX http://lists.dragonflybsd.org/pipermail/users/2016-September/313064.html
 OPTIONS_EXCLUDE_DragonFly=	FUSE
 
