@@ -313,7 +313,7 @@ readmes: readme
 
 .if !target(readme)
 readme:
-	@${RM} -f README.html
+	@${RM} README.html
 	@${MAKE} README.html
 .endif
 
@@ -355,7 +355,7 @@ README.html:
 			-e '/%%SUBDIR%%/r$@.tmp2' \
 			-e '/%%SUBDIR%%/d' \
 		> $@
-	@${RM} -f $@.tmp $@.tmp2 $@.tmp3 $@.tmp4
+	@${RM} $@.tmp $@.tmp2 $@.tmp3 $@.tmp4
 
 # Pass in the cached invariant variables to child makes.
 .if !defined(NOPRECIOUSMAKEVARS)
