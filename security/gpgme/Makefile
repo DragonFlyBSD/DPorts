@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gpgme
-PORTVERSION=	1.7.0
+PORTVERSION=	1.7.1
 PORTREVISION?=	0
 CATEGORIES?=	security
 MASTER_SITES=	GNUPG/gpgme
@@ -60,12 +60,13 @@ INSTALL_WRKSRC=	${WRKSRC}/lang/${BINDING_NAME}
 
 .  if ${SLAVEPORT} == "cpp"
 CONFIGURE_ARGS+=--enable-languages="cpp"
+USES+=		compiler:c++11-lang
 .  endif
 
 .  if ${SLAVEPORT} == "qt5"
 LIB_DEPENDS+=	libgpgmepp.so:security/gpgme-cpp
 CONFIGURE_ARGS+=--enable-languages="cpp qt"
-USES+=		pkgconfig
+USES+=		compiler:c++11-lang pkgconfig
 USE_QT5=	buildtools_build core testlib
 CONFLICTS_INSTALL=	kdepimlibs-4.*
 .  endif
@@ -86,6 +87,12 @@ CONFLICTS_INSTALL=	py*-pyme-[0-9]*
 .include <bsd.port.pre.mk>
 
 .if defined(SLAVEPORT)
+.  if (${SLAVEPORT} == "cpp" || ${SLAVEPORT} == "qt5")
+.    if ${OPSYS} == FreeBSD && ${OSVERSION} < 1001000
+BUILD_DEPENDS+=	${LOCALBASE}/lib/c++/libstdc++.so:devel/libc++
+CXXFLAGS+=	-stdlib=libc++ -I${LOCALBASE}/include/c++/v1
+.    endif
+.  endif
 .  if ${SLAVEPORT} == "python"
 .    if ${PYTHON_REL} >= 3000
 CONFIGURE_ARGS+=--enable-languages="python3"
