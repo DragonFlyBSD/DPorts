@@ -3,7 +3,7 @@
 
 PORTNAME=	gnome-contacts
 PORTVERSION=	3.18.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 
@@ -46,19 +46,14 @@ MAKE_ENV=	XDG_CACHE_HOME=${WRKDIR}
 GLIB_SCHEMAS=	org.gnome.Contacts.enums.xml \
 		org.gnome.Contacts.gschema.xml
 
-CHEESE_DESC=	Cheese webcam support
-
 OPTIONS_SUB=	yes
 OPTIONS_DEFINE=	MANPAGES NLS
 OPTIONS_DEFAULT=MANPAGES
 
 OPTIONS_DEFINE_i386=	CHEESE
-OPTIONS_DEFAULT_i386=	CHEESE
 OPTIONS_DEFINE_x86_64=	CHEESE
+OPTIONS_DEFAULT_i386=	CHEESE
 OPTIONS_DEFAULT_x86_64=	CHEESE
-
-CHEESE_CONFIGURE_WITH=	cheese
-CHEESE_LIB_DEPENDS=	libcheese-gtk.so:multimedia/cheese
 
 MANPAGES_CONFIGURE_ENABLE=	man-pages
 MANPAGES_USE=		GNOME=libxslt:build
@@ -68,5 +63,12 @@ MANPAGES_BUILD_DEPENDS=	docbook-xml>=0:textproc/docbook-xml \
 NLS_CONFIGURE_ENABLE=   nls
 NLS_USES=       gettext
 
+CHEESE_DESC=		Cheese webcam support
+CHEESE_CONFIGURE_WITH=	cheese
+CHEESE_LIB_DEPENDS=	libcheese-gtk.so:multimedia/cheese
+
+post-patch:
+	# touch vala sources to force regen c sources to honor cheese setting
+	${TOUCH} ${WRKSRC}/src/main.vala ${WRKSRC}/src/contacts-avatar-dialog.vala
 
 .include <bsd.port.mk>

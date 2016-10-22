@@ -1,7 +1,1 @@
-.undef OPTIONS_DEFAULT_x86_64
-
-CONFIGURE_ARGS+= --with-cheese=no
-
-# zrj: touch vala sources to force regen c sources to *not* include CHEESE
-dfly-patch:
-	${TOUCH} ${WRKSRC}/src/main.vala ${WRKSRC}/src/contacts-avatar-dialog.vala
+OPTIONS_DEFAULT_x86_64:=	${OPTIONS_DEFAULT_x86_64:NCHEESE}
