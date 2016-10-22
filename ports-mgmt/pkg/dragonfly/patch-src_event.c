@@ -1,6 +1,18 @@
---- src/event.c.orig	2016-06-25 11:35:01 UTC
+--- src/event.c.orig	2016-10-15 20:59:04 UTC
 +++ src/event.c
-@@ -573,6 +573,7 @@ event_callback(void *data, struct pkg_ev
+@@ -524,7 +524,10 @@ draw_progressbar(int64_t current, int64_
+ 
+ 			humanize_number(buf, sizeof(buf),
+ 			    current,"B", HN_AUTOSCALE, HN_IEC_PREFIXES);
+-			printf(" %*s", (int)sizeof(buf), buf);
++			if (current < 1000)
++				printf(" %*s  ", (int)sizeof(buf) - 2, buf);
++			else
++				printf(" %*s", (int)sizeof(buf), buf);
+ 
+ 			if (bytes_left > 0)
+ 				format_rate_SI(buf, sizeof(buf), transferred);
+@@ -580,6 +583,7 @@ event_callback(void *data, struct pkg_ev
  	int *debug = data, i;
  	struct pkg_event_conflict *cur_conflict;
  	const char *filename, *reponame;
@@ -8,7 +20,7 @@
  
  	if (msg_buf == NULL) {
  		msg_buf = sbuf_new_auto();
-@@ -630,9 +631,12 @@ event_callback(void *data, struct pkg_ev
+@@ -637,9 +641,12 @@ event_callback(void *data, struct pkg_ev
  			 */
  			filename = ev->e_fetching.url;
  		}
