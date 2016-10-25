@@ -1,4 +1,4 @@
-USES+= gettext localbase
+USES+= gettext localbase:ldflags
 LDFLAGS+= -lintl
 
 # zrj: ncurses is not used on ddate
