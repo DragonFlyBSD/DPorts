@@ -3,6 +3,7 @@
 
 PORTNAME=	openssl
 PORTVERSION=	1.0.2j
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	security devel
 MASTER_SITES=	http://www.openssl.org/source/ \
@@ -130,7 +131,7 @@ post-patch:
 
 post-patch-MAN3-off:
 	${GREP} -L openssl_manual_section ${WRKSRC}/doc/crypto/*.pod | ${XARGS} ${RM}
-	${RM} -rf ${WRKSRC}/doc/ssl/*.pod
+	${RM} -r ${WRKSRC}/doc/ssl/*.pod
 	${REINPLACE_CMD} -e 's|pod doc/ssl/\*\.pod|pod|' ${WRKSRC}/Makefile.org
 
 do-configure:
