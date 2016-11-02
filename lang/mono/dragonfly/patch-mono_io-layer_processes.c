@@ -1,16 +1,16 @@
---- mono/io-layer/processes.c.orig	2015-11-12 11:00:29.000000000 +0200
+--- mono/io-layer/processes.c.orig	2016-10-11 12:53:47 UTC
 +++ mono/io-layer/processes.c
-@@ -55,7 +55,9 @@
+@@ -68,7 +68,9 @@
  #endif
  
- #if defined(PLATFORM_MACOSX) || defined(__OpenBSD__) || defined(__FreeBSD__)
+ #if defined(USE_OSX_LOADER) || defined(USE_BSD_LOADER)
 +#ifndef __DragonFly__
  #include <sys/proc.h>
 +#endif
  #include <sys/sysctl.h>
  #  if !defined(__OpenBSD__)
  #    include <sys/utsname.h>
-@@ -1929,8 +1931,13 @@ get_process_name_from_proc (pid_t pid)
+@@ -1951,8 +1953,13 @@ get_process_name_from_proc (pid_t pid)
  		return(ret);
  	}
  
@@ -24,13 +24,3 @@
  	free(pi);
  #elif defined(__OpenBSD__)
  	mib [0] = CTL_KERN;
-@@ -1963,6 +1970,9 @@ retry:
- #if defined(__OpenBSD__)
- 	if (strlen (pi->p_comm) > 0)
- 		ret = g_strdup (pi->p_comm);
-+#elif defined(__DragonFly__)
-+	if (strlen (pi->kp_comm) > 0)
-+		ret = g_strdup (pi->kp_comm);
- #elif defined(__FreeBSD__)
- 	if (strlen (pi->ki_comm) > 0)
- 		ret = g_strdup (pi->ki_comm);
