@@ -22,7 +22,10 @@ GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
 USE_LDCONFIG=	yes
 USES=		autoreconf libtool
+USES+=		ssl
+LDFLAGS+=	-lcrypto
 
+FILESDIR=	${.CURDIR}/does-not-exist
 SHEBANG_FILES=	test_jbig2dec.py
 python_CMD=	${PYTHON_CMD}
 
@@ -33,14 +36,7 @@ TESTS_DISTFILES=	jb2streams${EXTRACT_SUFX}:tests
 TESTS_TEST_TARGET=	check-TESTS
 TESTS_USES=		python:build shebangfix
 
-post-patch:
-	@${RM} ${WRKSRC}/getopt* ${WRKSRC}/sha1.h
-	@${REINPLACE_CMD} -E 's|SHA1_Final\( *([^,]+), *([^\)]+)\)|SHA1_Final(\2, \1)|' ${WRKSRC}/jbig2dec.c ${WRKSRC}/sha1.c
-
 post-patch-PNG-on:
 	@${REINPLACE_CMD} 's|png_check_sig|png_sig_cmp|g' ${WRKSRC}/configure
-
-post-patch-TESTS-off:
-	@${REINPLACE_CMD} -e '/^TESTS = / s| test_jbig2dec.py||' ${WRKSRC}/Makefile.in
 
 .include <bsd.port.mk>
