@@ -23,7 +23,7 @@ INSTALL_TARGET=	install-strip
 USE_LDCONFIG=	yes
 USES=		autoreconf libtool
 USES+=		ssl
-LDFLAGS+=	-lcrypto
+LDFLAGS+=	-L${OPENSSLLIB} -lcrypto
 
 FILESDIR=	${.CURDIR}/does-not-exist
 SHEBANG_FILES=	test_jbig2dec.py
