@@ -3,7 +3,7 @@
 
 PORTNAME=	ncurses
 PORTVERSION=	6.0
-PORTREVISION=	5
+PORTREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	http://invisible-mirror.net/archives/${PORTNAME}/ \
 		ftp://invisible-island.net/${PORTNAME}/
@@ -12,9 +12,8 @@ DIST_SUBDIR=	${PORTNAME}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Library for terminal-independent, full-screen output
 
-CONFLICTS=	ncurses-devel-*
-
 LICENSE=	MIT
+LICENSE_FILE=	${WRKSRC}/COPYING
 
 BROKEN_sparc64=	cannot build: coredump: illegal instruction
 
@@ -33,6 +32,7 @@ CONFIGURE_ARGS=	--datadir=${PREFIX}/share/misc --disable-overwrite \
 		--mandir=${MANPREFIX}/man \
 		--with-hashed-db \
 		--with-pkg-config-libdir=${PREFIX}/libdata/pkgconfig
+
 MAKE_JOBS_UNSAFE=	yes
 
 .if exists (/usr/lib/priv/libprivate_ncursesw.so)
@@ -132,7 +132,7 @@ post-install:
 . endfor
 .endfor
 
-	${RM} -f ${STAGEDIR}${PREFIX}/lib/libncurses.so \
+	${RM} ${STAGEDIR}${PREFIX}/lib/libncurses.so \
 		${STAGEDIR}${PREFIX}/lib/libncursesw.so
 	${ECHO} "INPUT(libncurses.so.${NCVER} AS_NEEDED(-ltinfo))" > ${STAGEDIR}${PREFIX}/lib/libncurses.so
 	${ECHO} "INPUT(libncursesw.so.${NCVER} AS_NEEDED(-ltinfow))" > ${STAGEDIR}${PREFIX}/lib/libncursesw.so
