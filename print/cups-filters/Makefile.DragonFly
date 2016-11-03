@@ -1,0 +1,2 @@
+# libcups.so, libfontconfig.so, libpopper.so are compiled with pthread support
+MAKE_ENV+= LDVER=ld.bfd	# LDFLAGS+= -pthread # looks like more an ld.gold issue
