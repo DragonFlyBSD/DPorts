@@ -1,0 +1,11 @@
+--- etc/rc.d/Makefile.orig	2013-01-20 18:21:10.000000000 +0000
++++ etc/rc.d/Makefile
+@@ -1,8 +1,6 @@
+ .include <mkc.configure.mk>
+ 
+-.if ${TARGET_OPSYS} == "FreeBSD"
+ SCRIPTS=	hastmon
+ SCRIPTSDIR=	${PREFIX}/etc/rc.d
+-.endif
+ 
+ .include <mkc.prog.mk>
