@@ -42,18 +42,11 @@ NOTESTS_DESC=	Do not run any self-tests (only Tier-1 & DISCOURAGED)
 SMALLTESTS_DESC=Run tests that fit into 500 MB disk space (DEFAULT)
 ALLTESTS_DESC=	Run most self-tests (requires more RAM & disk space)
 PARALLELTESTS_DESC=	Run self-tests in parallel (requires more disk space)
-
-post-extract:
-	@${CHMOD} u+w ${WRKSRC}/po/*.po ${WRKSRC}/po/*.pot \
-		${WRKSRC}/${CONFIGURE_SCRIPT}
 .endif
 
 PKGDEINSTALL=	${PKGINSTALL}
 
-# get more details into tinderbox logs
-.if defined(PACKAGE_BUILDING)
 MAKE_ARGS+=	V=1
-.endif
 
 .include <bsd.port.options.mk>
 
@@ -165,7 +158,7 @@ post-build:
 # system are statically linked against anything that is outside the root fs,
 # else we're in trouble if e2fsck is needed for boot:
 # (we don't use e2fsck.static, since we can link libc.so dynamically)
-	cd ${WRKSRC}/e2fsck && ${RM} -f e2fsck \
+	cd ${WRKSRC}/e2fsck && ${RM} e2fsck \
 		&& ${MAKE_CMD} e2fsck \
 		STATIC_LIBS="../lib/libext2fs.a ../lib/libcom_err.a \
 		../lib/libblkid.a  ../lib/libuuid.a" \
@@ -205,7 +198,7 @@ post-build:
 .endif
 
 post-install:
-	${RM} -f ${STAGEDIR}${PREFIX}/sbin/uuidd
+	${RM} ${STAGEDIR}${PREFIX}/sbin/uuidd
 	${INSTALL_PROGRAM} ${WRKSRC}/fsck_ext2fs ${STAGEDIR}${PREFIX}/sbin/
 	${INSTALL_MAN} ${FILESDIR}/fsck_ext2fs.8 ${STAGEDIR}${PREFIX}/man/man8/
 .if ${PORT_OPTIONS:MDOCS}
