@@ -1,28 +1,34 @@
 # $FreeBSD$
 
 PORTNAME=	citra
-PORTVERSION=	s20161007
-PORTREVISION?=	1
+PORTVERSION=	s20161031
+PORTREVISION?=	0
 CATEGORIES=	emulators
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Nintendo 3DS emulator/debugger
 
-LICENSE=	BSD2CLAUSE BSD3CLAUSE BSL GPLv2+
+LICENSE=	BSD2CLAUSE BSD3CLAUSE BSL GPLv2+ LGPL21+ UNLICENSE
 LICENSE_COMB=	multi
 LICENSE_FILE_BSD2CLAUSE=${WRKSRC}/externals/dynarmic/externals/fmt/LICENSE.rst
 LICENSE_FILE_BSD3CLAUSE=${WRKSRC}/externals/inih/inih/LICENSE.txt
 LICENSE_FILE_BSL=	${WRKSRC}/externals/catch/LICENSE_1_0.txt
 LICENSE_FILE_GPLv2+ =	${WRKSRC}/license.txt
+LICENSE_FILE_LGPL21+ =	${WRKSRC}/externals/qhexedit/license.txt
+LICENSE_NAME_UNLICENSE=	The Unlicense
+LICENSE_TEXT_UNLICENSE=	See http://unlicense.org/
+LICENSE_PERMS_UNLICENSE=	${_LICENSE_PERMS_PD}
+LICENSE_GROUPS_UNLICENSE=	${_LICENSE_GROUPS_PD}
 
 LIB_DEPENDS=	libpng.so:graphics/png
 
 # backend_x64/hostloc.h:93:8: fatal error: no type named 'Reg64' in namespace 'Xbyak'
-BROKEN_i386=	https://github.com/MerryMage/dynarmic/issues/35
+ONLY_FOR_ARCHS=	amd64
+ONLY_FOR_ARCHS_REASON=	https://github.com/MerryMage/dynarmic/issues/35
 
 USE_GITHUB=	yes
 # XXX Switch to system Boost after ports/199601
-GH_TUPLE=	citra-emu:${PORTNAME}:136cbbe \
+GH_TUPLE=	citra-emu:${PORTNAME}:ae2fab4 \
 		citra-emu:ext-boost:f005c95:boost/externals/boost \
 		citra-emu:ext-soundtouch:5274ec4:soundtouch/externals/soundtouch \
 		MerryMage:dynarmic:943487e:dynarmic/externals/dynarmic \
@@ -54,5 +60,10 @@ QT5_PLIST_FILES=bin/${PORTNAME}-qt \
 		share/applications/${PORTNAME}.desktop \
 		share/mime/packages/${PORTNAME}.xml \
 		share/pixmaps/${PORTNAME}.svg
+
+post-patch:
+	@${REINPLACE_CMD} -e 's/@GIT_BRANCH@/master/' \
+		-e 's/@GIT_DESC@/${GH_TAGNAME}/' \
+		${WRKSRC}/src/common/scm_rev.cpp.in
 
 .include <bsd.port.mk>
