@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	neomutt
-PORTVERSION=	20161014
+PORTVERSION=	20161028
 DISTVERSIONPREFIX=	${PORTNAME}-
 CATEGORIES=	mail
 
@@ -86,6 +86,6 @@ post-patch:
 	@${REINPLACE_CMD} '/LIBS=$$/d' ${WRKSRC}/configure.ac
 
 post-install:
-	${RM} -f ${STAGEDIR}${PREFIX}/etc/mime*
+	${RM} ${STAGEDIR}${PREFIX}/etc/mime*
 
 .include <bsd.port.mk>
