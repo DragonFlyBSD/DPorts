@@ -3,7 +3,7 @@
 
 PORTNAME=	gnome-contacts
 PORTVERSION=	3.18.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 
@@ -69,6 +69,7 @@ CHEESE_LIB_DEPENDS=	libcheese-gtk.so:multimedia/cheese
 
 post-patch:
 	# touch vala sources to force regen c sources to honor cheese setting
-	${TOUCH} ${WRKSRC}/src/main.vala ${WRKSRC}/src/contacts-avatar-dialog.vala
+	${TOUCH} ${WRKSRC}/src/main.vala \
+		${WRKSRC}/src/contacts-avatar-dialog.vala
 
 .include <bsd.port.mk>
