@@ -21,7 +21,7 @@ dfly-patch:
 	${REINPLACE_CMD} -e 's|typedef unsigned |//|g' ${WRKSRC}/modules/sha1/sha256.h
 
 do-install:
-	${RM} -f ${WRKSRC}/modules/tcllibc/license.terms
+	${RM} ${WRKSRC}/modules/tcllibc/license.terms
 	${MKDIR} ${STAGEDIR}${PREFIX}/lib/tcllib
 	${MV} ${WRKSRC}/modules/tcllibc ${STAGEDIR}${PREFIX}/lib/tcllib/
 	${SED} -e s,%%PLATFORM%%,`${LOCALBASE}/bin/critcl -show | ${SED} -n 's| *platform *||p'`,\
