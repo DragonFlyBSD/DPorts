@@ -54,7 +54,7 @@ AUTOMAKE_ARGS=	--add-missing --foreign
 OPTIONS_SUB=	yes
 
 .if defined (MUTT_LITE)
-OPTIONS_UNSET=	NLS DOCS EXAMPLES
+OPTIONS_EXCLUDE=	NLS DOCS EXAMPLES
 .else
 OPTIONS_DEFINE=	COMPRESSED_FOLDERS SASL DEBUG DOCS EXAMPLES FLOCK \
 		FORCEBASE64 GPGME GREETING_PATCH HTML ICONV IDN IFDEF_PATCH \
@@ -297,7 +297,7 @@ post-patch::
 		${WRKSRC}/contrib/Makefile.am
 
 pre-configure::
-	@${RM} -f ${WRKSRC}/missing
+	@${RM} ${WRKSRC}/missing
 .if defined(WITH_KRB5_SYS)
 	@${ECHO_CMD} "#define HAVE_HEIMDAL" >> ${WRKSRC}/config.h.in
 	@${REINPLACE_CMD} -e 's|<gssapi/gssapi\.h>|<gssapi.h>|' \
