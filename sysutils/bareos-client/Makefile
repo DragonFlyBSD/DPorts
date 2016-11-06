@@ -17,4 +17,6 @@ OPTIONS_DEFINE=	NLS PYTHON LMDB
 OPTIONS_DEFAULT=#
 LMDB_DESC=	Enable build of LMDB support
 
+CONFIGURE_ARGS+=	--with-openssl=no
+
 .include "${MASTERDIR}/Makefile"
