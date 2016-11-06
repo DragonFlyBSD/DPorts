@@ -1,0 +1,4 @@
+# libgcc_pic.a + ld.gold + pthread issue
+.if defined(PKGNAMESUFFIX)
+MAKE_ENV+= LDVER=ld.bfd
+.endif
