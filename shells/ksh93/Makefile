@@ -30,6 +30,9 @@ FETCH_ENV=	HTTP_AUTH=basic:*:I\ accept\ www.opensource.org/licenses/cpl:.
 LDFLAGS+=	-lm
 MAKE_ENV=	CCFLAGS="${CFLAGS}"
 NO_WRKSUBDIR=	yes
+USES=		ssl
+CFLAGS+=	-I${OPENSSLINC}
+LDFLAGS+=	-L${OPENSSLLIB}
 
 INITVERSION=	2013-05-24
 KSHVERSION=	2012-08-01
@@ -39,7 +42,7 @@ STATIC_MAKE_ENV=	LDFLAGS+=-static
 .include <bsd.port.pre.mk>
 
 post-patch:
-.if ${OSVERSION} >= 1100093
+.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1100093
 	@${REINPLACE_CMD} -e 's|SF_FLAGS|SFIO_FLAGS|g' ${WRKSRC}/src/lib/libast/include/sfio*.h ${WRKSRC}/src/lib/libast/sfio/*.c
 .endif
 

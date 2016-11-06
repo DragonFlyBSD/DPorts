@@ -1,0 +1,11 @@
+--- src/lib/libcmd/Makefile.orig	2012-06-08 19:29:14 UTC
++++ src/lib/libcmd/Makefile
+@@ -26,7 +26,7 @@ cmd 1.2 :LIBRARY: RELEASE cmdinit.c \
+ 	rmdir.c stty.c sum.c sync.c tail.c tee.c tty.c uname.c uniq.c \
+ 	vmstate.c wc.c revlib.c wclib.c sumlib.o \
+ 	fts_fix.c lib.c \
+-	-lfsg -lmd -lutil
++	-lfsg -lcrypto -lutil
+ 
+ sumlib.o : +lsum
+ 	$(AR) x $(*:O=1) $(<)
