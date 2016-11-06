@@ -18,8 +18,7 @@ BUILD_DEPENDS=	yasm:devel/yasm
 
 USES=		cmake pathfix tar:bz2
 USE_LDCONFIG=	yes
-CMAKE_ARGS=	-DENABLE_TESTS=on -DPLATFORM_LIBS=md
-EXTRACT_AFTER_ARGS+=	--exclude "md5*"
+CMAKE_ARGS=	-DENABLE_TESTS=on
 
 WRKSRC=		${WRKDIR}/multicoreware-${PORTNAME}-1d3b6e448e01/source
 
