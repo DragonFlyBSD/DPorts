@@ -1,0 +1,4 @@
+# libgcc_pic.a + ld.gold + pthread issue
+.if defined(SLAVEPORT) && ${SLAVEPORT} == "qt5"
+CONFIGURE_ENV+= LDVER=ld.bfd
+.endif
