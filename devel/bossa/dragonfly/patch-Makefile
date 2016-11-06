@@ -1,0 +1,13 @@
+--- Makefile.orig	2016-09-16 09:12:11 UTC
++++ Makefile
+@@ -141,6 +141,10 @@ COMMON_SRCS+=PosixSerialPort.cpp BSDPort
+ 
+ endif
+ 
++ifeq (${OS},DragonF)
++COMMON_SRCS+=PosixSerialPort.cpp BSDPortFactory.cpp
++endif
++
+ #
+ # Object files
+ #
