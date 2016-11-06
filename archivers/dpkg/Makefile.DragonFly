@@ -1,0 +1,6 @@
+CONFIGURE_ARGS:= ${CONFIGURE_ARGS:N--with-libmd} --with-libmd=no
+CONFIGURE_ENV+=	ac_cv_header_md5_h=no
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's|<md5.h>|"compat/md5.h"|' \
+		${WRKSRC}/lib/dpkg/buffer.c
