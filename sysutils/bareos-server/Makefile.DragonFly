@@ -1,4 +1,8 @@
+.if ${PKGNAMESUFFIX} == "-client"
+CONFIGURE_ARGS+= --with-openssl=no
+.endif
 
 .if ${PKGNAMESUFFIX} == "-client-static"
 USES+= gettext ncurses
+CONFIGURE_ARGS+= --with-openssl=no
 .endif
