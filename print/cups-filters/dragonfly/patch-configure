@@ -1,0 +1,11 @@
+--- configure.orig	2016-09-21 21:40:21 UTC
++++ configure
+@@ -18310,7 +18310,7 @@ RCSTOP="$rcstop"
+ 
+ if test x$rcdir = x; then
+ 	case "`uname`" in
+-		FreeBSD* | OpenBSD* | MirBSD* | ekkoBSD*)
++		FreeBSD* | OpenBSD* | MirBSD* | ekkoBSD* | DragonFly*)
+ 			# FreeBSD and OpenBSD
+ 			;;
+ 
