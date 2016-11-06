@@ -1,0 +1,3 @@
+# libgcc_pic.a + ld.gold + pthread issue
+CONFIGURE_ENV+= LDVER=ld.bfd
+LDFLAGS+= -pthread
