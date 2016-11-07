@@ -1,2 +1,3 @@
 USES+= alias
 NLS_LDFLAGS=	-lintl
+LDFLAGS+=	-lxcb -lxcb-shm
