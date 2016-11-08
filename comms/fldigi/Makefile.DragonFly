@@ -1,0 +1,6 @@
+# SRC_DATA has const float in new audio/libsamplerate <samplerate.h>
+CFLAGS+= -fpermissive
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g'	\
+		${WRKSRC}/src/misc/newinstall.cxx
