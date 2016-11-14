@@ -107,7 +107,7 @@ nocat:*:159:159::0:0:NoCat Daemon:/libexec/nocat:/sbin/nologin
 _ypldap:*:160:160::0:0:YP Ldap unprivileged user:/var/empty:/usr/sbin/nologin
 solr:*:161:161::0:0:Apache Solr System:/var/db/solr:/usr/sbin/nologin
 octoprint:*:162:162::0:0:OctoPrint Daemon:/usr/local/octoprint:/usr/sbin/nologin
-# free: 163
+_iked:*:163:163::0:0:IKEv2 Daemon:/var/empty:/usr/sbin/nologin
 # free: 164
 # free: 165
 # free: 166
@@ -412,7 +412,7 @@ ecartis:*:450:450::0:0:Ecartis Listserver:/usr/local/ecartis:/usr/sbin/nologin
 courier:*:465:465::0:0:Courier Mail Server:/nonexistent:/usr/sbin/nologin
 condor:*:466:466::0:0:& user:/home/condor:/usr/sbin/nologin
 netmon:*:467:467::0:0:Network monitor account:/var/netmon:/usr/sbin/nologin
-slurm:*:468:468::0:0:SLURM Daemon:/home/slurm:/usr/sbin/nologin
+slurm:*:468:468::0:0:SLURM Daemon:/nonexistent:/usr/sbin/nologin
 consul:*:469:469::0:0:Consul Daemon:/var/tmp/consul:/usr/sbin/nologin
 serf:*:470:470::0:0:Serf Daemon:/nonexistent:/usr/sbin/nologin
 vault:*:471:471::0:0:Vault Daemon:/nonexistent:/usr/sbin/nologin
@@ -519,7 +519,7 @@ polkitd:*:565:565::0:0:Polkit Daemon User:/var/empty:/usr/sbin/nologin
 # free: 572
 # free: 573
 # free: 574
-# free: 575
+nexus:*:575:575::0:0:Nexus Repository Manager OSS:/nonexistent:/usr/sbin/nologin
 # free: 576
 # free: 577
 # free: 578
