@@ -20,6 +20,7 @@ BUILD_DEPENDS=	p5-Exporter-Tiny>=0.026:devel/p5-Exporter-Tiny \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Fatal>=0:devel/p5-Test-Fatal
 
+NO_ARCH=	yes
 USE_PERL5=	configure
 USES=		perl5
 
