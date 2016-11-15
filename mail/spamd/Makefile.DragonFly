@@ -1,0 +1,3 @@
+
+dfly-patch:
+	${CP} ${DFLY_FILESDIR}/sha1hl_compat.h ${WRKSRC}/spamd
