@@ -1,0 +1,6 @@
+# check MAYBE_INLINE for _OPENMP case
+#CONFIGURE_ARGS+=	--disable-openmp
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@MAYBE_INLINE_BODY void@void@'	\
+		${WRKSRC}/MD5_std.c
