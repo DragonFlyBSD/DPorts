@@ -6,21 +6,11 @@ CONFIGURE_ARGS+=	--disable-firebird-sdbc
 CONFIGURE_ARGS+=	--with-os-version=${DFLYVERSION} \
 			--with-vendor="DragonFly dports"
 
-# fix Release 4.2
-.if exists(/usr/include/bus/u4b/usb_freebsd.h)
-CFLAGS+=	-D__STDC_LIMIT_MACROS
-.endif
-
 REPLACE_LIST= \
-	avmedia/Library_avmediaogl.mk \
-	chart2/Library_chartcore.mk \
-	chart2/Library_chartopengl.mk \
-	desktop/Library_sofficeapp.mk \
 	external/curl/ExternalProject_curl.mk \
 	external/liblangtag/ExternalProject_langtag.mk \
 	external/libxmlsec/ExternalProject_xmlsec.mk \
 	external/libxslt/ExternalProject_xslt.mk \
-	external/np_sdk/inc/nptypes.h \
 	external/nss/ExternalProject_nss.mk \
 	external/openssl/ExternalProject_openssl.mk \
 	external/redland/ExternalProject_raptor.mk \
@@ -33,21 +23,40 @@ REPLACE_LIST= \
 	solenv/bin/modules/installer/parameter.pm \
 	soltools/mkdepend/main.c \
 	stoc/source/corereflection/criface.cxx \
-	svx/Executable_gengal.mk \
 	sw/Module_sw.mk \
-	vcl/Executable_icontest.mk \
-	vcl/Executable_mtfdemo.mk \
-	vcl/Executable_ui-previewer.mk \
-	vcl/Executable_vcldemo.mk \
-	vcl/Library_vcl.mk \
-	vcl/StaticLibrary_glxtest.mk \
 	vcl/qa/cppunit/BitmapTest.cxx \
 	vcl/unx/generic/app/saldata.cxx \
 	vcl/unx/generic/dtrans/X11_selection.cxx \
 	vcl/unx/generic/gdi/salbmp.cxx \
 	vcl/unx/generic/printer/printerinfomanager.cxx \
-	vcl/unx/gtk/app/gtkdata.cxx \
-	vcl/unx/kde/kdedata.cxx
+	vcl/unx/kde/kdedata.cxx \
+	desktop/unx/source/start.c \
+	jvmfwk/plugins/sunmajor/pluginlib/sunversion.cxx \
+	jvmfwk/plugins/sunmajor/pluginlib/sunversion.hxx \
+	sal/osl/unx/process_impl.cxx \
+	sal/osl/unx/sockimpl.hxx \
+	sal/osl/unx/pipe.cxx \
+	vcl/unx/gtk3/gtk3gtkdata.cxx \
+	vcl/unx/gtk/gtkdata.cxx
+
+PERCENT_BSD_LIST= \
+	Repository.mk \
+	avmedia/Library_avmediaogl.mk \
+	chart2/Library_chartcore.mk \
+	chart2/Library_chartopengl.mk \
+	desktop/Library_crashreport.mk\
+	desktop/Library_sofficeapp.mk \
+	libreofficekit/Module_libreofficekit.mk \
+	libreofficekit/Executable_gtktiledviewer.mk \
+	libreofficekit/Library_libreofficekitgtk.mk \
+	svx/Executable_gengal.mk \
+	vcl/Executable_vcldemo.mk \
+	vcl/Executable_ui-previewer.mk \
+	vcl/Executable_mtfdemo.mk \
+	vcl/Module_vcl.mk \
+	vcl/Library_desktop_detector.mk \
+	vcl/Library_vcl.mk \
+	vcl/Executable_icontest.mk
 
 # Avoid stripping in /tmp, it takes too much space for poudriere
 # Also, ooinstall is fed wrong TMPDIR which is redefined a few times
@@ -58,3 +67,23 @@ dfly-patch:
 		${WRKSRC}/solenv/bin/ooinstall
 	(cd ${WRKSRC} && \
 		${REINPLACE_CMD} -e 's|FREEBSD|DRAGONFLY|' ${REPLACE_LIST})
+.for F in ${REPLACE_LIST}
+	@/usr/bin/cmp -s ${WRKSRC:Q}/${F} ${WRKSRC:Q}/${F}.bak && \
+		echo "${F} was not altered" || /usr/bin/true
+.endfor
+	(cd ${WRKSRC} && \
+		${REINPLACE_CMD} -e 's|%BSD|DRAGONFLY|' ${PERCENT_BSD_LIST})
+.for F in ${PERCENT_BSD_LIST}
+	@/usr/bin/cmp -s ${WRKSRC:Q}/${F} ${WRKSRC:Q}/${F}.bak && \
+		echo "${F} was not altered" || /usr/bin/true
+.endfor
+# these test core!  Something is really wrong
+	${REINPLACE_CMD} \
+		-e '/CppunitTest_sc_bugfix_test/d' \
+		-e '/CppunitTest_sc_filters_test/d ' \
+		-e '/CppunitTest_sc_condformats/d' \
+		-e '/CppunitTest_sc_subsequent_export_test/d' \
+		-e '/CppunitTest_sc_html_export_test/d' \
+		-e '/CppunitTest_sc_copypaste/d' \
+		-e '/CppunitTest_sc_functions_test/d' \
+		${WRKSRC}/sc/Module_sc.mk
