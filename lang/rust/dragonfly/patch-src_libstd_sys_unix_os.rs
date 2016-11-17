@@ -1,6 +1,25 @@
---- src/libstd/sys/unix/os.rs.orig	2016-07-04 18:04:09 UTC
+--- src/libstd/sys/unix/os.rs.orig	2016-11-08 03:16:18 UTC
 +++ src/libstd/sys/unix/os.rs
-@@ -208,8 +208,44 @@ pub fn current_exe() -> io::Result<PathB
+@@ -73,12 +73,13 @@ pub fn set_errno(e: i32) {
+ 
+ #[cfg(target_os = "dragonfly")]
+ pub fn errno() -> i32 {
+-    extern {
+-        #[thread_local]
+-        static errno: c_int;
++    unsafe {
++        extern {
++            #[thread_local]
++            static errno: c_int;
++        }
++        errno as i32
+     }
+-
+-    errno as i32
+ }
+ 
+ /// Gets a detailed string description for the given error number.
+@@ -219,8 +220,44 @@ pub fn current_exe() -> io::Result<PathB
      }
  }
  
