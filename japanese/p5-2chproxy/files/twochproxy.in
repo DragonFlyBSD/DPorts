@@ -1,0 +1,32 @@
+#!/bin/sh
+#
+# PROVIDE: twochproxy
+# REQUIRE: LOGIN
+# KEYWORD: shutdown
+#
+# $FreeBSD: head/japanese/p5-2chproxy/files/twochproxy.in 426204 2016-11-16 00:43:30Z hrs $
+
+. /etc/rc.subr
+
+name=twochproxy
+rcvar=${name}_enable
+
+command=%%PREFIX%%/sbin/2chproxy.pl
+start_cmd=${name}_start
+stop_cmd=${name}_stop
+load_rc_config $name
+pidfile=/var/run/2chproxy.pid
+: ${twochproxy_enable:=NO}
+
+twochproxy_start()
+{
+
+	$command --daemon
+}
+twochproxy_stop()
+{
+
+	$command --kill && rm -f $pidfile
+}
+
+run_rc_command "$1"
