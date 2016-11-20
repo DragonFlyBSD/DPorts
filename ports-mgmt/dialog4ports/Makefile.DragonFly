@@ -3,8 +3,11 @@
 #      our libdialog is good
 
 .if exists(/usr/lib/priv/libprivate_ncursesw.so)
+CFLAGS+=	-I/usr/include/priv/ncurses
+
 .  if defined(D4P_SLAVE)
-LDFLAGS+= -L/usr/lib/priv
+LDFLAGS+=	-L/usr/lib/priv
+CONFIGURE_ENV+=	cf_cv_curses_incdir=-I/usr/include/priv/ncurses
 pre-patch:
 	${REINPLACE_CMD} -e 's@\(ncurses curses cursesX\)@\1 private_ncursesw@g'			\
 		${WRKDIR}/${DIALOGNAME}/configure

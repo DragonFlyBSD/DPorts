@@ -49,7 +49,7 @@ DIALOGNAME=	dialog-1.1-20120706
 MAKE_ENV+=	DIALOGSOURCES=${WRKDIR}/${DIALOGNAME}
 
 do-configure:
-	@cd ${WRKDIR}/${DIALOGNAME}; ./configure LDFLAGS="${LDFLAGS}"
+	@cd ${WRKDIR}/${DIALOGNAME}; ${SETENV} ${CONFIGURE_ENV} ./configure LDFLAGS="${LDFLAGS}"
 
 .endif
 
