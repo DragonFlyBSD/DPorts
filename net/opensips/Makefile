@@ -3,6 +3,7 @@
 
 PORTNAME=		opensips
 PORTVERSION=		2.1.4
+PORTREVISION=	1
 CATEGORIES=		net
 MASTER_SITES=		http://opensips.org/pub/opensips/${PORTVERSION}/
 
@@ -41,7 +42,7 @@ DOCSDIR=		share/doc/opensips
 
 USE_RC_SUBR=		opensips
 
-USES=			gmake perl5 pkgconfig shebangfix ssl
+USES=			gmake ncurses perl5 pkgconfig shebangfix ssl
 USE_GCC=		yes
 
 NOPRECIOUSMAKEVARS=	yes
