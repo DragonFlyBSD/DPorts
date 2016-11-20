@@ -1,4 +1,4 @@
---- xmit/remote.c.bak	2016-06-16 18:06:13.000000000 +0300
+--- xmit/remote.c.intermediate	2016-06-16 18:06:13.000000000 +0300
 +++ xmit/remote.c
 @@ -345,7 +345,12 @@ FILE	*fp;
  		fp->_flag |= _SIERR;
