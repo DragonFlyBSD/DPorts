@@ -1,3 +1,5 @@
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NSCSICRYPTO}
+
 .if ${PKGNAMESUFFIX} == "-client"
 CONFIGURE_ARGS+= --with-openssl=no
 .endif
