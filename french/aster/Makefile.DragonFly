@@ -1,3 +1,0 @@
-# This port cannot be deleted because bsd.aster.mk is used a lot
-
-BROKEN=	main binary does not build

@@ -1,16 +1,13 @@
---- setup.py.orig	2013-01-28 12:35:55.000000000 +0000
+--- setup.py.orig	2016-11-22 17:26:38 UTC
 +++ setup.py
-@@ -345,6 +345,13 @@ def main():
+@@ -356,6 +356,10 @@ def main():
              cfg['ARCH'] = 'x86_64'
        else:
-          cfg['IFDEF'] = 'LINUX'
+          cfg['IFDEF'] = 'DARWIN'
 +   elif plt.startswith('dragonfly'):
-+      common_libs = []
++      common_libs = ['z']
 +      cfg['IFDEF']='FREEBSD'
-+      if machine == 'x86_64':
-+         cfg['ARCH'] = machine
-+      else:
-+         cfg['ARCH'] = 'x86'
++      cfg['ARCH'] = 'x86_64'
     elif plt.startswith('freebsd'):
-       common_libs = []
+       common_libs = ['z']
        cfg['IFDEF']='FREEBSD'
