@@ -1,5 +1,6 @@
 USES+=	ncurses
-OPTIONS_DEFAULT:= ${DEFAULT_OPTIONS:NTERMCAP}
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NTERMCAP}
 
 pre-configure-script:
-	${REINPLACE_CMD} "s/SHOBJ_LDFLAGS =/SHOBJ_LDFLAGS = -lncurses/" ${WRKSRC}/shlib/Makefile.in
+	${REINPLACE_CMD} "s/SHOBJ_LDFLAGS =/SHOBJ_LDFLAGS = -lncurses/" \
+	${WRKSRC}/shlib/Makefile.in
