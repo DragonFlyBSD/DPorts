@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	xapian-core
-PORTVERSION=	1.2.23
+PORTVERSION=	1.2.24
 PORTEPOCH=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://oligarchy.co.uk/xapian/${PORTVERSION}/ \
@@ -28,9 +28,16 @@ PORTDOCS=	*
 
 SSE2_CONFIGURE_ENABLE=	sse
 
+.include <bsd.port.pre.mk>
+
+# FreeBSD 9 does not have SOCK_CLOEXEC.
+.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1000031
+CXXFLAGS+=	-DSOCK_CLOEXEC=0
+.endif
+
 post-install:
 .for file in copydatabase delve quest
 	${INSTALL_PROGRAM} ${WRKSRC}/examples/.libs/${file} ${STAGEDIR}${PREFIX}/bin/xapian-${file}
 .endfor
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
