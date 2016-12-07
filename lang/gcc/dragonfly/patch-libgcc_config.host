@@ -1,4 +1,4 @@
---- libgcc/config.host.orig	2013-07-09 21:35:57.000000000 +0000
+--- libgcc/config.host.orig	2013-08-16 22:23:29.000000000 +0000
 +++ libgcc/config.host
 @@ -176,6 +176,11 @@ case ${host} in
    tmake_file="$tmake_file t-darwin ${cpu_type}/t-darwin t-libgcc-pic t-slibgcc-darwin"
@@ -37,10 +37,10 @@
  i[34567]86-*-freebsd*)
  	tmake_file="${tmake_file} i386/t-freebsd i386/t-crtstuff"
  	;;
-@@ -1144,6 +1158,7 @@ i[34567]86-*-darwin* | x86_64-*-darwin*
-   i[34567]86-*-gnu* | \
+@@ -1179,6 +1193,7 @@ i[34567]86-*-darwin* | x86_64-*-darwin*
    i[34567]86-*-solaris2* | x86_64-*-solaris2.1[0-9]* | \
-   i[34567]86-*-cygwin* | i[34567]86-*-mingw* | x86_64-*-mingw* | \
+   i[34567]86-*-cygwin* | x86_64-*-cygwin* | \
+   i[34567]86-*-mingw* | x86_64-*-mingw* | \
 +  i[34567]86-*-dragonfly* | x86_64-*-dragonfly* | \
    i[34567]86-*-freebsd* | x86_64-*-freebsd* | \
    i[34567]86-*-openbsd* | x86_64-*-openbsd*)
