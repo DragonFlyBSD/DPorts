@@ -1,2 +1,0 @@
-# Use LLVM 3.8 everywhere we can
-LLVMVER= 38
