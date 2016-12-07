@@ -2,10 +2,9 @@
 # $FreeBSD$
 
 PORTNAME=	cdo
-PORTVERSION=	1.7.1
-PORTREVISION=	1
+PORTVERSION=	1.7.2
 CATEGORIES=	science
-MASTER_SITES=	https://code.zmaw.de/attachments/download/12070/ \
+MASTER_SITES=	https://code.zmaw.de/attachments/download/12760/ \
 		LOCAL/sunpoet
 
 MAINTAINER=	sunpoet@FreeBSD.org
@@ -17,13 +16,13 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 OPTIONS_DEFINE=	CGRIBEX HDF5 JASPER NETCDF PROJ SZIP UDUNITS
 OPTIONS_DEFAULT=CGRIBEX HDF5 JASPER NETCDF PROJ SZIP UDUNITS
 OPTIONS_SUB=	yes
+CGRIBEX_DESC=	Use CGRIBEX library for GRIB1 files
 HDF5_IMPLIES=	SZIP
 NETCDF_IMPLIES=	HDF5
 
 PORTSCOUT=	site:https://code.zmaw.de/projects/cdo/files
 
-CONFIGURE_ARGS=	--disable-cgribex \
-		--disable-data \
+CONFIGURE_ARGS=	--disable-data \
 		--disable-extra \
 		--disable-grib \
 		--disable-ieg \
