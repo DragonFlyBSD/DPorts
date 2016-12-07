@@ -1,11 +1,11 @@
---- src/include/trousers_types.h.intermediate	2013-05-16 07:12:43.992012000 +0000
+--- src/include/trousers_types.h.intermediate	2016-12-07 16:10:31 UTC
 +++ src/include/trousers_types.h
-@@ -126,7 +126,7 @@ typedef struct tdTSS_KEY {
- 	BYTE *encData;
- } TSS_KEY;
+@@ -128,7 +128,7 @@ typedef struct tdTSS_KEY {
  
--#if defined (__FreeBSD__)
-+#if defined (__FreeBSD__) && !defined(__DragonFly__)
+ #if (defined (__linux) || defined (linux) || defined (SOLARIS) || defined (__GLIBC__))
+ #define BSD_CONST
+-#elif (defined (__OpenBSD__) || defined (__FreeBSD__)) || defined (__APPLE__)
++#elif (defined (__OpenBSD__) || defined (__FreeBSD__)) || defined (__APPLE__) || defined (__DragonFly__)
  #define BSD_CONST const
- #else
- #define BSD_CONST /* */
+ #endif
+ 
