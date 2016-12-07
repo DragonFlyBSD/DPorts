@@ -79,6 +79,10 @@ CPE_UPDATE=	p${RUBY_PATCHLEVEL}
 
 .include <bsd.port.pre.mk>
 
+.if ${SSL_DEFAULT:Mopenssl-devel}
+BROKEN=		Does not build with openssl-devel
+.endif
+
 # PORTEPOCH/PORTREVISION hack
 
 .if ${PORTEPOCH} != 0
@@ -98,7 +102,7 @@ CONFIGURE_ARGS+=	--disable-dtrace
 .endif
 
 .if ${ARCH} == "powerpc" || ${ARCH} == "powerpc64"
-USE_GCC=	4.9+
+USE_GCC=	yes
 .endif
 
 .if ${ARCH} == "armv6" || ${ARCH} == "armv6hf"
