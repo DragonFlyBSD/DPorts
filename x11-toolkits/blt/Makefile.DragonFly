@@ -1,0 +1,5 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(SHLIB_LIB_SPECS =\)@\1 -lm @g'		\
+			 -e 's@\(TCL_ONLY_LIB_SPECS =\)@\1 -lm @g'	\
+		${WRKSRC}/generic/shared/Makefile.in
