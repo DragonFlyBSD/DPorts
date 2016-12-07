@@ -554,9 +554,9 @@ DISTFILES+=	${DISTNAME}${_GITHUB_EXTRACT_SUFX}
 .  if !empty(GH_SUBDIR)
 _SITES_extract:=	690:post-extract-gh-DEFAULT
 post-extract-gh-DEFAULT:
-	@${RMDIR} ${WRKSRC}/${GH_SUBDIR} 2>/dev/null || :
-	@${MKDIR} ${WRKSRC}/${GH_SUBDIR:H} 2>/dev/null || :
-	@${LN} -s ${GH_SUBDIR:C/[^\/]//g:C/\//..\//g} ${WRKSRC}/${GH_SUBDIR}
+	@${RMDIR} ${WRKSRC}/${GH_SUBDIR_DEFAULT} 2>/dev/null || :
+	@${MKDIR} ${WRKSRC}/${GH_SUBDIR_DEFAULT:H} 2>/dev/null || :
+	@${LN} -s ${GH_SUBDIR_DEFAULT:C/[^\/]//g:C/\//..\//g} ${WRKSRC}/${GH_SUBDIR_DEFAULT}
 .  endif
 # If there are non default groups
 .  if !empty(_GITHUB_GROUPS:NDEFAULT)
@@ -1084,8 +1084,8 @@ MASTER_SITE_SAVANNAH+= \
 # Updated:	2013-03-25
 .if !defined(IGNORE_MASTER_SITE_SOURCEFORGE)
 MASTER_SITE_SOURCEFORGE+= http://downloads.sourceforge.net/project/%SUBDIR%/
-.for mirror in heanet sunet iweb switch freefr garr aarnet jaist master \
-	nchc ncu internode waix hivelocity superb-dca3 ufpr tenet \
+.for mirror in heanet iweb freefr jaist master \
+	nchc ncu internode waix superb-dca3 ufpr tenet \
 	netcologne ignum kent
 MASTER_SITE_SOURCEFORGE+= \
 	http://${mirror}.dl.sourceforge.net/project/%SUBDIR%/
