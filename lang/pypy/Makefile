@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME?=	pypy
-DISTVERSION?=	5.4.1	# Also update bsd.pypy.cffi.mk
-PORTREVISION?=	1
+DISTVERSION?=	5.6.0	# Also update bsd.pypy.cffi.mk
 CATEGORIES=	lang python
 MASTER_SITES=	https://bitbucket.org/pypy/pypy/downloads/ http://buildbot.pypy.org/mirror/
 DISTNAME?=	${PORTNAME}2-v${PORTVERSION}-src
@@ -61,10 +60,6 @@ PLIST=		${.CURDIR}/pkg-plist
 
 .include "${MASTERDIR}/bsd.pypy.mk"
 .include <bsd.port.pre.mk>
-
-.if ${SSL_DEFAULT:Mlibressl*}
-IGNORE=	Detected LibreSSL which is interpreted as unsupported OpenSSL > v1.1
-.endif
 
 .if ${ARCH} == "i386" || ${ARCH} == "armv6"
 PYPY_BITS=	32
