@@ -1,0 +1,16 @@
+--- src/library/CMakeLists.txt.orig	2016-09-01 00:46:51.000000000 +0300
++++ src/library/CMakeLists.txt
+@@ -95,8 +95,13 @@ if( CMAKE_COMPILER_IS_GNUCC )
+     configure_file( ${CMAKE_CURRENT_SOURCE_DIR}/clFFT.pc.in
+                     ${CMAKE_CURRENT_BINARY_DIR}/clFFT.pc @ONLY )
+ 
++  if (CMAKE_SYSTEM_NAME STREQUAL "DragonFly")
++    install( FILES ${CMAKE_CURRENT_BINARY_DIR}/clFFT.pc
++             DESTINATION libdata/pkgconfig )
++  else ()
+     install( FILES ${CMAKE_CURRENT_BINARY_DIR}/clFFT.pc
+              DESTINATION lib${SUFFIX_LIB}/pkgconfig )
++  endif()
+ endif( )
+ 
+ # CPack configuration; include the executable into the package

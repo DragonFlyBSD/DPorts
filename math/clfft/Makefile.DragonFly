@@ -1,0 +1,3 @@
+
+# .pc file is only installed if compiler is GNUC, go figure
+PLIST_FILES+=	libdata/pkgconfig/clFFT.pc
