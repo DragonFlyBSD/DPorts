@@ -3,6 +3,7 @@
 
 PORTNAME=	idjc
 PORTVERSION=	0.8.16
+PORTREVISION=	1
 CATEGORIES=	audio python
 MASTER_SITES=	SF/idjc/idjc/0.8
 
@@ -44,6 +45,10 @@ BROKEN_powerpc64=	Does not build
 PLIST_SUB+=		PORTVERSION="${PORTVERSION}"
 
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}-${PORTVERSION}
+
+post-patch:
+	${REINPLACE_CMD} 's,PYTHON=python,PYTHON=${PYTHON_CMD},' ${WRKSRC}/py-compile
+
 pre-install:
 	${REINPLACE_CMD} 's|libvorbis.so.0|libvorbis.so|' \
 		${WRKSRC}/python/format.py
