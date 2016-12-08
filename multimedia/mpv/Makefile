@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	mpv
-PORTVERSION=	0.21.0
+PORTVERSION=	0.22.0
 DISTVERSIONPREFIX=	v
 PORTEPOCH=	1
 CATEGORIES=	multimedia audio
@@ -157,7 +157,7 @@ post-patch:
 	@${FIND} ${WRKSRC}/DOCS/man -name '*.rst' | ${XARGS} ${REINPLACE_CMD} \
 		-e 's|/usr/local|${PREFIX}|g'
 
-post-stage:
+post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/mpv
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libmpv.so
 
