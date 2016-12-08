@@ -1,0 +1,50 @@
+--- build/toolchain/gcc_toolchain.gni.orig	2016-11-10 20:02:09 UTC
++++ build/toolchain/gcc_toolchain.gni
+@@ -10,6 +10,11 @@ import("//build/toolchain/cc_wrapper.gni
+ import("//build/toolchain/goma.gni")
+ import("//build/toolchain/toolchain.gni")
+ 
++declare_args() {
++  extra_cxxflags = ""
++  extra_ldflags = ""
++}
++
+ # This template defines a toolchain for something that works like gcc
+ # (including clang).
+ #
+@@ -453,14 +458,28 @@ template("clang_toolchain") {
+   }
+ 
+   gcc_toolchain(target_name) {
+-    prefix = rebase_path("$clang_base_path/bin", root_build_dir)
+-    cc = "$prefix/clang"
+-    cxx = "$prefix/clang++"
+-    ld = cxx
++    if (is_bsd) {
++      # cc = getenv("CC")
++      # assert(cc != "", "CC env must me set with >= clang39")
++      # cxx = getenv("CXX")
++      # assert(cxx != "", "CXX env must me set with >= clang++39")
++      # ld = cxx
++      cc = "${toolprefix}clang39"
++      cxx = "${toolprefix}clang++39"
++      ld = cxx
++      readelf = "readelf"
++      ar = "${toolprefix}llvm-ar39"
++      nm = "${toolprefix}llvm-nm39"
++    } else {
++      prefix = rebase_path("$clang_base_path/bin", root_build_dir)
++      cc = "$prefix/clang"
++      cxx = "$prefix/clang++"
++      ld = cxx
+ 
+-    readelf = "${toolprefix}readelf"
+-    ar = "${toolprefix}ar"
+-    nm = "${toolprefix}nm"
++      readelf = "${toolprefix}readelf"
++      ar = "${toolprefix}ar"
++      nm = "${toolprefix}nm"
++    }
+ 
+     forward_variables_from(invoker, [ "strip" ])
+ 

@@ -4,21 +4,21 @@ to be, so I will set this to the highest signed value to make chromium
 build on gcc5.  There is a good chance this will work (maybe better than
 it has been).  Let us see (surely Google will have to fix this though)
 
---- third_party/WebKit/Source/core/dom/NodeFilter.h.orig	2015-02-20 04:50:08 UTC
+--- third_party/WebKit/Source/core/dom/NodeFilter.h	2016-11-29 15:10:34.000000000 +0200
 +++ third_party/WebKit/Source/core/dom/NodeFilter.h
-@@ -52,7 +52,7 @@ public:
+@@ -51,7 +51,7 @@ public:
       * to the value of NodeType for the equivalent node type.
       */
      enum {
--        SHOW_ALL                       = 0xFFFFFFFF,
-+        SHOW_ALL                       = 0x7FFFFFFF,
-         SHOW_ELEMENT                   = 0x00000001,
-         SHOW_ATTRIBUTE                 = 0x00000002,
-         SHOW_TEXT                      = 0x00000004,
---- third_party/WebKit/Source/core/dom/NodeFilter.idl.orig	2015-05-25 19:01:25 UTC
+-        kShowAll                       = 0xFFFFFFFF,
++        kShowAll                       = 0x7FFFFFFF,
+         kShowElement                   = 0x00000001,
+         kShowAttribute                 = 0x00000002,
+         kShowText                      = 0x00000004,
+--- third_party/WebKit/Source/core/dom/NodeFilter.idl	2016-11-10 22:02:26.000000000 +0200
 +++ third_party/WebKit/Source/core/dom/NodeFilter.idl
-@@ -32,7 +32,7 @@
-     const short FILTER_SKIP = 3;
+@@ -30,7 +30,7 @@
+     const unsigned short FILTER_SKIP = 3;
  
      // Constants for whatToShow
 -    const unsigned long SHOW_ALL = 0xFFFFFFFF;

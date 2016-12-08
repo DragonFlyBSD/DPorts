@@ -1,0 +1,43 @@
+--- chrome/browser/ui/BUILD.gn.intermediate	2016-11-30 15:07:57.000000000 +0200
++++ chrome/browser/ui/BUILD.gn
+@@ -352,14 +352,14 @@ split_static_library("ui") {
+   if (use_gio) {
+     deps += [ "//build/linux/libgio" ]
+   }
+-  if (use_aura && !use_ozone && is_desktop_linux) {
++  if (use_aura && !use_ozone && (is_desktop_linux || is_bsd)) {
+     deps += [
+       # gtk2 is the only component that can interact with gtk2 in our new
+       # world.
+       "//chrome/browser/ui/libgtk2ui",
+     ]
+   }
+-  if (is_win || is_mac || is_desktop_linux) {
++  if (is_win || is_mac || is_desktop_linux || is_bsd) {
+     sources += rebase_path(gypi_values.chrome_browser_ui_desktop_sources,
+                            ".",
+                            "//chrome")
+@@ -512,7 +512,7 @@ split_static_library("ui") {
+       ]
+     }
+   }
+-  if (is_desktop_linux) {
++  if (is_desktop_linux || is_bsd) {
+     sources += rebase_path(gypi_values.chrome_browser_ui_desktop_linux_sources,
+                            ".",
+                            "//chrome")
+@@ -520,6 +520,14 @@ split_static_library("ui") {
+       "//ui/base/ime",
+       "//ui/events:dom_keycode_converter",
+     ]
++
++    if (is_bsd && !use_dbus) {
++      defines += [ "GLOBAL_MENUBAR_DBUS_DUMMY" ]
++      sources -= [
++        "views/frame/global_menu_bar_registrar_x11.cc",
++        "views/frame/global_menu_bar_x11.cc",
++      ]
++    }
+   }
+   if (is_linux || is_bsd) {  # Both desktop Linux and ChromeOS.
+     sources += rebase_path(gypi_values.chrome_browser_ui_linux_sources,

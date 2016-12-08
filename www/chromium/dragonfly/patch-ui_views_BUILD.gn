@@ -1,0 +1,18 @@
+--- ui/views/BUILD.gn.intermediate	2016-12-01 11:20:35.000000000 +0200
++++ ui/views/BUILD.gn
+@@ -120,9 +120,13 @@ component("views") {
+     ]
+     if (!is_chromeos) {
+       sources += gypi_values.views_desktop_aura_sources
+-      if (use_atk) {
++      if (use_atk || is_bsd) {
+         sources += gypi_values.views_desktop_aura_x11_sources
+-        configs += [ "//build/config/linux/atk" ]
++        if (use_atk) {
++          configs += [ "//build/config/linux/atk" ]
++        } else {
++          sources -= [ "accessibility/native_view_accessibility_auralinux.cc" ]
++        }
+       } else if (is_win) {
+         sources += gypi_values.views_desktop_aura_win_sources
+       } else if (use_ozone) {

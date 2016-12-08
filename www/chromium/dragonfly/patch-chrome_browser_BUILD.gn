@@ -1,0 +1,21 @@
+--- chrome/browser/BUILD.gn.intermediate	2016-12-01 08:24:07.000000000 +0200
++++ chrome/browser/BUILD.gn
+@@ -893,10 +893,17 @@ split_static_library("browser") {
+                            "//chrome")
+   }
+ 
+-  if (is_desktop_linux) {
++  if (is_desktop_linux || is_bsd) {
+     sources += rebase_path(gypi_values.chrome_browser_linux_desktop_sources,
+                            ".",
+                            "//chrome")
++    if (is_bsd && !use_dbus) {
++      sources -= [
++         "media/window_icon_util_x11.cc",
++         "password_manager/native_backend_kwallet_x.cc",
++         "password_manager/native_backend_kwallet_x.h",
++       ]
++    }
+   }
+   if (enable_plugin_installation) {
+     sources +=
