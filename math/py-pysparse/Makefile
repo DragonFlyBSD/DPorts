@@ -3,9 +3,9 @@
 
 PORTNAME=	pysparse
 PORTVERSION=	1.3
+PORTREVISION=	1
 CATEGORIES=	math python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
-DISTNAME=	${PORTNAME}-${PORTVERSION}-dev
 
 MAINTAINER=	yuri@rawbw.com
 COMMENT=	Fast sparse matrix library for Python
