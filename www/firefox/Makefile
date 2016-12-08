@@ -2,13 +2,13 @@
 # $FreeBSD$
 
 PORTNAME=	firefox
-DISTVERSION=	50.0
+DISTVERSION=	50.0.2
 DISTVERSIONSUFFIX=.source
-PORTREVISION=	2
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	www ipv6
 MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}/source \
-		MOZILLA/${PORTNAME}/candidates/${DISTVERSION}-candidates/build2/source
+		MOZILLA/${PORTNAME}/candidates/${DISTVERSION}-candidates/build1/source
 
 MAINTAINER=	gecko@FreeBSD.org
 COMMENT=	Web browser based on the browser portion of Mozilla
@@ -48,22 +48,14 @@ MOZ_OPTIONS=	--enable-application=browser \
 		--enable-official-branding
 
 OPTIONS_DEFINE=		RUST
-OPTIONS_DEFAULT=	BUNDLED_CAIRO GTK3 ${OPTIONS_DEFAULT_${OPSYS}_${OSREL:R}_${ARCH}}
-
+OPTIONS_DEFAULT=	BUNDLED_CAIRO GTK3
+OPTIONS_EXCLUDE_FreeBSD_9=	RUST
 # XXX lang/rust currently builds only on these platforms
-OPTIONS_DEFAULT_DragonFly_4_x86_64=	RUST
-OPTIONS_DEFAULT_FreeBSD_10_amd64=	RUST
-OPTIONS_DEFAULT_FreeBSD_10_i386=	RUST
-OPTIONS_DEFAULT_FreeBSD_11_amd64=	RUST
-OPTIONS_DEFAULT_FreeBSD_11_i386=	RUST
-OPTIONS_DEFAULT_FreeBSD_12_amd64=	RUST
-OPTIONS_DEFAULT_FreeBSD_12_i386=	RUST
+OPTIONS_DEFAULT_x86_64=	RUST
+OPTIONS_DEFAULT_i386=	RUST
 
 OPTIONS_SINGLE+=	TOOLKIT
 OPTIONS_SINGLE_TOOLKIT=	GTK2 GTK3
-
-TEST_BROKEN=		No rule to make target '../../../dist/bin/libnspr4.so', needed by \
-			'../../../_tests/xpcshell/modules/libmar/tests/unit/libnspr4.so'
 
 .include "${.CURDIR}/../../www/firefox/Makefile.options"
 
