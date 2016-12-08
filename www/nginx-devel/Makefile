@@ -2,16 +2,16 @@
 # $FreeBSD$
 
 PORTNAME=	nginx
-PORTVERSION=	1.11.5
-PORTREVISION=	1
+PORTVERSION=	1.11.6
+PORTREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://nginx.org/download/
 MASTER_SITES+=	LOCAL/osa
-PKGNAMESUFFIX=	-devel
+PKGNAMESUFFIX?=	-devel
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
-MAINTAINER=	osa@FreeBSD.org
-COMMENT=	Robust and small WWW server
+MAINTAINER?=	osa@FreeBSD.org
+COMMENT?=	Robust and small WWW server
 
 LICENSE=	BSD2CLAUSE
 
@@ -59,6 +59,7 @@ OPTIONS_DEFINE=	\
 	NJS \
 	STREAM \
 	STREAM_SSL \
+	STREAM_SSL_PREREAD \
 	THREADS \
 	WWW \
 	AJP \
@@ -67,6 +68,7 @@ OPTIONS_DEFINE=	\
 	CLOJURE \
 	CT \
 	ECHO \
+	FASTDFS \
 	HEADERS_MORE \
 	HTTP_ACCEPT_LANGUAGE \
 	HTTP_ACCESSKEY \
@@ -127,11 +129,12 @@ OPTIONS_DEFINE=	\
 	XRID_HEADER \
 	XSS
 
-OPTIONS_DEFAULT=DSO FILE_AIO HTTP HTTP_ADDITION HTTP_AUTH_REQ HTTP_CACHE \
+OPTIONS_DEFAULT?=DSO FILE_AIO HTTP HTTP_ADDITION HTTP_AUTH_REQ HTTP_CACHE \
 		HTTP_DAV HTTP_FLV HTTP_GZIP_STATIC HTTP_GUNZIP_FILTER \
 		HTTP_MP4 HTTP_RANDOM_INDEX HTTP_REALIP HTTP_SECURE_LINK \
 		HTTP_SLICE HTTP_REWRITE HTTP_SSL HTTP_STATUS HTTP_SUB \
-		HTTPV2 MAIL MAIL_SSL STREAM STREAM_SSL THREADS WWW
+		HTTPV2 MAIL MAIL_SSL STREAM STREAM_SSL STREAM_SSL_PREREAD \
+		THREADS WWW
 
 DSO_DESC=			Enable dynamic modules support
 DEBUG_DESC=			Build with debugging support
@@ -168,6 +171,7 @@ HTTPV2_DESC=			Enable HTTP/2 protocol support (SSL req.)
 NJS_DESC=			Enable http_javascript module
 STREAM_DESC=			Enable stream module
 STREAM_SSL_DESC=		Enable stream_ssl module (SSL req.)
+STREAM_SSL_PREREAD_DESC=	Enable stream_ssl_preread module (SSL req.)
 THREADS_DESC=			Enable threads support
 WWW_DESC=			Enable html sample files
 AJP_DESC=			3rd party ajp module
@@ -176,6 +180,7 @@ CACHE_PURGE_DESC=		3rd party cache_purge module
 CLOJURE_DESC=			3rd party clojure module
 CT_DESC=			3rd party cert_transparency module (SSL req.)
 ECHO_DESC=			3rd party echo module
+FASTDFS_DESC=			3rd party fastdfs module
 HEADERS_MORE_DESC=		3rd party headers_more module
 HTTP_ACCEPT_LANGUAGE_DESC=	3rd party accept_language module
 HTTP_ACCESSKEY_DESC=		3rd party http_accesskey module
@@ -263,7 +268,10 @@ HTTP_PORT?=	80
 NGINX_ACCESSLOG?=	${NGINX_LOGDIR}/access.log
 NGINX_ERRORLOG?=	${NGINX_LOGDIR}/error.log
 
-CONFLICTS?=	nginx-1.*
+CONFLICTS?=     nginx-1.* \
+                nginx-full-1.* \
+                nginx-lite-1.* \
+                nginx-naxsi-1.*
 USE_RC_SUBR=	nginx
 SUB_FILES=	pkg-message
 SUB_LIST+=	WWWOWN=${WWWOWN} \
@@ -455,6 +463,21 @@ CONFIGURE_ARGS+=--add-dynamic-module=${WRKSRC_echo}
 .else
 CONFIGURE_ARGS+=--add-module=${WRKSRC_echo}
 .endif
+.endif
+
+.if ${PORT_OPTIONS:MFASTDFS}
+NGINX_FASTDFS_VERSION=     5a8110f
+GH_ACCOUNT+=    happyfish100:fastdfs
+GH_PROJECT+=    fastdfs-nginx-module:fastdfs
+GH_TAGNAME+=    ${NGINX_FASTDFS_VERSION}:fastdfs
+EXTRA_PATCHES+= ${PATCHDIR}/extra-patch-fastdfs-src-config
+BUILD_DEPENDS+=	${LOCALBASE}/include/fastcommon/logger.h:devel/libfastcommon \
+		${LOCALBASE}/include/fastdfs/fdfs_client.h:ftp/fastdfs
+LIB_DEPENDS+=	libfastcommon.so:devel/libfastcommon \
+		libfdfsclient.so:ftp/fastdfs
+CONFIGURE_ARGS+=--add-module=${WRKSRC_fastdfs}/src \
+		--with-cc-opt="-I ${LOCALBASE}/include/fastdfs \
+		-I ${LOCALBASE}/include/fastcommon"
 .endif
 
 .if ${PORT_OPTIONS:MHEADERS_MORE}
@@ -720,6 +743,7 @@ DISTFILES+=	nginx_upstream_fair-${NGINX_UPSTREAM_FAIR_VERSION}.tar.gz:upstreamfa
 CONFIGURE_ARGS+=--add-module=${WRKDIR}/nginx_upstream_fair-${NGINX_UPSTREAM_FAIR_VERSION}
 .if !empty(PORT_OPTIONS:MHTTP_UPSTREAM_CHECK)
 EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-ngx_http_upstream_fair_module.c
+IGNORE=	HTTP_UPSTREAM_FAIR: a patch requires
 .endif
 .endif
 
@@ -734,17 +758,15 @@ EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-ngx_http_sticky_misc.c
 
 .if ${PORT_OPTIONS:MHTTP_VIDEO_THUMBEXTRACTOR}
 NGINX_VIDEO_THUMBEXTRACTOR_VERSION=	0.7.0
-LIB_DEPENDS+= 	libjpeg.so:graphics/jpeg \
-		libavformat.so:multimedia/ffmpeg \
+LIB_DEPENDS+= 	libavformat.so:multimedia/ffmpeg \
 		libavcodec.so:multimedia/ffmpeg \
 		libavutil.so:multimedia/ffmpeg \
-		libswscale.so:multimedia/ffmpeg \
-		${IMAGEMAGICK_LIB_DEPENDS}
+		libswscale.so:multimedia/ffmpeg
+USES+=		jpeg
 GH_ACCOUNT+=	wandenberg:vte
 GH_PROJECT+=	nginx-video-thumbextractor-module:vte
 GH_TAGNAME+=	${NGINX_VIDEO_THUMBEXTRACTOR_VERSION}:vte
-CONFIGURE_ARGS+=--add-module=${WRKSRC_vte} --with-cc-opt="-I ${LOCALBASE}/include \
-		-I ${LOCALBASE}/include/ImageMagick"
+CONFIGURE_ARGS+=--add-module=${WRKSRC_vte}
 .endif
 
 .if ${PORT_OPTIONS:MHTTP_XSLT}
@@ -771,7 +793,8 @@ GH_ACCOUNT+=	openresty:drizzle
 GH_PROJECT+=	drizzle-nginx-module:drizzle
 GH_TAGNAME+=	v${NGINX_DRIZZLE_VERSION}:drizzle
 CONFIGURE_ARGS+=--add-module=${WRKSRC_drizzle}
-EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-openresty-drizzle-nginx-module-config
+EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-openresty-drizzle-nginx-module-config \
+		${PATCHDIR}/extra-patch-ngx_http_drizzle_upstream.c
 .endif
 
 .if ${PORT_OPTIONS:MDYNAMIC_UPSTREAM}
@@ -841,6 +864,7 @@ GH_ACCOUNT+=	openresty:memc
 GH_PROJECT+=	memc-nginx-module:memc
 GH_TAGNAME+=	v${NGINX_MEMC_VERSION}:memc
 CONFIGURE_ARGS+=--add-module=${WRKSRC_memc}
+EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-ngx_http_memc_util.c
 .endif
 
 .if ${PORT_OPTIONS:MMODSECURITY}
@@ -852,6 +876,7 @@ LIB_DEPENDS+=	libapr-1.so:devel/apr1 \
 		libyajl.so:devel/yajl
 USE_APACHE=	22+
 USE_GNOME+=	libxml2
+USES+=		pkgconfig shebangfix
 MASTER_SITES+=	http://www.modsecurity.org/tarball/${NGINX_MODSECURITY_VERSION:S/RC/rc/}/:modsecurity
 DISTFILES+=	modsecurity-${NGINX_MODSECURITY_VERSION}.tar.gz:modsecurity
 CONFIGURE_ARGS+=--add-module=${WRKDIR}/modsecurity-${NGINX_MODSECURITY_VERSION}/nginx/modsecurity
@@ -898,7 +923,8 @@ GH_ACCOUNT+=	FRiCKLE:postgres
 GH_PROJECT+=	ngx_postgres:postgres
 GH_TAGNAME+=	${NGINX_POSTGRES_VERSION}:postgres
 CONFIGURE_ARGS+=--add-module=${WRKSRC_postgres}
-EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-ngx_postgres-config
+EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-ngx_postgres-config \
+		${PATCHDIR}/extra-patch-ngx_postgres_module.c
 .endif
 
 .if ${PORT_OPTIONS:MRDS_CSV}
@@ -923,6 +949,7 @@ GH_ACCOUNT+=	openresty:redis2
 GH_PROJECT+=	redis2-nginx-module:redis2
 GH_TAGNAME+=	v${NGINX_REDIS2_VERSION}:redis2
 CONFIGURE_ARGS+=--add-module=${WRKSRC_redis2}
+EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-ngx_http_redis2_util.c
 .endif
 
 .if ${PORT_OPTIONS:MRTMP}
@@ -1033,7 +1060,7 @@ CONFIGURE_ARGS+=--with-http_v2_module
 .if ${PORT_OPTIONS:MNJS}
 GH_ACCOUNT+=	nginx:njs
 GH_PROJECT+=	njs:njs
-GH_TAGNAME+=	ee84984:njs
+GH_TAGNAME+=	8c01042:njs
 .if !empty(PORT_OPTIONS:MDSO)
 CONFIGURE_ARGS+=--add-dynamic-module=${WRKSRC_njs}/nginx
 .else
@@ -1051,6 +1078,9 @@ CONFIGURE_ARGS+=--with-stream
 NGINX_OPENSSL=	yes
 USE_HTTP_SSL=	yes
 CONFIGURE_ARGS+=--with-stream_ssl_module
+.if ${PORT_OPTIONS:MSTREAM_SSL_PREREAD}
+CONFIGURE_ARGS+=--with-stream_ssl_preread_module
+.endif
 .endif
 .endif
 
@@ -1194,6 +1224,12 @@ post-patch:
 		's!%%PREFIX%%!${LOCALBASE}!g' \
 		${WRKSRC_drizzle}/config
 .endif
+.if ${PORT_OPTIONS:MFASTDFS}
+	@${REINPLACE_CMD} \
+		's!%%PREFIX%%!${PREFIX}!g; \
+		s!%%LOCALBASE%%!${LOCALBASE}!g' \
+		${WRKSRC_fastdfs}/src/config
+.endif
 # Respect CFLAGS by remove needless --std=c99 flag
 .if ${PORT_OPTIONS:MGRIDFS}
 	@${REINPLACE_CMD} \
@@ -1256,7 +1292,9 @@ post-patch:
 pre-configure:
 .if ${PORT_OPTIONS:MMODSECURITY}
 	( cd ${WRKDIR}/modsecurity-${NGINX_MODSECURITY_VERSION} && \
-		CC="${CC}" ${CONFIGURE_CMD} --enable-standalone-module && \
+		CC="${CC}" ${CONFIGURE_CMD} --enable-standalone-module \
+		--with-pcre=${LOCALBASE} --with-yajl=${LOCALBASE} \
+		--with-curl=${LOCALBASE} && \
 		${SETENV} ${MAKE_ENV} ${MAKE_CMD} )
 .endif
 .if ${PORT_OPTIONS:MSMALL_LIGHT}
@@ -1296,10 +1334,15 @@ do-install:
 		${STAGEDIR}${PREFIX}/${SITE_ARCH_REL}/
 .endif
 
+.if ${PORT_OPTIONS:MFASTDFS}
+	${MKDIR} ${STAGEDIR}${PREFIX}/etc/fdfs
+	${INSTALL_DATA} ${WRKSRC_fastdfs}/src/mod_fastdfs.conf ${STAGEDIR}${PREFIX}/etc/fdfs/mod_fastdfs.conf.sample
+.endif
+
 # Install dynamic modules
 .if !empty(PORT_OPTIONS:MDSO)
 	(cd ${WRKSRC}/objs/ && ${FIND} . -name '*.so' -maxdepth 1 -type f \
-		-exec ${INSTALL_PROGRAM} "{}" ${STAGEDIR}${MODULESDIR} \;)
+		-exec ${INSTALL_PROGRAM} {} ${STAGEDIR}${MODULESDIR} \;)
 .endif
 
 .if ${PORT_OPTIONS:MNAXSI}
@@ -1317,6 +1360,10 @@ post-install:
 
 .if ${PORT_OPTIONS:MNAXSI}
 	${ECHO_CMD} etc/nginx/naxsi_core.rules >> ${TMPPLIST}
+.endif
+
+.if ${PORT_OPTIONS:MFASTDFS}
+	${ECHO_CMD} @sample etc/fdfs/mod_fastdfs.conf.sample >> ${TMPPLIST}
 .endif
 
 # Add dynamic modules to the plist
