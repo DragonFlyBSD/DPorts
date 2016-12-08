@@ -3,6 +3,7 @@
 
 PORTNAME=	wt
 PORTVERSION=	3.3.6
+PORTREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	info@babaei.net
@@ -219,7 +220,7 @@ USE_MYSQL=	yes
 CMAKE_ARGS+=	-DMYSQL_PREFIX:STRING=${LOCALBASE}
 .endif
 
-post-stage:
+post-install:
 	@${RM} ${STAGEDIR}${ETCDIR}/wt_config.xml
 	@${MKDIR} ${STAGEDIR}${ETCDIR}
 	@${CP} -p ${BUILD_WRKSRC}/wt_config.xml \
