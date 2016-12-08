@@ -5,3 +5,8 @@ pre-patch:
 		${WRKSRC}/Utilities/KWSys/vtksys/CMakeLists.txt
 	${REINPLACE_CMD} -e 's|#define USE_STAT_64|//#define USE_STAT_64|g'	\
 		${WRKSRC}/IO/LSDyna/private/LSDynaFamily.cxx
+
+# prune orphaned dirs (MF rm the share/cmake/hdf5/libhdf5.settings)
+post-install-script:
+	-rmdir ${STAGEDIR}${PREFIX}/share/cmake/hdf5
+	-rmdir ${STAGEDIR}${PREFIX}/share/cmake
