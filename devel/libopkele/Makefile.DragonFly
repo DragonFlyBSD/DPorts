@@ -1,5 +1,0 @@
-# fails on gcc5:
-# ../include/opkele/iterator.h:162:7: error: invalid abstract return type
-#   'opkele::util::basic_filterator<IT>'
-
-USE_GCC=	NOT5
