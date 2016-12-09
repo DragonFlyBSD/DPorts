@@ -4,9 +4,9 @@
 
 PORTNAME=	poedit
 PORTVERSION=	1.8.4
-PORTREVISION=	3
+PORTREVISION=	5
 CATEGORIES=	editors
-MASTER_SITES=	http://github.com/vslavik/${PORTNAME}/releases/download/v${PORTVERSION}-oss/
+MASTER_SITES=	https://github.com/vslavik/${PORTNAME}/releases/download/v${PORTVERSION}-oss/
 
 MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	Gettext catalogs (.po files) editor
