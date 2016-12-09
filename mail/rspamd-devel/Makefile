@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	rspamd
-PORTVERSION=	1.4.0.a2.16112016
+PORTVERSION=	1.4.2.a1.30112016
 CATEGORIES=	mail
 PKGNAMESUFFIX=	-devel
 
@@ -9,6 +9,7 @@ MAINTAINER=	vsevolod@FreeBSD.org
 COMMENT=	Fast spam filtering system dev version
 
 LICENSE=	APACHE20
+LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libpcre.so:devel/pcre \
 		libgmime-2.6.so:mail/gmime26 \
@@ -19,11 +20,10 @@ BUILD_DEPENDS=	ragel:devel/ragel
 
 CONFLICTS_INSTALL=	rspamd
 
-RSPAMD_VERSION=	1.4.0
+RSPAMD_VERSION=	1.4.2
 USE_GITHUB=	yes
 GH_ACCOUNT=	vstakhov
-GH_PROJECT=	rspamd
-GH_TAGNAME=	a5eef8b
+GH_TAGNAME=	cdecbbc
 
 OPTIONS_DEFINE=	GPERF REDIRECTOR HYPERSCAN
 GPERF_DESC=		Google perf-tools profiling
@@ -49,7 +49,7 @@ CMAKE_ARGS+=	-DCONFDIR=${PREFIX}/etc/rspamd \
 		-DGIT_ID=${GH_TAGNAME} \
 		-DENABLE_FANN=ON
 
-USES=		cmake:outsource gettext iconv pkgconfig tar:xz perl5 \
+USES=		cmake:outsource gettext iconv pkgconfig perl5 \
 		compiler:c11 sqlite ssl
 USE_LDCONFIG=	yes
 USE_PERL5=	build
@@ -92,8 +92,8 @@ WITH_DEBUG=	yes
  PLIST_SUB+=	REDIRECTOR="@comment "
 .endif
 
-post-stage:
-	${INSTALL} -d \
+post-install:
+	@${MKDIR} \
 		${STAGEDIR}/var/log/rspamd \
 		${STAGEDIR}/var/db/rspamd \
 		${STAGEDIR}/var/run/rspamd
@@ -102,8 +102,6 @@ post-stage:
 	# No need, since rspamd.conf.sample is a same
 	${RM} ${STAGEDIR}/${ETCDIR}/rspamd.sysvinit.conf
 	${INSTALL_DATA} ${WRKDIR}/rspamd.newsyslog.conf.sample ${STAGEDIR}${ETCDIR}
-
-post-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/newsyslog.conf.d
 	${LN} -s ${ETCDIR}/rspamd.newsyslog.conf ${STAGEDIR}${PREFIX}/etc/newsyslog.conf.d
 
