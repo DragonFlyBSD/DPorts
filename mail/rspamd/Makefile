@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	rspamd
-PORTVERSION=	1.3.5
+PORTVERSION=	1.4.1
 CATEGORIES=	mail
 MASTER_SITES=	http://rspamd.com/downloads/
 
@@ -82,7 +82,10 @@ USE_GNOME=	glib20
  PLIST_SUB+=	REDIRECTOR="@comment "
 .endif
 
-post-stage:
+post-install:
+	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/newsyslog.conf.d
+	${LN} -s ${ETCDIR}/rspamd.newsyslog.conf ${STAGEDIR}${PREFIX}/etc/newsyslog.conf.d
+
 	${INSTALL} -d \
 		${STAGEDIR}/var/log/rspamd \
 		${STAGEDIR}/var/db/rspamd \
@@ -92,9 +95,5 @@ post-stage:
 	# No need, since rspamd.conf.sample is a same
 	${RM} ${STAGEDIR}/${ETCDIR}/rspamd.sysvinit.conf
 	${INSTALL_DATA} ${WRKDIR}/rspamd.newsyslog.conf.sample ${STAGEDIR}${ETCDIR}
-
-post-install:
-	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/newsyslog.conf.d
-	${LN} -s ${ETCDIR}/rspamd.newsyslog.conf ${STAGEDIR}${PREFIX}/etc/newsyslog.conf.d
 
 .include <bsd.port.mk>
