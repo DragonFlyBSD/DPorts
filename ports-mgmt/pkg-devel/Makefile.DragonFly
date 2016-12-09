@@ -13,9 +13,6 @@ dfly-patch:
 .else
 	${REINPLACE_CMD} -e "s|/usr/ports|${PORTSDIR}|g" ${PROBLEM_FILES}
 .endif
-# temporary
-	${REINPLACE_CMD} -e "s|sys/_type|sys/type|" \
-		${WRKSRC}/external/libsbuf/sys/sbuf.h
 
 # use the private LibreSSL base libraries if available
 .if exists(/usr/lib/priv/libprivate_ssl.so)
