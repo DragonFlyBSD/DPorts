@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/databases/influxdb/files/influxd.in 413757 2016-04-21 22:27:38Z girgen $
+# $FreeBSD: head/databases/influxdb/files/influxd.in 427896 2016-12-05 14:13:07Z girgen $
 
 # PROVIDE: influxd
 # REQUIRE: DAEMON NETWORKING
@@ -41,7 +41,7 @@ start_precmd="influxd_precmd"
 
 influxd_precmd()
 {
-    install -o ${influxd_user} /dev/null ${influxd_pidfile}
+    install -d -o ${influxd_user} %%INFLUXD_PIDDIR%%
 }
 
 run_rc_command "$1"
