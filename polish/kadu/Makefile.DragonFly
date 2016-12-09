@@ -1,2 +1,1 @@
-CFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+USES+= localbase:ldflags
