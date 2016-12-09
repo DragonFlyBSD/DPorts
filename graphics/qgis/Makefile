@@ -4,6 +4,7 @@
 PORTNAME=	qgis
 DISTVERSIONPREFIX=	final-
 DISTVERSION=	2_14_3
+PORTREVISION=	1
 CATEGORIES=	graphics geography
 
 MAINTAINER=	rhurlin@gwdg.de
@@ -11,7 +12,8 @@ COMMENT=	Geographical Information System (GIS) data viewer
 
 LICENSE=	GPLv2
 
-BUILD_DEPENDS=	txt2tags:textproc/txt2tags
+BUILD_DEPENDS=	txt2tags:textproc/txt2tags \
+		python:lang/python
 LIB_DEPENDS=	libexpat.so:textproc/expat2 \
 		libgdal.so:graphics/gdal \
 		libgeos.so:graphics/geos \
