@@ -4,6 +4,7 @@
 PORTNAME=	remmina
 DISTVERSIONPREFIX=v
 DISTVERSION=	1.2.0-rcgit.16
+PORTREVISION=	1
 CATEGORIES=	net gnome
 
 MAINTAINER=	woodsb02@FreeBSD.org
@@ -42,7 +43,6 @@ GCRYPT_LIB_DEPENDS=	libgcrypt.so:security/libgcrypt
 GCRYPT_CMAKE_BOOL=	WITH_GCRYPT
 
 NLS_CMAKE_BOOL=		WITH_TRANSLATIONS
-NLS_LDFLAGS=		-lintl
 
 SSH_LIB_DEPENDS=	libssh_threads.so:security/libssh
 SSH_LDFLAGS=		-fstack-protector
@@ -63,8 +63,12 @@ EXTRA_PATCHES=	${FILESDIR}/extrapatch-remmina_src_remmina__file.c
 
 post-patch:
 	# do not build plugins and locales , they are provided by separated ports
-	${REINPLACE_CMD} -e's|add_subdirectory(remmina-plugins)||' ${WRKSRC}/CMakeLists.txt
-	${REINPLACE_CMD} -e's|add_subdirectory(remmina-plugins-gnome)||' ${WRKSRC}/CMakeLists.txt
-	${REINPLACE_CMD} -e's|add_subdirectory(external_tools)||' ${WRKSRC}/remmina/CMakeLists.txt
+	${REINPLACE_CMD} -e's|add_subdirectory(remmina-plugins)||' \
+		-e 's,FreeBSD,FreeBSD|DragonFly,' ${WRKSRC}/CMakeLists.txt
+	${REINPLACE_CMD} -e's|add_subdirectory(remmina-plugins-gnome)||' \
+		${WRKSRC}/CMakeLists.txt
+	${REINPLACE_CMD} -e's|add_subdirectory(external_tools)||' \
+		-e 's,FreeBSD,FreeBSD|DragonFly,' \
+		${WRKSRC}/remmina/CMakeLists.txt
 
 .include <bsd.port.post.mk>
