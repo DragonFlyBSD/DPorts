@@ -1,4 +1,5 @@
 USE_CXXSTD=	c++11
+LDFLAGS+=	-lpthread
 DPMSG=		${WRKDIR}/dports-message
 
 .if !defined(DPORTS_BUILDER) && defined(PACKAGE_BUILDING)
