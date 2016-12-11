@@ -26,6 +26,10 @@ SUB_LIST=	LLVM_PREFIX="${LLVM_PREFIX}" LLVM_SUFFIX="${LLVM_SUFFIX}"
 
 CMAKE_INSTALL_PREFIX=	${LLVM_PREFIX}
 CMAKE_ARGS=	-DLLVM_BUILD_LLVM_DYLIB=ON
+# Following commit https://github.com/kitware/cmake/commit/956054
+# we need to either change the whole man-shuffle below, or simply
+# redefine CMAKE_INSTALL_MANDIR
+CMAKE_ARGS+=	-DCMAKE_INSTALL_MANDIR:PATH="share/man"
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	llvm-mirror
@@ -104,6 +108,7 @@ COMMANDS=	bugpoint \
 		llvm-ar \
 		llvm-as \
 		llvm-bcanalyzer \
+		llvm-cat \
 		llvm-config \
 		llvm-cov \
 		llvm-diff \
@@ -114,6 +119,7 @@ COMMANDS=	bugpoint \
 		llvm-link \
 		llvm-mc \
 		llvm-mcmarkup \
+		llvm-modextract \
 		llvm-nm \
 		llvm-objdump \
 		llvm-opt-report \
@@ -187,6 +193,10 @@ COMPILER_RT_PATTERN=	(asan_blacklist.txt|sanitizer|xray_interface.h)
 .if ${PORT_OPTIONS:MLIT}
 MAN1SRCS+=	lit.1 FileCheck.1
 LIT_COMMANDS=	lit llvm-lit FileCheck
+.endif
+
+.if ${PORT_OPTIONS:MLLD}
+COMMANDS+=	ld.lld
 .endif
 
 .if ${PORT_OPTIONS:MLLDB}
