@@ -1,12 +1,13 @@
 #!/bin/sh
-# $FreeBSD: head/sysutils/filebeat/files/filebeat.in 415952 2016-05-27 18:16:40Z girgen $
+# $FreeBSD: head/sysutils/filebeat/files/filebeat.in 428146 2016-12-08 17:46:28Z girgen $
 
 # PROVIDE: filebeat
 # REQUIRE: DAEMON
 # BEFORE: LOGIN
 # KEYWORD: shutdown
 
-# Add the following lines to /etc/rc.conf to enable logstash-forwarder:
+# Add the following lines to /etc/rc.conf to enable filebeat:
+#
 # filebeat_enable (bool):	Set to YES to enable filebeat
 # 				Default: NO
 # filebeat_flags (str):		Extra flags passed to filebeat
