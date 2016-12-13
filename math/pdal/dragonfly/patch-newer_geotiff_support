@@ -1,0 +1,34 @@
+How is that considered to be a good practice?? cmake logic is not enough?
+
+--- io/las/GeotiffSupport.hpp.orig	2015-11-25 20:45:33.000000000 +0200
++++ io/las/GeotiffSupport.hpp
+@@ -46,10 +46,10 @@
+ #endif
+ 
+ // Fake out the compiler if we don't have libgeotiff includes already
+-#if !defined(__geotiff_h_)
++#if !defined(__geotiff_h_) && !defined(LIBGEOTIFF_GEOTIFF_H_)
+ typedef struct GTIFS *GTIF;
+ #endif
+-#if !defined(__geo_simpletags_h_)
++#if !defined(__geo_simpletags_h_) && !defined(LIBGEOTIFF_GEO_SIMPLETAGS_H_)
+ typedef struct ST_TIFFS *ST_TIFF;
+ #endif
+ 
+--- io/las/GeotiffSupport.cpp.orig	2015-11-25 20:45:33.000000000 +0200
++++ io/las/GeotiffSupport.cpp
+@@ -41,12 +41,12 @@
+ #include <sstream>
+ 
+ PDAL_C_START
+-#ifdef __geotiff_h_
++#if defined(__geotiff_h_) || defined(LIBGEOTIFF_GEOTIFF_H_)
+ 
+ char PDAL_DLL * GTIFGetOGISDefn(GTIF*, GTIFDefn*);
+ int PDAL_DLL GTIFSetFromOGISDefn(GTIF*, const char*);
+ 
+-#endif // defined __geotiff_h_
++#endif // defined __geotiff_h_ || defined LIBGEOTIFF_GEOTIFF_H_
+ PDAL_C_END
+ 
+ 
