@@ -1,0 +1,5 @@
+
+# zrj: remove clang'ism from MF
+dfly-patch:
+	${REINPLACE_CMD} -e 's@ -Wno-error=c11-extensions@@g'	\
+		${WRKSRC}/Makefile
