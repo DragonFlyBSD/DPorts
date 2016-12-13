@@ -3,6 +3,7 @@
 
 PORTNAME=	blender
 PORTVERSION=	2.77a
+PORTREVISION=	3
 CATEGORIES=	graphics games
 MASTER_SITES=	http://download.blender.org/source/ \
 		http://mirror.cs.umn.edu/blender.org/source/ \
@@ -210,9 +211,14 @@ BROKEN=	REDCODE requires OPENJPEG and FFMPEG
 
 .include <bsd.port.pre.mk>
 
-.if ${COMPILER_TYPE} == gcc
+.if ${OPSYS} == FreeBSD && ${COMPILER_TYPE} == gcc
 # gcc 4.2 does not support -msse4.1, which is needed for blender 2.70+
+.if ${ARCH} == x86_64
+# gcc 4.9 fails to link on amd64
+USE_GCC=	4.8
+.else
 USE_GCC=	yes
+.endif
 .endif
 
 post-patch:
