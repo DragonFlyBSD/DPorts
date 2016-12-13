@@ -1,0 +1,5 @@
+# fix pc file location
+
+dfly-patch:
+	${REINPLACE_CMD} -e "s|FreeBSD|DragonFly|" \
+		${WRKSRC}/cmake/modules/LXQtCreatePkgConfigFile.cmake
