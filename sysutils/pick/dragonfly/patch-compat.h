@@ -1,5 +1,5 @@
---- src/compat.h.orig	2016-02-12 08:48:41 UTC
-+++ src/compat.h
+--- compat.h.orig	2016-10-20 07:33:58 UTC
++++ compat.h
 @@ -5,7 +5,7 @@
  #include "config.h"
  #endif
