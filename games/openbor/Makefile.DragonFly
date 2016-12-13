@@ -1,0 +1,6 @@
+
+# zrj: this one is strange, why -Wl,--as-needed in MF? (fix link order anyway)
+#LDFLAGS:=
+dfly-patch:
+	${REINPLACE_CMD} -e "s@-lSDL2 -lSDL2_gfx@-lSDL2_gfx -lm -lSDL2 -lrt -lm@g"	\
+		${WRKSRC}/Makefile
