@@ -1,5 +1,0 @@
-# hack until the cause is found
-
-post-install:
-	${MV} ${STAGEDIR}${PREFIX}/share/man/man1/remmina.1 \
-		${STAGEDIR}${PREFIX}/man/man1/remmina.1
