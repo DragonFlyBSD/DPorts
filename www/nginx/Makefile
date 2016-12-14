@@ -3,7 +3,7 @@
 
 PORTNAME=	nginx
 PORTVERSION=	1.10.2
-PORTREVISION=	2
+PORTREVISION=	3
 PORTEPOCH=	2
 CATEGORIES=	www
 MASTER_SITES=	http://nginx.org/download/
@@ -535,6 +535,7 @@ NGINX_HTTP_GEOIP2_VERSION=	2.0
 GH_ACCOUNT+=	leev:geoip2
 GH_PROJECT+=	ngx_http_geoip2_module:geoip2
 GH_TAGNAME+=	${NGINX_HTTP_GEOIP2_VERSION}:geoip2
+CFLAGS+=	"-I${LOCALBASE}/include"
 .if !empty(PORT_OPTIONS:MDSO)
 CONFIGURE_ARGS+=--add-dynamic-module=${WRKSRC_geoip2}
 .else
@@ -780,6 +781,8 @@ CONFIGURE_ARGS+=--add-module=${WRKDIR}/mod_zip-${NGINX_ZIP_VERSION}
 
 .if ${PORT_OPTIONS:MDRIZZLE}
 LIB_DEPENDS+=	libdrizzle.so:databases/libdrizzle
+CONFIGURE_ENV+=	"LIBDRIZZLE_INC=${LOCALBASE}/include"
+CONFIGURE_ENV+=	"LIBDRIZZLE_LIB=${LOCALBASE}/lib"
 NGINX_DRIZZLE_VERSION=	0.1.9
 GH_ACCOUNT+=	openresty:drizzle
 GH_PROJECT+=	drizzle-nginx-module:drizzle
