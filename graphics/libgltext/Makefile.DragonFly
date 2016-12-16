@@ -1,0 +1,4 @@
+
+# zrj: use correct lang for linking the libgltext.so
+# fixes graphics/libgltext build (binutils 2.27 ld.gold is unhappy)
+CONFIGURE_ARGS+= CC=c++
