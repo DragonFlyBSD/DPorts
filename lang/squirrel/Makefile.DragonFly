@@ -1,0 +1,8 @@
+
+# zrj: add missing link against -lm in libsqstdlib.so
+# NOTYPE  GLOBAL DEFAULT  UND {pow, exp, log, sqrt, fmod, etc}
+# fixes  build (binutils 2.27 ld.gold is unhappy)
+dfly-patch:
+	${REINPLACE_CMD} -e "/-shared -o/s/$$/ -lm/g"	\
+		${WRKSRC}/sqstdlib/Makefile	\
+		${WRKSRC}/squirrel/Makefile
