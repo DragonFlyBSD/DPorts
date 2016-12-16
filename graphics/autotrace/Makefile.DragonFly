@@ -1,0 +1,7 @@
+
+# zrj: add missing link against -lm in libautotrace.so
+# NOTYPE  GLOBAL DEFAULT  UND {acos, ceil, sqrt}
+# fixes graphics/autotrace build (binutils 2.27 ld.gold is unhappy)
+dfly-patch:
+	${REINPLACE_CMD} -e "/LINK) -rpath/s/$$/ -lm/g"	\
+		${WRKSRC}/Makefile.in
