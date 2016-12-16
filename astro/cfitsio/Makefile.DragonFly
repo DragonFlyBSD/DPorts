@@ -1,0 +1,7 @@
+
+# zrj: add missing link against -lz in libcfitsio.so
+# NOTYPE  GLOBAL DEFAULT  UND {deflate, deflateEnd, deflateInit2_, inflate, inflateEnd, inflateInit2_}
+# fixes graphics/vips build (binutils 2.27 ld.gold is unhappy)
+dfly-patch:
+	${REINPLACE_CMD} -e "/SHLIB_LD}/s/$$/ -lz/g"	\
+		${WRKSRC}/Makefile.in
