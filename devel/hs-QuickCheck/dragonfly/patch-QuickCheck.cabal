@@ -1,0 +1,13 @@
+# zrj: add missing link against -lm in libQuickCheck-*.so
+# NOTYPE  GLOBAL DEFAULT  UND log
+# fixes devel/hs-alex (binutils 2.27 ld.gold is unhappy
+--- QuickCheck.cabal.orig	2015-04-03 15:23:20.000000000 +0300
++++ QuickCheck.cabal
+@@ -52,6 +52,7 @@ flag templateHaskell
+   Description: Build Test.QuickCheck.All, which uses Template Haskell.
+ 
+ library
++  extra-libraries: m
+   -- Choose which library versions to use.
+   if flag(base4point8)
+     Build-depends: base >= 4.8 && < 5
