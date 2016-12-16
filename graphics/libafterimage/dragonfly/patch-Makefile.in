@@ -1,0 +1,14 @@
+# zrj: add missing link against -lm, -png, -jpeg in libafterimage.so
+# NOTYPE  GLOBAL DEFAULT  UND {fmod, exp}
+# fixes graphics/libafterimage build (binutils 2.27 ld.gold is unhappy)
+--- Makefile.in.intermediate 2016-12-15 19:09:40.000000000 +0200
++++ Makefile.in
+@@ -394,7 +394,7 @@ $(LIB_SHARED): $(LIB_SHARED).$(LIBVERMAJ
+ 
+ $(LIB_SHARED).$(LIBVERMAJOR): $(LIB_OBJS) $(LIB_INCS) config.h
+ 	$(CC) -shared -Wl,-soname,$(LIB_SHARED).$(LIBVERMAJOR) -o $(LIB_SHARED).$(LIBVERMAJOR) \
+-	 $(LIB_OBJS)
++	 $(LIB_OBJS) $(LIBRARIES)
+ 
+ install.man:
+ 		@if [ -d doc/man ] ; then \
