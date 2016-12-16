@@ -1,0 +1,7 @@
+
+# zrj: add missing link against -lxml2 in liblttoolbox3.so
+# NOTYPE  GLOBAL DEFAULT  UND {xml*}
+# fixes textproc/apertium build (binutils 2.27 ld.gold is unhappy)
+dfly-patch:
+	${REINPLACE_CMD} -e '/liblttoolbox3_la_LINK) -rpath/s/$$/ $$(LTTOOLBOX_LIBS)/g'	\
+		${WRKSRC}/lttoolbox/Makefile.in
