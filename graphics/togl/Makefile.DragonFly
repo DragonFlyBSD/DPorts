@@ -1,0 +1,7 @@
+
+# zrj: add missing link against -lc in libtogl.so
+# NOTYPE  GLOBAL DEFAULT  UND {malloc etc}
+# fixes cad/netgen build (binutils 2.27 ld.gold is unhappy)
+dfly-patch:
+	${REINPLACE_CMD} -e '/MAKE_SHARED_LIB=/s/"$$/ -lc"/g' \
+		${WRKSRC}/configure
