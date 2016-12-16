@@ -146,7 +146,7 @@ _EXPORTED_VARS+=	UID
 .endif
 
 INDEXDIR?=	${PORTSDIR}
-INDEXFILE?=	INDEX-${DFLYVERSION:C/([0-9]*)[0-9]{5}/\1/}
+INDEXFILE?=	INDEX
 
 # local customization of the ports tree
 .sinclude "${.CURDIR}/Makefile.local"

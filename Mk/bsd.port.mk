@@ -1294,7 +1294,7 @@ _GITHUB_MUST_SET_DISTNAME=		yes
 DISTNAME?=	${PORTNAME}-${DISTVERSIONFULL}
 .endif
 
-INDEXFILE?=		INDEX-${DFLYVERSION:C/([0-9]*)[0-9]{5}/\1/}
+INDEXFILE?=		INDEX
 
 .if defined(USE_XORG) || defined(XORG_CAT)
 .include "${PORTSDIR}/Mk/bsd.xorg.mk"
