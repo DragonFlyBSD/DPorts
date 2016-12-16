@@ -1,0 +1,7 @@
+
+# zrj: add missing link against -lm in libilbccodec.so
+# NOTYPE  GLOBAL DEFAULT  UND {pow, log10, sqrt, cos}
+# fixes net/pjsip-extsrtp and audio/asterisk/flite (binutils 2.27 ld.gold is unhappy)
+dfly-patch:
+	${REINPLACE_CMD} -e "/app=libilbccodec .*subst /s/$$/ ILBC_LDFLAGS=-lm/"	\
+		${WRKSRC}/third_party/build/ilbc/Makefile
