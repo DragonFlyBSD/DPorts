@@ -1,0 +1,14 @@
+# zrj: add missing link against -lm in libGormCore.so
+# NOTYPE  GLOBAL DEFAULT  UND {floor, floorf}
+# fixes x11/gnustep-app (binutils 2.27 ld.gold is unhappy)
+--- GormCore/GNUmakefile.orig	2011-11-05 03:44:24.000000000 +0200
++++ GormCore/GNUmakefile
+@@ -166,6 +166,8 @@ GormCore_OBJC_FILES = \
+ 	NSView+GormExtensions.m \
+         GormPrivate.m
+ 
++SHARED_LD_POSTFLAGS += -lm
++
+ -include GNUmakefile.preamble
+ -include GNUmakefile.local
+ 
