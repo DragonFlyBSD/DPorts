@@ -1,0 +1,3 @@
+# zrj: link this small library with c++ (missing -lstdc++)
+# fixes graphics/blender build (binutils 2.27 ld.gold is unhappy)
+MAKE_ENV+= CC_LINK=c++ # how that even worked and didn't crashed blender..
