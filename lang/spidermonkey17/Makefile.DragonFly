@@ -1,0 +1,7 @@
+
+# zrj: add missing link against -lc ??? and -lm in libjs.so
+# NOTYPE  GLOBAL DEFAULT  UND {acos, asin, atan, atan2, ceil, cos, exp, floor, fmod, log, log10, pow, sin, sqrt, tan}
+# fixes net/mediatomb build (binutils 2.27 ld.gold is unhappy)
+dfly-patch:
+	${REINPLACE_CMD} -e "/MKSHLIB) -o /s/$$/ -lc -lm/g"	\
+		${WRKSRC}/rules.mk
