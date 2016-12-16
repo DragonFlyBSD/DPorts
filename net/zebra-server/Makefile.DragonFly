@@ -1,0 +1,7 @@
+
+# zrj: add missing link against -lyaz, -lxslt in libidzebra-2.0.so
+# NOTYPE  GLOBAL DEFAULT  UND {yaz*, xml*}
+# fixes net/zebra-server build (binutils 2.27 ld.gold is unhappy)
+dfly-patch:
+	${REINPLACE_CMD} -e '/libidzebra_2_0_la_LINK) -rpath/s/$$/ $$(YAZLALIB)/g'	\
+		${WRKSRC}/index/Makefile.in
