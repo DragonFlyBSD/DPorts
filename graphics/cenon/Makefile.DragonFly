@@ -1,0 +1,5 @@
+
+# fix plist garbage
+post-install-script:
+	-rm -f ${STAGEDIR}${PREFIX}/GNUstep/System/Applications/Cenon.app/Resources/InspectorPanel.nib/._keyedobjects.nib
+	-rm -f ${STAGEDIR}${PREFIX}/GNUstep/System/Library/._README
