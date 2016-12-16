@@ -1,0 +1,7 @@
+
+# zrj: add missing link against -lm in libflite.so
+# NOTYPE  GLOBAL DEFAULT  UND {pow, exp, log, sqrt, fmod, sin}
+# fixes gnustep-gui build (binutils 2.27 ld.gold is unhappy)
+dfly-patch:
+	${REINPLACE_CMD} -e "/-shared -Wl/s/)$$/ -lm)/g"	\
+		${WRKSRC}/config/common_make_rules
