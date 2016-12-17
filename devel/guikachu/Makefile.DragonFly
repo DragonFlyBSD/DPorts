@@ -1,0 +1,2 @@
+# missing msgfmt: /bin/sh: -o: not found
+USES+=	gettext-tools:build
