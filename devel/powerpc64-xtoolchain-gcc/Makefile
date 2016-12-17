@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	xtoolchain
-PORTVERSION=	0.1
+PORTVERSION=	0.2
 CATEGORIES=	devel
 MASTER_SITES=	# none
 DISTFILES=	# none
@@ -18,9 +18,9 @@ TOOLCHAIN_PREFIX=	x86_64-
 .else
 TOOLCHAIN_PREFIX=	${PKGNAMEPREFIX}
 .endif
-XCC?=		${TOOLCHAIN_PREFIX}portbld-freebsd10-gcc
-XCXX?=		${TOOLCHAIN_PREFIX}portbld-freebsd10-g++
-XCPP?=		${TOOLCHAIN_PREFIX}portbld-freebsd10-cpp
+XCC?=		${TOOLCHAIN_PREFIX}unknown-freebsd10-gcc
+XCXX?=		${TOOLCHAIN_PREFIX}unknown-freebsd10-g++
+XCPP?=		${TOOLCHAIN_PREFIX}unknown-freebsd10-cpp
 X_COMPILER_TYPE?=	${PKGNAMESUFFIX:C/-//g}
 
 RUN_DEPENDS?=	${XCC}:devel/${PKGNAMEPREFIX}${X_COMPILER_TYPE}
