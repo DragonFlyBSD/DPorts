@@ -1,0 +1,7 @@
+
+# zrj: add missing link against -lm in libSDL2_gfx.so
+# NOTYPE  GLOBAL DEFAULT  UND {atan, ceil, cos, floor, lrint, pow, sin, sqrt}
+# fixes games/manaplus build (binutils 2.27 ld.gold is unhappy)
+dfly-patch:
+	${REINPLACE_CMD} -e "/libSDL2_gfx_la_LINK) -rpath/s/$$/ -lm/g"	\
+		${WRKSRC}/Makefile.in
