@@ -1,0 +1,10 @@
+--- configure-alt.orig	2015-01-19 19:10:12.000000000 +0200
++++ configure-alt
+@@ -64,6 +64,7 @@ echo
+ case `uname` in 
+ 	Darwin) true ${os_type:=MAC_OSX} ;;
+ 	Linux)  true ${os_type:=LINUX} ;;
++	DragonFly) true ${os_type:=_BSD} ;;
+ 	FreeBSD) true ${os_type:=_BSD} ;;
+ 	NetBSD) true ${os_type:=_BSD} ;;
+ 	OpenBSD) true ${os_type:=_BSD} ;;
