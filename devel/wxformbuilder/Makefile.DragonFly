@@ -1,0 +1,6 @@
+
+# can't use DOS2UNIX_FILES w/o messing up files/ patches...
+dfly-patch:
+	${REINPLACE_CMD} -e "s@\(defined(__FreeBSD__)\)@(\1||defined(__DragonFly__))@g"	\
+		${WRKSRC}/sdk/premake/src/os.c	\
+		${WRKSRC}/sdk/premake/src/os.h
