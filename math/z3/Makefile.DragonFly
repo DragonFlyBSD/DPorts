@@ -1,0 +1,2 @@
+# zrj: disable OpenMP, propagates to libs
+CONFIGURE_ARGS+= --noomp
