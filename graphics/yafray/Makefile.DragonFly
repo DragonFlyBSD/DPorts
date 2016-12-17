@@ -1,0 +1,6 @@
+USES+= alias
+
+# just replace one of older entries of freebsd
+dfly-patch:
+	${REINPLACE_CMD} -e "s@freebsd7@dragonfly4@g"	\
+		${WRKSRC}/SConstruct
