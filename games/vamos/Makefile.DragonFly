@@ -1,0 +1,10 @@
+
+# zrj: fix missing -lstdc++ and -lm
+CONFIGURE_ENV+= CC=c++
+dfly-patch:
+	${REINPLACE_CMD} -e "/LINK) -rpath/s/$$/ -lm/g"	\
+		${WRKSRC}/body/Makefile.in	\
+		${WRKSRC}/geometry/Makefile.in	\
+		${WRKSRC}/media/Makefile.in	\
+		${WRKSRC}/track/Makefile.in	\
+		${WRKSRC}/world/Makefile.in
