@@ -1,0 +1,13 @@
+# zrj: add missing link against -lm in libHSJuicyPixels-*.so
+# NOTYPE  GLOBAL DEFAULT  UND {cosf, log, powf, sqrtf}
+# fixes textproc/hs-pandoc (binutils 2.27 ld.gold is unhappy)
+--- JuicyPixels.cabali.orig	2015-08-17 21:14:41.000000000 +0300
++++ JuicyPixels.cabal
+@@ -35,6 +35,7 @@ Flag Mmap
+     Default: False
+ 
+ Library
++  extra-libraries: m
+   hs-source-dirs: src
+   Default-Language: Haskell2010
+   Exposed-modules:  Codec.Picture,
