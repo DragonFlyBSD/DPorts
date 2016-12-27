@@ -1845,7 +1845,6 @@ deskutils/lxshortcut||2014-03-24|Has expired: Now distributed with x11/libfm-1.2
 databases/p5-Ima-DBI-Contextual||2014-03-24|Has expired: deprecated by upstream
 databases/p5-Class-DBI-Lite||2014-03-24|Has expired: deprecated by upstream
 net/AquaGatekeeper||2014-03-24|Has expired: Binary port of software abandoned by the vendor
-mail/mailutils||2014-03-24|Has expired: This port needs to be taken care of, it suffers from bit rot.  Especially with options other than GUILE, uninstall may leave files behind
 games/xflame||2014-03-24|Has expired: No more public distfiles
 games/p5-Algorithm-Pair-Best|games/p5-Algorithm-Pair-Best2|2014-03-24|Has expired: Use games/p5-Algorithm-Pair-Best2 instead
 x11-wm/hackedbox||2014-03-24|Has expired: Abandonware
@@ -3033,8 +3032,6 @@ databases/msql||2014-09-07|Has expired: Not staged and BROKEN
 multimedia/pvr250||2014-09-07|Has expired: Not staged and BROKEN
 multimedia/pvrxxx||2014-09-07|Has expired: Not staged and BROKEN
 textproc/py-4suite-xml||2014-09-07|Has expired: Not staged
-games/alienarena||2014-09-07|Has expired: Not staged
-games/alienarena-data||2014-09-07|Useless with alienarena removed
 net/libexosip2-legacy|net/libexosip2|2014-09-07|Has expired: Superseded by net/libexosip2
 net/libosip|net/libosip2|2014-09-07|Has expired: Superseded by net/libosip2
 lang/caml-light||2014-09-07|Not staged
@@ -4133,7 +4130,6 @@ graphics/pinta||2015-12-30|Has expired: Broken for more than 6 months
 games/kanatest||2015-12-30|Has expired: Broken for more than 6 months
 editors/bless||2015-12-30|Has expired: Broken for more than 6 months
 security/burpsuite||2015-12-30|Has expired: Broken for more than 6 months
-net/remmina-plugin-rdp||2015-12-30|Has expired: Broken for more than 6 months
 dns/bind10|dns/bundy|2015-12-31|Has expired: Is not developed any more, use dns/bundy
 lang/perl5.16||2015-12-31|Has expired: Unsupported, please upgrade to a more recent version of Perl
 devel/py-distutils-extra|devel/py-python-distutils-extra|2015-12-31|Renamed to match upstream naming
@@ -4709,7 +4705,6 @@ devel/poco-devel|devel/poco|2016-09-18|Has expired: older than stable devel/poco
 databases/pglogical-output|databases/pglogical|2016-09-22|databases/pglogical-output merged into databases/pglogical
 mail/gml||2016-09-23|Has expired: Deprecated upstream. Use native gmail tools to import
 net/nats|net/gnatsd|2016-09-24|Switched to upstream naming
-devel/py-unittest2||2016-09-26|Has expired: Was only required for Pythons lesser than 2.7
 graphics/evas_generic_loaders|devel/efl|2016-09-27|Merged into devel/efl
 graphics/evas_generic_loaders-gst|devel/efl|2016-09-27|Merged into devel/efl
 graphics/evas_generic_loaders-pdf|devel/efl|2016-09-27|Merged into devel/efl
@@ -4911,3 +4906,29 @@ graphics/ocrfeeder||2016-12-08|Has expired: Depends on broken and expired py-rep
 devel/libcppformat|devel/libfmt|2016-12-08|Project was renamed
 databases/py35-mysqlclient|databases/py3-mysqlclient|2016-12-10|Moved to match existing naming convention
 databases/py35-psycopg2|databases/py3-psycopg2|2016-12-10|Moved to match existing naming convention
+www/linux-f10-flashplugin11|www/linux-flashplayer|2016-12-13|Removed upstream
+www/linux-c6-flashplugin11|www/linux-flashplayer|2016-12-13|Removed upstream
+www/linux-c7-flashplugin11|www/linux-flashplayer|2016-12-13|Removed upstream
+net/py-ceilometerclient|net/py-python-ceilometerclient|2016-12-17|Rename to match pypi name
+net/py-cinderclient|net/py-python-cinderclient|2016-12-17|Rename to match pypi name
+net/py-designateclient|net/py-python-designateclient|2016-12-17|Rename to match pypi name
+net/py-glanceclient|net/py-python-glanceclient|2016-12-17|Rename to match pypi name
+net/py-heatclient|net/py-python-heatclient|2016-12-17|Rename to match pypi name
+net/py-keystoneclient|net/py-python-keystoneclient|2016-12-17|Rename to match pypi name
+net/py-neutronclient|net/py-python-neutronclient|2016-12-17|Rename to match pypi name
+net/py-novaclient|net/py-python-novaclient|2016-12-17|Rename to match pypi name
+net/py-openstackclient|net/py-python-openstackclient|2016-12-17|Rename to match pypi name
+www/py-django-openstack-auth|www/py-django_openstack_auth|2016-12-18|Rename to match pypi name
+www/linux-c6-flashplugin24|www/linux-flashplayer|2016-12-18|Renamed to match upstream
+www/linux-c7-flashplugin24|www/linux-flashplayer|2016-12-18|Renamed to match upstream
+biology/p5-bioperl|biology/p5-BioPerl|2016-12-18|Rename to match upstream naming
+biology/p5-bioperl-run|biology/p5-BioPerl-Run|2016-12-18|Rename to match upstream naming
+databases/py-swiftclient|databases/py-python-swiftclient|2016-12-18|Rename to match pypi name
+x11-toolkits/py-kiwi|x11-toolkits/py-kiwi-gtk|2016-12-24|Rename to match PyPI naming
+www/py33-requests|www/py3-requests|2016-12-26|No need for 4 versions of py-requests
+www/py34-requests|www/py3-requests|2016-12-26|No need for 4 versions of py-requests
+www/py35-requests|www/py3-requests|2016-12-26|No need for 4 versions of py-requests
+net-mgmt/ccnet|net-mgmt/ccnet-client|2016-12-26|Split into -client and -server parts
+net-mgmt/seafile|net-mgmt/seafile-client|2016-12-26|Split into -client and -server parts
+comms/libcodec2|audio/codec2|2016-12-26|Removed: Duplicate port use `audio/codec2` instead
+databases/py-sqlalchemy07|databases/py-sqlalchemy10|2016-12-27|Has expired: Upstream has declared this version EoL: please migrate to databases/py-sqlalchemy10

@@ -65,8 +65,15 @@ KDE4_APPLICATIONS_VERSION?=	15.04.3
 KDE4_BRANCH?=			stable
 
 # Current KDE desktop.
-KDE_FRAMEWORKS_VERSION?=	5.27.0
+KDE_FRAMEWORKS_VERSION?=	5.29.0
 KDE_FRAMEWORKS_BRANCH?= 	stable
+
+# Current KDE applications.
+KDE_APPLICATIONS_VERSION?=      16.12.0
+KDE_APPLICATIONS_BRANCH?=       stable
+# Upstream moves old software to Attic/. Specify the newest applications release there.
+# Only the major version is used for the comparison.
+_KDE_APPLICATIONS_ATTIC_VERSION=	15.12.3
 
 # Extended KDE universe applications.
 CALLIGRA_VERSION?=		2.9.11
@@ -86,7 +93,7 @@ KDE_PREFIX=	${LOCALBASE}
 
 # === CATEGORIES HANDLING -- SETTING DEFAULT VALUES ============================
 # Doing MASTER_SITES magic based on the category of the port
-_KDE_CATEGORIES_SUPPORTED=	kde-frameworks kde-kde4
+_KDE_CATEGORIES_SUPPORTED=	kde-applications kde-frameworks kde-kde4
 .  for cat in ${_KDE_CATEGORIES_SUPPORTED}
 .    if ${CATEGORIES:M${cat}}
 .      if !defined(_KDE_CATEGORY)
@@ -110,6 +117,20 @@ CPE_VENDOR?=		kde
 PORTVERSION?=		${KDE4_VERSION}
 MASTER_SITES?=		KDE/${KDE4_BRANCH}/${KDE4_VERSION}/src
 DIST_SUBDIR?=		KDE/${KDE4_VERSION}
+.    elif  ${_KDE_CATEGORY:Mkde-applications}
+PORTVERSION?=           ${KDE_APPLICATIONS_VERSION}
+.      if ${_KDE_VERSION:M4}
+CONFLICTS_INSTALL?=     ${PORTNAME}-kf5-*
+.      else
+CONFLICTS_INSTALL?=     kde4-${PORTNAME}-* ${PORTNAME}-kde4-*
+.      endif
+# Decide where the file lies on KDE's servers: Check whether the file lies in  Attic
+.      if ${KDE_APPLICATIONS_VERSION:R:R} <= ${_KDE_APPLICATIONS_ATTIC_VERSION:R:R}
+MASTER_SITES?=          KDE/Attic/applications/${KDE_APPLICATIONS_VERSION}/src
+.      else
+MASTER_SITES?=          KDE/${KDE_APPLICATIONS_BRANCH}/applications/${KDE_APPLICATIONS_VERSION}/src
+.      endif
+DIST_SUBDIR?=           KDE/applications/${KDE_APPLICATIONS_VERSION}
 .    elif ${_KDE_CATEGORY:Mkde-frameworks}
 PORTVERSION?=		${KDE_FRAMEWORKS_VERSION}
 PKGNAMEPREFIX?=		kf5-
@@ -189,10 +210,9 @@ _USE_KDE4_ALL+=		akonadi attica automoc4 ontologies qimageblitz soprano \
 # that our list of frameworks matches the structure offered upstream.
 _USE_FRAMEWORKS_TIER1=	apidox archive attica5 breeze-icons codecs config \
 			coreaddons dbusaddons dnssd i18n idletime itemmodels \
-			itemviews oxygen-icons5 plotting solid sonnet \
-			threadweaver widgetsaddons windowsystem
+			itemviews oxygen-icons5 plotting prison solid sonnet \
+			syntaxhighlighting threadweaver widgetsaddons windowsystem
 # NOT LISTED TIER1: modemmanagerqt networkmanagerqt (not applicable)
-# NOT LISTED TIER1: syntaxhighlighting (new in 5.28)
 # NOT LISTED TIER1: wayland (needs graphics/wayland)
 
 _USE_FRAMEWORKS_TIER2=	auth completion crash doctools filemetadata5 \
@@ -528,6 +548,9 @@ plasma-framework_LIB=	libKF5Plasma.so
 plotting_PORT=		graphics/kf5-kplotting
 plotting_LIB=		libKF5Plotting.so
 
+prison_PORT=		graphics/kf5-prison
+prison_LIB=		libKF5Prison.so
+
 pty_PORT=		devel/kf5-kpty
 pty_LIB=		libKF5Pty.so
 
@@ -542,6 +565,9 @@ solid_LIB=		libKF5Solid.so
 
 sonnet_PORT=		textproc/kf5-sonnet
 sonnet_LIB=		libKF5SonnetCore.so
+
+syntaxhighlighting_PORT=	textproc/kf5-syntax-highlighting
+syntaxhighlighting_LIB=		libKF5SyntaxHighlighting.so
 
 texteditor_PORT=	devel/kf5-ktexteditor
 texteditor_LIB=		libKF5TextEditor.so
