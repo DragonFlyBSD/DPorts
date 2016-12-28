@@ -5,6 +5,25 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20161228:
+  AFFECTS: users of multimedia/mlt
+  AUTHOR: avilla@FreeBSD.org
+
+  MLT Qt plugins have been moved to their own ports, mlt-qt4 and
+  mlt-qt5. Please, uninstall multimedia/mlt before you update:
+
+  # pkg delete mlt
+
+20161227:
+  AFFECTS: users of security/openvpn, security/openvpn-polarssl
+  AUTHOR: Matthias Andree <mandree@FreeBSD.org>
+
+  The OpenVPN ports have been updated to the new upstream release v2.4,
+  and their predecessors preserved as openvpn23 and openvpn23-polarssl,
+  respectively.  Note that for the new v2.4 release, the
+  openvpn-polarssl port has been renamed to openvpn-mbedtls to match the
+  upstream library's new name.
+
 20161218:
   AFFECTS: users of www/nghttp2
   AUTHOR: sunpoet@FreeBSD.org
@@ -1414,20 +1433,4 @@ you update your ports collection, before attempting any port upgrades.
   for details.
 
   The old version 2.2.2 has been retained as security/easy-rsa2.
-
-20151227:
-  AFFECTS: users of games/nethack34
-  AUTHOR: glewis@FreeBSD.org
-
-  The port name and installation location of games/nethack34 have changed
-  to allow for a port of NetHack 3.6.0.  To preserve your save and bones
-  files do the following after updating:
-
-    # sudo cp -p ${LOCALBASE}/share/nethack/save/* ${LOCALBASE}/share/nethack34/save/
-    # sudo cp -p ${LOCALBASE}/share/nethack/bon* ${LOCALBASE}/share/nethack34/
-
-  After verifying the files were copied correctly, remove the playground
-  directory (as these files are incompatible with NetHack 3.6.0).
-
-    # sudo rm -r ${LOCALBASE}/share/nethack
 
