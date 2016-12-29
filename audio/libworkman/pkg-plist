@@ -1,6 +1,5 @@
 lib/libworkman.so
 lib/libworkman.so.1
-lib/libworkman.so.1.4
 include/workman/wm_cdda.h
 include/workman/wm_cddb.h
 include/workman/wm_cdinfo.h
