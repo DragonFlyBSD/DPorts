@@ -4,7 +4,7 @@
 PORTNAME=	gitlab
 PORTVERSION=	8.11.11
 DISTVERSIONPREFIX=	v
-PORTREVISION=	2
+PORTREVISION=	6
 CATEGORIES=	www devel
 
 MAINTAINER=	tz@FreeBSD.org
@@ -158,8 +158,7 @@ RUN_DEPENDS=	git>=2.7.4:devel/git \
 	rubygem-sys-filesystem>=1.1.6:sysutils/rubygem-sys-filesystem \
 	rubygem-rinku>=1.7.3:www/rubygem-rinku
 
-USE=	pgsql=yes
-WANT=	pgsql=9.1+
+USES=		pgsql
 
 USE_RUBY=	yes
 
@@ -185,6 +184,8 @@ do-install:
 	${MV} ${WRKSRC}/config/resque.yml.example ${WRKSRC}/config/resque.yml.sample
 	${MV} ${WRKSRC}/config/secrets.yml.example ${WRKSRC}/config/secrets.yml.sample
 	${MV} ${WRKSRC}/config/initializers/rack_attack.rb.example ${WRKSRC}/config/initializers/rack_attack.rb.sample
+	${MV} ${WRKSRC}/lib/support/nginx/gitlab ${WRKSRC}/lib/support/nginx/gitlab.sample
+	${MV} ${WRKSRC}/lib/support/nginx/gitlab-ssl ${WRKSRC}/lib/support/nginx/gitlab-ssl.sample
 	${CP} ${WRKSRC}/config/database.yml.postgresql ${WRKSRC}/config/database.yml.sample
 	${MKDIR} ${STAGEDIR}/home/git/repositories
 	${MKDIR} ${STAGEDIR}${PREFIX}/www/${PORTNAME}/public/assets
