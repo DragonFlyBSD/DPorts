@@ -1,0 +1,4 @@
+
+# this scons is strange with binutils227
+LDFLAGS+=	-lm
+MAKE_ENV+=	LINKFLAGS="${LDFLAGS}"
