@@ -2,8 +2,9 @@
 # $FreeBSD$
 
 PORTNAME=	liblxqt-l10n
-PORTVERSION=	0.11.0
+PORTVERSION=	0.11.1
 CATEGORIES=	devel
+MASTER_SITES=	LXQT/lxqt-l10n
 DISTNAME=	lxqt-l10n-${DISTVERSION}
 
 MAINTAINER=	olivierd@FreeBSD.org
@@ -11,9 +12,14 @@ COMMENT=	Translations of liblxqt
 
 LICENSE=	LGPL21+
 
-USES=	cmake:outsource lxqt tar:xz
-USE_QT5=	buildtools_build qmake_build
-USE_LXQT=	lxqt
+MASTERDIR=	${.CURDIR}/../../x11/lxqt-l10n
+DISTINFO_FILE=	${MASTERDIR}/distinfo
+DESCR=	${MASTERDIR}/pkg-descr
+PLIST=	${.CURDIR}/pkg-plist
+
+USES=	cmake:outsource lxqt pkgconfig tar:xz
+USE_QT5=	buildtools_build qmake_build linguisttools
+USE_LXQT=	buildtools
 
 CMAKE_ARGS+=	-DWITH_COMPTON_CONF:BOOL=OFF \
 	-DWITH_LIBFM_QT:BOOL=OFF \
