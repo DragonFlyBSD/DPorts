@@ -14,8 +14,8 @@
 # bsd.port.mk.  There are significant differences in those so non-FreeBSD code
 # was removed.
 #
-# $FreeBSD: head/ports-mgmt/portlint/src/portlint.pl 425858 2016-11-11 02:13:40Z marcus $
-# $MCom: portlint/portlint.pl,v 1.397 2016/11/11 02:12:15 jclarke Exp $
+# $FreeBSD: head/ports-mgmt/portlint/src/portlint.pl 429292 2016-12-23 23:19:41Z marcus $
+# $MCom: portlint/portlint.pl,v 1.399 2016/12/23 23:18:20 jclarke Exp $
 #
 
 use strict;
@@ -50,7 +50,7 @@ $portdir = '.';
 # version variables
 my $major = 2;
 my $minor = 17;
-my $micro = 5;
+my $micro = 6;
 
 # default setting - for FreeBSD
 my $portsdir = '/usr/ports';
@@ -1566,6 +1566,8 @@ sub checkmakefile {
 		CFLAGS
 		CMAKE_OFF
 		CMAKE_ON
+		CMAKE_BOOL_OFF
+		CMAKE_BOOL
 		CONFIGURE_ENABLE
 		CONFIGURE_ENV
 		CONFIGURE_OFF
