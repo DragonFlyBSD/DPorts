@@ -3,11 +3,11 @@
 
 PORTNAME?=	opencv
 PORTVERSION=	2.4.13.1
-PORTREVISION?=	4
+PORTREVISION?=	5
 CATEGORIES=	graphics
 PKGNAMESUFFIX?=	2
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	mbaxter@uw.edu
 COMMENT=	Open Source Computer Vision library
 
 LICENSE=	BSD3CLAUSE
