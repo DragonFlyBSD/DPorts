@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net-mgmt/icinga2/files/icinga2.in 413950 2016-04-24 16:58:58Z lme $
+# $FreeBSD: head/net-mgmt/icinga2/files/icinga2.in 428618 2016-12-15 14:40:20Z lme $
 #
 
 # PROVIDE: icinga2
@@ -18,6 +18,11 @@
 #
 
 . /etc/rc.subr
+
+# XXX temporary workaround for a bug in Icinga 2. See
+# https://dev.icinga.org/issues/13567
+
+trap "" SIGPIPE
 
 # Add /usr/local/bin to path, so that the notification scripts 
 # can work (#!/usr/bin/env bash)
