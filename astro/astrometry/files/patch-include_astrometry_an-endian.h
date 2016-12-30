@@ -1,4 +1,4 @@
---- include/astrometry/an-endian.h.orig	2015-12-12 21:02:27.000000000 +0200
+--- include/astrometry/an-endian.h.orig	2015-12-12 19:02:27 UTC
 +++ include/astrometry/an-endian.h
 @@ -11,7 +11,7 @@
  // (actually 10.5 does)
