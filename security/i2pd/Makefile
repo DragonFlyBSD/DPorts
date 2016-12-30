@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	i2pd
-PORTVERSION=	2.10.0
-PORTREVISION=	1
+PORTVERSION=	2.11.0
+PORTREVISION=	3
 CATEGORIES=	security net-p2p
 
 MAINTAINER=	amdmi3@FreeBSD.org
@@ -22,10 +22,16 @@ GH_ACCOUNT=	PurpleI2P
 
 USES=		cmake compiler:c++11-lib ssl
 CMAKE_SOURCE_PATH=${WRKSRC}/build
+USE_RC_SUBR=	${PORTNAME}
 
-PLIST_FILES=	bin/${PORTNAME} \
-		man/man1/${PORTNAME}.1.gz
 PORTDOCS=	*
+
+USERS=		_i2pd
+GROUPS=		_i2pd
+
+PLIST_SUB=	USER="${USERS}" GROUP="${GROUPS}"
+SUB_LIST=	USER="${USERS}" GROUP="${GROUPS}"
+SUB_FILES=	i2pd.newsyslog.conf
 
 OPTIONS_DEFINE=	AESNI UPNP DOCS
 
@@ -38,12 +44,17 @@ UPNP_LIB_DEPENDS=	libminiupnpc.so:net/miniupnpc
 .include <bsd.port.pre.mk>
 
 .if ${SSL_DEFAULT:Mlibressl*}
-BROKEN=		does not build with LibreSSL (unsupported DSA_set0_pqg(), DSA_set0_key())
+BROKEN=		does not build with LibreSSL (boost libressl compatibility problems)
 .endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/debian/${PORTNAME}.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
+	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/newsyslog.conf.d
+	${INSTALL_DATA} ${WRKDIR}/i2pd.newsyslog.conf ${STAGEDIR}${PREFIX}/etc/newsyslog.conf.d/i2pd.conf
+	@${MKDIR} ${STAGEDIR}/var/run/i2pd
+	@${MKDIR} ${STAGEDIR}/var/log/i2pd
+	@${MKDIR} ${STAGEDIR}/var/db/i2pd
 
 do-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
