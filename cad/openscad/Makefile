@@ -36,7 +36,7 @@ QMAKE_ARGS+=	VERSION=${PORTVERSION} \
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 post-patch:
-	${REINPLACE_CMD} -e 's,share/man,man,' \
+	@${REINPLACE_CMD} -e 's,share/man,man,' \
 		${WRKSRC}/openscad.pro
 
 .include <bsd.port.mk>
