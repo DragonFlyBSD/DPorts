@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	libpsl
-PORTVERSION=	0.16.0
+PORTVERSION=	0.16.1
 DISTVERSIONPREFIX=	${PORTNAME}-
 CATEGORIES=	dns
 
@@ -29,7 +29,7 @@ CONFIGURE_ARGS=	--enable-man \
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
 USE_LDCONFIG=	yes
-USES=		autoreconf libtool pathfix pkgconfig python:build shebangfix
+USES=		autoreconf libtool localbase:ldflags pathfix pkgconfig python:build shebangfix
 
 GH_ACCOUNT=	rockdaboot
 USE_GITHUB=	yes
