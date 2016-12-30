@@ -2,7 +2,7 @@
 
 PORTNAME=	libav
 PORTVERSION=	11.7
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	multimedia audio ipv6 net
 MASTER_SITES=	http://libav.org/releases/
 
@@ -20,6 +20,7 @@ USE_XORG=	x11
 HAS_CONFIGURE=	yes
 USE_PERL5=	build
 USE_LDCONFIG=	${PREFIX}/lib/${PORTNAME}
+NOPRECIOUSMAKEVARS=	yes # ARCH
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 CONFIGURE_ARGS=	--prefix="${PREFIX}" \
