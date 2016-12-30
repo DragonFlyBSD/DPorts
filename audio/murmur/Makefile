@@ -1,5 +1,5 @@
 # Created by: Ayumi M <ayu@commun.jp>
-# $FreeBSD: head/audio/murmur/Makefile 428581 2016-12-14 17:58:20Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	murmur
 PORTVERSION=	1.2.10
