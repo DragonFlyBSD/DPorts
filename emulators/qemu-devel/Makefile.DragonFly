@@ -5,3 +5,7 @@ OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT} VKNET
 VKNET_DESC=		vknet network backend for simple userspace bridge
 VKNET_CONFIGURE_ENABLE=	vknet
 VKNET_EXTRA_PATCHES=	${DFLY_FILESDIR}/vknet-patch
+
+# silence some include warnings
+dfly-patch:
+	${MKDIR} ${WRKSRC}/bsd-user/dragonfly
