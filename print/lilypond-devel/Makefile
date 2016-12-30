@@ -3,6 +3,7 @@
 
 PORTNAME=	lilypond
 PORTVERSION=	2.19.51
+PORTREVISION=	1
 CATEGORIES=	print audio
 MASTER_SITES=	http://download.linuxaudio.org/lilypond/sources/v${PORTVERSION:R}/
 PKGNAMESUFFIX=	-devel
@@ -30,8 +31,6 @@ LIB_DEPENDS=	libltdl.so:devel/libltdl \
 		libgmp.so:math/gmp \
 		libfreetype.so:print/freetype2 \
 		libfontconfig.so:x11-fonts/fontconfig
-
-BROKEN_FreeBSD_9=	does not build on FreeBSD < 10.x
 
 INFO=		internals \
 		lilypond-changes \
@@ -72,6 +71,12 @@ PLIST_SUB=	PORTVERSION=${PORTVERSION}
 OPTIONS_DEFINE=	NLS
 OPTIONS_SUB=	yes
 
+.include <bsd.port.pre.mk>
+
+.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1000000 && ${OSVERSION} < 1003000
+BROKEN=		does not build on < 10.3 (undefined reference to `__cxa_throw_bad_array_new_length')
+.endif
+
 post-patch:
 	${REINPLACE_CMD} -e 's|<FlexLexer.h>|"/usr/include/FlexLexer.h"|' \
 	    ${WRKSRC}/lily/include/includable-lexer.hh
@@ -84,4 +89,4 @@ post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/lilypond/${PORTVERSION}/python/midi.so
 	(cd ${STAGEDIR}/${DATADIR} && ${LN} -fs ${PORTVERSION} current)
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
