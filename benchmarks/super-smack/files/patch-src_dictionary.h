@@ -1,4 +1,4 @@
---- src/dictionary.h.orig	2003-05-15 03:14:52.000000000 +0300
+--- src/dictionary.h.orig	2003-05-15 00:14:52 UTC
 +++ src/dictionary.h
 @@ -22,6 +22,7 @@ using namespace std;
  #include "../config.h"
