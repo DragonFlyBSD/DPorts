@@ -1,5 +1,5 @@
 # Created by: Rick van der Zwet <rick@wzoeterwoude.net>
-# $FreeBSD: head/lang/maude/Makefile 426198 2016-11-16 00:34:23Z linimon $
+# $FreeBSD$
 
 PORTNAME=	maude
 PORTVERSION=	2.6
