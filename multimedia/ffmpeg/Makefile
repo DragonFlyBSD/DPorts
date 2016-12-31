@@ -3,6 +3,7 @@
 
 PORTNAME=	ffmpeg
 PORTVERSION=	3.2.2
+PORTREVISION=	3
 PORTEPOCH=	1
 CATEGORIES=	multimedia audio ipv6 net
 MASTER_SITES=	http://ffmpeg.org/releases/
@@ -17,10 +18,12 @@ BUILD_DEPENDS=	yasm:devel/yasm \
 		${LOCALBASE}/bin/as:devel/binutils
 
 HAS_CONFIGURE=	yes
-USES=		compiler:c11 cpe gmake perl5 pkgconfig tar:bzip2 shebangfix
+USES=		compiler:c11 cpe gmake localbase:ldflags perl5 \
+		pkgconfig shebangfix tar:bzip2
 USE_LDCONFIG=	yes
 USE_PERL5=	build
 SHEBANG_FILES=	doc/texi2pod.pl
+NOPRECIOUSMAKEVARS=	yes # ARCH
 
 PORTSCOUT=	limit:^3\.
 
@@ -29,16 +32,17 @@ OPTIONS_DEFINE=	ALSA AMR_NB AMR_WB ASS BS2B CACA CDIO CELT CHROMAPRINT DC1394 \
 		FREETYPE FREI0R FRIBIDI GME GSM ICONV ILBC JACK KVAZAAR LADSPA \
 		LAME LIBBLURAY MODPLUG NETCDF OPENAL OPENCL OPENCV OPENGL \
 		OPENH264 OPENJPEG OPTIMIZED_CFLAGS OPUS PULSEAUDIO \
-		RUBBERBAND RTCPU SCHROEDINGER SDL SMB SNAPPY SNDIO SPEEX SSH \
+		RUBBERBAND RTCPU SCHROEDINGER SDL SMB SNAPPY SNDIO SOXR SPEEX SSH \
 		TESSERACT THEORA TWOLAME V4L VAAPI VDPAU VIDSTAB VORBIS \
 		VO_AMRWBENC VPX WAVPACK WEBP X11GRAB X264 X265 XCB XVID \
 		XVIDEO ZIMG ZMQ ZVBI
 
-OPTIONS_DEFAULT=	FFSERVER FONTCONFIG FREETYPE FREI0R GNUTLS ICONV \
+OPTIONS_DEFAULT=	FFSERVER FONTCONFIG FREETYPE FREI0R GMP GNUTLS ICONV \
 			OPENCV RTCPU SCHROEDINGER THEORA V4L VAAPI VDPAU \
 			VORBIS VPX X264 XVID
 
-OPTIONS_RADIO=	SSL
+OPTIONS_RADIO=	RTMP SSL
+OPTIONS_RADIO_RTMP=	GCRYPT GMP LIBRTMP
 OPTIONS_RADIO_SSL=	GNUTLS OPENSSL
 OPTIONS_GROUP=	LICENSE
 OPTIONS_GROUP_LICENSE=	GPL3 NONFREE
@@ -70,7 +74,8 @@ NONFREE_DESC=	Allow use of nonfree code
 OPENH264_DESC=	H.264 video codec support via OpenH264
 RUBBERBAND_DESC=Time-stretching and pitch-shifting with librubberband
 RTCPU_DESC=	Detect CPU capabilities at runtime
-LIBRTMP_DESC=	RTMP protocol support via librtmp
+RTMP_DESC=	RTMP(T)E protocol support
+LIBRTMP_DESC=	${RTMP_DESC} via librtmp
 TESSERACT_DESC=	Optical Character Recognition via Tesseract
 VFP_DESC=	Enable Vector Floating Point instructions
 VIDSTAB_DESC=	Video stabilization filter
@@ -313,6 +318,10 @@ SNDIO_CONFIGURE_OFF=	--disable-indev=sndio \
 			--disable-outdev=sndio
 SNDIO_LIB_DEPENDS=	libsndio.so:audio/sndio
 
+# soxr
+SOXR_LIB_DEPENDS=	libsoxr.so:audio/libsoxr
+SOXR_CONFIGURE_ENABLE=	libsoxr
+
 # speex
 SPEEX_LIB_DEPENDS=	libspeex.so:audio/speex
 SPEEX_CONFIGURE_ENABLE=	libspeex
@@ -348,7 +357,9 @@ VDPAU_CONFIGURE_ENABLE=	vdpau
 # armv6
 VFP_CONFIGURE_ENABLE=	vfp
 NEON_CONFIGURE_ENABLE=	neon
+.if ! ${CFLAGS:M-march*}
 NEON_CONFIGURE_ON=	--cpu=armv7-a
+.endif
 
 # vo-amrwbenc
 VO_AMRWBENC_LIB_DEPENDS=	libvo-amrwbenc.so:audio/vo-amrwbenc
@@ -362,7 +373,6 @@ VIDSTAB_CONFIGURE_ENABLE=	libvidstab
 # vorbis
 VORBIS_LIB_DEPENDS=	libvorbisenc.so:audio/libvorbis
 VORBIS_CONFIGURE_ENABLE=	libvorbis
-VORBIS_VARS=		FFMPEG_CFLAGS+="-I${LOCALBASE}/include/vorbis"
 
 # vp8
 VPX_LIB_DEPENDS=	libvpx.so:multimedia/libvpx
@@ -420,7 +430,7 @@ LICENSE_FILE_GPLv3=	${WRKSRC}/COPYING.GPLv3
 LICENSE_FILE_LGPL3=	${WRKSRC}/COPYING.LGPLv3
 
 NONFREE_CONFIGURE_ENABLE=nonfree
-NONFREE_VARS=		RESTRICTED="linking to libfaac or libaacplus restricts redistribution"
+NONFREE_VARS=		RESTRICTED="enabling OPENSSL or FDK_AAC restricts redistribution"
 
 INSTALL_TARGET=	install-progs install-doc install-data \
 		install-libs install-headers
@@ -442,11 +452,7 @@ CONFIGURE_ARGS+=--prefix="${PREFIX}" \
 		--enable-avfilter \
 		--enable-avresample \
 		--enable-pthreads \
-		--disable-libsoxr \
-		--cc="${CC}" \
-		--extra-cflags="${FFMPEG_CFLAGS} -I${LOCALBASE}/include" \
-		--extra-ldflags="-L${LOCALBASE}/lib ${FFMPEG_LDFLAGS}" \
-		--extra-libs="-lpthread"
+		--cc="${CC}"
 
 CONFIGURE_ENV_armv6_clang=	ASFLAGS=-no-integrated-as
 CONFIGURE_ARGS_armv6=		--disable-fast-unaligned
@@ -468,28 +474,8 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|/etc/ffserver.conf|${PREFIX}/etc/ffserver.conf|' \
 		${WRKSRC}/ffserver.c
 	@${REINPLACE_CMD} -E \
-		-e "s|(EXTRALIBS[[:space:]]*=)|\1-L${LOCALBASE}/lib |g; \
-		s|%%LOCALBASE%%|${LOCALBASE}|g; \
-		s|gsm/gsm.h|gsm.h|g" \
-		${CONFIGURE_WRKSRC}/${CONFIGURE_SCRIPT}
-	@${REINPLACE_CMD} -e 's|-ldl||' \
 		-e 's|require_pkg_config opencv|require_pkg_config opencv-core|g' \
 		${CONFIGURE_WRKSRC}/${CONFIGURE_SCRIPT}
-
-post-patch-SDL-on:
-	@${REINPLACE_CMD} -E \
-		-e 's|sdl-config|${SDL_CONFIG}|g' \
-		${CONFIGURE_WRKSRC}/${CONFIGURE_SCRIPT}
-	@${REINPLACE_CMD} -E \
-		-e 's|#include <SDL|#include <SDL2/SDL|' \
-		${WRKSRC}/ffplay.c \
-		${WRKSRC}/libavdevice/opengl_enc.c \
-		${WRKSRC}/libavdevice/sdl2.c
-
-post-configure-THEORA-off:
-	@${REINPLACE_CMD} -E \
-		-e 's|^(CONFIG_LIBTHEORA).*$$|\1=no|' \
-		${WRKSRC}/config.mak
 
 post-install:
 	(cd ${WRKSRC} && ${COPYTREE_SHARE} \
