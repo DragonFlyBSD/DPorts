@@ -1,0 +1,11 @@
+--- Makefile.intermediate	2016-12-31 17:57:40 UTC
++++ Makefile
+@@ -42,7 +42,7 @@ ifeq ($(OS), NetBSD)
+ CFLAGS += -D_NETBSD_SOURCE
+ endif
+ ifneq ($(OS), FreeBSD)
+-ifneq ($(OS), Darwin)
++ifneq ($(OS), DragonFly)
+ #CFLAGS += -D_POSIX_C_SOURCE=200112L
+ CFLAGS += -D_XOPEN_SOURCE=600
+ endif
