@@ -1,11 +1,11 @@
---- SP/Makefile.orig	2015-12-26 16:21:49.000000000 +0200
+--- SP/Makefile.orig	2016-11-19 09:33:57 UTC
 +++ SP/Makefile
-@@ -734,7 +734,7 @@ else # ifdef MINGW
- # SETUP AND BUILD -- FREEBSD
+@@ -728,7 +728,7 @@ else # ifdef MINGW
+ # SETUP AND BUILD -- *BSD (is dying)
  #############################################################################
  
--ifeq ($(PLATFORM),freebsd)
-+ifneq (,$(findstring "$(PLATFORM)", "dragonfly" "freebsd"))
+-ifneq (,$(findstring "$(PLATFORM)", "freebsd" "openbsd" "netbsd"))
++ifneq (,$(findstring "$(PLATFORM)", "freebsd" "openbsd" "netbsd" "dragonfly"))
  
-   # flags
-   BASE_CFLAGS = $(shell env MACHINE_ARCH=$(ARCH) make -f /dev/null -VCFLAGS) \
+   BASE_CFLAGS = -Wall -fno-strict-aliasing \
+     -pipe -DUSE_ICON -DMAP_ANONYMOUS=MAP_ANON
