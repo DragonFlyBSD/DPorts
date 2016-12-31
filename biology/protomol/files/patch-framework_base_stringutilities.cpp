@@ -1,4 +1,4 @@
---- framework/base/stringutilities.cpp.orig	2005-05-07 17:40:24.000000000 +0300
+--- framework/base/stringutilities.cpp.orig	2005-05-07 14:40:24 UTC
 +++ framework/base/stringutilities.cpp
 @@ -3,6 +3,7 @@
  

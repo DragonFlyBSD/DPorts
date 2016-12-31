@@ -1,4 +1,4 @@
---- framework/imd/imd.cpp.orig	2005-05-07 17:40:25.000000000 +0300
+--- framework/imd/imd.cpp.orig	2005-05-07 14:40:25 UTC
 +++ framework/imd/imd.cpp
 @@ -1,6 +1,7 @@
  #include "imd.h"

@@ -1,4 +1,4 @@
---- framework/imd/vmdsock.cpp.orig	2005-05-07 17:40:25.000000000 +0300
+--- framework/imd/vmdsock.cpp.orig	2005-05-07 14:40:25 UTC
 +++ framework/imd/vmdsock.cpp
 @@ -32,6 +32,7 @@ namespace ProtoMol {
  #include <stdio.h>
