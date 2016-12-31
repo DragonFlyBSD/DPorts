@@ -3,7 +3,7 @@
 
 PORTNAME=	mediatomb
 PORTVERSION=	0.12.1
-PORTREVISION=	14
+PORTREVISION=	15
 CATEGORIES=	net multimedia
 MASTER_SITES=	SF/${PORTNAME}/MediaTomb/${PORTVERSION}
 
@@ -14,6 +14,8 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libexpat.so:textproc/expat2
+
+BROKEN_FreeBSD_9_i386=	does not build (error: declaration of 'operator new' as non-function)
 
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
