@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	telegram
-PORTVERSION=	1.3.1
-PORTREVISION=	1
+PORTVERSION=	1.4.1.g20161227
 CATEGORIES=	net-im
 
 MAINTAINER=	cpm@FreeBSD.org
@@ -26,7 +25,8 @@ GNU_CONFIGURE=	yes
 USE_GITHUB=	yes
 GH_ACCOUNT=	vysheng
 GH_PROJECT=	tg tgl:tgl tl-parser:tlparser
-GH_TAGNAME=	1.3.1 2.0.1:tgl 1659d87:tlparser
+GH_TAGNAME=	6547c0b ffb04ca:tgl 36bf190:tlparser
+GH_SUBDIR=	tgl:tgl tgl/tl-parser:tlparser
 
 PLIST_FILES=	bin/telegram-cli \
 		etc/telegram-cli/server.pub
@@ -37,10 +37,6 @@ PORTDOCS=	*
 .if ${OSVERSION} < 1000024
 USE_GCC=	yes
 .endif
-
-post-extract:
-	@${MV} ${WRKSRC_tgl}/* ${WRKSRC}/tgl
-	@${MV} ${WRKSRC_tlparser}/* ${WRKSRC}/tgl/tl-parser
 
 do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/telegram-cli
