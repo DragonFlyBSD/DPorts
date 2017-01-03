@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/fbsd-kthr.c 398712 2015-10-06 18:52:58Z jhb $");
+__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/fbsd-kthr.c 428876 2016-12-18 16:08:14Z tijl $");
 
 #include <sys/param.h>
 #include <sys/proc.h>
@@ -130,7 +130,7 @@ kgdb_thr_add_procs(CORE_ADDR paddr, CORE_ADDR (*cpu_pcb_addr) (u_int))
 			} CATCH(e, RETURN_MASK_ERROR) {
 				break;
 			} END_CATCH
-			kt = malloc(sizeof(*kt));
+			kt = XNEW (struct kthr);
 			kt->next = first;
 			kt->kaddr = tdaddr;
 			if (tid == dumptid)

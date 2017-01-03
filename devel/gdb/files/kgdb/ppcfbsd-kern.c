@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/ppcfbsd-kern.c 405792 2016-01-11 17:36:13Z jhb $");
+__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/ppcfbsd-kern.c 428876 2016-12-18 16:08:14Z tijl $");
 
 #include <sys/types.h>
 #ifdef __powerpc__
@@ -118,7 +118,7 @@ ppcfbsd_trapframe_cache (struct frame_info *this_frame, void **this_cache)
   int i, regnum;
 
   if (*this_cache)
-    return *this_cache;
+    return (struct trad_frame_cache *)*this_cache;
 
   cache = trad_frame_cache_zalloc (this_frame);
   *this_cache = cache;

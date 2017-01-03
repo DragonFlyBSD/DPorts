@@ -1,6 +1,6 @@
 /* Native-dependent code for DragonFly.
 
-   Copyright (C) 2002-2015 Free Software Foundation, Inc.
+   Copyright (C) 2002-2016 Free Software Foundation, Inc.
 
    This file is part of GDB.
 
@@ -22,6 +22,7 @@
 #include "inferior.h"
 #include "regcache.h"
 #include "regset.h"
+#include "gdbcmd.h"
 #include "gdbthread.h"
 #include "gdb_wait.h"
 #include <sys/types.h>
@@ -42,18 +43,20 @@
 static char *
 dfly_pid_to_exec_file (struct target_ops *self, int pid)
 {
-  ssize_t len = PATH_MAX;
+  ssize_t len;
   static char buf[PATH_MAX];
   char name[PATH_MAX];
 
 #ifdef KERN_PROC_PATHNAME
+  size_t buflen;
   int mib[4];
 
   mib[0] = CTL_KERN;
   mib[1] = KERN_PROC;
   mib[2] = KERN_PROC_PATHNAME;
   mib[3] = pid;
-  if (sysctl (mib, 4, buf, &len, NULL, 0) == 0)
+  buflen = sizeof buf;
+  if (sysctl (mib, 4, buf, &buflen, NULL, 0) == 0)
     return buf;
 #endif
 
@@ -149,5 +152,15 @@ dfly_nat_add_target (struct target_ops *t)
 {
   t->to_pid_to_exec_file = dfly_pid_to_exec_file;
   t->to_find_memory_regions = dfly_find_memory_regions;
+  /* XXX: thread vfork support */
   add_target (t);
+}
+
+/* Provide a prototype to silence -Wmissing-prototypes.  */
+extern initialize_file_ftype _initialize_dfly_nat;
+
+void
+_initialize_dfly_nat (void)
+{
+/* XXX: todo add_setshow_boolean_cmd() */
 }

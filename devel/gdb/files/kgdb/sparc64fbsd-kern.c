@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/sparc64fbsd-kern.c 405792 2016-01-11 17:36:13Z jhb $");
+__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/sparc64fbsd-kern.c 428876 2016-12-18 16:08:14Z tijl $");
 
 #include <sys/types.h>
 #ifdef __sparc64__
@@ -91,7 +91,7 @@ sparc64fbsd_trapframe_cache (struct frame_info *this_frame, void **this_cache)
   int regnum;
 
   if (*this_cache)
-    return *this_cache;
+    return (struct sparc_frame_cache *)*this_cache;
 
   cache = sparc_frame_cache (this_frame, this_cache);
   gdb_assert (cache == *this_cache);

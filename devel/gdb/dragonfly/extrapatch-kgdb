@@ -1,0 +1,350 @@
+--- gdb/i386fbsd-kern.c.orig	2016-12-19 10:24:53.000000000 +0200
++++ gdb/i386fbsd-kern.c
+@@ -28,7 +28,11 @@
+ __FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/i386fbsd-kern.c 414115 2016-04-27 16:11:53Z jhb $");
+ 
+ #include <sys/param.h>
++#ifdef __DragonFly__
++#include <sys/user.h>
++#else
+ #include <sys/proc.h>
++#endif
+ #ifdef __i386__
+ #include <machine/pcb.h>
+ #include <machine/frame.h>
+--- gdb/amd64fbsd-kern.c.orig	2016-12-19 12:45:07.000000000 +0200
++++ gdb/amd64fbsd-kern.c
+@@ -32,6 +32,9 @@ __FBSDID("$FreeBSD: head/devel/gdb/files
+ #include <machine/pcb.h>
+ #include <machine/frame.h>
+ #endif
++#ifdef __DragonFly__
++#include <machine/segments.h>
++#endif
+ #include <string.h>
+ 
+ #include <defs.h>
+@@ -241,6 +244,7 @@ _initialize_amd64_kgdb_tdep(void)
+ 	    GDB_OSABI_FREEBSD_ELF_KERNEL, amd64fbsd_kernel_init_abi);
+ 
+ #ifdef __amd64__
++#ifndef __DragonFly__ /* XXX */
+ 	gdb_assert(offsetof(struct pcb, pcb_rbx)
+ 		   == amd64fbsd_pcb_offset[AMD64_RBX_REGNUM]);
+ 	gdb_assert(offsetof(struct pcb, pcb_rbp)
+@@ -301,4 +305,5 @@ _initialize_amd64_kgdb_tdep(void)
+ 	gdb_assert(offsetof(struct trapframe, tf_ss)
+ 		   == amd64fbsd_trapframe_offset[AMD64_SS_REGNUM]);
+ #endif
++#endif
+ }
+--- gdb/fbsd-kthr.c.orig	2016-12-19 10:07:48.000000000 +0200
++++ gdb/fbsd-kthr.c
+@@ -28,7 +28,11 @@
+ __FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/fbsd-kthr.c 398712 2015-10-06 18:52:58Z jhb $");
+ 
+ #include <sys/param.h>
++#ifdef __DragonFly__
++#include <sys/user.h>
++#else
+ #include <sys/proc.h>
++#endif
+ #include <stdbool.h>
+ 
+ #include <defs.h>
+@@ -47,10 +51,14 @@ static LONGEST mp_maxid;
+ static struct kthr *first;
+ struct kthr *curkthr;
+ 
++#ifdef __DragonFly__
++static int proc_off_p_pid, proc_off_p_comm, proc_off_p_list, thread_off_td_pcb;
++#else
+ static int proc_off_p_pid, proc_off_p_comm, proc_off_p_list, proc_off_p_threads;
+ static int thread_off_td_tid, thread_off_td_oncpu, thread_off_td_pcb;
+ static int thread_off_td_name, thread_off_td_plist;
+ static int thread_oncpu_size;
++#endif
+ 
+ CORE_ADDR
+ kgdb_lookup(const char *sym)
+@@ -101,14 +109,21 @@ kgdb_thr_add_procs(CORE_ADDR paddr, CORE
+ 	struct type *ptr_type = builtin_type (gdbarch)->builtin_data_ptr;
+ 	enum bfd_endian byte_order = gdbarch_byte_order (gdbarch);
+ 	struct kthr *kt;
++#ifndef __DragonFly__
++	CORE_ADDR pcb, pnext, tdnext;
++	LONGEST pid;
++#else
+ 	CORE_ADDR pcb, pnext, tdaddr, tdnext;
+ 	ULONGEST oncpu;
+ 	LONGEST pid, tid;
++#endif
+ 
+ 	while (paddr != 0) {
+ 		TRY {
++#ifndef __DragonFly__
+ 			tdaddr = read_memory_typed_address (paddr +
+ 			    proc_off_p_threads, ptr_type);
++#endif
+ 			pid = read_memory_integer (paddr + proc_off_p_pid, 4,
+ 			    byte_order);
+ 			pnext = read_memory_typed_address (paddr +
+@@ -118,15 +133,19 @@ kgdb_thr_add_procs(CORE_ADDR paddr, CORE
+ 		} END_CATCH
+ 		while (tdaddr != 0) {
+ 			TRY {
++#ifndef __DragonFly__
+ 				tid = read_memory_integer (tdaddr +
+ 				    thread_off_td_tid, 4, byte_order);
+ 				oncpu = read_memory_unsigned_integer (tdaddr +
+ 				    thread_off_td_oncpu, thread_oncpu_size,
+ 				    byte_order);
++#endif
+ 				pcb = read_memory_typed_address (tdaddr +
+ 				    thread_off_td_pcb, ptr_type);
++#ifndef __DragonFly__
+ 				tdnext = read_memory_typed_address (tdaddr +
+ 				    thread_off_td_plist, ptr_type);
++#endif
+ 			} CATCH(e, RETURN_MASK_ERROR) {
+ 				break;
+ 			} END_CATCH
+@@ -139,10 +158,14 @@ kgdb_thr_add_procs(CORE_ADDR paddr, CORE
+ 				kt->pcb = cpu_pcb_addr(oncpu);
+ 			else
+ 				kt->pcb = pcb;
++#ifndef __DragonFly__
+ 			kt->tid = tid;
++#endif
+ 			kt->pid = pid;
+ 			kt->paddr = paddr;
++#ifndef __DragonFly__
+ 			kt->cpu = oncpu;
++#endif
+ 			first = kt;
+ 			tdaddr = tdnext;
+ 		}
+@@ -165,7 +188,11 @@ kgdb_thr_init(CORE_ADDR (*cpu_pcb_addr)
+ 		free(kt);
+ 	}
+ 
++#ifdef __DragonFly__
++	addr = kgdb_lookup("_ncpus");
++#else
+ 	addr = kgdb_lookup("allproc");
++#endif
+ 	if (addr == 0)
+ 		return (NULL);
+ 	TRY {
+@@ -174,18 +201,30 @@ kgdb_thr_init(CORE_ADDR (*cpu_pcb_addr)
+ 		return (NULL);
+ 	} END_CATCH
+ 
++#ifdef __DragonFly__
++	dumppcb = kgdb_lookup("_dumppcb");
++#else
+ 	dumppcb = kgdb_lookup("dumppcb");
++#endif
+ 	if (dumppcb == 0)
+ 		return (NULL);
+ 
+ #if 1
+ 	TRY {
++#ifdef __DragonFly__
++		dumptid = parse_and_eval_long("_dumpthread");
++#else
+ 		dumptid = parse_and_eval_long("dumptid");
++#endif
+ 	} CATCH(e, RETURN_MASK_ERROR) {
+ 		dumptid = -1;
+ 	} END_CATCH
+ #else
++#ifdef __DragonFly__
++	addr = kgdb_lookup("_dumpthread");
++#else
+ 	addr = kgdb_lookup("dumptid");
++#endif
+ 	if (addr != 0) {
+ 		TRY {
+ 			dumptid = read_memory_integer (addr, 4, byte_order);
+@@ -209,6 +248,7 @@ kgdb_thr_init(CORE_ADDR (*cpu_pcb_addr)
+ 	 * kernels, try to extract these offsets using debug symbols.  If
+ 	 * that fails, use native values.
+ 	 */
++#ifndef __DragonFly__
+ 	TRY {
+ 		proc_off_p_pid = parse_and_eval_long("proc_off_p_pid");
+ 		proc_off_p_comm = parse_and_eval_long("proc_off_p_comm");
+@@ -221,6 +261,7 @@ kgdb_thr_init(CORE_ADDR (*cpu_pcb_addr)
+ 		thread_off_td_plist = parse_and_eval_long("thread_off_td_plist");
+ 		thread_oncpu_size = 4;
+ 	} CATCH(e, RETURN_MASK_ERROR) {
++#endif
+ 		TRY {
+ 			proc_off_p_pid = parse_and_eval_address(
+ 			    "&((struct proc *)0)->p_pid");
+@@ -228,6 +269,7 @@ kgdb_thr_init(CORE_ADDR (*cpu_pcb_addr)
+ 			    "&((struct proc *)0)->p_comm");
+ 			proc_off_p_list = parse_and_eval_address(
+ 			    "&((struct proc *)0)->p_list");
++#ifndef __DragonFly__
+ 			proc_off_p_threads = parse_and_eval_address(
+ 			    "&((struct proc *)0)->p_threads");
+ 			thread_off_td_tid = parse_and_eval_address(
+@@ -236,26 +278,35 @@ kgdb_thr_init(CORE_ADDR (*cpu_pcb_addr)
+ 			    "&((struct thread *)0)->td_name");
+ 			thread_off_td_oncpu = parse_and_eval_address(
+ 			    "&((struct thread *)0)->td_oncpu");
++#endif
+ 			thread_off_td_pcb = parse_and_eval_address(
+ 			    "&((struct thread *)0)->td_pcb");
++#ifndef __DragonFly__
+ 			thread_off_td_plist = parse_and_eval_address(
+ 			    "&((struct thread *)0)->td_plist");
+ 			thread_oncpu_size = parse_and_eval_long(
+ 			    "sizeof(((struct thread *)0)->td_oncpu)");
++#endif
+ 		} CATCH(e, RETURN_MASK_ERROR) {
+ 			proc_off_p_pid = offsetof(struct proc, p_pid);
+ 			proc_off_p_comm = offsetof(struct proc, p_comm);
+ 			proc_off_p_list = offsetof(struct proc, p_list);
++#ifndef __DragonFly__
+ 			proc_off_p_threads = offsetof(struct proc, p_threads);
+ 			thread_off_td_tid = offsetof(struct thread, td_tid);
+ 			thread_off_td_name = offsetof(struct thread, td_name);
+ 			thread_off_td_oncpu = offsetof(struct thread, td_oncpu);
++#endif
+ 			thread_off_td_pcb = offsetof(struct thread, td_pcb);
++#ifndef __DragonFly__
+ 			thread_off_td_plist = offsetof(struct thread, td_plist);
+ 			thread_oncpu_size =
+ 			    sizeof(((struct thread *)0)->td_oncpu);
++#endif
+ 		} END_CATCH
++#ifndef __DragonFly__
+ 	} END_CATCH
++#endif
+ 
+ 	kgdb_thr_add_procs(paddr, cpu_pcb_addr);
+ 	addr = kgdb_lookup("zombproc");
+@@ -326,7 +377,9 @@ char *
+ kgdb_thr_extra_thread_info(int tid)
+ {
+ 	char comm[MAXCOMLEN + 1];
++#ifndef __DragonFly__
+ 	char td_name[MAXCOMLEN + 1];
++#endif
+ 	struct kthr *kt;
+ 	static char buf[64];
+ 
+@@ -339,12 +392,14 @@ kgdb_thr_extra_thread_info(int tid)
+ 		    sizeof(comm));
+ 		strlcat(buf, ": ", sizeof(buf));
+ 		strlcat(buf, comm, sizeof(buf));
++#ifndef __DragonFly__
+ 		read_memory_string (kt->kaddr + thread_off_td_name, td_name,
+ 		    sizeof(td_name));
+ 		if (strcmp(comm, td_name) != 0) {
+ 			strlcat(buf, "/", sizeof(buf));
+ 			strlcat(buf, td_name, sizeof(buf));
+ 		}
++#endif
+ 	} CATCH(e, RETURN_MASK_ERROR) {
+ 	} END_CATCH
+ 	return (buf);
+--- gdb/fbsd-kvm.c.orig	2016-12-19 10:07:48.000000000 +0200
++++ gdb/fbsd-kvm.c
+@@ -28,7 +28,11 @@
+ __FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/fbsd-kvm.c 411099 2016-03-14 16:19:34Z tijl $");
+ 
+ #include <sys/param.h>
++#ifdef __DragonFly__
++#include <sys/user.h>
++#else
+ #include <sys/proc.h>
++#endif
+ #include <sys/sysctl.h>
+ #include <sys/user.h>
+ #include <err.h>
+@@ -153,8 +157,13 @@ kgdb_dmesg(void)
+ 	TRY {
+ 		bufp = parse_and_eval_address("msgbufp->msg_ptr");
+ 		size = parse_and_eval_long("msgbufp->msg_size");
++#ifdef __DragonFly__
++		rseq = parse_and_eval_long("msgbufp->msg_bufr");
++		wseq = parse_and_eval_long("msgbufp->msg_bufx");
++#else
+ 		rseq = parse_and_eval_long("msgbufp->msg_rseq");
+ 		wseq = parse_and_eval_long("msgbufp->msg_wseq");
++#endif
+ 	} CATCH(e, RETURN_MASK_ERROR) {
+ 		return;
+ 	} END_CATCH
+@@ -189,6 +198,7 @@ fbsd_kernel_osabi_sniffer(bfd *abfd)
+ 	if (elf_elfheader(abfd)->e_ident[EI_OSABI] != ELFOSABI_FREEBSD)
+ 		return (GDB_OSABI_UNKNOWN);
+ 
++#ifndef __DragonFly__
+ 	/* FreeBSD ELF kernels have an interpreter path of "/red/herring". */
+ 	bufp = buf;
+ 	s = bfd_get_section_by_name(abfd, ".interp");
+@@ -196,6 +206,7 @@ fbsd_kernel_osabi_sniffer(bfd *abfd)
+ 	    bfd_get_full_section_contents(abfd, s, &bufp) &&
+ 	    memcmp(buf, KERNEL_INTERP, sizeof(buf)) == 0)
+ 		return (GDB_OSABI_FREEBSD_ELF_KERNEL);
++#endif
+ 
+ 	return (GDB_OSABI_UNKNOWN);
+ }
+@@ -375,7 +386,11 @@ kgdb_trgt_files_info(struct target_ops *
+ 
+ 	printf_filtered ("\t`%s', ", vmcore);
+ 	wrap_here ("        ");
++#ifdef __DragonFly__
++	printf_filtered ("file type %s.\n", "DragonFly kernel vmcore");
++#else
+ 	printf_filtered ("file type %s.\n", "FreeBSD kernel vmcore");
++#endif
+ }
+ 
+ static void
+--- gdb/bsd-kvm.c.orig	2016-08-01 18:50:20.000000000 +0300
++++ gdb/bsd-kvm.c
+@@ -35,7 +35,9 @@
+ #include <paths.h>
+ #include "readline/readline.h"
+ #include <sys/param.h>
++#ifndef __DragonFly__
+ #include <sys/proc.h>
++#endif
+ #include <sys/user.h>
+ 
+ #include "bsd-kvm.h"
+@@ -273,7 +275,7 @@ bsd_kvm_cmd (char *arg, int fromtty)
+   /* ??? Should this become an alias for "target kvm"?  */
+ }
+ 
+-#ifndef HAVE_STRUCT_THREAD_TD_PCB
++#ifndef __DragonFly__ //#ifndef HAVE_STRUCT_THREAD_TD_PCB
+ 
+ static void
+ bsd_kvm_proc_cmd (char *arg, int fromtty)
+@@ -376,7 +378,7 @@ Optionally specify the filename of a cor
+ Generic command for manipulating the kernel memory interface."),
+ 		  &bsd_kvm_cmdlist, "kvm ", 0, &cmdlist);
+ 
+-#ifndef HAVE_STRUCT_THREAD_TD_PCB
++#ifndef __DragonFly__ //#ifndef HAVE_STRUCT_THREAD_TD_PCB
+   add_cmd ("proc", class_obscure, bsd_kvm_proc_cmd,
+ 	   _("Set current context from proc address"), &bsd_kvm_cmdlist);
+ #endif
+--- gdb/config/i386/dfly64.mh.orig	2016-12-19 15:30:10.000000000 +0200
++++ gdb/config/i386/dfly64.mh
+@@ -1,6 +1,6 @@
+ # Host: DragonFly/amd64
+ NATDEPFILES= fork-child.o inf-ptrace.o \
+ 	dfly-nat.o amd64-nat.o x86bsd-nat.o amd64bsd-nat.o amd64dfly-nat.o \
+-	x86-nat.o x86-dregs.o
++	x86-nat.o x86-dregs.o bsd-kvm.o
+ 
+ LOADLIBES= -lkvm

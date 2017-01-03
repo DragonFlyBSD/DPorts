@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gdb
-PORTVERSION=	7.11.1
-PORTREVISION=	3
+PORTVERSION=	7.12
 CATEGORIES=	devel
 MASTER_SITES=	GNU
 
@@ -25,39 +24,22 @@ CONFIGURE_ARGS=	--program-suffix=${PORTVERSION:S/.//g} \
 		--with-gdb-datadir=${PREFIX}/share/gdb${PORTVERSION:S/.//g} \
 		--with-separate-debug-dir=/usr/lib/debug \
 		${ICONV_CONFIGURE_ARG} \
+		--with-expat=yes --with-libexpat-prefix=${LOCALBASE} \
 		--without-libunwind-ia64
 CFLAGS:=	${CFLAGS:C/ +$//}	# blanks at EOL creep in sometimes
 CFLAGS+=	-DRL_NO_COMPAT -Wno-unused-function -Wno-unused-variable
 EXCLUDE=	dejagnu expect sim texinfo intl
 EXTRACT_AFTER_ARGS=	${EXCLUDE:S/^/--exclude /}
-EXTRA_PATCHES=	${FILESDIR}/commit-21002a6 \
-		${FILESDIR}/commit-b00f86d \
-		${FILESDIR}/commit-aa1ed4a \
-		${FILESDIR}/commit-7697fc9 \
-		${FILESDIR}/commit-3350c5f \
-		${FILESDIR}/commit-2faa344 \
-		${FILESDIR}/commit-82372b2 \
-		${FILESDIR}/commit-e6cdd38 \
-		${FILESDIR}/commit-a3405d1 \
-		${FILESDIR}/commit-5077bff \
-		${FILESDIR}/commit-bb2a62e \
-		${FILESDIR}/commit-8607ea6 \
-		${FILESDIR}/commit-2c5c2a3 \
-		${FILESDIR}/commit-ee95032 \
-		${FILESDIR}/commit-bc7b765 \
-		${FILESDIR}/commit-0064d22 \
-		${FILESDIR}/commit-da95a26 \
-		${FILESDIR}/commit-5fa14c6 \
-		${FILESDIR}/commit-dbaed38
+LIB_DEPENDS+=	libexpat.so:textproc/expat2
 
 VER=		${PORTVERSION:S/.//g}
 PLIST_SUB=	VER=${VER}
 
 ONLY_FOR_ARCHS=	i386 amd64 powerpc powerpc64 armv6	# untested elsewhere, might work
 
-OPTIONS_DEFINE=	DEBUG EXPAT GDB_LINK GUILE KGDB PYTHON TUI
+OPTIONS_DEFINE=	DEBUG GDB_LINK GUILE KGDB PYTHON TUI
 
-OPTIONS_DEFAULT=	EXPAT GDB_LINK PYTHON TUI PORT_READLINE
+OPTIONS_DEFAULT=	GDB_LINK PYTHON TUI PORT_READLINE
 
 OPTIONS_SINGLE=	READLINE
 OPTIONS_SINGLE_READLINE=	BASE_READLINE BUNDLED_READLINE PORT_READLINE
@@ -76,8 +58,6 @@ BASE_READLINE_CFLAGS=	-D_rl_echoing_p=readline_echoing_p
 BASE_READLINE_EXTRA_PATCHES=	${FILESDIR}/extrapatch-base-readline
 BUNDLED_READLINE_CONFIGURE_OFF=	--with-system-readline
 DEBUG_CFLAGS=		-g
-EXPAT_CONFIGURE_WITH=	expat
-EXPAT_LIB_DEPENDS=	libexpat.so:textproc/expat2
 GUILE_CONFIGURE_WITH=	guile
 GUILE_USES=		pkgconfig
 GUILE_LIB_DEPENDS=	libguile-2.0.so:lang/guile2
@@ -92,6 +72,17 @@ TUI_CONFIGURE_ENABLE=	tui
 .if ${OSVERSION} < 1000010
 # FreeBSD 9.x and earlier do not define SIGLIBRT in <sys/signal.h>
 CFLAGS+=	-DSIGLIBRT=33
+.endif
+
+.if ${OPSYS} == FreeBSD && ${OSVERSION} > 1000010
+# The option -Wno-extended-offsetof is supported by clang only
+CFLAGS+=	-Wno-extended-offsetof
+.endif
+
+.if ${OPSYS} == DragonFly
+# Wow c++ smth.c too on gdb, gcc wasn't enough? throw helpers for c-- and try to kill it
+CFLAGS+=	-D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS
+CONFIGURE_ARGS+= --disable-build-with-cxx
 .endif
 
 .if ! ${PORT_OPTIONS:MBUNDLED_READLINE}
@@ -111,6 +102,8 @@ do-install:
 		${STAGEDIR}${PREFIX}/bin/gdb${VER}
 	${INSTALL_MAN} ${WRKSRC}/gdb/doc/gdb.1 \
 		${STAGEDIR}${MAN1PREFIX}/man/man1/gdb${VER}.1
+	(cd ${WRKSRC}/gdb/data-directory ; \
+		${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} install-syscalls )
 
 do-install-KGDB-on:
 	${INSTALL_PROGRAM} ${WRKSRC}/gdb/kgdb \
@@ -119,10 +112,6 @@ do-install-KGDB-on:
 do-install-TUI-on:
 	${LN} -sf gdb${VER} ${STAGEDIR}${PREFIX}/bin/gdbtui${VER}
 
-do-install-EXPAT-on:
-	(cd ${WRKSRC}/gdb/data-directory ; \
-		${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} install-syscalls )
-
 do-install-GDB_LINK-on:
 	${LN} -sf gdb${VER} ${STAGEDIR}${PREFIX}/bin/gdb
 .if ${PORT_OPTIONS:MKGDB}
@@ -130,10 +119,13 @@ do-install-GDB_LINK-on:
 .endif
 
 dfly-patch:
-	@${CP} ${DFLY_FILESDIR}/dfly64.mh ${WRKSRC}/gdb/config/i386/
-	@${CP} ${DFLY_FILESDIR}/dfly-nat.* ${WRKSRC}/gdb/
-	@${CP} ${DFLY_FILESDIR}/i386* ${WRKSRC}/gdb/
-	@${CP} ${DFLY_FILESDIR}/amd64* ${WRKSRC}/gdb/
+	${CP} ${DFLY_FILESDIR}/dfly64.mh ${WRKSRC}/gdb/config/i386/
+	${CP} ${DFLY_FILESDIR}/dfly-nat.* ${WRKSRC}/gdb/
+	${CP} ${DFLY_FILESDIR}/i386* ${WRKSRC}/gdb/
+	${CP} ${DFLY_FILESDIR}/amd64* ${WRKSRC}/gdb/
+.if ${PORT_OPTIONS:MKGDB}
+	${PATCH} ${PATCH_ARGS} < ${DFLY_FILESDIR}/extrapatch-kgdb
+.endif
 
 do-install-PYTHON-on:
 	(cd ${WRKSRC}/gdb; ${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} install-python )

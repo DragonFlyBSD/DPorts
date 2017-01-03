@@ -30,10 +30,11 @@
 #include <sys/procfs.h>
 #include <sys/ptrace.h>
 #include <sys/sysctl.h>
+#include <sys/user.h>
 #include <machine/reg.h>
 #include <machine/segments.h>
 
-#include "fbsd-nat.h"
+#include "dfly-nat.h"
 #include "amd64-tdep.h"
 #include "amd64-nat.h"
 #include "x86bsd-nat.h"
@@ -170,7 +171,7 @@ amd64dfly_supply_pcb (struct regcache *regcache, struct pcb *pcb)
   regcache_raw_supply (regcache, 13, &pcb->pcb_r13);
   regcache_raw_supply (regcache, 14, &pcb->pcb_r14);
   regcache_raw_supply (regcache, 15, &pcb->pcb_r15);
-#if (__FreeBSD_version < 800075) && (__FreeBSD_kernel_version < 800075)
+#if 0 && (__FreeBSD_version < 800075) && (__FreeBSD_kernel_version < 800075)
   /* struct pcb provides the pcb_ds/pcb_es/pcb_fs/pcb_gs fields only
      up until __FreeBSD_version 800074: The removal of these fields
      occurred on 2009-04-01 while the __FreeBSD_version number was
@@ -190,7 +191,7 @@ amd64dfly_supply_pcb (struct regcache *regcache, struct pcb *pcb)
 /* Implement the to_read_description method.  */
 
 static const struct target_desc *
-amd64fbsd_read_description (struct target_ops *ops)
+amd64dfly_read_description (struct target_ops *ops)
 {
 #ifdef PT_GETXSTATE_INFO
   static int xsave_probed;
@@ -245,7 +246,7 @@ _initialize_amd64dfly_nat (void)
 
   /* Add some extra features to the common *BSD/x86 target.  */
   t = amd64bsd_target ();
-  t->to_read_description = amd64fbsd_read_description;
+  t->to_read_description = amd64dfly_read_description;
 
   dfly_nat_add_target (t);
 
