@@ -1,23 +1,14 @@
---- src/build-system/configure.intermediate	2016-08-12 14:59:09 UTC
+--- src/build-system/configure.intermediate	2017-01-03 19:31:31 UTC
 +++ src/build-system/configure
-@@ -5818,7 +5818,7 @@ ncbi_compiler_ver="0"
- if test "$GCC" = "yes" ; then
-    compiler_ver="`$real_CXX -dumpversion 2>&1`"
-    case "$compiler_ver" in
--     2.95* | 2.96* | 3.* | 4.* )
-+     2.95* | 2.96* | 3.* | 4.* | 5.* )
-        compiler="GCC"
-        ncbi_compiler="GCC"
-        ncbi_compiler_ver="$compiler_ver"
-@@ -6127,6 +6127,7 @@ if test "$with_mt" != "no" ; then
-      solaris2.10:GCC ) : ${THREAD_LIBS:="-lposix4"} ;;
-      solaris*        ) : ${THREAD_LIBS:="-lpthread -lposix4"} ;;
-      freebsd*        ) ;; # -pthread already substitutes libc_r for libc
-+     dragonfly*      ) ;; #  ^^^
-      *               ) : ${THREAD_LIBS:="-lpthread"} ;;
-    esac
-    LIBS="$LIBS $THREAD_LIBS"
-@@ -7311,7 +7312,7 @@ if test "$skip_fast_flags" = no -a -z "$
+@@ -7857,6 +7857,7 @@ case "$host_os:$compiler" in
+   solaris2.10:GCC ) : ${THREAD_LIBS:="-lposix4"} ;;
+   solaris*        ) : ${THREAD_LIBS:="-lpthread -lposix4"} ;;
+   freebsd*        ) ;; # -pthread already substitutes libc_r for libc
++  dragonfly*      ) ;; # ^^^
+   *               ) : ${THREAD_LIBS:="-lpthread"} ;;
+ esac
+ 
+@@ -9056,7 +9057,7 @@ if test "$skip_fast_flags" = no -a -z "$
        GCC:* )
          DEF_FAST_FLAGS="-O3 -finline-functions -fstrict-aliasing"
          case "$host_os:$host_cpu:$compiler_version" in
@@ -26,12 +17,12 @@
             * ) DEF_FAST_FLAGS="$DEF_FAST_FLAGS -ffast-math" ;;
          esac
          if test "$with_profiling" != "yes"; then
-@@ -7553,7 +7554,7 @@ LIB_OR_DLL="lib"
+@@ -9356,7 +9357,7 @@ LIB_OR_DLL="lib"
  if test "$with_dll" = "yes" ; then
     case "$host_os:$compiler" in
      linux*:GCC | irix*:* | solaris*:WorkShop* | *:KCC | linux*:ICC \
 -    | solaris*:GCC | osf*:* | darwin*:GCC | freebsd*:GCC )
-+    | solaris*:GCC | osf*:* | darwin*:GCC | freebsd*:GCC |dragonfly*:GCC)
++    | solaris*:GCC | osf*:* | darwin*:GCC | freebsd*:GCC | dragonfly*:GCC )
        ;;
      * )
        echo
