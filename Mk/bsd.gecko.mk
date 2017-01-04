@@ -144,7 +144,7 @@ LDFLAGS+=		-L${LOCALBASE}/lib \
 .if ${OPSYS} != DragonFly # XXX xpcshell crash during install
 # use jemalloc 3.0.0 (4.0 for firefox 43+) API for stats/tuning
 MOZ_EXPORT+=	MOZ_JEMALLOC3=1 MOZ_JEMALLOC4=1
-.if ${OPSYS} != FreeBSD || ${OSVERSION} < 1000012 || ${MOZILLA_VER:R:R} >= 37
+.if ${OPSYS} != FreeBSD || ${MOZILLA_VER:R:R} >= 37
 . if ${MOZILLA_VER:R:R} >= 48
 MOZ_OPTIONS+=	--enable-jemalloc=4
 .else
@@ -370,6 +370,19 @@ LIB_DEPENDS+=	libpulse.so:audio/pulseaudio
 MOZ_OPTIONS+=	--enable-pulseaudio
 .else
 MOZ_OPTIONS+=	--disable-pulseaudio
+.endif
+
+.if ${PORT_OPTIONS:MSNDIO}
+LIB_DEPENDS+=	libsndio.so:audio/sndio
+post-patch-SNDIO-on:
+	@${REINPLACE_CMD} -e 's|OpenBSD|${OPSYS}|g' \
+		${MOZSRC}/media/libcubeb/src/moz.build \
+		${MOZSRC}/media/libcubeb/tests/moz.build \
+		${MOZSRC}/toolkit/library/moz.build
+	@${REINPLACE_CMD} -e 's|OS==\"openbsd\"|OS==\"${OPSYS:tl}\"|g' \
+		${MOZSRC}/media/webrtc/trunk/webrtc/build/common.gypi
+	@${ECHO} "OS_LIBS += ['sndio']" >> \
+		${MOZSRC}/media/webrtc/signaling/test/common.build
 .endif
 
 .if ${PORT_OPTIONS:MRUST}
