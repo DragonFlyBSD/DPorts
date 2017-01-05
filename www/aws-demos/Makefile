@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	aws
-PORTVERSION=	17.0.1
+PORTVERSION=	17.1.0
 CATEGORIES=	www
 PKGNAMESUFFIX=	-demos
 
@@ -16,11 +16,11 @@ BUILD_DEPENDS=	gprbuild:devel/gprbuild \
 		xmlada>=4.4:textproc/xmlada \
 		aws>=3.1:www/aws
 
-USES=		ada gmake python tar:bzip2
+USES=		ada gmake python
 USE_GITHUB=	yes
 GH_ACCOUNT=	AdaCore
-GH_TAGNAME=	17.0
-GH_TUPLE=	AdaCore:templates-parser:17.0:tp/templates_parser
+GH_TAGNAME=	${PORTVERSION:R}
+GH_TUPLE=	AdaCore:templates-parser:${PORTVERSION:R}:tp/templates_parser
 
 DISTINFO_FILE=	${PORTSDIR}/www/aws/distinfo
 
@@ -103,11 +103,7 @@ PROGS=		multiple_sessions/multiple_sessions \
 		soap_disp/soap_server_disp \
 		soap_disp/soap_client
 
-.include <bsd.port.pre.mk>
-
-.if ${SSL_DEFAULT} == base
-IGNORE_FreeBSD_9=	Requires newer OpenSSL (set DEFAULT_VERSIONS+=ssl=openssl)
-.endif
+.include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSSL}
 CONF_ARGS+=	SOCKET=openssl
@@ -156,7 +152,9 @@ do-install:
 		${STAGEDIR}${EXAMPLESDIR}/demos)
 .endfor
 .for prog in ${PROGS}
-	${STRIP_CMD} ${STAGEDIR}${EXAMPLESDIR}/demos/${prog}
+	@${CHMOD} 755 ${STAGEDIR}${EXAMPLESDIR}/demos/${prog}
+	@${STRIP_CMD} ${STAGEDIR}${EXAMPLESDIR}/demos/${prog}
+	@${CHMOD} ${BINMODE} ${STAGEDIR}${EXAMPLESDIR}/demos/${prog}
 .endfor
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
