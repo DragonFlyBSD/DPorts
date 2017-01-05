@@ -19,14 +19,13 @@ LIB_DEPENDS=	libvorbis.so:audio/libvorbis \
 		libboost_regex.so:devel/boost-libs \
 		libmatroska.so:multimedia/libmatroska
 
-BROKEN_FreeBSD_9=	does not build: g++48 internal compiler error
 BROKEN_sparc64=	does not install
 
 USES=		compiler:c++14-lang iconv localbase pkgconfig tar:xz
 GNU_CONFIGURE=	yes
 USE_RUBY=	yes
 RUBY_NO_RUN_DEPENDS=	yes
-CONFIGURE_ENV+=	ac_cv_path_PO4A=no ZLIB_CFLAGS=-I/usr/include ZLIB_LIBS=-lz
+CONFIGURE_ENV+=	ac_cv_path_PO4A=no
 CONFIGURE_ARGS=	--without-curl \
 		--with-boost=${LOCALBASE} \
 		--with-boost-filesystem=boost_filesystem \
