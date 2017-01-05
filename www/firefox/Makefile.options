@@ -9,15 +9,18 @@ OPTIONS_DEFAULT+=	DBUS DTRACE FFMPEG OPTIMIZED_CFLAGS \
 			${MACHINE_CPU:Msoftfp:C/.+/INTEGER_SAMPLES/}
 
 OPTIONS_MULTI+=		AUDIO
-OPTIONS_MULTI_AUDIO=	ALSA PULSEAUDIO
+OPTIONS_MULTI_AUDIO=	ALSA PULSEAUDIO SNDIO
+
+# No lazy-bindings and inconsistent fallback order (libcubeb vs. audio_device)
+SNDIO_PREVENTS=		${OPTIONS_MULTI_AUDIO:NSNDIO}
 
 # dragonfly, sparc64, riscv
 .if !exists(/usr/sbin/dtrace)
 OPTIONS_EXCLUDE+=	DTRACE
 .endif
 
-# dtrace(1) crashes during build or fails to allocate space for probe
-OPTIONS_EXCLUDE_FreeBSD_9=	DTRACE
+# ld(1) fails to link probes: Relocations in generic ELF (EM: 0)
+OPTIONS_EXCLUDE_aarch64=	DTRACE
 
 BUNDLED_CAIRO_DESC?=	Use bundled fork of cairo-1.9.5
 CANBERRA_DESC?=		Sound theme alerts
