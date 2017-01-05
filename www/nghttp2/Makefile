@@ -24,9 +24,7 @@ SPDY_IMPLIES=	APP
 
 CONFIGURE_ARGS=	--disable-python-bindings
 CONFIGURE_ENV=	OPENSSL_CFLAGS="-I${OPENSSLINC}" \
-		OPENSSL_LIBS="-L${OPENSSLLIB} -lcrypto -lssl" \
-		ZLIB_CFLAGS="-I${INCLUDEDIR}" \
-		ZLIB_LIBS="-L${LIBDIR} -lz"
+		OPENSSL_LIBS="-L${OPENSSLLIB} -lcrypto -lssl"
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
 USE_CXXSTD=	c++11
@@ -64,11 +62,7 @@ SPDY_LIB_DEPENDS=	libspdylay.so:www/spdylay
 
 .include <bsd.port.pre.mk>
 
-.if ${OSVERSION} <= 1000000
-CPPFLAGS+=	-D_GLIBCXX_USE_C99
-.endif
-
-.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1000000
+.if ${OPSYS} == FreeBSD
 CONFIGURE_ARGS+=--with-jemalloc
 .endif
 
