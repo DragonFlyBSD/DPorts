@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	ccnet-server
-PORTVERSION=	6.0.6
+PORTVERSION=	6.0.7
 DISTVERSIONPREFIX=	v
 DISTVERSIONSUFFIX=	-server
 CATEGORIES=	net-mgmt devel
@@ -19,8 +19,7 @@ LIB_DEPENDS=	libsearpc.so:devel/libsearpc \
 		libzdb.so:databases/libzdb \
 		libuuid.so:misc/e2fsprogs-libuuid \
 		libevent.so:devel/libevent2 \
-		libjansson.so:devel/jansson \
-		libldap.so:net/openldap24-client
+		libjansson.so:devel/jansson
 
 CONFLICT=	ccnet-[0-9]*
 
@@ -30,8 +29,7 @@ GH_ACCOUNT=	haiwen
 USES=		autoreconf gettext libtool localbase mysql:client \
        		pathfix pgsql pkgconfig python:-2.7 shebangfix ssl
 USE_LDCONFIG=	yes
-SHEBANG_FILES=	tools/*.py
-PATHFIX_MAKEFILEIN=	Makefile.am
+USE_OPENLDAP=	yes
 
 CONFIGURE_ENV=	SSL_CFLAGS="${OPENSSLINC}" SSL_LIBS="-L${OPENSSLLIB} -lssl -lcrypto"
 GNU_CONFIGURE=	yes
