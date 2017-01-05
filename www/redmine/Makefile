@@ -3,7 +3,7 @@
 
 PORTNAME=	redmine
 PORTVERSION=	3.2.3
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	www
 MASTER_SITES=	http://www.redmine.org/releases/
 
@@ -28,7 +28,8 @@ RUN_DEPENDS=	rubygem-bundler>=1.5.0:sysutils/rubygem-bundler \
 		rubygem-rbpdf>=1.19.0:print/rubygem-rbpdf \
 		rubygem-rake>=0:devel/rubygem-rake \
 		rubygem-ruby-openid>=2.3.0:net/rubygem-ruby-openid \
-		rubygem-rack-openid>=0:www/rubygem-rack-openid
+		rubygem-rack-openid>=0:www/rubygem-rack-openid \
+		rubygem-net-ldap>=0.12.0:net/rubygem-net-ldap
 
 NO_ARCH=	yes
 NO_BUILD=	yes
@@ -54,13 +55,12 @@ PASSENGER_DESC=	Use Apache/Nginx WEB server
 MYSQL_DESC=	MySQL database support (via mysql2 rubygem)
 NO_OPTIONS_SORT=	yes
 
-MYSQL_RUN_DEPENDS=	rubygem-mysql2>=0.3.11:databases/rubygem-mysql2
+MYSQL_RUN_DEPENDS=	rubygem-mysql2>=0.4.5:databases/rubygem-mysql2
 PASSENGER_RUN_DEPENDS=	passenger-config:www/rubygem-passenger
 POSTGRESQL_RUN_DEPENDS=	rubygem-pg>=0.18.1:databases/rubygem-pg
 MARKDOWN_RUN_DEPENDS=	rubygem-redcarpet>=3.3.2:textproc/rubygem-redcarpet
-RMAGIC_RUN_DEPENDS=	rubygem-rmagick>=2.13.4:graphics/rubygem-rmagick
-LDAP_RUN_DEPENDS=	rubygem-net-ldap>=0.3.1:net/rubygem-net-ldap
-THIN_RUN_DEPENDS=	thin:www/rubygem-thin
+RMAGIC_RUN_DEPENDS=	rubygem-rmagick>=2.14.0:graphics/rubygem-rmagick
+THIN_RUN_DEPENDS=	rubygem-thin>=1.6.2:www/rubygem-thin
 THIN_SUB_LIST=		WWWOWN=${WWWOWN} WWWGRP=${WWWGRP}
 THIN_VARS=		USE_RC_SUBR=redmine
 
@@ -91,9 +91,6 @@ do-install-POSTGRESQL-on:
 
 do-install-LDAP-on:
 	${CP} ${FILESDIR}/ldap.rb ${STAGEDIR}${WWWDIR}/bundler.d
-
-do-install-OPENID-on:
-	${CP} ${FILESDIR}/openid.rb ${STAGEDIR}${WWWDIR}/bundler.d
 
 do-install-MARKDOWN-on:
 	${CP} ${FILESDIR}/markdown.rb ${STAGEDIR}${WWWDIR}/bundler.d

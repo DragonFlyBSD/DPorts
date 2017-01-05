@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/www/redmine/files/redmine.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/www/redmine/files/redmine.in 430440 2017-01-03 05:32:37Z swills $
 
 # PROVIDE: redmine
 # REQUIRE: LOGIN
@@ -24,6 +24,9 @@ command=%%RUBY_NAME%%
 pidfile="%%WWWDIR%%/tmp/pids/thin.pid"
 
 load_rc_config $name
+
+# add /usr/local/bin to path
+export PATH=$PATH:%%PREFIX%%/bin
 
 # set defaults
 : ${redmine_enable="NO"}
