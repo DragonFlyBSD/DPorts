@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	thunderbird
-DISTVERSION=	45.5.1
-PORTREVISION=	6
+DISTVERSION=	45.6.0
+PORTREVISION=	0
 CATEGORIES=	mail news net-im ipv6
 MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}/source \
 		MOZILLA/${PORTNAME}/candidates/${DISTVERSION}-candidates/build1/source
@@ -37,8 +37,6 @@ USE_MOZILLA=	# empty
 
 USE_GL=		gl
 USES=		tar:xz
-
-BROKEN_aarch64=		Fails to link: js-dtrace.o.arJ1an: error adding symbols: File in wrong format
 
 MOZ_OPTIONS=	--program-transform-name='s/thunderbird/${MOZILLA}/' \
 	--enable-single-profile --disable-profilesharing \
