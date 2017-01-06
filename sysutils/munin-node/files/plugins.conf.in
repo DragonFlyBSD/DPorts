@@ -1,4 +1,4 @@
-# $FreeBSD: head/sysutils/munin-node/files/plugins.conf.in 377445 2015-01-19 17:47:47Z mat $
+# $FreeBSD: head/sysutils/munin-node/files/plugins.conf.in 430477 2017-01-03 15:16:20Z mat $
 #
 ######################################################################
 # This file is installed by the sysutils/munin-node port, you should #
@@ -65,7 +65,7 @@ env.mysqlshow %%LOCALBASE%%/bin/mysqlshow
 
 [postfix*]
 user root
-env.logfile /var/log/maillog
+env.logfile maillog
 
 [sendmail*]
 group wheel
