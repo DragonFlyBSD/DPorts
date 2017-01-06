@@ -4,15 +4,21 @@
 PORTNAME=	megacli
 DISTVERSION=	8-07-14
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.avagotech.com/docs-and-downloads/raid-controllers/raid-controllers-common-files/ \
+MASTER_SITES=	https://docs.broadcom.com/docs-and-downloads/raid-controllers/raid-controllers-common-files/\
 		http://ftp.wsisiz.edu.pl/pub/pc/drivers/lsi/
 DISTNAME=	${DISTVERSION}_MegaCLI
-EXTRACT_SUFX=	.zip
 
 MAINTAINER=	samflanker@gmail.com
 COMMENT=	SAS MegaRAID FreeBSD MegaCLI
 
-RESTRICTED=	Source recipient must acknowledge license. Reproduction or redistribution prohibited. See http://www.lsi.com/lookup/License.aspx
+LICENSE=	megacli
+LICENSE_NAME=	BROADCOM
+LICENSE_TEXT=	Source recipient must acknowledge license.\
+		Reproduction or redistribution prohibited.\
+		See https://www.broadcom.com/cs/Satellite?pagename=AVG2/Utilities/EulaMsg
+LICENSE_PERMS=	no-dist-mirror no-dist-sell no-pkg-mirror no-pkg-sell auto-accept
+
+USES=		zip
 
 ONLY_FOR_ARCHS=	i386 amd64
 
@@ -25,7 +31,7 @@ MEGACLI_ARCH=	MegaCli${ARCH:S/i386//:S/amd64/64/:S/x86_64/64/}
 
 post-extract:
 	@${MV} ${WRKSRC}/FreeBSD/MegaCLI.zip ${WRKSRC}/FreeBSD/MegaCli.zip
-	@${TAR} -xf ${WRKSRC}/FreeBSD/${MEGACLI_ARCH}.zip -C ${WRKSRC}/FreeBSD
+	@${EXTRACT_CMD} ${EXTRACT_BEFORE_ARGS} ${WRKSRC}/FreeBSD/${MEGACLI_ARCH}.zip -d ${WRKSRC}/FreeBSD
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/FreeBSD/${MEGACLI_ARCH} ${STAGEDIR}${PREFIX}/sbin/MegaCli
