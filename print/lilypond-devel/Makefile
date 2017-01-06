@@ -71,12 +71,6 @@ PLIST_SUB=	PORTVERSION=${PORTVERSION}
 OPTIONS_DEFINE=	NLS
 OPTIONS_SUB=	yes
 
-.include <bsd.port.pre.mk>
-
-.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1000000 && ${OSVERSION} < 1003000
-BROKEN=		does not build on < 10.3 (undefined reference to `__cxa_throw_bad_array_new_length')
-.endif
-
 post-patch:
 	${REINPLACE_CMD} -e 's|<FlexLexer.h>|"/usr/include/FlexLexer.h"|' \
 	    ${WRKSRC}/lily/include/includable-lexer.hh
@@ -89,4 +83,4 @@ post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/lilypond/${PORTVERSION}/python/midi.so
 	(cd ${STAGEDIR}/${DATADIR} && ${LN} -fs ${PORTVERSION} current)
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
