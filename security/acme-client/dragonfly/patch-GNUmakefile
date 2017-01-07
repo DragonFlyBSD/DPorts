@@ -1,16 +1,16 @@
---- GNUmakefile.orig	2016-11-20 10:28:53 UTC
+--- GNUmakefile.orig	2016-12-02 18:30:41 UTC
 +++ GNUmakefile
-@@ -64,6 +64,13 @@ CFLAGS	+= -I/usr/local/include
- LDFLAGS	+= -L/usr/local/lib
+@@ -99,6 +99,13 @@ LDFLAGS	+= -L/usr/local/lib
  OBJS	+= util-portable.o \
  	   sandbox-null.o
+ 
 +else ifeq ($(shell uname), DragonFly)
-+# Compiling on DragonFly.
-+# LibreSSL is assumed to be in packages (/usr/local).
++
 +CFLAGS	+= -I/usr/local/include
 +LDFLAGS	+= -L/usr/local/lib
 +OBJS	+= util-portable.o \
 +	   sandbox-null.o
++
  else ifeq ($(shell uname), NetBSD)
+ 
  # Compiling on NetBSD.
- # LibreSSL is assumed to be in packages (/usr/pkg).
