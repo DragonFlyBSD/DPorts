@@ -24,8 +24,6 @@ LIB_DEPENDS=	libfreetype.so:print/freetype2 \
 BUILD_DEPENDS=	asciidoc:textproc/asciidoc \
 		${LOCALBASE}/include/boost/shared_ptr.hpp:devel/boost-libs
 
-BROKEN_FreeBSD_9=	does not build
-
 USE_GITHUB=	yes
 GH_ACCOUNT=	EasyRPG
 GH_PROJECT=	Player
@@ -40,16 +38,10 @@ PORTDOCS=	AUTHORS README
 
 OPTIONS_DEFINE=	DOCS
 
-.include <bsd.port.pre.mk>
-
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1000000
-CONFIGURE_ENV+=	ZLIB_CFLAGS=" " ZLIB_LIBS=-lz
-.endif
-
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for f in ${PORTDOCS}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${STAGEDIR}${DOCSDIR}/
 .endfor
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
