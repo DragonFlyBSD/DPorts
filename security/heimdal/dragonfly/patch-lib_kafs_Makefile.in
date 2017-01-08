@@ -1,0 +1,11 @@
+--- lib/kafs/Makefile.in.intermediate	2017-01-08 19:27:18 UTC
++++ lib/kafs/Makefile.in
+@@ -525,7 +525,7 @@ heim_verbose = $(heim_verbose_$(V))
+ heim_verbose_ = $(heim_verbose_$(AM_DEFAULT_VERBOSITY))
+ heim_verbose_0 = @echo "  GEN    "$@;
+ @KRB5_FALSE@DEPLIB_krb5 = 
+-@KRB5_TRUE@DEPLIB_krb5 = ../krb5/libkrb5.la $(LIB_hcrypto)
++@KRB5_TRUE@DEPLIB_krb5 = ../krb5/libkrb5.la ../asn1/libasn1.la $(LIB_hcrypto)
+ @KRB5_FALSE@krb5_am_workaround = 
+ @KRB5_TRUE@krb5_am_workaround = -I$(top_srcdir)/lib/krb5
+ @AIX_FALSE@AFSL_EXP = 

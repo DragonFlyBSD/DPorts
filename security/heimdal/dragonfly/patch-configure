@@ -1,0 +1,11 @@
+--- configure.intermediate	2017-01-08 19:27:19.000000000 +0200
++++ configure
+@@ -16124,7 +16124,7 @@ case "$host" in
+ 	;;
+ *-*-freebsd[1234])
+     ;;
+-*-*-freebsd*)
++*-*-freebsd*|*-*-dragonfly*)
+ 	native_pthread_support=yes
+ 	PTHREAD_LIBADD="-lpthread"
+ 	;;
