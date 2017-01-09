@@ -53,7 +53,7 @@ WARNING+=		"OVERRIDE_LINUX_BASE_PORT is deprecated, please use DEFAULT_VERSIONS+
 .endif
 # Possible values: 5.1, 5.2, 5.3
 LUA_DEFAULT?=		5.2
-# Possible values: 5.1, 5.5, 5.6, 5.7, 5.5m, 10.0m, 10.1m, 5.5p, 5.6p
+# Possible values: 5.1, 5.5, 5.6, 5.7, 8.0, 5.5m, 10.0m, 10.1m, 5.5p, 5.6p
 MYSQL_DEFAULT?=		5.6
 # Possible values: 5.20, 5.22, devel
 .if !exists(${LOCALBASE}/bin/perl) || (!defined(_PORTS_ENV_CHECK) && \
@@ -81,7 +81,7 @@ PYTHON2_DEFAULT?=	2.7
 # Possible values: 3.3, 3.4, 3.5, 3.6
 PYTHON3_DEFAULT?=	3.5
 # Possible values: 2.1, 2.2, 2.3, 2.4
-RUBY_DEFAULT?=		2.2
+RUBY_DEFAULT?=		2.3
 # Possible values: base, openssl, openssl-devel, libressl, libressl-devel
 .if !defined(SSL_DEFAULT)
 #	If no preference was set, check for an installed base version
