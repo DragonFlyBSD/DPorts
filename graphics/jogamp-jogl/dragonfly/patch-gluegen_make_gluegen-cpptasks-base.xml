@@ -9,3 +9,21 @@
      </condition>
      <condition property="isAndroid">
        <os name="Android" />
+@@ -919,6 +919,8 @@
+         <define name="DEBUG"    if="c.compiler.use-debug"/>
+         <define name="NDEBUG"   unless="c.compiler.use-debug"/>
+       </defineset>
++      <compilerarg value="-isystem"/>
++      <compilerarg value="/usr/local/include" />
+     </compiler>
+ 
+     <compiler id="compiler.cfg.linux" name="${gcc.compat.compiler}">
+@@ -991,6 +993,8 @@
+         <define name="DEBUG"    if="c.compiler.use-debug"/>
+         <define name="NDEBUG"   unless="c.compiler.use-debug"/>
+       </defineset>
++      <compilerarg value="-isystem"/>
++      <compilerarg value="/usr/local/include" />
+     </compiler>
+ 
+     <compiler id="compiler.cfg.hpux" name="aCC">
