@@ -90,10 +90,6 @@ PLIST_SUB+=	GOLD=""
 PLIST_SUB+=	GOLD="@comment "
 .endif
 
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1000000
-CONFIGURE_ARGS+=	--disable-initfini-array
-.endif
-
 post-install:
 .if !defined(PKGNAMEPREFIX)
 	${INSTALL_DATA} ${WRKSRC}/include/plugin-api.h ${STAGEDIR}${PREFIX}/include/
