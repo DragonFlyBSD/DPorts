@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	node
-PORTVERSION=	7.3.0
+PORTVERSION=	7.4.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www
 MASTER_SITES=	http://nodejs.org/dist/v${PORTVERSION}/
@@ -13,7 +13,7 @@ LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 OPTIONS_DEFINE=	BUNDLED_SSL DOCS NLS DTRACE
-OPTIONS_DEFAULT=	DTRACE
+OPTIONS_DEFAULT=	BUNDLED_SSL DTRACE
 OPTIONS_SUB=	yes
 
 .if !exists(/usr/sbin/dtrace)
@@ -22,7 +22,7 @@ OPTIONS_EXCLUDE+=	DTRACE
 
 OPTIONS_EXCLUDE_FreeBSD_10=	DTRACE
 
-BUNDLED_SSL_DESC=		Use node.js's bundled OpenSSL implementation
+BUNDLED_SSL_DESC=		Use node.js's bundled OpenSSL implementation #'
 BUNDLED_SSL_USES_OFF=		ssl
 BUNDLED_SSL_CONFIGURE_OFF=	--shared-openssl
 
@@ -72,9 +72,8 @@ IGNORE=		cannot build node.js with LibreSSL. You must enable BUNDLED_SSL
 .endif
 .endif
 
-.if ${ARCH} == "armv6"
-CONFIGURE_ARGS=	--openssl-no-asm
-.endif
+# something is wrong with configure wrt to DF I think
+CONFIGURE_ARGS+=--openssl-no-asm
 
 .if ${COMPILER_TYPE} == gcc
 # GCC does not expose std::snprintf() without this define
@@ -82,10 +81,7 @@ CXXFLAGS+=	-D_GLIBCXX_USE_C99
 .endif
 
 .if ${PORT_OPTIONS:MDTRACE}
-PLIST_SUB+=	DTRACE=""
 CONFIGURE_ARGS+=	--with-dtrace
-.else
-PLIST_SUB+=	DTRACE="@comment "
 .endif
 
 post-patch:

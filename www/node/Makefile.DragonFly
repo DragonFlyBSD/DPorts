@@ -1,4 +1,0 @@
-DEFAULT_OPTIONS:=	${DEFAULT_OPTIONS} BUNDLED_SSL
-
-# something is wrong with configure wrt to DF I think
-CONFIGURE_ARGS+=	--openssl-no-asm
