@@ -69,16 +69,6 @@ TUI_CONFIGURE_ENABLE=	tui
 
 .include <bsd.port.options.mk>
 
-.if ${OSVERSION} < 1000010
-# FreeBSD 9.x and earlier do not define SIGLIBRT in <sys/signal.h>
-CFLAGS+=	-DSIGLIBRT=33
-.endif
-
-.if ${OPSYS} == FreeBSD && ${OSVERSION} > 1000010
-# The option -Wno-extended-offsetof is supported by clang only
-CFLAGS+=	-Wno-extended-offsetof
-.endif
-
 .if ${OPSYS} == DragonFly
 # Wow c++ smth.c too on gdb, gcc wasn't enough? throw helpers for c-- and try to kill it
 CFLAGS+=	-D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS
