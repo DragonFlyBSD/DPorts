@@ -1,7 +1,7 @@
 # Created by: ftigeot@wolfpond.org
 
 PORTNAME=	xf86-video-intel
-PORTVERSION=	2.99.2016.06.01
+PORTVERSION=	2.99.2017.01.06
 PORTEPOCH=	2
 CATEGORIES=	x11-drivers
 MASTER_SITES=	http://dl.wolfpond.org/distfiles/
@@ -29,7 +29,7 @@ USE_XORG=	glproto \
 		xrender \
 		xvmc
 
-USES+=		autoreconf:build gmake libtool cpe
+USES+=		autoreconf:build gmake libtool cpe tar:xz
 CPE_VENDOR=	x
 
 OPTIONS_DEFINE=	TOOLS
