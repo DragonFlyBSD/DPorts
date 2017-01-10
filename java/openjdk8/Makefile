@@ -360,11 +360,6 @@ MAKE_ENV+=		LD_LIBRARY_PATH="${BOOTSTRAPJDKDIR}/jre/lib/amd64"
 .  endif
 .endif
 
-# PR193009: work around the rtld bug
-.if ${OSVERSION} < 1001511
-CONFIGURE_ARGS+=	--enable-static-libjli
-.endif
-
 .if ${COMPILER_TYPE} == clang
 .if ${COMPILER_VERSION} >= 35
 MAKE_ENV+=	COMPILER_WARNINGS_FATAL=false
