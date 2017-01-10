@@ -2,10 +2,10 @@
 # $FreeBSD$
 
 PORTNAME=	pcsc-lite
-PORTVERSION=	1.8.19
+PORTVERSION=	1.8.20
 PORTEPOCH=	2
 CATEGORIES=	devel security
-MASTER_SITES=	https://alioth.debian.org/frs/download.php/file/4198/
+MASTER_SITES=	https://alioth.debian.org/frs/download.php/latestfile/39/
 
 MAINTAINER=	mokhi64@gmail.com
 COMMENT=	Smartcard development library
@@ -21,8 +21,7 @@ USE_RC_SUBR=	pcscd
 SHEBANG_FILES=	${WRKSRC}/src/spy/pcsc-spy
 
 USE_LDCONFIG=	yes
-CONFIGURE_ARGS=	--enable-usbdropdir=${PREFIX}/lib/pcsc/drivers/ \
-		LIBUSB_CFLAGS=" " LIBUSB_LIBS="-lusb"
+CONFIGURE_ARGS=	--enable-usbdropdir=${PREFIX}/lib/pcsc/drivers/
 
 PKGMESSAGE=	${WRKDIR}/pkg-message
 
