@@ -14,7 +14,6 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 BUILD_DEPENDS=	valac:lang/vala
 LIB_DEPENDS=	libsearpc.so:devel/libsearpc \
-		libglib-2.0.so:devel/glib20 \
 		libsqlite3.so:databases/sqlite3 \
 		libzdb.so:databases/libzdb \
 		libuuid.so:misc/e2fsprogs-libuuid \
@@ -28,6 +27,7 @@ GH_ACCOUNT=	haiwen
 
 USES=		autoreconf gettext libtool localbase mysql:client \
        		pathfix pgsql pkgconfig python:-2.7 shebangfix ssl
+USE_GNOME=	glib20
 USE_LDCONFIG=	yes
 USE_OPENLDAP=	yes
 
@@ -48,12 +48,6 @@ PLIST_SUB=	USERS=${USERS} \
 		GROUPS=${GROUPS} \
 		SEAFILE_SERVER=${SEAFILE_SERVER} \
 		HAIWENDIR=${HAIWENDIR}
-
-.include <bsd.port.options.mk>
-
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1000000
-WITH_OPENSSL_PORT=	yes
-.endif
 
 post-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/${SEABIN} ${STAGEDIR}${PREFIX}/${SEALIB}
