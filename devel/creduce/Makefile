@@ -27,11 +27,4 @@ USES=		gmake perl5
 dfly-patch:
 	${REINPLACE_CMD} 's,llvm-config,llvm-config38,g' ${WRKSRC}/configure
 
-.include <bsd.port.pre.mk>
-
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1000000
-CONFIGURE_ENV+=	CPPFLAGS="-stdlib=libstdc++ -I${LOCALBASE}/lib/gcc48/include/c++/ -I${LOCALBASE}/lib/gcc48/include/ -I${LOCALBASE}/lib/gcc48/include/c++/${ARCH:C/amd64/x86_64/}-portbld-${OPSYS:tl}${OSREL}/ -L${LOCALBASE}/lib -L${LOCALBASE}/lib/gcc48" \
-		LDFLAGS="-L/usr/local/lib/gcc48 -lstdc++"
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
