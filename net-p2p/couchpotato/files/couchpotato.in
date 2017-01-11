@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/net-p2p/couchpotato/files/couchpotato.in 429565 2016-12-26 18:48:29Z feld $
+# $FreeBSD: head/net-p2p/couchpotato/files/couchpotato.in 430603 2017-01-04 22:31:55Z feld $
 #
 # PROVIDE: couchpotato
 # REQUIRE: LOGIN
@@ -23,7 +23,7 @@ rcvar=couchpotato_enable
 load_rc_config ${name}
 
 : ${couchpotato_enable:=NO}
-: ${couchpotato_user:=nobody}
+: ${couchpotato_user:=couchpotato}
 : ${couchpotato_datadir=/var/db/couchpotato}
 : ${couchpotato_conf=%%ETCDIR%%/settings.conf}
 
