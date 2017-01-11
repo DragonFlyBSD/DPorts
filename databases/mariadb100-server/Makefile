@@ -2,7 +2,7 @@
 
 PORTNAME?=	mariadb
 PORTVERSION=	10.0.27
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	databases ipv6
 MASTER_SITES=	http://ftp.osuosl.org/pub/${SITESDIR}/ \
 		http://mirrors.supportex.net/${SITESDIR}/ \
@@ -139,7 +139,7 @@ post-install:
 
 .include <bsd.port.pre.mk>
 
-.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1000012
+.if ${OPSYS} == FreeBSD
 CMAKE_ARGS+=	-DWITH_JEMALLOC="system"
 .else
 CMAKE_ARGS+=	-DWITH_JEMALLOC="no"
@@ -151,7 +151,7 @@ NOT_FOR_ARCHS_REASON=   TokuDB not supported on 32-bit platforms, see \
 			https://github.com/percona/PerconaFT/blob/master/README.md
 .endif
 
-.if ${ARCH} == 'i386' && ${OSVERSION} >= 1001000
+.if ${ARCH} == 'i386'
 # Server segfaults on i386 when built with clang >= 3.4
 USE_GCC=	yes
 .endif
