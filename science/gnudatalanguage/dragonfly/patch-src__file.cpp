@@ -1,15 +1,15 @@
---- src/file.cpp.intermediate	2016-01-13 18:32:20.000000000 +0200
+--- src/file.cpp.orig	2017-01-12 06:03:15 UTC
 +++ src/file.cpp
-@@ -242,7 +242,7 @@ extern "C"
+@@ -244,7 +244,7 @@ extern "C"
+ */
  #endif
  #define NTEST_SEARCH 7
- 
 -#if defined(__CYGWIN__) || defined(__FreeBSD__)
 +#if defined(__CYGWIN__) || defined(__FreeBSD__) || defined(__DragonFly__)
  #define stat64 stat
  #define lstat64 lstat
  // for religious reasons, CYGWIN doesn't do lstat64
-@@ -996,7 +996,7 @@ bool *tests )
+@@ -1004,7 +1004,7 @@ bool *tests )
    if ( noSort )
      globflags |= GLOB_NOSORT;
  
