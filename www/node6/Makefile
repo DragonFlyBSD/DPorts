@@ -14,7 +14,7 @@ LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 OPTIONS_DEFINE=	BUNDLED_SSL DOCS NLS DTRACE
-OPTIONS_DEFAULT=	DTRACE
+OPTIONS_DEFAULT=	BUNDLED_SSL DTRACE
 OPTIONS_SUB=	yes
 
 .if !exists(/usr/sbin/dtrace)
@@ -73,9 +73,8 @@ IGNORE=		cannot build node.js with LibreSSL. You must enable BUNDLED_SSL
 .endif
 .endif
 
-.if ${ARCH} == "armv6"
+# something is wrong with configure wrt to DF I think
 CONFIGURE_ARGS+=--openssl-no-asm
-.endif
 
 .if ${COMPILER_TYPE} == gcc
 # GCC does not expose std::snprintf() without this define
