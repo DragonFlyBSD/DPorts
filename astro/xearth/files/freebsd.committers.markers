@@ -1,4 +1,4 @@
-# $FreeBSD: head/astro/xearth/files/freebsd.committers.markers 430161 2016-12-31 20:46:19Z rpaulo $
+# $FreeBSD: head/astro/xearth/files/freebsd.committers.markers 431466 2017-01-14 13:57:37Z cpm $
 #
 # FreeBSD Project Committers
 #
@@ -217,6 +217,7 @@
  52.188649,	-2.2341,	"crees"				# Worcester, West Midlands, United Kingdom
  42.8474,	-2.66976,	"carvay"			# Araba, Vitoria-Gasteiz, Spain
  51.49,		-3.16,		"ceri"				# Cardiff, UK
+ 37.1876,	-3.6149,	"cpm"				# Granada, Spain
  53.20,		-6.15,		"dwmalone"	align=left	# Dublin, Ireland
  53.286499,	-6.196429,	"flz"				# Stillorgan, Co. Dublin, Ireland
  53.65,		-6.67,		"peadar"	align=above	# Navan, Co. Meath, Ireland
@@ -284,6 +285,7 @@
  44.89,		-93.35,		"bdrewery"			# Minneapolis, MN, USA
  42.02,		-93.67,		"ghelmer"			# Ames, IA, USA
  29.834,	-95.00,		"     ,chris"			# Houston, TX, USA
+ 30.47702408	-97.64801025	"ler"				# Pflugerville, TX, USA
  30.715833	-95.5525,	"ade"				# Huntsville, TX, USA
  37.0625,	-95.677068,	"kmacy"				# Palo Alto, CA, USA
  29.7925,	-95.8225,	"dwcjr"				# Katy, TX, USA
