@@ -3,6 +3,7 @@
 
 PORTNAME=	gdb
 PORTVERSION=	7.12
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	GNU
 
@@ -30,32 +31,30 @@ CFLAGS:=	${CFLAGS:C/ +$//}	# blanks at EOL creep in sometimes
 CFLAGS+=	-DRL_NO_COMPAT -Wno-unused-function -Wno-unused-variable
 EXCLUDE=	dejagnu expect sim texinfo intl
 EXTRACT_AFTER_ARGS=	${EXCLUDE:S/^/--exclude /}
+EXTRA_PATCHES=	${FILESDIR}/commit-387360daf9 \
+		${FILESDIR}/commit-b268007c68
 LIB_DEPENDS+=	libexpat.so:textproc/expat2
 
 VER=		${PORTVERSION:S/.//g}
 PLIST_SUB=	VER=${VER}
 
-ONLY_FOR_ARCHS=	i386 amd64 powerpc powerpc64 armv6	# untested elsewhere, might work
+ONLY_FOR_ARCHS=	i386 amd64 powerpc powerpc64 armv6 mips	# untested elsewhere, might work
 
 OPTIONS_DEFINE=	DEBUG GDB_LINK GUILE KGDB PYTHON TUI
 
 OPTIONS_DEFAULT=	GDB_LINK PYTHON TUI PORT_READLINE
 
 OPTIONS_SINGLE=	READLINE
-OPTIONS_SINGLE_READLINE=	BASE_READLINE BUNDLED_READLINE PORT_READLINE
+OPTIONS_SINGLE_READLINE=	BUNDLED_READLINE PORT_READLINE
 
 GDB_LINK_DESC=		Create ${PREFIX}/bin/gdb symlink
 KGDB_DESC=		Kernel Debugging Support
-BASE_READLINE_DESC=	from base system
 BUNDLED_READLINE_DESC=	from gdb distfile
 PORT_READLINE_DESC=	from devel/readline port
 TUI_DESC=		Text User Interface enabled
 
 OPTIONS_SUB=	yes
 
-BASE_READLINE_USES=	readline
-BASE_READLINE_CFLAGS=	-D_rl_echoing_p=readline_echoing_p
-BASE_READLINE_EXTRA_PATCHES=	${FILESDIR}/extrapatch-base-readline
 BUNDLED_READLINE_CONFIGURE_OFF=	--with-system-readline
 DEBUG_CFLAGS=		-g
 GUILE_CONFIGURE_WITH=	guile
@@ -69,15 +68,13 @@ TUI_CONFIGURE_ENABLE=	tui
 
 .include <bsd.port.options.mk>
 
-.if ${OPSYS} == DragonFly
-# Wow c++ smth.c too on gdb, gcc wasn't enough? throw helpers for c-- and try to kill it
-CFLAGS+=	-D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS
-CONFIGURE_ARGS+= --disable-build-with-cxx
-.endif
-
 .if ! ${PORT_OPTIONS:MBUNDLED_READLINE}
 EXCLUDE+=	readline
 .endif
+
+# Wow c++ smth.c too on gdb, gcc wasn't enough? throw helpers for c-- and try to kill it
+CFLAGS+=	-D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS
+CONFIGURE_ARGS+=	--disable-build-with-cxx
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|$$| [GDB v${PORTVERSION} for ${OPSYS}]|' \
@@ -85,7 +82,7 @@ post-patch:
 
 post-patch-KGDB-on:
 	@${CP} -r ${FILESDIR}/kgdb/*.[ch] ${WRKSRC}/gdb/
-	@${PATCH} ${PATCH_ARGS} < ${FILESDIR}/extrapatch-kgdb
+	@${PATCH} -d ${PATCH_WRKSRC} ${PATCH_ARGS} < ${FILESDIR}/extrapatch-kgdb
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gdb/gdb \

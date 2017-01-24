@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/ppcfbsd-kern.c 428876 2016-12-18 16:08:14Z tijl $");
+__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/ppcfbsd-kern.c 431323 2017-01-12 21:40:06Z olivier $");
 
 #include <sys/types.h>
 #ifdef __powerpc__
@@ -58,7 +58,7 @@ ppcfbsd_supply_pcb(struct regcache *regcache, CORE_ADDR pcb_addr)
 
 	tdep = gdbarch_tdep (target_gdbarch());
 
-	if (target_read_memory(pcb_addr, &pcb, sizeof(pcb)) != 0)
+	if (target_read_memory(pcb_addr, (gdb_byte *)&pcb, sizeof(pcb)) != 0)
 		memset(&pcb, 0, sizeof(pcb));
 
 	/*
