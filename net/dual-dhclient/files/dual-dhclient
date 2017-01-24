@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# $FreeBSD: head/net/dual-dhclient/files/dual-dhclient 431537 2017-01-15 09:00:18Z cperciva $
+
+# Public domain
+
+/sbin/dhclient "$@"
+/usr/local/sbin/dhclient -6 -nw -cf /dev/null "$@"
