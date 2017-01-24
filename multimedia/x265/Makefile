@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	x265
-PORTVERSION=	1.9
+PORTVERSION=	2.2
 CATEGORIES=	multimedia
 MASTER_SITES=	http://bitbucket.org/multicoreware/${PORTNAME}/get/
 DISTNAME=	${PORTVERSION}
@@ -20,7 +20,7 @@ USES=		cmake pathfix tar:bz2
 USE_LDCONFIG=	yes
 CMAKE_ARGS=	-DENABLE_TESTS=on
 
-WRKSRC=		${WRKDIR}/multicoreware-${PORTNAME}-1d3b6e448e01/source
+WRKSRC=		${WRKDIR}/multicoreware-${PORTNAME}-be14a7e9755e/source
 
 BROKEN_mips64=		Fails to link: Nonrepresentable section on output
 
