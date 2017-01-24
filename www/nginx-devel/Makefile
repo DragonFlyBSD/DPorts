@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	nginx
-PORTVERSION=	1.11.7
+PORTVERSION=	1.11.8
 CATEGORIES=	www
 MASTER_SITES=	http://nginx.org/download/
 MASTER_SITES+=	LOCAL/osa
@@ -1174,7 +1174,7 @@ GROUPS?=${WWWGRP}
 
 .if defined(NGINX_OPENSSL)
 USE_OPENSSL=	yes
-.if ${OSVERSION} < 1100000
+.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1100000
 WITH_OPENSSL_PORT=yes
 .endif
 .endif
