@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnutls
-PORTVERSION=	3.4.17
+PORTVERSION=	3.5.8
 CATEGORIES=	security net
 MASTER_SITES=	GNUPG/gnutls/v${PORTVERSION:R}
 
@@ -10,17 +10,18 @@ COMMENT=	GNU Transport Layer Security library
 
 LICENSE=	GPLv3 LGPL21
 LICENSE_COMB=	multi
-LICENSE_FILE_GPLv3=	${WRKSRC}/COPYING
-LICENSE_FILE_LGPL21=	${WRKSRC}/COPYING.LESSER
+LICENSE_FILE_GPLv3=	${WRKSRC}/doc/COPYING
+LICENSE_FILE_LGPL21=	${WRKSRC}/doc/COPYING.LESSER
 
 LIB_DEPENDS=	libgmp.so:math/gmp \
 		libnettle.so:security/nettle \
-		libtasn1.so:security/libtasn1
+		libtasn1.so:security/libtasn1 \
+		libunistring.so:devel/libunistring
 BUILD_DEPENDS+=	${LOCALBASE}/share/certs/ca-root-nss.crt:security/ca_root_nss
 RUN_DEPENDS+=	${LOCALBASE}/share/certs/ca-root-nss.crt:security/ca_root_nss
 
-USES=		cpe gmake iconv libtool localbase makeinfo pathfix pkgconfig \
-		tar:xz
+USES=		compiler cpe gmake iconv libtool localbase makeinfo \
+		pathfix pkgconfig tar:xz
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-guile \
@@ -63,6 +64,15 @@ ZLIB_CONFIGURE_WITH=	zlib
 
 INFO=		gnutls gnutls-guile
 
+.include <bsd.port.pre.mk>
+
+# XXX CHOSEN_COMPILER_VERSION isn't supported, so check CC hasn't changed
+.if ${ARCH} == aarch64 && ${CC} == cc && \
+    ${COMPILER_TYPE} == clang && ${COMPILER_VERSION} < 40
+BUILD_DEPENDS+=	as:devel/binutils
+CFLAGS+=	-no-integrated-as
+.endif
+
 post-patch:
 	@${RM} ${WRKSRC}/doc/*.info*
 
@@ -70,4 +80,4 @@ post-install:
 	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/examples/*.[ch] ${STAGEDIR}${EXAMPLESDIR}
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
