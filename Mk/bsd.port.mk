@@ -349,7 +349,10 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #				  can be used in Makefiles by port maintainers
 #				  if a port breaks with it (it should be
 #				  extremely rare).
-#
+##
+# USE_LOCALE	- LANG and LC_ALL are set to the value of this variable in
+#				  CONFIGURE_ENV and MAKE_ENV.  Example: USE_LOCALE=en_US.UTF-8
+##
 # USE_GCC		- If set, this port requires this version of gcc, either in
 #				  the system or installed from a port.
 # USE_CSTD		- Override the default C language standard (gnu89, gnu99)
@@ -756,6 +759,11 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #				  The patches specified by this variable will be
 #				  applied after the normal distribution patches but
 #				  before those in ${PATCHDIR}.
+# EXTRA_PATCH_TREE - where to find extra 'out-of-tree' patches
+#				  Points to a directory hierarchy with the same layout
+#				  as the ports tree, where local patches can be found.
+#				  This allows a third party to keep their patches in
+#				  some other source control system if needed.
 # PATCH_WRKSRC	- Directory to apply patches in.
 #				  Default: ${WRKSRC}
 #
@@ -1037,6 +1045,12 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 # Most port authors should not need to understand anything after this point.
 #
 
+LANG=		C
+LC_ALL=		C
+.if defined(.PARSEDIR)
+.export		LANG LC_ALL
+.endif
+
 # These need to be absolute since we don't know how deep in the ports
 # tree we are and thus can't go relative.  They can, of course, be overridden
 # by individual Makefiles or local system make configuration.
@@ -1155,6 +1169,25 @@ OSREL!=		${ECHO} ${DFLYVERSION} | ${AWK} '{a=int($$1/100000); b=int(($$1-(a*1000
 . endif
 .endif
 _EXPORTED_VARS+=	OSVERSION DFLYVERSION OSREL
+
+
+.if (${OPSYS} == FreeBSD && (${OSVERSION} < 1003000 || (${OSVERSION} >= 1100000 && ${OSVERSION} < 1100122))) || \
+    (${OPSYS} == DragonFly && ${DFLYVERSION} < 400400)
+_UNSUPPORTED_SYSTEM_MESSAGE=	Ports Collection support for your ${OPSYS} version has ended, and no ports\
+								are guaranteed to build on this system. Please upgrade to a supported release.
+. if defined(ALLOW_UNSUPPORTED_SYSTEM)
+WARNING+=			"${_UNSUPPORTED_SYSTEM_MESSAGE}"
+. else
+show-unsupported-system-error:
+	@${ECHO_MSG} "/!\\ ERROR: /!\\"
+	@${ECHO_MSG}
+	@${ECHO_MSG} "${_UNSUPPORTED_SYSTEM_MESSAGE}" | ${FMT} 75 79
+	@${ECHO_MSG}
+	@${ECHO_MSG} "No support will be provided if you silence this message by defining ALLOW_UNSUPPORTED_SYSTEM." | ${FMT} 75 79
+	@${ECHO_MSG}
+	@${FALSE}
+. endif
+.endif
 
 # Only define tools here (for transition period with between pkg tools)
 .include "${PORTSDIR}/Mk/bsd.commands.mk"
@@ -1883,6 +1916,11 @@ ${_f}_ARGS:=	${f:C/^[^\:]*(\:|\$)//:S/,/ /g}
 .include "${USESDIR}/${f:C/\:.*//}.mk"
 .endfor
 
+.if defined(USE_LOCALE)
+CONFIGURE_ENV+=	LANG=${USE_LOCALE} LC_ALL=${USE_LOCALE}
+MAKE_ENV+=		LANG=${USE_LOCALE} LC_ALL=${USE_LOCALE}
+.endif
+
 .if defined(USE_XORG)
 # Add explicit X options to avoid problems with false positives in configure
 .if defined(GNU_CONFIGURE)
@@ -1997,12 +2035,11 @@ PATCH_STRIP?=	-p0
 PATCH_DIST_STRIP?=	-p0
 .if defined(PATCH_DEBUG)
 PATCH_DEBUG_TMP=	yes
-PATCH_ARGS?=	-d ${PATCH_WRKSRC} -E ${PATCH_STRIP}
-PATCH_DIST_ARGS?=	--suffix ${DISTORIG} -d ${PATCH_WRKSRC} -E ${PATCH_DIST_STRIP}
+PATCH_ARGS?=	-E ${PATCH_STRIP}
+PATCH_DIST_ARGS?=	--suffix ${DISTORIG} -E ${PATCH_DIST_STRIP}
 .else
-PATCH_DEBUG_TMP=	no
-PATCH_ARGS?=	-d ${PATCH_WRKSRC} --forward --quiet -E ${PATCH_STRIP}
-PATCH_DIST_ARGS?=	--suffix ${DISTORIG} -d ${PATCH_WRKSRC} --forward --quiet -E ${PATCH_DIST_STRIP}
+PATCH_ARGS?=	--forward --quiet -E ${PATCH_STRIP}
+PATCH_DIST_ARGS?=	--suffix ${DISTORIG} --forward --quiet -E ${PATCH_DIST_STRIP}
 .endif
 .if !defined(QUIET)
 PATCH_SILENT=		PATCH_SILENT=yes
@@ -2014,6 +2051,7 @@ PATCH_DIST_ARGS+=	--batch
 
 # Prevent breakage with VERSION_CONTROL=numbered
 PATCH_ARGS+=	-V simple
+PATCH_DIST_ARGS+=		-V simple
 
 .if defined(PATCH_CHECK_ONLY)
 PATCH_ARGS+=	-C
@@ -2376,8 +2414,10 @@ _PATCH_SITES_ALL+=	${_PATCH_SITES_${_group}}
 .		endfor
 .	endif
 _PATCHFILES:=	${_PATCHFILES} ${_P_file}
-.	if !empty(_P_strip)
-_PATCH_DIST_STRIP_CASES:=	${_PATCH_DIST_STRIP_CASES} ("${_P_file}") printf %s "${_P_strip}" ;;
+.	if empty(_P_strip)
+_PATCHFILES2:=	${_PATCHFILES2} ${_P_file}
+.	else
+_PATCHFILES2:=	${_PATCHFILES2} ${_P_file}:${_P_strip}
 .	endif
 .endfor
 _P_groups=
@@ -3083,100 +3123,30 @@ do-extract:
 
 .if !target(do-patch)
 do-patch:
-.if defined(PATCHFILES)
-	@${ECHO_MSG} "===>  Applying distribution patches for ${PKGNAME}"
-	@(set -e; \
-	cd ${_DISTDIR}; \
-	patch_dist_strip () { \
-		case "$$1" in \
-		${_PATCH_DIST_STRIP_CASES} \
-		esac; \
-	}; \
-	for i in ${_PATCHFILES}; do \
-		if [ ${PATCH_DEBUG_TMP} = yes ]; then \
-			${ECHO_MSG} "===>   Applying distribution patch $$i" ; \
-		fi ; \
-		case $$i in \
-		*.Z|*.gz) ${GZCAT} $$i ;; \
-		*.bz2) ${BZCAT} $$i ;; \
-		*.xz) ${XZCAT} $$i ;; \
-		*.zip) ${UNZIP_NATIVE_CMD} -p $$i ;; \
-		*) ${CAT} $$i ;; \
-		esac | ${PATCH} ${PATCH_DIST_ARGS} `patch_dist_strip $$i` ; \
-	done )
-.endif
-.if defined(EXTRA_PATCHES)
-	@set -e ; \
-	for i in ${EXTRA_PATCHES}; do \
-		case $$i in \
-		*:-p[0-9]) patch_file=$${i%:*} ; patch_strip=$${i##*:} ;; \
-		*) patch_file=$$i ;; \
-		esac ; \
-		${ECHO_MSG} "===>  Applying extra patch $$patch_file" ; \
-		case $$patch_file in \
-		*.Z|*.gz) ${GZCAT} $$patch_file ;; \
-		*.bz2) ${BZCAT} $$patch_file ;; \
-		*.xz) ${XZCAT} $$patch_file ;; \
-		*.zip) ${UNZIP_NATIVE_CMD} -p $$patch_file ;; \
-		*) ${CAT} $$patch_file ;; \
-		esac | ${PATCH} ${PATCH_ARGS} $$patch_strip ; \
-	done
-.endif
-	@set -e ;\
-	if [ -d ${PATCHDIR} ]; then \
-		if [ "`${ECHO_CMD} ${PATCHDIR}/patch-*`" != "${PATCHDIR}/patch-*" ]; then \
-			${ECHO_MSG} "===>  Applying ports patches for ${PKGNAME}" ; \
-			PATCHES_APPLIED="" ; \
-			for i in ${PATCHDIR}/patch-*; do \
-				case $$i in \
-					*.orig|*.rej|*~|*,v) \
-						${ECHO_MSG} "===>   Ignoring patchfile $$i" ; \
-						;; \
-					*) \
-						if [ ${PATCH_DEBUG_TMP} = yes ]; then \
-							${ECHO_MSG} "===>   Applying ${OPSYS} patch $$i" ; \
-						fi; \
-						if ${PATCH} ${PATCH_ARGS} < $$i ; then \
-							PATCHES_APPLIED="$$PATCHES_APPLIED $$i" ; \
-						else \
-							${ECHO_MSG} `${ECHO_CMD} "=> Patch $$i failed to apply cleanly." | ${SED} "s|${PATCHDIR}/||"` ; \
-							if [ x"$$PATCHES_APPLIED" != x"" -a ${PATCH_SILENT} != "yes" ]; then \
-								${ECHO_MSG} `${ECHO_CMD} "=> Patch(es) $$PATCHES_APPLIED applied cleanly." | ${SED} "s|${PATCHDIR}/||g"` ; \
-							fi; \
-							${FALSE} ; \
-						fi; \
-						;; \
-				esac; \
-			done; \
-		fi; \
-	fi
-	@set -e ; if [ -d ${DFLY_PATCHDIR} ]; then \
-		if [ "`${ECHO_CMD} ${DFLY_PATCHDIR}/patch-*`" != "${DFLY_PATCHDIR}/patch-*" ]; then \
-			${ECHO_MSG} "===>  Applying ${OPSYS} patches for ${PKGNAME}" ; \
-			PATCHES_APPLIED="" ; \
-			for i in ${DFLY_PATCHDIR}/patch-*; do \
-				case $$i in \
-					*.orig|*.rej|*~|*,v) \
-						${ECHO_MSG} "===>   Ignoring patchfile $$i" ; \
-						;; \
-					*) \
-						if [ ${PATCH_DEBUG_TMP} = yes ]; then \
-							${ECHO_MSG} "===>   Applying ${OPSYS} patch $$i" ; \
-						fi; \
-						if ${PATCH} ${PATCH_ARGS} < $$i ; then \
-							PATCHES_APPLIED="$$PATCHES_APPLIED $$i" ; \
-						else \
-							${ECHO_MSG} `${ECHO_CMD} "=> Patch $$i failed to apply cleanly." | ${SED} "s|${DFLY_PATCHDIR}/||"` ; \
-							if [ x"$$PATCHES_APPLIED" != x"" ]; then \
-								${ECHO_MSG} `${ECHO_CMD} "=> Patch(es) $$PATCHES_APPLIED applied cleanly." | ${SED} "s|${DFLY_PATCHDIR}/||g"` ; \
-							fi; \
-							${FALSE} ; \
-						fi; \
-						;; \
-				esac; \
-			done; \
-		fi; \
-	fi
+	@${SETENV} \
+			dp_BZCAT="${BZCAT}" \
+			dp_CAT="${CAT}" \
+			dp_DISTDIR="${_DISTDIR}" \
+			dp_ECHO_MSG="${ECHO_MSG}" \
+			dp_EXTRA_PATCHES="${EXTRA_PATCHES}" \
+			dp_EXTRA_PATCH_TREE="${EXTRA_PATCH_TREE}" \
+			dp_GZCAT="${GZCAT}" \
+			dp_OPSYS="${OPSYS}" \
+			dp_PATCH="${PATCH}" \
+			dp_PATCHDIR="${PATCHDIR}" \
+			dp_DFLY_PATCHDIR="${DFLY_PATCHDIR}" \
+			dp_PATCHFILES="${_PATCHFILES2}" \
+			dp_PATCH_ARGS=${PATCH_ARGS:Q} \
+			dp_PATCH_DEBUG_TMP="${PATCH_DEBUG_TMP}" \
+			dp_PATCH_DIST_ARGS="${PATCH_DIST_ARGS}" \
+			dp_PATCH_SILENT="${PATCH_SILENT}" \
+			dp_PATCH_WRKSRC=${PATCH_WRKSRC} \
+			dp_PKGNAME="${PKGNAME}" \
+			dp_PKGORIGIN="${PKGORIGIN}" \
+			dp_SCRIPTSDIR="${SCRIPTSDIR}" \
+			dp_UNZIP_NATIVE_CMD="${UNZIP_NATIVE_CMD}" \
+			dp_XZCAT="${XZCAT}" \
+			${SH} ${SCRIPTSDIR}/do-patch.sh
 .endif
 
 .if !target(run-autotools-fixup)
@@ -4661,6 +4631,7 @@ pre-check-config:
 .  for opt in ${OPTIONS_SINGLE_${single}}
 .    if empty(ALL_OPTIONS:M${single}) || !empty(PORT_OPTIONS:M${single})
 .      if !empty(PORT_OPTIONS:M${opt})
+OPTIONS_WRONG_SINGLE_${single}+=	${opt}
 .        if defined(OPTFOUND)
 OPTIONS_WRONG_SINGLE+=	${single}
 .        else
@@ -4685,6 +4656,7 @@ OPTIONS_WRONG_SINGLE+=	${single}
 .for radio in ${OPTIONS_RADIO}
 .  for opt in ${OPTIONS_RADIO_${radio}}
 .    if !empty(PORT_OPTIONS:M${opt})
+OPTIONS_WRONG_RADIO_${radio}+=	${opt}
 .      if defined(OPTFOUND)
 OPTIONS_WRONG_RADIO+=	${radio}
 .      else
@@ -4737,9 +4709,11 @@ _check-config: pre-check-config
 .endfor
 .for single in ${OPTIONS_WRONG_SINGLE}
 	@${ECHO_MSG} "====> You must select one and only one option from the ${single} single"
+	@${ECHO_MSG} "=====> Only one of these must be defined: ${OPTIONS_WRONG_SINGLE_${single}}"
 .endfor
 .for radio in ${OPTIONS_WRONG_RADIO}
 	@${ECHO_MSG} "====> You cannot select multiple options from the ${radio} radio"
+	@${ECHO_MSG} "=====> Only one of these must be defined: ${OPTIONS_WRONG_RADIO_${radio}}"
 .endfor
 .if defined(OPTIONS_WRONG_PREVENTS)
 	@${ECHO_MSG} "====> Two or more enabled options conflict with each other"
@@ -5245,7 +5219,8 @@ _TARGETS_STAGES=	SANITY PKG FETCH EXTRACT PATCH CONFIGURE BUILD INSTALL TEST PAC
 # If you change the pre-foo and post-foo values here, go and keep them in sync
 # in _OPTIONS_TARGETS in bsd.options.mk
 
-_SANITY_SEQ=	050:post-chroot 100:pre-everything 150:check-makefile \
+_SANITY_SEQ=	050:post-chroot 100:pre-everything \
+				125:show-unsupported-system-error 150:check-makefile \
 				200:show-warnings 210:show-dev-warnings 220:show-dev-errors \
 				250:check-categories 300:check-makevars \
 				350:check-desktop-entries 400:check-depends \

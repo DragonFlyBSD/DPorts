@@ -5,6 +5,64 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20170121:
+  AFFECTS: users of security/tinc
+  AUTHOR: dinoex@FreeBSD.org
+
+  this version of tinc requires all nodes in the VPN to be linked with a
+  version of OpenSSL or LibreSSL that supports the AES256 and SHA256
+  algorithms.
+
+
+20170120:
+  AFFECTS: users of databases/mysql56-server
+  AUTHOR: feld@FreeBSD.org
+
+  databases/mysql56-server was updated to 5.6.35 which included backported
+  rc script changes from the mysql57-server port. This broke mysql_optfile in
+  rc.conf and also forced a sample my.cnf if none existed. MySQL has
+  some parameters which cannot be changed after a database has been
+  created, so this caused MySQL to fail to start.
+
+  This change was reverted in mysql56-server-5.6.35_1
+
+  An additional change was made in mysql56-server-5.6.35_2 to prevent
+  automatic loading of a sample my.cnf which was causing issues for
+  users who were running without a my.cnf.
+
+20170117:
+  AFFECTS: users of EoL'ed FreeBSD versions (<10.3, 11 prior to 11.0)
+  AUTHOR: amdmi3@FreeBSD.org
+
+  The ports system will now refuse to build anything if it's run on
+  outdated system version. This protects users from unexpected build
+  failures after code to support EoL'ed systems is removed from the
+  tree. You may define ALLOW_UNSUPPORTED_SYSTEM to override this and
+  allow builds, but no support will be provided in case of failures.
+
+20170116:
+  AFFECTS: users of java/wildfly10
+  AUTHOR: olgeni@FreeBSD.org
+
+  The java/wildfly10 port has been updated to 10.1.0. To complete the
+  migration you must copy your existing configuration (directories
+  "appclient", "standalone", and "domain") from /usr/local/wildfly-10.0.0
+  to /usr/local/wildfly10.
+
+20170115:
+  AFFECTS: users of net-mgmt/librenms
+  AUTHOR: dvl@FreeBSD.org
+
+  The following is recommended for /var/db/mysql/my.cnf
+
+  NOTE: these are global settings.  Please read this first:
+
+  http://dev.mysql.com/doc/refman/5.7/en/sql-mode.html
+
+  [mysqld]
+  innodb_file_per_table=1
+  sql-mode=""
+
 20170109:
   AFFECTS: users of lang/ruby22
   AUTHOR: swills@FreeBSD.org
@@ -176,7 +234,7 @@ you update your ports collection, before attempting any port upgrades.
 
   Bareos v1.6.x changed the configuration scheme, from one configuration
   file per Bareos component (file daemon, storage daemon, and director)
-  to several configuration files, in several directories, for each 
+  to several configuration files, in several directories, for each
   component. See http://doc.bareos.org/master/html/bareos-manual-main-reference.html
 
   The new scheme will use all files named *.conf in the directory
@@ -204,7 +262,7 @@ you update your ports collection, before attempting any port upgrades.
    - misc/osinfo-db: contains database with OS data
    - devel/libosinfo: the library
 
-  As osinfo-db-tools now ships binaries that previously were 
+  As osinfo-db-tools now ships binaries that previously were
   part of libosinfo, it's required to delete the old libosinfo
   package to prevent conflict because of same files installation:
 
@@ -430,15 +488,15 @@ you update your ports collection, before attempting any port upgrades.
   AFFECTS: Users of net-im/ejabberd
   AUTHOR: ashish@FreeBSD.org
 
-  Before upgrading ejabberd to 16.09, please make sure to backup your 
+  Before upgrading ejabberd to 16.09, please make sure to backup your
   ejabberd data using:
- 
+
      % sudo -u ejabberd -H ejabberdctl backup /path/to/backup/file
 
-  In some cases, ejabberd may fail to start, for which a workaround is to 
+  In some cases, ejabberd may fail to start, for which a workaround is to
   remove the schema.DAT file from /var/spool/ejabberd before starting, and
   then restoring everything from the backup using:
-     
+
      % sudo -u ejabberd -H ejabberdctl restore /path/to/backup/file
 
   For more details:
@@ -1451,46 +1509,4 @@ you update your ports collection, before attempting any port upgrades.
 
   Before upgrading uTox port, please set maximum font scale in the
   program options.
-
-20160119:
-  AFFECTS: users of security/tor, security/tor-devel
-  AUTHOR: amdmi3@FreeBSD.org
-
-  The tor ports now create /var/log/tor subdirectory for tor logs. If
-  you've used /var/log/tor as a log _file_, you'll need to update your
-  torrc and move the file before updating the port.
-
-20160118:
-  AFFECTS: users of mail/rspamd and mail/rmilter
-  AUTHOR: vsevolod@FreeBSD.org
-
-  Rspamd has been updated to the version 1.1.0. If you have used per user
-  statistics, then please consult changelog for details: your configuration
-  should be changed.
-
-  Rmilter has been updated to the version 1.7.0. Support of SPF and Spamassassin
-  has been dropped from this project completely. You might also consider
-  migration from memcahched to redis in this version.
-
-20160113:
-  AFFECTS: users of sysutils/ansible
-  AUTHOR: lifanov@mail.lifanov.com
-
-  Ansible 2.0.0 introduces a number of incompatible configuration changes.
-  Please read changelog and migrate current configuration:
-
-  https://raw.githubusercontent.com/ansible/ansible/v2.0.0.0-1/CHANGELOG.md
-
-  Ansible 1.9.* will be provided as sysutils/ansible1 until the next update
-  of 2.0 branch.
-
-20160111:
-  AFFECTS: users of security/easy-rsa
-  AUTHOR: mandree@FreeBSD.org
-
-  The port has been upgraded to version 3. This incurs major changes,
-  please see ${PREFIX}/share/doc/easy-rsa/doc/EasyRSA-Upgrade-Notes.md
-  for details.
-
-  The old version 2.2.2 has been retained as security/easy-rsa2.
 

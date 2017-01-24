@@ -45,15 +45,20 @@ FPC_DEFAULT?=		3.0.0
 GCC_DEFAULT?=		4.9
 # Possible values: 7, 8, 9, agpl
 GHOSTSCRIPT_DEFAULT?=	agpl
-# Possible values: c6, c6_64, c7, c7_64
+.if defined(ARCH) && ${ARCH} == amd64
+# Possible values: c6, c6_64, c7
+LINUX_DEFAULT?=		c6_64
+.else
+# Possible values: c6
 LINUX_DEFAULT?=		c6
+.endif
 .if defined(OVERRIDE_LINUX_BASE_PORT)
 LINUX_DEFAULT:=		${OVERRIDE_LINUX_BASE_PORT}
 WARNING+=		"OVERRIDE_LINUX_BASE_PORT is deprecated, please use DEFAULT_VERSIONS+=linux=${OVERRIDE_LINUX_BASE_PORT}."
 .endif
 # Possible values: 5.1, 5.2, 5.3
 LUA_DEFAULT?=		5.2
-# Possible values: 5.1, 5.5, 5.6, 5.7, 8.0, 5.5m, 10.0m, 10.1m, 5.5p, 5.6p
+# Possible values: 5.1, 5.5, 5.6, 5.7, 8.0, 5.5m, 10.0m, 10.1m, 5.5p, 5.6p, 5.7p
 MYSQL_DEFAULT?=		5.6
 # Possible values: 5.20, 5.22, devel
 .if !exists(${LOCALBASE}/bin/perl) || (!defined(_PORTS_ENV_CHECK) && \
