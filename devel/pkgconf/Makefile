@@ -1,7 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	pkgconf
-PORTVERSION=	1.1.1
+PORTVERSION=	1.2.0
+PORTREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	https://distfiles.dereferenced.org/pkgconf/ \
 		http://files.etoilebsd.net/pkgconf/
