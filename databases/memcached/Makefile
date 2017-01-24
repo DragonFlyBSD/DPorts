@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	memcached
-PORTVERSION=	1.4.33
-PORTREVISION=	1
+PORTVERSION=	1.4.34
 CATEGORIES=	databases
 MASTER_SITES=	http://www.memcached.org/files/ \
 		GENTOO
@@ -28,6 +27,8 @@ OPTIONS_EXCLUDE+=	DTRACE
 
 OPTIONS_EXCLUDE_FreeBSD_10+=	DTRACE
 OPTIONS_EXCLUDE_i386=		DTRACE
+# ld(1) fails to link probes: Relocations in generic ELF (EM: 0)
+OPTIONS_EXCLUDE_aarch64=	DTRACE
 
 DTRACE_DESC=	Enable dtrace probes
 SASL_DESC=	Enable SASL Authentication
