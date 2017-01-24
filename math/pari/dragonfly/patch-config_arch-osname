@@ -1,4 +1,4 @@
---- config/arch-osname.orig	2009-09-19 12:01:14.000000000 +0000
+--- config/arch-osname.orig	2014-02-26 13:00:32 UTC
 +++ config/arch-osname
 @@ -20,7 +20,7 @@ if test -n "$myuname"; then
              arch=`uname -m`

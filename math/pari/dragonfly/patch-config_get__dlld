@@ -1,4 +1,4 @@
---- config/get_dlld.orig	2009-09-19 12:01:14.000000000 +0000
+--- config/get_dlld.orig	2016-09-24 16:50:04 UTC
 +++ config/get_dlld
 @@ -9,7 +9,7 @@ DLSUFFIX=so
  soname=.$soname_num
@@ -9,18 +9,18 @@
      case $pari_release_verbose in
        *STABLE*)      sodest=.$version.$patch;; # released version
        *DEVELOPMENT*) sodest=.$patch.0.0;;      # unstable version
-@@ -66,6 +66,7 @@ if test -n "$DLLD"; then
+@@ -76,6 +76,7 @@ if test -n "$DLLD"; then
      case "$osname" in
        aix)     DLLDFLAGS='-r' ;;
-       darwin)  DLLD=; DLLDFLAGS='-dylib -flat_namespace -undefined suppress' ;;
+       darwin)  DLLDFLAGS="-compatibility_version $compat_ver -current_version $num_ver" ;;
 +      dragonfly) DLLDFLAGS='-Bshareable -x' ;;
        freebsd) DLLDFLAGS='-Bshareable -x' ;;
        hpux)    DLLDFLAGS='-b' ;;
        irix)    DLLDFLAGS='-shared -elf -no_unresolved -all' ;;
-@@ -91,7 +92,7 @@ if test -n "$DLLD"; then
-     DLLDFLAGS="-shared $extra \$(CFLAGS) \$(DLCFLAGS) $DLLDFLAGS"
+@@ -108,7 +109,7 @@ if test -n "$DLLD"; then
    fi
    case "$osname" in
+ # Beware: will run through 'eval' [ hence ${...} instead of \$(...) ]
 -    gnu*|cygwin|osf1|freebsd|linux|sunos|solaris) EXTRADLLDFLAGS='-lc ${LIBS}';;
 +    gnu*|cygwin|osf1|dragonfly|freebsd|linux|sunos|solaris) EXTRADLLDFLAGS='-lc ${LIBS}';;
    esac
