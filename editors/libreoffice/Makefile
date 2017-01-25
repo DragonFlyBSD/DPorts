@@ -260,7 +260,7 @@ CONFIGURE_ENV=	DMAKE=${LOCALBASE}/bin/dmake \
 
 MAKE_ENV+=	CXXFLAGS_WARN="${CXXFLAGS_WARN}"
 MAKE_ENV+=	GNUSED=${LOCALBASE}/bin/gsed
-MAKE_ENV+=	DISPLAY= LANG=C LC_ALL=C
+MAKE_ENV+=	DISPLAY=
 
 _MAKE_JOBS=	#
 
@@ -269,11 +269,6 @@ _MAKE_JOBS=	#
 .if ${OPSYS} == FreeBSD
 .if ${COMPILER_FEATURES:Mlibstdc++}
 BROKEN=		Build with system libstdc++ is unsupported
-.endif
-
-.if ${OSVERSION} < 1000033
-BUILD_DEPENDS+=	${LOCALBASE}/bin/flex:textproc/flex
-CONFIGURE_ENV+=	FLEX=${LOCALBASE}/bin/flex
 .endif
 .endif # FreeBSD
 
