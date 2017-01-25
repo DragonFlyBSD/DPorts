@@ -1,0 +1,11 @@
+--- configure.orig	2016-10-08 11:11:34.000000000 +0300
++++ configure
+@@ -12595,7 +12595,7 @@ solaris*)
+ 	xenable_intf_lipmi=no
+ 	xenable_ipmishell=no
+ 	;;
+-*freebsd*)
++*freebsd*|*dragonfly*)
+ 	xenable_intf_imb=no
+ 	xenable_intf_lipmi=no
+ 	CFLAGS="$CFLAGS -D__BSD_VISIBLE"
