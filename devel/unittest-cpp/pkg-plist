@@ -1,4 +1,4 @@
-@comment $FreeBSD: head/devel/unittest-cpp/pkg-plist 430327 2017-01-02 09:45:03Z vanilla $
+@comment $FreeBSD: head/devel/unittest-cpp/pkg-plist 431472 2017-01-14 15:39:16Z vanilla $
 include/UnitTest++/AssertException.h
 include/UnitTest++/CheckMacros.h
 include/UnitTest++/Checks.h
@@ -37,3 +37,4 @@ lib/cmake/UnitTest++/UnitTest++Config.cmake
 lib/cmake/UnitTest++/UnitTest++Targets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/UnitTest++/UnitTest++Targets.cmake
 lib/libUnitTest++.a
+libdata/pkgconfig/UnitTest++.pc
