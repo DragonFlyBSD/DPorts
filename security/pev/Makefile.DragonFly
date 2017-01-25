@@ -1,5 +1,8 @@
+USES+= alias
 
 # zrj: MF subs LINUX, we sub FreeBSD
 dfly-patch:
 	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g'	\
+		${WRKSRC}/src/plugins/Makefile \
+		${WRKSRC}/lib/libpe/Makefile \
 		${WRKSRC}/lib/libpe/Makefile
