@@ -2,7 +2,7 @@
 
 PORTNAME=	openjdk
 PORTVERSION=	${JDK_MAJOR_VERSION}.${JDK_UPDATE_VERSION}.${JDK_BUILD_NUMBER:S/^0//}
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	java devel
 MASTER_SITES=	http://download.java.net/openjdk/jdk${JDK_MAJOR_VERSION}/promoted/b${DIST_BUILD_NUMBER}/:jdk \
 		https://adopt-openjdk.ci.cloudbees.com/job/jtreg/${JTREG_JENKINS_BUILD}/artifact/:jtreg \
@@ -199,8 +199,7 @@ SHEBANG_FILES=	configure
 _MAKE_JOBS=	#
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-MAKE_ENV=	LANG="C" LC_ALL="C"
-MAKE_ENV+=	CLASSPATH="" JAVA_HOME=""
+MAKE_ENV=	CLASSPATH="" JAVA_HOME=""
 MAKE_ENV+=	IGNORE_OLD_CONFIG=true
 MAKE_ENV+=	COMPILER_WARNINGS_FATAL="false"
 # openjdk8 normally sets X_CFLAGS in the ./configure script, but it won't do
