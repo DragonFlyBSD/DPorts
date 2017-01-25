@@ -45,7 +45,7 @@ disconnected.
  }
  
  static void
-@@ -939,6 +958,10 @@ new_socket(sock_type type, int fd)
+@@ -963,6 +982,10 @@ new_socket(sock_type type, int fd)
  {
  	u_int i, old_alloc, new_alloc;
  
@@ -56,33 +56,33 @@ disconnected.
  	set_nonblock(fd);
  
  	if (fd > max_fd)
-@@ -1166,7 +1189,7 @@ static void
+@@ -1190,7 +1213,7 @@ static void
  usage(void)
  {
  	fprintf(stderr,
 -	    "usage: ssh-agent [-c | -s] [-Dd] [-a bind_address] [-E fingerprint_hash]\n"
 +	    "usage: ssh-agent [-c | -s] [-Ddx] [-a bind_address] [-E fingerprint_hash]\n"
- 	    "                 [-t life] [command [arg ...]]\n"
+ 	    "                 [-P pkcs11_whitelist] [-t life] [command [arg ...]]\n"
  	    "       ssh-agent [-c | -s] -k\n");
  	exit(1);
-@@ -1197,6 +1220,7 @@ main(int ac, char **av)
+@@ -1222,6 +1245,7 @@ main(int ac, char **av)
  	/* drop */
  	setegid(getgid());
  	setgid(getgid());
 +	setuid(geteuid());
  
- #if defined(HAVE_PRCTL) && defined(PR_SET_DUMPABLE)
- 	/* Disable ptrace on Linux without sgid bit */
-@@ -1210,7 +1234,7 @@ main(int ac, char **av)
+ 	platform_disable_tracing(0);	/* strict=no */
+ 
+@@ -1232,7 +1256,7 @@ main(int ac, char **av)
  	__progname = ssh_get_progname(av[0]);
  	seed_rng();
  
--	while ((ch = getopt(ac, av, "cDdksE:a:t:")) != -1) {
-+	while ((ch = getopt(ac, av, "cDdksE:a:t:x")) != -1) {
+-	while ((ch = getopt(ac, av, "cDdksE:a:P:t:")) != -1) {
++	while ((ch = getopt(ac, av, "cDdksE:a:P:t:x")) != -1) {
  		switch (ch) {
  		case 'E':
  			fingerprint_hash = ssh_digest_alg_by_name(optarg);
-@@ -1249,6 +1273,9 @@ main(int ac, char **av)
+@@ -1276,6 +1300,9 @@ main(int ac, char **av)
  				usage();
  			}
  			break;
