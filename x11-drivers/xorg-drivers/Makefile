@@ -2,14 +2,14 @@
 
 PORTNAME=	xorg-drivers
 PORTVERSION=	7.7
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	x11-drivers
 
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	X.org drivers meta-port
 
-VIDEODIR=	${PREFIX}/lib/xorg/modules/drivers
-INPUTDIR=	${PREFIX}/lib/xorg/modules/input
+VIDEODIR=	${LOCALBASE}/lib/xorg/modules/drivers
+INPUTDIR=	${LOCALBASE}/lib/xorg/modules/input
 
 USES=		metaport
 
@@ -31,7 +31,6 @@ VIDEO_DRIVERS=		nv \
 			apm \
 			ark \
 			dummy \
-			fbdev \
 			glint \
 			i128 \
 			i740 \
@@ -44,6 +43,7 @@ VIDEO_DRIVERS=		nv \
 
 VIDEO_DRIVERS_REMOVED=	mach64 \
 			r128 \
+			chips \
 			neomagic \
 			rendition \
 			s3virge \
