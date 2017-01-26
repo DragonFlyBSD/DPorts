@@ -1,6 +1,9 @@
 USES+= alias
 
-.if !defined(DPORTS_BUILDER)
-MANUAL_PACKAGE_BUILD=	Mono frequently sigaborts on pkgbox64; \
-	If you want Mono-based packages, build them yourself
-.endif
+# Mono has been behaving for a while, so let it build on pkgbox64
+# for a while (provisionally)
+#
+#.if !defined(DPORTS_BUILDER)
+#MANUAL_PACKAGE_BUILD=	Mono frequently sigaborts on pkgbox64; \
+#	If you want Mono-based packages, build them yourself
+#.endif
