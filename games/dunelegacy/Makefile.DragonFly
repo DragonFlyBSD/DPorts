@@ -1,1 +1,6 @@
 USES+= alias
+
+# cause of freebsd-ports patches
+dfly-patch:
+	${REINPLACE_CMD} -e 's@CXXFLAGS="-O3 @CXXFLAGS="-O3 -std=gnu++11 @g'	\
+		${WRKSRC}/configure.ac
