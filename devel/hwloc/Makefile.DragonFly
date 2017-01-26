@@ -1,0 +1,3 @@
+.if ${DFLYVERSION} >= 400706
+PLIST_FILES+=	include/hwloc/glibc-sched.h
+.endif
