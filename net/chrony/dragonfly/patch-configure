@@ -1,11 +1,11 @@
---- configure.orig	2016-06-07 12:20:59.000000000 +0300
+--- configure.orig	2017-01-12 15:34:28 UTC
 +++ configure
-@@ -372,7 +372,7 @@ case $OPERATINGSYSTEM in
+@@ -401,7 +401,7 @@ case $OPERATINGSYSTEM in
          add_def LINUX
          echo "Configuring for " $SYSTEM
      ;;
 -    FreeBSD)
 +    FreeBSD|DragonFly)
-         EXTRA_OBJECTS="sys_generic.o sys_netbsd.o sys_timex.o"
-         add_def FREEBSD
-         if [ $feat_droproot = "1" ]; then
+         # recvmmsg() seems to be broken on FreeBSD 11.0 and it's just
+         # a wrapper around recvmsg()
+         try_recvmmsg=0
