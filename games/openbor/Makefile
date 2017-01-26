@@ -2,6 +2,7 @@
 
 PORTNAME=	openbor
 PORTVERSION=	3.0.r4426
+PORTREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	LOCAL/jbeich \
 		https://svn.code.sf.net/p/${PORTNAME}/engine/engine/:svn
@@ -24,7 +25,7 @@ MAKE_ENV=	BUILD_LINUX=1 SDKPATH="${LOCALBASE}" \
 		GCC_TARGET="${CONFIGURE_TARGET:S/amd64/x86_64/}"
 MAKE_ARGS=	CC="${CC}" LIBRARIES="${LOCALBASE}/lib" \
 		TARGET_ARCH=${ARCH:S/i386/x86/} ARCHFLAGS="" \
-		TARGET_FINAL='${TARGET}' BUILD_MMX=""
+		TARGET_FINAL='${TARGET}' BUILD_MMX="" ECHO="${ECHO}"
 CFLAGS+=	-fgnu89-inline ${CFLAGS_${OPSYS}}
 CFLAGS_DragonFly=	-D_GCC_MAX_ALIGN_T # system stddef.h
 LDFLAGS+=	-Wl,--as-needed # ogg, pthread, zlib
@@ -51,15 +52,14 @@ TREMOR_LIB_DEPENDS=	libvorbisidec.so:audio/libtremor
 TREMOR_MAKE_ARGS=	BUILD_TREMOR=1 BUILD_VORBIS=""
 TREMOR_LIB_DEPENDS_OFF=	libvorbisfile.so:audio/libvorbis
 
+.include <bsd.port.options.mk>
+
 #
 # To update snapshot: make makesum BOOTSTRAP=
 # Specific snapshot:  make makesum SVN_FETCH= PORTVERSION=1.0.r1234
 #
 .if defined(BOOTSTRAP)
-# XXX SED and _MASTER_SITES_svn aren't defined yet
-SED?=		/usr/bin/sed
-SVN_REV!=	${SETENV} LC_ALL=C svn info \
-			${MASTER_SITES:M*\:svn:S/:svn//} | \
+SVN_REV!=	svn info ${MASTER_SITES:M*\:svn:S/:svn//} | \
 		${SED} -n 's/^Last Changed Rev: //p'
 PORTVERSION:=	${PORTVERSION:R}.r${SVN_REV}
 .else
@@ -91,9 +91,9 @@ post-patch:
 	@${REINPLACE_CMD} -e 's/ -O[0-9]//; s/ -g//; s/ -Werror//' \
 		-e 's/ -fomit-frame-pointer//' \
 		-e 's/ -freorder-blocks//' \
-		-e 's/ -Wno-unused-result//' \
 		-e 's/ -Wl,-rpath,$$(LIBRARIES)//' \
 		-e '/echo/!s/	@/	/' \
+		-e 's/@echo/@$$(ECHO)/' \
 		-e 's/$$(LIBS)/$$(LDFLAGS) &/' \
 		${WRKSRC}/Makefile
 	@${GREP} -Flr 'malloc.h' ${WRKSRC} | ${XARGS} ${REINPLACE_CMD} \
