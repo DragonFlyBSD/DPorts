@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	cargo
-PORTVERSION=	0.14.0
+PORTVERSION=	0.15.0
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	dumbbell@FreeBSD.org
@@ -33,11 +34,12 @@ LICENSE_FILE_MIT=	${WRKSRC}/LICENSE-MIT
 #   This is a collection of mainly shell scripts which are used to
 #   install Cargo.
 
-MASTER_SITES=	https://static.rust-lang.org/cargo-dist/2016-11-02/:bootstrap \
-		LOCAL/dumbbell/cargo:registry
+MASTER_SITES=	https://static.rust-lang.org/cargo-dist/:bootstrap \
+		LOCAL/dumbbell/rust:registry
 .if !defined(SKIP_CARGO_REGISTRY)
 DISTFILES+=	${CARGO_REGISTRY}:registry
 .endif
+DISTINFO_FILE=	${.CURDIR}/distinfo.${ARCH}
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	rust-lang
@@ -45,11 +47,15 @@ GH_PROJECT=	rust-installer:rust_installer
 GH_TAGNAME=	755bc3d:rust_installer
 GH_SUBDIR=	src/rust-installer:rust_installer
 
-ONLY_FOR_ARCHS=	amd64
+ONLY_FOR_ARCHS=	amd64 i386
 ONLY_FOR_ARCHS_REASON=	requires prebuilt bootstrap cargo
 
-CARGO_BOOT_SIG=	${ARCH:S/amd64/x86_64/}-unknown-${OPSYS:tl}
-CARGO_BOOT=	${PORTNAME}-nightly-${CARGO_BOOT_SIG}${EXTRACT_SUFX}
+# Rust's target arch string is different from *BSD arch strings
+RUST_ARCH_x86_64=	x86_64 # dragonfly
+RUST_ARCH_amd64=	x86_64
+RUST_ARCH_i386=		i686
+RUST_TARGET=		${RUST_ARCH_${ARCH}}-unknown-${OPSYS:tl}
+CARGO_BOOT=	2016-11-02/${PORTNAME}-nightly-${RUST_TARGET}${EXTRACT_SUFX}
 CARGO_REGISTRY=	${PORTNAME}-registry-${DISTVERSIONFULL}.tar.xz
 
 # We don't USES=cmake here, because cmake is not Cargo's build system.
@@ -64,7 +70,8 @@ RUST_PORT?=	lang/rust
 USES=		gmake python:-2.7,build pkgconfig ssl
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix="${PREFIX}" --mandir="${MANPREFIX}/man"
-MAKE_ENV=	ARGS="${CARGO_ARGS}"
+MAKE_ENV=	ARGS="${CARGO_ARGS}" \
+		OPENSSL_DIR="${OPENSSLBASE}"
 CARGO_ARGS=	--jobs ${MAKE_JOBS_NUMBER}
 
 MAKE_ARGS+=	VERBOSE=1
@@ -73,13 +80,10 @@ OPTIONS_DEFINE=	BOOTSTRAP
 OPTIONS_DEFAULT=BOOTSTRAP
 
 BOOTSTRAP_DESC=		Bootstrap using pre-built vendor snapshot
-BOOTSTRAP_CONFIGURE_OFF=--local-cargo="$$(command -v cargo)" # respect PATH
+BOOTSTRAP_CONFIGURE_ON=	--cargo="${WRKDIR}/${PORTNAME}-nightly-${RUST_TARGET}/cargo/bin/cargo"
+BOOTSTRAP_CONFIGURE_OFF=--cargo="$$(command -v cargo)" # respect PATH
 BOOTSTRAP_DISTFILES=	${CARGO_BOOT}:bootstrap
-BOOTSTRAP_EXTRACT_ONLY=	${DISTFILES:N*\:bootstrap:C/:.*//}
 BOOTSTRAP_MAKE_ENV=	LD_LIBRARY_PATH="${WRKSRC}/target/snapshot/cargo/lib"
-.if !exists(/usr/lib/libssl.so.8) # OPENSSL_SHLIBVER
-BOOTSTRAP_VARS+=	WITH_OPENSSL_PORT=yes
-.endif
 
 post-extract-BOOTSTRAP-on:
 	@${MKDIR} ${WRKSRC}/target/dl

@@ -1,2 +1,3 @@
 MASTER_SITES=	http://www.ntecs.de/downloads/rust/:bootstrap \
 		LOCAL/jbeich:registry
+CARGO_BOOT=	cargo-nightly-${RUST_TARGET}.tar.gz
