@@ -1,6 +1,6 @@
---- chrome/browser/ui/BUILD.gn.intermediate	2016-11-30 15:07:57.000000000 +0200
+--- chrome/browser/ui/BUILD.gn.intermediate	2017-01-26 11:24:39.000000000 +0200
 +++ chrome/browser/ui/BUILD.gn
-@@ -352,14 +352,14 @@ split_static_library("ui") {
+@@ -1895,14 +1895,14 @@ split_static_library("ui") {
    if (use_gio) {
      deps += [ "//build/linux/libgio" ]
    }
@@ -14,22 +14,22 @@
    }
 -  if (is_win || is_mac || is_desktop_linux) {
 +  if (is_win || is_mac || is_desktop_linux || is_bsd) {
-     sources += rebase_path(gypi_values.chrome_browser_ui_desktop_sources,
-                            ".",
-                            "//chrome")
-@@ -512,7 +512,7 @@ split_static_library("ui") {
+     sources += [
+       "avatar_button_error_controller.cc",
+       "avatar_button_error_controller.h",
+@@ -2988,7 +2988,7 @@ split_static_library("ui") {
        ]
      }
    }
 -  if (is_desktop_linux) {
 +  if (is_desktop_linux || is_bsd) {
-     sources += rebase_path(gypi_values.chrome_browser_ui_desktop_linux_sources,
-                            ".",
-                            "//chrome")
-@@ -520,6 +520,14 @@ split_static_library("ui") {
-       "//ui/base/ime",
-       "//ui/events:dom_keycode_converter",
-     ]
+     sources += [
+       "input_method/input_method_engine.cc",
+       "input_method/input_method_engine.h",
+@@ -3023,6 +3023,15 @@ split_static_library("ui") {
+         "views/javascript_app_modal_dialog_views_x11.h",
+       ]
+     }
 +
 +    if (is_bsd && !use_dbus) {
 +      defines += [ "GLOBAL_MENUBAR_DBUS_DUMMY" ]
@@ -38,6 +38,7 @@
 +        "views/frame/global_menu_bar_x11.cc",
 +      ]
 +    }
++
    }
    if (is_linux || is_bsd) {  # Both desktop Linux and ChromeOS.
-     sources += rebase_path(gypi_values.chrome_browser_ui_linux_sources,
+     sources += [

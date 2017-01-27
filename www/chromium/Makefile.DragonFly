@@ -4,6 +4,9 @@ USES+=		alias
 
 OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NGCONF:NPULSEAUDIO:NKERBEROS} ALSA
 
+# provide value for NM if not already (not in mk/bsd.*.mk)
+NM?=		nm
+
 GN_ARGS+=	use_allocator="none" use_experimental_allocator_shim=false
 #GN_ARGS+=	current_os="bsd" host_os="bsd" target_os="bsd" is_bsd=true
 GN_ARGS+=	fatal_linker_warnings=false host_toolchain="//build/toolchain/linux:x64"

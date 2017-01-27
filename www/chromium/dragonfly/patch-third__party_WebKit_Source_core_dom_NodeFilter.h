@@ -4,18 +4,18 @@ to be, so I will set this to the highest signed value to make chromium
 build on gcc5.  There is a good chance this will work (maybe better than
 it has been).  Let us see (surely Google will have to fix this though)
 
---- third_party/WebKit/Source/core/dom/NodeFilter.h	2016-11-29 15:10:34.000000000 +0200
+--- third_party/WebKit/Source/core/dom/NodeFilter.h.orig	2016-12-09 07:04:31.000000000 +0200
 +++ third_party/WebKit/Source/core/dom/NodeFilter.h
-@@ -51,7 +51,7 @@ public:
+@@ -49,7 +49,7 @@ class NodeFilter final : public GarbageC
       * to the value of NodeType for the equivalent node type.
       */
-     enum {
--        kShowAll                       = 0xFFFFFFFF,
-+        kShowAll                       = 0x7FFFFFFF,
-         kShowElement                   = 0x00000001,
-         kShowAttribute                 = 0x00000002,
-         kShowText                      = 0x00000004,
---- third_party/WebKit/Source/core/dom/NodeFilter.idl	2016-11-10 22:02:26.000000000 +0200
+   enum {
+-    kShowAll = 0xFFFFFFFF,
++    kShowAll = 0x7FFFFFFF,
+     kShowElement = 0x00000001,
+     kShowAttribute = 0x00000002,
+     kShowText = 0x00000004,
+--- third_party/WebKit/Source/core/dom/NodeFilter.idl.orig	2016-12-09 07:04:31.000000000 +0200
 +++ third_party/WebKit/Source/core/dom/NodeFilter.idl
 @@ -30,7 +30,7 @@
      const unsigned short FILTER_SKIP = 3;
