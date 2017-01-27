@@ -1,0 +1,3 @@
+
+# exclude pulseaudio
+LIB_DEPENDS:= ${LIB_DEPENDS:Nlibpulse*}
