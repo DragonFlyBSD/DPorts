@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	rancid
-PORTVERSION=	3.6.1
+PORTVERSION=	3.6.2
 PORTREVISION=	1
 CATEGORIES=	net-mgmt
 MASTER_SITES=	ftp://ftp.shrubbery.net/pub/rancid/
@@ -53,9 +53,6 @@ CONFIGURE_ARGS+=	--with-svn
 BUILD_DEPENDS+=		svn:devel/subversion
 .else
 CONFIGURE_ARGS+=	--without-svn
-.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1000000
-RUN_DEPENDS+=	cvs>0:devel/cvs
-.endif
 .endif
 
 pre-everything::
@@ -69,6 +66,7 @@ post-patch:
 .endif
 	${REINPLACE_CMD} "s|par.1|rancid-par.1|" ${WRKSRC}/man/Makefile.in
 	${MV} ${WRKSRC}/man/par.1 ${WRKSRC}/man/rancid-par.1
+	${REINPLACE_CMD} 's|uid=`perl|uid=`${PERL}|' ${WRKSRC}/etc/rancid.conf.sample.in
 
 post-install:
 	${MKDIR} ${STAGEDIR}${LOCALBASE}/etc/periodic/hourly
