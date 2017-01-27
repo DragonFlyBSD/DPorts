@@ -29,6 +29,11 @@ SBCL_BOOT_LIST=	1.0.31-amd64-freebsd8 \
 		1.0.31-i386-freebsd8 \
 		1.2.9-x86_64-dragonfly4
 
+CONMODULES=	asdf sb-aclrepl sb-bsd-sockets sb-cltl2 sb-concurrency \
+		sb-cover sb-executable sb-gmp sb-grovel sb-introspect \
+		sb-md5 sb-mpfr sb-posix sb-queue sb-rotate-byte sb-rt \
+		sb-simple-streams sb-sprof
+
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 MAKE_SH_ARGS?=	--prefix="${PREFIX}" \
@@ -76,10 +81,8 @@ DOCS_VARS=		INFO="asdf sbcl"
 QSHOW_VARS=		MAKE_SH_ARGS+="--with-sb-qshow"
 QSHOW_VARS_OFF=		MAKE_SH_ARGS+="--without-sb-qshow"
 
-RENAME_PLIST_SUB=	RENAME_DLM="_"
-RENAME_PLIST_SUB_OFF=	RENAME_DLM="."
-RENAME_VARS=		RENAME_DLM="_"
-RENAME_VARS_OFF=	RENAME_DLM="."
+RENAME_PLIST_SUB=	CORE_SUFFIX="_core"
+RENAME_PLIST_SUB_OFF=	CORE_SUFFIX=".core"
 
 SAFEPOINT_VARS=		MAKE_SH_ARGS+="--with-sb-safepoint --with-sb-thruption --with-sb-wtimer"
 SAFEPOINT_VARS_OFF=	MAKE_SH_ARGS+="--without-sb-safepoint --without-sb-thruption --without-sb-wtimer"
@@ -136,6 +139,11 @@ do-install:
 	INFO_DIR="${STAGEDIR}${PREFIX}/${INFO_PATH}" \
 	DOC_DIR="${STAGEDIR}${DOCSDIR}" \
 	${SH} install.sh)
+.for M in ${CONMODULES}
+	${MKDIR} ${STAGEDIR}${PREFIX}/lib/sbcl/${M}
+	${INSTALL_DATA} ${WRKSRC}/contrib/${M}/*.[la]* \
+		${STAGEDIR}${PREFIX}/lib/sbcl/${M}/
+.endfor
 
 post-build-DOCS-on:
 	${DO_MAKE_BUILD} -C ${WRKSRC}/doc/manual info html
