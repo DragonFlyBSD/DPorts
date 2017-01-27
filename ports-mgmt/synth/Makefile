@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	synth
-PORTVERSION=	1.66
+PORTVERSION=	1.67
 PORTREVISION=	1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	ports-mgmt
@@ -20,7 +20,7 @@ BUILD_DEPENDS=	${LOCALBASE}/lib/libncurses.a:devel/ncurses \
 USES=		ada:6
 USE_GITHUB=	yes
 GH_ACCOUNT=	jrmarino
-GH_TAGNAME=	4d9f5ea
+GH_TAGNAME=	v1.67a
 
 GPR=		${LOCALBASE}/lib/gnat
 MAKE_ENV=	NCURSES_LINK=static
