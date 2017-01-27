@@ -47,7 +47,7 @@ MAKE_SH_ARGS+=	--dynamic-space-size=${DYNAMIC_SPACE_SIZE}
 
 # All options explained into file: ${WRKSRC}/base-target-features.lisp-expr
 OPTIONS_DEFINE=	DOCS QSHOW RENAME SAFEPOINT THREADS UNICODE XREF ZLIB
-OPTIONS_DEFAULT=	SBCL UNICODE
+OPTIONS_DEFAULT=	RENAME SBCL UNICODE
 
 QSHOW_DESC=	C runtime with low-level debugging output
 RENAME_DESC=	Rename suffix .core to _core
