@@ -1,0 +1,10 @@
+
+# include/FTGL/fgl.h has c++ style comments that are not allowed in ISO C90
+dfly-patch:
+	${REINPLACE_CMD} -e '/flags=/s@\(Wall W ansi\)@\1 std=c99@g'	\
+		${WRKSRC}/configure
+
+# deal with Q/A, try to prune Orphaned: @dirs
+post-install:
+	-rmdir ${STAGEDIR}${PREFIX}/lib/girepository-1.0
+	-rmdir ${STAGEDIR}${PREFIX}/share/gir-1.0 
