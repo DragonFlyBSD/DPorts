@@ -6,7 +6,7 @@
  endif
 +ifeq ($(UNAME), DragonFly)
 +CXX=c++
-+LIB= -lpthread -lc++
++LIB= -lpthread
 +CXXFLAGS += -std=c++0x
 +endif
  
