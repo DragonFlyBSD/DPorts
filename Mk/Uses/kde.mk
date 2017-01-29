@@ -211,9 +211,10 @@ _USE_KDE4_ALL+=		akonadi attica automoc4 ontologies qimageblitz soprano \
 _USE_FRAMEWORKS_TIER1=	apidox archive attica5 breeze-icons codecs config \
 			coreaddons dbusaddons dnssd i18n idletime itemmodels \
 			itemviews oxygen-icons5 plotting prison solid sonnet \
-			syntaxhighlighting threadweaver wayland widgetsaddons \
+			syntaxhighlighting threadweaver widgetsaddons \
 			windowsystem
 # NOT LISTED TIER1: modemmanagerqt networkmanagerqt (not applicable)
+# NOT AVAILABLE DF: wayland
 
 _USE_FRAMEWORKS_TIER2=	auth completion crash doctools filemetadata5 \
 			kimageformats jobwidgets notifications package \
