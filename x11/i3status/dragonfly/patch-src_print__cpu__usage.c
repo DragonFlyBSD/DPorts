@@ -3,7 +3,7 @@ cpu_usage { format = "CPU %usage"  }
 
 Likely aplies to all *BSD, but for now just dports.
 
---- src/print_cpu_usage.c.orig	2016-01-01 20:51:19.000000000 +0200
+--- src/print_cpu_usage.c.orig	2017-01-21 15:00:31 UTC
 +++ src/print_cpu_usage.c
 @@ -33,8 +33,13 @@
  
@@ -19,12 +19,13 @@ Likely aplies to all *BSD, but for now just dports.
  
  /*
   * Reads the CPU utilization from /proc/stat and returns the usage as a
-@@ -44,10 +49,10 @@ static int prev_idle = 0;
- void print_cpu_usage(yajl_gen json_gen, char *buffer, const char *format) {
+@@ -45,11 +50,11 @@ void print_cpu_usage(yajl_gen json_gen,
+     const char *selected_format = format;
      const char *walk;
      char *outwalk = buffer;
 -    int curr_user = 0, curr_nice = 0, curr_system = 0, curr_idle = 0, curr_total;
 -    int diff_idle, diff_total, diff_usage;
+     bool colorful_output = false;
  
  #if defined(LINUX)
 +    int curr_user = 0, curr_nice = 0, curr_system = 0, curr_idle = 0, curr_total;
@@ -32,7 +33,7 @@ Likely aplies to all *BSD, but for now just dports.
      static char statpath[512];
      char buf[1024];
      strcpy(statpath, "/proc/stat");
-@@ -62,7 +67,9 @@ void print_cpu_usage(yajl_gen json_gen,
+@@ -64,7 +69,9 @@ void print_cpu_usage(yajl_gen json_gen,
      prev_total = curr_total;
      prev_idle = curr_idle;
  #elif defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
@@ -43,7 +44,7 @@ Likely aplies to all *BSD, but for now just dports.
  #if defined(__FreeBSD__) || defined(__DragonFly__) || defined(__NetBSD__)
      size_t size;
      long cp_time[CPUSTATES];
-@@ -89,7 +96,8 @@ void print_cpu_usage(yajl_gen json_gen,
+@@ -91,7 +98,8 @@ void print_cpu_usage(yajl_gen json_gen,
      curr_total = curr_user + curr_nice + curr_system + curr_idle;
      diff_idle = curr_idle - prev_idle;
      diff_total = curr_total - prev_total;
