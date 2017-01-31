@@ -1,0 +1,56 @@
+--- tools/clang/lib/Driver/ToolChains.cpp.orig	2017-01-10 23:13:08.000000000 +0200
++++ tools/clang/lib/Driver/ToolChains.cpp
+@@ -4860,7 +4860,7 @@ DragonFly::DragonFly(const Driver &D, co
+ 
+   getFilePaths().push_back(getDriver().Dir + "/../lib");
+   getFilePaths().push_back("/usr/lib");
+-  getFilePaths().push_back("/usr/lib/gcc50");
++  getFilePaths().push_back("/usr/lib/gcc50"); // XXX how to deal with up upcoming gcc 7.0?
+ }
+ 
+ Tool *DragonFly::buildAssembler() const {
+@@ -4871,6 +4871,8 @@ Tool *DragonFly::buildLinker() const {
+   return new tools::dragonfly::Linker(*this);
+ }
+ 
++bool DragonFly::HasNativeLLVMSupport() const { return true; }
++
+ /// CUDA toolchain.  Our assembler is ptxas, and our "linker" is fatbinary,
+ /// which isn't properly a linker but nonetheless performs the step of stitching
+ /// together object files from the assembler into a single blob.
+--- tools/clang/lib/Driver/ToolChains.h.orig	2017-01-05 18:52:29.000000000 +0200
++++ tools/clang/lib/Driver/ToolChains.h
+@@ -854,6 +854,8 @@ public:
+   DragonFly(const Driver &D, const llvm::Triple &Triple,
+             const llvm::opt::ArgList &Args);
+ 
++  bool HasNativeLLVMSupport() const override;
++
+   bool IsMathErrnoDefault() const override { return false; }
+ 
+ protected:
+--- tools/clang/lib/Driver/Tools.cpp.intermediate	2017-01-31 11:14:08 UTC
++++ tools/clang/lib/Driver/Tools.cpp
+@@ -10764,17 +10764,20 @@ void dragonfly::Linker::ConstructJob(Com
+           Args.MakeArgString(getToolChain().GetFilePath("crtbegin.o")));
+   }
+ 
++  if (D.isUsingLTO())
++    AddGoldPlugin(getToolChain(), Args, CmdArgs, D.getLTOMode() == LTOK_Thin, D);
++
+   Args.AddAllArgs(CmdArgs,
+                   {options::OPT_L, options::OPT_T_Group, options::OPT_e});
+ 
+   AddLinkerInputs(getToolChain(), Inputs, Args, CmdArgs, JA);
+ 
+   if (!Args.hasArg(options::OPT_nostdlib, options::OPT_nodefaultlibs)) {
+-    CmdArgs.push_back("-L/usr/lib/gcc50");
++    CmdArgs.push_back("-L/usr/lib/gcc50"); // XXX solve better for gcc 7.0 import
+ 
+     if (!Args.hasArg(options::OPT_static)) {
+       CmdArgs.push_back("-rpath");
+-      CmdArgs.push_back("/usr/lib/gcc50");
++      CmdArgs.push_back("/usr/lib/gcc50"); // XXX solve better for gcc 7.0 import
+     }
+ 
+     if (D.CCCIsCXX()) {

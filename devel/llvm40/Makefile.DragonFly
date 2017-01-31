@@ -1,0 +1,17 @@
+# ninja once again can't relink properly..
+USES:= ${USES:Nninja}
+
+# prune few strange predefs from cpp
+CLANG_EXTRA_PATCHES+= ${DFLY_PATCHDIR}/clang-patch-wrong_predefs
+# add basic -flto support for DragonFly, strange why llvm devs do not test these
+CLANG_EXTRA_PATCHES+= ${DFLY_PATCHDIR}/clang-patch-add_flto_support
+
+# few simple patches, again, libomp.so works, but libgomp.so is way faster/robust
+# also for some reason plain -fopenmp does not propagate any lib to the linker
+OPENMP_EXTRA_PATCHES+= ${DFLY_PATCHDIR}/openmp-patch-tools_openmp_runtime_cmake_LibompMicroTests.cmake
+OPENMP_EXTRA_PATCHES+= ${DFLY_PATCHDIR}/openmp-patch-tools_openmp_runtime_src_kmp.h
+OPENMP_EXTRA_PATCHES+= ${DFLY_PATCHDIR}/openmp-patch-tools_openmp_runtime_src_kmp__ftn__entry.h
+OPENMP_EXTRA_PATCHES+= ${DFLY_PATCHDIR}/openmp-patch-tools_openmp_runtime_src_kmp__platform.h
+OPENMP_EXTRA_PATCHES+= ${DFLY_PATCHDIR}/openmp-patch-tools_openmp_runtime_src_kmp__runtime.cpp
+OPENMP_EXTRA_PATCHES+= ${DFLY_PATCHDIR}/openmp-patch-tools_openmp_runtime_src_kmp__wrapper__malloc.h
+OPENMP_EXTRA_PATCHES+= ${DFLY_PATCHDIR}/openmp-patch-tools_openmp_runtime_src_z__Linux__util.cpp
