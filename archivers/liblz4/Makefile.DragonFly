@@ -1,5 +1,5 @@
 dfly-patch:
-	${REINPLACE_CMD} 's|FreeBSD GNU|DragonFly FreeBSD|' \
+	${REINPLACE_CMD} 's|GNU FreeBSD|GNU FreeBSD DragonFly|' \
 		${WRKSRC}/Makefile \
 		${WRKSRC}/lib/Makefile \
 		${WRKSRC}/programs/Makefile
