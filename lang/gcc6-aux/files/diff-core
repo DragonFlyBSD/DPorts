@@ -9,26 +9,30 @@
    %{symbolic:-Bsymbolic}"
  
  #undef  LINK_SPEC
+--- gcc/config/aarch64/aarch64-freebsd.h.orig
++++ gcc/config/aarch64/aarch64-freebsd.h
+@@ -41,6 +41,7 @@
+     %{symbolic:-Bsymbolic}                                      \
+     %{static:-Bstatic}                                          \
+     %{!static:                                                  \
++    %{!static:--hash-style=gnu -rpath @PREFIX@/@GCCAUX@/lib}   \
+       %{rdynamic:-export-dynamic}                               \
+       %{!shared:-dynamic-linker " FBSD_DYNAMIC_LINKER " }}      \
+     -X" SUBTARGET_EXTRA_LINK_SPEC "                             \
+@@ -91,4 +92,6 @@
+ #undef TARGET_BINDS_LOCAL_P
+ #define TARGET_BINDS_LOCAL_P default_binds_local_p_2
+ 
++/* Static stack checking is supported by means of probes.  */
++#define STACK_CHECK_STATIC_BUILTIN 1
+ #endif  /* GCC_AARCH64_FREEBSD_H */
 --- gcc/config/i386/freebsd.h.orig
 +++ gcc/config/i386/freebsd.h
-@@ -77,6 +77,12 @@
-    When the -shared link option is used a final link is not being
-    done.  */
- 
-+#if FBSD_MAJOR < 10
-+#define ELF_HASH_STYLE "--hash-style=both "
-+#else
-+#define ELF_HASH_STYLE "--hash-style=gnu "
-+#endif
-+
- #undef	LINK_SPEC
- #define LINK_SPEC "\
-   %{p:%nconsider using '-pg' instead of '-p' with gprof(1)} \
-@@ -88,6 +94,7 @@
+@@ -88,6 +88,7 @@
          %{rdynamic:-export-dynamic} \
          -dynamic-linker %(fbsd_dynamic_linker) } \
      %{static:-Bstatic}} \
-+  %{!static:" ELF_HASH_STYLE "-rpath @PREFIX@/@GCCAUX@/lib} \
++  %{!static:--hash-style=gnu -rpath @PREFIX@/@GCCAUX@/lib} \
    %{symbolic:-Bsymbolic}"
  
  /* A C statement to output to the stdio stream FILE an assembler
@@ -38,7 +42,7 @@
          %{rdynamic:-export-dynamic} \
  	-dynamic-linker %(fbsd_dynamic_linker) } \
      %{static:-Bstatic}} \
-+  %{!static:" ELF_HASH_STYLE "-rpath @PREFIX@/@GCCAUX@/lib} \
++  %{!static:--hash-style=gnu -rpath @PREFIX@/@GCCAUX@/lib} \
    %{symbolic:-Bsymbolic}"
 --- gcc/Makefile.in.orig
 +++ gcc/Makefile.in
@@ -50,7 +54,7 @@
  	insn-opinit.o \
  	insn-output.o \
  	insn-peep.o \
-@@ -1556,6 +1555,7 @@
+@@ -1557,6 +1556,7 @@
    $(OBJS-libcommon-target) main.o c-family/cppspec.o \
    $(COLLECT2_OBJS) $(EXTRA_GCC_OBJS) $(GCOV_OBJS) $(GCOV_DUMP_OBJS) \
    $(GCOV_TOOL_OBJS) $(GENGTYPE_OBJS) gcc-ar.o gcc-nm.o gcc-ranlib.o \
@@ -58,7 +62,7 @@
    lto-wrapper.o collect-utils.o
  
  # This lists all host object files, whether they are included in this
-@@ -1563,6 +1563,11 @@
+@@ -1564,6 +1564,11 @@
  ALL_HOST_OBJS = $(ALL_HOST_FRONTEND_OBJS) $(ALL_HOST_BACKEND_OBJS)
  
  BACKEND = libbackend.a main.o libcommon-target.a libcommon.a \
@@ -70,7 +74,7 @@
  	$(CPPLIB) $(LIBDECNUMBER)
  
  # This is defined to "yes" if Tree checking is enabled, which roughly means
-@@ -2217,6 +2222,7 @@
+@@ -2218,6 +2223,7 @@
  
  insn-modes.c: s-modes; @true
  insn-modes.h: s-modes-h; @true
@@ -78,7 +82,7 @@
  min-insn-modes.c: s-modes-m; @true
  
  s-modes: build/genmodes$(build_exeext)
-@@ -2234,6 +2240,12 @@
+@@ -2235,6 +2241,12 @@
  	$(SHELL) $(srcdir)/../move-if-change tmp-min-modes.c min-insn-modes.c
  	$(STAMP) s-modes-m
  
@@ -91,7 +95,7 @@
  insn-preds.c: s-preds; @true
  tm-preds.h: s-preds-h; @true
  tm-constrs.h: s-constrs-h; @true
-@@ -3419,6 +3431,9 @@
+@@ -3420,6 +3432,9 @@
  	    ( cd $(DESTDIR)$(bindir) && \
  	      $(LN) $(GCC_INSTALL_NAME)$(exeext) $(FULL_DRIVER_NAME) ); \
  	  fi; \
