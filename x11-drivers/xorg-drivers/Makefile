@@ -30,6 +30,7 @@ VIDEO_DRIVERS=		nv \
 			vesa \
 			apm \
 			ark \
+			ast \
 			dummy \
 			glint \
 			i128 \
