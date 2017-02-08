@@ -3,6 +3,7 @@
 
 PORTNAME=	bitmessage
 PORTVERSION=	0.6.1
+PORTREVISION=	1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	net-p2p
 
@@ -12,16 +13,14 @@ COMMENT=	Secure P2P communications client
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3 \
-		${PYTHON_PKGNAMEPREFIX}qt4-core>=${PYQT4_VERSION}:devel/py-qt4-core \
-		${PYTHON_PKGNAMEPREFIX}qt4-network>=${PYQT4_VERSION}:net/py-qt4-network \
-		${PYTHON_PKGNAMEPREFIX}qt4-gui>=${PYQT4_VERSION}:x11-toolkits/py-qt4-gui
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	Bitmessage
 GH_PROJECT=	PyBitmessage
 
 USES=		python pyqt:4 ssl
+USE_PYQT=	core_run gui_run network_run
 NATIVE_POW_USES=gmake
 INSTALLS_ICONS=	yes
 
@@ -32,12 +31,11 @@ OPTIONS_SUB=	yes
 REINPLACE_ARGS=	-i ''
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|python2|${PYTHON_CMD}| ; s|share/man|man|' \
+	@${REINPLACE_CMD} -e 's|@PYTHON@|${PYTHON_CMD}|' \
 		${WRKSRC}/Makefile
 	@${REINPLACE_CMD} -e "s|\((CCFLAGS)\)|\1 -I${OPENSSLINC} |g" \
 		-e "s|\(-lcrypto\)|-L${OPENSSLLIB} \1|g" \
 		${WRKSRC}/src/bitmsghash/Makefile
-	@${REINPLACE_CMD} -e 's|python2|${PYTHON_CMD}| ; s|share/man|man|' ${WRKSRC}/Makefile ${WRKSRC}/src/depends.py
 	@${REINPLACE_CMD} -e 's|^#!.*$$|#!${PYTHON_CMD}|' \
 		${WRKSRC}/compiletest.py ${WRKSRC}/src/bitmessagecli.py ${WRKSRC}/src/bitmessagemain.py \
 		${WRKSRC}/src/depends.py \
