@@ -1,0 +1,11 @@
+--- CMakeLists.txt.orig	2017-02-08 16:53:14 UTC
++++ CMakeLists.txt
+@@ -54,6 +54,8 @@ IF(CMAKE_SYSTEM_NAME MATCHES "Linux")
+     SET(libdiscid_OS "linux")
+ ELSEIF(CMAKE_SYSTEM_NAME MATCHES "Darwin")
+     SET(libdiscid_OS "darwin")
++ELSEIF(CMAKE_SYSTEM_NAME MATCHES "DragonFly")
++    SET(libdiscid_OS "bsd")
+ ELSEIF(CMAKE_SYSTEM_NAME MATCHES "FreeBSD")
+     SET(libdiscid_OS "bsd")
+ ELSEIF(CMAKE_SYSTEM_NAME MATCHES "NetBSD")
