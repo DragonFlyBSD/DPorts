@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	isa-l
-PORTVERSION=	2.16.0
+PORTVERSION=	2.17.0
 DISTVERSIONPREFIX=v
 CATEGORIES=	devel
 
@@ -20,7 +20,10 @@ USES=		autoreconf gmake libtool:keepla
 
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
+ONLY_FOR_ARCHS=	amd64
 
 INSTALL_TARGET=	install-strip
+
+BROKEN_aarch64=		Fails to compile: invalid conversion between vector type and integer type
 
 .include <bsd.port.mk>
