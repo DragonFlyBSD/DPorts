@@ -3,7 +3,7 @@
 
 PORTNAME=	handbrake
 PORTVERSION=	0.10.5
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	multimedia
 MASTER_SITES=	http://download.handbrake.fr/releases/${PORTVERSION}/ \
 		http://download.handbrake.fr/handbrake/contrib/:contrib \
@@ -46,6 +46,7 @@ LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 		libmp3lame.so:audio/lame
 
 BROKEN_aarch64=	Fails to build: invokes x86 asm
+BROKEN_armv6=	Fails to build: invokes x86 asm
 
 .if !defined(PACKAGE_BUILDING)
 # DVDCSS version hardcoded in contrib/libdvdread/libdvdread-5.0.0-6-gcb1ae87/src/dvd_input.c (dlopen'ed)
