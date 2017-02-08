@@ -1,8 +1,8 @@
 https://lists.freebsd.org/pipermail/freebsd-usb/2015-January/013586.html
 
---- usb1.py.orig	2015-08-15 17:59:35 UTC
-+++ usb1.py
-@@ -1729,15 +1729,20 @@ class USBDevice(object):
+--- usb1/__init__.py.orig	2016-11-23 13:07:52 UTC
++++ usb1/__init__.py
+@@ -1830,15 +1830,20 @@ class USBDevice(object):
          """
          Get device's port number.
          """
