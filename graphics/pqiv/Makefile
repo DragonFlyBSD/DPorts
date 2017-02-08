@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	pqiv
-PORTVERSION=	2.7.2
+PORTVERSION=	2.7.4
 CATEGORIES=	graphics
 
 MAINTAINER=	danilo@FreeBSD.org
