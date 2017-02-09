@@ -1643,7 +1643,9 @@ PLIST_SUB_SED?= ${PLIST_SUB_SED_tmp3:C/([^=]*)="?([^"]*)"?/s!\2!%%\1%%!g;/g:C/\.
 WORLD_CCOPTLEVEL:=
 WORLD_CFLAGS:=
 CFLAGS:=	${CFLAGS:C/ $//:N-O}
+.if !${CFLAGS:M-O*}
 CFLAGS+=	-O2
+.endif
 
 .if defined(WITHOUT_CPU_CFLAGS)
 .if defined(_CPUCFLAGS)
