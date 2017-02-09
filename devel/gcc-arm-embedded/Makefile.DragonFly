@@ -1,3 +1,0 @@
-# binutils fails to build (-Werror probably) with gcc50
-
-USE_GCC=	DEFAULT_NOT5
