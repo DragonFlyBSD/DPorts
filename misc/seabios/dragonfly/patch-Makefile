@@ -1,0 +1,14 @@
+May only be needed for gcc 5.4, gcc 6.x might work without patch
+
+--- Makefile.orig	2016-10-26 16:06:51 UTC
++++ Makefile
+@@ -74,8 +74,7 @@ CFLAGSSEG := $(COMMONCFLAGS) -DMODESEGME
+     $(call cc-option,$(CC),-fno-jump-tables,-DMANUAL_NO_JUMP_TABLE) \
+     $(call cc-option,$(CC),-fno-tree-switch-conversion,)
+ CFLAGS32SEG := $(CFLAGSSEG) -DMODE16=0
+-CFLAGS16 := $(CFLAGSSEG) -DMODE16=1 \
+-    $(call cc-option,$(CC),-m16,-Wa$(COMMA)src/code16gcc.s) \
++CFLAGS16 := $(CFLAGSSEG) -DMODE16=1 -Wa$(COMMA)src/code16gcc.s \
+     $(call cc-option,$(CC),--param large-stack-frame=4,-fno-inline)
+ 
+ # Run with "make V=1" to see the actual compile commands
