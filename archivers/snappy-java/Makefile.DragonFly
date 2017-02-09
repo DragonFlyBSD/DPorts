@@ -1,3 +1,0 @@
-# Must be same c++ compiler as java/openjdk7
-
-USE_GCC=	NOT5
