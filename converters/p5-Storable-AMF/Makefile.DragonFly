@@ -1,3 +1,0 @@
-# restrict to ports gcc/gcc47 because this locks up on gcc 5.0!
-
-USE_GCC=	NOT5
