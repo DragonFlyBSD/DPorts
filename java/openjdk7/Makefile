@@ -11,8 +11,7 @@ MASTER_SITES=	http://download.java.net/openjdk/jdk${JDK_MAJOR_VERSION}u${JDK_MIN
 		http://icedtea.classpath.org/download/drops/:jaxp \
 		http://download.java.net/glassfish/components/jax-ws/openjdk/jdk7/:jaxws \
 		http://icedtea.classpath.org/download/drops/:jaxws \
-		http://dl.wolfpond.org/openjdk7/:bootstrap \
-		http://leaf.dragonflybsd.org/~marino/dports-src/:bootstrap \
+		LOCAL/marino:bootstrap \
 		https://java.net/downloads/jax-ws/JDK7/:jaf \
 		http://icedtea.classpath.org/download/drops/:jaf \
 		APACHE/ant/binaries/:ant
@@ -147,8 +146,7 @@ TZUPDATE_RUN_DEPENDS=	java-zoneinfo>0:java/java-zoneinfo
 .include <bsd.port.options.mk>
 
 .if ${OPSYS} == DragonFly
-BOOTSTRAP_DISTFILE= bootstrap-openjdk6-6.0.tar.xz
-BUILD_DEPENDS+=	gcc48:lang/gcc48
+BOOTSTRAP_DISTFILE= bootstrap-openjdk6-b41.txz
 .endif
 
 BOOTSTRAPJDKDIR=	${WRKDIR}/bootstrap
