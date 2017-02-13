@@ -1,3 +1,4 @@
+USES+= ncurses
 LDFLAGS+= -lcrypto
 
 OPTIONS_DEFINE:=	${OPTIONS_DEFINE} VKNET
