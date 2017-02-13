@@ -6,7 +6,7 @@ TODO: Implement for DragonFly
  void
  glibtop_get_cpu_s (glibtop *server, glibtop_cpu *buf)
  {
-+#ifndef __DragonFly__
++#if !defined(__DragonFly__) || __DragonFly_version >= 400713
  	long cpts [CPUSTATES];
  	long *cp_times = NULL;
  	struct clockinfo ci;
