@@ -22,7 +22,7 @@ MESABASEVERSION=	11.2.2
 # if there is a subversion, don't include the '-' between 7.11-rc2.
 MESASUBVERSION=
 
-MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/${MESABASEVERSION}/
+MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/older-versions/11.x/${MESABASEVERSION}/
 
 DISTFILES=	mesa-${MESADISTVERSION}${EXTRACT_SUFX}
 
