@@ -1,0 +1,2 @@
+
+CLANG_EXTRA_PATCHES+= ${DFLY_PATCHDIR}/clang-patch-wrong_predefs
