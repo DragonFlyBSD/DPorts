@@ -139,6 +139,7 @@ PHP_EXT_INC?=	""
 .  if defined(IGNORE_WITH_PHP)
 .    for VER in ${IGNORE_WITH_PHP}
 .      if ${PHP_VER} == "${VER}"
+_IGNORE_PHP_SET=
 IGNORE=		cannot be installed: doesn't work with lang/php${PHP_VER} port\
 		(doesn't support PHP ${IGNORE_WITH_PHP:C/^([57])/\1./})
 .      endif
@@ -367,7 +368,7 @@ pspell_DEPENDS=	textproc/php${PHP_VER}-pspell
 radius_DEPENDS=	net/pecl-radius
 readline_DEPENDS=	devel/php${PHP_VER}-readline
 recode_DEPENDS=	converters/php${PHP_VER}-recode
-redis_DEPENDS=	databases/php${PHP_VER}-redis
+redis_DEPENDS=	databases/pecl-redis
 session_DEPENDS=www/php${PHP_VER}-session
 shmop_DEPENDS=	devel/php${PHP_VER}-shmop
 simplexml_DEPENDS=	textproc/php${PHP_VER}-simplexml
@@ -402,7 +403,7 @@ BUILD_DEPENDS+=	${PHPBASE}/lib/php/${PHP_EXT_DIR}/${extension:S/:build//}.so:${$
 RUN_DEPENDS+=	${PHPBASE}/lib/php/${PHP_EXT_DIR}/${extension:S/:build//}.so:${${extension:S/:build//}_DEPENDS}
 .        endif
 .      else
-.        if ${ext:tl} != "yes"
+.        if ${ext:tl} != "yes" && !defined(_IGNORE_PHP_SET)
 check-makevars::
 			@${ECHO_CMD} "Unknown extension ${extension:S/:build//} for PHP ${PHP_VER}."
 			@${FALSE}
