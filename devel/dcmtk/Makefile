@@ -3,7 +3,7 @@
 
 PORTNAME=	dcmtk
 DISTVERSION=	3.6.0
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	ftp://dicom.offis.de/pub/dicom/offis/software/${PORTNAME}/${PORTNAME}${PORTVERSION:S/.//g}/
 
@@ -30,8 +30,6 @@ PLIST_SUB=	SHLIBVER=${SHLIBVER}
 PORTDOCS=	*
 
 OPTIONS_DEFINE=	DOCS
-
-CFLAGS_x86_64=	-fPIC
 
 post-patch:
 	${FIND} ${WRKSRC} -name "*.h.orig" -delete
