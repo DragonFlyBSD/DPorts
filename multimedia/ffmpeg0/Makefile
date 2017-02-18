@@ -3,7 +3,7 @@
 
 PORTNAME=	ffmpeg
 PORTVERSION=	0.7.17
-PORTREVISION=	6
+PORTREVISION=	7
 PORTEPOCH=	1
 CATEGORIES=	multimedia audio ipv6 net
 MASTER_SITES=	http://ffmpeg.org/releases/
@@ -38,7 +38,7 @@ PLIST_SUB+=	SUFF="${FFMPEG_SUFFIX}"
 PROGS=		ffmpeg ffprobe
 
 CONFIGURE_ENV+=	COMPILER_PATH=${LOCALBASE}/bin
-MAKE_ENV+=	COMPILER_PATH=${LOCALBASE}/bin
+MAKE_ENV+=	COMPILER_PATH=${LOCALBASE}/bin V=1
 
 CONFIGURE_ARGS+=--prefix="${PREFIX}" \
 		--mandir="${PREFIX}/man" \
@@ -48,6 +48,7 @@ CONFIGURE_ARGS+=--prefix="${PREFIX}" \
 		--datadir="${DATADIR}" \
 		--build-suffix="${FFMPEG_SUFFIX}" \
 		--enable-shared \
+		--enable-pic \
 		--enable-gpl \
 		--enable-postproc \
 		--enable-avfilter \
