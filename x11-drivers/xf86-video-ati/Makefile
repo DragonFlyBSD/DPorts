@@ -1,27 +1,27 @@
-# Updated driver version, keep PORTREVISION bumping with every xorg-server bump
+# $FreeBSD$
 
 PORTNAME=	xf86-video-ati
-PORTVERSION=	7.7.0
+PORTVERSION=	7.8.0
+PORTEPOCH=	1
 CATEGORIES=	x11-drivers
 
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	X.Org ati display driver
 
+LICENSE=	MIT
+LICENSE_FILE=	${WRKSRC}/COPYING
+
+LIB_DEPENDS=	libpciaccess.so:devel/libpciaccess \
+		libdrm_radeon.so:graphics/libdrm
+
 USE_GL=		gl
 XORG_CAT=	driver
-USE_XORG=	xf86driproto \
-		xineramaproto \
-		xf86miscproto \
-		glproto \
-		presentproto
-INSTALL_TARGET=	install-strip
+USE_XORG=	pciaccess
+
 # No Radeon kernel driver on non-x86 and PC98.
 ONLY_FOR_ARCHS=	i386 amd64
+ONLY_FOR_ARCHS_REASON=	KMS is required and currently only available on x86
 
 CONFIGURE_ARGS+=--disable-udev
-# zrj: enable radeonsi support(requires glamor support in Xorg)
-CONFIGURE_ARGS+=--enable-glamor
-
-.include <bsd.port.options.mk>
 
 .include <bsd.port.mk>
