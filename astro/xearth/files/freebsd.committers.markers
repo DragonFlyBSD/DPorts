@@ -1,4 +1,4 @@
-# $FreeBSD: head/astro/xearth/files/freebsd.committers.markers 432823 2017-01-30 09:11:40Z krion $
+# $FreeBSD: head/astro/xearth/files/freebsd.committers.markers 434136 2017-02-14 20:01:32Z tobik $
 #
 # FreeBSD Project Committers
 #
@@ -58,6 +58,7 @@
  13.6325,	78.4552,	"jkoshy"			# Rishi Valley, India
  28.599623,	77.314412	"ashish"			# Delhi, India
  43.219564,	76.851597,	"bp"				# Almaty, Kazakhstan
+ 35.72689,	51.54698,	"mmokhi"			# Tehran, Iran
  51.33,		46.00,		"novel"				# Saratov, Russia
  48.805,	44.586,		"den"				# Volgograd, Russia
  55.740978,	37.830851,	"sem"				# Moscow, Russia
@@ -141,6 +142,7 @@
  45.875896,	8.941637,	"gahr"				# Arzo, Switzerland
  52.05,		8.9,		"lkoeller"			# Lemgo, Germany
  45.667,	8.867,		"nivit"		align=left	# Fagnano Olona, Italy
+ 53.0793,	8.8017,		"tobik"				# Bremen, Germany
  47.420,	8.6,		"beat"				# Wallisellen, Switzerland
  49.85958,	8.55246,	"bcr"				# Griesheim, Germany
  47.1666,	8.5166,		"dhartmei"			# Zug, Switzerland
