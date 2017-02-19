@@ -2,7 +2,7 @@
 
 PORTNAME=	xorg-drivers
 PORTVERSION=	7.7
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	x11-drivers
 
 MAINTAINER=	x11@FreeBSD.org
@@ -13,22 +13,22 @@ INPUTDIR=	${LOCALBASE}/lib/xorg/modules/input
 
 USES=		metaport
 
-INPUT_DRIVERS=		mouse \
-			keyboard \
-			acecad \
+INPUT_DRIVERS=		acecad \
+			egalax \
 			elographics \
+			evdev \
+			fpit \
 			hyperpen \
 			joystick \
+			keyboard \
+			mouse \
 			mutouch \
 			penmount \
 			synaptics \
-			vmmouse \
 			void \
 			wacom
 
-VIDEO_DRIVERS=		nv \
-			vesa \
-			apm \
+VIDEO_DRIVERS=		apm \
 			ark \
 			ast \
 			dummy \
@@ -37,15 +37,19 @@ VIDEO_DRIVERS=		nv \
 			i740 \
 			mga \
 			s3 \
+			scfb \
 			tdfx \
 			trident \
 			tseng \
+			vesa \
 			vmware
 
-VIDEO_DRIVERS_REMOVED=	mach64 \
-			r128 \
+VIDEO_DRIVERS_REMOVED=	libinput \
+			mach64 \
 			chips \
+			cirrus \
 			neomagic \
+			r128 \
 			rendition \
 			s3virge \
 			savage \
@@ -53,34 +57,33 @@ VIDEO_DRIVERS_REMOVED=	mach64 \
 			sis \
 			voodoo
 
-OPTIONS_DEFAULT=	MOUSE \
-			KEYBOARD \
-			NV \
-			VESA
+OPTIONS_DEFAULT=	KEYBOARD \
+			MOUSE \
+			SCFB
 
 .for type in input video
 . for a in ${${type:tu}_DRIVERS}
 OPTIONS_DEFINE+=	${a:tu}
-${a:tu}_DESC=	Install ${a} ${type} driver
+${a:tu}_DESC=		Install ${a} ${type} driver
 . endfor
 .endfor
 
-OPTIONS_DEFINE_i386=	ATI INTEL OPENCHROME
-OPTIONS_DEFAULT_i386=	ATI INTEL OPENCHROME
+OPTIONS_DEFINE_x86_64=	AMDGPU ATI INTEL29 VMMOUSE VMWARE
+OPTIONS_DEFAULT_x86_64=	ATI INTEL29 VESA
 
-OPTIONS_DEFINE_x86_64:=	ATI INTEL29 OPENCHROME
-OPTIONS_DEFAULT_x86_64:=	ATI INTEL29 OPENCHROME
+OPTIONS_DEFINE_i386:=	${OPTIONS_DEFINE_x86_64} GEODE
+OPTIONS_DEFAULT_i386:=	${OPTIONS_DEFAULT_x86_64}
 
 OPTIONS_DEFINE_sparc64=	SUNFFB
 OPTIONS_DEFAULT_sparc64=SUNFFB
 
-OPTIONS_DEFINE_ia64=	OPENCHROME
-OPTIONS_DEFAULT_ia64=	OPENCHROME
-
-ATI_DESC=		Install ati video driver
+AMDGPU_DESC=		Install amdgpu video driver
+ATI_DESC=		Install ati (radeon) video driver 
+GEODE_DESC=		Install geode video driver
 INTEL29_DESC=		Install intel video driver
-OPENCHROME_DESC=	Install openchrome video driver
 SUNFFB_DESC=		Install sunffb video driver
+VMMOUSE_DESC=		Install vmmouse input driver
+VMWARE_DESC=		Install vmware video driver
 
 # these drivers have a different module name compared to the plugin they install
 QUIRKS=		keyboard:kbd intel29:intel
@@ -88,12 +91,13 @@ QUIRKS=		keyboard:kbd intel29:intel
 .include <bsd.port.options.mk>
 
 # Manual add arch specific drivers so they be added to depend lines.
-.if ${ARCH}==i386
-VIDEO_DRIVERS+=	ati intel openchrome
+.if ${ARCH}==i386 || ${ARCH}==x86_64
+INPUT_DRIVERS+= vmmouse
+VIDEO_DRIVERS+=	amdgpu ati intel29 vmware
 .endif
 
-.if ${ARCH}==x86_64
-VIDEO_DRIVERS+=	ati intel29 openchrome
+.if ${ARCH}==i386
+VIDEO_DRIVERS+= geode
 .endif
 
 .if ${ARCH}==sparc64
