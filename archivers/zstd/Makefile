@@ -2,11 +2,11 @@
 # $FreeBSD$
 
 PORTNAME=	zstd
-PORTVERSION=	1.1.2
+PORTVERSION=	1.1.3
 DISTVERSIONPREFIX=	v
 CATEGORIES=	archivers
 
-MAINTAINER=	marino@FreeBSD.org
+MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Zstandard - Fast real-time compression algorithm
 
 LICENSE=	BSD2CLAUSE
@@ -21,5 +21,10 @@ ALL_TARGET=	default
 MAKE_ARGS=	MANDIR="${PREFIX}/man/man1" \
 		LIBDIR="${PREFIX}/lib" \
 		INCLUDEDIR="${PREFIX}/include"
+MAKE_ENV=	INSTALL_LIB="${INSTALL_LIB}" \
+		INSTALL_MAN="${INSTALL_MAN}" \
+		INSTALL_DATA="${INSTALL_DATA}" \
+		INSTALL_SCRIPT="${INSTALL_SCRIPT}" \
+		INSTALL_PROGRAM="${INSTALL_PROGRAM}"
 
 .include <bsd.port.mk>
