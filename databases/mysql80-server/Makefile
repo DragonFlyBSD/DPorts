@@ -10,7 +10,7 @@ MASTER_SITES=		MYSQL/MySQL-8.0
 PKGNAMESUFFIX?=		80-server
 DISTNAME=		${PORTNAME}-boost-${PORTVERSION}${DISTVERSIONSUFFIX}
 
-MAINTAINER=		mokhi64@gmail.com
+MAINTAINER=		mmokhi@FreeBSD.org
 COMMENT?=		Multithreaded SQL database (server)
 
 LICENSE=		GPLv2
@@ -134,7 +134,6 @@ PERFSCHM_SUB_LIST_OFF+=	PERFSCHEMRC="--skip-performance-schema"
 .include <bsd.port.pre.mk>
 
 .if ${SSL_DEFAULT} == base
-BROKEN_FreeBSD_9=	FreeBSD 9.x requires SSL from ports
 CMAKE_ARGS+=		-DWITH_SSL=system
 .else
 CMAKE_ARGS+=		-DWITH_SSL=${OPENSSLBASE}
