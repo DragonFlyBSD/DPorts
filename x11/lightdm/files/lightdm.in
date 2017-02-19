@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/x11/lightdm/files/lightdm.in 429481 2016-12-26 06:53:37Z woodsb02 $
+# $FreeBSD: head/x11/lightdm/files/lightdm.in 433952 2017-02-12 16:36:59Z woodsb02 $
 #
 # PROVIDE: lightdm
 # REQUIRE: LOGIN cleanvar moused syscons dbus
@@ -22,8 +22,9 @@ load_rc_config ${name}
 
 : ${lightdm_enable:="NO"}
 
-command="%%PREFIX%%/sbin/${name}"
+command="/usr/sbin/daemon"
+procname="%%PREFIX%%/sbin/${name}"
 pidfile="/var/run/${name}.pid"
-command_args="--pid-file=${pidfile} > /dev/null 2>&1 &"
+command_args="-f ${procname} --pid-file=${pidfile}"
 
 run_rc_command "$1"
