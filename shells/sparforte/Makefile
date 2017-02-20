@@ -2,11 +2,11 @@
 # $FreeBSD$
 
 PORTNAME=	sparforte
-PORTVERSION=	2.0.1
+PORTVERSION=	2.0.2
 DISTVERSIONPREFIX=	v
 CATEGORIES=	shells lang
 
-MAINTAINER=	marino@FreeBSD.org
+MAINTAINER=	freebsd.contact@marino.st
 COMMENT=	Shell and scripting language for mission-critical, scalable projects
 
 LICENSE=	GPLv2 GMGPL
