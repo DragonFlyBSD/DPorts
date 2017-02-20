@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD: head/net-mgmt/unifi5/files/unifi.in 422567 2016-09-21 15:34:11Z feld $
+# $FreeBSD: head/net-mgmt/unifi5/files/unifi.in 433676 2017-02-08 21:49:19Z feld $
 #
 
 # PROVIDE: unifi
@@ -30,11 +30,30 @@ procname=%%JAVA%%
 command="/usr/sbin/daemon"
 command_args="-f -p ${pidfile} %%JAVA%% ${unifi_javaflags} -jar lib/ace.jar start"
 start_precmd=start_precmd
+stop_precmd=stop_precmd
+stop_postcmd=stop_postcmd
 
 start_precmd()
 {
 	if [ ! -e /var/run/unifi ] ; then
 		install -d -o %%USERS%% -g %%GROUPS%% /var/run/unifi;
+	fi
+}
+
+stop_precmd()
+{
+	if [ -r ${pidfile} ]; then
+		_UNIFIPID=$(check_pidfile ${pidfile} ${procname})
+		export _UNIFI_CHILDREN=$(pgrep -P ${_UNIFIPID})
+	fi
+}
+
+stop_postcmd()
+{
+	if ! [ -z ${_UNIFI_CHILDREN} ]; then
+		echo "Cleaning up leftover child processes."
+		kill $sig_stop ${_UNIFI_CHILDREN}
+		wait_for_pids ${_UNIFI_CHILDREN}
 	fi
 }
 
