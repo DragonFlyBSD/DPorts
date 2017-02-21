@@ -1,0 +1,2 @@
+# allow some slop, not worth it to deal with netcdf linking against hdf5
+MAKE_ENV+= LDVER=ld.bfd
