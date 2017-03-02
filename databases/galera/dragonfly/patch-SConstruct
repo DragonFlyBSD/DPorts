@@ -1,0 +1,29 @@
+--- SConstruct.intermediate	2017-03-02 10:31:36 UTC
++++ SConstruct
+@@ -160,7 +160,7 @@ env.Replace(RPATH = [os.getenv('RPATH',
+ env.Append(CPPFLAGS = ' -pthread')
+ 
+ # Freebsd ports are installed under /usr/local
+-if sysname == 'freebsd' or sysname == 'sunos':
++if sysname == 'dragonfly' or sysname == 'freebsd' or sysname == 'sunos':
+     env.Append(LIBPATH  = ['/usr/local/lib'])
+     env.Append(CPPFLAGS = ' -I/usr/local/include ')
+ if sysname == 'sunos':
+@@ -209,7 +209,7 @@ env.Append(CPPPATH = Split('''#
+ #                           '''))
+ 
+ # Preprocessor flags
+-if sysname != 'sunos' and sysname != 'darwin' and sysname != 'freebsd':
++if sysname != 'sunos' and sysname != 'darwin' and sysname != 'freebsd'and sysname != 'dragonfly':
+     env.Append(CPPFLAGS = ' -D_XOPEN_SOURCE=600')
+ if sysname == 'sunos':
+     env.Append(CPPFLAGS = ' -D__EXTENSIONS__')
+@@ -254,7 +254,7 @@ if sysname != 'darwin':
+         print 'Error: rt library not found'
+         Exit(1)
+ 
+-if sysname == 'freebsd':
++if sysname == 'freebsd' or sysname == 'dragonfly':
+     if not conf.CheckLib('execinfo'):
+         print 'Error: execinfo library not found'
+         Exit(1)
