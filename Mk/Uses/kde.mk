@@ -55,7 +55,7 @@ _KDE_RELNAME=		KDE${_KDE_VERSION}
 # === VERSIONS OF THE DIFFERENT COMPONENTS =====================================
 # Old KDE desktop.
 KDE4_VERSION?=			4.14.3
-KDE4_KDELIBS_VERSION=		4.14.10
+KDE4_KDELIBS_VERSION=		4.14.30
 KDE4_ACTIVITIES_VERSION=	4.13.3
 KDE4_WORKSPACE_VERSION=		4.11.21
 KDE4_KDEPIM_VERSION?=		4.14.10
@@ -65,11 +65,11 @@ KDE4_APPLICATIONS_VERSION?=	15.04.3
 KDE4_BRANCH?=			stable
 
 # Current KDE desktop.
-KDE_FRAMEWORKS_VERSION?=	5.30.0
+KDE_FRAMEWORKS_VERSION?=	5.32.0
 KDE_FRAMEWORKS_BRANCH?= 	stable
 
 # Current KDE applications.
-KDE_APPLICATIONS_VERSION?=      16.12.0
+KDE_APPLICATIONS_VERSION?=      16.12.3
 KDE_APPLICATIONS_BRANCH?=       stable
 # Upstream moves old software to Attic/. Specify the newest applications release there.
 # Only the major version is used for the comparison.
@@ -134,8 +134,14 @@ DIST_SUBDIR?=           KDE/applications/${KDE_APPLICATIONS_VERSION}
 .    elif ${_KDE_CATEGORY:Mkde-frameworks}
 PORTVERSION?=		${KDE_FRAMEWORKS_VERSION}
 PKGNAMEPREFIX?=		kf5-
-MASTER_SITES?=		KDE/${KDE_FRAMEWORKS_BRANCH}/frameworks/${KDE_FRAMEWORKS_VERSION:R} \
-			KDE/${KDE_FRAMEWORKS_BRANCH}/frameworks/${KDE_FRAMEWORKS_VERSION:R}/portingAids
+# This is a slight duplication of _USE_FRAMEWORKS_PORTING -- it maybe would be
+# better to rely on ${_USE_FRAMEWORKS_PORTING:S/^/k/g}
+_PORTINGAIDS=		kjs kjsembed kdelibs4support khtml kmediaplayer kross
+.      if ${_PORTINGAIDS:M*${PORTNAME}*}
+MASTER_SITES?=		KDE/${KDE_FRAMEWORKS_BRANCH}/frameworks/${KDE_FRAMEWORKS_VERSION:R}/portingAids
+.      else
+MASTER_SITES?=		KDE/${KDE_FRAMEWORKS_BRANCH}/frameworks/${KDE_FRAMEWORKS_VERSION:R}
+.      endif
 DIST_SUBDIR?=		KDE/frameworks/${KDE_FRAMEWORKS_VERSION}
 .    else
 IGNORE?=		unknown CATEGORY value '${_KDE_CATEGORY}' #'
@@ -223,7 +229,7 @@ _USE_FRAMEWORKS_TIER2=	auth completion crash doctools filemetadata5 \
 
 _USE_FRAMEWORKS_TIER3=	activities baloo5 bookmarks configwidgets \
 			designerplugin emoticons globalaccel guiaddons \
-			iconthemes init kcmutils kconfigwidgets kdeclarative \
+			iconthemes init kcmutils kdeclarative \
 			kded kdesu kdewebkit kio newstuff notifyconfig parts \
 			people plasma-framework runner service texteditor \
 			textwidgets wallet xmlgui xmlrpcclient
@@ -238,7 +244,7 @@ _USE_FRAMEWORKS_PORTING=js jsembed kdelibs4support khtml mediaplayer kross
 # These are weird items: not officially released as Frameworks, but
 # required by them (and from KDE).
 #  - kirigami https://dot.kde.org/2016/03/30/kde-proudly-presents-kirigami-ui
-_USE_FRAMEWORKS_EXTRA=	kirigami
+_USE_FRAMEWORKS_EXTRA=	kirigami kirigami2
 
 _USE_FRAMEWORKS_ALL=	ecm \
 			${_USE_FRAMEWORKS_TIER1} \
@@ -512,8 +518,11 @@ kimageformats_TYPE=	run
 kio_PORT=		devel/kf5-kio
 kio_LIB=		libKF5KIOCore.so
 
-kirigami_PATH=		${QT_QMLDIR}/org/kde/kirigami/libkirigamiplugin.so
 kirigami_PORT=		x11-toolkits/kirigami
+kirigami_PATH=		${QT_QMLDIR}/org/kde/kirigami/libkirigamiplugin.so
+
+kirigami2_PORT=		x11-toolkits/kirigami2
+kirigami2_PATH=		${QT_QMLDIR}/org/kde/kirigami.2/libkirigamiplugin.so
 
 kross_PORT=		lang/kf5-kross
 kross_LIB=		libKF5KrossCore.so
