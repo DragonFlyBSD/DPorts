@@ -1,12 +1,12 @@
 # $FreeBSD$
 
 PORTNAME=	acpica
-PORTVERSION=	20170119
+PORTVERSION=	20170303
 CATEGORIES=	sysutils devel
 MASTER_SITES=	https://acpica.org/sites/acpica/files/ \
 		LOCAL/jkim
 PKGNAMESUFFIX=	-tools
-DISTNAME=	${PORTNAME}-unix2-${PORTVERSION}
+DISTNAME=	${PORTNAME}-unix-${PORTVERSION}
 
 MAINTAINER=	jkim@FreeBSD.org
 COMMENT=	Tools from the ACPI Component Architecture (ACPICA) project
