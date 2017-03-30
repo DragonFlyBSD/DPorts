@@ -1,11 +1,11 @@
---- Makefile.in.orig	2012-11-13 09:56:43.000000000 +0000
+--- Makefile.in.orig	2016-12-20 10:48:22 UTC
 +++ Makefile.in
-@@ -242,7 +242,7 @@ $(pywrapdir)/ldns_wrapper.c: $(PYLDNS_I_
- 	$(swig) $(swigpy_flags) -o $@ $(CPPFLAGS) $(PYTHON_CPPFLAGS) $(pywrapdir)/ldns.i
+@@ -283,7 +283,7 @@ $(pywrapdir)/ldns_wrapper.c: $(PYLDNS_I_
+ 	$(swig) $(swigpy_flags) -o $@ $(PYTHON_CPPFLAGS) $(pywrapdir)/ldns.i
  
  ldns_wrapper.lo: $(pywrapdir)/ldns_wrapper.c ldns/config.h
--	$(COMP_LIB) -I./include/ldns $(PYTHON_CPPFLAGS) $(PYTHON_X_CFLAGS) -c $(pywrapdir)/ldns_wrapper.c -o $@
-+	$(COMP_LIB) -I$(srcdir)/ldns $(PYTHON_CPPFLAGS) $(PYTHON_X_CFLAGS) -c $(pywrapdir)/ldns_wrapper.c -o $@
+-	$(COMP_LIB) -I./include/ldns $(LIBSSL_CPPFLAGS) $(PYTHON_CPPFLAGS) $(PYTHON_X_CFLAGS) -c $(pywrapdir)/ldns_wrapper.c -o $@
++	$(COMP_LIB) -I$/include/ldns $(LIBSSL_CPPFLAGS) $(PYTHON_CPPFLAGS) $(PYTHON_X_CFLAGS) -c $(pywrapdir)/ldns_wrapper.c -o $@
  
  _ldns.la: ldns_wrapper.lo libldns.la 
- 	$(LIBTOOL) --tag=CC --mode=link $(CC) $(CFLAGS) $(PYTHON_CFLAGS) $(LDFLAGS) $(PYTHON_LDFLAGS) -module -version-number $(version_info) -no-undefined -o $@ ldns_wrapper.lo -rpath $(python_site) -L. -L.libs -lldns $(LIBS)
+ 	$(LIBTOOL) --tag=CC --mode=link $(CC) $(CFLAGS) $(PYTHON_CFLAGS) $(LDFLAGS) $(PYTHON_LDFLAGS) -module -version-info $(version_info) -no-undefined -o $@ ldns_wrapper.lo -rpath $(python_site) -L. -L.libs -lldns $(LIBS)
