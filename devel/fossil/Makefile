@@ -1,35 +1,41 @@
 # $FreeBSD$
 
 PORTNAME=	fossil
-PORTVERSION=	1.37
+PORTVERSION=	2.1
 DISTVERSIONPREFIX=	src-
 PORTEPOCH=	2
 CATEGORIES=	devel www
-MASTER_SITES=	http://fossil-scm.org/index.html/uv/download/
+MASTER_SITES=	http://fossil-scm.org/index.html/uv/
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	gahr@FreeBSD.org
 COMMENT=	DSCM with built-in wiki, http interface and server, tickets database
 
 LICENSE=	BSD2CLAUSE
+LICENSE_FILE=	${WRKSRC}/COPYRIGHT-BSD2.txt
 
-PLIST_FILES=	bin/fossil
+WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
+USES=		ssl
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX}
-
-USE_OPENSSL=	yes
 USE_RC_SUBR=	fossil
 MAKE_JOBS_UNSAFE=yes
 
-OPTIONS_DEFINE=	JSON FUSE STATIC
-OPTIONS_DEFAULT=	JSON
-WRKSRC=		${WRKDIR}/${PORTNAME:C/^(.).*/\1/:tu}${PORTNAME:C/^.(.*)/\1/}_2017-01-16_205854_1669115ab9
+PLIST_FILES=	bin/fossil
+
+OPTIONS_DEFINE=	JSON FUSE STATIC TH1HOOKS TCL
+OPTIONS_DEFAULT=JSON
 JSON_DESC=	JSON API support
 FUSE_DESC=	Enable fossil fusefs command
+TH1HOOKS_DESC=	Enable TH1 command and web page hooks
+TCL_DESC=	Enable Tcl integration
 
 JSON_CONFIGURE_ON=	--json
 STATIC_CONFIGURE_ON=	--static
 FUSE_CONFIGURE_OFF=	--disable-fusefs
+TH1HOOKS_CONFIGURE_ON=	--with-th1-hooks
+TCL_CONFIGURE_ON=	--with-tcl-stubs=${TCL_LIBDIR} --with-tcl=${LOCALBASE}
+TCL_USES=		tcl
 FUSE_LIB_DEPENDS=	libfuse.so:sysutils/fusefs-libs
 FUSE_USES=		localbase:ldflags
 
