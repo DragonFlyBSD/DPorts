@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	libwww
-PORTVERSION=	6.19
+PORTVERSION=	6.24
 DISTVERSIONPREFIX=	perl-
 CATEGORIES=	www devel perl5
 MASTER_SITES=	CPAN
@@ -34,14 +34,9 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-Test-Fatal>=0:devel/p5-Test-Fatal \
 		p5-Test-RequiresInternet>=0:devel/p5-Test-RequiresInternet
 
-OPTIONS_DEFINE=	HTTPS
-
 CONFIGURE_ARGS=	--aliases
 NO_ARCH=	yes
 USE_PERL5=	configure
 USES=		perl5
-
-HTTPS_BUILD_DEPENDS=	p5-LWP-Protocol-https>=0:www/p5-LWP-Protocol-https
-HTTPS_RUN_DEPENDS=	p5-LWP-Protocol-https>=0:www/p5-LWP-Protocol-https
 
 .include <bsd.port.mk>
