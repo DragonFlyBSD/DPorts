@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	seafile-client
-PORTVERSION=	6.0.3
+PORTVERSION=	6.0.4
 DISTVERSIONPREFIX=	v
 CATEGORIES=	net-mgmt
 
@@ -18,7 +18,7 @@ LIB_DEPENDS=	libsearpc.so:devel/libsearpc \
 		libcurl.so:ftp/curl \
 		libinotify.so:devel/libinotify \
 		libccnet.so:net-mgmt/ccnet-client \
-		libevent.so:devel/libevent2 \
+		libevent.so:devel/libevent \
 		libuuid.so:misc/e2fsprogs-libuuid \
 		libjansson.so:devel/jansson
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3 \
