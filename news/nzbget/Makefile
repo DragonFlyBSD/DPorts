@@ -4,7 +4,7 @@
 PORTNAME=	nzbget
 PORTVERSION=	17.1
 DISTVERSIONPREFIX=	v
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	news
 
 MAINTAINER=	toxic@doobie.com
@@ -47,7 +47,7 @@ RAR_RUN_DEPENDS=	unrar:archivers/unrar
 OPENSSL_CONFIGURE_ON=	--with-tlslib=OpenSSL \
 			--with-openssl-includes=${OPENSSLINC} \
 			--with-openssl-libraries=${OPENSSLLIB}
-OPENSSL_USE=		OPENSSL=yes
+OPENSSL_USES=		ssl
 
 GNUTLS_CONFIGURE_ON=	--with-tlslib=GnuTLS
 GNUTLS_LIB_DEPENDS=	libgnutls.so:security/gnutls \

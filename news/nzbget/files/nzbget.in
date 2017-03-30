@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/news/nzbget/files/nzbget.in 408947 2016-02-15 17:00:47Z rakuco $
+# $FreeBSD: head/news/nzbget/files/nzbget.in 434648 2017-02-22 22:24:16Z feld $
 #
 # PROVIDE: nzbget
 # KEYWORD: shutdown
@@ -21,25 +21,6 @@ load_rc_config ${name}
 : ${nzbget_enable:=NO}
 
 command=%%PREFIX%%/bin/nzbget
-start_cmd="${name}_start"
-status_cmd="${command} -L S"
-stop_cmd="${name}_stop"
-
-nzbget_start()
-{
-	echo "Starting ${name}."
-	# artificial sleep because it doesnt want to start
-	# after a restart without it
-	sleep .5
-	${command} -D
-}
-
-nzbget_stop()
-{
-	echo "Stopping ${name}."
-	${command} -Q
-	# artificial sleep because stop is backgrounded
-	sleep 3
-}
+command_args="-D"
 
 run_rc_command "$1"
