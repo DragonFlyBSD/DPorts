@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/databases/postgresql-repmgr/files/repmgrd.in 372725 2014-11-18 15:47:34Z matthew $
+# $FreeBSD: head/databases/postgresql-repmgr/files/repmgrd.in 435467 2017-03-05 10:40:45Z bofh $
 #
 # PROVIDE: repmgrd
 # REQUIRE: postgresql
@@ -22,12 +22,13 @@ rcvar=repmgrd_enable
 load_rc_config $name
 
 : ${repmgrd_enable:="NO"}
+: ${repmgrd_user:="pgsql"}
 : ${repmgrd_config="%%PREFIX%%/etc/repmgr.conf"}
 
 command=%%PREFIX%%/sbin/${name}
 pidfile=/var/run/${name}.pid
 
-command_args="-p $pidfile -f $repmgrd_config"
+command_args="-m -d -p $pidfile -f $repmgrd_config"
 
 run_rc_command "$1"
 
