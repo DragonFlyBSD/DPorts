@@ -2,9 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=		fstrm
-PORTVERSION=		0.3.0
+PORTVERSION=		0.3.1
 DISTVERSIONPREFIX=	v
-PORTREVISION=		1
 CATEGORIES=		devel
 
 MAINTAINER=		freebsd@dns-lab.com
@@ -13,7 +12,7 @@ COMMENT=		Implementation of the Frame Streams data transport protocol in C
 LICENSE=		APACHE20
 LICENSE_FILE=		${WRKSRC}/LICENSE
 
-LIB_DEPENDS=		libevent.so:devel/libevent2
+LIB_DEPENDS=		libevent.so:devel/libevent
 
 USE_GITHUB=		yes
 GH_ACCOUNT=		farsightsec
@@ -21,6 +20,7 @@ GH_ACCOUNT=		farsightsec
 GNU_CONFIGURE=		yes
 USES=			autoreconf gmake libtool pkgconfig
 USE_LDCONFIG=		yes
+INSTALL_TARGET=		install-strip
 TEST_TARGET=		check
 
 OPTIONS_DEFINE=		DOXYGEN
