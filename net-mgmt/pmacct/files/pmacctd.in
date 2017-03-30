@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net-mgmt/pmacct/files/pmacctd.in 310459 2013-01-15 19:38:19Z zi $
+# $FreeBSD: head/net-mgmt/pmacct/files/pmacctd.in 436629 2017-03-21 19:44:42Z pi $
 #
 
 # PROVIDE: pmacctd
@@ -12,7 +12,8 @@
 #
 # pmacctd_enable="YES"
 #
-# You can define flags for pmacctd running. See pmacctd(8) for details.
+# You can define flags for pmacctd running. 
+# See http://wiki.pmacct.net/OfficialConfigKeys for more details.
 #
 # Example:
 # pmacctd_flags="-f %%PREFIX%%/etc/pmacctd.conf -i em0"
