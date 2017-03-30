@@ -1,5 +1,0 @@
-
-# zrj: docker part build fix?
-dfly-patch:
-	${REINPLACE_CMD} -e "s@Mtimespec@Mtim@g"	\
-		${WRKSRC}/metricbeat/module/docker/vendor/github.com/fsouza/go-dockerclient/external/github.com/docker/docker/pkg/system/stat_unsupported.go
