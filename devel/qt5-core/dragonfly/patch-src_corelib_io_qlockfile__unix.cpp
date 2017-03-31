@@ -1,9 +1,9 @@
---- src/corelib/io/qlockfile_unix.cpp.orig	2016-09-16 05:49:42 UTC
+--- src/corelib/io/qlockfile_unix.cpp.orig	2016-12-01 08:17:04 UTC
 +++ src/corelib/io/qlockfile_unix.cpp
-@@ -266,7 +266,7 @@ QString QLockFilePrivate::processNameByP
-     }
-     buf[len] = 0;
-     return QFileInfo(QFile::decodeName(buf)).fileName();
+@@ -283,7 +283,7 @@ QString QLockFilePrivate::processNameByP
+     if (get_thread_info(pid, &info) != B_OK)
+         return QString();
+     return QFile::decodeName(info.name);
 -#elif defined(Q_OS_BSD4) && !defined(Q_OS_IOS)
 +#elif defined(Q_OS_BSD4) && !defined(Q_OS_IOS) && 0
  # if defined(Q_OS_NETBSD)
