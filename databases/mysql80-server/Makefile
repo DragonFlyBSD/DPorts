@@ -4,7 +4,7 @@
 PORTNAME?=		mysql
 PORTVERSION=		8.0.0
 DISTVERSIONSUFFIX?=	-dmr
-PORTREVISION?=		1
+PORTREVISION?=		3
 CATEGORIES=		databases ipv6
 MASTER_SITES=		MYSQL/MySQL-8.0
 PKGNAMESUFFIX?=		80-server
@@ -27,7 +27,7 @@ MY_DBDIR=	/var/db/mysql
 MY_SECDIR=	/var/db/mysql_secure
 MY_TMPDIR=	/var/db/mysql_tmpdir
 
-LIB_DEPENDS+=	libevent.so:devel/libevent2 \
+LIB_DEPENDS+=	libevent.so:devel/libevent \
 		liblz4.so:archivers/liblz4
 
 CMAKE_BUILD_TYPE=	Release
@@ -127,8 +127,10 @@ FEATURES_DESC=		Default features knobs
 PERFSCHM_DESC=		Enable "Performance Schema" by default (High RAM usage)
 OPTIONS_DEFAULT+=	PERFSCHM
 
-PERFSCHM_SUB_LIST+=	PERFSCHEMRC=""
-PERFSCHM_SUB_LIST_OFF+=	PERFSCHEMRC="--skip-performance-schema"
+PERFSCHM_SUB_LIST+=		PERFSCHEMRC=""
+PERFSCHM_SUB_LIST_OFF+=		PERFSCHEMRC="--skip-performance-schema"
+FEDERATED_SUB_LIST+=		FEDER="--federated"
+FEDERATED_SUB_LIST_OFF+=	FEDER=""
 .endif
 
 .include <bsd.port.pre.mk>
