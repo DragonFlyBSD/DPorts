@@ -2,13 +2,13 @@
 # $FreeBSD$
 
 PORTNAME=	firefox
-DISTVERSION=	45.7.0
+DISTVERSION=	45.8.0
 DISTVERSIONSUFFIX=esr.source
-PORTREVISION=	1
+PORTREVISION=	3
 PORTEPOCH=	1
 CATEGORIES=	www ipv6
 MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}esr/source \
-		MOZILLA/${PORTNAME}/candidates/${DISTVERSION}esr-candidates/build1/source
+		MOZILLA/${PORTNAME}/candidates/${DISTVERSION}esr-candidates/build2/source
 PKGNAMESUFFIX=	-esr
 
 MAINTAINER=	gecko@FreeBSD.org
@@ -16,7 +16,7 @@ COMMENT=	Web browser based on the browser portion of Mozilla
 
 BUILD_DEPENDS=	nspr>=4.12:devel/nspr \
 		nss>=3.21.3:security/nss \
-		libevent2>=2.0.21_2:devel/libevent2 \
+		libevent>=2.0.21_2:devel/libevent \
 		soundtouch>=1.9.0:audio/soundtouch \
 		harfbuzz>=1.1.0:print/harfbuzz \
 		graphite2>=1.3.6:graphics/graphite2 \
