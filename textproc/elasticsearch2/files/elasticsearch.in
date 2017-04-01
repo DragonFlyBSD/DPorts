@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/textproc/elasticsearch2/files/elasticsearch.in 414918 2016-05-10 04:38:12Z tj $
+# $FreeBSD: head/textproc/elasticsearch2/files/elasticsearch.in 436109 2017-03-13 20:49:36Z tj $
 #
 # PROVIDE: elasticsearch
 # REQUIRE: NETWORKING SERVERS
@@ -113,6 +113,7 @@ if [ -n "$2" ]; then
     profile="$2"
     if [ "x${elasticsearch_profiles}" != "x" ]; then
         pidfile="${_pidprefix}.${profile}.pid"
+	command_args="-d --pidfile=${pidfile}"
         eval elasticsearch_config="\${elasticsearch_${profile}_config:-}"
         if [ "x${elasticsearch_config}" = "x" ]; then
             echo "You must define a configuration  (elasticsearch_${profile}_config)"
