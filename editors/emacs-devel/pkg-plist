@@ -1517,6 +1517,8 @@ share/applications/emacs.desktop
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/cl-macs.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/cl-preloaded.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/cl-preloaded.elc
+%%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/cl-print.el.gz
+%%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/cl-print.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/cl-seq.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/cl-seq.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/cl.el.gz
@@ -2324,8 +2326,7 @@ share/applications/emacs.desktop
 %%DATADIR%%/%%EMACS_VER%%/lisp/language/viet-util.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/language/vietnamese.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/language/vietnamese.elc
-%%DATADIR%%/%%EMACS_VER%%/lisp/ldefs-boot-auto.el
-%%DATADIR%%/%%EMACS_VER%%/lisp/ldefs-boot-manual.el
+%%DATADIR%%/%%EMACS_VER%%/lisp/ldefs-boot.el
 %%DATADIR%%/%%EMACS_VER%%/lisp/leim/ja-dic/ja-dic.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/leim/ja-dic/ja-dic.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/leim/leim-list.el
