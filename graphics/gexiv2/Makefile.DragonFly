@@ -1,8 +1,0 @@
-## Unknown why gold linker causes c++11 errors to be thrown, keep using ld
-##MAKE_ENV+=	LDVER=ld.bfd
-
-# zrj: linking c++ only with cc is a bit how you doing... fix it and ld.gold is fine
-# fixes graphics/entangle build (binutils 2.27 ld.gold is unhappy)
-dfly-patch:
-	${REINPLACE_CMD} -e "s@CC@CXX@g"	\
-		${WRKSRC}/Makefile
