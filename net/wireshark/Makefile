@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME?=	wireshark
-PORTVERSION=	2.2.4
+PORTVERSION=	2.2.5
 PORTREVISION?=	0
 CATEGORIES=	net ipv6
 MASTER_SITES=	http://www.wireshark.org/download/src/ \
@@ -116,6 +116,7 @@ ANDROIDDUMP_CONFIGURE_OFF=--enable-androiddump=no
 LUA_CPPFLAGS=		-I${LUA_INCDIR}
 
 QT5_CONFIGURE_ENV=	PATH="${PATH}:${QT_BINDIR}"
+QT5_EXTRA_PATCHES=	${FILESDIR}/extrapatch-configure-qt5
 QT5_MAKE_ENV=		PATH="${PATH}:${QT_BINDIR}"
 QT5_VARS=		PKGNAMESUFFIX=-qt5
 QT5_PLIST_SUB=		GUI_GTK="@comment "
