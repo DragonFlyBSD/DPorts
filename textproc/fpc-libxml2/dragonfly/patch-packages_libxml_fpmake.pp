@@ -3,7 +3,7 @@
 @@ -17,7 +17,7 @@ begin
      P.Directory:=ADirectory;
  {$endif ALLPACKAGES}
-     P.Version:='3.0.0';
+     P.Version:='3.0.2';
 -    P.OSes := [freebsd,linux,win32];
 +    P.OSes := [dragonfly,freebsd,linux,win32];
      P.SourcePath.Add('src');
