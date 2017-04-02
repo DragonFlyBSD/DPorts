@@ -24,7 +24,7 @@ LIB_DEPENDS=	libxkbcommon.so:x11/libxkbcommon		\
 		libwayland-server.so:graphics/wayland		\
 		libwayland-client.so:graphics/wayland		\
 		libwayland-cursor.so:graphics/wayland		\
-		libevent.so:devel/libevent2			\
+		libevent.so:devel/libevent			\
 		libdrm.so:graphics/libdrm			\
 		libpng.so:graphics/png				\
 		libwebp.so:graphics/webp			\
