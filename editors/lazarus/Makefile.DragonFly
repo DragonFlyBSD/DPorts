@@ -2,7 +2,7 @@ DFLY_FILESDIR= ${FILESDIR:S@/files$$@/dragonfly@}
 DFLY_PATCHDIR= ${PATCHDIR:S@/files$$@/dragonfly@}
 
 BUILD_DEPENDS+= ${LOCALBASE}/bin/fpcmake:lang/fpc
-MAKE_ENV+= FPCDIR="${LOCALBASE}/lib/fpc/3.0.0"
+MAKE_ENV+= FPCDIR="${LOCALBASE}/lib/fpc/3.0.2"
 # bootstrap dragonfly
 pre-build-script:
 	cd ${WRKDIR}/${PORTNAME}/packager/registration && \
