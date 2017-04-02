@@ -1,11 +1,11 @@
---- CMakeLists.txt.intermediate	2016-07-09 17:42:17 UTC
+--- CMakeLists.txt.orig	2017-04-02 17:44:42 UTC
 +++ CMakeLists.txt
-@@ -78,7 +78,7 @@ IF( "${CMAKE_SYSTEM_NAME}" MATCHES "Darw
+@@ -111,7 +111,7 @@ IF ("${CMAKE_SYSTEM_NAME}" MATCHES "Darw
  ENDIF()
  
- SET( LINUX FALSE )
--IF( "${CMAKE_SYSTEM_NAME}" MATCHES "Linux|FreeBSD" )
-+IF( "${CMAKE_SYSTEM_NAME}" MATCHES "Linux|FreeBSD|DragonFly" )
-   SET( LINUX TRUE )
+ SET(LINUX FALSE)
+-IF ("${CMAKE_SYSTEM_NAME}" MATCHES "Linux|FreeBSD")
++IF ("${CMAKE_SYSTEM_NAME}" MATCHES "Linux|FreeBSD|DragonFly")
+     SET(LINUX TRUE)
  ENDIF()
  
