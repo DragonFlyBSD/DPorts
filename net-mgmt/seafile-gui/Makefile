@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	seafile-gui
-PORTVERSION=	6.0.3
+PORTVERSION=	6.0.4
 DISTVERSIONPREFIX=	v
 CATEGORIES=	net-mgmt devel
 
@@ -16,7 +16,7 @@ LIB_DEPENDS=	libsearpc.so:devel/libsearpc \
 		libsqlite3.so:databases/sqlite3 \
 		libccnet.so:net-mgmt/ccnet-client \
 		libjansson.so:devel/jansson \
-		libevent.so:devel/libevent2 \
+		libevent.so:devel/libevent \
 		libuuid.so:misc/e2fsprogs-libuuid
 
 USE_GITHUB=	yes
