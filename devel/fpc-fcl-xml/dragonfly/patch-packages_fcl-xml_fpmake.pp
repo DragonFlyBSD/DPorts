@@ -3,7 +3,7 @@
 @@ -22,7 +22,7 @@ begin
      P.Options.Add('-S2h');
      D:=P.Dependencies.Add('fcl-base');
-       D.Version:='3.0.0';
+       D.Version:='3.0.2';
 -    D:=P.Dependencies.Add('iconvenc',[linux,darwin,iphonesim,freebsd,haiku,beos,aix]);
 +    D:=P.Dependencies.Add('iconvenc',[linux,darwin,iphonesim,dragonfly,freebsd,haiku,beos,aix]);
  
