@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	unbound
-PORTVERSION=	1.6.0
-PORTREVISION=	1
+PORTVERSION=	1.6.1
 CATEGORIES=	dns
 MASTER_SITES=	http://unbound.net/downloads/
 
@@ -14,9 +13,7 @@ LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libexpat.so:textproc/expat2 \
-		libldns.so.1.6.17:dns/ldns
-
-BROKEN_aarch64=	Fails to link: missing sbrk
+		libldns.so.2.0.0:dns/ldns
 
 USES=		autoreconf cpe libtool ssl
 CPE_VENDOR=	nlnetlabs
@@ -57,11 +54,11 @@ GOST_CONFIGURE_ENABLE=	gost
 GOST_VARS=		DEPENDS_ARGS+=WITH_GOST=yes
 LIBEVENT_CONFIGURE_WITH=libevent
 LIBEVENT_CPPFLAGS+=	$$(pkg-config libevent --cflags-only-I)
-LIBEVENT_LIB_DEPENDS=	libevent.so:devel/libevent2
+LIBEVENT_LIB_DEPENDS=	libevent.so:devel/libevent
 LIBEVENT_LDFLAGS+=	$$(pkg-config libevent --libs-only-L)
 LIBEVENT_USES=		pkgconfig
 MUNIN_PLUGIN_SUB_FILES=	pkg-message
-PYTHON_BUILD_DEPENDS=	swig:devel/swig13
+PYTHON_BUILD_DEPENDS=	swig:devel/swig30
 PYTHON_CONFIGURE_ON=	--with-pyunbound=yes --with-pythonmodule=yes LDFLAGS="-L${LOCALBASE}/lib"
 PYTHON_USES=		python:2
 PYTHON_VARS=		STRIP_FILES+=.libs/_unbound.so
