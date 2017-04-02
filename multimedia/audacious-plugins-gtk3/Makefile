@@ -3,12 +3,13 @@
 
 PORTNAME=	audacious-plugins
 PORTVERSION=	3.8.2
+PORTREVISION=	1
 DISTVERSIONSUFFIX=	-gtk3
 CATEGORIES=	multimedia audio
 MASTER_SITES=	http://distfiles.audacious-media-player.org/
 PKGNAMESUFFIX=	${DISTVERSIONSUFFIX}
 
-MAINTAINER=	olivierd@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Plugins needed for audacious-gtk3
 
 LICENSE=	GPLv3
