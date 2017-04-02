@@ -2,11 +2,12 @@
 # $FreeBSD$
 
 PORTNAME=	adwaita
-PORTVERSION=	0.97
+PORTVERSION=	0.98
+PORTREVISION=	1
 CATEGORIES=	x11-themes
 PKGNAMESUFFIX=	-qt4
 
-MAINTAINER=	olivierd@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Adwaita theme for Qt4 applications
 
 LICENSE=	GPLv2 LGPL20
