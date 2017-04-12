@@ -5251,3 +5251,65 @@ databases/py-sqlalchemy08|databases/py-sqlalchemy10|2017-03-29|Has expired: Upst
 devel/py3-meson||2017-03-30|Removed
 deskutils/kchmviewer-kde4|deskutils/kchmviewer|2017-03-31|Renamed to drop the -kde4 suffix
 emulators/ppsspp-qt4|emulators/ppsspp-qt5|2017-03-31|Qt4 support was removed upstream
+devel/llvm37||2017-04-01|Obsolete and unmaintained upstream
+lang/clang37||2017-04-01|Obsolete and unmaintained upstream
+devel/lldb37||2017-04-01|Obsolete and unmaintained upstream
+audio/gnome-media||2017-04-01|Obsolete and not depend on anymore
+audio/gnome-audio||2017-04-01|Obsolete and not depend on anymore
+accessibility/gnome-mag||2017-04-01|Obsolete and not depend on anymore
+accessibility/gnome-speech||2017-04-01|Obsolete and not depend on anymore
+accessibility/gok||2017-04-01|Obsolete and not depend on anymore
+accessibility/dasher||2017-04-01|Obsolete and not depend on anymore
+accessibility/java-access-bridge||2017-04-01|Obsolete and not depend on anymore
+accessibility/dasher||2017-04-01|Obsolete and not depend on anymore
+accessibility/at-spi||2017-04-01|Obsolete and not depend on anymore
+accessibility/at-spi-reference||2017-04-01|Obsolete and not depend on anymore
+archivers/gnome-autoar||2017-04-01|Obsolete and not depend on anymore
+deskutils/gnome-blog||2017-04-01|Obsolete and not depend on anymore
+deskutils/gnome-epub-thumbnailer||2017-04-01|Obsolete and not depend on anymore
+databases/libgdamm||2017-04-01|Obsolete and not depend on anymore
+databases/libgda4-bdb||2017-04-02|Obsolete and not depend on anymore
+databases/libgda4-reference||2017-04-02|Obsolete and not depend on anymore
+databases/libgda4-postgresql||2017-04-02|Obsolete and not depend on anymore
+databases/libgda4||2017-04-02|Obsolete and not depend on anymore
+databases/libgda4-jdbc||2017-04-02|Obsolete and not depend on anymore
+databases/libgda4-mysql||2017-04-02|Obsolete and not depend on anymore
+databases/libgda4-mdb||2017-04-02|Obsolete and not depend on anymore
+databases/libgda4-ldap||2017-04-02|Obsolete and not depend on anymore
+devel/libsigcx||2017-04-02|Obsolete and not depend on anymore
+x11-toolkits/gal2||2017-04-02|Obsolete and not depend on anymore
+x11-toolkits/gal2-reference||2017-04-02|Obsolete and not depend on anymore
+x11-toolkits/vte290|x11-toolkits/vte3|2017-04-02|Obsolete and not depend on anymore
+x11-toolkits/libgtksourceviewmm||2017-04-03|Obsolete and not depend on anymore
+graphics/goocanvasmm||2017-04-03|Obsolete and not depend on anymore
+x11-themes/kde4-icons-oxygen|x11-themes/kf5-oxygen-icons5|2017-04-03|Replaced by x11-themes/kf5-oxygen-icons5
+devel/php5-geshi|devel/php-geshi|2017-04-04|Update PKGNAMEPREFIX: it builds fine with PHP 7.x
+databases/p5-Search-Xapian|databases/p5-Search-Xapian12|2017-04-04|Rename to match Xapian PKGNAMESUFFIX
+archivers/pecl-snappy|archivers/php-snappy|2017-04-04|Update PKGNAMEPREFIX: it builds fine with PHP 7.x
+textproc/kibana50|textproc/kibana5|2017-04-05|Rename port to match the rest of the 5.X line of the elastic stack
+textproc/kibana50-x-pack|textproc/kibana5-x-pack|2017-04-05|Rename port to match the rest of the 5.X line of the elastic stack
+www/typo3|www/typo3-8|2017-04-08|Rename to coexist with TYPO3 7.x (was typo3-lts) since both versions are LTS now
+www/typo3-lts|www/typo3-7|2017-04-08|Rename to coexist with TYPO3 8.x (was typo3) since both versions are LTS now
+sysutils/puppet38|sysutils/puppet4|2017-04-10|Has expired: Upstream support ended, see http://tinyurl.com/puppet3eol
+editors/libreoffice4|editors/libreoffice|2017-04-10|Has expired: Deprecated by upstream
+databases/rubygem-redis-actionpack4|databases/rubygem-redis-actionpack|2017-04-10|Has expired: Use databases/rubygem-redis-actionpack instead
+devel/rubygem-nio4r1|devel/rubygem-nio4r|2017-04-10|Has expired: Use devel/rubygem-nio4r instead
+devel/liborcus07|devel/liborcus|2017-04-10|Has expired: Deprecated by upstream, use devel/liborcus
+devel/mdds0|devel/mdds|2017-04-10|Has expired: Deprecated by upstream, use devel/mdds
+security/openvpn23-polarssl||2017-04-10|Has expired: Replaced by new upstream relesae 2.4.x
+security/openvpn23|security/openvpn|2017-04-10|Has expired: Replaced by new upstream relesae 2.4.x
+textproc/p5-XML-XSH||2017-04-10|Has expired: Deprecated by upstream
+www/rubygem-jquery-atwho-rails-rails4|www/rubygem-jquery-atwho-rails|2017-04-10|Has expired: Use www/rubygem-jquery-atwho-rails instead
+www/p5-Catalyst-Plugin-Singleton||2017-04-10|Has expired: Deprecated by upstream
+x11/lumina-i18n||2017-04-10|Has expired: Obsolete, i18n files included in x11/lumina
+sysutils/jail2||2017-04-10|Has expired: Starting with 10.0 functionality has been merged into base.
+sysutils/iocage-devel||2017-04-10|Has expired: Outdated version. Please use sysutils/py-iocage instead
+sysutils/iocage||2017-04-10|Has expired: Outdated version. Please use sysutils/py-iocage instead
+databases/puppetdb||2017-04-10|Has expired: Depends on expired sysutils/puppet38, use puppetdb[34] instead
+databases/puppetdb-terminus||2017-04-10|Has expired: Depends on expired sysutils/puppet38, use puppetdb-terminus[34]
+databases/pglesslog||2017-04-10|Has expired: Does not build with recent PostgreSQL versions
+textproc/go-text||2017-04-10|Has expired: Go libraries should not be packaged
+devel/go-pretty||2017-04-10|Has expired: Go libraries should not be packaged
+databases/godis||2017-04-10|Has expired: Go libraries should not be packaged
+www/moodle29|www/moodle32|2017-04-10|Has expired: Upstream support EoL, please migrate to moodle32
+audio/schism|audio/schismtracker|2017-04-12|Renamed for better naming
