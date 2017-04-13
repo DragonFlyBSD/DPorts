@@ -39,6 +39,8 @@ PLIST_SUB+=	OPSYS=${OPSYS:tl} OSREL=${OSREL}
 .endif
 .endif
 
+TARGETARCH=${PKGNAMEPREFIX:C/-//g}
+
 GNU_CONFIGURE=	yes
 CONFIGURE_OUTSOURCE=	yes
 CONFIGURE_ARGS+=--target=${GCC_TARGET} --disable-nls --enable-languages=c,c++ \
@@ -54,15 +56,22 @@ ALL_TARGET?=	all-gcc
 INSTALL_TARGET?=	install-gcc
 
 .include <bsd.port.options.mk>
+.include <bsd.port.pre.mk>
 
 post-patch:
 	@${REINPLACE_CMD} -e '/LIBSTDCXX/ s/stdc\+\+/c\+\+/g ' \
 		${WRKSRC}//gcc/cp/g++spec.c
 
-.if ${ARCH} == "x86_64"
+.if ${TARGETARCH} == "x86_64"
 CONFIGURE_TARGET=	x86_64-unknown-${OPSYS:tl}${OSREL}
 .else
 CONFIGURE_TARGET=	${ARCH}-unknown-${OPSYS:tl}${OSREL}
+.endif
+
+.if ${TARGETARCH} == "armv6" || ${TARGETARCH} == "aarch64"
+. if ${COMPILER_TYPE} == clang
+MAKE_ARGS+=CXXFLAGS=-fbracket-depth=512
+. endif
 .endif
 
 post-install:
@@ -78,4 +87,4 @@ post-install:
 	@${RM} ${STAGEDIR}${PREFIX}/info/*
 	@${RM} ${STAGEDIR}${PREFIX}/man/man7/*
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
