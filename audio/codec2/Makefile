@@ -2,7 +2,7 @@
 
 PORTNAME=	codec2
 PORTVERSION=	0.5.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	audio hamradio
 MASTER_SITES=	http://files.freedv.org/codec2/ \
 		LOCAL/db
@@ -11,12 +11,10 @@ MAINTAINER=	hamradio@FreeBSD.org
 COMMENT=	Low bit rate codec
 
 LICENSE=	LGPL21
-CONFLICTS=	libcodec2-*
 
 LIB_DEPENDS=	libspeex.so:audio/speex
 
-BROKEN_powerpc64=	Does not build
-
+CONFLICTS=	libcodec2-*
 USES=		cmake:outsource compiler:c11 tar:xz
 USE_LDCONFIG=	yes
 
