@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	cppcheck
-PORTVERSION=	1.77
+PORTVERSION=	1.78
+PORTREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	SF
 
@@ -14,7 +15,8 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libtinyxml2.so:textproc/tinyxml2
 
-USES=		compiler:c++11-lib execinfo gmake tar:bzip2
+USES=		compiler:c++11-lib execinfo gmake python shebangfix tar:bzip2
+SHEBANG_FILES=	htmlreport/cppcheck-htmlreport
 USE_CXXSTD=	c++11
 
 ALL_TARGET=	cppcheck
