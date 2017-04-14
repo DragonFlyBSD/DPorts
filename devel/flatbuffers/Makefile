@@ -3,6 +3,7 @@
 
 PORTNAME=	flatbuffers
 PORTVERSION=	1.6.0
+PORTREVISION=	1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	devel
 
@@ -11,8 +12,6 @@ COMMENT=	Memory efficient serialization library
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
-
-BROKEN_powerpc64=	Does not build
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	google
