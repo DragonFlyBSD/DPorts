@@ -2,9 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	gitlab
-PORTVERSION=	8.16.8
+PORTVERSION=	8.16.9
 DISTVERSIONPREFIX=	v
-PORTREVISION=	1
 CATEGORIES=	www devel
 
 MAINTAINER=	tz@FreeBSD.org
@@ -77,7 +76,7 @@ RUN_DEPENDS=	git>=2.8.4:devel/git \
 	rubygem-fog-local>=0.3:net/rubygem-fog-local \
 	rubygem-fog-openstack>=0.1:net/rubygem-fog-openstack \
 	rubygem-fog-rackspace>=0.1.1:net/rubygem-fog-rackspace \
-	rubygem-google-api-client>=0.8.6:devel/rubygem-google-api-client \
+	rubygem-google-api-client010>=0.8.6:devel/rubygem-google-api-client010 \
 	rubygem-unf>=0.1.4:textproc/rubygem-unf \
 	rubygem-seed-fu>=2.3.5:databases/rubygem-seed-fu \
 	rubygem-html-pipeline1>=1.11.0:textproc/rubygem-html-pipeline1 \
@@ -151,7 +150,7 @@ RUN_DEPENDS=	git>=2.8.4:devel/git \
 	rubygem-base32>=0.3.2:converters/rubygem-base32 \
 	rubygem-sentry-raven>=2.0.0:devel/rubygem-sentry-raven \
 	rubygem-premailer-rails>=1.9.0:mail/rubygem-premailer-rails \
-	rubygem-newrelic_rpm>=3.16:devel/rubygem-newrelic_rpm \
+	rubygem-newrelic_rpm3>=3.16:devel/rubygem-newrelic_rpm3 \
 	rubygem-octokit>=4.6.2:net/rubygem-octokit \
 	rubygem-mail_room>=0.9.0:mail/rubygem-mail_room \
 	rubygem-email_reply_trimmer>=0.1:mail/rubygem-email_reply_trimmer \
