@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/www/varnish5/files/varnishd.in 427381 2016-11-29 14:56:48Z feld $
+# $FreeBSD: head/www/varnish5/files/varnishd.in 438113 2017-04-09 18:29:05Z feld $
 #
 
 # PROVIDE: varnishd
@@ -99,7 +99,7 @@ varnishd_reload()
 	if [ -z "${varnishd_config}" ]; then
 		echo "${name}: nothing to reload, no configuration file defined, builtin VCL used"
 	else
-		_new_config_name="rc.d_reloaded@$(date +%Y%m%d%H%M%S)"
+		_new_config_name="reloaded_$(date +%Y%m%d%H%M%S)"
 		_varnishadm_cmd="%%PREFIX%%/bin/varnishadm ${varnish_cli_flags}"
 		if ! eval ${_varnishadm_cmd} vcl.list > /dev/null; then
 			err 1 "${name}: can't connect to varnishadm"
