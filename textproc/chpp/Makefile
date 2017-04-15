@@ -29,7 +29,7 @@ OPTIONS_DEFINE=	DOCS EXAMPLES
 
 .include <bsd.port.pre.mk>
 
-.if ${ARCH} != "i386" && ${ARCH} != "x86_64"
+.if ${ARCH} != "i386" && ${ARCH} != "x86_64" && ${ARCH} != "powerpc64"
 BROKEN=		Does not compile
 .endif
 
