@@ -1,10 +1,10 @@
 #!/bin/sh
 #
-# $FreeBSD: head/www/e2guardian/files/e2guardian.in 409489 2016-02-25 02:15:00Z acm $
+# $FreeBSD: head/www/e2guardian/files/e2guardian.in 437392 2017-04-01 02:49:39Z wen $
 #
 
 # PROVIDE: e2guardian
-# REQUIRE: NETWORKING SERVERS
+# REQUIRE: NETWORKING SERVERS squid clamav_clamd
 # BEFORE: DAEMON
 # KEYWORD: shutdown
 
