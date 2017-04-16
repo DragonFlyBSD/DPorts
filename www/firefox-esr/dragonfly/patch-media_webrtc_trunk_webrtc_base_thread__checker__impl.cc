@@ -1,4 +1,4 @@
---- media/webrtc/trunk/webrtc/base/thread_checker_impl.cc.orig	2016-05-12 20:09:59.000000000 +0300
+--- media/webrtc/trunk/webrtc/base/thread_checker_impl.cc.orig	2016-05-12 20:13:19.000000000 +0300
 +++ media/webrtc/trunk/webrtc/base/thread_checker_impl.cc
 @@ -22,6 +22,11 @@
  #include <lwp.h>
