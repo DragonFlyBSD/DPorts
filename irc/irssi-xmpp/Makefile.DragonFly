@@ -1,7 +1,0 @@
-
-# is freebsd-ports out of sync? Current irssi has:
-# /usr/local/include/irssi/src/core/server-setup-rec.h:
-# unsigned int use_ssl:1; /* this connection uses SSL */
-dfly-patch:
-	${REINPLACE_CMD} -e 's@->use_tls@->use_ssl@g'	\
-		${WRKSRC}/src/core/xmpp-servers.c
