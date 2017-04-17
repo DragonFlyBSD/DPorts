@@ -1,3 +1,0 @@
-
-dfly-patch:
-	${LN} -sv ${WRKSRC}/logo.free.png ${WRKSRC}/logo.png
