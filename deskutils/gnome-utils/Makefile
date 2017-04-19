@@ -13,7 +13,6 @@ USES=		metaport
 
 RUN_DEPENDS=	baobab>=3.0:deskutils/baobab \
 		gnome-screenshot>=3.0:deskutils/gnome-screenshot \
-		gnote>=3.0:deskutils/gnote \
 		gnome-search-tool>=3.0:deskutils/gnome-search-tool \
 		gnome-dictionary>=3.0:deskutils/gnome-dictionary \
 		gnome-system-log>=3.0:deskutils/gnome-system-log \
