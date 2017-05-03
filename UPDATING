@@ -1566,13 +1566,3 @@ you update your ports collection, before attempting any port upgrades.
   Portupgrade users:
       portupgrade -fr security/libressl
 
-20160501:
-  AFFECTS: users of mail/dspam
-  AUTHOR: junovitch@FreeBSD.org
-
-  dspam has been modified to no longer run as root:mail by default.
-  Existing configuration must be adjusted to reflect using a non-privileged
-  port and the /var/run/dspam directory for PID and socket files.  If you
-  need dspam to run as root for your mail setup, you can use the SETUID
-  config option to enable the old insecure behavior.
-

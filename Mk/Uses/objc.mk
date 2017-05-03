@@ -26,11 +26,7 @@ _ALTCCVERSION!=	/usr/bin/clang --version
 _ALTCCVERSION!=	/usr/bin/gcc --version
 .endif
 
-.if defined(.PARSEDIR)
 ALT_COMPILER_VERSION=	${_ALTCCVERSION:M[0-9].[0-9]*:tW:C/([0-9]).([0-9]).*/\1\2/g}
-.else
-ALT_COMPILER_VERSION=	${_ALTCCVERSION:M[0-9].[0-9]*:C/([0-9]).([0-9]).*/\1\2/g:u}
-.endif
 .if ${_ALTCCVERSION:Mclang}
 ALT_COMPILER_TYPE=	clang
 .elif !empty(_ALTCCVERSION)
