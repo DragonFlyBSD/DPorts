@@ -2,7 +2,7 @@
 
 PORTNAME=	llvm
 DISTVERSION=	3.9.1
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	devel lang
 MASTER_SITES=	http://llvm.org/${PRE_}releases/${LLVM_RELEASE}/${RCDIR}
 PKGNAMESUFFIX=	${LLVM_SUFFIX}
@@ -27,10 +27,15 @@ LLVM_PREFIX=	${PREFIX}/llvm${LLVM_SUFFIX}
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}${LLVM_SUFFIX}
 DATADIR=	${PREFIX}/share/${PORTNAME}${LLVM_SUFFIX}
 
-USES=		cmake:outsource compiler:c++11-lib libedit ninja perl5 tar:xz
+USES=		cmake:outsource compiler:c++11-lib libedit ninja perl5 tar:xz \
+		shebangfix
 _USES_PYTHON?=	python:build
 USES+=		${_USES_PYTHON}
 USE_LDCONFIG=	${LLVM_PREFIX}/lib
+SHEBANG_FILES=	utils/lit/lit.py utils/llvm-lit/llvm-lit.in \
+		tools/clang/tools/scan-view/bin/scan-view \
+		tools/clang/tools/clang-format/git-clang-format \
+		tools/clang/tools/clang-format/clang-format-diff.py
 
 SUB_FILES=	llvm-wrapper.sh
 SUB_LIST=	LLVM_PREFIX="${LLVM_PREFIX}" LLVM_SUFFIX="${LLVM_SUFFIX}"
@@ -230,8 +235,6 @@ MAN1SRCS+=	bugpoint.1 llc.1 lli.1 llvm-ar.1 llvm-as.1 \
 		llvm-profdata.1 llvm-readobj.1 llvm-stress.1 llvm-symbolizer.1 \
 		opt.1 tblgen.1
 
-NOT_FOR_ARCH=	ia64
-
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "x86_64"
@@ -278,6 +281,9 @@ _COMPILER_RT_LIBS+= \
 COMMANDS+=	${EXTRAS_COMMANDS}
 MAN1SRCS+=	extraclangtools.1
 PORTDOCS+=	clang-tools
+SHEBANG_FILES+=	tools/clang/tools/extra/clang-tidy/tool/clang-tidy-diff.py \
+		tools/clang/tools/extra/clang-tidy/tool/run-clang-tidy.py \
+		tools/clang/tools/extra/include-fixer/find-all-symbols/tool/run-find-all-symbols.py
 .endif
 
 .if ${PORT_OPTIONS:MLLD}
