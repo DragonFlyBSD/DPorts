@@ -15,6 +15,9 @@ COMMENT=	Cross platform C++ library, used by OpenH323
 
 LIB_DEPENDS=	libexpat.so:textproc/expat2
 
+BROKEN_aarch64=		fails to compile: fatal error: trclib.h: No such file or directory
+BROKEN_mips64=		fails to compile: fatal error: trclib.h: No such file or directory
+
 CONFLICTS=	ptlib-2.*
 
 WRKSRC=		${WRKDIR}/ptlib_v${PORTVERSION:S/./_/g}
@@ -93,7 +96,7 @@ PLIST_SUB+=	DC1394="@comment "
 
 .include <bsd.port.pre.mk>
 
-.if (${ARCH} == "x86_64") || (${ARCH} == "ia64") || (${ARCH} == "powerpc") || (${ARCH} == "sparc64")
+.if (${ARCH} == "x86_64") || (${ARCH} == "powerpc") || (${ARCH} == "sparc64")
 CFLAGS+=	-fPIC
 .endif
 
