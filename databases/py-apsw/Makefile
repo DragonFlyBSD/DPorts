@@ -2,19 +2,19 @@
 # $FreeBSD$
 
 PORTNAME=	apsw
-PORTVERSION=	3.17.0
+PORTVERSION=	3.18.0
 DISTVERSIONSUFFIX=	-r1
 CATEGORIES=	databases python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Another Python SQLite Wrapper
 
 LICENSE=	ZLIB
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USE_PYTHON=	autoplist concurrent distutils
-USES=		localbase python sqlite:3
+USES?=		localbase python sqlite:3
 
 GH_ACCOUNT=	rogerbinns
 USE_GITHUB=	yes
