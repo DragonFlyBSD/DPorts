@@ -3,7 +3,7 @@
 
 PORTNAME=	ansible
 PORTVERSION?=	2.3.0.0
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	http://releases.ansible.com/ansible/
 
@@ -19,6 +19,8 @@ RUN_DEPENDS?=	${PYTHON_PKGNAMEPREFIX}yaml>0:devel/py-yaml \
 		${PYTHON_PKGNAMEPREFIX}Jinja2>0:devel/py-Jinja2 \
 		${PYTHON_PKGNAMEPREFIX}netaddr>0:net/py-netaddr
 
+EXTRA_PATCHES?=	${FILESDIR}/extra-patch-f82d95a
+
 NO_ARCH=	yes
 USES?=		cpe python
 USE_PYTHON=	autoplist distutils
@@ -27,7 +29,7 @@ CPE_VENDOR=	ansibleworks
 SUB_FILES=	pkg-message
 SUB_LIST+=	PYTHON_CMD=${PYTHON_CMD}
 
-PLIST_FILES+=	man/man1/ansible-console.1.gz \
+PLIST_FILES?=	man/man1/ansible-console.1.gz \
 		man/man1/ansible-doc.1.gz \
 		man/man1/ansible-galaxy.1.gz \
 		man/man1/ansible-playbook.1.gz \
