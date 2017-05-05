@@ -2,11 +2,11 @@
 # $FreeBSD$
 
 PORTNAME=	gcc
-PORTVERSION=	5.4.1.s20170404
+PORTVERSION=	5.4.1.s20170425
 CATEGORIES=	lang java
 MASTER_SITES=	GCC/snapshots/${DIST_VERSION}
-DISTNAME=	gcc-${DIST_VERSION}
 PKGNAMESUFFIX=	${SUFFIX}-devel
+DISTNAME=	gcc-${DIST_VERSION}
 
 MAINTAINER=	gerald@FreeBSD.org
 COMMENT=	GNU Compiler Collection 5
@@ -52,6 +52,9 @@ OPTIONS_DEFAULT_powerpc64=	JAVA
 OPTIONS_EXCLUDE_DragonFly=	JAVA
 BOOTSTRAP_DESC=		Build using a full bootstrap
 GRAPHITE_DESC=		Support for Graphite loop optimizations
+
+JAVA_USES=	python:build shebangfix
+SHEBANG_FILES=	libjava/contrib/aot-compile.in
 
 .if exists(/usr/lib32/libc.so)
 OPTIONS_DEFINE_powerpc64+=	MULTILIB
