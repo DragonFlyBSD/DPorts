@@ -3,6 +3,7 @@
 
 PORTNAME=	darktable
 PORTVERSION=	2.2.4
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	https://github.com/darktable-org/${PORTNAME}/releases/download/release-${PORTVERSION:C/\.rc/rc/}/
 
@@ -96,8 +97,8 @@ WEBP_CMAKE_OFF=		-DUSE_WEBP:BOOL=OFF
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == x86_64 && ${CHOSEN_COMPILER_TYPE} == clang
-# Enable OpenMP support with Clang 3.9.
-LLVM_VER=	39
+# Enable OpenMP support with Clang 4.0.
+LLVM_VER=	40
 BUILD_DEPENDS+=	clang${LLVM_VER}:devel/llvm${LLVM_VER}
 
 CPP=		clang-cpp${LLVM_VER}
