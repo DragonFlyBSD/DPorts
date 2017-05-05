@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net/miredo/files/miredo-server.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/net/miredo/files/miredo-server.in 439589 2017-04-27 23:36:45Z jkim $
 #
 
 # PROVIDE: miredo-server
@@ -12,12 +12,12 @@
 #
 #miredo_server_enable="YES"
 #
-miredo_server_enable="${miredo-server_enable-NO}"
+miredo_server_enable="${miredo_server_enable:-NO}"
 
 . /etc/rc.subr
 
 name=miredo-server
-rcvar=miredo-server_enable
+rcvar=miredo_server_enable
 
 command=%%PREFIX%%/sbin/${name}
 required_files=%%PREFIX%%/etc/miredo/miredo-server.conf
