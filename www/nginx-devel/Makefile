@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	nginx
-PORTVERSION=	1.11.10
+PORTVERSION=	1.13.0
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://nginx.org/download/
 MASTER_SITES+=	LOCAL/osa
@@ -70,7 +71,6 @@ OPTIONS_DEFINE=	\
 	FASTDFS \
 	HEADERS_MORE \
 	HTTP_ACCEPT_LANGUAGE \
-	HTTP_ACCESSKEY \
 	HTTP_AUTH_DIGEST \
 	HTTP_AUTH_KRB5 \
 	HTTP_AUTH_LDAP \
@@ -122,10 +122,7 @@ OPTIONS_DEFINE=	\
 	SLOWFS_CACHE \
 	SMALL_LIGHT \
 	SRCACHE \
-	STATSD \
-	UDPLOG \
 	X11 \
-	XRID_HEADER \
 	XSS
 
 OPTIONS_DEFAULT?=DSO FILE_AIO HTTP HTTP_ADDITION HTTP_AUTH_REQ HTTP_CACHE \
@@ -139,6 +136,7 @@ DSO_DESC=			Enable dynamic modules support
 DEBUG_DESC=			Build with debugging support
 DEBUGLOG_DESC=			Enable debug log (--with-debug)
 FILE_AIO_DESC=			Enable file aio
+IPV6_DESC=			Enable IPv6 support
 GOOGLE_PERFTOOLS_DESC=		Enable google perftools module
 HTTP_DESC=			Enable HTTP module
 HTTP_ADDITION_DESC=		Enable http_addition module
@@ -182,7 +180,6 @@ ECHO_DESC=			3rd party echo module
 FASTDFS_DESC=			3rd party fastdfs module
 HEADERS_MORE_DESC=		3rd party headers_more module
 HTTP_ACCEPT_LANGUAGE_DESC=	3rd party accept_language module
-HTTP_ACCESSKEY_DESC=		3rd party http_accesskey module
 HTTP_AUTH_DIGEST_DESC=		3rd party http_authdigest module
 HTTP_AUTH_KRB5_DESC=		3rd party http_auth_gss module
 HTTP_AUTH_LDAP_DESC=		3rd party http_auth_ldap module
@@ -234,10 +231,7 @@ SHIBBOLETH_DESC=		3rd party shibboleth module
 SLOWFS_CACHE_DESC=		3rd party slowfs_cache module
 SMALL_LIGHT_DESC=		3rd party small_light module
 SRCACHE_DESC=			3rd party srcache module
-STATSD_DESC=			3rd party statsd module
-UDPLOG_DESC=			3rd party udplog (syslog) module
 X11_DESC=			graphics/ImageMagick[-nox11] dependency
-XRID_HEADER_DESC=		3rd party x-rid header module
 XSS_DESC=			3rd party xss module
 VIDEO_DESC=			Video module support
 
@@ -312,8 +306,9 @@ CONFIGURE_ARGS+=--with-debug
 CONFIGURE_ARGS+=--with-file-aio
 .endif
 
-.if ${PORT_OPTIONS:MIPV6}
-CONFIGURE_ARGS+=--with-ipv6
+.if empty(PORT_OPTIONS:MIPV6)
+CONFIGURE_ARGS+=--with-cc-opt="-DNGX_HAVE_INET6=0"
+.else
 CATEGORIES+=	ipv6
 .endif
 
@@ -338,14 +333,6 @@ GH_TAGNAME+=	${GIT_ACCEPT_LANGUAGE_VERSION}:accept_language
 CONFIGURE_ARGS+=--add-module=${WRKSRC_accept_language}
 .endif
 
-.if ${PORT_OPTIONS:MHTTP_ACCESSKEY}
-NGINX_ACCESSKEY_VERSION=	2.0.3
-MASTER_SITES+=	LOCAL/osa:accesskey
-DISTFILES+=	nginx-accesskey-${NGINX_ACCESSKEY_VERSION}.tar.gz:accesskey
-CONFIGURE_ARGS+=--add-module=${WRKDIR}/nginx-accesskey-${NGINX_ACCESSKEY_VERSION}
-IGNORE=	ACCESSKEY: a patch requires
-.endif
-
 .if ${PORT_OPTIONS:MHTTP_ADDITION}
 CONFIGURE_ARGS+=--with-http_addition_module
 .endif
@@ -359,14 +346,16 @@ CONFIGURE_ARGS+=--add-module=${WRKSRC_auth_digest}
 .endif
 
 .if ${PORT_OPTIONS:MHTTP_AUTH_KRB5}
-GIT_HTTP_AUTH_KRB5_VERSION=	c85a38c
+GIT_HTTP_AUTH_KRB5_VERSION=	0c6ff3f
 GH_ACCOUNT+=	stnoonan:auth_krb5
 GH_PROJECT+=	spnego-http-auth-nginx-module:auth_krb5
 GH_TAGNAME+=	${GIT_HTTP_AUTH_KRB5_VERSION}:auth_krb5
 CONFIGURE_ARGS+=--add-module=${WRKSRC_auth_krb5}
-EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-spnego-http-auth-nginx-module-config
-# TODO: Provide optional dependence on Kerberos implementations from ports
-USES+=	gssapi:base,flags
+#EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-spnego-http-auth-nginx-module-config
+#OPTIONS_RADIO+=		GSSAPI
+#OPTIONS_RADIO_GSSAPI+=	GSSAPI_HEIMDAL GSSAPI_MIT
+#GSSAPI_HEIMDAL_USES=	gssapi:heimdal,flags
+#GSSAPI_MIT_USES=	gssapi:mit
 .endif
 
 .if ${PORT_OPTIONS:MHTTP_AUTH_LDAP}
@@ -465,6 +454,7 @@ CONFIGURE_ARGS+=--add-dynamic-module=${WRKSRC_echo}
 .else
 CONFIGURE_ARGS+=--add-module=${WRKSRC_echo}
 .endif
+EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-ngx_http_echo_request_info.c
 .endif
 
 .if ${PORT_OPTIONS:MFASTDFS}
@@ -713,12 +703,11 @@ CONFIGURE_ARGS+=--with-http_sub_module
 .endif
 
 .if ${PORT_OPTIONS:MHTTP_UPLOAD}
-GIT_UPLOAD_VERSION=	aba1e3f34c
-GH_ACCOUNT+=	vkholodkov:upload
+GIT_UPLOAD_VERSION=	72ec037
+GH_ACCOUNT+=	Austinb:upload
 GH_PROJECT+=	nginx-upload-module:upload
 GH_TAGNAME+=	${GIT_UPLOAD_VERSION}:upload
 CONFIGURE_ARGS+=--add-module=${WRKSRC_upload}
-IGNORE=	HTTP_UPLOAD: a patch requires
 .endif
 
 .if ${PORT_OPTIONS:MHTTP_UPLOAD_PROGRESS}
@@ -744,14 +733,14 @@ EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-src-http-modules-ngx_http_upstream_hash_
 .endif
 
 .if !empty(PORT_OPTIONS:MHTTP_UPSTREAM_FAIR)
-NGINX_UPSTREAM_FAIR_VERSION=	20090923
-MASTER_SITES+=	LOCAL/osa:upstreamfair
-DISTFILES+=	nginx_upstream_fair-${NGINX_UPSTREAM_FAIR_VERSION}.tar.gz:upstreamfair
-CONFIGURE_ARGS+=--add-module=${WRKDIR}/nginx_upstream_fair-${NGINX_UPSTREAM_FAIR_VERSION}
-.if !empty(PORT_OPTIONS:MHTTP_UPSTREAM_CHECK)
-EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-ngx_http_upstream_fair_module.c
-IGNORE=	HTTP_UPSTREAM_FAIR: a patch requires
-.endif
+NGINX_UPSTREAM_FAIR_VERSION=	b5be36f
+GH_ACCOUNT+=	cryptofuture:upstreamfair
+GH_PROJECT+=	nginx-upstream-fair:upstreamfair
+GH_TAGNAME+=	${NGINX_UPSTREAM_FAIR_VERSION}:upstreamfair
+CONFIGURE_ARGS+=--add-module=${WRKSRC_upstreamfair}
+#.if !empty(PORT_OPTIONS:MHTTP_UPSTREAM_CHECK)
+#EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-ngx_http_upstream_fair_module.c
+#.endif
 .endif
 
 .if ${PORT_OPTIONS:MHTTP_UPSTREAM_STICKY}
@@ -786,12 +775,11 @@ CONFIGURE_ARGS+=--with-http_xslt_module
 .endif
 
 .if ${PORT_OPTIONS:MHTTP_ZIP}
-NGINX_ZIP_VERSION=	ca0b345
-GH_ACCOUNT+=	evanmiller:mod_zip
+NGINX_ZIP_VERSION=	74ef235
+GH_ACCOUNT+=	anthonyryan1:mod_zip
 GH_PROJECT+=	mod_zip:mod_zip
 GH_TAGNAME+=	${NGINX_ZIP_VERSION}:mod_zip
 CONFIGURE_ARGS+=--add-module=${WRKDIR}/mod_zip-${NGINX_ZIP_VERSION}
-IGNORE=	HTTP_ZIP: a patch requires
 .endif
 
 .if ${PORT_OPTIONS:MDRIZZLE}
@@ -857,7 +845,7 @@ CONFIGURE_ARGS+=--add-module=${WRKSRC_let}
 LIB_DEPENDS+=	libluajit-5.1.so:lang/luajit
 CONFIGURE_ENV+=	"LUAJIT_INC=${LOCALBASE}/include/luajit-2.0"
 CONFIGURE_ENV+=	"LUAJIT_LIB=${LOCALBASE}/lib"
-NGINX_LUA_VERSION=	0.10.7
+NGINX_LUA_VERSION=	0.10.8
 GH_ACCOUNT+=	openresty:lua
 GH_PROJECT+=	lua-nginx-module:lua
 GH_TAGNAME+=	v${NGINX_LUA_VERSION}:lua
@@ -866,6 +854,11 @@ CONFIGURE_ARGS+=--add-dynamic-module=${WRKSRC_lua}
 .else
 CONFIGURE_ARGS+=--add-module=${WRKSRC_lua}
 .endif
+EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-ngx_http_lua_common.h  \
+		${PATCHDIR}/extra-patch-ngx_http_lua_headers.c \
+		${PATCHDIR}/extra-patch-ngx_http_lua_headers.h \
+		${PATCHDIR}/extra-patch-ngx_http_lua_module.c \
+		${PATCHDIR}/extra-patch-ngx_http_lua_ssl_ocsp.c
 .endif
 
 .if ${PORT_OPTIONS:MMEMC}
@@ -890,7 +883,8 @@ USES+=		pkgconfig shebangfix
 MASTER_SITES+=	http://www.modsecurity.org/tarball/${NGINX_MODSECURITY_VERSION:S/RC/rc/}/:modsecurity
 DISTFILES+=	modsecurity-${NGINX_MODSECURITY_VERSION}.tar.gz:modsecurity
 CONFIGURE_ARGS+=--add-module=${WRKDIR}/modsecurity-${NGINX_MODSECURITY_VERSION}/nginx/modsecurity
-EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-nginx-modsecurity-configure
+EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-nginx-modsecurity-configure \
+		${PATCHDIR}/extra-patch-ngx_http_modsecurity.c
 .endif
 
 .if ${PORT_OPTIONS:MNAXSI}
@@ -1029,30 +1023,6 @@ GH_TAGNAME+=	v${NGINX_SRCACHE_VERSION}:srcache
 CONFIGURE_ARGS+=--add-module=${WRKSRC_srcache}
 .endif
 
-.if ${PORT_OPTIONS:MSTATSD}
-NGINX_STATSD_VERSION=	b756a12
-GH_ACCOUNT+=	zebrafishlabs:statsd
-GH_PROJECT+=	nginx-statsd:statsd
-GH_TAGNAME+=	${NGINX_STATSD_VERSION}:statsd
-CONFIGURE_ARGS+=--add-module=${WRKSRC_statsd}
-.endif
-
-.if ${PORT_OPTIONS:MUDPLOG}
-NGINX_UDPLOG_VERSION=	1.0.0
-MASTER_SITES+=	http://www.grid.net.ru/nginx/download/:udplog
-DISTFILES+=	nginx_udplog_module-${NGINX_UDPLOG_VERSION}.tar.gz:udplog
-CONFIGURE_ARGS+=--add-module=${WRKDIR}/nginx_udplog_module-${NGINX_UDPLOG_VERSION}
-EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-ngx_http_udplog_module.c
-.endif
-
-.if ${PORT_OPTIONS:MXRID_HEADER}
-GIT_XRID_VERSION=	0daa3cc
-GH_ACCOUNT+=	gabor:xrid
-GH_PROJECT+=	nginx-x-rid-header:xrid
-GH_TAGNAME+=	${GIT_XRID_VERSION}:xrid
-CONFIGURE_ARGS+=--add-module=${WRKSRC_xrid}
-.endif
-
 .if ${PORT_OPTIONS:MXSS}
 NGINX_XSS_VERSION=	0.05
 GH_ACCOUNT+=	openresty:xss
@@ -1070,7 +1040,7 @@ CONFIGURE_ARGS+=--with-http_v2_module
 .if ${PORT_OPTIONS:MNJS}
 GH_ACCOUNT+=	nginx:njs
 GH_PROJECT+=	njs:njs
-GH_TAGNAME+=	f106743:njs
+GH_TAGNAME+=	753ebe6:njs
 .if !empty(PORT_OPTIONS:MDSO)
 CONFIGURE_ARGS+=--add-dynamic-module=${WRKSRC_njs}/nginx
 .else
@@ -1265,20 +1235,6 @@ post-patch:
 	@${REINPLACE_CMD} \
 		's!%%PREFIX%%!${LOCALBASE}!g' \
 		${WRKDIR}/nginx-sflow-module-${NGINX_SFLOW_VERSION}/ngx_http_sflow_config.h
-.endif
-.if ${PORT_OPTIONS:MSTATSD}
-	@${REINPLACE_CMD} \
-		's!ngx_udp_connection_t!ngx_resolver_connection_t!g; \
-		s!uc->connection!uc->udp!g; \
-		s!e->udp_connection->connection!e->udp_connection->udp!g' \
-		${WRKSRC_statsd}/ngx_http_statsd.c
-.endif
-.if ${PORT_OPTIONS:MUDPLOG}
-	@${REINPLACE_CMD} \
-		's!ngx_udp_connection_t!ngx_resolver_connection_t!g; \
-		s!uc->connection!uc->udp!g; \
-		s!e->udp_connection->connection!e->udp_connection->udp!g' \
-		${WRKDIR}/nginx_udplog_module-${NGINX_UDPLOG_VERSION}/ngx_http_udplog_module.c
 .endif
 .if ${PORT_OPTIONS:MICONV}
 	@${REINPLACE_CMD} \
