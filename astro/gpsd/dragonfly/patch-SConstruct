@@ -1,11 +1,13 @@
---- SConstruct.orig	2016-01-30 16:35:46 UTC
+--- SConstruct.orig	2017-05-06 16:37:42 UTC
 +++ SConstruct
-@@ -539,12 +539,8 @@ else:
+@@ -539,14 +539,8 @@ else:
      # are like FreeBSD.
      ncurseslibs= []
      if env['ncurses']:
 -        if config.CheckPKG('ncurses'):
 -            ncurseslibs = pkg_config('ncurses')
+-	    if config.CheckPKG('tinfo'):
+-		ncurseslibs += pkg_config('tinfo')
 -        elif WhereIs('ncurses5-config'):
 -            ncurseslibs = ['!ncurses5-config --libs --cflags']
 -        elif WhereIs('ncursesw5-config'):
@@ -15,13 +17,13 @@
          elif sys.platform.startswith('freebsd'):
              ncurseslibs= [ '-lncurses' ]
          elif sys.platform.startswith('openbsd'):
-@@ -561,6 +557,9 @@ else:
+@@ -563,6 +557,9 @@ else:
              except OSError:
                  announce("pkg_config is confused about the state of libusb-1.0.")
-                 usblibs = []
+                 usbflags = []
 +        elif sys.platform.startswith("dragonfly"):
 +            confdefs.append("#define HAVE_LIBUSB 1\n")
-+            usblibs = [ "-lusb"]
++            usbflags = [ "-lusb"]
          elif sys.platform.startswith("freebsd"):
              confdefs.append("#define HAVE_LIBUSB 1\n")
-             usblibs = [ "-lusb"]
+             usbflags = [ "-lusb"]
