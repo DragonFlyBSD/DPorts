@@ -1,6 +1,9 @@
 #!/bin/sh
 
-perl %%PREFIX%%/libexec/backuppc/update.pl \
+PERL5LIB=%%PREFIX%%/lib; export PERL5LIB
+
+perl %%PREFIX%%/libexec/backuppc/configure.pl \
+    --config-only \
     --bin-path perl=%%PREFIX%%/bin/perl \
     --config-dir %%ETCDIR%% \
     --cgi-dir %%CGIDIR%% \
