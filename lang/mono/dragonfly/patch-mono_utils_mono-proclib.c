@@ -1,6 +1,6 @@
---- mono/utils/mono-proclib.c.orig	2015-11-12 11:00:29.000000000 +0200
+--- mono/utils/mono-proclib.c.orig	2017-05-06 16:30:40 UTC
 +++ mono/utils/mono-proclib.c
-@@ -31,7 +31,7 @@
+@@ -36,7 +36,7 @@
  #endif
  #include <sys/resource.h>
  #endif
@@ -9,7 +9,7 @@
  #include <sys/proc.h>
  #if defined(__APPLE__)
  #include <mach/mach.h>
-@@ -43,6 +43,10 @@
+@@ -48,6 +48,10 @@
  #    define kinfo_starttime_member kp_proc.p_starttime
  #    define kinfo_pid_member kp_proc.p_pid
  #    define kinfo_name_member kp_proc.p_comm
@@ -17,6 +17,6 @@
 +#    define kinfo_starttime_member kp_start
 +#    define kinfo_pid_member kp_pid
 +#    define kinfo_name_member kp_comm
- #elif defined(__OpenBSD__)
- // Can not figure out how to get the proc's start time on OpenBSD
- #    undef kinfo_starttime_member 
+ #elif defined(__NetBSD__)
+ #    define kinfo_starttime_member p_ustart_sec
+ #    define kinfo_pid_member p_pid

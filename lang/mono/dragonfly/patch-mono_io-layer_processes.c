@@ -1,4 +1,4 @@
---- mono/io-layer/processes.c.orig	2016-10-11 12:53:47 UTC
+--- mono/io-layer/processes.c.orig	2017-04-12 10:51:21 UTC
 +++ mono/io-layer/processes.c
 @@ -68,7 +68,9 @@
  #endif
@@ -10,7 +10,7 @@
  #include <sys/sysctl.h>
  #  if !defined(__OpenBSD__)
  #    include <sys/utsname.h>
-@@ -1951,8 +1953,13 @@ get_process_name_from_proc (pid_t pid)
+@@ -1970,8 +1972,13 @@ get_process_name_from_proc (pid_t pid)
  		return(ret);
  	}
  
@@ -21,6 +21,6 @@
  	if (strlen (pi->ki_comm) > 0)
  		ret = g_strdup (pi->ki_comm);
 +#endif
- 	free(pi);
+ 	g_free (pi);
  #elif defined(__OpenBSD__)
  	mib [0] = CTL_KERN;
