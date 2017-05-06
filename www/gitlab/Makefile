@@ -4,6 +4,7 @@
 PORTNAME=	gitlab
 PORTVERSION=	8.16.9
 DISTVERSIONPREFIX=	v
+PORTREVISION=	3
 CATEGORIES=	www devel
 
 MAINTAINER=	tz@FreeBSD.org
@@ -37,12 +38,12 @@ RUN_DEPENDS=	git>=2.8.4:devel/git \
 	rubygem-rugged>=0.24:devel/rubygem-rugged \
 	rubygem-devise>=4.2:devel/rubygem-devise \
 	rubygem-doorkeeper>=4.2.0:security/rubygem-doorkeeper \
-	rubygem-omniauth>=1.3.2:security/rubygem-omniauth \
+	rubygem-omniauth13>=1.3.2:security/rubygem-omniauth13 \
 	rubygem-omniauth-auth0>=1.4.1:net/rubygem-omniauth-auth0 \
 	rubygem-omniauth-azure-oauth2>=0.0.6:net/rubygem-omniauth-azure-oauth2 \
 	rubygem-omniauth-cas3>=1.1.2:security/rubygem-omniauth-cas3 \
 	rubygem-omniauth-facebook>=4.0.0:net/rubygem-omniauth-facebook \
-	rubygem-omniauth-github>=1.1.1:net/rubygem-omniauth-github \
+	rubygem-omniauth-github11>=1.1.1:net/rubygem-omniauth-github11 \
 	rubygem-omniauth-gitlab>=1.0.2:security/rubygem-omniauth-gitlab \
 	rubygem-omniauth-google-oauth2>=0.4.1:net/rubygem-omniauth-google-oauth2 \
 	rubygem-omniauth-saml>=1.7.0:security/rubygem-omniauth-saml \
@@ -100,7 +101,7 @@ RUN_DEPENDS=	git>=2.8.4:devel/git \
 	rubygem-after_commit_queue>=1.3.0:databases/rubygem-after_commit_queue \
 	rubygem-acts-as-taggable-on>=4.0.0:www/rubygem-acts-as-taggable-on \
 	rubygem-sidekiq>=4.2.7:devel/rubygem-sidekiq \
-	rubygem-sidekiq-cron>=0.4.4:devel/rubygem-sidekiq-cron \
+	rubygem-sidekiq-cron04>=0.4.4:devel/rubygem-sidekiq-cron04 \
 	rubygem-redis-namespace>=1.5.2:databases/rubygem-redis-namespace \
 	rubygem-sidekiq-limit_fetch>=3.4:devel/rubygem-sidekiq-limit_fetch \
 	rubygem-httparty>=0.13.3:www/rubygem-httparty \
@@ -156,7 +157,7 @@ RUN_DEPENDS=	git>=2.8.4:devel/git \
 	rubygem-email_reply_trimmer>=0.1:mail/rubygem-email_reply_trimmer \
 	rubygem-html2text>=0:textproc/rubygem-html2text \
 	rubygem-ruby-prof>=0.16.2:devel/rubygem-ruby-prof \
-	rubygem-oauth2>=1.2.0:net/rubygem-oauth2 \
+	rubygem-oauth212>=1.2.0:net/rubygem-oauth212 \
 	rubygem-paranoia>=2.2:databases/rubygem-paranoia \
 	rubygem-health_check22>=2.2.0:devel/rubygem-health_check22 \
 	rubygem-vmstat>=2.3.0:sysutils/rubygem-vmstat \
