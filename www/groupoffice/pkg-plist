@@ -90,6 +90,8 @@
 %%WWWDIR%%/go/base/exception/MissingParameter.php
 %%WWWDIR%%/go/base/exception/NoCron.php
 %%WWWDIR%%/go/base/exception/NotFound.php
+%%WWWDIR%%/go/base/exception/OtherLoginLocation.php
+%%WWWDIR%%/go/base/exception/PasswordNeedsChange.php
 %%WWWDIR%%/go/base/exception/RelationDeleteRestrict.php
 %%WWWDIR%%/go/base/exception/Save.php
 %%WWWDIR%%/go/base/exception/SecurityTokenMismatch.php
@@ -145,6 +147,7 @@
 %%WWWDIR%%/go/base/model/Acl.php
 %%WWWDIR%%/go/base/model/AclUsersGroups.php
 %%WWWDIR%%/go/base/model/AdvancedSearch.php
+%%WWWDIR%%/go/base/model/Client.php
 %%WWWDIR%%/go/base/model/Group.php
 %%WWWDIR%%/go/base/model/Grouped.php
 %%WWWDIR%%/go/base/model/Holiday.php
@@ -1231,6 +1234,7 @@
 %%WWWDIR%%/modules/addressbook/SelectContact.js
 %%WWWDIR%%/modules/addressbook/SelectContactDialog.js
 %%WWWDIR%%/modules/addressbook/SentMailingsGrid.js
+%%WWWDIR%%/modules/addressbook/Settings.js
 %%WWWDIR%%/modules/addressbook/SexCombobox.js
 %%WWWDIR%%/modules/addressbook/Stores.js
 %%WWWDIR%%/modules/addressbook/TemplatesGrid.js
@@ -1306,6 +1310,7 @@
 %%WWWDIR%%/modules/addressbook/model/SentMailing.php
 %%WWWDIR%%/modules/addressbook/model/SentMailingCompany.php
 %%WWWDIR%%/modules/addressbook/model/SentMailingContact.php
+%%WWWDIR%%/modules/addressbook/model/Settings.php
 %%WWWDIR%%/modules/addressbook/model/Template.php
 %%WWWDIR%%/modules/addressbook/scripts.inc.php
 %%WWWDIR%%/modules/addressbook/scripts.txt
@@ -3153,6 +3158,7 @@
 %%WWWDIR%%/modules/ipwhitelist/install/updates.php
 %%WWWDIR%%/modules/ipwhitelist/language/bn_BD.php
 %%WWWDIR%%/modules/ipwhitelist/language/cs.php
+%%WWWDIR%%/modules/ipwhitelist/language/de.php
 %%WWWDIR%%/modules/ipwhitelist/language/en.php
 %%WWWDIR%%/modules/ipwhitelist/language/fr.php
 %%WWWDIR%%/modules/ipwhitelist/language/nl.php
@@ -3649,6 +3655,8 @@
 %%WWWDIR%%/modules/projects2/report/EmployeesReport.php
 %%WWWDIR%%/modules/projects2/report/ExportAll.php
 %%WWWDIR%%/modules/projects2/report/Planning.php
+%%WWWDIR%%/modules/projects2/report/ProjectCostBatchReport.php
+%%WWWDIR%%/modules/projects2/report/ProjectCostReport.php
 %%WWWDIR%%/modules/projects2/report/ProjectReport.php
 %%WWWDIR%%/modules/projects2/report/ProjectsReport.php
 %%WWWDIR%%/modules/projects2/report/ProjectsReportLarge.php
@@ -4187,6 +4195,7 @@
 %%WWWDIR%%/modules/sync/z-push/config.php
 %%WWWDIR%%/modules/sync/z-push/install.sh
 %%WWWDIR%%/modules/sync/z-push/z-push-admin.php
+%%WWWDIR%%/modules/sync/z-push/z-push-top.php
 %%WWWDIR%%/modules/syncml/Response.php
 %%WWWDIR%%/modules/syncml/Server.php
 %%WWWDIR%%/modules/syncml/SyncmlModule.php
@@ -8034,8 +8043,10 @@
 %%WWWDIR%%/views/Extjs3/javascript/windows/ExportGridDialog.js
 %%WWWDIR%%/views/Extjs3/javascript/windows/LoginDialog.js
 %%WWWDIR%%/views/Extjs3/javascript/windows/MergeDialog.js
+%%WWWDIR%%/views/Extjs3/javascript/windows/OtherLoginLocationDetectedDialog.js
 %%WWWDIR%%/views/Extjs3/javascript/windows/PasswordDialog.js
 %%WWWDIR%%/views/Extjs3/javascript/windows/PersonalSettingsDialog.js
+%%WWWDIR%%/views/Extjs3/javascript/windows/RequirePasswordResetDialog.js
 %%WWWDIR%%/views/Extjs3/javascript/windows/ResetPasswordDialog.js
 %%WWWDIR%%/views/Extjs3/javascript/windows/SelectEmail.js
 %%WWWDIR%%/views/Extjs3/javascript/windows/SelectGroups.js
