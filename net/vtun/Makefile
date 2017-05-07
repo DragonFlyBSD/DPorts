@@ -41,7 +41,6 @@ OPTIONS_DEFINE=	DOCS
 post-patch:
 	${REINPLACE_CMD} \
 		-e 's|$$\(SSL_HDR_DIR\)|$$\1 $$\1/openssl|g' \
-		-e 's|$$\(BLOWFISH_HDR_DIR\)|$$\1 $$SSL_HDR_DIR/openssl|g' \
 		${WRKSRC}/configure
 
 post-install:

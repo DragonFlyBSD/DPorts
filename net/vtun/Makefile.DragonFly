@@ -1,0 +1,3 @@
+CONFIGURE_ARGS:= ${CONFIGURE_ARGS:N--with-ssl-head*} \
+	--with-blowfish-headers=${OPENSSLINC}/openssl \
+	--with-ssl-headers=${OPENSSLINC}/openssl
