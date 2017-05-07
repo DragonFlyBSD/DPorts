@@ -1,1 +1,7 @@
 USES+= alias
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NZFS}
+PLIST_FILES+=		lib/libvirt/storage-backend/libvirt_storage_backend_logical.so
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's|ACL_LIBS=""|ACL_LIBS="-lposix1e"|' \
+		${WRKSRC}/configure

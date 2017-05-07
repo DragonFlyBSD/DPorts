@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	libvirt
-PORTVERSION=	2.5.0
+PORTVERSION=	3.2.0
 CATEGORIES=	devel
 MASTER_SITES=	http://libvirt.org/sources/ \
 		ftp://libvirt.org/libvirt/
@@ -20,8 +20,8 @@ BUILD_DEPENDS=	dnsmasq:dns/dnsmasq \
 		xsltproc:textproc/libxslt
 RUN_DEPENDS=	dnsmasq:dns/dnsmasq
 
-OPTIONS_DEFINE=	DOCS GNUTLS NLS NSS QEMU READLINE SASL
-OPTIONS_DEFAULT=	GNUTLS READLINE
+OPTIONS_DEFINE=	DOCS GNUTLS NLS NSS QEMU READLINE SASL ZFS
+OPTIONS_DEFAULT=	GNUTLS READLINE ZFS
 OPTIONS_DEFINE_x86_64=	XEN
 .if exists(/usr/sbin/bhyve)
 OPTIONS_DEFINE_x86_64+=	BHYVE
@@ -35,6 +35,7 @@ QEMU_DESC=	QEMU driver
 BHYVE_DESC=	bhyve driver
 XEN_DESC=	Xen support via libxl
 NSS_DESC=	Name Service Switch plugin
+ZFS_DESC=	ZFS storage driver
 
 OPTIONS_SUB=	yes
 
@@ -65,6 +66,8 @@ SASL_LIB_DEPENDS=	libsasl2.so:security/cyrus-sasl2
 XEN_CONFIGURE_WITH=	libxl
 XEN_CFLAGS=	-I${LOCALBASE}/include
 XEN_LIB_DEPENDS=	libxenlight.so:sysutils/xen-tools
+
+ZFS_CONFIGURE_WITH=	storage-zfs
 
 VARDIR=		/var
 
@@ -112,6 +115,7 @@ PLIST_SUB+=	XEN="@comment "
 .endif
 
 CONF_FILES=	\
+		bhyve.conf \
 		libvirt-admin.conf \
 		libvirt.conf \
 		libvirtd.conf \
