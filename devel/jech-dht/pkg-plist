@@ -1,5 +1,4 @@
 lib/libdht.so.0
 lib/libdht.so
 lib/libdht.a
-bin/dht-example
 include/dht/dht.h
