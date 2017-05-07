@@ -1,7 +1,0 @@
-USES+= bison localbase
-
-MAKE_ARGS+= OS=freebsd ISSMP=yes
-
-dfly-patch:
-	${REINPLACE_CMD} -e 's@\(uname -s |\)@\1 sed -e "s/DragonFly/freebsd/" | @g'	\
-		${WRKSRC}/Makefile.defs
