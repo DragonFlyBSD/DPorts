@@ -1,1 +1,1 @@
-USE_GCC= 4.8+
+CONFIGURE_ARGS:=	${CONFIGURE_ARGS:N--with-jemalloc}
