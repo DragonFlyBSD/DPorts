@@ -1,2 +1,6 @@
 # boost stuff: dep auto_ptr and __float128 literals ext
 CXXFLAGS+=	-Wno-deprecated-declarations -fext-numeric-literals
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's|__FreeBSD__|__DragonFly__|' \
+		${WRKSRC}/include/system/libcontext.h
