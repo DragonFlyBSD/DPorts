@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	avr-libc
-PORTVERSION=	1.8.1
+PORTVERSION=	2.0.0
 PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	devel
@@ -42,20 +42,14 @@ HAS_CONFIGURE=	yes
 
 CONFIGURE_ENV=	CC=avr-gcc PREFIX=${PREFIX}
 .if ${PORT_OPTIONS:MDOXYGEN}
-CONFIGURE_ARGS=	--build=`./config.guess` --host=avr \
+CONFIGURE_ARGS=	--build=${CONFIGURE_TARGET} --host=avr \
 	--enable-doc --disable-versioned-doc --prefix=${PREFIX} \
 	--mandir=${PREFIX}/share/doc/avr-libc/man
 PLIST_DOC=	${PKGDIR}/pkg-plist.doc
 .else
-CONFIGURE_ARGS=	--build=`./config.guess` --host=avr --prefix=${PREFIX}
+CONFIGURE_ARGS=	--build=${CONFIGURE_TARGET} --host=avr --prefix=${PREFIX}
 PLIST_DOC=
 .endif
-# Work around the braind***ness introduced by <bsd.cpu.mk> in freebsd-5.
-# Sorry, the user is no longer be able to override the optimization and
-# debugging settings now.
-MAKE_ENV=	NO_CPU_CFLAGS=true
-CFLAGS+=	-O
-CXXFLAGS+=	-O
 
 post-patch:
 .if ! ${PORT_OPTIONS:MDOXYGEN}
@@ -69,6 +63,7 @@ do-install:
 		 ${FIND} . -type f \
 		  \( -name '*.html' -or -name '*.css' -or \
 		     -name '*.jpg' -or -name '*.png' \) |\
+		 ${GREP} -v '/search/' |\
 		 ${SORT} |\
 		 ${SED} -e 's|^\.|share/doc/avr-libc/avr-libc-user-manual|' \
 		 >> ${TMPPLIST})

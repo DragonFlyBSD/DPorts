@@ -1,0 +1,12 @@
+--- config.guess.orig	2010-03-16 23:05:25 UTC
++++ config.guess
+@@ -751,6 +751,9 @@ EOF
+     *:BSD/OS:*:*)
+ 	echo ${UNAME_MACHINE}-unknown-bsdi${UNAME_RELEASE}
+ 	exit 0 ;;
++    *:DragonFly:*:*)
++	echo ${UNAME_MACHINE}-unknown-dragonfly${UNAME_RELEASE}
++	exit 0 ;;
+     *:FreeBSD:*:*|*:GNU/FreeBSD:*:*)
+ 	# Determine whether the default compiler uses glibc.
+ 	eval $set_cc_for_build
