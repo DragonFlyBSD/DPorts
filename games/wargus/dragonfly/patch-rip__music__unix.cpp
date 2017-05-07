@@ -1,4 +1,4 @@
---- rip_music_unix.cpp.bak	2015-12-07 15:29:30.000000000 +0200
+--- rip_music_unix.cpp.orig	2016-11-08 15:26:25 UTC
 +++ rip_music_unix.cpp
 @@ -44,6 +44,11 @@
  #elif defined(__FreeBSD__)
@@ -9,6 +9,6 @@
 +#	include <sys/mount.h>
 +#       define __ino_t ino_t
 +#       define __dev_t dev_t
- #endif
- 
- #include "rip_music.h"
+ #elif defined(__APPLE__)
+ #       define __dev_t dev_t
+ #       define __ino_t ino_t
