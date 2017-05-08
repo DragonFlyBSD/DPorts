@@ -1,0 +1,23 @@
+--- source/darkplaces/makefile.intermediate	2017-05-08 16:33:35 UTC
++++ source/darkplaces/makefile
+@@ -9,20 +9,7 @@ else
+ 
+ # UNIXes
+ DP_ARCH:=$(shell uname)
+-ifneq ($(filter %BSD,$(DP_ARCH)),)
+ 	DP_MAKE_TARGET=bsd
+-else
+-ifeq ($(DP_ARCH), Darwin)
+-	DP_MAKE_TARGET=macosx
+-else
+-ifeq ($(DP_ARCH), SunOS)
+-	DP_MAKE_TARGET=sunos
+-else
+-	DP_MAKE_TARGET=linux
+-
+-endif  # ifeq ($(DP_ARCH), SunOS)
+-endif  # ifeq ($(DP_ARCH), Darwin)
+-endif  # ifneq ($(filter %BSD,$(DP_ARCH)),)
+ endif  # ifdef windir
+ endif  # ifndef DP_MAKE_TARGET
+ 
