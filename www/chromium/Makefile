@@ -31,6 +31,7 @@ LIB_DEPENDS=	libcairo.so:graphics/cairo \
 		libFLAC.so:audio/flac \
 		libfreetype.so:print/freetype2 \
 		libharfbuzz.so:print/harfbuzz \
+		libharfbuzz-icu.so:print/harfbuzz-icu \
 		libexif.so:graphics/libexif \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libgcrypt.so:security/libgcrypt \
