@@ -67,11 +67,11 @@ LIB_DEPENDS=	libssh2.so:security/libssh2 \
 RUN_DEPENDS=	rustc:${RUST_PORT}
 RUST_PORT?=	lang/rust
 
-USES=		gmake python:-2.7,build pkgconfig
+USES=		gmake python:-2.7,build pkgconfig ssl
 HAS_CONFIGURE=	yes
-CONFIGURE_ARGS=	--prefix="${PREFIX}" --mandir="${MANPREFIX}/man" \
-		--enable-build-openssl
-MAKE_ENV=	ARGS="${CARGO_ARGS}"
+CONFIGURE_ARGS=	--prefix="${PREFIX}" --mandir="${MANPREFIX}/man"
+MAKE_ENV=	ARGS="${CARGO_ARGS}" \
+		OPENSSL_DIR="${OPENSSLBASE}"
 CARGO_ARGS=	--jobs ${MAKE_JOBS_NUMBER}
 
 MAKE_ARGS+=	VERBOSE=1

@@ -19,4 +19,4 @@ dfly-bootstrap:
 	${ECHO} ${PKGNAME} > /tmp/${STRAPNAME}/version
 	(cd /tmp && ${TAR} -czf ${STRAPNAME}.tar.gz ${STRAPNAME})
 	@${ECHO} The new bootstrap is located at /tmp/${STRAPNAME}.tar.gz
-	@${RM} -r /tmp/${STRAPNAME} /tmp/explode
+#	@${RM} -r /tmp/${STRAPNAME} /tmp/explode
