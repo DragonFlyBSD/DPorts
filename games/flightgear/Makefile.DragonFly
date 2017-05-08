@@ -9,6 +9,8 @@ PKGMESSAGE=	${DPMSG}
 
 # workaround with X11 clipboard support
 dfly-patch:
+	${REINPLACE_CMD} -e 's|"FreeBSD"|"DragonFly"|' \
+		${WRKSRC}/src/Main/CMakeLists.txt
 	${ECHO_MSG} 'target_link_libraries(fgfs "-L/usr/local/lib -lX11")' >> \
 		${WRKSRC}/src/Main/CMakeLists.txt
 .if !defined(DPORTS_BUILDER) && defined(PACKAGE_BUILDING)
