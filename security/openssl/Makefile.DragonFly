@@ -1,1 +1,2 @@
 OPTIONS_EXCLUDE+= SCTP
+CFLAGS:=	${CFLAGS:N-Werror:N-Qunused-arguments}
