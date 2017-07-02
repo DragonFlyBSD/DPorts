@@ -537,13 +537,13 @@ proxydeps_suggest_uses() {
 	elif echo ${pkg} | grep -E '/sdl2_(gfx|image|mixer|net|ttf)$' > /dev/null; then
 		warn "you need USE_SDL+=$(echo ${pkg} | sed -E 's|.*/sdl2_||')2"
 	# gl-related
-	elif [ ${pkg} = 'graphics/libGL' ]; then
+	elif expr ${lib_file} : "${LOCALBASE}/lib/libGL.so.*$" > /dev/null; then
 		warn "you need USE_GL+=gl"
-	elif [ ${pkg} = 'graphics/gbm' ]; then
+	elif expr ${lib_file} : "${LOCALBASE}/lib/libgbm.so.*$" > /dev/null; then
 		warn "you need USE_GL+=gbm"
-	elif [ ${pkg} = 'graphics/libglesv2' ]; then
+	elif expr ${lib_file} : "${LOCALBASE}/lib/libGLESv2.so.*$" > /dev/null; then
 		warn "you need USE_GL+=glesv2"
-	elif [ ${pkg} = 'graphics/libEGL' ]; then
+	elif expr ${lib_file} : "${LOCALBASE}/lib/libEGL.so.*$" > /dev/null; then
 		warn "you need USE_GL+=egl"
 	elif [ ${pkg} = 'graphics/glew' ]; then
 		warn "you need USE_GL+=glew"
@@ -596,7 +596,7 @@ proxydeps_suggest_uses() {
 		warn "you need USES+=gnustep and USE_GNUSTEP+=gui"
 	# iconv
 	elif [ ${pkg} = "converters/libiconv" ]; then
-		warn "you need USES+=iconv"
+		warn "you need USES+=iconv, USES+=iconv:wchar_t, or USES+=iconv:translit depending on needs"
 	# jpeg
 	elif [ ${pkg} = "graphics/jpeg" -o ${pkg} = "graphics/jpeg-turbo" ]; then
 		warn "you need USES+=jpeg"
@@ -797,9 +797,35 @@ perlcore() {
 	fi
 }
 
+no_arch() {
+	[ -z "$NO_ARCH" ] && return
+	rc=0
+	while read f; do
+		[ -z "$f" ] && continue
+		if [ -n "$NO_ARCH_IGNORE" ]; then
+			skip=
+			for blacklist in $NO_ARCH_IGNORE; do
+				case $f in
+					*$blacklist) skip=1; break;;
+				esac
+			done
+			[ "$skip" ] && continue
+		fi
+		err "'${f#.}' is a architecture specific binary file and you have set NO_ARCH.  Either remove NO_ARCH or add '$(basename $f)' to NO_ARCH_IGNORE."
+		rc=1
+	done <<-EOF
+	$(list_stagedir_elfs  \
+		| file -F $'\1' -f - -N \
+		| grep -aE 'ELF .* [LM]SB .*, .*, version [0-9]+ \(FreeBSD\)' \
+		| cut -f 1 -d $'\1')
+	EOF
+	return $rc
+}
+
+
 checks="shebang symlinks paths stripped desktopfileutils sharedmimeinfo"
 checks="$checks suidfiles libtool libperl prefixvar baselibs terminfo"
-checks="$checks proxydeps sonames perlcore"
+checks="$checks proxydeps sonames perlcore no_arch"
 
 ret=0
 cd ${STAGEDIR}
