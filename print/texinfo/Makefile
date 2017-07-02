@@ -2,15 +2,12 @@
 # $FreeBSD$
 
 PORTNAME=	texinfo
-PORTVERSION=	6.1.20160425
-PORTREVISION=	1
+PORTVERSION=	6.4
 PORTEPOCH=	1
 CATEGORIES=	print
-MASTER_SITES=	ftp://ftp.stack.nl/pub/users/johans/texinfo/${PORTVERSION:E}/ \
-		http://ftp.stack.nl/pub/users/johans/texinfo/${PORTVERSION:E}/ \
-		GNU
-DISTNAME=	${PORTNAME}-${PORTVERSION:R}
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} htmlxref.cnf texinfo.tex texi2dvi
+MASTER_SITES=	GNU \
+		LOCAL/sunpoet/${DIST_SUBDIR}:DEFAULT,local
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} htmlxref.cnf texi2dvi:local texinfo.tex:local
 DIST_SUBDIR=	${PORTNAME}/${PORTVERSION}
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
@@ -26,11 +23,11 @@ OPTIONS_DEFINE=	NLS
 OPTIONS_SUB=	yes
 
 GNU_CONFIGURE=	yes
-INSTALL_TARGET=	install install-tex
+INSTALL_TARGET=	install-strip install-tex
 MAKE_ARGS=	PERL=${PERL} TEXMF=${LOCALBASE}/${TEXMFDIR}
 PKGDEINSTALL=	${PKGINSTALL}
 USE_TEX=	yes
-USES=		charsetfix cpe gmake iconv ncurses perl5 tar:xz
+USES=		charsetfix cpe gmake iconv libtool ncurses perl5 tar:xz
 
 INFO=		info-stnd texinfo
 
@@ -48,6 +45,5 @@ post-patch:
 
 post-install:
 	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/htmlxref.cnf ${STAGEDIR}${DATADIR}
-	${RMDIR} ${STAGEDIR}${PREFIX}/lib/${PORTNAME}
 
 .include <bsd.port.mk>
