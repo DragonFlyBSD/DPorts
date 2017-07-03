@@ -1,9 +1,9 @@
 #!/bin/sh
 
-# $FreeBSD: head/databases/postgresql96-server/files/postgresql.in 424765 2016-10-27 14:04:55Z girgen $
+# $FreeBSD: head/databases/postgresql96-server/files/postgresql.in 440628 2017-05-11 14:28:22Z girgen $
 #
 # PROVIDE: postgresql
-# REQUIRE: LOGIN
+# REQUIRE: sshd
 # KEYWORD: shutdown
 #
 # Add the following line to /etc/rc.conf to enable PostgreSQL:
