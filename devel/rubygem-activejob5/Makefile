@@ -2,12 +2,12 @@
 # $FreeBSD$
 
 PORTNAME=	activejob
-PORTVERSION=	5.1.0
+PORTVERSION=	5.1.2
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 PKGNAMESUFFIX=	5
 
-MAINTAINER=	ruby@FreeBSD.org
+MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Job class declarations for a variety of queueing backends
 
 LICENSE=	MIT
