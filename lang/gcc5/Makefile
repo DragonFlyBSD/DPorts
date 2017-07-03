@@ -3,7 +3,7 @@
 
 PORTNAME=	gcc
 PORTVERSION=	5.4.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	lang java
 MASTER_SITES=	GCC/releases/gcc-${DISTVERSION}
 PKGNAMESUFFIX=	${SUFFIX}
@@ -24,7 +24,7 @@ RUN_DEPENDS+=	${LOCALBASE}/bin/as:devel/binutils
 BUILD_DEPENDS+=	runtest:misc/dejagnu
 .endif
 
-CONFLICTS=	gcc-5.*
+CONFLICTS=	gcc5-devel-5.*
 CPE_VENDOR=	gnu
 
 GCC_VERSION=	${PORTVERSION}
@@ -68,7 +68,7 @@ CONFIGURE_TARGET=	x86_64-portbld-${OPSYS:tl}${OSREL}
 CONFIGURE_ENV+=	UNAME_m="powerpc64"
 .endif
 
-.if ${ARCH} == "armv6" || ${ARCH} == "aarch64"
+.if ${ARCH} == "aarch64" || ${ARCH} == "armv6"
 . if ${COMPILER_TYPE} == clang
 .  if empty(PORT_OPTIONS:MBOOTSTRAP)
 MAKE_ARGS+=CXXFLAGS=-fbracket-depth=512
@@ -115,7 +115,7 @@ INFO=		gcc${SUFFIX}/cpp \
 		gcc${SUFFIX}/gfortran \
 		gcc${SUFFIX}/libgomp
 # Release tarballs (as opposed to snapshots) always carry this.
-#.if ${ARCH} == "i386" || ${ARCH} == "x86_64"
+#.if ${ARCH} == "x86_64" || ${ARCH} == "i386"
 INFO+=		gcc${SUFFIX}/libquadmath \
 		gcc${SUFFIX}/libitm
 #.endif
@@ -161,6 +161,7 @@ post-stage:
 	${RM} ${STAGEDIR}${PREFIX}/man/man7/*
 	${RM} ${STAGEDIR}${PREFIX}/bin/rebuild-gcj-db${SUFFIX} \
 	         ${STAGEDIR}${PREFIX}/man/man1/rebuild-gcj-db${SUFFIX}.1
+	${RM} -r ${STAGEDIR}${TARGLIB}/gcc/*/${GCC_VERSION}/include-fixed/
 	# Add target libraries and include files to packaging list.
 	${RM} ${WRKDIR}/PLIST.lib
 .for d in ${TARGLIB:S/^${PREFIX}\///} ${LIBEXEC:S/^${PREFIX}\///} include/gcj include/gnu include/java include/javax
