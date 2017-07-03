@@ -16,7 +16,7 @@ LICENSE_FILE=	${WRKSRC}/../COPYING
 
 BUILD_DEPENDS=	yasm:devel/yasm
 
-USES=		cmake pathfix tar:bz2
+USES=		cmake:noninja pathfix tar:bz2
 USE_LDCONFIG=	yes
 CMAKE_ARGS=	-DENABLE_PIC=on -DENABLE_TESTS=on
 CFLAGS_mips=	-DNO_ATOMICS # cannot use lang/gcc
