@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	unbound
-PORTVERSION=	1.6.2
+PORTVERSION=	1.6.3
 CATEGORIES=	dns
 MASTER_SITES=	http://unbound.net/downloads/
 
@@ -42,7 +42,7 @@ ECDSA_DESC=	Enable ECDSA (elliptic curve) support (OpenSSL >= 1.0)
 MUNIN_PLUGIN_DESC=	Install Munin plugin
 FILTER_AAAA_DESC=	Build with AAAA filter functionality (contrib)
 DNSTAP_DESC=	Enable dnstap logging support
-DNSCRYPT_DESC=	Enable dnscryot support
+DNSCRYPT_DESC=	Enable dnscrypt support
 SUBNET_DESC=	Enable client subnet support
 EVAPI_DESC=	(Experimental) pluggable event based libunbound API support
 TFOCL_DESC=	Enable TCP Fast Open for client mode
