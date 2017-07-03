@@ -2,12 +2,12 @@
 # $FreeBSD$
 
 PORTNAME=	activerecord
-PORTVERSION=	5.0.2
+PORTVERSION=	5.0.4
 CATEGORIES=	databases rubygems
 MASTER_SITES=	RG
 PKGNAMESUFFIX=	50
 
-MAINTAINER=	ruby@FreeBSD.org
+MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Object-relational mapping layer for Rails MVC Framework
 
 LICENSE=	MIT
