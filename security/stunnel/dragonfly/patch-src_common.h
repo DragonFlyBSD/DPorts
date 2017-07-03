@@ -1,4 +1,4 @@
---- src/common.h.orig	2016-06-27 07:29:32 UTC
+--- src/common.h.orig	2017-01-02 14:27:26 UTC
 +++ src/common.h
 @@ -448,7 +448,7 @@ extern char *sys_errlist[];
  #define OPENSSL_NO_TLS1_2

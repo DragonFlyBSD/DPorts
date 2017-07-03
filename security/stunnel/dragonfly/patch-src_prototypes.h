@@ -1,6 +1,6 @@
---- src/prototypes.h.orig	2016-07-05 21:27:57 UTC
+--- src/prototypes.h.orig	2017-03-26 20:25:00 UTC
 +++ src/prototypes.h
-@@ -650,13 +650,13 @@ typedef enum {
+@@ -657,13 +657,13 @@ typedef enum {
  #endif /* OPENSSL_NO_DH */
      STUNNEL_LOCKS                           /* number of locks */
  } LOCK_TYPE;
