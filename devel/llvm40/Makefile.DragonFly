@@ -1,5 +1,5 @@
 # ninja once again can't relink properly..
-USES:= ${USES:Nninja}
+USES:= ${USES:Ncmake*} cmake:outsource,noninja
 
 # prune few strange predefs from cpp
 CLANG_EXTRA_PATCHES+= ${DFLY_PATCHDIR}/clang-patch-wrong_predefs
