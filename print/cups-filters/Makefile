@@ -1,8 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	cups-filters
-PORTVERSION=	1.13.4
-PORTREVISION?=	3
+PORTVERSION=	1.13.5
 CATEGORIES=	print
 MASTER_SITES=	http://www.openprinting.org/download/cups-filters/
 
@@ -29,11 +28,12 @@ SHEBANG_FILES=	filter/braille/drivers/generic/brftoembosser.in \
 		filter/braille/drivers/index/imageubrltoindexv4.in \
 		filter/braille/drivers/index/textbrftoindexv3.in \
 		filter/braille/filters/imagetobrf.in \
+		filter/braille/filters/liblouis1.defs.gen.in \
 		filter/braille/filters/texttobrf.in
 USE_GNOME=	glib20
 USE_RC_SUBR=	cups_browsed
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--with-shell=/bin/sh
+CONFIGURE_ARGS=	--with-shell=/bin/sh --with-pdftops-path=${LOCALBASE}/bin/pdftops
 INSTALL_TARGET=	install-strip
 
 CPPFLAGS+=	-I${LOCALBASE}/include
@@ -50,6 +50,7 @@ OPTIONS_SUB=			yes
 
 BRAILLE_CONFIGURE_ENABLE=	braille
 BRAILLE_DESC=			Braille embosser support
+BRAILLE_BUILD_DEPENDS=		bash:shells/bash
 BRAILLE_LIB_DEPENDS=		liblouis.so:devel/liblouis \
 #				liblouisutdml.so:devel/liblouisutdml
 BRAILLE_RUN_DEPENDS=		convert:graphics/ImageMagick \
@@ -93,12 +94,12 @@ GS_DESC=			Ghostscript gs(1)
 
 HYBRID_BUILD_DEPENDS=		pdftops:graphics/poppler-utils
 HYBRID_RUN_DEPENDS=		pdftops:graphics/poppler-utils
-HYBRID_CONFIGURE_ON=		--with-pdftops=hybrid --with-pdftops-path=${LOCALBASE}/bin/pdftops
+HYBRID_CONFIGURE_ON=		--with-pdftops=hybrid
 HYBRID_DESC=			Ghostscript or Poppler depending on printer
 
 PDFTOPS_BUILD_DEPENDS=		pdftops:graphics/poppler-utils
 PDFTOPS_RUN_DEPENDS=		pdftops:graphics/poppler-utils
-PDFTOPS_CONFIGURE_ON=		--with-pdftops=pdftops --with-pdftops-path=${LOCALBASE}/bin/pdftops
+PDFTOPS_CONFIGURE_ON=		--with-pdftops=pdftops
 PDFTOPS_DESC=			Poppler pdftops(1)
 
 MUPDF_BUILD_DEPENDS=		mutool:graphics/mupdf
