@@ -1,7 +1,0 @@
-#!/bin/sh
-#
-# # $FreeBSD: head/devel/allegro/files/shooter.in 332384 2013-11-01 14:45:33Z nemysis $
-#
-
-cd "%%EXAMPLESDIR%%/demos/shooter"
-exec ./shooter "${@}"
