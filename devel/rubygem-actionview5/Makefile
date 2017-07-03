@@ -2,12 +2,12 @@
 # $FreeBSD$
 
 PORTNAME=	actionview
-PORTVERSION=	5.1.0
+PORTVERSION=	5.1.2
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 PKGNAMESUFFIX=	5
 
-MAINTAINER=	ruby@FreeBSD.org
+MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Rendering framework putting the V in MVC (part of Rails)
 
 LICENSE=	MIT
