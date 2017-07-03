@@ -1,5 +1,3 @@
-$FreeBSD: head/sysutils/runit/files/patch-src_runit-init.c 420105 2016-08-11 21:06:42Z crees $
-
 runit is designed to be placed in /sbin.  However, there is no reason that
 PREFIX cannot be respected here, so should a user define in loader.conf this
 in place, then it will still be found.

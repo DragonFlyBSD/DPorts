@@ -1,5 +1,3 @@
-$FreeBSD: head/sysutils/runit/files/patch-src_runit.c 420105 2016-08-11 21:06:42Z crees $
-
 Should the user neglect to add the symlink, rather than stick them in a
 reboot loop give a warning.
 
