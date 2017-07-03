@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	ffmpeg
-PORTVERSION=	3.3
+PORTVERSION=	3.3.2
 PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	multimedia audio ipv6 net
@@ -49,7 +49,6 @@ OPTIONS_GROUP_LICENSE=	GPL3 NONFREE
 
 OPTIONS_DEFINE_x86_64=	MMX SSE
 OPTIONS_DEFINE_armv6=	VFP NEON
-OPTIONS_DEFINE_armv6hf=	VFP NEON
 OPTIONS_DEFINE_i386=	MMX SSE
 OPTIONS_DEFAULT_x86_64=	MMX SSE
 OPTIONS_DEFAULT_i386=	MMX SSE
@@ -445,6 +444,7 @@ CONFIGURE_ARGS+=--prefix="${PREFIX}" \
 		--enable-pthreads \
 		--cc="${CC}"
 
+CONFIGURE_ENV_aarch64_clang=	ASFLAGS=-no-integrated-as
 CONFIGURE_ENV_armv6_clang=	ASFLAGS=-no-integrated-as
 CONFIGURE_ARGS_armv6=		--disable-fast-unaligned
 
