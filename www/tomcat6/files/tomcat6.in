@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/www/tomcat6/files/tomcat6.in 411095 2016-03-14 15:31:56Z feld $
+# $FreeBSD: head/www/tomcat6/files/tomcat6.in 440281 2017-05-06 16:38:37Z ler $
 #
 
 # PROVIDE: tomcat%%TOMCAT_VERSION%%
@@ -168,7 +168,7 @@ tomcat_check_pidfile() {
 		debug "pid file ($_pidfile): no pid in file."
 		return
 	fi
-	if [ -n "`/usr/bin/procstat -c $_pid | grep -e "^$_pid.*$java_class"`" ]; then
+	if [ -n "`/usr/bin/procstat -c $_pid | grep -e "^ *$_pid.*$java_class"`" ]; then
 		echo -n $_pid
 	fi
 }
