@@ -14,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USE_GITHUB=	yes
 
-USES=		cmake pkgconfig
+USES=		cmake:noninja pkgconfig
 USE_LDCONFIG=	yes
 
 NOT_FOR_ARCHS=	sparc64
@@ -182,6 +182,10 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|add_subdirectory(data)||g' \
 		${WRKSRC}/CMakeLists.txt
 .endif
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's|__FreeBSD__|__DragonFly__|' \
+		${WRKSRC}/modules/core/src/system.cpp
 
 post-install:
 .if !defined(OCV_SLAVE)
