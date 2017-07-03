@@ -3,7 +3,6 @@
 
 PORTNAME=	llvm
 PORTVERSION=	${LLVM_MAJOR}.d${SNAPDATE}
-PORTREVISION=	2
 CATEGORIES=	devel lang
 PKGNAMESUFFIX=	-devel
 
@@ -17,7 +16,7 @@ LLVM_PREFIX=	${PREFIX}/llvm${LLVM_SUFFIX}
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}${LLVM_SUFFIX}
 DATADIR=	${PREFIX}/share/${PORTNAME}${LLVM_SUFFIX}
 
-USES=		cmake:outsource compiler:c++11-lib libedit ninja perl5 \
+USES=		cmake:outsource compiler:c++11-lib libedit perl5 \
 		shebangfix
 USE_LDCONFIG=	${LLVM_PREFIX}/lib
 _USES_PYTHON?=	python:build
@@ -52,6 +51,7 @@ OPTIONS_DEFINE_i386=	COMPILER_RT
 OPTIONS_DEFAULT=	CLANG EXTRAS LIT LLD
 OPTIONS_DEFAULT_x86_64=	GOLD
 OPTIONS_DEFAULT_i386=	COMPILER_RT
+OPTIONS_EXCLUDE_FreeBSD_10=	LLDB
 OPTIONS_SUB=	yes
 
 PLIST_FILES=
@@ -88,7 +88,7 @@ LLD_DESC=		Install lld, the LLVM linker
 LLD_GH_PROJECT=		lld:lld
 LLD_GH_SUBDIR=		tools/lld:lld
 LLD_GH_TAGNAME=		${LLD_COMMIT}:lld
-LLDB_BUILD_DEPENDS=	swig:devel/swig13
+LLDB_BUILD_DEPENDS=	swig3.0:devel/swig30
 LLDB_DESC=		Install lldb, the LLVM debugger
 LLDB_GH_PROJECT=	lldb:lldb
 LLDB_GH_SUBDIR=		tools/lldb:lldb
@@ -125,6 +125,7 @@ COMMANDS=	bugpoint \
 		llvm-cat \
 		llvm-config \
 		llvm-cov \
+		llvm-cvtres \
 		llvm-diff \
 		llvm-dis \
 		llvm-dwarfdump \
@@ -277,8 +278,10 @@ _COMPILER_RT_LIBS= \
 	libclang_rt.tsan_cxx-x86_64.a.syms \
 	libclang_rt.ubsan_standalone-x86_64.a \
 	libclang_rt.ubsan_standalone-x86_64.a.syms \
+	libclang_rt.ubsan_standalone-x86_64.so \
 	libclang_rt.ubsan_standalone_cxx-x86_64.a \
-	libclang_rt.ubsan_standalone_cxx-x86_64.a.syms
+	libclang_rt.ubsan_standalone_cxx-x86_64.a.syms \
+	libclang_rt.ubsan_standalone_cxx-x86_64.so
 .endif
 .if ${ARCH} == "i386"
 _COMPILER_RT_LIBS+= \
@@ -307,15 +310,17 @@ COMMANDS+=	lld \
 PORTDOCS+=	lld
 .endif
 
-.if ${PORT_OPTIONS:MLLDB} && ${PYTHON_REL} >= 3000
-BROKEN=	LLDB does not build with Python 3
-.endif
-
 post-patch:
 	${REINPLACE_CMD} -e 's|import lit|import lit${LLVM_SUFFIX}|' \
 	    -e 's|from lit|from lit${LLVM_SUFFIX}|' \
 	    -e 's|lit\.|lit${LLVM_SUFFIX}.|' \
 	    ${WRKSRC}/utils/lit/lit.py ${WRKSRC}/utils/lit/lit/*.py
+	${REINPLACE_CMD} -e 's,/usr/local/,${LOCALBASE}/,' \
+	    ${WRKSRC}/CMakeLists.txt
+
+post-patch-COMPILER_RT-on:
+	cd ${WRKSRC_compiler_rt} && patch < ${PATCHDIR}/compiler-rt-patch-ino64
+	cd ${WRKSRC_compiler_rt} && patch < ${PATCHDIR}/compiler-rt-patch-canonical-syscalls
 
 post-build-COMPILER_RT-on:
 	${MKDIR} ${WRKDIR}/compiler-rt-build
@@ -392,6 +397,8 @@ regression-test: ${BUILD_COOKIE}
 
 build-plist:
 	${RM} ${PLIST} ${PLIST}.tmp
+	${ECHO_CMD} "@comment >>>>> GENERATED FILE, DO NOT EDIT <<<<<" >> ${PLIST}.tmp
+	${ECHO_CMD} "@comment Alter build-plist target and regenerate as required" >> ${PLIST}.tmp
 .for command in ${COMMANDS}
 	${ECHO_CMD} bin/${command}${LLVM_SUFFIX} >> ${PLIST}.tmp
 .endfor
@@ -406,7 +413,8 @@ build-plist:
 	    -e 's|release.cmake|%%CMAKE_BUILD_TYPE%%.cmake|' \
 	    -e 's|${LLVM_RELEASE:C/\./\\./g}|%%LLVM_RELEASE%%|' \
 	    -e 's|${LLVM_MAJOR:C/\./\\./}|%%LLVM_MAJOR%%|' \
-	    -e 's|\.${LLVM_MAJOR:C/\..*//}|.%%LLVM_LIB_VER%%|' | \
+	    -e 's|\.${LLVM_MAJOR:C/\..*//}|.%%LLVM_LIB_VER%%|' \
+	    -e 's|${PYTHON_SITELIBDIR:C|${PREFIX}/||}|%%PYTHON_SITELIBDIR%%|' | \
 	    ${SORT} >> ${PLIST}.tmp
 	${FIND} ${STAGEDIR}${PYTHON_SITELIBDIR}/lit${LLVM_SUFFIX} -type f | \
 	    ${SED} -e 's|${STAGEDIR}${PYTHON_SITELIBDIR}|%%LIT%%%%PYTHON_SITELIBDIR%%|' \
