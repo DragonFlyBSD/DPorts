@@ -3,7 +3,7 @@
 
 PORTNAME=	glib
 PORTVERSION=	2.50.2
-PORTREVISION=	1
+PORTREVISION=	3
 PORTEPOCH=	1
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
@@ -26,8 +26,8 @@ GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 # iconv:wchar_t - our iconv in base doesn't support utf-8 -> wchar_t (boooo)
 # (wchar_t is used by glibmm, rawtherapee triggered this)
-USES+=		gettext gmake gnome iconv:wchar_t libtool localbase pathfix perl5 \
-		pkgconfig python shebangfix
+USES+=		compiler:c11 gettext gmake gnome iconv:wchar_t libtool \
+		localbase pathfix perl5 pkgconfig python shebangfix
 USE_PYTHON=	py3kplist
 CONFIGURE_ARGS=	--disable-gtk-doc --with-html-dir=${PREFIX}/share/doc \
 		--disable-man --without-xml-catalog \
@@ -93,9 +93,6 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g ; \
 		s|/usr/share/locale/locale|${LOCALBASE}/share/locale/locale|g' \
 			${WRKSRC}/glib/gutils.c
-	@${REINPLACE_CMD} -e 's|/lib/dbus/machine-id|/db/dbus/machine-id|g' \
-		${WRKSRC}/gio/gdbusaddress.c ${WRKSRC}/gio/gdbusprivate.c \
-		${WRKSRC}/po/*.po
 	@${REINPLACE_CMD} -e 's|inotify_support=yes|inotify_support=no| ; \
 		s|-Werror|| ; \
 		s|#define HAVE_SYS_INOTIFY_H 1||' ${WRKSRC}/configure
