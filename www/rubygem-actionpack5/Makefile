@@ -2,12 +2,12 @@
 # $FreeBSD$
 
 PORTNAME=	actionpack
-PORTVERSION=	5.1.0
+PORTVERSION=	5.1.2
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 PKGNAMESUFFIX=	5
 
-MAINTAINER=	ruby@FreeBSD.org
+MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Action Controller and Action View of Rails MVC Framework
 
 LICENSE=	MIT
