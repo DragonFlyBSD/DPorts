@@ -28,7 +28,7 @@ PERL_USES=	perl5
 
 .include <bsd.port.pre.mk>
 
-.if ${ARCH} == "x86_64" || ${ARCH} == "ia64" || ${ARCH} == "sparc64"
+.if ${ARCH} == "x86_64" || ${ARCH} == "sparc64"
 CONFIGURE_ARGS+=--enable-64bit
 .endif
 
