@@ -1,0 +1,4 @@
+# $FreeBSD: head/devel/hadoop2/files/kms-env.sh.in 442991 2017-06-09 13:57:17Z demon $
+
+export KMS_LOG=/var/log/hadoop
+export KMS_TEMP=/var/tmp
