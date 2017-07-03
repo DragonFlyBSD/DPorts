@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	fog-core
-PORTVERSION=	1.44.1
+PORTVERSION=	1.44.3
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
