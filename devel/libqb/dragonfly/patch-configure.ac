@@ -1,0 +1,11 @@
+--- configure.ac.intermediate	2017-07-04 03:27:34.000000000 +0000
++++ configure.ac
+@@ -351,7 +351,7 @@
+ 				   [Disable _POSIX_THREAD_PROCESS_SHARED])
+ 		AC_MSG_RESULT([Darwin])
+ 	;;
+-	*bsd*)
++	dragonfly*|*bsd*)
+ 		AC_DEFINE_UNQUOTED([QB_BSD], [1],
+ 				   [Compiling for BSD platform])
+ 		case "$host_os" in
