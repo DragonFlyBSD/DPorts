@@ -1,9 +1,0 @@
---- src/snapshots.txt.intermediate	2016-11-13 17:44:53 UTC
-+++ src/snapshots.txt
-@@ -1,3 +1,6 @@
-+2016-11-11
-+  dragonfly-x86_64 493d77148ccf65c10175b8eb18600233f7bd2dc9
-+
- 2016-08-21
-   freebsd-x86_64 4630444c0eca5e01aa576e196d260d6ebf0dd197
- 

@@ -1,9 +1,0 @@
-TIMESTAMP = 1485297292
-SHA256 (cargo-registry-0.15.0_2.tar.xz) = 513eead0d81a73c23a3f3a79cac66370f2e3f1557204965a594088b2a85de050
-SIZE (cargo-registry-0.15.0_2.tar.xz) = 21517360
-SHA256 (cargo-nightly-x86_64-unknown-dragonfly.tar.gz) = 78355e53e98bb7640d5481b8d291d076cc65c19bc83f90d54338a97d84ac58fe
-SIZE (cargo-nightly-x86_64-unknown-dragonfly.tar.gz) = 4429496
-SHA256 (rust-lang-cargo-0.15.0_GH0.tar.gz) = 6ebe9e0de255d5bd912528bef0f57db7746e162c6d9875a89c6c8b2b40a21d64
-SIZE (rust-lang-cargo-0.15.0_GH0.tar.gz) = 631157
-SHA256 (rust-lang-rust-installer-755bc3d_GH0.tar.gz) = 103a502bad7af80eef7ccd2dd2969a272a6fa3f237ebeaca083315a45878f07f
-SIZE (rust-lang-rust-installer-755bc3d_GH0.tar.gz) = 19193
