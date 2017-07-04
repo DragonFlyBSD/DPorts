@@ -2,15 +2,16 @@
 # $FreeBSD$
 
 PORTNAME=	vte3
-PORTVERSION=	3.1.3
+PORTVERSION=	3.1.4
 CATEGORIES=	x11-toolkits rubygems
 MASTER_SITES=	RG
 
-MAINTAINER=	ruby@FreeBSD.org
+MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Ruby binding for VTE
 
 LICENSE=	LGPL21+
 
+BUILD_DEPENDS=	rubygem-rake>=0:devel/rubygem-rake
 RUN_DEPENDS=	rubygem-gobject-introspection>=${PORTVERSION}:devel/rubygem-gobject-introspection \
 		rubygem-gtk3>=${PORTVERSION}:x11-toolkits/rubygem-gtk3
 
