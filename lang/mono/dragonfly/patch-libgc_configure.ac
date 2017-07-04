@@ -1,0 +1,11 @@
+--- libgc/configure.ac.orig	2017-04-05 23:08:22.000000000 +0000
++++ libgc/configure.ac	2017-07-03 21:47:55.000000000 +0000
+@@ -125,7 +125,7 @@
+ 	AC_DEFINE(THREAD_LOCAL_ALLOC)
+ 	AC_DEFINE(USE_COMPILER_TLS)
+ 	;;
+-      *-*-freebsd*)
++      *-*-freebsd*|*-*-dragonfly*)
+ 	AC_DEFINE(GC_FREEBSD_THREADS)
+ 	if test "x$PTHREAD_CFLAGS" != "x"; then
+ 		AM_CPPFLAGS="$AM_CPPFLAGS $PTHREAD_CFLAGS"
