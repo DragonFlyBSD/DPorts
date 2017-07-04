@@ -1,0 +1,6 @@
+dfly-patch:
+	${REINPLACE_CMD} -e 's|FreeBSD|DragonFly|' \
+		${WRKSRC}/priv/templates/Makefile
+	${REINPLACE_CMD} -e 's|freebsd|dragonfly|' \
+		${WRKSRC}/rebar.config \
+		${WRKSRC}/src/rebar_erlc_compiler.erl
