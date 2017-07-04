@@ -1,5 +1,0 @@
---- /dev/null	2015-07-10 21:56:18 UTC
-+++ libgcc/config/i386/t-dragonfly
-@@ -0,0 +1,2 @@
-+# Required for -fcilkplus support
-+SHLIB_MAPFILES += $(srcdir)/config/i386/libgcc-bsd.ver
