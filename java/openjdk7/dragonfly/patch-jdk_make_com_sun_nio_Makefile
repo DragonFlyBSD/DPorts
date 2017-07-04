@@ -1,11 +1,11 @@
---- jdk/make/com/sun/nio/Makefile.intermediate	2015-02-13 11:07:06 UTC
-+++ jdk/make/com/sun/nio/Makefile
-@@ -29,8 +29,6 @@
+--- jdk/make/com/sun/nio/Makefile.orig	2017-07-03 17:01:25.000000000 +0000
++++ jdk/make/com/sun/nio/Makefile	2017-07-03 17:04:02.000000000 +0000
+@@ -32,8 +32,6 @@
  
- BUILDDIR = ../../..
- include $(BUILDDIR)/common/Defs.gmk
+ # MMM: disable for now
+ ifeq (, $(findstring $(PLATFORM), macosx aix))
 -include $(BUILDDIR)/common/Subdirs.gmk
 -SUBDIRS = sctp
+ endif
  
  all build clean clobber::
- 	$(SUBDIRS-loop)
