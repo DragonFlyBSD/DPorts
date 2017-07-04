@@ -1,5 +1,3 @@
-$FreeBSD: head/databases/neo4j/files/patch-conf-neo4j-conf 420830 2016-08-25 02:19:15Z crees $
-
 --- conf/neo4j.conf.orig	2016-08-25 02:30:25.057742736 +0100
 +++ conf/neo4j.conf	2016-08-25 02:32:53.932724521 +0100
 @@ -6,9 +6,9 @@
