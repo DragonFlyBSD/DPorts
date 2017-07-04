@@ -1,3 +1,5 @@
-
 # zrj: libsox.a comes compiled with -fopenmp, it would not hurt to link with omp
 LDFLAGS+= -fopenmp
+
+# jrm: db@ removed -std, seems wrong
+USE_CXXSTD=	c++11
