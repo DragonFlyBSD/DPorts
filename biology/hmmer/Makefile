@@ -30,7 +30,7 @@ OPTIONS_DEFINE=	DOCS EXAMPLES
 # HMMER is useless without SSE and any PC in use today should support it
 # Should probably also do enable-vmx on Power processors to enable
 # Altivec/VMX, but I don't have a machine to test this.
-.if ${ARCH} == "x86_64" || ${ARCH} == "ia64" || ${ARCH} == "i386"
+.if ${ARCH} == "x86_64" || ${ARCH} == "i386"
 CONFIGURE_ARGS+=--enable-sse
 .endif
 
