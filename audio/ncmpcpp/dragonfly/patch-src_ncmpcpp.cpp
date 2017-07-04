@@ -1,11 +1,11 @@
---- src/ncmpcpp.cpp.orig	2014-12-13 18:03:39 UTC
-+++ src/ncmpcpp.cpp
-@@ -150,7 +150,7 @@ int main(int argc, char **argv)
- 	signal(SIGPIPE, sighandler);
- 	signal(SIGWINCH, sighandler);
- 	// ignore Ctrl-C
--	sigignore(SIGINT);
-+	signal(SIGINT, sighandler);
- #	endif // !WIN32
+--- src/ncmpcpp.cpp.orig	2017-05-21 14:10:48.000000000 +0000
++++ src/ncmpcpp.cpp	2017-07-04 02:52:17.000000000 +0000
+@@ -108,7 +108,7 @@
+ 	cerr_buffer = std::cerr.rdbuf();
+ 	std::cerr.rdbuf(errorlog.rdbuf());
  	
- 	while (!Actions::ExitMainLoop)
+-	sigignore(SIGPIPE);
++	signal(SIGPIPE, sighandler);
+ 	signal(SIGWINCH, sighandler);
+ 
+ 	Mpd.setNoidleCallback(Status::update);
