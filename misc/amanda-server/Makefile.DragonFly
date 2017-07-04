@@ -1,0 +1,5 @@
+PAT=--help={target,optimizers,warnings,undocumented,params,c}
+REP=--help=target --help=optimizers --help=warnings --help=undocumented --help=params --help=c
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's|${PAT}|${REP}|' ${WRKSRC}/configure
