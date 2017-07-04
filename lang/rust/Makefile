@@ -2,18 +2,30 @@
 # $FreeBSD$
 
 PORTNAME=	rust
-PORTVERSION?=	1.14.0
+PORTVERSION?=	1.18.0
 CATEGORIES=	lang
 MASTER_SITES=	http://static.rust-lang.org/dist/:src \
-		http://static.rust-lang.org/dist/:bootstrap \
-		https://github.com/dhuseby/rust-manual-snapshots/raw/master/:bootstrap \
+		https://static.rust-lang.org/dist/:rust_bootstrap \
+		LOCAL/dumbbell/rust:rust_bootstrap \
+		https://static.rust-lang.org/dist/:cargo_bootstrap \
+		https://s3.amazonaws.com/rust-lang-ci/cargo-builds/:cargo_bootstrap \
+		LOCAL/dumbbell/rust:cargo_bootstrap \
 		LOCAL/marino:bootstrap
-DISTNAME?=	${PORTNAME}c-${PORTVERSION}
-DISTFILES?=	${DISTNAME}-src${EXTRACT_SUFX}:src
-DISTFILES+=	${RUST_BOOT}:bootstrap
-EXTRACT_ONLY?=	${DISTFILES:N*\:bootstrap:C/:.*//}
+DISTNAME?=	${PORTNAME}c-${PORTVERSION}-src
+BOOTSTRAP_FILES=${RUSTC_BOOTSTRAP}:rust_bootstrap \
+		${RUST_STD_BOOTSTRAP}:rust_bootstrap \
+		${CARGO_BOOTSTRAP}:cargo_bootstrap
+DISTFILES?=	${DISTNAME}${EXTRACT_SUFX}:src \
+		${BOOTSTRAP_FILES}
+.if !defined(SKIP_CARGO_REGISTRY)
+MASTER_SITES+=	LOCAL/riggs/rust:registry \
+		LOCAL/dumbbell/rust:registry
+DISTFILES+=	${CARGO_REGISTRY}:registry
+.endif
+DIST_SUBDIR?=	rust
+EXTRACT_ONLY?=	${DISTFILES:N*\:*bootstrap:C/:.*//}
 
-MAINTAINER?=	riggs@FreeBSD.org
+MAINTAINER?=	rust@FreeBSD.org
 COMMENT=	Language with a focus on memory safety and concurrency
 
 LICENSE=	APACHE20 \
@@ -24,10 +36,8 @@ LICENSE_FILE_MIT=	${WRKSRC}/LICENSE-MIT
 
 BUILD_DEPENDS=		cmake:devel/cmake
 
-ONLY_FOR_ARCHS?=	amd64 i386
+ONLY_FOR_ARCHS?=	aarch64 amd64 i386
 ONLY_FOR_ARCHS_REASON=	requires prebuilt bootstrap compiler
-
-DISTINFO_FILE?=	${MASTERDIR}/distinfo.${ARCH}
 
 # FIXME: The bootstrapped rustc adds -L/usr/local/lib in front of
 # the LDFLAGS. When stage0's rustc is linked, it picks the installed
@@ -36,27 +46,31 @@ CONFLICTS_BUILD?=	rust-nightly
 CONFLICTS_BUILD+=	${PKGBASE}
 CONFLICTS_INSTALL?=	rust-nightly
 
-RUST_BOOT_VERSION?=	1.13.0
-RUST_BOOT=		rustc-${RUST_BOOT_VERSION}-${RUST_TARGET}.tar.gz
+RUST_BOOTSTRAP_DIR?=		2017-04-27
+RUST_BOOTSTRAP_DIR_aarch64?=	2017-04-24
+RUST_BOOTSTRAP_VERSION?=	1.17.0
+RUST_BOOTSTRAP_VERSION_aarch64?=1.17.0
+RUSTC_BOOTSTRAP=		${RUST_BOOTSTRAP_DIR_${ARCH}:U${RUST_BOOTSTRAP_DIR}}/rustc-${RUST_BOOTSTRAP_VERSION_${ARCH}:U${RUST_BOOTSTRAP_VERSION}}-${RUST_TARGET}.tar.gz
+RUST_STD_BOOTSTRAP=		${RUST_BOOTSTRAP_DIR_${ARCH}:U${RUST_BOOTSTRAP_DIR}}/rust-std-${RUST_BOOTSTRAP_VERSION_${ARCH}:U${RUST_BOOTSTRAP_VERSION}}-${RUST_TARGET}.tar.gz
 
-# Rust's libraries are named librustc_${component}-${RUST_VSN_HASH}.so.
-# The hash depends on Rust version and, if the channel is not "stable",
-# the channel name. See $(CFG_FILENAME_EXTRA) definition in mk/main.mk.
-RUST_VSN=	${PORTVERSION:C/\.[0-9]{8}$//}
-.if defined(.PARSEDIR) # fixes |make describe| on 9.x (which is BROKEN)
+CARGO_BOOTSTRAP_DIR?=		${RUST_BOOTSTRAP_DIR}
+CARGO_BOOTSTRAP_DIR_aarch64?=	${RUST_BOOTSTRAP_DIR_aarch64}
+CARGO_BOOTSTRAP_VERSION?=	0.18.0
+CARGO_BOOTSTRAP_VERSION_aarch64?=0.18.0
+CARGO_BOOTSTRAP=		${CARGO_BOOTSTRAP_DIR_${ARCH}:U${CARGO_BOOTSTRAP_DIR}}/cargo-${CARGO_BOOTSTRAP_VERSION_${ARCH}:U${CARGO_BOOTSTRAP_VERSION}}-${RUST_TARGET}${EXTRACT_SUFX}
+CARGO_REGISTRY=			${PORTNAME}-registry-${DISTVERSIONFULL}.tar.xz
+
 RUST_CHANNEL=	${PKGNAMESUFFIX:Ustable:S/^-//}
-.endif
-RUST_VSN_HASH!=	/usr/bin/printf '%s' ${RUST_VSN}${PKGNAMESUFFIX} | /sbin/md5 -q | cut -c 1-8
-PLIST_SUB+=	RUST_VSN_HASH=${RUST_VSN_HASH}
 
 # Rust's target arch string is different from *BSD arch strings
-RUST_ARCH_x86_64=	x86_64 # dragonfly
+RUST_ARCH_aarch64=	aarch64
 RUST_ARCH_amd64=	x86_64
 RUST_ARCH_i386=		i686
+RUST_ARCH_x86_64=	x86_64 # dragonfly
 RUST_TARGET=		${RUST_ARCH_${ARCH}}-unknown-${OPSYS:tl}
-PLIST_SUB+=	RUST_TARGET=${RUST_TARGET}
+PLIST_SUB+=		RUST_TARGET=${RUST_TARGET}
 
-USES=		compiler gmake libedit python:2,build
+USES=		compiler gmake libedit python:2.7,build
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-valgrind \
 		${CHOSEN_COMPILER_TYPE:Mclang:C/.+/--enable-&/} \
@@ -64,9 +78,8 @@ CONFIGURE_ARGS=	--disable-valgrind \
 		--musl-root=${PREFIX}	\
 		--local-rust-root=${PREFIX} \
 		--mandir=${MANPREFIX}/man \
-		--release-channel=${RUST_CHANNEL}
-
-PORTDOCS=	*
+		--release-channel=${RUST_CHANNEL} \
+		--python="${PYTHON_CMD}"
 
 MAKE_ARGS+=	VERBOSE=1
 
@@ -82,12 +95,29 @@ LLNEXTGEN_BUILD_DEPENDS=	LLnextgen:devel/llnextgen
 PORT_LLVM_DESC=	Build against devel/llvm${LLVM_VER} instead of bundled version
 PORT_LLVM_BUILD_DEPENDS=	${LLVM_PREFIX}/bin/FileCheck:devel/llvm${LLVM_VER}
 PORT_LLVM_CONFIGURE_ON=		--llvm-root=${LLVM_PREFIX}
-LLVM_VER?=			39
+LLVM_VER?=			40
 LLVM_PREFIX=			${LOCALBASE}/llvm${LLVM_VER}
 
 # Note that make test does not work when rust is already installed
 TEST_TARGET=	check
 TEST_ENV+=	ALLOW_NONZERO_RLIMIT_CORE=1
+
+# Rust manifests list all files and directories installed by rust-installer.
+# We use them in:
+#     - pre-install to cleanup the ${STAGEDIR}
+#     - post-install to populate the ${TMPPLIST}
+RUST_MANIFESTS=		lib/rustlib/manifest-rustc \
+			lib/rustlib/manifest-rust-std-${RUST_TARGET}
+RUST_DOCS_MANIFESTS=	lib/rustlib/manifest-rust-docs
+DOCS_VARS=		rust_manifests+=${RUST_DOCS_MANIFESTS}
+
+PLIST_FILES=		lib/rustlib/components \
+			lib/rustlib/rust-installer-version
+
+.include <bsd.port.pre.mk>
+.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1200031
+EXTRA_PATCHES+=        ${PATCHDIR}/extra-patch-ino64
+.endif
 
 pre-fetch:
 	# FIXME: This is the same check for CONFLICTS as the standard
@@ -113,52 +143,106 @@ pre-fetch:
 		exit 1;\
 	fi
 
+RUST_STD_DIR=		${RUST_STD_BOOTSTRAP:T:R:R}
+LIBSTD_SUFFIX=		f4594d3e53dcb114
+LIBSTD_SUFFIX_aarch64=	b41e0ffe8c1bd541
+LIBSTD=			${RUST_STD_DIR}/rust-std-${RUST_TARGET}/lib/rustlib/${RUST_TARGET}/lib/libstd-${LIBSTD_SUFFIX_${ARCH}:U${LIBSTD_SUFFIX}}.rlib
+STDF=			${LIBSTD:T:R:S/lib//}.0.o
+
 post-extract:
-	@${MKDIR} ${WRKSRC}/dl
-	${LN} -sf ${DISTDIR}/${RUST_BOOT} ${WRKSRC}/dl
+	@${MKDIR} \
+		${WRKSRC}/build/cache/${RUST_BOOTSTRAP_DIR_${ARCH}:U${RUST_BOOTSTRAP_DIR}} \
+		${WRKSRC}/build/cache/${CARGO_BOOTSTRAP_DIR_${ARCH}:U${CARGO_BOOTSTRAP_DIR}}
+	${LN} -sf ${DISTDIR}/${DIST_SUBDIR}/${RUSTC_BOOTSTRAP} \
+		${WRKSRC}/build/cache/${RUST_BOOTSTRAP_DIR_${ARCH}:U${RUST_BOOTSTRAP_DIR}}
+.if ${OPSYS} != FreeBSD || ${OSVERSION} < 1200031
+	${LN} -sf ${DISTDIR}/${DIST_SUBDIR}/${RUST_STD_BOOTSTRAP} \
+		${WRKSRC}/build/cache/${RUST_BOOTSTRAP_DIR_${ARCH}:U${RUST_BOOTSTRAP_DIR}}
+.endif
+	${LN} -sf ${DISTDIR}/${DIST_SUBDIR}/${CARGO_BOOTSTRAP} \
+		${WRKSRC}/build/cache/${CARGO_BOOTSTRAP_DIR_${ARCH}:U${CARGO_BOOTSTRAP_DIR}}
+.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1200031
+	${TAR} -x -C ${WRKSRC} -f ${DISTDIR}/${DIST_SUBDIR}/${RUST_STD_BOOTSTRAP}
+	${CC} ${CFLAGS} -fPIC -c -o ${WRKSRC}/old_fstat.o ${FILESDIR}/old_fstat.c
+	(cd ${WRKSRC} && ${AR} x ${WRKSRC}/${LIBSTD} ${STDF})
+	${LD} -r -o ${WRKSRC}/std.xx.o ${WRKSRC}/${STDF} ${WRKSRC}/old_fstat.o
+	${MV} ${WRKSRC}/std.xx.o ${WRKSRC}/${STDF}
+	(cd ${WRKSRC} && ${AR} r ${WRKSRC}/${LIBSTD} ${STDF})
+	${TAR} -cy --format=ustar -C ${WRKSRC} -f ${WRKSRC}/rustc.tbz ${RUST_STD_DIR}
+	${MV} ${WRKSRC}/rustc.tbz ${WRKSRC}/build/cache/${RUST_STD_BOOTSTRAP}
+.endif
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|' \
+	@test ! -f ${WRKSRC}/mk/main.mk || \
+	${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|' \
 		${WRKSRC}/mk/main.mk
 	@${REINPLACE_CMD} -e 's|gdb|${LOCALBASE}/bin/gdb|' \
 		${WRKSRC}/src/etc/rust-gdb
+	@if test "${RUST_BOOTSTRAP_DIR_${ARCH}}" -o "${RUST_BOOTSTRAP_VERSION_${ARCH}}"; then \
+		${REINPLACE_CMD} -e \
+		's|^rustc:.*|rustc: ${RUST_BOOTSTRAP_VERSION_${ARCH}:U${RUST_BOOTSTRAP_VERSION}}-${RUST_BOOTSTRAP_DIR_${ARCH}:U${RUST_BOOTSTRAP_DIR}}|' \
+		${WRKSRC}/src/stage0.txt; \
+	fi
+	@if test "${CARGO_BOOTSTRAP_DIR_${ARCH}}"; then \
+		${REINPLACE_CMD} -e \
+		's|^cargo:.*|cargo: ${RUST_BOOTSTRAP_DIR_${ARCH}:U${RUST_BOOTSTRAP_DIR}}|' \
+		${WRKSRC}/src/stage0.txt; \
+	fi
+	@if test "${CARGO_BOOTSTRAP_VERSION_${ARCH}}"; then \
+		${REINPLACE_CMD} -e \
+		's|cargo-nightly-|cargo-${CARGO_BOOTSTRAP_VERSION_${ARCH}:U${CARGO_BOOTSTRAP_VERSION}}-|' \
+		${WRKSRC}/src/bootstrap/bootstrap.py; \
+	fi
 
 # In case the previous "make stage" failed, this ensures rust's
 # install.sh won't backup previously staged files before reinstalling
 # new ones. Otherwise, the staging directory is polluted with unneeded
 # files.
 pre-install:
-	@for f in manifest-rustc manifest-rust-std-${RUST_TARGET}; do \
-	    if test -f ${STAGEDIR}${PREFIX}/lib/rustlib/$$f; then \
-		${SED} -E -e 's,^(dir|file:),${STAGEDIR},' \
-		< ${STAGEDIR}${PREFIX}/lib/rustlib/$$f \
-		| ${XARGS} ${RM}; \
+	@for f in ${RUST_MANIFESTS} ${RUST_DOCS_MANIFESTS}; do \
+	    if test -f "${STAGEDIR}${PREFIX}/$$f"; then \
+	        ${SED} -E -e 's,^(file|dir):,${STAGEDIR},' \
+	            < "${STAGEDIR}${PREFIX}/$$f" \
+	            | ${XARGS} ${RM} -r; \
+	        ${RM} "${STAGEDIR}${PREFIX}/$$f"; \
 	    fi; \
+	done
+	@for f in ${PLIST_FILES}; do \
+	    ${RM} "${STAGEDIR}${PREFIX}/$$f"; \
+	done
+
+# In post-install, we use the manifests generated during Rust install
+# to in turn generate the PLIST. We do that, instead of the regular
+# `pkg-plist`, because several libraries have a computed filename based
+# on the absolute path of the source files. As it is user-specific, we
+# can't know their filename in advance.
+#
+# We fix manpage entries in the generated manifests because Rust
+# installs them uncompressed but the Ports framework compresses them.
+post-install:
+	for f in ${RUST_MANIFESTS}; do \
+	    ${REINPLACE_CMD} -E \
+	        -e 's|:${STAGEDIR}|:|' \
+	        -e 's|(man/man[1-9]/.*\.[0-9])|\1.gz|' \
+	        ${STAGEDIR}${PREFIX}/$$f; \
+	    ${RM} ${STAGEDIR}${PREFIX}/$$f.bak; \
+	    ${ECHO} "${PREFIX}/$$f" >> ${TMPPLIST}; \
+	    ${AWK} '\
+	        /^file:/ { \
+	            file=$$0; \
+	            sub(/^file:/, "", file); \
+	            print file; \
+	        } \
+	        /^dir:/ { \
+	            dir=$$0; \
+	            sub(/^dir:/, "", dir); \
+	            system("find ${STAGEDIR}" dir " -type f | ${SED} -E -e \"s|${STAGEDIR}||\""); \
+	        }' \
+	        ${STAGEDIR}${PREFIX}/$$f >> ${TMPPLIST}; \
 	done
 	@${RM} \
-		${STAGEDIR}${PREFIX}/lib/rustlib/components \
-		${STAGEDIR}${PREFIX}/lib/rustlib/manifest-rustc \
-		${STAGEDIR}${PREFIX}/lib/rustlib/manifest-rust-std-${RUST_TARGET} \
-		${STAGEDIR}${PREFIX}/lib/rustlib/rust-installer-version \
-		${STAGEDIR}${PREFIX}/lib/rustlib/uninstall.sh
-
-pre-install-DOCS-on:
-	@for f in manifest-rust-docs; do \
-	    if test -f ${STAGEDIR}${PREFIX}/lib/rustlib/$$f; then \
-		${SED} -E -e 's,^(dir|file:),${STAGEDIR},' \
-		< ${STAGEDIR}${PREFIX}/lib/rustlib/$$f \
-		| ${XARGS} ${RM}; \
-	    fi; \
-	done
-	@${RM} ${STAGEDIR}${PREFIX}/lib/rustlib/manifest-rust-docs
-
-post-install:
-	@for f in manifest-rustc manifest-rust-std-${RUST_TARGET}; do \
-		${REINPLACE_CMD} -e 's|${STAGEDIR}||' \
-			${STAGEDIR}${PREFIX}/lib/rustlib/$$f; \
-		${RM} ${STAGEDIR}${PREFIX}/lib/rustlib/$$f.bak; \
-	done
-	@${RM} ${STAGEDIR}${PREFIX}/lib/rustlib/install.log
+	    ${STAGEDIR}${PREFIX}/lib/rustlib/install.log \
+	    ${STAGEDIR}${PREFIX}/lib/rustlib/uninstall.sh
 # FIXME: Static libraries in lib/rustlib/*/lib/*.rlib are not stripped,
 # but they contain non-object files which make strip(1) unhappy.
 	@${STRIP_CMD} \
@@ -167,12 +251,24 @@ post-install:
 		${STAGEDIR}${PREFIX}/lib/*.so \
 		${STAGEDIR}${PREFIX}/lib/rustlib/*/lib/*.so
 
-post-install-DOCS-on:
-	@for f in manifest-rust-docs; do \
-		${REINPLACE_CMD} -e 's|${STAGEDIR}||' \
-			${STAGEDIR}${PREFIX}/lib/rustlib/$$f; \
-		${RM} ${STAGEDIR}${PREFIX}/lib/rustlib/$$f.bak; \
-	done
-	@${RMDIR} ${STAGEDIR}${PREFIX}/share/doc/rust/html/extra
+.include <bsd.port.post.mk>
 
-.include <bsd.port.mk>
+# "make gen-registry" is a special target to ease this port update.
+#
+# After changing the version number and the Git revision, you can run
+# "make gen-registry" to update the distinfo and create a new snapshot of
+# the registry. The new registry is written to ${DISTDIR} and can be
+# uploaded.
+
+gen-registry:
+	${MAKE} -C${.CURDIR} -DSKIP_CARGO_REGISTRY makesum
+	${MAKE} -C${.CURDIR} -DSKIP_CARGO_REGISTRY
+	${TAR} cJvf ${DISTDIR}/${DIST_SUBDIR}/${CARGO_REGISTRY} -C${WRKDIR} \
+		--uid 0 --gid 0 \
+		--exclude 'src/*/benches/' \
+		--exclude 'src/*/ci/' \
+		--exclude 'src/*/examples/' \
+		--exclude 'src/*/tests/' \
+		--exclude 'index/github.com-*/.git/' \
+		.cargo
+	${MAKE} -C${.CURDIR} makesum
