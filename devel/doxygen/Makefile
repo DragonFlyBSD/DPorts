@@ -15,13 +15,11 @@ COMMENT=	Documentation system for C, C++, and other languages
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		bison cmake:outsource iconv python:2 shebangfix
+USES=		bison cmake:outsource,noninja iconv python:2 shebangfix
 ALL_TARGET=	all
 CMAKE_ARGS+=	-DDOC_INSTALL_DIR:PATH=${DOCSDIR_REL}
 # Parallel jobs breaks when the DOCS option is on
 MAKE_JOBS_UNSAFE=	yes
-
-EXTRACT_AFTER_ARGS=	--exclude '*/libmd5'
 
 PLIST_FILES=	bin/doxygen
 
