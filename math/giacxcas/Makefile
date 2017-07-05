@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	giacxcas
-DISTVERSION=	1.2.2-57
-PORTREVISION=	3
+DISTVERSION=	1.2.3-55
 CATEGORIES=	math
 MASTER_SITES=	http://www-fourier.ujf-grenoble.fr/~parisse/debian/dists/stable/main/source/:giac \
 		http://www-fourier.ujf-grenoble.fr/~parisse/giac/freebsd/
