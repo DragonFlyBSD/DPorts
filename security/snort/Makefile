@@ -19,7 +19,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libpcre.so:devel/pcre \
 		libdnet.so:net/libdnet \
-		libpcap.so:net/libpcap
+		libpcap.so.1:net/libpcap
 
 BUILD_DEPENDS=	daq>=2.0.0:net/daq
 RUN_DEPENDS=	daq>=2.0.0:net/daq
