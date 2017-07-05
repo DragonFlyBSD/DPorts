@@ -1,5 +1,0 @@
-
-dfly-patch:
-	${REINPLACE_CMD} -e "s@setcap cap_net_raw@false @" \
-		${WRKSRC}/Makefile.am \
-		${WRKSRC}/Makefile.in
