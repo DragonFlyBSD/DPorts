@@ -2,10 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	rawtherapee
-PORTVERSION=	5.0.1
-PORTREVISION=	1
-DISTVERSIONSUFFIX=	-gtk3
-DISTNAME=	${PORTNAME}-${PORTVERSION:R}-r${PORTVERSION:E}${DISTVERSIONSUFFIX}
+PORTVERSION=	5.1
+#DISTNAME=	${PORTNAME}-${PORTVERSION:R}-r${PORTVERSION:E}${DISTVERSIONSUFFIX}
 CATEGORIES=	graphics
 MASTER_SITES=	http://rawtherapee.com/shared/source/
 
@@ -38,7 +36,6 @@ USE_LDCONFIG=	yes
 # compliant.
 CFLAGS+=	-I${LOCALBASE}/include -fPIC -D_GLIBCXX_USE_C99 -Wno-deprecated-declarations -Wno-unused-result
 LDFLAGS+=	-lpthread
-CONFIGURE_ENV+=	CFLAGS="${CFLAGS}"
 CMAKE_ARGS+=	-DDOCDIR="${DOCSDIR}" \
 		-DCREDITSDIR="${DOCSDIR}" \
 		-DLICENCEDIR="${DOCSDIR}" \
@@ -103,11 +100,11 @@ STRIP=
 
 .if ${ARCH} == i386
 USES+=		compiler:c++11-lib
-# FIXME: if we were to use GCC on i386, we'd need to use -mstackrealign
+# If we were to use GCC on i386, we'd need to use -mstackrealign
 # or similar options, else we get SIGBUS when SSE2 is enabled due to
 # improper alignment. Base clang is good enough though, i386 does not
 # support OpenMP, and those seeking ultimate performance need to use
-# amd64.
+# amd64. Workaround implemented below.
 .else
 USES+=		compiler:gcc-c++11-lib
 .endif
