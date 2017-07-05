@@ -34,7 +34,7 @@ LIBS+=		-lexecinfo
 
 BUILD_DEPENDS=	${LOCALBASE}/include/linux/input.h:multimedia/v4l_compat
 
-RUN_DEPENDS=	${LOCALBASE}/lib/libglapi.so.0:graphics/libglapi
+RUN_DEPENDS=	${LOCALBASE}/lib/libglapi.so:graphics/mesa-libs
 
 GNU_CONFIGURE=	YES
 
