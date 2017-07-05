@@ -3,7 +3,7 @@
 
 PORTNAME=	libkml
 PORTVERSION=	1.3.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	science
 
 MAINTAINER=	sunpoet@FreeBSD.org
@@ -20,6 +20,8 @@ LIB_DEPENDS=	libboost_thread.so:devel/boost-libs \
 		libgtest.so:devel/googletest \
 		libminizip.so:archivers/minizip \
 		liburiparser.so:net/uriparser
+
+BROKEN_powerpc64=	fails to compile: iomem_simple.h: redefinition of typedef 'open_file_func'
 
 OPTIONS_DEFINE=	EXAMPLES
 
