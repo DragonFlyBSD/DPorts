@@ -118,10 +118,10 @@ TEST_WRKSRC?=		${CONFIGURE_WRKSRC}
 #             as the build.ninja file won't be where ninja expects it.
 .if empty(cmake_ARGS:Mnoninja) && empty(cmake_ARGS:Mrun) && empty(USES:Mfortran)
 .  if "${CONFIGURE_WRKSRC}" == "${BUILD_WRKSRC}" && "${CONFIGURE_WRKSRC}" == "${INSTALL_WRKSRC}"
-.    if ! empty(USES:Mgmake)
-BROKEN=		USES=gmake is incompatible with cmake's ninja-generator
-.    endif
 # disable ninja by default on DPORTS
+# .    if ! empty(USES:Mgmake)
+# BROKEN=		USES=gmake is incompatible with cmake's ninja-generator
+# .    endif
 # .      include "${USESDIR}/ninja.mk"
 .  endif
 .endif
