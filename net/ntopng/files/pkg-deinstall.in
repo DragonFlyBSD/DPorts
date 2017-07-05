@@ -1,11 +1,11 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net/ntopng/files/pkg-deinstall.in 434215 2017-02-16 14:51:05Z madpilot $
+# $FreeBSD: head/net/ntopng/files/pkg-deinstall.in 441485 2017-05-22 18:05:09Z madpilot $
 
 [ "$2" != "DEINSTALL" ] && exit 0
 
-[ -f "%%DATADIR%%/GeoLiteCity.dat" ] && /bin/rm "%%DATADIR%%/GeoLiteCity.dat"
-[ -f "%%DATADIR%%/GeoLiteCityv6.dat" ] && /bin/rm "%%DATADIR%%/GeoLiteCityv6.dat"
-[ -f "%%DATADIR%%/GeoIPASNum.dat.gz" ] && /bin/rm "%%DATADIR%%/GeoIPASNum.dat.gz"
-[ -f "%%DATADIR%%/GeoIPASNumv6.dat.gz" ] && /bin/rm "%%DATADIR%%/GeoIPASNumv6.dat.gz"
+[ -f "%%DATADIR%%/httpdocs/geoip/GeoLiteCity.dat" ] && /bin/rm "%%DATADIR%%/httpdocs/geoip/GeoLiteCity.dat"
+[ -f "%%DATADIR%%/httpdocs/geoip/GeoLiteCityv6.dat" ] && /bin/rm "%%DATADIR%%/httpdocs/geoip/GeoLiteCityv6.dat"
+[ -f "%%DATADIR%%/httpdocs/geoip/GeoIPASNum.dat.gz" ] && /bin/rm "%%DATADIR%%/httpdocs/geoip/GeoIPASNum.dat.gz"
+[ -f "%%DATADIR%%/httpdocs/geoip/GeoIPASNumv6.dat.gz" ] && /bin/rm "%%DATADIR%%/httpdocs/geoip/GeoIPASNumv6.dat.gz"
 [ -d "%%DATADIR%%/httpdocs/geoip" ] && /usr/bin/find "%%DATADIR%%/httpdocs/geoip" -type d -empty -delete
