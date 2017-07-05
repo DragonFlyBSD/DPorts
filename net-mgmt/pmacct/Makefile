@@ -13,7 +13,7 @@ COMMENT=	Accounting and aggregation tool for IPv4 and IPv6 traffic
 LICENSE=	GPLv2
 
 BROKEN_aarch64=		fails to build: undefined reference to sbrk
-BROKEN_powerp64=	fails to build: cc: Internal error: Segmentation fault (program ld)
+BROKEN_powerpc64=	fails to build: cc: Internal error: Segmentation fault (program ld)
 
 USE_RC_SUBR=	pmacctd nfacctd sfacctd
 SUB_FILES=	pkg-message
@@ -23,7 +23,7 @@ LDFLAGS+=	"-L${LOCALBASE}/lib"
 
 OPTIONS_DEFINE=	MYSQL PGSQL SQLITE3 THREADS LAYER2 IPV6 DEBUG \
 		DOCS PLABEL RABBITMQ KAFKA JANSSON AVRO
-OPTIONS_DEFAULT=MMAP LAYER2 IPV6 THREADS SHARED
+OPTIONS_DEFAULT=MMAP LAYER2 THREADS SHARED
 
 AVRO_DESC=	Enable avro support
 JANSSON_DESC=	Enable Jansson support
@@ -65,7 +65,7 @@ PLIST_SUB+=	WITH_PGSQL="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MSQLITE3}
-USES+=		sqlite
+USES+=		pkgconfig sqlite
 CONFIGURE_ARGS+=--enable-sqlite3 \
 		--with-sqlite3-includes=${LOCALBASE}/include
 PLIST_SUB+=	WITH_SQLITE3=""
