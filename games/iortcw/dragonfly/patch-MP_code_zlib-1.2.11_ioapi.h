@@ -1,5 +1,5 @@
---- SP/code/zlib-1.2.8/ioapi.h.orig	2016-11-19 09:33:57 UTC
-+++ SP/code/zlib-1.2.8/ioapi.h
+--- MP/code/zlib-1.2.11/ioapi.h.orig	2017-07-06 15:26:34.000000000 +0000
++++ MP/code/zlib-1.2.11/ioapi.h	2017-07-06 15:26:56.000000000 +0000
 @@ -55,7 +55,7 @@
  #define ftello64 ftell
  #define fseeko64 fseek
