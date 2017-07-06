@@ -1,6 +1,6 @@
 #!/bin/sh
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD: head/www/radicale/files/radicale.in 385065 2015-04-30 20:22:39Z feld $
+# $FreeBSD: head/www/radicale/files/radicale.in 440516 2017-05-09 21:25:26Z zi $
 #
 
 # PROVIDE: radicale
@@ -26,6 +26,7 @@ load_rc_config $name
 : ${radicale_enable:=NO}
 : ${radicale_config=%%PREFIX%%/etc/radicale/config}
 : ${radicale_user=%%USERS%%}
+: ${radicale_group=%%GROUPS%%}
 
 pidfile=/var/run/radicale/radicale.pid
 command=%%PREFIX%%/bin/radicale
