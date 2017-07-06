@@ -21,9 +21,9 @@ SHA256 (rust/2017-04-24/cargo-0.18.0-aarch64-unknown-freebsd.tar.gz) = 8cdbf046b
 SIZE (rust/2017-04-24/cargo-0.18.0-aarch64-unknown-freebsd.tar.gz) = 2935624
 SHA256 (rust/rust-registry-1.18.0.tar.xz) = 86c74c61aec5b94c9db9f569e6aa5cfeab2dde2a4ba73ea1da4c7320b31f5b36
 SIZE (rust/rust-registry-1.18.0.tar.xz) = 7714840
-SHA256 (rust/2017-04-27/rustc-1.17.0-x86_64-unknown-dragonfly.tar.gz) = a7f22cb60b2e440c4bdf4ef3988527b9b27ce95d978e7d792c162218ba70a51e
-SIZE (rust/2017-04-27/rustc-1.17.0-x86_64-unknown-dragonfly.tar.gz) = 43359305
-SHA256 (rust/2017-04-27/rust-std-1.17.0-x86_64-unknown-dragonfly.tar.gz) = 70685efdd1181be946919de8173f530f4202c2f2fcae8b71971ec872f8c1e226
-SIZE = (rust/2017-04-27/rust-std-1.17.0-x86_64-unknown-dragonfly.tar.gz) = 57572645
-SHA256 (rust/2017-04-27/cargo-0.18.0-x86_64-unknown-dragonfly.tar.gz) = 6a4d85ca24a791c24f8687ae4155551d0a1c9445f661e985d4645b3ae9e595e7
-SIZE (rust/2017-04-27/cargo-0.18.0-x86_64-unknown-dragonfly.tar.gz) = 4945570
+SHA256 (rust/2017-04-27/rustc-1.17.0-x86_64-unknown-dragonfly.tar.gz) = 8d879c3c0e805e0fe34a8205d6fee99e1d656bed96dfcc70598ff46f920fc261
+SIZE (rust/2017-04-27/rustc-1.17.0-x86_64-unknown-dragonfly.tar.gz) = 38329043
+SHA256 (rust/2017-04-27/rust-std-1.17.0-x86_64-unknown-dragonfly.tar.gz) = a7ad69adde35d99b57e05a84f2292f3b4d3e492ab4cf445906b2d8792335b085
+SIZE = (rust/2017-04-27/rust-std-1.17.0-x86_64-unknown-dragonfly.tar.gz) = 52536632
+SHA256 (rust/2017-04-27/cargo-0.18.0-x86_64-unknown-dragonfly.tar.gz) = 2f31cc9f76e0eb1aa7f44b61ce792902deca49f1d45cdede9313f654d699e3e1
+SIZE (rust/2017-04-27/cargo-0.18.0-x86_64-unknown-dragonfly.tar.gz) = 4858151
