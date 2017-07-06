@@ -19,11 +19,9 @@ REPLACE_LIST= \
 	include/osl/endian.h \
 	registry/workben/makefile.mk \
 	sal/osl/unx/system.cxx \
-	sc/Module_sc.mk \
 	solenv/bin/modules/installer/parameter.pm \
 	soltools/mkdepend/main.c \
 	stoc/source/corereflection/criface.cxx \
-	sw/Module_sw.mk \
 	vcl/qa/cppunit/BitmapTest.cxx \
 	vcl/unx/generic/app/saldata.cxx \
 	vcl/unx/generic/dtrans/X11_selection.cxx \
@@ -44,13 +42,16 @@ PERCENT_BSD_LIST= \
 	avmedia/Library_avmediaogl.mk \
 	chart2/Library_chartcore.mk \
 	chart2/Library_chartopengl.mk \
+	desktop/CppunitTest_desktop_app.mk \
 	desktop/Library_crashreport.mk\
 	desktop/Library_sofficeapp.mk \
 	libreofficekit/Module_libreofficekit.mk \
 	libreofficekit/Executable_gtktiledviewer.mk \
 	libreofficekit/Library_libreofficekitgtk.mk \
 	svx/Executable_gengal.mk \
+	vcl/CppunitTest_vcl_wmf_test.mk \
 	vcl/Executable_vcldemo.mk \
+	vcl/Executable_visualbackendtest.mk \
 	vcl/Executable_ui-previewer.mk \
 	vcl/Executable_mtfdemo.mk \
 	vcl/Module_vcl.mk \
@@ -65,8 +66,8 @@ PERCENT_BSD_LIST= \
 dfly-patch:
 	${REINPLACE_CMD} -e 's|$$ENV{TMPDIR};|"${WRKDIR}";|' \
 		${WRKSRC}/solenv/bin/ooinstall
-	(cd ${WRKSRC} && \
-		${REINPLACE_CMD} -e 's|FREEBSD|DRAGONFLY|' ${REPLACE_LIST})
+	(cd ${WRKSRC} && ${REINPLACE_CMD} -e 's|FREEBSD|DRAGONFLY|' \
+		${REPLACE_LIST})
 .for F in ${REPLACE_LIST}
 	@/usr/bin/cmp -s ${WRKSRC:Q}/${F} ${WRKSRC:Q}/${F}.bak && \
 		echo "${F} was not altered" || /usr/bin/true
@@ -77,12 +78,3 @@ dfly-patch:
 	@/usr/bin/cmp -s ${WRKSRC:Q}/${F} ${WRKSRC:Q}/${F}.bak && \
 		echo "${F} was not altered" || /usr/bin/true
 .endfor
-# these test core!  Something is really wrong
-	${REINPLACE_CMD} \
-		-e '/CppunitTest_sc_bugfix_test/d' \
-		-e '/CppunitTest_sc_filters_test/d ' \
-		-e '/CppunitTest_sc_condformats/d' \
-		-e '/CppunitTest_sc_html_export_test/d' \
-		-e '/CppunitTest_sc_copypaste/d' \
-		-e '/CppunitTest_sc_functions_test/d' \
-		${WRKSRC}/sc/Module_sc.mk
