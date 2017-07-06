@@ -1,3 +1,4 @@
+MAKE_ARGS+=	strict_build_flags=0
 
 dfly-patch:
 	${REINPLACE_CMD} -e 's@\(defined(__FreeBSD__)\)@(\1 || defined(__DragonFly__))@g'	\
@@ -9,8 +10,7 @@ dfly-patch:
 		${WRKSRC}/galerautils/src/gu_limits.h	\
 		${WRKSRC}/galerautils/src/gu_mmap.cpp	\
 		${WRKSRC}/galerautils/src/gu_resolver.cpp	\
-		${WRKSRC}/galerautils/src/gu_system.h	\
-		${WRKSRC}/gcs/src/gcs_spread.c
+		${WRKSRC}/galerautils/src/gu_system.h
 	${REINPLACE_CMD} -e 's@[[:<:]]T_USER[[:>:]]@T_USERz@g'	\
 		${WRKSRC}/gcomm/src/evs_message2.hpp	\
 		${WRKSRC}/gcomm/src/evs_proto.cpp	\
