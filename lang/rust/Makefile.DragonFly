@@ -5,7 +5,3 @@ MASTER_SITES+=	https://leaf.dragonflybsd.org/~mneumann/rust/:rust_bootstrap \
 
 MAKE_ENV="LD_LIBRARY_PATH=${WRKSRC}/build/${RUST_TARGET}/stage0/lib"
 MAKE_ENV+=RUST_BACKTRACE=1
-
-.if ${DFLYVERSION} >= 400905
-EXTRA_PATCHES+=	extra-patch-src_liblibc_src_unix_bsd_freebsdlike_dragonfly_mod.rs
-.endif

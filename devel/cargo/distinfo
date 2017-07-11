@@ -11,5 +11,5 @@ SHA256 (rust/rust-lang-cargo-0.19.0_GH0.tar.gz) = 9ea59d17a7fa81aa4bdefa2bb45a53
 SIZE (rust/rust-lang-cargo-0.19.0_GH0.tar.gz) = 652163
 SHA256 (rust/rust-lang-rust-installer-4f99485_GH0.tar.gz) = daa34a28d8fe64dd358e5a0c3a83b7018da6df41c9b4420d28ffdb8b05a82478
 SIZE (rust/rust-lang-rust-installer-4f99485_GH0.tar.gz) = 19990
-SHA256 (rust/2017-04-27/cargo-0.18.0-x86_64-unknown-dragonfly.tar.gz) = 2f31cc9f76e0eb1aa7f44b61ce792902deca49f1d45cdede9313f654d699e3e1
-SIZE (rust/2017-04-27/cargo-0.18.0-x86_64-unknown-dragonfly.tar.gz) = 4858151
+SHA256 (rust/2017-04-27/cargo-0.18.0-x86_64-unknown-dragonfly.tar.gz) = 6a4d85ca24a791c24f8687ae4155551d0a1c9445f661e985d4645b3ae9e595e7
+SIZE (rust/2017-04-27/cargo-0.18.0-x86_64-unknown-dragonfly.tar.gz) = 4945570
