@@ -1,1 +1,0 @@
-USES:=	${USES:Ncmake*} cmake:outsource,noninja
