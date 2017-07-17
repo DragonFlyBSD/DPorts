@@ -5,6 +5,51 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20170717:
+  AFFECTS: users of devel/p5-Log-Any and devel/p5-Log-Any-Adapter-Syslog
+  AUTHOR: eugen@FreeBSD.org
+
+  devel/p5-Log-Any-Adapter-Syslog functionality have been merged into
+  devel/p5-Log-Any and from now devel/p5-Log-Any must be used.
+
+  devel/p5-Log-Any-Adapter-Syslog will be marked as deprecated and removed.
+
+20170712:
+  AFFECTS: users of devel/apr1
+  AUTHOR: brnrd@FreeBSD.org
+
+  APR was updated to 1.6.0 and APR-util was updated to 1.6.2
+
+  The Apache Portable Runtime project removed support for FreeTDS from the
+  APR Utilities in version 1.6. Users of FreeTDS will have to migrate
+  configurations to use the newly added ODBC support in conjunction with
+  FreeTDS using FreeTDS' ODBC capabilities.
+
+  Please rebuild all ports which are using functions from APR/APR-util
+  such as Apache, Subversion, etc. Normally, you can obtain the list of
+  dependent software by running the following command:
+
+  # pkg info -r apr
+
+  Then you should rebuild all ports depending on APR(-util) to avoid
+  dangling shared library dependencies. Poudriere and pkg handle this
+  correctly, portmaster and portupgrade users can use the following to
+  rebuild all dependent ports.
+
+  Portmaster users:
+      portmaster -r apr
+  Portupgrade users:
+      portupgrade -fr devel/apr1
+
+20170710:
+  AFFECTS: users of net-im/ejabberd
+  AUTHOR: ashish@FreeBSD.org
+
+  After update to 17.07, there is an issue[1] expected related to certificate
+  verification with TLS connections.
+
+  [1] - https://github.com/processone/ejabberd/issues/1833
+
 20170628:
   AFFECTS: users of www/node
   AUTHOR: bhughes@freebsd.org
@@ -59,13 +104,13 @@ you update your ports collection, before attempting any port upgrades.
 
   The upgrade instructions consider a basic usage and do not match
   complex scenarious like replication, sharding or similar.
-  
+
   Upgrade instructions:
 
   First stop your PostgreSQL, create PostgreSQL-binaries and backup your data.
   If you have another Version of PostgreSQL installed, for example 9.3.12, your
   files are named accourding to this.
-  
+
   # service postgresql stop
   # pkg create postgresql93-server postgresql93-contrib
   # mkdir /tmp/pg-upgrade
@@ -90,7 +135,7 @@ you update your ports collection, before attempting any port upgrades.
 
   After installing the new PostgreSQL version you need to convert
   all your databases to new version:
-  
+
   # service postgresql initdb
   # su -l pgsql -c "pg_upgrade -b /tmp/pg-upgrade/usr/local/bin/ -d /usr/local/pgsql/data93/ -B /usr/local/bin/ -D /usr/local/pgsql/data/"
 
@@ -106,7 +151,7 @@ you update your ports collection, before attempting any port upgrades.
   based application. Calligra now uses Qt5 and KF5. The translations have
   been merged (upstream) into the application, so separate language /
   translation ports are no longer provided. Krita has been split out
-  (upstream) into a separate application, which is packaged as 
+  (upstream) into a separate application, which is packaged as
   graphics/krita. Kexi, the visual database applications creator,
   is packaged separately as databases/kexi.
 
@@ -121,7 +166,7 @@ you update your ports collection, before attempting any port upgrades.
   which can be resolved by adding 'mod_s2s_dialback: {}' to 'modules' section
   of configuration file.
 
-  [1] - https://github.com/processone/ejabberd/issues/1700  
+  [1] - https://github.com/processone/ejabberd/issues/1700
 
 20170603:
   AFFECTS: users of www/kanboard
@@ -1416,22 +1461,4 @@ you update your ports collection, before attempting any port upgrades.
   from /awstatsicons. After applying the awstats-7.5 update, you must
   update that alias to point to /usr/local/www/awstats/icon (just remove
   the "s" at the end).
-
-20160708:
-  AFFECTS: users of sysutils/screen
-  AUTHOR: cy@FreeBSD.org
-
-  GNU Screen was updated to version 4.4.0 (r417201).  Note that there was
-  fix to screen message structure field responsible for $TERM handling,
-  making it impossible to attach to older versions.
-
-20160704:
-  AFFECTS: users of databases/mysql57-*
-  AUTHOR: riggs@FreeBSD.org
-
-  The default location for my.cnf has changed from "/var/db/mysql/my.cnf"
-  to "/usr/local/etc/mysql/my.cnf". Existing my.cnf files must be merged
-  manually with the new default and moved to the new location. To
-  continue using the my.cnf file at the old location, set "mysql_optfile"
-  in /etc/rc.conf to point to the location of the existing my.cnf file.
 
