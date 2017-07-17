@@ -103,6 +103,10 @@ CONFIGURE_ARGS+=--with-setjmp-type=_setjmp
 CONFIGURE_ENV+=	ac_cv_func__setjmp=yes
 .endif
 
+.if ${PORT_OPTIONS:MCAPIDOCS}
+MAKE_JOBS_UNSAFE=	yes
+.endif
+
 .if ${RUBY_VER} == ${RUBY_DEFAULT_VER}
 MLINKS=		${RUBY_NAME}.1 ruby.1
 PLIST_SUB+=	IF_DEFAULT=""
