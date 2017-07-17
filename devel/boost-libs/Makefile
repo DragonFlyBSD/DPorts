@@ -51,4 +51,7 @@ post-install:
 		-e "s|%%PYTHON_LIBDIR%%|${PYTHON_LIBDIR}|g" \
 		-e "s|%%PYTHON_VERSION%%|${PYTHON_VERSION}|g" ${PKGMESSAGE}
 
+	${RM} ${STAGEDIR}${PREFIX}/lib/libboost_math_tr1l.*
+	${RM} ${STAGEDIR}${PREFIX}/lib/libboost_math_c99l.*
+
 .include <bsd.port.mk>
