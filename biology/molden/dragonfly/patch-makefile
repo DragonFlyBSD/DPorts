@@ -1,0 +1,14 @@
+--- makefile.intermediate	2016-08-02 10:51:37 UTC
++++ makefile
+@@ -108,6 +108,11 @@
+ endif
+ endif
+ 
++ifeq ($(uname), DragonFly)
++CFLAGS:= ${CFLAGS} -DDRAGONFLY
++LIBS =  -L/usr/local/lib -lX11 -lm
++endif
++
+ ifeq ($(uname), Darwin)
+ #
+ # Mac OS X g77
