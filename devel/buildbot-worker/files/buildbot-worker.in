@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/devel/buildbot-worker/files/buildbot-worker.in 437133 2017-03-28 15:42:26Z grembo $
+# $FreeBSD: head/devel/buildbot-worker/files/buildbot-worker.in 445207 2017-07-07 03:57:39Z asomers $
 # PROVIDE: buildbot-worker
 # REQUIRE: LOGIN
 # KEYWORD: shutdown
@@ -44,7 +44,7 @@
 
 export PATH=${PATH}:%%LOCALBASE%%/bin
 
-name=buildbot-worker
+name=buildbot_worker
 desc="Buildbot Buildworker"
 rcvar=buildbot_worker_enable
 
