@@ -27,7 +27,7 @@ SHEBANG_FILES=	build/make/ads2gas.pl
 CONFIGURE_ENV=	ASFLAGS="${ASFLAGS}"
 # Only explicitly list ARCHs with SIMD optimizations
 CONFIGURE_ARGS_aarch64=	--target=arm64-linux-gcc
-CONFIGURE_ARGS_amd64=	--target=x86_64-linux-gcc
+CONFIGURE_ARGS_x86_64=	--target=x86_64-linux-gcc
 CONFIGURE_ARGS_i386=	--target=x86-linux-gcc
 .if ${CFLAGS:M-march=armv[78]*}
 CONFIGURE_ARGS+=	--target=armv7-linux-gcc
