@@ -1,0 +1,20 @@
+--- src/import-export/test/Makefile.in.orig	2017-07-02 21:50:42.000000000 +0300
++++ src/import-export/test/Makefile.in
+@@ -706,6 +706,7 @@ LDADD = \
+   $(top_builddir)/src/app-utils/libgncmod-app-utils.la \
+   ${top_builddir}/src/gnome-utils/libgncmod-gnome-utils.la \
+   ${top_builddir}/src/engine/libgncmod-engine.la \
++  ${GTK_LIBS} \
+   ${GLIB_LIBS} \
+   ${GUILE_LIBS}
+ 
+--- src/import-export/test/Makefile.am	2017-07-02 21:50:27.000000000 +0300
++++ src/import-export/test/Makefile.am
+@@ -22,6 +22,7 @@ LDADD = \
+   $(top_builddir)/src/app-utils/libgncmod-app-utils.la \
+   ${top_builddir}/src/gnome-utils/libgncmod-gnome-utils.la \
+   ${top_builddir}/src/engine/libgncmod-engine.la \
++  ${GTK_LIBS} \
+   ${GLIB_LIBS} \
+   ${GUILE_LIBS}
+ 
