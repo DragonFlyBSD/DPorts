@@ -1,0 +1,5 @@
+
+# restore explicit linkage with std c++ runtime lib
+dfly-patch:
+	${REINPLACE_CMD} -e '/AC_CHECK_LIB(stdc++, main)/s/# test x/test x/g'	\
+		${WRKSRC}/configure.ac
