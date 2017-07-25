@@ -1,5 +1,8 @@
 USES+= alias
 
+# exclude dubious warn flags from MF
+CFLAGS:=	${CFLAGS:N-Wno-error=unused-command-line-argument}
+
 dfly-patch:
 	${REINPLACE_CMD} -e 's@<dev/ppbus/ppi\.h>@<dev/misc/ppi/ppi.h>@g'	\
 			 -e 's@<dev/ppbus/ppbconf\.h>@<bus/ppbus/ppbconf.h>@g'	\
