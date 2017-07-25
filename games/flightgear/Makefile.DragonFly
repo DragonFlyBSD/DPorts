@@ -7,6 +7,9 @@ RUN_DEPENDS:=	${RUN_DEPENDS:N*flightgear-data}
 PKGMESSAGE=	${DPMSG}
 .endif
 
+# for now the libudev.so:devel/libudev-devd is not available
+LIB_DEPENDS:=	${LIB_DEPENDS:Nlibudev.so\:devel\/libudev-devd}
+
 # workaround with X11 clipboard support
 dfly-patch:
 	${REINPLACE_CMD} -e 's|"FreeBSD"|"DragonFly"|' \

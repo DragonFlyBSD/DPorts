@@ -1,4 +1,4 @@
---- CMakeLists.txt.orig	2016-03-10 22:27:34 UTC
+--- CMakeLists.txt.intermediate	2017-07-25 16:38:29.000000000 +0300
 +++ CMakeLists.txt
 @@ -114,6 +114,7 @@ IF(APPLE)
      SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -mmacosx-version-min=10.7")
@@ -8,3 +8,12 @@
  	${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
      find_package(Threads REQUIRED)
      find_package(X11 REQUIRED)
+@@ -227,7 +227,7 @@ include( ConfigureMsvc3rdParty )
+ if(EVENT_INPUT)
+     if(APPLE)
+       add_definitions(-DWITH_EVENTINPUT)
+-    elseif(CMAKE_SYSTEM_NAME MATCHES "Linux|FreeBSD")
++    elseif(CMAKE_SYSTEM_NAME MATCHES "Linux|DragonFly|FreeBSD")
+         if(NOT UDEV_FOUND)
+             message(WARNING "UDev not found, event input is disabled!")
+             set(EVENT_INPUT 0)
