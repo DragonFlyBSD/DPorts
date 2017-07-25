@@ -1,2 +1,3 @@
-SHA256 (sysbench-0.4.12.tar.gz) = 83fa7464193e012c91254e595a89894d8e35b4a38324b52a5974777e3823ea9e
-SIZE (sysbench-0.4.12.tar.gz) = 421932
+TIMESTAMP = 1499297334
+SHA256 (akopytov-sysbench-1.0.8_GH0.tar.gz) = 2dad131a99578999c8159eccd2f7ec1b9da4eca9e646dfeb838cf72c00862d69
+SIZE (akopytov-sysbench-1.0.8_GH0.tar.gz) = 1494988
