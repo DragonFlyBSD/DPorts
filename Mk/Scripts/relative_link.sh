@@ -11,9 +11,21 @@
 # limitation: Since realpath cannot be performed against an non-existent file,
 #             The paths of the two arguments are assumed to be comparable
 
-if [ $# -ne 2 ]; then
-   echo "Usage of relative_link.sh: <path to existing file> <symlink to be created>"
+if [ $# -ne 2 -a $# -ne 3 ]; then
+   echo "Usage of relative_link.sh: [-s] <path to existing file> <symlink to be created>"
    exit 1;
+fi
+
+SRC=${1}
+DEST=${2}
+
+if [ $# -eq 3 ]; then
+  SRC=${2}
+  DEST=${3}
+  if [ "${1}" != "-s" ]; then
+    echo "Error: relative_link.sh supports only -s dummy flag"
+    exit 1;
+  fi
 fi
 
 AWKPROG='BEGIN { split(existing,comp,"/"); lenc=length(comp) }\
@@ -29,6 +41,6 @@ AWKPROG='BEGIN { split(existing,comp,"/"); lenc=length(comp) }\
   }\
 }'
 
-symlink=$(echo ${2} | awk -v existing="${1}" -F "/" "${AWKPROG}")
+symlink=$(echo ${DEST} | awk -v existing="${SRC}" -F "/" "${AWKPROG}")
 
-ln -sf "${symlink}" "${2}"
+ln -sf "${symlink}" "${DEST}"
