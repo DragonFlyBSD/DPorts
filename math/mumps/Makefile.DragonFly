@@ -1,1 +1,5 @@
 MAKE_JOBS_UNSAFE=yes
+
+dfly-patch:
+	${REINPLACE_CMD} -e "s@\(-lblas\)@-L${LOCALBASE}/lib \1@g"	\
+		${WRKSRC}/src/Makefile
