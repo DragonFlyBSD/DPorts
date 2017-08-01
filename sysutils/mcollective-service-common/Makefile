@@ -1,10 +1,10 @@
 # $FreeBSD$
 
 PORTNAME?=	mcollective-service-common
-PORTVERSION=	3.1.3
+PORTVERSION=	3.1.5
 CATEGORIES=	sysutils
 
-MAINTAINER=	romain@FreeBSD.org
+MAINTAINER=	puppet@FreeBSD.org
 COMMENT?=	MCollective common files to manage the OS Services
 
 LICENSE=	APACHE20
