@@ -418,7 +418,7 @@ gitlab-runner:*:474:
 # free: 476
 # free: 477
 prometheus:*:478:
-# free: 479
+alertmanager:*:479:
 # free: 480
 # free: 481
 # free: 482
@@ -827,7 +827,7 @@ chronyd:*:849:
 # free: 885
 # free: 886
 # free: 887
-# free: 888
+vuls:*:888:
 # free: 889
 # free: 890
 # free: 891

@@ -2093,7 +2093,6 @@ multimedia/xfce4-xmms-plugin||2014-04-28|Has expired: Abandonware, and can't sel
 multimedia/xmms-weasel||2014-04-28|Has expired: Abandonware, please consider using multimedia/audacious instead
 audio/xmms-sexyspc||2014-04-28|Has expired: Abandonware, please consider using multimedia/audacious instead
 audio/libmusicbrainz4|audio/libmusicbrainz5|2014-04-28|Has expired: Please use audio/libmusicbrainz5 instead
-cad/kicad-library||2014-05-02|kicad-library is no more distributed separately
 science/netcdf-ftn|science/netcdf-fortran|2014-05-03|Use science/netcdf-fortran instead
 science/netcdf3-ftn|science/netcdf-fortran|2014-05-03|Use science/netcdf-fortran instead
 science/netcdf4|science/netcdf|2014-05-03|Use science/netcdf instead
@@ -3686,7 +3685,6 @@ devel/erlang-mustache|devel/erlang-bbmustache|2015-06-21|Renamed upstream
 dns/maradns1|dns/maradns|2015-06-23|Has expired: MaraDNS 1 end-of-life: June 21, 2015, use dns/maradns
 net/py-soappy-devel||2015-06-25|Please use net/py-soappy instead. It's fresher than -devel
 devel/armv6-freebsd10.0-xdev||2015-06-27|Not usable for the purpose it has been intended for
-devel/bear|devel/erlang-bear|2015-06-27|Renamed with erlang- prefix
 devel/common_lib|devel/erlang-common_lib|2015-06-27|Renamed with erlang- prefix
 devel/cowlib|devel/erlang-cowlib|2015-06-27|Renamed with erlang- prefix
 devel/cuttlefish|devel/erlang-cuttlefish|2015-06-27|Renamed with erlang- prefix
@@ -5475,6 +5473,7 @@ net-mgmt/zabbix24-proxy||2017-05-29|Has expired: Upstream has declared this vers
 net-mgmt/zabbix24-server||2017-05-29|Has expired: Upstream has declared this version EoL in 2016 (Q1)
 net/py-cloudfiles|net/py-python-cloudfiles|2017-05-30|Rename to match PyPI naming
 irc/konversation-kde4|irc/konversation|2017-05-30|Renamed to irc/konversation
+net/py-python-swiftclient|databases/py-python-swiftclient|2017-05-31|Duplicate port
 lang/perl5.20|lang/perl5.24|2017-06-01|Support ends three years after .0 release, please upgrade to a more recent version of Perl
 misc/unicode-ucd|textproc/UCD|2017-06-02|unicode-ucd was a duplicate of textproc/UCD, remove the younger port
 print/gutenprint-base|print/gutenprint|2017-06-04|Folded into gutenprint port
@@ -5486,10 +5485,10 @@ mail/linux-thunderbird||2017-06-07|Has expired: Use the native thunderbird mail/
 devel/p5-Penguin||2017-06-07|Has expired: Depends on expired security/pgp
 security/p5-Crypt-PGPSimple||2017-06-07|Has expired: Depends on expired security/pgp
 mail/pgpsendmail||2017-06-07|Has expired: Depends on expired security/pgp
-security/pgp||2017-06-07|Has expired: This software was last updated in 1996, use security/gnupg1 as a drop-in replacement with legacy PGP support.
+security/pgp||2017-06-07|Has expired: This software was last updated in 1996, use security/gnupg1 as a drop-in replacement with legacy PGP support
 dns/pear-Net_DNS||2017-06-07|Has expired: This Port use PHP4.2 - This PHP-Version is not longer supporded
-net/samba42|net/samba44|2016-09-07|Has expired: not supported upstream https://wiki.samba.org/index.php/Samba_Release_Planning
-net/samba43|net/samba44|2017-03-07|Has expired: not supported upstream https://wiki.samba.org/index.php/Samba_Release_Planning
+net/samba42|net/samba44|2017-06-07|Has expired: not supported upstream https://wiki.samba.org/index.php/Samba_Release_Planning
+net/samba43|net/samba44|2017-06-07|Has expired: not supported upstream https://wiki.samba.org/index.php/Samba_Release_Planning
 www/py-utidy|www/py-utidylib|2017-06-08|Rename to comply with PyPI scheme
 chinese/calligra-l10n-zh_CN||2017-06-12|Merged with editors/calligra
 chinese/calligra-l10n-zh_TW||2017-06-12|Merged with editors/calligra
@@ -5545,6 +5544,35 @@ devel/etcd3|devel/etcd31|2017-07-07|Version 3.2 introduces breaking changes
 sysutils/py-iocage|sysutils/py3-iocage|2017-07-10|Has expired: obsoleted by sysutils/py3-iocage port using Python 3 instead of Python 2
 www/mediawiki126|www/mediawiki127|2017-07-10|Has expired: Upstream support EoL
 devel/libbrotli|archivers/brotli|2017-07-12|meta project no longer required to build libs
-dns/opendnssec13|dns/opendnssec14|2017-07-13|Has expired: Approaching EOL, upgrade to opendnssec 1.4 or 2
+dns/opendnssec13|dns/opendnssec|2017-07-13|Has expired: Approaching EOL, upgrade to opendnssec 1.4 or 2
 multimedia/banshee||2017-07-13|Has expired: Project is not being actively maintained upstream anymore
 www/libhtp-suricata||2017-07-16|No longer required. security/suricata now uses official (not forked) libhtp 
+databases/py-odbc|databases/py-pyodbc|2017-07-18|Rename to comply with PyPI scheme
+security/sshguard-ipfw|security/sshguard|2017-07-20|Merged with security/sshguard
+security/sshguard-pf|security/sshguard|2017-07-20|Merged with security/sshguard
+security/sshguard-null|security/sshguard|2017-07-20|Merged with security/sshguard
+audio/gstreamer1-plugins-mad|audio/gstreamer1-plugins-mpg123|2017-07-21|The GStreamer 1 mad plugin was removed, the mpg123 plugin supplies the same functionality
+x11-toolkits/gstreamer1-plugins-gtksink|x11-toolkits/gstreamer1-plugins-gtk|2017-07-21|The GStreamer 1 gtksink plugin was renamed
+devel/ffcall|devel/libffcall|2017-07-28|Project was renamed
+databases/grass|databases/grass6|2017-07-30|Project was renamed to allow for grass7
+net/rubygem-oauth212|net/rubygem-oauth2|2017-07-31|Has expired: Only created for www/gitlab; please use net/rubygem-oauth2 instead
+textproc/rubygem-liquid3|textproc/rubygem-liquid|2017-07-31|Has expired: Use textproc/rubygem-liquid instead
+mail/dovecot2-antispam-plugin|mail/dovecot2-pigeonhole|2017-07-31|Has expired: Use pigeonhole instead. See https://wiki2.dovecot.org/HowTo/AntispamWithSieve
+mail/dovecot-antispam|mail/dovecot2-antispam-plugin|2017-07-31|Has expired: Dovecot-1.x is deprecated. Use dovecot2 and dovecot2-antispam-plugin instead
+mail/dovecot-sieve|mail/dovecot2-pigeonhole|2017-07-31|Has expired: Dovecot-1.x is deprecated. Use dovecot2 and dovecot-pigeonhole instead
+mail/dovecot-managesieve|mail/dovecot2-pigeonhole|2017-07-31|Has expired: Dovecot-1.x is deprecated. Use dovecot2 and dovecot-pigeonhole instead
+www/rubygem-jquery-ui-rails5-rails4|www/rubygem-jquery-ui-rails-rails4|2017-07-31|Has expired: Only created for www/gitlab; please use www/rubygem-jquery-ui-rails-rails4 instead
+security/rubygem-omniauth13|security/rubygem-omniauth|2017-07-31|Has expired: Only created for www/gitlab; please use security/rubygem-omniauth instead
+devel/rubygem-health_check22|devel/rubygem-health_check|2017-07-31|Has expired: Only created for www/gitlab; please use devel/rubygem-health_check instead
+devel/rubygem-semantic_puppet0|devel/rubygem-semantic_puppet|2017-07-31|Has expired: Use devel/rubygem-semantic_puppet instead
+devel/rubygem-newrelic_rpm3|devel/rubygem-newrelic_rpm|2017-07-31|Has expired: Only created for www/gitlab; please use devel/rubygem-newrelic_rpm instead
+lang/p5-Parse-Perl||2017-07-31|Has expired: does not build with Perl >= 5.22
+sysutils/rubygem-puppet_forge1|sysutils/rubygem-puppet_forge|2017-07-31|Has expired: Use sysutils/rubygem-puppet_forge instead
+sysutils/rubygem-SyslogLogger||2017-07-31|Has expired: Project is EOL'd because it was merged into Ruby 2.0
+multimedia/avbin||2017-07-31|Has expired: Unfetchable for more than six months (google code has gone away)
+games/gondola||2017-07-31|Depends on expired multimedia/avbin
+sysutils/flyback||2017-07-31|Unfetchable for more than six months (google code has gone away)
+multimedia/py-ffmpeg||2017-07-31|Has expired: Depreciated upstream in favour of ffpyplayer
+mail/dovecot|mail/dovecot2|2017-07-31|Has expired: Deprecated by upstream years ago. Use mail/dovecot2 instead
+devel/cloudabi-binutils-aarch64|devel/cloudabi-toolchain|2017-07-31|ELF-toolchain based tools should be used instead
+devel/cloudabi-binutils-x86_64|devel/cloudabi-toolchain|2017-07-31|ELF-toolchain based tools should be used instead
