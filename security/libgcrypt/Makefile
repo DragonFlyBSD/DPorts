@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	libgcrypt
-PORTVERSION=	1.7.8
+PORTVERSION=	1.8.0
 CATEGORIES=	security
 MASTER_SITES=	GNUPG
 
@@ -11,15 +11,15 @@ COMMENT=	General purpose crypto library based on code used in GnuPG
 LICENSE=	GPLv2+ LGPL21+
 LICENSE_COMB=	multi
 
-BUILD_DEPENDS=	libgpg-error>=1.8:security/libgpg-error
-RUN_DEPENDS=	libgpg-error>=1.8:security/libgpg-error
+BUILD_DEPENDS=	libgpg-error>=1.25:security/libgpg-error
+RUN_DEPENDS=	libgpg-error>=1.25:security/libgpg-error
 
 USES=		cpe libtool makeinfo tar:bzip2
 CPE_VENDOR=	gnupg
 USE_CSTD=	gnu89
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-drng-support --enable-static=yes
-CONFIGURE_ENV=	MAKEINFO="makeinfo --no-split"
+CONFIGURE_ENV=	MAKEINFO="${MAKEINFO} --no-split"
 CONFIGURE_TARGET=${ARCH:S/amd64/x86_64/}-portbld-${OPSYS:tl}${OSREL}
 USE_LDCONFIG=	yes
 TEST_TARGET=	check
@@ -32,10 +32,6 @@ PORTDOCS=	*
 OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.options.mk>
-
-.if ${ARCH} == "aarch64"
-EXTRA_PATCHES+=		${FILESDIR}/extra-patch-aarch64
-.endif
 
 .if ${ARCH} == "powerpc"
 CONFIGURE_ARGS+=	--disable-asm
