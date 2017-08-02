@@ -1,9 +1,9 @@
 #!/bin/sh
 
-# $FreeBSD: head/audio/teamspeak3-server/files/teamspeak.in 409698 2016-02-27 23:29:40Z rakuco $
+# $FreeBSD: head/audio/teamspeak3-server/files/teamspeak.in 446701 2017-07-26 23:02:06Z ultima $
 #
 # PROVIDE: teamspeak
-# REQUIRE: LOGIN
+# REQUIRE: LOGIN %%MYSQL%%
 # KEYWORD: shutdown
 #
 # Add the following lines to /etc/rc.conf.local or /etc/rc.conf
@@ -28,6 +28,7 @@ command_args="-fp $pidfile -u teamspeak %%PREFIX%%/libexec/ts3server dbsqlpath=%
 teamspeak_chdir=$db_dir
 required_dirs="$db_dir $log_dir"
 
+%%CD%%
 load_rc_config $name
 
 : ${teamspeak_enable="NO"}

@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	teamspeak3-server
-PORTVERSION=	3.0.13.7
+PORTVERSION=	3.0.13.8
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	audio net
 MASTER_SITES=	http://dl.4players.de/ts/releases/${PORTVERSION}/ \
@@ -46,12 +47,18 @@ PORTDOCS=	permissiondoc.txt \
 		server_upgrade.txt \
 		update_mysql_to_mariadb.txt
 
-OPTIONS_DEFINE=	DOCS
+OPTIONS_DEFINE=	DOCS MYSQL
+
+MYSQL_USES=	mysql:server
+MYSQL_VARS=	SUB_LIST+=MYSQL=mysql
+MYSQL_VARS_OFF=	SUB_LIST+=MYSQL=
 
 .include <bsd.port.options.mk>
 
 .if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1100000 && ${OSVERSION} < 1100507
-BROKEN=	Will not start on FreeBSD 11.0, Bug 212493
+SUB_LIST+=	CD="cd \$$db_dir"
+.else
+SUB_LIST+=	CD=
 .endif
 
 .if ${ARCH} == "i386"
@@ -60,7 +67,7 @@ TEAMSPEAK_ARCH=	x86
 TEAMSPEAK_ARCH=	amd64
 .endif
 
-WRKSRC= ${WRKDIR}/${PORTNAME}_freebsd_${TEAMSPEAK_ARCH}
+WRKSRC=	${WRKDIR}/${PORTNAME}_freebsd_${TEAMSPEAK_ARCH}
 
 DBDIR=	/var/db/teamspeak
 ETCDIR=	${PREFIX}/etc/teamspeak
