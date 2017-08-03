@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $FreeBSD: head/www/gitlab/files/gitlab.in 437349 2017-03-31 11:27:26Z tz $
+# $FreeBSD: head/www/gitlab/files/gitlab.in 445153 2017-07-06 14:10:14Z tz $
 
 ### BEGIN INIT INFO
 # Provides:          gitlab
@@ -390,7 +390,7 @@ restart_gitlab(){
 ### Finally the input handling.
 
 case "$1" in
-  start|quietstart)
+  start|quietstart|faststart)
         start_gitlab
         ;;
   stop|faststop)
