@@ -20,7 +20,7 @@ LIB_DEPENDS=	libgcc_s.so:lang/gcc
 RUN_DEPENDS=	boost-libs>=0:devel/boost-libs
 
 ONLY_FOR_ARCHS=	amd64
-ONLY_FOR_ARCHS_REASON_amd64=	only builds and is supported on amd64
+ONLY_FOR_ARCHS_REASON_x86_64=	only builds and is supported on amd64
 
 USES=		tar:bz2 qmake:outsource blaslapack:openblas
 USE_GL=		gl glu
