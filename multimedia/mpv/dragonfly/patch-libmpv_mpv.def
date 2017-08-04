@@ -1,0 +1,8 @@
+--- libmpv/mpv.def.orig	2017-07-18 19:14:02 UTC
++++ libmpv/mpv.def
+@@ -1,3 +1,5 @@
++__progname
++environ
+ mpv_client_api_version
+ mpv_client_name
+ mpv_command
