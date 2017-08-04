@@ -1,14 +1,14 @@
---- gdb/osabi.c.orig	2015-02-19 11:58:07 UTC
+--- gdb/osabi.c.orig	2017-06-04 15:51:27 UTC
 +++ gdb/osabi.c
-@@ -69,6 +69,7 @@ static const struct osabi_names gdb_osab
-   { "NetBSD/a.out", NULL },
-   { "NetBSD/ELF", NULL },
-   { "OpenBSD/ELF", NULL },
-+  { "DragonFly/ELF", NULL },
+@@ -67,6 +67,7 @@ static const struct osabi_names gdb_osab
+   { "FreeBSD", NULL },
+   { "NetBSD", NULL },
+   { "OpenBSD", NULL },
++  { "DragonFly", NULL },
    { "WindowsCE", NULL },
    { "DJGPP", NULL },
-   { "Irix", NULL },
-@@ -501,6 +502,15 @@ generic_elf_osabi_sniff_abi_tag_sections
+   { "QNX-Neutrino", NULL },
+@@ -492,6 +493,15 @@ generic_elf_osabi_sniff_abi_tag_sections
  	  return;
  	}
  

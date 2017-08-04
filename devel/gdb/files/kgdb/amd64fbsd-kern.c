@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/amd64fbsd-kern.c 428876 2016-12-18 16:08:14Z tijl $");
+__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/amd64fbsd-kern.c 446852 2017-07-28 21:20:47Z jhb $");
 
 #include <sys/types.h>
 #ifdef __amd64__
@@ -238,7 +238,7 @@ void
 _initialize_amd64_kgdb_tdep(void)
 {
 	gdbarch_register_osabi (bfd_arch_i386, bfd_mach_x86_64,
-	    GDB_OSABI_FREEBSD_ELF_KERNEL, amd64fbsd_kernel_init_abi);
+	    GDB_OSABI_FREEBSD_KERNEL, amd64fbsd_kernel_init_abi);
 
 #ifdef __amd64__
 	gdb_assert(offsetof(struct pcb, pcb_rbx)

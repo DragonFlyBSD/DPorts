@@ -1,10 +1,10 @@
---- gdb/defs.h.orig	2013-02-04 12:57:44.000000000 +0000
+--- gdb/defs.h.orig	2017-06-04 15:54:54 UTC
 +++ gdb/defs.h
-@@ -581,6 +581,7 @@ enum gdb_osabi
-   GDB_OSABI_NETBSD_AOUT,
-   GDB_OSABI_NETBSD_ELF,
-   GDB_OSABI_OPENBSD_ELF,
+@@ -592,6 +592,7 @@ enum gdb_osabi
+   GDB_OSABI_FREEBSD,
+   GDB_OSABI_NETBSD,
+   GDB_OSABI_OPENBSD,
 +  GDB_OSABI_DRAGONFLY,
    GDB_OSABI_WINCE,
    GDB_OSABI_GO32,
-   GDB_OSABI_IRIX,
+   GDB_OSABI_QNXNTO,

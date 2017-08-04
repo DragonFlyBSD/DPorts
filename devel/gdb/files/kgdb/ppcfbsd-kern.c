@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/ppcfbsd-kern.c 431323 2017-01-12 21:40:06Z olivier $");
+__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/ppcfbsd-kern.c 446852 2017-07-28 21:20:47Z jhb $");
 
 #include <sys/types.h>
 #ifdef __powerpc__
@@ -58,7 +58,7 @@ ppcfbsd_supply_pcb(struct regcache *regcache, CORE_ADDR pcb_addr)
 
 	tdep = gdbarch_tdep (target_gdbarch());
 
-	if (target_read_memory(pcb_addr, (gdb_byte *)&pcb, sizeof(pcb)) != 0)
+	if (target_read_memory(pcb_addr, &pcb, sizeof(pcb)) != 0)
 		memset(&pcb, 0, sizeof(pcb));
 
 	/*
@@ -241,14 +241,14 @@ _initialize_ppc_kgdb_tdep(void)
 				       bfd_target_elf_flavour,
 				       fbsd_kernel_osabi_sniffer);
 	gdbarch_register_osabi (bfd_arch_powerpc, bfd_mach_ppc,
-	    GDB_OSABI_FREEBSD_ELF_KERNEL, ppcfbsd_kernel_init_abi);
+	    GDB_OSABI_FREEBSD_KERNEL, ppcfbsd_kernel_init_abi);
 	gdbarch_register_osabi (bfd_arch_powerpc, bfd_mach_ppc64,
-	    GDB_OSABI_FREEBSD_ELF_KERNEL, ppcfbsd_kernel_init_abi);
+	    GDB_OSABI_FREEBSD_KERNEL, ppcfbsd_kernel_init_abi);
 
 	/* Not sure about this one. */
 	gdbarch_register_osabi_sniffer(bfd_arch_rs6000,
 				       bfd_target_elf_flavour,
 				       fbsd_kernel_osabi_sniffer);
 	gdbarch_register_osabi (bfd_arch_rs6000, 0,
-	    GDB_OSABI_FREEBSD_ELF_KERNEL, ppcfbsd_kernel_init_abi);
+	    GDB_OSABI_FREEBSD_KERNEL, ppcfbsd_kernel_init_abi);
 }

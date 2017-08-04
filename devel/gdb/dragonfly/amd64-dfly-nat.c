@@ -37,7 +37,7 @@
 #include "dfly-nat.h"
 #include "amd64-tdep.h"
 #include "amd64-nat.h"
-#include "x86bsd-nat.h"
+#include "x86-bsd-nat.h"
 #include "x86-nat.h"
 
 
@@ -311,12 +311,18 @@ Please report this to <bug-gdb@gnu.org>."),
 
   SC_RBP_OFFSET = offset;
 
-  /* DragonFly provides a kern.ps_strings sysctl that we can use to
-     locate the sigtramp.  That way we can still recognize a sigtramp
-     if its location is changed in a new kernel.  Of course this is
-     still based on the assumption that the sigtramp is placed
-     directly under the location where the program arguments and
-     environment can be found.  */
+#ifdef KERN_PROC_SIGTRAMP
+  {
+    struct kinfo_sigtramp kst = {0};
+    size_t len = sizeof (kst);
+    int mib[3] = { CTL_KERN, KERN_PROC, KERN_PROC_SIGTRAMP };
+    if (sysctl (mib, 3, &kst, &len, NULL, 0) == 0)
+      {
+        amd64dfly_sigtramp_start_addr = (uintptr_t) kst.ksigtramp_start;
+        amd64dfly_sigtramp_end_addr   = (uintptr_t) kst.ksigtramp_end;
+      }
+  }
+#else
   {
     int mib[2];
     long ps_strings;
@@ -331,4 +337,5 @@ Please report this to <bug-gdb@gnu.org>."),
 	amd64dfly_sigtramp_end_addr = ps_strings;
       }
   }
+#endif
 }

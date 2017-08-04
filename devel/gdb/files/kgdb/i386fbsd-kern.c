@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/i386fbsd-kern.c 428876 2016-12-18 16:08:14Z tijl $");
+__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/i386fbsd-kern.c 446852 2017-07-28 21:20:47Z jhb $");
 
 #include <sys/param.h>
 #include <sys/proc.h>
@@ -473,7 +473,7 @@ _initialize_i386_kgdb_tdep(void)
 				       bfd_target_elf_flavour,
 				       fbsd_kernel_osabi_sniffer);
 	gdbarch_register_osabi (bfd_arch_i386, 0,
-	    GDB_OSABI_FREEBSD_ELF_KERNEL, i386fbsd_kernel_init_abi);
+	    GDB_OSABI_FREEBSD_KERNEL, i386fbsd_kernel_init_abi);
 
 	i386fbsd_pspace_data = register_program_space_data_with_cleanup (NULL,
 	    i386fbsd_pspace_data_cleanup);
