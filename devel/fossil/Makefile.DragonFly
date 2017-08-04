@@ -1,0 +1,3 @@
+dfly-patch:
+	${REINPLACE_CMD} -e "/LIB =/ s/@LIBS@/@LIBS@ -lm/" \
+		${WRKSRC}/Makefile.in
