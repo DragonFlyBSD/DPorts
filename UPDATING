@@ -5,6 +5,97 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20170808:
+  AFFECTS: users of lang/ghc and */hs-*
+  AUTHOR: haskell@FreeBSD.org
+
+  The Glorious Glasgow Haskell Compiler has been updated to version
+  8.0.2.  Hence it is recommended to rebuild or reinstall all the
+  dependent ports and the lang/ghc port itself in one of the following
+  ways:
+
+  # portmaster -w -r ghc
+    or
+  # portupgrade -fr lang/ghc
+
+  In case of pkg(8), it is probably safer to remove all the GHC-dependent
+  packages along with GHC and reinstall everything from scratch.  For
+  example:
+
+  # pkg query "%ro" ghc > ghc-pkgs.txt
+  # pkg delete -y lang/ghc
+
+  In ghc-pkgs.txt, check and remove all the packages that have been moved
+  on the update, then use this command:
+
+  # pkg install -y `cat ghc-pkgs.txt`
+
+20170807:
+  AFFECTS: users of mail/dovecot2 and mail/dovecot2-pigeonhole
+  AUTHOR: adamw@FreeBSD.org
+
+  Now that dovecot1 has been removed from the ports tree, dovecot2
+  and dovecot2-pigeonhole have been renamed to simply dovecot and
+  dovecot-pigeonhole.
+
+  pkg should handle the rename automatically, but if you run into
+  trouble, you can point pkg at the new origin via:
+
+  # pkg set -o mail/dovecot2:mail/dovecot
+  # pkg set -o mail/dovecot2-pigeonhole:mail/dovecot-pigeonhole
+
+  Similarly, you can point portmaster at the new location via:
+
+  # portmaster -o mail/dovecot mail/dovecot2
+
+  If all else fails, just remove and reinstall the package:
+
+  # pkg delete dovecot2
+  # pkg install dovecot
+
+20170806:
+  AFFECTS: users of mail/dovecot2-antispam-plugin
+  AUTHOR: adamw@FreeBSD.org
+
+  Development of the antispam plugin ceased years ago, and upstream
+  recommends using pigeonhole (mail/dovecot2-pigeonhole) instead.
+
+  See https://wiki2.dovecot.org/HowTo/AntispamWithSieve for a recipe
+  to replicate the antispam plugin's behaviour.
+
+20170803:
+  AFFECTS: users of net/guacamole-client
+  AUTHOR: ultima@FreeBSD.org
+
+  As of version 0.9.13, the configuration directory for guacamole-client
+  has changed from /usr/local/etc/guacamole to
+  /usr/local/etc/guacamole-client.
+
+20170803:
+  AFFECTS: users of net/guacamole-server
+  AUTHOR: ultima@FreeBSD.org
+
+  As of version 0.9.13, the configuration directory for guacamole-server
+  has changed from /usr/local/etc/guacd to /usr/local/etc/guacamole-server.
+
+20170803:
+  AFFECTS: users of sysutils/terraform
+  AUTHOR: lifanov@FreeBSD.org
+
+  Terraform was updated to version 0.10.0, which split out provider plugins.
+  Provider plugins are now installed in the project directory the next time
+  "terraform init" is run. Please see the complete upgrading guide:
+
+  https://www.terraform.io/upgrade-guides/0-10.html
+
+20170729:
+  AFFECTS: users of net-p2p/bitcoin
+  AUTHOR: lwhsu@FreeBSD.org
+
+  Bitcoin data directory has been changed from /var/db/bitcoind to
+  /var/db/bitcoin.  Users of previous versions may want to migrate data to
+  new location or specify bitcoind_data.
+
 20170729:
   AFFECTS: users of mail/mailscanner
   AUTHOR: crees@FreeBSD.org
@@ -1427,49 +1518,4 @@ you update your ports collection, before attempting any port upgrades.
   restarting the services. As from the Recursor changelog, "The Lua hook
   infrastructure was redone using LuaWrapper; old scripts will no longer
   work, but new scripts are easier to write under the new interface."
-
-20160811:
-  AFFECTS: users of security/libressl
-  AUTHOR: brnrd@FreeBSD.org
-
-  The port has been updated to the latest stable version 2.4 of LibreSSL.
-  The shared library versions of the libraries have been bumped.
-  With this update, the patch for the OPENSSL_VERSION_NUMBER has been
-  removed. This causes issues with a number of ports. Patches for all
-  ports for which this issues is known can be found on
-  https://wiki.freebsd.org/LibreSSL/Ports#OPENSSL_VERSION_NUMBER
-
-  After upgrading, manually update all packages that depend on any of the
-  libraries provided by LibreSSL (libssl, libcrypto and libtls) since the
-  versions of these libraries have changed. Normally, you can obtain the
-  list of dependent software by running the following command:
-
-  # pkg info -r libressl
-
-  Then you should rebuild all ports depending on libressl to avoid dangling
-  shared library dependencies. Poudriere and pkg handle this correctly,
-  portmaster and portupgrade users can use the following to rebuild all
-  dependent ports.
-
-  Portmaster users:
-      portmaster -r libressl
-  Portupgrade users:
-      portupgrade -fr security/libressl
-
-20160811:
-  AFFECTS: users of databases/postgresqlNN-server with ICU patch
-  AUTHOR: girgen@FreeBSD.org
-
-  The ICU patch is added to the PostgreSQL-9.5 server. Please note that you
-  must never change between using the ICU patch and using system locale for
-  the same database cluster without REINDEXing all TEXT/VARCHAR columns, or
-  dump and restore your database. Failing to do so will result in corrupted
-  indexes due to the differences between the locale definitions. ICU will
-  always be the better choice for speed and correctness.
-
-  Also, the ICU patch used to support other Unicode encodings than UTF-8,
-  but that has been removed due to lack of demand and the complicated testing
-  required. If you use another Unicode encoding and rely on ICU for collation,
-  please refrain from upgrading the postgresql server and instead contact the
-  author named above.
 
