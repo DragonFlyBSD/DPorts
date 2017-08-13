@@ -1,0 +1,25 @@
+
+# zrj: don't use -lthr and hack SIGRTMIN to 50
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-lthr@@g'			\
+		${WRKSRC}/libs/libmythbase/libmythbase.pro
+	${REINPLACE_CMD} -e 's@SIGRTMIN@50@g'			\
+		${WRKSRC}/libs/libmythbase/signalhandling.cpp	\
+		${WRKSRC}/programs/mythavtest/main.cpp		\
+		${WRKSRC}/programs/mythbackend/main.cpp		\
+		${WRKSRC}/programs/mythccextractor/main.cpp	\
+		${WRKSRC}/programs/mythcommflag/main.cpp	\
+		${WRKSRC}/programs/mythfilldatabase/main.cpp	\
+		${WRKSRC}/programs/mythfrontend/main.cpp	\
+		${WRKSRC}/programs/mythjobqueue/main.cpp	\
+		${WRKSRC}/programs/mythlcdserver/main.cpp	\
+		${WRKSRC}/programs/mythlogserver/main.cpp	\
+		${WRKSRC}/programs/mythmediaserver/main.cpp	\
+		${WRKSRC}/programs/mythmetadatalookup/main.cpp	\
+		${WRKSRC}/programs/mythpreviewgen/main.cpp	\
+		${WRKSRC}/programs/mythscreenwizard/main.cpp	\
+		${WRKSRC}/programs/mythshutdown/main.cpp	\
+		${WRKSRC}/programs/mythtranscode/main.cpp	\
+		${WRKSRC}/programs/mythtv-setup/main.cpp	\
+		${WRKSRC}/programs/mythutil/main.cpp		\
+		${WRKSRC}/programs/mythwelcome/main.cpp

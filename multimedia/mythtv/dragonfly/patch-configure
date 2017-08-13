@@ -1,0 +1,14 @@
+--- configure.intermediate	2016-07-20 09:49:01 UTC
++++ configure
+@@ -4095,10 +4095,7 @@ case $target_os in
+         oss_indev_extralibs="-lossaudio"
+         oss_outdev_extralibs="-lossaudio"
+         ;;
+-    dragonfly)
+-        disable symver
+-        ;;
+-    freebsd)
++    freebsd|dragonfly)
+         append CCONFIG "freebsd"
+         # Workaround compile errors from missing u_int/uint def
+         CPPFLAGS=`echo $CPPFLAGS | sed 's/-D_POSIX_C_SOURCE=200112//'`
