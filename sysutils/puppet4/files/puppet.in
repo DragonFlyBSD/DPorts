@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/sysutils/puppet4/files/puppet.in 397822 2015-09-25 13:15:46Z mmoll $
+# $FreeBSD: head/sysutils/puppet4/files/puppet.in 447830 2017-08-12 13:35:40Z romain $
 #
 
 # PROVIDE: puppet
@@ -29,5 +29,21 @@ unset puppet_flags
 
 pidfile="${puppet_rundir}/agent.pid"
 start_precmd="install -d -o puppet -g puppet ${pidfile%/*}"
+
+PATH="${PATH}:/usr/local/bin"
+
+# An UTF-8 locale is required
+: LC_ALL=${LC_ALL:=C.UTF-8}
+case $LC_ALL in
+    *.UTF-8)
+	;;
+    *.*)
+	LC_ALL="${LC_ALL%.*}.UTF-8"
+	;;
+    *)
+	LC_ALL=C.UTF-8
+	;;
+esac
+export LC_ALL
 
 run_rc_command "$1"
