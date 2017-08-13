@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net-mgmt/icinga-core/files/ido2db.in 372771 2014-11-19 12:34:49Z lme $
+# $FreeBSD: head/net-mgmt/icinga-core/files/ido2db.in 447117 2017-08-02 16:09:43Z lme $
 #
 
 # PROVIDE: ido2db 
@@ -15,6 +15,7 @@
 . /etc/rc.subr
 
 name="ido2db"
+desc="Icinga 1 database connection daemon"
 rcvar=ido2db_enable
 
 load_rc_config "${name}"

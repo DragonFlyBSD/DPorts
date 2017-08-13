@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net-mgmt/icinga-core/files/icinga.in 350854 2014-04-10 21:08:03Z lme $
+# $FreeBSD: head/net-mgmt/icinga-core/files/icinga.in 447117 2017-08-02 16:09:43Z lme $
 #
 
 # PROVIDE: icinga
@@ -19,6 +19,7 @@
 . /etc/rc.subr
 
 name="icinga"
+desc="Icinga 1 monitoring (core)"
 rcvar=icinga_enable
 
 load_rc_config "${name}"
