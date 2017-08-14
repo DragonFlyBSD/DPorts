@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/databases/neo4j/files/neo4j.in 432630 2017-01-28 15:32:55Z crees $
+# $FreeBSD: head/databases/neo4j/files/neo4j.in 447753 2017-08-11 10:28:28Z jonathan $
 #
 # PROVIDE: neo4j
 # REQUIRE: DAEMON
@@ -20,7 +20,7 @@ load_rc_config $name
 
 : ${neo4j_enable:=NO}
 
-command=%%PREFIX%%/libexec/neo4j/neo4j
+command=%%PREFIX%%/bin/neo4j
 start_cmd="$command start"
 start_precmd=neo4j_prestart
 stop_cmd="$command stop"
@@ -29,7 +29,7 @@ status_cmd="$command status"
 neo4j_prestart()
 {
 	NEO4J_DATA=%%DATADIR%%
-	NEO4J_LIB=%%PREFIX%%/lib/neo4j
+	NEO4J_LIB=%%PREFIX%%/neo4j/lib
 	NEO4J_LOGS=/var/log/neo4j
 	NEO4J_PLUGINS=${NEO4J_LIB}/plugins
 	NEO4J_RUN=/var/run/neo4j

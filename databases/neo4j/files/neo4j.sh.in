@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 #
-# $FreeBSD: head/databases/neo4j/files/neo4j.sh.in 420830 2016-08-25 02:19:15Z crees $
+# $FreeBSD: head/databases/neo4j/files/neo4j.sh.in 447753 2017-08-11 10:28:28Z jonathan $
 
-. %%PREFIX%%/libexec/neo4j/neo4j-shared.sh
-
-exec %%PREFIX%%/libexec/neo4j/$(basename $0) ${1+"$@"}
+exec %%PREFIX%%/bin/$(basename $0) ${1+"$@"}
