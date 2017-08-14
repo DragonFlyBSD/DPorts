@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/devel/staf/files/stafproc.in 400451 2015-10-29 09:45:34Z riggs $
+# $FreeBSD: head/devel/staf/files/stafproc.in 447227 2017-08-03 15:20:17Z asomers $
 #
 
 # PROVIDE: stafproc
@@ -25,7 +25,7 @@ pidfile="/var/run/${name}/${name}.pid"
 start_precmd="stafproc_precmd"
 procname="%%PREFIX%%/bin/STAFProc"
 command="/usr/sbin/daemon"
-command_args="-p ${pidfile} env PATH=$PATH:%%PREFIX%%/bin ${procname} ${stafproc_config} >> ${stafproc_log} 2>&1"
+command_args="-p ${pidfile} env PATH=$PATH:%%PREFIX%%/bin ${procname} ${stafproc_config} < /dev/null >> ${stafproc_log} 2>&1"
 
 stafproc_precmd()
 {
