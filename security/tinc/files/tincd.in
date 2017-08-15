@@ -1,11 +1,10 @@
 #!/bin/sh
 
-# $FreeBSD: head/security/tinc/files/tincd.in 406095 2016-01-14 06:02:05Z dinoex $
+# $FreeBSD: head/security/tinc/files/tincd.in 447477 2017-08-06 17:37:25Z dinoex $
 #
 # PROVIDE: tincd
 # REQUIRE: ipfilter FILESYSTEMS sysctl netif
 # BEFORE:  SERVERS routing
-# KEYWORD: nojail
 #
 # Define these tincd_* variables in one of these files:
 #	/etc/rc.conf
