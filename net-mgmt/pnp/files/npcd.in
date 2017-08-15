@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net-mgmt/pnp/files/npcd.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/net-mgmt/pnp/files/npcd.in 447117 2017-08-02 16:09:43Z lme $
 #
 
 # PROVIDE: npcd
@@ -19,6 +19,7 @@
 . /etc/rc.subr
 
 name="npcd"
+desc="Nagios performance C daemon"
 rcvar=npcd_enable
 
 command="%%PREFIX%%/bin/npcd"
