@@ -1,0 +1,24 @@
+#! /bin/sh
+
+# $FreeBSD: head/databases/postgresql10-server/pkg-install-server 421360 2016-09-05 11:15:29Z girgen $
+
+PATH=/bin:/usr/bin:/usr/sbin
+
+backupwarning() {
+cat <<EOF
+
+  =========== BACKUP YOUR DATA! =============
+  As always, backup your data before
+  upgrading. If the upgrade leads to a higher
+  minor revision (e.g. 8.3.x -> 8.4), a dump
+  and restore of all databases is
+  required. This is *NOT* done by the port!
+  ===========================================
+EOF
+}
+
+case $2 in
+PRE-INSTALL)
+	backupwarning
+	;;
+esac
