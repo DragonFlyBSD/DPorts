@@ -4,5 +4,4 @@
 # fixes www/varnish4 (binutils 2.27 ld.gold is unhappy)
 dfly-patch:
 	${REINPLACE_CMD} -e "/libvarnishapi_la_LIBADD/s/\(@PCRE_LIBS@ @RT_LIBS@\)/\1 @LIBM@/g"	\
-		${WRKSRC}/lib/libvarnishapi/Makefile.am	\
-		${WRKSRC}/lib/libvarnishapi/Makefile.in
+		${WRKSRC}/lib/libvarnishapi/Makefile.am
