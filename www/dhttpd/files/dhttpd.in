@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/www/dhttpd/files/dhttpd.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/www/dhttpd/files/dhttpd.in 447117 2017-08-02 16:09:43Z lme $
 #
 # PROVIDE: dhttpd
 # REQUIRE: DAEMON
@@ -14,6 +14,7 @@
 . /etc/rc.subr
 
 name="dhttpd"
+desc="Secure and efficient personal HTTP server"
 rcvar=dhttpd_enable
 
 load_rc_config $name
