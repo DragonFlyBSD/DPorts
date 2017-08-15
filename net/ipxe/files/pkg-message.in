@@ -1,0 +1,6 @@
+The following files have been installed in %%DATADIR%%:
+- ipxe.dsk for creating a bootable floppy disk
+- ipxe.usb for creating a bootable USB key
+- ipxe.iso for creating a bootable CD
+- ipxe.pxe for chainloading from a PXE ROM
+- ipxe.lkrn for any boot manager that can boot Linux kernels
