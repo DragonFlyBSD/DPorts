@@ -1,0 +1,11 @@
+--- configure.orig	2017-08-15 14:13:44 UTC
++++ configure
+@@ -642,6 +642,8 @@ def check_compiler(o):
+ 
+   if is_clang:
+     o['variables']['llvm_version'] = get_llvm_version(CC)
++  else:
++    o['variables']['llvm_version'] = '0.0'
+ 
+   # Need xcode_version or gas_version when openssl asm files are compiled.
+   if options.without_ssl or options.openssl_no_asm or options.shared_openssl:
