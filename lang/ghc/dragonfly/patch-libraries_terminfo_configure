@@ -1,0 +1,11 @@
+--- libraries/terminfo/configure.orig	2017-01-04 14:19:39 UTC
++++ libraries/terminfo/configure
+@@ -2068,7 +2068,7 @@ if test "x$curses_libraries" != "xNONE";
+   TERMINFO_LIB_DIRS=$curses_libraries
+ fi
+ if test "x$curses_includes" != "xNONE"; then
+-  CPPFLAGS="-I$curses_includes $CPPFLAGS"
++  CPPFLAGS="-I/usr/local/include -I$curses_includes $CPPFLAGS"
+   TERMINFO_INCLUDE_DIRS=$curses_includes
+ fi
+ 
