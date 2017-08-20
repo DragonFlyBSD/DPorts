@@ -1,13 +1,10 @@
-# zrj: add missing link against -lm in libHShslua-*.so
-# NOTYPE  GLOBAL DEFAULT  UND {acos, asin, ...}
-# fixes textproc/hs-pandoc (binutils 2.27 ld.gold is unhappy)
---- hslua.cabal.orig	2015-05-29 17:26:15.000000000 +0300
+--- hslua.cabal.orig	2017-03-23 22:23:17 UTC
 +++ hslua.cabal
-@@ -41,6 +41,7 @@ flag luajit
+@@ -42,6 +42,7 @@ flag luajit
    default:              False
  
  library
-+  extra-libraries: m
-   build-depends:        base == 4.*, bytestring >= 0.10 && < 0.11
++  extra-libraries:      m
+   build-depends:        base       >= 4.7    && < 5,
+                         bytestring >= 0.10.2 && < 0.11
    exposed-modules:      Scripting.Lua, Scripting.Lua.Raw
-   hs-source-dirs:       src
