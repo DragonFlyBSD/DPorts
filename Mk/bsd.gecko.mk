@@ -252,6 +252,7 @@ MOZ_OPTIONS+=	\
 		--enable-chrome-format=${MOZ_CHROME} \
 		--enable-default-toolkit=${MOZ_TOOLKIT} \
 		--enable-update-channel=${MOZ_CHANNEL} \
+		--disable-updater \
 		--enable-pie \
 		--with-pthreads
 # Configure options for install
@@ -475,7 +476,6 @@ CFLAGS+=	-B${LOCALBASE}/bin
 LDFLAGS+=	-B${LOCALBASE}/bin
 . endif
 .elif ${ARCH:Mpowerpc*}
-USES:=		compiler:gcc-c++11-lib ${USES:Ncompiler*c++11*}
 . if ${ARCH} == "powerpc64"
 MOZ_EXPORT+=	UNAME_m="${ARCH}"
 CFLAGS+=	-mminimal-toc

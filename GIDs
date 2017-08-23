@@ -710,7 +710,7 @@ bopm:*:717:
 # free: 768
 # free: 769
 postgres:*:770:
-# free: 771
+cockroach:*:771:
 # free: 772
 # free: 773
 # free: 774
@@ -763,7 +763,7 @@ openacs:*:820:
 dotlrn:*:821:
 # free: 822
 # free: 823
-# free: 824
+selenium:*:824:
 polw:*:825:
 statsd:*:826:
 # free: 827
