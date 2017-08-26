@@ -1,0 +1,2 @@
+GNU_CONFIGURE= yes
+LDFLAGS+=	-L${LOCALBASE}/lib
