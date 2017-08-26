@@ -1,9 +1,3 @@
-
 dfly-patch:
-	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
-		${WRKSRC}/ccx_*/src/CalculiX.h	\
-		${WRKSRC}/ccx_*/src/Makefile
-	${REINPLACE_CMD} -e "s@-lpthread@-lpthread -L${LOCALBASE}/lib@g" \
-		${WRKSRC}/ccx_*/src/Makefile
 	${REINPLACE_CMD} -e "s@-lGL@-L${LOCALBASE}/lib -lGL@g" \
 		${WRKSRC}/cgx_*/src/Makefile
