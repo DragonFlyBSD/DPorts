@@ -1,3 +1,5 @@
+USES:=		${USES:Nninja}
+CMAKE_ARGS:=	${CMAKE_ARGS:N-GNinja}
 
 # zrj: gcc5 w/ -pedantic doesn't pass while leaky clang++36 does
 # DebugCmdInfoConstants.cc:14:7: error: zero-size array 'names'
