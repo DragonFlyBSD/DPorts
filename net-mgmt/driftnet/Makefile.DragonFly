@@ -9,3 +9,8 @@ dfly-patch:
 			 -e '/packetcapture_dispatch/s@inline void@void@g'	\
 		${WRKSRC}/src/packetcapture.c	\
 		${WRKSRC}/src/packetcapture.h
+	${REINPLACE_CMD} -e "s/__FreeBSD__/__DragonFly__/" \
+		${WRKSRC}/src/pid.c \
+		${WRKSRC}/src/layer2.c \
+		${WRKSRC}/src/layer3.c \
+		${WRKSRC}/src/connection.c
