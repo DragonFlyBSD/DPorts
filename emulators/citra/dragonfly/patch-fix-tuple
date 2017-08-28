@@ -1,0 +1,23 @@
+From 5d9d42f0d0e0b2619e7412b86699a9b2b9dfa4ea Mon Sep 17 00:00:00 2001
+From: wwylele <wwylele@gmail.com>
+Date: Thu, 10 Aug 2017 11:56:55 +0300
+Subject: [PATCH] SwRasterizer/Lighting: use make_tuple instead of constructor
+
+implicit tuple constructor is a c++17 thing, which is not supported by some not-so-old libraries. Play safe for now
+---
+ src/video_core/swrasterizer/lighting.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/video_core/swrasterizer/lighting.cpp b/src/video_core/swrasterizer/lighting.cpp
+index 63088eee8c..d61e6d5720 100644
+--- src/video_core/swrasterizer/lighting.cpp
++++ src/video_core/swrasterizer/lighting.cpp
+@@ -244,7 +244,7 @@ std::tuple<Math::Vec4<u8>, Math::Vec4<u8>> ComputeFragmentsColors(
+                                          MathUtil::Clamp(specular_sum.z, 0.0f, 1.0f) * 255,
+                                          MathUtil::Clamp(specular_sum.w, 0.0f, 1.0f) * 255)
+                         .Cast<u8>();
+-    return {diffuse, specular};
++    return std::make_tuple(diffuse, specular);
+ }
+ 
+ } // namespace Pica
