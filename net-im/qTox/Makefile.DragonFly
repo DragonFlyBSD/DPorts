@@ -1,0 +1,6 @@
+dfly-patch:
+	${REINPLACE_CMD} -e "/X(\.png/d" \
+		${WRKSRC}/smileys/smileys.qrc \
+		${WRKSRC}/smileys/Basic/emoticons.xml
+	${REINPLACE_CMD} -e "s|FreeBSD|DragonFly|" \
+		${WRKSRC}/CMakeLists.txt
