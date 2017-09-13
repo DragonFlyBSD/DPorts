@@ -2,7 +2,7 @@
 
 PORTNAME=	openal-soft
 PORTVERSION=	1.18.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	http://kcat.strangesoft.net/openal-releases/
 
@@ -16,6 +16,7 @@ CONFLICTS=	openal-200[0-9]*
 
 USES=		tar:bzip2 cmake compiler:c11
 USE_LDCONFIG=	yes
+LLD_UNSAFE=	yes
 CMAKE_ARGS=	-DSHARE_INSTALL_DIR:STRING=${ETCDIR} \
 		-DALSOFT_REQUIRE_OSS:BOOL=OFF \
 		-DALSOFT_REQUIRE_JACK:BOOL=OFF \
