@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $FreeBSD: head/mail/mailman/files/pkg-install.in 409904 2016-03-02 00:12:11Z mandree $
+# $FreeBSD: head/mail/mailman/files/pkg-install.in 449582 2017-09-10 16:53:56Z mandree $
 
 PATH=/bin:/usr/bin:/usr/sbin
 
@@ -105,6 +105,9 @@ POST-INSTALL)
   else
     echo "---> rcfile sets mailman_fix_perms to no, skipping check_perms"
   fi
+
+  echo "---> Fixing up default host names (MAILHOST, URLHOST)"
+  sed -Ee "s}^(DEFAULT_(EMAIL|URL)_HOST) = '//'}\1 = '`hostname -f`'}" -i '' "%%MAILMANDIR%%/Mailman/Defaults.py"
 
   echo "---> Running assorted other checks"
   if egrep -q "^[ \t]*MTA.*=.*Postfix" "%%MAILMANDIR%%/Mailman/mm_cfg.py" ; then
