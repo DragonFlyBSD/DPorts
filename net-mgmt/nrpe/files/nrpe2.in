@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/net-mgmt/nrpe/files/nrpe2.in 348129 2014-03-13 21:24:01Z mandree $
+# $FreeBSD: head/net-mgmt/nrpe/files/nrpe2.in 449332 2017-09-06 09:24:10Z mat $
 #
 # PROVIDE: nrpe2
 # REQUIRE: LOGIN
@@ -48,6 +48,7 @@ nrpe2_prestart()
 {
 	find_pidfile
 	install -d -o ${nrpe_user:-nagios} ${pidfile%/*}
+	rm -f ${pidfile}
 }
 
 run_rc_command "$1"
