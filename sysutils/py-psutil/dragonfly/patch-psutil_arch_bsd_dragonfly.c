@@ -1,4 +1,4 @@
---- psutil/arch/bsd/dragonfly.c.orig	2017-03-29 15:37:57 UTC
+--- psutil/arch/bsd/dragonfly.c.orig	2017-09-02 15:12:27 UTC
 +++ psutil/arch/bsd/dragonfly.c
 @@ -0,0 +1,557 @@
 +/*
@@ -28,7 +28,7 @@
 +#include <kvm.h>
 +
 +#include "../../_psutil_common.h"
-+
++#include "../../_psutil_posix.h"
 +
 +#define PSUTIL_TV2DOUBLE(t)    ((t).tv_sec + (t).tv_usec / 1000000.0)
 +#define PSUTIL_BT2MSEC(bt) (bt.sec * 1000 + (((uint64_t) 1000000000 * (uint32_t) \
