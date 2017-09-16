@@ -1,0 +1,2 @@
+# /usr/local/include/poppler/PDFDoc.h:295:153: error: 'nullptr' was not declared
+USE_CXXSTD=	c++11
