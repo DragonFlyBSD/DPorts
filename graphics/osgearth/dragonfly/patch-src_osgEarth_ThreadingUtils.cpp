@@ -1,19 +1,20 @@
---- src/osgEarth/ThreadingUtils.cpp.intermediate	2016-05-23 16:05:03 UTC
+--- src/osgEarth/ThreadingUtils.cpp.orig	2016-09-15 14:19:21 UTC
 +++ src/osgEarth/ThreadingUtils.cpp
-@@ -23,7 +23,6 @@
- #else
+@@ -20,7 +20,7 @@
+ 
+ #ifdef _WIN32
+     extern "C" unsigned long __stdcall GetCurrentThreadId();
+-#elif defined(__APPLE__) || defined(__LINUX__) || defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
++#elif defined(__APPLE__) || defined(__LINUX__) || defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined __DragonFly__
  #   include <unistd.h>
  #   include <sys/syscall.h>
--#   include <sys/thr.h>
- #endif
- 
- using namespace osgEarth::Threading;
-@@ -41,6 +40,8 @@ unsigned osgEarth::Threading::getCurrent
-   return ::syscall(SYS_thread_selfid);
- #elif __ANDROID__
+ #else
+@@ -44,6 +44,8 @@ unsigned osgEarth::Threading::getCurrent
    return gettid();
+ #elif __LINUX__
+   return (unsigned)::syscall(SYS_gettid);
 +#elif __DragonFly__
 +  return (unsigned)::syscall(SYS_lwp_gettid);
- #elif __FreeBSD__
-   long lwpid;
-   thr_self(&lwpid);
+ #elif defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
+   long  tid;
+   syscall(SYS_thr_self, &tid);
