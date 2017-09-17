@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/devel/zookeeper/files/zookeeper.in 405460 2016-01-07 15:42:56Z skreuzer $
+# $FreeBSD: head/devel/zookeeper/files/zookeeper.in 449045 2017-08-31 16:06:36Z skreuzer $
 #
 # PROVIDE: zookeeper
 # REQUIRE: LOGIN
@@ -25,6 +25,7 @@ load_rc_config "${name}"
 : ${zookeeper_log4jpropfile:=file:%%ETCDIR%%/log4j.properties}
 : ${zookeeper_rootlogger:="INFO,ROLLINGFILE"}
 : ${zookeeper_logdir:=%%ZOOKEEPER_LOGDIR%%}
+: ${zookeeper_jvmopts:=}
 
 JAVA=%%JAVA%%
 JAVAJARDIR=%%JAVAJARDIR%%
@@ -44,7 +45,7 @@ procname=${JAVA}
 required_files="${zookeeper_config}"
 
 command="/usr/sbin/daemon"
-command_args="-p ${pidfile} ${JAVA} ${log4j_params} ${zookeeper_main}"
+command_args="-p ${pidfile} ${JAVA} ${zookeeper_jvmopts} ${log4j_params} ${zookeeper_main}"
 
 start_precmd="zookeeper_init"
 
