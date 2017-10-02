@@ -5,6 +5,71 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20171001:
+  AFFECTS: users of mail/isync using Maildir sub-folders
+  AUTHOR: ehaupt@FreeBSD.org
+
+  If you have Maildir sub-folders, you need to update the configuration
+  to specify the naming style.
+
+  Please refer to the mbsync(1) man page section 'SubFolders
+  Verbatim|Maildir++|Legacy' on how to make the apropriate changes.
+
+20170930:
+  AFFECTS: users of PHP and its modules
+  AUTHOR: eugen@FreeBSD.org
+
+  All lang/php* ports switched to depend on devel/oniguruma6
+  instead of previous oniguruma version some time ago.
+
+  If you have not moved from devel/oniguruma5 before and
+  have troubles updating PHP,
+
+  for users of portmaster:
+	portmaster -o devel/oniguruma6 devel/oniguruma5
+	portmaster -r devel/oniguruma6
+
+  for users of portupgrade:
+	portupgrade -o devel/oniguruma6 devel/oniguruma5
+	portupgrade -fr devel/oniguruma6
+
+  pkg should handle this automatically.
+
+20170928:
+  AFFECTS: users of security/courier-authlib and its modules
+  AUTHOR: madpilot@FreeBSD.org
+
+  The affected ports have been modified to follow the upstream
+  suggested best practice to use the sysconftool on installation.
+
+  Please make sure your configuration files include all the comments
+  that tool uses to correctly update the configuration on update.
+
+  You can use the ".sample" or ".dist" files as templates for missing
+  comments if needed.
+
+20170915:
+  AFFECTS: users of devel/cargo
+  AUTHOR: rust@FreeBSD.org
+
+  Starting with version 1.19.0, Cargo is provided with Rust. Therefore,
+  devel/cargo was merged into lang/rust.
+
+20170914:
+  AFFECTS: users of CMake & CMake Modules
+  AUTHOR: adridg@FreeBSD.org
+
+  The devel/cmake-modules port has been merged into devel/cmake.
+
+  The benefit of being able to update the modules without the binary
+  is outweighed by the issues caused by having the binary out-of-sync
+  with the modules.
+
+  Users should delete the devel/cmake-modules package and then
+  upgrade or reinstall devel/cmake.
+ 
+  All ports have been updated to depend only on CMake.
+
 20170904
   AFFECTS: users of net-mgmt/seafile-server
   AUTHOR: ultima@FreeBSD.org
@@ -17,14 +82,11 @@ you update your ports collection, before attempting any port upgrades.
   AFFECTS: users of security/gnupg
   AUTHOR: adamw@FreeBSD.org
 
-  security/gnupg22 has become the new stable version of GnuPG. This is
-  an LTS branch, and is directly analogous to security/gnupg20. gnupg20
-  will reach EOL at the end of the year, and all gnupg20 users should
-  migrate to gnupg22.
+  security/gnupg has become the new stable version of GnuPG. This is
+  an LTS branch. gnupg20 will reach EOL at the end of the year, and all
+  gnupg20 users should migrate to gnupg22.
 
   See https://gnupg.org/faq/whats-new-in-2.1.html for important changes.
-
-  The security/gnupg port will become GnuPG 2.3.x soon.
 
 20170820:
   AFFECTS: users of www/uwsgi
@@ -212,7 +274,7 @@ you update your ports collection, before attempting any port upgrades.
 
 20170628:
   AFFECTS: users of www/node
-  AUTHOR: bhughes@freebsd.org
+  AUTHOR: bhughes@FreeBSD.org
 
   The www/node port has been updated to Node.js v8.1.2, the latest
   upstream release. This is a major release, including many significant
@@ -1362,73 +1424,4 @@ you update your ports collection, before attempting any port upgrades.
   $prefs['_GLOBAL']['suppress_version_warning'] = true;
 
   See https://github.com/blind-coder/rcmcarddav/issues/165 for details.
-
-20160927:
-  AFFECTS: emulators/ppsspp
-  AUTHOR:  jbeich@FreeBSD.org
-
-  Qt* GUI was split into separate ports:
-
-      emulators/ppsspp-qt4
-      emulators/ppsspp-qt5
-
-20160927:
-  AFFECTS: sysutils/android-file-transfer
-  AUTHOR:  jbeich@FreeBSD.org
-
-  Qt* GUI was split into separate ports:
-
-      sysutils/android-file-transfer-qt4
-      sysutils/android-file-transfer-qt5
-
-20160922:
-  AFFECTS: users of databases/pglogical, databases/pglogical-output
-  AUTHOR:  matthew@FreeBSD.org
-
-  As of version 1.2.0, databases/pglogical-output has been merged into
-  databases/pglogical.  portmaster or portupgrade users should delete
-  pglogical-output manually before upgrading.
-
-20160921:
-  AFFECTS: users of mail/sieve-connect
-  AUTHOR: alexey@renatasystems.org
-
-  Version 0.88 contains two breaking changes:
-  1.  If the Sieve server does not offer STARTTLS, then connections should now
-      fail.
-  2.  When deriving a remote script name from the local filename, use the
-      basename and strip off directories.
-
-  For additional information see:
-  http://mail.globnix.net/pipermail/sieve-connect-announce/2016/000012.html
-
-20160919:
-  AFFECTS: users of net/vtun
-  AUTHOR: cy@FreeBSD.org
-
-  The VTUN_EXTENDED_MODE option has been replaced by -e command line
-  option.
-
-20160914:
-  AFFECTS: users of www/nginx-devel
-  AUTHOR: osa@FreeBSD.org
-
-  Nginx now creates logs under /var/log/nginx/ and changes default log
-  names from "nginx-access.log" and "nginx-error.log" to "access.log" and
-  "error.log" respectively.  This is important for the error log because
-  the location is encoded and touched by nginx during startup regardless
-  of the configured location for the error log.
-
-  See http://trac.nginx.org/nginx/ticket/147 for additional information
-  on why this happens.
-
-20160914:
-  AFFECTS: users of deskutils/xfce4-volumed-pulse
-  AUTHOR: olivierd@FreeBSD.org
-
-  The port has been updated to the latest stable version 0.2.2.
-  Support of xfce4-mixer has been removed, so you can delete
-  its properties with the following command:
-
-  xfconf-query -c xfce4-mixer -p / -rR
 
