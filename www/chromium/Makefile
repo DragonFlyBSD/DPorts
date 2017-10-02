@@ -52,7 +52,7 @@ RUN_DEPENDS=	droid-fonts-ttf>0:x11-fonts/droid-fonts-ttf \
 		xdg-open:devel/xdg-utils
 
 ONLY_FOR_ARCHS=	i386 amd64
-USES=		compiler bison cpe desktop-file-utils execinfo jpeg \
+USES=		compiler bison cpe desktop-file-utils jpeg \
 		ninja perl5 pkgconfig python:2,build shebangfix tar:xz
 
 CPE_VENDOR=	google
