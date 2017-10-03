@@ -23,7 +23,7 @@ MAKE_ENV=	CC.host=${CC} CXX.host=${CXX} LINK.host=${CXX} LINK.target=${CXX}
 MAKE_ENV+=	GYPFLAGS=-DOS=freebsd
 MAKE_ENV+=	library=shared
 USE_LDCONFIG=	yes
-USES=		alias compiler cpe execinfo gmake python:2 shebangfix tar:xz
+USES=		alias compiler cpe gmake python:2 shebangfix tar:xz
 
 CPE_VENDOR=	google
 
