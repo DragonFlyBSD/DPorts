@@ -1,3 +1,3 @@
-TIMESTAMP = 1491997970
-SHA256 (xorg/driver/xf86-video-intel-2.99.2017.04.12.tar.xz) = 099fa9d2fdd8c7696758afca1dfbb2d54315c302d598a4926e322b2f783527be
-SIZE (xorg/driver/xf86-video-intel-2.99.2017.04.12.tar.xz) = 945704
+TIMESTAMP = 1506697001
+SHA256 (xorg/driver/xf86-video-intel-2.99.2017.06.09.tar.xz) = 0f116a2f80e86fc6fe73f5ab94a1e0cb309d9d3bfe9cf45fb61cd71892341ddc
+SIZE (xorg/driver/xf86-video-intel-2.99.2017.06.09.tar.xz) = 946640

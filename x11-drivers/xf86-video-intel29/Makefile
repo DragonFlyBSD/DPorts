@@ -1,7 +1,7 @@
 # Created by: ftigeot@wolfpond.org
 
 PORTNAME=	xf86-video-intel
-PORTVERSION=	2.99.2017.04.12
+PORTVERSION=	2.99.2017.06.09
 PORTEPOCH=	2
 CATEGORIES=	x11-drivers
 MASTER_SITES=	http://dl.wolfpond.org/distfiles/
