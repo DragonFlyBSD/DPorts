@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/kgdb-main.c 428876 2016-12-18 16:08:14Z tijl $");
+__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/kgdb-main.c 450895 2017-09-29 14:49:58Z pizzamig $");
 
 #include <sys/param.h>
 #include <sys/stat.h>
@@ -203,7 +203,7 @@ verify_remote(void)
 }
 
 static void
-add_arg(struct captured_main_args *args, char *arg)
+add_arg(struct captured_main_args *args, char const *arg)
 {
 
 	args->argc++;
@@ -211,7 +211,7 @@ add_arg(struct captured_main_args *args, char *arg)
 	    sizeof(char *));
 	if (args->argv == NULL)
 		err(1, "Out of memory building argument list");
-	args->argv[args->argc] = arg;
+	args->argv[args->argc] = (char *)arg;
 }
 
 int
@@ -239,9 +239,9 @@ main(int argc, char *argv[])
 			if (s[0] == '-')
 				s++;
 			if (strcmp(s, "quiet") == 0)
-				argv[a] = "-q";
+				argv[a] = (char *)"-q";
 			else if (strcmp(s, "fullname") == 0)
-				argv[a] = "-f";
+				argv[a] = (char *)"-f";
 		}
 	}
 
