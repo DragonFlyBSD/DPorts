@@ -1,5 +1,5 @@
---- psutil/_psutil_bsd.c.orig	2017-08-03 16:14:27 UTC
-+++ psutil/_psutil_bsd.c
+--- psutil/_psutil_bsd.c.orig	2017-09-10 08:13:13.000000000 +0300
++++ psutil/_psutil_bsd.c	2017-09-21 12:59:49.453698000 +0300
 @@ -19,6 +19,7 @@
      #define _KMEMUSER
  #endif
@@ -16,18 +16,19 @@
  #include <netinet/in_systm.h>
  #include <netinet/ip.h>
  #include <netinet/in_pcb.h>
-@@ -94,6 +94,10 @@
+@@ -94,6 +94,11 @@
      #ifndef DTYPE_VNODE
          #define DTYPE_VNODE 1
      #endif
 +#elif PSUTIL_DRAGONFLY
 +    #include "arch/bsd/dragonfly.h"
++    #include <sys/resource.h>
 +
 +    #include <utmpx.h>
  #endif
  
  
-@@ -231,6 +235,12 @@ psutil_proc_oneshot_info(PyObject *self,
+@@ -231,6 +236,12 @@
      memtext = (long)kp.ki_tsize * pagesize;
      memdata = (long)kp.ki_dsize * pagesize;
      memstack = (long)kp.ki_ssize * pagesize;
@@ -40,3 +41,20 @@
  #else
      rss = (long)kp.p_vm_rssize * pagesize;
      #ifdef PSUTIL_OPENBSD
+@@ -425,7 +436,7 @@
+     size_t size = sizeof(cpu_time);
+     int ret;
+ 
+-#if defined(PSUTIL_FREEBSD) || defined(PSUTIL_NETBSD)
++#if defined(PSUTIL_FREEBSD) || defined(PSUTIL_NETBSD) || defined(PSUTIL_DRAGONFLY)
+     ret = sysctlbyname("kern.cp_time", &cpu_time, &size, NULL, 0);
+ #elif PSUTIL_OPENBSD
+     int mib[] = {CTL_KERN, KERN_CPTIME};
+@@ -433,6 +444,7 @@
+ #endif
+     if (ret == -1)
+         return PyErr_SetFromErrno(PyExc_OSError);
++
+     return Py_BuildValue("(ddddd)",
+                          (double)cpu_time[CP_USER] / CLOCKS_PER_SEC,
+                          (double)cpu_time[CP_NICE] / CLOCKS_PER_SEC,

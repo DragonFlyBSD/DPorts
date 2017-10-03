@@ -1,6 +1,6 @@
---- psutil/arch/bsd/dragonfly.c.orig	2017-09-02 15:12:27 UTC
-+++ psutil/arch/bsd/dragonfly.c
-@@ -0,0 +1,557 @@
+--- psutil/arch/bsd/dragonfly.c.orig	2017-09-21 12:34:55.978891000 +0300
++++ psutil/arch/bsd/dragonfly.c	2017-09-21 12:40:54.722447000 +0300
+@@ -0,0 +1,562 @@
 +/*
 + * Copyright (c) 2009, Jay Loden, Giampaolo Rodola'. All rights reserved.
 + * Use of this source code is governed by a BSD-style license that can be
@@ -267,6 +267,12 @@
 +    return Py_BuildValue("l", (long)kp.kp_nthreads);
 +}
 +
++PyObject *
++psutil_proc_connections(PyObject *self, PyObject *args) {
++    /* XXX: not implemented */
++
++    return NULL;
++}
 +
 +PyObject *
 +psutil_proc_threads(PyObject *self, PyObject *args) {
@@ -297,7 +303,6 @@
 +    unsigned int   active, inactive, wired, cached, free;
 +    size_t         size = sizeof(total);
 +    struct vmtotal vm;
-+    int            mib[] = {CTL_VM, VM_METER};
 +    long           pagesize = getpagesize();
 +    long buffers;
 +    size_t buffers_size = sizeof(buffers);
@@ -320,7 +325,7 @@
 +        goto error;
 +
 +    size = sizeof(vm);
-+    if (sysctl(mib, 2, &vm, &size, NULL, 0) != 0)
++    if (sysctlbyname("vm.vmtotal", &vm, &size, NULL, 0))
 +        goto error;
 +
 +    return Py_BuildValue("KKKKKKKK",
@@ -415,7 +420,7 @@
 +
 +    // retrieve maxcpus value
 +    size = sizeof(maxcpus);
-+    if (sysctlbyname("kern.smp.maxcpus", &maxcpus, &size, NULL, 0) < 0) {
++    if (sysctlbyname("hw.ncpu", &maxcpus, &size, NULL, 0) < 0) {
 +        Py_DECREF(py_retlist);
 +        PyErr_SetFromErrno(PyExc_OSError);
 +        return NULL;
