@@ -7,7 +7,7 @@ PORTNAME=	perl
 DISTVERSIONPREFIX=	v
 DISTVERSION=	${GH_TAGNAME:C/^v//:C/-g[0-9a-f]*$//}
 DISTVERSIONSUFFIX=	${GH_TAGNAME:C/.*-g/-g/}
-PORTREVISION=	1
+PORTREVISION=	0
 CATEGORIES=	lang devel perl5
 # XXX Leave only CPAN.
 MASTER_SITES=	LOCAL/mat/perl GH
@@ -18,10 +18,10 @@ DIST_SUBDIR=	perl
 MAINTAINER=	mat@FreeBSD.org
 COMMENT=	Practical Extraction and Report Language
 
-LICENSE=	ART10 GPLv1
+LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
 LICENSE_FILE_ART10=	${WRKSRC}/Artistic
-LICENSE_FILE_GPLv1=	${WRKSRC}/Copying
+LICENSE_FILE_GPLv1+ =	${WRKSRC}/Copying
 
 # Uncomment when the default Perl is switched to 5.2(X+2)
 #DEPRECATED=	Support end three years after .0 release, please upgrade to a more recent version of Perl
@@ -35,7 +35,7 @@ TEST_ENV=	${MAKE_ENV} TEST_JOBS=${MAKE_JOBS_NUMBER} \
 USE_GITHUB=	yes
 GH_ACCOUNT=	Perl
 GH_PROJECT=	perl5
-GH_TAGNAME=	v5.27.3-84-g7bd9fb1
+GH_TAGNAME=	v5.27.4-28-g60dfa51
 
 OPTIONS_DEFINE=	DEBUG GDBM PERL_64BITINT MULTIPLICITY SITECUSTOMIZE \
 		THREADS PERL_MALLOC DTRACE DOT_INC
@@ -125,10 +125,6 @@ CONFIGURE_ARGS=	-sde -Dprefix=${PREFIX} \
 CONFIGURE_ARGS+=	\
 	-Alddlflags='-L${WRKSRC} -L${PREFIX}/${_ARCH_LIB}/CORE -lperl' \
 	-Dshrpldflags='$$(LDDLFLAGS:N-L${WRKSRC}:N-L${PREFIX}/${_ARCH_LIB}/CORE:N-lperl) -Wl,-soname,$$(LIBPERL)'
-
-# XXX should be fixed soon.
-CONFIGURE_ARGS+= \
-	 -Accflags=-DNO_USE_ATFUNCTIONS
 
 # Give a hint of where libperl.so can be found.
 USE_LDCONFIG=	${PREFIX}/${_ARCH_LIB}/CORE
