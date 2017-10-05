@@ -3,5 +3,7 @@ OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT} PORT_LLVM
 MASTER_SITES+=	https://leaf.dragonflybsd.org/~mneumann/rust/:rust_bootstrap \
 		https://leaf.dragonflybsd.org/~mneumann/rust/:cargo_bootstrap
 
-MAKE_ENV="LD_LIBRARY_PATH=${WRKSRC}/build/${RUST_TARGET}/stage0/lib"
-MAKE_ENV+=RUST_BACKTRACE=1
+X_PY_ENV+="LD_LIBRARY_PATH=${WRKSRC}/build/${RUST_TARGET}/stage0/lib"
+X_PY_ENV+="RUST_BACKTRACE=1"
+
+MAKE_JOBS_NUMBER=1
