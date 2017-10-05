@@ -14,7 +14,6 @@ LICENSE=	BSD3CLAUSE
 
 BROKEN_i386=	undefined reference to __atomic_fetch_add_8
 
-USES=		execinfo
 
 OPTIONS_DEFINE=	TESTS TRIB
 OPTIONS_RADIO=	EXTLUA
