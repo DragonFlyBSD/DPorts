@@ -1,4 +1,4 @@
---- lib/Support/Unix/Path.inc.orig	2017-03-29 21:58:52 UTC
+--- lib/Support/Unix/Path.inc.orig	2017-09-20 00:07:27 UTC
 +++ lib/Support/Unix/Path.inc
 @@ -68,13 +68,13 @@
  
@@ -13,6 +13,6 @@
  #else
 -#if defined(__OpenBSD__) || defined(__FreeBSD__)
 +#if defined(__OpenBSD__) || defined(__FreeBSD__) || defined(__DragonFly__)
- #include <sys/param.h>
  #include <sys/mount.h>
+ #include <sys/param.h>
  #elif defined(__linux__)
