@@ -1,2 +1,3 @@
 BUILD_DEPENDS+=		krb5-config:security/krb5
 RUN_DEPENDS+=		krb5-config:security/krb5
+USE_CXXSTD=		gnu++11
