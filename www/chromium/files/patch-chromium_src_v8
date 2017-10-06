@@ -1,0 +1,384 @@
+diff --git v8/BUILD.gn v8/BUILD.gn
+index 80d6f34133..61786f1a99 100644
+--- v8/BUILD.gn
++++ v8/BUILD.gn
+@@ -112,7 +112,8 @@ declare_args() {
+       [ "//test/cctest/test-experimental-extra.js" ]
+ 
+   v8_enable_gdbjit = ((v8_current_cpu == "x86" || v8_current_cpu == "x64" ||
+-                       v8_current_cpu == "x87") && (is_linux || is_mac)) ||
++                       v8_current_cpu == "x87") &&
++                      (is_linux || is_mac || is_bsd)) ||
+                      (v8_current_cpu == "ppc64" && is_linux)
+ }
+ 
+@@ -435,7 +436,7 @@ config("toolchain") {
+   # TODO(jochen): Add support for compiling with simulators.
+ 
+   if (is_debug) {
+-    if (is_linux && v8_enable_backtrace) {
++    if ((is_linux || is_bsd) && v8_enable_backtrace) {
+       ldflags += [ "-rdynamic" ]
+     }
+ 
+@@ -2103,7 +2104,7 @@ v8_source_set("v8_base") {
+       "src/x64/simulator-x64.h",
+       "src/x64/sse-instr.h",
+     ]
+-    if (is_linux) {
++    if (is_linux || is_bsd) {
+       sources += [ "src/trap-handler/handler-inside.cc" ]
+     }
+   } else if (v8_current_cpu == "arm") {
+@@ -2511,7 +2512,7 @@ v8_component("v8_libbase") {
+     ]
+   }
+ 
+-  if (is_linux) {
++  if (is_linux && !is_bsd) {
+     sources += [
+       "src/base/debug/stack_trace_posix.cc",
+       "src/base/platform/platform-linux.cc",
+@@ -2531,6 +2532,12 @@ v8_component("v8_libbase") {
+       "dl",
+       "rt",
+     ]
++  } else if (is_bsd) {
++    sources += [
++      "src/base/debug/stack_trace_posix.cc",
++      "src/base/platform/platform-freebsd.cc",
++    ]
++    libs = [ "rt", "execinfo" ]
+   } else if (is_android) {
+     if (current_toolchain == host_toolchain) {
+       libs = [
+@@ -2660,6 +2667,9 @@ if (current_toolchain == v8_snapshot_toolchain) {
+     sources = [
+       "src/snapshot/mksnapshot.cc",
+     ]
++    if (is_bsd) {
++      libs = ["execinfo"]
++    }
+ 
+     configs = [ ":internal_config" ]
+ 
+diff --git v8/gypfiles/standalone.gypi v8/gypfiles/standalone.gypi
+index 4c805bf643..bd2f118726 100644
+--- v8/gypfiles/standalone.gypi
++++ v8/gypfiles/standalone.gypi
+@@ -52,7 +52,8 @@
+           'variables': {
+             'conditions': [
+               ['OS=="linux" or OS=="freebsd" or OS=="openbsd" or \
+-                 OS=="netbsd" or OS=="mac" or OS=="qnx" or OS=="aix"', {
++                 OS=="netbsd" or OS=="mac" or OS=="qnx" or OS=="aix"
++                 OS=="dragonfly"', {
+                 # This handles the Unix platforms we generally deal with.
+                 # Anything else gets passed through, which probably won't work
+                 # very well; such hosts should pass an explicit target_arch
+@@ -60,7 +61,7 @@
+                 'host_arch%': '<!pymod_do_main(detect_v8_host_arch)',
+               }, {
+                 # OS!="linux" and OS!="freebsd" and OS!="openbsd" and
+-                # OS!="netbsd" and OS!="mac" and OS!="aix"
++                # OS!="netbsd" and OS!="mac" and OS!="aix" and OS!="dragonfly"
+                 'host_arch%': 'ia32',
+               }],
+             ],
+@@ -752,7 +753,7 @@
+       },  # target_defaults
+     }],  # OS=="mac"
+     ['OS=="linux" or OS=="freebsd" or OS=="openbsd" or OS=="solaris" \
+-       or OS=="netbsd" or OS=="aix"', {
++       or OS=="netbsd" or OS=="aix" or OS=="dragonfly"', {
+       'target_defaults': {
+         'cflags': [
+           '-Wall',
+@@ -808,7 +809,7 @@
+       },
+     }],
+     # 'OS=="linux" or OS=="freebsd" or OS=="openbsd" or OS=="solaris"
+-    #  or OS=="netbsd"'
++    #  or OS=="netbsd" or OS=="dragonfly"'
+     ['OS=="qnx"', {
+       'target_defaults': {
+         'cflags': [
+diff --git v8/gypfiles/toolchain.gypi v8/gypfiles/toolchain.gypi
+index 6b82cfbd49..57d4e150a9 100644
+--- v8/gypfiles/toolchain.gypi
++++ v8/gypfiles/toolchain.gypi
+@@ -121,7 +121,7 @@
+       }],
+       # linux_use_gold_flags: whether to use build flags that rely on gold.
+       # On by default for x64 Linux.
+-      ['OS=="linux" and target_arch=="x64"', {
++      ['(OS=="linux" or OS=="dragonfly") and target_arch=="x64"', {
+         'linux_use_gold_flags%': 1,
+       }, {
+         'linux_use_gold_flags%': 0,
+@@ -1090,7 +1090,7 @@
+         ],
+       }],
+       ['OS=="linux" or OS=="freebsd" or OS=="openbsd" or OS=="solaris" \
+-         or OS=="netbsd" or OS=="qnx" or OS=="aix"', {
++         or OS=="netbsd" or OS=="qnx" or OS=="aix" or OS=="dragonfly"', {
+         'conditions': [
+           [ 'v8_no_strict_aliasing==1', {
+             'cflags': [ '-fno-strict-aliasing' ],
+@@ -1100,7 +1100,7 @@
+       ['OS=="solaris"', {
+         'defines': [ '__C99FEATURES__=1' ],  # isinf() etc.
+       }],
+-      ['OS=="freebsd" or OS=="openbsd"', {
++      ['OS=="freebsd" or OS=="openbsd" or OS=="dragonfly"', {
+         'cflags': [ '-I/usr/local/include' ],
+       }],
+       ['OS=="netbsd"', {
+@@ -1147,7 +1147,7 @@
+         },
+         'conditions': [
+           ['OS=="linux" or OS=="freebsd" or OS=="openbsd" or OS=="netbsd" or \
+-            OS=="qnx" or OS=="aix"', {
++            OS=="qnx" or OS=="aix" or OS=="dragonfly"', {
+             'cflags!': [
+               '-O3',
+               '-O2',
+@@ -1201,7 +1201,7 @@
+         },
+         'conditions': [
+           ['OS=="linux" or OS=="freebsd" or OS=="openbsd" or OS=="netbsd" or \
+-            OS=="qnx" or OS=="aix"', {
++            OS=="qnx" or OS=="aix" or OS=="dragonfly"', {
+             'cflags!': [
+               '-O0',
+               '-O1',
+@@ -1249,7 +1249,7 @@
+         ],
+         'conditions': [
+           ['OS=="linux" or OS=="freebsd" or OS=="openbsd" or OS=="netbsd" or \
+-            OS=="qnx" or OS=="aix"', {
++            OS=="qnx" or OS=="aix" or OS=="dragonfly"', {
+             'cflags': [ '-Woverloaded-virtual', '<(wno_array_bounds)', ],
+           }],
+           ['OS=="linux" and v8_enable_backtrace==1', {
+@@ -1320,7 +1320,7 @@
+         },
+         'conditions': [
+           ['OS=="linux" or OS=="freebsd" or OS=="openbsd" or OS=="netbsd" \
+-            or OS=="aix"', {
++            or OS=="aix" or OS=="dragonfly"', {
+             'cflags!': [
+               '-Os',
+             ],
+diff --git v8/include/v8.h v8/include/v8.h
+index da3cdfdcbd..e9fbc47472 100644
+--- v8/include/v8.h
++++ v8/include/v8.h
+@@ -7919,7 +7919,7 @@ class V8_EXPORT V8 {
+    */
+   static void ShutdownPlatform();
+ 
+-#if V8_OS_LINUX && V8_TARGET_ARCH_X64 && !V8_OS_ANDROID
++#if (V8_OS_LINUX || V8_OS_DRAGONFLYBSD) && V8_TARGET_ARCH_X64 && !V8_OS_ANDROID
+   /**
+    * Give the V8 signal handler a chance to handle a fault.
+    *
+diff --git v8/src/api.cc v8/src/api.cc
+index 7699bc87ec..7bf9411601 100644
+--- v8/src/api.cc
++++ v8/src/api.cc
+@@ -6277,7 +6277,7 @@ bool v8::V8::Initialize() {
+   return true;
+ }
+ 
+-#if V8_OS_LINUX && V8_TARGET_ARCH_X64 && !V8_OS_ANDROID
++#if (V8_OS_LINUX || V8_OS_DRAGONFLYBSD) && V8_TARGET_ARCH_X64 && !V8_OS_ANDROID
+ bool V8::TryHandleSignal(int signum, void* info, void* context) {
+   return v8::internal::trap_handler::TryHandleSignal(
+       signum, static_cast<siginfo_t*>(info), static_cast<ucontext_t*>(context));
+diff --git v8/src/base/platform/condition-variable.cc v8/src/base/platform/condition-variable.cc
+index 19c33f8b1f..861da38291 100644
+--- v8/src/base/platform/condition-variable.cc
++++ v8/src/base/platform/condition-variable.cc
+@@ -15,7 +15,7 @@ namespace base {
+ #if V8_OS_POSIX
+ 
+ ConditionVariable::ConditionVariable() {
+-#if (V8_OS_FREEBSD || V8_OS_NETBSD || V8_OS_OPENBSD || \
++#if (V8_OS_FREEBSD || V8_OS_NETBSD || V8_OS_OPENBSD || V8_OS_DRAGONFLYBSD || \
+      (V8_OS_LINUX && V8_LIBC_GLIBC))
+   // On Free/Net/OpenBSD and Linux with glibc we can change the time
+   // source for pthread_cond_timedwait() to use the monotonic clock.
+@@ -91,7 +91,7 @@ bool ConditionVariable::WaitFor(Mutex* mutex, const TimeDelta& rel_time) {
+   result = pthread_cond_timedwait_relative_np(
+       &native_handle_, &mutex->native_handle(), &ts);
+ #else
+-#if (V8_OS_FREEBSD || V8_OS_NETBSD || V8_OS_OPENBSD || \
++#if (V8_OS_FREEBSD || V8_OS_NETBSD || V8_OS_OPENBSD || V8_OS_DRAGONFLYBSD || \
+      (V8_OS_LINUX && V8_LIBC_GLIBC))
+   // On Free/Net/OpenBSD and Linux with glibc we can change the time
+   // source for pthread_cond_timedwait() to use the monotonic clock.
+diff --git v8/src/base/platform/platform-posix.cc v8/src/base/platform/platform-posix.cc
+index 25c270ad28..15a1647542 100644
+--- v8/src/base/platform/platform-posix.cc
++++ v8/src/base/platform/platform-posix.cc
+@@ -358,6 +358,8 @@ int OS::GetCurrentThreadId() {
+   return static_cast<int>(pthread_mach_thread_np(pthread_self()));
+ #elif V8_OS_LINUX
+   return static_cast<int>(syscall(__NR_gettid));
++#elif V8_OS_FREEBSD || V8_OS_DRAGONFLYBSD
++  return static_cast<int>(pthread_getthreadid_np());
+ #elif V8_OS_ANDROID
+   return static_cast<int>(gettid());
+ #elif V8_OS_AIX
+diff --git v8/src/d8.gyp v8/src/d8.gyp
+index e6a40212cd..afc082aa2e 100644
+--- v8/src/d8.gyp
++++ v8/src/d8.gyp
+@@ -67,7 +67,7 @@
+         }],
+         ['(OS=="linux" or OS=="mac" or OS=="freebsd" or OS=="netbsd" \
+            or OS=="openbsd" or OS=="solaris" or OS=="android" \
+-           or OS=="qnx" or OS=="aix")', {
++           or OS=="qnx" or OS=="aix" or OS=="dragonfly")', {
+              'sources': [ 'd8-posix.cc', ]
+            }],
+         [ 'OS=="win"', {
+diff --git v8/src/globals.h v8/src/globals.h
+index 1194472d29..6a4662b7a2 100644
+--- v8/src/globals.h
++++ v8/src/globals.h
+@@ -186,6 +186,9 @@ const size_t kCodeRangeAreaAlignment = 256 * MB;
+ #elif V8_HOST_ARCH_PPC && V8_TARGET_ARCH_PPC && V8_OS_LINUX
+ const size_t kMaximalCodeRangeSize = 512 * MB;
+ const size_t kCodeRangeAreaAlignment = 64 * KB;  // OS page on PPC Linux
++#elif V8_OS_DRAGONFLYBSD
++const size_t kMaximalCodeRangeSize = 256 * MB;
++const size_t kCodeRangeAreaAlignment = 4 * KB;  // OS page.
+ #else
+ const size_t kMaximalCodeRangeSize = 512 * MB;
+ const size_t kCodeRangeAreaAlignment = 4 * KB;  // OS page.
+diff --git v8/src/libsampler/sampler.cc v8/src/libsampler/sampler.cc
+index f65498aa60..7d1aea735d 100644
+--- v8/src/libsampler/sampler.cc
++++ v8/src/libsampler/sampler.cc
+@@ -489,7 +489,7 @@ void SignalHandler::FillRegisterState(void* context, RegisterState* state) {
+   state->fp = reinterpret_cast<void*>(mcontext->ss.ebp);
+ #endif  // __DARWIN_UNIX03
+ #endif  // V8_HOST_ARCH_IA32
+-#elif V8_OS_FREEBSD
++#elif V8_OS_FREEBSD || V8_OS_DRAGONFLYBSD
+ #if V8_HOST_ARCH_IA32
+   state->pc = reinterpret_cast<void*>(mcontext.mc_eip);
+   state->sp = reinterpret_cast<void*>(mcontext.mc_esp);
+diff --git v8/src/trap-handler/handler-inside.cc v8/src/trap-handler/handler-inside.cc
+index a51bd9427f..c038d363a4 100644
+--- v8/src/trap-handler/handler-inside.cc
++++ v8/src/trap-handler/handler-inside.cc
+@@ -64,7 +64,7 @@ class SigUnmaskStack {
+ #endif
+ }  // namespace
+ 
+-#if V8_TRAP_HANDLER_SUPPORTED && V8_OS_LINUX
++#if V8_TRAP_HANDLER_SUPPORTED && (V8_OS_LINUX || V8_OS_DRAGONFLYBSD)
+ bool TryHandleSignal(int signum, siginfo_t* info, ucontext_t* context) {
+   // Bail out early in case we got called for the wrong kind of signal.
+   if (signum != SIGSEGV) {
+@@ -97,7 +97,11 @@ bool TryHandleSignal(int signum, siginfo_t* info, ucontext_t* context) {
+     sigaddset(&sigs, SIGSEGV);
+     SigUnmaskStack unmask(sigs);
+ 
++#if V8_OS_DRAGONFLYBSD
++    uintptr_t fault_addr = context->uc_mcontext.mc_rip;
++#else
+     uintptr_t fault_addr = context->uc_mcontext.gregs[REG_RIP];
++#endif
+ 
+     // TODO(eholk): broad code range check
+ 
+@@ -124,7 +128,11 @@ bool TryHandleSignal(int signum, siginfo_t* info, ucontext_t* context) {
+           if (data->instructions[i].instr_offset == offset) {
+             // Hurray again, we found the actual instruction. Tell the caller to
+             // return to the landing pad.
++#if V8_OS_DRAGONFLYBSD
++            context->uc_mcontext.mc_rip =
++#else
+             context->uc_mcontext.gregs[REG_RIP] =
++#endif
+                 data->instructions[i].landing_offset + base;
+             return true;
+           }
+@@ -138,7 +146,7 @@ bool TryHandleSignal(int signum, siginfo_t* info, ucontext_t* context) {
+   g_thread_in_wasm_code = true;
+   return false;
+ }
+-#endif  // V8_TRAP_HANDLER_SUPPORTED && V8_OS_LINUX
++#endif  // V8_TRAP_HANDLER_SUPPORTED && (V8_OS_LINUX || V8_OS_DRAGONFLYBSD)
+ 
+ #if V8_TRAP_HANDLER_SUPPORTED
+ void HandleSignal(int signum, siginfo_t* info, void* context) {
+diff --git v8/src/trap-handler/trap-handler.h v8/src/trap-handler/trap-handler.h
+index 5494c5fdb3..586ea09d5f 100644
+--- v8/src/trap-handler/trap-handler.h
++++ v8/src/trap-handler/trap-handler.h
+@@ -13,7 +13,7 @@
+ #include "src/flags.h"
+ #include "src/globals.h"
+ 
+-#if V8_OS_LINUX
++#if V8_OS_LINUX || V8_OS_DRAGONFLYBSD
+ #include <ucontext.h>
+ #endif
+ 
+@@ -22,7 +22,7 @@ namespace internal {
+ namespace trap_handler {
+ 
+ // TODO(eholk): Support trap handlers on other platforms.
+-#if V8_TARGET_ARCH_X64 && V8_OS_LINUX && !V8_OS_ANDROID
++#if V8_TARGET_ARCH_X64 && (V8_OS_LINUX || V8_OS_DRAGONFLYBSD) && !V8_OS_ANDROID
+ #define V8_TRAP_HANDLER_SUPPORTED 1
+ #else
+ #define V8_TRAP_HANDLER_SUPPORTED 0
+@@ -85,9 +85,9 @@ inline void ClearThreadInWasm() {
+ 
+ bool RegisterDefaultSignalHandler();
+ 
+-#if V8_OS_LINUX
++#if V8_OS_LINUX || V8_OS_DRAGONFLYBSD
+ bool TryHandleSignal(int signum, siginfo_t* info, ucontext_t* context);
+-#endif  // V8_OS_LINUX
++#endif  // V8_OS_LINUX || V8_OS_DRAGONFLYBSD
+ 
+ }  // namespace trap_handler
+ }  // namespace internal
+diff --git v8/test/BUILD.gn v8/test/BUILD.gn
+index 936a6f6afc..19926955a3 100644
+--- v8/test/BUILD.gn
++++ v8/test/BUILD.gn
+@@ -10,7 +10,7 @@ group("gn_all") {
+ 
+   deps = [
+     ":default_tests",
+-    "inspector:inspector-test",
++#    "inspector:inspector-test",
+     "mkgrokdump:mkgrokdump",
+   ]
+ 
+@@ -45,7 +45,7 @@ group("default_tests") {
+     deps = [
+       ":cctest_run",
+       ":fuzzer_run",
+-      ":inspector-test_run",
++#      ":inspector-test_run",
+       ":intl_run",
+       ":message_run",
+       ":mjsunit_run",
+@@ -77,7 +77,7 @@ v8_isolate_run("default") {
+ v8_isolate_run("optimize_for_size") {
+   deps = [
+     ":cctest_run",
+-    ":inspector-test_run",
++#    ":inspector-test_run",
+     ":intl_run",
+     ":mjsunit_run",
+     ":webkit_run",

@@ -1,0 +1,168 @@
+diff --git third_party/skia/BUILD.gn third_party/skia/BUILD.gn
+index a18b8b1148..3450570cb0 100644
+--- third_party/skia/BUILD.gn
++++ third_party/skia/BUILD.gn
+@@ -19,8 +19,8 @@ declare_args() {
+   skia_use_angle = false
+   skia_use_egl = false
+   skia_use_expat = true
+-  skia_use_fontconfig = is_linux
+-  skia_use_freetype = is_android || is_fuchsia || is_linux
++  skia_use_fontconfig = is_linux || is_bsd
++  skia_use_freetype = is_android || is_fuchsia || is_linux || is_bsd
+   skia_use_gdi = false
+   skia_use_icu = !is_fuchsia && !is_ios && !is_win  # TODO: Windows
+   skia_use_libjpeg_turbo = true
+@@ -101,7 +101,7 @@ config("skia_public") {
+   if (is_component_build) {
+     defines += [ "SKIA_DLL" ]
+   }
+-  if (is_fuchsia || is_linux) {
++  if (is_fuchsia || is_linux || is_bsd) {
+     defines += [ "SK_SAMPLES_FOR_X" ]
+   }
+   if (skia_enable_android_framework_defines) {
+@@ -363,7 +363,7 @@ optional("fontmgr_android") {
+ }
+ 
+ optional("fontmgr_custom") {
+-  enabled = is_linux && skia_use_freetype && !skia_use_fontconfig
++  enabled = (is_linux || is_bsd) && skia_use_freetype && !skia_use_fontconfig
+ 
+   deps = [
+     ":typeface_freetype",
+@@ -427,7 +427,7 @@ optional("gpu") {
+   } else if (skia_use_egl) {
+     sources += [ "src/gpu/gl/egl/GrGLCreateNativeInterface_egl.cpp" ]
+     libs += [ "EGL" ]
+-  } else if (is_linux) {
++  } else if (is_linux || is_bsd) {
+     sources += [ "src/gpu/gl/glx/GrGLCreateNativeInterface_glx.cpp" ]
+     libs += [
+       "GL",
+@@ -688,7 +688,7 @@ component("skia") {
+     ]
+   }
+ 
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     sources += [ "src/ports/SkDebug_stdio.cpp" ]
+   }
+ 
+@@ -759,7 +759,7 @@ if (skia_enable_tools) {
+     # TODO: worth fixing?
+     executable("fiddle") {
+       libs = []
+-      if (is_linux) {
++      if (is_linux || is_bsd) {
+         libs += [ "OSMesa" ]
+       }
+ 
+@@ -873,7 +873,7 @@ if (skia_enable_tools) {
+       } else if (is_ios) {
+         sources += [ "tools/gpu/gl/iOS/CreatePlatformGLTestContext_iOS.mm" ]
+         libs += [ "OpenGLES.framework" ]
+-      } else if (is_linux) {
++      } else if (is_linux || is_bsd) {
+         sources += [ "tools/gpu/gl/glx/CreatePlatformGLTestContext_glx.cpp" ]
+         libs += [ "X11" ]
+       } else if (is_mac) {
+@@ -1052,7 +1052,7 @@ if (skia_enable_tools) {
+     if (!is_android) {
+       sources += [ "src/views/SkWindow.cpp" ]
+     }
+-    if (is_linux) {
++    if (is_linux || is_bsd) {
+       public_include_dirs += [ "src/views/unix" ]
+       sources += [
+         "src/views/unix/SkOSWindow_Unix.cpp",
+@@ -1223,7 +1223,7 @@ if (skia_enable_tools) {
+     ]
+   }
+ 
+-  if (is_linux || is_win || is_mac) {
++  if (is_linux || is_win || is_mac || is_bsd) {
+     test_app("SampleApp") {
+       sources = [
+         "samplecode/SampleApp.cpp",
+@@ -1233,7 +1233,7 @@ if (skia_enable_tools) {
+         sources += [ "src/views/mac/skia_mac.mm" ]
+       } else if (is_win) {
+         sources += [ "src/views/win/skia_win.cpp" ]
+-      } else if (is_linux) {
++      } else if (is_linux || is_bsd) {
+         sources += [ "src/views/unix/skia_unix.cpp" ]
+       }
+       deps = [
+@@ -1421,7 +1421,8 @@ if (skia_enable_tools) {
+     ]
+   }
+ 
+-  if (skia_enable_gpu && (is_android || is_linux || is_win || is_mac)) {
++  if (skia_enable_gpu &&
++      (is_android || is_linux || is_win || is_mac || is_bsd)) {
+     test_app("viewer") {
+       is_shared_library = is_android
+       sources = [
+@@ -1445,7 +1446,7 @@ if (skia_enable_tools) {
+           "tools/viewer/sk_app/android/surface_glue_android.cpp",
+         ]
+         libs += [ "android" ]
+-      } else if (is_linux) {
++      } else if (is_linux || is_bsd) {
+         sources += [
+           "tools/viewer/sk_app/unix/GLWindowContext_unix.cpp",
+           "tools/viewer/sk_app/unix/RasterWindowContext_unix.cpp",
+@@ -1473,7 +1474,7 @@ if (skia_enable_tools) {
+         if (is_android) {
+           sources +=
+               [ "tools/viewer/sk_app/android/VulkanWindowContext_android.cpp" ]
+-        } else if (is_linux) {
++        } else if (is_linux || is_bsd) {
+           sources += [ "tools/viewer/sk_app/unix/VulkanWindowContext_unix.cpp" ]
+           libs += [ "X11-xcb" ]
+         } else if (is_win) {
+diff --git third_party/skia/gn/BUILD.gn third_party/skia/gn/BUILD.gn
+index 96da6775ec..16234d9002 100644
+--- third_party/skia/gn/BUILD.gn
++++ third_party/skia/gn/BUILD.gn
+@@ -259,7 +259,7 @@ config("default") {
+     libs += [ "objc" ]
+   }
+ 
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     libs += [ "pthread" ]
+   }
+ 
+@@ -464,7 +464,7 @@ config("executable") {
+     ldflags = [ "-pie" ]
+   } else if (is_mac) {
+     ldflags = [ "-Wl,-rpath,@loader_path/." ]
+-  } else if (is_linux) {
++  } else if (is_linux || is_bsd) {
+     ldflags = [
+       "-rdynamic",
+       "-Wl,-rpath,\$ORIGIN",
+diff --git third_party/skia/third_party/angle2/BUILD.gn third_party/skia/third_party/angle2/BUILD.gn
+index b6bec35c74..1bf0bb95f3 100644
+--- third_party/skia/third_party/angle2/BUILD.gn
++++ third_party/skia/third_party/angle2/BUILD.gn
+@@ -45,7 +45,7 @@ config("common") {
+     "$angle_root/src/third_party/khronos",
+   ]
+ 
+-  assert(is_linux || is_win)  # TODO: is_mac?
++  assert(is_linux || is_win || is_bsd)  # TODO: is_mac?
+   if (is_linux) {
+     defines += [
+       "ANGLE_USE_X11",
+@@ -97,7 +97,7 @@ shared_library("libGLESv2") {
+     sources -= [ "$angle_root/src/libGLESv2/libGLESv2.def" ]
+   }
+ 
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     libs += [
+       "X11",
+       "Xi",

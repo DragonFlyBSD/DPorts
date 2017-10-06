@@ -1,0 +1,313 @@
+diff --git third_party/webrtc/BUILD.gn third_party/webrtc/BUILD.gn
+index 863f0620b..7b5605317 100644
+--- third_party/webrtc/BUILD.gn
++++ third_party/webrtc/BUILD.gn
+@@ -58,6 +58,9 @@ config("common_inherited_config") {
+   if (is_linux) {
+     defines += [ "WEBRTC_LINUX" ]
+   }
++  if (current_os == "dragonfly") {
++    defines += [ "WEBRTC_DRAGONFLY" ]
++  }
+   if (is_mac) {
+     defines += [ "WEBRTC_MAC" ]
+   }
+diff --git third_party/webrtc/base/byteorder.h third_party/webrtc/base/byteorder.h
+index d0cfa5e48..d47fc0a35 100644
+--- third_party/webrtc/base/byteorder.h
++++ third_party/webrtc/base/byteorder.h
+@@ -76,6 +76,8 @@
+ #else
+ #error RTC_ARCH_CPU_BIG_ENDIAN or RTC_ARCH_CPU_LITTLE_ENDIAN must be defined.
+ #endif  // defined(RTC_ARCH_CPU_LITTLE_ENDIAN)
++#elif defined(WEBRTC_DRAGONFLY)
++#include <sys/endian.h>
+ #elif defined(WEBRTC_POSIX)
+ #include <endian.h>
+ #endif
+diff --git third_party/webrtc/base/cpu_time.cc third_party/webrtc/base/cpu_time.cc
+index 5fce36654..d916e54e2 100644
+--- third_party/webrtc/base/cpu_time.cc
++++ third_party/webrtc/base/cpu_time.cc
+@@ -12,7 +12,7 @@
+ #include "webrtc/base/logging.h"
+ #include "webrtc/base/timeutils.h"
+ 
+-#if defined(WEBRTC_LINUX)
++#if defined(WEBRTC_LINUX) || defined(WEBRTC_DRAGONFLY)
+ #include <time.h>
+ #elif defined(WEBRTC_MAC)
+ #include <sys/resource.h>
+@@ -36,7 +36,7 @@ const int64_t kNanosecsPerFiletime = 100;
+ namespace rtc {
+ 
+ int64_t GetProcessCpuTimeNanos() {
+-#if defined(WEBRTC_LINUX)
++#if defined(WEBRTC_LINUX) || defined(WEBRTC_DRAGONFLY)
+   struct timespec ts;
+   if (clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &ts) == 0) {
+     return ts.tv_sec * kNumNanosecsPerSec + ts.tv_nsec;
+@@ -73,7 +73,7 @@ int64_t GetProcessCpuTimeNanos() {
+ }
+ 
+ int64_t GetThreadCpuTimeNanos() {
+-#if defined(WEBRTC_LINUX)
++#if defined(WEBRTC_LINUX) || defined(WEBRTC_DRAGONFLY)
+   struct timespec ts;
+   if (clock_gettime(CLOCK_THREAD_CPUTIME_ID, &ts) == 0) {
+     return ts.tv_sec * kNumNanosecsPerSec + ts.tv_nsec;
+diff --git third_party/webrtc/base/ifaddrs_converter.h third_party/webrtc/base/ifaddrs_converter.h
+index 0a1cdb9e4..28f0e93cb 100644
+--- third_party/webrtc/base/ifaddrs_converter.h
++++ third_party/webrtc/base/ifaddrs_converter.h
+@@ -14,6 +14,9 @@
+ #if defined(WEBRTC_ANDROID)
+ #include "webrtc/base/ifaddrs-android.h"
+ #else
++#if defined(WEBRTC_DRAGONFLY)
++#include <sys/types.h>
++#endif
+ #include <ifaddrs.h>
+ #endif  // WEBRTC_ANDROID
+ 
+diff --git third_party/webrtc/base/physicalsocketserver.cc third_party/webrtc/base/physicalsocketserver.cc
+index a41270301..6dffbbaf2 100644
+--- third_party/webrtc/base/physicalsocketserver.cc
++++ third_party/webrtc/base/physicalsocketserver.cc
+@@ -56,7 +56,8 @@ typedef void* SockOptArg;
+ 
+ #endif  // WEBRTC_POSIX
+ 
+-#if defined(WEBRTC_POSIX) && !defined(WEBRTC_MAC) && !defined(__native_client__)
++#if defined(WEBRTC_POSIX) && !defined(WEBRTC_MAC) && \
++            !defined(__native_client__) && !defined(WEBRTC_DRAGONFLY)
+ 
+ int64_t GetSocketRecvTimestamp(int socket) {
+   struct timeval tv_ioctl;
+@@ -546,7 +547,8 @@ int PhysicalSocket::TranslateOption(Option opt, int* slevel, int* sopt) {
+       *slevel = IPPROTO_IP;
+       *sopt = IP_DONTFRAGMENT;
+       break;
+-#elif defined(WEBRTC_MAC) || defined(BSD) || defined(__native_client__)
++#elif defined(WEBRTC_MAC) || defined(WEBRTC_DRAGONFLY) || defined(BSD) || \
++              defined(__native_client__)
+       LOG(LS_WARNING) << "Socket::OPT_DONTFRAGMENT not supported.";
+       return -1;
+ #elif defined(WEBRTC_POSIX)
+diff --git third_party/webrtc/base/platform_thread.cc third_party/webrtc/base/platform_thread.cc
+index d3a1a037f..c17de088f 100644
+--- third_party/webrtc/base/platform_thread.cc
++++ third_party/webrtc/base/platform_thread.cc
+@@ -18,6 +18,8 @@
+ #if defined(WEBRTC_LINUX)
+ #include <sys/prctl.h>
+ #include <sys/syscall.h>
++#elif defined(WEBRTC_DRAGONFLY)
++#include <pthread_np.h>
+ #endif
+ 
+ namespace rtc {
+@@ -31,6 +33,8 @@ PlatformThreadId CurrentThreadId() {
+   ret = pthread_mach_thread_np(pthread_self());
+ #elif defined(WEBRTC_LINUX)
+   ret =  syscall(__NR_gettid);
++#elif defined(WEBRTC_DRAGONFLY)
++  ret =  pthread_getthreadid_np();
+ #elif defined(WEBRTC_ANDROID)
+   ret = gettid();
+ #else
+@@ -74,6 +78,8 @@ void SetCurrentThreadName(const char* name) {
+   }
+ #elif defined(WEBRTC_LINUX) || defined(WEBRTC_ANDROID)
+   prctl(PR_SET_NAME, reinterpret_cast<unsigned long>(name));
++#elif defined(WEBRTC_DRAGONFLY)
++  pthread_set_name_np(pthread_self(), name);
+ #elif defined(WEBRTC_MAC) || defined(WEBRTC_IOS)
+   pthread_setname_np(name);
+ #endif
+@@ -294,7 +300,8 @@ bool PlatformThread::SetPriority(ThreadPriority priority) {
+ #elif defined(__native_client__)
+   // Setting thread priorities is not supported in NaCl.
+   return true;
+-#elif defined(WEBRTC_CHROMIUM_BUILD) && defined(WEBRTC_LINUX)
++#elif (defined(WEBRTC_CHROMIUM_BUILD) && defined(WEBRTC_LINUX)) || \
++      defined(WEBRTC_DRAGONFLY)
+   // TODO(tommi): Switch to the same mechanism as Chromium uses for changing
+   // thread priorities.
+   return true;
+diff --git third_party/webrtc/base/stringutils.h third_party/webrtc/base/stringutils.h
+index 4c241f02d..c4f9d9f03 100644
+--- third_party/webrtc/base/stringutils.h
++++ third_party/webrtc/base/stringutils.h
+@@ -22,7 +22,9 @@
+ #define alloca _alloca
+ #endif  // WEBRTC_WIN 
+ 
+-#if defined(WEBRTC_POSIX)
++#if defined(WEBRTC_DRAGONFLY)
++#include <stdlib.h>
++#elif defined(WEBRTC_POSIX)
+ #ifdef BSD
+ #include <stdlib.h>
+ #else  // BSD
+diff --git third_party/webrtc/base/window.h third_party/webrtc/base/window.h
+index a4a9aa446..25527f121 100644
+--- third_party/webrtc/base/window.h
++++ third_party/webrtc/base/window.h
+@@ -16,7 +16,7 @@
+ #include "webrtc/base/stringencode.h"
+ 
+ // Define platform specific window types.
+-#if defined(WEBRTC_LINUX) && !defined(WEBRTC_ANDROID)
++#if (defined(WEBRTC_LINUX) && !defined(WEBRTC_ANDROID)) || defined(WEBRTC_DRAGONFLY)
+ typedef unsigned long Window;  // Avoid include <X11/Xlib.h>.
+ #elif defined(WEBRTC_WIN)
+ // We commonly include win32.h in webrtc/base so just include it here.
+@@ -31,7 +31,7 @@ namespace rtc {
+ class WindowId {
+  public:
+   // Define WindowT for each platform.
+-#if defined(WEBRTC_LINUX) && !defined(WEBRTC_ANDROID)
++#if (defined(WEBRTC_LINUX) && !defined(WEBRTC_ANDROID)) || defined(WEBRTC_DRAGONFLY)
+   typedef Window WindowT;
+ #elif defined(WEBRTC_WIN)
+   typedef HWND WindowT;
+diff --git third_party/webrtc/modules/rtp_rtcp/source/rtp_utility.cc third_party/webrtc/modules/rtp_rtcp/source/rtp_utility.cc
+index d003c0bdb..1680005bf 100644
+--- third_party/webrtc/modules/rtp_rtcp/source/rtp_utility.cc
++++ third_party/webrtc/modules/rtp_rtcp/source/rtp_utility.cc
+@@ -54,7 +54,7 @@ bool StringCompare(const char* str1, const char* str2,
+                    const uint32_t length) {
+   return _strnicmp(str1, str2, length) == 0;
+ }
+-#elif defined(WEBRTC_LINUX) || defined(WEBRTC_MAC)
++#elif defined(WEBRTC_LINUX) || defined(WEBRTC_MAC) || defined(WEBRTC_DRAGONFLY)
+ bool StringCompare(const char* str1, const char* str2,
+                    const uint32_t length) {
+   return strncasecmp(str1, str2, length) == 0;
+diff --git third_party/webrtc/modules/video_capture/device_info_impl.cc third_party/webrtc/modules/video_capture/device_info_impl.cc
+index 35434c00f..8e8996e49 100644
+--- third_party/webrtc/modules/video_capture/device_info_impl.cc
++++ third_party/webrtc/modules/video_capture/device_info_impl.cc
+@@ -49,7 +49,7 @@ int32_t DeviceInfoImpl::NumberOfCapabilities(
+     if (_lastUsedDeviceNameLength == strlen((char*) deviceUniqueIdUTF8))
+     {
+         // Is it the same device that is asked for again.
+-#if defined(WEBRTC_MAC) || defined(WEBRTC_LINUX)
++#if defined(WEBRTC_MAC) || defined(WEBRTC_LINUX) || defined(WEBRTC_DRAGONFLY)
+         if(strncasecmp((char*)_lastUsedDeviceName,
+                        (char*) deviceUniqueIdUTF8,
+                        _lastUsedDeviceNameLength)==0)
+@@ -81,7 +81,7 @@ int32_t DeviceInfoImpl::GetCapability(const char* deviceUniqueIdUTF8,
+     ReadLockScoped cs(_apiLock);
+ 
+     if ((_lastUsedDeviceNameLength != strlen((char*) deviceUniqueIdUTF8))
+-#if defined(WEBRTC_MAC) || defined(WEBRTC_LINUX)
++#if defined(WEBRTC_MAC) || defined(WEBRTC_LINUX) || defined(WEBRTC_DRAGONFLY)
+         || (strncasecmp((char*)_lastUsedDeviceName,
+                         (char*) deviceUniqueIdUTF8,
+                         _lastUsedDeviceNameLength)!=0))
+@@ -129,7 +129,7 @@ int32_t DeviceInfoImpl::GetBestMatchedCapability(
+ 
+     ReadLockScoped cs(_apiLock);
+     if ((_lastUsedDeviceNameLength != strlen((char*) deviceUniqueIdUTF8))
+-#if defined(WEBRTC_MAC) || defined(WEBRTC_LINUX)
++#if defined(WEBRTC_MAC) || defined(WEBRTC_LINUX) || defined(WEBRTC_DRAGONFLY)
+         || (strncasecmp((char*)_lastUsedDeviceName,
+                         (char*) deviceUniqueIdUTF8,
+                         _lastUsedDeviceNameLength)!=0))
+diff --git third_party/webrtc/system_wrappers/BUILD.gn third_party/webrtc/system_wrappers/BUILD.gn
+index 1cf1b6f3b..2360fe6c4 100644
+--- third_party/webrtc/system_wrappers/BUILD.gn
++++ third_party/webrtc/system_wrappers/BUILD.gn
+@@ -90,7 +90,7 @@ rtc_static_library("system_wrappers") {
+     libs += [ "rt" ]
+   }
+ 
+-  if (is_linux || is_android) {
++  if (is_linux || is_android || is_bsd) {
+     sources += [ "source/atomic32_non_darwin_unix.cc" ]
+   }
+ 
+diff --git third_party/webrtc/system_wrappers/source/atomic32_non_darwin_unix.cc third_party/webrtc/system_wrappers/source/atomic32_non_darwin_unix.cc
+index fbc9c2910..06f108668 100644
+--- third_party/webrtc/system_wrappers/source/atomic32_non_darwin_unix.cc
++++ third_party/webrtc/system_wrappers/source/atomic32_non_darwin_unix.cc
+@@ -12,7 +12,9 @@
+ 
+ #include <assert.h>
+ #include <inttypes.h>
++#if !defined(WEBRTC_DRAGONFLY)
+ #include <malloc.h>
++#endif
+ 
+ #include "webrtc/common_types.h"
+ 
+diff --git third_party/webrtc/system_wrappers/source/clock.cc third_party/webrtc/system_wrappers/source/clock.cc
+index f65adfcbb..337389f1c 100644
+--- third_party/webrtc/system_wrappers/source/clock.cc
++++ third_party/webrtc/system_wrappers/source/clock.cc
+@@ -14,7 +14,7 @@
+ // Windows needs to be included before mmsystem.h
+ #include "webrtc/base/win32.h"
+ #include <MMSystem.h>
+-#elif ((defined WEBRTC_LINUX) || (defined WEBRTC_MAC))
++#elif ((defined WEBRTC_LINUX) || (defined WEBRTC_MAC) || (defined WEBRTC_DRAGONFLY))
+ #include <sys/time.h>
+ #include <time.h>
+ #endif
+@@ -179,7 +179,7 @@ class WindowsRealTimeClock : public RealTimeClock {
+   const ReferencePoint ref_point_;
+ };
+ 
+-#elif ((defined WEBRTC_LINUX) || (defined WEBRTC_MAC))
++#elif ((defined WEBRTC_LINUX) || (defined WEBRTC_MAC) || (defined WEBRTC_DRAGONFLY))
+ class UnixRealTimeClock : public RealTimeClock {
+  public:
+   UnixRealTimeClock() {}
+@@ -217,7 +217,7 @@ Clock* Clock::GetRealTimeClock() {
+     delete clock;
+   }
+   return g_shared_clock;
+-#elif defined(WEBRTC_LINUX) || defined(WEBRTC_MAC)
++#elif defined(WEBRTC_LINUX) || defined(WEBRTC_MAC) || defined(WEBRTC_DRAGONFLY)
+   static UnixRealTimeClock clock;
+   return &clock;
+ #else
+diff --git third_party/webrtc/system_wrappers/source/cpu_info.cc third_party/webrtc/system_wrappers/source/cpu_info.cc
+index 4a61c7a6f..7a7c156f9 100644
+--- third_party/webrtc/system_wrappers/source/cpu_info.cc
++++ third_party/webrtc/system_wrappers/source/cpu_info.cc
+@@ -16,7 +16,7 @@
+ #ifndef EXCLUDE_D3D9
+ #include <d3d9.h>
+ #endif
+-#elif defined(WEBRTC_LINUX)
++#elif defined(WEBRTC_LINUX) || defined(WEBRTC_DRAGONFLY)
+ #include <unistd.h>
+ #endif
+ #if defined(WEBRTC_MAC)
+@@ -34,7 +34,8 @@ static int DetectNumberOfCores() {
+   SYSTEM_INFO si;
+   GetSystemInfo(&si);
+   number_of_cores = static_cast<int>(si.dwNumberOfProcessors);
+-#elif defined(WEBRTC_LINUX) || defined(WEBRTC_ANDROID)
++#elif defined(WEBRTC_LINUX) || defined(WEBRTC_ANDROID) || \
++      defined(WEBRTC_DRAGONFLY)
+   number_of_cores = static_cast<int>(sysconf(_SC_NPROCESSORS_ONLN));
+ #elif defined(WEBRTC_MAC)
+   int name[] = {CTL_HW, HW_AVAILCPU};
+diff --git third_party/webrtc/webrtc.gni third_party/webrtc/webrtc.gni
+index d4acaf526..08a0ca119 100644
+--- third_party/webrtc/webrtc.gni
++++ third_party/webrtc/webrtc.gni
+@@ -190,7 +190,8 @@ rtc_libyuv_dir = "//third_party/libyuv"
+ rtc_opus_dir = "//third_party/opus"
+ 
+ # Desktop capturer is supported only on Windows, OSX and Linux.
+-rtc_desktop_capture_supported = is_win || is_mac || (is_linux && use_x11)
++rtc_desktop_capture_supported = is_win || is_mac ||
++                                ((is_linux || is_bsd) && use_x11)
+ 
+ ###############################################################################
+ # Templates

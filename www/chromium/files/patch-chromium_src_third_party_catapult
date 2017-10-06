@@ -1,0 +1,74 @@
+diff --git third_party/catapult/common/py_trace_event/py_trace_event/trace_time.py third_party/catapult/common/py_trace_event/py_trace_event/trace_time.py
+index c5e3fe1ed..86d77ae5c 100644
+--- third_party/catapult/common/py_trace_event/py_trace_event/trace_time.py
++++ third_party/catapult/common/py_trace_event/py_trace_event/trace_time.py
+@@ -27,12 +27,14 @@ _PLATFORMS = {
+     'cygwin': 'cygwin',
+     'freebsd': 'freebsd',
+     'sunos': 'sunos5',
++    'dragonfly': 'dragonfly',
+     'bsd': 'bsd'
+ }
+ # Mapping of what to pass get_clocktime based on platform.
+ _CLOCK_MONOTONIC = {
+     'linux': 1,
+     'freebsd': 4,
++    'dragonfly': 4,
+     'bsd': 3,
+     'sunos5': 4
+ }
+@@ -207,7 +209,8 @@ def InitializeNowFunction(plat):
+   elif (plat.startswith(_PLATFORMS['linux'])
+         or plat.startswith(_PLATFORMS['freebsd'])
+         or plat.startswith(_PLATFORMS['bsd'])
+-        or plat.startswith(_PLATFORMS['sunos'])):
++        or plat.startswith(_PLATFORMS['sunos'])
++        or plat.startswith(_PLATFORMS['dragonfly'])):
+     InitializeLinuxNowFunction(plat)
+ 
+   elif (plat.startswith(_PLATFORMS['windows'])
+diff --git third_party/catapult/telemetry/third_party/web-page-replay/platformsettings.py third_party/catapult/telemetry/third_party/web-page-replay/platformsettings.py
+index 9037ff8a5..47bee8d6a 100644
+--- third_party/catapult/telemetry/third_party/web-page-replay/platformsettings.py
++++ third_party/catapult/telemetry/third_party/web-page-replay/platformsettings.py
+@@ -771,6 +771,8 @@ def _new_platform_settings(system, release):
+     return _WindowsPlatformSettings()
+   if system == 'FreeBSD':
+     return _FreeBSDPlatformSettings()
++  if system == 'DragonFly':
++    return _FreeBSDPlatformSettings()
+   raise NotImplementedError('Sorry %s %s is not supported.' % (system, release))
+ 
+ 
+diff --git third_party/catapult/third_party/pyserial/serial/serialposix.py third_party/catapult/third_party/pyserial/serial/serialposix.py
+index b9b4b2826..248ea02ce 100755
+--- third_party/catapult/third_party/pyserial/serial/serialposix.py
++++ third_party/catapult/third_party/pyserial/serial/serialposix.py
+@@ -124,8 +124,9 @@ elif plat[:7] == 'openbsd':    # OpenBSD
+ 
+     baudrate_constants = {}
+ 
+-elif plat[:3] == 'bsd' or  \
+-    plat[:7] == 'freebsd':
++elif (plat[:3] == 'bsd' or
++      plat[:7] == 'freebsd' or
++      plat[:9] == 'dragonfly'):
+ 
+     def device(port):
+         return '/dev/cuad%d' % port
+diff --git third_party/catapult/third_party/pyserial/serial/tools/list_ports_posix.py third_party/catapult/third_party/pyserial/serial/tools/list_ports_posix.py
+index 09f115fbf..3fe3359f0 100755
+--- third_party/catapult/third_party/pyserial/serial/tools/list_ports_posix.py
++++ third_party/catapult/third_party/pyserial/serial/tools/list_ports_posix.py
+@@ -39,8 +39,9 @@ elif plat[:7] == 'openbsd':    # OpenBSD
+         devices = glob.glob('/dev/cua*')
+         return [(d, d, d) for d in devices]
+ 
+-elif plat[:3] == 'bsd' or  \
+-        plat[:7] == 'freebsd':
++elif (plat[:3] == 'bsd' or
++      plat[:7] == 'freebsd' or
++      plat[:9] == 'dragonfly'):
+ 
+     def comports():
+         devices = glob.glob('/dev/cuad*')

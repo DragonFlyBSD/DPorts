@@ -1,0 +1,128 @@
+diff --git third_party/pdfium/BUILD.gn third_party/pdfium/BUILD.gn
+index 5802752af..c39de1389 100644
+--- third_party/pdfium/BUILD.gn
++++ third_party/pdfium/BUILD.gn
+@@ -75,7 +75,7 @@ config("pdfium_core_config") {
+   cflags = []
+   configs = [ ":pdfium_common_config" ]
+   defines = [ "V8_DEPRECATION_WARNINGS" ]
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     if (current_cpu == "x64") {
+       defines += [ "_FX_CPU_=_FX_X64_" ]
+       cflags += [ "-fPIC" ]
+diff --git third_party/pdfium/core/fxcrt/fx_system.h third_party/pdfium/core/fxcrt/fx_system.h
+index 5e8aa6c0e..f8e102799 100644
+--- third_party/pdfium/core/fxcrt/fx_system.h
++++ third_party/pdfium/core/fxcrt/fx_system.h
+@@ -43,6 +43,9 @@
+ #elif defined(__linux__)
+ #define _FX_OS_ _FX_LINUX_DESKTOP_
+ #define _FXM_PLATFORM_ _FXM_PLATFORM_LINUX_
++#elif defined(__FreeBSD__) || defined(__DragonFly__)
++#define _FX_OS_ _FX_LINUX_DESKTOP_
++#define _FXM_PLATFORM_ _FXM_PLATFORM_LINUX_
+ #elif defined(__APPLE__)
+ #define _FX_OS_ _FX_MACOSX_
+ #define _FXM_PLATFORM_ _FXM_PLATFORM_APPLE_
+diff --git third_party/pdfium/fpdfsdk/javascript/PublicMethods.cpp third_party/pdfium/fpdfsdk/javascript/PublicMethods.cpp
+index 2efcacdde..dae95399f 100644
+--- third_party/pdfium/fpdfsdk/javascript/PublicMethods.cpp
++++ third_party/pdfium/fpdfsdk/javascript/PublicMethods.cpp
+@@ -1017,62 +1017,42 @@ bool CJS_PublicMethods::AFPercent_Format(CJS_Runtime* pRuntime,
+   if (iSepStyle < 0 || iSepStyle > 3)
+     iSepStyle = 0;
+ 
+-  // for processing decimal places
++  // Processing decimal places
+   double dValue = atof(strValue.c_str());
+   dValue *= 100;
+   if (iDec > 0)
+     dValue += DOUBLE_CORRECT;
+ 
++  // Calculating number string
++  bool bNegative;
+   int iDec2;
+-  int iNegative = 0;
+-  strValue = fcvt(dValue, iDec, &iDec2, &iNegative);
++  strValue = CalculateString(dValue, iDec, &iDec2, &bNegative);
+   if (strValue.IsEmpty()) {
+     dValue = 0;
+-    strValue = fcvt(dValue, iDec, &iDec2, &iNegative);
+-  }
+-
+-  if (iDec2 < 0) {
+-    for (int iNum = 0; iNum < abs(iDec2); iNum++) {
+-      strValue = "0" + strValue;
+-    }
+-    iDec2 = 0;
+-  }
+-  int iMax = strValue.GetLength();
+-  if (iDec2 > iMax) {
+-    for (int iNum = 0; iNum <= iDec2 - iMax; iNum++) {
+-      strValue += "0";
+-    }
+-    iMax = iDec2 + 1;
++    strValue = CalculateString(dValue, iDec, &iDec2, &bNegative);
+   }
+ 
+-  // for processing seperator style
+-  if (iDec2 < iMax) {
+-    if (iSepStyle == 0 || iSepStyle == 1) {
+-      strValue.Insert(iDec2, '.');
+-      iMax++;
+-    } else if (iSepStyle == 2 || iSepStyle == 3) {
+-      strValue.Insert(iDec2, ',');
+-      iMax++;
+-    }
++  // Processing separator style
++  if (iDec2 < strValue.GetLength()) {
++    if (iSepStyle == 2 || iSepStyle == 3)
++      strValue.Replace(".", ",");
+ 
+     if (iDec2 == 0)
+       strValue.Insert(iDec2, '0');
+   }
+   if (iSepStyle == 0 || iSepStyle == 2) {
+-    char cSeperator;
++    char cSeparator;
+     if (iSepStyle == 0)
+-      cSeperator = ',';
++      cSeparator = ',';
+     else
+-      cSeperator = '.';
++      cSeparator = '.';
+ 
+-    for (int iDecPositive = iDec2 - 3; iDecPositive > 0; iDecPositive -= 3) {
+-      strValue.Insert(iDecPositive, cSeperator);
+-      iMax++;
+-    }
++    for (int iDecPositive = iDec2 - 3; iDecPositive > 0; iDecPositive -= 3)
++      strValue.Insert(iDecPositive, cSeparator);
+   }
+ 
+   // negative mark
+-  if (iNegative)
++  if (bNegative)
+     strValue = "-" + strValue;
+   strValue += "%";
+   Value = CFX_WideString::FromLocal(strValue.AsStringC());
+diff --git third_party/pdfium/third_party/libopenjpeg20/opj_malloc.h third_party/pdfium/third_party/libopenjpeg20/opj_malloc.h
+index 517707f94..fff76d6f2 100644
+--- third_party/pdfium/third_party/libopenjpeg20/opj_malloc.h
++++ third_party/pdfium/third_party/libopenjpeg20/opj_malloc.h
+@@ -98,10 +98,11 @@ Allocate memory aligned to a 16 byte boundary
+ #else /* Not _WIN32 */
+ 	#if defined(__sun)
+ 		#define HAVE_MEMALIGN
+-  #elif defined(__FreeBSD__)
+-    #define HAVE_POSIX_MEMALIGN
++	#elif defined(__FreeBSD__)
++		#define HAVE_POSIX_MEMALIGN
+ 	/* Linux x86_64 and OSX always align allocations to 16 bytes */
+-	#elif !defined(__amd64__) && !defined(__APPLE__) && !defined(_AIX)
++	#elif !defined(__amd64__) && !defined(__x86_64__) && \
++	      !defined(__APPLE__) && !defined(_AIX)
+ 		#define HAVE_MEMALIGN
+ 		#include <malloc.h>			
+ 	#endif

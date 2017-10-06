@@ -1,0 +1,15 @@
+diff --git third_party/usrsctp/usrsctplib/usrsctplib/netinet/sctp_os_userspace.h third_party/usrsctp/usrsctplib/usrsctplib/netinet/sctp_os_userspace.h
+index fd3e0d7..df72f86 100755
+--- third_party/usrsctp/usrsctplib/usrsctplib/netinet/sctp_os_userspace.h
++++ third_party/usrsctp/usrsctplib/usrsctplib/netinet/sctp_os_userspace.h
+@@ -41,6 +41,10 @@
+ 
+ #include <errno.h>
+ 
++#if defined(__Userspace_os_DragonFly)
++#include <sys/param.h>
++#endif
++
+ #if defined(__Userspace_os_Windows)
+ #include <winsock2.h>
+ #include <ws2tcpip.h>

@@ -2,10 +2,10 @@
 # $FreeBSD$
 
 PORTNAME=	chromium
-PORTVERSION=	55.0.2883.87
+PORTVERSION=	60.0.3112.116
 CATEGORIES=	www
 MASTER_SITES=	http://commondatastorage.googleapis.com/chromium-browser-official/
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} # default, but needed to get distinfo correct if TEST is on
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	chromium@FreeBSD.org
 COMMENT=	Google web browser based on WebKit
@@ -15,44 +15,31 @@ LICENSE_COMB=	multi
 
 BUILD_DEPENDS=	bash:shells/bash \
 		python:lang/python \
-		flock:sysutils/flock \
-		gperf:devel/gperf \
-		yasm:devel/yasm \
-		${LOCALBASE}/include/linux/videodev2.h:multimedia/v4l_compat \
-		${LOCALBASE}/share/usbids/usb.ids:misc/usbids \
-		${PYTHON_PKGNAMEPREFIX}Jinja2>0:devel/py-Jinja2 \
-		${PYTHON_PKGNAMEPREFIX}ply>0:devel/py-ply \
-		${PYTHON_PKGNAMEPREFIX}html5lib>0:www/py-html5lib
+		gperf:devel/gperf
 
 LIB_DEPENDS=	libcairo.so:graphics/cairo \
 		libcups.so:print/cups \
 		libdrm.so:graphics/libdrm \
 		libexpat.so:textproc/expat2 \
-		libFLAC.so:audio/flac \
 		libfreetype.so:print/freetype2 \
 		libharfbuzz.so:print/harfbuzz \
-		libharfbuzz-icu.so:print/harfbuzz-icu \
-		libexif.so:graphics/libexif \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libgcrypt.so:security/libgcrypt \
-		libicuuc.so:devel/icu \
-		libjsoncpp.so:devel/jsoncpp \
 		libnspr4.so:devel/nspr \
 		libnss3.so:security/nss \
 		libpci.so:devel/libpci \
-		libpng.so:graphics/png \
-		libre2.so:devel/re2 \
-		libsnappy.so:archivers/snappy \
-		libspeechd.so:accessibility/speech-dispatcher \
-		libspeex.so:audio/speex \
-		libwebp.so:graphics/webp \
-		libxml2.so:textproc/libxml2
+		libasound.so:audio/alsa-lib \
+		libdbus-1.so:devel/dbus \
+		libdbus-glib-1.so:devel/dbus-glib \
+		libkrb5.so:security/krb5 \
+		# end
 
 RUN_DEPENDS=	droid-fonts-ttf>0:x11-fonts/droid-fonts-ttf \
+		${LOCALBASE}/lib/alsa-lib/libasound_module_pcm_oss.so:audio/alsa-plugins \
 		xdg-open:devel/xdg-utils
 
 ONLY_FOR_ARCHS=	i386 amd64
-USES=		compiler bison cpe desktop-file-utils jpeg \
+USES=		compiler bison cpe desktop-file-utils \
 		ninja perl5 pkgconfig python:2,build shebangfix tar:xz
 
 CPE_VENDOR=	google
@@ -60,7 +47,7 @@ CPE_PRODUCT=	chrome
 USE_PERL5=	build
 USE_XORG=	scrnsaverproto x11 xcb xcomposite xcursor xext xdamage xfixes xi \
 		xproto xrandr xrender xscrnsaver xtst
-USE_GNOME=	atk glib20 gtk20 libxslt libxml2
+USE_GNOME=	atk glib20 gtk30
 MAKE_ARGS=	-C out/${BUILDTYPE}
 SHEBANG_FILES=	chrome/tools/build/linux/chrome-wrapper
 ALL_TARGET=	chrome
@@ -73,21 +60,10 @@ INSTALLS_ICONS=	yes
 # replace_gn_files.py script, some parts just turned on/off for target host
 # OS "target_os == is_bsd", like libusb, libpci.
 GN_ARGS+=	\
-		clang_use_chrome_plugins=false \
-		enable_media_router=true \
-		enable_nacl=false \
-		enable_remoting=false \
-		toolkit_views=true \
-		use_allocator="none" \
-		use_aura=true \
-		use_experimental_allocator_shim=true \
-		treat_warnings_as_errors=false \
-		use_sysroot=false \
-		use_system_libjpeg=true \
-		use_system_sqlite=false   # chrome has additional patches
-# TODO: investigate building with these options:
-# use_system_icu use_system_harfbuzz use_system_minigbm
-GN_BOOTSTRAP_FLAGS=	--no-clean --no-rebuild
+		treat_warnings_as_errors=true \
+		use_pulseaudio=false \
+		use_sysroot=false
+GN_BOOTSTRAP_FLAGS=	--no-clean --gn-gen-args="use_sysroot=false"
 
 # XXX: technically for us these are a no-no
 # FreeBSD Chromium Api Key
@@ -98,35 +74,15 @@ GN_ARGS+=	google_api_key="AIzaSyBsp9n41JLW8jCokwn7vhoaMejDFRd1mp8" \
 		google_default_client_id="996322985003.apps.googleusercontent.com" \
 		google_default_client_secret="IR1za9-1VK0zZ0f_O8MVFicn"
 
-SUB_FILES=	chromium-browser.desktop chrome
+SUB_FILES=	chrome chromium-browser.desktop
 SUB_LIST+=	COMMENT="${COMMENT}"
 
-OPTIONS_DEFINE=	CODECS GCONF KERBEROS DRIVER DBUS
+OPTIONS_DEFINE=	CODECS
 CODECS_DESC=	Compile and enable patented codecs like H.264
-DBUS_DESC=	Hooks for sniffers (gnome dependencies)
-DRIVER_DESC=	Install chromedriver
-OPTIONS_GROUP=		AUDIO TESTS
-OPTIONS_GROUP_AUDIO=	ALSA PULSEAUDIO
-OPTIONS_GROUP_TESTS=	DEBUG TEST
 
-OPTIONS_DEFAULT=	CODECS GCONF KERBEROS ALSA DBUS
-OPTIONS_SUB=		yes
-
-GCONF_USE=	GNOME=gconf2
-ALSA_LIB_DEPENDS=	libasound.so:audio/alsa-lib
-ALSA_RUN_DEPENDS=	${LOCALBASE}/lib/alsa-lib/libasound_module_pcm_oss.so:audio/alsa-plugins \
-			alsa-lib>=1.1.1_1:audio/alsa-lib
-PULSEAUDIO_LIB_DEPENDS=	libpulse.so:audio/pulseaudio
-DRIVER_MAKE_ARGS=chromedriver
-TEST_DISTFILES=	${PORTNAME}-${DISTVERSION}-testdata${EXTRACT_SUFX}
+OPTIONS_DEFAULT=	CODECS
 
 .include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MALSA}
-GN_ARGS+=	use_alsa=true
-.else
-GN_ARGS+=	use_alsa=false
-.endif
 
 .if ${PORT_OPTIONS:MCODECS}
 GN_ARGS+=	ffmpeg_branding="Chrome"
@@ -143,7 +99,7 @@ DEBUG_MAKE_ENV=	V=1
 BUILDTYPE=	Debug
 GN_ARGS+=	is_debug=true
 GN_BOOTSTRAP_FLAGS+=	--debug
-#GN_ARGS+=	is_component_build=true
+MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/out/Debug
 .else
 BUILDTYPE=	Release
 .if ${OPSYS} == FreeBSD && ${ARCH} == x86_64
@@ -152,40 +108,6 @@ GN_ARGS+=	use_lld=true # harder, better, faster, stronger
 GN_ARGS+=	is_debug=false
 GN_ARGS+=	symbol_level=0
 GN_ARGS+=	remove_webcore_debug_symbols=true
-.endif
-
-.if ${PORT_OPTIONS:MDBUS}
-USE_GNOME+=	dconf
-LIB_DEPENDS+=	\
-		libdbus-1.so:devel/dbus \
-		libdbus-glib-1.so:devel/dbus-glib \
-		libgnome-keyring.so:security/libgnome-keyring
-.else
-GN_ARGS+=	use_dbus=false use_gconf=false use_gnome_keyring=false use_gio=false
-##GN_ARGS+=	use_glib=false use_atk=false # bug in x11_event_source_libevent.cc
-.endif
-
-.if ${PORT_OPTIONS:MGCONF}
-GN_ARGS+=	use_gconf=true
-.else
-GN_ARGS+=	use_gconf=false
-.endif
-
-.if ${PORT_OPTIONS:MKERBEROS}
-GN_ARGS+=	use_kerberos=true
-.else
-GN_ARGS+=	use_kerberos=false
-.endif
-
-.if ${PORT_OPTIONS:MPULSEAUDIO}
-GN_ARGS+=	use_pulseaudio=true
-.else
-GN_ARGS+=	use_pulseaudio=false
-.endif
-
-.if ${PORT_OPTIONS:MTEST}
-.include "Makefile.tests"
-ALL_TARGET+=	${TEST_TARGETS}
 .endif
 
 .include <bsd.port.pre.mk>
@@ -217,26 +139,12 @@ EXTRA_PATCHES+=	${FILESDIR}/extra-patch-libc++-old
 
 pre-everything::
 	@${ECHO_MSG}
-	@${ECHO_MSG} "To build Chromium, you should have around 2GB of memory,"
-.if ${PORT_OPTIONS:MDEBUG}
-	@${ECHO_MSG} "lots of free diskspace (~ 40GB)"
-	@${ECHO_MSG} "and no less then 16GB of memory for linking."
-.else
-	@${ECHO_MSG} "and a fair amount of free diskspace (~ 3.7GB)."
-.endif
+	@${ECHO_MSG} "To build Chromium, you should have around 16GB of memory,"
+	@${ECHO_MSG} "and lots of free diskspace (~ 40GB)."
 	@${ECHO_MSG}
 	@${ECHO_MSG} "Make sure you have Python build with the SEM option ON"
 	@${ECHO_MSG} "(default in python27-2.7.8 since r361735)"
 	@${ECHO_MSG}
-
-pre-configure:
-	# We used to remove bundled libraries to be sure that chromium uses
-	# system libraries and not shippen ones.
-	# cd ${WRKSRC} && ${PYTHON_CMD} \
-	#./build/linux/unbundle/remove_bundled_libraries.py [list of preserved]
-	cd ${WRKSRC} && ${PYTHON_CMD} \
-		./build/linux/unbundle/replace_gn_files.py --system-libraries \
-		flac harfbuzz-ng libwebp libxml libxslt snappy yasm || ${FALSE}
 
 do-configure:
 	# GN generator bootstrapping and generating ninja files
@@ -245,12 +153,6 @@ do-configure:
 		./tools/gn/bootstrap/bootstrap.py ${GN_BOOTSTRAP_FLAGS}
 	cd ${WRKSRC} && ${SETENV} ./out/${BUILDTYPE}/gn \
 		gen --args='${GN_ARGS}' out/${BUILDTYPE}
-
-test regression-test: build
-.for t in ${TEST_TARGETS}
-	cd ${WRKSRC}/out/${BUILDTYPE} && ${SETENV} LC_ALL=en_US.UTF-8 \
-		./${t} --gtest_filter=-${EXCLUDE_${t}:ts:} || ${TRUE}
-.endfor
 
 do-install:
 	@${MKDIR} ${STAGEDIR}${DATADIR}
@@ -262,11 +164,9 @@ do-install:
 .endfor
 	${INSTALL_SCRIPT} ${WRKSRC}/chrome/tools/build/linux/chrome-wrapper \
 		${STAGEDIR}${DATADIR}
-.for p in chrome_100_percent chrome_200_percent keyboard_resources resources
-	${INSTALL_DATA} ${WRKSRC}/out/${BUILDTYPE}/${p}.pak \
+	${INSTALL_DATA} ${WRKSRC}/out/${BUILDTYPE}/*.pak \
 		${STAGEDIR}${DATADIR}
-.endfor
-.for d in icudtl.dat natives_blob.bin
+.for d in icudtl.dat natives_blob.bin snapshot_blob.bin
 	${INSTALL_DATA} ${WRKSRC}/out/${BUILDTYPE}/${d} ${STAGEDIR}${DATADIR}
 .endfor
 	${INSTALL_PROGRAM} ${WRKSRC}/out/${BUILDTYPE}/chrome \
@@ -277,11 +177,5 @@ do-install:
 	${INSTALL_DATA} ${WRKDIR}/chromium-browser.desktop \
 		${STAGEDIR}${DESKTOPDIR}
 	${INSTALL_SCRIPT} ${WRKDIR}/chrome ${STAGEDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/out/${BUILDTYPE}/mksnapshot \
-		${STAGEDIR}${DATADIR}
-.if ${PORT_OPTIONS:MDRIVER}
-	${INSTALL_PROGRAM} ${WRKSRC}/out/${BUILDTYPE}/chromedriver \
-		${STAGEDIR}${PREFIX}/bin
-.endif
 
 .include <bsd.port.post.mk>

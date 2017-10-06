@@ -1,0 +1,14 @@
+diff --git third_party/re2/src/re2/dfa.cc third_party/re2/src/re2/dfa.cc
+index 08992e1..38c6691 100644
+--- third_party/re2/src/re2/dfa.cc
++++ third_party/re2/src/re2/dfa.cc
+@@ -50,7 +50,8 @@
+ 
+ namespace re2 {
+ 
+-#if !defined(__linux__)  /* only Linux seems to have memrchr */
++/* only Linux and DragonFly seem to have memrchr */
++#if !defined(__linux__) && !defined(__DragonFly__)
+ static void* memrchr(const void* s, int c, size_t n) {
+   const unsigned char* p = (const unsigned char*)s;
+   for (p += n; n > 0; n--)
