@@ -1,6 +1,6 @@
---- src/event-loop.c.orig	2015-06-26 06:08:19 +0200
-+++ src/event-loop.c
-@@ -32,17 +32,16 @@
+--- src/event-loop.c.orig	2017-07-17 16:15:13.011430000 +0300
++++ src/event-loop.c	2017-07-17 16:14:50.301277000 +0300
+@@ -33,17 +33,16 @@
  #include <fcntl.h>
  #include <sys/socket.h>
  #include <sys/un.h>
@@ -8,11 +8,11 @@
 -#include <sys/signalfd.h>
 -#include <sys/timerfd.h>
  #include <unistd.h>
- #include <assert.h>
 +#include <event2/event.h>
 +#include <event2/thread.h>
+ #include "wayland-util.h"
  #include "wayland-private.h"
- #include "wayland-server.h"
+ #include "wayland-server-core.h"
  #include "wayland-os.h"
  
  struct wl_event_loop {
@@ -21,7 +21,7 @@
  	struct wl_list check_list;
  	struct wl_list idle_list;
  	struct wl_list destroy_list;
-@@ -51,8 +50,8 @@
+@@ -52,8 +51,8 @@
  };
  
  struct wl_event_source_interface {
@@ -32,7 +32,7 @@
  };
  
  struct wl_event_source {
-@@ -60,6 +59,7 @@
+@@ -61,6 +60,7 @@
  	struct wl_event_loop *loop;
  	struct wl_list link;
  	void *data;
@@ -40,7 +40,7 @@
  	int fd;
  };
  
-@@ -69,22 +69,26 @@
+@@ -70,22 +70,26 @@
  	int fd;
  };
  
@@ -75,7 +75,7 @@
  
  	return fd_source->func(fd_source->fd, mask, source->data);
  }
-@@ -95,32 +99,12 @@
+@@ -96,32 +100,12 @@
  
  static struct wl_event_source *
  add_source(struct wl_event_loop *loop,
@@ -109,7 +109,7 @@
  	return source;
  }
  
-@@ -131,33 +115,49 @@
+@@ -132,33 +116,49 @@
  		     void *data)
  {
  	struct wl_event_source_fd *source;
@@ -167,7 +167,7 @@
  }
  
  struct wl_event_source_timer {
-@@ -166,18 +166,11 @@
+@@ -167,18 +167,11 @@
  };
  
  static int
@@ -188,7 +188,7 @@
  
  	return timer_source->func(timer_source->base.data);
  }
-@@ -197,25 +190,27 @@
+@@ -198,25 +191,27 @@
  	if (source == NULL)
  		return NULL;
  
@@ -226,12 +226,12 @@
  
  	return 0;
  }
-@@ -227,18 +222,11 @@
+@@ -228,18 +223,11 @@
  };
  
  static int
 -wl_event_source_signal_dispatch(struct wl_event_source *source,
--			       struct epoll_event *ep)
+-				struct epoll_event *ep)
 +wl_event_source_signal_dispatch(evutil_socket_t fd, short what, void *arg)
  {
 +	struct wl_event_source *source = (struct wl_event_source *) arg;
@@ -247,8 +247,8 @@
  
  	return signal_source->func(signal_source->signal_number,
  				   signal_source->base.data);
-@@ -255,23 +243,22 @@
- 			void *data)
+@@ -256,23 +244,22 @@
+ 			 void *data)
  {
  	struct wl_event_source_signal *source;
 -	sigset_t mask;
@@ -278,7 +278,7 @@
  }
  
  struct wl_event_source_idle {
-@@ -297,6 +284,7 @@
+@@ -298,6 +285,7 @@
  	source->base.interface = &idle_source_interface;
  	source->base.loop = loop;
  	source->base.fd = -1;
@@ -286,7 +286,7 @@
  
  	source->func = func;
  	source->base.data = data;
-@@ -312,17 +300,25 @@
+@@ -313,17 +301,25 @@
  	wl_list_insert(source->loop->check_list.prev, &source->link);
  }
  
@@ -318,7 +318,7 @@
  	}
  
  	wl_list_remove(&source->link);
-@@ -336,8 +332,20 @@
+@@ -337,8 +333,20 @@
  {
  	struct wl_event_source *source, *next;
  
@@ -340,7 +340,7 @@
  
  	wl_list_init(&loop->destroy_list);
  }
-@@ -351,8 +359,9 @@
+@@ -352,8 +360,9 @@
  	if (loop == NULL)
  		return NULL;
  
@@ -352,7 +352,7 @@
  		free(loop);
  		return NULL;
  	}
-@@ -371,21 +380,19 @@
+@@ -372,21 +381,19 @@
  	wl_signal_emit(&loop->destroy_signal, loop);
  
  	wl_event_loop_process_destroy_list(loop);
@@ -376,7 +376,7 @@
  
  	return n;
  }
-@@ -406,22 +413,14 @@
+@@ -407,22 +414,14 @@
  WL_EXPORT int
  wl_event_loop_dispatch(struct wl_event_loop *loop, int timeout)
  {
@@ -402,7 +402,7 @@
  	wl_event_loop_process_destroy_list(loop);
  
  	wl_event_loop_dispatch_idle(loop);
-@@ -433,11 +432,14 @@
+@@ -434,11 +433,14 @@
  	return 0;
  }
  

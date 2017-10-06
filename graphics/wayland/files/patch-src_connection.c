@@ -65,12 +65,3 @@
  	}
  
  	if (wl_buffer_put(&connection->out, data, count) < 0)
-@@ -570,7 +593,7 @@
- 			fd = args[i].h;
- 			dup_fd = wl_os_dupfd_cloexec(fd, 0);
- 			if (dup_fd < 0) {
--				wl_log("dup failed: %m");
-+				wl_log("dup failed: %s\n", strerror(errno));
- 				abort();
- 			}
- 			closure->args[i].h = dup_fd;

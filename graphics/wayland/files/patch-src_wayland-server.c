@@ -1,8 +1,8 @@
---- src/wayland-server.c.orig	2015-06-13 00:34:55 +0200
-+++ src/wayland-server.c
-@@ -44,6 +44,13 @@
+--- src/wayland-server.c.orig	2017-07-25 13:54:10.374724000 +0300
++++ src/wayland-server.c	2017-07-25 13:53:43.934582000 +0300
+@@ -43,6 +43,13 @@
+ #include <sys/file.h>
  #include <sys/stat.h>
- #include <ffi.h>
  
 +#include "../config.h"
 +
@@ -11,22 +11,22 @@
 +#include <sys/ucred.h>
 +#endif
 +
+ #include "wayland-util.h"
  #include "wayland-private.h"
  #include "wayland-server.h"
- #include "wayland-server-protocol.h"
-@@ -80,7 +87,11 @@
+@@ -77,7 +84,11 @@
  	struct wl_list link;
  	struct wl_map objects;
- 	struct wl_signal destroy_signal;
+ 	struct wl_priv_signal destroy_signal;
 +#ifdef HAVE_SYS_UCRED_H
 +	struct xucred xucred;
 +#else
  	struct ucred ucred;
 +#endif
  	int error;
+ 	struct wl_priv_signal resource_created_signal;
  };
- 
-@@ -414,7 +425,9 @@
+@@ -486,7 +497,9 @@
  wl_client_create(struct wl_display *display, int fd)
  {
  	struct wl_client *client;
@@ -34,9 +34,9 @@
  	socklen_t len;
 +#endif
  
- 	client = malloc(sizeof *client);
+ 	client = zalloc(sizeof *client);
  	if (client == NULL)
-@@ -429,10 +442,12 @@
+@@ -501,10 +514,12 @@
  	if (!client->source)
  		goto err_client;
  
@@ -49,38 +49,32 @@
  
  	client->connection = wl_connection_create(fd);
  	if (client->connection == NULL)
-@@ -484,12 +499,21 @@
+@@ -558,12 +573,21 @@
  wl_client_get_credentials(struct wl_client *client,
  			  pid_t *pid, uid_t *uid, gid_t *gid)
  {
 +#ifdef HAVE_SYS_UCRED_H
-+	if (pid)
+ 	if (pid)
+-		*pid = client->ucred.pid;
 +		*pid = 0;
-+	if (uid)
+ 	if (uid)
+-		*uid = client->ucred.uid;
 +		*uid = client->xucred.cr_uid;
-+	if (gid)
+ 	if (gid)
+-		*gid = client->ucred.gid;
 +		*gid = client->xucred.cr_gid;
 +#else
- 	if (pid)
- 		*pid = client->ucred.pid;
- 	if (uid)
- 		*uid = client->ucred.uid;
- 	if (gid)
- 		*gid = client->ucred.gid;
++ 	if (pid)
++ 		*pid = client->ucred.pid;
++ 	if (uid)
++ 		*uid = client->ucred.uid;
++ 	if (gid)
++ 		*gid = client->ucred.gid;
 +#endif
  }
  
- /** Look up an object in the client name space
-@@ -911,7 +935,7 @@
- 
- 	if (interface->version < version) {
- 		wl_log("wl_global_create: implemented version higher "
--		       "than interface version%m\n");
-+		       "than interface version%s\n", strerror(errno));
- 		return NULL;
- 	}
- 
-@@ -1035,7 +1059,7 @@
+ /** Get the file descriptor for the client
+@@ -1276,7 +1300,7 @@
  	client_fd = wl_os_accept_cloexec(fd, (struct sockaddr *) &name,
  					 &length);
  	if (client_fd < 0)
@@ -89,7 +83,7 @@
  	else
  		if (!wl_client_create(display, client_fd))
  			close(client_fd);
-@@ -1140,12 +1164,12 @@
+@@ -1381,12 +1405,12 @@
  
  	size = offsetof (struct sockaddr_un, sun_path) + strlen(s->addr.sun_path);
  	if (bind(s->fd, (struct sockaddr *) &s->addr, size) < 0) {

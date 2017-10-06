@@ -1,0 +1,29 @@
+--- Makefile.am.orig	2017-07-25 16:18:36.937418000 +0300
++++ Makefile.am	2017-07-25 16:44:33.246044000 +0300
+@@ -154,7 +154,6 @@
+ 	interface-test				\
+ 	list-test				\
+ 	map-test				\
+-	os-wrappers-test			\
+ 	sanity-test				\
+ 	socket-test				\
+ 	queue-test				\
+@@ -241,7 +240,7 @@
+ headers_test_SOURCES = tests/headers-test.c \
+ 		       tests/headers-protocol-test.c \
+ 		       tests/headers-protocol-core-test.c
+-headers_test_LDADD = libtest-runner.la
++headers_test_LDADD = libtest-runner.laos_wrapper
+ nodist_headers_test_SOURCES =			\
+ 	protocol/wayland-server-protocol-core.h	\
+ 	protocol/wayland-client-protocol-core.h
+@@ -253,9 +252,6 @@
+ fixed_benchmark_SOURCES = tests/fixed-benchmark.c
+ fixed_benchmark_LDADD = libtest-runner.la
+ 
+-os_wrappers_test_SOURCES = tests/os-wrappers-test.c
+-os_wrappers_test_LDADD = libtest-runner.la
+-
+ exec_fd_leak_checker_SOURCES = tests/exec-fd-leak-checker.c
+ exec_fd_leak_checker_LDADD = libtest-runner.la
+ 

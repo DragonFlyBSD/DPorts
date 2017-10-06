@@ -1,22 +1,23 @@
---- tests/test-compositor.c
-+++ tests/test-compositor.c
-@@ -99,13 +99,34 @@ client_destroyed(struct wl_listener *listener, void *data)
+--- tests/test-compositor.c.orig	2017-07-25 14:34:46.337944000 +0300
++++ tests/test-compositor.c	2017-07-25 14:33:46.687620000 +0300
+@@ -97,12 +97,33 @@
  {
+ 	struct client_info *ci = data;
  	struct display *d;
- 	struct client_info *ci;
+-	siginfo_t status;
 +#ifdef __DragonFly__
 +	int status;
 +#else
- 	siginfo_t status;
++ 	siginfo_t status;
 +#endif
  
- 	ci = wl_container_of(listener, ci, destroy_listener);
  	d = ci->display;
  
+-	assert(waitid(P_PID, ci->pid, &status, WEXITED) != -1);
 +#ifdef __DragonFly__
 +	assert(waitpid(ci->pid, &status, 0) != -1);
 +#else
- 	assert(waitid(P_PID, ci->pid, &status, WEXITED) != -1);
++ 	assert(waitid(P_PID, ci->pid, &status, WEXITED) != -1);
 +#endif
  
 +#ifdef __DragonFly__
@@ -35,7 +36,7 @@
  	switch (status.si_code) {
  	case CLD_KILLED:
  	case CLD_DUMPED:
-@@ -121,6 +142,7 @@ client_destroyed(struct wl_listener *listener, void *data)
+@@ -118,6 +139,7 @@
  		ci->exit_code = status.si_status;
  		break;
  	}

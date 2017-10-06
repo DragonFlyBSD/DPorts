@@ -1,5 +1,5 @@
 PORTNAME=	wayland
-PORTVERSION=	1.9.0
+PORTVERSION=	1.13.0
 CATEGORIES=	graphics
 MASTER_SITES=	http://wayland.freedesktop.org/releases/
 MAINTAINER=	imre@vdsz.com
@@ -13,7 +13,10 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 LIB_DEPENDS=	libevent.so:devel/libevent	\
 		libevent_pthreads.so:devel/libevent \
 		libexpat.so:textproc/expat2 \
-		libffi.so:devel/libffi
+		libffi.so:devel/libffi \
+		libxml2.so:textproc/libxml2
+
+BUILD_DEPENDS=	${LOCALBASE}/bin/xsltproc:textproc/libxslt
 
 GNU_CONFIGURE=	YES
 
