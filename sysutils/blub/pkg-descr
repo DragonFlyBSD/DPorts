@@ -1,4 +1,0 @@
-BLUB is a simple alternative loader for DragonFly BSD.
-Main differences are gptboot and GRUB friendliness.
-
-WWW: https://github.com/zrj-rimwis/blub

@@ -1,8 +1,0 @@
-#!/bin/sh
-
-case $2 in
-DEINSTALL)
-	/bin/rm -f /boot/loader.local
-	/bin/rm -f /boot/loader.efi.local
-	;;
-esac
