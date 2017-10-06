@@ -11,6 +11,7 @@ MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Code_Aster finite element method solver
 
 LICENSE=	GPLv2
+IGNORE=		aster does not build anymore
 
 #-----------------------------------------------------------------------
 # You may define these options:
