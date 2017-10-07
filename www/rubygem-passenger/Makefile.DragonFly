@@ -1,4 +1,4 @@
-USES+=	libtool python:2 shebangfix ssl
+LIB_DEPENDS:=	${LIB_DEPENDS:N*/libunwind}
 
 BUILD_DEPENDS+=	bash:shells/bash
 RUN_DEPENDS+=	bash:shells/bash
