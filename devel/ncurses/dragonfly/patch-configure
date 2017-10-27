@@ -1,0 +1,14 @@
+--- configure.fbsd	2017-10-20 12:33:46 UTC
++++ configure
+@@ -7851,7 +7851,10 @@ case $host_os in
+ 	cf_xopen_source="-D_DARWIN_C_SOURCE"
+ 	cf_XOPEN_SOURCE=
+ 	;;
+-(freebsd*|dragonfly*)
++(dragonfly*)
++	cf_XOPEN_SOURCE=
++	;;
++(freebsd*)
+ 	# 5.x headers associate
+ 	#	_XOPEN_SOURCE=600 with _POSIX_C_SOURCE=200112L
+ 	#	_XOPEN_SOURCE=500 with _POSIX_C_SOURCE=199506L
