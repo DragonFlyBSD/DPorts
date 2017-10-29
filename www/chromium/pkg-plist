@@ -224,6 +224,8 @@ share/applications/chromium-browser.desktop
 %%DATADIR%%/resources/inspector/profiler/profiler_module.js
 %%DATADIR%%/resources/inspector/devtools_extension_api.js
 %%DATADIR%%/resources/inspector/audits2_worker/audits2_worker_module.js
+%%DATADIR%%/swiftshader/libEGL.so
+%%DATADIR%%/swiftshader/libGLESv2.so
 share/icons/hicolor/128x128/apps/chrome.png
 share/icons/hicolor/22x22/apps/chrome.png
 share/icons/hicolor/24x24/apps/chrome.png

@@ -169,6 +169,10 @@ do-install:
 .for d in icudtl.dat natives_blob.bin snapshot_blob.bin
 	${INSTALL_DATA} ${WRKSRC}/out/${BUILDTYPE}/${d} ${STAGEDIR}${DATADIR}
 .endfor
+	@${MKDIR} ${STAGEDIR}${DATADIR}/swiftshader
+.for d in libEGL.so libGLESv2.so
+	${INSTALL_DATA} ${WRKSRC}/out/${BUILDTYPE}/swiftshader/${d} ${STAGEDIR}${DATADIR}/swiftshader
+.endfor
 	${INSTALL_PROGRAM} ${WRKSRC}/out/${BUILDTYPE}/chrome \
 		${STAGEDIR}${DATADIR}
 	cd ${WRKSRC}/out/${BUILDTYPE} && \
