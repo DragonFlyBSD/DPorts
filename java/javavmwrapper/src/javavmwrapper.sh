@@ -25,7 +25,7 @@
 # Greg Lewis
 # ----------------------------------------------------------------------------
 #
-# $FreeBSD: head/java/javavmwrapper/src/javavmwrapper.sh 351127 2014-04-12 19:43:17Z glewis $
+# $FreeBSD: head/java/javavmwrapper/src/javavmwrapper.sh 452075 2017-10-14 18:36:17Z glewis $
 #
 # MAINTAINER=java@FreeBSD.org
 
@@ -501,13 +501,16 @@ setJavaHome() {
         for version in ${JAVA_VERSION}; do
             case "${version}" in
                 1.6+)
-                    _JAVAVM_VERSION="${_JAVAVM_VERSION} 1.6 1.7 1.8"
+                    _JAVAVM_VERSION="${_JAVAVM_VERSION} 1.6 1.7 1.8 1.9"
                     ;;
                 1.7+)
-                    _JAVAVM_VERSION="${_JAVAVM_VERSION} 1.7 1.8"
+                    _JAVAVM_VERSION="${_JAVAVM_VERSION} 1.7 1.8 1.9"
                     ;;
                 1.8+)
-                    _JAVAVM_VERSION="${_JAVAVM_VERSION} 1.8"
+                    _JAVAVM_VERSION="${_JAVAVM_VERSION} 1.8 1.9"
+                    ;;
+                1.9+)
+                    _JAVAVM_VERSION="${_JAVAVM_VERSION} 1.9"
                     ;;
                 *)
                     _JAVAVM_VERSION="${_JAVAVM_VERSION} ${version}"
