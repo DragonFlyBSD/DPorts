@@ -5,7 +5,41 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
-20171006:
+20171026:
+  AFFECTS: users of devel/universal-ctags
+  AUTHOR: rodrigo@FreeBSD.org
+
+  Due to conflicts with emacs ctag (editors/emacs-devel, editors/emacs-nox11, editors/emacs),
+  the installed files will be prefixed with the 'u' character.
+  The new binaries will de named uctags and ureadtags.
+
+20171015:
+  AFFECTS: people using WITHOUT_DEBUG
+  AUTHOR: madpilot@FreeBSD.org
+
+  The WITHOUT_DEBUG flag has been retired. It's only purpose was
+  to override a global WITH_DEBUG, if that was defined, but many
+  ports were ignoring such flag even if honouring WITH_DEBUG.
+
+  The same effect can be obtained using ".undef WITH_DEBUG" without
+  any special support in port Makefiles.
+
+20171012:
+  AFFECTS: users of security/openssh-portable
+  AUTHOR: bdrewery@FreeBSD.org
+
+  OpenSSH has been upgraded to 7.6p1 which has removed several deprecated
+  features:
+
+    - SSH version 1 support dropped.
+    - Dropped support for hmac-ripemd160 MAC.
+    - Dropped support for the ciphers arcfour, blowfish and CAST.
+    - RSA keys less than 1024 bits are refused.
+
+  The HPN option is currently disabled by default, and does not build,
+  in the package.  This follows what happened in base as well.
+
+ 20171006:
   AFFECTS: users of graphics/netpbm
   AUTHOR: tobik@FreeBSD.org
 
@@ -1334,29 +1368,4 @@ you update your ports collection, before attempting any port upgrades.
   srm has been updated from 1.2.12 to 1.2.15. Since version 1.2.14,
   srm defaults to using its "simple" mode to overwrite files (one pass
   writing 0x00 to the files) instead of the 35-pass Gutmann method.
-
-20161029:
-  AFFECTS: users of irc/quassel
-  AUTHOR: woodsb02@FreeBSD.org
-
-  Quassel is now split into two ports / packages; one for providing
-  the server backend (irc/quassel-core), and one for providing the
-  client front-end (irc/quassel). Alternatively, the irc/quassel
-  port can be built with the MONO option enabled to also install
-  the client and server combined into a single monolithic binary.
-
-20161028:
-  AFFECTS: users of security/openssl and security/openssl-devel
-  AUTHOR: brnrd@FreeBSD.org
-
-  The shared library versions of OpenSSL have been bumped to avoid
-  issues with ports' and base's OpenSSL not being binary compatible.
-
-  Please rebuild all ports that depend on OpenSSL if you use OpenSSL
-  from ports.
-
-  If you use portmaster:
-        portmaster -r openssl
-  If you use portupgrade:
-        portupgrade -fr security/openssl
 
