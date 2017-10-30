@@ -2,14 +2,13 @@
 # $FreeBSD$
 
 PORTNAME=	ncurses
-PORTVERSION=	6.0
-PORTREVISION=	3
+PORTVERSION=	6.0.0s${SNAPSHOT}
 CATEGORIES=	devel
-MASTER_SITES=	http://invisible-mirror.net/archives/${PORTNAME}/ \
-		ftp://invisible-island.net/${PORTNAME}/
+MASTER_SITES=	ftp://ftp.invisible-island.net/${PORTNAME}/current/
+DISTNAME=	${PORTNAME}-6.0-${SNAPSHOT}
 DIST_SUBDIR=	${PORTNAME}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	swills@FreeBSD.org
 COMMENT=	Library for terminal-independent, full-screen output
 
 LICENSE=	MIT
@@ -17,6 +16,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 BROKEN_sparc64=	cannot build: coredump: illegal instruction
 
+SNAPSHOT=	20171007
 GNU_CONFIGURE=	yes
 CONFIGURE_SCRIPT=../configure
 CONFIGURE_ARGS=	--datadir=${PREFIX}/share/misc --disable-overwrite \
@@ -35,20 +35,14 @@ CONFIGURE_ARGS=	--datadir=${PREFIX}/share/misc --disable-overwrite \
 
 MAKE_JOBS_UNSAFE=	yes
 
-.if exists (/usr/lib/priv/libprivate_ncursesw.so)
-NCVER=6
-REL_VER=6.0
-.else
-NCVER=6P
-REL_VER=6P.0
-.endif
-
+OPTIONS_DEFINE=	TRACE DEBUG PROFILE EXAMPLES DOCS
 TRACE_DESC=	Add trace() function to all models of ncurses
 
 CONFIGURE_ENV=	gnat_exists="no"
 
 USE_LDCONFIG=	yes
-USES=		pkgconfig shebangfix terminfo
+USES=		cpe pkgconfig shebangfix terminfo tar:tgz
+CPE_VENDOR=	gnu
 SHEBANG_FILES=	test/tracemunch
 
 WIDEC_WRKSRC=	${WRKSRC}/build.widec
@@ -61,8 +55,8 @@ CONFIGURE_WRKSRC=	${NOWIDEC_WRKSRC}
 BUILD_WRKSRC=	${NOWIDEC_WRKSRC}
 INSTALL_WRKSRC=	${NOWIDEC_WRKSRC}
 
-PLIST_SUB+=	ABI_VER=${NCVER} \
-		REL_VER=${REL_VER} \
+PLIST_SUB+=	ABI_VER=6 \
+		REL_VER=6.0 \
 		DEBUG="@comment " \
 		WIDEC_EXAMPLESDIR=${WIDEC_EXAMPLESDIR:S,${PREFIX}/,,} \
 		NOWIDEC_EXAMPLESDIR=${NOWIDEC_EXAMPLESDIR:S,${PREFIX}/,,}
@@ -101,7 +95,6 @@ post-extract:
 post-patch:
 	@${REINPLACE_CMD} -e 's,$$(INSTALL_PROG) ncurses-config,@INSTALL_SCRIPT@ ncurses-config,' ${WRKSRC}/misc/Makefile.in
 	@${REINPLACE_CMD} -e 's,/usr/include,${PREFIX}/include,g' ${WRKSRC}/misc/ncurses-config.in
-	${REINPLACE_CMD} -e '/^NCURSES_MAJOR/ s|6|${NCVER}|' ${WRKSRC}/dist.mk
 
 post-configure:
 	cd ${.CURDIR} && \
@@ -137,7 +130,7 @@ post-install:
 	${ECHO} "INPUT(libncurses.so.${NCVER} AS_NEEDED(-ltinfo))" > ${STAGEDIR}${PREFIX}/lib/libncurses.so
 	${ECHO} "INPUT(libncursesw.so.${NCVER} AS_NEEDED(-ltinfow))" > ${STAGEDIR}${PREFIX}/lib/libncursesw.so
 
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/*.so.${REL_VER}
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/*.so.6.0
 
 	${MV} ${STAGEDIR}${PREFIX}/share/misc/terminfo.db \
 		${STAGEDIR}${PREFIX}/share/misc/terminfo.db.default
