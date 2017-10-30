@@ -22,6 +22,7 @@ INSTALL_TARGET=	install-strip
 OPTIONS_DEFINE=	ASM
 OPTIONS_DEFAULT_x86_64=	ASM
 OPTIONS_DEFAULT_armv6=	ASM
+OPTIONS_DEFAULT_armv7=	ASM
 
 ASM_CONFIGURE_OFF=	--disable-asm
 ASM_DESC=	Optimized assembler routines (requires MMX on x86)
