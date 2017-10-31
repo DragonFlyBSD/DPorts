@@ -74,3 +74,37 @@ sbin/tune2fs
 %%NLS%%share/locale/uk/LC_MESSAGES/e2fsprogs.mo
 %%NLS%%share/locale/vi/LC_MESSAGES/e2fsprogs.mo
 %%NLS%%share/locale/zh_CN/LC_MESSAGES/e2fsprogs.mo
+@comment lib/libblkid.so
+@comment lib/libblkid.so.1
+@comment lib/libblkid.so.1.0
+lib/libcom_err.so
+lib/libcom_err.so.2
+lib/libcom_err.so.2.1
+lib/libe2p.so
+lib/libe2p.so.2
+lib/libe2p.so.2.3
+lib/libext2fs.so
+lib/libext2fs.so.2
+lib/libext2fs.so.2.4
+include/e2p/e2p.h
+include/ext2fs/bitops.h
+include/ext2fs/ext2_err.h
+include/ext2fs/ext2_ext_attr.h
+include/ext2fs/ext2_fs.h
+include/ext2fs/ext2_io.h
+include/ext2fs/ext2_types.h
+include/ext2fs/ext2fs.h
+include/ext2fs/ext3_extents.h
+include/ext2fs/qcow2.h
+include/ext2fs/tdb.h
+lib/libe2p.a
+lib/libext2fs.a
+libdata/pkgconfig/e2p.pc
+libdata/pkgconfig/ext2fs.pc
+include/com_err.h
+include/et/com_err.h
+libdata/pkgconfig/com_err.pc
+bin/compile_et
+share/et/et_c.awk
+share/et/et_h.awk
+man/man1/compile_et.1.gz
