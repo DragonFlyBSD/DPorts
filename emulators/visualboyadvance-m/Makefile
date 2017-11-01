@@ -3,7 +3,7 @@
 
 PORTNAME=	visualboyadvance-m
 PORTVERSION=	2.0.0b2
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	emulators
 
 MAINTAINER=	root@cooltrainer.org
@@ -35,7 +35,6 @@ DEBUGGER_DESC=	Enable the debugger
 ASMCORE_DESC=	Enable x86 ASM CPU cores (i386 only)
 ASMSCALERS_DESC=	Enable x86 ASM graphic filters (i386 only)
 
-WANT_GNOME=	yes
 DOS2UNIX_REGEX=	.*\.(c|cpp|h|ypp)
 USE_XORG=	x11 xext
 USE_GL=		gl glu
