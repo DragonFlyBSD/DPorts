@@ -2,8 +2,9 @@
 # $FreeBSD$
 
 PORTNAME=	gitea
-PORTVERSION=	1.1.4
+PORTVERSION=	1.2.2
 DISTVERSIONPREFIX=	v
+PORTREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	stb@lassitu.de
@@ -32,13 +33,31 @@ GROUPS=		git
 OPTIONS_DEFINE=	CERT PAM SQLITE
 CERT_DESC=	Automatic creation of self-signed certificates
 PAM_DESC=	Authentication using PAM
-SQLITE=		Add SQLite as database backend
 
 OPTIONS_DEFAULT=	${OPTIONS_DEFINE}
 
 CERT_VARS=	GO_TAGS+=cert
 PAM_VARS=	GO_TAGS+=pam
 SQLITE_VARS=	GO_TAGS+=sqlite
+
+.include <bsd.port.options.mk>
+
+.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1100513
+DAEMONARGS=	-S -l \$${gitea_facility} -s \$${gitea_priority} -t \$${name}
+.else
+DAEMONARGS=	-f
+.endif
+
+SUB_LIST+=	DAEMONARGS="${DAEMONARGS}"
+
+post-patch:
+	# Gitea releases don't supply the release version number; the
+	# automatic method to obtain the version number in the Gitea build
+	# system only works when sources are checked out from git.
+	# See https://github.com/go-gitea/gitea/issues/1136#issuecomment-311622745
+	${SED} -Ei .orig \
+		-e 's#^(var Version = )"[^"]+"#\1"${PORTVERSION}"#' \
+		${GO_WRKSRC}/main.go
 
 do-install:
 	${INSTALL_PROGRAM} ${GO_WRKDIR_BIN}/${PORTNAME} ${STAGEDIR}${PREFIX}/sbin
