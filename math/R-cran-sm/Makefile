@@ -10,6 +10,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Smoothing methods for nonparametric regression and density estimation
 
+BROKEN_x86_64=	Does not build
 
 USES=		cran:auto-plist,compiles
 
