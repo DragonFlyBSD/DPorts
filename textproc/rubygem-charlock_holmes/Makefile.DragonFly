@@ -1,1 +1,2 @@
 CONFIGURE_ARGS+= --with-cxxflags=-std=c++11
+LIB_DEPENDS:=	${LIB_DEPENDS:N*/libunwind}
