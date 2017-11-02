@@ -3,7 +3,7 @@
 
 PORTNAME=	zorba
 PORTVERSION=	2.7.0
-PORTREVISION=	14
+PORTREVISION=	16
 CATEGORIES=	textproc
 MASTER_SITES=	https://launchpadlibrarian.net/119058962/
 DISTNAME=	${PORTNAME}-src-${PORTVERSION}
@@ -50,12 +50,6 @@ PLIST_SUB+=	FULLVERSION=${PORTVERSION} \
 		MIDVERSION=${PORTVERSION:R} \
 		MINVERSION=${PORTVERSION:R:R}
 
-.if exists(/usr/lib/libexecinfo.so)
-LOC_EXECINFO=	/usr/lib/libexecinfo.so
-.else
-LOC_EXECINFO=	${LOCALBASE}/lib/libexecinfo.so
-.endif
-
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPHP}
@@ -91,7 +85,7 @@ BUILD_DEPENDS+=	swig2.0:devel/swig20
 .endif
 
 post-patch:
-	${REINPLACE_CMD} -e 's|%%LIBEXECINFO%%|${LOC_EXECINFO}|' \
+	${REINPLACE_CMD} \
 		-e 's|FreeBSD|${OPSYS}|g' ${WRKSRC}/CMakeLists.txt
 	${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
 		${WRKSRC}/cmake_modules/FindPHP5.cmake
@@ -103,7 +97,7 @@ post-patch:
 post-install:
 	${LN} -sf libzorba_simplestore.so.${PORTVERSION} ${STAGEDIR}${PREFIX}/lib/libzorba_simplestore.so.${PORTVERSION:R:R}
 .if ${PORT_OPTIONS:MDOCS} && !${PORT_OPTIONS:MDOXYGEN}
-	cd ${STAGEDIR}${DOCSDIR} && rmdir c/html code/html code cxx/html zorba/html
+	cd ${STAGEDIR}${DOCSDIR} && ${RM} -r c/html code/html code cxx/html zorba/html zorba/xqdoc zorba
 .endif
 
 test:	build
