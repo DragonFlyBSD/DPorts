@@ -1,3 +1,0 @@
-USES+= alias
-
-RUN_DEPENDS+= ${LOCALBASE}/lib/librtlsdr.so:comms/rtl-sdr
