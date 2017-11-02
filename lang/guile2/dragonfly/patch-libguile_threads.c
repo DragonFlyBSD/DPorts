@@ -1,6 +1,6 @@
---- libguile/threads.c.orig	2014-02-28 20:01:27 UTC
+--- libguile/threads.c.orig	2016-12-15 02:03:33.000000000 +0200
 +++ libguile/threads.c
-@@ -2260,7 +2260,7 @@ scm_ia64_ar_bsp (const void *opaque)
+@@ -2252,7 +2252,7 @@ scm_ia64_ar_bsp (const void *opaque)
    return (void *) ctx->uc_mcontext.sc_ar_bsp;
  }
  # endif /* linux */
