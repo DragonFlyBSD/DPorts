@@ -1,7 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	fail2ban
-PORTVERSION=	0.9.7
+PORTVERSION=	0.10.1
+PORTREVISION=	1
 CATEGORIES=	security python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -33,11 +34,13 @@ PORTDOCS=	README.md DEVELOP
 
 FILES=		${WRKSRC}/bin/fail2ban-client \
 		${WRKSRC}/fail2ban/client/configreader.py \
+		${WRKSRC}/fail2ban/client/fail2bancmdline.py \
+		${WRKSRC}/fail2ban/client/fail2banregex.py \
 		${WRKSRC}/man/fail2ban-client.1 \
 		${WRKSRC}/man/fail2ban-client.h2m \
 		${WRKSRC}/setup.py
 
-MAN_FILES= 	${WRKSRC}/man/fail2ban-client.1 \
+MAN_FILES=	${WRKSRC}/man/fail2ban-client.1 \
 		${WRKSRC}/man/fail2ban-client.h2m \
 		${WRKSRC}/man/fail2ban-regex.1 \
 		${WRKSRC}/man/fail2ban-server.1 \
