@@ -48,7 +48,4 @@ post-install:
 	@${LN} -s libmysqlclient.so ${STAGEDIR}${PREFIX}/lib/mysql/libmysqlclient_r.so
 	@${LN} -s libmysqlclient.so.20 ${STAGEDIR}${PREFIX}/lib/mysql/libmysqlclient_r.so.20
 
-dfly-patch:
-	${REINPLACE_CMD} -e 's/FreeBSD/DragonFly/' ${WRKSRC}/cmake/plugin.cmake
-
 .include "${MASTERDIR}/Makefile"
