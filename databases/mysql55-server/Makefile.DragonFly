@@ -1,0 +1,5 @@
+
+# shebang fix
+dfly-patch:
+	${REINPLACE_CMD} -e 's@"\(FreeBSD\)"@"\1|DragonFly"@g'  \
+		${WRKSRC}/scripts/CMakeLists.txt
