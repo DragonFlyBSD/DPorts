@@ -1,56 +1,56 @@
---- configure.orig	2016-10-18 19:20:17 UTC
+--- configure.orig	2017-11-17 14:47:06 UTC
 +++ configure
-@@ -5566,7 +5566,7 @@ fi
+@@ -5731,7 +5731,7 @@ fi
  
  
- case $uname in
--        Darwin* | *BSD*)
-+        Darwin* | *BSD* | DragonFly*)
+ case $host_os_name in
+-        darwin* | *bsd*)
++        darwin* | *bsd* | dragonfly*)
                  ARFLAGS="-rcv"
                  ;;
          *)
-@@ -6230,7 +6230,7 @@ _ACEOF
+@@ -6390,7 +6390,7 @@ _ACEOF
  # Locale data
  if test "$localedir" = "\${datarootdir}/locale"; then
- 	case "$uname" in
--		Linux | GNU | *BSD* | Darwin*)
-+		Linux | GNU | *BSD* | Darwin* | DragonFly*)
+ 	case "$host_os_name" in
+-		linux* | gnu* | *bsd* | darwin*)
++		linux* | gnu* | *bsd* | darwin* | dragonfly*)
  			CUPS_LOCALEDIR="$datarootdir/locale"
  			;;
  
-@@ -6284,7 +6284,7 @@ _ACEOF
+@@ -6444,7 +6444,7 @@ _ACEOF
  
  # Server executables...
- case "$uname" in
--	*BSD* | Darwin*)
-+	*BSD* | Darwin* | DragonFly*)
+ case "$host_os_name" in
+-	*bsd* | darwin*)
++	*bsd* | darwin* | dragonfly*)
  		# *BSD and Darwin (macOS)
  		INSTALL_SYSV=""
  		CUPS_SERVERBIN="$exec_prefix/libexec/cups"
-@@ -6345,7 +6345,7 @@ fi
+@@ -6505,7 +6505,7 @@ fi
  
  if test "$mandir" = "\${prefix}/man" -a "$prefix" = "/"; then
- 	case "$uname" in
--        	Darwin* | Linux | GNU | *BSD*)
-+        	Darwin* | Linux | GNU | *BSD* | DragonFly*)
+ 	case "$host_os_name" in
+-        	darwin* | linux* | gnu* | *bsd*)
++        	darwin* | linux* | gnu* | *bsd* | dragonfly*)
          		# Darwin, macOS, Linux, GNU HURD, and *BSD
          		mandir="/usr/share/man"
          		AMANDIR="/usr/share/man"
-@@ -6426,7 +6426,7 @@ if test x$enable_shared != xno; then
+@@ -6586,7 +6586,7 @@ if test x$enable_shared != xno; then
  			DSOXX="\$(CXX)"
  			DSOFLAGS="$DSOFLAGS -Wl,-h\`basename \$@\` -G \$(OPTIM)"
  			;;
--		Linux | GNU | *BSD*)
-+		Linux | GNU | *BSD* | DragonFly*)
+-		linux* | gnu* | *bsd*)
++		linux* | gnu* | *bsd* | dragonfly*)
  			LIBCUPS="lib$cupsbase.so.2"
  			LIBCUPSCGI="libcupscgi.so.1"
  			LIBCUPSIMAGE="libcupsimage.so.2"
-@@ -6522,7 +6522,7 @@ if test "$DSO" != ":"; then
+@@ -6682,7 +6682,7 @@ if test "$DSO" != ":"; then
  				EXPORT_LDFLAGS="-R$libdir"
  			fi
  			;;
--                *BSD*)
-+                *BSD* | DragonFly*)
+-                *bsd*)
++                *bsd* | dragonfly*)
                          # *BSD...
  			if test $exec_prefix != /usr; then
  				DSOFLAGS="-Wl,-R$libdir $DSOFLAGS"
