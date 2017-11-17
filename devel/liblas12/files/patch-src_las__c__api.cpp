@@ -1,6 +1,6 @@
---- src/las_c_api.cpp.orig	2009-10-02 17:01:59 UTC
+--- src/las_c_api.cpp.orig	2009-10-02 17:48:41 UTC
 +++ src/las_c_api.cpp
-@@ -745,7 +745,7 @@ LAS_DLL LASErrorEnum LASHeader_SetProjec
+@@ -745,7 +745,7 @@ LAS_DLL LASErrorEnum LASHeader_SetProjectId(LASHeaderH
  
      try {
          liblas::guid id;
@@ -9,7 +9,7 @@
          ((LASHeader*) hHeader)->SetProjectId(id);    
      } catch (std::exception const& e)
      {
-@@ -1542,7 +1542,7 @@ LAS_DLL LASGuidH LASGuid_CreateFromStrin
+@@ -1542,7 +1542,7 @@ LAS_DLL LASGuidH LASGuid_CreateFromString(const char* 
      VALIDATE_LAS_POINTER1(string, "LASGuid_CreateFromString", NULL);    
      liblas::guid id;
      try {
