@@ -1,0 +1,14 @@
+--- langtools/test/Makefile.intermediate	2017-07-25 10:03:38.831253000 +0200
++++ langtools/test/Makefile
+@@ -42,6 +42,11 @@
+     ARCH=i586
+   endif
+ endif
++ifeq ($(OSNAME), DragonFly)
++  PLATFORM = bsd
++  JT_PLATFORM = linux
++  ARCH = $(shell uname -m)
++endif
+ ifeq ($(OSNAME), Darwin)
+   PLATFORM = bsd
+   ARCH = $(shell uname -m)
