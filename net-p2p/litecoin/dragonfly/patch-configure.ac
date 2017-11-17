@@ -1,0 +1,12 @@
+--- configure.ac.orig	2017-07-25 03:11:44 UTC
++++ configure.ac
+@@ -393,6 +393,9 @@ case $host in
+    *freebsd*)
+      LEVELDB_TARGET_FLAGS="-DOS_FREEBSD"
+      ;;
++   *dragonfly*)
++     LEVELDB_TARGET_FLAGS="-DOS_DRAGONFLYBSD"
++     ;;
+    *openbsd*)
+      LEVELDB_TARGET_FLAGS="-DOS_OPENBSD"
+      ;;
