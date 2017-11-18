@@ -1,9 +1,14 @@
+
+# avoid ICE on base g++50, drop -O2 down to -O1
+#                  from /construction/graphics/blender/blender-2.79/intern/cycles/kernel/kernels/cpu/kernel_avx.cpp:39:
+#/construction/graphics/blender/blender-2.79/intern/cycles/kernel/../kernel/closure/bsdf_microfacet_multi.h: In function 'ccl::float3 ccl::bsdf_microfacet_multi_ggx_glass_eval_transmit(const ShaderClosure*, ccl::float3, ccl::float3, float*, ccl::uint*)':
+#/construction/graphics/blender/blender-2.79/intern/cycles/kernel/../kernel/closure/bsdf_microfacet_multi.h:522:19: internal compiler error: Segmentation fault
+# ccl_device float3 bsdf_microfacet_multi_ggx_glass_eval_transmit(const ShaderClosure *sc, const float3 I, const float3 omega_in, float *pdf, ccl_addr_space uint *lcg_state) {
+CXXFLAGS:=	${CXXFLAGS:N-O*} -O1
+
 USE_CXXSTD= gnu++11
 DPMSG=		${WRKDIR}/dports-message
 PKGMESSAGE=	${DPMSG}
-
-OPTIONS_DEFAULT+= RAYOPTIMIZATION MOD_OCEANSIM FFMPEG REDCODE CAMERATRACK
-OPTIONS_DEFAULT+= CYCLES
 
 # make sure that openmp threading is not used during build!
 MAKE_ENV+= OMP_NUM_THREADS=1
