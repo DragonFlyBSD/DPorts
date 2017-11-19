@@ -1,0 +1,11 @@
+--- CMakeLists.txt.intermediate	2017-11-19 18:08:57 UTC
++++ CMakeLists.txt
+@@ -170,6 +170,8 @@ if(HAVE_UTEMPTER)
+     target_link_libraries(${QTERMWIDGET_LIBRARY_NAME} ulog)
+ endif()
+ 
++target_link_libraries(${QTERMWIDGET_LIBRARY_NAME} util)
++
+ if (UTF8PROC_FOUND)
+     target_compile_definitions(${QTERMWIDGET_LIBRARY_NAME}
+         PRIVATE
