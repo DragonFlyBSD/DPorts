@@ -1,0 +1,11 @@
+--- configure.orig	2017-09-06 11:52:06 UTC
++++ configure
+@@ -5385,7 +5385,7 @@ fi
+ 
+ fi
+ 	    ;;
+-	FreeBSD-*)
++	DragonFly-*|FreeBSD-*)
+ 	    # This configuration from FreeBSD Ports.
+ 	    SHLIB_CFLAGS="-fPIC"
+ 	    SHLIB_LD="${CC} -shared"
