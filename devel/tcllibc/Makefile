@@ -17,9 +17,6 @@ OPTIONS_DEFINE=
 post-patch:
 	cd ${WRKSRC}/modules/json/c && ${YACC} -b json json.y
 
-dfly-patch:
-	${REINPLACE_CMD} -e 's|typedef unsigned |//|g' ${WRKSRC}/modules/sha1/sha256.h
-
 do-install:
 	${RM} ${WRKSRC}/modules/tcllibc/license.terms
 	${MKDIR} ${STAGEDIR}${PREFIX}/lib/tcllib
