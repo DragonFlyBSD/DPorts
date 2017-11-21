@@ -91,12 +91,12 @@ PLIST_SUB+=	ASTK_CLIENT=""  ASTKDIR=${ASTKDIR}
 .else
 PLIST_SUB+=	ASTK_CLIENT="@comment " ASTKDIR=""
 .endif
-.if !defined(WITHOUT_EFICAS)
-RUN_DEPENDS+=	fr-eficas>0:french/eficas
-PLIST_SUB+=	EFICAS=""
-.else
+#.if !defined(WITHOUT_EFICAS)
+#RUN_DEPENDS+=	fr-eficas>0:french/eficas
+#PLIST_SUB+=	EFICAS=""
+#.else
 PLIST_SUB+=	EFICAS="@comment "
-.endif
+#.endif
 .if !defined(WITHOUT_GMSH)
 RUN_DEPENDS+=	${LOCALBASE}/bin/gmsh:cad/gmsh
 PLIST_SUB+=	GMSH=""
