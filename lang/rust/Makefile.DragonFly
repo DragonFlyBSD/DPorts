@@ -6,4 +6,7 @@ MASTER_SITES+=	https://leaf.dragonflybsd.org/~mneumann/rust/:rust_bootstrap \
 X_PY_ENV+="LD_LIBRARY_PATH=${WRKSRC}/build/${RUST_TARGET}/stage0/lib"
 X_PY_ENV+="RUST_BACKTRACE=1"
 
+# A pthread bug has been fixed in 5.0.2
+.if ${DFLYVERSION} < 500002
 MAKE_JOBS_NUMBER=1
+.endif
