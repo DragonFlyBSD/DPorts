@@ -42,8 +42,8 @@ BUILD_DEPENDS+=	astk-serveur>0:cad/astk-serveur	\
 		${PYNUMPY}
 LIB_DEPENDS+=	libhdf5-18.so:science/hdf5-18			\
 		libmetis.so.2:math/metis-edf			\
-		libomp.so:devel/openmp				\
 		libmed.so:french/med
+#		libomp.so:devel/openmp
 #		libAsterInterface.so:science/mfront
 #		libAsterInterface.so:science/tfel
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}gnuplot>0:math/py-gnuplot\
