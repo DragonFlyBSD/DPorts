@@ -1,0 +1,2 @@
+USES+=		ssl
+CFLAGS+=	-I${OPENSSLINC}
