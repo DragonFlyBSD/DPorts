@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD$
+# $FreeBSD: head/x11-servers/xorg-server/files/pkg-deinstall.in 454856 2017-11-24 23:17:50Z dbaio $
 #
 
 PREFIX="${PKG_PREFIX-/usr/local}"
