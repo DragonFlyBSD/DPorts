@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD$
+# $FreeBSD: head/www/kannel/files/kannel_wapbox.in 454856 2017-11-24 23:17:50Z dbaio $
 #
 # PROVIDE: wapbox
 # REQUIRE: LOGIN bearerbox
