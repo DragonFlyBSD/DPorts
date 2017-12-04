@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD$
+# $FreeBSD: head/games/pachi/files/pkg-deinstall.in 454856 2017-11-24 23:17:50Z dbaio $
 
 [ "$2" != "POST-DEINSTALL" ] && exit 0
 
