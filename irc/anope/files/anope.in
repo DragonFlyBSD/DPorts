@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD$
+# $FreeBSD: head/irc/anope/files/anope.in 454856 2017-11-24 23:17:50Z dbaio $
 #
 
 # PROVIDE: anope
