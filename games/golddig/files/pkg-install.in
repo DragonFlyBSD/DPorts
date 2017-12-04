@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD$
+# $FreeBSD: head/games/golddig/files/pkg-install.in 454856 2017-11-24 23:17:50Z dbaio $
 
 [ "$2" != "POST-INSTALL" ] && exit 0
 [ -e "%%SCOREFILE%%" ] && exit 0
