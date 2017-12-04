@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD$
+# $FreeBSD: head/games/holotz-castle/files/holotz-castle-solutions.in 454856 2017-11-24 23:17:50Z dbaio $
 #
 
 echo ""
