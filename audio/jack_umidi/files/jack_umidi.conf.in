@@ -1,5 +1,5 @@
 #
-# $FreeBSD$
+# $FreeBSD: head/audio/jack_umidi/files/jack_umidi.conf.in 454856 2017-11-24 23:17:50Z dbaio $
 #
 # Script to automatically start jack_umidi when a device is plugged in.
 # This will attempt to run jack_umidi as whatever user jackd is running as.
