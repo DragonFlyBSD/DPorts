@@ -1,12 +1,15 @@
-# $FreeBSD: head/sysutils/zrepl/files/zrepl.yml.sample 451049 2017-10-01 15:15:44Z woodsb02 $
+# $FreeBSD: head/sysutils/zrepl/files/zrepl.yml.sample 454572 2017-11-20 15:40:31Z woodsb02 $
 #
 # zrepl main configuration file.
 # For documentation, refer to https://zrepl.github.io/
 #
 global:
   logging:
-    syslog:
-      enable: true
-      format: logfmt
+    - outlet: "stdout"
+      level:  "error"
+      format: "human"
+    - outlet: "syslog"
+      level:  "info"
+      format: "logfmt"
 
 # Add "jobs:" section(s) here for your specific use cases.
