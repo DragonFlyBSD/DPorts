@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD$
+# $FreeBSD: head/sysutils/ipad_charge/files/ipad_charge.in 454856 2017-11-24 23:17:50Z dbaio $
 #
 # PROVIDE: ipad_charge
 # REQUIRE: DAEMON
