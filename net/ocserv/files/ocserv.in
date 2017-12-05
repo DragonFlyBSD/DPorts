@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD$
+# $FreeBSD: head/net/ocserv/files/ocserv.in 454856 2017-11-24 23:17:50Z dbaio $
 #
 # PROVIDE: ocserv
 # REQUIRE: DAEMON
