@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD$
+# $FreeBSD: head/www/zerowait-httpd/files/pkg-deinstall.in 454856 2017-11-24 23:17:50Z dbaio $
 #
 
 PATH=/bin:/usr/bin:/usr/sbin
