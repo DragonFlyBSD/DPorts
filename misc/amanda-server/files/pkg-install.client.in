@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD$
+# $FreeBSD: head/misc/amanda-server/files/pkg-install.client.in 454856 2017-11-24 23:17:50Z dbaio $
 
 case "$2" in
 POST-INSTALL)
