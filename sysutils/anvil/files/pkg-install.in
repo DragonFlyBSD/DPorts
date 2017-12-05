@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD$
+# $FreeBSD: head/sysutils/anvil/files/pkg-install.in 454856 2017-11-24 23:17:50Z dbaio $
 
 if [ "$2" == "POST-INSTALL" ]; then
 	/usr/sbin/chown -R anvil:anvil /var/db/anvil
