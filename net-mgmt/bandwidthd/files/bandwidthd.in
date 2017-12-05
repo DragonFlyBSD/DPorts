@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD$
+# $FreeBSD: head/net-mgmt/bandwidthd/files/bandwidthd.in 454856 2017-11-24 23:17:50Z dbaio $
 #
 # PROVIDE: bandwidthd
 # REQUIRE: NETWORKING SERVERS
