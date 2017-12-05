@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD$
+# $FreeBSD: head/sysutils/pacman/files/pkg-deinstall.in 454856 2017-11-24 23:17:50Z dbaio $
 #
 
 case $2 in
