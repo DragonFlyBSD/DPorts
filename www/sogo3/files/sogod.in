@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD$
+# $FreeBSD: head/www/sogo3/files/sogod.in 454856 2017-11-24 23:17:50Z dbaio $
 #
 # PROVIDE: sogod
 # REQUIRE: NETWORKING
