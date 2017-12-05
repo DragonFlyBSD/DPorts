@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD$
+# $FreeBSD: head/print/p910nd/files/p910nd.in 454856 2017-11-24 23:17:50Z dbaio $
 # 
 # PROVIDE: p910nd
 # REQUIRE: DAEMON
