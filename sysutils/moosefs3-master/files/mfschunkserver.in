@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD$
+# $FreeBSD: head/sysutils/moosefs3-master/files/mfschunkserver.in 454856 2017-11-24 23:17:50Z dbaio $
 
 # PROVIDE: mfschunkserver
 # REQUIRE: DAEMON
