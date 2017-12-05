@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD$
+# $FreeBSD: head/textproc/refdb/files/refdbd.in 454856 2017-11-24 23:17:50Z dbaio $
 #
 # O. Hartmann, Berlin, 2014
 #
