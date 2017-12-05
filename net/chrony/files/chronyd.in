@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net/chrony/files/chronyd.in 350635 2014-04-08 17:06:58Z danfe $
+# $FreeBSD: head/net/chrony/files/chronyd.in 454465 2017-11-18 22:41:34Z rodrigo $
 #
 # PROVIDE: chronyd
 # REQUIRE: DAEMON
@@ -11,6 +11,7 @@
 name=chronyd
 rcvar=chronyd_enable
 command=%%PREFIX%%/sbin/${name}
+rc_flags="${chronyd_flags}"
 
 load_rc_config ${name}
 
