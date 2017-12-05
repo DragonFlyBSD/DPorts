@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD$
+# $FreeBSD: head/multimedia/mjpg-streamer/files/mjpg_streamer.in 454856 2017-11-24 23:17:50Z dbaio $
 #
 # PROVIDE: mjpg_streamer
 # REQUIRE: LOGIN
