@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD$
+# $FreeBSD: head/x11/gdm/files/gdm.in 454856 2017-11-24 23:17:50Z dbaio $
 #    $MCom: ports/trunk/x11/gdm3/files/gdm.in 18610 2013-06-30 16:33:05Z marcus $
 
 # PROVIDE: gdm
