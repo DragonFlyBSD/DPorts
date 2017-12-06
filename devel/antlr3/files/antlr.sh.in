@@ -1,5 +1,5 @@
 #! /bin/sh
 #
-# $FreeBSD$
+# $FreeBSD: head/devel/antlr3/files/antlr.sh.in 454856 2017-11-24 23:17:50Z dbaio $
 
 JAVA_VERSION="%%JAVA_VERSION%%" "%%LOCALBASE%%/bin/java" -classpath "%%JAVAJARDIR%%/%%INSTALL_JAR%%" org.antlr.Tool "$@"
