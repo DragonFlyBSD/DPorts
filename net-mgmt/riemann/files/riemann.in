@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD$
+# $FreeBSD: head/net-mgmt/riemann/files/riemann.in 454856 2017-11-24 23:17:50Z dbaio $
 #
 # PROVIDE: riemann
 # REQUIRE: LOGIN NETWORKING SERVERS
