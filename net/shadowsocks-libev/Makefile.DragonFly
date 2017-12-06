@@ -1,2 +1,0 @@
-dfly-patch:
-	${REINPLACE_CMD} -e "s|-Werror ||" ${WRKSRC}/src/Makefile.in
