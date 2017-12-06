@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD$
+# $FreeBSD: head/devel/maven31/files/mvn.sh.in 454856 2017-11-24 23:17:50Z dbaio $
 
 if [ -f /etc/mavenrc ] ; then
 	. /etc/mavenrc
