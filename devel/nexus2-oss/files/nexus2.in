@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD$
+# $FreeBSD: head/devel/nexus2-oss/files/nexus2.in 454856 2017-11-24 23:17:50Z dbaio $
 #
 # PROVIDE: %%NEXUS_RC%%
 # REQUIRE: LOGIN FILESYSTEMS
