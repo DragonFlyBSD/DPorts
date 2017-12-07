@@ -1,0 +1,3 @@
+dfly-patch:
+	${REINPLACE_CMD} -e 's|__FreeBSD__|__DragonFly__|' \
+		${WRKSRC}/src/Akai.h
