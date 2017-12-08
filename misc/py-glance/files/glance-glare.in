@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD$
+# $FreeBSD: head/misc/py-glance/files/glance-glare.in 454856 2017-11-24 23:17:50Z dbaio $
 #
 
 # PROVIDE: glance_glare
