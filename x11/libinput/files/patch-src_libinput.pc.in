@@ -1,0 +1,9 @@
+--- src/libinput.pc.in.orig	2015-01-19 05:00:52 UTC
++++ src/libinput.pc.in
+@@ -10,5 +10,5 @@ Description: Input device library
+ Version: @LIBINPUT_VERSION@
+ Cflags: -I${includedir}
+ Libs: -L${libdir} -linput
+-Libs.private: -lm -lrt
++Libs.private: @LIBS@
+ Requires.private: libudev

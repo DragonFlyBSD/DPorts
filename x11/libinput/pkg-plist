@@ -1,0 +1,10 @@
+bin/libinput-debug-events
+%%EVENT_GUI%%bin/libinput-event-gui
+bin/libinput-list-devices
+include/libinput.h
+lib/libinput.so
+lib/libinput.so.10
+lib/libinput.so.10.11.2
+libdata/pkgconfig/libinput.pc
+man/man1/libinput-debug-events.1.gz
+man/man1/libinput-list-devices.1.gz
