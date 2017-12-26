@@ -45,9 +45,6 @@ USE_RUBY=		yes
 RUBY_NO_BUILD_DEPENDS=	yes
 RUBY_NO_RUN_DEPENDS=	yes
 
-NOT_FOR_ARCHS=	ia64
-NOT_FOR_ARCHS_REASON_ia64=	does not build
-
 OPTIONS_DEFINE=		CAPIDOCS DEBUG DOCS EXAMPLES GMP RDOC
 OPTIONS_DEFAULT=	RDOC LIBEDIT
 OPTIONS_SINGLE=		EDIT
@@ -87,18 +84,18 @@ _SUF2=	,${PORTEPOCH}
 .endif
 
 .if ${OPSYS} == "FreeBSD"
-.if exists(/usr/sbin/dtrace) && (${OSVERSION} > 1100032) && (${ARCH} == "x86_64" || ${ARCH} == "i386")
+.if exists(/usr/sbin/dtrace) && (${OSVERSION} > 1100032) && (${ARCH} == x86_64 || ${ARCH} == i386)
 CONFIGURE_ARGS+=--enable-dtrace
 .else
 CONFIGURE_ARGS+=--disable-dtrace
 .endif
 .endif
 
-.if (${ARCH} == "powerpc64" || ${ARCH} == "powerpc")
+.if (${ARCH} == powerpc || ${ARCH} == powerpc64)
 USE_GCC=	yes
 .endif
 
-.if ${ARCH} == "armv6" || ${ARCH} == "armv6hf"
+.if ${ARCH} == armv6 || ${ARCH} == armv7
 CONFIGURE_ARGS+=--with-setjmp-type=_setjmp
 CONFIGURE_ENV+=	ac_cv_func__setjmp=yes
 .endif
