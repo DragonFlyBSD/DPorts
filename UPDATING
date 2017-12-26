@@ -5,6 +5,136 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20171223:
+  AFFECTS: users of dns/dnscrypt-proxy
+  AUTHOR: egypcio@googlemail.com
+
+  The 1.9.5_3 update of dns/dnscrypt-proxy replaces the default resolver used
+  by dnscrypt-proxy (cisco/OpenDNS) by a random one that does not log entries
+  and supports dnssec.
+
+20171223:
+  AFFECTS: users of samba44
+  AUTHOR: antoine@FreeBSD.org
+
+  The default version of samba has been switched from 4.4 to 4.6.
+  Upgrade instructions:
+
+  For package users having samba44 installed indirectly (as a dependency):
+    # pkg upgrade
+
+  For package users having samba44 installed directly (leaf port):
+    # pkg upgrade
+    # pkg install samba46
+
+  For ports users:
+    If you want to keep samba44, add DEFAULT_VERSIONS+= samba=4.4 to make.conf
+
+    If you want to upgrade to samba46, remove samba44:
+    # pkg delete -f samba44
+
+    Portmaster users:
+    # portmaster net/samba46
+    # portmaster -a
+
+    Portupgrade users:
+    # portinstall net/samba46
+    # portupgrade -a
+
+20171218:
+  AFFECTS: users of devel/gogs
+  AUTHOR: dg@syrec.org
+
+  Gogs user has been changed to "git" and configuration files are now
+  located in /usr/local/etc/gogs. Users should update ownership of the
+  existing Gogs directories with
+
+  # chown -R git:git /var/db/gogs
+  # chown -R git:git /var/log/gogs
+
+  and either move or merge the contents of /var/db/gogs/home/.ssh with
+  /usr/local/git/.ssh.  After migration, /var/db/gogs/home can be removed,
+  and both the user "gogs" and the group "gogs" should be deleted:
+
+  # rm -rf /var/db/gogs/home
+  # pw userdel gogs
+  # pw groupdel gogs
+
+20171215:
+  AFFECTS: users of finance/gnucash
+  AUTHOR: madpilot@FreeBSD.org
+
+  The gnucash port has been converted too use flavors, the GUILE1
+  and GUILE2 options have been converted to flavors so that two
+  separate packages can be provided.
+
+  Since the next major release of gnucash will drop guile1 support,
+  the default flavor package is compiled against guile2, switching
+  the previous default.
+
+  Users who intend to stay on the guile1 version should deinstall
+  the default gnucash package and install the gnucash-guile1 package.
+
+20171214:
+  AFFECTS: all ports users
+  AUTHOR: adamw@FreeBSD.org
+
+  Support for some deprecated variables is going to be removed soon. If
+  you use any of the following constructs (usually in /etc/make.conf),
+  you must switch to the new incantations:
+
+               OLD                                 NEW
+  -------------------------------    ------------------------------
+  WITH_[...]                         OPTIONS_SET= [...]
+  WITHOUT_[...]                      OPTIONS_UNSET= [...]
+  WITHOUT_NLS                        OPTIONS_UNSET= NLS
+  NOPORTDOCS                         OPTIONS_UNSET= DOCS
+  NOPORTEXAMPLES                     OPTIONS_UNSET= EXAMPLES
+  WITH_BDB_VER=[...]                 DEFAULT_VERSIONS+= bdb=[...]
+  OVERRIDE_LINUX_BASE_PORT=[...]     DEFAULT_VERSIONS+= linux=[...]
+  WITH_OPENSSL_BASE                  DEFAULT_VERSIONS+= ssl=base
+  WITH_OPENSSL_PORT                  DEFAULT_VERSIONS+= ssl=port
+
+20171205:
+  AFFECTS: users of dns/powerdns
+  AUTHOR: krion@FreeBSD.org
+
+  Recursor passthrough removal: This will impact many installations.
+  Previously, the PowerDNS Authoritative Server contained a facility
+  for sending recursion desired queries to a resolving backend,
+  possibly after first consulting its local cache. This feature
+  (‘recursor=’) was frequently confusing and also delivered
+  inconsistent results, for example when a query ended up referring
+  to a CNAME that was outside of the Authoritative Server’s
+  knowledge.
+
+20171203:
+  AFFECTS: users of sysutils/dsbmd
+  AUTHOR: mk@freeshell.de
+
+  Due to new configuration variables and new features, users of dsbmd
+  version 0.4.1 and earlier should consider recreating their dsbmd.conf from
+  the new dsbmd.conf.sample.
+
+20171130:
+  AFFECTS: all ports users
+  AUTHOR: adamw@FreeBSD.org
+
+  The ports tree has gained "flavors," which are a way to produce multiple
+  variations of a port. Some intended examples of this are language
+  modules being produced for multiple language versions, and lite/nox11 packages,
+  without needing separate ports for each variation. Python ports have already
+  been flavored (see the below entry). Flavor support must be added to
+  individual ports.
+
+  Flavors are already supported by make, pkg, poudriere, and synth; see the
+  manpages for those tools for usage instructions. Portmaster and portupgrade
+  don't support flavors yet, but community work on those tools is in progress.
+
+  Some bumps and breakages are inevitable for a major change such as this.
+  Please report breakages and monitor the ports@ list for solutions as they
+  become available.
+
 20171130:
   AFFECTS: */py*
   AUTHOR: mat@FreeBSD.org
@@ -1234,65 +1364,4 @@ you update your ports collection, before attempting any port upgrades.
   respectively.  Note that for the new v2.4 release, the
   openvpn-polarssl port has been renamed to openvpn-mbedtls to match the
   upstream library's new name.
-
-20161218:
-  AFFECTS: users of www/nghttp2
-  AUTHOR: sunpoet@FreeBSD.org
-
-  nghttp2 has been split into 2 ports: www/libnghttp2 for core library and
-  www/nghttp2 for the rest. Please uninstall nghttp2 before you update
-  this port.
-
-20161216:
-  AFFECTS: mail/thunderbird, www/seamonkey
-  AUTHOR: gecko@FreeBSD.org
-
-  ENIGMAIL is no longer provided as part of the ports after upstream
-  dropped binary components in 1.9. Go to Tools -> Add-ons Manager
-  then type "enigmail" in the search box to install.
-
-20161213:
-  AFFECTS: users of devel/skalibs, lang/execline, sysutils/s6
-  AUTHOR: Colin Booth <colin-ports@heliocat.net>
-
-  skalibs has undergone a major version bump and compatibility is not
-  guaranteed for software with a runtime dependency on
-  libskarnet.so.2.3.9.0. This will not affect lang/execline or
-  sysutils/s6 as those are statically linked against libskarnet.a.
-
-  execline has undergone a major version bump and compatibility is not
-  guaranteed for software with a runtime dependency on
-  libexecline.so.2.1.4.5. This will not affect sysutils/s6 as all s6
-  programs are statically linked against libexecline.a.
-
-  s6 has undergone a major version bump and compatibility is not
-  guaranteed for software with a runtime dependency on
-  libs6.so.2.2.4.3. Additionally, s6-applyuidgid and s6-setuidgid
-  have moved from $PREFIX/sbin to $PREFIX/bin. Any scripts calling
-  those utilities that are not relying on $PATH resolution to find
-  them will need to be rewritten.
-
-20161207:
-  AFFECTS: users of www/node
-  AUTHOR: bradleythughes@fastmail.fm
-
-  The www/node port has been updated to node.js v7.2.0, the latest
-  upstream release. A new port, www/node6, has been created for the
-  v6.x LTS branch. Users wanting to stay on v6.x can replace www/node
-  with www/node6 with one of the following commands:
-
-  # pkg set -o www/node:www/node6
-    or
-  # portmaster -o www/node6 www/node
-    or
-  # portupgrade -o www/node6 www/node
-
-20161202:
-  AFFECTS: Users of textproc/p5-Search-Elasticsearch
-  AUTHOR: tj@FreeBSD.org
-
-  As of the 5.01 release of ths package, the client libraries for older
-  versions of Elasticsearch have started to be shipped seperately.  If you are
-  using this library to access a none 5.X server you will need to install one of
-  the textproc/p5-Search-Elasticsearch-Client-* ports.
 

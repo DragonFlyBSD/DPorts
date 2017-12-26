@@ -103,7 +103,6 @@ graphics/solang||2013-02-14|Has expired: Broken for more than 6 months
 math/octave-devel||2013-02-14|Has expired: Broken for more than 6 months
 net/spnetkit||2013-02-14|Has expired: Broken for more than 6 months
 devel/py-flakes|devel/py-pyflakes|2013-02-18|Renamed to correct upstream name
-net/samba4-devel|net/samba4|2013-02-18|Renamed to reflect maturity of upstream version
 net/libnet-devel|net/libnet|2013-02-18|Renamed to stable branch
 x11-fm/tkdesk||2013-02-19|Obsolete and unmaintained, doesn't run
 textproc/libmspub|print/libmspub|2013-02-21|Duplicate of print/libmspub
@@ -443,7 +442,6 @@ games/rtcw|games/linux-rtcw|2013-06-18|Renamed (Linux binary port)
 multimedia/p5-Video-Info||2013-06-19|Has expired: Broken for more than 6 months
 net-p2p/p5-pdonkey||2013-06-19|Removed: depends on expired multimedia/p5-Video-Info
 lang/boo||2013-06-19|Has expired: Broken for more than 6 months
-math/petsc-mpich||2013-06-19|Has expired: Broken for more than 6 months
 databases/py-MySQLdb41||2013-06-19|Depends on databases/mysql41-client, which was removed
 databases/py-MySQLdb50||2013-06-19|Depends on databases/mysql50-client, which was removed
 devel/bugzilla|devel/bugzilla40|2013-06-20|Renamed
@@ -2560,7 +2558,6 @@ audio/liquidsoap||2014-09-01|Not staged
 benchmarks/spec-sfs||2014-09-01|Not staged
 biology/blast||2014-09-01|Not staged
 biology/embassy||2014-09-01|Not staged
-biology/pymol||2014-09-01|Not staged
 cad/scv||2014-09-01|Not staged
 cad/systemc||2014-09-01|Not staged
 chinese/cmexfonts||2014-09-01|Not staged
@@ -2733,7 +2730,6 @@ math/jsmath-fonts-sprite||2014-09-01|Not staged
 math/jsmath||2014-09-01|Not staged
 math/kash3||2014-09-01|Not staged
 math/matrix||2014-09-01|Not staged
-math/petsc||2014-09-01|Not staged
 math/sdpa-gmp||2014-09-01|Not staged
 math/sedumi||2014-09-01|Not staged
 math/unixstat||2014-09-01|Not staged
@@ -5731,12 +5727,12 @@ www/linux-seamonkey||2017-11-22|Has expired: Use native www/seamonkey instead
 graphics/linux-adobesvg||2017-11-22|Has expired: not supported by linux-firefox 52 or later
 sysutils/qjail2||2017-11-26|Has expired: Only for FreeBSD 8 and 9, use sysutils/qjail[4] instead
 www/newsbeuter|www/newsboat|2017-11-27|Port was renamed
-devel/buildbot|devel/py-buildbot|2017-11-29|Rename to comply with PyPI scheme.
-devel/buildbot-console-view|devel/py-buildbot-console-view|2017-11-29|Rename to comply with PyPI scheme.
-devel/buildbot-pkg|devel/py-buildbot-pkg|2017-11-29|Rename to comply with PyPI scheme.
-devel/buildbot-waterfall-view|devel/py-buildbot-waterfall-view|2017-11-29|Rename to comply with PyPI scheme.
-devel/buildbot-worker|devel/py-buildbot-worker|2017-11-29|Rename to comply with PyPI scheme.
-devel/buildbot-www|devel/py-buildbot-www|2017-11-29|Rename to comply with PyPI scheme.
+devel/buildbot|devel/py-buildbot|2017-11-29|Rename to comply with PyPI scheme
+devel/buildbot-console-view|devel/py-buildbot-console-view|2017-11-29|Rename to comply with PyPI scheme
+devel/buildbot-pkg|devel/py-buildbot-pkg|2017-11-29|Rename to comply with PyPI scheme
+devel/buildbot-waterfall-view|devel/py-buildbot-waterfall-view|2017-11-29|Rename to comply with PyPI scheme
+devel/buildbot-worker|devel/py-buildbot-worker|2017-11-29|Rename to comply with PyPI scheme
+devel/buildbot-www|devel/py-buildbot-www|2017-11-29|Rename to comply with PyPI scheme
 emulators/ppsspp-devel|emulators/ppsspp|2017-11-29|Out of date: use emulators/ppsspp for now
 audio/shairport|audio/shairport-sync|2017-11-29|Has expired: Officially unmaintained upstream. Use audio/shairport-sync instead
 accessibility/py3-speech-dispatcher|accessibility/py-speech-dispatcher@py36|2017-11-30|Moved to a flavored, generic, version
@@ -5890,4 +5886,26 @@ security/webshag||2017-12-01|Has expired: Abandoned
 www/p5-Yahoo-Lifestyle||2017-12-01|Has expired: This service has been shut down
 games/linux-rtcw|games/iortcw|2017-12-01|Has expired: Use the native and open source games/iortcw instead
 java/bootstrap-openjdk|java/bootstrap-openjdk6|2017-12-01|Has expired: superseded by java/bootstrap-openjdk[68]
-lang/gcc46|lang/gcc6|2017-12-01|Has expired: Unsupported by upstream. Use GCC 6 or newer instead.
+lang/gcc46|lang/gcc6|2017-12-01|Has expired: Unsupported by upstream. Use GCC 6 or newer instead
+security/krb5-113|security/krb5-114|2017-12-03|Has expired: EOL twelve months after release of krb5-1.15
+net/bird6|net/bird@ipv6|2017-12-06|Moved to a flavored version
+devel/kore-notls|devel/kore@notls|2017-12-06|Moved to a flavored version
+devel/llvm-cheri128|devel/llvm-cheri|2017-12-07|A single cheri compiler can now target 128-bit and 256-bit capabilities
+audio/cd-console||2017-12-13|Has expired: No public distfiles
+textproc/pecl-cld||2017-12-13|Has expired: Depends on expired devel/cld
+textproc/p5-Lingua-Identify-CLD||2017-12-13|Has expired: Depends on expired devel/cld
+devel/cld||2017-12-13|Has expired: Unfetchable for more than six months (google code has gone away)
+devel/py-ode|devel/py-PyODE|2017-12-14|Rename to reflect official Python modules naming scheme
+net-im/pork||2017-12-16|Removed, AIM shut down on 2017-12-15
+security/aimsniff||2017-12-16|Removed, AIM shut down on 2017-12-15
+net-im/bsflite||2017-12-18|Removed, AIM shut down on 2017-12-15
+audio/last.fm||2017-12-18|Removed, Last.fm Radio shutdown in 2014-03
+net-im/p5-Net-AIM||2017-12-19|Removed, AIM shut down on 2017-12-15
+devel/swig13|devel/swig30|2017-12-20|swig 1.3 is not maintained, use swig 3.0
+devel/swig20|devel/swig30|2017-12-20|swig 2.0 is not maintained, use swig 3.0
+devel/android-tools-adb-devel|devel/android-tools-adb|2017-12-20|Out of date: use devel/android-tools-adb for now
+devel/android-tools-fastboot-devel|devel/android-tools-fastboot|2017-12-20|Out of date: use devel/android-tools-fastboot for now
+math/petsc|science/PETSc|2017-12-20|Recreated after it has been deleted in r366959 on 2014-09-01
+math/petsc-mpich|science/PETSc|2017-12-20|Recreated after it has been deleted in r321243 on 2013-06-19 (it was a slave port)
+textproc/py-elasticsearch-py|textproc/py-elasticsearch|2017-12-21|Rename to match PyPI naming
+japanese/egg-canna||2017-12-25|Has expired: Requires Emacs versions before 23
