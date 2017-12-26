@@ -14,7 +14,7 @@
 MESAVERSION=	${MESABASEVERSION}${MESASUBVERSION:C/^(.)/.\1/}
 MESADISTVERSION=${MESABASEVERSION}${MESASUBVERSION:C/^(.)/-\1/}
 
-MESABASEVERSION=	17.2.4
+MESABASEVERSION=	17.3.1
 # if there is a subversion, don't include the '-' between 7.11-rc2.
 MESASUBVERSION=
 
@@ -42,7 +42,7 @@ LIB_DEPENDS+=	libelf.so:devel/libelf
 .endif
 
 USES+=		compiler:c++11-lib bison gettext-tools gmake libtool \
-		localbase pathfix pkgconfig python:2,build shebangfix tar:xz
+		localbase pathfix pkgconfig python:2.7,build shebangfix tar:xz
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 
@@ -55,7 +55,7 @@ python_OLD_CMD=	/usr/bin/env[[:space:]]python2 /usr/bin/python2 /bin/env[[:space
 SHEBANG_FILES=	src/gallium/*/*/*.py src/gallium/tools/trace/*.py \
 		src/gallium/drivers/svga/svgadump/svga_dump.py \
 		src/mapi/glapi/gen/*.py src/mapi/mapi_abi.py \
-		src/mesa/drivers/dri/common/xmlpool/gen_xmlpool.py \
+		src/util/xmlpool/gen_xmlpool.py \
 		src/mesa/main/get_*.py src/util/format_srgb.py \
 		src/amd/*/*.py src/intel/genxml/gen_pack_header.py
 
@@ -72,7 +72,7 @@ INSTALL_TARGET=	install-strip
 .include <bsd.port.pre.mk>
 
 # need LLVM for libEGL wherever possible, but mixing GCC and LLVM breaks Gallium
-MESA_LLVM_VER?=	40
+MESA_LLVM_VER?=	50
 
 .if "${MESA_LLVM_VER}" != ""
 BUILD_DEPENDS+=	llvm${MESA_LLVM_VER}>=3.9.0_4:devel/llvm${MESA_LLVM_VER}
