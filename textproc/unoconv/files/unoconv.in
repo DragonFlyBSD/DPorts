@@ -1,7 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/textproc/unoconv/files/unoconv.in 336717 2013-12-17 11:46:29Z nemysis $
+# $FreeBSD: head/textproc/unoconv/files/unoconv.in 456188 2017-12-13 02:16:28Z swills $
 #
 
-cd "%%DATADIR%%"
-exec ./unoconv "$@"
+exec %%DATADIR%%/unoconv "$@"
