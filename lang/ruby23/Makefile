@@ -90,18 +90,18 @@ _SUF2=	,${PORTEPOCH}
 .endif
 
 .if ${OPSYS} == "FreeBSD"
-.if exists(/usr/sbin/dtrace) && (${OSVERSION} > 1100032) && (${ARCH} == "x86_64" || ${ARCH} == "i386")
+.if exists(/usr/sbin/dtrace) && (${OSVERSION} > 1100032) && (${ARCH} == x86_64 || ${ARCH} == i386)
 CONFIGURE_ARGS+=--enable-dtrace
 .else
 CONFIGURE_ARGS+=--disable-dtrace
 .endif
 .endif
 
-.if ${ARCH} == "powerpc64"
+.if ${ARCH} == powerpc64
 USE_GCC=	yes
 .endif
 
-.if ${ARCH} == "armv6" || ${ARCH} == "armv6hf"
+.if ${ARCH} == armv6 || ${ARCH} == armv7
 CONFIGURE_ARGS+=--with-setjmp-type=_setjmp
 CONFIGURE_ENV+=	ac_cv_func__setjmp=yes
 .endif
