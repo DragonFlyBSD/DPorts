@@ -1,9 +1,9 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net/nss-pam-ldapd/files/nslcd.in 432185 2017-01-23 02:20:50Z zi $
+# $FreeBSD: head/net/nss-pam-ldapd/files/nslcd.in 456718 2017-12-19 14:40:35Z zi $
 #
 # PROVIDE: nslcd
-# REQUIRE: NETWORKING ldconfig resolv kstart
+# REQUIRE: NETWORKING slapd ldconfig resolv kstart
 # BEFORE: syslogd
 # KEYWORD: shutdown
 #
