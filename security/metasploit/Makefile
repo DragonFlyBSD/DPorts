@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	metasploit
-PORTVERSION=	4.16.21
+PORTVERSION=	4.16.26
 CATEGORIES=	security
 
 MAINTAINER=	tanawts@gmail.com
@@ -26,8 +26,8 @@ RUN_DEPENDS=	nmap:security/nmap \
 		rubygem-metasploit-credential>=0:security/rubygem-metasploit-credential \
 		rubygem-metasploit_data_models>=0:security/rubygem-metasploit_data_models \
 		rubygem-metasploit-model>=0:security/rubygem-metasploit-model \
-		rubygem-metasploit-payloads>=1.3.18:security/rubygem-metasploit-payloads \
-		rubygem-metasploit_payloads-mettle>=0.2.8:security/rubygem-metasploit_payloads-mettle \
+		rubygem-metasploit-payloads>=1.3.23:security/rubygem-metasploit-payloads \
+		rubygem-metasploit_payloads-mettle>=0.3.3:security/rubygem-metasploit_payloads-mettle \
 		rubygem-msgpack1>=0:devel/rubygem-msgpack1 \
 		rubygem-network_interface>=0:net/rubygem-network_interface \
 		rubygem-rubyntlm>=0:net/rubygem-rubyntlm \
@@ -86,9 +86,8 @@ NO_ARCH=	yes
 NO_ARCH_IGNORE=	template_x64_bsd.bin template_x86_bsd.bin CVE-2013-2171.bin
 STRIP=
 
-USES=		python shebangfix
+USES=		python:env shebangfix
 USE_RUBY=	yes
-PYTHON_NO_DEPENDS=	yes
 SHEBANG_FILES=	data/exploits/CVE-2017-7494/build.sh \
 		data/exploits/CVE-2017-7494/install-deps.sh \
 		external/source/shellcode/windows/build.sh \
