@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/security/hitch/files/hitch.in 405603 2016-01-09 03:23:01Z zi $
+# $FreeBSD: head/security/hitch/files/hitch.in 455660 2017-12-06 16:42:14Z feld $
 #
 
 # PROVIDE: hitch
@@ -33,6 +33,7 @@ load_rc_config $name
 
 command="%%PREFIX%%/sbin/hitch"
 command_args="--daemon -u nobody -g nobody -s --config=${hitch_config}"
+extra_commands=reload
 
 required_files=${hitch_config}
 run_rc_command "$1"
