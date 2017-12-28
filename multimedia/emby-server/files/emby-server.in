@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/multimedia/emby-server/files/emby-server.in 409735 2016-02-28 11:48:08Z riggs $
+# $FreeBSD: head/multimedia/emby-server/files/emby-server.in 456852 2017-12-20 20:26:20Z woodsb02 $
 #
 # PROVIDE: %%PORTNAME%%
 # REQUIRE: LOGIN
@@ -45,7 +45,7 @@ fi
 pidfile="/var/run/%%PORTNAME%%.pid"
 command="/usr/sbin/daemon"
 procname="%%LOCALBASE%%/bin/mono"
-command_args="-f -p ${pidfile} ${procname} %%PREFIX%%/lib/emby-server/MediaBrowser.Server.Mono.exe -ffmpeg %%LOCALBASE%%/bin/ffmpeg -ffprobe %%LOCALBASE%%/bin/ffprobe -programdata ${%%RC_NAME%%_data_dir}"
+command_args="-f -p ${pidfile} ${procname} %%PREFIX%%/lib/emby-server/MediaBrowser.Server.Mono.exe -os freebsd -ffmpeg %%LOCALBASE%%/bin/ffmpeg -ffprobe %%LOCALBASE%%/bin/ffprobe -programdata ${%%RC_NAME%%_data_dir}"
 
 start_precmd=%%RC_NAME%%_precmd
 %%RC_NAME%%_precmd()
