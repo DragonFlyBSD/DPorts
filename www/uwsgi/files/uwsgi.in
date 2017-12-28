@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/www/uwsgi/files/uwsgi.in 448482 2017-08-21 17:49:01Z ultima $
+# $FreeBSD: head/www/uwsgi/files/uwsgi.in 457125 2017-12-24 06:46:48Z tobik $
 #
 # PROVIDE: uwsgi
 # REQUIRE: DAEMON
@@ -51,7 +51,7 @@ rcvar=uwsgi_enable
 
 load_rc_config $name
 
-command=%%PREFIX%%/bin/uwsgi
+command=%%PREFIX%%/bin/uwsgi-%%PYTHON_VER%%
 
 : ${uwsgi_enable="NO"}
 : ${uwsgi_socket="/tmp/${name}.sock"}
