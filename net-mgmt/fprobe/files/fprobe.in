@@ -1,22 +1,22 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net-mgmt/fprobe/files/fprobe.in 311223 2013-01-30 16:01:32Z jadawin $
+# $FreeBSD: head/net-mgmt/fprobe/files/fprobe.in 456625 2017-12-18 11:53:44Z amdmi3 $
 #
 # PROVIDE: fprobe
 # REQUIRE: NETWORKING
 # KEYWORD: shutdown
 
-# Add the following lines to /etc/rc.conf to enable %%NAME%%:
+# Add the following lines to /etc/rc.conf to enable fprobe:
 #
-#%%NAME%%_enable="YES"
+# fprobe_enable="YES"
 #
-# See fprobe(8) for %%NAME%%_flags
+# See fprobe(8) for fprobe_flags
 #
 
 . /etc/rc.subr
 
-name="%%NAME%%"
-rcvar=%%NAME%%_enable
+name="fprobe"
+rcvar=fprobe_enable
 
 load_rc_config "$name"
 
