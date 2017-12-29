@@ -1,0 +1,14 @@
+dfly-patch:
+	# why is this hack necessary on DF and not FreeBSD?
+	${LN} -s ${LOCALBASE}/bin/python2 ${LOCALBASE}/sbin/python
+
+dfly-patch-ignore:
+	# why is this not necessary on FreeBSD??
+	${REINPLACE_CMD} -e 's|python -c|python2 -c|' \
+		${WRKSRC}/deps/npm/node_modules/node-gyp/gyp/pylib/gyp/generator/xcode.py\
+		${WRKSRC}/deps/v8/gypfiles/standalone.gypi\
+		${WRKSRC}/deps/v8/gypfiles/toolchain.gypi\
+		${WRKSRC}/deps/v8/Makefile\
+		${WRKSRC}/deps/v8/Makefile.android\
+		${WRKSRC}/test/pummel/test-exec.js\
+		${WRKSRC}/tools/gyp/pylib/gyp/generator/xcode.py

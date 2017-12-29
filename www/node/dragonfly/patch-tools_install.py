@@ -1,8 +1,8 @@
---- tools/install.py.orig	2014-12-22 21:22:32 UTC
+--- tools/install.py.orig	2017-12-12 10:22:53 UTC
 +++ tools/install.py
-@@ -132,7 +132,7 @@ def files(action):
-   if 'true' == variables.get('node_use_dtrace'):
-     action(['out/Release/node.d'], 'lib/dtrace/node.d')
+@@ -149,7 +149,7 @@ def files(action):
+   action(['deps/v8/tools/lldbinit'], 'share/doc/node/')
+   action(['deps/v8/tools/lldb_commands.py'], 'share/doc/node/')
  
 -  if 'freebsd' in sys.platform or 'openbsd' in sys.platform:
 +  if 'freebsd' in sys.platform or 'dragonfly' in sys.platform:

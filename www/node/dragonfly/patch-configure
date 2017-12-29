@@ -1,11 +1,21 @@
---- configure.orig	2017-08-15 14:13:44 UTC
+--- configure.orig	2017-12-12 10:22:19 UTC
 +++ configure
-@@ -642,6 +642,8 @@ def check_compiler(o):
+@@ -58,7 +58,7 @@ from gyp_node import run_gyp
+ # parse our options
+ parser = optparse.OptionParser()
  
-   if is_clang:
-     o['variables']['llvm_version'] = get_llvm_version(CC)
-+  else:
-+    o['variables']['llvm_version'] = '0.0'
+-valid_os = ('win', 'mac', 'solaris', 'freebsd', 'openbsd', 'linux',
++valid_os = ('win', 'mac', 'solaris', 'freebsd', 'openbsd', 'linux', 'dragonfly',
+             'android', 'aix', 'cloudabi')
+ valid_arch = ('arm', 'arm64', 'ia32', 'mips', 'mipsel', 'mips64el', 'ppc',
+               'ppc64', 'x32','x64', 'x86', 's390', 's390x')
+@@ -1492,9 +1492,6 @@ if options.prefix:
+ config = '\n'.join(map('='.join, config.iteritems())) + '\n'
  
-   # Need xcode_version or gas_version when openssl asm files are compiled.
-   if options.without_ssl or options.openssl_no_asm or options.shared_openssl:
+ # On Windows there's no reason to search for a different python binary.
+-bin_override = None if sys.platform == 'win32' else make_bin_override()
+-if bin_override:
+-  config = 'export PATH:=' + bin_override + ':$(PATH)\n' + config
+ 
+ write('config.mk', do_not_edit + config)
+ 
