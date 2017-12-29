@@ -91,7 +91,7 @@ MASTER_SITES+=	http://marc.merlins.org/linux/exim/files/:sa_exim \
 DISTFILES+=	sa-exim-${SA_EXIM_VERSION}.tar.gz:sa_exim
 .endif
 
-EXIM_VERSION=	4.89.1
+EXIM_VERSION=	4.90
 SA_EXIM_VERSION=4.2
 EXIM_INSTALL_ARG+=	"-no_chown" "-no_symlink"
 
@@ -539,6 +539,12 @@ post-extract:
 	@cd ${WRKDIR} && ${TAR} ${EXTRACT_BEFORE_ARGS} ${_DISTDIR}/sa-exim-${SA_EXIM_VERSION}.tar.gz ${EXTRACT_AFTER_ARGS}
 .endif
 
+dfly-patch:
+	(cd ${WRKSRC}/OS && \
+		${CP} os.h-FreeBSD os.h-DragonFly && \
+		${CP} os.c-FreeBSD os.c-DragonFly && \
+		${CP} Makefile-FreeBSD Makefile-DragonFly)
+
 do-configure:
 	@${MKDIR} ${WRKSRC}/Local
 	@${SED} -E ${SEDLIST} ${WRKSRC}/src/EDITME > ${WRKSRC}/Local/Makefile
@@ -566,7 +572,7 @@ do-configure:
 	    ${WRKDIR}/sa-exim-${SA_EXIM_VERSION}/sa-exim.conf
 .endif
 	@${REINPLACE_CMD} -E -e 's/XX_STRIPCMD_XX/${STRIP_CMD:S,/,\/,g}/' \
-		${WRKSRC}/OS/Makefile-FreeBSD
+		${WRKSRC}/OS/Makefile-${OPSYS}
 	@(cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} configure)
 
 post-build:
