@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	npm
-PORTVERSION=	5.4.2
-PORTREVISION=	2
+PORTVERSION=	5.6.0
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	LOCAL/sunpoet
 
@@ -14,7 +14,7 @@ LICENSE=	MIT
 
 RUN_DEPENDS=	gmake:devel/gmake
 
-CONFLICTS_INSTALL=	npm2 npm3 npm4
+CONFLICTS_INSTALL?=	npm-node4 npm-node6 npm-node8 npm2 npm3 npm4
 
 OPTIONS_SINGLE=	BACKEND
 OPTIONS_SINGLE_BACKEND=	NODE NODE4 NODE6 NODE8
@@ -27,7 +27,7 @@ NODE8_DESC=	Use Node.js 8.x (www/node8) as backend
 NO_ARCH=	yes
 NO_BUILD=	yes
 REINPLACE_ARGS=	-i ''
-USES=		cpe python:2,run shebangfix tar:xz
+USES=		cpe python:2.7,run shebangfix tar:xz
 
 CPE_VENDOR=	npmjs
 CPE_PRODUCT=	node_packaged_modules
