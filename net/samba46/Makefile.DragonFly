@@ -1,0 +1,9 @@
+# Samba is a mess.  Workaround:
+# https://lists.freebsd.org/pipermail/freebsd-ports/2016-December/106443.html
+
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NADS:NLDAP}
+
+dfly-patch:
+	${REINPLACE_CMD} -e "s|'md'|'md-disable'|" \
+		-e "s|'sys/md5.h'|'sys/md5-disable.h'|" \
+		${WRKDIR}/${DISTNAME}/lib/crypto/wscript_configure
