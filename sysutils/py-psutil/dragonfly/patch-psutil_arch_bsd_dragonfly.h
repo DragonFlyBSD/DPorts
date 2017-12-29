@@ -1,4 +1,4 @@
---- psutil/arch/bsd/dragonfly.h.orig	2017-03-29 15:37:57 UTC
+--- /dev/null	2017-10-13 14:10:04 UTC
 +++ psutil/arch/bsd/dragonfly.h
 @@ -0,0 +1,27 @@
 +/*

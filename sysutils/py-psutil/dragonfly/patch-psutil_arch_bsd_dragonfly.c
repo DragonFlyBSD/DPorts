@@ -1,5 +1,5 @@
---- psutil/arch/bsd/dragonfly.c.orig	2017-09-21 12:34:55.978891000 +0300
-+++ psutil/arch/bsd/dragonfly.c	2017-09-21 12:40:54.722447000 +0300
+--- /dev/null  2017-10-13 14:10:04 UTC
++++ psutil/arch/bsd/dragonfly.c
 @@ -0,0 +1,562 @@
 +/*
 + * Copyright (c) 2009, Jay Loden, Giampaolo Rodola'. All rights reserved.
@@ -61,7 +61,7 @@
 +
 +    // sysctl stores 0 in the size if we can't find the process information.
 +    if (size == 0) {
-+        NoSuchProcess();
++        NoSuchProcess("");
 +        return -1;
 +    }
 +    return 0;
@@ -241,7 +241,7 @@
 +        if (ret == -1)
 +            return NULL;
 +        else if (ret == 0)
-+            return NoSuchProcess();
++            return NoSuchProcess("");
 +        else
 +            strcpy(pathname, "");
 +    }
