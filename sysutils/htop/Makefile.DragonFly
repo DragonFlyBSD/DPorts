@@ -1,4 +1,4 @@
 # Created by: Diederik de Groot <ddegroot@talon.nl>
 
 MAINTAINER=	ddegroot@talon.nl
-RUN_DEPENDS=
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NLSOF}
