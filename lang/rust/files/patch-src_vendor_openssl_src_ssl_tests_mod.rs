@@ -4,7 +4,7 @@
  /// Tests that connecting with the client using NPN, but the server not does not
  /// break the existing connection behavior.
  #[test]
-+#[cfg(not(any(libressl261, libressl262, libressl263)))]
++#[cfg(not(any(libressl261, libressl263, libressl264)))]
  fn test_connect_with_unilateral_npn() {
      let (_s, stream) = Server::new();
      let mut ctx = SslContext::builder(SslMethod::tls()).unwrap();
@@ -12,7 +12,7 @@
  /// Tests that when the `SslStream` is created as a server stream, the protocols
  /// are correctly advertised to the client.
  #[test]
-+#[cfg(not(any(libressl261, libressl262, libressl263)))]
++#[cfg(not(any(libressl261, libressl263, libressl264)))]
  fn test_npn_server_advertise_multiple() {
      let listener = TcpListener::bind("127.0.0.1:0").unwrap();
      let localhost = listener.local_addr().unwrap();
@@ -21,7 +21,7 @@
  
  #[test]
 -#[cfg(any(all(feature = "v101", ossl101), all(feature = "v102", ossl102)))]
-+#[cfg(any(all(feature = "v101", ossl101, not(any(libressl261, libressl262, libressl263))), all(feature = "v102", ossl102)))]
++#[cfg(any(all(feature = "v101", ossl101, not(any(libressl261, libressl263, libressl264))), all(feature = "v102", ossl102)))]
  fn tmp_ecdh_callback() {
      use ec::EcKey;
      use nid;
@@ -30,7 +30,7 @@
  
  #[test]
 -#[cfg(any(all(feature = "v101", ossl101), all(feature = "v102", ossl102)))]
-+#[cfg(any(all(feature = "v101", ossl101, not(any(libressl261, libressl262, libressl263))), all(feature = "v102", ossl102)))]
++#[cfg(any(all(feature = "v101", ossl101, not(any(libressl261, libressl263, libressl264))), all(feature = "v102", ossl102)))]
  fn tmp_ecdh_callback_ssl() {
      use ec::EcKey;
      use nid;
