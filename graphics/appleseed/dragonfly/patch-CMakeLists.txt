@@ -1,6 +1,15 @@
---- CMakeLists.txt.intermediate	2016-12-17 10:36:20.000000000 +0200
+--- CMakeLists.txt.intermediate	2018-01-03 11:40:10.000000000 +0200
 +++ CMakeLists.txt
-@@ -158,7 +158,7 @@ if (CMAKE_SYSTEM_NAME STREQUAL "Windows"
+@@ -121,7 +121,7 @@ option (WARNINGS_AS_ERRORS
+ 
+ option (HIDE_SYMBOLS                        "When using gcc, hide symbols not on the public API"    ON)
+ 
+-if (CMAKE_SYSTEM_NAME MATCHES "Linux|FreeBSD")
++if (CMAKE_SYSTEM_NAME MATCHES "Linux|DragonFly|FreeBSD")
+     option (USE_VISIBILITY_MAP              "Use GNU export map for libappleseed.so (experimental)" OFF)
+ endif ()
+ 
+@@ -165,7 +165,7 @@ if (CMAKE_SYSTEM_NAME STREQUAL "Windows"
      include (src/cmake/config/win-vs.txt)
  elseif (CMAKE_SYSTEM_NAME STREQUAL "Darwin")
      include (src/cmake/config/mac-clang.txt)
