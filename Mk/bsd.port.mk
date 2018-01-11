@@ -1074,6 +1074,11 @@ STAGEDIR?=	${WRKDIR}/stage
 NOTPHONY?=
 FLAVORS?=
 FLAVOR?=
+# Disallow forced FLAVOR as make argument since we cannot change it to the
+# proper default.
+.if empty(FLAVOR) && !empty(.MAKEOVERRIDES:MFLAVOR)
+.error FLAVOR may not be passed empty as a make argument.
+.endif
 # Store env FLAVOR for later
 .if !defined(_FLAVOR)
 _FLAVOR:=	${FLAVOR}
@@ -1095,35 +1100,7 @@ _PORTS_DIRECTORIES+=	${PKG_DBDIR} ${PREFIX} ${WRKDIR} ${EXTRACT_WRKDIR} \
 .include "${PORTSDIR}/Mk/bsd.commands.mk"
 
 # Do not leak flavors to childs make
-.MAKEOVERRIDES:=	${MAKEOVERRIDES:NFLAVOR=*}
-
-.if !empty(FLAVOR) && !defined(_DID_FLAVORS_HELPERS)
-_DID_FLAVORS_HELPERS=	yes
-_FLAVOR_HELPERS_OVERRIDE=	DESCR PLIST PKGNAMEPREFIX PKGNAMESUFFIX
-_FLAVOR_HELPERS_APPEND=	 	CONFLICTS CONFLICTS_BUILD CONFLICTS_INSTALL \
-							PKG_DEPENDS EXTRACT_DEPENDS PATCH_DEPENDS \
-							FETCH_DEPENDS BUILD_DEPENDS LIB_DEPENDS \
-							RUN_DEPENDS TEST_DEPENDS
-# These overwrite the current value
-.for v in ${_FLAVOR_HELPERS_OVERRIDE}
-.if defined(${FLAVOR}_${v})
-${v}=	${${FLAVOR}_${v}}
-.endif
-.endfor
-
-# These append to the current value
-.for v in ${_FLAVOR_HELPERS_APPEND}
-.if defined(${FLAVOR}_${v})
-${v}+=	${${FLAVOR}_${v}}
-.endif
-.endfor
-
-.for v in BROKEN IGNORE
-.if defined(${FLAVOR}_${v})
-${v}=	flavor "${FLAVOR}" ${${FLAVOR}_${v}}
-.endif
-.endfor
-.endif # defined(${FLAVOR})
+.MAKEOVERRIDES:=	${.MAKEOVERRIDES:NFLAVOR}
 
 .if defined(CROSS_TOOLCHAIN)
 .if !defined(CROSS_SYSROOT)
@@ -1517,6 +1494,35 @@ IGNORE=	Unknown flavor '${FLAVOR}', possible flavors: ${FLAVORS}.
 FLAVOR=	${FLAVORS:[1]}
 .endif
 
+.if !empty(FLAVOR) && !defined(_DID_FLAVORS_HELPERS)
+_DID_FLAVORS_HELPERS=	yes
+_FLAVOR_HELPERS_OVERRIDE=	DESCR PLIST PKGNAMEPREFIX PKGNAMESUFFIX
+_FLAVOR_HELPERS_APPEND=	 	CONFLICTS CONFLICTS_BUILD CONFLICTS_INSTALL \
+							PKG_DEPENDS EXTRACT_DEPENDS PATCH_DEPENDS \
+							FETCH_DEPENDS BUILD_DEPENDS LIB_DEPENDS \
+							RUN_DEPENDS TEST_DEPENDS
+# These overwrite the current value
+.for v in ${_FLAVOR_HELPERS_OVERRIDE}
+.if defined(${FLAVOR}_${v})
+${v}=	${${FLAVOR}_${v}}
+.endif
+.endfor
+
+# These append to the current value
+.for v in ${_FLAVOR_HELPERS_APPEND}
+.if defined(${FLAVOR}_${v})
+${v}+=	${${FLAVOR}_${v}}
+.endif
+.endfor
+
+.for v in BROKEN IGNORE
+.if defined(${FLAVOR}_${v})
+${v}=	flavor "${FLAVOR}" ${${FLAVOR}_${v}}
+.endif
+.endfor
+.endif # defined(${FLAVOR})
+
+
 EXTRACT_SUFX?=			.tar.gz
 
 .if defined(USE_LINUX_PREFIX)
@@ -1780,18 +1786,6 @@ MAKE_ENV+=	WITHOUT_DEBUG_FILES=yes
 MAKE_ENV+=	WITHOUT_KERNEL_SYMBOLS=yes
 .endif
 
-.if defined(NOPORTDOCS)
-PLIST_SUB+=		PORTDOCS="@comment "
-.else
-PLIST_SUB+=		PORTDOCS=""
-.endif
-
-.if defined(NOPORTEXAMPLES)
-PLIST_SUB+=	        PORTEXAMPLES="@comment "
-.else
-PLIST_SUB+=	        PORTEXAMPLES=""
-.endif
-
 CONFIGURE_SHELL?=	${SH}
 MAKE_SHELL?=	${SH}
 
@@ -1838,8 +1832,7 @@ MAKE_ENV+=		CCVER=gcc50
 .  endif
 .endif
 
-_TEST_LD=/usr/bin/ld
-.if defined(LLD_UNSAFE) && ${_TEST_LD:tA} == "/usr/bin/ld.lld"
+.if defined(LLD_UNSAFE) && ${/usr/bin/ld:L:tA} == /usr/bin/ld.lld
 LDFLAGS+=	-fuse-ld=bfd
 .  if !defined(USE_BINUTILS)
 .    if exists(/usr/bin/ld.bfd)
@@ -3821,7 +3814,7 @@ CLEAN_DEPENDENCIES=
 .if !defined(NOCLEANDEPENDS)
 CLEAN_DEPENDENCIES+=	limited-clean-depends-${_f}
 limited-clean-depends-${_f}:
-	@cd ${.CURDIR} && ${MAKE} FLAVOR=${_f} limited-clean-depends
+	@cd ${.CURDIR} && ${SETENV} FLAVOR=${_f} ${MAKE} limited-clean-depends
 .endif
 .if target(pre-clean)
 CLEAN_DEPENDENCIES+=	pre-clean-${_f}
@@ -4097,7 +4090,7 @@ fetch-specials:
 		/*) ;; \
 		*) dir=${PORTSDIR}/$$dir ;; \
 		esac; \
-		(cd $$dir; ${MAKE} FLAVOR=$${flavor} fetch); \
+		(cd $$dir; ${SETENV} FLAVOR=$${flavor} ${MAKE} fetch); \
 	done
 .endif
 
@@ -4225,6 +4218,12 @@ PACKAGE-DEPENDS-LIST?= \
 	fi; \
 	checked="${PARENT_CHECKED}"; \
 	for dir in ${_LIB_RUN_DEPENDS:C,[^:]*:([^:]*):?.*,\1,}; do \
+		case $${dir} in \
+		*@*) \
+			flavor=$${dir\#*@}; \
+			dir=$${dir%@*}; \
+			;; \
+		esac; \
 		case "$$dir" in \
 		/*) ;; \
 		*) dir=${PORTSDIR}/$$dir ;; \
@@ -4234,7 +4233,7 @@ PACKAGE-DEPENDS-LIST?= \
 			case $$checked in	\
 			$$dir|$$dir\ *|*\ $$dir|*\ $$dir\ *) continue;;	\
 			esac;	\
-			childout=$$(cd $$dir; ${MAKE} CHILD_DEPENDS=yes PARENT_CHECKED="$$checked" package-depends-list); \
+			childout=$$(cd $$dir; ${SETENV} FLAVOR=$${flavor} ${MAKE} CHILD_DEPENDS=yes PARENT_CHECKED="$$checked" package-depends-list); \
 			set -- $$childout; \
 			childdir=""; \
 			while [ $$\# != 0 ]; do \
@@ -4384,7 +4383,7 @@ describe:
 describe: ${FLAVORS:S/^/describe-/}
 .   for f in ${FLAVORS}
 describe-${f}:
-	@cd ${.CURDIR} && ${MAKE} -B FLAVOR=${f} -D_DESCRIBE_WITH_FLAVOR describe
+	@cd ${.CURDIR} && ${SETENV} FLAVOR=${f} ${MAKE} -B -D_DESCRIBE_WITH_FLAVOR describe
 .   endfor
 .  endif # empty(FLAVORS)
 . endif
@@ -4531,7 +4530,7 @@ ${TMPPLIST}:
 
 .for _type in EXAMPLES DOCS
 .if !target(add-plist-${_type:tl})
-.if defined(PORT${_type}) && !defined(NOPORT${_type})
+.if defined(PORT${_type}) && !empty(PORT_OPTIONS:M${_type})
 add-plist-${_type:tl}:
 .for x in ${PORT${_type}}
 	@if ${ECHO_CMD} "${x}"| ${AWK} '$$1 ~ /(\*|\||\[|\]|\?|\{|\}|\$$)/ { exit 1};'; then \
@@ -4679,7 +4678,7 @@ pretty-flavors-package-names: .PHONY
 .else
 .for f in ${FLAVORS}
 	@${ECHO_CMD} -n "${f}: "
-	@cd ${.CURDIR} && ${MAKE} -B FLAVOR=${f} -V PKGNAME
+	@cd ${.CURDIR} && ${SETENV} FLAVOR=${f} ${MAKE} -B -V PKGNAME
 .endfor
 .endif
 
@@ -4688,7 +4687,7 @@ flavors-package-names: .PHONY
 	@${ECHO_CMD} "${PKGNAME}"
 .else
 .for f in ${FLAVORS}
-	@cd ${.CURDIR} && ${MAKE} -B FLAVOR=${f} -V PKGNAME
+	@cd ${.CURDIR} && ${SETENV} FLAVOR=${f} ${MAKE} -B -V PKGNAME
 .endfor
 .endif
 
@@ -5314,6 +5313,17 @@ show-warnings:
 	@sleep ${WARNING_WAIT}
 .endif
 
+.if defined(ERROR)
+show-errors:
+	@${ECHO_MSG} "/!\\ ERRORS /!\\"
+	@${ECHO_MSG}
+.for m in ${ERROR}
+	@${ECHO_MSG} "${m}" | ${FMT_80}
+	@${ECHO_MSG}
+.endfor
+	@${FALSE}
+.endif
+
 .if defined(DEVELOPER)
 .if defined(DEV_WARNING)
 DEV_WARNING_WAIT?=	10
@@ -5362,7 +5372,8 @@ _TARGETS_STAGES=	SANITY PKG FETCH EXTRACT PATCH CONFIGURE BUILD INSTALL TEST PAC
 
 _SANITY_SEQ=	050:post-chroot 100:pre-everything \
 				125:show-unsupported-system-error 150:check-makefile \
-				200:show-warnings 210:show-dev-warnings 220:show-dev-errors \
+				190:show-errors 200:show-warnings \
+				210:show-dev-errors 220:show-dev-warnings \
 				250:check-categories 300:check-makevars \
 				350:check-desktop-entries 400:check-depends \
 				450:identify-install-conflicts 500:check-deprecated \

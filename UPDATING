@@ -5,6 +5,52 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20180109
+  AFFECTS: users of www/qt5-webengine
+  AUTHOR: kde@FreeBSD.org
+
+  The upgrade of www/qt5-webengine to 5.9.3 may fail if an older version
+  of it is installed. It is recommended to either build the port in a
+  builder like poudriere, or to deinstall and then doing an install.
+
+20180107
+  AFFECTS: users of security/gnupg and mail/mutt and mail/neomutt
+  AUTHOR: adamw@FreeBSD.org
+
+  The invocation for gpg from mutt/neomutt changed between gnupg-2.0
+  (which has expired and is now removed) and gnupg-2.2 (the current
+  version in the tree). Unless you're using gpgme, PGP-related
+  commands may fail in (neo)mutt.
+
+  In all cases, users are strongly urged to use security/gpgme to take
+  care of the setup for you. If you prefer to roll your own, the
+  following muttrc/neomuttrc entry has been reported to work:
+
+  pgp_decrypt_command="gpg2 %?p?--passphrase-fd 0 --pinentry-mode=loopback? --no-verbose --batch --output - %f"
+
+  See muttrc(5), neomuttrc(5), mutt.org, and neomutt.org for instructions
+  on (neo)mutt's gpg and gpgme instructions.
+
+20180102:
+  AFFECTS: users of devel/awscli
+  AUTHOR: bhughes@FreeBSD.org
+
+  The package name for devel/awscli has changed (back) to just awscli.
+  The introduction of flavors erroneously caused the awscli package to
+  be renamed to py27-awscli.
+
+20171230:
+  AFFECTS: users of net-im/ejabberd
+  AUTHOR: ashish@FreeBSD.org
+
+  If you are building ejabberd 17.11 on a host, which already has an older 
+  version of ejabberd installed, then build process will fail with "unknown type
+  specifier" errors. As a workaround, please uninstall ejabberd before building
+  ejabberd.
+
+  This has been reported upstream at:
+  https://github.com/processone/ejabberd/issues/2194
+
 20171223:
   AFFECTS: users of dns/dnscrypt-proxy
   AUTHOR: egypcio@googlemail.com
@@ -1285,83 +1331,4 @@ you update your ports collection, before attempting any port upgrades.
   [mysqld]
   innodb_file_per_table=1
   sql-mode=""
-
-20170109:
-  AFFECTS: users of lang/ruby22
-  AUTHOR: swills@FreeBSD.org
-
-  The default ruby version has been updated from 2.2 to 2.3.
-
-  If you compile your own ports you may keep 2.2 as the default version by
-  adding the following lines to your /etc/make.conf file:
-
-  #
-  # Keep ruby 2.2 as default version
-  #
-  DEFAULT_VERSIONS+=ruby=2.2
-
-  If you wish to update to the new default version, you need to first stop any
-  software that uses ruby. Then, you will need to follow these steps, depending
-  upon how you manage your system.
-
-  If you use pkgng, simply upgrade:
-  # pkg upgrade
-
-  If you use portmaster, install new ruby, then rebuild all ports that depend
-  on ruby:
-  # portmaster -o lang/ruby23 lang/ruby22
-  # portmaster -R -r ruby-2.3
-
-  If you use portupgrade, install new ruby, then rebuild all ports that depend
-  on ruby:
-
-  # pkg delete -f ruby portupgrade
-  # make -C /usr/ports/ports-mgmt/portupgrade install clean
-  # pkg set -o lang/ruby22:lang/ruby23
-  # portupgrade -x ruby-2.3.\* -fr lang/ruby23
-
-20170102:
-  AFFECTS: multimedia/ffmpeg
-  AUTHOR: jbeich@FreeBSD.org
-
-  OPTIMIZED_CFLAGS switched to only use vendor optimizations which
-  means -ffast-math -fno-finite-math-only are no longer applied. If
-  you did like the former behavior consider adding
-
-      # multimedia/ffmpeg/Makefile.local
-      OPTIMIZED_CFLAGS_CFLAGS += -ffast-math -fno-finite-math-only
-
-  or
-
-      # /etc/make.conf
-      .if ${.CURDIR:M*/multimedia/ffmpeg}
-      CFLAGS += -ffast-math -fno-finite-math-only
-      .endif
-
-20161230:
-  AFFECTS: users of x11/xfce4-terminal
-  AUTHOR: olivierd@FreeBSD.org
-
-  The port has been updated to the latest stable version 0.8.2.
-  Please, don't active the hidden 'MiscSlimTabs' option in
-  ~/.config/xfce4/terminal/terminalrc, it requires Gtk+ > 3.20.
-
-20161228:
-  AFFECTS: users of multimedia/mlt
-  AUTHOR: avilla@FreeBSD.org
-
-  MLT Qt plugins have been moved to their own ports, mlt-qt4 and
-  mlt-qt5. Please, uninstall multimedia/mlt before you update:
-
-  # pkg delete mlt
-
-20161227:
-  AFFECTS: users of security/openvpn, security/openvpn-polarssl
-  AUTHOR: Matthias Andree <mandree@FreeBSD.org>
-
-  The OpenVPN ports have been updated to the new upstream release v2.4,
-  and their predecessors preserved as openvpn23 and openvpn23-polarssl,
-  respectively.  Note that for the new v2.4 release, the
-  openvpn-polarssl port has been renamed to openvpn-mbedtls to match the
-  upstream library's new name.
 
