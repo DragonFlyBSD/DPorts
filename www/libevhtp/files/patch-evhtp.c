@@ -1,26 +1,27 @@
-### Description: Commit 67ed0bc caused ports to break, this
-### patch will revert the commits until a proper fix is created.
-### Issue ID: https://github.com/ellzey/libevhtp/issues/201
-### https://github.com/ellzey/libevhtp/commit/67ed0bce433655dfeab65b797279dd167b394feb
---- evhtp.c.orig	2015-11-02 23:01:53 UTC
+--- evhtp.c.orig	2017-12-06 22:34:23 UTC
 +++ evhtp.c
-@@ -1673,12 +1673,10 @@ check_proto:
-                                          evhtp_header_new("Connection", "close", 0, 0));
-             }
+@@ -2373,15 +2373,15 @@ htp__connection_writecb_(struct bufferevent * bev, voi
+         return;
+     }
  
--#if 0
--            if (!out_len && !evhtp_header_find(request->headers_out, "Content-Length")) {
-+            if (!evhtp_header_find(request->headers_out, "Content-Length")) {
-                 evhtp_headers_add_header(request->headers_out,
-                                          evhtp_header_new("Content-Length", "0", 0, 0));
-             }
--#endif
+-    /* run user-hook for on_write callback before further analysis */
+-    htp__hook_connection_write_(conn);
+-
+     /* connection is in a paused state, no further processing yet */
+     if ((conn->flags & EVHTP_CONN_FLAG_PAUSED))
+     {
+         return;
+     }
  
-             break;
-         case EVHTP_PROTO_10:
-@@ -2356,7 +2354,7 @@ evhtp_connection_pause(evhtp_connection_
++    /* run user-hook for on_write callback before further analysis */
++    htp__hook_connection_write_(conn);
++
+     if (conn->flags & EVHTP_CONN_FLAG_WAITING)
+     {
+         HTP_FLAG_OFF(conn, EVHTP_CONN_FLAG_WAITING);
+@@ -3043,7 +3043,7 @@ evhtp_connection_pause(evhtp_connection_t * c)
  
-     c->paused = 1;
+     HTP_FLAG_ON(c, EVHTP_CONN_FLAG_PAUSED);
  
 -    bufferevent_disable(c->bev, EV_READ | EV_WRITE);
 +    bufferevent_disable(c->bev, EV_READ);
