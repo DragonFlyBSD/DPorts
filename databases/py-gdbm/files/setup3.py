@@ -3,7 +3,7 @@
 #       python setup.py install
 #
 
-__version__ = "$FreeBSD: head/databases/py-gdbm/files/setup3.py 340872 2014-01-24 00:14:07Z mat $"
+__version__ = "$FreeBSD: head/databases/py-gdbm/files/setup3.py 457528 2017-12-29 18:47:42Z sunpoet $"
 
 try:
     import distutils
@@ -23,7 +23,7 @@ libs = ["gdbm"]
 setup(name = "gdbm",
       description = "GDBM Extension to Python",
 
-      ext_modules = [Extension('gdbm', ['_gdbmmodule.c'],
+      ext_modules = [Extension('_gdbm', ['_gdbmmodule.c'],
                                include_dirs = inc_dirs,
                                libraries = libs,
                                library_dirs = lib_dirs)]
