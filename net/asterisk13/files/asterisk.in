@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net/asterisk13/files/asterisk.in 448520 2017-08-22 12:59:53Z madpilot $
+# $FreeBSD: head/net/asterisk13/files/asterisk.in 457847 2018-01-02 11:27:22Z madpilot $
 #
 
 # PROVIDE: asterisk
@@ -61,7 +61,7 @@ asterisk_stop()
 		return 1
 	fi
 	echo 'Stopping asterisk.'
-	if [ ${asterisk_stopsleep} > 0 ]; then
+	if [ ${asterisk_stopsleep} -gt 0 ]; then
 		sleep ${asterisk_stopsleep}
 	fi
 	$command -nqrx 'core stop now'
