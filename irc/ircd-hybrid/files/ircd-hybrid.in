@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/irc/ircd-hybrid/files/ircd-hybrid.in 381973 2015-03-23 01:35:36Z db $
+# $FreeBSD: head/irc/ircd-hybrid/files/ircd-hybrid.in 458681 2018-01-10 19:28:04Z db $
 #
 # PROVIDE: ircd-hybrid
 # REQUIRE: DAEMON
@@ -38,7 +38,7 @@ pid_touch ()
 
 pid_rm ()
 {
-    rm $pidfile
+    rm -f $pidfile
 }
 
 run_rc_command "$1"
