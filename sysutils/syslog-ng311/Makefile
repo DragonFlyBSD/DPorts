@@ -3,7 +3,7 @@
 
 PORTNAME=	syslog-ng
 DISTVERSION=	3.11.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	sysutils
 DISTFILES=	syslog-ng-${DISTVERSION}.tar.gz
 MASTER_SITES=	https://github.com/balabit/syslog-ng/releases/download/syslog-ng-${DISTVERSION}/
@@ -71,7 +71,6 @@ SPOOF_CONFIGURE_ENABLE=		spoof-source
 SPOOF_CONFIGURE_ON=		--with-libnet=/usr/local/bin
 SPOOF_CONFIGURE_ENV=		LIBNET_CFLAGS="-I/usr/local/include" \
 				LIBNET_LIBS="-L/usr/local/lib -lnet"
-
 
 IPV6_CONFIGURE_ENABLE=		ipv6
 
