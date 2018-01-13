@@ -1,0 +1,6 @@
+USE_CXXSTD=	c++0x
+USES+=	alias
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@!(defined(__clang__) && __has_feature(cxx_nullptr))@ __cplusplus < 201103L @' \
+		${WRKSRC}/src/include/prep.h
