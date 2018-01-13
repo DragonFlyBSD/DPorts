@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	pspg
-DISTVERSION=	0.8.0
+DISTVERSION=	0.9.1
 CATEGORIES=	databases
 
 MAINTAINER=	dg@syrec.org
@@ -25,7 +25,9 @@ OPTIONS_DEFINE=	DOCS
 
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/pspg
+
+post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
-	${INSTALL_MAN} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
