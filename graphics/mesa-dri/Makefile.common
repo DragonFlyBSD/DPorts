@@ -97,3 +97,5 @@ CONFIGURE_ARGS+=	--disable-glx-tls
 # we don't care about GLes v1
 CONFIGURE_ARGS+=	--disable-gles1
 
+# avoid unrecognized line command on vulcan drivers
+CONFIGURE_ENV+=		ax_cv_check_cflags___Wno_initializer_overrides=no
