@@ -73,11 +73,13 @@ GEMFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 RUBYGEM_ARGS=-l --no-update-sources --install-dir ${STAGEDIR}${PREFIX}/lib/ruby/gems/${RUBY_VER} --ignore-dependencies --bindir=${STAGEDIR}${PREFIX}/bin
 
-.if ${PORT_OPTIONS:MDOCS}
-RUBYGEM_ARGS+=	--rdoc --ri
-.else
+# below condition ALWAYS true (somebody brainfarted here)
+# Just disable rdoc unconditionally.  it freezes with 100% CPU sometimes
+# .if ${PORT_OPTIONS:MDOCS}
+# RUBYGEM_ARGS+=	--rdoc --ri
+# .else
 RUBYGEM_ARGS+=	--no-rdoc --no-ri
-.endif
+# .endif
 
 .if !target(do-extract)
 do-extract:
