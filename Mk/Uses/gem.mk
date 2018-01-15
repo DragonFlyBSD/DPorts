@@ -113,9 +113,9 @@ do-install:
 	${RM} -r ${STAGEDIR}${PREFIX}/${GEM_LIB_DIR}/ext \
 		${STAGEDIR}${PREFIX}/${CACHE_DIR} 2> /dev/null || ${TRUE}
 	${RMDIR} ${STAGEDIR}${PREFIX}/${EXT_DIR} 2> /dev/null || ${TRUE}
-.if !${PORT_OPTIONS:MDOCS}
-	-@${RMDIR} ${STAGEDIR}${PREFIX}/${DOC_DIR}
-.endif
+# .if !${PORT_OPTIONS:MDOCS}
+	-${RMDIR} ${STAGEDIR}${PREFIX}/${DOC_DIR}
+# .endif
 .endif
 
 .if empty(gem_ARGS:Mnoautoplist)
