@@ -1,3 +1,5 @@
+USES:=		${USES:Nninja} ncurses
+CFLAGS+=	-I{NCURSESINC}
 
 # zrj: from devel/geany-plugin-devhelp/Makefile
 #      "Workaround for 9.x which doesn't have zlib.pc"
