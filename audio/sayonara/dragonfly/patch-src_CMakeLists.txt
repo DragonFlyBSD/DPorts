@@ -1,0 +1,11 @@
+--- src/CMakeLists.txt.orig	2017-12-31 13:34:19 UTC
++++ src/CMakeLists.txt
+@@ -63,7 +63,7 @@ LINK_DIRECTORIES(${GSTREAMER_LIBRARY_DIR
+ 
+ IF(WIN32)
+ 	LINK_DIRECTORIES(${GIO_LIBRARY_DIRS})
+-ELSEIF(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
++ELSEIF(${CMAKE_SYSTEM_NAME} MATCHES "DragonFly")
+ 	FIND_LIBRARY(execinfo_LIB execinfo)
+ 	IF(NOT execinfo_LIB)
+ 		MESSAGE(FATAL_ERROR "FreeBSD requires execinfo library")
