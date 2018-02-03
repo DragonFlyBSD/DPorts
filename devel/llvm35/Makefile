@@ -2,7 +2,7 @@
 
 PORTNAME=	llvm
 DISTVERSION=	3.5.2
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	devel lang
 MASTER_SITES=	http://llvm.org/releases/3.5.2/
 DISTNAME=	${PORTNAME}-${DISTVERSION}.src
@@ -115,10 +115,10 @@ CONFIGURE_ARGS+=	--disable-docs
 
 .if ${PORT_OPTIONS:MLIT}
 MAN1SRCS+=		lit.1
-USES+=			python
+USES+=			python:2.7
 LIT_COMMANDS=		lit llvm-lit FileCheck
 .else
-USES+=			python:build
+USES+=			python:2.7,build
 .endif
 
 .if ${PORT_OPTIONS:MLTOPLUGIN}
