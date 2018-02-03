@@ -3,7 +3,7 @@
 
 PORTNAME=	bind
 PORTVERSION=	${ISCVERSION:S/-P/P/:S/b/.b/:S/a/.a/:S/rc/.rc/}
-PORTREVISION=	5
+PORTREVISION=	1
 CATEGORIES=	dns net ipv6
 MASTER_SITES=	ISC/bind9/${ISCVERSION}
 PKGNAMESUFFIX=	99
@@ -19,7 +19,7 @@ DEPRECATED=	Going out of support, please migrate to dns/bind911
 EXPIRATION_DATE=	2018-06-30
 
 # ISC releases things like 9.8.0-P1, which our versioning doesn't like
-ISCVERSION=	9.9.11
+ISCVERSION=	9.9.11-P1
 
 USES=	cpe libedit
 
@@ -41,7 +41,7 @@ CONFIGURE_ARGS=	--localstatedir=/var --disable-linux-caps \
 		--sysconfdir=${ETCDIR}
 ETCDIR=		${PREFIX}/etc/namedb
 
-CONFLICTS=	bind-tools bind9-devel bind910 bind911
+CONFLICTS=	bind-tools bind9-devel bind910 bind911 bind912
 
 SUB_FILES=	pkg-message named.conf
 USE_RC_SUBR=	named
