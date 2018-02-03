@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	qpdf
-PORTVERSION=	6.0.0
-PORTREVISION=	1
+PORTVERSION=	7.1.0
 CATEGORIES=	print
 MASTER_SITES=	SF
 
@@ -13,18 +12,11 @@ COMMENT=	Command-line tools for transforming and inspecting PDF documents
 LICENSE=	ART20
 LICENSE_FILE=	${WRKSRC}/Artistic-2.0
 
-LIB_DEPENDS=	libpcre.so:devel/pcre
+USES=		gmake jpeg libtool localbase
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--disable-static
+USE_LDCONFIG=	yes
 
 OPTIONS_DEFINE=	DOCS
-
-GNU_CONFIGURE=	yes
-CPPFLAGS+=	-I${LOCALBASE}/include
-LIBS+=		-L${LOCALBASE}/lib
-USE_LDCONFIG=	yes
-USES=		gmake libtool
-
-post-patch:
-	@${REINPLACE_CMD} 's/make --version/${MAKE_CMD} --version/' \
-		${WRKSRC}/configure
 
 .include <bsd.port.mk>
