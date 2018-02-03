@@ -3,11 +3,11 @@
 
 PORTNAME=	source-highlight
 PORTVERSION=	3.1.6
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	textproc
 MASTER_SITES=	GNU/src-highlite
 
-MAINTAINER=	kevlo@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	C/C++ and Java sources to HTML converter
 
 LICENSE=	GPLv3
