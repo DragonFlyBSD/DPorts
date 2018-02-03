@@ -5,6 +5,93 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20180201:
+  AFFECTS: users of editors/emacs* and all ports using Emacs via USES=emacs
+  AUTHOR: jrm@FreeBSD.org
+
+  The Emacs ports framework has been updated to support flavors and the
+  editors/emacs-nox11 port has been replaced by the nox flavors of
+  editors/emacs and editors/emacs-devel.
+
+  Supported Flavors
+  --------------------------------------------------------
+  editors/emacs:       full canna nox
+  editors/emacs-devel: full nox
+  ports using Emacs:   full canna nox devel_full devel_nox
+  --------------------------------------------------------
+
+  For those using pre-built packages, if
+
+     # pkg upgrade
+
+  does not install the new Emacs package, use one of
+
+     # pkg install emacs
+     # pkg install emacs-canna
+     # pkg install emacs-nox
+     # pkg install emacs-devel
+     # pkg install emacs-devel_nox
+
+  For those building their own packages, a flavor other than the default must be
+  specified.  For example, to build editors/emacs with the nox flavor, or to
+  build a port using Emacs with the devel_full flavor use
+
+     # make FLAVOR=nox install
+     # make FLAVOR=devel_full
+
+  For ports using Emacs, an alternative to the default flavor, full,
+  can be set in make.conf.  For example, to automatically depend on
+  emacs-nox, use
+
+     DEFAULT_VERSIONS+=emacs=nox
+
+20180117:
+  AFFECTS: users of x11-toolkits/kf5-kirigami2 and x11/kf5-plasma-framework
+  AUTHOR: kde@FreeBSD.org
+
+  Files that were previously installed by kf5-kirigami2 are now installed 
+  by kf5-plasma-framework. This can lead to a conflict during the upgrade
+  of the packages. 
+  It is recommended to first remove the package kf5-kirigami2.
+
+20180115
+  AFFECTS: users of net-p2p/transmission-daemon
+  AUTHOR: woodsb02@FreeBSD.org
+
+  The transmission-daemon port has been updated to 2.92_4 to incorporate
+  a patch which mitigates DNS rebinding attacks. This will prevent
+  clients from being able to connect to the transmission daemon using
+  DNS with any hostname other than localhost, unless one of the
+  following is done:
+    - Enable password authentication, then any hostname is allowed.
+      This can be achieved by either:
+        - setting rpc-authentication-required to true, and adding
+          credentials to the rpc-username and rpc-password fields in
+          settings.json (must be done whilst the transmission service is
+          stopped); or
+        - running transmission-daemon with the following arguments
+          (these can be set with transmission_flags in /etc/rc.conf):
+          -t -u USERNAME -v PASSWORD
+    OR
+    - Add the allowed server hostnames to the rpc-host-whitelist setting
+      in settings.json (must be done whilst the transmission service is
+      stopped). Note that this value is NOT a list of allowed CLIENTS,
+      but instead a list of allowed SERVER hostnames.
+
+20180111
+  AFFECTS: users of editors/vim-lite
+  AUTHOR: adamw@FreeBSD.org
+
+  The vim-lite port has been renamed to vim-console, because it isn't
+  actually any lighter. All three vim packages are built with
+  --enable-features=huge. Portmaster users will need to run this
+  command:
+
+  	portmaster -o editors/vim-console editors/vim-lite
+
+  If the switch doesn't happen automatically for you, just delete the
+  vim-lite package and install vim-console.
+
 20180109
   AFFECTS: users of www/qt5-webengine
   AUTHOR: kde@FreeBSD.org
@@ -1228,107 +1315,4 @@ you update your ports collection, before attempting any port upgrades.
   * Process runs as uwsgi user and group (UID/GID 165)
   * Socket mode is 660, still protecting unauthorized access from "other"
   * Socket ownership is www:www, restoring compatibility
-
-20170130:
-  AFFECTS: users of devel/ice, devel/py-ice, devel/php5-ice
-  AUTHOR: grembo@FreeBSD.org
-
-  Since __WORDSIZE as defined by <stdint.h> always reports 32 when using
-  C++98/03 (unless __STDC_LIMIT_MACROS is set explictly), Ice 3.6.3 used
-  "long long" for Int64 instead of "long" on 64-bit platforms by mistake.
-  A workaround has been added in version 3.6.3_2 of these three ports,
-  requiring to upgrade all of them at the same time and to rebuild all
-  custom code that links against them.
-
-20170129:
-  AFFECTS: users of multimedia/motion
-  AUTHOR: jhale@FreeBSD.org
-
-  Version 3.x expected the configuration files to reside in:
-	${LOCALBASE}/etc
-  Version 4.x expects the configuration files to reside in:
-	${LOCALBASE}/etc/motion
-  This was unfortunately overlooked when the port was updated to 4.x, but it
-  has now been fixed to install the default configuration file in the new
-  location. The rc script now checks for motion.conf in the new location.
-
-  While you may be able to simply copy your old motion.conf to the new location,
-  it is recommended to review ${LOCALBASE}/etc/motion/motion.conf and make
-  changes to it based on your old ${LOCALBASE}/etc/motion.conf as some options
-  have been added and removed.
-
-  Further, if you use motion with multiple cameras and have
-  ${LOCALBASE}/etc/thread[0-9].conf files, they should be moved to
-  ${LOCALBASE}/etc/motion as well. These files are deprecated and should be
-  renamed to camera[0-9].conf and in motion.conf, lines like:
-	thread /usr/local/etc/thread1.conf
-  Should be converted to:
-	camera /usr/local/etc/motion/camera1.conf
-
-20170127:
-  AFFECTS: users of www/uwsgi
-  AUTHOR: feld@FreeBSD.org
-
-  The default socket mode for uwsgi as 777 is a severe security concern.
-  This has been remediated by changing the rc script to default to 600.
-  The mode is configurable with rc.conf values: uwsgi_socket_mode="600"
-  or for a profile named "www", uwsgi_www_socket_mode="600".
-
-20170121:
-  AFFECTS: users of security/tinc
-  AUTHOR: dinoex@FreeBSD.org
-
-  this version of tinc requires all nodes in the VPN to be linked with a
-  version of OpenSSL or LibreSSL that supports the AES256 and SHA256
-  algorithms.
-
-
-20170120:
-  AFFECTS: users of databases/mysql56-server
-  AUTHOR: feld@FreeBSD.org
-
-  databases/mysql56-server was updated to 5.6.35 which included backported
-  rc script changes from the mysql57-server port. This broke mysql_optfile in
-  rc.conf and also forced a sample my.cnf if none existed. MySQL has
-  some parameters which cannot be changed after a database has been
-  created, so this caused MySQL to fail to start.
-
-  This change was reverted in mysql56-server-5.6.35_1
-
-  An additional change was made in mysql56-server-5.6.35_2 to prevent
-  automatic loading of a sample my.cnf which was causing issues for
-  users who were running without a my.cnf.
-
-20170117:
-  AFFECTS: users of EoL'ed FreeBSD versions (<10.3, 11 prior to 11.0)
-  AUTHOR: amdmi3@FreeBSD.org
-
-  The ports system will now refuse to build anything if it's run on
-  outdated system version. This protects users from unexpected build
-  failures after code to support EoL'ed systems is removed from the
-  tree. You may define ALLOW_UNSUPPORTED_SYSTEM to override this and
-  allow builds, but no support will be provided in case of failures.
-
-20170116:
-  AFFECTS: users of java/wildfly10
-  AUTHOR: olgeni@FreeBSD.org
-
-  The java/wildfly10 port has been updated to 10.1.0. To complete the
-  migration you must copy your existing configuration (directories
-  "appclient", "standalone", and "domain") from /usr/local/wildfly-10.0.0
-  to /usr/local/wildfly10.
-
-20170115:
-  AFFECTS: users of net-mgmt/librenms
-  AUTHOR: dvl@FreeBSD.org
-
-  The following is recommended for /var/db/mysql/my.cnf
-
-  NOTE: these are global settings.  Please read this first:
-
-  http://dev.mysql.com/doc/refman/5.7/en/sql-mode.html
-
-  [mysqld]
-  innodb_file_per_table=1
-  sql-mode=""
 
