@@ -25,10 +25,8 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/fbsd-kld.c 446852 2017-07-28 21:20:47Z jhb $");
+__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/fbsd-kld.c 460050 2018-01-26 19:57:23Z jhb $");
 
-#include <sys/param.h>
-#include <sys/stat.h>
 #include <fcntl.h>
 #include <libgen.h>
 

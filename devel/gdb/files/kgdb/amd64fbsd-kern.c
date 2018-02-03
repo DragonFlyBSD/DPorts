@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/amd64fbsd-kern.c 446852 2017-07-28 21:20:47Z jhb $");
+__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/amd64fbsd-kern.c 460050 2018-01-26 19:57:23Z jhb $");
 
 #include <sys/types.h>
 #ifdef __amd64__
@@ -205,6 +205,7 @@ amd64fbsd_trapframe_sniffer (const struct frame_unwind *self,
   find_pc_partial_function (get_frame_func (this_frame), &name, NULL, NULL);
   return (name && ((strcmp (name, "calltrap") == 0)
 		   || (strcmp (name, "fork_trampoline") == 0)
+		   || (strcmp (name, "mchk_calltrap") == 0)
 		   || (strcmp (name, "nmi_calltrap") == 0)
 		   || (name[0] == 'X' && name[1] != '_')));
 }
