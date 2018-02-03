@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gpgme
-PORTVERSION=	1.9.0
+PORTVERSION=	1.10.0
 PORTREVISION?=	1
 CATEGORIES?=	security
 MASTER_SITES=	GNUPG/gpgme
@@ -31,7 +31,7 @@ CONFIGURE_ARGS+=--enable-languages="cl"
 INFO=		gpgme
 PORTDOCS=	AUTHORS ChangeLog INSTALL NEWS README THANKS TODO
 
-OPTIONS_DEFINE=		DOCS UISERVER
+OPTIONS_DEFINE=		DOCS TEST UISERVER
 OPTIONS_SINGLE=		GNUPG
 OPTIONS_SINGLE_GNUPG=	GNUPG1 GNUPG2
 OPTIONS_DEFAULT=	GNUPG2 UISERVER
@@ -44,15 +44,20 @@ GNUPG2_DESC=		Build gpgme library for GnuPG 2.x
 GNUPG2_BUILD_DEPENDS=	gpg2:security/gnupg
 GNUPG2_RUN_DEPENDS=	gpg2:security/gnupg
 
+# Tests may fail if the test directory path length surpasses the socket path
+# length limitation of 104 characters. Due to the way gnupg creates sockets,
+# the easiest way to overcome this is to create a /var/run/user/${UID}
+# directory set with 700 permissions and owned by the effective user building
+# the port.
+TEST_CONFIGURE_ENABLE=	g13-test gpg-test gpgconf-test gpgsm-test
+TEST_PREVENTS=		GNUPG1
+TEST_PREVENTS_MSG=	TEST option is mainly designed for use with the GNUPG2 option
+
 UISERVER_DESC=			GnuPG UI server support
 UISERVER_CONFIGURE_ENABLE=	fd-passing
 .endif
 
 .include <bsd.port.options.mk>
-
-.if !exists(${LOCALBASE}/bin/gpgsm)
-CONFIGURE_ARGS+=	--disable-gpgsm-test
-.endif
 
 .if defined(SLAVEPORT)
 LIB_DEPENDS+=	libgpgme.so:security/gpgme
@@ -85,18 +90,6 @@ PLIST_SUB+=	VERSION=${PORTVERSION}
 .  endif
 .endif
 
-.include <bsd.port.pre.mk>
-
-.if defined(SLAVEPORT)
-.  if ${SLAVEPORT} == "python"
-.    if ${PYTHON_REL} >= 3000
-CONFIGURE_ARGS+=--enable-languages="python3"
-.    else
-CONFIGURE_ARGS+=--enable-languages="python2"
-.    endif
-.  endif
-.endif
-
 post-patch:
 .if defined(SLAVEPORT)
 	@${FIND} ${BUILD_WRKSRC} -name "Makefile.in" -type f | ${XARGS} \
@@ -107,11 +100,15 @@ post-patch:
 .  endif
 .endif
 	@${REINPLACE_CMD} -e 's|^clfilesdir.*|clfilesdir=$$\(libdir\)/common-lisp/gpgme|g' \
-					${WRKSRC}/lang/cl/Makefile.in
+		${WRKSRC}/lang/cl/Makefile.in
+	@${REINPLACE_CMD} -e '/SUBDIRS/s|tests||' \
+		${WRKSRC}/lang/python/Makefile.in \
+		${WRKSRC}/lang/qt/Makefile.in
+
 .if !defined(SLAVEPORT)
 post-install-DOCS-on:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
