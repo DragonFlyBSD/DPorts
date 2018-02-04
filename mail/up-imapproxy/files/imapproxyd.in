@@ -1,9 +1,9 @@
 #!/bin/sh
 #
-# $FreeBSD: head/mail/up-imapproxy/files/imapproxyd.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/mail/up-imapproxy/files/imapproxyd.in 460171 2018-01-28 13:09:08Z dbaio $
 #
 # PROVIDE: imapproxyd
-# REQUIRE: DAEMON courier_imap_imapd courier_imap_imapd_ssl cyrus_imapd inetd %%DOVECOT%%
+# REQUIRE: DAEMON courier_imap_imapd courier_imap_imapd_ssl cyrus_imapd dovecot inetd
 # KEYWORD: shutdown
 
 #
