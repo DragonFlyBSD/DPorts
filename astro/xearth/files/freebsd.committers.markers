@@ -1,4 +1,4 @@
-# $FreeBSD: head/astro/xearth/files/freebsd.committers.markers 455811 2017-12-08 22:45:15Z kevans $
+# $FreeBSD: head/astro/xearth/files/freebsd.committers.markers 459429 2018-01-19 15:09:04Z tcberner $
 #
 # FreeBSD Project Committers
 #
@@ -78,7 +78,6 @@
  46.28,		30.44,		"anray"				# Odessa, Ukraine
 -25.80974,	28.27731,	"jhay"				# Pretoria, South Africa
  44.420,	26.1371,	"itetcu"			# Bucharest, Romania
- 59.430215	24.752914	"xmj"				# Tallinn, Estonia
  35.517,	24.033,		"manolis"			# Chania, Crete, Greece
  37.98,		23.73,		"dds"				# Athens, Greece
  42.6333,	23.2964,	"roam,vd,syrinx"		# Sofia, Bulgaria
