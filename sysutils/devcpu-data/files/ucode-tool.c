@@ -24,6 +24,7 @@
  * SUCH DAMAGE.
  */
 
+/* $FreeBSD: head/sysutils/devcpu-data/files/ucode-tool.c 459464 2018-01-19 19:28:08Z sbruno $ */
 #include <stdarg.h>
 #include <stdint.h>
 #include <stdio.h>
