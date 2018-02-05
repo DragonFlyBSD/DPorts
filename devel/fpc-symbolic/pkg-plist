@@ -1,5 +1,5 @@
-%%PORTDOCS%%%%DOCSDIR%%-%%PORTVERSION%%/symbolic/optimization.txt
-%%PORTDOCS%%%%DOCSDIR%%-%%PORTVERSION%%/symbolic/symbolic.txt
+%%DOCSDIR%%-%%PORTVERSION%%/symbolic/optimization.txt
+%%DOCSDIR%%-%%PORTVERSION%%/symbolic/symbolic.txt
 lib/fpc/%%PORTVERSION%%/fpmkinst/%%BUILDNAME%%/symbolic.fpm
 lib/fpc/%%PORTVERSION%%/units/%%BUILDNAME%%/symbolic/symbolic.o
 lib/fpc/%%PORTVERSION%%/units/%%BUILDNAME%%/symbolic/symbolic.ppu
