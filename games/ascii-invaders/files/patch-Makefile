@@ -1,9 +1,9 @@
---- Makefile.orig	2016-12-09 04:53:39.000000000 +0200
+--- Makefile.orig	2016-12-09 02:53:39 UTC
 +++ Makefile
 @@ -1,5 +1,5 @@
  CFLAGS+=-Wall
 -LIBS=-lcurses
-+LIBS=-lncurses
++LIBS=	-lncurses
  
  all:	ascii_invaders
  
