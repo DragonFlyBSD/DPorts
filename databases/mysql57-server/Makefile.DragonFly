@@ -1,7 +1,6 @@
+DFLY_PATCHDIR=	${.CURDIR}/dragonfly
+LDFLAGS+=	-L${LOCALBASE}/lib
 
-# shebang fix
 dfly-patch:
-	${REINPLACE_CMD} -e 's@"\(FreeBSD\)"@"\1|DragonFly"@g'	\
-		${WRKSRC}/scripts/CMakeLists.txt
-	${REINPLACE_CMD} -e 's@STREQUAL "\(FreeBSD\)"@MATCHES "\1|DragonFly"@g' \
-		${WRKSRC}/cmake/plugin.cmake
+	${REINPLACE_CMD} -e 's/FreeBSD/DragonFly/' ${WRKSRC}/scripts/CMakeLists.txt
+	${REINPLACE_CMD} -e 's/FreeBSD/DragonFly/' ${WRKSRC}/cmake/plugin.cmake
