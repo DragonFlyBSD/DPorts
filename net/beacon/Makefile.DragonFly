@@ -1,0 +1,2 @@
+post-patch:
+	${REINPLACE_CMD} -e 's/@HAVE_FREEBSD_TRUE@//' ${WRKSRC}/src/Makefile.in
