@@ -1,4 +1,0 @@
-
-# zrj: needs deprecated boost system api in libtorrent
-CFLAGS+= -DBOOST_SYSTEM_NEEDS_DEPRECATED
-
