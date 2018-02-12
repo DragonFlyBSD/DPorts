@@ -54,7 +54,6 @@ SHEBANG_FILES=	\
 
 LIB_DEPENDS+=	libuv.so:devel/libuv \
 		libcurl.so:ftp/curl \
-		libunwind.so:devel/libunwind \
 		libapr-1.so:devel/apr1
 
 BUILD_DEPENDS+=	rubygem-rack16>=0:www/rubygem-rack16
@@ -119,7 +118,8 @@ post-install:
 .if ${FLAVOR} == apache
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/${GEM_LIB_DIR}/buildout/apache2/mod_passenger.so
 	${MKDIR} ${STAGEDIR}${PREFIX}/${APACHEMODDIR}
-	${INSTALL} -lrs ${STAGEDIR}${PREFIX}/${GEM_LIB_DIR}/buildout/apache2/mod_passenger.so ${STAGEDIR}${PREFIX}/${APACHEMODDIR}/mod_passenger.so
+	${LN} -s ${PREFIX}/${GEM_LIB_DIR}/buildout/apache2/mod_passenger.so \
+		${STAGEDIR}${PREFIX}/${APACHEMODDIR}/mod_passenger.so
 	@${ECHO} "${APACHEMODDIR}/mod_passenger.so" >> ${TMPPLIST}
 .endif
 
