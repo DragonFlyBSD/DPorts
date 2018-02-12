@@ -1,2 +1,0 @@
-LDFLAGS+= -L${LOCALBASE}/lib
-CFLAGS+= -I${LOCALBASE}/include
