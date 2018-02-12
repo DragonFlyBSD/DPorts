@@ -1,0 +1,18 @@
+--- src/main/native/BUILD.orig	1979-12-31 23:00:00 UTC
++++ src/main/native/BUILD
+@@ -6,6 +6,7 @@ genrule(
+         "//src/conditions:freebsd": ["//tools/jdk:jni_md_header-freebsd"],
+         "//src/conditions:windows": ["//tools/jdk:jni_md_header-windows"],
+         "//src/conditions:windows_msvc": ["//tools/jdk:jni_md_header-windows"],
++        "//src/conditions:dragonfly": ["//tools/jdk:jni_md_header-dragonfly"],
+         "//conditions:default": ["//tools/jdk:jni_md_header-linux"],
+     }),
+     outs = ["jni_md.h"],
+@@ -33,6 +34,7 @@ filegroup(
+             "fsevents.cc",
+         ],
+         "//src/conditions:freebsd": ["unix_jni_freebsd.cc"],
++        "//src/conditions:dragonfly": ["unix_jni_dragonfly.cc"],
+         "//conditions:default": ["unix_jni_linux.cc"],
+     }),
+ )
