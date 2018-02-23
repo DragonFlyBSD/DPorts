@@ -402,7 +402,11 @@ FLAVORS=	${_ALL_PYTHON_FLAVORS}
 .    for _v in ${PYTHON_DEFAULT} ${PYTHON2_DEFAULT} ${PYTHON3_DEFAULT}
 _f=	py${_v:S/.//}
 .      if ${_ALL_PYTHON_FLAVORS:M${_f}} && !${FLAVORS:M${_f}}
+.if !empty(FLAVORS)
 FLAVORS:=	${FLAVORS} ${_f}
+.else
+FLAVORS:=	${_f}
+.endif
 .      endif
 .    endfor
 .  endif
@@ -666,6 +670,13 @@ PY_FUTURES=	${PYTHON_PKGNAMEPREFIX}futures>0:devel/py-futures@${PY_FLAVOR}
 .else
 PY_FUTURES=
 .endif
+
+.if ${PYTHON_REL} < 3000
+PY_BOOST_LIB=	boost_python
+.else
+PY_BOOST_LIB=	boost_python3
+.endif
+PY_BOOST=	lib${PY_BOOST_LIB}.so:devel/boost-python-libs@${PY_FLAVOR}
 
 # dependencies
 .for _stage in PATCH BUILD RUN TEST

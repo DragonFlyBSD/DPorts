@@ -5,6 +5,102 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20180220:
+  AFFECTS: users of www/nextcloud
+  AUTHOR: brnrd@FreeBSD.org
+
+  The file and directory permissions of Nextcloud have changed. Write
+  permissions have been removed from all directories except `data' and
+  `config'. For the updater to work, the app store of your installation
+  must be disabled. To disable the app-store prior to updating the
+  package:
+
+  # cd /usr/local/www/nextcloud
+  # su -m www -c "php ./occ config:system:set appstoreenabled --value=false --type=boolean"
+
+  If you've already updated your nextcloud package, you must manually edit
+  the configuration of nextcloud (config/config.php) and add
+
+  	'appstoreenabled' => false,
+
+  to the CONFIG array before the updater will run.
+
+20180214
+  AFFECTS: users of lang/ruby23
+  AUTHOR: swills@FreeBSD.org
+
+  The default ruby version has been updated from 2.3 to 2.4.
+
+  If you compile your own ports you may keep 2.3 as the default version by
+  adding the following lines to your /etc/make.conf file:
+
+  #
+  # Keep ruby 2.3 as default version
+  #
+  DEFAULT_VERSIONS+=ruby=2.3
+
+  If you wish to update to the new default version, you need to first stop any
+  software that uses ruby. Then, you will need to follow these steps, depending
+  upon how you manage your system.
+
+  If you use pkgng, simply upgrade:
+  # pkg upgrade
+
+  If you use portmaster, install new ruby, then rebuild all ports that depend
+  on ruby:
+  # portmaster -o lang/ruby24 lang/ruby23
+  # portmaster -R -r ruby-2.4
+
+  If you use portupgrade, install new ruby, then rebuild all ports that depend
+  on ruby:
+
+  # pkg delete -f ruby portupgrade
+  # make -C /usr/ports/ports-mgmt/portupgrade install clean
+  # pkg set -o lang/ruby23:lang/ruby24
+  # portupgrade -x ruby-2.4.\* -fr lang/ruby24
+
+20180209:
+  AFFECTS: users of japanese/lookup
+  AUTHOR: yasu@utahime.org
+
+  japanese/lookup is update to 1.99.96.20130920. This version is not
+  compatible with previous version 1.4.1 and incompatibility includes
+  how to setup. See info of Lookup for detail.
+
+20180209:
+  AFFECTS: users of net-mgmt/pmacct
+  AUTHOR: pi@FreeBSD.org
+
+  To allow separete pmacctd instances per interface, use
+
+    pmacctd_enable="YES"
+    pmacctd_interfaces="re1 re2"
+
+  in /etc/rc.conf. The path to the config files will be
+
+    /usr/local/etc/pmacct/<interface>
+
+20180208:
+  AFFECTS: users of mail/mailman*
+  AUTHOR: mandree@FreeBSD.org
+
+  In order to overcome complaints about mismatched checksums in
+  Mailman/Default.py, mailman now configures the DEFAULT_EMAIL_HOST
+  and DEFAULT_URL_HOST to "localhost" statically, and the rc script
+  will check this and refuse to start on next boot.
+
+  Users must configure DEFAULT_EMAIL_HOST and DEFAULT_URL_HOST in
+  Mailman/mm_cfg.py properly and add this line below:
+  add_virtualhost(DEFAULT_URL_HOST, DEFAULT_EMAIL_HOST)
+
+  A short example has been added to:
+  ${PREFIX}/local/share/doc/mailman/FreeBSD-post-install-notes.
+
+  As of 2.1.26_3, the post-install script will add back the prior
+  default settings to mm_cfg.py (instead of Defaults.py) if no
+  virtual hosts have been defined, to cover the normal use cases
+  and initial installation.
+
 20180201:
   AFFECTS: users of editors/emacs* and all ports using Emacs via USES=emacs
   AUTHOR: jrm@FreeBSD.org
@@ -33,8 +129,13 @@ you update your ports collection, before attempting any port upgrades.
      # pkg install emacs-devel_nox
 
   For those building their own packages, a flavor other than the default must be
-  specified.  For example, to build editors/emacs with the nox flavor, or to
-  build a port using Emacs with the devel_full flavor use
+  specified.  For example, to build the nox flavor of editors/emacs, or to build
+  the devel_full flavor of a port using Emacs, use
+
+     # poudriere bulk -j 11amd64 editors/emacs@nox
+     # poudriere bulk -j 11amd64 print/pdf-tools@devel_full
+
+  or
 
      # make FLAVOR=nox install
      # make FLAVOR=devel_full
@@ -1214,105 +1315,4 @@ you update your ports collection, before attempting any port upgrades.
   There is a libmtbl shared library version bump in mtbl version 1.0.0.
   The affected dependent ports have had PORTREVISION bumps, but you will
   need to rebuild any applications that link to libmtbl.
-
-20170220:
-  AFFECTS: sysutils/filebeat sysutils/metricbeat sysutils/packetbeat
-  AUTHOR: girgen@FreeBSD.org
-
-  The three elasticsearch beats ports have merged into one single port
-  systuils/beats that installs all of the above and some more. The reason is to
-  make the port more maintainable and also that the new heartbeat beat would
-  conflict with sysutils/heartbeat.
-
-20170220:
-  AFFECTS: devel/libevent2
-  AUTHOR: jbeich@FreeBSD.org
-
-  libevent2 has been renamed back to libevent as the default version.
-  If you manage out of tree ports make sure to run the following:
-
-    # pkg set -n libevent2:libevent
-    # pkg set -o devel/libevent2:devel/libevent
-
-20170218:
-  AFFECTS: users of Qt 4 and Qt 5
-  AUTHOR: kde@FreeBSD.org
-
-  Following what is already done in Qt 5, the Qt 4 ports no longer install
-  their binaries into ${LOCALBASE}/bin (which is "/usr/local/bin" in most
-  cases). Additionally, the "-qt4" suffix has been dropped from the file names
-  of the binaries that had it, such as "qmake-qt4".
-
-  The new misc/qtchooser port is now used to choose whether a Qt 4 or Qt 5
-  version of a binary such as "moc", "qmake" or "designer" will be used. By
-  default, the Qt 5 versions are preferred, but that can be changed by setting
-  the QT_SELECT environment variable to "qt4".
-
-  qtchooser also allows one to seamlessly use other Qt installations for those
-  binaries, which is particularly beneficial to people working on Qt itself or
-  who need their own checkouts.
-
-  See qtchooser(1) for more information on how to configure qtchooser.
-
-20170213:
-  AFFECTS: users of www/node*
-  AUTHOR: bradleythughes@fastmail.fm
-
-  The BUNDLED_SSL option is now enabled by default on FreeBSD 10, since
-  Node.js requires OpenSSL 1.0.2, and FreeBSD 10 is shipped with 1.0.1.
-
-20170213:
-  AFFECTS: users of graphics/libGL, graphics/libEGL, graphics/libglesv2
-  AUTHOR: kwm@FreeBSD.org
-
-  The workaround for handling conflicting libraries between the
-  nvidia-driver, libGL, libEGL and libglesv2 ports was removed. If the
-  nvidia-driver port is updated before the other ports, it will remove
-  the libraries of said ports. This is a side effect of how the workaround
-  worked. If this happens reinstalling the affected port is enough.
-
-  pkg users can run: pkg install -f libGL libEGL libglesv2
-
-20170211:
-  AFFECTS: users of x11-server/xorg-server
-  AUTHOR: rezny@FreeBSD.org
-
-  Xorg server has been updated to 1.18.4 and autodetection has changed.
-  The order in which drivers are now attempted is:
-    1) vendor/model specific driver according to PCI IDs
-    2) generic modesetting driver which requires a drm driver with KMS
-    3) scfb, the generic framebuffer driver
-    4) vesa (only if arch is x86)
-
-  This should minimize the need for xorg.conf files. It is recommended to
-  load the correct KMS driver (i915kms.ko or radeonkms.ko) via rc.conf,
-  i.e. kld_list="i915kms.ko", to ensure correct functionality. Although
-  the vendor drivers may attempt to load the correct drm driver, which
-  does not always work, the modesetting driver assumes the required KMS
-  driver is already loaded and will fail if there is none. The modesetting
-  driver is now recommended as an alternative to the Intel driver; the
-  performance is comparable and stability is better with modesetting. The
-  ATI driver continues to offer better performance than modesetting.
-
-20170203:
-  AFFECTS: users of security/libressl-devel
-  AUTHOR: brnrd@FreeBSD.org
-
-  The version 2.5.1 bumps the libcrypto, libssl and libtls shared library
-  versions. You will have to rebuild all packages that depend on
-  libressl-devel. Check the 20160811 libressl entry for more detailed
-  guidance on rebuilding.
-
-20170202:
-  AFFECTS: users of www/uwsgi
-  AUTHOR: feld@FreeBSD.org
-
-  The previous disruptive changes to uwsgi for security have been remediated
-  through creation of a dedicated uwsgi user/group and utilizing the
-  uwsgi feature to set socket ownership. The uwsgi daemon by default now
-  has the following properties:
-
-  * Process runs as uwsgi user and group (UID/GID 165)
-  * Socket mode is 660, still protecting unauthorized access from "other"
-  * Socket ownership is www:www, restoring compatibility
 

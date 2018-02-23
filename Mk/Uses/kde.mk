@@ -55,7 +55,7 @@ _KDE_RELNAME=		KDE${_KDE_VERSION}
 # === VERSIONS OF THE DIFFERENT COMPONENTS =====================================
 # Old KDE desktop.
 KDE4_VERSION?=			4.14.3
-KDE4_KDELIBS_VERSION=		4.14.30
+KDE4_KDELIBS_VERSION=		4.14.38
 KDE4_ACTIVITIES_VERSION=	4.13.3
 KDE4_WORKSPACE_VERSION=		4.11.22
 KDE4_KDEPIM_VERSION?=		4.14.10
@@ -65,7 +65,7 @@ KDE4_APPLICATIONS_VERSION?=	15.04.3
 KDE4_BRANCH?=			stable
 
 # Current KDE desktop.
-KDE_FRAMEWORKS_VERSION?=	5.42.0
+KDE_FRAMEWORKS_VERSION?=	5.43.0
 KDE_FRAMEWORKS_BRANCH?= 	stable
 
 # Current KDE applications.
@@ -117,6 +117,8 @@ CPE_VENDOR?=		kde
 PORTVERSION?=		${KDE4_VERSION}
 MASTER_SITES?=		KDE/${KDE4_BRANCH}/${KDE4_VERSION}/src
 DIST_SUBDIR?=		KDE/${KDE4_VERSION}
+PKGNAMESUFFIX=		-kde4
+CONFLICTS_INSTALL=	${PORTNAME:C/-kde4//}-4.*
 .    elif  ${_KDE_CATEGORY:Mkde-applications}
 PORTVERSION?=           ${KDE_APPLICATIONS_VERSION}
 .      if ${_KDE_VERSION:M4}
@@ -215,7 +217,7 @@ _USE_KDE4_ALL+=		akonadi attica automoc4 ontologies qimageblitz soprano \
 # The *_TIER<n> variables are internal, primarily for checking
 # that our list of frameworks matches the structure offered upstream.
 _USE_FRAMEWORKS_TIER1=	apidox archive attica5 breeze-icons codecs config \
-			coreaddons dbusaddons dnssd i18n idletime itemmodels \
+			coreaddons dbusaddons dnssd holidays i18n idletime itemmodels \
 			itemviews kirigami2 oxygen-icons5 plotting prison solid \
 			sonnet syntaxhighlighting threadweaver \
 			widgetsaddons windowsystem
@@ -231,7 +233,7 @@ _USE_FRAMEWORKS_TIER3=	activities baloo5 bookmarks configwidgets \
 			designerplugin emoticons globalaccel guiaddons \
 			iconthemes init kcmutils kdeclarative \
 			kded kdesu kdewebkit kio newstuff notifyconfig parts \
-			people plasma-framework runner service texteditor \
+			people plasma-framework purpose runner service texteditor \
 			textwidgets wallet xmlgui xmlrpcclient
 
 _USE_FRAMEWORKS_TIER4= 	frameworkintegration
@@ -252,45 +254,45 @@ _USE_FRAMEWORKS_ALL=	ecm \
 _USE_KDE5_ALL=		${_USE_FRAMEWORKS_ALL}
 
 # ====================== kde4 components =======================================
-baloo_PORT=		sysutils/baloo
+baloo_PORT=		sysutils/baloo-kde4
 baloo_LIB=		libbaloocore.so
 
-baloo-widgets_PORT=	sysutils/baloo-widgets
+baloo-widgets_PORT=	sysutils/baloo-widgets-kde4
 baloo-widgets_LIB=	libbaloowidgets.so
 
-baseapps_PORT=		x11/kde4-baseapps
+baseapps_PORT=		x11/kde-baseapps-kde4
 baseapps_PATH=		${KDE_PREFIX}/bin/kfmclient
 baseapps_TYPE=		run
 
 kactivities_PORT=	x11/kactivities
 kactivities_LIB=	libkactivities.so
 
-kate_PORT=		editors/kate
+kate_PORT=		editors/kate-kde4
 kate_LIB=		libkateinterfaces.so
 
-kdelibs_PORT=		x11/kdelibs4
+kdelibs_PORT=		x11/kdelibs-kde4
 kdelibs_LIB=		libkdecore.so
 
-kfilemetadata_PORT=	sysutils/kfilemetadata
+kfilemetadata_PORT=	sysutils/kfilemetadata-kde4
 kfilemetadata_LIB=	libkfilemetadata.so
 
-korundum_PORT=		devel/ruby-korundum
+korundum_PORT=		devel/ruby-korundum-kde4
 korundum_PATH=		${KDE_PREFIX}/lib/kde4/krubypluginfactory.so
 korundum_TYPE=		run
 
-libkcddb_PORT=		audio/libkcddb
+libkcddb_PORT=		audio/libkcddb-kde4
 libkcddb_LIB=		libkcddb.so
 
-libkcompactdisc_PORT=	audio/libkcompactdisc
+libkcompactdisc_PORT=	audio/libkcompactdisc-kde4
 libkcompactdisc_LIB=	libkcompactdisc.so
 
 libkdcraw_PORT=		graphics/libkdcraw-kde4
 libkdcraw_LIB=		libkdcraw.so
 
-libkdeedu_PORT=		misc/libkdeedu
+libkdeedu_PORT=		misc/libkdeedu-kde4
 libkdeedu_LIB=		libkeduvocdocument.so
 
-libkdegames_PORT=	games/libkdegames
+libkdegames_PORT=	games/libkdegames-kde4
 libkdegames_LIB=	libkdegames.so
 
 libkexiv2_PORT=		graphics/libkexiv2-kde4
@@ -299,59 +301,59 @@ libkexiv2_LIB=		libkexiv2.so
 libkipi_PORT=		graphics/libkipi-kde4
 libkipi_LIB=		libkipi.so
 
-libkonq_PORT=		x11/libkonq
+libkonq_PORT=		x11/libkonq-kde4
 libkonq_LIB=		libkonq.so
 
-libksane_PORT=		graphics/libksane
+libksane_PORT=		graphics/libksane-kde4
 libksane_LIB=		libksane.so
 
-marble_PORT=		astro/marble
+marble_PORT=		astro/marble-kde4
 marble_LIB=		libmarblewidget.so
 
-nepomuk-core_PORT=	sysutils/nepomuk-core
+nepomuk-core_PORT=	sysutils/nepomuk-core-kde4
 nepomuk-core_LIB=	libnepomukcore.so
 
-nepomuk-widgets_PORT=	sysutils/nepomuk-widgets
+nepomuk-widgets_PORT=	sysutils/nepomuk-widgets-kde4
 nepomuk-widgets_LIB=	libnepomukwidgets.so
 
-okular_PORT=		graphics/okular
+okular_PORT=		graphics/okular-kde4
 okular_LIB=		libokularcore.so
 
-perlkde_PORT=		devel/p5-perlkde
+perlkde_PORT=		devel/p5-perlkde-kde4
 perlkde_PATH=		${KDE_PREFIX}/lib/kde4/kperlpluginfactory.so
 perlkde_TYPE=		run
 
-perlqt_PORT=		devel/p5-perlqt
+perlqt_PORT=		devel/p5-perlqt-kde4
 perlqt_PATH=		${KDE_PREFIX}/bin/puic4
 
-pimlibs_PORT=		deskutils/kdepimlibs4
+pimlibs_PORT=		deskutils/kdepimlibs-kde4
 pimlibs_LIB=		libkpimutils.so
 
-pykde4_PORT=		devel/py-pykde4
+pykde4_PORT=		devel/py-pykde4-kde4
 pykde4_PATH=		${KDE_PREFIX}/lib/kde4/kpythonpluginfactory.so
 pykde4_TYPE=		run
 
-pykdeuic4_PORT=		devel/py-pykdeuic4
+pykdeuic4_PORT=		devel/py-pykdeuic4-kde4
 pykdeuic4_PATH=		${LOCALBASE}/bin/pykdeuic4
 pykdeuic4_TYPE=		run
 
-qtruby_PORT=		devel/ruby-qtruby
+qtruby_PORT=		devel/ruby-qtruby-kde4
 qtruby_LIB=		libqtruby4shared.so
 
-runtime_PORT=		x11/kde4-runtime
+runtime_PORT=		x11/kde-runtime-kde4
 runtime_PATH=		${KDE_PREFIX}/bin/knotify4
 runtime_TYPE=		run
 
-smokegen_PORT=		devel/smokegen
+smokegen_PORT=		devel/smokegen-kde4
 smokegen_LIB=		libsmokebase.so
 
-smokekde_PORT=		devel/smokekde
+smokekde_PORT=		devel/smokekde-kde4
 smokekde_LIB=		libsmokekdecore.so
 
-smokeqt_PORT=		devel/smokeqt
+smokeqt_PORT=		devel/smokeqt-kde4
 smokeqt_LIB=		libsmokeqtcore.so
 
-workspace_PORT=		x11/kde4-workspace
+workspace_PORT=		x11/kde-workspace-kde4
 workspace_LIB=		libkworkspace.so
 
 # Non-Software Compilation components
@@ -454,6 +456,9 @@ globalaccel_LIB=	libKF5GlobalAccel.so
 guiaddons_PORT=		x11-toolkits/kf5-kguiaddons
 guiaddons_LIB=		libKF5GuiAddons.so
 
+holidays_PORT=		net/kf5-kholidays
+holidays_LIB=		libKF5Holidays.so
+
 i18n_PORT=		devel/kf5-ki18n
 i18n_LIB=		libKF5I18n.so
 
@@ -553,6 +558,9 @@ prison_LIB=		libKF5Prison.so
 
 pty_PORT=		devel/kf5-kpty
 pty_LIB=		libKF5Pty.so
+
+purpose_PORT=		misc/kf5-purpose
+purpose_LIB=		libKF5Purpose.so
 
 runner_PORT=		x11/kf5-krunner
 runner_LIB=		libKF5Runner.so

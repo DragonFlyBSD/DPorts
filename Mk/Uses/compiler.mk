@@ -188,10 +188,10 @@ CC=	clang
 CXX=	clang++
 CHOSEN_COMPILER_TYPE=	clang
 .else
-BUILD_DEPENDS+=	${LOCALBASE}/bin/clang38:lang/clang38
-CPP=	${LOCALBASE}/bin/clang-cpp38
-CC=	${LOCALBASE}/bin/clang38
-CXX=	${LOCALBASE}/bin/clang++38
+BUILD_DEPENDS+=	${LOCALBASE}/bin/clang50:devel/llvm50
+CPP=	${LOCALBASE}/bin/clang-cpp50
+CC=	${LOCALBASE}/bin/clang50
+CXX=	${LOCALBASE}/bin/clang++50
 CHOSEN_COMPILER_TYPE=	clang
 .endif
 .endif
@@ -210,11 +210,11 @@ CC=	clang
 CXX=	clang++
 CHOSEN_COMPILER_TYPE=	clang
 .else
-BUILD_DEPENDS+=	${LOCALBASE}/bin/clang38:lang/clang38
+BUILD_DEPENDS+=	${LOCALBASE}/bin/clang50:devel/llvm50
 CHOSEN_COMPILER_TYPE=	clang
-CPP=	${LOCALBASE}/bin/clang-cpp38
-CC=	${LOCALBASE}/bin/clang38
-CXX=	${LOCALBASE}/bin/clang++38
+CPP=	${LOCALBASE}/bin/clang-cpp50
+CC=	${LOCALBASE}/bin/clang50
+CXX=	${LOCALBASE}/bin/clang++50
 .endif
 .endif
 .endif
@@ -232,11 +232,11 @@ CC=	clang
 CXX=	clang++
 CHOSEN_COMPILER_TYPE=	clang
 .else
-BUILD_DEPENDS+=	${LOCALBASE}/bin/clang38:lang/clang38
+BUILD_DEPENDS+=	${LOCALBASE}/bin/clang50:devel/llvm50
 CHOSEN_COMPILER_TYPE=	clang
-CPP=	${LOCALBASE}/bin/clang-cpp38
-CC=	${LOCALBASE}/bin/clang38
-CXX=	${LOCALBASE}/bin/clang++38
+CPP=	${LOCALBASE}/bin/clang-cpp50
+CC=	${LOCALBASE}/bin/clang50
+CXX=	${LOCALBASE}/bin/clang++50
 .endif
 .endif
 .endif
