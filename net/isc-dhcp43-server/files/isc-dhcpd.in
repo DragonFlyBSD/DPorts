@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $FreeBSD: head/net/isc-dhcp43-server/files/isc-dhcpd.in 458489 2018-01-08 22:33:23Z zi $
+# $FreeBSD: head/net/isc-dhcp43-server/files/isc-dhcpd.in 461710 2018-02-13 15:39:44Z zi $
 #
 # PROVIDE: dhcpd
 # REQUIRE: DAEMON
@@ -20,7 +20,7 @@
 name="$file" ;
 
 case $0 in
-/etc/rc*)
+/etc/rc*|/usr/sbin/service)
 	# during boot (shutdown) $0 is /etc/rc (/etc/rc.shutdown),
 	# so get the name of the script from $_file
 	name=$_file
