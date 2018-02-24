@@ -3,6 +3,7 @@
 
 PORTNAME=	wget
 DISTVERSION=	1.19.4
+PORTREVISION=	1
 CATEGORIES=	ftp www ipv6
 MASTER_SITES=	GNU
 EXTRACT_SUFX=	.tar.lz
@@ -97,10 +98,4 @@ post-patch-DOCS-off:
 		-e '/^install-data-am:/ s, install-info-am,,' \
 		${WRKSRC}/doc/Makefile.in
 
-.include <bsd.port.pre.mk>
-
-.if ${PORT_OPTIONS:MOPENSSL} && ${SSL_DEFAULT:Mopenssl-devel}
-BROKEN=		Does not build with openssl-devel
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
