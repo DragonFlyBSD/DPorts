@@ -2,6 +2,7 @@
 
 PORTNAME=	cppcms
 PORTVERSION=	1.2.0
+PORTREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	SF/cppcms/${PORTNAME}/${PORTVERSION}
 
@@ -14,7 +15,7 @@ LIB_DEPENDS=	libpcre.so:devel/pcre
 
 BROKEN_powerpc64=	Does not build: error: 'localeconv_l' was not declared in this scope
 
-USES=		cmake python:2 shebangfix tar:bzip2 ssl
+USES=		cmake python:2.7 shebangfix tar:bzip2 ssl
 USE_LDCONFIG=	yes
 SHEBANG_FILES=	bin/cppcms_tmpl_cc
 
@@ -25,6 +26,8 @@ ICU_DESC=		ICU unicode support
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MICU}
+USES+=		compiler:c++11-lib
+USE_CXXSTD=	gnu++11
 LIB_DEPENDS+=	libicuuc.so:devel/icu
 CMAKE_ARGS+=	-DDISABLE_ICONV:BOOL=ON
 .else
@@ -38,6 +41,9 @@ CMAKE_ARGS+=	-DDISABLE_GCRYPT:BOOL=OFF
 .else
 CMAKE_ARGS+=	-DDISABLE_GCRYPT:BOOL=ON
 .endif
+
+post-patch:
+	${REINPLACE_CMD}  -e 's/python2/${PYTHON_VERSION}/' ${WRKSRC}/CMakeLists.txt
 
 post-install:
 	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
