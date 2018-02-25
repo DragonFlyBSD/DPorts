@@ -1,20 +1,24 @@
 #!/bin/sh
 #
-# $FreeBSD: head/security/acme.sh/files/pkg-install.in 454856 2017-11-24 23:17:50Z dbaio $
+# $FreeBSD: head/security/acme.sh/files/pkg-install.in 462048 2018-02-16 17:23:28Z dvl $
 
 if [ "$2" = "POST-INSTALL" ]; then
     if [ ! -d ~acme/.acme.sh ]; then
         /usr/bin/install -d -o acme -g acme -m 750 ~acme/.acme.sh
     fi
 
-    if [ ! -d ~acme/certs ]; then    
+    if [ ! -d ~acme/certs ]; then
         /usr/bin/install -d -o acme -g acme -m 750 ~acme/certs
     fi
-    
+
+    if [ ! -d ~acme/.acme.sh/deploy ]; then
+        /bin/ln -sf %%EXAMPLESDIR%%/deploy ~acme/.acme.sh
+    fi
+
     if [ ! -d ~acme/.acme.sh/dnsapi ]; then
         /bin/ln -sf %%EXAMPLESDIR%%/dnsapi ~acme/.acme.sh
     fi
-    
+
     if [ ! -f ~acme/.acme.sh/account.conf.sample ]; then
 
         /bin/cat << EOF >> ~acme/.acme.sh/account.conf.sample
