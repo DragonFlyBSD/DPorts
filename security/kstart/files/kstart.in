@@ -1,8 +1,8 @@
 #!/bin/sh
-# $FreeBSD: head/security/kstart/files/kstart.in 399672 2015-10-19 13:42:11Z zi $
+# $FreeBSD: head/security/kstart/files/kstart.in 461163 2018-02-07 18:24:16Z zi $
 
 # PROVIDE: kstart
-# REQUIRE: DAEMON LOGIN
+# REQUIRE: NETWORKING
 # KEYWORD: shutdown
 
 # Add the following lines to /etc/rc.conf to enable kstart:
