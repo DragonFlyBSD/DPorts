@@ -1,6 +1,0 @@
-FILEUTIL=	${WRKSRC}/src/github.com/syncthing/syncthing/vendor/github.com/cznic/fileutil
-
-dfly-patch:
-	${CP} ${FILEUTIL}/fileutil_freebsd.go \
-		${FILEUTIL}/fileutil_dragonfly.go
-	
