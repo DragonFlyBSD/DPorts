@@ -1,6 +1,6 @@
---- Makefile.bak	2015-09-17 17:10:59.000000000 +0300
-+++ Makefile
-@@ -1240,7 +1240,7 @@ endif
+--- Makefile.ship.intermediate	2018-02-26 16:52:44 UTC
++++ Makefile.ship
+@@ -1339,7 +1339,7 @@ endif
  #	See HOWTO.INSTALL for more information.                        #
  ########################################################################
  
