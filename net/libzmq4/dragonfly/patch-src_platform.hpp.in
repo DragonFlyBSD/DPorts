@@ -1,6 +1,6 @@
---- src/platform.hpp.in.orig	2017-02-18 18:06:01 UTC
+--- src/platform.hpp.in.orig	2017-12-13 13:37:26 UTC
 +++ src/platform.hpp.in
-@@ -222,9 +222,12 @@
+@@ -231,9 +231,12 @@
  /* Whether EFD_CLOEXEC is defined and functioning. */
  #undef ZMQ_HAVE_EVENTFD_CLOEXEC
  
@@ -11,6 +11,6 @@
 +/* Have DragonFly OS */
 +#undef ZMQ_HAVE_DRAGONFLY
 +
- /* Have GNU/Hurd OS */
- #undef ZMQ_HAVE_GNU
+ /* Whether getrandom is supported. */
+ #undef ZMQ_HAVE_GETRANDOM
  
