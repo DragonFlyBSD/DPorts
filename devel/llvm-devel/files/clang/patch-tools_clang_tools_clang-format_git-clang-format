@@ -1,5 +1,5 @@
 
-$FreeBSD: head/devel/llvm-devel/files/clang-patch-tools_clang_tools_clang-format_git-clang-format 450182 2017-09-20 01:08:57Z brooks $
+$FreeBSD: head/devel/llvm-devel/files/clang/patch-tools_clang_tools_clang-format_git-clang-format 461160 2018-02-07 18:03:24Z brooks $
 
 --- tools/clang/tools/clang-format/git-clang-format.orig
 +++ tools/clang/tools/clang-format/git-clang-format

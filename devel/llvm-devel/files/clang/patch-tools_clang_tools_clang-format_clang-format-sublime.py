@@ -1,5 +1,5 @@
 
-$FreeBSD: head/devel/llvm-devel/files/clang-patch-tools_clang_tools_clang-format_clang-format-sublime.py 450182 2017-09-20 01:08:57Z brooks $
+$FreeBSD: head/devel/llvm-devel/files/clang/patch-tools_clang_tools_clang-format_clang-format-sublime.py 461160 2018-02-07 18:03:24Z brooks $
 
 --- tools/clang/tools/clang-format/clang-format-sublime.py.orig
 +++ tools/clang/tools/clang-format/clang-format-sublime.py
