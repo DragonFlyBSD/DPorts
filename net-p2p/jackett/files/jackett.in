@@ -2,7 +2,7 @@
 #
 # Author: Mark Felder <feld@FreeBSD.org>
 #
-# $FreeBSD: head/net-p2p/jackett/files/jackett.in 447248 2017-08-03 16:47:31Z feld $
+# $FreeBSD: head/net-p2p/jackett/files/jackett.in 462611 2018-02-22 14:41:49Z wen $
 #
 
 # PROVIDE: jackett
@@ -38,6 +38,9 @@ start_precmd=jackett_precmd
 jackett_precmd()
 {
 	export XDG_CONFIG_HOME=${jackett_data_dir}
+
+	# avoid root user warning
+	export USER=${jackett_user}
 
 	if [ ! -d ${jackett_data_dir} ]; then
 		install -d -o ${jackett_user} ${jackett_data_dir}
