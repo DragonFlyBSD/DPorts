@@ -1,0 +1,4 @@
+BUILD_DEPENDS+= ${LOCALBASE}/bin/update-mime-database:misc/shared-mime-info
+LIB_DEPENDS+=	libraptor2.so:textproc/raptor2 \
+		libxml2.so:textproc/libxml2 \
+		libyajl.so:devel/yajl
