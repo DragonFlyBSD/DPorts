@@ -1,6 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	gui
+PORTREVISION=	2
 CATEGORIES=	x11-toolkits devel python
 
 MAINTAINER=	kde@FreeBSD.org
