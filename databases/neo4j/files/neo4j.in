@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/databases/neo4j/files/neo4j.in 447753 2017-08-11 10:28:28Z jonathan $
+# $FreeBSD: head/databases/neo4j/files/neo4j.in 461285 2018-02-09 02:40:11Z jonathan $
 #
 # PROVIDE: neo4j
 # REQUIRE: DAEMON
@@ -28,11 +28,11 @@ status_cmd="$command status"
 
 neo4j_prestart()
 {
-	NEO4J_DATA=%%DATADIR%%
+	NEO4J_DATA=%%DBDIR%%
 	NEO4J_LIB=%%PREFIX%%/neo4j/lib
-	NEO4J_LOGS=/var/log/neo4j
+	NEO4J_LOGS=%%LOGDIR%%
 	NEO4J_PLUGINS=${NEO4J_LIB}/plugins
-	NEO4J_RUN=/var/run/neo4j
+	NEO4J_RUN=%%RUNDIR%%
 	mkdir -p ${NEO4J_LOGS} ${NEO4J_RUN}
 }
 
