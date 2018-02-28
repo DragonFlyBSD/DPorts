@@ -1,0 +1,4 @@
+LDFLAGS+= -lz -lutil
+
+WALLPAPERS_RUN_DEPENDS=	${KDE_PREFIX}/share/wallpapers/Horos/metadata.desktop:x11-themes/kde-wallpapers-kde4 \
+			dragonfly-wallpapers>0:x11-themes/dragonfly-wallpapers
