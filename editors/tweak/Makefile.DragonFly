@@ -1,0 +1,1 @@
+MAKE_ARGS=	LIBS="-L${NCURSESLIB} -lncurses"
