@@ -1,3 +1,0 @@
-USES+= alias
-CFLAGS+= -D__FreeBSD_version=1300000
-CFLAGS+= -DMAXNAMLEN=255
