@@ -1,2 +1,0 @@
-BUILD_DEPENDS+=	tradcpp:devel/tradcpp
-CPP:=		tradcpp
