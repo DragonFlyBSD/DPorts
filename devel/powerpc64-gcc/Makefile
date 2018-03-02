@@ -28,7 +28,7 @@ PLIST_SUB=	TARGETARCH=${PKGNAMEPREFIX:C/-//g} \
 .if empty(GCC_TARGET)
 # We are building for a FreeBSD target
 GCC_TARGET?=	${PKGNAMEPREFIX}unknown-freebsd10
-BU_PREFIX?=	${PKGNAMEPREFIX}freebsd
+BU_PREFIX?=	${PKGNAMEPREFIX}unknown-freebsd10
 EXTRA_PATCHES+= ${FILESDIR}/freebsd-format-extensions
 PLIST_SUB+=	OPSYS=freebsd OSREL=10
 .else
