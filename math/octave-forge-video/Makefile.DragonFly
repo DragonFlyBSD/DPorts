@@ -1,1 +1,1 @@
-LDFLAGS+= -L${LOCALBASE}/lib
+IGNORE=		new(?) issue with libmd during configure
