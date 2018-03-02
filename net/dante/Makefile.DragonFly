@@ -1,4 +1,4 @@
 CFLAGS+= -Wno-unused-but-set-variable
 
 # configure scripts relies on traditional cpp behaviour
-CPP:=cpp -E -traditional
+CPP:=	cpp -P
