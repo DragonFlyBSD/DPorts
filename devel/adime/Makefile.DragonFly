@@ -1,3 +1,0 @@
-dfly-patch:
-	${REINPLACE_CMD} -e '/(LIB_FLAGS)/ s/$$/ -lm/' \
-		${WRKSRC}/misc/makefile.uni
