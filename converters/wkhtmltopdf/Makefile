@@ -15,7 +15,7 @@ LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2 \
 		libpng.so:graphics/png
 
-USES=		gmake iconv jpeg perl5 pkgconfig ssl:build
+USES=		compiler:env gmake iconv jpeg perl5 pkgconfig ssl:build
 USE_XORG=	x11 xext xrender
 USE_PERL5=	build
 USE_LDCONFIG=	yes
@@ -86,4 +86,12 @@ post-install:
 		${STAGEDIR}${PREFIX}/bin/wkhtmltopdf \
 		${STAGEDIR}${PREFIX}/lib/libwkhtmltox.so.0.12.4
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if ${OPSYS} == FreeBSD
+.if ${COMPILER_TYPE:Mclang} && ${COMPILER_VERSION} >= 60
+BROKEN=		Does not build
+.endif
+.endif
+
+.include <bsd.port.post.mk>
