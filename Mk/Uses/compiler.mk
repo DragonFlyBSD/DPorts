@@ -37,6 +37,9 @@ compiler_ARGS=	env
 
 VALID_ARGS=	c++11-lib c++11-lang c++14-lang c11 features openmp env nestedfct c++0x gcc-c++11-lib
 
+_CC_hash:=	${CC:hash}
+_CXX_hash:=	${CXX:hash}
+
 .if ${compiler_ARGS} == gcc-c++11-lib
 _COMPILER_ARGS+=	features gcc-c++11-lib
 .elif ${compiler_ARGS} == c++11-lib
@@ -67,11 +70,17 @@ _COMPILER_ARGS+=	features
 .endif
 
 .if ${CC} == cc 
-# This is the DragonFly base compiler, we know it's gcc (for now)
+# This is the DragonFly base compiler, we know it's gcc
 COMPILER_TYPE=		gcc
 COMPILER_VERSION=	53
 .else
+.if defined(_CCVERSION_${_CC_hash})
+_CCVERSION=	${_CCVERSION_${_CC_hash}}
+.else
 _CCVERSION!=	${CC} --version
+_CCVERSION_${_CC_hash}=	${_CCVERSION}
+PORTS_ENV_VARS+=	_CCVERSION_${_CC_hash}
+.endif
 COMPILER_VERSION=	${_CCVERSION:M[0-9].[0-9]*:tW:C/([0-9]).([0-9]).*/\1\2/g}
 .if ${_CCVERSION:Mclang}
 COMPILER_TYPE=	clang
@@ -82,7 +91,10 @@ COMPILER_TYPE=	gcc
 
 ALT_COMPILER_VERSION=	0
 ALT_COMPILER_TYPE=	none
-_ALTCCVERSION=	
+_ALTCCVERSION=		none
+.if defined(_ALTCCVERSION_${_CC_hash})
+_ALTCCVERSION=	${_ALTCCVERSION_${_CC_hash}}
+.else
 .if ${COMPILER_TYPE} == gcc && exists(/usr/bin/clang)
 .if ${ARCH} == amd64 || ${ARCH} == i386 # clang often non-default for a reason
 _ALTCCVERSION!=	/usr/bin/clang --version
@@ -90,11 +102,14 @@ _ALTCCVERSION!=	/usr/bin/clang --version
 .elif ${COMPILER_TYPE} == clang && exists(/usr/bin/gcc)
 _ALTCCVERSION!=	/usr/bin/gcc --version
 .endif
+_ALTCCVERSION_${_CC_hash}=	${_ALTCCVERSION}
+PORTS_ENV_VARS+=		_ALTCCVERSION_${_CC_hash}
+.endif
 
 ALT_COMPILER_VERSION=	${_ALTCCVERSION:M[0-9].[0-9]*:tW:C/([0-9]).([0-9]).*/\1\2/g}
 .if ${_ALTCCVERSION:Mclang}
 ALT_COMPILER_TYPE=	clang
-.elif !empty(_ALTCCVERSION)
+.elif ${_ALTCCVERSION} != none
 ALT_COMPILER_TYPE=	gcc
 .endif
 
@@ -121,7 +136,13 @@ CHOSEN_COMPILER_TYPE=	gcc
 COMPILER_FEATURES=	libstdc++ c89 c99 c11 gnu89 gnu99 gnu11 c++98 \
 			c++0x c++11 c++14 gnu++98 gnu++11 dragonfly
 .  else
+.if defined(_CXXINTERNAL_${_CXX_hash})
+_CXXINTERNAL=	${_CXXINTERNAL_${_CXX_hash}}
+.else
 _CXXINTERNAL!=	${CXX} -\#\#\# /dev/null 2>&1
+_CXXINTERNAL_${_CXX_hash}=	${_CXXINTERNAL}
+PORTS_ENV_VARS+=	_CXXINTERNAL_${_CXX_hash}
+.endif
 .if ${_CXXINTERNAL:M\"-lc++\"}
 COMPILER_FEATURES=	libc++
 .else
@@ -136,7 +157,13 @@ _LANG=c
 .if ${CXXSTD:M${std}}
 _LANG=c++
 .endif
-OUTPUT_${std}!=	echo | ${CC} -std=${std} -c -x ${_LANG} /dev/null -o /dev/null 2>&1; echo
+.if defined(OUTPUT_${std:hash}_${_CC_hash})
+OUTPUT_${std}=	${OUTPUT_${std:hash}_${_CC_hash}}
+.else
+OUTPUT_${std}!=	${CC} -std=${std} -c -x ${_LANG} /dev/null -o /dev/null 2>&1; echo yes
+OUTPUT_${std:hash}_${_CC_hash}=	${OUTPUT_${std}}
+PORTS_ENV_VARS+=		OUTPUT_${std:hash}_${_CC_hash}
+.endif
 .if !${OUTPUT_${std}:M*error*}
 COMPILER_FEATURES+=	${std}
 .endif
