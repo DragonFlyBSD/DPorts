@@ -1,0 +1,3 @@
+USES:=		${USES:Ncmake} cmake:noninja
+# libmd is not needed if internal c++ implementation of md5 is used
+CMAKE_ARGS:=	${CMAKE_ARGS:N-DPLATFORM_LIBS=md}
