@@ -1,10 +1,10 @@
---- lib/cpp/src/thrift/transport/TSSLSocket.h.orig	2012-10-12 00:58:06.000000000 +0000
+--- lib/cpp/src/thrift/transport/TSSLSocket.h.orig	2017-12-03 19:11:36 UTC
 +++ lib/cpp/src/thrift/transport/TSSLSocket.h
-@@ -23,6 +23,7 @@
- #include <string>
- #include <boost/shared_ptr.hpp>
+@@ -24,6 +24,7 @@
+ #include <thrift/transport/TSocket.h>
+ 
  #include <openssl/ssl.h>
 +#include <sys/socket.h>
+ #include <string>
  #include <thrift/concurrency/Mutex.h>
- #include "TSocket.h"
- 
+ #include <thrift/stdcxx.h>
