@@ -1,0 +1,3 @@
+dfly-patch:
+	${REINPLACE_CMD} -e 's|\.\*BSD|DragonFly|' ${WRKSRC}/CMakeLists.txt
+
