@@ -1,0 +1,10 @@
+--- native/Makefile.intermediate	2018-03-08 02:47:39 UTC
++++ native/Makefile
+@@ -46,6 +46,7 @@ OS=$(shell uname | sed -e 's/CYGWIN.*/wi
+                         -e 's/SunOS.*/solaris/g' \
+                         -e 's/NetBSD/netbsd/g' \
+                         -e 's/GNU\/kFreeBSD/kfreebsd/g' \
++                        -e 's/DragonFly/freebsd/g' \
+                         -e 's/FreeBSD/freebsd/g' \
+                         -e 's/OpenBSD/openbsd/g' \
+                         -e 's/Darwin.*/darwin/g' \
