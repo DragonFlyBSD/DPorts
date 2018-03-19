@@ -2,7 +2,7 @@
 
 PORTNAME=	openjdk
 PORTVERSION=	${JDK_MAJOR_VERSION}.${JDK_UPDATE_VERSION}.${JDK_BUILD_NUMBER:S/^0//}
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	java devel
 MASTER_SITES=	http://download.java.net/openjdk/jdk${JDK_MAJOR_VERSION}/promoted/b${DIST_BUILD_NUMBER}/:jdk \
 		https://adopt-openjdk.ci.cloudbees.com/job/jtreg/${JTREG_JENKINS_BUILD}/artifact/:jtreg \
@@ -236,7 +236,7 @@ CONFIGURE_ARGS+=	--disable-ccache \
 CONFIGURE_SCRIPT=	../../configure
 CONFIGURE_WRKSRC=	${WRKSRC}/common/autoconf
 
-OPTIONS_DEFINE=		ALSA POLICY TZUPDATE X11
+OPTIONS_DEFINE=		ALSA POLICY TZUPDATE X11 FONTCONFIG
 OPTIONS_DEFINE_armv6=	FPUHACK
 OPTIONS_DEFINE_armv7=	FPUHACK
 OPTIONS_DEFAULT=	POLICY TZUPDATE X11
@@ -263,6 +263,7 @@ X11_MAKE_ENV_OFF=	BUILD_HEADLESS_ONLY=1 \
 			MAKEFLAGS=X_CFLAGS="-I${LOCALBASE}/include"
 X11_MAKE_ENV_ON=	MAKEFLAGS=""
 X11_USE=		XORG=x11,xext,xi,xrender,xt,xtst
+FONTCONFIG_IMPLIES=	X11
 
 JAVAVMS_COMMENT=	OpenJDK${JDK_MAJOR_VERSION}
 
@@ -388,6 +389,9 @@ post-extract:
 post-extract-TEST-on:
 	@${LN} -sf ${WRKDIR}/jtreg/linux/bin ${WRKDIR}/jtreg/
 
+do-patch-FONTCONFIG-on:
+	@${PATCH} -d ${PATCH_WRKSRC} < ${PATCHDIR}/fontconfig.patch
+
 post-patch:
 	@${FIND} ${WRKSRC} -name '*.orig' -delete
 	@${RMDIR} ${WRKSRC}/jdk/src/macosx/classes/java/net \
@@ -400,6 +404,7 @@ post-patch:
 	    -e 's|%%OBJCOPY%%|${OBJCOPY}|' \
 	    ${WRKSRC}/configure \
 	    ${WRKSRC}/common/autoconf/toolchain.m4 \
+	    ${WRKSRC}/jdk/make/lib/Awt2dLibraries.gmk \
 	    ${WRKSRC}/jdk/src/share/classes/com/sun/java/swing/plaf/gtk/Metacity.java \
 	    ${WRKSRC}/jdk/src/share/classes/sun/print/PSPrinterJob.java \
 	    ${WRKSRC}/jdk/src/solaris/classes/sun/nio/fs/BsdFileSystemProvider.java
