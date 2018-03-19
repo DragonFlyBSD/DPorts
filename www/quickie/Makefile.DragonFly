@@ -1,4 +1,0 @@
-
-# zrj: these to work around missing -I option in base soelim for building DOCS
-BUILD_DEPENDS+= ${LOCALBASE}/bin/groff:textproc/groff
-CONFIGURE_ARGS+= SOELIM=${LOCALBASE}/bin/soelim GROFF=${LOCALBASE}/bin/groff
