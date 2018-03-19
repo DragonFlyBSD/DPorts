@@ -434,8 +434,6 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #				  ${PREFIX}/etc/rc.d if ${PREFIX} is not /usr, otherwise they
 #				  will be installed in /etc/rc.d/ and added to the packing list.
 ##
-# USE_APACHE	- If set, this port relies on an apache webserver.
-#
 # Conflict checking.  Use if your port cannot be installed at the same time as
 # another package.
 #
@@ -1399,8 +1397,13 @@ USES+=	php
 .include "${PORTSDIR}/Mk/bsd.ocaml.mk"
 .endif
 
-.if defined(USE_APACHE) || defined(USE_APACHE_BUILD) || defined(USE_APACHE_RUN)
-.include "${PORTSDIR}/Mk/bsd.apache.mk"
+.if defined(USE_APACHE_BUILD)
+USES+=	apache:build,${USE_APACHE_BUILD:C/2([0-9])/2.\1/g}
+.elif defined(USE_APACHE_RUN)
+USES+=	apache:run,${USE_APACHE_RUN:C/2([0-9])/2.\1/g}
+.elif defined(USE_APACHE)
+USE_APACHE:=	${USE_APACHE:S/common/server,/}
+USES+=	apache:${USE_APACHE:C/2([0-9])/2.\1/g}
 .endif
 
 .if defined(USE_QT4) || defined(USE_QT5)
@@ -1493,6 +1496,11 @@ IGNORE=	Unknown flavor '${FLAVOR}', possible flavors: ${FLAVORS}.
 
 .if !empty(FLAVORS) && empty(FLAVOR)
 FLAVOR=	${FLAVORS:[1]}
+.endif
+
+# Reorder FLAVORS so the default is first if set by the port.
+.if empty(_FLAVOR) && !empty(FLAVORS) && !empty(FLAVOR)
+FLAVORS:=	${FLAVOR} ${FLAVORS:N${FLAVOR}}
 .endif
 
 .if !empty(FLAVOR) && !defined(_DID_FLAVORS_HELPERS)
@@ -1685,6 +1693,11 @@ DEV_WARNING+=	"You are using USE_GITHUB and WRKSRC is set which is wrong.  Set G
 .endif
 WRKSRC?=		${WRKDIR}/${GH_PROJECT}-${GH_TAGNAME_EXTRACT}
 .endif
+
+.if !default(IGNORE_MASTER_SITE_GITLAB) && defined(USE_GITLAB) && empty(USE_GITLAB:Mnodefault)
+WRKSRC?=		${WRKDIR}/${GL_PROJECT}-${GL_COMMIT}-${GL_COMMIT}
+.endif
+
 # If the distname is not extracting into a specific subdirectory, have the
 # ports framework force extract into a subdirectory so that metadata files
 # do not get in the way of the build, and vice-versa.
@@ -1980,10 +1993,6 @@ _USES_POST+=	php
 
 .if defined(USE_WX) || defined(USE_WX_NOT)
 .include "${PORTSDIR}/Mk/bsd.wx.mk"
-.endif
-
-.if defined(USE_APACHE) || defined(USE_APACHE_BUILD) || defined(USE_APACHE_RUN)
-.include "${PORTSDIR}/Mk/bsd.apache.mk"
 .endif
 
 .if defined(USE_FPC) || defined(WANT_FPC_BASE) || defined(WANT_FPC_ALL)
@@ -2638,6 +2647,7 @@ CONFIGURE_LOG?=		config.log
 # A default message to print if do-configure fails.
 CONFIGURE_FAIL_MESSAGE?=	"Please report the problem to ${MAINTAINER} [maintainer] and attach the \"${CONFIGURE_WRKSRC}/${CONFIGURE_LOG}\" including the output of the failure of your make command. Also, it might be a good idea to provide an overview of all packages installed on your system (e.g. a ${PKG_INFO} -Ea)."
 
+CONFIG_SITE?=		${PORTSDIR}/Templates/config.site
 .if defined(GNU_CONFIGURE)
 # Maximum command line length
 .if !defined(CONFIGURE_MAX_CMD_LEN)
@@ -2646,7 +2656,6 @@ CONFIGURE_MAX_CMD_LEN=	262144
 _EXPORTED_VARS+=	CONFIGURE_MAX_CMD_LEN
 GNU_CONFIGURE_PREFIX?=	${PREFIX}
 GNU_CONFIGURE_MANPREFIX?=	${MANPREFIX}
-CONFIG_SITE?=		${PORTSDIR}/Templates/config.site
 CONFIGURE_ARGS+=	--prefix=${GNU_CONFIGURE_PREFIX} $${_LATE_CONFIGURE_ARGS}
 .if defined(CROSS_TOOLCHAIN)
 CROSS_HOST=		${CROSS_TOOLCHAIN:C,-.*$,,}-unknown-${OPSYS:tl}${OSREL}
@@ -2960,6 +2969,12 @@ DEPENDS_TARGET+=	install
 DEPENDS_TARGET+=	clean
 DEPENDS_ARGS+=	NOCLEANDEPENDS=yes
 .endif
+.endif
+
+.if defined(USE_GITLAB) && !${USE_GITLAB:Mnodefault} && empty(GL_COMMIT_DEFAULT)
+check-makevars::
+	@${ECHO_MSG} "GL_COMMIT is a required 40 character hash for use USE_GITLAB"
+	@${FALSE}
 .endif
 
 ################################################################
@@ -4040,6 +4055,29 @@ DEV_WARNING+=	"It looks like the ${d} depends line has an absolute port origin, 
 all-depends-list:
 	@${ALL-DEPENDS-LIST}
 
+_FLAVOR_RECURSIVE_SH= \
+	if [ -z "$${recursive_cmd}" ]; then \
+		${ECHO_MSG} "_FLAVOR_RECURSIVE_SH requires recursive_cmd to be set to the recursive make target to run." >&2; \
+		${FALSE}; \
+	fi; \
+	if [ "$${recursive_dirs-null}" = "null" ]; then \
+		${ECHO_MSG} "_FLAVOR_RECURSIVE_SH requires recursive_dirs to be set to the directories to recurse." >&2; \
+		${FALSE}; \
+	fi; \
+	for dir in $${recursive_dirs}; do \
+		case $${dir} in \
+			*@*) \
+				flavor=$${dir\#*@}; \
+				dir=$${dir%@*}; \
+				;; \
+		esac; \
+		case $$dir in \
+		/*) ;; \
+		*) dir=${PORTSDIR}/$$dir ;; \
+		esac; \
+		(cd $$dir; ${SETENV} FLAVOR=$${flavor} ${MAKE} $${recursive_cmd}); \
+	done
+
 # This script is shared among several dependency list variables.  See file for
 # usage.
 DEPENDS-LIST= \
@@ -4053,6 +4091,7 @@ DEPENDS-LIST= \
 			${DEPENDS_SHOW_FLAVOR:D-f}
 
 ALL-DEPENDS-LIST=			${DEPENDS-LIST} -r ${_UNIFIED_DEPENDS:Q}
+ALL-DEPENDS-FLAVORS-LIST=	${DEPENDS-LIST} -f -r ${_UNIFIED_DEPENDS:Q}
 MISSING-DEPENDS-LIST=		${DEPENDS-LIST} -m ${_UNIFIED_DEPENDS:Q}
 BUILD-DEPENDS-LIST=			${DEPENDS-LIST} "${PKG_DEPENDS} ${EXTRACT_DEPENDS} ${PATCH_DEPENDS} ${FETCH_DEPENDS} ${BUILD_DEPENDS} ${LIB_DEPENDS}"
 RUN-DEPENDS-LIST=			${DEPENDS-LIST} "${LIB_DEPENDS} ${RUN_DEPENDS}"
@@ -4076,42 +4115,32 @@ limited-clean-depends:
 
 .if !target(deinstall-depends)
 deinstall-depends:
-	@for dir in $$(${ALL-DEPENDS-LIST}); do \
-		(cd $$dir; ${MAKE} deinstall); \
-	done
+	@recursive_cmd="deinstall"; \
+	    recursive_dirs="$$(${ALL-DEPENDS-FLAVORS-LIST})"; \
+		${_FLAVOR_RECURSIVE_SH}
 .endif
 
 .if !target(fetch-specials)
 fetch-specials:
 	@${ECHO_MSG} "===> Fetching all distfiles required by ${PKGNAME} for building"
-	@for dir in ${_DEPEND_SPECIALS}; do \
-		case $${dir} in \
-			*@*) \
-				flavor=$${dir#*@}; \
-				dir=$${dir%@*}; \
-				;; \
-		esac; \
-		case $$dir in \
-		/*) ;; \
-		*) dir=${PORTSDIR}/$$dir ;; \
-		esac; \
-		(cd $$dir; ${SETENV} FLAVOR=$${flavor} ${MAKE} fetch); \
-	done
+	@recursive_cmd="fetch"; \
+	    recursive_dirs="${_DEPEND_SPECIALS}"; \
+		${_FLAVOR_RECURSIVE_SH}
 .endif
 
 .if !target(fetch-recursive)
 fetch-recursive:
 	@${ECHO_MSG} "===> Fetching all distfiles for ${PKGNAME} and dependencies"
-	@for dir in ${.CURDIR} $$(${ALL-DEPENDS-LIST}); do \
-		(cd $$dir; ${MAKE} fetch); \
-	done
+	@recursive_cmd="fetch"; \
+	    recursive_dirs="${.CURDIR} $$(${ALL-DEPENDS-FLAVORS-LIST})"; \
+		${_FLAVOR_RECURSIVE_SH}
 .endif
 
 .if !target(fetch-recursive-list)
 fetch-recursive-list:
-	@for dir in ${.CURDIR} $$(${ALL-DEPENDS-LIST}); do \
-		(cd $$dir; ${MAKE} fetch-list); \
-	done
+	@recursive_cmd="fetch-list"; \
+	    recursive_dirs="${.CURDIR} $$(${ALL-DEPENDS-FLAVORS-LIST})"; \
+		${_FLAVOR_RECURSIVE_SH}
 .endif
 
 # Used by fetch-required and fetch-required list, this script looks
@@ -4176,9 +4205,9 @@ fetch-required-list: fetch-list
 .if !target(checksum-recursive)
 checksum-recursive:
 	@${ECHO_MSG} "===> Fetching and checking checksums for ${PKGNAME} and dependencies"
-	@for dir in ${.CURDIR} $$(${ALL-DEPENDS-LIST}); do \
-		(cd $$dir; ${MAKE} checksum); \
-	done
+	@recursive_cmd="checksum"; \
+	    recursive_dirs="${.CURDIR} $$(${ALL-DEPENDS-FLAVORS-LIST})"; \
+		${_FLAVOR_RECURSIVE_SH}
 .endif
 
 # Dependency lists: build and runtime.  Print out directory names.
@@ -4315,9 +4344,9 @@ actual-package-depends:
 # Build packages for port and dependencies
 
 package-recursive: package
-	@for dir in $$(${ALL-DEPENDS-LIST}); do \
-		(cd $$dir; ${MAKE} package-noinstall); \
-	done
+	@recursive_cmd="package-noinstall"; \
+	    recursive_dirs="$$(${ALL-DEPENDS-FLAVORS-LIST})"; \
+		${_FLAVOR_RECURSIVE_SH}
 
 # Show missing dependencies
 missing:
@@ -4990,9 +5019,9 @@ config:
 .if !target(config-recursive)
 config-recursive:
 	@${ECHO_MSG} "===> Setting user-specified options for ${PKGNAME} and dependencies";
-	@for dir in ${.CURDIR} $$(${ALL-DEPENDS-LIST}); do \
-		(cd $$dir; ${MAKE} config-conditional); \
-	done
+	@recursive_cmd="config-conditional"; \
+	    recursive_dirs="${.CURDIR} $$(${ALL-DEPENDS-FLAVORS-LIST})"; \
+		${_FLAVOR_RECURSIVE_SH}
 .endif # config-recursive
 
 .if !target(config-conditional)
@@ -5046,9 +5075,9 @@ showconfig: check-config
 .if !target(showconfig-recursive)
 showconfig-recursive:
 	@${ECHO_MSG} "===> The following configuration options are available for ${PKGNAME} and dependencies";
-	@for dir in ${.CURDIR} $$(${ALL-DEPENDS-LIST}); do \
-		(cd $$dir; ${MAKE} showconfig); \
-	done
+	@recursive_cmd="showconfig"; \
+	    recursive_dirs="${.CURDIR} $$(${ALL-DEPENDS-FLAVORS-LIST})"; \
+		${_FLAVOR_RECURSIVE_SH}
 .endif # showconfig-recursive
 
 .if !target(rmconfig)
@@ -5073,9 +5102,9 @@ rmconfig:
 .if !target(rmconfig-recursive)
 rmconfig-recursive:
 	@${ECHO_MSG} "===> Removing user-specified options for ${PKGNAME} and dependencies";
-	@for dir in ${.CURDIR} $$(${ALL-DEPENDS-LIST}); do \
-		(cd $$dir; ${MAKE} rmconfig); \
-	done
+	@recursive_cmd="rmconfig"; \
+	    recursive_dirs="${.CURDIR} $$(${ALL-DEPENDS-FLAVORS-LIST})"; \
+		${_FLAVOR_RECURSIVE_SH}
 .endif # rmconfig-recursive
 
 .if !target(pretty-print-config)

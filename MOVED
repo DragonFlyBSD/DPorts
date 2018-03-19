@@ -3612,7 +3612,6 @@ net-mgmt/glpi-plugins-tracker-server|net-mgmt/glpi-plugins-fusioninventory-serve
 science/rubygem-netcdf|science/rubygem-ruby-netcdf|2015-05-24|Rename to match our rubygem- port naming
 security/rubygem-rc4|security/rubygem-ruby-rc4|2015-05-24|Rename to match our rubygem- port naming
 print/rubygem-colortools|print/rubygem-color-tools|2015-05-24|Rename to match our rubygem- port naming
-security/qtkeychain|security/qtkeychain-qt5|2015-05-24|Renamed to indicate supported QT version
 www/rubygem-layout-yullio|www/rubygem-layout_yullio_generator|2015-05-27|Rename to match our rubygem- port naming
 net/rubygem-rightaws|net/rubygem-right_aws|2015-05-27|Rename to match our rubygem- port naming
 net/rubygem-rightflexiscale|net/rubygem-right_flexiscale|2015-05-27|Rename to match our rubygem- port naming
@@ -4654,6 +4653,7 @@ textproc/asciinema|textproc/py3-asciinema|2016-09-13|Has expired: use textproc/p
 x11-toolkits/qtada||2016-09-13|Has expired: No development since 2012, usefulness unclear
 security/letsencrypt.sh|security/dehydrated|2016-09-13|Upstream renamed the project
 devel/py-dogpile.core|devel/py-dogpile.cache|2016-09-13|EOL upstream. Merged into devel/py-dogpile.cache since 0.6.0
+archivers/php5-snappy|archivers/pecl-snappy|2016-09-15|It is PHP 7 compatible now
 korean/imhangul||2016-09-15|Split into korean/imhangul-gtk2 and korean/imhangul-gtk3
 devel/poco-devel|devel/poco|2016-09-18|Has expired: older than stable devel/poco
 databases/pglogical-output|databases/pglogical|2016-09-22|databases/pglogical-output merged into databases/pglogical
@@ -5169,6 +5169,7 @@ x11/rsibreak-kde4|x11/rsibreak|2017-03-11|Renamed to drop the -kde4 suffix
 textproc/ack|textproc/p5-ack|2017-03-12|Rename to match our perl naming
 misc/p5-Geo-Coder-Geocoder-US||2017-03-12|Has expired: http://geocoder.us/ disappeared in late 2015
 databases/py-sqlalchemy09|databases/py-sqlalchemy10|2017-03-12|Has expired: Upstream has declared this version EoL: please migrate to databases/py-sqlalchemy10
+lang/OpenCoarrays|lang/opencoarrays|2017-03-12|Rename to lower case
 devel/avr-gcc-devel||2017-03-13|Has expired: There's no longer a point to have both, a -devel and a regular port of GCC for the AVR
 net/py-pysimplesoap|net/py-soap2py|2017-03-13|Rename to match upstream naming
 games/trigger-data|games/trigger-rally|2017-03-15|Merged into games/trigger-rally
@@ -5393,7 +5394,6 @@ games/libfov||2017-04-30|Has expired: Unfetchable for more than six months (goog
 games/dcross||2017-04-30|Has expired: Unfetchable for more than six months (google code has gone away)
 games/lostfeathers||2017-04-30|Has expired: Unfetchable for more than six months (google code has gone away)
 games/hexglass||2017-04-30|Has expired: Unfetchable for more than six months (google code has gone away)
-textproc/ibus-table||2017-04-30|Has expired: Unfetchable for more than six months (google code has gone away)
 textproc/chm2pdf||2017-04-30|Has expired: Unfetchable for more than six months (google code has gone away)
 textproc/dtdinst||2017-04-30|Has expired: Unfetchable for more than six months (google code has gone away)
 textproc/py-xmltv||2017-04-30|Has expired: Unfetchable for more than six months (google code has gone away)
@@ -6245,3 +6245,57 @@ devel/adime||2018-03-02|Has expired: Abandonware, not used in the ports tree
 devel/boaconstructor||2018-03-02|Has expired: Abandonware, does not work with recent python/wxPython
 audio/amp||2018-03-02|Has expired: No more upstream
 devel/alf||2018-03-02|Has expired: Abandonware, unused in the ports tree
+net/remmina-plugin-gnome|net/remmina-plugin-secret|2018-03-04|Renamed upstream
+databases/php70-memcache|databases/php-memcache@php70|2018-03-08|Merge into a flavorized version
+databases/php71-memcache|databases/php-memcache@php71|2018-03-08|Merge into a flavorized version
+databases/php72-memcache|databases/php-memcache@php72|2018-03-08|Merge into a flavorized version
+ftp/php56-fastdfs|ftp/php-fastdfs@php56|2018-03-08|Merge into flavorized version
+ftp/php70-fastdfs|ftp/php-fastdfs@php70|2018-03-08|Merge into flavorized version
+ftp/php71-fastdfs|ftp/php-fastdfs@php71|2018-03-08|Merge into flavorized version
+ftp/php72-fastdfs|ftp/php-fastdfs@php72|2018-03-08|Merge into flavorized version
+www/unit-php56|www/unit-php@php56|2018-03-08|Merge into flavorized version
+www/unit-php70|www/unit-php@php70|2018-03-08|Merge into flavorized version
+www/unit-php71|www/unit-php@php71|2018-03-08|Merge into flavorized version
+www/unit-php72|www/unit-php@php72|2018-03-08|Merge into flavorized version
+databases/php70-memcached|databases/php-memcached|2018-03-08|Move to flavorized version
+www/openxmldir||2018-03-08|Has expired: Unmaintained, all www files wrongly belongs to www user
+www/hastymail2||2018-03-08|Has expired: Unmaintained, all www files wrongly belongs to www user
+www/dalbum||2018-03-08|Has expired: Unmaintained, all www files wrongly belongs to www user
+www/iwebcal||2018-03-08|Has expired: Unmaintained, all www files wrongly belongs to www user
+www/impresscms||2018-03-08|Has expired: Unmaintained, all www files wrongly belongs to www user
+www/freeway||2018-03-08|Has expired: Unmaintained upstream, all www files wrongly belongs to www user
+www/xaraya||2018-03-08|Has expired: Unmaintained, all www files wrongly belongs to www user
+www/subsonic||2018-03-08|Has expired: Unmaintained, all www files wrongly belongs to www user
+www/phpwebapp||2018-03-08|Has expired: Unmaintained upstream, all www files wrongly belongs to www user
+www/hastymail||2018-03-08|Has expired: Unmaintained, all www files wrongly belongs to www user
+www/b2evolution||2018-03-08|Has expired: Unmaintained, all www files wrongly belongs to www user
+www/textpattern||2018-03-08|Has expired: Unmaintained, all www files wrongly belongs to www user
+www/eventum||2018-03-08|Has expired: Unmaintained, all www files wrongly belongs to www user
+www/quickie||2018-03-08|Has expired: Unmaintained, all www files wrongly belongs to www user
+www/jinzora||2018-03-08|Has expired: Unmaintained, all www files wrongly belongs to www user
+www/zen-cart||2018-03-08|Has expired: Unmaintained, no upstream, all www files wrongly belongs to www user
+www/bblog||2018-03-08|Has expired: Unmaintained, all www files wrongly belongs to www user
+www/extjs||2018-03-08|Has expired: Unmaintained, all www files wrongly belongs to www user
+www/geeklog||2018-03-08|Has expired: Unmaintained, all www files wrongly belongs to www user
+www/lilurl||2018-03-08|Has expired: Unmaintained, all www files wrongly belongs to www user
+www/zikula||2018-03-08|Has expired: Unmaintained, no upstream, all www files wrongly belongs to www user
+www/yii||2018-03-08|Has expired: Unmaintained, all www files wrongly belongs to www user
+www/phpmp||2018-03-08|Has expired: Unmaintained, all www files wrongly belongs to www user
+www/lionwiki||2018-03-08|Has expired: Unmaintained, all www files wrongly belongs to www user
+databases/php-memcached|databases/pecl-memcached|2018-03-10|Remove duplicate port, use databases/pecl-memcached instead
+emulators/i386-wine-staging|emulators/i386-wine-devel|2018-03-10|Broken for months, abandoned upstream
+archivers/quazip-qt5|archivers/quazip@qt5|2018-03-11|Moved to a flavoured version
+devel/go-json-rest||2018-03-11|Go libraries aren't allowed (GH/ant0ine/go-json-rest)
+security/qtkeychain-qt4|security/qtkeychain@qt4|2018-03-12|Moved to a flavoured version
+security/qtkeychain-qt5|security/qtkeychain@qt5|2018-03-12|Moved to a flavoured version
+devel/libdbusmenu-qt5|devel/libdbusmenu-qt@qt5|2018-03-12|Moved to a flavoured version
+finance/electrum2|finance/electrum|2018-03-13|Has expired: Vulnerable legacy port, please use finance/electrum instead
+math/py-gsl|math/py-pygsl|2018-03-13|Rename to match PyPI naming
+www/mediawiki123|www/mediawiki127|2018-03-14|Has expired: Upstream no longer maintained
+www/mediawiki128|www/mediawiki130|2018-03-14|Has expired: Upstream no longer maintained
+sysutils/py-zfs||2018-03-16|Not needed since ZFS 28
+net/freebsd-tftp||2018-03-16|Imported into base in FreeBSD 8.0
+multimedia/plexpy|multimedia/tautulli|2018-03-17|Project renamed due to copyright infringement
+net-im/ring-daemon||2018-03-18|Ring can't build because it depends on custom bundled versions of other packages
+net-im/ring-libclient||2018-03-18|Ring can't build because it depends on custom bundled versions of other packages
+net-im/ring-gnome||2018-03-18|Ring can't build because it depends on custom bundled versions of other packages
