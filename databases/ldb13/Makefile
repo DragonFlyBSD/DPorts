@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=		ldb
-PORTVERSION=		1.3.1
+PORTVERSION=		1.3.2
 PORTREVISION=		0
 PORTEPOCH=		0
 CATEGORIES=		databases
@@ -49,10 +49,14 @@ CONFIGURE_ARGS+=	--mandir=${MANPREFIX}/man \
 			--disable-rpath \
 			--without-gettext
 
-OPTIONS_DEFINE=		MANPAGES
+OPTIONS_DEFINE=		MANPAGES DEBUG
 MANPAGES_DESC=		Build and install manpages (requires textproc/docbook-xsl)
 
 .include <bsd.port.options.mk>
+
+DEBUG_CONFIGURE_ON=	--verbose --enable-debug
+DEBUG_MAKE_ARGS=	--verbose
+DEBUG_FLAGS=		-g -ggdb3 -O0
 
 LDB_BINS=		bin/ldbedit \
 			bin/ldbmodify \
@@ -174,12 +178,12 @@ post-install:
 			${STRIP_CMD} ${STAGEDIR}${PREFIX}/${lib}
 .endfor
 .if !defined(NO_PYTHON)
-			${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libpyldb-util.so
-			${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/ldb.so
-.if defined(SAMBA4_PYTHON3)
-			${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libpyldb-util.${SAMBA4_PYTHON3_SO_ABI}.so
-			${STRIP_CMD} ${STAGEDIR}${PREFIX}/${SAMBA4_PYTHON3_SITELIBDIR}/ldb.${SAMBA4_PYTHON3_SO_ABI}.so
-.endif
+		${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libpyldb-util.so
+		${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/ldb.so
+.	if defined(SAMBA4_PYTHON3)
+		${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libpyldb-util.${SAMBA4_PYTHON3_SO_ABI}.so
+		${STRIP_CMD} ${STAGEDIR}${PREFIX}/${SAMBA4_PYTHON3_SITELIBDIR}/ldb.${SAMBA4_PYTHON3_SO_ABI}.so
+.	endif
 .endif
 
 .include <bsd.port.post.mk>
