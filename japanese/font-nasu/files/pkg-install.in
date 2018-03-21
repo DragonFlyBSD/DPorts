@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/japanese/font-nasu/files/pkg-install.in 418874 2016-07-21 14:04:32Z ume $
+# $FreeBSD: head/japanese/font-nasu/files/pkg-install.in 464597 2018-03-15 15:54:14Z ume $
 
 catfontsdir()
 {
@@ -55,8 +55,8 @@ addentries()
 	do
 		make_xlfd $ENC Nasu-Regular-20141215.ttf adobe "nasu" p medium
 		make_xlfd $ENC Nasu-Bold-20141215.ttf adobe "nasu" p bold
-		make_xlfd $ENC NasuM-Regular-20141215.ttf adobe "nasum" c medium
-		make_xlfd $ENC NasuM-Bold-20141215.ttf adobe "nasum" c bold
+		make_xlfd $ENC NasuM-Regular-20141215.ttf adobe "nasum" m medium
+		make_xlfd $ENC NasuM-Bold-20141215.ttf adobe "nasum" m bold
 	done
 }
 
