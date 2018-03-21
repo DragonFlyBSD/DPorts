@@ -1,8 +1,9 @@
 #!/bin/sh
 #
-# $FreeBSD: head/news/nzbget/files/nzbget.in 434648 2017-02-22 22:24:16Z feld $
+# $FreeBSD: head/news/nzbget/files/nzbget.in 463542 2018-03-03 23:33:33Z bdrewery $
 #
 # PROVIDE: nzbget
+# REQUIRE: LOGIN
 # KEYWORD: shutdown
 #
 # Add the following lines to /etc/rc.conf.local or /etc/rc.conf
