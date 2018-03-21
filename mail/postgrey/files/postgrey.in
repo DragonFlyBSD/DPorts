@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/mail/postgrey/files/postgrey.in 372199 2014-11-05 17:35:38Z pawel $
+# $FreeBSD: head/mail/postgrey/files/postgrey.in 464903 2018-03-18 12:20:10Z dbaio $
 #
 # PROVIDE: postgrey
 # REQUIRE: LOGIN
@@ -34,6 +34,7 @@ load_rc_config $name
 : ${postgrey_flags:=--inet=10023}
 
 command=%%PREFIX%%/sbin/postgrey
+extra_commands=reload
 pidfile=%%PG_RUNDIR%%/postgrey.pid
 required_dirs="${postgrey_dbdir} %%PG_RUNDIR%%"
 
