@@ -3,7 +3,7 @@
 
 PORTNAME=	Ipopt
 PORTVERSION=	3.12.7
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	math
 MASTER_SITES=	http://www.coin-or.org/download/source/Ipopt/ \
 		http://glaros.dtc.umn.edu/gkhome/fetch/sw/metis/OLD/:metis \
@@ -55,10 +55,5 @@ post-install-DOCS-on:
 	   ${STAGEDIR}${DOCSDIR}
 	${MV} ${STAGEDIR}${PREFIX}/share/coin/doc ${STAGEDIR}${DOCSDIR}
 	${RM} -r ${STAGEDIR}${PREFIX}/share/coin
-
-.if defined(MAINTAINER_MODE)
-regression-test:
-	(cd ${WRKSRC}; ${MAKE_CMD} test)
-.endif
 
 .include <bsd.port.mk>
