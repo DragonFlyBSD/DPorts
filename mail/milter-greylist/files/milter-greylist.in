@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/mail/milter-greylist/files/milter-greylist.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/mail/milter-greylist/files/milter-greylist.in 464850 2018-03-17 21:51:38Z dbaio $
 
 # PROVIDE: miltergreylist
 # REQUIRE: LOGIN
@@ -20,6 +20,8 @@ name="miltergreylist"
 rcvar=miltergreylist_enable
 
 command="%%PREFIX%%/libexec/milter-greylist"
+extra_commands="configtest"
+configtest_cmd="%%PREFIX%%/libexec/milter-greylist -c"
 
 load_rc_config $name
 
