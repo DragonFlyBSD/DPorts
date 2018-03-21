@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/textproc/elasticsearch6/files/elasticsearch.in 463358 2018-03-01 23:37:20Z feld $
+# $FreeBSD: head/textproc/elasticsearch6/files/elasticsearch.in 464526 2018-03-14 19:17:59Z feld $
 #
 # PROVIDE: elasticsearch
 # REQUIRE: NETWORKING SERVERS
@@ -29,6 +29,7 @@ load_rc_config ${name}
 : ${elasticsearch_user=elasticsearch}
 : ${elasticsearch_group=elasticsearch}
 : ${elasticsearch_config=%%PREFIX%%/etc/elasticsearch}
+: ${elasticsearch_login_class=root}
 
 required_files="${elasticsearch_config}/elasticsearch.yml"
 _pidprefix=/var/run/elasticsearch
