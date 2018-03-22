@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net/rabbitmq/files/rabbitmq.in 441685 2017-05-25 13:34:32Z olgeni $
+# $FreeBSD: head/net/rabbitmq/files/rabbitmq.in 463787 2018-03-07 11:10:44Z olgeni $
 #
 # PROVIDE: rabbitmq
 # REQUIRE: DAEMON
@@ -56,7 +56,7 @@ rabbitmq_start()
 
 	mkdir -p ${RABBITMQ_LOG_BASE}
  
-	chown ${rabbitmq_user}:${rabbitmq_user} ${RABBITMQ_LOG_BASE}
+	chown -R ${rabbitmq_user}:${rabbitmq_user} ${RABBITMQ_LOG_BASE}
 
 	if [ -f ${RABBITMQ_HOME}/.erlang.cookie ]; then
 		chmod 600 ${RABBITMQ_HOME}/.erlang.cookie
