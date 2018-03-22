@@ -1,6 +1,6 @@
---- configure.intermediate	2014-06-24 15:03:31.014117000 +0000
+--- configure.orig	2018-03-22 01:51:30 UTC
 +++ configure
-@@ -4721,7 +4721,7 @@ case "${host_os}" in
+@@ -4631,7 +4631,7 @@ case "${host_os}" in
  esac
  
  case "${host_os}" in
@@ -9,7 +9,7 @@
       ac_default_prefix=/usr/local
       ;;
       openbsd*)
-@@ -4807,7 +4807,7 @@ HOST_OS=${host_os}
+@@ -4718,7 +4718,7 @@ HOST_OS=${host_os}
  PBX_WINARCH=0
  
  case "${host_os}" in
@@ -18,12 +18,3 @@
       OSARCH=FreeBSD
       ;;
       netbsd*)
-@@ -25868,7 +25868,7 @@ PWLIB_OSTYPE=
- case "$host_os" in
-   linux*)          PWLIB_OSTYPE=linux ;
-   		;;
--  freebsd* )       PWLIB_OSTYPE=FreeBSD ;
-+  dragonfly*|freebsd* )       PWLIB_OSTYPE=FreeBSD ;
-   		;;
-   openbsd* )       PWLIB_OSTYPE=OpenBSD ;
- 				   ENDLDLIBS="-lossaudio" ;
