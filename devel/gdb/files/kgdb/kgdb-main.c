@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/kgdb-main.c 450895 2017-09-29 14:49:58Z pizzamig $");
+__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/kgdb-main.c 464493 2018-03-14 14:33:21Z pizzamig $");
 
 #include <sys/param.h>
 #include <sys/stat.h>
@@ -378,6 +378,10 @@ main(int argc, char *argv[])
 	/* Set an alternate prompt. */
 	add_arg(&args, "-iex");
 	add_arg(&args, "set prompt (kgdb) ");
+
+	/* Change osabi to assume a FreeBSD kernel. */
+	add_arg(&args, "-iex");
+	add_arg(&args, "set osabi FreeBSD/kernel");
 
 	/* Open the vmcore if requested. */
 	if (vmcore != NULL) {

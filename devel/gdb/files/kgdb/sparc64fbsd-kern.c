@@ -25,27 +25,24 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/sparc64fbsd-kern.c 446852 2017-07-28 21:20:47Z jhb $");
+__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/sparc64fbsd-kern.c 464493 2018-03-14 14:33:21Z pizzamig $");
 
-#include <sys/types.h>
+#include "defs.h"
+#include "gdbcore.h"
+#include "osabi.h"
+#include "regcache.h"
+#include "target.h"
+#include "frame-unwind.h"
+#include "solib.h"
+#include "trad-frame.h"
+#include "sparc-tdep.h"
+#include "sparc64-tdep.h"
+
 #ifdef __sparc64__
 #include <machine/asm.h>
 #include <machine/pcb.h>
 #include <machine/frame.h>
 #endif
-#include <string.h>
-
-#include <defs.h>
-#include "gdbcore.h"
-#include "osabi.h"
-#include "regcache.h"
-#include <target.h>
-#include <frame-unwind.h>
-#include "solib.h"
-#include "trad-frame.h"
-
-#include <sparc-tdep.h>
-#include <sparc64-tdep.h>
 
 #include "kgdb.h"
 
@@ -304,8 +301,6 @@ sparc64fbsd_kernel_init_abi(struct gdbarch_info info, struct gdbarch *gdbarch)
 	fbsd_vmcore_set_cpu_pcb_addr(gdbarch, kgdb_trgt_stop_pcb);
 #endif
 }
-
-void _initialize_sparc64_kgdb_tdep(void);
 
 void
 _initialize_sparc64_kgdb_tdep(void)

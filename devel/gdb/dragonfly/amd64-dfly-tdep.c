@@ -1,6 +1,6 @@
 /* Target-dependent code for DragonFly/amd64.
 
-   Copyright (C) 2003-2013 Free Software Foundation, Inc.
+   Copyright (C) 2003-2018 Free Software Foundation, Inc.
 
    This file is part of GDB.
 
@@ -23,8 +23,8 @@
 #include "gdbcore.h"
 #include "regcache.h"
 #include "osabi.h"
+#include "x86-xstate.h"
 
-#include "gdb_assert.h"
 #include <string.h>
 
 #include "amd64-tdep.h"
@@ -152,7 +152,8 @@ amd64dfly_init_abi (struct gdbarch_info info, struct gdbarch *gdbarch)
   tdep->gregset_num_regs = ARRAY_SIZE (amd64dfly_r_reg_offset);
   tdep->sizeof_gregset = 25 * 8;
 
-  amd64_init_abi (info, gdbarch);
+  amd64_init_abi (info, gdbarch,
+		  amd64_target_description (X86_XSTATE_SSE_MASK));
 
   tdep->sigtramp_start = amd64dfly_sigtramp_start_addr;
   tdep->sigtramp_end = amd64dfly_sigtramp_end_addr;
