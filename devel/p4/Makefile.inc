@@ -1,8 +1,0 @@
-ZIP_FILES=	${DISTNAME}.zip
-P4VERSION?=	r${PORTVERSION:S/^20//:C/\.[0-9]+$//}
-YEAR=		2016
-MAJOR=		1
-MINOR=		1492381
-
-JAM?=		${LOCALBASE}/bin/jam
-OSVER?=		${OSREL:S/.//}
