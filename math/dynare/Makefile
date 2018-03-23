@@ -1,12 +1,12 @@
-# Created by: Fernando Apesteguia <fernando.apesteguia@gmail.com>
 # $FreeBSD$
 
 PORTNAME=	dynare
 DISTVERSION=	4.5.4
+PORTREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	http://www.dynare.org/release/source/
 
-MAINTAINER=	fernando.apesteguia@gmail.com
+MAINTAINER=	fernape@FreeBSD.org
 COMMENT=	Software platform for handling a wide class of economic models
 
 LICENSE=	GPLv3
@@ -21,8 +21,8 @@ LIB_DEPENDS=	libumfpack.so:math/suitesparse \
 		libfftw3_threads.so:math/fftw3 \
 		libfftw3f_threads.so:math/fftw3-float
 
-GNU_CONFIGURE=	yes
 USES=		fortran gmake localbase pkgconfig shebangfix tar:xz
+GNU_CONFIGURE=	yes
 SHEBANG_FILES=	matlab/modules/reporting/success.sh
 
 INFO=	dynare
@@ -36,6 +36,8 @@ OPTIONS_SUB=		yes
 MATLAB_CONFIGURE_ENABLE=	matlab
 OCTAVE_CONFIGURE_ENABLE=	octave
 OCTAVE_BUILD_DEPENDS=		octave:math/octave
+OCTAVE_USES=			compiler:c++14-lang
+OCTAVE_VARS=			CXXFLAGS=--std=c++14 # https://github.com/DynareTeam/dynare/issues/1599
 
 ONLY_FOR_ARCH=	i386 amd64
 ARCH_x86_64=	64
