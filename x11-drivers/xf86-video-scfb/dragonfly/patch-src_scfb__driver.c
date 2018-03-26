@@ -47,15 +47,6 @@
  static Bool ScfbSaveScreen(ScreenPtr, int);
  static void ScfbSave(ScrnInfoPtr);
  static void ScfbRestore(ScrnInfoPtr);
-@@ -201,7 +194,7 @@
- 	/* Check that we're being loaded on a OpenBSD or NetBSD system. */
- 	LoaderGetOS(&osname, NULL, NULL, NULL);
- 	if (!osname || (strcmp(osname, "freebsd") != 0 && strcmp(osname, "openbsd") != 0 &&
--	                strcmp(osname, "netbsd") != 0)) {
-+	                strcmp(osname, "netbsd") != 0 && strcmp(osname, "dragonfly") != 0)) {
- 		if (errmaj)
- 			*errmaj = LDR_BADOS;
- 		if (errmin)
 @@ -232,7 +225,7 @@
  	void *			shadow;
  	CloseScreenProcPtr	CloseScreen;

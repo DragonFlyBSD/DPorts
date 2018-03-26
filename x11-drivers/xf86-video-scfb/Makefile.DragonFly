@@ -1,0 +1,10 @@
+# We can't use EXTRA_PATCHES here because extra patches are applied
+# *before* the freebsd patches, and src/scfb_driver.c is already
+# being patched by freebsd.  This hack hides the dragonfly patch directory.
+
+.if ${DFLYVERSION} < 500100
+DFLY_FILESDIR=	${.CURDIR}/hidden
+.endif
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's|netbsd|dragonfly|' ${WRKSRC}/src/scfb_driver.c
