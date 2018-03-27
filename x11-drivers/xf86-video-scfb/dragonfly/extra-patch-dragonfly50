@@ -40,6 +40,15 @@
  static void ScfbLoadPalette(ScrnInfoPtr, int, int *, LOCO *, VisualPtr);
  static Bool ScfbSaveScreen(ScreenPtr, int);
  static void ScfbSave(ScrnInfoPtr);
+@@ -200,7 +201,7 @@ ScfbSetup(pointer module, pointer opts,
+ 	/* Check that we're being loaded on a OpenBSD or NetBSD system. */
+ 	LoaderGetOS(&osname, NULL, NULL, NULL);
+ 	if (!osname || (strcmp(osname, "freebsd") != 0 && strcmp(osname, "openbsd") != 0 &&
+-	                strcmp(osname, "netbsd") != 0)) {
++	                strcmp(osname, "netbsd") != 0 && strcmp(osname, "dragonfly") != 0)) {
+ 		if (errmaj)
+ 			*errmaj = LDR_BADOS;
+ 		if (errmin)
 @@ -231,7 +232,7 @@ typedef struct {
  	void *			shadow;
  	CloseScreenProcPtr	CloseScreen;
@@ -99,7 +108,7 @@
  	ScfbPtr fPtr = SCFBPTR(pScrn);
  	VisualPtr visual;
  	int ret, flags, ncolors;
-@@ -792,7 +795,7 @@ ScfbScreenInit(int scrnIndex, ScreenPtr 
+@@ -792,7 +795,7 @@ ScfbScreenInit(int scrnIndex, ScreenPtr
  				   "RENDER extension initialisation failed.");
  	}
  	if (fPtr->shadowFB && !ScfbShadowInit(pScreen)) {
@@ -108,7 +117,7 @@
  		    "shadow framebuffer initialization failed\n");
  		return FALSE;
  	}
-@@ -801,20 +804,19 @@ ScfbScreenInit(int scrnIndex, ScreenPtr 
+@@ -801,20 +804,19 @@ ScfbScreenInit(int scrnIndex, ScreenPtr
  	if (!fPtr->rotate)
  		ScfbDGAInit(pScrn, pScreen);
  	else
@@ -132,7 +141,7 @@
  	xf86SetBackingStore(pScreen);
  
  	/* Software cursor. */
-@@ -858,9 +860,9 @@ ScfbScreenInit(int scrnIndex, ScreenPtr 
+@@ -858,9 +860,9 @@ ScfbScreenInit(int scrnIndex, ScreenPtr
  }
  
  static Bool

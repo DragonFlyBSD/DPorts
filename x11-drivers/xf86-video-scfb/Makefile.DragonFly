@@ -3,8 +3,7 @@
 # being patched by freebsd.  This hack hides the dragonfly patch directory.
 
 .if ${DFLYVERSION} < 500100
-DFLY_FILESDIR=	${.CURDIR}/hidden
+EXTRA_PATCHES+=	${DFLY_FILESDIR}/extra-patch-dragonfly50
+.else
+EXTRA_PATCHES+=	${DFLY_FILESDIR}/extra-patch-dragonfly52
 .endif
-
-dfly-patch:
-	${REINPLACE_CMD} -e 's|netbsd|dragonfly|' ${WRKSRC}/src/scfb_driver.c

@@ -1,9 +1,19 @@
---- src/scfb_driver.c.intermediate	2018-01-14 17:19:15
+--- src/scfb_driver.c.orig	2018-03-26 23:53:42 UTC
 +++ src/scfb_driver.c
-@@ -81,19 +81,11 @@
+@@ -55,7 +55,6 @@
+ #include "xf86Priv.h"
  
- #include "compat-api.h"
+ #include "mipointer.h"
+-#include "mibstore.h"
+ #include "micmap.h"
+ #include "colormapst.h"
+ #include "xf86cmap.h"
+@@ -80,19 +79,13 @@
+ #include "xf86xv.h"
+ #endif
  
++#include "compat-api.h"
++
 +#define SCFB_LOG_VERBOSE	4
 +
  #undef	DEBUG
@@ -22,21 +32,21 @@
  /* Prototypes */
  static pointer ScfbSetup(pointer, pointer, int *, int *);
  static Bool ScfbGetRec(ScrnInfoPtr);
-@@ -102,16 +94,17 @@
+@@ -101,16 +94,17 @@ static const OptionInfoRec * ScfbAvailab
  static void ScfbIdentify(int);
  static Bool ScfbProbe(DriverPtr, int);
  static Bool ScfbPreInit(ScrnInfoPtr, int);
--static Bool ScfbScreenInit(SCREEN_INIT_ARGS_DECL);
--static Bool ScfbCloseScreen(CLOSE_SCREEN_ARGS_DECL);
+-static Bool ScfbScreenInit(int, ScreenPtr, int, char **);
+-static Bool ScfbCloseScreen(int, ScreenPtr);
 +static Bool ScfbScreenInit(ScreenPtr, int, char **);
 +static Bool ScfbCloseScreen(ScreenPtr);
  static void *ScfbWindowLinear(ScreenPtr, CARD32, CARD32, int, CARD32 *,
  			      void *);
--static void ScfbPointerMoved(SCRN_ARG_TYPE, int, int);
--static Bool ScfbEnterVT(VT_FUNC_ARGS_DECL);
--static void ScfbLeaveVT(VT_FUNC_ARGS_DECL);
--static Bool ScfbSwitchMode(SWITCH_MODE_ARGS_DECL);
--static int ScfbValidMode(SCRN_ARG_TYPE, DisplayModePtr, Bool, int);
+-static void ScfbPointerMoved(int, int, int);
+-static Bool ScfbEnterVT(int, int);
+-static void ScfbLeaveVT(int, int);
+-static Bool ScfbSwitchMode(int, DisplayModePtr, int);
+-static int ScfbValidMode(int, DisplayModePtr, Bool, int);
 +static void ScfbPointerMoved(ScrnInfoPtr, int, int);
 +static Bool ScfbEnterVT(ScrnInfoPtr);
 +static void ScfbLeaveVT(ScrnInfoPtr);
@@ -47,17 +57,38 @@
  static Bool ScfbSaveScreen(ScreenPtr, int);
  static void ScfbSave(ScrnInfoPtr);
  static void ScfbRestore(ScrnInfoPtr);
-@@ -232,7 +225,7 @@
+@@ -200,7 +194,7 @@ ScfbSetup(pointer module, pointer opts,
+ 	/* Check that we're being loaded on a OpenBSD or NetBSD system. */
+ 	LoaderGetOS(&osname, NULL, NULL, NULL);
+ 	if (!osname || (strcmp(osname, "freebsd") != 0 && strcmp(osname, "openbsd") != 0 &&
+-	                strcmp(osname, "netbsd") != 0)) {
++	                strcmp(osname, "netbsd") != 0 && strcmp(osname, "dragonfly") != 0)) {
+ 		if (errmaj)
+ 			*errmaj = LDR_BADOS;
+ 		if (errmin)
+@@ -231,7 +225,7 @@ typedef struct {
  	void *			shadow;
  	CloseScreenProcPtr	CloseScreen;
  	CreateScreenResourcesProcPtr CreateScreenResources;
--	void			(*PointerMoved)(SCRN_ARG_TYPE, int, int);
+-	void			(*PointerMoved)(int, int, int);
 +	void			(*PointerMoved)(ScrnInfoPtr, int, int);
  	EntityInfoPtr		pEnt;
  
  #ifdef XFreeXDGA
-@@ -318,7 +311,9 @@
- 	struct fbtype fb;
+@@ -302,7 +296,7 @@ scfb_mmap(size_t len, off_t off, int fd)
+ 		mapaddr = NULL;
+ 	}
+ #if DEBUG
+-	ErrorF("mmap returns: addr %p len 0x%x, fd %d, off %x\n", mapaddr, mapsize, fd, off);
++	ErrorF("mmap returns: addr %p len 0x%x, fd %d, off %lx\n", mapaddr, mapsize, fd, off);
+ #endif
+ 	return mapaddr;
+ }
+@@ -314,9 +308,12 @@ ScfbProbe(DriverPtr drv, int flags)
+        	GDevPtr *devSections;
+ 	int numDevSections;
+ 	const char *dev;
++	struct fbtype fb;
  	Bool foundScreen = FALSE;
  
 -	TRACE("probe start");
@@ -67,7 +98,17 @@
  
  	/* For now, just bail out for PROBE_DETECT. */
  	if (flags & PROBE_DETECT)
-@@ -358,7 +353,6 @@
+@@ -330,7 +327,8 @@ ScfbProbe(DriverPtr drv, int flags)
+ 	for (i = 0; i < numDevSections; i++) {
+ 		ScrnInfoPtr pScrn = NULL;
+ 		dev = xf86FindOptionValue(devSections[i]->options, "device");
+-		if ((fd = xf86Info.consoleFd) >= 0) {
++		if ((fd = xf86Info.consoleFd) >= 0 &&
++		    ioctl(fd, FBIOGTYPE, &fb) != -1) {
+ 			entity = xf86ClaimFbSlot(drv, 0, devSections[i], TRUE);
+ 			pScrn = xf86ConfigFbEntity(NULL,0,entity,
+ 						   NULL,NULL,NULL,NULL);
+@@ -355,7 +353,6 @@ ScfbProbe(DriverPtr drv, int flags)
  		}
  	}
  	free(devSections);
@@ -75,7 +116,16 @@
  	return foundScreen;
  }
  
-@@ -376,7 +370,8 @@
+@@ -366,14 +363,15 @@ ScfbPreInit(ScrnInfoPtr pScrn, int flags
+ 	struct fbtype fb;
+ 	int default_depth, wstype;
+ 	const char *dev;
+-	char *mod = NULL, *s;
+-	const char *reqSym = NULL;
++	char *mod = NULL;
++	const char *reqSym = NULL, *s;
+ 	Gamma zeros = {0.0, 0.0, 0.0};
+ 	DisplayModePtr mode;
  
  	if (flags & PROBE_DETECT) return FALSE;
  
@@ -85,7 +135,7 @@
  
  	if (pScrn->numEntities != 1) return FALSE;
  
-@@ -591,7 +586,8 @@
+@@ -588,7 +586,8 @@ ScfbPreInit(ScrnInfoPtr pScrn, int flags
  		ScfbFreeRec(pScrn);
  		return FALSE;
  	}
@@ -95,16 +145,17 @@
  	return TRUE;
  }
  
-@@ -636,7 +632,7 @@
+@@ -633,15 +632,16 @@ ScfbShadowInit(ScreenPtr pScreen)
  }
  
  static Bool
--ScfbScreenInit(SCREEN_INIT_ARGS_DECL)
+-ScfbScreenInit(int scrnIndex, ScreenPtr pScreen, int argc, char **argv)
 +ScfbScreenInit(ScreenPtr pScreen, int argc, char **argv)
  {
- 	ScrnInfoPtr pScrn = xf86ScreenToScrn(pScreen);
+-	ScrnInfoPtr pScrn = xf86Screens[pScreen->myNum];
++	ScrnInfoPtr pScrn = xf86ScreenToScrn(pScreen);
  	ScfbPtr fPtr = SCFBPTR(pScrn);
-@@ -644,7 +640,8 @@
+ 	VisualPtr visual;
  	int ret, flags, ncolors;
  	size_t len;
  
@@ -114,7 +165,13 @@
  #if DEBUG
  	ErrorF("\tbitsPerPixel=%d, depth=%d, defaultVisual=%s\n"
  	       "\tmask: %x,%x,%x, offset: %u,%u,%u\n",
-@@ -800,6 +797,10 @@
+@@ -792,29 +792,32 @@ ScfbScreenInit(int scrnIndex, ScreenPtr
+ 				   "RENDER extension initialisation failed.");
+ 	}
+ 	if (fPtr->shadowFB && !ScfbShadowInit(pScreen)) {
+-		xf86DrvMsg(scrnIndex, X_ERROR,
++		xf86DrvMsg(pScrn->scrnIndex, X_ERROR,
+ 		    "shadow framebuffer initialization failed\n");
  		return FALSE;
  	}
  
@@ -125,7 +182,28 @@
  #ifdef XFreeXDGA
  	if (!fPtr->rotate)
  		ScfbDGAInit(pScrn, pScreen);
-@@ -855,19 +856,20 @@
+ 	else
+-		xf86DrvMsg(scrnIndex, X_INFO, "Rotated display, "
++		xf86DrvMsg(pScrn->scrnIndex, X_INFO, "Rotated display, "
+ 		    "disabling DGA\n");
+ #endif
+ 	if (fPtr->rotate) {
+-		xf86DrvMsg(scrnIndex, X_INFO, "Enabling Driver Rotation, "
++		xf86DrvMsg(pScrn->scrnIndex, X_INFO, "Enabling Driver Rotation, "
+ 		    "disabling RandR\n");
+ 		xf86DisableRandR();
+ 		if (pScrn->bitsPerPixel == 24)
+-			xf86DrvMsg(scrnIndex, X_WARNING,
++			xf86DrvMsg(pScrn->scrnIndex, X_WARNING,
+ 			    "Rotation might be broken in 24 bpp\n");
+ 	}
+ 
+ 	xf86SetBlackWhitePixels(pScreen);
+-	miInitializeBackingStore(pScreen);
+ 	xf86SetBackingStore(pScreen);
+ 
+ 	/* Software cursor. */
+@@ -853,19 +856,20 @@ ScfbScreenInit(int scrnIndex, ScreenPtr
  	fPtr->CloseScreen = pScreen->CloseScreen;
  	pScreen->CloseScreen = ScfbCloseScreen;
  
@@ -136,10 +214,11 @@
  }
  
  static Bool
--ScfbCloseScreen(CLOSE_SCREEN_ARGS_DECL)
+-ScfbCloseScreen(int scrnIndex, ScreenPtr pScreen)
 +ScfbCloseScreen(ScreenPtr pScreen)
  {
- 	ScrnInfoPtr pScrn = xf86ScreenToScrn(pScreen);
+-	ScrnInfoPtr pScrn = xf86Screens[scrnIndex];
++	ScrnInfoPtr pScrn = xf86ScreenToScrn(pScreen);
  	PixmapPtr pPixmap;
  	ScfbPtr fPtr = SCFBPTR(pScrn);
  
@@ -150,42 +229,42 @@
  
  	pPixmap = pScreen->GetScreenPixmap(pScreen);
  	if (fPtr->shadowFB)
-@@ -893,8 +895,9 @@
+@@ -891,8 +895,9 @@ ScfbCloseScreen(int scrnIndex, ScreenPtr
  
  	/* Unwrap CloseScreen. */
  	pScreen->CloseScreen = fPtr->CloseScreen;
 -	TRACE_EXIT("ScfbCloseScreen");
--	return (*pScreen->CloseScreen)(CLOSE_SCREEN_ARGS);
+-	return (*pScreen->CloseScreen)(scrnIndex, pScreen);
 +	xf86DrvMsgVerb(pScrn->scrnIndex, X_INFO, SCFB_LOG_VERBOSE,
 +		       "ScfbCloseScreen done\n");
 +	return (*pScreen->CloseScreen)(pScreen);
  }
  
  static void *
-@@ -909,9 +912,8 @@
+@@ -907,9 +912,8 @@ ScfbWindowLinear(ScreenPtr pScreen, CARD
  }
  
  static void
--ScfbPointerMoved(SCRN_ARG_TYPE arg, int x, int y)
+-ScfbPointerMoved(int index, int x, int y)
 +ScfbPointerMoved(ScrnInfoPtr pScrn, int x, int y)
  {
--    SCRN_INFO_PTR(arg);
+-    ScrnInfoPtr pScrn = xf86Screens[index];
      ScfbPtr fPtr = SCFBPTR(pScrn);
      int newX, newY;
  
-@@ -943,50 +945,40 @@
+@@ -941,50 +945,40 @@ ScfbPointerMoved(int index, int x, int y
      }
  
      /* Pass adjusted pointer coordinates to wrapped PointerMoved function. */
--    (*fPtr->PointerMoved)(arg, newX, newY);
+-    (*fPtr->PointerMoved)(index, newX, newY);
 +    (*fPtr->PointerMoved)(pScrn, newX, newY);
  }
  
  static Bool
--ScfbEnterVT(VT_FUNC_ARGS_DECL)
+-ScfbEnterVT(int scrnIndex, int flags)
 +ScfbEnterVT(ScrnInfoPtr pScrn)
  {
--	SCRN_INFO_PTR(arg);
+-	ScrnInfoPtr pScrn = xf86Screens[scrnIndex];
 -
 -	TRACE_ENTER("EnterVT");
 +	xf86DrvMsgVerb(pScrn->scrnIndex, X_INFO, SCFB_LOG_VERBOSE,
@@ -196,11 +275,11 @@
  }
  
  static void
--ScfbLeaveVT(VT_FUNC_ARGS_DECL)
+-ScfbLeaveVT(int scrnIndex, int flags)
 +ScfbLeaveVT(ScrnInfoPtr pScrn)
  {
 -#if DEBUG
--	SCRN_INFO_PTR(arg);
+-	ScrnInfoPtr pScrn = xf86Screens[scrnIndex];
 -#endif
 -
 -	TRACE_ENTER("LeaveVT");
@@ -209,11 +288,11 @@
  }
  
  static Bool
--ScfbSwitchMode(SWITCH_MODE_ARGS_DECL)
+-ScfbSwitchMode(int scrnIndex, DisplayModePtr mode, int flags)
 +ScfbSwitchMode(ScrnInfoPtr pScrn, DisplayModePtr mode)
  {
 -#if DEBUG
--	SCRN_INFO_PTR(arg);
+-	ScrnInfoPtr pScrn = xf86Screens[scrnIndex];
 -#endif
 -
 -	TRACE_ENTER("SwitchMode");
@@ -224,12 +303,12 @@
  }
  
  static int
--ScfbValidMode(SCRN_ARG_TYPE arg, DisplayModePtr mode, Bool verbose, int flags)
+-ScfbValidMode(int scrnIndex, DisplayModePtr mode, Bool verbose, int flags)
 +ScfbValidMode(ScrnInfoPtr pScrn, DisplayModePtr mode, Bool verbose,
 +	      int flags)
  {
 -#if DEBUG
--	SCRN_INFO_PTR(arg);
+-	ScrnInfoPtr pScrn = xf86Screens[scrnIndex];
 -#endif
 -
 -	TRACE_ENTER("ValidMode");
@@ -238,7 +317,7 @@
  	return MODE_OK;
  }
  
-@@ -994,19 +986,43 @@
+@@ -992,19 +986,43 @@ static void
  ScfbLoadPalette(ScrnInfoPtr pScrn, int numColors, int *indices,
  	       LOCO *colors, VisualPtr pVisual)
  {
@@ -288,7 +367,7 @@
  
  	if (!pScrn->vtSema)
  		return TRUE;
-@@ -1014,7 +1030,6 @@
+@@ -1012,7 +1030,6 @@ ScfbSaveScreen(ScreenPtr pScreen, int mo
  	if (mode != SCREEN_SAVER_FORCER) {
  		/* TODO, if (mode) enable_screen(); else disable_screen(); */
  	}
@@ -296,7 +375,7 @@
  	return TRUE;
  }
  
-@@ -1024,10 +1039,8 @@
+@@ -1022,10 +1039,8 @@ ScfbSave(ScrnInfoPtr pScrn)
  {
  	ScfbPtr fPtr = SCFBPTR(pScrn);
  
@@ -309,7 +388,7 @@
  }
  
  static void
-@@ -1036,14 +1049,16 @@
+@@ -1034,14 +1049,16 @@ ScfbRestore(ScrnInfoPtr pScrn)
  	ScfbPtr fPtr = SCFBPTR(pScrn);
  	int mode;
  
@@ -328,23 +407,31 @@
  }
  
  #ifdef XFreeXDGA
-@@ -1082,9 +1097,9 @@
+@@ -1067,7 +1084,6 @@ static Bool
+ ScfbDGASetMode(ScrnInfoPtr pScrn, DGAModePtr pDGAMode)
+ {
+ 	DisplayModePtr pMode;
+-	int scrnIdx = pScrn->pScreen->myNum;
+ 	int frameX0, frameY0;
+ 
+ 	if (pDGAMode) {
+@@ -1081,9 +1097,9 @@ ScfbDGASetMode(ScrnInfoPtr pScrn, DGAMod
  		frameY0 = pScrn->frameY0;
  	}
  
--	if (!(*pScrn->SwitchMode)(SWITCH_MODE_ARGS(pScrn, pMode)))
+-	if (!(*pScrn->SwitchMode)(scrnIdx, pMode, 0))
 +	if (!(*pScrn->SwitchMode)(pScrn, pMode))
  		return FALSE;
--	(*pScrn->AdjustFrame)(ADJUST_FRAME_ARGS(pScrn, frameX0, frameY0));
+-	(*pScrn->AdjustFrame)(scrnIdx, frameX0, frameY0, 0);
 +	(*pScrn->AdjustFrame)(pScrn, frameX0, frameY0);
  
  	return TRUE;
  }
-@@ -1092,7 +1107,7 @@
+@@ -1091,7 +1107,7 @@ ScfbDGASetMode(ScrnInfoPtr pScrn, DGAMod
  static void
  ScfbDGASetViewport(ScrnInfoPtr pScrn, int x, int y, int flags)
  {
--	(*pScrn->AdjustFrame)(ADJUST_FRAME_ARGS(pScrn, x, y));
+-	(*pScrn->AdjustFrame)(pScrn->pScreen->myNum, x, y, flags);
 +	(*pScrn->AdjustFrame)(pScrn, x, y);
  }
  
