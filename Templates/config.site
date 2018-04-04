@@ -105,7 +105,6 @@
 : ${ac_cv_header_unistd_h=yes}
 : ${ac_cv_header_utime_h=yes}
 : ${ac_cv_header_utmpx_h=yes}
-: ${ac_cv_header_utmp_h=no}
 : ${ac_cv_header_vis_h=yes}
 : ${ac_cv_header_wchar_h=yes}
 : ${ac_cv_header_wctype_h=yes}
@@ -509,13 +508,6 @@
 : ${ac_cv_func_vprintf=yes}
 : ${ac_cv_func_vsnprintf=yes}
 : ${ac_cv_func_vsprintf=yes}
-: ${ac_cv_func_waitpid=yes}
-: ${ac_cv_func_wait=yes}
-: ${ac_cv_func_wait2=yes}
-: ${ac_cv_func_wait3=yes}
-: ${ac_cv_func_wait3_rusage=yes}
-: ${ac_cv_func_wait4=yes}
-: ${ac_cv_func_wait6=yes}
 : ${ac_cv_func_warn=yes}
 : ${ac_cv_func_warnx=yes}
 : ${ac_cv_func_wcrtomb=yes}
@@ -530,21 +522,6 @@
 : ${ac_cv_func_yp_match=yes}
 
 # misc utx
-: ${ac_cv_func_endutxent=yes}
-: ${ac_cv_func_getutxent=yes}
-: ${ac_cv_func_getutxid=yes}
-: ${ac_cv_func_getutxline=yes}
-: ${ac_cv_func_getutxuser=yes}
-: ${ac_cv_func_pututxline=yes}
-: ${ac_cv_func_setutxdb=yes}
-: ${ac_cv_func_setutxent=yes}
-: ${ac_cv_func_endutent=no}
-: ${ac_cv_func_getutent=no}
-: ${ac_cv_func_getutid=no}
-: ${ac_cv_func_getutline=no}
-: ${ac_cv_func_pututline=no}
-: ${ac_cv_func_setutent=no}
-: ${ac_cv_func_utmpname=no}
 
 # non existing functions
 : ${ac_cv_func_argz_count=no}

@@ -5,6 +5,76 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20180404:
+  AFFECTS: users of www/nextcloud
+  AUTHOR: brnrd@FreeBSD.org
+
+  With the 13.0.1 update the path for Apps bundled with the package has
+  changed from "apps" to "apps-pkg". You must add an entry to the
+  "apps_paths" array in config/config.php of your nextcloud installation,
+  a patch for the default installation can be applied with:
+
+  # cd /usr/local/www/nextcloud
+  # su -m www -c "php ./occ config:import < /usr/local/share/nextcloud/fix-apps_paths.json
+
+20180401:
+  AFFECTS: users of mail/dovecot and mail/dovecot-pigeonhole
+  AUTHOR: adamw@FreeBSD.org
+
+  Dovecot has been upgraded to 2.3.1, and pigeonhole to 0.5.1. Most
+  existing dovecot installations MUST be modified for 2.3, but for
+  most users the modifications are simple.
+
+  Modify your Dovecot conf.d/ files before spinning up 2.3.1. The
+  upgrading instructions are detailed here:
+
+  	https://wiki2.dovecot.org/Upgrading/2.3
+
+20180330:
+  AFFECTS: users of lang/perl5*
+  AUTHOR: mat@FreeBSD.org
+
+  The default Perl version has been switched to Perl 5.26.  If you are using
+  binary packages to upgrade your system, you do not have anything to do, pkg
+  upgrade will do the right thing.  For the other people, follow the
+  instructions in entry 20161103, it should still be the same.
+
+20180325:
+  AFFECTS: users of net/samba48
+  AUTHOR: timur@FreeBSD.org
+
+  New Samba 4.8 upgrades the relevant database files in the way, that doesn't
+  allow easy fallback to the previous versions of Samba. So, before upgrading
+  to the new version make a backup of the /var/db/samba4/ directory.
+
+  Full list of changes, new features and upgrade procedure is available at:
+
+        https://www.samba.org/samba/history/samba-4.8.0.html
+
+  Please, read it carefully before upgrading!.
+
+20180320:
+  AFFECTS: users of x11/sterm
+  AUTHOR: pkubaj@anongoth.pl
+
+  The user-defined options in config.h have changed.  You should
+  compare your config.h file with the default one and change
+  appropriately.
+
+20180319:
+  AFFECTS: users of dns/dnsmasq
+  AUTHOR: mandree@FreeBSD.org
+
+  Note that with dnsmasq 2.79, some parts of the interface have changed in an
+  incompatible way versus previous versions. This comprises changed recursion
+  behaviour, signature support, a change for SIGINT (vs. SIGHUP) behaviour.
+
+  Note especially that dnsmasq will no longer answer non-recursive queries
+  unless it is marked authoritative!  Be sure to see the manual page for the
+  various --auth-* options, such as --auth-zone.
+
+  Please see the CHANGELOG that ships with dnsmasq for details.
+
 20180317:
   AFFECTS: users of multimedia/plexpy
   AUTHOR: feld@FreeBSD.org
@@ -46,12 +116,18 @@ you update your ports collection, before attempting any port upgrades.
 
   PHP extensions and modules have been flavored.
 
-  People using Poudriere 3.2+ and binary packages do not have to do anything.
+  People using Poudriere 3.2+ and binary packages do not have to do anything if
+  they are using PHP applications.
 
   PHP modules and extensions may have change their names from php5- or php7- to
   fully versionned phpXY-.
   PECL extensions and PEAR modules package names have changed from pecl- and
   pear- to phpXX-pecl and phpXX-pear-.
+
+  To rename an installed package to match the new naming scheme, for example,
+  for the imagick pecl extension, run:
+
+    # pkg set -n pecl-imagick:php56-pecl-imagick
 
   For other people, to build the PHP 7.2 version of, for example,
   databases/php-memcached, you need to run:
@@ -78,7 +154,7 @@ you update your ports collection, before attempting any port upgrades.
 
   to the CONFIG array before the updater will run.
 
-20180214
+20180214:
   AFFECTS: users of lang/ruby23
   AUTHOR: swills@FreeBSD.org
 
@@ -1188,145 +1264,4 @@ you update your ports collection, before attempting any port upgrades.
   xapian-omega:
     # pkg set -n xapian-omega:xapian-omega12
     # pkg set -o databases/xapian-omega:databases/xapian-omega12
-
-20170401:
-  AFFECTS: net/samba44, net/samba45, net/samba46 and devel/p5-Parse-Pidl*
-  AUTHOR: timur@FreeBSD.org
-
-  It turned out that arbitary versions of p5-Parse-Pidl may lead to the
-  hard to explain crashes of the Samba server and utilities(in particular
-  we suspect it was responsible for the troubles with the DC provisioning).
-
-  So, from now on net/samba* ports use bundled version of Pidl. You need to
-  remove external package from the system:
-
-  pkg delete -f p5-Parse-Pidl p5-Parse-Pidl44
-
-20170331:
-  AFFECTS: users of security/openssh-portable
-  AUTHOR: bdrewery@FreeBSD.org
-
-  The format of several log messages emitted by the packet code has
-  changed to include additional information about the user and
-  their authentication state. Software that monitors ssh/sshd logs
-  may need to account for these changes. For example:
-
-  Connection closed by user x 1.1.1.1 port 1234 [preauth]
-  Connection closed by authenticating user x 10.1.1.1 port 1234 [preauth]
-  Connection closed by invalid user x 1.1.1.1 port 1234 [preauth]
-
-  Affected messages include connection closure, timeout, remote
-  disconnection, negotiation failure and some other fatal messages
-  generated by the packet code.
-
-20170326:
-  AFFECTS: users of samba43
-  AUTHOR: antoine@FreeBSD.org
-
-  The default version of samba has been switched from 4.3 to 4.4.
-  Upgrade instructions:
-
-  For package users having samba43 installed indirectly (as a dependency):
-    # pkg upgrade
-
-  For package users having samba43 installed directly (leaf port):
-    # pkg upgrade
-    # pkg install samba44
-
-  For ports users:
-    If you want to keep samba43, add DEFAULT_VERSIONS+= samba=4.3 to make.conf
-
-    If you want to upgrade to samba44, remove samba43 and obsolete packages:
-    # pkg delete -f samba36-libsmbclient samba36-nmblookup samba36-smbclient samba36 samba43 p5-Parse-Pidl
-
-    Portmaster users:
-    # portmaster net/samba44
-    # portmaster -a
-
-    Portupgrade users:
-    # portinstall net/samba44
-    # portupgrade -a
-
-20170325:
-  AFFECTS: net/samba46 and devel/p5-Parse-Pidl
-  AUTHOR: timur@FreeBSD.org
-
-  New version of Samba port from 4.6 branch is added. Before upgrading please read upgrade notes:
-
-  https://www.samba.org/samba/history/samba-4.6.0.html
-
-  For the vfs_fruit users:
-
-  Users on *BSD must rename the metadata xattr used by vfs_fruit when
-  using the default setting "fruit:metadata = netatalk".
-
-  Due to a glitch in the Samba xattr API compatibility layer for FreeBSD and a
-  mistake in vfs_fruit, vfs_fruit ended up using the wrong xattr name when
-  configured with "fruit:metadata = netatalk" (default). Instead of the correct
-
-  org.netatalk.Metadata
-
-  it used
-
-  netatalk.Metadata
-
-  Starting with Samba 4.6 vfs_fruit will use the correct "org.netatalk.Metadata"
-  which means existing installations must rename this xattrs. For this purpose
-  Samba now includes a new tool `mvxattr`.
-
-20170325:
-  AFFECTS: net/samba45, net/samba46 and devel/p5-Parse-Pidl
-  AUTHOR: timur@FreeBSD.org
-
-  While new Uses/samba.mk dosen't work well with slave ports to compile devel/p5-Parse-Pidl
-  for net/samba45 or net/samba46 you need explicitly set in the /etc/make.conf:
-
-  SAMBA4_PORT=net/samba46
-
-  explicitly. In the future that shouldn't be necessary.
-
-20170321:
-  AFFECTS: users of samba36-libsmbclient, samba36-nmblookup samba36-smbclient and samba36
-  AUTHOR: antoine@FreeBSD.org
-
-  The obsolete samba36-libsmbclient, samba36-nmblookup, samba36-smbclient and samba36 packages/ports were removed
-  and USES=samba was introduced.
-  Upgrade instructions:
-
-  For package users having those ports installed indirectly (as dependencies):
-    # pkg upgrade
-
-  For package users having those ports installed directly (leaf ports):
-    # pkg upgrade
-    # pkg install samba43
-
-  For ports users:
-    Choose you samba version, for instance add DEFAULT_VERSIONS+= samba=4.3 to make.conf
-
-    Remove obsolete packages:
-    # pkg delete -f samba36-libsmbclient samba36-nmblookup samba36-smbclient samba36
-
-    Portmaster users:
-    # portmaster net/samba43
-    # portmaster -a
-
-    Portupgrade users:
-    # portinstall net/samba43
-    # portupgrade -a
-
-20170319:
-  AFFECTS: users of mail/pecl-mailparse
-  AUTHOR: dbaio@bsd.com.br
-
-  The mail/pecl-mailparse has been upgraded to version 3.0.2, and the new
-  version is not compatible with PHP5. If you need PHP5 support, you can
-  find version 2.1.6 in mail/pecl-mailparse2.
-
-20170319:
-  AFFECTS: users of textproc/pecl-yaml
-  AUTHOR: dbaio@bsd.com.br
-
-  The pecl-yaml has been upgraded to version 2.0.0, and the new version is
-  not compatible with PHP5. If you need PHP5 support, you can find version
-  1.3.0 in textproc/pecl-yaml1.
 

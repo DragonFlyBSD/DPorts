@@ -159,16 +159,16 @@ anvil:*:217:
 zap:*:218:
 sddm:*:219:
 bs:*:220:
-# free: 221
+opensips:*:221:
 rtpproxy:*:222:
-# free: 223
+mqttwarn:*:223:
 # free: 224
 postgrey:*:225:
 sqlgrey:*:226:
 _hfm:*:227:
 osrm:*:228:
 kismet:*:229:
-# free: 230
+carbon:*:230:
 # free: 231
 # free: 232
 # free: 233
@@ -828,7 +828,7 @@ chronyd:*:849:
 # free: 887
 vuls:*:888:
 mattermost:*:889:
-# free: 890
+matterircd:*:890:
 # free: 891
 # free: 892
 # free: 893
