@@ -2,10 +2,9 @@
 # $FreeBSD$
 
 PORTNAME=	gdal
-PORTVERSION=	2.2.3
-PORTREVISION=	2
+PORTVERSION=	2.2.4
 CATEGORIES=	graphics geography
-MASTER_SITES=	http://download.osgeo.org/gdal/${PORTVERSION}/ \
+MASTER_SITES=	https://download.osgeo.org/gdal/${PORTVERSION}/ \
 		ftp://ftp.remotesensing.org/pub/gdal/${PORTVERSION}/ \
 		LOCAL/sunpoet
 
@@ -54,7 +53,7 @@ MAKEFILE=	GNUmakefile
 USE_LDCONFIG=	yes
 USES=		gmake iconv jpeg localbase tar:xz
 
-PLIST_SUB=	PORTVERSION=${PORTVERSION} SHLIB_VER=${PORTVERSION:R:R}
+PLIST_SUB=	PORTVERSION=${PORTVERSION}
 
 SLAVEDIRS=	graphics/p5-Geo-GDAL graphics/php-gdal graphics/py-gdal
 
