@@ -1,10 +1,11 @@
 #!/bin/sh
-# $FreeBSD: head/devel/llvm-devel/files/llvm-wrapper.sh.in 463450 2018-03-02 22:26:04Z brooks $
+# $FreeBSD: head/devel/llvm-devel/files/llvm-wrapper.sh.in 465643 2018-03-26 22:36:06Z brooks $
 
 LLVM_PREFIX="%%LLVM_PREFIX%%"
 LLVM_SUFFIX="%%LLVM_SUFFIX%%"
 
-tool=${0##*/}
+tool=$(/bin/realpath $0)
+tool=${tool##*/}
 tool="${LLVM_PREFIX}/bin/${tool%${LLVM_SUFFIX}}"
 LD_LIBRARY_PATH="${LD_LIBRARY_PATH:+${LD_LIBRARY_PATH}:}${LLVM_PREFIX}/lib" \
     "${tool}" "${@}"
