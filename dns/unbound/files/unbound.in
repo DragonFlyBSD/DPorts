@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/dns/unbound/files/unbound.in 459983 2018-01-26 10:16:16Z brnrd $
+# $FreeBSD: head/dns/unbound/files/unbound.in 465195 2018-03-21 17:00:23Z pi $
 #
 # unbound freebsd startup rc.d script, modified from the named script.
 # uses the default unbound installation path and pidfile location.
@@ -27,7 +27,7 @@ reload_precmd="%%PREFIX%%/sbin/unbound-checkconf ${unbound_conf} >/dev/null"
 
 load_rc_config $name
 
-pidfile=${unbound_pidfile:-"%%PREFIX%%/etc/unbound/unbound.pid"}
+pidfile=`%%PREFIX%%/sbin/unbound-checkconf -o pidfile ${unbound_conf}`
 unbound_enable=${unbound_enable:-"NO"}
 unbound_anchorflags=${unbound_anchorflags:-""}
 unbound_conf=${unbound_conf:-"%%ETCDIR%%/unbound.conf"}
