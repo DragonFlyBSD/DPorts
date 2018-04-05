@@ -2,7 +2,7 @@
 
 PORTNAME=	llvm
 DISTVERSION=	3.9.1
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	devel lang
 MASTER_SITES=	http://llvm.org/${PRE_}releases/${LLVM_RELEASE}/${RCDIR}
 PKGNAMESUFFIX=	${LLVM_SUFFIX}
@@ -339,7 +339,7 @@ post-patch-COMPILER_RT-on:
 post-build-COMPILER_RT-on:
 	${MKDIR} ${WRKDIR}/compiler-rt-build
 	cd ${WRKDIR}/compiler-rt-build && \
-	${CMAKE_BIN} ${CMAKE_ARGS} \
+	${SETENV} ${CONFIGURE_ENV} ${CMAKE_BIN} ${CMAKE_ARGS} \
 	    -DLLVM_CONFIG_PATH=${CONFIGURE_WRKSRC}/bin/llvm-config \
 	    ${WRKSRC_compiler_rt} && \
 	${MAKE_ENV} ${MAKE_CMD}
