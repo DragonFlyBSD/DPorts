@@ -1,6 +1,5 @@
 bin/librecad
 bin/ttf2lff
-share/appdata/librecad.appdata.xml
 share/applications/librecad.desktop
 %%DATADIR%%/fonts/OpenGostTypeA-Regular.lff
 %%DATADIR%%/fonts/OpenGostTypeB-Regular.lff
@@ -48,7 +47,6 @@ share/applications/librecad.desktop
 %%DATADIR%%/fonts/symeteo.lff
 %%DATADIR%%/fonts/symusic.lff
 %%DATADIR%%/fonts/unicode.lff
-%%DATADIR%%/fonts/wqy-unicode.lff
 %%DATADIR%%/library/algoritm/alg1.dxf
 %%DATADIR%%/library/algoritm/alg10.dxf
 %%DATADIR%%/library/algoritm/alg11.dxf
@@ -1385,10 +1383,12 @@ share/applications/librecad.desktop
 %%DATADIR%%/patterns/triangle_b.dxf
 %%DATADIR%%/plugins/libalign.so
 %%DATADIR%%/plugins/libasciifile.so
+%%DATADIR%%/plugins/libgear.so
 %%DATADIR%%/plugins/libimportshp.so
 %%DATADIR%%/plugins/liblist.so
 %%DATADIR%%/plugins/libpicfile.so
 %%DATADIR%%/plugins/libplotequation.so
 %%DATADIR%%/plugins/libsameprop.so
 %%DATADIR%%/plugins/libsample.so
+share/metainfo/librecad.appdata.xml
 share/pixmaps/librecad.png
