@@ -2,7 +2,7 @@
 
 PORTNAME=	supertux
 PORTVERSION=	0.4.0
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	games
 MASTER_SITES=	https://github.com/SuperTux/supertux/releases/download/v${PORTVERSION}/
 PKGNAMESUFFIX=	2
@@ -17,6 +17,7 @@ LIB_DEPENDS=	libphysfs.so:devel/physfs \
 
 BROKEN_FreeBSD_10=	does not build on 10.x
 
+LLD_UNSAFE=	yes
 USE_SDL=	sdl2 image2
 USE_GL=		glew
 USES=		cmake:outsource compiler:c++11-lib dos2unix iconv \
@@ -25,7 +26,8 @@ USES=		cmake:outsource compiler:c++11-lib dos2unix iconv \
 CFLAGS+=	-D_GLIBCXX_USE_C99
 CMAKE_ARGS=	-DINSTALL_SUBDIR_BIN=bin \
 		-DBUILD_SHARED_LIBS=off
-DOS2UNIX_FILES=	external/squirrel/CMakeLists.txt
+DOS2UNIX_FILES=	external/squirrel/CMakeLists.txt \
+		external/squirrel/squirrel/sqvm.cpp
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}${PKGNAMESUFFIX}
 
 OPTIONS_DEFINE=	DOCS
