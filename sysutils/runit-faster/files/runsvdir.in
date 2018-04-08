@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/sysutils/runit-faster/files/runsvdir.in 464555 2018-03-15 04:07:19Z tobik $
+# $FreeBSD: head/sysutils/runit-faster/files/runsvdir.in 465960 2018-03-30 11:09:45Z tobik $
 #
 # PROVIDE: runsvdir
 # BEFORE:  SERVERS
@@ -28,6 +28,8 @@ stop_postcmd="%%PREFIX%%/sbin/sv exit ${runsvdir_path}/*"
 
 runsvdir_start()
 {
+	/bin/mkdir -p /var/run/runit/runsvdir
+	/bin/ln -sF %%RUNITDIR%%/runsvdir/current /var/run/runit/runsvdir/current
 	/bin/test -d ${runsvdir_path} || /bin/mkdir -p ${runsvdir_path}
 	/usr/bin/env -i \
 	PATH=/bin:/sbin:/usr/bin:/usr/sbin:%%PREFIX%%/bin:%%PREFIX%%/sbin:/rescue \
