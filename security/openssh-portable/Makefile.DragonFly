@@ -1,1 +1,1 @@
-LDFLAGS+= -lssl -lcrypto
+CONFIGURE_ARGS+=	--disable-libutil --without-stackprotect
