@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	openttd
-DISTVERSION=	1.7.2
-PORTREVISION=	1
+DISTVERSION=	1.8.0
 CATEGORIES=	games
 MASTER_SITES=	http://ca.binaries.openttd.org/binaries/releases/${DISTVERSION}/ \
 		http://cz.binaries.openttd.org/binaries/releases/${DISTVERSION}/ \
@@ -58,6 +57,7 @@ USE_RC_SUBR=	${PORTNAME}
 .else
 USES+=		compiler:c++11-lib
 USE_CXXSTD=	gnu++11
+CXXFLAGS+=	-DU_USING_ICU_NAMESPACE=1
 LIB_DEPENDS+=	libfreetype.so:print/freetype2 \
 		libicui18n.so:devel/icu \
 		libicu-le-hb.so:devel/icu-le-hb \
