@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/dns/dnsdist/files/dnsdist.in 454856 2017-11-24 23:17:50Z dbaio $
+# $FreeBSD: head/dns/dnsdist/files/dnsdist.in 466166 2018-04-01 15:14:45Z cpm $
 #
 # PROVIDE: dnsdist
 # REQUIRE: NETWORKING DAEMON
@@ -22,7 +22,10 @@ load_rc_config ${name}
 : ${dnsdist_priv_group:=_dnsdist}
 : ${dnsdist_enable:=NO}
 
-command=/usr/local/sbin/${name}
-command_args="-u ${dnsdist_priv_user} -g ${dnsdist_priv_group} -d"
+pidfile=/var/run/${name}.pid
+
+command=/usr/sbin/daemon
+actual_command=/usr/local/sbin/${name}
+command_args="-c -f -r -P ${pidfile} ${actual_command} -u ${dnsdist_priv_user} -g ${dnsdist_priv_group} --supervised"
 
 run_rc_command "$1"
