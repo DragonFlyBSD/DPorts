@@ -18,6 +18,7 @@ USE_LDCONFIG=	yes
 USE_XORG=	x11 xext sm ice xt xaw xmu xpm
 GNU_CONFIGURE=	yes
 MAKE_JOBS_UNSAFE=yes
+LLD_UNSAFE=	yes	# Needs linker to provide library search paths.
 
 WRKSRC_SUBDIR=	x11
 
