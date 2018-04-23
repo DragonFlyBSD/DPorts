@@ -381,9 +381,6 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #				- If set, the system should use OpenLDAP libraries
 #				  with SASL support.
 ##
-# USE_FPC		- If set, this port relies on the Free Pascal language.
-# 				  Implies inclusion of bsd.fpc.mk.  (Also see
-#				  that file for more information on WANT_FPC_*).
 # USE_JAVA		- If set, this port relies on the Java language.
 #				  Implies inclusion of bsd.java.mk.  (Also see
 #				  that file for more information on USE_JAVA_*).
@@ -1381,10 +1378,6 @@ DEV_WARNING+=		"Using USE_PHP alone is deprecated, please use USES=php"
 USES+=	php
 .endif
 
-.if defined(USE_FPC) || defined(WANT_FPC_BASE) || defined(WANT_FPC_ALL)
-.include "${PORTSDIR}/Mk/bsd.fpc.mk"
-.endif
-
 .if defined(USE_JAVA)
 .include "${PORTSDIR}/Mk/bsd.java.mk"
 .endif
@@ -1994,10 +1987,6 @@ _USES_POST+=	php
 
 .if defined(USE_WX) || defined(USE_WX_NOT)
 .include "${PORTSDIR}/Mk/bsd.wx.mk"
-.endif
-
-.if defined(USE_FPC) || defined(WANT_FPC_BASE) || defined(WANT_FPC_ALL)
-.include "${PORTSDIR}/Mk/bsd.fpc.mk"
 .endif
 
 .if defined(USE_GECKO)

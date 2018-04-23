@@ -173,7 +173,7 @@ carbon:*:230:
 # free: 232
 # free: 233
 kafka:*:234:
-# free: 235
+openhab:*:235:
 # free: 236
 # free: 237
 # free: 238
@@ -414,7 +414,7 @@ nomad:*:472:
 minio:*:473:
 gitlab-runner:*:474:
 traefik:*:475:
-# free: 476
+gitlab-pages:*:476:
 # free: 477
 prometheus:*:478:
 alertmanager:*:479:
@@ -825,13 +825,13 @@ chronyd:*:849:
 # free: 884
 # free: 885
 # free: 886
-# free: 887
+pdagent:*:887:
 vuls:*:888:
 mattermost:*:889:
 matterircd:*:890:
-# free: 891
-# free: 892
-# free: 893
+urbackup:*:891:
+tautulli:*:892:
+logstash:*:893:
 arangodb:*:894:
 snmptt:*:895:
 istat:*:896:
