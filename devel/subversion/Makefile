@@ -1,13 +1,13 @@
 # Created by: rooneg@electricjellyfish.net
 # $FreeBSD$
 
-PORTREVISION=	4
+PORTREVISION=	0
 
 MAINTAINER=	lev@FreeBSD.org
 COMMENT=	Version control system
 
-CONFLICTS_INSTALL=	subversion-1.[^9].[0-9]* \
-			subversion1[^9]-1.[^9].[0-9]*
+CONFLICTS_INSTALL=	subversion-1.[0-9].[0-9]* \
+			subversion1[0-9]-1.[0-9].[0-9]*
 
 USE_RC_SUBR=	svnserve
 
@@ -27,7 +27,7 @@ OPTIONS_DEFINE=	\
 		TEST		\
 		TOOLS
 
-OPTIONS_DEFAULT= \
+OPTIONS_DEFAULT=LZ4 \
 		SERF TOOLS
 
 FREEBSD_TEMPLATE_DESC=	FreeBSD Project log template
@@ -80,12 +80,6 @@ BDB_BUILD_DEPENDS=	yes
 OLD_LIB_DEPENDS:=	${LIB_DEPENDS:S!^!${LOCALBASE}/lib/!:C!(\.so|\.[0-9]+)?:!.a:!}
 BUILD_DEPENDS+=		${OLD_LIB_DEPENDS}
 LIB_DEPENDS=
-.endif
-
-.if ${PORT_OPTIONS:MBDB}
-CONFIGURE_ARGS+=	--enable-bdb6
-.else
-CONFIGURE_ARGS+=	--without-berkeley-db
 .endif
 
 .if make(repository)
