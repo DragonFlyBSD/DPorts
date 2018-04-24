@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/sysutils/puppet4/files/puppetmaster.in 461209 2018-02-08 10:33:38Z romain $
+# $FreeBSD: head/sysutils/puppet4/files/puppetmaster.in 467077 2018-04-11 14:54:38Z romain $
 #
 
 # PROVIDE: puppetmaster
@@ -28,11 +28,11 @@ command_args="master ${puppetmaster_flags}"
 unset puppetmaster_flags
 
 pidfile="${puppetmaster_rundir}/master.pid"
-puppet_manifest="$($command config print manifest)"
 
 start_precmd="puppetmaster_checkconfig"
 restart_precmd="puppetmaster_checkconfig"
 puppetmaster_checkconfig() {
+	puppet_manifest="$($command config print manifest)"
 	cat << EOT
 ================================================================================
 The Rack and WEBrick Puppet master servers are deprecated and will be removed
