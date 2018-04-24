@@ -7,16 +7,21 @@ PORTVERSION=	${ISCVERSION:S/-P/P/:S/b/.b/:S/a/.a/:S/rc/.rc/}
 # dns/bind-tools here
 PORTREVISION=	0
 .else
+# XXX: correct version
 # dns/bind9xx here
 PORTREVISION=	0
 .endif
 CATEGORIES=	dns net ipv6
+# XXX: put the ISC master_site
+#MASTER_SITES=	ISC/bind9/${ISCVERSION}
 MASTER_SITES=	LOCAL/mat/bind
 .if defined(BIND_TOOLS_SLAVE)
 PKGNAMESUFFIX=	-tools
 .else
 PKGNAMESUFFIX=	9-devel
 .endif
+# XXX: correct DISTNAME.
+#DISTNAME=	${PORTNAME}-${ISCVERSION}
 
 MAINTAINER=	mat@FreeBSD.org
 .if defined(BIND_TOOLS_SLAVE)
@@ -29,13 +34,15 @@ LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
 
 # ISC releases things like 9.8.0-P1, which our versioning doesn't like
-ISCVERSION=	9.13.0a0.2018.03.21
+ISCVERSION=	9.13.0a0.2018.04.20
+# XXX: Remove gitlab
 USE_GITLAB=	yes
 GL_SITE=	https://gitlab.isc.org
 GL_ACCOUNT=	isc-projects
 GL_PROJECT=	bind9
-GL_COMMIT=	52909b5dbeadf13ecbf43e8ee573af23eebd6859
+GL_COMMIT=	498491555e578626a37380e8baf3ee0d48dff815
 
+# XXX: remove tar:bz2
 USES=	cpe libedit tar:bz2
 
 CPE_VENDOR=	isc
@@ -56,10 +63,12 @@ CONFIGURE_ARGS=	--localstatedir=/var --disable-linux-caps \
 		--sysconfdir=${ETCDIR}
 ETCDIR=		${PREFIX}/etc/namedb
 
+# XXX: Add -devel
 CONFLICTS=	bind99 bind910 bind911 bind912
 
 .if defined(BIND_TOOLS_SLAVE)
 CONFIGURE_ARGS+=	--disable-shared
+# XXX: Change to the correct version
 CONFLICTS+=		bind9-devel
 .else
 USE_RC_SUBR=	named
@@ -178,12 +187,12 @@ IDN_USES=		iconv
 
 IPV6_CONFIGURE_ENABLE=	ipv6
 
-JSON_CONFIGURE_WITH=	libjson
+JSON_CONFIGURE_WITH=	libjson=${LOCALBASE}
 JSON_LIB_DEPENDS=	libjson-c.so:devel/json-c
 
 LARGE_FILE_CONFIGURE_ENABLE=	largefile
 
-LMDB_CONFIGURE_WITH=	lmdb
+LMDB_CONFIGURE_WITH=	lmdb=${LOCALBASE}
 LMDB_LIB_DEPENDS=	liblmdb.so:databases/lmdb
 
 MINCACHE_EXTRA_PATCHES=	${FILESDIR}/extrapatch-bind-min-override-ttl
@@ -233,9 +242,11 @@ BROKEN=	OpenSSL from the base system does not support GOST, add \
 	that needs SSL.
 .endif
 
+# XXX: Remove
 post-extract:
 	echo "SRCID=${GL_COMMIT}" > ${WRKSRC}/srcid
 
+# XXX: Remove first REINPLACE_CMD
 post-patch:
 	@${REINPLACE_CMD} -e '/RELEASETYPE=/s#$$#-${GL_COMMIT}#' \
 		${WRKSRC}/version
