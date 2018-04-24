@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	flexget
-PORTVERSION=	2.13.5
+PORTVERSION=	2.13.11
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	www python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -13,7 +14,7 @@ COMMENT=	Program to automate downloading from different sources
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlalchemy10>=1.0.13:databases/py-sqlalchemy10@${FLAVOR} \
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlalchemy12>0:databases/py-sqlalchemy12@${FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}Jinja2>0:devel/py-Jinja2@${FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}rpyc>0:devel/py-RPyC@${FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}apscheduler>=3.2.0:devel/py-apscheduler@${FLAVOR} \
@@ -27,7 +28,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlalchemy10>=1.0.13:databases/py-sqlalchemy
 		${PYTHON_PKGNAMEPREFIX}progressbar>0:misc/py-progressbar@${FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}guessit>=2.1.4:multimedia/py-guessit@${FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pynzb>0:news/py-pynzb@${FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}zxcvbn-python>0:security/py-zxcvbn-python@${FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}zxcvbn>0:security/py-zxcvbn@${FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}plumbum>=1.2:sysutils/py-plumbum@${FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}colorclass>=2.2.0:textproc/py-colorclass@${FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}feedparser>=5.2.1:textproc/py-feedparser@${FLAVOR} \
