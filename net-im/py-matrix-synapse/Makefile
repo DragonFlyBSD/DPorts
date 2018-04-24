@@ -3,12 +3,12 @@
 
 PORTNAME=	matrix-synapse
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.27.2
-PORTREVISION=	0
+DISTVERSION=	0.27.4
+PORTREVISION=	1
 CATEGORIES=	net-im python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	feld@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Matrix protocol reference homeserver
 
 LICENSE=	APACHE20
@@ -18,7 +18,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}jsonschema>=2.5.1:devel/py-jsonschema@${FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}frozendict>=0.5:devel/py-frozendict@${FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}unpaddedbase64>=1.1.0:devel/py-unpaddedbase64@${FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}canonicaljson>=1.0.0:devel/py-canonicaljson@${FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}canonicaljson>=1.1.3:devel/py-canonicaljson@${FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}signedjson>=1.0.0:security/py-signedjson@${FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pynacl>=1.2.1:security/py-pynacl@${FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}service_identity>=16.0:security/py-service_identity@${FLAVOR} \
@@ -34,7 +34,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}jsonschema>=2.5.1:devel/py-jsonschema@${FLAV
 		${PYTHON_PKGNAMEPREFIX}blist>=1.3.6:devel/py-blist@${FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pysaml2>=4.0.2:security/py-pysaml2@${FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pymacaroons-pynacl>=0.9.3:security/py-pymacaroons-pynacl@${FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}msgpack-python>=0.3.0:devel/py-msgpack-python@${FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}msgpack>=0.3.0:devel/py-msgpack@${FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}phonenumbers>=8.2.0:devel/py-phonenumbers@${FLAVOR}
 
 # Conditional requirements that aren't so conditional
