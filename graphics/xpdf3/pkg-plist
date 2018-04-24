@@ -1,5 +1,6 @@
 %%X11%%libexec/xpdf/xpdf
 %%X11%%bin/xpdf
+%%X11%%%%DESKTOPDIR%%/xpdf.desktop
 etc/man.d/xpdf.conf
 %%X11%%%%DATADIR%%/man/man1/xpdf.1.gz
 %%DATADIR%%/man/man5/xpdfrc.5.gz
