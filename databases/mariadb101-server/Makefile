@@ -2,7 +2,7 @@
 
 PORTNAME?=	mariadb
 PORTVERSION=	10.1.32
-PORTREVISION?=	1
+PORTREVISION?=	2
 CATEGORIES=	databases ipv6
 MASTER_SITES=	http://ftp.osuosl.org/pub/${SITESDIR}/ \
 		http://mirrors.supportex.net/${SITESDIR}/ \
@@ -185,7 +185,7 @@ post-install-MROONGA-on:
 
 .include <bsd.port.options.mk>
 
-.if ${OPSYS} != FreeBSD || ${OSVERSION} < 1101515 || \
+.if ${OPSYS} != FreeBSD || ${OSVERSION} < 1101514 || \
 	${OSVERSION} >= 1200000 && ${OSVERSION} < 1200057
 SUB_LIST+=	LEGACY_LIMITS="" MODERN_LIMITS="@comment "
 .else
