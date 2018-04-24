@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	redis
-DISTVERSION=	4.0.8
-PORTREVISION=	1
+DISTVERSION=	4.0.9
+PORTREVISION=	2
 CATEGORIES=	databases
 MASTER_SITES=	http://download.redis.io/releases/
 PKGNAMESUFFIX=	-devel
@@ -57,7 +57,7 @@ USES+=		tcl:build
 
 LDFLAGS+=	-lpthread -lm -lexecinfo
 
-CONFLICTS?=	redis-3.*
+CONFLICTS?=	redis-4.*
 
 USES+=		gmake
 MAKE_ENV=	"V=yo"
