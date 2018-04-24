@@ -10,13 +10,15 @@ EXTRACT_ONLY=
 MAINTAINER=	zrj@ef.irc
 COMMENT=	Intel i915 GPU firmware
 
-FIRMWARES_i915=									\
-	bxt_dmc_ver1 skl_dmc_ver1 skl_guc_ver1 skl_guc_ver4 skl_guc_ver6
+FIRMWARES_i915= \
+	bxt_dmc_ver1 \
+	kbl_dmc_ver1 \
+	skl_dmc_ver1 skl_guc_ver1 skl_guc_ver4 skl_guc_ver6
 
 WRKSRC=		${WRKDIR}
 FWNAME=		i915fw
 FWFILE=		i915-firmware-${FWVERSION}.tar.gz
-FWVERSION=	20160311
+FWVERSION=	20180102
 
 NO_ARCH=	yes
 DATADIR=	${PREFIX}/share/fw-i915
@@ -47,6 +49,11 @@ do-build:
 		${WRKSRC}/remove-firmware.sh
 	cd ${WRKSRC} && \
 	tar xf ${DISTDIR}/${FWFILE}
+
+# update kbl-dmc firmware to 04
+pre-install:
+	cd ${WRKSRC}/i915 && ${RM} kbl_dmc_ver1.bin && \
+	${LN} -sv kbl_dmc_ver1_04.bin kbl_dmc_ver1.bin
 
 do-install:
 	${MKDIR} ${STAGEDIR}${DATADIR}/
