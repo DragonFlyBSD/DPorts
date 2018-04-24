@@ -1,7 +1,7 @@
 #!/bin/sh
 # Created by: Mark Felder <feld@FreeBSD.org>
 #
-# $FreeBSD: head/multimedia/tautulli/files/tautulli.in 464823 2018-03-17 15:11:32Z feld $
+# $FreeBSD: head/multimedia/tautulli/files/tautulli.in 466727 2018-04-07 14:14:23Z feld $
 #
 # PROVIDE: tautulli
 # REQUIRE: LOGIN
@@ -19,7 +19,8 @@ rcvar=tautulli_enable
 load_rc_config $name
 
 : ${tautulli_enable:=NO}
-: ${tautulli_user=nobody}
+: ${tautulli_user=tautulli}
+: ${tautulli_group=tautulli}
 
 command_interpreter=%%PYTHON_CMD%%
 command=%%WWWDIR%%/Tautulli.py
@@ -34,7 +35,7 @@ tautulli_prestart()
 		exit 1
 	fi
 	
-	install -d -o ${tautulli_user} /var/db/tautulli
+	install -d -o ${tautulli_user} -g ${tautulli_group} /var/db/tautulli
 }
 
 run_rc_command "$1"
