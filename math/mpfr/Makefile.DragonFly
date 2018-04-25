@@ -1,0 +1,2 @@
+# issue with unreferenced __trunctfdf2
+CONFIGURE_ARGS+=	--disable-float128
