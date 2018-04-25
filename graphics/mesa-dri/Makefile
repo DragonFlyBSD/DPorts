@@ -3,7 +3,6 @@
 
 PORTNAME=	mesa-dri
 PORTVERSION=	${MESAVERSION}
-PORTREVISION=	1
 CATEGORIES=	graphics
 
 COMMENT=	OpenGL hardware acceleration drivers for DRI2+
@@ -52,7 +51,7 @@ VULKAN_DRIVERS+=	RADEON
 .if ${ARCH} == x86_64 || ${ARCH} == i386
 DRI_DRIVERS+=		I915 I965
 GALLIUM_DRIVERS+=	SVGA
-. if ${OPSYS} == FreeBSD && ${OSVERSION} < 1100000
+. if ${OPSYS} == FreeBSD
 EXTRA_PATCHES+=	${PATCHDIR}/extra-src_mesa_drivers_dri_i965_intel__screen.c
 . endif
 VULKAN_DRIVERS+=	INTEL
@@ -69,7 +68,7 @@ VULKAN_DRIVERS:=	# nothing, won't build on DF
 BUILD_DEPENDS+=		${PYTHON_PKGNAMEPREFIX}mako>0:textproc/py-mako@${PY_FLAVOR}
 .endif
 
-.if ${VULKAN_DRIVERS:MINTEL}
+.if ${DRI_DRIVERS} || ${VULKAN_DRIVERS:MINTEL}
 . if ${/usr/bin/ld:L:tA} != /usr/bin/ld.lld
 # --build-id isn't supported by old GNU ld.bfd in base
 USE_BINUTILS=		yes
