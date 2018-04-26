@@ -2,8 +2,7 @@
 #   $MCom: ports/finance/gnucash/Makefile,v 1.26 2008/12/31 03:25:18 mezz Exp $
 
 PORTNAME=	gnucash
-PORTVERSION=	2.6.19
-PORTREVISION=	2
+PORTVERSION=	2.6.21
 CATEGORIES=	finance gnome
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}%20%28stable%29/${PORTVERSION}
 
@@ -41,36 +40,40 @@ guile2_BUILD_DEPENDS=	slib-guile2>0:lang/slib-guile2
 guile2_RUN_DEPENDS=	slib-guile2>0:lang/slib-guile2
 guile2_CONFLICTS_INSTALL=	gnucash-guile1-[0-9]*
 
-OPTIONS_DEFINE=	AQBANKING OFX DATABASE LOCALE_TAX PYTHON GTKMM DOCS
+OPTIONS_DEFINE=		AQBANKING DATABASE DOCS GTKMM LOCALE_TAX NLS OFX PYTHON
+OPTIONS_DEFAULT=	AQBANKING OFX
 
 AQBANKING_DESC=	AqBanking support (HBCI/OpenHBCI)
-OFX_DESC=	OFX support
 DATABASE_DESC=	Enable SQL database backends
-LOCALE_TAX_DESC=	Enable localized tax categories
 GTKMM_DESC=	Enable GTKMM based UI
+LOCALE_TAX_DESC=	Enable localized tax categories
+OFX_DESC=	OFX support
 
 OPTIONS_SUB=		yes
 AQBANKING_CONFIGURE_ENABLE=aqbanking
 AQBANKING_LIB_DEPENDS=	libgwengui-gtk2.so:devel/gwenhywfar-gtk2 \
+			libgwenhywfar.so:devel/gwenhywfar \
 			libktoblzcheck.so:finance/ktoblzcheck \
 			libaqbanking.so:finance/aqbanking
 AQBANKING_VARS=		GLIB_SCHEMAS+=org.gnucash.dialogs.import.hbci.gschema.xml
-OFX_CONFIGURE_ENABLE=	ofx
-OFX_LIB_DEPENDS=	libofx.so:finance/libofx
-OFX_VARS=		GLIB_SCHEMAS+=org.gnucash.dialogs.import.ofx.gschema.xml
 DATABASE_CONFIGURE_ENABLE=dbi
 DATABASE_BUILD_DEPENDS=	libdbi-drivers>=0:databases/libdbi-drivers
 DATABASE_LIB_DEPENDS=	libdbi.so:databases/libdbi
 DATABASE_RUN_DEPENDS=	libdbi-drivers>=0:databases/libdbi-drivers
 DATABASE_CONFIGURE_ON=	--with-dbi-dbd-dir=${LOCALBASE}/lib/dbd
-LOCALE_TAX_CONFIGURE_ON=--enable-locale-specific-tax
-PYTHON_CONFIGURE_ON=	--enable-python
-PYTHON_USES=		python:2.7
 GTKMM_USE=		GNOME=gtkmm24
 GTKMM_CONFIGURE_ON=	--enable-gtkmm
 GTKMM_CONFIGURE_OFF=	--disable-gtkmm
+LOCALE_TAX_CONFIGURE_ON=--enable-locale-specific-tax
+NLS_CONFIGURE_ENABLE=	nls
+NLS_USES=		gettext-runtime
+OFX_CONFIGURE_ENABLE=	ofx
+OFX_LIB_DEPENDS=	libofx.so:finance/libofx
+OFX_VARS=		GLIB_SCHEMAS+=org.gnucash.dialogs.import.ofx.gschema.xml
+PYTHON_CONFIGURE_ON=	--enable-python
+PYTHON_USES=		python:2.7
 
-USES=		compiler:c++11-lib desktop-file-utils gettext gmake libtool localbase \
+USES=		compiler:c++11-lib desktop-file-utils gettext-tools gmake libtool localbase \
 		perl5 pkgconfig shebangfix tar:bzip2
 USE_XORG=	x11
 USE_CXXSTD=	c++11
@@ -94,6 +97,7 @@ GLIB_SCHEMAS=	org.gnucash.dialogs.business.gschema.xml \
 		org.gnucash.dialogs.reconcile.gschema.xml \
 		org.gnucash.dialogs.sxs.gschema.xml \
 		org.gnucash.dialogs.totd.gschema.xml \
+		org.gnucash.general.finance-quote.gschema.xml \
 		org.gnucash.gschema.xml \
 		org.gnucash.history.gschema.xml \
 		org.gnucash.warnings.gschema.xml \
