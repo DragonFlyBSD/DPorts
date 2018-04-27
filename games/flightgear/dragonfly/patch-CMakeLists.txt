@@ -1,17 +1,17 @@
---- CMakeLists.txt.intermediate	2017-07-25 16:38:29.000000000 +0300
+--- CMakeLists.txt.orig	2018-04-27 13:22:58 UTC
 +++ CMakeLists.txt
-@@ -114,6 +114,7 @@ IF(APPLE)
-     SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -mmacosx-version-min=10.7")
-     SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -mmacosx-version-min=10.7")
+@@ -128,6 +128,7 @@ elseif(WIN32)
+     MESSAGE("Installing: ${CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS}")
+ 
  elseif(${CMAKE_SYSTEM_NAME} MATCHES "Linux" OR
 +        ${CMAKE_SYSTEM_NAME} MATCHES "DragonFly" OR
  	${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
      find_package(Threads REQUIRED)
      find_package(X11 REQUIRED)
-@@ -227,7 +227,7 @@ include( ConfigureMsvc3rdParty )
- if(EVENT_INPUT)
-     if(APPLE)
+@@ -242,7 +243,7 @@ if(EVENT_INPUT)
        add_definitions(-DWITH_EVENTINPUT)
+       find_library(IOKIT_FRAMEWORK IOKit)
+       list(APPEND EVENT_INPUT_LIBRARIES ${IOKIT_FRAMEWORK})      
 -    elseif(CMAKE_SYSTEM_NAME MATCHES "Linux|FreeBSD")
 +    elseif(CMAKE_SYSTEM_NAME MATCHES "Linux|DragonFly|FreeBSD")
          if(NOT UDEV_FOUND)
