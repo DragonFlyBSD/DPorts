@@ -13,3 +13,17 @@
  #
  # ----------------------------------- Memory -----------------------------------
  #
+@@ -86,3 +88,13 @@
+ # Require explicit names when deleting indices:
+ #
+ #action.destructive_requires_name: true
++#
++# ---------------------------DragonFly specific options-------------------------
++#
++# Java Native Interface code doesn't work on DragonFly
++#
++bootstrap.system_call_filter: false
++#
++# The default mmapfs storage engine is prone to memory leaks
++#
++index.store.type: niofs
