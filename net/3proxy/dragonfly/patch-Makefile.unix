@@ -1,11 +1,11 @@
---- Makefile.unix.intermediate	2016-02-09 14:38:04.000000000 +0200
+--- Makefile.unix.orig	2018-04-27 13:25:47 UTC
 +++ Makefile.unix
 @@ -13,7 +13,7 @@ CC ?= gcc
  # you may need -L/usr/pkg/lib for older NetBSD versions
- CFLAGS = -c -pipe -O2 -fno-strict-aliasing -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL
+ CFLAGS = -c -O2 -pipe  -fstack-protector -fno-strict-aliasing -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL
  COUT = -o 
 -LN ?= ${CC}
 +LN = ${CC}
- LDFLAGS = -pthread
+ LDFLAGS = -fno-strict-aliasing -pthread
  # -lpthreads may be reuqired on some platforms instead of -pthreads
  # -ldl or -lld may be required for some platforms
