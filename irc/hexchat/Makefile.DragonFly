@@ -1,0 +1,2 @@
+dfly-patch:
+	${RM} ${WRKSRC}/meson_post_install.py
