@@ -1,15 +1,21 @@
 --- agent/mibgroup/udp-mib/data_access/udp_endpoint_freebsd4.c.orig	2017-04-13 13:08:40 UTC
 +++ agent/mibgroup/udp-mib/data_access/udp_endpoint_freebsd4.c
-@@ -153,7 +153,7 @@ _load(netsnmp_container *container, u_in
+@@ -153,9 +153,13 @@ _load(netsnmp_container *container, u_in
  #endif
  
  #if !defined(NETSNMP_ENABLE_IPV6)
 -#if __FreeBSD_version >= 1200026
-+#ifdef in6p_vflag
++#ifndef in6p_vflag
++#if defined(__FreeBSD__) && __FreeBSD_version >= 1200026
  	if (pcb.inp_vflag & INP_IPV6)
  #else
++	if (INP_ISIPV6(&(pcb.xi_inp)))
++#endif
++#else
          if (pcb.xi_inp.inp_vflag & INP_IPV6)
-@@ -188,7 +188,11 @@ _load(netsnmp_container *container, u_in
+ #endif
+ 	    continue;
+@@ -188,7 +192,11 @@ _load(netsnmp_container *container, u_in
          entry->rmt_port = htons(pcb.xi_inp.inp_fport);
          
          /** the addr string may need work */
