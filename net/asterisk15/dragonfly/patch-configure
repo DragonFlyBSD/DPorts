@@ -1,0 +1,40 @@
+--- configure.orig	2018-05-04 18:26:23 UTC
++++ configure
+@@ -4655,7 +4655,7 @@ astlogdir='${localstatedir}/log/asterisk
+ astvarrundir='${localstatedir}/run/asterisk'
+ 
+ case "${host_os}" in
+-     *bsd*)
++     *bsd*|*dragonfly*)
+      if test ${prefix} != 'NONE'; then
+         astvarlibdir='${prefix}/share/asterisk'
+         astdbdir='${localstatedir}/db/asterisk'
+@@ -4674,7 +4674,7 @@ case "${host_os}" in
+      CPPFLAGS=-I/usr/pkg/include
+      LDFLAGS=-L/usr/pkg/lib
+      ;;
+-     freebsd*)
++     freebsd*|dragonfly*)
+      ac_default_prefix=/usr/local
+      ;;
+      openbsd*)
+@@ -4761,6 +4761,9 @@ HOST_OS=${host_os}
+ PBX_WINARCH=0
+ 
+ case "${host_os}" in
++     dragonfly*)
++     OSARCH=DragonFly
++     ;;
+      freebsd*)
+      OSARCH=FreeBSD
+      ;;
+@@ -8368,6 +8371,9 @@ ax_pthread_flags="pthreads none -Kthread
+ 
+ case $host_os in
+ 
++        dragonfly*)
++        ax_pthread_flags="-pthread $ax_pthread_flags"
++        ;;
+         freebsd*)
+ 
+         # -kthread: FreeBSD kernel threads (preferred to -pthread since SMP-able)
