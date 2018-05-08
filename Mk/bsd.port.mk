@@ -1190,8 +1190,7 @@ OSREL!=		${ECHO} ${DFLYVERSION} | ${AWK} '{a=int($$1/100000); b=int(($$1-(a*1000
 .endif
 _EXPORTED_VARS+=	OSVERSION DFLYVERSION OSREL
 
-
-.if (${OPSYS} == FreeBSD && (${OSVERSION} < 1003000 || (${OSVERSION} >= 1100000 && ${OSVERSION} < 1101001))) || \
+.if (${OPSYS} == FreeBSD && (${OSVERSION} < 1004000 || (${OSVERSION} >= 1100000 && ${OSVERSION} < 1101001))) || \
     (${OPSYS} == DragonFly && ${DFLYVERSION} < 400400)
 _UNSUPPORTED_SYSTEM_MESSAGE=	Ports Collection support for your ${OPSYS} version has ended, and no ports\
 								are guaranteed to build on this system. Please upgrade to a supported release.
@@ -1344,8 +1343,12 @@ _SUF2=	,${PORTEPOCH}
 PKGVERSION=	${PORTVERSION:C/[-_,]/./g}${_SUF1}${_SUF2}
 PKGNAME=	${PKGNAMEPREFIX}${PORTNAME}${PKGNAMESUFFIX}-${PKGVERSION}
 DISTVERSIONFULL=	${DISTVERSIONPREFIX}${DISTVERSION:C/:(.)/\1/g}${DISTVERSIONSUFFIX}
-.if defined(USE_GITHUB) && empty(MASTER_SITES:MGHC) && empty(DISTNAME) && empty(USE_GITHUB:Mnodefault)
+.if defined(USE_GITHUB) && empty(MASTER_SITES:MGHC) && empty(USE_GITHUB:Mnodefault)
+.  if empty(DISTNAME)
 _GITHUB_MUST_SET_DISTNAME=		yes
+.  else
+DEV_WARNING+=	"You are using USE_GITHUB and DISTNAME is set which is wrong.  Set GH_ACCOUNT/GH_PROJECT/GH_TAGNAME correctly and remove WRKSRC entirely."
+.  endif
 .else
 DISTNAME?=	${PORTNAME}-${DISTVERSIONFULL}
 .endif
@@ -1781,18 +1784,10 @@ INSTALL_TARGET:=	${INSTALL_TARGET:S/^install-strip$/install/g}
 
 # XXX PIE support to be added here
 MAKE_ENV+=	NO_PIE=yes
-# We prefer to pass MK_*=no but it was only supported after a certain
-# revision.  Passing WITHOUT_* may conflict with a make.conf or src.conf's
-# WITH_* value.  Note that ports *do* pull in src.conf.
-.if ${OSVERSION} >= 1003503
 # We will control debug files.  Don't let builds that use /usr/share/mk
 # split out debug symbols since the plist won't know to expect it.
 MAKE_ENV+=	MK_DEBUG_FILES=no
 MAKE_ENV+=	MK_KERNEL_SYMBOLS=no
-.else
-MAKE_ENV+=	WITHOUT_DEBUG_FILES=yes
-MAKE_ENV+=	WITHOUT_KERNEL_SYMBOLS=yes
-.endif
 
 CONFIGURE_SHELL?=	${SH}
 MAKE_SHELL?=	${SH}
@@ -1835,8 +1830,13 @@ PKG_DEPENDS+=	${LOCALBASE}/sbin/pkg:${PKG_ORIGIN}
 .include "${PORTSDIR}/Mk/bsd.df.gcc.mk"
 .else
 .  if !defined(USE_GNUSTEP)
+.   if exists (/usr/libexec/gcc80/CC)
+CONFIGURE_ENV+= 	CCVER=gcc80
+MAKE_ENV+=		CCVER=gcc80
+.   else
 CONFIGURE_ENV+= 	CCVER=gcc50
 MAKE_ENV+=		CCVER=gcc50
+.   endif
 .  endif
 .endif
 

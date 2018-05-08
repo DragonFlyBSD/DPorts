@@ -26,6 +26,15 @@ case ${dp_TARGET} in
 		;;
 esac
 
+if [ ! -n "${DO_FETCH_ISLOCKED:=}" ]; then
+	for _file in "${@}"; do
+		file=${_file%%:*}
+		lkfile="`echo "$file" | md5`"
+		DO_FETCH_ISLOCKED=YES lockf -s ${lkfile}.lk sh $0 "${_file}" || exit 1
+	done
+	exit 0
+fi
+
 for _file in "${@}"; do
 	file=${_file%%:*}
 

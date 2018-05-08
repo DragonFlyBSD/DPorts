@@ -131,7 +131,7 @@ CHOSEN_COMPILER_TYPE=	gcc
 
 .if ${_COMPILER_ARGS:Mfeatures}
 .  if ${CC} == cc && ${CXX} == c++
-   # This is DragonFly's base gcc50 compiler
+   # This is DragonFly's base gcc50/gcc80 compiler
    # Use a cache for DF rather than testing each feature.
 COMPILER_FEATURES=	libstdc++ c89 c99 c11 gnu89 gnu99 gnu11 c++98 \
 			c++0x c++11 c++14 gnu++98 gnu++11 dragonfly
@@ -193,10 +193,10 @@ CC=	clang
 CXX=	clang++
 CHOSEN_COMPILER_TYPE=	clang
 .else
-BUILD_DEPENDS+=	${LOCALBASE}/bin/clang50:devel/llvm50
-CPP=	${LOCALBASE}/bin/clang-cpp50
-CC=	${LOCALBASE}/bin/clang50
-CXX=	${LOCALBASE}/bin/clang++50
+BUILD_DEPENDS+=	${LOCALBASE}/bin/clang60:devel/llvm60
+CPP=	${LOCALBASE}/bin/clang-cpp60
+CC=	${LOCALBASE}/bin/clang60
+CXX=	${LOCALBASE}/bin/clang++60
 CHOSEN_COMPILER_TYPE=	clang
 .endif
 .endif
@@ -215,10 +215,10 @@ CC=	clang
 CXX=	clang++
 CHOSEN_COMPILER_TYPE=	clang
 .else
-BUILD_DEPENDS+=	${LOCALBASE}/bin/clang50:devel/llvm50
-CPP=	${LOCALBASE}/bin/clang-cpp50
-CC=	${LOCALBASE}/bin/clang50
-CXX=	${LOCALBASE}/bin/clang++50
+BUILD_DEPENDS+=	${LOCALBASE}/bin/clang60:devel/llvm60
+CPP=	${LOCALBASE}/bin/clang-cpp60
+CC=	${LOCALBASE}/bin/clang60
+CXX=	${LOCALBASE}/bin/clang++60
 CHOSEN_COMPILER_TYPE=	clang
 .endif
 .endif
@@ -237,11 +237,11 @@ CC=	clang
 CXX=	clang++
 CHOSEN_COMPILER_TYPE=	clang
 .else
-BUILD_DEPENDS+=	${LOCALBASE}/bin/clang50:devel/llvm50
+BUILD_DEPENDS+=	${LOCALBASE}/bin/clang60:devel/llvm60
 CHOSEN_COMPILER_TYPE=	clang
-CPP=	${LOCALBASE}/bin/clang-cpp50
-CC=	${LOCALBASE}/bin/clang50
-CXX=	${LOCALBASE}/bin/clang++50
+CPP=	${LOCALBASE}/bin/clang-cpp60
+CC=	${LOCALBASE}/bin/clang60
+CXX=	${LOCALBASE}/bin/clang++60
 .endif
 .endif
 .endif
@@ -259,11 +259,11 @@ CC=	clang
 CXX=	clang++
 CHOSEN_COMPILER_TYPE=	clang
 .else
-BUILD_DEPENDS+=	${LOCALBASE}/bin/clang50:devel/llvm50
+BUILD_DEPENDS+=	${LOCALBASE}/bin/clang60:devel/llvm60
 CHOSEN_COMPILER_TYPE=	clang
-CPP=	${LOCALBASE}/bin/clang-cpp50
-CC=	${LOCALBASE}/bin/clang50
-CXX=	${LOCALBASE}/bin/clang++50
+CPP=	${LOCALBASE}/bin/clang-cpp60
+CC=	${LOCALBASE}/bin/clang60
+CXX=	${LOCALBASE}/bin/clang++60
 .endif
 .endif
 .endif

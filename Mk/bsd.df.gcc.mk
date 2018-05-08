@@ -3,7 +3,8 @@
 # The primary base compiler is used is possible, otherwise the ports default
 # is used unless there's a hard specification.
 #
-# For DragonFly 4.1+, the primary base compiler is gcc50 and for earlier
+# For DragonFly 5.3+, the primary base compiler is gcc80,
+# for DragonFly 4.1+, the primary base compiler is gcc50 and for earlier
 # releases, the primary base compiler is gcc47.  The avoidance of the use of
 # the alternate compiler is intentional.
 
@@ -24,7 +25,11 @@ PORT_COMPILER=6
 .    if ${USE_GCC:tu} == NOT5 || ${USE_GCC:tu} == DEFAULT_NOT5
 PORT_COMPILER=${LANG_GCC_IS}
 .    else
+.     if exists (/usr/libexec/gcc80/CC)
+BASE_COMPILER=gcc80
+.     else
 BASE_COMPILER=gcc50
+.     endif
 .    endif
 .  endif
 .endif
