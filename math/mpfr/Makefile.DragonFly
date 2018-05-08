@@ -1,2 +1,5 @@
+# zrj: these are available in gcc80 libgcc.a
+.if !exists (/usr/libexec/gcc80/CC)
 # issue with unreferenced __trunctfdf2
 CONFIGURE_ARGS+=	--disable-float128
+.endif
