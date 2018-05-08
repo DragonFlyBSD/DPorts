@@ -1,0 +1,4 @@
+# pathsub.c:215:6: error: 'strncpy' output truncated before terminating nul copying 3 bytes from a string of the same length [-Werror=stringop-truncation]
+dfly-patch:
+	${REINPLACE_CMD} -e '/WARNING_CFLAGS += -Werror/d'	\
+		${WRKSRC}/coreconf/Werror.mk
