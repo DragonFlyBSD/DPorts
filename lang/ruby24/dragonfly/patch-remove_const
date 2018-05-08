@@ -1,0 +1,25 @@
+--- include/ruby/ruby.h.orig	2017-09-10 12:33:09.000000000 +0000
++++ include/ruby/ruby.h
+@@ -628,7 +628,7 @@ int ruby_safe_level_2_warning(void) __at
+ # define rb_set_safe_level(level) rb_set_safe_level(RUBY_SAFE_LEVEL_CHECK(level, error))
+ #endif
+ void rb_set_safe_level_force(int);
+-CONSTFUNC(void rb_secure_update(VALUE));
++void rb_secure_update(VALUE);
+ NORETURN(void rb_insecure_operation(void));
+ 
+ VALUE rb_errinfo(void);
+--- include/ruby/intern.h.orig	2016-12-04 05:40:18.000000000 +0000
++++ include/ruby/intern.h
+@@ -254,9 +254,9 @@ NORETURN(DEPRECATED(PRINTF_ARGS(void rb_
+ NORETURN(DEPRECATED(PRINTF_ARGS(void rb_compile_error_append(const char*, ...), 1, 2)));
+ NORETURN(void rb_error_frozen(const char*));
+ NORETURN(void rb_error_frozen_object(VALUE));
+-CONSTFUNC(void rb_error_untrusted(VALUE));
++void rb_error_untrusted(VALUE);
+ void rb_check_frozen(VALUE);
+-CONSTFUNC(void rb_check_trusted(VALUE));
++void rb_check_trusted(VALUE);
+ #define rb_check_frozen_internal(obj) do { \
+ 	VALUE frozen_obj = (obj); \
+ 	if (OBJ_FROZEN(frozen_obj)) { \
