@@ -1,10 +1,13 @@
 # ninja once again can't relink properly..
 USES:= ${USES:Ncmake*} cmake:outsource,noninja
+CXXFLAGS+=	-fpermissive
 
 # prune few strange predefs from cpp
 CLANG_EXTRA_PATCHES+= ${DFLY_PATCHDIR}/clang-patch-wrong_predefs
 # add basic -flto support for DragonFly, strange why llvm devs do not test these
 CLANG_EXTRA_PATCHES+= ${DFLY_PATCHDIR}/clang-patch-add_flto_support
+# gcc80 compat
+CLANG_EXTRA_PATCHES+= ${DFLY_PATCHDIR}/clang-patch-gcc80_compat
 
 # few simple patches, again, libomp.so works, but libgomp.so is way faster/robust
 # also for some reason plain -fopenmp does not propagate any lib to the linker
@@ -15,3 +18,11 @@ OPENMP_EXTRA_PATCHES+= ${DFLY_PATCHDIR}/openmp-patch-tools_openmp_runtime_src_km
 OPENMP_EXTRA_PATCHES+= ${DFLY_PATCHDIR}/openmp-patch-tools_openmp_runtime_src_kmp__runtime.cpp
 OPENMP_EXTRA_PATCHES+= ${DFLY_PATCHDIR}/openmp-patch-tools_openmp_runtime_src_kmp__wrapper__malloc.h
 OPENMP_EXTRA_PATCHES+= ${DFLY_PATCHDIR}/openmp-patch-tools_openmp_runtime_src_z__Linux__util.cpp
+
+dfly-patch:
+.if exists (/usr/libexec/gcc80/CC)
+	-${REINPLACE_CMD} -e 's|gcc50|gcc80|g' -e 's|5.0"|8.0"|' \
+		${WRKSRC}/tools/clang/lib/Driver/Tools.cpp \
+		${WRKSRC}/tools/clang/lib/Driver/ToolChains.cpp \
+		${WRKSRC}/tools/clang/lib/Frontend/InitHeaderSearch.cpp
+.endif
