@@ -1,0 +1,3 @@
+# xsel.c:1989:7: error: 'strncpy' specified bound 1024 equals destination size [-Werror=stringop-truncation]
+dfly-patch:
+	${REINPLACE_CMD} -e 's/-Werror[[:>:]]//g' ${WRKSRC}/configure.ac
