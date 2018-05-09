@@ -1,0 +1,3 @@
+# [-Werror=format-overflow=]
+dfly-patch:
+	${REINPLACE_CMD} -e 's/-Werror[[:>:]]//g' ${WRKSRC}/makefile
