@@ -1,3 +1,8 @@
+# zrj: too noisy on gcc80
+.if exists (/usr/libexec/gcc80/CC)
+CXXFLAGS+=	-Wno-expansion-to-defined -Wno-class-memaccess
+.endif
+
 dfly-patch:
 	(cd ${WRKSRC} && ${TOUCH} \
 		aclocal.m4 configure configure.ac autotoolsconfig.h.in)
