@@ -1,0 +1,16 @@
+--- configure.ac.orig	2017-11-14 13:12:45.000000000 +0000
++++ configure.ac
+@@ -566,6 +566,13 @@ AX_CHECK_COMPILE_FLAG([-Werror=unused-re
+      [CFLAGS="${CFLAGS} -Wno-unused-result"
+       OCFLAGS="${OCFLAGS} -Wno-unused-result"])])
+ 
++AX_CHECK_COMPILE_FLAG([-Werror=nonnull-compare],
++    [CFLAGS="${CFLAGS} -Wno-error=nonnull-compare"
++     OCFLAGS="${OCFLAGS} -Wno-error=nonnull-compare"],
++    [AX_CHECK_COMPILE_FLAG([-Wnonnull-compare],
++     [CFLAGS="${CFLAGS} -Wno-nonnull-compare"
++      OCFLAGS="${OCFLAGS} -Wno-nonnull-compare"])])
++
+ # This corresponds to FreeBSD's WARNS level 6
+ DEVELOPER_CFLAGS=" \
+ 	-Werror \
