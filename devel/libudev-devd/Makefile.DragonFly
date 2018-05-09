@@ -1,0 +1,3 @@
+# udev-device.c:100:23: error: '.PCI_ID' directive output may be truncated writing 7 bytes into a region of size between 1 and 32 [-Werror=format-truncation=]
+dfly-patch:
+	${REINPLACE_CMD} -e 's/-Werror[[:>:]]//g' ${WRKSRC}/Makefile.am
