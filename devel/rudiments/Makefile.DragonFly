@@ -1,0 +1,2 @@
+# mysteriously silent
+CONFIGURE_ARGS+= --disable-werror
