@@ -1,0 +1,3 @@
+
+# [-Werror=format-truncation]
+MAKE_ARGS+=	WARNS=3
