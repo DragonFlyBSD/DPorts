@@ -1,0 +1,3 @@
+# [-Werror=misleading-indentation]
+dfly-patch:
+	${REINPLACE_CMD} -e 's/-Werror //g' ${WRKSRC}/configure
