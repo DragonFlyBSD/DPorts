@@ -1,3 +1,4 @@
+USE_CXXSTD=	c++98
 
 # zrj: take atoi from cstdlib
 dfly-patch:
