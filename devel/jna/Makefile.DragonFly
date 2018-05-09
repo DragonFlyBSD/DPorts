@@ -1,0 +1,3 @@
+# [exec] dispatch.c:656:42: error: '%s' directive output may be truncated writing up to 1023 bytes into a region of size between 1010 and 1020 [-Werror=format-truncation=]
+dfly-patch:
+	${REINPLACE_CMD} -e 's/-Werror //g' ${WRKSRC}/native/Makefile
