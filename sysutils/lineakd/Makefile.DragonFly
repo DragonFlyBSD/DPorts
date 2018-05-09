@@ -1,1 +1,2 @@
 USES+= alias
+USE_CXXSTD=	c++98
