@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	sudo
-PORTVERSION=	1.8.22
-PORTREVISION=	1
+PORTVERSION=	1.8.23
+PORTREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	SUDO
 
@@ -26,7 +26,8 @@ CONFIGURE_ARGS=	--sysconfdir=${PREFIX}/etc \
 		--with-tty-tickets \
 		--with-env-editor \
 		--with-logincap \
-		--with-long-otp-prompt
+		--with-long-otp-prompt \
+		--with-rundir=/var/run/sudo
 
 OPTIONS_DEFINE=	LDAP INSULTS DISABLE_ROOT_SUDO DISABLE_AUTH NOARGS_SHELL \
 		AUDIT OPIE PAM NLS SSSD DOCS EXAMPLES
@@ -108,6 +109,7 @@ post-patch:
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/pam.conf ${STAGEDIR}${PREFIX}/etc/pam.d/sudo.default
 	${RM} ${STAGEDIR}${PREFIX}/etc/sudoers
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/cvtsudoers
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/sudoreplay
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/sbin/visudo
 .for f in group_file.so libsudo_util.so sudoers.so system_group.so
