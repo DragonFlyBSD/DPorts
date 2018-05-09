@@ -14,7 +14,7 @@
 MESAVERSION=	${MESABASEVERSION}${MESASUBVERSION:C/^(.)/.\1/}
 MESADISTVERSION=${MESABASEVERSION}${MESASUBVERSION:C/^(.)/-\1/}
 
-MESABASEVERSION=	18.0.1
+MESABASEVERSION=	18.0.3
 # if there is a subversion, don't include the '-' between 7.11-rc2.
 MESASUBVERSION=
 
@@ -72,7 +72,7 @@ INSTALL_TARGET=	install-strip
 .include <bsd.port.pre.mk>
 
 # need LLVM for libEGL wherever possible, but mixing GCC and LLVM breaks Gallium
-MESA_LLVM_VER?=	50
+MESA_LLVM_VER?=	60
 
 .if "${MESA_LLVM_VER}" != ""
 BUILD_DEPENDS+=	llvm${MESA_LLVM_VER}>=3.9.0_4:devel/llvm${MESA_LLVM_VER}
