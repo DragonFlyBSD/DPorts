@@ -275,11 +275,6 @@ MAN1SRCS+=	bugpoint.1 dsymutil.1 llc.1 lli.1 llvm-ar.1 llvm-as.1 \
 
 .include <bsd.port.pre.mk>
 
-.if ${OPSYS} == FreeBSD && ${OSREL} == 10.3
-CFLAGS+=	-D_LIBCPP_TRIVIAL_PAIR_COPY_CTOR=1
-BROKEN=	Missing __cxa_thread_atexit
-.endif
-
 .if defined(WITH_DEBUG)
 CMAKE_BUILD_TYPE=	RelWithDebInfo
 STRIP=
@@ -445,7 +440,7 @@ post-install-LIT-on:
 	    ${STAGEDIR}${PREFIX}/bin/FileCheck${LLVM_SUFFIX}
 
 TEST_CMD=	'(cd ${WRKSRC}/test; ${SETENV} ${MAKE_ENV} LD_LIBRARY_PATH=${WRKSRC}/Release/lib ${MAKE_CMD} check-local-lit)'
-regression-test: ${BUILD_COOKIE}
+do-test:
 	if [ `${ID} -u` = 0 ]; then \
 		${CHOWN} -R nobody ${WRKSRC}/test; \
 		su -m nobody -c ${TEST_CMD}; \
