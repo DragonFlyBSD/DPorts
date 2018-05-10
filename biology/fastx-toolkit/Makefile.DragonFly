@@ -1,0 +1,3 @@
+# fasta_formatter.cpp:105:9: error: this statement may fall through [-Werror=implicit-fallthrough=]
+dfly-patch:
+	${REINPLACE_CMD} -e 's/-Werror[[:>:]]//g' ${WRKSRC}/configure.ac
