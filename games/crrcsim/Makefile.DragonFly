@@ -1,1 +1,2 @@
 USES+= alias
+USE_CXXSTD=	gnu++98
