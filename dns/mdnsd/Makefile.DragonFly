@@ -1,0 +1,3 @@
+# 1035.c:271:54: error: 'snprintf' output may be truncated before the last format character [-Werror=format-truncation=]
+dfly-patch:
+	${REINPLACE_CMD} -e 's/-Werror[[:>:]]//g' ${WRKSRC}/libmdnsd/CMakeLists.txt
