@@ -1,0 +1,1 @@
+CPPFLAGS+=	-std=gnu++98
