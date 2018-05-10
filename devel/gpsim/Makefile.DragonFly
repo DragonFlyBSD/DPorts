@@ -1,3 +1,4 @@
+CXXFLAGS+=	-fpermissive
 
 # zrj: add missing link against -lm in libgpsim_eXdbm.so
 # NOTYPE  GLOBAL DEFAULT  UND {ceil, floor, fmod}
