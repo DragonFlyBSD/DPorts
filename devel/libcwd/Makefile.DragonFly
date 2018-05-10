@@ -1,0 +1,4 @@
+# avoid passing out garbage from configure (-fpermissive leaks), patch it out
+dfly-patch:
+	${REINPLACE_CMD} -e 's/typedef \$$ac_cv_type_getgroups/typedef int/g'	\
+		${WRKSRC}/configure
