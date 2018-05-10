@@ -13,17 +13,7 @@ To enable spamd you need:
    spamd.conf.sample file.  Copy then to spamd.conf file and
    edit to suit your needs.
 
-3) mount fdescfs to /dev/fd with the following line in /etc/fstab
-	fdescfs  	/dev/fd  	fdescfs rw 	0 	0
-
-   Note for XEN users:
-   The XEN kernel ships without modules, therefore you have to add
-   the following lines to the kernel config and build a new kernel.
-	options FDESCFS
-	device	pf
-	device	pflog
-
-4) Add following lines to the pf.conf(5)
+3) Add following lines to the pf.conf(5)
 
   table <spamd-white> persist
   no rdr inet proto tcp from <spamd-white> to any \
