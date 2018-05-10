@@ -1,0 +1,7 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(CXXFLAGS)\)@\1 -fpermissive@g'	\
+		${WRKSRC}/Makefile.in	\
+		${WRKSRC}/SpiralSound/Plugins/PoshSamplerPlugin/Makefile.in	\
+		${WRKSRC}/SpiralSound/Plugins/SpiralLoopPlugin/Makefile.in	\
+		${WRKSRC}/SpiralSound/Plugins/StreamPlugin/Makefile.in
