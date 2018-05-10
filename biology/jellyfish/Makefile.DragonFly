@@ -1,4 +1,5 @@
 
+# count_main.cc:333:28: error: catching polymorphic type 'class MergeError' by value [-Werror=catch-value=]
 dfly-patch:
-	${REINPLACE_CMD} -e 's@Werror@Werror -Wno-deprecated-declarations@g'	\
+	${REINPLACE_CMD} -e 's@Werror@Wno-deprecated-declarations@g'	\
 		${WRKSRC}/development.mk
