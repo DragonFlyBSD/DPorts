@@ -1,0 +1,3 @@
+
+# [-Werror=ignored-qualifiers]
+CMAKE_ARGS+=	-DCATCH_ENABLE_WERROR:BOOL=OFF
