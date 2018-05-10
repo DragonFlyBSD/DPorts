@@ -1,0 +1,2 @@
+# include/ogdf/basic/DisjointSets.h:180:4: error: there are no arguments to 'memcpy' that depend on a template parameter, so a declaration of 'memcpy' must be available [-fpermissive]
+CXXFLAGS+=	-fpermissive
