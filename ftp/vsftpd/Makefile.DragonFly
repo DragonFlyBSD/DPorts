@@ -1,0 +1,4 @@
+# sysutil.c:1072:3: error: 'strncpy' specified bound 5 equals destination size [-Werror=stringop-truncation]
+# ORPHANS: Error: Orphaned: @dir /var/ftp
+dfly-patch:
+	${REINPLACE_CMD} -e 's/-Werror[[:>:]]//g' ${WRKSRC}/Makefile
