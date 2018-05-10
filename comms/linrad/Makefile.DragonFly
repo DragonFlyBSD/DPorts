@@ -1,0 +1,3 @@
+# lsetad.c:4672:47: error: 'strncat' specified bound 6 equals source length [-Werror=stringop-overflow=]
+dfly-patch:
+	${REINPLACE_CMD} -e 's/-Werror[[:>:]]//g' ${WRKSRC}/Makefile.in
