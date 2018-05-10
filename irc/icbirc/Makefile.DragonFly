@@ -1,0 +1,3 @@
+# irc.c:221:37: error: '%s' directive output may be truncated writing up to 8191 bytes into a region of size 8185 [-Werror=format-truncation=]
+dfly-patch:
+	${REINPLACE_CMD} -e 's/-Werror[[:>:]]//g' ${WRKSRC}/Makefile
