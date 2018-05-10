@@ -1,0 +1,3 @@
+# util.c:57:31: error: '%c' yields only last 2 digits of year in some locales [-Werror=format-y2k]
+dfly-patch:
+	${REINPLACE_CMD} -e 's/-Werror=format=2//g' ${WRKSRC}/configure
