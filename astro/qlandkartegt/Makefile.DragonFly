@@ -1,0 +1,11 @@
+
+# c++11 compat
+dfly-patch:
+	${REINPLACE_CMD} -e 's@"_MKSTR(@" _MKSTR(@g'	\
+		${WRKSRC}/3rdparty/cache2gtiff/main.cpp	\
+		${WRKSRC}/3rdparty/map2gcm/main.cpp	\
+		${WRKSRC}/3rdparty/map2jnx/main.cpp	\
+		${WRKSRC}/3rdparty/map2rmap/main.cpp	\
+		${WRKSRC}/3rdparty/map2rmp/CFileGenerator.cpp	\
+		${WRKSRC}/3rdparty/map2rmp/main.cpp	\
+		${WRKSRC}/src/version.h
