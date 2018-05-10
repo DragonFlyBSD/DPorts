@@ -1,0 +1,3 @@
+# [-Werror=format-truncation=]
+dfly-patch:
+	${REINPLACE_CMD} -e 's/-Werror //g' ${WRKSRC}/src/GNUmakefile
