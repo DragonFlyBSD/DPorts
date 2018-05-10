@@ -1,4 +1,6 @@
 USES+= alias
+USE_CXXSTD=	c++98
+CXXFLAGS+=	-Wno-narrowing
 
 dfly-patch:
 	${REINPLACE_CMD} -e 's@\(freebsd\*\)@\1|dragonfly*@g'		\
