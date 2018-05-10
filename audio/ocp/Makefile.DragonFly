@@ -1,0 +1,5 @@
+
+# not "bad" gcc80 too
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(4\.\*\|5\.\*\)@\1|8*@g'	\
+		${WRKSRC}/configure
