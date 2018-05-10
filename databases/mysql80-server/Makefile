@@ -81,7 +81,6 @@ PLIST_SUB=	MY_DBDIR=${MY_DBDIR} \
 # MySQL-Server part
 .if !defined(CLIENT_ONLY)
 USES+=		mysql:80
-IGNORE_FreeBSD_10=	"FreeBSD 10.0 doesn't have _cxa_thread_atexit() implemeneted in libc, it has been implemented since 11
 
 CONFLICTS_INSTALL=	mysql8[1-9]-server-* \
 			mysql[0-79][0-9]-server-* \
