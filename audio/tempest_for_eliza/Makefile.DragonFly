@@ -1,0 +1,3 @@
+# mp3player.cpp:106:39: error: bitwise comparison always evaluates to false [-Werror=tautological-compare]
+dfly-patch:
+	${REINPLACE_CMD} -e 's/-Werror[[:>:]]//g' ${WRKSRC}/configure
