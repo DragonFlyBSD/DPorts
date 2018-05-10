@@ -118,6 +118,7 @@ do-configure:
 	  --target=msp430-elf \
 	  --enable-languages=c,c++ \
 	  --disable-nls \
+	  --disable-werror \
 	  --enable-target-optspace \
 	  --enable-newlib-nano-formatted-io \
 	  --with-gmp=${PREFIX} \
@@ -132,6 +133,7 @@ do-configure:
 	  --target=msp430-elf \
 	  --enable-languages=c,c++ \
 	  ${ICONV_CONFIGURE_ARG} \
+	  --disable-werror \
 	  --disable-nls \
 	  --disable-binutils \
 	  --disable-gas \
