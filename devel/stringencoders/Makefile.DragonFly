@@ -1,1 +1,5 @@
 CFLAGS+= -Wno-unused-but-set-variable
+
+# [-Werror=format-truncation=]
+dfly-patch:
+	${REINPLACE_CMD} -e '/EXTRACFLAGS/s/-Werror[[:>:]]//g'	${WRKSRC}/configure
