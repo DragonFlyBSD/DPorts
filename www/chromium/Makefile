@@ -40,7 +40,7 @@ RUN_DEPENDS=	droid-fonts-ttf>0:x11-fonts/droid-fonts-ttf \
 
 ONLY_FOR_ARCHS=	i386 amd64
 USES=		compiler bison cpe desktop-file-utils \
-		ninja perl5 pkgconfig python:2,build shebangfix tar:xz
+		ninja perl5 pkgconfig python:2.7,build shebangfix tar:xz
 
 CPE_VENDOR=	google
 CPE_PRODUCT=	chrome
@@ -60,7 +60,6 @@ INSTALLS_ICONS=	yes
 # replace_gn_files.py script, some parts just turned on/off for target host
 # OS "target_os == is_bsd", like libusb, libpci.
 GN_ARGS+=	\
-		treat_warnings_as_errors=true \
 		use_pulseaudio=false \
 		use_sysroot=false
 GN_BOOTSTRAP_FLAGS=	--no-clean --gn-gen-args="use_sysroot=false"
