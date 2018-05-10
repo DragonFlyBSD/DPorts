@@ -23,7 +23,7 @@ BUILD_DEPENDS=	gprbuild:devel/gprbuild \
 LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 		libgtkada.so:x11-toolkits/gtkada3 \
 		libfreetype.so:print/freetype2 \
-		libclang.so.3.8:devel/llvm38
+		libclang.so.5:devel/llvm50
 RUN_DEPENDS=	rsvg-convert:graphics/librsvg2 \
 		gdb${PORTGDB}:devel/gdb \
 		gprbuild:devel/gprbuild \
@@ -59,7 +59,7 @@ DEBUG_CONFIGURE_OFF=	Build=Production
 CONFIGURE_TARGET=	${ARCH:S/amd64/x86_64/}-aux-${OPSYS:tl}${OSREL}
 CONFIGURE_ENV+=		AWK=/usr/bin/awk
 CONFIGURE_ARGS=		--with-gtk=3.0 \
-			--with-clang=${PREFIX}/llvm38/lib
+			--with-clang=${PREFIX}/llvm50/lib
 MAKE_ARGS+=		PROCESSORS=${MAKE_JOBS_NUMBER}
 MAKE_ARGS+=		PYTHON_CMD=${PYTHON_CMD}
 PORTDOCS=		html pdf
