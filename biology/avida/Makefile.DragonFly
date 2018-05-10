@@ -1,0 +1,2 @@
+# smth error: redefinition of in stl_numeric.h
+USE_CXXSTD=	gnu++98
