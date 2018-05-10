@@ -1,0 +1,2 @@
+USE_CXXSTD=	gnu++98
+CXXFLAGS+=	-fpermissive
