@@ -1,7 +1,7 @@
 CXXFLAGS+= -Wno-deprecated-declarations
 
+# src/json.cpp:49:12: error: this statement may fall through [-Werror=implicit-fallthrough=]
 dfly-patch:
-.if exists(/lib/priv/libprivate_ncurses.so.59)
 	${REINPLACE_CMD} -e "s@ncursesw5-config@ncursesw6-config@g" \
+			 -e 's/-Werror[[:>:]]//g' \
 		${WRKSRC}/Makefile
-.endif
