@@ -1,3 +1,4 @@
+CXXFLAGS+=	-fpermissive
 
 # shebang fix
 dfly-patch:
