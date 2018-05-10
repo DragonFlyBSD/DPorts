@@ -1,2 +1,6 @@
 
 CONFIGURE_ARGS+= ac_cv_header_netinet_icmp6_h=no
+
+# findif.c:277:5: error: 'strncpy' specified bound 20 equals destination size [-Werror=stringop-truncation]
+dfly-patch:
+	${REINPLACE_CMD} -e 's/-Werror[[:>:]]//g' ${WRKSRC}/configure.ac
