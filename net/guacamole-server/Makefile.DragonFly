@@ -1,1 +1,7 @@
 OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NPULSEAUDIO}
+
+# [-Werror=format-overflow=] [-Werror=stringop-truncation]
+dfly-patch:
+	${REINPLACE_CMD} -e 's/-Werror //g'		\
+		${WRKSRC}/src/protocols/rdp/Makefile.am	\
+		${WRKSRC}/src/terminal/Makefile.am
