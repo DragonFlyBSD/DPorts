@@ -1,4 +1,5 @@
 USES+= alias
+USE_CXXSTD=	c++98
 
 # just replace one of older entries of freebsd
 dfly-patch:
