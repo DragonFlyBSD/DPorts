@@ -1,0 +1,2 @@
+# gcc80 -Werror=format-overflow
+CFLAGS+=	-Wformat=0
