@@ -11,20 +11,25 @@
      elif fnmatch.fnmatch(host_os, 'netbsd*'):
  	osname = "NetBSD"
  	conf.Define('HOST_OS_NETBSD')
-@@ -872,6 +876,7 @@ env.AppendUnique(CFLAGS = [
+@@ -872,6 +876,8 @@ env.AppendUnique(CFLAGS = [
      '-Wstrict-prototypes',
      '-Wnested-externs',
      '-Wno-unused-function',
 +    '-Wno-maybe-uninitialized',
++    '-Wno-error',
      '-pipe',
      ])
  
-@@ -883,7 +888,7 @@ env.AppendUnique(CXXFLAGS = [
+@@ -883,7 +888,11 @@ env.AppendUnique(CXXFLAGS = [
      '-Wpointer-arith',
      '-Wcast-align',
      '-Woverloaded-virtual',
 -    '-ftemplate-depth-25',
 +    '-Wno-cast-qual',
++    '-Wno-error',
++    '-fpermissive',
++    '-Wno-deprecated',
++    '-Wno-deprecated-declarations',
      '-pipe',
      ])
  
