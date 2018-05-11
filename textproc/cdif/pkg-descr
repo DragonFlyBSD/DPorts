@@ -6,6 +6,4 @@ cdif reads that file (stdin if no file) as a output from diff command.
 Lines those don't look like diff output are simply ignored and
 printed.
 
-Note that this requires fdescfs(5) mounted.
-
 WWW: https://github.com/kaz-utashiro/cdif
