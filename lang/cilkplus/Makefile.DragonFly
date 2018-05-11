@@ -1,0 +1,2 @@
+# The -fcilkplus was removed from gcc-8
+USE_GCC=	6
