@@ -1,0 +1,3 @@
+# [-Werror=format-truncation=]
+dfly-patch:
+	${REINPLACE_CMD} -e '/CFLAGS_EXTRA/s/-Werror //g' ${WRKSRC}/configure
