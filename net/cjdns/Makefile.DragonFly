@@ -1,0 +1,3 @@
+# error: 'strncpy' specified bound 16 equals destination size [-Werror=stringop-truncation]
+dfly-patch:
+	${REINPLACE_CMD} -e "/'-Werror',/d" ${WRKSRC}/node_build/make.js
