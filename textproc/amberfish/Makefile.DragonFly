@@ -1,0 +1,4 @@
+
+# CXXFLAGS = -ansi
+dfly-patch:
+	${REINPLACE_CMD} -e 's/-ansi/-std=c++11/g' ${WRKSRC}/src/Makefile.in
