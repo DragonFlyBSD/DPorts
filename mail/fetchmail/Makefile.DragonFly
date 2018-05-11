@@ -1,1 +1,4 @@
 OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NGSSAPI_BASE} GSSAPI_MIT
+
+# XXX issue with dports/openssl crypto and base libopie
+CONFIGURE_ARGS:=	${CONFIGURE_ARGS:N--enable-opie} ac_cv_header_opie_h=no
