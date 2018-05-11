@@ -29,12 +29,12 @@ PLIST_SUB+=	X8664=""
 PLIST_SUB+=	X8664="@comment "
 .endif
 
-.if ${OSVERSION} >= 1100508
+.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1100508
 CFLAGS+=	-Wno-address-of-packed-member
 .endif
 
 do-build:
-	cd ${WRKSRC}; ${SETENV} CC=${CC} AR=${AR} NM=${NM} OBJCOPY=${OBJCOPY} ./buildrump.sh -F CFLAGS="${CFLAGS}" -r fullbuild
+	cd ${WRKSRC}; ${SETENV} CC=${CC} AR=${AR} NM=${NM} OBJCOPY=${OBJCOPY} NOGCCERROR=yes ./buildrump.sh -F CFLAGS="${CFLAGS}" -r fullbuild
 
 do-install:
 	cd ${WRKSRC}/rump; ${PAX} -wr lib include ${STAGEDIR}${PREFIX}/
