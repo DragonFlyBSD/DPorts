@@ -1,0 +1,5 @@
+CXXFLAGS+=	-c -Wall -g -Wno-narrowing
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/CPP/s@CFLAGS)@CXXFLAGS)@g'	\
+		${WRKSRC}/Makefile
