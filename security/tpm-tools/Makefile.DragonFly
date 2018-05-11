@@ -1,1 +1,5 @@
 CFLAGS+= -Wno-unused-but-set-variable
+
+# [-Werror=sizeof-pointer-memaccess]
+dfly-patch:
+	${REINPLACE_CMD} -e 's/-Werror[[:>:]]//g' ${WRKSRC}/configure
