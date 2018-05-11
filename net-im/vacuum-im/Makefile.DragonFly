@@ -1,0 +1,2 @@
+USES+=	dos2unix
+DOS2UNIX_FILES+= src/plugins/messagearchiver/messagearchiver.cpp
