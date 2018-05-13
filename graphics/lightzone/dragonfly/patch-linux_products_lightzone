@@ -1,0 +1,13 @@
+--- products/lightzone.intermediate	2018-05-10 05:29:36.000000000 +0000
++++ products/lightzone
+@@ -19,6 +19,10 @@ elif [ "${PLATFORM}" = "FreeBSD" ]; then
+   totalmem=`sysctl -n hw.physmem`
+   totalmem=$(( ${totalmem} / 1024 ))
+   usrdir=%%LOCALBASE%%
++elif [ "${PLATFORM}" = "DragonFly" ]; then
++  totalmem=`sysctl -n hw.physmem`
++  totalmem=$(( ${totalmem} / 1024 ))
++  usrdir=/usr/local
+ fi
+ 
+ if [ -d ${usrdir}/share/java/lightzone ]; then
