@@ -23,6 +23,7 @@ CONFLICTS=	elasticsearch-[0-9]* elasticsearch2-[0-9]* elasticsearch5-[0-9]*
 USES=		cpe shebangfix
 NO_ARCH=	yes
 USE_JAVA=	yes
+JAVA_RUN=	yes
 NO_BUILD=	yes
 JAVA_VERSION=	1.8+
 USE_RC_SUBR=	${PORTNAME}
@@ -49,7 +50,7 @@ SEARCHGROUP?=	${SEARCHUSER}
 USERS=		${SEARCHUSER}
 GROUPS=		${SEARCHGROUP}
 
-SUB_LIST=	ETCDIR=${ETCDIR} JAVA=${JAVA}
+SUB_LIST=	ETCDIR=${ETCDIR} JAVA=${JAVA} JAVA_HOME=${JAVA_HOME}
 SUB_FILES=	pkg-message
 
 post-patch:

@@ -42,6 +42,7 @@ start_precmd=elasticsearch_precmd
 command=%%PREFIX%%/lib/elasticsearch/bin/elasticsearch
 command_args="-d --pidfile=${pidfile}"
 
+export JAVA_HOME=%%JAVA_HOME%%
 export ES_PATH_CONF=${elasticsearch_config}
 
 elasticsearch_precmd()
