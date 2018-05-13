@@ -1,15 +1,15 @@
---- configure.orig	2018-03-22 01:51:30 UTC
+--- configure.orig	2018-05-10 14:50:16 UTC
 +++ configure
-@@ -4631,7 +4631,7 @@ case "${host_os}" in
- esac
- 
- case "${host_os}" in
+@@ -4638,7 +4638,7 @@ case "${host_os}" in
+      CPPFLAGS=-I/usr/pkg/include
+      LDFLAGS=-L/usr/pkg/lib
+      ;;
 -     freebsd*)
 +     dragonfly*|freebsd*)
       ac_default_prefix=/usr/local
       ;;
       openbsd*)
-@@ -4718,7 +4718,7 @@ HOST_OS=${host_os}
+@@ -4725,7 +4725,7 @@ HOST_OS=${host_os}
  PBX_WINARCH=0
  
  case "${host_os}" in

@@ -392,7 +392,8 @@ sbin/safe_asterisk
 @dir %%VARDIR%%/spool/asterisk
 @dir %%VARDIR%%/spool/asterisk/system
 @dir %%VARDIR%%/spool/asterisk/tmp
-@dir %%VARDIR%%/db/asterisk
 @dir %%VARDIR%%/run/asterisk
+@dir %%VARDIR%%/%%LUA_LIBDIR%%/asterisk
+@dir %%VARDIR%%/%%LUA_LIBDIR%%
 @owner
 @group
