@@ -1,14 +1,6 @@
---- src/build-system/configure.intermediate	2017-01-03 19:31:31 UTC
+--- src/build-system/configure.orig	2018-04-09 15:31:36 UTC
 +++ src/build-system/configure
-@@ -7857,6 +7857,7 @@ case "$host_os:$compiler" in
-   solaris2.10:GCC ) : ${THREAD_LIBS:="-lposix4"} ;;
-   solaris*        ) : ${THREAD_LIBS:="-lpthread -lposix4"} ;;
-   freebsd*        ) ;; # -pthread already substitutes libc_r for libc
-+  dragonfly*      ) ;; # ^^^
-   *               ) : ${THREAD_LIBS:="-lpthread"} ;;
- esac
- 
-@@ -9056,7 +9057,7 @@ if test "$skip_fast_flags" = no -a -z "$
+@@ -9615,7 +9615,7 @@ if test "$skip_fast_flags" = no -a -z "$
        GCC:* )
          DEF_FAST_FLAGS="-O3 -finline-functions -fstrict-aliasing"
          case "$host_os:$host_cpu:$compiler_version" in
@@ -17,7 +9,7 @@
             * ) DEF_FAST_FLAGS="$DEF_FAST_FLAGS -ffast-math" ;;
          esac
          if test "$with_profiling" != "yes"; then
-@@ -9356,7 +9357,7 @@ LIB_OR_DLL="lib"
+@@ -9915,7 +9915,7 @@ LIB_OR_DLL="lib"
  if test "$with_dll" = "yes" ; then
     case "$host_os:$compiler" in
      linux*:GCC | irix*:* | solaris*:WorkShop* | *:KCC | linux*:ICC \
