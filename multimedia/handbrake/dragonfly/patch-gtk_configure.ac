@@ -1,0 +1,11 @@
+--- gtk/configure.ac.orig	2018-04-05 17:31:47.000000000 +0000
++++ gtk/configure.ac
+@@ -184,7 +184,7 @@ case $host in
+ 	fi
+     HB_LIBS="$HB_LIBS -lregex -luuid"
+     ;;
+-  *-*-freebsd*)
++  *-*-freebsd*|*-*-dragonfly*)
+     HB_LIBS="$HB_LIBS -lpthread"
+     ;;
+   *)
