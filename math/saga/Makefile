@@ -18,7 +18,7 @@ LIB_DEPENDS=	libfftw3.so:math/fftw3 \
 		libgdal.so:graphics/gdal \
 		libhpdf.so:print/libharu \
 		libjasper.so:graphics/jasper \
-		liblas.so:devel/liblas12 \
+		liblas12.so:devel/liblas12 \
 		libodbc.so:databases/unixODBC \
 		libopencv_core.so:graphics/opencv-core \
 		libopencv_ml.so:graphics/opencv \
