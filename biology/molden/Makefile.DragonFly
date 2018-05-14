@@ -1,5 +1,0 @@
-
-# zrj: wow..., lets fix it properly by ignoring base headers
-dfly-patch:
-	${REINPLACE_CMD} -e 's@/usr/include/[^[:space:]]*\.h@@g'	\
-		${WRKSRC}/surf/Makefile
