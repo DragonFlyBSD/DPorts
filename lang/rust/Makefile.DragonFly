@@ -1,9 +1,12 @@
-OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT} PORT_LLVM
-
 MASTER_SITES+=	https://leaf.dragonflybsd.org/~mneumann/rust/:rust_bootstrap \
 		https://leaf.dragonflybsd.org/~mneumann/rust/:cargo_bootstrap
 
+# non static bootstrap
+.if exists (/usr/libexec/gcc80/CC)
+X_PY_ENV+="LD_LIBRARY_PATH=${WRKSRC}/build/${RUST_TARGET}/stage0/lib:/usr/lib/gcc80"
+.else
 X_PY_ENV+="LD_LIBRARY_PATH=${WRKSRC}/build/${RUST_TARGET}/stage0/lib"
+.endif
 X_PY_ENV+="RUST_BACKTRACE=1"
 
 # A pthread bug has been fixed in 5.0.2
