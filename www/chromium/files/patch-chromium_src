@@ -7771,16 +7771,6 @@ diff --git device/serial/serial_io_handler_posix.cc device/serial/serial_io_hand
 index 704a4bf076b3..9a182141f6f8 100644
 --- device/serial/serial_io_handler_posix.cc
 +++ device/serial/serial_io_handler_posix.cc
-@@ -6,6 +6,9 @@
- 
- #include <sys/ioctl.h>
- #include <termios.h>
-+#if defined(OS_DRAGONFLY)
-+#include <sys/termios.h>
-+#endif
- 
- #include "base/files/file_util.h"
- #include "base/posix/eintr_wrapper.h"
 @@ -65,10 +68,12 @@ bool BitrateToSpeedConstant(int bitrate, speed_t* speed) {
      BITRATE_TO_SPEED_CASE(57600)
      BITRATE_TO_SPEED_CASE(115200)
