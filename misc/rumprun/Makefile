@@ -35,11 +35,11 @@ PLIST_SUB+=	I386="@comment "
 .endif
 
 do-build:
-	cd ${WRKSRC}; ${SETENV} CC=${CC} LDVER=ld.bfd ./build-rr.sh -d ${PREFIX} -o objdir hw build
+	cd ${WRKSRC}; ${SETENV} CC=${CC} LDVER=ld.bfd NOGCCERROR=yes ./build-rr.sh -d ${PREFIX} -o objdir hw build
 
 do-install:
 	${SED} -i -e 's/^RRDEST=.*$$/RRDEST=\"${STAGEDIR:S/\//\\\//g}${PREFIX:S/\//\\\//g}\"/' ${WRKSRC}/objdir/config.sh
-	cd ${WRKSRC}; ${SETENV} CC=${CC} LDVER=ld.bfd ./build-rr.sh -o objdir hw install
+	cd ${WRKSRC}; ${SETENV} CC=${CC} LDVER=ld.bfd NOGCCERROR=yes ./build-rr.sh -o objdir hw install
 .for sec in 3 4 7
 	${MV} ${STAGEDIR}${PREFIX}/share/man/man${sec} ${STAGEDIR}${PREFIX}/man
 .endfor
