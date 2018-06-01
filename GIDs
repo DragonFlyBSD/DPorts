@@ -162,7 +162,7 @@ bs:*:220:
 opensips:*:221:
 rtpproxy:*:222:
 mqttwarn:*:223:
-# free: 224
+payara:*:224:
 postgrey:*:225:
 sqlgrey:*:226:
 _hfm:*:227:
@@ -755,7 +755,7 @@ foreman_proxy:*:812:
 puppet:*:814:
 uchiwa:*:815:
 # free: 816
-btsync:*:817:
+rslsync:*:817:
 jenkins:*:818:
 rundeck:*:819:
 openacs:*:820:
@@ -824,7 +824,7 @@ chronyd:*:849:
 # free: 883
 # free: 884
 # free: 885
-# free: 886
+miniflux:*:886:
 pdagent:*:887:
 vuls:*:888:
 mattermost:*:889:

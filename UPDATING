@@ -5,6 +5,52 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20180529:
+  AFFECTS: users of textproc/ibus-typing-booster
+  AUTHOR: thierry@FreeBSD.org
+
+  Attention, this release merges all engines into one. Therefore, the
+  engine names had to change. The old engine names like "German - DE
+  (Typing Booster)", "Hindi - HI (Typing Booster)" don't exist anymore!
+  If one has entries for them in the Gnome Control Center or in
+  ibus-setup, one needs to remove these old entries and add the new
+  engine name "Other (Typing Booster)".
+
+20180518:
+  AFFECTS: users of sysutils/ansible*
+  AUTHOR: lifanov@FreeBSD.org
+
+  Ansible ports are now flavored. Package names for Ansible changed
+  to include python version. Poudriere and package users don't need
+  to do anything.
+
+  To rename an installed package to match the new naming scheme,
+  for example, for ansible24, run:
+
+   # pkg set -n ansible24:py27-ansible24
+
+20180514:
+  AFFECTS: users of www/gitlab
+  AUTHOR: mfechner@FreeBSD.org
+
+  Gitlab-pages support was removed as new version does not compile.
+  If you require gitlab-pages do not update to version 10.7.3 till it is
+  fixed upstream.
+  You can find the bug report here:
+  https://gitlab.com/gitlab-org/gitlab-pages/issues/143
+
+20180513:
+  AFFECTS: users of net/xrdp
+  AUTHOR: meta@FreeBSD.org
+
+  net/xrdp has been updated from 0.6.2 to 0.9.6. There are significant
+  changes between these versions. You should consider backing up your
+  configuration files such as xrdp.ini and sesman.ini, and then migrate
+  configuration files by hand.
+
+  Regarding km-*.ini, don't use the old files. They can be safely replaced
+  with new ones.
+
 20180507:
   AFFECTS: users of math/suitesparse who build it locally
   AUTHOR: yuri@FreeBSD.org
@@ -1265,29 +1311,4 @@ you update your ports collection, before attempting any port upgrades.
 
   Qt5 was fixed to ignore gold. If you see these errors, you
   need to rebuild qt5-qmake, then all qt5-* ports.
-
-20170529:
-  AFFECTS: users of sysutils/dsbmd
-  AUTHOR: mk@freeshell.de
-
-  Due to new configuration variables and semantic changes, users of dsbmd
-  version 0.2 and earlier should consider recreating their dsbmd.conf from
-  the new dsbmd.conf.sample.
-
-20170518:
-  AFFECTS: users of www/yarn
-  AUTHOR: adamw@FreeBSD.org
-
-  The default node backend for yarn has switched to www/node. Binary
-  package users should expect the node backend to be switched during
-  the upgrade. To keep the node6 (LTS) backend, rebuild www/yarn with
-  the NODE6 backend option enabled.
-
-20170517:
-  AFFECTS: users of security/pecl-ssh2
-  AUTHOR: dbaio@FreeBSD.org
-
-  The security/pecl-ssh2 has been upgraded to version 1.0, and the new
-  version is not compatible with PHP5. If you need PHP5 support, you can
-  find version 0.13 in security/pecl-ssh2-0.
 

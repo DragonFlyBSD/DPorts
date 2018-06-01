@@ -21,6 +21,8 @@
 # line.  If a port is copied to a new location and the old location is kept
 # (e.g. upgraded to a later version), don't record it here.
 #
+# This file can be linted with Tools/scripts/MOVEDlint.awk
+#
 # Port|Moved to|Date|Why
 textproc/docproj-jadetex|textproc/docproj|2013-01-03|Moved: Replace by textproc/docproj
 ports-mgmt/portmanager||2013-01-06|Has expired: Does not support modern ports features such as MOVED, is lacking upstream and active contributions, and does not support pkgng.  Consider using ports-mgmt/portmaster, ports-mgmt/portupgrade or pkgng
@@ -1946,7 +1948,6 @@ net/pcnfsd||2014-04-11|Has expired: Unmaintained since 1997
 cad/chipmunk||2014-04-11|Has expired: Unmaintained since 1999
 graphics/comix||2014-04-11|Has expired: Insists on installing in /usr/local, and uses nautilus2 which is deprecated
 www/mambo||2014-04-11|Has expired: Broken for more than 6 months
-devel/lua-rds-parser||2014-04-11|Has expired: Broken for more than 6 months
 japanese/exmh2||2014-04-11|Has expired: Unmaintained since 1999
 net/freewais-sf||2014-04-11|Has expired: Unmaintained since 1999
 editors/elvis||2014-04-11|Has expired: Unmaintained since 1999
@@ -6272,3 +6273,34 @@ databases/rubygem-seed-fu236|databases/rubygem-seed-fu|2018-05-01|Has expired: O
 security/polarssl13||2018-05-01|Has expired: has reached end of life
 devel/tesla||2018-05-06|Outdated and almost certainly unused
 devel/llvm39||2018-05-08|Obsolete, no remaining dependencies
+textproc/p5-Spork||2018-05-09|Removed, depends on expired www/p5-Kwiki
+www/p5-Kwiki||2018-05-09|Has expired: All www files wrongly belongs to www user
+x11-servers/x11rdp|x11-drivers/xorgxrdp|2018-05-13|Obsoleted by update of net/xrdp
+net-p2p/btsync|net-p2p/rslsync|2018-05-13|Renamed by the vendor
+net-im/licq-msn||2018-05-14|MSN Messenger service terminated 2017-05-19
+finance/gnucash@guile1||2018-05-14|Version 3.0 dropped guile1 support. Use unflavored finance/gnucash instead
+net-im/rubygem-earthquake||2018-05-15|Broken and unmaintained upstream
+security/rubygem-jugyo-twitter_oauth||2018-05-15|The only consumer of this port (net-im/rubygem-earthquake) has been removed
+sysutils/bareos-bat||2018-05-18|Removed, use sysutils/bareos-webui or install bareos16 ports
+www/p5-CGI_Lite|www/p5-CGI-Lite|2018-05-20|Rename to match upstream naming
+www/mod_proxy_uwsgi|www/apache24|2018-05-22|Module has been merged into Apache 2.4
+devel/p5-reaper|devel/p5-Reaper|2018-05-22|Rename to match upstream naming
+textproc/py-pyelasticsearch||2018-05-22|Has expired: Not depended upon anymore
+net/corosync|net/corosync2|2018-05-24|There are now multiple versions of corosync
+net/pacemaker|net/pacemaker1|2018-05-24|There are now multiple versions of pacemaker
+editors/lazarus-lcl-gtk2|editors/lazarus|2018-05-25|Removed, no longer needed
+editors/lazarus-lcl-nogui||2018-05-25|Removed, no longer needed
+editors/lazarus-lcl-qt|editors/lazarus-qt4|2018-05-25|Removed, no longer needed
+editors/lazarus-lcl-qt5|editors/lazarus-qt5|2018-05-25|Removed, no longer needed
+editors/lazarus-lcl-units||2018-05-25|Removed, no longer needed
+net/bird-devel|net/bird2|2018-05-25|There are now muliple versions of bird
+devel/hs-BNFC||2018-05-25|Removed, no longer supported
+graphics/hs-HGL||2018-05-25|Removed, no longer supported
+devel/hs-DrIFT||2018-05-25|Removed, no longer supported
+devel/hs-hastache||2018-05-25|Removed, no longer supported
+devel/hs-monadplus||2018-05-25|Removed, no longer supported
+devel/hs-stm||2018-05-25|Removed, no longer supported
+devel/hs-text||2018-05-25|Removed, no longer supported
+science/hs-bio||2018-05-25|Removed, no longer supported
+textproc/hs-parsec||2018-05-25|Removed, no longer supported
+audio/calf|audio/calf-lv2|2018-05-27|Added -lv2 suffix: the port mostly provides LV2 plugins

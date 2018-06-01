@@ -70,12 +70,12 @@ KDE_PLASMA_VERSION?=		5.12.5
 KDE_PLASMA_BRANCH?=		stable
 
 # Current KDE frameworks.
-KDE_FRAMEWORKS_VERSION?=	5.45.0
+KDE_FRAMEWORKS_VERSION?=	5.46.0
 KDE_FRAMEWORKS_BRANCH?= 	stable
 
 # Current KDE applications.
-KDE_APPLICATIONS_VERSION?=	18.04.0
-KDE_APPLICATIONS_SHLIB_VER?=	5.8.0
+KDE_APPLICATIONS_VERSION?=	18.04.1
+KDE_APPLICATIONS_SHLIB_VER?=	5.8.1
 KDE_APPLICATIONS_BRANCH?=	stable
 # Upstream moves old software to Attic/. Specify the newest applications release there.
 # Only the major version is used for the comparison.
@@ -124,14 +124,14 @@ PORTVERSION?=		${KDE4_VERSION}
 MASTER_SITES?=		KDE/${KDE4_BRANCH}/${KDE4_VERSION}/src
 DIST_SUBDIR?=		KDE/${KDE4_VERSION}
 PKGNAMESUFFIX=		-kde4
-CONFLICTS_INSTALL=	${PORTNAME:C/-kde4//}-4.*
+CONFLICTS_INSTALL=	${PORTNAME}
 .    elif  ${_KDE_CATEGORY:Mkde-applications}
 PORTVERSION?=		${KDE_APPLICATIONS_VERSION}
 .      if ${_KDE_VERSION:M4}
 CONFLICTS_INSTALL?=	${PORTNAME}-[0-9]*
 PKGNAMESUFFIX?=		-kde4
 .      else
-CONFLICTS_INSTALL?=	${PORTNAME}-kde4-[0-9]*
+CONFLICTS_INSTALL?=	${PORTNAME}-kde4
 .      endif
 # Decide where the file lies on KDE's servers: Check whether the file lies in Attic
 .      if ${KDE_APPLICATIONS_VERSION:R:R} <= ${_KDE_APPLICATIONS_ATTIC_VERSION:R:R}
@@ -245,9 +245,9 @@ _USE_KDE4_ALL+= 	${_USE_KDE_BOTH}
 # that our list of frameworks matches the structure offered upstream.
 _USE_FRAMEWORKS_TIER1=	apidox archive attica5 breeze-icons codecs config \
 			coreaddons dbusaddons dnssd holidays i18n idletime itemmodels \
-			itemviews kirigami2 oxygen-icons5 plotting prison solid \
-			sonnet syntaxhighlighting threadweaver \
-			widgetsaddons windowsystem
+			itemviews kirigami2 oxygen-icons5 plotting prison \
+			qqc2-desktop-style solid sonnet syntaxhighlighting \
+			threadweaver widgetsaddons windowsystem
 # NOT LISTED TIER1: modemmanagerqt networkmanagerqt (not applicable)
 # NOT AVAILABLE DF: wayland
 
@@ -300,7 +300,11 @@ _USE_KDEPIM5_ALL=	akonadicontacts akonadiimportwizard akonadimime akonadinotes \
 			kdepim-runtime5 kontactinterface kpimdav \
 			ksmtp ldap libkdepim libkleo libksieve mailcommon \
 			mailimporter mailtransport mbox messagelib \
-			mime pimcommon pimtextedit syndication tnef
+			mime pimcommon pimtextedit syndication tnef \
+			kalarm kontact kmail account-wizard mbox-importer \
+			akonadiconsole akregator grantlee-editor kaddressbook \
+			kalarm kmail-account-wizard kmail knotes kontact \
+			korganizer mbox-importer pim-data-exporter
 
 _USE_KDE5_ALL=		${_USE_FRAMEWORKS_ALL} \
 			${_USE_PLASMA_ALL} \
@@ -575,6 +579,9 @@ pty_LIB=		libKF5Pty.so
 purpose_PORT=		misc/kf5-purpose
 purpose_LIB=		libKF5Purpose.so
 
+qqc2-desktop-style_PORT=	x11-themes/kf5-qqc2-desktop-style
+qqc2-desktop-style_PATH=	${QT_PLUGINDIR}/kf5/kirigami/org.kde.desktop.so
+
 runner_PORT=		x11/kf5-krunner
 runner_LIB=		libKF5Runner.so
 
@@ -848,6 +855,43 @@ syndication_LIB=	libKF5Syndication.so
 
 tnef_PORT=		net/ktnef
 tnef_LIB=		libKF5Tnef.so
+
+# PIM Applications
+akonadiconsole_PORT=	deskutils/akonadiconsole
+akonadiconsole_PATH=	${KDE_PREFIX}/bin/akonadiconsole
+
+akregator_PORT=		deskutils/akregator
+akregator_PATH=		${KDE_PREFIX}/bin/akregator
+
+grantlee-editor_PORT=	deskutils/grantlee-editor
+grantlee-editor_PATH=	${KDE_PREFIX}/bin/contactthemeeditor
+
+kaddressbook_PORT=	deskutils/kaddressbook
+kaddressbook_PATH=	${KDE_PREFIX}/bin/kaddressbook
+
+kalarm_PORT=		deskutils/kalarm
+kalarm_PATH=		${KDE_PREFIX}/bin/kalarm
+
+kmail_PORT=		deskutils/kmail
+kmail_PATH=		${KDE_PREFIX}/bin/kmail
+
+kmail-account-wizard_PORT=	deskutils/kmail-account-wizard
+kmail-account-wizard_PATH=	${KDE_PREFIX}/bin/accountwizard
+
+knotes_PORT=		deskutils/knotes
+knotex_PATH=		${KDE_PREFIX}/bin/knotes
+
+kontact_PORT=		deskutils/kontact
+kontact_PATH=		${KDE_PREFIX}/bin/kontact
+
+korganizer_PORT=	deskutils/korganizer
+korganizer_PATH=	${KDE_PREFIX}/bin/korganizer
+
+mbox-importer_PORT=	deskutils/mbox-importer
+mbox-importer_PATH=	${KDE_PREFIX}/bin/mboximporter
+
+pim-data-exporter_PORT=	deskutils/pim-data-exporter
+pim-data-exporter_PATH=	${KDE_PREFIX}/bin/pimsettingexporter
 # ====================== end of pim5 components ================================
 
 # ====================== multiversion component ================================
