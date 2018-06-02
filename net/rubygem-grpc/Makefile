@@ -1,11 +1,11 @@
 # $FreeBSD$
 
 PORTNAME=	grpc
-PORTVERSION=	1.10.0
+PORTVERSION=	1.11.1
 CATEGORIES=	net rubygems
 MASTER_SITES=	RG
 
-MAINTAINER=	idefix@fechner.net
+MAINTAINER=	mfechner@FreeBSD.org
 COMMENT=	Ruby implementation of gRPC
 
 LICENSE=	BSD3CLAUSE
