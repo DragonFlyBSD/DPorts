@@ -14,6 +14,9 @@ PATCHFILES=	0ee4735ab8fb.patch:-p1
 MAINTAINER=	ale@FreeBSD.org
 COMMENT=	NOSQL distributed document-oriented database
 
+EXPIRATION_DATE=	2018-07-23
+DEPRECATED=	End of Life October 2016
+
 # mongodb is AGPLv3, C++ driver is APACHE20
 LICENSE=	AGPLv3 APACHE20
 LICENSE_COMB=	multi
@@ -63,7 +66,7 @@ LIB_DEPENDS+=	libsasl2.so:security/cyrus-sasl2
 
 .if ${PORT_OPTIONS:MTEST}
 USES+=		python:build
-BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pymongo>=2.5:databases/pymongo
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pymongo>=2.5:databases/pymongo@${PY_FLAVOR}
 TEST_TARGET=	smokeAll smokeCppUnittests
 .	if ${PORT_OPTIONS:MSSL}
 TEST_TARGET+=	smokeSsl
