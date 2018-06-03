@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	pipenv
-PORTVERSION=	11.10.1
-PORTREVISION=	1
+PORTVERSION=	2018.5.18
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -20,17 +19,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}certifi>=0:security/py-certifi@${FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}virtualenv-clone>=0.2.5:devel/py-virtualenv-clone@${FLAVOR}
 
 NO_ARCH=	yes
-REINPLACE_ARGS=	-i ''
 USE_PYTHON=	autoplist concurrent distutils
 USES=		python
 
-.include <bsd.port.pre.mk>
-
-.if ${PYTHON_REL} < 3400
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}pathlib2>=2.1.0:devel/py-pathlib2@${FLAVOR}
-.endif
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|pathlib2==2.1.0|pathlib2>=2.1.0|' ${WRKSRC}/setup.py ${WRKSRC}/pipenv.egg-info/requires.txt
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
