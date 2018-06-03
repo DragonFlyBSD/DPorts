@@ -1,0 +1,11 @@
+
+; $FreeBSD: head/dns/bind913/files/empty.db 340872 2014-01-24 00:14:07Z mat $
+
+$TTL 3h
+@ SOA @ nobody.localhost. 42 1d 12h 1w 3h
+	; Serial, Refresh, Retry, Expire, Neg. cache TTL
+
+@	NS	@
+
+; Silence a BIND warning
+@	A	127.0.0.1
