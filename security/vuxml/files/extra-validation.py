@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# $FreeBSD: head/security/vuxml/files/extra-validation.py 450912 2017-09-29 16:37:20Z zi $
+# $FreeBSD: head/security/vuxml/files/extra-validation.py 469775 2018-05-13 06:16:49Z riggs $
 
 import datetime
 import xml.etree.ElementTree as ET
@@ -13,7 +13,7 @@ if len(sys.argv) != 2:
 re_date = re.compile(r'^(19|20)[0-9]{2}-[0-9]{2}-[0-9]{2}$')
 
 # warn if description has more than X characters
-DESCRIPTION_LENGTH = 4500
+DESCRIPTION_LENGTH = 5000
 
 tree = ET.parse(sys.argv[1])
 root = tree.getroot()
