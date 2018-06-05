@@ -1,0 +1,5 @@
+USES:=	${USES:Ncmake*} cmake:outsource,noninja
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's|__FreeBSD__|__DragonFly__|' \
+		${WRKSRC}/modules/core/src/system.cpp
