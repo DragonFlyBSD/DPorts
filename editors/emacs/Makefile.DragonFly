@@ -5,3 +5,4 @@ GNULS_DESC=		Use gnu ls 'gls' for --dired flag support
 GNULS_EXTRA_PATCHES_OFF=	${FILESDIR}/../dragonfly/extra-ls_lisp_dired.el
 GNULS_EXTRA_PATCHES=		${FILESDIR}/../dragonfly/extra-gls_lisp_dired.el
 GNULS_RUN_DEPENDS=		gls:sysutils/coreutils
+CFLAGS=				-D__STDC_WANT_IEC_60559_BFP_EXT__
