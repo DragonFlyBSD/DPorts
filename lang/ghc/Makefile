@@ -3,11 +3,10 @@
 
 PORTNAME=	ghc
 PORTVERSION=	${GHC_VERSION}
-PORTREVISION=	3
 CATEGORIES=	lang haskell
 MASTER_SITES=	http://www.haskell.org/ghc/dist/${PORTVERSION}/:source \
 		http://leaf.dragonflybsd.org/~marino/dports-src/:dflyboot \
-		LOCAL/pgj/:boot
+		LOCAL/arrowd/:boot
 DISTFILES=	ghc-${PORTVERSION}-src${EXTRACT_SUFX}:source
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -18,13 +17,13 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 ONLY_FOR_ARCHS=	i386 amd64
 
-GHC_VERSION=		8.0.2
-HSCOLOUR_VERSION=	1.24.1
+GHC_VERSION=		8.4.2
+HSCOLOUR_VERSION=	1.24.4
 
 DATADIR=	${PREFIX}/share/ghc-${GHC_VERSION}
 EXAMPLESDIR=	${PREFIX}/share/examples/ghc-${GHC_VERSION}
 
-CONFLICTS=	ghc-7.4.* ghc-7.6.* ghc-7.8.* ghc-7.10.*
+CONFLICTS=	ghc-7.4.* ghc-7.6.* ghc-7.8.* ghc-7.10.* ghc-8.0.*
 
 LIB_DEPENDS+=	libgmp.so:math/gmp
 
@@ -39,8 +38,7 @@ NO_CCACHE=	ccache: error: Failed to create directory /nonexistent/.ccache/tmp: P
 # This is better fixed in files/build.mk.in
 GNU_CONFIGURE=	yes
 
-CONFIGURE_ARGS=		--with-ld=${LD} \
-			--with-gmp-includes=${LOCALBASE}/include \
+CONFIGURE_ARGS=		--with-gmp-includes=${LOCALBASE}/include \
 			--with-gmp-libraries=${LOCALBASE}/lib \
 			--with-iconv-includes=${LOCALBASE}/include \
 			--with-iconv-libraries=${LOCALBASE}/lib
@@ -48,7 +46,7 @@ CONFIGURE_ARGS=		--with-ld=${LD} \
 SUB_FILES=		build.mk \
 			build.boot.mk
 SUB_LIST=		GHC_VERSION=${GHC_VERSION} \
-			NCURSESINC="${NCURSESINC}" NCURSESLIB="${NCURSESLIB}" \
+			NCURSESINC="${NCURSESBASE}/include" NCURSESLIB="${NCURSESLIB}" \
 			CFLAGS="${CFLAGS}"
 
 OPTIONS_GROUP=		BOOTSTRAP
@@ -93,17 +91,13 @@ LOCALBASE?=	/usr/local
 .if empty(PORT_OPTIONS:MBOOT)
 .  if ${OPSYS} == "FreeBSD"
 
-BOOT_GHC_VERSION=	7.10.2
+BOOT_GHC_VERSION=	8.4.2
 DISTFILES+=		ghc-${BOOT_GHC_VERSION}-boot-${ARCH}-freebsd${EXTRACT_SUFX}:boot
 
 .  elif ${OPSYS} == "DragonFly"
 
-BOOT_GHC_VERSION=	7.10.2
-.    if exists (/usr/lib/priv/libprivate_ncursesw.so)
-DISTFILES+=		ghc-${BOOT_GHC_VERSION}-boot-${ARCH}-dragonfly2.tar.xz:dflyboot
-.    else
+BOOT_GHC_VERSION=	8.0.2
 DISTFILES+=		ghc-${BOOT_GHC_VERSION}-boot-${ARCH}-dragonfly.tar.xz:dflyboot
-.    endif
 CONFIGURE_TARGET=	${ARCH}-portbld-dragonfly
 CONFIGURE_ENV+=		BOOTDIR=${BOOT_DIR} LBASE=${LOCALBASE}
 
@@ -113,10 +107,13 @@ IGNORE=		unsupported ${OPSYS} Operating System
 
 .endif # MBOOT
 
-CONFIGURE_ARGS+=	-with-gcc=${CC}
-.if empty(PORT_OPTIONS:MBOOT)
-CONFIGURE_ARGS_BOOT+=	--with-gcc=${CC}
+.if ${OSVERSION} < 1200000
+USE_GCC=	yes
+CONFIGURE_ARGS+=	--enable-dtrace=0
+.else
+LD=		ld.bfd
 .endif
+CONFIGURE_ENV+=		CC=${CC} LD=${LD}
 
 DOCSDIR=	${PREFIX}/share/doc/${DISTNAME}
 GHC_LIBDIR=	${STAGEDIR}${PREFIX}/lib/ghc-${GHC_VERSION}
@@ -134,7 +131,7 @@ BOOT_HSC2HS=	${BOOT_DIR}/bin/hsc2hs
 
 SLAVE_CMD=	${SETENV} PATH=${BOOT_DIR}/bin:${PATH}
 
-CONFIGURE_ARGS_BOOT+=	--prefix=${BOOT_DIR} --with-ld=${LD}
+CONFIGURE_ARGS_BOOT+=	--prefix=${BOOT_DIR}
 CONFIGURE_ARGS+=	--with-ghc=${BOOT_GHC}
 .else # MBOOT
 SLAVE_CMD=		# empty
@@ -214,7 +211,7 @@ pre-configure: apply-slist
 	${CP} ${WRKDIR}/build.mk ${WRKSRC}/mk/build.mk
 
 	@${MKDIR} ${TMPDIR}
-.if empty(PORT_OPTIONS:MBOOTH) && ${OPSYS} == FreeBSD && \
+.if empty(PORT_OPTIONS:MBOOT) && ${OPSYS} == FreeBSD && \
     ${OSVERSION} >= 1200031
 	${CC} ${CFLAGS} -c -o ${BOOT_DIR}/wrap.o ${PATCHDIR}/wrap.c
 	for x in ${BOOT_DIR}/rts/dist/build/libCffi*.a; do \
@@ -251,14 +248,14 @@ pre-configure: apply-slist
 		${SLAVE_CMD} ./Setup install)
 .endif
 
-_EXECUTABLES=	${STAGEDIR}${PREFIX}/bin/hp2ps \
-		${GHC_LIBDIR}/bin/unlit \
+_EXECUTABLES=	${GHC_LIBDIR}/bin/unlit \
 		${GHC_LIBDIR}/bin/hpc \
 		${GHC_LIBDIR}/bin/ghc-iserv \
 		${GHC_LIBDIR}/bin/ghc-pkg \
 		${GHC_LIBDIR}/bin/hsc2hs \
 		${GHC_LIBDIR}/bin/runghc \
-		${GHC_LIBDIR}/bin/ghc
+		${GHC_LIBDIR}/bin/ghc \
+		${GHC_LIBDIR}/bin/hp2ps
 
 .if ${PORT_OPTIONS:MPROFILE}
 _EXECUTABLES+=	${GHC_LIBDIR}/bin/ghc-iserv-prof
@@ -275,7 +272,7 @@ post-install:
 .if ${PORT_OPTIONS:MDOCS}
 	${LN} -sf haddock-ghc-${GHC_VERSION} ${STAGEDIR}${PREFIX}/bin/haddock
 .endif
-	(for f in ${_EXECUTABLES} $$(${FIND} ${GHC_LIBDIR} -name '*.so'); do \
+	(for f in ${_EXECUTABLES} $$(${FIND} ${GHC_LIBDIR} -name '*.so*'); do \
 		${STRIP_CMD} $$f; done)
 
 .include <bsd.port.mk>
@@ -283,12 +280,8 @@ post-install:
 # Create a bootstrap compiler tar ball: run this in an interactive poudriere jail
 .PHONY: create-bootstrap
 create-bootstrap:
-	@${ECHO} "TODO: https://github.com/freebsd-haskell/ports/wiki/Updating-the-Bootstrap-Compiler"
-	cd ${WRKSCR} \
-	&& ${CP} ${WRKDIR}/build.boot.mk mk \
-	&& setenv ${CONFIGURE_ENV} ./configure	--with-iconv-includes=${LOCALBASE}/include \
-						--with-iconv-libraries=${LOCALBASE}/lib \
-						--with-gcc=${CC} \
-						--with-ld=${LD} \
-	&& make binary-dist TAR_COMP=xz \\
-	&& mv ghc-${GHC_VERSION}-boot-${GHC_ARCH}-unknown-freebsd.tar.xz /tmp/ghc-${GHC_VERSION}-${ARCH}-freebsd${FREEBSD_MAJOR_VERSION}-boot.tar.xz
+	cd ${WRKSRC} \
+	&& gmake binary-dist TAR_COMP=xz \
+	&& mv ${WRKSRC}/ghc-${GHC_VERSION}-${ARCH}-portbld-freebsd.tar.xz /tmp/ghc-${GHC_VERSION}-boot-${ARCH}-freebsd.tar.xz
+	&& sha256 ghc-${GHC_VERSION}-boot-${ARCH}-freebsd.tar.xz
+	&& stat -f %z ghc-${GHC_VERSION}-boot-${ARCH}-freebsd.tar.xz
