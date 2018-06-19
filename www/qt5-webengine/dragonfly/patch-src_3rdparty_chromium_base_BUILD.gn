@@ -1,0 +1,17 @@
+--- src/3rdparty/chromium/base/BUILD.gn.intermediate	2018-05-26 16:02:59.000000000 +0000
++++ src/3rdparty/chromium/base/BUILD.gn
+@@ -1100,10 +1100,10 @@ component("base") {
+     ]
+     sources += [
+       "files/file_path_watcher_stub.cc",
+-      "process/process_handle_freebsd.cc",
+-      "process/process_iterator_freebsd.cc",
+-      "process/process_metrics_freebsd.cc",
+-      "sys_info_freebsd.cc",
++      "process/process_handle_dragonfly.cc",
++      "process/process_iterator_dragonfly.cc",
++      "process/process_metrics_dragonfly.cc",
++      "sys_info_dragonfly.cc",
+     ]
+     libs = [
+       "execinfo", # logging.cc

@@ -1,0 +1,18 @@
+--- mkspecs/features/functions.prf.intermediate	2018-05-26 13:48:33.000000000 +0000
++++ mkspecs/features/functions.prf
+@@ -368,6 +368,7 @@ defineReplace(gnArgs) {
+     macos: include($$QTWEBENGINE_ROOT/src/core/config/mac_osx.pri)
+     win32: include($$QTWEBENGINE_ROOT/src/core/config/windows.pri)
+     freebsd: include($$QTWEBENGINE_ROOT/src/core/config/freebsd.pri)
++    dragonfly: include($$QTWEBENGINE_ROOT/src/core/config/freebsd.pri)
+     isEmpty(gn_args): error(No gn_args found please make sure you have valid configuration.)
+     return($$gn_args)
+ }
+@@ -388,6 +389,7 @@ defineReplace(gnOS) {
+     win32: return(win)
+     linux: return(linux)
+     freebsd: return(bsd)
++    dragonfly: return(bsd)
+     error(Unsupported platform)
+     return(unknown)
+ }
