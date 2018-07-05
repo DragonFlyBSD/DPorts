@@ -1,6 +1,0 @@
-
-dfly-patch:
-	${REINPLACE_CMD} -e 's@[[:<:]]make[[:>:]]@$${MAKE}@g'		\
-		${WRKSRC}/support/cpp/Makefile.in
-	${REINPLACE_CMD} -e 's@sdcc-libs:@sdcc-libs: sdcc-sdbinutils@g'	\
-		${WRKSRC}/Makefile.in    # libiberty.a build order issue

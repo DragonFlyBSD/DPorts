@@ -1,4 +1,0 @@
-
-dfly-patch:
-	${REINPLACE_CMD} -e 's@__FreeBSD_version > 410001@1@'	\
-		${WRKSRC}/mg.c
