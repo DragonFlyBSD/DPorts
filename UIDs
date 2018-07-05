@@ -154,7 +154,7 @@ gini:*:206:206::0:0:& streaming server:/var/log/gini:/usr/sbin/nologin
 _mixminion:*:207:207::0:0:Mixminion server:/nonexistent:/usr/sbin/nologin
 _dnsdist:*:208:208::0:0:dnsdist user:/nonexistent:/usr/sbin/nologin
 shoutcast:*:210:210::0:0:Shoutcast sandbox:/nonexistent:/bin/sh
-git:*:211:211::0:0:gitosis user:/usr/local/git:/bin/sh
+git:*:211:211::0:0:git user:/usr/local/git:/bin/sh
 hg:*:212:212::0:0:mercurial-server user:/usr/local/hg:/bin/sh
 drizzle:*:213:213::0:0:Drizzle daemon:/var/db/drizzle:/usr/sbin/nologin
 kyototycoon:*:214:214::0:0:kyototycoon user:/var/empty:/usr/sbin/nologin
@@ -797,7 +797,7 @@ chronyd:*:849:849::0:0:chronyd user:/nonexistent:/usr/sbin/nologin
 # free: 850
 # free: 851
 # free: 852
-# free: 853
+_geodns:*:853:853::0:0:GeoDNS User:/var/empty:/usr/sbin/nologin
 # free: 854
 # free: 855
 # free: 856
@@ -829,7 +829,7 @@ archiva:*:871:871::0:0:Apache Archiva Daemon:/nonexistent:/usr/sbin/nologin
 # free: 882
 # free: 883
 # free: 884
-# free: 885
+tcpdump:*:885:885::0:0:tcpdump user:/nonexistent:/usr/sbin/nologin
 miniflux:*:886:886::0:0:Miniflux:/nonexistent:/usr/sbin/nologin
 pdagent:*:887:887::0:0:PagerDuty Agent:/nonexistent:/usr/sbin/nologin
 vuls:*:888:888::0:0:VULnerability Scanner:/var/db/vuls:/usr/sbin/nologin
