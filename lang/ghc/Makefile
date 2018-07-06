@@ -17,7 +17,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 ONLY_FOR_ARCHS=	i386 amd64
 
-GHC_VERSION=		8.4.2
+GHC_VERSION=		8.4.3
 HSCOLOUR_VERSION=	1.24.4
 
 DATADIR=	${PREFIX}/share/ghc-${GHC_VERSION}
@@ -107,9 +107,10 @@ IGNORE=		unsupported ${OPSYS} Operating System
 
 .endif # MBOOT
 
+# Turn off for a while, see PR 228727
+CONFIGURE_ARGS+=	--enable-dtrace=0
 .if ${OSVERSION} < 1200000
 USE_GCC=	yes
-CONFIGURE_ARGS+=	--enable-dtrace=0
 .else
 LD=		ld.bfd
 .endif
