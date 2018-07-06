@@ -281,6 +281,8 @@ share/gtk-doc/html/libvirt/up.png
 %%DATADIR%%/schemas/networkcommon.rng
 %%DATADIR%%/schemas/nodedev.rng
 %%DATADIR%%/schemas/nwfilter.rng
+%%DATADIR%%/schemas/nwfilter_params.rng
+%%DATADIR%%/schemas/nwfilterbinding.rng
 %%DATADIR%%/schemas/secret.rng
 %%DATADIR%%/schemas/storagecommon.rng
 %%DATADIR%%/schemas/storagepool.rng
@@ -394,6 +396,7 @@ lib/libvirt/connection-driver/libvirt_driver_vbox.so
 %%XEN%%lib/libvirt/connection-driver/libvirt_driver_libxl.so
 lib/libvirt/storage-backend/libvirt_storage_backend_fs.so
 %%ZFS%%lib/libvirt/storage-backend/libvirt_storage_backend_zfs.so
+lib/libvirt/storage-file/libvirt_storage_file_fs.so
 %%QEMU%%@dir /var/run/libvirt/qemu
 %%QEMU%%@dir /var/lib/libvirt/qemu/channel/target
 %%QEMU%%@dir /var/lib/libvirt/qemu/channel
