@@ -10,6 +10,13 @@ now requires a C++ or C99 compiler to compile.
 
 (Bug #25597667)
 
+For Qt5, which requires C++11, the following line single-line
+definition for mysql_bool is less-fragile and more C++y:
+	using mysql_bool = decltype(MYSQL_BIND::is_null_value);
+This does not apply to the Qt4 port, which allows older compilers
+and the less-fragile approach would therefore break on old-gcc-in-base
+architectures.
+
 --- src/plugins/sqldrivers/mysql/qsql_mysql.cpp.orig	2018-04-29 07:25:09 UTC
 +++ src/plugins/sqldrivers/mysql/qsql_mysql.cpp
 @@ -74,6 +74,14 @@ Q_DECLARE_METATYPE(MYSQL_STMT*)
@@ -18,7 +25,7 @@ now requires a C++ or C99 compiler to compile.
 
 +// MYSQL 8.0.1 no longer uses the my_bool type:
 +// https://dev.mysql.com/doc/relnotes/mysql/8.0/en/news-8-0-1.html
-+#if MYSQL_VERSION_ID >= 80001
++#if (MYSQL_VERSION_ID >= 80001) && !defined(MARIADB_BASE_VERSION)
 +typedef bool mysql_bool;
 +#else
 +typedef my_bool mysql_bool;
