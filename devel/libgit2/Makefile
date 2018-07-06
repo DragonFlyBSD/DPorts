@@ -1,12 +1,13 @@
 # $FreeBSD$
 
+# Also update devel/libgit2-glib, devel/rubygem-rugged, devel/py-pygit2
+
 PORTNAME=	libgit2
-PORTVERSION=	0.27.0
-PORTREVISION=	1
+PORTVERSION=	0.27.2
 DISTVERSIONPREFIX=	v
 CATEGORIES=	devel
 
-MAINTAINER=	wg@FreeBSD.org
+MAINTAINER=	mfechner@FreeBSD.org
 COMMENT=	Portable, pure C implementation of the Git core
 
 LICENSE=	GPLv2
