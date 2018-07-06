@@ -3,7 +3,7 @@
 
 PORTNAME=	sane-backends
 PORTVERSION=	1.0.27
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	https://alioth.debian.org/frs/download.php/file/4146/ \
 		http://fossies.org/linux/misc/
@@ -14,7 +14,7 @@ COMMENT=	API for access to scanners, digitals camera, frame grabbers etc
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-LIB_DEPENDS=	libpng16.so:graphics/png \
+LIB_DEPENDS=	libpng.so:graphics/png \
 		libtiff.so:graphics/tiff
 
 USES=		gmake jpeg libtool localbase pathfix pkgconfig
