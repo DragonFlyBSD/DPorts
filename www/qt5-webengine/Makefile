@@ -20,6 +20,7 @@
 
 PORTNAME=	webengine
 DISTVERSION=	${QT5_VERSION}
+PORTREVISION=	3
 CATEGORIES=	www
 PKGNAMEPREFIX=	qt5-
 
@@ -65,16 +66,15 @@ PULSEAUDIO_QMAKE_ON=	QT_CONFIG+=pulseaudio
 # whether webenginewidgets is available, which fails when qmake processes all
 # .pro files at once.
 USES=		gperf jpeg python:2.7,build pkgconfig \
-		qmake:norecursive,outsource shebangfix
+		qmake:norecursive,outsource qt-dist:5,webengine shebangfix
 USE_GNOME=	glib20 libxml2 libxslt
-USE_QT5=	core designer gui location network qml quick webchannel \
+USE_QT=		core designer gui location network qml quick webchannel \
 		widgets buildtools_build qmake_build
 USE_XORG=	scrnsaverproto x11 xcb xcomposite xcursor xext xi xproto \
 		xrandr xrender xscrnsaver xtst
 
 USE_LDCONFIG=	${QT_LIBDIR}
 
-QT_DIST=	${PORTNAME}
 
 QMAKE_CONFIGURE_ARGS=	-no-printing-and-pdf -proprietary-codecs -system-ffmpeg
 
@@ -86,11 +86,15 @@ ALL_TARGET=	first
 
 .if ${OPSYS} == FreeBSD && ${OSVERSION} < 1100000
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-10
-
-BUILD_DEPENDS+=	clang50:devel/llvm50
-CC=		clang50
-CXX=		clang++50
 .endif  # ${OPSYS} == FreeBSD && ${OSVERSION} < 1100000
+
+# 1101513 is 11-STABLE after merging clang, llvm, lld, lldb, compiler-rt and
+#            libc++ 6.0.0 release, and several follow-up fixes.
+.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1101513
+BUILD_DEPENDS+=	clang60:devel/llvm60
+CC=		clang60
+CXX=		clang++60
+.endif  # ${OPSYS} == FreeBSD && ${OSVERSION} < 1101513
 
 # We need ar(1) from ports because the Chromium code uses the @file syntax.
 # We then need to ensure ld(1) from ports is used because of the archives ar(1)
