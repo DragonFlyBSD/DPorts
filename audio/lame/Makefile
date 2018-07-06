@@ -9,6 +9,9 @@ MASTER_SITES=	SF/${PORTNAME:tl}/${PORTNAME:tl}/3.100
 MAINTAINER=	netchild@FreeBSD.org
 COMMENT=	Fast MP3 encoder kit
 
+LICENSE=	LGPL20+
+LICENSE_FILE=	${WRKSRC}/COPYING
+
 USES=		gmake iconv libtool
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
@@ -43,6 +46,8 @@ post-patch:
 
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libmp3lame.so.0
+
+post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for file in ${DOC_FILES}
 	${INSTALL_DATA} ${WRKSRC}/${file} ${STAGEDIR}${DOCSDIR}
