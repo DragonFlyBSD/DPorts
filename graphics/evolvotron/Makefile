@@ -15,12 +15,14 @@ COMMENT=	Generative software that evolves images/textures/patterns
 
 LICENSE=	GPLv3+ # LICENSE file is GPLv2 though
 
+BROKEN_powerpc64=	fails to link: evolvotron.o: undefined reference to boost::program_options::options_description::options_description
+
 LIB_DEPENDS=	libboost_thread.so:devel/boost-libs
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-USES=		python qmake
-USE_QT4=	corelib gui xml moc_build
+USES=		python qmake qt:4
+USE_QT=		corelib gui xml moc_build
 QMAKE_ARGS=	VERSION_NUMBER="${PORTVERSION}"
 QMAKE_SOURCE_PATH=	${WRKSRC}/main.pro
 MAKE_JOBS_UNSAFE=	yes
