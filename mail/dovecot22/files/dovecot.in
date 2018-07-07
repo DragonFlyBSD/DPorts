@@ -1,10 +1,11 @@
 #!/bin/sh
 #
-# $FreeBSD: head/mail/dovecot22/files/dovecot.in 422397 2016-09-18 16:38:28Z ohauer $
+# $FreeBSD: head/mail/dovecot22/files/dovecot.in 472344 2018-06-13 20:59:52Z ler $
 #
 
 # PROVIDE: dovecot
 # REQUIRE: %%REQUIRE%%
+# BEFORE:  mail
 # KEYWORD: shutdown
 
 # dovecot_enable (bool):	Set it to YES to enable dovecot
