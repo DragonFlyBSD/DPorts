@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	feh
-PORTVERSION=	2.26.3
+PORTVERSION=	2.26.4
 CATEGORIES=	graphics
 MASTER_SITES=	http://feh.finalrewind.org/ \
 		LOCAL/uqs
@@ -17,7 +17,7 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libImlib2.so:graphics/imlib2 \
 		libpng.so:graphics/png
 
-USES=		cpe desktop-file-utils gmake localbase:ldflags \
+USES=		compiler:c++11-lang cpe desktop-file-utils gmake localbase:ldflags \
 		perl5 shebangfix tar:bzip2
 SHEBANG_FILES=	cam/feh-cam
 USE_XORG=	x11 xt xinerama
