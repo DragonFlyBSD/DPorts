@@ -2,11 +2,11 @@
 
 PORTNAME=	nadia
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.4.3
+DISTVERSION=	0.4.4
 CATEGORIES=	devel
 PKGNAMEPREFIX=	elixir-
 
-MAINTAINER=	olgeni@FreeBSD.org
+MAINTAINER=	erlang@FreeBSD.org
 COMMENT=	Telegram Bot API Wrapper written in Elixir
 
 LICENSE=	MIT
