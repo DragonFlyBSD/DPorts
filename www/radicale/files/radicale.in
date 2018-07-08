@@ -1,6 +1,6 @@
 #!/bin/sh
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD: head/www/radicale/files/radicale.in 466656 2018-04-06 16:26:35Z sunpoet $
+# $FreeBSD: head/www/radicale/files/radicale.in 471537 2018-06-04 09:43:46Z decke $
 #
 
 # PROVIDE: radicale
@@ -24,12 +24,12 @@ rcvar=radicale_enable
 load_rc_config $name
 
 : ${radicale_enable:=NO}
-: ${radicale_config=%%PREFIX%%/etc/radicale/config}
+: ${radicale_config=%%ETCDIR%%/config}
 : ${radicale_user:=radicale}
 : ${radicale_group:=radicale}
 
 pidfile=/var/run/radicale/radicale.pid
-command=%%PREFIX%%/bin/radicale
+command=%%PREFIX%%/bin/radicale-%%PYTHON_VER%%
 command_args="-d -p ${pidfile} -C ${radicale_config}"
 command_interpreter=%%PYTHON_CMD%%
 required_files=${radicale_config}
