@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	entr
-PORTVERSION=	4.0
+PORTVERSION=	4.1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://entrproject.org/code/ \
 		https://bitbucket.org/eradman/entr/get/
@@ -12,8 +12,9 @@ COMMENT=	Runs arbitrary commands when files change
 # This software has code under BSD2CLAUSE license.
 # All the code used in FreeBSD is under ISCL license.
 LICENSE=	ISCL
+LICENSE_FILE=	${WRKSRC}/LICENSE
 
-WRKSRC=		${WRKDIR}/eradman-entr-d5110481f5b9
+WRKSRC=		${WRKDIR}/eradman-entr-f4e2cbe57708
 
 MAKEFILE=	Makefile.bsd
 MAKE_ARGS=	MANPREFIX=${MANPREFIX}/man
