@@ -1,9 +1,9 @@
 #!/bin/sh
 
 # Start or stop cyrus-imapd
-# $FreeBSD: head/mail/cyrus-imapd23/files/imapd.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/mail/cyrus-imapd23/files/imapd.in 472520 2018-06-16 06:42:34Z ume $
 
-# PROVIDE: cyrus_imapd
+# PROVIDE: cyrus_imapd imap
 # REQUIRE: DAEMON
 # BEFORE: mail
 # KEYWORD: shutdown
@@ -27,6 +27,7 @@ command="%%PREFIX%%/cyrus/bin/master"
 pidfile="/var/run/cyrus-master.pid"
 required_files="%%PREFIX%%/etc/cyrus.conf %%PREFIX%%/etc/imapd.conf"
 stop_postcmd="cyrus_imapd_poststop"
+extra_commands="reload"
 
 cyrus_imapd_poststop() {
 	/bin/rm -f ${pidfile}
