@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/www/fcgiwrap/files/fcgiwrap.in 454862 2017-11-25 02:03:57Z delphij $
+# $FreeBSD: head/www/fcgiwrap/files/fcgiwrap.in 471940 2018-06-07 17:57:18Z zi $
 #
 # fcgiwrap startup script
 #
@@ -68,7 +68,6 @@ fcgiwrap_setfib() {
 fcgiwrap_precmd() {
 	fcgiwrap_setfib
 	install -d -o root -g wheel -m 1777 /var/run/fcgiwrap
-	umask $(printf 0%o $(echo $((0777 - $(echo 0${fcgiwrap_socket_mode})))))
 }
 
 fcgiwrap_postcmd() {
@@ -80,13 +79,15 @@ fcgiwrap_postcmd() {
 			return
 			;;
 	esac
+	if [ -n "${fcgiwrap_socket_mode}" ]; then
+		chmod ${fcgiwrap_socket_mode} ${fcgiwrap_socket#unix:}
+	fi
 	if [ "${fcgiwrap_socket_owner}" != "${fcgiwrap_user}" ]; then
 		chown ${fcgiwrap_socket_owner} ${fcgiwrap_socket#unix:}
 	fi
 	if [ "${fcgiwrap_socket_group}" != "${fcgiwrap_group}" ]; then
 		chgrp ${fcgiwrap_socket_group} ${fcgiwrap_socket#unix:}
 	fi
-	umask ${fcgiwrap_saved_umask}
 }
 
 fcgiwrap_stop() {
