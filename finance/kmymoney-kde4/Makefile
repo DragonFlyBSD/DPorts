@@ -1,8 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	kmymoney
-PORTVERSION=	4.8.1.1
-PORTREVISION=	2
+PORTVERSION=	4.8.2
+PORTREVISION=	1
 CATEGORIES=	finance kde
 MASTER_SITES=	KDE/stable/${PORTNAME}/${PORTVERSION}/src
 PKGNAMESUFFIX=	-kde4
@@ -19,8 +19,8 @@ LIB_DEPENDS=	libboost_graph.so:devel/boost-libs \
 		libassuan.so:security/libassuan \
 		libgpg-error.so:security/libgpg-error
 
-USES=		cmake kde:4 pkgconfig shared-mime-info shebangfix tar:xz
-USE_QT4=	corelib gui dbus declarative network phonon script sql svg xml \
+USES=		cmake kde:4 pkgconfig qt:4 shared-mime-info shebangfix tar:xz
+USE_QT=		corelib gui dbus declarative network phonon script sql svg xml \
 		qmake_build moc_build rcc_build uic_build
 USE_KDE=	automoc4 kdelibs pimlibs soprano
 USE_LDCONFIG=	yes
