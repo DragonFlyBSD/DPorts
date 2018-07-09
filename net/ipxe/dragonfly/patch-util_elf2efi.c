@@ -1,6 +1,6 @@
---- util/elf2efi.c.intermediate	2018-05-14 15:03:12.000000000 +0300
+--- util/elf2efi.c.orig	2018-07-09 15:32:32 UTC
 +++ util/elf2efi.c
-@@ -612,26 +612,34 @@ static void process_reloc ( struct elf_f
+@@ -612,27 +612,35 @@ static void process_reloc ( struct elf_f
  		 */
  	} else {
  		switch ( mrel ) {
@@ -30,6 +30,7 @@
 +#endif
  		case ELF_MREL ( EM_ARM, R_ARM_CALL ) :
 +#ifndef __DragonFly__
+ 		case ELF_MREL ( EM_ARM, R_ARM_REL32 ) :
  		case ELF_MREL ( EM_ARM, R_ARM_THM_PC22 ) :
 +#endif
  		case ELF_MREL ( EM_ARM, R_ARM_THM_JUMP24 ) :
