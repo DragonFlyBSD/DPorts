@@ -7,4 +7,4 @@ CXXFLAGS+=	-std=gnu++98 -Wno-expansion-to-defined -Wno-class-memaccess
 dfly-patch:
 	${REINPLACE_CMD} -e 's@\(FreeBSD:\*\))@\1|DragonFly:*)@g'	\
 			 -e 's@\(5\*\|4\*\|3.4\*\)@8*|\1@g'     \
-		${WRKSRC}/../qt-c0cfa03/configure
+		${WRKSRC}/../qt-5db36ec/configure
