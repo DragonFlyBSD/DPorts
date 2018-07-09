@@ -1,24 +1,24 @@
---- configure.ac.intermediate	2017-07-03 21:36:12.000000000 +0000
+--- configure.ac.orig	2018-07-08 23:42:08 UTC
 +++ configure.ac
-@@ -143,7 +143,7 @@
- 		with_sigaltstack=no
+@@ -180,7 +180,7 @@ case "$host" in
  		use_sigposix=yes
+ 		with_sgen_default_concurrent=yes
  		;;
 -	*-*-*freebsd*)
 +	*-*-*freebsd*|*-*-dragonfly*)
  		if test "x$PTHREAD_CFLAGS" = "x"; then
  			CPPFLAGS="$CPPFLAGS -DGC_FREEBSD_THREADS"
  			libmono_cflags=
-@@ -3002,7 +3002,7 @@
- 			BTLS_SUPPORTED=yes
- 			BTLS_PLATFORM=i386
+@@ -3296,7 +3296,7 @@ case "$host" in
+ 			BTLS_PLATFORM=x86_64
+ 			boehm_supported=false
  			;;
 -		  openbsd*|freebsd*|kfreebsd-gnu*)
-+		  openbsd*|freebsd*|kfreebsd-gnu*|dragonfly*)
- 		        ;;
- 		esac
- 		;;
-@@ -3537,6 +3537,11 @@
++		  openbsd*|freebsd*|dragonfly*|kfreebsd-gnu*)
+                         BTLS_SUPPORTED=yes
+                         BTLS_PLATFORM=x86_64
+ 			;;
+@@ -3788,6 +3788,11 @@ case "$host" in
  	SQLITE="libsqlite.so"
  	SQLITE3="libsqlite3.so"
  	;;
