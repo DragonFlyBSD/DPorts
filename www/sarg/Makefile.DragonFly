@@ -1,4 +1,0 @@
-# -Werror=format-truncation
-dfly-patch:
-	${REINPLACE_CMD} -e 's@-Werror=format"@-Wno-error=format"@g'	\
-		${WRKSRC}/configure.in
