@@ -1,11 +1,11 @@
---- src/CMakeLists.txt.orig	2016-09-24 01:49:17.000000000 +0300
+--- src/CMakeLists.txt.orig	2018-05-21 17:23:31 UTC
 +++ src/CMakeLists.txt
-@@ -177,7 +177,7 @@ set(REQUIRED_QT "Qt5Widgets >= ${REQUIRE
+@@ -217,7 +217,7 @@ set(REQUIRED_QT "Qt5Widgets >= ${REQUIRE
  configure_file(libfm-qt.pc.in lib${LIBFM_QT_LIBRARY_NAME}.pc @ONLY)
  # FreeBSD loves to install files to different locations
- # http://www.freebsd.org/doc/handbook/dirstructure.html
+ # https://www.freebsd.org/doc/handbook/dirstructure.html
 -if(${CMAKE_SYSTEM_NAME} STREQUAL "FreeBSD")
-+if((${CMAKE_SYSTEM_NAME} STREQUAL "FreeBSD") OR (${CMAKE_SYSTEM_NAME} STREQUAL "DragonFly"))
++if(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD|DragonFly")
      install(FILES
          "${CMAKE_CURRENT_BINARY_DIR}/lib${LIBFM_QT_LIBRARY_NAME}.pc"
          DESTINATION libdata/pkgconfig
