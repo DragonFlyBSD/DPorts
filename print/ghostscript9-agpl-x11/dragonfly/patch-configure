@@ -1,0 +1,38 @@
+--- configure.intermediate	2018-07-08 23:11:47 UTC
++++ configure
+@@ -4353,7 +4353,7 @@ else
+             CC_DBG_FLAGS_TO_TRY="-gdwarf-2 -g3 -O0"
+         fi
+         ;;
+-        *BSD)
++        *BSD|DragonFly)
+         if test $ac_cv_c_compiler_gnu = yes; then
+             CC_OPT_FLAGS_TO_TRY="-O2"
+             CC_DBG_FLAGS_TO_TRY="-gdwarf-2 -g3 -O0"
+@@ -5392,7 +5392,7 @@ done
+ OBJDIR_BSDMAKE_WORKAROUND=obj
+ 
+ case `uname` in
+-        *BSD)
++        *BSD|DragonFly)
+         OBJDIR_BSDMAKEWORKAOROUND="notobj"
+         ;;
+ esac
+@@ -10088,7 +10088,7 @@ else
+       DLL_EXT=".dll"
+       SO_LIB_VERSION_SEPARATOR="-"
+     ;;
+-    *BSD)
++    *BSD|DragonFly)
+       DYNAMIC_CFLAGS="-fPIC"
+       GS_DYNAMIC_LDFLAGS="-shared -Wl,\$(LD_SET_DT_SONAME)\$(LDFLAGS_SO_PREFIX)\$(GS_SONAME_MAJOR)"
+       PCL_DYNAMIC_LDFLAGS="-shared -Wl,\$(LD_SET_DT_SONAME)\$(LDFLAGS_SO_PREFIX)\$(PCL_SONAME_MAJOR)"
+@@ -10143,7 +10143,7 @@ if test "${enable_dynamic+set}" = set; t
+       OPT_CFLAGS="$DYNAMIC_CFLAGS $OPT_CFLAGS"
+       DBG_CFLAGS="$DYNAMIC_CFLAGS $DBG_CFLAGS"
+       ;;
+-      *BSD)
++      *BSD|DragonFly)
+       INSTALL_SHARED="install-shared"
+       if test "x$X_DEVS" != x; then
+               DYNAMIC_DEVS="\$(GLOBJDIR)/X11.so"
