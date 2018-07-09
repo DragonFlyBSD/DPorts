@@ -1,0 +1,10 @@
+--- configure.ac.orig	2016-03-23 11:38:40 UTC
++++ configure.ac
+@@ -140,6 +140,7 @@ dnl AC_CANONICAL_HOST
+ case "$host" in
+   i[[3456]]86-*-*bsd*)   ARCH="-D__BSD__ -D__I386__" ;;
+   *-*-*bsd*)             ARCH="-D__BSD__" ;;
++  *-*-dragonfly*)        ARCH="-D__BSD__" ;;
+   aarch64-*-linux-*)     ARCH="-D__LINUX__" ;;
+   alpha*-*-linux-*)      ARCH="-D__ALPHA__ -D__LINUX__" ;;
+   alpha*-*-*-*)          ARCH="-D__ALPHA__ -D__LINUX__" ;;
