@@ -2,21 +2,23 @@
 
 PORTNAME=	kdegraphics
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
+PORTREVISION=	1
 CATEGORIES=	graphics kde
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Graphics utilities for KDE (meta port)
 
-USES=		kde:5 metaport
-USE_QT5=	#
+USES=		kde:5 metaport qt:5
+USE_QT=		#
 
 OPTIONS_DEFINE=	GPHOTO \
 		GWENVIEW \
 		KCOLORCHOOSER \
 		KOLOURPAINT \
 		KRULER \
-		SPECTACLE \
 		MOBIPOCKET \
+		SKANLITE \
+		SPECTACLE \
 		SVG \
 		THUMBNAILER
 
@@ -36,6 +38,9 @@ KOLOURPAINT_RUN_DEPENDS=	kolourpaint>=${KDE_APPLICATIONS_VERSION}:graphics/kolou
 
 KRULER_DESC=			Screen ruler
 KRULER_RUN_DEPENDS=		kruler>=${KDE_APPLICATIONS_VERSION}:deskutils/kruler
+
+SKANLITE_DESC=			Simple scanning application
+SKANLITE_RUN_DEPENDS=		skanlite>=2.1:graphics/skanlite
 
 SPECTACLE_DESC=			Screen capture program
 SPECTACLE_RUN_DEPENDS=		spectacle>=${KDE_APPLICATIONS_VERSION}:graphics/spectacle
