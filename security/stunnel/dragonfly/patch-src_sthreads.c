@@ -1,4 +1,4 @@
---- src/sthreads.c.orig	2017-06-06 15:46:34.000000000 +0300
+--- src/sthreads.c.orig	2018-07-02 21:30:10 UTC
 +++ src/sthreads.c
 @@ -97,14 +97,14 @@ unsigned long stunnel_thread_id(void) {
  
@@ -17,35 +17,21 @@
      CRYPTO_THREADID_set_callback(threadid_func);
  #endif
  #if OPENSSL_VERSION_NUMBER<0x10000000L || !defined(OPENSSL_NO_DEPRECATED)
-@@ -216,11 +216,11 @@ void stunnel_rwlock_destroy_debug(struct
+@@ -224,7 +224,7 @@ NOEXPORT int s_atomic_add(int *val, int
  
- struct CRYPTO_dynlock_value stunnel_locks[STUNNEL_LOCKS];
- 
--#if OPENSSL_VERSION_NUMBER<0x10100004L
-+#if OPENSSL_VERSION_NUMBER<0x10100004L || defined(LIBRESSL_VERSION_NUMBER)
- #define CRYPTO_THREAD_lock_new() CRYPTO_get_new_dynlockid()
- #endif
+ CRYPTO_RWLOCK *stunnel_locks[STUNNEL_LOCKS];
  
 -#if OPENSSL_VERSION_NUMBER<0x10100004L
 +#if OPENSSL_VERSION_NUMBER<0x10100004L || defined(LIBRESSL_VERSION_NUMBER)
  
- static struct CRYPTO_dynlock_value *lock_cs;
+ #ifdef USE_OS_THREADS
  
-@@ -261,7 +261,7 @@ NOEXPORT void locking_callback(int mode,
+@@ -334,7 +334,7 @@ int CRYPTO_atomic_add(int *val, int amou
  
  void locking_init(void) {
      size_t i;
--#if OPENSSL_VERSION_NUMBER<0x10100004L
-+#if OPENSSL_VERSION_NUMBER<0x10100004L || defined(LIBRESSL_VERSION_NUMBER)
+-#if defined(USE_OS_THREADS) && OPENSSL_VERSION_NUMBER<0x10100004L
++#if defined(USE_OS_THREADS) && OPENSSL_VERSION_NUMBER<0x10100004L || defined(LIBRESSL_VERSION_NUMBER)
      size_t num;
- #endif
  
-@@ -269,7 +269,7 @@ void locking_init(void) {
-     for(i=0; i<STUNNEL_LOCKS; i++) /* all the mutexes */
-         stunnel_rwlock_init(&stunnel_locks[i]);
- 
--#if OPENSSL_VERSION_NUMBER<0x10100004L
-+#if OPENSSL_VERSION_NUMBER<0x10100004L || defined(LIBRESSL_VERSION_NUMBER)
      /* initialize the OpenSSL static locking */
-     num=(size_t)CRYPTO_num_locks();
-     lock_cs=str_alloc_detached(num*sizeof(struct CRYPTO_dynlock_value));
