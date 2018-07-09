@@ -3,7 +3,7 @@
 
 PORTNAME=	k3b
 PORTVERSION=	2.0.3
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	sysutils multimedia kde
 MASTER_SITES=	KDE/stable/${PORTNAME}
 DISTFILES=	${DISTNAME}a${EXTRACT_SUFX}
@@ -17,11 +17,11 @@ LIB_DEPENDS=	libcdda_paranoia.so:audio/cdparanoia \
 RUN_DEPENDS=	cdrecord:sysutils/cdrtools
 BUILD_DEPENDS=	cdrecord:sysutils/cdrtools
 
-USES=		cmake gettext kde:4 pkgconfig shared-mime-info tar:xz
+USES=		cmake gettext kde:4 pkgconfig qt:4 shared-mime-info tar:xz
 CMAKE_ARGS=	-DK3B_BUILD_K3BSETUP:BOOL=OFF \
 		-DK3B_ENABLE_MUSICBRAINZ:BOOL=OFF
 USE_KDE=	automoc4 kdelibs libkcddb
-USE_QT4=	gui phonon qt3support webkit \
+USE_QT=		gui phonon qt3support webkit \
 		qmake_build moc_build rcc_build uic_build
 USE_LDCONFIG=	yes
 
