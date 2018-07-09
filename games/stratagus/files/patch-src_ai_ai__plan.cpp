@@ -1,6 +1,4 @@
-c++11 compat
-
---- src/ai/ai_plan.cpp.orig	2016-11-08 14:38:09.000000000 +0000
+--- src/ai/ai_plan.cpp.orig	2016-11-08 14:38:09 UTC
 +++ src/ai/ai_plan.cpp
 @@ -343,7 +343,7 @@ int GetTotalBoardCapacity(ITERATOR begin
  int AiForce::PlanAttack()

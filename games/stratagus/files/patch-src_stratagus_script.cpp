@@ -1,6 +1,4 @@
-c++11 compat
-
---- src/stratagus/script.cpp.orig	2016-11-08 14:38:09.000000000 +0000
+--- src/stratagus/script.cpp.orig	2016-11-08 14:38:09 UTC
 +++ src/stratagus/script.cpp
 @@ -767,7 +767,7 @@ NumberDesc *CclParseNumberDesc(lua_State
  			lua_pop(l, 1); // table.
