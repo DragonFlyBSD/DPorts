@@ -2,7 +2,7 @@
 
 PORTNAME=	kde-runtime
 PORTVERSION=	${KDE_APPLICATIONS_VERSION}
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	x11 kde kde-applications
 PKGNAMESUFFIX=	-kde4
 
@@ -26,12 +26,12 @@ BUILD_DEPENDS=	libssh>0.7:security/libssh
 RUN_DEPENDS=	cagibid:net/cagibi
 RUN_DEPENDS+=	libssh>0.7:security/libssh
 
-USES=		cmake:outsource gettext jpeg kde:4 samba:lib shared-mime-info \
+USES=		cmake:outsource gettext jpeg kde:4 qt:4 samba:lib shared-mime-info \
 		shebangfix tar:xz
 USES+=		gmake
 USE_KDE=	kactivities kdelibs oxygen-icons5 \
 		attica automoc4 pimlibs soprano strigi nepomuk-core
-USE_QT4=	corelib dbus declarative designer_build gui phonon \
+USE_QT=		corelib dbus declarative designer_build gui phonon \
 		network qtestlib script svg webkit xml \
 		moc_build qmake_build rcc_build uic_build
 USE_XORG=	ice sm x11 xau xcursor xext xft xdmcp xpm
