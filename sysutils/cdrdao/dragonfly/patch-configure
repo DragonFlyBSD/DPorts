@@ -1,24 +1,24 @@
---- configure.orig	2009-10-05 13:58:33.000000000 +0200
-+++ configure	2013-01-15 01:54:43.359501000 +0100
-@@ -10072,7 +10072,7 @@
+--- configure.orig	2018-05-16 10:47:00 UTC
++++ configure
+@@ -7436,7 +7436,7 @@ if test "$scglib" = yes; then
    scsilib_objs="ScsiIf-lib.o"
  
    case "$host" in
--    *-freebsd*)
-+    *-freebsd* | *-dragonfly*)
+-    *-freebsd* | *-kfreebsd*-gnu)
++    *-freebsd* | *-kfreebsd*-gnu | *-dragonfly*)
  			       scsilib_libs="$scsilib_libs -lcam"
  			       ;;
    esac
-@@ -10090,7 +10090,7 @@
+@@ -7454,7 +7454,7 @@ else
  	       scsilib_objs="ScsiIf-linux.o sg_err.o"
  	       ;;
  
--    *-freebsd*)
-+    *-freebsd* | *-dragonfly*)
+-    *-freebsd* | *-kfreebsd*-gnu)
++    *-freebsd* | *-kfreebsd*-gnu | *-dragonfly*)
  	       scsilib_libs="-lcam"
  	       scsilib_objs="ScsiIf-freebsd-cam.o"
  	       ;;
-@@ -10130,7 +10130,7 @@
+@@ -7492,7 +7492,7 @@ case "$host" in
  esac
  
  case "$host" in
@@ -27,12 +27,12 @@
  	      if test "$use_pthreads" = yes; then
  		LDFLAGS="-pthread $LDFLAGS"
  		thread_libs=""
-@@ -10148,7 +10148,7 @@
+@@ -7508,7 +7508,7 @@ $as_echo "#define _P1003_1B_VISIBLE 1" >
  esac
  
  case "$host" in
--  *-linux* | *-freebsd* | *-solaris*)
-+  *-linux* | *-freebsd* | *-dragonfly* | *-solaris*)
+-  *-linux* | *-freebsd* | *-kfreebsd*-gnu | *-solaris*)
++  *-linux* | *-freebsd* | *-kfreebsd*-gnu | *-dragonfly* | *-solaris*)
  	     sound_if_obj=SoundIF-ao.o
  	     ;;
  
