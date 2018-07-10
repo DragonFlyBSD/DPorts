@@ -12,7 +12,9 @@ COMMENT=	Tools for use with the SCUMMVM game emulator
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-RUN_DEPENDS:=	${BUILD_DEPENDS}
+RUN_DEPENDS=	lame:audio/lame \
+		flac:audio/flac \
+		oggenc:audio/vorbis-tools
 BUILD_DEPENDS=	lame:audio/lame \
 		flac:audio/flac \
 		oggenc:audio/vorbis-tools
