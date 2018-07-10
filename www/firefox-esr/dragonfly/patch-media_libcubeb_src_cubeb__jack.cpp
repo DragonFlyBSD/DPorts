@@ -1,4 +1,4 @@
---- media/libcubeb/src/cubeb_jack.cpp.orig	2017-10-06 17:40:00 UTC
+--- media/libcubeb/src/cubeb_jack.cpp.intermediate	2017-10-06 16:40:09 UTC
 +++ media/libcubeb/src/cubeb_jack.cpp
 @@ -8,9 +8,6 @@
   */
@@ -7,6 +7,6 @@
 -#ifndef __FreeBSD__
 -#define _POSIX_SOURCE
 -#endif
- #include <algorithm>
  #include <dlfcn.h>
- #include <limits>
+ #include <stdio.h>
+ #include <string.h>
