@@ -1,0 +1,10 @@
+--- configure.ac.orig	2016-04-04 05:59:39 UTC
++++ configure.ac
+@@ -98,6 +98,7 @@ AC_CHECK_FUNCS([bzero memmove memset str
+ dnl AC_CANONICAL_HOST
+ case "$host" in
+   *-*-*bsd*)  ARCH="-D__BSD__" ;;
++  *-*-dragonfly*)  ARCH="-D__BSD__" ;;
+   *-*-mingw*) ARCH="-D__WIN32__ -D__MINGW32__" ;;
+   *)          ARCH="-D__LINUX__" ;;
+ esac
