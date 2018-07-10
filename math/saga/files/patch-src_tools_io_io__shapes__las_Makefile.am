@@ -1,4 +1,4 @@
---- src/tools/io/io_shapes_las/Makefile.am.orig	2016-11-17 08:03:02.000000000 +0000
+--- src/tools/io/io_shapes_las/Makefile.am.orig	2016-11-17 08:03:02 UTC
 +++ src/tools/io/io_shapes_las/Makefile.am
 @@ -6,7 +6,7 @@ DBGFLAGS = -g -DDEBUG
  endif

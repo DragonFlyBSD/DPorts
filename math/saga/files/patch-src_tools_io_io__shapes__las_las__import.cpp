@@ -1,4 +1,4 @@
---- src/tools/io/io_shapes_las/las_import.cpp.orig	2018-05-02 10:26:28.000000000 +0000
+--- src/tools/io/io_shapes_las/las_import.cpp.orig	2018-05-01 09:07:10 UTC
 +++ src/tools/io/io_shapes_las/las_import.cpp
 @@ -60,9 +60,9 @@
  //---------------------------------------------------------

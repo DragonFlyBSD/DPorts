@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	saga
-PORTVERSION=	6.1.0
-PORTREVISION=	3
+PORTVERSION=	6.4.0
 CATEGORIES=	math
 MASTER_SITES=	SF/saga-gis/SAGA%20-%20${PORTVERSION:C/\.[[:digit:]]\.[[:digit:]]*$//}/SAGA%20-%20${PORTVERSION}
 
@@ -13,7 +12,8 @@ COMMENT=	System for Automated Geoscientific Analyses
 LICENSE=	GPLv2 LGPL21
 LICENSE_COMB=	multi
 
-BUILD_DEPENDS=	swig3.0:devel/swig30
+BUILD_DEPENDS=	clang60:devel/llvm60 \
+		swig3.0:devel/swig30
 LIB_DEPENDS=	libfftw3.so:math/fftw3 \
 		libgdal.so:graphics/gdal \
 		libhpdf.so:print/libharu \
@@ -26,12 +26,11 @@ LIB_DEPENDS=	libfftw3.so:math/fftw3 \
 		libsvm.so:science/libsvm \
 		libtbb.so:devel/tbb \
 		libtiff.so:graphics/tiff
-RUN_DEPENDS:=	${BUILD_DEPENDS}
+RUN_DEPENDS:=	swig3.0:devel/swig30
 
-USES=		autoreconf compiler:gcc-c++11-lib desktop-file-utils dos2unix \
+USES=		autoreconf compiler:c++11-lib desktop-file-utils dos2unix \
 		iconv:wchar_t libtool localbase pkgconfig python:2.7
 USE_LDCONFIG=	yes
-USE_CXXSTD=	c++11
 USE_WX=		3.0+
 CONFIGURE_ARGS=	CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" \
 		--enable-python --with-system-svm
@@ -44,14 +43,13 @@ DOS2UNIX_GLOB=	*.cpp *.h
 PLIST_SUB=	PORTVERSION=${PORTVERSION}
 
 OPTIONS_DEFINE=	PGSQL OPENMP VIGRA
-OPTIONS_DEFAULT=	PGSQL OPENMP VIGRA
+OPTIONS_DEFAULT=	PGSQL VIGRA
+OPTIONS_DEFAULT_x86_64=	OPENMP
 NO_OPTIONS_SORT=	yes
 OPTIONS_SUB=	yes
-OPENMP_DESC=	Enable Multiprocessing
+OPENMP_DESC=	Enable Multiprocessing (only amd64, NOT i386)
 VIGRA_DESC=	Enable 'Vision with Generic Algorithms' Library
 
-OPENMP_CONFIGURE_ENABLE=	openmp
-OPENMP_LDFLAGS=		-pthread
 PGSQL_CONFIGURE_OFF=	--with-postgresql=no
 PGSQL_CONFIGURE_ON=	--with-postgresql=${LOCALBASE}/bin/pg_config
 PGSQL_USES=		pgsql
@@ -61,6 +59,19 @@ VIGRA_RUN_DEPENDS=	${LOCALBASE}/lib/libvigraimpex.so:graphics/vigra
 INSTALL_TARGET=	install-strip
 
 .include <bsd.port.pre.mk>
+
+# make describe needs them here
+CPP=		clang-cpp60
+CC=		clang60
+CXX=		clang++60
+
+### TODO: OPENMP_?= NOT for other archs
+.if ${OPSYS} == FreeBSD && ${ARCH} != i386
+OPENMP_CONFIGURE_ENABLE=	openmp
+OPENMP_LDFLAGS=		-L${LOCALBASE}/lib -lm -L${LOCALBASE}/llvm60/lib -lomp
+.else
+OPENMP_CONFIGURE_DISABLE=	openmp
+.endif
 
 SUB_FILES=	pkg-message
 
@@ -91,10 +102,16 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|PORTVERSION|${PORTVERSION}|' \
 		${WRKSRC}/src/saga_core/saga_gui/dlg_about.cpp
 
+post-patch-OPENMP-on:
+	@${REINPLACE_CMD} -e 's|-lgomp|-lomp|' \
+		${WRKSRC}/configure.ac \
+		${WRKSRC}/configure \
+		${WRKSRC}/src/accessories/templates/template4saga-tools/my_tool_library/Makefile
+
 post-configure:
 	@${REINPLACE_CMD} -e 's|cd $$(pkgdatadir);|cd ${STAGEDIR}${DATADIR};|g' \
 		${WRKSRC}/src/saga_core/saga_gui/Makefile
-	@${REINPLACE_CMD} -e 's|^LDFLAGS = .*|& -lopencv_contrib|' \
+	@${REINPLACE_CMD} -e 's|^LDFLAGS = .*|& -lopencv_core|' \
 		${WRKSRC}/src/tools/imagery/imagery_opencv/Makefile
 
 post-install:
