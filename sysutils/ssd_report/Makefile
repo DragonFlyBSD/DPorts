@@ -10,9 +10,9 @@ COMMENT=	SSD health report
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-FLAVORS=	smart smartmontools
+FLAVORS=	smartmontools #smart
 
-smart_RUN_DEPENDS=		smart:sysutils/smart
+# smart_RUN_DEPENDS=		smart:sysutils/smart
 smartmontools_RUN_DEPENDS=	smartctl:sysutils/smartmontools
 smartmontools_PKGNAMESUFFIX=	-smartmontools
 
