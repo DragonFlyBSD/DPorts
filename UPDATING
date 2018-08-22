@@ -5,6 +5,116 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20180813:
+  AFFECTS: net/geoipupdate
+  AUTHOR: adamw@FreeBSD.org
+
+  There have been some breaking changes to the GeoIP.conf in version 3.0.0.
+  Read about the changes at
+    https://github.com/maxmind/geoipupdate/blob/master/ChangeLog.md
+  and either edit your GeoIP.conf as needed, or recreate it from
+  GeoIP.conf.sample.
+
+20180810:
+  AFFECTS: databases/postgresql??-server
+  AUTHOR: girgen@FreeBSD.org
+
+  The PostgreSQL server packages are no longer built with support for the XML
+  datatype per default. To retain support for the XML datatype you should build
+  the port and check the XML option in the option dialog. The reason for this
+  is the bad security reputation of libxml2.
+ 
+20180806:
+  AFFECTS: www/tt-rss
+  AUTHOR: thierry@FreeBSD.org
+
+  tt-rss now uses pdo_mysql/pgsql for database acccess; a web server reload
+  will be required if pdo ext. isn't installed.
+
+20180804:
+  AFFECTS: net-mgmt/zabbix*-server
+  AUTHOR: dbaio@FreeBSD.org
+
+  The JAVAGW option was removed from the Zabbix Server and an additional slave
+  port was created, zabbix*-java, it installs only Zabbix Java Gateway files,
+  this way is possible to deploy a Zabbix Java Gateway without the need to
+  install Zabbix Server components.
+
+  If you are using the JAVAGW option on Zabbix Server, please, install now the
+  new zabbix*-java port.
+
+20180803
+  AFFECTS: users of net/openntpd
+  AUTHOR: naddy@FreeBSD.org
+
+  The numerical ID of the "_ntp" user had to be moved after 12.0-CURRENT
+  (revision 336525) took over its value for a user "ntpd" that uses a
+  different privilege model.
+
+  To avoid clashes between the two users, please remove the openntpd
+  package, delete the old UID with
+
+  # pw userdel _ntp
+
+  and re-install openntpd.
+
+20180731:
+  AFFECTS: users of audio/sndio
+  AUTHOR: tobik@FreeBSD.org
+
+  sndiod(8) will now use the default audio device /dev/dsp instead
+  of /dev/dsp0 if no device was specified.
+
+  The location of ~/.aucat_cookie has moved to ~/.sndio/cookie.  If
+  you share audio devices via sndiod(8) on the network or between
+  local users, please migrate it manually to the new location to
+  guarantee a smooth upgrade.
+
+20180731:
+  AFFECTS: users of x11/xorg and all ports with USE_XORG=*proto
+  AUTHOR: zeising@FreeBSD.org
+
+  The xorg *proto packages have all been merged into one package,
+  x11/xorgproto.  This might cause issues with upgrading.  If you
+  get conflicts between xorgproto and old *proto packages, please
+  remove the old package and install xorgproto again.
+
+  In order to remove all orphaned ports, including all *proto port,
+  the following can be used after the ports tree has been updated:
+  pkg version -l \? | cut -f 1 -w | grep -v compat | xargs pkg delete -fy
+
+20180728:
+  AFFECTS: users who upgrade from security/kc to security/kc24
+  AUTHOR: pi@FreeBSD.org
+
+  The ondisk format changes from kc 2.3 to kc 2.4, so please
+  read the kc24 pkg-message file before the upgrade. It describes
+  how to create a backup, the xml dump and how to import the
+  xml dump afterwards.
+
+20180725:
+  AFFECTS: users of textproc/ibus-typing-booster
+  AUTHOR: thierry@FreeBSD.org
+
+  Due to a migration from IBusConfig to GSettings, the old settings are
+  unfortunately lost, so one has to open the setup tool and recreate ones
+  favourite settings.
+
+20180714:
+  AFFECTS: users of dns/dnsdist
+  AUTHOR: cpm@FreeBSD.org
+
+  After discussing with several users, we noticed that quite a lot of them
+  were not aware that enabling the dnsdist's console without a key, even
+  restricted to the local host, could be a security issue and allow privilege
+  escalation by allowing an unprivileged user to connect to the console and
+  execute Lua code as the dnsdist user. We therefore decided to refuse any
+  connection to the console until a key has been set, so please check that
+  you do set a key before upgrading if you use the console.  
+
+  For further details read: 
+  https://blog.powerdns.com/2018/07/10/dnsdist-1-3-2-released/
+
 20180704:
   AFFECTS: users of www/gitlab
   AUTHOR: mfechner@FreeBSD.org
@@ -1081,188 +1191,4 @@ you update your ports collection, before attempting any port upgrades.
   gnupg20 users should migrate to gnupg22.
 
   See https://gnupg.org/faq/whats-new-in-2.1.html for important changes.
-
-20170820:
-  AFFECTS: users of www/uwsgi
-  AUTHOR: ultima@FreeBSD.org
-
-  The default socket owner and mode had been changed from www:www 600
-  to uwsgi:www 660. This should resolve issue #1471[1] on github.
-
-  [1] https://github.com/unbit/uwsgi/issues/1471
-
-20170808:
-  AFFECTS: users of lang/ghc and */hs-*
-  AUTHOR: haskell@FreeBSD.org
-
-  The Glorious Glasgow Haskell Compiler has been updated to version
-  8.0.2.  Hence it is recommended to rebuild or reinstall all the
-  dependent ports and the lang/ghc port itself in one of the following
-  ways:
-
-  # portmaster -w -r ghc
-    or
-  # portupgrade -fr lang/ghc
-
-  In case of pkg(8), it is probably safer to remove all the GHC-dependent
-  packages along with GHC and reinstall everything from scratch.  For
-  example:
-
-  # pkg query "%ro" ghc > ghc-pkgs.txt
-  # pkg delete -y lang/ghc
-
-  In ghc-pkgs.txt, check and remove all the packages that have been moved
-  on the update, then use this command:
-
-  # pkg install -y `cat ghc-pkgs.txt`
-
-20170807:
-  AFFECTS: users of mail/dovecot2 and mail/dovecot2-pigeonhole
-  AUTHOR: adamw@FreeBSD.org
-
-  Now that dovecot1 has been removed from the ports tree, dovecot2
-  and dovecot2-pigeonhole have been renamed to simply dovecot and
-  dovecot-pigeonhole.
-
-  pkg should handle the rename automatically, but if you run into
-  trouble, you can point pkg at the new origin via:
-
-  # pkg set -o mail/dovecot2:mail/dovecot
-  # pkg set -o mail/dovecot2-pigeonhole:mail/dovecot-pigeonhole
-
-  Similarly, you can point portmaster at the new location via:
-
-  # portmaster -o mail/dovecot mail/dovecot2
-
-  If all else fails, just remove and reinstall the package:
-
-  # pkg delete dovecot2
-  # pkg install dovecot
-
-20170806:
-  AFFECTS: users of mail/dovecot2-antispam-plugin
-  AUTHOR: adamw@FreeBSD.org
-
-  Development of the antispam plugin ceased years ago, and upstream
-  recommends using pigeonhole (mail/dovecot2-pigeonhole) instead.
-
-  See https://wiki2.dovecot.org/HowTo/AntispamWithSieve for a recipe
-  to replicate the antispam plugin's behaviour.
-
-20170803:
-  AFFECTS: users of net/guacamole-client
-  AUTHOR: ultima@FreeBSD.org
-
-  As of version 0.9.13, the configuration directory for guacamole-client
-  has changed from /usr/local/etc/guacamole to
-  /usr/local/etc/guacamole-client.
-
-20170803:
-  AFFECTS: users of net/guacamole-server
-  AUTHOR: ultima@FreeBSD.org
-
-  As of version 0.9.13, the configuration directory for guacamole-server
-  has changed from /usr/local/etc/guacd to /usr/local/etc/guacamole-server.
-
-20170803:
-  AFFECTS: users of sysutils/terraform
-  AUTHOR: lifanov@FreeBSD.org
-
-  Terraform was updated to version 0.10.0, which split out provider plugins.
-  Provider plugins are now installed in the project directory the next time
-  "terraform init" is run. Please see the complete upgrading guide:
-
-  https://www.terraform.io/upgrade-guides/0-10.html
-
-20170729:
-  AFFECTS: users of net-p2p/bitcoin
-  AUTHOR: lwhsu@FreeBSD.org
-
-  Bitcoin data directory has been changed from /var/db/bitcoind to
-  /var/db/bitcoin.  Users of previous versions may want to migrate data to
-  new location or specify bitcoind_data.
-
-20170729:
-  AFFECTS: users of mail/mailscanner
-  AUTHOR: crees@FreeBSD.org
-
-  Version 5.0.3 of MailScanner introduced a serious bug in packaging.
-  Unfortunately if it is installed, your configuration has been deleted.
-
-  If you have managed to get it working, please back up
-  /usr/local/etc/MailScanner as it will also be deleted on deinstall
-  of the same package.
-
-20170726:
-  AFFECTS: users of www/luakit
-  AUTHOR: ports@textmail.me
-
-  Luakit was updated to version 2017.07.26, which is incompatible to the
-  previous release from 2012. Please remove old configuration files from
-  the following directories:
-        ${PREFIX}/etc/xdg/luakit
-        ${HOME}/.config/luakit
-        ${HOME}/.local/share/luakit
-
-20170721:
-  AFFECTS: users of security/sshguard*
-  AUTHOR: dan.mcgregir@usask.ca
-
-  security/sshguard was updated to 2.0.0, and security/sshguard-pf,
-  security/sshguard-ipfw, and security/sshguard-null have been merged into
-  security/sshguard.
-
-  Configuration of the service is now handled in ${PREFIX}/etc/sshguard.conf.
-  Please select the desired backend, -null is selected by default.
-
-  In order to upgrade from 1.7.1 change the origin to security/sshguard
-
-  # pkg set -o security/sshguard-ipfw:security/sshguard
-  # pkg set -o security/sshguard-null:security/sshguard
-  # pkg set -o security/sshguard-pf:security/sshguard
-
-20170717:
-  AFFECTS: users of devel/p5-Log-Any and devel/p5-Log-Any-Adapter-Syslog
-  AUTHOR: eugen@FreeBSD.org
-
-  devel/p5-Log-Any-Adapter-Syslog functionality have been merged into
-  devel/p5-Log-Any and from now devel/p5-Log-Any must be used.
-
-  devel/p5-Log-Any-Adapter-Syslog will be marked as deprecated and removed.
-
-20170712:
-  AFFECTS: users of devel/apr1
-  AUTHOR: brnrd@FreeBSD.org
-
-  APR was updated to 1.6.0 and APR-util was updated to 1.6.2
-
-  The Apache Portable Runtime project removed support for FreeTDS from the
-  APR Utilities in version 1.6. Users of FreeTDS will have to migrate
-  configurations to use the newly added ODBC support in conjunction with
-  FreeTDS using FreeTDS' ODBC capabilities.
-
-  Please rebuild all ports which are using functions from APR/APR-util
-  such as Apache, Subversion, etc. Normally, you can obtain the list of
-  dependent software by running the following command:
-
-  # pkg info -r apr
-
-  Then you should rebuild all ports depending on APR(-util) to avoid
-  dangling shared library dependencies. Poudriere and pkg handle this
-  correctly, portmaster and portupgrade users can use the following to
-  rebuild all dependent ports.
-
-  Portmaster users:
-      portmaster -r apr
-  Portupgrade users:
-      portupgrade -fr devel/apr1
-
-20170710:
-  AFFECTS: users of net-im/ejabberd
-  AUTHOR: ashish@FreeBSD.org
-
-  After update to 17.07, there is an issue[1] expected related to certificate
-  verification with TLS connections.
-
-  [1] - https://github.com/processone/ejabberd/issues/1833
 

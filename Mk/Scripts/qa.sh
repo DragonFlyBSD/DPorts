@@ -914,9 +914,38 @@ flavors()
 	return ${rc}
 }
 
+license()
+{
+	local lic autoaccept pkgmirror #distsell distmirror pkgsell
+
+	if [ -n "$DISABLE_LICENSES" ]; then
+		warn "You have disabled the licenses framework with DISABLE_LICENSES, unable to run checks"
+	elif [ -n "$LICENSE" ]; then
+		for lic in $LICENSE_PERMS; do
+			case "$lic" in
+				auto-accept) autoaccept=1 ;;
+				#dist-mirror) distmirror=1 ;;
+				#dist-sell)   distsell=1   ;;
+				pkg-mirror)  pkgmirror=1  ;;
+				#pkg-sell)    pkgsell=1    ;;
+			esac
+		done
+
+		if [ -z "$autoaccept" ]; then
+			warn "License is not auto-accepted, packages will not be built, ports depending on this one will be ignored."
+		fi
+		if [ -z "$pkgmirror" ]; then
+			warn "License does not allow package to be distributed, ports depending on this one will be ignored"
+		fi
+	fi
+
+	return 0
+}
+
 checks="shebang symlinks paths stripped desktopfileutils sharedmimeinfo"
 checks="$checks suidfiles libtool libperl prefixvar baselibs terminfo"
 checks="$checks proxydeps sonames perlcore no_arch gemdeps gemfiledeps flavors"
+checks="$checks license"
 
 ret=0
 cd ${STAGEDIR} || exit 1

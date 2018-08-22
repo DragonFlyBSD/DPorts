@@ -70,12 +70,12 @@ KDE_PLASMA_VERSION?=		5.12.5
 KDE_PLASMA_BRANCH?=		stable
 
 # Current KDE frameworks.
-KDE_FRAMEWORKS_VERSION?=	5.47.0
+KDE_FRAMEWORKS_VERSION?=	5.48.0
 KDE_FRAMEWORKS_BRANCH?= 	stable
 
 # Current KDE applications.
-KDE_APPLICATIONS_VERSION?=	18.04.2
-KDE_APPLICATIONS_SHLIB_VER?=	5.8.2
+KDE_APPLICATIONS_VERSION?=	18.04.3
+KDE_APPLICATIONS_SHLIB_VER?=	5.8.3
 KDE_APPLICATIONS_BRANCH?=	stable
 # Upstream moves old software to Attic/. Specify the newest applications release there.
 # Only the major version is used for the comparison.
@@ -803,7 +803,7 @@ kdepim-apps-libs_PORT=	deskutils/kdepim-apps-libs
 kdepim-apps-libs_LIB=	libKF5SendLater.so
 
 kdepim-runtime5_PORT=	deskutils/kdepim-runtime
-kdepim-runtime5_LIB=	libakonadi-filestore.so.5
+kdepim-runtime5_PATH=	${KDE_PREFIX}/lib/sasl2/libkdexoauth2.so
 
 kontactinterface_PORT=	net/kontactinterface
 kontactinterface_LIB=	libKF5KontactInterface.so

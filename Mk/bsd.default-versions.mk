@@ -46,8 +46,8 @@ FIREBIRD_DEFAULT?=	2.5
 FORTRAN_DEFAULT?=	gfortran
 # Possible values: 3.0.4
 FPC_DEFAULT?=		3.0.4
-# Possible values: 4.9, 5, 6, 7
-GCC_DEFAULT?=		6
+# Possible values: 4.9, 5, 6, 7, 8
+GCC_DEFAULT?=		7
 # Possible values: 7, 8, 9, agpl
 GHOSTSCRIPT_DEFAULT?=	agpl
 # Possible values: 1.8.2
@@ -82,11 +82,11 @@ PERL5_DEFAULT:=		${_PERL5_FROM_BIN:R}
 PGSQL_DEFAULT?=		9.5
 # Possible values: 5.6, 7.0, 7.1, 7.2
 PHP_DEFAULT?=		5.6
-# Possible values: 2.7, 3.4, 3.5, 3.6
+# Possible values: 2.7, 3.4, 3.5, 3.6, 3.7
 PYTHON_DEFAULT?=	2.7
 # Possible values: 2.7
 PYTHON2_DEFAULT?=	2.7
-# Possible values: 3.4, 3.5, 3.6
+# Possible values: 3.4, 3.5, 3.6, 3.7
 PYTHON3_DEFAULT?=	3.6
 # Possible values: 2.3, 2.4, 2.5
 RUBY_DEFAULT?=		2.4
