@@ -1,9 +1,0 @@
-USES+= alias
-USE_CXXSTD=	c++98
-
-# just replace one of older entries of freebsd
-dfly-patch:
-	${REINPLACE_CMD} \
-		-e "s@freebsd7@dragonfly4@g" \
-		-e "s@freebsd8@dragonfly5@g" \
-		${WRKSRC}/SConstruct
