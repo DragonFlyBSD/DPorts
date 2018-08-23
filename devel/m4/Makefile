@@ -1,5 +1,5 @@
 # Created by: mr
-# $FreeBSD: head/devel/m4/Makefile 459001 2018-01-14 21:10:59Z antoine $
+# $FreeBSD$
 
 PORTNAME=	m4
 PORTVERSION=	1.4.18
