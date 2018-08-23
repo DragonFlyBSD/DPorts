@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <dima@Chg.RU>
-# $FreeBSD: head/devel/p5-Locale-gettext/Makefile 453381 2017-11-02 21:41:47Z olgeni $
+# $FreeBSD$
 
 PORTNAME=	Locale-gettext
 PORTVERSION=	1.07
