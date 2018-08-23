@@ -1,12 +1,10 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD$
+# $FreeBSD: head/devel/ncurses/Makefile 475966 2018-07-31 02:26:36Z swills $
 
 PORTNAME=	ncurses
-PORTVERSION=	6.0.0s${SNAPSHOT}
-PORTREVISION=	1
+DISTVERSION=	6.1-${SNAPSHOT}
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.invisible-island.net/${PORTNAME}/current/
-DISTNAME=	${PORTNAME}-6.0-${SNAPSHOT}
 DIST_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	swills@FreeBSD.org
@@ -17,7 +15,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 BROKEN_sparc64=	cannot build: coredump: illegal instruction
 
-SNAPSHOT=	20171223
+SNAPSHOT=	20180728
 GNU_CONFIGURE=	yes
 CONFIGURE_SCRIPT=../configure
 CONFIGURE_ARGS=	--datadir=${PREFIX}/share/misc --disable-overwrite \
@@ -57,8 +55,7 @@ BUILD_WRKSRC=	${NOWIDEC_WRKSRC}
 INSTALL_WRKSRC=	${NOWIDEC_WRKSRC}
 
 PLIST_SUB+=	ABI_VER=6 \
-		REL_VER=6.0 \
-		DEBUG="@comment " \
+		REL_VER=${DISTVERSION:S/-${SNAPSHOT}//} \
 		WIDEC_EXAMPLESDIR=${WIDEC_EXAMPLESDIR:S,${PREFIX}/,,} \
 		NOWIDEC_EXAMPLESDIR=${NOWIDEC_EXAMPLESDIR:S,${PREFIX}/,,}
 
@@ -131,7 +128,7 @@ post-install:
 	${ECHO} "INPUT(libncurses.so.${PORTVERSION:R} AS_NEEDED(-ltinfo))" > ${STAGEDIR}${PREFIX}/lib/libncurses.so
 	${ECHO} "INPUT(libncursesw.so.${PORTVERSION:R} AS_NEEDED(-ltinfow))" > ${STAGEDIR}${PREFIX}/lib/libncursesw.so
 
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/*.so.6.0
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/*.so.${DISTVERSION:S/-${SNAPSHOT}//}
 
 	${MV} ${STAGEDIR}${PREFIX}/share/misc/terminfo.db \
 		${STAGEDIR}${PREFIX}/share/misc/terminfo.db.default
