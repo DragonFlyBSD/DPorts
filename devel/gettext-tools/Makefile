@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $FreeBSD: head/devel/gettext-tools/Makefile 416967 2016-06-16 13:31:37Z tijl $
 
 # NOTE: before committing to this port, contact portmgr to arrange for an
 # experimental ports run.  Untested commits may be backed out at portmgr's
