@@ -1,5 +1,5 @@
 # Created by: Alexander Churanov <churanov.port.maintainer@gmail.com>
-# $FreeBSD: head/devel/boost-libs/Makefile 476723 2018-08-09 06:58:30Z jbeich $
+# $FreeBSD$
 
 PORTNAME=	boost-libs
 PORTREVISION=	0
