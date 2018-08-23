@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: head/lang/vala/Makefile 477444 2018-08-17 19:09:15Z truckman $
+# $FreeBSD$
 
 PORTNAME=	vala
 PORTVERSION=	0.36.15
