@@ -1,4 +1,4 @@
-# $FreeBSD: head/ports-mgmt/pkg/Makefile 477662 2018-08-20 16:53:05Z brd $
+# $FreeBSD$
 
 PORTNAME=	pkg
 DISTVERSION=	1.10.5
