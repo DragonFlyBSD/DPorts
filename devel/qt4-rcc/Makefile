@@ -1,5 +1,5 @@
 # Created by: lofi@FreeBSD.org
-# $FreeBSD: head/devel/qt4-rcc/Makefile 473503 2018-06-28 17:39:53Z tcberner $
+# $FreeBSD$
 
 PORTNAME=	rcc
 DISTVERSION=	${QT4_VERSION}
