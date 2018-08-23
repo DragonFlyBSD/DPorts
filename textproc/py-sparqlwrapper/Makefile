@@ -1,5 +1,5 @@
 # Created by: Olivier Duchateau
-# $FreeBSD: head/textproc/py-sparqlwrapper/Makefile 470338 2018-05-18 23:31:49Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	sparqlwrapper
 PORTVERSION=	1.8.2
