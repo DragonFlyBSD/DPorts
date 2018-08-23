@@ -1,9 +1,8 @@
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/devel/pcre2/Makefile 477253 2018-08-15 19:09:00Z adamw $
 
 PORTNAME=	pcre2
-PORTVERSION=	10.21
-PORTREVISION=	1
+PORTVERSION=	10.31
 CATEGORIES=	devel
 MASTER_SITES=	SF/pcre/${PORTNAME}/${PORTVERSION} \
 		ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/ \
