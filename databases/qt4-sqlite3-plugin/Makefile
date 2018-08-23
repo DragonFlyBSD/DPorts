@@ -1,5 +1,5 @@
 # Created by: Michael Nottebrock <lofi@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/databases/qt4-sqlite3-plugin/Makefile 442740 2017-06-06 05:00:56Z tcberner $
 
 PORTREVISION=	4
 
