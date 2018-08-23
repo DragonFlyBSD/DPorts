@@ -1,4 +1,4 @@
-# $FreeBSD: head/archivers/php71-zlib/Makefile 475229 2018-07-24 08:44:32Z tz $
+# $FreeBSD$
 
 CATEGORIES=	archivers
 
