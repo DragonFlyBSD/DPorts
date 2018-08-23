@@ -1,5 +1,5 @@
 # Created by: Foxfair Hu <foxfair@FreeBSD.org>
-# $FreeBSD: head/x11/libXrender/Makefile 476013 2018-07-31 18:41:30Z zeising $
+# $FreeBSD$
 
 PORTNAME=	libXrender
 PORTVERSION=	0.9.10
