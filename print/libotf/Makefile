@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: head/print/libotf/Makefile 473708 2018-07-02 06:27:48Z yuri $
+# $FreeBSD$
 
 PORTNAME=	libotf
 DISTVERSION=	0.9.16
