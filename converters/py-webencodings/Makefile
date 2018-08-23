@@ -1,4 +1,4 @@
-# $FreeBSD: head/converters/py-webencodings/Makefile 463559 2018-03-04 09:10:41Z yuri $
+# $FreeBSD$
 
 PORTNAME=	webencodings
 DISTVERSION=	0.5.1
