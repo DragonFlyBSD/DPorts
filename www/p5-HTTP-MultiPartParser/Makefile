@@ -1,4 +1,4 @@
-# $FreeBSD: head/www/p5-HTTP-MultiPartParser/Makefile 470752 2018-05-24 01:25:11Z wen $
+# $FreeBSD$
 
 PORTNAME=		HTTP-MultiPartParser
 PORTVERSION=	0.02
