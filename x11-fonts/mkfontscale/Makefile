@@ -1,5 +1,5 @@
 # Created by: Pawel Worach
-# $FreeBSD: head/x11-fonts/mkfontscale/Makefile 476013 2018-07-31 18:41:30Z zeising $
+# $FreeBSD$
 
 PORTNAME=	mkfontscale
 PORTVERSION=	1.1.3
