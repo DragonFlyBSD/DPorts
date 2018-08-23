@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/x11-fonts/fontconfig/Makefile 469428 2018-05-09 03:50:45Z lwhsu $
 
 PORTNAME=	fontconfig
 PORTVERSION=	2.12.6
