@@ -1,4 +1,4 @@
-# $FreeBSD: head/www/p5-Cookie-Baker/Makefile 472105 2018-06-10 00:33:29Z wen $
+# $FreeBSD$
 
 PORTNAME=	Cookie-Baker
 PORTVERSION=	0.09
