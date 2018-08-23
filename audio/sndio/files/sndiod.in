@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/audio/sndio/files/sndiod.in 427071 2016-11-25 01:11:41Z cpm $
+# $FreeBSD: head/audio/sndio/files/sndiod.in 476019 2018-07-31 19:40:24Z tobik $
 #
 # PROVIDE: sndiod
 # REQUIRE: NETWORKING sysctl
@@ -14,9 +14,8 @@ rcvar=sndiod_enable
 
 load_rc_config $name
 
-: ${sndiod_dev="rsnd/$($SYSCTL -n hw.snd.default_unit)"}
 : ${sndiod_enable="NO"}
-: ${sndiod_flags="-f ${sndiod_dev} -c 0:7 -j off -s default -m mon -s monitor"}
+: ${sndiod_flags="-c 0:7 -j off -s default -m mon -s monitor"}
 
 command="%%PREFIX%%/bin/sndiod"
 
