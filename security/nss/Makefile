@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/security/nss/Makefile 473361 2018-06-26 00:54:43Z jbeich $
 
 PORTNAME=	nss
 PORTVERSION=	3.38
