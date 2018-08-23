@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: head/x11-toolkits/tk86/Makefile 471251 2018-06-01 08:34:21Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	tk
 PORTVERSION=	8.6.8
