@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/devel/libIDL/Makefile 428152 2016-12-08 19:52:19Z tijl $
 #   $MCom: ports/devel/libIDL/Makefile,v 1.7 2010/04/02 17:27:42 kwm Exp $
 
 PORTNAME=	libIDL
