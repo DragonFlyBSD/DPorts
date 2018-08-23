@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/devel/xdg-utils/Makefile 425587 2016-11-06 21:33:17Z bapt $
 
 PORTNAME=	xdg-utils
 PORTVERSION=	1.1.1
