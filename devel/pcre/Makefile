@@ -1,5 +1,5 @@
 # Created by: dom
-# $FreeBSD$
+# $FreeBSD: head/devel/pcre/Makefile 470355 2018-05-19 06:51:05Z krion $
 
 PORTNAME=	pcre
 PORTVERSION=	8.42
