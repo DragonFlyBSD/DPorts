@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/devel/p5-Devel-OverloadInfo/Makefile 459762 2018-01-23 15:16:31Z sunpoet $
 
 PORTNAME=	Devel-OverloadInfo
 PORTVERSION=	0.005
