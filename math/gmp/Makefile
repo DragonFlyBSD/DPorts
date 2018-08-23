@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: head/math/gmp/Makefile 458670 2018-01-10 18:36:49Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	gmp
 PORTVERSION=	6.1.2
