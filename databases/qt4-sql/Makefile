@@ -1,5 +1,5 @@
 # Created by: lofi@FreeBSD.org
-# $FreeBSD: head/databases/qt4-sql/Makefile 473503 2018-06-28 17:39:53Z tcberner $
+# $FreeBSD$
 
 PORTNAME=	sql
 DISTVERSION=	${QT4_VERSION}
