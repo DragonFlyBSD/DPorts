@@ -1,9 +1,9 @@
 # Created by: Johan Str??m <johan@stromnet.se>
-# $FreeBSD$
+# $FreeBSD: head/devel/jsoncpp/Makefile 475857 2018-07-29 22:18:44Z gerald $
 
 PORTNAME=	jsoncpp
 PORTVERSION=	1.8.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
