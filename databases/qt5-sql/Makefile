@@ -1,4 +1,4 @@
-# $FreeBSD: head/databases/qt5-sql/Makefile 473503 2018-06-28 17:39:53Z tcberner $
+# $FreeBSD$
 
 PORTNAME=	sql
 DISTVERSION=	${QT5_VERSION}
