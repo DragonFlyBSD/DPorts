@@ -1,8 +1,8 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/dns/py-idna/Makefile 476560 2018-08-07 02:56:04Z koobs $
 
 PORTNAME=	idna
-PORTVERSION=	2.6
+PORTVERSION=	2.7
 CATEGORIES=	dns python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
