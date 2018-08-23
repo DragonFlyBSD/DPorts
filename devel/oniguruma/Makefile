@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: head/devel/oniguruma/Makefile 474217 2018-07-09 02:07:36Z yuri $
+# $FreeBSD$
 
 PORTNAME=	oniguruma
 DISTVERSION=	6.8.2
