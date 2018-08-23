@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/misc/iso-codes/Makefile 455210 2017-11-30 15:50:30Z mat $
 
 PORTNAME=	iso-codes
 PORTVERSION=	3.76
