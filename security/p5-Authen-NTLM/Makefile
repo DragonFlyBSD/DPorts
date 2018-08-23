@@ -1,5 +1,5 @@
 # Created by: James Thomason <james@divide.org>
-# $FreeBSD$
+# $FreeBSD: head/security/p5-Authen-NTLM/Makefile 449893 2017-09-15 08:58:46Z mat $
 
 PORTNAME=	Authen-NTLM
 PORTVERSION=	1.09
