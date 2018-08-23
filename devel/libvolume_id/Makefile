@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: head/devel/libvolume_id/Makefile 424813 2016-10-28 08:30:31Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	libvolume_id
 PORTVERSION=	0.81.1
