@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/qt5-core/Makefile 473551 2018-06-29 14:22:11Z jbeich $
+# $FreeBSD$
 
 PORTNAME=	core
 DISTVERSION=	${QT5_VERSION}
