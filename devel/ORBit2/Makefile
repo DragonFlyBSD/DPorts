@@ -1,5 +1,5 @@
 # Created by: Chia-liang Kao <clkao@CirX.ORG>
-# $FreeBSD$
+# $FreeBSD: head/devel/ORBit2/Makefile 428152 2016-12-08 19:52:19Z tijl $
 #   $MCom: ports/trunk/devel/ORBit2/Makefile 18393 2013-04-26 21:23:07Z kwm $
 
 PORTNAME=	ORBit2
