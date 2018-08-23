@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: head/lang/spidermonkey52/Makefile 474607 2018-07-13 20:53:28Z mi $
+# $FreeBSD$
 
 PORTNAME=	spidermonkey
 PORTVERSION=	52.8.0
