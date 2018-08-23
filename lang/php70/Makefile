@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: head/lang/php70/Makefile 475028 2018-07-20 17:12:19Z joneum $
+# $FreeBSD$
 
 PORTNAME=	php70
 PORTVERSION=	7.0.31
