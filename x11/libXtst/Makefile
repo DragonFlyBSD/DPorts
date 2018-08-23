@@ -1,8 +1,9 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/x11/libXtst/Makefile 476013 2018-07-31 18:41:30Z zeising $
 
 PORTNAME=	libXtst
 PORTVERSION=	1.2.3
+PORTREVISION=	1
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
@@ -11,8 +12,7 @@ COMMENT=	X Test extension
 LICENSE=	MIT
 
 XORG_CAT=	lib
-USE_XORG=	x11 xext recordproto:both xextproto inputproto:both \
-		xi
+USE_XORG=	x11 xext xi xorgproto
 USES+=	cpe
 CPE_PRODUCT=	libxtst
 CPE_VENDOR=	x
