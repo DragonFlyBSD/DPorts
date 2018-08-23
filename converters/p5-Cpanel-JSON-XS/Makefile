@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: head/converters/p5-Cpanel-JSON-XS/Makefile 477677 2018-08-20 22:14:17Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Cpanel-JSON-XS
 PORTVERSION=	4.05
