@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <frederic@culot.org>
-# $FreeBSD$
+# $FreeBSD: head/devel/p5-Package-DeprecationManager/Makefile 447172 2017-08-02 19:15:24Z culot $
 
 PORTNAME=	Package-DeprecationManager
 PORTVERSION=	0.17
