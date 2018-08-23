@@ -1,4 +1,4 @@
-# $FreeBSD: head/graphics/libpotrace/Makefile 399944 2015-10-22 02:23:05Z hrs $
+# $FreeBSD$
 
 PORTNAME=	libpotrace
 PORTVERSION=	1.12
