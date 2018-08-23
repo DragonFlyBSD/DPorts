@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD$
+# $FreeBSD: head/devel/py-zope.event/Makefile 404782 2015-12-29 20:02:47Z sunpoet $
 
 PORTNAME=	zope.event
 PORTVERSION=	4.1.0
