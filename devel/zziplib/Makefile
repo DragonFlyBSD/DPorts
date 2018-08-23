@@ -1,5 +1,5 @@
 # Created by: George Reid <greid@ukug.uk.freebsd.org>
-# $FreeBSD: head/devel/zziplib/Makefile 474059 2018-07-07 06:55:42Z miwi $
+# $FreeBSD$
 
 PORTNAME=	zziplib
 DISTVERSIONPREFIX=	v
