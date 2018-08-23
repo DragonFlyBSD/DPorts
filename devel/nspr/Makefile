@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/devel/nspr/Makefile 464373 2018-03-13 13:47:49Z jbeich $
 
 PORTNAME=	nspr
 DISTVERSION=	4.19
