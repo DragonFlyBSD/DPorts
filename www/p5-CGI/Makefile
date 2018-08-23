@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: head/www/p5-CGI/Makefile 477270 2018-08-15 19:33:47Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	CGI
 PORTVERSION=	4.40
