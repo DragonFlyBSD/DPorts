@@ -1,5 +1,5 @@
 # Created by: Andrew <andrew@ugh.net.au>
-# $FreeBSD: head/textproc/p5-XML-Simple/Makefile 464906 2018-03-18 13:19:31Z wen $
+# $FreeBSD$
 
 PORTNAME=	XML-Simple
 PORTVERSION=	2.25
