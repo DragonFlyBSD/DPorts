@@ -1,4 +1,4 @@
-# $FreeBSD: head/textproc/docbook-sgml/Makefile 476167 2018-08-01 09:07:54Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	docbook
 PORTVERSION=	4.5
