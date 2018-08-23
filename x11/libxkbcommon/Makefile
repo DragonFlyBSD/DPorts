@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $FreeBSD: head/x11/libxkbcommon/Makefile 472020 2018-06-08 19:18:24Z zeising $
 
 PORTNAME=	libxkbcommon
 PORTVERSION=	0.8.0
