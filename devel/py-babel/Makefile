@@ -1,5 +1,5 @@
 # Created by: Muhammad Moinur Rahman <bofh@FreeBSD.org>
-# $FreeBSD: head/devel/py-babel/Makefile 475311 2018-07-25 12:48:39Z bofh $
+# $FreeBSD$
 
 PORTNAME=	Babel
 PORTVERSION=	2.6.0
