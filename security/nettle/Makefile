@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: head/security/nettle/Makefile 458622 2018-01-10 12:02:42Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	nettle
 PORTVERSION=	3.4
