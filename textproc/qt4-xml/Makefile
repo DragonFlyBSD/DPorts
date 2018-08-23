@@ -1,5 +1,5 @@
 # Created by: lofi@FreeBSD.org
-# $FreeBSD: head/textproc/qt4-xml/Makefile 473503 2018-06-28 17:39:53Z tcberner $
+# $FreeBSD$
 
 PORTNAME=	xml
 DISTVERSION=	${QT4_VERSION}
