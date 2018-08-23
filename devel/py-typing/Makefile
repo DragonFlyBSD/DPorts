@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/py-typing/Makefile 460987 2018-02-05 17:28:33Z rm $
+# $FreeBSD$
 
 PORTNAME=	typing
 PORTVERSION=	3.6.4
