@@ -1,5 +1,5 @@
 # Created by: arved
-# $FreeBSD: head/textproc/py-chardet/Makefile 472884 2018-06-20 17:05:41Z mat $
+# $FreeBSD$
 
 PORTNAME=	chardet
 PORTVERSION=	3.0.4
