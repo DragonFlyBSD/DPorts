@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/www/p5-WWW-Form-UrlEncoded/Makefile 449893 2017-09-15 08:58:46Z mat $
 
 PORTNAME=	WWW-Form-UrlEncoded
 PORTVERSION=	0.24
