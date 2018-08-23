@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $FreeBSD: head/devel/autoconf-wrapper/Makefile 452576 2017-10-21 08:12:46Z pi $
 
 PORTNAME?=	autoconf-wrapper
 PORTVERSION=	20131203
