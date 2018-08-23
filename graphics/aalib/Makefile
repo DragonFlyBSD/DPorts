@@ -1,5 +1,5 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD$
+# $FreeBSD: head/graphics/aalib/Makefile 446854 2017-07-28 21:45:20Z jkim $
 
 PORTNAME=	aalib
 DISTVERSION=	1.4rc5
