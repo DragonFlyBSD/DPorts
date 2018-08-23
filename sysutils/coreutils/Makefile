@@ -1,4 +1,4 @@
-# $FreeBSD: head/sysutils/coreutils/Makefile 464774 2018-03-17 09:25:03Z antoine $
+# $FreeBSD$
 
 PORTNAME=	coreutils
 PORTVERSION=	8.28
