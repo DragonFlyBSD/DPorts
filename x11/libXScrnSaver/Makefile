@@ -1,8 +1,8 @@
-# $FreeBSD$
+# $FreeBSD: head/x11/libXScrnSaver/Makefile 476013 2018-07-31 18:41:30Z zeising $
 
 PORTNAME=	libXScrnSaver
-PORTVERSION=	1.2.2
-PORTREVISION=	3
+PORTVERSION=	1.2.3
+PORTREVISION=	1
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
@@ -12,6 +12,6 @@ LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 XORG_CAT=	lib
-USE_XORG=	x11 xext xextproto scrnsaverproto:both
+USE_XORG=	x11 xext xorgproto
 
 .include <bsd.port.mk>
