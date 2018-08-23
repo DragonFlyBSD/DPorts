@@ -1,4 +1,4 @@
-# $FreeBSD: head/multimedia/libvdpau/Makefile 476013 2018-07-31 18:41:30Z zeising $
+# $FreeBSD$
 
 PORTNAME=	libvdpau
 PORTVERSION=	1.1.1
