@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $FreeBSD: head/textproc/py-sphinxcontrib-websupport/Makefile 448958 2017-08-30 03:40:04Z araujo $
 
 PORTNAME=	sphinxcontrib-websupport
 PORTVERSION=	1.0.1
