@@ -1,5 +1,5 @@
 # Created by: Michael Haro <mharo@area51.fremont.ca.us>
-# $FreeBSD$
+# $FreeBSD: head/audio/libmikmod/Makefile 444998 2017-07-04 07:13:45Z ehaupt $
 
 PORTNAME=	libmikmod
 PORTVERSION=	3.3.11.1
