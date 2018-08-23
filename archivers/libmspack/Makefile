@@ -1,5 +1,5 @@
 # Created by: Max Khon <fjoe@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/archivers/libmspack/Makefile 384196 2015-04-17 23:52:55Z amdmi3 $
 
 PORTNAME=	libmspack
 PORTVERSION=	0.5
