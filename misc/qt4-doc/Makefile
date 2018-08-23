@@ -1,5 +1,5 @@
 # Created by: lofi@FreeBSD.org
-# $FreeBSD$
+# $FreeBSD: head/misc/qt4-doc/Makefile 473503 2018-06-28 17:39:53Z tcberner $
 
 PORTNAME=	doc
 DISTVERSION=	${QT4_VERSION}
