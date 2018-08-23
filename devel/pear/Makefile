@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/devel/pear/Makefile 463917 2018-03-08 19:48:41Z mat $
 
 PORTNAME=	pear
 PORTVERSION=	1.10.5
