@@ -1,5 +1,5 @@
 # Created by: Anders Nordby <anders@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/sysutils/dmidecode/Makefile 449544 2017-09-10 13:08:59Z sunpoet $
 
 PORTNAME=	dmidecode
 PORTVERSION=	3.1
