@@ -1,5 +1,5 @@
 # Created by: Matthias Andree <mandree@FreeBSD.org>
-# $FreeBSD: head/databases/db5/Makefile 476241 2018-08-02 16:05:16Z mandree $
+# $FreeBSD$
 
 PORTNAME=	db5
 PORTVERSION=	5.3.28
