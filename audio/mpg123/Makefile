@@ -1,5 +1,5 @@
 # Created by: Carey Jones <mcj@acquiesce.org>
-# $FreeBSD$
+# $FreeBSD: head/audio/mpg123/Makefile 463282 2018-03-01 06:41:55Z novel $
 
 PORTNAME=	mpg123
 PORTVERSION=	1.25.10
