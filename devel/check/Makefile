@@ -1,5 +1,5 @@
 # Created by: mikeh@FreeBSD.org
-# $FreeBSD$
+# $FreeBSD: head/devel/check/Makefile 452601 2017-10-21 20:17:13Z sunpoet $
 
 PORTNAME=	check
 PORTVERSION=	0.12.0
