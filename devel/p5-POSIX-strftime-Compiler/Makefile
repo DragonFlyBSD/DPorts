@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/p5-POSIX-strftime-Compiler/Makefile 449893 2017-09-15 08:58:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	POSIX-strftime-Compiler
 PORTVERSION=	0.41
