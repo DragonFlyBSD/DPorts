@@ -1,5 +1,5 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: head/graphics/liblqr-1/Makefile 423644 2016-10-10 10:30:27Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	liblqr-1
 PORTVERSION=	0.4.2
