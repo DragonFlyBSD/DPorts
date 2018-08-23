@@ -1,5 +1,5 @@
 # Created by: Neil Blakey-Milner <nbm@rucus.ru.ac.za>
-# $FreeBSD: head/ftp/curl/Makefile 475522 2018-07-28 11:43:46Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	curl
 PORTVERSION=	7.61.0
