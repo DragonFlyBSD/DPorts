@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/lang/spidermonkey52/Makefile 474607 2018-07-13 20:53:28Z mi $
 
 PORTNAME=	spidermonkey
 PORTVERSION=	52.8.0
@@ -28,6 +28,7 @@ WRKSRC=		${WRKDIR}/firefox-${PORTVERSION}esr/js/src
 PATCH_WRKSRC=	${WRKDIR}/firefox-${PORTVERSION}esr/
 
 CONFIGURE_ARGS=	--with-pthreads \
+		--prefix=${PREFIX:Q} \
 		--target=${CONFIGURE_TARGET} \
 		--with-intl-api \
 		--with-system-zlib \
