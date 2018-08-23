@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-# $FreeBSD: head/devel/m17n-db/Makefile 474807 2018-07-17 16:53:05Z thierry $
+# $FreeBSD$
 
 PORTNAME=	m17n-db
 PORTVERSION=	1.8.0
