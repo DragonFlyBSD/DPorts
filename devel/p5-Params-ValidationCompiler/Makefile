@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/p5-Params-ValidationCompiler/Makefile 477474 2018-08-18 03:32:40Z wen $
+# $FreeBSD$
 
 PORTNAME=	Params-ValidationCompiler
 PORTVERSION=	0.30
