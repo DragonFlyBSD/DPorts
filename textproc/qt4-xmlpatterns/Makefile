@@ -1,5 +1,5 @@
 # Created by: danny@ricin.com
-# $FreeBSD$
+# $FreeBSD: head/textproc/qt4-xmlpatterns/Makefile 473503 2018-06-28 17:39:53Z tcberner $
 
 PORTNAME=	xmlpatterns
 DISTVERSION=	${QT4_VERSION}
