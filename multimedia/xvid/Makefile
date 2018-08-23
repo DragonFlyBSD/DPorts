@@ -1,5 +1,5 @@
 # Created by: Michael Nottebrock <michaelnottebrock@gmx.net> et al
-# $FreeBSD: head/multimedia/xvid/Makefile 476404 2018-08-05 10:24:48Z riggs $
+# $FreeBSD$
 
 PORTNAME=	xvid
 PORTVERSION=	1.3.5
