@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $FreeBSD: head/textproc/minixmlto/Makefile 437987 2017-04-08 08:49:23Z bapt $
 
 PORTNAME=	minixmlto
 PORTVERSION=	0.0.2
