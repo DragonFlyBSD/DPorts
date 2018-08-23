@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $FreeBSD: head/www/p5-Mozilla-CA/Makefile 466307 2018-04-03 09:50:24Z sunpoet $
 
 PORTNAME=	Mozilla-CA
 PORTVERSION=	20180117
