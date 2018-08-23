@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/devel/dconf/Makefile 452544 2017-10-20 17:13:00Z kwm $
 
 PORTNAME=	dconf
 PORTVERSION=	0.26.1
