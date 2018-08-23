@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $FreeBSD: head/print/indexinfo/Makefile 453561 2017-11-05 20:41:19Z bapt $
 
 PORTNAME=	indexinfo
 PORTVERSION=	0.3.1
