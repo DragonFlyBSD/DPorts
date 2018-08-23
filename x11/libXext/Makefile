@@ -1,9 +1,9 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/x11/libXext/Makefile 476013 2018-07-31 18:41:30Z zeising $
 
 PORTNAME=	libXext
 PORTVERSION=	1.3.3
-PORTREVISION=	1
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	x11
 
@@ -13,7 +13,7 @@ COMMENT=	X11 Extension library
 LICENSE=	MIT
 
 XORG_CAT=	lib
-USE_XORG=	xproto x11 xextproto:both xau
+USE_XORG=	x11 xau xorgproto
 CONFIGURE_ARGS+=--disable-specs --without-xmlto
 INSTALL_TARGET=	install-strip
 USES+=	cpe
