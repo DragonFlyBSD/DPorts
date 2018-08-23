@@ -1,4 +1,4 @@
-# $FreeBSD: head/x11-fonts/libXfontcache/Makefile 476013 2018-07-31 18:41:30Z zeising $
+# $FreeBSD$
 
 PORTNAME=	libXfontcache
 PORTVERSION=	1.0.5
