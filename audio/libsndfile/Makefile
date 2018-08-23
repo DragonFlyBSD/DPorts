@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD$
+# $FreeBSD: head/audio/libsndfile/Makefile 463363 2018-03-02 00:42:07Z jhale $
 
 PORTNAME=	libsndfile
 PORTVERSION=	1.0.28
