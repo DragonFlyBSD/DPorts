@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@csie.nctu.edu.tw>
-# $FreeBSD: head/devel/t1lib/Makefile 431147 2017-01-11 00:28:13Z ler $
+# $FreeBSD$
 
 PORTNAME=	t1lib
 PORTVERSION=	5.1.2
