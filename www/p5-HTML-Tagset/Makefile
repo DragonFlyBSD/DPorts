@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/www/p5-HTML-Tagset/Makefile 449893 2017-09-15 08:58:46Z mat $
 
 PORTNAME=	HTML-Tagset
 PORTVERSION=	3.20
