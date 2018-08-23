@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/devel/automake/Makefile 472376 2018-06-14 12:47:58Z tijl $
 
 PORTNAME=	automake
 PORTVERSION=	1.16.1
