@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <culot@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/www/p5-HTTP-Date/Makefile 449893 2017-09-15 08:58:46Z mat $
 
 PORTNAME=	HTTP-Date
 PORTVERSION=	6.02
