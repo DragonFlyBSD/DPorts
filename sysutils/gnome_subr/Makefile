@@ -1,5 +1,5 @@
 # Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-# $FreeBSD: head/sysutils/gnome_subr/Makefile 465433 2018-03-24 08:33:22Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	gnome_subr
 PORTVERSION=	1.0
