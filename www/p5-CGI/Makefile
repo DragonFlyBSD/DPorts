@@ -1,8 +1,8 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/www/p5-CGI/Makefile 477270 2018-08-15 19:33:47Z sunpoet $
 
 PORTNAME=	CGI
-PORTVERSION=	4.38
+PORTVERSION=	4.40
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
