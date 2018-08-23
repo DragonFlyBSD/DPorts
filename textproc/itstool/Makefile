@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/textproc/itstool/Makefile 462307 2018-02-19 11:10:43Z antoine $
 #   $MCom: ports/trunk/textproc/itstool/Makefile 19804 2014-08-13 14:55:11Z kwm $
 
 PORTNAME=	itstool
