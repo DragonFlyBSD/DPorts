@@ -1,5 +1,5 @@
 # Created by: danny@ricin.com
-# $FreeBSD$
+# $FreeBSD: head/textproc/qt4-clucene/Makefile 473503 2018-06-28 17:39:53Z tcberner $
 
 PORTNAME=	clucene
 DISTVERSION=	${QT4_VERSION}
