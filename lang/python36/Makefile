@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: head/lang/python36/Makefile 475350 2018-07-26 08:58:50Z tobik $
+# $FreeBSD$
 
 PORTNAME=	python
 PORTVERSION=	${PYTHON_PORTVERSION}
