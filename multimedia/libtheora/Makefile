@@ -1,5 +1,5 @@
 # Created by: Koop Mast <kwm@rainbow-runner.nl>
-# $FreeBSD: head/multimedia/libtheora/Makefile 463123 2018-02-27 13:03:48Z mat $
+# $FreeBSD$
 
 PORTNAME=	libtheora
 PORTVERSION=	1.1.1
