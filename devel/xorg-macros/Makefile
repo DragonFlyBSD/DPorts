@@ -1,5 +1,5 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD: head/devel/xorg-macros/Makefile 474634 2018-07-14 09:37:42Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	xorg-macros
 PORTVERSION=	1.19.2
