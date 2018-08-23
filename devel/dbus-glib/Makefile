@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: head/devel/dbus-glib/Makefile 452568 2017-10-21 04:13:07Z pi $
+# $FreeBSD$
 
 PORTNAME=	dbus-glib
 PORTVERSION=	0.108
