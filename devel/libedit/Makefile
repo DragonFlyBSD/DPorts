@@ -1,5 +1,5 @@
 # Created by: jasone
-# $FreeBSD: head/devel/libedit/Makefile 463123 2018-02-27 13:03:48Z mat $
+# $FreeBSD$
 
 PORTNAME=	libedit
 PORTVERSION=	${EDITVERSION}.${EDITDATE}
