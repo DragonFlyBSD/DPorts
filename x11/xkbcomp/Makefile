@@ -1,4 +1,4 @@
-# $FreeBSD: head/x11/xkbcomp/Makefile 472017 2018-06-08 18:39:39Z zeising $
+# $FreeBSD$
 
 PORTNAME=	xkbcomp
 PORTVERSION=	1.4.2
