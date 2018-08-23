@@ -1,8 +1,8 @@
 # Created by: Muhammad Moinur Rahman <bofh@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/devel/py-babel/Makefile 475311 2018-07-25 12:48:39Z bofh $
 
 PORTNAME=	Babel
-PORTVERSION=	2.5.3
+PORTVERSION=	2.6.0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
