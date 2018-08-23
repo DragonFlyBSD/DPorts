@@ -1,5 +1,5 @@
 # Created by: Kimura Fuyuki <fuyuki@mj.0038.net>
-# $FreeBSD: head/textproc/xmlcharent/Makefile 472786 2018-06-19 13:46:47Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	xmlcharent
 PORTVERSION=	0.3
