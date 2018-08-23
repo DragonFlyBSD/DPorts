@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: head/devel/p5-Devel-StackTrace/Makefile 454549 2017-11-20 13:22:28Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Devel-StackTrace
 PORTVERSION=	2.03
