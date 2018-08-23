@@ -1,5 +1,5 @@
 # Created by: Nikolay Dachev <freebsd@dachev.info>
-# $FreeBSD$
+# $FreeBSD: head/net/py-ipaddress/Makefile 467518 2018-04-16 18:33:56Z sunpoet $
 
 PORTNAME=	ipaddress
 PORTVERSION=	1.0.22
