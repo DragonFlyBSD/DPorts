@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $FreeBSD: head/devel/qt5-concurrent/Makefile 473503 2018-06-28 17:39:53Z tcberner $
 
 PORTNAME=	concurrent
 DISTVERSION=	${QT5_VERSION}
