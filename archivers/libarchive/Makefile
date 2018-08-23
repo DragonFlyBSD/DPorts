@@ -1,4 +1,4 @@
-# $FreeBSD: head/archivers/libarchive/Makefile 453144 2017-10-29 23:47:56Z glewis $
+# $FreeBSD$
 
 PORTNAME=	libarchive
 PORTVERSION=	3.3.2
