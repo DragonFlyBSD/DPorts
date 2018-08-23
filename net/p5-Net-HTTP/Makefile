@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <culot@FreeBSD.org>
-# $FreeBSD: head/net/p5-Net-HTTP/Makefile 469509 2018-05-10 06:55:04Z wen $
+# $FreeBSD$
 
 PORTNAME=	Net-HTTP
 PORTVERSION=	6.18
