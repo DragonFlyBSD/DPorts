@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $FreeBSD: head/devel/tradcpp/Makefile 426399 2016-11-19 17:02:59Z sunpoet $
 
 PORTNAME=	tradcpp
 PORTVERSION=	0.5.2
