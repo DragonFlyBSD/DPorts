@@ -1,4 +1,4 @@
-# $FreeBSD: head/lang/php72/Makefile 477510 2018-08-18 15:32:16Z joneum $
+# $FreeBSD$
 
 PORTNAME=	php72
 DISTVERSION=	7.2.9

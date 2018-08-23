@@ -1,4 +1,4 @@
-# $FreeBSD: head/lang/php72/Makefile.ext 475984 2018-07-31 08:47:33Z tz $
+# $FreeBSD$
 
 COMMENT=	The ${PHP_MODNAME} shared extension for php
 
