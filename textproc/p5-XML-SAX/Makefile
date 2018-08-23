@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD$
+# $FreeBSD: head/textproc/p5-XML-SAX/Makefile 463111 2018-02-27 07:15:54Z pi $
 
 PORTNAME=	XML-SAX
 PORTVERSION=	1.00
