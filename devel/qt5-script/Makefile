@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/qt5-script/Makefile 473503 2018-06-28 17:39:53Z tcberner $
+# $FreeBSD$
 
 PORTNAME=	script
 DISTVERSION=	${QT5_VERSION}
