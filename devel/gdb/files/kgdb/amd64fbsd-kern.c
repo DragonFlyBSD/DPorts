@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/amd64fbsd-kern.c 464493 2018-03-14 14:33:21Z pizzamig $");
+__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/amd64fbsd-kern.c 475318 2018-07-25 17:28:36Z jhb $");
 
 #include "defs.h"
 #include "frame-unwind.h"
@@ -81,7 +81,14 @@ amd64fbsd_supply_pcb(struct regcache *regcache, CORE_ADDR pcb_addr)
 {
   gdb_byte buf[8];
   int i;
-  
+
+  memset(buf, 0, sizeof(buf));
+
+  /*
+   * XXX The PCB may have been swapped out.  Supply a dummy %rip value
+   * so as to avoid triggering an exception during stack unwinding.
+   */
+  regcache->raw_supply(AMD64_RIP_REGNUM, buf);
   for (i = 0; i < ARRAY_SIZE (amd64fbsd_pcb_offset); i++)
     if (amd64fbsd_pcb_offset[i] != -1) {
       if (target_read_memory(pcb_addr + amd64fbsd_pcb_offset[i], buf,

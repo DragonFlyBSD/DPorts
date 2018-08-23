@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/fbsd-kthr.c 446852 2017-07-28 21:20:47Z jhb $");
+__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/fbsd-kthr.c 475318 2018-07-25 17:28:36Z jhb $");
 
 #include <sys/param.h>
 #include <sys/proc.h>
@@ -178,23 +178,11 @@ kgdb_thr_init(CORE_ADDR (*cpu_pcb_addr) (u_int))
 	if (dumppcb == 0)
 		return (NULL);
 
-#if 1
 	TRY {
 		dumptid = parse_and_eval_long("dumptid");
 	} CATCH(e, RETURN_MASK_ERROR) {
 		dumptid = -1;
 	} END_CATCH
-#else
-	addr = kgdb_lookup("dumptid");
-	if (addr != 0) {
-		TRY {
-			dumptid = read_memory_integer (addr, 4, byte_order);
-		} CATCH(e, RETURN_MASK_ERROR) {
-			dumptid = -1;
-		} END_CATCH
-	} else
-		dumptid = -1;
-#endif
 
 	TRY {
 		mp_maxid = parse_and_eval_long("mp_maxid");

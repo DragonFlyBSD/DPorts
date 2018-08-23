@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/i386fbsd-kern.c 464493 2018-03-14 14:33:21Z pizzamig $");
+__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/i386fbsd-kern.c 475318 2018-07-25 17:28:36Z jhb $");
 
 #include "defs.h"
 #include "frame-unwind.h"
@@ -128,6 +128,13 @@ i386fbsd_supply_pcb(struct regcache *regcache, CORE_ADDR pcb_addr)
   gdb_byte buf[4];
   int i;
 
+  memset(buf, 0, sizeof(buf));
+
+  /*
+   * XXX The PCB may have been swapped out.  Supply a dummy %eip value
+   * so as to avoid triggering an exception during stack unwinding.
+   */
+  regcache->raw_supply(I386_EIP_REGNUM, buf);
   for (i = 0; i < ARRAY_SIZE (i386fbsd_pcb_offset); i++)
     if (i386fbsd_pcb_offset[i] != -1) {
       if (target_read_memory(pcb_addr + i386fbsd_pcb_offset[i], buf, sizeof buf)

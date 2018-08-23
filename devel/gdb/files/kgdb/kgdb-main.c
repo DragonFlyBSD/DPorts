@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/kgdb-main.c 464493 2018-03-14 14:33:21Z pizzamig $");
+__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/kgdb-main.c 475318 2018-07-25 17:28:36Z jhb $");
 
 #include <sys/param.h>
 #include <sys/stat.h>
@@ -221,9 +221,10 @@ main(int argc, char *argv[])
 	struct stat st;
 	struct captured_main_args args;
 	char *s;
-	int a, ch;
+	int a, ch, writeable;
 
 	dumpnr = NULL;
+	writeable = 0;
 
 	strlcpy(crashdir, "/var/crash", sizeof(crashdir));
 	s = getenv("KGDB_CRASH_DIR");
@@ -303,7 +304,7 @@ main(int argc, char *argv[])
 			verbose++;
 			break;
 		case 'w':	/* core file is writeable. */
-			add_arg(&args, "--write");
+			writeable = 1;
 			break;
 		case '?':
 		default:
@@ -386,7 +387,8 @@ main(int argc, char *argv[])
 	/* Open the vmcore if requested. */
 	if (vmcore != NULL) {
 		add_arg(&args, "-ex");
-		if (asprintf(&s, "target vmcore %s", vmcore) < 0)
+		if (asprintf(&s, "target vmcore %s%s", writeable ? "-w " : "",
+		    vmcore) < 0)
 			err(1, "couldn't build command line");
 		add_arg(&args, s);
 	}

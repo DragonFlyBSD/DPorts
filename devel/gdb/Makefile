@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gdb
-PORTVERSION=	8.1
-PORTREVISION=	2
+PORTVERSION=	8.1.1
 CATEGORIES=	devel
 MASTER_SITES=	GNU
 
@@ -24,7 +23,7 @@ TEST_TARGET=	check
 # C++14.  However, clang in 10.3 crashes while building this port.
 # Requiring C++14 forces 10.3 to use an external version of clang while
 # still using the base system clang on 11.0 and later.
-USES=		compiler:c++14-lang cpe iconv gmake libtool tar:xz
+USES=		compiler:c++14-lang cpe gmake libtool tar:xz
 USE_CSTD=	gnu89
 CPE_VENDOR=	gnu
 GNU_CONFIGURE=	yes
@@ -35,7 +34,7 @@ CONFIGURE_ARGS=	--program-suffix=${PORTVERSION:S/.//g} \
 		--with-separate-debug-dir=/usr/lib/debug \
 		${ICONV_CONFIGURE_ARG} \
 		--with-expat=yes --with-libexpat-prefix=${LOCALBASE} \
-		--without-libunwind-ia64
+		--without-libunwind-ia64 --with-system-zlib
 CFLAGS:=	${CFLAGS:C/ +$//}	# blanks at EOL creep in sometimes
 CFLAGS+=	-DRL_NO_COMPAT -Wno-unused-function -Wno-unused-variable
 CFLAGS+=	-Wno-unknown-warning-option
@@ -58,15 +57,21 @@ PLIST_SUB=	VER=${VER}
 
 OPTIONS_DEFINE=	DEBUG GDB_LINK GUILE KGDB PYTHON TUI
 
-OPTIONS_DEFAULT=	GDB_LINK PYTHON TUI PORT_READLINE
+OPTIONS_DEFAULT=	GDB_LINK PYTHON TUI PORT_READLINE PORT_ICONV SYSTEM_ZLIB
 
-OPTIONS_SINGLE=	READLINE
+OPTIONS_SINGLE=	READLINE ICONV ZLIB
 OPTIONS_SINGLE_READLINE=	BUNDLED_READLINE PORT_READLINE
+OPTIONS_SINGLE_ICONV=	PORT_ICONV SYSTEM_ICONV
+OPTIONS_SINGLE_ZLIB=	BUNDLED_ZLIB SYSTEM_ZLIB
 
 GDB_LINK_DESC=		Create ${PREFIX}/bin/gdb symlink
 KGDB_DESC=		Kernel Debugging Support
 BUNDLED_READLINE_DESC=	from gdb distfile
+BUNDLED_ZLIB_DESC=	from gdb distfile
 PORT_READLINE_DESC=	from devel/readline port
+PORT_ICONV_DESC=	use libiconv, with wider charset support
+SYSTEM_ICONV_DESC=	use libc iconv, with no wchar support
+SYSTEM_ZLIB_DESC=	use system zlib
 TUI_DESC=		Text User Interface enabled
 
 OPTIONS_SUB=	yes
@@ -77,15 +82,22 @@ GUILE_CONFIGURE_WITH=	guile
 GUILE_USES=		pkgconfig
 GUILE_LIB_DEPENDS=	libguile-2.0.so:lang/guile2
 PORT_READLINE_USES=	readline:port
+PORT_ICONV_USES=	iconv:wchar_t
 PYTHON_CONFIGURE_ON=	--with-python=${PYTHON_CMD}
 PYTHON_CONFIGURE_OFF=	--without-python
 PYTHON_USES=		python
+SYSTEM_ICONV_USES=	iconv
+SYSTEM_ZLIB_WITH=	system-zlib
 TUI_CONFIGURE_ENABLE=	tui
 
 .include <bsd.port.pre.mk>
 
 .if ! ${PORT_OPTIONS:MBUNDLED_READLINE}
 EXCLUDE+=	readline
+.endif
+
+.if ! ${PORT_OPTIONS:MBUNDLED_ZLIB}
+EXCLUDE+=	zlib
 .endif
 
 # Wow c++ smth.c too on gdb, gcc wasn't enough? throw helpers for c-- and try to kill it
