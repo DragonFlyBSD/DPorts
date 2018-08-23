@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: head/www/p5-libwww/Makefile 463128 2018-02-27 13:24:30Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	libwww
 PORTVERSION=	6.33
