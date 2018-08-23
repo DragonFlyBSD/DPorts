@@ -1,5 +1,5 @@
 # Created by: Tilman Linneweh <arved@FreeBSD.org>
-# $FreeBSD: head/security/libksba/Makefile 426121 2016-11-14 16:18:44Z cmt $
+# $FreeBSD$
 
 PORTNAME=	libksba
 PORTVERSION=	1.3.5
