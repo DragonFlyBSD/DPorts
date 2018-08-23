@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/print/texinfo/Makefile 457285 2017-12-26 14:55:09Z sunpoet $
 
 PORTNAME=	texinfo
 PORTVERSION=	6.5
