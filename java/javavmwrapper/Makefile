@@ -1,5 +1,5 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-# $FreeBSD: head/java/javavmwrapper/Makefile 472787 2018-06-19 13:47:52Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	javavmwrapper
 PORTVERSION=	2.6
