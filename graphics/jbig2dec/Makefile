@@ -1,4 +1,4 @@
-# $FreeBSD: head/graphics/jbig2dec/Makefile 451282 2017-10-05 09:48:45Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	jbig2dec
 PORTVERSION=	0.14
