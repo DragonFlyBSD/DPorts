@@ -1,4 +1,4 @@
-# $FreeBSD: head/textproc/qt5-xml/Makefile 473503 2018-06-28 17:39:53Z tcberner $
+# $FreeBSD$
 
 PORTNAME=	xml
 DISTVERSION=	${QT5_VERSION}
