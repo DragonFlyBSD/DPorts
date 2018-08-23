@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $FreeBSD: head/devel/p5-Class-C3/Makefile 467971 2018-04-22 08:54:20Z sunpoet $
 
 PORTNAME=	Class-C3
 PORTVERSION=	0.34
