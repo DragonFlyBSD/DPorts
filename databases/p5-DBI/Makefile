@@ -1,5 +1,5 @@
 # Created by: James FitzGibbon <jfitz@FreeBSD.org>
-# $FreeBSD: head/databases/p5-DBI/Makefile 465216 2018-03-21 19:03:13Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	DBI
 PORTVERSION=	1.641
