@@ -1,9 +1,10 @@
 # Created by: Ashish SHUKLA <ashish@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/multimedia/libvpx/Makefile 475857 2018-07-29 22:18:44Z gerald $
 
 PORTNAME=	libvpx
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.7.0
+PORTREVISION=	1
 CATEGORIES=	multimedia
 
 MAINTAINER=	jbeich@FreeBSD.org
