@@ -1,5 +1,5 @@
 # Created by: stas
-# $FreeBSD: head/devel/libinotify/Makefile 460912 2018-02-04 10:48:47Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	libinotify
 PORTVERSION=	20180201
