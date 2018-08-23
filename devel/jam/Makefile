@@ -1,5 +1,5 @@
 # Created by: Jeffrey Hsu <hsu@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/devel/jam/Makefile 406556 2016-01-18 10:33:02Z gahr $
 
 PORTNAME=	jam
 PORTVERSION=	2.6
