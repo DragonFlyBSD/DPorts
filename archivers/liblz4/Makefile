@@ -1,5 +1,5 @@
 # Created by: adamw
-# $FreeBSD$
+# $FreeBSD: head/archivers/liblz4/Makefile 469954 2018-05-14 19:12:46Z bapt $
 
 PORTNAME=	lz4
 PORTVERSION=	1.8.2
