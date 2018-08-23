@@ -1,5 +1,5 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD$
+# $FreeBSD: head/dns/libidn/Makefile 469353 2018-05-08 05:04:15Z yuri $
 
 PORTNAME=	libidn
 DISTVERSION=	1.34
