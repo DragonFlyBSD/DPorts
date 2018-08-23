@@ -1,5 +1,5 @@
 # Created by: Ian Vaudrey <i.vaudrey@bigfoot.com>
-# $FreeBSD: head/devel/makedepend/Makefile 476013 2018-07-31 18:41:30Z zeising $
+# $FreeBSD$
 
 PORTNAME=	makedepend
 PORTVERSION=	1.0.5
