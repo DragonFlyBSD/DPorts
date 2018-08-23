@@ -1,4 +1,4 @@
-# $FreeBSD: head/textproc/py-alabaster/Makefile 455210 2017-11-30 15:50:30Z mat $
+# $FreeBSD$
 
 PORTNAME=	alabaster
 PORTVERSION=	0.7.6
