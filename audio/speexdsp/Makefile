@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $FreeBSD: head/audio/speexdsp/Makefile 471987 2018-06-08 09:04:27Z amdmi3 $
 
 PORTNAME=	speexdsp
 DISTVERSION=	1.2rc3
