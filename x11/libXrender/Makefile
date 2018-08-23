@@ -1,8 +1,9 @@
 # Created by: Foxfair Hu <foxfair@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/x11/libXrender/Makefile 476013 2018-07-31 18:41:30Z zeising $
 
 PORTNAME=	libXrender
 PORTVERSION=	0.9.10
+PORTREVISION=	1
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
@@ -11,6 +12,6 @@ COMMENT=	X Render extension library
 LICENSE=	MIT
 
 XORG_CAT=	lib
-USE_XORG=	x11 renderproto:both xproto:both
+USE_XORG=	x11 xorgproto
 
 .include <bsd.port.mk>
