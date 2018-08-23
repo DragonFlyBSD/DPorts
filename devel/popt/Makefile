@@ -1,5 +1,5 @@
 # Created by: Yuan-Chen Cheng <ycheng@sinica.edu.tw>
-# $FreeBSD$
+# $FreeBSD: head/devel/popt/Makefile 445585 2017-07-12 14:42:19Z jpaetzel $
 
 PORTNAME=	popt
 PORTVERSION=	1.16
