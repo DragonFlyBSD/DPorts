@@ -1,5 +1,5 @@
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD: head/devel/pcre2/Makefile 477253 2018-08-15 19:09:00Z adamw $
+# $FreeBSD$
 
 PORTNAME=	pcre2
 PORTVERSION=	10.31
