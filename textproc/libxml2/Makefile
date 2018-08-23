@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <Nakai@technologist.com>
-# $FreeBSD$
+# $FreeBSD: head/textproc/libxml2/Makefile 464471 2018-03-14 08:33:13Z amdmi3 $
 
 PORTNAME=	libxml2
 PORTVERSION=	2.9.7
