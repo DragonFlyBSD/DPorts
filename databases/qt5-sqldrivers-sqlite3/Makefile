@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $FreeBSD: head/databases/qt5-sqldrivers-sqlite3/Makefile 414014 2016-04-25 16:13:38Z mat $
 
 PORTNAME=	sqlite3
 
