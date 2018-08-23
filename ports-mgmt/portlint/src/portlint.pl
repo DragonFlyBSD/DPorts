@@ -14,7 +14,7 @@
 # bsd.port.mk.  There are significant differences in those so non-FreeBSD code
 # was removed.
 #
-# $FreeBSD: head/ports-mgmt/portlint/src/portlint.pl 473207 2018-06-24 16:13:06Z marcus $
+# $FreeBSD: head/ports-mgmt/portlint/src/portlint.pl 476593 2018-08-07 12:49:20Z marcus $
 # $MCom: portlint/portlint.pl,v 1.467 2018/06/24 16:07:04 jclarke Exp $
 #
 
