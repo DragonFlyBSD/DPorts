@@ -1,5 +1,5 @@
 # Created by: torstenb@FreeBSD.org
-# $FreeBSD$
+# $FreeBSD: head/devel/autoconf213/Makefile 472048 2018-06-09 09:04:27Z amdmi3 $
 
 PORTNAME=	autoconf
 PORTVERSION=	2.13.000227
