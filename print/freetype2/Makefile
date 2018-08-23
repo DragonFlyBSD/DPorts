@@ -1,5 +1,5 @@
 # Created by: jseger@FreeBSD.org
-# $FreeBSD$
+# $FreeBSD: head/print/freetype2/Makefile 468892 2018-05-02 23:33:10Z jbeich $
 
 PORTNAME=	freetype2
 PORTVERSION=	2.9.1
