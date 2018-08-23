@@ -1,5 +1,5 @@
 # Created by: Frederic Culot <culot@FreeBSD.org>
-# $FreeBSD: head/www/p5-HTTP-Message/Makefile 472660 2018-06-17 23:47:50Z wen $
+# $FreeBSD$
 
 PORTNAME=	HTTP-Message
 PORTVERSION=	6.18
