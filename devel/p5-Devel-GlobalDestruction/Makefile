@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $FreeBSD: head/devel/p5-Devel-GlobalDestruction/Makefile 449893 2017-09-15 08:58:46Z mat $
 
 PORTNAME=	Devel-GlobalDestruction
 PORTVERSION=	0.14
