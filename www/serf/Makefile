@@ -1,5 +1,5 @@
 # Created by: Craig Rodrigues <rodrigc@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/www/serf/Makefile 472172 2018-06-11 08:34:33Z amdmi3 $
 
 PORTNAME=	serf
 PORTVERSION=	1.3.9
