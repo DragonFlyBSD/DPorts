@@ -1,5 +1,5 @@
 # Created by: Ashish Shukla <wahjava@gmail.com>
-# $FreeBSD: head/x11/libxcb/Makefile 470141 2018-05-16 18:59:47Z zeising $
+# $FreeBSD$
 
 PORTNAME=	libxcb
 PORTVERSION=	1.13
