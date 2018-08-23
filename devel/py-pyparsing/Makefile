@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD: head/devel/py-pyparsing/Makefile 435542 2017-03-06 15:49:36Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	pyparsing
 PORTVERSION=	2.2.0
