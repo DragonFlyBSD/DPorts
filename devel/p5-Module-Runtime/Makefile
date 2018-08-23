@@ -1,5 +1,5 @@
 # Created by: brix@FreeBSD.org
-# $FreeBSD$
+# $FreeBSD: head/devel/p5-Module-Runtime/Makefile 452360 2017-10-18 17:22:16Z sunpoet $
 
 PORTNAME=	Module-Runtime
 PORTVERSION=	0.016
