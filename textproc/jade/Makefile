@@ -1,5 +1,5 @@
 # Created by: jfieber
-# $FreeBSD: head/textproc/jade/Makefile 425174 2016-11-02 22:45:14Z mat $
+# $FreeBSD$
 
 PORTNAME=	jade
 PORTVERSION=	1.2.1
