@@ -1,5 +1,0 @@
-
-# deal with inline semantics
-dfly-patch:
-	${REINPLACE_CMD} -e 's/^\(inline void\)/static \1/g'	\
-		${WRKSRC}/dbf2mysql.c ${WRKSRC}/mysql2dbf.c
