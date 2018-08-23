@@ -1,5 +1,5 @@
 # Created by: Lars Thegler <lth@FreeBSD.org>
-# $FreeBSD: head/lang/p5-List-MoreUtils/Makefile 456148 2017-12-12 13:34:11Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	List-MoreUtils
 PORTVERSION=	0.428
