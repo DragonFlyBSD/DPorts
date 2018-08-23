@@ -1,8 +1,8 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/devel/p5-Exporter-Tiny/Makefile 475707 2018-07-29 19:11:34Z sunpoet $
 
 PORTNAME=	Exporter-Tiny
-PORTVERSION=	1.000000
+PORTVERSION=	1.002001
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
