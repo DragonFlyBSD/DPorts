@@ -1,5 +1,5 @@
 # Created by: fenner
-# $FreeBSD$
+# $FreeBSD: head/textproc/gtk-doc/Makefile 437491 2017-04-01 21:46:04Z bapt $
 #    $MCom: ports/trunk/textproc/gtk-doc/Makefile 19804 2014-08-13 14:55:11Z kwm $
 
 PORTNAME=	gtk-doc
