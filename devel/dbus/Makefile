@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: head/devel/dbus/Makefile 438705 2017-04-17 15:38:36Z miwi $
+# $FreeBSD$
 
 PORTNAME=	dbus
 PORTVERSION=	1.10.16
