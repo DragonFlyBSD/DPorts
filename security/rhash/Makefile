@@ -1,5 +1,5 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/security/rhash/Makefile 452987 2017-10-27 14:40:41Z danfe $
 
 PORTNAME=	rhash
 PORTVERSION=	1.3.5
