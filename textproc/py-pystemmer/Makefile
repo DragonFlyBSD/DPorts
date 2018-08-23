@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: head/textproc/py-pystemmer/Makefile 474476 2018-07-11 19:15:15Z dbaio $
+# $FreeBSD$
 
 PORTNAME=	pystemmer
 PORTVERSION=	1.3.0
