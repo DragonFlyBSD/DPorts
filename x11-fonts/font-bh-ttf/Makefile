@@ -1,5 +1,5 @@
 # Created by: Pawel Worach
-# $FreeBSD$
+# $FreeBSD: head/x11-fonts/font-bh-ttf/Makefile 381876 2015-03-21 23:05:19Z bapt $
 
 PORTNAME=	font-bh-ttf
 PORTVERSION=	1.0.3
