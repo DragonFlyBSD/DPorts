@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	public_suffix_list
-PORTVERSION=	20180328
+PORTVERSION=	20180808
 CATEGORIES=	dns
 
 MAINTAINER=	sunpoet@FreeBSD.org
@@ -16,12 +16,12 @@ SLAVEDIRS=	dns/p5-Mozilla-PublicSuffix dns/rubygem-public_suffix dns/rubygem-pub
 NO_ARCH=	yes
 NO_BUILD=	yes
 
-PLIST_FILES=	%%DATADIR%%/public_suffix_list.dat \
-		%%DATADIR%%/test_psl.txt
+PORTDATA=	public_suffix_list.dat \
+		test_psl.txt
 
 GH_ACCOUNT=	publicsuffix
 GH_PROJECT=	list
-GH_TAGNAME=	f85ba38
+GH_TAGNAME=	f8ccab5
 USE_GITHUB=	yes
 
 do-install:
