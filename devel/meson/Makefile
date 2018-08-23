@@ -1,5 +1,5 @@
 # Created by: Ting-Wei Lan <lantw44@gmail.com>
-# $FreeBSD$
+# $FreeBSD: head/devel/meson/Makefile 472993 2018-06-21 19:13:30Z kwm $
 
 PORTNAME=	meson
 PORTVERSION=	0.46.1
