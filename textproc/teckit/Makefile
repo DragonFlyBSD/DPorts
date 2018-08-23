@@ -1,5 +1,5 @@
 # Created by: Nikola Lecic <nikola.lecic@anthesphoria.net>
-# $FreeBSD$
+# $FreeBSD: head/textproc/teckit/Makefile 459026 2018-01-15 10:01:19Z danfe $
 
 PORTNAME=	teckit
 PORTVERSION=	2.5.7
