@@ -1,5 +1,5 @@
 # Created by: scrappy
-# $FreeBSD: head/security/p5-IO-Socket-SSL/Makefile 475588 2018-07-28 16:05:47Z joneum $
+# $FreeBSD$
 
 PORTNAME=	IO-Socket-SSL
 PORTVERSION=	2.058
