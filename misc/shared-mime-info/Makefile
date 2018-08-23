@@ -1,5 +1,5 @@
 # Created by: olgeni@FreeBSD.org
-# $FreeBSD: head/misc/shared-mime-info/Makefile 437508 2017-04-01 23:07:57Z bapt $
+# $FreeBSD$
 
 PORTNAME=	shared-mime-info
 PORTVERSION=	1.8
