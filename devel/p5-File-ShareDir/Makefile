@@ -1,8 +1,8 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/devel/p5-File-ShareDir/Makefile 473991 2018-07-06 02:50:41Z wen $
 
 PORTNAME=	File-ShareDir
-PORTVERSION=	1.114
+PORTVERSION=	1.116
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
