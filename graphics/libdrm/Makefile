@@ -1,5 +1,5 @@
 # Created by: lesi@FreeBSD.org
-# $FreeBSD: head/graphics/libdrm/Makefile 476865 2018-08-11 09:12:55Z zeising $
+# $FreeBSD$
 
 PORTNAME=	libdrm
 PORTVERSION=	2.4.93
