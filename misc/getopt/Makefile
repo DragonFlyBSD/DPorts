@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@kolobov.com>
-# $FreeBSD$
+# $FreeBSD: head/misc/getopt/Makefile 423014 2016-09-30 19:24:30Z tijl $
 
 PORTNAME=	getopt
 PORTVERSION=	1.1.6
