@@ -1,5 +1,5 @@
 # Created by: Frank Laszlo <laszlof@vonostingroup.com>
-# $FreeBSD: head/devel/readline/Makefile 464407 2018-03-13 20:30:25Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	readline
 PORTVERSION=	7.0.${PATCHLEVEL}
