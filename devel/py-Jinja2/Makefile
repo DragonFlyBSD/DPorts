@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/devel/py-Jinja2/Makefile 472884 2018-06-20 17:05:41Z mat $
+# $FreeBSD$
 
 PORTNAME=	Jinja2
 PORTVERSION=	2.10
