@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/textproc/p5-XML-SAX-Base/Makefile 449893 2017-09-15 08:58:46Z mat $
 
 PORTNAME=	XML-SAX-Base
 PORTVERSION=	1.09
