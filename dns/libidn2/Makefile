@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: head/dns/libidn2/Makefile 470376 2018-05-19 11:06:15Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	libidn2
 PORTVERSION=	2.0.5
