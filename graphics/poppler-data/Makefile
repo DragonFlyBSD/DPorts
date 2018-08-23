@@ -1,4 +1,4 @@
-# $FreeBSD: head/graphics/poppler-data/Makefile 474497 2018-07-12 09:07:41Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	poppler-data
 PORTVERSION=	0.4.9
