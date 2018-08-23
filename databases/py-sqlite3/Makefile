@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang
-# $FreeBSD$
+# $FreeBSD: head/databases/py-sqlite3/Makefile 455210 2017-11-30 15:50:30Z mat $
 
 PORTNAME=	sqlite3
 PORTVERSION=	${PYTHON_PORTVERSION}
