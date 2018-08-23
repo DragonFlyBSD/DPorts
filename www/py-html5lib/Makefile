@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: head/www/py-html5lib/Makefile 472884 2018-06-20 17:05:41Z mat $
+# $FreeBSD$
 
 PORTNAME=	html5lib
 PORTVERSION=	1.0.1
