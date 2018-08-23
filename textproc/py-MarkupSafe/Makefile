@@ -1,5 +1,5 @@
 # Created by: wen@FreeBSD.org
-# $FreeBSD$
+# $FreeBSD: head/textproc/py-MarkupSafe/Makefile 453358 2017-11-02 19:00:55Z sunpoet $
 
 PORTNAME=	MarkupSafe
 PORTVERSION=	1.0
