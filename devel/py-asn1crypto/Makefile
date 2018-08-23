@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $FreeBSD: head/devel/py-asn1crypto/Makefile 444640 2017-06-29 10:06:12Z robak $
 
 PORTNAME=	asn1crypto
 PORTVERSION=	0.22.0
