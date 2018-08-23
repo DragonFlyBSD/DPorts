@@ -1,5 +1,5 @@
 # Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: head/lang/p5-List-MoreUtils-XS/Makefile 476432 2018-08-05 19:06:48Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	List-MoreUtils-XS
 PORTVERSION=	0.428
