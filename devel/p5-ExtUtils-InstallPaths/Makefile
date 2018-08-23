@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/devel/p5-ExtUtils-InstallPaths/Makefile 469656 2018-05-11 16:53:17Z sunpoet $
 
 PORTNAME=	ExtUtils-InstallPaths
 PORTVERSION=	0.012
