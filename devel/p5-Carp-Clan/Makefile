@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: head/devel/p5-Carp-Clan/Makefile 449893 2017-09-15 08:58:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	Carp-Clan
 PORTVERSION=	6.06
