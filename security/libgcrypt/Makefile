@@ -1,4 +1,4 @@
-# $FreeBSD: head/security/libgcrypt/Makefile 472337 2018-06-13 18:59:05Z cpm $
+# $FreeBSD$
 
 PORTNAME=	libgcrypt
 PORTVERSION=	1.8.3
