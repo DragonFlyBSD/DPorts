@@ -1,4 +1,4 @@
-# $FreeBSD: head/x11/xorgproto/Makefile 476508 2018-08-06 12:20:39Z mat $
+# $FreeBSD$
 
 PORTNAME=	xorgproto
 PORTVERSION=	2018.4
