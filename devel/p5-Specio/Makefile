@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD: head/devel/p5-Specio/Makefile 453563 2017-11-05 21:16:09Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Specio
 PORTVERSION=	0.42
