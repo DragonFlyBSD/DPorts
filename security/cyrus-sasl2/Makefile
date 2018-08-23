@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $FreeBSD: head/security/cyrus-sasl2/Makefile 458890 2018-01-13 05:57:26Z ume $
 
 PORTREVISION=	13
 
