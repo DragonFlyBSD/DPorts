@@ -1,5 +1,5 @@
 # Created by: ache
-# $FreeBSD$
+# $FreeBSD: head/net/p5-URI/Makefile 468363 2018-04-26 18:51:07Z sunpoet $
 
 PORTNAME=	URI
 PORTVERSION=	1.74
