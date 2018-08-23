@@ -1,5 +1,5 @@
 # Created by: mm
-# $FreeBSD: head/devel/orc/Makefile 453381 2017-11-02 21:41:47Z olgeni $
+# $FreeBSD$
 
 PORTNAME=	orc
 PORTVERSION=	0.4.25
