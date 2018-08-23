@@ -1,4 +1,4 @@
-# $FreeBSD: head/lang/go14/Makefile 477571 2018-08-19 13:25:05Z jlaffaye $
+# $FreeBSD$
 
 PORTNAME=	go14
 PORTVERSION=	1.4.3
