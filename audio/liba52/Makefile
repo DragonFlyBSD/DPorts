@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: head/audio/liba52/Makefile 450863 2017-09-28 19:32:49Z jbeich $
+# $FreeBSD$
 
 PORTNAME=	liba52
 PORTVERSION=	0.7.4
