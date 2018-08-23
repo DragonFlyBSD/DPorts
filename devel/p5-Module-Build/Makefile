@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: head/devel/p5-Module-Build/Makefile 449893 2017-09-15 08:58:46Z mat $
+# $FreeBSD$
 #
 # If you have compelling evidence that some ports need at least this version of
 # p5-Module-Build to build, be sure to update the BUILD_DEPENDS version in
