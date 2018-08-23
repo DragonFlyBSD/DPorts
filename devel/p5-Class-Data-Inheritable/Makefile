@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD$
+# $FreeBSD: head/devel/p5-Class-Data-Inheritable/Makefile 465562 2018-03-26 08:33:25Z amdmi3 $
 
 PORTNAME=	Class-Data-Inheritable
 PORTVERSION=	0.08
