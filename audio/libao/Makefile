@@ -1,5 +1,5 @@
 # Created by: t.vanklaveren@student.utwente.nl
-# $FreeBSD$
+# $FreeBSD: head/audio/libao/Makefile 419927 2016-08-09 15:11:26Z naddy $
 
 PORTNAME=	libao
 PORTVERSION=	1.2.0
