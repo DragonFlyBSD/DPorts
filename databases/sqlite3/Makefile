@@ -1,5 +1,5 @@
 # Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-# $FreeBSD: head/databases/sqlite3/Makefile 473551 2018-06-29 14:22:11Z jbeich $
+# $FreeBSD$
 
 PORTNAME=	sqlite3
 DISTVERSION=	3.24.0
