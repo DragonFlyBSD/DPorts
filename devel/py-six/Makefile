@@ -1,5 +1,5 @@
 # Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-# $FreeBSD: head/devel/py-six/Makefile 472884 2018-06-20 17:05:41Z mat $
+# $FreeBSD$
 
 PORTNAME=	six
 PORTVERSION=	1.11.0
