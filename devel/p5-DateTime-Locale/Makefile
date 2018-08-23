@@ -1,5 +1,5 @@
 # Created by: Mathieu Arnold <m@absolight.net>
-# $FreeBSD$
+# $FreeBSD: head/devel/p5-DateTime-Locale/Makefile 472587 2018-06-17 02:08:38Z wen $
 
 PORTNAME=	DateTime-Locale
 PORTVERSION=	1.22
