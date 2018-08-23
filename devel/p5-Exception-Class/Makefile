@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $FreeBSD: head/devel/p5-Exception-Class/Makefile 456147 2017-12-12 13:34:06Z sunpoet $
 
 PORTNAME=	Exception-Class
 PORTVERSION=	1.44
