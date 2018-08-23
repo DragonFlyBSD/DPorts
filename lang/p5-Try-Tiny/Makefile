@@ -1,5 +1,5 @@
 # Created by: Anton Berezin <tobez@FreeBSD.org>
-# $FreeBSD: head/lang/p5-Try-Tiny/Makefile 444894 2017-07-02 16:10:36Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Try-Tiny
 PORTVERSION=	0.28
