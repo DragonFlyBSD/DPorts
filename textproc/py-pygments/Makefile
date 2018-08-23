@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/textproc/py-pygments/Makefile 455210 2017-11-30 15:50:30Z mat $
 
 PORTNAME=	pygments
 PORTVERSION=	2.2.0
