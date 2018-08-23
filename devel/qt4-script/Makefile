@@ -1,5 +1,5 @@
 # Created by: lofi@FreeBSD.org
-# $FreeBSD$
+# $FreeBSD: head/devel/qt4-script/Makefile 473503 2018-06-28 17:39:53Z tcberner $
 
 PORTNAME=	script
 DISTVERSION=	${QT4_VERSION}
