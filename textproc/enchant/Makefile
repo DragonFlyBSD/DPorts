@@ -1,5 +1,5 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
-# $FreeBSD: head/textproc/enchant/Makefile 466176 2018-04-01 18:50:52Z kwm $
+# $FreeBSD$
 
 PORTNAME=	enchant
 PORTVERSION=	1.6.0
