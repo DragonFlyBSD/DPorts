@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/p5-Package-Stash/Makefile 449893 2017-09-15 08:58:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	Package-Stash
 PORTVERSION=	0.37
