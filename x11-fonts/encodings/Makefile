@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $FreeBSD: head/x11-fonts/encodings/Makefile 458816 2018-01-12 10:55:33Z pi $
 
 PORTNAME=	encodings
 PORTVERSION=	1.0.4
