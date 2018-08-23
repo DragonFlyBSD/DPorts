@@ -1,8 +1,9 @@
 # Created by: Pawel Worach
-# $FreeBSD$
+# $FreeBSD: head/x11-fonts/mkfontscale/Makefile 476013 2018-07-31 18:41:30Z zeising $
 
 PORTNAME=	mkfontscale
 PORTVERSION=	1.1.3
+PORTREVISION=	1
 CATEGORIES=	x11-fonts
 
 MAINTAINER=	x11@FreeBSD.org
@@ -14,7 +15,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 LIB_DEPENDS=	libfreetype.so:print/freetype2
 
 XORG_CAT=	app
-USE_XORG=	xproto fontenc
+USE_XORG=	xorgproto fontenc
 
 CONFIGURE_ARGS+=--disable-maintainer-mode
 
