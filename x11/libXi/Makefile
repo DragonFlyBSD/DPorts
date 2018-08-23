@@ -1,8 +1,9 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/x11/libXi/Makefile 476013 2018-07-31 18:41:30Z zeising $
 
 PORTNAME=	libXi
 PORTVERSION=	1.7.9
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	x11
 
@@ -12,7 +13,7 @@ COMMENT=	X Input extension library
 LICENSE=	MIT
 
 XORG_CAT=	lib
-USE_XORG=	xproto x11 xext xextproto xfixes inputproto:both
+USE_XORG=	x11 xext xfixes xorgproto
 INSTALL_TARGET=	install-strip
 USES+=	cpe
 CPE_PRODUCT=	libxi
