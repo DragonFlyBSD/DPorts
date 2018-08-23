@@ -1,14 +1,15 @@
-# $FreeBSD$
+# $FreeBSD: head/x11/xset/Makefile 476013 2018-07-31 18:41:30Z zeising $
 
 PORTNAME=	xset
 PORTVERSION=	1.2.4
+PORTREVISION=	1
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	User preference utility for X
 
 XORG_CAT=	app
-USE_XORG=	xmuu xproto x11 xext xfontcache
+USE_XORG=	xmuu xorgproto x11 xext xfontcache
 CONFIGURE_ARGS=	--without-xf86misc
 
 PLIST_FILES=	bin/xset man/man1/xset.1.gz
