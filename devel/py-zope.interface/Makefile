@@ -1,5 +1,5 @@
 # Created by: Neal Nelson <neal@nelson.name>
-# $FreeBSD: head/devel/py-zope.interface/Makefile 403670 2015-12-13 13:46:28Z rm $
+# $FreeBSD$
 
 PORTNAME=	zope.interface
 PORTVERSION=	4.1.3
