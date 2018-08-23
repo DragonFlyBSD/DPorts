@@ -1,5 +1,5 @@
 # Created by: KIRIYAMA Kazuhiko <kiri@FreeBSD.org>
-# $FreeBSD: head/textproc/sdocbook-xml/Makefile 472907 2018-06-20 19:35:30Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	sdocbook-xml
 PORTVERSION=	1.1
