@@ -1,4 +1,4 @@
-# $FreeBSD: head/www/p5-HTTP-Headers-Fast/Makefile 449893 2017-09-15 08:58:46Z mat $
+# $FreeBSD$
 
 PORTNAME=	HTTP-Headers-Fast
 PORTVERSION=	0.21
