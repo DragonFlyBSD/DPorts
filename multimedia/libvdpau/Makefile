@@ -1,7 +1,8 @@
-# $FreeBSD$
+# $FreeBSD: head/multimedia/libvdpau/Makefile 476013 2018-07-31 18:41:30Z zeising $
 
 PORTNAME=	libvdpau
 PORTVERSION=	1.1.1
+PORTREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://cgit.freedesktop.org/~aplattner/libvdpau/snapshot/
 
@@ -14,7 +15,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 USES=		autoreconf libtool pkgconfig tar:xz
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-documentation
-USE_XORG=	dri2proto xext
+USE_XORG=	xorgproto xext
 USE_LDCONFIG=	yes
 INSTALL_TARGET=	install-strip
 
