@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/py-setuptools_scm/Makefile 466646 2018-04-06 15:43:40Z wg $
+# $FreeBSD$
 
 PORTNAME=	setuptools_scm
 PORTVERSION=	1.17.0
