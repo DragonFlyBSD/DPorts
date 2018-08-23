@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $FreeBSD: head/devel/tex-kpathsea/Makefile 474568 2018-07-13 09:07:42Z amdmi3 $
 
 PORTNAME=	kpathsea
 PORTVERSION=	6.2.1
@@ -11,6 +11,8 @@ DIST_SUBDIR=	TeX
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	Path searching library for TeX
+
+LICENSE=	LGPL21+
 
 USES=		libtool pathfix tar:xz
 USE_LDCONFIG=	yes
