@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/x11/startup-notification/Makefile 450591 2017-09-25 13:16:27Z gahr $
 
 PORTNAME=	startup-notification
 PORTVERSION=	0.12
