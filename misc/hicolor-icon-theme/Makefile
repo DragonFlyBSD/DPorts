@@ -1,5 +1,5 @@
 # Created by: marcus@FreeBSD.org
-# $FreeBSD$
+# $FreeBSD: head/misc/hicolor-icon-theme/Makefile 393151 2015-07-29 11:27:07Z kwm $
 
 PORTNAME=	hicolor-icon-theme
 PORTVERSION=	0.15
