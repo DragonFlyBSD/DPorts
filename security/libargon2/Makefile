@@ -1,5 +1,5 @@
 # Created by: Christopher Hall <hsw@bitmark.com>
-# $FreeBSD: head/security/libargon2/Makefile 458583 2018-01-09 23:18:28Z dbaio $
+# $FreeBSD$
 
 PORTNAME=	libargon2
 PORTVERSION=	20171227
