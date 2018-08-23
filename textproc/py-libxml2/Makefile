@@ -1,5 +1,5 @@
 # Created by: Alexander Nedotsukov <bland@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/textproc/py-libxml2/Makefile 455210 2017-11-30 15:50:30Z mat $
 
 PORTREVISION=	0
 CATEGORIES=	textproc gnome python
