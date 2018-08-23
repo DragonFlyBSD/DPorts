@@ -1,5 +1,5 @@
 # Created by: Neil Booth
-# $FreeBSD$
+# $FreeBSD: head/net/py-pysocks/Makefile 457002 2017-12-22 23:04:42Z sunpoet $
 
 PORTNAME=	pysocks
 PORTVERSION=	1.6.8
