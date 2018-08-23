@@ -1,5 +1,5 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/devel/gamin/Makefile 428152 2016-12-08 19:52:19Z tijl $
 #    $MCom: ports/trunk/devel/gamin/Makefile 18634 2013-07-26 10:42:35Z kwm $
 
 PORTNAME=	gamin
