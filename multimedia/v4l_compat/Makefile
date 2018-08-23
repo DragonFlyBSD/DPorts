@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $FreeBSD: head/multimedia/v4l_compat/Makefile 473615 2018-06-30 12:37:58Z riggs $
 
 PORTNAME=	v4l_compat
 PORTREVISION=	1
