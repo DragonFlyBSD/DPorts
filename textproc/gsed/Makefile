@@ -1,5 +1,5 @@
 # Created by: Cyrille Lefevre <clefevre@citeweb.net>
-# $FreeBSD$
+# $FreeBSD: head/textproc/gsed/Makefile 465784 2018-03-28 09:03:24Z amdmi3 $
 
 PORTNAME=	sed
 PORTVERSION=	4.2.2
