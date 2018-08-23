@@ -1,8 +1,8 @@
-# $FreeBSD$
+# $FreeBSD: head/lang/go14/Makefile 477571 2018-08-19 13:25:05Z jlaffaye $
 
 PORTNAME=	go14
 PORTVERSION=	1.4.3
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=	http://golang.org/dl/
 DISTNAME=	go${PORTVERSION}.src
@@ -62,6 +62,7 @@ do-build:
 		CC=${CC} \
 		GOROOT=${WRKSRC} GOROOT_FINAL=${PREFIX}/go14 \
 		GOBIN= GOARCH=${GOARCH} GOOS=${OPSYS:tl} \
+		GO386=387 \
 		CGO_ENABLED=0 \
 		${SH} make.bash
 
