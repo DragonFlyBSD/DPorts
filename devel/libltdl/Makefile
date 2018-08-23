@@ -1,5 +1,5 @@
 # Created by: Jeremy Norris <ishmael27x@yahoo.com>
-# $FreeBSD$
+# $FreeBSD: head/devel/libltdl/Makefile 370099 2014-10-05 18:01:19Z tijl $
 
 PORTNAME=	libltdl
 PORTREVISION=	0
