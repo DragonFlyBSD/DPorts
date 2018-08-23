@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $FreeBSD: head/devel/pkgconf/Makefile 462790 2018-02-24 11:27:49Z bapt $
 
 PORTNAME=	pkgconf
 PORTVERSION=	1.4.2
