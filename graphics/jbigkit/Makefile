@@ -1,5 +1,5 @@
 # Created by: mi
-# $FreeBSD: head/graphics/jbigkit/Makefile 455681 2017-12-06 21:35:56Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	jbigkit
 PORTVERSION=	2.1
