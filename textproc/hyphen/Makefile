@@ -1,4 +1,4 @@
-# $FreeBSD: head/textproc/hyphen/Makefile 450522 2017-09-24 18:50:25Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	hyphen
 PORTVERSION=	2.8.8
