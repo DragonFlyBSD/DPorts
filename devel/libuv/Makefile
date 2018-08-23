@@ -1,8 +1,8 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD$
+# $FreeBSD: head/devel/libuv/Makefile 477412 2018-08-17 08:52:08Z thierry $
 
 PORTNAME=	libuv
-PORTVERSION=	1.21.0
+PORTVERSION=	1.23.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	devel
 #MASTER_SITES=	http://dist.libuv.org/dist/v${PORTVERSION}/
