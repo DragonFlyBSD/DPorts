@@ -1,5 +1,5 @@
 # Created by: will
-# $FreeBSD$
+# $FreeBSD: head/devel/p5-Class-Singleton/Makefile 449893 2017-09-15 08:58:46Z mat $
 
 PORTNAME=	Class-Singleton
 PORTVERSION=	1.5
