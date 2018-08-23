@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $FreeBSD: head/devel/libtool/Makefile.common 393644 2015-08-06 09:18:36Z tijl $
 
 PORTVERSION=	2.4.6
 PORTREVISION?=	0 # Leave this zero. Set in Makefile instead.
