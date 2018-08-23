@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: head/lang/perl5.26/Makefile 473550 2018-06-29 14:08:40Z mat $
+# $FreeBSD$
 
 PORTNAME=	perl
 DISTVERSION=	${PERL_VERSION}
