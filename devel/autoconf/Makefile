@@ -1,5 +1,5 @@
 # Created by: ade@FreeBSD.org
-# $FreeBSD: head/devel/autoconf/Makefile 452613 2017-10-21 20:19:15Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	autoconf
 PORTVERSION=	2.69
