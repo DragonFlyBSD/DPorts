@@ -1,5 +1,5 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/graphics/giflib/Makefile 447092 2017-08-02 09:01:11Z amdmi3 $
 
 PORTNAME=	giflib
 PORTVERSION=	5.1.4
