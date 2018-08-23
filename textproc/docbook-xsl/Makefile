@@ -1,4 +1,4 @@
-# $FreeBSD: head/textproc/docbook-xsl/Makefile 472906 2018-06-20 19:35:24Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	docbook-xsl
 PORTVERSION=	1.76.1
