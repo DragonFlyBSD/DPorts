@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $FreeBSD: head/x11/xcb-util-wm/Makefile 412351 2016-04-01 14:33:55Z mat $
 
 PORTNAME=	xcb-util-wm
 PORTVERSION=	0.4.1
