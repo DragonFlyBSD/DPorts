@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: head/devel/binutils/Makefile 477638 2018-08-20 09:17:45Z jhb $
+# $FreeBSD$
 
 PORTNAME=	binutils
 PORTVERSION=	2.30
