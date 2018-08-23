@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/py-setuptools/Makefile 474770 2018-07-17 03:36:05Z miwi $
+# $FreeBSD$
 
 PORTNAME=	setuptools
 PORTVERSION=	40.0.0
