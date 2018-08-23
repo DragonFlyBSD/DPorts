@@ -1,8 +1,9 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/devel/imake/Makefile 476013 2018-07-31 18:41:30Z zeising $
 
 PORTNAME=	imake
 PORTVERSION=	1.0.7
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	devel
 
@@ -20,7 +21,7 @@ USE_PERL5=	run
 SHEBANG_FILES=	mkhtmlindex.pl
 
 XORG_CAT=	util
-USE_XORG=	xproto
+USE_XORG=	xorgproto
 
 CONFIGURE_ENV=	ac_cv_path_RAWCPP=tradcpp
 
