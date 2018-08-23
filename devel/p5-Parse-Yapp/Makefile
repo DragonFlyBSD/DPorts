@@ -1,5 +1,5 @@
 # Created by: Michael Lyngbøl <lyngbol@wheel.dk>
-# $FreeBSD$
+# $FreeBSD: head/devel/p5-Parse-Yapp/Makefile 449893 2017-09-15 08:58:46Z mat $
 
 PORTNAME=	Parse-Yapp
 PORTVERSION=	1.05
