@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $FreeBSD: head/textproc/p5-XML-Parser/Makefile 449893 2017-09-15 08:58:46Z mat $
 
 PORTNAME=	XML-Parser
 PORTVERSION=	2.44
