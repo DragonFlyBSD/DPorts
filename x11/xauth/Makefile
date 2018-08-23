@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $FreeBSD: head/x11/xauth/Makefile 433522 2017-02-06 21:16:17Z bapt $
 
 PORTNAME=	xauth
 PORTVERSION=	1.0.10
