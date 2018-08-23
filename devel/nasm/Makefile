@@ -1,5 +1,5 @@
 # Created by: Murray Stokely <murray@cdrom.com>
-# $FreeBSD: head/devel/nasm/Makefile 475358 2018-07-26 09:37:50Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	nasm
 PORTVERSION=	2.13.03
