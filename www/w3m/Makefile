@@ -1,5 +1,5 @@
 # Created by: MANTANI Nobutaka <nobutaka@nobutaka.com>
-# $FreeBSD$
+# $FreeBSD: head/www/w3m/Makefile 473660 2018-07-01 09:17:45Z linimon $
 
 PORTNAME=	w3m
 PORTVERSION=	0.5.3.20180520
