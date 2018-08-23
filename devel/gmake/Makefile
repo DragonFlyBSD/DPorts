@@ -1,5 +1,5 @@
 # Created by: jkh
-# $FreeBSD$
+# $FreeBSD: head/devel/gmake/Makefile 462385 2018-02-20 09:39:14Z tijl $
 
 PORTNAME=	gmake
 PORTVERSION=	4.2.1
