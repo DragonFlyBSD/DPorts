@@ -1,4 +1,4 @@
-# $FreeBSD: head/textproc/xmlcatmgr/Makefile 395716 2015-08-31 18:38:29Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	xmlcatmgr
 PORTVERSION=	2.2
