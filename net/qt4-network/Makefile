@@ -1,5 +1,5 @@
 # Created by: lofi@FreeBSD.org
-# $FreeBSD: head/net/qt4-network/Makefile 473503 2018-06-28 17:39:53Z tcberner $
+# $FreeBSD$
 
 PORTNAME=	network
 DISTVERSION=	${QT4_VERSION}
