@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: head/misc/help2man/Makefile 463329 2018-03-01 15:19:18Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	help2man
 PORTVERSION=	1.47.6
