@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $FreeBSD: head/devel/qt5-dbus/Makefile 473503 2018-06-28 17:39:53Z tcberner $
 
 PORTNAME=	dbus
 DISTVERSION=	${QT5_VERSION}
