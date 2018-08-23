@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: head/www/p5-HTML-Parser/Makefile 474242 2018-07-09 08:40:17Z mat $
+# $FreeBSD$
 
 PORTNAME=	HTML-Parser
 PORTVERSION=	3.72
