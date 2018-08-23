@@ -1,4 +1,4 @@
-# $FreeBSD: head/security/pinentry-tty/Makefile 375494 2014-12-24 22:33:57Z makc $
+# $FreeBSD$
 
 PORTNAME=	pinentry
 PORTREVISION=	0
