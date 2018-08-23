@@ -1,5 +1,5 @@
 # Created by: t.vanklaveren@student.utwente.nl
-# $FreeBSD: head/audio/libogg/Makefile 463123 2018-02-27 13:03:48Z mat $
+# $FreeBSD$
 
 PORTNAME=	libogg
 PORTVERSION=	1.3.3
