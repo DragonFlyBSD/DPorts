@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: head/devel/p5-DateTime-TimeZone/Makefile 471877 2018-06-06 18:57:43Z jadawin $
+# $FreeBSD$
 
 PORTNAME=	DateTime-TimeZone
 PORTVERSION=	2.19
