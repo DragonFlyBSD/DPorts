@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: head/converters/fribidi/Makefile 412342 2016-04-01 13:18:17Z mat $
+# $FreeBSD$
 
 PORTNAME=	fribidi
 PORTVERSION=	0.19.7
