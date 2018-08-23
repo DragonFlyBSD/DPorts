@@ -1,5 +1,5 @@
 # Created by: giffunip@asme.org
-# $FreeBSD$
+# $FreeBSD: head/archivers/lzo2/Makefile 436863 2017-03-24 23:58:19Z mandree $
 
 PORTNAME=	lzo2
 PORTVERSION=	2.10
