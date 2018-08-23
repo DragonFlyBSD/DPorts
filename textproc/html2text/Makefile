@@ -1,5 +1,5 @@
 # Created by: Simon 'corecode' Schubert <corecode@corecode.ath.cx>
-# $FreeBSD$
+# $FreeBSD: head/textproc/html2text/Makefile 409279 2016-02-21 10:35:30Z amdmi3 $
 
 PORTNAME=	html2text
 PORTVERSION=	1.3.2a
