@@ -1,5 +1,5 @@
 # Created by: Dave Grochowski
-# $FreeBSD$
+# $FreeBSD: head/devel/gccmakedep/Makefile 412346 2016-04-01 14:00:51Z mat $
 
 PORTNAME=	gccmakedep
 PORTVERSION=	1.0.3
