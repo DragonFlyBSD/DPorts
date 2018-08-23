@@ -1,5 +1,5 @@
 # Created by: Muhammad Moinur Rahman <5u623l20@gmail.com>
-# $FreeBSD$
+# $FreeBSD: head/devel/py-enum34/Makefile 459514 2018-01-20 12:38:10Z sunpoet $
 
 PORTNAME=	enum34
 PORTVERSION=	1.1.6
