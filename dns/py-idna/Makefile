@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: head/dns/py-idna/Makefile 476560 2018-08-07 02:56:04Z koobs $
+# $FreeBSD$
 
 PORTNAME=	idna
 PORTVERSION=	2.7
