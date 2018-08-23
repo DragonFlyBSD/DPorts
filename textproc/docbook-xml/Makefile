@@ -1,4 +1,4 @@
-# $FreeBSD: head/textproc/docbook-xml/Makefile 424411 2016-10-21 12:51:40Z mat $
+# $FreeBSD$
 
 PORTNAME=	docbook
 PORTVERSION=	5.0
