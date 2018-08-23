@@ -1,5 +1,5 @@
 # Created by: Sergei Kolobov <sergei@kolobov.com>
-# $FreeBSD: head/security/libtasn1/Makefile 459431 2018-01-19 15:44:49Z novel $
+# $FreeBSD$
 
 PORTNAME=	libtasn1
 PORTVERSION=	4.13
