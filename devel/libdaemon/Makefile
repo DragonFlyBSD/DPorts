@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: head/devel/libdaemon/Makefile 472297 2018-06-13 09:04:32Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	libdaemon
 PORTVERSION=	0.14
