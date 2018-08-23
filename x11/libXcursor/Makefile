@@ -1,8 +1,9 @@
 # Created by: Eric Anholt <anholt@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/x11/libXcursor/Makefile 476013 2018-07-31 18:41:30Z zeising $
 
 PORTNAME=	libXcursor
 PORTVERSION=	1.1.15
+PORTREVISION=	1
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
@@ -11,8 +12,7 @@ COMMENT=	X client-side cursor loading library
 LICENSE=	MIT
 
 XORG_CAT=	lib
-USE_XORG=	xrender x11 xfixes fixesproto xproto:both \
-		xextproto
+USE_XORG=	xrender x11 xfixes xorgproto
 
 USES+=	cpe
 CPE_PRODUCT=	libxcursor
