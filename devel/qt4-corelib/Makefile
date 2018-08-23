@@ -1,5 +1,5 @@
 # Created by: lofi@FreeBSD.org
-# $FreeBSD: head/devel/qt4-corelib/Makefile 473551 2018-06-29 14:22:11Z jbeich $
+# $FreeBSD$
 
 PORTNAME=	corelib
 DISTVERSION=	${QT4_VERSION}
