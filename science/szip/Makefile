@@ -1,5 +1,5 @@
 # Created by: glewis
-# $FreeBSD: head/science/szip/Makefile 471837 2018-06-06 12:13:19Z antoine $
+# $FreeBSD$
 
 PORTNAME=	szip
 PORTVERSION=	2.1
