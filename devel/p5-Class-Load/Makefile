@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/p5-Class-Load/Makefile 472925 2018-06-20 19:37:04Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Class-Load
 PORTVERSION=	0.25
