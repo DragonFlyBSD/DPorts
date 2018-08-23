@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $FreeBSD: head/devel/p5-Dist-CheckConflicts/Makefile 449893 2017-09-15 08:58:46Z mat $
 
 PORTNAME=	Dist-CheckConflicts
 PORTVERSION=	0.11
