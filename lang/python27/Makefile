@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $FreeBSD: head/lang/python27/Makefile 469635 2018-05-11 12:49:32Z wen $
 
 PORTNAME=	python
 PORTVERSION=	${PYTHON_PORTVERSION}
