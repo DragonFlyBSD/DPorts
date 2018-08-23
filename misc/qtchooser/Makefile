@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $FreeBSD: head/misc/qtchooser/Makefile 462177 2018-02-17 17:51:11Z sunpoet $
 
 PORTNAME=	qtchooser
 PORTVERSION=	39
