@@ -1,5 +1,5 @@
 # Created by: Nikos Ntarmos <ntarmos@ceid.upatras.gr>
-# $FreeBSD$
+# $FreeBSD: head/x11/xcb-util/Makefile 427509 2016-12-01 17:05:06Z garga $
 
 PORTNAME=	xcb-util
 PORTVERSION=	0.4.0
