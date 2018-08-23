@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/dns/py-dnspython/Makefile 472884 2018-06-20 17:05:41Z mat $
 
 PORTNAME=	dnspython
 PORTVERSION=	1.15.0
