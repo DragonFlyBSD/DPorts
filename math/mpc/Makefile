@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD$
+# $FreeBSD: head/math/mpc/Makefile 470764 2018-05-24 09:04:14Z amdmi3 $
 
 PORTNAME=	mpc
 PORTVERSION=	1.1.0
