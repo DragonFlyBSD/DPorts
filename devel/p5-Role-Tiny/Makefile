@@ -1,5 +1,5 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/devel/p5-Role-Tiny/Makefile 453774 2017-11-08 23:30:02Z sunpoet $
 
 PORTNAME=	Role-Tiny
 PORTVERSION=	2.000006
