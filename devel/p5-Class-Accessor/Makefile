@@ -1,5 +1,5 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD: head/devel/p5-Class-Accessor/Makefile 452721 2017-10-23 18:26:56Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	Class-Accessor
 PORTVERSION=	0.51
