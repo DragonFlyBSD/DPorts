@@ -1,5 +1,5 @@
 # Created by: jkh
-# $FreeBSD: head/devel/swig30/Makefile 451537 2017-10-08 13:49:08Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	swig
 PORTVERSION=	3.0.12
