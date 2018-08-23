@@ -1,5 +1,5 @@
 # Created by: Brent J. Nordquist <bjn@visi.com>
-# $FreeBSD: head/databases/gdbm/Makefile 444463 2017-06-27 13:46:53Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	gdbm
 PORTVERSION=	1.13
