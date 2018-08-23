@@ -1,5 +1,5 @@
 # Created by: Jerry Hicks
-# $FreeBSD: head/devel/bison/Makefile 459020 2018-01-15 07:35:04Z antoine $
+# $FreeBSD$
 
 PORTNAME=	bison
 PORTVERSION=	3.0.4
