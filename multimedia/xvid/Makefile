@@ -1,5 +1,5 @@
 # Created by: Michael Nottebrock <michaelnottebrock@gmx.net> et al
-# $FreeBSD$
+# $FreeBSD: head/multimedia/xvid/Makefile 476404 2018-08-05 10:24:48Z riggs $
 
 PORTNAME=	xvid
 PORTVERSION=	1.3.5
@@ -36,6 +36,12 @@ OPTIONS_DEFINE=	OPTIMIZED_CFLAGS
 .if ${ARCH} == "x86_64"
 CONFIGURE_TARGET=	x86_64-portbld-freebsd${OSREL}
 .endif
+
+.if ${ARCH}=="i386"
+# relocation against symbol in readonly segment
+LLD_UNSAFE=	yes
+.endif
+
 .if ${ARCH} == "x86_64" || ${ARCH} == "i386"
 BUILD_DEPENDS+=	nasm:devel/nasm
 .endif
