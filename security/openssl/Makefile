@@ -1,9 +1,9 @@
 # Created by: Dirk Froemberg <dirk@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/security/openssl/Makefile 477164 2018-08-14 15:12:32Z joneum $
 
 PORTNAME=	openssl
-PORTVERSION=	1.0.2o
-PORTREVISION=	4
+PORTVERSION=	1.0.2p
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	security devel
 MASTER_SITES=	http://www.openssl.org/source/ \
@@ -62,6 +62,7 @@ USE_PERL5=	build
 MAKE_ARGS+=	WHOLE_ARCHIVE_FLAG=--whole-archive
 MAKE_ENV+=	LIBRPATH="${PREFIX}/lib" GREP_OPTIONS=
 SUB_FILES=	pkg-message
+TEST_TARGET=	test
 
 MAKE_JOBS_UNSAFE=	yes
 
@@ -111,7 +112,7 @@ CFLAGS+= -Werror -Qunused-arguments
 .endif
 
 .if ${PREFIX} == /usr
-IGNORE=	the OpenSSL port can not be installed over the base version
+IGNORE=	the OpenSSL port cannot be installed over the base version
 .endif
 
 OPENSSLDIR?=	${PREFIX}/openssl
@@ -154,10 +155,5 @@ post-install-SHARED-on:
 post-install-DOCS-on:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/openssl.txt ${STAGEDIR}${DOCSDIR}/
-
-test: build
-	cd ${WRKSRC} && ${MAKE} test
-
-regression-test:	test
 
 .include <bsd.port.post.mk>
