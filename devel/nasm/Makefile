@@ -1,5 +1,5 @@
 # Created by: Murray Stokely <murray@cdrom.com>
-# $FreeBSD$
+# $FreeBSD: head/devel/nasm/Makefile 475358 2018-07-26 09:37:50Z amdmi3 $
 
 PORTNAME=	nasm
 PORTVERSION=	2.13.03
@@ -12,6 +12,7 @@ MAINTAINER=	zeising@FreeBSD.org
 COMMENT=	General-purpose multi-platform x86 and amd64 assembler
 
 LICENSE=	BSD2CLAUSE
+LICENSE_FILE=	${WRKSRC}/LICENSE
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	ac_cv_func_strspn=yes
