@@ -1,5 +1,5 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/textproc/libxslt/Makefile 465962 2018-03-30 11:37:02Z bapt $
 
 PORTNAME=	libxslt
 PORTVERSION=	1.1.32
