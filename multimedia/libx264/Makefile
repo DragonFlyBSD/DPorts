@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
-# $FreeBSD: head/multimedia/libx264/Makefile 476802 2018-08-10 00:55:12Z jbeich $
+# $FreeBSD$
 #
 # Updating notes: see multimedia/x264/Makefile.
 
