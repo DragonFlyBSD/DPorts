@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/libpciaccess/Makefile 471087 2018-05-29 09:04:18Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	libpciaccess
 PORTVERSION=	0.13.5
