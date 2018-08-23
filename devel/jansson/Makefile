@@ -1,5 +1,5 @@
 # Created by: vanilla@
-# $FreeBSD: head/devel/jansson/Makefile 461567 2018-02-12 09:03:44Z vanilla $
+# $FreeBSD$
 
 PORTNAME=	jansson
 PORTVERSION=	2.11
