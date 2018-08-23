@@ -4,6 +4,7 @@
 PORTNAME=	gcc6-aux
 PORTVERSION=	${SNAPSHOT}
 PORTREVISION=	${MAIN_PR}
+PORTEPOCH=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://downloads.dragonlace.net/src/:boot \
 		LOCAL/marino:boot GCC/${MS_SUBDIR}
@@ -16,6 +17,7 @@ LICENSE=	GPLv3 GPLv3RLE
 LICENSE_COMB=	multi
 
 BROKEN_FreeBSD_12_aarch64=	fails to configure: cannot compute sizeof (long long)
+BROKEN_aarch64=			fails to configure: ./config.h:556:15: two or more data types in declaration specifiers
 
 .include "${.CURDIR}/Makefile.common"
 
