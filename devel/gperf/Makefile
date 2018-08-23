@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $FreeBSD: head/devel/gperf/Makefile 469491 2018-05-09 21:40:17Z sunpoet $
 
 PORTNAME=	gperf
 PORTVERSION=	3.0.3
