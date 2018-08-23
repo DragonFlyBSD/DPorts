@@ -1,5 +1,5 @@
 # Created by: Pawel Worach
-# $FreeBSD$
+# $FreeBSD: head/x11-fonts/font-util/Makefile 473808 2018-07-03 09:07:35Z amdmi3 $
 
 PORTNAME=	font-util
 PORTVERSION=	1.3.1
