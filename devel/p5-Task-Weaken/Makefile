@@ -1,5 +1,5 @@
 # Created by: lbr@FreeBSD.org
-# $FreeBSD$
+# $FreeBSD: head/devel/p5-Task-Weaken/Makefile 467981 2018-04-22 08:55:14Z sunpoet $
 
 PORTNAME=	Task-Weaken
 PORTVERSION=	1.06
