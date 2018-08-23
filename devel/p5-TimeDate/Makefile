@@ -1,5 +1,5 @@
 # Created by: Andreas Klemm <andreas@klemm.gtn.com>
-# $FreeBSD: head/devel/p5-TimeDate/Makefile 463946 2018-03-09 09:03:09Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	TimeDate
 PORTVERSION=	2.30
