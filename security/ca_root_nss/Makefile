@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $FreeBSD: head/security/ca_root_nss/Makefile 473361 2018-06-26 00:54:43Z jbeich $
 
 PORTNAME=	ca_root_nss
 PORTVERSION=	${VERSION_NSS}
