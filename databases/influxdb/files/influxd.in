@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/databases/influxdb/files/influxd.in 449830 2017-09-14 11:17:52Z eugen $
+# $FreeBSD: head/databases/influxdb/files/influxd.in 477862 2018-08-23 09:25:23Z miwi $
 
 # PROVIDE: influxd
 # REQUIRE: DAEMON NETWORKING
@@ -37,7 +37,7 @@ load_rc_config $name
 : ${influxd_facility:="daemon"}
 : ${influxd_priority:="info"}
 : ${influxd_conf:="%%PREFIX%%/etc/${name}.conf"}
-: ${influxd_options:="${influxdb_flags} -config=${influxd_conf}"}
+: ${influxd_options:="${influxd_flags} -config=${influxd_conf}"}
 
 # daemon
 influxd_pidfile="%%INFLUXD_PIDDIR%%${name}.pid"
