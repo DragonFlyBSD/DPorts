@@ -3,12 +3,15 @@
 
 PORTNAME=	pop3vscan
 PORTVERSION=	0.4
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=	mail
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Transparent POP3-Proxy with virus-scanning capabilities
+
+DEPRECATED=	Unmaintained upstream
+EXPIRATION_DATE=	2018-09-15
 
 LIB_DEPENDS=	libpcre.so:devel/pcre
 
