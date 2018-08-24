@@ -3,7 +3,7 @@
 
 PORTNAME=	annoyance-filter
 PORTVERSION=	1.0d
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	mail
 MASTER_SITES=	SF/annoyancefilter/annoyancefilter/${PORTVERSION} \
 		http://www.fourmilab.ch/annoyance-filter/
@@ -15,6 +15,9 @@ LICENSE=	PD GPLv2+
 LICENSE_COMB=	multi
 LICENSE_FILE_PD=	${WRKSRC}/COPYING
 LICENSE_FILE_GPLv2+ =	${WRKSRC}/COPYING.GNU
+
+DEPRECATED=	Unmaintained upstream
+EXPIRATION_DATE=	2018-09-15
 
 USE_GCC=	yes
 GNU_CONFIGURE=	yes
