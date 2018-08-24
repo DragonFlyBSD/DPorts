@@ -3,6 +3,7 @@
 
 PORTNAME=	quagga
 PORTVERSION=	1.2.4
+PORTREVISION=	1
 CATEGORIES=	net ipv6
 MASTER_SITES=	SAVANNAH
 
@@ -13,7 +14,7 @@ LICENSE=	GPLv2
 
 BUILD_DEPENDS=	gawk:lang/gawk
 
-CONFLICTS=	frr3 frr4 openbgpd pimd zebra
+CONFLICTS=	frr3 frr4 frr5 openbgpd pimd zebra
 
 USES=		compiler:c11 cpe gmake libtool makeinfo \
 		perl5 readline ssl
