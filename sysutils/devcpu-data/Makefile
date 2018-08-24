@@ -2,15 +2,15 @@
 # $FreeBSD$
 
 PORTNAME=	data
-PORTVERSION=	1.17
+PORTVERSION=	1.19
 CATEGORIES=	sysutils
-MASTER_SITES=	https://downloadmirror.intel.com/27776/eng/:intel \
+MASTER_SITES=	https://downloadmirror.intel.com/28039/eng/:intel \
 		LOCAL/sbruno:amd
 PKGNAMEPREFIX=	devcpu-
-DISTFILES=	microcode-20180425.tgz:intel \
+DISTFILES=	microcode-20180807.tgz:intel \
 		amd64-microcode.20180525.tar.xz:amd
 
-MAINTAINER=	sbruno@freebsd.org
+MAINTAINER=	sbruno@FreeBSD.org
 COMMENT=	Intel and AMD CPUs microcode updates
 
 LICENSE=	EULA
