@@ -1,0 +1,11 @@
+--- usr.sbin/httpd/Makefile.orig	2018-08-08 13:59:12.845042000 +0200
++++ usr.sbin/httpd/Makefile	2018-08-08 13:59:23.825280000 +0200
+@@ -38,7 +38,7 @@ SRCS+=  buffer.c \
+ 
+ MAN=		obhttpd.8 obhttpd.conf.5
+ 
+-LDADD=		${LIBEVENT} -ltls -lssl -lcrypto -lutil -lcrypt -lprocstat
++LDADD=		${LIBEVENT} -ltls -lssl -lcrypto -lutil -lcrypt
+ SRCS+=		patterns.c
+ MAN+=		patterns.7
+ 
