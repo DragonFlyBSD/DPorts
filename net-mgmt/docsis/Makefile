@@ -1,0 +1,37 @@
+# Created by: James Flemer <jflemer@acm.jhu.edu>
+# $FreeBSD$
+
+PORTNAME=	docsis
+PORTVERSION=	0.9.8
+CATEGORIES=	net-mgmt
+
+MAINTAINER=	plcmaechler@gmail.com
+COMMENT=	Binary configuration file encoder/decoder
+
+LICENSE=	GPLv2+
+
+BUILD_DEPENDS=	gm4:devel/m4 \
+		flex:textproc/flex
+LIB_DEPENDS=	libnetsnmp.so:net-mgmt/net-snmp \
+		libpkg.so:ports-mgmt/pkg
+
+USES=		autoreconf bison libtool ssl
+USE_GITHUB=	yes
+GNU_CONFIGURE=	yes
+
+PLIST_SUB=	MIBS=share/snmp/mibs
+
+OPTIONS_DEFINE=	DOCS EXAMPLES
+
+GH_ACCOUNT=	rlaager
+GH_TAGNAME=	upstream/${PORTVERSION}
+
+post-patch:
+	@${REINPLACE_CMD} -e \
+		'/^htmldocdir/s|share/docsis|share/doc/docsis|' \
+		${WRKSRC}/doc/Makefile.am
+	@${REINPLACE_CMD} -e \
+		'/^examplesdir/s|docsis/examples|examples/docsis|' \
+		${WRKSRC}/examples/Makefile.am
+
+.include <bsd.port.mk>
