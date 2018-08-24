@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#$FreeBSD: head/net/sniproxy/files/sniproxy.in 468034 2018-04-22 15:25:48Z krion $
+#$FreeBSD: head/net/sniproxy/files/sniproxy.in 475258 2018-07-24 14:50:33Z krion $
 #
 
 # PROVIDE: sniproxy
@@ -22,7 +22,7 @@ rcvar=sniproxy_enable
 
 command=%%PREFIX%%/sbin/sniproxy
 
-pidfile=${sniproxy_pidfile:-"/var/run/sniproxy.pid
+pidfile=${sniproxy_pidfile:-"/var/run/sniproxy.pid"}
 
 sniproxy_enable=${sniproxy_enable:-"NO"}
 sniproxy_conf=${sniproxy_conf:-"%%PREFIX%%/etc/sniproxy.conf"}
