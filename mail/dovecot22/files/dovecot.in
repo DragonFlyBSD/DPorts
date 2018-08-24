@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/mail/dovecot22/files/dovecot.in 472344 2018-06-13 20:59:52Z ler $
+# $FreeBSD: head/mail/dovecot22/files/dovecot.in 477601 2018-08-19 21:00:17Z ler $
 #
 
 # PROVIDE: dovecot
@@ -63,7 +63,7 @@ for config in ${dovecot_config}; do
 	required_files="${config}"
 	command_args="-c ${config}"
 	if [ -s ${config} ]; then
-		base_dir=$(${command} ${command_args} -a | /usr/bin/awk -F '= ' '/^base_dir =/ { print $2 }')
+		base_dir=$(${command} ${command_args} -a 2>/dev/null | /usr/bin/awk -F '= ' '/^base_dir =/ { print $2 }')
 		pidfile="${base_dir}/master.pid"
 	else
 		echo "==Error=="
