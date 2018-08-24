@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	redis
-DISTVERSION=	5.0-rc3
+DISTVERSION=	5.0-rc4
 CATEGORIES=	databases
 PKGNAMESUFFIX=	-devel
 
