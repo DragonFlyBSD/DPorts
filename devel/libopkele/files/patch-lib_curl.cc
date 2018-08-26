@@ -1,6 +1,4 @@
-Ease up -std=c++11
-
---- lib/curl.cc.orig	2008-06-25 23:50:26.000000000 +0300
+--- lib/curl.cc.orig	2018-07-07 18:25:16 UTC
 +++ lib/curl.cc
 @@ -45,7 +45,7 @@ namespace opkele {
  	    || (r=easy_setopt(CURLOPT_MAXREDIRS,5))
