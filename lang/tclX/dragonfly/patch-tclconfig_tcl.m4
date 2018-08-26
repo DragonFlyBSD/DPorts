@@ -1,20 +1,20 @@
---- tclconfig/tcl.m4.orig	2005-11-21 18:54:51.000000000 +0000
+--- tclconfig/tcl.m4.orig	2018-08-26 19:48:33 UTC
 +++ tclconfig/tcl.m4
-@@ -1462,7 +1462,7 @@ dnl AC_CHECK_TOOL(AR, ar, :)
- 	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.a'
- 	    TCL_LIB_VERSIONS_OK=nodots
+@@ -1706,7 +1706,7 @@ AC_DEFUN([TEA_CONFIG_CFLAGS], [
+ 	    	LDFLAGS="$LDFLAGS -pthread"
+ 	    ])
  	    ;;
 -	FreeBSD-*)
 +	DragonFly-*|FreeBSD-*)
- 	    # FreeBSD 3.* and greater have ELF.
+ 	    # This configuration from FreeBSD Ports.
  	    SHLIB_CFLAGS="-fPIC"
- 	    SHLIB_LD="ld -Bshareable -x"
-@@ -1907,7 +1907,7 @@ dnl AC_CHECK_TOOL(AR, ar, :)
- 		    ;;
- 		IRIX*)
- 		    ;;
--		NetBSD-*|FreeBSD-*)
-+		NetBSD-*|FreeBSD-*|DragonFly-*)
- 		    ;;
- 		Darwin-*)
- 		    ;;
+ 	    SHLIB_LD="${CC} -shared"
+@@ -2068,7 +2068,7 @@ dnl # preprocessing tests use only CPPFL
+ 	    BSD/OS*) ;;
+ 	    CYGWIN_*|MINGW32_*|MINGW64_*) ;;
+ 	    IRIX*) ;;
+-	    NetBSD-*|FreeBSD-*|OpenBSD-*) ;;
++	    NetBSD-*|FreeBSD-*|OpenBSD-*|Dragonfly-*) ;;
+ 	    Darwin-*) ;;
+ 	    SCO_SV-3.2*) ;;
+ 	    windows) ;;
