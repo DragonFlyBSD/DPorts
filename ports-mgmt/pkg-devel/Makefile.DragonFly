@@ -20,12 +20,11 @@ dfly-patch:
 		-e 's|lssl|lprivate_ssl|' \
 		-e 's|lcrypto|lprivate_crypto|' \
 		-e 's|la_rpath = |la_rpath = -R /lib/priv |' \
-		${WRKSRC}/libpkg/Makefile.in \
-		${WRKSRC}/src/Makefile.in \
-		${WRKSRC}/tests/Makefile.in
-	${REINPLACE_CMD} \
-		-e '/OS_CFLAGS=/ s|SOURCE|SOURCE -I/usr/include/priv|' \
-		-e '/OS_LDFLAGS=/ s|=|="-L/usr/lib/priv -R/lib/priv"|' ${WRKSRC}/configure
+		${WRKSRC}/libpkg/Makefile.autosetup \
+		${WRKSRC}/src/Makefile.autosetup \
+		${WRKSRC}/tests/Makefile.autosetup
+CFLAGS+=	-I/usr/include/priv
+LDFLAGS+=	-L/usr/lib/priv -R/lib/priv
 .endif
 
 post-stage:
