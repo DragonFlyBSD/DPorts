@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	libvirt
-PORTVERSION=	4.5.0
+PORTVERSION=	4.6.0
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://libvirt.org/sources/ \
 		ftp://libvirt.org/libvirt/
@@ -64,7 +65,7 @@ SASL_LIB_DEPENDS=	libsasl2.so:security/cyrus-sasl2
 
 XEN_CONFIGURE_WITH=	libxl
 XEN_CFLAGS=	-I${LOCALBASE}/include
-XEN_LIB_DEPENDS=	libxenlight.so:sysutils/xen-tools
+XEN_LIB_DEPENDS=	libxenlight.so:sysutils/xen-tools47
 
 LIBSSH_CONFIGURE_WITH=	libssh
 LIBSSH_LIB_DEPENDS=	libssh.so:security/libssh
@@ -105,7 +106,7 @@ USE_PERL5=	build
 USE_LDCONFIG=	yes
 INSTALL_TARGET=	install-strip
 TEST_TARGET=	check
-SHLIB_VER=	0.4005.0
+SHLIB_VER=	0.4006.0
 PLIST_SUB+=	PORTVERSION="-${PORTVERSION}" \
 		SHLIB_VER=${SHLIB_VER}
 PORTDOCS=	*
@@ -117,10 +118,10 @@ SUB_LIST+=	PORTVERSION="-${PORTVERSION}"
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MQEMU} || ${PORT_OPTIONS:MNSS}
-LIB_DEPENDS+=		libyajl.so:devel/yajl
-CONFIGURE_ARGS+=	--with-yajl=${LOCALBASE}
+LIB_DEPENDS+=		libjansson.so:devel/jansson
+CONFIGURE_ARGS+=	--with-jansson
 .else
-CONFIGURE_ARGS+=	--without-yajl
+CONFIGURE_ARGS+=	--without-jansson
 .endif
 
 .if !${PLIST_SUB:MXEN}
