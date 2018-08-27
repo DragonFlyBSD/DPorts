@@ -2,7 +2,7 @@
 
 PORTNAME=	liteide
 DISTVERSIONPREFIX=	x
-DISTVERSION=	33.3
+DISTVERSION=	34.1
 CATEGORIES=	devel editors
 
 MAINTAINER=	dg@syrec.org
@@ -11,32 +11,52 @@ COMMENT=	Simple, open source, cross-platform Go IDE
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/LICENSE.LGPL
 
-WRKSRC_SUBDIR=	liteidex
+BUILD_DEPENDS=	go:lang/go
+RUN_DEPENDS=	go:lang/go \
+		gocode:devel/go-gocode
+
+FLAVORS=	qt5 qt4
+FLAVOR?=	${FLAVORS:[1]}
+
+qt4_CONFLICTS_INSTALL=	${PORTNAME}
+qt4_PKGNAMESUFFIX=	-qt4
+qt5_CONFLICTS_INSTALL=	${PORTNAME}-qt4
 
 USES=		qmake
+USE_GL=		gl
 USE_LDCONFIG=	${PREFIX}/lib/${PORTNAME}
+
 USE_GITHUB=	yes
 GH_ACCOUNT=	visualfc
-LDFLAGS+=	-Wl,--as-needed
+GH_TUPLE=	visualfc:gotools:b908c25:gotools/src/github.com/visualfc/gotools
+
+.if ${FLAVOR:U} == qt4
+USES+=		qt:4
+USE_QT=		corelib gui moc_build network rcc_build uic_build webkit xml
+PLIST_SUB+=	QT4="" NO_QT4="@comment "
+.else
+USES+=		qt:5
+USE_QT=		buildtools_build core gui network printsupport widgets xml
+PLIST_SUB+=	QT4="@comment " NO_QT4=""
+.endif
+
+WRKSRC_SUBDIR=	liteidex
 
 PORTDOCS=	CONTRIBUTORS README.md
 
-ICON_SIZES=	16 24 32 48 64 128
-
-OPTIONS_DEFINE=		DEBUG DOCS
-OPTIONS_SINGLE=		QT
-OPTIONS_SINGLE_QT=	QT4 QT5
-OPTIONS_DEFAULT=	QT5
-OPTIONS_SUB=		yes
+OPTIONS_DEFINE=	DEBUG DOCS
+OPTIONS_SUB=	yes
 
 DEBUG_CONFIGURE_ENABLE=	debug
 
-QT4_USES=	qt:4
-QT4_USE=	QT=corelib,gui,network,webkit,xml,moc_build,rcc_build,uic_build
-QT5_USES=	qt:5
-QT5_USE=	QT=core,gui,network,printsupport,widgets,xml,buildtools_build
+ICON_SIZES=	16 24 32 48 64 128
+
+post-build:
+	cd ${WRKSRC}/${GH_SUBDIR_gotools} && \
+		${SETENV} ${MAKE_ENV} GOPATH=${WRKSRC} go build
 
 post-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/${GH_SUBDIR_gotools}/gotools ${STAGEDIR}${PREFIX}/bin
 	@${MKDIR} ${STAGEDIR}${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/liteide.desktop ${STAGEDIR}${PREFIX}/share/applications
 	(cd ${WRKSRC}/deploy && ${COPYTREE_SHARE} . ${STAGEDIR}${DATADIR})
