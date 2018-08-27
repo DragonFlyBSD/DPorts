@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/games/minecraft-server/files/minecraft.in 399340 2015-10-15 14:14:21Z mat $
+# $FreeBSD: head/games/minecraft-server/files/minecraft.in 476166 2018-08-01 08:30:38Z 0mp $
 # PROVIDE: minecraft
 # REQUIRE: LOGIN
 # KEYWORD: shutdown
@@ -49,7 +49,7 @@ minecraft_start()
 		fi
 		echo "Starting ${name}."
 		cd %%PREFIX%%/minecraft-server
-		su mcserver -c "%%LOCALBASE%%/bin/tmux new-session -s minecraft -d '%%LOCALBASE%%/bin/java -Xmx${minecraft_memx} -Xms${minecraft_mems} ${minecraft_args} -jar %%PREFIX%%/minecraft-server/minecraft_server.%%VERSION%%.jar nogui'"
+		su mcserver -c "%%LOCALBASE%%/bin/tmux new-session -s minecraft -d '%%LOCALBASE%%/bin/java -Xmx${minecraft_memx} -Xms${minecraft_mems} ${minecraft_args} -jar %%PREFIX%%/minecraft-server/server.jar nogui'"
 	fi
 }
 
