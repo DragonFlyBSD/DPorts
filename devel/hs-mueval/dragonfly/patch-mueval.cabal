@@ -1,0 +1,16 @@
+--- mueval.cabal.orig	2016-08-16 12:20:44 UTC
++++ mueval.cabal
+@@ -40,11 +40,13 @@ executable mueval-core
+            main-is:       main.hs
+            build-depends: base
+            ghc-options:   -Wall -static -threaded
++           extra-libraries: m
+ 
+ executable mueval
+            main-is:       watchdog.hs
+            build-depends: base
+            ghc-options:   -Wall -static -threaded
++           extra-libraries: m
+ 
+ source-repository head
+   type:     git
