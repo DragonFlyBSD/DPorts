@@ -1,4 +1,4 @@
---- SConstruct.intermediate	2016-08-02 17:45:02 UTC
+--- SConstruct.orig	2018-08-27 20:18:01 UTC
 +++ SConstruct
 @@ -594,6 +594,10 @@ if not env.GetOption('clean') and \
          conf.Define('HOST_OS_LINUX')
@@ -11,20 +11,19 @@
      elif fnmatch.fnmatch(host_os, 'netbsd*'):
  	osname = "NetBSD"
  	conf.Define('HOST_OS_NETBSD')
-@@ -872,6 +876,8 @@ env.AppendUnique(CFLAGS = [
-     '-Wstrict-prototypes',
+@@ -859,6 +863,8 @@ env.AppendUnique(CFLAGS = [
      '-Wnested-externs',
      '-Wno-unused-function',
+     '-Wno-unused-parameter',
 +    '-Wno-maybe-uninitialized',
 +    '-Wno-error',
      '-pipe',
      ])
  
-@@ -883,7 +888,11 @@ env.AppendUnique(CXXFLAGS = [
+@@ -870,6 +876,11 @@ env.AppendUnique(CXXFLAGS = [
+     '-Wno-sign-compare', 
      '-Wpointer-arith',
-     '-Wcast-align',
      '-Woverloaded-virtual',
--    '-ftemplate-depth-25',
 +    '-Wno-cast-qual',
 +    '-Wno-error',
 +    '-fpermissive',
