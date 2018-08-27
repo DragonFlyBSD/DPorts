@@ -1,15 +1,6 @@
---- configure.orig	2015-04-22 17:11:11.000000000 +0300
+--- configure.orig	2018-06-10 12:14:00 UTC
 +++ configure
-@@ -420,7 +420,7 @@ elif test "$have_gcc" = yes; then
- 	fi
- 
- 	case $cxx_version in
--		4.[7-9]|4.[7-9].[0-9]|4.[7-9].[0-9][-.]*|[5-6].[0-9]|[5-6].[0-9].[0-9]|[5-6].[0-9].[0-9][-.]*)
-+		4.[7-9]|4.[7-9].[0-9]|4.[7-9].[0-9][-.]*|[5-6].[0-9]|[5-6].[0-9].[0-9]|[5-6].[0-9].[0-9][-.]*|[6-9].[0-9])
- 			_cxx_major=`echo $cxx_version | cut -d '.' -f 1`
- 			_cxx_minor=`echo $cxx_version | cut -d '.' -f 2`
- 			cxx_version="$cxx_version, ok"
-@@ -515,7 +515,7 @@ else
+@@ -524,7 +524,7 @@ else
  	echo_n "Checking hosttype... "
  	echo $_host_os
  	case $_host_os in
