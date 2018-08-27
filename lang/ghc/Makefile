@@ -3,6 +3,7 @@
 
 PORTNAME=	ghc
 PORTVERSION=	${GHC_VERSION}
+PORTREVISION=	1
 CATEGORIES=	lang haskell
 MASTER_SITES=	http://www.haskell.org/ghc/dist/${PORTVERSION}/:source \
 		http://leaf.dragonflybsd.org/~marino/dports-src/:dflyboot \
