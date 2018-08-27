@@ -1,0 +1,13 @@
+TIMESTAMP = 1532436613
+SHA256 (pdfbox-2.0.11.jar) = 756785cafdd309e7d464c3e54228e25674ec6dece7a1e8100e8fde353fa1ce95
+SIZE (pdfbox-2.0.11.jar) = 2524580
+SHA256 (fontbox-2.0.11.jar) = 5cc9968bc41417f88995fad1de15204f3b9481588cc79e9c627c596cc8faefde
+SIZE (fontbox-2.0.11.jar) = 1557078
+SHA256 (preflight-2.0.11.jar) = b6906e2a816b12eb85502d20e1f91240dc7c6841c3ac548f00c334631454cc6a
+SIZE (preflight-2.0.11.jar) = 245970
+SHA256 (xmpbox-2.0.11.jar) = 5b4c6c76342f0e4b3038427d0c3266a4844ea2b8bbe5f21920e9ccfd9f464b41
+SIZE (xmpbox-2.0.11.jar) = 131862
+SHA256 (pdfbox-tools-2.0.11.jar) = 979a94672cf55cdfc5528b44176d32c3dcb19440d96a177de9889accfe58d8c2
+SIZE (pdfbox-tools-2.0.11.jar) = 72756
+SHA256 (pdfbox-debugger-2.0.11.jar) = ad9f7fc6be65fda431d60c5028e7ba7cf9cbafeb9de71f37c993aec02dc79f43
+SIZE (pdfbox-debugger-2.0.11.jar) = 241545
