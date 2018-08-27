@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/www/py-graphite-api/files/graphiteapi.in 473979 2018-07-05 18:23:22Z dch $
+# $FreeBSD: head/www/py-graphite-api/files/graphiteapi.in 476828 2018-08-10 11:40:28Z dch $
 #
 
 # PROVIDE: graphiteapi
@@ -55,8 +55,7 @@ start_precmd="start_precmd"
 
 start_precmd()
 {
-    test -d "%%GRAPHITEAPI_LOGDIR%%" || install -d -o
-    ${graphiteapi_user} \
+    test -d "%%GRAPHITEAPI_LOGDIR%%" || install -d -o ${graphiteapi_user} \
         -g ${graphiteapi_group} -m 0750 "%%GRAPHITEAPI_LOGDIR%%"
     test -d "%%GRAPHITEAPI_TMPDIR%%" || install -d -o ${graphiteapi_user} \
         -g ${graphiteapi_group} -m 0750 "%%GRAPHITEAPI_TMPDIR%%"
