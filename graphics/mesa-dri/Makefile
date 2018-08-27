@@ -7,8 +7,7 @@ CATEGORIES=	graphics
 
 COMMENT=	OpenGL hardware acceleration drivers for DRI2+
 
-USE_XORG=	dri2proto dri3proto glproto presentproto x11 xdamage xext \
-		xfixes xshmfence xv xvmc
+USE_XORG=	xorgproto x11 xdamage xext xfixes xshmfence xv xvmc
 
 OPTIONS_DEFINE=	TEXTURE VAAPI VDPAU
 OPTIONS_DEFAULT=TEXTURE
