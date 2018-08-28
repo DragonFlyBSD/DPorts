@@ -3,7 +3,8 @@
 
 PORTNAME=	focuswriter
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.6.13
+DISTVERSION=	1.6.15
+PORTREVISION=	1
 CATEGORIES=	editors
 
 MAINTAINER=	lightside@gmx.com
@@ -24,7 +25,7 @@ USE_QT=		concurrent core gui multimedia network printsupport widgets \
 		buildtools_build linguisttools_build
 
 PORTDATA=	*
-PORTDOCS=	CREDITS NEWS README
+PORTDOCS=	ChangeLog CREDITS README
 
 OPTIONS_DEFINE=	DOCS
 
