@@ -1,6 +1,0 @@
-
-# XXX smth not right with atomics in gcc80
-# CMakeFiles/rpcs3.dir/Emu/Cell/SPUThread.cpp.o:SPUThread.cpp:function SPUThread::cpu_init(): error: undefined reference to '__atomic_store_16'
-.if exists (/usr/libexec/gcc80/CC)
-USE_GCC=	6
-.endif
