@@ -1,4 +1,2 @@
+# Current version breaks with gcc8
 # XXX no patches yet
-.if exists (/usr/libexec/gcc80/CC)
-USE_GCC=	6
-.endif
