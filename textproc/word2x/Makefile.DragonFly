@@ -1,4 +1,1 @@
 # fifo.h:65:21: error: using typedef-name 'fifo<T>::queue' after 'struct'
-.if exists (/usr/libexec/gcc80/CC)
-USE_GCC=	6
-.endif
