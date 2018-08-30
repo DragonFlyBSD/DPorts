@@ -1,0 +1,11 @@
+--- configure.ac.intermediate	2018-08-30 00:16:51 UTC
++++ configure.ac
+@@ -112,7 +112,7 @@ dnl AC_CANONICAL_HOST
+ case "$host" in
+   *-*-mingw*) ARCH="-D__WIN32__ -D__MINGW32__ -mwindows" ;;
+   *-*-cygwin) ARCH="-D__WIN32__ -D__CYGWIN__ -mwindows -mno-cygwin" ;;
+-  *-*-*bsd*)  ARCH="-D__BSD__" ;;
++  *-*-*bsd*|*-*-dragonfly*)  ARCH="-D__BSD__" ;;
+   *)          ARCH="-D__LINUX__" ;;
+ esac
+ CFLAGS="$CFLAGS $ARCH"
