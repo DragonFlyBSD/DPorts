@@ -1,3 +1,5 @@
 dfly-patch:
 	# why is this hack necessary on DF and not FreeBSD?
+.if defined(PACKAGE_BUILDING)
 	${LN} -s ${LOCALBASE}/bin/python2.7 ${LOCALBASE}/sbin/python
+.endif
