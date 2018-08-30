@@ -1837,7 +1837,7 @@ PKG_ORIGIN=		ports-mgmt/pkg-devel
 PKG_DEPENDS+=	${LOCALBASE}/sbin/pkg:${PKG_ORIGIN}
 .endif
 
-.if defined(USE_GCC)
+.if defined(USE_GCC) || defined(USE_GCC_VERSION)
 .include "${PORTSDIR}/Mk/bsd.df.gcc.mk"
 .else
 .  if !defined(USE_GNUSTEP)

@@ -3,8 +3,8 @@
 # The primary base compiler is used is possible, otherwise the ports default
 # is used unless there's a hard specification.
 #
-# For DragonFly 5.3+, the primary base compiler is gcc80,
-# for DragonFly 4.1+, the primary base compiler is gcc50 and for earlier
+# For DragonFly 5.4+, the primary base compiler is gcc80,
+# for DragonFly 4.1 - 5.3, the primary base compiler is gcc50 and for earlier
 # releases, the primary base compiler is gcc47.  The avoidance of the use of
 # the alternate compiler is intentional.
 
@@ -16,21 +16,13 @@ _INCLUDE_BSD_DF_GCC_MK=	yes
 .undef PORT_COMPILER
 .undef BASE_COMPILER
 
-.if ${USE_GCC} == 4.8 || ${USE_GCC} == 4.9
-PORT_COMPILER=${USE_GCC}
+.if ${USE_GCC_VERSION:M[678]}
+PORT_COMPILER=${USE_GCC_VERSION}
 .else
-.  if ${USE_GCC:M6*}
-PORT_COMPILER=6
-.  else
-.    if ${USE_GCC:tu} == NOT5 || ${USE_GCC:tu} == DEFAULT_NOT5
-PORT_COMPILER=${LANG_GCC_IS}
-.    else
-.     if exists (/usr/libexec/gcc80/CC)
+.  if exists (/usr/libexec/gcc80/CC)
 BASE_COMPILER=gcc80
-.     else
+.  else
 BASE_COMPILER=gcc50
-.     endif
-.    endif
 .  endif
 .endif
 
@@ -39,13 +31,8 @@ BASE_COMPILER=gcc50
 USE_BINUTILS=		yes
 V:=			${PORT_COMPILER:S/.//}
 X:=			${PORT_COMPILER:S/.//:S/-devel//}
-.  if "${PORT_COMPILER}" == "${LANG_GCC_IS}"
-BUILD_DEPENDS+=		gcc${X}:lang/gcc
-RUN_DEPENDS+=		gcc${X}:lang/gcc
-.  else
 BUILD_DEPENDS+=		gcc${X}:lang/gcc${V}
 RUN_DEPENDS+=		gcc${X}:lang/gcc${V}
-.  endif
 _GCC_RUNTIME:=		${LOCALBASE}/lib/gcc${V}
 
 CC:=			gcc${X}
@@ -67,7 +54,7 @@ MAKE_ENV+=		CCVER=${BASE_COMPILER}
 
 
 test-gcc:
-	@echo USE_GCC=${USE_GCC}
+	@echo USE_GCC_VERSION=${USE_GCC_VERSION}
 .if defined(IGNORE)
 	@echo "IGNORE: ${IGNORE}"
 .else
