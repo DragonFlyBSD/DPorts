@@ -1,6 +1,4 @@
-.if exists (/usr/libexec/gcc80/CC)
-USE_GCC=	6
-.endif
+# current version breaks with gcc80
 
 # zrj: not whole world uses amd64!
 dfly-patch:
