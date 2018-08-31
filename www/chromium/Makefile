@@ -45,8 +45,8 @@ USES=		compiler bison cpe desktop-file-utils \
 CPE_VENDOR=	google
 CPE_PRODUCT=	chrome
 USE_PERL5=	build
-USE_XORG=	scrnsaverproto x11 xcb xcomposite xcursor xext xdamage xfixes xi \
-		xproto xrandr xrender xscrnsaver xtst
+USE_XORG=	x11 xcb xcomposite xcursor xext xdamage xfixes xi \
+		xrandr xrender xscrnsaver xtst
 USE_GNOME=	atk glib20 gtk30
 MAKE_ARGS=	-C out/${BUILDTYPE}
 SHEBANG_FILES=	chrome/tools/build/linux/chrome-wrapper
