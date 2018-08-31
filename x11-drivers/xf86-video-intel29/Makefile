@@ -18,13 +18,10 @@ USE_GL=		gl
 
 USE_LDCONFIG=	yes
 XORG_CAT=	driver
-USE_XORG=	glproto \
-		pixman \
+USE_XORG=	pixman \
 		x11 \
 		xcomposite \
 		xext \
-		xf86driproto \
-		xineramaproto \
 		xrandr \
 		xrender \
 		xvmc
