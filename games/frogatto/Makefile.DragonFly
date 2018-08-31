@@ -1,5 +1,0 @@
-USE_CXXSTD=	gnu++98
-
-.if !defined(DPORTS_BUILDER)
-MANUAL_PACKAGE_BUILD=	huge (430M packaged)
-.endif
