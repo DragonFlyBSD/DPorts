@@ -10,13 +10,8 @@ BUILD_DEPENDS=	wayland>=1.9.0:graphics/wayland \
 
 MASTERDIR=	${.CURDIR}/../xorg-server
 DESCR=		${.CURDIR}/pkg-descr
-USE_XORG=	x11 xf86driproto glproto randrproto renderproto fixesproto \
-		dri2proto damageproto xcmiscproto xtrans inputproto \
-		xf86bigfontproto scrnsaverproto bigreqsproto \
-		resourceproto fontsproto videoproto \
-		compositeproto trapproto recordproto \
-		xineramaproto xinerama evieproto xkbfile xfont \
-		xau xdmcp xext fontenc xv pixman presentproto
+USE_XORG=	x11 xtrans xinerama xkbfile xfont \
+		xau xdmcp xext fontenc xv pixman
 
 CONFIGURE_ARGS=	--disable-kdrive --disable-xephyr --disable-dmx --disable-xvfb \
 		--disable-xwin --disable-xorg --enable-xwayland \
