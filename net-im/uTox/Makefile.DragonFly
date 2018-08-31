@@ -1,3 +1,0 @@
-
-# zrj: so that not to edit makefile
-MAKE_ARGS+= UNAME_S=FreeBSD
