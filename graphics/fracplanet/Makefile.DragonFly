@@ -1,1 +1,1 @@
-USE_CXXSTD=	gnu++98
+USE_CXXSTD=	c++11
