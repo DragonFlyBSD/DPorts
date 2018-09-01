@@ -1,0 +1,26 @@
+--- include/__locale.orig	2018-04-13 18:14:57 UTC
++++ include/__locale
+@@ -31,7 +31,8 @@
+ #elif defined(_NEWLIB_VERSION)
+ # include <support/newlib/xlocale.h>
+ #elif (defined(__APPLE__)      || defined(__FreeBSD__) \
+-    || defined(__EMSCRIPTEN__) || defined(__IBMCPP__))
++    || defined(__EMSCRIPTEN__) || defined(__IBMCPP__)) \
++  || defined(__DragonFly__)
+ # include <xlocale.h>
+ #elif defined(__Fuchsia__)
+ # include <support/fuchsia/xlocale.h>
+@@ -402,10 +403,11 @@ public:
+     static const mask xdigit = _HEX;
+     static const mask blank  = _BLANK;
+ # define _LIBCPP_CTYPE_MASK_IS_COMPOSITE_PRINT
+-#elif defined(__APPLE__) || defined(__FreeBSD__) || defined(__EMSCRIPTEN__) || defined(__NetBSD__)
++#elif defined(__APPLE__) || defined(__FreeBSD__) || defined(__EMSCRIPTEN__) || \
++  defined(__NetBSD__) || defined(__DragonFly__)
+ # ifdef __APPLE__
+     typedef __uint32_t mask;
+-# elif defined(__FreeBSD__)
++# elif defined(__FreeBSD__) || defined(__DragonFly__)
+     typedef unsigned long mask;
+ # elif defined(__EMSCRIPTEN__) || defined(__NetBSD__)
+     typedef unsigned short mask;
