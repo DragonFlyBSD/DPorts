@@ -1,0 +1,10 @@
+USE_GCC_VERSION=6
+
+# Apparently webrtc can't be built without sctp anymore, so
+# turn it off again
+MOZ_OPTIONS+=	--disable-webrtc
+
+dfly-patch:
+	# disable SCTP
+	${REINPLACE_CMD} -e 's|MOZ_SCTP|MOZ_DISABLE_SCTP|' \
+		${WRKSRC}/netwerk/moz.build
