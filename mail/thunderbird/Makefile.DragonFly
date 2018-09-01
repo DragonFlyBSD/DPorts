@@ -1,3 +1,6 @@
+# requires gnu++14
+USE_GCC_VERSION=	6
+
 OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NENIGMAIL:NPULSEAUDIO}
 LDFLAGS+=		-R${PREFIX}/lib/thunderbird
 MAKE_ENV+=		AR=/usr/bin/ar LD=/usr/bin/ld \
@@ -5,3 +8,10 @@ MAKE_ENV+=		AR=/usr/bin/ar LD=/usr/bin/ld \
 
 MOZ_OPTIONS+=	--host=${ARCH}-dports-${OPSYS:tl}${OSREL}
 MOZ_OPTIONS+=	--disable-webrtc
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/<malloc.h>/d' \
+		${WRKSRC}/comm/ldap/c-sdk/libraries/liblber/lber-int.h
+	# fix error: 'snprintf' was not declared in this scope
+	${REINPLACE_CMD} -e '/_POSIX_SOURCE/d' \
+		${WRKSRC}/media/libcubeb/src/cubeb_jack.cpp
