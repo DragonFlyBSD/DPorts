@@ -2,6 +2,7 @@
 
 PORTNAME=	firebird
 PORTVERSION=	2.5.8
+PORTREVISION=	1
 CATEGORIES?=	databases
 MASTER_SITES=	https://github.com/FirebirdSQL/${PORTNAME}/releases/download/R2_5_8/
 PKGNAMESUFFIX?=	${PORTVERSION:R:S/.//}-server
@@ -20,14 +21,13 @@ LICENSE_FILE_IPL=	${WRKSRC}/builds/install/misc/IPLicense.txt
 LICENSE_PERMS_IDPL=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 LICENSE_PERMS_IPL=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
-LIB_DEPENDS=	libicuuc.so:devel/icu
 
 USES=		cpe gmake pkgconfig tar:bzip2
 USE_CXXSTD=	gnu++98
 GNU_CONFIGURE=	yes
 MAKE_JOBS_UNSAFE=	yes
 
-CONFIGURE_ARGS=	--with-system-icu \
+CONFIGURE_ARGS=	\
 		--prefix=${LOCALSTATEDIR} \
 		--exec-prefix=${PREFIX} \
 		--with-fbconf=${PREFIX}/${CONFDIR} \

@@ -1,0 +1,11 @@
+--- extern/icu/source/tools/genrb/Makefile.in.orig	2017-02-14 09:17:16 UTC
++++ extern/icu/source/tools/genrb/Makefile.in
+@@ -81,7 +81,7 @@ $(TARGET) : $(OBJECTS)
+ 	$(LINK.cc) $(OUTOPT)$@ $^ $(LIBS) 
+ 
+ $(DERB) : $(DERB_OBJ)
+-	$(LINK.c) $(OUTOPT)$@ $^ $(LIBS) 
++	$(LINK.cc) $(OUTOPT)$@ $^ $(LIBS) 
+ 
+ 
+ # the 'mv' will always fail if you are building in the source dir

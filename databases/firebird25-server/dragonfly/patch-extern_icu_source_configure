@@ -1,0 +1,11 @@
+--- extern/icu/source/configure.orig	2017-02-14 09:17:14 UTC
++++ extern/icu/source/configure
+@@ -3122,7 +3122,7 @@ alpha*-*-linux-gnu)
+ 	  	icu_cv_host_frag=mh-cygwin-msvc
+ 	fi ;;
+ *-*-mingw*) icu_cv_host_frag=mh-mingw ;;
+-*-*-*bsd*) 	icu_cv_host_frag=mh-bsd-gcc ;;
++*-*-*bsd*|*-*-dragonfly*) 	icu_cv_host_frag=mh-bsd-gcc ;;
+ *-*-aix*)
+ 	if test "$GCC" = yes; then
+ 		icu_cv_host_frag=mh-aix-gcc

@@ -1,0 +1,21 @@
+--- extern/icu/source/config/mh-bsd-gcc.orig	2017-02-14 09:17:14 UTC
++++ extern/icu/source/config/mh-bsd-gcc
+@@ -26,14 +26,14 @@ STATIC_O = ao
+ 
+ ## Compilation rules
+ %.$(STATIC_O): $(srcdir)/%.c
+-	$(COMPILE.c) $(STATICCPPFLAGS) $(STATICCFLAGS) -o $@ $<
++	$(COMPILE.c) $(STATICCPPFLAGS) $(STATICCFLAGS) -fPIC -DPIC -o $@ $<
+ %.o: $(srcdir)/%.c
+-	$(COMPILE.c) $(DYNAMICCPPFLAGS) $(DYNAMICCFLAGS) -o $@ $<
++	$(COMPILE.c) $(DYNAMICCPPFLAGS) $(DYNAMICCFLAGS) -fPIC -DPIC -o $@ $<
+ 
+ %.$(STATIC_O): $(srcdir)/%.cpp
+-	$(COMPILE.cc) $(STATICCPPFLAGS) $(STATICCXXFLAGS) -o $@ $<
++	$(COMPILE.cc) $(STATICCPPFLAGS) $(STATICCXXFLAGS) -fPIC -DPIC -o $@ $<
+ %.o: $(srcdir)/%.cpp
+-	$(COMPILE.cc) $(DYNAMICCPPFLAGS) $(DYNAMICCXXFLAGS) -o $@ $<
++	$(COMPILE.cc) $(DYNAMICCPPFLAGS) $(DYNAMICCXXFLAGS) -fPIC -DPIC -o $@ $<
+ 
+ 
+ ## Dependency rules

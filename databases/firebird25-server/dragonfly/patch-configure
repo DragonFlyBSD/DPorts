@@ -1,6 +1,6 @@
---- configure.orig	2011-10-01 09:09:42.000000000 +0200
-+++ configure	2013-01-23 17:43:47.194076000 +0100
-@@ -2411,7 +2411,7 @@
+--- configure.orig	2017-02-14 09:42:30 UTC
++++ configure
+@@ -2428,7 +2428,7 @@ _ACEOF
      SHRLIB_EXT=so
      ;;
  
@@ -9,7 +9,7 @@
      MAKEFILE_PREFIX=freebsd_amd64
      case "$target" in
          x86_64*-*-k*bsd-gnu)      # Debian/kFreeBSD
-@@ -2449,7 +2449,7 @@
+@@ -2466,7 +2466,7 @@ _ACEOF
      SHRLIB_EXT=so
      ;;
  
@@ -18,7 +18,7 @@
      MAKEFILE_PREFIX=freebsd
      case "$target" in
          *-*-k*bsd-gnu)      # Debian/kFreeBSD
-@@ -4419,7 +4419,7 @@
+@@ -4502,7 +4502,7 @@ $as_echo "$as_me: WARNING: we do not kno
  $as_echo_n "checking if more special flags are required for pthreads... " >&6; }
          flag=no
          case "${host_cpu}-${host_os}" in
@@ -27,7 +27,7 @@
                  *solaris* | *-osf* | *-hpux*) flag="-D_REENTRANT";;
          esac
          { $as_echo "$as_me:$LINENO: result: ${flag}" >&5
-@@ -11499,7 +11499,7 @@
+@@ -11582,7 +11582,7 @@ freebsd* | dragonfly*)
      shlibpath_overrides_runpath=no
      hardcode_into_libs=yes
      ;;
@@ -36,7 +36,7 @@
      shlibpath_overrides_runpath=yes
      hardcode_into_libs=yes
      ;;
-@@ -15491,7 +15491,7 @@
+@@ -15574,7 +15574,7 @@ freebsd* | dragonfly*)
      shlibpath_overrides_runpath=no
      hardcode_into_libs=yes
      ;;
@@ -45,7 +45,7 @@
      shlibpath_overrides_runpath=yes
      hardcode_into_libs=yes
      ;;
-@@ -18119,7 +18119,7 @@
+@@ -18202,7 +18202,7 @@ freebsd* | dragonfly*)
      shlibpath_overrides_runpath=no
      hardcode_into_libs=yes
      ;;
@@ -54,7 +54,7 @@
      shlibpath_overrides_runpath=yes
      hardcode_into_libs=yes
      ;;
-@@ -20754,7 +20754,7 @@
+@@ -20837,7 +20837,7 @@ freebsd* | dragonfly*)
      shlibpath_overrides_runpath=no
      hardcode_into_libs=yes
      ;;
@@ -63,3 +63,12 @@
      shlibpath_overrides_runpath=yes
      hardcode_into_libs=yes
      ;;
+@@ -43305,7 +43305,7 @@ fi
+ 
+ (cd extern/icu/source
+ chmod +x runConfigureICU configure install-sh
+-./runConfigureICU "$ICU_PLATFORM" "$DEBUG_ICU" "$ICU_EXTRAS" --prefix=`pwd`/..)
++./runConfigureICU "$ICU_PLATFORM" "$DEBUG_ICU" "$ICU_EXTRAS" --disable-shared --enable-static --prefix=`pwd`/..)
+ fi
+ 
+ echo

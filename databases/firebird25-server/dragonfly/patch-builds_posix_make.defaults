@@ -1,4 +1,4 @@
---- builds/posix/make.defaults.orig	2016-06-30 09:34:53 UTC
+--- builds/posix/make.defaults.orig	2017-02-14 09:17:14 UTC
 +++ builds/posix/make.defaults
 @@ -126,7 +126,7 @@ RM_R=		rm -rf
  CHMOD=			chmod
@@ -14,11 +14,11 @@
  
  LINK_LIBS = @LIBS@
 -ICU_LIBS = -licuuc -licudata -licui18n
-+ICU_LIBS = $(shell icu-config --ldflags)
++ICU_LIBS = -lsicuuc -lsicudata -lsicui18n
  STATICLINK_LIBS = @LIBS@
  SO_LINK_LIBS = @LIBS@
  
-@@ -223,16 +223,12 @@ LIBFBSTATIC_A = $(LIB)/libfbstatic.a
+@@ -223,15 +223,14 @@ LIBFBSTATIC_A = $(LIB)/libfbstatic.a
  
  ifeq ($(EDITLINE_FLG),Y)
    ifeq ($(STD_EDITLINE), true)
@@ -32,7 +32,17 @@
 -LIBICU_SO = $(LIB)/$(LIB_PREFIX)icuuc*.$(SHRLIB_FOREIGN_EXT) \
 -			$(LIB)/$(LIB_PREFIX)icudata*.$(SHRLIB_FOREIGN_EXT) \
 -			$(LIB)/$(LIB_PREFIX)icui18n*.$(SHRLIB_FOREIGN_EXT)
--
++LIBICU_SO = $(LIB)/$(LIB_PREFIX)sicuuc*.a $(LIB)/$(LIB_PREFIX)sicudata*.a \
++		$(LIB)/$(LIB_PREFIX)sicui18n*.a
+ 
  # Shared library name for usage inside of the UDF
  IbUtilLibraryName = $(LIB_PREFIX)ib_util.$(SHRLIB_EXT)
- LIBIBUTIL_SO = $(LIB)/$(IbUtilLibraryName)
+@@ -305,7 +304,7 @@ CREATE_DB	= $(BIN)/create_db$(EXEC_EXT)
+ GDS_DROP	= $(BIN)/gds_drop$(EXEC_EXT)
+ FBSVCMGR	= $(BIN)/fbsvcmgr$(EXEC_EXT)
+ FBTRACEMGR	= $(BIN)/fbtracemgr$(EXEC_EXT)
+-GSTAT		= $(BIN)/gstat$(EXEC_EXT)
++GSTAT		= $(BIN)/fbstat$(EXEC_EXT)
+ NBACKUP		= $(BIN)/nbackup$(EXEC_EXT)
+ FBTRACE		= $(PLUGINS)/$(LIB_PREFIX)fbtrace.$(SHRLIB_EXT)
+ LOCKPRINT	= $(BIN)/fb_lock_print$(EXEC_EXT)

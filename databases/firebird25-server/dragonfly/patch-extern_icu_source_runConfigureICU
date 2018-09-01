@@ -1,0 +1,11 @@
+--- extern/icu/source/runConfigureICU.orig	2017-02-14 09:17:15 UTC
++++ extern/icu/source/runConfigureICU
+@@ -299,7 +299,7 @@ case $platform in
+         RELEASE_CFLAGS='-O2'
+         RELEASE_CXXFLAGS='-O2'
+         ;;
+-    *BSD)
++    *BSD|DragonFly)
+         THE_OS="BSD"
+         THE_COMP="the GNU C++"
+         CC=gcc; export CC
