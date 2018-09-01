@@ -27,9 +27,10 @@ channel = "%CHANNEL%"
 [llvm]
 ccache = %CCACHE%
 
-[target.%TARGET%]
-
 [dist]
 
 # Do not build the source archive.
 src-tarball = false
+
+[target.%TARGET%]
+

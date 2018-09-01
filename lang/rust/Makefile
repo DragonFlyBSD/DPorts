@@ -158,6 +158,16 @@ post-extract:
 	${TAR} -c --format=ustar -C ${WRKSRC} -f ${WRKSRC}/rust-std.tar.gz ${RUST_STD_DIR}
 	${MV} ${WRKSRC}/rust-std.tar.gz ${WRKSRC}/build/cache/${RUST_STD_BOOTSTRAP}
 .endif
+	${SED} -E \
+		-e 's,%PREFIX%,${PREFIX},' \
+		-e 's,%SYSCONFDIR%,${PREFIX}/etc,' \
+		-e 's,%MANDIR%,${MANPREFIX}/man,' \
+		-e 's,%PYTHON_CMD%,${PYTHON_CMD},' \
+		-e 's,%CHANNEL%,${RUST_CHANNEL},' \
+		-e 's,%TARGET%,${RUST_TARGET},' \
+		-e 's,%CCACHE%,${CCACHE_VALUE},' \
+		< ${FILESDIR}/config.toml \
+		> ${WRKSRC}/config.toml
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|gdb|${LOCALBASE}/bin/gdb|' \
@@ -209,16 +219,6 @@ CCACHE_VALUE=	false
 .endif
 
 do-configure:
-	${SED} -E \
-		-e 's,%PREFIX%,${PREFIX},' \
-		-e 's,%SYSCONFDIR%,${PREFIX}/etc,' \
-		-e 's,%MANDIR%,${MANPREFIX}/man,' \
-		-e 's,%PYTHON_CMD%,${PYTHON_CMD},' \
-		-e 's,%CHANNEL%,${RUST_CHANNEL},' \
-		-e 's,%TARGET%,${RUST_TARGET},' \
-		-e 's,%CCACHE%,${CCACHE_VALUE},' \
-		< ${FILESDIR}/config.toml \
-		> ${WRKSRC}/config.toml
 # The FreeBSD 10 autotools fix may modify some files just before
 # `do-configure`. Like after `extra-path-ino64`, we need to update
 # `.cargo-checksum.json`.

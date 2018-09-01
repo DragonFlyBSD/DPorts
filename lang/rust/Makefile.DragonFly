@@ -1,15 +1,26 @@
+# firefox and thunderbird now require gcc6+, and rust build with base
+# compiler fails to find libgcc_pic
+USE_GCC_VERSION= 6
+
 MASTER_SITES+=	https://leaf.dragonflybsd.org/~mneumann/rust/:rust_bootstrap \
 		https://leaf.dragonflybsd.org/~mneumann/rust/:cargo_bootstrap
 
 # non static bootstrap
+X_PY_ENV+="RUST_BACKTRACE=1"
 .if exists (/usr/libexec/gcc80/CC)
 X_PY_ENV+="LD_LIBRARY_PATH=${WRKSRC}/build/${RUST_TARGET}/stage0/lib:/usr/lib/gcc80"
 .else
 X_PY_ENV+="LD_LIBRARY_PATH=${WRKSRC}/build/${RUST_TARGET}/stage0/lib"
-.endif
-X_PY_ENV+="RUST_BACKTRACE=1"
+EXTRA_PATCHES+=	${DFLY_FILESDIR}/extra-patch-src_libunwind_build.rs
 
-# A pthread bug has been fixed in 5.0.2
-.if ${DFLYVERSION} < 500002
-MAKE_JOBS_NUMBER=1
+dfly-patch:
+	${ECHO} 'cc = "${CC}"' >> ${WRKSRC}/config.toml
+	${ECHO} 'cxx = "${CXX}"' >> ${WRKSRC}/config.toml
+#	${ECHO} 'linker = "${PREFIX}/bin/${CC}"' >> ${WRKSRC}/config.toml
+	${ECHO} 'linker = "${CC}"' >> ${WRKSRC}/config.toml
+
+.  if defined(PACKAGE_BUILDING)
+pre-configure:
+	(cd ${PREFIX}/lib/gcc6 && ${LN} -s libgcc_s.so libgcc_pic.so)
+.  endif
 .endif
