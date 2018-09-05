@@ -1828,7 +1828,6 @@ devel/ros_tutorials||2014-03-28|Has expired: Depends on expiring devel/ros_comm
 math/ros-geometry||2014-03-28|Has expired: Depends on expiring devel/ros_comm
 devel/ros-nxt||2014-03-28|Has expired: Depends on expiring devel/ros_comm
 devel/ros-rx||2014-03-28|Has expired: Depends on expiring devel/ros_comm
-devel/R-cran-vcd||2014-03-28|Has expired: New port without proper maintainer
 devel/ros-documentation||2014-03-28|Has expired: Depends on expiring devel/ros_comm
 devel/ros-common_msgs||2014-03-28|Has expired: Depends on expiring devel/ros_comm
 devel/ros_comm||2014-03-28|Has expired: Broken for more than 6 months
@@ -6589,3 +6588,27 @@ net-p2p/twister||2018-08-21|Has expired: Broken for more than 5 months
 comms/usrp||2018-08-21|Has expired: Broken for more than 5 months
 devel/libbobcat||2018-08-21|Has expired: Broken for more than 5 months
 net-p2p/dogecoin||2018-08-21|Has expired: Broken for more than 5 months
+misc/freebsd-doc-sr||2018-08-23|Removed
+www/py-django18|www/py-django111|2018-08-25|Has expired: End of Live since 01/04/2018
+x11-themes/qt4-style-Kvantum|x11-themes/Kvantum@qt4|2018-08-26|Moved to flavored version
+x11-themes/qt5-style-Kvantum|x11-themes/Kvantum@qt5|2018-08-26|Moved to flavored version
+devel/gps||2018-08-28|Has expired: Depends on obsolete LLVM 3.8.
+net-mgmt/ocsinventory-ng|net-mgmt/ocsinventory-server|2018-08-26|split port
+www/py-buku|www/buku|2018-09-01|Moved to correct directory, port is not a python library
+math/rpy2|math/py-rpy2|2018-09-01|Moved to correct directory, this is a python library
+games/libdungeonmaker||2018-09-02|Has expired: Abandonware. Unused in the ports tree
+net-p2p/lopster||2018-09-02|Has expired: Unmaintained. Napster is dead
+audio/napster||2018-09-02|Has expired: Unmaintained. Napster and OpenNap are dead
+net-p2p/xnap||2018-09-02|Has expired: Unmaintained. Napster, OpenNap, and FastTrack are dead
+russian/napster||2018-09-02|Has expired: Unmaintained. Napster and OpenNap are dead
+devel/mico||2018-09-02|Has expired: unmaintained upstream and unused in the ports tree
+net/rubygem-gitlab_omniauth-ldap1|net/rubygem-gitlab_omniauth-ldap|2018-09-02|Has expired: Use net/rubygem-gitlab_omniauth-ldap instead
+devel/onscripter|games/onscripter|2018-09-03|Moved to better category
+devel/onscripter-1byte|games/onscripter-1byte|2018-09-03|Moved to better category
+devel/ponscripter-sekai|games/ponscripter-sekai|2018-09-03|Moved to better category
+devel/renpy|games/renpy|2018-09-03|Moved to better category
+devel/renpy6|games/renpy6|2018-09-03|Moved to better category
+devel/rlvm|games/rlvm|2018-09-03|Moved to better category
+dns/openmdns|net/openmdns|2018-09-03|Moved to better category
+www/hs-activehs||2018-09-03|Has expired: Doesn't build with recent dependencies
+science/mpqc-mpich|science/mpqc|2018-09-03|MPI option is enabled by default in mpqc, no need for mpqc-mpich
