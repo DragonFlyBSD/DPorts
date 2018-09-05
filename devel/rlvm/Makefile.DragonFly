@@ -1,3 +1,0 @@
-# Using gold result in a crazy amount of boost errors that I don't
-# want to deal with.  Keep using ld.bfd for now.
-MAKE_ENV+= LDVER=ld.bfd
