@@ -1,11 +1,9 @@
 # $FreeBSD$
 
 PORTNAME=	jbig2dec
-PORTVERSION=	0.14
+PORTVERSION=	0.15
 CATEGORIES=	graphics devel
-MASTER_SITES=	http://downloads.ghostscript.com/public/${PORTNAME}/ \
-		LOCAL/sunpoet:tests
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
+MASTER_SITES=	LOCAL/sunpoet:tests
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Decoder implementation of the JBIG2 image compression format
@@ -26,6 +24,10 @@ USES+=		ssl
 LDFLAGS+=	-L${OPENSSLLIB} -lcrypto
 
 FILESDIR=	${.CURDIR}/does-not-exist
+
+GH_ACCOUNT=	ArtifexSoftware
+USE_GITHUB=	yes
+
 SHEBANG_FILES=	test_jbig2dec.py
 python_CMD=	${PYTHON_CMD}
 
@@ -36,7 +38,7 @@ TESTS_DISTFILES=	jb2streams${EXTRACT_SUFX}:tests
 TESTS_TEST_TARGET=	check-TESTS
 TESTS_USES=		python:build shebangfix
 
-post-patch-PNG-on:
-	@${REINPLACE_CMD} 's|png_check_sig|png_sig_cmp|g' ${WRKSRC}/configure
+pre-configure:
+	@cd ${WRKSRC}/ && ${SH} autogen.sh
 
 .include <bsd.port.mk>
