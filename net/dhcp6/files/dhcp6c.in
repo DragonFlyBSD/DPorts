@@ -1,10 +1,9 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net/dhcp6/files/dhcp6c.in 477305 2018-08-16 01:26:36Z leres $
+# $FreeBSD: head/net/dhcp6/files/dhcp6c.in 478821 2018-09-02 21:14:47Z pi $
 #
 
 # PROVIDE: dhcp6c
-# REQUIRE: DAEMON
 # BEFORE: NETWORKING
 # KEYWORD: shutdown
 
@@ -42,7 +41,7 @@ load_rc_config $name
 
 required_files="${dhcp6c_config}"
 pidfile="${dhcp6c_pidfile}"
-command_args="-c ${dhcp6c_config} -p ${dhcp6c_pidfile} ${dhcp6c_flags} ${dhcp6c_interfaces}"
+command_args="-c ${dhcp6c_config} -p ${dhcp6c_pidfile} ${dhcp6c_interfaces}"
 
 dhcp6c_precmd()
 {
