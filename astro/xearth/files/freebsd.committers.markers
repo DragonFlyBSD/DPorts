@@ -1,4 +1,4 @@
-# $FreeBSD: head/astro/xearth/files/freebsd.committers.markers 475269 2018-07-24 18:32:22Z jhixson $
+# $FreeBSD: head/astro/xearth/files/freebsd.committers.markers 478985 2018-09-04 19:11:13Z kbowling $
 #
 # FreeBSD Project Committers
 #
@@ -304,6 +304,7 @@
  40.1,		-105.3,		"gibbs,ken"			# Boulder, CO, USA
  29.067,	-110.967,	"jcamou"			# Hermosillo, Sonora, Mexico
  40.298753,	-111.696486,	"jamie"				# Orem, UT, USA
+ 33.3437,	-111.9344	"kbowling"			# Tempe, Arizona, USA
  51.083,	-114.13,	"davidc"			# Calgary, Alberta, Canada
  51.083,	-114.167,	"aaron"				# Calgary, Alberta, Canada
  47.74075,	-116.83366,	"jasone"			# Coeur d'Alene, ID, USA
