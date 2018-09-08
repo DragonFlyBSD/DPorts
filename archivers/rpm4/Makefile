@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	rpm
-PORTVERSION=	4.13.1
-PORTREVISION=	1
+PORTVERSION=	4.14.2
+PORTREVISION=	2
 CATEGORIES=	archivers
 MASTER_SITES=	http://ftp.rpm.org/releases/rpm-${PORTVERSION:R}.x/
 PKGNAMESUFFIX=	4
@@ -16,17 +16,19 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libpopt.so:devel/popt \
 		libnss3.so:security/nss
+RUN_DEPENDS=	bash:shells/bash
 
 USES=		alias bdb gmake libarchive libtool lua:51 pathfix pkgconfig \
 		shebangfix tar:bzip2
 INVALID_BDB_VER=51
-GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
+GNU_CONFIGURE=	yes
 SHEBANG_FILES=	scripts/brp-python-bytecompile scripts/check-prereqs \
 		scripts/check-rpaths-worker scripts/pythondeps.sh \
 		scripts/mono-find-requires scripts/mono-find-provides \
 		scripts/pkgconfigdeps.sh scripts/fontconfig.prov \
 		scripts/rpmdb_loadcvt scripts/perl.prov scripts/perl.req  \
+		scripts/pythondistdeps.py scripts/find-lang.sh \
 		python/rpm/transaction.py
 CONFIGURE_ARGS=	--with-external-db \
 		--without-db \
@@ -71,6 +73,9 @@ post-patch:
 		${WRKSRC}/misc/fts.?
 	@${REINPLACE_CMD} -e 's/ __GLIBC__.*/& || defined(__FreeBSD__)/' \
 		${WRKSRC}/system.h
+
+post-install-PYTHON-off:
+	@${RM} ${STAGEDIR}${PREFIX}/lib/rpm/pythondistdeps.py
 
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
