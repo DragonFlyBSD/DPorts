@@ -1,1 +1,1 @@
-LDFLAGS+= -lm
+LDFLAGS+= -lm -lX11
