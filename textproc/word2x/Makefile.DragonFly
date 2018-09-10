@@ -1,1 +1,0 @@
-# fifo.h:65:21: error: using typedef-name 'fifo<T>::queue' after 'struct'
