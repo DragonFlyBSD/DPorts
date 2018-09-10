@@ -8,3 +8,6 @@ dfly-patch:
 	# disable SCTP
 	${REINPLACE_CMD} -e 's|MOZ_SCTP|MOZ_DISABLE_SCTP|' \
 		${WRKSRC}/netwerk/moz.build
+	(cd ${WRKSRC}/gfx/angle/checkout/src/compiler/translator && \
+		${REINPLACE_CMD} -e 's|<math.h>|<cmath>|' \
+		InfoSink.h IntermNode.cpp)
