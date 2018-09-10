@@ -10,15 +10,12 @@ include/wayland-server-protocol.h
 include/wayland-server.h
 include/wayland-util.h
 include/wayland-version.h
-lib/libwayland-client.a
 lib/libwayland-client.so
 lib/libwayland-client.so.0
 lib/libwayland-client.so.0.3.0
-lib/libwayland-cursor.a
 lib/libwayland-cursor.so
 lib/libwayland-cursor.so.0
 lib/libwayland-cursor.so.0.0.0
-lib/libwayland-server.a
 lib/libwayland-server.so
 lib/libwayland-server.so.0
 lib/libwayland-server.so.0.1.0

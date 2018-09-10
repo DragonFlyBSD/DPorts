@@ -1,6 +1,6 @@
---- src/connection.c.orig	2015-06-13 00:31:24 +0200
-+++ src/connection.c
-@@ -39,6 +39,7 @@
+--- src/connection.c.orig	2018-07-20 17:20:22.749299000 +0300
++++ src/connection.c	2018-07-20 17:27:23.761642000 +0300
+@@ -38,6 +38,7 @@
  #include <sys/types.h>
  #include <sys/socket.h>
  #include <time.h>
@@ -8,7 +8,7 @@
  #include <ffi.h>
  
  #include "wayland-util.h"
-@@ -293,7 +294,10 @@
+@@ -299,7 +300,10 @@
  		msg.msg_namelen = 0;
  		msg.msg_iov = iov;
  		msg.msg_iovlen = count;
@@ -20,19 +20,7 @@
  		msg.msg_controllen = clen;
  		msg.msg_flags = 0;
  
-@@ -302,8 +306,10 @@
- 				      MSG_NOSIGNAL | MSG_DONTWAIT);
- 		} while (len == -1 && errno == EINTR);
- 
--		if (len == -1)
-+		if (len == -1) {
-+//			warn("%s: sendmsg", __func__);
- 			return -1;
-+		}
- 
- 		close_fds(&connection->fds_out, MAX_FDS_OUT);
- 
-@@ -358,11 +364,28 @@
+@@ -370,11 +374,25 @@
  wl_connection_write(struct wl_connection *connection,
  		    const void *data, size_t count)
  {
@@ -46,9 +34,6 @@
 -			return -1;
 +		if (wl_connection_flush(connection) < 0) {
 +			if (errno == EAGAIN) {
-+//				wl_log("%s: wl_connection_flush failed, "
-+//				    "retrying: %s\n", __func__,
-+//				    strerror(errno));
 +				pfd.fd = connection->fd;
 +				pfd.events = POLLWRNORM;
 +				pfd.revents = 0;

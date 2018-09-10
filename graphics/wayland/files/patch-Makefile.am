@@ -1,6 +1,6 @@
---- Makefile.am.orig	2017-07-25 16:18:36.937418000 +0300
-+++ Makefile.am	2017-07-25 16:44:33.246044000 +0300
-@@ -154,7 +154,6 @@
+--- Makefile.am.orig	2018-07-20 12:31:32.488050000 +0300
++++ Makefile.am	2018-07-20 16:58:29.771965000 +0300
+@@ -170,7 +170,6 @@
  	interface-test				\
  	list-test				\
  	map-test				\
@@ -8,16 +8,24 @@
  	sanity-test				\
  	socket-test				\
  	queue-test				\
-@@ -241,7 +240,7 @@
+@@ -223,7 +222,7 @@
+ 	libwayland-util.la			\
+ 	libwayland-client.la			\
+ 	libwayland-server.la			\
+-	-lrt -ldl $(FFI_LIBS)
++	-lrt -ldl $(FFI_LIBS) $(KVM_LIBS)
+ 
+ 
+ array_test_SOURCES = tests/array-test.c
+@@ -270,7 +269,6 @@
  headers_test_SOURCES = tests/headers-test.c \
  		       tests/headers-protocol-test.c \
  		       tests/headers-protocol-core-test.c
 -headers_test_LDADD = libtest-runner.la
-+headers_test_LDADD = libtest-runner.laos_wrapper
  nodist_headers_test_SOURCES =			\
  	protocol/wayland-server-protocol-core.h	\
  	protocol/wayland-client-protocol-core.h
-@@ -253,9 +252,6 @@
+@@ -282,9 +280,6 @@
  fixed_benchmark_SOURCES = tests/fixed-benchmark.c
  fixed_benchmark_LDADD = libtest-runner.la
  

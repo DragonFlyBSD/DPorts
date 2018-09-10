@@ -1,5 +1,5 @@
---- src/wayland-shm.c.orig	2017-07-25 14:19:12.722864000 +0300
-+++ src/wayland-shm.c	2017-07-25 14:48:35.482456000 +0300
+--- src/wayland-shm.c.orig	2018-07-20 13:58:03.525147000 +0300
++++ src/wayland-shm.c	2018-07-20 15:20:10.858627000 +0300
 @@ -30,6 +30,10 @@
  
  #define _GNU_SOURCE
@@ -11,7 +11,15 @@
  #include <stdbool.h>
  #include <stdio.h>
  #include <stdlib.h>
-@@ -59,6 +63,9 @@
+@@ -40,6 +44,7 @@
+ #include <assert.h>
+ #include <signal.h>
+ #include <pthread.h>
++#include <errno.h>
+ 
+ #include "wayland-util.h"
+ #include "wayland-private.h"
+@@ -59,6 +64,9 @@
  	char *data;
  	int32_t size;
  	int32_t new_size;
@@ -21,7 +29,7 @@
  };
  
  struct wl_shm_buffer {
-@@ -84,7 +91,24 @@
+@@ -84,7 +92,24 @@
  	if (pool->size == pool->new_size)
  		return;
  
@@ -47,7 +55,7 @@
  	if (data == MAP_FAILED) {
  		wl_resource_post_error(pool->resource,
  				       WL_SHM_ERROR_INVALID_FD,
-@@ -111,6 +135,9 @@
+@@ -111,6 +136,9 @@
  		return;
  
  	munmap(pool->data, pool->size);
@@ -57,7 +65,7 @@
  	free(pool);
  }
  
-@@ -235,6 +262,8 @@
+@@ -235,6 +263,8 @@
  				       "shrinking pool invalid");
  		return;
  	}
@@ -66,7 +74,7 @@
  
  	pool->new_size = size;
  
-@@ -276,21 +305,27 @@
+@@ -276,21 +306,28 @@
  	pool->external_refcount = 0;
  	pool->size = size;
  	pool->new_size = size;
@@ -76,7 +84,9 @@
  	if (pool->data == MAP_FAILED) {
  		wl_resource_post_error(resource,
  				       WL_SHM_ERROR_INVALID_FD,
- 				       "failed mmap fd %d", fd);
+-				       "failed mmap fd %d: %m", fd);
++				       "failed mmap fd %d: %s", fd,
++				       strerror(errno));
  		goto err_free;
  	}
 -	close(fd);
@@ -97,7 +107,7 @@
  		free(pool);
  		return;
  	}
-@@ -495,6 +530,14 @@
+@@ -495,6 +532,14 @@
  	sigbus_data->fallback_mapping_used = 1;
  
  	/* This should replace the previous mapping */
@@ -112,7 +122,7 @@
  	if (mmap(pool->data, pool->size,
  		 PROT_READ | PROT_WRITE,
  		 MAP_PRIVATE | MAP_FIXED | MAP_ANONYMOUS,
-@@ -502,6 +545,7 @@
+@@ -502,6 +547,7 @@
  		reraise_sigbus();
  		return;
  	}
