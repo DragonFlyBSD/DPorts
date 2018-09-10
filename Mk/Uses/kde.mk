@@ -247,9 +247,8 @@ _USE_FRAMEWORKS_TIER1=	apidox archive attica5 breeze-icons codecs config \
 			coreaddons dbusaddons dnssd holidays i18n idletime itemmodels \
 			itemviews kirigami2 oxygen-icons5 plotting prison \
 			qqc2-desktop-style solid sonnet syntaxhighlighting \
-			threadweaver widgetsaddons windowsystem
+			threadweaver wayland widgetsaddons windowsystem
 # NOT LISTED TIER1: modemmanagerqt networkmanagerqt (not applicable)
-# NOT AVAILABLE DF: wayland
 
 _USE_FRAMEWORKS_TIER2=	auth completion crash doctools \
 			filemetadata kimageformats jobwidgets notifications \
