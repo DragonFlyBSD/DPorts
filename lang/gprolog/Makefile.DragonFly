@@ -1,4 +1,0 @@
-# base gcc80 + -O3 = pl2wam hangs
-.if exists (/usr/libexec/gcc80/CC)
-BROKEN=	hangs during build with gcc8
-.endif
