@@ -1,4 +1,4 @@
---- galerautils/src/gu_fdesc.cpp.orig	2014-03-27 17:49:30.000000000 +0200
+--- galerautils/src/gu_fdesc.cpp.orig	2018-08-29 10:14:04 UTC
 +++ galerautils/src/gu_fdesc.cpp
 @@ -13,7 +13,7 @@ extern "C" {
  #include "gu_limits.h"
@@ -9,12 +9,13 @@
  #define _XOPEN_SOURCE 600
  #endif
  
-@@ -186,6 +186,8 @@ namespace gu
- 
+@@ -235,6 +235,9 @@ namespace gu
  #if defined(__APPLE__)
-         if (0 != fcntl (fd_, F_SETSIZE, size_) && 0 != ftruncate (fd_, size_))
+         if (-1 == fcntl (fd_, F_SETSIZE, size_) && -1 == ftruncate (fd_, size_))
+         {
 +#elif defined(__DragonFly__)
 +        if (0 != ftruncate (fd_, size_))
++        {
  #else
-         if (0 != posix_fallocate (fd_, start, diff))
- #endif
+         int const ret = posix_fallocate (fd_, start, diff);
+         if (0 != ret)
