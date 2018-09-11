@@ -1,9 +1,0 @@
-
-# very very nosy under g++80, suppress
-# ../../base/metrics/histogram_samples.cc:164:32: error: 'void* memset(void*, int, size_t)' clearing an object of non-trivial type 'struct base::HistogramSamples::LocalMetadata'; use assignment or value-initialization instead [-Werror=class-memaccess]
-.if exists (/usr/libexec/gcc80/CC)
-dfly-patch:
-	${REINPLACE_CMD} -e '/treat_warnings_as_errors/s@true@false@g'	\
-			 -e 's@\("-Wno-narrowing",\)@\1 "-Wno-class-memaccess",@g'	\
-		${WRKSRC}/build/config/compiler/BUILD.gn
-.endif
