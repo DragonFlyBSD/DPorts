@@ -1,8 +1,0 @@
-
-# zrj: add missing link against -lm in libgegl-0.3.so
-# NOTYPE  GLOBAL DEFAULT  UND {atanhf, ceil, ceilf, floor, floorf, sqrt, sqrtf, tanhf}
-# fixes desktop/gnome-photos build (binutils 2.27 ld.gold is unhappy)
-dfly-patch:
-	${REINPLACE_CMD} -e "/LINK) -rpath/s/$$/ -lm/g"	\
-		${WRKSRC}/gegl/Makefile.in	\
-		${WRKSRC}/libs/npd/Makefile.in
