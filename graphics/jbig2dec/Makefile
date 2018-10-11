@@ -19,10 +19,9 @@ CONFIGURE_ENV=	ac_cv_func_getopt_long=yes
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
 USE_LDCONFIG=	yes
-USES=		autoreconf libtool
+USES=		autoreconf:build libtool
 USES+=		ssl
 LDFLAGS+=	-L${OPENSSLLIB} -lcrypto
-
 FILESDIR=	${.CURDIR}/does-not-exist
 
 GH_ACCOUNT=	ArtifexSoftware
