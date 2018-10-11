@@ -14,7 +14,7 @@ LICENSE=	APACHE20
 
 CONFLICTS=	metis4-4* metis-edf-[0-9]*
 
-USES=		cmake:noninja
+USES=		cmake:noninja compiler:c11
 
 OPTIONS_DEFINE=	OPENMP SHARED STATIC DOCS
 
