@@ -44,7 +44,7 @@ USE_LDCONFIG=	yes
 CMAKE_ARGS=	-DENABLE_PIC=on -DPLATFORM_LIBS=md -DENABLE_TESTS=on
 CFLAGS_mips=	-DNO_ATOMICS # cannot use lang/gcc
 CFLAGS_mips64=	-DNO_ATOMICS # cannot use lang/gcc
-EXTRACT_AFTER_ARGS+=	--exclude compat
+LDFLAGS_i386=	-Wl,-znotext
 WRKSRC=		${WRKDIR}/${PORTNAME}_${PORTVERSION}/source
 
 do-test:
