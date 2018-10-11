@@ -46,7 +46,7 @@ DISTFILES+=	${CARGO_DIST_SUBDIR}/${_crate}.tar.gz:cargo_${_crate:S/-//g:S/.//g}
 
 CARGO_BUILDDEP?=	yes
 .if ${CARGO_BUILDDEP:tl} == "yes"
-BUILD_DEPENDS+=	 rust>=1.19.0_2:lang/rust
+BUILD_DEPENDS+=	 rust>=1.29.1:lang/rust
 .endif
 
 # Location of cargo binary (default to lang/rust's Cargo binary)
@@ -151,6 +151,12 @@ DEV_WARNING+=	"CARGO_CRATES=libc-0.2.37 or older maybe unstable on FreeBSD 12.0.
 # Use the system's libgit2 instead of building the bundled version
 CARGO_ENV+=	LIBGIT2_SYS_USE_PKG_CONFIG=1
 LIB_DEPENDS+=	libgit2.so:devel/libgit2
+.endif
+
+.if ${CARGO_CRATES:Mlibssh2-sys-[0-9]*}
+# Use the system's libssh2 instead of building the bundled version
+CARGO_ENV+=	LIBSSH2_SYS_USE_PKG_CONFIG=1
+LIB_DEPENDS+=	libssh2.so:security/libssh2
 .endif
 
 .if ${CARGO_CRATES:Monig_sys-[0-9]*}

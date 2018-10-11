@@ -1297,7 +1297,6 @@ audio/rubygem-ogginfo|audio/rubygem-ruby-ogginfo|2013-11-30|Rename to match upst
 x11-fm/xnc||2013-12-01|Has expired: Latest release from 2005, upstream disappeared, does not build
 audio/liteamp||2013-12-01|Has expired: Dead upstream since 2004, does not build with clang
 net-im/tapioca-qt||2013-12-01|Has expired: Unmaintained upstream since 2007, not used by anything
-net-im/telepathy-qt|net-im/telepathy-qt4|2013-12-01|Has expired: Unmaintained upstream since 2007, use net-im/telepathy-qt4
 x11-toolkits/linux-f10-gtk||2013-12-01|Has expired: GTK1 is deprecated
 net-im/linux-ymessenger||2013-12-01|Has expired: Depends on deprecated Linux GTK1
 emulators/linux-pete-mesagpu||2013-12-01|Has expired: Depends on deprecated Linux GTK1
@@ -2650,7 +2649,6 @@ lang/hiphop-php||2014-09-01|Not staged
 lang/lush||2014-09-01|Not staged
 lang/metaocaml||2014-09-01|Not staged
 lang/mpd||2014-09-01|Not staged
-lang/ocaml-camlidl||2014-09-01|Not staged
 lang/ocaml-mode.el||2014-09-01|Not staged
 lang/ocs||2014-09-01|Not staged
 lang/oorexx||2014-09-01|Not staged
@@ -2834,7 +2832,6 @@ print/pdfcolorsplit||2014-09-01|Not staged
 print/pdq||2014-09-01|Not staged
 print/phppdflib||2014-09-01|Not staged
 print/ruby-panda||2014-09-01|Not staged
-print/scribus-devel||2014-09-01|Not staged
 russian/libcyrillic||2014-09-01|Not staged
 russian/prawda||2014-09-01|Not staged
 russian/pscyr||2014-09-01|Not staged
@@ -5362,7 +5359,6 @@ audio/last-cmus||2017-04-30|Has expired: Unfetchable for more than six months (g
 audio/mehdiaplayer||2017-04-30|Has expired: Unfetchable for more than six months (google code has gone away)
 japanese/nhocr||2017-04-30|Has expired: Unfetchable for more than six months (google code has gone away)
 misc/xsw||2017-04-30|Has expired: Unfetchable for more than six months (google code has gone away)
-dns/py-adns||2017-04-30|Has expired: Unfetchable for more than six months (google code has gone away)
 dns/py-bonjour||2017-04-30|Has expired: Unfetchable for more than six months (google code has gone away)
 games/robocalypto||2017-04-30|Has expired: Unfetchable for more than six months (google code has gone away)
 games/libfov||2017-04-30|Has expired: Unfetchable for more than six months (google code has gone away)
@@ -6592,8 +6588,8 @@ misc/freebsd-doc-sr||2018-08-23|Removed
 www/py-django18|www/py-django111|2018-08-25|Has expired: End of Live since 01/04/2018
 x11-themes/qt4-style-Kvantum|x11-themes/Kvantum@qt4|2018-08-26|Moved to flavored version
 x11-themes/qt5-style-Kvantum|x11-themes/Kvantum@qt5|2018-08-26|Moved to flavored version
-devel/gps||2018-08-28|Has expired: Depends on obsolete LLVM 3.8.
-net-mgmt/ocsinventory-ng|net-mgmt/ocsinventory-server|2018-08-26|split port
+devel/gps||2018-08-28|Has expired: Depends on obsolete LLVM 3.8
+net-mgmt/ocsinventory-ng|net-mgmt/ocsinventory-server|2018-08-30|split port
 www/py-buku|www/buku|2018-09-01|Moved to correct directory, port is not a python library
 math/rpy2|math/py-rpy2|2018-09-01|Moved to correct directory, this is a python library
 games/libdungeonmaker||2018-09-02|Has expired: Abandonware. Unused in the ports tree
@@ -6612,3 +6608,69 @@ devel/rlvm|games/rlvm|2018-09-03|Moved to better category
 dns/openmdns|net/openmdns|2018-09-03|Moved to better category
 www/hs-activehs||2018-09-03|Has expired: Doesn't build with recent dependencies
 science/mpqc-mpich|science/mpqc|2018-09-03|MPI option is enabled by default in mpqc, no need for mpqc-mpich
+misc/timediff|misc/tzdiff|2018-09-04|Project was renamed
+www/rubygem-hamlit26|www/rubygem-hamlit|2018-09-06|Has expired: Obsolete by gitlab-ce 11.2.x update, please use www/rubygem-hamlit instead
+games/ppracer|games/etracer|2018-09-10|Has expired: Unmaintained.  Play games/etracer instead
+www/py-django-livesettings||2018-09-13|Has expired: Missing dependency on removed www/py-django-keyedcache
+www/bookmarkbridge||2018-09-16|Has expired: Unmaintained. Unlikely to work correctly with modern browsers
+mail/annoyance-filter||2018-09-16|Has expired: Unmaintained upstream
+mail/pop3vscan||2018-09-16|Has expired: Unmaintained upstream
+audio/firefly|audio/forked-daapd|2018-09-16|Has expired: Unmaintained.  Use audio/forked-daapd instead
+www/hs-hS3||2018-09-16|Has expired: Not being developed upstream
+converters/hs-dataenc||2018-09-16|Has expired: Not being developed upstream
+devel/tinyq||2018-09-16|Has expired: Unmaintained upstream and unused in the ports tree
+devel/hs-hashed-storage||2018-09-16|Has expired: Not being developed upstream
+www/py-searx|www/searx|2018-09-16|Move to a proper directory: this is a server, not a library
+net/syndication|net/kf5-syndication|2018-09-17|Has become a proper KDE framework
+x11-wm/swm||2018-09-21|Has expired: upstream no longer maintained, the screen turns black after starting swm
+graphics/OpenEXR|graphics/openexr|2018-09-22|Renamed to match upstream distribution's lower-case name
+math/mtl||2018-09-27|Has expired: fails to fetch: mastersite times out
+dns/dnscrypt-proxy|dns/dnscrypt-proxy2|2018-09-27|Has expired: Deprecated by upstream, use dns/dnscrypt-proxy2 instead
+www/waterfox||2018-09-29|Has expired: experiment ended: unsustainable
+net/ntp-devel|net/ntp|2018-09-30|Has expired: Use net/ntp instead
+net/xrdp-devel|net/xrdp|2018-09-30|Has expired: Use net/xrdp instead
+net/tigervnc-devel|net/tigervnc|2018-09-30|Has expired: Use net/tigervnc instead
+net/unison-devel|net/unison|2018-09-30|Has expired: Use net/unison instead
+textproc/p5-IDNA-Punycode||2018-09-30|Has expired: Deprecated by upstream
+graphics/gnustep-slideshowkit||2018-09-30|Has expired: unknown license
+graphics/gnustep-slideshow||2018-09-30|Has expired: depends on expiring graphics/gnustep-slideshowkit
+security/lockdown||2018-09-30|Has expired: Renders system unbootable
+devel/p5-Search-Binary||2018-09-30|Has expired: Deprecated by upstream, use List::BinarySearch instead
+devel/p5-ExtUtils-Command|devel/p5-ExtUtils-MakeMaker|2018-09-30|Has expired: ExtUtils::Command has been re-incorporated to ExtUtils-MakeMaker since 7.06, use devel/p5-ExtUtils-MakeMaker instead
+editors/yui||2018-09-30|Has expired: Unmaintained upstream
+x11/tint-devel|x11/tint|2018-09-30|Has expired: Use x11/tint instead
+print/apsfilter||2018-09-30|Mostly unmaintained since 2015 and depends on expired ports
+print/hpijs||2018-09-30|Has expired: Unsupported since 2005, please migrate to print/hplip
+archivers/freeze||2018-09-30|Has expired: unknown license
+accessibility/atk-reference||2018-09-30|Removed stand alone documentation port
+graphics/cairo-reference||2018-09-30|Removed stand-alone documentation port
+deskutils/gnome-shell-extension-overlay-icons|deskutils/gnome-shell-extension-windowoverlay-icons|2018-09-30|Renamed
+deskutils/gnome-tweak-tool|deskutils/gnome-tweaks|2018-09-30|Renamed
+x11-themes/gnome-themes-standard|x11-themes/gnome-themes-extra|2018-09-30|Renamed
+accessibility/mousetweaks||2018-09-30|Remove, no longer maintained
+net/grilo2||2018-09-30|Last user was switched to net/grilo
+net/grilo-plugins2||2018-09-30|Last user was switched to net/grilo-plugins
+deskutils/kdeconnect|deskutils/kdeconnect-kde-kde4|2018-09-30|Renamed to make place for KF5 based version
+devel/rubygem-rainbow2|devel/rubygem-rainbow|2018-10-01|Has expired: Obsolete by gitlab-ce 11.3.x update, please use devel/rubygem-rainbow instead
+net/rubygem-fog-google13|net/rubygem-fog-google|2018-10-01|Has expired: Obsolete by gitlab-ce 11.3.x update, please use net/rubygem-fog-google instead
+devel/rubygem-gemnasium-gitlab-service||2018-10-01|Has expired: Not required by gitlab-ce 11.3.x update anymore
+devel/erlang-protobuffs||2018-10-02|Has expired: upstream deprecated
+comms/wsjt|comms/wsjtx|2018-10-02|Has expired: replace with wsjtx upstream no longer maintained
+comms/wspr|comms/wsjtx|2018-10-02|Has expired: replace with wsjtx upstream no longer maintained
+comms/kvasd|comms/wsjtx|2018-10-02|Has expired: use wsjtx- kvasd is not needed by wsjtx and no longer maintained
+mail/mutt-lite|mail/mutt|2018-10-02|Has expired: For a lite version of mutt build mail/mutt with less (or zero) options
+math/arpack-ng-mpich|math/arpack-ng|2018-10-04|math/arpack-ng-mpich slave port is merged into math/arpack-ng
+editors/latexila|editors/gnome-latex|2018-10-05|Project was renamed
+math/arpack|math/arpack-ng|2018-10-06|math/arpack is the old, unmaintained version, math/arpack-ng should be used instead
+net-p2p/libtorrent-rasterbar-python|net-p2p/py-libtorrent-rasterbar|2018-10-06|Rename to the canonical name for a python port
+biology/tinker|science/tinker|2018-10-06|Move to proper category
+net-im/telepathy-qt4|net-im/telepathy-qt@qt4|2018-10-07|Moved to flavored version
+net-im/telepathy-qt5|net-im/telepathy-qt@qt5|2018-10-07|Moved to flavored version
+graphics/gegl3|graphics/gegl|2018-10-07|Replaced old gegl version with the newer version
+www/mediawiki129|www/mediawiki131|2018-10-08|Has expired: Deprecated by upstream
+devel/pecl-xdebug26|devel/pecl-xdebug|2018-10-09|Renamed because 2.6 is the new default
+net-mgmt/zabbix2-server|net-mgmt/zabbix22-server|2018-10-10|Has expired: End of Life was August, 2017
+net-mgmt/zabbix2-agent|net-mgmt/zabbix22-agent|2018-10-10|Has expired: End of Life was August, 2017
+net-mgmt/zabbix2-frontend|net-mgmt/zabbix22-frontend|2018-10-10|Has expired: End of Life was August, 2017
+net-mgmt/zabbix2-java|net-mgmt/zabbix22-java|2018-10-10|Has expired: End of Life was August, 2017
+net-mgmt/zabbix2-proxy|net-mgmt/zabbix22-proxy|2018-10-10|Has expired: End of Life was August, 2017

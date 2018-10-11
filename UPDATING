@@ -5,6 +5,94 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20181010:
+  AFFECTS: users of mail/courier-imap and other courier ports
+  AUTHOR: madpilot@FreeBSD.org
+
+  Courier-IMAP 5.0.0 added IMAP UTF8 support, and converted maildir
+  folders' names to Unicode.
+
+  Updating an existing system to Courier-IMAP 5.0, and later,
+  requires a manual one-time conversion of all existing maildirs
+  using the maildirmake command. See the maildirmake(1) manual page
+  for more information.
+
+  All other courier ports accessing maildirs also need to be updated
+  at the same time.
+
+20181009:
+  AFFECTS: users of devel/pecl-xdebug*
+  AUTHOR: pizzamig@FreeBSD.org
+
+  xdebug 2.6.1 (devel/pecl-xdebug) is the new default version and it supports
+  PHP from 7.0 to 7.2 included.
+  If you're using PHP 5.6, the previous compatible xdebug version is still
+  available in devel/pecl-xdebug25
+  If you're using PHP 7.3, the only compatible xdebug version is available
+  in devel/pecl-xdebug-devel
+
+20180930:
+  AFFECTS: users of DRM components
+  AUTHOR: jmd@FreeBSD.org
+
+  A metaport, graphics/drm-kmod, was introduced for users of both the LinuxKPI-
+  based DRM components as well as the legacy ones. It is recommended to use the
+  metaport from now on, which will select a recommended DRM version based on
+  the FreeBSD version.
+
+20180924:
+  AFFECTS: www/libresonic-standalone
+  AUTHOR: jlh@FreeBSD.org
+
+  HTTPS support has been removed from the port, as it will be removed upstream:
+    https://github.com/Libresonic/libresonic/issues/125#issuecomment-256227104
+
+  In order to avoid strange behavior for users who are using this feature, the
+  rc.d script will fail fast if libresonic_ssl="YES". You should remove the
+  following variables from rc.conf(5): libresonic_ssl libresonic_ssl_keystore
+  libresonic_ssl_password.
+
+  # sed -i '' /libresonic_ssl/d /etc/rc.conf
+
+  Users needing SSL are encouraged to use an HTTP reverse-proxy. Example
+  configurations can be found here:
+    https://github.com/Libresonic/libresonic/issues/119
+
+20180922:
+  AFFECTS: users of graphics/ilmbase, graphics/OpenEXR
+  AUTHOR: mandree@FreeBSD.org
+
+  The IlmBase package has been updated to 2.3.0.
+  The OpenEXR package has been renamed to openexr and updated to 2.3.0.
+
+  The PORTREVISION of all ports requiring either has been bumped to
+  ease the reubuilds, and where there were versions in the file names,
+  these have been removed from the *_DEPENDS lines for easier maintenance.
+
+  A full ports or package upgrade should just work.
+
+  If you are doing partial updates, be sure to rebuild and reinstall
+  all packages that require either of OpenEXR or ilmbase.
+  Normally, these can be listed by running:
+
+  # pkg info -q -r OpenEXR ilmbase  | sort -u | xargs pkg info -q -o
+
+20180905:
+  AFFECTS: users of lang/php56
+  AUTHOR: tz@FreeBSD.org
+
+  The default version of PHP has been switched from 5.6 to 7.1.
+
+  If you use binary packages you should make a list of php packages
+  before running 'pkg upgrade':
+
+  # pkg info php5\* > ~/installed-php-ports-list
+
+  After the upgrade, check with such list if all your php extensions
+  are still installed, and reinstall them if needed.
+
+  If you use mod_php56 you need to deinstall it and install mod_php71.
+
 20180901:
   AFFECTS: net/samba48
   AUTHOR: timur@FreeBSD.org
@@ -1182,94 +1270,4 @@ you update your ports collection, before attempting any port upgrades.
 
   The HPN option is currently disabled by default, and does not build,
   in the package.  This follows what happened in base as well.
-
-20171004:
-  AFFECTS: users of security/krb5-appl
-  AUTHOR: cy@FreeBSD.org
-
-  Configuration options to rename kerberos ftp, telnet, rlogin, rsh, and
-  rcp are now default to avoid conflicting with net/bsdrcmds packages
-  (in poudriere). Deselect the options to use the original command names
-  and also uninstall net/bsdrcmds to avoid the conflict.
-
-20171002:
-  AFFECTS: users of x11-wm/cwm
-  AUTHOR: tobik@FreeBSD.org
-
-  Configuration options were renamed and you need to update your ~/.cwmrc
-  accordingly.  Make sure to check cwmrc(5) for the new option names.
-  cwm-migrate-config.pl can help in migrating your ~/.cwmrc.
-
-20171001:
-  AFFECTS: users of mail/isync using Maildir sub-folders
-  AUTHOR: ehaupt@FreeBSD.org
-
-  If you have Maildir sub-folders, you need to update the configuration
-  to specify the naming style.
-
-  Please refer to the mbsync(1) man page section 'SubFolders
-  Verbatim|Maildir++|Legacy' on how to make the apropriate changes.
-
-20170930:
-  AFFECTS: users of PHP and its modules
-  AUTHOR: eugen@FreeBSD.org
-
-  All lang/php* ports switched to depend on devel/oniguruma6
-  instead of previous oniguruma version some time ago.
-
-  If you have not moved from devel/oniguruma5 before and
-  have troubles updating PHP,
-
-  for users of portmaster:
-	portmaster -o devel/oniguruma6 devel/oniguruma5
-	portmaster -r devel/oniguruma6
-
-  for users of portupgrade:
-	portupgrade -o devel/oniguruma6 devel/oniguruma5
-	portupgrade -fr devel/oniguruma6
-
-  pkg should handle this automatically.
-
-20170928:
-  AFFECTS: users of security/courier-authlib and its modules
-  AUTHOR: madpilot@FreeBSD.org
-
-  The affected ports have been modified to follow the upstream
-  suggested best practice to use the sysconftool on installation.
-
-  Please make sure your configuration files include all the comments
-  that tool uses to correctly update the configuration on update.
-
-  You can use the ".sample" or ".dist" files as templates for missing
-  comments if needed.
-
-20170915:
-  AFFECTS: users of devel/cargo
-  AUTHOR: rust@FreeBSD.org
-
-  Starting with version 1.19.0, Cargo is provided with Rust. Therefore,
-  devel/cargo was merged into lang/rust.
-
-20170914:
-  AFFECTS: users of CMake & CMake Modules
-  AUTHOR: adridg@FreeBSD.org
-
-  The devel/cmake-modules port has been merged into devel/cmake.
-
-  The benefit of being able to update the modules without the binary
-  is outweighed by the issues caused by having the binary out-of-sync
-  with the modules.
-
-  Users should delete the devel/cmake-modules package and then
-  upgrade or reinstall devel/cmake.
- 
-  All ports have been updated to depend only on CMake.
-
-20170904:
-  AFFECTS: users of net-mgmt/seafile-server
-  AUTHOR: ultima@FreeBSD.org
-
-  Users using MySQL updating to 6.1.2 need to verify table's collation
-  are utf8_unicode_ci. Upstream has set collation type to be implicit
-  and will cause all libraries to disappear if set to incorrect collation.
 
