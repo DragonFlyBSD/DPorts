@@ -4,7 +4,7 @@
 
 PORTNAME=	gtk
 PORTVERSION=	1.2.10
-PORTREVISION=	26
+PORTREVISION=	27
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME/sources/gtk+/1.2
 PKGNAMESUFFIX=	12
@@ -26,6 +26,8 @@ LIBS+=		-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
 
 INFO=		gdk gtk
+
+OPTIONS_DEFINE=	NLS
 
 .include <bsd.port.options.mk>
 
