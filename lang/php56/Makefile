@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	php56
-PORTVERSION=	5.6.37
+PORTVERSION=	5.6.38
 PORTREVISION?=	0
 CATEGORIES?=	lang devel www
 MASTER_SITES=	PHP/distributions
@@ -32,6 +32,9 @@ CONFIGURE_ARGS+=--with-layout=GNU \
 USES+=		autoreconf:build
 USE_GNOME=	libxml2
 
+# PR230207 Allow relocations against read-only segments (override lld default)
+LDFLAGS_i386=	-Wl,-z,notext
+
 OPTIONS_DEFINE+=CLI CGI FPM EMBED PHPDBG DEBUG DTRACE IPV6 MAILHEAD LINKTHR ZTS
 OPTIONS_DEFAULT=CLI CGI FPM EMBED LINKTHR
 # Bug 197128:  No ASM code for MIPS/MIPS64, disable FPM
@@ -49,7 +52,7 @@ MAILHEAD_DESC=	Enable mail header patch
 LINKTHR_DESC=	Link thread lib (for threaded extensions)
 ZTS_DESC=	Force Zend Thread Safety (ZTS) build
 
-CONFLICTS=	php55-5* php70-*
+CONFLICTS=	php55-5* php70-* php71-* php72-* php73-*
 
 DESTDIRNAME=	INSTALL_ROOT
 
