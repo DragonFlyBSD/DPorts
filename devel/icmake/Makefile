@@ -20,7 +20,7 @@ PLIST_SUB+=	PORTVERSION="${PORTVERSION}"
 
 REINPLACE_ARGS=	-I ""
 
-USES=		shebangfix
+USES=		compiler shebangfix
 SHEBANG_FILES=	build comp/build comp/icm_bootstrap comp/updategrammar \
 		comp/updateparser comp/updatescanner dep/build dep/icm_bootstrap \
 		exec/build exec/icm_bootstrap exec/list/test/build exec/string/test/build \
@@ -34,6 +34,14 @@ GL_ACCOUNT=	fbb-git
 GL_COMMIT=	8e3ac3057363162b87279bab1e9ba356eb0aea0f
 
 .include <bsd.port.options.mk>
+
+OPTIONS_DEFINE=	DOCS
+
+.include <bsd.port.pre.mk>
+
+.if ${CHOSEN_COMPILER_TYPE} == gcc && ${COMPILER_VERSION} == 42
+CFLAGS+=	-std=gnu99
+.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|find|find .|g' \
@@ -95,4 +103,4 @@ do-build:
 do-install:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./icm_install strip all ${STAGEDIR}
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
