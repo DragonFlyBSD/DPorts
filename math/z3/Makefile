@@ -12,7 +12,7 @@ COMMENT=	Z3 Theorem Prover
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-USES=		python:2.7,build
+USES=		compiler:c++11-lang python:2.7,build
 USE_GITHUB=	yes
 GH_ACCOUNT=	Z3Prover
 
@@ -35,6 +35,7 @@ GMP_LIB_DEPENDS=	libgmp.so:math/gmp
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS=		--prefix=${PREFIX}
 USE_LDCONFIG=		yes
+LDFLAGS_i386=		-Wl,-znotext
 BUILD_WRKSRC=		${WRKSRC}/build
 INSTALL_WRKSRC=		${WRKSRC}/build
 
