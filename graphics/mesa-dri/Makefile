@@ -67,6 +67,7 @@ VULKAN_DRIVERS:=	# nothing, won't build on DF
 BUILD_DEPENDS+=		${PYTHON_PKGNAMEPREFIX}mako>0:textproc/py-mako@${PY_FLAVOR}
 .endif
 
+LDFLAGS_i386=		-Wl,-znotext
 .if ${DRI_DRIVERS} || ${VULKAN_DRIVERS:MINTEL}
 . if ${/usr/bin/ld:L:tA} != /usr/bin/ld.lld
 # --build-id isn't supported by old GNU ld.bfd in base
