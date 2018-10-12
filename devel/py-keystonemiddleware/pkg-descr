@@ -1,0 +1,6 @@
+Provides middleware for integrating with the OpenStack Identity API and handling
+authorization enforcement based upon the data within the OpenStack Identity
+tokens. Also included is middleware that provides the ability to create audit
+events based on API requests.
+
+WWW: https://docs.openstack.org/keystonemiddleware/
