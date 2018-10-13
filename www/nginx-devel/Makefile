@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	nginx
-PORTVERSION=	1.15.3
+PORTVERSION=	1.15.5
+PORTREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://nginx.org/download/ \
 		LOCAL/osa
@@ -195,6 +196,12 @@ _addextmod=	add-module
 
 .for mod in ${DSO_BASEMODS}
 CONFIGURE_ARGS+=	--with-${mod}${_addbasemod}
+.endfor
+
+# Some modules depend on other being there before, for example, devel_kit needs
+# to be there before a few other.
+.for mod in ${FIRST_DSO_EXTMODS}
+CONFIGURE_ARGS+=	--${_addextmod}=${WRKSRC_${mod}}${${mod:tu}_SUBDIR}
 .endfor
 
 .for mod in ${DSO_EXTMODS}
