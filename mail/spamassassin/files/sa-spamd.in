@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/mail/spamassassin/files/sa-spamd.in 376379 2015-01-06 01:05:46Z marino $
+# $FreeBSD: head/mail/spamassassin/files/sa-spamd.in 480763 2018-09-26 19:30:36Z zeising $
 #
 
 # PROVIDE: spamd
@@ -43,7 +43,7 @@ restart_precmd="precmd"
 pidfile=${spamd_pidfile:-"/var/run/${name}/${name}.pid"}
 command=%%PREFIX%%/bin/${name}
 command_args="-d -r ${pidfile}"
-#command_interpreter="%%PREFIX%%/bin/perl"
+command_interpreter="%%PREFIX%%/bin/perl"
 required_dirs="%%PREFIX%%/share/spamassassin"
 
 precmd()
