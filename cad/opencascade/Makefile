@@ -3,7 +3,7 @@
 
 PORTNAME=	opencascade
 PORTVERSION=	7.2.0
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	cad science
 MASTER_SITES=	LOCAL/thierry
 
@@ -74,6 +74,7 @@ VIS_LIB_DEPENDS=	libftgl.so:graphics/ftgl		\
 
 VIS_CMAKE_ON=	-D3RDPARTY_FREETYPE_DIR=${LOCALBASE}
 
+DOXYGEN_IMPLIES=	DOCS
 DOXYGEN_USE=	TEX=latex:build
 DOXYGEN_BUILD_DEPENDS=	bash:shells/bash		\
 			doxygen:devel/doxygen		\
