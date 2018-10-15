@@ -1,7 +1,9 @@
 # $FreeBSD$
 
 PORTNAME=	git-cinnabar
-DISTVERSION=	0.5.0
+DISTVERSION=	0.5.0-31
+DISTVERSIONSUFFIX=	-gcb81a59
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -29,6 +31,8 @@ MAKE_ARGS+=	SUBMODULE_STATUS=dummy
 DATADIR=	${PREFIX}/libexec/git-core
 PORTDATA=	*
 PORTDOCS=	README.md
+
+OPTIONS_DEFINE=	DOCS
 
 post-configure:
 	@${TAR} cf - -C$$(${MAKE} -V WRKSRC -C ${PORTSDIR}/devel/git) . | \
