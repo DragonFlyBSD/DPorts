@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnuplot
-PORTVERSION=	5.2.4
+PORTVERSION=	5.2.5
 CATEGORIES=	math graphics
 MASTER_SITES=	SF
 
@@ -15,7 +15,7 @@ LICENSE_PERMS=	dist-mirror pkg-mirror auto-accept
 
 CONFLICTS_INSTALL?=	gnuplot-lite-[0-9]*
 
-USES+=		groff iconv pkgconfig readline
+USES+=		compiler:c++11-lang groff iconv pkgconfig readline
 GNU_CONFIGURE=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib ${ICONV_LIB}
 CONFIGURE_ARGS+=--with-readline=gnu \
