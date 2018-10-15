@@ -30,10 +30,10 @@ LIB_DEPENDS=	libpopt.so:devel/popt \
 		libpng.so:graphics/png \
 		libMagick++-6.so:graphics/ImageMagick
 
-USE_GNOME=	gtkmm24 libxml2 libxslt
 USES=		compiler:c++11-lib cmake cpe desktop-file-utils gnome \
 		iconv:wchar_t jpeg pathfix pkgconfig python:2.7,build \
 		shebangfix tar:bzip2
+USE_GNOME=	gtkmm24 libxml2 libxslt
 USE_XORG=	x11
 INSTALLS_ICONS=	yes
 CMAKE_ARGS+=	-DWITH_GNOME_VFS:BOOL=NO
