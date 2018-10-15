@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	bitcoin
-PORTVERSION=	0.16.2
+PORTVERSION=	0.17.0
 PORTREVISION?=	0
 CATEGORIES=	net-p2p finance
 MASTER_SITES=	https://bitcoincore.org/bin/bitcoin-core-${PORTVERSION}/:DEFAULT \
@@ -18,8 +18,6 @@ LICENSE=	MIT
 
 LIB_DEPENDS=	libboost_date_time.so:devel/boost-libs \
 		libevent.so:devel/libevent
-
-BROKEN_powerpc64=	fails to compile: util.cpp: undefined reference to boost::program_options::to_internal
 
 USES=		autoreconf compiler:c++11-lib gmake libtool pkgconfig qt:5 shebangfix ssl
 GNU_CONFIGURE=	yes
