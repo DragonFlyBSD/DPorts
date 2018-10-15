@@ -2,6 +2,7 @@
 
 PORTNAME=	nestopia
 DISTVERSION=	1.49
+PORTREVISION=	1
 CATEGORIES=	emulators
 
 MAINTAINER=	neel@neelc.org
@@ -23,5 +24,7 @@ USE_GL=		glu
 USE_GNOME=	cairo gdkpixbuf2 gtk30
 USE_SDL=	sdl2
 INSTALLS_ICONS=	yes
+
+OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.mk>
