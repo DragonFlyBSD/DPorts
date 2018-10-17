@@ -67,4 +67,19 @@ CONFIGURE_LOG=		${MESON_BUILD_DIR}/meson-logs/meson-log.txt
 # Add meson build dir at the end.
 CONFIGURE_ARGS+=	${MESON_BUILD_DIR}
 
+# Dragonfly
+_USES_patch+=	705:chmod-meson
+
+chmod-meson:
+	@for variant in \
+		meson-postinstall.sh\
+		meson_post_install.sh\
+		meson_post_install.py;\
+	do \
+	if [ -e "${WRKSRC}/$$variant" ]; then \
+		${ECHO_CMD} "Setting $$variant as executable"; \
+		${CHMOD} ${BINMODE} ${WRKSRC}/$$variant; \
+	fi; \
+	done
+
 .endif #!defined(_INCLUDE_USES_MESON_MK)
