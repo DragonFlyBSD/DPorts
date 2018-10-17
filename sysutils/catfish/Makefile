@@ -18,11 +18,12 @@ RUN_DEPENDS=	\
 	gksu:sysutils/gksu
 BUILD_DEPENDS=	${RUN_DEPENDS}
 
-USES=		desktop-file-utils python:2.7 tar:bz2
+USES=		desktop-file-utils gettext-tools gnome python:2.7 tar:bz2
+NO_ARCH=	yes
 USE_PYTHON=	distutils
 USE_GNOME=	gtk30 intltool pygobject3
 
-OPTIONS_DEFINE=	ZEITGEIST
+OPTIONS_DEFINE=	DOCS ZEITGEIST
 OPTIONS_DEFAULT=ZEITGEIST
 
 ZEITGEIST_DESC=	Provide recent search suggestions
