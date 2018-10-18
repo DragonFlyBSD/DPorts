@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	rust
-PORTVERSION?=	1.25.0
-PORTREVISION?=
+PORTVERSION?=	1.29.2
+PORTREVISION?=	0
 CATEGORIES=	lang
 MASTER_SITES=	http://static.rust-lang.org/dist/:src \
 		LOCAL/dumbbell/rust:rust_bootstrap \
@@ -31,10 +31,13 @@ LICENSE_FILE_MIT=	${WRKSRC}/LICENSE-MIT
 
 BUILD_DEPENDS=		cmake:devel/cmake
 LIB_DEPENDS=		libcurl.so:ftp/curl \
+			libgit2.so:devel/libgit2 \
 			libssh2.so:security/libssh2
 
 ONLY_FOR_ARCHS?=	aarch64 amd64 i386
 ONLY_FOR_ARCHS_REASON=	requires prebuilt bootstrap compiler
+
+BROKEN_aarch64=		fails to build: bootstrap compiler crashes
 
 # FIXME: The bootstrapped rustc adds -L/usr/local/lib in front of
 # the LDFLAGS. When stage0's rustc is linked, it picks the installed
@@ -44,13 +47,13 @@ ONLY_FOR_ARCHS_REASON=	requires prebuilt bootstrap compiler
 CONFLICTS_INSTALL?=	rust-nightly
 
 # See WRKSRC/src/stage0.txt for this date and version values.
-BOOTSTRAPS_DATE?=		2018-02-15
+BOOTSTRAPS_DATE?=		2018-08-02
 
-RUST_BOOTSTRAP_VERSION?=	1.24.0
+RUST_BOOTSTRAP_VERSION?=	1.28.0
 RUSTC_BOOTSTRAP=		${BOOTSTRAPS_DATE_${ARCH}:U${BOOTSTRAPS_DATE}}/rustc-${RUST_BOOTSTRAP_VERSION_${ARCH}:U${RUST_BOOTSTRAP_VERSION}}-${RUST_TARGET}.tar.gz
 RUST_STD_BOOTSTRAP=		${BOOTSTRAPS_DATE_${ARCH}:U${BOOTSTRAPS_DATE}}/rust-std-${RUST_BOOTSTRAP_VERSION_${ARCH}:U${RUST_BOOTSTRAP_VERSION}}-${RUST_TARGET}.tar.gz
 
-CARGO_BOOTSTRAP_VERSION?=	0.25.0
+CARGO_BOOTSTRAP_VERSION?=	0.29.0
 CARGO_BOOTSTRAP=		${BOOTSTRAPS_DATE_${ARCH}:U${BOOTSTRAPS_DATE}}/cargo-${CARGO_BOOTSTRAP_VERSION_${ARCH}:U${CARGO_BOOTSTRAP_VERSION}}-${RUST_TARGET}.tar.gz
 
 RUST_CHANNEL=	${PKGNAMESUFFIX:Ustable:S/^-//}
@@ -78,6 +81,7 @@ LLNEXTGEN_BUILD_DEPENDS=	LLnextgen:devel/llnextgen
 #     - pre-install to cleanup the ${STAGEDIR}
 #     - post-install to populate the ${TMPPLIST}
 RUST_MANIFESTS=		lib/rustlib/manifest-cargo \
+			lib/rustlib/manifest-clippy-preview \
 			lib/rustlib/manifest-rls-preview \
 			lib/rustlib/manifest-rustc \
 			lib/rustlib/manifest-rustfmt-preview \
@@ -92,15 +96,10 @@ PLIST_FILES=		lib/rustlib/components \
 			lib/rustlib/rust-installer-version
 
 .include <bsd.port.pre.mk>
-# ABI patch needed to address ino64 before fixes upstreamed.
-# https://github.com/rust-lang/rust/issues/42681
-.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1200031 && !defined(NIGHTLY_DATE)
-NEED_ABI_PATCH=		1
-.else
-NEED_ABI_PATCH=		0
-.endif
 
 X_PY_ENV+=	HOME="${WRKDIR}" \
+		LIBGIT2_SYS_USE_PKG_CONFIG=1 \
+		LIBSSH2_SYS_USE_PKG_CONFIG=1 \
 		OPENSSL_DIR="${OPENSSLBASE}"
 X_PY_CMD=	${PYTHON_CMD} ${WRKSRC}/x.py
 
@@ -138,36 +137,10 @@ post-extract:
 		${WRKSRC}/build/cache/${BOOTSTRAPS_DATE_${ARCH}:U${BOOTSTRAPS_DATE}}
 	${LN} -sf ${DISTDIR}/${DIST_SUBDIR}/${RUSTC_BOOTSTRAP} \
 		${WRKSRC}/build/cache/${BOOTSTRAPS_DATE_${ARCH}:U${BOOTSTRAPS_DATE}}
-.if ${NEED_ABI_PATCH} == 0
 	${LN} -sf ${DISTDIR}/${DIST_SUBDIR}/${RUST_STD_BOOTSTRAP} \
 		${WRKSRC}/build/cache/${BOOTSTRAPS_DATE_${ARCH}:U${BOOTSTRAPS_DATE}}
-.endif
 	${LN} -sf ${DISTDIR}/${DIST_SUBDIR}/${CARGO_BOOTSTRAP} \
 		${WRKSRC}/build/cache/${BOOTSTRAPS_DATE_${ARCH}:U${BOOTSTRAPS_DATE}}
-.if ${NEED_ABI_PATCH} == 1
-	${TAR} -x -C ${WRKSRC} -f ${DISTDIR}/${DIST_SUBDIR}/${RUST_STD_BOOTSTRAP}
-	${CC} ${CFLAGS} -fPIC -c -o ${WRKSRC}/old_fstat.o ${FILESDIR}/old_fstat.c
-	(set -ex; cd ${WRKSRC}; \
-	 libstd="$$(echo "${RUST_STD_DIR}/rust-std-${RUST_TARGET}/lib/rustlib/${RUST_TARGET}/lib/"libstd-*.rlib)"; \
-	 hash="$$(basename "$$libstd" .rlib | ${SED} 's/^libstd-//')"; \
-	 std_o="$$(${AR} t "$$libstd" | ${GREP} -E "^std-$$hash.*\.o$$" | ${HEAD} -n 1)"; \
-	 ${AR} x "$$libstd" "$$std_o"; \
-	 ${LD} -r -o std.xx.o "$$std_o" old_fstat.o; \
-	 ${MV} std.xx.o "$$std_o"; \
-	 ${AR} r "$$libstd" "$$std_o")
-	${TAR} -c --format=ustar -C ${WRKSRC} -f ${WRKSRC}/rust-std.tar.gz ${RUST_STD_DIR}
-	${MV} ${WRKSRC}/rust-std.tar.gz ${WRKSRC}/build/cache/${RUST_STD_BOOTSTRAP}
-.endif
-	${SED} -E \
-		-e 's,%PREFIX%,${PREFIX},' \
-		-e 's,%SYSCONFDIR%,${PREFIX}/etc,' \
-		-e 's,%MANDIR%,${MANPREFIX}/man,' \
-		-e 's,%PYTHON_CMD%,${PYTHON_CMD},' \
-		-e 's,%CHANNEL%,${RUST_CHANNEL},' \
-		-e 's,%TARGET%,${RUST_TARGET},' \
-		-e 's,%CCACHE%,${CCACHE_VALUE},' \
-		< ${FILESDIR}/config.toml \
-		> ${WRKSRC}/config.toml
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|gdb|${LOCALBASE}/bin/gdb|' \
@@ -186,7 +159,9 @@ post-patch:
 		${WRKSRC}/src/stage0.txt
 # After patching crates, we need to update their corresponding
 # `.cargo-checksum.json` to reflect the new checksums verified by Cargo.
-	@for dir in "${WRKSRC}/src/vendor/libc" "${WRKSRC}/src/vendor/openssl" "${WRKSRC}/src/vendor/openssl-sys" "${WRKSRC}/src/vendor/libgit2-sys"; do \
+	@for dir in "${WRKSRC}/src/vendor/libc" \
+	"${WRKSRC}/src/vendor/libgit2-sys" \
+	"${WRKSRC}/src/vendor/openssl"; do \
 		if ! test -d "$$dir"; then \
 			continue; \
 		fi; \
@@ -218,7 +193,24 @@ CCACHE_VALUE=	"${CCACHE_WRAPPER_PATH:C,/libexec/ccache$,,}/bin/ccache"
 CCACHE_VALUE=	false
 .endif
 
+pre-configure:
+	@for file in \
+		${WRKSRC}/src/vendor/backtrace-sys/src/libbacktrace/configure \
+		${WRKSRC}/src/vendor/backtrace-sys/src/libbacktrace/config/libtool.m4; do \
+		mv "$$file" "$$file.dont-fix"; \
+	done
+
 do-configure:
+	${SED} -E \
+		-e 's,%PREFIX%,${PREFIX},' \
+		-e 's,%SYSCONFDIR%,${PREFIX}/etc,' \
+		-e 's,%MANDIR%,${MANPREFIX}/man,' \
+		-e 's,%PYTHON_CMD%,${PYTHON_CMD},' \
+		-e 's,%CHANNEL%,${RUST_CHANNEL},' \
+		-e 's,%TARGET%,${RUST_TARGET},' \
+		-e 's,%CCACHE%,${CCACHE_VALUE},' \
+		< ${FILESDIR}/config.toml \
+		> ${WRKSRC}/config.toml
 # The FreeBSD 10 autotools fix may modify some files just before
 # `do-configure`. Like after `extra-path-ino64`, we need to update
 # `.cargo-checksum.json`.
@@ -235,6 +227,13 @@ do-configure:
 		if test "$$regex"; then \
 			${REINPLACE_CMD} -E $$regex .cargo-checksum.json; \
 		fi; \
+	done
+
+post-configure:
+	@for file in \
+		${WRKSRC}/src/vendor/backtrace-sys/src/libbacktrace/configure \
+		${WRKSRC}/src/vendor/backtrace-sys/src/libbacktrace/config/libtool.m4; do \
+		mv "$$file.dont-fix" "$$file"; \
 	done
 
 post-configure-DOCS-on:
@@ -272,7 +271,7 @@ do-install:
 	cd ${WRKSRC} && \
 	${SETENV} ${X_PY_ENV} \
 		DESTDIR=${STAGEDIR} \
-	${X_PY_CMD} install \
+	${X_PY_CMD} 'install' \
 		--verbose \
 		--config ./config.toml \
 		--jobs ${MAKE_JOBS_NUMBER}
@@ -322,13 +321,16 @@ post-install:
 # but they contain non-object files which make strip(1) unhappy.
 	@${STRIP_CMD} \
 		${STAGEDIR}${PREFIX}/bin/cargo \
+		${STAGEDIR}${PREFIX}/bin/cargo-clippy \
 		${STAGEDIR}${PREFIX}/bin/cargo-fmt \
+		${STAGEDIR}${PREFIX}/bin/clippy-driver \
 		${STAGEDIR}${PREFIX}/bin/rls \
 		${STAGEDIR}${PREFIX}/bin/rustc \
 		${STAGEDIR}${PREFIX}/bin/rustdoc \
 		${STAGEDIR}${PREFIX}/bin/rustfmt \
 		${STAGEDIR}${PREFIX}/lib/*.so \
-		${STAGEDIR}${PREFIX}/lib/rustlib/*/lib/*.so
+		${STAGEDIR}${PREFIX}/lib/rustlib/*/lib/*.so \
+		${STAGEDIR}${PREFIX}/lib/rustlib/*/codegen-backends/*.so
 
 # We set `extended = true` in config.toml because we want to build
 # Cargo at the same time. However, this installs the rust-src component
@@ -353,6 +355,14 @@ do-test:
 		--verbose \
 		--config ./config.toml \
 		--jobs ${MAKE_JOBS_NUMBER}
+
+makesum-all-archs:
+	${MAKE} makesum ARCH=${ONLY_FOR_ARCHS:O:[1]}
+.for arch in ${ONLY_FOR_ARCHS:O:[2..-1]}
+	${MAKE} makesum ARCH=${arch} DISTINFO_FILE=${DISTINFO_FILE}.${arch}
+	${GREP} ${RUST_ARCH_${arch}} ${DISTINFO_FILE}.${arch} >> ${DISTINFO_FILE}
+	${RM} ${DISTINFO_FILE}.${arch}
+.endfor
 
 BOOTSTRAPS_SOURCE_PKG_FBSDVER=		10
 BOOTSTRAPS_SOURCE_PKG_FBSDVER_aarch64=	11

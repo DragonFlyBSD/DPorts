@@ -33,4 +33,3 @@ ccache = %CCACHE%
 src-tarball = false
 
 [target.%TARGET%]
-
