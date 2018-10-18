@@ -1,6 +1,0 @@
-LDFLAGS+= -L${LOCALBASE}/lib
-
-# zrj: remove offending foreign comment style?
-dfly-patch:
-	${REINPLACE_CMD} -e 's@// Store number of joining.*@@g'	\
-		${WRKSRC}/src/base/cs_join.c
