@@ -1,8 +1,0 @@
-CXXFLAGS+=	-fpermissive
-
-# zrj: add missing link against -lm in libgpsim_eXdbm.so
-# NOTYPE  GLOBAL DEFAULT  UND {ceil, floor, fmod}
-# fixes devel/gpsim build (binutils 2.27 ld.gold is unhappy)
-dfly-patch:
-	${REINPLACE_CMD} -e "/LINK) -rpath/s/$$/ -lm/g" \
-		${WRKSRC}/eXdbm/Makefile.in
