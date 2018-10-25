@@ -14,7 +14,6 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libfixbuf.so:net/libfixbuf \
 		libltdl.so:devel/libltdl \
-		libpcap.so:net/libpcap \
 		libpcre.so:devel/pcre
 
 GNU_CONFIGURE=	yes
