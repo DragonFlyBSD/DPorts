@@ -14,7 +14,6 @@ COMMENT=	On-the-fly verification system for asynchronous concurrent systems
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-RUN_DEPENDS=	gcc:lang/gcc
 
 WRKSRC=		${WRKDIR}/Spin/Src${PORTVERSION}
 MAKEFILE=	makefile
