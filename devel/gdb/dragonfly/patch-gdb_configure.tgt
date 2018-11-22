@@ -1,6 +1,6 @@
---- gdb/configure.tgt.orig	2015-05-13 17:36:05 UTC
+--- gdb/configure.tgt.orig	2018-09-05 07:44:28 UTC
 +++ gdb/configure.tgt
-@@ -659,6 +659,12 @@ x86_64-*-linux*)
+@@ -707,6 +707,12 @@ x86_64-*-linux*)
  			solib-svr4.o symfile-mem.o linux-tdep.o linux-record.o"
  	build_gdbserver=yes
  	;;
@@ -12,13 +12,13 @@
 +	;;
  x86_64-*-freebsd* | x86_64-*-kfreebsd*-gnu)
  	# Target: FreeBSD/amd64
- 	gdb_target_obs="amd64-tdep.o amd64fbsd-tdep.o i386-tdep.o \
-@@ -699,6 +705,8 @@ esac
+ 	gdb_target_obs="amd64-fbsd-tdep.o ${i386_tobjs} \
+@@ -747,6 +753,8 @@ gdb_target_obs="${cpu_obs} ${os_obs} ${g
  # map target onto default OS ABI
  
  case "${targ}" in
 +*-*-dragonfly*)
 +		gdb_osabi=GDB_OSABI_DRAGONFLY ;;
  *-*-freebsd* | *-*-kfreebsd*-gnu)
- 		gdb_osabi=GDB_OSABI_FREEBSD_ELF ;;
+ 		gdb_osabi=GDB_OSABI_FREEBSD ;;
  *-*-linux* | *-*-uclinux*)

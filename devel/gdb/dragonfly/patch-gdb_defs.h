@@ -1,6 +1,6 @@
---- gdb/defs.h.orig	2017-06-04 15:54:54 UTC
+--- gdb/defs.h.orig	2018-09-05 07:27:32 UTC
 +++ gdb/defs.h
-@@ -592,6 +592,7 @@ enum gdb_osabi
+@@ -483,6 +483,7 @@ enum gdb_osabi
    GDB_OSABI_FREEBSD,
    GDB_OSABI_NETBSD,
    GDB_OSABI_OPENBSD,

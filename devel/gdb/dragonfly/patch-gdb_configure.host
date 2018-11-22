@@ -1,6 +1,6 @@
---- gdb/configure.host.orig	2015-05-13 17:36:05 UTC
+--- gdb/configure.host.orig	2018-09-05 07:44:28 UTC
 +++ gdb/configure.host
-@@ -175,6 +175,7 @@ vax-*-netbsdelf* | vax-*-knetbsd*-gnu)
+@@ -176,6 +176,7 @@ vax-*-netbsdelf* | vax-*-knetbsd*-gnu)
  vax-*-openbsd*)		gdb_host=obsd ;;
  
  x86_64-*-linux*)	gdb_host=linux64 ;;

@@ -1,6 +1,6 @@
---- gdb/Makefile.in.orig	2018-01-31 02:58:50 UTC
+--- gdb/Makefile.in.orig	2018-09-05 07:44:28 UTC
 +++ gdb/Makefile.in
-@@ -641,6 +641,7 @@ ALL_64_TARGET_OBS = \
+@@ -655,6 +655,7 @@ ALL_64_TARGET_OBS = \
  	alpha-tdep.o \
  	amd64-darwin-tdep.o \
  	amd64-dicos-tdep.o \
@@ -8,7 +8,7 @@
  	amd64-fbsd-tdep.o \
  	amd64-linux-tdep.o \
  	amd64-nbsd-tdep.o \
-@@ -700,6 +701,7 @@ ALL_TARGET_OBS = \
+@@ -715,6 +716,7 @@ ALL_TARGET_OBS = \
  	i386-darwin-tdep.o \
  	i386-dicos-tdep.o \
  	i386-fbsd-tdep.o \
@@ -16,7 +16,7 @@
  	i386-gnu-tdep.o \
  	i386-go32-tdep.o \
  	i386-linux-tdep.o \
-@@ -1198,6 +1200,7 @@ HFILES_NO_SRCDIR = \
+@@ -1219,6 +1221,7 @@ HFILES_NO_SRCDIR = \
  	darwin-nat.h \
  	dcache.h \
  	defs.h \
@@ -24,7 +24,7 @@
  	dicos-tdep.h \
  	dictionary.h \
  	disasm.h \
-@@ -2227,6 +2230,7 @@ ALLDEPFILES = \
+@@ -2232,6 +2235,7 @@ ALLDEPFILES = \
  	bsd-uthread.c \
  	darwin-nat.c \
  	dicos-tdep.c \

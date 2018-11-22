@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/kgdb-main.c 475318 2018-07-25 17:28:36Z jhb $");
+__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/kgdb-main.c 480613 2018-09-24 17:23:35Z jhb $");
 
 #include <sys/param.h>
 #include <sys/stat.h>
@@ -50,7 +50,6 @@ __FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/kgdb-main.c 475318 2018-07-25 17:2
 #include <cli-out.h>
 #include <main.h>
 #include <objfiles.h>
-#include "observer.h"
 #include <target.h>
 #include <top.h>
 #include <ui-file.h>

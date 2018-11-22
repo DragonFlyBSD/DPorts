@@ -23,7 +23,6 @@
 #include "target.h"
 #include "gregset.h"
 
-#include "gdb_assert.h"
 #include <signal.h>
 #include <stddef.h>
 #include <sys/types.h>
@@ -37,10 +36,24 @@
 #include "dfly-nat.h"
 #include "amd64-tdep.h"
 #include "amd64-nat.h"
-#include "x86-bsd-nat.h"
+#include "amd64-bsd-nat.h"
 #include "x86-nat.h"
 #include "x86-xstate.h"
 
+
+class amd64_fbsd_nat_target final
+  : public amd64_bsd_nat_target<fbsd_nat_target>
+{
+public:
+  /* Add some extra features to the common *BSD/amd64 target.  */
+  const struct target_desc *read_description () override;
+
+#if defined(HAVE_PT_GETDBREGS) && defined(USE_SIGTRAP_SIGINFO)
+  bool supports_stopped_by_hw_breakpoint () override;
+#endif
+};
+
+static amd64_fbsd_nat_target the_amd64_fbsd_nat_target;
 
 /* Offset in `struct reg' where MEMBER is stored.  */
 #define REG_OFFSET(member) offsetof (struct reg, member)
@@ -164,35 +177,24 @@ amd64dfly_supply_pcb (struct regcache *regcache, struct pcb *pcb)
     return 0;
 
   pcb->pcb_rsp += 8;
-  regcache_raw_supply (regcache, AMD64_RIP_REGNUM, &pcb->pcb_rip);
-  regcache_raw_supply (regcache, AMD64_RBX_REGNUM, &pcb->pcb_rbx);
-  regcache_raw_supply (regcache, AMD64_RSP_REGNUM, &pcb->pcb_rsp);
-  regcache_raw_supply (regcache, AMD64_RBP_REGNUM, &pcb->pcb_rbp);
-  regcache_raw_supply (regcache, 12, &pcb->pcb_r12);
-  regcache_raw_supply (regcache, 13, &pcb->pcb_r13);
-  regcache_raw_supply (regcache, 14, &pcb->pcb_r14);
-  regcache_raw_supply (regcache, 15, &pcb->pcb_r15);
-#if 0 && (__FreeBSD_version < 800075) && (__FreeBSD_kernel_version < 800075)
-  /* struct pcb provides the pcb_ds/pcb_es/pcb_fs/pcb_gs fields only
-     up until __FreeBSD_version 800074: The removal of these fields
-     occurred on 2009-04-01 while the __FreeBSD_version number was
-     bumped to 800075 on 2009-04-06.  So 800075 is the closest version
-     number where we should not try to access these fields.  */
-  regcache_raw_supply (regcache, AMD64_DS_REGNUM, &pcb->pcb_ds);
-  regcache_raw_supply (regcache, AMD64_ES_REGNUM, &pcb->pcb_es);
-  regcache_raw_supply (regcache, AMD64_FS_REGNUM, &pcb->pcb_fs);
-  regcache_raw_supply (regcache, AMD64_GS_REGNUM, &pcb->pcb_gs);
-#endif
+  regcache->raw_supply (AMD64_RIP_REGNUM, &pcb->pcb_rip);
+  regcache->raw_supply (AMD64_RBX_REGNUM, &pcb->pcb_rbx);
+  regcache->raw_supply (AMD64_RSP_REGNUM, &pcb->pcb_rsp);
+  regcache->raw_supply (AMD64_RBP_REGNUM, &pcb->pcb_rbp);
+  regcache->raw_supply (12, &pcb->pcb_r12);
+  regcache->raw_supply (13, &pcb->pcb_r13);
+  regcache->raw_supply (14, &pcb->pcb_r14);
+  regcache->raw_supply (15, &pcb->pcb_r15);
 
   return 1;
 }
 #endif /* DFLY_PCB_SUPPLY */
 
 
-/* Implement the to_read_description method.  */
+/* Implement the read_description method.  */
 
-static const struct target_desc *
-amd64dfly_read_description (struct target_ops *ops)
+const struct target_desc *
+amd64_dfly_nat_target::read_description ()
 {
 #ifdef PT_GETXSTATE_INFO
   static int xsave_probed;
@@ -201,7 +203,7 @@ amd64dfly_read_description (struct target_ops *ops)
   struct reg regs;
   int is64;
 
-  if (ptrace (PT_GETREGS, ptid_get_pid (inferior_ptid),
+  if (ptrace (PT_GETREGS, inferior_ptid.pid (),
 	      (PTRACE_TYPE_ARG3) &regs, 0) == -1)
     perror_with_name (_("Couldn't get registers"));
   is64 = (regs.r_cs == GSEL (GUCODE_SEL, SEL_UPL));
@@ -210,7 +212,7 @@ amd64dfly_read_description (struct target_ops *ops)
     {
       struct ptrace_xstate_info info;
 
-      if (ptrace (PT_GETXSTATE_INFO, ptid_get_pid (inferior_ptid),
+      if (ptrace (PT_GETXSTATE_INFO, inferior_ptid.pid (),
 		  (PTRACE_TYPE_ARG3) &info, sizeof (info)) == 0)
 	{
 	  x86bsd_xsave_len = info.xsave_len;
@@ -222,41 +224,43 @@ amd64dfly_read_description (struct target_ops *ops)
   if (x86bsd_xsave_len != 0)
     {
       if (is64)
-	return amd64_target_description (xcr0);
+	return amd64_target_description (xcr0, true);
       else
 	return i386_target_description (xcr0);
     }
 #endif
   if (is64)
-    return amd64_target_description (X86_XSTATE_SSE_MASK);
+    return amd64_target_description (X86_XSTATE_SSE_MASK, true);
   else
     return i386_target_description (X86_XSTATE_SSE_MASK);
 }
 
-/* Provide a prototype to silence -Wmissing-prototypes.  */
-void _initialize_amd64dfly_nat (void);
+#if defined(HAVE_PT_GETDBREGS) && defined(USE_SIGTRAP_SIGINFO)
+/* Implement the supports_stopped_by_hw_breakpoints method.  */
+
+bool
+amd64_dfly_nat_target::supports_stopped_by_hw_breakpoint ()
+{
+  return true;
+}
+#endif
 
 void
 _initialize_amd64dfly_nat (void)
 {
-  struct target_ops *t;
   int offset;
 
   amd64_native_gregset32_reg_offset = amd64dfly32_r_reg_offset;
   amd64_native_gregset64_reg_offset = amd64dfly64_r_reg_offset;
 
-  /* Add some extra features to the common *BSD/x86 target.  */
-  t = amd64bsd_target ();
-  t->to_read_description = amd64dfly_read_description;
-
-  dfly_nat_add_target (t);
+  add_inf_child_target (&the_amd64_dfly_nat_target);
 
 #ifdef DFLY_PCB_SUPPLY
   /* Support debugging kernel virtual memory images.  */
   bsd_kvm_add_target (amd64dfly_supply_pcb);
 #endif
 
-  /* To support the recognition of signal handlers, i386bsd-tdep.c
+  /* To support the recognition of signal handlers, i386-bsd-tdep.c
      hardcodes some constants.  Inclusion of this file means that we
      are compiling a native debugger, which means that we can use the
      system header files and sysctl(3) to get at the relevant

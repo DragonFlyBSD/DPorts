@@ -1,7 +1,7 @@
---- gdb/i386-tdep.h.orig	2013-01-01 06:32:45.000000000 +0000
+--- gdb/i386-tdep.h.orig	2018-09-05 07:27:13 UTC
 +++ gdb/i386-tdep.h
-@@ -387,12 +387,11 @@ extern int i386_process_record (struct g
- /* Functions and variables exported from i386bsd-tdep.c.  */
+@@ -449,12 +449,11 @@ extern int i386_mpx_enabled (void);
+ /* Functions and variables exported from i386-bsd-tdep.c.  */
  
  extern void i386bsd_init_abi (struct gdbarch_info, struct gdbarch *);
 -extern CORE_ADDR i386fbsd_sigtramp_start_addr;

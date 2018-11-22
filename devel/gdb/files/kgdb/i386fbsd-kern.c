@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/i386fbsd-kern.c 475318 2018-07-25 17:28:36Z jhb $");
+__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/i386fbsd-kern.c 480613 2018-09-24 17:23:35Z jhb $");
 
 #include "defs.h"
 #include "frame-unwind.h"
@@ -186,7 +186,7 @@ i386fbsd_fetch_tss(void)
 	struct segment_descriptor sd;
 	CORE_ADDR addr, cpu0prvpage, tss;
 
-	kt = kgdb_thr_lookup_tid(ptid_get_tid(inferior_ptid));
+	kt = kgdb_thr_lookup_tid(inferior_ptid.tid());
 	if (kt == NULL || kt->cpu == NOCPU || kt->cpu < 0)
 		return (0);
 

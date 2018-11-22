@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/amd64fbsd-kern.c 475318 2018-07-25 17:28:36Z jhb $");
+__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/amd64fbsd-kern.c 480613 2018-09-24 17:23:35Z jhb $");
 
 #include "defs.h"
 #include "frame-unwind.h"
@@ -231,7 +231,7 @@ amd64fbsd_kernel_init_abi(struct gdbarch_info info, struct gdbarch *gdbarch)
 {
 
 	amd64_init_abi(info, gdbarch,
-		       amd64_target_description (X86_XSTATE_SSE_MASK));
+		       amd64_target_description (X86_XSTATE_SSE_MASK, true));
 
 	frame_unwind_prepend_unwinder(gdbarch, &amd64fbsd_trapframe_unwind);
 

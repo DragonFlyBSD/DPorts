@@ -23,7 +23,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: head/devel/gdb/files/kgdb/kgdb.h 446852 2017-07-28 21:20:47Z jhb $
+ * $FreeBSD: head/devel/gdb/files/kgdb/kgdb.h 480613 2018-09-24 17:23:35Z jhb $
  */
 
 #ifndef _KGDB_H_
@@ -41,7 +41,6 @@ struct kthr {
 
 extern struct kthr *curkthr;
 extern struct target_so_ops kld_so_ops;
-extern struct target_ops kgdb_trgt_ops;
 extern int kgdb_quiet;
 
 CORE_ADDR kgdb_trgt_stop_pcb(u_int);
