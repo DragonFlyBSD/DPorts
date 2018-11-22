@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/mail/dovecot/files/dovecot.in 477601 2018-08-19 21:00:17Z ler $
+# $FreeBSD: head/mail/dovecot/files/dovecot.in 483490 2018-10-30 14:04:21Z ler $
 #
 
 # PROVIDE: dovecot
@@ -60,6 +60,14 @@ for config in ${dovecot_config}; do
 	required_files="${config}"
 	command_args="-c ${config}"
 	if [ -s ${config} ]; then
+               ${command} ${command_args} -a 2>&1 >/dev/null
+                if [ $? -ne 0 ]; then
+                       echo "==Error=="
+                       echo "Configuration file check failed."
+                       # Use dovecot to print the config error.
+                       ${command} ${command_args} -a
+                       exit $?
+                fi
 		base_dir=$(${command} ${command_args} -a 2>/dev/null | /usr/bin/awk -F '= ' '/^base_dir =/ { print $2 }')
 		pidfile="${base_dir}/master.pid"
 	else
