@@ -4,7 +4,7 @@
 
 PORTNAME=	gtk
 PORTVERSION=	1.2.10
-PORTREVISION=	27
+PORTREVISION=	28
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME/sources/gtk+/1.2
 PKGNAMESUFFIX=	12
@@ -12,6 +12,9 @@ DISTNAME=	gtk+-${PORTVERSION}
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Gimp Toolkit for X11 GUI (previous stable version)
+
+DEPRECATED=	Uses obsolete glib12
+EXPIRATION_DATE=	2018-12-20
 
 USES=		libtool pathfix perl5
 USE_PERL5=	build
