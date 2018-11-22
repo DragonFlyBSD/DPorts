@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	kakoune
-DISTVERSION=	2018.09.04
+DISTVERSION=	2018.10.27
 CATEGORIES=	editors
 MASTER_SITES=	https://github.com/mawww/kakoune/releases/download/v${DISTVERSION}/
 
@@ -11,7 +11,7 @@ COMMENT=	Modal code editor with a focus on interactivity
 LICENSE=	UNLICENSE
 LICENSE_FILE=	${WRKSRC:H}/UNLICENSE
 
-BUILD_DEPENDS=	a2x:textproc/asciidoc
+RUN_DEPENDS=	setsid:sysutils/ssid
 
 USES=		compiler:c++14-lang gmake ncurses tar:bzip2
 
