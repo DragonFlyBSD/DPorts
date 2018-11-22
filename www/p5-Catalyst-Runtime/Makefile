@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	Catalyst-Runtime
-PORTVERSION=	5.90119
+PORTVERSION=	5.90122
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -12,7 +12,6 @@ COMMENT=	Elegant MVC Web Application Framework (Runtime)
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
-LICENSE_FILE=	${WRKSRC}/LICENSE
 
 # Do not add the following ports to TEST_DEPENDS to avoid cyclic dependencies:
 # - devel/p5-Test-WWW-Mechanize-Catalyst
@@ -37,6 +36,7 @@ RUN_DEPENDS=	p5-CGI-Simple>=1.109:www/p5-CGI-Simple \
 		p5-MooseX-Getopt>=0.48:devel/p5-MooseX-Getopt \
 		p5-MooseX-MethodAttributes>=0.24:devel/p5-MooseX-MethodAttributes \
 		p5-Path-Class>=0.09:devel/p5-Path-Class \
+		p5-PerlIO-utf8_strict>=0:devel/p5-PerlIO-utf8_strict \
 		p5-Plack>=0.9991:www/p5-Plack \
 		p5-Plack-Middleware-FixMissingBodyInRedirect>=0.09:www/p5-Plack-Middleware-FixMissingBodyInRedirect \
 		p5-Plack-Middleware-MethodOverride>=0.12:www/p5-Plack-Middleware-MethodOverride \
@@ -64,15 +64,14 @@ TEST_DEPENDS=	p5-Term-Size-Any>=0:devel/p5-Term-Size-Any \
 
 PORTSCOUT=	limit:^[0-9\.]*$$
 
-NO_ARCH=	yes
 USES=		perl5
 USE_PERL5=	configure
+
+NO_ARCH=	yes
 
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 502501
-BUILD_DEPENDS=	${RUN_DEPENDS}
-RUN_DEPENDS+=	p5-Scalar-List-Utils>=1.45:lang/p5-Scalar-List-Utils
 RUN_DEPENDS+=	p5-Scalar-List-Utils>=1.45:lang/p5-Scalar-List-Utils
 .endif
 
