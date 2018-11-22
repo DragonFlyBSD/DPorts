@@ -2,8 +2,7 @@
 
 PORTNAME=	opencollada
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.6.63
-PORTREVISION=	1
+DISTVERSION=	1.6.67
 CATEGORIES=	graphics devel
 
 MAINTAINER=	ports@FreeBSD.org
@@ -15,7 +14,7 @@ BROKEN_sparc64=	cannot build: runaway process
 
 LIB_DEPENDS=	libpcre.so:devel/pcre
 
-USES=		cmake:outsource compiler:c++11-lib  dos2unix iconv pkgconfig
+USES=		cmake:outsource compiler:c++11-lib dos2unix iconv pkgconfig
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	KhronosGroup
