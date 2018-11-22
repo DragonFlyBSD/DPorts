@@ -1,2 +1,0 @@
-CXXFLAGS+=	-fpermissive
-LDFLAGS+= -L${LOCALBASE}/lib -ltasn1

@@ -1,5 +1,0 @@
-
-# port does not respect CXXFLAGS
-dfly-patch:
-	${REINPLACE_CMD} -e 's/\(CXXFLAGS =\)/\1 -std=gnu++98/g'	\
-		${WRKSRC}/Makefile
