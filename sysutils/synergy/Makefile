@@ -22,6 +22,8 @@ GH_ACCOUNT=	symless
 GH_PROJECT=	synergy-core
 USE_XORG=	ice xtst x11 sm xext xinerama xrandr xi
 
+CONFLICTS=	synergy-1
+
 CMAKE_ARGS=	-DSYNERGY_REVISION:STRING=${PORTVERSION:S/.//g}00000 # it expects a 7-digit hash
 
 CFLAGS+=	-I${LOCALBASE}/include -L${LOCALBASE}/lib
