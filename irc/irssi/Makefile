@@ -12,16 +12,13 @@ COMMENT=	Modular IRC client with many features
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		cpe gettext-runtime gmake libtool ncurses pkgconfig tar:xz
+USES=		autoreconf cpe gettext-runtime gmake gnome libtool ncurses pkgconfig tar:xz
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
 USE_GNOME=	glib20
 
 OPTIONS_DEFINE=	PERL PROXY SOCKS BOT DOCS TRUECOLOR CAPSICUM
 OPTIONS_DEFAULT=	PERL CAPSICUM
-
-# If we're on FreeBSD 10 don't offer the Capsicum option.
-OPTIONS_EXCLUDE_FreeBSD_10=	CAPSICUM
 
 OPTIONS_SUB=	yes
 SOCKS_DESC=	Socks proxy support
@@ -47,11 +44,9 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|/usr|${PREFIX}|' -e 's|/etc|${PREFIX}&|' \
 		${WRKSRC}/docs/irssi.1
 
-post-configure:
-	@${MV} ${WRKSRC}/irssi.conf ${WRKSRC}/irssi.conf.sample
-
 post-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/irssi/modules
+	@${MV} ${STAGEDIR}${PREFIX}/etc/irssi.conf ${STAGEDIR}${PREFIX}/etc/irssi.conf.sample
 
 post-install-PERL-on:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/${SITE_ARCH_REL}/auto/Irssi/Irssi.so
