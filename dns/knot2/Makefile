@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	knot
-DISTVERSION=	2.6.8
+DISTVERSION=	2.7.3
 PORTREVISION=	1
 CATEGORIES=	dns ipv6
 MASTER_SITES=	https://secure.nic.cz/files/knot-dns/ \
@@ -14,6 +14,9 @@ COMMENT=	High performance authoritative-only DNS server
 
 LICENSE=	GPLv3
 
+NOT_FOR_ARCHS=	i386
+NOT_FOR_ARCHS_REASON_i386=Uses 64 bit atomics that clang cannot generate on i386 on FreeBSD >= 11.2
+
 LIB_DEPENDS=	libgnutls.so:security/gnutls \
 		libidn2.so:dns/libidn2 \
 		liblmdb.so:databases/lmdb \
@@ -22,14 +25,14 @@ LIB_DEPENDS=	libgnutls.so:security/gnutls \
 
 CONFLICTS=	knot-1.* knot1-[0-6].*
 
-USES=		alias compiler:c11 libedit libtool localbase ncurses pkgconfig python shebangfix tar:xz
+USES=		alias compiler:c11 libedit libtool localbase ncurses pkgconfig python tar:xz
 GNU_CONFIGURE=	yes
-SHEBANG_FILES=	src/utils/pykeymgr/pykeymgr.in
 CONFIGURE_ARGS=	--with-rundir=/var/run/knot \
 		--with-storage=/var/db/knot \
 		--with-pkgconfigdir=${PREFIX}/libdata/pkgconfig \
 		--enable-recvmmsg=no
 USE_LDCONFIG=	yes
+LLD_UNSAFE=	yes
 INSTALL_TARGET=	install-strip
 USE_RC_SUBR=	${PORTNAME}
 SUB_FILES=	pkg-message
@@ -38,7 +41,7 @@ USERS=		knot
 GROUPS=		knot
 SUB_LIST+=	USERS="${USERS}" GROUPS="${GROUPS}"
 
-PORTDOCS=	AUTHORS COPYING ChangeLog INSTALL NEWS README THANKS
+PORTDOCS=	COPYING NEWS README
 
 OPTIONS_DEFINE=			DNSTAP FASTPARSER IDN DOCS
 
@@ -71,6 +74,7 @@ post-install:
 	${MV} ${STAGEDIR}${ETCDIR}/knot.sample.conf \
 		${STAGEDIR}${ETCDIR}/knot.conf.sample
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}/var/run/knot ${STAGEDIR}/var/db/knot
 	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}/
 
 .include <bsd.port.mk>
