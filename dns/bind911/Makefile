@@ -3,7 +3,7 @@
 
 PORTNAME=	bind
 PORTVERSION=	${ISCVERSION:S/-P/P/:S/b/.b/:S/a/.a/:S/rc/.rc/}
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	dns net ipv6
 MASTER_SITES=	ISC/bind9/${ISCVERSION}
 PKGNAMESUFFIX=	911
@@ -20,7 +20,7 @@ LIB_DEPENDS=	libxml2.so:textproc/libxml2
 USES=	cpe libedit
 
 # ISC releases things like 9.8.0-P1, which our versioning doesn't like
-ISCVERSION=	9.11.4-P2
+ISCVERSION=	9.11.5
 
 CPE_VENDOR=	isc
 CPE_VERSION=	${ISCVERSION:C/-.*//}
@@ -35,6 +35,7 @@ CONFIGURE_ARGS=	--localstatedir=/var --disable-linux-caps \
 		--with-libxml2=${LOCALBASE} \
 		--with-readline="-L${LOCALBASE}/lib -ledit" \
 		--with-dlopen=yes \
+		--with-gost=no \
 		--sysconfdir=${ETCDIR}
 ETCDIR=		${PREFIX}/etc/namedb
 
@@ -56,9 +57,8 @@ OPTIONS_DEFINE=		IDN LARGE_FILE PYTHON JSON \
 			MINCACHE PORTREVISION QUERYTRACE LMDB DNSTAP \
 			START_LATE TUNING_LARGE TCP_FASTOPEN
 
-OPTIONS_RADIO=	CRYPTO GOSTDEF
+OPTIONS_RADIO=	CRYPTO
 OPTIONS_RADIO_CRYPTO=	SSL NATIVE_PKCS11
-OPTIONS_RADIO_GOSTDEF=	GOST GOST_ASN1
 
 OPTIONS_GROUP=		DLZ
 OPTIONS_GROUP_DLZ=	DLZ_POSTGRESQL DLZ_MYSQL DLZ_BDB \
@@ -80,9 +80,6 @@ DNSTAP_DESC=		Provides fast passive logging of DNS messages
 FILTER_AAAA_DESC=	Enable filtering of AAAA records
 FIXED_RRSET_DESC=	Enable fixed rrset ordering
 GEOIP_DESC=		Allow geographically based ACL.
-GOSTDEF_DESC=		Enable GOST ciphers, needs SSL
-GOST_ASN1_DESC=		GOST using ASN.1
-GOST_DESC=		GOST raw keys (new default)
 GSSAPI_BASE_DESC=	Using Heimdal in base
 GSSAPI_HEIMDAL_DESC=	Using security/heimdal
 GSSAPI_MIT_DESC=	Using security/krb5
@@ -130,10 +127,6 @@ FIXED_RRSET_CONFIGURE_ENABLE=	fixed-rrset
 
 GEOIP_CONFIGURE_WITH=	geoip
 GEOIP_LIB_DEPENDS=	libGeoIP.so:net/GeoIP
-
-GOST_ASN1_CONFIGURE_ON=	--with-gost=asn1
-
-GOST_CONFIGURE_ON=	--with-gost
 
 GSSAPI_BASE_CONFIGURE_ON=\
 	--with-gssapi=${GSSAPIBASEDIR} KRB5CONFIG="${KRB5CONFIG}"
@@ -199,14 +192,10 @@ TUNING_LARGE_CONFIGURE_OFF=	--with-tuning=default
 
 .include <bsd.port.pre.mk>
 
-.if !${PORT_OPTIONS:MGOST} && !${PORT_OPTIONS:MGOST_ASN1}
-CONFIGURE_ARGS+=	--without-gost
-.endif
-
-.if ( ${PORT_OPTIONS:MGOST} || ${PORT_OPTIONS:MGOST_ASN1} ) && ${SSL_DEFAULT} == base
-BROKEN=	OpenSSL from the base system does not support GOST, add \
-	DEFAULT_VERSIONS+=ssl=openssl to your /etc/make.conf and rebuild everything \
-	that needs SSL.
+.if ${SSL_DEFAULT} == base
+SUB_LIST+=	ENGINES=/usr/lib/engines
+.else
+SUB_LIST+=	ENGINES=${LOCALBASE}/lib/engines
 .endif
 
 post-patch:
