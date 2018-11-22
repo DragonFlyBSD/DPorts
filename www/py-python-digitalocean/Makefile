@@ -2,9 +2,9 @@
 # $FreeBSD$
 
 PORTNAME=	python-digitalocean
-PORTVERSION=	1.13.2
+PORTVERSION=	1.14.0
+DISTVERSIONPREFIX=	v
 CATEGORIES=	www python
-MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	skreuzer@FreeBSD.org
@@ -12,9 +12,14 @@ COMMENT=	API to manage digitalocean.com droplets
 
 LICENSE=	GPLv3
 
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}requests>=2.0.0:www/py-requests@${PY_FLAVOR}
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}requests>=2.0.0:www/py-requests@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}jsonpickle>0:devel/py-jsonpickle@${PY_FLAVOR}
+
+USE_GITHUB=	yes
+GH_ACCOUNT=	koalalorenzo
 
 USES=	python
 USE_PYTHON=	distutils autoplist
+NO_ARCH=	yes
 
 .include <bsd.port.mk>
