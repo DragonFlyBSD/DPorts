@@ -28,10 +28,6 @@ _l=		${lang:C/=.*//g}
 ${_l:tu}_DEFAULT=	${lang:C/.*=//g}
 .endfor
 
-.if exists(/usr/lib/priv/libprivate_ssl.so)
-SSL_DEFAULT?=	libressl
-.endif
-
 # Possible values: 2.2, 2.4
 APACHE_DEFAULT?=	2.4
 # Possible values: 48, 5, 6
@@ -46,7 +42,9 @@ FIREBIRD_DEFAULT?=	2.5
 FORTRAN_DEFAULT?=	gfortran
 # Possible values: 3.0.4
 FPC_DEFAULT?=		3.0.4
-# Possible values: 4.9, 5, 6, 7, 8
+# Possible values: 50, 60, 70 (to be used when non-base compiler is required)
+LLVM_DEFAULT?=		60
+# Possible values: 5, 6, 7, 8
 GCC_DEFAULT?=		7
 # Possible values: 7, 8, 9, agpl
 GHOSTSCRIPT_DEFAULT?=	agpl
@@ -78,10 +76,10 @@ _PERL5_FROM_BIN!=	perl -e 'printf "%vd\n", $$^V;'
 _EXPORTED_VARS+=	_PERL5_FROM_BIN
 PERL5_DEFAULT:=		${_PERL5_FROM_BIN:R}
 .endif
-# Possible values: 9.3, 9.4, 9.5, 9.6, 10
+# Possible values: 9.3, 9.4, 9.5, 9.6, 10, 11
 PGSQL_DEFAULT?=		9.5
 # Possible values: 5.6, 7.0, 7.1, 7.2, 7.3
-PHP_DEFAULT?=		7.1
+PHP_DEFAULT?=		7.2
 # Possible values: 2.7, 3.4, 3.5, 3.6, 3.7
 PYTHON_DEFAULT?=	2.7
 # Possible values: 2.7
@@ -92,7 +90,7 @@ PYTHON3_DEFAULT?=	3.6
 RUBY_DEFAULT?=		2.4
 # Possible values: 4.6, 4.7, 4.8
 SAMBA_DEFAULT?=		4.7
-# Possible values: base, openssl, openssl-devel, openssl111, libressl, libressl-devel
+# Possible values: base, openssl, openssl111, libressl, libressl-devel
 .if !defined(SSL_DEFAULT)
 #	If no preference was set, check for an installed base version
 #	but give an installed port preference over it.

@@ -97,7 +97,6 @@ _GSTREAMER_PLUGINS= \
 		opus \
 		pango \
 		resindvd \
-		schroedinger \
 		shout2 \
 		sndfile \
 		sndio \
@@ -136,6 +135,7 @@ _GSTREAMER_PLUGINS+= \
 		nas \
 		python \
 		qt4 \
+		schroedinger \
 		sdl \
 		vdpau \
 		vp8 \
@@ -145,6 +145,7 @@ _GSTREAMER_PLUGINS+= \
 # plugins only in 1.0
 .if defined(USE_GSTREAMER1)
 _GSTREAMER_PLUGINS+= \
+		aom \
 		assrender \
 		bs2b \
 		chromaprint \
@@ -165,6 +166,7 @@ _GSTREAMER_PLUGINS+= \
 		openexr \
 		openh264 \
 		openjpeg \
+		openmpt \
 		png \
 		rsvg \
 		rtmp \
@@ -173,6 +175,7 @@ _GSTREAMER_PLUGINS+= \
 		srtp \
 		ttml \
 		vpx \
+		vulkan \
 		webp \
 		x \
 		x265 \
@@ -355,6 +358,9 @@ aalib_IMPL=	good
 annodex_DEPENDS=	multimedia/gstreamer-plugins-annodex
 annodex_IMPL=		good
 
+aom_DEPENDS=	multimedia/gstreamer-plugins-aom
+aom_IMPL=	bad
+
 assrender_DEPENDS=	multimedia/gstreamer-plugins-assrender
 assrender_IMPL=		bad
 
@@ -390,6 +396,9 @@ openexr_IMPL=		bad
 
 openjpeg_DEPENDS=	graphics/gstreamer-plugins-openjpeg
 openjpeg_IMPL=		bad
+
+openmpt_DEPENDS=	audio/gstreamer-plugins-openmpt
+openmpt_IMPL=		bad
 
 png_DEPENDS=	graphics/gstreamer-plugins-png
 png_IMPL=	good
@@ -505,6 +514,9 @@ vp8_IMPL=	bad
 
 vpx_DEPENDS=	multimedia/gstreamer-plugins-vpx
 vpx_IMPL=	good
+
+vulkan_DEPENDS=	graphics/gstreamer-plugins-vulkan
+vulkan_IMPL=	bad
 
 # XXX: This is a quick solution for ports with USE_GSTREAMER=python
 #      but without USE_PYTHON.

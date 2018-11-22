@@ -550,8 +550,6 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #				  the path relative to ${INFO_PATH}.
 # INFO_PATH		- Path, where all .info files will be installed by your
 #				  port, relative to ${PREFIX}
-#				  Default: "share/info" if ${PREFIX} is equal to /usr
-#				  and "info" otherwise.
 #
 # Set the following to specify all documentation your port installs into
 # ${DOCSDIR}
@@ -1198,7 +1196,7 @@ OSREL!=		${ECHO} ${DFLYVERSION} | ${AWK} '{a=int($$1/100000); b=int(($$1-(a*1000
 .endif
 _EXPORTED_VARS+=	DFLYVERSION OSREL
 
-.if (${OPSYS} == FreeBSD && (${OSVERSION} < 1004000 || (${OSVERSION} >= 1100000 && ${OSVERSION} < 1102000))) || \
+.if (${OPSYS} == FreeBSD && ${OSVERSION} < 1102000) || \
     (${OPSYS} == DragonFly && ${DFLYVERSION} < 400400)
 _UNSUPPORTED_SYSTEM_MESSAGE=	Ports Collection support for your ${OPSYS} version has ended, and no ports\
 								are guaranteed to build on this system. Please upgrade to a supported release.
@@ -1512,7 +1510,8 @@ FLAVORS:=	${FLAVOR} ${FLAVORS:N${FLAVOR}}
 
 .if !empty(FLAVOR) && !defined(_DID_FLAVORS_HELPERS)
 _DID_FLAVORS_HELPERS=	yes
-_FLAVOR_HELPERS_OVERRIDE=	DESCR PLIST PKGNAMEPREFIX PKGNAMESUFFIX
+_FLAVOR_HELPERS_OVERRIDE=	DESCR PLIST PKGNAMEPREFIX PKGNAMESUFFIX \
+							DEPRECATED EXPIRATION_DATE
 _FLAVOR_HELPERS_APPEND=	 	CONFLICTS CONFLICTS_BUILD CONFLICTS_INSTALL \
 							PKG_DEPENDS EXTRACT_DEPENDS PATCH_DEPENDS \
 							FETCH_DEPENDS BUILD_DEPENDS LIB_DEPENDS \
@@ -2203,7 +2202,6 @@ PLIST?=			${PKGDIR}/pkg-plist
 PKGHELP?=		${PKGDIR}/pkg-help
 PKGINSTALL?=	${PKGDIR}/pkg-install
 PKGDEINSTALL?=	${PKGDIR}/pkg-deinstall
-PKGREQ?=		${PKGDIR}/pkg-req
 PKGMESSAGE?=	${PKGDIR}/pkg-message
 _PKGMESSAGES+=	${PKGMESSAGE}
 
@@ -2214,7 +2212,7 @@ PKG_SUFX?=		.tar
 .else
 PKG_SUFX?=		.txz
 .endif
-# where pkg_add records its dirty deeds.
+# where pkg(8) stores its data
 PKG_DBDIR?=		/var/db/pkg
 
 ALL_TARGET?=		all
@@ -2686,12 +2684,7 @@ MAN${sect}PREFIX?=	${MANPREFIX}
 .endfor
 MANLPREFIX?=	${MANPREFIX}
 MANNPREFIX?=	${MANPREFIX}
-
-.if ${PREFIX} == /usr
 INFO_PATH?=	share/info
-.else
-INFO_PATH?=	info
-.endif
 
 .if defined(INFO)
 RUN_DEPENDS+=	indexinfo:print/indexinfo

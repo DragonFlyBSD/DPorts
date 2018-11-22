@@ -245,7 +245,6 @@ devel/goffice04||2013-04-16|Removed: No users, blocking libgsf update
 devel/goffice06||2013-04-16|Removed: No users, blocking libgsf update
 devel/goffice1||2013-04-16|Removed: Only one port user which has no user itself. blocking libgsf update
 devel/present||2013-04-16|Removed: No users, blocking libgsf update
-audio/icecast|audio/icecast2|2013-04-18|Has expired: Unmaintained upstream since 2004. Use audio/icecast2 instead
 net-im/gajim-devel|net-im/gajim|2013-04-18|Has expired: This port is outdated for two years, no distfile available. Please use net-im/gajim instead
 dns/bind97||2013-04-20|Has expired: No longer supported by ISC, use Bind 9.8 or 9.9
 dns/bind97-sdb||2013-04-20|Has expired: No longer supported by ISC, use Bind 9.8 or 9.9
@@ -740,7 +739,6 @@ multimedia/ksubeditor||2013-07-26|Has expired: Depends on Qt 3.x
 multimedia/mandvd||2013-07-26|Has expired: Depends on Qt 3.x
 multimedia/noatun-plugins||2013-07-26|Has expired: Depends on Qt 3.x
 multimedia/qdvdauthor||2013-07-26|Has expired: Depends on Qt 3.x
-multimedia/subtitlecomposer||2013-07-26|Has expired: Depends on Qt 3.x
 multimedia/transkode||2013-07-26|Has expired: Depends on Qt 3.x
 multimedia/xine_artsplugin||2013-07-26|Has expired: Depends on Qt 3.x
 net/cphone||2013-07-26|Has expired: Depends on Qt 3.x
@@ -2841,7 +2839,6 @@ science/dtiquery||2014-09-01|Not staged
 science/elmer-hutiter||2014-09-01|Not staged
 science/elmerpost||2014-09-01|Not staged
 science/g3data||2014-09-01|Not staged
-science/gamess||2014-09-01|Not staged
 science/minc||2014-09-01|Not staged
 science/psi3||2014-09-01|Not staged
 science/x11iraf||2014-09-01|Not staged
@@ -5235,7 +5232,6 @@ www/rubygem-jquery-atwho-rails-rails4|www/rubygem-jquery-atwho-rails|2017-04-10|
 www/p5-Catalyst-Plugin-Singleton||2017-04-10|Has expired: Deprecated by upstream
 x11/lumina-i18n||2017-04-10|Has expired: Obsolete, i18n files included in x11/lumina
 sysutils/jail2||2017-04-10|Has expired: Starting with 10.0 functionality has been merged into base
-sysutils/iocage-devel||2017-04-10|Has expired: Outdated version. Please use sysutils/py-iocage instead
 databases/puppetdb||2017-04-10|Has expired: Depends on expired sysutils/puppet38, use puppetdb[34] instead
 databases/puppetdb-terminus||2017-04-10|Has expired: Depends on expired sysutils/puppet38, use puppetdb-terminus[34]
 databases/pglesslog||2017-04-10|Has expired: Does not build with recent PostgreSQL versions
@@ -5481,7 +5477,6 @@ www/apache22-event-mpm||2017-07-01|Has expired: Upstream propose EoL of apache 2
 net/freeradius2|net/freeradius3|2017-07-01|Has expired: EoL, use net/freeradius3 instead
 net/abills||2017-07-01|Removed, unmaintained and depends on expired net/freeradius2
 net-mgmt/ezradius||2017-07-01|Removed, unmaintained and depends on expired net/freeradius2
-x11-toolkits/qt5-declarative||2017-07-01|Has expired: Has not been released since Qt 5.5 -- installation can lead to runtime conflicts with qt5-quick
 deskutils/california|deskutils/gnome-calendar|2017-07-02|Has expired: Orphaned upstream, replaced by gnome-calendar
 devel/etcd3|devel/etcd31|2017-07-07|Version 3.2 introduces breaking changes
 sysutils/py-iocage|sysutils/py3-iocage|2017-07-10|Has expired: obsoleted by sysutils/py3-iocage port using Python 3 instead of Python 2
@@ -5625,15 +5620,15 @@ x11-wm/awesome2|x11-wm/awesome|2017-10-14|Has expired: Awesome WM 2.x is depreca
 x11-wm/awesome3|x11-wm/awesome|2017-10-14|Has expired: Awesome WM 3.x is deprecated use 4.x instead
 www/moodle30|www/moodle33|2017-10-14|Has expired: Deprecated by upstream, please use www/moodle33 instead
 lang/gcc5-devel|lang/gcc5|2017-10-14|The GCC 5 branch has been closed, use the final release instead (or a newer major version)
-devel/vtcl||2017-10-16|Has expired: This port depends on Tcl/Tk 8.4 , which is no longer maintained. Please port it to 8.5+
-editors/tpad||2017-10-16|Has expired: This port depends on Tcl/Tk 8.4 , which is no longer maintained. Please port it to 8.5+
-games/polypuzzle||2017-10-16|Has expired: This port depends on Tcl/Tk 8.4 , which is no longer maintained. Please port it to 8.5+
-multimedia/nxtvepg||2017-10-16|Has expired: This port depends on Tcl/Tk 8.4 , which is no longer maintained. Please port it to 8.5+
-net/xpvm||2017-10-16|Has expired: This port depends on Tcl/Tk 8.4 , which is no longer maintained. Please port it to 8.5+
-x11/tkXwin||2017-10-16|Has expired: This port depends on Tcl/Tk 8.4 , which is no longer maintained. Please port it to 8.5+
+devel/vtcl||2017-10-16|Has expired: This port depends on Tcl/Tk 8.4, which is no longer maintained. Please port it to 8.5+
+editors/tpad||2017-10-16|Has expired: This port depends on Tcl/Tk 8.4, which is no longer maintained. Please port it to 8.5+
+games/polypuzzle||2017-10-16|Has expired: This port depends on Tcl/Tk 8.4, which is no longer maintained. Please port it to 8.5+
+multimedia/nxtvepg||2017-10-16|Has expired: This port depends on Tcl/Tk 8.4, which is no longer maintained. Please port it to 8.5+
+net/xpvm||2017-10-16|Has expired: This port depends on Tcl/Tk 8.4, which is no longer maintained. Please port it to 8.5+
+x11/tkXwin||2017-10-16|Has expired: This port depends on Tcl/Tk 8.4, which is no longer maintained. Please port it to 8.5+
 games/crafty-tablebase-pawn||2017-10-17|Waste of resources
 devel/p5-Log-Any-Adapter-Syslog|devel/p5-Log-Any|2017-10-19|Has expired: Merged with devel/p5-Log-Any
-lang/fpc-tcl||2017-10-20|Has expired: This port depends on Tcl/Tk 8.4 , which is no longer maintained. Please port it to 8.5+
+lang/fpc-tcl||2017-10-20|Has expired: This port depends on Tcl/Tk 8.4, which is no longer maintained. Please port it to 8.5+
 net/asterisk11|net/asterisk13|2017-10-28|Has expired: Asterisk 11.x will reach EOL on 2017-10-25. Please migrate to net/asterisk13
 lang/gcc5-aux|lang/gcc6-aux|2017-11-01|Has expired: Essentially unmaintained and replaced by gcc6-aux
 textproc/rubygem-rouge1|textproc/rubygem-rouge|2017-11-01|Has expired: Use textproc/rubygem-rouge instead
@@ -5667,7 +5662,6 @@ databases/cassandra2||2017-11-12|Has expired: Broken for more than 6 months
 graphics/geos35|graphics/geos|2017-11-12|Has expired: legacy version, no longer needed
 astro/gmapcatcher||2017-11-12|Has expired: Unfetchable for more than six months (google code has gone away)
 audio/smasher||2017-11-12|Has expired: Does not build with modern csound
-audio/csound|audio/csound6|2017-11-12|Has expired: Not supported upstream anymore, use csound6
 french/eficas||2017-11-14|Removed with Code_Aster 13.4.0, should be replaced by aster-study in cad/salome
 databases/grass6|databases/grass7|2017-11-18|Removed in favor of grass 7
 news/brag||2017-11-21|Has expired: Tcl/Tk 8.4 is no longer maintained, please use 8.5+
@@ -6674,3 +6668,71 @@ net-mgmt/zabbix2-agent|net-mgmt/zabbix22-agent|2018-10-10|Has expired: End of Li
 net-mgmt/zabbix2-frontend|net-mgmt/zabbix22-frontend|2018-10-10|Has expired: End of Life was August, 2017
 net-mgmt/zabbix2-java|net-mgmt/zabbix22-java|2018-10-10|Has expired: End of Life was August, 2017
 net-mgmt/zabbix2-proxy|net-mgmt/zabbix22-proxy|2018-10-10|Has expired: End of Life was August, 2017
+www/swish++||2018-10-16|Has expired: Unmaintained upstream
+deskutils/tagutils||2018-10-16|Has expired: Unmaintained upstream
+devel/libleaftag||2018-10-16|Has expired: Unmaintained upstream
+net-im/jabber||2018-10-16|Has expired: Unmaintained upstream
+cad/gmsh-occ||2018-10-17|To match upstream, cad/gmsh now builds with OCC
+audio/msbcg729||2018-10-18|Obsolete: net/mediastreamer has built-in G.729 codec
+audio/msilbc|multimedia/mswebrtc|2018-10-18|Deprecated upstream
+multimedia/msx264|multimedia/msopenh264|2018-10-18|Deprecated upstream
+games/openastromenace|games/astromenace|2018-10-20|Name correctly after upstream
+devel/hs-enumerator||2018-10-23|Has expired: Doesn't build with recent GHC version
+net-im/hs-haskell-xmpp||2018-10-23|Has expired: Doesn't build with recent GHC version
+security/hs-certificate||2018-10-23|Has expired: Doesn't build with recent GHC version
+textproc/hs-attoparsec-enumerator||2018-10-23|Has expired: Doesn't build with recent GHC version
+textproc/hs-HaXml||2018-10-23|Has expired: Doesn't build with recent GHC version
+www/hs-happstack||2018-10-23|Has expired: Doesn't build with recent GHC version
+x11-toolkits/hs-wxc||2018-10-23|Has expired: Doesn't build with recent GHC version
+x11-toolkits/hs-wx||2018-10-23|Has expired: Doesn't build with recent GHC version
+archivers/hs-zlib-enum||2018-10-23|Has expired: Doesn't build with recent GHC version
+x11-toolkits/hs-wxcore||2018-10-23|Has expired: Doesn't build with recent GHC version
+devel/hs-TypeCompose||2018-10-23|Has expired: Doesn't build with recent GHC version
+devel/hs-PSQueue||2018-10-23|Has expired: Doesn't build with recent GHC version
+devel/hs-blaze-builder-enumerator||2018-10-23|Has expired: Doesn't build with recent GHC version
+www/hs-gitit||2018-10-23|Has expired: Doesn't build with newest packages
+cad/kicad-library||2018-10-25|Has expired: KiCad has been upgraded to 5.0.0
+devel/linux-kernel||2018-10-29|Has expired: no longer useful
+audio/py-musicbrainz2||2018-10-29|Has expired: Musicbrainz Web Service 1.0 support ended 2018-08-01
+games/bloboats||2018-11-01|Has expired: Upstream gone, FreeBSD 10 only
+net/stf-6rd-kmod||2018-11-01|Has expired: Does not build on FreeBSD 11+
+net/pmf||2018-11-01|Has expired: Does not build on FreeBSD 11+
+net/knemo-kde4||2018-11-01|Has expired: KDE4 is EOL upstream, FreeBSD 10 only-port
+net/userfw||2018-11-01|Has expired: Does not build on FreeBSD 11+
+sysutils/qjail4|sysutils/qjail|2018-11-01|Has expired: Only for FreeBSD 10.x, use sysutis/qjail instead
+sysutils/bsdmoted||2018-11-01|Has expired: does not build on FreeBSD 11+
+sysutils/scprotect||2018-11-01|Has expired: Does not build on FreeBSD 11+
+www/typo3-7|www/typo3-8|2018-11-01|Has expired: Support will end in October 2018, please update to either www/typo3-8 or www/typo3-9
+devel/memleax||2018-11-01|Has expired: does not actually detect leaks
+emulators/virtio-kmod||2018-11-01|Has expired: Does not build on FreeBSD 10+
+games/traindirector||2018-11-01|Has expired: Does not build on FreeBSD 11+
+devel/rubygem-peek-sidekiq||2018-11-01|Obsolete by www/gitlab-ce 11.4.x upgrade
+devel/rubygem-sidekiq-limit_fetch||2018-11-01|Obsolete by www/gitlab-ce 11.4.x upgrade
+textproc/rubygem-github-markup16|textproc/rubygem-github-markup|2018-11-01|Obsolete by www/gitlab-ce 11.4.x upgrade, please use textproc/rubygem-github-markup
+www/rubygem-dropzonejs-rails07|www/rubygem-dropzonejs-rails|2018-11-01|Obsolete by www/gitlab-ce 11.4.x upgrade, please use www/rubygem-dropzonejs-rails
+audio/icecast2|audio/icecast|2018-11-03|Use upstream naming
+security/openssl-devel|security/openssl111|2018-11-04|Use security/openssl111 instead
+irc/netwalker-ircc||2018-11-04|Has expired: Upstream gone, very old code base, use modern irc client instead
+x11-toolkits/qt5-quick|x11-toolkits/qt5-declarative|2018-11-04|Remove unnecessary split
+lang/qt5-qml|x11-toolkits/qt5-declarative|2018-11-04|Remove unnecessary split
+science/ncs|science/code_saturne|2018-11-04|Code_Saturne merged bft, ecs, fvm, mei and ncs
+science/bft|science/code_saturne|2018-11-04|Code_Saturne merged bft, ecs, fvm, mei and ncs
+science/ecs|science/code_saturne|2018-11-04|Code_Saturne merged bft, ecs, fvm, mei and ncs
+science/fvm|science/code_saturne|2018-11-04|Code_Saturne merged bft, ecs, fvm, mei and ncs
+science/mei|science/code_saturne|2018-11-04|Code_Saturne merged bft, ecs, fvm, mei and ncs
+x11-wm/cde|x11/cde|2018-11-05|Recategorise
+misc/rumprun||2018-11-06|Has expired: "fails with current compilers"
+security/ossec-hids-client|security/ossec-hids-agent|2018-11-09|Agent is the name used in documentation
+graphics/ImageMagick|graphics/ImageMagick6|2018-11-10|Port renamed
+graphics/ImageMagick-nox11|graphics/ImageMagick6-nox11|2018-11-10|Port renamed
+lang/gcc6-devel|lang/gcc6|2018-11-11|The GCC 6 branch has been closed, use the final release instead (or a later major version)
+mail/py-email-reply-parser|mail/py-email_reply_parser|2018-11-15|Rename to match upstream naming
+net-mgmt/vidalia||2018-11-16|Has expired: outdated and unmaintained
+german/selfhtml||2018-11-16|Has expired: Project migrated to a Wiki
+sysutils/fastest_cvsup||2018-11-16|Has expired: Obsolete, FreeBSD and OpenBSD switched from cvsup to svn and cvsync, NetBSD only have 2 servers left
+devel/rubygem-sidekiq-bulk-rails5|devel/rubygem-sidekiq-bulk|2018-11-17|Remove -rails5 suffix
+audio/csound6|audio/csound|2018-11-17|Move to audio/csound because this is a stable project, no need to have a versioned package name
+x11-fonts/emojione-color-font-ttf|x11-fonts/twemoji-color-font-ttf|2018-11-19|Has expired: EOL upstream, please use x11-fonts/twemoji-color-font-ttf instead
+editors/coedit|editors/dexed|2018-11-19|Project was renamed
+net-mgmt/p5-FusionInventory-Agent-Task-NetDiscovery||2018-11-20|Has expired: No longer needed
+net-mgmt/p5-FusionInventory-Agent-Task-SNMPQuery||2018-11-20|Removed, no longer needed

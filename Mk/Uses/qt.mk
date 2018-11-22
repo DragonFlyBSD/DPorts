@@ -153,7 +153,7 @@ _USE_QT4_ONLY=		accessible assistant-adp assistantclient clucene codecs-cn codec
 _USE_QT5_ONLY=		3d buildtools canvas3d charts concurrent connectivity \
 			core datavis3d diag examples gamepad \
 			graphicaleffects location paths phonon4 plugininfo printsupport \
-			qdbus qdoc qdoc-data qev qml quick quickcontrols \
+			qdbus qdoc qdoc-data qev quickcontrols \
 			quickcontrols2 scxml sensors serialbus serialport speech \
 			sql-tds uiplugin uitools virtualkeyboard wayland webchannel \
 			webengine websockets websockets-qml widgets x11extras
@@ -217,7 +217,11 @@ dbus_PORT=		devel/${_QT_RELNAME}-dbus
 dbus_LIB=		libQt${_QT_LIBVER}DBus.so
 
 declarative_PORT=	x11-toolkits/${_QT_RELNAME}-declarative
+.  if ${_QT_VER:M4}
 declarative_LIB=	libQt${_QT_LIBVER}Declarative.so
+.  else
+declarative_LIB=	libQt${_QT_LIBVER}Qml.so
+.  endif
 
 demo_PORT=		misc/${_QT_RELNAME}-qtdemo
 demo_PATH=		${LOCALBASE}/${QT_BINDIR_REL}/qtdemo
@@ -333,9 +337,6 @@ qev_PATH=		${LOCALBASE}/${QT_BINDIR_REL}/qev
 qmake_PORT=		devel/${_QT_RELNAME}-qmake
 qmake_PATH=		${LOCALBASE}/${QT_BINDIR_REL}/qmake
 
-qml_PORT=		lang/${_QT_RELNAME}-qml
-qml_LIB=		libQt${_QT_LIBVER}Qml.so
-
 qmlviewer_PORT=		devel/${_QT_RELNAME}-qmlviewer
 qmlviewer_PATH=		${LOCALBASE}/${QT_BINDIR_REL}/qmlviewer
 
@@ -347,9 +348,6 @@ qtconfig_PATH=		${LOCALBASE}/${QT_BINDIR_REL}/qtconfig
 
 qtestlib_PORT=		${testlib_PORT}
 qtestlib_LIB=		${testlib_LIB}
-
-quick_PORT=		x11-toolkits/${_QT_RELNAME}-quick
-quick_LIB=		libQt${_QT_LIBVER}Quick.so
 
 quickcontrols_PORT=	x11-toolkits/${_QT_RELNAME}-quickcontrols
 quickcontrols_PATH=	${LOCALBASE}/${QT_QMLDIR_REL}/QtQuick/Controls/qmldir
