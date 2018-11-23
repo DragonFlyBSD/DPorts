@@ -2,9 +2,9 @@
 # $FreeBSD$
 
 PORTNAME=	chicken
-DISTVERSION=	5.0.0rc3
+DISTVERSION=	5.0.0
 CATEGORIES=	lang scheme
-MASTER_SITES=	https://code.call-cc.org/dev-snapshots/2018/10/08/
+MASTER_SITES=	https://code.call-cc.org/releases/${DISTVERSION}/
 PKGNAMESUFFIX=	5
 
 MAINTAINER=	tobik@FreeBSD.org
