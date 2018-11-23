@@ -29,7 +29,7 @@ PLIST_SUB+=	X8664=""
 PLIST_SUB+=	X8664="@comment "
 .endif
 
-.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1100508
+.if ${OPSYS} == FreeBSD
 CFLAGS+=	-Wno-address-of-packed-member
 .endif
 
