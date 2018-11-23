@@ -28,6 +28,10 @@ _l=		${lang:C/=.*//g}
 ${_l:tu}_DEFAULT=	${lang:C/.*=//g}
 .endfor
 
+.if exists(/usr/lib/priv/libprivate_ssl.so)
+SSL_DEFAULT?=  libressl
+.endif
+
 # Possible values: 2.2, 2.4
 APACHE_DEFAULT?=	2.4
 # Possible values: 48, 5, 6
