@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/security/hitch/files/hitch.in 472971 2018-06-21 12:38:59Z zi $
+# $FreeBSD: head/security/hitch/files/hitch.in 482392 2018-10-18 23:36:11Z zi $
 #
 
 # PROVIDE: hitch
@@ -30,8 +30,8 @@ load_rc_config $name
 
 : ${hitch_enable="NO"}
 : ${hitch_config="%%PREFIX%%/etc/hitch.conf"}
-: ${hitch_huser:=nobody}
-: ${hitch_hgroup:=nobody}
+: ${hitch_huser:=hitch}
+: ${hitch_hgroup:=hitch}
 
 command="%%PREFIX%%/sbin/hitch"
 command_args="--daemon -u ${hitch_huser} -g ${hitch_hgroup} -s --config=${hitch_config}"
