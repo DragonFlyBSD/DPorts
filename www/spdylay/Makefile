@@ -14,9 +14,10 @@ COMMENT=	SPDY protocol version 2, 3 and 3.1 implementation in C
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BROKEN_SSL=	openssl-devel
 BROKEN_powerpc64=	does not link: undefined reference to 'std::ctype<char>::_M_widen_init()'
 BROKEN_sparc64=	does not build: fails to link
+DEPRECATED=	SPDY is deprecated, use HTTP/2 instead
+EXPIRATION_DATE=2018-12-31
 
 BUILD_DEPENDS=	libevent>=2.0.8:devel/libevent
 LIB_DEPENDS=	libevent_openssl.so:devel/libevent
