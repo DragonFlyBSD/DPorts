@@ -9,7 +9,7 @@ PORTREVISION=	0
 .else
 # XXX: correct version
 # dns/bind9xx here
-PORTREVISION=	1
+PORTREVISION=	0
 .endif
 CATEGORIES=	dns net ipv6
 # XXX: put the ISC master_site
@@ -38,15 +38,15 @@ BROKEN_powerpc64=	fails to link: /usr/bin/ld: cannot find -latomic
 LIB_DEPENDS=	libxml2.so:textproc/libxml2
 
 # XXX: remove tar:bz2
-USES=	cpe libedit ssl tar:bz2
+USES=	compiler:c11 cpe libedit ssl tar:bz2
 # ISC releases things like 9.8.0-P1, which our versioning doesn't like
-ISCVERSION=	9.13.1a0.2018.10.05
+ISCVERSION=	9.13.1a0.2018.11.20
 # XXX: Remove gitlab
 USE_GITLAB=	yes
 GL_SITE=	https://gitlab.isc.org
 GL_ACCOUNT=	isc-projects
 GL_PROJECT=	bind9
-GL_COMMIT=	e8f66bcfa36b89586319372a7fe626fbf4e49a03
+GL_COMMIT=	380ab3b39f4ea99f7cfe0e9ce065594f3e697ab7
 
 CPE_VENDOR=	isc
 CPE_VERSION=	${ISCVERSION:C/-.*//}
