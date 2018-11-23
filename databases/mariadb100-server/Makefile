@@ -1,8 +1,8 @@
 # $FreeBSD$
 
 PORTNAME?=	mariadb
-PORTVERSION=	10.0.36
-PORTREVISION?=	2
+PORTVERSION=	10.0.37
+PORTREVISION?=	0
 CATEGORIES=	databases ipv6
 MASTER_SITES=	http://ftp.osuosl.org/pub/${SITESDIR}/ \
 		http://mirrors.supportex.net/${SITESDIR}/ \
@@ -17,13 +17,16 @@ PKGNAMESUFFIX?=	100-server
 MAINTAINER=	brnrd@FreeBSD.org
 COMMENT?=	Multithreaded SQL database (server)
 
+DEPRECATED=	Upstream End-of-Life March 2019 (https://mariadb.org/about/maintenance-policy/)
+EXPIRATION_DATE=	2019-04-01
+
 LICENSE=	GPLv2
 LICENSE_NAME_PerconaFT=	PerconaFT patents license
 LICENSE_FILE_PerconaFT=	${WRKSRC}/storage/tokudb/PerconaFT/PATENTS
 LICENSE_PERMS_PerconaFT=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
-BROKEN_SSL=		openssl-devel
-BROKEN_SSL_REASON_openssl-devel=	incomplete definition of type 'struct dh_st'
+BROKEN_SSL=		openssl111
+BROKEN_SSL_REASON_openssl111=	Does not support OpenSSL 1.1, use MariaDB 10.2 or 10.3
 
 SUB_FILES=	pkg-message
 
@@ -142,6 +145,9 @@ post-install-TOKUDB-on:
 .include <bsd.port.pre.mk>
 
 .if ${OPSYS} == FreeBSD
+.  if ${OSVERSION} >= 1200085 && ${SSL_DEFAULT} == base
+BROKEN=	${BROKEN_SSL_REASON_openssl111}
+.  endif
 CMAKE_ARGS+=	-DWITH_JEMALLOC="system"
 .else
 CMAKE_ARGS+=	-DWITH_JEMALLOC="no"
