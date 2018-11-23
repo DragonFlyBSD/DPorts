@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/net/bird/files/bird6.in 442031 2017-05-29 19:30:30Z olivier $
+# $FreeBSD: head/net/bird/files/bird6.in 484648 2018-11-10 23:02:44Z olivier $
 #
 # PROVIDE: bird6 dynamicrouting
 # REQUIRE: LOGIN
@@ -28,7 +28,8 @@ extra_commands="reload"
 
 : ${bird6_enable="NO"}
 : ${bird6_config="%%PREFIX%%/etc/bird6.conf"}
+: ${bird6_group="birdvty"}
 
-command_args="-P /var/run/${name}.pid -c $bird6_config"
+command_args="-P /var/run/${name}.pid -c $bird6_config -g $bird6_group"
 
 run_rc_command "$1"
