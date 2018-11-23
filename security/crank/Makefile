@@ -3,12 +3,15 @@
 
 PORTNAME=	crank
 PORTVERSION=	0.2.1
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=	security
 MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	CRyptANalysis toolKit
+
+DEPRECATED=	Uses obsolete glib12
+EXPIRATION_DATE=	2018-12-20
 
 LIB_DEPENDS=	libguile.so:lang/guile
 
