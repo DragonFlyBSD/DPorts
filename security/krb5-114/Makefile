@@ -21,8 +21,10 @@ LICENSE=		MIT
 DEPRECATED=		EOL twelve months after release of krb5-1.16
 EXPIRATION_DATE=	2018-12-31
 
-BROKEN_SSL=		openssl-devel
-BROKEN_SSL_REASON_openssl-devel=	 OpenSSL >= 1.1.0 unsupported.
+BROKEN_FreeBSD_12=	Fails to build after import of openssl111
+BROKEN_FreeBSD_13=	Fails to build after import of openssl111
+BROKEN_SSL=		openssl111
+BROKEN_SSL_REASON_openssl111=	 OpenSSL >= 1.1.0 unsupported.
 
 
 CONFLICTS=		heimdal-[0-9]* srp-[0-9]* krb5-11[35]-[0-9]* \
