@@ -13,4 +13,9 @@ USE_KDE=	archive auth codecs config configwidgets coreaddons ecm \
 USE_QT=		buildtools_build concurrent core dbus gui qmake_build \
 		script svg widgets xml
 
+OPTIONS_DEFINE=	ICONS
+OPTIONS_DEFAULT=	ICONS
+ICONS_DESC=	Install Breeze Icons
+ICONS_USE=	KDE=breeze-icons_run
+
 .include <bsd.port.mk>
