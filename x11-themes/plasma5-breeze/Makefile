@@ -16,7 +16,7 @@ USES=		cmake:outsource compiler:c++11-lib cpe \
 USE_KDE=	auth breeze-icons codecs config configwidgets coreaddons \
 		decoration ecm frameworkintegration guiaddons i18n kcmutils \
 		plasma-framework service wayland widgetsaddons windowsystem
-USE_QT=		core dbus gui network qml quick widgets x11extras xml \
+USE_QT=		core dbus declarative gui network widgets x11extras xml \
 		buildtools_build qmake_build
 USE_XORG=	xcb
 
