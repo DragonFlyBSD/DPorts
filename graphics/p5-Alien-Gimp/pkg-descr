@@ -1,0 +1,4 @@
+Use in your Makefile.PL as above. Produces config info usable via
+ExtUtils::Depends.
+
+WWW: https://metacpan.org/release/Alien-Gimp
