@@ -3,7 +3,7 @@
 
 PORTNAME=	classpath
 PORTVERSION=	0.99
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	java devel
 MASTER_SITES=	GNU \
 		SAVANNAH
@@ -12,6 +12,9 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	java@FreeBSD.org
 COMMENT=	GNU project to create a free Java class library
+
+DEPRECATED=	Staled since 2012, OpenJDK is live now
+EXPIRATION_DATE=	2018-12-02
 
 LICENSE=	GPLv2
 
