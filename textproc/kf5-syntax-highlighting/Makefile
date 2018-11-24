@@ -12,4 +12,6 @@ USE_KDE=	ecm
 USE_QT=		buildtools_build core gui linguisttools_build \
 		network testlib qmake_build
 
+CMAKE_ARGS=	-DCMAKE_DISABLE_FIND_PACKAGE_Qt5XmlPatterns=TRUE
+
 .include <bsd.port.mk>
