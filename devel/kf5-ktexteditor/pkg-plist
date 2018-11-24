@@ -1,4 +1,5 @@
 etc/dbus-1/system.d/org.kde.ktexteditor.katetextbuffer.conf
+etc/xdg/ktexteditor.categories
 include/KF5/KTextEditor/KTextEditor/AnnotationInterface
 include/KF5/KTextEditor/KTextEditor/Application
 include/KF5/KTextEditor/KTextEditor/Attribute
@@ -77,7 +78,6 @@ share/kservicetypes5/ktexteditor.desktop
 share/kservicetypes5/ktexteditorplugin.desktop
 share/locale/af/LC_MESSAGES/ktexteditor5.mo
 share/locale/ar/LC_MESSAGES/ktexteditor5.mo
-share/locale/ast/LC_MESSAGES/ktexteditor5.mo
 share/locale/be/LC_MESSAGES/ktexteditor5.mo
 share/locale/bg/LC_MESSAGES/ktexteditor5.mo
 share/locale/bn/LC_MESSAGES/ktexteditor5.mo
