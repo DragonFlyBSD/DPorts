@@ -13,7 +13,7 @@ USES=		cmake:outsource compiler:c++11-lib gettext kde:5 pathfix qt:5 tar:xz
 USE_KDE=	bookmarks config configwidgets coreaddons dbusaddons ecm \
 		globalaccel i18n kcmutils kdeclarative  kio package \
 		service widgetsaddons windowsystem xmlgui
-USE_QT=		buildtools_build core dbus gui network qmake_build qml \
-		quick sql widgets
+USE_QT=		buildtools_build core dbus declarative gui network qmake_build \
+		sql widgets
 
 .include <bsd.port.mk>
