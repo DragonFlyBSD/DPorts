@@ -3,7 +3,7 @@
 
 PORTNAME=	nucleo
 PORTVERSION=	0.7.6
-PORTREVISION=	21
+PORTREVISION=	22
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	http://insitu.lri.fr/metisse/download/nucleo/
 
@@ -18,15 +18,14 @@ LIB_DEPENDS=	libexif.so:graphics/libexif \
 		libfreetype.so:print/freetype2 \
 		libexpat.so:textproc/expat2
 
-USES=		gmake jpeg libtool localbase:ldflags pathfix pkgconfig python:run shebangfix tar:bzip2
+USES=		gl gmake jpeg libtool localbase:ldflags \
+		pathfix pkgconfig python:run shebangfix tar:bzip2
 USE_GL=		gl glu
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--without-opencv
 USE_LDCONFIG=	yes
 INSTALL_TARGET=	install-strip
 SHEBANG_FILES=	docs/MacOSX/nBundle.in
-
-CXXFLAGS+=	-Wno-c++11-narrowing
 
 OPTIONS_DEFINE=	FFMPEG GD GNUTLS QT4
 OPTIONS_RADIO=	DNSSD
