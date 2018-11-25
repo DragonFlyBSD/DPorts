@@ -2,7 +2,7 @@
 
 PORTNAME=	kid3
 PORTVERSION=	3.6.2
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	audio kde
 MASTER_SITES=	SF
 PKGNAMESUFFIX=	-${SLAVE}
@@ -52,7 +52,7 @@ USE_QT+=	corelib dbus gui network xml \
 CMAKE_ON+=	WITH_QT4
 .else
 # KF5 and Qt5
-USES+=		qt:5
+USES+=		compiler:c++11-lang qt:5
 USE_QT+=	core dbus gui multimedia network xml widgets \
 		buildtools_build linguisttools_build qmake_build
 CMAKE_ON+=	WITH_QT5
