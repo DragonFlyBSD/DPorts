@@ -2,10 +2,10 @@
 
 PORTNAME=	SASM
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.9.0
+DISTVERSION=	3.10.0
 CATEGORIES=	devel
 
-MAINTAINER=	martinfilla@post.cz
+MAINTAINER=	freebsd@sysctl.cz
 COMMENT=	Simple IDE for NASM, MASM, GAS and FASM assembly languages
 
 LICENSE=	GPLv3
@@ -20,6 +20,6 @@ USE_GL=		gl
 DATADIR=	${PREFIX}/share/sasm
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|/usr/share|${PEFIX}/share|' ${WRKSRC}/Linux/share/applications/sasm.desktop
+	@${REINPLACE_CMD} -e 's|/usr/share|${PEFIX}/share|' ${WRKSRC}/BSD/share/applications/sasm.desktop
 
 .include <bsd.port.mk>
