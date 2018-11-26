@@ -3,7 +3,7 @@
 
 PORTNAME=	cool-retro-term
 PORTVERSION=	1.0.0
-PORTREVISION=	4
+PORTREVISION=	5
 DISTVERSIONPREFIX=	v
 CATEGORIES=	x11
 
@@ -18,20 +18,8 @@ GH_PROJECT=	qmltermwidget:qtw
 GH_TAGNAME=	v0.1.0:qtw
 
 USES=		desktop-file-utils qmake qt:5
-USE_QT=		qmake_build buildtools_build core gui qml quick widgets \
+USE_QT=		qmake_build buildtools_build core declarative gui widgets \
 		graphicaleffects_run quickcontrols_run
-
-.include <bsd.port.pre.mk>
-
-.if ${OPSYS} == "FreeBSD"
-.if ${ARCH} == powerpc
-USE_GCC=	yes
-.else
-CC=		clang
-CXX=		clang++
-CPP=		clang-cpp
-.endif
-.endif
 
 post-extract:
 	@${RMDIR} ${WRKSRC}/qmltermwidget
@@ -45,4 +33,4 @@ post-patch:
 	@${REINPLACE_CMD} -e 's,\.\./icons,/icons,' \
 		${WRKSRC}/app/main.cpp
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
