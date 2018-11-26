@@ -1,6 +1,6 @@
---- third_party/openfst/src/include/fst/replace.h.orig	2014-07-07 04:12:05.000000000 +0000
+--- third_party/openfst/src/include/fst/replace.h.orig	2018-10-14 23:15:07 UTC
 +++ third_party/openfst/src/include/fst/replace.h
-@@ -1250,7 +1250,7 @@ class ArcIterator< ReplaceFst<A, T, C> >
+@@ -1250,7 +1250,7 @@ class ArcIterator< ReplaceFst<A, T, C> > {
      // If state is already cached, use cached arcs array.
      if (fst_.GetImpl()->HasArcs(state_)) {
        (fst_.GetImpl())
