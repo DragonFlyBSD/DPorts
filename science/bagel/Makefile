@@ -2,8 +2,7 @@
 
 PORTNAME=	bagel
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.1.2-21
-DISTVERSIONSUFFIX=	-g2a9472a50
+DISTVERSION=	1.2.0
 CATEGORIES=	science
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -13,7 +12,6 @@ LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 BROKEN_i386=	error: static_assert failed "size_t is assumed to be the same size as unsigned long long"
-BROKEN_FreeBSD_10=	/usr/include/c++/v1/memory:4004:35: error: no viable overloaded '='; __e->__weak_this_ = *this;
 
 LIB_DEPENDS=	libboost_serialization.so:devel/boost-libs \
 		libcblas.so:math/cblas
