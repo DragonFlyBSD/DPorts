@@ -2,6 +2,7 @@
 
 PORTNAME=	marble
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
+PORTREVISION=	1
 CATEGORIES=	astro kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -12,13 +13,14 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 LIB_DEPENDS=	libquazip5.so:archivers/quazip@qt5
 
-USES=		cmake:outsource desktop-file-utils gettext kde:5 qt:5 tar:xz
+USES=		cmake:outsource compiler:c++11-lang desktop-file-utils gettext \
+		kde:5 qt:5 tar:xz
 USE_KDE=	attica auth codecs completion config configwidgets coreaddons \
 		crash doctools ecm i18n jobwidgets kio newstuff package parts \
 		plasma-framework runner service sonnet textwidgets wallet \
 		widgetsaddons xmlgui
-USE_QT=		concurrent core dbus designer gui location network opengl \
-		phonon4 printsupport qml quick script sql svg webkit widgets xml \
+USE_QT=		concurrent core dbus declarative designer gui location network opengl \
+		phonon4 printsupport script sql svg webkit widgets xml \
 		buildtools_build qmake_build
 
 USE_LDCONFIG=	yes
