@@ -1,0 +1,1 @@
+CFLAGS:=	${CFLAGS:N-Wno-error-narrowing} -Wno-narrowing
