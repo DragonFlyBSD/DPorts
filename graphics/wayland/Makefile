@@ -1,8 +1,8 @@
 PORTNAME=	wayland
-PORTVERSION=	1.15.0
+PORTVERSION=	1.16.0
 CATEGORIES=	graphics
-MASTER_SITES=	http://wayland.freedesktop.org/releases/
-MAINTAINER=	imre@vdsz.com
+MASTER_SITES=	https://wayland.freedesktop.org/releases/
+MAINTAINER=	karu.pruun@gmail.com
 COMMENT=	Wayland Display Protocol implementation
 
 LICENSE=	MIT
