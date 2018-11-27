@@ -3,7 +3,7 @@
 
 PORTNAME=	widelands
 DISTVERSION=	build19
-PORTREVISION=	13
+PORTREVISION=	14
 CATEGORIES=	games
 MASTER_SITES=	https://launchpad.net/widelands/${DISTVERSION}/${DISTVERSION}/+download/ \
 		http://mirror.amdmi3.ru/distfiles/
@@ -28,6 +28,10 @@ CMAKE_ARGS=	-DWL_INSTALL_BASEDIR="${PREFIX}" \
 		-DWL_OPTIMIZE_FLAGS=""
 USE_GL=		gl glew
 USE_SDL=	sdl2 mixer2 image2 net2 ttf2
+CXXFLAGS_powerpc=	-Wno-maybe-uninitialized
+CXXFLAGS_powerpcspe=	-Wno-maybe-uninitialized
+CXXFLAGS_powerpc64=	-Wno-maybe-uninitialized
+CXXFLAGS_sparc64=	-Wno-maybe-uninitialized
 
 PORTDATA=	*
 PORTDOCS=	*
