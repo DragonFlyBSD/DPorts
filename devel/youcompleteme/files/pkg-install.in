@@ -1,0 +1,10 @@
+#!/bin/sh
+#
+# $FreeBSD: head/devel/youcompleteme/files/pkg-install.in 456332 2017-12-14 18:41:43Z ultima $
+#
+
+case $2 in
+	POST-INSTALL)
+		%%PREFIX%%/bin/vim --noplugin -u NONE -U NONE --cmd ":helptags %%VIMFILESDIR%%/doc" --cmd ":q"
+		;;
+esac
