@@ -1,0 +1,9 @@
+# remove pulseaudio from cinnamon
+
+LIB_DEPENDS:=	${LIB_DEPENDS:Nlibpulse*}
+
+CONFIGURE_ENV+=	GVC_CFLAGS=dummy GVC_LIBS=dummy
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/gvc/d' ${WRKSRC}/src/Makefile.am
+	${RM} -r ${WRKSRC}/src/gvc
