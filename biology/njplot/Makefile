@@ -13,7 +13,7 @@ COMMENT=	Phylogenetic tree drawing program
 
 LICENSE=	NONE
 
-BUILD_DEPENDS=	blastall:biology/ncbi-toolkit
+BUILD_DEPENDS=	cdscan:biology/ncbi-toolkit
 
 MAKEFILE=	makefile
 
