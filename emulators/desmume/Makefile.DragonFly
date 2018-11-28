@@ -1,6 +1,0 @@
-CXXFLAGS+=	-fpermissive
-
-# c++11 compat
-dfly-patch:
-	${REINPLACE_CMD} -e 's@"__VA_ARGS__@" __VA_ARGS__@g'	\
-		${WRKSRC}/src/wifi.cpp
