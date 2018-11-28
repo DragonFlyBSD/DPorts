@@ -87,15 +87,6 @@ QMAKE_CONFIGURE_ARGS=	-proprietary-codecs -system-ffmpeg
 # dependencies correctly in the generated Makefiles, use the right target here.
 ALL_TARGET=	first
 
-# We need ar(1) from ports because the Chromium code uses the @file syntax.
-# We then need to ensure ld(1) from ports is used because of the archives ar(1)
-# generated.
-.if ${OPSYS} == FreeBSD
-USE_BINUTILS=	yes
-CC+=		"-B${LOCALBASE}/bin"
-CXX+=		"-B${LOCALBASE}/bin"
-.endif
-
 # The build system reads the environment variable $NINJA_PATH to decide whether
 # to boostrap ninja or not (and also to invoke it afterwards). CC and CXX are
 # read by some Chromium code to determine which compiler to invoke when running
