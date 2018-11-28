@@ -1,3 +1,0 @@
-dfly-patch:
-	${GREP} -rl __FreeBSD__ ${WRKSRC} | ${XARGS} \
-		${REINPLACE_CMD} -e 's|__FreeBSD__|__DragonFly__|'
