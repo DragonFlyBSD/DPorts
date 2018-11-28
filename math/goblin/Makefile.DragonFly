@@ -1,2 +1,0 @@
-# include/goblinController.h:54:13: error:   overriding 'virtual goblinRootObject::~goblinRootObject() noexcept'
-USE_CXXSTD=	c++98
