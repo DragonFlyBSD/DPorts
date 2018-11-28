@@ -1,3 +1,0 @@
-dfly-patch:
-	${REINPLACE_CMD} -e 's|-lFSNode|-lFSNode -lgnustep-gui|' \
-		${WRKSRC}/gmds/mdfind/GNUmakefile.in
