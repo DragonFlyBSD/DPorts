@@ -80,7 +80,7 @@ BUILDNAME=		${LAZARUS_ARCH}-${OPSYS:tl}
 LCL_UNITS_DIR=		${LOCALBASE}/share/lazarus-${LAZARUS_VER}/lcl/units/${BUILDNAME}
 MKINSTDIR=		${LOCALBASE}/lib/fpc/${FPC_VER}/fpmkinst/${BUILDNAME}
 
-LAZARUS_FLAVORS=	gtk2 qt4 qt5
+LAZARUS_FLAVORS=	gtk2
 
 .if ${lazarus_ARGS:Mflavors}
 .	if defined(LAZARUS_NO_FLAVORS)
