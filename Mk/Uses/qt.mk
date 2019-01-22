@@ -30,7 +30,7 @@ _QT_MK_INCLUDED=	qt.mk
 # Qt versions currently supported by the framework.
 _QT_SUPPORTED?=		4 5
 QT4_VERSION?=		4.8.7
-QT5_VERSION?=		5.11.2
+QT5_VERSION?=		5.12.0
 
 # We accept the Qt version to be passed by either or all of the three mk files.
 .  if empty(qt_ARGS) && empty(qmake_ARGS) && empty(qt-dist_ARGS)
@@ -152,11 +152,11 @@ _USE_QT4_ONLY=		accessible assistant-adp assistantclient clucene codecs-cn codec
 
 _USE_QT5_ONLY=		3d buildtools canvas3d charts concurrent connectivity \
 			core datavis3d diag examples gamepad \
-			graphicaleffects location paths phonon4 plugininfo printsupport \
+			graphicaleffects location networkauth paths phonon4 plugininfo printsupport \
 			qdbus qdoc qdoc-data qev quickcontrols \
-			quickcontrols2 scxml sensors serialbus serialport speech \
+			quickcontrols2 remoteobjects scxml sensors serialbus serialport speech \
 			sql-tds uiplugin uitools virtualkeyboard wayland webchannel \
-			webengine websockets websockets-qml widgets x11extras
+			webengine websockets websockets-qml webview widgets x11extras
 
 # Dependency tuples: _LIB should be preferred if possible.
 3d_PORT=		graphics/${_QT_RELNAME}-3d
@@ -289,6 +289,9 @@ multimedia_LIB=		libQt${_QT_LIBVER}Multimedia.so
 network_PORT=		net/${_QT_RELNAME}-network
 network_LIB=		libQt${_QT_LIBVER}Network.so
 
+networkauth_PORT=		net/${_QT_RELNAME}-networkauth
+networkauth_LIB=		libQt${_QT_LIBVER}NetworkAuth.so
+
 opengl_PORT=		graphics/${_QT_RELNAME}-opengl
 opengl_LIB=		libQt${_QT_LIBVER}OpenGL.so
 
@@ -360,6 +363,9 @@ qvfb_PATH=		${LOCALBASE}/${QT_BINDIR_REL}/qvfb
 
 rcc_PORT=		devel/${_QT_RELNAME}-rcc
 rcc_PATH=		${LOCALBASE}/${QT_BINDIR_REL}/rcc
+
+remoteobjects_PORT=	devel/${_QT_RELNAME}-remoteobjects
+remoteobjects_LIB=	libQt${_QT_LIBVER}RemoteObjects.so
 
 sensors_PORT=		comms/${_QT_RELNAME}-sensors
 sensors_LIB=		libQt${_QT_LIBVER}Sensors.so
@@ -437,6 +443,9 @@ websockets-qml_PATH=	${LOCALBASE}/${QT_QMLDIR_REL}/QtWebSockets/qmldir
 
 webkit_PORT=		www/${_QT_RELNAME}-webkit
 webkit_LIB=		libQt${_QT_LIBVER}WebKit.so
+
+webview_PORT=		www/${_QT_RELNAME}-webview
+webview_LIB=		libQt${_QT_LIBVER}WebView.so
 
 widgets_PORT=		x11-toolkits/${_QT_RELNAME}-widgets
 widgets_LIB=		libQt${_QT_LIBVER}Widgets.so

@@ -458,7 +458,7 @@ pwhois:*:512:
 # free: 517
 # free: 518
 # free: 519
-# free: 520
+libvirtdbus:*:520:
 davmail:*:521:
 nullmail:*:522:
 freevo:*:523:
@@ -820,7 +820,7 @@ _geodns:*:853:
 # free: 879
 # free: 880
 # free: 881
-# free: 882
+midpoint:*:882:
 ipfs-go:*:883:
 telegraf:*:884:
 tcpdump:*:885:

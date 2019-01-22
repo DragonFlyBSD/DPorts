@@ -16,7 +16,7 @@
 #
 # $FreeBSD$
 #
-# MAINTAINER= sobomax@FreeBSD.org
+# MAINTAINER= ports@FreeBSD.org
 
 PATH=/sbin:/bin:/usr/bin
 
@@ -25,8 +25,6 @@ cleanup() {
 	echo "Terminated."
 	exit 1
 }
-
-echo "Distfiles clean utility by Maxim Sobolev <sobomax@FreeBSD.org>."
 
 PORTSDIR=${PORTSDIR:-/usr/ports}
 if [ ! -d ${PORTSDIR} ]; then
