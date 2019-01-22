@@ -1,7 +1,7 @@
 # Created by: rooneg@electricjellyfish.net
 # $FreeBSD$
 
-PORTREVISION=	0
+PORTREVISION=	1
 
 MAINTAINER=	lev@FreeBSD.org
 COMMENT=	Version control system
@@ -18,7 +18,7 @@ OPTIONS_DEFINE=	\
 		BDB		\
 		DOCS		\
 		FREEBSD_TEMPLATE\
-		GPG_AGENT \
+		GPG_AGENT 	\
 		MAINTAINER_DEBUG\
 		NLS		\
 		SASL		\
