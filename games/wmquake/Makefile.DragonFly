@@ -1,3 +1,0 @@
-USES+= ncurses
-
-MAKE_ARGS+= GTKCONFIG=gtk12-config LIBGDK=-lgdk12

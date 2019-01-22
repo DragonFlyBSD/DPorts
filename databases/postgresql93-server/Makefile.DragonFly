@@ -1,3 +1,0 @@
-CONFIGURE_ARGS+=	--with-template=freebsd
-PG_UID!=		grep -E '^pgsql:' ${PORTSDIR}/GIDs | \
-			awk -F ':' '{print $$3}'; echo
