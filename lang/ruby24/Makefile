@@ -92,7 +92,7 @@ CONFIGURE_ARGS+=--disable-dtrace
 .endif
 .endif
 
-.if (${ARCH} == powerpc || ${ARCH} == powerpc64)
+.if ${ARCH:Mpowerpc*}
 USE_GCC=	yes
 .endif
 
