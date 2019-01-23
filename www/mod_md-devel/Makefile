@@ -2,11 +2,14 @@
 # $FreeBSD$
 
 PORTNAME=	mod_md
-PORTVERSION=	1.1.16
+PORTVERSION=	1.1.17
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www
 PKGNAMEPREFIX=	${APACHE_PKGNAMEPREFIX}
 PKGNAMESUFFIX=	-devel
+
+DEPRECATED=	Use the module that is shipped with Apache 2.4
+EXPIRATION_DATE=2019-03-24
 
 MAINTAINER=	brnrd@FreeBSD.org
 COMMENT=	Early experience LetsEncrypt module for Apache httpd
@@ -16,7 +19,6 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BROKEN_mips=		fails to compile: md_json.c:29: expected [error|warning|ignored] after pragma GCC diagnostic
 BROKEN_mips64=		fails to compile: md_json.c:29: expected [error|warning|ignored] after pragma GCC diagnostic
-BROKEN_powerpc64=	fails to compile: md_json.c:29: expected [error|warning|ignored] after pragma GCC diagnostic
 
 LIB_DEPENDS=	libaprutil-1.so:devel/apr1 \
 		libcurl.so:ftp/curl \
