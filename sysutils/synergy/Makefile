@@ -4,7 +4,7 @@ PORTNAME=	synergy
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.0.0
 DISTVERSIONSUFFIX=	-stable
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	sysutils
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -15,7 +15,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libcurl.so:ftp/curl
 
-USES=		cmake:outsource compiler:c++14-lang cpe ssl
+USES=		cmake compiler:c++14-lang cpe ssl
 CPE_VENDOR=	synergy-foss
 USE_GITHUB=	yes
 GH_ACCOUNT=	symless
