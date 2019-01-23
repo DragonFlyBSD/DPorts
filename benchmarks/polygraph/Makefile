@@ -3,9 +3,10 @@
 
 PORTNAME=	polygraph
 DISTVERSION=	4.13.0
-DISTVERSIONSUFFIX=	-src
+PORTREVISION=	1
 CATEGORIES=	benchmarks www
 MASTER_SITES=	http://www.web-polygraph.org/downloads/srcs/
+EXTRACT_SUFX=	-src.tgz
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Benchmarking tool for Web proxies
@@ -13,12 +14,7 @@ COMMENT=	Benchmarking tool for Web proxies
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BROKEN_SSL=	openssl111
-BROKEN_SSL_REASON_openssl111=	configure: error: OpenSSL libraries and/or directories were not found in /usr/local
-
-WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
-
-USES=		gmake ncurses shebangfix tar:tgz
+USES=		gmake ncurses shebangfix
 SHEBANG_FILES=	tools/*.pl
 USE_GCC=	any
 GNU_CONFIGURE=	yes
