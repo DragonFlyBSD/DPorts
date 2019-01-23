@@ -3,13 +3,16 @@
 PORTNAME=	libjreen
 PORTVERSION=	1.1.1
 DISTVERSIONPREFIX=	v
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net-im
 
 MAINTAINER=	akuz84@gmail.com
 COMMENT=	Qt4 based jabber library
 
 LICENSE=	GPLv2
+
+DEPRECATED=		Qt4 has been EOL since december 2015
+EXPIRATION_DATE=	2019-03-15
 
 LIB_DEPENDS=	libqca.so:devel/qca@qt4 \
 		libspeex.so:audio/speex
