@@ -22,7 +22,7 @@ CACHE_PURGE_CONFIGURE_ON=	--add-module=${WRKDIR}/ngx_cache_purge-2.3
 CLOJURE_CATEGORIES+=	java
 CLOJURE_USE=		JAVA=yes JAVA_OS=native JAVA_VERSION=1.8 \
 			JAVA_VENDOR=openjdk JAVA_BUILD=yes JAVA_RUN=yes
-CLOJURE_GH_TUPLE=	nginx-clojure:nginx-clojure:1129712:clojure
+CLOJURE_GH_TUPLE=	nginx-clojure:nginx-clojure:50096bd:clojure
 CLOJURE_CONFIGURE_ENV=	"JNI_INCS=-I${LOCALBASE}/openjdk8/include -I${LOCALBASE}/openjdk8/include/freebsd"
 CLOJURE_VARS=		DSO_EXTMODS+=clojure CLOJURE_SUBDIR=/src/c
 
@@ -144,7 +144,7 @@ HTTP_SUBS_FILTER_CONFIGURE_ON=	--add-module=${WRKSRC_subs_filter}
 
 HTTP_TARANTOOL_LIB_DEPENDS=	libmsgpuck.so:devel/msgpuck \
 				libyajl.so:devel/yajl
-HTTP_TARANTOOL_GH_TUPLE=	tarantool:nginx_upstream_module:4ca8684:nginx_tarantool
+HTTP_TARANTOOL_GH_TUPLE=	tarantool:nginx_upstream_module:27836e4:nginx_tarantool
 HTTP_TARANTOOL_VARS=		DSO_EXTMODS+=nginx_tarantool
 HTTP_TARANTOOL_EXTRA_PATCHES=	${PATCHDIR}/extra-patch-ngx_http_tarantool-config
 
@@ -205,24 +205,25 @@ MODSECURITY_LIB_DEPENDS=	libapr-1.so:devel/apr1 \
 				libpcre.so:devel/pcre \
 				libyajl.so:devel/yajl
 MODSECURITY_USE=		GNOME=libxml2
+MODSECURITY_VERSION=		2.9.3
 MODSECURITY_USES=		apache:2.2+ pkgconfig shebangfix
-MODSECURITY_MASTER_SITES=	http://www.modsecurity.org/tarball/2.9.2/:modsecurity
-MODSECURITY_DISTFILES=		modsecurity-2.9.2.tar.gz:modsecurity
+MODSECURITY_MASTER_SITES=	http://www.modsecurity.org/tarball/${MODSECURITY_VERSION}/:modsecurity
+MODSECURITY_DISTFILES=		modsecurity-${MODSECURITY_VERSION}.tar.gz:modsecurity
 MODSECURITY_EXTRA_PATCHES=	${PATCHDIR}/extra-patch-nginx-modsecurity-configure
-MODSECURITY_VARS=		WRKSRC_modsecurity=${WRKDIR}/modsecurity-2.9.2
+MODSECURITY_VARS=		WRKSRC_modsecurity=${WRKDIR}/modsecurity-${MODSECURITY_VERSION}
 
-MODSECURITY3_LIB_DEPENDS=	libmodsecurity.so:www/mod_security3
-MODSECURITY3_GH_TUPLE=		SpiderLabs:ModSecurity-nginx:4cde86b:modsec
+MODSECURITY3_LIB_DEPENDS=	libmodsecurity.so:security/modsecurity3
+MODSECURITY3_GH_TUPLE=		SpiderLabs:ModSecurity-nginx:ecb255a:modsec
 MODSECURITY3_CONFIGURE_ON=	--add-module=${WRKSRC_modsec}
 
 NAXSI_NGINX_VER=	0.56
 NAXSI_GH_TUPLE=		nbs-system:naxsi:${NAXSI_NGINX_VER}:naxsi
 NAXSI_VARS=		DSO_EXTMODS+=naxsi NAXSI_SUBDIR=/naxsi_src
 
-NJS_GH_TUPLE=		nginx:njs:da25ee4:njs
+NJS_GH_TUPLE=		nginx:njs:0.2.7:njs
 NJS_VARS=		DSO_EXTMODS+=njs NJS_SUBDIR=/nginx
 
-PASSENGER_NGINX_VER=	5.3.5
+PASSENGER_NGINX_VER=	6.0.1
 PASSENGER_CATEGORIES=	ruby
 PASSENGER_USE=		ruby=yes
 PASSENGER_BUILD_DEPENDS=${LOCALBASE}/bin/rake:devel/rubygem-rake
@@ -231,7 +232,8 @@ PASSENGER_MASTER_SITES=	http://s3.amazonaws.com/phusion-passenger/releases/:pass
 PASSENGER_DISTFILES=	passenger-${PASSENGER_NGINX_VER}.tar.gz:passenger
 PASSENGER_VARS=		WRKSRC_passenger=${WRKDIR}/passenger-${PASSENGER_NGINX_VER} \
 			DSO_EXTDIRS+=passenger-${PASSENGER_NGINX_VER}/src/nginx_module
-PASSENGER_EXTRA_PATCHES=${PATCHDIR}/extra-patch-passenger-build-nginx.rb
+PASSENGER_EXTRA_PATCHES=${PATCHDIR}/extra-patch-passenger-build-nginx.rb \
+			${PATCHDIR}/extra-patch-passenger-disable-telemetry
 
 POSTGRES_USES=		pgsql
 POSTGRES_GH_TUPLE=	FRiCKLE:ngx_postgres:1.0rc7:postgres
