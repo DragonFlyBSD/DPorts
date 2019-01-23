@@ -1,5 +1,5 @@
 # ninja once again can't relink properly..
-USES:= ${USES:Ncmake*} cmake:outsource,noninja
+USES:= ${USES:Ncmake*} cmake:noninja
 CXXFLAGS+=	-fpermissive
 
 # prune few strange predefs from cpp
