@@ -21,6 +21,7 @@
 @(,,555) %%DATADIR%%/bin/gitlab-shell
 @(,,555) %%DATADIR%%/bin/gitlab-shell-authorized-keys-check
 @(,,555) %%DATADIR%%/bin/gitlab-shell-authorized-principals-check
+@(,,555) %%DATADIR%%/bin/gitlab-shell-ruby
 @(,,555) %%DATADIR%%/bin/install
 @(,,555) %%DATADIR%%/bin/test-logger
 @sample %%DATADIR%%/config.yml.sample
@@ -39,10 +40,10 @@
 %%DATADIR%%/lib/gitlab_logger.rb
 %%DATADIR%%/lib/gitlab_metrics.rb
 %%DATADIR%%/lib/gitlab_net.rb
+%%DATADIR%%/lib/gitlab_net/errors.rb
 %%DATADIR%%/lib/gitlab_post_receive.rb
 %%DATADIR%%/lib/gitlab_shell.rb
 %%DATADIR%%/lib/httpunix.rb
-%%DATADIR%%/lib/http_codes.rb
 %%DATADIR%%/lib/http_helper.rb
 %%DATADIR%%/lib/names_helper.rb
 %%DATADIR%%/lib/object_dirs_helper.rb
@@ -84,11 +85,13 @@
 %%DATADIR%%/spec/vcr_cassettes/custom-action-not-ok-json.yml
 %%DATADIR%%/spec/vcr_cassettes/custom-action-not-ok-not-json.yml
 %%DATADIR%%/spec/vcr_cassettes/custom-action-ok-not-json.yml
+%%DATADIR%%/spec/vcr_cassettes/custom-action-ok-with-message.yml
 %%DATADIR%%/spec/vcr_cassettes/custom-action-ok.yml
 %%DATADIR%%/spec/vcr_cassettes/discover-ok.yml
 %%DATADIR%%/spec/vcr_cassettes/http-pull-disabled.yml
 %%DATADIR%%/spec/vcr_cassettes/http-push-disabled.yml
-%%DATADIR%%/spec/vcr_cassettes/lfs-authenticate-ok.yml
+%%DATADIR%%/spec/vcr_cassettes/lfs-authenticate-ok-download.yml
+%%DATADIR%%/spec/vcr_cassettes/lfs-authenticate-ok-upload.yml
 %%DATADIR%%/spec/vcr_cassettes/notify-post-receive.yml
 %%DATADIR%%/spec/vcr_cassettes/post-receive-not-found.yml
 %%DATADIR%%/spec/vcr_cassettes/post-receive.yml
