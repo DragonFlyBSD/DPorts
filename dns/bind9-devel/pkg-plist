@@ -124,7 +124,6 @@ include/dns/zoneverify.h
 include/dns/zt.h
 include/dst/dst.h
 include/dst/gssapi.h
-include/dst/lib.h
 include/dst/result.h
 include/irs/context.h
 include/irs/dnsconf.h
@@ -177,8 +176,6 @@ include/isc/magic.h
 include/isc/md.h
 include/isc/mem.h
 include/isc/meminfo.h
-include/isc/msgcat.h
-include/isc/msgs.h
 include/isc/mutex.h
 include/isc/mutexblock.h
 include/isc/net.h
@@ -234,7 +231,6 @@ include/isccc/base64.h
 include/isccc/cc.h
 include/isccc/ccmsg.h
 include/isccc/events.h
-include/isccc/lib.h
 include/isccc/result.h
 include/isccc/sexpr.h
 include/isccc/symtab.h
@@ -250,6 +246,7 @@ include/isccfg/log.h
 include/isccfg/namedconf.h
 include/isccfg/version.h
 include/ns/client.h
+include/ns/hooks.h
 include/ns/interfacemgr.h
 include/ns/lib.h
 include/ns/listenlist.h
@@ -273,6 +270,7 @@ include/pkcs11/eddsa.h
 include/pkcs11/pkcs11.h
 include/pkcs11/pkcs11f.h
 include/pkcs11/pkcs11t.h
+lib/filter-aaaa.so
 lib/libbind9.a
 lib/libdns.a
 lib/libirs.a
@@ -306,6 +304,7 @@ man/man8/dnssec-revoke.8.gz
 man/man8/dnssec-settime.8.gz
 man/man8/dnssec-signzone.8.gz
 man/man8/dnssec-verify.8.gz
+man/man8/filter-aaaa.8.gz
 man/man8/named-checkconf.8.gz
 man/man8/named-checkzone.8.gz
 man/man8/named-compilezone.8.gz

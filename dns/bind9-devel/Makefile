@@ -33,20 +33,18 @@ COMMENT=	BIND DNS suite with updated DNSSEC and DNS64
 LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
 
-BROKEN_powerpc64=	fails to link: /usr/bin/ld: cannot find -latomic
-
 LIB_DEPENDS=	libxml2.so:textproc/libxml2
 
 # XXX: remove tar:bz2
 USES=	compiler:c11 cpe libedit ssl tar:bz2
 # ISC releases things like 9.8.0-P1, which our versioning doesn't like
-ISCVERSION=	9.13.1a0.2018.11.20
+ISCVERSION=	9.13.4a0.2019.01.21
 # XXX: Remove gitlab
 USE_GITLAB=	yes
 GL_SITE=	https://gitlab.isc.org
 GL_ACCOUNT=	isc-projects
 GL_PROJECT=	bind9
-GL_COMMIT=	380ab3b39f4ea99f7cfe0e9ce065594f3e697ab7
+GL_COMMIT=	914e8ddd6126200a698d1a52dce800eaeb088730
 
 CPE_VENDOR=	isc
 CPE_VERSION=	${ISCVERSION:C/-.*//}
@@ -56,7 +54,6 @@ CPE_UPDATE=	${ISCVERSION:C/.*-//:tl}
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--localstatedir=/var --disable-linux-caps \
-		--disable-symtable \
 		--with-libxml2=${LOCALBASE} \
 		--with-readline="-L${LOCALBASE}/lib -ledit" \
 		--with-dlopen=yes \
@@ -83,15 +80,15 @@ MAKE_JOBS_UNSAFE=	yes
 
 OPTIONS_DEFAULT=	SIGCHASE IDN GSSAPI_NONE JSON PYTHON
 OPTIONS_DEFINE=		IDN LARGE_FILE PYTHON JSON \
-			FIXED_RRSET SIGCHASE IPV6
+			FIXED_RRSET SIGCHASE
 
 OPTIONS_RADIO=	CRYPTO
 OPTIONS_RADIO_CRYPTO=	NATIVE_PKCS11
 
 .if !defined(BIND_TOOLS_SLAVE)
 OPTIONS_DEFAULT+=	DLZ_FILESYSTEM LMDB RPZ_NSDNAME RPZ_NSIP TCP_FASTOPEN
-OPTIONS_DEFINE+=	RPZ_NSIP RPZ_NSDNAME DOCS GEOIP \
-			MINCACHE PORTREVISION QUERYTRACE LMDB DNSTAP \
+OPTIONS_DEFINE+=	RPZ_NSIP RPZ_NSDNAME DOCS \
+			OVERRIDECACHE PORTREVISION QUERYTRACE LMDB DNSTAP \
 			START_LATE TUNING_LARGE TCP_FASTOPEN
 OPTIONS_GROUP=		DLZ
 OPTIONS_GROUP_DLZ=	DLZ_POSTGRESQL DLZ_MYSQL DLZ_BDB \
@@ -112,14 +109,13 @@ DLZ_POSTGRESQL_DESC=	DLZ Postgres driver
 DLZ_STUB_DESC=		DLZ stub driver
 DNSTAP_DESC=		Provides fast passive logging of DNS messages
 FIXED_RRSET_DESC=	Enable fixed rrset ordering
-GEOIP_DESC=		Allow geographically based ACL.
 GSSAPI_BASE_DESC=	Using Heimdal in base
 GSSAPI_HEIMDAL_DESC=	Using security/heimdal
 GSSAPI_MIT_DESC=	Using security/krb5
 GSSAPI_NONE_DESC=	Disable
 LARGE_FILE_DESC=	64-bit file support
 LMDB_DESC=		Use LMDB for zone management
-MINCACHE_DESC=		Use the mincachettl patch
+OVERRIDECACHE_DESC=	Use the override-cache patch
 NATIVE_PKCS11_DESC=	Use PKCS\#11 native API (**READ HELP**)
 PORTREVISION_DESC=	Show PORTREVISION in the version string
 PYTHON_DESC=		Build with Python utilities
@@ -153,9 +149,6 @@ DNSTAP_LIB_DEPENDS=	libfstrm.so:devel/fstrm \
 
 FIXED_RRSET_CONFIGURE_ENABLE=	fixed-rrset
 
-GEOIP_CONFIGURE_WITH=	geoip
-GEOIP_LIB_DEPENDS=	libGeoIP.so:net/GeoIP
-
 GSSAPI_BASE_CONFIGURE_ON=\
 	--with-gssapi=${GSSAPIBASEDIR} KRB5CONFIG="${KRB5CONFIG}"
 GSSAPI_BASE_USES=	gssapi
@@ -175,8 +168,6 @@ IDN_CONFIGURE_ON=	--with-libidn2=${LOCALBASE} ${ICONV_CONFIGURE_BASE}
 IDN_LIB_DEPENDS=	libidn2.so:dns/libidn2
 IDN_USES=		iconv
 
-IPV6_CONFIGURE_ENABLE=	ipv6
-
 JSON_CONFIGURE_WITH=	libjson=${LOCALBASE}
 JSON_LIB_DEPENDS=	libjson-c.so:devel/json-c
 
@@ -185,7 +176,7 @@ LARGE_FILE_CONFIGURE_ENABLE=	largefile
 LMDB_CONFIGURE_WITH=	lmdb=${LOCALBASE}
 LMDB_LIB_DEPENDS=	liblmdb.so:databases/lmdb
 
-MINCACHE_EXTRA_PATCHES=	${FILESDIR}/extrapatch-bind-min-override-ttl
+OVERRIDECACHE_EXTRA_PATCHES=	${FILESDIR}/extrapatch-bind-min-override-ttl
 
 NATIVE_PKCS11_CONFIGURE_ENABLE=	native-pkcs11
 
@@ -213,6 +204,18 @@ TUNING_LARGE_CONFIGURE_ON=	--with-tuning=large
 TUNING_LARGE_CONFIGURE_OFF=	--with-tuning=default
 
 .include <bsd.port.pre.mk>
+
+.if defined(WITH_DEBUG)
+CONFIGURE_ARGS+=	--enable-symtable
+.else
+CONFIGURE_ARGS+=	--disable-symtable
+.endif
+
+.if ${SSL_DEFAULT} == base
+SUB_LIST+=	ENGINES=/usr/lib/engines
+.else
+SUB_LIST+=	ENGINES=${LOCALBASE}/lib/engines
+.endif
 
 # XXX: Remove
 post-extract:
