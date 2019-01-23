@@ -2,6 +2,7 @@
 
 PORTNAME=	transmission
 DISTVERSION=	2.94
+PORTREVISION?=	2
 CATEGORIES+=	net-p2p
 SLAVEPORT?=	cli
 PKGNAMESUFFIX?=	-cli
@@ -26,7 +27,7 @@ LIB_DEPENDS+=	libcurl.so:ftp/curl \
 		libutp.so:net/libutp \
 		libminiupnpc.so:net/miniupnpc
 
-USES+=		cmake:outsource cpe iconv libtool localbase pkgconfig
+USES+=		cmake cpe iconv libtool localbase pkgconfig
 
 .  if ${SLAVEPORT:Mcli}
 USES+=		ssl
