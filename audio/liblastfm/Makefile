@@ -13,19 +13,22 @@ COMMENT=	Qt C++ library for the Last.fm webservices
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		cmake pkgconfig 
+USES=		cmake pkgconfig
 USE_GITHUB=	yes
 GH_ACCOUNT=	lastfm
 USE_LDCONFIG=	yes
 
 SLAVE?=		qt4
 .if ${SLAVE} == qt4
+DEPRECATED=		Qt4 has been EOL since december 2015
+EXPIRATION_DATE=	2019-03-15
+
 USES+=		qt:4
 USE_QT=		corelib dbus network sql xml \
 		moc_build qmake_build rcc_build
 CMAKE_ON+=	BUILD_WITH_QT4
 .else
-USES+=		qt:5
+USES+=		compiler:c++11-lang qt:5
 USE_QT=		core dbus network sql xml \
 		buildtools_build qmake_build
 CMAKE_OFF+=	BUILD_WITH_QT4
