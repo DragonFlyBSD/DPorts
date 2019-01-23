@@ -1,11 +1,11 @@
 # $FreeBSD$
 
 PORTNAME=	dnscrypt-proxy
-PORTVERSION=	2.0.18
+PORTVERSION=	2.0.19
 CATEGORIES=	dns security ipv6
 PKGNAMESUFFIX=	2
 
-MAINTAINER=	egypcio@googlemail.com
+MAINTAINER=	egypcio@FreeBSD.org
 COMMENT=	Flexible DNS proxy with support for encrypted protocols
 
 LICENSE=	ISCL
