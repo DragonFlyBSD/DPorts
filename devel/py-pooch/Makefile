@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	pooch
-PORTVERSION=	0.1
+PORTVERSION=	0.2.1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -21,6 +21,7 @@ USES=		python
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes
+USE_LOCALE=	en_US.UTF-8
 
 .include <bsd.port.pre.mk>
 
