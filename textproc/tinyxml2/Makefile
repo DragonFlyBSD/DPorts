@@ -3,6 +3,7 @@
 
 PORTNAME=	tinyxml2
 PORTVERSION=	7.0.1
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	textproc
 
@@ -15,7 +16,7 @@ OPTIONS_DEFINE=	EXAMPLES
 
 CMAKE_OFF=	BUILD_TESTS
 CMAKE_ON=	BUILD_SHARED_LIBS
-USES=		cmake compiler:c++11-lang dos2unix pathfix
+USES=		cmake:insource compiler:c++11-lang dos2unix pathfix
 USE_LDCONFIG=	yes
 
 PLIST_SUB=	PORTVERSION=${PORTVERSION}
