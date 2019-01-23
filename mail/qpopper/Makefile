@@ -10,7 +10,7 @@ MASTER_SITES=	http://core.ring.gr.jp/archives/net/mail/qpopper/ \
 		LOCAL/eugen
 DISTNAME=	${PORTNAME}${PORTVERSION}
 
-MAINTAINER=	bc979@lafn.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Berkeley POP 3 server (now maintained by Qualcomm)
 
 # BSD-style license
@@ -48,14 +48,13 @@ SAMPLE_EXT=	.sample
 
 PKGDEINSTALL=	${PKGINSTALL}
 
-OPTIONS_DEFINE=	APOP_ONLY APOP DOCUMENTATION DRAC FULL_POPD_DEBUG PAM \
+OPTIONS_DEFINE=	APOP_ONLY APOP DOCUMENTATION FULL_POPD_DEBUG PAM \
 	POPPASSD SAMPLE_POPUSERS SHY_ENABLED \
 	OPENSSL STANDALONE_MODE U_OPTION
 
 APOP_ONLY_DESC=	build with APOP authentication only
 APOP_DESC=	build with APOP
 DOCUMENTATION_DESC=	install pdf documentation
-DRAC_DESC=	build with Dynamic Relay Authorization
 FULL_POPD_DEBUG_DESC=	build with more verbose debugging
 PAM_DESC=	build with PAM authentication
 POPPASSD_DESC=	build the poppassd daemon
@@ -82,13 +81,6 @@ QPOPAUTH=	""
 .if ${PORT_OPTIONS:MAPOP_ONLY}
 OS_DEFS+=	-DAPOP_ONLY
 .endif
-.endif
-
-# If WITH_DRAC variable present in the environment, qpopper builds
-# with Dynamic Relay Authorization Control support.
-.if ${PORT_OPTIONS:MDRAC}
-CONFIGURE_ARGS+=	--with-drac
-BUILD_DEPENDS+=	${LOCALBASE}/lib/libdrac.a:mail/drac
 .endif
 
 # If WITH_FULL_POPD_DEBUG variable present in the environment, qpopper builds
