@@ -3,7 +3,7 @@
 
 PORTNAME=	ParMetis
 PORTVERSION=	4.0.3
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	math parallel
 MASTER_SITES=	http://glaros.dtc.umn.edu/gkhome/fetch/sw/parmetis/
 DISTNAME=	${PORTNAME:tl}-${PORTVERSION}
@@ -16,7 +16,7 @@ LICENSE_NAME=	University of Minnesota METIS License
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 LICENSE_PERMS=	auto-accept
 
-USES=		cmake:noninja gmake
+USES=		cmake:insource,noninja gmake
 USE_LDCONFIG=	${PREFIX}/lib/parmetis
 
 OPTIONS_DEFINE=	OPENMPI DOCS STATIC
