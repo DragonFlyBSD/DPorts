@@ -2,7 +2,7 @@
 
 PORTNAME=	mkl-dnn
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.17
+DISTVERSION=	0.17.2
 CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -15,7 +15,7 @@ BROKEN_i386=	error: shift count >= width of type (and other errors), see https:/
 
 TEST_DEPENDS=	bash:shells/bash
 
-USES=		cmake:outsource
+USES=		cmake
 USE_GITHUB=	yes
 GH_ACCOUNT=	intel
 USE_LDCONFIG=	yes
