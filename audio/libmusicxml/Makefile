@@ -2,7 +2,9 @@
 
 PORTNAME=	libmusicxml
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.13
+DISTVERSION=	3.14-1
+PORTREVISION=	1
+DISTVERSIONSUFFIX=	-g52654a71
 CATEGORIES=	audio
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -11,7 +13,7 @@ COMMENT=	Library and tools for the MusicXML format
 LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/license.txt
 
-USES=		cmake:outsource compiler:c++11-lang
+USES=		cmake compiler:c++11-lang
 USE_GITHUB=	yes
 GH_ACCOUNT=	grame-cncm
 USE_LDCONFIG=	yes
