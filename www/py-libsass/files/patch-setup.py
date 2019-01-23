@@ -1,20 +1,14 @@
---- setup.py.orig	2018-11-13 19:39:18 UTC
+--- setup.py.orig	2018-12-01 15:27:12 UTC
 +++ setup.py
-@@ -37,7 +37,7 @@ def _maybe_clang(flags):
-         compiler.linker_so[0] = os.environ['CXX']
-         return compiler
-     distutils.sysconfig.customize_compiler = customize_compiler
--    flags[:] = ['-c', '-O3'] + flags + ['-stdlib=libc++']
-+    flags[:] = ['-c'] + flags
+@@ -18,9 +18,9 @@ MACOS_FLAG = ['-mmacosx-version-min=10.7']
+ FLAGS_POSIX = [
+     '-fPIC', '-std=gnu++0x', '-Wall', '-Wno-parentheses', '-Werror=switch',
+ ]
+-FLAGS_CLANG = ['-c', '-O3'] + FLAGS_POSIX + ['-stdlib=libc++']
++FLAGS_CLANG = ['-c'] + FLAGS_POSIX
+ LFLAGS_POSIX = ['-fPIC',  '-lstdc++']
+-LFLAGS_CLANG = ['-fPIC', '-stdlib=libc++']
++LFLAGS_CLANG = ['-fPIC']
  
- 
- def _maybe_macos(flags):
-@@ -54,7 +54,7 @@ def _maybe_macos(flags):
- if sys.platform == 'win32':
-     extra_link_args = []
- elif platform.system() in {'Darwin', 'FreeBSD'}:
--    extra_link_args = ['-fPIC', '-lc++']
-+    extra_link_args = ['-fPIC', '-lstdc++']
- else:
-     extra_link_args = ['-fPIC', '-lstdc++']
- 
+ sources = ['pysass.cpp']
+ headers = []
