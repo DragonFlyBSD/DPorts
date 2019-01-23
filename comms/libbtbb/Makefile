@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	libbtbb
-PORTVERSION=	201808R1
+PORTVERSION=	201812R1
+PORTREVISION=	1
 CATEGORIES=	comms
 
 MAINTAINER=	gnn@FreeBSD.org
@@ -13,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	${PYNUMPY}
 
-USES=		cmake:outsource \
+USES=		cmake \
 		python:2.7,build
 
 USE_GITHUB=	yes
