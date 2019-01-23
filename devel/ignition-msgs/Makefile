@@ -2,6 +2,7 @@
 
 PORTNAME=	ignition-msgs
 DISTVERSION=	3.0.0
+PORTREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	https://bitbucket.org/${BB_ACCOUNT}/${BB_PROJECT}/get/${BB_COMMIT}.tar.gz?dummy=/
 
@@ -15,7 +16,7 @@ BUILD_DEPENDS=	ignition-cmake==2:devel/ignition-cmake \
 LIB_DEPENDS=	libprotobuf.so:devel/protobuf \
 		libignition-math6.so:math/ignition-math
 
-USES=		cmake:outsource
+USES=		compiler:c++11-lang cmake
 USE_RUBY=	yes
 USE_LDCONFIG=	yes
 
