@@ -1,7 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	console-bridge
-DISTVERSION=	0.4.1
+DISTVERSION=	0.4.2
+PORTREVISION=	1
 CATEGORIES=	misc
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -9,7 +10,7 @@ COMMENT=	Package for logging that seamlessly pipes into rosconsole
 
 LICENSE=	BSD3CLAUSE
 
-USES=		cmake:outsource compiler:c++11-lang
+USES=		cmake compiler:c++11-lang
 USE_GITHUB=	yes
 GH_ACCOUNT=	ros
 GH_PROJECT=	${PORTNAME:S/-/_/}
