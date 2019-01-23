@@ -2,13 +2,13 @@
 # $FreeBSD$
 
 PORTNAME=	Reddit-Client
-PORTVERSION=	1.2816
-PORTEPOCH=	3
+PORTVERSION=	1.29
+PORTEPOCH=	4
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	ehaupt@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Methods and object wrappers for objects exposed by the Reddit API
 
 LICENSE=	ART10 GPLv1+
