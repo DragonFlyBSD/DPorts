@@ -3,6 +3,7 @@
 
 PORTNAME=	gdcm
 PORTVERSION=	${GDCM_MAJOR}.${GDCM_MINOR}.${GDCM_PATCH}
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	SF/gdcm/gdcm%202.x/GDCM%20${PORTVERSION}
 
@@ -11,20 +12,14 @@ COMMENT=	Grassroots DICOM library
 
 LICENSE=	BSD3CLAUSE
 
-BUILD_DEPENDS=	pkgconf:devel/pkgconf
 LIB_DEPENDS=	libopenjp2.so:graphics/openjpeg \
 		libexpat.so:textproc/expat2
 
-USES=		compiler:c++11-lang
+USES=		alias cmake compiler:c++11-lang pkgconfig tar:bzip2 ssl
 
-OPTIONS_RADIO=		VTK
-OPTIONS_RADIO_VTK=	VTK5 VTK6
+OPTIONS_DEFINE=		VTK6
 OPTIONS_SUB=		yes
 
-VTK5_DESC=		Build VTK 5 integration classes
-VTK5_LIB_DEPENDS=	libvtkHybrid.so:math/vtk5
-VTK5_CMAKE_ON=		-DGDCM_USE_VTK:BOOL=ON \
-			-DVTK_DIR:PATH=${LOCALBASE}/lib/vtk-${VTK5_VERSION}
 VTK6_DESC=		Build VTK 6 integration classes
 VTK6_LIB_DEPENDS=	libvtkCommonCore-${VTK6_VERSION}.so:math/vtk6
 VTK6_CMAKE_ON=		-DGDCM_USE_VTK:BOOL=ON \
@@ -36,10 +31,8 @@ GDCM_MINOR=	8
 GDCM_PATCH=	8
 
 # Change this whenever VTK is updated
-VTK5_VERSION=	5.10
 VTK6_VERSION=	6.2
 
-USES=		alias cmake:outsource tar:bzip2 ssl
 USE_LDCONFIG=	yes
 CFLAGS+=	-I${LOCALBASE}/include
 CMAKE_ARGS=	-DGDCM_USE_SYSTEM_OPENSSL:BOOL=ON \
@@ -55,7 +48,7 @@ CMAKE_ARGS=	-DGDCM_USE_SYSTEM_OPENSSL:BOOL=ON \
 
 .include <bsd.port.options.mk>
 
-.if ${PORT_OPTIONS:MVTK5} || ${PORT_OPTIONS:MVTK6}
+.if ${PORT_OPTIONS:MVTK6}
 DESKTOP_ENTRIES="Gdcmviewer" "Simple DICOM Viewer" "" "gdcmviewer" "" ""
 PLIST_SUB+=	VTK=""
 .else
