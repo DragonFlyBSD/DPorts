@@ -2,6 +2,7 @@
 
 PORTNAME=	sdformat
 DISTVERSION=	8.0.0
+PORTREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	https://bitbucket.org/${BB_ACCOUNT}/${BB_PROJECT}/get/${BB_COMMIT}.tar.gz?dummy=/
 
@@ -18,7 +19,7 @@ LIB_DEPENDS=	libignition-math6.so:math/ignition-math \
 		liburdfdom_world.so:misc/urdfdom
 RUN_DEPENDS=	ignition-tools>0:devel/ignition-tools
 
-USES=		cmake:outsource compiler:c++17-lang pkgconfig
+USES=		cmake compiler:c++17-lang pkgconfig
 USE_LDCONFIG=	yes
 
 CMAKE_OFF=	BUILD_TESTING
