@@ -2,11 +2,11 @@
 # $FreeBSD$
 
 PORTNAME=	hub
-PORTVERSION=	2.6.0
+PORTVERSION=	2.7.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	devel sysutils
 
-MAINTAINER=	egypcio@googlemail.com
+MAINTAINER=	egypcio@FreeBSD.org
 COMMENT=	Introduces git to GitHub
 
 LICENSE=	MIT
