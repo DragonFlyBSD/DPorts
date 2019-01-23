@@ -2,6 +2,7 @@
 
 PORTNAME=	ignition-tools
 DISTVERSION=	0.1.0
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://bitbucket.org/${BB_ACCOUNT}/${BB_PROJECT}/get/${BB_COMMIT}.tar.gz?dummy=/
 
@@ -11,7 +12,7 @@ COMMENT=	Ignition entry point (ign) for using all the suite of ignition tools
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		cmake:outsource pkgconfig shebangfix
+USES=		cmake compiler:c++11-lang pkgconfig shebangfix
 SHEBANG_FILES=	src/ign.in
 USE_RUBY=	yes
 
