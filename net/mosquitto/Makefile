@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	mosquitto
-PORTVERSION=	1.5.3
-PORTREVISION=	1
+PORTVERSION=	1.5.5
 CATEGORIES=	net
 MASTER_SITES=	http://mosquitto.org/files/source/
 
@@ -17,12 +16,13 @@ LIB_DEPENDS=	libcares.so:dns/c-ares \
 BUILD_DEPENDS=	xsltproc:textproc/libxslt
 
 USES=		cmake ssl
-NOCONFIGURE=	yes
 USE_RC_SUBR=	mosquitto
 USE_LDCONFIG=	yes
-PLIST_SUB=	PORTVERSION=${PORTVERSION}
 
 USERS=		nobody
+
+NOCONFIGURE=	yes
+PLIST_SUB=	PORTVERSION=${PORTVERSION}
 
 OPTIONS_DEFINE=	WS
 
