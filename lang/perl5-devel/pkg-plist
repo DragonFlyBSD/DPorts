@@ -267,7 +267,6 @@ etc/man.d/perl%%PKGNAMESUFFIX%%.conf
 %%PRIV_LIB%%/Math/BigFloat/Trace.pm
 %%PRIV_LIB%%/Math/BigInt.pm
 %%PRIV_LIB%%/Math/BigInt/Calc.pm
-%%PRIV_LIB%%/Math/BigInt/CalcEmu.pm
 %%PRIV_LIB%%/Math/BigInt/Lib.pm
 %%PRIV_LIB%%/Math/BigInt/Trace.pm
 %%PRIV_LIB%%/Math/BigRat.pm
@@ -474,6 +473,7 @@ etc/man.d/perl%%PKGNAMESUFFIX%%.conf
 %%PRIV_LIB%%/Test2/EventFacet/Error.pm
 %%PRIV_LIB%%/Test2/EventFacet/Hub.pm
 %%PRIV_LIB%%/Test2/EventFacet/Info.pm
+%%PRIV_LIB%%/Test2/EventFacet/Info/Table.pm
 %%PRIV_LIB%%/Test2/EventFacet/Meta.pm
 %%PRIV_LIB%%/Test2/EventFacet/Parent.pm
 %%PRIV_LIB%%/Test2/EventFacet/Plan.pm
@@ -532,6 +532,7 @@ etc/man.d/perl%%PKGNAMESUFFIX%%.conf
 %%PRIV_LIB%%/Unicode/Collate/Locale/bn.pl
 %%PRIV_LIB%%/Unicode/Collate/Locale/ca.pl
 %%PRIV_LIB%%/Unicode/Collate/Locale/cs.pl
+%%PRIV_LIB%%/Unicode/Collate/Locale/cu.pl
 %%PRIV_LIB%%/Unicode/Collate/Locale/cy.pl
 %%PRIV_LIB%%/Unicode/Collate/Locale/da.pl
 %%PRIV_LIB%%/Unicode/Collate/Locale/de_at_ph.pl
@@ -827,7 +828,6 @@ etc/man.d/perl%%PKGNAMESUFFIX%%.conf
 %%ARCH_LIB%%/Scalar/Util.pm
 %%ARCH_LIB%%/Socket.pm
 %%ARCH_LIB%%/Storable.pm
-%%ARCH_LIB%%/Storable/Limit.pm
 %%ARCH_LIB%%/Sub/Util.pm
 %%ARCH_LIB%%/Sys/Hostname.pm
 %%ARCH_LIB%%/Sys/Syslog.pm
@@ -956,13 +956,18 @@ etc/man.d/perl%%PKGNAMESUFFIX%%.conf
 %%MAN1%%/perl5260delta.1.gz
 %%MAN1%%/perl5261delta.1.gz
 %%MAN1%%/perl5262delta.1.gz
+%%MAN1%%/perl5263delta.1.gz
 %%MAN1%%/perl5280delta.1.gz
+%%MAN1%%/perl5281delta.1.gz
 %%MAN1%%/perl5290delta.1.gz
 %%MAN1%%/perl5291delta.1.gz
 %%MAN1%%/perl5292delta.1.gz
 %%MAN1%%/perl5293delta.1.gz
 %%MAN1%%/perl5294delta.1.gz
 %%MAN1%%/perl5295delta.1.gz
+%%MAN1%%/perl5296delta.1.gz
+%%MAN1%%/perl5297delta.1.gz
+%%MAN1%%/perl5298delta.1.gz
 %%MAN1%%/perl561delta.1.gz
 %%MAN1%%/perl56delta.1.gz
 %%MAN1%%/perl581delta.1.gz
@@ -1385,7 +1390,6 @@ etc/man.d/perl%%PKGNAMESUFFIX%%.conf
 %%MAN3%%/Math::BigFloat.3.gz
 %%MAN3%%/Math::BigInt.3.gz
 %%MAN3%%/Math::BigInt::Calc.3.gz
-%%MAN3%%/Math::BigInt::CalcEmu.3.gz
 %%MAN3%%/Math::BigInt::FastCalc.3.gz
 %%MAN3%%/Math::BigInt::Lib.3.gz
 %%MAN3%%/Math::BigRat.3.gz
@@ -1576,6 +1580,7 @@ etc/man.d/perl%%PKGNAMESUFFIX%%.conf
 %%MAN3%%/Test2::EventFacet::Error.3.gz
 %%MAN3%%/Test2::EventFacet::Hub.3.gz
 %%MAN3%%/Test2::EventFacet::Info.3.gz
+%%MAN3%%/Test2::EventFacet::Info::Table.3.gz
 %%MAN3%%/Test2::EventFacet::Meta.3.gz
 %%MAN3%%/Test2::EventFacet::Parent.3.gz
 %%MAN3%%/Test2::EventFacet::Plan.3.gz
@@ -1747,13 +1752,18 @@ etc/man.d/perl%%PKGNAMESUFFIX%%.conf
 %%PRIV_LIB%%/pod/perl5260delta.pod
 %%PRIV_LIB%%/pod/perl5261delta.pod
 %%PRIV_LIB%%/pod/perl5262delta.pod
+%%PRIV_LIB%%/pod/perl5263delta.pod
 %%PRIV_LIB%%/pod/perl5280delta.pod
+%%PRIV_LIB%%/pod/perl5281delta.pod
 %%PRIV_LIB%%/pod/perl5290delta.pod
 %%PRIV_LIB%%/pod/perl5291delta.pod
 %%PRIV_LIB%%/pod/perl5292delta.pod
 %%PRIV_LIB%%/pod/perl5293delta.pod
 %%PRIV_LIB%%/pod/perl5294delta.pod
 %%PRIV_LIB%%/pod/perl5295delta.pod
+%%PRIV_LIB%%/pod/perl5296delta.pod
+%%PRIV_LIB%%/pod/perl5297delta.pod
+%%PRIV_LIB%%/pod/perl5298delta.pod
 %%PRIV_LIB%%/pod/perl561delta.pod
 %%PRIV_LIB%%/pod/perl56delta.pod
 %%PRIV_LIB%%/pod/perl581delta.pod
@@ -2271,7 +2281,9 @@ etc/man.d/perl%%PKGNAMESUFFIX%%.conf
 %%PRIV_LIB%%/unicore/lib/Perl/_PerlFol.pl
 %%PRIV_LIB%%/unicore/lib/Perl/_PerlIDC.pl
 %%PRIV_LIB%%/unicore/lib/Perl/_PerlIDS.pl
+%%PRIV_LIB%%/unicore/lib/Perl/_PerlIsI.pl
 %%PRIV_LIB%%/unicore/lib/Perl/_PerlNch.pl
+%%PRIV_LIB%%/unicore/lib/Perl/_PerlNon.pl
 %%PRIV_LIB%%/unicore/lib/Perl/_PerlPat.pl
 %%PRIV_LIB%%/unicore/lib/Perl/_PerlPr2.pl
 %%PRIV_LIB%%/unicore/lib/Perl/_PerlPro.pl
