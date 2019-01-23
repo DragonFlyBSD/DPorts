@@ -5,7 +5,7 @@ PORTVERSION=	2.7.0
 CATEGORIES=	dns net ipv6
 PKGNAMEPREFIX=	go-
 
-MAINTAINER=	egypcio@googlemail.com
+MAINTAINER=	egypcio@FreeBSD.org
 COMMENT=	DNS server with per-client targeted responses
 
 LICENSE=	APACHE20
@@ -13,6 +13,9 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	GeoIP>=1.6.12:net/GeoIP
 RUN_DEPENDS=	GeoIP>=1.6.12:net/GeoIP
+
+DEPRECATED=     Uses legacy GeoIP 1 format which no longer works; switch to GeoIP 2 where possible
+EXPIRATION_DATE=2019-02-15
 
 USES=		go pkgconfig
 USE_RC_SUBR=	geodns
