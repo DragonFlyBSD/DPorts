@@ -2,6 +2,7 @@
 
 PORTNAME=	ignition-transport
 DISTVERSION=	6.0.0
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://bitbucket.org/${BB_ACCOUNT}/${BB_PROJECT}/get/${BB_COMMIT}.tar.gz?dummy=/
 
@@ -20,7 +21,7 @@ LIB_DEPENDS=	libignition-math6.so:math/ignition-math \
 		libzmq.so:net/libzmq4
 RUN_DEPENDS=	ignition-tools>0:devel/ignition-tools
 
-USES=		cmake:outsource pkgconfig sqlite
+USES=		cmake pkgconfig sqlite
 USE_LDCONFIG=	yes
 
 CMAKE_OFF=	BUILD_TESTING
