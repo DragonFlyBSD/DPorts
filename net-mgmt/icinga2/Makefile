@@ -3,6 +3,7 @@
 PORTNAME=	icinga2
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.10.2
+PORTREVISION=	2
 CATEGORIES=	net-mgmt
 
 MAINTAINER=	lme@FreeBSD.org
@@ -15,7 +16,7 @@ LIB_DEPENDS=	libboost_system.so:devel/boost-libs \
 		libyajl.so:devel/yajl
 RUN_DEPENDS=	${LOCALBASE}/bin/bash:shells/bash
 
-USES=		alias bison cmake compiler:c++0x libedit ssl
+USES=		alias bison cmake:insource compiler:c++0x libedit ssl
 USE_GITHUB=	yes
 GH_ACCOUNT=	icinga
 
