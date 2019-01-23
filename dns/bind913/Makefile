@@ -8,7 +8,7 @@ PORTVERSION=	${ISCVERSION:S/-P/P/:S/b/.b/:S/a/.a/:S/rc/.rc/}
 PORTREVISION=	0
 .else
 # dns/bind913 here
-PORTREVISION=	0
+PORTREVISION=	2
 .endif
 CATEGORIES=	dns net ipv6
 MASTER_SITES=	ISC/bind9/${ISCVERSION}
@@ -33,7 +33,7 @@ LIB_DEPENDS=	libxml2.so:textproc/libxml2
 
 USES=	compiler:c11 cpe libedit ssl
 # ISC releases things like 9.8.0-P1, which our versioning doesn't like
-ISCVERSION=	9.13.3
+ISCVERSION=	9.13.5
 
 CPE_VENDOR=	isc
 CPE_VERSION=	${ISCVERSION:C/-.*//}
@@ -43,7 +43,6 @@ CPE_UPDATE=	${ISCVERSION:C/.*-//:tl}
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--localstatedir=/var --disable-linux-caps \
-		--disable-symtable \
 		--with-libxml2=${LOCALBASE} \
 		--with-readline="-L${LOCALBASE}/lib -ledit" \
 		--with-dlopen=yes \
@@ -75,7 +74,7 @@ OPTIONS_RADIO_CRYPTO=	NATIVE_PKCS11
 
 .if !defined(BIND_TOOLS_SLAVE)
 OPTIONS_DEFAULT+=	DLZ_FILESYSTEM LMDB RPZ_NSDNAME RPZ_NSIP TCP_FASTOPEN
-OPTIONS_DEFINE+=	RPZ_NSIP RPZ_NSDNAME DOCS GEOIP \
+OPTIONS_DEFINE+=	RPZ_NSIP RPZ_NSDNAME DOCS \
 			MINCACHE PORTREVISION QUERYTRACE LMDB DNSTAP \
 			START_LATE TUNING_LARGE TCP_FASTOPEN
 OPTIONS_GROUP=		DLZ
@@ -97,7 +96,6 @@ DLZ_POSTGRESQL_DESC=	DLZ Postgres driver
 DLZ_STUB_DESC=		DLZ stub driver
 DNSTAP_DESC=		Provides fast passive logging of DNS messages
 FIXED_RRSET_DESC=	Enable fixed rrset ordering
-GEOIP_DESC=		Allow geographically based ACL.
 GSSAPI_BASE_DESC=	Using Heimdal in base
 GSSAPI_HEIMDAL_DESC=	Using security/heimdal
 GSSAPI_MIT_DESC=	Using security/krb5
@@ -137,9 +135,6 @@ DNSTAP_LIB_DEPENDS=	libfstrm.so:devel/fstrm \
 			libprotobuf-c.so:devel/protobuf-c
 
 FIXED_RRSET_CONFIGURE_ENABLE=	fixed-rrset
-
-GEOIP_CONFIGURE_WITH=	geoip
-GEOIP_LIB_DEPENDS=	libGeoIP.so:net/GeoIP
 
 GSSAPI_BASE_CONFIGURE_ON=\
 	--with-gssapi=${GSSAPIBASEDIR} KRB5CONFIG="${KRB5CONFIG}"
@@ -198,6 +193,18 @@ TUNING_LARGE_CONFIGURE_ON=	--with-tuning=large
 TUNING_LARGE_CONFIGURE_OFF=	--with-tuning=default
 
 .include <bsd.port.pre.mk>
+
+.if defined(WITH_DEBUG)
+CONFIGURE_ARGS+=	--enable-symtable
+.else
+CONFIGURE_ARGS+=	--disable-symtable
+.endif
+
+.if ${SSL_DEFAULT} == base
+SUB_LIST+=	ENGINES=/usr/lib/engines
+.else
+SUB_LIST+=	ENGINES=${LOCALBASE}/lib/engines
+.endif
 
 post-patch:
 .if defined(BIND_TOOLS_SLAVE)
