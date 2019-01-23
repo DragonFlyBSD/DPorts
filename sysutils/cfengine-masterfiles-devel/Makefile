@@ -3,11 +3,12 @@
 
 PORTNAME=	cfengine-masterfiles
 PORTVERSION=	3.${CFENGINE_COMMIT_DATE}
+PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	https://cfengine-package-repos.s3.amazonaws.com/tarballs/
 PKGNAMESUFFIX=	-devel
-HASH=		41bd11d
-CFENGINE_COMMIT_DATE=	2018.11.08
+HASH=		5d505fd
+CFENGINE_COMMIT_DATE=	2019.01.17
 
 MAINTAINER=	cy@FreeBSD.org
 #		gjb@FreeBSD.org is also committer for this port
@@ -28,8 +29,6 @@ CONFLICTS=	cfengine-masterfiles3[0-9]-* cfengine-masterfiles31[02-9]-* \
 RUN_DEPENDS=	cf-agent:sysutils/cfengine${PKGNAMESUFFIX}
 
 FETCH_BEFORE_ARGS=	-o ${DISTDIR}/${DISTFILES}
-
-CONFLICTS=	cfengine-masterfiles[6-9]*
 
 MAKE_JOBS_UNSAFE=	yes
 USES=		autoreconf:build cpe gmake python:build shebangfix
