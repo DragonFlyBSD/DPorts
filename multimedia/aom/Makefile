@@ -2,12 +2,12 @@
 
 PORTNAME=	aom
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.0.0-959
-DISTVERSIONSUFFIX=	-g89e832b90
+DISTVERSION=	1.0.0-1216
+DISTVERSIONSUFFIX=	-gb46542180
 CATEGORIES=	multimedia
 
 MAINTAINER=	jbeich@FreeBSD.org
-COMMENT=	AV1 Codec Library
+COMMENT=	AV1 reference encoder/decoder
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -16,7 +16,7 @@ BUILD_DEPENDS=	${BUILD_DEPENDS_${ARCH}}
 BUILD_DEPENDS_x86_64=	nasm:devel/nasm
 BUILD_DEPENDS_i386=	nasm:devel/nasm
 
-USES=		cmake:outsource compiler:c++11-lib perl5
+USES=		cmake compiler:c++11-lib perl5
 USE_GITHUB=	yes
 USE_PERL5=	build
 USE_LDCONFIG=	yes
