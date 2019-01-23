@@ -2,6 +2,7 @@
 
 PORTNAME=	botan
 DISTVERSION=	2.8.0
+PORTREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	http://botan.randombit.net/releases/
 PKGNAMESUFFIX=	2
@@ -41,7 +42,6 @@ SQLITE3_CONFIGURE_WITH=	sqlite3
 
 SSL_USES=		ssl
 SSL_CONFIGURE_WITH=	openssl
-SSL_VARS=		BROKEN_SSL=	openssl111
 
 .include <bsd.port.options.mk>
 
