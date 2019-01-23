@@ -3,10 +3,11 @@
 
 PORTNAME=	multimarkdown
 DISTVERSION=	6.4.0
+PORTREVISION=	1
 CATEGORIES=	textproc
 DIST_SUBDIR=	${PORTNAME}
 
-MAINTAINER=	egypcio@googlemail.com
+MAINTAINER=	egypcio@FreeBSD.org
 COMMENT=	Extended Markdown processor with more features, written in C
 
 LICENSE=	BSD3CLAUSE MIT GPLv2+ ZLIB
