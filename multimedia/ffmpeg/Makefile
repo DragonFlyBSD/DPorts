@@ -3,6 +3,7 @@
 
 PORTNAME=	ffmpeg
 PORTVERSION=	4.1
+PORTREVISION=	4
 PORTEPOCH=	1
 CATEGORIES=	multimedia audio ipv6 net
 MASTER_SITES=	https://ffmpeg.org/releases/
@@ -17,6 +18,7 @@ BUILD_DEPENDS=	nasm:devel/nasm \
 		${LOCALBASE}/bin/as:devel/binutils
 
 HAS_CONFIGURE=	yes
+CONFIGURE_LOG=	ffbuild/config.log
 USES=		compiler:c11 cpe gmake localbase:ldflags perl5 \
 		pkgconfig shebangfix tar:xz
 USE_LDCONFIG=	yes
@@ -26,7 +28,8 @@ NOPRECIOUSMAKEVARS=	yes # ARCH
 
 PORTSCOUT=	limit:^4\.
 
-OPTIONS_DEFINE=	ALSA AMR_NB AMR_WB AOM ASS BEIGNET BS2B CACA CDIO CELT CHROMAPRINT CODEC2 DAVS2 DC1394 \
+# Option CHROMAPRINT disabled, it cannot work and people are baffled.
+OPTIONS_DEFINE=	ALSA AMR_NB AMR_WB AOM ASS BEIGNET BS2B CACA CDIO CELT CODEC2 DAV1D DAVS2 DC1394 \
 		DEBUG DOCS DRM FDK_AAC FLITE FONTCONFIG \
 		FREETYPE FREI0R FRIBIDI GME GSM ICONV ILBC JACK KLVANC KVAZAAR LADSPA \
 		LAME LENSFUN LIBBLURAY LIBRSVG2 LIBXML2 LV2 MODPLUG MYSOFA OPENAL OPENCL OPENCV OPENGL \
@@ -83,6 +86,7 @@ BEIGNET_DESC=	DRM/VAAPI to OpenCL mapping for i965 + Beignet
 BS2B_DESC=	Bauer Stereophonic-to-Binaural filter
 CHROMAPRINT_DESC=	Audio fingerprinting with chromaprint
 CODEC2_DESC=	Codec 2 audio encoding/decoding via libcodec2
+DAV1D_DESC=	AV1 video decoding via libdav1d
 DAVS2_DESC=	AVS2 decoding via libdavs2
 DC1394_DESC=	IIDC-1394 grabbing using libdc1394
 DRM_DESC=	KMS grabbing using libdrm
@@ -168,6 +172,10 @@ CHROMAPRINT_CONFIGURE_ENABLE=	chromaprint
 # codec2
 CODEC2_LIB_DEPENDS=	libcodec2.so:audio/codec2
 CODEC2_CONFIGURE_ENABLE=	libcodec2
+
+# dav1d
+DAV1D_LIB_DEPENDS=	libdav1d.so:multimedia/dav1d
+DAV1D_CONFIGURE_ENABLE=	libdav1d
 
 # davs2
 DAVS2_LIB_DEPENDS=	libdavs2.so:multimedia/davs2
