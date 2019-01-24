@@ -2,12 +2,13 @@
 
 PORTNAME=	kross
 DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
+PORTREVISION=	1
 CATEGORIES=	lang kde kde-frameworks
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KF5 multi-language application scripting
 
-USES=		cmake:outsource compiler:c++11-lib gettext kde:5 qt:5 tar:xz
+USES=		cmake compiler:c++11-lib gettext kde:5 qt:5 tar:xz
 USE_KDE=	auth bookmarks codecs completion config configwidgets \
 		coreaddons doctools ecm i18n iconthemes itemviews \
 		jobwidgets kio parts service solid sonnet textwidgets \
