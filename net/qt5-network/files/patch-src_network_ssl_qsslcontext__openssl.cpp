@@ -1,6 +1,10 @@
---- src/network/ssl/qsslcontext_openssl.cpp.orig	2018-09-13 04:25:10 UTC
+* 
+* Fix for libressl after openssl111 API change
+*
+*
+--- src/network/ssl/qsslcontext_openssl.cpp.orig	2018-12-03 11:15:26 UTC
 +++ src/network/ssl/qsslcontext_openssl.cpp
-@@ -248,7 +248,7 @@ void QSslContext::applyBackendConfig(QSs
+@@ -249,7 +249,7 @@ void QSslContext::applyBackendConfig(QSs
      if (sslContext->sslConfiguration.backendConfiguration().isEmpty())
          return;
  

@@ -1,0 +1,4 @@
+dfly-patch:
+	# SIOCGHWADDR doesn't exist on DragonFly
+	${REINPLACE_CMD} -e 's|Q_OS_FREEBSD|__FreeBSD__|g' \
+	${WRKSRC}/src/plugins/bearer/generic/qgenericengine.cpp
