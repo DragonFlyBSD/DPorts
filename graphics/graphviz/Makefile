@@ -3,7 +3,7 @@
 
 PORTNAME=	graphviz
 PORTVERSION=	2.40.1
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	graphics tk
 MASTER_SITES=	https://graphviz.gitlab.io/pub/graphviz/stable/SOURCES/
 
@@ -20,9 +20,8 @@ LIB_DEPENDS=	libltdl.so:devel/libltdl \
 		libexpat.so:textproc/expat2 \
 		libgd.so:${GD_PORT}
 
-USES=		bison compiler:c++11-lang cpe gmake groff \
-		jpeg libtool:keepla localbase:ldflags pathfix \
-		pkgconfig shebangfix
+USES=		cpe pathfix shebangfix gmake bison groff pkgconfig \
+		libtool:keepla localbase:ldflags jpeg compiler:c++11-lang
 GNU_CONFIGURE=	yes
 # sincos is broken on armv6, see ports/220591
 CFLAGS_armv6=	-fno-builtin-sincos -fno-builtin-sin -fno-builtin-cos \
@@ -210,6 +209,11 @@ CONFIGURE_ENV+=		SWIG="${LOCALBASE}/bin/swig3.0"
 .else
 CONFIGURE_ARGS+=	--disable-swig
 CONFIGURE_ENV+=		SWIG="/nonexistent"
+.endif
+
+.if ${PORT_OPTIONS:MGVEDIT}
+DEPRECATED=		Qt4 has been EOL since december 2015
+EXPIRATION_DATE=	2019-03-15
 .endif
 
 .include <bsd.port.pre.mk>
