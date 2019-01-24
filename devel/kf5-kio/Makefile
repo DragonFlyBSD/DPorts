@@ -1,13 +1,14 @@
 # $FreeBSD$
 
 PORTNAME=	kio
-DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
+DISTVERSION=	5.54.1 # Respin for bug 402665
+PORTREVISION=	1
 CATEGORIES=	devel kde kde-frameworks
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KF5 resource and network access abstraction
 
-USES=		cmake:outsource compiler:c++11-lib desktop-file-utils \
+USES=		cmake compiler:c++11-lib desktop-file-utils \
 		gettext kde:5 qt:5 ssl tar:xz
 USE_GNOME=	libxml2 libxslt
 USE_KDE=	archive auth bookmarks codecs completion config \
