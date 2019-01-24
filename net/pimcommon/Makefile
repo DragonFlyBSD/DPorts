@@ -2,6 +2,7 @@
 
 PORTNAME=	pimcommon
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
+PORTREVISION=	1
 CATEGORIES=	net kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -11,7 +12,7 @@ LICENSE=	LGPL21
 
 LIB_DEPENDS=	libboost_system.so:devel/boost-libs
 
-USES=		cmake:outsource compiler:c++11-lib gettext grantlee:5 kde:5 qt:5 tar:xz
+USES=		cmake compiler:c++11-lib gettext grantlee:5 kde:5 qt:5 tar:xz
 USE_KDE=	archive attica auth codecs completion config configwidgets \
 		dbusaddons ecm emoticons i18n init iconthemes itemmodels \
 		jobwidgets kdelibs4support kio newstuff service sonnet textwidgets \
