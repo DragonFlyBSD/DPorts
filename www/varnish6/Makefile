@@ -1,9 +1,9 @@
 # $FreeBSD$
 
 PORTNAME=	varnish
-PORTVERSION=	6.0.1
+PORTVERSION=	6.1.1
 DISTVERSIONPREFIX=	varnish-
-PORTREVISION=	1
+PORTREVISION=	0
 CATEGORIES=	www
 PKGNAMESUFFIX=	6
 
@@ -13,7 +13,8 @@ COMMENT=	High-performance HTTP accelerator
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	rst2man:textproc/py-docutils
+BUILD_DEPENDS=	rst2man:textproc/py-docutils \
+		${PYTHON_PKGNAMEPREFIX}sphinx>0:textproc/py-sphinx@${PY_FLAVOR}
 LIB_DEPENDS=	libpcre.so:devel/pcre
 
 CONFLICTS=	varnish-2.* varnish-3.* varnish4-4.* varnish5-5.*
@@ -45,9 +46,14 @@ EXTRA_PATCHES+=	${FILESDIR}/no-inet6.patch
 
 OPTIONS_DEFINE=	DOCS
 
-.if defined(BAD_TESTS)
+.include <bsd.port.pre.mk>
+
 post-patch:
+.if defined(BAD_TESTS)
 	${RM} ${BAD_TESTS:C|.+|${WRKSRC}/bin/varnishtest/tests/\0.vtc|}
 .endif
+.if ${ARCH:Mmips*} || ${ARCH:Mpowerpc*} || ${ARCH} == sparc64
+	${REINPLACE_CMD} -e '/-Wno-unknown-warning-option -Wno-implicit-fallthrough/d' ${WRKSRC}/configure.ac
+.endif
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
