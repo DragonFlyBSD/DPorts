@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/print/cups-filters/files/cups_browsed.in 410825 2016-03-11 11:53:42Z tijl $
+# $FreeBSD: head/print/cups-filters/files/cups_browsed.in 487453 2018-12-14 17:41:40Z tijl $
 #
 # PROVIDE: cups_browsed
 # REQUIRE: cupsd %%AVAHI_DAEMON%%
@@ -19,11 +19,18 @@ rcvar=cups_browsed_enable
 
 load_rc_config ${name}
 
- : ${cups_browsed_enable:=NO}
+: ${cups_browsed_enable:=NO}
+: ${cups_browsed_flags:=}
 
-command=/usr/sbin/daemon
 pidfile=/var/run/cups-browsed.pid
-command_args="-p ${pidfile} %%PREFIX%%/sbin/cups-browsed"
-procname="%%PREFIX%%/sbin/cups-browsed"
+command="%%PREFIX%%/sbin/cups-browsed"
+
+start_cmd="${name}_start"
+
+cups_browsed_start()
+{
+	echo -n "Starting ${name}."
+	/usr/sbin/daemon -p ${pidfile} ${command} ${cups_browsed_flags}
+}
 
 run_rc_command "$1"

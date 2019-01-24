@@ -3,3 +3,5 @@ MAKE_ENV+= LDVER=ld.bfd	# LDFLAGS+= -pthread # looks like more an ld.gold issue
 
 # /usr/local/include/poppler/PDFDoc.h:295:153: error: 'nullptr' was not declared
 USE_CXXSTD=	c++11
+
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NPSHYBRID} PSPOPPLER
