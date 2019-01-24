@@ -2,6 +2,7 @@
 
 PORTNAME=	telepathy-logger-qt
 DISTVERSION=	17.08.0
+PORTREVISION=	2
 CATEGORIES=	net-im
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	stable/${PORTNAME}/${PORTVERSION:R}/src
@@ -20,7 +21,7 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libtelepathy-logger.so:net-im/telepathy-logger \
 		libtelepathy-qt5.so:net-im/telepathy-qt@qt5
 
-USES=		bison:build cmake:outsource compiler:c++11-lang kde:5 \
+USES=		bison:build cmake compiler:c++11-lang kde:5 \
 		pkgconfig python:2.7,build qt:5 tar:xz
 USE_GNOME=	glib20 libxml2
 USE_KDE=	ecm
