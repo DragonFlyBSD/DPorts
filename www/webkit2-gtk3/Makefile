@@ -2,10 +2,9 @@
 # $FreeBSD$
 
 PORTNAME=	webkit
-PORTVERSION=	2.22.3
-PORTREVISION=	1
+PORTVERSION=	2.22.5
 CATEGORIES=	www
-MASTER_SITES=	http://webkitgtk.org/releases/
+MASTER_SITES=	https://webkitgtk.org/releases/
 PKGNAMESUFFIX=	2-gtk3
 DISTNAME=	${PORTNAME}gtk-${PORTVERSION}
 
@@ -34,7 +33,7 @@ LIB_DEPENDS=	libenchant-2.so:textproc/enchant2 \
 
 PORTSCOUT=	limitw:1,even
 
-USES=		bison cmake:outsource compiler:c++14-lang gettext gl gnome gperf \
+USES=		bison cmake compiler:c++14-lang gettext gl gnome gperf \
 		jpeg localbase:ldflags perl5 pkgconfig python:2.7,build \
 		sqlite tar:xz
 USE_GNOME=	cairo gdkpixbuf2 gtk30 introspection:build libxml2 libxslt
@@ -49,10 +48,10 @@ USE_XORG=	x11 xcomposite xdamage xext xrender xt ice
 BINARY_ALIAS=		python=${PYTHON_CMD}
 CXXFLAGS+=		-DFIXED_EXECUTABLE_MEMORY_POOL_SIZE_IN_MB=32
 CXXFLAGS_powerpc=	-DENABLE_YARR_JIT=0
-CXXFLAGS_powerpc64=	-DENABLE_YARR_JIT=0 \
-			-mminimal-toc
+CXXFLAGS_powerpc64=	-DENABLE_YARR_JIT=0
 CMAKE_ARGS=		-DPORT=GTK
-CMAKE_OFF=		USE_LD_GOLD ${CMAKE_OFF_${ARCH}:U}
+CMAKE_OFF=		USE_LD_GOLD ${CMAKE_OFF_${ARCH}:U} \
+			USE_SYSTEM_MALLOC
 CMAKE_ON=		ENABLE_GLES2 ENABLE_MINIBROWSER
 CMAKE_OFF_armv6=	ENABLE_JIT
 CMAKE_OFF_armv7=	ENABLE_JIT
