@@ -2,6 +2,7 @@
 
 PORTNAME=	kfilemetadata
 DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
+PORTREVISION=	1
 CATEGORIES=	devel kde kde-frameworks
 
 MAINTAINER=	kde@FreeBSD.org
@@ -15,7 +16,7 @@ LIB_DEPENDS=	libavutil.so:multimedia/ffmpeg \
 		libtag.so:audio/taglib
 # TODO: maybe depend on textproc/catdoc
 
-USES=		cmake:outsource compiler:c++11-lib gettext kde:5 pkgconfig \
+USES=		cmake compiler:c++11-lib gettext kde:5 pkgconfig \
 		qt:5 tar:xz
 USE_KDE=	archive ecm i18n
 USE_QT=		buildtools_build core qmake_build xml
