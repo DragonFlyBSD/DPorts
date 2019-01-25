@@ -6,7 +6,7 @@ PORTVERSION=	2.1.0
 CATEGORIES=	emulators
 MASTER_SITES=	http://download.tuxfamily.org/hatari/${PORTVERSION}/
 
-MAINTAINER=	egypcio@googlemail.com
+MAINTAINER=	egypcio@FreeBSD.org
 COMMENT=	Atari ST emulator
 
 LICENSE=	GPLv2+
@@ -14,7 +14,6 @@ LICENSE_FILE=	${WRKSRC}/gpl.txt
 
 BROKEN_aarch64=		fails to configure: error: unrecognized CPU type
 BROKEN_armv6=		fails to configure: CMake Error: Generator: execution of make failed
-BROKEN_powerpc64=	fails to compile: sysdeps.h: redefinition of typedef 'uae_u8'
 
 LIB_DEPENDS=	libportaudio.so:audio/portaudio \
 		libpng.so:graphics/png
