@@ -2,7 +2,7 @@
 
 PORTNAME=	xpdf
 PORTVERSION=	4.00
-PORTREVISION=	1
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	graphics print
 MASTER_SITES=	https://xpdfreader-dl.s3.amazonaws.com/
@@ -26,7 +26,7 @@ CONFLICTS_INSTALL=	xpdf
 MANPREFIX=	${PREFIX}/share/xpdf
 SUB_FILES=	xpdf-man.conf
 
-USES=		cmake:outsource localbase
+USES=		compiler:c++11-lang cmake localbase:ldflags
 CMAKE_ARGS+=	-DOPI_SUPPORT:BOOL=ON -DCMAKE_DISABLE_FIND_PACKAGE_Qt4:BOOL=ON \
 		-DUSE_LCMS:BOOL=OFF -DSYSTEM_XPDFRC=${PREFIX}/etc/xpdfrc
 
