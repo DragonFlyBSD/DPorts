@@ -3,7 +3,7 @@
 
 PORTNAME=	zbar
 PORTVERSION=	0.10
-PORTREVISION=	15
+PORTREVISION=	16
 CATEGORIES=	graphics
 MASTER_SITES=	SF
 
@@ -28,9 +28,12 @@ X11_USE=	XORG=ice,sm,x11,xau,xcb,xdmcp,xext,xv
 X11_CONFIGURE_ON=	--with-x=yes
 X11_CONFIGURE_OFF=	--with-x=no --without-xshm --without-xv
 
-IMAGEMAGICK_LIB_DEPENDS=	libMagick++-6.so:graphics/ImageMagick6
+IMAGEMAGICK_LIB_DEPENDS=	libMagick++-7.so:graphics/ImageMagick7
 IMAGEMAGICK_CONFIGURE_ON=	--with-imagemagick=yes
 IMAGEMAGICK_CONFIGURE_OFF=	--with-imagemagick=no
+
+# To avoid patching configure even more:
+CONFIGURE_ENV+=			ac_cv_header_wand_MagickWand_h=yes
 
 V4L_BUILD_DEPENDS=	v4l_compat>=1.0.20101027:multimedia/v4l_compat
 V4L_CONFIGURE_ON=	--enable-video=yes
@@ -52,6 +55,12 @@ QT4_CONFIGURE_OFF=	--with-qt=no
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+
+.include <bsd.port.options.mk>
+.if ${PORT_OPTIONS:MQT4}
+DEPRECATED=		Qt4 has been EOL since december 2015
+EXPIRATION_DATE=	2019-03-15
+.endif
 
 post-patch-DOCS-off:
 	@${REINPLACE_CMD} '/^install-data-am: /s/install-dist_docDATA//' \
