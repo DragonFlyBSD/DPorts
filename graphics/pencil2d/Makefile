@@ -4,6 +4,7 @@ PORTNAME=	pencil2d
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.6.2-63
 DISTVERSIONSUFFIX=	-gd05fbae0
+PORTREVISION=	2
 CATEGORIES=	graphics math
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -12,7 +13,10 @@ COMMENT=	Easy and intuitive tool to make 2D hand-drawn animations
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE.TXT
 
-USES=		desktop-file-utils gl gmake qmake qt:5 shared-mime-info
+RUN_DEPENDS=	ffmpeg:multimedia/ffmpeg
+
+USES=		compiler:c++11-lang desktop-file-utils gl gmake qmake qt:5 \
+		shared-mime-info
 USE_GITHUB=	yes
 USE_QT=		core gui multimedia network svg widgets xml buildtools_build
 USE_GL=		gl
