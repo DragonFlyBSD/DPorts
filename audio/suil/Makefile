@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	suil
-PORTVERSION=	0.10.0
+PORTVERSION=	0.10.2
+PORTREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://download.drobilla.net/
 
@@ -15,6 +16,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 BUILD_DEPENDS=	lv2>=1.14.0:audio/lv2
 LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2
+RUN_DEPENDS=	lv2>=1.14.0:audio/lv2
 
 USES=		gnome pkgconfig python:build tar:bzip2 waf
 USE_GNOME=	atk cairo gdkpixbuf2 glib20 gtk20 gtk30 pango
@@ -23,7 +25,7 @@ USE_LDCONFIG=	yes
 PLIST_SUB=	SUILVERSION=${PORTVERSION}
 
 OPTIONS_DEFINE=		QT4 QT5
-OPTIONS_DEFAULT=	QT4 QT5
+OPTIONS_DEFAULT=	QT5
 OPTIONS_SUB=		yes
 QT4_CONFIGURE_OFF=	--no-qt4
 QT4_LIB_DEPENDS=	libQtCore.so:devel/qt4-corelib \
