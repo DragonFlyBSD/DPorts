@@ -3,12 +3,14 @@
 
 PORTNAME=	lumina-archiver
 PORTVERSION=	1.4.1
+PORTREVISION=	2
 CATEGORIES=	deskutils
 
 MAINTAINER=	jt@ixsystems.com
 COMMENT=	Archive manager from the Lumina Desktop
 
 LICENSE=	BSD3CLAUSE
+LICENSE_FILE=	${WRKSRC}/../../../LICENSE
 
 CONFLICTS_INSTALL=	lumina-1.2.*
 
