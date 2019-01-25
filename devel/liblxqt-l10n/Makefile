@@ -3,6 +3,7 @@
 
 PORTNAME=	liblxqt
 PORTVERSION=	0.13.0
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	LXQT/lxqt-l10n
 PKGNAMESUFFIX=	-l10n
@@ -13,7 +14,7 @@ COMMENT=	Translations of liblxqt
 
 LICENSE=	LGPL21+
 
-USES=		cmake:outsource lxqt pkgconfig qt:5 tar:xz
+USES=		cmake lxqt pkgconfig qt:5 tar:xz
 USE_QT=		buildtools_build qmake_build linguisttools
 USE_LXQT=	buildtools
 
