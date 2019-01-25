@@ -4,7 +4,7 @@
 PORTNAME=	heimdall
 PORTVERSION=	1.4.2
 DISTVERSIONPREFIX=	v
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	devel
 
 MAINTAINER=	ehaupt@FreeBSD.org
@@ -13,7 +13,7 @@ COMMENT=	Tool suite used to flash firmware onto Samsung mobile devices
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		compiler:c++11-lang cmake
+USES=		compiler:c++11-lang cmake:insource
 USE_GITHUB=	yes
 
 OPTIONS_DEFINE=	DOCS GUI
