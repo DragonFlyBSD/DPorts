@@ -2,6 +2,7 @@
 
 PORTNAME=	kgraphviewer
 DISTVERSION=	2.4.3
+PORTREVISION=	1
 CATEGORIES=	graphics kde
 MASTER_SITES=   KDE/stable/${PORTNAME}/${PORTVERSION}/
 DIST_SUBDIR=    KDE/${PORTNAME}
@@ -14,7 +15,8 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libgvc.so:graphics/graphviz
 
-USES=		cmake:outsource desktop-file-utils kde:5 qt:5 tar:xz pkgconfig
+USES=		cmake compiler:c++11-lang desktop-file-utils kde:5 qt:5 tar:xz \
+		pkgconfig
 USE_KDE=	auth codecs completion config configwidgets \
 		coreaddons i18n iconthemes jobwidgets kio parts service \
 		sonnet textwidgets widgetsaddons xmlgui \
