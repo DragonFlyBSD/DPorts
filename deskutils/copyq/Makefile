@@ -1,8 +1,9 @@
 # $FreeBSD$
 
 PORTNAME=	copyq
-PORTVERSION=	3.6.1
+PORTVERSION=	3.7.2
 DISTVERSIONPREFIX=	v
+PORTREVISION=	1
 CATEGORIES=	deskutils
 
 MAINTAINER=	ports@FreeBSD.org
@@ -11,7 +12,8 @@ COMMENT=	Qt5 based clipboard manager
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		cmake:outsource qt:5
+USES=		cmake qt:5
+USE_LDCONFIG=	yes
 USE_XORG=	ice sm x11 xext xfixes xtst
 USE_QT=		core gui network script svg widgets x11extras xml \
 		buildtools_build linguist_build qmake_build \
