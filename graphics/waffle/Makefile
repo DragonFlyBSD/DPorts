@@ -3,7 +3,7 @@
 
 PORTNAME=	waffle
 PORTVERSION=	1.5.2
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.waffle-gl.org/files/release/waffle-${PORTVERSION}/
 
@@ -12,7 +12,7 @@ COMMENT=	Library that allows to defer selection of an OpenGL API until runtime
 
 LICENSE=	BSD2CLAUSE
 
-USES=		cmake:outsource compiler:c11 localbase pathfix pkgconfig tar:xz
+USES=		cmake compiler:c11 localbase pathfix pkgconfig tar:xz
 USE_GL=		egl gl
 USE_LDCONFIG=	yes
 USE_XORG=	x11 xcb
