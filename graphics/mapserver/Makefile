@@ -4,7 +4,7 @@
 PORTNAME=		mapserver
 PORTVERSION=		7.2.1
 CATEGORIES=		graphics www geography
-MASTER_SITES=		http://download.osgeo.org/mapserver/
+MASTER_SITES=		https://download.osgeo.org/mapserver/
 
 MAINTAINER=		wen@FreeBSD.org
 COMMENT=		System for developing web-based GIS applications
@@ -20,7 +20,7 @@ LIB_DEPENDS=		libgd.so:graphics/gd \
 			libfreetype.so:print/freetype2 \
 			libprotobuf-c.so:devel/protobuf-c
 
-USES=			cpe cmake:outsource jpeg
+USES=			cpe cmake jpeg
 CPE_VENDOR=		umn
 USE_GNOME=		libxml2
 LDFLAGS+=		-L${LOCALBASE} -pthread
@@ -129,7 +129,6 @@ CMAKE_ARGS+=		-DWITH_POSTGIS=0
 
 .if ${PORT_OPTIONS:MPHP}
 USES+=			php:build
-IGNORE_WITH_PHP=	70
 CMAKE_ARGS+=		-DWITH_PHP=1
 PLIST_SUB+=		PHP=""
 .else
