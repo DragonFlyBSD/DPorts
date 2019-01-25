@@ -2,6 +2,7 @@
 
 PORTNAME=	krfb
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
+PORTREVISION=	1
 CATEGORIES=	net kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -10,7 +11,7 @@ COMMENT=	VNC server for KDE
 LIB_DEPENDS=	libvncserver.so:net/libvncserver \
 		libxcb-image.so:x11/xcb-util-image
 
-USES=		alias cmake:outsource compiler:c++11-lib gettext jpeg \
+USES=		alias cmake compiler:c++11-lib gettext jpeg \
 		kde:5 pkgconfig qt:5 tar:xz
 USE_KDE=	auth codecs completion config configwidgets coreaddons \
 		crash dbusaddons dnssd doctools ecm i18n notifications \
