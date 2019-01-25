@@ -3,6 +3,7 @@
 
 PORTNAME=	svn2git
 PORTVERSION=	1.0.12
+PORTREVISION=	1
 CATEGORIES=	devel kde
 
 MAINTAINER=	dbn@FreeBSD.org
@@ -26,6 +27,7 @@ OPTIONS_DEFINE=	FREEBSD_REPO
 FREEBSD_REPO_DESC=	FreeBSD-repo only mode
 
 QMAKE_ARGS=	SVN_INCLUDE=${LOCALBASE}/include/subversion-1 \
+		SVN_LIBDIR=${LOCALBASE}/lib \
 		APR_INCLUDE=${LOCALBASE}/include/apr-1
 PLIST_FILES=	bin/svn2git
 
