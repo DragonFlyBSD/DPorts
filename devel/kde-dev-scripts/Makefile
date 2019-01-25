@@ -2,12 +2,13 @@
 
 PORTNAME=	kde-dev-scripts
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
+PORTREVISION=	1
 CATEGORIES=	devel kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE development scripts
 
-USES=		cmake:outsource kde:5 perl5 python:run qt:5 shebangfix tar:xz
+USES=		cmake kde:5 perl5 python:run qt:5 shebangfix tar:xz
 USE_KDE=	doctools ecm
 USE_QT=		buildtools_build qmake_build
 
