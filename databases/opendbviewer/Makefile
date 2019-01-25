@@ -2,6 +2,7 @@
 
 PORTNAME=	opendbviewer
 PORTVERSION=	1.1.0
+PORTREVISION=	2
 CATEGORIES=	databases
 
 MAINTAINER=	lbartoletti@tuxfamily.org
@@ -12,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	convert:graphics/ImageMagick6
 
-USES=		cmake:outsource compiler:c++11-lang qt:5
+USES=		cmake compiler:c++11-lang qt:5
 USE_GITHUB=	yes
 GH_ACCOUNT=	Jet1oeil
 USE_QT=		core gui network sql sql-sqlite3 testlib widgets \
