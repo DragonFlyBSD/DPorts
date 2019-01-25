@@ -4,7 +4,7 @@
 PORTNAME=	pyside
 PORTVERSION=	1.2.2
 DISTVERSIONPREFIX=	qt4.8+
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	https://download.qt-project.org/official_releases/pyside/
 PKGNAMESUFFIX=	${PYTHON_PKGNAMESUFFIX}
@@ -13,6 +13,9 @@ MAINTAINER=	python@FreeBSD.org
 COMMENT=	Python bindings for the Qt applications and UI framework
 
 LICENSE=	LGPL21
+
+DEPRECATED=		Qt4 has been EOL since december 2015
+EXPIRATION_DATE=	2019-03-15
 
 LIB_DEPENDS=	libapiextractor.so:devel/apiextractor \
 		libgenrunner.so:devel/generatorrunner \
