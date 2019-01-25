@@ -3,11 +3,14 @@
 
 PORTNAME=	qtscriptgenerator
 PORTVERSION=	0.2.0
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	devel
 
 MAINTAINER=	syncer@gmail.com
 COMMENT=	Tool that generates Qt bindings for Qt Script
+
+DEPRECATED=		Qt4 has been EOL since december 2015
+EXPIRATION_DATE=	2019-03-15
 
 BROKEN_armv6=		fails to build: qtscript_QEasingCurve.cpp:332:32: cannot initialize a parameter of type 'QEasingCurve::EasingFunction' with an lvalue of type 'float'
 BROKEN_armv7=		fails to build: qtscript_QEasingCurve.cpp:332:32: cannot initialize a parameter of type 'QEasingCurve::EasingFunction' with an lvalue of type 'float'
