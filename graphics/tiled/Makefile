@@ -3,6 +3,7 @@
 
 PORTNAME=	tiled
 PORTVERSION=	1.2.1
+PORTREVISION=	2
 DISTVERSIONPREFIX=	v
 CATEGORIES=	graphics editors games
 
