@@ -3,7 +3,7 @@
 PORTNAME=	puddletag
 PORTVERSION=	1.2.0
 DISTVERSIONPREFIX=v
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	audio python
 
 MAINTAINER=	multimedia@FreeBSD.org
@@ -11,6 +11,9 @@ COMMENT=	Audio tag editor
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+DEPRECATED=		Qt4 has been EOL since december 2015
+EXPIRATION_DATE=	2019-03-15
 
 RUN_DEPENDS=	chromaprint>=0.4:audio/chromaprint \
 		${PYTHON_PKGNAMEPREFIX}mutagen>=1.14:audio/py-mutagen@${PY_FLAVOR} \
