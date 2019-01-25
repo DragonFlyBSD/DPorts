@@ -1,6 +1,6 @@
 # $FreeBSD$
-PORTREVISION=	1
 
+PORTREVISION=	3
 PKGNAMESUFFIX=	-gtk
 
 LIB_DEPENDS=	libdbus-glib-1.so:devel/dbus-glib \
