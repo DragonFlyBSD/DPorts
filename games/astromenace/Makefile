@@ -3,6 +3,7 @@
 
 PORTNAME=	astromenace
 PORTVERSION=	1.4.0
+PORTREVISION=	1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	games
 
@@ -23,7 +24,7 @@ LIB_DEPENDS=	libogg.so:audio/libogg \
 USE_GITHUB=	yes
 GH_ACCOUNT=	viewizard
 
-USES=		cmake compiler:c++11-lib dos2unix gl openal:al,alut
+USES=		cmake:insource compiler:c++11-lib dos2unix gl openal:al,alut
 DOS2UNIX_FILES=	CMakeLists.txt src/config/config.cpp
 USE_GL=		gl glu
 USE_SDL=	sdl2
