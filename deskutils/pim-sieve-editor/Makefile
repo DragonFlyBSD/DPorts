@@ -2,12 +2,13 @@
 
 PORTNAME=	pim-sieve-editor
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
+PORTREVISION=	1
 CATEGORIES=	deskutils kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Mail sieve editor
 
-USES=		cmake:outsource compiler:c++11-lib gettext kde:5 qt:5 tar:xz
+USES=		cmake compiler:c++11-lib gettext kde:5 qt:5 tar:xz
 USE_KDE=	auth bookmarks codecs config configwidgets coreaddons crash \
 		dbusaddons ecm i18n iconthemes kio service wallet \
 		widgetsaddons xmlgui
