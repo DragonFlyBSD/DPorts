@@ -3,7 +3,7 @@
 
 PORTNAME=	opencascade
 PORTVERSION=	7.3.0
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	cad science
 MASTER_SITES=	LOCAL/thierry
 
@@ -22,7 +22,7 @@ RUN_DEPENDS=	bash:shells/bash
 
 # Check ${WRKSRC}/dox/overview/overview.md
 # and ${WRKSRC}/dox/dev_guides/building
-USES=		alias:10 cmake:outsource compiler:c++14-lang dos2unix \
+USES=		alias:10 cmake compiler:c++14-lang dos2unix \
 		gl shebangfix tk tar:tgz
 USE_XORG=	ice sm x11 xext xi xmu xt
 USE_GL=		gl glu
@@ -66,14 +66,12 @@ FFMPEG_CMAKE_OFF=	-DUSE_FFMPEG:BOOL=OFF
 FFMPEG_LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg
 
 VIS_CMAKE_ON=		-DUSE_FREEIMAGE:BOOL=ON -DUSE_GL2PS:BOOL=ON	\
-			-DUSE_FREETYPE:BOOL=ON
+			-DUSE_FREETYPE:BOOL=ON -D3RDPARTY_FREETYPE_DIR=${LOCALBASE}
 VIS_CMAKE_OFF=		-DUSE_FREEIMAGE:BOOL=OFF -DUSE_GL2PS:BOOL=OFF	\
 			-DUSE_FREETYPE:BOOL=OFF
 VIS_LIB_DEPENDS=	libftgl.so:graphics/ftgl		\
 			libgl2ps.so:print/gl2ps		\
 			libfreeimageplus.so:graphics/freeimage
-
-VIS_CMAKE_ON=	-D3RDPARTY_FREETYPE_DIR=${LOCALBASE}
 
 DOXYGEN_IMPLIES=	DOCS
 DOXYGEN_USE=	TEX=latex:build
