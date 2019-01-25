@@ -3,6 +3,7 @@
 
 PORTNAME=	gedit
 PORTVERSION=	3.28.1
+PORTREVISION=	1
 CATEGORIES=	editors gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome
@@ -42,7 +43,6 @@ CPPFLAGS+=	-Wno-error=format-nonliteral
 CFLAGS+=	-Wno-error=format-nonliteral
 LDFLAGS+=	-L${LOCALBASE}/lib
 USE_LDCONFIG=	yes
-SHEBANG_FILES=	plugins/externaltools/data/send-to-fpaste.tool.in
 PLIST_SUB=	VERSION="3.14"
 INSTALL_TARGET=	install-strip
 
