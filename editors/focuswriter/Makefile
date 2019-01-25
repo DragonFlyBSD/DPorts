@@ -3,7 +3,8 @@
 
 PORTNAME=	focuswriter
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.6.16
+DISTVERSION=	1.7.1
+PORTREVISION=	2
 CATEGORIES=	editors
 
 MAINTAINER=	lightside@gmx.com
@@ -14,9 +15,9 @@ LICENSE_COMB=	multi
 LICENSE_FILE_GPLv3+ =	${WRKSRC}/COPYING
 LICENSE_FILE_LGPL3+ =	${WRKSRC}/resources/images/icons/oxygen/COPYING
 
-LIB_DEPENDS=	libhunspell-1.6.so:textproc/hunspell
+LIB_DEPENDS=	libhunspell-1.7.so:textproc/hunspell
 
-USES=		compiler:c++11-lib desktop-file-utils pkgconfig qmake qt:5
+USES=		compiler:c++11-lib desktop-file-utils gl pkgconfig qmake qt:5
 USE_GITHUB=	yes
 GH_ACCOUNT=	gottcode
 USE_GL=		gl
