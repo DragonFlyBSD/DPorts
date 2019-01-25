@@ -3,7 +3,7 @@
 
 PORTNAME=	lximage-qt
 PORTVERSION=	0.7.0
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	LXQT
 
@@ -14,9 +14,9 @@ LICENSE=	GPLv2
 
 LIB_DEPENDS=	libexif.so:graphics/libexif \
 	libmenu-cache.so:x11/menu-cache \
-	libfm.so:x11/libfm
+	libfm.so:x11/libfm@gtk2
 
-USES=	cmake:outsource compiler:c++11-lib desktop-file-utils gettext-runtime \
+USES=	cmake compiler:c++11-lib desktop-file-utils gettext-runtime \
 	localbase:ldflags lxqt pkgconfig qt:5 tar:xz
 USE_GNOME=	glib20
 USE_QT=		buildtools_build qmake_build core dbus gui linguisttools \
