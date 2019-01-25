@@ -2,6 +2,7 @@
 
 PORTNAME=	kgpg
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
+PORTREVISION=	1
 CATEGORIES=	security kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -9,7 +10,8 @@ COMMENT=	Encryption tool for KDE
 
 RUN_DEPENDS=	gpg2:security/gnupg
 
-USES=		cmake:outsource gettext kde:5 qt:5 tar:xz
+USES=		cmake compiler:c++11-lang gettext kde:5 qt:5 \
+		tar:xz
 USE_KDE=	akonadi akonadicontacts archive auth bookmarks codecs \
 		completion config configwidgets contacts coreaddons crash \
 		dbusaddons doctools ecm i18n iconthemes itemmodels itemviews \
