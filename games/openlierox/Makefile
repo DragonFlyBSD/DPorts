@@ -3,7 +3,7 @@
 
 PORTNAME=	openlierox
 DISTVERSION=	0.58_rc3
-PORTREVISION=	18
+PORTREVISION=	19
 PORTEPOCH=	1
 CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/OpenLieroX%20${DISTVERSION:C/_/%20/}
@@ -14,7 +14,7 @@ COMMENT=	Extremely addictive realtime worms shoot-em-up
 
 LIB_DEPENDS=	libcurl.so:ftp/curl
 
-USES=		cmake compiler:c++11-lang gnome localbase pkgconfig tar:bzip2
+USES=		cmake:insource compiler:c++11-lang gnome localbase pkgconfig tar:bzip2
 USE_SDL=	sdl image
 USE_GNOME=	libxml2
 
