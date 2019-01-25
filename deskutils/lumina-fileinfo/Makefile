@@ -3,7 +3,7 @@
 
 PORTNAME=	lumina-fileinfo
 PORTVERSION=	1.4.1
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	deskutils
 
 MAINTAINER=	jt@ixsystems.com
