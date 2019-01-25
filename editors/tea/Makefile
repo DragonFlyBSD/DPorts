@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	tea
-PORTVERSION=	46.3.0
-PORTREVISION=	1
+PORTVERSION=	47.0.1
+PORTREVISION=	2
 CATEGORIES=	editors
 
 MAINTAINER=	danilo@FreeBSD.org
@@ -11,28 +11,20 @@ COMMENT=	Simple and powerful Qt-based text editor
 
 LICENSE=	GPLv3
 
-BROKEN_powerpc64=	fails to link: spellchecker.o:(.text+0xd2c): undefined reference to Hunspell::remove(std::string const&)
+USES=		compiler:c++11-lang gl gmake pkgconfig:build qmake qt:5
 
-USES=		gl pkgconfig:build qmake
-
-OPTIONS_SINGLE=	TOOLKITS
-OPTIONS_SINGLE_TOOLKITS=	QT4 QT5
 OPTIONS_DEFINE=		DOCS
 OPTIONS_GROUP=		SPELL
 OPTIONS_GROUP_SPELL=	ASPELL HUNSPELL
-OPTIONS_DEFAULT=	QT4 ASPELL HUNSPELL
+OPTIONS_DEFAULT=	ASPELL HUNSPELL
 
+USE_QT=		buildtools_build core declarative gui network widgets printsupport
 USE_GL=		gl
 USE_LOCALE=	en_US.UTF-8
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	psemiletov
 GH_PROJECT=	${PORTNAME}-qt
-
-QT4_USES=	qt:4
-QT4_USE=	qt=corelib,gui,moc_build,network,rcc_build
-QT5_USES=	qt:5
-QT5_USE=	qt=buildtools_build,core,declarative,gui,network,widgets,printsupport
 
 LDFLAGS+=	-lz
 PLIST_FILES=	bin/tea share/pixmaps/tea_icon_v2.png
@@ -44,7 +36,7 @@ DESKTOP_ENTRIES="TEA" "" "${PREFIX}/share/pixmaps/tea_icon_v2.png" \
 ASPELL_LIB_DEPENDS=	libaspell.so:textproc/aspell
 ASPELL_QMAKE_OFF=	CONFIG+=noaspell
 
-HUNSPELL_LIB_DEPENDS=	libhunspell-1.6.so:textproc/hunspell
+HUNSPELL_LIB_DEPENDS=	libhunspell-1.7.so:textproc/hunspell
 HUNSPELL_QMAKE_OFF=	CONFIG+=nohunspell
 
 do-install:
