@@ -2,6 +2,7 @@
 
 PORTNAME=	breeze-gtk
 DISTVERSION=	${KDE_PLASMA_VERSION}
+PORTREVISION=	1
 CATEGORIES=	x11-themes kde kde-plasma
 
 MAINTAINER=	kde@FreeBSD.org
@@ -10,7 +11,7 @@ COMMENT=	Plasma5 Breeze visual style for Gtk
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING.LIB
 
-USES=		cmake:outsource compiler:c++11-lang cpe kde:5 pkgconfig qt:5 \
+USES=		cmake compiler:c++11-lang cpe kde:5 pkgconfig qt:5 \
 		tar:xz
 USE_GNOME=	gdkpixbuf2
 USE_KDE=	ecm
