@@ -2,12 +2,14 @@
 
 PORTNAME=	lumina-pdf
 PORTVERSION=	1.4.1
+PORTREVISION=	2
 CATEGORIES=	deskutils
 
 MAINTAINER=	jt@ixsystems.com
 COMMENT=	PDF viewer from the Lumina Desktop
 
 LICENSE=	BSD3CLAUSE
+LICENSE_FILE=	${WRKSRC}/../../../LICENSE
 
 LIB_DEPENDS=	libpoppler-qt5.so:graphics/poppler-qt5
 
