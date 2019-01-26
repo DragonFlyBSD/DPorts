@@ -3,7 +3,7 @@
 
 PORTNAME=	mediadownloader
 PORTVERSION=	1.5.2
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	multimedia www
 MASTER_SITES=	SF/googleimagedown/project/${PORTVERSION}/
 DISTNAME=	${PORTNAME}_${PORTVERSION}-src
@@ -12,6 +12,9 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Search, watch, and download from Google Image and YouTube
 
 LICENSE=	GPLv3
+
+DEPRECATED=		Qt4 has been EOL since december 2015
+EXPIRATION_DATE=	2019-03-15
 
 USES=		qmake qt:4
 USE_GL=		gl glu
