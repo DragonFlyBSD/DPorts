@@ -3,13 +3,16 @@
 
 PORTNAME=	qtweetlib
 PORTVERSION=	0.5
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net
 
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	C++ Qt based Twitter library
 
 LICENSE=	LGPL21
+
+DEPRECATED=		Qt4 has been EOL since december 2015
+EXPIRATION_DATE=	2019-03-15
 
 LIB_DEPENDS=	libqjson.so:devel/qjson@qt4
 
