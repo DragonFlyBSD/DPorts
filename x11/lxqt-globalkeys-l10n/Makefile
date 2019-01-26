@@ -3,6 +3,7 @@
 
 PORTNAME=	globalkeys
 PORTVERSION=	0.13.0
+PORTREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	LXQT/lxqt-l10n
 PKGNAMEPREFIX=	lxqt-
@@ -14,7 +15,7 @@ COMMENT=	Translations of lxqt-globalkeys
 
 LICENSE=	LGPL21+
 
-USES=	cmake:outsource lxqt pkgconfig tar:xz qt:5
+USES=	cmake lxqt pkgconfig tar:xz qt:5
 USE_QT=	buildtools_build qmake_build linguisttools
 USE_LXQT=	buildtools
 
