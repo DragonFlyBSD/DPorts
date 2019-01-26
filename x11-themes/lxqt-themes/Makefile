@@ -3,6 +3,7 @@
 
 PORTNAME=	lxqt-themes
 PORTVERSION=	0.13.0
+PORTREVISION=	1
 CATEGORIES=	x11-themes
 MASTER_SITES=	LXQT
 
@@ -11,7 +12,7 @@ COMMENT=	Themes for the LXQt desktop
 
 LICENSE=	LGPL21+
 
-USES=		lxqt cmake:outsource tar:xz
+USES=		lxqt cmake tar:xz
 USE_LXQT=	buildtools
 
 .include <bsd.port.mk>
