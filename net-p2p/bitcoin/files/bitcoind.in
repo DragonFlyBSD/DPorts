@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/net-p2p/bitcoin/files/bitcoind.in 482296 2018-10-17 14:29:53Z ale $
+# $FreeBSD: head/net-p2p/bitcoin/files/bitcoind.in 488524 2018-12-27 09:53:37Z ale $
 
 # PROVIDE: bitcoind
 # REQUIRE: LOGIN cleanvar
@@ -118,7 +118,7 @@ bitcoind_start()
 {
   echo "Starting bitcoind:"
   cd "${bitcoind_data_dir}" || return 1
-  ${daemon_command} -u "${bitcoind_user}" -p "${pidfile}" -o "${bitcoind_data_dir}/bitcoind.log" \
+  ${daemon_command} -u "${bitcoind_user}" -p "${pidfile}" -f \
     ${command} \
     -conf="${bitcoind_config_file}" \
     -datadir="${bitcoind_data_dir}"
