@@ -1,6 +1,6 @@
---- scripts/mk_util.py.orig	2018-07-09 15:47:08 UTC
+--- scripts/mk_util.py.orig	2019-01-26 18:56:21 UTC
 +++ scripts/mk_util.py
-@@ -606,7 +606,7 @@ elif os.name == 'posix':
+@@ -623,7 +623,7 @@ elif os.name == 'posix':
          PREFIX="/usr/local"
      elif os.uname()[0] == 'Linux':
          IS_LINUX=True
@@ -9,7 +9,7 @@
          IS_FREEBSD=True
      elif os.uname()[0] == 'NetBSD':
          IS_NETBSD=True
-@@ -1251,7 +1251,7 @@ def get_so_ext():
+@@ -1294,7 +1294,7 @@ def get_so_ext():
      sysname = os.uname()[0]
      if sysname == 'Darwin':
          return 'dylib'
@@ -18,10 +18,10 @@
          return 'so'
      elif sysname == 'CYGWIN' or sysname.startswith('MSYS_NT') or sysname.startswith('MINGW'):
          return 'dll'
-@@ -2511,7 +2511,7 @@ def mk_config():
-             LDFLAGS        = '%s -lrt' % LDFLAGS
+@@ -2746,7 +2746,7 @@ def mk_config():
              SLIBFLAGS      = '-shared'
              SLIBEXTRAFLAGS = '%s -lrt' % SLIBEXTRAFLAGS
+             SLIBEXTRAFLAGS = '%s -Wl,-soname,libz3.so' % SLIBEXTRAFLAGS
 -        elif sysname == 'FreeBSD':
 +        elif sysname == 'FreeBSD' or sysname == 'DragonFly':
              CXXFLAGS       = '%s -D_FREEBSD_' % CXXFLAGS
