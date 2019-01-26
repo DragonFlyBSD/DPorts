@@ -3,6 +3,7 @@
 
 PORTNAME=	lxqt-admin
 PORTVERSION=	0.13.0
+PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	LXQT
 
@@ -11,7 +12,8 @@ COMMENT=	System administration tool for the LXQt desktop
 
 LICENSE=	LGPL21+
 
-USES=	cmake:outsource kde:5 localbase lxqt pkgconfig gnome tar:xz qt:5
+USES=	cmake compiler:c++11-lang gnome kde:5 localbase \
+	lxqt pkgconfig tar:xz qt:5
 USE_QT=	buildtools_build qmake_build core dbus gui svg \
 	widgets x11extras xml
 USE_KDE=	windowsystem
