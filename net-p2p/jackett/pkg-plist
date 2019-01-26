@@ -54,6 +54,7 @@
 %%DATADIR%%/Definitions/1337x.yml
 %%DATADIR%%/Definitions/2fast4you.yml
 %%DATADIR%%/Definitions/3dtorrents.yml
+%%DATADIR%%/Definitions/420files.yml
 %%DATADIR%%/Definitions/Bittorrentfiles.yml
 %%DATADIR%%/Definitions/acidlounge.yml
 %%DATADIR%%/Definitions/anidex.yml
@@ -61,6 +62,8 @@
 %%DATADIR%%/Definitions/aox.yml
 %%DATADIR%%/Definitions/arabafenice.yml
 %%DATADIR%%/Definitions/archetorrent.yml
+%%DATADIR%%/Definitions/arenabg.yml
+%%DATADIR%%/Definitions/asiancinema.yml
 %%DATADIR%%/Definitions/asiandvdclub.yml
 %%DATADIR%%/Definitions/ast4u.yml
 %%DATADIR%%/Definitions/audiobookbay.yml
@@ -77,7 +80,6 @@
 %%DATADIR%%/Definitions/bluebird.yml
 %%DATADIR%%/Definitions/blutopia.yml
 %%DATADIR%%/Definitions/btbit.yml
-%%DATADIR%%/Definitions/btdb.yml
 %%DATADIR%%/Definitions/btgigs.yml
 %%DATADIR%%/Definitions/btnext.yml
 %%DATADIR%%/Definitions/btstornet.yml
@@ -92,6 +94,7 @@
 %%DATADIR%%/Definitions/cztorrent.yml
 %%DATADIR%%/Definitions/datascene.yml
 %%DATADIR%%/Definitions/deildu.yml
+%%DATADIR%%/Definitions/desitorrents.yml
 %%DATADIR%%/Definitions/diablotorrent.yml
 %%DATADIR%%/Definitions/downloadville.yml
 %%DATADIR%%/Definitions/dragonworldreloaded.yml
@@ -105,7 +108,6 @@
 %%DATADIR%%/Definitions/ethor.yml
 %%DATADIR%%/Definitions/ettv.yml
 %%DATADIR%%/Definitions/extratorrent-ag.yml
-%%DATADIR%%/Definitions/extratorrentclone.yml
 %%DATADIR%%/Definitions/eztv.yml
 %%DATADIR%%/Definitions/fanoin.yml
 %%DATADIR%%/Definitions/femdomcult.yml
@@ -127,6 +129,7 @@
 %%DATADIR%%/Definitions/hd4free.yml
 %%DATADIR%%/Definitions/hdbits.yml
 %%DATADIR%%/Definitions/hdbitscom.yml
+%%DATADIR%%/Definitions/hdcenter.yml
 %%DATADIR%%/Definitions/hdchina.yml
 %%DATADIR%%/Definitions/hdcity.yml
 %%DATADIR%%/Definitions/hdhome.yml
@@ -136,6 +139,7 @@
 %%DATADIR%%/Definitions/hdtorrentsit.yml
 %%DATADIR%%/Definitions/hon3yhd.yml
 %%DATADIR%%/Definitions/hqsource.yml
+%%DATADIR%%/Definitions/hush.yml
 %%DATADIR%%/Definitions/hyperay.yml
 %%DATADIR%%/Definitions/icetorrent.yml
 %%DATADIR%%/Definitions/idopeclone.yml
@@ -190,6 +194,7 @@
 %%DATADIR%%/Definitions/rutor.yml
 %%DATADIR%%/Definitions/scenefz.yml
 %%DATADIR%%/Definitions/scenereactor.yml
+%%DATADIR%%/Definitions/scenerush.yml
 %%DATADIR%%/Definitions/sdbits.yml
 %%DATADIR%%/Definitions/shareisland.yml
 %%DATADIR%%/Definitions/sharespacedb.yml
@@ -220,6 +225,7 @@
 %%DATADIR%%/Definitions/torlock.yml
 %%DATADIR%%/Definitions/torrent-turk.yml
 %%DATADIR%%/Definitions/torrent9.yml
+%%DATADIR%%/Definitions/torrent9clone.yml
 %%DATADIR%%/Definitions/torrentbd.yml
 %%DATADIR%%/Definitions/torrentccf.yml
 %%DATADIR%%/Definitions/torrentcouch.yml
@@ -231,7 +237,6 @@
 %%DATADIR%%/Definitions/torrentlt.yml
 %%DATADIR%%/Definitions/torrentsectorcrew.yml
 %%DATADIR%%/Definitions/torrentseeds.yml
-%%DATADIR%%/Definitions/torrentsmd.yml
 %%DATADIR%%/Definitions/torrentz2.yml
 %%DATADIR%%/Definitions/torviet.yml
 %%DATADIR%%/Definitions/totheglory.yml
@@ -241,6 +246,7 @@
 %%DATADIR%%/Definitions/ultimategamerclub.yml
 %%DATADIR%%/Definitions/unionfansub.yml
 %%DATADIR%%/Definitions/waffles.yml
+%%DATADIR%%/Definitions/wihd.yml
 %%DATADIR%%/Definitions/worldofp2p.yml
 %%DATADIR%%/Definitions/worldwidetorrents.yml
 %%DATADIR%%/Definitions/x-ite.me.yml
@@ -310,6 +316,7 @@
 %%DATADIR%%/Microsoft.AspNetCore.Rewrite.dll
 %%DATADIR%%/Microsoft.AspNetCore.Routing.Abstractions.dll
 %%DATADIR%%/Microsoft.AspNetCore.Routing.dll
+%%DATADIR%%/Microsoft.AspNetCore.Server.IIS.dll
 %%DATADIR%%/Microsoft.AspNetCore.Server.IISIntegration.dll
 %%DATADIR%%/Microsoft.AspNetCore.Server.Kestrel.Core.dll
 %%DATADIR%%/Microsoft.AspNetCore.Server.Kestrel.Https.dll
@@ -347,6 +354,7 @@
 %%DATADIR%%/Microsoft.Extensions.Logging.Configuration.dll
 %%DATADIR%%/Microsoft.Extensions.Logging.Console.dll
 %%DATADIR%%/Microsoft.Extensions.Logging.Debug.dll
+%%DATADIR%%/Microsoft.Extensions.Logging.EventSource.dll
 %%DATADIR%%/Microsoft.Extensions.Logging.dll
 %%DATADIR%%/Microsoft.Extensions.ObjectPool.dll
 %%DATADIR%%/Microsoft.Extensions.Options.ConfigurationExtensions.dll
@@ -397,6 +405,7 @@
 %%DATADIR%%/System.Globalization.dll
 %%DATADIR%%/System.IO.Compression.ZipFile.dll
 %%DATADIR%%/System.IO.Compression.dll
+%%DATADIR%%/System.IO.FileSystem.AccessControl.dll
 %%DATADIR%%/System.IO.FileSystem.DriveInfo.dll
 %%DATADIR%%/System.IO.FileSystem.Primitives.dll
 %%DATADIR%%/System.IO.FileSystem.Watcher.dll
@@ -427,7 +436,6 @@
 %%DATADIR%%/System.Reflection.Extensions.dll
 %%DATADIR%%/System.Reflection.Metadata.dll
 %%DATADIR%%/System.Reflection.Primitives.dll
-%%DATADIR%%/System.Reflection.TypeExtensions.dll
 %%DATADIR%%/System.Reflection.dll
 %%DATADIR%%/System.Resources.Reader.dll
 %%DATADIR%%/System.Resources.ResourceManager.dll
@@ -474,11 +482,11 @@
 %%DATADIR%%/System.Xml.ReaderWriter.dll
 %%DATADIR%%/System.Xml.XDocument.dll
 %%DATADIR%%/System.Xml.XPath.XDocument.dll
+%%DATADIR%%/System.Xml.XPath.XmlDocument.dll
 %%DATADIR%%/System.Xml.XPath.dll
 %%DATADIR%%/System.Xml.XmlDocument.dll
 %%DATADIR%%/System.Xml.XmlSerializer.dll
 %%DATADIR%%/Upstart.config
 %%DATADIR%%/YamlDotNet.dll
-%%DATADIR%%/install_service_macos
 %%DATADIR%%/netstandard.dll
 %%DATADIR%%/web.config
