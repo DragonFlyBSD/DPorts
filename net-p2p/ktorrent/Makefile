@@ -4,13 +4,14 @@
 
 PORTNAME=	ktorrent
 DISTVERSION=	5.1.1
+PORTREVISION=	1
 CATEGORIES=	net-p2p kde
 MASTER_SITES=	KDE/stable/${PORTNAME}/${DISTVERSION}/
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	BitTorrent client for KDE
 
-USES=		cmake:outsource gettext kde:5 qt:5 tar:xz
+USES=		cmake gettext kde:5 qt:5 tar:xz
 
 LIB_DEPENDS=	libKF5Torrent.so:net-p2p/libktorrent \
 		libgcrypt.so:security/libgcrypt \
