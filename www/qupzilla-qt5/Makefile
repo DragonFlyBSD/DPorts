@@ -2,7 +2,7 @@
 
 PORTNAME=	qupzilla
 PORTVERSION=	1.8.9
-PORTREVISION=	4
+PORTREVISION=	6
 CATEGORIES=	www
 MASTER_SITES=	https://github.com/QupZilla/${PORTNAME}/releases/download/v${PORTVERSION}/
 PKGNAMESUFFIX=	-qt5
@@ -13,11 +13,11 @@ COMMENT=	Web browser based on WebKit engine and Qt Framework
 
 LICENSE=	GPLv3
 
-LIB_DEPENDS=	libhunspell-1.6.so:textproc/hunspell
+LIB_DEPENDS=	libhunspell-1.7.so:textproc/hunspell
 
 CONFLICTS_INSTALL=	${PORTNAME}-qt4*
 
-USES=		desktop-file-utils pkgconfig qmake qt:5 ssl tar:xz
+USES=		compiler:c++11-lang desktop-file-utils pkgconfig qmake qt:5 ssl tar:xz
 USE_QT=		core concurrent gui network printsupport script sql webkit \
 		widgets x11extras xml imageformats_run sql-sqlite3_run \
 		buildtools_build linguisttools_build
