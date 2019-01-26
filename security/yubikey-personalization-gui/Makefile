@@ -3,7 +3,7 @@
 PORTNAME=	yubikey-personalization-gui
 PORTVERSION=	3.1.25
 DISTVERSIONPREFIX=	${PORTNAME}-
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	security
 
 MAINTAINER=	romain@FreeBSD.org
@@ -15,7 +15,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 LIB_DEPENDS=	libykpers-1.so:security/ykpers \
 		libyubikey.so:security/libyubikey
 
-USES=		pkgconfig qmake
+USES=		compiler:c++11-lang pkgconfig qmake
 USE_GITHUB=	yes
 
 GH_ACCOUNT=	Yubico
@@ -34,6 +34,13 @@ PLIST_FILES=	bin/yubikey-personalization-gui \
 		share/applications/yubikey-personalization-gui.desktop \
 		share/pixmaps/yubikey-personalization-gui.png \
 		share/pixmaps/yubikey-personalization-gui.xpm
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MQT4}
+DEPRECATED=		Qt4 has been EOL since december 2015
+EXPIRATION_DATE=	2019-03-15
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/build/release/${PORTNAME} \
