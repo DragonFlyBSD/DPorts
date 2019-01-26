@@ -2,12 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	librenms
-PORTVERSION=	1.45
-PORTREVISION=	1
-# RELEASE_TIMESTAMP is used for a patch inside the vendor code
-# it represents the release date via: git show --pretty='%H|%ct' -s 1.42.01
-# It sits here so you remember to update it with each release
-RELEASE_TIMESTAMP=	1539772408
+PORTVERSION=	1.47
 PORTEPOCH=	1
 CATEGORIES=	net-mgmt
 MASTER_SITES=	LOCAL/dvl:vendor
@@ -18,8 +13,14 @@ COMMENT=	Autodiscovering PHP/MySQL/SNMP based network monitoring
 
 LICENSE=	GPLv3
 
-# perhaps we also need python-memcache python-mysqldb
+USES=		python${PY_MYSQL} shebangfix
 
+# RELEASE_TIMESTAMP is used for a patch inside the vendor code
+# it represents the release date via: git show --pretty='%H|%ct' -s 1.42.01
+# It sits here so you remember to update it with each release
+RELEASE_TIMESTAMP=	1546180156
+
+# perhaps we also need python-memcache python-mysqldb
 RUN_DEPENDS+=	rrdtool:databases/rrdtool \
 		dot:graphics/graphviz \
 		${LOCALBASE}/share/pear/Net/IPv4.php:net/pear-Net_IPv4@${PHP_FLAVOR} \
@@ -28,9 +29,7 @@ RUN_DEPENDS+=	rrdtool:databases/rrdtool \
 		bash:shells/bash \
 		sudo:security/sudo
 
-USES=		python${PY_MYSQL} shebangfix
-
-USE_PHP=	ctype curl filter gd hash json ldap mbstring mysqli openssl pdo pdo_mysql posix session simplexml snmp tokenizer xml zip
+USE_PHP=	ctype curl filter gd hash json ldap mbstring mysqli openssl pdo pdo_mysql phar posix session simplexml snmp tokenizer xml zip
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	librenms
@@ -72,8 +71,7 @@ SHEBANG_FILES=	scripts/auth_test.php scripts/deploy-docs.sh scripts/github-remov
 		scripts/Migration/XML_Conversion/convert.sh \
 		scripts/Migration/XML_Conversion/destwork.sh \
 		scripts/Migration/XML_Conversion/mkdir.sh \
-		scripts/removespikes.php scripts/agent-local/nfs-stats.sh \
-		scripts/removespikes.pl scripts/watchmaillog/watchmaillog.pl \
+		scripts/removespikes.pl scripts/removespikes.php scripts/watchmaillog/watchmaillog.pl \
 		poller.php poller-wrapper.py \
 		../${PORTNAME}-vendor-${PORTVERSION}/ezyang/htmlpurifier/maintenance/generate-includes.php \
 		../${PORTNAME}-vendor-${PORTVERSION}/ezyang/htmlpurifier/maintenance/flush-definition-cache.php \
@@ -128,16 +126,15 @@ NO_ARCH=	yes
 
 APACHEMOD_USES=		php:mod
 APACHEMOD_USES_OFF=	php:web
-APACHEMOD_USE=		USES=apache:run,22+
 
 post-patch:
-	${REINPLACE_CMD}    's|%%PORTNAME%%|${PORTNAME}|g'                   ${WRKSRC}/config.php.default
-	${REINPLACE_CMD}    's|%%WWW_USER%%|${WWW_USER}|g'                   ${WRKSRC}/config.php.default
-	${REINPLACE_CMD}    's|%%LOCALBASE%%|${LOCALBASE}|g'                 ${WRKSRC}/poller-wrapper.py ${WRKSRC}/poller.php
-	${REINPLACE_CMD}    's|%%PORTVERSION%%|${PORTVERSION}|g'             ${WRKSRC}/includes/common.php
-	${REINPLACE_CMD}    's|%%RELEASE_TIMESTAMP%%|${RELEASE_TIMESTAMP}|g' ${WRKSRC}/includes/common.php
-	${REINPLACE_CMD} -e 's|/opt/librenms|${WWWDIR}|'                     ${WRKSRC}/html/install.php
-	${RM} ${WRKSRC}/LibreNMS/Validations/Updates.php
+	@${REINPLACE_CMD}    's|%%PORTNAME%%|${PORTNAME}|g'                   ${WRKSRC}/config.php.default
+	@${REINPLACE_CMD}    's|%%WWW_USER%%|${WWW_USER}|g'                   ${WRKSRC}/config.php.default
+	@${REINPLACE_CMD}    's|%%LOCALBASE%%|${LOCALBASE}|g'                 ${WRKSRC}/poller-wrapper.py ${WRKSRC}/poller.php
+	@${REINPLACE_CMD}    's|%%PORTVERSION%%|${PORTVERSION}|g'             ${WRKSRC}/includes/common.php
+	@${REINPLACE_CMD}    's|%%RELEASE_TIMESTAMP%%|${RELEASE_TIMESTAMP}|g' ${WRKSRC}/includes/common.php
+	@${REINPLACE_CMD} -e 's|/opt/librenms|${WWWDIR}|'                     ${WRKSRC}/html/install.php
+	@${RM} ${WRKSRC}/LibreNMS/Validations/Updates.php
 
 do-install:
 	${MKDIR} ${STAGEDIR}/${WWWDIR}
@@ -157,6 +154,9 @@ do-install:
 # Ensure PHP and Python scripts are executable
 	${FIND} ${STAGEDIR}/${WWWDIR} -type f -name '*.py' -or -type f -name \
 	       '*.php' -exec ${CHMOD} +x {} \;
+# these values should be outside the www tree now
+	${MKDIR} ${STAGEDIR}/var/log/${PORTNAME}
+	${MKDIR} ${STAGEDIR}/var/db/${PORTNAME}
 
 do-install-DOCS-on:
 	${MKDIR} ${STAGEDIR}/${DOCSDIR}
@@ -170,10 +170,6 @@ do-install-EXAMPLES-on:
 .for f in ${PORTEXAMPLES}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${STAGEDIR}/${EXAMPLESDIR}
 .endfor
-
-# these values should be outside the www tree now
-	${MKDIR} ${STAGEDIR}/var/log/${PORTNAME}
-	${MKDIR} ${STAGEDIR}/var/db/${PORTNAME}
 
 post-install:
 	@${FIND} -s ${STAGEDIR}${WWWDIR} -type f '(' -name '*.orig' -or -name '*.bak' -or -name '.gitignore' ')' -delete
