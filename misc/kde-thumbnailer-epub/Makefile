@@ -3,6 +3,7 @@
 PORTNAME=	kde-thumbnailer-epub
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.1.9b
+PORTREVISION=	1
 CATEGORIES=	misc kde
 
 MAINTAINER=	makc@FreeBSD.org
@@ -11,7 +12,7 @@ COMMENT=	KDE thumbnail generator for ePub files
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		cmake:outsource kde:5 qt:5
+USES=		cmake compiler:c++11-lang kde:5 qt:5
 USE_KDE=	archive ecm_build kio
 USE_QT=		buildtools_build qmake_build gui xmlpatterns
 
