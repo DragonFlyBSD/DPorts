@@ -1,5 +1,6 @@
 # $FreeBSD$
 
+PORTREVISION=	1
 PKGNAMESUFFIX=	-qt5
 
 COMMENT=	Qt5 modules of uim input method
@@ -10,7 +11,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libuim.so:textproc/uim
 
-USES=		iconv libtool qt:5
+USES=		compiler:c++11-lang gl iconv libtool qt:5
 USE_GL=		gl
 USE_QT=		buildtools_build core gui qmake_build widgets x11extras
 
