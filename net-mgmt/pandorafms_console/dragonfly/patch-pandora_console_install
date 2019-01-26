@@ -1,0 +1,11 @@
+--- pandora_console_install.bak	2015-01-26 16:49:43.458535259 +0200
++++ pandora_console_install
+@@ -68,7 +68,7 @@ set_global_vars () {
+ 			;;
+ 		esac
+ 		;;
+-	FreeBSD)
++	FreeBSD|DragonFly)
+ 		DISTRO=FreeBSD
+ 		WWWUSER=www
+ 		WWWGROUP=www
