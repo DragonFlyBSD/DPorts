@@ -3,7 +3,7 @@
 
 PORTNAME=	kicad
 DISTVERSION=	r${GIT_SRC_DATE}
-PORTREVISION=	4
+PORTREVISION=	6
 CATEGORIES=	cad
 PKGNAMESUFFIX=	-devel
 DIST_SUBDIR=		${PORTNAME}
@@ -46,7 +46,7 @@ PLIST_SUB=	OPSYS=${OPSYS}	\
 BINS=		cvpcb eeschema gerbview kicad pcbnew
 EXTRAS2RM=	linux-non_unicode linux wings3d LINUX.README	\
 		contrib_makefiles.txt running_kicad_under_W98.txt
-USES=		desktop-file-utils shared-mime-info compiler:c++11-lib tar:bzip2 cmake:noninja \
+USES=		desktop-file-utils shared-mime-info compiler:c++11-lib tar:bzip2 cmake:insource,noninja \
 		gettext python:2.7 shebangfix ssl
 SHEBANG_FILES=	pcbnew/python/plugins/touch_slider_wizard.py
 
