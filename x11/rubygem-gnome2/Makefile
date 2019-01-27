@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome2
-PORTVERSION=	3.2.9
+PORTVERSION=	3.3.1
 CATEGORIES=	x11 gnome rubygems
 PKGNAMEPREFIX=	rubygem-
 
@@ -36,6 +36,5 @@ RUN_DEPENDS=	rubygem-atk>=${PORTVERSION}:accessibility/rubygem-atk \
 		rubygem-webkit-gtk2>=${PORTVERSION}:www/rubygem-webkit-gtk2
 
 USES=		metaport
-USE_RUBY=	yes
 
 .include <bsd.port.mk>
