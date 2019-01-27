@@ -3,6 +3,7 @@
 
 PORTNAME=	avogadro
 DISTVERSION=	1.2.0
+PORTREVISION=	2
 CATEGORIES=	science
 MASTER_SITES=	SF
 
@@ -11,6 +12,9 @@ COMMENT=	Advanced molecular editor and viewer
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
+
+DEPRECATED=		Qt4 has been EOL since december 2015
+EXPIRATION_DATE=	2019-03-15
 
 CONFLICTS_INSTALL=	libmsym
 
