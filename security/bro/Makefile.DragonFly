@@ -1,9 +1,0 @@
-USES:=		${USES:Nninja}
-CMAKE_ARGS:=	${CMAKE_ARGS:N-GNinja}
-
-# zrj: gcc5 w/ -pedantic doesn't pass while leaky clang++36 does
-# DebugCmdInfoConstants.cc:14:7: error: zero-size array 'names'
-CXXFLAGS:= ${CXXFLAGS:N-pedantic}
-
-# zrj: there are few things that need runtime dfly-patch:
-# but gives warnings on nested make[1]
