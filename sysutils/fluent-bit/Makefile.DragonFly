@@ -1,4 +1,0 @@
-# some truncation
-dfly-patch:
-	${REINPLACE_CMD} -e 's/-Werror //g'	\
-		${WRKSRC}/lib/msgpack-c-0b7cabd/CMakeLists.txt
