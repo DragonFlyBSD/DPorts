@@ -1,28 +1,25 @@
---- src/CMakeLists.txt.intermediate	2014-04-04 09:32:50.578351000 +0000
+--- src/CMakeLists.txt.intermediate	2019-01-28 15:23:07 UTC
 +++ src/CMakeLists.txt
-@@ -1287,11 +1287,7 @@ if (UNIX AND NOT APPLE)
+@@ -1364,11 +1364,7 @@ if (UNIX AND NOT APPLE)
+   # command but they're actually used by libraries that appear after them, so
    # they end up getting ignored.  This appends them to the very end of the link
    # line, ensuring they're always used.
-   find_package(X11)
--  if (${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
--    target_link_libraries(clementine_lib ${X11_X11_LIB})
+-  if (FREEBSD)
+     target_link_libraries(clementine_lib ${X11_X11_LIB})
 -  else ()
 -    target_link_libraries(clementine_lib ${X11_X11_LIB} ${CMAKE_DL_LIBS})
 -  endif ()
-+  target_link_libraries(clementine_lib ${X11_X11_LIB})
  endif ()
  
  add_dependencies(clementine_lib qtsingleapplication)
-@@ -1320,10 +1316,8 @@ add_executable(clementine
+@@ -1397,10 +1393,8 @@ add_executable(clementine
    main.cpp
  )
  
--if (${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
--  target_link_libraries(clementine execinfo)
--  set_target_properties(clementine PROPERTIES OUTPUT_NAME clementine-player)
--endif (${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
-+target_link_libraries(clementine execinfo)
-+set_target_properties(clementine PROPERTIES OUTPUT_NAME clementine-player)
+-if (FREEBSD)
+   target_link_libraries(clementine execinfo)
+   set_target_properties(clementine PROPERTIES OUTPUT_NAME clementine-player)
+-endif (FREEBSD)
  
  target_link_libraries(clementine
    clementine_lib
