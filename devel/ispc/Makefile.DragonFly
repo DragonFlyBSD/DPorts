@@ -1,7 +1,0 @@
-USES+=		ncurses
-CPPFLAGS+=	-I${NCURSESINC}
-LDFLAGS+=	-L${NCURSESLIB}
-
-dfly-patch:
-	${REINPLACE_CMD} -e 's|-lcurses|-L${PREFIX}/lib -lncurses|' \
-		${WRKSRC}/Makefile
