@@ -3,6 +3,7 @@
 
 PORTNAME=	smplayer
 DISTVERSION=	18.9.0
+PORTREVISION=	2
 CATEGORIES=	multimedia audio kde
 MASTER_SITES=	SF/${PORTNAME}/SMPlayer/${PORTVERSION}
 
@@ -62,6 +63,13 @@ THEMES_RUN_DEPENDS=	smplayer-themes>=0:multimedia/smplayer-themes
 PORTSCOUT=	site:http://sourceforge.net/projects/smplayer/files/Unstable/releases/
 
 SUB_FILES=	pkg-message
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MQT4}
+DEPRECATED=		Qt4 has been EOL since december 2015
+EXPIRATION_DATE=	2019-03-15
+.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|&& $$(QMAKE) $$(QMAKE_OPTS)||; \
