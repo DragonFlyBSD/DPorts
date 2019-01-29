@@ -1,4 +1,0 @@
-# [-Werror=class-memaccess] [-Werror=format-overflow=]
-dfly-patch:
-	${REINPLACE_CMD} -e 's/-Werror[[:>:]]//g'	\
-		${WRKSRC}/*/CMakeLists.txt
