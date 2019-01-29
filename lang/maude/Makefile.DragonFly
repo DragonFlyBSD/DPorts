@@ -1,2 +1,0 @@
-# metaMatch.cc:175:10: error: cannot convert 'bool' to 'MatchSearchState*' in return
-USE_CXXSTD=	c++98
