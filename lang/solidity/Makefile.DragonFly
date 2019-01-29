@@ -1,4 +1,0 @@
-# StandardCompiler.cpp:118:14: error: catching polymorphic type 'struct dev::BadHexCharacter' by value [-Werror=catch-value=]
-dfly-patch:
-	${REINPLACE_CMD} -e '/add_compile_options(-Werror)/d'	\
-		${WRKSRC}/cmake/EthCompilerSettings.cmake
