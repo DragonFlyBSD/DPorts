@@ -1,0 +1,4 @@
+dfly-patch:
+	${REINPLACE_CMD} -e 's| -Werror||g' \
+	${WRKSRC}/src/core/CMakeLists.txt \
+	${WRKSRC}/src/pyglue/CMakeLists.txt
