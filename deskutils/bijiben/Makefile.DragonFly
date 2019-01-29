@@ -1,0 +1,2 @@
+dfly-patch:
+	${CHMOD} ${BINMODE} ${WRKSRC}/build-aux/meson_post_install.py
