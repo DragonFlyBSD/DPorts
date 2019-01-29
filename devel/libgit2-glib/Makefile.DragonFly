@@ -1,0 +1,2 @@
+dfly-patch:
+	${CHMOD} ${BINMODE} ${WRKSRC}/meson_vapi_link.py
