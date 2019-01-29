@@ -1,13 +1,13 @@
 # zrj: add missing link against -lm in libHSdia-functions-*.so
 # NOTYPE  GLOBAL DEFAULT  UND sqrt
 # fixes www/hs-activehs (binutils 2.27 ld.gold is unhappy)
---- dia-functions.cabal.orig	2015-05-07 01:28:40.000000000 +0300
+--- dia-functions.cabal.orig	2019-01-29 03:54:34 UTC
 +++ dia-functions.cabal
 @@ -19,6 +19,7 @@ cabal-version:       >=1.2
  build-type:          Simple
  
  library
 +  extra-libraries: m
-   GHC-Options: -Wall -fwarn-tabs -fno-warn-unused-matches -fno-warn-name-shadowing 
+   GHC-Options: -Wall -fwarn-tabs -fno-warn-unused-matches -fno-warn-name-shadowing
  
    Exposed-Modules:
