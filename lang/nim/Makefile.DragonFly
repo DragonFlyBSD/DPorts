@@ -1,5 +1,0 @@
-
-# enforce gcc on myos=freebsd
-dfly-patch:
-	${REINPLACE_CMD} -e '/cc = clang/d' -e '/tlsEmulation:on/d'	\
-		${WRKSRC}/config/nim.cfg
