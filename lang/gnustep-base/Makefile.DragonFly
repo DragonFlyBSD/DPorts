@@ -1,0 +1,2 @@
+LDFLAGS+= -L${LOCALBASE}/lib ${ICONV_LIB}
+
