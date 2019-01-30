@@ -9,7 +9,7 @@ COMMENT=	Implementation of the Code Sourcery C++ ABI
 
 LICENSE=	BSD2CLAUSE
 
-USES=		cmake compiler:c++11-lang
+USES=		cmake:insource compiler:c++11-lang
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	pathscale
