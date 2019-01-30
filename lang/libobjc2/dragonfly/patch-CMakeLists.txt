@@ -1,0 +1,29 @@
+--- CMakeLists.txt.orig	2015-08-07 11:33:41 UTC
++++ CMakeLists.txt
+@@ -4,6 +4,8 @@ cmake_minimum_required(VERSION 2.8)
+ project(libobjc)
+ enable_language(ASM)
+ 
++INCLUDE (CheckCXXSourceCompiles)
++
+ set(CMAKE_C_FLAGS_DEBUG "-g -O0 -fno-inline ${CMAKE_C_FLAGS_DEBUG}")
+ set(CMAKE_C_FLAGS_RELEASE "-O3 ${CMAKE_C_FLAGS_RELEASE}")
+ set(CMAKE_C_FLAGS "-std=gnu99 ${CMAKE_C_FLAGS}")
+@@ -370,3 +372,17 @@ if (TESTS)
+ 	add_subdirectory(Test)
+ endif (TESTS)
+ 
++CHECK_CXX_SOURCE_COMPILES("
++	#include <stdlib.h>
++	extern \"C\" {
++	__attribute__((weak))
++	void *__cxa_allocate_exception(size_t thrown_size) noexcept;
++	}
++	#include <exception>
++	int main() { return 0; }" CXA_ALLOCATE_EXCEPTION_NOEXCEPT_COMPILES)
++
++if (CXA_ALLOCATE_EXCEPTION_NOEXCEPT_COMPILES)
++	add_definitions(-DCXA_ALLOCATE_EXCEPTION_SPECIFIER=noexcept)
++else ()
++	add_definitions(-DCXA_ALLOCATE_EXCEPTION_SPECIFIER=)
++endif ()
