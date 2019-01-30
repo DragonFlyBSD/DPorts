@@ -1,0 +1,14 @@
+# zrj: add missing link against -lm in libGorm.so
+# NOTYPE  GLOBAL DEFAULT  UND ceilf
+# fixes x11/gnustep-app (binutils 2.27 ld.gold is unhappy)
+--- GormLib/GNUmakefile.orig	2008-12-19 15:09:11.000000000 +0200
++++ GormLib/GNUmakefile
+@@ -84,6 +84,8 @@ IBResourceManager.m
+ 
+ libGorm_C_FILES= 
+ 
++SHARED_LD_POSTFLAGS += -lm
++
+ HEADERS_INSTALL = $(libGorm_HEADER_FILES)
+ 
+ -include GNUmakefile.preamble
