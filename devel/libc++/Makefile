@@ -17,7 +17,7 @@ LICENSE_GROUP=	MIT UIUC
 LICENSE_NAME_UIUC=	University of Illinois/NCSA Open Source License
 LICENSE_PERMS_UIUC=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
-USES+=		cmake:outsource compiler:c++11-lang
+USES+=		cmake compiler:c++11-lang
 USE_LDCONFIG=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib
 
