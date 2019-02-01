@@ -1,0 +1,12 @@
+--- src/qt/qtbase/configure~	2019-01-14 02:03:41.521430000 +0100
++++ src/qt/qtbase/configure	2019-01-14 02:04:09.391581000 +0100
+@@ -2792,6 +2792,9 @@ if [ -z "$PLATFORM" ]; then
+      ULTRIX:*)
+         PLATFORM=ultrix-g++
+         ;;
++     DragonFly:*)
++        PLATFORM=freebsd-g++
++        ;;
+ #     FreeBSD:10.[0-9]*)
+ #        echo "=== ($UNAME_RELEASE) ==="
+ #        PLATFORM=freebsd-clang
