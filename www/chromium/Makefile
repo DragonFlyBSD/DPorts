@@ -204,7 +204,7 @@ TEST_DISTFILES=		${PORTNAME}-${DISTVERSION}-testdata${EXTRACT_SUFX} \
 
 .include <bsd.port.options.mk>
 
-BUILD_DEPENDS+= ${LOCALBASE}/lib/c++/libstdc++.so:devel/libc++
+LIB_DEPENDS+=	libc++.so.1:devel/libc++
 BUILD_DEPENDS+=	clang60:devel/llvm60
 CC=             clang60
 CXX=            clang++60
