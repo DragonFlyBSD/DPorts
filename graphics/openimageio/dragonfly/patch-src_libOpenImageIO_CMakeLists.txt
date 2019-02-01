@@ -1,0 +1,11 @@
+--- src/libOpenImageIO/CMakeLists.txt.orig	2019-01-31 17:34:15.648052000 +0000
++++ src/libOpenImageIO/CMakeLists.txt	2019-01-31 17:34:21.747786000 +0000
+@@ -171,7 +171,7 @@
+ endif ()
+ 
+ if (CMAKE_COMPILER_IS_GNUCXX AND NOT CMAKE_CXX_COMPILER_VERSION VERSION_LESS 4.8)
+-    target_link_libraries (OpenImageIO atomic)
++    target_link_libraries (OpenImageIO)
+ endif ()
+ 
+ target_link_libraries (OpenImageIO ${ILMBASE_LIBRARIES})
