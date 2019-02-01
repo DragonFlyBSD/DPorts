@@ -1,0 +1,11 @@
+--- src/third_party/IntelRDFPMathLib20U1/SConscript.orig	2019-01-31 20:25:54 UTC
++++ src/third_party/IntelRDFPMathLib20U1/SConscript
+@@ -291,7 +291,7 @@ if env.TargetOSIs('linux') or env.Target
+     cpp_defines['linux'] = '1'
+     libs.append('m')
+ 
+-if env.TargetOSIs('freebsd') or env.TargetOSIs('openbsd'):
++if env.TargetOSIs('freebsd', 'dragonfly') or env.TargetOSIs('openbsd'):
+     cpp_defines['LINUX'] = '1'
+     cpp_defines['freebsd'] = '1'
+     libs.append('m')

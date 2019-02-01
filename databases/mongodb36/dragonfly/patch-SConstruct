@@ -1,0 +1,75 @@
+--- SConstruct.orig	2019-01-31 18:30:02 UTC
++++ SConstruct
+@@ -1030,6 +1030,7 @@ def CheckForProcessor(context, which_arc
+ os_macros = {
+     "windows": "defined(_WIN32)",
+     "solaris": "defined(__sun)",
++    "dragonfly": "defined(__DragonFly__)",
+     "freebsd": "defined(__FreeBSD__)",
+     "openbsd": "defined(__OpenBSD__)",
+     "iOS": "defined(__APPLE__) && TARGET_OS_IOS && !TARGET_OS_SIMULATOR",
+@@ -1150,7 +1151,7 @@ if not env['HOST_ARCH']:
+ # In some places we have POSIX vs Windows cpp files, and so there's an additional
+ # env variable to interpolate their names in child sconscripts
+ 
+-env['TARGET_OS_FAMILY'] = 'posix' if env.TargetOSIs('posix') else env.GetTargetOSName()
++env['TARGET_OS_FAMILY'] = 'posix' if env.TargetOSIs('posix', 'dragonfly') else env.GetTargetOSName()
+ 
+ # Currently we only use tcmalloc on windows and linux x86_64. Other
+ # linux targets (power, s390x, arm) do not currently support tcmalloc.
+@@ -1397,7 +1398,7 @@ if env['_LIBDEPS'] == '$_LIBDEPS_LIBS':
+     if not env.TargetOSIs('solaris', 'darwin', 'windows', 'openbsd'):
+         env.Tool('thin_archive')
+ 
+-if env.TargetOSIs('linux', 'freebsd', 'openbsd'):
++if env.TargetOSIs('linux', 'freebsd', 'openbsd', 'dragonfly'):
+     env['LINK_LIBGROUP_START'] = '-Wl,--start-group'
+     env['LINK_LIBGROUP_END'] = '-Wl,--end-group'
+     # NOTE: The leading and trailing spaces here are important. Do not remove them.
+@@ -1431,8 +1432,8 @@ if env.TargetOSIs('linux'):
+ elif env.TargetOSIs('solaris'):
+      env.Append( LIBS=["socket","resolv","lgrp"] )
+ 
+-elif env.TargetOSIs('freebsd'):
+-    env.Append( LIBS=[ "kvm" ] )
++elif env.TargetOSIs('freebsd', 'dragonfly'):
++    env.Append( LIBS=[ "kvm", "pthread" ] )
+     env.Append( CCFLAGS=[ "-fno-omit-frame-pointer" ] )
+ 
+ elif env.TargetOSIs('darwin'):
+@@ -1634,7 +1635,7 @@ if env.TargetOSIs('posix'):
+                          "-Wno-unknown-pragmas",
+                          "-Winvalid-pch"] )
+     # env.Append( " -Wconversion" ) TODO: this doesn't really work yet
+-    if env.TargetOSIs('linux', 'darwin', 'solaris', 'freebsd'):
++    if env.TargetOSIs('linux', 'darwin', 'solaris', 'freebsd', 'dragonfly'):
+         if not has_option("disable-warnings-as-errors"):
+             env.Append( CCFLAGS=["-Werror"] )
+ 
+@@ -2244,7 +2245,7 @@ def doConfigure(myenv):
+     if usingLibStdCxx:
+         def CheckModernLibStdCxx(context):
+             test_body = """
+-            #if !__has_include(<experimental/filesystem>)
++            #if !__has_include(<filesystem>)
+             #error "libstdc++ from GCC 5.3.0 or newer is required"
+             #endif
+             """
+@@ -2701,7 +2702,7 @@ def doConfigure(myenv):
+         sslLibName = "ssl"
+         cryptoLibName = "crypto"
+         sslLinkDependencies = ["crypto", "dl"]
+-        if conf.env.TargetOSIs('freebsd'):
++        if conf.env.TargetOSIs('freebsd', 'dragonfly'):
+             sslLinkDependencies = ["crypto"]
+         if conf.env.TargetOSIs('windows'):
+             sslLibName = "ssleay32"
+@@ -2939,7 +2940,7 @@ def doConfigure(myenv):
+         myenv.ConfError("Couldn't find SASL header/libraries")
+ 
+     # requires ports devel/libexecinfo to be installed
+-    if env.TargetOSIs('freebsd', 'openbsd'):
++    if env.TargetOSIs('freebsd', 'openbsd', 'dragonfly'):
+         if not conf.CheckLib("execinfo"):
+             myenv.ConfError("Cannot find libexecinfo, please install devel/libexecinfo.")
+ 

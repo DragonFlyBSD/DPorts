@@ -1,0 +1,11 @@
+--- src/third_party/wiredtiger/SConscript.orig	2019-01-31 18:37:58 UTC
++++ src/third_party/wiredtiger/SConscript
+@@ -60,6 +60,8 @@ elif env.TargetOSIs('solaris'):
+     env.Append(CPPDEFINES=["__EXTENSIONS__"])
+ elif env.TargetOSIs('freebsd'):
+     env.Append(CPPPATH=["build_freebsd"])
++elif env.TargetOSIs('dragonfly'):
++    env.Append(CPPPATH=["build_dragonfly"])
+ elif env.TargetOSIs('openbsd'):
+     env.Append(CPPPATH=["build_openbsd"])
+ elif env.TargetOSIs('linux'):
