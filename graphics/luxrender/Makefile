@@ -20,7 +20,7 @@ LIB_DEPENDS=	${PY_BOOST} \
 		libfftw3.so:math/fftw3 \
 		libOpenImageIO.so:graphics/openimageio
 .if ${DISTVERSION} != 1.4
-LIB_DEPENDS+=	libembree.so:graphics/embree
+# LIB_DEPENDS+=	libembree.so:graphics/embree
 .endif
 
 CONFLICTS_INSTALL?=	${PORTNAME}14-1.4*
