@@ -1,0 +1,19 @@
+dfly-patch:
+	${REINPLACE_CMD} -e 's|__FreeBSD__|__DragonFly__|' \
+		${WRKSRC}/openfx/Support/Library/ofxsImageEffect.cpp \
+		${WRKSRC}/openfx/Examples/OpenGL/opengl.cpp \
+		${WRKSRC}/openfx/Examples/DepthConverter/depthConverter.cpp \
+		${WRKSRC}/openfx/Examples/Rectangle/rectangle.cpp \
+		${WRKSRC}/openfx/Examples/Basic/basic.cpp \
+		${WRKSRC}/openfx/Examples/Custom/custom.cpp \
+		${WRKSRC}/openfx/Examples/Invert/invert.cpp \
+		${WRKSRC}/openfx/Examples/Overlay/overlay.cpp \
+		${WRKSRC}/openfx/Examples/Test/testProperties.cpp \
+		${WRKSRC}/openfx/HostSupport/src/ofxhPluginCache.cpp \
+		${WRKSRC}/openfx/HostSupport/include/ofxhBinary.h \
+		${WRKSRC}/openfx/Documentation/sources/Guide/Code/Example2/invert.cpp \
+		${WRKSRC}/openfx/Documentation/sources/Guide/Code/Example1/basics.cpp \
+		${WRKSRC}/openfx/Documentation/sources/Guide/Code/Example5/circle.cpp \
+		${WRKSRC}/openfx/Documentation/sources/Guide/Code/Example4/saturation.cpp \
+		${WRKSRC}/openfx/Documentation/sources/Guide/Code/Example3/gain.cpp \
+		${WRKSRC}/openfx/Support/Library/ofxsImageEffect.cpp

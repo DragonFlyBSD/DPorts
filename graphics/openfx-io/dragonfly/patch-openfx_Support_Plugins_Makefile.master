@@ -1,0 +1,20 @@
+--- openfx/Support/Plugins/Makefile.master.orig	2019-02-02 12:46:34.839598000 +0000
++++ openfx/Support/Plugins/Makefile.master	2019-02-02 12:47:14.027858000 +0000
+@@ -57,7 +57,7 @@
+ ifeq ($(OS),Linux)
+   PLUGINPATH=/usr/local/OFX/Plugins
+ endif
+-ifeq ($(OS),FreeBSD)
++ifeq ($(OS),$(filter $(OS),FreeBSD DragonFly))
+   PLUGINPATH=/usr/OFX/Plugins
+ endif
+ ifeq ($(OS),Darwin)
+@@ -133,7 +133,7 @@
+     endif
+     LINKFLAGS := $(LINKFLAGS) $(BITSFLAG)
+   endif
+-  ifeq ($(OS),FreeBSD)
++  ifeq ($(OS),$(filter $(OS),FreeBSD DragonFly))
+     LINKFLAGS = -L/usr/local/lib -shared -fvisibility=hidden -Xlinker --version-script=$(PATHTOROOT)/include/linuxSymbols -lGL -Wl,-rpath,'$$ORIGIN'/../../Libraries
+     ARCH= FreeBSD-x86
+     BITSFLAG = -m32 -fPIC

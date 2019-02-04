@@ -1,0 +1,38 @@
+--- IO/Makefile.orig	2019-02-02 12:30:33 UTC
++++ IO/Makefile
+@@ -31,7 +31,7 @@ OCIOLookTransform.o \
+ 
+ OCIO_OPENGL_OBJS = GenericOCIOOpenGL.o glad.o ofxsOGLUtilities.o
+ 
+-ifeq ($(OS),$(filter $(OS),Linux FreeBSD Darwin))
++ifeq ($(OS),$(filter $(OS),Linux FreeBSD Darwin DragonFly))
+     PLUGINOBJECTS += RunScript.o
+ endif
+ 
+@@ -72,7 +72,7 @@ $(TOP_SRCDIR)/PNG/fr.inria.openfx.ReadPN
+ $(TOP_SRCDIR)/PNG/fr.inria.openfx.WritePNG.png \
+ $(TOP_SRCDIR)/PNG/fr.inria.openfx.WritePNG.svg
+ 
+-ifeq ($(OS),$(filter $(OS),Linux FreeBSD Darwin))
++ifeq ($(OS),$(filter $(OS),Linux FreeBSD Darwin DragonFly))
+ RESOURCES += ../RunScript/fr.inria.openfx.RunScript.png \
+              ../RunScript/fr.inria.openfx.RunScript.svg 
+ endif
+@@ -87,7 +87,7 @@ $(TOP_SRCDIR)/PNG \
+ $(TOP_SRCDIR)/SeExpr \
+ $(TOP_SRCDIR)/IOSupport/SequenceParsing
+ 
+-ifeq ($(OS),$(filter $(OS),Linux FreeBSD Darwin))
++ifeq ($(OS),$(filter $(OS),Linux FreeBSD Darwin DragonFly))
+ VPATH += $(TOP_SRCDIR)/RunScript
+ endif
+ 
+@@ -95,7 +95,7 @@ include $(TOP_SRCDIR)/Makefile.master
+ 
+ CXXFLAGS += -I$(TOP_SRCDIR)/EXR -I$(TOP_SRCDIR)/FFmpeg -I$(TOP_SRCDIR)/OIIO -I$(TOP_SRCDIR)/PFM -I$(TOP_SRCDIR)/OCIO -I$(TOP_SRCDIR)/SeExpr -I$(TOP_SRCDIR)/PNG
+ 
+-ifeq ($(OS),$(filter $(OS),Linux FreeBSD Darwin))
++ifeq ($(OS),$(filter $(OS),Linux FreeBSD Darwin DragonFly))
+ CXXFLAGS += -I$(TOP_SRCDIR)/RunScript
+ endif
+ 

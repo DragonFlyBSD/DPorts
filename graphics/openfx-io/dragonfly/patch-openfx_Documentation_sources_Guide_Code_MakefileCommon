@@ -1,0 +1,15 @@
+--- openfx/Documentation/sources/Guide/Code/MakefileCommon.orig	2019-02-02 12:37:43 UTC
++++ openfx/Documentation/sources/Guide/Code/MakefileCommon
+@@ -22,6 +22,12 @@ ifeq ($(UNAME), FreeBSD)
+   OS_BUNDLE_DIR = FreeBSD-x86-64
+ endif
+ 
++ifeq ($(UNAME), DragonFly)
++  OS_CXXFLAGS = -fPIC -fvisibility=hidden
++  OS_LDFLAGS = -shared -fvisibility=hidden
++  OS_BUNDLE_DIR = FreeBSD-x86-64
++endif
++
+ # set up C++ flags
+ CXXFLAGS = $(OFX_INC_DIR) $(OPTIMISE) $(OS_CXXFLAGS)
+ 
