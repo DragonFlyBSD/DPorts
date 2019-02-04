@@ -1,0 +1,526 @@
+diff -ruNp project/cmake/scripts.orig/dragonfly/ArchSetup.cmake project/cmake/scripts/dragonfly/ArchSetup.cmake
+--- project/cmake/scripts.orig/dragonfly/ArchSetup.cmake	1970-01-01 01:00:00.000000000 +0100
++++ project/cmake/scripts/dragonfly/ArchSetup.cmake	2018-08-04 13:36:43.766461000 +0200
+@@ -0,0 +1,14 @@
++set(ARCH_DEFINES -D_LINUX -DTARGET_POSIX -DTARGET_DRAGONFLY)
++set(SYSTEM_DEFINES -D__STDC_CONSTANT_MACROS -D_FILE_DEFINED
++                   -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64)
++set(PLATFORM_DIR linux)
++set(SYSTEM_LDFLAGS -L/usr/local/lib)
++if(WITH_ARCH)
++  set(ARCH ${WITH_ARCH})
++else()
++  if(CMAKE_SYSTEM_PROCESSOR STREQUAL x86_64)
++    set(ARCH x86_64-dragonfly)
++  else()
++    message(WARNING "unknown CPU: ${CPU}")
++  endif()
++endif()
+diff -ruNp project/cmake/scripts.orig/dragonfly/Install.cmake project/cmake/scripts/dragonfly/Install.cmake
+--- project/cmake/scripts.orig/dragonfly/Install.cmake	1970-01-01 01:00:00.000000000 +0100
++++ project/cmake/scripts/dragonfly/Install.cmake	2017-11-14 17:55:01.000000000 +0100
+@@ -0,0 +1,361 @@
++if(X_FOUND)
++  set(USE_X11 1)
++else()
++  set(USE_X11 0)
++endif()
++if(OPENGL_FOUND)
++  set(USE_OPENGL 1)
++else()
++  set(USE_OPENGL 0)
++endif()
++if(OPENGLES_FOUND)
++  set(USE_OPENGLES 1)
++else()
++  set(USE_OPENGLES 0)
++endif()
++
++# CMake config
++set(APP_PREFIX ${prefix})
++set(APP_LIB_DIR ${libdir}/${APP_NAME_LC})
++set(APP_DATA_DIR ${datarootdir}/${APP_NAME_LC})
++set(APP_INCLUDE_DIR ${includedir}/${APP_NAME_LC})
++set(CXX11_SWITCH "-std=c++11")
++
++# Set XBMC_STANDALONE_SH_PULSE so we can insert PulseAudio block into kodi-standalone
++if(EXISTS ${CORE_SOURCE_DIR}/tools/Linux/kodi-standalone.sh.pulse)
++  if(ENABLE_PULSEAUDIO AND PULSEAUDIO_FOUND)
++    file(READ "${CORE_SOURCE_DIR}/tools/Linux/kodi-standalone.sh.pulse" pulse_content)
++    set(XBMC_STANDALONE_SH_PULSE ${pulse_content})
++  endif()
++endif()
++
++# Configure startup scripts
++configure_file(${CORE_SOURCE_DIR}/tools/Linux/kodi.sh.in
++               ${CORE_BUILD_DIR}/scripts/${APP_NAME_LC} @ONLY)
++configure_file(${CORE_SOURCE_DIR}/tools/Linux/kodi-standalone.sh.in
++               ${CORE_BUILD_DIR}/scripts/${APP_NAME_LC}-standalone @ONLY)
++
++# Configure cmake files
++configure_file(${PROJECT_SOURCE_DIR}/KodiConfig.cmake.in
++               ${CORE_BUILD_DIR}/scripts/${APP_NAME}Config.cmake @ONLY)
++
++# Configure xsession entry
++configure_file(${CORE_SOURCE_DIR}/tools/Linux/kodi-xsession.desktop.in
++               ${CORE_BUILD_DIR}/${APP_NAME_LC}-xsession.desktop @ONLY)
++
++# Configure desktop entry
++configure_file(${CORE_SOURCE_DIR}/tools/Linux/kodi.desktop.in
++               ${CORE_BUILD_DIR}/${APP_NAME_LC}.desktop @ONLY)
++
++# Install app
++install(TARGETS ${APP_NAME_LC}
++        DESTINATION ${libdir}/${APP_NAME_LC}
++        COMPONENT kodi-bin)
++if(ENABLE_X11 AND XRANDR_FOUND)
++  install(TARGETS ${APP_NAME_LC}-xrandr
++          DESTINATION ${libdir}/${APP_NAME_LC}
++          COMPONENT kodi-bin)
++endif()
++
++# Install scripts
++install(PROGRAMS ${CMAKE_BINARY_DIR}/${CORE_BUILD_DIR}/scripts/${APP_NAME_LC}
++                 ${CMAKE_BINARY_DIR}/${CORE_BUILD_DIR}/scripts/${APP_NAME_LC}-standalone
++        DESTINATION ${bindir}
++        COMPONENT kodi-bin)
++
++# Install libraries
++foreach(library ${LIBRARY_FILES})
++  get_filename_component(dir ${library} DIRECTORY)
++  string(REPLACE "${CMAKE_BINARY_DIR}/" "" dir ${dir})
++  install(PROGRAMS ${library}
++          DESTINATION ${libdir}/${APP_NAME_LC}/${dir}
++          COMPONENT kodi-bin)
++endforeach()
++
++# Install add-ons, fonts, icons, keyboard maps, keymaps, etc
++# (addons, media, system, userdata folders in share/kodi/)
++foreach(file ${install_data})
++  get_filename_component(dir ${file} DIRECTORY)
++  install(FILES ${CMAKE_BINARY_DIR}/${file}
++          DESTINATION ${datarootdir}/${APP_NAME_LC}/${dir}
++          COMPONENT kodi)
++endforeach()
++
++# Install xsession entry
++install(FILES ${CMAKE_BINARY_DIR}/${CORE_BUILD_DIR}/${APP_NAME_LC}-xsession.desktop
++        RENAME ${APP_NAME_LC}.desktop
++        DESTINATION ${datarootdir}/xsessions
++        COMPONENT kodi)
++
++# Install desktop entry
++install(FILES ${CMAKE_BINARY_DIR}/${CORE_BUILD_DIR}/${APP_NAME_LC}.desktop
++        DESTINATION ${datarootdir}/applications
++        COMPONENT kodi)
++
++# Install icons
++install(FILES ${CORE_SOURCE_DIR}/tools/Linux/packaging/media/icon16x16.png
++        RENAME ${APP_NAME_LC}.png
++        DESTINATION ${datarootdir}/icons/hicolor/16x16/apps
++        COMPONENT kodi)
++install(FILES ${CORE_SOURCE_DIR}/tools/Linux/packaging/media/icon22x22.png
++        RENAME ${APP_NAME_LC}.png
++        DESTINATION ${datarootdir}/icons/hicolor/22x22/apps
++        COMPONENT kodi)
++install(FILES ${CORE_SOURCE_DIR}/tools/Linux/packaging/media/icon24x24.png
++        RENAME ${APP_NAME_LC}.png
++        DESTINATION ${datarootdir}/icons/hicolor/24x24/apps
++        COMPONENT kodi)
++install(FILES ${CORE_SOURCE_DIR}/tools/Linux/packaging/media/icon32x32.png
++        RENAME ${APP_NAME_LC}.png
++        DESTINATION ${datarootdir}/icons/hicolor/32x32/apps
++        COMPONENT kodi)
++install(FILES ${CORE_SOURCE_DIR}/tools/Linux/packaging/media/icon48x48.png
++        RENAME ${APP_NAME_LC}.png
++        DESTINATION ${datarootdir}/icons/hicolor/48x48/apps
++        COMPONENT kodi)
++install(FILES ${CORE_SOURCE_DIR}/tools/Linux/packaging/media/icon64x64.png
++        RENAME ${APP_NAME_LC}.png
++        DESTINATION ${datarootdir}/icons/hicolor/64x64/apps
++        COMPONENT kodi)
++install(FILES ${CORE_SOURCE_DIR}/tools/Linux/packaging/media/icon128x128.png
++        RENAME ${APP_NAME_LC}.png
++        DESTINATION ${datarootdir}/icons/hicolor/128x128/apps
++        COMPONENT kodi)
++install(FILES ${CORE_SOURCE_DIR}/tools/Linux/packaging/media/icon256x256.png
++        RENAME ${APP_NAME_LC}.png
++        DESTINATION ${datarootdir}/icons/hicolor/256x256/apps
++        COMPONENT kodi)
++
++# Install docs
++install(FILES ${CORE_SOURCE_DIR}/copying.txt
++              ${CORE_SOURCE_DIR}/LICENSE.GPL
++              ${CORE_SOURCE_DIR}/version.txt
++              ${CORE_SOURCE_DIR}/docs/README.linux
++        DESTINATION ${docdir}
++        COMPONENT kodi)
++
++install(FILES ${CORE_SOURCE_DIR}/privacy-policy.txt
++        DESTINATION ${datarootdir}/${APP_NAME_LC}
++        COMPONENT kodi)
++
++# Install kodi-tools-texturepacker
++if(NOT WITH_TEXTUREPACKER)
++  install(PROGRAMS $<TARGET_FILE:TexturePacker::TexturePacker>
++          DESTINATION ${bindir}
++          COMPONENT kodi-tools-texturepacker)
++endif()
++
++# Install kodi-addon-dev headers
++install(FILES ${CORE_SOURCE_DIR}/xbmc/addons/kodi-addon-dev-kit/include/kodi/kodi_vfs_types.h
++              ${CORE_SOURCE_DIR}/xbmc/addons/kodi-addon-dev-kit/include/kodi/kodi_vfs_utils.hpp
++              ${CORE_SOURCE_DIR}/xbmc/addons/kodi-addon-dev-kit/include/kodi/libKODI_adsp.h
++              ${CORE_SOURCE_DIR}/xbmc/addons/kodi-addon-dev-kit/include/kodi/libKODI_audioengine.h
++              ${CORE_SOURCE_DIR}/xbmc/addons/kodi-addon-dev-kit/include/kodi/libKODI_guilib.h
++              ${CORE_SOURCE_DIR}/xbmc/addons/kodi-addon-dev-kit/include/kodi/libKODI_inputstream.h
++              ${CORE_SOURCE_DIR}/xbmc/addons/kodi-addon-dev-kit/include/kodi/libKODI_peripheral.h
++              ${CORE_SOURCE_DIR}/xbmc/addons/kodi-addon-dev-kit/include/kodi/libXBMC_addon.h
++              ${CORE_SOURCE_DIR}/xbmc/addons/kodi-addon-dev-kit/include/kodi/libXBMC_codec.h
++              ${CORE_SOURCE_DIR}/xbmc/addons/kodi-addon-dev-kit/include/kodi/libXBMC_pvr.h
++              ${CORE_SOURCE_DIR}/xbmc/addons/kodi-addon-dev-kit/include/kodi/xbmc_addon_cpp_dll.h
++              ${CORE_SOURCE_DIR}/xbmc/addons/kodi-addon-dev-kit/include/kodi/xbmc_addon_dll.h
++              ${CORE_SOURCE_DIR}/xbmc/addons/kodi-addon-dev-kit/include/kodi/xbmc_addon_types.h
++              ${CORE_SOURCE_DIR}/xbmc/addons/kodi-addon-dev-kit/include/kodi/xbmc_codec_types.h
++              ${CORE_SOURCE_DIR}/xbmc/cores/VideoPlayer/DVDDemuxers/DVDDemuxPacket.h
++              ${CORE_SOURCE_DIR}/xbmc/filesystem/IFileTypes.h
++        DESTINATION ${includedir}/${APP_NAME_LC}
++        COMPONENT kodi-addon-dev)
++
++# Install kodi-addon-dev add-on bindings
++install(FILES ${CMAKE_BINARY_DIR}/${CORE_BUILD_DIR}/scripts/${APP_NAME}Config.cmake
++              ${CORE_SOURCE_DIR}/project/cmake/scripts/common/AddonHelpers.cmake
++              ${CORE_SOURCE_DIR}/project/cmake/scripts/common/AddOptions.cmake
++              ${CORE_SOURCE_DIR}/project/cmake/scripts/common/ArchSetup.cmake
++              ${CORE_SOURCE_DIR}/project/cmake/scripts/common/CheckCommits.cmake
++              ${CORE_SOURCE_DIR}/project/cmake/scripts/common/CheckTargetPlatform.cmake
++              ${CORE_SOURCE_DIR}/project/cmake/scripts/common/GenerateVersionedFiles.cmake
++              ${CORE_SOURCE_DIR}/project/cmake/scripts/common/GeneratorSetup.cmake
++              ${CORE_SOURCE_DIR}/project/cmake/scripts/common/HandleDepends.cmake
++              ${CORE_SOURCE_DIR}/project/cmake/scripts/common/Macros.cmake
++              ${CORE_SOURCE_DIR}/project/cmake/scripts/common/PrepareEnv.cmake
++              ${CORE_SOURCE_DIR}/project/cmake/scripts/common/ProjectMacros.cmake
++              ${CORE_SOURCE_DIR}/project/cmake/scripts/linux/PathSetup.cmake
++        DESTINATION ${datarootdir}/${APP_NAME_LC}/cmake
++        COMPONENT kodi-addon-dev)
++
++# Install kodi-audio-dev
++install(FILES ${CORE_SOURCE_DIR}/xbmc/cores/AudioEngine/Utils/AEChannelData.h
++              ${CORE_SOURCE_DIR}/xbmc/addons/kodi-addon-dev-kit/include/kodi/kodi_adsp_dll.h
++              ${CORE_SOURCE_DIR}/xbmc/addons/kodi-addon-dev-kit/include/kodi/kodi_adsp_types.h
++              ${CORE_SOURCE_DIR}/xbmc/addons/kodi-addon-dev-kit/include/kodi/kodi_audiodec_dll.h
++              ${CORE_SOURCE_DIR}/xbmc/addons/kodi-addon-dev-kit/include/kodi/kodi_audiodec_types.h
++              ${CORE_SOURCE_DIR}/xbmc/addons/kodi-addon-dev-kit/include/kodi/xbmc_audioenc_dll.h
++              ${CORE_SOURCE_DIR}/xbmc/addons/kodi-addon-dev-kit/include/kodi/xbmc_audioenc_types.h
++              ${CORE_SOURCE_DIR}/xbmc/addons/kodi-addon-dev-kit/include/kodi/kodi_audioengine_types.h
++        DESTINATION ${includedir}/${APP_NAME_LC}
++        COMPONENT kodi-audio-dev)
++
++if(ENABLE_EVENTCLIENTS)
++  # Install kodi-eventclients-common BT python files
++  install(PROGRAMS ${CORE_SOURCE_DIR}/tools/EventClients/lib/python/bt/__init__.py
++                   ${CORE_SOURCE_DIR}/tools/EventClients/lib/python/bt/bt.py
++                   ${CORE_SOURCE_DIR}/tools/EventClients/lib/python/bt/hid.py
++          DESTINATION lib/python2.7/dist-packages/${APP_NAME_LC}/bt
++          COMPONENT kodi-eventclients-common)
++
++  # Install kodi-eventclients-common PS3 python files
++  install(PROGRAMS ${CORE_SOURCE_DIR}/tools/EventClients/lib/python/ps3/__init__.py
++                   ${CORE_SOURCE_DIR}/tools/EventClients/lib/python/ps3/keymaps.py
++                   ${CORE_SOURCE_DIR}/tools/EventClients/lib/python/ps3/sixaxis.py
++                   ${CORE_SOURCE_DIR}/tools/EventClients/lib/python/ps3/sixpair.py
++                   ${CORE_SOURCE_DIR}/tools/EventClients/lib/python/ps3/sixwatch.py
++          DESTINATION lib/python2.7/dist-packages/${APP_NAME_LC}/ps3
++          COMPONENT kodi-eventclients-common)
++
++  # Install kodi-eventclients-common python files
++  file(WRITE ${CMAKE_BINARY_DIR}/packages/deb/defs.py ICON_PATH="usr/share/pixmaps/${APP_NAME_LC}/")
++  install(PROGRAMS ${CMAKE_BINARY_DIR}/packages/deb/defs.py
++                   ${CORE_SOURCE_DIR}/tools/EventClients/lib/python/__init__.py
++                   "${CORE_SOURCE_DIR}/tools/EventClients/Clients/PS3 BD Remote/ps3_remote.py"
++                   ${CORE_SOURCE_DIR}/tools/EventClients/lib/python/xbmcclient.py
++                   ${CORE_SOURCE_DIR}/tools/EventClients/lib/python/zeroconf.py
++          DESTINATION lib/python2.7/dist-packages/${APP_NAME_LC}
++          COMPONENT kodi-eventclients-common)
++
++  # Install kodi-eventclients-common icons
++  install(FILES ${CORE_SOURCE_DIR}/tools/EventClients/icons/bluetooth.png
++                ${CORE_SOURCE_DIR}/tools/EventClients/icons/phone.png
++                ${CORE_SOURCE_DIR}/tools/EventClients/icons/mail.png
++                ${CORE_SOURCE_DIR}/tools/EventClients/icons/mouse.png
++          DESTINATION ${datarootdir}/pixmaps/${APP_NAME_LC}
++          COMPONENT kodi-eventclients-common)
++
++  # Install kodi-eventclients-dev headers
++  install(FILES ${CORE_SOURCE_DIR}/tools/EventClients/lib/c++/xbmcclient.h
++          DESTINATION ${includedir}/${APP_NAME_LC}
++          COMPONENT kodi-eventclients-dev)
++
++  # Install kodi-eventclients-dev C# examples
++  install(FILES "${CORE_SOURCE_DIR}/tools/EventClients/examples/c#/XBMCDemoClient1.cs"
++          DESTINATION "${docdir}/${APP_NAME_LC}-eventclients-dev/examples/C#"
++          COMPONENT kodi-eventclients-dev)
++
++  # Install kodi-eventclients-dev C++ examples
++  install(FILES ${CORE_SOURCE_DIR}/tools/EventClients/examples/c++/example_notification.cpp
++                ${CORE_SOURCE_DIR}/tools/EventClients/examples/c++/example_log.cpp
++                ${CORE_SOURCE_DIR}/tools/EventClients/examples/c++/example_button1.cpp
++                ${CORE_SOURCE_DIR}/tools/EventClients/examples/c++/example_mouse.cpp
++                ${CORE_SOURCE_DIR}/tools/EventClients/examples/c++/example_button2.cpp
++          DESTINATION ${docdir}/${APP_NAME_LC}-eventclients-dev/examples/C++
++          COMPONENT kodi-eventclients-dev)
++
++  # Install kodi-eventclients-dev java examples
++  install(FILES ${CORE_SOURCE_DIR}/tools/EventClients/examples/java/XBMCDemoClient1.java
++          DESTINATION ${docdir}/${APP_NAME_LC}-eventclients-dev/examples/java
++          COMPONENT kodi-eventclients-dev)
++
++  # Install kodi-eventclients-dev python examples
++  install(PROGRAMS ${CORE_SOURCE_DIR}/tools/EventClients/examples/python/example_mouse.py
++                   ${CORE_SOURCE_DIR}/tools/EventClients/examples/python/example_button1.py
++                   ${CORE_SOURCE_DIR}/tools/EventClients/examples/python/example_notification.py
++                   ${CORE_SOURCE_DIR}/tools/EventClients/examples/python/example_action.py
++                   ${CORE_SOURCE_DIR}/tools/EventClients/examples/python/example_button2.py
++                   ${CORE_SOURCE_DIR}/tools/EventClients/examples/python/example_simple.py
++          DESTINATION ${docdir}/${APP_NAME_LC}-eventclients-dev/examples/python
++          COMPONENT kodi-eventclients-dev)
++
++  # Install kodi-eventclients-ps3
++  install(PROGRAMS "${CORE_SOURCE_DIR}/tools/EventClients/Clients/PS3 BD Remote/ps3_remote.py"
++          RENAME ${APP_NAME_LC}-ps3remote
++          DESTINATION ${bindir}
++          COMPONENT kodi-eventclients-ps3)
++
++  if(BLUETOOTH_FOUND AND CWIID_FOUND)
++    # Install kodi-eventclients-wiiremote
++    install(PROGRAMS ${CMAKE_BINARY_DIR}/${CORE_BUILD_DIR}/WiiRemote/${APP_NAME_LC}-wiiremote
++            DESTINATION ${bindir}
++            COMPONENT kodi-eventclients-wiiremote)
++  endif()
++
++  # Install kodi-eventclients-xbmc-send
++  install(PROGRAMS "${CORE_SOURCE_DIR}/tools/EventClients/Clients/Kodi Send/kodi-send.py"
++          RENAME ${APP_NAME_LC}-send
++          DESTINATION ${bindir}
++          COMPONENT kodi-eventclients-xbmc-send)
++endif()
++
++# Install kodi-inputstream-dev
++install(FILES ${CORE_SOURCE_DIR}/xbmc/addons/kodi-addon-dev-kit/include/kodi/kodi_inputstream_dll.h
++              ${CORE_SOURCE_DIR}/xbmc/addons/kodi-addon-dev-kit/include/kodi/kodi_inputstream_types.h
++        DESTINATION ${includedir}/${APP_NAME_LC}
++        COMPONENT kodi-inputstream-dev)
++
++# Install kodi-pvr-dev
++install(FILES ${CORE_SOURCE_DIR}/xbmc/addons/kodi-addon-dev-kit/include/kodi/xbmc_epg_types.h
++              ${CORE_SOURCE_DIR}/xbmc/addons/kodi-addon-dev-kit/include/kodi/xbmc_pvr_dll.h
++              ${CORE_SOURCE_DIR}/xbmc/addons/kodi-addon-dev-kit/include/kodi/xbmc_pvr_types.h
++        DESTINATION ${includedir}/${APP_NAME_LC}
++        COMPONENT kodi-pvr-dev)
++
++# Install kodi-screensaver-dev
++install(FILES ${CORE_SOURCE_DIR}/xbmc/addons/kodi-addon-dev-kit/include/kodi/xbmc_scr_dll.h
++              ${CORE_SOURCE_DIR}/xbmc/addons/kodi-addon-dev-kit/include/kodi/xbmc_scr_types.h
++        DESTINATION ${includedir}/${APP_NAME_LC}
++        COMPONENT kodi-screensaver-dev)
++
++# Install kodi-visualization-dev
++install(FILES ${CORE_SOURCE_DIR}/xbmc/addons/kodi-addon-dev-kit/include/kodi/xbmc_vis_dll.h
++              ${CORE_SOURCE_DIR}/xbmc/addons/kodi-addon-dev-kit/include/kodi/xbmc_vis_types.h
++        DESTINATION ${includedir}/${APP_NAME_LC}
++        COMPONENT kodi-visualization-dev)
++
++# Install kodi-peripheral-dev
++install(FILES ${CORE_SOURCE_DIR}/xbmc/addons/kodi-addon-dev-kit/include/kodi/kodi_peripheral_callbacks.h
++              ${CORE_SOURCE_DIR}/xbmc/addons/kodi-addon-dev-kit/include/kodi/kodi_peripheral_dll.h
++              ${CORE_SOURCE_DIR}/xbmc/addons/kodi-addon-dev-kit/include/kodi/kodi_peripheral_types.h
++              ${CORE_SOURCE_DIR}/xbmc/addons/kodi-addon-dev-kit/include/kodi/kodi_peripheral_utils.hpp
++        DESTINATION ${includedir}/${APP_NAME_LC}
++        COMPONENT kodi-peripheral-dev)
++
++# Install XBT skin files
++foreach(texture ${XBT_FILES})
++  string(REPLACE "${CMAKE_BINARY_DIR}/" "" dir ${texture})
++  get_filename_component(dir ${dir} DIRECTORY)
++  install(FILES ${texture}
++          DESTINATION ${datarootdir}/${APP_NAME_LC}/${dir}
++          COMPONENT kodi)
++endforeach()
++
++# Install extra stuff if it exists
++if(EXISTS ${CMAKE_BINARY_DIR}/${CORE_BUILD_DIR}/extra-installs)
++  install(CODE "file(STRINGS ${CMAKE_BINARY_DIR}/${CORE_BUILD_DIR}/extra-installs dirs)
++              foreach(dir \${dirs})
++                file(GLOB_RECURSE FILES RELATIVE ${CMAKE_BINARY_DIR} \${dir}/*)
++                foreach(file \${FILES})
++                  get_filename_component(dir \${file} DIRECTORY)
++                  file(INSTALL \${file} DESTINATION ${datarootdir}/${APP_NAME_LC}/\${dir})
++                endforeach()
++              endforeach()")
++endif()
++
++if(NOT "$ENV{DESTDIR}" STREQUAL "")
++  set(DESTDIR ${CMAKE_BINARY_DIR}/$ENV{DESTDIR})
++endif()
++foreach(subdir ${build_dirs})
++  if(NOT subdir MATCHES kodi-platform)
++    string(REPLACE " " ";" subdir ${subdir})
++    list(GET subdir 0 id)
++    install(CODE "execute_process(COMMAND ${CMAKE_MAKE_PROGRAM} -C ${CMAKE_BINARY_DIR}/${CORE_BUILD_DIR}/${id}/src/${id}-build install DESTDIR=${DESTDIR})")
++  endif()
++endforeach()
++
++# generate packages? yes please, if everything checks out
++if(CPACK_GENERATOR)
++  if(CPACK_GENERATOR STREQUAL DEB AND ( CORE_SYSTEM_NAME STREQUAL linux OR CORE_SYSTEM_NAME STREQUAL rbpi ) )
++    if(CMAKE_BUILD_TYPE STREQUAL Debug)
++      message(STATUS "DEB Generator: Build type is set to 'Debug'. Packaged binaries will be unstripped.")
++    endif()
++    include(${PROJECT_SOURCE_DIR}/cpack/CPackConfigDEB.cmake)
++  else()
++    message(FATAL_ERROR "DEB Generator: Can't configure CPack to generate Debian packages on non-linux systems.")
++  endif()
++endif()
+diff -ruNp project/cmake/scripts.orig/dragonfly/Macros.cmake project/cmake/scripts/dragonfly/Macros.cmake
+--- project/cmake/scripts.orig/dragonfly/Macros.cmake	1970-01-01 01:00:00.000000000 +0100
++++ project/cmake/scripts/dragonfly/Macros.cmake	2017-11-14 17:55:01.000000000 +0100
+@@ -0,0 +1,95 @@
++function(core_link_library lib wraplib)
++  set(export -Wl,--unresolved-symbols=ignore-all
++             `cat ${CMAKE_BINARY_DIR}/${CORE_BUILD_DIR}/cores/dll-loader/exports/wrapper.def`
++             ${CMAKE_BINARY_DIR}/${CORE_BUILD_DIR}/cores/dll-loader/exports/CMakeFiles/wrapper.dir/wrapper.c.o)
++  set(check_arg "")
++  if(TARGET ${lib})
++    set(target ${lib})
++    set(link_lib $<TARGET_FILE:${lib}>)
++    set(check_arg ${ARGV2})
++    set(data_arg  ${ARGV3})
++  else()
++    set(target ${ARGV2})
++    set(link_lib ${lib})
++    set(check_arg ${ARGV3})
++    set(data_arg ${ARGV4})
++  endif()
++
++  # wrapper has to be adapted in order to support coverage.
++  if(CMAKE_BUILD_TYPE STREQUAL Coverage)
++    set(export "")
++  endif()
++
++  if(check_arg STREQUAL export)
++    set(export ${export}
++        -Wl,--version-script=${ARGV3})
++  elseif(check_arg STREQUAL extras)
++    foreach(arg ${data_arg})
++      list(APPEND export ${arg})
++    endforeach()
++  elseif(check_arg STREQUAL archives)
++    set(extra_libs ${data_arg})
++  endif()
++
++  string(REGEX REPLACE "[ ]+" ";" _flags "${CMAKE_SHARED_LINKER_FLAGS}")
++  get_filename_component(dir ${wraplib} DIRECTORY)
++  add_custom_command(OUTPUT ${CMAKE_BINARY_DIR}/${wraplib}-${ARCH}${CMAKE_SHARED_MODULE_SUFFIX}
++                     COMMAND ${CMAKE_COMMAND} -E make_directory ${dir}
++                     COMMAND ${CMAKE_C_COMPILER}
++                     ARGS    ${_flags} -Wl,--whole-archive
++                             "${link_lib}" ${extra_libs}
++                             -Wl,--no-whole-archive -lm
++                             -Wl,-soname,${wraplib}-${ARCH}${CMAKE_SHARED_MODULE_SUFFIX}
++                             -shared -o ${CMAKE_BINARY_DIR}/${wraplib}-${ARCH}${CMAKE_SHARED_MODULE_SUFFIX}
++                             ${export}
++                     DEPENDS ${target} wrapper.def wrapper)
++
++  get_filename_component(libname ${wraplib} NAME_WE)
++  add_custom_target(wrap_${libname} ALL DEPENDS ${CMAKE_BINARY_DIR}/${wraplib}-${ARCH}${CMAKE_SHARED_MODULE_SUFFIX})
++  set_target_properties(wrap_${libname} PROPERTIES FOLDER lib/wrapped)
++  add_dependencies(${APP_NAME_LC}-libraries wrap_${libname})
++
++  set(LIBRARY_FILES ${LIBRARY_FILES} ${CMAKE_BINARY_DIR}/${wraplib}-${ARCH}${CMAKE_SHARED_MODULE_SUFFIX} CACHE STRING "" FORCE)
++endfunction()
++
++function(find_soname lib)
++  cmake_parse_arguments(arg "REQUIRED" "" "" ${ARGN})
++
++  string(TOLOWER ${lib} liblow)
++  if(${lib}_LDFLAGS)
++    set(link_lib "${${lib}_LDFLAGS}")
++  else()
++    if(IS_ABSOLUTE "${${lib}_LIBRARIES}")
++      set(link_lib "${${lib}_LIBRARIES}")
++    else()
++      set(link_lib -l${${lib}_LIBRARIES})
++    endif()
++  endif()
++  execute_process(COMMAND ${CMAKE_C_COMPILER} -nostdlib -o /dev/null -Wl,-M ${link_lib} 
++                  COMMAND grep LOAD.*${liblow}
++                  ERROR_QUIET
++                  OUTPUT_VARIABLE ${lib}_FILENAME)
++  string(REPLACE "LOAD " "" ${lib}_FILENAME "${${lib}_FILENAME}")
++  string(STRIP "${${lib}_FILENAME}" ${lib}_FILENAME)
++  if(NOT ${lib}_FILENAME)
++    execute_process(COMMAND ${CMAKE_C_COMPILER} -nostdlib -o /dev/null -Wl,-t ${link_lib}
++                    OUTPUT_QUIET
++                    ERROR_VARIABLE _TMP_FILENAME)
++    string(REGEX MATCH ".*lib${liblow}.so" ${lib}_FILENAME ${_TMP_FILENAME})
++  endif()
++  if(${lib}_FILENAME)
++    execute_process(COMMAND objdump -p ${${lib}_FILENAME}
++                    COMMAND grep SONAME.*${liblow}
++                    ERROR_QUIET
++                    OUTPUT_VARIABLE ${lib}_SONAME)
++    string(REPLACE "SONAME " "" ${lib}_SONAME ${${lib}_SONAME})
++    string(STRIP ${${lib}_SONAME} ${lib}_SONAME)
++    if(VERBOSE)
++      message(STATUS "${lib} soname: ${${lib}_SONAME}")
++    endif()
++    set(${lib}_SONAME ${${lib}_SONAME} PARENT_SCOPE)
++  endif()
++  if(arg_REQUIRED AND NOT ${lib}_SONAME)
++    message(FATAL_ERROR "Could not find dynamically loadable library ${lib}")
++  endif()
++endfunction()
+diff -ruNp project/cmake/scripts.orig/dragonfly/PathSetup.cmake project/cmake/scripts/dragonfly/PathSetup.cmake
+--- project/cmake/scripts.orig/dragonfly/PathSetup.cmake	1970-01-01 01:00:00.000000000 +0100
++++ project/cmake/scripts/dragonfly/PathSetup.cmake	2017-11-14 17:55:01.000000000 +0100
+@@ -0,0 +1,40 @@
++include(GNUInstallDirs)
++
++if(NOT prefix)
++  set(prefix ${CMAKE_INSTALL_PREFIX})
++else()
++  set(CMAKE_INSTALL_PREFIX ${prefix})
++endif()
++if(NOT exec_prefix)
++  set(exec_prefix ${prefix})
++endif()
++if(NOT libdir)
++  set(libdir ${CMAKE_INSTALL_FULL_LIBDIR})
++endif()
++if(NOT bindir)
++  set(bindir ${CMAKE_INSTALL_FULL_BINDIR})
++endif()
++if(NOT includedir)
++  set(includedir ${CMAKE_INSTALL_FULL_INCLUDEDIR})
++endif()
++if(NOT datarootdir)
++  set(datarootdir ${CMAKE_INSTALL_FULL_DATAROOTDIR})
++endif()
++if(NOT datadir)
++  set(datadir ${CMAKE_INSTALL_FULL_DATADIR})
++endif()
++if(NOT docdir)
++  set(docdir ${CMAKE_INSTALL_FULL_DOCDIR})
++endif()
++
++list(APPEND final_message "-- PATH config --")
++list(APPEND final_message "Prefix: ${prefix}")
++list(APPEND final_message "Libdir: ${libdir}")
++list(APPEND final_message "Bindir: ${bindir}")
++list(APPEND final_message "Includedir: ${includedir}")
++list(APPEND final_message "Datarootdir: ${datarootdir}")
++list(APPEND final_message "Datadir: ${datadir}")
++list(APPEND final_message "Docdir: ${docdir}")
++
++set(PATH_DEFINES -DBIN_INSTALL_PATH=\"${libdir}/${APP_NAME_LC}\"
++                   -DINSTALL_PATH=\"${datarootdir}/${APP_NAME_LC}\")

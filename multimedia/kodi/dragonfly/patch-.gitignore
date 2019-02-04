@@ -1,0 +1,12 @@
+--- .gitignore.orig	2017-11-14 17:55:01.000000000 +0100
++++ .gitignore	2018-08-04 11:34:43.948994000 +0200
+@@ -441,6 +441,9 @@ lib/cpluff/stamp-h1
+ # /xbmc/filesystem/
+ /xbmc/filesystem/Makefile
+ 
++# /xbmc/dragonfly/
++/xbmc/dragonfly/Makefile
++
+ # /xbmc/freebsd/
+ /xbmc/freebsd/Makefile
+ 

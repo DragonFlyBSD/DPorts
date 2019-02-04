@@ -1,0 +1,11 @@
+--- xbmc/cores/DllLoader/CMakeLists.txt.orig	2018-08-04 14:17:12.288709000 +0200
++++ xbmc/cores/DllLoader/CMakeLists.txt	2018-08-04 14:17:31.989133000 +0200
+@@ -24,7 +24,7 @@ if(NOT CORE_SYSTEM_NAME STREQUAL windows
+                       SoLoader.cpp)
+   list(APPEND HEADERS mmap_anon.h
+                       SoLoader.h)
+-  if(NOT CORE_SYSTEM_NAME STREQUAL freebsd)
++  if(NOT CORE_SYSTEM_NAME STREQUAL freebsd AND NOT CORE_SYSTEM_NAME STREQUAL dragonfly)
+     list(APPEND SOURCES ldt_keeper.c) 
+     list(APPEND HEADERS ldt_keeper.h)
+   endif()

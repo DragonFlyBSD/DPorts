@@ -1,0 +1,6 @@
+diff -ruNp system/settings.orig/dragonfly.xml system/settings/dragonfly.xml
+--- system/settings.orig/dragonfly.xml	1970-01-01 01:00:00.000000000 +0100
++++ system/settings/dragonfly.xml	2017-11-14 17:55:01.000000000 +0100
+@@ -0,0 +1,2 @@
++<?xml version="1.0" encoding="utf-8" ?>
++

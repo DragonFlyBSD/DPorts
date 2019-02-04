@@ -1,0 +1,61 @@
+--- configure.ac.orig	2018-07-30 18:58:01.440560000 +0200
++++ configure.ac	2018-07-30 19:00:44.524053000 +0200
+@@ -56,7 +56,7 @@ AC_DEFUN([XB_ADD_CODEC],
+ # check for library basenames
+ AC_DEFUN([XB_FIND_SONAME],
+ [
+-  if echo "$host" | grep -q freebsd ; then
++  if echo "$host" | grep -q dragonfly ; then
+     AC_MSG_CHECKING([for lib$2 soname])
+     $1_SONAME=[`ldconfig -r | sed -n "s;.* \(/.*lib$2\.so.*\)$;\1;p" | head -n 1`]
+     if test x$$1_SONAME != x ; then
+@@ -573,6 +573,13 @@ case $host in
+      MAKE="gmake"
+      USE_STATIC_FFMPEG=1
+      ;;
++  x86_64-*-dragonfly*)
++     target_platform=target_linux
++     CORE_SYSTEM_NAME=linux
++     ARCH="x86_64-dragonfly"
++     MAKE="gmake"
++     USE_STATIC_FFMPEG=1
++     ;;
+   armv6-*-freebsd*)
+      target_platform=target_linux
+      ARCH="armv6-freebsd"
+@@ -781,7 +788,7 @@ fi
+ 
+ 
+ # platform specific flags
+-if echo "$ARCH" | grep -q "freebsd" ; then
++if echo "$ARCH" | grep -q "dragonfly" ; then
+   LOCALBASE="${LOCALBASE:-/usr/local}"
+   CFLAGS="$CFLAGS -idirafter$LOCALBASE/include"
+   CXXFLAGS="$CXXFLAGS -idirafter$LOCALBASE/include"
+@@ -1057,7 +1064,7 @@ fi
+ PKG_CHECK_MODULES([GNUTLS], [gnutls], [have_gnutls=yes];AC_DEFINE([HAVE_GNUTLS], [1], [Define if we have gnutls]), AC_MSG_WARN("gnutls not found"))
+ 
+ AC_CHECK_LIB([bz2],         [main],, AC_MSG_ERROR($missing_library))
+-if echo "$ARCH" | grep -q freebsd; then
++if echo "$ARCH" | grep -q dragonfly; then
+ AC_CHECK_LIB([pthread],     [main],LIBS="-pthread $LIBS", AC_MSG_ERROR($missing_library))
+ AC_CHECK_LIB([pthread],     [pthread_set_name_np],
+   AC_DEFINE([HAVE_PTHREAD_SET_NAME_NP],[1],["Define to 1 if pthread has pthread_set_name_np"]),
+@@ -1469,7 +1476,7 @@ if test "x$use_libudev" != "xno"; then
+   use_libusb="no"
+   AC_MSG_NOTICE($libusb_disabled_udev_found)
+ else
+-  if echo "$ARCH" | grep -q freebsd ; then
++  if echo "$ARCH" | grep -q dragonfly ; then
+     AC_CHECK_LIB([usb],[main],
+ 	  	[use_libusb="yes";USB_LIBS="-lusb"],
+ 		[use_libusb="no";AC_MSG_RESULT($libusb_not_found)])
+@@ -2231,7 +2238,7 @@ OUTPUT_FILES="Makefile \
+     lib/libUPnP/Makefile \
+     xbmc/DllPaths_generated.h \
+     xbmc/DllPaths_generated_android.h \
+-    xbmc/freebsd/Makefile \
++    xbmc/dragonfly/Makefile \
+     xbmc/linux/Makefile \
+     xbmc/filesystem/Makefile \
+     xbmc/windowing/Makefile \

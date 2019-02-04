@@ -1,0 +1,10 @@
+--- tools/depends/target/ffmpeg/FFmpeg-3.1.11-Krypton-17.5/configure.orig	2018-08-04 11:30:54.654061000 +0200
++++ tools/depends/target/ffmpeg/FFmpeg-3.1.11-Krypton-17.5/configure	2018-08-04 11:31:29.584812000 +0200
+@@ -4649,7 +4649,6 @@ case $target_os in
+         oss_outdev_extralibs="-lossaudio"
+         ;;
+     dragonfly)
+-        disable symver
+         ;;
+     freebsd)
+         ;;

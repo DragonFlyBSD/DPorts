@@ -1,0 +1,17 @@
+diff -ruNp project/cmake/treedata.orig/dragonfly/subdirs.txt project/cmake/treedata/dragonfly/subdirs.txt
+--- project/cmake/treedata.orig/dragonfly/subdirs.txt	1970-01-01 01:00:00.000000000 +0100
++++ project/cmake/treedata/dragonfly/subdirs.txt	2018-08-04 13:42:51.834377000 +0200
+@@ -0,0 +1,13 @@
++xbmc/linux                 linuxsupport
++xbmc/linux/sse4            sse4
++xbmc/input/linux           input/linux
++xbmc/input/touch           input/touch
++xbmc/input/touch/generic   input/touch/generic
++xbmc/network/linux         network/linux
++xbmc/peripherals/bus/linux peripherals/bus/linux
++xbmc/powermanagement/linux powermanagement/linux
++xbmc/storage/linux         storage/linux
++xbmc/filesystem/posix      filesystem/posix
++xbmc/utils/posix           utils_posix
++xbmc/platform/posix        posix
++xbmc/dragonfly             dragonflysupport

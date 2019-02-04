@@ -1,0 +1,67 @@
+--- Makefile.in.orig	2017-11-14 17:55:01.000000000 +0100
++++ Makefile.in	2018-08-04 20:26:16.758031000 +0200
+@@ -197,6 +197,10 @@ ifeq ($(findstring freebsd,@ARCH@),freeb
+ DIRECTORY_ARCHIVES += xbmc/freebsd/freebsd.a
+ endif
+ 
++ifeq ($(findstring dragonfly,@ARCH@),dragonfly)
++DIRECTORY_ARCHIVES += xbmc/dragonfly/dragonfly.a
++endif
++
+ ifeq (@HAVE_XBMC_NONFREE@,1)
+ DIRECTORY_ARCHIVES += lib/UnrarXLib/UnrarXLib.a
+ endif
+@@ -400,6 +404,10 @@ ifeq ($(findstring freebsd,@ARCH@),freeb
+ DYNOBJSXBMC+= xbmc/freebsd/freebsd.a
+ endif
+ 
++ifeq ($(findstring dragonfly,@ARCH@),dragonfly)
++DYNOBJSXBMC+= xbmc/dragonfly/dragonfly.a
++endif
++
+ ifeq (@USE_STATIC_FFMPEG@,1)
+ FFMPEGOBJS = @FFMPEG_LIBDIR@/libavcodec.a \
+              @FFMPEG_LIBDIR@/libavfilter.a \
+@@ -510,10 +518,19 @@ ifeq ($(findstring Darwin,$(shell uname
+ 		-exec install "{}" $(DESTDIR)$(libdir)/xbmc/"{}" \; \
+ 		-exec printf " -- %-75.75s\r" "{}" \;
+ else
++ifeq ($(findstring dragonfly,@ARCH@), dragonfly)
++	@find -E system addons -type f -not -iregex ".*\.git.*" \
++		-iregex ".*@ARCH@.*|.*\.vis|.*\.xbs" \
++		-exec sh -c "install -d \"$(DESTDIR)$(libdir)/@APP_NAME_LC@/\`dirname '{}'\`\"" \; \
++		-and \
++		-exec install "{}" $(DESTDIR)$(libdir)/@APP_NAME_LC@/"{}" \; \
++		-exec printf " -- %-75.75s\r" "{}" \;
++else
+ 	@find system addons -regextype posix-extended -type f -not -iregex ".*\.git.*" -iregex ".*\.so|.*\.so\.[0-9].*|.*\.vis|.*\.xbs" -exec install -D "{}" $(DESTDIR)$(libdir)/@APP_NAME_LC@/"{}" \; -printf " -- %-75.75f\r"
+ 	@find -L addons -regextype posix-extended -type f -not -iregex ".*\.git.*" -iregex ".*\.so|.*\.so\.[0-9].*" -exec cp -d "{}" $(DESTDIR)$(libdir)/@APP_NAME_LC@/"{}" \; -printf " -- %-75.75f\r"
+ endif
+ endif
++endif
+ 
+ install-scripts:
+ 	@install -d $(DESTDIR)$(bindir)
+@@ -545,6 +562,14 @@ ifeq ($(findstring bsd,@ARCH@), bsd)
+ 		-exec install -m 0644 "{}" $(DESTDIR)$(datarootdir)/@APP_NAME_LC@/"{}" \; \
+ 		-exec printf " -- %-75.75s\r" "{}" \;
+ else
++ifeq ($(findstring dragonfly,@ARCH@), dragonfly)
++	@find -E addons media userdata system -type f \
++		-not -iregex ".*-@ARCH@.*|.*\.vis|.*\.xbs|.*\.git.*|.*\.so|.*\.so\.[0-9].*|.*\.dll|$(subst ${space},|,$(INSTALL_FILTER))" \
++		-exec sh -c "install -d \"$(DESTDIR)$(datarootdir)/@APP_NAME_LC@/\`dirname '{}'\`\"" \; \
++		-and \
++		-exec install -m 0644 "{}" $(DESTDIR)$(datarootdir)/@APP_NAME_LC@/"{}" \; \
++		-exec printf " -- %-75.75s\r" "{}" \;
++else
+ ifeq ($(findstring Darwin,$(shell uname -s)),Darwin)
+ 	@find -E addons media userdata system -type f \
+ 		-not -iregex ".*-@ARCH@.*|.*\.vis|.*\.xbs|.*\.git.*|.*\.so|.*\.so\.[0-9].*|.*\.dll|$(subst ${space},|,$(INSTALL_FILTER))" \
+@@ -556,6 +581,7 @@ else
+ 	@find addons media userdata system -regextype posix-extended -type f -not -iregex ".*-@ARCH@.*|.*\.vis|.*\.xbs|.*\.git.*|.*\.so|.*\.so\.[0-9].*|.*\.dll|$(subst ${space},|,$(INSTALL_FILTER))" -exec install -D -m 0644 "{}" $(DESTDIR)$(datarootdir)/@APP_NAME_LC@/"{}" \; -printf " -- %-75.75f\r"
+ endif
+ endif
++endif
+ 	@# Icons and links
+ 	@install -d $(DESTDIR)$(datarootdir)/applications
+ 	@install -m 0644 tools/Linux/kodi.desktop $(DESTDIR)$(datarootdir)/applications/@APP_NAME_LC@.desktop

@@ -1,0 +1,11 @@
+--- project/cmake/CMakeLists.txt.orig	2018-08-04 11:57:40.758619000 +0200
++++ project/cmake/CMakeLists.txt	2018-08-04 11:57:51.538851000 +0200
+@@ -52,7 +52,7 @@ if(UNIX)
+   option(ENABLE_INTERNAL_CROSSGUID "Enable internal crossguid?" ON)
+   option(ENABLE_OPENSSL     "Enable OpenSSL?" ON)
+   option(ENABLE_SDL         "Enable SDL?" OFF)
+-  if(CORE_SYSTEM_NAME STREQUAL linux OR CORE_SYSTEM_NAME STREQUAL freebsd)
++  if(CORE_SYSTEM_NAME STREQUAL linux OR CORE_SYSTEM_NAME STREQUAL freebsd OR CORE_SYSTEM_NAME STREQUAL dragonfly)
+     option(ENABLE_X11         "Enable X11 support?" ON)
+     option(ENABLE_AML         "Enable AML?" OFF)
+     option(ENABLE_IMX         "Enable IMX?" OFF)

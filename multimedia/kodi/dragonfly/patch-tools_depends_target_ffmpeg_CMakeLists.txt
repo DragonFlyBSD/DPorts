@@ -1,0 +1,11 @@
+--- tools/depends/target/ffmpeg/CMakeLists.txt.orig	2018-08-04 11:25:05.386548000 +0200
++++ tools/depends/target/ffmpeg/CMakeLists.txt	2018-08-04 11:25:30.207082000 +0200
+@@ -34,7 +34,7 @@ if(CMAKE_BUILD_TYPE STREQUAL Release)
+   list(APPEND ffmpeg_conf --disable-debug)
+ endif()
+ 
+-if(CORE_SYSTEM_NAME STREQUAL linux OR CORE_SYSTEM_NAME STREQUAL freebsd)
++if(CORE_SYSTEM_NAME STREQUAL linux OR CORE_SYSTEM_NAME STREQUAL freebsd OR CORE_SYSTEM_NAME STREQUAL dragonfly)
+   list(APPEND ffmpeg_conf --enable-vdpau --enable-vaapi --enable-pic)
+ elseif(CORE_SYSTEM_NAME STREQUAL android)
+   if(CPU MATCHES arm64)

@@ -1,0 +1,11 @@
+--- xbmc/cores/DllLoader/Makefile.in.orig	2018-08-04 14:21:52.554744000 +0200
++++ xbmc/cores/DllLoader/Makefile.in	2018-08-04 14:21:56.934838000 +0200
+@@ -13,7 +13,7 @@ SRCS += LibraryLoader.cpp
+ SRCS += mmap_anon.c
+ SRCS += SoLoader.cpp
+ 
+-ifneq ($(findstring freebsd,@ARCH@),freebsd)
++ifneq ($(findstring dragonfly,@ARCH@),dragonfly)
+ SRCS += ldt_keeper.c
+ endif
+ 

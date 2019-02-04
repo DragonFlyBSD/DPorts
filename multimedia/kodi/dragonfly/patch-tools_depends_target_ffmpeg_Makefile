@@ -1,0 +1,14 @@
+--- tools/depends/target/ffmpeg/Makefile.orig	2018-07-30 19:27:36.938602000 +0200
++++ tools/depends/target/ffmpeg/Makefile	2018-07-30 19:27:53.868965000 +0200
+@@ -29,6 +29,11 @@ ifeq ($(OS), freebsd)
+   ffmpg_config += --enable-vdpau --enable-vaapi --enable-gnutls
+   ffmpg_config += --enable-libvorbis --enable-muxer=ogg --enable-encoder=libvorbis
+ endif
++ifeq ($(OS), dragonfly)
++  ffmpg_config += --target-os=$(OS) --cpu=$(CPU)
++  ffmpg_config += --enable-vdpau --enable-vaapi --enable-gnutls
++  ffmpg_config += --enable-libvorbis --enable-muxer=ogg --enable-encoder=libvorbis
++endif
+ ifeq ($(OS), linux)
+   ffmpg_config += --target-os=$(OS) --cpu=$(CPU)
+   ffmpg_config += --enable-vdpau --enable-vaapi --enable-pic
