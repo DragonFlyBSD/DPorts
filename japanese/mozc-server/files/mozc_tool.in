@@ -1,0 +1,17 @@
+#!/bin/sh
+# $FreeBSD: head/japanese/mozc-server/files/mozc_tool.in 379309 2015-02-18 19:16:43Z hrs $
+
+: ${MODE:=${1:-about_dialog}}
+case $MODE in
+--mode=*)
+	exec %%PREFIX%%/libexec/mozc_tool $MODE
+;;
+config_dialog|dictionary_tool|word_register_dialog|about_dialog|character_palette|hand_writing)
+	exec %%PREFIX%%/libexec/mozc_tool --mode="$MODE"
+;;
+*)
+	echo "Specify one of the following keywords:"
+	echo "config_dialog|dictionary_tool|word_register_dialog|about_dialog|character_palette|hand_writing" | tr "|" "\n"
+	exit 1
+;;
+esac

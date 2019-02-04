@@ -1,0 +1,14 @@
+dfly-patch:
+	${REINPLACE_CMD} -e 's|freebsd|dragonfly|' \
+		${WRKSRC}/src/gyp/common.gypi
+	${REINPLACE_CMD} -e 's|OS_FREEBSD|OS_DRAGONFLY|' \
+		${WRKSRC}/src/gyp/common.gypi \
+		${WRKSRC}/src/base/thread.cc \
+		${WRKSRC}/src/base/logging.cc \
+		${WRKSRC}/src/base/mutex.cc \
+		${WRKSRC}/src/ipc/ipc_path_manager.cc \
+		${WRKSRC}/src/ipc/unix_ipc.cc \
+		${WRKSRC}/src/gui/about_dialog/about_dialog.cc \
+		${WRKSRC}/src/server/mozc_server.cc
+	${REINPLACE_CMD} -e 's|FreeBSD|DragonFly|' \
+		${WRKSRC}/src/build_tools/util.py
