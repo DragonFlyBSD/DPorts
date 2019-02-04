@@ -1,1 +1,1 @@
-USE_QT4=		corelib network qmake xmlpatterns
+USE_QT=		corelib network qmake xmlpatterns
