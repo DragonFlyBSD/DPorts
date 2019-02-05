@@ -1,0 +1,10 @@
+dfly-patch:
+	${REINPLACE_CMD} -e 's|FreeBSD|DragonFly|' \
+		${WRKSRC}/Makefile \
+		${WRKSRC}/include/grpc/impl/codegen/port_platform.h \
+		${WRKSRC}/third_party/zlib/contrib/minizip/ioapi.h \
+		${WRKSRC}/third_party/boringssl/third_party/googletest/include/gtest/internal/gtest-port-arch.h
+	${REINPLACE_CMD} -e 's|FREEBSD|DRAGONFLY|' \
+		${WRKSRC}/third_party/boringssl/third_party/googletest/include/gtest/internal/gtest-port-arch.h \
+		${WRKSRC}/third_party/boringssl/third_party/googletest/include/gtest/internal/gtest-port.h
+
