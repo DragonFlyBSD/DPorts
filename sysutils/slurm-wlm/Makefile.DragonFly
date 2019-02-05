@@ -1,0 +1,25 @@
+dfly-patch:
+	@${REINPLACE_CMD} -e 's|cpuset_setaffinity|sched_setaffinity|g' \
+		${WRKSRC}/configure
+	${REINPLACE_CMD} -e 's|FreeBSD|DragonFly|' \
+		${WRKSRC}/src/common/net.c \
+		${WRKSRC}/src/common/callerid.h \
+		${WRKSRC}/src/common/callerid.c \
+		${WRKSRC}/src/plugins/task/cgroup/task_cgroup_cpuset.c \
+		${WRKSRC}/src/plugins/acct_gather_energy/rapl/acct_gather_energy_rapl.c \
+		${WRKSRC}/src/plugins/burst_buffer/common/burst_buffer_common.c \
+		${WRKSRC}/src/plugins/priority/multifactor/priority_multifactor.c \
+		${WRKSRC}/src/plugins/switch/cray/switch_cray.c \
+		${WRKSRC}/src/plugins/switch/generic/switch_generic.c \
+		${WRKSRC}/src/plugins/power/common/power_common.c \
+		${WRKSRC}/src/plugins/mpi/pmi2/setup.c \
+		${WRKSRC}/src/plugins/mpi/pmi2/info.c \
+		${WRKSRC}/src/plugins/node_features/knl_cray/node_features_knl_cray.c \
+		${WRKSRC}/src/plugins/node_features/knl_generic/node_features_knl_generic.c \
+		${WRKSRC}/src/slurmd/slurmd/get_mach_stat.c \
+		${WRKSRC}/src/slurmd/common/xcgroup.h \
+		${WRKSRC}/src/slurmd/common/set_oomadj.c \
+		${WRKSRC}/src/slurmd/common/setproctitle.h \
+		${WRKSRC}/src/slurmd/common/xcgroup.c \
+		${WRKSRC}/src/slurmd/common/setproctitle.c \
+		${WRKSRC}/src/common/log.c
