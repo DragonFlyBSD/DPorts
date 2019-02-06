@@ -1,0 +1,7 @@
+dfly-patch:
+	${REINPLACE_CMD} -e 's|FreeBSD|DragonFly|' \
+		${WRKSRC}/cmake/Config.cmake \
+		${WRKSRC}/include/SFML/Window/WindowHandle.hpp \
+		${WRKSRC}/include/SFML/Config.hpp
+	${REINPLACE_CMD} -e 's|dev/usb/usbhid.h|bus/u4b/usbhid.h|' \
+		${WRKSRC}/src/SFML/Window/FreeBSD/JoystickImpl.hpp
