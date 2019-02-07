@@ -1,0 +1,23 @@
+dfly-patch:
+	@${SED} 's|%%CONFIGS%%|${CONFIGS}|g; \
+		s|%%DATADIR%%|${STAGEDIR}${DATADIR}|g; \
+		s|%%DOCSDIR%%|${STAGEDIR}${DOCSDIR}|g; \
+		s|%%ICONV_LIB%%|${ICONV_LIB}|g; \
+		s|%%INSTALL_PROGRAM%%|${INSTALL_PROGRAM}|g; \
+		s|%%INSTALL_DATA%%|${INSTALL_DATA}|g; \
+		s|%%LOCALBASE%%|${LOCALBASE}|g; \
+		s|%%MANPREFIX%%|${STAGEDIR}${MANPREFIX}|g; \
+		s|%%OPENSSLLIB%%|${OPENSSLLIB}|g; \
+		s|%%OPENSSLINC%%|${OPENSSLINC}|g; \
+		s|%%PREFIX%%|${STAGEDIR}${PREFIX}|g; \
+		s/Ice_system_libs.*/& -lexecinfo/;' \
+		${FILESDIR}/Make.rules.FreeBSD > ${WRKSRC}/config/Make.rules.DragonFly
+	${REINPLACE_CMD} -e 's|__FreeBSD__|__DragonFly__|' \
+		${WRKSRC}/cpp/include/IceUtil/Config.h \
+		${WRKSRC}/cpp/src/Ice/Network.cpp \
+		${WRKSRC}/cpp/src/Ice/Thread.cpp \
+		${WRKSRC}/cpp/src/Glacier2CryptPermissionsVerifier/CryptPermissionsVerifierI.cpp \
+		${WRKSRC}/cpp/src/IceSSL/OpenSSLEngine.cpp \
+		${WRKSRC}/cpp/src/IceGrid/PlatformInfo.cpp \
+		${WRKSRC}/cpp/src/IceUtil/UtilException.cpp \
+		${WRKSRC}/cpp/test/include/TestCommon.h
