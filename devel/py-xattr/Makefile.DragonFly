@@ -1,0 +1,4 @@
+dfly-patch:
+	${REINPLACE_CMD} -e 's|FreeBSD|DragonFly|' \
+		${WRKSRC}/setup.py \
+		${WRKSRC}/xattr/lib_build.c
