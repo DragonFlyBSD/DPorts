@@ -1,0 +1,16 @@
+BINARY_ALIAS:=   gcc=${CC} gfortran=gfortran${_GCC_VER}
+
+# Use -fdefault-integer-8 instead of -i8
+# https://gcc.gnu.org/bugzilla/show_bug.cgi?id=37468
+#
+# Also disable -i4 completely, it's unrecognized and I haven't
+# find the substitute. Maybe that is incorrect?
+dfly-patch:
+	${REINPLACE_CMD} -e 's|\-i8|\-fdefault-integer-8|' \
+		-e 's|\-i4||' \
+		${WRKSRC}/NWints/simint/simint.txt \
+		${WRKSRC}/config/makefile.h \
+		${WRKSRC}/config/makefile-legacy.h \
+		${WRKSRC}/peigs/DEFS.release \
+		${WRKSRC}/../contrib/openmp_tests/dgemm/GNUmakefile \
+		${WRKSRC}/../contrib/mov2asc/Makefile
