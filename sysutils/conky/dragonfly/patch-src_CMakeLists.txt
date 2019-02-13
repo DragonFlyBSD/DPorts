@@ -1,0 +1,11 @@
+--- src/CMakeLists.txt.orig	2019-02-13 22:58:01.000000000 +0000
++++ src/CMakeLists.txt	2019-02-13 22:58:20.000000000 +0000
+@@ -129,7 +129,7 @@
+ endif(OS_FREEBSD)
+ 
+ if(OS_DRAGONFLY)
+-  set(dragonfly dragonfly.cc dragonfly.h bsdapm.cc bsdapm.h)
++  set(dragonfly dragonfly.cc dragonfly.h)
+   set(optional_sources ${optional_sources} ${dragonfly})
+ endif(OS_DRAGONFLY)
+ 
