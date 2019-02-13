@@ -1,0 +1,5 @@
+#
+# Please note the LibreSSL compatibility patches have been
+# taken from https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=223994
+#
+CONFIGURE_ARGS+=--disable-xattr

@@ -1,0 +1,11 @@
+--- configure.orig	2019-02-13 10:41:51.000000000 +0000
++++ configure	2019-02-13 10:42:19.000000000 +0000
+@@ -16939,7 +16939,7 @@
+ fi
+ fi
+ 
+-if test $HAVE_UNAME=yes -a x`uname -s` = xFreeBSD
++if test $HAVE_UNAME=yes -a x`uname -s` = xDragonFly
+ then
+ 
+ 
