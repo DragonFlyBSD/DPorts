@@ -1,0 +1,22 @@
+CFLAGS+= -fuse-ld=bfd
+dfly-patch:
+	${REINPLACE_CMD} -e 's|FreeBSD|DragonFly|' \
+		${WRKSRC}/src/ptrace/_UPT_reg_offset.c \
+		${WRKSRC}/src/x86/siglongjmp.S \
+		${WRKSRC}/src/setjmp/longjmp.c \
+		${WRKSRC}/src/setjmp/siglongjmp.c \
+		${WRKSRC}/src/x86_64/ucontext_i.h \
+		${WRKSRC}/src/x86_64/getcontext.S \
+		${WRKSRC}/src/x86_64/init.h \
+		${WRKSRC}/src/x86_64/setcontext.S \
+		${WRKSRC}/include/tdep-x86_64/jmpbuf.h \
+		${WRKSRC}/include/libunwind_i.h \
+		${WRKSRC}/include/tdep-x86/jmpbuf.h \
+		${WRKSRC}/tests/Gtest-trace.c \
+		${WRKSRC}/tests/crasher.c \
+		${WRKSRC}/tests/Gtest-bt.c \
+		${WRKSRC}/tests/test-coredump-unwind.c
+	${REINPLACE_CMD} -e 's|lgcc_s|lgcc|' \
+		-e 's|xfreebsd|xdragonfly|' \
+		${WRKSRC}/configure
+
