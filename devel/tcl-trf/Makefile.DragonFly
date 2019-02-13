@@ -1,0 +1,3 @@
+USES+=	ssl
+CPPFLAGS+=              -I${OPENSSLINC}
+LDFLAGS+=               -L${OPENSSLLIB}
