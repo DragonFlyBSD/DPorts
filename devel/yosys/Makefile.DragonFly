@@ -1,0 +1,9 @@
+dfly-patch:
+	${REINPLACE_CMD} -e 's|FreeBSD|DragonFly|' \
+		${WRKSRC}/libs/minisat/System.cc \
+		${WRKSRC}/kernel/yosys.cc \
+		${WRKSRC}/kernel/log.cc \
+		${WRKSRC}/kernel/log.h \
+		${WRKSRC}/kernel/driver.cc \
+		${WRKSRC}/passes/cmds/cover.cc \
+		${WRKSRC}/Makefile
