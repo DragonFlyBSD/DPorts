@@ -1,0 +1,1 @@
+LIB_DEPENDS+=   libc++.so.1:devel/libc++
