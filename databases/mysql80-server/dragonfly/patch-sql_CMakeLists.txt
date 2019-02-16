@@ -1,0 +1,13 @@
+--- sql/CMakeLists.txt~	2018-12-20 21:14:03.000000000 +0100
++++ sql/CMakeLists.txt	2019-02-14 10:05:34.467372000 +0100
+@@ -543,6 +543,10 @@ IF(CMAKE_SYSTEM_NAME MATCHES "FreeBSD")
+   LIST(APPEND SQL_SHARED_SOURCES resourcegroups/platform/thread_attrs_api_freebsd.cc)
+ ENDIF()
+ 
++IF(CMAKE_SYSTEM_NAME MATCHES "DragonFly")
++  LIST(APPEND SQL_SHARED_SOURCES resourcegroups/platform/thread_attrs_api_freebsd.cc)
++ENDIF()
++
+ IF(CMAKE_SYSTEM_NAME MATCHES "SunOS")
+   LIST(APPEND SQL_SHARED_SOURCES resourcegroups/platform/thread_attrs_api_solaris.cc)
+ ENDIF()
