@@ -1,6 +1,22 @@
 --- src/wrk.c.orig
 +++ src/wrk.c
-@@ -10,6 +10,7 @@ static struct config {
+@@ -4,15 +4,28 @@
+ #include "script.h"
+ #include "main.h"
+ 
++#if defined(__FreeBSD__)
++#include <sys/cpuset.h>
++#include <sys/sysctl.h>
++#include <pthread_np.h>
++#elif defined(__DragonFly__)
++#include <sys/sysctl.h>
++#include <pthread_np.h>
++#endif
++
++
+ static struct config {
+     uint64_t connections;
+     uint64_t duration;
      uint64_t threads;
      uint64_t timeout;
      uint64_t pipeline;
@@ -8,15 +24,92 @@
      bool     delay;
      bool     dynamic;
      bool     latency;
-@@ -45,6 +46,7 @@ static void usage() {
++    bool     tcp_nodelay;
++    bool     bind_cpu;
+     char    *host;
+     char    *script;
+     SSL_CTX *ctx;
+@@ -44,8 +57,11 @@ static void handler(int sig) {
+ static void usage() {
      printf("Usage: wrk <options> <url>                            \n"
             "  Options:                                            \n"
++           "    -B, --bindcpu          Bind threads to CPUs       \n"
             "    -c, --connections <N>  Connections to keep open   \n"
-+           "        --connreqs    <N>  Max number of requests per connection\n"
++           "    -C, --connreqs    <N>  Max number of requests per connection\n"
             "    -d, --duration    <T>  Duration of test           \n"
++           "    -N, --delay            Disable TCP_NODELAY        \n"
             "    -t, --threads     <N>  Number of threads to use   \n"
             "                                                      \n"
-@@ -136,7 +138,14 @@ int main(int argc, char **argv) {
+            "    -s, --script      <S>  Load Lua script file       \n"
+@@ -61,6 +77,10 @@ static void usage() {
+ int main(int argc, char **argv) {
+     char *url, **headers = zmalloc(argc * sizeof(char *));
+     struct http_parser_url parts = {};
++#if defined(__FreeBSD__) || defined(__DragonFly__)
++    int ncpus;
++    size_t len;
++#endif
+ 
+     if (parse_args(&cfg, &url, &parts, headers, argc, argv)) {
+         usage();
+@@ -99,9 +119,26 @@ int main(int argc, char **argv) {
+         exit(1);
+     }
+ 
++#if defined(__FreeBSD__) || defined(__DragonFly__)
++    len = sizeof(ncpus);
++    if (sysctlbyname("hw.ncpu", &ncpus, &len, NULL, 0)) {
++        fprintf(stderr, "sysctlbyname hw.ncpu failed: %s\n", strerror(errno));
++        exit(1);
++    }
++#endif
++
+     cfg.host = host;
+ 
+     for (uint64_t i = 0; i < cfg.threads; i++) {
++        pthread_attr_t attr;
++#if defined(__FreeBSD__) || defined(__DragonFly__)
++#ifdef __FreeBSD__
++        cpuset_t mask;
++#else
++        cpu_set_t mask;
++#endif
++        int cpu, error;
++#endif
+         thread *t      = &threads[i];
+         t->loop        = aeCreateEventLoop(10 + cfg.connections * 3);
+         t->connections = cfg.connections / cfg.threads;
+@@ -120,11 +157,28 @@ int main(int argc, char **argv) {
+             }
+         }
+ 
+-        if (!t->loop || pthread_create(&t->thread, NULL, &thread_main, t)) {
++        pthread_attr_init(&attr);
++        if (cfg.bind_cpu) {
++#if defined(__FreeBSD__) || defined(__DragonFly__)
++            CPU_ZERO(&mask);
++            cpu = i % ncpus;
++            CPU_SET(cpu, &mask);
++            error = pthread_attr_setaffinity_np(&attr, sizeof(mask), &mask);
++            if (error) {
++                fprintf(stderr, "pthread_attr_setaffinity_np(cpu%d) failed: "
++                    "%s\n", cpu, strerror(error));
++                exit(1);
++            }
++#endif
++        }
++
++        t->requests = i; /* XXX steal requests as thread id */
++        if (!t->loop || pthread_create(&t->thread, &attr, &thread_main, t)) {
+             char *msg = strerror(errno);
+             fprintf(stderr, "unable to create thread %"PRIu64": %s\n", i, msg);
+             exit(2);
+         }
++        pthread_attr_destroy(&attr);
+     }
+ 
+     struct sigaction sa = {
+@@ -136,7 +190,14 @@ int main(int argc, char **argv) {
  
      char *time = format_time_s(cfg.duration);
      printf("Running %s test @ %s\n", time, url);
@@ -32,16 +125,65 @@
  
      uint64_t start    = time_us();
      uint64_t complete = 0;
-@@ -238,6 +247,8 @@ static int connect_socket(thread *thread, connection *c) {
+@@ -204,6 +265,15 @@ void *thread_main(void *arg) {
+ 
+     char *request = NULL;
+     size_t length = 0;
++    char name[16];
++
++    snprintf(name, sizeof(name), "wrkt%zd", thread->requests);
++    thread->requests = 0;
++#ifdef __linux__
++    pthread_setname_np(pthread_self(), name);
++#elif defined(__FreeBSD__) || defined(__DragonFly__)
++    pthread_set_name_np(pthread_self(), name);
++#endif
+ 
+     if (!cfg.dynamic) {
+         script_request(thread->L, &request, &length);
+@@ -238,17 +308,29 @@ static int connect_socket(thread *thread, connection *c) {
      struct aeEventLoop *loop = thread->loop;
      int fd, flags;
  
+-    fd = socket(addr->ai_family, addr->ai_socktype, addr->ai_protocol);
 +    c->requests = 0;
-+
-     fd = socket(addr->ai_family, addr->ai_socktype, addr->ai_protocol);
  
++#ifdef SOCK_NONBLOCK
++    fd = socket(addr->ai_family, addr->ai_socktype | SOCK_NONBLOCK, addr->ai_protocol);
++#else	/* !SOCK_NONBLOCK */
++    fd = socket(addr->ai_family, addr->ai_socktype, addr->ai_protocol);
++#ifdef FIONBIO
++    flags = 1;
++    ioctl(fd, FIONBIO, &flags, sizeof(flags));
++#else
      flags = fcntl(fd, F_GETFL, 0);
-@@ -348,7 +359,8 @@ static int response_complete(http_parser *parser) {
+     fcntl(fd, F_SETFL, flags | O_NONBLOCK);
++#endif
++#endif	/* SOCK_NONBLOCK */
+ 
+     if (connect(fd, addr->ai_addr, addr->ai_addrlen) == -1) {
+         if (errno != EINPROGRESS) goto error;
+     }
+ 
+-    flags = 1;
+-    setsockopt(fd, IPPROTO_TCP, TCP_NODELAY, &flags, sizeof(flags));
++    if (cfg.tcp_nodelay) {
++        flags = 1;
++        setsockopt(fd, IPPROTO_TCP, TCP_NODELAY, &flags, sizeof(flags));
++    }
+ 
+     flags = AE_READABLE | AE_WRITABLE;
+     if (aeCreateFileEvent(loop, fd, flags, socket_connected, c) == AE_OK) {
+@@ -264,7 +346,7 @@ static int connect_socket(thread *thread, connection *c) {
+ }
+ 
+ static int reconnect_socket(thread *thread, connection *c) {
+-    aeDeleteFileEvent(thread->loop, c->fd, AE_WRITABLE | AE_READABLE);
++    aeCloseFileEvent(thread->loop, c->fd, AE_WRITABLE | AE_READABLE);
+     sock.close(c);
+     close(c->fd);
+     return connect_socket(thread, c);
+@@ -348,7 +430,8 @@ static int response_complete(http_parser *parser) {
          aeCreateFileEvent(thread->loop, c->fd, AE_WRITABLE, socket_writeable, c);
      }
  
@@ -51,33 +193,45 @@
          reconnect_socket(thread, c);
          goto done;
      }
-@@ -476,6 +488,7 @@ static struct option longopts[] = {
+@@ -476,6 +559,9 @@ static struct option longopts[] = {
      { "timeout",     required_argument, NULL, 'T' },
      { "help",        no_argument,       NULL, 'h' },
      { "version",     no_argument,       NULL, 'v' },
 +    { "connreqs",    required_argument, NULL, 'C' },
++    { "delay",       no_argument,       NULL, 'N' },
++    { "bindcpu",     no_argument,       NULL, 'B' },
      { NULL,          0,                 NULL,  0  }
  };
  
-@@ -488,6 +501,7 @@ static int parse_args(struct config *cfg, char **url, struct http_parser_url *pa
+@@ -488,8 +574,10 @@ static int parse_args(struct config *cfg, char **url, struct http_parser_url *pa
      cfg->connections = 10;
      cfg->duration    = 10;
      cfg->timeout     = SOCKET_TIMEOUT_MS;
 +    cfg->connreqs    = UINT64_MAX;
++    cfg->tcp_nodelay = true;
  
-     while ((c = getopt_long(argc, argv, "t:c:d:s:H:T:Lrv?", longopts, NULL)) != -1) {
+-    while ((c = getopt_long(argc, argv, "t:c:d:s:H:T:Lrv?", longopts, NULL)) != -1) {
++    while ((c = getopt_long(argc, argv, "t:c:d:s:C:H:T:BLNrv?", longopts, NULL)) != -1) {
          switch (c) {
-@@ -517,6 +531,9 @@ static int parse_args(struct config *cfg, char **url, struct http_parser_url *pa
+             case 't':
+                 if (scan_metric(optarg, &cfg->threads)) return -1;
+@@ -517,6 +605,15 @@ static int parse_args(struct config *cfg, char **url, struct http_parser_url *pa
                  printf("wrk %s [%s] ", VERSION, aeGetApiName());
                  printf("Copyright (C) 2012 Will Glozer\n");
                  break;
++            case 'B':
++                cfg->bind_cpu = true;
++                break;
 +            case 'C':
 +                if (scan_metric(optarg, &cfg->connreqs)) return -1;
++                break;
++            case 'N':
++                cfg->tcp_nodelay = false;
 +                break;
              case 'h':
              case '?':
              case ':':
-@@ -532,11 +549,15 @@ static int parse_args(struct config *cfg, char **url, struct http_parser_url *pa
+@@ -532,11 +629,15 @@ static int parse_args(struct config *cfg, char **url, struct http_parser_url *pa
          return -1;
      }
  
