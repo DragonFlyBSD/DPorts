@@ -1,0 +1,11 @@
+--- j3d-core/build.xml.orig	2019-02-17 01:16:52.000000000 +0000
++++ j3d-core/build.xml	2019-02-17 01:17:09.000000000 +0000
+@@ -142,7 +142,7 @@
+     <echo message="version_file    = ${version_file}"/>
+   </target>
+ 
+-  <target name="setupFreeBSD" if="isFreeBSD">
++  <target name="setupFreeBSD" if="isDragonFly">
+     <property name="isUnix" value="true"/>
+     <property name="shell" value="/bin/sh"/>
+     <property name="wstype" value="x11"/>

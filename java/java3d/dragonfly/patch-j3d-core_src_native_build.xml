@@ -1,0 +1,18 @@
+--- j3d-core/src/native/build.xml.orig	2019-02-17 01:10:35.000000000 +0000
++++ j3d-core/src/native/build.xml	2019-02-17 01:15:52.000000000 +0000
+@@ -3,13 +3,13 @@
+ <!-- Ant file for building native files -->
+ <project name="j3d-core native" default="compile-opt">
+ 
+-  <target name="nativeSetup-debug-freebsd" if="isFreeBSD">
++  <target name="nativeSetup-debug-freebsd" if="isDragonFly">
+ 	<property name="bldFlag" value="-g -DDEBUG"/>
+ 	<property name="coreLibDependency" value="lib/${os.arch}/libj3dcore-ogl.so"/>
+         <property name="osNativeConfigTemplate3D" value="X11NativeConfigTemplate3D"/>
+         <property name="osNativeScreenInfo" value="X11NativeScreenInfo"/>
+   </target>
+-  <target name="nativeSetup-opt-freebsd" if="isFreeBSD">
++  <target name="nativeSetup-opt-freebsd" if="isDragonFly">
+ 	<property name="bldFlag" value="-O2"/>
+ 	<property name="coreLibDependency" value="lib/${os.arch}/libj3dcore-ogl.so"/>
+         <property name="osNativeConfigTemplate3D" value="X11NativeConfigTemplate3D"/>
