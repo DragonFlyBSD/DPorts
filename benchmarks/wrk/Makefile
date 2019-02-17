@@ -3,6 +3,7 @@
 
 PORTNAME=	wrk
 PORTVERSION=	4.1.0
+PORTREVISION=	1
 CATEGORIES=	benchmarks www
 
 MAINTAINER=	osa@FreeBSD.org
