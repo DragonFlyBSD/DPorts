@@ -1,0 +1,110 @@
+--- Makefile.in.orig	2015-09-22 03:59:28 +0200
++++ Makefile.in
+@@ -312,17 +312,12 @@
+ @ENABLE_DRM_COMPOSITOR_TRUE@	$(am__DEPENDENCIES_2) libshared.la \
+ @ENABLE_DRM_COMPOSITOR_TRUE@	libsession-helper.la \
+ @ENABLE_DRM_COMPOSITOR_TRUE@	$(am__DEPENDENCIES_3)
+-am__drm_backend_la_SOURCES_DIST = src/compositor-drm.c \
+-	src/libinput-seat.c src/libinput-seat.h src/libinput-device.c \
+-	src/libinput-device.h shared/helpers.h shared/timespec-util.h \
+-	src/libbacklight.c src/libbacklight.h src/vaapi-recorder.c \
++am__drm_backend_la_SOURCES_DIST = src/compositor-drm.c src/kbdev.c \
++	shared/helpers.h shared/timespec-util.h src/vaapi-recorder.c \
+ 	src/vaapi-recorder.h
+-am__objects_1 = src/drm_backend_la-libinput-seat.lo \
+-	src/drm_backend_la-libinput-device.lo
+ @ENABLE_DRM_COMPOSITOR_TRUE@@ENABLE_VAAPI_RECORDER_TRUE@am__objects_2 = src/drm_backend_la-vaapi-recorder.lo
+ @ENABLE_DRM_COMPOSITOR_TRUE@am_drm_backend_la_OBJECTS = src/drm_backend_la-compositor-drm.lo \
+-@ENABLE_DRM_COMPOSITOR_TRUE@	$(am__objects_1) \
+-@ENABLE_DRM_COMPOSITOR_TRUE@	src/drm_backend_la-libbacklight.lo \
++@ENABLE_DRM_COMPOSITOR_TRUE@	src/drm_backend_la-kbdev.lo \
+ @ENABLE_DRM_COMPOSITOR_TRUE@	$(am__objects_2)
+ drm_backend_la_OBJECTS = $(am_drm_backend_la_OBJECTS)
+ drm_backend_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
+@@ -1728,6 +1723,7 @@
+ EGL_TESTS_CFLAGS = @EGL_TESTS_CFLAGS@
+ EGL_TESTS_LIBS = @EGL_TESTS_LIBS@
+ EGREP = @EGREP@
++EVENT_LIBS = @EVENT_LIBS@
+ EXEEXT = @EXEEXT@
+ FBDEV_COMPOSITOR_CFLAGS = @FBDEV_COMPOSITOR_CFLAGS@
+ FBDEV_COMPOSITOR_LIBS = @FBDEV_COMPOSITOR_LIBS@
+@@ -2039,8 +2035,8 @@
+ @BUILD_WESTON_LAUNCH_TRUE@	$(SYSTEMD_LOGIN_CFLAGS)			\
+ @BUILD_WESTON_LAUNCH_TRUE@	$(LIBDRM_CFLAGS)
+ 
+-@BUILD_WESTON_LAUNCH_TRUE@weston_launch_LDADD = $(PAM_LIBS) $(SYSTEMD_LOGIN_LIBS) $(LIBDRM_LIBS)
+-pkgconfigdir = $(libdir)/pkgconfig
++@BUILD_WESTON_LAUNCH_TRUE@weston_launch_LDADD = $(PAM_LIBS) $(EVENT_LIBS) $(SYSTEMD_LOGIN_LIBS) $(LIBDRM_LIBS) -ldevattr -lprop
++pkgconfigdir = $(prefix)/libdata/pkgconfig
+ pkgconfig_DATA = src/weston.pc
+ wayland_sessiondir = $(datadir)/wayland-sessions
+ dist_wayland_session_DATA = src/weston.desktop
+@@ -2085,18 +2081,20 @@
+ @ENABLE_X11_COMPOSITOR_TRUE@	src/compositor-x11.c			\
+ @ENABLE_X11_COMPOSITOR_TRUE@	shared/helpers.h
+ 
+-INPUT_BACKEND_LIBS = $(LIBINPUT_BACKEND_LIBS)
+-INPUT_BACKEND_SOURCES = \
+-	src/libinput-seat.c			\
+-	src/libinput-seat.h			\
+-	src/libinput-device.c			\
+-	src/libinput-device.h			\
+-	shared/helpers.h
++INPUT_BACKEND_LIBS =
++#INPUT_BACKEND_LIBS = $(LIBINPUT_BACKEND_LIBS)
++#INPUT_BACKEND_SOURCES = \
++#	src/libinput-seat.c			\
++#	src/libinput-seat.h			\
++#	src/libinput-device.c			\
++#	src/libinput-device.h			\
++#	shared/helpers.h
+ 
+ @ENABLE_DRM_COMPOSITOR_TRUE@drm_backend_la_LDFLAGS = -module -avoid-version
+ @ENABLE_DRM_COMPOSITOR_TRUE@drm_backend_la_LIBADD =  \
+ @ENABLE_DRM_COMPOSITOR_TRUE@	$(COMPOSITOR_LIBS) \
+ @ENABLE_DRM_COMPOSITOR_TRUE@	$(DRM_COMPOSITOR_LIBS) \
++@ENABLE_DRM_COMPOSITOR_TRUE@	-ldevattr \
+ @ENABLE_DRM_COMPOSITOR_TRUE@	$(INPUT_BACKEND_LIBS) libshared.la \
+ @ENABLE_DRM_COMPOSITOR_TRUE@	-lrt libsession-helper.la \
+ @ENABLE_DRM_COMPOSITOR_TRUE@	$(am__append_9)
+@@ -2107,6 +2105,8 @@
+ @ENABLE_DRM_COMPOSITOR_TRUE@drm_backend_la_SOURCES =  \
+ @ENABLE_DRM_COMPOSITOR_TRUE@	src/compositor-drm.c \
+ @ENABLE_DRM_COMPOSITOR_TRUE@	$(INPUT_BACKEND_SOURCES) \
++@ENABLE_DRM_COMPOSITOR_TRUE@	shared/kbdev.h.c \
++@ENABLE_DRM_COMPOSITOR_TRUE@	shared/kbdev.h.h \
+ @ENABLE_DRM_COMPOSITOR_TRUE@	shared/helpers.h \
+ @ENABLE_DRM_COMPOSITOR_TRUE@	shared/timespec-util.h \
+ @ENABLE_DRM_COMPOSITOR_TRUE@	src/libbacklight.c \
+@@ -2314,6 +2314,7 @@
+ 
+ @BUILD_CLIENTS_TRUE@libtoytoolkit_la_LIBADD = \
+ @BUILD_CLIENTS_TRUE@	$(CLIENT_LIBS)				\
++@BUILD_CLIENTS_TRUE@	$(EVENT_LIBS)				\
+ @BUILD_CLIENTS_TRUE@	$(CAIRO_EGL_LIBS)			\
+ @BUILD_CLIENTS_TRUE@	libshared-cairo.la -lrt -lm
+ 
+@@ -3054,6 +3055,8 @@
+ 	$(AM_V_CCLD)$(desktop_shell_la_LINK) $(am_desktop_shell_la_rpath) $(desktop_shell_la_OBJECTS) $(desktop_shell_la_LIBADD) $(LIBS)
+ src/drm_backend_la-compositor-drm.lo: src/$(am__dirstamp) \
+ 	src/$(DEPDIR)/$(am__dirstamp)
++src/drm_backend_la-kbdev.lo: src/$(am__dirstamp) \
++	src/$(DEPDIR)/$(am__dirstamp)
+ src/drm_backend_la-libinput-seat.lo: src/$(am__dirstamp) \
+ 	src/$(DEPDIR)/$(am__dirstamp)
+ src/drm_backend_la-libinput-device.lo: src/$(am__dirstamp) \
+@@ -4210,6 +4213,13 @@
+ @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+ @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(drm_backend_la_CFLAGS) $(CFLAGS) -c -o src/drm_backend_la-compositor-drm.lo `test -f 'src/compositor-drm.c' || echo '$(srcdir)/'`src/compositor-drm.c
+ 
++src/drm_backend_la-kbdev.lo: src/kbdev.c
++@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(drm_backend_la_CFLAGS) $(CFLAGS) -MT src/drm_backend_la-kbdev.lo -MD -MP -MF src/$(DEPDIR)/drm_backend_la-kbdev.Tpo -c -o src/drm_backend_la-kbdev.lo `test -f 'src/kbdev.c' || echo '$(srcdir)/'`src/kbdev.c
++@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) src/$(DEPDIR)/drm_backend_la-kbdev.Tpo src/$(DEPDIR)/drm_backend_la-kbdev.Plo
++@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='src/kbdev.c' object='src/drm_backend_la-kbdev.lo' libtool=yes @AMDEPBACKSLASH@
++@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
++@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(drm_backend_la_CFLAGS) $(CFLAGS) -c -o src/drm_backend_la-kbdev.lo `test -f 'src/kbdev.c' || echo '$(srcdir)/'`src/kbdev.c
++
+ src/drm_backend_la-libinput-seat.lo: src/libinput-seat.c
+ @am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(drm_backend_la_CFLAGS) $(CFLAGS) -MT src/drm_backend_la-libinput-seat.lo -MD -MP -MF src/$(DEPDIR)/drm_backend_la-libinput-seat.Tpo -c -o src/drm_backend_la-libinput-seat.lo `test -f 'src/libinput-seat.c' || echo '$(srcdir)/'`src/libinput-seat.c
+ @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) src/$(DEPDIR)/drm_backend_la-libinput-seat.Tpo src/$(DEPDIR)/drm_backend_la-libinput-seat.Plo
