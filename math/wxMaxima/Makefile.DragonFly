@@ -1,2 +1,0 @@
-# otherwise it fails configure tests for linkage with wxWidgets
-USE_CXXSTD=	c++11
