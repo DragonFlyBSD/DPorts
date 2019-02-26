@@ -74,7 +74,7 @@ postfix:*:125:125::0:0:Postfix Mail System:/var/spool/postfix:/usr/sbin/nologin
 synapse:*:126:141::0:0:Synapse Daemon:/nonexistent:/usr/sbin/nologin
 navcron:*:127:127::0:0:Network Administration Visualized:/usr/local/nav:/usr/sbin/nologin
 sd-agent:*:128:128::0:0:ServerDensity Agent:/nonexistent:/usr/sbin/nologin
-# free: 129
+digdag:*:129:65534::0:0:digdag server:/nonexistent:/usr/sbin/nologin
 _bgpd:*:130:130::0:0:BGP Daemon:/var/empty:/usr/sbin/nologin
 _ospfd:*:131:131::0:0:OSPF Daemon:/var/empty:/usr/sbin/nologin
 _spamd:*:132:132::0:0:Spam Daemon:/var/empty:/usr/sbin/nologin
@@ -298,8 +298,7 @@ sonarr:*:351:351::0:0:Sonarr PVR:/nonexistent:/usr/sbin/nologin
 radarr:*:352:352::0:0:Radarr Daemon:/nonexistent:/usr/sbin/nologin
 _iodined:*:353:353::0:0:Iodine Daemon:/nonexistent:/usr/sbin/nologin
 jackett:*:354:354::0:0:Jackett Torznab Proxy Daemon:/nonexistent:/usr/sbin/nologin
-# free: 354
-# free: 355
+nzbhydra2:*:355:355::0:0:NZBHydra 2 Daemon:/nonexistent:/usr/sbin/nologin
 # free: 356
 # free: 357
 # free: 358
@@ -549,7 +548,7 @@ _tss:*:601:601:daemon:0:0:TrouSerS user:/var/empty:/usr/sbin/nologin
 _pkcs11:*:602:602:daemon:0:0:opencryptoki user:/var/empty:/usr/sbin/nologin
 _acme:*:603:603::0:0:ACME client user:/var/empty:/usr/sbin/nologin
 # free: 604
-# free: 605
+_hockeypuck:*:605:605::0:0:hockeypuck pgp keyserver user:/var/empty:/usr/sbin/nologin
 # free: 606
 # free: 607
 # free: 608
@@ -794,8 +793,8 @@ sogod:*:846:846::0:0:SOGo groupware:/nonexistent:/usr/sbin/nologin
 domoticz:*:847:847::0:0:domoticz user:/nonexistent:/usr/sbin/nologin
 graylog:*:848:848::0:0:Graylog user:/nonexistent:/usr/sbin/nologin
 chronyd:*:849:849::0:0:chronyd user:/nonexistent:/usr/sbin/nologin
-# free: 850
-# free: 851
+qbittorrent:*:850:850::0:0:qBittorrent Daemon User:/var/db/qbittorrent/conf:/usr/sbin/nologin
+cassandra:*:851:851::0:0:Cassandra DB Daemon User:/var/db/cassandra:/usr/sbin/nologin
 # free: 852
 _geodns:*:853:853::0:0:GeoDNS User:/var/empty:/usr/sbin/nologin
 # free: 854

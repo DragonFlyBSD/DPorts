@@ -293,7 +293,7 @@ sonarr:*:351:
 radarr:*:352:
 _iodined:*:353:
 jackett:*:354:
-# free: 355
+nzbhydra2:*:355:
 # free: 356
 # free: 357
 # free: 358
@@ -543,7 +543,7 @@ _tss:*:601:
 _pkcs11:*:602:
 _acme:*:603:
 # free: 604
-# free: 605
+_hockeypuck:*:605:
 # free: 606
 # free: 607
 # free: 608
@@ -788,8 +788,8 @@ sogod:*:846:
 domoticz:*:847:
 graylog:*:848:
 chronyd:*:849:
-# free: 850
-# free: 851
+qbittorrent:*:850:
+cassandra:*:851:
 # free: 852
 _geodns:*:853:
 # free: 854
