@@ -1,8 +1,9 @@
 # If multiple repositories are enabled, packages are taken in order in which
 # the enabled repositories are listed.
 
+# United States, California
 Avalon: {
-	url		: http://mirror-master.dragonflybsd.org/dports/${ABI}/LATEST,
+	url		: https://mirror-master.dragonflybsd.org/dports/${ABI}/LATEST,
 	mirror_type	: NONE,
 	signature_type	: NONE,
 	pubkey		: NONE,
@@ -10,17 +11,156 @@ Avalon: {
 	enabled		: yes
 }
 
-IRCAM: {
-	url		: http://mirrors.ircam.fr/pub/DragonFlyBSD-dports/${ABI}/LATEST,
+# United States, New York
+NYCBUG: {
+	url		: https://mirrors.nycbug.org/pub/DragonflyBSD/dports/${ABI}/LATEST,
 	enabled		: no
 }
 
+# Canada
+MUUG: {
+	url		: https://muug.ca/mirror/dragonflybsd/dports/${ABI}/LATEST,
+	enabled		: no
+}
+
+# Ecuador
+EPN: {
+	url		: https://mirror.epn.edu.ec/dragonflybsd/dports/${ABI}/LATEST,
+	enabled		: no
+}
+
+# Ecuador
+REDCEDIA: {
+	url		: https://mirror.cedia.org.ec/dragonflybsd/dports/${ABI}/LATEST,
+	enabled		: no
+}
+
+# Ecuador
+UTA: {
+	url		: https://mirror.cedia.org.ec/dragonflybsd/dports/${ABI}/LATEST,
+	enabled		: no
+}
+
+# Ecuador
+UCE: {
+	url		: https://mirror.uce.edu.ec/dragonflybsd/dports/${ABI}/LATEST,
+	enabled		: no
+}
+# Hong Kong
+KoDDoS: {
+	url		: https://mirror-hk.koddos.net/dragonflybsd/dports/${ABI}/LATEST,
+	enabled		: no
+}
+
+# Japan
+JAIST: {
+	url		: https://mirror-hk.koddos.net/dragonflybsd/dports/${ABI}/LATEST,
+	enabled		: no
+}
+
+# Taiwan
+TWAREN: {
+	url		: http://ftp.twaren.net/BSD/DragonFlyBSD/dports/${ABI}/LATEST,
+	enabled		: no
+}
+
+# Belarus
+Beltelecom: {
+	url		: https://mirror.datacenter.by/pub/DragonFlyBSD/dports/${ABI}/LATEST,
+	enabled		: no
+}
+
+# Denmark
+Aalborg: {
+	url		: https://mirrors.dotsrc.org/dragonflybsd/dports/${ABI}/LATEST,
+	enabled		: no
+}
+
+# France
+IRCAM: {
+	url		: https://mirrors.ircam.fr/pub/DragonFlyBSD-dports/${ABI}/LATEST,
+	enabled		: no
+}
+
+# France
 Wolfpond: {
 	url		: http://pkg.wolfpond.org/${ABI}/LATEST,
 	enabled		: no
 }
 
-NYCBUG: {
-	url		: http://mirrors.nycbug.org/pub/DragonflyBSD/dports/${ABI}/LATEST,
+# Germany
+GmbH: {
+	url		: https://mirror.checkdomain.de/dragonflybsd/dports/${ABI}/LATEST,
+	enabled		: no
+}
+
+# Germany
+HerrBischoff: {
+	url		: https://mirror.herrbischoff.com/dragonfly/dports/${ABI}/LATEST,
+	enabled		: no
+}
+
+# Germany
+Marburg: {
+	url		: https://mirror.herrbischoff.com/dragonfly/dports/${ABI}/LATEST,
+	enabled		: no
+}
+
+# Greece
+UOC: {
+	url		: https://ftp.cc.uoc.gr/mirrors/DragonFly/dports/${ABI}/LATEST,
+	enabled		: no
+}
+
+# Italy
+GARR: {
+	url		: https://dragonflybsd.mirror.garr.it/mirrors/dragonflybsd/dports/${ABI}/LATEST,
+	enabled		: no
+}
+
+# Netherlands
+KoDDoS2: {
+	url		: https://mirror.koddos.net/dragonflybsd/dports/${ABI}/LATEST,
+	enabled		: no
+}
+
+# Poland
+ICM: {
+	url		: https://ftp.icm.edu.pl/pub/BSD/dragonflybsd/dports/${ABI}/LATEST,
+	enabled		: no
+}
+
+# Russia
+TochLab: {
+	url		: https://mirror.tochlab.net/pub/DragonFlyBSD/dports/${ABI}/LATEST,
+	enabled		: no
+}
+# Serbia
+fourdots: {
+	url		: https://fourdots.com/mirror/DragonflyBSD/dports/${ABI}/LATEST,
+	enabled		: no
+}
+
+# Sweden
+ACCUMU: {
+	url		: https://ftp.acc.umu.se/mirror/dragonflybsd.org/dports/${ABI}/LATEST,
+	enabled		: no
+}
+
+# United Kingdom
+Bytemark: {
+	url		: https://mirror.bytemark.co.uk/dragonflybsd/dports/${ABI}/LATEST,
+	enabled		: no
+}
+
+# United Kingdom
+Coreix: {
+	url		: http://mirrors.coreix.net/dragonflybsd/dports/${ABI}/LATEST,
+	enabled		: no
+}
+
+# United Kingdom
+UOK: {
+	url		: https://www.mirrorservice.org/sites/ftp.dragonflybsd.org/dports/${ABI}/LATEST,
 	enabled		: no
 }
