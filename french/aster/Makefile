@@ -3,13 +3,19 @@
 
 PORTNAME=	aster
 DISTVERSION=	${ASTER_DISTVERSION}
-CATEGORIES=	french cad
+PORTREVISION=	1
 CATEGORIES=	french cad
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Code_Aster finite element method solver
 
 LICENSE=	GPLv2
+
+DEPRECATED=		Qt4 has been EOL since december 2015
+EXPIRATION_DATE=	2019-03-15
+
+BROKEN_FreeBSD_12=	does not build (sed: ${STAGEDIR}${inst_dir}/${VE}/aster.conf: No such file or directory)
+BROKEN_FreeBSD_13=	does not build (sed: ${STAGEDIR}${inst_dir}/${VE}/aster.conf: No such file or directory)
 
 #-----------------------------------------------------------------------
 # You may define these options:
@@ -34,27 +40,23 @@ LICENSE=	GPLv2
 BUILD_DEPENDS+=	astk-serveur>0:cad/astk-serveur	\
 		${SHELL_INSTALL_ASTER}:shells/${SHIADEP}	\
 		${LOCALBASE}/lib/libscotch.a:cad/scotch		\
-		${LOCALBASE}/lib/libGKlib.a:math/metis-edf	\
 		pylupdate4:textproc/py-qt4-xml			\
 		gnproc:sysutils/coreutils			\
-		python:lang/python				\
 		bash:shells/bash				\
 		${PYNUMPY}
 LIB_DEPENDS+=	libhdf5-18.so:science/hdf5-18			\
-		libmetis.so.2:math/metis-edf			\
+		libmetis.so:math/metis			\
+		libomp.so:devel/openmp				\
 		libmed.so:french/med
-#		libomp.so:devel/openmp
 #		libAsterInterface.so:science/mfront
 #		libAsterInterface.so:science/tfel
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}gnuplot>0:math/py-gnuplot\
+RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}gnuplot>0:math/py-gnuplot@${PY_FLAVOR} \
 		${SHELL_INSTALL_ASTER}:shells/${SHIADEP}	\
 		astk-serveur>0:cad/astk-serveur
 
-BROKEN_FreeBSD_12=	does not build (sed: ${STAGEDIR}${inst_dir}/${VE}/aster.conf: No such file or directory)
-
-USES=		bison fortran gettext python:2 tk
+USES=		bison fortran gettext python:2.7 qt:4 tk
 USE_BINUTILS=	yes
-USE_QT4=	linguisttools_build
+USE_QT=		linguisttools_build
 
 .if defined(WITH_ATLAS)
 USES+=		blaslapack:atlas
@@ -68,6 +70,8 @@ MAKE_ENV=	INCLUDES="${LOCALBASE}/include/hdf5-18 ${LOCALBASE}/include"	\
 		LD_PRELOAD="${LOCALBASE}/lib/gcc${_GCC_VER}/libgcc_s.so.1"	\
 		LINKFLAGS="${LDFLAGS}" LD_LIBRARY_PATH="${LOCALBASE}/lib/gcc${_GCC_VER}"
 REINPLACE_ARGS=	-i ""
+
+BINARY_ALIAS=	python=${PYTHON_CMD}
 
 VER=		${PORTVERSION:R}
 VE=		${VER:R}
