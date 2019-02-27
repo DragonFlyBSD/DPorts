@@ -3,7 +3,6 @@
 
 PORTNAME=	knights
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
-PORTREVISION=	1
 CATEGORIES=	games kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -13,7 +12,7 @@ RUN_DEPENDS=	${LOCALBASE}/bin/gnuchess:games/gnuchess
 
 LICENSE=	GPLv2
 
-USES=		cmake kde:5 qt:5 tar:xz
+USES=		cmake compiler:c++11-lang kde:5 qt:5 tar:xz
 USE_KDE=	auth codecs completion config configwidgets coreaddons \
 		crash dbusaddons i18n libkdegames package plasma-framework \
 		plotting service solid sonnet textwidgets wallet \
