@@ -1,0 +1,6 @@
+# XXX - Ugly hack to remove on next update!!!
+# I don't know if this is even remotely correct :)
+#
+MASTER_SITE_AVALON:=    https://avalon.dragonflybsd.org/misc/distfiles/${DIST_SUBDIR}/
+MASTER_SITES+=          AVALON:AVALON,avalon
+DISTFILES=      	${DISTNAME}${EXTRACT_SUFX} htmlxref.cnf:avalon texi2dvi:avalon texinfo.tex:avalon
