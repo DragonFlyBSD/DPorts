@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	worker
-PORTVERSION=	3.15.2
-PORTREVISION=	1
+PORTVERSION=	3.15.3
 CATEGORIES=	x11-fm
 MASTER_SITES=	http://www.boomerangsworld.de/cms/worker/downloads/
 
@@ -46,5 +45,9 @@ LUA_USES=	lua:51
 
 XFT_CONFIGURE_OFF=	--disable-xft
 XFT_USE=	xorg=xft
+
+.if exists(/usr/lib/libstdc++.so)
+CXXFLAGS+=	-Wno-error=narrowing
+.endif
 
 .include <bsd.port.mk>
