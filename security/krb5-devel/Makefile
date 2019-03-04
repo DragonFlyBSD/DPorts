@@ -3,12 +3,13 @@
 
 PORTNAME=		krb5
 PORTVERSION=		1.18.${MIT_COMMIT_DATE}
+PORTREVISION=		1
 CATEGORIES=		security
 .if !defined(MASTERDIR)
 PKGNAMESUFFIX=		-devel
 .endif
-HASH=			8d8e682
-MIT_COMMIT_DATE=	2019.01.17
+HASH=			51d3f2a
+MIT_COMMIT_DATE=	2019.02.09
 
 PATCH_SITES=		http://web.mit.edu/kerberos/advisories/
 PATCH_DIST_STRIP=	-p2
@@ -107,6 +108,8 @@ CONFIGURE_ARGS+=	--program-transform-name="${PROGRAM_TRANSFORM_NAME}"
 post-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/share/doc/krb5
 	${ECHO_CMD} @dir share/doc/krb5 >> ${TMPPLIST}
+	@${SED} "s|%%PREFIX%%|${PREFIX}|" ${FILESDIR}/kdc.in > ${STAGEDIR}${PREFIX}/sbin/kdc; \
+	${CHMOD} +x ${STAGEDIR}${PREFIX}/sbin/kdc
 
 post-install-LDAP-on:
 	${MKDIR} ${STAGEDIR}${DATADIR}
