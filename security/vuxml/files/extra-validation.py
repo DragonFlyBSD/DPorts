@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# $FreeBSD: head/security/vuxml/files/extra-validation.py 469775 2018-05-13 06:16:49Z riggs $
+# $FreeBSD: head/security/vuxml/files/extra-validation.py 491045 2019-01-23 16:03:33Z zi $
 
 import datetime
 import xml.etree.ElementTree as ET
@@ -11,6 +11,7 @@ if len(sys.argv) != 2:
     sys.exit(1)
 
 re_date = re.compile(r'^(19|20)[0-9]{2}-[0-9]{2}-[0-9]{2}$')
+re_invalid_package_name = re.compile('[@!#$%^&*()<>?/\|}{~:]')
 
 # warn if description has more than X characters
 DESCRIPTION_LENGTH = 5000
@@ -88,5 +89,16 @@ for vuln in root:
         if description_len > DESCRIPTION_LENGTH:
             print("Warning: description too long ({0} chars, {1} is warning threshold): {2})" \
                   .format(description_len, DESCRIPTION_LENGTH, vid))
+
+        # Walk and validate package names
+        affects = vuln.find(namespace + "affects")
+        packages = affects.findall(namespace + "package")
+        for package in packages:
+            names = package.findall(namespace + "name")
+
+            for name in names:
+                if (re_invalid_package_name.search(name.text) is not None):
+                    print("Error: invalid package name: " + name.text + " for VID " + format(vid))
+                    ret = 1
 
 sys.exit(ret)
