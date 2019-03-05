@@ -11,3 +11,7 @@ OPTIONS_DEFAULT+=	DBUS
 DBUS_CONFIGURE_WITH=atk-bridge
 DBUS_LIB_DEPENDS=libatk-bridge-2.0.so:${PORTSDIR}/accessibility/at-spi2-atk
 DBUS_DESC=	AT-SPI ATK bridge support (hidden depends on devel/dbus)
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/\(PANGO_PACKAGES="pango pangocairo\)"/\1 fribidi"/' \
+		${WRKSRC}/configure
