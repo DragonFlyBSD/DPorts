@@ -1,3 +1,5 @@
+LLD_UNSAFE=yes # Needs linker to provide library search paths.
+
 LIB_DEPENDS+=	libxml2.so:textproc/libxml2 \
 		libxslt.so:textproc/libxslt
 
