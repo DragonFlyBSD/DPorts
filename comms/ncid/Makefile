@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	ncid
-PORTVERSION=	1.10
+PORTVERSION=	1.10.1
 CATEGORIES=	comms
 MASTER_SITES=	SF
 DISTNAME=	${PORTNAME}-${PORTVERSION}-src
@@ -59,6 +59,10 @@ post-patch:
 		-e 's|$$(prefix)/share|$${PREFIX}/share|g' \
 		-e 's|$$(SHARE)/man|$${MANPREFIX}/man/|g' \
 		-e 's|$$(SHARE)/ncid|$${DATADIR}|g' ${WRKSRC}/Makefile
+.if exists(/usr/lib/libstdc++.so)
+	@${REINPLACE_CMD} -e 's|-Wno-stringop-truncation||g' \
+		${WRKSRC}/Makefile ${WRKSRC}/server/Makefile
+.endif
 
 do-install:
 	@${MKDIR} ${STAGEDIR}${ETCDIR}

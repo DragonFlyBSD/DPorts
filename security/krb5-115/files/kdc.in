@@ -1,0 +1,5 @@
+#!/bin/sh -
+# $FreeBSD: head/security/krb5-115/files/kdc.in 492968 2019-02-15 04:37:25Z cy $
+
+set -- $(echo "$*" | sed 's/--detach//')
+exec %%PREFIX%%/sbin/krb5kdc "$@"

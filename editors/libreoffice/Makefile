@@ -2,7 +2,7 @@
 
 .include "${.CURDIR}/Makefile.common"
 
-PORTREVISION=	5
+PORTREVISION=	6
 MASTER_SITES=	https://download.documentfoundation.org/libreoffice/src/${PORTVERSION}/ \
 		https://dev-www.libreoffice.org/src/:src \
 		https://dev-www.libreoffice.org/extern/:ext
@@ -289,6 +289,12 @@ CXXFLAGS_WARN=	-Wno-deprecated-declarations \
 post-patch:
 	${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|' \
 	    ${WRKSRC}/shell/source/unix/exec/shellexec.cxx
+	# Fix with poppler 0.73
+	${REINPLACE_CMD} -e 's|Guchar|unsigned char|g' \
+		${WRKSRC}/sdext/source/pdfimport/xpdfwrapper/pdfioutdev_gpl.cxx \
+		${WRKSRC}/sdext/source/pdfimport/xpdfwrapper/pdfioutdev_gpl.hxx \
+		${WRKSRC}/sdext/source/pdfimport/xpdfwrapper/pnghelper.cxx
+
 .if ${COMPILER_FEATURES:Mlibstdc++}
 	${REINPLACE_CMD} -e 's/gb_CC/gb_CXX/' ${WRKSRC}/solenv/gbuild/platform/unxgcc.mk
 .endif

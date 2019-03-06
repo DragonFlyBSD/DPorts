@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	musicpd
-PORTVERSION=	0.21.4
+PORTVERSION=	0.21.5
 CATEGORIES=	audio ipv6
 MASTER_SITES=	https://www.musicpd.org/download/mpd/${PORTVERSION:R}/
 DISTNAME=	mpd-${PORTVERSION}
@@ -45,7 +45,7 @@ OPTIONS_RADIO_ZEROCONF=	AVAHI MDNSRESPONDER
 OPTIONS_RADIO_RESAMPLER=	SAMPLERATE SOXR
 
 OPTIONS_MULTI=	FILE_FORMAT
-OPTIONS_MULTI_FILE_FORMAT= \
+OPTIONS_MULTI_FILE_FORMAT=	\
 			ADPLUG AUDIOFILE FAAD FFMPEG FLAC FLUIDSYNTH \
 			GME MAD MIKMOD MODPLUG MPG123 MUSEPACK \
 			OPUS SIDPLAY2 SNDFILE TWOLAME \
@@ -53,7 +53,7 @@ OPTIONS_MULTI_FILE_FORMAT= \
 
 OPTIONS_GROUP=	ACCESS PLAYBACK
 
-OPTIONS_GROUP_ACCESS=	CDPARANOIA CURL MMS QOBUZ SMB SOUNDCLOUD TIDAL YAJL
+OPTIONS_GROUP_ACCESS=	CDPARANOIA CURL MMS PLAYLISTS QOBUZ SMB SOUNDCLOUD TIDAL YAJL
 
 OPTIONS_GROUP_PLAYBACK=	AO JACK OPENAL PULSEAUDIO \
 			SHOUTCAST SNDIO
@@ -64,6 +64,7 @@ GME_DESC=	GME support (video game music files)
 ISO9660_DESC=	Direct support for ISO 9660 images
 PROXYDB_DESC=	Proxy database support via libmpdclient
 LAME_DESC=	Support for MP3 Icecast Streams
+PLAYLISTS_DESC=	Enable extra playlist support (wma, RSS)
 QOBUZ_DESC=	Streaming service support: Qobuz
 SIDPLAY2_DESC=	Sidplay support (C64 mono and stereo files)
 SOUNDCLOUD_DESC=Streaming service support: SoundCloud
@@ -74,116 +75,118 @@ WILDMIDI_DESC=	WildMIDI support (MIDI files)
 YAJL_DESC=	JSON support via libyajl
 ZZIP_DESC=	Support for zzip archives
 
-OPTIONS_DEFAULT=AUDIOFILE CURL FFMPEG FLAC ID3TAG MAD SNDFILE \
+OPTIONS_DEFAULT=AUDIOFILE CURL FFMPEG FLAC ID3TAG MAD PLAYLISTS SNDFILE \
 		VORBIS VORBISENC
 
 # Decoder plugins
-ADPLUG_MESON_ON=	-Dadplug=enabled
+ADPLUG_MESON_ENABLED=	adplug
 ADPLUG_LIB_DEPENDS=	libadplug.so:audio/libadplug
-AUDIOFILE_MESON_ON=	-Daudiofile=enabled
+AUDIOFILE_MESON_ENABLED=audiofile
 AUDIOFILE_LIB_DEPENDS=	libaudiofile.so:audio/libaudiofile
-FAAD_MESON_ON=		-Dfaad=enabled
+FAAD_MESON_ENABLED=	faad
 FAAD_LIB_DEPENDS=	libfaad.so:audio/faad
-FFMPEG_MESON_ON=	-Dffmpeg=enabled
+FFMPEG_MESON_ENABLED=	ffmpeg
 FFMPEG_LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg \
 			libavformat.so:multimedia/ffmpeg \
 			libavutil.so:multimedia/ffmpeg
-FLAC_MESON_ON=		-Dflac=enabled
+FLAC_MESON_ENABLED=	flac
 FLAC_LIB_DEPENDS=	libFLAC.so:audio/flac
-FLUIDSYNTH_MESON_ON=	-Dfluidsynth=enabled
+FLUIDSYNTH_MESON_ENABLED=	fluidsynth
 FLUIDSYNTH_LIB_DEPENDS=	libfluidsynth.so:audio/fluidsynth
-GME_MESON_ON=		-Dgme=enabled
+GME_MESON_ENABLED=	gme
 GME_LIB_DEPENDS=	libgme.so:audio/libgme
-MAD_MESON_ON=		-Dmad=enabled
+MAD_MESON_ENABLED=	mad
 MAD_LIB_DEPENDS=	libmad.so:audio/libmad
-MIKMOD_MESON_ON=	-Dmikmod=enabled
+MIKMOD_MESON_ENABLED=	mikmod
 MIKMOD_LIB_DEPENDS=	libmikmod.so:audio/libmikmod
-MODPLUG_MESON_ON=	-Dmodplug=enabled
+MODPLUG_MESON_ENABLED=	modplug
 MODPLUG_LIB_DEPENDS=	libmodplug.so:audio/libmodplug
-MPG123_MESON_ON=	-Dmpg123=enabled
+MPG123_MESON_ENABLED=	mpg123
 MPG123_LIB_DEPENDS=	libmpg123.so:audio/mpg123
-MUSEPACK_MESON_ON=	-Dmpcdec=enabled
+MUSEPACK_MESON_ENABLED=	mpcdec
 MUSEPACK_LIB_DEPENDS=	libmpcdec.so:audio/musepack
-OPUS_MESON_ON=		-Dopus=enabled
+OPUS_MESON_ENABLED=		opus
 OPUS_LIB_DEPENDS=	libopus.so:audio/opus \
 			libogg.so:audio/libogg
-SIDPLAY2_MESON_ON=	-Dsidplay=enabled
+PLAYLISTS_MESON_ENABLED=expat
+PLAYLISTS_LIB_DEPENDS=	libexpat.so:textproc/expat2
+SIDPLAY2_MESON_ENABLED=	sidplay
 SIDPLAY2_LIB_DEPENDS=	libsidplay2.so:audio/libsidplay2
 SIDPLAY2_LDFLAGS=	-L${LOCALBASE}/lib/sidplay/builders
-SNDFILE_MESON_ON=	-Dsndfile=enabled
+SNDFILE_MESON_ENABLED=	sndfile
 SNDFILE_LIB_DEPENDS=	libsndfile.so:audio/libsndfile
-VORBIS_MESON_ON=	-Dvorbis=enabled
+VORBIS_MESON_ENABLED=	vorbis
 VORBIS_LIB_DEPENDS=	libvorbis.so:audio/libvorbis
-WAVPACK_MESON_ON=	-Dwavpack=enabled
+WAVPACK_MESON_ENABLED=	wavpack
 WAVPACK_LIB_DEPENDS=	libwavpack.so:audio/wavpack
-WILDMIDI_MESON_ON=	-Dwildmidi=enabled
+WILDMIDI_MESON_ENABLED=	wildmidi
 WILDMIDI_LIB_DEPENDS=	libWildMidi.so:audio/wildmidi
 
 # Encoder plugins
-VORBISENC_MESON_ON=	-Dvorbisenc=enabled
+VORBISENC_MESON_ENABLED=	vorbisenc
 VORBISENC_LIB_DEPENDS=	libvorbisenc.so:audio/libvorbis
-LAME_MESON_ON=		-Dlame=enabled
+LAME_MESON_ENABLED=	lame
 LAME_LIB_DEPENDS=	libmp3lame.so:audio/lame
-TWOLAME_MESON_ON=	-Dtwolame=enabled
+TWOLAME_MESON_ENABLED=	twolame
 TWOLAME_LIB_DEPENDS=	libtwolame.so:audio/twolame
 
 # Filter plugins
-SAMPLERATE_MESON_ON=	-Dlibsamplerate=enabled
+SAMPLERATE_MESON_ENABLED=	libsamplerate
 SAMPLERATE_LIB_DEPENDS=	libsamplerate.so:audio/libsamplerate
-SOXR_MESON_ON=		-Dsoxr=enabled
+SOXR_MESON_ENABLED=	soxr
 SOXR_LIB_DEPENDS=	libsoxr.so:audio/libsoxr
 
 # Output plugins
-AO_MESON_ON=		-Dao=enabled
+AO_MESON_ENABLED=	ao
 AO_LIB_DEPENDS=		libao.so:audio/libao
-JACK_MESON_ON=		-Djack=enabled
+JACK_MESON_ENABLED=	jack
 JACK_LIB_DEPENDS=	libjack.so:audio/jack
-OPENAL_MESON_ON=	-Dopenal=enabled
+OPENAL_MESON_ENABLED=	openal
 OPENAL_USES=		openal
-PULSEAUDIO_MESON_ON=	-Dpulse=enabled
+PULSEAUDIO_MESON_ENABLED=	pulse
 PULSEAUDIO_LIB_DEPENDS=	libpulse.so:audio/pulseaudio
-SHOUTCAST_MESON_ON=	-Dshout=enabled
+SHOUTCAST_MESON_ENABLED=shout
 SHOUTCAST_LIB_DEPENDS=	libshout.so:audio/libshout
 SHOUTCAST_IMPLIES=	VORBIS
-SNDIO_MESON_ON=		-Dsndio=enabled
+SNDIO_MESON_ENABLED=	sndio
 SNDIO_LIB_DEPENDS=	libsndio.so:audio/sndio
 
 # Input plugins
-CDPARANOIA_MESON_ON=	-Dcdio_paranoia=enabled
+CDPARANOIA_MESON_ENABLED=	cdio_paranoia
 CDPARANOIA_LIB_DEPENDS=	libcdda_paranoia.so:audio/cdparanoia
-CURL_MESON_ON=		-Dcurl=enabled
+CURL_MESON_ENABLED=	curl
 CURL_LIB_DEPENDS=	libcurl.so:ftp/curl
-MMS_MESON_ON=		-Dmms=enabled
+MMS_MESON_ENABLED=	mms
 MMS_LIB_DEPENDS=	libmms.so:net/libmms
-SMB_MESON_ON=		-Dsmbclient=enabled
+SMB_MESON_ENABLED=	smbclient
 SMB_USES=		samba:lib
 
 # Archive plugins
-ZZIP_MESON_ON=		-Dzzip=enabled
+ZZIP_MESON_ENABLED=	zzip
 ZZIP_LIB_DEPENDS=	libzzip.so:devel/zziplib
-ISO9660_MESON_ON=	-Diso9660=enabled
+ISO9660_MESON_ENABLED=	iso9660
 ISO9660_LIB_DEPENDS=	libcdio_paranoia.so:sysutils/libcdio-paranoia
 
 # Database plugins
-SQLITE3_MESON_ON=	-Dsqlite=enabled
+SQLITE3_MESON_ENABLED=	sqlite
 SQLITE3_LIB_DEPENDS=	libsqlite3.so:databases/sqlite3
-PROXYDB_MESON_ON=	-Dlibmpdclient=enabled
+PROXYDB_MESON_ENABLED=	libmpdclient
 PROXYDB_LIB_DEPENDS=	libmpdclient.so:audio/libmpdclient
 
 # Tag plugins
-ID3TAG_MESON_ON=	-Did3tag=enabled
+ID3TAG_MESON_ENABLED=	id3tag
 ID3TAG_LIB_DEPENDS=	libid3tag.so:audio/libid3tag
 
 # Network support
-IPV6_MESON_ON=		-Dipv6=enabled
+IPV6_MESON_ENABLED=	ipv6
 
 # Commercial service support
-QOBUZ_MESON_ON=		-Dqobuz=enabled
+QOBUZ_MESON_ENABLED=	qobuz
 QOBUZ_LIB_DEPENDS=	libgcrypt.so:security/libgcrypt
 QOBUZ_IMPLIES=		CURL YAJL
-SOUNDCLOUD_MESON_ON=	-Dsoundcloud=enabled
+SOUNDCLOUD_MESON_ENABLED=	soundcloud
 SOUNDCLOUD_IMPLIES=	CURL YAJL
-TIDAL_MESON_ON=		-Dtidal=enabled
+TIDAL_MESON_ENABLED=	tidal
 TIDAL_IMPLIES=		CURL YAJL
 
 # Misc library suppore
@@ -191,7 +194,7 @@ AVAHI_MESON_ON=		-Dzeroconf=avahi
 AVAHI_LIB_DEPENDS=	libavahi-client.so:net/avahi-app
 MDNSRESPONDER_MESON_ON=		-Dzeroconf=bonjour
 MDNSRESPONDER_LIB_DEPENDS=	libdns_sd.so:net/mDNSResponder
-YAJL_MESON_ON=		-Dyajl=enabled
+YAJL_MESON_ENABLED=	yajl
 YAJL_LIB_DEPENDS=	libyajl.so:devel/yajl
 
 MPDUSER?=	mpd

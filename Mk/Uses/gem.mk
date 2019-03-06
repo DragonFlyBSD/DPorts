@@ -73,13 +73,10 @@ GEMFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 RUBYGEM_ARGS=-l --no-update-sources --install-dir ${STAGEDIR}${PREFIX}/lib/ruby/gems/${RUBY_VER} --ignore-dependencies --bindir=${STAGEDIR}${PREFIX}/bin
 
-# below condition ALWAYS true (somebody brainfarted here)
-# Just disable rdoc unconditionally.  it freezes with 100% CPU sometimes
-# .if ${PORT_OPTIONS:MDOCS}
-# RUBYGEM_ARGS+=	--rdoc --ri
-# .else
-RUBYGEM_ARGS+=	--no-rdoc --no-ri
-# .endif
+# Until we figure out why generating the documentation (rdoc, ri)
+# freezes randomly with a 100% CPU usage we'll disable the documentation
+# generation entirely
+RUBYGEM_ARGS+=	--no-document
 
 .if !target(do-extract)
 do-extract:
@@ -106,7 +103,7 @@ do-build:
 
 .if !target(do-install)
 do-install:
-	(cd ${BUILD_WRKSRC}; ${SETENV} ${GEM_ENV} ${RUBYGEMBIN} install ${RUBYGEM_ARGS} ${GEMFILES} -- --build-args ${CONFIGURE_ARGS})
+	(cd ${BUILD_WRKSRC}; ${SETENV} ${GEM_ENV} ${RUBYGEMBIN} install ${RUBYGEM_ARGS} ${GEMFILES} -- ${CONFIGURE_ARGS})
 	${RM} -r ${STAGEDIR}${PREFIX}/${GEMS_BASE_DIR}/build_info/
 	${FIND} ${STAGEDIR}${PREFIX}/${GEMS_BASE_DIR} -type f -name '*.so' -exec ${STRIP_CMD} {} +
 	${FIND} ${STAGEDIR}${PREFIX}/${GEMS_BASE_DIR} -type f \( -name mkmf.log -or -name gem_make.out \) -delete

@@ -5,6 +5,65 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20190224:
+  AFFECTS: users of security/gnutls
+  AUTHOR: tijl@FreeBSD.org
+
+  GnuTLS now looks for its configuration files in PREFIX/etc (/usr/local/etc)
+  instead of /etc.  If the following files exist they have to be moved.  On a
+  default installation these files do not exist.
+
+  /etc/gnutls/default-priorities
+  /etc/gnutls/pkcs11.conf
+  /etc/tpasswd
+  /etc/tpasswd.conf
+
+20190215:
+  AFFECTS: users of net-im/ejabberd
+  AUTHOR: ashish@FreeBSD.org
+
+  If you've mod_mam enabled with compress_xml set to true, then you're affected
+  by bug where the XML namespace, and tag elements get interchanged in the MAM cache
+  which results in invalid XML, and causing XMPP clients to disconnect. For more details,
+  please refer to: https://github.com/processone/ejabberd/issues/2744
+
+  This upgrade contains the patch that fixes the problem going forward. For fixing already
+  affected users, you'll need to wipe off the MAM cache for the affected users:
+
+      sudo -u ejabberd -H ejabberdctl remove_mam_for_user <user> <server>
+
+20190207:
+  AFFECTS: users of net-mgmt/mk-livestatus
+  AUTHOR: egypcio@FreeBSD.org
+
+  The default Nagios version supported by net-mgmt/mk-livestatus changed
+  from Nagios 3 to Nagios 4 - the respective Nagios package was added to
+  net-mgmt/mk-livestatus' runtime dependencies.
+
+  If you still need support for Nagios 3 you just need to change the
+  options for net-mgmt/mk-livestatus and compile the port yourself.
+
+20190202:
+  AFFECTS: users of archivers/urbackup-server
+  AUTHOR: freebsd@coombscloud.com
+
+  Some of the port's sources previously included absolute references to /etc/urbackup.  
+  The upgrade now changes these references to ${PREFIX}/etc/urbackup. If you have placed 
+  any configuration files within /etc/urbackup, these should be relocated to 
+  ${PREFIX}/etc/urbackup.
+
+20190124:
+  AFFECTS: users of sysutils/rubygem-fluentd, sysutils/fluent-bit
+  AUTHOR: girgen@FreeBSD.org
+
+  The fluentd port has been upgraded from the 0.12 line to 1.3.3.  The upgrade
+  is mostly non-disruptive since there is a backward compatibility with 0.12
+  plugins and configuration files, but care should be taken about the order of
+  server upgrades since fluentd 1.x is unable to send it's data to version 0.12
+  instances.  You should carefully read
+  https://docs.fluentd.org/v1.0/articles/update-from-v0.12 before performing
+  any upgrade activities.
+
 20190120:
   AFFECTS: users of mail/fetchmail
   AUTHOR: mandree@FreeBSD.org
@@ -1137,153 +1196,4 @@ you update your ports collection, before attempting any port upgrades.
   databases/php-memcached, you need to run:
 
     # make FLAVOR=php72 install
-
-20180220:
-  AFFECTS: users of www/nextcloud
-  AUTHOR: brnrd@FreeBSD.org
-
-  The file and directory permissions of Nextcloud have changed. Write
-  permissions have been removed from all directories except `data' and
-  `config'. For the updater to work, the app store of your installation
-  must be disabled. To disable the app-store prior to updating the
-  package:
-
-  # cd /usr/local/www/nextcloud
-  # su -m www -c "php ./occ config:system:set appstoreenabled --value=false --type=boolean"
-
-  If you've already updated your nextcloud package, you must manually edit
-  the configuration of nextcloud (config/config.php) and add
-
-  	'appstoreenabled' => false,
-
-  to the CONFIG array before the updater will run.
-
-20180214:
-  AFFECTS: users of lang/ruby23
-  AUTHOR: swills@FreeBSD.org
-
-  The default ruby version has been updated from 2.3 to 2.4.
-
-  If you compile your own ports you may keep 2.3 as the default version by
-  adding the following lines to your /etc/make.conf file:
-
-  #
-  # Keep ruby 2.3 as default version
-  #
-  DEFAULT_VERSIONS+=ruby=2.3
-
-  If you wish to update to the new default version, you need to first stop any
-  software that uses ruby. Then, you will need to follow these steps, depending
-  upon how you manage your system.
-
-  If you use pkgng, simply upgrade:
-  # pkg upgrade
-
-  If you use portmaster, install new ruby, then rebuild all ports that depend
-  on ruby:
-  # portmaster -o lang/ruby24 lang/ruby23
-  # portmaster -R -r ruby-2.4
-
-  If you use portupgrade, install new ruby, then rebuild all ports that depend
-  on ruby:
-
-  # pkg delete -f ruby portupgrade
-  # make -C /usr/ports/ports-mgmt/portupgrade install clean
-  # pkg set -o lang/ruby23:lang/ruby24
-  # portupgrade -x ruby-2.4.\* -fr lang/ruby24
-
-20180209:
-  AFFECTS: users of japanese/lookup
-  AUTHOR: yasu@utahime.org
-
-  japanese/lookup is update to 1.99.96.20130920. This version is not
-  compatible with previous version 1.4.1 and incompatibility includes
-  how to setup. See info of Lookup for detail.
-
-20180209:
-  AFFECTS: users of net-mgmt/pmacct
-  AUTHOR: pi@FreeBSD.org
-
-  To allow separete pmacctd instances per interface, use
-
-    pmacctd_enable="YES"
-    pmacctd_interfaces="re1 re2"
-
-  in /etc/rc.conf. The path to the config files will be
-
-    /usr/local/etc/pmacct/<interface>
-
-20180208:
-  AFFECTS: users of mail/mailman*
-  AUTHOR: mandree@FreeBSD.org
-
-  In order to overcome complaints about mismatched checksums in
-  Mailman/Default.py, mailman now configures the DEFAULT_EMAIL_HOST
-  and DEFAULT_URL_HOST to "localhost" statically, and the rc script
-  will check this and refuse to start on next boot.
-
-  Users must configure DEFAULT_EMAIL_HOST and DEFAULT_URL_HOST in
-  Mailman/mm_cfg.py properly and add this line below:
-  add_virtualhost(DEFAULT_URL_HOST, DEFAULT_EMAIL_HOST)
-
-  A short example has been added to:
-  ${PREFIX}/local/share/doc/mailman/FreeBSD-post-install-notes.
-
-  As of 2.1.26_3, the post-install script will add back the prior
-  default settings to mm_cfg.py (instead of Defaults.py) if no
-  virtual hosts have been defined, to cover the normal use cases
-  and initial installation.
-
-20180201:
-  AFFECTS: users of editors/emacs* and all ports using Emacs via USES=emacs
-  AUTHOR: jrm@FreeBSD.org
-
-  The Emacs ports framework has been updated to support flavors and the
-  editors/emacs-nox11 port has been replaced by the nox flavors of
-  editors/emacs and editors/emacs-devel.
-
-  Supported Flavors
-  --------------------------------------------------------
-  editors/emacs:       full canna nox
-  editors/emacs-devel: full nox
-  ports using Emacs:   full canna nox devel_full devel_nox
-  --------------------------------------------------------
-
-  For those using pre-built packages, if
-
-     # pkg upgrade
-
-  does not install the new Emacs package, use one of
-
-     # pkg install emacs
-     # pkg install emacs-canna
-     # pkg install emacs-nox
-     # pkg install emacs-devel
-     # pkg install emacs-devel-nox
-
-  For those building their own packages, a flavor other than the default must be
-  specified.  For example, to build the nox flavor of editors/emacs, or to build
-  the devel_full flavor of a port using Emacs, use
-
-     # poudriere bulk -j 11amd64 editors/emacs@nox
-     # poudriere bulk -j 11amd64 print/pdf-tools@devel_full
-
-  or
-
-     # make FLAVOR=nox install
-     # make FLAVOR=devel_full
-
-  An alternative to the default flavor, full, for editors/emacs and
-  editors/emacs-devel can be set in make.conf.  For example, to specify nox as
-  the default flavor for both ports, use
-
-     .if ${.CURDIR:M*/editors/emacs*}
-     FLAVOR?=nox
-     .endif
-
-  For ports using Emacs, an alternative to the default flavor, full,
-  can be also be set in make.conf.  For example, to automatically depend on
-  emacs-nox, use
-
-     DEFAULT_VERSIONS+=emacs=nox
 

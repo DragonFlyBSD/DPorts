@@ -1,8 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	asterisk
-PORTVERSION=	13.24.1
-PORTREVISION=	1
+PORTVERSION=	13.25.0
 CATEGORIES=	net
 MASTER_SITES=	https://downloads.asterisk.org/pub/telephony/%SUBDIR%/:DEFAULT,g729
 MASTER_SITE_SUBDIR=	asterisk/ \
@@ -21,7 +20,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 LIB_DEPENDS=	libuuid.so:misc/e2fsprogs-libuuid \
 		libjansson.so:devel/jansson
 
-ONLY_FOR_ARCHS=		amd64 armv6 armv7 i386 powerpc sparc64
+ONLY_FOR_ARCHS=	amd64 armv6 armv7 i386 powerpc sparc64
 
 EXTRACT_ONLY:=	${DISTNAME}${EXTRACT_SUFX}
 
@@ -34,17 +33,17 @@ USE_RC_SUBR=	asterisk
 USE_GITHUB=	nodefault
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=	--datarootdir=${DATADIR} \
-			--with-ilbc=internal \
-			--with-crypto=${OPENSSLBASE} \
-			--with-ssl=${OPENSSLBASE}
+CONFIGURE_ARGS=	--datarootdir=${DATADIR} \
+		--with-ilbc=internal \
+		--with-crypto=${OPENSSLBASE} \
+		--with-ssl=${OPENSSLBASE}
 
 CPE_VENDOR=	digium
 
 SHEBANG_FILES=	agi/agi-test.agi \
 		agi/jukebox.agi \
 		contrib/scripts/astversion
-
+LDFLAGS=	-L.
 MAKE_ENV=	PTHREAD_LIBS="-lpthread" \
 		MKDIR="${MKDIR}" \
 		PWLIBDIR=${LOCALBASE}/share/pwlib \

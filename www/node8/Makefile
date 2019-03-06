@@ -13,6 +13,8 @@ COMMENT=	V8 JavaScript for client and server (8.x LTS)
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+BROKEN_SSL=		libressl libressl-devel
+BROKEN_SSL_REASON=	Node.js 8.x LTS requires OpenSSL >= 1.0.2 or the BUNDLED_SSL option enabled
 ONLY_FOR_ARCHS=		aarch64 amd64 armv6 armv7 i386 powerpc64
 
 OPTIONS_DEFINE=	BUNDLED_SSL DOCS NLS DTRACE
@@ -65,19 +67,11 @@ LIB_DEPENDS+=	libcares.so:dns/c-ares\
 
 .include <bsd.port.options.mk>
 
-.if empty(PORT_OPTIONS:MBUNDLED_SSL)
-
-.if !empty(SSL_DEFAULT:Mlibressl*)
-IGNORE=		cannot build node.js with LibreSSL. You must enable BUNDLED_SSL
-.endif
-
+.if ${PORT_OPTIONS:MBUNDLED_SSL} && ${ARCH} != x86_64 && ${ARCH} != i386
+CONFIGURE_ARGS+=--openssl-no-asm
 .endif
 
 .include <bsd.port.pre.mk>
-
-.if ${ARCH} == armv6 || ${ARCH} == armv7
-CONFIGURE_ARGS+=--openssl-no-asm
-.endif
 
 .if ${CHOSEN_COMPILER_TYPE} == gcc
 # GCC does not expose std::snprintf() without this define

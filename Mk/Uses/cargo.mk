@@ -30,15 +30,12 @@ CARGO_VENDOR_DIR?=	${WRKSRC}/cargo-crates
 CARGO_CARGOTOML?=	${WRKSRC}/Cargo.toml
 CARGO_CARGOLOCK?=	${WRKSRC}/Cargo.lock
 
-# Define MASTER_SITES_CRATESIO for crates.io
-MASTER_SITES_CRATESIO=	https://crates.io/api/v1/crates
-
 # Save crates inside ${DISTDIR}/rust/crates by default.
 CARGO_DIST_SUBDIR?=	rust/crates
 
 # Generate list of DISTFILES.
 .for _crate in ${CARGO_CRATES}
-MASTER_SITES+=	${MASTER_SITES_CRATESIO}/${_crate:C/^(.*)-[0-9].*/\1/}/${_crate:C/^.*-([0-9].*)/\1/}/download?dummy=/:cargo_${_crate:S/-//g:S/.//g}
+MASTER_SITES+=	CRATESIO/${_crate:C/^(.*)-[0-9].*/\1/}/${_crate:C/^.*-([0-9].*)/\1/}:cargo_${_crate:S/-//g:S/.//g}
 DISTFILES+=	${CARGO_DIST_SUBDIR}/${_crate}.tar.gz:cargo_${_crate:S/-//g:S/.//g}
 .endfor
 
@@ -134,16 +131,16 @@ CARGO_ENV+=	GETTEXT_BIN_DIR=${LOCALBASE}/bin \
 		GETTEXT_LIB_DIR=${LOCALBASE}/lib
 .endif
 
-.if ${CARGO_CRATES:Mlibc-[0-9]*}
+.for libc in ${CARGO_CRATES:Mlibc-[0-9]*}
 # FreeBSD 12.0 changed ABI: r318736 and r320043
 # https://github.com/rust-lang/libc/commit/78f93220d70e
 # https://github.com/rust-lang/libc/commit/969ad2b73cdc
-_libc_VER=	${CARGO_CRATES:Mlibc-[0-9]*:C/.*-//}
+_libc_VER=	${libc:C/.*-//}
 . if ${_libc_VER:R:R} == 0 && (${_libc_VER:R:E} < 2 || ${_libc_VER:R:E} == 2 && ${_libc_VER:E} < 38)
-DEV_WARNING+=	"CARGO_CRATES=libc-0.2.37 or older maybe unstable on FreeBSD 12.0. Consider updating to the latest version."
+DEV_WARNING+=	"CARGO_CRATES=${libc} may be unstable on FreeBSD 12.0. Consider updating to the latest version (higher than 0.2.37)."
 . endif
 .undef _libc_VER
-.endif
+.endfor
 
 .if ${CARGO_CRATES:Mlibgit2-sys-[0-9]*}
 # Use the system's libgit2 instead of building the bundled version
@@ -184,6 +181,8 @@ DEV_WARNING+=	"CARGO_CRATES=openssl-0.10.3 or older do not support OpenSSL 1.1.1
 .include "${USESDIR}/ssl.mk"
 CARGO_ENV+=	OPENSSL_LIB_DIR=${OPENSSLLIB} \
 		OPENSSL_INCLUDE_DIR=${OPENSSLINC}
+# Silence bogus QA warning about needing USES=ssl
+QA_ENV+=	USESSSL=yes
 .endif
 
 .if ${CARGO_CRATES:Mpkg-config-[0-9]*}

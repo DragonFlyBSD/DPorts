@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net/howl/files/mdnsresponder.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/net/howl/files/mdnsresponder.in 491350 2019-01-27 13:50:11Z swills $
 #
 # PROVIDE: mdnsresponder
 # REQUIRE: DAEMON
@@ -20,6 +20,6 @@ command=%%PREFIX%%/bin/mDNSResponder
 
 load_rc_config ${name}
 
-mdnsresponder_enable=${mdnsresponder_enable-"NO"}
+mdnsresponder_enable=${mdnsresponder_enable:-"NO"}
 
 run_rc_command "$1"

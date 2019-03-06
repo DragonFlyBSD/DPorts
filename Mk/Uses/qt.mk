@@ -30,7 +30,7 @@ _QT_MK_INCLUDED=	qt.mk
 # Qt versions currently supported by the framework.
 _QT_SUPPORTED?=		4 5
 QT4_VERSION?=		4.8.7
-QT5_VERSION?=		5.12.0
+QT5_VERSION?=		5.12.1
 
 # We accept the Qt version to be passed by either or all of the three mk files.
 .  if empty(qt_ARGS) && empty(qmake_ARGS) && empty(qt-dist_ARGS)
@@ -466,7 +466,7 @@ xmlpatterns-tool_PATH=	${LOCALBASE}/${QT_BINDIR_REL}/xmlpatterns
 _USE_QT_ALL+=		${_USE_QT${_QT_VER}_ONLY}
 _USE_QT=		${USE_QT}
 # Iterate through components deprived of suffix.
-.  for component in ${_USE_QT:O:u:C/_.+//}
+.  for component in ${_USE_QT:O:u:C/_(build|run)$//}
 # Check that the component is valid.
 .    if ${_USE_QT_ALL:M${component}} != ""
 # Skip meta-components (currently none).

@@ -8,10 +8,13 @@ MASTER_SITES=	https://github.com/QupZilla/${PORTNAME}/releases/download/v${PORTV
 PKGNAMESUFFIX=	-qt5
 DISTNAME=	QupZilla-${PORTVERSION}
 
-MAINTAINER=	rezny@FreeBSD.org
+MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Web browser based on WebKit engine and Qt Framework
 
 LICENSE=	GPLv3
+
+DEPRECATED=	Project continues as www/falkon
+EXPIRATION_DATE=	2019-02-28
 
 LIB_DEPENDS=	libhunspell-1.7.so:textproc/hunspell
 

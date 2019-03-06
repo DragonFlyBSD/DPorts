@@ -1,1 +1,1 @@
-USE_QT4+= corelib
+USE_QT+= corelib
