@@ -1,2 +1,1 @@
-LDFLAGS+= -L${LOCALBASE}/lib ${ICONV_LIB}
-
+LLD_UNSAFE=yes	# Needs linker to provide library search paths.

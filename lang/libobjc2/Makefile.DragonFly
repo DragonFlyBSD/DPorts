@@ -1,2 +1,0 @@
-PLIST_FILES+=	lib/libobjcxx.so
-PLIST_FILES+=	lib/libobjcxx.so.${SHLIB_MAJOR}.${SHLIB_MINOR}
