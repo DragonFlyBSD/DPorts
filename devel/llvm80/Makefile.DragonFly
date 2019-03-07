@@ -1,0 +1,12 @@
+# LLDB needs to be ported to dragonfly
+# OpenMP patches still not in llvm70
+OPTIONS_DEFAULT:=        ${OPTIONS_DEFAULT:NLLDB}
+OPTIONS_DEFAULT_x86_64:= ${OPTIONS_DEFAULT:NOPENMP}
+
+# Allow some non-conforming code to build
+CXXFLAGS+=	-fpermissive
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's|gcc50|gcc80|g' -e 's|5.0"|8.0"|' \
+		${WRKSRC}/tools/clang/lib/Driver/ToolChains/DragonFly.cpp \
+		${WRKSRC}/tools/clang/lib/Frontend/InitHeaderSearch.cpp
