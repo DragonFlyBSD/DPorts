@@ -33,6 +33,10 @@ GNUSTEP_LOCAL_TOOLS=		${GNUSTEP_LOCAL_ROOT}/Tools
 LIB_DIRS+=	${GNUSTEP_SYSTEM_LIBRARIES} \
 		${GNUSTEP_LOCAL_LIBRARIES}
 
+# LLD can't search library paths for now, so all GNUStep packages are to be marked
+# as LLD unsafe
+LLD_UNSAFE=yes
+
 .for a in CFLAGS CPPFLAGS CXXFLAGS OBJCCFLAGS OBJCFLAGS LDFLAGS
 MAKE_ENV+=	ADDITIONAL_${a}="${ADDITIONAL_${a}} ${${a}}"
 .endfor
