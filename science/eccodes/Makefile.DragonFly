@@ -1,0 +1,3 @@
+dfly-patch:
+	${REINPLACE_CMD} -e 's|FreeBSD|DragonFly|' \
+		${WRKSRC}/cmake/ecbuild_check_os.cmake
