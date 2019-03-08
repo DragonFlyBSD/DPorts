@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	node
-PORTVERSION=	11.6.0
+PORTVERSION=	11.10.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www
 MASTER_SITES=	http://nodejs.org/dist/v${PORTVERSION}/
@@ -13,10 +13,14 @@ LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BROKEN_powerpc64=	fails to build: KeyError: 'action'
+BROKEN_SSL=		openssl libressl libressl-devel
+BROKEN_SSL_REASON=	Node.js 11.x requires OpenSSL 1.1.x or the BUNDLED_SSL option enabled
 ONLY_FOR_ARCHS=		aarch64 amd64 armv6 armv7 i386 powerpc64
 
 OPTIONS_DEFINE=		BUNDLED_SSL DOCS NLS DTRACE
-OPTIONS_DEFAULT=	BUNDLED_SSL DTRACE
+OPTIONS_DEFAULT=	DTRACE
+OPTIONS_DEFAULT_FreeBSD_11=	BUNDLED_SSL
+OPTIONS_DEFAULT+=	${OPTIONS_DEFAULT_${OPSYS}_${OSREL:R}}
 OPTIONS_SUB=		yes
 
 .if !exists(/usr/sbin/dtrace)
@@ -64,21 +68,15 @@ LIB_DEPENDS+=	libcares.so:dns/c-ares\
 
 .include <bsd.port.options.mk>
 
-.if empty(PORT_OPTIONS:MBUNDLED_SSL)
-
-.if ${OPSYS} == FreeBSD && ${SSL_DEFAULT} != openssl111
-IGNORE=		node.js requires openssl 1.1.0, add DEFAULT_VERSIONS+=ssl=openssl111 to /etc/make.conf or enable BUNDLED_SSL option
+.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1200085
+BROKEN_SSL+=	base
 .endif
 
-.if !empty(SSL_DEFAULT:Mlibressl*)
-IGNORE=		cannot build node.js with LibreSSL. You must enable BUNDLED_SSL
-.endif
-
+.if ${PORT_OPTIONS:MBUNDLED_SSL} && ${ARCH} != x86_64 && ${ARCH} != i386
+CONFIGURE_ARGS+=--openssl-no-asm
 .endif
 
 .include <bsd.port.pre.mk>
-
-CONFIGURE_ARGS+=--openssl-no-asm
 
 .if ${CHOSEN_COMPILER_TYPE} == gcc
 # GCC does not expose std::snprintf() without this define

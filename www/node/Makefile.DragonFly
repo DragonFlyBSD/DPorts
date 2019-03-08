@@ -1,3 +1,6 @@
+OPTIONS_DEFAULT+=BUNDLED_SSL
+CONFIGURE_ARGS+=--openssl-no-asm
+
 dfly-patch:
 	# why is this hack necessary on DF and not FreeBSD?
 .if defined(PACKAGE_BUILDING)
