@@ -1,0 +1,9 @@
+#
+# XXX - The current logic in Mk/Uses/cargo.mk will try to append
+# LDFLAGS to RUSTFLAGS (via -C link-arg) but it turns out that as
+# we don't define LDFLAGS for this port, it will pass an empty arg
+# which rustc converts into "" and gcc doesn't like that. It produces
+# a 'No such file or directory' error.
+#
+# Add a dummy argument to the $CC call so that the build succeeds.
+LDFLAGS="-v"
