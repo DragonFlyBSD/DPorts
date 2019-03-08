@@ -1,4 +1,4 @@
---- processcore/processes_dragonfly_p.cpp.orig	2019-02-03 14:47:31 UTC
+--- processcore/processes_dragonfly_p.cpp.orig	2019-02-19 10:55:27 UTC
 +++ processcore/processes_dragonfly_p.cpp
 @@ -37,10 +37,6 @@
  #include <stdlib.h>
@@ -62,7 +62,7 @@
 -    QString command = QString(buf);
 +    QString command = QString::fromUtf8(buf);
  
-     //cmdline seperates parameters with the NULL character
+     //cmdline separates parameters with the NULL character
 -    command = command.replace('\0', ' ');
 +    command = command.replace(QLatin1Char('\0'), QLatin1Char(' '));
      process->setCommand(command.trimmed());
