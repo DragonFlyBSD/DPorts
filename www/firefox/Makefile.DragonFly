@@ -1,3 +1,5 @@
+OPTIONS_DEFAULT:=        ${OPTIONS_DEFAULT:NPULSEAUDIO}
+
 USE_GCC_VERSION=6
 
 # Apparently webrtc can't be built without sctp anymore, so
