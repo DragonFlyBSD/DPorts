@@ -19,5 +19,4 @@ dfly-patch:
 		${WRKSRC}/cpp/src/Glacier2CryptPermissionsVerifier/CryptPermissionsVerifierI.cpp \
 		${WRKSRC}/cpp/src/IceSSL/OpenSSLEngine.cpp \
 		${WRKSRC}/cpp/src/IceGrid/PlatformInfo.cpp \
-		${WRKSRC}/cpp/src/IceUtil/UtilException.cpp \
-		${WRKSRC}/cpp/test/include/TestCommon.h
+		${WRKSRC}/cpp/src/IceUtil/UtilException.cpp

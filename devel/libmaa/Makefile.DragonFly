@@ -1,3 +1,2 @@
-
-# [-Werror=format-truncation]
-MAKE_ARGS+=	WARNS=3
+# Needed in order to build
+CFLAGS+=	-Wno-format-truncation
