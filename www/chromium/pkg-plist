@@ -3,10 +3,8 @@ bin/chrome
 %%DATADIR%%/chrome-wrapper
 %%DATADIR%%/chrome_100_percent.pak
 %%DATADIR%%/chrome_200_percent.pak
-%%DATADIR%%/font_service.service
 %%DATADIR%%/headless_lib.pak
 %%DATADIR%%/icudtl.dat
-%%DATADIR%%/keyboard_resources.pak
 %%DATADIR%%/libEGL.so
 %%DATADIR%%/libGLESv2.so
 %%DATADIR%%/locales/am.pak
@@ -120,6 +118,7 @@ bin/chrome
 %%DATADIR%%/product_logo_48.png
 %%DATADIR%%/protoc
 %%DATADIR%%/resources.pak
+%%DATADIR%%/resources/inspector/.htaccess
 %%DATADIR%%/resources/inspector/Images/accelerometer-back.png
 %%DATADIR%%/resources/inspector/Images/accelerometer-bottom.png
 %%DATADIR%%/resources/inspector/Images/accelerometer-front.png
@@ -195,7 +194,6 @@ bin/chrome
 %%DATADIR%%/resources/inspector/audits2_worker.js
 %%DATADIR%%/resources/inspector/audits2_worker/audits2_worker_module.js
 %%DATADIR%%/resources/inspector/bindings_test_runner/bindings_test_runner_module.js
-%%DATADIR%%/resources/inspector/browser_console/browser_console_module.js
 %%DATADIR%%/resources/inspector/browser_debugger/browser_debugger_module.js
 %%DATADIR%%/resources/inspector/changes/changes_module.js
 %%DATADIR%%/resources/inspector/cm/cm_module.js
@@ -257,8 +255,8 @@ bin/chrome
 %%DATADIR%%/resources/inspector/emulated_devices/iPhone6Plus-portrait.svg
 %%DATADIR%%/resources/inspector/event_listeners/event_listeners_module.js
 %%DATADIR%%/resources/inspector/extensions_test_runner/extensions_test_runner_module.js
-%%DATADIR%%/resources/inspector/formatter_worker.js
 %%DATADIR%%/resources/inspector/formatter/formatter_module.js
+%%DATADIR%%/resources/inspector/formatter_worker.js
 %%DATADIR%%/resources/inspector/har_importer/har_importer_module.js
 %%DATADIR%%/resources/inspector/heap_profiler_test_runner/heap_profiler_test_runner_module.js
 %%DATADIR%%/resources/inspector/heap_snapshot_model/heap_snapshot_model_module.js
@@ -313,8 +311,8 @@ bin/chrome
 %%DATADIR%%/resources/inspector/worker_app.js
 %%DATADIR%%/resources/inspector/workspace_diff/workspace_diff_module.js
 %%DATADIR%%/snapshot_blob.bin
-%%DATADIR%%/swiftshader/libEGL.so
-%%DATADIR%%/swiftshader/libGLESv2.so
+%%NOT_AARCH64%%%%DATADIR%%/swiftshader/libEGL.so
+%%NOT_AARCH64%%%%DATADIR%%/swiftshader/libGLESv2.so
 %%DATADIR%%/v8_context_snapshot.bin
 %%DATADIR%%/views_mus_resources.pak
 %%DEBUG%%%%DATADIR%%/character_data_generator
@@ -324,6 +322,8 @@ bin/chrome
 %%DEBUG%%%%DATADIR%%/libVkLayer_parameter_validation.so
 %%DEBUG%%%%DATADIR%%/libVkLayer_threading.so
 %%DEBUG%%%%DATADIR%%/libVkLayer_unique_objects.so
+%%DEBUG%%%%DATADIR%%/libmalloc_wrapper.so
+%%DEBUG%%%%DATADIR%%/libtest_shared_library.so
 %%DRIVER%%bin/chromedriver
 man/man1/chrome.1.gz
 share/applications/chromium-browser.desktop

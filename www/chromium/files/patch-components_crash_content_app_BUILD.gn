@@ -1,0 +1,20 @@
+--- components/crash/content/app/BUILD.gn.orig	2018-12-03 21:16:48.000000000 +0100
++++ components/crash/content/app/BUILD.gn	2018-12-13 18:52:20.920947000 +0100
+@@ -36,7 +36,7 @@
+     sources += [ "crashpad.cc" ]
+   }
+ 
+-  if (is_android || is_linux) {
++  if (is_android || is_linux && !is_bsd) {
+     # Want these files on both Linux and Android.
+     set_sources_assignment_filter([])
+     sources += [
+@@ -73,8 +73,6 @@
+       "//content/public/common:content_descriptors",
+       "//content/public/common:result_codes",
+       "//sandbox",
+-      "//third_party/breakpad:client",
+-      "//third_party/crashpad/crashpad/snapshot",
+     ]
+   }
+ 

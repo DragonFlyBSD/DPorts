@@ -1,0 +1,23 @@
+# XXX - This is a hack to force llvm60 to use libc++ C++ includes instead of base's gcc 
+CXXFLAGS+=	-stdlib=libc++ -cxx-isystem ${LOCALBASE}/include/c++/v1 -I${LOCALBASE}/include
+LDFLAGS=	-L${LOCALBASE}/lib/c++ -L${LOCALBASE}/lib -L /usr/lib -L /lib
+
+# chromium-legacy installs files in the same path as this port
+CONFLICTS_INSTALL=      chromium-legacy
+
+# Since FreeBSD has libc++ in base we need to rely on DPorts' libc++
+LIB_DEPENDS+=  	libc++.so.1:devel/libc++
+BUILD_DEPENDS+=	clang60:devel/llvm60
+CC=             clang60
+CXX=            clang++60
+
+# FreeBSD has kerberos in base but we don't
+BUILD_DEPENDS+=	 krb5>0:security/krb5
+
+# XXX - Jumbo builds are faster but some work needs to be done for it to work in dfly.
+GN_ARGS:= ${GN_ARGS:Nuse_jumbo_build=true}
+
+dfly-patch:
+	# Setup nodejs dependency
+	@${MKDIR} ${WRKSRC}/third_party/node/dragonfly/node-dragonfly-x64/bin
+	${LN} -sf ${LOCALBASE}/bin/node ${WRKSRC}/third_party/node/dragonfly/node-dragonfly-x64/bin/node

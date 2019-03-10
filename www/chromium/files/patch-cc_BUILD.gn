@@ -1,0 +1,21 @@
+--- cc/BUILD.gn.orig	2018-11-19 19:55:02.000000000 +0100
++++ cc/BUILD.gn	2018-12-04 13:07:27.981323000 +0100
+@@ -551,7 +551,7 @@
+     "//ui/gl:test_support",
+     "//ui/latency",
+   ]
+-  if (!is_android) {
++  if (!is_android && !is_bsd) {
+     data_deps = [
+       "//third_party/mesa_headers",
+     ]
+@@ -751,9 +751,6 @@
+     "//ui/gfx/geometry",
+     "//ui/gl",
+     "//ui/gl:test_support",
+-  ]
+-  data_deps = [
+-    "//third_party/mesa_headers",
+   ]
+ }
+ 
