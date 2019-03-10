@@ -1,0 +1,21 @@
+--- third_party/angle/BUILD.gn.orig	2018-12-03 21:20:20.000000000 +0100
++++ third_party/angle/BUILD.gn	2018-12-15 15:01:55.525312000 +0100
+@@ -283,6 +283,7 @@
+         "X11",
+         "Xi",
+         "Xext",
++        "GL",
+       ]
+     }
+   }
+@@ -822,10 +823,6 @@
+     libs = []
+     if (is_linux) {
+       sources += util_linux_sources
+-      libs += [
+-        "rt",
+-        "dl",
+-      ]
+     }
+ 
+     if (is_mac) {
