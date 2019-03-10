@@ -1,0 +1,2 @@
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NWAYLAND}
+LIB_DEPENDS:=           ${LIB_DEPENDS:Nlibepoll-shim.so\:devel\/libepoll-shim}
