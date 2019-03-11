@@ -1,5 +1,7 @@
 LDFLAGS+=		-R${PREFIX}/lib/seamonkey
 
+OPTIONS_DEFAULT:=        ${OPTIONS_DEFAULT:NPULSEAUDIO}
+
 dfly-patch:
 	${REINPLACE_CMD} -e '/^UNAME_RELEASE=/ \
 		s/^UNAME_RELEASE=.*/UNAME_RELEASE=${OSREL}/' \

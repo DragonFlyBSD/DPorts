@@ -1,3 +1,5 @@
+OPTIONS_DEFAULT:=        ${OPTIONS_DEFAULT:NPULSEAUDIO}
+
 MOZ_OPTIONS:=	${MOZ_OPTIONS:N--enable-jemall*}
 # XXX use lang/gcc5, stl wrappers are not compatible even with gcc6
 .if exists (/usr/libexec/gcc80/CC)
