@@ -1,14 +1,14 @@
 # Created by: Florent Thoumie <flz@FreeBSD.org>
 # $FreeBSD$
 
-PORTNAME=	chromium-legacy
+PORTNAME=	chromium
 PORTVERSION=	68.0.3440.106
 PORTREVISION=	3
 CATEGORIES?=	www
 MASTER_SITES=	https://commondatastorage.googleapis.com/chromium-browser-official/ \
 		LOCAL/cpm/chromium/:fonts
 
-DISTNAME=	chromium-${DISTVERSION}
+PKGNAMESUFFIX=  -legacy
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER?=	chromium@FreeBSD.org
