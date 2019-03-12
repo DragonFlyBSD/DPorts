@@ -1,2 +1,3 @@
-SHA256 (amdgpu-firmware-20160413.tar.gz) = 07c5d4d0c493bc5e0642fba0dd42243ef85b646fcab36eed9184a4a06ca26f01
-SIZE (amdgpu-firmware-20160413.tar.gz) = 3848996
+TIMESTAMP = 1551731382
+SHA256 (amdgpu-firmware-20190220.tar.gz) = 6384cd3d8642b7b79bf34b740710f9a72ad11dd930bb597df7e6279dac43f469
+SIZE (amdgpu-firmware-20190220.tar.gz) = 9481641
