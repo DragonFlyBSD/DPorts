@@ -1042,8 +1042,6 @@ LC_ALL=		C
 
 WITH_PKGNG?=		yes
 WITHOUT_FBSD10_FIX?=	yes
-DFLY_PATCHDIR?= 	${MASTERDIR}/dragonfly
-DFLY_FILESDIR?= 	${MASTERDIR}/dragonfly
 PORTSDIR?=		/usr/dports
 LOCALBASE?=		/usr/local
 LINUXBASE?=		/compat/linux
@@ -1363,6 +1361,8 @@ INDEXFILE?=		INDEX
 .include "${PORTSDIR}/Mk/bsd.xorg.mk"
 .endif
 
+DFLY_PATCHDIR?= 	${PATCHDIR:H}/dragonfly
+DFLY_FILESDIR?= 	${FILESDIR:H}/dragonfly
 PACKAGES?=		/usr/packages
 TEMPLATES?=		${PORTSDIR}/Templates
 KEYWORDS?=		${PORTSDIR}/Keywords
@@ -1659,6 +1659,7 @@ QA_ENV+=		USESSHAREDMIMEINFO=yes
 .if !empty(USES:Mterminfo)
 QA_ENV+=		USESTERMINFO=yes
 .endif
+QA_ENV+=		DFLY_ALLOW_FOREIGN_BINARIES="${DFLY_ALLOW_FOREIGN_BINARIES:Dyes}"
 
 CO_ENV+=		STAGEDIR=${STAGEDIR} \
 				PREFIX=${PREFIX} \
@@ -1841,13 +1842,8 @@ PKG_DEPENDS+=	${LOCALBASE}/sbin/pkg:${PKG_ORIGIN}
 .include "${PORTSDIR}/Mk/bsd.df.gcc.mk"
 .else
 .  if !defined(USE_GNUSTEP)
-.   if exists (/usr/libexec/gcc80/CC)
 CONFIGURE_ENV+= 	CCVER=gcc80
 MAKE_ENV+=		CCVER=gcc80
-.   else
-CONFIGURE_ENV+= 	CCVER=gcc50
-MAKE_ENV+=		CCVER=gcc50
-.   endif
 .  endif
 .endif
 
@@ -5222,38 +5218,37 @@ _SANITY_SEQ=	050:post-chroot 100:pre-everything \
 				350:check-desktop-entries 400:check-depends \
 				450:identify-install-conflicts 500:check-deprecated \
 				550:check-vulnerable 600:check-license 650:check-config \
-				700:buildanyway-message 750:options-message ${_USES_sanity}
+				700:buildanyway-message 750:options-message 780:dfly-sanity ${_USES_sanity}
 
 _PKG_DEP=		check-sanity
 _PKG_SEQ=		500:pkg-depends
 _FETCH_DEP=		pkg
 _FETCH_SEQ=		150:fetch-depends 300:pre-fetch 450:pre-fetch-script \
 				500:do-fetch 550:fetch-specials 700:post-fetch \
-				850:post-fetch-script \
+				850:post-fetch-script 880:dfly-fetch \
 				${_OPTIONS_fetch} ${_USES_fetch}
 _EXTRACT_DEP=	fetch
 _EXTRACT_SEQ=	010:check-build-conflicts 050:extract-message 100:checksum \
 				150:extract-depends 190:clean-wrkdir 200:${EXTRACT_WRKDIR} \
 				300:pre-extract 450:pre-extract-script 500:do-extract \
-				700:post-extract 850:post-extract-script \
+				700:post-extract 850:post-extract-script 880:dfly-extract \
 				999:extract-fixup-modes \
 				${_OPTIONS_extract} ${_USES_extract} ${_SITES_extract}
 _PATCH_DEP=		extract
 _PATCH_SEQ=		050:ask-license 100:patch-message 150:patch-depends \
 				300:pre-patch 450:pre-patch-script 500:do-patch \
-				700:post-patch 850:post-patch-script \
-				880:dfly-patch \
+				700:post-patch 850:post-patch-script 880:dfly-patch \
 				${_OPTIONS_patch} ${_USES_patch}
 _CONFIGURE_DEP=	patch
 _CONFIGURE_SEQ=	150:build-depends 151:lib-depends 160:create-binary-alias \
 				200:configure-message \
 				300:pre-configure 450:pre-configure-script \
 				490:run-autotools-fixup 500:do-configure 700:post-configure \
-				850:post-configure-script \
+				850:post-configure-script 880:dfly-configure \
 				${_OPTIONS_configure} ${_USES_configure}
 _BUILD_DEP=		configure
 _BUILD_SEQ=		100:build-message 300:pre-build 450:pre-build-script \
-				500:do-build 700:post-build 850:post-build-script \
+				500:do-build 700:post-build 850:post-build-script 880:dfly-build \
 				${_OPTIONS_build} ${_USES_build}
 _STAGE_DEP=		build
 # STAGE is special in its numbering as it has install and stage, so install is
@@ -5262,7 +5257,7 @@ _STAGE_SEQ=		050:stage-message 100:stage-dir 150:run-depends \
 				200:apply-slist 300:pre-install \
 				400:generate-plist 450:pre-su-install 475:create-users-groups \
 				500:do-install 550:kmod-post-install 600:fixup-lib-pkgconfig 700:post-install \
-				750:post-install-script 800:post-stage 850:compress-man \
+				750:post-install-script 780:dfly-install 800:post-stage 850:compress-man \
 				860:install-rc-script 870:install-ldconfig-file \
 				880:install-license 890:install-desktop-entries \
 				900:add-plist-info 910:add-plist-docs 920:add-plist-examples \
@@ -5276,7 +5271,7 @@ stage-qa: stage
 .endif
 _TEST_DEP=		stage
 _TEST_SEQ=		100:test-message 150:test-depends 300:pre-test 500:do-test \
-				800:post-test \
+				800:post-test 880:dfly-test \
 				${_OPTIONS_test} ${_USES_test}
 _INSTALL_DEP=	stage
 _INSTALL_SEQ=	100:install-message \
