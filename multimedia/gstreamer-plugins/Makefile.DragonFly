@@ -4,6 +4,3 @@ CFLAGS+= -Wformat
 
 # just for the noise
 CFLAGS+= -Wno-deprecated-declarations
-
-# for all -base -bad -good and the -ugly separate
-DFLY_PATCHDIR=	${PATCHDIR:S@/files$$@/dragonfly@}
