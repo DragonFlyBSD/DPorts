@@ -1,0 +1,8 @@
+
+# zrj: installs linux specific ttf2ufm binary in gems
+#Error: '/usr/local/lib/ruby/gems/2.4/gems/rbpdf-font-1.19.1/lib/fonts/ttf2ufm/ttf2ufm' is 'ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux.so.2, for GNU/Linux 2.6.8, with debug_info, not stripped' GNU specific binary file.
+.if defined(DEVELOPER)
+.MAKEFLAGS+=	DFLY_ALLOW_FOREIGN_BINARIES=yes
+DFLY_ALLOW_FOREIGN_BINARIES=yes
+NO_ARCH_IGNORE=	ttf2ufm
+.endif
