@@ -1,0 +1,32 @@
+Should be ok.
+--- libPARI/gphelp.orig	2016-05-07 02:22:28 UTC
++++ libPARI/gphelp
+@@ -328,7 +328,7 @@ sub apropos
+   @sentence_list = @list = "";
+   while (<DOC>)
+   {
+-    if (/^\\(subsubsec[a-z]*|subsec[a-z]*|section|chapter){/)
++    if (/^\\(subsubsec[a-z]*|subsec[a-z]*|section|chapter)\{/)
+     {
+       $new = &get_match($_,'{','}');
+       &apropos_check();
+@@ -733,7 +733,7 @@ sub basic_subst
+ 
+   s/(\\string)?\\_/_/g;
+   s/\\([#\$&%|])/$1/g;
+-  s/\\(hat(?![a-zA-Z])|\^)({\\?\s*})?/^/g;
++  s/\\(hat(?![a-zA-Z])|\^)(\{\\?\s*\})?/^/g;
+   # Don't eat spaces after =head:
+   s/((^\Q$tr{podleader}\Ehead\d\s*)?) *\\pow(?![a-zA-z]) */$1^/gmo;
+ 
+@@ -1025,8 +1025,8 @@ sub TeXprint_topod {
+   s/\$\$(.*?)\$\$\s*/\n\nS<  >$tr{startcode}$1$tr{endcode}\n\n/gs;
+   s/\$([^\$]+)\$/$tr{startcode}$1$tr{endcode}/g;
+ 
+-  s/\\s(?:ref|idx){\s*([^{}]*)}/$tr{startindex} . for_index($1) . $tr{endindex}/ge;
+-  s/\\(?:ref|idx){\s*([^{}]*)}/$tr{startindex} . for_index($1) . "$tr{endindex}$1"/ge;
++  s/\\s(?:ref|idx)\{\s*([^{}]*)\}/$tr{startindex} . for_index($1) . $tr{endindex}/ge;
++  s/\\(?:ref|idx)\{\s*([^{}]*)\}/$tr{startindex} . for_index($1) . "$tr{endindex}$1"/ge;
+ 
+ # Conflict between different versions of PARI and refcard:
+ # s/\\(?:key|li)\s*{(.*)}\s*{(.+)}[ \t]*\n/\n\n=item C<$2>\n\n$1\n\n/msg;
