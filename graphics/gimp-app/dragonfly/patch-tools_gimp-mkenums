@@ -1,0 +1,12 @@
+From upstream.
+--- tools/gimp-mkenums.orig	2018-04-26 13:26:42 UTC
++++ tools/gimp-mkenums
+@@ -263,7 +263,7 @@ while (<>) {
+     next if /^\s*typedef\s+enum.*;/;
+ 
+     if (m@^\s*typedef\s+enum\s*
+-           ({)?\s*
++           (\{)?\s*
+            (?:/\*<
+              (([^*]|\*(?!/))*)
+             >\s*\*/)?
