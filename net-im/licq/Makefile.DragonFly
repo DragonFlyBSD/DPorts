@@ -1,6 +1,4 @@
 
 # licq segfaults during tests with gcc80 + issues with shared_ptr
-.if exists (/usr/libexec/gcc80/CC)
-BUILD_DEPENDS+= clang50:devel/llvm50
-CXX:=	clang++50
-.endif
+BUILD_DEPENDS+= clang60:devel/llvm60
+CXX:=	clang++60
