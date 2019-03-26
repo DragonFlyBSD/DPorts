@@ -1,8 +1,6 @@
 USES+= alias
 # very noisy
-.if exists (/usr/libexec/gcc80/CC)
 CXXFLAGS+=	-std=gnu++98 -Wno-expansion-to-defined -Wno-class-memaccess
-.endif
 
 dfly-patch:
 	${REINPLACE_CMD} -e 's@\(FreeBSD:\*\))@\1|DragonFly:*)@g'	\
