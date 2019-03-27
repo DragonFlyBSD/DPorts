@@ -1,0 +1,2 @@
+USES+=	shebangfix
+SHEBANG_FILES+=	COMMANDS/*
