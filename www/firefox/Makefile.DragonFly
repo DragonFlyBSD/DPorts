@@ -1,3 +1,14 @@
+#XXX zrj gcc-8.3
+# $ cat test.c
+# #include <time.h>
+# int main() {
+#  struct timespec ts;
+#  clock_gettime(CLOCK_MONOTONIC, &ts);
+#  return 0; }
+# $ gcc -fstack-protector-strong -Wl,-z,nocopyreloc test.c
+# /usr/libexec/binutils227/elf/ld.gold: internal error in check_non_pic, at /usr/src/gnu/usr.bin/binutils227/block3/gold-linker/../../../../../contrib/binutils-2.27/gold/x86_64.cc:2371
+CFLAGS+= -fPIC
+
 OPTIONS_DEFAULT:=        ${OPTIONS_DEFAULT:NPULSEAUDIO}
 
 USE_GCC_VERSION=6
