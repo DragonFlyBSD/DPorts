@@ -1,0 +1,5 @@
+# contains freebsd/linux and netbsd/openbsd binaries (gems not used on host)
+.if defined(DEVELOPER)
+.MAKEFLAGS+=	DFLY_ALLOW_FOREIGN_BINARIES=yes
+DFLY_ALLOW_FOREIGN_BINARIES=yes
+.endif
