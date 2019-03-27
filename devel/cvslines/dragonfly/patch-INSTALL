@@ -1,0 +1,13 @@
+/var/log/synth/devel___cvslines.log:$* is no longer supported. Its use will be fatal in Perl 5.30 at /construction/devel/cvslines/cvslines/INSTALL line 144
+Should be ok, only print 2nd line.
+--- INSTALL.intermediate	2019-03-18 13:04:19 UTC
++++ INSTALL
+@@ -141,7 +141,7 @@ MSG
+     $cvs_versmsg = `cvs -v`;
+     if ($cvs_versmsg !~ /\nConcurrent Versions System\s+\(CVS\)\s+1\.11\s+/)
+       {
+-        $starsave = $*; $* = 1; $cvs_versmsg =~ s/^/    /g; $* = $starsave;
++        $cvs_versmsg =~ s/\n([^\n]++).*/    \1\n/s;
+         print STDERR <<MSG;
+ $Myname:
+ 
