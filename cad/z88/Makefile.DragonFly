@@ -1,0 +1,5 @@
+
+# zrj: MF incorrectly does 's,--copy-dt-needed-entries,,' leaving empty '-Wl, '
+# This fails compilation of z88o binary and linux precompiled variant gets installed.
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-Wl, @@g' ${WRKSRC}/make/make_unix_64/z88o.mk.gcc64
