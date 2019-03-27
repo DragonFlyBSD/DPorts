@@ -11,13 +11,16 @@ MAINTAINER=	brooks@FreeBSD.org
 COMMENT=	LLVM and Clang
 
 .include "Makefile.LICENSE"
+LICENSE+=	LLVM2
+LICENSE_FILE_LLVM2=	${WRKSRC}/LICENSE.TXT
+LICENSE_NAME_LLVM2= 	Apache License 2.0 with LLVM Exceptions
+LICENSE_PERMS_LLVM2=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 LLVM_SUFFIX=	-devel
 LLVM_PREFIX=	${PREFIX}/llvm${LLVM_SUFFIX}
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}${LLVM_SUFFIX}
 DATADIR=	${PREFIX}/share/${PORTNAME}${LLVM_SUFFIX}
 
-IGNORE=		Does not build but llvm40, llvm60 need some files
 BUILD_DEPENDS=
 
 USES=		cmake compiler:c++11-lib libedit perl5 \
@@ -65,10 +68,10 @@ GH_TAGNAME=	${LLVM_COMMIT}
 .include "Makefile.snapshot"
 
 OPTIONS_DEFINE=	CLANG DOCS EXTRAS LIT LLD LLDB
-OPTIONS_DEFINE_amd64=	COMPILER_RT GOLD OPENMP
+OPTIONS_DEFINE_x86_64=	COMPILER_RT GOLD OPENMP
 OPTIONS_DEFINE_i386=	COMPILER_RT OPENMP
 OPTIONS_DEFAULT=	CLANG EXTRAS LIT LLD LLDB
-OPTIONS_DEFAULT_amd64=	COMPILER_RT GOLD OPENMP
+OPTIONS_DEFAULT_x86_64=	COMPILER_RT GOLD OPENMP
 OPTIONS_DEFAULT_i386=	COMPILER_RT OPENMP
 OPTIONS_SUB=	yes
 
@@ -329,7 +332,7 @@ STRIP=
 _CRTLIBDIR=	${LLVM_PREFIX:S|${PREFIX}/||}/lib/clang/${LLVM_RELEASE}/lib/freebsd
 _CRTBLDIR=	${LLVM_PREFIX:S|${PREFIX}/||}/share
 _COMPILER_RT_BLACKLISTS=	cfi_blacklist.txt
-.if ${ARCH} == "amd64"
+.if ${ARCH} == "x86_64"
 _COMPILER_RT_BLACKLISTS+=	asan_blacklist.txt
 _COMPILER_RT_BLACKLISTS+=	msan_blacklist.txt
 _COMPILER_RT_LIBS= \
@@ -422,10 +425,6 @@ post-patch-CLANG-on:
 	    ${PATCH_WRKSRC}/tools/clang/tools/clang-format/clang-format-sublime.py \
 	    ${PATCH_WRKSRC}/tools/clang/tools/clang-format/git-clang-format
 
-post-patch-COMPILER_RT-on:
-	cd ${WRKSRC_compiler_rt} && \
-	${PATCH} -p0 < ${PATCHDIR}/compiler-rt-safestack_platform.h
-
 post-build-COMPILER_RT-on:
 	${MKDIR} ${WRKDIR}/compiler-rt-build
 	cd ${WRKDIR}/compiler-rt-build && \
@@ -471,7 +470,7 @@ post-install-CLANG-on:
 post-install-COMPILER_RT-on:
 	cd ${WRKDIR}/compiler-rt-build && \
 	    ${MAKE_ENV} ${MAKE_CMD} ${INSTALL_TARGET}
-.if ${ARCH} == "amd64"
+.if ${ARCH} == "x86_64"
 	${RM} ${STAGEDIR}${LLVM_PREFIX}/lib/freebsd/libclang_rt*i386*
 .endif
 	${MKDIR} ${STAGEDIR}${PREFIX}/${_CRTLIBDIR}
