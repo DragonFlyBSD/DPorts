@@ -1,0 +1,11 @@
+--- scripts/CMakeLists.txt.orig	2019-01-29 18:39:37 UTC
++++ scripts/CMakeLists.txt
+@@ -100,7 +100,7 @@ IF(CMAKE_GENERATOR MATCHES "Makefiles")
+ ENDIF()
+ 
+ 
+-IF(CMAKE_SYSTEM_NAME MATCHES "FreeBSD")
++IF(CMAKE_SYSTEM_NAME MATCHES "FreeBSD|DragonFly")
+   SET (PERL_PATH "/usr/local/bin/perl")
+ ELSE()
+   SET (PERL_PATH "/usr/bin/perl")
