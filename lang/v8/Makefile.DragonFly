@@ -1,10 +1,8 @@
 # smth smth very outdated V8 sources (2013-04-30)
-.if exists (/usr/libexec/gcc80/CC)
-BUILD_DEPENDS+=	clang50:devel/llvm50
-MAKE_ENV+=	CC.host=clang50 CXX.host=clang++50 LINK.host=clang++50 LINK.target=clang++50
-MAKE_ARGS+=	CC=clang50 CXX=clang++50 LINK=clang++50
+BUILD_DEPENDS+=	clang60:devel/llvm60
+MAKE_ENV+=	CC.host=clang60 CXX.host=clang++60 LINK.host=clang++60 LINK.target=clang++60
+MAKE_ARGS+=	CC=clang60 CXX=clang++60 LINK=clang++60
 
 dfly-patch:
-	${REINPLACE_CMD} -e 's/g\+\+/clang++50/'	\
+	${REINPLACE_CMD} -e 's/g\+\+/clang++60/'	\
 		${WRKSRC}/build/gyp/pylib/gyp/generator/make.py
-.endif
