@@ -19,11 +19,7 @@ MAKE_ARGS=	--layout=system \
 # Our compiler-flags will be added AFTER those set by bjam. We remove
 # the optimization level, because Boost sets it itself (to -O3 in case
 # of gcc/g++):
-.if exists (/usr/libexec/gcc80/CC)
 MAKE_ARGS+=	cxxflags="${CXXFLAGS:N-O*}" cflags="${CFLAGS:N-O*}"
-.else
-MAKE_ARGS+=	cxxflags="${CXXFLAGS:N-O*} -std=c++11" cflags="${CFLAGS:N-O*}"
-.endif
 
 MAKE_ARGS+=	--toolset=${CHOSEN_COMPILER_TYPE} \
 		${_MAKE_JOBS}
