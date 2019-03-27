@@ -1,0 +1,12 @@
+Should be ok.
+--- ppParser.yp.orig	2007-10-10 21:32:24 UTC
++++ ppParser.yp
+@@ -1639,7 +1639,7 @@ B<Example:>
+                     nonWhitespace    => qr/$patternNlbBackslash(\S)/,
+                     colon            => qr/$patternNlbBackslash(:)/,
+                     namedVarKernel   => qr/\$($patternWUmlauts)/,
+-                    symVarKernel     => qr/\$({($patternWUmlauts)})/,
++                    symVarKernel     => qr/\$(\{($patternWUmlauts)\})/,
+                    );
+   @lexerPatterns{qw(
+                     namedVar
