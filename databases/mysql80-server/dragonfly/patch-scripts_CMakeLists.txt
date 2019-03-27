@@ -1,0 +1,11 @@
+--- scripts/CMakeLists.txt.intermediate	2019-03-20 10:50:52 UTC
++++ scripts/CMakeLists.txt
+@@ -261,7 +261,7 @@ IF(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX
+   STRING(REGEX REPLACE "-std=c..[0-9]+" "" CXXFLAGS "${CXXFLAGS}")
+ ENDIF()
+ 
+-IF(CMAKE_SYSTEM_NAME MATCHES "FreeBSD")
++IF(CMAKE_SYSTEM_NAME MATCHES "FreeBSD|DragonFly")
+   SET (PERL_PATH "/usr/local/bin/perl")
+ ELSE()
+   SET (PERL_PATH "/usr/bin/perl")
