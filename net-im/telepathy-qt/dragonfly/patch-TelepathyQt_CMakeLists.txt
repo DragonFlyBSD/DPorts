@@ -1,0 +1,10 @@
+--- TelepathyQt/CMakeLists.txt.intermediate	2019-03-28 16:45:08 UTC
++++ TelepathyQt/CMakeLists.txt
+@@ -989,6 +989,7 @@ if(ENABLE_SERVICE_SUPPORT)
+     target_link_libraries(telepathy-qt${QT_VERSION_MAJOR}-service
+         ${QT_QTDBUS_LIBRARY}
+         ${QT_QTCORE_LIBRARY}
++        ${QT_QTNETWORK_LIBRARY}
+         ${TP_QT_LIBRARY_LINKER_FLAGS})
+ 
+     # Set the correct version number
