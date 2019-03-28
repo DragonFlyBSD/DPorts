@@ -1,0 +1,5 @@
+
+# zrj: -ansi and c++ style comments gnutls includes
+dfly-patch:
+	${REINPLACE_CMD} -e 's/-ansi/-ansi -std=gnu90/'	\
+		${WRKSRC}/Makefile
