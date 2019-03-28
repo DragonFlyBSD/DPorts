@@ -1,0 +1,7 @@
+
+# zrj: useful?
+.if defined(DEVELOPER)
+.MAKEFLAGS+=	DFLY_ALLOW_FOREIGN_BINARIES=yes
+DFLY_ALLOW_FOREIGN_BINARIES=yes
+NO_ARCH_IGNORE+=	libdbm64.so libwebp_jni.so libwebp_jni64.so
+.endif
