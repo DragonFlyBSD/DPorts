@@ -1,0 +1,6 @@
+
+# zrj: fix wrong dest lib name (not lib64 if x86_64)
+dfly-patch:
+	${REINPLACE_CMD} -e "s@/lib64@/lib@g"	\
+		${WRKSRC}/src/libs/vpropertyexplorer/vpropertyexplorer.pro	\
+		${WRKSRC}/src/libs/qmuparser/qmuparser.pro
