@@ -1,4 +1,4 @@
---- scripts/checks.sh.intermediate	2015-12-17 17:25:50.000000000 +0200
+--- scripts/checks.sh.orig	2019-01-29 09:09:08 UTC
 +++ scripts/checks.sh
 @@ -124,7 +124,7 @@ cc_cxx_common()
  	common_lf=
