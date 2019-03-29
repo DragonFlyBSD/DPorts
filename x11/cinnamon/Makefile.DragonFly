@@ -4,6 +4,28 @@ LIB_DEPENDS:=	${LIB_DEPENDS:Nlibpulse*}
 
 CONFIGURE_ENV+=	GVC_CFLAGS=dummy GVC_LIBS=dummy
 
+SHEBANG_FILES+=	files/usr/bin/cinnamon-slideshow \
+		files/usr/bin/cinnamon-looking-glass \
+		files/usr/bin/cinnamon-json-makepot \
+		files/usr/bin/cinnamon-desktop-editor \
+		files/usr/bin/cinnamon-launcher \
+		files/usr/bin/cinnamon-settings \
+		files/usr/bin/cinnamon-preview-gtk-theme \
+		files/usr/bin/cinnamon-menu-editor \
+		files/usr/bin/cinnamon-screensaver-lock-dialog \
+		files/usr/bin/cinnamon-settings-users \
+		files/usr/share/cinnamon/desklets/launcher@cinnamon.org/editorDialog.py \
+		files/usr/lib/cinnamon-desktop-editor/cinnamon-desktop-editor.py \
+		files/usr/lib/cinnamon-settings-users/cinnamon-settings-users.py \
+		files/usr/lib/cinnamon-settings/bin/XletSettings.py \
+		files/usr/lib/cinnamon-settings/bin/installSchema.py \
+		files/usr/lib/cinnamon-settings/bin/removeSchema.py \
+		files/usr/lib/cinnamon-settings/cinnamon-settings.py \
+		files/usr/lib/cinnamon-screensaver-lock-dialog/cinnamon-screensaver-lock-dialog.py \
+		files/usr/lib/cinnamon-json-makepot/cinnamon-json-makepot.py \
+		files/usr/lib/cinnamon-looking-glass/cinnamon-looking-glass.py \
+		files/usr/lib/cinnamon-slideshow/cinnamon-slideshow.py
+
 dfly-patch:
 	${REINPLACE_CMD} -e '/gvc/d' ${WRKSRC}/src/Makefile.am
 	${RM} -r ${WRKSRC}/src/gvc
