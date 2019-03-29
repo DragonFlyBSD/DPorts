@@ -1838,6 +1838,19 @@ PKG_ORIGIN=		ports-mgmt/pkg-devel
 PKG_DEPENDS+=	${LOCALBASE}/sbin/pkg:${PKG_ORIGIN}
 .endif
 
+.if defined(USE_CLANG_FALLBACK)
+. if ${USE_CLANG_FALLBACK:Mdefault}
+BUILD_DEPENDS+= clang60:devel/llvm${LLVM_DEFAULT}
+CC=clang${LLVM_DEFAULT}
+CXX=clang++${LLVM_DEFAULT}
+CPP=clang-cpp${LLVM_DEFAULT}
+. else
+BUILD_DEPENDS+= clang${USE_CLANG_FALLBACK}:devel/llvm${USE_CLANG_FALLBACK}
+CC=clang${USE_CLANG_FALLBACK}
+CXX=clang++${USE_CLANG_FALLBACK}
+CPP=clang-cpp${USE_CLANG_FALLBACK}
+. endif
+.else
 .if defined(USE_GCC) || defined(USE_GCC_VERSION)
 .include "${PORTSDIR}/Mk/bsd.df.gcc.mk"
 .else
@@ -1845,6 +1858,7 @@ PKG_DEPENDS+=	${LOCALBASE}/sbin/pkg:${PKG_ORIGIN}
 CONFIGURE_ENV+= 	CCVER=gcc80
 MAKE_ENV+=		CCVER=gcc80
 .  endif
+.endif
 .endif
 
 .if defined(LLD_UNSAFE) && ${/usr/bin/ld:L:tA} == /usr/bin/ld.lld
