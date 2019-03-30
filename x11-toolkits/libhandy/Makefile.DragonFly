@@ -1,0 +1,4 @@
+
+# zrj: src/gen-public-types.sh are not executable
+dfly-patch:
+	${CHMOD} +x ${WRKSRC}/src/gen-public-types.sh
