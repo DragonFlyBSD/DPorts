@@ -1,0 +1,7 @@
+
+# Depending what is found first for "find /usr/local/include -name config.h | head -1"
+# -BOINCCFG=/usr/local/include/boinc/config.h
+# +BOINCCFG=/usr/local/include/wx-3.0/wx/config.h
+dfly-patch:
+	${REINPLACE_CMD} -e "s@find \($$BOINCDIR\)@find ${LOCALBASE}/include/boinc \1@"	\
+		${WRKSRC}/m4/sah_check_boinc.m4

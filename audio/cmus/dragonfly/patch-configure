@@ -1,11 +1,11 @@
---- configure.intermediate	2016-09-05 08:44:39 UTC
+--- configure.intermediate	2019-03-29 11:51:23 UTC
 +++ configure
-@@ -21,7 +21,7 @@ check_cflags()
- check_sndio()
+@@ -352,7 +352,7 @@ check_arts()
+ check_oss()
  {
  	case `uname -s` in
--	OpenBSD|FreeBSD)
-+	OpenBSD|FreeBSD|DragonFly)
- 		check_library SNDIO "" "-lsndio"
- 		return $?
- 	esac
+-		Linux|*FreeBSD)
++		Linux|*FreeBSD|DragonFly)
+ 			;;
+ 		*BSD)
+ 			check_library OSS "" "-lossaudio"

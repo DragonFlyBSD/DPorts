@@ -1,7 +1,5 @@
 
 # likely devel/etl issue
 # /usr/local/include/ETL/_pen.h:139:51: error: binding reference of type 'etl::generic_pen<T, AT>::difference_type::value_type&' {aka 'int&'} to 'const value_type' {aka 'const int'} discards qualifiers
-.if exists (/usr/libexec/gcc80/CC)
-BUILD_DEPENDS+= clang50:devel/llvm50
-CONFIGURE_ENV+= CC=clang50 CXX=clang++50 CPP=clang-cpp50
-.endif
+BUILD_DEPENDS+= clang60:devel/llvm60
+CONFIGURE_ENV+= CC=clang60 CXX=clang++60 CPP=clang-cpp60

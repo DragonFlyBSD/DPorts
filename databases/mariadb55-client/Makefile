@@ -11,7 +11,6 @@ MASTERDIR=	${.CURDIR}/../mariadb55-server
 
 FILESDIR=	${.CURDIR}/files
 PATCHDIR=	${.CURDIR}/files
-DFLY_PATCHDIR=	${.CURDIR}/dragonfly
 PLIST=		${.CURDIR}/pkg-plist
 
 CONFLICTS_INSTALL=	mariadb5[0-46-9]-client-* \

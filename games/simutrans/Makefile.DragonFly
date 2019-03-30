@@ -1,7 +1,6 @@
 
 # bauer/../tpl/sparse_tpl.h:60:11: error: binding reference of type 'koord&' to 'const koord' discards qualifiers
 #    return size;
-.if exists (/usr/libexec/gcc80/CC)
-BUILD_DEPENDS+= clang50:devel/llvm50
-MAKE_ARGS+= CC=clang50 CXX=clang++50
-.endif
+CXXFLAGS= -Wno-c++11-narrowing
+BUILD_DEPENDS+= clang60:devel/llvm60
+MAKE_ARGS+= CC=clang60 CXX=clang++60

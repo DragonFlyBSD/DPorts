@@ -1,0 +1,4 @@
+USES+=	python:build
+
+# [-Werror=ignored-qualifiers]
+CMAKE_ARGS+=	-DCATCH_ENABLE_WERROR:BOOL=OFF

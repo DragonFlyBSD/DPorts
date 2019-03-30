@@ -1,6 +1,3 @@
-DFLY_FILESDIR= ${FILESDIR:S@/files$$@/dragonfly@}
-DFLY_PATCHDIR= ${PATCHDIR:S@/files$$@/dragonfly@}
-
 BUILD_DEPENDS+= ${LOCALBASE}/bin/fpcmake:lang/fpc
 MAKE_ENV+= FPCDIR="${LOCALBASE}/lib/fpc/3.0.4"
 # bootstrap dragonfly

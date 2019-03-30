@@ -1,4 +1,2 @@
 # zrj: too noisy on gcc80
-.if exists (/usr/libexec/gcc80/CC)
 CXXFLAGS+=	-Wno-expansion-to-defined -Wno-class-memaccess
-.endif

@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	flightgear
-PORTVERSION=	2018.2.2
-PORTREVISION=	2
+PORTVERSION=	2018.3.2
 CATEGORIES=	games
 MASTER_SITES=	SF/flightgear/release-${PORTVERSION:R}
 
@@ -22,16 +21,18 @@ LIB_DEPENDS=	libpng.so:graphics/png \
 		libcurl.so:ftp/curl \
 		libudev.so:devel/libudev-devd
 BUILD_DEPENDS=	${LOCALBASE}/lib/libplibsl.a:x11-toolkits/plib \
-		${LOCALBASE}/lib/libSimGearCore.a:devel/simgear
+		${LOCALBASE}/lib/libSimGearCore.a:devel/simgear \
+		${LOCALBASE}/include/linux/input.h:devel/evdev-proto
 RUN_DEPENDS=	${LOCALBASE}/lib/libplibsl.a:x11-toolkits/plib \
 		${LOCALBASE}/lib/libSimGearCore.a:devel/simgear \
 		${LOCALBASE}/share/flightgear/version:games/flightgear-data
 
-LLD_UNSAFE=	yes
 USES=		alias cmake compiler cpe dos2unix gl jpeg openal:al,alut \
 		sqlite tar:bzip2
 USE_XORG=	ice sm x11 xext xft xi xinerama xmu xt
 USE_GL=		gl glew glu glut
+
+LLD_UNSAFE=	yes
 
 DOS2UNIX_REGEX=	.*\.(c|h|cxx|cpp|hxx|hpp)
 CMAKE_ARGS+=	-DSYSTEM_SQLITE:BOOL=ON \
@@ -49,6 +50,6 @@ DBUS_CMAKE_OFF=	-DUSE_DBUS:BOOL=OFF
 QT5_CMAKE_ON=	-DENABLE_QT:BOOL=ON
 QT5_CMAKE_OFF=	-DENABLE_QT:BOOL=OFF
 QT5_USES=	qt:5
-QT5_USE=	QT=core,buildtools,gui,declarative,network,qmake,widgets
+QT5_USE=	QT=core,buildtools,gui,declarative,network,qmake,widgets,svg
 
 .include <bsd.port.mk>

@@ -1358,7 +1358,6 @@ include/ql/volatilitymodel.hpp
 lib/libQuantLib.so
 lib/libQuantLib.so.0
 lib/libQuantLib.so.0.0.0
-lib/libQuantLib.la
 lib/libQuantLib.a
 libdata/pkgconfig/quantlib.pc
 man/man1/quantlib-config.1.gz

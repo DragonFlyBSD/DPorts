@@ -1,10 +1,8 @@
 # gcc80 built jade segfaults in textproc/docbook-utils while dealing with html
 # likely jade's -fno-implicit-templates + memcpy() tricks + memove() on vtable
 .if 0
-BUILD_DEPENDS+=	clang50:devel/llvm50
-CONFIGURE_ENV+=	CC=clang50 CXX=clang++50
+BUILD_DEPENDS+=	clang60:devel/llvm60
+CONFIGURE_ENV+=	CC=clang60 CXX=clang++60
 .endif
 # https://gcc.gnu.org/bugzilla/show_bug.cgi?id=69534#c9
-.if exists (/usr/libexec/gcc80/CC)
 CXXFLAGS+=	-fno-lifetime-dse
-.endif

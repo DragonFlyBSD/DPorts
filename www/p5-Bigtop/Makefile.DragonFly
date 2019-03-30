@@ -1,0 +1,5 @@
+
+# zrj: fix install template location for stage-qa
+dfly-patch:
+	${REINPLACE_CMD} -e "s@return '\$$tentmaker_template_path@return '${LOCALBASE}/share/TentMaker@"	\
+		${WRKDIR}/Bigtop-${PORTVERSION}/Build.PL

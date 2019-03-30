@@ -1,0 +1,3 @@
+OPTIONS_EXCLUDE+= SCTP
+CONFIGURE_ARGS:= ${CONFIGURE_ARGS:Nsctp}
+CFLAGS:=	${CFLAGS:N-Werror:N-Qunused-arguments}

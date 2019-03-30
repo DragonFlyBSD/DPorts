@@ -1,0 +1,7 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@ STREQUAL \(FreeBSD\)@ MATCHES "\1|DragonFly"@g'	\
+		${WRKSRC}/core/CMakeLists.txt					\
+		${WRKSRC}/core/app/CMakeLists.txt				\
+		${WRKSRC}/core/tests/filters/CMakeLists.txt			\
+		${WRKSRC}/core/showfoto/CMakeLists.txt

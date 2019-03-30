@@ -1,0 +1,13 @@
+include/catch2/catch.hpp
+include/catch2/catch_reporter_automake.hpp
+include/catch2/catch_reporter_tap.hpp
+include/catch2/catch_reporter_teamcity.hpp
+lib/cmake/Catch2/Catch.cmake
+lib/cmake/Catch2/Catch2Config.cmake
+lib/cmake/Catch2/Catch2ConfigVersion.cmake
+lib/cmake/Catch2/Catch2Targets.cmake
+lib/cmake/Catch2/CatchAddTests.cmake
+lib/cmake/Catch2/ParseAndAddCatchTests.cmake
+libdata/pkgconfig/catch2.pc
+share/Catch2/gdbinit
+share/Catch2/lldbinit

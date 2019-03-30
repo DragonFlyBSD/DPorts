@@ -84,7 +84,9 @@ CONFIGURE_ARGS+=--with-openssl=${OPENSSLBASE}
 CPPFLAGS+=	-fPIC
 .endif
 
+.if ${PORT_OPTIONS:MDOCS}
 PORTDOCS=	*
+.endif
 
 .if ${CYRUS_BUILD_TARGET} == "cyrus-sasl"
 

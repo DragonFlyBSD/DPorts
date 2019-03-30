@@ -29,7 +29,7 @@ list_stagedir_elfs() {
 }
 
 shebangonefile() {
-	local f interp interparg badinterp rc
+	local f interp interparg badinterp rc zruby zshare
 
 	f="$*"
 	rc=0
@@ -82,9 +82,19 @@ shebangonefile() {
 		;;
 	esac
 
+	# Relax critical error reqs for ${LOCALBASE}/lib/ruby/gems/ for now.
+	zruby=${f#${STAGEDIR}${PREFIX}/}
+	zruby=${zruby%${zruby#lib/ruby/gems/}}
+	# Relax critical error reqs for ${LOCALBASE}/share/ for now. Too many atm.
+	zshare=${f#${STAGEDIR}${PREFIX}/}
+	zshare=${zshare%${zshare#share/}}
 	if [ -n "${badinterp}" ]; then
+		if [ "${zshare}" == "share/" -o "${zruby}" == "lib/ruby/gems/" ]; then
+		warn "'${badinterp}' is an invalid shebang you need USES=shebangfix for '${f#${STAGEDIR}${PREFIX}/}'"
+		else
 		err "'${badinterp}' is an invalid shebang you need USES=shebangfix for '${f#${STAGEDIR}${PREFIX}/}'"
 		rc=1
+		fi
 	fi
 
 	return ${rc}
@@ -623,7 +633,7 @@ proxydeps_suggest_uses() {
 }
 
 proxydeps() {
-	local file dep_file dep_file_pkg already rc
+	local file dep_file dep_file_pkg already rc zfor
 
 	rc=0
 
@@ -632,6 +642,12 @@ proxydeps() {
 	while read -r file; do
 		# No results presents a blank line from heredoc.
 		[ -z "${file}" ] && continue
+		# Refuse to run ldd(1) on anything not for ld-elf.so.2.
+		zfor=$(file -b "${STAGEDIR}${file}")
+		if echo "${zfor}" |sed -e 's@/usr@@g' -e "s@/libexec/ld-elf.so.2@@g" | grep ", interpreter /" > /dev/null ; then
+			warn "Refusing to run ldd on ${file}: '${zfor}'"
+			continue
+		fi
 		while read -r dep_file; do
 			# No results presents a blank line from heredoc.
 			[ -z "${dep_file}" ] && continue
@@ -677,7 +693,7 @@ proxydeps() {
 	done <<-EOT
 	$(list_stagedir_elfs | \
 		file -F $'\1' -f - | \
-		grep -a 'ELF.*FreeBSD.*dynamically linked' | \
+		grep -a 'ELF.*SYSV.*dynamically linked' | \
 		cut -f 1 -d $'\1'| \
 		sed -e 's/^\.//')
 	EOT
@@ -790,7 +806,7 @@ no_arch() {
 	done <<-EOF
 	$(list_stagedir_elfs  \
 		| file -F $'\1' -f - -N \
-		| grep -aE 'ELF .* [LM]SB .*, .*, version [0-9]+ \(FreeBSD\)' \
+		| grep -aE 'ELF .* [LM]SB' \
 		| cut -f 1 -d $'\1')
 	EOF
 	return $rc
@@ -925,10 +941,63 @@ license()
 	return 0
 }
 
+foreign_binaries() {
+	local filearch rc
+	rc=0
+	while read -r f; do
+		[ -z "$f" ] && continue
+		filearch=$(file -b "$f")
+		case "$filearch" in
+			*"for DragonFly"*)	continue ;;
+			*"for GNU"*)		rc=1 && err "'${f#.}' is '$filearch' GNU specific binary file." ;;
+			*"for FreeBSD"*)	rc=1 && err "'${f#.}' is '$filearch' FreeBSD specific binary file." ;;
+			*"for NetBSD"*)		rc=1 && err "'${f#.}' is '$filearch' NetBSD specific binary file." ;;
+			*"for OpenBSD"*)	rc=1 && err "'${f#.}' is '$filearch' OpenBSD specific binary file." ;;
+			*)	strings "$f" | grep -e "GCC:.*DragonFly" -e "_rt0_amd64_dragonfly" > /dev/null ||
+							warn "'${f#.}' is '$filearch' unknown OS specific binary file." ;;
+		esac
+	done <<-EOF
+	$(list_stagedir_elfs  \
+		| file -F $'\1' -f - -N \
+		| grep -aE 'ELF .* [LM]SB .*, .*, version [0-9]+' \
+		| cut -f 1 -d $'\1')
+	EOF
+	if [ -n "$DFLY_ALLOW_FOREIGN_BINARIES" ]; then
+		if [ $rc -eq 0 ]; then
+			warn "No foreign binaries detected, the DFLY_ALLOW_FOREIGN_BINARIES might not be needed."
+		else
+			rc=0
+			warn "Foreign binaries were allowed by DFLY_ALLOW_FOREIGN_BINARIES."
+		fi
+	fi
+	return ${rc}
+}
+
+freebsd_binaries() {
+	local rc
+	rc=0
+	while read -r f; do
+		[ -z "$f" ] && continue
+		if [ -n "$DFLY_ALLOW_FOREIGN_BINARIES" ]; then
+			warn "'${f#.}' is a FreeBSD specific binary file."
+		else
+			err "'${f#.}' is a FreeBSD specific binary file."
+			rc=1
+		fi
+	done <<-EOF
+	$(list_stagedir_elfs  \
+		| file -F $'\1' -f - -N \
+		| grep -aE 'ELF .* [LM]SB .*, .*, version [0-9]+ \(FreeBSD\)' \
+		| cut -f 1 -d $'\1')
+	EOF
+	return ${rc}
+}
+
 checks="shebang symlinks paths stripped desktopfileutils sharedmimeinfo"
 checks="$checks suidfiles libtool libperl prefixvar baselibs terminfo"
 checks="$checks proxydeps sonames perlcore no_arch gemdeps gemfiledeps flavors"
 checks="$checks license"
+checks="$checks foreign_binaries freebsd_binaries"
 
 ret=0
 cd ${STAGEDIR} || exit 1

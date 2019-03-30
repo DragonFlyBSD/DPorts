@@ -12,10 +12,6 @@ COMMENT=	Pre seeded toolchain to cross build FreeBSD base
 
 LLVM_SUFFIX?=	-devel
 
-.if "${LLVM_SUFFIX}" == "-devel"
-IGNORE=		does not build but xtoolchain-llvm40/60 need it
-.endif
-
 NO_BUILD=	yes
 
 XCC?=		clang${LLVM_SUFFIX}

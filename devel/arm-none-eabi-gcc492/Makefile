@@ -60,7 +60,7 @@ post-install:
 	@${RM} ${STAGEDIR}${PREFIX}/bin/$f
 	@${RM} ${STAGEDIR}${PREFIX}/man/man1/$f.1.gz
 .endfor
-	@${RM} ${STAGEDIR}${PREFIX}/info/*
+	@${RM} ${STAGEDIR}${PREFIX}/share/info/*
 	@${RM} ${STAGEDIR}${PREFIX}/man/man7/*
 
 # The following is required for clang to bootstrap gcc.

@@ -1,0 +1,7 @@
+
+# zrj: installs linux specific dlv binary in gems
+.if defined(DEVELOPER)
+.MAKEFLAGS+=	DFLY_ALLOW_FOREIGN_BINARIES=yes
+DFLY_ALLOW_FOREIGN_BINARIES=yes
+NO_ARCH_IGNORE=	dlv
+.endif

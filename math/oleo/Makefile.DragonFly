@@ -1,7 +1,5 @@
 
 # gcc80 freezes at configure
 # checking for working mktime... ###  Watchdog killed runaway process!  (no activity for 25 minutes)  ###
-.if exists (/usr/libexec/gcc80/CC)
-BUILD_DEPENDS+= clang50:devel/llvm50
-CONFIGURE_ENV+= CC=clang50 CXX=clang++50 CPP=clang-cpp50
-.endif
+BUILD_DEPENDS+= clang60:devel/llvm60
+CONFIGURE_ENV+= CC=clang60 CXX=clang++60 CPP=clang-cpp60

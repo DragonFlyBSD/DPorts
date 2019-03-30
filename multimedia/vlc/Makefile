@@ -41,7 +41,7 @@ INSTALL_TARGET=	install-strip
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-avcodec --enable-avformat --enable-dvbpsi \
 		--enable-fontconfig --enable-freetype --enable-libgcrypt \
-		--enable-libxml2 --disable-oss --enable-postproc \
+		--enable-libxml2 --enable-oss --enable-postproc \
 		--enable-swscale --enable-vlc \
 		--disable-alsa --disable-archive --disable-chromaprint --disable-crystalhd \
 		--disable-dc1394 --disable-decklink --disable-dsm \
