@@ -1,9 +1,11 @@
+.if defined(DPORTS_BUILDER)
+.undef FORBIDDEN
+.endif
+
 # zrj: too noisy on gcc80
 # tuxillo: Added -fno-delete-null-pointer-checks (see: https://bugzilla.redhat.com/show_bug.cgi?id=1320240)
-.if exists (/usr/libexec/gcc80/CC)
 CXXFLAGS+=	-Wno-expansion-to-defined -Wno-class-memaccess
 CXXFLAGS+=	-fno-delete-null-pointer-checks
-.endif
 
 dfly-patch:
 	(cd ${WRKSRC} && ${TOUCH} \
