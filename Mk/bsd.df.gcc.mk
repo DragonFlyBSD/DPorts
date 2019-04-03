@@ -16,14 +16,10 @@ _INCLUDE_BSD_DF_GCC_MK=	yes
 .undef PORT_COMPILER
 .undef BASE_COMPILER
 
-.if exists (/usr/libexec/gcc80/CC)
 BASE_COMPILER=gcc80
-.else
-BASE_COMPILER=gcc50
-.endif
 
-.if defined(USE_GCC_VERSION) && ${USE_GCC_VERSION:M[678]}
-.   if ${BASE_COMPILER:Mgcc50}  # Ignore USE_GCC_VERSION when gcc80 available
+.if defined(USE_GCC_VERSION) && ${USE_GCC_VERSION:M[679]}
+.   if ${BASE_COMPILER:Mgcc80}
 PORT_COMPILER=${USE_GCC_VERSION}
 .   endif
 .endif

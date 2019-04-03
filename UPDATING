@@ -1080,39 +1080,3 @@ you update your ports collection, before attempting any port upgrades.
   # cd /usr/local/www/nextcloud
   # su -m www -c "php ./occ config:import < /usr/local/share/nextcloud/fix-apps_paths.json"
 
-20180401:
-  AFFECTS: users of mail/dovecot and mail/dovecot-pigeonhole
-  AUTHOR: adamw@FreeBSD.org
-
-  Dovecot has been upgraded to 2.3.1, and pigeonhole to 0.5.1. Most
-  existing dovecot installations MUST be modified for 2.3, but for
-  most users the modifications are simple.
-
-  Modify your Dovecot conf.d/ files before spinning up 2.3.1. The
-  upgrading instructions are detailed here:
-
-  	https://wiki2.dovecot.org/Upgrading/2.3
-
-20180330:
-  AFFECTS: users of lang/perl5*
-  AUTHOR: mat@FreeBSD.org
-
-  The default Perl version has been switched to Perl 5.26.  If you are using
-  binary packages to upgrade your system, you do not have anything to do, pkg
-  upgrade will do the right thing.  For the other people, follow the
-  instructions in entry 20161103, it should still be the same.
-
-20180325:
-  AFFECTS: users of net/samba48
-  AUTHOR: timur@FreeBSD.org
-
-  New Samba 4.8 upgrades the relevant database files in the way, that doesn't
-  allow easy fallback to the previous versions of Samba. So, before upgrading
-  to the new version make a backup of the /var/db/samba4/ directory.
-
-  Full list of changes, new features and upgrade procedure is available at:
-
-        https://www.samba.org/samba/history/samba-4.8.0.html
-
-  Please, read it carefully before upgrading!.
-
