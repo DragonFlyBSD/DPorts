@@ -3,4 +3,5 @@ LDFLAGS+=	-lz -L${LOCALBASE}/lib -lfreetype -ljpeg -lopenjp2 \
 		-ljbig2dec
 
 pre-configure:
-	${REINPLACE_CMD} -e 's|FreeBSD|DragonFly|' ${WRKSRC}/Makerules
+	${REINPLACE_CMD} -e 's|FreeBSD|DragonFly|' -e 's|-lthr|-lpthread|'	\
+		${WRKSRC}/Makerules
