@@ -1,4 +1,3 @@
 
 # licq segfaults during tests with gcc80 + issues with shared_ptr
-BUILD_DEPENDS+= clang60:devel/llvm60
-CXX:=	clang++60
+USE_CLANG_FALLBACK= default
