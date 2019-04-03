@@ -1,0 +1,11 @@
+--- lib/llvm/Support/CMakeLists.txt.orig	2017-12-05 12:40:29 UTC
++++ lib/llvm/Support/CMakeLists.txt
+@@ -38,7 +38,7 @@ circular_raw_ostream.cpp
+ raw_ostream.cpp
+ )
+ 
+-if(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
++if(${CMAKE_SYSTEM_NAME} MATCHES "(FreeBSD|DragonFly)")
+   target_link_libraries(llvmSupport execinfo pthread)
+ endif()
+ 
