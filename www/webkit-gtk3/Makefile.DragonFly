@@ -1,7 +1,9 @@
-# zrj: too noisy on gcc80
-.if exists (/usr/libexec/gcc80/CC)
-CXXFLAGS+=	-Wno-expansion-to-defined -Wno-class-memaccess
+.if defined(DPORTS_BUILDER)
+.undef FORBIDDEN
 .endif
+
+# zrj: too noisy on gcc80
+CXXFLAGS+=	-Wno-expansion-to-defined -Wno-class-memaccess
 
 dfly-patch:
 	(cd ${WRKSRC} && ${TOUCH} \
