@@ -1,0 +1,10 @@
+# port requires gcc48
+BUILD_DEPENDS+=	gcc48:lang/gcc48
+
+# zrj: fix CRLF for dragonfly patches
+USES+=	dos2unix
+DOS2UNIX_FILES+=	BaseTools/Source/C/GenFv/GenFvInternalLib.c
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@elf_x86_64_fbsd@elf_x86_64@g'	\
+		${WRKSRC}/BhyvePkg/Csm/BhyveCsm16/GNUmakefile
