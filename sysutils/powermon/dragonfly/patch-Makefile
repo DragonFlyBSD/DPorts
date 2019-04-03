@@ -1,0 +1,14 @@
+--- Makefile.orig	2017-07-03 16:04:31 UTC
++++ Makefile
+@@ -1,9 +1,9 @@
+ # Base CFLAGS
+ CFLAGS := -O2 -fomit-frame-pointer -std=c99 \
+-		  -pedantic -Wall -Wextra -MMD -pipe
++		  -pedantic -Wall -Wextra -MMD -pipe $(CFLAGS)
+ 
+ # Base LDFLAGS
+-LDFLAGS := -lcursesw -lm
++LDFLAGS := $(LDFLAGS) -lncursesw -lm
+ 
+ # -----------
+ 
