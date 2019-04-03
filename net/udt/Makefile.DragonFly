@@ -1,0 +1,3 @@
+USES+=	ssl
+CFLAGS+= -I${OPENSSLINC}
+CXXFLAGS+= -Wno-error=catch-value
