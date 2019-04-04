@@ -5,7 +5,7 @@
 
 PORTNAME=	ripgrep
 DISTVERSION=	0.10.0
-PORTREVISION=	1
+PORTREVISION=	4
 CATEGORIES=	textproc
 
 MAINTAINER=	petteri.valkonen@iki.fi
@@ -110,7 +110,8 @@ PLIST_FILES=	bin/rg \
 
 PORTDOCS=	CHANGELOG.md FAQ.md GUIDE.md
 
-OPTIONS_DEFINE=	DOCS SIMD
+OPTIONS_DEFINE=	DOCS PCRE2 SIMD
+OPTIONS_DEFAULT=PCRE2
 
 OPTIONS_DEFINE_x86_64=	AVX
 OPTIONS_DEFINE_i386=	AVX
@@ -124,11 +125,15 @@ AVX_DESC=	${SSE_DESC:S/SSE/AVX/}
 AVX_VARS=	CARGO_FEATURES+=avx-accel RUSTFLAGS+="-C target-feature=+avx"
 AVX_IMPLIES=	SIMD
 
+PCRE2_DESC=	${PCRE_DESC} version 2
+PCRE2_LIB_DEPENDS=	libpcre2-8.so:devel/pcre2
+PCRE2_VARS=	CARGO_FEATURES+=pcre2
+
 # simd crate uses cfg_target_feature which isn't stable yet, so unlock
 # unstable features similar to how lang/rust bootstraps. www/firefox
 # uses the same hack when building with --enable-rust-simd.
 SIMD_MAKE_ENV=	RUSTC_BOOTSTRAP=1
-SIMD_VARS=	CARGO_FEATURES+=simd-accel ${SIMD_VARS_${ARCH}}
+SIMD_VARS=	CARGO_FEATURES+=simd-accel ${SIMD_VARS_${ARCH}${PORT_OPTIONS:MAVX}}
 SIMD_VARS_i386=	RUSTFLAGS+="-C target-feature=+sse2"
 
 post-patch:
