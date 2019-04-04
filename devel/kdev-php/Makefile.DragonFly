@@ -1,0 +1,2 @@
+# don't know how to make app_templates/simple_phpapp/%APPNAME.py. Stop
+USES+= gmake
