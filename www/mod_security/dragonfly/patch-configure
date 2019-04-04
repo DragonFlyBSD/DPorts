@@ -1,0 +1,11 @@
+--- configure.intermediate	2019-03-31 20:53:41 UTC
++++ configure
+@@ -14171,7 +14171,7 @@ case $host in
+     echo "Checking platform... Identified as Solaris"
+     solarisos=true
+     ;;
+-  *-*-freebsd*)
++  *-*-freebsd*|*-*dragonfly*)
+     echo "Checking platform... Identified as FreeBSD"
+     freebsdos=true
+     ;;

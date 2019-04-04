@@ -1,0 +1,12 @@
+--- src/Makefile.intermediate	2019-04-04 14:30:25 UTC
++++ src/Makefile
+@@ -38,7 +38,8 @@ PROG    = snortsam
+ SAMTOOL = samtool
+ CFLAGS  = -O2 -D$(SYSTYPE) $(DEBUG)
+ LDFLAGS =
+-SYSTYPE = `uname`
++#SYSTYPE = `uname`
++SYSTYPE = FreeBSD
+ 
+ # OS specific flags
+ OBSD_CFLAGS   = -DBSD ${PFPLUGIN}

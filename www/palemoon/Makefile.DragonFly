@@ -2,5 +2,8 @@ OPTIONS_DEFAULT:=        ${OPTIONS_DEFAULT:NPULSEAUDIO}
 
 MOZ_OPTIONS:=	${MOZ_OPTIONS:N--enable-jemall*}
 # XXX use lang/gcc5, stl wrappers are not compatible even with gcc6
-USES+=	fortran
-CONFIGURE_ENV+=	CXX=g++5
+BUILD_DEPENDS+=	gcc5:lang/gcc5
+RUN_DEPENDS+=	gcc5:lang/gcc5
+CXXFLAGS+=	-Wl,-rpath=${LOCALBASE}/lib/gcc5
+LDFLAGS+=	-Wl,-rpath=${LOCALBASE}/lib/gcc5 -L${LOCALBASE}/lib/gcc5
+CONFIGURE_ENV+=	CXX=g++5 CC=gcc5

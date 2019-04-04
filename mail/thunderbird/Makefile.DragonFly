@@ -1,6 +1,3 @@
-# requires gnu++14
-USE_GCC_VERSION=	6
-
 OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NENIGMAIL:NPULSEAUDIO}
 LDFLAGS+=		-R${PREFIX}/lib/thunderbird
 MAKE_ENV+=		AR=/usr/bin/ar LD=/usr/bin/ld \

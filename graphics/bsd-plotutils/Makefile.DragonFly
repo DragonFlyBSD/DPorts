@@ -1,0 +1,7 @@
+USES+= ncurses
+
+dfly-patch:
+	${REINPLACE_CMD} -e "s@-ltermcap@-ltinfo@"	\
+		${WRKSRC}/libplot/dumb/Makefile
+	${REINPLACE_CMD} -e "s@-lcurses@-lncurses@"	\
+		${WRKSRC}/libplot/crt/Makefile

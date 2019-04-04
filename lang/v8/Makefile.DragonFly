@@ -1,8 +1,2 @@
 # smth smth very outdated V8 sources (2013-04-30)
-BUILD_DEPENDS+=	clang60:devel/llvm60
-MAKE_ENV+=	CC.host=clang60 CXX.host=clang++60 LINK.host=clang++60 LINK.target=clang++60
-MAKE_ARGS+=	CC=clang60 CXX=clang++60 LINK=clang++60
-
-dfly-patch:
-	${REINPLACE_CMD} -e 's/g\+\+/clang++60/'	\
-		${WRKSRC}/build/gyp/pylib/gyp/generator/make.py
+USE_CLANG_FALLBACK= default

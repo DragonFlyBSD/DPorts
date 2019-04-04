@@ -1,0 +1,4 @@
+
+dfly-patch:
+	@${REINPLACE_CMD} -e "s|clang++|c++|g" \
+	${WRKSRC}/Makefile.config ${WRKSRC}/Makefile

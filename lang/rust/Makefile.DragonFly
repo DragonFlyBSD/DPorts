@@ -1,7 +1,3 @@
-# firefox and thunderbird now require gcc6+, and rust build with base
-# compiler fails to find libgcc_pic
-USE_GCC_VERSION= 6
-
 MASTER_SITES+=	https://leaf.dragonflybsd.org/~mneumann/rust/:rust_bootstrap \
 		https://leaf.dragonflybsd.org/~mneumann/rust/:cargo_bootstrap
 

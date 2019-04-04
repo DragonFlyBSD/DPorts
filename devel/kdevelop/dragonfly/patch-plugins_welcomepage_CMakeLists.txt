@@ -1,0 +1,10 @@
+--- plugins/welcomepage/CMakeLists.txt.orig	2019-03-07 07:08:09 UTC
++++ plugins/welcomepage/CMakeLists.txt
+@@ -29,7 +29,3 @@ target_link_libraries(kdevwelcomepage
+     KF5::Declarative
+ )
+ # see https://bugs.launchpad.net/ubuntu/+source/gcc-5/+bug/1568899
+-if (UNIX AND CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+-    message(WARNING "Applying workaround for https://bugs.launchpad.net/ubuntu/+source/gcc-5/+bug/1568899")
+-    target_link_libraries(kdevwelcomepage gcc_s gcc)
+-endif()

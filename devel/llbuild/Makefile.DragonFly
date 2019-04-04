@@ -1,0 +1,14 @@
+USES+= ncurses
+
+# Swift port expects clang++, llvm parts
+USE_CLANG_FALLBACK= default
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@[[:<:]]curses[[:>:]]@ncurses@'	\
+		${WRKSRC}/products/llbuild/CMakeLists.txt	\
+		${WRKSRC}/products/libllbuild/CMakeLists.txt	\
+		${WRKSRC}/products/swift-build-tool/CMakeLists.txt \
+		${WRKSRC}/unittests/Core/CMakeLists.txt		\
+		${WRKSRC}/unittests/Basic/CMakeLists.txt	\
+		${WRKSRC}/unittests/BuildSystem/CMakeLists.txt	\
+		${WRKSRC}/unittests/Ninja/CMakeLists.txt

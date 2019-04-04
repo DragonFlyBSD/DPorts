@@ -1,0 +1,5 @@
+
+# zrj: remove stupidly low limit, to use default one of 900
+dfly-patch:
+	${REINPLACE_CMD} -e "s@, '-ftemplate-depth-25'@@g"	\
+		${WRKSRC}/wscript

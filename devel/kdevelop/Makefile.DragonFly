@@ -1,0 +1,2 @@
+# bmake gives: don't know how to make app_templates/empty/%PROJECTDIRNAME.kdev4
+USES+=	gmake

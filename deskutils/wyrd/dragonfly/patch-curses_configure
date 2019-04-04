@@ -1,0 +1,29 @@
+--- curses/configure.intermediate	2019-04-02 23:20:22 UTC
++++ curses/configure
+@@ -3673,7 +3673,7 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
+ int
+ main ()
+ {
+-TERMINAL __dummy
++TERMINAL *__dummy
+   ;
+   return 0;
+ }
+@@ -3691,7 +3691,7 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
+ int
+ main ()
+ {
+-TERMINAL __dummy
++TERMINAL *__dummy
+   ;
+   return 0;
+ }
+@@ -3709,7 +3709,7 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
+ int
+ main ()
+ {
+-TERMINAL __dummy
++TERMINAL *__dummy
+   ;
+   return 0;
+ }
