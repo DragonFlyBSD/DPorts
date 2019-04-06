@@ -1840,7 +1840,7 @@ PKG_DEPENDS+=	${LOCALBASE}/sbin/pkg:${PKG_ORIGIN}
 
 .if defined(USE_CLANG_FALLBACK)
 . if ${USE_CLANG_FALLBACK:Mdefault}
-BUILD_DEPENDS+= clang60:devel/llvm${LLVM_DEFAULT}
+BUILD_DEPENDS+= clang${LLVM_DEFAULT}:devel/llvm${LLVM_DEFAULT}
 CC=clang${LLVM_DEFAULT}
 CXX=clang++${LLVM_DEFAULT}
 CPP=clang-cpp${LLVM_DEFAULT}
