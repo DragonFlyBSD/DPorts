@@ -56,7 +56,9 @@ CONFIGURE_ARGS+=	generic
 PLIST_SUB+=	ARCH="generic"
 .endif
 
+.if ${OPSYS} == FreeBSD
 CC=	${LOCALBASE}/bin/clang60
 CXX=	${LOCALBASE}/bin/clang++60
+.endif
 
 .include <bsd.port.mk>
