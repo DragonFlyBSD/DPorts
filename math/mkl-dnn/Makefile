@@ -31,6 +31,7 @@ PLIST_FILES=	include/mkldnn.h \
 OPTIONS_DEFINE=		OPENMP
 
 OPENMP_CMAKE_BOOL=	USE_OPENMP
+.if 0 #${OPSYS} == FreeBSD
 OPENMP_LIB_DEPENDS=	libomp.so:devel/openmp
 
 # use clang from ports because cmake can't find OpenMP with base clang, see https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=223678
@@ -38,6 +39,7 @@ BUILD_DEPENDS+=	clang${LLVM_DEFAULT}:devel/llvm${LLVM_DEFAULT}
 CPP=		clang-cpp${LLVM_DEFAULT}
 CC=		clang${LLVM_DEFAULT}
 CXX=		clang++${LLVM_DEFAULT}
+.endif
 
 do-test: # some tests are known to fail: https://github.com/intel/mkl-dnn/issues/350
 	@${REINPLACE_CMD} 's| /bin/bash | ${LOCALBASE}/bin/bash |' ${WRKSRC}/tests/CMakeLists.txt
