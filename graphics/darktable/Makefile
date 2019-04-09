@@ -108,7 +108,7 @@ CXX=		clang++${LLVM_VER}
 
 # Depend on devel/openmp instead of the full LLVM at runtime. Required
 # for a consistent libomp experience.
-LIB_DEPENDS+=	libomp.so.0:devel/openmp
+LIB_DEPENDS+=	
 .endif
 
 .if defined(WITH_DEBUG)
