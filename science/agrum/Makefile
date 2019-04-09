@@ -35,10 +35,12 @@ PYTHON_USES=		python
 PYTHON_PLIST_SUB=	PYTHON_VER_MAJ=${PYTHON_VER:R}
 
 # use clang from ports because cmake can't find OpenMP with base clang, see https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=223678
+.if 0 #${OPSYS} == FreeBSD
 BUILD_DEPENDS+=	clang${LLVM_DEFAULT}:devel/llvm${LLVM_DEFAULT}
 RUN_DEPENDS+=	clang${LLVM_DEFAULT}:devel/llvm${LLVM_DEFAULT}
 CPP=		clang-cpp${LLVM_DEFAULT}
 CC=		clang${LLVM_DEFAULT}
 CXX=		clang++${LLVM_DEFAULT}
+.endif
 
 .include <bsd.port.mk>
