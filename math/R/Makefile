@@ -129,7 +129,7 @@ LIBVER=		${PORTVERSION:R}
 # LLVM, which gets pulled in with FLANG, provides libomp.  So, only depend on
 # devel/openmp when GFORTRAN and OPENMP are on.
 .if ! ${PORT_OPTIONS:MFLANG} && ${PORT_OPTIONS:MOPENMP}
-LIB_DEPENDS+=	libomp.so:devel/openmp
+LIB_DEPENDS+=	
 .endif
 
 post-patch:
