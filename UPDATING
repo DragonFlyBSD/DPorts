@@ -1061,10 +1061,3 @@ you update your ports collection, before attempting any port upgrades.
   These should be fixable by issuing a command à la
   # pkg set --change-origin databases/akonadi:databases/akonadi-kde4 akonadi
 
-20180409:
-  AFFECTS: users of net-im/matterircd
-  AUTHOR: norrland@nullbyte.se
-
-  Matterircd has been updated to 0.17.0 and mattermost configuration settings
-  need to be migrated to [mattermost] section. See matterircd.toml.sample.
-
