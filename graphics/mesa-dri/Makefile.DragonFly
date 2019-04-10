@@ -1,0 +1,10 @@
+# zrj: justdoitTM will avoid installing llvmX0 for all Xorg ports.
+STATIC_LLVM=yes
+
+# llvm environ boilerplate...
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(LD_NO_UNDEFINED)\)@NOP) -Wl,--allow-shlib-undefined@'	\
+		${WRKSRC}/src/gallium/targets/dri/Makefile.in				\
+		${WRKSRC}/src/gallium/targets/va/Makefile.in				\
+		${WRKSRC}/src/gallium/targets/vdpau/Makefile.in				\
+		${WRKSRC}/src/gallium/targets/xvmc/Makefile.in
