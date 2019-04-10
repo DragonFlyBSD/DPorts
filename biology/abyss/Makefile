@@ -16,7 +16,7 @@ BUILD_DEPENDS=	${LOCALBASE}/include/boost/version.hpp:devel/boost-libs \
 		pandoc:textproc/hs-pandoc # pandoc is required just for one man page: abyss-sealer
 LIB_DEPENDS=	libffi.so:devel/libffi \
 		libgmp.so:math/gmp \
-		libomp.so:devel/openmp
+		
 RUN_DEPENDS=	bash:shells/bash \
 		gmake:devel/gmake
 
