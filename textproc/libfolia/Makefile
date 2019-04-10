@@ -13,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	autoconf-archive>=0:devel/autoconf-archive
 LIB_DEPENDS=	libicui18n.so:devel/icu \
-		libomp.so:devel/openmp \
+		 \
 		libticcutils.so:devel/ticcutils
 
 USES=		autoreconf gmake gnome libtool pkgconfig
