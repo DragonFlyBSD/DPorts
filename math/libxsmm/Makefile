@@ -14,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.md
 BROKEN_i386=	LIBXSMM is only supported on a 64-bit platform!
 
 BUILD_DEPENDS=	bash:shells/bash
-LIB_DEPENDS=	libomp.so:devel/openmp
+LIB_DEPENDS=	
 
 USES=		fortran gmake localbase:ldflags python:build shebangfix
 SHEBANG_GLOB=	*.sh
