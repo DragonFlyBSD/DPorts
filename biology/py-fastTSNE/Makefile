@@ -13,7 +13,7 @@ LICENSE=	BSD3CLAUSE
 
 BUILD_DEPENDS=	${PYNUMPY}
 LIB_DEPENDS=	libfftw3.so:math/fftw3 \
-		libomp.so:devel/openmp
+		
 RUN_DEPENDS=	${PYNUMPY} \
 		${PYTHON_PKGNAMEPREFIX}numba>=0.38.1:devel/py-numba@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}scipy>0:science/py-scipy@${PY_FLAVOR} \
