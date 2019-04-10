@@ -15,7 +15,7 @@ LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>1.7,1:math/py-numpy@${PY_FLAVOR}
-LIB_DEPENDS=	libomp.so:devel/openmp \
+LIB_DEPENDS=	 \
 		libtbb.so:devel/tbb
 RUN_DEPENDS=	${PY_ENUM34} \
 		${PYTHON_PKGNAMEPREFIX}llvmlite>=0.12:devel/py-llvmlite@${PY_FLAVOR}
