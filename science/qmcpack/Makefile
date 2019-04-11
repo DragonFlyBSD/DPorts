@@ -18,7 +18,7 @@ LIB_DEPENDS=	libboost_system.so:devel/boost-libs \
 		libfftw3.so:math/fftw3 \
 		libhdf5.so:science/hdf5 \
 		libmpich.so:net/mpich \
-		libomp.so:devel/openmp \
+		 \
 		libopenblas.so:math/openblas \
 		libsz.so:science/szip
 
