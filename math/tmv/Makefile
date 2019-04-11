@@ -12,7 +12,7 @@ COMMENT=	Fast, intuitive linear algebra library for C++
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/TMV_LICENSE
 
-LIB_DEPENDS=	libomp.so:devel/openmp
+LIB_DEPENDS=	
 
 USES=		gmake blaslapack:netlib localbase
 USE_GITHUB=	yes
