@@ -18,7 +18,7 @@ LIB_DEPENDS=	libfftw3.so:math/fftw3 \
 		libfftw3f.so:math/fftw3-float \
 		libhamlib.so:comms/hamlib \
 		libxslt.so:textproc/libxslt \
-		libomp.so:devel/openmp
+		
 
 MAKE_JOBS_UNSAFE=	yes
 USES=		cmake compiler:c++11-lib dos2unix fortran pkgconfig \
