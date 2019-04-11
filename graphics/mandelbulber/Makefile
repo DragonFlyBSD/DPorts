@@ -38,7 +38,7 @@ OPTIONS_EXCLUDE=	OPENMP  # not properly supported yet
 
 OPENCL_BUILD_DEPENDS=	opencl>=0:devel/opencl
 
-OPENMP_LIB_DEPENDS=	libomp.so:devel/openmp
+OPENMP_LIB_DEPENDS=	
 
 post-patch-OPENMP-off:
 	@${REINPLACE_CMD} -e 's|-fopenmp||' \
