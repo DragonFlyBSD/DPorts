@@ -17,7 +17,7 @@ LICENSE_FILE=	${WRKSRC}/gpl-2.0.txt
 BUILD_DEPENDS=	${PYNUMPY}
 LIB_DEPENDS=	libR.so:math/R \
 		libicui18n.so:devel/icu \
-		libomp.so:devel/openmp \
+		 \
 		libpcre.so:devel/pcre
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Jinja2>0:devel/py-Jinja2@${PY_FLAVOR} \
 		${PYNUMPY} \
