@@ -12,7 +12,7 @@ COMMENT=	Tilburg Memory Based Learner
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-LIB_DEPENDS=	libomp.so:devel/openmp \
+LIB_DEPENDS=	 \
 		libticcutils.so:devel/ticcutils
 
 USES=		autoreconf gmake gnome libtool pathfix pkgconfig
