@@ -52,7 +52,7 @@ $o_CONFIGURE_ENABLE=	${o:S/_/-/g:tl}
 
 # OPENMP_USES=	compiler:openmp - XXX broken, insists on gcc,
 # but boost is built with clang...
-OPENMP_LIB_DEPENDS=	libomp.so:devel/openmp
+OPENMP_LIB_DEPENDS=	
 OPENMP_CFLAGS=		-I${LOCALBASE}/include
 OPENMP_LDFLAGS=		-L${LOCALBASE}/lib
 # devel/openmp installs its own -lomp, which is cleaner.
