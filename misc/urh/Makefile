@@ -11,7 +11,7 @@ COMMENT=	Universal Radio Hacker: investigate wireless protocols like a boss
 LICENSE=	GPLv3
 
 BUILD_DEPENDS=	${PYNUMPY}
-LIB_DEPENDS=	libomp.so:devel/openmp
+LIB_DEPENDS=	
 RUN_DEPENDS=	${PYNUMPY} \
 		${PYTHON_PKGNAMEPREFIX}psutil>0:sysutils/py-psutil@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pyzmq>0:net/py-pyzmq@${PY_FLAVOR}
