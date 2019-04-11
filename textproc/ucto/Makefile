@@ -16,7 +16,7 @@ BUILD_DEPENDS=	autoconf-archive>0:devel/autoconf-archive \
 LIB_DEPENDS=	libexttextcat-2.0.so:textproc/libexttextcat \
 		libfolia.so:textproc/libfolia \
 		libicuio.so:devel/icu \
-		libomp.so:devel/openmp \
+		 \
 		libticcutils.so:devel/ticcutils
 RUN_DEPENDS=	uctodata>0:textproc/uctodata
 
