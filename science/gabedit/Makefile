@@ -39,7 +39,7 @@ PLIST_FILES+=	share/icons/hicolor/${SZ}x${SZ}/apps/${PORTNAME}.png
 OPTIONS_DEFINE=		OPENMP
 OPTIONS_DEFAULT=	OPENMP
 
-OPENMP_LIB_DEPENDS=	libomp.so:devel/openmp
+OPENMP_LIB_DEPENDS=	
 
 post-patch:
 	@${REINPLACE_CMD} 's|/usr/|${PREFIX}/|; s| -O2| ${CFLAGS}|; s|gcc|${CC}|' ${WRKSRC}/CONFIG
