@@ -63,7 +63,7 @@ ODBC_CONFIGURE_WITH=	odbc
 ODBC_LIB_DEPENDS=	libodbc.so:databases/unixODBC
 
 OPENMP_CONFIGURE_ENABLE=	openmp
-OPENMP_LIB_DEPENDS=	libomp.so:devel/openmp
+OPENMP_LIB_DEPENDS=	
 
 R_DESC=			libR support
 R_CONFIGURE_WITH=	libR
