@@ -1,0 +1,5 @@
+include/libcipher3.h
+lib/libcipher.a
+lib/libcipher.so
+lib/libcipher.so.3
+man/man3/cipher.3.gz
