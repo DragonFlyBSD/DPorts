@@ -1,1 +1,5 @@
 LDFLAGS+= -lkvm -lkinfo
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-lmd[[:>:]]@@g' ${WRKSRC}/Makefile \
+		${WRKSRC}/server/Makefile ${WRKSRC}/src/Makefile
