@@ -1,0 +1,5 @@
+
+# link with libcrypto, not libmd
+dfly-patch:
+	${REINPLACE_CMD} -e "s@-lmd[[:>:]]@-lcrypto@g" \
+		${WRKSRC}/Makefile.am
