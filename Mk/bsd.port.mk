@@ -1791,7 +1791,9 @@ INSTALL_TARGET:=	${INSTALL_TARGET:S/^install-strip$/install/g}
 .endif
 
 .if !defined(WITHOUT_SSP)
-.include "${PORTSDIR}/Mk/bsd.ssp.mk"
+# Leave the conditional just in case WITHOUT_SSP becomes
+# something else.
+#.include "${PORTSDIR}/Mk/bsd.ssp.mk"
 .endif
 
 # XXX PIE support to be added here
