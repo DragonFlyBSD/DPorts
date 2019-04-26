@@ -17,8 +17,8 @@ fortran_ARGS=	${FORTRAN_DEFAULT}
 
 .if ${fortran_ARGS} == flang
 .if ${ARCH} == amd64
-BUILD_DEPENDS+=	flang:devel/flang
-RUN_DEPENDS+=	flang:devel/flang
+BUILD_DEPENDS+=	flang>0:devel/flang
+RUN_DEPENDS+=	flang>0:devel/flang
 F77=		flang
 FC=		flang
 LDFLAGS+=	-L${LOCALBASE}/flang/lib -Wl,--as-needed -lflang -lexecinfo -Wl,--no-as-needed
@@ -26,9 +26,9 @@ LDFLAGS+=	-L${LOCALBASE}/flang/lib -Wl,--as-needed -lflang -lexecinfo -Wl,--no-a
 IGNORE=		USES=fortran: flang argument only available for amd64
 .endif
 .elif ${fortran_ARGS} == gfortran
-_GCC_VER=	5
+_GCC_VER=	8
 . if defined(USE_GCC)
-.  if ${USE_GCC} == 4.8 || ${USE_GCC} == 4.9 || ${USE_GCC} == 6
+.  if ${USE_GCC} == 6 || ${USE_GCC} == 7 || ${USE_GCC} == 9
 _GCC_VER=	${USE_GCC:S/.//}
 .  endif
 . endif
