@@ -1,5 +1,0 @@
-# Fix path on x86_64
-
-post-extract:
-	@${REINPLACE_CMD} -e 's,lib64,lib,g' ${WRKSRC}/src/src.pro
-

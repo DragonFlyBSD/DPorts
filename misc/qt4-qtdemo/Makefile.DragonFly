@@ -1,4 +1,0 @@
-
-dfly-patch:
-	${REINPLACE_CMD} -e 's@\(5\*\|4\*\|3.4\*\)@8*|\1@g'	\
-		${WRKSRC}/configure

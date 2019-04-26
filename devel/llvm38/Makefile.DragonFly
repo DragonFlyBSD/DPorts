@@ -1,8 +1,0 @@
-# zrj: very noisy
-CXXFLAGS+=	-fpermissive -Wno-class-memaccess
-
-dfly-patch:
-	-${REINPLACE_CMD} -e 's|gcc50|gcc80|g' -e 's|5.0"|8.0"|' \
-		${WRKSRC}/tools/clang/lib/Driver/Tools.cpp \
-		${WRKSRC}/tools/clang/lib/Driver/ToolChains.cpp \
-		${WRKSRC}/tools/clang/lib/Frontend/InitHeaderSearch.cpp

@@ -1,5 +1,0 @@
-pre-build:
-	@${REINPLACE_CMD} -e 's/extern int errno;/#include <errno.h>/' \
-		${WRKSRC}/bin/mkcmd/machine.h \
-		${WRKSRC}/bin/mkcmd/main.c \
-		${WRKSRC}/bin/mkcmd/mkcmd.c

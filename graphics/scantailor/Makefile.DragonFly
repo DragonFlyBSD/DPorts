@@ -1,5 +1,0 @@
-
-# port does not honor the CXXFLAGS
-dfly-patch:
-	${REINPLACE_CMD} -e 's@\(CMAKE_CXX_FLAGS "\)@\1 -std=gnu++98 @g'	\
-		${WRKSRC}/cmake/SetDefaultGccFlags.cmake

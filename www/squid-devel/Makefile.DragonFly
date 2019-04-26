@@ -1,5 +1,0 @@
-OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NGSSAPI_BASE:NTP_IPF} GSSAPI_MIT
-
-CONFIGURE_ARGS+= ac_cv_require_wno_deprecated_register=no
-CFLAGS+=	-Wno-stringop-truncation
-CXXFLAGS+=	-Wno-error
