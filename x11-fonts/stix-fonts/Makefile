@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	stixfonts
-PORTVERSION=	2.0.0
+PORTVERSION=	2.0.1
+DISTVERSIONPREFIX=	v
 CATEGORIES=	x11-fonts
 
 MAINTAINER=	thierry@FreeBSD.org
@@ -24,7 +25,7 @@ FONTNAME=	stix
 
 OPTIONS_DEFINE=	DOCS
 
-PORTDOCS=	STIX_${PORTVERSION}_release_notes.txt STIX_${PORTVERSION}_stylistic_sets.pdf
+PORTDOCS=	STIX_${PORTVERSION}_release_notes.txt
 
 do-install:
 	${MKDIR} ${STAGEDIR}${FONTSDIR}
