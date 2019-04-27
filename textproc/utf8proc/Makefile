@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	utf8proc
-PORTVERSION=	2.1.0
+PORTVERSION=	2.2.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	textproc devel
 
@@ -14,7 +14,8 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
 USES=		gmake
 USE_GITHUB=	yes
-GH_ACCOUNT=	JuliaLang
+
+GH_ACCOUNT=	JuliaStrings
 USE_LDCONFIG=	yes
 MAKE_ARGS=	prefix=${PREFIX}
 PLIST_FILES=	include/utf8proc.h \
@@ -23,6 +24,8 @@ PLIST_FILES=	include/utf8proc.h \
 		lib/libutf8proc.so.2 \
 		lib/libutf8proc.so.${PORTVERSION}
 PORTDOCS=	NEWS.md README.md
+
+CONFLICTS=	libutf8proc-[0-9]*
 
 OPTIONS_DEFINE=	DOCS
 
