@@ -3,6 +3,7 @@
 
 PORTNAME=	conky
 PORTVERSION=	1.11.3
+PORTREVISION=	1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	sysutils
 
@@ -15,7 +16,7 @@ BUILD_DEPENDS=	db2x_xsltproc:textproc/docbook2X \
 		xsltproc:textproc/libxslt
 
 USES=		cpe cmake:noninja compiler:c++11-lib gettext-runtime iconv \
-		localbase lua:53 pkgconfig tar:bzip2
+		localbase lua:52 pkgconfig tar:bzip2
 
 CMAKE_ARGS+=	-DBUILD_PORT_MONITORS:BOOL=false \
 		-DBUILD_IBM:BOOL=false \
@@ -37,7 +38,7 @@ OPTIONS_DEFINE=	APCUPSD CURL DOCS EXAMPLES IPV6 METAR MOC MPD NCURSES RSS \
 
 OPTIONS_GROUP?=	X11
 OPTIONS_GROUP_X11=	ARGB DOUBLE_BUFFER IMLIB2 XFT XINERAMA LUA_CAIRO LUA_IMLIB2 LUA_RSVG
-OPTIONS_DEFAULT?=	X11 ARGB DOUBLE_BUFFER XFT
+OPTIONS_DEFAULT?=	X11 ARGB DOUBLE_BUFFER XFT LUA_CAIRO
 
 APCUPSD_DESC=		Monitor APCUPSD
 APCUPSD_CMAKE_BOOL=	BUILD_APCUPSD
@@ -121,6 +122,11 @@ XOAP_USE=		gnome=libxml2
 
 .if ${PORT_OPTIONS:MLUA_CAIRO} && ${PORT_OPTIONS:MLUA_IMLIB2}
 PLIST_FILES+=		lib/conky/libcairo_imlib2_helper.so
+.endif
+
+# disable apm on non-x86 archs
+.if ${ARCH} != x86_64 && ${ARCH} != i386
+EXTRA_PATCHES+=		${PATCHDIR}/extra-patch-src_CMakeLists.txt
 .endif
 
 post-patch:
