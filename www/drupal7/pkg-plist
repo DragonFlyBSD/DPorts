@@ -113,6 +113,7 @@
 %%DRUPAL_BASE%%/misc/jquery.form.js
 %%DRUPAL_BASE%%/misc/jquery.js
 %%DRUPAL_BASE%%/misc/jquery.once.js
+%%DRUPAL_BASE%%/misc/jquery-extend-3.4.0.js
 %%DRUPAL_BASE%%/misc/machine-name.js
 %%DRUPAL_BASE%%/misc/menu-collapsed-rtl.png
 %%DRUPAL_BASE%%/misc/menu-collapsed.png
@@ -408,6 +409,9 @@
 %%DRUPAL_BASE%%/modules/file/icons/x-office-document.png
 %%DRUPAL_BASE%%/modules/file/icons/x-office-presentation.png
 %%DRUPAL_BASE%%/modules/file/icons/x-office-spreadsheet.png
+%%DRUPAL_BASE%%/modules/file/tests/fixtures/file_scan_ignore/a.txt
+%%DRUPAL_BASE%%/modules/file/tests/fixtures/file_scan_ignore/frontend_framework/b.txt
+%%DRUPAL_BASE%%/modules/file/tests/fixtures/file_scan_ignore/frontend_framework/c.txt
 %%DRUPAL_BASE%%/modules/file/tests/file.test
 %%DRUPAL_BASE%%/modules/file/tests/file_module_test.info
 %%DRUPAL_BASE%%/modules/file/tests/file_module_test.module
