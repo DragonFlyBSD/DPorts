@@ -2,14 +2,14 @@
 # $FreeBSD$
 
 PORTNAME=	tt-rss
-PORTVERSION=	g20181226
+PORTVERSION=	g20190401
 PORTEPOCH=	1
 CATEGORIES=	www
 MASTER_SITES=	https://git.tt-rss.org/git/tt-rss/archive/
 DISTNAME=	${GIT_TAGNAME}
 DIST_SUBDIR=	${PORTNAME}
 
-MAINTAINER=	thierry@FreeBSD.org
+MAINTAINER=	dereks@lifeofadishwasher.com
 COMMENT=	Tiny Tiny RSS: web-based news feed (RSS/Atom) aggregator
 
 LICENSE=	GPLv2
@@ -21,7 +21,7 @@ REINPLACE_ARGS=	-i ""
 SHEBANG_FILES=	lib/dojo-src/rebuild-dojo.sh utils/extract-i18n-js.pl
 WRKSRC=		${WRKDIR}/tt-rss
 
-GIT_TAGNAME=	734af3357d
+GIT_TAGNAME=	1a484ec3f5
 
 NO_BUILD=	yes
 NO_ARCH=	yes
