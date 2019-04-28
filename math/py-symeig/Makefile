@@ -3,7 +3,7 @@
 
 PORTNAME=	symeig
 PORTVERSION=	1.5
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	math python
 MASTER_SITES=	SF/mdp-toolkit/mdp-toolkit/2.4
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,6 +12,10 @@ MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Symmetrical eigenvalue routines for NumPy
 
 LICENSE=	BSD3CLAUSE
+
+DEPRECATED=	Consider using science/py-scipy as this library is included in\
+		py-scipy since 0.7 and onwards
+EXPIRATION_DATE=2019-05-14
 
 BUILD_DEPENDS+=	${PYNUMPY}
 RUN_DEPENDS+=	${PYNUMPY}
