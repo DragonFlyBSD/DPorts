@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	docker-compose
-PORTVERSION=	1.23.2
+PORTVERSION=	1.24.0
 CATEGORIES=	sysutils python
 MASTER_SITES=	CHEESESHOP
 
