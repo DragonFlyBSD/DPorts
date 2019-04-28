@@ -1,11 +1,10 @@
 #!/bin/sh
 #
-# $FreeBSD: head/security/hitch/files/hitch.in 482392 2018-10-18 23:36:11Z zi $
+# $FreeBSD: head/security/hitch/files/hitch.in 499601 2019-04-22 01:32:18Z zi $
 #
 
 # PROVIDE: hitch
-# REQUIRE: NETWORKING SERVERS
-# BEFORE: DAEMON
+# REQUIRE: LOGIN
 # KEYWORD: shutdown
 
 #
