@@ -1,10 +1,5 @@
 USES+= alias localbase
 
-.if 0
-BUILD_DEPENDS+= clang50:devel/llvm50
-CONFIGURE_ENV+= CC=clang50 CXX=clang++50 CPP=clang-cpp50
-.endif
-
 # Mono has been behaving for a while, so let it build on pkgbox64
 # for a while (provisionally)
 #
