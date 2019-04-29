@@ -1,7 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	matomo
-DISTVERSION=	3.8.1
+DISTVERSION=	3.9.1
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://builds.matomo.org/
 PKGNAMEPREFIX=	${PHP_PKGNAMEPREFIX}
@@ -12,6 +13,7 @@ COMMENT=	Open Source Web Analytics Software Program
 
 LICENSE=	GPLv3
 
+IGNORE_WITH_PHP=71
 NO_BUILD=	yes
 SUB_FILES=	pkg-message
 
