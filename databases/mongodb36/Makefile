@@ -2,7 +2,7 @@
 
 PORTNAME=	mongodb
 DISTVERSIONPREFIX=	r
-DISTVERSION=	3.6.10
+DISTVERSION=	3.6.12
 CATEGORIES=	databases net
 MASTER_SITES=	https://fastdl.mongodb.org/src/ \
 		http://fastdl.mongodb.org/src/ \
@@ -28,7 +28,7 @@ LIB_DEPENDS=	libboost_system.so:devel/boost-libs \
 		libsnappy.so:archivers/snappy
 
 CONFLICTS_BUILD=	mongo-cxx-driver
-CONFLICTS_INSTALL=	mongodb[32-4]*
+CONFLICTS_INSTALL=	mongodb34 mongodb40
 
 USES=		compiler:c++14-lang cpe python:2.7,build scons shebangfix
 USE_RC_SUBR=	mongod
