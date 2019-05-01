@@ -177,7 +177,12 @@ _BROKEN_OPTIONS_HELPERS+=	${opt}_${helper}
 .  endfor
 .endfor
 .if !empty(_BROKEN_OPTIONS_HELPERS)
+# Work around issue in freebsd-ports.
+. if ${_BROKEN_OPTIONS_HELPERS:MOPENSSL_LDFLAGS}
+DEV_WARNING+=	"The following options helper is incorrectly set after bsd.port.options.mk and is ineffective: ${_BROKEN_OPTIONS_HELPERS}"
+. else
 DEV_ERROR+=	"The following options helpers are incorrectly set after bsd.port.options.mk and are ineffective: ${_BROKEN_OPTIONS_HELPERS}"
+. endif
 .endif
 
 SANITY_UNSUPPORTED=	USE_OPENAL USE_FAM USE_MAKESELF USE_ZIP USE_LHA USE_CMAKE \
