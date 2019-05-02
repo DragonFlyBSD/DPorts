@@ -14,13 +14,13 @@ LICENSE=	MIT
 USES=		uidfix
 
 USE_LDCONFIG=	yes
-MAKE_ENV+=	STAGEDIR="${STAGEDIR}"
+MAKE_ENV=	STAGEDIR="${STAGEDIR}"
 
 MAKEFILE=	${FILESDIR}/BSDmakefile
 
 MAKE_ARGS+=    NO_WERROR=yes
 
-post-build:
+pre-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/include/dht
 
 .include <bsd.port.mk>
