@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/www/varnish6/files/varnishd.in 438113 2017-04-09 18:29:05Z feld $
+# $FreeBSD: head/www/varnish6/files/varnishd.in 500118 2019-04-26 16:53:26Z feld $
 #
 
 # PROVIDE: varnishd
@@ -83,7 +83,7 @@ varnishd_checkconfig()
 		echo "${name}: nothing to check, no configuration file defined, builtin VCL used"
 	else
 		echo "Performing sanity check on ${name} configuration:"
-		if eval ${command} -C -f "${varnishd_config}" 2> /dev/null ; then
+		if eval ${command} ${varnishd_flags} -C -f "${varnishd_config}" 2> /dev/null ; then
 			echo "${name}: the configuration file ${varnishd_config} syntax is ok"
 		else
 			err 1 "${name}: the configuration file ${varnishd_config} syntax is NOT ok"
