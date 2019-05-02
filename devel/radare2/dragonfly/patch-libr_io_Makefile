@@ -1,0 +1,15 @@
+--- libr/io/Makefile.intermediate	2019-05-01 15:11:12 UTC
++++ libr/io/Makefile
+@@ -20,9 +20,9 @@ include $(SHLR)/ptrace-wrap/deps.mk
+ OBJS+=$(PTRACEWRAP_OBJS)
+ endif
+ 
+-ifeq (${BUILD_OS},dragonfly)
+-  LDFLAGS+=-lkvm
+-endif
++#ifeq (${BUILD_OS},dragonfly)
++LDFLAGS+=-lkvm
++#endif
+ 
+ .PHONY: pre
+ pre: libr_io.${EXT_SO} libr_io.${EXT_AR}
