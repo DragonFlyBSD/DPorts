@@ -1,0 +1,11 @@
+--- src/mlt++/configure.orig	2019-03-30 20:59:21 UTC
++++ src/mlt++/configure
+@@ -10,7 +10,7 @@ case $targetos in
+                 echo "CXXFLAGS+=-Wall -fPIC"
+ 		echo "LIBFLAGS=-dynamiclib -single_module"
+ 		;;
+-	Linux|FreeBSD|NetBSD|GNU/kFreeBSD|GNU)
++	Linux|DragonFly|FreeBSD|NetBSD|GNU/kFreeBSD|GNU)
+ 		echo LIBSUF=.so
+ 		echo "CXXFLAGS+=-Wall $WARNINGS -fPIC -DPIC"
+ 		echo "LIBFLAGS=-shared"

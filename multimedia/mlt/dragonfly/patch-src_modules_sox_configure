@@ -1,0 +1,11 @@
+--- src/modules/sox/configure.orig	2019-03-30 20:59:21 UTC
++++ src/modules/sox/configure
+@@ -8,7 +8,7 @@ then
+ 	Darwin)
+ 		LDD="otool -L"
+ 		;;
+-	Linux|FreeBSD|NetBSD)
++	Linux|DragonFly|FreeBSD|NetBSD)
+ 		LDD="ldd"
+ 		;;
+ 	*)

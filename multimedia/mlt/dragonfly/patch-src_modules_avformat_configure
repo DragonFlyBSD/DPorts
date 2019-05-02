@@ -1,0 +1,11 @@
+--- src/modules/avformat/configure.orig	2019-03-30 20:59:21 UTC
++++ src/modules/avformat/configure
+@@ -25,7 +25,7 @@ else
+ 	Darwin)
+ 		export LIBSUF=.dylib
+ 		;;
+-	Linux|FreeBSD|NetBSD)
++	Linux|DragonFly|FreeBSD|NetBSD)
+ 		export LIBSUF=.so
+ 		;;
+ 	*)

@@ -1,0 +1,63 @@
+--- configure.orig	2019-03-30 20:59:21 UTC
++++ configure
+@@ -108,7 +108,7 @@ build_config()
+ 		echo "RDYNAMIC=-rdynamic"
+ 		echo "LDFLAGS+=-Wl,--no-undefined -Wl,--as-needed"
+ 		;;
+-		FreeBSD)
++		FreeBSD|DragonFly)
+ 		[ "$optimisations" = "true" ] &&
+ 			echo "OPTIMISATIONS+=-ffast-math"
+ 		echo "CFLAGS+=-fPIC -pthread"
+@@ -227,6 +227,7 @@ export windeploy=true
+ : ${CC:=gcc}
+ 
+ # Test for a supported C++ compiler.
++if false ; then
+ if $($CC --version | grep -is -e gcc > /dev/null)
+ then
+ 	echo "Found gcc version $($CC -dumpversion)"
+@@ -247,6 +248,7 @@ else
+ 	echo "MLT requires either the gcc or clang C/C++ compilers."
+ 	exit 1
+ fi
++fi
+ 
+ # Iterate through arguments
+ for i in "$@"
+@@ -294,7 +296,7 @@ case $targetos in
+ 		[ "$?" = "0" ] && targetarch="amd64"
+ 	fi
+ 	;;
+-	Linux|FreeBSD|NetBSD)
++	Linux|DragonFly|FreeBSD|NetBSD)
+ 	LIBSUF=".so"
+ 	;;
+ 	MINGW??_NT-*|MinGW|mingw)
+@@ -337,6 +339,8 @@ then
+ 		Linux)
+ 		grep mmx /proc/cpuinfo > /dev/null 2>&1 || mmx=false
+ 		;;
++		DragonFly)
++		;;
+ 		FreeBSD)
+ 		[ "$(make -V MACHINE_CPU:Mmmx -f /dev/null)" ] || mmx=false
+ 		;;
+@@ -356,6 +360,8 @@ then
+ 		Linux)
+ 		grep sse /proc/cpuinfo > /dev/null 2>&1 || sse=false
+ 		;;
++		DragonFly)
++		;;
+ 		FreeBSD)
+ 		[ "$(make -V MACHINE_CPU:Msse -f /dev/null)" ] || sse=false
+ 		;;
+@@ -375,6 +381,8 @@ then
+ 		Linux)
+ 		grep sse2 /proc/cpuinfo > /dev/null 2>&1 || sse2=false
+ 		;;
++		DragonFly)
++		;;
+ 		FreeBSD)
+ 		[ "$(make -V MACHINE_CPU:Msse2 -f /dev/null)" ] || sse2=false
+ 		;;
