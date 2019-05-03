@@ -1,0 +1,11 @@
+--- configure.ac.intermediate	2019-05-02 20:44:32 UTC
++++ configure.ac
+@@ -45,7 +45,7 @@ case "${host_os}" in
+ 		;;
+ 	esac
+ 	;;
+-  *freebsd*|dragonfly)
++  *freebsd*|*dragonfly*)
+     PANO_WIN32_RESOURCE=
+     HSYS=freebsd
+     HCPU="${target_cpu}"
