@@ -1,0 +1,2 @@
+# broken checks for openmpi2 in this package
+OPTIONS_DEFAULT:=      ${OPTIONS_DEFAULT:NOPENMPI2}
