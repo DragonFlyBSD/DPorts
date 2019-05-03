@@ -1,0 +1,11 @@
+--- meson.build.intermediate	2019-05-02 21:22:05 UTC
++++ meson.build
+@@ -28,7 +28,7 @@ execinfo_dep = cc.find_library('execinfo
+ zlib_dep = dependency('zlib', required:false)
+ conf.set('ENABLE_ZLIB', zlib_dep.found())
+ 
+-lzma_dep = dependency('liblzma')
++lzma_dep = cc.find_library('lzma')
+ 
+ xapian_dep = dependency('xapian-core',
+                         required:false,

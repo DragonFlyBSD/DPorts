@@ -1,0 +1,11 @@
+--- src/meson.build.intermediate	2019-05-02 21:22:05 UTC
++++ src/meson.build
+@@ -76,7 +76,6 @@ libzim = library('zim',
+                  cpp_args : extra_cpp_args,
+                  version: meson.project_version(),
+                  install : true,
+-                 build_rpath : join_paths(get_option('prefix'), get_option('libdir')),
+-                 install_rpath: '$ORIGIN')
++                 build_rpath : join_paths(get_option('prefix'), get_option('libdir')))
+ libzim_dep = declare_dependency(link_with: libzim,
+                                 include_directories: include_directory)
