@@ -3,6 +3,9 @@
 
 OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NADS:NLDAP}
 
+# exclude bad depends for qa.sh
+TEST_DEPENDS:= ${TEST_DEPENDS:Npython\:lang/python}
+
 dfly-patch:
 	${REINPLACE_CMD} -e "s|'md'|'md-disable'|" \
 		-e "s|'sys/md5.h'|'sys/md5-disable.h'|" \
