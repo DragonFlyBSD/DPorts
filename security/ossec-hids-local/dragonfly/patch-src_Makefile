@@ -1,0 +1,35 @@
+--- src/Makefile.intermediate	2019-05-03 18:19:28 UTC
++++ src/Makefile
+@@ -85,6 +85,13 @@ ifeq (${uname_S},Darwin)
+ 		LUA_PLAT=macosx
+ 
+ else
++ifeq (${uname_S},DragonFly)
++		DEFINES+=-DDragonFly
++		OSSEC_LDFLAGS+=-pthread
++		LUA_PLAT=freebsd
++		CFLAGS+=-I/usr/local/include
++		OSSEC_LDFLAGS+=-L/usr/local/lib
++else
+ ifeq (${uname_S},FreeBSD)
+ 		DEFINES+=-DFreeBSD
+ 		OSSEC_LDFLAGS+=-pthread
+@@ -117,6 +124,7 @@ endif # HPUX
+ endif # OpenBSD
+ endif # NetBSD
+ endif # FreeBSD
++endif # DragonFly
+ endif # Darwin
+ endif # SunOS
+ endif # AIX
+@@ -197,6 +205,10 @@ OSSEC_WINDRES =${QUIET_CCBIN}${MING_BASE
+ 
+ ifneq (,$(filter ${USE_INOTIFY},auto yes y Y 1))
+ 	DEFINES+=-DINOTIFY_ENABLED
++	ifeq (${uname_S},DragonFly)
++		OSSEC_LDFLAGS+=-linotify -L/usr/local/lib -I/usr/local/include
++		OSSEC_CFLAGS+=-I/usr/local/include
++	endif
+ 	ifeq (${uname_S},FreeBSD)
+ 		OSSEC_LDFLAGS+=-linotify -L/usr/local/lib -I/usr/local/include
+ 		OSSEC_CFLAGS+=-I/usr/local/include
