@@ -1,0 +1,3 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/latomic/d' ${WRKSRC}/OgreMain/CMakeLists.txt
