@@ -1,0 +1,13 @@
+# all this crap is to build gsd without pulseaudio support
+# Obviously functionality has to be eliminated
+
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NSMARTCARD}
+
+LIB_DEPENDS:=	${LIB_DEPENDS:Nlibpulse*}
+
+dfly-patch:
+	${REINPLACE_CMD} -e "/libpulse_mainloop_glib_dep/d"	\
+		${WRKSRC}/meson.build
+	${REINPLACE_CMD} -e "/sound/d" -e "/media-keys/d"	\
+		${WRKSRC}/plugins/meson.build
+	${CHMOD} +x ${WRKSRC}/gnome-settings-daemon/codegen.py
