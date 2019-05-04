@@ -1,0 +1,2 @@
+# configure: error: Package requirements ("dbus-1") were not met:
+LIB_DEPENDS=	libdbus-1.so:devel/dbus
