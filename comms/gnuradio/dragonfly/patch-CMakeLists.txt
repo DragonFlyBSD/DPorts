@@ -1,0 +1,11 @@
+--- CMakeLists.txt.intermediate	2019-05-02 19:26:02 UTC
++++ CMakeLists.txt
+@@ -69,7 +69,7 @@ set(MSVC_MIN_VERSION "1800")
+ ########################################################################
+ # FreeBSD libdata vs. lib
+ #
+-if(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
++if(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD" OR CMAKE_SYSTEM_NAME STREQUAL "DragonFly")
+ set(GR_PKGCONFIG_DIR      libdata${LIB_SUFFIX})
+ else()
+ set(GR_PKGCONFIG_DIR      lib${LIB_SUFFIX})
