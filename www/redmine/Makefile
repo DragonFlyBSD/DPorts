@@ -3,6 +3,7 @@
 
 PORTNAME=	redmine
 PORTVERSION=	3.4.9
+PORTREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	https://www.redmine.org/releases/
 
@@ -24,7 +25,7 @@ RUN_DEPENDS=	rubygem-bundler>=1.5.0:sysutils/rubygem-bundler \
 		rubygem-roadie>=3.2.1:mail/rubygem-roadie \
 		rubygem-mimemagic>=0:misc/rubygem-mimemagic \
 		rubygem-mail>=2.6.4:mail/rubygem-mail \
-		rubygem-nokogiri>=1.8.1:textproc/rubygem-nokogiri \
+		rubygem-nokogiri18>=1.8.1:textproc/rubygem-nokogiri18 \
 		rubygem-i18n>=0.7:devel/rubygem-i18n \
 		rubygem-rails-html-sanitizer>=1.0.3:textproc/rubygem-rails-html-sanitizer \
 		rubygem-rbpdf>=1.19.6:print/rubygem-rbpdf \
@@ -33,10 +34,11 @@ RUN_DEPENDS=	rubygem-bundler>=1.5.0:sysutils/rubygem-bundler \
 		rubygem-rack-openid>=0:www/rubygem-rack-openid \
 		rubygem-rake>=0:devel/rubygem-rake
 
+USES=		cpe
+USE_RUBY=	yes
+
 NO_ARCH=	yes
 NO_BUILD=	yes
-USE_RUBY=	yes
-USES=		cpe
 
 USERS=		${WWWOWN}
 GROUPS=		${WWWGRP}
