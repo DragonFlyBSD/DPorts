@@ -1,0 +1,4 @@
+
+# meson no perm
+dfly-patch:
+	${CHMOD} +x ${WRKSRC}/meson_compile_python.py
