@@ -2,7 +2,7 @@
 
 PORTNAME=	scrcpy
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.7
+DISTVERSION=	1.8
 CATEGORIES=	comms net
 MASTER_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/releases/download/${GH_TAGNAME}/:jar
 DISTFILES=	${DIST_JARFILE}:jar
@@ -17,7 +17,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg
 RUN_DEPENDS=	adb:devel/android-tools-adb
 
-USES=		meson pkgconfig sdl
+USES=		compiler:c++11-lang meson pkgconfig sdl
 USE_SDL=	sdl2
 
 USE_GITHUB=	yes
