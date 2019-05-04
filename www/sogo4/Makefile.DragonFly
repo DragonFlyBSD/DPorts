@@ -1,0 +1,2 @@
+# XXX clang objc referring libSOGo.so to stage/
+DFLY_ALLOW_FOREIGN_BINARIES=yes
