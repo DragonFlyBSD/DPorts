@@ -1,0 +1,5 @@
+
+# pass through stage-qa
+dfly-patch:
+	${REINPLACE_CMD} -e 's@0\.12@1.3.3@g'	\
+		${WRKSRC}/fluent-plugin-graylog.gemspec
