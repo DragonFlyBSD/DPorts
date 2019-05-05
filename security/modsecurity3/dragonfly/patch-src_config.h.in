@@ -1,0 +1,12 @@
+--- src/config.h.in.orig	2018-11-02 01:21:27 UTC
++++ src/config.h.in
+@@ -3,6 +3,9 @@
+ /* Define if the operating system is AIX */
+ #undef AIX
+ 
++/* Define if the operating system is DRAGONFLY */
++#undef DRAGONFLY
++
+ /* Define if the operating system is FREEBSD */
+ #undef FREEBSD
+ 

@@ -1,0 +1,16 @@
+--- configure.orig	2018-11-02 01:21:30 UTC
++++ configure
+@@ -18344,6 +18344,13 @@ $as_echo "#define SOLARIS 1" >>confdefs.
+ 
+     PLATFORM="Solaris"
+     ;;
++  *-*-dragonfly*)
++    echo "Checking platform... Identified as DragonFly"
++
++$as_echo "#define DRAGONFLY 1" >>confdefs.h
++
++    PLATFORM="DRAGONFLY"
++    ;;
+   *-*-freebsd*)
+     echo "Checking platform... Identified as FreeBSD"
+ 
