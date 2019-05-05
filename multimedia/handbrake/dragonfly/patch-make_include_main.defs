@@ -1,6 +1,6 @@
---- make/include/main.defs.bak	2016-05-30 17:00:04.000000000 +0300
+--- make/include/main.defs.orig	2019-02-22 16:23:51 UTC
 +++ make/include/main.defs
-@@ -130,6 +130,11 @@ ifeq (1-freebsd,$(FEATURE.gtk)-$(BUILD.s
+@@ -120,6 +120,11 @@ ifeq (1-linux,$(FEATURE.gtk)-$(BUILD.sys
      MODULES += gtk
  endif
  
@@ -9,6 +9,6 @@
 +    MODULES += gtk
 +endif
 +
- ifeq (1,$(FEATURE.local_yasm))
-     MODULES += contrib/yasm
- endif
+ ifeq (1-freebsd,$(FEATURE.gtk)-$(BUILD.system))
+     ## build gtk when gtk+freebsd
+     MODULES += gtk
