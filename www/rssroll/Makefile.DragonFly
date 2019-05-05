@@ -1,0 +1,13 @@
+USES+=	ssl
+CFLAGS+=	-I${OPENSSLINC}
+LDFLAGS+=	-L${OPENSSLLIB}
+
+CFLAGS+=	-Wno-stringop-overflow
+
+# disable tests target that uses bsd.progs.mk
+dfly-patch:
+	-${REINPLACE_CMD} -e '/SUBDIR/s@ test@@g'	\
+		${WRKSRC_libcez}/Makefile
+	${REINPLACE_CMD} -e '/SUBDIR/s@ tests@@g'	\
+			 -e '/SUBDIR_TARGETS/d'	\
+		${WRKSRC}/Makefile

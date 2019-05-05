@@ -1,0 +1,20 @@
+--- src/Makefile.orig	2018-10-29 16:50:45 UTC
++++ src/Makefile
+@@ -1,6 +1,5 @@
+ #
+-PROGS=		rssroll index.cgi
+-
++NO_WERROR=yes
+ SRCS.rssroll=	rssroll.c rss.c
+ SRCS.index.cgi=	index.c
+ 
+@@ -22,4 +21,8 @@ install:
+ 
+ test:
+ 
+-.include <bsd.progs.mk>
++all:
++	${CC} ${CFLAGS} ${SRCS.rssroll} ${LDFLAGS} ${LDADD.rssroll} -o rssroll
++	${CC} ${CFLAGS} ${SRCS.index.cgi} ${LDFLAGS} ${LDADD.index.cgi} -o index.cgi
++
++.include <bsd.prog.mk>
