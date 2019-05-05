@@ -1,0 +1,13 @@
+--- utils/ad2c.orig	2019-05-05 12:50:11 UTC
++++ utils/ad2c
+@@ -15,8 +15,9 @@
+ #		Convert CR to LF.
+ #
+ 
++export LC_ALL=C
+ #sed 's/\r/\n/g' "$@" |
+-perl -npe 's/\r/\n/g' < "$@" |
++perl5 -npe 's/\r/\n/g' < "$@" |
+ sed '
+ /^!/d
+ /^$/d
