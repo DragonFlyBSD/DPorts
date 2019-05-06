@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/mail/milter-regex/files/milterregex.in 398009 2015-09-26 20:02:17Z dinoex $
+# $FreeBSD: head/mail/milter-regex/files/milterregex.in 500679 2019-05-02 19:07:34Z dinoex $
 
 # Start or stop milterregex
 
@@ -30,6 +30,7 @@ command="%%PREFIX%%/libexec/milter-regex"
 pidfile="${spooldir}/milter-regex.pid"
 required_files="%%PREFIX%%/etc/milter-regex.conf"
 stop_postcmd="milterregex_poststop"
+command_args="-r ${pidfile}"
 
 milterregex_poststop() {
 	/bin/rm -f ${pidfile}
