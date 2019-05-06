@@ -5,6 +5,16 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20190506:
+  AFFECTS: users of www/gitea
+  AUTHOR: stb@lassitu.de
+
+  Gitea requires the addition of another secret to the config file in order to
+  start up.  Either manually add JWT_SECRET to the
+  ${PREFIX}/etc/gitea/conf/app.ini config file (see app.ini.sample), or allow
+  Gitea to make the change for you by making the config file writable to the
+  git user.
+
 20190424:
   AFFECTS: users of www/node
   AUTHOR: bhughes@FreeBSD.org
@@ -1187,28 +1197,4 @@ you update your ports collection, before attempting any port upgrades.
 
   The suitesparse needs to be uninstalled before math/suitesparse can be
   correctly built. This is true for the version 5.2.0 and prior versions.
-
-20180505:
-  AFFECTS: users of www/gitea
-  AUTHOR: stb@lassitu.de
-
-  The www/gitea port no longer requires shell/bash.  If you want to
-  stop using bash and deinstall the package, make sure to set the
-  configuration in etc/gitea/conf/app.ini, section [repository],
-  SCRIPT_TYPE to "sh".  See app.ini.sample for an example.
-
-20180501:
-  AFFECTS: users of www/node
-  AUTHOR: bhughes@FreeBSD.org
-
-  The www/node port has been udpated to Node.js v10.0.0, the latest
-  upstream release. This is a major release, including many significant
-  changes. Users are encouraged to read the release announcements before
-  upgrading:
-
-  https://nodejs.org/en/blog/release/v10.0.0/
-
-  In particular, Node.js now depends on OpenSSL 1.1.0h, so the
-  BUNDLED_SSL option is enabled by default. Users can disable this
-  option when using security/openssl-devel as their default SSL library.
 

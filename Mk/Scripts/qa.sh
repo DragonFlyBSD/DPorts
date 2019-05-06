@@ -207,6 +207,11 @@ paths() {
 	$(find ${TMPPLIST} ${STAGEDIR} -type f -exec grep -l "${STAGEDIR}" {} +)
 	EOF
 
+	if [ -n "$DFLY_ALLOW_FOREIGN_BINARIES" -a $rc -eq 1 ]; then
+		rc=0
+		warn "The referring was allowed by DFLY_ALLOW_FOREIGN_BINARIES."
+	fi
+
 	return ${rc}
 }
 
