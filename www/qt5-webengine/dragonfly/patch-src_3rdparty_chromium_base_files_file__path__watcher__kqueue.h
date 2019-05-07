@@ -1,11 +1,13 @@
---- src/3rdparty/chromium/base/files/file_path_watcher_kqueue.h.intermediate	2018-05-26 13:48:33.000000000 +0000
+--- src/3rdparty/chromium/base/files/file_path_watcher_kqueue.h.orig	2019-03-07 09:23:57 UTC
 +++ src/3rdparty/chromium/base/files/file_path_watcher_kqueue.h
-@@ -5,7 +5,7 @@
+@@ -5,6 +5,10 @@
  #ifndef BASE_FILES_FILE_PATH_WATCHER_KQUEUE_H_
  #define BASE_FILES_FILE_PATH_WATCHER_KQUEUE_H_
  
--#ifdef __FreeBSD__
-+#if defined(__FreeBSD__) || defined(__DragonFly__)
- #include <sys/stdint.h>
- #include <sys/types.h>
- #endif
++#ifdef __DragonFly__
++// XXX for struct klist visibility in process_handle_dragonfly.cc through <sys/eventvar.h>
++#define _KERNEL_STRUCTURES // for later inclusion for <sys/user.h> in gen/foo*jumbo*.cc
++#endif
+ #include <sys/event.h>
+ 
+ #include <memory>

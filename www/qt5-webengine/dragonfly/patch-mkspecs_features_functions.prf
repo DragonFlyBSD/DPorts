@@ -1,18 +1,18 @@
---- mkspecs/features/functions.prf.intermediate	2018-05-26 13:48:33.000000000 +0000
+--- mkspecs/features/functions.prf.intermediate	2019-05-06 09:02:15.000000000 +0000
 +++ mkspecs/features/functions.prf
-@@ -368,6 +368,7 @@ defineReplace(gnArgs) {
+@@ -82,6 +82,7 @@ defineReplace(gnArgs) {
+     linux: include($$QTWEBENGINE_ROOT/src/core/config/linux.pri)
      macos: include($$QTWEBENGINE_ROOT/src/core/config/mac_osx.pri)
      win32: include($$QTWEBENGINE_ROOT/src/core/config/windows.pri)
++    dragonfly: include($$QTWEBENGINE_ROOT/src/core/config/dragonfly.pri)
      freebsd: include($$QTWEBENGINE_ROOT/src/core/config/freebsd.pri)
-+    dragonfly: include($$QTWEBENGINE_ROOT/src/core/config/freebsd.pri)
      isEmpty(gn_args): error(No gn_args found please make sure you have valid configuration.)
      return($$gn_args)
- }
-@@ -388,6 +389,7 @@ defineReplace(gnOS) {
+@@ -102,6 +103,7 @@ defineReplace(gnOS) {
+     macos: return(mac)
      win32: return(win)
      linux: return(linux)
-     freebsd: return(bsd)
 +    dragonfly: return(bsd)
+     freebsd: return(bsd)
      error(Unsupported platform)
      return(unknown)
- }
