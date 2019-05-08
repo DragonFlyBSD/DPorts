@@ -1,0 +1,20 @@
+--- external_libraries/hidapi/CMakeLists.txt.orig	2016-10-23 20:09:39 UTC
++++ external_libraries/hidapi/CMakeLists.txt
+@@ -23,7 +23,7 @@ option(HID_INSTALL_HUT "install hid usag
+ 
+ if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
+   set(HIDAPI "default" CACHE STRING "HID API to use (one of {default,hidraw,libusb})")
+-elseif(CMAKE_SYSTEM_NAME MATCHES "FreeBSD")
++elseif(CMAKE_SYSTEM_NAME MATCHES "FreeBSD|DragonFly")
+   set(HIDAPI "libusb")
+ endif()
+ 
+@@ -46,7 +46,7 @@ endif()
+ # directories
+ add_subdirectory(hidapi)
+ 
+-if(CMAKE_SYSTEM_NAME MATCHES "Linux" OR CMAKE_SYSTEM_NAME MATCHES "FreeBSD")
++if(CMAKE_SYSTEM_NAME MATCHES "Linux" OR CMAKE_SYSTEM_NAME MATCHES "FreeBSD|DragonFly")
+   add_definitions( -DLINUX_FREEBSD )
+   if(HIDAPI STREQUAL "default")
+     set( HIDAPI hidraw )
