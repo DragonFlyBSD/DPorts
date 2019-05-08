@@ -1,0 +1,11 @@
+--- CMakeLists.txt.intermediate	2019-05-07 16:34:25.000000000 +0000
++++ CMakeLists.txt
+@@ -1380,7 +1380,7 @@ if (NOT LWS_WITHOUT_TESTAPPS)
+ 
+ 	if (UNIX AND LWS_WITH_PLUGINS)
+ 		set(CMAKE_C_FLAGS "-fPIC ${CMAKE_C_FLAGS}")
+-		if(NOT(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD"))
++		if(NOT(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD|DragonFly"))
+ 			target_link_libraries(websockets dl)
+ 		endif()
+ 	endif()
