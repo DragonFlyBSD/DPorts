@@ -1,0 +1,10 @@
+--- configure.ac.orig	2019-04-18 00:24:28 UTC
++++ configure.ac
+@@ -164,6 +164,7 @@ AS_IF([test "x$systems" = "x"],
+   AS_CASE([$host],
+     [*-*-netbsd*],   [systems="oss"],
+     [*-*-freebsd*],  [systems="oss"],
++    [*-*-dragonfly*],  [systems="oss"],
+     [*-*-linux*],    [systems="alsa pulse jack oss"],
+     [*-apple*],      [systems="core jack"],
+     [*-mingw32*],    [systems="asio dsound wasapi jack"],
