@@ -1,0 +1,11 @@
+--- source/CMakeLists.txt.intermediate	2019-05-07 17:52:08.000000000 +0000
++++ source/CMakeLists.txt
+@@ -146,7 +146,7 @@ endif()
+ GET_GCC_VERSION(gcc_version)
+ 
+ 
+-if (CMAKE_SYSTEM_NAME MATCHES "Linux|FreeBSD")
++if (CMAKE_SYSTEM_NAME MATCHES "Linux|DragonFly|FreeBSD")
+     set(INSTALL_DESTINATION "lib/SuperCollider/plugins")
+     if (QUARKS)
+         set(INSTALL_DESTINATION_LADSPALIST
