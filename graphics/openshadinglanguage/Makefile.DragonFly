@@ -1,5 +1,8 @@
+CXXFLAGS+=	-Wno-format-overflow
 
 # [-Werror=deprecated]
 dfly-patch:
 	${REINPLACE_CMD} -e 's/-Werror[[:>:]]//g'	\
 		${WRKSRC}/CMakeLists.txt
+	${REINPLACE_CMD} -e '/add_definitions ("-Werror")/d' \
+		${WRKSRC}/src/cmake/compiler.cmake
