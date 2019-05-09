@@ -1,0 +1,7 @@
+
+# use correct openssl(1)
+dfly-patch:
+	${REINPLACE_CMD} -e "s@[[:<:]]openssl[[:>:]]@${LOCALBASE}/bin/openssl@" \
+			 -e "s@${LOCALBASE}/bin/openssl.cnf@openssl.cnf@" \
+		${WRKSRC}/certs/makefile ${WRKSRC}/certs/GNUmakefile \
+		${WRKSRC}/util/openssl.lua
