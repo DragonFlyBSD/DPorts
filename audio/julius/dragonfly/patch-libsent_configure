@@ -1,0 +1,20 @@
+--- libsent/configure.orig	2009-02-11 07:22:45 UTC
++++ libsent/configure
+@@ -2084,7 +2084,7 @@ echo "configure:2073: checking for input
+ 	   { echo "configure: error: no audio io avaiable!" 1>&2; exit 1; }
+ 	fi
+ 	;;
+-  freebsd*)
++  freebsd*|dragonfly*)
+ 	# FreeBSD (snd driver)
+ 	if test "$has_oss" = yes; then
+ 	    altype=freebsd
+@@ -2476,7 +2476,7 @@ EOF
+       ADINOBJ="$ADINOBJ src/adin/adin_mic_linux.o"
+       ;;
+ 
+-    freebsd)
++    freebsd|dragonfly)
+ 	if test "$has_oss" = no; then
+ 	  { echo "configure: error: neither sys/soundcard.h nor machine/soundcard.h exist" 1>&2; exit 1; }
+ 	fi
