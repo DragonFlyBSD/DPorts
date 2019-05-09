@@ -1,0 +1,20 @@
+--- meson.build.orig	2018-12-14 15:44:46 UTC
++++ meson.build
+@@ -1,7 +1,7 @@
+ project('kiwix-lib', 'cpp',
+   version : '3.1.1',
+   license : 'GPL',
+-  default_options : ['c_std=c11', 'cpp_std=c++11', 'werror=true'])
++  default_options : ['c_std=c11', 'cpp_std=c++11', 'werror=false'])
+ 
+ compiler = meson.get_compiler('cpp')
+ find_library_in_compiler = meson.version().version_compare('>=0.31.0')
+@@ -15,7 +15,7 @@ endif
+ 
+ thread_dep = dependency('threads')
+ libicu_dep = dependency('icu-i18n', static:static_deps)
+-libzim_dep = dependency('libzim', version : '>=4.0.0', static:static_deps)
++libzim_dep = compiler.find_library('zim')
+ pugixml_dep = dependency('pugixml', static:static_deps)
+ libcurl_dep = dependency('libcurl', static:static_deps)
+ 
