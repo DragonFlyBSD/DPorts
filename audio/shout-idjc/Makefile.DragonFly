@@ -1,1 +1,2 @@
-LDFLAGS+=	-L${LOCALBASE}/lib -logg
+USES+=	ssl
+LDFLAGS:=	-L${OPENSSLLIB} ${LDFLAGS}
