@@ -1,0 +1,9 @@
+--- SPEC.orig	2011-09-12 04:18:35.000000000 +0300
++++ SPEC
+@@ -1,5 +1,5 @@
+ use strict;
+-my $OK = ($^O =~ m{ (?:free|open|net) bsd \z }xmsi) ? 1 : 0;
++my $OK = ($^O =~ m{ (?:(?:free|open|net) bsd \z|dragonfly) }xmsi) ? 1 : 0;
+ die "OS unsupported\n" if ! $OK;
+ 
+ {
