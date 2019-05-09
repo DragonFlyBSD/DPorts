@@ -1,0 +1,4 @@
+
+dfly-configure:
+	${REINPLACE_CMD} 's|edit/readline/readline.h|readline/readline.h|' \
+		${WRKSRC}/sample/ipmi_serial_bmc_emu.c
