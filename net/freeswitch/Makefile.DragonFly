@@ -1,0 +1,6 @@
+
+# missing dep for bundled libvpx
+BUILD_DEPENDS+=	yasm:devel/yasm
+
+# cleanup clang'isms
+CFLAGS:= ${CFLAGS:N-W*} -Wno-stringop-truncation -Wno-stringop-overflow -Wno-format-truncation
