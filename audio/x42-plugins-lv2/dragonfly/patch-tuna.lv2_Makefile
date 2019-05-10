@@ -1,0 +1,12 @@
+--- tuna.lv2/Makefile.intermediate	2019-05-08 15:52:29.000000000 +0000
++++ tuna.lv2/Makefile
+@@ -328,7 +328,8 @@ ifneq ($(BUILDOPENGL), no)
+ endif
+ ifneq ($(BUILDJACKAPP), no)
+ 	install -d $(DESTDIR)$(BINDIR)
+-	install -T -m755 $(APPBLD)x42-tuna-collection$(EXE_EXT) $(DESTDIR)$(BINDIR)/x42-tuna$(EXE_EXT)
++	cp $(APPBLD)x42-tuna-collection$(EXE_EXT) $(APPBLD)x42-tuna$(EXE_EXT)
++	install -m755 $(APPBLD)x42-tuna$(EXE_EXT) $(DESTDIR)$(BINDIR)
+ endif
+ ifneq ($(MOD),)
+ 	install -d $(DESTDIR)$(LV2DIR)/$(BUNDLE)/modgui
