@@ -1,0 +1,11 @@
+--- Dbus/src/CMakeLists.txt.orig	2015-02-19 16:13:47 UTC
++++ Dbus/src/CMakeLists.txt
+@@ -29,7 +29,7 @@ add_definitions (-DMY_APPLET_DOCK_VERSIO
+ add_definitions (-DMY_APPLET_ICON_FILE="icon.svg")
+ add_definitions (-DCD_PLUGINS_DIR="${pluginsdir}")
+ 
+-IF (${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
++IF (${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD|DragonFly")
+ 	set(kvm "kvm")
+ endif()
+ 
