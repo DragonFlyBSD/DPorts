@@ -1,0 +1,11 @@
+--- src/core-impl/storage/sql/mysqlestorage/CMakeLists.txt.orig	2018-12-24 04:18:12 UTC
++++ src/core-impl/storage/sql/mysqlestorage/CMakeLists.txt
+@@ -27,7 +27,7 @@ target_link_libraries(amarok_storage-mys
+     ${ZLIB_LIBRARIES}
+ )
+ 
+-if(${CMAKE_HOST_SYSTEM_NAME} MATCHES "FreeBSD")
++if(${CMAKE_HOST_SYSTEM_NAME} MATCHES "FreeBSD|DragonFly")
+         target_link_libraries(amarok_storage-mysqlestorage ${MYSQL_LIBRARIES})
+ endif()
+ 

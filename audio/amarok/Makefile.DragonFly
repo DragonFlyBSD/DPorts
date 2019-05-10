@@ -1,0 +1,3 @@
+
+# too noisy
+CXXFLAGS+=	-Wno-suggest-override
