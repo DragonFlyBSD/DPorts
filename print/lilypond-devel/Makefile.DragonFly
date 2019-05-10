@@ -1,0 +1,2 @@
+# unhurt lily
+CXXFLAGS+=	-Wno-sequence-point
