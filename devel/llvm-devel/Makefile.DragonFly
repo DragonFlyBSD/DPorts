@@ -1,3 +1,6 @@
+# hmm
+_USES_PYTHON:=	python:2.7,build
+
 # LLDB needs to be ported to dragonfly
 OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NLLDB}
 OPTIONS_DEFAULT_x86_64:= ${OPTIONS_DEFAULT_x86_64:NCOMPILER_RT}
