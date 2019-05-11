@@ -1,0 +1,4 @@
+
+# wrong MF, exclude MPI
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NMPI}
+
