@@ -1,0 +1,20 @@
+--- libpolys/configure.orig	2018-02-14 14:58:49 UTC
++++ libpolys/configure
+@@ -22127,7 +22127,7 @@ $as_echo_n "checking whether system supp
+ case $host in #(
+   *linux*) :
+     SUPPORTS_DYNAMIC_MODULES=yes ;; #(
+-  *freebsd*) :
++  *freebsd*|*dragonfly*) :
+     SUPPORTS_DYNAMIC_MODULES=yes ;; #(
+   *-sun-solaris2*) :
+     SUPPORTS_DYNAMIC_MODULES=yes ;; #(
+@@ -22204,7 +22204,7 @@ $as_echo_n "checking whether system supp
+ case $host in #(
+   *linux*) :
+     SUPPORTS_DYNAMIC_MODULES=yes ;; #(
+-  *freebsd*) :
++  *freebsd*|*dragonfly*) :
+     SUPPORTS_DYNAMIC_MODULES=yes ;; #(
+   *-sun-solaris2*) :
+     SUPPORTS_DYNAMIC_MODULES=yes ;; #(
