@@ -1,0 +1,3 @@
+
+# configure script checks for vendor with cc --version
+CONFIGURE_ARGS+=	CC=gcc
