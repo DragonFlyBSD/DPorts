@@ -1,1 +1,3 @@
-OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NRAR}
+
+# exclude binary blob in rar
+RAR_RUN_DEPENDS:=	${RAR_RUN_DEPENDS:Nrar*}
