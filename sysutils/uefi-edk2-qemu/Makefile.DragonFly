@@ -1,0 +1,20 @@
+# zrj: fix CRLF for dragonfly patches
+USES+=	dos2unix
+DOS2UNIX_FILES+=	BaseTools/Source/C/GenFv/GenFvInternalLib.c
+
+FLAVORS:= ${FLAVORS:Ni386}
+
+BUILD_DEPENDS+=	${LOCALBASE}/bin/ld:devel/binutils
+
+dfly-patch:
+	${MKDIR} ${BUILD_WRKSRC}/BaseTools/Bin/DragonFly-x86_64;
+	${LN} -sf /usr/bin/gcc ${BUILD_WRKSRC}/BaseTools/Bin/DragonFly-x86_64/gcc
+	${LN} -sf /usr/bin/cc  ${BUILD_WRKSRC}/BaseTools/Bin/DragonFly-x86_64/cc
+	${LN} -sf /usr/bin/g++ ${BUILD_WRKSRC}/BaseTools/Bin/DragonFly-x86_64/g++
+	${LN} -sf ${LOCALBASE}/bin/ld ${BUILD_WRKSRC}/BaseTools/Bin/DragonFly-x86_64/ld
+	${LN} -sf ${LOCALBASE}/bin/gmake ${BUILD_WRKSRC}/BaseTools/Bin/DragonFly-x86_64/make
+	${LN} -sf ${LOCALBASE}/bin/ar ${BUILD_WRKSRC}/BaseTools/Bin/DragonFly-x86_64/gcc-ar
+	${LN} -sf ${LOCALBASE}/bin/nm ${BUILD_WRKSRC}/BaseTools/Bin/DragonFly-x86_64/gcc-nm
+	${LN} -sf ${LOCALBASE}/bin/objcopy ${BUILD_WRKSRC}/BaseTools/Bin/DragonFly-x86_64/objcopy
+	${LN} -sf ${LOCALBASE}/bin/python2.7 ${BUILD_WRKSRC}/BaseTools/Bin/DragonFly-x86_64/python
+	${LN} -sf ${LOCALBASE}/bin/nasm ${BUILD_WRKSRC}/BaseTools/Bin/DragonFly-x86_64/nasm
