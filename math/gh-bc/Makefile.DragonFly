@@ -1,0 +1,5 @@
+
+# fix stage-qa
+dfly-install:
+	${RM} ${STAGEDIR}${PREFIX}/share/nls/C/bc.cat
+	${RLN} ${STAGEDIR}${PREFIX}/share/nls/en_US.US-ASCII/bc.cat ${STAGEDIR}${PREFIX}/share/nls/C/bc.cat
