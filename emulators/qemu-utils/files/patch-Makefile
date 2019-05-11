@@ -1,0 +1,30 @@
+--- Makefile.orig	2018-07-26 01:18:43 UTC
++++ Makefile
+@@ -806,15 +806,10 @@ ifndef NOPORTDOCS
+ 	$(INSTALL_DIR) "$(DESTDIR)$(qemu_docdir)"
+ 	$(INSTALL_DATA) qemu-doc.html "$(DESTDIR)$(qemu_docdir)"
+ 	$(INSTALL_DATA) qemu-doc.txt "$(DESTDIR)$(qemu_docdir)"
+-	$(INSTALL_DATA) docs/interop/qemu-qmp-ref.html "$(DESTDIR)$(qemu_docdir)"
+-	$(INSTALL_DATA) docs/interop/qemu-qmp-ref.txt "$(DESTDIR)$(qemu_docdir)"
+ endif
+ ifdef CONFIG_POSIX
+ 	$(INSTALL_DIR) "$(DESTDIR)$(mandir)/man1"
+ 	$(INSTALL_DATA) qemu.1 "$(DESTDIR)$(mandir)/man1"
+-	$(INSTALL_DIR) "$(DESTDIR)$(mandir)/man7"
+-	$(INSTALL_DATA) docs/interop/qemu-qmp-ref.7 "$(DESTDIR)$(mandir)/man7"
+-	$(INSTALL_DATA) docs/qemu-block-drivers.7 "$(DESTDIR)$(mandir)/man7"
+ ifneq ($(TOOLS),)
+ 	$(INSTALL_DATA) qemu-img.1 "$(DESTDIR)$(mandir)/man1"
+ 	$(INSTALL_DIR) "$(DESTDIR)$(mandir)/man8"
+@@ -868,11 +863,6 @@ endif
+ ifdef CONFIG_GTK
+ 	$(MAKE) -C po $@
+ endif
+-	$(INSTALL_DIR) "$(DESTDIR)$(qemu_datadir)/keymaps"
+-	set -e; for x in $(KEYMAPS); do \
+-		$(INSTALL_DATA) $(SRC_PATH)/pc-bios/keymaps/$$x "$(DESTDIR)$(qemu_datadir)/keymaps"; \
+-	done
+-	$(INSTALL_DATA) $(BUILD_DIR)/trace-events-all "$(DESTDIR)$(qemu_datadir)/trace-events-all"
+ 	for d in $(TARGET_DIRS); do \
+ 	$(MAKE) $(SUBDIR_MAKEFLAGS) TARGET_DIR=$$d/ -C $$d $@ || exit 1 ; \
+         done
