@@ -1,0 +1,4 @@
+USES+=	localbase
+
+# remove harcoded clang'ism
+CXXFLAGS:=	${CXXFLAGS:N-Wno-c++11*} -Wno-narrowing -Wno-write-strings
