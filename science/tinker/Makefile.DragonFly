@@ -1,0 +1,4 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e "s@\(-lfftw3_threads\)@-L${LOCALBASE}/lib \1@g" \
+		${WRKSRC}/make/Makefile
