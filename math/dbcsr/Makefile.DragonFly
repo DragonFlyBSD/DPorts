@@ -1,0 +1,4 @@
+USES+=	pkgconfig
+
+# ...
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NMPI:NC_API}
