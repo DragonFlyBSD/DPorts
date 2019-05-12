@@ -1,43 +1,37 @@
-TODO: Implement for DragonFly
-
---- sysdeps/freebsd/procmap.c.intermediate	2013-01-11 17:16:37.000000000 +0100
-+++ sysdeps/freebsd/procmap.c	2013-01-11 17:16:50.000000000 +0100
-@@ -19,6 +19,8 @@
-    Boston, MA 02111-1307, USA.
- */
+--- sysdeps/freebsd/procmap.c.intermediate	2019-05-12 09:40:18.000000000 +0000
++++ sysdeps/freebsd/procmap.c
+@@ -24,6 +24,7 @@
+ #include <glibtop/error.h>
+ #include <glibtop/procmap.h>
  
 +#ifndef __DragonFly__ /* TODO */
-+
- #include <config.h>
- #include <glibtop.h>
- #include <glibtop/error.h>
-@@ -301,3 +303,29 @@
+ #include <glibtop_suid.h>
+ 
+ #include <kvm.h>
+@@ -228,6 +229,9 @@ _glibtop_sysdeps_freebsd_dev_inode (glib
+ 	    } /* end-if IS_UFS */
+ }
+ #endif
++#else
++static const unsigned long _glibtop_sysdeps_proc_map = 0;
++#endif /* __DragonFly__ */
+ 
+ /* Init function. */
+ 
+@@ -243,6 +247,10 @@ glibtop_map_entry *
+ glibtop_get_proc_map_p (glibtop *server, glibtop_proc_map *buf,
+                         pid_t pid)
+ {
++#ifdef __DragonFly__
++	memset (buf, 0, sizeof (glibtop_proc_map));
++	return NULL;
++#else
+         struct kinfo_proc *pinfo;
+         struct vm_map_entry entry, *first;
+         struct vmspace vmspace;
+@@ -394,4 +402,5 @@ glibtop_get_proc_map_p (glibtop *server,
+         buf->total  = (guint64) (buf->number * buf->size);
  
          return (glibtop_map_entry*) g_array_free(maps, FALSE);
++#endif
  }
-+#else /* __DragonFly__ */
-+
-+#include <config.h>
-+#include <glibtop.h>
-+#include <glibtop/error.h>
-+#include <glibtop/procmap.h>
-+
-+static const unsigned long _glibtop_sysdeps_proc_map = 0;
-+
-+/* Init function. */
-+
-+void
-+_glibtop_init_proc_map_p (glibtop *server)
-+{
-+        server->sysdeps.proc_map = _glibtop_sysdeps_proc_map;
-+}
-+
-+/* Provides detailed information about a process. */
-+
-+glibtop_map_entry *
-+glibtop_get_proc_map_p (glibtop *server, glibtop_proc_map *buf, pid_t pid)
-+{
-+        memset (buf, 0, sizeof (glibtop_proc_map));
-+        return NULL;
-+}
-+#endif /* __DragonFly__ */

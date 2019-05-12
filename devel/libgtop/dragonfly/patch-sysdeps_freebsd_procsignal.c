@@ -1,6 +1,6 @@
---- sysdeps/freebsd/procsignal.c.orig	2011-03-14 23:08:03.000000000 +0100
-+++ sysdeps/freebsd/procsignal.c	2013-01-11 17:12:00.000000000 +0100
-@@ -66,10 +66,17 @@
+--- sysdeps/freebsd/procsignal.c.orig	2016-11-27 18:05:03 UTC
++++ sysdeps/freebsd/procsignal.c
+@@ -64,10 +64,17 @@ glibtop_get_proc_signal_p (glibtop *serv
  		return;
  	}
  

@@ -1,16 +1,17 @@
-TODO: Implement for DragonFly
-
---- sysdeps/freebsd/cpu.c.intermediate	2013-01-11 16:19:27.000000000 +0100
-+++ sysdeps/freebsd/cpu.c	2013-01-11 16:18:37.000000000 +0100
-@@ -53,6 +53,7 @@
- void
- glibtop_get_cpu_s (glibtop *server, glibtop_cpu *buf)
- {
-+#if !defined(__DragonFly__) || __DragonFly_version >= 400713
- 	long cpts [CPUSTATES];
- 	long *cp_times = NULL;
- 	struct clockinfo ci;
-@@ -132,4 +133,5 @@
+--- sysdeps/freebsd/cpu.c.orig	2016-11-27 18:05:03 UTC
++++ sysdeps/freebsd/cpu.c
+@@ -61,6 +61,10 @@ glibtop_get_cpu_s (glibtop *server, glib
+ 
+ 	memset (buf, 0, sizeof (glibtop_cpu));
+ 
++#ifdef __DragonFly__
++	glibtop_warn_io_r (server, "sysctl (kern.cp_time)");
++	return;
++#else
+ 	length = sizeof (cpts);
+ 	if (sysctlbyname ("kern.cp_time", cpts, &length, NULL, 0)) {
+ 		glibtop_warn_io_r (server, "sysctl (kern.cp_time)");
+@@ -130,4 +134,5 @@ glibtop_get_cpu_s (glibtop *server, glib
  	if (ncpu > 1) {
  		buf->flags |= _glibtop_sysdeps_cpu_smp;
  	}
