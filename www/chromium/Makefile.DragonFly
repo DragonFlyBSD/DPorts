@@ -5,19 +5,27 @@ LDFLAGS=	-L${LOCALBASE}/lib/c++ -L${LOCALBASE}/lib -L /usr/lib -L /lib
 # chromium-legacy installs files in the same path as this port
 CONFLICTS_INSTALL=      chromium-legacy
 
+# FreeBSD has kerberos in base but we don't
+KERBEROS_LIB_DEPENDS+=	libkrb5.so:security/krb5
+
 # Since FreeBSD has libc++ in base we need to rely on DPorts' libc++
 LIB_DEPENDS+=  	libc++.so.1:devel/libc++
-BUILD_DEPENDS+=	clang60:devel/llvm60
-CC=             clang60
-CXX=            clang++60
-
-# FreeBSD has kerberos in base but we don't
-BUILD_DEPENDS+=	 krb5>0:security/krb5
+BUILD_DEPENDS+=	clang${LLVM_DEFAULT}:devel/llvm${LLVM_DEFAULT}
+CC=             clang${LLVM_DEFAULT}
+CXX=            clang++${LLVM_DEFAULT}
 
 # XXX - Jumbo builds are faster but some work needs to be done for it to work in dfly.
-GN_ARGS:= ${GN_ARGS:Nuse_jumbo_build=true}
+#GN_ARGS:= ${GN_ARGS:Nuse_jumbo_build=true}
 
 dfly-patch:
 	# Setup nodejs dependency
 	@${MKDIR} ${WRKSRC}/third_party/node/dragonfly/node-dragonfly-x64/bin
 	${LN} -sf ${LOCALBASE}/bin/node ${WRKSRC}/third_party/node/dragonfly/node-dragonfly-x64/bin/node
+
+	# XXX The correct solution is to pass variables to gn
+	# Use the current LLVM version by replacing the hardcoded one
+	${REINPLACE_CMD} -e "s|clang60|clang${LLVM_DEFAULT}|g" \
+		-e "s|clang\+\+60|clang++${LLVM_DEFAULT}|g" \
+		-e "s|ar60|ar${LLVM_DEFAULT}|g" \
+		-e "s|nm60|nm${LLVM_DEFAULT}|g" \
+		${WRKSRC}/build/toolchain/gcc_toolchain.gni
