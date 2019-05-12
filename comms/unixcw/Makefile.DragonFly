@@ -1,0 +1,12 @@
+USES+=	alias
+
+# no pulse
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NPULSEAUDIO}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@curses@ncurses@' \
+		${WRKSRC}/configure.ac
+	${REINPLACE_CMD} -e 's@lcurses@lncurses@g' \
+		${WRKSRC}/configure \
+		${WRKSRC}/src/cwcp/Makefile.am \
+		${WRKSRC}/src/cwcp/Makefile.in
