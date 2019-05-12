@@ -1,0 +1,11 @@
+--- configure.ac.intermediate	2019-05-12 15:59:41.000000000 +0000
++++ configure.ac
+@@ -22,7 +22,7 @@ case "$target" in
+   linux)
+     os=linux
+     ;;
+-  freebsd)
++  freebsd|dragonfly)
+     os=freebsd
+     ;;
+   windows)
