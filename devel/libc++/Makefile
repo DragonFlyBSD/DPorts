@@ -2,10 +2,10 @@
 # $FreeBSD$
 
 PORTNAME?=	libc++
-DISTNAME=	libc++-${PORTVERSION}
-PORTVERSION=	6.0.1
+DISTNAME=	libcxx-${PORTVERSION}.src
+PORTVERSION=	8.0.0
 CATEGORIES=	devel
-MASTER_SITES=	https://avalon.dragonflybsd.org/misc/distfiles/ \
+MASTER_SITES=	http://releases.llvm.org/${PORTVERSION}/
 
 MAINTAINER=	tuxillo@quantumachine.net
 COMMENT?=	LLVM C++ standard library with c++11 support
@@ -29,16 +29,12 @@ LIB_DEPENDS+=	libcxxrt.so:devel/libcxxrt
 
 CMAKE_ARGS=	-DLIBCXX_CXX_ABI=libcxxrt -DLIBCXX_CXX_ABI_INCLUDE_PATHS=${CXXRT_INCS}
 
-
 post-install:
 	${LN} -sf c++/v1 ${STAGEDIR}${PREFIX}/include/c++/v1/tr1
 	${RM} ${STAGEDIR}${PREFIX}/lib/libc++.so
 	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/c++/
 	${ECHO} 'GROUP ( ${PREFIX}/lib/libc++.so.1 ${CXXRT_LIB} ${EXTRALIB})' > ${STAGEDIR}${PREFIX}/lib/libc++.so
 	${ECHO} 'GROUP ( ${PREFIX}/lib/libc++.so.1 ${CXXRT_LIB} ${EXTRALIB})' > ${STAGEDIR}${PREFIX}/lib/c++/libstdc++.so
-
-regression-test: build
-	cd ${WRKSRC}/test && ${SH} ./testit
 
 .endif
 .include <bsd.port.mk>
