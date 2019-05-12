@@ -1,0 +1,4 @@
+USES+=	alias
+
+# no pulse
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NPULSEAUDIO}
