@@ -1,4 +1,0 @@
-bin/zrepl
-@sample etc/newsyslog.conf.d/zrepl.conf.sample
-@sample etc/syslog.d/zrepl.conf.sample
-@sample etc/zrepl/zrepl.yml.sample
