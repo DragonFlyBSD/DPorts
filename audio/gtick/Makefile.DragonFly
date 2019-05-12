@@ -1,0 +1,7 @@
+
+# no pulse
+LIB_DEPENDS:=	${LIB_DEPENDS:Nlibpulse*}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@libpulse-simple@@' \
+		${WRKSRC}/configure
