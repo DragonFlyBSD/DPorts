@@ -1,0 +1,3 @@
+
+# not needed dep
+LIB_DEPENDS:=	${LIB_DEPENDS:Nlibboost_system*}
