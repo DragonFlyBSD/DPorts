@@ -1,0 +1,4 @@
+
+# fifo.h:65:21: error: using typedef-name 'fifo<T>::queue' after 'struct'
+# use permissive c++ compiler
+USE_CLANG_FALLBACK=	default
