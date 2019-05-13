@@ -1,0 +1,11 @@
+--- CMakeLists.txt.orig	2017-05-09 21:46:36 UTC
++++ CMakeLists.txt
+@@ -31,7 +31,7 @@ set (PACKAGE_TARNAME "${PACKAGE}")
+ set (PACKAGE_VERSION "${VERSION}")
+ set (PACKAGE_STRING "${PACKAGE} ${VERSION}")
+ 
+-if (FREEBSD)
++if (FREEBSD OR ${CMAKE_SYSTEM_NAME} MATCHES "DragonFly")
+ SET (TASKSH_MAN1DIR man/man1            CACHE STRING "Installation directory for man pages, section 1")
+ else (FREEBSD)
+ SET (TASKSH_MAN1DIR share/man/man1      CACHE STRING "Installation directory for man pages, section 1")
