@@ -1,0 +1,11 @@
+--- CMakeLists.txt.intermediate	2019-05-13 05:41:11.000000000 +0000
++++ CMakeLists.txt
+@@ -425,7 +425,7 @@ if (HAVE_SYS_CAPABILITY_H)
+     DOC "libcap library"
+   )
+ # On FreeBSD <sys/capabilities.h> is present in libc, so we don't require libcap there.
+-  if (NOT LIBCAP_LIBRARIES AND NOT CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
++  if (NOT LIBCAP_LIBRARIES AND NOT CMAKE_SYSTEM_NAME STREQUAL "FreeBSD|DragonFly")
+     message(FATAL_ERROR "Found \"sys/capability.h\" but could not find libcap")
+   endif()
+ else()
