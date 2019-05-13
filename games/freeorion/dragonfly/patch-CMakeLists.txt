@@ -1,0 +1,18 @@
+--- CMakeLists.txt.intermediate	2019-05-13 15:18:28.000000000 +0000
++++ CMakeLists.txt
+@@ -164,6 +164,7 @@ set_property(DIRECTORY APPEND
+         $<$<PLATFORM_ID:Windows>:FREEORION_WIN32>
+         $<$<PLATFORM_ID:Darwin>:FREEORION_MACOSX>
+         $<$<PLATFORM_ID:Linux>:FREEORION_LINUX>
++        $<$<PLATFORM_ID:DragonFly>:FREEORION_DRAGONFLY>
+         $<$<PLATFORM_ID:FreeBSD>:FREEORION_FREEBSD>
+         $<$<PLATFORM_ID:OpenBSD>:FREEORION_OPENBSD>
+ )
+@@ -276,6 +277,7 @@ set_property(DIRECTORY APPEND
+         # headers, which in turn breaks the build.  Python 2.7.13 should have
+         # fixed this with python bug #10910
+         $<$<PLATFORM_ID:Darwin>:BOOST_DATE_TIME_NO_LOCALE>
++        $<$<PLATFORM_ID:DragonFly>:BOOST_DATE_TIME_NO_LOCALE>
+         $<$<PLATFORM_ID:FreeBSD>:BOOST_DATE_TIME_NO_LOCALE>
+ )
+ 
