@@ -1,0 +1,16 @@
+bin/ndpiReader
+include/ndpi/ndpi_api.h
+include/ndpi/ndpi_config.h
+include/ndpi/ndpi_define.h
+include/ndpi/ndpi_includes.h
+include/ndpi/ndpi_main.h
+include/ndpi/ndpi_protocol_ids.h
+include/ndpi/ndpi_protocols.h
+include/ndpi/ndpi_typedefs.h
+include/ndpi/ndpi_unix.h
+include/ndpi/ndpi_win32.h
+lib/libndpi.a
+lib/libndpi.so
+lib/libndpi.so.%%MAJOR_VER%%
+lib/libndpi.so.%%VER%%.0
+libdata/pkgconfig/libndpi.pc
