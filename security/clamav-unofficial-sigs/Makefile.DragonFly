@@ -1,0 +1,3 @@
+
+# port needs either dig or host commands to build
+BUILD_DEPENDS+=	bind-tools>0:dns/bind-tools
