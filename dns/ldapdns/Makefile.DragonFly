@@ -1,0 +1,7 @@
+
+# port does "cc -v |grep gcc"
+CONFIGURE_ARGS+=	CC=gcc
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-pthreads@-pthread@g' \
+		${WRKSRC}/configure
