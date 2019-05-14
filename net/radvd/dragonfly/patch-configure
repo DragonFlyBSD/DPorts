@@ -1,0 +1,11 @@
+--- configure.orig	2019-02-26 04:36:37 UTC
++++ configure
+@@ -2998,7 +2998,7 @@ $as_echo "#define _GNU_SOURCE /**/" >>co
+ 
+                 arch=linux
+         ;;
+-        *bsd*)
++        *bsd*|*dragonfly*)
+ 		{ $as_echo "$as_me:${as_lineno-$LINENO}: result: bsd44" >&5
+ $as_echo "bsd44" >&6; }
+                 arch=bsd44
