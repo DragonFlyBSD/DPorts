@@ -1,0 +1,37 @@
+LibreSSL is not supported right now. Just to unbreak the build.
+
+--- vendor/ngx_mruby-source/src/http/ngx_http_mruby_module.c.orig	2018-04-05 12:38:11 UTC
++++ vendor/ngx_mruby-source/src/http/ngx_http_mruby_module.c
+@@ -430,7 +430,7 @@ static char *ngx_http_mruby_merge_srv_co
+       return NGX_CONF_ERROR;
+     }
+ 
+-#if OPENSSL_VERSION_NUMBER >= 0x1000205fL
++#if OPENSSL_VERSION_NUMBER >= 0x1000205fL && !defined(LIBRESSL_VERSION_NUMBER)
+     SSL_CTX_set_cert_cb(sscf->ssl.ctx, ngx_http_mruby_ssl_cert_handler, NULL);
+ #else
+     ngx_log_error(NGX_LOG_EMERG, cf->log, 0,
+@@ -1968,7 +1968,11 @@ static int ngx_http_mruby_set_der_certif
+     goto NGX_MRUBY_SSL_ERROR;
+   }
+ 
++#ifdef LIBRESSL_VERSION_NUMBER
++  goto NGX_MRUBY_SSL_ERROR; /* not supported yet */
++#else
+   SSL_certs_clear(ssl_conn);
++#endif
+ 
+   if (SSL_use_certificate(ssl_conn, x509) == 0) {
+     goto NGX_MRUBY_SSL_ERROR;
+@@ -2046,7 +2050,11 @@ static int ngx_http_mruby_set_der_certif
+     goto NGX_MRUBY_SSL_ERROR;
+   }
+ 
++#ifdef LIBRESSL_VERSION_NUMBER
++  goto NGX_MRUBY_SSL_ERROR; /* not supported yet */
++#else
+   SSL_certs_clear(ssl_conn);
++#endif
+ 
+   if (SSL_use_certificate(ssl_conn, x509) == 0) {
+     goto NGX_MRUBY_SSL_ERROR;
