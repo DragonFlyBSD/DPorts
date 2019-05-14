@@ -1,0 +1,11 @@
+--- configure.orig	2017-01-01 19:28:19 UTC
++++ configure
+@@ -111,7 +111,7 @@ case $OS in
+ 	        echo "EXTRA_LIBS   =" >> $CFG
+ 	        ;;
+ 
+-        FreeBSD)
++        FreeBSD|DragonFly)
+                 heading
+ 	        echo "INCLUDES     =" >> $CFG
+ 	        echo "DEFS        += -DHAVE_STRTONUM -DHAVE_STRLCPY" >> $CFG
