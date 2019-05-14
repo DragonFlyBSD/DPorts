@@ -1,0 +1,7 @@
+--- nonFree/sift/CMakeLists.txt.intermediate	2019-05-14 11:34:56 UTC
++++ nonFree/sift/CMakeLists.txt
+@@ -34,3 +34,4 @@ install(
+   COMPONENT headers
+   FILES_MATCHING PATTERN "*.hpp" PATTERN "*.h"
+ )
++target_link_libraries(vlsift m)
