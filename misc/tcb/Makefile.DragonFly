@@ -1,0 +1,8 @@
+USES+=	alias ncurses
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@<termcap.h>@<ncurses/term.h>@g' \
+		${WRKSRC}/src/tc.c
+	${REINPLACE_CMD} -e "s@-ltermcap@-L${LOCALBASE}/lib -lncurses@g" \
+			 -e 's@FreeBSD@DragonFly@g' \
+		${WRKSRC}/config.sh
