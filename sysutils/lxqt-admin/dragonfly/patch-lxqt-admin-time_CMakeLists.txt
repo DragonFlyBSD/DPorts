@@ -1,0 +1,11 @@
+--- lxqt-admin-time/CMakeLists.txt.orig	2019-01-24 21:53:08 UTC
++++ lxqt-admin-time/CMakeLists.txt
+@@ -75,7 +75,7 @@ target_link_libraries(lxqt-admin-time
+ )
+ install(TARGETS lxqt-admin-time RUNTIME DESTINATION bin)
+ install(FILES ${DESKTOP_FILES} DESTINATION ${CMAKE_INSTALL_PREFIX}/share/applications)
+-if(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
++if(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD|DragonFly")
+ install(PROGRAMS "lxqt-admin-time-helper.freebsd" DESTINATION bin RENAME lxqt-admin-time-helper)
+ install(FILES "org.lxqt.lxqt-admin-time.policy" DESTINATION "${POLKITQT-1_POLICY_FILES_INSTALL_DIR}")
+ endif()

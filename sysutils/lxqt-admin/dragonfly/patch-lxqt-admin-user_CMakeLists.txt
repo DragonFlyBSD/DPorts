@@ -1,0 +1,11 @@
+--- lxqt-admin-user/CMakeLists.txt.orig	2019-01-24 21:53:08 UTC
++++ lxqt-admin-user/CMakeLists.txt
+@@ -73,7 +73,7 @@ configure_file(
+     @ONLY
+ )
+ 
+-if(${CMAKE_SYSTEM_NAME} MATCHES  "FreeBSD")
++if(${CMAKE_SYSTEM_NAME} MATCHES  "FreeBSD|DragonFly")
+     install(PROGRAMS "lxqt-admin-user-helper.freebsd" DESTINATION bin RENAME lxqt-admin-user-helper)
+ else()
+     install(PROGRAMS "lxqt-admin-user-helper.default" DESTINATION bin RENAME lxqt-admin-user-helper)
