@@ -1,0 +1,11 @@
+--- configure.ac.orig	2017-01-19 22:28:48 UTC
++++ configure.ac
+@@ -74,7 +74,7 @@ PKG_CHECK_MODULES(LIBUDEV, [libudev])
+ PKG_CHECK_MODULES(LIBEVDEV, [libevdev >= 0.4])
+ 
+ AC_CHECK_LIB([m], [atan2])
+-AC_CHECK_LIB([rt], [clock_gettime])
++AC_SEARCH_LIBS([clock_gettime], [rt])
+ 
+ if test "x$GCC" = "xyes"; then
+ 	GCC_CXXFLAGS="-Wall -Wextra -Wno-unused-parameter -g -fvisibility=hidden"
