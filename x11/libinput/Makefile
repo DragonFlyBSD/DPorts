@@ -1,45 +1,47 @@
-# DragonFly BSD newport
+# $FreeBSD: head/x11/libinput/Makefile 494850 2019-03-06 21:57:42Z zeising $
 
 PORTNAME=	libinput
-PORTVERSION=	1.6.0
+PORTVERSION=	1.12.6
+PORTREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://freedesktop.org/software/${PORTNAME}/
 
-MAINTAINER=	karu.pruun@gmail.com
-COMMENT=	Generic input library (DragonFly BSD version)
+MAINTAINER=	x11@FreeBSD.org
+COMMENT=	Generic input library
 
 LICENSE=	MIT
+LICENSE_FILE=	${WRKSRC}/COPYING
 
-BUILD_DEPENDS=	${LOCALBASE}/include/linux/input.h:devel/evdev-proto
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}evdev>0:devel/py-evdev@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pyudev>0:devel/py-pyudev@${PY_FLAVOR}
 LIB_DEPENDS=	libevdev.so:devel/libevdev \
 		libudev.so:devel/libudev-devd \
 		libmtdev.so:devel/libmtdev
 
-OPTIONS_DEFINE=	EVENT_GUI LIBWACOM
+USES=		localbase meson pkgconfig python:3.4+,run shebangfix tar:xz
+USE_LDCONFIG=	yes
+CPPFLAGS=	-I${WRKSRC}/shims
+
+MESON_ARGS+=	-Ddocumentation=false -Dtests=false
+
+python_OLD_CMD=	"/usr/bin/env python3"
+SHEBANG_FILES=	tools/libinput-measure-fuzz.py \
+		tools/libinput-measure-touch-size.py \
+		tools/libinput-measure-touchpad-pressure.py \
+		tools/libinput-measure-touchpad-tap.py \
+		tools/libinput-replay
+
+OPTIONS_DEFINE=	DEBUG_GUI LIBWACOM
 OPTIONS_DEFAULT=
-EVENT_GUI_DESC=	Build the GUI event viewer
-LIBWACOM_DESC=	Libwacom support
 OPTIONS_SUB=	yes
 
-EVENT_GUI_USE=	GNOME=gtk30,glib20,cairo
-EVENT_GUI_CONFIGURE_ENABLE=	event-gui
-LIBWACOM_LIB_DEPENDS=		libwacom.so:x11/libwacom
-LIBWACOM_CONFIGURE_ENABLE=	libwacom
+DEBUG_GUI_DESC=	Build the GUI event viewer
+LIBWACOM_DESC=	Libwacom support
 
-USES=		autoreconf gmake libtool pathfix pkgconfig tar:xz
-USE_LDCONFIG=	yes
-GNU_CONFIGURE=	yes
-
-CPPFLAGS+=	-I${WRKSRC}/shims
-CONFIGURE_ARGS=	--disable-tests --without-libunwind
-INSTALL_TARGET=	install-strip
-
-post-patch:
-	${RM} ${WRKSRC}/include/linux/input.h
-	${REINPLACE_CMD} -e '/SUBDIR/ s/udev//g' ${WRKSRC}/Makefile.am
-
-post-install-EVENT_GUI-on:
-	${INSTALL_PROGRAM} ${WRKSRC}/tools/event-gui \
-		${STAGEDIR}${PREFIX}/bin/libinput-event-gui
+DEBUG_GUI_USES=		gnome
+DEBUG_GUI_USE=		GNOME=gtk30,glib20,cairo
+DEBUG_GUI_MESON_TRUE=	debug-gui
+LIBWACOM_LIB_DEPENDS=	libwacom.so:x11/libwacom
+LIBWACOM_MESON_TRUE=	libwacom
 
 .include <bsd.port.mk>

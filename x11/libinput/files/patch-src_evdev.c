@@ -1,6 +1,23 @@
---- src/evdev.c.orig	2017-01-19 21:36:55 UTC
+When a process without full /dev/input access enumerates devices via libudev-devd,
+the udev_device structs do not get udev properties that mark them as inputs, keyboards, etc,
+and get rejected as not being input devices.
+
+libinput reopens devices just to check path equality.
+The udev_devices from reopening do have the right properties,
+so we just use them instead of the original (enumerated) ones.
+
+--- src/evdev.c.orig	2018-12-18 05:06:18 UTC
 +++ src/evdev.c
-@@ -1893,6 +1893,15 @@ evdev_device_dispatch(void *data)
+@@ -905,7 +905,7 @@ evdev_sync_device(struct evdev_device *device)
+ 		evdev_device_dispatch_one(device, &ev);
+ 	} while (rc == LIBEVDEV_READ_STATUS_SYNC);
+ 
+-	return rc == -EAGAIN ? 0 : rc;
++	return (rc == -EAGAIN || rc == -EINVAL)? 0 : rc;
+ }
+ 
+ static void
+@@ -943,6 +943,17 @@ evdev_device_dispatch(void *data)
  
  	if (rc != -EAGAIN && rc != -EINTR) {
  		libinput_remove_source(libinput, device->source);
@@ -11,8 +28,10 @@
 +		 * Issuing evdev_device_suspend() here leads to SIGSEGV
 +		 */
 +		int dummy_fd = open("/dev/null", O_RDONLY | O_CLOEXEC);
-+		dup2(dummy_fd, device->fd);
-+		close(dummy_fd);
++		if (dummy_fd >= 0) {
++			dup2(dummy_fd, device->fd);
++			close(dummy_fd);
++		}
  		device->source = NULL;
  	}
  }
