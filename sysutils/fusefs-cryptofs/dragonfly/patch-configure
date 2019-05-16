@@ -1,0 +1,11 @@
+--- configure.orig	2007-02-03 15:27:01 UTC
++++ configure
+@@ -19477,7 +19477,7 @@ echo "${ECHO_T}yes" >&6; }
+ fi
+ 
+ case $target_os in
+-    *bsd* | *darwin*)
++    *bsd* | *darwin* | *dragonfly*)
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define BSD 1
