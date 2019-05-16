@@ -1,3 +1,7 @@
+.if !defined(DPORTS_BUILDER)
+MANUAL_PACKAGE_BUILD=   huge (399M packaged)
+.endif
+
 # hmm
 _USES_PYTHON:=	python:2.7,build
 
