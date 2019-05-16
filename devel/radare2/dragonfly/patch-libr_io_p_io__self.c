@@ -19,8 +19,9 @@
  				(void *)entry.start,
  				(void *)entry.end,
 -				r_tr_rwx_i (perm),
+-				entry.offset);
 +				r_str_rwx_i (perm),
- 				entry.offset);
++				entry.ba.offset);
  
  		self_sections[self_sections_count].from = entry.start;
  		self_sections[self_sections_count].to = entry.end;
