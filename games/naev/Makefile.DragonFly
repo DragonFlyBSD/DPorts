@@ -1,0 +1,12 @@
+DPMSG=		${WRKDIR}/dports-message
+
+.if !defined(DPORTS_BUILDER) && defined(PACKAGE_BUILDING)
+RUN_DEPENDS:=	${RUN_DEPENDS:N*naev-data}
+PKGMESSAGE=	${DPMSG}
+
+dfly-patch:
+	@${ECHO} "########################################################" >> ${DPMSG}
+	@${ECHO} "# Build games/naev-data from source to play this game  #" >> ${DPMSG}
+	@${ECHO} "########################################################" >> ${DPMSG}
+
+.endif
