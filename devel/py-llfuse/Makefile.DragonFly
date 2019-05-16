@@ -1,0 +1,7 @@
+
+# XXX not yet
+# src/llfuse.c:11065:22: __pyx_v_mode = ((__pyx_v_mode & (~((mode_t)S_IFMT))) | ((mode_t)S_IFDIR));
+# rc/llfuse.c:30453:36: __pyx_v_self->attr->st_blksize = __pyx_t_1;
+dfly-patch:
+	${REINPLACE_CMD} -e "/compile_args.append('-Werror=conversion')/d" \
+		${WRKSRC}/setup.py
