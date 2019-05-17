@@ -1,0 +1,6 @@
+
+dfly-patch:
+	cands=`grep -rl __FreeBSD__ ${WRKSRC}`; \
+	${REINPLACE_CMD} 's|__FreeBSD__|__DragonFly__|g' $${cands}
+	${REINPLACE_CMD} -e "s@return ::isnan@return std::isnan@g" \
+	${WRKSRC}/src/cxx_supportlib/vendor-modified/boost/math/special_functions/fpclassify.hpp

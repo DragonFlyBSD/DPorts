@@ -20,7 +20,7 @@ BUILD_DEPENDS=	jhindexer:java/javahelp \
 		tidy:www/tidy-lib \
 		autoconf:devel/autoconf
 LIB_DEPENDS=	liblcms2.so:graphics/lcms2 \
-		libomp.so:devel/openmp \
+		 \
 		libtiff.so:graphics/tiff
 RUN_DEPENDS=	jhindexer:java/javahelp
 

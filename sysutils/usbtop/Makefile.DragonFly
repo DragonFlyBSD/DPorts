@@ -1,0 +1,3 @@
+
+# port does not need boost and uses base libpcap
+LIB_DEPENDS:=

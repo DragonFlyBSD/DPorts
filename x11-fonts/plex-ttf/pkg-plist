@@ -1,3 +1,11 @@
+%%FONTSDIR%%/IBMPlexArabic-Bold.ttf
+%%FONTSDIR%%/IBMPlexArabic-ExtraLight.ttf
+%%FONTSDIR%%/IBMPlexArabic-Light.ttf
+%%FONTSDIR%%/IBMPlexArabic-Medium.ttf
+%%FONTSDIR%%/IBMPlexArabic-Regular.ttf
+%%FONTSDIR%%/IBMPlexArabic-SemiBold.ttf
+%%FONTSDIR%%/IBMPlexArabic-Text.ttf
+%%FONTSDIR%%/IBMPlexArabic-Thin.ttf
 %%FONTSDIR%%/IBMPlexDevanagari-Bold.ttf
 %%FONTSDIR%%/IBMPlexDevanagari-ExtraLight.ttf
 %%FONTSDIR%%/IBMPlexDevanagari-Light.ttf
@@ -86,3 +94,11 @@
 %%FONTSDIR%%/IBMPlexThai-SemiBold.ttf
 %%FONTSDIR%%/IBMPlexThai-Text.ttf
 %%FONTSDIR%%/IBMPlexThai-Thin.ttf
+%%FONTSDIR%%/IBMPlexThaiLooped-Bold.ttf
+%%FONTSDIR%%/IBMPlexThaiLooped-ExtraLight.ttf
+%%FONTSDIR%%/IBMPlexThaiLooped-Light.ttf
+%%FONTSDIR%%/IBMPlexThaiLooped-Medium.ttf
+%%FONTSDIR%%/IBMPlexThaiLooped-Regular.ttf
+%%FONTSDIR%%/IBMPlexThaiLooped-SemiBold.ttf
+%%FONTSDIR%%/IBMPlexThaiLooped-Text.ttf
+%%FONTSDIR%%/IBMPlexThaiLooped-Thin.ttf

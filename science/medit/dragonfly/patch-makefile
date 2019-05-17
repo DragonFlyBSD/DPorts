@@ -1,0 +1,19 @@
+--- makefile.intermediate	2019-05-11 07:37:16.000000000 +0000
++++ makefile
+@@ -65,6 +65,16 @@ FreeBSD:
+ 	"GLUT_LIB = -lglut" \
+         "EXEDIR = $(WRKSRC)/bin"
+ 
++DragonFly:
++	$(MAKE) $(MFLAGS) -f Makefile.arch \
++        "prog   = medit" \
++        "INCDIR = -I. -I$(WRKSRC)/sources -I$(LOCALBASE)/include" \
++	"XLIBS  = -L$(LOCALBASE)/lib -lXmu -lXext -lX11 -pthread" \
++        "GL_LIB   = -lGL" \
++	"GLU_LIB  = -lGLU" \
++	"GLUT_LIB = -lglut" \
++        "EXEDIR = $(WRKSRC)/bin"
++
+ linux:
+ 	$(MAKE) $(MFLAGS) -f Makefile.arch \
+         "prog   = medit-2.3-linux"\

@@ -1,10 +1,14 @@
 #!/bin/sh
 #
-# $FreeBSD: head/devel/youcompleteme/files/pkg-deinstall.in 456332 2017-12-14 18:41:43Z ultima $
+# $FreeBSD: head/devel/youcompleteme/files/pkg-deinstall.in 496127 2019-03-18 06:05:22Z ultima $
 #
 
 case $2 in
+	PRE-DEINSTALL)
+		%%FIND%% "%%VIMFILESDIR%%" -name "*.pyc" -delete
+		;;
 	POST-DEINSTALL)
 		/bin/rm "%%VIMFILESDIR%%/doc/tags"
+		%%FIND%% "%%VIMFILESDIR%%" -name "*.pyc" -delete
 		;;
 esac

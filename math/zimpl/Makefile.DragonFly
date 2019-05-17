@@ -1,0 +1,3 @@
+
+dfly-patch:
+	${CP} ${WRKSRC}/make/make.freebsd.x86_64.gnu.opt ${WRKSRC}/make/make.dragonfly.x86_64.gnu.opt

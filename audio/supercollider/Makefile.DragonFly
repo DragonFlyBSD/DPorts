@@ -1,0 +1,6 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@ifdef \(__FreeBSD__\)@if defined(\1) || defined(__DragonFly__)@' \
+		${WRKSRC}/server/supernova/server/main.cpp
+	${REINPLACE_CMD} -e '/target_link_libraries( libsupernova atomic )/d' \
+		${WRKSRC}/server/supernova/CMakeLists.txt

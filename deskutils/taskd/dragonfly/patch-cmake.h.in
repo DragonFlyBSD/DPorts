@@ -1,0 +1,10 @@
+--- cmake.h.in.orig	2015-05-10 21:35:22 UTC
++++ cmake.h.in
+@@ -36,6 +36,7 @@
+ #cmakedefine DARWIN
+ #cmakedefine CYGWIN
+ #cmakedefine FREEBSD
++#cmakedefine DRAGONFLY
+ #cmakedefine OPENBSD
+ #cmakedefine NETBSD
+ #cmakedefine HAIKU

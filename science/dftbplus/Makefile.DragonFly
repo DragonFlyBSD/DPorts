@@ -1,0 +1,4 @@
+
+# ...
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NMPI}
+LDFLAGS:=	-L${LOCALBASE}/lib ${LDFLAGS:N/usr/local/lib/libomp.so}

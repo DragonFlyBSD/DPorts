@@ -2,22 +2,25 @@
 # $FreeBSD$
 
 PORTNAME=	dht
-PORTVERSION=	0.25
+PORTVERSION=	0.26
 CATEGORIES=	devel
 MASTER_SITES=	http://www.pps.univ-paris-diderot.fr/~jch/software/files/
 
-MAINTAINER=	mi@aldan.algebra.com
+MAINTAINER=	rigoletto@FreeBSD.org
 COMMENT=	Mainline variant of Kademlia Distributed Hash Table (DHT)
 
 LICENSE=	MIT
 
-MAKEFILE=	${FILESDIR}/BSDmakefile
-USE_LDCONFIG=	yes
-USES=	uidfix
-MAKE_ENV+=	STAGEDIR="${STAGEDIR}"
-MAKE_ARGS+=	NO_WERROR=yes
+USES=		uidfix
 
-pre-su-install:
+USE_LDCONFIG=	yes
+MAKE_ENV=	STAGEDIR="${STAGEDIR}"
+
+MAKEFILE=	${FILESDIR}/BSDmakefile
+
+MAKE_ARGS+=    NO_WERROR=yes
+
+pre-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/include/dht
 
 .include <bsd.port.mk>

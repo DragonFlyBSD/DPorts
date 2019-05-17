@@ -1,0 +1,12 @@
+--- meters.lv2/Makefile.intermediate	2019-05-08 15:52:29.000000000 +0000
++++ meters.lv2/Makefile
+@@ -467,7 +467,8 @@ ifneq ($(targets),)
+ 	install -m755 $(targets) $(DESTDIR)$(LV2DIR)/$(BUNDLE)
+ 	install -m644 $(BUILDDIR)manifest.ttl $(BUILDDIR)$(LV2NAME).ttl $(DESTDIR)$(LV2DIR)/$(BUNDLE)
+ 	install -d $(DESTDIR)$(BINDIR)
+-	install -T -m755 $(APPBLD)x42-meter-collection$(EXE_EXT) $(DESTDIR)$(BINDIR)/x42-meter$(EXE_EXT)
++	cp $(APPBLD)x42-meter-collection$(EXE_EXT) $(APPBLD)x42-meter$(EXE_EXT)
++	install -m755 $(APPBLD)x42-meter$(EXE_EXT) $(DESTDIR)$(BINDIR)
+ endif
+ 
+ uninstall-bin:

@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	ffmpeg
-PORTVERSION=	4.1.1
-PORTREVISION=	1
+PORTVERSION=	4.1.3
+PORTREVISION=	4
 PORTEPOCH=	1
 CATEGORIES=	multimedia audio ipv6 net
 MASTER_SITES=	https://ffmpeg.org/releases/
@@ -39,7 +39,7 @@ OPTIONS_DEFINE=	ALSA AMR_NB AMR_WB AOM ASS BEIGNET BS2B CACA CDIO CELT CODEC2 DA
 		VO_AMRWBENC VPX WAVPACK WEBP X264 X265 XAVS2 XCB XVID \
 		XVIDEO ZIMG ZMQ ZVBI
 
-OPTIONS_DEFAULT=	FONTCONFIG FREETYPE FREI0R GMP GNUTLS ICONV \
+OPTIONS_DEFAULT=	DAV1D FONTCONFIG FREETYPE FREI0R GMP GNUTLS ICONV \
 			OPENCV OPTIMIZED_CFLAGS OPUS RTCPU THEORA V4L VAAPI VDPAU \
 			VORBIS VPX X264 X265 XCB XVID
 
@@ -332,6 +332,7 @@ OPENCV_LIB_DEPENDS=	libopencv_imgproc.so:graphics/opencv-core
 OPENCV_CONFIGURE_ENABLE=	libopencv
 
 # opengl
+OPENGL_USES=		gl
 OPENGL_USE=		GL=gl
 OPENGL_CONFIGURE_ENABLE=	opengl
 
@@ -414,7 +415,7 @@ SRT_CONFIGURE_ENABLE=	libsrt
 # svt-av1
 SVTAV1_LIB_DEPENDS=	libSvtAv1Enc.so:multimedia/svt-av1
 SVTAV1_CONFIGURE_ON=	--enable-libsvtav1
-SVTAV1_PATCH_SITES=	https://github.com/OpenVisualCloud/SVT-AV1/raw/37a5b96/ffmpeg_plugin/:svtav1
+SVTAV1_PATCH_SITES=	https://github.com/OpenVisualCloud/SVT-AV1/raw/1bd31d3c/ffmpeg_plugin/:svtav1
 SVTAV1_PATCHFILES=	0001-Add-ability-for-ffmpeg-to-run-svt-av1.patch:-p1:svtav1
 .if make(makesum)
 .MAKEFLAGS:		WITH+=SVTAV1
@@ -439,7 +440,7 @@ SVTHEVC_PREVENTS_MSG=	${SVTAV1_PREVENTS_MSG}
 # svt-vp9
 SVTVP9_LIB_DEPENDS=	libSvtVp9Enc.so:multimedia/svt-vp9
 SVTVP9_CONFIGURE_ON=	--enable-libsvtvp9
-SVTVP9_PATCH_SITES=	https://github.com/OpenVisualCloud/SVT-VP9/raw/2437369/ffmpeg_plugin/:svtvp9
+SVTVP9_PATCH_SITES=	https://github.com/OpenVisualCloud/SVT-VP9/raw/ce24589/ffmpeg_plugin/:svtvp9
 SVTVP9_PATCHFILES=	0001-Add-ability-for-ffmpeg-to-run-svt-vp9.patch:-p1:svtvp9
 .if make(makesum)
 .MAKEFLAGS:		WITH+=SVTVP9
@@ -473,6 +474,7 @@ VAPOURSYNTH_LIB_DEPENDS=	libvapoursynth-script.so:multimedia/vapoursynth
 VAPOURSYNTH_CONFIGURE_ENABLE=	vapoursynth
 
 # vdpau
+VDPAU_USE=		XORG=x11
 VDPAU_LIB_DEPENDS=	libvdpau.so:multimedia/libvdpau
 VDPAU_CONFIGURE_ENABLE=	vdpau
 
@@ -529,7 +531,7 @@ XVID_LIB_DEPENDS=	libxvidcore.so:multimedia/xvid
 XVID_CONFIGURE_ENABLE=	libxvid
 
 # xv
-XVIDEO_USE=		XORG=xv
+XVIDEO_USE=		XORG=x11,xext,xv
 XVIDEO_CONFIGURE_OFF=	--disable-outdev=xv
 
 # zimg

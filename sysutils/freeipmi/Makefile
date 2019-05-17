@@ -12,13 +12,11 @@ COMMENT=	Library and tools to support IPMI-capable hardware
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BROKEN_aarch64=		invokes x86 assembler
 BROKEN_armv6=		invokes x86 assembler
 BROKEN_armv7=		invokes x86 assembler
 BROKEN_mips=		invokes x86 assembler
 BROKEN_mips64=		invokes x86 assembler
 BROKEN_sparc64=		invokes x86 assembler
-BROKEN_powerpc64=	invokes x86 assembler
 
 LIB_DEPENDS=	libargp.so:devel/argp-standalone \
 		libgcrypt.so:security/libgcrypt
@@ -26,6 +24,7 @@ LIB_DEPENDS=	libargp.so:devel/argp-standalone \
 OPTIONS_DEFINE=	DEBUG DOCS IOPERM IPV6
 IOPERM_DESC=	Use i386_set_ioperm
 
+USES=		gmake libtool localbase shebangfix
 CFLAGS+=	-D_WANT_SEMUN
 CONFIGURE_ARGS=	--disable-init-scripts \
 		--sysconfdir=${ETCDIR} \
@@ -35,7 +34,6 @@ CONFIGURE_ARGS=	--disable-init-scripts \
 CONFIGURE_ENV=	PTHREAD_LIBS=-lpthread ac_cv_path_CPP=${CPP}
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-USES=		gmake libtool localbase shebangfix
 
 INFO=		freeipmi-faq
 PLIST_SUB=	CACHE_DIR=${CACHE_DIR}

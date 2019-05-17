@@ -1,0 +1,10 @@
+--- configure.ac.orig	2019-01-04 13:38:34 UTC
++++ configure.ac
+@@ -14,6 +14,7 @@ AM_PROG_CC_C_O
+ 
+ case $target_os in
+      *linux*)	arch=linux;;
++     *dragonfly*)  arch=bsd;;
+      *netbsd*)  arch=netbsd;;
+      *bsd*)	arch=bsd;;
+      *)		arch=unknown;;

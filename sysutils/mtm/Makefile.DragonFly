@@ -1,0 +1,2 @@
+
+MAKE_ARGS+=	LIBPATH="-L${LOCALBASE}/lib"

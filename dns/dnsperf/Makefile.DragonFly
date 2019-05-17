@@ -1,0 +1,4 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e "s@/usr/lib/libcrypto.a@${LOCALBASE}/lib/libcrypto.a@g" \
+		${WRKSRC}/configure.ac

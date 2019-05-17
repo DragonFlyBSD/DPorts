@@ -1,0 +1,6 @@
+
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NMPI}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@BUILD_DIR := Build-.*@BUILD_DIR := Build-dragonfly@' \
+		${WRKSRC}/local.mk

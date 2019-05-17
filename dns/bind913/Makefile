@@ -8,7 +8,7 @@ PORTVERSION=	${ISCVERSION:S/-P/P/:S/b/.b/:S/a/.a/:S/rc/.rc/}
 PORTREVISION=	0
 .else
 # dns/bind913 here
-PORTREVISION=	0
+PORTREVISION=	1
 .endif
 CATEGORIES=	dns net ipv6
 MASTER_SITES=	ISC/bind9/${ISCVERSION}
@@ -30,6 +30,9 @@ LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
 
 LIB_DEPENDS=	libxml2.so:textproc/libxml2
+.if !defined(BIND_TOOLS_SLAVE)
+RUN_DEPENDS=	bind-tools>0:dns/bind-tools
+.endif
 
 USES=	compiler:c11 cpe libedit ssl
 # ISC releases things like 9.8.0-P1, which our versioning doesn't like
@@ -50,39 +53,43 @@ CONFIGURE_ARGS=	--localstatedir=/var --disable-linux-caps \
 		--sysconfdir=${ETCDIR}
 ETCDIR=		${PREFIX}/etc/namedb
 
-CONFLICTS=	bind99 bind910 bind911 bind912 bind9-devel
-
 .if defined(BIND_TOOLS_SLAVE)
 CONFIGURE_ARGS+=	--disable-shared
-CONFLICTS+=		bind913
+EXTRA_PATCHES=	${PATCHDIR}/extrapatch-bind-tools
 .else
 USE_RC_SUBR=	named
 SUB_FILES=	pkg-message named.conf
-CONFLICTS+=		bind-tools
+EXTRA_PATCHES=	${PATCHDIR}/extrapatch-no-bind-tools
 
 PORTDOCS=	*
+CONFLICTS=	bind911 bind912 bind914 bind9-devel
 .endif	# BIND_TOOLS_SLAVE
 
 MAKE_JOBS_UNSAFE=	yes
 
-OPTIONS_DEFAULT=	SIGCHASE IDN GSSAPI_NONE JSON PYTHON
-OPTIONS_DEFINE=		IDN LARGE_FILE PYTHON JSON \
-			FIXED_RRSET SIGCHASE
+OPTIONS_DEFAULT=	DLZ_FILESYSTEM GSSAPI_NONE IDN JSON \
+			LMDB PYTHON SIGCHASE TCP_FASTOPEN
+OPTIONS_DEFINE=		DNSTAP DOCS FIXED_RRSET IDN JSON LARGE_FILE \
+			LMDB MINCACHE PORTREVISION PYTHON QUERYTRACE \
+			SIGCHASE START_LATE TCP_FASTOPEN TUNING_LARGE
 
 OPTIONS_RADIO=	CRYPTO
 OPTIONS_RADIO_CRYPTO=	NATIVE_PKCS11
 
-.if !defined(BIND_TOOLS_SLAVE)
-OPTIONS_DEFAULT+=	DLZ_FILESYSTEM LMDB TCP_FASTOPEN
-OPTIONS_DEFINE+=	DOCS \
-			MINCACHE PORTREVISION QUERYTRACE LMDB DNSTAP \
-			START_LATE TUNING_LARGE TCP_FASTOPEN
 OPTIONS_GROUP=		DLZ
 OPTIONS_GROUP_DLZ=	DLZ_POSTGRESQL DLZ_MYSQL DLZ_BDB \
 			DLZ_LDAP DLZ_FILESYSTEM DLZ_STUB
-.endif	# BIND_TOOLS_SLAVE
+
 OPTIONS_SINGLE=		GSSAPI
 OPTIONS_SINGLE_GSSAPI=	GSSAPI_BASE GSSAPI_HEIMDAL GSSAPI_MIT GSSAPI_NONE
+
+.if defined(BIND_TOOLS_SLAVE)
+OPTIONS_EXCLUDE=	DOCS ${OPTIONS_GROUP_DLZ} \
+			MINCACHE PORTREVISION QUERYTRACE LMDB DNSTAP \
+			START_LATE TUNING_LARGE TCP_FASTOPEN
+.else
+OPTIONS_EXCLUDE=	PYTHON
+.endif	# BIND_TOOLS_SLAVE
 
 OPTIONS_SUB=	yes
 
@@ -184,13 +191,19 @@ TCP_FASTOPEN_CONFIGURE_ENABLE=	tcp-fastopen
 TUNING_LARGE_CONFIGURE_ON=	--with-tuning=large
 TUNING_LARGE_CONFIGURE_OFF=	--with-tuning=default
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 .if defined(WITH_DEBUG)
-CONFIGURE_ARGS+=	--enable-symtable
+CONFIGURE_ARGS+=	--enable-symtable \
+			--enable-developer
+USES+=	perl5 pkgconfig
+USE_PERL5=	build
+BUILD_DEPENDS+=	cmocka>0:sysutils/cmocka
 .else
 CONFIGURE_ARGS+=	--disable-symtable
 .endif
+
+.include <bsd.port.pre.mk>
 
 .if ${SSL_DEFAULT} == base
 SUB_LIST+=	ENGINES=/usr/lib/engines
@@ -199,24 +212,13 @@ SUB_LIST+=	ENGINES=${LOCALBASE}/lib/engines
 .endif
 
 post-patch:
-.if defined(BIND_TOOLS_SLAVE)
-	@${REINPLACE_CMD} -e 's#^SUBDIRS.*#SUBDIRS = lib bin#' \
-		-e 's#isc-config.sh installdirs#installdirs#' \
-		-e 's#.*INSTALL.*isc-config.*##' \
-		-e 's#.*INSTALL.*bind.keys.*##' \
-		${WRKSRC}/Makefile.in
-	@${REINPLACE_CMD} -e 's#^SUBDIRS.*#SUBDIRS = delv dig dnssec tools nsupdate \\#' \
-		-e 's#^	.*check confgen ##' \
-		${WRKSRC}/bin/Makefile.in
-.else
-.  for FILE in check/named-checkconf.8 named/named.8 nsupdate/nsupdate.1 \
+.for FILE in check/named-checkconf.8 named/named.8 nsupdate/nsupdate.1 \
 	rndc/rndc.8
 	@${REINPLACE_CMD} -e 's#/etc/named.conf#${ETCDIR}/named.conf#g' \
 		-e 's#/etc/rndc.conf#${ETCDIR}/rndc.conf#g' \
 		-e "s#/var\/run\/named\/named.pid#/var/run/named/pid#" \
 		${WRKSRC}/bin/${FILE}
-.  endfor
-.endif
+.endfor
 
 .if !defined(BIND_TOOLS_SLAVE)
 .  if ${PORTREVISION:N0}
@@ -247,10 +249,11 @@ post-install-DOCS-on:
 	${INSTALL_DATA} ${WRKSRC}/doc/arm/Bv9ARM.pdf ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/CHANGES* ${WRKSRC}/HISTORY.md \
 		${WRKSRC}/README.md ${STAGEDIR}${DOCSDIR}
-.endif	# BIND_TOOLS_SLAVE
+.else
 
 # Can't use USE_PYTHON=autoplist
 post-install-PYTHON-on:
 	@${FIND} ${STAGEDIR}${PYTHON_SITELIBDIR} -type f | ${SED} -e 's|${STAGEDIR}||' >> ${TMPPLIST}
+.endif	# BIND_TOOLS_SLAVE
 
 .include <bsd.port.post.mk>

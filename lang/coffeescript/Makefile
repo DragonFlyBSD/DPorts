@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	coffeescript
-DISTVERSION=	2.3.2
+DISTVERSION=	2.4.1
 CATEGORIES=	lang
 
 MAINTAINER=	egypcio@FreeBSD.org
@@ -21,6 +21,7 @@ CONFLICTS_INSTALL=	cake
 
 OPTIONS_DEFINE=	EXAMPLES
 
+NO_ARCH=	yes
 NO_BUILD=	yes
 
 do-install:

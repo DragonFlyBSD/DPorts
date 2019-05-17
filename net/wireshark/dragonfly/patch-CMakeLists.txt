@@ -1,0 +1,11 @@
+--- CMakeLists.txt.intermediate	2019-05-14 16:05:06.000000000 +0000
++++ CMakeLists.txt
+@@ -193,7 +193,7 @@ if(NOT (WIN32 OR APPLE))
+ 		# Some systems support $ORIGIN in RPATH to enable relocatable
+ 		# binaries. In other cases, only absolute paths can be used.
+ 		# https://www.lekensteyn.nl/rpath.html
+-		if(CMAKE_SYSTEM_NAME MATCHES "^(Linux|SunOS|FreeBSD)$")
++		if(CMAKE_SYSTEM_NAME MATCHES "^(Linux|SunOS|FreeBSD|DragonFly)$")
+ 			# Provide a knob to optionally force absolute rpaths,
+ 			# to support old/buggy systems and as a user preference
+ 			# for hardening.

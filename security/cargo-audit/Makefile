@@ -3,7 +3,7 @@
 PORTNAME=	cargo-audit
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.6.1
-PORTREVISION=	1
+PORTREVISION=	5
 CATEGORIES=	security
 
 MAINTAINER=	tobik@FreeBSD.org
@@ -14,7 +14,10 @@ LICENSE_COMB=	dual
 LICENSE_FILE_APACHE20=	${WRKSRC}/LICENSE-APACHE
 LICENSE_FILE_MIT=	${WRKSRC}/LICENSE-MIT
 
-USES=		cargo
+LIB_DEPENDS=	libgit2.so:devel/libgit2 \
+		libssh2.so:security/libssh2
+
+USES=		cargo ssl
 USE_GITHUB=	yes
 GH_ACCOUNT=	RustSec
 
@@ -37,7 +40,7 @@ CARGO_CRATES=	atty-0.2.11 \
 		idna-0.1.5 \
 		itoa-0.4.3 \
 		lazy_static-1.2.0 \
-		libc-0.2.45 \
+		libc-0.2.49 \
 		libgit2-sys-0.7.11 \
 		libssh2-sys-0.2.11 \
 		libz-sys-1.0.25 \

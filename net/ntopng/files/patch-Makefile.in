@@ -1,0 +1,11 @@
+--- Makefile.in.orig	2018-12-21 18:58:17 UTC
++++ Makefile.in
+@@ -95,7 +95,7 @@ ifeq (@NEDGE@, 0)
+  HAS_ZEROMQ=$(shell pkg-config --exists libzmq; echo $$?)
+  ifeq ($(HAS_ZEROMQ), 0)
+ 	ZEROMQ_INC = $(shell pkg-config --cflags libzmq)
+-	ZMQ_STATIC=/usr/local/lib/libzmq.a
++	ZMQ_STATIC=/nonexistent
+ 	ifeq ($(wildcard $(ZMQ_STATIC)),)
+ 		ZEROMQ_LIB = $(shell pkg-config --libs libzmq)
+ 	else

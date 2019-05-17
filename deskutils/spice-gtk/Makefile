@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	spice-gtk
-PORTVERSION=	0.35
+PORTVERSION=	0.36
+PORTREVISION=	2
 CATEGORIES?=	deskutils gnome
 MASTER_SITES=	http://www.spice-space.org/download/gtk/
 
@@ -15,15 +16,18 @@ NOT_FOR_ARCHS=		powerpc powerpc64 powerpcspe sparc64
 NOT_FOR_ARCHS_REASON=	server only supports little-endian
 
 LIB_DEPENDS=	libepoxy.so:graphics/libepoxy \
-		libopus.so:audio/opus
-BUILD_DEPENDS=	spice-protocol>=0.12.14:devel/spice-protocol \
+		libjson-glib-1.0.so:devel/json-glib \
+		libopus.so:audio/opus \
+		libva-x11.so:multimedia/libva
+BUILD_DEPENDS=	spice-protocol>=0.12.15:devel/spice-protocol \
 		${PYTHON_PKGNAMEPREFIX}pyparsing>=2.0.1:devel/py-pyparsing@${PY_FLAVOR}
-RUN_DEPENDS=	spice-protocol>=0.12.14:devel/spice-protocol
+RUN_DEPENDS=	spice-protocol>=0.12.15:devel/spice-protocol
 
-USES=		autoreconf cpe gettext-tools gmake jpeg libtool pkgconfig tar:bzip2 \
+USES=		autoreconf cpe gettext-tools gmake gnome jpeg libtool pkgconfig tar:bzip2 \
 		python ssl localbase:ldflags
 USE_XORG=	x11 pixman
 USE_GNOME=	cairo gdkpixbuf2 gnomeprefix gtk30 intltool introspection:build
+
 CPE_VENDOR=	redhat
 
 SPICE_SSL_CFLAGS=	-I${OPENSSLINC}

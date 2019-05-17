@@ -1,0 +1,4 @@
+
+# meson no perm
+dfly-patch:
+	${CHMOD} +x ${WRKSRC}/build-aux/post_install.py

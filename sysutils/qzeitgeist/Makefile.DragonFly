@@ -1,3 +1,0 @@
-LIB_DEPENDS+=	libicuuc.so:devel/icu \
-		libxml2.so:textproc/libxml2 \
-		libyajl.so:devel/yajl

@@ -1,0 +1,11 @@
+--- CMakeLists.txt.orig	2018-11-22 03:24:25 UTC
++++ CMakeLists.txt
+@@ -222,7 +222,7 @@ elseif (CMAKE_SYSTEM_NAME MATCHES "Darwi
+     add_definitions (-DNNG_USE_CLOCKID=CLOCK_REALTIME)
+     set(NNG_PLATFORM_POSIX ON)
+ 
+-elseif (CMAKE_SYSTEM_NAME MATCHES "FreeBSD")
++elseif (CMAKE_SYSTEM_NAME MATCHES "FreeBSD|DragonFly")
+     add_definitions (-DNNG_PLATFORM_POSIX)
+     add_definitions (-DNNG_PLATFORM_FREEBSD)
+     set(NNG_PLATFORM_POSIX ON)

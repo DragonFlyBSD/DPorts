@@ -10,7 +10,7 @@ COMMENT=	Virtual globe and world atlas for KDE
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-LIB_DEPENDS=	libquazip5.so:archivers/quazip@qt5
+LIB_DEPENDS=	libquazip5.so:archivers/quazip
 
 USES=		cmake compiler:c++11-lang desktop-file-utils gettext \
 		kde:5 qt:5 tar:xz

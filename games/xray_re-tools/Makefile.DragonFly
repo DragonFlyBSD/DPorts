@@ -1,0 +1,9 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(defined(__FreeBSD__)\)@(\1||defined(__DragonFly__))@g' \
+		${WRKSRC}/sources/xray_re/xr_types.h
+	${REINPLACE_CMD} -e 's@[[:<:]]__unused[[:>:]]@__unused_@g' \
+		${WRKSRC}/sources/xray_re/xr_blender.h \
+		${WRKSRC}/sources/xray_re/xr_ai_way.h
+	${REINPLACE_CMD} -e 's@_THROW_BAD_ALLOC@throw()@g' \
+		${WRKSRC}/sources/3rd-party/nvtt/nvcore/Memory.h

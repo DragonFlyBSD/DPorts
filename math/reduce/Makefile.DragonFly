@@ -1,0 +1,12 @@
+
+# fails, just hardcode
+dfly-patch:
+	${REINPLACE_CMD} -e 's@HAVE_NCURSES_TERM_H@__DragonFly__@g' \
+			 -e 's@HAVE_NCURSES_H@__DragonFly__@' \
+		${WRKSRC}/csl/fox/src/termed.cpp
+	 ${REINPLACE_CMD} -e 's@\(defined(__FreeBSD__)\)@(\1 || defined(__DragonFly__))@g' \
+		${WRKSRC}/libraries/libedit-20140620-3.1/src/chartype.h \
+		${WRKSRC}/libraries/libffi/src/dlmalloc.c \
+		${WRKSRC}/csl/fox/src/FXDir.cpp \
+		${WRKSRC}/csl/fox/src/FXDate.cpp \
+		${WRKSRC}/csl/fox/src/FXSystem.cpp

@@ -1,0 +1,7 @@
+USES+=	dos2unix
+DOS2UNIX_WRKSRC=	${WRKSRC:H}
+
+dfly-patch:
+	${LN} -sv ${WRKSRC}/logo.free.png ${WRKSRC}/logo.png
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@' \
+		${WRKSRC}/Makefile.os

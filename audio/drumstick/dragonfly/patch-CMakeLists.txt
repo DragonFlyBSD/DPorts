@@ -1,0 +1,29 @@
+--- CMakeLists.txt.intermediate	2019-05-12 15:44:55.000000000 +0000
++++ CMakeLists.txt
+@@ -100,7 +100,7 @@ else()
+     message(FATAL_ERROR "Program pkg-config not found")
+ endif()
+ 
+-if(${CMAKE_SYSTEM} MATCHES "Linux|FreeBSD")
++if(${CMAKE_SYSTEM} MATCHES "Linux|FreeBSD|DragonFly")
+     #pkg_check_modules(ALSA alsa>=1.0.0)
+     if(ALSA_FOUND)
+         set(ALSA_LIBS ${ALSA_LIBRARIES})
+@@ -136,7 +136,7 @@ if(BUILD_TESTING)
+   add_subdirectory(tests)
+ endif()
+ 
+-if(${CMAKE_SYSTEM} MATCHES "Linux|FreeBSD")
++if(${CMAKE_SYSTEM} MATCHES "Linux|FreeBSD|DragonFly")
+     find_package(Doxygen)
+     if(DOXYGEN_FOUND)
+         configure_file(
+@@ -184,7 +184,7 @@ configure_file(
+ add_custom_target( uninstall
+     "${CMAKE_COMMAND}" -P "${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake")
+ 
+-if(${CMAKE_SYSTEM} MATCHES "Linux|FreeBSD")
++if(${CMAKE_SYSTEM} MATCHES "Linux|FreeBSD|DragonFly")
+     # tarball target
+     add_custom_target( tarball
+         COMMAND mkdir -p drumstick-${VERSION}

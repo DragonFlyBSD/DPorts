@@ -1,7 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	pspg
-DISTVERSION=	1.6.3
+DISTVERSION=	1.6.5
+PORTREVISION=	1
 CATEGORIES=	databases
 
 MAINTAINER=	dg@syrec.org
@@ -11,6 +12,7 @@ LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USES=		autoreconf gmake localbase ncurses pkgconfig readline
+
 USE_GITHUB=	yes
 GH_ACCOUNT=	okbob
 GNU_CONFIGURE=	yes

@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	netcdf
-PORTVERSION=	4.6.2
+PORTVERSION=	4.7.0
 DISTVERSIONPREFIX=	c-
 CATEGORIES=	science
 MASTER_SITES=	https://www.unidata.ucar.edu/downloads/netcdf/ftp/ \
@@ -12,10 +12,8 @@ MASTER_SITES=	https://www.unidata.ucar.edu/downloads/netcdf/ftp/ \
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	C library for machine-independent, array-oriented data access
 
-LICENSE=	UCAR_UNIDATA
-LICENSE_NAME=	University Corporation for Atmospheric Research/Unidata
+LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
-LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 LIB_DEPENDS=	libhdf5.so:science/hdf5
 
@@ -46,6 +44,7 @@ SZIP_LIBS=		-lsz
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-ldl ||g' ${WRKSRC}/configure
+	@${REINPLACE_CMD} -e '/ int fileno(FILE\*);/d' ${WRKSRC}/libdispatch/d*.c ${WRKSRC}/ncgen/ncgen* ${WRKSRC}/ncgen3/ncgen* ${WRKSRC}/oc2/ocdump.c
 
 post-build-DOXYGEN-on:
 	cd ${WRKSRC}/docs/ && ${LOCALBASE}/bin/doxygen .

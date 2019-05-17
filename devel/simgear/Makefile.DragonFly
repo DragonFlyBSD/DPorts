@@ -1,1 +1,4 @@
+# this does not work
+LDFLAGS_gcc:=
+
 LDFLAGS+= -lpthread

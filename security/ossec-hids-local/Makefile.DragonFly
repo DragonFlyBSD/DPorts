@@ -1,0 +1,3 @@
+# fix stage-qa, there are some orphans still tho...
+USES+=	shebangfix
+SHEBANG_FILES+=	active-response/ossec-pagerduty.sh

@@ -2,6 +2,7 @@
 
 PORTNAME=	siril
 DISTVERSION=	0.9.10
+PORTREVISION=	1
 CATEGORIES=	astro graphics
 MASTER_SITES=	https://free-astro.org/download/
 
@@ -38,7 +39,7 @@ OPTIONS_DEFINE=			OPENMP
 OPTIONS_DEFAULT=		OPENMP
 
 OPENMP_CONFIGURE_ENABLE=	openmp
-OPENMP_LIB_DEPENDS=		libomp.so:devel/openmp
+OPENMP_LIB_DEPENDS=		
 
 post-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/share/appdata ${STAGEDIR}${PREFIX}/share/mime/packages

@@ -3,6 +3,7 @@
 
 PORTNAME=	gretl
 DISTVERSION=	2019a
+PORTREVISION=	2
 CATEGORIES=	math finance
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${DISTVERSIONFULL}/
 
@@ -26,6 +27,7 @@ USE_LDCONFIG=	yes
 
 BINARY_ALIAS=	make=${GMAKE}
 ALL_TARGET=	# empty
+SSP_CFLAGS?=	-fstack-protector # XXX -strong crashes mklang on 12.0+ i386
 CONFIGURE_ENV=	ac_cv_lib_dl_dlopen="" \
 		LAPACK_LIBS="${LAPACK} ${BLAS}"
 
@@ -63,7 +65,7 @@ ODBC_CONFIGURE_WITH=	odbc
 ODBC_LIB_DEPENDS=	libodbc.so:databases/unixODBC
 
 OPENMP_CONFIGURE_ENABLE=	openmp
-OPENMP_LIB_DEPENDS=	libomp.so:devel/openmp
+OPENMP_LIB_DEPENDS=	
 
 R_DESC=			libR support
 R_CONFIGURE_WITH=	libR

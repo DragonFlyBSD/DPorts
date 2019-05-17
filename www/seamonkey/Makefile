@@ -3,7 +3,7 @@
 
 PORTNAME=	seamonkey
 DISTVERSION=	2.49.4
-PORTREVISION=	23
+PORTREVISION=	26
 MOZILLA_VER=	52 # above + 3
 CATEGORIES?=	www mail news editors irc ipv6
 MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}/source \
@@ -12,6 +12,8 @@ DISTFILES=	${DISTNAME}.source${EXTRACT_SUFX}
 
 MAINTAINER=	gecko@FreeBSD.org
 COMMENT=	The open source, standards compliant web browser
+
+BROKEN_FreeBSD_13_x86_64=	xpcshell crashes after base Clang updated to 8.0.0
 
 BUILD_DEPENDS=	nspr>=4.13.1:devel/nspr \
 		nss>=3.28.6:security/nss \

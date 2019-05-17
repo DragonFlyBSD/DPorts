@@ -1,0 +1,7 @@
+USE_CXXSTD:=	gnu++11
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-Werror @ @g' \
+		${WRKSRC}/examples/CMakeLists.txt \
+		${WRKSRC}/src/CMakeLists.txt \
+		${WRKSRC}/tests/CMakeLists.txt

@@ -1,4 +1,4 @@
---- libgnu/signal.in.h.orig	2015-05-23 17:36:17.000000000 +0300
+--- libgnu/signal.in.h.orig	2019-02-23 17:33:37 UTC
 +++ libgnu/signal.in.h
 @@ -59,7 +59,7 @@
     declare pthread_sigmask in <pthread.h>, not in <signal.h>.

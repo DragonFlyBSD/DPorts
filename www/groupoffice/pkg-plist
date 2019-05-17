@@ -155,7 +155,6 @@
 %%WWWDIR%%/go/base/model/Group.php
 %%WWWDIR%%/go/base/model/Grouped.php
 %%WWWDIR%%/go/base/model/Holiday.php
-%%WWWDIR%%/go/base/model/LinkFolder.php
 %%WWWDIR%%/go/base/model/ModelCache.php
 %%WWWDIR%%/go/base/model/ModelCollection.php
 %%WWWDIR%%/go/base/model/ModelType.php
@@ -358,8 +357,10 @@
 %%WWWDIR%%/go/modules/community/apikeys/controller/Key.php
 %%WWWDIR%%/go/modules/community/apikeys/install/install.sql
 %%WWWDIR%%/go/modules/community/apikeys/install/uninstall.sql
+%%WWWDIR%%/go/modules/community/apikeys/language/cs.php
 %%WWWDIR%%/go/modules/community/apikeys/language/de.php
 %%WWWDIR%%/go/modules/community/apikeys/language/en.php
+%%WWWDIR%%/go/modules/community/apikeys/language/fr.php
 %%WWWDIR%%/go/modules/community/apikeys/language/hu.php
 %%WWWDIR%%/go/modules/community/apikeys/language/id.php
 %%WWWDIR%%/go/modules/community/apikeys/language/pt_br.php
@@ -381,8 +382,10 @@
 %%WWWDIR%%/go/modules/community/googleauthenticator/install/install.sql
 %%WWWDIR%%/go/modules/community/googleauthenticator/install/uninstall.sql
 %%WWWDIR%%/go/modules/community/googleauthenticator/install/updates.php
+%%WWWDIR%%/go/modules/community/googleauthenticator/language/cs.php
 %%WWWDIR%%/go/modules/community/googleauthenticator/language/de.php
 %%WWWDIR%%/go/modules/community/googleauthenticator/language/en.php
+%%WWWDIR%%/go/modules/community/googleauthenticator/language/fr.php
 %%WWWDIR%%/go/modules/community/googleauthenticator/language/hu.php
 %%WWWDIR%%/go/modules/community/googleauthenticator/language/id.php
 %%WWWDIR%%/go/modules/community/googleauthenticator/language/nl.php
@@ -401,8 +404,10 @@
 %%WWWDIR%%/go/modules/community/imapauthenticator/install/install.sql
 %%WWWDIR%%/go/modules/community/imapauthenticator/install/uninstall.sql
 %%WWWDIR%%/go/modules/community/imapauthenticator/install/updates.php
+%%WWWDIR%%/go/modules/community/imapauthenticator/language/cs.php
 %%WWWDIR%%/go/modules/community/imapauthenticator/language/de.php
 %%WWWDIR%%/go/modules/community/imapauthenticator/language/en.php
+%%WWWDIR%%/go/modules/community/imapauthenticator/language/fr.php
 %%WWWDIR%%/go/modules/community/imapauthenticator/language/hu.php
 %%WWWDIR%%/go/modules/community/imapauthenticator/language/id.php
 %%WWWDIR%%/go/modules/community/imapauthenticator/language/pt_br.php
@@ -424,7 +429,9 @@
 %%WWWDIR%%/go/modules/community/ldapauthenticator/install/install.sql
 %%WWWDIR%%/go/modules/community/ldapauthenticator/install/uninstall.sql
 %%WWWDIR%%/go/modules/community/ldapauthenticator/install/updates.php
+%%WWWDIR%%/go/modules/community/ldapauthenticator/language/cs.php
 %%WWWDIR%%/go/modules/community/ldapauthenticator/language/de.php
+%%WWWDIR%%/go/modules/community/ldapauthenticator/language/fr.php
 %%WWWDIR%%/go/modules/community/ldapauthenticator/language/en.php
 %%WWWDIR%%/go/modules/community/ldapauthenticator/language/hu.php
 %%WWWDIR%%/go/modules/community/ldapauthenticator/language/id.php
@@ -451,10 +458,13 @@
 %%WWWDIR%%/go/modules/community/multi_instance/install/install.sql
 %%WWWDIR%%/go/modules/community/multi_instance/install/uninstall.sql
 %%WWWDIR%%/go/modules/community/multi_instance/install/updates.php
+%%WWWDIR%%/go/modules/community/multi_instance/language/cs.php
 %%WWWDIR%%/go/modules/community/multi_instance/language/de.php
 %%WWWDIR%%/go/modules/community/multi_instance/language/en.php
+%%WWWDIR%%/go/modules/community/multi_instance/language/fr.php
 %%WWWDIR%%/go/modules/community/multi_instance/language/hu.php
 %%WWWDIR%%/go/modules/community/multi_instance/language/id.php
+%%WWWDIR%%/go/modules/community/multi_instance/language/it.php
 %%WWWDIR%%/go/modules/community/multi_instance/language/pt_br.php
 %%WWWDIR%%/go/modules/community/multi_instance/model/Instance.php
 %%WWWDIR%%/go/modules/community/multi_instance/oninstall.php
@@ -524,6 +534,7 @@
 %%WWWDIR%%/go/modules/community/serverclient/language/el.php
 %%WWWDIR%%/go/modules/community/serverclient/language/en.php
 %%WWWDIR%%/go/modules/community/serverclient/language/fr.php
+%%WWWDIR%%/go/modules/community/serverclient/language/it.php
 %%WWWDIR%%/go/modules/community/serverclient/language/ko.php
 %%WWWDIR%%/go/modules/community/serverclient/language/nb.php
 %%WWWDIR%%/go/modules/community/serverclient/language/nl.php
@@ -682,6 +693,7 @@
 %%WWWDIR%%/go/modules/core/links/Module.php
 %%WWWDIR%%/go/modules/core/links/controller/Link.php
 %%WWWDIR%%/go/modules/core/links/language/en.php
+%%WWWDIR%%/go/modules/core/links/language/fr.php
 %%WWWDIR%%/go/modules/core/links/language/nl.php
 %%WWWDIR%%/go/modules/core/links/model/Link.php
 %%WWWDIR%%/go/modules/core/links/views/extjs3/CreateLinkButton.js
@@ -720,7 +732,10 @@
 %%WWWDIR%%/go/modules/core/modules/model/Module.php
 %%WWWDIR%%/go/modules/core/search/Module.php
 %%WWWDIR%%/go/modules/core/search/controller/Search.php
+%%WWWDIR%%/go/modules/core/search/language/cs.php
 %%WWWDIR%%/go/modules/core/search/language/en.php
+%%WWWDIR%%/go/modules/core/search/language/fr.php
+%%WWWDIR%%/go/modules/core/search/language/it.php
 %%WWWDIR%%/go/modules/core/search/language/pt_br.php
 %%WWWDIR%%/go/modules/core/search/model/Search.php
 %%WWWDIR%%/go/modules/core/search/views/extjs3/Module.js
@@ -1003,8 +1018,10 @@
 %%WWWDIR%%/modules/assistant/install/instal.sql
 %%WWWDIR%%/modules/assistant/language/de.php
 %%WWWDIR%%/modules/assistant/language/en.php
+%%WWWDIR%%/modules/assistant/language/fr.php
 %%WWWDIR%%/modules/assistant/language/hu.php
 %%WWWDIR%%/modules/assistant/language/id.php
+%%WWWDIR%%/modules/assistant/language/it.php
 %%WWWDIR%%/modules/assistant/language/pt_br.php
 %%WWWDIR%%/modules/assistant/scripts.txt
 %%WWWDIR%%/modules/assistant/themes/Default/images/assistant.png
@@ -1616,6 +1633,7 @@
 %%WWWDIR%%/modules/customcss/language/fr.php
 %%WWWDIR%%/modules/customcss/language/hu.php
 %%WWWDIR%%/modules/customcss/language/id.php
+%%WWWDIR%%/modules/customcss/language/it.php
 %%WWWDIR%%/modules/customcss/language/ko.php
 %%WWWDIR%%/modules/customcss/language/nb.php
 %%WWWDIR%%/modules/customcss/language/pl.php
@@ -1734,6 +1752,7 @@
 %%WWWDIR%%/modules/demodata/Plugin.js
 %%WWWDIR%%/modules/demodata/controller/DemodataController.php
 %%WWWDIR%%/modules/demodata/language/bn_bd.php
+%%WWWDIR%%/modules/demodata/language/cs.php
 %%WWWDIR%%/modules/demodata/language/en.php
 %%WWWDIR%%/modules/demodata/language/fr.php
 %%WWWDIR%%/modules/demodata/language/id.php
@@ -1755,6 +1774,7 @@
 %%WWWDIR%%/modules/documenttemplates/language/fr.php
 %%WWWDIR%%/modules/documenttemplates/language/hu.php
 %%WWWDIR%%/modules/documenttemplates/language/id.php
+%%WWWDIR%%/modules/documenttemplates/language/it.php
 %%WWWDIR%%/modules/documenttemplates/language/ko.php
 %%WWWDIR%%/modules/documenttemplates/language/nb.php
 %%WWWDIR%%/modules/documenttemplates/language/nl.php
@@ -1904,6 +1924,7 @@
 %%WWWDIR%%/modules/exactonline/language/fr.php
 %%WWWDIR%%/modules/exactonline/language/hu.php
 %%WWWDIR%%/modules/exactonline/language/id.php
+%%WWWDIR%%/modules/exactonline/language/it.php
 %%WWWDIR%%/modules/exactonline/language/nl.php
 %%WWWDIR%%/modules/exactonline/language/pt_br.php
 %%WWWDIR%%/modules/exactonline/model/AddressbookAddressbookExtension.php
@@ -2131,6 +2152,7 @@
 %%WWWDIR%%/modules/favorites/language/fr.php
 %%WWWDIR%%/modules/favorites/language/hu.php
 %%WWWDIR%%/modules/favorites/language/id.php
+%%WWWDIR%%/modules/favorites/language/it.php
 %%WWWDIR%%/modules/favorites/language/pt_br.php
 %%WWWDIR%%/modules/favorites/model/Addressbook.php
 %%WWWDIR%%/modules/favorites/model/Calendar.php
@@ -2303,11 +2325,13 @@
 %%WWWDIR%%/modules/filesearch/install/uninstall.sql
 %%WWWDIR%%/modules/filesearch/install/updates.inc.php
 %%WWWDIR%%/modules/filesearch/install/updatescripts/1_install_cron.php
+%%WWWDIR%%/modules/filesearch/language/cs.php
 %%WWWDIR%%/modules/filesearch/language/de.php
 %%WWWDIR%%/modules/filesearch/language/en.php
 %%WWWDIR%%/modules/filesearch/language/fr.php
 %%WWWDIR%%/modules/filesearch/language/hu.php
 %%WWWDIR%%/modules/filesearch/language/id.php
+%%WWWDIR%%/modules/filesearch/language/it.php
 %%WWWDIR%%/modules/filesearch/language/nb.php
 %%WWWDIR%%/modules/filesearch/language/nl.php
 %%WWWDIR%%/modules/filesearch/language/pt_br.php
@@ -2452,10 +2476,13 @@
 %%WWWDIR%%/modules/groups/MainPanel.js
 %%WWWDIR%%/modules/groups/UsersGrid.js
 %%WWWDIR%%/modules/groups/controller/GroupController.php
+%%WWWDIR%%/modules/groups/language/cs.php
 %%WWWDIR%%/modules/groups/language/de.php
 %%WWWDIR%%/modules/groups/language/en.php
+%%WWWDIR%%/modules/groups/language/fr.php
 %%WWWDIR%%/modules/groups/language/hu.php
 %%WWWDIR%%/modules/groups/language/id.php
+%%WWWDIR%%/modules/groups/language/it.php
 %%WWWDIR%%/modules/groups/language/pt_br.php
 %%WWWDIR%%/modules/groups/scripts.txt
 %%WWWDIR%%/modules/groups/themes/Default/images/groups.png
@@ -2472,6 +2499,7 @@
 %%WWWDIR%%/modules/hoursapproval2/language/hr.php
 %%WWWDIR%%/modules/hoursapproval2/language/hu.php
 %%WWWDIR%%/modules/hoursapproval2/language/id.php
+%%WWWDIR%%/modules/hoursapproval2/language/it.php
 %%WWWDIR%%/modules/hoursapproval2/language/nb.php
 %%WWWDIR%%/modules/hoursapproval2/language/nl.php
 %%WWWDIR%%/modules/hoursapproval2/language/pl.php
@@ -2503,6 +2531,7 @@
 %%WWWDIR%%/modules/leavedays/language/fr.php
 %%WWWDIR%%/modules/leavedays/language/hu.php
 %%WWWDIR%%/modules/leavedays/language/id.php
+%%WWWDIR%%/modules/leavedays/language/it.php
 %%WWWDIR%%/modules/leavedays/language/nl.php
 %%WWWDIR%%/modules/leavedays/language/pt_br.php
 %%WWWDIR%%/modules/leavedays/model/Credit.php
@@ -2636,6 +2665,7 @@
 %%WWWDIR%%/modules/mediawiki/json.php
 %%WWWDIR%%/modules/mediawiki/language/bn.php
 %%WWWDIR%%/modules/mediawiki/language/ca.php
+%%WWWDIR%%/modules/mediawiki/language/cs.php
 %%WWWDIR%%/modules/mediawiki/language/de.php
 %%WWWDIR%%/modules/mediawiki/language/en.php
 %%WWWDIR%%/modules/mediawiki/language/fr.php
@@ -2774,6 +2804,7 @@
 %%WWWDIR%%/modules/pr2analyzer/language/fr.php
 %%WWWDIR%%/modules/pr2analyzer/language/hu.php
 %%WWWDIR%%/modules/pr2analyzer/language/id.php
+%%WWWDIR%%/modules/pr2analyzer/language/it.php
 %%WWWDIR%%/modules/pr2analyzer/language/nl.php
 %%WWWDIR%%/modules/pr2analyzer/language/pt_br.php
 %%WWWDIR%%/modules/pr2analyzer/themes/Default/images/pr2analizer.png
@@ -2842,6 +2873,7 @@
 %%WWWDIR%%/modules/projects2/controller/TypeController.php
 %%WWWDIR%%/modules/projects2/controller/WeekController.php
 %%WWWDIR%%/modules/projects2/cron/IncomeNotification.php
+%%WWWDIR%%/modules/projects2/cron/ScanEmailForLinks.php
 %%WWWDIR%%/modules/projects2/customfields/model/Project.php
 %%WWWDIR%%/modules/projects2/customfields/model/TimeEntry.php
 %%WWWDIR%%/modules/projects2/export/CurrentGrid.php
@@ -2864,7 +2896,6 @@
 %%WWWDIR%%/modules/projects2/language/de.php
 %%WWWDIR%%/modules/projects2/language/en.php
 %%WWWDIR%%/modules/projects2/language/es.php
-%%WWWDIR%%/modules/projects2/language/fr.php
 %%WWWDIR%%/modules/projects2/language/hr.php
 %%WWWDIR%%/modules/projects2/language/hu.php
 %%WWWDIR%%/modules/projects2/language/id.php
@@ -2938,6 +2969,7 @@
 %%WWWDIR%%/modules/projects2/views/Extjs3/IncomeDialog.js
 %%WWWDIR%%/modules/projects2/views/Extjs3/IncomeGrid.js
 %%WWWDIR%%/modules/projects2/views/Extjs3/InvoiceDialog.js
+%%WWWDIR%%/modules/projects2/views/Extjs3/InvoiceProjectDialog.js
 %%WWWDIR%%/modules/projects2/views/Extjs3/InvoiceablePanel.js
 %%WWWDIR%%/modules/projects2/views/Extjs3/MergeDialog.js
 %%WWWDIR%%/modules/projects2/views/Extjs3/OfficeTimePanel.js
@@ -3002,6 +3034,7 @@
 %%WWWDIR%%/modules/savemailas/language/fr.php
 %%WWWDIR%%/modules/savemailas/language/hu.php
 %%WWWDIR%%/modules/savemailas/language/id.php
+%%WWWDIR%%/modules/savemailas/language/it.php
 %%WWWDIR%%/modules/savemailas/language/ko.php
 %%WWWDIR%%/modules/savemailas/language/nb.php
 %%WWWDIR%%/modules/savemailas/language/nl.php
@@ -3020,6 +3053,7 @@
 %%WWWDIR%%/modules/scanbox/language/fr.php
 %%WWWDIR%%/modules/scanbox/language/hu.php
 %%WWWDIR%%/modules/scanbox/language/id.php
+%%WWWDIR%%/modules/scanbox/language/it.php
 %%WWWDIR%%/modules/scanbox/language/nb.php
 %%WWWDIR%%/modules/scanbox/language/nl.php
 %%WWWDIR%%/modules/scanbox/language/pt_br.php
@@ -3126,6 +3160,7 @@
 %%WWWDIR%%/modules/site/language/fr.php
 %%WWWDIR%%/modules/site/language/hu.php
 %%WWWDIR%%/modules/site/language/id.php
+%%WWWDIR%%/modules/site/language/it.php
 %%WWWDIR%%/modules/site/language/nl.php
 %%WWWDIR%%/modules/site/language/pt_br.php
 %%WWWDIR%%/modules/site/model/Content.php
@@ -3278,6 +3313,7 @@
 %%WWWDIR%%/modules/smime/language/fr.php
 %%WWWDIR%%/modules/smime/language/hu.php
 %%WWWDIR%%/modules/smime/language/id.php
+%%WWWDIR%%/modules/smime/language/it.php
 %%WWWDIR%%/modules/smime/language/ko.php
 %%WWWDIR%%/modules/smime/language/nb.php
 %%WWWDIR%%/modules/smime/language/nl.php
@@ -3520,6 +3556,7 @@
 %%WWWDIR%%/modules/tickets/language/fr.php
 %%WWWDIR%%/modules/tickets/language/hu.php
 %%WWWDIR%%/modules/tickets/language/id.php
+%%WWWDIR%%/modules/tickets/language/it.php
 %%WWWDIR%%/modules/tickets/language/ko.php
 %%WWWDIR%%/modules/tickets/language/nb.php
 %%WWWDIR%%/modules/tickets/language/nl.php
@@ -3574,6 +3611,7 @@
 %%WWWDIR%%/modules/timeregistration2/language/hr.php
 %%WWWDIR%%/modules/timeregistration2/language/hu.php
 %%WWWDIR%%/modules/timeregistration2/language/id.php
+%%WWWDIR%%/modules/timeregistration2/language/it.php
 %%WWWDIR%%/modules/timeregistration2/language/nb.php
 %%WWWDIR%%/modules/timeregistration2/language/nl.php
 %%WWWDIR%%/modules/timeregistration2/language/pl.php
@@ -3690,6 +3728,7 @@
 %%WWWDIR%%/modules/workflow/install/install.sql
 %%WWWDIR%%/modules/workflow/install/uninstall.sql
 %%WWWDIR%%/modules/workflow/install/updates.inc.php
+%%WWWDIR%%/modules/workflow/language/cs.php
 %%WWWDIR%%/modules/workflow/language/de.php
 %%WWWDIR%%/modules/workflow/language/en.php
 %%WWWDIR%%/modules/workflow/language/fr.php
@@ -4004,6 +4043,7 @@
 %%WWWDIR%%/modules/zpushadmin/language/fr.php
 %%WWWDIR%%/modules/zpushadmin/language/hu.php
 %%WWWDIR%%/modules/zpushadmin/language/id.php
+%%WWWDIR%%/modules/zpushadmin/language/it.php
 %%WWWDIR%%/modules/zpushadmin/language/nb.php
 %%WWWDIR%%/modules/zpushadmin/language/nl.php
 %%WWWDIR%%/modules/zpushadmin/language/sv.php
@@ -4208,6 +4248,7 @@
 %%WWWDIR%%/vendor/guzzlehttp/promises/src/TaskQueueInterface.php
 %%WWWDIR%%/vendor/guzzlehttp/promises/src/functions.php
 %%WWWDIR%%/vendor/guzzlehttp/promises/src/functions_include.php
+%%WWWDIR%%/vendor/guzzlehttp/psr7/.editorconfig
 %%WWWDIR%%/vendor/guzzlehttp/psr7/CHANGELOG.md
 %%WWWDIR%%/vendor/guzzlehttp/psr7/LICENSE
 %%WWWDIR%%/vendor/guzzlehttp/psr7/README.md
@@ -4226,6 +4267,7 @@
 %%WWWDIR%%/vendor/guzzlehttp/psr7/src/PumpStream.php
 %%WWWDIR%%/vendor/guzzlehttp/psr7/src/Request.php
 %%WWWDIR%%/vendor/guzzlehttp/psr7/src/Response.php
+%%WWWDIR%%/vendor/guzzlehttp/psr7/src/Rfc7230.php
 %%WWWDIR%%/vendor/guzzlehttp/psr7/src/ServerRequest.php
 %%WWWDIR%%/vendor/guzzlehttp/psr7/src/Stream.php
 %%WWWDIR%%/vendor/guzzlehttp/psr7/src/StreamDecoratorTrait.php
@@ -4918,6 +4960,28 @@
 %%WWWDIR%%/vendor/psr/http-message/src/StreamInterface.php
 %%WWWDIR%%/vendor/psr/http-message/src/UploadedFileInterface.php
 %%WWWDIR%%/vendor/psr/http-message/src/UriInterface.php
+%%WWWDIR%%/vendor/psr/log/.gitignore
+%%WWWDIR%%/vendor/psr/log/LICENSE
+%%WWWDIR%%/vendor/psr/log/Psr/Log/AbstractLogger.php
+%%WWWDIR%%/vendor/psr/log/Psr/Log/InvalidArgumentException.php
+%%WWWDIR%%/vendor/psr/log/Psr/Log/LogLevel.php
+%%WWWDIR%%/vendor/psr/log/Psr/Log/LoggerAwareInterface.php
+%%WWWDIR%%/vendor/psr/log/Psr/Log/LoggerAwareTrait.php
+%%WWWDIR%%/vendor/psr/log/Psr/Log/LoggerInterface.php
+%%WWWDIR%%/vendor/psr/log/Psr/Log/LoggerTrait.php
+%%WWWDIR%%/vendor/psr/log/Psr/Log/NullLogger.php
+%%WWWDIR%%/vendor/psr/log/Psr/Log/Test/LoggerInterfaceTest.php
+%%WWWDIR%%/vendor/psr/log/Psr/Log/Test/TestLogger.php
+%%WWWDIR%%/vendor/psr/log/README.md
+%%WWWDIR%%/vendor/psr/log/composer.json
+%%WWWDIR%%/vendor/ralouphie/getallheaders/.gitignore
+%%WWWDIR%%/vendor/ralouphie/getallheaders/.travis.yml
+%%WWWDIR%%/vendor/ralouphie/getallheaders/LICENSE
+%%WWWDIR%%/vendor/ralouphie/getallheaders/README.md
+%%WWWDIR%%/vendor/ralouphie/getallheaders/composer.json
+%%WWWDIR%%/vendor/ralouphie/getallheaders/phpunit.xml
+%%WWWDIR%%/vendor/ralouphie/getallheaders/src/getallheaders.php
+%%WWWDIR%%/vendor/ralouphie/getallheaders/tests/GetAllHeadersTest.php
 %%WWWDIR%%/vendor/sabre/dav/.gitignore
 %%WWWDIR%%/vendor/sabre/dav/.travis.yml
 %%WWWDIR%%/vendor/sabre/dav/CHANGELOG.md
@@ -4926,10 +4990,10 @@
 %%WWWDIR%%/vendor/sabre/dav/README.md
 %%WWWDIR%%/vendor/sabre/dav/bin/build.php
 %%WWWDIR%%/vendor/sabre/dav/bin/googlecode_upload.py
-%%WWWDIR%%/vendor/sabre/dav/bin/migrateto17.php
 %%WWWDIR%%/vendor/sabre/dav/bin/migrateto20.php
 %%WWWDIR%%/vendor/sabre/dav/bin/migrateto21.php
 %%WWWDIR%%/vendor/sabre/dav/bin/migrateto30.php
+%%WWWDIR%%/vendor/sabre/dav/bin/migrateto32.php
 %%WWWDIR%%/vendor/sabre/dav/bin/naturalselection
 %%WWWDIR%%/vendor/sabre/dav/bin/sabredav
 %%WWWDIR%%/vendor/sabre/dav/bin/sabredav.php
@@ -4939,13 +5003,13 @@
 %%WWWDIR%%/vendor/sabre/dav/examples/fileserver.php
 %%WWWDIR%%/vendor/sabre/dav/examples/groupwareserver.php
 %%WWWDIR%%/vendor/sabre/dav/examples/minimal.php
-%%WWWDIR%%/vendor/sabre/dav/examples/sql/mysql.addressbook.sql
+%%WWWDIR%%/vendor/sabre/dav/examples/sql/mysql.addressbooks.sql
 %%WWWDIR%%/vendor/sabre/dav/examples/sql/mysql.calendars.sql
 %%WWWDIR%%/vendor/sabre/dav/examples/sql/mysql.locks.sql
 %%WWWDIR%%/vendor/sabre/dav/examples/sql/mysql.principals.sql
 %%WWWDIR%%/vendor/sabre/dav/examples/sql/mysql.propertystorage.sql
 %%WWWDIR%%/vendor/sabre/dav/examples/sql/mysql.users.sql
-%%WWWDIR%%/vendor/sabre/dav/examples/sql/pgsql.addressbook.sql
+%%WWWDIR%%/vendor/sabre/dav/examples/sql/pgsql.addressbooks.sql
 %%WWWDIR%%/vendor/sabre/dav/examples/sql/pgsql.calendars.sql
 %%WWWDIR%%/vendor/sabre/dav/examples/sql/pgsql.locks.sql
 %%WWWDIR%%/vendor/sabre/dav/examples/sql/pgsql.principals.sql
@@ -4966,6 +5030,7 @@
 %%WWWDIR%%/vendor/sabre/dav/lib/CalDAV/Backend/PDO.php
 %%WWWDIR%%/vendor/sabre/dav/lib/CalDAV/Backend/SchedulingSupport.php
 %%WWWDIR%%/vendor/sabre/dav/lib/CalDAV/Backend/SharingSupport.php
+%%WWWDIR%%/vendor/sabre/dav/lib/CalDAV/Backend/SimplePDO.php
 %%WWWDIR%%/vendor/sabre/dav/lib/CalDAV/Backend/SubscriptionSupport.php
 %%WWWDIR%%/vendor/sabre/dav/lib/CalDAV/Backend/SyncSupport.php
 %%WWWDIR%%/vendor/sabre/dav/lib/CalDAV/Calendar.php
@@ -4978,7 +5043,6 @@
 %%WWWDIR%%/vendor/sabre/dav/lib/CalDAV/ICalendar.php
 %%WWWDIR%%/vendor/sabre/dav/lib/CalDAV/ICalendarObject.php
 %%WWWDIR%%/vendor/sabre/dav/lib/CalDAV/ICalendarObjectContainer.php
-%%WWWDIR%%/vendor/sabre/dav/lib/CalDAV/IShareableCalendar.php
 %%WWWDIR%%/vendor/sabre/dav/lib/CalDAV/ISharedCalendar.php
 %%WWWDIR%%/vendor/sabre/dav/lib/CalDAV/Notifications/Collection.php
 %%WWWDIR%%/vendor/sabre/dav/lib/CalDAV/Notifications/ICollection.php
@@ -5000,7 +5064,6 @@
 %%WWWDIR%%/vendor/sabre/dav/lib/CalDAV/Schedule/Outbox.php
 %%WWWDIR%%/vendor/sabre/dav/lib/CalDAV/Schedule/Plugin.php
 %%WWWDIR%%/vendor/sabre/dav/lib/CalDAV/Schedule/SchedulingObject.php
-%%WWWDIR%%/vendor/sabre/dav/lib/CalDAV/ShareableCalendar.php
 %%WWWDIR%%/vendor/sabre/dav/lib/CalDAV/SharedCalendar.php
 %%WWWDIR%%/vendor/sabre/dav/lib/CalDAV/SharingPlugin.php
 %%WWWDIR%%/vendor/sabre/dav/lib/CalDAV/Subscriptions/ISubscription.php
@@ -5129,6 +5192,8 @@
 %%WWWDIR%%/vendor/sabre/dav/lib/DAV/PropertyStorage/Plugin.php
 %%WWWDIR%%/vendor/sabre/dav/lib/DAV/Server.php
 %%WWWDIR%%/vendor/sabre/dav/lib/DAV/ServerPlugin.php
+%%WWWDIR%%/vendor/sabre/dav/lib/DAV/Sharing/ISharedNode.php
+%%WWWDIR%%/vendor/sabre/dav/lib/DAV/Sharing/Plugin.php
 %%WWWDIR%%/vendor/sabre/dav/lib/DAV/SimpleCollection.php
 %%WWWDIR%%/vendor/sabre/dav/lib/DAV/SimpleFile.php
 %%WWWDIR%%/vendor/sabre/dav/lib/DAV/StringUtil.php
@@ -5140,11 +5205,15 @@
 %%WWWDIR%%/vendor/sabre/dav/lib/DAV/Version.php
 %%WWWDIR%%/vendor/sabre/dav/lib/DAV/Xml/Element/Prop.php
 %%WWWDIR%%/vendor/sabre/dav/lib/DAV/Xml/Element/Response.php
+%%WWWDIR%%/vendor/sabre/dav/lib/DAV/Xml/Element/Sharee.php
 %%WWWDIR%%/vendor/sabre/dav/lib/DAV/Xml/Property/Complex.php
 %%WWWDIR%%/vendor/sabre/dav/lib/DAV/Xml/Property/GetLastModified.php
 %%WWWDIR%%/vendor/sabre/dav/lib/DAV/Xml/Property/Href.php
+%%WWWDIR%%/vendor/sabre/dav/lib/DAV/Xml/Property/Invite.php
+%%WWWDIR%%/vendor/sabre/dav/lib/DAV/Xml/Property/LocalHref.php
 %%WWWDIR%%/vendor/sabre/dav/lib/DAV/Xml/Property/LockDiscovery.php
 %%WWWDIR%%/vendor/sabre/dav/lib/DAV/Xml/Property/ResourceType.php
+%%WWWDIR%%/vendor/sabre/dav/lib/DAV/Xml/Property/ShareAccess.php
 %%WWWDIR%%/vendor/sabre/dav/lib/DAV/Xml/Property/SupportedLock.php
 %%WWWDIR%%/vendor/sabre/dav/lib/DAV/Xml/Property/SupportedMethodSet.php
 %%WWWDIR%%/vendor/sabre/dav/lib/DAV/Xml/Property/SupportedReportSet.php
@@ -5152,9 +5221,11 @@
 %%WWWDIR%%/vendor/sabre/dav/lib/DAV/Xml/Request/MkCol.php
 %%WWWDIR%%/vendor/sabre/dav/lib/DAV/Xml/Request/PropFind.php
 %%WWWDIR%%/vendor/sabre/dav/lib/DAV/Xml/Request/PropPatch.php
+%%WWWDIR%%/vendor/sabre/dav/lib/DAV/Xml/Request/ShareResource.php
 %%WWWDIR%%/vendor/sabre/dav/lib/DAV/Xml/Request/SyncCollectionReport.php
 %%WWWDIR%%/vendor/sabre/dav/lib/DAV/Xml/Response/MultiStatus.php
 %%WWWDIR%%/vendor/sabre/dav/lib/DAV/Xml/Service.php
+%%WWWDIR%%/vendor/sabre/dav/lib/DAVACL/ACLTrait.php
 %%WWWDIR%%/vendor/sabre/dav/lib/DAVACL/AbstractPrincipalCollection.php
 %%WWWDIR%%/vendor/sabre/dav/lib/DAVACL/Exception/AceConflict.php
 %%WWWDIR%%/vendor/sabre/dav/lib/DAVACL/Exception/NeedPrivileges.php
@@ -5179,7 +5250,9 @@
 %%WWWDIR%%/vendor/sabre/dav/lib/DAVACL/Xml/Property/CurrentUserPrivilegeSet.php
 %%WWWDIR%%/vendor/sabre/dav/lib/DAVACL/Xml/Property/Principal.php
 %%WWWDIR%%/vendor/sabre/dav/lib/DAVACL/Xml/Property/SupportedPrivilegeSet.php
+%%WWWDIR%%/vendor/sabre/dav/lib/DAVACL/Xml/Request/AclPrincipalPropSetReport.php
 %%WWWDIR%%/vendor/sabre/dav/lib/DAVACL/Xml/Request/ExpandPropertyReport.php
+%%WWWDIR%%/vendor/sabre/dav/lib/DAVACL/Xml/Request/PrincipalMatchReport.php
 %%WWWDIR%%/vendor/sabre/dav/lib/DAVACL/Xml/Request/PrincipalPropertySearchReport.php
 %%WWWDIR%%/vendor/sabre/dav/lib/DAVACL/Xml/Request/PrincipalSearchPropertySetReport.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/CalDAV/Backend/AbstractPDOTest.php
@@ -5189,7 +5262,9 @@
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/CalDAV/Backend/MockSharing.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/CalDAV/Backend/MockSubscriptionSupport.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/CalDAV/Backend/PDOMySQLTest.php
+%%WWWDIR%%/vendor/sabre/dav/tests/Sabre/CalDAV/Backend/PDOPgSqlTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/CalDAV/Backend/PDOSqliteTest.php
+%%WWWDIR%%/vendor/sabre/dav/tests/Sabre/CalDAV/Backend/SimplePDOTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/CalDAV/CalendarHomeNotificationsTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/CalDAV/CalendarHomeSharedCalendarsTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/CalDAV/CalendarHomeSubscriptionsTest.php
@@ -5233,7 +5308,6 @@
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/CalDAV/Schedule/PluginPropertiesWithSharedCalendarTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/CalDAV/Schedule/ScheduleDeliverTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/CalDAV/Schedule/SchedulingObjectTest.php
-%%WWWDIR%%/vendor/sabre/dav/tests/Sabre/CalDAV/ShareableCalendarTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/CalDAV/SharedCalendarTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/CalDAV/SharingPluginTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/CalDAV/Subscriptions/CreateSubscriptionTest.php
@@ -5262,6 +5336,7 @@
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/CardDAV/Backend/AbstractPDOTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/CardDAV/Backend/Mock.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/CardDAV/Backend/PDOMySQLTest.php
+%%WWWDIR%%/vendor/sabre/dav/tests/Sabre/CardDAV/Backend/PDOPgSqlTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/CardDAV/Backend/PDOSqliteTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/CardDAV/CardTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/CardDAV/IDirectoryTest.php
@@ -5274,6 +5349,7 @@
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/CardDAV/ValidateVCardTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/CardDAV/Xml/Property/SupportedAddressDataTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/CardDAV/Xml/Property/SupportedCollationSetTest.php
+%%WWWDIR%%/vendor/sabre/dav/tests/Sabre/CardDAV/Xml/Request/AddressBookMultiGetTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/CardDAV/Xml/Request/AddressBookQueryReportTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/AbstractServer.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/Auth/Backend/AbstractBasicTest.php
@@ -5285,6 +5361,7 @@
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/Auth/Backend/FileTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/Auth/Backend/Mock.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/Auth/Backend/PDOMySQLTest.php
+%%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/Auth/Backend/PDOPgSqlTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/Auth/Backend/PDOSqliteTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/Auth/PluginTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/BasicNodeTest.php
@@ -5295,11 +5372,13 @@
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/ClientMock.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/ClientTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/CorePluginTest.php
+%%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/DbTestHelperTrait.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/Exception/LockedTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/Exception/PaymentRequiredTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/Exception/ServiceUnavailableTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/Exception/TooManyMatchesTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/ExceptionTest.php
+%%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/FSExt/DirectoryTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/FSExt/FileTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/FSExt/ServerTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/GetIfConditionsTest.php
@@ -5315,6 +5394,8 @@
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/Locks/Backend/FileTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/Locks/Backend/Mock.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/Locks/Backend/PDOMySQLTest.php
+%%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/Locks/Backend/PDOPgSqlTest.php
+%%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/Locks/Backend/PDOSqliteTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/Locks/Backend/PDOTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/Locks/MSWordTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/Locks/Plugin2Test.php
@@ -5322,9 +5403,12 @@
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/Mock/Collection.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/Mock/File.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/Mock/PropertiesCollection.php
+%%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/Mock/SharedNode.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/Mock/StreamingFile.php
+%%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/MockLogger.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/Mount/PluginTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/ObjectTreeTest.php
+%%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/PSR3Test.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/PartialUpdate/FileMock.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/PartialUpdate/PluginTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/PartialUpdate/SpecificationTest.php
@@ -5333,6 +5417,7 @@
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/PropertyStorage/Backend/AbstractPDOTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/PropertyStorage/Backend/Mock.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/PropertyStorage/Backend/PDOMysqlTest.php
+%%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/PropertyStorage/Backend/PDOPgSqlTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/PropertyStorage/Backend/PDOSqliteTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/PropertyStorage/PluginTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/ServerEventsTest.php
@@ -5344,6 +5429,8 @@
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/ServerRangeTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/ServerSimpleTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/ServerUpdatePropertiesTest.php
+%%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/Sharing/PluginTest.php
+%%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/Sharing/ShareResourceTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/SimpleFileTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/StringUtilTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/Sync/MockSyncCollection.php
@@ -5355,16 +5442,22 @@
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/UUIDUtilTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/Xml/Element/PropTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/Xml/Element/ResponseTest.php
+%%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/Xml/Element/ShareeTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/Xml/Property/HrefTest.php
+%%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/Xml/Property/InviteTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/Xml/Property/LastModifiedTest.php
+%%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/Xml/Property/LocalHrefTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/Xml/Property/LockDiscoveryTest.php
+%%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/Xml/Property/ShareAccessTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/Xml/Property/SupportedMethodSetTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/Xml/Property/SupportedReportSetTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/Xml/Request/PropFindTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/Xml/Request/PropPatchTest.php
+%%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/Xml/Request/ShareResourceTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/Xml/Request/SyncCollectionTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAV/Xml/XmlTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAVACL/ACLMethodTest.php
+%%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAVACL/AclPrincipalPropSetReportTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAVACL/AllowAccessTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAVACL/BlockAccessTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAVACL/Exception/AceConflictTest.php
@@ -5384,8 +5477,10 @@
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAVACL/PrincipalBackend/AbstractPDOTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAVACL/PrincipalBackend/Mock.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAVACL/PrincipalBackend/PDOMySQLTest.php
+%%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAVACL/PrincipalBackend/PDOPgSqlTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAVACL/PrincipalBackend/PDOSqliteTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAVACL/PrincipalCollectionTest.php
+%%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAVACL/PrincipalMatchTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAVACL/PrincipalPropertySearchTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAVACL/PrincipalSearchPropertySetTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAVACL/PrincipalTest.php
@@ -5395,13 +5490,15 @@
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAVACL/Xml/Property/CurrentUserPrivilegeSetTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAVACL/Xml/Property/PrincipalTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAVACL/Xml/Property/SupportedPrivilegeSetTest.php
+%%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAVACL/Xml/Request/AclPrincipalPropSetReportTest.php
+%%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAVACL/Xml/Request/PrincipalMatchReportTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/DAVServerTest.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/HTTP/ResponseMock.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/HTTP/SapiMock.php
 %%WWWDIR%%/vendor/sabre/dav/tests/Sabre/TestUtil.php
 %%WWWDIR%%/vendor/sabre/dav/tests/bootstrap.php
 %%WWWDIR%%/vendor/sabre/dav/tests/phpcs/ruleset.xml
-%%WWWDIR%%/vendor/sabre/dav/tests/phpunit.xml
+%%WWWDIR%%/vendor/sabre/dav/tests/phpunit.xml.dist
 %%WWWDIR%%/vendor/sabre/event/.gitignore
 %%WWWDIR%%/vendor/sabre/event/.travis.yml
 %%WWWDIR%%/vendor/sabre/event/CHANGELOG.md
@@ -5502,6 +5599,7 @@
 %%WWWDIR%%/vendor/sabre/uri/tests/phpcs/ruleset.xml
 %%WWWDIR%%/vendor/sabre/uri/tests/phpunit.xml.dist
 %%WWWDIR%%/vendor/sabre/vobject/.gitignore
+%%WWWDIR%%/vendor/sabre/vobject/.php_cs.dist
 %%WWWDIR%%/vendor/sabre/vobject/.travis.yml
 %%WWWDIR%%/vendor/sabre/vobject/CHANGELOG.md
 %%WWWDIR%%/vendor/sabre/vobject/LICENSE
@@ -5592,6 +5690,7 @@
 %%WWWDIR%%/vendor/sabre/vobject/lib/timezonedata/php-bc.php
 %%WWWDIR%%/vendor/sabre/vobject/lib/timezonedata/php-workaround.php
 %%WWWDIR%%/vendor/sabre/vobject/lib/timezonedata/windowszones.php
+%%WWWDIR%%/vendor/sabre/vobject/phpstan.neon
 %%WWWDIR%%/vendor/sabre/vobject/resources/schema/xcal.rng
 %%WWWDIR%%/vendor/sabre/vobject/resources/schema/xcard.rng
 %%WWWDIR%%/vendor/sabre/vobject/tests/VObject/AttachIssueTest.php
@@ -7826,6 +7925,7 @@
 %%WWWDIR%%/views/Extjs3/javascript/go/usersettings/LookAndFeelPanel.js
 %%WWWDIR%%/views/Extjs3/javascript/go/usersettings/UserSettingsDialog.js
 %%WWWDIR%%/views/Extjs3/javascript/go/util.js
+%%WWWDIR%%/views/Extjs3/javascript/go/util/Cookies.js
 %%WWWDIR%%/views/Extjs3/javascript/go/util/Format.js
 %%WWWDIR%%/views/Extjs3/javascript/grids/CheckColumn.js
 %%WWWDIR%%/views/Extjs3/javascript/grids/ColumnRenderers.js

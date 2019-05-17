@@ -36,7 +36,6 @@ REPLACE_LIST= \
 PERCENT_BSD_LIST= \
 	Repository.mk \
 	chart2/Library_chartcore.mk \
-	chart2/Library_chartopengl.mk \
 	desktop/CppunitTest_desktop_app.mk \
 	desktop/Library_crashreport.mk\
 	desktop/Library_sofficeapp.mk \

@@ -1,0 +1,11 @@
+LDFLAGS+=	-L${LOCALBASE}/lib
+
+# never use these MPI by default
+OPTIONS_DEFAULT:=
+
+.if 0
+CMAKE_ARGS+=	-DFLEUR_USE_SERIAL:BOOL=true
+dfly-patch:
+	${REINPLACE_CMD} -e '/You asked for MPI/s@message(@set(FLEUR_USE_MPI FALSE) #message(@' \
+		${WRKSRC}/cmake/tests/test_MPI.cmake
+.endif

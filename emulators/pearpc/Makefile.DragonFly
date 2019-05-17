@@ -1,0 +1,2 @@
+# XXX no timer_create() and timer_delete(), use setitimer() fallback
+CONFIGURE_ARGS+=	ac_cv_lib_rt_clock_settime=no

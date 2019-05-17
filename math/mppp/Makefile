@@ -2,7 +2,7 @@
 
 PORTNAME=	mppp
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.12
+DISTVERSION=	0.14
 PORTREVISION=	1
 CATEGORIES=	math
 
@@ -18,14 +18,11 @@ BUILD_DEPENDS=	${LOCALBASE}/include/gmp.h:math/gmp \
 RUN_DEPENDS=	${LOCALBASE}/include/gmp.h:math/gmp \
 		${LOCALBASE}/include/mpfr.h:math/mpfr
 
-USES=		cmake
+USES=		cmake compiler:c++14-lang
 USE_GITHUB=	yes
 GH_ACCOUNT=	bluescarni
-NO_BUILD=	yes
-NO_ARCH=	yes
 
-TEST_USES=	compiler:c++14-lang
-TEST_ARGS=	-DMPPP_BUILD_TESTS=ON -DMPPP_WITH_MPFR=ON #-DMPPP_WITH_QUADMATH=ON (quadmath requires __float128, only available in clang6)
+TEST_ARGS=	-DMPPP_BUILD_TESTS=ON -DMPPP_WITH_MPFR=ON -DMPPP_WITH_QUADMATH=ON
 BENCHMARK_ARGS=	-DMPPP_BUILD_BENCHMARKS=ON -DMPPP_BENCHMARK_BOOST=ON
 
 do-test:

@@ -1,0 +1,11 @@
+--- tests/core-impl/collections/db/sql/CMakeLists.txt.orig	2018-12-24 04:18:12 UTC
++++ tests/core-impl/collections/db/sql/CMakeLists.txt
+@@ -29,7 +29,7 @@ macro(add_database_test test_target test
+         ${ZLIB_LIBRARIES}
+         ${GOOGLEMOCK_LIBRARIES}
+     )
+-    if(${CMAKE_HOST_SYSTEM_NAME} MATCHES "FreeBSD")
++    if(${CMAKE_HOST_SYSTEM_NAME} MATCHES "FreeBSD|DragonFly")
+         target_link_libraries(${test_target} ${MYSQL_LIBRARIES} crypt)
+     endif()
+ endmacro(add_database_test)

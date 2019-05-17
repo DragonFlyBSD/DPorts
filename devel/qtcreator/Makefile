@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	qtcreator
-DISTVERSION=	4.8.1
+DISTVERSION=	4.9.0
 CATEGORIES=	devel
 MASTER_SITES=	QT/official_releases/qtcreator/${DISTVERSION:R}/${DISTVERSION}
 DISTNAME=	qt-creator-opensource-src-${DISTVERSION}
@@ -16,13 +16,16 @@ LIB_DEPENDS=	libqbscore.so:devel/qbs
 BUILD_DEPENDS=	llvm${LLVM_DEFAULT}>0:devel/llvm${LLVM_DEFAULT}
 RUN_DEPENDS=	llvm${LLVM_DEFAULT}>0:devel/llvm${LLVM_DEFAULT}
 
-USES=		compiler:c++14-lang python:2.7 qmake qt:5 shebangfix tar:xz
+USES=		compiler:c++14-lang gl python:2.7 qmake qt:5 shebangfix tar:xz
 USE_LDCONFIG=	${LOCALBASE}/lib/${PORTNAME}
 USE_GL=		gl
 USE_QT=		buildtools concurrent core declarative designer gui help \
 		linguist location network printsupport qdoc qmake \
 		quickcontrols script script serialport sql svg webchannel \
-		webengine widgets xml xmlpatterns
+		widgets xml xmlpatterns
+
+CXXFLAGS_powerpc=	-maltivec
+CXXFLAGS_powerpc64=	-maltivec
 
 # be paranoid and do not extract qbs (devel/qbs) copy from source tree
 EXTRACT_AFTER_ARGS+=	--exclude '${DISTNAME}/src/shared/qbs'
@@ -42,12 +45,19 @@ DESKTOP_ENTRIES="Qt Creator" "" "QtProject-qtcreator" \
 
 BROKEN_aarch64=		fails to build: invokes x86 asm
 
-OPTIONS_DEFINE=		DOCS EXAMPLES
+OPTIONS_DEFINE=		DOCS EXAMPLES QTWEBENGINE
+OPTIONS_SUB=		yes
 DOCS_DESC=		Install the Qt5 api documentation
 DOCS_USE=		QT=doc_run
 EXAMPLES_DESC=		Install the Qt5 example projects
 EXAMPLES_USE=		QT=examples_run
-OPTIONS_DEFAULT=	${OPTIONS_DEFINE}
+OPTIONS_DEFAULT=	DOCS EXAMPLES
+OPTIONS_DEFAULT_x86_64=	QTWEBENGINE
+OPTIONS_DEFAULT_i386=	QTWEBENGINE
+
+QTWEBENGINE_DESC=	Add dependency on qt5-webengine
+QTWEBENGINE_USE=	qt=webengine
+QTWEBENGINE_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_Qt5WebEngine
 
 ALL_TARGET=		all
 INSTALL_TARGET=		install
@@ -61,7 +71,6 @@ SHEBANG_FILES=		tests/system/tools/objectsToTable.py \
 			tests/system/tools/findUnusedObjects.py \
 			share/qtcreator/templates/wizards/files/python/file.py \
 			share/qtcreator/scripts/openTerminal.py \
-			src/libs/3rdparty/botan/configure.py \
 			src/libs/qmljs/parser/changeLicense.py \
 			src/libs/qt-breakpad/qtbreakpadsymbols \
 			src/tools/icons/export.py \
@@ -77,6 +86,14 @@ SHEBANG_FILES=		tests/system/tools/objectsToTable.py \
 			scripts/uichanges.py \
 			scripts/makedmg.py
 
+.include <bsd.port.pre.mk>
+
+.if ${CHOSEN_COMPILER_TYPE} == gcc
+PLIST_SUB+=	GCC=""
+.else
+PLIST_SUB+=	GCC="@comment "
+.endif
+
 post-patch:
 # Fix paths for gnuplot and ant.
 	${REINPLACE_CMD} -e 's|/usr/bin/gnuplot|${LOCALBASE}/bin/gnuplot|' \
@@ -85,8 +102,7 @@ post-patch:
 				${WRKSRC}/src/plugins/android/androidsettingswidget.cpp
 # Fix python binary in pro file.
 	${REINPLACE_CMD} -e 's|python|${PYTHON_CMD}|g' \
-				${WRKSRC}/qtcreator.pro \
-				${WRKSRC}/src/libs/botan/botan.pro
+				${WRKSRC}/qtcreator.pro
 
 pre-configure:
 # We piggyback on QMAKE_LIBDIR_FLAGS to make sure -L${WRKSRC}/lib is passed to
@@ -99,4 +115,4 @@ pre-configure:
 # See QTBUG-40825 and ports bugs 194088, 195105 and 198720.
 	${ECHO_CMD} 'QMAKE_LIBDIR_FLAGS = -L${WRKSRC}/lib' >> ${WRKSRC}/.qmake.cache
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>

@@ -1,9 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	node
-PORTVERSION=	6.16.0
+PORTVERSION=	6.17.1
 DISTVERSIONPREFIX=	v
-PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://nodejs.org/dist/v${PORTVERSION}/
 PKGNAMESUFFIX=	6
@@ -16,6 +15,8 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BROKEN_SSL=		openssl111 libressl libressl-devel
 BROKEN_SSL_REASON=	Node.js 6.x LTS requires OpenSSL 1.0.2 or the BUNDLED_SSL option enabled
+DEPRECATED=		Node.js 6.x LTS reaches end-of-life on 2019-04-30, see https://github.com/nodejs/Release
+EXPIRATION_DATE=	2019-04-30
 ONLY_FOR_ARCHS=		amd64 armv6 armv7 i386 powerpc64
 
 OPTIONS_DEFINE=		BUNDLED_SSL DOCS NLS DTRACE
@@ -39,6 +40,7 @@ BUNDLED_SSL_USES_OFF=		ssl
 BUNDLED_SSL_CONFIGURE_OFF+=	--shared-openssl
 
 NLS_CONFIGURE_ON=	--with-intl=system-icu
+NLS_BUILD_DEPENDS=	icu>=58.2:devel/icu
 NLS_LIB_DEPENDS=	libicui18n.so:devel/icu
 
 DTRACE_CONFIGURE_ON=	--with-dtrace
@@ -60,8 +62,12 @@ SHEBANG_FILES=	tools/specialize_node_d.py tools/genv8constants.py
 
 PREFIX_RELDEST=	${PREFIX:S,^${DESTDIR},,}
 REINPLACE_ARGS=	-i ''
-MAKE_ENV+=	CC.host=${CC} CXX.host=${CXX} LINK.host=${CXX} LINK.target=${CXX}
+MAKE_ENV+=	CC.host=${CC} CFLAGS.host="${CFLAGS}" \
+		CXX.host=${CXX} CXXFLAGS.host="${CXXFLAGS}" \
+		LINK.host=${CXX} LDFLAGS.host="${LDFLAGS}"
 
+BUILD_DEPENDS+=	c-ares>=1.10.0:dns/c-ares\
+		libuv>=1.16.1:devel/libuv
 LIB_DEPENDS+=	libcares.so:dns/c-ares\
 		libuv.so:devel/libuv
 

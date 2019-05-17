@@ -6,7 +6,7 @@
 
 PORTNAME=	mutt
 PORTVERSION=	${VERSION}.j${JP_VERSION}
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	japanese mail
 MASTER_SITES=	ftp://ftp.mutt.org/mutt/devel/:body \
 		ftp://ftp.fu-berlin.de/pub/unix/mail/mutt/devel/:body \
@@ -126,6 +126,11 @@ CONFIGURE_ARGS+=	--disable-hcache
 .endif
 .if ${PORT_OPTIONS:MMAILDIR_HEADER_CACHE}
 CONFIGURE_ARGS+=	--without-qdbm
+.endif
+
+.if ${SSL_DEFAULT} == base
+BROKEN_FreeBSD_12=	variable has incomplete type 'X509_STORE_CTX' (aka 'struct x509_store_ctx_st')
+BROKEN_FreeBSD_13=	variable has incomplete type 'X509_STORE_CTX' (aka 'struct x509_store_ctx_st')
 .endif
 
 post-patch:

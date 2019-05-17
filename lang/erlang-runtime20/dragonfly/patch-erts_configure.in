@@ -1,0 +1,11 @@
+--- erts/configure.in.orig	2019-04-16 14:37:48 UTC
++++ erts/configure.in
+@@ -3928,7 +3928,7 @@ case $host_os in
+ 			DED_LDFLAGS="-m32 $DED_LDFLAGS"
+ 		fi
+ 	;;	
+-	freebsd*)
++	freebsd*|dragonfly*)
+ 		DED_LD="$CC"
+ 		DED_LD_FLAG_RUNTIME_LIBRARY_PATH="$CFLAG_RUNTIME_LIBRARY_PATH"
+ 		DED_LDFLAGS="-shared"

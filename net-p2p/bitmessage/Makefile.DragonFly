@@ -1,1 +1,0 @@
-CFLAGS+=	-I${OPENSSLINC} -I${LOCALBASE}/include

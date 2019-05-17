@@ -1,6 +1,0 @@
-USE_CXXSTD=	c++11
-
-# zrj: some checks onf ifstream file..
-dfly-patch:
-	${REINPLACE_CMD} -e "s@( file != NULL )@(file.is_open())@g"	\
-		${WRKSRC}/libs/core/texturing_old/shadowmap_old.cpp

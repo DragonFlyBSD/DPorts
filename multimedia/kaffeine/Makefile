@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	kaffeine
-DISTVERSION=	2.0.16-2
+DISTVERSION=	2.0.17
 CATEGORIES=	multimedia kde
 MASTER_SITES=	KDE/stable/${PORTNAME}
 

@@ -1,0 +1,4 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e "s@LDOPTS =@LDOPTS = -L${LOCALBASE}/lib @g" \
+		${WRKSRC}/config/make.inc.gfort

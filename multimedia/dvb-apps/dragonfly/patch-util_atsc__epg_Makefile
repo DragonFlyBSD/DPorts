@@ -1,0 +1,11 @@
+--- util/atsc_epg/Makefile~	2014-03-21 20:26:36.000000000 +0100
++++ util/atsc_epg/Makefile	2019-04-30 23:43:49.440260000 +0200
+@@ -4,7 +4,7 @@ binaries = atsc_epg
+ 
+ inst_bin = $(binaries)
+ 
+-CPPFLAGS += -I../../lib -std=c99 -D_POSIX_SOURCE
++CPPFLAGS += -I../../lib -std=c99
+ #LDFLAGS  += -static -L../../lib/libdvbapi -L../../lib/libucsi
+ LDFLAGS  += -L../../lib/libdvbapi -L../../lib/libucsi
+ LDLIBS   += -ldvbapi -lucsi

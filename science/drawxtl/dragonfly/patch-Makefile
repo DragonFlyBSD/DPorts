@@ -1,0 +1,12 @@
+--- Makefile.intermediate	2019-05-11 06:32:39.000000000 +0000
++++ Makefile
+@@ -27,6 +27,9 @@ endif
+ ifneq (,$(findstring BSD,$(OS)))
+     OS=Linux
+ endif
++ifneq (,$(findstring DragonFly,$(OS)))
++    OS=Linux
++endif
+ 
+ ifeq ($(OS),Linux)
+ 

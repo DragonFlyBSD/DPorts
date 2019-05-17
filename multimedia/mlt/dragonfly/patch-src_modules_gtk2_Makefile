@@ -1,0 +1,12 @@
+--- src/modules/gtk2/Makefile.intermediate	2019-05-01 18:19:28 UTC
++++ src/modules/gtk2/Makefile
+@@ -40,6 +40,9 @@ LDFLAGS += $(shell pkg-config $(PKGCONFI
+ ifeq ($(targetos),Darwin)
+ LDFLAGS += -liconv
+ endif
++ifeq ($(targetos),DragonFly)
++LDFLAGS += -liconv
++endif
+ ifeq ($(targetos),FreeBSD)
+ LDFLAGS += -liconv
+ endif

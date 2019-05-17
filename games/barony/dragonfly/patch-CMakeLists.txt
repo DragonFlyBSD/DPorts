@@ -1,0 +1,11 @@
+--- CMakeLists.txt.intermediate	2019-05-13 13:09:05.000000000 +0000
++++ CMakeLists.txt
+@@ -318,7 +318,7 @@ else()
+   if (APPLE)
+     target_link_libraries(barony ${GLUT_LIBRARIES})
+   endif()
+-  if (${CMAKE_SYSTEM_NAME} MATCHES "BSD")
++  if (${CMAKE_SYSTEM_NAME} MATCHES "BSD|DragonFly")
+     # For backtrace
+     find_path(EXECINFO_INC NAMES execinfo.h)
+     find_library(EXECINFO_LIB NAMES execinfo)

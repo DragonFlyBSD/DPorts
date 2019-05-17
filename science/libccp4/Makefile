@@ -2,7 +2,7 @@
 
 PORTNAME=	libccp4
 DISTVERSION=	6.5.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	science
 MASTER_SITES=	ftp://ftp.ccp4.ac.uk/opensource/
 
@@ -13,6 +13,8 @@ LICENSE=	GPLv3 LGPL3
 LICENSE_COMB=	dual
 LICENSE_FILE_GPLv3=	${WRKSRC}/COPYING
 LICENSE_FILE_LGPL3=	${WRKSRC}/COPYING.LESSER
+
+BROKEN_aarch64=		ccp4/ccp4_sysdep.h:244:4: error: "Can't determine machine number format"
 
 LIB_DEPENDS=	libmmdb2.so:science/mmdb2
 

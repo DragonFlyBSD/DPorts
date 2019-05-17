@@ -1,0 +1,11 @@
+--- libopenage/CMakeLists.txt.intermediate	2019-05-13 14:03:38.000000000 +0000
++++ libopenage/CMakeLists.txt
+@@ -88,7 +88,7 @@ if(NOT APPLE AND NOT MSVC)
+ 	find_library(RT_LIB rt)
+ endif()
+ 
+-if ("${CMAKE_SYSTEM_NAME}" MATCHES "(Free|Net|Open)BSD")
++if ("${CMAKE_SYSTEM_NAME}" MATCHES "(Free|Net|Open)BSD|DragonFly")
+    find_library(EXECINFO_LIB execinfo)
+    find_path(NYAN_INCLUDE_DIR "nyan.h" PATHS /usr/local/include/nyan )
+    find_library(NYAN_LIBRARY NAMES "nyan" PATHS /usr/local/lib )

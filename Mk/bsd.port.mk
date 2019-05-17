@@ -1345,15 +1345,7 @@ _SUF2=	,${PORTEPOCH}
 PKGVERSION=	${PORTVERSION:C/[-_,]/./g}${_SUF1}${_SUF2}
 PKGNAME=	${PKGNAMEPREFIX}${PORTNAME}${PKGNAMESUFFIX}-${PKGVERSION}
 DISTVERSIONFULL=	${DISTVERSIONPREFIX}${DISTVERSION:C/:(.)/\1/g}${DISTVERSIONSUFFIX}
-.if defined(USE_GITHUB) && empty(MASTER_SITES:MGHC) && empty(USE_GITHUB:Mnodefault)
-.  if empty(DISTNAME)
-_GITHUB_MUST_SET_DISTNAME=		yes
-.  else
-DEV_WARNING+=	"You are using USE_GITHUB and DISTNAME is set which is wrong.  Set GH_ACCOUNT/GH_PROJECT/GH_TAGNAME correctly and remove WRKSRC entirely."
-.  endif
-.else
 DISTNAME?=	${PORTNAME}-${DISTVERSIONFULL}
-.endif
 
 INDEXFILE?=		INDEX
 
@@ -1791,7 +1783,9 @@ INSTALL_TARGET:=	${INSTALL_TARGET:S/^install-strip$/install/g}
 .endif
 
 .if !defined(WITHOUT_SSP)
-.include "${PORTSDIR}/Mk/bsd.ssp.mk"
+# Leave the conditional just in case WITHOUT_SSP becomes
+# something else.
+#.include "${PORTSDIR}/Mk/bsd.ssp.mk"
 .endif
 
 # XXX PIE support to be added here
@@ -1811,10 +1805,8 @@ MAKE_ENV+=		SHELL=${MAKE_SHELL} NO_LINT=YES
 PATCH_DEPENDS+=		${LOCALBASE}/bin/unzip:archivers/unzip
 .endif
 
-# Check the compatibility layer for amd64/ia64
-
 .if defined(IA32_BINARY_PORT) && ${ARCH} != "i386"
-.if ${ARCH} == "amd64" || ${ARCH} == "ia64"
+.if ${ARCH} == "amd64"
 .if !defined(HAVE_COMPAT_IA32_KERN)
 IGNORE=		requires a kernel with compiled-in IA32 compatibility
 .elif !defined(HAVE_COMPAT_IA32_LIBS)
@@ -4614,7 +4606,7 @@ check-man: stage
 .endif
 
 # Compress all manpage not already compressed which are not hardlinks
-# Find all manpages which are not compressed and are hadlinks, and only get the list of inodes concerned, for each of them compress the first one found and recreate the hardlinks for the others
+# Find all manpages which are not compressed and are hardlinks, and only get the list of inodes concerned, for each of them compress the first one found and recreate the hardlinks for the others
 # Fixes all dead symlinks left by the previous round
 .if !target(compress-man)
 compress-man:
@@ -5043,7 +5035,7 @@ showconfig: check-config
 
 .if !target(showconfig-recursive)
 showconfig-recursive:
-	@${ECHO_MSG} "===> The following configuration options are available for ${PKGNAME} and dependencies";
+	@${ECHO_MSG} "===> The following configuration options are available for ${PKGNAME} and its dependencies";
 	@recursive_cmd="showconfig"; \
 	    recursive_dirs="${.CURDIR} $$(${ALL-DEPENDS-FLAVORS-LIST})"; \
 		${_FLAVOR_RECURSIVE_SH}
@@ -5070,7 +5062,7 @@ rmconfig:
 
 .if !target(rmconfig-recursive)
 rmconfig-recursive:
-	@${ECHO_MSG} "===> Removing user-specified options for ${PKGNAME} and dependencies";
+	@${ECHO_MSG} "===> Removing user-specified options for ${PKGNAME} and its dependencies";
 	@recursive_cmd="rmconfig"; \
 	    recursive_dirs="${.CURDIR} $$(${ALL-DEPENDS-FLAVORS-LIST})"; \
 		${_FLAVOR_RECURSIVE_SH}

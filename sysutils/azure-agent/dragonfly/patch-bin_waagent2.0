@@ -1,0 +1,20 @@
+--- bin/waagent2.0.intermediate	2019-04-07 10:21:37 UTC
++++ bin/waagent2.0
+@@ -6007,7 +6007,7 @@ def GetMyDistro(dist_class_name=''):
+         if 'Linux' in platform.system():
+             Distro=DistInfo()[0]
+         else : # I know this is not Linux!
+-            if 'FreeBSD' in platform.system():
++            if 'FreeBSD' in platform.system() or 'DragonFly' in platform.system():
+                 Distro=platform.system()
+         Distro=Distro.strip('"')
+         Distro=Distro.strip(' ')
+@@ -6020,7 +6020,7 @@ def GetMyDistro(dist_class_name=''):
+     return globals()[dist_class_name]() # the distro class inside this module.
+ 
+ def DistInfo(fullname=0):
+-    if 'FreeBSD' in platform.system():
++    if 'FreeBSD' in platform.system() or 'DragonFly' in platform.system():
+         release = re.sub('\-.*\Z', '', str(platform.release()))
+         distinfo = ['FreeBSD', release]
+         return distinfo

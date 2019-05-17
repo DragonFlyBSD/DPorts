@@ -2,3 +2,8 @@ USES+= alias
 
 # zrj: just like recent addition in MF add explicit -std=c++11 for nullptr
 CFLAGS+= -std=c++11 -DSIGLIBRT=33 # ugly but works
+LDFLAGS+= -lexecinfo
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
+		${WRKSRC}/Makefile

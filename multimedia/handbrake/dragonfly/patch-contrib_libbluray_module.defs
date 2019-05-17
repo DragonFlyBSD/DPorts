@@ -1,9 +1,13 @@
---- contrib/libbluray/module.defs.orig	2018-04-05 17:31:47.000000000 +0000
+--- contrib/libbluray/module.defs.orig	2019-02-22 16:23:51 UTC
 +++ contrib/libbluray/module.defs
-@@ -23,3 +23,6 @@ endif
- ifeq (freebsd,$(BUILD.system))
+@@ -19,6 +19,10 @@ ifeq (freebsd,$(BUILD.system))
      LIBBLURAY.GCC.D += _XOPEN_SOURCE=700
  endif
+ 
 +ifeq (dragonfly,$(BUILD.system))
 +    LIBBLURAY.GCC.D += _XOPEN_SOURCE=700
 +endif
++
+ ifneq (none,$(FFMPEG.GCC.g))
+     LIBBLURAY.GCC.args.extra += -g
+ endif

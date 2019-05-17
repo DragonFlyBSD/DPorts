@@ -1,0 +1,2 @@
+# avoid libitm, use locks
+CONFIGURE_ARGS+= --enable-locks

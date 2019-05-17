@@ -1,0 +1,5 @@
+
+# just to avoid bad prototype
+dfly-patch:
+	${REINPLACE_CMD} -e 's@rb_set_safe_level(MAIN_SAFE_LEVEL)@rb_set_safe_level(1)@g'	\
+		${WRKSRC}/src/plruby.c

@@ -1,4 +1,4 @@
---- src/3rdparty/chromium/build/gyp_environment.py.orig	2018-04-10 14:05:55.000000000 +0000
+--- src/3rdparty/chromium/build/gyp_environment.py.orig	2019-03-07 09:23:57 UTC
 +++ src/3rdparty/chromium/build/gyp_environment.py
 @@ -23,7 +23,7 @@ def SetEnvironment():
    # . -f / --format has precedence over the env var, no need to check for it

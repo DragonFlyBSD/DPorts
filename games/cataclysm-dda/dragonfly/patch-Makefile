@@ -1,0 +1,12 @@
+--- Makefile.orig	2019-05-13 15:08:26.000000000 +0000
++++ Makefile
+@@ -157,6 +157,9 @@ OS  = $(shell uname -s)
+ ifneq ($(findstring BSD,$(OS)),)
+   BSD = 1
+ endif
++ifneq ($(findstring DragonFly,$(OS)),)
++  BSD = 1
++endif
+ 
+ # This sets CXX and so must be up here
+ ifdef CLANG

@@ -4,7 +4,7 @@
 PORTNAME=	mongo-cxx-driver
 PORTVERSION=	1.1.2
 DISTVERSIONPREFIX=legacy-
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	devel
 
 MAINTAINER=	numisemis@yahoo.com
@@ -37,4 +37,11 @@ MAKE_ARGS=	--prefix=${STAGEDIR}${PREFIX} \
 		--cxx=${CXX}
 USE_LDCONFIG=	yes
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if ${SSL_DEFAULT} == base
+BROKEN_FreeBSD_12=	use of undeclared identifier 'BIO_s_file_internal'
+BROKEN_FreeBSD_13=	use of undeclared identifier 'BIO_s_file_internal'
+.endif
+
+.include <bsd.port.post.mk>

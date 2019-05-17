@@ -4,11 +4,13 @@
 PORTNAME=	palemoon
 DISTVERSION=	27.9.4
 DISTVERSIONSUFFIX=_Release
-PORTREVISION=	4
+PORTREVISION=	6
 CATEGORIES=	www ipv6
 
 MAINTAINER=	lichray@gmail.com
 COMMENT=	Open Source Goanna-based web browser
+
+BROKEN_FreeBSD_13_x86_64=	xpcshell crashes after base Clang updated to 8.0.0
 
 BUILD_DEPENDS=	nspr>=4.15:devel/nspr \
 		nss>=3.31.1:security/nss \

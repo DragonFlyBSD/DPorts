@@ -1,0 +1,3 @@
+.if !defined(DPORTS_BUILDER)
+MANUAL_PACKAGE_BUILD=	huge (300M packaged)
+.endif

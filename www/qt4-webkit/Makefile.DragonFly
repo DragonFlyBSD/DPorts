@@ -1,2 +1,0 @@
-# zrj: too noisy on gcc80
-CXXFLAGS+=	-Wno-expansion-to-defined -Wno-class-memaccess

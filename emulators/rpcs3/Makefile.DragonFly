@@ -1,0 +1,3 @@
+# actually libatomic, but hey, ncurses because of bundled llvm
+USES+=	fortran ncurses
+CXXFLAGS:=	${CXXFLAGS:N*macro-redefined}

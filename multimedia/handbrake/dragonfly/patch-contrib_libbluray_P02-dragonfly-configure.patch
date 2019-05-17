@@ -1,21 +1,5 @@
---- contrib/libbluray/P01-dragonfly-configure.patch.orig	2018-04-09 12:18:09 UTC
-+++ contrib/libbluray/P01-dragonfly-configure.patch
-@@ -0,0 +1,13 @@
-+--- libbluray-1.0.2/configure.orig	2017-12-04 00:27:38.000000000 +0900
-++++ libbluray-1.0.2/configure
-+@@ -14,6 +14,10 @@
-+ ## M4sh Initialization. ##
-+ ## -------------------- ##
-+
-++if test `uname` = 'DragonFly' ; then
-++  ln -s linux jni/dragonfly
-++fi
-++
-+ # Be more Bourne compatible
-+ DUALCASE=1; export DUALCASE # for MKS sh
-+ if test -n "${ZSH_VERSION+set}" && (emulate sh) >/dev/null 2>&1; then :
 --- contrib/libbluray/P02-dragonfly-configure.patch.intermediate	2018-05-14 10:32:41.104627937 +0000
-+++ contrib/libbluray/P01-dragonfly-configure.patch
++++ contrib/libbluray/P02-dragonfly-configure.patch
 @@ -0,0 +1,10 @@
 +--- libbluray-1.0.2/configure.intermediate	2018-05-14 10:29:49.000000000 +0000
 ++++ libbluray-1.0.2/configure

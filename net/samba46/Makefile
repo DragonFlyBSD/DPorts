@@ -3,7 +3,7 @@
 
 PORTNAME?=			${SAMBA4_BASENAME}46
 PORTVERSION?=			${SAMBA4_VERSION}
-PORTREVISION?=			1
+PORTREVISION?=			2
 CATEGORIES?=			net
 MASTER_SITES=			SAMBA/samba/stable SAMBA/samba/rc
 DISTNAME=			${SAMBA4_DISTNAME}
@@ -11,7 +11,8 @@ DISTNAME=			${SAMBA4_DISTNAME}
 MAINTAINER?=			timur@FreeBSD.org
 COMMENT?=			Free SMB/CIFS and AD/DC server and client for Unix
 
-LICENSE=			GPLv3
+LICENSE=			GPLv3+
+LICENSE_FILE=			${WRKSRC}/COPYING
 
 BROKEN_powerpc64=		fails to compile: unrecognized command line option "-Wno-format-truncation"
 

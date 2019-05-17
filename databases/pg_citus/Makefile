@@ -2,8 +2,9 @@
 # $FreeBSD$
 
 PORTNAME=	citus
-PORTVERSION=	8.1.1
+PORTVERSION=	8.2.1
 DISTVERSIONPREFIX=	v
+PORTREVISION=	1
 CATEGORIES=	databases
 PKGNAMEPREFIX=	pg_
 
@@ -12,12 +13,9 @@ COMMENT=	Horizontally scale Postgresql using sharding and replication
 
 LICENSE=	AGPLv3
 
-BROKEN_aarch64=		fails to compile: transaction/backend_data.c:53:2: error: unknown type name 'pg_atomic_uint64'; did you mean 'pg_atomic_uint32'?
-BROKEN_armv6=		fails to compile: transaction/backend_data.c:53:2: error: unknown type name 'pg_atomic_uint64'; did you mean 'pg_atomic_uint32'?
-BROKEN_armv7=		fails to compile: transaction/backend_data.c:53:2: error: unknown type name 'pg_atomic_uint64'; did you mean 'pg_atomic_uint32'?
 BROKEN_i386=		fails to compile: transaction/backend_data.c:727:2: error: unknown type name 'pg_atomic_uint64'; did you mean 'pg_atomic_uint32'?
 
-USES=		gmake pgsql:9.6+ autoreconf readline
+USES=		gmake pgsql:10+ autoreconf readline
 WANT_PGSQL=	lib server
 GNU_CONFIGURE=	yes
 

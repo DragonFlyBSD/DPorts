@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	R
-DISTVERSION=	3.5.2
+DISTVERSION=	3.6.0
 CATEGORIES=	math lang
 MASTER_SITES=	CRAN/src/base/R-${PORTVERSION:C|\..*||}
 
@@ -71,7 +71,7 @@ ATLAS_USES=		blaslapack:atlas
 ATLAS_CONFIGURE_ON=	--disable-BLAS-shlib
 CAIROPANGO_IMPLIES=	X11
 CAIROPANGO_CONFIGURE_WITH=	cairo
-CAIROPANGO_USES=	gettext jpeg pkgconfig
+CAIROPANGO_USES=	gettext gnome jpeg pkgconfig
 CAIROPANGO_USE=		GNOME=pango,cairo
 FLANG_USES=		fortran:flang
 FLANG_USES_OFF=		fortran
@@ -124,12 +124,11 @@ X11_USE=		xorg=ice,sm,x11,xext,xmu,xscrnsaver,xt
 LIBVER=		${PORTVERSION:R}
 
 .include <bsd.port.options.mk>
-.include "compiler.mk"
 
 # LLVM, which gets pulled in with FLANG, provides libomp.  So, only depend on
 # devel/openmp when GFORTRAN and OPENMP are on.
 .if ! ${PORT_OPTIONS:MFLANG} && ${PORT_OPTIONS:MOPENMP}
-LIB_DEPENDS+=	libomp.so:devel/openmp
+LIB_DEPENDS+=	
 .endif
 
 post-patch:

@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	svt-vp9
-PORTVERSION=	s20180215
+PORTVERSION=	s20180426
 CATEGORIES=	multimedia
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -23,7 +23,7 @@ USE_GITHUB=	yes
 USE_LDCONFIG=	yes
 GH_ACCOUNT=	OpenVisualCloud
 GH_PROJECT=	SVT-VP9
-GH_TAGNAME=	2437369
+GH_TAGNAME=	ce24589
 
 post-patch:
 # Default CFLAGS are already set by USES=cmake
@@ -47,7 +47,7 @@ post-patch:
 	@${REINPLACE_CMD} -i .opsys 's/Linux/${OPSYS}/' \
 		${WRKSRC}/CMakeLists.txt \
 		${WRKSRC}/Source/Lib/*/CMakeLists.txt
-	@${GREP} -Flr '__linux' ${WRKSRC} | ${XARGS} \
+	@${GREP} --exclude='*/third_party/*' -Flr '__linux' ${WRKSRC} | ${XARGS} \
 		${REINPLACE_CMD} -i .opsys -E 's/__linux(__)?/__${OPSYS}__/'
 
 .include <bsd.port.mk>

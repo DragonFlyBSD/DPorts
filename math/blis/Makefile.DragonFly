@@ -1,0 +1,6 @@
+# zrj: decouple from hardcoded clang, missing deps perl5 and as(1) from ports
+USES+=	perl5
+BUILD_DEPENDS:=	${BUILD_DEPENDS:Nllvm*} ${LOCALBASE}/bin/as:devel/binutils
+# port checks CC value CC_VENDOR for gcc or clang, and needs newer as(1) as base
+CC:=	gcc
+AS:=	${LOCALBASE}/bin/as

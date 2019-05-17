@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/security/tinc/files/tincd.in 447477 2017-08-06 17:37:25Z dinoex $
+# $FreeBSD: head/security/tinc/files/tincd.in 500398 2019-04-29 08:34:08Z dinoex $
 #
 # PROVIDE: tincd
 # REQUIRE: ipfilter FILESYSTEMS sysctl netif
@@ -69,6 +69,7 @@ tincd_stop()
 			$command -n $cfg -k
 		done
 	fi
+	wait_for_pids $rc_pid
 }
 tincd_reload()
 {

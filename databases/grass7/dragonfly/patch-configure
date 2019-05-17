@@ -1,0 +1,13 @@
+Contains orphans in staged/docs and staged/bin/v.in.pdal
+
+--- configure.intermediate	2019-05-02 19:18:25 UTC
++++ configure
+@@ -1586,7 +1586,7 @@ EOF
+             SHLIB_SUFFIX=".so"
+             LD_LIBRARY_PATH_VAR="LD_LIBRARY_PATH"
+ 	    ;;
+-	*-freebsd*)
++	*-freebsd*|*-dragonfly*)
+ 	    # NOTE: only FreeBSD 4+ is supported
+ 	    # FreeBSD 3.* and greater have ELF.
+ 	    SHLIB_CFLAGS="-fPIC"

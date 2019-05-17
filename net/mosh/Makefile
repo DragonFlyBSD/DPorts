@@ -3,7 +3,7 @@
 
 PORTNAME=	mosh
 PORTVERSION=	1.3.2
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	net
 MASTER_SITES=	https://mosh.org/ \
 		ZI
@@ -14,8 +14,6 @@ COMMENT=	Mobile terminal that supports intermittent connectivity
 LICENSE=	GPLv3
 
 LIB_DEPENDS=	libprotobuf.so:devel/protobuf
-
-BROKEN_powerpc64=	fails to compile: metadata_lite.h: class 'google::protobuf::internal::InternalMetadataWithArenaLite' does not have any field named 'InternalMetadataWithArenaBase'
 
 USE_PERL5=	run
 GNU_CONFIGURE=	yes

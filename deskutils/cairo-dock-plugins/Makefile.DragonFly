@@ -1,0 +1,3 @@
+# add few orphans
+PLIST_FILES+=	lib/cairo-dock/libcd_kde-integration.so
+PLIST_FILES+=	share/cairo-dock/plug-ins/kde-integration/icon.png

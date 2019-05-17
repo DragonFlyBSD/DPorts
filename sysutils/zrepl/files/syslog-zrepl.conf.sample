@@ -1,8 +1,0 @@
-# $FreeBSD: head/sysutils/zrepl/files/syslog-zrepl.conf.sample 451049 2017-10-01 15:15:44Z woodsb02 $
-#
-# Syslog configuration file for zrepl.
-# See syslog.conf(5) for details.
-#
-# SELECTOR					ACTION
-# FACILITY.[!<=>]LEVEL
-local0.info					/var/log/zrepl.log

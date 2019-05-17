@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	qbittorrent
-DISTVERSION=	4.1.5
-PORTREVISION=	3
+DISTVERSION=	4.1.6
 CATEGORIES=	net-p2p ipv6
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
@@ -44,14 +43,12 @@ SUB_LIST=		USER=${USERS} GROUP=${GROUPS}
 PLIST_SUB=		USER=${USERS} GROUP=${GROUPS}
 .endif
 
-OPTIONS_DEFINE=		DBUS DEBUG DOCS
+OPTIONS_DEFINE=		DBUS DEBUG
 OPTIONS_DEFAULT=	DBUS
 
 DEBUG_CONFIGURE_ENABLE=	debug
 DBUS_CONFIGURE_ENABLE=	qt-dbus
 DBUS_USE=		qt=dbus
-
-PORTDOCS=		AUTHORS Changelog README.md
 
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/qbittorrent${SUFFIX}
@@ -61,9 +58,5 @@ post-install:
 .if ${FLAVOR} == nox
 	@${MKDIR} ${STAGEDIR}/var/db/qbittorrent/conf ${STAGEDIR}/var/db/qbittorrent/Downloads
 .endif
-
-post-install-DOCS-on:
-	@${MKDIR} ${STAGEDIR}${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>

@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	rails
-PORTVERSION=	5.0.7.1
+PORTVERSION=	5.0.7.2
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 PKGNAMESUFFIX=	50
@@ -20,7 +20,7 @@ RUN_DEPENDS=	rubygem-actioncable50>=${PORTVERSION}:www/rubygem-actioncable50 \
 		rubygem-activemodel50>=${PORTVERSION}:databases/rubygem-activemodel50 \
 		rubygem-activerecord50>=${PORTVERSION}:databases/rubygem-activerecord50 \
 		rubygem-activesupport50>=${PORTVERSION}:devel/rubygem-activesupport50 \
-		rubygem-bundler<2.0:sysutils/rubygem-bundler \
+		rubygem-bundler>=1.3.0:sysutils/rubygem-bundler \
 		rubygem-railties50>=${PORTVERSION}:www/rubygem-railties50 \
 		rubygem-sprockets-rails-rails50>=2.0.0:devel/rubygem-sprockets-rails-rails50 \
 		rubygem-bindex>=0.5.0:devel/rubygem-bindex \

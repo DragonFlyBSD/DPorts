@@ -1,0 +1,3 @@
+# ld.gold is not supported in non cmake build
+# https://github.com/protocolbuffers/protobuf/issues/5144
+MAKE_ENV+= LDVER=ld.bfd

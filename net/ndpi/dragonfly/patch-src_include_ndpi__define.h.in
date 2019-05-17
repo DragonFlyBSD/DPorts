@@ -1,0 +1,11 @@
+--- src/include/ndpi_define.h.in.orig	2019-03-01 17:04:18 UTC
++++ src/include/ndpi_define.h.in
+@@ -27,7 +27,7 @@
+   gcc -E -dM - < /dev/null |grep ENDIAN
+ */
+ 
+-#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__)
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
+ #include <machine/endian.h>
+ #endif
+ 

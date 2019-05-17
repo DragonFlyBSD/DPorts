@@ -1,0 +1,9 @@
+USES+=	alias
+
+# remove garbage
+LIB_DEPENDS:=	${LIB_DEPENDS:Nlibpulse*}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-D__LINUX_PULSE__@-D__LINUX_ALSA__@g' \
+			 -e 's@-lpulse-simple -lpulse@@g' \
+		${WRKSRC}/Makefile.am

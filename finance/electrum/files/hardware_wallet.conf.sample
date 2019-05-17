@@ -1,0 +1,23 @@
+# $FreeBSD: head/finance/electrum/files/hardware_wallet.conf.sample 492668 2019-02-11 06:25:12Z ehaupt $
+#
+# Allow members of group operator to access hardware wallet devices
+
+## Ledger Nano S
+#notify 301 {
+#        match "system"          "USB";
+#        match "subsystem"       "DEVICE";
+#        match "vendor"          "0x2c97";
+#        match "product"         "0x0001";
+#        match "type"            "ATTACH";
+#        action "/bin/chmod g=rw /dev/$cdev";
+#};
+
+## SatoshiLabs TREZOR
+#notify 301 {
+#        match "system"          "USB";
+#        match "subsystem"       "DEVICE";
+#        match "vendor"          "0x534c";
+#        match "product"         "0x0001";
+#        match "type"            "ATTACH";
+#        action "/bin/chmod g=rw /dev/$cdev";
+#};

@@ -1,11 +1,11 @@
---- src/lib/libcmd/Makefile.orig	2012-06-08 19:29:14 UTC
+--- src/lib/libcmd/Makefile.orig	2017-11-30 22:35:04 UTC
 +++ src/lib/libcmd/Makefile
-@@ -26,7 +26,7 @@ cmd 1.2 :LIBRARY: RELEASE cmdinit.c \
- 	rmdir.c stty.c sum.c sync.c tail.c tee.c tty.c uname.c uniq.c \
- 	vmstate.c wc.c revlib.c wclib.c sumlib.o \
+@@ -29,7 +29,7 @@ cmd 1.2 :LIBRARY: RELEASE cmdinit.c \
  	fts_fix.c lib.c \
+ 	grep.c xargs.c iconv.c realpath.c \
+ 	od.c tr.c ls.c \
 -	-lfsg -lmd -lutil
 +	-lfsg -lcrypto -lutil
  
- sumlib.o : +lsum
- 	$(AR) x $(*:O=1) $(<)
+ grep.o : LICENSE=since=1995,author=gsf+doug
+ iconv.o xargs.o : LICENSE=since=1989,author=gsf

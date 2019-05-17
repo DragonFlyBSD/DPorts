@@ -1,0 +1,33 @@
+--- configure.orig	2019-03-10 08:43:32 UTC
++++ configure
+@@ -15,7 +15,7 @@ atexit() {
+ }
+ 
+ compile() {
+-	$CC -Werror -o /dev/null -x c - $LDFLAGS
++	$CC $CPPFLAGS -Werror -o /dev/null -x c - $LDFLAGS
+ }
+ 
+ fatal() {
+@@ -134,6 +134,7 @@ HAVE_STRTONUM=0
+ CC=$(makevar CC)
+ CFLAGS=$(makevar CFLAGS)
+ CFLAGS="${CFLAGS} ${DEBUG} -Wall -Wextra -MD -MP"
++LDFLAGS="${LDFLAGS}"
+ INSTALL=$(makevar INSTALL)
+ INSTALL_MAN=$(makevar INSTALL_MAN)
+ 
+@@ -158,10 +159,10 @@ set -u
+ # Enable tracing, will end up in config.log.
+ set -x
+ 
+-if (LDFLAGS=-lcurses check_curses); then
++if (LDFLAGS="${LDFLAGS} -lncurses" check_curses); then
+ 	HAVE_CURSES=1
+-	LDFLAGS="${LDFLAGS} -lcurses"
+-elif (LDFLAGS=-lncursesw check_curses); then
++	LDFLAGS="${LDFLAGS} -lncurses"
++elif (LDFLAGS="${LDFLAGS} -lncursesw" check_curses); then
+ 	HAVE_NCURSESW=1
+ 	LDFLAGS="${LDFLAGS} -lncursesw"
+ else

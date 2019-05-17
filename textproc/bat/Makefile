@@ -3,13 +3,16 @@
 PORTNAME=	bat
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.10.0
-PORTREVISION=	0
+PORTREVISION=	4
 CATEGORIES=	textproc
 
 MAINTAINER=	pizzamig@FreeBSD.org
 COMMENT=	Clone of cat with syntax highlighting
 
 LICENSE=	APACHE20
+
+LIB_DEPENDS=	libgit2.so:devel/libgit2 \
+		libonig.so:devel/oniguruma
 
 USES=		cargo
 USE_GITHUB=	yes
@@ -68,7 +71,7 @@ CARGO_CRATES=	adler32-1.0.3 \
 		kernel32-sys-0.2.2 \
 		lazy_static-1.2.0 \
 		lazycell-1.2.0 \
-		libc-0.2.43 \
+		libc-0.2.49 \
 		libgit2-sys-0.7.11 \
 		libz-sys-1.0.25 \
 		linked-hash-map-0.5.1 \

@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	libressl
-PORTVERSION=	2.8.3
+PORTVERSION=	2.9.1
 CATEGORIES=	security devel
 MASTER_SITES=	OPENBSD/LibreSSL
 
@@ -30,7 +30,9 @@ USES=		cpe libtool pathfix pkgconfig
 USE_LDCONFIG=	yes
 OPTIONS_SUB=	yes
 CFLAGS+=	-fpic -DPIC -Wl,-rpath,${PREFIX}/lib -Wl,--as-needed
+.if 0 #${OPSYS} == FreeBSD
 LDFLAGS+=	-pthread
+.endif
 
 INSTALL_TARGET=	install-strip
 TEST_TARGET=	check

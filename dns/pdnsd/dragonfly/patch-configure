@@ -1,0 +1,11 @@
+--- configure.orig	2012-03-17 11:27:03 UTC
++++ configure
+@@ -6761,7 +6761,7 @@ _ACEOF
+ 
+       target="Linux"
+       ;;
+-    FreeBSD|NetBSD|OpenBSD|Darwin)
++    FreeBSD|NetBSD|OpenBSD|Darwin|DragonFly)
+       { $as_echo "$as_me:$LINENO: result: \"${uname_sys}\"" >&5
+ $as_echo "\"${uname_sys}\"" >&6; }
+       cat >>confdefs.h <<\_ACEOF

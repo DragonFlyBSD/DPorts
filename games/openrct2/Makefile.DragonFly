@@ -1,0 +1,6 @@
+USES+=	alias
+
+# if using base c++
+dfly-patch:
+	${REINPLACE_CMD} -e 's@gcc_s gcc@gcc_pic gcc@g' \
+		${WRKSRC}/src/openrct2/CMakeLists.txt

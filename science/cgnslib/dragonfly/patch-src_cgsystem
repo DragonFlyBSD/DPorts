@@ -1,0 +1,10 @@
+--- src/cgsystem.orig	2019-03-04 16:10:05 UTC
++++ src/cgsystem
+@@ -109,6 +109,7 @@ if [ $SYSTEM = UNKNOWN -a -n $uname ]; t
+ 			  fi
+ 			fi ;;
+     BSD/OS,i[3456]86)	SYSTEM=BSD386 ;;
++    DragonFly,*)	SYSTEM=FREEBSD ;;
+     FreeBSD,*)		SYSTEM=FREEBSD ;;
+     NetBSD,*)		case `$uname -p` in
+ 			  i386)	   SYSTEM=BSD386 ;;

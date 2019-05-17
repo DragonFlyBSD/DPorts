@@ -1,4 +1,0 @@
-# AZOTH option needs qt-mobility module that requires PulseAudio
-
-OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NAZOTH}
-

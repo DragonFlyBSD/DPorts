@@ -1,0 +1,18 @@
+--- meson.build.intermediate	2019-05-02 14:39:30 UTC
++++ meson.build
+@@ -107,15 +107,6 @@ m_dep = cc.find_library('m')
+ enable_alsa = get_option('alsa')
+ assert(enable_alsa or not host_is_linux, 'ALSA is not optional on Linux platforms')
+ 
+-libgvc = subproject(
+-  'gvc',
+-  default_options: [
+-    'static=true',
+-    'alsa=' + enable_alsa.to_string()
+-  ]
+-)
+-libgvc_dep = libgvc.get_variable('libgvc_dep')
+-
+ # GUdev integration (default enabled)
+ enable_gudev = get_option('gudev')
+ if enable_gudev

@@ -1291,7 +1291,6 @@
 %%QT_PLUGINDIR%%/renderplugins/libscene2d.so
 %%DEBUG%%%%QT_PLUGINDIR%%/renderplugins/libscene2d.so.debug
 %%QT_PLUGINDIR%%/sceneparsers/libassimpsceneimport.so
-%%DEBUG%%%%QT_PLUGINDIR%%/sceneparsers/libassimpsceneimport.so.debug
 %%QT_PLUGINDIR%%/sceneparsers/libgltfsceneexport.so
 %%DEBUG%%%%QT_PLUGINDIR%%/sceneparsers/libgltfsceneexport.so.debug
 %%QT_PLUGINDIR%%/sceneparsers/libgltfsceneimport.so

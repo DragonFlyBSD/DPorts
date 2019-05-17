@@ -1,0 +1,5 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-Wno-reserved-user-defined-literal@@g'	\
+			 -e 's@-pedantic@@g' -e 's@-Wsign-promo@-Wno-parentheses@g'	\
+		${WRKSRC}/src/klayout.pri

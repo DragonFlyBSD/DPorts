@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net/quagga/files/quagga.in 379165 2015-02-17 15:28:14Z mat $
+# $FreeBSD: head/net/quagga/files/quagga.in 495859 2019-03-16 09:00:10Z tobik $
 #
 
 # PROVIDE: quagga
@@ -17,7 +17,7 @@
 # Per daemon tuning may be done with daemon_name_flags
 #  zebra_flags="-P 0"
 #  bgpd_flags="-nrP 0" and so on
-# If you want to give the routing deamons a chance to catchup before
+# If you want to give the routing daemons a chance to catchup before
 # continueing, set quagga_wait_for to a "default" or certain prefix.
 #  quagga_wait_for="default"
 # Set the time limit for the wait.

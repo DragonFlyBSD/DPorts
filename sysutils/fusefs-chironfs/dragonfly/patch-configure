@@ -1,0 +1,11 @@
+--- configure.orig	2008-06-21 05:39:51 UTC
++++ configure
+@@ -7429,7 +7429,7 @@ test -n "$target_alias" &&
+     NONENONEs,x,x, &&
+   program_prefix=${target_alias}-
+ case $host in
+-     *-*-freebsd*)
++     *-*-freebsd*|*-*-dragonfly*)
+        os_type=freebsd
+         ;;
+      *-*-pcbsd*)

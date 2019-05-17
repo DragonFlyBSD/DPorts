@@ -1,0 +1,4 @@
+#! /bin/sh -
+# $FreeBSD: head/games/orthorobot/files/orthorobot.in 500026 2019-04-25 16:10:13Z 0mp $
+
+exec %%LOVE_CMD%% %%DATADIR%%/%%PORTNAME%%.love "$@"

@@ -1,7 +1,5 @@
-TODO: Implement for DragonFly
-
---- sysdeps/freebsd/procmem.c.orig	2011-03-14 23:08:03.000000000 +0100
-+++ sysdeps/freebsd/procmem.c	2013-01-11 17:10:04.000000000 +0100
+--- sysdeps/freebsd/procmem.c.orig	2016-11-27 18:05:03 UTC
++++ sysdeps/freebsd/procmem.c
 @@ -34,8 +34,10 @@
  #include <vm/vm_map.h>
  
@@ -13,17 +11,27 @@ TODO: Implement for DragonFly
  
  #include <sys/ucred.h>
  #include <sys/user.h>
-@@ -93,6 +95,7 @@
- 		return;
- 	}
+@@ -92,12 +94,23 @@ glibtop_get_proc_mem_p (glibtop *server,
  
-+#ifndef __DragonFly__
  #define        PROC_VMSPACE   ki_vmspace
  
++#ifdef __DragonFly__
++       buf->rss_rlim = pinfo [0].kp_vm_rssize;
++#else
         buf->rss_rlim = pinfo [0].ki_rssize;
-@@ -157,4 +160,5 @@
- 
- 	buf->flags = _glibtop_sysdeps_proc_mem |
- 		_glibtop_sysdeps_proc_mem_share;
 +#endif
- }
+ 
++#ifdef __DragonFly__
++       buf->vsize = buf->size = (guint64)
++	       pinfo [0].kp_vm_map_size;
++       buf->resident = buf->rss = (guint64)
++	       ps_pgtok (pinfo [0].kp_vm_rssize) * 1024;
++#else
+        buf->vsize = buf->size = (guint64)
+ 	       pinfo [0].ki_size;
+        buf->resident = buf->rss = (guint64)
+ 	       ps_pgtok (pinfo [0].ki_rssize) * 1024;
++#endif
+ 
+        buf->flags |= _glibtop_sysdeps_proc_mem;
+ 

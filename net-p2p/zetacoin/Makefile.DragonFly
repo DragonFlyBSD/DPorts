@@ -1,2 +1,0 @@
-# zrj shoehorn __endian definitions (leveldb issue fixed in 1.18?)
-CFLAGS+= -D__BYTE_ORDER=_BYTE_ORDER -D__LITTLE_ENDIAN=_LITTLE_ENDIAN

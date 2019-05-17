@@ -3,7 +3,7 @@
 
 PORTNAME=	violetland
 PORTVERSION=	0.5
-PORTREVISION=	12
+PORTREVISION=	13
 CATEGORIES=	games
 
 MAINTAINER=	amdmi3@FreeBSD.org
@@ -20,7 +20,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	ooxi
 GH_TUPLE=	jarro2783:CMake-Gettext:6ee6405:cmakegettext/lib/CMake-Gettext
 
-USES=		cmake gettext gl sdl
+USES=		cmake compiler:c++11-lang gettext gl sdl
 USE_SDL=	sdl mixer image ttf
 USE_GL=		gl glu
 USE_CXXSTD=	c++98

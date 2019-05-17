@@ -1,0 +1,25 @@
+
+#MAKE_ARGS+=	AM_V_CXX=
+PLIST_SUB+=	OPSYS=${OPSYS}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
+		${WRKSRC}/OpenFX-IO/IO/Makefile \
+		${WRKSRC}/OpenFX/Support/Plugins/Makefile.master
+	${REINPLACE_CMD} -e 's@__FreeBSD__@__DragonFly__@g' \
+		${WRKSRC}/OpenFX/Documentation/sources/Guide/Code/Example1/basics.cpp \
+		${WRKSRC}/OpenFX/Documentation/sources/Guide/Code/Example2/invert.cpp \
+		${WRKSRC}/OpenFX/Documentation/sources/Guide/Code/Example3/gain.cpp \
+		${WRKSRC}/OpenFX/Documentation/sources/Guide/Code/Example4/saturation.cpp \
+		${WRKSRC}/OpenFX/Documentation/sources/Guide/Code/Example5/circle.cpp \
+		${WRKSRC}/OpenFX/Examples/Basic/basic.cpp \
+		${WRKSRC}/OpenFX/Examples/Custom/custom.cpp \
+		${WRKSRC}/OpenFX/Examples/DepthConverter/depthConverter.cpp \
+		${WRKSRC}/OpenFX/Examples/Invert/invert.cpp \
+		${WRKSRC}/OpenFX/Examples/OpenGL/opengl.cpp \
+		${WRKSRC}/OpenFX/Examples/Overlay/overlay.cpp \
+		${WRKSRC}/OpenFX/Examples/Rectangle/rectangle.cpp \
+		${WRKSRC}/OpenFX/Examples/Test/testProperties.cpp \
+		${WRKSRC}/OpenFX/HostSupport/include/ofxhBinary.h \
+		${WRKSRC}/OpenFX/HostSupport/src/ofxhPluginCache.cpp \
+		${WRKSRC}/OpenFX/Support/Library/ofxsImageEffect.cpp

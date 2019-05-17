@@ -1,0 +1,11 @@
+--- SConstruct.intermediate	2019-05-15 11:16:13.000000000 +0000
++++ SConstruct
+@@ -186,7 +186,7 @@ if sys.platform != "win32" and not env["
+ # FreeBSD requires libexecinfo
+ # Linux and darwin have the header
+ # NetBSD and Windows do not
+-if sys.platform.startswith("freebsd"):
++if sys.platform.startswith("freebsd") or sys.platform.startswith("dragonfly"):
+     env.Append(LIBS = ['execinfo'])
+     env.Append(CPPFLAGS = "-DHAVE_EXECINFO")
+ elif sys.platform == "linux2" or sys.platform == "darwin":

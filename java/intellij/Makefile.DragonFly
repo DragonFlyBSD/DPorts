@@ -1,3 +1,6 @@
+.if !defined(DPORTS_BUILDER)
+MANUAL_PACKAGE_BUILD=	huge (417M packaged)
+.endif
 
 # zrj: useful?
 .if defined(DEVELOPER)

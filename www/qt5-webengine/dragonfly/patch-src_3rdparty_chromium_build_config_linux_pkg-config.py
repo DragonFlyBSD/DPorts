@@ -1,11 +1,11 @@
---- src/3rdparty/chromium/build/config/linux/pkg-config.py.intermediate	2018-05-26 15:13:03.000000000 +0000
+--- src/3rdparty/chromium/build/config/linux/pkg-config.py.intermediate	2019-05-06 09:08:08.000000000 +0000
 +++ src/3rdparty/chromium/build/config/linux/pkg-config.py
 @@ -60,7 +60,7 @@ def SetConfigPath(options):
    if "linux" in sys.platform:
      libdir = sysroot + '/libdata/' + options.system_libdir + '/pkgconfig'
      libdir += ':' + sysroot + '/usr/share/pkgconfig'
 -  elif "bsd" in sys.platform:
-+  elif ("bsd" in sys.platform) or ("dragonfly" not in sys.platform):
++  elif ("bsd" in sys.platform) or ("dragonfly" in sys.platform):
      libdir = sysroot + '/libdata/pkgconfig'
      libdir += ':' + '/usr/libdata/pkgconfig'
    os.environ['PKG_CONFIG_LIBDIR'] = libdir

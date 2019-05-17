@@ -3,7 +3,7 @@
 
 PORTNAME=	ffmpeg
 PORTVERSION=	0.7.17
-PORTREVISION=	16
+PORTREVISION=	17
 PORTEPOCH=	1
 CATEGORIES=	multimedia audio ipv6 net
 MASTER_SITES=	http://ffmpeg.org/releases/
@@ -23,7 +23,8 @@ BUILD_DEPENDS=	yasm:devel/yasm \
 
 PORTSCOUT=	limit:^0\.7.*
 
-USES=		cpe gmake perl5 pkgconfig tar:bzip2 shebangfix
+USES=		compiler:c++11-lang cpe gmake perl5 pkgconfig tar:bzip2 \
+		shebangfix
 USE_LDCONFIG=	${PREFIX}/lib/ffmpeg${FFMPEG_SUFFIX}
 USE_PERL5=	build
 SHEBANG_FILES=	doc/texi2pod.pl

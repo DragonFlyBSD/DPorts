@@ -210,12 +210,16 @@
 #			  packages for different Python versions.
 #			  default: py${PYTHON_SUFFIX}-
 #
+# PYTHON_PKGNAMESUFFIX
+#			- Use this as a ${PKGNAMESUFFIX} to distinguish
+#			  packages for different Python versions.
+#			  default: -py${PYTHON_SUFFIX}
+#
 # Using USES=python.mk also will add some useful entries to PLIST_SUB:
 #
 #	PYTHON_INCLUDEDIR=${PYTHONPREFIX_INCLUDEDIR:S;${PREFIX}/;;}
 #	PYTHON_LIBDIR=${PYTHONPREFIX_LIBDIR:S;${PREFIX}/;;}
 #	PYTHON_PLATFORM=${PYTHON_PLATFORM}
-#	PYTHON_PYOEXTENSION=${PYTHON_PYOEXTENSION}
 #	PYTHON_SITELIBDIR=${PYTHONPREFIX_SITELIBDIR:S;${PREFIX}/;;}
 #	PYTHON_SUFFIX=${PYTHON_SUFFIX}
 #	PYTHON_VER=${PYTHON_VER}
@@ -225,10 +229,6 @@
 #
 #	PYTHON2="" PYTHON3="@comment " for Python 2.x
 #	PYTHON2="@comment " PYTHON3="" for Python 3.x
-#
-# PYTHON_PKGNAMESUFFIX
-#			- Deprecated, use PYTHON_PKGNAMEPREFIX instead
-#			  default: -py${PYTHON_SUFFIX}
 #
 # PYDISTUTILS_INSTALLNOSINGLE
 #			- Deprecated without replacement
@@ -245,6 +245,20 @@ _PYTHON_VERSIONS=		2.7 3.6 3.7 3.5 # preferred first
 _PYTHON_PORTBRANCH=		2.7		# ${_PYTHON_VERSIONS:[1]}
 _PYTHON_BASECMD=		${LOCALBASE}/bin/python
 _PYTHON_RELPORTDIR=		lang/python
+
+# List all valid USE_PYTHON features here
+_VALID_PYTHON_FEATURES=	allflavors autoplist concurrent cython cython_run \
+			distutils flavors noegginfo noflavors optsuffix \
+			py3kplist pythonprefix
+_INVALID_PYTHON_FEATURES=
+.for var in ${USE_PYTHON}
+.  if empty(_VALID_PYTHON_FEATURES:M${var})
+_INVALID_PYTHON_FEATURES+=	${var}
+.  endif
+.endfor
+.if !empty(_INVALID_PYTHON_FEATURES)
+IGNORE=	uses unknown USE_PYTHON features: ${_INVALID_PYTHON_FEATURES}
+.endif
 
 # Make each individual feature available as _PYTHON_FEATURE_<FEATURENAME>
 .for var in ${USE_PYTHON}
@@ -334,6 +348,13 @@ _PYTHON_VERSION_MINIMUM_TMP:=	${_PYTHON_VERSION_CHECK:C/([1-9]\.[0-9])[-+].*/\1/
 _PYTHON_VERSION_MINIMUM:=	${_PYTHON_VERSION_MINIMUM_TMP:M[1-9].[0-9]}
 _PYTHON_VERSION_MAXIMUM_TMP:=	${_PYTHON_VERSION_CHECK:C/.*-([1-9]\.[0-9])/\1/}
 _PYTHON_VERSION_MAXIMUM:=	${_PYTHON_VERSION_MAXIMUM_TMP:M[1-9].[0-9]}
+
+# At this point we should have no argument left in ${_PYTHON_ARGS}
+# except a version spec
+_PYTHON_ARGS:=	${_PYTHON_ARGS:N[1-9].[0-9]-[1-9].[0-9]:N[1-9].[0-9]:N[1-9].[0-9]+:N-[1-9].[0-9]}
+.if !empty(_PYTHON_ARGS)
+IGNORE=	uses unknown USES=python arguments: ${_PYTHON_ARGS}
+.endif
 
 .undef _PYTHON_VERSION_NONSUPPORTED
 .if !empty(_PYTHON_VERSION_MINIMUM) && (${_PYTHON_VERSION} < ${_PYTHON_VERSION_MINIMUM})
@@ -620,7 +641,7 @@ add-plist-python:
 		/^@dirrmtry / {d = substr($$0, 11); if (d in dirs) {print $$0 "/" pc}; print $$0; next} \
 		{print} \
 		' \
-		pc="__pycache__" mt="$$(${PYMAGICTAG})" pyo="${PYTHON_PYOEXTENSION}" \
+		pc="__pycache__" mt="$$(${PYMAGICTAG})" pyo="opt-1.pyc" \
 		${TMPPLIST} > ${TMPPLIST}.pyc_tmp
 	@${MV} ${TMPPLIST}.pyc_tmp ${TMPPLIST}
 .endif # ${PYTHON_REL} >= 3200 && defined(_PYTHON_FEATURE_PY3KPLIST)
@@ -682,7 +703,6 @@ PREFIX=		${PYTHONBASE}
 PLIST_SUB+=	PYTHON_INCLUDEDIR=${PYTHONPREFIX_INCLUDEDIR:S;${PREFIX}/;;} \
 		PYTHON_LIBDIR=${PYTHONPREFIX_LIBDIR:S;${PREFIX}/;;} \
 		PYTHON_PLATFORM=${PYTHON_PLATFORM} \
-		PYTHON_PYOEXTENSION=${PYTHON_PYOEXTENSION} \
 		PYTHON_SITELIBDIR=${PYTHONPREFIX_SITELIBDIR:S;${PREFIX}/;;} \
 		PYTHON_SUFFIX=${PYTHON_SUFFIX} \
 		PYTHON_VER=${PYTHON_VER} \

@@ -1,0 +1,3 @@
+
+dfly-patch:
+	${CP} ${WRKSRC}/make/FreeBSD.mk ${WRKSRC}/make/DragonFly.mk
