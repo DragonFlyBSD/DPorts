@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/databases/postgresql11-server/files/postgresql.in 482724 2018-10-21 21:55:23Z girgen $
+# $FreeBSD: head/databases/postgresql11-server/files/postgresql.in 501149 2019-05-09 22:32:11Z girgen $
 #
 # PROVIDE: postgresql
 # REQUIRE: sshd
@@ -47,6 +47,7 @@ stop_cmd="postgresql_command stop"
 restart_cmd="postgresql_command restart"
 reload_cmd="postgresql_command reload"
 status_cmd="postgresql_command status"
+promote_cmd="postgresql_command promote"
 
 initdb_cmd="postgresql_initdb"
 
