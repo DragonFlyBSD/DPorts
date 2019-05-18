@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	pdal
-DISTVERSION=	1.8.0
-PORTREVISION=	1
+DISTVERSION=	1.9.1
 CATEGORIES=	math databases graphics
 
 MAINTAINER=	lbartoletti@tuxfamily.org
