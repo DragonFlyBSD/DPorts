@@ -1,4 +1,3 @@
-USE_XORG+= xrandr
 
-pre-configure:
+dfly-patch:
 	${REINPLACE_CMD} -e '/latomic/d' ${WRKSRC}/OgreMain/CMakeLists.txt
