@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/irc/inspircd/files/inspircd.in 456675 2017-12-18 21:46:45Z yuri $
+# $FreeBSD: head/irc/inspircd/files/inspircd.in 501352 2019-05-12 01:01:33Z swills $
 #
 # PROVIDE: inspircd
 # REQUIRE: DAEMON
@@ -40,7 +40,7 @@ load_rc_config ${name}
 : ${inspircd_chdir="%%ETCDIR%%"}
 
 command=/usr/sbin/daemon
-command_args="-f %%PREFIX%%/bin/inspircd --nofork --config ${inspircd_config} --logfile ${inspircd_logfile} ${inspircd_flags}"
+command_args="-S -p ${inspircd_pidfile} %%PREFIX%%/bin/inspircd --nofork --config ${inspircd_config} ${inspircd_flags}"
 procname=%%PREFIX%%/bin/inspircd
 pidfile=${inspircd_pidfile}
 required_files=${inspircd_config}
