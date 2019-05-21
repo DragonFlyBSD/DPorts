@@ -13,23 +13,21 @@ LICENSE=	AGPLv3 GFDL GPLv3 LGPL3
 LICENSE_COMB=	multi
 
 BROKEN_RUBY24=	Build succeeds, but using binary results in segmentation fault
-DEPRECATED=	Broken for more than 6 months
-EXPIRATION_DATE=	2019-05-08
 
 BUILD_DEPENDS=	rubygem-glib2>0:devel/rubygem-glib2
 LIB_DEPENDS=	libev.so:devel/libev
 RUN_DEPENDS=	rubygem-glib2>0:devel/rubygem-glib2
 
-USES=		compiler:c++11-lang gettext gmake libtool pathfix pkgconfig
+USES=		compiler:c++11-lang gettext gmake gnome libtool pathfix pkgconfig
+USE_GNOME=	glib20 intltool
+USE_LDCONFIG=	yes
 USE_RC_SUBR=	milter-manager
+USE_RUBY=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-libev \
 		--with-package-platform=freebsd
 CPPFLAGS+=	-I${LOCALBASE}/include
 LIBS+=		-L${LOCALBASE}/lib
-USE_GNOME=	glib20 intltool
-USE_LDCONFIG=	yes
-USE_RUBY=	yes
 INSTALL_TARGET=	install-strip
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
