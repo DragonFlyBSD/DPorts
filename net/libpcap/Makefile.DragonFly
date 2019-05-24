@@ -1,0 +1,3 @@
+
+# explicitly disable netmap, no kernel module
+CONFIGURE_ARGS+=	--disable-netmap
