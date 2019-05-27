@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/sysutils/py-google-compute-engine/files/google_accounts_daemon.in 472394 2018-06-14 19:07:49Z swills $
+# $FreeBSD: head/sysutils/py-google-compute-engine/files/google_accounts_daemon.in 501547 2019-05-13 10:05:26Z swills $
 #
 # PROVIDE: google_accounts_daemon
 # BEFORE: LOGIN
@@ -24,7 +24,7 @@ load_rc_config "${name}"
 : ${google_accounts_daemon_enable:="NO"}
 
 command_interpreter="%%PYTHON_CMD%%"
-command=%%PREFIX%%/bin/${name}
+command=%%PREFIX%%/bin/${name}-%%PYTHON_VER%%
 pidfile=/var/run/${name}.pid
 start_cmd="google_accounts_daemon_start"
 
