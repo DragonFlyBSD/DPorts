@@ -1,0 +1,13 @@
+USES+=	localbase:ldflags
+
+# exclude for now
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NSCSICRYPTO}
+
+# not ready for ld.gold
+MAKE_ENV+=	LDVER=ld.bfd
+
+LDFLAGS+=	-lintl
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@sys/acl.h@sys/not_acl.h@g' \
+		${WRKSRC}/core/cmake/BareosCheckIncludes.cmake
