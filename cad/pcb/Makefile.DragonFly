@@ -1,0 +1,7 @@
+
+# the pcb-menu.res contains \xb0 "degree sign", our TRE rejects it when LC_CTYPE="en_US.UTF-8"
+BUILD_DEPENDS+=	gsed:textproc/gsed
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@[[:<:]]sed[[:>:]]@gsed@g' \
+		${WRKSRC}/src/Makefile.in
