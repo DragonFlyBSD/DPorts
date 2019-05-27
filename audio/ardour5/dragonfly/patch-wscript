@@ -1,0 +1,11 @@
+--- wscript.intermediate	2019-05-26 15:13:18 UTC
++++ wscript
+@@ -610,7 +610,7 @@ int main() { return 0; }''',
+     if opt.stl_debug:
+         cxx_flags.append("-D_GLIBCXX_DEBUG")
+ 
+-    if re.search ("freebsd", sys.platform) != None or re.search ("openbsd", sys.platform) != None:
++    if re.search ("freebsd", sys.platform) != None or re.search ("openbsd", sys.platform) != None or re.search ("dragonfly", sys.platform) != None:
+         linker_flags.append('-lexecinfo')
+ 
+     if conf.env['DEBUG_RT_ALLOC']:
