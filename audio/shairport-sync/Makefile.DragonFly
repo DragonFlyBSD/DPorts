@@ -1,0 +1,2 @@
+# MF has plain -lcrypto in LDFLAGS and that fails at early configure
+USES+= localbase
