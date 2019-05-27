@@ -1,0 +1,10 @@
+--- src/objects/valid/Makefile.valid.lib.intermediate	2019-05-27 11:46:12.000000000 +0000
++++ src/objects/valid/Makefile.valid.lib
+@@ -4,5 +4,7 @@ SRC = valid__ valid___
+ 
+ ASN_DEP = general
+ 
++DLL_LIB = xregexp
++
+ USES_LIBRARIES =  \
+     general xregexp
