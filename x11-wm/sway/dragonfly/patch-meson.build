@@ -1,0 +1,24 @@
+--- meson.build.orig	2019-05-24 16:51:27.318612000 +0300
++++ meson.build	2019-05-24 16:55:03.319934000 +0300
+@@ -29,6 +29,7 @@ add_project_arguments(
+ cc = meson.get_compiler('c')
+ 
+ is_freebsd = host_machine.system().startswith('freebsd')
++is_dragonfly = host_machine.system().startswith('dragonfly')
+ datadir = get_option('datadir')
+ sysconfdir = get_option('sysconfdir')
+ prefix = get_option('prefix')
+@@ -169,6 +170,13 @@ if is_freebsd
+ 	configure_file(
+ 		configuration: config,
+ 		input: 'security.d/10-freebsd.in',
++		output: '@BASENAME@',
++		install_dir: sysconfdir + '/sway/security.d'
++	)
++elif is_dragonfly
++	configure_file(
++		configuration: config,
++		input: 'security.d/10-freebsd.in',
+ 		output: '@BASENAME@',
+ 		install_dir: sysconfdir + '/sway/security.d'
+ 	)
