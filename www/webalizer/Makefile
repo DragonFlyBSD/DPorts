@@ -53,6 +53,7 @@ GEOIP_CONFIGURE_ON=	--enable-geoip \
 			--with-geoip-lib=${LOCALBASE}/lib \
 			--with-geoip-inc=${LOCALBASE}/include
 GEOIP_LIB_DEPENDS=	libmaxminddb.so:net/libmaxminddb
+GEOIP_USES=		compiler:c++11-lang
 BDB1_CFLAGS=		-DUSE_DB185
 BDB_USES=		bdb
 BDB_LDFLAGS=		-L${BDB_LIB_DIR}
@@ -71,7 +72,7 @@ IP_AS_HOSTNAME_CFLAGS=		-DUSE_IP_AS_HOSTNAME
 DISTFILES+=	webalizer-flags.tgz:main
 .endif
 .if ${PORT_OPTIONS:MGEODB} || make(makesum) || defined(FETCH_ALL)
-DISTFILES+=	webalizer-geodb-20190401.tgz:geodb
+DISTFILES+=	webalizer-geodb-20190501.tgz:geodb
 .endif
 
 # slave ports override with languages specific gd

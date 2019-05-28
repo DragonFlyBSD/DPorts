@@ -1,0 +1,3 @@
+
+# no ninja, one gmake please
+USES:=	${USES:Nninja} gmake

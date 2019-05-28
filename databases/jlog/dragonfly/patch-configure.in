@@ -1,0 +1,11 @@
+--- configure.in.orig	2015-01-22 20:41:56 UTC
++++ configure.in
+@@ -251,7 +251,7 @@ case $host in
+     SHCFLAGS="$CFLAGS"
+     SHLD="$CC -dynamiclib -single_module -undefined dynamic_lookup -install_name \$(libdir)/\$@"
+     ;;
+-  *freebsd*)
++  *freebsd*|*dragonfly*)
+     SHCFLAGS="$CFLAGS -fPIC -pthread"
+     SHLD="$CC -shared -rdynamic"
+     ;;

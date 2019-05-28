@@ -1,0 +1,6 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/MATCHES/s@\("FreeBSD\)"@\1|DragonFly"@g' \
+		${WRKSRC}/cmake/platforms.cmake
+	${REINPLACE_CMD} -e 's@HAVE_EXECINFO_H@do_not_use@g' \
+		${WRKSRC}/code/windows_stub/stubs.cpp

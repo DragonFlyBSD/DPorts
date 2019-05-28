@@ -1,0 +1,2 @@
+@postexec /bin/ln -sf %%EXECUTABLE%% %%HADDOCK%%
+@postunexec [ -f %%GHC_HADDOCK_CMD%% ] && /bin/ln -sf %%GHC_HADDOCK_CMD%% %%HADDOCK%% || rm -f %%HADDOCK%%

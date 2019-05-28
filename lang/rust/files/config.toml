@@ -24,12 +24,19 @@ mandir = "%MANDIR%"
 # Rust release channel.
 channel = "%CHANNEL%"
 
+default-linker = "%CC%"
+
 [llvm]
 ccache = %CCACHE%
+#targets = "X86;ARM;AArch64;Mips;PowerPC;SystemZ;JSBackend;MSP430;Sparc;NVPTX;Hexagon"
+#experimental-targets = "WebAssembly;RISCV"
+
+[target.%TARGET%]
+cc = "%CC%"
+cxx = "%CXX%"
+linker = "%CC%"
 
 [dist]
 
 # Do not build the source archive.
 src-tarball = false
-
-[target.%TARGET%]

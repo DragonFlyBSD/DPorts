@@ -1,0 +1,4 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/#if defined(__APPLE__)/& || defined(__DragonFly__)/' \
+		${WRKSRC}/mysql_fdw.c

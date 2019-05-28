@@ -1,0 +1,29 @@
+--- src/build-system/configure.orig	2018-03-22 20:17:49 UTC
++++ src/build-system/configure
+@@ -8123,7 +8123,7 @@ fi
+ case "$host_os:$compiler" in
+   solaris2.10:GCC ) : ${THREAD_LIBS:="-lposix4"} ;;
+   solaris*        ) : ${THREAD_LIBS:="-lpthread -lposix4"} ;;
+-  freebsd*        ) : ${THREAD_LIBS:="-pthread"} ;; # for LMDB in ST builds
++  freebsd*|dragonfly*) : ${THREAD_LIBS:="-pthread"} ;; # for LMDB in ST builds
+   *               ) : ${THREAD_LIBS:="-lpthread"} ;;
+ esac
+ 
+@@ -9665,7 +9665,7 @@ if test "$skip_fast_flags" = no -a -z "$
+       GCC:* )
+         DEF_FAST_FLAGS="-O3 -finline-functions -fstrict-aliasing"
+         case "$host_os:$host_cpu:$compiler_version" in
+-           freebsd* | solaris*:*86*:* | *:4[5-9]? | *:[5-9]?? ) ;;
++           freebsd* | dragonfly* | solaris*:*86*:* | *:4[5-9]? | *:[5-9]?? ) ;;
+            * ) DEF_FAST_FLAGS="$DEF_FAST_FLAGS -ffast-math" ;;
+         esac
+         if test "$with_profiling" != "yes"; then
+@@ -9965,7 +9965,7 @@ LIB_OR_DLL="lib"
+ if test "$with_dll" = "yes" ; then
+    case "$host_os:$compiler" in
+     linux*:GCC | irix*:* | solaris*:WorkShop* | *:KCC | linux*:ICC \
+-    | solaris*:GCC | osf*:* | darwin*:GCC | freebsd*:GCC )
++    | solaris*:GCC | osf*:* | darwin*:GCC | freebsd*:GCC | dragonfly*:GCC)
+       ;;
+     * )
+       echo

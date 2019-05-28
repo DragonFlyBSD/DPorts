@@ -1,0 +1,7 @@
+
+# sed: RE error: invalid byte sequence in ylwrap lexer.en.l
+BUILD_DEPENDS+=	gsed:textproc/gsed
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@[[:<:]]sed[[:>:]]@gsed@g' \
+		${WRKSRC}/ylwrap

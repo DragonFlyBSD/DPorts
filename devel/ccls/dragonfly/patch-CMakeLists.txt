@@ -1,0 +1,14 @@
+--- CMakeLists.txt.orig	2019-03-28 04:21:12 UTC
++++ CMakeLists.txt
+@@ -109,6 +109,11 @@ set(THREADS_PREFER_PTHREAD_FLAG ON)
+ find_package(Threads REQUIRED)
+ target_link_libraries(ccls PRIVATE Threads::Threads)
+ 
++if(${CMAKE_SYSTEM_NAME} STREQUAL DragonFly)
++  find_package(Backtrace REQUIRED)
++  target_link_libraries(ccls PRIVATE ${Backtrace_LIBRARIES})
++endif()
++
+ if(${CMAKE_SYSTEM_NAME} STREQUAL FreeBSD)
+   find_package(Backtrace REQUIRED)
+   target_link_libraries(ccls PRIVATE ${Backtrace_LIBRARIES})

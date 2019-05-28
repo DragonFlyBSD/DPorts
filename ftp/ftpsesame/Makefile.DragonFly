@@ -1,0 +1,5 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@<net/pfvar.h>@<net/pf/pfvar.h>@g' \
+			 -e 's@<net/ppp_defs.h>@<net/ppp_layer/ppp_defs.h>@g' \
+		${WRKSRC}/ftpsesame.c ${WRKSRC}/filter.c ${WRKSRC}/state.c

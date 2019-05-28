@@ -1,0 +1,2 @@
+# actually only for libatomix
+USES+=	alias fortran

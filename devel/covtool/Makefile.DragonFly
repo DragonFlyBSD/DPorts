@@ -1,0 +1,3 @@
+
+dfly-patch:
+	${LN} -sv ${WRKSRC}/rules.FreeBSD ${WRKSRC}/rules.DragonFly

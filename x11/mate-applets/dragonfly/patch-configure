@@ -1,0 +1,11 @@
+--- configure.intermediate	2019-05-26 08:43:44.000000000 +0000
++++ configure
+@@ -16703,7 +16703,7 @@ fi
+ 
+ 	   ;;
+        # list of supported OS cores that do not use libapm
+-       *-*-freebsd*|*-*-netbsd*|*-*-openbsd*|*-*kfreebsd*-gnu)
++       *-*-freebsd*|*-*-netbsd*|*-*-openbsd*|*-*kfreebsd*-gnu|*dragonfly*)
+           if test -n "${OS_SYS}"; then
+ 	       ACPIINC="-I${OS_SYS}"
+ 	   else

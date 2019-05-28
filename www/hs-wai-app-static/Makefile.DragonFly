@@ -1,4 +1,0 @@
-dfly-patch:
-	mv ${WRKSRC}/${PORTNAME}.cabal ${WRKSRC}/${PORTNAME}.cabal.orig
-	awk '{print; if (tolower($$1) == "executable") {print "    extra-libraries: m"}}' \
-		${WRKSRC}/${PORTNAME}.cabal.orig > ${WRKSRC}/${PORTNAME}.cabal

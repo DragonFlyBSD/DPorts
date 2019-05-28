@@ -1,0 +1,20 @@
+--- configure.orig	2015-03-19 00:55:21 UTC
++++ configure
+@@ -19118,7 +19118,7 @@ EOF
+       ;;
+ 
+       powerpc-apple-macos* | \
+-      *-*-freebsd* | *-*-openbsd* | *-*-netbsd* | *-*-gnu* | *-*-k*bsd*-gnu | \
++      *-*-dragonfly* | *-*-freebsd* | *-*-openbsd* | *-*-netbsd* | *-*-gnu* | *-*-k*bsd*-gnu | \
+       *-*-mirbsd* | \
+       *-*-sunos4* | \
+       *-*-osf* | \
+@@ -19159,7 +19159,7 @@ EOF
+     SONAME_FLAG=
+ 
+     case "${BAKEFILE_HOST}" in
+-      *-*-linux* | *-*-freebsd* | *-*-openbsd* | *-*-netbsd* | \
++      *-*-linux* | *-*-dragonfly* | *-*-freebsd* | *-*-openbsd* | *-*-netbsd* | \
+       *-*-k*bsd*-gnu | *-*-mirbsd* | *-*-gnu* )
+         if test "x$SUNCXX" = "xyes"; then
+             SONAME_FLAG="-h "

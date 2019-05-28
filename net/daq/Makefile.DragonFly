@@ -1,0 +1,3 @@
+
+# explicitly disable netmap
+CONFIGURE_ARGS+=	--disable-netmap-module

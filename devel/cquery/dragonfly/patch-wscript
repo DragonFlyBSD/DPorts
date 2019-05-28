@@ -1,0 +1,13 @@
+--- /tmp/wscript	2018-07-10 15:40:31.000000000 +0000
++++ wscript	2019-05-27 18:29:11.000000000 +0000
+@@ -338,6 +338,10 @@ def build(bld):
+     lib.append('pthread')
+     # loguru calls dladdr
+     lib.append('dl')
++  elif sys.platform.startswith('dragonfly'):
++    lib.append('execinfo')
++    lib.append('kvm')
++    lib.append('pthread')
+   elif sys.platform.startswith('freebsd'):
+     # loguru::stacktrace_as_stdstring calls backtrace_symbols
+     lib.append('execinfo')

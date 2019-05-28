@@ -1,4 +1,6 @@
 
+MAKE_ARGS+=	KORE_CURL_LIB="-L${LOCALBASE}/lib -lcurl" KORE_CURL_INC="-I${LOCALBASE}/include"
+
 # zrj: remove clang'ism from MF
 # [-Werror=pointer-compare]
 dfly-patch:

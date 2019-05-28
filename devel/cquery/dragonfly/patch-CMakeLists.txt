@@ -1,0 +1,22 @@
+--- CMakeLists.txt.intermediate	2019-05-27 18:00:09.000000000 +0000
++++ CMakeLists.txt
+@@ -115,6 +115,10 @@ if(${CMAKE_SYSTEM_NAME} STREQUAL Linux)
+   # loguru calls dladdr
+   target_link_libraries(cquery PRIVATE ${CMAKE_DL_LIBS})
+ 
++elseif(${CMAKE_SYSTEM_NAME} STREQUAL DragonFly)
++  find_package(Backtrace REQUIRED)
++  target_link_libraries(cquery PRIVATE ${Backtrace_LIBRARIES} kvm)
++
+ elseif(${CMAKE_SYSTEM_NAME} STREQUAL FreeBSD)
+   # loguru::stacktrace_as_stdstring calls backtrace_symbols
+   # sparsepp/spp_memory.h uses libkvm
+@@ -159,7 +163,7 @@ if(NOT SYSTEM_CLANG)
+   # libclang.[so,dylib]. On Windows we install libclang.dll to the bin directory
+   # to do the same.
+ 
+-  if(${CMAKE_SYSTEM_NAME} MATCHES Linux|FreeBSD)
++  if(${CMAKE_SYSTEM_NAME} MATCHES Linux|DragonFly|FreeBSD)
+     set_property(TARGET cquery APPEND PROPERTY
+                  INSTALL_RPATH $ORIGIN/../lib)
+   elseif(${CMAKE_SYSTEM_NAME} STREQUAL Darwin)

@@ -1,0 +1,21 @@
+--- configure.orig	2018-02-21 14:45:46 UTC
++++ configure
+@@ -4238,6 +4238,18 @@ cpc_default="yes"
+ 
+ good_os="yes"
+ case "$(uname -s)" in
++	DragonFly)
++		{ $as_echo "$as_me:${as_lineno-$LINENO}: *** DragonFly Machine ***" >&5
++$as_echo "$as_me: *** FreeBSD Machine ***" >&6;}
++
++$as_echo "#define UPERF_FREEBSD 1" >>confdefs.h
++
++		good_os="no"
++		sctp_default="no"
++		ssl_default="yes"
++		UPERF_LIBS="$UPERF_LIBS -lrt -lm -pthread"
++		CFLAGS="-D_GNU_SOURCE $CFLAGS"
++		;;
+ 	FreeBSD)
+ 		{ $as_echo "$as_me:${as_lineno-$LINENO}: *** FreeBSD Machine ***" >&5
+ $as_echo "$as_me: *** FreeBSD Machine ***" >&6;}

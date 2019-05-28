@@ -1,0 +1,13 @@
+Fix pkg-plist
+
+--- CMakeLists.txt.orig	2019-05-07 10:16:45 UTC
++++ CMakeLists.txt
+@@ -181,7 +181,7 @@ add_subdirectory(phonon)
+ # This ensures pressing the eject button on a CD drive ejects the disc
+ # It listens to the Solid::OpticalDrive::ejectPressed signal that is only
+ # supported by Solid in the HAL backend and does nothing with UDev
+-if(CMAKE_SYSTEM_NAME MATCHES FreeBSD)
++if(CMAKE_SYSTEM_NAME MATCHES "FreeBSD|DragonFly")
+ add_subdirectory(solidautoeject)
+ endif()
+ 

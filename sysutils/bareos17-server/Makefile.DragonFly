@@ -1,0 +1,6 @@
+
+# exclude for now
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NSCSICRYPTO}
+
+# not ready for ld.gold
+MAKE_ENV+=	LDVER=ld.bfd

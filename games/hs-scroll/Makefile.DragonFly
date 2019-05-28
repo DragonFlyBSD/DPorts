@@ -1,0 +1,7 @@
+USES+=	ncurses
+
+# sigh
+dfly-patch:
+	${REINPLACE_CMD} -e "s@\(-DHSNCURSES_NARROW_HEADER\)@\1 ${CFLAGS}@g" \
+			 -e 's@\(\|\| os(freebsd)\)@\1 || os(dragonfly)@g' \
+		${WRKSRC}/ncurses-0.2.16/ncurses.cabal
