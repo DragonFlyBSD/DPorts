@@ -1,5 +1,5 @@
---- crypt/sha256.c.orig	2016-05-09 09:35:34 UTC
-+++ crypt/sha256.c
+--- compat/crypt/sha256.c.orig	2019-05-04 09:19:02 UTC
++++ compat/crypt/sha256.c
 @@ -28,14 +28,7 @@
  
  #include <string.h>
@@ -14,5 +14,5 @@
 -#endif
 +#include <sys/endian.h>
  
- #include "../common.h"
+ #include "common.h"
  #include "sha256.h"
