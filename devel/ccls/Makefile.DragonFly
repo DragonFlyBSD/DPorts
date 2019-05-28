@@ -1,0 +1,4 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e "/CLANG_EXECUTABLE/s@ clang)@ clang${LLVM_DEFAULT})@g" \
+		${WRKSRC}/CMakeLists.txt
