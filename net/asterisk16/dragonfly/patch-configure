@@ -1,0 +1,21 @@
+--- configure.intermediate	2019-05-28 17:20:06.000000000 +0000
++++ configure
+@@ -4672,7 +4672,7 @@ astlogdir='${localstatedir}/log/asterisk
+ astvarrundir='${localstatedir}/run/asterisk'
+ 
+ case "${host_os}" in
+-     *bsd*)
++     *bsd*|*dragonfly*)
+      if test ${prefix} != 'NONE'; then
+         astvarlibdir='${prefix}/share/asterisk'
+         astdbdir='${localstatedir}/db/asterisk'
+@@ -8385,6 +8385,9 @@ ax_pthread_flags="pthreads none -Kthread
+ 
+ case $host_os in
+ 
++	dragonfly*)
++	ax_pthread_flags="-pthread $ax_pthread_flags"
++	;;
+         freebsd*)
+ 
+         # -kthread: FreeBSD kernel threads (preferred to -pthread since SMP-able)
