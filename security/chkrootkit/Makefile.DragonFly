@@ -1,0 +1,5 @@
+USES+=	alias:11
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
+		${WRKSRC}/chkrootkit
