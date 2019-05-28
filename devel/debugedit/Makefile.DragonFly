@@ -1,0 +1,4 @@
+
+LIB_DEPENDS+=	libelf.so:devel/libelf
+
+CFLAGS+=	-I${LOCALBASE}/include/libelf -L${LOCALBASE}/lib
