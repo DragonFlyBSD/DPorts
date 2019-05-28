@@ -1,0 +1,20 @@
+--- lib/SDLAudio/configure.orig	2007-10-08 15:10:40 UTC
++++ lib/SDLAudio/configure
+@@ -23266,7 +23266,7 @@ fi
+ # causes Carbon.p complaints?
+ #            pthread_cflags="-D_REENTRANT -D_THREAD_SAFE"
+             ;;
+-        *-*-freebsd*)
++        *-*-freebsd*|*-*-dragonfly*)
+             pthread_cflags="-D_REENTRANT -D_THREAD_SAFE"
+             pthread_lib="-pthread"
+             ;;
+@@ -24338,7 +24338,7 @@ case "$target" in
+         # Set up files for the thread library
+         # Set up files for the timer library
+         ;;
+-    *-*-freebsd*)
++    *-*-freebsd*|*-*-dragonfly*)
+         ARCH=freebsd
+ 
+         CheckDiskAudio
