@@ -1,0 +1,5 @@
+
+# On DragonFly base does not have libutempter, so no KPty_HAVE_UTEMPTER
+# plasma5-krited provides exucutable instead
+BUILD_DEPENDS+=	plasma5-kwrited>0:devel/plasma5-kwrited
+RUN_DEPENDS+=	plasma5-kwrited>0:devel/plasma5-kwrited
