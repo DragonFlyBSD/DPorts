@@ -1,6 +1,16 @@
-dfly-patch:
-	@${REINPLACE_CMD} -e 's|cpuset_setaffinity|sched_setaffinity|g' \
+
+# double star rules in version script, disable
+CONFIGURE_ARGS+=	--with-gnu-ld=no
+
+pre-configure-script:
+	${REINPLACE_CMD} -e 's|cpuset_setaffinity|sched_setaffinity|g' \
 		${WRKSRC}/configure
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's|cpuset_setaffinity|sched_setaffinity|g' \
+			 -e "s@WITH_GNU_LD_TRUE=@WITH_GNU_LD_TRUE='#'@g" \
+		${WRKSRC}/configure
+	${TOUCH} ${WRKSRC}/src/api/full_version.map ${WRKSRC}/src/db_api/version.map
 	${REINPLACE_CMD} -e 's|FreeBSD|DragonFly|' \
 		${WRKSRC}/src/common/net.c \
 		${WRKSRC}/src/common/callerid.h \
