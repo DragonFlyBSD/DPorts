@@ -1,0 +1,12 @@
+
+# sigh, just remove -lgfortran
+dfly-patch:
+	${REINPLACE_CMD} -e 's@[[:<:]]isnan[[:>:]]@std::isnan@g' \
+			 -e 's@[[:<:]]isinf[[:>:]]@std::isinf@g' \
+		${WRKSRC}/src/Bolt.cpp \
+		${WRKSRC}/src/Jackknife.cpp \
+		${WRKSRC}/src/LDscoreCalibration.cpp \
+		${WRKSRC}/src/SnpData.cpp \
+		${WRKSRC}/src/StatsUtils.cpp
+	${REINPLACE_CMD} -e 's@ -lgfortran@@g' \
+		${WRKSRC}/src/Makefile
