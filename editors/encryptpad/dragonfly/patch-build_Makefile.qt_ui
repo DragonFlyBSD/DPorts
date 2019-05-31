@@ -1,0 +1,11 @@
+--- build/Makefile.qt_ui.orig	2018-09-16 03:57:30 UTC
++++ build/Makefile.qt_ui
+@@ -7,6 +7,8 @@ include ../deps/makefiles/platform.mak
+ 
+ ifeq ($(PLATFORM),GNULINUX)
+     QMAKE_SPEC := linux-g++
++else ifeq ($(PLATFORM),DRAGONFLY)
++    QMAKE_SPEC := freebsd-g++
+ else ifeq ($(PLATFORM),FREEBSD)
+     QMAKE_SPEC := freebsd-clang
+ else ifeq ($(PLATFORM),MACOS)
