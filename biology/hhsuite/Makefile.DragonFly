@@ -1,0 +1,17 @@
+
+# hack it, port does not support MPI handling properly and MF is missing options.
+.if 1
+CMAKE_ARGS+=	-DMPI:BOOL:CACHED=true -DHAVE_MPI:BOOL:CACHED=true -DMPI_FOUND:BOOL:CACHED=true
+CMAKE_ARGS+=	-DMPI_C_FOUND:BOOL:CACHED=true -DMPI_CXX_FOUND:BOOL:CACHED=true
+CMAKE_ARGS+=	-DMPI_C:STR:CACHED=mpicc -DMPI_CXX:STR:CACHED=mpicxx
+CMAKE_ARGS+=	-DMPI_INCLUDE_PATH:STR:CACHED="${LOCALBASE}/mpi/openmpi/include"
+CMAKE_ARGS+=	-DMPI_C_COMPILE_FLAGS:STR:CACHED="-I${LOCALBASE}/mpi/openmpi/include"
+CMAKE_ARGS+=	-DMPI_CXX_COMPILE_FLAGS:STR:CACHED="-I${LOCALBASE}/mpi/openmpi/include"
+CMAKE_ARGS+=	-DMPI_CXX_LINK_FLAGS:STR:CACHED="-Wl,-rpath,${LOCALBASE}/mpi/openmpi/lib -L${LOCALBASE}/mpi/openmpi/lib -lmpi_cxx -lmpi"
+.endif
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/find_package(MPI QUIET)/d' -e '/find_package(MPI)/d' \
+		${WRKSRC}/src/CMakeLists.txt \
+		${WRKSRC}/lib/ffindex/src/CMakeLists.txt \
+		${WRKSRC}/lib/ffindex/src/mpq/CMakeLists.txt
