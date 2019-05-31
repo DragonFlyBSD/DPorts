@@ -1,0 +1,58 @@
+--- configure.orig	2019-02-10 20:28:05 UTC
++++ configure
+@@ -4466,6 +4466,10 @@ case "$target" in
+          osis64bit=yes
+       fi
+       ;;
++   *-dragonfly*)
++      bitflag="64"
++      osis64bit=yes
++      ;;
+    *nto-qnx*)
+       ;;
+    *qnx*)
+@@ -5114,7 +5118,7 @@ fi
+          fi
+       fi
+                   case "$target" in
+-         *freebsd*)
++         *freebsd*|*dragonfly*)
+             REXX_LIBS="`echo ${REXX_LIBS} | sed -e s/-pthread//`"
+          ;;
+          *)
+@@ -6898,7 +6902,7 @@ $as_echo_n "checking OS distribution nam
+ $as_echo "$MYDISTRO" >&6; }
+ else
+    case "$target" in
+-      *freebsd* | *openbsd*)
++      *freebsd* | *openbsd* | *dragonfly*)
+          MYDISTRO="`echo $target | cut -f3 -d-`"
+       ;;
+       *darwin*)
+@@ -7033,7 +7037,7 @@ case "$target" in
+       LD_RXLIB1="${CC} -shared  ${LDFLAGS}"
+       LD_RXTRANSLIB1="$LD_RXLIB1"
+       ;;
+-   *-freebsd* | *openbsd*)
++   *-freebsd* | *openbsd* | *dragonfly*)
+       if test "$ac_cv_prog_CC" = "gcc"; then
+          LD_RXLIB1="gcc -shared  ${LDFLAGS}"
+          LD_RXTRANSLIB1="$LD_RXLIB1"
+@@ -7328,7 +7332,7 @@ $as_echo_n "checking whether Posix Threa
+    save_cflags="$CFLAGS"
+    pthread_libs="pthreads pthread c_r c"
+    case "$target" in
+-      *freebsd*)
++      *freebsd*|*dragonfly*)
+          CFLAGS="$CFLAGS -pthread"
+          ;;
+    esac
+@@ -7386,7 +7390,7 @@ rm -f core conftest.err conftest.$ac_obj
+                   THREADING_LINK="-lpthread"
+                fi
+                ;;
+-            *freebsd*)
++            *freebsd*|*dragonfly*)
+                THREADING_COMPILE="-pthread -D_REENTRANT -DPOSIX"
+                THREADING_LINK="-pthread"
+                ;;
