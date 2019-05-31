@@ -1,0 +1,11 @@
+--- bin/lint.orig	2019-04-16 20:04:19 UTC
++++ bin/lint
+@@ -136,7 +136,7 @@ then
+     echo ========================================
+     typeset mapping_file=""
+     case "${os_name}" in
+-        Darwin | FreeBSD | OpenBSD )
++        Darwin | FreeBSD | OpenBSD | DragonFly)
+             mapping_file="../etc/iwyu.bsd.map"
+             ;;
+         Linux | CYGWIN* )
