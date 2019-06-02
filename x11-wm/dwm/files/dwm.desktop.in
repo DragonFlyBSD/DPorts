@@ -1,0 +1,7 @@
+# $FreeBSD: head/x11-wm/dwm/files/dwm.desktop.in 502192 2019-05-21 08:01:35Z 0mp $
+[Desktop Entry]
+Name=dwm
+Comment=%%COMMENT%%
+TryExec=dwm
+Exec=dwm
+Type=Application
