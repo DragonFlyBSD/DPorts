@@ -1,13 +1,11 @@
 # Created by: lesi@FreeBSD.org
-# $FreeBSD$
 
 PORTNAME=	libdrm
-PORTVERSION=	2.4.96
-PORTEPOCH=	1
+PORTVERSION=	2.4.98
 CATEGORIES=	graphics x11
 MASTER_SITES=	http://dri.freedesktop.org/libdrm/
 
-MAINTAINER=	x11@FreeBSD.org
+MAINTAINER=	ftigeot@wolfpond.org
 COMMENT=	Userspace interface to kernel Direct Rendering Module services
 
 LICENSE=	MIT
@@ -60,12 +58,6 @@ PLIST_SUB+=	ARM_DRIVERS="@comment "
 PLIST_SUB+=	INTEL_DRIVER="@comment "
 PLIST_SUB+=	NOUVEAU_DRIVER="@comment "
 PLIST_SUB+=	RADEON_DRIVERS="@comment "
-.endif
-
-# This variable is not for users. So use a non-default name, intended for
-# people working on DRM kernel module development.
-.if ${OPSYS} == FreeBSD && !defined(LIBDRM_SKIP_RETURN_PATCH)
-EXTRA_PATCHES+=	${FILESDIR}/extra-xf86drm.c
 .endif
 
 pre-patch:
