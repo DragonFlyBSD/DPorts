@@ -1,8 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	xf86-video-ati
-PORTVERSION=	7.10.0
-PORTEPOCH=	1
+PORTVERSION=	18.0.1
 CATEGORIES=	x11-drivers
 
 MAINTAINER=	ftigeot@wolfpond.org
