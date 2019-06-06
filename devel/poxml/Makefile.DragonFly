@@ -1,0 +1,7 @@
+
+# XXX disable tests until devel/kf5-kdoctools:bin/checkXML5 is fixed
+# checkXML5 /construction/devel/poxml/poxml-19.04.1/tests/lauri.xml
+# QProcess: Destroyed while process ("meinproc5") is still running.
+dfly-patch:
+	${REINPLACE_CMD} -e '/add_subdirectory(tests)/d' \
+		${WRKSRC}/CMakeLists.txt
