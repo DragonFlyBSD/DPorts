@@ -1,0 +1,4 @@
+USES+=	gmake
+
+# MF is missing dep
+BUILD_DEPENDS+=	bash:shells/bash
