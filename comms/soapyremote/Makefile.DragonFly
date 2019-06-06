@@ -1,0 +1,3 @@
+
+# cmake incorrectly checks for <ifaddrs.h> availability
+CFLAGS+=	-DHAS_IFADDRS_H
