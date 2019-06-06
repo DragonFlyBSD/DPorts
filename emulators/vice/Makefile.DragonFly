@@ -1,0 +1,6 @@
+
+BUILD_DEPENDS+=	gsed:textproc/gsed
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@[[:<:]]sed[[:>:]]@gsed@g' \
+		${WRKSRC}/doc/Makefile.in

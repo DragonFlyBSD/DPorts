@@ -1,0 +1,11 @@
+--- configure.orig	2018-12-19 21:25:02 UTC
++++ configure
+@@ -21905,7 +21905,7 @@ else
+ fi
+ 
+     ;;
+-  freebsd*)
++  freebsd*|dragonfly*)
+     VICEDIR="$PREFIX/lib/vice"
+      if true; then
+   ALTERNATE_DOCDIR_TRUE=
