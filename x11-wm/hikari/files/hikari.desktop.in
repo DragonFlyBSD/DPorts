@@ -1,0 +1,7 @@
+# $FreeBSD: head/x11-wm/hikari/files/hikari.desktop.in 502633 2019-05-25 20:51:47Z swills $
+[Desktop Entry]
+Type=XSession
+Name=Hikari
+Comment=%%COMMENT%%
+TryExec=%%PREFIX%%/bin/hikari
+Exec=%%PREFIX%%/bin/hikari
