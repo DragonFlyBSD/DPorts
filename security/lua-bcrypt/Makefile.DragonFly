@@ -1,0 +1,4 @@
+USES+=	alias ssl
+
+CFLAGS+=	-I${OPENSSLINC}
+LDFLAGS+=	-L${OPENSSLLIB}
