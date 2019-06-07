@@ -1,0 +1,14 @@
+
+# MF does not handle all target properly, fill in the blanks
+CONFIGURE_ENV+=	QMAKESPEC=${QMAKESPEC}
+ALL_TARGET=	wpa_gui-qt4-build
+CFLAGS+=	-Dfdatasync=fsync
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@wpa_gui-qt4:@wpa_gui-qt4-build:@g' \
+		${WRKSRC}/Makefile
+
+# until it gets rewritten from qt4 to qt5
+dfly-configure:
+	(cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${LRELEASE} wpa_gui-qt4/wpa_gui.pro)
+
