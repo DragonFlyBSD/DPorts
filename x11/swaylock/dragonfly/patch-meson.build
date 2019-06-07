@@ -1,0 +1,11 @@
+--- meson.build.intermediate	2019-06-02 19:16:07.000000000 +0000
++++ meson.build
+@@ -25,7 +25,7 @@ cc = meson.get_compiler('c')
+ 
+ sysconfdir = get_option('sysconfdir')
+ prefix = get_option('prefix')
+-is_freebsd = host_machine.system().startswith('freebsd')
++is_freebsd = host_machine.system().startswith('freebsd') or host_machine.system().startswith('dragonfly')
+ 
+ add_project_arguments(
+ 	'-DSYSCONFDIR="/@0@"'.format(join_paths(prefix, sysconfdir)),
