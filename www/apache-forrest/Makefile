@@ -5,7 +5,7 @@ PORTNAME=		apache-forrest
 PORTVERSION=		0.9
 PORTREVISION=		0
 CATEGORIES=		www java
-MASTER_SITES=		SITE_APACHE/forrest
+MASTER_SITES=		APACHE/forrest
 DISTFILES=		${DISTNAME}-sources.tar.gz \
 			${DISTNAME}-dependencies.tar.gz
 
