@@ -1,0 +1,5 @@
+
+# work around untested MF chages
+dfly-patch:
+	${REINPLACE_CMD} -e '/require_otp_vsn/s@19|20"}@19|20|21"}@g' \
+		${WRKSRC}/rebar.config
