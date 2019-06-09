@@ -1,1 +1,2 @@
+USES+=	alias
 CFLAGS+=	-Wno-narrowing
