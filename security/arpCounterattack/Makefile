@@ -12,7 +12,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Detects and remedies ARP attacks
 
 LIB_DEPENDS=	libdnet.so:net/libdnet \
-		libpcap.so:net/libpcap
+		
 
 USES=		compiler:c++11-lib tar:tbz
 USE_CSTD=	c++11
