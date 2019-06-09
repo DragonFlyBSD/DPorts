@@ -1,0 +1,4 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-fsanitize=address@-fsanitize_not@' \
+		${WRKSRC}/configure
