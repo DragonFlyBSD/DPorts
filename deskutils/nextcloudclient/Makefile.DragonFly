@@ -1,0 +1,6 @@
+USES+=	localbase:ldflags
+
+# nuke version check
+dfly-patch:
+	${REINPLACE_CMD} -e '/find_package/s@(OpenSSL 1.1 REQUIRED )@(OpenSSL REQUIRED )@g' \
+		${WRKSRC}/CMakeLists.txt

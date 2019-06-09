@@ -1,0 +1,16 @@
+--- src/libsync/CMakeLists.txt.orig	2019-02-07 01:52:13 UTC
++++ src/libsync/CMakeLists.txt
+@@ -9,11 +9,11 @@ if ( APPLE )
+     )
+ endif()
+ 
+-IF(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD|NetBSD|OpenBSD")
++IF(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD|NetBSD|OpenBSD|DragonFly")
+     list(APPEND OS_SPECIFIC_LINK_LIBRARIES
+ 	inotify
+     )
+-ENDIF(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD|NetBSD|OpenBSD")
++ENDIF(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD|NetBSD|OpenBSD|DragonFly")
+ 
+ if(SPARKLE_FOUND AND NOT BUILD_LIBRARIES_ONLY)
+     list (APPEND OS_SPECIFIC_LINK_LIBRARIES ${SPARKLE_LIBRARY})
