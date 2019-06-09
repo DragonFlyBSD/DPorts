@@ -1,0 +1,3 @@
+
+# add missing ncurses in MF
+USES+=	ncurses
