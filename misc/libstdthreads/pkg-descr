@@ -1,0 +1,4 @@
+This library implements the C11 threads interface on top of the pthreads
+library outside libc scope to avoid having to merge libpthread into libc.
+It is very unlikely that these functions will be used a lot in the future and
+could be deprecated in future C STD revisions for a subset of pthread API.
