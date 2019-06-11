@@ -1,0 +1,5 @@
+
+# zrj: pkg-static: lstat(/construction/audio/hts_engine-API/stage/usr/local/share/licenses/hts_engine-API-1.10/): No such file or directory
+PLIST= ${WRKDIR}/fixed-plist
+dfly-patch:
+	${CAT} ${.CURDIR}/pkg-plist | ${SED} -e '/@dir share\/licenses\/hts_engine-API/d' > ${PLIST}
