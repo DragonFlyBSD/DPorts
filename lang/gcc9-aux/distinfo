@@ -1,0 +1,7 @@
+TIMESTAMP = 1559256312
+SHA256 (gcc-9.1.0.tar.xz) = 79a66834e96a6050d8fe78db2c3b32fb285b230b855d0a66288235bc04b327a0
+SIZE (gcc-9.1.0.tar.xz) = 70546856
+SHA256 (ada-bootstrap.x86_64.dragonfly.55.tar.bz2) = aba76dd10c97193d52dc9894ff4a853410341b22f7fc3000b169b592d9aec631
+SIZE (ada-bootstrap.x86_64.dragonfly.55.tar.bz2) = 52327525
+SHA256 (ada-bootstrap.x86_64.dragonfly.41.tar.bz2) = eb7785d8b842aee2bb04b43adfb1346b178ee4e83d8775b4e6705fd23f1586f0
+SIZE (ada-bootstrap.x86_64.dragonfly.41.tar.bz2) = 44956630

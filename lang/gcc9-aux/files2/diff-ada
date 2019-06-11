@@ -1,0 +1,33 @@
+--- gcc/ada/gnatchop.adb.orig	2019-01-08 09:54:04 UTC
++++ gcc/ada/gnatchop.adb
+@@ -44,7 +44,7 @@ procedure Gnatchop is
+    Config_File_Name : constant String_Access := new String'("gnat.adc");
+    --  The name of the file holding the GNAT configuration pragmas
+ 
+-   Gcc : String_Access := new String'("gcc");
++   Gcc : String_Access := new String'("ada");
+    --  May be modified by switch --GCC=
+ 
+    Gcc_Set : Boolean := False;
+--- gcc/ada/gnatlink.adb.orig	2019-01-08 09:54:04 UTC
++++ gcc/ada/gnatlink.adb
+@@ -136,7 +136,7 @@ procedure Gnatlink is
+    --  This table collects the arguments to be passed to compile the binder
+    --  generated file.
+ 
+-   Gcc : String_Access := Program_Name ("gcc", "gnatlink");
++   Gcc : String_Access := Program_Name ("ada", "gnatlink");
+ 
+    Read_Mode : constant String := "r" & ASCII.NUL;
+ 
+--- gcc/ada/make.adb.orig	2019-01-08 09:54:04 UTC
++++ gcc/ada/make.adb
+@@ -445,7 +445,7 @@ package body Make is
+    -- Compiler, Binder & Linker Data and Subprograms --
+    ----------------------------------------------------
+ 
+-   Gcc      : String_Access := Program_Name ("gcc", "gnatmake");
++   Gcc      : String_Access := Program_Name ("ada", "gnatmake");
+    Gnatbind : String_Access := Program_Name ("gnatbind", "gnatmake");
+    Gnatlink : String_Access := Program_Name ("gnatlink", "gnatmake");
+    --  Default compiler, binder, linker programs
