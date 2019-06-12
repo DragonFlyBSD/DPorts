@@ -1,0 +1,11 @@
+--- CMakeLists.txt.intermdiate	2019-06-11 09:36:34.000000000 +0000
++++ CMakeLists.txt
+@@ -40,7 +40,7 @@ elseif(UNIX)
+         set(OPENBSD TRUE)
+     elseif(CMAKE_SYSTEM_NAME MATCHES "kNetBSD.*|NetBSD.*")
+         set(NETBSD TRUE)
+-    elseif(CMAKE_SYSTEM_NAME MATCHES "kFreeBSD.*|FreeBSD")
++    elseif(CMAKE_SYSTEM_NAME MATCHES "kFreeBSD.*|FreeBSD|DragonFly")
+         set(FREEBSD TRUE)
+     endif()
+ endif()
