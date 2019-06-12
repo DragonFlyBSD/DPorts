@@ -1,0 +1,11 @@
+--- configure.orig	2013-02-27 09:04:56 UTC
++++ configure
+@@ -7,7 +7,7 @@ ETCDIR=`grep "^ETCDIR = " .default | awk
+ 
+ BSD=0
+ UNAME="`uname`"
+-if [ "$UNAME" = "FreeBSD" -o "$UNAME" = "OpenBSD" -o "$UNAME" = "NetBSD" ]; then
++if [ "$UNAME" = "FreeBSD" -o "$UNAME" = "OpenBSD" -o "$UNAME" = "NetBSD" -o "$UNAME" = "DragonFly" ]; then
+ 	BSD=1
+ fi
+ 

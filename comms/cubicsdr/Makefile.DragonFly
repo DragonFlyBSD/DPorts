@@ -1,0 +1,10 @@
+USES+=	alias
+
+CMAKE_ARGS+=	-DUSE_AUDIO_PULSE:BOOL=OFF -DUSE_AUDIO_ALSA:BOOL=ON
+
+# no pulse
+LIB_DEPENDS:=	${LIB_DEPENDS:Nlibpulse*}
+
+LIB_DEPENDS+=	libasound.so:audio/alsa-lib
+RUN_DEPENDS+=	${LOCALBASE}/lib/alsa-lib/libasound_module_pcm_oss.so:audio/alsa-plugins
+RUN_DEPENDS+=	alsa-lib>=1.1.1_1:audio/alsa-lib

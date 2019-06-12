@@ -1,0 +1,17 @@
+--- Makefile.orig	2019-05-05 14:58:33 UTC
++++ Makefile
+@@ -113,12 +113,14 @@ ifeq ($(UNAME),Darwin)
+ endif
+ 
+ ifneq (Windows,$(UNAME))
++	ifneq (DragonFly,$(UNAME))
+ 	ifneq (FreeBSD,$(UNAME))
+ 		ifneq (OpenBSD,$(UNAME))
+ 			LDFLAGS += -ldl
+ 			LDLIBS += -ldl
+ 		endif
+ 	endif
++	endif
+ endif
+ 
+ ifneq ($(BUILD),shared)

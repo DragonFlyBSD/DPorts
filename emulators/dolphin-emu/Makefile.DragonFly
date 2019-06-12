@@ -1,0 +1,10 @@
+USES+=	alias localbase:ldflags
+
+# no pulse
+LIB_DEPENDS:=	${LIB_DEPENDS:Nlibpulse*}
+
+LIB_DEPENDS+=	libasound.so:audio/alsa-lib
+RUN_DEPENDS+=	${LOCALBASE}/lib/alsa-lib/libasound_module_pcm_oss.so:audio/alsa-plugins
+RUN_DEPENDS+=	alsa-lib>=1.1.1_1:audio/alsa-lib
+
+CMAKE_ARGS+=	-DENABLE_ALSA:BOOL=ON -DENABLE_PULSEAUDIO:BOOL=OFF

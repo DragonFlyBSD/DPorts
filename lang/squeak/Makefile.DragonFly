@@ -1,0 +1,20 @@
+
+# no pulse
+LIB_DEPENDS:=	${LIB_DEPENDS:Nlibpulse*}
+
+# Package 'dbus-1', required by 'virtual:world', not found
+LIB_DEPENDS+=    libdbus-1.so:devel/dbus
+
+PLIST= ${WRKDIR}/pulseless-plist
+
+# gut it out
+dfly-patch:
+	${REINPLACE_CMD} -e 's@__FreeBSD__@__DragonFly__@g' \
+		${WRKSRC}/Cross/plugins/SqueakFFIPrims/sqFFIPlugin.c \
+		${WRKSRC}/unix/plugins/CameraPlugin/sqCamera-linux.c
+	${RM} -rf "${WRKSRC}/unix/vm-sound-pulse"
+	${REINPLACE_CMD} -e '/"pulse"/d' \
+		${WRKSRC}/unix/vm/sqUnixMain.c
+	${REINPLACE_CMD} -e 's@pulseaudio --check@/usr/bin/false@g' \
+		${WRKSRC}/unix/cmake/squeak.in
+	${CAT} ${.CURDIR}/pkg-plist | ${SED} -e '/so.vm-sound-pulse/d' > ${PLIST}

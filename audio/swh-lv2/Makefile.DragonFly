@@ -1,0 +1,5 @@
+
+# attempt to fix pkg-plist missing ${OPSYS}
+PLIST=	${WRKDIR}/dfly-plist
+dfly-patch:
+	${CAT} ${.CURDIR}/pkg-plist | ${SED} -e 's@FreeBSD@DragonFly@g' > ${PLIST}

@@ -1,0 +1,7 @@
+USES+=	alias
+
+CXXFLAGS+=	-fpermissive
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@freebsd@dragonfly@g' \
+		${WRKSRC}/makefile

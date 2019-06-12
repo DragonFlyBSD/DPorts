@@ -1,0 +1,10 @@
+
+# no pulse
+LIB_DEPENDS:=	${LIB_DEPENDS:Nlibpulse*}
+
+# gut it out
+dfly-patch:
+	${REINPLACE_CMD} -e '/libpulse-simple/d' \
+			 -e "s@'src/pulse.cpp',@@g" \
+			 -e 's@ pulse,@@g' \
+		${WRKSRC}/meson.build

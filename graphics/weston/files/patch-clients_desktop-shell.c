@@ -1,6 +1,6 @@
 --- clients/desktop-shell.c.orig	2015-10-03 11:39:49 +0200
 +++ clients/desktop-shell.c
-@@ -34,8 +34,6 @@
+@@ -34,11 +34,10 @@
  #include <math.h>
  #include <cairo.h>
  #include <sys/wait.h>
@@ -9,7 +9,11 @@
  #include <linux/input.h>
  #include <libgen.h>
  #include <ctype.h>
-@@ -122,7 +120,7 @@
++#include <signal.h>
+ #include <time.h>
+ 
+ #include <wayland-client.h>
+@@ -122,7 +121,7 @@ struct panel_clock {
  	struct widget *widget;
  	struct panel *panel;
  	struct task clock_task;
@@ -18,7 +22,7 @@
  };
  
  struct unlock_dialog {
-@@ -187,7 +185,7 @@
+@@ -187,7 +186,7 @@ panel_launcher_activate(struct panel_lau
  
  	pid = fork();
  	if (pid < 0) {
@@ -27,7 +31,7 @@
  		return;
  	}
  
-@@ -196,7 +194,8 @@
+@@ -196,7 +195,8 @@ panel_launcher_activate(struct panel_lau
  
  	argv = widget->argv.data;
  	if (execve(argv[0], argv, widget->envp.data) < 0) {
@@ -37,7 +41,7 @@
  		exit(1);
  	}
  }
-@@ -333,14 +332,12 @@
+@@ -333,14 +333,12 @@ panel_launcher_touch_up_handler(struct w
  }
  
  static void
@@ -54,7 +58,7 @@
  	widget_schedule_redraw(clock->widget);
  }
  
-@@ -385,16 +382,9 @@
+@@ -385,16 +383,9 @@ panel_clock_redraw_handler(struct widget
  static int
  clock_timer_reset(struct panel_clock *clock)
  {
@@ -73,7 +77,7 @@
  
  	return 0;
  }
-@@ -404,7 +394,7 @@
+@@ -404,7 +395,7 @@ panel_destroy_clock(struct panel_clock *
  {
  	widget_destroy(clock->widget);
  
@@ -82,7 +86,7 @@
  
  	free(clock);
  }
-@@ -413,22 +403,14 @@
+@@ -413,22 +404,14 @@ static void
  panel_add_clock(struct panel *panel)
  {
  	struct panel_clock *clock;
@@ -107,7 +111,7 @@
  	clock_timer_reset(clock);
  
  	clock->widget = widget_add_widget(panel->widget, clock);
-@@ -900,8 +882,9 @@
+@@ -900,8 +883,9 @@ unlock_dialog_destroy(struct unlock_dial
  }
  
  static void
@@ -118,7 +122,7 @@
  	struct desktop *desktop =
  		container_of(task, struct desktop, unlock_task);
  
-@@ -1029,7 +1012,7 @@
+@@ -1029,7 +1013,7 @@ background_create(struct desktop *deskto
  	weston_config_section_get_string(s, "background-type",
  					 &type, "tile");
  	if (type == NULL) {
@@ -127,7 +131,7 @@
  		exit(EXIT_FAILURE);
  	}
  
-@@ -1309,7 +1292,8 @@
+@@ -1309,7 +1293,8 @@ int main(int argc, char *argv[])
  
  	desktop.display = display_create(&argc, argv);
  	if (desktop.display == NULL) {

@@ -1,0 +1,10 @@
+--- lukefile.orig	2018-02-21 02:29:31 UTC
++++ lukefile
+@@ -9,6 +9,7 @@ defines  = {
+    platforms    = {
+       aix       = {_ALL_SOURCE       = 1},
+       bsd       = {_BSD_SOURCE       = 1},
++      dragonfly = {__BSD_VISIBLE     = 1},
+       freebsd   = {__BSD_VISIBLE     = 1},
+       macosx    = {_DARWIN_C_SOURCE  = 1},
+       -- QNX is only POSIX 2001, but _XOPEN_SOURCE turns off other functions

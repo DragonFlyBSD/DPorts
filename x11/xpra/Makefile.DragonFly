@@ -1,0 +1,10 @@
+
+# no pulse
+RUN_DEPENDS:=	${RUN_DEPENDS:N*gstreamer1-plugins-pulse}
+
+# attempt to fix plist
+PLIST= ${WRKDIR}/zero-plist
+
+# gut it out
+dfly-patch:
+	${CAT} ${.CURDIR}/pkg-plist | ${SED} -e '/zeroconf/d' > ${PLIST}

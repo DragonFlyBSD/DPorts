@@ -1,0 +1,5 @@
+
+# can not find gdal LICENSE
+dfly-patch:
+	${LN} -sv ${WRKSRC}/doc/licensing/freebsd-licensing.cmake ${WRKSRC}/doc/licensing/dragonfly-licensing.cmake
+	${REINPLACE_CMD} -e '/third_party_components gdal/d' ${WRKSRC}/doc/licensing/CMakeLists.txt

@@ -1,0 +1,3 @@
+
+# either local cflags or HIKARI_USE_COMPAT_QUEUE
+CFLAGS+=	-DHIKARI_USE_COMPAT_QUEUE

@@ -5,6 +5,25 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20190522:
+  AFFECTS: users of sysutils/graylog
+  AUTHOR: dch@FreeBSD.org
+
+  The port has been updated to the latest stable version 3.0.2, which
+  includes more plugins by default, but also requires manual changes to
+  graylog's configuration files, possibly port and URL changes, such as
+  X-Graylog-Server-URL settings, and elasticsearch must be >= 5.
+
+  The location of configuration files has been amended to align with the
+  official distribution files and locations.
+
+  After upgrading, manually review and merge changes from your
+  /usr/local/etc/graylog/server/server.conf into
+  /usr/local/etc/graylog/graylog.conf
+
+  Consult https://www.graylog.org/post/announcing-graylog-v3-0-ga for
+  further details.
+
 20190506:
   AFFECTS: users of www/gitea
   AUTHOR: stb@lassitu.de
@@ -1155,17 +1174,4 @@ you update your ports collection, before attempting any port upgrades.
   If one has entries for them in the Gnome Control Center or in
   ibus-setup, one needs to remove these old entries and add the new
   engine name "Other (Typing Booster)".
-
-20180518:
-  AFFECTS: users of sysutils/ansible*
-  AUTHOR: lifanov@FreeBSD.org
-
-  Ansible ports are now flavored. Package names for Ansible changed
-  to include python version. Poudriere and package users don't need
-  to do anything.
-
-  To rename an installed package to match the new naming scheme,
-  for example, for ansible24, run:
-
-   # pkg set -n ansible24:py27-ansible24
 

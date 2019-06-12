@@ -1,3 +1,6 @@
+
+# this needs to be updated, but current available bootstrap is good enough.
+.if defined(BOOTSTRAP_GENERATING_DFLY)
 BSPKGLOC?=	undefined
 DESTINO?=	/tmp
 BSNAME?=	${PKGNAME}-boot-${ARCH}-${OPSYS:tl}.tar.xz
@@ -35,4 +38,5 @@ bootstrap-package:
 	@${ECHO} packing new bootstrap.
 	@(cd ${BSWRKAREA} && ${TAR} -cJf ${BSNAME} ${PKGNAME}-boot)
 	@${ECHO} the new bootstrap is here: ${BSWRKAREA}/${BSNAME}
+.endif
 .endif

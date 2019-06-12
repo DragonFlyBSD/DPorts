@@ -5,6 +5,7 @@ PORTNAME=	TclExpat
 PORTVERSION=	1.1
 PORTREVISION=	7
 CATEGORIES=	textproc tcl
+MASTER_SITES=	https://broken_for_developer_mode.z/
 #MASTER_SITES=	http://T32.TecNik93.com/FreeBSD/others_ports/${PORTNAME}/sources/
 
 MAINTAINER=	mi@aldan.algebra.com

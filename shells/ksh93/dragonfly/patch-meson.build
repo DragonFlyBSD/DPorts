@@ -1,0 +1,11 @@
+--- meson.build.orig	2019-04-16 20:04:19 UTC
++++ meson.build
+@@ -228,7 +228,7 @@ feature_data.set_quoted('HOSTTYPE', host
+ feature_data.set_quoted('OSNAME', osname)
+ 
+ # Some systems, like FreeBSD, have a different signature for the fts_open() comparison function.
+-feature_data.set10('const_const_fts_open', osname == 'freebsd' or osname == 'cygwin')
++feature_data.set10('const_const_fts_open', osname == 'freebsd' or osname == 'dragonfly' or osname == 'cygwin')
+ # On Cygwin we can't use socketpair() for pipes.
+ feature_data.set10('_pipe_socketpair', osname != 'cygwin')
+ 

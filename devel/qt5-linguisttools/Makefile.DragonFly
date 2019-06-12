@@ -1,0 +1,9 @@
+
+# zrj: subsitute correct full spec pathname, at least it is not fatally random... m_hostBuild
+# QProcess: Destroyed while process ("/usr/local/lib/qt5/bin/qmake") is still running.
+# lupdate warning: no TS files specified. Only diagnostics will be produced for 'blah.pro'.
+# WARNING: Project ERROR: Could not find feature force_asserts.
+dfly-patch:
+	${REINPLACE_CMD} -e "s@dragonfly-g++@${QMAKESPEC}@g" \
+			 -e "s@QT_LIBDIR@${QT_LIBDIR}@g" \
+		${WRKSRC}/src/linguist/shared/qmakeevaluator.cpp

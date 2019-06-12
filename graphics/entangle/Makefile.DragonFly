@@ -1,0 +1,4 @@
+USES+= alias
+
+# not ready for ld.gold, missing -lgstbase for gst_base_src_get_type
+MAKE_ENV+=	LDVER=ld.bfd

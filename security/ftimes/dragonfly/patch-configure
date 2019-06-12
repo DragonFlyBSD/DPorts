@@ -1,0 +1,11 @@
+--- configure.intermediate	2019-06-08 10:16:11.000000000 +0000
++++ configure
+@@ -2467,7 +2467,7 @@ $as_echo "#define USE_AP_SNPRINTF 1" >>c
+   ap_srcs="ap_snprintf.c"
+   ap_incs="ap_snprintf.h"
+   ;;
+-*bsd*)
++*bsd*|dragonfly*)
+   OS_CFLAGS="-DUNIX"
+ 
+ $as_echo "#define FTimes_BSD 1" >>confdefs.h

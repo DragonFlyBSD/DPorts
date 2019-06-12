@@ -1,0 +1,3 @@
+
+# missing dep
+BUILD_DEPENDS+=	dtc>0:sysutils/dtc

@@ -1,3 +1,3 @@
-TIMESTAMP = 1556961147
-SHA256 (xorg/driver/xf86-video-ati-7.10.0.tar.bz2) = ee51d642e3105cb5424f02622dc2966b87b42d498bb34104a70fcf6d4a8f4e79
-SIZE (xorg/driver/xf86-video-ati-7.10.0.tar.bz2) = 876442
+TIMESTAMP = 1559201331
+SHA256 (xorg/driver/xf86-video-ati-18.0.1.tar.bz2) = 72ea3b8127d4550b64f797457f5a7851a541fa4ee2cc3f345b6c1886b81714a0
+SIZE (xorg/driver/xf86-video-ati-18.0.1.tar.bz2) = 881457

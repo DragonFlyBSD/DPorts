@@ -1,0 +1,28 @@
+From 572b93d7080f1c089b8c236ad0bc932859e2712d Mon Sep 17 00:00:00 2001
+From: Eric Engestrom <eric.engestrom@intel.com>
+Date: Tue, 11 Dec 2018 12:05:40 +0000
+Subject: [PATCH] drm-atomic: fix allocation size
+
+`props_info` happens to be of type `drmModePropertyRes **` so
+`sizeof(props_info) == sizeof(*props_info)`, so we didn't notice, but
+the compiler did.
+
+Signed-off-by: Eric Engestrom <eric.engestrom@intel.com>
+---
+ drm-atomic.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+--- drm-atomic.c.orig
++++ drm-atomic.c
+@@ -391,7 +391,7 @@ const struct drm * init_drm_atomic(const char *device)
+ 			return NULL;						\
+ 		}								\
+ 		drm.type->props_info = calloc(drm.type->props->count_props,	\
+-				sizeof(drm.type->props_info));			\
++				sizeof(*drm.type->props_info));			\
+ 		for (i = 0; i < drm.type->props->count_props; i++) {		\
+ 			drm.type->props_info[i] = drmModeGetProperty(drm.fd,	\
+ 					drm.type->props->props[i]);		\
+-- 
+2.21.0
+

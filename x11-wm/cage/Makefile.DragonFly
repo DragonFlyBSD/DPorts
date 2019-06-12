@@ -1,0 +1,6 @@
+
+# ISO C99 requires at leas one argument for "..."
+CFLAGS+=	-Wno-error=format-extra-args
+dfly-patch:
+	${REINPLACE_CMD} -e 's@c_std=c11@c_std=gnu11@g' \
+		${WRKSRC}/meson.build

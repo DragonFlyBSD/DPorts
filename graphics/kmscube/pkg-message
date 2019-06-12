@@ -1,0 +1,2 @@
+The kmscube is intended to be ran as root after manually loaded drm drivers.
+Run kldload i915 or kldload radeon. Only for testing drm kernel drivers.

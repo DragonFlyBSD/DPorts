@@ -1,0 +1,14 @@
+--- Makefile.orig	2019-03-02 21:05:03 UTC
++++ Makefile
+@@ -4,6 +4,11 @@ CPPFLAGS+=-O2 -std=gnu++11 -I. -DNDEBUG
+ LDFLAGS+=-levent -lstdc++ -lssl -lcrypto
+ 
+ uname_S := $(shell sh -c 'uname -s 2>/dev/null || echo not')
++ifeq ($(uname_S),DragonFly)
++  LIBEVENT_HOME=/usr/local
++  CPPFLAGS+=-I${LIBEVENT_HOME}/include
++  LDFLAGS+=-L${LIBEVENT_HOME}/lib
++endif
+ ifeq ($(uname_S),FreeBSD)
+   CXX=clang++
+   LIBEVENT_HOME=/usr/local

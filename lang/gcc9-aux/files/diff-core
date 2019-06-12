@@ -1,0 +1,79 @@
+--- gcc/config/dragonfly.h.orig	2019-01-01 12:31:55 UTC
++++ gcc/config/dragonfly.h
+@@ -84,13 +84,13 @@
+    } \
+    %{static:-Bstatic} \
+   } \
+-  %{!static:--hash-style=gnu} \
++  %{!static:--hash-style=gnu --enable-new-dtags -rpath @PREFIX@/@GCCAUX@/lib} \
+   %{symbolic:-Bsymbolic}"
+ 
+ #undef  LINK_SPEC
+ #define LINK_SPEC DFBSD_LINK_SPEC
+ 
+-#define DFBSD_DYNAMIC_LINKER "/usr/libexec/ld-elf.so.2"
++#define DFBSD_DYNAMIC_LINKER "/libexec/ld-elf.so.2"
+ 
+ 
+ /* Use --as-needed -lgcc_s for eh support.  */
+--- gcc/Makefile.in.orig	2019-04-25 14:32:16 UTC
++++ gcc/Makefile.in
+@@ -1225,7 +1225,6 @@ OBJS = \
+ 	insn-emit.o \
+ 	insn-extract.o \
+ 	insn-latencytab.o \
+-	insn-modes.o \
+ 	insn-opinit.o \
+ 	insn-output.o \
+ 	insn-peep.o \
+@@ -1637,6 +1636,7 @@ ALL_HOST_BACKEND_OBJS = $(GCC_OBJS) $(OB
+   $(OBJS-libcommon-target) main.o c-family/cppspec.o \
+   $(COLLECT2_OBJS) $(EXTRA_GCC_OBJS) $(GCOV_OBJS) $(GCOV_DUMP_OBJS) \
+   $(GCOV_TOOL_OBJS) $(GENGTYPE_OBJS) gcc-ar.o gcc-nm.o gcc-ranlib.o \
++  insn-modes.o insn-modes-ada.o \
+   lto-wrapper.o collect-utils.o
+ 
+ # for anything that is shared use the cc1plus profile data, as that
+@@ -1652,6 +1652,11 @@ endif
+ ALL_HOST_OBJS = $(ALL_HOST_FRONTEND_OBJS) $(ALL_HOST_BACKEND_OBJS)
+ 
+ BACKEND = libbackend.a main.o libcommon-target.a libcommon.a \
++	insn-modes.o \
++	$(CPPLIB) $(LIBDECNUMBER)
++
++BACKEND2 = libbackend.a main.o libcommon-target.a libcommon.a \
++	insn-modes-ada.o \
+ 	$(CPPLIB) $(LIBDECNUMBER)
+ 
+ # This is defined to "yes" if Tree checking is enabled, which roughly means
+@@ -2362,6 +2367,7 @@ s-genrtl-h: build/gengenrtl$(build_exeex
+ 
+ insn-modes.c: s-modes; @true
+ insn-modes.h: s-modes-h; @true
++insn-modes-ada.c: s-modes-ada; @true
+ insn-modes-inline.h: s-modes-inline-h; @true
+ min-insn-modes.c: s-modes-m; @true
+ 
+@@ -2386,6 +2392,12 @@ s-modes-m: build/genmodes$(build_exeext)
+ 	$(SHELL) $(srcdir)/../move-if-change tmp-min-modes.c min-insn-modes.c
+ 	$(STAMP) s-modes-m
+ 
++s-modes-ada: s-modes
++	$(shell sed -e 's/: TARGET_96_ROUND_53_LONG_DOUBLE \? &ieee_extended_intel_96_round_53_format //' \
++		< insn-modes.c > tmp-modes-ada.c)
++	$(SHELL) $(srcdir)/../move-if-change tmp-modes-ada.c insn-modes-ada.c
++	$(STAMP) s-modes-ada
++
+ insn-preds.c: s-preds; @true
+ tm-preds.h: s-preds-h; @true
+ tm-constrs.h: s-constrs-h; @true
+@@ -3617,6 +3629,9 @@ install-driver: installdirs xgcc$(exeext
+ 	    ( cd $(DESTDIR)$(bindir) && \
+ 	      $(LN) $(GCC_INSTALL_NAME)$(exeext) $(FULL_DRIVER_NAME) ); \
+ 	  fi; \
++	  if [ -f gnat1$(exeext) ] ; then \
++	    ( cd $(DESTDIR)$(bindir) && $(LN) $(GCC_INSTALL_NAME)$(exeext) ada$(exeext) ) \
++	  fi; \
+ 	  if [ ! -f gcc-cross$(exeext) ] \
+ 	      && [ "$(GCC_INSTALL_NAME)" != "$(GCC_TARGET_INSTALL_NAME)" ]; then \
+ 	    rm -f $(DESTDIR)$(bindir)/$(target_noncanonical)-gcc-tmp$(exeext); \

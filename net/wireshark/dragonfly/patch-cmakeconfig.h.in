@@ -1,0 +1,14 @@
+Add missing cmake define from ConfigureChecks.cmake
+
+--- cmakeconfig.h.in.orig	2019-05-22 17:29:46 UTC
++++ cmakeconfig.h.in
+@@ -299,6 +299,9 @@
+ /* Define to 1 if you have the <sys/ioctl.h> header file. */
+ #cmakedefine HAVE_SYS_IOCTL_H 1
+ 
++/* Define to 1 if you have the <sys/select.h> header file. */
++#cmakedefine HAVE_SYS_SELECT_H 1
++
+ /* Define to 1 if you have the <sys/socket.h> header file. */
+ #cmakedefine HAVE_SYS_SOCKET_H 1
+ 

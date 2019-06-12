@@ -1,0 +1,8 @@
+
+# no pulse
+LIB_DEPENDS:=	${LIB_DEPENDS:Nlibpulse*}
+
+# remove pulse components
+PLIST= ${WRKDIR}/pulseless-plist
+dfly-patch:
+	${CAT} ${.CURDIR}/pkg-plist | ${SED} -e '/PulseAudioPCMOutputDriver.h/d' > ${PLIST}

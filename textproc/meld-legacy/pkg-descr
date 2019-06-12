@@ -1,0 +1,9 @@
+Meld-legacy is a GNOME2 visual diff and merge tool from way back when.
+Main difference is that it has fallback to save/read settings from users
+home dir .config/meld/meldrc.ini if dbus is not available on the system.
+The diff viewer lets you edit files in place (diffs update dynamically),
+and a middle column shows detailed changes and allows merges.
+The margins show location of changes for easy navigation, and it also
+features a tabbed interface that allows you to open many diffs at once.
+
+WWW: http://meldmerge.org/

@@ -1,0 +1,8 @@
+
+# no pulse
+LIB_DEPENDS:=	${LIB_DEPENDS:Nlibpulse*}
+
+PLIST= ${WRKDIR}/pulseless-plist
+# gut it out
+dfly-patch:
+	${CAT} ${.CURDIR}/pkg-plist | ${SED} -e '/pulseaudio/d' > ${PLIST}

@@ -1,4 +1,4 @@
---- libr/io/p/io_self.c.orig	2019-04-02 22:12:18 UTC
+--- libr/io/p/io_self.c.orig	2019-05-15 07:39:46 UTC
 +++ libr/io/p/io_self.c
 @@ -750,11 +750,10 @@ exit:
  	kvm_read (k, (uintptr_t)p.p_vmspace, (ut8 *)&vs, sizeof (vs));
@@ -14,17 +14,23 @@
  		if (entry.protection & VM_PROT_READ) {
  			perm |= R_PERM_R;
  		}
-@@ -769,14 +768,14 @@ exit:
+@@ -767,16 +766,16 @@ exit:
+ 		}
+ 
  		io->cb_printf (" %p - %p %s [off. %zu]\n",
- 				(void *)entry.start,
- 				(void *)entry.end,
+-				(void *)entry.start,
+-				(void *)entry.end,
 -				r_tr_rwx_i (perm),
 -				entry.offset);
++				(void *)entry.ba.start,
++				(void *)entry.ba.end,
 +				r_str_rwx_i (perm),
 +				entry.ba.offset);
  
- 		self_sections[self_sections_count].from = entry.start;
- 		self_sections[self_sections_count].to = entry.end;
+-		self_sections[self_sections_count].from = entry.start;
+-		self_sections[self_sections_count].to = entry.end;
++		self_sections[self_sections_count].from = entry.ba.start;
++		self_sections[self_sections_count].to = entry.ba.end;
  		self_sections[self_sections_count].perm = perm;
  		self_sections_count++;
 -		ep = entry.next;

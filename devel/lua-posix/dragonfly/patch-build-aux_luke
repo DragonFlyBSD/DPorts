@@ -1,0 +1,11 @@
+--- build-aux/luke.intermediate	2019-05-30 13:42:20.000000000 +0000
++++ build-aux/luke
+@@ -340,7 +340,7 @@ return r
+ end,}
+ end
+ package.preload['luke.platforms']=function()
+-local _ENV=require'std.normalize'{'std.functional',}local CANON={['AIX']=list('aix','unix'),['FreeBSD']=list('freebsd','bsd','unix'),['OpenBSD']=list('openbsd','bsd','unix'),['NetBSD']=list('netbsd','bsd','unix'),['Darwin']=list('macosx','bsd','unix'),['Linux']=list('linux','unix'),['SunOS']=list('solaris','unix'),['^CYGWIN']=list('cygwin','unix'),['^MSYS']=list('msys','cygwin','unix'),['^Windows']=list('win32','windows'),['^MINGW']=list('mingw32','win32','windows'),['^procnto']=list('qnx'),['QNX']=list('qnx'),['Haiku']=list('haiku','unix'),}local ALLPLATFORMS=reduce(values(CANON),function(acc,platforms)map(platforms,function(v)acc[v]=true
++local _ENV=require'std.normalize'{'std.functional',}local CANON={['AIX']=list('aix','unix'),['DragonFly']=list('dragonfly','bsd','unix'),['FreeBSD']=list('freebsd','bsd','unix'),['OpenBSD']=list('openbsd','bsd','unix'),['NetBSD']=list('netbsd','bsd','unix'),['Darwin']=list('macosx','bsd','unix'),['Linux']=list('linux','unix'),['SunOS']=list('solaris','unix'),['^CYGWIN']=list('cygwin','unix'),['^MSYS']=list('msys','cygwin','unix'),['^Windows']=list('win32','windows'),['^MINGW']=list('mingw32','win32','windows'),['^procnto']=list('qnx'),['QNX']=list('qnx'),['Haiku']=list('haiku','unix'),}local ALLPLATFORMS=reduce(values(CANON),function(acc,platforms)map(platforms,function(v)acc[v]=true
+ end)end)local function match_uname(canon,uname,x)return match(uname,x)and canon[x]end
+ local function toplatforms(canon,uname)local literalkeys,patternkeys=partition(keys(canon),function(k)return sub(k,1,1)~='^'end)return(pluck(literalkeys,canon)or{})[uname]or dropuntil(map(patternkeys,bind(match_uname,{canon,uname})))or list('unix')end
+ local supported=toplatforms(CANON,popen('uname -s'):read'*l')local function isplatform(x)return ALLPLATFORMS[x]~=nil

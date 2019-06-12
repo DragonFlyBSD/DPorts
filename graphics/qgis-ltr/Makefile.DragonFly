@@ -1,0 +1,8 @@
+USES+=	alias
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@STREQUAL "FreeBSD"@MATCHES "FreeBSD|DragonFly"@g' \
+		${WRKSRC}/cmake/FindGRASS.cmake \
+		${WRKSRC}/src/app/CMakeLists.txt
+	${REINPLACE_CMD} -e '/-lulog/d' \
+		${WRKSRC}/src/plugins/grass/CMakeLists.txt

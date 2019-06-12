@@ -1,2 +1,0 @@
-MAKE_JOBS_UNSAFE=yes
-OPTIONS_EXCLUDE+= NLS	# avoid qmake

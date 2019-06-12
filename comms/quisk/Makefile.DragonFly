@@ -1,0 +1,8 @@
+
+# no pulse
+LIB_DEPENDS:=	${LIB_DEPENDS:Nlibpulse*}
+
+# gut is out
+dfly-patch:
+	${REINPLACE_CMD} -e "s@, 'pulse'@@g" -e "s@, 'sound_pulseaudio.c'@@g" \
+		${WRKSRC}/setup.py

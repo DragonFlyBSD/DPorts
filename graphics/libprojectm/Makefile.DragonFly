@@ -1,0 +1,21 @@
+USES+=	alias
+
+.undef PULSEAUDIO_BROKEN_OFF
+OPTIONS_EXCLUDE=	PULSEAUDIO
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NPULSEAUDIO}
+
+PLIST= ${WRKDIR}/pulseless-plist
+
+# gut it out
+dfly-patch:
+	${RM} -rf "${WRKSRC}/src/projectM-pulseaudio"
+	${REINPLACE_CMD} -e '/projectM-pulseaudio/d' ${WRKSRC}/src/publish.sh
+	${REINPLACE_CMD} -e '/pulseaudio\/Makefile/d' -e '/libpulse is req/d' \
+		${WRKSRC}/configure.ac
+	${REINPLACE_CMD} -e 's@projectM-pulseaudio@@g' ${WRKSRC}/src/Makefile.am
+	${CAT} ${.CURDIR}/pkg-plist | ${SED} -e '/pulseaudio/d' > ${PLIST}
+
+# missing install for .desktop Icon=
+dfly-install:
+	${INSTALL_DATA} ${WRKSRC}/src/projectM-qt/images/icons/prjm16-transparent.svg \
+		${STAGEDIR}${PREFIX}/share/pixmaps

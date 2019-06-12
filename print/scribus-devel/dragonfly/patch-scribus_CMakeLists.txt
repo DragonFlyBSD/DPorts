@@ -1,0 +1,26 @@
+--- scribus/CMakeLists.txt.intermediate	2019-06-07 14:59:34.000000000 +0000
++++ scribus/CMakeLists.txt
+@@ -1246,7 +1246,7 @@ else()
+ endif()
+ 
+ ##TEST FIX FOR 6897
+-if (CMAKE_SYSTEM_NAME STREQUAL "FreeBSD" OR CMAKE_SYSTEM_NAME STREQUAL "OpenBSD")
++if (CMAKE_SYSTEM_NAME STREQUAL "FreeBSD" OR CMAKE_SYSTEM_NAME STREQUAL "OpenBSD" OR CMAKE_SYSTEM_NAME STREQUAL "DragonFly")
+ # Use the -E / --export-dynamic flag to ensure that symbols in the Scribus
+ # binary are in the public symbol table for plugins. The symbols must also
+ # be set as SCRIBUS_API if we're building with -fvisibility=hidden .
+@@ -1302,12 +1302,12 @@ endif ()
+ 
+ # required to resolve symbols from libdl when ld is called with --no-add-needed
+ # #9310 for the OpenBSD addition
+-if(UNIX AND NOT CMAKE_SYSTEM_NAME STREQUAL "OpenBSD" AND NOT CMAKE_SYSTEM_NAME STREQUAL "FreeBSD" AND NOT HAIKU)
++if(UNIX AND NOT CMAKE_SYSTEM_NAME STREQUAL "OpenBSD" AND NOT CMAKE_SYSTEM_NAME MATCHES "FreeBSD|DragonFly" AND NOT HAIKU)
+ 	target_link_libraries(${EXE_NAME} dl)
+ endif()
+ 
+ # #9311 for the OpenBSD addition
+-if(CMAKE_SYSTEM_NAME STREQUAL "OpenBSD" OR CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
++if(CMAKE_SYSTEM_NAME STREQUAL "OpenBSD" OR CMAKE_SYSTEM_NAME STREQUAL "FreeBSD" OR CMAKE_SYSTEM_NAME STREQUAL "DragonFly")
+ 	target_link_libraries(${EXE_NAME} util execinfo)
+ endif()
+ 

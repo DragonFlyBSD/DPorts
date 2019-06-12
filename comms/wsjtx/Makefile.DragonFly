@@ -1,0 +1,8 @@
+
+# work around bundled tarball
+dfly-patch:
+	${ECHO} '--- hamlib/src/usb_port.c.orig' >> ${WRKSRC}/hamlib.patch
+	${ECHO} '+++ hamlib/src/usb_port.c' >> ${WRKSRC}/hamlib.patch
+	${ECHO} '@@ -297 +297 @@' >> ${WRKSRC}/hamlib.patch
+	${ECHO} '-    (void)libusb_set_auto_detach_kernel_driver(udh, port->parm.usb.iface);' >> ${WRKSRC}/hamlib.patch
+	${ECHO} '+//    (void)libusb_set_auto_detach_kernel_driver(udh, port->parm.usb.iface);' >> ${WRKSRC}/hamlib.patch
