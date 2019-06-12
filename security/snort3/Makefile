@@ -17,7 +17,7 @@ BUILD_DEPENDS=	daq>=2.2.2:net/daq \
 		bash>0:shells/bash
 LIB_DEPENDS=	libpcre.so:devel/pcre \
 		libdnet.so:net/libdnet \
-		libpcap.so:net/libpcap \
+		 \
 		libluajit-5.1.so:lang/luajit \
 		libhwloc.so:devel/hwloc
 RUN_DEPENDS=	daq>=2.2.2:net/daq
