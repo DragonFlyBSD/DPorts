@@ -1,3 +1,9 @@
 USES+=	ssl
 CPPFLAGS+=              -I${OPENSSLINC}
 LDFLAGS+=               -L${OPENSSLLIB}
+
+# too much damage in MF
+.if ${DFLYVERSION} > 500700
+CPPFLAGS+=	-DSHA_Init=SHA1_Init -DSHA_Update=SHA1_Update -DSHA_Final=SHA1_Final
+LIB_DEPENDS+=	libmd.so:security/libmd
+.endif
