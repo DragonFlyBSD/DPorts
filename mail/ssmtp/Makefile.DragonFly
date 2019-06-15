@@ -1,0 +1,3 @@
+
+# exclude dep that fetches libmd
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NCRAMMD5}
