@@ -1,0 +1,5 @@
+
+# zrj: remove not needed -lmd from files/ patches
+dfly-patch:
+	${REINPLACE_CMD} -e '/ARCHIVE_LDADD/s@-lmd -lcrypto@@g' \
+		${WRKSRC}/acinclude.m4

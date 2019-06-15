@@ -1,2 +1,9 @@
-USES+=		ssl
-CPPFLAGS+=	-I${OPENSSLINC}
+
+# restore originals and exclude -lmd
+CXXFLAGS+=	-Imd5
+LIBS:=	${LIBS:N-lmd}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@tempfile.o@& md5/libmd5.a@g' \
+			 -e 's@^:@md5/libmd5.a:@g' \
+		${WRKSRC}/Makefile

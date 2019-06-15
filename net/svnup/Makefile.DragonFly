@@ -1,6 +1,5 @@
-CFLAGS+= -I${OPENSSLINC}
-LDFLAGS+= -L${OPENSSLLIB}
 
+# needs MD5End()
 .if ${DFLYVERSION} > 500700
 LIB_DEPENDS+=	libmd.so:security/libmd
 .endif

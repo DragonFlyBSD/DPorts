@@ -1,3 +1,8 @@
 USES+=	ssl
 CFLAGS+= -I${OPENSSLINC}
+LDFLAGS+= -L${OPENSSLLIB}
 CXXFLAGS+= -Wno-error=catch-value
+
+.if ${DFLYVERSION} > 500700
+LIB_DEPENDS+=	libmd.so:security/libmd
+.endif

@@ -1,0 +1,4 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/LDADD/s@-lmd@@g' \
+		${WRKSRC}/Makefile

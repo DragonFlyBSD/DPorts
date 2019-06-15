@@ -1,3 +1,7 @@
 
 dfly-patch:
 	${CP} ${DFLY_FILESDIR}/sha1hl_compat.h ${WRKSRC}/spamd
+
+.if ${DFLYVERSION} > 500700
+LIB_DEPENDS+=	libmd.so:security/libmd
+.endif
