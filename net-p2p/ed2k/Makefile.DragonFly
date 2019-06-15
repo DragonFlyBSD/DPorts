@@ -1,1 +1,6 @@
 CFLAGS+= -I${OPENSSLINC}
+LDFLAGS+= -L${OPENSSLLIB}
+
+.if ${DFLYVERSION} > 500700
+LIB_DEPENDS+=	libmd.so:security/libmd
+.endif
