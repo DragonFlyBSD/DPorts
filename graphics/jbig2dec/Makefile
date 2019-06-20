@@ -41,4 +41,10 @@ TESTS_USES=		python:build shebangfix
 pre-configure:
 	@cd ${WRKSRC}/ && ${SH} autogen.sh
 
+# maintainer section:
+
+.if defined(MAINTAINER_MODE)
+DISTFILES=	jb2streams${EXTRACT_SUFX}:tests
+.endif
+
 .include <bsd.port.mk>
