@@ -7,29 +7,29 @@ PROBLEM_FILES=	${WRKSRC}/libpkg/pkg_config.c \
 		${WRKSRC}/docs/pkg-version.8 \
 		${WRKSRC}/docs/pkg.8
 
+CFLAGS+=	-I/usr/include/priv
+LDFLAGS+=	-L/usr/lib/priv -R/lib/priv
+
 dfly-patch:
 .if defined(PACKAGE_BUILDING)
 	@${REINPLACE_CMD} -e "s|/usr/ports|/usr/dports|g" ${PROBLEM_FILES}
 .else
 	@${REINPLACE_CMD} -e "s|/usr/ports|${PORTSDIR}|g" ${PROBLEM_FILES}
 .endif
-
 # use the private LibreSSL base libraries if available
 .if exists(/usr/lib/priv/libprivate_ssl.so)
 	${REINPLACE_CMD} \
 		-e 's|lssl|lprivate_ssl|' \
 		-e 's|lcrypto|lprivate_crypto|' \
-		-e 's|la_rpath = |la_rpath = -R /lib/priv |' \
-		${WRKSRC}/libpkg/Makefile.in \
-		${WRKSRC}/src/Makefile.in \
-		${WRKSRC}/tests/Makefile.in
-	${REINPLACE_CMD} \
-		-e '/OS_CFLAGS=/ s|SOURCE|SOURCE -I/usr/include/priv|' \
-		-e '/OS_LDFLAGS=/ s|=|="-L/usr/lib/priv -R/lib/priv"|' ${WRKSRC}/configure
+		${WRKSRC}/libpkg/Makefile.autosetup \
+		${WRKSRC}/src/Makefile.autosetup \
+		${WRKSRC}/tests/Makefile.autosetup
 .endif
 
+#		-e '/LOCAL_CFLAGS=/s|=|= -I/usr/include/priv|' \
+#		-e '/LOCAL_LDFLAGS=/s|=|= -L/usr/lib/priv -R/lib/priv|'
+
 post-stage:
-	${RM} ${STAGEDIR}${PREFIX}/sbin/pkg2ng
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/periodic/411.pkg-backup \
 		${WRKSRC}/scripts/periodic/490.status-pkg-changes \
 		${STAGEDIR}${PREFIX}/etc/periodic/daily/
