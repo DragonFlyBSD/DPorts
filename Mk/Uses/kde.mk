@@ -54,16 +54,16 @@ _KDE_RELNAME=		KDE${_KDE_VERSION}
 
 # === VERSIONS OF THE DIFFERENT COMPONENTS =====================================
 # Current KDE desktop.
-KDE_PLASMA_VERSION?=		5.15.5
+KDE_PLASMA_VERSION?=		5.16.1
 KDE_PLASMA_BRANCH?=		stable
 
 # Current KDE frameworks.
-KDE_FRAMEWORKS_VERSION?=	5.58.0
+KDE_FRAMEWORKS_VERSION?=	5.59.0
 KDE_FRAMEWORKS_BRANCH?= 	stable
 
 # Current KDE applications.
-KDE_APPLICATIONS_VERSION?=	19.04.1
-KDE_APPLICATIONS_SHLIB_VER?=	5.11.1
+KDE_APPLICATIONS_VERSION?=	19.04.2
+KDE_APPLICATIONS_SHLIB_VER?=	5.11.2
 KDE_APPLICATIONS_BRANCH?=	stable
 # Upstream moves old software to Attic/. Specify the newest applications release there.
 # Only the major version is used for the comparison.
@@ -554,7 +554,7 @@ kde-milou_PORT=			deskutils/plasma5-milou
 kde-milou_LIB=			libmilou.so.5
 
 kde-oxygen_PORT= 		x11-themes/plasma5-oxygen
-kde-oxygen_LIB=			liboxygenstyle5.so
+kde-oxygen_PATH=			${QT_PLUGINDIR}/styles/oxygen.so
 
 kde-plasma-browser-integration_PORT=	www/plasma5-plasma-browser-integration
 kde-plasma-browser-integration_PATH=	${KDE_PREFIX}/bin/plasma-browser-integration-host

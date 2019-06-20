@@ -388,17 +388,6 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 # USE_WX		- If set, this port uses the WxWidgets library and related
 #				  components. See bsd.wx.mk for more details.
 ##
-#
-# USE_QT4		- A list of the Qt 4 dependencies the port has (e.g,
-#				  corelib, webkit).  Implies that the port needs Qt.
-#				  Implies the inclusion of bsd.qt.mk.  See bsd.qt.mk
-#				  for more details.
-#
-# USE_QT5		- A list of the Qt 5 dependencies the port has (e.g,
-#				  core, webkit).  Implies that the port needs Qt.
-#				  Implies the inclusion of bsd.qt.mk.  See bsd.qt.mk
-#				  for more details.
-##
 # USE_LINUX_PREFIX
 #				- Controls the action of PREFIX (see above).  Only use this
 #				  if the port is a Linux infrastructure port (e.g. contains libs
@@ -4725,7 +4714,8 @@ PORTS_ENV_VARS+=	${_EXPORTED_VARS}
 
 .if !target(pre-check-config)
 pre-check-config:
-_CHECK_OPTIONS_NAMES=	OPTIONS_DEFINE
+_CHECK_OPTIONS_NAMES=	OPTIONS_DEFINE OPTIONS_GROUP OPTIONS_MULTI \
+			OPTIONS_RADIO OPTIONS_SINGLE
 _CHECK_OPTIONS_NAMES+=	${OPTIONS_GROUP:S/^/OPTIONS_GROUP_/}
 _CHECK_OPTIONS_NAMES+=	${OPTIONS_MULTI:S/^/OPTIONS_MULTI_/}
 _CHECK_OPTIONS_NAMES+=	${OPTIONS_RADIO:S/^/OPTIONS_RADIO_/}

@@ -47,7 +47,7 @@ FIREBIRD_DEFAULT?=	2.5
 FORTRAN_DEFAULT?=	gfortran
 # Possible values: 3.0.4
 FPC_DEFAULT?=		3.0.4
-# Possible values: 6, 7, 8
+# Possible values: 7, 8, 9
 GCC_DEFAULT?=		8
 # Possible values: 7, 8, 9, agpl
 GHOSTSCRIPT_DEFAULT?=	agpl
@@ -78,7 +78,7 @@ PERL5_DEFAULT?=		5.28
 # be set manually in /etc/make.conf in the first place, and we're never getting
 # in here.
 .if !defined(_PERL5_FROM_BIN)
-_PERL5_FROM_BIN!=	perl -e 'printf "%vd\n", $$^V;'
+_PERL5_FROM_BIN!=	${LOCALBASE}/bin/perl -e 'printf "%vd\n", $$^V;'
 .endif
 _EXPORTED_VARS+=	_PERL5_FROM_BIN
 PERL5_DEFAULT:=		${_PERL5_FROM_BIN:R}
@@ -98,7 +98,7 @@ RUBY_DEFAULT?=		2.5
 # Possible values: rust, rust-nightly
 RUST_DEFAULT?=		rust
 # Possible values: 4.6, 4.7, 4.8
-SAMBA_DEFAULT?=		4.7
+SAMBA_DEFAULT?=		4.8
 # Possible values: base, openssl, openssl111, libressl, libressl-devel
 .if !defined(SSL_DEFAULT)
 #	If no preference was set, check for an installed base version

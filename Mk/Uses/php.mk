@@ -300,6 +300,8 @@ _INCLUDE_USES_PHP_POST_MK=yes
 
 .  if ${php_ARGS:Mext} || ${php_ARGS:Mzend}
 PHP_MODNAME?=	${PORTNAME}
+PHP_EXT_PKGMESSAGE=	${WRKDIR}/php-ext-pkg-message
+_PKGMESSAGES+=	${PHP_EXT_PKGMESSAGE}
 PHP_HEADER_DIRS+=	.
 # If there is no priority defined, we wing it.
 .    if !defined(PHP_MOD_PRIO)
@@ -348,6 +350,15 @@ add-plist-phpext:
 		>> ${TMPPLIST}
 	@${ECHO_CMD} "${PHP_EXT_INI_FILE}" \
 		>> ${TMPPLIST}
+	@${ECHO_CMD} "[" > ${PHP_EXT_PKGMESSAGE}
+	@${ECHO_CMD} "{" >> ${PHP_EXT_PKGMESSAGE}
+	@${ECHO_CMD} "  message: <<EOD" >> ${PHP_EXT_PKGMESSAGE}
+	@${ECHO_CMD} "This file has been added to automatically load the installed extension:" >> ${PHP_EXT_PKGMESSAGE}
+	@${ECHO_CMD} "${PREFIX}/${PHP_EXT_INI_FILE}" >> ${PHP_EXT_PKGMESSAGE}
+	@${ECHO_CMD} "EOD" >> ${PHP_EXT_PKGMESSAGE}
+	@${ECHO_CMD} "  type: install" >> ${PHP_EXT_PKGMESSAGE}
+	@${ECHO_CMD} "}" >> ${PHP_EXT_PKGMESSAGE}
+	@${ECHO_CMD} "]" >> ${PHP_EXT_PKGMESSAGE}
 .  endif
 
 # Extensions
