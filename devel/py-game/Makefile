@@ -2,13 +2,13 @@
 # $FreeBSD$
 
 PORTNAME=	game
-DISTVERSION=	1.9.5
+DISTVERSION=	1.9.6
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	py${PORTNAME}-${PORTVERSION}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Module designed to write games in Python
 
 LICENSE=	LGPL21
@@ -16,7 +16,7 @@ LICENSE_FILE=	${WRKSRC}/docs/LGPL
 
 BUILD_DEPENDS=	v4l_compat>0:multimedia/v4l_compat
 LIB_DEPENDS=	libfreetype.so:print/freetype2 \
-		libpng16.so:graphics/png \
+		libpng.so:graphics/png \
 		libsmpeg.so:multimedia/smpeg
 RUN_DEPENDS=	${PYNUMPY} \
 		v4l_compat>0:multimedia/v4l_compat
