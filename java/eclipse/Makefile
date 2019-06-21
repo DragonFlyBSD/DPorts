@@ -54,13 +54,12 @@ BUILD_DEPENDS=	git:devel/git-lite \
 		${LOCALBASE}/share/java/maven/bin/mvn:devel/maven
 LIB_DEPENDS=	libsecret-1.so:security/libsecret \
 		libwebkit2gtk-4.0.so:www/webkit2-gtk3
-USES=		gmake pkgconfig gnome
+USES=		compiler:c++11-lang gmake pkgconfig gnome
 USE_GNOME=	gtk30
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	daemonblade
 GH_PROJECT=	eclipse-maven-repo
-GH_TAGNAME=	${PORTVERSION}
 
 USE_JAVA=	yes
 JAVA_VERSION=	1.8
@@ -74,7 +73,7 @@ DESKTOP_ENTRIES="Eclipse" \
 
 SUB_FILES=	${PORTNAME}
 
-MAVEN_ENV=	MAVEN_OPTS=-Xmx1024m
+MAVEN_ENV=	MAVEN_OPTS=-Xmx1024m CC=${CC}
 MAVEN_REPO=	-Dmaven.repo.local=${WRKDIR}/${GH_PROJECT}-${PORTVERSION}
 MAVEN_ECLIPSE=	-Dnative=gtk.freebsd.${ARCH} -Dcomparator.repo=file://${WRKDIR}/${GH_PROJECT}-${PORTVERSION}/p2-stub -DforceContextQualifier=v${ECLIPSE_TSTAMP}
 
