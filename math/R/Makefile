@@ -12,7 +12,7 @@ COMMENT=	Language for statistical computing and graphics
 
 LICENSE=	GPLv2
 
-ONLY_FOR_ARCHS=	aarch64 amd64 armv6 armv7 i386
+ONLY_FOR_ARCHS=	aarch64 amd64 armv6 armv7 i386 powerpc64
 
 LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libpcre.so:devel/pcre
@@ -25,7 +25,8 @@ RUN_DEPENDS=	gmake:devel/gmake # R packages may require GNU make
 # - Create ports for each of the recommended packages
 # - Create a meta-port for the recommended packages
 
-USES=		gmake iconv libtool localbase pathfix perl5 readline:port
+USES=		compiler:c++11-lang gmake iconv libtool localbase pathfix \
+		perl5 readline:port
 USE_LDCONFIG=	${PREFIX}/lib/R/lib
 USE_PERL5=	build
 
