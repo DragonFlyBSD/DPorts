@@ -1,12 +1,9 @@
 # $FreeBSD$
 
 PORTNAME=	kxstitch
-DISTVERSION=	2.1.1
+DISTVERSION=	2.2.0
 MASTER_SITES=	KDE/stable/${PORTNAME}/${DISTVERSION}
 CATEGORIES=	graphics kde
-
-PATCH_SITES=    https://github.com/KDE/${PORTNAME}/commit/
-PATCHFILES=     9db3fcf9cd367681c0864238dc5009a604f3896c.patch:-p1
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Cross stitch pattern editor
@@ -14,7 +11,7 @@ COMMENT=	Cross stitch pattern editor
 LIB_DEPENDS=	libMagick++-6.so:graphics/ImageMagick6 \
 		libMagickCore-6.so:graphics/ImageMagick6
 
-USES=		cmake desktop-file-utils kde:5 qt:5 tar:xz
+USES=		cmake compiler:c++11-lang desktop-file-utils kde:5 qt:5 tar:xz
 USE_KDE=	auth bookmarks codecs completion config configwidgets coreaddons \
 		i18n itemviews jobwidgets kio service solid sonnet textwidgets \
 		widgetsaddons xmlgui
