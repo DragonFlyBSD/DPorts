@@ -9,11 +9,6 @@ dfly-patch:
 	${REINPLACE_CMD} -e '/-fgnu-inline-asm/d' \
 		${WRKSRC}/src/3rdparty/chromium/sandbox/linux/BUILD.gn
 	${RM} -rf ${WRKSRC}/src/3rdparty/chromium/third_party/tcmalloc
-	${RM} -rf ${WRKSRC}/src/3rdparty/chromium/third_party/usrsctp
-	${REINPLACE_CMD} -e '/\/\/third_party\/usrsctp/d' \
-		${WRKSRC}/src/3rdparty/chromium/testing/libfuzzer/fuzzers/BUILD.gn \
-		${WRKSRC}/src/3rdparty/chromium/third_party/webrtc_overrides/BUILD.gn \
-		${WRKSRC}/src/3rdparty/chromium/third_party/webrtc/media/BUILD.gn
 #	${CP} ${WRKSRC}/src/core/config/freebsd.pri ${WRKSRC}/src/core/config/dragonfly.pri
 # missing remove for files/patch-src_3rdparty_chromium_build_linux_unbundle_libwebp.gn
 	${REINPLACE_CMD} -e '/use_system_libwebp/d' ${WRKSRC}/src/core/config/linux.pri
