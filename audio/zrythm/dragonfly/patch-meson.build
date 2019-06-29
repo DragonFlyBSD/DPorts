@@ -1,0 +1,11 @@
+--- meson.build.orig	2019-06-21 22:35:28 UTC
++++ meson.build
+@@ -48,7 +48,7 @@ elif host_machine.system() == 'windows'
+   os_win32 = true
+ elif host_machine.system() == 'linux'
+   os_linux = true
+-elif host_machine.system() == 'freebsd'
++elif host_machine.system() == 'freebsd' or host_machine.system() == 'dragonfly'
+   os_freebsd = true
+ endif
+ 
