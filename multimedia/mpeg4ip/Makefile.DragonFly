@@ -1,8 +1,0 @@
-
-dfly-patch:
-	${REINPLACE_CMD} -e 's@-Werror@@g' \
-		${WRKSRC}/lib/rtp/configure.in \
-		${WRKSRC}/lib/rtp/Makefile.in \
-		${WRKSRC}/player/lib/audio/faad/Makefile.in \
-		${WRKSRC}/player/lib/audio/faad/Makefile.am
-

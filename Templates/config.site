@@ -1,4 +1,4 @@
-# $FreeBSD: head/Templates/config.site 464716 2018-03-16 17:41:22Z bdrewery $
+# $FreeBSD: head/Templates/config.site 503514 2019-06-05 17:40:09Z antoine $
 # Do not add:
 #	- toolchain related
 #	- arch-dependent values
@@ -76,7 +76,6 @@
 : ${ac_cv_header_string_h=yes}
 : ${ac_cv_header_strings_h=yes}
 : ${ac_cv_header_sys_cdefs_h=yes}
-: ${ac_cv_header_sys_dir_h=yes}
 : ${ac_cv_header_sys_fcntl_h=yes}
 : ${ac_cv_header_sys_file_h=yes}
 : ${ac_cv_header_sys_ioctl_h=yes}

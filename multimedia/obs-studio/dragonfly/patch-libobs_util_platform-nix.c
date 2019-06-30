@@ -1,9 +1,9 @@
---- libobs/util/platform-nix.c.intermediate	2019-06-08 12:52:50.000000000 +0000
+--- libobs/util/platform-nix.c.orig	2019-06-30 00:00:32 UTC
 +++ libobs/util/platform-nix.c
-@@ -33,14 +33,16 @@
- #if !defined(__APPLE__)
+@@ -34,14 +34,16 @@
  #include <sys/times.h>
  #include <sys/wait.h>
+ #include <libgen.h>
 -#ifdef __FreeBSD__
 +#if defined(__FreeBSD__) || defined(__DragonFly__)
  #include <sys/param.h>
@@ -18,7 +18,7 @@
  #else
  #include <sys/resource.h>
  #endif
-@@ -706,7 +708,7 @@ static void os_get_cores_internal(void)
+@@ -737,7 +739,7 @@ static void os_get_cores_internal(void)
  	dstr_free(&proc_phys_ids);
  	dstr_free(&proc_phys_id);
  	free(line);
@@ -27,7 +27,7 @@
  	char *text = os_quick_read_utf8_file("/var/run/dmesg.boot");
  	char *core_count = text;
  	int packages = 0;
-@@ -779,7 +781,7 @@ int os_get_logical_cores(void)
+@@ -810,7 +812,7 @@ int os_get_logical_cores(void)
  	return logical_cores;
  }
  
@@ -36,7 +36,7 @@
  uint64_t os_get_sys_free_size(void)
  {
  	uint64_t mem_free = 0;
-@@ -807,8 +809,13 @@ bool os_get_proc_memory_usage(os_proc_me
+@@ -838,8 +840,13 @@ bool os_get_proc_memory_usage(os_proc_me
  		return false;
  
  	usage->resident_size =
@@ -50,7 +50,7 @@
  	return true;
  }
  
-@@ -817,7 +824,11 @@ uint64_t os_get_proc_resident_size(void)
+@@ -848,7 +855,11 @@ uint64_t os_get_proc_resident_size(void)
  	struct kinfo_proc kinfo;
  	if (!os_get_proc_memory_usage_internal(&kinfo))
  		return 0;
@@ -62,7 +62,7 @@
  }
  
  uint64_t os_get_proc_virtual_size(void)
-@@ -825,7 +836,11 @@ uint64_t os_get_proc_virtual_size(void)
+@@ -856,7 +867,11 @@ uint64_t os_get_proc_virtual_size(void)
  	struct kinfo_proc kinfo;
  	if (!os_get_proc_memory_usage_internal(&kinfo))
  		return 0;

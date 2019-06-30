@@ -1,8 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	ImageMagick
-DISTVERSION=	6.9.10-22
-PORTREVISION=	1
+DISTVERSION=	6.9.10-48
 PORTEPOCH=	1
 CATEGORIES=	graphics perl5
 MASTER_SITES=	http://www.imagemagick.org/download/ \
@@ -37,6 +36,8 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libltdl.so:devel/libltdl
 
+TESTS_DEPENDS=	gsfonts>=0:print/gsfonts
+
 PORTSCOUT?=	limit:^6\.9\.
 
 CONFLICTS_INSTALL=	ImageMagick7 ImageMagick7-nox11 # bin/Magick++-config
@@ -51,7 +52,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	MAKE=${MAKE_CMD}
 CONFIGURE_ARGS=	--without-dps \
 		--without-flif \
-		--without-raqm \
 		--without-zstd
 USE_LDCONFIG=	yes
 USE_GNOME=	libxml2
@@ -66,10 +66,10 @@ PLIST_SUB=	PORTVERSION=${PORTVERSION:R}
 OPTIONS_SUB=	yes
 OPTIONS_DEFINE=	BZIP2 DOCS DJVU FFTW FONTCONFIG FPX FREETYPE \
 		GRAPHVIZ GSLIB HEIF JPEG2000 JBIG JPEG LCMS2 LZMA LQR MODULES \
-		OPENEXR OPENMP PANGO PDF PERL PNG SVG TESTS TIFF WEBP WMF \
+		OPENEXR OPENMP PANGO PDF PERL PNG RAQM SVG TESTS TIFF WEBP WMF \
 		THREADS X11 16BIT_PIXEL HDRI RAW
 OPTIONS_DEFAULT=	16BIT_PIXEL BZIP2 FFTW FONTCONFIG FREETYPE \
-		JPEG2000 JBIG JPEG LCMS2 LZMA LQR MODULES PDF PERL PNG SVG \
+		JPEG2000 JBIG JPEG LCMS2 LZMA LQR MODULES PDF PERL PNG RAQM SVG \
 		TIFF WEBP WMF THREADS X11 RAW
 
 DJVU_DESC=		DJVU format support (needs THREADS)
@@ -148,6 +148,10 @@ PANGO_IMPLIES=		X11
 
 PNG_CONFIGURE_WITH=	png
 PNG_LIB_DEPENDS=	libpng.so:graphics/png
+
+RAQM_DESC=		Complex text layout support
+RAQM_CONFIGURE_WITH=	raqm
+RAQM_LIB_DEPENDS=	libraqm.so:print/libraqm
 
 # libraw is by default liked to lcms2, whichs also ends up in IM regardless
 # of the IM LCMS option.
@@ -294,6 +298,10 @@ USES+=			ghostscript:x11
 . else
 USES+=			ghostscript
 . endif
+.endif
+
+.if ${PORT_OPTIONS:MPDF} || ${PORT_OPTIONS:MGSLIB}
+RUN_DEPENDS+=	gsfonts>=0:print/gsfonts
 .endif
 
 .if ${PORT_OPTIONS:MDOCS}

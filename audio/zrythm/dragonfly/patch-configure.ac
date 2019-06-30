@@ -1,0 +1,11 @@
+--- configure.ac.orig	2019-06-21 22:35:28 UTC
++++ configure.ac
+@@ -40,7 +40,7 @@ case "${host_os}" in
+   linux*)
+     build_linux=yes
+     ;;
+-  freebsd*)
++  freebsd*|dragonfly*)
+     build_freebsd=yes
+     ;;
+   cygwin*|mingw*|msys*)

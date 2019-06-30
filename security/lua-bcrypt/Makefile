@@ -1,7 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	bcrypt
-PORTVERSION=	2.1
+DISTVERSIONPREFIX=	v
+DISTVERSION=	2.1-4
 CATEGORIES=	security
 PKGNAMEPREFIX=	${LUA_PKGNAMEPREFIX}
 
@@ -10,12 +11,11 @@ COMMENT=	Library providing OpenBSD's bcrypt hash function for Lua
 
 LICENSE=	ISCL
 
-USES=		gmake lua
+USES=		compiler:c11 gmake lua
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	mikejsavage
 GH_PROJECT=	lua-bcrypt
-GH_TAGNAME=	d64cdc8
 
 PLIST_FILES=	${LUA_MODLIBDIR}/bcrypt.so
 

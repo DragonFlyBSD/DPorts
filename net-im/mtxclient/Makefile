@@ -2,18 +2,15 @@
 
 PORTNAME=		mtxclient
 DISTVERSIONPREFIX=	v
-DISTVERSION=		0.2.0
+DISTVERSION=		0.2.1
 PORTREVISION=		1
 CATEGORIES=		net-im
-
-PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES=	cdbf06f341e9.patch:-p1
 
 MAINTAINER=	adridg@FreeBSD.org
 COMMENT=	Client API library for the Matrix protocol
 
 LICENSE=	MIT
-LICENSE_FILES=	${WRKSRC}/LICENSE
+LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	nlohmann-json>=3:devel/nlohmann-json \
 		spdlog>=1.3:devel/spdlog \
