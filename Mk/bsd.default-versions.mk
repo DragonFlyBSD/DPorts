@@ -55,19 +55,16 @@ GHOSTSCRIPT_DEFAULT?=	agpl
 JULIA_DEFAULT?=		1.0
 # Possible values: 2.0.0
 LAZARUS_DEFAULT?=	2.0.0
-.if ${ARCH} == amd64
-# Possible values: c6, c6_64, c7
-LINUX_DEFAULT?=		c6_64
-.else
-# Possible values: c6
-LINUX_DEFAULT?=		c6
-.endif
+# Possible values: c6, c7
+LINUX_DEFAULT?=		c7
 # Possible values: 60, 70, 80, -devel (to be used when non-base compiler is required)
+# Please give notice to the Graphics Team (x11@FreeBSD.org) in advance before 
+# bumping the LLVM version.
 LLVM_DEFAULT?=		80
 # Possible values: 5.1, 5.2, 5.3
 LUA_DEFAULT?=		5.2
 # Possible values: 5.5, 5.6, 5.7, 8.0, 5.5m, 10.0m, 10.1m, 10.2m, 10.3m, 5.5p, 5.6p, 5.7p, 5.6w
-MYSQL_DEFAULT?=		5.6
+MYSQL_DEFAULT?=		5.7
 # Possible values: 5.26, 5.28, 5.30, devel
 .if !exists(${LOCALBASE}/bin/perl) || (!defined(_PORTS_ENV_CHECK) && \
     defined(PACKAGE_BUILDING))
@@ -97,7 +94,7 @@ PYTHON3_DEFAULT?=	3.6
 RUBY_DEFAULT?=		2.5
 # Possible values: rust, rust-nightly
 RUST_DEFAULT?=		rust
-# Possible values: 4.6, 4.7, 4.8
+# Possible values: 4.6, 4.7, 4.8, 4.10
 SAMBA_DEFAULT?=		4.8
 # Possible values: base, openssl, openssl111, libressl, libressl-devel
 .if !defined(SSL_DEFAULT)

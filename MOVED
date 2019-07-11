@@ -8890,7 +8890,7 @@ www/rubygem-heroku||2019-05-31|Has expired: Upstream has changed to node-based C
 multimedia/gmerlin-avdecoder||2019-05-31|Has expired: unused in the ports tree and depends on vulnerable multimedia/ffmpeg0
 security/racoon2-legacy|security/racoon2|2019-05-31|Has expired: No longer supported upstream, use security/racoon2
 www/pivotx||2019-05-31|Has expired: inactive upstream and does not work with PHP 7
-dns/bind912|dns/bind914|2019-05-31|Has expired: Support ends, please move to dns/bind914.
+dns/bind912|dns/bind914|2019-05-31|Has expired: Support ends, please move to dns/bind914
 multimedia/vdr-plugin-softhddevice||2019-05-31|Has expired: unmaintained and depends on vulnerable multimedia/ffmpeg0
 devel/pecl-pthreads||2019-06-02|Has expired: Does not work with recent versions of php
 net-mgmt/ccnet-client||2019-06-10|Removed, no longer has dependencies and has been abandoned upstream
@@ -8908,3 +8908,44 @@ databases/postgis20|databases/postgis23|2019-06-16|Has expired: Upstream no long
 databases/postgis22|databases/postgis23|2019-06-16|Has expired: Upstream no longer maintained
 games/freeciv-sounds||2019-06-16|Unused and already part of games/freeciv
 security/py-bro-pkg|security/py-zkg|2019-06-17|Renamed to match upstream changes
+devel/py-pydocumentdb|devel/py-azure-cosmos|2019-06-20|Renamed upstream
+www/rubygem-lograge-rails50|www/rubygem-lograge-rails5|2019-06-21|Obsolete by gitlab-ce upgrade, use www/rubygem-lograge-rails5 instead
+devel/rubygem-batch-loader12|devel/rubygem-batch-loader|2019-06-21|Obsolete by gitlab-ce upgrade, use devel/rubygem-batch-loader instead
+security/easy-rsa2|security/easy-rsa|2019-06-23|Has expired: Use easy-rsa 3 instead
+devel/py-robotframework-selenium2library|devel/py-robotframework-seleniumlibrary|2019-06-25|Renamed to match upstream
+net-p2p/zetacoin-nox11|net-p2p/zetacoin|2019-06-26|Slave port folded back into now text-only master port
+net/tigervnc||2019-06-29|Removed: Non-essential meta port
+sysutils/cfengine33|sysutils/cfengine313|2019-06-30|Has expired: No longer supported upstream
+sysutils/cfengine-masterfiles38|sysutils/cfengine-masterfiles313|2019-06-30|Has expired: No longer supported upstream
+sysutils/cfengine39|sysutils/cfengine313|2019-06-30|Has expired: No longer supported upstream
+sysutils/cfengine-masterfiles37|sysutils/cfengine-masterfiles313|2019-06-30|Has expired: NO longer supported upstream
+sysutils/cfengine37|sysutils/cfengine313|2019-06-30|Has expired: No longer supported upstream
+net/morebalance||2019-06-30|Has expired: Abandonware and depends on expiring games/libggz
+sysutils/cfengine36|sysutils/cfengine313|2019-06-30|Has expired: No longer supported upstream
+sysutils/cfengine-masterfiles36|sysutils/cfengine-masterfiles313|2019-06-30|Has expired: No longer supported upstream
+sysutils/cfengine34|sysutils/cfengine313|2019-06-30|Has expired: No longer supported upstream
+sysutils/cfengine35|sysutils/cfengine313|2019-06-30|Has expired: No longer supported upstream
+sysutils/cfengine-masterfiles39|sysutils/cfengine-masterfiles313|2019-06-30|Has expired: No longer supported upstream
+devel/py-typed-ast12|devel/py-typed-ast|2019-06-30|Has expired: Use devel/py-typed-ast instead
+devel/rubygem-devise-rails50|devel/rubygem-devise|2019-06-30|Has expired: Use devel/rubygem-devise (depends on Rails 5.0) instead
+security/rubygem-devise-two-factor-rails50|security/rubygem-devise-two-factor|2019-06-30|Has expired: Use security/rubygem-devise-two-factor (depends on Rails 5.0) instead
+emulators/qemu-riscv||2019-06-30|Has expired: The development has been moved to the upstream
+games/libggz||2019-06-30|Has expired: Abandonware
+games/ggz-txt-client||2019-06-30|Has expired: Abandonware
+games/ggz-sdl-games||2019-06-30|Has expired: Abandonware
+games/ggz-client-libs||2019-06-30|Has expired: Abandonware
+games/ggz-gtk-client||2019-06-30|Has expired: Abandonware
+games/ggz-gtk-games||2019-06-30|Has expired: Abandonware
+sysutils/cfengine38|sysutils/cfengine313|2019-06-30|Has expired: No longer supported upstream
+devel/llvm40|devel/llvm80|2019-06-30|Has expired: Obsolete and unmaintained
+www/axis|www/axis2|2019-06-30|Has expired: Abandonware; use www/axis2 instead
+sysutils/cfengine32|sysutils/cfengine313|2019-06-30|Has expired: No longer supported upstream
+devel/py-msgpack05|devel/py-msgpack|2019-06-30|Has expired: Use devel/py-msgpack instead
+devel/rubygem-fastthread||2019-06-30|Has expired: Does not build for all supported Ruby version
+www/rubygem-responders-rails50|www/rubygem-responders|2019-06-30|Has expired: Use www/rubygem-responders (depends on Rails 5.0) instead
+emulators/xen-kernel47|emulators/xen-kernel|2019-07-01|Has expired: This port is about to be removed, please update to a newer Xen version
+sysutils/xen-tools47|sysutils/xen-tools|2019-07-01|Has expired: This port is about to be removed, please update to a newer Xen version
+www/palemoon||2019-07-03|Not maintained and full of security holes
+www/seamonkey||2019-07-03|2.49.* is not maintained upstream and full of security holes
+www/tomcat8||2019-07-06|Has expired: EoL since 2018-06-30
+devel/libevent-hiphop||2019-07-10|Has expired: Obsoleted with removal of lang/hiphop-php
