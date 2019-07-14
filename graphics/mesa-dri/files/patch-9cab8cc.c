@@ -1,6 +1,9 @@
-https://gitlab.freedesktop.org/mesa/mesa/commit/9cab8ccd6cb5aa8a4748dd6d7fc15d9747624df6
+amd: Make vgpr-spilling depend on llvm version 
 
---- src/amd/common/ac_llvm_util.c.orig
+https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=230789#c14
+diff --git a/src/amd/common/ac_llvm_util.c b/src/amd/common/ac_llvm_util.c
+index 69d9f7b9f3fe9e5feb07b32c35cbcf1206a14ca8..dc9b684e9dd287d5bb558d9ad3868a9d0975228d 100644
+--- src/amd/common/ac_llvm_util.c
 +++ src/amd/common/ac_llvm_util.c
 @@ -153,7 +153,8 @@ static LLVMTargetMachineRef ac_create_target_machine(enum radeon_family family,
  	LLVMTargetRef target = ac_get_llvm_target(triple);
