@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	go
-PORTVERSION=	1.12.6
+PORTVERSION=	1.12.7
 PORTEPOCH=	1
 CATEGORIES=	lang
 MASTER_SITES=	https://golang.org/dl/
@@ -34,6 +34,8 @@ sh_CMD=		${SH}
 
 WRKSRC=		${WRKDIR}/go
 ONLY_FOR_ARCHS=	i386 amd64 armv6 armv7
+
+CONFLICTS_INSTALL=	go-devel
 
 OPTIONS_DEFINE_i386=	GO387
 GO387_DESC=	Do not generate code with SSE2 (for old x86 CPU)
