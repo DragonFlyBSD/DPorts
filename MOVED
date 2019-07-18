@@ -8017,7 +8017,6 @@ sysutils/qzeitgeist||2019-03-16|Has expired: Qt4 has been EOL since december 201
 sysutils/searchmonkey||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 textproc/beediff||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 textproc/dixit||2019-03-16|Has expired: Qt4 has been EOL since december 2015
-textproc/goldendict||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 textproc/ibus-qt||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 textproc/py-qt4-xml||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 textproc/py-qt4-xmlpatterns||2019-03-16|Has expired: Qt4 has been EOL since december 2015
@@ -8949,3 +8948,8 @@ www/palemoon||2019-07-03|Not maintained and full of security holes
 www/seamonkey||2019-07-03|2.49.* is not maintained upstream and full of security holes
 www/tomcat8||2019-07-06|Has expired: EoL since 2018-06-30
 devel/libevent-hiphop||2019-07-10|Has expired: Obsoleted with removal of lang/hiphop-php
+textproc/apache-solr3|textproc/apache-solr|2019-07-12|Obsolete
+misc/tcb||2019-07-13|Has expired: Abandonware that uses sys/dir.h
+editors/xed||2019-07-13|Has expired: Abandonware using sys/dir.h
+databases/gtksql||2019-07-13|Has expired: Abandonware using sys/dir.h
+security/snortreport||2019-07-16|Has expired: Abandonware
