@@ -1,5 +1,4 @@
 dfly-patch:
-	# from ravenports
-	# Don't run post-install script; the manifest does this as postexec
-	${REINPLACE_CMD} -e 's|not meson.is_cross_build()|false|' ${WRKSRC}/meson.build
-	${CHMOD} ${BINMODE} ${WRKSRC}/build-aux/gen-*.py
+	# Make the scripts executable
+	${CHMOD} ${BINMODE} ${WRKSRC}/build-aux/gen-*.py \
+		${WRKSRC}/build-aux/*.sh

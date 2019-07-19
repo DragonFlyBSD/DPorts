@@ -1,0 +1,10 @@
+--- meson.build.orig	2019-02-28 16:22:57 UTC
++++ meson.build
+@@ -398,7 +398,6 @@ endif
+ subdir('po')
+ 
+ if not meson.is_cross_build()
+-  subdir('tests')
+   subdir('thumbnailer')
+ endif
+ 
