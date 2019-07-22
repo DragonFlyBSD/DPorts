@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	sshguard
-PORTVERSION=	2.3.1
+PORTVERSION=	2.4.0
+PORTEPOCH=	1
 CATEGORIES=	security
 MASTER_SITES=	SF/sshguard/sshguard/${PORTVERSION}
 
@@ -23,7 +24,7 @@ post-patch:
 		${WRKSRC}/examples/sshguard.conf.sample
 
 post-install:
-	${INSTALL} -d ${STAGEDIR}${PREFIX}/etc
+	${MKDIR} ${STAGEDIR}${PREFIX}/etc
 	${INSTALL_DATA} ${WRKSRC}/examples/sshguard.conf.sample \
 		${STAGEDIR}${PREFIX}/etc
 

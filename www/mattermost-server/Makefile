@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	mattermost-server
-PORTVERSION=	5.12.0
+PORTVERSION=	5.12.3
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www
 
@@ -13,9 +13,10 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 ONLY_FOR_ARCHS=	amd64 armv6 armv7 i386
 
-BUILD_DEPENDS=	go>=1.8.1:lang/go
 RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:security/ca_root_nss \
 		mattermost-webapp>=${PORTVERSION}:www/mattermost-webapp
+
+USES=		go
 
 GO_LDFLAGS=	-X github.com/mattermost/mattermost-server/model.BuildNumber=${PORTVERSION}
 

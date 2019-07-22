@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	syncthing
-PORTVERSION=	1.1.4
+PORTVERSION=	1.2.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	net
 MASTER_SITES=	https://github.com/syncthing/syncthing/releases/download/v${PORTVERSION}/
@@ -13,7 +13,7 @@ COMMENT=	Encrypted file sync tool
 LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/${PORTNAME}/LICENSE
 
-BUILD_DEPENDS=	${LOCALBASE}/bin/go:lang/go
+USES=		go
 
 USE_RC_SUBR=	syncthing syncthing-discosrv syncthing-relaysrv syncthing-relaypoolsrv
 

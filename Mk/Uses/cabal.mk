@@ -132,7 +132,7 @@ cabal-post-extract:
 .    if !target(do-build)
 do-build:
 	cd ${WRKSRC} && \
-		${SETENV} ${MAKE_ENV} HOME=${CABAL_HOME} cabal new-build --offline --flags "${CABAL_FLAGS}" ${BUILD_ARGS} ${BUILD_TARGET}
+		${SETENV} ${MAKE_ENV} HOME=${CABAL_HOME} cabal new-build --offline --disable-benchmarks --disable-tests --flags "${CABAL_FLAGS}" ${BUILD_ARGS} ${BUILD_TARGET}
 .    endif
 
 .    if !target(do-install)
@@ -149,7 +149,7 @@ do-install:
 	${ECHO} 'export ${dep:S/-/_/}_datadir=${DATADIR}' >> ${STAGEDIR}${PREFIX}/bin/${exe}
 .         endfor
 	${ECHO} '' >> ${STAGEDIR}${PREFIX}/bin/${exe}
-	${ECHO} '${PREFIX}/libexec/cabal/${exe} $$*' >> ${STAGEDIR}${PREFIX}/bin/${exe}
+	${ECHO} '${PREFIX}/libexec/cabal/${exe} "$$@"' >> ${STAGEDIR}${PREFIX}/bin/${exe}
 	${CHMOD} +x ${STAGEDIR}${PREFIX}/bin/${exe}
 .      endfor
 .    endif

@@ -15,4 +15,7 @@ USE_KDE=	ecm
 USE_QT=		buildtools_build core gui linguisttools qmake_build \
 		testlib widgets
 
+# Disable examples -- they are not installed anyways.
+CMAKE_OFF=	ENABLE_EXAMPLES
+
 .include <bsd.port.mk>

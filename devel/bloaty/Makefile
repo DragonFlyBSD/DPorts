@@ -3,7 +3,7 @@
 PORTNAME=	bloaty
 PORTVERSION=	1.0
 DISTVERSIONPREFIX=	v
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	swills@FreeBSD.org
@@ -12,9 +12,6 @@ COMMENT=	Size profiler for binaries
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	go:lang/go \
-		cmake:devel/cmake \
-		ninja:devel/ninja
 LIB_DEPENDS=	libre2.so:devel/re2 \
 		libcapstone.so:devel/capstone4 \
 		libprotobuf.so:devel/protobuf

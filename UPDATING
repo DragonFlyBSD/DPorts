@@ -5,24 +5,173 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+
+20190717:
+  AFFECTS: users of sysutils/py-borgmatic
+  AUTHOR: egypcio@FreeBSD.org
+
+  The default location for borgmatic's configurations changed. We moved it
+  from '/etc/borgmatic' to '/usr/local/etc/borgmatic' in order to follow
+  recommended standards used on FreeBSD.
+
+20190710:
+  AFFECTS: users with DEFAULT_VERSIONS+=linux=c6 or c6_64 in /etc/make.conf
+  AUTHOR: tij@FreeBSD.org
+
+  On amd64 adding DEFAULT_VERSIONS+=linux=c6 to /etc/make.conf made Linux
+  infrastructure ports (linux_base-c6 and linux-c6*) install i386 CentOS 6
+  packages.  Using c6_64 instead of c6 made them install mixed amd64/i386
+  CentOS 6 packages and allowed Linux application ports to install amd64
+  binaries when available.  The i386-only configuration was only useful for
+  users of x11/nvidia-driver* which didn't provide Linux amd64 emulation
+  until recently.
+
+  With x11/nvidia-driver* now supporting Linux amd64 there's no longer a
+  need for i386-only Linux on amd64 so DEFAULT_VERSIONS+=linux=c6 has been
+  changed to make Linux infrastructure ports install mixed amd64/i386
+  CentOS 6 packages, like c6_64 before, and support for c6_64 has been
+  removed.
+
+  Users with DEFAULT_VERSIONS+=linux=c6 should reinstall linux_base-c6 and
+  all packages that depend on it.  A list of dependent packages can be
+  obtained with the following command:
+
+    pkg info -r linux_base-c6
+
+  Users with DEFAULT_VERSIONS+=linux=c6_64 only need to replace c6_64 with
+  c6 in /etc/make.conf.
+
+  Users of x11/nvidia-driver* should upgrade to FreeBSD 11.3 or 12.0 if
+  they want to run Linux amd64 OpenGL programs.  If you are running an
+  older version you may want to postpone installing or updating Linux
+  application ports until you find the time to upgrade because application
+  ports may install amd64 binaries now.  Infrastructure ports are safe to
+  reinstall, and so is x11/nvidia-driver*.
+
+  On i386 nothing has changed.
+
+20190707:
+  AFFECTS: users of www/gitlab-ce
+  AUTHOR: mfechner@FreeBSD.org
+
+  You must at first upgrade to version 11.11.5 before you can upgrade
+  to version 12.
+  Support for MySQL will be dropped with next version.
+  Make sure you use at least PostgreSQL version 9.6.
+  Follow the normal upgrade manual that can be found here:
+  https://gitlab.fechner.net/mfechner/Gitlab-docu/blob/master/update/11.11-12.0-freebsd.md
+
+20190705:
+  AFFECTS: users of net/serviio which bought a license for the non-free features
+  AUTHOR: netchild@FreeBSD.org
+
+  Version 2 of serviio needs a new license file. Updating without a new license
+  file will disable the non-free features.
+
+20190701:
+  AFFECTS: users of databases/mysql56-(server|client)
+  AUTHOR: ale@FreeBSD.org
+
+  The default MySQL version has been updated from 5.6 to 5.7.
+
+  If you compile your own ports you may keep 5.6 as the default version by
+  adding the following lines to your /etc/make.conf file:
+
+  #
+  # Keep MySQL 5.6 as default version
+  #
+  DEFAULT_VERSIONS+=mysql=5.6
+
+  If you wish to update to the new default version, you need to first stop any
+  running server instance. Then, you will need to follow these steps, depending
+  on installed packages.
+
+  # pkg set -o databases/mysql56-client:databases/mysql57-client
+  # pkg set -o databases/mysql56-server:databases/mysql57-server
+  # pkg upgrade
+
+20190630:
+  AFFECTS: users of net/samba410
+  AUTHOR: timur@FreeBSD.org
+
+  If you used Samba in AD/DC mode with the previous versions of the port on UFS2
+  backed storage you have to add usage of vfs_freebsd VFS module for at least
+  SYSVOL share and configure it to use 'legacy' mode(see manpage).
+
+  The reason behind this is that previous versions Samba port used a hack to
+  workaround broken mapping of Linux security and trusted extended attributes
+  into FreeBSD namespace. In particular, essential security.NTACL attribute
+  was replaced with the user.NTACL and placed in a insecure USER namespace.
+
+  This port dropped this hack in favor of vfs_freebsd module, which should
+  provide more controlled way of such a mapping.
+
+  To maintain the compatibility with the previous installations on UFS2 storage
+  (as ZFS uses it's own way of mapping SYSVOL, thanks to the iXsystems patches)
+  the vfs_freebsd module provides 'legacy' mode that implements old functionality.
+
+  For the fresh installations it is recommended to use 'secure' mode of operations
+  for this module and use it as a global vfs objects.
+
+  Caution: The given module is still considered EXPERIMENTAL.
+
+20190630:
+  AFFECTS: users of net/samba410, net/samba4[6-8] and devel/talloc?, devel/tevent?,
+           databases/tdb?, databases/ldb*
+  AUTHOR: timur@FreeBSD.org
+
+  The port of the new version of Samba 4.10 is introduced. Due necessarily
+  to keep backwards compatibility for the legacy samba4[6-8] ports the 
+  upgrade procedure is a bit convoluted.
+
+  You are safe to perform fresh new install of samba410 port. In case you
+  are upgrading from the previous versions of Samba, please use the
+  following procedure:
+
+  0.  Take backups of all the relevant files, in particular PREFIX/etc/smb4.conf
+      and /var/db/samba4/ subdirectory. Keep in mind that files there (may)
+      have extended attributes, so use appropriate tools to preserve them.
+
+  1a. If you haven't updated Samba between 20190619 and 20190630 then next
+      step should be as simple as:
+
+        portmaster -o net/samba410 net/samba48
+
+  1b. If you have been affected by the archiving legacy versions of
+      Samba-related libraries for legacy versions of Samba, which happened
+      in the given time frame, then you need to reverse operation from the
+       20190619 entry:
+
+      for users of portmaster:
+        portmaster -o devel/talloc devel/talloc1
+        portmaster -o devel/tevent devel/tevent1
+        portmaster -o databases/tdb databases/tdb1
+        portmaster -o net/samba410 net/samba48
+
+      for users of portupgrade:
+        portupgrade -o devel/talloc devel/talloc1
+        portupgrade -o devel/tevent devel/tevent1
+        portupgrade -o databases/tdb databases/tdb1
+        portupgrade -o net/samba410 net/samba48
+
 20190619:
   AFFECTS: users of samba4[6-8] and devel/talloc, devel/tevent, databases/tdb, databases/ldb*
   AUTHOR: timur@FreeBSD.org
 
-  To introduce samba410(we deliberatly skip samba49 due the complexity of handling)
-  and to drop dependency on deprecated Python 2.7, Samba supplimentary libraries
-  talloc, tevent and tdb were splitted into current Python 3 compatiable versions
+  To introduce samba410(we deliberately skip samba49 due the complexity of handling)
+  and to drop dependency on deprecated Python 2.7, Samba supplementary libraries
+  talloc, tevent and tdb were split into current Python 3 compatible versions
   and legacy ones, with the suffix "1".
 
-  Old versions of Samba were changed to depend on the legacy supplimentary libraries,
+  Old versions of Samba were changed to depend on the legacy supplementary libraries,
   so if you need to install samba46, samba47 or samba48 over previous Samba
-  installations you need to downgrade supplimentary libs with the following commands:
+  installations you need to downgrade supplementary libs with the following commands:
 
   for users of portmaster:
         portmaster -o devel/talloc1 devel/talloc
         portmaster -o devel/tevent1 devel/tevent
         portmaster -o databases/tdb1 databases/tdb
-        portmaster -r devel/talloc1
+        portmaster -r talloc1
 
   for users of portupgrade:
         portupgrade -o devel/talloc1 devel/talloc

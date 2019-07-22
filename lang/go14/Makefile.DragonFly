@@ -5,3 +5,11 @@ DFLY_ALLOW_FOREIGN_BINARIES=yes
 .endif
 
 PLIST_SUB+=	OPSYSL=${OPSYS:tl}
+SHEBANG_FILES += misc/makerelease/darwin/scripts/postinstall \
+		 misc/makerelease/darwin/scripts/preinstall
+
+
+dfly-patch:
+	# XXX This is meh
+	${RM} ${WRKSRC}/src/debug/elf/testdata/gcc-amd64-linux-exec \
+		${WRKSRC}/src/debug/dwarf/testdata/typedef.elf

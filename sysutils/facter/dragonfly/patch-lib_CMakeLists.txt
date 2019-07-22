@@ -1,0 +1,18 @@
+--- lib/CMakeLists.txt.orig	2019-07-16 09:17:35 UTC
++++ lib/CMakeLists.txt
+@@ -225,6 +225,15 @@ elseif ("${CMAKE_SYSTEM_NAME}" MATCHES "
+     set(LIBFACTER_PLATFORM_LIBRARIES
+         geom
+     )
++elseif ("${CMAKE_SYSTEM_NAME}" MATCHES "DragonFly")
++    set(LIBFACTER_PLATFORM_SOURCES
++        "src/facts/dragonfly/collection.cc"
++        "src/facts/glib/load_average_resolver.cc"
++        "src/facts/bsd/filesystem_resolver.cc"
++        "src/facts/bsd/networking_resolver.cc"
++        "src/facts/bsd/uptime_resolver.cc"
++        "src/util/bsd/scoped_ifaddrs.cc"
++    )
+ elseif ("${CMAKE_SYSTEM_NAME}" MATCHES "OpenBSD")
+     set(LIBFACTER_PLATFORM_SOURCES
+         "src/facts/openbsd/collection.cc"

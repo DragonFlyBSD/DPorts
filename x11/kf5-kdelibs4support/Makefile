@@ -18,7 +18,7 @@ USE_KDE=	auth bookmarks codecs completion config configwidgets \
 		widgetsaddons windowsystem xmlgui \
 		designerplugin_build designerplugin_run \
 		itemmodels_run
-USE_QT=		buildtools_build core dbus designer gui network \
+USE_QT=		buildtools_build concurrent core dbus designer gui network \
 		printsupport qmake_build svg testlib widgets \
 		x11extras xml
 USE_XORG=	ice sm x11 xext

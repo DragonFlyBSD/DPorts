@@ -1,2 +1,0 @@
-# unbreak after x11-toolkits/scintilla update on freebsd-ports
-CFLAGS+= -DINCLUDE_DEPRECATED_FEATURES

@@ -1,6 +1,6 @@
---- configure.orig	2018-04-18 14:48:02 UTC
+--- configure.orig	2019-07-13 23:12:38 UTC
 +++ configure
-@@ -23528,7 +23528,7 @@ fi
+@@ -24255,7 +24255,7 @@ fi
  
  
  case "$host_os" in
@@ -9,13 +9,3 @@
      dri3_default=yes
      ;;
  *)
-@@ -27316,9 +27316,6 @@ rm -f core conftest.err conftest.$ac_obj
-         CLANG_LIBDIR=${LLVM_LIBDIR}
-     fi
-     CLANG_RESOURCE_DIR=$CLANG_LIBDIR/clang/${LLVM_VERSION}
--    if test ! -f "$CLANG_RESOURCE_DIR/include/stddef.h"; then :
--  as_fn_error $? "Could not find clang internal header stddef.h in $CLANG_RESOURCE_DIR Use --with-clang-libdir to specify the correct path to the clang libraries." "$LINENO" 5
--fi
- fi
-  if test "x$enable_opencl" = xyes; then
-   HAVE_CLOVER_TRUE=

@@ -1,11 +1,11 @@
 # $FreeBSD$
 
 PORTNAME=	her
-PORTVERSION=	1.0.3
+PORTVERSION=	1.1.0
 CATEGORIES=	databases rubygems
 MASTER_SITES=	RG
 
-MAINTAINER=	ruby@FreeBSD.org
+MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	ORM that maps REST resources to Ruby objects
 
 LICENSE=	MIT

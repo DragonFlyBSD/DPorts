@@ -12,7 +12,7 @@ USE_KDE=	auth bookmarks codecs completion config configwidgets \
 		coreaddons doctools ecm i18n iconthemes itemviews \
 		jobwidgets kdewebkit kio plotting service solid sonnet \
 		textwidgets widgetsaddons xmlgui
-USE_QT=		buildtools_build core dbus designer gui linguisttools \
+USE_QT=		buildtools_build concurrent core dbus designer gui linguisttools \
 		network qmake_build webkit widgets xml
 
 .include <bsd.port.mk>

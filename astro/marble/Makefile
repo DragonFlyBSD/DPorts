@@ -2,6 +2,7 @@
 
 PORTNAME=	marble
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
+PORTREVISION=	1
 CATEGORIES=	astro kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -13,13 +14,13 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 LIB_DEPENDS=	libquazip5.so:archivers/quazip
 
 USES=		cmake compiler:c++11-lang desktop-file-utils gettext \
-		kde:5 qt:5 tar:xz
+		kde:5 qt:5 shared-mime-info tar:xz
 USE_KDE=	attica auth codecs completion config configwidgets coreaddons \
 		crash doctools ecm i18n jobwidgets kio newstuff package parts \
 		plasma-framework plasma-workspace-wallpapers runner service \
 		sonnet textwidgets wallet widgetsaddons xmlgui
 USE_QT=		concurrent core dbus declarative designer gui location network opengl \
-		phonon4 printsupport script sql svg webchannel widgets xml \
+		phonon4 printsupport script serialport sql svg webchannel widgets xml \
 		buildtools_build qmake_build
 
 USE_LDCONFIG=	yes
@@ -36,7 +37,7 @@ OPTIONS_SUB=	yes
 
 GPS_DESC=		Support for GPS position provider
 GPS_LIB_DEPENDS=	libgps.so:astro/gpsd
-GPS_CMAKE_BOOL_ON=		WITH_libgps
+GPS_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_libgps
 
 WEBENGINE_DESC=		Add dependency on qt5-webengine
 WEBENGINE_USE=		QT=webengine

@@ -1,10 +1,11 @@
---- layers/parameter_validation_utils.cpp.orig	2018-07-30 17:53:08 UTC
+--- layers/parameter_validation_utils.cpp.orig	2019-06-13 14:59:29 UTC
 +++ layers/parameter_validation_utils.cpp
-@@ -27,6 +27,7 @@
- #include <stdlib.h>
- #include <string.h>
+@@ -21,6 +21,8 @@
  
-+#include <cmath>	// for std::isnan()
- #include <iostream>
- #include <string>
- #include <sstream>
+ #define NOMINMAX
+ 
++#include <cmath>     // for std::isnan()
++
+ #include <math.h>
+ 
+ #include "chassis.h"
