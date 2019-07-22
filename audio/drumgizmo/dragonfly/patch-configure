@@ -1,15 +1,15 @@
---- configure.orig	2018-08-12 08:05:10 UTC
+--- configure.orig	2019-06-16 08:51:06 UTC
 +++ configure
-@@ -16951,7 +16951,7 @@ $as_echo "Auto setting gui based on host
+@@ -17381,7 +17381,7 @@ $as_echo "Auto setting gui based on host
  	     case $host_os in #(
    darwin*) :
-     enable_gui="pugl-cocoa" ;; #(
+     enable_gui="cocoa" ;; #(
 -  linux*|*bsd*) :
 +  linux*|*bsd*|dragonfly*) :
      enable_gui="x11" ;; #(
    msys|mingw*|windows*|winnt|cygwin) :
      enable_gui="win32" ;; #(
-@@ -17579,7 +17579,7 @@ if test "x$enable_vst" = "xyes"; then :
+@@ -18144,7 +18144,7 @@ if test "x$enable_vst" = "xyes"; then :
  	case $host_os in #(
    darwin*) :
        ;; #(
@@ -18,7 +18,7 @@
      VST_CPPFLAGS="$VST_CPPFLAGS -D__cdecl=" ;; #(
    msys|mingw*|windows*|winnt|cygwin) :
        ;; #(
-@@ -17808,7 +17808,7 @@ $as_echo "*** input midifile plugin disa
+@@ -18373,7 +18373,7 @@ $as_echo "*** input midifile plugin disa
  fi
  
      case $host_os in
@@ -27,7 +27,7 @@
        enable_oss_midi_value=yes
        ;;
      *)
-@@ -18022,7 +18022,7 @@ $as_echo "*** output wavfile plugin disa
+@@ -18587,7 +18587,7 @@ $as_echo "*** output wavfile plugin disa
  fi
  
      case $host_os in
@@ -36,7 +36,7 @@
        enable_oss_value=yes
        ;;
      *)
-@@ -18477,7 +18477,7 @@ LIBS="$tmp_LIBS"
+@@ -19042,7 +19042,7 @@ LIBS="$tmp_LIBS"
  case $host_os in #(
    darwin*) :
      PTHREAD_LIBS="$PTHREAD_LIBS -framework CoreServices" ;; #(
