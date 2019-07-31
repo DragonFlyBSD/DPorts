@@ -1,1 +1,2 @@
-CONFIGURE_ENV+=	ac_cv_header_net_pfvar_h=yes
+# configure script just checks for these
+CONFIGURE_ENV+=	ac_cv_header_net_pfvar_h=yes ac_cv_header_net_if_tun_h=yes
