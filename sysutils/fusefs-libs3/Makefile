@@ -13,7 +13,7 @@ LICENSE=	GPLv2 LGPL21
 LICENSE_COMB=	multi
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		meson
+USES=		compiler meson
 USE_LDCONFIG=	yes
 PLIST_SUB=	VERSION=${PORTVERSION}
 
@@ -23,8 +23,8 @@ GH_PROJECT=	libfuse
 
 .include <bsd.port.pre.mk>
 
+.if ${CHOSEN_COMPILER_TYPE} == gcc
 post-patch:
-.if ${ARCH:Mmips*} || ${ARCH:Mpowerpc*} || ${ARCH} == sparc64
 	${REINPLACE_CMD} -e '/-Wno-unused-result/d' ${WRKSRC}/meson.build
 .endif
 
