@@ -6457,7 +6457,6 @@ security/shibboleth2-sp|security/shibboleth-sp|2018-08-07|Project updated to ver
 security/opensaml2|security/opensaml|2018-08-07|Project updated to version 3, so the 2 suffix is not valid anymore
 devel/lldb38|devel/llvm38|2018-08-08|METAPORT removed
 lang/clang38|devel/llvm38|2018-08-08|METAPORT removed
-science/py-tensorflow||2018-08-08|Has expired: build broken
 devel/bazel-clang38|devel/bazel|2018-08-08|Slave port depends on obsolete LLVM version
 security/libbeid|security/beid|2018-08-12|No longer just a library
 editors/joe2|editors/joe|2018-08-12|Patches from editors/joe2 have been integrated into editors/joe
@@ -6810,7 +6809,6 @@ games/gnomeattacks||2018-12-11|Has expired: GNOME 2 application
 games/gnomebreakout||2018-12-11|Has expired: GNOME 2 application
 x11-clocks/gtubeclock||2018-12-11|Has expired: GNOME 2 application
 x11-clocks/sanduhr||2018-12-11|Has expired: GNOME 2 application
-audio/grip||2018-12-11|Has expired: GNOME 2 application
 audio/jack-rack||2018-12-11|Has expired: GNOME 2 application
 math/gdcalc||2018-12-11|Has expired: GNOME 2 application
 x11/brightside||2018-12-11|Has expired: GNOME 2 application
@@ -6979,7 +6977,6 @@ security/py-yubioath-desktop|security/yubioath-desktop|2018-12-27|New Yubikey Oa
 audio/amarok-kde4|audio/amarok|2018-12-28|Renamed as no longer kde4 based
 games/knights-kde|games/knights|2018-12-30|Switch to version from KDE Applications
 multimedia/kmplayer-kde4|multimedia/kmplayer|2018-12-30|Moved to KF5 based version
-net/pecl-mosquitto||2018-12-30|Has expired: Works only with EOL php 5.6
 net/pecl-ip2location||2018-12-30|Has expired: Works only with EOL php 5.6
 net/pecl-yp||2018-12-30|Has expired: Works only with EOL php 5.6
 net/pecl-oauth||2018-12-30|Has expired: Works only with EOL php 5.6
@@ -7061,7 +7058,6 @@ devel/pecl-jsonc||2018-12-30|Has expired: Works only with EOL php 5.6
 devel/pecl-weakref||2018-12-30|Has expired: Works only with EOL php 5.6
 devel/pecl-pthreads2|devel/pecl-pthreads|2018-12-30|Has expired: Works only with EOL php 5.6
 devel/pecl-gearman||2018-12-30|Has expired: Works only with EOL php 5.6
-devel/pecl-inotify||2018-12-30|Has expired: Works only with EOL php 5.6
 devel/pecl-raphf||2018-12-30|Has expired: Works only with EOL php 5.6
 devel/php5-thrift||2018-12-30|Has expired: Works only with EOL php 5.6
 devel/php5-ice||2018-12-30|Has expired: Works only with EOL php 5.6
@@ -7527,7 +7523,6 @@ security/pecl-ssh2-0|security/pecl-ssh2|2019-01-01|Has expired: Works only with 
 security/bitwarden-ruby||2019-01-01|Has expired: Expects very specific rubygem versions for new updates. Please follow instructions in git repo
 devel/pecl-intl||2019-01-01|Has expired: Works only with EOL php 5.6
 devel/pecl-APCu4|devel/pecl-APCu|2019-01-01|Has expired: Works only with EOL php 5.6
-databases/pecl-memcache||2019-01-01|Has expired: Works only with EOL php 5.6
 databases/pecl-memcached2|databases/pecl-memcached|2019-01-01|Has expired: Works only with EOL php 5.6
 math/pecl-bitset2|math/pecl-bitset|2019-01-01|Has expired: Works only with EOL php 5.6
 multimedia/zoneminder-h264|multimedia/zoneminder|2019-01-01|Has expired: h264 feature was commited to main branch, please upgrade to www/zoneminder
@@ -8953,3 +8948,25 @@ misc/tcb||2019-07-13|Has expired: Abandonware that uses sys/dir.h
 editors/xed||2019-07-13|Has expired: Abandonware using sys/dir.h
 databases/gtksql||2019-07-13|Has expired: Abandonware using sys/dir.h
 security/snortreport||2019-07-16|Has expired: Abandonware
+databases/pecl-redis3|databases/pecl-redis|2019-07-19|No longer needed after PHP 5 removal
+www/weblint||2019-07-20|Broken, uses nonexistant perl libraries, and upstream disappeared. Use www/p5-HTML-Lint instead
+www/august||2019-07-20|Uses removed weblint
+misc/bitwise|math/bitwise|2019-07-21|Moved to math category
+devel/gradle46||2019-07-26|Removed because the only user, biology/gatk, doesn't need it any more
+devel/subversion19|devel/subversion|2019-07-27|Has expired: subversion 1.9.x is end of life log time ago. Consider installing devel/subversion or devel/subversion-lts
+www/p5-WebService-MusicBrainz0|www/p5-WebService-MusicBrainz|2019-07-28|0.9x branch is no longer required after audio/abcde was updated to 2.9.1
+security/rubygem-googleauth06|security/rubygem-googleauth|2019-07-31|Has expired: Use security/rubygem-googleauth instead
+devel/ddd||2019-07-31|Has expired: does not work with modern gdb
+devel/py-pip-tools2|devel/py-pip-tools|2019-07-31|Has expired: Use devel/py-pip-tools instead
+lang/cint|lang/cling|2019-07-31|Has expired: Abandonware; superseded by lang/cling
+emulators/pearpc||2019-08-01|Has expired: Abandonware
+sysutils/bbcp||2019-08-03|Has expired: the port is broken for more than a year
+multimedia/gnome-mpv|multimedia/celluloid|2019-08-08|Renamed upstream
+devel/py-mimeparse|devel/py-python-mimeparse|2019-08-11|Rename to match upstream naming
+devel/rubygem-web-console|devel/rubygem-web-console-rails5|2019-08-11|Rename to match our rubygem- port naming
+devel/rubygem-spring-rails5|devel/rubygem-spring|2019-08-11|Remove unnecessary port after devel/rubygem-spring update
+devel/rubygem-spring-rails50|devel/rubygem-spring|2019-08-11|Remove unnecessary port after devel/rubygem-spring update
+www/rubygem-turbolinks-rails5|www/rubygem-turbolinks|2019-08-11|Remove unnecessary port after www/rubygem-turbolinks RUN_DEPENDS fix
+www/rubygem-turbolinks-rails50|www/rubygem-turbolinks|2019-08-11|Remove unnecessary port after www/rubygem-turbolinks RUN_DEPENDS fix
+textproc/sphinxsearch-devel|textproc/sphinxsearch|2019-08-11|Has expired: Broken for more than 6 months
+lang/dmd2||2019-08-11|Has expired: Broken for more than 6 months and upstream has no fix for statfs64

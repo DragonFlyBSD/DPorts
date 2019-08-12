@@ -177,11 +177,11 @@ openhab:*:235:
 rspamd:*:236:
 paperless:*:237:
 sonic:*:238:
-# free: 239
+restserver:*:239:
 aprsd:*:240:
 tnc:*:241:
 prosody:*:242:
-# free: 243
+ot-recorder:*:243:
 mastodon:*:244:
 # free: 245
 # free: 246
@@ -542,7 +542,7 @@ _xsi:*:600:
 _tss:*:601:
 _pkcs11:*:602:
 _acme:*:603:
-# free: 604
+_lego:*:604:
 _hockeypuck:*:605:
 # free: 606
 # free: 607

@@ -47,8 +47,12 @@ FIREBIRD_DEFAULT?=	2.5
 FORTRAN_DEFAULT?=	gfortran
 # Possible values: 3.0.4
 FPC_DEFAULT?=		3.0.4
-# Possible values: 7, 8, 9
+# Possible values: 7, 8, 9 (powerpcspe was dropped with GCC 9)
+.if ${ARCH} == "powerpcspe"
 GCC_DEFAULT?=		8
+.else
+GCC_DEFAULT?=		9
+.endif
 # Possible values: 7, 8, 9, agpl
 GHOSTSCRIPT_DEFAULT?=	agpl
 # Possible values: 0.6, 0.7, 1.0, 1.1
@@ -80,7 +84,7 @@ _PERL5_FROM_BIN!=	${LOCALBASE}/bin/perl -e 'printf "%vd\n", $$^V;'
 _EXPORTED_VARS+=	_PERL5_FROM_BIN
 PERL5_DEFAULT:=		${_PERL5_FROM_BIN:R}
 .endif
-# Possible values: 9.4, 9.5, 9.6, 10, 11
+# Possible values: 9.4, 9.5, 9.6, 10, 11, 12
 PGSQL_DEFAULT?=		9.5
 # Possible values: 7.1, 7.2, 7.3
 PHP_DEFAULT?=		7.2
