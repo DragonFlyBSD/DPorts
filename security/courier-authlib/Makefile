@@ -3,7 +3,7 @@
 
 PORTNAME=	courier-authlib
 PORTVERSION=	0.69.0
-PORTREVISION?=	1
+PORTREVISION?=	2
 CATEGORIES?=	security mail
 .if defined(PKGNAMESUFFIX)
 MASTER_SITES=	SF/courier/authlib/${PORTVERSION}
@@ -124,6 +124,7 @@ RUN_DEPENDS+=	${LOCALBASE}/share/sysconftool/sysconftool:devel/sysconftool
 OPTIONS_DEFINE+=	DOCS
 
 DOCS=		README.authmysql.html README.authmysql.myownquery
+USES+=		compiler:c11
 USE_MYSQL=	yes
 CONFIGURE_ARGS+=--with-authmysql \
 		--with-mysql-libs=${LOCALBASE}/lib/mysql \
