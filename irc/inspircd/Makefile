@@ -4,6 +4,7 @@
 PORTNAME=	inspircd
 DISTVERSIONPREFIX=	v
 DISTVERSION=	3.2.0
+PORTREVISION=	1
 CATEGORIES=	irc
 
 MAINTAINER=	dg@syrec.org
@@ -13,7 +14,7 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/docs/LICENSE.txt
 
 # Configure script is written in perl
-USES=		cpe gmake perl5
+USES=		compiler:c++11-lang cpe gmake perl5
 USE_GITHUB=	yes
 USE_PERL5=	build
 
