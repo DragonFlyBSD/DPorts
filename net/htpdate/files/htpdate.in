@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net/htpdate/files/htpdate.in 406238 2016-01-16 16:40:19Z jgh $
+# $FreeBSD: head/net/htpdate/files/htpdate.in 508486 2019-08-09 23:20:14Z jgh $
 
 # PROVIDE: htpdate
 # REQUIRE: NETWORKING SERVERS
@@ -17,7 +17,7 @@
 load_rc_config htpdate
 
 htpdate_enable="${htpdate_enable:-"NO"}"
-htpdate_servers="${htpdate_servers:-"www.freebsd.org www.linux.com"}"
+htpdate_servers="${htpdate_servers:-"www.example.com"}"
 htpdate_flags="${htpdate_flags:-"-l -s -D"}"
 
 name=htpdate
