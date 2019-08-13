@@ -3,7 +3,7 @@
 PORTNAME=	bloaty
 PORTVERSION=	1.0
 DISTVERSIONPREFIX=	v
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	devel
 
 MAINTAINER=	swills@FreeBSD.org
@@ -16,7 +16,7 @@ LIB_DEPENDS=	libre2.so:devel/re2 \
 		libcapstone.so:devel/capstone4 \
 		libprotobuf.so:devel/protobuf
 
-USES=		cmake pkgconfig
+USES=		cmake compiler:c++11-lang pkgconfig
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	google
