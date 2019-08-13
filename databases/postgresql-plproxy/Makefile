@@ -2,9 +2,9 @@
 # $FreeBSD$
 
 PORTNAME=	plproxy
-DISTVERSIONPREFIX=	${PORTNAME}_
+DISTVERSIONPREFIX=	plproxy_
 DISTVERSION=	2_8
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	databases
 PKGNAMEPREFIX=	postgresql-
 
@@ -15,11 +15,10 @@ LICENSE=	ISCL
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
 
 USES=		bison gmake pgsql
-LLD_UNSAFE=	yes
-USE_GITHUB=	yes
 
-post-patch:
-	@${REINPLACE_CMD} -e '/^#ifdef/ s| SYS_| HAVE_SYS_|' ${WRKSRC}/src/execute.c
+LLD_UNSAFE=	yes
+
+USE_GITHUB=	yes
 
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/postgresql/plproxy.so
