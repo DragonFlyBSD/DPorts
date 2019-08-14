@@ -2,8 +2,8 @@
 
 PORTNAME=	rpcs3
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.0.6-8385 # git rev-list --count HEAD
-DISTVERSIONSUFFIX=	-g736ec4035
+DISTVERSION=	0.0.6-8457 # git rev-list --count HEAD
+DISTVERSIONSUFFIX=	-g94d33003a
 CATEGORIES=	emulators
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -46,6 +46,7 @@ LDFLAGS+=	-Wl,--as-needed # GLU
 # XXX Remove after FreeBSD 11.2/12.0 reach EOL i.e., around 2020-02-01
 .if !exists(/usr/include/c++/v1/charconv) && exists(/usr/lib/libc++.so)
 EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-revert-f9ad6358563b
+EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-revert-5bd17a44c972
 .endif
 
 OPTIONS_DEFINE=	ALSA EVDEV GDB LLVM PULSEAUDIO VULKAN
