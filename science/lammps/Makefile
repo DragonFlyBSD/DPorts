@@ -13,9 +13,9 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 BROKEN_i386=	undefined reference to `__atomic_load'
 CONFLICTS_BUILD=	ga # conflicts with include/error.h, already fixed in the head
 
-USES=		blaslapack:openblas cmake:noninja eigen:3 fortran shebangfix
+USES=		blaslapack:openblas cmake:noninja eigen:3 fortran localbase:ldflags shebangfix
 USE_GITHUB=	yes
-GH_TAGNAME=	patch_5Jun2019
+GH_TAGNAME=	stable_7Aug2019
 SHEBANG_GLOB=	*.sh *.bash
 SHEBANG_FILES=	lib/kokkos/bin/nvcc_wrapper
 
