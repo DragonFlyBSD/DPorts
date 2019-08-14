@@ -1,0 +1,9 @@
+#
+# Since _POSIX_C_SOURCE=200112L is defined, we can't make use of the pthread_np
+# functions like pthread_set_name_np
+# Please note that there is only one __DragonFly__ used in the file below
+# so sed works fine for now but can cause problems in the future.
+#
+dfly-patch:
+	${REINPLACE_CMD} -e 's| defined(__DragonFly__) \|\|||' \
+		${WRKSRC}/src/thread.h
