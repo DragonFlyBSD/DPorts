@@ -188,7 +188,7 @@ mastodon:*:244:
 fcron:*:247:
 # free: 248
 # free: 249
-# free: 250
+sems:*:250:
 # free: 251
 # free: 252
 _adsuck:*:253:
@@ -294,7 +294,7 @@ radarr:*:352:
 _iodined:*:353:
 jackett:*:354:
 nzbhydra2:*:355:
-# free: 356
+lidarr:*:356:
 # free: 357
 # free: 358
 # free: 359

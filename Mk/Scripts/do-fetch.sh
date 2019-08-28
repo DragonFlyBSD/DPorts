@@ -28,9 +28,10 @@ esac
 
 if [ ! -n "${DO_FETCH_ISLOCKED:=}" ]; then
 	for _file in "${@}"; do
+		mkdir -p .locks
 		file=${_file%%:*}
 		lkfile="`echo "$file" | md5`"
-		DO_FETCH_ISLOCKED=YES lockf -s ${lkfile}.lk sh $0 "${_file}" || exit 1
+		DO_FETCH_ISLOCKED=YES lockf -k -s .locks/${lkfile}.lk sh $0 "${_file}" || exit 1
 	done
 	exit 0
 fi
