@@ -2,9 +2,10 @@
 # $FreeBSD$
 
 PORTNAME=	aspell
-PORTVERSION=	0.60.7
+DISTVERSION=	0.60.8-20190817
 CATEGORIES=	textproc
-MASTER_SITES=	GNU/aspell
+#MASTER_SITES=	GNU/aspell
+MASTER_SITES=	GNU_ALPHA/aspell
 
 MAINTAINER=	office@FreeBSD.org
 COMMENT=	Spelling checker with better suggestion logic than ispell
@@ -27,7 +28,7 @@ SHEBANG_FILES=	scripts/aspell-import
 CPE_VENDOR=	gnu
 
 INSTALL_TARGET=	install-strip
-VERINST=	${PORTVERSION:R}
+VERINST=	${PORTVERSION:R:R}
 SUB_FILES=	aspell.ver
 PLIST_SUB=	VER=${VERINST}
 SUB_LIST=	VERINST=${VERINST}
