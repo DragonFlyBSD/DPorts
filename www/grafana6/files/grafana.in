@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/www/grafana6/files/grafana.in 442509 2017-06-03 16:57:23Z swills $
+# $FreeBSD: head/www/grafana6/files/grafana.in 509953 2019-08-26 15:03:19Z ler $
 #
 # PROVIDE: grafana
 # REQUIRE: LOGIN
@@ -41,7 +41,7 @@ grafana_precmd()
 {
     chown ${grafana_user}:${grafana_group} %%GRAFANADATADIR%%
     chown ${grafana_user}:${grafana_group} %%GRAFANALOGDIR%%
-    chown ${grafana_user}:${grafana_group} %%GRAFANAHOMEDIR%%data/log/
+    chown ${grafana_user}:${grafana_group} %%GRAFANAHOMEDIR%%/data/log/
     install -d -o ${grafana_user} %%GRAFANAPIDDIR%%
     install -o ${grafana_user} /dev/null ${pidfile}
 }
