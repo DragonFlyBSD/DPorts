@@ -9,7 +9,7 @@ OPTIONS_DEFINE+=	DBUS
 OPTIONS_DEFAULT+=	DBUS
 
 DBUS_CONFIGURE_WITH=atk-bridge
-DBUS_LIB_DEPENDS=libatk-bridge-2.0.so:${PORTSDIR}/accessibility/at-spi2-atk
+DBUS_LIB_DEPENDS=libatk-bridge-2.0.so:accessibility/at-spi2-atk
 DBUS_DESC=	AT-SPI ATK bridge support (hidden depends on devel/dbus)
 
 dfly-patch:
