@@ -1,0 +1,2 @@
+The pam_tacplus module provides authentication services based upon the
+TACACS+ protocol for the PAM (Pluggable Authentication Module) framework.
