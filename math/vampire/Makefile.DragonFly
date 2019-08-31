@@ -1,0 +1,5 @@
+
+# port does not respect CXXFLAGS
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-Wall@-D__FreeBSD__=9 &@g' \
+		${WRKSRC}/Makefile
