@@ -1,0 +1,6 @@
+
+# exclude binary alias, use base
+BINARY_ALIAS:=	${BINARY_ALIAS:Ncpp*}
+
+LDFLAGS:=	${LDFLAGS:N*gfortran.so} -L${LOCALBASE}/lib/gcc${_GCC_VER} -lgfortran
+LDFLAGS+=	-L${LOCALBASE}/lib -lmpifort
