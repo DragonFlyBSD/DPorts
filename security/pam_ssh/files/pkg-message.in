@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------
+This port might create possible security risks.
+Ensure that users are using secure passphrases on remote systems for
+their default private keys in /home/USER/.ssh/id_rsa etc !!!
+
+In order to use this PAM module in sshd daemon enable option "UsePAM yes"
+in /etc/sshd/sshd_config and put following line in /etc/pam.d/sshd:
+
+  auth sufficient %%LOCALBASE%%/lib/pam_ssh.so no_warn try_first_pass
+
+Make sure not to lose connection while reinstalling the port, this will
+result in unusable sshd(8) if pam_ssh.so module is not found.
+-------------------------------------------------------------------------
