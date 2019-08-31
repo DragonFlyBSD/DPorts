@@ -8,8 +8,14 @@ PLIST_SUB+=	OPSYSL=${OPSYS:tl}
 SHEBANG_FILES += misc/makerelease/darwin/scripts/postinstall \
 		 misc/makerelease/darwin/scripts/preinstall
 
-
+# attempt to fix pkg-plist missing ${OPSYS}
+PLIST=  ${WRKDIR}/dfly-plist
 dfly-patch:
-	# XXX This is meh
-	${RM} ${WRKSRC}/src/debug/elf/testdata/gcc-amd64-linux-exec \
-		${WRKSRC}/src/debug/dwarf/testdata/typedef.elf
+	${CAT} ${.CURDIR}/pkg-plist | ${GREP} -v "typedef.elf" | \
+	    ${GREP} -v "/testdata/.*-exec" | \
+	    ${SED} -e 's@freebsd_\%@%%OPSYSL%%_%@g' | \
+	    ${SED} -e '/\/runtime\/z/s@_freebsd@_%%OPSYSL%%@g'  > ${PLIST}
+
+dfly-install:
+	${RM} -fv ${STAGEDIR}/${PREFIX}/go14/src/debug/dwarf/testdata/typedef.elf*
+	${RM} -fv ${STAGEDIR}/${PREFIX}/go14/src/debug/*/testdata/*-exec*
