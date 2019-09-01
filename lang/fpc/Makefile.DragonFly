@@ -1,4 +1,6 @@
 
+MAKE_ENV+=	LDVER=ld.bfd
+
 # zrj: fix up path, now can call directly
 .if !defined(PKGNAMESUFFIX)
 dfly-patch:
