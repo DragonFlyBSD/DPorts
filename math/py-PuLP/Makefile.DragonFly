@@ -1,0 +1,8 @@
+
+dfly-patch:
+	${CP} ${WRKSRC}/src/pulp/pulp.cfg.freebsd ${WRKSRC}/src/pulp/pulp.cfg.dragonfly
+	${REINPLACE_CMD} -e 's@freebsd@dragonfly@g' \
+		${WRKSRC}/src/pulp/solvers.py
+	${REINPLACE_CMD} -e '/pulp.cfg./s@linux@dragonfly@g' \
+			 -e '/cbc.linux/d' -e '/cbc.win/d' \
+		${WRKSRC}/setup.py
