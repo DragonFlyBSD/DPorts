@@ -1,0 +1,11 @@
+--- CMakeLists.txt.orig	2019-08-07 15:40:55 UTC
++++ CMakeLists.txt
+@@ -41,7 +41,7 @@ IF (${CMAKE_SYSTEM_NAME} MATCHES "Linux"
+     MESSAGE(STATUS ${CMAKE_SYSTEM_NAME} " supported")
+     ADD_DEFINITIONS("-D_DEFAULT_SOURCE -DLINUX")
+ 
+-ELSEIF (${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
++ELSEIF (${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD|DragonFly")
+     MESSAGE(STATUS ${CMAKE_SYSTEM_NAME} " supported")
+     SET(CMAKE_REQUIRED_INCLUDES "/usr/local/include" "/usr/include")
+     SET(CMAKE_LIBRARY_PATH "/usr/local/lib")
