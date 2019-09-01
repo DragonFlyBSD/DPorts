@@ -1,0 +1,3 @@
+
+# cannot find <cblas.h>, graphics/caffe mkl_alternate.hpp
+LIB_DEPENDS+=	libcblas.so:math/cblas
