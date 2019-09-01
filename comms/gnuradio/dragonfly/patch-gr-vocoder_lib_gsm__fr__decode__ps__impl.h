@@ -3,7 +3,7 @@
 @@ -26,7 +26,7 @@
  #include <gnuradio/vocoder/gsm_fr_decode_ps.h>
  
- extern "C"{
+ extern "C" {
 -#ifdef __FreeBSD__
 +#if defined(__FreeBSD__) || defined(__DragonFly__)
  #include <gsm.h>
