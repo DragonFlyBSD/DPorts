@@ -1,5 +1,5 @@
---- ../lightcrafts/mk/platform.mk.intermediate	2018-05-10 05:29:36.000000000 +0000
-+++ ../lightcrafts/mk/platform.mk
+--- lightcrafts/mk/platform.mk.intermediate	2018-05-10 05:29:36.000000000 +0000
++++ lightcrafts/mk/platform.mk
 @@ -272,7 +272,7 @@ endif
  ##
  # Linux, FreeBSD or OpenIndiana
