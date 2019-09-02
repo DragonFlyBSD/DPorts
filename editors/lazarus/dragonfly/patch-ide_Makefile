@@ -1,0 +1,14 @@
+Hack to allow building lazarus-qt5.
+
+--- ide/Makefile.orig	2018-11-11 21:09:04 UTC
++++ ide/Makefile
+@@ -2420,6 +2420,9 @@ OTHERLIBDIR:=$(shell grep -v "^\#" /etc/
+ endif
+ endif
+ ifdef inUnix
++ifeq ($(OS_SOURCE),dragonfly)
++OTHERLIBDIR+=/usr/local/lib/qt5
++endif
+ ifeq ($(OS_SOURCE),netbsd)
+ OTHERLIBDIR+=/usr/pkg/lib
+ endif
