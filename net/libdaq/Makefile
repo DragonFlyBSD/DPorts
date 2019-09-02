@@ -12,7 +12,6 @@ COMMENT=	Data Acquisition abstraction library for snort 3.0+
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-LIB_DEPENDS=	libpcap.so:net/libpcap	# avoid base libpcap
 
 USES=		autoreconf compiler:c++11-lang libtool pkgconfig
 USE_GITHUB=	yes
