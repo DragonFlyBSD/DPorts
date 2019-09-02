@@ -16,3 +16,8 @@ dfly-patch:
 	${REINPLACE_CMD} -e 's|gcc50|gcc80|g' -e 's|5.0"|8.0"|' \
 		${WRKSRC}/tools/clang/lib/Driver/ToolChains/DragonFly.cpp \
 		${WRKSRC}/tools/clang/lib/Frontend/InitHeaderSearch.cpp
+
+# attempt to fix pkg-plist (compiler-rt header)
+dfly-install:
+	${MKDIR} ${STAGEDIR}/${PREFIX}/llvm-devel/include/fuzzer
+	${TOUCH} ${STAGEDIR}/${PREFIX}/llvm-devel/include/fuzzer/FuzzedDataProvider.h
