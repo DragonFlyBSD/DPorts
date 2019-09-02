@@ -1,3 +1,10 @@
 USES+=	localbase:ldflags
 LIB_DEPENDS+=	libexpat.so:textproc/expat2
 CFLAGS+=	-DWCHAR=wchar_t -Dfdatasync=fsync
+MAKE_ENV+=	ICONV_LIBS=-liconv BUILD_PLATFORM=DragonFly
+
+# zrj: BUILD_PLATFORM == BSD is hardcoded to FreeBSD (LD_ARCH= -m elf_x86_64_fbsd)
+dfly-patch:
+	${REINPLACE_CMD} -e 's@[[:<:]]BSD[[:>:]]@DragonFly@g' \
+		${WRKSRC}/src/container/Makefile \
+		${WRKSRC}/src/utils/Makefile

@@ -1,6 +1,6 @@
---- include/dsp/types.h.orig	2019-03-23 14:16:40 UTC
-+++ include/dsp/types.h
-@@ -172,7 +172,7 @@
+--- include/common/types.h.orig	2019-07-22 23:21:17 UTC
++++ include/common/types.h
+@@ -196,7 +196,7 @@
      #define IF_PLATFORM_LINUX(...)      __VA_ARGS__
  #endif /* __linux__ */
  
