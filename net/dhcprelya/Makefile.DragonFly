@@ -1,3 +1,6 @@
+USES+=	localbase:ldflags
+LIB_DEPENDS+=	libradius.so.4:net/libradius
+
 CFLAGS+= -DSLIST_FOREACH_SAFE=SLIST_FOREACH_MUTABLE
 
 dfly-patch:
