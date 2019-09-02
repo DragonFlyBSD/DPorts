@@ -2,9 +2,9 @@
 # $FreeBSD$
 
 PORTNAME=	fileobj
-PORTVERSION=	0.7.55
-PORTREVISION=	1
+PORTVERSION=	0.7.91
 DISTVERSIONPREFIX=	v
+PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 CATEGORIES=	editors
 
 MAINTAINER=	zrj@dragonflybsd.org
@@ -16,8 +16,8 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 GH_ACCOUNT=	kusumi
 USE_GITHUB=	yes
 
-USES=		python
-USE_PYTHON=	autoplist distutils concurrent optsuffix
+USES=		python gettext-runtime
+USE_PYTHON=	autoplist distutils concurrent
 
 PLIST_FILES=	man/man1/fileobj.1.gz
 
