@@ -1,0 +1,39 @@
+--- Makefile.orig	2018-06-17 12:42:42 UTC
++++ Makefile
+@@ -1,12 +1,13 @@
+-CC=lazbuild
++LAZBUILD_CMD?=lazbuild -d
+ ST=strip
+-datadir  = $(DESTDIR)/usr/share/cqrlog
+-bindir   = $(DESTDIR)/usr/bin
+-sharedir = $(DESTDIR)/usr/share
++datadir  = $(DESTDIR)${PREFIX}/share/cqrlog
++bindir   = $(DESTDIR)${PREFIX}/bin
++sharedir = $(DESTDIR)${PREFIX}/share
+ tmpdir   = /tmp
++mandir   = $(DESTDIR)${PREFIX}
+ 
+ cqrlog: src/cqrlog.lpi
+-	$(CC) --ws=gtk2 --pcp=$(tmpdir)/.lazarus src/cqrlog.lpi
++	$(LAZBUILD_CMD) $(LAZBUILD_ARGS) --ws=$(LCL_PLATFORM) --lazarusdir=$(LAZARUS_DIR) src/cqrlog.lpi
+ 	$(ST) src/cqrlog
+ 	gzip tools/cqrlog.1 -c > tools/cqrlog.1.gz
+ 
+@@ -39,7 +40,7 @@ install:
+ 	install -d -v         $(sharedir)/icons/cqrlog
+ 	install -d -v         $(sharedir)/applications
+ 	install -d -v         $(sharedir)/appdata
+-	install -d -v         $(sharedir)/man/man1
++	install -d -v         $(mandir)/man/man1
+ 	install    -v -m 0755 src/cqrlog $(bindir)
+ 	install    -v -m 0755 tools/cqrlog-apparmor-fix $(datadir)/cqrlog-apparmor-fix
+ 	install    -v -m 0644 ctyfiles/* $(datadir)/ctyfiles/
+@@ -65,7 +66,7 @@ install:
+ 	install    -v -m 0644 images/icon/32x32/cqrlog.png $(sharedir)/pixmaps/cqrlog/cqrlog.png
+ 	install    -v -m 0644 images/icon/128x128/cqrlog.png $(sharedir)/icons/cqrlog.png
+ 	install    -v -m 0644 src/changelog.html $(datadir)/changelog.html
+-	install    -v -m 0644 tools/cqrlog.1.gz $(sharedir)/man/man1/cqrlog.1.gz
++	install    -v -m 0644 tools/cqrlog.1.gz $(mandir)/man/man1/cqrlog.1.gz
+ deb:
+ 	dpkg-buildpackage -rfakeroot -i -I
+ deb_src:
