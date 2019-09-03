@@ -1,9 +1,9 @@
 
-MAKE_ENV+=	LDVER=ld.bfd
+#MAKE_ENV+=	LDVER=ld.bfd
 
 # zrj: fix up path, now can call directly
 .if !defined(PKGNAMESUFFIX)
-dfly-patch:
+zdfly-patch:
 	${REINPLACE_CMD} -e "s@/usr/libexec/binutils225/elf/ld.bfd@/usr/bin/ld.bfd@"	\
 		${WRKSRC}/compiler/systems/t_bsd.pas
 

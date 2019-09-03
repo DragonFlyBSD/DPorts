@@ -13,6 +13,7 @@ MASTER_SITES=	ftp://ftp.freepascal.org/pub/fpc/dist/${PORTVERSION}/source/:sourc
 		ftp://ftp.us.freepascal.org/pub/fpc/dist/${PORTVERSION}/source/:source \
 		SF/freepascal/Source/${PORTVERSION}:source \
 		http://leaf.dragonflybsd.org/~marino/dports-src/:DragonFlybootstrap \
+		http://avalon.dragonflybsd.org/misc/distfiles/freepascal/:DragonFlybootstrap \
 		LOCAL/acm/freepascal/:bootstrap \
 		LOCAL/acm/freepascal/:man
 DISTFILES=	${DISTNAME:S/$/.source/}${EXTRACT_SUFX}:source
@@ -24,7 +25,7 @@ COMMENT?=	Free Pascal compiler with Turbo and Delphi
 ONLY_FOR_ARCHS=	amd64 i386
 
 USES+=		gmake iconv
-BOOTVER=	3.0.0
+BOOTVER=	3.0.4
 MANVER=		3.0.4
 
 LDPATH=		"/usr/bin/ld.bfd"
