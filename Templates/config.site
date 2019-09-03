@@ -1,4 +1,4 @@
-# $FreeBSD: head/Templates/config.site 503514 2019-06-05 17:40:09Z antoine $
+# $FreeBSD: head/Templates/config.site 510716 2019-09-01 18:57:18Z antoine $
 # Do not add:
 #	- toolchain related
 #	- arch-dependent values
@@ -619,7 +619,6 @@
 : ${ac_cv_have_decl_getpagesize=yes}
 : ${ac_cv_have_decl_getrlimit=yes}
 : ${ac_cv_have_decl_getrusage=yes}
-: ${ac_cv_have_decl_gets=yes}
 : ${ac_cv_have_decl_getsubopt=yes}
 : ${ac_cv_have_decl_gettimeofday=yes}
 : ${ac_cv_have_decl_getusershell=yes}
@@ -891,7 +890,6 @@
 : ${gl_cv_have_raw_decl_getlogin=yes}
 : ${gl_cv_have_raw_decl_getlogin_r=yes}
 : ${gl_cv_have_raw_decl_getpagesize=yes}
-: ${gl_cv_have_raw_decl_gets=yes}
 : ${gl_cv_have_raw_decl_getsubopt=yes}
 : ${gl_cv_have_raw_decl_gettimeofday=yes}
 : ${gl_cv_have_raw_decl_getusershell=yes}

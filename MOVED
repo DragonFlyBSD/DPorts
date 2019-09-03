@@ -616,7 +616,6 @@ graphics/imgseek||2013-07-26|Has expired: Depends on Qt 3.x
 graphics/kalbum||2013-07-26|Has expired: Depends on Qt 3.x
 graphics/kbarcode||2013-07-26|Has expired: Depends on Qt 3.x
 graphics/kdegraphics3||2013-07-26|Has expired: Depends on Qt 3.x
-graphics/kipi-plugins||2013-07-26|Has expired: Depends on Qt 3.x
 graphics/kisomandel||2013-07-26|Has expired: Depends on Qt 3.x
 graphics/kradview||2013-07-26|Has expired: Depends on Qt 3.x
 graphics/kuickshow||2013-07-26|Has expired: Depends on Qt 3.x
@@ -8989,3 +8988,27 @@ security/linux-c7-openssl||2019-08-25|Merged into linux_base-c7
 science/py-onnx|math/py-onnx|2019-08-26|Move to a more appropriate category
 security/kr||2019-08-27|Has expired: Broken for more than 6 months
 lang/swift||2019-08-27|Has expired: Broken for more than 6 months
+security/rubygem-devise-two-factor30-rails5|security/rubygem-devise-two-factor-rails5|2019-08-30|No longer needed after gitlab-ce 12.1 update (r510253)
+textproc/rubygem-asciidoctor-plantuml008|textproc/rubygem-asciidoctor-plantuml|2019-08-30|No longer needed after gitlab-ce 12.1 update (r510253)
+www/rubygem-responders2-rails5|www/rubygem-responders-rails5|2019-08-30|No longer needed after gitlab-ce 12.1 update (r510253)
+graphics/kipiplugins|graphics/kipi-plugins|2019-08-30|Renamed upstream
+devel/rubygem-rails-i18n|devel/rubygem-rails-i18n-rails5|2019-08-31|Has expired: Use devel/rubygem-rails-i18n-rails5 instead
+textproc/rubygem-gitlab-linguist|textproc/rubygem-github-linguist|2019-08-31|Has expired: Use textproc/rubygem-github-linguist instead
+textproc/rubygem-html-pipeline1|textproc/rubygem-html-pipeline|2019-08-31|Has expired: Use textproc/rubygem-html-pipeline instead
+devel/pure-stldict||2019-09-01|Has expired: Depends on expiring devel/llvm35
+lang/dmd1||2019-09-01|Has expired: No longer supported upstream
+lang/gprolog||2019-09-01|Has expired: Abandonware upstream (more than five years), fails in various ways with remotely recent compilers
+math/pure-mpfr||2019-09-01|Has expired: Depends on expiring devel/llvm35
+math/pure-rational||2019-09-01|Has expired: Depends on expiring devel/llvm35
+net/pure-sockets||2019-09-01|Has expired: Depends on expiring devel/llvm35
+textproc/pure-csv||2019-09-01|Has expired: Depends on expiring devel/llvm35
+textproc/pure-xml||2019-09-01|Has expired: Depends on expiring devel/llvm35
+x11-toolkits/pure-tk||2019-09-01|Has expired: Depends on expiring devel/llvm35
+databases/pure-sql3||2019-09-01|Has expired: Depends on expiring devel/llvm35
+devel/pure-readline||2019-09-01|Has expired: Depends on expiring devel/llvm35
+devel/pure-stllib||2019-09-01|Has expired: Depends on expiring devel/llvm35
+x11-toolkits/pure-gtk||2019-09-01|Has expired: Depends on expiring devel/llvm35
+lang/pure||2019-09-01|Has expired: Depends on expiring devel/llvm35
+devel/pure-ffi||2019-09-01|Has expired: Depends on expiring devel/llvm35
+devel/llvm35||2019-09-01|Has expired: Obsolete and unmaintained
+archivers/py-attic|archivers/py-borg|2019-09-02|Has expired: Unsupported by upstream, please migrate to archivers/py-borg.  See https://borgbackup.readthedocs.io/en/stable/usage/upgrade.html#borg-upgrade
