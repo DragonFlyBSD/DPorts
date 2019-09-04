@@ -2,6 +2,7 @@
 
 PORTNAME=	plasma
 DISTVERSION=	${KDE_PLASMA_VERSION}
+PORTREVISION=	1
 CATEGORIES=	x11 kde
 PKGNAMEPREFIX=	plasma5-
 
@@ -16,7 +17,7 @@ USES=		kde:5 metaport qt:5
 #   * plasma-pa don't depend on plamsa-pa by default
 #   * breeze-kde4 don't pull in qt4 bits
 #   * kwrited use is as build/run depends (executable on dragonfly)
-USE_KDE=	${_USE_PLASMA_ALL:Nplasma-pa:Nbreeze-kde4:Nkwrited}
+USE_KDE=	${_USE_PLASMA_ALL:Nplasma-pa:Nbreeze-kde4:Nkwrited:Nkwallet-pam}
 
 OPTIONS_DEFINE=	PHONON PULSEAUDIO
 OPTIONS_DEFAULT=	PHONON
