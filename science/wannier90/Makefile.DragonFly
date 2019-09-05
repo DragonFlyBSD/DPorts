@@ -1,4 +1,5 @@
 
 dfly-patch:
 	${REINPLACE_CMD} -e "s@LDOPTS =@LDOPTS = -L${LOCALBASE}/lib @g" \
+			 -e "/F90 =/s@gfortran.*@${FC}@g" \
 		${WRKSRC}/config/make.inc.gfort
