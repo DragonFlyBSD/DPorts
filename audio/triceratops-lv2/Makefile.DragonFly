@@ -1,0 +1,5 @@
+
+# zrj: lv2 port now installs lv2.pc (no longer the lv2core.pc)
+dfly-patch:
+	${REINPLACE_CMD} -e '/check_pkg/s@lv2core@lv2@g' \
+		${WRKSRC}/wscript
