@@ -1,4 +1,4 @@
-# $FreeBSD: head/sysutils/tuptime/files/tuptime.in 480685 2018-09-25 16:25:43Z fernape $
+# $FreeBSD: head/sysutils/tuptime/files/tuptime.in 510860 2019-09-02 22:33:17Z swills $
 #!/bin/sh
 #
 # PROVIDE: tuptime
@@ -18,7 +18,9 @@ export PATH=$PATH:/usr/local/bin/
 
 tuptime_start()
 {
+	echo "Starting $name."
 	command_args="-x"
+
 	if /usr/sbin/pw usershow "${tuptime_user}" >/dev/null 2>&1; then
 		su -m ${tuptime_user} -c "$name $command_args"
 	else
@@ -28,7 +30,9 @@ tuptime_start()
 
 tuptime_stop()
 {
+	echo "Stopping $name."
 	command_args="-xg"
+
 	if /usr/sbin/pw usershow "${tuptime_user}" >/dev/null 2>&1; then
 		su -m ${tuptime_user} -c "$name $command_args"
 	else
