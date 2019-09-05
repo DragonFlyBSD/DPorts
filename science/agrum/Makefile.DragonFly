@@ -1,3 +1,4 @@
 
 # properly handled by compiler
 OPENMP_LIB_DEPENDS:=
+OPENMP_LDFLAGS:=
