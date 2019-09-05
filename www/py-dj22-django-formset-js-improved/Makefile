@@ -6,7 +6,7 @@ CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}dj22-
 
-MAINTAINER=	alex@axanderio.de
+MAINTAINER=	alex@xanderio.de
 COMMENT=	Fork of django-formset-js that adds support for reordering and nested formsets
 
 LICENSE=	BSD3CLAUSE
