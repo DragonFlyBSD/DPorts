@@ -1,0 +1,11 @@
+--- autoconf/os.orig	2018-10-26 22:27:02 UTC
++++ autoconf/os
+@@ -13,6 +13,8 @@ if eval 'uname > /dev/null 2> /dev/null'
+       echo "mingw";;
+     FreeBSD*)
+       echo "freebsd";;
++    DragonFly*)
++      echo "dragonfly";;
+     *)
+       echo "unix";;
+   esac
