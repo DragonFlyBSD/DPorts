@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/mail/dcc-dccd/files/dccifd.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/mail/dcc-dccd/files/dccifd.in 503924 2019-06-10 20:04:46Z pkubaj $
 #
 # PROVIDE: dccifd
 # REQUIRE: LOGIN
@@ -32,8 +32,8 @@ load_rc_config $name
 
 # Set defaults
 : ${dccifd_enable:="NO"}
-: ${dccifd_home="%%DCCHOME%%"}
-: ${dccifd_libexec="%%PREFIX%%/dcc/libexec"}
+: ${dccifd_home="%%DCCDATA%%"}
+: ${dccifd_libexec="%%PREFIX%%/libexec"}
 : ${dccifd_conf="$dccifd_home/dcc_conf"}
 
 pidfile=${dccifd_pidfile:-"/var/run/dcc/dccifd.pid"}
