@@ -1,0 +1,5 @@
+
+# prevent bad MF patching for already removed old base-gcc
+dfly-extract:
+	${REINPLACE_CMD} -e '/#pragma/s@GCC diagnostic@GCC  diagnostic@g' \
+                ${WRKSRC}/examples/simple-publisher.c
