@@ -1,0 +1,5 @@
+
+# zrj: work around "compiled at DATE, TIME" that gets passed to STRINGIFY(x)
+dfly-patch:
+	${REINPLACE_CMD} -e '/APPVERSION/s@compiled at@tarball version" ) #@g' \
+		${WRKSRC}/CMakeLists.txt
