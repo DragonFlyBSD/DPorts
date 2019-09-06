@@ -1,46 +1,50 @@
---- whowatch.c.orig	2000-06-06 03:21:44.000000000 -0700
-+++ whowatch.c	2010-02-02 19:56:37.081269004 -0800
-@@ -119,21 +119,17 @@
- /* 
+--- src/ulist.c.orig	2018-04-11 06:10:50 UTC
++++ src/ulist.c
+@@ -48,21 +48,17 @@ void update_line(int line)
+ /*
   * Create new user structure and fill it
   */
--struct user_t *allocate_user(struct utmp *entry)
-+struct user_t *allocate_user(struct utmpx *entry)
+-struct user_t *alloc_user(struct utmp *entry)
++struct user_t *alloc_user(struct utmpx *entry)
  {
  	struct user_t *u;
  	int ppid;
+ 
  	u = calloc(1, sizeof *u);
  	if(!u) errx(1, "Cannot allocate memory.");
 -	strncpy(u->name, entry->ut_user, UT_NAMESIZE);
 -	strncpy(u->tty, entry->ut_line, UT_LINESIZE);
 -	strncpy(u->host, entry->ut_host, UT_HOSTSIZE);
+-#ifdef HAVE_UTPID
 +	strncpy(u->name, entry->ut_user, sizeof(entry->ut_user));
 +	strncpy(u->tty, entry->ut_line, sizeof(entry->ut_line));
 +	strncpy(u->host, entry->ut_host, sizeof(entry->ut_host));
- 	
--#ifdef HAVE_UTPID		
  	u->pid = entry->ut_pid;
 -#else
 -	u->pid = get_login_pid(u->tty);
 -#endif
- 
-  	if((ppid = get_ppid(u->pid)) == -1)
+ 	if((ppid = get_ppid(u->pid)) == -1)
  		strncpy(u->parent, "can't access", sizeof u->parent);
-@@ -192,34 +188,24 @@
+ 	else 	strncpy(u->parent, get_name(ppid), sizeof u->parent - 1);
+@@ -70,7 +66,7 @@ struct user_t *alloc_user(struct utmp *e
+ 	return u;
+ }
+ 
+-static struct user_t* new_user(struct utmp *ut)
++static struct user_t* new_user(struct utmpx *ut)
+ {
+ 	struct user_t *u;
+ 	u = alloc_user(ut);
+@@ -108,21 +104,13 @@ void uredraw(struct wdgt *w)
   */
- void read_utmp()		
+ void read_utmp(void)
  {
 -	int fd, i;
 -	static struct utmp entry;
 +	static struct utmpx *entry;
  	struct user_t *u;
-+
-+	while ((entry = getutxent()) != NULL) {
- 	
--	if ((fd = open(UTMP_FILE ,O_RDONLY)) == -1){
--		curses_end();
--		errx(1, "Cannot open " UTMP_FILE);
--	}
+ 
+-	if ((fd = open(UTMP_FILE ,O_RDONLY)) == -1) err_exit(1, "Cannot open utmp");
 -	while((i = read(fd, &entry,sizeof entry)) > 0) {
 -		if(i != sizeof entry) errx(1, "Error reading " UTMP_FILE );
 -#ifdef HAVE_USER_PROCESS
@@ -48,37 +52,26 @@
 -#else
 -		if(!entry.ut_name[0]) continue;
 -#endif
--		u = allocate_user(&entry);
+-		u = new_user(&entry);
++	while ((entry = getutxent()) != NULL) {
 +		if(entry->ut_type != USER_PROCESS) continue;
-+		u = allocate_user(entry);
- 		print_user(u);
- 		update_nr_users(u->parent, &u->prot, LOGIN);
- 		how_many ++;
- 		users_list.d_lines = how_many;		
- 		addto_list(u, users);
++		u = new_user(entry);
  	}
 -	close(fd);
- 	wnoutrefresh(users_list.wd);
  	return;
  }
  
--struct user_t* new_user(struct utmp *newone)
-+struct user_t* new_user(struct utmpx *newone)
- {
+@@ -176,31 +164,23 @@ static void check_wtmp(struct wdgt *w)
+ 	static int wtmp_fd;
  	struct user_t *u;
- 	u = allocate_user(newone);
-@@ -246,7 +232,7 @@
- void check_wtmp()
- {
- 	struct user_t *u;
+ 	struct list_head *h;
 -	struct utmp entry;
 +	struct utmpx entry;
- 	int i;
+ 	int i, changed = 0;
+ 	if(!wtmp_fd) open_wtmp(&wtmp_fd);
  
- 	while((i = read(wtmp_fd, &entry, sizeof entry)) > 0){ 
-@@ -256,25 +242,17 @@
- 			errx(1, "Error reading " WTMP_FILE );
- 		}
+ 	while((i = read(wtmp_fd, &entry, sizeof entry)) > 0){
+ 		if (i < sizeof entry) prg_exit("Error reading wtmp");
  		/* user just logged in */
 -#ifdef HAVE_USER_PROCESS
  		if(entry.ut_type == USER_PROCESS) {
@@ -86,9 +79,7 @@
 -		if(entry.ut_user[0]) {
 -#endif
  			u = new_user(&entry);
- 			print_user(u);
- 			wrefresh(users_list.wd);
- 			print_info();
+ 			changed = 1;
  			continue;
  		}
 -#ifdef HAVE_DEAD_PROCESS
@@ -97,9 +88,10 @@
 -//		if(entry.ut_line[0]) continue;
 -#endif
  	/* user just logged out */
- 		for_each(u, users) {
--			if(strncmp(u->tty, entry.ut_line, UT_LINESIZE)) 
-+			if(strncmp(u->tty, entry.ut_line, sizeof(entry.ut_line))) 
+ 		list_for_each(h, &users_l) {
+ 			u = list_entry(h, struct user_t, head);
+-			if(strncmp(u->tty, entry.ut_line, UT_LINESIZE))
++			if(strncmp(u->tty, entry.ut_line, sizeof(entry.ut_line)))
  				continue;
- 			if (state == USERS_LIST) 
- 				delete_line(&users_list, u->line);
+ 			udel(u, w);
+ 			changed = 1;
