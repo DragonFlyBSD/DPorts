@@ -1,1 +1,14 @@
 OPTIONS_DEFAULT:=        ${OPTIONS_DEFAULT:NPULSEAUDIO}
+
+# Apparently webrtc can't be built without sctp anymore, so
+# turn it off again
+MOZ_OPTIONS+=	--disable-webrtc
+CXXFLAGS+=	-Wno-multistatement-macros -Wno-class-memaccess
+
+dfly-patch:
+	# disable SCTP
+	${REINPLACE_CMD} -e 's|MOZ_SCTP|MOZ_DISABLE_SCTP|' \
+		${WRKSRC}/netwerk/moz.build
+	(cd ${WRKSRC}/gfx/angle/checkout/src/compiler/translator && \
+		${REINPLACE_CMD} -e 's|<math.h>|<cmath>|' \
+		InfoSink.h IntermNode.cpp)
