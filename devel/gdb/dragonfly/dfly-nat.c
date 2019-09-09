@@ -18,30 +18,37 @@
    along with this program.  If not, see <http://www.gnu.org/licenses/>.  */
 
 #include "defs.h"
+#include "common/byte-vector.h"
 #include "gdbcore.h"
 #include "inferior.h"
 #include "regcache.h"
 #include "regset.h"
 #include "gdbcmd.h"
 #include "gdbthread.h"
-#include "gdb_wait.h"
+#include "common/gdb_wait.h"
+#include "inf-ptrace.h"
 #include <sys/types.h>
 #include <sys/procfs.h>
 #include <sys/ptrace.h>
+#include <sys/signal.h>
 #include <sys/sysctl.h>
-#ifdef HAVE_KINFO_GETVMMAP
 #include <sys/user.h>
+#ifdef HAVE_KINFO_GETVMMAP
 #include <libutil.h>
 #endif
+#include "common/filestuff.h"
 
 #include "elf-bfd.h"
 #include "dfly-nat.h"
+#include "dfly-tdep.h"
+
+#include <list>
 
 /* Return the name of a file that can be opened to get the symbols for
    the child process identified by PID.  */
 
-static char *
-dfly_pid_to_exec_file (struct target_ops *self, int pid)
+char *
+dfly_nat_target::pid_to_exec_file (int pid)
 {
   ssize_t len;
   static char buf[PATH_MAX];
@@ -57,7 +64,10 @@ dfly_pid_to_exec_file (struct target_ops *self, int pid)
   mib[3] = pid;
   buflen = sizeof buf;
   if (sysctl (mib, 4, buf, &buflen, NULL, 0) == 0)
-    return buf;
+    /* The kern.proc.pathname.<pid> sysctl returns a length of zero
+       for processes without an associated executable such as kernel
+       processes.  */
+    return buflen == 0 ? NULL : buf;
 #endif
 
   xsnprintf (name, PATH_MAX, "/proc/%d/exe", pid);
@@ -96,31 +106,26 @@ dfly_read_mapping (FILE *mapfile, unsigned long *start, unsigned long *end,
    calling FUNC for each memory region.  OBFD is passed as the last
    argument to FUNC.  */
 
-static int
-dfly_find_memory_regions (struct target_ops *self,
-			  find_memory_region_ftype func, void *obfd)
+int
+dfly_nat_target::find_memory_regions (find_memory_region_ftype func,
+				      void *obfd)
 {
-  pid_t pid = ptid_get_pid (inferior_ptid);
-  char *mapfilename;
-  FILE *mapfile;
+  pid_t pid = inferior_ptid.pid ();
   unsigned long start, end, size;
   char protection[4];
   int read, write, exec;
-  struct cleanup *cleanup;
 
-  mapfilename = xstrprintf ("/proc/%ld/map", (long) pid);
-  cleanup = make_cleanup (xfree, mapfilename);
-  mapfile = fopen (mapfilename, "r");
+  std::string mapfilename = string_printf ("/proc/%ld/map", (long) pid);
+  gdb_file_up mapfile (fopen (mapfilename.c_str (), "r"));
   if (mapfile == NULL)
-    error (_("Couldn't open %s."), mapfilename);
-  make_cleanup_fclose (mapfile);
+    error (_("Couldn't open %s."), mapfilename.c_str ());
 
   if (info_verbose)
     fprintf_filtered (gdb_stdout, 
-		      "Reading memory regions from %s\n", mapfilename);
+		      "Reading memory regions from %s\n", mapfilename.c_str ());
 
   /* Now iterate until end-of-file.  */
-  while (dfly_read_mapping (mapfile, &start, &end, &protection[0]))
+  while (dfly_read_mapping (mapfile.get (), &start, &end, &protection[0]))
     {
       size = end - start;
 
@@ -143,10 +148,10 @@ dfly_find_memory_regions (struct target_ops *self,
       func (start, size, read, write, exec, 1, obfd);
     }
 
-  do_cleanups (cleanup);
   return 0;
 }
 
+#ifdef OLDCODE
 void
 dfly_nat_add_target (struct target_ops *t)
 {
@@ -155,6 +160,7 @@ dfly_nat_add_target (struct target_ops *t)
   /* XXX: thread vfork support */
   add_target (t);
 }
+#endif
 
 /* Provide a prototype to silence -Wmissing-prototypes.  */
 extern initialize_file_ftype _initialize_dfly_nat;

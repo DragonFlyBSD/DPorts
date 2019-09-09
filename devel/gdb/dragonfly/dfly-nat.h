@@ -1,6 +1,6 @@
 /* Native-dependent code for DragonFly.
 
-   Copyright (C) 2004-2015 Free Software Foundation, Inc.
+   Copyright (C) 2004-2019 Free Software Foundation, Inc.
 
    This file is part of GDB.
 
@@ -20,8 +20,24 @@
 #ifndef DFLY_NAT_H
 #define DFLY_NAT_H
 
+#include "inf-ptrace.h"
+#include <sys/user.h>
+
+/* A prototype DragonFly target. */
+
+class dfly_nat_target : public inf_ptrace_target
+{
+public:
+  char *pid_to_exec_file (int pid) override;
+
+  int find_memory_regions (find_memory_region_ftype func, void *data) override;
+
+};
+
+#ifdef OLDCODE
 /* Register the customized DragonFly target.  This should be used
    instead of calling add_target directly.  */
 extern void dfly_nat_add_target (struct target_ops *);
+#endif
 
 #endif /* dfly-nat.h */

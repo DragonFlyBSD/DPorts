@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/ppcfbsd-kern.c 464493 2018-03-14 14:33:21Z pizzamig $");
+__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/ppcfbsd-kern.c 503200 2019-06-01 00:44:08Z jhb $");
 
 #include "defs.h"
 #include "frame-unwind.h"
@@ -109,10 +109,9 @@ ppcfbsd_trapframe_cache (struct frame_info *this_frame, void **this_cache)
 {
   struct gdbarch *gdbarch = get_frame_arch (this_frame);
   struct gdbarch_tdep *tdep = gdbarch_tdep (gdbarch);
-  enum bfd_endian byte_order = gdbarch_byte_order (gdbarch);
   struct trad_frame_cache *cache;
   CORE_ADDR base;
-  int i, regnum;
+  int i;
 
   if (*this_cache)
     return (struct trad_frame_cache *)*this_cache;

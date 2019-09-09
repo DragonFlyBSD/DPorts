@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/amd64fbsd-kern.c 480613 2018-09-24 17:23:35Z jhb $");
+__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/amd64fbsd-kern.c 503200 2019-06-01 00:44:08Z jhb $");
 
 #include "defs.h"
 #include "frame-unwind.h"
@@ -37,7 +37,7 @@ __FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/amd64fbsd-kern.c 480613 2018-09-24
 #include "symtab.h"
 #include "trad-frame.h"
 #include "amd64-tdep.h"
-#include "x86-xstate.h"
+#include "common/x86-xstate.h"
 
 #ifdef __amd64__
 #include <machine/pcb.h>

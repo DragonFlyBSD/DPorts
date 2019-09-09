@@ -1,6 +1,6 @@
 /* Target-dependent code for DragonFly/amd64.
 
-   Copyright (C) 2003-2018 Free Software Foundation, Inc.
+   Copyright (C) 2003-2019 Free Software Foundation, Inc.
 
    This file is part of GDB.
 
@@ -23,14 +23,45 @@
 #include "gdbcore.h"
 #include "regcache.h"
 #include "osabi.h"
-#include "x86-xstate.h"
+#include "regset.h"
+#include "common/x86-xstate.h"
 
 #include <string.h>
 
 #include "amd64-tdep.h"
+#include "dfly-tdep.h"
 #include "solib-svr4.h"
 
 /* Support for signal handlers.  */
+
+#if 0
+/* Return whether THIS_FRAME corresponds to a FreeBSD sigtramp
+   routine.  */
+
+static const gdb_byte amd64fbsd_sigtramp_code[] =
+{
+  0x48, 0x8d, 0x7c, 0x24, 0x10, /* lea     SIGF_UC(%rsp),%rdi */
+  0x6a, 0x00,			/* pushq   $0 */
+  0x48, 0xc7, 0xc0, 0xa1, 0x01, 0x00, 0x00,
+				/* movq    $SYS_sigreturn,%rax */
+  0x0f, 0x05                    /* syscall */
+};
+
+static int
+amd64fbsd_sigtramp_p (struct frame_info *this_frame)
+{
+  CORE_ADDR pc = get_frame_pc (this_frame);
+  gdb_byte buf[sizeof amd64fbsd_sigtramp_code];
+
+  if (!safe_frame_unwind_memory (this_frame, pc, buf, sizeof buf))
+    return 0;
+  if (memcmp (buf, amd64fbsd_sigtramp_code, sizeof amd64fbsd_sigtramp_code)
+      != 0)
+    return 0;
+
+  return 1;
+}
+#endif
 
 /* Assuming THIS_FRAME is for a BSD sigtramp routine, return the
    address of the associated sigcontext structure.  */
@@ -146,6 +177,10 @@ amd64dfly_init_abi (struct gdbarch_info info, struct gdbarch *gdbarch)
 {
   struct gdbarch_tdep *tdep = gdbarch_tdep (gdbarch);
 
+  /* Generic DragonFly support. */
+  dfly_init_abi (info, gdbarch);
+
+  /* Obviously DragonFly is BSD-based.  */
   i386bsd_init_abi (info, gdbarch);
 
   tdep->gregset_reg_offset = amd64dfly_r_reg_offset;
@@ -153,16 +188,38 @@ amd64dfly_init_abi (struct gdbarch_info info, struct gdbarch *gdbarch)
   tdep->sizeof_gregset = 25 * 8;
 
   amd64_init_abi (info, gdbarch,
-                 amd64_target_description (X86_XSTATE_SSE_MASK, true));
+		  amd64_target_description (X86_XSTATE_SSE_MASK, true));
 
+#if 0
+  tdep->sigtramp_p = amd64dfly_sigtramp_p;
+#endif
   tdep->sigtramp_start = amd64dfly_sigtramp_start_addr;
   tdep->sigtramp_end = amd64dfly_sigtramp_end_addr;
   tdep->sigcontext_addr = amd64dfly_sigcontext_addr;
   tdep->sc_reg_offset = amd64dfly_sc_reg_offset;
   tdep->sc_num_regs = ARRAY_SIZE (amd64dfly_sc_reg_offset);
 
+#if 0
+  tdep->xsave_xcr0_offset = I386_DFLY_XSAVE_XCR0_OFFSET;
+
+  /* Iterate over core file register note sections.  */
+  set_gdbarch_iterate_over_regset_sections
+    (gdbarch, amd64dfly_iterate_over_regset_sections);
+
+  set_gdbarch_core_read_description (gdbarch,
+				     amd64dfly_core_read_description);
+#endif
+
+  /* FreeBSD uses SVR4-style shared libraries.  */
   set_solib_svr4_fetch_link_map_offsets
     (gdbarch, svr4_lp64_fetch_link_map_offsets);
+
+  set_gdbarch_fetch_tls_load_module_address (gdbarch,
+					     svr4_fetch_objfile_link_map);
+#if 0
+  set_gdbarch_get_thread_local_address (gdbarch,
+					amd64fbsd_get_thread_local_address);
+#endif
 }
 
 void

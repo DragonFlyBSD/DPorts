@@ -1,6 +1,6 @@
 /* Native-dependent code for DragonFly/amd64.
 
-   Copyright (C) 2003-2018 Free Software Foundation, Inc.
+   Copyright (C) 2003-2019 Free Software Foundation, Inc.
 
    This file is part of GDB.
 
@@ -38,11 +38,11 @@
 #include "amd64-nat.h"
 #include "amd64-bsd-nat.h"
 #include "x86-nat.h"
-#include "x86-xstate.h"
+#include "common/x86-xstate.h"
 
 
-class amd64_fbsd_nat_target final
-  : public amd64_bsd_nat_target<fbsd_nat_target>
+class amd64_dfly_nat_target final
+  : public amd64_bsd_nat_target<dfly_nat_target>
 {
 public:
   /* Add some extra features to the common *BSD/amd64 target.  */
@@ -53,7 +53,7 @@ public:
 #endif
 };
 
-static amd64_fbsd_nat_target the_amd64_fbsd_nat_target;
+static amd64_dfly_nat_target the_amd64_dfly_nat_target;
 
 /* Offset in `struct reg' where MEMBER is stored.  */
 #define REG_OFFSET(member) offsetof (struct reg, member)
@@ -226,13 +226,13 @@ amd64_dfly_nat_target::read_description ()
       if (is64)
 	return amd64_target_description (xcr0, true);
       else
-	return i386_target_description (xcr0);
+	return i386_target_description (xcr0, true);
     }
 #endif
   if (is64)
     return amd64_target_description (X86_XSTATE_SSE_MASK, true);
   else
-    return i386_target_description (X86_XSTATE_SSE_MASK);
+    return i386_target_description (X86_XSTATE_SSE_MASK, true);
 }
 
 #if defined(HAVE_PT_GETDBREGS) && defined(USE_SIGTRAP_SIGINFO)
