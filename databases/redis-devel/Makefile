@@ -122,4 +122,4 @@ do-install:
 do-test:
 	@cd ${WRKSRC} && ${TCLSH} tests/test_helper.tcl
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
