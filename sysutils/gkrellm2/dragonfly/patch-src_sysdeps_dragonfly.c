@@ -39,6 +39,10 @@
 -    return;
 +	if (!cp_time)
 +		return;
++
++	len = sizeof (*cp_time) * ncpus;
++	if (sysctlbyname("kern.cputime", cp_time, &len, NULL, 0) != 0)
++		return;
  
 -  len = sizeof (*cp_time) * ncpus;
 -  if (sysctlbyname("kern.cputime", cp_time, &len, NULL, 0) != 0)
@@ -49,10 +53,6 @@
 -			    cp_time[n].cp_nice,
 -			    cp_time[n].cp_sys,
 -			    cp_time[n].cp_idle);
-+	len = sizeof (*cp_time) * ncpus;
-+	if (sysctlbyname("kern.cputime", cp_time, &len, NULL, 0) != 0)
-+		return;
-+
 +	for (n = 0; n < ncpus; n++)
 +		gkrellm_cpu_assign_data(n, cp_time[n].cp_user,
 +					cp_time[n].cp_nice,
@@ -61,7 +61,7 @@
  }
  
  gboolean
-@@ -133,12 +134,6 @@ gkrellm_sys_cpu_init(void)
+@@ -133,16 +134,10 @@ gkrellm_sys_cpu_init(void)
  #include <sys/sysctl.h>
  #include <sys/user.h>
  
@@ -74,7 +74,67 @@
  #include <kvm.h>
  #include <limits.h>
  #include <paths.h>
-@@ -252,7 +247,7 @@ gkrellm_sys_disk_name_from_device(gint d
+-#include <utmp.h>
++#include <utmpx.h>
+ 
+ extern	kvm_t	*kvmd;
+ 
+@@ -211,12 +206,20 @@ gkrellm_sys_proc_read_users(void)
+ 	gint		n_users;
+ 	struct stat	sb, s;
+ 	gchar		ttybuf[MAXPATHLEN];
++#ifdef _PATH_UTMP
+ 	FILE		*ut;
+ 	struct utmp	utmp;
++#define UTMP_FILE	_PATH_UTMP
++#else
++	struct utmpx	*utmp;
++#define UTMP_FILE	"/var/run/utx.active"
++#endif
+ 	static time_t	utmp_mtime;
+ 
+-	if (stat(_PATH_UTMP, &s) != 0 || s.st_mtime == utmp_mtime)
++	if (stat(UTMP_FILE, &s) != 0 || s.st_mtime == utmp_mtime)
+ 		return;
++
++#ifdef _PATH_UTMP
+ 	if ((ut = fopen(_PATH_UTMP, "r")) != NULL)
+ 		{
+ 		n_users = 0;
+@@ -226,14 +229,30 @@ gkrellm_sys_proc_read_users(void)
+ 				continue;
+ 			(void)snprintf(ttybuf, sizeof(ttybuf), "%s/%s",
+ 				       _PATH_DEV, utmp.ut_line);
+-			/* corrupted record */
+ 			if (stat(ttybuf, &sb))
+-				continue;
++				continue;	/* corrupted record */
+ 			++n_users;
+ 			}
+ 		(void)fclose(ut);
+ 		gkrellm_proc_assign_users(n_users);
+ 		}
++#else
++	setutxent();
++	n_users = 0;
++	while ((utmp = getutxent()) != NULL)
++		{
++		if (utmp->ut_type != USER_PROCESS)
++			continue;
++		(void)snprintf(ttybuf, sizeof(ttybuf), "%s/%s",
++			       _PATH_DEV, utmp->ut_line);
++		if (stat(ttybuf, &sb))
++			continue;		/* corrupted record */
++		++n_users;
++		}
++	endutxent();
++	gkrellm_proc_assign_users(n_users);
++#endif
++
+ 	utmp_mtime = s.st_mtime;
+ 	}
+ 
+@@ -252,7 +271,7 @@ gkrellm_sys_disk_name_from_device(gint d
  	}
  
  gint
@@ -83,7 +143,7 @@
  	{
  	return -1;	/* Append as added */
  	}
-@@ -336,19 +331,13 @@ gkrellm_sys_inet_read_tcp_data(void)
+@@ -336,19 +355,13 @@ gkrellm_sys_inet_read_tcp_data(void)
  	void *so_begin, *so_end;
  	struct xtcpcb *xtp;
  	struct inpcb *inp;
@@ -104,7 +164,7 @@
  	buf = NULL;
  	len = 0;
  
-@@ -371,17 +360,24 @@ gkrellm_sys_inet_read_tcp_data(void)
+@@ -371,17 +384,24 @@ gkrellm_sys_inet_read_tcp_data(void)
  		if (xtp->xt_len != sizeof *xtp)
  			goto out;
  		inp = &xtp->xt_inp;
@@ -133,7 +193,7 @@
  		}
  
  		tcp.remote_port = ntohs(inp->inp_fport);
-@@ -482,7 +478,7 @@ get_bufspace(guint64 *bufspacep)
+@@ -482,7 +502,7 @@ get_bufspace(guint64 *bufspacep)
  		}
  
  	if (sysctl(oid_bufspace, oid_bufspace_len,
@@ -142,7 +202,7 @@
  		return 0;
  	*bufspacep = bufspace;
  	return 1;	
-@@ -532,7 +528,7 @@ gkrellm_sys_mem_read_data(void)
+@@ -532,7 +552,7 @@ gkrellm_sys_mem_read_data(void)
  	{
  	static gint	psize, pshift = 0;
  	static gint	first_time_done = 0;
@@ -151,7 +211,7 @@
  	struct vmtotal	vmt;
  	size_t		length_vmt = sizeof(vmt);
  	static int	oid_vmt[] = { CTL_VM, VM_TOTAL };
-@@ -556,35 +552,29 @@ gkrellm_sys_mem_read_data(void)
+@@ -556,35 +576,29 @@ gkrellm_sys_mem_read_data(void)
  		}
  
  	shared = 0;
@@ -197,7 +257,7 @@
  	gkrellm_mem_assign_data(total, used, free, shared, buffers, cached);
  
  	swapin = mibs[MIB_V_SWAPPGSIN].value;
-@@ -599,7 +589,7 @@ gkrellm_sys_mem_read_data(void)
+@@ -599,7 +613,7 @@ gkrellm_sys_mem_read_data(void)
  			{
  			if (strncmp(buf, "Swap:", 5) == 0)
  				{
@@ -206,7 +266,7 @@
  				       &swap_total, &swap_used);
  				break;
  				}
-@@ -609,11 +599,11 @@ gkrellm_sys_mem_read_data(void)
+@@ -609,11 +623,11 @@ gkrellm_sys_mem_read_data(void)
  	}
  
  	if (first_time_done == 0)
@@ -223,7 +283,7 @@
  	}
  
  void
-@@ -667,11 +657,13 @@ gkrellm_sys_battery_read_data(void)
+@@ -667,11 +681,13 @@ gkrellm_sys_battery_read_data(void)
  	size_t		size;
  	int		acpi_info[4];
  	int		i;
@@ -238,7 +298,7 @@
  
  	if (!first_time_done)
  		{
-@@ -716,6 +708,7 @@ gkrellm_sys_battery_read_data(void)
+@@ -716,6 +732,7 @@ gkrellm_sys_battery_read_data(void)
  			return;
  		}
  
@@ -246,7 +306,7 @@
  	if ((f = open(APMDEV, O_RDONLY)) == -1)
  		return;
  	if ((r = ioctl(f, APMIO_GETINFO, &info)) == -1) {
-@@ -773,6 +766,7 @@ gkrellm_sys_battery_read_data(void)
+@@ -773,6 +790,7 @@ gkrellm_sys_battery_read_data(void)
  #endif
  
  	close(f);
@@ -254,7 +314,7 @@
  	}
  
  gboolean
-@@ -800,7 +794,9 @@ gkrellm_sys_battery_init(void)
+@@ -800,7 +818,9 @@ gkrellm_sys_battery_init(void)
  /* ===================================================================== */
  /* Sensor monitor interface */
  
@@ -265,7 +325,7 @@
  
  typedef struct
  	{
-@@ -830,16 +826,13 @@ static VoltDefault	voltdefault0[] =
+@@ -830,16 +850,13 @@ static VoltDefault	voltdefault0[] =
  #include <dirent.h>
  #include <osreldate.h>
  #include <machine/cpufunc.h>
@@ -284,7 +344,7 @@
  
  /* Addresses to use for /dev/io */
  #define WBIO1			0x295
-@@ -872,7 +865,9 @@ get_data(int iodev, u_char command, int
+@@ -872,7 +889,9 @@ get_data(int iodev, u_char command, int
  		struct smbcmd cmd;
  
  		bzero(&cmd, sizeof(cmd));
@@ -295,7 +355,7 @@
  		cmd.slave         = 0x5a;
  		cmd.cmd           = command;
  		if (ioctl(iodev, SMB_READB, (caddr_t)&cmd) == -1)
-@@ -880,6 +875,7 @@ get_data(int iodev, u_char command, int
+@@ -880,6 +899,7 @@ get_data(int iodev, u_char command, int
  			close(iodev);
  			return FALSE;
  			}
@@ -303,7 +363,7 @@
  		}
  	else
  		{
-@@ -897,6 +893,8 @@ gkrellm_sys_sensors_get_temperature(gcha
+@@ -897,6 +917,8 @@ gkrellm_sys_sensors_get_temperature(gcha
  
  	{
  	u_char byte;
@@ -312,7 +372,7 @@
  
  	if (interface == MBMON_INTERFACE)
  		{
-@@ -906,15 +904,31 @@ gkrellm_sys_sensors_get_temperature(gcha
+@@ -906,15 +928,31 @@ gkrellm_sys_sensors_get_temperature(gcha
  
  	if (interface == INTERFACE_ACPI)
  		{
@@ -326,8 +386,8 @@
 -			*temp = (gfloat) TZ_KELVTOC(value);
 +			*temp = (interface == INTERFACE_CORETEMP) ?
 +				(gfloat) value : (gfloat) TZ_KELVTOC(value);
- 		return TRUE;
- 		}
++		return TRUE;
++		}
 +
 +	else if (interface == INTERFACE_CORETEMP)
 +		{
@@ -342,13 +402,13 @@
 +			return FALSE;
 +		if (temp)
 +			*temp = (float) ((sensor.value - 273150000) / 1000000.0);
-+		return TRUE;
-+		}
+ 		return TRUE;
+ 		}
 +
  	if (get_data(iodev, LM78_TEMP, interface, &byte))
  		{
  		if (temp)
-@@ -986,8 +1000,8 @@ gkrellm_sys_sensors_init(void)
+@@ -986,8 +1024,8 @@ gkrellm_sys_sensors_init(void)
  	{
  	gchar		mib_name[256], label[8];
  	gint		interface, id;
@@ -359,7 +419,7 @@
  	GList		*list;
  	struct freebsd_sensor *sensor;
  
-@@ -995,12 +1009,13 @@ gkrellm_sys_sensors_init(void)
+@@ -995,12 +1033,13 @@ gkrellm_sys_sensors_init(void)
  	*/
  	gkrellm_sys_sensors_mbmon_check(TRUE);
  
@@ -377,7 +437,7 @@
  			break;
  		interface = INTERFACE_ACPI;
  		if (!gkrellm_sys_sensors_get_temperature(mib_name, 0, 0,
-@@ -1010,7 +1025,44 @@ gkrellm_sys_sensors_init(void)
+@@ -1010,7 +1049,44 @@ gkrellm_sys_sensors_init(void)
  		gkrellm_sensors_add_sensor(SENSOR_TEMPERATURE, NULL,
  					   mib_name, 0, 0,
  					   interface, 1.0, 0.0, NULL, label);
@@ -423,7 +483,7 @@
  
  	if (freebsd_sensor_list)
  		{
-@@ -1044,13 +1096,7 @@ sensors_add_sensor(gint type, gchar *id_
+@@ -1044,13 +1120,7 @@ sensors_add_sensor(gint type, gchar *id_
  	sensor->factor = factor;
  	sensor->offset = offset;
  	sensor->default_label = default_label ? g_strdup(default_label) : NULL;
@@ -438,7 +498,7 @@
  	return TRUE;
  }
  
-@@ -1078,7 +1124,7 @@ scan_for_sensors(void)
+@@ -1078,7 +1148,7 @@ scan_for_sensors(void)
  						chip_dir, dentry->d_name);
  			if ((iodev = open(temp_file, O_RDWR)) == -1)
  				continue;
@@ -447,7 +507,7 @@
  			interface = INTERFACE_SMB;
  			if (!gkrellm_sys_sensors_get_temperature(NULL, 0, iodev,
  					interface, NULL))
-@@ -1122,7 +1168,7 @@ scan_for_sensors(void)
+@@ -1122,7 +1192,7 @@ scan_for_sensors(void)
  				if (!gkrellm_sys_sensors_get_fan(NULL, id, iodev,
  						interface, NULL))
  					continue;
@@ -456,7 +516,7 @@
  				sensors_add_sensor(SENSOR_FAN, id_name, id,
  						iodev, interface,
  						1.0 / (gfloat) fandiv[id], 0.0,
-@@ -1134,7 +1180,7 @@ scan_for_sensors(void)
+@@ -1134,7 +1204,7 @@ scan_for_sensors(void)
  			if (!gkrellm_sys_sensors_get_voltage(NULL, id, iodev,
  					interface, NULL))
  				continue;
