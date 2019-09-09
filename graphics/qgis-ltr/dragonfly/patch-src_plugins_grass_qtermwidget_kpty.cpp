@@ -23,3 +23,13 @@
  #if defined(HAVE_PTY_H)
  # include <pty.h>
  #endif
+@@ -86,7 +94,9 @@ extern "C" {
+ # include <utempter.h>
+ }
+ #else
++#ifndef __DragonFly__
+ # include <utmp.h>
++#endif
+ # ifdef HAVE_UTMPX
+ #  include <utmpx.h>
+ # endif
