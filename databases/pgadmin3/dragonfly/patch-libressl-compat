@@ -1,0 +1,27 @@
+--- pgadmin/libssh2/openssl.c.intermediate	2019-09-11 05:11:10.000000000 +0000
++++ pgadmin/libssh2/openssl.c
+@@ -48,7 +48,7 @@
+ #define EVP_MAX_BLOCK_LENGTH 32
+ #endif
+ 
+-#if OPENSSL_VERSION_NUMBER < 0x10100000L
++#if OPENSSL_VERSION_NUMBER < 0x10100000L || defined(LIBRESSL_VERSION_NUMBER)
+ static void *
+ OPENSSL_zalloc(size_t num)
+ {
+@@ -59,6 +59,7 @@ OPENSSL_zalloc(size_t num)
+     return ret;
+ }
+ 
++#ifndef LIBRESSL_VERSION_NUMBER
+ HMAC_CTX *
+ HMAC_CTX_new(void)
+ {   
+@@ -270,6 +271,7 @@ DSA_SIG_get0(const DSA_SIG *sig, const B
+     if (ps != NULL)
+         *ps = sig->s;
+ }
++#endif	/* !LIBRESSL_VERSION */
+ 
+ static EVP_CIPHER *
+ EVP_CIPHER_meth_new(int cipher_type, int block_size, int key_len)
