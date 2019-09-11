@@ -1,0 +1,15 @@
+--- src/xauthentication.cpp.orig	2019-05-24 14:55:26 UTC
++++ src/xauthentication.cpp
+@@ -106,9 +106,11 @@ namespace xeus
+         static const std::map<std::string, const EVP_MD*(*)()> schemes = {
+             {"hmac-md5", EVP_md5},
+             {"hmac-sha1", EVP_sha1},
++#if !defined(LIBRESSL_VERSION_NUMBER)
+             {"hmac-mdc2", EVP_mdc2},
++#endif
+             {"hmac-ripemd160", EVP_ripemd160},
+-#if OPENSSL_VERSION_NUMBER >= 0x10100000L
++#if OPENSSL_VERSION_NUMBER >= 0x10100000L && !defined(LIBRESSL_VERSION_NUMBER)
+             {"hmac-blake2b512", EVP_blake2b512},
+             {"hmac-blake2s256", EVP_blake2s256},
+ #endif
