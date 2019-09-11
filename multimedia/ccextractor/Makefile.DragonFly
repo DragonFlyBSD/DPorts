@@ -1,0 +1,3 @@
+
+# libccx.so is not linked against -lv
+MAKE_ENV+=	LDVER=ld.bfd

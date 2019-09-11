@@ -1,5 +1,5 @@
---- ../lightcrafts/build.xml.orig	2018-01-22 13:20:04.000000000 +0000
-+++ ../lightcrafts/build.xml
+--- lightcrafts/build.xml.orig	2018-01-22 13:20:04.000000000 +0000
++++ lightcrafts/build.xml
 @@ -27,6 +27,7 @@
    <condition property="MAKE" value="make">
      <not>

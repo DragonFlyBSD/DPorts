@@ -2,31 +2,35 @@
 # $FreeBSD$
 
 PORTNAME=	xlockmore
-PORTVERSION=	5.55
-PORTREVISION=	1
+PORTVERSION=	5.58
 CATEGORIES?=	x11
 MASTER_SITES=	http://www.sillycycle.com/xlock/ \
 		LOCAL/jgh/x11/${PORTNAME}/
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
+		${PORTNAME}.README
+EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	jgh@FreeBSD.org
 COMMENT=	Like XLock session locker/screen saver, but just more
 
 LICENSE=	BSD2CLAUSE
 
-USES=		tar:xz
+USES=		tar:xz gnome
+
 GNU_CONFIGURE=	yes
+PORTDOCS=	README ${PORTNAME}.README
 CONFIGURE_ARGS=	--without-motif --without-ttf --without-editres \
 		--without-dtsaver --without-rplay --without-nas \
 		--without-gtk --without-esound --disable-setuid
 
-USE_GNOME=	#
 USE_XORG=	x11 xaw ice sm xpm xext xinerama
 
-LIB_DEPENDS+=	libfreetype.so:print/freetype2
+LIB_DEPENDS+=	libfreetype.so:print/freetype2 \
+		libpng.so:graphics/png
 
 OPTIONS_DEFINE=	MESAGL MB SYSLOG DISABLE_ALLOW_ROOT NICE_ONLY BLANK_ONLY \
 		KERBEROS4 BAD_PAM GTK2 TIME_BOMB CUSTOMIZATION MAGICK JP \
-		XINERAMA
+		XINERAMA DOCS
 OPTIONS_DEFAULT=	XINERAMA
 OPTIONS_SUB=	yes
 
@@ -162,13 +166,10 @@ pre-extract:
 
 post-patch:
 	@${REINPLACE_CMD} -e '/xglockrc/ s|PROGRAM|DATA|' ${WRKSRC}/xglock/Makefile.in
-	@${REINPLACE_CMD} -e 's|$$(SOUNDPATH)|$$(DESTDIR)$$(SOUNDPATH)|g' ${WRKSRC}/modes/Makefile.in
-	@${REINPLACE_CMD} -e '/$$(ETCDIR)play.sh/ s|$$(INSTALL_PROGRAM)|$$(INSTALL_PROGRAM:N-s)|' ${WRKSRC}/modes/Makefile.in
-.if exists(/usr/bin/fortune)
-	@${REINPLACE_CMD} -e 's|/usr/games/fortune|/usr/bin/fortune|' ${WRKSRC}/modes/Makefile.in
-.endif
 
-post-configure:
-	@${REINPLACE_CMD} -e 's/-lXdpms//g' ${WRKSRC}/modes/Makefile
+post-install-DOCS-on:
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${DISTDIR}/${PORTNAME}.README ${STAGEDIR}${DOCSDIR}/${PORTNAME}.README
+	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>

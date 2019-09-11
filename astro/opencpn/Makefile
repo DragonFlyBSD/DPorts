@@ -3,15 +3,13 @@
 PORTNAME=	opencpn
 PORTVERSION=	4.4.0
 DISTVERSIONPREFIX=	v
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	astro geography
 
 MAINTAINER=	ml@netfence.it
 COMMENT=	Concise ChartPlotter/Navigator
 
 LICENSE=	GPLv2+
-
-BROKEN_aarch64=		Fails to compile: use of undeclared identifier rand
 
 LIB_DEPENDS=	libportaudio.so:audio/portaudio \
 		libcurl.so:ftp/curl \

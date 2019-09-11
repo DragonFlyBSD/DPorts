@@ -1,11 +1,11 @@
---- src/common/run_command.c.orig	2019-04-12 04:20:25 UTC
+--- src/common/run_command.c.orig	2019-07-11 00:40:34 UTC
 +++ src/common/run_command.c
-@@ -46,7 +46,7 @@
- #include <sys/wait.h>
+@@ -47,7 +47,7 @@
  #include <unistd.h>
+ #include <inttypes.h>		/* for uint16_t, uint32_t definitions */
  
--#if defined(__FreeBSD__) || defined(__NetBSD__)
-+#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
+-#if defined(__APPLE__) || defined(__FreeBSD__) || defined(__NetBSD__)
++#if defined(__APPLE__) || defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
  #define POLLRDHUP POLLHUP
  #endif
  

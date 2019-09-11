@@ -3,7 +3,7 @@
 
 PORTNAME=	gitea
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.8.3
+DISTVERSION=	1.9.2
 CATEGORIES=	www
 
 MAINTAINER=	stb@lassitu.de
@@ -14,13 +14,12 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 RUN_DEPENDS=	git:devel/git
 
-USES=		go
+USES=		go:modules
 USE_GITHUB=	yes
 GH_ACCOUNT=	go-gitea
 USE_RC_SUBR=	gitea
 
-GO_PKGNAME=	code.gitea.io/${PORTNAME}
-GO_TARGET=	-tags "${GO_TAGS}"
+GO_BUILDFLAGS=	-tags "${GO_TAGS}"
 
 SUB_FILES+=	app.ini.sample
 SUB_LIST+=	GITUSER=${USERS}

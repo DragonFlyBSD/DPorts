@@ -1,0 +1,6 @@
+
+LIB_DEPENDS+=	libmd.so:security/libmd
+
+dfly-patch:
+	${REINPLACE_CMD} -e "s@-lmd@-I${LOCALBASE}/include -L${LOCALBASE}/lib &@g" \
+		${WRKSRC}/configure

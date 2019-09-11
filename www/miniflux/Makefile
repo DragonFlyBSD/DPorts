@@ -1,18 +1,18 @@
 # $FreeBSD$
 
 PORTNAME=	miniflux
-DISTVERSION=	2.0.16
+DISTVERSION=	2.0.17
 CATEGORIES=	www
 
 MAINTAINER=	krion@FreeBSD.org
-COMMENT=	Miniflux is a self-hosted software to read RSS/Atom/JSON feeds
+COMMENT=	Self-hosted software to read RSS/Atom/JSON feeds
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:security/ca_root_nss
 
-USES=		go pgsql
+USES=		go:modules
 
 USERS=	miniflux
 GROUPS=	miniflux
@@ -29,11 +29,8 @@ GO_BUILDFLAGS=	-ldflags="-X miniflux.app/version.Version=${DISTVERSION} \
 		-X miniflux.app/version.BuildDate=$$(date +'%Y-%m-%dT%H:%M:%SZ')"
 
 OPTIONS_DEFINE=		PGSQL_SERVER
-OPTIONS_DEFAULT=
 PGSQL_SERVER_DESC=	Install the PostgreSQL Server Component
-PGSQL_SERVER_VARS=	WANT_PGSQL=server
-
-.include <bsd.port.options.mk>
+PGSQL_SERVER_VARS=	WANT_PGSQL=server,contrib
 
 do-install:
 	${INSTALL_PROGRAM} ${GO_WRKDIR_BIN}/miniflux.app ${STAGEDIR}${PREFIX}/bin/miniflux

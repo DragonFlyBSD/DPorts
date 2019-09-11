@@ -1,6 +1,6 @@
---- gdb/Makefile.in.orig	2018-09-05 07:44:28 UTC
+--- gdb/Makefile.in.orig	2019-05-11 18:19:02 UTC
 +++ gdb/Makefile.in
-@@ -655,6 +655,7 @@ ALL_64_TARGET_OBS = \
+@@ -645,6 +645,7 @@ ALL_64_TARGET_OBS = \
  	alpha-tdep.o \
  	amd64-darwin-tdep.o \
  	amd64-dicos-tdep.o \
@@ -8,27 +8,28 @@
  	amd64-fbsd-tdep.o \
  	amd64-linux-tdep.o \
  	amd64-nbsd-tdep.o \
-@@ -715,6 +716,7 @@ ALL_TARGET_OBS = \
+@@ -693,6 +694,7 @@ ALL_TARGET_OBS = \
+ 	csky-linux-tdep.o \
+ 	csky-tdep.o \
+ 	dicos-tdep.o \
++	dfly-tdep.o \
+ 	fbsd-tdep.o \
+ 	frv-linux-tdep.o \
+ 	frv-tdep.o \
+@@ -708,6 +710,7 @@ ALL_TARGET_OBS = \
+ 	i386-cygwin-tdep.o \
  	i386-darwin-tdep.o \
  	i386-dicos-tdep.o \
- 	i386-fbsd-tdep.o \
 +	i386-dfly-tdep.o \
+ 	i386-fbsd-tdep.o \
  	i386-gnu-tdep.o \
  	i386-go32-tdep.o \
- 	i386-linux-tdep.o \
-@@ -1219,6 +1221,7 @@ HFILES_NO_SRCDIR = \
- 	darwin-nat.h \
- 	dcache.h \
- 	defs.h \
+@@ -1247,6 +1250,8 @@ HFILES_NO_SRCDIR = \
+ 	extension.h \
+ 	extension-priv.h \
+ 	f-lang.h \
 +	dfly-nat.h \
- 	dicos-tdep.h \
- 	dictionary.h \
- 	disasm.h \
-@@ -2232,6 +2235,7 @@ ALLDEPFILES = \
- 	bsd-uthread.c \
- 	darwin-nat.c \
- 	dicos-tdep.c \
-+	dfly-nat.c \
- 	exec.c \
- 	fbsd-nat.c \
- 	fbsd-tdep.c \
++	dfly-tdep.h \
+ 	fbsd-nat.h \
+ 	fbsd-tdep.h \
+ 	filesystem.h \

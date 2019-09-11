@@ -1,0 +1,13 @@
+
+# FP has intermediates, use sed
+dfly-patch:
+	${REINPLACE_CMD} -e 's@FREEBSD@DRAGONFLY@g' \
+		${WRKSRC}/pea_utils.pas \
+		${WRKSRC}/peach.pas \
+		${WRKSRC}/list_utils.pas \
+		${WRKSRC}/unit_gwrap.pas \
+		${WRKSRC}/unit_pea.pas \
+		${WRKSRC}/unit3.pas \
+		${WRKSRC}/unit8.pas
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
+		${WRKSRC}/list_utils.pas

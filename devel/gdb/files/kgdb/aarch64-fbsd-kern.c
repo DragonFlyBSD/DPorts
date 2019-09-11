@@ -23,7 +23,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: head/devel/gdb/files/kgdb/aarch64-fbsd-kern.c 475318 2018-07-25 17:28:36Z jhb $
+ * $FreeBSD: head/devel/gdb/files/kgdb/aarch64-fbsd-kern.c 503200 2019-06-01 00:44:08Z jhb $
  */
 
 /* Target-dependent code for FreeBSD/aarch64 kernels.  */
@@ -73,7 +73,7 @@ aarch64_fbsd_trapframe_cache (struct frame_info *this_frame, void **this_cache)
   struct gdbarch *gdbarch = get_frame_arch (this_frame);
   enum bfd_endian byte_order = gdbarch_byte_order (gdbarch);
   struct trad_frame_cache *cache;
-  CORE_ADDR addr, func, pc, sp;
+  CORE_ADDR func, pc, sp;
   const char *name;
   int i;
 

@@ -1,0 +1,6 @@
+The SSH authentication component provides a function to verify the
+identity of a user (pam_sm_authenticate()), by prompting the user for a
+passphrase and verifying that it can decrypt the target user's SSH key
+using that passphrase without user having direct access to private key.
+
+NOTE: Ensure that users are using secure passphrases on remote systems!

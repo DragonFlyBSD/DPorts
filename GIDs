@@ -177,18 +177,18 @@ openhab:*:235:
 rspamd:*:236:
 paperless:*:237:
 sonic:*:238:
-# free: 239
+restserver:*:239:
 aprsd:*:240:
 tnc:*:241:
 prosody:*:242:
-# free: 243
+ot-recorder:*:243:
 mastodon:*:244:
 # free: 245
 # free: 246
 fcron:*:247:
 # free: 248
 # free: 249
-# free: 250
+sems:*:250:
 # free: 251
 # free: 252
 _adsuck:*:253:
@@ -294,7 +294,7 @@ radarr:*:352:
 _iodined:*:353:
 jackett:*:354:
 nzbhydra2:*:355:
-# free: 356
+lidarr:*:356:
 # free: 357
 # free: 358
 # free: 359
@@ -542,7 +542,7 @@ _xsi:*:600:
 _tss:*:601:
 _pkcs11:*:602:
 _acme:*:603:
-# free: 604
+_lego:*:604:
 _hockeypuck:*:605:
 # free: 606
 # free: 607

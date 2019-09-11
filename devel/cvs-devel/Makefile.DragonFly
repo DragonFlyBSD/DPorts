@@ -1,0 +1,4 @@
+
+USES+=	alias
+
+CONFIGURE_ARGS+=	ac_cv_have_decl___fpending=yes

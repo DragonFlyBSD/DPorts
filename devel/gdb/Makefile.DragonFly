@@ -1,0 +1,14 @@
+
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NKGDB}
+CONFIGURE_TARGET:=	x86_64-portbld-${OPSYS:tl}${OSREL}
+
+KGDB_BROKEN=	KGDB support not ready yet
+
+dfly-patch:
+	${CP} ${DFLY_FILESDIR}/dfly-tdep.* ${WRKSRC}/gdb/
+	${CP} ${DFLY_FILESDIR}/dfly-nat.* ${WRKSRC}/gdb/
+	${CP} ${DFLY_FILESDIR}/i386* ${WRKSRC}/gdb/
+	${CP} ${DFLY_FILESDIR}/amd64* ${WRKSRC}/gdb/
+#.if ${PORT_OPTIONS:MKGDB}
+#	${PATCH} ${PATCH_ARGS} < ${DFLY_FILESDIR}/extrapatch-kgdb
+#.endif

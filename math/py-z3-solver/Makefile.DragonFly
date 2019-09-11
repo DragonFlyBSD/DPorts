@@ -1,0 +1,8 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e "s@FREEBSD@DRAGONFLY@g" \
+			 -e "s@FreeBSD@DragonFly@g" \
+			 -e "s@freebsd@dragonfly@g" \
+		${WRKSRC}/../../util/scoped_timer.cpp \
+		${WRKSRC}/../../../scripts/mk_util.py \
+		${WRKSRC}/../../../CMakeLists.txt

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net/quagga/files/quagga.in 495859 2019-03-16 09:00:10Z tobik $
+# $FreeBSD: head/net/quagga/files/quagga.in 509507 2019-08-21 14:29:57Z tobik $
 #
 
 # PROVIDE: quagga
@@ -18,7 +18,7 @@
 #  zebra_flags="-P 0"
 #  bgpd_flags="-nrP 0" and so on
 # If you want to give the routing daemons a chance to catchup before
-# continueing, set quagga_wait_for to a "default" or certain prefix.
+# continuing, set quagga_wait_for to a "default" or certain prefix.
 #  quagga_wait_for="default"
 # Set the time limit for the wait.
 #  quagga_wait_seconds="90"

@@ -1,5 +1,5 @@
-USES+= ncurses
-CFLAGS+= -D__FreeBSD__=7 -D__FreeBSD_version=700000
+USES+= ncurses alias
+#CFLAGS+= -D__FreeBSD__=7 -D__FreeBSD_version=700000
 
 dfly-patch:
 	${REINPLACE_CMD} -e 's@-ltermcap@-lncurses@g'	\

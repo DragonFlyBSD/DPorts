@@ -1,19 +1,27 @@
---- gdb/configure.tgt.orig	2018-09-05 07:44:28 UTC
+--- gdb/configure.tgt.orig	2019-02-27 04:51:48 UTC
 +++ gdb/configure.tgt
-@@ -707,6 +707,12 @@ x86_64-*-linux*)
+@@ -97,6 +97,8 @@ esac
+ # 2. Get the objects per os in $TARG.
+ 
+ case "${targ}" in
++*-*-dragonfly*)
++	os_obs="dfly-tdep.o solib-svr4.o";;
+ *-*-freebsd* | *-*-kfreebsd*-gnu)
+ 	os_obs="fbsd-tdep.o solib-svr4.o";;
+ *-*-netbsd* | *-*-knetbsd*-gnu)
+@@ -747,6 +749,11 @@ x86_64-*-linux*)
  			solib-svr4.o symfile-mem.o linux-tdep.o linux-record.o"
  	build_gdbserver=yes
  	;;
 +x86_64-*-dragonfly*)
 +	# Target: DragonFly/amd64
-+	gdb_target_obs="amd64-tdep.o amd64dfly-tdep.o i386-tdep.o \
-+			i387-tdep.o i386bsd-tdep.o i386dfly-tdep.o \
-+			bsd-uthread.o solib-svr4.o"
++	gdb_target_obs="amd64-dfly-tdep.o ${i386_tobjs} \
++			i386-bsd-tdep.o i386-dfly-tdep.o"
 +	;;
  x86_64-*-freebsd* | x86_64-*-kfreebsd*-gnu)
  	# Target: FreeBSD/amd64
  	gdb_target_obs="amd64-fbsd-tdep.o ${i386_tobjs} \
-@@ -747,6 +753,8 @@ gdb_target_obs="${cpu_obs} ${os_obs} ${g
+@@ -787,6 +794,8 @@ gdb_target_obs="${cpu_obs} ${os_obs} ${g
  # map target onto default OS ABI
  
  case "${targ}" in

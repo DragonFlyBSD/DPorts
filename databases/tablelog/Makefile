@@ -3,7 +3,7 @@
 
 PORTNAME=	tablelog
 PORTVERSION=	0.4.4
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	databases
 MASTER_SITES=	http://pgfoundry.org/frs/download.php/1387/
 
@@ -11,6 +11,9 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Logs changes on a table in PostgreSQL
 
 LICENSE=	PostgreSQL
+
+DEPRECATED=	Abandonware
+EXPIRATION_DATE=	2019-09-15
 
 WRKSRC=		${WRKDIR}/table_log-${DISTVERSION}
 

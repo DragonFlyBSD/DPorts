@@ -1,0 +1,5 @@
+
+# zrj: disable -flto, c++ mess
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-O3 -flto@-O3@g' \
+		${WRKSRC}/CMakeLists.txt

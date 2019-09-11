@@ -1,3 +1,8 @@
+
+# zrj: sysutils/libutempter is not maintained, outdated and IGNOREd on FreeBSD.
+CONFIGURE_ARGS= --without-utempter
+.if 0
 LIB_DEPENDS+=	libutempter.so:sysutils/libutempter
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+.endif

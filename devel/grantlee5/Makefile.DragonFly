@@ -1,3 +1,4 @@
 # libgcc_pic.a + ld.gold + pthread issue
 MAKE_ENV+= LDVER=ld.bfd
 LDFLAGS+= -pthread # sorry
+USE_CXXSTD=	gnu++11

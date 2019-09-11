@@ -1,0 +1,4 @@
+The libradius library implements the Remote Authentication Dial In User
+Service (RADIUS). RADIUS, defined in RFCs 2865 and 2866, allows clients
+to perform authentication and accounting by means of network requests to
+remote servers.

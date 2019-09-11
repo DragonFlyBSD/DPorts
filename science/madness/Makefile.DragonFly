@@ -1,0 +1,2 @@
+
+CMAKE_ARGS+=	-DLAPACK_LIBRARIES:STRING="-L${LOCALBASE}/lib -llapack -lblas"

@@ -1,0 +1,7 @@
+
+common_warns= -Wno-stringop-overflow -Wno-format-truncation -Wno-maybe-uninitialized
+# use cc
+dfly-patch:
+	${REINPLACE_CMD} -e 's@clang@cc@g' \
+			 -e "s@CFLAGS += @& ${common_warns} @g" \
+		${WRKSRC}/config.mk

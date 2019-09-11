@@ -3,6 +3,7 @@
 
 PORTNAME=	gdal
 PORTVERSION=	2.4.2
+PORTREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	https://download.osgeo.org/gdal/${PORTVERSION}/ \
 		LOCAL/sunpoet
@@ -27,8 +28,8 @@ WRKSRC_SUBDIR=	swig/python
 
 SHEBANG_FILES=	scripts/*.py
 
-NUMPY_BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>=1.0.0,1:math/py-numpy@${PY_FLAVOR}
-NUMPY_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>=1.0.0,1:math/py-numpy@${PY_FLAVOR}
+NUMPY_BUILD_DEPENDS=	${PYNUMPY}
+NUMPY_RUN_DEPENDS=	${PYNUMPY}
 NUMPY_USES=		fortran
 
 post-install:

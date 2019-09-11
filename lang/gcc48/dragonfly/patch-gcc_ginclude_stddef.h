@@ -53,7 +53,7 @@
     since it no longer defines _BSD_RUNE_T_ yet still desires to export
     rune_t in some cases... */
 -#if defined (__FreeBSD__) && (__FreeBSD__ >= 5)
-+#if defined (__DragonFly__) || (defined (__FreeBSD__) && (__FreeBSD__ >= 5))
++#if !defined (__DragonFly__) && (defined (__FreeBSD__) && (__FreeBSD__ >= 5))
  #if !defined (_ANSI_SOURCE) && !defined (_POSIX_SOURCE)
  #if __BSD_VISIBLE
  #ifndef _RUNE_T_DECLARED

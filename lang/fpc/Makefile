@@ -3,7 +3,7 @@
 
 PORTNAME=	fpc
 PORTVERSION=	3.0.4
-PORTREVISION?=	0
+PORTREVISION?=	2
 CATEGORIES?=	lang
 MASTER_SITES=	ftp://ftp.freepascal.org/pub/fpc/dist/${PORTVERSION}/source/:source \
 		ftp://planetmirror.com/pub/fpc/dist/${PORTVERSION}/source/:source \
@@ -13,6 +13,7 @@ MASTER_SITES=	ftp://ftp.freepascal.org/pub/fpc/dist/${PORTVERSION}/source/:sourc
 		ftp://ftp.us.freepascal.org/pub/fpc/dist/${PORTVERSION}/source/:source \
 		SF/freepascal/Source/${PORTVERSION}:source \
 		http://leaf.dragonflybsd.org/~marino/dports-src/:DragonFlybootstrap \
+		http://avalon.dragonflybsd.org/misc/distfiles/freepascal/:DragonFlybootstrap \
 		LOCAL/acm/freepascal/:bootstrap \
 		LOCAL/acm/freepascal/:man
 DISTFILES=	${DISTNAME:S/$/.source/}${EXTRACT_SUFX}:source
@@ -24,9 +25,11 @@ COMMENT?=	Free Pascal compiler with Turbo and Delphi
 ONLY_FOR_ARCHS=	amd64 i386
 
 USES+=		gmake iconv
-LLD_UNSAFE=	yes	# Links object with invalid section header alignment
-BOOTVER=	3.0.0
+USE_BINUTILS=	yes
+BOOTVER=	3.0.4
 MANVER=		3.0.4
+
+LDPATH=		"/usr/bin/ld.bfd"
 
 #USE_GITHUB=	yes
 #GH_ACCOUNT=	fpc-svn
@@ -110,7 +113,8 @@ post-patch:
 .endif
 .if empty(ICONV_LIB)
 	@${REINPLACE_CMD} -e "s|s<>'c'|(s<>'c') and (s<>'iconv')|" \
-		${WRKDIR}/${FPCSRCDIR}/compiler/systems/t_bsd.pas
+			-e "s|%%LDPATH%%|${LDPATH}|g" \
+				${WRKDIR}/${FPCSRCDIR}/compiler/systems/t_bsd.pas
 	@${REINPLACE_CMD} -e 's|defined(bsd) and not ||' \
 		${WRKDIR}/${FPCSRCDIR}/rtl/unix/cwstring.pp
 .endif

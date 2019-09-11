@@ -1,3 +1,6 @@
 # actually libatomic, but hey, ncurses because of bundled llvm
-USES+=	fortran ncurses
+#USES+=	fortran
+#USES+=	ncurses
 CXXFLAGS:=	${CXXFLAGS:N*macro-redefined}
+# port got very clang specific, just use it
+USE_CLANG_FALLBACK=	default

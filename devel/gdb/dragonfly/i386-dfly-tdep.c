@@ -22,11 +22,12 @@
 #include "gdbcore.h"
 #include "osabi.h"
 #include "regcache.h"
-
-#include "gdb_assert.h"
+#include "regset.h"
+#include "common/x86-xstate.h"
 
 #include "i386-tdep.h"
 #include "i387-tdep.h"
+#include "dfly-tdep.h"
 #include "solib-svr4.h"
 
 static int i386dfly_r_reg_offset[] =

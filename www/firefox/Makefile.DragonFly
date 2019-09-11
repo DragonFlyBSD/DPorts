@@ -3,6 +3,10 @@ OPTIONS_DEFAULT:=        ${OPTIONS_DEFAULT:NPULSEAUDIO}
 # Apparently webrtc can't be built without sctp anymore, so
 # turn it off again
 MOZ_OPTIONS+=	--disable-webrtc
+# clang to generate C/c++ bindings...  assume default llvm
+MOZ_OPTIONS+=	--with-clang-path=${LOCALBASE}/llvm80/bin/clang \
+		--with-libclang-path=${LOCALBASE}/llvm80/lib
+CXXFLAGS+=	-Wno-multistatement-macros -Wno-class-memaccess
 
 dfly-patch:
 	# disable SCTP

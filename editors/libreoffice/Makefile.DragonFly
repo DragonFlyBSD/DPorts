@@ -35,6 +35,7 @@ REPLACE_LIST= \
 
 PERCENT_BSD_LIST= \
 	Repository.mk \
+	canvas/Executable_canvasdemo.mk \
 	chart2/Library_chartcore.mk \
 	desktop/CppunitTest_desktop_app.mk \
 	desktop/Library_crashreport.mk\

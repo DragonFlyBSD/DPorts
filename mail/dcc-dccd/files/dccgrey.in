@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/mail/dcc-dccd/files/dccgrey.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/mail/dcc-dccd/files/dccgrey.in 503924 2019-06-10 20:04:46Z pkubaj $
 #
 # PROVIDE: dccgrey
 # REQUIRE: LOGIN
@@ -32,8 +32,8 @@ load_rc_config $name
 
 # Set defaults
 : ${dccgrey_enable:="NO"}
-: ${dccgrey_home="%%DCCHOME%%"}
-: ${dccgrey_libexec="%%PREFIX%%/dcc/libexec"}
+: ${dccgrey_home="%%DCCDATA%%"}
+: ${dccgrey_libexec="%%PREFIX%%/libexec"}
 : ${dccgrey_conf="$dccgrey_home/dcc_conf"}
 
 

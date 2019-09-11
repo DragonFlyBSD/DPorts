@@ -1,4 +1,0 @@
-
-# zrj nothing to see, just a hack
-pre-build:
-	${ECHO_CMD} "#include <cstdio>" >> ${WRKSRC}/ddd/config.h

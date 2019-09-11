@@ -1,0 +1,4 @@
+GDB is a source-level debugger for Ada, C, C++, Objective-C, Pascal and
+many other languages.  This port is intended for testing purposes only.
+
+WWW: http://www.gnu.org/software/gdb/

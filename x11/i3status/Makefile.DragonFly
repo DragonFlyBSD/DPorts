@@ -1,1 +1,0 @@
-PULSEAUDIO_EXTRA_PATCHES_OFF+= ${DFLY_FILESDIR}/hellno-pulseaudio.diff

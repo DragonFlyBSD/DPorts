@@ -1,0 +1,3 @@
+
+# port uses nullptr
+USE_CXXSTD:=	gnu++11

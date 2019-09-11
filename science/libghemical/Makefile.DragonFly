@@ -1,0 +1,3 @@
+
+# zrj: srsly???
+CONFIGURE_ENV:=	${CONFIGURE_ENV:NLD_PRELOAD*}

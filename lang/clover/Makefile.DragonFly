@@ -1,2 +1,7 @@
 # zrj: needed for lib/clc/oland-r600--.bc dep
 RUN_DEPENDS+=	libclc>=0:devel/libclc
+
+# zrj: FP prunes standard headers from ports clangs.
+dfly-patch:
+	${REINPLACE_CMD} -e '/CLANG_RESOURCE_DIR/s@stddef.h@msa.h@g' \
+		${WRKSRC}/configure

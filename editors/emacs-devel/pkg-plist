@@ -1069,6 +1069,8 @@ share/metainfo/emacs.appdata.xml
 %%DATADIR%%/%%EMACS_VER%%/lisp/calendar/holidays.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/calendar/icalendar.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/calendar/icalendar.elc
+%%DATADIR%%/%%EMACS_VER%%/lisp/calendar/iso8601.el.gz
+%%DATADIR%%/%%EMACS_VER%%/lisp/calendar/iso8601.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/calendar/lunar.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/calendar/lunar.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/calendar/parse-time.el.gz
@@ -1523,8 +1525,6 @@ share/metainfo/emacs.appdata.xml
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/cl-print.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/cl-seq.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/cl-seq.elc
-%%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/cl.el.gz
-%%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/cl.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/copyright.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/copyright.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/crm.el.gz
@@ -2860,6 +2860,8 @@ share/metainfo/emacs.appdata.xml
 %%DATADIR%%/%%EMACS_VER%%/lisp/obsolete/bruce.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/obsolete/cc-compat.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/obsolete/cc-compat.elc
+%%DATADIR%%/%%EMACS_VER%%/lisp/obsolete/cl.el.gz
+%%DATADIR%%/%%EMACS_VER%%/lisp/obsolete/cl.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/obsolete/cl-compat.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/obsolete/cl-compat.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/obsolete/complete.el.gz
@@ -3278,14 +3280,6 @@ share/metainfo/emacs.appdata.xml
 %%DATADIR%%/%%EMACS_VER%%/lisp/proced.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/profiler.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/profiler.elc
-%%DATADIR%%/%%EMACS_VER%%/lisp/progmodes/ada-mode.el.gz
-%%DATADIR%%/%%EMACS_VER%%/lisp/progmodes/ada-mode.elc
-%%DATADIR%%/%%EMACS_VER%%/lisp/progmodes/ada-prj.el.gz
-%%DATADIR%%/%%EMACS_VER%%/lisp/progmodes/ada-prj.elc
-%%DATADIR%%/%%EMACS_VER%%/lisp/progmodes/ada-stmt.el.gz
-%%DATADIR%%/%%EMACS_VER%%/lisp/progmodes/ada-stmt.elc
-%%DATADIR%%/%%EMACS_VER%%/lisp/progmodes/ada-xref.el.gz
-%%DATADIR%%/%%EMACS_VER%%/lisp/progmodes/ada-xref.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/progmodes/antlr-mode.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/progmodes/antlr-mode.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/progmodes/asm-mode.el.gz

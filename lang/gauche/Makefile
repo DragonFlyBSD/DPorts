@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gauche
-PORTVERSION=	0.9.7
+PORTVERSION=	0.9.8
 CATEGORIES=	lang scheme
 MASTER_SITES=	SF/${PORTNAME}/Gauche
 DISTNAME=	Gauche-${PORTVERSION}
@@ -13,7 +13,6 @@ COMMENT=	Scheme script interpreter with multibyte character handling
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BROKEN_aarch64=	Fails to link: missing sbrk
 BROKEN_mips=	Fails to build: redefinition of GC_register_dynamic_libraries
 BROKEN_mips64=	Fails to build: redefinition of GC_register_dynamic_libraries
 
@@ -45,9 +44,12 @@ AXTLS_CONFIGURE_ON=	--with-tls=axtls
 EUCJP_DESC=		EUC-JP encoding support
 EUCJP_CONFIGURE_ON=	--enable-multibyte=euc-jp
 GDBM_LIB_DEPENDS=	libgdbm.so:databases/gdbm
+GDBM_CONFIGURE_ON=	--with-dbm=gdbm,ndbm
+GDBM_CONFIGURE_OFF=	--with-dbm=ndbm
 MBEDTLS_LIB_DEPENDS=	libmbedtls.so:security/mbedtls
 MBEDTLS_CONFIGURE_ON=	--with-tls=mbedtls
 SLIB_DESC=		Create catalogue for SLIB port
+# Gauche's slib module to use Aubrey Jaffer's SLIB
 SLIB_BUILD_DEPENDS=	${LOCALBASE}/share/slib/require.scm:lang/slib
 SLIB_CONFIGURE_ON=	--with-slib=${LOCALBASE}/share/slib
 SLIB_CONFIGURE_OFF=	--with-slib=${WRKDIR}
@@ -68,6 +70,7 @@ CONFIGURE_ARGS+=	--with-tls=none
 .endif
 
 post-patch:
+	@${REINPLACE_CMD} -e 's,/bash,/sh,' ${WRKSRC}/src/gen-features.sh
 # required for sparc64, no-op elsewhere
 	@${REINPLACE_CMD} -e \
 		'/^VPATH = /s,$$,/src,' ${WRKSRC}/gc/Makefile.in

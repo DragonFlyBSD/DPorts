@@ -1,0 +1,14 @@
+Hack to allow building lazarus-qt5.
+
+--- components/chmhelp/lhelp/Makefile.orig	2015-10-01 18:40:54 UTC
++++ components/chmhelp/lhelp/Makefile
+@@ -2033,6 +2033,9 @@ OTHERLIBDIR:=$(shell grep -v "^\#" /etc/
+ endif
+ endif
+ ifdef inUnix
++ifeq ($(OS_SOURCE),dragonfly)
++OTHERLIBDIR+=/usr/local/lib/qt5
++endif
+ ifeq ($(OS_SOURCE),netbsd)
+ OTHERLIBDIR+=/usr/pkg/lib
+ endif

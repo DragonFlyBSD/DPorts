@@ -1,0 +1,3 @@
+
+# XXX for now until utmp/wtmp removal from base
+CONFIGURE_ARGS+=	--disable-utmp

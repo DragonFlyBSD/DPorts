@@ -1,1 +1,6 @@
 LDFLAGS+=	-L${LOCALBASE}/lib
+
+# zrj: restore damage
+CPP=cpp
+CC=cc
+CXX=c++

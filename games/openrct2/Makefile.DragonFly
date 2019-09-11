@@ -1,4 +1,4 @@
-USES+=	alias
+USES+=	alias:11
 
 # if using base c++
 dfly-patch:

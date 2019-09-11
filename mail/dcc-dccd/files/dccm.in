@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/mail/dcc-dccd/files/dccm.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD: head/mail/dcc-dccd/files/dccm.in 503924 2019-06-10 20:04:46Z pkubaj $
 #
 # PROVIDE: dccm
 # REQUIRE: LOGIN
@@ -32,8 +32,8 @@ load_rc_config $name
 
 # Set defaults
 : ${dccm_enable:="NO"}
-: ${dccm_home="%%DCCHOME%%"}
-: ${dccm_libexec="%%PREFIX%%/dcc/libexec"}
+: ${dccm_home="%%DCCDATA%%"}
+: ${dccm_libexec="%%PREFIX%%/libexec"}
 : ${dccm_conf="$dccm_home/dcc_conf"}
 
 pidfile=${dccm_pidfile:-"/var/run/dcc/dccm.pid"}

@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	yoshimi
-DISTVERSION=	1.5.11.4
+DISTVERSION=	1.6.0
 CATEGORIES=	audio
 
 MAINTAINER=	tobik@FreeBSD.org

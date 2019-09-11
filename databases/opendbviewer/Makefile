@@ -1,8 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	opendbviewer
-PORTVERSION=	1.1.0
-PORTREVISION=	2
+PORTVERSION=	1.1.1
+DISTVERSIONPREFIX=	v
 CATEGORIES=	databases
 
 MAINTAINER=	lbartoletti@tuxfamily.org
@@ -24,5 +24,7 @@ OPTIONS_DEFAULT=	PGSQL
 
 PGSQL_USE=	QT=sql-pgsql
 MYSQL_USE=	QT=sql-mysql
+
+CMAKE_ARGS+=	-DCMAKE_CXX_STANDARD=11
 
 .include <bsd.port.mk>

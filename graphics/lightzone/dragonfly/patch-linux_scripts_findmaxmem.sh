@@ -1,5 +1,5 @@
---- scripts/findmaxmem.sh.orig	2018-01-22 13:20:04.000000000 +0000
-+++ scripts/findmaxmem.sh
+--- linux/scripts/findmaxmem.sh.orig	2018-01-22 13:20:04.000000000 +0000
++++ linux/scripts/findmaxmem.sh
 @@ -17,6 +17,9 @@ elif [ "${PLATFORM}" = "SunOS" ]; then
  elif [ "${PLATFORM}" = "FreeBSD" ]; then
    totalmem=`dmesg | grep 'real memory' | sed -r 's/.* ([0-9]+) .*/\1/'`

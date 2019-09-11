@@ -1,0 +1,10 @@
+--- Modules/ThirdParty/libLBFGS/src/CMakeLists.txt.orig	2019-07-23 19:56:55 UTC
++++ Modules/ThirdParty/libLBFGS/src/CMakeLists.txt
+@@ -1,6 +1,7 @@
+ ADD_LIBRARY( itklbfgs
+   lbfgs.c
+ )
++TARGET_LINK_LIBRARIES(itklbfgs m)
+ 
+ #if( ITK_COMPILER_SUPPORTS_SSE2_32 OR
+ #    ITK_COMPILER_SUPPORTS_SSE2_64)

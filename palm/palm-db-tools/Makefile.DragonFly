@@ -1,3 +1,0 @@
-# palmtypes.h:81:17: error: '<<' in boolean context, did you mean '<' ? [-Werror=int-in-bool-context]
-dfly-patch:
-	${REINPLACE_CMD} -e 's/-Werror[[:>:]]//g' ${WRKSRC}/configure

@@ -2,7 +2,7 @@
 
 PORTNAME=	xcrysden
 DISTVERSION=	1.5.60
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	science
 MASTER_SITES=	http://www.xcrysden.org/download/
 
@@ -32,7 +32,5 @@ post-patch:
 
 post-install:
 	@cd ${STAGEDIR}${PREFIX}/lib/${PORTNAME} && ${STRIP_CMD} xcrys xctclsh xsf2xsf
-	@${REINPLACE_CMD} -i '' -e 's|^\.|export LD_PRELOAD=/usr/local/lib/gcc${GCC_DEFAULT}/libgcc_s.so; .|' \
-		${STAGEDIR}${PREFIX}/bin/xcrysden
 
 .include <bsd.port.mk>

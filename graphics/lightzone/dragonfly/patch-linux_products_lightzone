@@ -1,5 +1,5 @@
---- products/lightzone.intermediate	2018-05-10 05:29:36.000000000 +0000
-+++ products/lightzone
+--- linux/products/lightzone.intermediate	2018-05-10 05:29:36.000000000 +0000
++++ linux/products/lightzone
 @@ -19,6 +19,10 @@ elif [ "${PLATFORM}" = "FreeBSD" ]; then
    totalmem=`sysctl -n hw.physmem`
    totalmem=$(( ${totalmem} / 1024 ))

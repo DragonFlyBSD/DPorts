@@ -1,0 +1,5 @@
+The libtacplus library implements the client side of the TACACS+ network
+access control protocol. TACACS+ allows clients to perform
+authentication, authorization, and accounting by means of network
+requests to remote servers. This library supports only the
+authentication and authorization portion of the protocol

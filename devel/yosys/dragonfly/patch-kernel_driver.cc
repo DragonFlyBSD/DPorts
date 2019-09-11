@@ -7,7 +7,7 @@
 -			vm_size_t sz_total = kip.ki_size;
 -			segsz_t sz_resident = kip.ki_rssize;
 +			vm_size_t sz_total = kip.kp_vm_map_size;
-+			segsz_t sz_resident = kip.kp_vm_rssize;
++			long sz_resident = kip.kp_vm_rssize;
  			meminfo = stringf(", MEM: %.2f MB total, %.2f MB resident",
  				(int)sz_total / 1024.0 / 1024.0,
  				(int)sz_resident * (getpagesize() / 1024.0 / 1024.0));

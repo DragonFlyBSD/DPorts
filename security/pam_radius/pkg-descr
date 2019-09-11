@@ -1,0 +1,3 @@
+The pam_radius module provides authentication services based upon the
+RADIUS (Remote Authentication Dial In User Service) protocol for the PAM
+(Pluggable Authentication Module) framework.

@@ -58,7 +58,7 @@ ERROR+=	"${a} is unsupported, please use ${${a}_ALT}"
 
 # Warnings only when DEVELOPER=yes
 
-.if exists(${.CURDIR}/../../Mk/bsd.port.mk)
+.if exists(${.CURDIR}/../../Mk/bsd.port.mk) || ${OVERLAYS:tA:M${.CURDIR:H:H}} == ${.CURDIR:H:H}
 .if ${.CURDIR:H:T} != ${PKGCATEGORY}
 DEV_ERROR+=	"The first entry in CATEGORIES should be the directory where the port lives"
 .endif
@@ -167,6 +167,14 @@ DEV_ERROR+=	"USE_FPC=yes is no longer supported, please use USES=fpc"
 DEV_ERROR+=	"PORT${_type} does not do anything unless the ${_type} option is present."
 .  endif
 .endfor
+
+.if empty(PORTEPOCH) || !empty(PORTEPOCH:C/[0-9]+//)
+DEV_ERROR+=	"PORTEPOCH needs to be an integer \>= 0"
+.endif
+
+.if empty(PORTREVISION) || !empty(PORTREVISION:C/[0-9]+//)
+DEV_ERROR+=	"PORTREVISION needs to be an integer \>= 0"
+.endif
 
 # Whitelist of options helper lookalikes that should not be reported on:
 _OPTIONS_HELPERS_SEEN+=	OPENSSL_LDFLAGS

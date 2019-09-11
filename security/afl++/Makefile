@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	afl
-PORTVERSION=	2.52c
-PORTREVISION=	1
+PORTVERSION=	2.53d.a1
 CATEGORIES=	security
 PKGNAMESUFFIX=	++
 
@@ -22,6 +21,7 @@ USES=		gmake tar:tgz
 USE_GITHUB=	yes
 GH_ACCOUNT=	vanhauser-thc
 GH_PROJECT=	AFLplusplus
+GH_TAGNAME=	8b6a4e575978fac83155efd90d39030c84b2a755
 
 ALL_TARGET=	all libdislocator
 TEST_TARGET=	test_build

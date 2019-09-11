@@ -1,0 +1,7 @@
+
+# something strange, libunwind issue in cmake
+CXXFLAGS+=	-lc
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-latomic@@g' \
+		${WRKSRC}/yarpl/CMakeLists.txt

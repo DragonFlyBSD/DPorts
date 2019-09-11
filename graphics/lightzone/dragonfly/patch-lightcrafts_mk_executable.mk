@@ -1,5 +1,5 @@
---- ../lightcrafts/mk/executable.mk.orig	2018-01-22 13:20:04.000000000 +0000
-+++ ../lightcrafts/mk/executable.mk
+--- lightcrafts/mk/executable.mk.orig	2018-01-22 13:20:04.000000000 +0000
++++ lightcrafts/mk/executable.mk
 @@ -99,7 +99,7 @@ ifeq ($(PLATFORM),Windows)
    LINK+=		$(EXEC_WINDOWS_LINK)
  endif

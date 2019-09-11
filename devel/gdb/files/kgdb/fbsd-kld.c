@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/fbsd-kld.c 480613 2018-09-24 17:23:35Z jhb $");
+__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/fbsd-kld.c 503200 2019-06-01 00:44:08Z jhb $");
 
 #include "defs.h"
 #include "command.h"
@@ -138,7 +138,6 @@ static int
 find_kld_path (const char *filename, char *path, size_t path_size)
 {
 	struct kld_info *info;
-	struct cleanup *cleanup;
 	gdb::unique_xmalloc_ptr<char> module_path;
 	char *module_dir, *cp;
 	int error;
@@ -403,7 +402,7 @@ kld_solib_create_inferior_hook (int from_tty)
 			    "&((struct linker_file *)0)->pathname");
 			info->off_next = parse_and_eval_address(
 			    "&((struct linker_file *)0)->link.tqe_next");
-		} CATCH(e, RETURN_MASK_ERROR) {
+		} CATCH(e2, RETURN_MASK_ERROR) {
 			return;
 		}
 		END_CATCH

@@ -5,6 +5,9 @@ MAKE_ENV+=		MIB_SYSTEM_LIBS="-lkinfo"
 
 CONFIGURE_ARGS+=	--with-out-mib-modules="sctp-mib"
 
+# configure has inverted check w/ -D_KERNEL first and -D_KERNEL_STRUCTURES next
+CONFIGURE_ARGS+=	ac_cv_IFNET_NEEDS_KERNEL=no
+
 # Avoid mixing openssl -lcrypto vs libressl one through libpkg.so
 LIB_DEPENDS:= ${LIB_DEPENDS:Nlibpkg.so*}
 CONFIGURE_ARGS+= ac_cv_header_pkg_h=no netsnmp_cv_func_pkg_init_LIBS=no

@@ -13,6 +13,7 @@ COMMENT=	LV2 Application Support Library
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+
 BUILD_DEPENDS=	lv2>=1.14.0_1:audio/lv2
 LIB_DEPENDS=	libjack.so:audio/jack \
 		librdf.so:textproc/redland

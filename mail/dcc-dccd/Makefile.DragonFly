@@ -1,1 +1,13 @@
+USES+=	gmake
+
 OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NDCCM}
+
+CONFIGURE_ARGS:=	${CONFIGURE_ARGS:N--without-DCC-MD5:N--with-installroot=*}
+CONFIGURE_ARGS+=	--with-installroot=\$${${DESTDIRNAME}}
+# zrj: sigh just look at MF, force space in configure args
+CONFIGURE_ARGS+=
+
+# undo MF damage.
+dfly-patch:
+	${REINPLACE_CMD} -e 's@lock_open.c@& md5.c@' \
+		${WRKSRC}/clntlib/Makefile.in

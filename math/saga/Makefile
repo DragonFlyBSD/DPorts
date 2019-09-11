@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	saga
-PORTVERSION=	7.2.0
+PORTVERSION=	7.3.0
+PORTREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	SF/saga-gis/SAGA%20-%20${PORTVERSION:C/\.[[:digit:]]\.[[:digit:]]*$//}/SAGA%20-%20${PORTVERSION}
 
@@ -30,7 +31,7 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 RUN_DEPENDS:=	swig3.0:devel/swig30
 
 USES=		autoreconf compiler:c++11-lib desktop-file-utils dos2unix \
-		iconv:wchar_t libtool localbase pkgconfig python:2.7
+		iconv:wchar_t libtool localbase pkgconfig python
 USE_LDCONFIG=	yes
 USE_WX=		3.0+
 
@@ -56,6 +57,7 @@ VIGRA_DESC=	Enable 'Vision with Generic Algorithms' Library
 
 OPENMP_CONFIGURE_ENABLE=	openmp
 OPENMP_LDFLAGS=		-L${LOCALBASE}/lib -lm
+# Use OpenMP from lang/llvm${LLVM_VER}
 PGSQL_CONFIGURE_OFF=	--with-postgresql=no
 PGSQL_CONFIGURE_ON=	--with-postgresql=${LOCALBASE}/bin/pg_config
 PGSQL_USES=		pgsql

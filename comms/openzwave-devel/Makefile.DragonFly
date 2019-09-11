@@ -1,0 +1,10 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@__FreeBSD__@__DragonFly__@g' \
+			 -e 's@__FreeBSD_version < 1000000@0@g' \
+		${WRKSRC}/cpp/hidapi/libusb/hid.c \
+		${WRKSRC}/cpp/src/aes/brg_endian.h \
+		${WRKSRC}/cpp/src/platform/unix/ThreadImpl.cpp \
+		${WRKSRC}/cpp/src/value_classes/Value.h
+	${REINPLACE_CMD} -e '/UNAME/s@FreeBSD@DragonFly@g' \
+		${WRKSRC}/cpp/build/Makefile
