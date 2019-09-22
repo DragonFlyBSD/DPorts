@@ -1,0 +1,2 @@
+SUB_LIST+=     ZEROTIER_SYSLOG=""
+SUB_LIST+=     ZEROTIER_IF_TAP="if_tap"
