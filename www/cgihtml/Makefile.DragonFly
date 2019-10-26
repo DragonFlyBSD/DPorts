@@ -1,3 +1,0 @@
-# The custom makefile has bad switches (-O solo) and gold returns
-# multiple definitions when compiling .so objects
-MAKE_ENV+= LDVER=ld.bfd

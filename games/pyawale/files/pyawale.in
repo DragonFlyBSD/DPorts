@@ -1,7 +1,0 @@
-#!/bin/sh
-#
-# $FreeBSD: head/games/pyawale/files/pyawale.in 352818 2014-05-02 15:44:31Z nemysis $
-#
-
-cd "%%DATADIR%%"
-exec %%PYTHON_CMD%% ./pyawale.py
