@@ -39,7 +39,7 @@ PLIST_SUB=	BDBMAJ=${BDBMAJ} BDBVER=${BDBVER}
 MAKE_ARGS+=	docdir=${DOCSDIR}
 CFLAGS+=	-Wall -Wextra
 
-OPTIONS_DEFINE=	CRYPTO L10N SQL JAVA TCL DOCS
+OPTIONS_DEFINE=	CRYPTO DEBUG L10N SQL JAVA TCL DOCS
 OPTIONS_DEFAULT=CRYPTO
 OPTIONS_SUB=	yes
 CRYPTO_DESC=	Cryptography support
@@ -58,7 +58,7 @@ SQL_VARS=		DBLIBS+=libdb_sql
 JAVA_USE=		java
 # db5 is incompatible with openjdk8 and causes IllegalArgument
 # exceptions during build
-JAVA_VARS=		DBLIBS+=libdb_java JAVA_VERSION="1.6 1.7"
+JAVA_VARS=		DBLIBS+=libdb_java JAVA_VERSION="1.7"
 JAVA_CONFIGURE_ENABLE=	java
 JAVA_CPPFLAGS=		-I"${JAVA_HOME}/include"
 JAVA_CONFIGURE_ENV=	JAVAC="${JAVAC}" JAR="${JAR}" JAVA="${JAVA}" JAVACFLAGS="-Xlint:unchecked"
