@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/security/fakeident/files/fakeidentd.in 404959 2015-12-31 19:01:05Z riggs $
+# $FreeBSD: head/security/fakeident/files/fakeidentd.in 511912 2019-09-13 02:08:08Z jgh $
 #
 
 # PROVIDE: fakeidentd
@@ -17,13 +17,14 @@
 # The username does not need to exist anywhere in your system.
 
 name=fakeidentd
+desc="Standalone 'fake' ident daemon"
 rcvar=fakeidentd_enable
 
 load_rc_config $name
 
 : ${fakeidentd_enable:="NO"}
 
-command=%%PREFIX%%/sbin/identd
+command="%%PREFIX%%/sbin/identd"
 pidfile=/var/run/identd.pid
 
 command_args="nobody && echo -n ' fakeidentd'"
