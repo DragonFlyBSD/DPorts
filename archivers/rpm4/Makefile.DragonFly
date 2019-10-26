@@ -1,0 +1,4 @@
+
+.if ${DFLYVERSION} >= 500706
+USES:=	${USES:Nalias}
+.endif
