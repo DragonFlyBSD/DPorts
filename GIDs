@@ -790,9 +790,9 @@ graylog:*:848:
 chronyd:*:849:
 qbittorrent:*:850:
 cassandra:*:851:
-# free: 852
+p0f:*:852:
 _geodns:*:853:
-# free: 854
+ebusd:*:854:
 # free: 855
 # free: 856
 # free: 857

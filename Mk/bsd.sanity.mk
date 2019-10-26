@@ -110,7 +110,7 @@ DEV_ERROR+=	"All LIB_DEPENDS should use the new format and start out with lib.  
 .if ${LICENSE:MBSD}
 DEV_WARNING+=	"LICENSE must not contain BSD, instead use BSD[234]CLAUSE"
 .endif
-.else
+.elif !defined(DISABLE_LICENSES)
 .  if empty(USES:Mmetaport)
 DEV_WARNING+=	"Please set LICENSE for this port"
 .  endif
@@ -292,7 +292,7 @@ APACHE_PORT_ALT=	DEFAULT_VERSIONS+=apache=${APACHE_PORT:S/www\/apache//:C/2(0-9)
 USE_FPC_RUN_ALT=	USES=fpc:run
 WANT_FPC_BASE_ALT=	USES=fpc:base
 WANT_FPC_ALL_ALT=	USES=fpc:all
-USE_QT4_ALT=		USES=qt:5 and USE_QT=${USE_QT4} (beware) as Qt4 has been removed
+USE_QT4_ALT=		USES=qt:5 and USE_QT=${USE_QT4} \(beware\) as Qt4 has been removed
 USE_QT5_ALT=		USES=qt:5 and USE_QT=${USE_QT5}
 QT_NONSTANDARD_ALT=	USES=qmake:no_env
 
