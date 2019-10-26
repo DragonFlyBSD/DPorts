@@ -6,6 +6,9 @@ DISTVERSION?=	1.3.0
 PORTREVISION=	1
 CATEGORIES=	multimedia
 
+PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+PATCHFILES+=	1d7fcf4227ee.patch:-p1
+
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	H.265/HEVC encoder implemented in C
 
@@ -41,9 +44,4 @@ post-patch:
 		-e '/AM_INIT_AUTOMAKE/s/])/ serial-tests&/' \
 		${WRKSRC}/configure.ac
 
-pre-install:	do-test
-
 .include <bsd.port.mk>
-
-# XXX test_external_symbols.sh fails with CRYPTOPP=on
-do-test:	.IGNORE
