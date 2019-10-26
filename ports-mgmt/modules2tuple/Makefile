@@ -1,11 +1,11 @@
 # $FreeBSD$
 
 PORTNAME=	modules2tuple
-PORTVERSION=	1.8.0
 DISTVERSIONPREFIX=	v
+DISTVERSION=	1.9.0
 CATEGORIES=	ports-mgmt
 
-MAINTAINER=	dg@syrec.org
+MAINTAINER=	dmgk@FreeBSD.org
 COMMENT=	Generate GH_TUPLE from modules.txt
 
 LICENSE=	BSD2CLAUSE
@@ -13,10 +13,10 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USES=		go:modules
 
-GO_BUILDFLAGS=	-ldflags="-X main.version=${PORTVERSION}"
-
 USE_GITHUB=	yes
 GH_ACCOUNT=	dmgk
+
+GO_BUILDFLAGS=	-ldflags="-s -w -X main.version=${PORTVERSION}"
 
 PLIST_FILES=	bin/${PORTNAME}
 
