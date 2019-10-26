@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	curl
-PORTVERSION=	7.65.3
+PORTVERSION=	7.66.0
 CATEGORIES=	ftp net www
 MASTER_SITES=	https://curl.haxx.se/download/ \
 		LOCAL/sunpoet
@@ -108,7 +108,6 @@ HTTP2_USES=		pkgconfig
 IDN_CONFIGURE_WITH=	libidn2
 IDN_LIB_DEPENDS=	libidn2.so:dns/libidn2
 IMAP_CONFIGURE_ENABLE=	imap
-IPV6_CATEGORIES=	ipv6
 IPV6_CONFIGURE_ENABLE=	ipv6
 LDAP_CONFIGURE_ENABLE=	ldap
 LDAP_USE=		OPENLDAP=yes
