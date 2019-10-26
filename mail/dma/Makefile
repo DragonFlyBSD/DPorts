@@ -5,7 +5,7 @@ PORTNAME=	dma
 PORTVERSION=	0.12
 DISTVERSIONPREFIX=	v
 PORTEPOCH=	1
-CATEGORIES=	mail ipv6
+CATEGORIES=	mail
 
 MAINTAINER=	garga@FreeBSD.org
 COMMENT=	DragonFly Mail Agent, a small MTA for local/outbound mail
@@ -36,6 +36,8 @@ CONFFILES+=	dma.conf auth.conf
 
 # 11.x has dma imported into base and /var/spool/dma added to mtree
 PLIST_SUB+=	VARDIR="@comment "
+
+PORTSCOUT=	limit:^[0-9\.]*$$
 
 post-patch:
 	@${REINPLACE_CMD} -e 's,/etc/dma,${PREFIX}/etc/dma,g' \
