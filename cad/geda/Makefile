@@ -14,10 +14,13 @@ COMMENT=	GPL Electronic Design Automation tools
 
 LICENSE=	GPLv2+
 
+.if ${/usr/bin/ld:L:tA} == /usr/bin/ld.lld
+BROKEN=		ld: error: ../src/.libs/libgeda.so: undefined reference to g_input_stream_get_type
+.endif
+
 LIB_DEPENDS=	libstroke.so:devel/libstroke \
 		libguile.so:lang/guile
 RUN_DEPENDS=	gawk:lang/gawk\
-		m4>=1.4.11:devel/m4
 
 USES=		desktop-file-utils gettext gmake libtool pathfix perl5 \
 		pkgconfig python:run shared-mime-info shebangfix
@@ -29,7 +32,6 @@ SHEBANG_FILES=	examples/lightning_detector/bom libgeda/docs/*.dox \
 USE_GNOME=	gtk20
 USE_PERL5=	run
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV=	M4=${LOCALBASE}/bin/gm4
 CONFIGURE_ARGS=	--with-libstroke=${LOCALBASE}
 INSTALL_TARGET=	install-strip
 USE_LDCONFIG=	yes
@@ -39,6 +41,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}-gaf
 DATADIR=	${PREFIX}/share/gEDA
 INFO=		geda-scheme
+BINARY_WRAPPERS=	gm4
 
 CONFLICTS=	geda-docs-[0-9]* geda-examples-[0-9]* geda-gattrib-[0-9]* \
 		geda-gschem-[0-9]* geda-netlist-[0-9]* geda-symbols-[0-9]* \
