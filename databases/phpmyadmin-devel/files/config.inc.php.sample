@@ -1,0 +1,14 @@
+<?php
+/* $FreeBSD: head/databases/phpmyadmin-devel/files/config.inc.php.sample 340872 2014-01-24 00:14:07Z mat $
+ *
+ * Skeleton configuration file -- this file is empty on a fresh
+ * installaton of phpmyadmin.
+ * 
+ * Copy any settings you want to override from
+ * libraries/config.default.php or visit /phpmyadmin/setup/ to generate a
+ * basic configuration file
+ * 
+ */
+
+
+?>
