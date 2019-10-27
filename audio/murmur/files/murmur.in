@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/audio/murmur/files/murmur.in 333522 2013-11-11 16:47:25Z feld $
+# $FreeBSD: head/audio/murmur/files/murmur.in 515199 2019-10-22 15:10:42Z feld $
 #
 # PROVIDE: murmur
 # REQUIRE: DAEMON
@@ -29,6 +29,8 @@ command="%%PREFIX%%/sbin/murmurd"
 command_args="-ini %%PREFIX%%/etc/murmur.ini"
 pidfile=/var/run/murmur/murmur.pid
 start_precmd=murmur_prestart
+extra_commands="reload"
+sig_reload="USR1"
 
 murmur_prestart() {
 	for i in /var/log/murmur /var/run/murmur /var/db/murmur; do
