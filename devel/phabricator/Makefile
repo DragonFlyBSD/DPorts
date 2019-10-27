@@ -15,11 +15,9 @@ RUN_DEPENDS=	${PHP_PKGNAMEPREFIX}libphutil>=20190831:devel/libphutil@${PHP_FLAVO
 		arcanist-lib${PHP_PKGNAMESUFFIX}>=20190622:devel/arcanist-lib@${PHP_FLAVOR} \
 		git:devel/git
 
-OPTIONS_DEFINE=	GD OPCACHE
-OPTIONS_DEFAULT=GD OPCACHE
-OPCACHE_DESC?=	Use OPcache to improve performance
-
 USES=		php:flavors shebangfix
+IGNORE_WITH_PHP=	74
+
 REINPLACE_ARGS=	-i ""
 SHEBANG_FILES=	scripts/*.php \
 		scripts/almanac/*.php \
@@ -46,6 +44,10 @@ SHEBANG_FILES=	scripts/*.php \
 USE_PHP=	ctype curl fileinfo filter hash iconv mbstring mysqli openssl \
 		pcntl posix zip
 
+OPTIONS_DEFINE=	GD OPCACHE
+OPTIONS_DEFAULT=GD OPCACHE
+OPCACHE_DESC?=	Use OPcache to improve performance
+
 GD_USE=		PHP=gd
 
 OPCACHE_RUN_DEPENDS=	${PHPBASE}/lib/php/${PHP_EXT_DIR}/apcu.so:devel/pecl-APCu@${PHP_FLAVOR}
@@ -55,6 +57,7 @@ USE_GITHUB=	yes
 NO_BUILD=	yes
 USE_RC_SUBR=	phd
 SUB_FILES=	pkg-message
+PORTSCOUT=	ignore:1
 GH_ACCOUNT=	phacility
 GH_TAGNAME=	24dbff2
 
