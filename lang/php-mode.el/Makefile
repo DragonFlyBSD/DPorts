@@ -2,9 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	php-mode.el
-PORTVERSION=	1.21.4
+PORTVERSION=	1.22.0
 DISTVERSIONPREFIX=	v
-PORTREVISION=	1
 CATEGORIES=	lang elisp
 PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
 
@@ -12,6 +11,10 @@ MAINTAINER=	yasu@utahime.org
 COMMENT=	PHP mode for GNU Emacs
 
 LICENSE=	GPLv3
+
+.if ${FLAVOR:U} == devel_full || ${FLAVOR:U} == devel_nox
+BROKEN=		php.el:232:10:Error: Symbol's function definition is void: rx-form
+.endif
 
 USES=		emacs gmake
 USE_GITHUB=	yes
@@ -27,8 +30,6 @@ do-install:
 		${WRKSRC}/php-face.elc \
 		${WRKSRC}/php-mode-debug.el \
 		${WRKSRC}/php-mode-debug.elc \
-		${WRKSRC}/php-mode-test.el \
-		${WRKSRC}/php-mode-test.elc \
 		${WRKSRC}/php-mode.el \
 		${WRKSRC}/php-mode.elc \
 		${WRKSRC}/php-project.el \
