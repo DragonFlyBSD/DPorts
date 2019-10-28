@@ -1,5 +1,5 @@
---- swoole_config.h.orig	2019-08-17 07:24:40 UTC
-+++ swoole_config.h
+--- include/swoole_config.h.orig	2019-09-25 07:04:17 UTC
++++ include/swoole_config.h
 @@ -41,7 +41,7 @@
  
  #define SW_SOCKET_OVERFLOW_WAIT    100
