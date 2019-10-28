@@ -1,11 +1,20 @@
---- configure.orig	2013-08-17 22:52:47.294312000 +0000
+--- configure.orig	2019-08-29 03:31:29 UTC
 +++ configure
-@@ -4719,7 +4719,7 @@ echo "${ECHO_T}yes" >&6; }
+@@ -4536,7 +4536,7 @@ $as_echo "yes" >&6; }
                          LDFLAGS="$LDFLAGS -Wl,-rpath,\$(libdir)"
  			;;
  
--		*BSD*)
-+		*BSD*|DragonFly)
- 			{ echo "$as_me:$LINENO: result: yes" >&5
- echo "${ECHO_T}yes" >&6; }
- 			LIBMXML="libmxml.so.1.5"
+-		*bsd)
++		*bsd | dragonfly)
+ 			{ $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+ $as_echo "yes" >&6; }
+ 			LIBMXML="libmxml.so.1.6"
+@@ -4649,7 +4649,7 @@ fi
+ 
+ if test "$mandir" = "\${prefix}/man" -a "$prefix" = "/usr"; then
+ 	case "$host_os_name" in
+-        	*bsd | darwin | linux*)
++        	*bsd | darwin | linux* | dragonfly)
+         		# *BSD, Darwin (macOS), and Linux
+         		mandir="/usr/share/man"
+         		;;
