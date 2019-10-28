@@ -2,14 +2,14 @@
 
 PORTNAME=	speech
 DISTVERSION=	${QT5_VERSION}
-PORTREVISION=	2
 CATEGORIES=	accessibility
 PKGNAMEPREFIX=	qt5-
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Accessibilty features for Qt5
 
-USES=		compiler:c++11-lang gl pkgconfig qmake:outsource qt-dist:5,speech
+USES=		compiler:c++11-lang gl pkgconfig qmake:outsource \
+		qt-dist:5,speech xorg
 USE_GL=		gl
 USE_QT=		core gui buildtools_build qmake_build
 
