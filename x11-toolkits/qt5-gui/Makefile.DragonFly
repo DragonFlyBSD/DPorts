@@ -1,0 +1,4 @@
+
+# zrj: Project ERROR: Unknown module(s) in QT: xkbcommon_support-private
+# missing <linux/kd.h> for both evdev and libinput
+#CONFIGURE_ARGS+=	-no-evdev -no-libinput

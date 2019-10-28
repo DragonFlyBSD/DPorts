@@ -1,0 +1,11 @@
+--- src/gui/configure.json.orig	2019-06-13 04:18:18 UTC
++++ src/gui/configure.json
+@@ -953,6 +953,8 @@
+                 "head": [
+                     "#if defined(__FreeBSD__)",
+                     "#  include <dev/evdev/input.h>",
++                    "#elif defined(__DragonFly__)",
++                    "#  include <dev/misc/evdev/input.h>",
+                     "#else",
+                     "#  include <linux/input.h>",
+                     "#  include <linux/kd.h>",
