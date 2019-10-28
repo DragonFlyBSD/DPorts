@@ -1,7 +1,7 @@
---- CMakeLists.txt.orig	2018-06-10 22:46:49 UTC
+--- CMakeLists.txt.intermediate	2019-10-28 17:15:29.000000000 +0000
 +++ CMakeLists.txt
-@@ -247,17 +247,6 @@ if(HAS_WVLA_FLAG)
-   add_definitions(-Wvla)
+@@ -302,18 +302,6 @@ if(HAS_WVLA_FLAG)
+   add_compile_options(-Wvla)
  endif()
  
 -if(UNIX)
@@ -10,11 +10,12 @@
 -  check_c_compiler_flag(-fstack-protector HAS_FSTACK_PROTECTOR_FLAG)
 -
 -  if(HAS_FSTACK_PROTECTOR_STRONG_FLAG)
--    add_definitions(-fstack-protector-strong)
+-    add_compile_options(-fstack-protector-strong)
 -  elseif(HAS_FSTACK_PROTECTOR_FLAG)
--    add_definitions(-fstack-protector --param ssp-buffer-size=4)
+-    add_compile_options(-fstack-protector --param ssp-buffer-size=4)
 -  endif()
 -endif()
- 
+-
  check_c_compiler_flag(-fdiagnostics-color=auto HAS_DIAG_COLOR_FLAG)
  if(HAS_DIAG_COLOR_FLAG)
+   if(CMAKE_GENERATOR MATCHES "Ninja")
