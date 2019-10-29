@@ -1,0 +1,8 @@
+USES+=	ncurses
+
+CFLAGS+=	-DTAILQ_FOREACH_SAFE=TAILQ_FOREACH_MUTABLE
+
+dfly-patch:
+	${REINPLACE_CMD} -e "/XCC/s@-lcurses@-L${LOCALBASE}/lib -lncurses@g"	\
+			 -e "/LIB_CURSES/s@-lcurses@\"-L${LOCALBASE}/lib -lncurses\"@g"	\
+		${WRKSRC}/configure
