@@ -1,5 +1,5 @@
 # $FreeBSD$
-PORTREVISION=	1
+PORTREVISION=	3
 
 .include "${.CURDIR}/Makefile.common"
 
@@ -112,9 +112,10 @@ USE_GL=		gl glew glu
 USE_OPENLDAP=	yes
 USE_PERL5=	build
 USE_XORG=	ice sm x11 xaw xext xinerama xrandr xrender
-USES=		autoreconf:build bison compiler:c++14-lang cpe gl gmake jpeg \
-		mysql:client \
-		perl5 pkgconfig python shebangfix shared-mime-info ssl tar:xz
+USES=		autoreconf:build bison compiler:c++14-lang cpe gl gmake gnome \
+		jpeg mysql:client \
+		perl5 pkgconfig python shebangfix shared-mime-info ssl tar:xz \
+		xorg
 
 OPTIONS_DEFINE=	CUPS DOCS GNOME GTK2 GTK3 JAVA KDE5 MMEDIA PGSQL QT5 SDK \
 		SYSTRAY TEST WEBDAV
@@ -159,8 +160,8 @@ GTK3_VARS=	${GTK_VARS}
 JAVA_BUILD_DEPENDS=	ant:devel/apache-ant \
 			${JAVAJARDIR}/commons-codec.jar:java/jakarta-commons-codec \
 			${JAVAJARDIR}/commons-httpclient.jar:java/jakarta-commons-httpclient \
-			${JAVAJARDIR}/commons-lang.jar:java/jakarta-commons-lang \
-			${JAVAJARDIR}/commons-logging.jar:java/jakarta-commons-logging \
+			${JAVAJARDIR}/commons-lang.jar:java/apache-commons-lang \
+			${JAVAJARDIR}/commons-logging.jar:java/apache-commons-logging \
 			${JAVAJARDIR}/junit.jar:java/junit \
 			${JAVAJARDIR}/bsh.jar:lang/bsh
 JAVA_CATEGORIES=	java
@@ -270,7 +271,7 @@ CONFIGURE_ARGS=	--disable-dependency-tracking \
 CONFIGURE_ENV=	DMAKE=${LOCALBASE}/bin/dmake \
 		FLEX=${LOCALBASE}/bin/flex \
 		GNUTAR="${TAR}" \
-		GPERF=${LOCALBASE}/bin/gperf \
+		GPERF=${LOCALBASE}/bin/gperf31 \
 		ICU_CFLAGS="`icu-config --cflags`" \
 		ICU_LIBS="`icu-config --ldflags`" \
 		OPENCOLLADA_CFLAGS="${COLLADA_CFLAGS}" \
