@@ -2,8 +2,12 @@
 # qt5-examples requires qt5-docs DISTINFO file, so remove it as well
 #OPTIONS_EXCLUDE=DOCS EXAMPLES
 
+# attempt to fix plist
+PLIST= ${WRKDIR}/qtcreator-plist
+
 # some conflict between qmljslexer_p.h and glslparsertable_p.h
 dfly-patch:
+	${CAT} ${.CURDIR}/pkg-plist | ${SED} -e '/utils-internal-asyncjob/d' > ${PLIST}
 	${REINPLACE_CMD} -e "s@[[:<:]]T_RESERVED[[:>:]]@T_GLRESERVED@g"	\
 		${WRKSRC}/src/libs/glsl/glsllexer.cpp			\
 		${WRKSRC}/src/libs/glsl/glslparsertable_p.h		\
