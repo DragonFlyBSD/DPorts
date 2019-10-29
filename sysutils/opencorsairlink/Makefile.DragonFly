@@ -1,0 +1,6 @@
+
+LDFLAGS+=	-lm
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@libusb_set_auto_detach_kernel_driver@666; //&@g' \
+		${WRKSRC}/logic/scan.c
