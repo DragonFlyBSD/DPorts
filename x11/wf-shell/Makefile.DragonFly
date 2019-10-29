@@ -1,0 +1,15 @@
+
+# no pulse
+LIB_DEPENDS:=	${LIB_DEPENDS:Nlibpulse*}
+
+dfly-patch:
+	${RM} -r ${WRKSRC}/subprojects/gvc
+	${RM} -r ${WRKSRC}/src/panel/widgets/volume*
+	${REINPLACE_CMD} -e '/libpulse/d' -e '/libgvc/d' \
+		${WRKSRC}/meson.build
+	${REINPLACE_CMD} -e 's@libpulse,@@g' \
+		${WRKSRC}/src/panel/meson.build
+	${REINPLACE_CMD} -e 's@,  libgvc@@g' -e '/volume.cpp/d' \
+		${WRKSRC}/src/panel/meson.build
+	${REINPLACE_CMD} -e '/volume/d'	-e '/WayfireVolume/d' \
+		${WRKSRC}/src/panel/panel.cpp
