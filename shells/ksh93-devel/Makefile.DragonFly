@@ -1,0 +1,3 @@
+
+dfly-patch:
+	${CHMOD} +x ${WRKSRC}/scripts/install_aux_files.sh
