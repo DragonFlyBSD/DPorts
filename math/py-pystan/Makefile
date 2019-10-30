@@ -2,7 +2,8 @@
 
 PORTNAME=	pystan
 PORTVERSION=	2.19.0.0
-CATEGORIES=	math
+PORTREVISION=	1
+CATEGORIES=	math python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -10,8 +11,9 @@ MAINTAINER=	gmm@tutanota.com
 COMMENT=	PyStan is the Python interface for Stan
 
 LICENSE=	GPLv3
+LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		python shebangfix
+USES=		compiler:c++14-lang python shebangfix
 USE_PYTHON=	autoplist distutils
 
 BUILD_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}cython>0:lang/cython@${PY_FLAVOR}
