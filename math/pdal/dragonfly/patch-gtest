@@ -1,0 +1,20 @@
+--- vendor/gtest/include/gtest/internal/gtest-port.h.orig	2019-08-23 12:50:12 UTC
++++ vendor/gtest/include/gtest/internal/gtest-port.h
+@@ -637,7 +637,7 @@ typedef struct _RTL_CRITICAL_SECTION GTE
+ // to your compiler flags.
+ #define GTEST_HAS_PTHREAD                                             \
+   (GTEST_OS_LINUX || GTEST_OS_MAC || GTEST_OS_HPUX || GTEST_OS_QNX || \
+-   GTEST_OS_FREEBSD || GTEST_OS_NACL || GTEST_OS_NETBSD || GTEST_OS_FUCHSIA)
++   GTEST_OS_FREEBSD || GTEST_OS_NACL || GTEST_OS_NETBSD || GTEST_OS_FUCHSIA || __DragonFly__)
+ #endif  // GTEST_HAS_PTHREAD
+ 
+ #if GTEST_HAS_PTHREAD
+@@ -829,7 +829,7 @@ typedef struct _RTL_CRITICAL_SECTION GTE
+      (GTEST_OS_WINDOWS_DESKTOP && _MSC_VER >= 1400) ||          \
+      GTEST_OS_WINDOWS_MINGW || GTEST_OS_AIX || GTEST_OS_HPUX || \
+      GTEST_OS_OPENBSD || GTEST_OS_QNX || GTEST_OS_FREEBSD || \
+-     GTEST_OS_NETBSD || GTEST_OS_FUCHSIA)
++     GTEST_OS_NETBSD || GTEST_OS_FUCHSIA || __DragonFly__)
+ # define GTEST_HAS_DEATH_TEST 1
+ #endif
+ 
