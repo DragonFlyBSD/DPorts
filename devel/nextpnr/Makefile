@@ -5,11 +5,13 @@ PORTVERSION=	g20190529
 PORTREVISION=	1
 CATEGORIES=	devel
 
-MAINTAINER=	manu@FreeBSD.Org
+MAINTAINER=	manu@FreeBSD.org
 COMMENT=	Portable FPGA place and route tool
 
 LICENSE=	ISCL
 LICENSE_FILE=	${WRKSRC}/COPYING
+
+BROKEN_powerpc64=	runaway build
 
 BUILD_DEPENDS=	${LOCALBASE}/share/trellis/database:devel/trellis \
 		${LOCALBASE}/share/icebox:devel/icestorm
@@ -18,7 +20,7 @@ LIB_DEPENDS=	libboost_thread.so:devel/boost-libs \
 		libboost_program_options.so:devel/boost-libs \
 		${PY_BOOST}
 
-USES=		cmake qt:5 eigen:3 python:3.5+ gl
+USES=		compiler:c++11-lang cmake qt:5 eigen:3 python:3.5+ gl
 
 USE_QT=		buildtools_build core gui opengl qmake_build widgets
 USE_GL=		gl
