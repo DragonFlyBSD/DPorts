@@ -23,6 +23,8 @@ TEST_DEPENDS=	p5-Test-Class>=0.12:devel/p5-Test-Class \
 USES=		perl5
 USE_PERL5=	modbuild
 
+BROKEN=		Does not work with gsl-2.6
+
 post-install:
 	${FIND} ${STAGEDIR}${PREFIX}/${SITE_ARCH_REL}/auto/Math/GSL/ -name "*.so" -exec ${STRIP_CMD} {} +
 
