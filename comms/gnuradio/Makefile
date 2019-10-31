@@ -2,7 +2,7 @@
 
 PORTNAME=	gnuradio
 PORTVERSION=	3.8.0.0
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	comms astro hamradio
 MASTER_SITES=	http://gnuradio.org/releases/gnuradio/
 
@@ -20,7 +20,6 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}lxml>0:devel/py-lxml@${PY_FLAVOR} \
 		${PYTHON_SITELIBDIR}/yaml/__init__.py:devel/py-yaml@${PY_FLAVOR} \
 		${PYTHON_SITELIBDIR}/gi/__init__.py:devel/py-gobject3@${PY_FLAVOR} \
 		${PYTHON_SITELIBDIR}/cairo/__init__.py:graphics/py-cairo@${PY_FLAVOR} \
-		${PYTHON_SITELIBDIR}/ephem/__init__.py:astro/pyephem@${PY_FLAVOR} \
 		${PYTHON_SITELIBDIR}/mako/__init__.py:textproc/py-mako@${PY_FLAVOR} \
 		${PYTHON_SITELIBDIR}/six.py:devel/py-six@${PY_FLAVOR} \
 		${PYTHON_SITELIBDIR}/click/__init__.py:devel/py-click@${PY_FLAVOR} \
@@ -104,7 +103,6 @@ DOXYGEN_CMAKE_ON=	-DENABLE_DOXYGEN:STRING="ON" \
 		-DENABLE_DOCS:STRING="ON"
 DOXYGEN_CMAKE_OFF=	-DENABLE_DOXYGEN:STRING="OFF" \
 		-DENABLE_DOCS:STRING="OFF"
-HAVE_PORTDOCS=	YES
 
 UHD_CMAKE_ON=	-DENABLE_GR_UHD:STRING="ON"
 UHD_CMAKE_OFF=	-DENABLE_GR_UHD:STRING="OFF"
