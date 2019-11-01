@@ -7,11 +7,12 @@ PROBLEM_FILES=	${WRKSRC}/libpkg/pkg_config.c \
 		${WRKSRC}/docs/pkg-version.8 \
 		${WRKSRC}/docs/pkg.8
 
-# Fix wrong check that only applies to FreeBSD, archive_write_add_filter_zstd()
-# availability only means that it can use library or invoke external zstd(1).
+# zrj: our base libs do not fetch any deps on -lpthread (even -larchive, -lzma)
 
 dfly-patch:
-	${REINPLACE_CMD} -e 's@-lprivatezstd@@g' ${WRKSRC}/auto.def
+	${REINPLACE_CMD} -e 's@ -pthread@@g' \
+		${WRKSRC}/src/Makefile.autosetup \
+		${WRKSRC}/tests/Makefile.autosetup
 .if defined(PACKAGE_BUILDING)
 	${REINPLACE_CMD} -e "s|/usr/ports|/usr/dports|g" ${PROBLEM_FILES}
 .else
