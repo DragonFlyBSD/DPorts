@@ -3718,10 +3718,10 @@ index addd7cfb08..57bc8f8b17 100644
  #endif
  
 diff --git tools/gn/util/exe_path.cc tools/gn/util/exe_path.cc
-index 2f80d5a1fa..0cb3006e4b 100644
+index 2f80d5a1fa..9e16259bed 100644
 --- tools/gn/util/exe_path.cc
 +++ tools/gn/util/exe_path.cc
-@@ -13,9 +13,10 @@
+@@ -13,9 +13,11 @@
  #include <mach-o/dyld.h>
  #elif defined(OS_WIN)
  #include <windows.h>
@@ -3729,11 +3729,12 @@ index 2f80d5a1fa..0cb3006e4b 100644
 +#elif defined(OS_FREEBSD) || defined(OS_DRAGONFLY)
  #include <sys/sysctl.h>
  #include <sys/types.h>
++#include <sys/param.h>
 +#include <sys/syslimits.h>
  #endif
  
  #if defined(OS_MACOSX)
-@@ -49,7 +50,7 @@ base::FilePath GetExePath() {
+@@ -49,7 +51,7 @@ base::FilePath GetExePath() {
    return base::FilePath(system_buffer);
  }
  
