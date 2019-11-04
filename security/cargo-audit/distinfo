@@ -1,4 +1,4 @@
-TIMESTAMP = 1571034156
+TIMESTAMP = 1572885143
 SHA256 (rust/crates/abscissa_core-0.4.0.tar.gz) = 554dbd9957063496821d7d1bae8d39e9ce61027ba0b3564461251a703b3398b0
 SIZE (rust/crates/abscissa_core-0.4.0.tar.gz) = 32891
 SHA256 (rust/crates/abscissa_derive-0.4.0.tar.gz) = f01d0b6cae0164593a54183db96193d2c2eee941dcf3e118a72a26b00a06e586
@@ -87,8 +87,8 @@ SHA256 (rust/crates/num_cpus-1.10.1.tar.gz) = bcef43580c035376c0705c42792c294b66
 SIZE (rust/crates/num_cpus-1.10.1.tar.gz) = 11151
 SHA256 (rust/crates/openssl-probe-0.1.2.tar.gz) = 77af24da69f9d9341038eba93a073b1fdaaa1b788221b00a69bce9e762cb32de
 SIZE (rust/crates/openssl-probe-0.1.2.tar.gz) = 6427
-SHA256 (rust/crates/openssl-sys-0.9.51.tar.gz) = ba24190c8f0805d3bd2ce028f439fe5af1d55882bbe6261bed1dbc93b50dd6b1
-SIZE (rust/crates/openssl-sys-0.9.51.tar.gz) = 45001
+SHA256 (rust/crates/openssl-sys-0.9.52.tar.gz) = c977d08e1312e2f7e4b86f9ebaa0ed3b19d1daff75fae88bbb88108afbd801fc
+SIZE (rust/crates/openssl-sys-0.9.52.tar.gz) = 45059
 SHA256 (rust/crates/ordermap-0.3.5.tar.gz) = a86ed3f5f244b372d6b1a00b72ef7f8876d0bc6a78a4c9985c53614041512063
 SIZE (rust/crates/ordermap-0.3.5.tar.gz) = 35246
 SHA256 (rust/crates/percent-encoding-2.1.0.tar.gz) = d4fd5641d01c8f18a23da7b6fe29298ff4b55afcccdf78973b24cf3175fee32e

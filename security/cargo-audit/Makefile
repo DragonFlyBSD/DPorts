@@ -64,7 +64,7 @@ CARGO_CRATES=	abscissa_core-0.4.0 \
 		num-traits-0.2.8 \
 		num_cpus-1.10.1 \
 		openssl-probe-0.1.2 \
-		openssl-sys-0.9.51 \
+		openssl-sys-0.9.52 \
 		ordermap-0.3.5 \
 		percent-encoding-2.1.0 \
 		petgraph-0.4.13 \
