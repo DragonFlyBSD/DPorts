@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	wt3
-PORTVERSION=	3.4.0
-PORTREVISION=	1
+PORTVERSION=	3.4.1
 CATEGORIES=	www
 
 MAINTAINER=	info@babaei.net
@@ -11,8 +10,6 @@ COMMENT=	Widget-centric C++ library for developing web applications
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
-
-BROKEN_powerpc64=	fails to link: libwthttp.so. undefined reference to boost::program_options::abstract_variables_map::operator
 
 LIB_DEPENDS=	libpng.so:graphics/png \
 		libboost_system.so:devel/boost-libs \

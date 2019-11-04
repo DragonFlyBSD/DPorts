@@ -5,10 +5,13 @@ PORTVERSION=	0.0.2
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www
 
-MAINTAINER=	neel@neelc.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Minimal, Multithreaded web server in C
 
 LICENSE=	BSD2CLAUSE
+
+DEPRECATED=	Upstream no longer available
+EXPIRATION_DATE=	2019-11-30
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	neelchauhan

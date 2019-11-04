@@ -5,9 +5,9 @@ PORTNAME=	lmon
 PORTVERSION=	1.2
 PORTREVISION=	1
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.bsdconsulting.no/tools/
+MASTER_SITES=	https://BSDforge.com/projects/source/sysutils/lmon/
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	portmaster@BSDforge.com
 COMMENT=	Near-realtime log monitoring tool, sends alerts on hits and misses
 
 LICENSE=	BSD3CLAUSE

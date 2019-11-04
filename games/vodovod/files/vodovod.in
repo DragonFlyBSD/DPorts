@@ -1,7 +1,0 @@
-#!/bin/sh
-#
-# $FreeBSD: head/games/vodovod/files/vodovod.in 330687 2013-10-17 23:36:50Z nemysis $
-#
-
-cd "%%DATADIR%%"
-exec ./vodovod "${@}"

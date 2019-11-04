@@ -61,6 +61,7 @@ include/KF5/KIOCore/KSSLSettings
 include/KF5/KIOCore/KSambaShare
 include/KF5/KIOCore/KSambaShareData
 include/KF5/KIOCore/KSslCertificateManager
+include/KF5/KIOCore/KSslErrorUiData
 include/KF5/KIOCore/KTcpSocket
 include/KF5/KIOCore/KUrlAuthorized
 include/KF5/KIOCore/kacl.h
@@ -125,6 +126,7 @@ include/KF5/KIOCore/ksambashare.h
 include/KF5/KIOCore/ksambasharedata.h
 include/KF5/KIOCore/ksslcertificatemanager.h
 include/KF5/KIOCore/ksslcertificatemanager_p.h
+include/KF5/KIOCore/ksslerroruidata.h
 include/KF5/KIOCore/ksslsettings.h
 include/KF5/KIOCore/ktcpsocket.h
 include/KF5/KIOCore/kurlauthorized.h
@@ -272,13 +274,14 @@ lib/libKF5KIOWidgets.so.%%KDE_FRAMEWORKS_VERSION%%
 lib/libexec/kf5/kio_http_cache_cleaner
 lib/libexec/kf5/kiod5
 lib/libexec/kf5/kioexec
-lib/libexec/kf5/kioslave
+lib/libexec/kf5/kioslave5
 lib/libexec/kf5/kpac_dhcp_helper
 %%QT_MKSPECDIR%%/modules/qt_KIOCore.pri
 %%QT_MKSPECDIR%%/modules/qt_KIOFileWidgets.pri
 %%QT_MKSPECDIR%%/modules/qt_KIOGui.pri
 %%QT_MKSPECDIR%%/modules/qt_KIOWidgets.pri
 %%QT_MKSPECDIR%%/modules/qt_KNTLM.pri
+%%QT_PLUGINDIR%%/designer/kio5widgets.so
 %%QT_PLUGINDIR%%/kcm_kio.so
 %%QT_PLUGINDIR%%/kcm_trash.so
 %%QT_PLUGINDIR%%/kcm_webshortcuts.so

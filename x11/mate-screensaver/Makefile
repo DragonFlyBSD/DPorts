@@ -3,6 +3,7 @@
 
 PORTNAME=	mate-screensaver
 PORTVERSION=	1.22.1
+PORTREVISION=	1
 CATEGORIES=	x11 mate
 MASTER_SITES=	MATE
 DIST_SUBDIR=	mate
@@ -22,31 +23,24 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 
 PORTSCOUT=	limitw:1,even
 
-USES=		gettext gmake localbase pathfix pkgconfig tar:xz
+USES=		gettext gmake localbase pathfix pkgconfig tar:xz xorg
 USE_GL=		gl
 USE_MATE=	desktop libmatekbd menus session:run
-USE_XORG=	ice sm x11 xext xscrnsaver xxf86misc xxf86vm
+USE_XORG=	ice sm x11 xext xscrnsaver xxf86vm
 USE_GNOME=	cairo gdkpixbuf2 gtk30 intltool
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--with-xscreensaverdir=${XSCREENSAVER_DIR} \
-		--with-xscreensaverhackdir=${LOCALBASE}/bin/xscreensaver-hacks \
-		--with-console-kit=yes \
+CONFIGURE_ARGS= --with-console-kit=yes \
 		--with-systemd=no
 
 GLIB_SCHEMAS=	org.mate.screensaver.gschema.xml
 
 SUB_FILES+=	mate-screensaver.pam
 
-XSCREENSAVER_DIR=	${LOCALBASE}/share/xscreensaver/config
 SCREENSAVER_DIR=	share/applications/screensavers
 
-XSCREENSAVER_EXCLUDE=	"(popsquares.xml)"
-
-OPTIONS_DEFINE=	PAM XSCREENSAVER
+OPTIONS_DEFINE=	PAM
 OPTIONS_DEFAULT=PAM
 PAM_DESC=	Pluggable Authentication Module support
-
-XSCREENSAVER_RUN_DEPENDS=	xscreensaver-gnome-hacks>=0:x11/xscreensaver-gnome-hacks
 
 OPTIONS_SUB=	yes
 

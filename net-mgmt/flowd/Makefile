@@ -4,10 +4,10 @@
 PORTNAME=	flowd
 PORTVERSION=	0.9.1
 PORTREVISION=	3
-CATEGORIES=	net-mgmt ipv6
-MASTER_SITES=	http://www2.mindrot.org/files/flowd/
+CATEGORIES=	net-mgmt
+MASTER_SITES=	http://mindrot.org/files/flowd/
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Small, fast, and secure NetFlow collector
 
 LICENSE=	MIT BSD2CLAUSE BSD3CLAUSE

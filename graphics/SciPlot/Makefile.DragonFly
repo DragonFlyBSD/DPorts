@@ -1,4 +1,0 @@
-USE_XORG+=	xt
-
-# Stupid Imake.  Hack: Redefine MOTIFLIB to add libXt since LDFLAGS is ignored
-MOTIFLIB=	-L${LOCALBASE}/lib -lXm -lXp -lXt -lX11

@@ -4,22 +4,23 @@
 PORTNAME=	viewnior
 PORTVERSION=	1.6
 DISTVERSIONPREFIX=	${PORTNAME}-
-PORTREVISION=	3
+PORTREVISION=	6
 CATEGORIES=	graphics
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	portmaster@BSDforge.com
 COMMENT=	Fast and simple image viewer
 
 LICENSE=	GPLv3
 
 LIB_DEPENDS=	libexiv2.so:graphics/exiv2
 
-USE_GITHUB=	yes
-GH_ACCOUNT=	xsisqox
-GH_PROJECT=	Viewnior
-
 USES=		autoreconf compiler:c++11-lang desktop-file-utils gettext-tools \
 		gmake libtool pkgconfig
+
+USE_GITHUB=	yes
+GH_ACCOUNT=	hellosiyan
+GH_PROJECT=	Viewnior
+
 USE_GNOME=	glib20 gtk20 gdkpixbuf2 intltool intlhack
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include

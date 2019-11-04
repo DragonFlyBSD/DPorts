@@ -1,0 +1,14 @@
+For src/leveldb/port/port_posix.h
+
+--- configure.ac.orig	2018-07-31 20:08:28 UTC
++++ configure.ac
+@@ -379,6 +379,9 @@ case $host in
+      TARGET_OS=linux
+      LEVELDB_TARGET_FLAGS="-DOS_LINUX"
+      ;;
++   *dragonfly*)
++     LEVELDB_TARGET_FLAGS="-DOS_DRAGONFLYBSD"
++     ;;
+    *freebsd*)
+      LEVELDB_TARGET_FLAGS="-DOS_FREEBSD"
+      ;;

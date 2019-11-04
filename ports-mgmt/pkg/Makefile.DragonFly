@@ -10,7 +10,12 @@ PROBLEM_FILES=	${WRKSRC}/libpkg/pkg_config.c \
 CFLAGS+=	-I/usr/include/priv
 LDFLAGS+=	-L/usr/lib/priv -R/lib/priv
 
+# zrj: our base libs do not fetch any deps on -lpthread (even -larchive, -lzma)
+
 dfly-patch:
+	${REINPLACE_CMD} -e 's@ -pthread@@g' \
+		${WRKSRC}/src/Makefile.autosetup \
+		${WRKSRC}/tests/Makefile.autosetup
 .if defined(PACKAGE_BUILDING)
 	@${REINPLACE_CMD} -e "s|/usr/ports|/usr/dports|g" ${PROBLEM_FILES}
 .else
@@ -25,9 +30,6 @@ dfly-patch:
 		${WRKSRC}/src/Makefile.autosetup \
 		${WRKSRC}/tests/Makefile.autosetup
 .endif
-
-#		-e '/LOCAL_CFLAGS=/s|=|= -I/usr/include/priv|' \
-#		-e '/LOCAL_LDFLAGS=/s|=|= -L/usr/lib/priv -R/lib/priv|'
 
 post-stage:
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/periodic/411.pkg-backup \

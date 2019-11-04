@@ -23,6 +23,7 @@ LLVM_COMMANDS=	\
 		llvm-elfabi \
 		llvm-exegesis \
 		llvm-extract \
+		llvm-ifs \
 		llvm-jitlink \
 		llvm-link \
 		llvm-lipo \
@@ -51,6 +52,7 @@ LLVM_COMMANDS=	\
 		llvm-undname \
 		llvm-xray \
 		opt \
+		pp-trace \
 		sancov
 
 CLANG_COMMANDS=	\
@@ -62,7 +64,9 @@ CLANG_COMMANDS=	\
 		clang-extdef-mapping \
 		clang-format \
 		clang-import-test \
+		clang-move \
 		clang-offload-bundler \
+		clang-offload-wrapper \
 		clang-scan-deps \
 		clangd \
 		diagtool \

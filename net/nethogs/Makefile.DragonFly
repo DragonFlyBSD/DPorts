@@ -1,3 +1,5 @@
+MAKE_JOBS_UNSAFE=	yes
+
 USES+=	alias ncurses
 
 dfly-patch:

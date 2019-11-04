@@ -1,9 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	casadi
-DISTVERSION=	3.4.5-49
-DISTVERSIONSUFFIX=	-g6b0de13ac
-PORTREVISION=	1
+DISTVERSION=	3.5.1
 CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -12,7 +10,7 @@ COMMENT=	Symbolic framework for numeric optimization
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-USES=		cmake pkgconfig
+USES=		cmake compiler:c++11-lang pkgconfig
 USE_GITHUB=	yes
 USE_LDCONFIG=	yes
 

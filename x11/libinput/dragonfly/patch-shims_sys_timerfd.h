@@ -18,7 +18,7 @@
 +	(((tvp)->tv_sec == (uvp)->tv_sec) ?				\
 +	    ((tvp)->tv_nsec cmp (uvp)->tv_nsec) :			\
 +	    ((tvp)->tv_sec cmp (uvp)->tv_sec))
-+#define	timespecsub(vvp, uvp)						\
++#define	timespecsub2(vvp, uvp)						\
 +	do {								\
 +		(vvp)->tv_sec -= (uvp)->tv_sec;				\
 +		(vvp)->tv_nsec -= (uvp)->tv_nsec;			\
@@ -79,7 +79,7 @@
 +			clock_gettime(CLOCK_MONOTONIC, &now_);		\
 +		expire_ = (new_value)->it_value;			\
 +		if (timespeccmp(&expire_, &now_, >)) {			\
-+			timespecsub(&expire_, &now_);			\
++			timespecsub2(&expire_, &now_);			\
 +			data_ = MAX(tstokq(&expire_), EVTIMER_MIN_DATA);\
 +		}							\
 +		EV_SET(&ev_[2], (tfd), EVFILT_TIMER, EV_ADD | EV_ONESHOT, \

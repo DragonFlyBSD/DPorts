@@ -2,9 +2,10 @@
 # $FreeBSD$
 
 PORTNAME=	owncloud
-PORTVERSION=	10.2.1
+PORTVERSION=	10.3.0
 CATEGORIES=	www
-MASTER_SITES=	https://download.owncloud.org/community/
+MASTER_SITES=	https://download.owncloud.org/community/ \
+		LOCAL/sunpoet
 PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
@@ -17,6 +18,7 @@ USES=		cpe php:flavors,web tar:bzip2
 USE_PHP=	bz2 ctype curl dom fileinfo filter gd hash iconv intl json \
 		mbstring pdo posix session simplexml xml xmlreader xmlwriter \
 		xsl wddx zip zlib
+IGNORE_WITH_PHP=	74
 
 NO_ARCH=	yes
 NO_BUILD=	yes

@@ -22,3 +22,12 @@ LibreSSL compat
      case 0:
        return TlsVersion::AUTO;
      default:
+@@ -238,7 +238,7 @@ TlsContext::InfoCallback TlsContext::inf
+ }
+ 
+ int TlsContext::security_level() const {
+-#if OPENSSL_VERSION_NUMBER >= ROUTER_OPENSSL_VERSION(1, 1, 0)
++#if OPENSSL_VERSION_NUMBER >= ROUTER_OPENSSL_VERSION(1, 1, 0) && !defined(LIBRESSL_VERSION_NUMBER)
+   return SSL_CTX_get_security_level(ssl_ctx_.get());
+ #else
+   return 0;

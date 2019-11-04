@@ -1,2 +1,0 @@
-
-CXXFLAGS+=	-Wno-int-in-bool-context -Wno-catch-value

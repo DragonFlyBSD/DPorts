@@ -5,6 +5,166 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20191025:
+  AFFECTS: users of x11/nvidia-driver (and slave ports)
+  AUTHOR: danfe@FreeBSD.org
+
+  x11/nvidia-driver* ports no longer install Linux programs and libraries,
+  which had been moved to their own ports (x11/linux-nvidia-libs*).  When
+  updating the driver package next time, remember to install them manually
+  if you need to run Linux OpenGL programs.
+
+20191016:
+  AFFECTS: users of KDE Plasma Desktop (x11/plasma5*)
+  AUTHOR: kde@FreeBSD.org
+
+  With Plasma 5.17 the startup script has been renamed. People who use the
+  .xinitrc method to start Plasma have to call the new binary.
+
+  Previously:
+  	exec ck-launch-session startkde
+  Change to:
+  	exec ck-launch-session startplasma-x11
+
+20191014:
+  AFFECTS: users of mail/rspamd, mail/rspamd-devel
+  AUTHOR: vsevolod@FreeBSD.org
+
+  Sample configuration files has been removed as default configuration files
+  are NOT intended for modification by users and SHOULD be overwritten on
+  port upgrade.
+
+  Make sure the default configuration files are unmodified and migrate all
+  configuration changes to the proper places, before you continue.
+
+20191002:
+  AFFECTS: users of textproc/groff
+  AUTHOR: bapt@FreeBSD.org
+
+  with groff 1.2.4_3, groff does not depend anymore on ghostscript and
+  netpbm. In order to be able to properly use the html backend the user
+  can install ghostscript and netpbm from ports without the need of
+  reinstalling the package.
+
+  Also note that the X11 option has been removed.
+
+20190930:
+  AFFECTS: users of net-mgmt/netbox
+  AUTHOR: kai@FreeBSD.org
+
+  Since the 2.6 release a running Redis server instance is required for
+  caching objects to run.  Also the following settings like below need to be
+  added (or modified) in the existing configuration.py:
+
+  REDIS = {
+    'HOST': 'localhost',
+    'PORT': 6397,
+    'PASSWORD': ''
+    'DATABASE': 0,
+    'CACHE_DATABASE': 1,
+    'DEFAULT_TIMEOUT': 300,
+    'SSL': False,
+  }
+
+  Note that if you were using these settings in a prior release with
+  webhooks, the DATABASE setting remains the same but an additional
+  CACHE_DATABASE settings has been added with a default value of 1 to
+  support the caching backend.
+
+  The DATABASE setting will be renamed in a future release of NetBox to
+  better relay the meaning of the setting.  It is highly recommended to keep
+  the webhook and cache databases separate.  Using the same database number
+  for both may result in webhook processing data being lost during cache
+  flushing events.
+
+  Please also check the pkg-message and the changelogs for further info.
+
+20190927:
+  AFFECTS: users of emulators/qemu-devel
+  AUTHOR: bofh@FreeBSD.org
+
+  qemu-devel has been updated to 4.1.0 and 4.0.0 has been merged into a new port
+  emulators/qemu40. If you want to stick with 4.0.X branch, simply use:
+  # portmaster -o emulators/qemu-devel emulators/qemu40
+
+20190927:
+  AFFECTS: users of XFCE desktop (x11-wm/xfce4)
+  AUTHOR: madpilot@FreeBSD.org
+
+  Due to changes in the XFCE 4.14 metaport, systems could end up with
+  both xscreensaver and xfce4-screensaver installed and enabled
+  simultaneously.
+
+  This can cause conflicts and problems unlocking the screen.
+
+  To avoid problems, please make sure to have only one enabled by
+  going to the Application Autostart tab of the Session and Startup
+  settings applet and enable only one Screensaver there.
+
+  Some further information can be found in the xfce4-session
+  pkg-message displayed on installation and upgrade.
+
+20190920:
+  AFFECTS: users of net-mgmt/pushgateway
+  AUTHOR: 0mp@FreeBSD.org
+
+  The persistent storage format used by pushgateway in the latest version
+  is not backwards compatible. See the pushgateway changelogs for details.
+
+20190911:
+  AFFECTS: users of security/bastillion
+  AUTHOR: netchild@FreeBSD.org
+
+  The datastore of bastillion needs to be updated:
+    java -jar $PREFIX/jetty_bastillion/upgrade/bastillion-upgrade-3.08.00.jar \
+      $PREFIX/jetty_bastillion/bastillion/WEB-INF/classes/BastillionConfig.properties
+
+20190909:
+  AFFECTS: users of lang/ruby25
+  AUTHOR: mfechner@FreeBSD.org
+
+  The default ruby version has been updated from 2.5 to 2.6.
+
+  If you compile your own ports you may keep 2.5 as the default version by
+  adding the following lines to your /etc/make.conf file:
+
+  #
+  # Keep ruby 2.5 as default version
+  #
+  DEFAULT_VERSIONS+=ruby=2.5
+
+  If you wish to update to the new default version, you need to first stop any
+  software that uses ruby. Then, you will need to follow these steps, depending
+  upon how you manage your system.
+
+  If you use pkgng, simply upgrade:
+  # pkg upgrade
+
+  If you do not use pkg, please check entry 20190420.
+  The description there should also work for this version.
+
+20190906:
+  AFFECTS: users of devel/py-fabric
+  AUTHOR: dbaio@FreeBSD.org
+
+  Fabric (devel/py-fabric) was upgraded to 2.5.0, Fabric (2+) represents
+  a near-total reimplementation and reorganization of the software.
+
+  Fabric 2 is not at 100% feature parity with 1.x! Some features have been
+  explicitly dropped, but others simply have not been ported over yet,
+  either due to time constraints or because said features need to be
+  re-examined in a modern context.
+
+  More information at:
+  https://www.fabfile.org/upgrading.html#upgrading
+  https://www.fabfile.org/upgrading.html#upgrade-specifics
+
+  If you would like to keep using 1.x, please run the following command to
+  update pkg database:
+
+    pkg set -n py27-fabric:py27-fabric1
+    pkg set -o devel/py-fabric:devel/py-fabric1
+
 20190830:
   AFFECTS: users of www/gitlab-ce
   AUTHOR: mfechner@FreeBSD.org
@@ -27,13 +187,13 @@ you update your ports collection, before attempting any port upgrades.
   speedup of the upgrade.
 
   The upgrade instructions consider a basic usage and do not match
-  complex scenarious like replication, sharding or similar.
+  complex scenarios like replication, sharding, or similar.
 
   Upgrade instructions:
 
   First stop your PostgreSQL, create PostgreSQL-binaries and backup your data.
   If you have another Version of PostgreSQL installed, for example 9.5.19, your
-  files are named accourding to this.
+  files are named according to this.
 
   # service postgresql stop
   # pkg create postgresql95-server postgresql95-contrib
@@ -80,7 +240,7 @@ you update your ports collection, before attempting any port upgrades.
   Riak support has been removed by upstream. For update instructions from
   19.05, please refer to:
 
-  https://docs.ejabberd.im/admin/upgrade/from_19.05_to_19.08/ 
+  https://docs.ejabberd.im/admin/upgrade/from_19.05_to_19.08/
 
 20190812:
   AFFECTS: users of lang/perl5*
@@ -115,6 +275,21 @@ you update your ports collection, before attempting any port upgrades.
   Users that still use the Python 2.7 version of net-im/py-matrix-synapse
   should switch to a newer Python version, e.g. 3.6, which is the default
   Python version since April 2019.
+
+20190717:
+  AFFECTS: users of net-p2p/zetacoin and net-p2p/zetacoin-nox11
+  AUTHOR: daniel@morante.net
+
+  Zetacoin will default to using modern versions of BDB (5.x or 6.x) when
+  the WALLET option is selected.   See pkg-help for explanation.
+
+  The zetacoin-nox11 slave port was renamed to zetacoin-daemon to align
+  with the net-p2p/bitcoin format.
+
+  The zetacoin-cli and zetacoin-tx utilities have been re-packaged into
+  a separate port. If you require these programs, or use the zetacoin-cli
+  program to access the daemon or the GUI, install net-p2p/zetacoin-utils
+  to reinstall them.
 
 20190717:
   AFFECTS: users of sysutils/py-borgmatic
@@ -226,8 +401,7 @@ you update your ports collection, before attempting any port upgrades.
   Caution: The given module is still considered EXPERIMENTAL.
 
 20190630:
-  AFFECTS: users of net/samba410, net/samba4[6-8] and devel/talloc?, devel/tevent?,
-           databases/tdb?, databases/ldb*
+  AFFECTS: users of net/samba410, net/samba4[6-8] and devel/talloc?, devel/tevent?, databases/tdb?, databases/ldb*
   AUTHOR: timur@FreeBSD.org
 
   The port of the new version of Samba 4.10 is introduced. Due necessarily
@@ -311,7 +485,7 @@ you update your ports collection, before attempting any port upgrades.
   are more intuitive and logical.
 
 20190604:
-  AFFECTS: users of samba47
+  AFFECTS: users of net/samba47
   AUTHOR: antoine@FreeBSD.org
 
   The default version of samba has been switched from 4.7 to 4.8.

@@ -4,7 +4,8 @@
 PORTNAME=	snmp
 PORTVERSION=	5.7.3
 PORTREVISION=	20
-CATEGORIES=	net-mgmt ipv6
+PORTEPOCH=	1
+CATEGORIES=	net-mgmt
 MASTER_SITES=	SF/net-${PORTNAME}/net-${PORTNAME}/${PORTVERSION} \
 		ZI
 PKGNAMEPREFIX=	net-
@@ -15,8 +16,6 @@ COMMENT=	Extendable SNMP implementation
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING
-
-LIB_DEPENDS=	libpkg.so:ports-mgmt/pkg
 
 NOT_FOR_ARCHS=		mips mips64
 NOT_FOR_ARCHS_REASON=	SSP is currently broken on MIPS

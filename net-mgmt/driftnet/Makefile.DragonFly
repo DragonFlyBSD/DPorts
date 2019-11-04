@@ -4,3 +4,7 @@ dfly-patch:
 		${WRKSRC}/configure.ac
 	${REINPLACE_CMD} -e 's@\(D__FAVOR_BSD \)@\1 -D__FreeBSD__=13 @' \
 		${WRKSRC}/src/Makefile.am
+	${REINPLACE_CMD} -e 's@\(defined(__FreeBSD__)\)@(\1 || defined(__DragonFly__))@g' \
+			 -e 's@ifdef \(__FreeBSD__\)@if defined(\1) || defined(__DragonFly__)@' \
+		${WRKSRC}/src/pid.c ${WRKSRC}/src/compat/compat.h \
+		${WRKSRC}/src/network/layer2.c ${WRKSRC}/src/network/layer3.c

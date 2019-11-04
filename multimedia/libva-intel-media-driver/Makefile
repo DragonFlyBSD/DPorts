@@ -2,9 +2,13 @@
 
 PORTNAME=	media-driver
 DISTVERSIONPREFIX=	intel-media-
-DISTVERSION=	19.3.pre3
+DISTVERSION=	19.4.pre1
+PORTREVISION=	1
 CATEGORIES=	multimedia
 PKGNAMEPREFIX=	libva-intel-
+
+PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+PATCHFILES+=	4d247bea67d4.patch:-p1
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	VAAPI driver for Intel HD 5000 (Gen8) or newer
@@ -16,7 +20,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.md
 ONLY_FOR_ARCHS=	amd64 i386
 ONLY_FOR_ARCHS_REASON=	Only Intel GPUs on x86 are supported
 
-BUILD_DEPENDS=	gmmlib>=19.2.3:multimedia/gmmlib \
+BUILD_DEPENDS=	gmmlib>=19.3.1:multimedia/gmmlib \
 		libva>=2.5.0:multimedia/libva
 LIB_DEPENDS=	libpciaccess.so:devel/libpciaccess \
 		libigdgmm.so:multimedia/gmmlib \

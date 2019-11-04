@@ -1,4 +1,10 @@
 MAKE_JOBS_UNSAFE=yes
 
 # XXX issue with dports/openssl crypto and base libopie
-OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NOTP}
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NOTP} SSL
+
+USES+=	ssl
+CONFIGURE_ARGS+=--with-openssl=${OPENSSLBASE}
+
+CFLAGS+=	-I${OPENSSLINC}
+LDFLAGS+=	-L${OPENSSLLIB}

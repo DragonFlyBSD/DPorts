@@ -4,6 +4,7 @@
 PORTNAME=	InsightToolkit
 PORTVERSION=	5.0.1
 DISTVERSIONPREFIX=v
+PORTREVISION=	3
 CATEGORIES=	science biology
 MASTER_SITES=	https://github.com/InsightSoftwareConsortium/ITK/releases/download/v5.0.1/:data
 DISTFILES=	InsightData-5.0.1.tar.gz:data
@@ -12,8 +13,6 @@ MAINTAINER=	woodsb02@FreeBSD.org
 COMMENT=	Insight Toolkit
 
 LICENSE=	APACHE20
-
-BROKEN_powerpc64=	fails to package: ITK_COMPILER_INFO_Clang_CXX.h:No such file or directory
 
 BUILD_DEPENDS=	googletest>=0:devel/googletest
 LIB_DEPENDS=	libgdcmCommon.so:devel/gdcm \
@@ -55,8 +54,16 @@ TESTING_DESC=	Build testing programs (very time consuming)
 EXAMPLES_CMAKE_ON=	-DBUILD_EXAMPLES:BOOL=ON
 TESTING_CMAKE_ON=	-DBUILD_TESTING:BOOL=ON
 
+.include <bsd.port.pre.mk>
+
+.if ${CHOSEN_COMPILER_TYPE} == gcc
+PLIST_SUB+=	CHOSEN_COMPILER_TYPE="GNU"
+.else
+PLIST_SUB+=	CHOSEN_COMPILER_TYPE="Clang"
+.endif
+
 post-extract:
 	${MV} ${WRKDIR}/${PORTNAME}-${PORTVERSION}/.ExternalData/* ${WRKSRC}/.ExternalData/
 	${RM} -r ${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>

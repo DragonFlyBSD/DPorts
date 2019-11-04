@@ -1,6 +1,8 @@
 #!/bin/sh
 #
-# $FreeBSD: head/archivers/deb2targz/files/deb2targz.sh 340851 2014-01-23 19:55:14Z mat $
+# $FreeBSD: head/archivers/deb2targz/files/deb2targz.sh 514229 2019-10-10 13:56:20Z ak $
+#
+# Distributed under the BSD 2-clause Simplified License.
 #
 
 PATH=/bin:/usr/bin

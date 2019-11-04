@@ -1,0 +1,3 @@
+
+# XXX work around a cblas.h vs gsl_cblas.h, gsl_cblas.h wins.
+CXXFLAGS+=	-DCBLAS_H

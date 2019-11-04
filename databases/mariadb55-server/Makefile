@@ -2,8 +2,8 @@
 
 PORTNAME?=	mariadb
 PORTVERSION=	5.5.65
-PORTREVISION?=	1
-CATEGORIES=	databases ipv6
+PORTREVISION?=	2
+CATEGORIES=	databases
 MASTER_SITES=	http://ftp.osuosl.org/pub/mariadb/${PORTNAME}-${PORTVERSION}/source/ \
 		http://mirrors.supportex.net/mariadb/${PORTNAME}-${PORTVERSION}/source/ \
 		http://mirror.aarnet.edu.au/pub/MariaDB/${PORTNAME}-${PORTVERSION}/source/ \
@@ -66,7 +66,7 @@ FASTMTX_CMAKE_ON=	-DWITH_FAST_MUTEXES=1
 .if !defined(CLIENT_ONLY)
 # MySQL-Server part
 USES+=		mysql:55m
-USE_LDCONFIG|=	${PREFIX}/lib/mysql/plugin
+USE_LDCONFIG+=	${PREFIX}/lib/mysql/plugin
 
 CONFLICTS_INSTALL=	mariadb5[0-46-9]-server-* \
 			mariadb1*-server-* \

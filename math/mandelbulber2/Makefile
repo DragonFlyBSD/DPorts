@@ -2,6 +2,7 @@
 
 PORTNAME=	mandelbulber2
 DISTVERSION=	2.19
+PORTREVISION=	2
 CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org

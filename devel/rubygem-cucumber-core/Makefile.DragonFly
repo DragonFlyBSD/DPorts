@@ -1,0 +1,4 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/cucumber-tag_expressions>/s@~>@>=@g' \
+		${WRKSRC}/cucumber-core.gemspec

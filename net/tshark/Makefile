@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	tshark
-PORTREVISION=	1
-CATEGORIES=	net ipv6
+CATEGORIES=	net
 
 CONFLICTS_INSTALL?=	tshark-lite-[0-9]* wireshark-lite-[0-9]* wireshark-[0-9]*
 

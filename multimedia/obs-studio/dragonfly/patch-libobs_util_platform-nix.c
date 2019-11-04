@@ -1,4 +1,4 @@
---- libobs/util/platform-nix.c.orig	2019-06-30 00:00:32 UTC
+--- libobs/util/platform-nix.c.intermediate	2019-10-29 09:17:49.000000000 +0000
 +++ libobs/util/platform-nix.c
 @@ -34,14 +34,16 @@
  #include <sys/times.h>
@@ -18,7 +18,7 @@
  #else
  #include <sys/resource.h>
  #endif
-@@ -737,7 +739,7 @@ static void os_get_cores_internal(void)
+@@ -740,7 +742,7 @@ static void os_get_cores_internal(void)
  	dstr_free(&proc_phys_ids);
  	dstr_free(&proc_phys_id);
  	free(line);
@@ -27,7 +27,7 @@
  	char *text = os_quick_read_utf8_file("/var/run/dmesg.boot");
  	char *core_count = text;
  	int packages = 0;
-@@ -810,7 +812,7 @@ int os_get_logical_cores(void)
+@@ -813,7 +815,7 @@ int os_get_logical_cores(void)
  	return logical_cores;
  }
  
@@ -36,21 +36,21 @@
  uint64_t os_get_sys_free_size(void)
  {
  	uint64_t mem_free = 0;
-@@ -838,8 +840,13 @@ bool os_get_proc_memory_usage(os_proc_me
+@@ -841,8 +843,13 @@ bool os_get_proc_memory_usage(os_proc_me
  		return false;
  
  	usage->resident_size =
 +#ifdef __DragonFly__
-+			(uint64_t)kinfo.kp_vm_rssize * sysconf(_SC_PAGESIZE);
-+	usage->virtual_size  = (uint64_t)kinfo.kp_vm_map_size;
++		(uint64_t)kinfo.kp_vm_rssize * sysconf(_SC_PAGESIZE);
++	usage->virtual_size = (uint64_t)kinfo.kp_vm_map_size;
 +#else
- 			(uint64_t)kinfo.ki_rssize * sysconf(_SC_PAGESIZE);
- 	usage->virtual_size  = (uint64_t)kinfo.ki_size;
+ 		(uint64_t)kinfo.ki_rssize * sysconf(_SC_PAGESIZE);
+ 	usage->virtual_size = (uint64_t)kinfo.ki_size;
 +#endif
  	return true;
  }
  
-@@ -848,7 +855,11 @@ uint64_t os_get_proc_resident_size(void)
+@@ -851,7 +858,11 @@ uint64_t os_get_proc_resident_size(void)
  	struct kinfo_proc kinfo;
  	if (!os_get_proc_memory_usage_internal(&kinfo))
  		return 0;
@@ -62,7 +62,7 @@
  }
  
  uint64_t os_get_proc_virtual_size(void)
-@@ -856,7 +867,11 @@ uint64_t os_get_proc_virtual_size(void)
+@@ -859,7 +870,11 @@ uint64_t os_get_proc_virtual_size(void)
  	struct kinfo_proc kinfo;
  	if (!os_get_proc_memory_usage_internal(&kinfo))
  		return 0;
@@ -73,4 +73,4 @@
 +#endif
  }
  #else
- uint64_t os_get_sys_free_size(void) {return 0;}
+ uint64_t os_get_sys_free_size(void)

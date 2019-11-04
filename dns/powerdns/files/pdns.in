@@ -1,10 +1,10 @@
 #!/bin/sh
 #
-# $FreeBSD: head/dns/powerdns/files/pdns.in 378861 2015-02-12 02:21:02Z brd $
+# $FreeBSD: head/dns/powerdns/files/pdns.in 511195 2019-09-05 16:51:04Z pi $
 #
 
 # PROVIDE: pdns_server
-# REQUIRE: DAEMON SERVERS
+# REQUIRE: DAEMON SERVERS mysql postgresql slapd
 # KEYWORD: shutdown
 
 #

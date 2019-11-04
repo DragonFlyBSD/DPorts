@@ -2,10 +2,10 @@
 
 PORTNAME=	nnn
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.6
+DISTVERSION=	2.7
 CATEGORIES=	misc shells
 
-MAINTAINER=	dg@syrec.org
+MAINTAINER=	dmgk@FreeBSD.org
 COMMENT=	Missing terminal file browser for X
 
 LICENSE=	BSD2CLAUSE
