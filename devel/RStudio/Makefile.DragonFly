@@ -1,0 +1,11 @@
+USES+=	alias
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/<sys\/cpuset.h>/d' \
+		${WRKSRC}/src/cpp/core/system/PosixSched.cpp
+	${REINPLACE_CMD} -e 's@procstat@@g' \
+		${WRKSRC}/src/cpp/desktop/CMakeLists.txt \
+		${WRKSRC}/src/cpp/diagnostics/CMakeLists.txt \
+		${WRKSRC}/src/cpp/session/postback/CMakeLists.txt
+	${REINPLACE_CMD} -e 's@-lprocstat@@g' \
+		${WRKSRC}/src/cpp/session/CMakeLists.txt
