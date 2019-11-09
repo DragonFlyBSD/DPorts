@@ -1,1 +1,11 @@
 CONFIGURE_ARGS+= --disable-serial
+
+# zrj: for various standard functions visibility
+dfly-patch:
+	${REINPLACE_CMD} -e 's@_POSIX_C_SOURCE@&___@g' \
+			 -e 's@_POSIX_SOURCE@&___@g' \
+		${WRKSRC}/libgphoto2/gphoto2-file.c \
+		${WRKSRC}/camlibs/kodak/dc120/library.c \
+		${WRKSRC}/camlibs/kodak/dc120/dc120.c \
+		${WRKSRC}/camlibs/panasonic/coolshot/library.c \
+		${WRKSRC}/camlibs/st2205/st2205.c
