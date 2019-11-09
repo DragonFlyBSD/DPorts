@@ -1,0 +1,2 @@
+
+CFLAGS+=	-DZ_HAVE_UNISTD_H
