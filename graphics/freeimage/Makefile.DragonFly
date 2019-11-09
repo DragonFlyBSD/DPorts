@@ -1,4 +1,7 @@
 DOS2UNIX_FILES+= Makefile.gnu
+
+CFLAGS+=	-DZ_HAVE_UNISTD_H
+
 # zrj: add missing link against -lm in libfreeimage-3.16.0.so
 # NOTYPE  GLOBAL DEFAULT  UND {acos, asin, atan2, ceil, cos, exp, floor, fmod, log, log10, lrintf, pow, powf, sin, sqrt, sqrtf, tan}
 # fixes graphics/ogre3d build (binutils 2.27 ld.gold is unhappy)
