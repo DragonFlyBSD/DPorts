@@ -5,7 +5,7 @@
  	# UNIX defaults
  
 -	CCFLAGS			?= -DUNIX -D_THREAD_SAFE -pipe ;
-+	CCFLAGS			?= -DUNIX -D__FreeBSD__ -D_THREAD_SAFE -pipe ;
++	CCFLAGS			?= -DUNIX -D__FreeBSD__ -D_THREAD_SAFE -pipe -DZ_HAVE_UNISTD_H ;
  	CCOPTFLAG		?= -O2 ;		
  	CCDEBUGFLAG		?= -g ;		
  	CCPROFFLAG		?= ;		
