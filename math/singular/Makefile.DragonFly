@@ -1,0 +1,4 @@
+
+# omalloc is lacking <unistd.h> includes for valloc() visibility or malloc_usable_size()
+# but it is not optional
+#CONFIGURE_ARGS+=	--disable-omalloc
