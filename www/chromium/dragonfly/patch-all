@@ -871,6 +871,19 @@ index cd599778d9..6e35060df3 100644
      return false;
  #if !defined(OS_BSD)
    if (posix_fadvise(fd.get(), 0, 0, POSIX_FADV_DONTNEED) != 0)
+diff --git base/third_party/cityhash/city.cc base/third_party/cityhash/city.cc
+index b0d2294aab..633df5c900 100644
+--- base/third_party/cityhash/city.cc
++++ base/third_party/cityhash/city.cc
+@@ -54,7 +54,7 @@ using std::pair;
+ #define bswap_32(x) BSWAP_32(x)
+ #define bswap_64(x) BSWAP_64(x)
+ 
+-#elif defined(__FreeBSD__)
++#elif defined(__FreeBSD__) || defined(__DragonFly__)
+ 
+ #include <sys/endian.h>
+ #define bswap_32(x) bswap32(x)
 diff --git base/third_party/libevent/event-config.h base/third_party/libevent/event-config.h
 index bbd23f1d81..3d9950cc1a 100644
 --- base/third_party/libevent/event-config.h
@@ -2637,6 +2650,19 @@ index 638b8971b4..24536864ac 100644
  
  // Return the number of threads running in the process, or 0 to indicate that
  // we cannot detect it.
+diff --git third_party/grpc/src/include/grpc/impl/codegen/port_platform.h third_party/grpc/src/include/grpc/impl/codegen/port_platform.h
+index d7294d59d4..b2325f2eec 100644
+--- third_party/grpc/src/include/grpc/impl/codegen/port_platform.h
++++ third_party/grpc/src/include/grpc/impl/codegen/port_platform.h
+@@ -248,7 +248,7 @@
+ #else /* _LP64 */
+ #define GPR_ARCH_32 1
+ #endif /* _LP64 */
+-#elif defined(__FreeBSD__)
++#elif defined(__FreeBSD__) || defined(__DragonFly__)
+ #define GPR_PLATFORM_STRING "freebsd"
+ #ifndef _BSD_SOURCE
+ #define _BSD_SOURCE
 diff --git third_party/grpc/src/setup.py third_party/grpc/src/setup.py
 index 1e205bdf91..403e293d1a 100644
 --- third_party/grpc/src/setup.py
@@ -2663,6 +2689,34 @@ index 6e832edcea..e8d3c55993 100755
      if 'linux' in sys.platform:
        return 'src/cares/cares/config_linux/ares_config.h'
      if 'openbsd' in sys.platform:
+diff --git third_party/grpc/src/test/cpp/qps/json_run_localhost.cc third_party/grpc/src/test/cpp/qps/json_run_localhost.cc
+index 42cc9e0ed7..6b2cc2b3b1 100644
+--- third_party/grpc/src/test/cpp/qps/json_run_localhost.cc
++++ third_party/grpc/src/test/cpp/qps/json_run_localhost.cc
+@@ -24,7 +24,7 @@
+ #include <sstream>
+ #include <string>
+ 
+-#ifdef __FreeBSD__
++#ifdef defined(__FreeBSD__) || defined(__DragonFly__)
+ #include <sys/wait.h>
+ #endif
+ 
+diff --git third_party/icu/source/common/unicode/platform.h third_party/icu/source/common/unicode/platform.h
+index a3623f5da6..df6efe9245 100644
+--- third_party/icu/source/common/unicode/platform.h
++++ third_party/icu/source/common/unicode/platform.h
+@@ -165,8 +165,8 @@
+ #   else
+ #       define U_PLATFORM U_PF_DARWIN
+ #   endif
+-#elif defined(BSD) || defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__MirBSD__)
+-#   if defined(__FreeBSD__)
++#elif defined(BSD) || defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__MirBSD__) || defined(__DragonFly__)
++#   if defined(__FreeBSD__) || defined(__DragonFly__)
+ #       include <sys/endian.h>
+ #   endif
+ #   define U_PLATFORM U_PF_BSD
 diff --git third_party/libFuzzer/src/FuzzerDefs.h third_party/libFuzzer/src/FuzzerDefs.h
 index 320b37d5f8..6e616f14bd 100644
 --- third_party/libFuzzer/src/FuzzerDefs.h
@@ -2733,6 +2787,28 @@ index da57e65d33..0862d7bb37 100644
  # define GTEST_HAS_DEATH_TEST 1
  #endif
  
+diff --git third_party/libdrm/src/xf86drmMode.c third_party/libdrm/src/xf86drmMode.c
+index 15957ffcba..24d7fc7923 100644
+--- third_party/libdrm/src/xf86drmMode.c
++++ third_party/libdrm/src/xf86drmMode.c
+@@ -796,7 +796,7 @@ int drmCheckModesettingSupported(const char *busid)
+ 	closedir(sysdir);
+ 	if (found)
+ 		return 0;
+-#elif defined (__FreeBSD__) || defined (__FreeBSD_kernel__)
++#elif defined (__FreeBSD__) || defined (__FreeBSD_kernel__) || defined(__DragonFly__)
+ 	char kbusid[1024], sbusid[1024];
+ 	char oid[128];
+ 	int domain, bus, dev, func;
+@@ -829,8 +829,6 @@ int drmCheckModesettingSupported(const char *busid)
+ 			return -EINVAL;
+ 		return (modesetting ? 0 : -ENOSYS);
+ 	}
+-#elif defined(__DragonFly__)
+-	return 0;
+ #endif
+ #ifdef __OpenBSD__
+ 	int	fd;
 diff --git third_party/libphonenumber/dist/cpp/src/phonenumbers/base/memory/singleton.h third_party/libphonenumber/dist/cpp/src/phonenumbers/base/memory/singleton.h
 index 99a1fdbf4e..74a009b431 100644
 --- third_party/libphonenumber/dist/cpp/src/phonenumbers/base/memory/singleton.h
@@ -2783,6 +2859,19 @@ index 14a5d98878..21a242bebd 100644
 +    defined(__OpenBSD__) || defined(__DragonFly__)
  
  #include <pthread.h>
+ 
+diff --git third_party/libpng/arm/filter_neon.S third_party/libpng/arm/filter_neon.S
+index 2308aad13e..df123cd0bb 100644
+--- third_party/libpng/arm/filter_neon.S
++++ third_party/libpng/arm/filter_neon.S
+@@ -16,7 +16,7 @@
+ #define PNG_VERSION_INFO_ONLY
+ #include "../pngpriv.h"
+ 
+-#if (defined(__linux__) || defined(__FreeBSD__)) && defined(__ELF__)
++#if (defined(__linux__) || defined(__FreeBSD__) || defined(__DragonFly__)) && defined(__ELF__)
+ .section .note.GNU-stack,"",%progbits /* mark stack as non-executable */
+ #endif
  
 diff --git third_party/libvpx/source/libvpx/third_party/googletest/src/include/gtest/internal/gtest-port-arch.h third_party/libvpx/source/libvpx/third_party/googletest/src/include/gtest/internal/gtest-port-arch.h
 index f83700e06d..5274712ef9 100644
@@ -3030,6 +3119,19 @@ index 79b3a64102..664877964e 100644
      #define HAVE_POSIX_MEMALIGN
    /* Linux x86_64 and OSX always align allocations to 16 bytes */
    #elif !defined(__amd64__) && !defined(__APPLE__) && !defined(_AIX)
+diff --git third_party/pdfium/third_party/libpng16/arm/filter_neon.S third_party/pdfium/third_party/libpng16/arm/filter_neon.S
+index 2308aad13e..df123cd0bb 100644
+--- third_party/pdfium/third_party/libpng16/arm/filter_neon.S
++++ third_party/pdfium/third_party/libpng16/arm/filter_neon.S
+@@ -16,7 +16,7 @@
+ #define PNG_VERSION_INFO_ONLY
+ #include "../pngpriv.h"
+ 
+-#if (defined(__linux__) || defined(__FreeBSD__)) && defined(__ELF__)
++#if (defined(__linux__) || defined(__FreeBSD__) || defined(__DragonFly__)) && defined(__ELF__)
+ .section .note.GNU-stack,"",%progbits /* mark stack as non-executable */
+ #endif
+ 
 diff --git third_party/perfetto/include/perfetto/base/build_config.h third_party/perfetto/include/perfetto/base/build_config.h
 index 5dc6a30c65..a1db5333b7 100644
 --- third_party/perfetto/include/perfetto/base/build_config.h
@@ -3318,8 +3420,43 @@ index 54d4c75025..46cbcf125f 100644
  #define ANGLE_OS_POSIX
  #else
  #error Unsupported platform.
+diff --git third_party/swiftshader/src/OpenGL/libEGL/Display.cpp third_party/swiftshader/src/OpenGL/libEGL/Display.cpp
+index d94fbf3dd5..ad24979b86 100644
+--- third_party/swiftshader/src/OpenGL/libEGL/Display.cpp
++++ third_party/swiftshader/src/OpenGL/libEGL/Display.cpp
+@@ -690,7 +690,7 @@ bool Display::isValidWindow(EGLNativeWindowType window)
+ 			return status != 0;
+ 		}
+ 		return false;
+-	#elif defined(__linux__) || defined(__FreeBSD__)
++	#elif defined(__linux__) || defined(__FreeBSD__) || defined(__DragonFly__)
+ 		return false;  // Non X11 linux is headless only
+ 	#elif defined(__APPLE__)
+ 		return sw::OSX::IsValidWindow(window);
+@@ -868,7 +868,7 @@ sw::Format Display::getDisplayFormat() const
+ 		{
+ 			return sw::FORMAT_X8R8G8B8;
+ 		}
+-	#elif defined(__linux__) || defined(__FreeBSD__) // Non X11 linux is headless only
++	#elif defined(__linux__) || defined(__FreeBSD__) || defined(__DragonFly__) // Non X11 linux is headless only
+ 		return sw::FORMAT_A8B8G8R8;
+ 	#elif defined(__APPLE__)
+ 		return sw::FORMAT_A8B8G8R8;
+diff --git third_party/swiftshader/src/OpenGL/libEGL/Surface.cpp third_party/swiftshader/src/OpenGL/libEGL/Surface.cpp
+index b06d627e6c..febd2d5eb0 100644
+--- third_party/swiftshader/src/OpenGL/libEGL/Surface.cpp
++++ third_party/swiftshader/src/OpenGL/libEGL/Surface.cpp
+@@ -362,7 +362,7 @@ bool WindowSurface::checkForResize()
+ 
+ 		int windowWidth = windowAttributes.width;
+ 		int windowHeight = windowAttributes.height;
+-	#elif defined(__linux__) || defined(__FreeBSD__)
++	#elif defined(__linux__) || defined(__FreeBSD__) || defined(__DragonFly__)
+ 		// Non X11 linux is headless only
+ 		int windowWidth = 100;
+ 		int windowHeight = 100;
 diff --git third_party/swiftshader/src/OpenGL/libEGL/libEGL.cpp third_party/swiftshader/src/OpenGL/libEGL/libEGL.cpp
-index 4a69968dbd..28efc44586 100644
+index 4a69968dbd..39facec8f4 100644
 --- third_party/swiftshader/src/OpenGL/libEGL/libEGL.cpp
 +++ third_party/swiftshader/src/OpenGL/libEGL/libEGL.cpp
 @@ -148,7 +148,7 @@ EGLDisplay GetDisplay(EGLNativeDisplayType display_id)
@@ -3336,7 +3473,7 @@ index 4a69968dbd..28efc44586 100644
  		return success(
  			"EGL_KHR_client_get_all_proc_addresses "
 -#if (defined(__linux__) || defined(__FreeBSD__)) && !defined(__ANDROID__)
-+#if (defined(__linux__) || defined(__FreeBSD__) || defined(__DragonFlyy__)) && !defined(__ANDROID__)
++#if (defined(__linux__) || defined(__FreeBSD__) || defined(__DragonFly__)) && !defined(__ANDROID__)
  			"EGL_KHR_platform_gbm "
  #endif
  #if defined(USE_X11)
@@ -3452,6 +3589,61 @@ index b4279d4fcc..da95d7e9d0 100644
  #include <sys/mount.h>
  #include <sys/param.h>
  #elif defined(__linux__)
+diff --git third_party/swiftshader/third_party/llvm-7.0/llvm/lib/Support/Unix/Threading.inc third_party/swiftshader/third_party/llvm-7.0/llvm/lib/Support/Unix/Threading.inc
+index 2d49ce1ad7..8a40690268 100644
+--- third_party/swiftshader/third_party/llvm-7.0/llvm/lib/Support/Unix/Threading.inc
++++ third_party/swiftshader/third_party/llvm-7.0/llvm/lib/Support/Unix/Threading.inc
+@@ -21,11 +21,11 @@
+ 
+ #include <pthread.h>
+ 
+-#if defined(__FreeBSD__) || defined(__OpenBSD__)
++#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
+ #include <pthread_np.h> // For pthread_getthreadid_np() / pthread_set_name_np()
+ #endif
+ 
+-#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
+ #include <errno.h>
+ #include <sys/sysctl.h>
+ #include <sys/user.h>
+@@ -90,7 +90,7 @@ uint64_t llvm::get_threadid() {
+   thread_port_t Self = mach_thread_self();
+   mach_port_deallocate(mach_task_self(), Self);
+   return Self;
+-#elif defined(__FreeBSD__)
++#elif defined(__FreeBSD__) || defined(__DragonFly__)
+   return uint64_t(pthread_getthreadid_np());
+ #elif defined(__NetBSD__)
+   return uint64_t(_lwp_self());
+@@ -115,7 +115,8 @@ static constexpr uint32_t get_max_thread_name_length_impl() {
+ #else
+   return 0;
+ #endif
+-#elif defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
++// In DragonFly BSD case, it's MAXCOMLEN which is actually 16
++#elif defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
+   return 16;
+ #elif defined(__OpenBSD__)
+   return 32;
+@@ -148,7 +149,7 @@ void llvm::set_thread_name(const Twine &Name) {
+   ::pthread_setname_np(::pthread_self(), NameStr.data());
+ #endif
+ #endif
+-#elif defined(__FreeBSD__) || defined(__OpenBSD__)
++#elif defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
+   ::pthread_set_name_np(::pthread_self(), NameStr.data());
+ #elif defined(__NetBSD__)
+   ::pthread_setname_np(::pthread_self(), "%s",
+@@ -161,7 +162,7 @@ void llvm::set_thread_name(const Twine &Name) {
+ void llvm::get_thread_name(SmallVectorImpl<char> &Name) {
+   Name.clear();
+ 
+-#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
+   int pid = ::getpid();
+   uint64_t tid = get_threadid();
+ 
 diff --git third_party/swiftshader/third_party/llvm-7.0/llvm/utils/unittest/googletest/include/gtest/internal/gtest-port-arch.h third_party/swiftshader/third_party/llvm-7.0/llvm/utils/unittest/googletest/include/gtest/internal/gtest-port-arch.h
 index f1319c7f2e..d4185a2a4a 100644
 --- third_party/swiftshader/third_party/llvm-7.0/llvm/utils/unittest/googletest/include/gtest/internal/gtest-port-arch.h

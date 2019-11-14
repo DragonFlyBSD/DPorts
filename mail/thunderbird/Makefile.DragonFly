@@ -6,6 +6,9 @@ MAKE_ENV+=		AR=/usr/bin/ar LD=/usr/bin/ld \
 MOZ_OPTIONS+=	--host=${ARCH}-dports-${OPSYS:tl}${OSREL}
 MOZ_OPTIONS+=	--disable-webrtc
 
+
+# alsa headers use 'u_int32_t' and other BerkeleyDB/nvi fixed types (_XOPEN_SOURCE)
+# fix error: 'snprintf' was not declared in this scope
 dfly-patch:
 	# disable SCTP
 	${REINPLACE_CMD} -e 's|MOZ_SCTP|MOZ_DISABLE_SCTP|' \
@@ -15,6 +18,7 @@ dfly-patch:
 		InfoSink.h IntermNode.cpp)
 	${REINPLACE_CMD} -e '/<malloc.h>/d' \
 		${WRKSRC}/comm/ldap/c-sdk/libraries/liblber/lber-int.h
-	# fix error: 'snprintf' was not declared in this scope
-	${REINPLACE_CMD} -e '/_POSIX_SOURCE/d' \
+	${REINPLACE_CMD} -e 's@_XOPEN_SOURCE@&___@g' \
+		${WRKSRC}/media/libcubeb/src/cubeb_alsa.c
+	${REINPLACE_CMD} -e 's@_POSIX_SOURCE@&___@g' \
 		${WRKSRC}/media/libcubeb/src/cubeb_jack.cpp

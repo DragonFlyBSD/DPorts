@@ -8,3 +8,11 @@ RUN_DEPENDS+=	${LOCALBASE}/lib/alsa-lib/libasound_module_pcm_oss.so:audio/alsa-p
 RUN_DEPENDS+=	alsa-lib>=1.1.1_1:audio/alsa-lib
 
 CMAKE_ARGS+=	-DENABLE_ALSA:BOOL=ON -DENABLE_PULSEAUDIO:BOOL=OFF
+
+# alsa headers use 'u_int32_t' and other BerkeleyDB/nvi fixed types (_XOPEN_SOURCE)
+# fix error: 'snprintf' was not declared in this scope
+dfly-patch:
+	${REINPLACE_CMD} -e 's@_XOPEN_SOURCE@&___@g' \
+		${WRKSRC}/Externals/cubeb/src/cubeb_alsa.c
+	${REINPLACE_CMD} -e 's@_POSIX_SOURCE@&___@g' \
+                ${WRKSRC}/Externals/cubeb/src/cubeb_jack.cpp

@@ -1,2 +1,11 @@
 
 CFLAGS+=	-Dfdatasync=fsync
+
+# uses netinet headers and other BerkeleyDB/nvi fixed types (_XOPEN_SOURCE)
+dfly-patch:
+	${REINPLACE_CMD} -e '/FLAGS/s@-D_XOPEN_SOURCE=600@@g' \
+		${WRKSRC}/configure ${WRKSRC}/src/Makefile.in
+	${REINPLACE_CMD} -e 's@_XOPEN_SOURCE@&___@g' \
+		${WRKSRC}/src/rwtest.c \
+		${WRKSRC}/src/sg.h.in \
+		${WRKSRC}/src/ufdb.h.in
