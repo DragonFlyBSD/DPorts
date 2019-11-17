@@ -1,1 +1,5 @@
 LIB_DEPENDS+=	libltdl.so:devel/libltdl
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@<cam/@<bus/cam/@g' \
+		${WRKSRC}/libbrasero-media/scsi-cam.c
