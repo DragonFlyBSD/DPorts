@@ -10,6 +10,13 @@ dfly-patch:
 	${REINPLACE_CMD} -e "/600101/s@(__DragonFly__)@ __dRAGONfLY__@g"	\
 		${WRKSRC}/hald/freebsd/probing/probe-volume.c
 .endif
+	${REINPLACE_CMD} -e 's@<ufs/ufs/@<vfs/ufs/@g' \
+			 -e 's@<ufs/ffs/@<vfs/ufs/@g' \
+			 -e 's@<isofs/@<vfs/isofs/@g' \
+		${WRKSRC}/hald/freebsd/probing/probe-volume.c
+	${REINPLACE_CMD} -e 's@<cam/@<bus/cam/@g' \
+		${WRKSRC}/hald/freebsd/libprobe/hfp-cdrom.c \
+		${WRKSRC}/hald/freebsd/hf-scsi.c
 	${REINPLACE_CMD} -e "s|<sys/ata.h>|<sys/nata.h>|" \
 		${WRKSRC}/hald/freebsd/probing/freebsd_dvd_rw_utils.c \
 		${WRKSRC}/hald/freebsd/hf-ata.c \
