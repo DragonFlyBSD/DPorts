@@ -1,0 +1,11 @@
+--- lib/dnscore/include/dnscore/dnskey.h.orig	2019-02-11 12:45:57 UTC
++++ lib/dnscore/include/dnscore/dnskey.h
+@@ -96,7 +96,7 @@
+ #if OPENSSL_VERSION_NUMBER < 0x10100000L
+ #define SSL_API_LT_110 1
+ #elif defined(LIBRESSL_VERSION_NUMBER)
+-#define SSL_API_LT_110 1
++#define SSL_API_LT_110 0
+ #else
+ #define SSL_API_LT_110 0
+ #endif

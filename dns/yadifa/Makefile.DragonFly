@@ -1,0 +1,19 @@
+USES+=	alias
+
+CONFIGURE_ARGS+=	--with-openssl=${OPENSSLBASE}
+
+# zrj: quite a mess here
+dfly-patch:
+	${REINPLACE_CMD} -e 's@CCVER@&___@g' \
+			 -e 's@-DHAVE_CONFIG_H@& -D__FreeBSD__=9@g' \
+			 -e 's@FreeBSD)@FreeBSD|DragonFly)@g' \
+			 -e 's@defined __FreeBSD__@& || defined __DragonFly__@g' \
+		${WRKSRC}/configure \
+		${WRKSRC}/lib/dnscore/configure \
+		${WRKSRC}/lib/dnsdb/configure \
+		${WRKSRC}/lib/dnslg/configure \
+		${WRKSRC}/lib/dnszone/configure \
+		${WRKSRC}/sbin/yadifad/configure ${WRKSRC}/bin/yadifa/configure
+	${REINPLACE_CMD} -e 's@-D_THREAD_SAFE@-D__FreeBSD__=9 &@g' \
+		${WRKSRC}/mk/common-settings.mk ${WRKSRC}/lib/*/Makefile.in \
+		${WRKSRC}/bin/yadifa/Makefile.in ${WRKSRC}/sbin/yadifad/Makefile.in
