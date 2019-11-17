@@ -1,1 +1,8 @@
 USES += alias
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@<ufs/ufs/@<vfs/ufs/@g' \
+			 -e 's@<isofs/@<vfs/isofs/@g' \
+			 -e 's@<fs/msdosfs/@<vfs/msdosfs/@g' \
+			 -e 's@<fs/ntfs/@<vfs/ntfs/@g' \
+		${WRKSRC}/cmds.c
