@@ -1,0 +1,5 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@<ufs/ufs/@<vfs/ufs/@g' \
+			 -e 's@<ufs/ffs/@<vfs/ufs/@g' \
+		${WRKSRC}/scan_ffs.c
