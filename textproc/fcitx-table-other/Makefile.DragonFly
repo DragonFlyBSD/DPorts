@@ -1,0 +1,11 @@
+MAKE_JOBS_UNSAFE=yes
+
+# zrj: for some reason dirs are not being created
+dfly-configure:
+	-${MKDIR} ${WRKDIR}/.build/tables/am
+	-${MKDIR} ${WRKDIR}/.build/tables/ar
+	-${MKDIR} ${WRKDIR}/.build/tables/ml
+	-${MKDIR} ${WRKDIR}/.build/tables/ta
+	-${MKDIR} ${WRKDIR}/.build/tables/uk
+	-${MKDIR} ${WRKDIR}/.build/tables/th
+	-${MKDIR} ${WRKDIR}/.build/tables/vi

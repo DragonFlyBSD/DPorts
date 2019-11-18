@@ -1,0 +1,6 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/uname/s@PLATFORM=@&freebsd #@g' \
+		${WRKSRC}/support/configure.inc
+	${REINPLACE_CMD} -e 's@struct uuid@&___@g' \
+		${WRKSRC}/src/uuid.h

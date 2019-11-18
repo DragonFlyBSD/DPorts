@@ -2,3 +2,7 @@ USES+=		ssl
 CFLAGS+=	-I${OPENSSLINC}
 LDFLAGS+=	-L${OPENSSLLIB}
 CONFIGURE_ARGS+=	ac_cv_lib_md_MD5Update=no
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@<cam/@<bus/cam/@g' \
+		${WRKSRC}/src/istgt_lu_pass.c

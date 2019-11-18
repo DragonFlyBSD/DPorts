@@ -1,0 +1,5 @@
+
+# zrj: disable implicit use of /usr/src/sys headers
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-I/sys -I/usr/src/sys@@g' \
+		${WRKSRC}/Makefile.in

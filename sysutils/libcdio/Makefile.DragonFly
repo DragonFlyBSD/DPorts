@@ -1,1 +1,7 @@
 CONFIGURE_ENV+= am_cv_func_iconv_works=yes
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@<cam/@<bus/cam/@g' \
+			 -e 's@__FreeBSD_version@900001@g' \
+			 -e 's@__FreeBSD_kernel_version@900001@g' \
+		${WRKSRC}/lib/driver/FreeBSD/freebsd.h

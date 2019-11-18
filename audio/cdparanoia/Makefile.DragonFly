@@ -1,2 +1,6 @@
 USES+=		alias
 CFLAGS+=	-D__FreeBSD_version=900001
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@<cam/@<bus/cam/@g' \
+		${WRKSRC}/interface/low_interface.h

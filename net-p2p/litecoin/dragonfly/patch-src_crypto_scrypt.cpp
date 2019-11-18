@@ -1,21 +1,11 @@
---- src/crypto/scrypt.cpp.orig	2018-09-19 03:16:47 UTC
+--- src/crypto/scrypt.cpp.intermediate	2019-11-18 13:26:51.000000000 +0000
 +++ src/crypto/scrypt.cpp
-@@ -43,6 +43,10 @@
+@@ -43,7 +43,7 @@
  #include <cpuid.h>
  #endif
  #endif
-+
-+#ifdef __DragonFly__
-+#include <sys/endian.h>
-+#else
- #ifndef __FreeBSD__
+-#ifndef __FreeBSD__
++#if !defined(__FreeBSD__) && !defined(__DragonFly__)
  static inline uint32_t be32dec(const void *pp)
  {
-@@ -59,6 +63,7 @@ static inline void be32enc(void *pp, uin
- 	p[1] = (x >> 16) & 0xff;
- 	p[0] = (x >> 24) & 0xff;
- }
-+#endif
- 
- #endif
- typedef struct HMAC_SHA256Context {
+ 	const uint8_t *p = (uint8_t const *)pp;
