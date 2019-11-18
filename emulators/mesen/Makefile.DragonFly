@@ -1,0 +1,7 @@
+
+MAKE_ARGS+=	LTO=false MESENPLATFORM=x64
+MESEN_ARCH:=	x64
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-lstdc++fs@@g' \
+		${WRKSRC}/makefile
