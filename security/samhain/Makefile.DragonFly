@@ -1,0 +1,11 @@
+
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NDNMALLOC}
+
+# zrj: remove few hacks
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-Werror -Wno-invalid-source-encoding@& -Wfoo@g' \
+		${WRKSRC}/configure
+	${REINPLACE_CMD} -e 's@-D__BSD_VISIBLE=1@@g' \
+		${WRKSRC}/Makefile.in
+	${REINPLACE_CMD} -e 's@_XOPEN_SOURCE@&___@g' \
+		${WRKSRC}/src/slib.c
