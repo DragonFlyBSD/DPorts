@@ -1,0 +1,2 @@
+# Required for libdevmapper proplib(3) references
+LDFLAGS+=	-lprop
