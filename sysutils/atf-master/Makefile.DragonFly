@@ -1,0 +1,3 @@
+
+dfly-install:
+	${RM} -fv ${STAGEDIR}/README
