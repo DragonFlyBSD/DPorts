@@ -1,11 +1,22 @@
---- scripts/regular-install.orig	2014-10-17 15:18:20 UTC
+Support both uname -s and /etc/os-release ID
+
+--- scripts/regular-install.orig	2018-06-30 13:20:53 UTC
 +++ scripts/regular-install
-@@ -40,6 +40,8 @@ elif [ $os = "Darwin" -a $(id -u) = 0 ];
+@@ -38,6 +38,8 @@ elif [ -f /etc/SuSE-release ]; then
+     os="suse"
+ elif [ $os = "Darwin" -a $(id -u) = 0 ]; then
      os="darwin"
++elif [ $os = "DragonFly" ]; then
++    os="dragonfly"
  elif [ $os = "FreeBSD" ]; then
      os="freebsd"
-+elif [ $os = "DragonFly" ]; then
-+    os="freebsd"
  elif [ $os = "NetBSD" ]; then
-     os="netbsd"
- else
+@@ -105,7 +107,7 @@ case $(printf $os | tr '[:upper:]' '[:lo
+         chown -R root:wheel ${startupdir}
+         ;;
+ 
+-    freebsd)
++    freebsd | dragonfly)
+         install -d ${DESTDIR}${ETCDIR}/rc.d
+         sed -e "s;%prefix%;${PREFIX};g" \
+             -e "s;%etcdir%;${ETCDIR};g" \
