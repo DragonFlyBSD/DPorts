@@ -46,20 +46,20 @@ post-install:
 .include <bsd.port.pre.mk>
 
 .if ! ${SSL_DEFAULT:Mlibressl*}
-. ifnmake describe
-STAGEDIR_libressl!=	${MAKE} -V STAGEDIR -C ${PORTSDIR}/security/libressl
-. endif
-BUILD_DEPENDS+= 	${NONEXISTENT}:security/libressl:stage
-CFLAGS+=		-I${STAGEDIR_libressl}${LOCALBASE}/include
+USES:=	${USES:Nssl}
+libressl_static=	${LOCALBASE}/libressl-static
+BUILD_DEPENDS+= 	libressl-static>=0:security/libressl-static
+CFLAGS+=		-I${libressl_static}/include
+LDFLAGS+=		-I${libressl_static}/lib
 
 post-configure:
-	${REINPLACE_CMD} 's|-ltls|${STAGEDIR_libressl}${LOCALBASE}/lib/libtls.a|g' \
+	${REINPLACE_CMD} 's|-ltls|${libressl_static}/lib/libtls.a|g' \
 		${WRKSRC}/usr.sbin/httpd/Makefile
-	${REINPLACE_CMD} 's|-lssl|${STAGEDIR_libressl}${LOCALBASE}/lib/libssl.a|g' \
+	${REINPLACE_CMD} 's|-lssl|${libressl_static}/lib/libssl.a|g' \
 		 ${WRKSRC}/usr.sbin/httpd/Makefile
-	${REINPLACE_CMD} 's|-lcrypto|${STAGEDIR_libressl}${LOCALBASE}/lib/libcrypto.a|g' \
+	${REINPLACE_CMD} 's|-lcrypto|${libressl_static}/lib/libcrypto.a|g' \
 		${WRKSRC}/usr.sbin/httpd/Makefile
-	${REINPLACE_CMD} 's|-lcrypto|${STAGEDIR_libressl}${LOCALBASE}/lib/libcrypto.a|g' \
+	${REINPLACE_CMD} 's|-lcrypto|${libressl_static}/lib/libcrypto.a|g' \
 		${WRKSRC}/usr.bin/htpasswd/Makefile
 .endif # SSL_DEFAULT
 
