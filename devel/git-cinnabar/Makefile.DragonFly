@@ -1,0 +1,9 @@
+
+# deps for internal git configure
+#.ifdef PORTSBUILDER_DSYNTH
+BUILD_DEPENDS+=	xmlto>=0:textproc/xmlto
+BUILD_DEPENDS+=	asciidoc>=0:textproc/asciidoc
+BUILD_DEPENDS+=	autoconf>=0:devel/autoconf
+BUILD_DEPENDS+=	automake>=0:devel/automake
+BUILD_DEPENDS+=	gettext-tools>=0:devel/gettext-tools
+#.endif
