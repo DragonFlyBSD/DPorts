@@ -1,0 +1,8 @@
+
+USES+=	pkgconfig
+
+dfly-patch:
+	${REINPLACE_CMD} -e "s@-fomit-frame-pointer@& -I${OPENSSLINC}@g" \
+		${WRKSRC}/Makefile
+	${REINPLACE_CMD} -e 's@fdatasync@fsync@g' \
+		${WRKSRC}/tools/mkimage.c
