@@ -1,0 +1,15 @@
+--- src/Makefile.orig	2019-11-25 08:50:12.000000000 +0000
++++ src/Makefile
+@@ -31,10 +31,10 @@ efivar.pc : efivar.pc.in
+ efivar.h : efivar-guids.h
+ 
+ fakeguid.o : guid.c
+-	$(CC) $(cflags) -DEFIVAR_BUILD_ENVIRONMENT -c -o $@ $^
++	$(CC) $(cflags) -DEFIVAR_BUILD_ENVIRONMENT -fno-short-wchar -c -o $@ $^
+ 
+ makeguids.o : makeguids.c
+-	$(CC) $(cflags) -DEFIVAR_BUILD_ENVIRONMENT -c -o $@ $^
++	$(CC) $(cflags) -DEFIVAR_BUILD_ENVIRONMENT -fno-short-wchar -c -o $@ $^
+ 
+ makeguids : makeguids.o fakeguid.o
+ 
