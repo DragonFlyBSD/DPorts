@@ -1,3 +1,6 @@
 
+# racy creating directory "obj/O.dragonfly.x86_64.gnu.shared.opt"
+MAKE_JOBS_UNSAFE=yes
+
 dfly-patch:
 	${CP} ${WRKSRC}/make/make.freebsd.x86_64.gnu.opt ${WRKSRC}/make/make.dragonfly.x86_64.gnu.opt
