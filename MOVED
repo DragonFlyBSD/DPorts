@@ -6034,7 +6034,6 @@ audio/kscd|audio/kscd-kde4|2018-02-22|Make room for KDE updates
 comms/kremotecontrol|comms/kremotecontrol-kde4|2018-02-22|Make room for KDE updates
 graphics/ksnapshot|graphics/ksnapshot-kde4|2018-02-22|Make room for KDE updates
 graphics/ksaneplugin|graphics/ksaneplugin-kde4|2018-02-22|Make room for KDE updates
-graphics/kqtquickcharts|graphics/kqtquickcharts-kde4|2018-02-22|Make room for KDE updates
 x11/kde4-baseapps|x11/kde-baseapps-kde4|2018-02-22|Make room for KDE updates
 x11/kde4-runtime|x11/kde-runtime-kde4|2018-02-22|Make room for KDE updates
 x11/kde4-workspace|x11/kde-workspace-kde4|2018-02-22|Make room for KDE updates
@@ -7231,7 +7230,6 @@ graphics/kdegraphics-kde4||2018-12-31|Has expired: KDE4 is EOL upstream
 graphics/kdegraphics-svgpart-kde4||2018-12-31|Has expired: KDE4 is EOL upstream
 graphics/kcolorchooser-kde4||2018-12-31|Has expired: KDE4 is EOL upstream
 graphics/okular-kde4||2018-12-31|Has expired: KDE4 is EOL upstream
-graphics/kqtquickcharts-kde4||2018-12-31|Has expired: KDE4 is EOL upstream
 graphics/libkipi-kde4||2018-12-31|Has expired: Qt4 has been EOL since december 2015
 graphics/libkexiv2-kde4||2018-12-31|Has expired: KDE4 is EOL upstream
 graphics/kolourpaint-kde4||2018-12-31|Has expired: KDE4 is EOL upstream
@@ -8831,7 +8829,6 @@ converters/hs-sandi||2019-05-09|Has expired: Haskell libraries are getting pushe
 devel/hs-gtk2hs-buildtools||2019-05-09|Removed, does not build with recent GHC and references deleted port
 lang/perl5.24||2019-05-09|Has expired: Support ends three years after .0 release, please upgrade to a more recent version of Perl
 sysutils/bareos-client-static|sysutils/bareos17-client-static|2019-05-09|Port was renamed
-cad/brlcad||2019-05-13|Has expired: Broken for more than 6 months
 misc/gnuit||2019-05-13|Has expired: Upstream stale for 10 years, no users it appears
 print/py-reportlab1|print/py-reportlab|2019-05-13|Has expired: consider using latest upstream version in print/py-reportlab
 sysutils/djmount||2019-05-15|Has expired: Unmaintained upstream and does not build with upnp >= 1.8
@@ -8963,7 +8960,6 @@ www/rubygem-turbolinks-rails5|www/rubygem-turbolinks|2019-08-11|Remove unnecessa
 www/rubygem-turbolinks-rails50|www/rubygem-turbolinks|2019-08-11|Remove unnecessary port after www/rubygem-turbolinks RUN_DEPENDS fix
 textproc/sphinxsearch-devel|textproc/sphinxsearch|2019-08-11|Has expired: Broken for more than 6 months
 lang/dmd2||2019-08-11|Has expired: Broken for more than 6 months and upstream has no fix for statfs64
-cad/elmerfem||2019-08-12|Has expired: Broken for more than 6 months
 sysutils/openhpi||2019-08-12|Has expired: Broken for more than 6 months
 textproc/scim-bridge||2019-08-17|Has expired: Broken for more than 6 months
 devel/py-efilter||2019-08-17|Has expired: No longer maintained
@@ -9025,7 +9021,6 @@ irc/irssi-otr||2019-09-05|Has expired: Broken for more than 6 months
 mail/p5-Mail-ClamAV||2019-09-05|Has expired: Broken for more than 6 months
 mail/qmail-ldap||2019-09-05|Has expired: Broken for more than 6 months
 math/fityk||2019-09-05|Has expired: Broken for more than 6 months
-math/octave-forge-linear-algebra||2019-09-05|Has expired: Broken for more than 6 months
 math/octave-forge-mechanics||2019-09-05|Has expired: Broken for more than 6 months
 math/octave-forge-parallel||2019-09-05|Has expired: Broken for more than 6 months
 math/octave-forge-strings||2019-09-05|Has expired: Broken for more than 6 months
@@ -9416,7 +9411,6 @@ ports-mgmt/fastest_sites||2019-10-16|Has expired: Unfetchable, unmaintained
 ports-mgmt/pkg-plist||2019-10-16|Has expired: Unfetchable, unmaintained
 ports-mgmt/symports||2019-10-16|Has expired: Unfetchable, unmaintained
 print/poster||2019-10-16|Has expired: Unfetchable, unmaintained
-russian/d1489||2019-10-16|Has expired: Unfetchable, unmaintained
 science/metaf2xml||2019-10-16|Has expired: Unfetchable, unmaintained
 security/authforce||2019-10-16|Has expired: Unfetchable, unmaintained
 security/avcheck||2019-10-16|Has expired: Unfetchable, unmaintained
@@ -9513,7 +9507,7 @@ x11-wm/musca||2019-10-16|Has expired: Unfetchable, unmaintained
 x11-wm/weewm||2019-10-16|Has expired: Unfetchable, unmaintained
 x11-wm/windowlab||2019-10-16|Has expired: Unfetchable, unmaintained
 x11-wm/wmfs||2019-10-16|Has expired: Unfetchable, unmaintained
-x11-wm/plank|x11/plank|2019-10-17|Port incorrectly labeled as Windows Manager, is an independent dock application.
+x11-wm/plank|x11/plank|2019-10-17|Port incorrectly labeled as window manager, is an independent dock application
 net/kcontacts|net/kf5-kcontacts|2019-10-17|Became a KDE Framework
 net/kcalcore|net/kf5-kcalendarcore|2019-10-17|Became a KDE Framework
 java/linux-oracle-jre9|java/openjdk11|2019-10-18|Has expired: No longer maintained upstream, please migrate to openjdk11
@@ -9536,3 +9530,94 @@ www/nuvolaplayer-tunein||2019-10-21|Useless without audio/nuvolaplayer
 www/nuvolaplayer-yandex-music||2019-10-21|Useless without audio/nuvolaplayer
 www/nuvolaplayer-youtube||2019-10-21|Useless without audio/nuvolaplayer
 japanese/yasou-fpw||2019-10-23|Has expired: the only remaining mastersite times out
+lang/gcc5|lang/gcc|2019-10-30|Has expired: Unsupported by upstream. Use GCC 9 or newer instead
+games/xpilot-ng-client||2019-11-01|Has expired: Depends on deprecated libXxf86misc
+science/xmakemol||2019-11-01|Has expired: Depends on expiring graphics/libGLw
+x11/libXp||2019-11-01|Deprecated upstream
+x11/libXxf86misc||2019-11-01|Deprecated upstream
+graphics/libGLw||2019-11-01|Deprecated upstream
+textproc/libutf8proc||2019-11-01|Has expired: No longer needed for www/netsurf
+devel/rubygem-childprocess2|devel/rubygem-childprocess|2019-11-01|Has expired: Use devel/rubygem-childprocess instead
+databases/rubygem-redis3|databases/rubygem-redis|2019-11-02|Has expired: Use databases/rubygem-redis instead
+lang/phantomjs||2019-11-02|Has expired: Project has been discontinued: https://github.com/ariya/phantomjs/issues/15344
+net-mgmt/statsd||2019-11-02|Has expired: depends on expired www/node6
+palm/p5-Palm||2019-11-02|Has expired: obsolete technology
+shells/sparforte||2019-11-02|Has expired: uses expired bdb48
+sysutils/pcbsd-utils-qt5||2019-11-02|Has expired: No longer maintained upstream
+sysutils/sysadm||2019-11-02|Has expired: No longer maintained upstream
+sysutils/sysadm-client||2019-11-02|Has expired: No longer maintained upstream
+textproc/kibana5|textproc/kibana6|2019-11-02|Has expired: depends on expired www/node6
+textproc/kibana5-search-guard||2019-11-02|Has expired: Depends on expired www/node6 via textproc/kibana5
+textproc/p5-EBook-Tools||2019-11-02|Has expired: Depends on expired palm/p5-Palm
+textproc/xml-parse.el||2019-11-02|Has expired: Unfetchable, unmaintained
+www/bigbluebutton||2019-11-02|Has expired: Depends on expired www/tomcat6
+www/node6|www/node8|2019-11-02|Has expired: Node.js 6.x LTS reaches end-of-life on 2019-04-30, see https://github.com/nodejs/Release
+www/pebble||2019-11-02|Has expired: depends on expired www/tomcat6
+www/tomcat6|www/tomcat7|2019-11-02|Has expired: End-of-life since 2017
+www/p5-WWW-Mechanize-PhantomJS||2019-11-02|Has expired: uses expired lang/phantomjs
+x11/xfwp||2019-11-06|Has expired: Deprecated upstream
+x11/xfindproxy||2019-11-06|Has expired: Deprecated upstream
+security/clamav-milter|security/clamav|2019-11-12|Now that MILTER option is enabled by default, use security/clamav instead
+graphics/py-vips|graphics/py-pyvips|2019-11-12|Rename for better naming
+devel/aarch64-binutils|devel/binutils@aarch64|2019-11-05|Moved to a flavored version
+devel/aarch64-none-elf-binutils|devel/binutils@aarch64_none_elf|2019-11-05|Moved to a flavored version
+devel/amd64-binutils|devel/binutils@amd64|2019-11-05|Moved to a flavored version
+devel/arm-gnueabi-binutils|devel/binutils@arm_gnueabi|2019-11-05|Moved to a flavored version
+devel/arm-none-eabi-binutils|devel/binutils@arm_none_eabi|2019-11-05|Moved to a flavored version
+devel/avr-binutils|devel/binutils@avr|2019-11-05|Moved to a flavored version
+devel/i386-binutils|devel/binutils@i386|2019-11-05|Moved to a flavored version
+devel/mingw32-binutils|devel/binutils@mingw32|2019-11-05|Moved to a flavored version
+devel/mips-binutils|devel/binutils@mips|2019-11-05|Moved to a flavored version
+devel/mips64-binutils|devel/binutils@mips64|2019-11-05|Moved to a flavored version
+devel/powerpc64-binutils|devel/binutils@powerpc64|2019-11-05|Moved to a flavored version
+devel/riscv64-binutils|devel/binutils@riscv64|2019-11-05|Moved to a flavored version
+devel/s390x-binutils|devel/binutils@s390x|2019-11-05|Moved to a flavored version
+devel/sparc64-binutils|devel/binutils@sparc64|2019-11-05|Moved to a flavored version
+mail/opensmtpd-extras-filter-clamav||2019-11-15| Deprecated upstream
+mail/opensmtpd-extras-filter-dkim||2019-11-15| Deprecated upstream
+mail/opensmtpd-extras-filter-dnsbl||2019-11-15| Deprecated upstream
+mail/opensmtpd-extras-filter-lua||2019-11-15| Deprecated upstream
+mail/opensmtpd-extras-filter-monkey||2019-11-15| Deprecated upstream
+mail/opensmtpd-extras-filter-pause||2019-11-15| Deprecated upstream
+mail/opensmtpd-extras-filter-perl||2019-11-15| Deprecated upstream
+mail/opensmtpd-extras-filter-python||2019-11-15| Deprecated upstream
+mail/opensmtpd-extras-filter-regex||2019-11-15| Deprecated upstream
+mail/opensmtpd-extras-filter-spamassassin||2019-11-15| Deprecated upstream
+mail/opensmtpd-extras-tool-stats||2019-11-15| Deprecated upstream
+x11-wm/compton-yshui|x11-wm/picom|2019-11-18|Project renamed
+lang/ponyc-static|lang/ponyc@llvm_static|2019-11-20|Flavored
+devel/git-subversion|devel/git|2019-11-22|Subversion enabled by default in devel/git
+devel/libtrue||2019-11-22|Has expired: The joke is dead
+devel/rubygem-flipper-active_support_cache_store013|devel/rubygem-flipper-active_support_cache_store|2019-11-23|Obsolete, please use devel/rubygem-flipper-active_support_cache_store
+databases/rubygem-flipper-active_record013|databases/rubygem-flipper-active_record|2019-11-23|Obsolete, please use databases/rubygem-flipper-active_record instead
+devel/rubygem-flipper013|devel/rubygem-flipper|2019-11-23|Obsolete, please use devel/rubygem-flipper instead
+devel/rubygem-google-protobuf371|devel/rubygem-google-protobuf|2019-11-23|Obsolete, please use devel/rubygem-google-protobuf instead
+mail/rubygem-premailer-rails19-rails52|mail/rubygem-premailer-rails-rails52|2019-11-23|Obsolete, please use mail/rubygem-premailer-rails-rails52 instead
+mail/rubygem-premailer-rails19-rails5|mail/rubygem-premailer-rails-rails5|2019-11-23|Obsolete, please use mail/rubygem-premailer-rails-rails5 instead
+www/rubygem-rack-attack44|www/rubygem-rack-attack|2019-11-23|Obsolete, please use www/rubygem-rack-attack instead
+databases/rubygem-state_machines-activerecord05|databases/rubygem-state_machines-activerecord|2019-11-23|Obsolete, use databases/rubygem-state_machines-activerecord instead
+devel/rubygem-default_value_for32|devel/rubygem-default_value_for|2019-11-23|Obsolete, use devel/rubygem-default_value_for instead
+www/rubygem-responders2-rails52|www/rubygem-responders-rails52|2019-11-23|Obsolete, please use www/rubygem-responders-rails52 instead
+devel/rubygem-gitlab-default_value_for|devel/rubygem-default_value_for|2019-11-23|Obsolete, please use devel/rubygem-default_value_for instead
+www/httpdirfs|sysutils/fusefs-httpdirfs|2019-11-23|Rename for consistency with other FUSE ports
+math/tvm|misc/tvm|2019-11-24|Move to a more appropriate category
+math/onnx|misc/onnx|2019-11-24|Move to a more appropriate category
+math/py-onnx-tf|misc/py-onnx-tf|2019-11-24|Move to a more appropriate category
+misc/console-bridge|devel/ros-console_bridge|2019-11-24|Use devel/ros-console_bridge instead
+misc/urdfdom-headers|devel/ros-urdfdom_headers|2019-11-24|Use devel/ros-urdfdom_headers instead
+misc/urdfdom|devel/ros-urdfdom|2019-11-24|Use devel/ros-urdfdom instead
+sysutils/kdirstat|sysutils/k4dirstat|2019-11-25|Renamed to match the upstream name
+lang/gcc7-devel|lang/gcc7|2019-11-28|The GCC 7 branch is end of life, use the final release (or a new major version)
+multimedia/cuse4bsd-kmod||2019-11-30|Removed, in base system on all supported versions
+java/jdk9-doc||2019-11-30|Has expired: The corresponding JDK port is EoL
+java/jdk10-doc||2019-11-30|Has expired: The corresponding JDK port is EoL
+databases/zabbix22-libzbxpgsql|databases/zabbix3-libzbxpgsql|2019-12-01|End-of-Life was August, 2019
+astro/garmindev||2019-12-01|Has expired: This port is useful only with the long expired QLandkarteGT
+net-mgmt/zabbix22-agent|net-mgmt/zabbix3-agent|2019-12-01|Has expired: End of Life was August, 2019
+net-mgmt/zabbix22-frontend|net-mgmt/zabbix3-frontend|2019-12-01|Has expired: End of Life was August, 2019
+net-mgmt/zabbix22-java|net-mgmt/zabbix3-java|2019-12-01|Has expired: End of Life was August, 2019
+net-mgmt/zabbix22-proxy|net-mgmt/zabbix3-proxy|2019-12-01|Has expired: End of Life was August, 2019
+net-mgmt/zabbix22-server|net-mgmt/zabbix3-server|2019-12-01|Has expired: End of Life was August, 2019
+sysutils/fusefs-ext4fuse|sysutils/fusefs-ext2|2019-12-01|Has expired: Please consider using sysutils/fusefs-ext2 as upstream development is stalled.  Contrary to what its name suggests it supports ext2, ext3, ext4 in read/write  mode.
+www/grafana3|www/grafana4|2019-12-01|Has expired: Depends on expired lang/phantomjs
+www/miniminiweb||2019-12-01|Has expired: Upstream no longer available
