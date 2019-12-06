@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/devel/libvirt/files/libvirtd.in 407328 2016-01-26 23:35:32Z novel $
+# $FreeBSD$
 #
 # PROVIDE: libvirtd
 # REQUIRE: LOGIN virtlogd
