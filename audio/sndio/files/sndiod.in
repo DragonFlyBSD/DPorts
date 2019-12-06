@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/audio/sndio/files/sndiod.in 476019 2018-07-31 19:40:24Z tobik $
+# $FreeBSD$
 #
 # PROVIDE: sndiod
 # REQUIRE: NETWORKING sysctl
