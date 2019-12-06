@@ -4,7 +4,7 @@
 # REQUIRE: LOGIN
 # KEYWORD: shutdown
 #
-# $FreeBSD: head/japanese/p5-2chproxy/files/twochproxy.in 426204 2016-11-16 00:43:30Z hrs $
+# $FreeBSD$
 
 . /etc/rc.subr
 
