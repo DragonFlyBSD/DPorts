@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$FreeBSD: head/security/cyrus-sasl2/files/pkg-install.in 485191 2018-11-17 18:47:45Z ume $
+#	$FreeBSD$
 #
 # Created by: stb@FreeBSD.org for the cyrus imap server
 # Added to the cyrus-sasl port by hetzels@westbend.net
