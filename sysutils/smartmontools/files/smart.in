@@ -1,7 +1,7 @@
 #!/bin/sh
 # This script is in the public domain.  Original author: Garrett Wollman
 #
-# $FreeBSD: head/sysutils/smartmontools/files/smart.in 513591 2019-10-02 17:46:41Z swills $
+# $FreeBSD$
 #
 
 if [ -r /etc/defaults/periodic.conf ]; then
