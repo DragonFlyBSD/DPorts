@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $FreeBSD: head/devel/git/files/git_daemon.in 307344 2012-11-12 20:32:17Z wxs $
+# $FreeBSD$
 #
 
 # PROVIDE: git_daemon
