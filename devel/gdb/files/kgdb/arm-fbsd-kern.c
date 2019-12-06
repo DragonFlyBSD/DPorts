@@ -23,7 +23,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: head/devel/gdb/files/kgdb/arm-fbsd-kern.c 475318 2018-07-25 17:28:36Z jhb $
+ * $FreeBSD$
  */
 
 /* Target-dependent code for FreeBSD/arm kernels.  */

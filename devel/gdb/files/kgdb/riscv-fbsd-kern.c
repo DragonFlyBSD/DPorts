@@ -23,7 +23,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: head/devel/gdb/files/kgdb/riscv-fbsd-kern.c 503200 2019-06-01 00:44:08Z jhb $
+ * $FreeBSD$
  */
 
 /* Target-dependent code for FreeBSD/riscv64 kernels.  */

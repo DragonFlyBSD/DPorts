@@ -23,7 +23,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: head/devel/gdb/files/kgdb/aarch64-fbsd-kern.c 503200 2019-06-01 00:44:08Z jhb $
+ * $FreeBSD$
  */
 
 /* Target-dependent code for FreeBSD/aarch64 kernels.  */

@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/sparc64fbsd-kern.c 464493 2018-03-14 14:33:21Z pizzamig $");
+__FBSDID("$FreeBSD$");
 
 #include "defs.h"
 #include "gdbcore.h"
