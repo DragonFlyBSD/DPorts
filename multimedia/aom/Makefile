@@ -2,14 +2,10 @@
 
 PORTNAME=	aom
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.0.0-2558
-DISTVERSIONSUFFIX=	-g25daf5d22
+# XXX Switch to release after https://bugs.chromium.org/p/aomedia/issues/detail?id=2545
+DISTVERSION=	1.0.0-2751
+DISTVERSIONSUFFIX=	-g0968868d0
 CATEGORIES=	multimedia
-
-# XXX Drop revert of revert when ABI changes again
-# https://aomedia-review.googlesource.com/c/aom/+/96983
-PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES+=	a70e67a5fd6a.patch:-p1
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	AV1 reference encoder/decoder
