@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/mail/spamassassin/files/sa-spamd.in 480763 2018-09-26 19:30:36Z zeising $
+# $FreeBSD$
 #
 
 # PROVIDE: spamd
