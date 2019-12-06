@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/devel/subversion/files/svnserve.wrapper 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD$
 
 SVNSERVE=$(dirname $(realpath $0))/svnserve.bin
 
