@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/security/trousers/files/tcsd.in 415449 2016-05-18 13:53:45Z hrs $
+# $FreeBSD$
 #
 # PROVIDE: tcsd
 # REQUIRE: SERVERS tpmd
