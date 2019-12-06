@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/security/amavisd-new/files/amavis-p0fanalyzer.in 428490 2016-12-13 14:52:23Z flo $
+# $FreeBSD$
 #
 # PROVIDE: amavis_p0fanalyzer
 # REQUIRE: DAEMON
