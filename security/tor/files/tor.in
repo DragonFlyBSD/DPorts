@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/security/tor/files/tor.in 463489 2018-03-03 16:00:48Z yuri $
+# $FreeBSD$
 #
 # PROVIDE: tor
 # REQUIRE: DAEMON FILESYSTEMS
