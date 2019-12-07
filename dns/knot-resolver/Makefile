@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	knot-resolver
-DISTVERSION=	4.1.0
-PORTREVISION=	2
+DISTVERSION=	4.2.2
 CATEGORIES=	dns
 MASTER_SITES=	https://secure.nic.cz/files/knot-resolver/ \
 		https://dns.company/downloads/knot-resolver/
@@ -56,7 +55,7 @@ MESON_ARGS=	--default-library=static \
 #MESON_ARGS+=	lmdb_CFLAGS=-I${PREFIX}/include lmdb_LIBS=-llmdb
 
 OPTIONS_DEFINE=		DOCS DNSTAP DOXYGEN GO TRUSTANCHOR
-OPTIONS_DEFAULT=	DOCS DNSTAP DOXYGEN GO	
+OPTIONS_DEFAULT=	DOCS DNSTAP DOXYGEN GO
 
 # COOKIES will come return/reworked to reflect IETF dnsop group development
 #COOKIES_DESC=			cookies
@@ -97,14 +96,6 @@ TRUSTANCHOR_BUILD_DEPENDS=	${LUA_PKGNAMEPREFIX}luasocket>=0:net/luasocket \
 				${LUA_PKGNAMEPREFIX}luasec>=0:security/luasec
 
 .include <bsd.port.options.mk>
-
-# has to be tested if this is still is a bug.
-# if so, look in /usr/ports/multimedia/dav1d/Makefile for
-# CPU stuff / llvm bug/workaround/solution
-#.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1120000
-#NOT_FOR_ARCHS=	i386
-#NOT_FOR_ARCHS_REASON_i386=	libknot (installed by knot2) is broken on 11.2 at i386
-#.endif
 
 USERS=		kresd
 GROUPS=		kresd
