@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/japanese/font-myrica/files/pkg-install.in 511393 2019-09-07 06:40:50Z ume $
+# $FreeBSD$
 
 catfontsdir()
 {
