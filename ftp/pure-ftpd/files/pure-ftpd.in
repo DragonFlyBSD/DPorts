@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/ftp/pure-ftpd/files/pure-ftpd.in 430884 2017-01-08 20:42:47Z sunpoet $
+# $FreeBSD$
 #
 
 # PROVIDE: pureftpd
