@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/mail/milter-greylist/files/milter-greylist.in 464850 2018-03-17 21:51:38Z dbaio $
+# $FreeBSD$
 
 # PROVIDE: miltergreylist
 # REQUIRE: LOGIN
