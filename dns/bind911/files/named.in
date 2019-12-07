@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/dns/bind911/files/named.in 487359 2018-12-13 09:06:50Z mat $
+# $FreeBSD$
 #
 
 # PROVIDE: named
