@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/www/varnish6/files/varnishncsa.in 500118 2019-04-26 16:53:26Z feld $
+# $FreeBSD$
 #
 
 # PROVIDE: varnishncsa
