@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/databases/postgresql12-server/files/postgresql.in 512199 2019-09-17 08:49:01Z girgen $
+# $FreeBSD$
 #
 # PROVIDE: postgresql
 # REQUIRE: sshd
