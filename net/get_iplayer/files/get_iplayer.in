@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/net/get_iplayer/files/get_iplayer.in 478327 2018-08-28 19:39:38Z crees $
+# $FreeBSD$
 #
 # PROVIDE: get_iplayer
 # REQUIRE: LOGIN
