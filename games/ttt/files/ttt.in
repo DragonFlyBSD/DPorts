@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/games/ttt/files/ttt.in 337982 2013-12-29 13:35:32Z nemysis $
+# $FreeBSD$
 #
 
 cd "%%DATADIR%%"
