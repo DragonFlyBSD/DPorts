@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	gmic
-DISTVERSION=	2.7.4
+DISTVERSION=	2.7.5
 CATEGORIES=	graphics
 MASTER_SITES=	https://gmic.eu/files/source/
 DISTNAME=	${PORTNAME}_${DISTVERSION}
@@ -52,6 +52,7 @@ PLUGINS_LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 PLUGINS_BROKEN=		cmake files support was accidentally broken, need to convert the port to gmake use: https://github.com/dtschump/gmic/issues/135
 
 X11_CMAKE_BOOL=		ENABLE_X
+X11_USES=		xorg
 X11_USE=		XORG=ice,sm,x11,xext
 
 .include <bsd.port.mk>
