@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/mail/emailrelay/files/emailrelay.in 392741 2015-07-23 16:40:43Z danfe $
+# $FreeBSD$
 #
 # A shell-script wrapper for E-MailRelay for use in the FreeBSD rc.d system.
 #
