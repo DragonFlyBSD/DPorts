@@ -3,6 +3,7 @@
 PORTNAME=	lab
 PORTVERSION=	0.16.0
 DISTVERSIONPREFIX=	v
+PORTREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	swills@FreeBSD.org
@@ -11,13 +12,9 @@ COMMENT=	Lab makes it simple to work with repositories on GitLab
 LICENSE=	UNLICENSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+RUN_DEPENDS=	git:devel/git
+
 USES=		go:modules
-
-OPTIONS_DEFINE=	GIT_SUBVERSION
-
-GIT_SUBVERSION_DESC=		Use devel/git-subversion as backend
-GIT_SUBVERSION_RUN_DEPENDS=	git-subversion>0:devel/git-subversion
-GIT_SUBVERSION_RUN_DEPENDS_OFF=	git:devel/git
 
 USE_GITHUB=	yes
 
@@ -34,7 +31,7 @@ GH_TUPLE=	zaquestion:${PORTNAME}:${DISTVERSIONPREFIX}${PORTVERSION}:DEFAULT \
 		golang:net:03003ca0c849:golang_net/vendor/golang.org/x/net \
 		golang:oauth2:f42d05182288:golang_oauth2/vendor/golang.org/x/oauth2 \
 		golang:protobuf:v1.2.0:golang_protobuf/vendor/github.com/golang/protobuf \
-		golang:sys:d0be0721c37e:golang_sys/vendor/golang.org/x/sys \
+		golang:sys:33540a1f6037:golang_sys/vendor/golang.org/x/sys \
 		golang:text:v0.3.0:golang_text/vendor/golang.org/x/text \
 		google:go-querystring:v1.0.0:google_go_querystring/vendor/github.com/google/go-querystring \
 		hashicorp:hcl:ef8a98b0bbce:hashicorp_hcl/vendor/github.com/hashicorp/hcl \
