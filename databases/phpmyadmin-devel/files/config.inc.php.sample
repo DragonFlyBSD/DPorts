@@ -1,5 +1,5 @@
 <?php
-/* $FreeBSD: head/databases/phpmyadmin-devel/files/config.inc.php.sample 340872 2014-01-24 00:14:07Z mat $
+/* $FreeBSD$
  *
  * Skeleton configuration file -- this file is empty on a fresh
  * installaton of phpmyadmin.
