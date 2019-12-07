@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/archivers/deb2targz/files/deb2targz.sh 514229 2019-10-10 13:56:20Z ak $
+# $FreeBSD$
 #
 # Distributed under the BSD 2-clause Simplified License.
 #
