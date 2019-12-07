@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/devel/distcc/files/distccd.in 376666 2015-01-10 00:49:34Z jkim $
+# $FreeBSD$
 #    $MCom: ports/devel/distcc/files/distccd.sh.in,v 1.1 2007/05/19 17:43:14 ahze Exp $
 
 # PROVIDE: distccd
