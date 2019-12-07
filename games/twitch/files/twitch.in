@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/games/twitch/files/twitch.in 351294 2014-04-14 21:56:12Z nemysis $
+# $FreeBSD$
 #
 
 cd "%%DATADIR%%"
