@@ -1,5 +1,5 @@
 #! /bin/sh -
 #
-# $FreeBSD: head/cad/k40-whisperer/files/k40-whisperer.in 480119 2018-09-19 22:44:36Z 0mp $
+# $FreeBSD$
 
 exec %%PYTHON_CMD%% %%DATADIR%%/k40_whisperer.py
