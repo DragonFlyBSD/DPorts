@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/mail/popfile/files/popfile.sh.in 356631 2014-06-05 12:53:38Z pawel $
+# $FreeBSD$
 #
 case "${HOME}" in
 "")
