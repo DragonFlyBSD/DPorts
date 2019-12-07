@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/ftp/fastdfs/files/fdfs_storaged.in 453488 2017-11-04 21:35:36Z dbaio $
+# $FreeBSD$
 #
 # PROVIDE: fdfs_storaged
 # REQUIRE: LOGIN
