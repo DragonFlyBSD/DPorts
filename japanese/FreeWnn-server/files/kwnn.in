@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/japanese/FreeWnn-server/files/kwnn.in 367909 2014-09-11 07:48:17Z hrs $
+# $FreeBSD$
 #
 # PROVIDE: kwnn
 # REQUIRE: LOGIN
