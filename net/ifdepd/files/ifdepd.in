@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net/ifdepd/files/ifdepd.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD$
 #
 # PROVIDE: ifdepd
 # REQUIRE: netif routing
