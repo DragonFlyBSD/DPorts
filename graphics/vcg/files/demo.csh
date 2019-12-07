@@ -1,7 +1,7 @@
 #!/bin/csh
 #
 # SCCS-info %W% %E%
-# $FreeBSD: head/graphics/vcg/files/demo.csh 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD$
 #
 # ====================== Change area ============================
 

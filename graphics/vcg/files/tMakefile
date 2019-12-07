@@ -17,7 +17,7 @@
 # /*                                                                    */
 # /*--------------------------------------------------------------------*/
 #
-# $FreeBSD: head/graphics/vcg/files/tMakefile 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD$
 #
 # $Log: tMakefile,v $
 # Revision 1.1.1.1  1995/02/19 09:25:45  hsu
