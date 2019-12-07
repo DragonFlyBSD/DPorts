@@ -2,7 +2,7 @@
 #
 # %%APP_SHORTNAME%% startup script.
 #
-# $FreeBSD: head/java/wildfly12/files/wildfly12.in 483166 2018-10-27 18:33:08Z pi $
+# $FreeBSD$
 #
 
 # PROVIDE: %%APP_SHORTNAME%%
@@ -41,9 +41,6 @@ pidfile="%%PID_FILE%%"
 status_cmd="%%APP_SHORTNAME%%_status"
 
 WILDFLY_HOME="%%APP_HOME%%"
-#minimal requirements must be set for our javavmwrapper
-JAVA_VERSION="1.7+"
-export JAVA_VERSION
 
 %%APP_SHORTNAME%%_start ()
 {
