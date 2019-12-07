@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/japanese/font-ipa-uigothic/files/pkg-install.in 396786 2015-09-12 23:17:12Z hrs $
+# $FreeBSD$
 
 catfontsdir ()
 {
