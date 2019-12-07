@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/mail/opendkim/files/milter-opendkim.in 481909 2018-10-12 15:30:35Z uqs $
+# $FreeBSD$
 #
 
 # PROVIDE: milter-opendkim
