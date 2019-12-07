@@ -1,5 +1,5 @@
 # $Tecnik: ports/mail/dspam/files/UPDATING,v 1.16 2006/06/07 23:45:21 itetcu Exp $
-# $FreeBSD: head/mail/dspam/files/UPDATING 414374 2016-05-01 01:13:06Z junovitch $
+# $FreeBSD$
 #
 # for each PKGNAME or user option change an entry should be added in this file
 # each entry 
