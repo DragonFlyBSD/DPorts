@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/games/duckmaze/files/duckmaze.sh.in 339714 2014-01-14 20:28:49Z nemysis $
+# $FreeBSD$
 #
 
 cd "%%DATADIR%%"
