@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/japanese/font-aozoramincho/files/pkg-install.in 419179 2016-07-27 15:10:09Z ume $
+# $FreeBSD$
 
 catfontsdir()
 {
