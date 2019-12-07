@@ -1,4 +1,4 @@
-# $FreeBSD: head/security/heimdal/files/kpasswdd-Makefile 373047 2014-11-22 10:51:58Z hrs $
+# $FreeBSD$
 
 all: kpasswdd-cracklib.so
 

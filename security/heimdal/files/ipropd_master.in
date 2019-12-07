@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/security/heimdal/files/ipropd_master.in 368294 2014-09-16 05:53:10Z hrs $
+# $FreeBSD$
 #
 
 # PROVIDE: ipropd_master
