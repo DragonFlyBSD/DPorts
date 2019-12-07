@@ -1,4 +1,4 @@
-/* $FreeBSD: head/japanese/sj3-lib/files/sj3_freebsd.tmpl.in 340872 2014-01-24 00:14:07Z mat $ */
+/* $FreeBSD$ */
 
 SJ3TOP=		%%PREFIX%%
 SJ3DICTDIR=	$(SJ3LIBDIR)/sh3/dict
