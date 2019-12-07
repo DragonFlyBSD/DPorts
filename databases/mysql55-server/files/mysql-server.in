@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/databases/mysql55-server/files/mysql-server.in 483912 2018-11-03 21:54:52Z 0mp $
+# $FreeBSD$
 #
 
 # PROVIDE: mysql
