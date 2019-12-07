@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/devel/py-buildbot/files/buildbot.in 489253 2019-01-04 10:16:00Z koobs $
+# $FreeBSD$
 # PROVIDE: buildbot
 # REQUIRE: DAEMON
 # KEYWORD: shutdown
