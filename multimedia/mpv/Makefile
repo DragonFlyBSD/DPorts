@@ -117,6 +117,7 @@ OPENGL_IMPLIES=			X11
 PULSEAUDIO_LIB_DEPENDS=		libpulse.so:audio/pulseaudio
 PULSEAUDIO_CONFIGURE_OFF=	--disable-pulse
 
+SDL_USES=			sdl
 SDL_USE=			SDL=sdl2
 SDL_CONFIGURE_ON=		--enable-sdl2
 
@@ -157,7 +158,7 @@ WAYLAND_LIB_DEPENDS=		libwayland-client.so:graphics/wayland \
 				libxkbcommon.so:x11/libxkbcommon
 WAYLAND_CONFIGURE_OFF=		--disable-wayland
 
-X11_USES=			gnome
+X11_USES=			gnome xorg
 X11_USE=			XORG=x11,xext,xinerama,xorgproto,xrandr,xscrnsaver,xv,xxf86vm
 X11_VARS=			INSTALLS_ICONS=yes
 X11_CONFIGURE_OFF=		--disable-x11
