@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net/htpdate/files/htpdate.in 510076 2019-08-28 16:02:00Z jgh $
+# $FreeBSD$
 
 # PROVIDE: htpdate
 # REQUIRE: NETWORKING syslogd
