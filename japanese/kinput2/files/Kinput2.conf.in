@@ -1,4 +1,4 @@
-XCOMM $FreeBSD: head/japanese/kinput2/files/Kinput2.conf.in 340872 2014-01-24 00:14:07Z mat $
+XCOMM $FreeBSD$
 
 CCDEF_DIR = $(LIBDIR)/ccdef
 
