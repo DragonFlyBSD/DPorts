@@ -1,5 +1,5 @@
 /* -*- ugly-hack-mode -*- */
-/* $FreeBSD: head/lang/ghc/files843/wrap.c 502898 2019-05-28 15:53:04Z arrowd $ */
+/* $FreeBSD$ */
 
 #include <sys/stat.h>
 

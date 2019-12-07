@@ -1,5 +1,5 @@
 /* -*- ugly-hack-mode -*- */
-/* $FreeBSD: head/lang/ghc/files863/wrap.c 441844 2017-05-27 12:09:22Z kib $ */
+/* $FreeBSD$ */
 
 #include <sys/stat.h>
 
