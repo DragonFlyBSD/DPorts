@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/lang/rhino/files/rhinodbg.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD$
 #
 # Rhino debugger
-JAVA_VERSION="%%JAVA_VERSION%%" "%%LOCALBASE%%/bin/java" -cp "%%RHINOJAR%%" org.mozilla.javascript.tools.debugger.Main $@
+"%%LOCALBASE%%/bin/java" -cp "%%RHINOJAR%%" org.mozilla.javascript.tools.debugger.Main $@
