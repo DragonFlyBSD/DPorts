@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/net/corosync2/files/corosync.in 470799 2018-05-24 18:24:50Z flo $
+# $FreeBSD$
 
 # PROVIDE: corosync
 # REQUIRE: LOGIN FILESYSTEMS
