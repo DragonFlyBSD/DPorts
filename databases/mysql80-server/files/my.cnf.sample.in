@@ -1,4 +1,4 @@
-# $FreeBSD: head/databases/mysql80-server/files/my.cnf.sample.in 469734 2018-05-12 15:35:25Z mmokhi $
+# $FreeBSD$
 
 [client]
 port                            = 3306

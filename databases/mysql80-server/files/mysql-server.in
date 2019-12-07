@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/databases/mysql80-server/files/mysql-server.in 466508 2018-04-04 21:01:28Z mmokhi $
+# $FreeBSD$
 #
 
 # PROVIDE: mysql
