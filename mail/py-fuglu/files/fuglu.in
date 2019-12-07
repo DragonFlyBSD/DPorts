@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/mail/py-fuglu/files/fuglu.in 419343 2016-07-31 07:15:14Z riggs $
+# $FreeBSD$
 #
 # PROVIDE: fuglu
 # REQUIRE: LOGIN
