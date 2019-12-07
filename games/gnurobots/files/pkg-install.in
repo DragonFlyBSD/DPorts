@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/games/gnurobots/files/pkg-install.in 342296 2014-02-02 14:08:17Z nemysis $
+# $FreeBSD$
 #
 
 echo "This example maps you can use:"
