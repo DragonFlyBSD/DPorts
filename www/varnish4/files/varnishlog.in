@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/www/varnish4/files/varnishlog.in 400701 2015-11-03 15:08:46Z feld $
+# $FreeBSD$
 #
 
 # PROVIDE: varnishlog
