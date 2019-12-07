@@ -31,7 +31,9 @@ USES=		cmake \
 		pkgconfig \
 		qt:5 \
 		sqlite \
-		gl
+		gl \
+		gnome \
+		xorg
 
 USE_CXXSTD=	c++11
 
