@@ -1,4 +1,4 @@
-# $FreeBSD: head/finance/electrum/files/hardware_wallet.conf.sample 492668 2019-02-11 06:25:12Z ehaupt $
+# $FreeBSD$
 #
 # Allow members of group operator to access hardware wallet devices
 
