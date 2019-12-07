@@ -3,7 +3,7 @@
 
 PORTNAME=	nginx
 PORTVERSION=	1.16.1
-PORTREVISION?=	4
+PORTREVISION?=	7
 PORTEPOCH=	2
 CATEGORIES=	www
 MASTER_SITES=	https://nginx.org/download/ \
@@ -171,6 +171,7 @@ HTTP_SSL_USE=				openssl_rpath
 HTTP_SSL_USES=			ssl
 HTTP_STATUS_CONFIGURE_ON=	--with-http_stub_status_module
 HTTP_SUB_CONFIGURE_ON=		--with-http_sub_module
+HTTP_XSLT_USES=			gnome
 HTTP_XSLT_USE=			GNOME=libxml2,libxslt
 HTTP_XSLT_VARS=			DSO_BASEMODS+=http_xslt_module
 HTTPV2_IMPLIES=			HTTP_SSL
@@ -349,6 +350,11 @@ do-install-DSO-on:
 do-install-FASTDFS-on:
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/fdfs
 	${INSTALL_DATA} ${WRKSRC_fastdfs}/src/mod_fastdfs.conf ${STAGEDIR}${PREFIX}/etc/fdfs/mod_fastdfs.conf.sample
+
+do-install-MODSECURITY-on:
+	${INSTALL_DATA} \
+	${WRKDIR}/modsecurity-${MODSECURITY_VERSION}/unicode.mapping \
+	${STAGEDIR}${ETCDIR}
 
 do-install-NAXSI-on:
 	${INSTALL_DATA} \
