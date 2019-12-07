@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/mail/exilog/files/exilog.in 376298 2015-01-05 13:18:58Z marino $
+# $FreeBSD$
 #
 # PROVIDE: exilog
 # REQUIRE: %%SERVER%%
