@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/mail/courier/files/courier.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD$
 #
 # Adapted for FreeBSD from courier.sysvinit
 #

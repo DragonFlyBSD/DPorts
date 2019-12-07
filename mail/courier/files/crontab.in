@@ -1,3 +1,3 @@
-# $FreeBSD: head/mail/courier/files/crontab.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD$
 #minute	hour	mday	month	wday	command
 25	*	*	*	*	%%PREFIX%%/share/courier/sqwebmail/cleancache.pl
