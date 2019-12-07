@@ -1,5 +1,5 @@
 # Under a BSDL license. Copyright by Mario S F Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: head/devel/libtai/files/leapsecs-update.txt 391354 2015-07-05 08:48:50Z rodrigo $
+# $FreeBSD$
 +2005-12-31
 +2008-12-31
 +2012-06-30
