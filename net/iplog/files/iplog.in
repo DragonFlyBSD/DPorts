@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/net/iplog/files/iplog.in 358627 2014-06-20 18:41:00Z wg $
+# $FreeBSD$
 #
 # PROVIDE: iplog
 # REQUIRE: LOGIN
