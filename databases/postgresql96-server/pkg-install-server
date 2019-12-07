@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $FreeBSD: head/databases/postgresql96-server/pkg-install-server 421360 2016-09-05 11:15:29Z girgen $
+# $FreeBSD$
 
 PATH=/bin:/usr/bin:/usr/sbin
 
