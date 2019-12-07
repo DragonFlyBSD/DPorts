@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/games/robocode-naval/files/pkg-deinstall.in 414378 2016-05-01 04:37:16Z pi $
+# $FreeBSD$
 #
 
 if [ "$2" = "POST-DEINSTALL" ]; then
