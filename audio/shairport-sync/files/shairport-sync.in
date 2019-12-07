@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/audio/shairport-sync/files/shairport-sync.in 426607 2016-11-20 17:32:49Z ehaupt $
+# $FreeBSD$
 #
 # PROVIDE: shairport_sync
 # REQUIRE: LOGIN avahi_daemon
