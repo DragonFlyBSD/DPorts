@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/devel/qt5/files/pkg-deinstall.in 346930 2014-03-03 16:50:32Z makc $
+# $FreeBSD$
 
 case $2 in
 POST-DEINSTALL)
