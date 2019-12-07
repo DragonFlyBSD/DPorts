@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/net/bird2/files/bird.in 489701 2019-01-08 15:19:16Z olivier $
+# $FreeBSD$
 #
 # PROVIDE: bird
 # REQUIRE: LOGIN
