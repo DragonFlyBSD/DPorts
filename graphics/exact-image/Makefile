@@ -3,6 +3,7 @@
 
 PORTNAME=	exact-image
 PORTVERSION=	1.0.2
+PORTREVISION=	1
 CATEGORIES=	graphics perl5 python
 MASTER_SITES=	https://dl.exactcode.de/oss/exact-image/
 
@@ -29,7 +30,7 @@ LIB_DEPENDS=	libagg.so:graphics/agg \
 #hack to get custom exactcode configure script to enable tiff support with
 #broken headers on c++ in base system:
 CPPFLAGS+=	-fpermissive -I${LOCALBASE}/include
-USES=		gmake jpeg perl5 pkgconfig python:2.7 tar:bzip2
+USES=		gmake jpeg perl5 pkgconfig python:2.7 tar:bzip2 xorg
 USE_CXXSTD=	c++03
 USE_XORG=	x11
 HAS_CONFIGURE=	yes
