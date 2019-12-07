@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/games/minecraft-server/files/minecraft.in 476166 2018-08-01 08:30:38Z 0mp $
+# $FreeBSD$
 # PROVIDE: minecraft
 # REQUIRE: LOGIN
 # KEYWORD: shutdown
