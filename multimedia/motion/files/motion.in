@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/multimedia/motion/files/motion.in 432815 2017-01-30 00:09:53Z jhale $
+# $FreeBSD$
 #
 # PROVIDE: motion
 # REQUIRE: DAEMON
