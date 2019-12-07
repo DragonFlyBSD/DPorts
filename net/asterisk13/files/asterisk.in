@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net/asterisk13/files/asterisk.in 457847 2018-01-02 11:27:22Z madpilot $
+# $FreeBSD$
 #
 
 # PROVIDE: asterisk
