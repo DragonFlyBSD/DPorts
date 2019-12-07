@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/dns/gdnsd2/files/gdnsd.in 420941 2016-08-26 19:44:57Z allanjude $
+# $FreeBSD$
 #
 # PROVIDE: gdnsd
 # REQUIRE: DAEMON
