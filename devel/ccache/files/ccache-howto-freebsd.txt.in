@@ -1,5 +1,5 @@
 #
-# $FreeBSD: head/devel/ccache/files/ccache-howto-freebsd.txt.in 469389 2018-05-08 19:12:16Z bdrewery $
+# $FreeBSD$
 #
 
 To use ccache for ports, just add WITH_CCACHE_BUILD=yes to
