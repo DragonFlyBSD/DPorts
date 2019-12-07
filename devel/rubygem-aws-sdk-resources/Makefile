@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	aws-sdk-resources
-DISTVERSION=	3.54.1
+PORTVERSION=	3.59.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
@@ -47,6 +47,7 @@ RUN_DEPENDS=	rubygem-aws-sdk-acm>=1<2:devel/rubygem-aws-sdk-acm \
 		rubygem-aws-sdk-codedeploy>=1<2:devel/rubygem-aws-sdk-codedeploy \
 		rubygem-aws-sdk-codepipeline>=1<2:devel/rubygem-aws-sdk-codepipeline \
 		rubygem-aws-sdk-codestar>=1<2:devel/rubygem-aws-sdk-codestar \
+		rubygem-aws-sdk-codestarnotifications>=1<2:devel/rubygem-aws-sdk-codestarnotifications \
 		rubygem-aws-sdk-cognitoidentity>=1<2:devel/rubygem-aws-sdk-cognitoidentity \
 		rubygem-aws-sdk-cognitoidentityprovider>=1<2:devel/rubygem-aws-sdk-cognitoidentityprovider \
 		rubygem-aws-sdk-cognitosync>=1<2:devel/rubygem-aws-sdk-cognitosync \
@@ -57,6 +58,7 @@ RUN_DEPENDS=	rubygem-aws-sdk-acm>=1<2:devel/rubygem-aws-sdk-acm \
 		rubygem-aws-sdk-costandusagereportservice>=1<2:devel/rubygem-aws-sdk-costandusagereportservice \
 		rubygem-aws-sdk-costexplorer>=1<2:devel/rubygem-aws-sdk-costexplorer \
 		rubygem-aws-sdk-databasemigrationservice>=1<2:devel/rubygem-aws-sdk-databasemigrationservice \
+		rubygem-aws-sdk-dataexchange>=1<2:devel/rubygem-aws-sdk-dataexchange \
 		rubygem-aws-sdk-datapipeline>=1<2:devel/rubygem-aws-sdk-datapipeline \
 		rubygem-aws-sdk-datasync>=1<2:devel/rubygem-aws-sdk-datasync \
 		rubygem-aws-sdk-dax>=1<2:devel/rubygem-aws-sdk-dax \
@@ -124,6 +126,7 @@ RUN_DEPENDS=	rubygem-aws-sdk-acm>=1<2:devel/rubygem-aws-sdk-acm \
 		rubygem-aws-sdk-machinelearning>=1<2:devel/rubygem-aws-sdk-machinelearning \
 		rubygem-aws-sdk-macie>=1<2:devel/rubygem-aws-sdk-macie \
 		rubygem-aws-sdk-managedblockchain>=1<2:devel/rubygem-aws-sdk-managedblockchain \
+		rubygem-aws-sdk-marketplacecatalog>=1<2:devel/rubygem-aws-sdk-marketplacecatalog \
 		rubygem-aws-sdk-marketplacecommerceanalytics>=1<2:devel/rubygem-aws-sdk-marketplacecommerceanalytics \
 		rubygem-aws-sdk-marketplaceentitlementservice>=1<2:devel/rubygem-aws-sdk-marketplaceentitlementservice \
 		rubygem-aws-sdk-marketplacemetering>=1<2:devel/rubygem-aws-sdk-marketplacemetering \
@@ -170,6 +173,7 @@ RUN_DEPENDS=	rubygem-aws-sdk-acm>=1<2:devel/rubygem-aws-sdk-acm \
 		rubygem-aws-sdk-s3control>=1<2:devel/rubygem-aws-sdk-s3control \
 		rubygem-aws-sdk-sagemaker>=1<2:devel/rubygem-aws-sdk-sagemaker \
 		rubygem-aws-sdk-sagemakerruntime>=1<2:devel/rubygem-aws-sdk-sagemakerruntime \
+		rubygem-aws-sdk-savingsplans>=1<2:devel/rubygem-aws-sdk-savingsplans \
 		rubygem-aws-sdk-secretsmanager>=1<2:devel/rubygem-aws-sdk-secretsmanager \
 		rubygem-aws-sdk-securityhub>=1<2:devel/rubygem-aws-sdk-securityhub \
 		rubygem-aws-sdk-serverlessapplicationrepository>=1<2:devel/rubygem-aws-sdk-serverlessapplicationrepository \
@@ -177,6 +181,7 @@ RUN_DEPENDS=	rubygem-aws-sdk-acm>=1<2:devel/rubygem-aws-sdk-acm \
 		rubygem-aws-sdk-servicediscovery>=1<2:devel/rubygem-aws-sdk-servicediscovery \
 		rubygem-aws-sdk-servicequotas>=1<2:devel/rubygem-aws-sdk-servicequotas \
 		rubygem-aws-sdk-ses>=1<2:devel/rubygem-aws-sdk-ses \
+		rubygem-aws-sdk-sesv2>=1<2:devel/rubygem-aws-sdk-sesv2 \
 		rubygem-aws-sdk-shield>=1<2:devel/rubygem-aws-sdk-shield \
 		rubygem-aws-sdk-signer>=1<2:devel/rubygem-aws-sdk-signer \
 		rubygem-aws-sdk-simpledb>=1<2:devel/rubygem-aws-sdk-simpledb \
@@ -185,6 +190,8 @@ RUN_DEPENDS=	rubygem-aws-sdk-acm>=1<2:devel/rubygem-aws-sdk-acm \
 		rubygem-aws-sdk-sns>=1<2:devel/rubygem-aws-sdk-sns \
 		rubygem-aws-sdk-sqs>=1<2:devel/rubygem-aws-sdk-sqs \
 		rubygem-aws-sdk-ssm>=1<2:devel/rubygem-aws-sdk-ssm \
+		rubygem-aws-sdk-sso>=1<2:devel/rubygem-aws-sdk-sso \
+		rubygem-aws-sdk-ssooidc>=1<2:devel/rubygem-aws-sdk-ssooidc \
 		rubygem-aws-sdk-states>=1<2:devel/rubygem-aws-sdk-states \
 		rubygem-aws-sdk-storagegateway>=1<2:devel/rubygem-aws-sdk-storagegateway \
 		rubygem-aws-sdk-support>=1<2:devel/rubygem-aws-sdk-support \
