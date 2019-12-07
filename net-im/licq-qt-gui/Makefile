@@ -18,15 +18,15 @@ LIB_DEPENDS=	libboost_regex.so:devel/boost-libs
 RUN_DEPENDS=	licq:${LICQ_PORT} \
 		${LOCALBASE}/lib/licq/protocol_icq.so:${LICQ_PORT}-icq
 
+USES=		cmake qt:5 xorg
 USE_XORG=	x11 xext ice xscrnsaver sm
-USES=		cmake qt:5
 USE_QT=		buildtools_build qmake_build linguisttools_build core \
 		xml gui network dbus svg widgets
 USE_GITHUB=	yes
 GH_ACCOUNT=	licq-im
 GH_PROJECT=	licq
 GH_TAGNAME=	f271d55
-WRKSRC=		${WRKDIR}/${GH_PROJECT}-${GH_TAGNAME}/${PORTNAME}
+WRKSRC_SUBDIR=	${PORTNAME}
 CMAKE_ARGS+=	-DWITH_QT5:BOOL=ON
 
 OPTIONS_DEFINE=	HUNSPELL
