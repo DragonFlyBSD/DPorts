@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/sysutils/munin-node/plugins/zfs_compress 419615 2016-08-04 14:26:56Z mat $
+# $FreeBSD$
 
 set -e
 set -u
