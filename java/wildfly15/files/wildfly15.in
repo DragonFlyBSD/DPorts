@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 # %%APP_SHORTNAME%% startup script.
-# $FreeBSD: head/java/wildfly15/files/wildfly15.in 491476 2019-01-28 11:37:00Z pi $
+# $FreeBSD$
 #
 
 # PROVIDE: %%APP_SHORTNAME%%
