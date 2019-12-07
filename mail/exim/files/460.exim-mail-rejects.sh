@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/mail/exim/files/460.exim-mail-rejects.sh 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD$
 #
 # Check for rejected mail
 # Log lines that end with ' : IGNORE' will not be reported
