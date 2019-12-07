@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/dns/ddns/files/ddns_client.in 322124 2013-07-01 12:53:39Z culot $
+# $FreeBSD$
 #
 # PROVIDE: ddns_client
 # REQUIRE: DAEMON
