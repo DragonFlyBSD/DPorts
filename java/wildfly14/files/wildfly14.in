@@ -2,7 +2,7 @@
 #
 # %%APP_SHORTNAME%% startup script.
 #
-# $FreeBSD: head/java/wildfly14/files/wildfly14.in 483171 2018-10-27 19:33:56Z pi $
+# $FreeBSD$
 
 # PROVIDE: %%APP_SHORTNAME%%
 # REQUIRE: NETWORKING SERVERS
