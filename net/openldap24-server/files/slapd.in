@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net/openldap24-server/files/slapd.in 476803 2018-08-10 02:57:05Z cy $
+# $FreeBSD$
 #
 
 # PROVIDE: slapd
