@@ -1,5 +1,5 @@
 #!/bin/sh
 #
-# $FreeBSD: head/graphics/jalbum/files/jalbum.sh.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD$
 
 cd "%%DATADIR%%" && "%%LOCALBASE%%/bin/java" -jar JAlbum.jar "$@"
