@@ -3,7 +3,7 @@
 
 PORTNAME=	inkscape
 PORTVERSION=	0.92.4
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	graphics gnome
 MASTER_SITES=	https://media.inkscape.org/dl/resources/file/
 
@@ -35,7 +35,7 @@ RUN_DEPENDS=	${PYNUMPY} \
 
 USES=		compiler:c++11-lib cmake cpe desktop-file-utils gnome \
 		iconv:wchar_t jpeg pathfix pkgconfig python:2.7 \
-		shebangfix tar:bzip2
+		shebangfix tar:bzip2 xorg
 USE_GNOME=	gtkmm24 libxml2 libxslt
 USE_XORG=	x11
 INSTALLS_ICONS=	yes
