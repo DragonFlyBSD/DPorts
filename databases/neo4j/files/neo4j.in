@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/databases/neo4j/files/neo4j.in 461285 2018-02-09 02:40:11Z jonathan $
+# $FreeBSD$
 #
 # PROVIDE: neo4j
 # REQUIRE: DAEMON

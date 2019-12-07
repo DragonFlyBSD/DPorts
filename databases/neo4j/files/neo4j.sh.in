@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 #
-# $FreeBSD: head/databases/neo4j/files/neo4j.sh.in 447753 2017-08-11 10:28:28Z jonathan $
+# $FreeBSD$
 
 exec %%PREFIX%%/bin/$(basename $0) ${1+"$@"}
