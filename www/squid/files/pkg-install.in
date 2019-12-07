@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/www/squid/files/pkg-install.in 368307 2014-09-16 12:29:19Z marino $
+# $FreeBSD$
 #
 
 PATH=/bin:/usr/bin:/usr/sbin
