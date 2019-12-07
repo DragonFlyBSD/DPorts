@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/net/exaddos/files/exaddos.in 345266 2014-02-20 21:06:43Z zi $
+# $FreeBSD$
 #
 # PROVIDE: exaddos
 # REQUIRE: LOGIN
