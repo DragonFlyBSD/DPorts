@@ -2,7 +2,7 @@
 
 /* * Last edited: Sep 17 14:39 1991 (mallet) */
 /*
- * $FreeBSD: head/mail/xpbiff/files/LocPixmap.c 340872 2014-01-24 00:14:07Z mat $
+ * $FreeBSD$
  *
  * Copyright 1991 Lionel Mallet
  *
