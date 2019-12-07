@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/games/cockatrice/files/servatrice.in 470321 2018-05-18 19:35:50Z sbruno $
+# $FreeBSD$
 #
 
 # PROVIDE: servatrice
