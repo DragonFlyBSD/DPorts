@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/mail/davmail/files/davmail.in 443886 2017-06-19 17:25:57Z rodrigo $
+# $FreeBSD$
 #
 # PROVIDE: davmail
 # REQUIRE: LOGIN
