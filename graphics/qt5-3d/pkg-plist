@@ -705,6 +705,8 @@
 %%QT_INCDIR%%/Qt3DRender/%%FULLVER%%/Qt3DRender/private/dispatchcompute_p.h
 %%QT_INCDIR%%/Qt3DRender/%%FULLVER%%/Qt3DRender/private/effect_p.h
 %%QT_INCDIR%%/Qt3DRender/%%FULLVER%%/Qt3DRender/private/entity_p.h
+%%QT_INCDIR%%/Qt3DRender/%%FULLVER%%/Qt3DRender/private/entityaccumulator_p.h
+%%QT_INCDIR%%/Qt3DRender/%%FULLVER%%/Qt3DRender/private/entityvisitor_p.h
 %%QT_INCDIR%%/Qt3DRender/%%FULLVER%%/Qt3DRender/private/environmentlight_p.h
 %%QT_INCDIR%%/Qt3DRender/%%FULLVER%%/Qt3DRender/private/expandboundingvolumejob_p.h
 %%QT_INCDIR%%/Qt3DRender/%%FULLVER%%/Qt3DRender/private/filtercompatibletechniquejob_p.h
@@ -1302,6 +1304,7 @@
 %%QT_PLUGINDIR%%/renderplugins/libscene2d.so
 %%DEBUG%%%%QT_PLUGINDIR%%/renderplugins/libscene2d.so.debug
 %%QT_PLUGINDIR%%/sceneparsers/libassimpsceneimport.so
+%%DEBUG%%%%QT_PLUGINDIR%%/sceneparsers/libassimpsceneimport.so.debug
 %%QT_PLUGINDIR%%/sceneparsers/libgltfsceneexport.so
 %%DEBUG%%%%QT_PLUGINDIR%%/sceneparsers/libgltfsceneexport.so.debug
 %%QT_PLUGINDIR%%/sceneparsers/libgltfsceneimport.so
