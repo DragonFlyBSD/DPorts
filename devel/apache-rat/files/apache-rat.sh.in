@@ -2,7 +2,7 @@
 #
 # FreeBSD-specific script for Apache Rat.
 #
-# $FreeBSD: head/devel/apache-rat/files/apache-rat.sh.in 421130 2016-08-30 19:49:27Z cy $
+# $FreeBSD$
 #
 # See: http://creadur.apache.org/rat/apache-rat/
 
