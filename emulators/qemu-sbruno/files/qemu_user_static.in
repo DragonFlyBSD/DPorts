@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/emulators/qemu-sbruno/files/qemu_user_static.in 507618 2019-07-30 02:46:22Z sbruno $
+# $FreeBSD$
 #
 
 # PROVIDE: %%NAME%%
