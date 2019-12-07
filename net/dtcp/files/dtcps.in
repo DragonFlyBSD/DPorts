@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net/dtcp/files/dtcps.in 354582 2014-05-19 19:04:19Z ume $
+# $FreeBSD$
 #
 
 # PROVIDE: dtcps
