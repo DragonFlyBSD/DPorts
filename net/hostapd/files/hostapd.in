@@ -21,7 +21,7 @@ load_rc_config hostapd
 run_rc_command "$1"
 #!/bin/sh
 #
-# $FreeBSD: head/net/hostapd/files/hostapd.in 504433 2019-06-17 20:15:40Z cy $
+# $FreeBSD$
 #
 
 # PROVIDE: hostapd
