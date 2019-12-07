@@ -3,7 +3,7 @@
 # ex:ts=4:sw=4:noet
 #-*- mode: makefile; tab-width: 4; -*-
 #
-# $FreeBSD: head/mail/spamd/pkg-deinstall 449108 2017-09-01 22:03:04Z adamw $
+# $FreeBSD$
 
 #if [ "$2" = "DEINSTALL" ]; then
 # Disabled until pkg runs DEINSTALL before INSTALL in upgrades
