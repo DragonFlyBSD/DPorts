@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/sysutils/webmin/files/webmin.in 386759 2015-05-19 09:57:25Z olgeni $
+# $FreeBSD$
 #
 # PROVIDE: webmin
 # REQUIRE: LOGIN
