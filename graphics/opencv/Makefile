@@ -269,6 +269,7 @@ OPENGL_LIB_DEPENDS=	${PORT_OPTIONS:MGTK2:C,.+,libgtkglext-x11-1.0.so:x11-toolkit
 
 # GUI
 
+GTK2_USES=		gnome
 GTK2_USE=		GNOME=cairo,gdkpixbuf2,gtk20
 GTK2_CMAKE_BOOL=	WITH_GTK
 GTK2_LIB_DEPENDS=	libfreetype.so:print/freetype2 \
@@ -287,7 +288,7 @@ LIB_DEPENDS+=	libopencv_core.so:graphics/opencv-core \
 		libopencv_ml.so:graphics/opencv
 BUILD_DEPENDS+=	${PYNUMPY}
 RUN_DEPENDS+=	${PYNUMPY}
-USES+=		python:2.7
+USES+=		python
 USE_PYTHON=	flavors
 CMAKE_ARGS+=	-DBUILD_opencv_python${PYTHON_MAJOR_VER}:BOOL=ON
 . for module in apps java stitching superres videostab
