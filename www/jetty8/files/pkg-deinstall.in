@@ -8,7 +8,7 @@
 # * Checks if the 'www' user exists. If it does, then it displays
 #   a message.
 #
-# $FreeBSD: head/www/jetty8/files/pkg-deinstall.in 340719 2014-01-22 15:52:06Z mat $
+# $FreeBSD$
 #
 # Borrowed from the jakarta-tomcat port
 #

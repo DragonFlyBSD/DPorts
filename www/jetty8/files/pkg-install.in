@@ -3,7 +3,7 @@
 # Checks if the requested user and group exist. If they don't, then
 # an attempt is made to create both.
 #
-# $FreeBSD: head/www/jetty8/files/pkg-install.in 340719 2014-01-22 15:52:06Z mat $
+# $FreeBSD$
 #
 # Borrowed from the jakarta-tomcat port
 #

@@ -4,7 +4,7 @@
 # Author:        Jean-Baptiste Quenot <jb.quenot@caraldi.com>
 # Purpose:       Manage resin pid file and log files
 # Date Created:  2005-01-21 15:43:19
-# Revision:      $FreeBSD: head/www/jetty8/files/jettyctl.in 310487 2013-01-16 10:21:51Z olgeni $
+# Revision:      $FreeBSD$
 ################################################################################
 # Copyright (c) 2004, Jean-Baptiste Quenot <jb.quenot@caraldi.com>
 # All rights reserved.

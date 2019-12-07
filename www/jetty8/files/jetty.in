@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/www/jetty8/files/jetty.in 403154 2015-12-06 20:12:58Z olgeni $
+# $FreeBSD$
 #
 
 # PROVIDE: %%APP_NAME%%
