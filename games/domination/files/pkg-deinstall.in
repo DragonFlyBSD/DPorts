@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/games/domination/files/pkg-deinstall.in 348910 2014-03-24 00:05:09Z nemysis $
+# $FreeBSD$
 #
 
 if [ "$2" = "POST-DEINSTALL" ]; then
