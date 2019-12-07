@@ -3,7 +3,7 @@
 # c2mdoc -- Front-end which abuses the cproto parser to spit out
 #           mdoc(7) format prototypes for use in FreeBSD documentation.
 #
-# $FreeBSD: head/devel/c2mdoc/files/c2mdoc 102727 2004-03-02 12:02:15Z bms $
+# $FreeBSD$
 #
 
 AWKSCRIPT="%%LIBEXECDIR%%/c2mdoc.awk"
