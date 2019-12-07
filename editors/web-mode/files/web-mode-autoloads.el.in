@@ -1,5 +1,5 @@
 ;; -*- lisp -*-
-;; $FreeBSD: head/editors/web-mode/files/web-mode-autoloads.el.in 429963 2016-12-30 10:19:09Z hrs $
+;; $FreeBSD$
 ;;
 (if (not (fboundp 'normal-top-level-add-subdirs-to-load-path))
     (setq load-path (append '(
