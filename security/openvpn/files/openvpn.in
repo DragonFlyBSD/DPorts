@@ -8,7 +8,7 @@
 # and Vasil Dimov
 # softrestart feature suggested by Nick Hibma
 #
-# $FreeBSD: head/security/openvpn/files/openvpn.in 420825 2016-08-24 22:33:25Z mandree $
+# $FreeBSD$
 # 
 # This program is free software; you can redistribute it and/or modify it under
 # the terms of the GNU General Public License as published by the Free Software
