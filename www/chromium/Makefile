@@ -1,5 +1,5 @@
 # Created by: Florent Thoumie <flz@FreeBSD.org>
-# $FreeBSD: head/www/chromium/Makefile 504582 2019-06-19 17:25:17Z cpm $
+# $FreeBSD$
 
 PORTNAME=	chromium
 PORTVERSION=	78.0.3904.108
@@ -276,7 +276,7 @@ do-configure:
 	${LN} -sf ${LOCALBASE}/bin/node ${WRKSRC}/third_party/node/freebsd/node-freebsd-x64/bin/node
 
 	# Setup java dependency on amd64 and i386
-.if ${ARCH} == amd64 || ${ARCH} == i386
+.if ${ARCH} == x86_64 || ${ARCH} == i386
 	@${MKDIR} ${WRKDIR}/bin
 	${LN} -sf ${LOCALBASE}/openjdk8/bin/java ${WRKDIR}/bin/java
 .endif
