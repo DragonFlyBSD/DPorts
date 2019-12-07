@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/devel/zookeeper/files/zkServer.sh.in 405460 2016-01-07 15:42:56Z skreuzer $
+# $FreeBSD$
 
 zookeeper_log4jpropfile="file:%%ETCDIR%%/log4j.properties"
 zookeeper_rootlogger="WARN,CONSOLE"
