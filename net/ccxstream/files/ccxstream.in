@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net/ccxstream/files/ccxstream.in 458515 2018-01-09 07:55:05Z mat $
+# $FreeBSD$
 #
 
 # PROVIDE: ccxstream
