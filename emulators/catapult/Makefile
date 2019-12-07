@@ -8,7 +8,7 @@ CATEGORIES=	emulators
 MASTER_SITES=	https://github.com/openMSX/openMSX/releases/download/RELEASE_${PORTVERSION:S/./_/g}/
 DISTNAME=	openmsx-${PORTNAME}-${PORTVERSION}
 
-MAINTAINER=	johans@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GUI for openMSX
 
 LICENSE=	GPLv2
@@ -18,7 +18,7 @@ RUN_DEPENDS=	openmsx:emulators/openmsx
 
 OPTIONS_DEFINE=	DEBUG DOCS
 
-USES=		gmake pkgconfig python:2.7,build
+USES=		gmake gnome pkgconfig python:2.7,build
 USE_GCC=	yes
 USE_CXXSTD=	gnu++0x
 USE_GNOME=	gtk20 libxml2
