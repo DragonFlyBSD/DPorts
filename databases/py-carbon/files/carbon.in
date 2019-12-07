@@ -1,6 +1,6 @@
 #!/bin/sh
 # 
-# $FreeBSD: head/databases/py-carbon/files/carbon.in 438786 2017-04-18 15:56:03Z swills $
+# $FreeBSD$
 # 
 
 # PROVIDE: carbon
