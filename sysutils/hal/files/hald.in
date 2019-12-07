@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/sysutils/hal/files/hald.in 420769 2016-08-24 07:49:40Z kevlo $
+# $FreeBSD$
 #
 # PROVIDE: hald
 # REQUIRE: DAEMON devd dbus moused webcamd
