@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/net/syncthing/files/syncthing-relaypoolsrv.in 470134 2018-05-16 17:26:15Z swills $
+# $FreeBSD$
 #
 # PROVIDE: syncthingrelaypoolsrv
 # REQUIRE: DAEMON
