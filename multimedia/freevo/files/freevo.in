@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/multimedia/freevo/files/freevo.in 455210 2017-11-30 15:50:30Z mat $
+# $FreeBSD$
 #
 
 # PROVIDE: freevo
