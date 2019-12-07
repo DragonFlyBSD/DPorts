@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/audio/musicpd/files/musicpd.in 396924 2015-09-14 18:46:25Z crees $
+# $FreeBSD$
 #
 # PROVIDE: musicpd
 # REQUIRE: mixer LOGIN avahi_daemon oss
