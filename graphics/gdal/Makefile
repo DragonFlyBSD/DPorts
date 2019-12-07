@@ -3,7 +3,7 @@
 
 PORTNAME=	gdal
 PORTVERSION=	2.4.2
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	graphics geography
 MASTER_SITES=	https://download.osgeo.org/gdal/${PORTVERSION}/ \
 		LOCAL/sunpoet
@@ -14,6 +14,8 @@ COMMENT=	Translator library for raster geospatial data formats
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.TXT
 
+BUILD_DEPENDS=	libgeotiff>=1.5.0:graphics/libgeotiff \
+		proj>=6:graphics/proj
 LIB_DEPENDS=	libgeotiff.so:graphics/libgeotiff \
 		libgif.so:graphics/giflib \
 		libjson-c.so:devel/json-c \
