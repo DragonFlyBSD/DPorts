@@ -3,7 +3,7 @@
 #	pre-configure script for Elm port to FreeBSD 2.0
 #
 #	Stolen from the elm-ME port (/usr/ports/mail/elm/)
-# $FreeBSD: head/mail/elm/scripts/pre-configure 408147 2016-02-05 09:52:53Z marino $
+# $FreeBSD$
 
 PortsDir=$PORTSDIR
   CurDir=$CURDIR
