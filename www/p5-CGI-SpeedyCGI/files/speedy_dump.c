@@ -4,7 +4,7 @@
  * You can redistribute it and/or modify it under the same terms as
  * CGI::SpeedyCGI itself.
  *
- * $FreeBSD: head/www/p5-CGI-SpeedyCGI/files/speedy_dump.c 340872 2014-01-24 00:14:07Z mat $
+ * $FreeBSD$
  *
  */
 
