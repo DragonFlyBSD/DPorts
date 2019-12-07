@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/japanese/font-rounded-mgenplus/files/pkg-install.in 464597 2018-03-15 15:54:14Z ume $
+# $FreeBSD$
 
 catfontsdir()
 {
