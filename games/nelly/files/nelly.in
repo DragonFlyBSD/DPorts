@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/games/nelly/files/nelly.in 335903 2013-12-08 15:14:04Z nemysis $
+# $FreeBSD$
 #
 
 cd "%%DATADIR%%"
