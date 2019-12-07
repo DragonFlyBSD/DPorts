@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/games/pythonchess/files/pythonchess.in 354414 2014-05-18 12:28:39Z nemysis $
+# $FreeBSD$
 #
 
 cd "%%DATADIR%%"
