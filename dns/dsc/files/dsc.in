@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/dns/dsc/files/dsc.in 478274 2018-08-28 00:45:52Z leres $
+# $FreeBSD$
 #
 
 # PROVIDE: dsc
