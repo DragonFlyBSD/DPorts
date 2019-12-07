@@ -2,7 +2,7 @@
 
 PORTNAME=	qbs
 DISTVERSIONPREFIX=	src-
-DISTVERSION=	1.14.0
+DISTVERSION=	1.14.1
 CATEGORIES=	devel
 MASTER_SITES=	QT/official_releases/${PORTNAME}/${PORTVERSION}
 DIST_SUBDIR=	KDE/Qt/qbs
@@ -13,7 +13,7 @@ COMMENT=	Qbs Build Suite
 LICENSE=	GPLv3 LGPL21
 LICENSE_COMB=	dual
 
-USES=		compiler:c++11-lib python:run qmake:outsource qt:5 shebangfix
+USES=		compiler:c++11-lib gl python:run qmake:outsource qt:5 shebangfix
 USE_GL=		gl
 USE_LDCONFIG=	yes
 USE_QT=		buildtools_build core concurrent gui network script testlib \
