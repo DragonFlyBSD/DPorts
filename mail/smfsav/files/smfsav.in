@@ -6,7 +6,7 @@
 
 # Written for FreeBSD.
 #
-# $FreeBSD: head/mail/smfsav/files/smfsav.in 505489 2019-06-30 20:48:49Z swills $
+# $FreeBSD$
 #
 # Copy this file into /usr/local/etc/rc.d as /usr/local/etc/rc.d/smfsav
 # Add this line to /etc/rc.conf:
