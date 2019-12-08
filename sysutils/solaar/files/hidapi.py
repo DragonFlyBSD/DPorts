@@ -1,4 +1,4 @@
-# $FreeBSD: head/sysutils/solaar/files/hidapi.py 437119 2017-03-28 12:00:09Z tobik $
+# $FreeBSD$
 # This is based on previous support for libhidapi which was dropped in
 # upstream commit f5d2eba.
 import ctypes as _C
