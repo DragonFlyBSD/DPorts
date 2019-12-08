@@ -1,4 +1,4 @@
-## $FreeBSD: head/www/mod_security/files/280_mod_security.conf.sample.in 413465 2016-04-16 17:29:07Z ohauer $
+## $FreeBSD$
 ## vim: set filetype=apache:
 ##
 ## module file for mod_security
