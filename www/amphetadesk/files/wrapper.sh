@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/www/amphetadesk/files/wrapper.sh 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD$
 #
 # Under a BSDL license. Copyright 2005. Mario S F Ferreira <lioux@FreeBSD.org>
 
