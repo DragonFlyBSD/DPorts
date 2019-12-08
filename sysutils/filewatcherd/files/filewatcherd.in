@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/sysutils/filewatcherd/files/filewatcherd.in 325267 2013-08-23 13:52:39Z wg $
+# $FreeBSD$
 #
 # PROVIDE: filewatcherd
 # REQUIRE: DAEMON
