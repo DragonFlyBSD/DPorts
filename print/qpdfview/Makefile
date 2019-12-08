@@ -3,6 +3,7 @@
 
 PORTNAME=	qpdfview
 DISTVERSION=	0.4.18
+PORTREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	https://launchpadlibrarian.net/294276875/ \
 		https://launchpad.net/${PORTNAME}/trunk/${DISTVERSION}/+download/
@@ -15,7 +16,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libpoppler-qt5.so:graphics/poppler-qt5
 
-USES+=		compiler:c++11-lang desktop-file-utils gl pkgconfig qmake qt:5
+USES=		compiler:c++11-lang desktop-file-utils gl pkgconfig qmake qt:5
 USE_LDCONFIG=	yes
 USE_QT=		buildtools_build concurrent core dbus gui imageformats linguisttools printsupport sql sql-sqlite3 svg widgets xml
 USE_GL=		gl
