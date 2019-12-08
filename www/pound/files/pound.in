@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/www/pound/files/pound.in 383730 2015-04-10 14:31:00Z danfe $
+# $FreeBSD$
 #
 
 # PROVIDE: %%NAME%%
