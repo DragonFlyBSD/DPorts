@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/sysutils/apcupsd/files/apcupsd.in 443914 2017-06-19 22:45:58Z dbaio $
+# $FreeBSD$
 #
 # PROVIDE: apcupsd
 # REQUIRE: SERVERS
