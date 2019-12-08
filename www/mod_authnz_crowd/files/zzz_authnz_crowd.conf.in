@@ -1,4 +1,4 @@
-# $FreeBSD: head/www/mod_authnz_crowd/files/zzz_authnz_crowd.conf.in 324938 2013-08-18 21:15:26Z ohauer $
+# $FreeBSD$
 
 <IfModule dav_svn_module>
 LoadModule authnz_crowd_module %%APACHEMODDIR%%/mod_authnz_crowd.so
