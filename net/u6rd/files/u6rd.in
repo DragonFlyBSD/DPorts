@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net/u6rd/files/u6rd.in 451625 2017-10-09 17:20:00Z ume $
+# $FreeBSD$
 #
 
 # PROVIDE: u6rd
