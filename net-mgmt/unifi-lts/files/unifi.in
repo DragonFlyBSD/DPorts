@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD: head/net-mgmt/unifi-lts/files/unifi.in 433676 2017-02-08 21:49:19Z feld $
+# $FreeBSD$
 #
 
 # PROVIDE: unifi
