@@ -1,13 +1,13 @@
 # $FreeBSD$
 
 PORTNAME=	Rex
-PORTVERSION=	1.4.1
+PORTVERSION=	1.6.0
 CATEGORIES=	sysutils perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:JFRIED
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	az@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Perl framework for automation and systems administration
 
 LICENSE=	APACHE20
