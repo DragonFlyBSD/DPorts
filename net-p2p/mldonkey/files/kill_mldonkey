@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net-p2p/mldonkey/files/kill_mldonkey 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD$
 
 # Copyright (c) 2003
 # Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
