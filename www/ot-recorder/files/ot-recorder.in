@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/www/ot-recorder/files/ot-recorder.in 507690 2019-07-31 01:27:54Z dvl $
+# $FreeBSD$
 #
 # PROVIDE: otrecorder
 # REQUIRE: LOGIN mosquitto hass
