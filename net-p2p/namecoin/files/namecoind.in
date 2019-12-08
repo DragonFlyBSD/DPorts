@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/net-p2p/namecoin/files/namecoind.in 478891 2018-09-03 18:39:51Z rene $
+# $FreeBSD$
 
 # PROVIDE: namecoind
 # REQUIRE: LOGIN cleanvar
