@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/sysutils/phpfpm_exporter/files/phpfpm_exporter.in 462476 2018-02-21 07:49:21Z lwhsu $
+# $FreeBSD$
 #
 # PROVIDE: phpfpm_exporter
 # REQUIRE: LOGIN
