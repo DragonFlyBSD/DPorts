@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/security/openssh-portable/files/openssh.in 397771 2015-09-24 21:54:40Z bdrewery $
+# $FreeBSD$
 #
 # PROVIDE: openssh
 # REQUIRE: DAEMON
