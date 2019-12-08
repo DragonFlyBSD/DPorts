@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $FreeBSD: head/net-mgmt/netmagis-topo/files/toposendd.in 391542 2015-07-08 02:25:27Z pgollucci $
+# $FreeBSD$
 #
 
 # PROVIDE: toposendd
