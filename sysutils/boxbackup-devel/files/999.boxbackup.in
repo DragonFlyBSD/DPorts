@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/sysutils/boxbackup-devel/files/999.boxbackup.in 470559 2018-05-21 16:02:27Z asomers $
+# $FreeBSD$
 #
 # Box Backup monthly store compare
 #
