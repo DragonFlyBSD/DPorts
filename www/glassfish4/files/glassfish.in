@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/www/glassfish4/files/glassfish.in 370937 2014-10-15 17:25:25Z pi $
+# $FreeBSD$
 #
 # PROVIDE: glassfish
 # REQUIRE: LOGIN

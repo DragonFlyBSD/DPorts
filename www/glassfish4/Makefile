@@ -12,7 +12,6 @@ COMMENT=	Reference implementation of the Java EE application server
 
 USES=		zip
 USE_JAVA=	yes
-JAVA_VERSION=	7+
 NO_BUILD=	yes
 
 WRKSRC=		${WRKDIR}/glassfish4
