@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net/xorp/files/xorp.in 346231 2014-02-26 21:54:59Z antoine $
+# $FreeBSD$
 #
 # A sample XORP startup script.
 #
