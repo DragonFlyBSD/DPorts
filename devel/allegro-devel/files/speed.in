@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# # $FreeBSD: head/devel/allegro-devel/files/speed.in 332886 2013-11-05 18:14:56Z nemysis $
+# # $FreeBSD$
 #
 
 cd "%%EXAMPLESDIR%%/demos/speed"
