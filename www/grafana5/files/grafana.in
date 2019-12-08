@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/www/grafana5/files/grafana.in 442509 2017-06-03 16:57:23Z swills $
+# $FreeBSD$
 #
 # PROVIDE: grafana
 # REQUIRE: LOGIN
