@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/net/kea/files/kea.in 515608 2019-10-25 12:46:19Z meta $
+# $FreeBSD$
 #
 # PROVIDE: kea
 # REQUIRE: netif routing
