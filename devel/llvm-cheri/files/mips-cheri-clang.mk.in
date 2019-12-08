@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/llvm-cheri/files/mips-cheri-clang.mk.in 451941 2017-10-13 01:25:39Z brooks $
+# $FreeBSD$
 
 XCC=%%PREFIX%%/llvm%%LLVM_SUFFIX%%/bin/clang
 XCXX=%%PREFIX%%/llvm%%LLVM_SUFFIX%%/bin/clang++
