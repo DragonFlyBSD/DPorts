@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/www/subsonic-standalone/files/subsonic.in 423414 2016-10-06 16:05:47Z jlh $
+# $FreeBSD$
 #
 
 # PROVIDE: subsonic
