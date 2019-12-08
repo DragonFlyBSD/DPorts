@@ -1,6 +1,6 @@
 #!/bin/sh -
 #
-# $FreeBSD: head/sysutils/bsdstats/files/300.statistics.in 438194 2017-04-10 17:57:30Z cpm $
+# $FreeBSD$
 #
 
 #

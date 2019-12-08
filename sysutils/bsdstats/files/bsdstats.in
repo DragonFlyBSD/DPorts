@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/sysutils/bsdstats/files/bsdstats.in 385480 2015-05-05 16:48:14Z riggs $
+# $FreeBSD$
 #
 
 # PROVIDE: bsdstats
