@@ -1,4 +1,4 @@
-$FreeBSD: head/net/openbgpd6/files/COPYING 354184 2014-05-16 01:29:01Z hrs $
+$FreeBSD$
 
 Copyright (c) 2003-2007 Henning Brauer <henning@openbsd.org>
 Copyright (c) 2002 Daniel Hartmeier <dhartmei@openbsd.org>
