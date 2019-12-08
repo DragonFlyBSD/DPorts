@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/x11-wm/lxmed/files/lxmed-root.in 348945 2014-03-24 11:58:01Z nemysis $
+# $FreeBSD$
 #
 
 cd "%%DATADIR%%" && exec pc-su "${@}"
