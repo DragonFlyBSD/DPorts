@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/net/serviio/files/serviio.in 371092 2014-10-18 06:28:39Z netchild $
+# $FreeBSD$
 #
 # PROVIDE: serviio
 # REQUIRE: LOGIN
