@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD: head/security/ruby-bitwarden/files/rubywarden-api.in 495292 2019-03-10 13:07:06Z mr $
+# $FreeBSD$
 #
 
 # PROVIDE: rubywarden-api
