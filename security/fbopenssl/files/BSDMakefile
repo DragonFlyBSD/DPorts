@@ -1,4 +1,4 @@
-# $FreeBSD: head/security/fbopenssl/files/BSDMakefile 361226 2014-07-08 12:26:03Z pawel $
+# $FreeBSD$
 
 PREFIX?=	/usr/local
 OPENSSLLIB?=	/usr/lib
