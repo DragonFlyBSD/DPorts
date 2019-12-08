@@ -1,7 +1,7 @@
 #!/bin/sh
 #-*- mode: makefile; tab-width: 4; -*-
 # ex:ts=4
-# $FreeBSD: head/net-mgmt/nagvis/files/pkg-install.in 340719 2014-01-22 15:52:06Z mat $
+# $FreeBSD$
 
 # Set strict file and directory permissions.
 # Idea taken from nagvis install.sh
