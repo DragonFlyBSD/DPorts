@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/sysutils/asusoled/files/oled_clock.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD$
 #
 # PROVIDE: oled_clock
 # REQUIRE: DAEMON
