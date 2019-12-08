@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/www/py-kallithea/files/kallithea.in 428440 2016-12-12 20:58:11Z rene $
+# $FreeBSD$
 #
 
 # PROVIDE: kallithea
