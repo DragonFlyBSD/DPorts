@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/www/tusd/files/tusd.in 512760 2019-09-24 22:15:08Z mm $
+# $FreeBSD$
 
 # PROVIDE: tusd
 # REQUIRE: LOGIN
