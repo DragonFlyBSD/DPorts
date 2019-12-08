@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net/nss-pam-ldapd/files/nslcd.in 479439 2018-09-10 16:30:50Z zi $
+# $FreeBSD$
 #
 # PROVIDE: nslcd
 # REQUIRE: NETWORKING slapd ldconfig resolv kstart
