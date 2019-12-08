@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/www/py-graphite-api/files/graphiteapi.in 476828 2018-08-10 11:40:28Z dch $
+# $FreeBSD$
 #
 
 # PROVIDE: graphiteapi
