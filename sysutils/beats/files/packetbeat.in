@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/sysutils/beats/files/packetbeat.in 470949 2018-05-26 20:30:03Z girgen $
+# $FreeBSD$
 
 # PROVIDE: packetbeat
 # REQUIRE: DAEMON
