@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/sysutils/immortal/files/immortaldir.in 452970 2017-10-27 10:39:40Z olgeni $
+# $FreeBSD$
 #
 # PROVIDE: immortaldir
 # REQUIRE: LOGIN
