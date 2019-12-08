@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/sysutils/keyboard-daemon/files/keyboard_daemon.in 319048 2013-05-25 12:58:45Z crees $
+# $FreeBSD$
 #
 # PROVIDE: keyboard_daemon
 # REQUIRE: LOGIN
