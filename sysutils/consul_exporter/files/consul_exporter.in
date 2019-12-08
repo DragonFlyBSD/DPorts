@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/sysutils/consul_exporter/files/consul_exporter.in 449650 2017-09-11 14:40:12Z swills $
+# $FreeBSD$
 #
 # PROVIDE: consul_exporter
 # REQUIRE: LOGIN
