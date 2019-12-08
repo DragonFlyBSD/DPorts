@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net-mgmt/snmptt/files/snmptt.in 439381 2017-04-25 13:10:30Z garga $
+# $FreeBSD$
 #
 
 # PROVIDE: snmptt
