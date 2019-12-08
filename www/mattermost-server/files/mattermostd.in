@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/www/mattermost-server/files/mattermostd.in 514522 2019-10-15 13:09:38Z swills $
+# $FreeBSD$
 
 # PROVIDE: mattermostd
 # REQUIRE: DAEMON NETWORKING
