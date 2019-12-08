@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/security/vault/files/vault.in 474395 2018-07-10 17:49:55Z swills $
+# $FreeBSD$
 #
 # PROVIDE: vault
 # REQUIRE: DAEMON
