@@ -2,7 +2,7 @@
 #
 # Author: Mark Felder <feld@FreeBSd.org>
 #
-# $FreeBSD: head/www/miniflux/files/miniflux.in 508736 2019-08-12 14:04:08Z krion $
+# $FreeBSD$
 #
 
 # PROVIDE: miniflux
