@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/www/apt-cacher-ng/files/apt_cacher_ng.in 488298 2018-12-25 08:03:11Z tobik $
+# $FreeBSD$
 #
 # PROVIDE: apt_cacher_ng
 # REQUIRE: LOGIN
