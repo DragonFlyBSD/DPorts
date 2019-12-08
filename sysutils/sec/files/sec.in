@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/sysutils/sec/files/sec.in 467341 2018-04-14 21:15:23Z leres $
+# $FreeBSD$
 #
 # PROVIDE: sec
 # REQUIRE: LOGIN
