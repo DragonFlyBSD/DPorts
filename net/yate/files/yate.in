@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net/yate/files/yate.in 366208 2014-08-26 11:48:55Z wg $
+# $FreeBSD$
 #
 # PROVIDE: yate
 # REQUIRE: DAEMON
