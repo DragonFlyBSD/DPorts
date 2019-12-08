@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/sysutils/usermin/files/usermin.in 386760 2015-05-19 09:58:25Z olgeni $
+# $FreeBSD$
 #
 # PROVIDE: usermin
 # REQUIRE: LOGIN
