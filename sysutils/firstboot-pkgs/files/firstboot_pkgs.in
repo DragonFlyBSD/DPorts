@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/sysutils/firstboot-pkgs/files/firstboot_pkgs.in 432859 2017-01-30 17:48:06Z brd $
+# $FreeBSD$
 # KEYWORD: firstboot
 # PROVIDE: firstboot_pkgs
 # REQUIRE: NETWORKING
