@@ -4,7 +4,7 @@
 # Date created:                        13 July 2003
 # Whom:                                KAMIYA Satosi  <mimoriso@gmail.com>
 #
-# $FreeBSD: head/www/tdiary/files/tdiaryinst.rb.in 449671 2017-09-12 05:21:09Z pi $
+# $FreeBSD$
 #
 
 require 'getoptlong'
