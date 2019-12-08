@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/security/courier-authlib/files/courier-authdaemond.in 368413 2014-09-17 19:37:26Z oliver $
+# $FreeBSD$
 #
 # PROVIDE: courier_authdaemond
 # REQUIRE: DAEMON mysql ldconfig
