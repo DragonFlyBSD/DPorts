@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/x11/sddm/files/sddm.in 479245 2018-09-08 10:28:11Z adridg $
+# $FreeBSD$
 #
 # PROVIDE: sddm
 # REQUIRE: LOGIN cleanvar moused syscons dbus hald
