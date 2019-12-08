@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/security/morphis/files/morphis-service.in 433672 2017-02-08 20:39:14Z matthew $
+# $FreeBSD$
 #
 
 # Copyright (C) 2016 by Yuri Victorovich. All rights reserved.
