@@ -1,6 +1,6 @@
 #!/bin/sh
 # 
-# $FreeBSD: head/net-mgmt/unbound_exporter/files/unbound_exporter.in 446121 2017-07-17 22:26:33Z bsam $
+# $FreeBSD$
 
 # PROVIDE: unbound_exporter
 # REQUIRE: LOGIN
