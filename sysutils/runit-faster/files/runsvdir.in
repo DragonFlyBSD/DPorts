@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/sysutils/runit-faster/files/runsvdir.in 465960 2018-03-30 11:09:45Z tobik $
+# $FreeBSD$
 #
 # PROVIDE: runsvdir
 # BEFORE:  SERVERS
