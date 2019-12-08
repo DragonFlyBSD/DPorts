@@ -1,4 +1,4 @@
-## $FreeBSD: head/www/mod_auth_gssapi/files/240_mod_auth_gssapi.conf.sample.in 421727 2016-09-10 19:10:08Z pi $
+## $FreeBSD$
 ## vim: set filetype=apache:
 ##
 ## module file for mod_auth_gssapi
