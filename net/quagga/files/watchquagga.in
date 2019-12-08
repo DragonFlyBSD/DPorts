@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net/quagga/files/watchquagga.in 369831 2014-10-02 15:44:03Z mat $
+# $FreeBSD$
 #
 
 # PROVIDE: watchquagga
