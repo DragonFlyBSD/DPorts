@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net-mgmt/nsca-ng/files/nsca-ng.in 384593 2015-04-23 15:37:59Z mat $
+# $FreeBSD$
 #
 
 # PROVIDE: nsca-ng
