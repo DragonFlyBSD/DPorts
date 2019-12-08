@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/www/dhttpd/files/dhttpd.in 447117 2017-08-02 16:09:43Z lme $
+# $FreeBSD$
 #
 # PROVIDE: dhttpd
 # REQUIRE: DAEMON
