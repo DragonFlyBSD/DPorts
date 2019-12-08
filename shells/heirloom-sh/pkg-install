@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/shells/heirloom-sh/pkg-install 340719 2014-01-22 15:52:06Z mat $
+# $FreeBSD$
 #
 
 JSH="$(echo ${PKG_PREFIX-/usr/local}/bin/jsh | /usr/bin/sed -e 's|//|/|g')"
