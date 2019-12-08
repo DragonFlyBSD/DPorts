@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/security/jbrofuzz/files/jbrofuzz.sh.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD$
 #
 
 exec %%JAVA_CMD%% -jar -Xmx256m %%JAVASHAREDIR%%/%%JBROFUZZ%%/%%JBROFUZZ%%.jar "$@"
