@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/security/zeronet/files/zeronet-service.in 508209 2019-08-05 20:31:44Z yuri $
+# $FreeBSD$
 #
 
 # Copyright (C) 2016 by Yuri Victorovich. All rights reserved.
