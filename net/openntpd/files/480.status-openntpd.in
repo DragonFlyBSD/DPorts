@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net/openntpd/files/480.status-openntpd.in 442957 2017-06-08 20:29:22Z naddy $
+# $FreeBSD$
 #
 
 if [ -r /etc/defaults/periodic.conf ] ; then

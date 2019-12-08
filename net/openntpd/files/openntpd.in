@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net/openntpd/files/openntpd.in 416613 2016-06-09 15:47:58Z adamw $
+# $FreeBSD$
 #
 # PROVIDE: openntpd
 # REQUIRE: DAEMON ntpdate
