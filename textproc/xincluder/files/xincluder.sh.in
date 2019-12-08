@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/textproc/xincluder/files/xincluder.sh.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD$
 
 IAM=`basename "$0"`
 
@@ -12,4 +12,4 @@ case "${IAM}" in
 	*) echo "ERROR!" ; false ;;
 esac
 
-JAVA_VERSION="%%JAVA_VERSION%%" "%%LOCALBASE%%/bin/java" -cp "`"%%LOCALBASE%%/bin/classpath"`" "com.elharo.xml.xinclude.${MAIN_CLASS}" "$@"
+"%%LOCALBASE%%/bin/java" -cp "`"%%LOCALBASE%%/bin/classpath"`" "com.elharo.xml.xinclude.${MAIN_CLASS}" "$@"
