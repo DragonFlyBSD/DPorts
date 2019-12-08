@@ -2,7 +2,7 @@
 #
 # Author: Mark Felder <feld@FreeBSD.org>
 #
-# $FreeBSD: head/net-p2p/jackett/files/jackett.in 462611 2018-02-22 14:41:49Z wen $
+# $FreeBSD$
 #
 
 # PROVIDE: jackett
