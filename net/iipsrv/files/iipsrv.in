@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/net/iipsrv/files/iipsrv.in 417444 2016-06-24 19:06:49Z pawel $
+# $FreeBSD$
 #
 # PROVIDE: iipsrv
 # REQUIRE: LOGIN
