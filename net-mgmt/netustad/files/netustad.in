@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/net-mgmt/netustad/files/netustad.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD$
 #
 # PROVIDE: netustad
 # REQUIRE: NETWORKING SERVERS
