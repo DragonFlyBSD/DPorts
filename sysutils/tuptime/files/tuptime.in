@@ -1,4 +1,4 @@
-# $FreeBSD: head/sysutils/tuptime/files/tuptime.in 510860 2019-09-02 22:33:17Z swills $
+# $FreeBSD$
 #!/bin/sh
 #
 # PROVIDE: tuptime
