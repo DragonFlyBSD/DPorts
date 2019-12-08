@@ -1,8 +1,8 @@
 # $FreeBSD$
 
 PORTNAME?=	mariadb
-PORTVERSION=	10.1.41
-PORTREVISION=	1
+PORTVERSION=	10.1.43
+PORTREVISION=	0
 CATEGORIES=	databases
 MASTER_SITES=	http://ftp.osuosl.org/pub/${SITESDIR}/ \
 		http://mirrors.supportex.net/${SITESDIR}/ \
@@ -24,7 +24,6 @@ LICENSE_PERMS_PerconaFT=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 SUB_FILES=	pkg-message
 
-SLAVEDIRS=	databases/mariadb101-client
 USES=		bison:build cmake:insource,noninja compiler:c++11-lib cpe libedit ncurses \
 		shebangfix ssl
 USE_LDCONFIG=	${PREFIX}/lib/mysql
@@ -111,8 +110,7 @@ CMAKE_ON+=	WITHOUT_SERVER
 GSSAPI_NONE_CMAKE_ON=	-DPLUGIN_AUTH_GSSAPI_CLIENT=NO
 .else
 # MySQL-Server part
-BROKEN_powerpc64=	Does not build: fatal error: sys/platform/ppc.h: No such file or directory
-USES+=		mysql:101m
+USES+=		gnome mysql:101m
 USE_GNOME=	libxml2
 USE_LDCONFIG+=	${PREFIX}/lib/mysql/plugin
 USE_RC_SUBR=	mysql-server
@@ -170,6 +168,7 @@ post-patch:
 	@${REINPLACE_CMD} 's/*.1/${MAN1}/' ${WRKSRC}/man/CMakeLists.txt
 	@${REINPLACE_CMD} 's|%%PREFIX%%|${PREFIX}|g' ${WRKSRC}/mysys/my_default.c
 	@${REINPLACE_CMD} 's|%%LOCALBASE%%|${LOCALBASE}|g' ${WRKSRC}/scripts/mysql_config.sh
+	@${MV} ${WRKSRC}/storage/mroonga/version ${WRKSRC}/storage/mroonga/version_txt
 .if ${OPSYS} == DragonFly
 	${CP} ${WRKSRC}/cmake/os/FreeBSD.cmake \
 		${WRKSRC}/cmake/os/DragonFly.cmake
