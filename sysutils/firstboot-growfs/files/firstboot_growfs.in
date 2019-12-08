@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/sysutils/firstboot-growfs/files/firstboot_growfs.in 372970 2014-11-20 23:57:07Z cperciva $
+# $FreeBSD$
 # KEYWORD: firstboot
 # PROVIDE: firstboot_growfs
 # REQUIRE: NETWORKING
