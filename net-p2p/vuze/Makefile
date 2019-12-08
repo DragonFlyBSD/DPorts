@@ -3,7 +3,7 @@
 
 PORTNAME=	vuze
 PORTVERSION=	5.7.4.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net-p2p java
 MASTER_SITES=	SF/azureus/vuze/Vuze_${PORTVERSION:S/.//g}
 DISTNAME=	Vuze_${PORTVERSION:S/.//g}_source
@@ -20,7 +20,7 @@ BUILD_DEPENDS=	${JAVALIBDIR}/log4j.jar:devel/log4j \
 		${JAVALIBDIR}/swt.jar:x11-toolkits/swt
 RUN_DEPENDS=	${JAVALIBDIR}/swt.jar:x11-toolkits/swt
 
-USES=		zip
+USES=		gnome zip
 USE_JAVA=	yes
 JAVA_OS=	native
 USE_ANT=	yes

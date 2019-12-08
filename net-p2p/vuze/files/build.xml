@@ -1,6 +1,6 @@
 <!-- Under a BSDL license. Copyright by Mario S F Ferreira <lioux@FreeBSD.org> 2005- -->
 <!-- Under a BSDL license. Copyright by jrandom 2005- -->
-<!-- $FreeBSD: head/net-p2p/vuze/files/build.xml 340872 2014-01-24 00:14:07Z mat $ -->
+<!-- $FreeBSD$ -->
 <project basedir="." default="dist" name="azureus">
      <description>
 	Builds Azureus
