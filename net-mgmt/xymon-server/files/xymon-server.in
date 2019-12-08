@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net-mgmt/xymon-server/files/xymon-server.in 370391 2014-10-07 19:43:33Z feld $
+# $FreeBSD$
 #
 
 # PROVIDE: xymon_server
