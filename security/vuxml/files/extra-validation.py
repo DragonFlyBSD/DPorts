@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# $FreeBSD: head/security/vuxml/files/extra-validation.py 491045 2019-01-23 16:03:33Z zi $
+# $FreeBSD$
 
 import datetime
 import xml.etree.ElementTree as ET
