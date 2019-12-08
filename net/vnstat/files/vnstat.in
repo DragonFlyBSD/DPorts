@@ -1,6 +1,6 @@
 #!/bin/sh
 # Created by: Mark Felder <feld@FreeBSD.org>
-# $FreeBSD: head/net/vnstat/files/vnstat.in 485599 2018-11-22 14:12:49Z feld $
+# $FreeBSD$
 
 # PROVIDE: vnstat
 # REQUIRE: LOGIN
