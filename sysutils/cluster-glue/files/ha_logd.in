@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/sysutils/cluster-glue/files/ha_logd.in 411801 2016-03-24 16:15:23Z tijl $
+# $FreeBSD$
 #
 # PROVIDE: ha_logd
 # REQUIRE: DAEMON
