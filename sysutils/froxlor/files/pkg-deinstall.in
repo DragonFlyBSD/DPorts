@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/sysutils/froxlor/files/pkg-deinstall.in 351896 2014-04-23 01:03:16Z amdmi3 $
+# $FreeBSD$
 
 if [ "$2" != "POST-DEINSTALL" ]; then
 	exit 0
