@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/www/nostromo/files/nostromo.in 413217 2016-04-13 16:42:11Z mi $
+# $FreeBSD$
 #
 
 # PROVIDE: nostromo
