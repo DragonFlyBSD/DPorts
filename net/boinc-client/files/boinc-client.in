@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net/boinc-client/files/boinc-client.in 458988 2018-01-14 18:29:19Z ler $
+# $FreeBSD$
 #
 # PROVIDE: boinc-client
 # REQUIRE: LOGIN
