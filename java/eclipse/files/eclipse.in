@@ -4,6 +4,6 @@
 #
 # See: http://www.eclipse.org
 #
-# $FreeBSD: head/java/eclipse/files/eclipse.in 498880 2019-04-14 09:14:32Z pi $
+# $FreeBSD$
 #
 exec %%DATADIR%%/eclipse "$@"
