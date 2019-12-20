@@ -5,7 +5,8 @@
 
 PORTNAME=	RStudio
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.2.5001
+DISTVERSION=	1.2.5019
+PORTREVISION=	1
 CATEGORIES=	devel math java
 MASTER_SITES=	https://s3.amazonaws.com/rstudio-dictionaries/:dictionaries \
 		https://s3.amazonaws.com/rstudio-buildtools/:buildtools
@@ -50,6 +51,7 @@ CMAKE_ARGS+=	-DQT_QMAKE_EXECUTABLE:STRING=${QMAKE}
 CMAKE_ARGS+=	-DRSTUDIO_BOOST_SIGNALS_VERSION=2
 CMAKE_ARGS+=	-DFREEBSD_PORT_VERSION:STRING=${DISTVERSION}
 MAKE_ENV=	HOME=${WRKDIR} \
+		JAVA_HOME=${JAVA_HOME} \
 		ANT_OPTS="-Duser.home=${WRKDIR}"
 
 GWT_VERSION=	2.8.1
