@@ -23,5 +23,5 @@ dfly-patch:
 		${WRKSRC}/src/3rdparty/chromium/base/process/process_iterator_dragonfly.cc
 	${CP} ${WRKSRC}/src/3rdparty/chromium/base/process/process_metrics_freebsd.cc \
 		${WRKSRC}/src/3rdparty/chromium/base/process/process_metrics_dragonfly.cc
-	${CP} ${WRKSRC}/src/3rdparty/chromium/base/sys_info_freebsd.cc \
-		${WRKSRC}/src/3rdparty/chromium/base/sys_info_dragonfly.cc
+	${CP} ${WRKSRC}/src/3rdparty/chromium/base/system/sys_info_freebsd.cc \
+		${WRKSRC}/src/3rdparty/chromium/base/system/sys_info_dragonfly.cc
