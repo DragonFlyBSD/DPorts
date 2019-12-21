@@ -3,7 +3,7 @@
 
 PORTNAME=	synfigstudio
 PORTVERSION=	1.2.1
-PORTREVISION=	11
+PORTREVISION=	12
 CATEGORIES=	graphics multimedia
 MASTER_SITES=	SF/synfig/releases/${PORTVERSION}/source
 
@@ -23,8 +23,8 @@ LIB_DEPENDS=	libHalf.so:graphics/ilmbase \
 		libsynfig.so:devel/synfig
 RUN_DEPENDS=	xdg-open:devel/xdg-utils
 
-USES=		compiler:c++11-lang desktop-file-utils gmake libtool localbase \
-		pathfix pkgconfig shared-mime-info
+USES=		compiler:c++11-lang desktop-file-utils gmake gnome libtool \
+		localbase pathfix pkgconfig shared-mime-info
 USE_CXXSTD=	c++11
 USE_GNOME=	gtkmm30 intltool
 GNU_CONFIGURE=	yes
