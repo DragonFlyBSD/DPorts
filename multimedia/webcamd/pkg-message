@@ -1,0 +1,7 @@
+[
+{ type: install
+  message: <<EOM
+Warning: this is a stub port, webcamd is not ported to DragonFly.
+EOM
+}
+]
