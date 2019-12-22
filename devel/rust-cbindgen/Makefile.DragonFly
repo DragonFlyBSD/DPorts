@@ -1,2 +1,0 @@
-
-CARGO_CRATES+=	gcc-0.3.55 errno-dragonfly-0.1.1
