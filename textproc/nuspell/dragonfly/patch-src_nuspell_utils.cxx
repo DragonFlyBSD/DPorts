@@ -1,6 +1,6 @@
---- src/nuspell/locale_utils.cxx.orig	2019-08-08 08:30:19 UTC
-+++ src/nuspell/locale_utils.cxx
-@@ -33,9 +33,9 @@
+--- src/nuspell/utils.cxx.orig	2019-11-23 18:52:51 UTC
++++ src/nuspell/utils.cxx
+@@ -32,9 +32,9 @@
  #endif
  
  #if !defined(U_WCHAR_IS_UTF32) && !defined(U_WCHAR_IS_UTF16) &&                \
