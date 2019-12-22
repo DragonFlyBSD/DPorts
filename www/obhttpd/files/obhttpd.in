@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/www/obhttpd/files/obhttpd.in 403107 2015-12-06 12:17:51Z riggs $
+# $FreeBSD$
 #
 # PROVIDE: obhttpd
 # REQUIRE: DAEMON

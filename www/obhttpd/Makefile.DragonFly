@@ -1,4 +1,5 @@
 dfly-patch:
 	-${REINPLACE_CMD} -e 's/TAILQ_FOREACH_SAFE/TAILQ_FOREACH_MUTABLE/g' \
+		${WRKSRC}/usr.sbin/httpd/server.c \
 		${WRKSRC}/usr.sbin/httpd/logger.c \
 		${WRKSRC}/usr.sbin/httpd/parse.y
