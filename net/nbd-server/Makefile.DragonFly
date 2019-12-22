@@ -1,0 +1,4 @@
+dfly-patch:
+	${REINPLACE_CMD} -e 's@_XOPEN_SOURCE@&___@g' \
+		${WRKSRC}/nbd-server.c
+
