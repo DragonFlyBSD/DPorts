@@ -1,0 +1,19 @@
+--- meson.build.orig	2018-05-29 16:21:43 UTC
++++ meson.build
+@@ -79,16 +79,6 @@ endif
+ 
+ add_project_arguments(common_flags, language: 'c')
+ 
+-# Check that we meet the dependencies
+-libgvc = subproject(
+-  'gvc',
+-  default_options: [
+-    'static=true',
+-    'alsa=false',
+-  ]
+-)
+-libgvc_dep = libgvc.get_variable('libgvc_dep')
+-
+ goa_req_version = '>= 3.25.3'
+ pulse_req_version = '>= 2.0'
+ 
