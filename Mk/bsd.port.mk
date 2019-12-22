@@ -610,7 +610,9 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 # test-depends-list
 #				- Show all directories which are test-dependencies
 #				  for this port.
-#
+# install-missing-packages
+#               - Install missing dependencies from package and mark
+#                 them as automatically installed 
 # extract		- Unpacks ${DISTFILES} into ${WRKDIR}.
 # patch			- Apply any provided patches to the source.
 # configure		- Runs either GNU configure, one or more local configure
@@ -1091,7 +1093,7 @@ CC=		${XCC} --sysroot=${CROSS_SYSROOT}
 CXX=		${XCXX} --sysroot=${CROSS_SYSROOT}
 CPP=		${XCPP} --sysroot=${CROSS_SYSROOT}
 .for _tool in AS AR LD NM OBJCOPY RANLIB SIZE STRINGS
-${_tool}=	${CROSS_BINUTILS_PREFIX}${tool:tl}
+${_tool}=	${CROSS_BINUTILS_PREFIX}${_tool:tl}
 .endfor
 LD+=		--sysroot=${CROSS_SYSROOT}
 STRIP_CMD=	${CROSS_BINUTILS_PREFIX}strip
@@ -4345,6 +4347,11 @@ missing-packages:
 			${ECHO_CMD} $${_p}; \
 		fi; \
 	done
+
+# Install missing dependencies from package
+install-missing-packages:
+	@_dirs=$$(${MISSING-DEPENDS-LIST}); \
+	${PKG_BIN} install -A $$(${ECHO} $${_dirs} | ${SED} "s%${PORTSDIR}/%%g")
 
 ################################################################
 # Everything after here are internal targets and really
