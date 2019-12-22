@@ -2,7 +2,7 @@
 
 PORTNAME=	waybar
 DISTVERSION=	0.8.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
@@ -32,7 +32,7 @@ LIB_DEPENDS=	libjsoncpp.so:devel/jsoncpp \
 		libfmt.so:devel/libfmt \
 		libwayland-client.so:graphics/wayland
 
-USES=		compiler:c++17-lang meson pkgconfig
+USES=		compiler:c++17-lang gnome meson pkgconfig
 USE_GITHUB=	yes
 USE_GNOME=	gtkmm30
 GH_ACCOUNT=	Alexays
