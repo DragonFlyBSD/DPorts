@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	openssl
-PORTVERSION=	1.0.2t
+PORTVERSION=	1.0.2u
 PORTEPOCH=	1
 CATEGORIES=	security devel
 MASTER_SITES=	http://www.openssl.org/source/ \
@@ -14,10 +14,6 @@ COMMENT=	SSL and crypto library
 
 LICENSE=	OpenSSL
 LICENSE_FILE=	${WRKSRC}/LICENSE
-
-DEPRECATED=		OpenSSL 1.0.2 is End-of-Life 2019-12-31 at which \
-			time this port will update to 1.1.1 branch
-EXPIRATION_DATE=	2019-12-31
 
 OPTIONS_DEFINE=		DOCS MAN3 PADLOCK RFC3779 SHARED THREADS ZLIB
 CONFLICTS_INSTALL=	libressl-[0-9]* \
