@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	redis
-PORTVERSION=	6.0.0.20191203
+PORTVERSION=	6.0.0.20191218
 CATEGORIES=	databases
 PKGNAMESUFFIX=	-devel
 
@@ -11,17 +11,18 @@ COMMENT=	Persistent key-value database with built-in net interface
 
 LICENSE=	BSD3CLAUSE
 
-USES+=		compiler gmake
+USES+=		compiler:c11 gmake
 USE_GITHUB=	yes
-GH_TUPLE= 	antirez:${PORTNAME}:7b5f4b1
+GH_TUPLE= 	antirez:${PORTNAME}:c5bc1c1
 
 OPTIONS_DEFINE=	JEMALLOC TESTS TRIB
 OPTIONS_RADIO=	EXTLUA
-OPTIONS_RADIO_EXTLUA=	LUA LUAJIT
+OPTIONS_RADIO_EXTLUA=	LUA LUAJIT LUAJITOR
 OPTIONS_SUB=	yes
 JEMALLOC_DESC=	Use jemalloc
 LUA_DESC=	Use lang/lua instead of builtin lua
 LUAJIT_DESC=	Use lang/luajit instead of builtin lua
+LUAJITOR_DESC=	Use lang/luajit-openresty instead of builtin lua
 TESTS_DESC=	Install lang/tcl for redis unit tests
 TRIB_DESC=	Install redis-trib.rb (lang/ruby req.)
 
@@ -52,10 +53,18 @@ EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-src-Makefile.lua
 
 .if ${PORT_OPTIONS:MLUAJIT}
 LIB_DEPENDS+=	libluajit-5.1.so:lang/luajit
+BUILD_DEPENDS+=	${LOCALBASE}/include/luajit-2.0/lua.h:lang/luajit
 EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-src-Makefile.luajit
 .endif
 
-.if ${PORT_OPTIONS:MLUA} || ${PORT_OPTIONS:MLUAJIT}
+.if ${PORT_OPTIONS:MLUAJITOR}
+LIB_DEPENDS+=	libluajit-5.1.so:lang/luajit-openresty
+BUILD_DEPENDS+=	${LOCALBASE}/include/luajit-2.1/lua.h:lang/luajit-openresty
+EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-src-Makefile.luajit-or \
+		${PATCHDIR}/extra-patch-deps_lua_src_lua__cjson.c
+.endif
+
+.if ${PORT_OPTIONS:MLUA} || ${PORT_OPTIONS:MLUAJIT} || ${PORT_OPTIONS:MLUAJITOR}
 CFLAGS+=	-fPIC
 LDFLAGS+=	-Wl,-E
 .endif
@@ -98,11 +107,8 @@ post-patch:
 .if ${PORT_OPTIONS:MJEMALLOC}
 	@${REINPLACE_CMD} '35s!Linux!FreeBSD!g' ${WRKSRC}/src/Makefile
 .endif
-.if ${PORT_OPTIONS:MLUA} || ${PORT_OPTIONS:MLUAJIT}
+.if ${PORT_OPTIONS:MLUA} || ${PORT_OPTIONS:MLUAJIT} || ${PORT_OPTIONS:MLUAJITOR}
 	@cd ${WRKSRC}/deps/lua/src && ${CP} fpconv.* lua_* strbuf.* ${WRKSRC}/src/
-.endif
-.if ${CHOSEN_COMPILER_TYPE} == gcc && ${COMPILER_VERSION} <= 42
-	${REINPLACE_CMD} -e '/pragma/d' ${WRKSRC}/src/lzf_d.c
 .endif
 
 post-build:
