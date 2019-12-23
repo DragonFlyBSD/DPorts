@@ -3,7 +3,7 @@
 
 PORTNAME=	gnucash
 PORTVERSION=	3.7
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	finance gnome
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}%20%28stable%29/${PORTVERSION}
 
@@ -85,13 +85,13 @@ OFX_LIB_DEPENDS=	libofx.so:finance/libofx
 OFX_VARS=		GLIB_SCHEMAS+=org.gnucash.dialogs.import.ofx.gschema.xml
 PYTHON_CMAKE_BOOL=	WITH_PYTHON
 PYTHON_USES=		python:3.3+
-TEST_BUILD_DEPENDS=	${NONEXISTENT}:devel/googlemock:build \
+TEST_BUILD_DEPENDS=	${NONEXISTENT}:devel/googletest:build \
 			googletest>0:devel/googletest
 
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MTEST}
-GMOCK_WRKSRC!=	cd ${PORTSDIR}/devel/googlemock && ${MAKE} -V WRKSRC
+GMOCK_WRKSRC!=	cd ${PORTSDIR}/devel/googletest && ${MAKE} -V WRKSRC
 CONFIGURE_ENV+=	GMOCK_ROOT="${GMOCK_WRKSRC}"
 .endif
 
