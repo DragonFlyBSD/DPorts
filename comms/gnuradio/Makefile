@@ -2,7 +2,7 @@
 
 PORTNAME=	gnuradio
 PORTVERSION=	3.8.0.0
-PORTREVISION=	3
+PORTREVISION=	5
 CATEGORIES=	comms astro hamradio
 MASTER_SITES=	http://gnuradio.org/releases/gnuradio/
 
@@ -87,7 +87,6 @@ OPTIONS_DEFINE=		DOCS UHD TESTING DOXYGEN
 ##OPTIONS_EXCLUDE_${i386}=	DOXYGEN
 # Yay. building docs is broken on 10 and HEAD too so turn them all off
 OPTIONS_EXCLUDE=	DOXYGEN
-OPTIONS_DEFAULT=	UHD
 OPTIONS_SUB=		yes
 UHD_DESC=	Include UHD support from Ettus
 TESTING_DESC=	Include testing support
