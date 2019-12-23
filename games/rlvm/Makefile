@@ -4,7 +4,7 @@ PORTNAME=	rlvm
 DISTVERSIONPREFIX=	release-
 DISTVERSION=	0.14-67
 DISTVERSIONSUFFIX=	-g9350209
-PORTREVISION=	21
+PORTREVISION=	22
 CATEGORIES=	games
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
@@ -58,7 +58,6 @@ NLS_USES=	gettext
 NLS_EXTRA_PATCHES_OFF=${FILESDIR}/extra-patch-disable-nls
 TEST_USES=	lua:51
 TEST_BUILD_DEPENDS=googletest>=1.7.0:devel/googletest \
-		googlemock>=1.7.0:devel/googlemock \
 		luabind>0:devel/luabind
 TEST_EXTRA_PATCHES_OFF=${FILESDIR}/extra-patch-disable-test
 
