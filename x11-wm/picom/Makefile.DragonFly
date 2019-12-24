@@ -1,0 +1,3 @@
+
+dfly-patch:
+	${CHMOD} +x ${WRKSRC}/meson/install.sh
