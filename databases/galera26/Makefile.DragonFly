@@ -1,0 +1,17 @@
+
+# use of __atomic_fetch_add_8 atomics
+USE_CLANG_FALLBACK=	default
+
+MAKE_ARGS+=     strict_build_flags=0
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(defined(__FreeBSD__)\)@(\1 || defined(__DragonFly__))@g'       \
+		${WRKSRC}/asio/asio/detail/config.hpp   \
+		${WRKSRC}/asio/asio/detail/impl/socket_ops.ipp  \
+		${WRKSRC}/asio/asio/impl/error_code.ipp \
+		${WRKSRC}/galerautils/src/gu_errno.h    \
+		${WRKSRC}/galerautils/src/gu_limits.c   \
+		${WRKSRC}/galerautils/src/gu_limits.h   \
+		${WRKSRC}/galerautils/src/gu_mmap.cpp   \
+		${WRKSRC}/galerautils/src/gu_resolver.cpp       \
+		${WRKSRC}/galerautils/src/gu_system.h
