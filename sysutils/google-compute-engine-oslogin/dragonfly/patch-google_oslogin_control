@@ -1,0 +1,11 @@
+--- google_oslogin_control.intermediate	2019-12-24 16:19:43 UTC
++++ google_oslogin_control
+@@ -14,7 +14,7 @@
+ # limitations under the License.
+ 
+ is_freebsd() {
+-  [ "$(uname)" = "FreeBSD" ]
++  [ "$(uname)" = "FreeBSD" -o "$(uname)" = "DragonFly" ]
+   return $?
+ }
+ 
