@@ -11,8 +11,8 @@ COMMENT=	Algebraic modeling library in C++ for linear optimization solvers
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-LIB_DEPENDS=	libClp.so:math/clp \
-		libOsi.so:math/osi
+BUILD_DEPENDS=	cbc:math/cbc
+RUN_DEPENDS=	cbc:math/cbc
 
 USES=		gmake libtool pkgconfig
 USE_GITHUB=	yes
