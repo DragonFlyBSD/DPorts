@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME?=	mariadb
-PORTVERSION=	10.4.7
+PORTVERSION=	10.4.11
 PORTREVISION?=	0
 CATEGORIES=	databases
 MASTER_SITES=	http://mirrors.supportex.net/${SITESDIR}/ \
@@ -24,11 +24,12 @@ LICENSE_NAME_PerconaFT=	PerconaFT patents license
 LICENSE_FILE_PerconaFT=	${WRKSRC}/storage/tokudb/PerconaFT/PATENTS
 LICENSE_PERMS_PerconaFT=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
+USES=		bison:build cmake:insource,noninja compiler:c++11-lib cpe iconv:translit libedit ncurses shebangfix ssl
+
 SUB_FILES=	pkg-message
 PKGMESSAGE=	${WRKDIR}/pkg-message
 
 SLAVEDIRS=	databases/mariadb102-client
-USES=		bison:build cmake:insource,noninja compiler:c++11-lib cpe iconv:translit libedit ncurses shebangfix ssl
 USE_LDCONFIG=	${PREFIX}/lib/mysql
 SHEBANG_FILES=	scripts/*.sh
 SITESDIR=	mariadb/mariadb-${PORTVERSION}/source
@@ -42,12 +43,12 @@ OPTIONS_DEFAULT=	GSSAPI_BASE
 # MySQL-Server options
 OPTIONS_DEFAULT+=	CONNECT_EXTRA INNOBASE SPHINX SPIDER WSREP
 OPTIONS_GROUP=		COMPRESSION ENGINES GROONGA
-OPTIONS_DEFINE=		AWS_KMS CONNECT_EXTRA DOCS
+OPTIONS_DEFINE=		CONNECT_EXTRA DOCS
 OPTIONS_DEFINE_x86_64=	WSREP
 OPTIONS_GROUP_COMPRESSION=	LZ4 LZO SNAPPY ZSTD
 OPTIONS_GROUP_ENGINES=	INNOBASE MROONGA OQGRAPH ROCKSDB SPHINX SPIDER TOKUDB
 OPTIONS_GROUP_GROONGA=	ZMQ MSGPACK
-OPTIONS_EXCLUDE_i386=	TOKUDB
+OPTIONS_EXCLUDE_i386=	ROCKSDB TOKUDB
 
 CONNECT_EXTRA_DESC=	Enable ODBC and XML in CONNECT engine
 COMPRESSION_DESC=	Optional page compression
@@ -138,24 +139,28 @@ CONNECT_EXTRA_USE=		gnome=libxml2
 CONNECT_EXTRA_USES=		gnome
 CONNECT_EXTRA_CMAKE_BOOL=	CONNECT_WITH_LIBXML2 CONNECT_WITH_ODBC
 GSSAPI_NONE_VARS=	disabled_plugins+=AUTH_GSSAPI
-LZ4_CMAKE_BOOL=		GRN_WITH_LZ4 WITH_INNODB_LZ4 WITH_ROCKSDB_LZ4
+LZ4_CMAKE_ON=		-DGRN_WITH_LZ4=ON  -DWITH_INNODB_LZ4=ON  -DWITH_ROCKSDB_LZ4=ON
+LZ4_CMAKE_OFF=		-DGRN_WITH_LZ4=OFF -DWITH_INNODB_LZ4=OFF -DWITH_ROCKSDB_LZ4=OFF
 LZ4_LIB_DEPENDS=	liblz4.so:archivers/liblz4
-LZO_CMAKE_BOOL=		WITH_INNODB_LZO
+LZO_CMAKE_ON=		-DWITH_INNODB_LZO=ON
+LZO_CMAKE_OFF=		-DWITH_INNODB_LZO=OFF
 LZO_LIB_DEPENDS=	liblzo2.so:archivers/lzo2
 MROONGA_IMPLIES=	LZ4
 MSGPACK_LIB_DEPENDS=	libmsgpackc.so:devel/msgpack
 OQGRAPH_LIB_DEPENDS=	libboost_system.so:devel/boost-libs \
 			libJudy.so:devel/judy
 ROCKSDB_USES=		python
-SNAPPY_CMAKE_BOOL=	WITH_INNODB_SNAPPY WITH_ROCKSDB_snappy
+SNAPPY_CMAKE_ON=	-DWITH_INNODB_SNAPPY=ON  -DWITH_ROCKSDB_snappy=ON
+SNAPPY_CMAKE_OFF=	-DWITH_INNODB_SNAPPY=OFF -DWITH_ROCKSDB_snappy=OFF
 SNAPPY_LIB_DEPENDS=	libsnappy.so:archivers/snappy
-TOKUDB_BROKEN=		Error with bundled liblzma
 TOKUDB_IMPLIES=		SNAPPY
 TOKUDB_PORTDOCS=	README.md
 TOKUDB_VARS=		LICENSE+=PerconaFT LICENSE_COMB=multi
 WSREP_CMAKE_BOOL=	WITH_WSREP
+WSREP_LIB_DEPENDS=	libgalera.so:databases/galera26
 ZMQ_LIB_DEPENDS=	libzmq.so:net/libzmq4
-ZSTD_CMAKE_BOOL=	WITH_ROCKSDB_ZSTD
+ZSTD_CMAKE_ON=		-DWITH_ROCKSDB_zstd=ON
+ZSTD_CMAKE_OFF=		-DWITH_ROCKSDB_zstd=OFF
 ZSTD_LIB_DEPENDS=	libzstd.so:archivers/zstd
 
 .include <bsd.port.options.mk>
@@ -191,6 +196,7 @@ post-patch:
 	${REINPLACE_CMD} 's|%%PREFIX%%|${PREFIX}|g' ${WRKSRC}/mysys/my_default.c
 	${REINPLACE_CMD} 's|%%LOCALBASE%%|${LOCALBASE}|g' ${WRKSRC}/scripts/mysql_config.sh \
 		${WRKSRC}/storage/tokudb/PerconaFT/cmake_modules/TokuThirdParty.cmake
+	${MV} ${WRKSRC}/storage/mroonga/version ${WRKSRC}/storage/mroonga/version_txt
 .if ${OPSYS} == DragonFly
 	${CP} ${WRKSRC}/cmake/os/FreeBSD.cmake \
 		${WRKSRC}/cmake/os/DragonFly.cmake
@@ -201,8 +207,8 @@ post-configure:
 		-e 's|(#define LIBS .*)"$$|\1 -L${PREFIX}/lib"|' \
 		${WRKSRC}/libmariadb/mariadb_config/mariadb_config.c
 
-# Fix build failure in mbstream, see https://jira.mariadb.org/browse/MDEV-14072 	 
-post-configure-INNOBASE-on: 	 
+# Fix build failure in mbstream, see https://jira.mariadb.org/browse/MDEV-14072
+post-configure-INNOBASE-on:
 	${REINPLACE_CMD} -e 's| ${PREFIX}/lib/liblz4.so\(.* ${PREFIX}/lib/liblz4.so.*\)|\1|' \
 		-e 's| ${PREFIX}/lib/liblzo2.so\(.* ${PREFIX}/lib/liblzo2.so.*\)|\1|' \
 		-e 's| ${PREFIX}/lib/libsnappy.so\(.* ${PREFIX}/lib/libsnappy.so\)|\1|' \
