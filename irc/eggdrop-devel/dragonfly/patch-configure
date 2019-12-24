@@ -1,20 +1,10 @@
---- configure	2014-10-08 23:08:27.000000000 +0300
+--- configure.orig	2019-11-27 20:57:22 UTC
 +++ configure
-@@ -5282,7 +5282,7 @@ $as_echo "#define DLOPEN_1 1" >>confdefs
- 
-       fi
+@@ -5405,6 +5405,7 @@ $as_echo "#define STOP_UAC 1" >>confdefs
      ;;
--    *BSD)
-+    *BSD|DragonFly)
-       # FreeBSD/OpenBSD/NetBSD all support dlopen() and have had plenty of
-       # testing with Eggdrop.
-       WEIRD_OS="no"
-@@ -5559,7 +5559,7 @@ $as_echo "#define STOP_UAC 1" >>confdefs
-         SHLIB_CC="$CC -PIC"
-       fi
-     ;;
--    *BSD)
-+    *BSD|DragonFly)
-       # FreeBSD/OpenBSD/NetBSD
+     DragonFly)
        SHLIB_CC="$CC -fPIC"
-       SHLIB_LD="ld -Bshareable -x"
++      SHLIB_LD="$CC -shared"
+     ;;
+     Darwin)
+       # Mac OS X
