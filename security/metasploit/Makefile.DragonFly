@@ -7,5 +7,5 @@ NO_ARCH_IGNORE+=	libndkstager.so CVE-2013-6282.so CVE-2014-3153.so ofs-lib.so \
 			template_armle_linux.bin template_mipsbe_linux.bin \
 			template_x64_linux.bin template_x86_linux.bin \
 			template_x86_solaris.bin CVE-2013-2171.bin \
-			template_x86_bsd.bin template_x64_bsd.bin
+			template_x86_bsd.bin template_x64_bsd.bin exploit
 .endif
