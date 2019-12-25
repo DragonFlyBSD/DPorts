@@ -1,0 +1,7 @@
+
+# sed: RE error: Illegal byte sequence mc.1
+BUILD_DEPENDS+=	gsed:textproc/gsed
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@[[:<:]]sed[[:>:]]@gsed@g' \
+		${WRKSRC}/doc/man/hu/Makefile.in
