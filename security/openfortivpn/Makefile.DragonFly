@@ -1,0 +1,13 @@
+
+USES+=	gmake
+
+CFLAGS+=	-I${OPENSSLINC}
+LDFLAGS+=	-L${OPENSSLLIB}
+
+# zrj: XXX work around few kernel leaks to userland
+dfly-patch:
+	${REINPLACE_CMD} -e 's@xFreeBSD@xDragonFly@g' \
+		${WRKSRC}/configure.ac
+	${REINPLACE_CMD} -e 's@rtentry@rtentry_ofvpn@g' \
+			 -e 's@rt_use@rt_use_ofvpn@g' \
+		${WRKSRC}/src/ipv4.h ${WRKSRC}/src/ipv4.c
