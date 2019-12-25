@@ -1,0 +1,4 @@
+
+USES+=	alias
+
+CFLAGS+=	-DUNIX_BSD
