@@ -1,6 +1,6 @@
---- vendor/libc/src/unix/bsd/freebsdlike/dragonfly/mod.rs.orig	2019-11-04 17:34:41 UTC
+--- vendor/libc/src/unix/bsd/freebsdlike/dragonfly/mod.rs.orig	2019-12-16 17:26:11 UTC
 +++ vendor/libc/src/unix/bsd/freebsdlike/dragonfly/mod.rs
-@@ -1038,7 +1038,18 @@ f! {
+@@ -1053,7 +1053,17 @@ f! {
      }
  }
  
@@ -12,10 +12,9 @@
 +    }
 +}
 +
- extern {
+ extern "C" {
 +    #[thread_local]
 +    pub static mut errno: ::c_int;
-+
      pub fn setgrent();
-     pub fn mprotect(addr: *mut ::c_void, len: ::size_t, prot: ::c_int)
-                     -> ::c_int;
+     pub fn mprotect(
+         addr: *mut ::c_void,
