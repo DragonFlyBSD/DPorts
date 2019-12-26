@@ -1,4 +1,4 @@
---- src/processes.c.orig	2019-06-13 09:13:42 UTC
+--- src/processes.c.orig	2019-11-15 09:43:58 UTC
 +++ src/processes.c
 @@ -102,10 +102,13 @@
  /* #endif KERNEL_LINUX */
@@ -182,15 +182,15 @@
          WARNING("processes plugin: this platform has a %" PRIsz
                  " character limit "
 @@ -774,7 +778,8 @@ static int ps_init(void) {
- /* #endif KERNEL_LINUX */
+     /* #endif KERNEL_LINUX */
  
  #elif HAVE_LIBKVM_GETPROCS &&                                                  \
 -    (HAVE_STRUCT_KINFO_PROC_FREEBSD || HAVE_STRUCT_KINFO_PROC_OPENBSD)
 +    (HAVE_STRUCT_KINFO_PROC_FREEBSD || HAVE_STRUCT_KINFO_PROC_OPENBSD || \
 +    HAVE_STRUCT_KINFO_PROC_DRAGONFLY)
    pagesize = getpagesize();
- /* #endif HAVE_LIBKVM_GETPROCS && (HAVE_STRUCT_KINFO_PROC_FREEBSD ||
-  * HAVE_STRUCT_KINFO_PROC_OPENBSD) */
+   /* #endif HAVE_LIBKVM_GETPROCS && (HAVE_STRUCT_KINFO_PROC_FREEBSD ||
+    * HAVE_STRUCT_KINFO_PROC_OPENBSD) */
 @@ -801,7 +806,7 @@ static void ps_submit_state(const char *
  }
  
@@ -227,7 +227,7 @@
      ps_submit_proc_list(ps_ptr);
  
    read_fork_rate();
- /* #endif KERNEL_LINUX */
+   /* #endif KERNEL_LINUX */
  
 -#elif HAVE_LIBKVM_GETPROCS && HAVE_STRUCT_KINFO_PROC_FREEBSD
 +#elif HAVE_LIBKVM_GETPROCS && \
@@ -365,7 +365,7 @@
 -  for (procstat_t *ps_ptr = list_head_g; ps_ptr != NULL; ps_ptr = ps_ptr->next)
 +  for (collectd_procstat_t *ps_ptr = list_head_g; ps_ptr != NULL; ps_ptr = ps_ptr->next)
      ps_submit_proc_list(ps_ptr);
- /* #endif HAVE_LIBKVM_GETPROCS && HAVE_STRUCT_KINFO_PROC_FREEBSD */
+     /* #endif HAVE_LIBKVM_GETPROCS && HAVE_STRUCT_KINFO_PROC_FREEBSD */
  
 @@ -2392,7 +2439,7 @@ static int ps_read(void) {
    ps_submit_state("idle", idle);
@@ -374,7 +374,7 @@
 -  for (procstat_t *ps_ptr = list_head_g; ps_ptr != NULL; ps_ptr = ps_ptr->next)
 +  for (collectd_procstat_t *ps_ptr = list_head_g; ps_ptr != NULL; ps_ptr = ps_ptr->next)
      ps_submit_proc_list(ps_ptr);
- /* #endif HAVE_LIBKVM_GETPROCS && HAVE_STRUCT_KINFO_PROC_OPENBSD */
+     /* #endif HAVE_LIBKVM_GETPROCS && HAVE_STRUCT_KINFO_PROC_OPENBSD */
  
 @@ -2531,7 +2578,7 @@ static int ps_read(void) {
    ps_submit_state("paging", paging);
@@ -383,7 +383,7 @@
 -  for (procstat_t *ps = list_head_g; ps != NULL; ps = ps->next)
 +  for (collectd_procstat_t *ps = list_head_g; ps != NULL; ps = ps->next)
      ps_submit_proc_list(ps);
- /* #endif HAVE_PROCINFO_H */
+     /* #endif HAVE_PROCINFO_H */
  
 @@ -2627,7 +2674,7 @@ static int ps_read(void) {
    ps_submit_state("system", system);
