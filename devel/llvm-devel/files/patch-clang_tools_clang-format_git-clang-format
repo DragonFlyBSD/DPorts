@@ -1,8 +1,8 @@
 
-$FreeBSD: head/devel/llvm-devel/files/clang/patch-tools_clang_tools_clang-format_git-clang-format 461160 2018-02-07 18:03:24Z brooks $
+$FreeBSD$
 
---- tools/clang/tools/clang-format/git-clang-format.orig
-+++ tools/clang/tools/clang-format/git-clang-format
+--- clang/tools/clang-format/git-clang-format.orig
++++ clang/tools/clang-format/git-clang-format
 @@ -90,7 +90,7 @@
      usage=usage, formatter_class=argparse.RawDescriptionHelpFormatter,
      description=desc)

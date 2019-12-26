@@ -1,8 +1,8 @@
 Do not criple float128 support, allow to use headers like <cmath>.
 While there nuke, some leftover defines.
 
---- tools/clang/lib/Basic/Targets/OSTargets.h.orig	2018-02-25 15:34:17.000000000 +0000
-+++ tools/clang/lib/Basic/Targets/OSTargets.h
+--- clang/lib/Basic/Targets/OSTargets.h.orig	2018-02-25 15:34:17.000000000 +0000
++++ clang/lib/Basic/Targets/OSTargets.h
 @@ -144,11 +144,10 @@ protected:
                      MacroBuilder &Builder) const override {
      // DragonFly defines; list based off of gcc output

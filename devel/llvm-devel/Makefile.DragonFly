@@ -2,22 +2,16 @@
 MANUAL_PACKAGE_BUILD=   huge (399M packaged)
 .endif
 
-# hmm
-_USES_PYTHON:=	python:2.7,build
-
 # LLDB needs to be ported to dragonfly
 OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NLLDB}
 OPTIONS_DEFAULT_x86_64:= ${OPTIONS_DEFAULT_x86_64:NCOMPILER_RT}
 
-# Copied from devel/llvm60, should be okay for now
-CLANG_EXTRA_PATCHES+=	${DFLY_PATCHDIR}/clang-patch-tools_clang_lib_Basic_Targets_OSTargets.h
-
 dfly-patch:
 	${REINPLACE_CMD} -e 's|gcc50|gcc80|g' -e 's|5.0"|8.0"|' \
-		${WRKSRC}/tools/clang/lib/Driver/ToolChains/DragonFly.cpp \
-		${WRKSRC}/tools/clang/lib/Frontend/InitHeaderSearch.cpp
+		${WRKSRC}/clang/lib/Driver/ToolChains/DragonFly.cpp \
+		${WRKSRC}/clang/lib/Frontend/InitHeaderSearch.cpp
 
 # attempt to fix pkg-plist (compiler-rt header)
 dfly-install:
-	${MKDIR} ${STAGEDIR}/${PREFIX}/llvm-devel/include/fuzzer
-	${TOUCH} ${STAGEDIR}/${PREFIX}/llvm-devel/include/fuzzer/FuzzedDataProvider.h
+	${MKDIR} ${STAGEDIR}/${PREFIX}/llvm-devel/lib/clang/10.0.0/include/profile
+	${TOUCH} ${STAGEDIR}/${PREFIX}/llvm-devel/lib/clang/10.0.0/include/profile/InstrProfData.inc

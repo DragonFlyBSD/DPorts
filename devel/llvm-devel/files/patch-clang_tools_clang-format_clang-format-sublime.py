@@ -1,8 +1,8 @@
 
-$FreeBSD: head/devel/llvm-devel/files/clang/patch-tools_clang_tools_clang-format_clang-format-sublime.py 461160 2018-02-07 18:03:24Z brooks $
+$FreeBSD$
 
---- tools/clang/tools/clang-format/clang-format-sublime.py.orig
-+++ tools/clang/tools/clang-format/clang-format-sublime.py
+--- clang/tools/clang-format/clang-format-sublime.py.orig
++++ clang/tools/clang-format/clang-format-sublime.py
 @@ -18,7 +18,7 @@
  import subprocess
  
