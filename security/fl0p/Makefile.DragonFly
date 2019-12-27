@@ -1,0 +1,5 @@
+
+USES+=	gmake
+
+dfly-patch:
+	${LN} -sv ${WRKSRC}/mk/FreeBSD ${WRKSRC}/mk/DragonFly
