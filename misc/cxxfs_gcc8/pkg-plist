@@ -1,0 +1,11 @@
+cxxfs_gcc8/bits/fs_dir.h
+cxxfs_gcc8/bits/fs_fwd.h
+cxxfs_gcc8/bits/fs_ops.h
+cxxfs_gcc8/bits/fs_path.h
+cxxfs_gcc8/experimental/bits/fs_dir.h
+cxxfs_gcc8/experimental/bits/fs_fwd.h
+cxxfs_gcc8/experimental/bits/fs_ops.h
+cxxfs_gcc8/experimental/bits/fs_path.h
+cxxfs_gcc8/experimental/filesystem
+cxxfs_gcc8/filesystem
+cxxfs_gcc8/libstdc++fs.a

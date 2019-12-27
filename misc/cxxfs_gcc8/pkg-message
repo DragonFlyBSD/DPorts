@@ -1,0 +1,9 @@
+[
+{ type: install
+  message: <<EOM
+To use this port add:
+  CXXFLAGS+= -isystem ${LOCALBASE}/cxxfs_gcc8
+  LDFLAGS+=  -L${LOCALBASE}/cxxfs_gcc8
+EOM
+}
+]
