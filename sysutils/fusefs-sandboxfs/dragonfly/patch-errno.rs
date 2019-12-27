@@ -1,5 +1,5 @@
---- cargo-crates/nix-0.12.0/src/errno.rs.orig	2018-11-20 17:37:27 UTC
-+++ cargo-crates/nix-0.12.0/src/errno.rs
+--- cargo-crates/nix-0.12.1/src/errno.rs.orig	2018-11-20 17:37:27 UTC
++++ cargo-crates/nix-0.12.1/src/errno.rs
 @@ -522,9 +522,6 @@ fn desc(errno: Errno) -> &'static str {
          EIPSEC          => "IPsec processing failure",
  
