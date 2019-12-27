@@ -1,0 +1,5 @@
+
+USES+=	ssl
+
+CFLAGS+=	-I${OPENSSLINC} -DWITH_SSL
+LDFLAGS+=	-L${OPENSSLLIB} -lcrypto
