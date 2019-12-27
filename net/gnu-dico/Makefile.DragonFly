@@ -1,0 +1,5 @@
+
+# zrj: wrong include ordering
+dfly-patch:
+	${REINPLACE_CMD} -e '/rpl_strerror/s@^@//@g' \
+		${WRKSRC}/gnu/string.in.h
