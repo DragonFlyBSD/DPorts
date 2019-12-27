@@ -1,0 +1,9 @@
+
+# needs <experimental/filesystem> but redirect to <filesystem>
+USE_GCC_VERSION= 9
+LDFLAGS+=	-lstdc++fs
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@<experimental/filesystem>@<filesystem>@g' \
+			 -e 's@experimental::filesystem@filesystem@g' \
+		${WRKSRC}/tiv.cpp
