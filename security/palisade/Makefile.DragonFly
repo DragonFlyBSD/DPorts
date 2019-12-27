@@ -1,0 +1,5 @@
+
+# use of <quadmath.h> and libquadmath.so
+USES+=	fortran
+
+DFLY_CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER:STRING="g++8"
