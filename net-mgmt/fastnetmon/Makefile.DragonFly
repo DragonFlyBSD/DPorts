@@ -1,1 +1,5 @@
 USES+=ncurses
+
+# during fastnetmon link libunified_parser.a is before libnetmap_plugin.a
+# and gets rejected by ld.gold: undef ref to parse_raw_packet_to_simple_packet()
+CMAKE_ARGS+=	-DENABLE_NETMAP_SUPPORT:BOOL=OFF
