@@ -1,0 +1,3 @@
+.if !defined(DPORTS_BUILDER)
+MANUAL_PACKAGE_BUILD=	requires >4GB of RAM for final link
+.endif
