@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/games/farblazer/files/farblazer.in 350742 2014-04-09 21:24:55Z nemysis $
+# $FreeBSD$
 #
 
 cd "%%DATADIR%%"

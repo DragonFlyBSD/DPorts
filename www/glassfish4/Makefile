@@ -5,13 +5,13 @@ PORTNAME=	glassfish
 PORTVERSION=	4.1
 CATEGORIES=	www java
 MASTER_SITES=	http://dlc.sun.com.edgesuite.net/glassfish/${PORTVERSION}/release/
+PKGNAMESUFFIX=	4
 
 MAINTAINER=	jmd@FreeBSD.org
 COMMENT=	Reference implementation of the Java EE application server
 
 USES=		zip
 USE_JAVA=	yes
-JAVA_VERSION=	1.7+
 NO_BUILD=	yes
 
 WRKSRC=		${WRKDIR}/glassfish4

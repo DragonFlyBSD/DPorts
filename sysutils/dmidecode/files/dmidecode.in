@@ -25,7 +25,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: head/sysutils/dmidecode/files/dmidecode.in 403097 2015-12-06 10:04:50Z pi $
+# $FreeBSD$
 #
 
 # If there is a global system configuration file, suck it in.

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/irc/atheme-services/files/atheme-services.in 344087 2014-02-13 10:28:22Z tdb $
+# $FreeBSD$
 #
 # PROVIDE: atheme_services
 # REQUIRE: LOGIN

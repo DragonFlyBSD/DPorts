@@ -1,0 +1,6 @@
+
+# deps for internal mysql configure
+#.ifdef PORTSBUILDER_DSYNTH
+BUILD_DEPENDS+=	bison>=0:devel/bison
+BUILD_DEPENDS+=	cmake>=0:devel/cmake
+#.endif

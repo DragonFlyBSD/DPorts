@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/deskutils/py-paperless/files/paperless-consumer.in 497249 2019-03-30 12:27:52Z grembo $
+# $FreeBSD$
 #
 # PROVIDE: paperless-consumer
 # REQUIRE: LOGIN

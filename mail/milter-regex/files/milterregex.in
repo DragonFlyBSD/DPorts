@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/mail/milter-regex/files/milterregex.in 500679 2019-05-02 19:07:34Z dinoex $
+# $FreeBSD$
 
 # Start or stop milterregex
 

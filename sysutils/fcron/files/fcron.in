@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/sysutils/fcron/files/fcron.in 414794 2016-05-08 09:33:26Z pi $
+# $FreeBSD$
 #
 # PROVIDE: fcron
 # REQUIRE: LOGIN

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/news/nzbget/files/nzbget.in 463542 2018-03-03 23:33:33Z bdrewery $
+# $FreeBSD$
 #
 # PROVIDE: nzbget
 # REQUIRE: LOGIN

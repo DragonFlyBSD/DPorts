@@ -1,7 +1,7 @@
 /*
  * Custom options imported from asterisk provided customizations.
  *
- * $FreeBSD: head/net/pjsip/files/config_site.h 500705 2019-05-03 08:17:41Z madpilot $
+ * $FreeBSD$
  */
 
 #include <sys/select.h>

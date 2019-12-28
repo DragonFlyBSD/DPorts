@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/dns/dnsmasq/files/dnsmasq.in 363645 2014-07-31 17:56:45Z mandree $
+# $FreeBSD$
 #
 # PROVIDE: dnsmasq
 # REQUIRE: SERVERS ldconfig

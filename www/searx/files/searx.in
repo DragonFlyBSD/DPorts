@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/www/searx/files/searx.in 463944 2018-03-09 08:34:57Z yuri $
+# $FreeBSD$
 
 # PROVIDE: searx
 # REQUIRE: DAEMON NETWORKING

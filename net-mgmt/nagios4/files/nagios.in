@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net-mgmt/nagios4/files/nagios.in 395658 2015-08-31 10:06:07Z mat $
+# $FreeBSD$
 #
 
 # PROVIDE: nagios

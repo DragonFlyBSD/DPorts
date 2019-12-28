@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/mail/mailman/files/mailman.in 462151 2018-02-17 12:45:18Z mandree $
+# $FreeBSD$
 #
 # PROVIDE: mailman
 # REQUIRE: LOGIN

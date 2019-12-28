@@ -1,4 +1,4 @@
-# $FreeBSD: head/Templates/config.site 510716 2019-09-01 18:57:18Z antoine $
+# $FreeBSD$
 # Do not add:
 #	- toolchain related
 #	- arch-dependent values

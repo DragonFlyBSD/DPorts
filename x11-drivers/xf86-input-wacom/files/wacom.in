@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/x11-drivers/xf86-input-wacom/files/wacom.in 409737 2016-02-28 12:16:13Z jbeich $
+# $FreeBSD$
 #
 # PROVIDE: wacom
 # REQUIRE: mountcritlocal

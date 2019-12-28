@@ -3,7 +3,7 @@
 # motsognir.sh for rc.d usage (c) 2013-2014 Mateusz Viste.
 # $Id$
 
-# $FreeBSD: head/net/motsognir/files/motsognir.in 374112 2014-12-06 14:27:35Z pawel $
+# $FreeBSD$
 #
 # PROVIDE: motsognir
 # REQUIRE: DAEMON

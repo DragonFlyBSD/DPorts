@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/www/selenium/files/selenium.in 447957 2017-08-14 18:53:51Z pi $
+# $FreeBSD$
 #
 # PROVIDE: selenium
 # REQUIRE: LOGIN

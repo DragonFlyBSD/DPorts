@@ -7,7 +7,7 @@
 
 # This script is in the public domain
 
-# $FreeBSD: head/ports-mgmt/portdowngrade/files/portdowngrade 478673 2018-09-01 11:23:29Z crees $
+# $FreeBSD$
 
 usage()
 {

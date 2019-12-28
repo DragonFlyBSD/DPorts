@@ -1,0 +1,29 @@
+--- SConstruct.orig	2017-05-25 17:11:36.000000000 +0000
++++ SConstruct	2017-07-06 16:18:34.000000000 +0000
+@@ -184,7 +184,7 @@
+ env.Append(CCFLAGS = ' -pthread')
+ 
+ # FreeBSD ports are usually installed under /usr/local
+-if sysname == 'freebsd' or sysname == 'sunos':
++if sysname == 'dragonfly' or sysname == 'freebsd' or sysname == 'sunos':
+     env.Append(LIBPATH = ['/usr/local/lib'])
+     env.Append(CPPPATH = ['/usr/local/include'])
+ if sysname == 'sunos':
+@@ -207,7 +207,7 @@
+ # print env.Dump()
+ 
+ # Preprocessor flags
+-if sysname != 'sunos' and sysname != 'darwin' and sysname != 'freebsd':
++if sysname != 'sunos' and sysname != 'darwin' and sysname != 'freebsd'and sysname != 'dragonfly':
+     env.Append(CPPFLAGS = ' -D_XOPEN_SOURCE=600')
+ if sysname == 'sunos':
+     env.Append(CPPFLAGS = ' -D__EXTENSIONS__')
+@@ -283,7 +283,7 @@
+         print 'Error: rt library not found'
+         Exit(1)
+ 
+-if sysname == 'freebsd':
++if sysname == 'freebsd' or sysname == 'dragonfly':
+     if not conf.CheckLib('execinfo'):
+         print 'Error: execinfo library not found'
+         Exit(1)

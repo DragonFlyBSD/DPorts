@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/dns/unbound/files/unbound.in 510824 2019-09-02 16:31:02Z swills $
+# $FreeBSD$
 #
 # unbound freebsd startup rc.d script
 # uses the default unbound installation path and pidfile location.

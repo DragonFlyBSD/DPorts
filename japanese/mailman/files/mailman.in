@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/japanese/mailman/files/mailman.in 360783 2014-07-05 17:42:23Z tota $
+# $FreeBSD$
 #
 # PROVIDE: mailman
 # REQUIRE: LOGIN

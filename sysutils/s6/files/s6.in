@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/sysutils/s6/files/s6.in 394374 2015-08-16 02:48:26Z jbeich $
+# $FreeBSD$
 #
 # PROVIDE: /service
 # BEFORE:  SERVERS

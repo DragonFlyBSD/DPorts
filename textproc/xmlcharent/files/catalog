@@ -1,4 +1,4 @@
--- $FreeBSD: head/textproc/xmlcharent/files/catalog 340872 2014-01-24 00:14:07Z mat $ --
+-- $FreeBSD$ --
 
 PUBLIC "ISO 8879:1986//ENTITIES Added Latin 1//EN//XML"
 "iso-lat1.ent"

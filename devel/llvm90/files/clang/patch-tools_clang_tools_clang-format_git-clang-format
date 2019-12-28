@@ -1,5 +1,5 @@
 
-$FreeBSD: head/devel/llvm90/files/clang/patch-tools_clang_tools_clang-format_git-clang-format 460063 2018-01-26 23:47:28Z brooks $
+$FreeBSD$
 
 --- tools/clang/tools/clang-format/git-clang-format.orig
 +++ tools/clang/tools/clang-format/git-clang-format

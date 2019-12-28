@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/mail/courier/files/pkg-install.in 360268 2014-07-02 21:52:11Z marino $
+# $FreeBSD$
 #
 
 PKG_PREFIX=${PKG_PREFIX:=/usr/local}

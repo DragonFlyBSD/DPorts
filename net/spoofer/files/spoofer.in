@@ -1,4 +1,4 @@
-# $FreeBSD: head/net/spoofer/files/spoofer.in 419610 2016-08-04 13:19:54Z jadawin $
+# $FreeBSD$
 #!/bin/sh
 #
 # PROVIDE: spoofer

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/java/javavmwrapper/src/classpath.sh 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD$
 #
 
 JAVALIBDIR=%%JAVALIBDIR%%

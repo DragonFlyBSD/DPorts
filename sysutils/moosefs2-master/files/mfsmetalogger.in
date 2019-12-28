@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/sysutils/moosefs2-master/files/mfsmetalogger.in 394023 2015-08-12 16:10:30Z feld $
+# $FreeBSD$
 
 # PROVIDE: mfsmetalogger
 # REQUIRE: DAEMON

@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $FreeBSD: head/devel/py-mwlib/files/nserve.in 370065 2014-10-05 13:29:15Z wen $
+# $FreeBSD$
 #
 
 # PROVIDE: nserve

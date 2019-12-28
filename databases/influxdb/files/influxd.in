@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/databases/influxdb/files/influxd.in 477862 2018-08-23 09:25:23Z miwi $
+# $FreeBSD$
 
 # PROVIDE: influxd
 # REQUIRE: DAEMON NETWORKING

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/devel/py-buildbot-worker/files/buildbot-worker.in 484380 2018-11-07 03:24:59Z koobs $
+# $FreeBSD$
 # PROVIDE: buildbot-worker
 # REQUIRE: LOGIN
 # KEYWORD: shutdown

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/x11-fm/rox-session/files/rox-session.in 304126 2012-09-11 21:59:23Z olgeni $
+# $FreeBSD$
 
 echo "ROX Session: Starting up..." 
 cd "%%DATADIR%%"

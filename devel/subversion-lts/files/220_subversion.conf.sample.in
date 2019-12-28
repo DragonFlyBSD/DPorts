@@ -1,4 +1,4 @@
-## $FreeBSD: head/devel/subversion-lts/files/220_subversion.conf.sample.in 403810 2015-12-15 21:06:27Z ohauer $
+## $FreeBSD$
 ## vim: set filetype=apache:
 ##
 ## module file for subversion

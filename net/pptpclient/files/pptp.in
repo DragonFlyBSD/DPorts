@@ -24,7 +24,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: head/net/pptpclient/files/pptp.in 408595 2016-02-09 20:44:50Z dteske $
+# $FreeBSD$
 #
 
 # PROVIDE: pptp

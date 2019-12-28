@@ -1,4 +1,4 @@
--- $FreeBSD: head/devel/kyua/files/kyua.conf.in 364865 2014-08-14 20:21:56Z jmmv $
+-- $FreeBSD$
 --
 -- System-wide configuration file for kyua(1).  See kyua.conf(5) for details
 -- on the syntax.

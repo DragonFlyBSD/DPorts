@@ -1,11 +1,12 @@
---- test/module.defs.intermediate	2018-04-05 17:31:47.000000000 +0000
+--- test/module.defs.orig	2019-11-09 20:44:32 ORIG
 +++ test/module.defs
-@@ -63,6 +63,8 @@ else ifeq ($(BUILD.system),kfreebsd)
-     TEST.GCC.l += pthread dl m
- else ifeq ($(BUILD.system),freebsd)
+@@ -74,6 +74,9 @@ else ifeq ($(HOST.system),kfreebsd)
+ else ifeq ($(HOST.system),freebsd)
+     TEST.GCC.L += $(LOCALBASE)/lib
      TEST.GCC.l += pthread m
-+else ifeq ($(BUILD.system),dragonfly)
++else ifeq ($(HOST.system),dragonfly)
++    TEST.GCC.L += $(LOCALBASE)/lib
 +    TEST.GCC.l += pthread m
- else ifeq ($(BUILD.system),solaris)
+ else ifeq ($(HOST.system),solaris)
      TEST.GCC.l += pthread nsl socket
- ifneq (,$(filter $(BUILD.release),2.10))
+ ifneq (,$(filter $(HOST.release),2.10))

@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/sysutils/lizardfs/files/mfscgiserv.in 491834 2019-02-01 17:12:54Z jhixson $
+# $FreeBSD$
 
 # PROVIDE: mfscgiserv
 # REQUIRE: DAEMON

@@ -4,10 +4,10 @@
 PORTNAME=	repeater
 PORTVERSION=	0.14
 CATEGORIES=	net
-MASTER_SITES=	http://koti.mbnet.fi/jtko/uvncrepeater/
+MASTER_SITES=	http://newestvision.com/freebsd/pkg/
 DISTNAME=	repeater${PORTVERSION:C/\.//}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	oleg@newestvision.com
 COMMENT=	UltraVNC repeater
 
 LICENSE=	GPLv2+

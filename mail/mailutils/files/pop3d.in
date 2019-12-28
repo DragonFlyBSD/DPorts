@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/mail/mailutils/files/pop3d.in 430016 2016-12-30 19:16:19Z danfe $
+# $FreeBSD$
 #
 # PROVIDE: pop3d
 # REQUIRE: DAEMON

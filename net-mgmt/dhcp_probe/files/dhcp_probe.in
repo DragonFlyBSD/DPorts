@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/net-mgmt/dhcp_probe/files/dhcp_probe.in 380712 2015-03-07 18:33:16Z riggs $
+# $FreeBSD$
 #
 # PROVIDE: dhcp_probe
 # REQUIRE: LOGIN

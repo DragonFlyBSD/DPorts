@@ -24,7 +24,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: head/sysutils/devcpu-data/files/ucode-split.c 470255 2018-05-18 01:28:23Z sbruno $
+ * $FreeBSD$
  */
 
 #include <err.h>

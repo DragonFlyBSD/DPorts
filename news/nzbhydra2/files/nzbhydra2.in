@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/news/nzbhydra2/files/nzbhydra2.in 492464 2019-02-08 22:45:48Z tcberner $
+# $FreeBSD$
 #
 # PROVIDE: nzbhydra2
 # REQUIRE: LOGIN

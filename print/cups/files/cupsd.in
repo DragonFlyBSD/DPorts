@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/print/cups/files/cupsd.in 410825 2016-03-11 11:53:42Z tijl $
+# $FreeBSD$
 #
 # PROVIDE: cupsd
 # REQUIRE: DAEMON %%DBUS_DAEMON%% %%AVAHI_DAEMON%%

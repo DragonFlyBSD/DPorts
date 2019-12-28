@@ -2,10 +2,10 @@
 
 PORTNAME=	dep
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.5.0
+DISTVERSION=	0.5.4
 CATEGORIES=	devel
 
-MAINTAINER=	sam.gwydir@joyent.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Prototype dependency management tool for Go
 
 LICENSE=	BSD3CLAUSE

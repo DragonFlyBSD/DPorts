@@ -10,11 +10,11 @@ DIST_SUBDIR=	mate
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	MATE support utilities
 
-LICENSE=	GPLv2 GFDL LGPL21
+LICENSE=	GPLv2+ GFDL LGPL20+
 LICENSE_COMB=	multi
-LICENSE_FILE_GPLv2=	${WRKSRC}/COPYING
+LICENSE_FILE_GPLv2+ =	${WRKSRC}/COPYING
 LICENSE_FILE_GFDL=	${WRKSRC}/COPYING.docs
-LICENSE_FILE_LGPL21=	${WRKSRC}/COPYING.libs
+LICENSE_FILE_LGPL20+ =	${WRKSRC}/COPYING.libs
 
 BUILD_DEPENDS=	itstool:textproc/itstool \
 		inkscape:graphics/inkscape
@@ -24,8 +24,8 @@ LIB_DEPENDS=	libgtop-2.0.so:devel/libgtop \
 
 PORTSCOUT=	limitw:1,even
 
-USES=		gettext gmake libtool localbase pathfix \
-		pkgconfig tar:xz
+USES=		gettext gmake gnome libtool localbase mate pathfix \
+		pkgconfig tar:xz xorg
 USE_MATE=	panel
 USE_XORG=	ice sm x11 xext
 USE_GNOME=	cairo gnomeprefix gtk30 intltool

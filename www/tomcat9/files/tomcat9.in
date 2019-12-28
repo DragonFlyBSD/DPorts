@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/www/tomcat9/files/tomcat9.in 509574 2019-08-22 02:40:39Z glewis $
+# $FreeBSD$
 #
 
 # PROVIDE: tomcat9

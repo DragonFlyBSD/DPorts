@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	portfmt
-PORTVERSION=	g20191021
+PORTVERSION=	g20191215
 CATEGORIES=	ports-mgmt
 
 MAINTAINER=	tobik@FreeBSD.org
@@ -12,25 +12,22 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	t6
-GH_TAGNAME=	aaef9d8c373b204482369a2c5cecd5b5f8ab8c83
+GH_TAGNAME=	dc6727041f0ad01e34131cab7186412d57ba6329
 USE_LDCONFIG=	yes
 
 HAS_CONFIGURE=	yes
-CONFIGURE_ARGS=	LDFLAGS="${LDFLAGS}" \
+CONFIGURE_ARGS=	CPPFLAGS="${CPPFLAGS}" \
+		LDFLAGS="${LDFLAGS}" \
 		PREFIX="${PREFIX}"
 MAKE_ARGS=	INSTALL_LIB="${INSTALL_LIB}" \
 		INSTALL_MAN="${INSTALL_MAN}" \
 		INSTALL_PROGRAM="${INSTALL_PROGRAM}"
 TEST_TARGET=	test
 
-PLIST_FILES=	bin/portclippy \
-		bin/portedit \
-		bin/portfmt \
-		bin/portscan \
-		lib/libportfmt.so \
-		man/man1/portclippy.1.gz \
-		man/man1/portedit.1.gz \
-		man/man1/portfmt.1.gz \
-		man/man1/portscan.1.gz
+OPTIONS_DEFINE=		SUBPACKAGES
+
+SUBPACKAGES_DESC=	Subpackages support (D16457)
+
+SUBPACKAGES_CPPFLAGS_OFF=	-DPORTFMT_SUBPACKAGES=0
 
 .include <bsd.port.mk>

@@ -1,4 +1,4 @@
-# $FreeBSD: head/databases/mysql57-server/files/my.cnf.sample.in 414707 2016-05-06 14:39:59Z riggs $
+# $FreeBSD$
 
 [client]
 port                            = 3306

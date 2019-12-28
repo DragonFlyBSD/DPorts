@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/net/sslh/files/sslh.in 381066 2015-03-12 08:43:18Z vanilla $
+# $FreeBSD$
 #
 # sslh startup script
 #

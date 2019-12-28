@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/games/blockrage/files/blockrage.in 339345 2014-01-10 12:13:56Z nemysis $
+# $FreeBSD$
 #
 
 cd "%%DATADIR%%"

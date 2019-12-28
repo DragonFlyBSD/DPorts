@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/dns/dhisd/files/dhisd.in 484793 2018-11-12 09:15:38Z egypcio $
+# $FreeBSD$
 #
 # PROVIDE: dhisd
 # REQUIRE: SERVERS

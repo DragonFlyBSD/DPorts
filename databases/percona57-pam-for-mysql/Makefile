@@ -16,6 +16,7 @@ MASTERDIR=	${.CURDIR}/../percona57-server
 PKGMESSAGE=	${.CURDIR}/pkg-message
 PATCHDIR=	${MASTERDIR}/files
 FILESDIR=	${.CURDIR}/files
+DFLY_PATCHDIR=	${.CURDIR}/dragonfly
 PLIST=		${.CURDIR}/pkg-plist
 DESCR=		${.CURDIR}/pkg-descr
 

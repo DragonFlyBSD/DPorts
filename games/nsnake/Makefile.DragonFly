@@ -1,0 +1,5 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e "s@^CFLAGS=@& ${CFLAGS}@g" \
+			 -e "s@^LDFLAGS=@& ${LDFLAGS}@g" \
+		${WRKSRC}/config.mk

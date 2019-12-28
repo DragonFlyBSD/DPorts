@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/audio/icecast-kh/files/icecast.in 334719 2013-11-24 12:05:33Z alexey $
+# $FreeBSD$
 #
 
 # PROVIDE: icecast

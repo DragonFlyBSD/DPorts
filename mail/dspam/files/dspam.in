@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/mail/dspam/files/dspam.in 414374 2016-05-01 01:13:06Z junovitch $
+# $FreeBSD$
 #
 
 # PROVIDE: dspam

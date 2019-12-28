@@ -1,4 +1,4 @@
-# $FreeBSD: head/Keywords/terminfo.ucl 398827 2015-10-08 14:12:53Z amdmi3 $
+# $FreeBSD$
 #
 
 actions: []

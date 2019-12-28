@@ -2,7 +2,7 @@
 #
 # Author: Mark Felder <feld@FreeBSD.org>
 #
-# $FreeBSD: head/dns/nsnotifyd/files/nsnotifyd.in 466599 2018-04-05 20:37:15Z feld $
+# $FreeBSD$
 #
 
 # PROVIDE: nsnotifyd

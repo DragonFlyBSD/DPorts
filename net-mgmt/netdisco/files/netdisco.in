@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/net-mgmt/netdisco/files/netdisco.in 461651 2018-02-12 20:21:13Z riggs $
+# $FreeBSD$
 # 
 # PROVIDE: netdisco
 # REQUIRE: DAEMON LOGIN

@@ -2,7 +2,7 @@
 #
 # Author: Mark Felder <feld@FreeBSD.org>
 #
-# $FreeBSD: head/net-p2p/sonarr-devel/files/sonarr.in 512297 2019-09-18 22:50:09Z feld $
+# $FreeBSD$
 #
 
 # PROVIDE: sonarr

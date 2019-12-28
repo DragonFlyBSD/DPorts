@@ -1,15 +1,6 @@
---- setup.py.orig	2017-01-22 22:24:10 UTC
+--- setup.py.orig	2019-02-14 12:51:17 UTC
 +++ setup.py
-@@ -117,7 +117,7 @@ def main():
-     elif os.uname()[0] == 'Darwin':
-         compile_args.append('-DHAVE_STRUCT_STAT_ST_ATIMESPEC')
-         c_sources.append('src/darwin_compat.c')
--    elif os.uname()[0] in ('FreeBSD', 'NetBSD'):
-+    elif os.uname()[0] in ('FreeBSD', 'NetBSD', 'DragonFly'):
-         compile_args.append('-DHAVE_STRUCT_STAT_ST_ATIMESPEC')
-     else:
-         print("NOTE: unknown system (%s), nanosecond resolution file times "
-@@ -147,8 +147,9 @@ def main():
+@@ -145,8 +145,9 @@ def main():
                         'License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)',
                         'Operating System :: POSIX :: Linux',
                         'Operating System :: MacOS :: MacOS X',

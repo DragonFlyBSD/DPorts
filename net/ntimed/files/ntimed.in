@@ -2,7 +2,7 @@
 #
 # Author: Mark Felder <feld@FreeBSD.org>
 #
-# $FreeBSD: head/net/ntimed/files/ntimed.in 375206 2014-12-22 03:55:43Z koobs $
+# $FreeBSD$
 #
 
 # PROVIDE: ntimed

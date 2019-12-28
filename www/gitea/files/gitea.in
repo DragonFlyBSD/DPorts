@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/www/gitea/files/gitea.in 476977 2018-08-12 08:00:30Z flo $
+# $FreeBSD$
 #
 # PROVIDE: gitea
 # REQUIRE: NETWORKING SYSLOG

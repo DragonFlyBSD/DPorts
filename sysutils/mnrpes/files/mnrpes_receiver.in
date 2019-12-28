@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/sysutils/mnrpes/files/mnrpes_receiver.in 351172 2014-04-13 02:10:02Z swills $
+# $FreeBSD$
 #
 # mnrpes_receiver startup script
 #

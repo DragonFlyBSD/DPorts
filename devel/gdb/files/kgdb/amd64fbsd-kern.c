@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: head/devel/gdb/files/kgdb/amd64fbsd-kern.c 503200 2019-06-01 00:44:08Z jhb $");
+__FBSDID("$FreeBSD$");
 
 #include "defs.h"
 #include "frame-unwind.h"

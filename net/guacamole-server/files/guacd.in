@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/net/guacamole-server/files/guacd.in 408301 2016-02-06 16:11:34Z pi $
+# $FreeBSD$
 #
 # PROVIDE: guacd
 # REQUIRE: LOGIN

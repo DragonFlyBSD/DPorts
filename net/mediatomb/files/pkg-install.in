@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/net/mediatomb/files/pkg-install.in 397755 2015-09-24 19:49:17Z pi $
+# $FreeBSD$
 #
 
 if [ "$2" != "PRE-INSTALL" ]; then

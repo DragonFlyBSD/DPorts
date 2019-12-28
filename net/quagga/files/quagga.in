@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net/quagga/files/quagga.in 509507 2019-08-21 14:29:57Z tobik $
+# $FreeBSD$
 #
 
 # PROVIDE: quagga

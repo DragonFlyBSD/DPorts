@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/devel/cvsd/files/cvsd.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD$
 #
 # PROVIDE: cvsd
 # REQUIRE: LOGIN syslogd

@@ -1,0 +1,3 @@
+
+# /usr/libexec/binutils227/elf/ld.gold: --default-symver: unknown option
+MAKE_ENV+=	LDVER=ld.bfd

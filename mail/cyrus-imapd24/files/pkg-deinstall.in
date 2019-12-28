@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/mail/cyrus-imapd24/files/pkg-deinstall.in 411341 2016-03-18 11:39:18Z ume $
+# $FreeBSD$
 # Created by: hetzels@westbend.net
 
 #set -vx

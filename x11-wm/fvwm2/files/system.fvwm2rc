@@ -1,4 +1,4 @@
-# $FreeBSD: head/x11-wm/fvwm2/files/system.fvwm2rc 505298 2019-06-28 20:00:01Z cy $
+# $FreeBSD$
 #
 # this is a bare bones sample .fvwm2rc/system.fvwm2rc file for fvwm.
 # It should be customized before install.  See other sample .fvwm2rc files

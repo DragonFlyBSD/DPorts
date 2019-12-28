@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/sysutils/fluent-bit/files/fluent-bit.in 441900 2017-05-28 08:22:38Z girgen $
+# $FreeBSD$
 
 # PROVIDE: fluent-bit
 # REQUIRE: DAEMON

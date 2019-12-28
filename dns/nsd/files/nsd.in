@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/dns/nsd/files/nsd.in 420347 2016-08-17 13:22:27Z lev $
+# $FreeBSD$
 #
 # PROVIDE: nsd
 # REQUIRE: DAEMON

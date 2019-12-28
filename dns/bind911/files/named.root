@@ -1,5 +1,5 @@
 ;
-; $FreeBSD: head/dns/bind911/files/named.root 459406 2018-01-19 12:32:34Z mat $
+; $FreeBSD$
 ;
 
 ;       This file holds the information on root name servers needed to 

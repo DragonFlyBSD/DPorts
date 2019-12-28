@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/sysutils/nut/files/nut.in 476960 2018-08-12 04:24:05Z cy $
+# $FreeBSD$
 #
 
 # PROVIDE: nut

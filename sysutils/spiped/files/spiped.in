@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/sysutils/spiped/files/spiped.in 429219 2016-12-23 03:47:39Z cperciva $
+# $FreeBSD$
 #
 # PROVIDE: spiped
 # REQUIRE: LOGIN

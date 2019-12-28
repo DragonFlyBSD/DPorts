@@ -1,4 +1,4 @@
-/* $FreeBSD: head/audio/xcdplayer/files/cdrom_freebsd.c 386988 2015-05-22 07:21:04Z jbeich $ */
+/* $FreeBSD$ */
 /* $NetBSD: pkgsrc/audio/xcdplayer/files/cdrom_freebsd.c,v 1.6 2005/12/11 20:48:46 joerg Exp $ */
 /*
  * Copyright (C) 1990 Regents of the University of California.

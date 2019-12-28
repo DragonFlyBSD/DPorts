@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/net-p2p/amule/files/amuled.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD$
 #
 # aMule RCng startup script
 # Ogirinal work from Gabriele Cecchetti (amule.org forum)

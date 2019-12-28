@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/net/dictd/files/dictd.in 374253 2014-12-08 09:12:03Z sunpoet $
+# $FreeBSD$
 #
 # PROVIDE: dictd
 # REQUIRE: DAEMON

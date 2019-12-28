@@ -3,7 +3,7 @@
 
 PORTNAME=	deadbeef
 PORTVERSION=	0.7.2
-PORTREVISION=	17
+PORTREVISION=	18
 CATEGORIES=	audio
 MASTER_SITES=	SF/${PORTNAME}/
 
@@ -14,8 +14,8 @@ LICENSE=	GPLv2 LGPL21
 LICENSE_COMB=	dual
 
 GNU_CONFIGURE=	yes
-USES=		compiler:c11 desktop-file-utils gettext gmake iconv libtool \
-		pkgconfig shebangfix tar:bzip2
+USES=		compiler:c11 desktop-file-utils gettext gmake gnome iconv \
+		libtool pkgconfig shebangfix tar:bzip2
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--disable-alsa --disable-nullout --disable-static
 CPPFLAGS+=	-I../dumb/dumb-kode54/include -I../../plugins/libmp4ff \

@@ -1,5 +1,5 @@
 ;; leim-list.el --- Mozc setup for leim API
-;; $FreeBSD: head/japanese/mozc-server/files/leim-list.el 379309 2015-02-18 19:16:43Z hrs $$
+;; $FreeBSD$$
 ;;
 ;; Copyright (c) 2013 Hiroki Sato <hrs@FreeBSD.org>.  All rights reserved.
 ;;

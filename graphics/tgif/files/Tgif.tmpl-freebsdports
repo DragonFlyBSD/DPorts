@@ -1,4 +1,4 @@
-XCOMM $FreeBSD: head/graphics/tgif/files/Tgif.tmpl-freebsdports 340872 2014-01-24 00:14:07Z mat $
+XCOMM $FreeBSD$
 #ifdef WITH_NLS
 #define IHaveSubdirs
 SUBDIRS=		po

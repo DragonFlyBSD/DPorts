@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/sysutils/daemontools-encore/files/svscan.in 395753 2015-09-01 13:50:53Z knu $
+# $FreeBSD$
 #
 
 # PROVIDE: svscan

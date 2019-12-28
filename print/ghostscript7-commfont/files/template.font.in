@@ -1,5 +1,5 @@
 %!PS-Adobe-3.0 Resource-Font
-%%Creator: $FreeBSD: head/print/ghostscript7-commfont/files/template.font.in 340872 2014-01-24 00:14:07Z mat $
+%%Creator: $FreeBSD$
 %%DocumentNeededResources: %%CMAPNAME%% (CMap)
 %%IncludeResource: %%CMAPNAME%% (CMap)
 %%BeginResource: Font (%%FONTNAME%%-%%CMAPNAME%%)

@@ -1,4 +1,4 @@
-# $FreeBSD: head/www/nghttp2/files/nghttpx.conf.sample 421805 2016-09-11 07:52:26Z brnrd $
+# $FreeBSD$
 # Sample config file for nghttpx in proxy forwarding mode.
 
 # See https://nghttp2.org/documentation/nghttpx.1.html for

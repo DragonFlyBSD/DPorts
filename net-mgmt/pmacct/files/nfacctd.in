@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net-mgmt/pmacct/files/nfacctd.in 436629 2017-03-21 19:44:42Z pi $
+# $FreeBSD$
 #
 
 # PROVIDE: nfacctd

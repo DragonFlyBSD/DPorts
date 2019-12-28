@@ -1,14 +1,14 @@
---- make/include/main.defs.orig	2019-02-22 16:23:51 UTC
+--- make/include/main.defs.orig	2019-11-09 20:44:32 UTC
 +++ make/include/main.defs
-@@ -120,6 +120,11 @@ ifeq (1-linux,$(FEATURE.gtk)-$(BUILD.sys
+@@ -110,6 +110,11 @@ ifeq (1-linux,$(FEATURE.gtk)-$(HOST.syst
      MODULES += gtk
  endif
  
-+ifeq (1-dragonfly,$(FEATURE.gtk)-$(BUILD.system))
++ifeq (1-dragonfly,$(FEATURE.gtk)-$(HOST.system))
 +    ## build gtk when gtk+dragonfly
 +    MODULES += gtk
 +endif
 +
- ifeq (1-freebsd,$(FEATURE.gtk)-$(BUILD.system))
+ ifeq (1-freebsd,$(FEATURE.gtk)-$(HOST.system))
      ## build gtk when gtk+freebsd
      MODULES += gtk

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/net-mgmt/p0f2/files/p0f2.in 312440 2013-02-17 19:55:16Z swills $
+# $FreeBSD$
 #
 # PROVIDE: p0f2
 # REQUIRE: LOGIN

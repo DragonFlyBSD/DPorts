@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/japanese/mozc-server/files/mozc.in 391682 2015-07-09 21:12:03Z hrs $
+# $FreeBSD$
 : ${MOZCDIR:="${HOME}/.mozc"}
 
 # Mozc does not run by priviledged user.  Ignore silently.

@@ -1,0 +1,4 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/200809/s@_POSIX_C_SOURCE@&___@g' \
+		${WRKSRC}/src/util/compat.h

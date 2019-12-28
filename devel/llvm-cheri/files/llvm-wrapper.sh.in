@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/devel/llvm-cheri/files/llvm-wrapper.sh.in 484937 2018-11-14 18:12:23Z bdrewery $
+# $FreeBSD$
 
 LLVM_PREFIX="%%LLVM_PREFIX%%"
 LLVM_SUFFIX="%%LLVM_SUFFIX%%"

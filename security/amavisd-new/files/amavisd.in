@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/security/amavisd-new/files/amavisd.in 477228 2018-08-15 13:30:40Z flo $
+# $FreeBSD$
 #
 # PROVIDE: amavisd
 # REQUIRE: LOGIN mysql postgresql amavis_p0fanalyzer

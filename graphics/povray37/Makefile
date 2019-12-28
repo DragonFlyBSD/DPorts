@@ -3,7 +3,7 @@
 PORTNAME=	povray
 DISTVERSIONPREFIX=	v
 DISTVERSION=	3.7.0.8
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	37
 
@@ -40,6 +40,7 @@ IO_DESC=	Without I/O restrictions (security risk)
 
 IO_CONFIGURE_ON=	--disable-io-restrictions
 STATIC_CONFIGURE_ON=	--enable-static
+X11_USES=		sdl xorg
 X11_USE=		XORG=xpm,sm,ice,x11 SDL=sdl
 X11_CONFIGURE_OFF=	--without-x
 

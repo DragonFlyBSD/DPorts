@@ -1,4 +1,4 @@
-# $FreeBSD: head/www/carbonapi/files/carbonapi.in 465192 2018-03-21 16:49:20Z pi $
+# $FreeBSD$
 #
 # PROVIDE: carbonapi
 # REQUIRE: LOGIN

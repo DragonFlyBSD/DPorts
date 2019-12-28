@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net-mgmt/nfsen/files/nfsen.in 418197 2016-07-07 19:41:31Z feld $
+# $FreeBSD$
 #
 # PROVIDE: nfsen
 # REQUIRE: LOGIN

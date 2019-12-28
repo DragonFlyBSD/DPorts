@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/net-mgmt/carbonzipper/files/carbonzipper.in 465193 2018-03-21 16:52:34Z pi $
+# $FreeBSD$
 #
 # PROVIDE: carbonzipper
 # REQUIRE: LOGIN

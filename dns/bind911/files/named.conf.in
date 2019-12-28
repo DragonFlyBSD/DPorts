@@ -1,4 +1,4 @@
-// $FreeBSD: head/dns/bind911/files/named.conf.in 443607 2017-06-14 22:54:43Z mat $
+// $FreeBSD$
 //
 // Refer to the named.conf(5) and named(8) man pages, and the documentation
 // in /usr/local/share/doc/bind for more details.

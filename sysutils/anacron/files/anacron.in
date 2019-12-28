@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/sysutils/anacron/files/anacron.in 361519 2014-07-11 09:52:59Z madpilot $
+# $FreeBSD$
 #
 
 # PROVIDE: anacron

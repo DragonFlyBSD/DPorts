@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/mail/davmail/files/davmail.sh.in 360324 2014-07-02 23:53:20Z jkim $
+# $FreeBSD$
 exec %%LOCALBASE%%/bin/java \
     -cp "%%DATADIR%%/davmail.jar:%%DATADIR%%/lib/*" \
     davmail.DavGateway "$@"

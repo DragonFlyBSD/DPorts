@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/games/lugaru/files/lugaru.in 329241 2013-10-03 21:58:56Z nemysis $
+# $FreeBSD$
 #
 
 cd "%%DATADIR%%"

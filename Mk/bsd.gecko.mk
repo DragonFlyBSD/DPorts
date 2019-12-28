@@ -71,7 +71,6 @@ USE_PERL5=	build
 USE_XORG=	x11 xcb xcomposite xdamage xext xfixes xrender xt
 HAS_CONFIGURE=	yes
 CONFIGURE_OUTSOURCE=	yes
-CONFIGURE_WRKSRC=	${WRKSRC}/objdir # bug1579761
 LDFLAGS+=		-Wl,--as-needed
 
 BUNDLE_LIBS=	yes
@@ -112,7 +111,7 @@ RUSTFLAGS+=	${CFLAGS:M-mcpu=*:S/-mcpu=/-C target-cpu=/}
 .endif
 
 # Standard depends
-_ALL_DEPENDS=	av1 event ffi graphite harfbuzz hunspell icu jpeg nspr nss png pixman sqlite vpx webp
+_ALL_DEPENDS=	av1 event ffi graphite harfbuzz icu jpeg nspr nss png pixman sqlite vpx webp
 
 .if exists(${FILESDIR}/patch-bug1559213)
 av1_LIB_DEPENDS=	libaom.so:multimedia/aom libdav1d.so:multimedia/dav1d
@@ -132,9 +131,6 @@ graphite_MOZ_OPTIONS=	--with-system-graphite2
 harfbuzz_LIB_DEPENDS=	libharfbuzz.so:print/harfbuzz
 harfbuzz_MOZ_OPTIONS=	--with-system-harfbuzz
 .endif
-
-hunspell_LIB_DEPENDS=	libhunspell-1.7.so:textproc/hunspell
-hunspell_MOZ_OPTIONS=	--enable-system-hunspell
 
 icu_LIB_DEPENDS=		libicui18n.so:devel/icu
 icu_MOZ_OPTIONS=		--with-system-icu --with-intl-api
@@ -268,10 +264,8 @@ MOZ_OPTIONS+=	--disable-pulseaudio
 BUILD_DEPENDS+=	${LOCALBASE}/include/sndio.h:audio/sndio
 post-patch-SNDIO-on:
 	@${REINPLACE_CMD} -e 's|OpenBSD|${OPSYS}|g' \
-		${MOZSRC}/media/libcubeb/src/moz.build \
-		${MOZSRC}/toolkit/library/moz.build
-	@${REINPLACE_CMD} -e 's|OpenBSD|${OPSYS}|g' \
-			 ${MOZSRC}/media/libcubeb/gtest/moz.build
+		-e '/DISABLE_LIBSNDIO_DLOPEN/d' \
+		${MOZSRC}/media/libcubeb/src/moz.build
 .endif
 
 .if ${PORT_OPTIONS:MDEBUG}
@@ -327,7 +321,6 @@ LDFLAGS+=	-B${LOCALBASE}/bin
 .elif ${ARCH:Mpowerpc*}
 . if ${ARCH} == "powerpc64"
 MOZ_EXPORT+=	UNAME_m="${ARCH}"
-CFLAGS+=	-mminimal-toc
 . endif
 .elif ${ARCH} == "sparc64"
 # Work around miscompilation/mislinkage of the sCanonicalVTable hacks.

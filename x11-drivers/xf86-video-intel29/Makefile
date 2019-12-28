@@ -2,6 +2,7 @@
 
 PORTNAME=	xf86-video-intel
 PORTVERSION=	2.99.2018.10.22
+PORTREVISION=	1
 PORTEPOCH=	2
 CATEGORIES=	x11-drivers
 MASTER_SITES=	http://dl.wolfpond.org/distfiles/
@@ -9,25 +10,23 @@ MASTER_SITES=	http://dl.wolfpond.org/distfiles/
 MAINTAINER=	ftigeot@wolfpond.org
 COMMENT=	Driver for Intel integrated graphics chipsets
 
-LIB_DEPENDS=	libxcb-util.so:x11/xcb-util
-# Needed to build tests
-LIB_DEPENDS+=	libpng.so:graphics/png
+LICENSE=	MIT	# various
+LICENSE_FILE=	${WRKSRC}/COPYING
 
 ONLY_FOR_ARCHS=	amd64 i386
+
+LIB_DEPENDS=	libxcb-util.so:x11/xcb-util \
+		libdrm.so:graphics/libdrm
+
+USES=		autoreconf:build gmake libtool tar:xz cpe gl xorg xorg-cat:driver
 USE_GL=		gl
-
+USE_XORG=	pciaccess pixman x11 xcb xext xrender xv xvmc xrandr xcomposite
 USE_LDCONFIG=	yes
-XORG_CAT=	driver
-USE_XORG=	pixman \
-		x11 \
-		xcomposite \
-		xext \
-		xrandr \
-		xrender \
-		xvmc
 
-USES+=		autoreconf:build gmake libtool cpe tar:xz
 CPE_VENDOR=	x
+
+# Needed to build tests
+LIB_DEPENDS+=	libpng.so:graphics/png
 
 OPTIONS_DEFINE=	TOOLS
 

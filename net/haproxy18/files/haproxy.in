@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net/haproxy18/files/haproxy.in 477980 2018-08-24 19:19:26Z demon $
+# $FreeBSD$
 #
 
 # PROVIDE: haproxy

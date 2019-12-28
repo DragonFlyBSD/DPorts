@@ -1,4 +1,4 @@
 #! /bin/sh -
-# $FreeBSD: head/emulators/edumips64/files/edumips64.in 500854 2019-05-05 11:25:01Z 0mp $
+# $FreeBSD$
 
 exec "%%JAVA%%" -jar %%JAVAJARDIR%%/%%JARFILE%% "$@"

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/security/hitch/files/hitch.in 509648 2019-08-23 14:21:33Z zi $
+# $FreeBSD$
 #
 
 # PROVIDE: hitch

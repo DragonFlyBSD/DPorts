@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/sysutils/rest-server/files/restserver.in 507353 2019-07-26 12:01:54Z dch $
+# $FreeBSD$
 #
 # PROVIDE: restserver
 # REQUIRE: DAEMON

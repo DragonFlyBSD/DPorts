@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/games/traingame/files/traingame.in 330705 2013-10-18 00:28:50Z nemysis $
+# $FreeBSD$
 #
 
 cd "%%DATADIR%%"

@@ -1,0 +1,5 @@
+
+# XXX prevent rebuilding mailutils.info
+dfly-patch:
+	${REINPLACE_CMD} -e '/mailutils\.info:/s@^@#@g' \
+		${WRKSRC}/doc/texinfo/Makefile.in

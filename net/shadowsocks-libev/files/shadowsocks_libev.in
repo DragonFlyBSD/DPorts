@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/net/shadowsocks-libev/files/shadowsocks_libev.in 335066 2013-11-27 22:04:32Z delphij $
+# $FreeBSD$
 
 # PROVIDE: shadowsocks-libev
 # REQUIRE: LOGIN cleanvar

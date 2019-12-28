@@ -1,8 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	curv
-DISTVERSION=	0.4-333
-DISTVERSIONSUFFIX=	-ga9a63930
+DISTVERSION=	0.4-417
+DISTVERSIONSUFFIX=	-gf6f8d011
 PORTREVISION=	1
 CATEGORIES=	math lang graphics
 
@@ -31,6 +31,7 @@ USE_XORG=	x11
 
 PLIST_FILES=	bin/curv \
 		lib/curv/lib/blend.curv \
+		lib/curv/lib/noise.curv \
 		lib/curv/lib/web_colour.curv \
 		lib/curv/std.curv \
 		share/gtksourceview-3.0/language-specs/curv.lang

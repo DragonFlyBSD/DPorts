@@ -1,0 +1,11 @@
+--- ../msgbox-rs-d3e12e1cbfcd280bb4de5ad8032bded37d8e573f/Cargo.toml.orig	2019-12-27 09:36:00 UTC
++++ ../msgbox-rs-d3e12e1cbfcd280bb4de5ad8032bded37d8e573f/Cargo.toml
+@@ -27,7 +27,7 @@ user32-sys = "0.2.0"
+ [target.'cfg(target_os = "linux")'.dependencies]
+ gtk = "0.4.1"
+ 
+-[target.'cfg(target_os = "freebsd")'.dependencies]
++[target.'cfg(any(target_os = "freebsd", target_os = "dragonfly"))'.dependencies]
+ gtk = "0.4.1"
+ 
+ [target.'cfg(target_os = "macos")'.dependencies]

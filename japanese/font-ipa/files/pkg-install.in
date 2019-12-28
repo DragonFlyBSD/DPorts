@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/japanese/font-ipa/files/pkg-install.in 396784 2015-09-12 23:13:05Z hrs $
+# $FreeBSD$
 
 catfontsdir ()
 {

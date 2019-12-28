@@ -1,7 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	anope
-PORTVERSION=	2.0.6
+PORTVERSION=	2.0.7
+PORTREVISION=	1
 CATEGORIES=	irc
 
 MAINTAINER=	egypcio@FreeBSD.org
@@ -36,7 +37,7 @@ NLS_USES=	gettext
 
 OPENSSL_USES=	ssl
 
-REDIS_RUN_DEPENDS=	redis:databases/redis
+REDIS_RUN_DEPENDS=	redis>=0:databases/redis
 
 PCRE_LIB_DEPENDS=	libpcre.so:devel/pcre
 

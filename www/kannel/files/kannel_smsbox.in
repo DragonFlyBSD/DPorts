@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/www/kannel/files/kannel_smsbox.in 454856 2017-11-24 23:17:50Z dbaio $
+# $FreeBSD$
 #
 # PROVIDE: smsbox
 # REQUIRE: LOGIN bearerbox

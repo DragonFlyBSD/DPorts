@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/emulators/tpm-emulator/files/tpmd.in 415449 2016-05-18 13:53:45Z hrs $
+# $FreeBSD$
 #
 # PROVIDE: tpmd
 # REQUIRE: SERVERS

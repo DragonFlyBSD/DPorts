@@ -1,4 +1,4 @@
-# $FreeBSD: head/audio/praat/files/makefile.defs.freebsd.alsa 413318 2016-04-14 21:35:33Z jbeich $
+# $FreeBSD$
 # File: makefile.defs.linux.alsa
 
 # System: Linux

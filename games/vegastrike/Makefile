@@ -3,7 +3,7 @@
 
 PORTNAME=	vegastrike
 PORTVERSION=	0.5.1.r1
-PORTREVISION=	18
+PORTREVISION=	19
 CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION:R}/
 DISTNAME=	${PORTNAME}-src-${PORTVERSION}
@@ -26,7 +26,8 @@ LIB_DEPENDS=	${PY_BOOST} \
 		libfreetype.so:print/freetype2
 
 USES=		compiler:c++11-lang dos2unix gl gmake gnome jpeg \
-		localbase:ldflags openal:al pkgconfig python:2.7 sdl tar:bzip2
+		localbase:ldflags openal:al pkgconfig python:2.7 sdl tar:bzip2 \
+		xorg
 USE_CXXSTD=	c++98
 USE_SDL=	sdl
 USE_GL=		gl glu glut

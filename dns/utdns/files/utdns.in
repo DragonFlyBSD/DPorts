@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/dns/utdns/files/utdns.in 474355 2018-07-10 11:49:01Z ehaupt $
+# $FreeBSD$
 #
 # PROVIDE: %%PORTNAME%%
 # REQUIRE: LOGIN

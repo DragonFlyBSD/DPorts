@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/sysutils/consul/files/consul.in 455627 2017-12-05 21:31:37Z swills $
+# $FreeBSD$
 #
 # PROVIDE: consul
 # REQUIRE: LOGIN

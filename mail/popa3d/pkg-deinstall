@@ -1,4 +1,4 @@
-# $FreeBSD: head/mail/popa3d/pkg-deinstall 340719 2014-01-22 15:52:06Z mat $
+# $FreeBSD$
 #
 
 if [ "$2" != "POST-DEINSTALL" ]; then

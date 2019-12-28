@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/mail/dcc-dccd/files/dccm.in 503924 2019-06-10 20:04:46Z pkubaj $
+# $FreeBSD$
 #
 # PROVIDE: dccm
 # REQUIRE: LOGIN

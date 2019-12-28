@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/www/tomee/files/tomee.in 400170 2015-10-26 00:46:14Z swills $
+# $FreeBSD$
 #
 
 # PROVIDE: tomee

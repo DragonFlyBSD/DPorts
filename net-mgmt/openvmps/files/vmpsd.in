@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/net-mgmt/openvmps/files/vmpsd.in 409259 2016-02-20 16:59:02Z pi $
+# $FreeBSD$
 
 # PROVIDE: vmpsd
 # REQUIRE: DAEMON

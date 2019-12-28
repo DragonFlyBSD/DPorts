@@ -44,15 +44,18 @@ post-install:
 CPPFLAGS+=		-I${OPENSSLINC}
 LDFLAGS+=		-L${OPENSSLLIB}
 .else # SSL_DEFAULT
-BUILD_DEPENDS+=		${NONEXISTENT}:security/libressl:stage
-CPPFLAGS+=		-I${WRKDIR}/libressl/include
-LDFLAGS+=		-L${WRKDIR}/libressl/lib
+USES:=			${USES:Nssl}
+BUILD_DEPENDS+=		libressl-static>=0:security/libressl-static
+CPPFLAGS+=		-I${LOCALBASE}/libressl-static/include
+CFLAGS+=		-I${LOCALBASE}/libressl-static/include
+LDFLAGS+=		-L${LOCALBASE}/libressl-static/lib
 
-# Don't use COPYTREE_SHARE here as it hard links files, and the original files
-# are owned by root, which creates problems of its own.
-pre-configure:
-	@cd `${MAKE} -V STAGEDIR -C ${PORTSDIR}/security/libressl`${PREFIX} \
-	    && ${FIND} -E . ! -name *.so\* | ${CPIO} -dump ${WRKDIR}/libressl >/dev/null 2>&1
+dfly-patch:
+	${REINPLACE_CMD} -e '/LIBS=/s@-l$$ac_lib -lssl@-ltls -lssl@g' \
+			 -e 's@-ltls@${LOCALBASE}/libressl-static/lib/libtls.a@g' \
+			 -e 's@-lssl@${LOCALBASE}/libressl-static/lib/libssl.a@g' \
+			 -e 's@-lcrypto@${LOCALBASE}/libressl-static/lib/libcrypto.a@g' \
+                ${WRKSRC}/configure
 .endif # SSL_DEFAULT
 
 .include <bsd.port.post.mk>

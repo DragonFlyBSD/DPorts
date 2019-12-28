@@ -1,5 +1,5 @@
 #!/bin/sh
 #
-# $FreeBSD: head/games/jtans/files/jtans.sh.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD$
 
-JAVA_VERSION="%%JAVA_VERSION%%" "%%LOCALBASE%%/bin/java" -jar "%%DATADIR%%/jtans_appli-1.0.jar"
+"%%LOCALBASE%%/bin/java" -jar "%%DATADIR%%/jtans_appli-1.0.jar"

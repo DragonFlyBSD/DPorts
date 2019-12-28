@@ -1,7 +1,7 @@
 MASTER_SITES+=	https://leaf.dragonflybsd.org/~mneumann/rust/:rust_bootstrap \
 		https://leaf.dragonflybsd.org/~mneumann/rust/:cargo_bootstrap
 
-RUST_BOOTSTRAP_VERSION=	1.37.0
+RUST_BOOTSTRAP_VERSION=	1.39.0
 
 # non static bootstrap
 X_PY_ENV+="RUST_BACKTRACE=1"

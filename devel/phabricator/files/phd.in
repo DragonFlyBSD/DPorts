@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/devel/phabricator/files/phd.in 444855 2017-07-01 23:10:49Z grembo $
+# $FreeBSD$
 #
 
 # PROVIDE: phd

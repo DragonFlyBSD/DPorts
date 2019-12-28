@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/games/magicmaze/files/magicmaze.in 343637 2014-02-10 14:14:02Z nemysis $
+# $FreeBSD$
 #
 
 cd "%%DATADIR%%"

@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/www/nghttp2/files/nghttpx.in 421805 2016-09-11 07:52:26Z brnrd $
+# $FreeBSD$
 
 # PROVIDE: nghttpx
 # REQUIRE: LOGIN cleanvar

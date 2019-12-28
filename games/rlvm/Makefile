@@ -4,7 +4,7 @@ PORTNAME=	rlvm
 DISTVERSIONPREFIX=	release-
 DISTVERSION=	0.14-67
 DISTVERSIONSUFFIX=	-g9350209
-PORTREVISION=	21
+PORTREVISION=	22
 CATEGORIES=	games
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
@@ -27,7 +27,7 @@ RUN_DEPENDS=	${LOCALBASE}/share/fonts/dejavu/DejaVuSans.ttf:x11-fonts/dejavu
 USE_GITHUB=	yes
 GH_ACCOUNT=	eglaysher
 
-USES=		compiler:c++11-lib pkgconfig scons
+USES=		compiler:c++11-lib gl gnome pkgconfig scons sdl
 USE_GL=		glew glu
 USE_GNOME=	gtk20
 USE_SDL=	image mixer ttf
@@ -58,7 +58,6 @@ NLS_USES=	gettext
 NLS_EXTRA_PATCHES_OFF=${FILESDIR}/extra-patch-disable-nls
 TEST_USES=	lua:51
 TEST_BUILD_DEPENDS=googletest>=1.7.0:devel/googletest \
-		googlemock>=1.7.0:devel/googlemock \
 		luabind>0:devel/luabind
 TEST_EXTRA_PATCHES_OFF=${FILESDIR}/extra-patch-disable-test
 

@@ -1,0 +1,38 @@
+--- modules/mod_authen/SS5Supa.c.intermediate	2019-11-25 10:33:16.000000000 +0000
++++ modules/mod_authen/SS5Supa.c
+@@ -208,7 +208,7 @@ static unsigned char * ss5_secure_dh_com
+ 
+   p = BN_bin2bn ((pippo->p), pippo->lenp, NULL);
+   g = BN_bin2bn ((pippo->g), pippo->leng, NULL);
+-#if OPENSSL_VERSION_NUMBER >= 0x10100005L
++#if OPENSSL_VERSION_NUMBER >= 0x10100005L && !defined(LIBRESSL_VERSION_NUMBER)
+   DH_set0_pqg(ss, p, NULL, g);
+ #else
+   ss->p = p;
+@@ -227,7 +227,7 @@ static unsigned char * ss5_secure_dh_com
+     return NULL;
+   }       
+   do {
+-#if OPENSSL_VERSION_NUMBER >= 0x10100005L
++#if OPENSSL_VERSION_NUMBER >= 0x10100005L && !defined(LIBRESSL_VERSION_NUMBER)
+     if (DH_get0_pub_key(ss)) {
+       BN_free(DH_get0_pub_key(ss));
+       BN_free(DH_get0_priv_key(ss));
+@@ -248,7 +248,7 @@ static unsigned char * ss5_secure_dh_com
+       DH_free(ss);
+       return NULL; 
+     }
+-#if OPENSSL_VERSION_NUMBER >= 0x10100005L
++#if OPENSSL_VERSION_NUMBER >= 0x10100005L && !defined(LIBRESSL_VERSION_NUMBER)
+   } while (BN_is_negative(DH_get0_pub_key(ss)));
+ 
+   len_key = BN_num_bytes(DH_get0_pub_key(ss));
+@@ -270,7 +270,7 @@ static unsigned char * ss5_secure_dh_com
+     return NULL;
+   }
+ 
+-#if OPENSSL_VERSION_NUMBER >= 0x10100005L
++#if OPENSSL_VERSION_NUMBER >= 0x10100005L && !defined(LIBRESSL_VERSION_NUMBER)
+   BN_bn2bin (DH_get0_pub_key(ss), public_key);
+ #else
+   BN_bn2bin (ss->pub_key, public_key);

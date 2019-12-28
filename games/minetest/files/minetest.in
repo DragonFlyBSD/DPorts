@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/games/minetest/files/minetest.in 507742 2019-07-31 22:50:15Z amdmi3 $
+# $FreeBSD$
 #
 # PROVIDE: minetest
 # REQUIRE: LOGIN

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/games/4stattack/files/4stattack.in 350646 2014-04-08 21:05:09Z nemysis $
+# $FreeBSD$
 #
 
 cd "%%DATADIR%%"

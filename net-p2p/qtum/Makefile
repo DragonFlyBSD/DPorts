@@ -2,12 +2,10 @@
 # $FreeBSD$
 
 PORTNAME=	qtum
-PORTVERSION=	0.18.1
+PORTVERSION=	0.18.2
 DISTVERSIONPREFIX=	mainnet-ignition-v
+PORTREVISION=	1
 CATEGORIES=	net-p2p finance
-
-PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES+=	05564ff309be.patch:-p1
 
 MAINTAINER=	vd@FreeBSD.org
 COMMENT=	PoS cryptocurrency that can execute smart contract as part of an UTXO

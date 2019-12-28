@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/print/cups-filters/files/cups_browsed.in 487453 2018-12-14 17:41:40Z tijl $
+# $FreeBSD$
 #
 # PROVIDE: cups_browsed
 # REQUIRE: cupsd %%AVAHI_DAEMON%%

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/www/webhook/files/webhook.in 465583 2018-03-26 12:24:18Z jrm $
+# $FreeBSD$
 
 # PROVIDE: webhook
 # REQUIRE: NETWORKING SYSLOG

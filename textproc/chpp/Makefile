@@ -29,10 +29,6 @@ OPTIONS_DEFINE=	DOCS EXAMPLES
 
 .include <bsd.port.pre.mk>
 
-.if ${ARCH} != "i386" && ${ARCH} != "x86_64" && ${ARCH} != "powerpc64"
-BROKEN=		Does not compile
-.endif
-
 post-patch:
 	@${REINPLACE_CMD} -e \
 		'/LDADD/s| gc/gc.a | -lgc | ; \
@@ -40,8 +36,8 @@ post-patch:
 
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
-.for file in AUTHORS NEWS README
-	${INSTALL_DATA} ${WRKSRC}/${file} ${STAGEDIR}${DOCSDIR}
+.for filename in AUTHORS NEWS README
+	${INSTALL_DATA} ${WRKSRC}/${filename} ${STAGEDIR}${DOCSDIR}
 .endfor
 
 post-install-EXAMPLES-on:

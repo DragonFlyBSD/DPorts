@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/audio/murmur/files/murmur.in 515199 2019-10-22 15:10:42Z feld $
+# $FreeBSD$
 #
 # PROVIDE: murmur
 # REQUIRE: DAEMON

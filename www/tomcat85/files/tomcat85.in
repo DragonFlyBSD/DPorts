@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/www/tomcat85/files/tomcat85.in 509575 2019-08-22 02:46:31Z glewis $
+# $FreeBSD$
 #
 
 # PROVIDE: tomcat85

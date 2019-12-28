@@ -1,7 +1,0 @@
-
-dfly-patch:
-	${REINPLACE_CMD} -e 's@STREQUAL "FreeBSD"@MATCHES "FreeBSD|DragonFly"@g' \
-		${WRKSRC}/build/CMakeLists.txt
-	${REINPLACE_CMD} -e 's@\(defined(__FreeBSD__)\)@(\1 || defined(__DragonFly__))@g' \
-		${WRKSRC}/src/concurrency/thread_posix.cc \
-		${WRKSRC}/src/concurrency/thread_pool.cc

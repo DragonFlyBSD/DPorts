@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/mail/bincimap/files/bincimapd.in 268605 2011-02-04 11:45:46Z arved $
+# $FreeBSD$
 #
 # Copyright 2007, AnyWi Technologies
 #

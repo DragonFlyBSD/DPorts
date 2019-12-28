@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/security/greenbone-security-assistant9/files/gsad.in 447483 2017-08-07 03:48:23Z acm $
+# $FreeBSD$
 #
 # PROVIDE: gsad
 # REQUIRE: DAEMON

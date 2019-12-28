@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/net-mgmt/devmon/files/devmon.in 376298 2015-01-05 13:18:58Z marino $
+# $FreeBSD$
 # PROVIDE: devmon
 # REQUIRE: LOGIN
 # KEYWORD: shutdown

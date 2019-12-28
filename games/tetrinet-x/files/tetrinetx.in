@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/games/tetrinet-x/files/tetrinetx.in 359016 2014-06-23 22:29:07Z madpilot $
+# $FreeBSD$
 #
 # PROVIDE: tetrinetx
 # REQUIRE: DAEMON

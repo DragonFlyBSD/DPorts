@@ -2,7 +2,7 @@
 #
 # %%APP_SHORTNAME%% startup script.
 #
-# $FreeBSD: head/mail/openemm2015/files/openemm2015.in 454856 2017-11-24 23:17:50Z dbaio $
+# $FreeBSD$
 #
 
 # PROVIDE: %%APP_SHORTNAME%%

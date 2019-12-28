@@ -1,4 +1,4 @@
-## $FreeBSD: head/www/mod_perl2/files/260_mod_perl.conf.sample.in 388078 2015-05-31 13:21:32Z ohauer $
+## $FreeBSD$
 ## vim: set filetype=apache:
 ##
 ## module file for mod_perl

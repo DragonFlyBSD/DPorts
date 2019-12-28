@@ -1,4 +1,4 @@
-/* $FreeBSD: head/security/p5-Authen-Krb5/files/krb5-heimdal-compat.h 378261 2015-02-01 18:43:42Z hrs $ */
+/* $FreeBSD$ */
 #if 0
 #define HAVE_HEIMDAL 1
 #endif

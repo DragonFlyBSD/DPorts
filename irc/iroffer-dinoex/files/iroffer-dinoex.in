@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/irc/iroffer-dinoex/files/iroffer-dinoex.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD$
 #
 
 # PROVIDE: iroffer

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Start or stop cyrus-imapd
-# $FreeBSD: head/mail/cyrus-imapd24/files/imapd.in 472520 2018-06-16 06:42:34Z ume $
+# $FreeBSD$
 
 # PROVIDE: cyrus_imapd imap
 # REQUIRE: DAEMON

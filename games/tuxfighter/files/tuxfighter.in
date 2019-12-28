@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/games/tuxfighter/files/tuxfighter.in 335241 2013-11-29 22:26:25Z nemysis $
+# $FreeBSD$
 #
 
 cd "%%DATADIR%%"

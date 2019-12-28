@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/japanese/font-ume/files/pkg-install.in 429975 2016-12-30 12:33:35Z hrs $
+# $FreeBSD$
 
 catfontsdir ()
 {

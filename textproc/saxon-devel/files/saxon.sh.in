@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/textproc/saxon-devel/files/saxon.sh.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD$
 
 IAM="`basename "$0"`"
 
@@ -17,4 +17,4 @@ do
 	SAXON_CLASSPATH="${SAXON_CLASSPATH}:${jarfile}"
 done
 
-JAVA_VERSION="%%JAVA_VERSION%%" exec "%%LOCALBASE%%/bin/java" -classpath "${SAXON_CLASSPATH}" "${LAUNCHER_CLASS}" "$@"
+exec "%%LOCALBASE%%/bin/java" -classpath "${SAXON_CLASSPATH}" "${LAUNCHER_CLASS}" "$@"

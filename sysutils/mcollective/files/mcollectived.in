@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/sysutils/mcollective/files/mcollectived.in 447834 2017-08-12 14:21:30Z romain $
+# $FreeBSD$
 #
 # PROVIDE: mcollectived
 # REQUIRE: LOGIN

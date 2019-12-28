@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/security/opencryptoki/files/pkcsslotd.in 416685 2016-06-10 18:24:09Z hrs $
+# $FreeBSD$
 #
 # PROVIDE: pkcsslotd
 # REQUIRE: LOGIN tcsd

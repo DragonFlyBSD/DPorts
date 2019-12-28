@@ -1,0 +1,8 @@
+
+# build without pulseaudio support
+# sound functionality has to be eliminated
+LIB_DEPENDS:=	${LIB_DEPENDS:Nlibpulse*}
+
+dfly-patch:
+	${RM} -r ${WRKSRC}/subprojects/gvc
+	${REINPLACE_CMD} -e "/libgvc_gir/d" ${WRKSRC}/src/meson.build

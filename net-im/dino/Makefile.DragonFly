@@ -1,0 +1,5 @@
+
+# vala invoke issues at -jN
+MAKE_JOBS_UNSAFE=yes
+
+USES:=	${USES:Nninja} gmake

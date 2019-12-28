@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/textproc/jdictionary/files/jdictionary.sh.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD$
 
 cd "%%DATADIR%%"
 exec "%%LOCALBASE%%/bin/java" -jar "%%DATADIR%%/jdictionary.jar" "@*"

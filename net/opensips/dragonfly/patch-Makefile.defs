@@ -1,0 +1,31 @@
+--- Makefile.defs.intermediate	2019-12-25 09:59:27.000000000 +0000
++++ Makefile.defs
+@@ -332,7 +332,7 @@ cfg_dir = etc/$(MAIN_NAME)/
+ bin_dir = sbin/
+ 
+ ARCH_B = $(shell echo $(ARCH) | sed -e 's/.*64.*/64b/')
+-ifeq ($(OS),freebsd)
++ifeq ($(OS),dragonfly)
+ 	LIBDIR ?= lib
+ else
+ ifeq ($(ARCH_B),64b)
+@@ -353,7 +353,7 @@ ifeq ($(OS), linux)
+ 	data_dir = share/$(MAIN_NAME)/
+ 	LOCALBASE ?= $(SYSBASE)/local
+ else
+-ifeq ($(OS), freebsd)
++ifeq ($(OS), dragonfly)
+ 	doc_dir = share/doc/$(MAIN_NAME)/
+ 	man_dir = man/
+ 	data_dir = share/$(MAIN_NAME)/
+@@ -1466,7 +1466,9 @@ endif
+ 	# -lrt needed for sched_yield
+ endif
+ 
+-ifeq ($(OS), freebsd)
++ifeq ($(OS), dragonfly)
++	CFLAGS+=-I%%LOCALBASE%%/include
++	LDFLAGS+=-L%%LOCALBASE%%/lib
+ 	DEFS+=-DHAVE_SOCKADDR_SA_LEN -DHAVE_GETHOSTBYNAME2 -DHAVE_UNION_SEMUN \
+ 		-DHAVE_SCHED_YIELD -DHAVE_MSGHDR_MSG_CONTROL \
+ 		-DHAVE_CONNECT_ECONNRESET_BUG -DHAVE_TIMEGM \

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net/ntopng/files/pkg-deinstall.in 490396 2019-01-15 18:16:34Z madpilot $
+# $FreeBSD$
 
 [ "$2" != "DEINSTALL" ] && exit 0
 

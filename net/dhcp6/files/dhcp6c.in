@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net/dhcp6/files/dhcp6c.in 478821 2018-09-02 21:14:47Z pi $
+# $FreeBSD$
 #
 
 # PROVIDE: dhcp6c

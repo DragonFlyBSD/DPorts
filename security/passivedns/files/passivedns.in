@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/security/passivedns/files/passivedns.in 384872 2015-04-27 20:33:38Z lme $
+# $FreeBSD$
 #
 # PROVIDE: passivedns
 # REQUIRE: DAEMON

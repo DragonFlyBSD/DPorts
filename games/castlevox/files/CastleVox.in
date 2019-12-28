@@ -1,8 +1,0 @@
-#!/bin/sh
-#
-# $FreeBSD: head/games/castlevox/files/CastleVox.in 313626 2013-03-08 08:34:49Z rene $
-
-export JAVA_VERSION="%%JAVA_VERSION%%"
-
-cd "%%DATADIR%%" && exec "%%LOCALBASE%%/bin/java" \
--Djava.ext.dirs="%%DATADIR%%" -jar "%%DATADIR%%/VoxCore.jar" "${@}"

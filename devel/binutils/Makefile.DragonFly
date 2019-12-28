@@ -1,0 +1,4 @@
+
+.if !${FLAVOR:Mnative}
+IGNORE=	FreeBSD specific
+.endif

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/sysutils/cfengine310/files/cf-monitord.in 377628 2015-01-21 22:33:58Z skreuzer $
+# $FreeBSD$
 #
 # PROVIDE: cf-monitord
 # REQUIRE: LOGIN

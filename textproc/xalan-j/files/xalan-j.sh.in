@@ -1,4 +1,4 @@
 #!/bin/sh
-# $FreeBSD: head/textproc/xalan-j/files/xalan-j.sh.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD$
 
 "%%LOCALBASE%%/bin/java" -cp "%%JAVALIBDIR%%/xml-apis.jar:%%JAVALIBDIR/xercesImpl.jar:%%JAVAJARDIR%%/xalan.jar" org.apache.xalan.xslt.Process "$@"

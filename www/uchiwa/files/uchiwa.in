@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/www/uchiwa/files/uchiwa.in 417836 2016-06-30 19:22:21Z pi $
+# $FreeBSD$
 
 # PROVIDE: uchiwa
 # REQUIRE: LOGIN

@@ -183,7 +183,7 @@ tnc:*:241:
 prosody:*:242:
 ot-recorder:*:243:
 mastodon:*:244:
-# free: 245
+routinator:*:245:
 # free: 246
 fcron:*:247:
 # free: 248
@@ -720,7 +720,7 @@ litecoin:*:778:
 bitcoin:*:779:
 zetacoin:*:780:
 monero:*:781:
-# free: 782
+zeek:*:782:
 # free: 783
 # free: 784
 # free: 785

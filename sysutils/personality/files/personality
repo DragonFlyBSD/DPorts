@@ -25,7 +25,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: head/sysutils/personality/files/personality 404857 2015-12-30 14:07:42Z ak $
+# $FreeBSD$
 #
 ##############################################################################
 #

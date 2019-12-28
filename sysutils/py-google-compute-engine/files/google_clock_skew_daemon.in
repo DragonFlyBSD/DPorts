@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/sysutils/py-google-compute-engine/files/google_clock_skew_daemon.in 501547 2019-05-13 10:05:26Z swills $
+# $FreeBSD$
 #
 # PROVIDE: google_clock_skew_daemon
 # BEFORE: LOGIN

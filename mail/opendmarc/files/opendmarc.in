@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/mail/opendmarc/files/opendmarc.in 402719 2015-12-01 03:02:16Z ache $
+# $FreeBSD$
 
 # PROVIDE: opendmarc
 # REQUIRE: LOGIN

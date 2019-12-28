@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net-mgmt/statsite/files/statsite.in 479292 2018-09-09 15:56:18Z tobik $
+# $FreeBSD$
 #
 # PROVIDE: statsite
 # REQUIRE: NETWORKING SYSLOG

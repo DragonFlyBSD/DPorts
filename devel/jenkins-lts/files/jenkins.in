@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/devel/jenkins-lts/files/jenkins.in 465251 2018-03-22 00:00:43Z swills $
+# $FreeBSD$
 #
 # PROVIDE: jenkins
 # REQUIRE: LOGIN

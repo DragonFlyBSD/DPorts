@@ -1,4 +1,4 @@
-# $FreeBSD: head/Keywords/javavm.ucl 419368 2016-07-31 12:47:28Z bapt $
+# $FreeBSD$
 #
 # The argument is not registered as a file because of how the various
 # jdk/jre are made: kind of autoplist which would make the bin/java registered

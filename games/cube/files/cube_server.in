@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/games/cube/files/cube_server.in 352146 2014-04-25 19:58:43Z nemysis $
+# $FreeBSD$
 #
 
 # The executable needs to be run from its data directory, and needs to store

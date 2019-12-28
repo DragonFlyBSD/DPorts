@@ -1,7 +1,6 @@
 # $FreeBSD$
 
 MASTERDIR=	${.CURDIR}/../bitcoin
-PORTREVISION=	7
 PKGNAMESUFFIX=	-daemon
 
 COMMENT=	Virtual Peer-to-Peer Currency (Daemon)
@@ -27,6 +26,8 @@ PLIST_FILES=	bin/bitcoind \
 		"@sample %%ETCDIR%%.conf.sample"
 
 USE_RC_SUBR=	bitcoind
+
+PORTREVISION=	1
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/bitcoin.conf ${STAGEDIR}${PREFIX}/etc/bitcoin.conf.sample

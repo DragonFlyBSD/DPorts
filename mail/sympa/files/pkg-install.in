@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/mail/sympa/files/pkg-install.in 399341 2015-10-15 14:19:52Z mat $
+# $FreeBSD$
 #
 
 if [ "$2" = "POST_INSTALL" ]; then

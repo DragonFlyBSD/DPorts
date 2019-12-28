@@ -1,0 +1,3 @@
+
+# same as MF
+MAKE_ENV+= PATH=${WRKSRC}/dist-newstyle/build/${CABAL_ARCH}-dragonfly/ghc-8.6.5/happy-${HAPPY_VERSION}/build/happy/:${PATH}

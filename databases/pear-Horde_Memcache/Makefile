@@ -7,9 +7,7 @@ CATEGORIES=	databases www pear
 MAINTAINER=	horde@FreeBSD.org
 COMMENT=	Horde Memcache API
 
-IGNORE_WITH_PHP=71
-
-USES=	horde
+USES=		horde php
 USE_PHP=	memcache hash
 USE_HORDE_RUN=	Horde_Exception
 

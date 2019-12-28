@@ -1,0 +1,6 @@
+
+CFLAGS+=	-D_KERNEL_STRUCTURES
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@<net/pfvar.h>@<net/pf/pfvar.h>@g' \
+		${WRKSRC}/ioctl_helpers.h

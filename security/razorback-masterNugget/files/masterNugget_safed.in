@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/security/razorback-masterNugget/files/masterNugget_safed.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD$
 #
 # PROVIDE: masterNugget_safed
 # REQUIRE: masterNugget

@@ -6,5 +6,3 @@ CFLAGS+=	-DSYS_FREEBSD
 dfly-patch:
 	${LN} -v ${WRKSRC}/make/variant/gnu.defs		\
 		 ${WRKSRC}/make/variant/dragonfly.defs
-	-${REINPLACE_CMD} -e 's@&& __FreeBSD_version >= 470000@|| defined(__DragonFly__)@g'	\
-		${WRKSRC}/../libdvdread-6.0.0/src/bswap.h

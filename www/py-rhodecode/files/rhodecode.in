@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/www/py-rhodecode/files/rhodecode.in 326200 2013-09-03 18:56:27Z wg $
+# $FreeBSD$
 # PROVIDE: rhodecode
 # REQUIRE: NETWORKING
 #

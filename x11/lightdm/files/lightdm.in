@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/x11/lightdm/files/lightdm.in 433952 2017-02-12 16:36:59Z woodsb02 $
+# $FreeBSD$
 #
 # PROVIDE: lightdm
 # REQUIRE: LOGIN cleanvar moused syscons dbus

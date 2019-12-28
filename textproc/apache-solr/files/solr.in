@@ -24,7 +24,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
 # DAMAGE.
 
-# $FreeBSD: head/textproc/apache-solr/files/solr.in 481923 2018-10-12 19:41:06Z mfechner $
+# $FreeBSD$
 #
 # PROVIDE: solr
 # REQUIRE: LOGIN

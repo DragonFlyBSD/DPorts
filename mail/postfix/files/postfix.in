@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/mail/postfix/files/postfix.in 409551 2016-02-25 20:09:56Z ohauer $
+# $FreeBSD$
 #
 # PROVIDE: postfix mail
 # REQUIRE: %%REQUIRE%%

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/mail/qmail/files/qmailsend.in 417471 2016-06-25 14:44:04Z pi $
+# $FreeBSD$
 #
 # PROVIDE: qmailsend
 # REQUIRE: network

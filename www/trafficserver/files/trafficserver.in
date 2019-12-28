@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/www/trafficserver/files/trafficserver.in 494511 2019-03-03 14:59:54Z pi $
+# $FreeBSD$
 #
 
 # PROVIDE: trafficserver

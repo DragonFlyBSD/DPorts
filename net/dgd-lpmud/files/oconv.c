@@ -1,5 +1,5 @@
 /* convert old LPmud .o files to new DGD .o format */
-/* $FreeBSD: head/net/dgd-lpmud/files/oconv.c 340872 2014-01-24 00:14:07Z mat $ */
+/* $FreeBSD$ */
 # include <ctype.h>
 # include <stdio.h>
 # include <stdlib.h>

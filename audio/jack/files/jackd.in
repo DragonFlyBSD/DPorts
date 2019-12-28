@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/audio/jack/files/jackd.in 472147 2018-06-10 17:11:05Z riggs $
+# $FreeBSD$
 #
 # PROVIDE: jackd
 # REQUIRE: LOGIN

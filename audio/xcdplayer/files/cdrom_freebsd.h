@@ -1,4 +1,4 @@
-/* $FreeBSD: head/audio/xcdplayer/files/cdrom_freebsd.h 340851 2014-01-23 19:55:14Z mat $ */
+/* $FreeBSD$ */
 /*
  * Copyright (C) 1990 Regents of the University of California.
  *

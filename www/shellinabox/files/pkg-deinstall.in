@@ -1,5 +1,5 @@
 #! /bin/sh
-# $FreeBSD: head/www/shellinabox/files/pkg-deinstall.in 340719 2014-01-22 15:52:06Z mat $
+# $FreeBSD$
 #
 
 PATH=/bin:/usr/bin:/usr/sbin

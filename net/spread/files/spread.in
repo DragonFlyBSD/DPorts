@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net/spread/files/spread.in 301241 2012-07-20 20:32:20Z ohauer $
+# $FreeBSD$
 #
 
 # PROVIDE: spread

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/net/bird/files/bird.in 484648 2018-11-10 23:02:44Z olivier $
+# $FreeBSD$
 #
 # PROVIDE: bird dynamicrouting
 # REQUIRE: LOGIN

@@ -2,14 +2,10 @@
 
 PORTNAME=	aom
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.0.0-2558
-DISTVERSIONSUFFIX=	-g25daf5d22
+# XXX Switch to release after https://bugs.chromium.org/p/aomedia/issues/detail?id=2545
+DISTVERSION=	1.0.0-2860
+DISTVERSIONSUFFIX=	-g3e421b069
 CATEGORIES=	multimedia
-
-# XXX Drop revert of revert when ABI changes again
-# https://aomedia-review.googlesource.com/c/aom/+/96983
-PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES+=	a70e67a5fd6a.patch:-p1
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	AV1 reference encoder/decoder
@@ -28,6 +24,13 @@ USE_LDCONFIG=	yes
 GH_ACCOUNT=	jbeich # mirror
 CMAKE_ON=	BUILD_SHARED_LIBS
 CMAKE_OFF=	ENABLE_DOCS ENABLE_TESTS
+
+OPTIONS_DEFINE=	VMAF
+
+VMAF_DESC=		Encoding tuning for VMAF
+VMAF_BUILD_DEPENDS=	${LOCALBASE}/lib/libvmaf.a:multimedia/vmaf
+VMAF_USES=		localbase:ldflags
+VMAF_CMAKE_ON=		-DCONFIG_TUNE_VMAF:STRING=1
 
 post-patch:
 # Extract (snapshot) version from the port instead of CHANGELOG

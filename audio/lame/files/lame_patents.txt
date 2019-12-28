@@ -1,4 +1,4 @@
-# $FreeBSD: head/audio/lame/files/lame_patents.txt 476193 2018-08-01 20:01:27Z netchild $
+# $FreeBSD$
 
 Intellectual Property Precaution
 

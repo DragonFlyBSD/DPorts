@@ -25,7 +25,7 @@
 # SUCH DAMAGE.
 #
 
-__version__ = "$FreeBSD: head/misc/metalink-editor/files/setup.py 340872 2014-01-24 00:14:07Z mat $"
+__version__ = "$FreeBSD$"
 
 try:
 	from distutils import sysconfig

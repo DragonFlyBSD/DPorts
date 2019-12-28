@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/mail/up-imapproxy/files/imapproxyd.in 460171 2018-01-28 13:09:08Z dbaio $
+# $FreeBSD$
 #
 # PROVIDE: imapproxyd
 # REQUIRE: DAEMON courier_imap_imapd courier_imap_imapd_ssl cyrus_imapd dovecot inetd

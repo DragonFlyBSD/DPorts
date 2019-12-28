@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/net-mgmt/pnp/files/npcd.in 447117 2017-08-02 16:09:43Z lme $
+# $FreeBSD$
 #
 
 # PROVIDE: npcd

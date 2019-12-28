@@ -3,7 +3,7 @@
 #       python setup.py install
 #
 
-__version__ = "$FreeBSD: head/databases/py-gdbm/files/setup.py 340872 2014-01-24 00:14:07Z mat $"
+__version__ = "$FreeBSD$"
 
 try:
     import distutils

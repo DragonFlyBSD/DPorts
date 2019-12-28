@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/net/kafka/files/kafka.in 506671 2019-07-15 15:52:48Z swills $
+# $FreeBSD$
 #
 # PROVIDE: kafka
 # REQUIRE: LOGIN

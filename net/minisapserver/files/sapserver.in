@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/net/minisapserver/files/sapserver.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD$
 #
 # PROVIDE: sapserver
 # REQUIRE: NETWORKING

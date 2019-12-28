@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/sysutils/stanchion/files/stanchion.in 397818 2015-09-25 12:24:07Z wg $
+# $FreeBSD$
 
 # PROVIDE: stanchion
 # REQUIRE: LOGIN cleanvar

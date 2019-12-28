@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/security/clamav/files/clamav-freshclam.in 457649 2017-12-30 22:25:18Z ler $
+# $FreeBSD$
 #
 
 # PROVIDE: clamav_freshclam

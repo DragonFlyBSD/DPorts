@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/www/payara/files/payara.in 470810 2018-05-24 20:49:47Z rodrigo $
+# $FreeBSD$
 #
 # PROVIDE: payara
 # REQUIRE: LOGIN

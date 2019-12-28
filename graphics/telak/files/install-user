@@ -2,7 +2,7 @@
 #
 # Emanuel Haupt <ehaupt@critical.ch>
 #
-# $FreeBSD: head/graphics/telak/files/install-user 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD$
 
 writeconf()
 {

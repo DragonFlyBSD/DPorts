@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/mail/archiveopteryx-devel/files/archiveopteryx.in 347712 2014-03-10 00:32:59Z feld $
+# $FreeBSD$
 #
 # PROVIDE: archiveopteryx
 # REQUIRE: login

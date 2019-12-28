@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/net-im/proxy65/files/proxy65.in 378774 2015-02-10 13:09:11Z mm $
+# $FreeBSD$
 #
 # PROVIDE: proxy65
 # REQUIRE: DAEMON %%JABBER_REQUIRE%%

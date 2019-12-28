@@ -1,0 +1,11 @@
+
+.if ${MODEL} == "clearfog"
+USES+=	ssl pkgconfig
+.endif
+
+dfly-patch:
+	${REINPLACE_CMD} -e "s@HOSTCC)@& -I${WRKSRC}/scripts/dtc/libfdt@g" \
+			 -e 's@--quiet@@g' \
+		${WRKSRC}/scripts/dtc/pylibfdt/Makefile
+	${REINPLACE_CMD} -e "s@fdatasync@fsync@g" \
+		${WRKSRC}/tools/mkimage.c

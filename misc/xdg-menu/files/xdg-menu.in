@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/misc/xdg-menu/files/xdg-menu.in 314520 2013-03-18 02:31:52Z beech $
+# $FreeBSD$
 #
 
 cd "%%DATADIR%%"

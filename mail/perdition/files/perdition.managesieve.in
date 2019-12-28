@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/mail/perdition/files/perdition.managesieve.in 365923 2014-08-24 13:53:43Z wg $
+# $FreeBSD$
 #
 # PROVIDE: perdition_managesieve
 # REQUIRE: DAEMON

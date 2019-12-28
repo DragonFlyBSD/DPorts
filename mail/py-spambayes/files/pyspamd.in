@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Start or stop pyspamd
-# $FreeBSD: head/mail/py-spambayes/files/pyspamd.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD$
 
 # PROVIDE: pyspamd
 # REQUIRE: DAEMON

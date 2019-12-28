@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/www/spawn-fcgi/files/spawn-fcgi.in 368670 2014-09-20 17:53:26Z marino $
+# $FreeBSD$
 #
 # PROVIDE: spawn_fcgi
 # REQUIRE: %%REQUIRE%%

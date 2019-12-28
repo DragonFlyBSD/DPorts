@@ -1,0 +1,7 @@
+
+.if defined(FLAVOR) && ${FLAVOR:Masterisk13}
+MAKE_ENV+=	PBX_DATADIR=${LOCALBASE}/share/asterisk
+dfly-patch:
+	${REINPLACE_CMD} -e "s@PBX_DATADIR=\"@&${LOCALBASE}/share/asterisk\" #@g" \
+		${WRKSRC}/autoconf/acinclude.m4
+.endif

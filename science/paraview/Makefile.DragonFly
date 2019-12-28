@@ -1,0 +1,4 @@
+
+# attempt to fix stage-qa (orphans)
+dfly-install:
+	-${RM} -fv ${STAGEDIR}${PREFIX}/share/vtkm-1.2

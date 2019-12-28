@@ -1,6 +1,6 @@
 #!/bin/csh
 #
-# $FreeBSD: head/devel/opengrok/files/opengrok.in 370625 2014-10-11 07:28:56Z marino $
+# $FreeBSD$
 
 set JAVA = "%%LOCALBASE%%/bin/java"
 set LIBFILES = "%%LIBFILES%%"

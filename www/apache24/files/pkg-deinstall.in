@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/www/apache24/files/pkg-deinstall.in 378215 2015-01-31 15:22:51Z ohauer $
+# $FreeBSD$
 #
 
 MPM_FALLBACK="%%ETCDIR%%/modules.d/%%MPMF%%"

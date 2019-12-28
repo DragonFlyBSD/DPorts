@@ -1,0 +1,6 @@
+
+# deps for internal libxslt build
+#.ifdef PORTSBUILDER_DSYNTH
+BUILD_DEPENDS+=	libgcrypt>=0:security/libgcrypt
+BUILD_DEPENDS+=	libxml2>=0:textproc/libxml2
+#.endif

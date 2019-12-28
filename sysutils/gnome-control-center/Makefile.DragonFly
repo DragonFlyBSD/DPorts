@@ -1,0 +1,15 @@
+
+USES+=	gssapi:mit
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NCHEESE}
+
+# build without pulseaudio support
+# sound functionality has to be eliminated
+LIB_DEPENDS:=		${LIB_DEPENDS:Nlibpulse*}
+
+dfly-patch:
+	${RM} -r ${WRKSRC}/panels/sound
+	${RM} -r ${WRKSRC}/subprojects/gvc
+	${REINPLACE_CMD} -e "/pulse/d" ${WRKSRC}/meson.build
+	${REINPLACE_CMD} -e "/'sound'/d" ${WRKSRC}/panels/meson.build
+	${REINPLACE_CMD} -e "/sound/d" ${WRKSRC}/shell/cc-panel-list.c
+	${REINPLACE_CMD} -e "/sound/d" ${WRKSRC}/shell/cc-panel-loader.c

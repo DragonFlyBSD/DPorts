@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 #
-# $FreeBSD: head/textproc/p5-XML-Parser/files/check_nfs.pl 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD$
 
 use strict;
 use warnings;

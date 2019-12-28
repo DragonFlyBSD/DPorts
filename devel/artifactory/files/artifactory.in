@@ -2,7 +2,7 @@
 #
 # artifactory startup script.
 #
-# $FreeBSD: head/devel/artifactory/files/artifactory.in 401165 2015-11-09 20:31:41Z riggs $
+# $FreeBSD$
 #
 # Make sure you have the artifactory user and artifactory home or set them below accordingly!
 

@@ -1,6 +1,0 @@
-CFLAGS+= -DHAVE_LIMITS_H=1
-
-pre-configure:
-	${RM} -rf ${WRKSRC}/openbsd-compat/vis.h ${WRKSRC}/openbsd-compat/sys
-	${REINPLACE_CMD} -e 's|TAILQ_FOREACH_SAFE|TAILQ_FOREACH_MUTABLE|' \
-		${WRKSRC}/smtpd/rfc2822.c

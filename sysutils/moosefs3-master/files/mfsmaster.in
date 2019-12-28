@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/sysutils/moosefs3-master/files/mfsmaster.in 454856 2017-11-24 23:17:50Z dbaio $
+# $FreeBSD$
 
 # PROVIDE: mfsmaster
 # REQUIRE: DAEMON

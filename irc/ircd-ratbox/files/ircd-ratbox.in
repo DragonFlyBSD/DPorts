@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/irc/ircd-ratbox/files/ircd-ratbox.in 385077 2015-05-01 00:03:27Z feld $
+# $FreeBSD$
 #
 # PROVIDE: ircd-ratbox
 # REQUIRE: DAEMON

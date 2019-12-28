@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: head/devel/zookeeper/files/zookeeper.in 506595 2019-07-14 02:46:42Z skreuzer $
+# $FreeBSD$
 #
 # PROVIDE: zookeeper
 # REQUIRE: LOGIN

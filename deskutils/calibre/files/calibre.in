@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/deskutils/calibre/files/calibre.in 445400 2017-07-09 10:13:49Z madpilot $
+# $FreeBSD$
 #
 # PROVIDE: calibre
 # REQUIRE: DAEMON
