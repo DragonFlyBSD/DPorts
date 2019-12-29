@@ -1,0 +1,129 @@
+--- ck_ssl.c.intermediate	2019-12-29 00:08:06.000000000 +0000
++++ ck_ssl.c
+@@ -1584,7 +1584,7 @@ the build.\r\n\r\n");
+ 
+ #ifdef ZLIB
+     cm = COMP_zlib();
+-#if OPENSSL_VERSION_NUMBER >= 0x10100005L
++#if OPENSSL_VERSION_NUMBER >= 0x10100005L && !defined(LIBRESSL_VERSION_NUMBER)
+     if (cm != NULL && COMP_get_type(cm) != NID_undef) {
+ #else
+     if (cm != NULL && cm->type != NID_undef) {
+@@ -1594,7 +1594,7 @@ the build.\r\n\r\n");
+ #endif /* ZLIB */
+ #ifdef NID_rle_compression
+     cm = COMP_rle();
+-#if OPENSSL_VERSION_NUMBER >= 0x10100005L
++#if OPENSSL_VERSION_NUMBER >= 0x10100005L && !defined(LIBRESSL_VERSION_NUMBER)
+     if (cm != NULL && COMP_get_type(cm) != NID_undef)
+ #else
+     if (cm != NULL && cm->type != NID_undef)
+@@ -2728,7 +2728,7 @@ ssl_anonymous_cipher(ssl) SSL * ssl;
+ int
+ ssl_verify_crl(int ok, X509_STORE_CTX *ctx)
+ {
+-#if OPENSSL_VERSION_NUMBER >= 0x10100005L
++#if OPENSSL_VERSION_NUMBER >= 0x10100005L && !defined(LIBRESSL_VERSION_NUMBER)
+     X509_OBJECT *obj;
+ #else
+     X509_OBJECT obj;
+@@ -2752,7 +2752,7 @@ ssl_verify_crl(int ok, X509_STORE_CTX *c
+     if (!crl_store)
+         return ok;
+ 
+-#if OPENSSL_VERSION_NUMBER >= 0x10100005L
++#if OPENSSL_VERSION_NUMBER >= 0x10100005L && !defined(LIBRESSL_VERSION_NUMBER)
+     obj = X509_OBJECT_new();
+     if (!obj)
+         return(ok);
+@@ -2804,11 +2804,11 @@ ssl_verify_crl(int ok, X509_STORE_CTX *c
+      * Try to retrieve a CRL corresponding to the _subject_ of
+      * the current certificate in order to verify it's integrity.
+      */
+-#if OPENSSL_VERSION_NUMBER < 0x10100005L
++#if OPENSSL_VERSION_NUMBER < 0x10100005L || defined(LIBRESSL_VERSION_NUMBER)
+     memset((char *)&obj, 0, sizeof(obj));
+ #endif
+     X509_STORE_CTX_init(store_ctx, crl_store, NULL, NULL);
+-#if OPENSSL_VERSION_NUMBER >= 0x10100005L
++#if OPENSSL_VERSION_NUMBER >= 0x10100005L && !defined(LIBRESSL_VERSION_NUMBER)
+     rc = X509_STORE_get_by_subject(store_ctx, X509_LU_CRL, subject, obj);
+     X509_STORE_CTX_cleanup(store_ctx);
+     crl = X509_OBJECT_get0_X509_CRL(obj);
+@@ -2824,7 +2824,7 @@ ssl_verify_crl(int ok, X509_STORE_CTX *c
+         if (X509_CRL_verify(crl, X509_get_pubkey(xs)) <= 0) {
+             fprintf(stderr, "Invalid signature on CRL!\n");
+             X509_STORE_CTX_set_error(ctx, X509_V_ERR_CRL_SIGNATURE_FAILURE);
+-#if OPENSSL_VERSION_NUMBER >= 0x10100005L
++#if OPENSSL_VERSION_NUMBER >= 0x10100005L && !defined(LIBRESSL_VERSION_NUMBER)
+             X509_OBJECT_free(obj);
+ #else
+             X509_OBJECT_free_contents(&obj);
+@@ -2841,7 +2841,7 @@ ssl_verify_crl(int ok, X509_STORE_CTX *c
+             fprintf(stderr, "Found CRL has invalid nextUpdate field.\n");
+             X509_STORE_CTX_set_error(ctx,
+                                     X509_V_ERR_ERROR_IN_CRL_NEXT_UPDATE_FIELD);
+-#if OPENSSL_VERSION_NUMBER >= 0x10100005L
++#if OPENSSL_VERSION_NUMBER >= 0x10100005L && !defined(LIBRESSL_VERSION_NUMBER)
+             X509_OBJECT_free(obj);
+ #else
+             X509_OBJECT_free_contents(&obj);
+@@ -2854,7 +2854,7 @@ ssl_verify_crl(int ok, X509_STORE_CTX *c
+ "Found CRL is expired - revoking all certificates until you get updated CRL.\n"
+                     );
+             X509_STORE_CTX_set_error(ctx, X509_V_ERR_CRL_HAS_EXPIRED);
+-#if OPENSSL_VERSION_NUMBER >= 0x10100005L
++#if OPENSSL_VERSION_NUMBER >= 0x10100005L && !defined(LIBRESSL_VERSION_NUMBER)
+             X509_OBJECT_free(obj);
+ #else
+             X509_OBJECT_free_contents(&obj);
+@@ -2862,7 +2862,7 @@ ssl_verify_crl(int ok, X509_STORE_CTX *c
+             X509_STORE_CTX_free(store_ctx);
+             return 0;
+         }
+-#if OPENSSL_VERSION_NUMBER >= 0x10100005L
++#if OPENSSL_VERSION_NUMBER >= 0x10100005L && !defined(LIBRESSL_VERSION_NUMBER)
+         X509_OBJECT_free(obj);
+ #else
+         X509_OBJECT_free_contents(&obj);
+@@ -2873,11 +2873,11 @@ ssl_verify_crl(int ok, X509_STORE_CTX *c
+      * Try to retrieve a CRL corresponding to the _issuer_ of
+      * the current certificate in order to check for revocation.
+      */
+-#if OPENSSL_VERSION_NUMBER < 0x10100005L
++#if OPENSSL_VERSION_NUMBER < 0x10100005L || defined(LIBRESSL_VERSION_NUMBER)
+     memset((char *)&obj, 0, sizeof(obj));
+ #endif
+     X509_STORE_CTX_init(store_ctx, crl_store, NULL, NULL);
+-#if OPENSSL_VERSION_NUMBER >= 0x10100005L
++#if OPENSSL_VERSION_NUMBER >= 0x10100005L && !defined(LIBRESSL_VERSION_NUMBER)
+     rc = X509_STORE_get_by_subject(store_ctx, X509_LU_CRL, issuer, obj);
+     X509_STORE_CTX_free(store_ctx);		/* calls X509_STORE_CTX_cleanup() */
+     crl = X509_OBJECT_get0_X509_CRL(obj);
+@@ -2893,7 +2893,7 @@ ssl_verify_crl(int ok, X509_STORE_CTX *c
+         n = sk_X509_REVOKED_num(X509_CRL_get_REVOKED(crl));
+         for (i = 0; i < n; i++) {
+             revoked = sk_X509_REVOKED_value(X509_CRL_get_REVOKED(crl), i);
+-#if OPENSSL_VERSION_NUMBER >= 0x10100005L
++#if OPENSSL_VERSION_NUMBER >= 0x10100005L && !defined(LIBRESSL_VERSION_NUMBER)
+             if (ASN1_INTEGER_cmp(X509_REVOKED_get0_serialNumber(revoked),
+                                  X509_get_serialNumber(xs)) == 0) {
+ 
+@@ -2908,7 +2908,7 @@ ssl_verify_crl(int ok, X509_STORE_CTX *c
+                 free(cp);
+ 
+                 X509_STORE_CTX_set_error(ctx, X509_V_ERR_CERT_REVOKED);
+-#if OPENSSL_VERSION_NUMBER >= 0x10100005L
++#if OPENSSL_VERSION_NUMBER >= 0x10100005L && !defined(LIBRESSL_VERSION_NUMBER)
+                 X509_OBJECT_free(obj);
+ #else
+                 X509_OBJECT_free_contents(&obj);
+@@ -2916,7 +2916,7 @@ ssl_verify_crl(int ok, X509_STORE_CTX *c
+                 return 0;
+             }
+         }
+-#if OPENSSL_VERSION_NUMBER >= 0x10100005L
++#if OPENSSL_VERSION_NUMBER >= 0x10100005L && !defined(LIBRESSL_VERSION_NUMBER)
+         X509_OBJECT_free(obj);
+ #else
+         X509_OBJECT_free_contents(&obj);
