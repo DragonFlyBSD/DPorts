@@ -1,0 +1,9 @@
+
+USES:=	${USES:N*flang} fortran
+BINARY_ALIAS:=	flang=gfortran8
+
+LDFLAGS+=	-Wl,-rpath=/usr/local/lib/gcc8 -L/usr/local/lib/gcc8
+
+dfly-patch:
+	${REINPLACE_CMD} -e "s@flang@gfortran@g" \
+		${WRKSRC}/setup.py

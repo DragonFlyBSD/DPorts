@@ -3,6 +3,9 @@ USES+=	localbase:ldflags
 # exclude for now
 OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NSCSICRYPTO}
 
+BROKEN_SSL=     libressl
+BROKEN_SSL_REASON_libressl=	port requires deprecated PSK support
+
 # not ready for ld.gold
 MAKE_ENV+=	LDVER=ld.bfd
 

@@ -1,2 +1,12 @@
 BSDVIDEO_BROKEN=	bsdvideo plugin doesn't build on DragonFly
 OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NBSDVIDEO}
+
+#.if defined(SSL_DEFAULT) && ${SSL_DEFAULT} == libressl
+# ptclib/pssl.cxx:143:54: error: invalid conversion
+# from 'const BIO_METHOD*' {aka 'const bio_method_st*'}
+# to 'BIO_METHOD*' {aka 'bio_method_st*'} [-fpermissive]
+#     PSSL_BIO(BIO_METHOD *method = BIO_s_file_internal())
+dfly-patch:
+	${REINPLACE_CMD} -e 's@STDCXXFLAGS)@& -fpermissive@g' \
+		${WRKSRC}/make/common.mak
+#.endif

@@ -1,0 +1,11 @@
+--- nnrpd/tls.c.intermediate	2019-12-28 17:47:48.000000000 +0000
++++ nnrpd/tls.c
+@@ -652,7 +652,7 @@ tls_init_serverengine(int verifydepth, i
+         }
+     }
+ 
+-#if OPENSSL_VERSION_NUMBER >= 0x01010100fL
++#if OPENSSL_VERSION_NUMBER >= 0x01010100fL && !defined(LIBRESSL_VERSION_NUMBER)
+     /* New API added in OpenSSL 1.1.1 for TLSv1.3 cipher suites. */
+     if (tls_ciphers13 != NULL) {
+         if (SSL_CTX_set_ciphersuites(CTX, tls_ciphers13) == 0) {

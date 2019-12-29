@@ -1,0 +1,11 @@
+--- src/Mayaqua/Encrypt.h.intermediate	2019-12-29 10:24:56.000000000 +0000
++++ src/Mayaqua/Encrypt.h
+@@ -105,7 +105,7 @@
+ #ifndef	ENCRYPT_H
+ #define	ENCRYPT_H
+ 
+-#if OPENSSL_VERSION_NUMBER >= 0x10100000L
++#if OPENSSL_VERSION_NUMBER >= 0x10100000L && !defined(LIBRESSL_VERSION_NUMBER)
+ #define USE_OPENSSL_AEAD_CHACHA20POLY1305
+ #endif
+ 

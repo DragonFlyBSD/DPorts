@@ -1,0 +1,20 @@
+--- xmltooling/security/impl/OpenSSLSupport.cpp.orig	2018-11-01 14:08:56 UTC
++++ xmltooling/security/impl/OpenSSLSupport.cpp
+@@ -73,7 +73,7 @@ const BIGNUM *xmltooling::DSA_get0_pubke
+ {
+ #if (OPENSSL_VERSION_NUMBER < 0x10100000L)
+     return dsa->pub_key;
+-#elif (OPENSSL_VERSION_NUMBER  < 0x10101000L)
++#elif (OPENSSL_VERSION_NUMBER  < 0x10101000L) || defined(LIBRESSL_VERSION_NUMBER)
+     const BIGNUM *result;
+     DSA_get0_key(dsa, &result, NULL);
+     return result;
+@@ -86,7 +86,7 @@ const BIGNUM *xmltooling::DSA_get0_privk
+ {
+ #if (OPENSSL_VERSION_NUMBER < 0x10100000L)
+     return dsa->priv_key;
+-#elif (OPENSSL_VERSION_NUMBER  < 0x10101000L)
++#elif (OPENSSL_VERSION_NUMBER  < 0x10101000L) || defined(LIBRESSL_VERSION_NUMBER)
+     const BIGNUM *result;
+     DSA_get0_key(dsa, NULL, &result);
+     return result;

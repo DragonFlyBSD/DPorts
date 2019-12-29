@@ -1,0 +1,20 @@
+--- src/connection.c.orig	2018-05-27 23:59:38 UTC
++++ src/connection.c
+@@ -115,7 +115,7 @@ static mutex_t *ssl_mutexes = NULL;
+ #if !defined(WIN32) && OPENSSL_VERSION_NUMBER < 0x10000000
+ static unsigned long ssl_id_function (void);
+ #endif
+-#if OPENSSL_VERSION_NUMBER < 0x10100000L
++#if OPENSSL_VERSION_NUMBER < 0x10100000L || defined(LIBRESSL_VERSION_NUMBER)
+ static void ssl_locking_function (int mode, int n, const char *file, int line);
+ #endif
+ #endif
+@@ -312,7 +312,7 @@ static unsigned long ssl_id_function (vo
+ }
+ #endif
+ 
+-#if OPENSSL_VERSION_NUMBER < 0x10100000L
++#if OPENSSL_VERSION_NUMBER < 0x10100000L || defined(LIBRESSL_VERSION_NUMBER)
+ static void ssl_locking_function (int mode, int n, const char *file, int line)
+ {
+     if (mode & CRYPTO_LOCK)

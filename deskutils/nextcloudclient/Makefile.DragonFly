@@ -1,5 +1,8 @@
 USES+=	localbase:ldflags
 
+BROKEN_SSL=	libressl
+BROKEN_SSL_REASON_libressl=	port requires EVP_PKEY_CTX_set_rsa_oaep_md()
+
 # nuke version check
 dfly-patch:
 	${REINPLACE_CMD} -e '/find_package/s@(OpenSSL 1.1 REQUIRED )@(OpenSSL REQUIRED )@g' \

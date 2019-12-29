@@ -1,0 +1,58 @@
+
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NGBM}
+
+dfly-patch:
+	${CP} -v ${WRKSRC}/system/settings/freebsd.xml ${WRKSRC}/system/settings/dragonfly.xml
+	${CP} -Rv ${WRKSRC}/cmake/scripts/freebsd  ${WRKSRC}/cmake/scripts/dragonfly
+	${REINPLACE_CMD} -e 's@FREEBSD@DRAGONFLY@g' -e 's@freebsd@dragonfly@g' -e 's@amd64@x86_64@g' \
+		${WRKSRC}/cmake/scripts/dragonfly/ArchSetup.cmake
+	${CP} -Rv ${WRKSRC}/cmake/platform/freebsd ${WRKSRC}/cmake/platform/dragonfly
+	${REINPLACE_CMD} -e 's@FREEBSD@DRAGONFLY@g' \
+		${WRKSRC}/cmake/platform/dragonfly/defines.txt
+	${CP} -Rv ${WRKSRC}/cmake/treedata/freebsd ${WRKSRC}/cmake/treedata/dragonfly
+	${REINPLACE_CMD} -e 's@freebsd@dragonfly@g' \
+		${WRKSRC}/cmake/treedata/dragonfly/subdirs.txt
+	${CP} -Rv ${WRKSRC}/xbmc/platform/freebsd  ${WRKSRC}/xbmc/platform/dragonfly
+	${REINPLACE_CMD} -e 's@freebsd@dragonfly@' \
+		${WRKSRC}/xbmc/platform/dragonfly/CMakeLists.txt
+	${CP} -Rv ${WRKSRC}/xbmc/platform/overrides/freebsd \
+		  ${WRKSRC}/xbmc/platform/overrides/dragonfly
+	${CP} -Rv ${WRKSRC}/tools/buildsteps/freebsd \
+		  ${WRKSRC}/tools/buildsteps/dragonfly
+	${REINPLACE_CMD} -e 's@freebsd@dragonfly@g' \
+		${WRKSRC}/tools/buildsteps/dragonfly/*
+	${REINPLACE_CMD} -e 's@defined (TARGET_FREEBSD)@defined(TARGET_FREEBSD)@g' \
+			 -e 's@defined(TARGET_FREEBSD)@(&||defined(TARGET_DRAGONFLY))@g' \
+		${WRKSRC}/xbmc/platform/posix/network/NetworkLinux.cpp
+	${REINPLACE_CMD} -e 's@defined(TARGET_FREEBSD)@(&||defined(TARGET_DRAGONFLY))@g' \
+			 -e 's@#ifdef \(TARGET_FREEBSD\)@#if defined(TARGET_FREEBSD) || defined(TARGET_DRAGONFLY)@g' \
+		${WRKSRC}/xbmc/platform/linux/peripherals/PeripheralBusUSBLibUSB.cpp \
+		${WRKSRC}/xbmc/threads/platform/pthreads/ThreadImpl.cpp
+	${REINPLACE_CMD} -e 's@defined(TARGET_FREEBSD)@(&||defined(TARGET_DRAGONFLY))@g' \
+		${WRKSRC}/tools/depends/native/TexturePacker/src/XBTFWriter.cpp \
+		${WRKSRC}/xbmc/LangInfo.cpp \
+		${WRKSRC}/xbmc/Util.cpp \
+		${WRKSRC}/xbmc/addons/kodi-addon-dev-kit/include/kodi/Filesystem.h \
+		${WRKSRC}/xbmc/addons/kodi-addon-dev-kit/include/kodi/gui/gl/GL.h \
+		${WRKSRC}/xbmc/cores/AudioEngine/Sinks/AESinkOSS.cpp \
+		${WRKSRC}/xbmc/cores/DllLoader/exports/emu_msvcrt.cpp \
+		${WRKSRC}/xbmc/cores/DllLoader/exports/emu_msvcrt.h \
+		${WRKSRC}/xbmc/cores/DllLoader/exports/util/EmuFileWrapper.h \
+		${WRKSRC}/xbmc/cores/DllLoader/exports/wrapper.c \
+		${WRKSRC}/xbmc/cores/DllLoader/ldt_keeper.c \
+		${WRKSRC}/xbmc/guilib/XBTFReader.cpp \
+		${WRKSRC}/xbmc/guilib/guiinfo/SystemGUIInfo.cpp \
+		${WRKSRC}/xbmc/interfaces/python/XBPython.cpp \
+		${WRKSRC}/xbmc/peripherals/bus/PeripheralBusUSB.h \
+		${WRKSRC}/xbmc/platform/posix/Filesystem.cpp \
+		${WRKSRC}/xbmc/platform/posix/PlatformDefs.h \
+		${WRKSRC}/xbmc/platform/posix/PosixMountProvider.cpp \
+		${WRKSRC}/xbmc/platform/posix/XFileUtils.cpp \
+		${WRKSRC}/xbmc/platform/posix/main.cpp \
+		${WRKSRC}/xbmc/storage/DetectDVDType.cpp \
+		${WRKSRC}/xbmc/storage/MediaManager.cpp \
+		${WRKSRC}/xbmc/system_gl.h \
+		${WRKSRC}/xbmc/utils/CharsetConverter.cpp \
+		${WRKSRC}/xbmc/utils/Stopwatch.cpp \
+		${WRKSRC}/xbmc/utils/test/TestCPUInfo.cpp \
+		${WRKSRC}/xbmc/windowing/X11/XRandR.cpp

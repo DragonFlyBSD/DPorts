@@ -1,0 +1,11 @@
+--- imap/tls.c.orig	2019-12-29 06:12:47 UTC
++++ imap/tls.c
+@@ -741,7 +741,7 @@ EXPORTED int     tls_init_serverengine(c
+     const char *tls_versions = config_getstring(IMAPOPT_TLS_VERSIONS);
+ 
+     if (strstr(tls_versions, "tls1_3") == NULL) {
+-#if (OPENSSL_VERSION_NUMBER >= 0x1010100fL)
++#if (OPENSSL_VERSION_NUMBER >= 0x1010100fL) && !defined(LIBRESSL_VERSION_NUMBER)
+         //syslog(LOG_DEBUG, "TLS server engine: Disabled TLSv1.3");
+         off |= SSL_OP_NO_TLSv1_3;
+ #else

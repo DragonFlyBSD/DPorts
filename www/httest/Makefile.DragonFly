@@ -1,0 +1,3 @@
+
+BROKEN_SSL=	libressl
+BROKEN_SSL_REASON_libressl=    port requires sk_*() M_ASN1_TIME_new
