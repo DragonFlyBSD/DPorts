@@ -1,0 +1,30 @@
+--- src/openssl_cert.cpp.orig	2018-04-01 20:53:40 UTC
++++ src/openssl_cert.cpp
+@@ -193,7 +193,7 @@ unsigned char *ASN1_seq_pack(void *safes
+ 
+ #endif	// OpenSSL v1.0
+ //  Work with OpenSSL 1.1.0 and later
+-#if OPENSSL_VERSION_NUMBER >= 0x10100000L
++#if OPENSSL_VERSION_NUMBER >= 0x10100000L && !defined(LIBRESSL_VERSION_NUMBER)
+ # define M_PKCS12_bag_type PKCS12_bag_type
+ # define M_PKCS12_cert_bag_type PKCS12_cert_bag_type
+ # define M_PKCS12_crl_bag_type PKCS12_cert_bag_type
+@@ -2201,15 +2201,15 @@ tqsl_add_bag_attribute(PKCS12_SAFEBAG *b
+ #if (OPENSSL_VERSION_NUMBER & 0xfffff000) == 0x00906000
+ 					attrib->set = 1;
+ #else
+-  #if OPENSSL_VERSION_NUMBER < 0x10100000L
+-    #if (OPENSSL_VERSION_NUMBER & 0xfffff000) >= 0x00907000
++  #if OPENSSL_VERSION_NUMBER < 0x10100000L || defined(LIBRESSL_VERSION_NUMBER)
++    #if (OPENSSL_VERSION_NUMBER & 0xfffff000) >= 0x00907000 || defined(LIBRESSL_VERSION_NUMBER)
+ 					attrib->single = 0;
+     #else
+         #error "Unexpected OpenSSL version; check X509_ATTRIBUTE struct compatibility"
+     #endif
+   #endif
+ #endif
+-#if OPENSSL_VERSION_NUMBER >= 0x10100000L
++#if OPENSSL_VERSION_NUMBER >= 0x10100000L && !defined(LIBRESSL_VERSION_NUMBER)
+ 					STACK_OF(X509_ATTRIBUTE) *sk;
+ 					sk = (STACK_OF(X509_ATTRIBUTE)*)PKCS12_SAFEBAG_get0_attrs(bag);
+ 					if (sk) {
