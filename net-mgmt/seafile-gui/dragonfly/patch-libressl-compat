@@ -1,0 +1,11 @@
+--- src/utils/rsa.cpp.orig	2019-11-19 04:02:59 UTC
++++ src/utils/rsa.cpp
+@@ -13,7 +13,7 @@ namespace {
+ 
+ /* Forward compatibility functions if libssl < 1.1.0. */
+ 
+-#if OPENSSL_VERSION_NUMBER < 0x10100000L || defined(LIBRESSL_VERSION_NUMBER)
++#if OPENSSL_VERSION_NUMBER < 0x10100000L
+ 
+ int RSA_set0_key(RSA *r, BIGNUM *n, BIGNUM *e, BIGNUM *d)
+ {
