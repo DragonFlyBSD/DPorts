@@ -1,0 +1,9 @@
+
+# override to DEFAULT LLVM
+LLVM_VER:=	80
+
+# and exclude not needed components
+BUILD_DEPENDS:=	${BUILD_DEPENDS:Nllvm*}
+RUN_DEPENDS:=	${RUN_DEPENDS:Nllvm*}
+CC:=	cc
+CXX:=	c++
