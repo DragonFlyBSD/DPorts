@@ -1,0 +1,26 @@
+--- tool/yubico-piv-tool.c.intermediate	2019-12-30 12:57:50.000000000 +0000
++++ tool/yubico-piv-tool.c
+@@ -751,7 +751,11 @@ static bool request_certificate(ykpiv_st
+       fprintf(stderr, "Failed signing request.\n");
+       goto request_out;
+     }
++#ifdef LIBRESSL_VERSION_NUMBER
++    ASN1_BIT_STRING_set(req->signature, signature, sig_len);
++#else
+     M_ASN1_BIT_STRING_set(req->signature, signature, sig_len);
++#endif
+     /* mark that all bits should be used. */
+     req->signature->flags = ASN1_STRING_FLAG_BITS_LEFT;
+   }
+@@ -1007,7 +1011,11 @@ static bool selfsign_certificate(ykpiv_s
+       fprintf(stderr, "Failed signing certificate.\n");
+       goto selfsign_out;
+     }
++#ifdef LIBRESSL_VERSION_NUMBER
++    ASN1_BIT_STRING_set(x509->signature, signature, sig_len);
++#else
+     M_ASN1_BIT_STRING_set(x509->signature, signature, sig_len);
++#endif
+     /* setting flags to ASN1_STRING_FLAG_BITS_LEFT here marks that no bits
+      * should be subtracted from the bit string, thus making sure that the
+      * certificate can be validated. */
