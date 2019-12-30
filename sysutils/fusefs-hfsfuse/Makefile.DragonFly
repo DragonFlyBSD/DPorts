@@ -1,0 +1,2 @@
+
+CFLAGS+=	-I${LOCALBASE}/include -L${LOCALBASE}/lib
