@@ -1,0 +1,11 @@
+--- CMakeLists.txti.orig	2016-08-02 22:51:47 UTC
++++ CMakeLists.txt
+@@ -63,7 +63,7 @@ if(CMAKE_SYSTEM_NAME MATCHES "Linux")
+ elseif(CMAKE_SYSTEM_NAME MATCHES "Darwin")
+   message(STATUS "Darwin detected")
+   set(METER_SOURCES "osx/memory.cc" "osx/cpu.cc" "common/load.cc")
+-elseif(CMAKE_SYSTEM_NAME MATCHES "FreeBSD")
++elseif(CMAKE_SYSTEM_NAME MATCHES "FreeBSD|DragonFly")
+   message(STATUS "FreeBSD detected")
+   set(METER_SOURCES "freebsd/memory.cc" "freebsd/cpu.cc" "common/load.cc")
+ elseif(CMAKE_SYSTEM_NAME MATCHES "OpenBSD")
