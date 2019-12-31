@@ -1,0 +1,11 @@
+--- GNUmakefilentermediate	2019-12-31 09:11:50.000000000 +0000
++++ GNUmakefile
+@@ -57,7 +57,7 @@ ifeq ($(SYSTEMX),)
+   SYSTEMX := $(shell uname -s 2>/dev/null)
+ endif
+ 
+-IS_LINUX := $(shell echo "$(SYSTEMX)" | $(GREP) -i -c -E "Linux|FreeBSD")
++IS_LINUX := $(shell echo "$(SYSTEMX)" | $(GREP) -i -c -E "Linux|FreeBSD|DragonFly")
+ IS_HURD := $(shell echo "$(SYSTEMX)" | $(GREP) -i -c -E "GNU|Hurd")
+ IS_MINGW := $(shell echo "$(SYSTEMX)" | $(GREP) -i -c "MinGW")
+ IS_CYGWIN := $(shell echo "$(SYSTEMX)" | $(GREP) -i -c "Cygwin")
