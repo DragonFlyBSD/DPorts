@@ -15,7 +15,7 @@ Contains orphans in staged/docs and staged/bin/v.in.pdal
  	    SHLIB_LD="${CC} -shared"
  	    SHLIB_SUFFIX=".so"
  	    LDFLAGS="-export-dynamic"
-+            SHLIB_LD_FLAGS="-Wl,-soname,\$(notdir \$@)"
++            #SHLIB_LD_FLAGS="-Wl,-soname,\$(notdir \$@)"
  	    #LD_SEARCH_FLAGS='-rpath ${LIB_RUNTIME_DIR}'
  	    LD_SEARCH_FLAGS='-Wl,-rpath-link,${LIB_RUNTIME_DIR}'
  	    # TODO: add optional pthread support with any combination of: 
