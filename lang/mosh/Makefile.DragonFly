@@ -1,0 +1,9 @@
+
+USES+=	alias
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(\*freebsd\*\))@\1|*dragonfly*)@g' \
+			 -e 's@^freebsd\*@&|dragonfly*@g' \
+			 -e 's@\(ptracestub_common\)=true@\1=false@g' \
+			 -e 's@HAVE_PTRACE_COMMON@&___@g' \
+		${WRKSRC}/configure
