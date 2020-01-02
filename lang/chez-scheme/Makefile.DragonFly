@@ -1,0 +1,4 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-Werror @& -Wno-implicit-fallthrough @g' \
+		${WRKSRC}/c/Mf-a6fb
