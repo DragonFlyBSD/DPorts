@@ -1,0 +1,54 @@
+--- src/makemake.in.intermediate	2020-01-02 19:03:31.000000000 +0000
++++ src/makemake.in
+@@ -887,7 +887,7 @@ fi
+ if [ -z "$fsstnd" ]; then       # default fsstnd depends on the OS
+   case ${TSYSOS} in
+     cygwin | win32gcc )  fsstnd=redhat; ;; # cygwin == redhat!
+-    *bsd ) fsstnd=bsd; ;;
++    *bsd|dragonfly ) fsstnd=bsd; ;;
+     linux )
+       if test -r /etc/lsb-release; then
+         . /etc/lsb-release;
+@@ -928,7 +928,7 @@ if [ -z "$docdir" ] ; then
+       redhat)
+         docdir="\$(datarootdir)${NEXT_}doc${NEXT_}\$(TOPDIR)"
+         ;;
+-      debian | gnu_ext | *bsd)
++      debian | gnu_ext | *bsd | dragonfly)
+         docdir="\$(datarootdir)${NEXT_}doc${NEXT_}clisp"
+         ;;
+     esac
+@@ -4120,13 +4120,13 @@ if [ $CROSS = false ] ; then
+         echotab "mkdir -p \$(DESTDIR)\$(psdir)"
+         echotab "mkdir -p \$(DESTDIR)\$(pdfdir)"
+         ;;
+-      *bsd)
++      *bsd|dragonfly)
+         echotab "mkdir -p \$(DESTDIR)\$(docdir)"
+         ;;
+     esac
+     echotab "mkdir -p \$(DESTDIR)\$(docdir)"
+     case "$fsstnd" in
+-      *bsd)
++      *bsd|dragonfly)
+         ;;
+       *)
+         echotab "mkdir -p \$(DESTDIR)\$(docdir)/doc"
+@@ -4218,7 +4218,7 @@ if [ $CROSS = false ] ; then
+           fi
+         done
+         ;;
+-      *bsd)
++      *bsd|dragonfly)
+         echotab "mkdir -p \$(DESTDIR)\$(docdir)"
+         for f in ${MANPAGES}; do
+           echotab "\$(INSTALL_DATA) $f.html \$(DESTDIR)\$(docdir)/$f.html"
+@@ -4232,7 +4232,7 @@ if [ $CROSS = false ] ; then
+     echotab "mkdir -p \$(DESTDIR)\$(docdir)"
+     echotab "\$(INSTALL_DATA) \$(READMES) \$(DESTDIR)\$(docdir)/"
+     case "$fsstnd" in
+-      *bsd)
++      *bsd|dragonfly)
+         echotab "\$(INSTALL_DATA) \$(MANUALS) ${manual_print} \$(DESTDIR)\$(docdir)/"
+         ;;
+       *)
