@@ -1,4 +1,6 @@
 
 .if !${FLAVOR:Mnative}
-IGNORE=	FreeBSD specific
+#IGNORE=	FreeBSD specific
+dfly-patch:
+	(cd ${WRKSRC} && ${PATCH} ${PATCH_ARGS} < ${DFLY_PATCHDIR}/zzz-patch-targets)
 .endif

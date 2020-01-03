@@ -1,0 +1,138 @@
+--- bfd/config.bfd.intermediate	2020-01-03 06:58:13.000000000 +0000
++++ bfd/config.bfd
+@@ -239 +239 @@ case "${targ}" in
+-  aarch64-*-freebsd*)
++  aarch64-*-freebsd* | aarch64-*-dragonfly*)
+@@ -378 +378 @@ case "${targ}" in
+-  armeb-*-elf | arm*b-*-freebsd* | arm*b-*-linux-* | armeb-*-eabi*)
++  armeb-*-elf | arm*b-*-freebsd* | arm*b-*-dragonfly* | arm*b-*-linux-* | armeb-*-eabi*)
+@@ -386 +386 @@ case "${targ}" in
+-  arm-*-elf | arm*-*-freebsd* | arm*-*-linux-* | arm*-*-conix* | \
++  arm-*-elf | arm*-*-freebsd* | arm*-*-dragonfly*  | arm*-*-linux-* | arm*-*-conix* | \
+@@ -613,2 +613,2 @@ case "${targ}" in
+-    targ_selvecs=iamcu_elf32_vec
+-    targ64_selvecs="x86_64_elf64_vec l1om_elf64_vec k1om_elf64_vec"
++    targ_selvecs=iamcu_elf32_vec i386_elf32_fbsd_ve
++    targ64_selvecs="x86_64_elf64_vec l1om_elf64_vec k1om_elf64_vec x86_64_elf64_fbsd_vec l1om_elf64_fbsd_vec k1om_elf64_fbsd_vec"
+@@ -682 +682 @@ case "${targ}" in
+-    targ_selvecs="i386_elf32_vec iamcu_elf32_vec l1om_elf64_vec k1om_elf64_vec x86_64_pei_vec"
++    targ_selvecs="i386_elf32_vec iamcu_elf32_vec l1om_elf64_vec k1om_elf64_vec x86_64_pei_vec i386_elf32_fbsd_vec x86_64_elf64_vec l1om_elf64_fbsd_vec k1om_elf64_fbsd_vec"
+@@ -933 +933 @@ case "${targ}" in
+-  mips64*el-*-freebsd* | mips64*el-*-kfreebsd*-gnu)
++  mips64*el-*-freebsd* | mips64*el-*-kfreebsd*-gnu | mips64*el-*-dragonfly*)
+@@ -940 +940 @@ case "${targ}" in
+-  mips64*-*-freebsd* | mips64*-*-kfreebsd*-gnu)
++  mips64*-*-freebsd* | mips64*-*-kfreebsd*-gnu | mips64*-*-dragonfly*)
+@@ -947 +947 @@ case "${targ}" in
+-  mips*el-*-freebsd* | mips*el-*-kfreebsd*-gnu)
++  mips*el-*-freebsd* | mips*el-*-kfreebsd*-gnu | mips*el-*-dragonfly*)
+@@ -954 +954 @@ case "${targ}" in
+-  mips*-*-freebsd* | mips*-*-kfreebsd*-gnu)
++  mips*-*-freebsd* | mips*-*-kfreebsd*-gnu | mips*-*-dragonfly*)
+@@ -1102 +1102 @@ case "${targ}" in
+-  powerpc64-*-freebsd*)
++  powerpc64-*-freebsd* | powerpc64-*-dragonfly*)
+@@ -1120 +1120 @@ case "${targ}" in
+-  powerpc-*-*freebsd*)
++  powerpc-*-*freebsd* | powerpc-*-*dragonfly*)
+@@ -1212 +1212 @@ case "${targ}" in
+-  s390x-*-freebsd*)
++  s390x-*-freebsd* | s390x-*-dragonfly*)
+@@ -1308 +1308 @@ case "${targ}" in
+-  sparc64-*-freebsd* | sparc64-*-kfreebsd*-gnu)
++  sparc64-*-freebsd* | sparc64-*-kfreebsd*-gnu | sparc64-*-dragonfly*)
+--- ld/configure.tgt.intermediate	2020-01-03 07:25:39.000000000 +0000
++++ ld/configure.tgt
+@@ -55,2 +55,2 @@ aarch64-*-cloudabi*)	targ_emul=aarch64cl
+-aarch64-*-freebsd*)	targ_emul=aarch64fbsd
+-			targ_extra_emuls="aarch64fbsdb aarch64elf" ;;
++aarch64-*-freebsd* | aarch64-*-dragonfly*)	targ_emul=aarch64elf
++			targ_extra_emuls="aarch64fbsdb aarch64fbsd" ;;
+@@ -105 +105 @@ arm-*-pe)		targ_emul=armpe ; targ_extra_
+-arm*b-*-freebsd*)	targ_emul=armelfb_fbsd
++arm*b-*-freebsd* | arm*b-*-dragonfly*)	targ_emul=armelfb_fbsd
+@@ -107,3 +107,3 @@ arm*b-*-freebsd*)	targ_emul=armelfb_fbsd
+-arm*-*-freebsd* | arm-*-kfreebsd*-gnu)
+-			targ_emul=armelf_fbsd
+-			targ_extra_emuls="armelfb_fbsd armelf" ;;
++arm*-*-freebsd* | arm-*-kfreebsd*-gnu | arm*-*-dragonfly*)
++			targ_emul=armelf
++			targ_extra_emuls="armelfb_fbsd armelf_fbsd" ;;
+@@ -320 +320 @@ i[3-7]86-*-dragonfly*)	targ_emul=elf_i38
+-			targ_extra_emuls="elf_iamcu i386bsd" ;;
++			targ_extra_emuls="elf_iamcu i386bsd elf_i386_fbsd" ;;
+@@ -322 +322 @@ x86_64-*-dragonfly*)	targ_emul=elf_x86_6
+-			targ_extra_emuls="elf_i386 elf_iamcu elf_l1om elf_k1om" ;;
++			targ_extra_emuls="elf_i386 elf_iamcu elf_l1om elf_k1om elf_x86_64_fbsd elf_i386_fbsd elf_l1om_fbsd elf_k1om_fbsd" ;;
+@@ -483,15 +483,15 @@ mips*-*-linux-*)	targ_emul=elf32btsmip
+-mips64*el-*-freebsd* | mips64*el-*-kfreebsd*-gnu)
+-			targ_emul=elf64ltsmip_fbsd
+-			targ_extra_emuls="elf32ltsmip_fbsd elf32btsmip_fbsd elf32ltsmipn32_fbsd elf32btsmipn32_fbsd elf64ltsmip_fbsd elf64btsmip_fbsd elf32ltsmip elf32btsmip elf32ltsmipn32 elf32btsmipn32 elf64ltsmip elf64btsmip"
+-			targ_extra_libpath=$targ_extra_emuls ;;
+-mips64*-*-freebsd* | mips64*-*-kfreebsd*-gnu)
+-			targ_emul=elf64btsmip_fbsd
+-			targ_extra_emuls="elf32btsmip_fbsd elf32ltsmip_fbsd elf32btsmipn32_fbsd elf32ltsmipn32_fbsd elf64btsmip_fbsd elf64ltsmip_fbsd elf32ltsmip elf32btsmip elf32ltsmipn32 elf32btsmipn32 elf64ltsmip elf64btsmip"
+-			targ_extra_libpath=$targ_extra_emuls ;;
+-mips*el-*-freebsd* | mips*el-*-kfreebsd*-gnu)
+-			targ_emul=elf32ltsmip_fbsd
+-			targ_extra_emuls="elf32ltsmip elf32btsmip elf32ltsmipn32 elf32btsmipn32 elf64ltsmip elf64btsmip elf32ltsmipn32_fbsd elf32btsmip_fbsd elf32btsmipn32_fbsd elf64ltsmip_fbsd elf64btsmip_fbsd"
+-			targ_extra_libpath=$targ_extra_emuls ;;
+-mips*-*-freebsd* | mips*-*-kfreebsd*-gnu)
+-			targ_emul=elf32btsmip_fbsd
+-			targ_extra_emuls="elf32ltsmip elf32btsmip elf32ltsmipn32 elf32btsmipn32 elf64ltsmip elf64btsmip elf32ltsmip_fbsd elf32btsmipn32_fbsd elf32ltsmipn32_fbsd elf64ltsmip_fbsd elf64btsmip_fbsd"
++mips64*el-*-freebsd* | mips64*el-*-kfreebsd*-gnu | mips64*el-*-dragonfly*)
++			targ_emul=elf64ltsmip
++			targ_extra_emuls="elf32ltsmip_fbsd elf32btsmip_fbsd elf32ltsmipn32_fbsd elf32btsmipn32_fbsd elf64ltsmip_fbsd elf64btsmip_fbsd elf32ltsmip elf32btsmip elf32ltsmipn32 elf32btsmipn32 elf64ltsmip elf64btsmip"
++			targ_extra_libpath=$targ_extra_emuls ;;
++mips64*-*-freebsd* | mips64*-*-kfreebsd*-gnu | mips64*-*-dragonfly*)
++			targ_emul=elf64btsmip
++			targ_extra_emuls="elf32btsmip_fbsd elf32ltsmip_fbsd elf32btsmipn32_fbsd elf32ltsmipn32_fbsd elf64btsmip_fbsd elf64ltsmip_fbsd elf32ltsmip elf32btsmip elf32ltsmipn32 elf32btsmipn32 elf64ltsmip elf64btsmip"
++			targ_extra_libpath=$targ_extra_emuls ;;
++mips*el-*-freebsd* | mips*el-*-kfreebsd*-gnu | mips*el-*-dragonfly*)
++			targ_emul=elf32ltsmip
++			targ_extra_emuls="elf32ltsmip_fbsd elf32btsmip_fbsd elf32ltsmipn32 elf32btsmipn32 elf64ltsmip elf64btsmip elf32ltsmipn32_fbsd elf32btsmip_fbsd elf32btsmipn32_fbsd elf64ltsmip_fbsd elf64btsmip_fbsd"
++			targ_extra_libpath=$targ_extra_emuls ;;
++mips*-*-freebsd* | mips*-*-kfreebsd*-gnu | mips*-*-dragonfly*)
++			targ_emul=elf32btsmip
++			targ_extra_emuls="elf32ltsmip_fbsd elf32btsmip_fbsd elf32ltsmipn32 elf32btsmipn32 elf64ltsmip elf64btsmip elf32ltsmip elf32btsmipn32_fbsd elf32ltsmipn32_fbsd elf64ltsmip_fbsd elf64btsmip_fbsd"
+@@ -535,3 +535,3 @@ pj*-*-*)		targ_emul=pjelf
+-powerpc-*-freebsd* | powerpc-*-kfreebsd*-gnu)
+-			targ_emul=elf32ppc_fbsd
+-			targ_extra_emuls="elf32ppc elf32ppcsim"
++powerpc-*-freebsd* | powerpc-*-kfreebsd*-gnu | powerpc-*-dragonfly*)
++			targ_emul=elf32ppc
++			targ_extra_emuls="elf32ppc_fbsd elf32ppcsim"
+@@ -540,3 +540,3 @@ powerpc-*-freebsd* | powerpc-*-kfreebsd*
+-powerpc64-*-freebsd*)
+-			targ_emul=elf64ppc_fbsd
+-			targ_extra_emuls="elf64ppc elf32ppc_fbsd elf32ppc"
++powerpc64-*-freebsd* | powerpc64-*-dragonfly*)
++			targ_emul=elf64ppc
++			targ_extra_emuls="elf64ppc_fbsd elf32ppc_fbsd elf32ppc"
+@@ -654 +654 @@ rx-*-*)			targ_emul=elf32rx ;;
+-s390x-*-freebsd*)	targ_emul=elf64_s390
++s390x-*-freebsd* | s390x-*-dragonfly*)	targ_emul=elf64_s390
+@@ -698,3 +698,3 @@ sh-*-*)			targ_emul=sh; targ_extra_emuls
+-sparc64-*-freebsd* | sparcv9-*-freebsd* | sparc64-*-kfreebsd*-gnu | sparcv9-*-kfreebsd*-gnu)
+-			targ_emul=elf64_sparc_fbsd
+-			targ_extra_emuls="elf64_sparc elf32_sparc"
++sparc64-*-freebsd* | sparcv9-*-freebsd* | sparc64-*-kfreebsd*-gnu | sparcv9-*-kfreebsd*-gnu | sparc64-*-dragonfly* | sparcv9-*-dragonfly*)
++			targ_emul=elf64_sparc
++			targ_extra_emuls="elf64_sparc_fbsd elf32_sparc"
+--- gas/configure.intermediate	2020-01-03 07:36:44.000000000 +0000
++++ gas/configure
+@@ -7101 +7101 @@ x86_64-*kfreebsd*-gnu|x86_64-*linux*|pow
+-s390*-*freebsd*| \
++s390*-*freebsd*| s390*-*dragonfly* | \
+@@ -7132 +7132 @@ s390*-*linux*|s390*-*tpf*|sparc*-*linux*
+-	  s390x-*freebsd*)
++	  s390x-*freebsd* | s390x-*dragonfly*)
+@@ -7157 +7157 @@ s390*-*linux*|s390*-*tpf*|sparc*-*linux*
+-	  s390*-*freebsd*)
++	  s390*-*freebsd* | s390*-*dragonfly*)
+@@ -12776 +12776 @@ _ACEOF
+-	  mips64*-linux* | mips-sgi-irix6* | mips64*-freebsd* \
++	  mips64*-linux* | mips-sgi-irix6* | mips64*-freebsd* | mips64*-dragonfly*  \
+@@ -12780 +12780 @@ _ACEOF
+-	  mips*-linux* | mips*-freebsd* | mips*-kfreebsd*-gnu)
++	  mips*-linux* | mips*-freebsd* | mips*-kfreebsd*-gnu | mips*-dragonfly*)
