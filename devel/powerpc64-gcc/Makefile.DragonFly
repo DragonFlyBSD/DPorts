@@ -1,0 +1,24 @@
+
+dfly-patch:
+	${TOUCH} ${WRKSRC}/gcc/config/dragonfly-spec.h
+	${TOUCH} ${WRKSRC}/gcc/config/i386/dragonfly64.h
+	${CP} ${WRKSRC}/gcc/config/aarch64/aarch64-freebsd.h \
+		${WRKSRC}/gcc/config/aarch64/aarch64-dragonfly.h
+	${CP} ${WRKSRC}/gcc/config/arm/freebsd.h \
+		${WRKSRC}/gcc/config/arm/dragonfly.h
+	${CP} ${WRKSRC}/gcc/config/mips/freebsd.h \
+		${WRKSRC}/gcc/config/mips/dragonfly.h
+	${CP} ${WRKSRC}/gcc/config/rs6000/freebsd.h \
+		${WRKSRC}/gcc/config/rs6000/dragonfly.h
+	${CP} ${WRKSRC}/gcc/config/rs6000/freebsd64.h \
+		${WRKSRC}/gcc/config/rs6000/dragonfly64.h
+	${CP} ${WRKSRC}/gcc/config/sparc/freebsd.h \
+		${WRKSRC}/gcc/config/sparc/dragonfly.h
+	${REINPLACE_CMD} -e 's@FBSD_@DFBSD_@g' \
+		${WRKSRC}/gcc/config/aarch64/aarch64-dragonfly.h \
+		${WRKSRC}/gcc/config/arm/dragonfly.h \
+		${WRKSRC}/gcc/config/mips/dragonfly.h \
+		${WRKSRC}/gcc/config/rs6000/sysv4.h \
+		${WRKSRC}/gcc/config/rs6000/dragonfly.h \
+		${WRKSRC}/gcc/config/rs6000/dragonfly64.h \
+		${WRKSRC}/gcc/config/sparc/dragonfly.h

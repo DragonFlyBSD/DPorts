@@ -1,0 +1,120 @@
+--- gcc/config.gcc.intermediate	2020-01-03 09:03:07.000000000 +0000
++++ gcc/config.gcc
+@@ -658,6 +658,7 @@ case ${target} in
+       exit 1
+       ;;
+   esac
++  fbsd_tm_file="${fbsd_tm_file} dragonfly-spec.h dragonfly.h dragonfly-stdint.h"
+   extra_options="$extra_options rpath.opt dragonfly.opt"
+   default_use_cxa_atexit=yes
+   use_gcc_stdint=wrap
+@@ -946,9 +947,9 @@ aarch64*-*-elf | aarch64*-*-rtems*)
+ 	done
+ 	TM_MULTILIB_CONFIG=`echo $TM_MULTILIB_CONFIG | sed 's/^,//'`
+ 	;;
+-aarch64*-*-freebsd*)
++aarch64*-*-freebsd*|aarch64*-*-dragonfly*)
+ 	tm_file="${tm_file} dbxelf.h elfos.h ${fbsd_tm_file}"
+-	tm_file="${tm_file} aarch64/aarch64-elf.h aarch64/aarch64-freebsd.h"
++	tm_file="${tm_file} aarch64/aarch64-elf.h aarch64/aarch64-dragonfly.h"
+ 	tmake_file="${tmake_file} aarch64/t-aarch64 aarch64/t-aarch64-freebsd"
+ 	;;
+ aarch64*-*-linux*)
+@@ -1056,17 +1057,17 @@ arm-wrs-vxworks)
+ 	extra_options="${extra_options} arm/vxworks.opt"
+ 	tmake_file="${tmake_file} arm/t-arm arm/t-vxworks"
+ 	;;
+-arm*-*-freebsd*)                # ARM FreeBSD EABI
++arm*-*-freebsd*|arm*-*-dragonfly*)                # ARM FreeBSD EABI
+ 	tm_file="dbxelf.h elfos.h ${fbsd_tm_file} arm/elf.h"
+ 	case $target in
+-	arm*b-*-freebsd*)
++	arm*b-*-freebsd*|arm*b-*-dragonfly*)
+ 	    tm_defines="${tm_defines} TARGET_BIG_ENDIAN_DEFAULT=1"
+ 	    ;;
+ 	esac
+ 	tmake_file="${tmake_file} arm/t-arm arm/t-bpabi"
+-	tm_file="${tm_file} arm/bpabi.h arm/freebsd.h arm/aout.h arm/arm.h"
++	tm_file="${tm_file} arm/bpabi.h arm/dragonfly.h arm/aout.h arm/arm.h"
+ 	case $target in
+-	armv6*-*-freebsd*)
++	armv6*-*-freebsd*|armv6*-*-dragonfly*)
+ 	    tm_defines="${tm_defines} TARGET_FREEBSD_ARMv6=1"
+             if test $fbsd_major -ge 11; then
+                tm_defines="${tm_defines} TARGET_FREEBSD_ARM_HARD_FLOAT=1"
+@@ -1447,11 +1448,11 @@ x86_64-*-rdos*)
+     tmake_file="i386/t-i386elf t-svr4"
+     ;;
+ i[34567]86-*-dragonfly*)
+-	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h dragonfly.h dragonfly-stdint.h i386/dragonfly.h"
++	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h dragonfly-spec.h dragonfly.h dragonfly-stdint.h i386/dragonfly.h"
+ 	tmake_file="${tmake_file} i386/t-crtstuff"
+ 	;;
+ x86_64-*-dragonfly*)
+-	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h dragonfly.h dragonfly-stdint.h i386/x86-64.h i386/dragonfly.h"
++	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h dragonfly-spec.h dragonfly.h dragonfly-stdint.h i386/x86-64.h i386/dragonfly.h i386/dragonfly64.h"
+ 	tmake_file="${tmake_file} i386/t-crtstuff"
+ 	;;
+ i[34567]86-*-freebsd*)
+@@ -2044,22 +2045,22 @@ microblaze*-*-elf)
+ 	cxx_target_objs="${cxx_target_objs} microblaze-c.o"
+ 	tmake_file="${tmake_file} microblaze/t-microblaze"
+         ;;
+-mips*-*-freebsd*)	# FreeBSD/mips[64], either endian.
+-	tm_file="${tm_file} elfos.h ${fbsd_tm_file} mips/elf.h mips/freebsd.h"
++mips*-*-freebsd*|mips*-*-dragonfly*)	# FreeBSD/mips[64], either endian.
++	tm_file="${tm_file} elfos.h ${fbsd_tm_file} mips/elf.h mips/dragonfly.h"
+ 	target_cpu_default="MASK_ABICALLS|MASK_SOFT_FLOAT_ABI"
+ 	case ${target} in
+-		mips64*-*-freebsd*)
++		mips64*-*-freebsd*|mips64*-*-dragonfly*)
+ 			tm_defines="${tm_defines} MIPS_ABI_DEFAULT=ABI_64"
+ 			;;
+-		mipsn32*-*-freebsd*)
++		mipsn32*-*-freebsd*|mipsn32*-*-dragonfly*)
+ 			tm_defines="${tm_defines} MIPS_ABI_DEFAULT=ABI_N32"
+ 			;;
+-		mips*-*-freebsd*)
++		mips*-*-freebsd*|mips*-*-dragonfly*)
+ 			tm_defines="${tm_defines} MIPS_ABI_DEFAULT=ABI_32 MIPS_ISA_DEFAULT=3"
+ 			;;
+ 	esac
+ 	case ${target} in
+-		mips*el-*-freebsd*)
++		mips*el-*-freebsd*|mips*el-*-dragonfly*)
+ 			tm_defines="${tm_defines} TARGET_ENDIAN_DEFAULT=0";
+ 			;;
+ 	esac
+@@ -2358,18 +2359,18 @@ powerpc64-*-darwin*)
+ 	tm_file="${tm_file} ${cpu_type}/darwin8.h ${cpu_type}/darwin64.h"
+ 	extra_headers=altivec.h
+ 	;;
+-powerpc*-*-freebsd*)
++powerpc*-*-freebsd*|powerpc*-*-dragonfly*)
+ 	tm_file="${tm_file} dbxelf.h elfos.h ${fbsd_tm_file} rs6000/sysv4.h"
+ 	extra_options="${extra_options} rs6000/sysv4.opt"
+ 	tmake_file="rs6000/t-fprules rs6000/t-ppcos ${tmake_file} rs6000/t-ppccomm"
+ 	case ${target} in
+ 	     powerpc64*)
+-	    	tm_file="${tm_file} rs6000/default64.h rs6000/freebsd64.h"
++	    	tm_file="${tm_file} rs6000/default64.h rs6000/dragonfly64.h"
+ 		tmake_file="${tmake_file} rs6000/t-freebsd64"
+ 		extra_options="${extra_options} rs6000/linux64.opt"
+ 		;;
+ 	     *)
+-	        tm_file="${tm_file} rs6000/freebsd.h"
++	        tm_file="${tm_file} rs6000/dragonfly.h"
+ 		;;
+ 	esac
+ 	;;
+@@ -2913,8 +2914,8 @@ sparc64-*-linux*)
+ 	extra_options="${extra_options} sparc/long-double-switch.opt"
+ 	tmake_file="${tmake_file} sparc/t-sparc sparc/t-linux64"
+ 	;;
+-sparc64-*-freebsd*|ultrasparc-*-freebsd*)
+-	tm_file="${tm_file} ${fbsd_tm_file} dbxelf.h elfos.h sparc/sysv4.h sparc/freebsd.h"
++sparc64-*-freebsd*|ultrasparc-*-freebsd*|sparc64-*-dragonfly*)
++	tm_file="${tm_file} ${fbsd_tm_file} dbxelf.h elfos.h sparc/sysv4.h sparc/dragonfly.h"
+ 	extra_options="${extra_options} sparc/long-double-switch.opt"
+ 	case "x$with_cpu" in
+ 		xultrasparc) ;;
