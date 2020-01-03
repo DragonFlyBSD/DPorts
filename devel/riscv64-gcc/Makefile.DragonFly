@@ -1,0 +1,7 @@
+
+dfly-patch:
+	${TOUCH} ${WRKSRC}/gcc/config/dragonfly-spec.h
+	${CP} ${WRKSRC}/gcc/config/riscv/freebsd.h \
+		${WRKSRC}/gcc/config/riscv/dragonfly.h
+	${REINPLACE_CMD} -e 's@FBSD_@DFBSD_@g' \
+		${WRKSRC}/gcc/config/riscv/dragonfly.h
