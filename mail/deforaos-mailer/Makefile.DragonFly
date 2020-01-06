@@ -1,0 +1,6 @@
+
+# XXX for now disable date test, it fails for anything other TZ=UTC
+# if /etc/localtime is present, different interpretation of %z vs glibc
+dfly-patch:
+	${REINPLACE_CMD} -e 's@_test "date"@#disabled &@g' \
+		${WRKSRC}/tests/tests.sh
