@@ -1,0 +1,11 @@
+--- libdw/Makefile.am.orig	2017-08-02 12:06:25 UTC
++++ libdw/Makefile.am
+@@ -105,7 +105,7 @@ am_libdw_pic_a_OBJECTS = $(libdw_a_SOURC
+ libdw_so_LIBS = libdw_pic.a ../libdwelf/libdwelf_pic.a \
+ 	  ../libdwfl/libdwfl_pic.a ../libebl/libebl.a
+ libdw_so_DEPS = ../lib/libeu.a ../libelf/libelf.so
+-libdw_so_LDLIBS = $(libdw_so_DEPS) -ldl -lz $(argp_LDADD) $(zip_LIBS)
++libdw_so_LDLIBS = $(libdw_so_DEPS) -lz $(argp_LDADD) $(zip_LIBS)
+ libdw_so_SOURCES =
+ libdw.so$(EXEEXT): $(srcdir)/libdw.map $(libdw_so_LIBS) $(libdw_so_DEPS)
+ # The rpath is necessary for libebl because its $ORIGIN use will
