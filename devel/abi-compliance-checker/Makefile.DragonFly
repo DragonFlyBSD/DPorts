@@ -1,0 +1,17 @@
+
+USES+=	localbase:ldflags
+
+BUILD_DEPENDS+=   eu-readelf:devel/elfutils
+
+LIB_DEPENDS+=	libelf.so:devel/libelf
+CFLAGS+=	-I${LOCALBASE}/include/libelf
+#CFLAGS+=	-I${LOCALBASE}/include/elfutils -I${LOCALBASE}/include
+#LDFLAGS+=	-L${LOCALBASE}/lib/elfutils -Wl,-rpath,${LOCALBASE}/lib/elfutils
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
+		${WRKSRC}/vdumper/Makefile
+	${REINPLACE_CMD} -e 's@freebsd|@&dragonfly|@g' \
+		${WRKSRC}/checker/modules/Internals/Basic.pm \
+		${WRKSRC}/checker/modules/Internals/CallConv.pm \
+		${WRKSRC}/checker/modules/Internals/SysCheck.pm
