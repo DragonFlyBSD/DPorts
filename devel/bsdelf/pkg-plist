@@ -1,0 +1,15 @@
+bsdelf/include/dwarf.h
+bsdelf/include/elfdefinitions.h
+bsdelf/include/gelf.h
+bsdelf/include/libdwarf.h
+bsdelf/include/libelf.h
+bsdelf/include/libelftc.h
+bsdelf/lib/libdwarf.a
+bsdelf/lib/libdwarf.so
+bsdelf/lib/libdwarf.so.3
+bsdelf/lib/libelf.a
+bsdelf/lib/libelf.so
+bsdelf/lib/libelf.so.1
+bsdelf/lib/libelftc.a
+bsdelf/lib/libelftc.so
+bsdelf/lib/libelftc.so.1

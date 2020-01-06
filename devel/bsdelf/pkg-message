@@ -1,0 +1,10 @@
+[
+{ type: install
+  message: <<EOM
+To use this port add:
+  CFLAGS+= -I${LOCALBASE}/bsdelf/include
+  LDFLAGS+=  -L${LOCALBASE}/bsdelf/lib
+             -Wl,-rpath,${LOCALBASE}/bsdelf/lib
+EOM
+}
+]
