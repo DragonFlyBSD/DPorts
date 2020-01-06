@@ -1,0 +1,23 @@
+--- libelftc/make-toolchain-version.orig	2016-02-16 22:58:35 UTC
++++ libelftc/make-toolchain-version
+@@ -64,19 +64,7 @@ done
+ curdir=`pwd`
+ cd ${top} || usage "ERROR: Cannot change directory to \"${top}\"."
+ 
+-if [ -d CVS ]; then		# Look for CVS (NetBSD).
+-    versionstring=" cvs:unknown"
+-else				# Try git (DragonFlyBSD).
+-    gitversion="$(git describe --all --dirty --long 2> /dev/null)"
+-    if [ -n "${gitversion}" ]; then
+-        versionstring=" git:${gitversion}"
+-    else   # Assume an SVN checkout (SourceForge or FreeBSD).
+-        svnversion="$(svnversion)"
+-        if [ -n "${svnversion}" ]; then
+-	    versionstring=" svn:$(svnversion)"
+-        fi
+-    fi
+-fi
++versionstring=" tarball:0.7.1"
+ 
+ if [ -z "${versionstring}" ]; then
+     echo "ERROR: cannot determine a revision number." 1>&2
