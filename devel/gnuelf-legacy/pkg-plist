@@ -1,0 +1,8 @@
+libelf-legacy/include/libelf/gelf.h
+libelf-legacy/include/libelf/libelf.h
+libelf-legacy/include/libelf/nlist.h
+libelf-legacy/include/libelf/sys_elf.h
+libelf-legacy/include/libelf/elf_repl.h
+libelf-legacy/lib/libelf.a
+libelf-legacy/lib/libelf.so
+libelf-legacy/lib/libelf.so.0
