@@ -1,0 +1,9 @@
+
+dfly-patch:
+	${CP} ${WRKSRC}/config/Makefile.config.freebsd \
+		${WRKSRC}/config/Makefile.config.dragonfly
+	${REINPLACE_CMD} -e 's@FREEBSD@DRAGONFLY@g' \
+		${WRKSRC}/config/Makefile.config.dragonfly
+dfly-configure:
+	${REINPLACE_CMD} -e 's@FREEBSD@DRAGONFLY@g' \
+		${WRKSRC}/Makefile.config

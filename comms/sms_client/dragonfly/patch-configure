@@ -1,0 +1,12 @@
+--- configure.orig	2000-09-22 10:14:28 UTC
++++ configure
+@@ -204,6 +204,9 @@ case $UNAME_SYSTEM in
+ 	Linux*)
+ 		EXTENSION=linux
+ 		;;
++        DragonFly*)
++                EXTENSION=dragonfly
++                ;;
+         FreeBSD*)
+                 EXTENSION=freebsd
+                 ;;
