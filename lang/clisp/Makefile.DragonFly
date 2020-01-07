@@ -1,0 +1,5 @@
+
+USES+=	alias
+
+LDFLAGS+=	-pthread
+LDFLAGS_gcc:=

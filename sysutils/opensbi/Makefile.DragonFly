@@ -1,0 +1,3 @@
+
+# /usr/libexec/binutils227/elf/strip: Unable to recognise the format of the input file fw_dynamic.elf
+STRIP_CMD= echo

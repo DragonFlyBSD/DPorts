@@ -1,0 +1,2 @@
+cxx_atomics/stdatomic.h
+cxx_atomics/libatomic.a

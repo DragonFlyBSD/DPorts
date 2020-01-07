@@ -1,0 +1,15 @@
+
+BUILD_DEPENDS+=	gcc8>0:lang/gcc8
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@elf_x86_64_fbsd@elf_x86_64@g' \
+		${WRKSRC}/OvmfPkg/Csm/BhyveCsm16/GNUmakefile
+	${REINPLACE_CMD} -e 's@defined(__FreeBSD__)@(&||defined(__DragonFly__))@' \
+		${WRKSRC}/BaseTools/Source/C/GenFv/GenFvInternalLib.c
+	${MKDIR} -p ${BUILD_WRKSRC}/BaseTools/Bin/DragonFly-x86_64
+	${LN} -sf ${LOCALBASE}/bin/gmake   ${BUILD_WRKSRC}/BaseTools/Bin/DragonFly-x86_64/make
+	${LN} -sf ${LOCALBASE}/bin/nasm    ${BUILD_WRKSRC}/BaseTools/Bin/DragonFly-x86_64/nasm
+	${LN} -sf ${LOCALBASE}/bin/gcc-ar8 ${BUILD_WRKSRC}/BaseTools/Bin/DragonFly-x86_64/gcc-ar
+	${LN} -sf ${LOCALBASE}/bin/gcc-nm8 ${BUILD_WRKSRC}/BaseTools/Bin/DragonFly-x86_64/gcc-nm
+	${LN} -sf ${LOCALBASE}/bin/ld      ${BUILD_WRKSRC}/BaseTools/Bin/DragonFly-x86_64/ld
+	${LN} -sf ${LOCALBASE}/bin/objcopy ${BUILD_WRKSRC}/BaseTools/Bin/DragonFly-x86_64/objcopy

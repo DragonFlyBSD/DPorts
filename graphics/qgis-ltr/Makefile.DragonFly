@@ -1,5 +1,8 @@
 USES+=	alias
 
+# grass7 has packaging issues
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NGRASS}
+
 dfly-patch:
 	${REINPLACE_CMD} -e 's@STREQUAL "FreeBSD"@MATCHES "FreeBSD|DragonFly"@g' \
 		${WRKSRC}/cmake/FindGRASS.cmake \

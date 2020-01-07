@@ -1,0 +1,53 @@
+
+.if ${PORTVERSION} != "0.174"
+BROKEN= needs recheck on new version
+.endif
+
+USES+=	localbase:ldflags
+
+## disable nls
+#OPTIONS_EXCLUDE+=	NLS
+CONFIGURE_ARGS+=	--disable-nls
+BUILD_DEPENDS+=		gnustat:sysutils/coreutils \
+			bash>0:shells/bash
+CFLAGS+=	-Wno-error=cast-function-type -O1
+#CFLAGS+= -g
+LDFLAGS+=	-Wl,-rpath,${LOCALBASE}/lib/elfutils
+
+DPMSG=		${WRKDIR}/dports-message
+PKGMESSAGE=	${DPMSG}
+
+dfly-patch:
+	@${ECHO} "[" > ${DPMSG}
+	@${ECHO} "{ type: install" >> ${DPMSG}
+	@${ECHO} "  message: <<EOM" >> ${DPMSG}
+	@${ECHO} "To use this port add:" >> ${DPMSG}
+	@${ECHO} "  CFLAGS+= -I${LOCALBASE}/include/elfutils" >> ${DPMSG}
+	@${ECHO} "           -I${LOCALBASE}/include" >> ${DPMSG}
+	@${ECHO} "  LDFLAGS+= -L${LOCALBASE}/lib/elfutils" >> ${DPMSG}
+	@${ECHO} "            -Wl,-rpath,${LOCALBASE}/lib/elfutils" >> ${DPMSG}
+	@${ECHO} "EOM" >> ${DPMSG}
+	@${ECHO} "}" >> ${DPMSG}
+	@${ECHO} "]" >> ${DPMSG}
+	${REINPLACE_CMD} -e "s@Libs: @&-L${LOCALBASE}/lib/elfutils -Wl,-rpath,${LOCALBASE}/lib/elfutils @g" \
+			 -e "s@Cflags: @&-I${LOCALBASE}/include/elfutils @g" \
+			 -e '/Requires: libelf =/d' \
+		${WRKSRC}/config/libelf.pc.in ${WRKSRC}/config/libdw.pc.in
+	${REINPLACE_CMD} -e 's@dwarfcfi_LDADD =@& $$(libeu) @g' \
+			 -e 's@next_cfi_LDADD =@& $$(libeu) @g' \
+		${WRKSRC}/tests/Makefile.am
+	${REINPLACE_CMD} -e 's@wc --lines@wc -l@g' \
+		${WRKSRC}/tests/run-strip-test.sh
+	${REINPLACE_CMD} -e 's@ /bin/sh@/usr/local/bin/bash@g' \
+			 -e 's@ /bin/bash@/usr/local/bin/bash@g' \
+			 -e 's@stat -c@gnustat -c@g' \
+		${WRKSRC}/tests/*.sh
+
+# solve install files issues against devel/libelf (use -Wl,-rpath)
+dfly-install:
+	${MV} -v ${STAGEDIR}${PREFIX}/include/*.h \
+		${STAGEDIR}${PREFIX}/include/elfutils/
+	${MV} -v ${STAGEDIR}${PREFIX}/lib/lib* \
+		${STAGEDIR}${PREFIX}/lib/elfutils/
+	${MV} -v ${STAGEDIR}${PREFIX}/libdata/pkgconfig/libelf.pc \
+		${STAGEDIR}${PREFIX}/libdata/pkgconfig/elfutils.pc

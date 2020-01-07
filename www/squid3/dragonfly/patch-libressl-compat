@@ -1,0 +1,23 @@
+--- src/ssl/gadgets.cc.orig	2018-07-15 20:46:55 UTC
++++ src/ssl/gadgets.cc
+@@ -321,12 +321,20 @@ mimicExtensions(Ssl::X509_Pointer & cert
+                                                 &ext_der,
+                                                 (const ASN1_ITEM *)ASN1_ITEM_ptr(method->it));
+ 
++#ifdef LIBRESSL_VERSION_NUMBER
++                    ASN1_OCTET_STRING *ext_oct = ASN1_OCTET_STRING_new();
++#else
+                     ASN1_OCTET_STRING *ext_oct = M_ASN1_OCTET_STRING_new();
++#endif
+                     ext_oct->data = ext_der;
+                     ext_oct->length = ext_len;
+                     X509_EXTENSION_set_data(ext, ext_oct);
+ 
++#ifdef LIBRESSL_VERSION_NUMBER
++                    ASN1_OCTET_STRING_free(ext_oct);
++#else
+                     M_ASN1_OCTET_STRING_free(ext_oct);
++#endif
+                     ASN1_BIT_STRING_free(keyusage);
+                 }
+             }

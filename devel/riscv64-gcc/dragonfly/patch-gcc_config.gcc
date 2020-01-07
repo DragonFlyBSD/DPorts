@@ -1,0 +1,21 @@
+--- gcc/config.gcc.orig	2019-01-29 15:31:10 UTC
++++ gcc/config.gcc
+@@ -692,6 +692,7 @@ case ${target} in
+       exit 1
+       ;;
+   esac
++  fbsd_tm_file="${fbsd_tm_file} dragonfly-spec.h dragonfly.h dragonfly-stdint.h"
+   extra_options="$extra_options rpath.opt dragonfly.opt"
+   default_use_cxa_atexit=yes
+   use_gcc_stdint=wrap
+@@ -2095,8 +2096,8 @@ riscv*-*-elf* | riscv*-*-rtems*)
+ 	# automatically detect that GAS supports it, yet we require it.
+ 	gcc_cv_initfini_array=yes
+ 	;;
+-riscv*-*-freebsd*)
+-	tm_file="${tm_file} elfos.h ${fbsd_tm_file} riscv/freebsd.h"
++riscv*-*-freebsd*|riscv*-*-dragonfly*)
++	tm_file="${tm_file} elfos.h ${fbsd_tm_file} riscv/dragonfly.h"
+ 	tmake_file="${tmake_file} riscv/t-riscv"
+ 	gnu_ld=yes
+ 	gas=yes

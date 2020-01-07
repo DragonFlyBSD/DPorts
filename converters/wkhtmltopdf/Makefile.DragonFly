@@ -1,6 +1,7 @@
 USES+= alias
 # very noisy
-CXXFLAGS+=	-std=gnu++98 -Wno-expansion-to-defined -Wno-class-memaccess
+CXXFLAGS+=	-Wno-expansion-to-defined -Wno-class-memaccess
+CXXFLAGS+=	-fpermissive -Wno-unused-local-typedefs
 
 dfly-patch:
 	${REINPLACE_CMD} -e 's@\(FreeBSD:\*\))@\1|DragonFly:*)@g'	\

@@ -1,4 +1,4 @@
 OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NGSSAPI_BASE:NTP_IPF} GSSAPI_MIT
 
 CFLAGS+=	-Wno-stringop-truncation
-CXXFLAGS+=	-Wno-error
+CXXFLAGS+=	-Wno-error -fpermissive

@@ -1,0 +1,6 @@
+
+.if ${DFLYVERSION} >= 500709
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\*basename (const@*basename (@g' \
+		${WRKSRC}/include/libiberty.h
+.endif

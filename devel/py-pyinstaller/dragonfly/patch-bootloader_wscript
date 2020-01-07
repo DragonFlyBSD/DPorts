@@ -1,0 +1,49 @@
+--- bootloader/wscript.intermediate	2019-12-30 17:27:00.000000000 +0000
++++ bootloader/wscript
+@@ -45,6 +45,7 @@ variants = {
+ # map waf's DEST_OS to these values.
+ DESTOS_TO_SYSTEM = {
+     'linux': 'Linux',
++    'dragonfly': 'DragonFly',
+     'freebsd': 'FreeBSD',
+     'win32': 'Windows',
+     'darwin': 'Darwin',
+@@ -56,6 +57,7 @@ DESTOS_TO_SYSTEM = {
+ # Map from platform.system() to waf's DEST_OS
+ SYSTEM_TO_BUILDOS = {
+     'Linux': 'linux',
++    'DragonFly': 'dragonfly',
+     'FreeBSD': 'freebsd',
+     'Windows': 'win32',
+     'Darwin': 'darwin',
+@@ -419,6 +421,9 @@ def configure(ctx):
+     if ctx.env.DEST_OS == 'linux' and not ctx.options.nolsb:
+         ctx.set_lsb_compiler()
+ 
++    if ctx.env.DEST_OS == 'generic' and BUILD_OS == 'dragonfly':
++        ctx.env.DEST_OS = 'dragonfly'
++
+     global is_cross
+     is_cross = (BUILD_OS != ctx.env.DEST_OS)
+ 
+@@ -426,7 +431,7 @@ def configure(ctx):
+         ctx.msg('System', 'Assuming cross-compilation for %s' %
+                 DESTOS_TO_SYSTEM[ctx.env.DEST_OS])
+ 
+-        if ctx.env.DEST_OS in ('freebsd', 'hpux', 'sunos'):
++        if ctx.env.DEST_OS in ('dragonfly', 'freebsd', 'hpux', 'sunos'):
+             # For these FreeBSD and HP-UX we determine some settings from
+             # Python's sysconfig. For cross-compiling somebody needs to
+             # implement options to overwrite these values as they may be
+@@ -593,8 +598,10 @@ def configure(ctx):
+     else:
+         # Mac OS X and FreeBSD do not need libdl.
+         # https://stackoverflow.com/questions/20169660/where-is-libdl-so-on-mac-os-x
+-        if ctx.env.DEST_OS not in ('darwin', 'freebsd'):
++        if ctx.env.DEST_OS not in ('darwin', 'dragonfly', 'freebsd'):
+             ctx.check_cc(lib='dl', mandatory=True)
++        if ctx.env.DEST_OS == 'dragonfly':
++            ctx.env.append_value('CFLAGS', '-Wno-stringop-overflow')
+         if ctx.env.DEST_OS == 'freebsd' and sysconfig.get_config_var('HAVE_PTHREAD_H'):
+             # On FreeBSD if python has threads: libthr needs to be loaded in
+             # the main process, so the bootloader needs to be link to thr.

@@ -1,5 +1,15 @@
 USES+= alias localbase
 
+LIB_DEPENDS+=	libcharset.so:converters/libiconv
+
+CONFIGURE_ARGS+=	ac_cv_header_localcharset_h=yes \
+			ac_cv_lib_charset_locale_charset=yes
+
+# ./configure: LIBS+=-liconv -lcharset: not found
+dfly-patch:
+	${REINPLACE_CMD} -e 's@LIBS+="-liconv -lcharset"@LIBS="-liconv -lcharset $$LIBS"@g' \
+		${WRKSRC}/configure ${WRKSRC}/configure.ac
+
 # Mono has been behaving for a while, so let it build on pkgbox64
 # for a while (provisionally)
 #

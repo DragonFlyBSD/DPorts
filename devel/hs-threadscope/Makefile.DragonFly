@@ -1,0 +1,15 @@
+
+# hide _Noreturn in C headers.
+dfly-patch:
+	mv ${WRKSRC}/${PORTNAME}.cabal ${WRKSRC}/${PORTNAME}.cabal.orig
+	awk '{print; if (tolower($$1) == "executable") {print "    extra-libraries: m"}}' \
+		${WRKSRC}/${PORTNAME}.cabal.orig > ${WRKSRC}/${PORTNAME}.cabal
+	${REINPLACE_CMD} -e 's@defined(__OpenBSD__)@(&||defined(__DragonFly__))@g' \
+		${WRKSRC}/hashable-*/benchmarks/cbits/siphash.h
+	${REINPLACE_CMD} -e 's@\(\|\| os(freebsd)\)@\1 || os(dragonfly)@g' \
+			 -e 's@-D_Nonnull=@& -D_Bool=int @g' \
+		${WRKSRC}/cairo-*/cairo.cabal \
+		${WRKSRC}/gio-*/gio.cabal \
+		${WRKSRC}/glib-*/glib.cabal \
+		${WRKSRC}/gtk-*/gtk.cabal \
+		${WRKSRC}/pango-*/pango.cabal

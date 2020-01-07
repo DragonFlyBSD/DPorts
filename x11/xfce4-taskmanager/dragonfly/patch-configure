@@ -1,0 +1,11 @@
+--- configure.orig	2018-12-18 19:54:29 UTC
++++ configure
+@@ -16447,7 +16447,7 @@ if test x"$ac_skel" = x"yes"; then
+ 	ac_os_implementation="skel"
+ else
+ 	case "$target_os" in
+-		freebsd*)
++		freebsd*|dragonfly*)
+ 		ac_os_implementation="freebsd"
+ 		{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for kvm_openfiles in -lkvm" >&5
+ $as_echo_n "checking for kvm_openfiles in -lkvm... " >&6; }

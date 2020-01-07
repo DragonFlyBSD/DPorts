@@ -34,10 +34,10 @@ DragonFly BSD arch files
 +DYLIB_KEY = -shared
 +WARNING_SUPPRESS = -Wno-parentheses
 +
-+CPLUS = c++ 
++CPLUS = c++
 +CONLY = cc
-+LIB_LINK_FLAGS = -shared
-+LIBS = -lpthread 
++LIB_LINK_FLAGS = -shared -Wl,-soname=$(BUILDING_LIBRARY)
++LIBS = -lpthread
 +C_FLAGS = $(CPLUS_FLAGS)
 +
 +ifeq ($(cfg), release)
@@ -56,7 +56,7 @@ DragonFly BSD arch files
 +ifeq (intel64,$(arch))
 +    CPLUS_FLAGS += -m64
 +    LIB_LINK_FLAGS += -m64
-+endif 
++endif
 +
 +#------------------------------------------------------------------------------
 +# Setting assembler data.
@@ -113,7 +113,7 @@ DragonFly BSD arch files
 +
 +CPLUS = clang++
 +CONLY = clang
-+LIB_LINK_FLAGS = $(DYLIB_KEY) -Wl,-soname=$(BUILDING_LIBRARY)
++LIB_LINK_FLAGS = -shared -Wl,-soname=$(BUILDING_LIBRARY)
 +LIBS += -lpthread -lrt
 +LINK_FLAGS = -Wl,-rpath-link=. -rdynamic
 +C_FLAGS = $(CPLUS_FLAGS)
@@ -200,10 +200,10 @@ DragonFly BSD arch files
 +DYLIB_KEY = -shared
 +WARNING_SUPPRESS = -Wno-parentheses
 +
-+CPLUS = g++ 
++CPLUS = g++
 +CONLY = gcc
-+LIB_LINK_FLAGS = -shared
-+LIBS = -lpthread 
++LIB_LINK_FLAGS = -shared -Wl,-soname=$(BUILDING_LIBRARY)
++LIBS = -lpthread
 +C_FLAGS = $(CPLUS_FLAGS)
 +
 +ifeq ($(cfg), release)
@@ -222,7 +222,7 @@ DragonFly BSD arch files
 +ifeq (intel64,$(arch))
 +    CPLUS_FLAGS += -m64
 +    LIB_LINK_FLAGS += -m64
-+endif 
++endif
 +
 +#------------------------------------------------------------------------------
 +# Setting assembler data.

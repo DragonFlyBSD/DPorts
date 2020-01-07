@@ -1,0 +1,23 @@
+--- Makefile.intermediate	2020-01-02 18:32:47.000000000 +0000
++++ Makefile
+@@ -25,6 +25,9 @@
+ ifeq ($(shell uname -s),Darwin)
+ CONFIG_DARWIN=y
+ endif
++ifeq ($(shell uname -s),DragonFly)
++CONFIG_DRAGONFLY=y
++endif
+ ifeq ($(shell uname -s),FreeBSD)
+ CONFIG_FREEBSD=y
+ endif
+@@ -42,6 +45,10 @@ ifdef CONFIG_DARWIN
+ CONFIG_CLANG=y
+ CONFIG_DEFAULT_AR=y
+ endif
++ifdef CONFIG_DRAGONFLY
++CONFIG_DEFAULT_AR=y
++CONFIG_LTO=
++endif
+ ifdef CONFIG_FREEBSD
+ # use clang instead of gcc
+ CONFIG_CLANG=y

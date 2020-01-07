@@ -1,0 +1,5 @@
+
+# XXX likely wrong
+dfly-patch:
+	${REINPLACE_CMD} -e 's@struct vmmeter@struct vmstats@g' \
+		${WRKSRC}/mem_freebsd.c

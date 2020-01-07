@@ -1,0 +1,5 @@
+
+MASTER_SITES+=	https://fossies.org/linux/misc/old/
+
+# devel/elfutils where patched to not have file conflicts
+CONFLICTS_INSTALL:=	nothing

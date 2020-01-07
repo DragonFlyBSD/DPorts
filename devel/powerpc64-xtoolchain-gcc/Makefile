@@ -19,16 +19,16 @@ TOOLCHAIN_PREFIX=	x86_64-
 .else
 TOOLCHAIN_PREFIX=	${PKGNAMEPREFIX}
 .endif
-XCC?=		${TOOLCHAIN_PREFIX}unknown-freebsd10-gcc
-XCXX?=		${TOOLCHAIN_PREFIX}unknown-freebsd10-g++
-XCPP?=		${TOOLCHAIN_PREFIX}unknown-freebsd10-cpp
+XCC?=		${TOOLCHAIN_PREFIX}unknown-${OPSYS:tl}${OSREL}-gcc
+XCXX?=		${TOOLCHAIN_PREFIX}unknown-${OPSYS:tl}${OSREL}-g++
+XCPP?=		${TOOLCHAIN_PREFIX}unknown-${OPSYS:tl}${OSREL}-cpp
 X_COMPILER_TYPE?=	${PKGNAMESUFFIX:C/-//g}
 
 RUN_DEPENDS?=	${XCC}:devel/${PKGNAMEPREFIX}${X_COMPILER_TYPE}
 
 SUB_FILES=	xtoolchain.mk
 SUB_LIST=	TARGETARCH=${TOOLCHAIN_PREFIX:C/-//g} \
-		OPSYS=freebsd \
+		OPSYS=${OPSYS:tl} \
 		OSREL=${OSREL} \
 		XCC=${XCC} \
 		XCXX=${XCXX} \

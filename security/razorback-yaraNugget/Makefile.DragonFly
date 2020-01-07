@@ -1,0 +1,6 @@
+
+USES+=	localbase:ldflags ssl
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(\*-\*-freebsd\*\))@\1|*-*-dragonfly*)@g' \
+		${WRKSRC}/common_m4/platform_flags.m4
