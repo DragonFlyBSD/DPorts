@@ -1,0 +1,47 @@
+--- config/gitlab.yml.example.orig	2019-12-03 11:22:02 UTC
++++ config/gitlab.yml.example
+@@ -902,7 +902,7 @@ production: &base
+   # Gitaly settings
+   gitaly:
+     # Path to the directory containing Gitaly client executables.
+-    client_path: /home/git/gitaly/bin
++    client_path: %%PREFIX%%/share/gitaly/bin
+     # Default Gitaly authentication token. Can be overridden per storage. Can
+     # be left blank when Gitaly is running locally on a Unix socket, which
+     # is the normal way to deploy Gitaly.
+@@ -920,8 +920,8 @@ production: &base
+     # real path not the symlink.
+     storages: # You must have at least a `default` storage path.
+       default:
+-        path: /home/git/repositories/
+-        gitaly_address: unix:/home/git/gitlab/tmp/sockets/private/gitaly.socket # TCP connections are supported too (e.g. tcp://host:port). TLS connections are also supported using the system certificate pool (eg: tls://host:port).
++        path: /usr/local/git/repositories/
++        gitaly_address: unix:%%PREFIX%%/www/gitlab-ce/tmp/sockets/private/gitaly.socket # TCP connections are supported too (e.g. tcp://host:port)
+         # gitaly_token: 'special token' # Optional: override global gitaly.token for this storage.
+ 
+   ## Backup settings
+@@ -967,12 +967,12 @@ production: &base
+ 
+   ## GitLab Shell settings
+   gitlab_shell:
+-    path: /home/git/gitlab-shell/
+-    authorized_keys_file: /home/git/.ssh/authorized_keys
++    path: %%PREFIX%%/share/gitlab-shell/
++    authorized_keys_file: %%PREFIX%%/git/.ssh/authorized_keys
+ 
+     # File that contains the secret key for verifying access for gitlab-shell.
+     # Default is '.gitlab_shell_secret' relative to Rails.root (i.e. root of the GitLab app).
+-    # secret_file: /home/git/gitlab/.gitlab_shell_secret
++    # secret_file: /usr/local/www/gitlab-ce/.gitlab_shell_secret
+ 
+     # Git over HTTP
+     upload_pack: true
+@@ -997,7 +997,7 @@ production: &base
+   # CAUTION!
+   # Use the default values unless you really know what you are doing
+   git:
+-    bin_path: /usr/bin/git
++    bin_path: %%PREFIX%%/bin/git
+ 
+   ## Webpack settings
+   # If enabled, this will tell rails to serve frontend assets from the webpack-dev-server running
