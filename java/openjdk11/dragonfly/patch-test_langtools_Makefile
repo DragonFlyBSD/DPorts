@@ -1,0 +1,13 @@
+--- test/langtools/Makefile.orig	2019-10-16 18:31:09 UTC
++++ test/langtools/Makefile
+@@ -37,6 +37,10 @@ ifeq ($(OSNAME), Darwin)
+     ARCH=i586
+   endif
+ endif
++ifeq ($(OSNAME), DragonFly)
++  PLATFORM = bsd
++  ARCH = $(shell uname -m)
++endif
+ ifeq ($(findstring BSD,$(OSNAME)), BSD)
+   PLATFORM = bsd
+   ARCH = $(shell uname -m)
