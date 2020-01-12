@@ -1,0 +1,15 @@
+[
+{ type: install
+  message: <<EOM
+## WARNING:
+This lightweight GTK2 old version is intended to be used only
+on trusted networks (no longer maintained by upstream) or LAN.
+
+No longer supported favorite addons can be still installed from
+https://github.com/JustOff/ca-archive/releases plugin archive
+after xpinstall.signatures.required is disabled in about:config.
+
+Do NOT use this legacy to browse shady webpages on the internet.
+EOM
+}
+]
