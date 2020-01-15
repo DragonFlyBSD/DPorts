@@ -1,0 +1,5 @@
+
+# zrj: no idea why needed
+MAKE_ARGS+=	CONF_CHECK=ignore
+
+CONFIGURE_ARGS+=	--with-stdc++lib=dynamic
