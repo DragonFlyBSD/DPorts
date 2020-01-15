@@ -1,0 +1,11 @@
+--- make/lib/Lib-jdk.sctp.gmk.orig	2019-10-16 18:31:09 UTC
++++ make/lib/Lib-jdk.sctp.gmk
+@@ -38,6 +38,8 @@ ifeq ($(OPENJDK_TARGET_OS_TYPE), unix)
+     SCTP_SUPPORTED=true
+   endif
+ 
++  # dragonfly disable
++  SCTP_SUPPORTED=false
+   ifeq ($(SCTP_SUPPORTED), true)
+     $(eval $(call SetupJdkLibrary, BUILD_LIBSCTP, \
+         NAME := sctp, \

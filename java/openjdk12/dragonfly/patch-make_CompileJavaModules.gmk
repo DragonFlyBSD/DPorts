@@ -1,0 +1,17 @@
+--- make/CompileJavaModules.gmk.orig	2019-10-16 18:31:09 UTC
++++ make/CompileJavaModules.gmk
+@@ -382,6 +382,14 @@ ifeq ($(OPENJDK_TARGET_OS),aix)
+   jdk.sctp_EXCLUDE_FILES += $(SCTP_IMPL_CLASSES)
+ endif
+ 
++#ifeq ($(OPENJDK_TARGET_OS_ENV), bsd.freebsd)
++  jdk.sctp_EXCLUDE_FILES += $(SCTP_IMPL_CLASSES)
++  ## WORKAROUND need to provide Impl classes that throw UnsupportedOperationException
++  ifeq ($(MODULE), jdk.sctp)
++    SRC_SUBDIRS += macosx/classes
++  endif
++#endif
++
+ ifeq ($(OPENJDK_TARGET_OS_ENV), bsd.openbsd)
+   jdk.sctp_EXCLUDE_FILES += $(SCTP_IMPL_CLASSES)
+   ## WORKAROUND need to provide Impl classes that throw UnsupportedOperationException
