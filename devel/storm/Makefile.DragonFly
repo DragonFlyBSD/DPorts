@@ -1,0 +1,5 @@
+
+# move up
+.if ${JAVA_VERSION} == 1.7
+JAVA_VERSION:=	8+
+.endif
