@@ -1,7 +1,0 @@
-
-# zrj: add missing link against -lm in libgnomeprintui-2-2.so
-# NOTYPE  GLOBAL DEFAULT  UND ceil
-# fixes graphics/gpaint build (binutils 2.27 ld.gold is unhappy)
-dfly-patch:
-	${REINPLACE_CMD} -e "/LINK) -rpath/s/$$/ -lm/g"	\
-		${WRKSRC}/libgnomeprintui/Makefile.in
