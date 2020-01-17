@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: head/mail/opensmtpd/files/smtpd.in 415927 2016-05-27 07:02:55Z fluffy $
+# $FreeBSD$
 #
 # PROVIDE: smtpd mail
 # REQUIRE: LOGIN
