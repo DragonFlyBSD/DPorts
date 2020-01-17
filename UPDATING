@@ -5,6 +5,85 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20200113:
+  AFFECTS: users of python and net/samba410, devel/talloc, devel/tevent, databases/tdb, databases/ldb*
+  AUTHOR: timur@FreeBSD.org
+
+  In the entry 20191216 for the Python update the filtering constrains
+  are too limiting and omit the Samba supplimentary libraries, which do
+  have Python bindings to the default Python 3.x version. With the update
+  of the default Python3 version you also need to rebuild all the
+  supplimentary Samba libraries and samba410 itself.
+
+  For portmaster users it would be enough to run:
+
+  # portmaster devel/talloc devel/tevent databases/tdb databases/ldb15 net/samba410
+
+
+20200109:
+  AFFECTS: www/firefox
+  AUTHOR: gecko@FreeBSD.org
+
+  Firefox requires Capsicum since r522464 for IPC and in future will
+  require Capsicum for process sandboxing. If you use a custom kernel
+  make sure to copy the following lines from GENERIC kernel:
+
+    options 	CAPABILITY_MODE		# Capsicum capability mode
+    options 	CAPABILITIES		# Capsicum capabilities
+
+20200107:
+  AFFECTS: Users of *-emacs27-* packages
+  AUTHOR: ashish@FreeBSD.org
+
+  There is a major version bump in 28.0.50, therefore to upgrade all the
+  packages dependent on editors/emacs-devel, please use the following commands:
+
+    # sh
+    # for i in $(pkg query -g %n '*-emacs27*'); do \
+        nn=$(echo "$i" | sed -e 's/emacs27/emacs28/'); \
+        pkg set -yn "$i":"$nn"; done;
+    # pkg upgrade
+
+20200106:
+  AFFECTS: users of net/gnatsd
+  AUTHOR: olgeni@FreeBSD.org
+
+  net/gnatsd has been replaced by net/nats-server to reflect the
+  new naming upstream.
+
+  All options in rc.conf should be renamed by replacing 'gnats'
+  with 'nats' (nats_enable, nats_user, nats_options).
+
+20200101:
+  AFFECTS: users of security/openssl and security/openssl111
+  AUTHOR: brnrd@FreeBSD.org
+
+  The openssl port was removed on 2019-12-31, subsequently the openssl111
+  port was renamed to openssl on 2020-01-01.
+
+  The shared library version of OpenSSL has been bumped.
+
+  Users of DEFAULT_VERSIONS= ssl=openssl111 must update this to
+  ssl=openssl. 
+
+  You must rebuild all ports that depend on OpenSSL if you use OpenSSL
+  from ports.
+
+20191226:
+  AFFECTS: users of sysutils/dsbmd
+  AUTHOR: mk@freeshell.de
+
+  With version 1.10 dsbmd now uses sysutils/fusefs-jmtpfs for mounting
+  MTP devices. Please adjust your dsbmd.conf or recreate it from the new
+  dsbmd.conf.sample.
+
+20191225:
+  AFFECTS: multimedia/libva-intel-media-driver
+  AUTHOR: jbeich@FreeBSD.org
+
+  As of libva 2.6.0 iHD driver is automatically enabled, so you no
+  longer need to adjust LIBVA_DRIVER_NAME in ~/.profile or ~/.login.
+
 20191221:
   AFFECTS: users of misc/openhab2
   AUTHOR: netchild@FreeBSD.org

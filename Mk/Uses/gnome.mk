@@ -78,7 +78,7 @@ _USE_GNOME_ALL+= atk cairo \
 		gnomevfs2 gtk-update-icon-cache gtk20 gtkhtml3 \
 		gtksharp20 gtksourceview2 gvfs libartlgpl2 libbonobo \
 		libbonoboui libglade2 libgnome \
-		libgnomecanvas libgnomekbd libgnomeprint libgnomeprintui \
+		libgnomecanvas libgnomekbd \
 		libgnomeui libgsf libgtkhtml libidl librsvg2 libwnck \
 		libxml2 libxslt \
 		orbit2 pango pangox-compat pygnome2 pygobject pygtk2 \
@@ -104,7 +104,7 @@ USE_LOCALE?=	en_US.UTF-8
 GNOME_MAKEFILEIN?=	Makefile.in
 SCROLLKEEPER_DIR=	/var/db/rarian
 
-referencehack_PRE_PATCH=	${FIND} ${WRKSRC} -name "Makefile.in" -type f | ${XARGS} ${REINPLACE_CMD} -e \
+referencehack_PRE_PATCH=	${FIND} ${WRKSRC} -name "Makefile.in" -type f | ${XARGS} ${FRAMEWORK_REINPLACE_CMD} -e \
 				"s|test \"\$$\$$installfiles\" = '\$$(srcdir)/html/\*'|:|"
 
 GNOME_HTML_DIR?=	${PREFIX}/share/doc
@@ -238,12 +238,6 @@ libgnomecanvas_USE_GNOME_IMPL=	libglade2 libartlgpl2
 
 libartlgpl2_LIB_DEPENDS=	libart_lgpl_2.so:graphics/libart_lgpl
 
-libgnomeprint_LIB_DEPENDS=	libgnomeprint-2-2.so:print/libgnomeprint
-libgnomeprint_USE_GNOME_IMPL=	libbonobo libartlgpl2 gtk20
-
-libgnomeprintui_LIB_DEPENDS=	libgnomeprintui-2-2.so:x11-toolkits/libgnomeprintui
-libgnomeprintui_USE_GNOME_IMPL=	libgnomeprint libgnomecanvas
-
 libgnome_LIB_DEPENDS=	libgnome-2.so:x11/libgnome
 libgnome_USE_GNOME_IMPL=gnomevfs2 libbonobo
 
@@ -319,12 +313,12 @@ pygnome2_USE_GNOME_IMPL=libgnomeui pygtk2
 
 intltool_BUILD_DEPENDS=	${LOCALBASE}/bin/intltool-extract:textproc/intltool
 
-intlhack_PRE_PATCH=	${FIND} ${WRKSRC} -name "intltool-merge.in" | ${XARGS} ${REINPLACE_CMD} \
+intlhack_PRE_PATCH=	${FIND} ${WRKSRC} -name "intltool-merge.in" | ${XARGS} ${FRAMEWORK_REINPLACE_CMD} \
 			's|mkdir $$lang or|mkdir $$lang, 0777 or| ; \
 			 s|^push @INC, "/.*|push @INC, "${LOCALBASE}/share/intltool";| ; \
 			 s|/usr/bin/iconv|${ICONV_CMD}|g ; \
 			 s|unpack *[(]'"'"'U\*'"'"'|unpack ('"'"'C*'"'"'|' ; \
-			${FIND} ${WRKSRC} -name configure | ${XARGS} ${REINPLACE_CMD} \
+			${FIND} ${WRKSRC} -name configure | ${XARGS} ${FRAMEWORK_REINPLACE_CMD} \
 			's/DATADIRNAME=lib/DATADIRNAME=share/'
 intlhack_USE_GNOME_IMPL=intltool
 
