@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $FreeBSD: /tmp/pcvs/ports/devel/libpasori/files/Makefile.lib.usb20,v 1.1 2009-08-09 07:03:55 stas Exp $
 
 .PATH:		${.CURDIR}/../src
 
