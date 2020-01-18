@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	yuzu
-PORTVERSION=	s20191219
+PORTVERSION=	s20200114
 PORTREVISION?=	0
 CATEGORIES=	emulators
 
@@ -28,20 +28,20 @@ BUILD_DEPENDS=	boost-libs>=1.66:devel/boost-libs \
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	yuzu-emu
-GH_TAGNAME=	7be65c6a6
+GH_TAGNAME=	64cd46579
 GH_TUPLE=	yuzu-emu:unicorn:1.0.1-153-g73f45735:unicorn/externals/unicorn \
 		DarkLordZach:mbedtls:a280e60:mbedtls/externals/mbedtls \
 		KhronosGroup:SPIRV-Headers:2c51218:SPIRV_Headers/externals/sirit/externals/SPIRV-Headers \
 		KhronosGroup:Vulkan-Headers:v1.1.127-2-gd42d074:Vulkan_Headers/externals/Vulkan-Headers \
-		MerryMage:dynarmic:r1-1436-g087a7441:dynarmic/externals/dynarmic \
-		ReinUsesLisp:sirit:88d37be:sirit/externals/sirit \
+		MerryMage:dynarmic:r1-1438-gf6ae9e1c:dynarmic/externals/dynarmic \
+		ReinUsesLisp:sirit:9f4d057:sirit/externals/sirit \
 		arsenm:sanitizers-cmake:aab6948:sanitizers_cmake/externals/cubeb/cmake/sanitizers-cmake \
 		catchorg:Catch2:v2.3.0:catch/externals/catch \
 		citra-emu:ext-libressl-portable:7d01cb0:libressl/externals/libressl \
 		citra-emu:ext-soundtouch:060181e:soundtouch/externals/soundtouch \
 		facebook:zstd:v1.3.8:zstd/externals/zstd \
 		fmtlib:fmt:6.0.0-56-g4b8f8fac:fmt/externals/fmt \
-		kinetiknz:cubeb:cubeb-0.2-1151-g9eb4c89:cubeb/externals/cubeb \
+		kinetiknz:cubeb:cubeb-0.2-1172-g3ab5075:cubeb/externals/cubeb \
 		lz4:lz4:v1.8.0-8-g4db65c1:lz4/externals/lz4 \
 		madler:zlib:v1.2.11:zlib/externals/zlib/zlib \
 		nih-at:libzip:rel-1-5-2-93-g89bd6d63:libzip/externals/libzip/libzip \
@@ -50,7 +50,7 @@ GH_TUPLE=	yuzu-emu:unicorn:1.0.1-153-g73f45735:unicorn/externals/unicorn \
 		xiph:opus:v1.3.1-4-gad8fe90d:opus/externals/opus/opus
 
 USES=		cmake compiler:c++17-lang iconv localbase:ldflags \
-		python:2.7,build sdl
+		python:build sdl
 USE_SDL=	sdl2
 LDFLAGS+=	-Wl,--as-needed # Qt5Network
 TEST_TARGET=	test
