@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	mpv-mpris
-DISTVERSION=	0.2
+DISTVERSION=	0.3
 CATEGORIES=	multimedia
 
 MAINTAINER=	tcberner@FreeBSD.org
@@ -13,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 BUILD_DEPENDS=	mpv:multimedia/mpv
 RUN_DEPENDS=	mpv:multimedia/mpv
 
-USES=		gettext-runtime gnome pkgconfig
+USES=		compiler:c11 gettext-runtime gnome pkgconfig
 USE_GNOME=	glib20
 USE_GITHUB=	yes
 GH_ACCOUNT=	hoyon
