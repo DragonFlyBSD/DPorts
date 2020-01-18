@@ -1,5 +1,5 @@
 #Japanese PDF resources
-# $FreeBSD: head/japanese/xpdf/files/dot.xpdfrc.in 340872 2014-01-24 00:14:07Z mat $
+# $FreeBSD$
 cidToUnicode	Adobe-Japan1	%%DATADIR%%/japanese/Adobe-Japan1.cidToUnicode
 unicodeMap	ISO-2022-JP	%%DATADIR%%/japanese/ISO-2022-JP.unicodeMap
 unicodeMap	EUC-JP		%%DATADIR%%/japanese/EUC-JP.unicodeMap
