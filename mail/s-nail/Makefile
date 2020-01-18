@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	s-nail
-PORTVERSION=	14.9.15
+PORTVERSION=	14.9.16
 CATEGORIES=	mail
 MASTER_SITES=	https://www.sdaoden.eu/downloads/
 
@@ -19,7 +19,7 @@ LICENSE_PERMS_RSA=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 LIB_DEPENDS=	libidn2.so:dns/libidn2
 RUN_DEPENDS=	mime-support>0:misc/mime-support
 
-USES=		iconv localbase ssl tar:xz
+USES=		compiler:c11 iconv localbase ssl tar:xz
 
 PLIST_FILES=	bin/s-nail \
 		"@sample etc/s-nail.rc.sample" \
