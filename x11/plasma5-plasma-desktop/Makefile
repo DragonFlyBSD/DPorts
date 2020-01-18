@@ -8,6 +8,9 @@ CATEGORIES=	x11 kde kde-plasma
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Plasma5 plasma desktop
 
+PATCH_SITES=	https://github.com/KDE/plasma-desktop/commit/
+PATCHFILES=	1db4d07bb78858da7676720d13ee7c4f3bd8e6e0.patch:-p1
+
 # TODO: update packagekit-qt5
 #LIB_DEPENDS=    libpackagekit-qt.so:ports-mgmt/packagekit-qt5
 LIB_DEPENDS=	libboost_system.so:devel/boost-libs \
@@ -19,7 +22,8 @@ LIB_DEPENDS=	libboost_system.so:devel/boost-libs \
 		libxkbfile.so:x11/libxkbfile
 RUN_DEPENDS=	iso-codes>=0:misc/iso-codes \
 		xf86-input-evdev>0:x11-drivers/xf86-input-evdev \
-		xf86-input-libinput>0:x11-drivers/xf86-input-libinput
+		xf86-input-libinput>0:x11-drivers/xf86-input-libinput \
+		setxkbmap:x11/setxkbmap
 BUILD_DEPENDS=	xf86-input-evdev>0:x11-drivers/xf86-input-evdev \
 		xf86-input-libinput>0:x11-drivers/xf86-input-libinput
 
