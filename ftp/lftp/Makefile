@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	lftp
-PORTVERSION=	4.8.4
-PORTREVISION=	5
+PORTVERSION=	4.9.1
 CATEGORIES=	ftp
 MASTER_SITES=	http://lftp.tech/ftp/ \
 		http://lftp.tech/ftp/old/ \
@@ -23,7 +22,8 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 LIB_DEPENDS=	libexpat.so:textproc/expat2 \
 		libidn2.so:dns/libidn2
 
-USES=		charsetfix iconv libtool localbase readline shebangfix
+USES=		compiler:c++11-lang charsetfix iconv libtool localbase \
+		readline shebangfix
 GNU_CONFIGURE=	yes
 
 PORTDOCS=	AUTHORS BUGS ChangeLog FAQ FEATURES INSTALL \
