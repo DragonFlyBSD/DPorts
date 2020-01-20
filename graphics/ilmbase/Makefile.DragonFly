@@ -1,5 +1,0 @@
-
-# zrj: XXX for now hardcode, creates issues in caligra
-dfly-patch:
-	${REINPLACE_CMD} -e '/LIB_SUFFIX_EXISTS_TRUE/s@\(am__append_1 = \)@\1-lpthread @'	\
-		${WRKSRC}/IlmThread/Makefile.in
