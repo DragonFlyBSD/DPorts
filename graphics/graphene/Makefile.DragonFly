@@ -1,4 +1,0 @@
-
-# attempt to fix pkg-plist (orphans)
-dfly-install:
-	-${RM} -f ${STAGEDIR}${PREFIX}/share/gtk-doc/html/graphene/ix07.html
