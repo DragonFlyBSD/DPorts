@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	wlroots
-DISTVERSION=	0.8.1
+DISTVERSION=	0.9.1
 CATEGORIES=	x11-toolkits
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -38,7 +38,7 @@ OPTIONS_SUB=	yes
 
 CONSOLEKIT_DESC=	DRM sessions without root using ConsoleKit2
 CONSOLEKIT_PATCH_SITES=	https://github.com/myfreeweb/${GH_PROJECT}/commit/:ck2
-CONSOLEKIT_PATCHFILES=	ac65ec72a2f2.patch:-p1:ck2 # see #1467 upstream
+CONSOLEKIT_PATCHFILES=	606b009fcdd1.patch:-p1:ck2 # see #1467 upstream
 CONSOLEKIT_LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 			libconsolekit.so:sysutils/consolekit2
 CONSOLEKIT_MESON_ENABLED=	consolekit2
