@@ -1,0 +1,8 @@
+# dfly does not have sys/termios.h
+dfly-patch:
+	${REINPLACE_CMD} -e '/sys\/termios.h/d' \
+		${WRKSRC}/src/cmd/9term/bsdpty.c \
+		${WRKSRC}/src/cmd/draw/mc.c \
+		${WRKSRC}/src/lib9/readcons.c
+
+
