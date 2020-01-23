@@ -14,6 +14,6 @@ pre-patch:
 .  endif
 
 dfly-patch:
-	${REINPLACE_CMD} -e "s@-lncursesw@-rpath /lib/priv -L/usr/lib/priv -lprivate_ncursesw@g" \
+	${REINPLACE_CMD} -e "s@-lncurses@-rpath /lib/priv -L/usr/lib/priv -lprivate_ncursesw@g" \
 		${WRKSRC}/Makefile
 .endif
