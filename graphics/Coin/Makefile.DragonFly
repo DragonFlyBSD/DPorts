@@ -1,1 +1,7 @@
 CXXFLAGS+=	-fpermissive
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/[[:<:]]isinf[[:>:]]/std::isinf/g' \
+		-e 's/[[:<:]]isnan[[:>:]]/std::isnan/g' \
+		${WRKSRC}/src/tidbits.cpp
+
