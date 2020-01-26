@@ -1,0 +1,9 @@
+
+# zrj: just to get it to stage with OpenSSL 1.1.1, LibreSSL so far good, break sanity
+.if ${PORTVERSION} == "0.65.3"
+dfly-install:
+	${TOUCH} ${STAGEDIR}${LOCALBASE}/bin/couriertls
+.else
+WITH_OPENSSL_PORT= da
+#BROKEN= version updated, clean MD
+.endif
