@@ -1,3 +1,13 @@
-pre-patch:
-	${ECHO_CMD} 'SET(CMAKE_NO_BUILTIN_CHRPATH OFF CACHE BOOL "" FORCE)' \
-	>> ${WRKSRC}/CMakeLists.txt
+
+# disable use of graphite optimizations when using base compiler
+dfly-patch:
+	${REINPLACE_CMD} -e 's@"loop-nest-optimize",@@g' \
+			 -e 's@"tree-loop-linear",@@g' \
+			 -e 's@"loop-block",@@g' \
+			 -e 's@"loop-strip-mine",@@g' \
+		${WRKSRC}/src/common/fast_guided_filter.h \
+		${WRKSRC}/src/common/iop_order.c \
+		${WRKSRC}/src/common/luminance_mask.h \
+		${WRKSRC}/src/iop/choleski.h \
+		${WRKSRC}/src/iop/filmicrgb.c \
+		${WRKSRC}/src/iop/toneequal.c
