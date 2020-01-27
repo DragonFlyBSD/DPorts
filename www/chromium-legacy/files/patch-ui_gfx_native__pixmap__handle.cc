@@ -1,4 +1,4 @@
---- ui/gfx/native_pixmap_handle.cc.orig	2019-06-04 18:55:50 UTC
+--- ui/gfx/native_pixmap_handle.cc.orig	2019-10-21 19:07:29 UTC
 +++ ui/gfx/native_pixmap_handle.cc
 @@ -8,7 +8,7 @@
  
@@ -15,22 +15,22 @@
  
 -#if defined(OS_LINUX)
 +#if defined(OS_LINUX) || defined(OS_BSD)
- static_assert(NativePixmapPlane::kNoModifier == DRM_FORMAT_MOD_INVALID,
-               "gfx::NativePixmapPlane::kNoModifier should be an alias for"
+ static_assert(NativePixmapHandle::kNoModifier == DRM_FORMAT_MOD_INVALID,
+               "gfx::NativePixmapHandle::kNoModifier should be an alias for"
                "DRM_FORMAT_MOD_INVALID");
-@@ -32,7 +32,7 @@ NativePixmapPlane::NativePixmapPlane()
+@@ -31,7 +31,7 @@ NativePixmapPlane::NativePixmapPlane() : stride(0), of
  NativePixmapPlane::NativePixmapPlane(int stride,
                                       int offset,
-                                      uint64_t size,
+                                      uint64_t size
 -#if defined(OS_LINUX)
 +#if defined(OS_LINUX) || defined(OS_BSD)
-                                      base::ScopedFD fd,
+                                      ,
+                                      base::ScopedFD fd
  #elif defined(OS_FUCHSIA)
-                                      zx::vmo vmo,
 @@ -42,7 +42,7 @@ NativePixmapPlane::NativePixmapPlane(int stride,
+     : stride(stride),
        offset(offset),
-       size(size),
-       modifier(modifier)
+       size(size)
 -#if defined(OS_LINUX)
 +#if defined(OS_LINUX) || defined(OS_BSD)
        ,
@@ -45,3 +45,12 @@
      DCHECK(plane.fd.is_valid());
      base::ScopedFD fd_dup(HANDLE_EINTR(dup(plane.fd.get())));
      if (!fd_dup.is_valid()) {
+@@ -96,7 +96,7 @@ NativePixmapHandle CloneHandleForIPC(const NativePixma
+ #endif
+   }
+ 
+-#if defined(OS_LINUX)
++#if defined(OS_LINUX) || defined(OS_BSD)
+   clone.modifier = handle.modifier;
+ #endif
+ 

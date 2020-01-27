@@ -1,4 +1,4 @@
---- chrome/browser/ui/views/first_run_dialog.cc.orig	2019-03-11 22:00:54 UTC
+--- chrome/browser/ui/views/first_run_dialog.cc.orig	2019-09-09 21:55:11 UTC
 +++ chrome/browser/ui/views/first_run_dialog.cc
 @@ -37,8 +37,10 @@
  namespace {
@@ -11,14 +11,14 @@
  }
  
  }  // namespace
-@@ -111,8 +113,10 @@ views::View* FirstRunDialog::CreateExtraView() {
+@@ -108,8 +110,10 @@ std::unique_ptr<views::View> FirstRunDialog::CreateExt
  bool FirstRunDialog::Accept() {
    GetWidget()->Hide();
  
 +#if !defined(OS_BSD)
-   ChangeMetricsReportingStateWithReply(report_crashes_->checked(),
+   ChangeMetricsReportingStateWithReply(report_crashes_->GetChecked(),
                                         base::Bind(&InitCrashReporterIfEnabled));
 +#endif
  
-   if (make_default_->checked())
+   if (make_default_->GetChecked())
      shell_integration::SetAsDefaultBrowser();
