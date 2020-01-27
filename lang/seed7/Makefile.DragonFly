@@ -1,0 +1,7 @@
+
+USES+= localbase:ldflags
+
+# zrj: prevent empty redefinition
+dfly-patch:
+	${REINPLACE_CMD} -e 's@SYSTEM_CONSOLE_LIBS@&___@g' \
+		${WRKSRC}/chkccomp.c
