@@ -1,0 +1,3 @@
+
+USES+=	shebangfix python
+SHEBANG_FILES+= meson_post_install.py
