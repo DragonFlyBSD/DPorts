@@ -1,1 +1,11 @@
 #IGNORE=	aster is failing again
+
+# attempt to fix stage-qa (leftover sed baks)
+dfly-install:
+	-${RM} -v ${STAGEDIR}${PREFIX}/aster/*/aster.conf.bak
+	-${RM} -v ${STAGEDIR}${PREFIX}/aster/*/include/aster/asterf_config.h.bak
+	-${RM} -v ${STAGEDIR}${PREFIX}/aster/*/include/aster/asterc_config.h.bak
+	-${RM} -v ${STAGEDIR}${PREFIX}/aster/*/lib/aster/aster_pkginfo.py.bak
+	-${RM} -v ${STAGEDIR}${PREFIX}/aster/*/share/aster/CTestTestfile.cmake.bak
+	-${RM} -v ${STAGEDIR}${PREFIX}/aster/*/share/aster/config.txt.bak
+	-${RM} -v ${STAGEDIR}${PREFIX}/aster/*/share/aster/profile.sh.bak
