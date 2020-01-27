@@ -1,0 +1,6 @@
+
+# dunno, but works
+dfly-patch:
+	${REINPLACE_CMD} -e '/gitlab-puma/s@2.7@4.3.1.g.2@g' \
+			 -e '/gitlab-puma/s@< 5@< 5.0.0.g.2@g' \
+		${WRKSRC}/gitlab-puma_worker_killer.gemspec
