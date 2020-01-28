@@ -1,0 +1,3 @@
+
+# attempt to avoid empty USE_GL
+USE_GL+=	gl
