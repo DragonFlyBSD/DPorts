@@ -1,2 +1,4 @@
 
+USES+=	gmake
+
 CXXFLAGS+=	-Wno-error=sign-compare
