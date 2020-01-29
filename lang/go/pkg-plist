@@ -5098,6 +5098,8 @@ go/src/os/exec_windows.go
 go/src/os/executable.go
 go/src/os/executable_darwin.go
 go/src/os/executable_freebsd.go
+go/src/os/executable_dragonfly.go
+go/src/os/executable_sysctl.go
 go/src/os/executable_path.go
 go/src/os/executable_plan9.go
 go/src/os/executable_procfs.go
