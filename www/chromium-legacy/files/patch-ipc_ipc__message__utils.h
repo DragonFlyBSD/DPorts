@@ -1,6 +1,6 @@
---- ipc/ipc_message_utils.h.orig	2019-06-04 18:55:25 UTC
+--- ipc/ipc_message_utils.h.orig	2019-10-21 19:06:36 UTC
 +++ ipc/ipc_message_utils.h
-@@ -204,7 +204,7 @@ struct ParamTraits<unsigned int> {
+@@ -210,7 +210,7 @@ struct ParamTraits<unsigned int> {
  //   3) Android 64 bit and Fuchsia also have int64_t typedef'd to long.
  // Since we want to support Android 32<>64 bit IPC, as long as we don't have
  // these traits for 32 bit ARM then that'll catch any errors.

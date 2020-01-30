@@ -2,7 +2,7 @@
 
 PORTNAME=	phalcon
 DISTVERSIONPREFIX=v
-DISTVERSION=	4.0.0-rc.3
+DISTVERSION=	4.0.2
 CATEGORIES=	www
 PKGNAMEPREFIX=	${PHP_PKGNAMEPREFIX}
 PKGNAMESUFFIX=	4
@@ -18,16 +18,13 @@ CONFLICTS_INSTALL=	${PKGNAMEPREFIX}phalcon
 
 RUN_DEPENDS=	${PHPBASE}/lib/php/${PHP_EXT_DIR}/psr.so:devel/pecl-psr@${PHP_FLAVOR}
 
-USES=		php:ext
+USES=		localbase php:ext
 USE_PHP=	hash:build json:build pdo:build session
 PHP_MOD_PRIO=	30
-IGNORE_WITH_PHP=74
 
 USE_GITHUB=	yes
-GH_ACCOUNT=	phalcon
 GH_PROJECT=	c${PORTNAME}
 
-CFLAGS+=	-I${LOCALBASE}/include
 CONFIGURE_ARGS=	--enable-phalcon
 
 .include <bsd.port.pre.mk>

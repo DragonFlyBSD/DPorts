@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	dbus
-DISTVERSION=	1.2.14
+DISTVERSION=	1.2.16
 PORTREVISION?=	0
 CATEGORIES=	devel gnome python
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus-python/
@@ -25,7 +25,7 @@ CONFIGURE_ARGS=	--docdir=${DOCSDIR} \
 INSTALL_TARGET=	install-strip
 
 .if ${SLAVE_PORT} == no
-USES+=		python:2.7,build
+USES+=		python:build
 
 DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}
 EXAMPLESDIR=	${PREFIX}/share/examples/py-${PORTNAME}

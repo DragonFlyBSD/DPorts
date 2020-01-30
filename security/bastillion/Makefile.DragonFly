@@ -1,0 +1,3 @@
+
+# bundled binaries
+NO_ARCH_IGNORE+=	libsetuid-linux.so libsetuid-osx.so

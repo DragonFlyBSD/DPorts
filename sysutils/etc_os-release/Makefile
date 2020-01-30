@@ -29,8 +29,15 @@ CONTENTS=	'NAME=DragonFly\0'$\
 		'HOME_URL=https://www.dragonflybsd.org/\0'$\
 		'BUG_REPORT_URL=https://bugs.dragonflybsd.org/'
 
+.include <bsd.port.pre.mk>
+# FreeBSD base gained /etc/os-release in r354922, which
+# corresponds to __FreeBSD_version 1300060
+.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1300060
+IGNORE=		/etc/os-release is present in base
+.endif
+
 do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc
 	${ECHO} -e ${CONTENTS} | ${XARGS} -0 -n 1 >> ${STAGEDIR}${PREFIX}/${PLIST_FILES}
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>

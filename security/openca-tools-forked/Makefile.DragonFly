@@ -1,3 +1,0 @@
-
-BROKEN_SSL=	libressl
-BROKEN_SSL_REASON_libressl=	port requires <openssl/asn1_mac.h>

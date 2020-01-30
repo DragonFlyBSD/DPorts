@@ -1,8 +1,8 @@
---- third_party/skia/src/sksl/SkSLString.h.orig	2019-03-11 22:08:28 UTC
+--- third_party/skia/src/sksl/SkSLString.h.orig	2019-09-09 21:57:02 UTC
 +++ third_party/skia/src/sksl/SkSLString.h
-@@ -22,6 +22,8 @@
-     #include "SkString.h"
- #endif
+@@ -13,6 +13,8 @@
+ #include <stdarg.h>
+ #include <string>
  
 +#include <stdarg.h>
 +

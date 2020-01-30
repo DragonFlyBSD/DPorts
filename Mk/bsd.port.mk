@@ -1043,6 +1043,7 @@ NOTPHONY?=
 FLAVORS?=
 FLAVOR?=
 OVERLAYS?=
+REWARNFILE=	${WRKDIR}/reinplace_warnings.txt
 # Disallow forced FLAVOR as make argument since we cannot change it to the
 # proper default.
 .if empty(FLAVOR) && !empty(.MAKEOVERRIDES:MFLAVOR)
@@ -1628,6 +1629,7 @@ QA_ENV+=		STAGEDIR=${STAGEDIR} \
 				PREFIX=${PREFIX} \
 				LINUXBASE=${LINUXBASE} \
 				LOCALBASE=${LOCALBASE} \
+				REWARNFILE=${REWARNFILE} \
 				"STRIP=${STRIP}" \
 				TMPPLIST=${TMPPLIST} \
 				CURDIR='${.CURDIR}' \
@@ -2030,7 +2032,12 @@ MAKE_ENV+=		LANG=${USE_LOCALE} LC_ALL=${USE_LOCALE}
 
 # Macro for doing in-place file editing using regexps
 REINPLACE_ARGS?=	-i.bak
+.if defined(DEVELOPER)
+REINPLACE_CMD?=	${SETENV} WRKSRC=${WRKSRC} REWARNFILE=${REWARNFILE} ${PORTSDIR}/Tools/scripts/sed_checked.sh
+.else
 REINPLACE_CMD?=	${SED} ${REINPLACE_ARGS}
+.endif
+FRAMEWORK_REINPLACE_CMD?=	${SED} -i.bak
 
 # Names of cookies used to skip already completed stages
 EXTRACT_COOKIE?=	${WRKDIR}/.extract_done.${PORTNAME}.${PREFIX:S/\//_/g}
@@ -2698,6 +2705,7 @@ SCRIPTS_ENV+=	BATCH=yes
 MANPREFIX?=	/usr/share
 .else
 MANPREFIX?=	${PREFIX}
+MANDIRS+=	${PREFIX}/share/man
 .endif
 
 MANDIRS+=	${MANPREFIX}/man

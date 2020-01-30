@@ -1,5 +1,5 @@
-MASTER_SITES+=	https://leaf.dragonflybsd.org/~mneumann/rust/:rust_bootstrap \
-		https://leaf.dragonflybsd.org/~mneumann/rust/:cargo_bootstrap
+MASTER_SITES+=	https://leaf.dragonflybsd.org/~mneumann/rust/:bootstrap \
+		https://leaf.dragonflybsd.org/~mneumann/rust/:bootstrap
 
 RUST_BOOTSTRAP_VERSION=	1.39.0
 

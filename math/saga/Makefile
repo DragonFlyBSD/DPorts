@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	saga
-PORTVERSION=	7.3.0
-PORTREVISION=	2
+PORTVERSION=	7.5.0
+PORTREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	SF/saga-gis/SAGA%20-%20${PORTVERSION:C/\.[[:digit:]]\.[[:digit:]]*$//}/SAGA%20-%20${PORTVERSION}
 
@@ -30,10 +30,10 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libtiff.so:graphics/tiff
 RUN_DEPENDS:=	swig3.0:devel/swig30
 
-USES=		autoreconf compiler:c++11-lib desktop-file-utils dos2unix gnome \
+USES=		autoreconf compiler:c++11-lib dos2unix gnome \
 		iconv:wchar_t libtool localbase pkgconfig python
 USE_LDCONFIG=	yes
-USE_WX=		3.0+
+USE_WX=		3.1+
 
 CONFIGURE_ARGS=	CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" \
 		--enable-python --with-system-svm
@@ -56,10 +56,10 @@ OPENMP_DESC=	Enable Multiprocessing (only amd64 and i386)
 VIGRA_DESC=	Enable 'Vision with Generic Algorithms' Library
 
 OPENMP_CONFIGURE_ENABLE=	openmp
+OPENMP_LIB_DEPENDS=	
 OPENMP_LDFLAGS=		-L${LOCALBASE}/lib -lm
-# Use OpenMP from lang/llvm${LLVM_VER}
-PGSQL_CONFIGURE_OFF=	--with-postgresql=no
-PGSQL_CONFIGURE_ON=	--with-postgresql=${LOCALBASE}/bin/pg_config
+# Use OpenMP from lang/llvm${LLVM_DEFAULT}
+PGSQL_CONFIGURE_WITH=	pg
 PGSQL_USES=		pgsql
 VIGRA_BUILD_DEPENDS=	${LOCALBASE}/lib/libvigraimpex.so:graphics/vigra
 VIGRA_RUN_DEPENDS=	${LOCALBASE}/lib/libvigraimpex.so:graphics/vigra
@@ -98,8 +98,6 @@ post-patch:
 		${WRKSRC}/src/saga_core/saga_gui/dlg_about.cpp
 
 post-configure:
-	@${REINPLACE_CMD} -e 's|cd $$(pkgdatadir);|cd ${STAGEDIR}${DATADIR};|g' \
-		${WRKSRC}/src/saga_core/saga_gui/Makefile
 	@${REINPLACE_CMD} -e 's|^LDFLAGS = .*|& -lopencv_core|' \
 		${WRKSRC}/src/tools/imagery/imagery_opencv/Makefile
 

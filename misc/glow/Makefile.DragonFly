@@ -1,0 +1,3 @@
+
+# needs to compile as clang
+USE_CLANG_FALLBACK=	default

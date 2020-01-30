@@ -1,0 +1,6 @@
+# copy fbsd's template
+dfly-patch:
+	${CP} ${WRKSRC}/bundles/pyml/pyml-current/pyml_arch_freebsd.ml \
+		${WRKSRC}/bundles/pyml/pyml-current/pyml_arch_dragonfly.ml
+	${REINPLACE_CMD} -e 's|FreeBSD|DragonFly|' -e 's|freebsd|dragonfly|' \
+		${WRKSRC}/bundles/pyml/Makefile

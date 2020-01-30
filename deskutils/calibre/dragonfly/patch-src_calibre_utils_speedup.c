@@ -1,4 +1,4 @@
---- src/calibre/utils/speedup.c.orig	2019-04-29 08:43:23 UTC
+--- src/calibre/utils/speedup.c.orig	2020-01-03 01:29:53. UTC
 +++ src/calibre/utils/speedup.c
 @@ -493,7 +493,7 @@ speedup_iso_8601(PyObject *self, PyObjec
  

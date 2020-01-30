@@ -1,0 +1,16 @@
+--- core/src/lib/crypto_openssl.cc.orig	2019-12-12 17:04:14 UTC
++++ core/src/lib/crypto_openssl.cc
+@@ -130,6 +130,13 @@ IMPLEMENT_ASN1_FUNCTIONS(RecipientInfo)
+ IMPLEMENT_ASN1_FUNCTIONS(SignatureData)
+ IMPLEMENT_ASN1_FUNCTIONS(CryptoData)
+ 
++#ifdef LIBRESSL_VERSION_NUMBER
++//#define M_ASN1_OCTET_STRING_free(a)	ASN1_STRING_free((ASN1_STRING *)a)
++#define M_ASN1_OCTET_STRING_cmp(a,b)	ASN1_STRING_cmp((const ASN1_STRING *)a,(const ASN1_STRING *)b)
++#define M_ASN1_OCTET_STRING_dup(a)	(ASN1_OCTET_STRING *) ASN1_STRING_dup((const ASN1_STRING *)a)
++#define M_ASN1_OCTET_STRING_set(a,b,c)	ASN1_STRING_set((ASN1_STRING *)a,b,c)
++#endif
++
+ #if OPENSSL_VERSION_NUMBER < 0x10100000L || defined(LIBRESSL_VERSION_NUMBER)
+ /* Openssl Version < 1.1 */
+ 

@@ -1,8 +1,0 @@
-# Uses waf and fails to explicitly link to -lraptor causing gold failure
-# To hard to fix quickly, so use ld.bfd instead
-MAKE_ENV+= LDVER=ld.bfd
-
-# zrj: lv2 port now installs lv2.pc (no longer the lv2core.pc)
-dfly-patch:
-	${REINPLACE_CMD} -e '/check_pkg/s@lv2core@lv2@g' \
-		${WRKSRC}/wscript

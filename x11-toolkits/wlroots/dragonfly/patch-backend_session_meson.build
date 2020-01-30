@@ -1,0 +1,11 @@
+--- backend/session/meson.build.orig	2020-01-06 14:01:10 UTC
++++ backend/session/meson.build
+@@ -6,6 +6,8 @@ wlr_files += files(
+ 
+ if host_machine.system().startswith('freebsd')
+ 	wlr_files += files('direct-freebsd.c')
++elif host_machine.system().startswith('dragonfly')
++	wlr_files += files('direct-freebsd.c')
+ else
+ 	wlr_files += files('direct.c')
+ endif

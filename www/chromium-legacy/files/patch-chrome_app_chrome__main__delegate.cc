@@ -1,6 +1,6 @@
---- chrome/app/chrome_main_delegate.cc.orig	2019-06-04 18:55:16 UTC
+--- chrome/app/chrome_main_delegate.cc.orig	2019-10-21 19:06:19 UTC
 +++ chrome/app/chrome_main_delegate.cc
-@@ -100,7 +100,7 @@
+@@ -99,7 +99,7 @@
  #include "chrome/app/shutdown_signal_handlers_posix.h"
  #endif
  
@@ -27,7 +27,7 @@
  void AdjustLinuxOOMScore(const std::string& process_type) {
    // Browsers and zygotes should still be killable, but killed last.
    const int kZygoteScore = 0;
-@@ -299,7 +299,7 @@ void AdjustLinuxOOMScore(const std::string& process_ty
+@@ -299,13 +299,13 @@ void AdjustLinuxOOMScore(const std::string& process_ty
    if (score > -1)
      base::AdjustOOMScore(base::GetCurrentProcId(), score);
  }
@@ -36,6 +36,13 @@
  
  // Returns true if this subprocess type needs the ResourceBundle initialized
  // and resources loaded.
+ bool SubprocessNeedsResourceBundle(const std::string& process_type) {
+   return
+-#if defined(OS_LINUX)
++#if defined(OS_LINUX) || defined(OS_BSD)
+       // The zygote process opens the resources for the renderers.
+       process_type == service_manager::switches::kZygoteProcess ||
+ #endif
 @@ -344,7 +344,7 @@ bool HandleVersionSwitches(const base::CommandLine& co
    return false;
  }
@@ -81,7 +88,7 @@
    // Record the startup process creation time on supported platforms.
    startup_metric_utils::RecordStartupProcessCreationTime(
        base::Process::Current().CreationTime());
-@@ -619,7 +619,7 @@ bool ChromeMainDelegate::BasicStartupComplete(int* exi
+@@ -654,7 +654,7 @@ bool ChromeMainDelegate::BasicStartupComplete(int* exi
      *exit_code = 0;
      return true;  // Got a --version switch; exit with a success error code.
    }
@@ -90,7 +97,7 @@
    // This will directly exit if the user asked for help.
    HandleHelpSwitches(command_line);
  #endif
-@@ -643,7 +643,7 @@ bool ChromeMainDelegate::BasicStartupComplete(int* exi
+@@ -678,7 +678,7 @@ bool ChromeMainDelegate::BasicStartupComplete(int* exi
  #if defined(OS_CHROMEOS)
    chromeos::RegisterPathProvider();
  #endif
@@ -99,7 +106,16 @@
    nacl::RegisterPathProvider();
  #endif
  
-@@ -965,7 +965,7 @@ void ChromeMainDelegate::PreSandboxStartup() {
+@@ -872,7 +872,7 @@ void ChromeMainDelegate::PreSandboxStartup() {
+ #if defined(OS_WIN)
+   child_process_logging::Init();
+ #endif
+-#if defined(ARCH_CPU_ARM_FAMILY) && (defined(OS_ANDROID) || defined(OS_LINUX))
++#if defined(ARCH_CPU_ARM_FAMILY) && (defined(OS_ANDROID) || defined(OS_LINUX) || defined(OS_BSD))
+   // Create an instance of the CPU class to parse /proc/cpuinfo and cache
+   // cpu_brand info.
+   base::CPU cpu_info;
+@@ -996,7 +996,7 @@ void ChromeMainDelegate::PreSandboxStartup() {
    InitializePDF();
  #endif
  
@@ -108,7 +124,7 @@
    // Zygote needs to call InitCrashReporter() in RunZygote().
    if (process_type != service_manager::switches::kZygoteProcess) {
  #if defined(OS_ANDROID)
-@@ -980,7 +980,7 @@ void ChromeMainDelegate::PreSandboxStartup() {
+@@ -1011,7 +1011,7 @@ void ChromeMainDelegate::PreSandboxStartup() {
      breakpad::InitCrashReporter(process_type);
  #endif  // defined(OS_ANDROID)
    }
@@ -117,7 +133,7 @@
  
    // After all the platform Breakpads have been initialized, store the command
    // line for crash reporting.
-@@ -990,7 +990,7 @@ void ChromeMainDelegate::PreSandboxStartup() {
+@@ -1021,7 +1021,7 @@ void ChromeMainDelegate::PreSandboxStartup() {
  void ChromeMainDelegate::SandboxInitialized(const std::string& process_type) {
    // Note: If you are adding a new process type below, be sure to adjust the
    // AdjustLinuxOOMScore function too.

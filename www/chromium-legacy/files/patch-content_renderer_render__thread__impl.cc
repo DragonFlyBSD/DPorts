@@ -1,6 +1,6 @@
---- content/renderer/render_thread_impl.cc.orig	2019-06-04 18:55:23 UTC
+--- content/renderer/render_thread_impl.cc.orig	2019-10-21 19:06:33 UTC
 +++ content/renderer/render_thread_impl.cc
-@@ -191,12 +191,21 @@
+@@ -185,12 +185,21 @@
  #include "mojo/public/cpp/bindings/message_dumper.h"
  #endif
  
@@ -22,7 +22,7 @@
  using base::ThreadRestrictions;
  using blink::WebDocument;
  using blink::WebFrame;
-@@ -917,7 +926,7 @@ void RenderThreadImpl::Init() {
+@@ -901,7 +910,7 @@ void RenderThreadImpl::Init() {
    DCHECK(parsed_num_raster_threads) << string_value;
    DCHECK_GT(num_raster_threads, 0);
  
@@ -31,16 +31,16 @@
    categorized_worker_pool_->SetBackgroundingCallback(
        main_thread_scheduler_->DefaultTaskRunner(),
        base::BindOnce(
-@@ -958,7 +967,7 @@ void RenderThreadImpl::Init() {
-   GetConnector()->BindInterface(mojom::kBrowserServiceName,
-                                 mojo::MakeRequest(&storage_partition_service_));
+@@ -930,7 +939,7 @@ void RenderThreadImpl::Init() {
+   base::DiscardableMemoryAllocator::SetInstance(
+       discardable_shared_memory_manager_.get());
  
 -#if defined(OS_LINUX)
 +#if defined(OS_LINUX) || defined(OS_BSD)
-   render_message_filter()->SetThreadPriority(
-       ChildProcess::current()->io_thread_id(), base::ThreadPriority::DISPLAY);
- #endif
-@@ -1332,7 +1341,7 @@ media::GpuVideoAcceleratorFactories* RenderThreadImpl:
+   if (base::FeatureList::IsEnabled(
+           blink::features::kBlinkCompositorUseDisplayThreadPriority)) {
+     render_message_filter()->SetThreadPriority(
+@@ -1309,7 +1318,7 @@ media::GpuVideoAcceleratorFactories* RenderThreadImpl:
        !cmd_line->HasSwitch(switches::kDisableGpuMemoryBufferVideoFrames);
  #else
        cmd_line->HasSwitch(switches::kEnableGpuMemoryBufferVideoFrames);

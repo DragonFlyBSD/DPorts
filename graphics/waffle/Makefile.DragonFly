@@ -1,2 +1,0 @@
-# ninja once again can't relink properly..
-USES:= ${USES:Nninja}

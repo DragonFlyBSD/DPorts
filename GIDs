@@ -7,7 +7,7 @@ operator:*:5:amanda
 mail:*:6:postfix,clamav
 ftp:*:14:
 smmsp:*:25:
-video:*:44:
+video:*:44:lightdm
 bind:*:53:
 rdfdb:*:55:
 spamd:*:58:
@@ -673,7 +673,7 @@ bopm:*:717:
 # free: 732
 # free: 733
 # free: 734
-# free: 735
+c-lightning:*:735:
 # free: 736
 # free: 737
 # free: 738
@@ -810,8 +810,8 @@ ebusd:*:854:
 # free: 869
 # free: 870
 # free: 871
-# free: 872
-# free: 873
+bitmark:*:872:
+bitmark-recorder:*:873:
 # free: 874
 # free: 875
 # free: 876

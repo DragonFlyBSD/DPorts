@@ -2,6 +2,7 @@
 
 PORTNAME=	wf-config
 DISTVERSION=	0.3
+PORTREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	jbeich@FreeBSD.org

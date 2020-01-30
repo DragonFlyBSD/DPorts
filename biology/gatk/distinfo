@@ -1,5 +1,5 @@
-TIMESTAMP = 1564135381
-SHA256 (gatk-4.1.2.0-43-deps.tar.gz) = c5b405f7da5b3ac0aff73c42523cb414ce2f6315aa583092287499e5770098f4
-SIZE (gatk-4.1.2.0-43-deps.tar.gz) = 365117204
-SHA256 (broadinstitute-gatk-4.1.2.0-43-g1f31a805b_GH0.tar.gz) = 8fd79e0ea6fe153bc2ebf76c9ca910a7db109b4d4c4b0fbeb4d4d61469f09238
-SIZE (broadinstitute-gatk-4.1.2.0-43-g1f31a805b_GH0.tar.gz) = 64286228
+TIMESTAMP = 1579483921
+SHA256 (gatk-4.1.4.1-deps.tar.gz) = b634903f674aa1550039c4434e0ef0efab75d509e80d5073a2b5f3a0120fd68e
+SIZE (gatk-4.1.4.1-deps.tar.gz) = 253677476
+SHA256 (broadinstitute-gatk-4.1.4.1_GH0.tar.gz) = 54129c3973ad7f1c501ecd7c841d15cd09fdd0d5ca3057810c17d7b7b9d88eb7
+SIZE (broadinstitute-gatk-4.1.4.1_GH0.tar.gz) = 64600068

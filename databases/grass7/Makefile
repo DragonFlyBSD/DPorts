@@ -3,7 +3,7 @@
 
 PORTNAME=	grass
 PORTVERSION=	7.6.1
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	databases geography
 MASTER_SITES=	https://grass.osgeo.org/%SUBDIR%/ \
 		http://grass.cict.fr/%SUBDIR%/ \
@@ -19,7 +19,7 @@ MASTER_SITES=	https://grass.osgeo.org/%SUBDIR%/ \
 MASTER_SITE_SUBDIR=	grass${VER}/source
 PKGNAMESUFFIX=	7
 
-MAINTAINER=	lbartoletti@tuxfamily.org
+MAINTAINER=	lbartoletti@FreeBSD.org
 COMMENT=	Open source Geographical Information System (GIS)
 
 LICENSE=	GPLv2+

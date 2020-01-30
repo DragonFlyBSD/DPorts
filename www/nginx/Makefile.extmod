@@ -80,6 +80,10 @@ HTTP_ACCEPT_LANGUAGE_CONFIGURE_ON=	--add-module=${WRKSRC_accept_language}
 HTTP_AUTH_DIGEST_GH_TUPLE=	atomx:nginx-http-auth-digest:cd86418:auth_digest
 HTTP_AUTH_DIGEST_VARS=		DSO_EXTMODS+=auth_digest
 
+HTTP_AUTH_JWT_GH_TUPLE=		TeslaGov:ngx-http-auth-jwt-module:80d89d9:http_auth_jwt
+HTTP_AUTH_JWT_VARS=			DSO_EXTMODS+=http_auth_jwt
+HTTP_AUTH_JWT_LIB_DEPENDS=	libjwt.so:www/libjwt libjansson.so:devel/jansson
+
 HTTP_AUTH_KRB5_GH_TUPLE=	stnoonan:spnego-http-auth-nginx-module:21bb963:auth_krb5
 HTTP_AUTH_KRB5_VARS=		DSO_EXTMODS+=auth_krb5
 HTTP_AUTH_KRB5_EXTRA_PATCHES=	${PATCHDIR}/extra-patch-spnego-http-auth-nginx-module-config
@@ -110,11 +114,11 @@ HTTP_GEOIP2_CFLAGS=		-I${LOCALBASE}/include
 HTTP_GEOIP2_VARS=		DSO_EXTMODS+=geoip2
 HTTP_GEOIP2_LIB_DEPENDS=	libmaxminddb.so:net/libmaxminddb
 
-HTTP_IP2LOCATION_GH_TUPLE=	ip2location:ip2location-nginx:d47d248:ip2location
+HTTP_IP2LOCATION_GH_TUPLE=	ip2location:ip2location-nginx:7aa49ce:ip2location
 HTTP_IP2LOCATION_LIB_DEPENDS=	libIP2Location.so:net/ip2location
 HTTP_IP2LOCATION_CONFIGURE_ON=	--add-module=${WRKSRC_ip2location}
 
-HTTP_IP2PROXY_GH_TUPLE=		ip2location:ip2proxy-nginx:d6fd05a:ip2proxy
+HTTP_IP2PROXY_GH_TUPLE=		ip2location:ip2proxy-nginx:f9815e3:ip2proxy
 HTTP_IP2PROXY_LIB_DEPENDS=	libIP2Proxy.so:net/ip2proxy
 HTTP_IP2PROXY_CONFIGURE_ON=	--add-module=${WRKSRC_ip2proxy}
 
@@ -204,6 +208,9 @@ ICONV_EXTRA_PATCHES=	${PATCHDIR}/extra-patch-calio-iconv-nginx-module-config
 LET_GH_TUPLE=		arut:nginx-let-module:v0.0.4:let
 LET_CONFIGURE_ON=	--add-module=${WRKSRC_let}
 
+LINK_GH_TUPLE=		Taymindis:nginx-link-function:3.2.1:link
+LINK_CONFIGURE_ON=	--add-module=${WRKSRC_link}
+
 LUA_IMPLIES=		DEVEL_KIT
 LUA_LIB_DEPENDS=	libluajit-5.1.so:lang/luajit-openresty
 LUA_RUN_DEPENDS=	lua-resty-core>0:www/lua-resty-core
@@ -229,15 +236,15 @@ MODSECURITY_EXTRA_PATCHES=	${PATCHDIR}/extra-patch-nginx-modsecurity-configure
 MODSECURITY_VARS=		WRKSRC_modsecurity=${WRKDIR}/modsecurity-${MODSECURITY_VERSION}
 MODSECURITY_CONFIGURE_ON=	--add-module=${WRKDIR}/modsecurity-${MODSECURITY_VERSION}/nginx/modsecurity
 
-MODSECURITY3_LIB_DEPENDS=	libmodsecurity.so:security/modsecurity3
-MODSECURITY3_GH_TUPLE=		SpiderLabs:ModSecurity-nginx:71ede63:modsec
+MODSECURITY3_LIB_DEPENDS=	libmodsecurity.so:security/modsecurity3-nginx
+MODSECURITY3_GH_TUPLE=		SpiderLabs:ModSecurity-nginx:v1.0.1:modsec
 MODSECURITY3_CONFIGURE_ON=	--add-module=${WRKSRC_modsec}
 
 NAXSI_NGINX_VER=	0.56
 NAXSI_GH_TUPLE=		nbs-system:naxsi:${NAXSI_NGINX_VER}:naxsi
 NAXSI_VARS=		DSO_EXTMODS+=naxsi NAXSI_SUBDIR=/naxsi_src
 
-NJS_GH_TUPLE=		nginx:njs:d9d2562:njs
+NJS_GH_TUPLE=		nginx:njs:b2f0f5d:njs
 NJS_VARS=		DSO_EXTMODS+=njs NJS_SUBDIR=/nginx
 
 PASSENGER_NGINX_VER=	6.0.4

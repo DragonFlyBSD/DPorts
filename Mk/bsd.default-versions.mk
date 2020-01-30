@@ -57,9 +57,9 @@ GCC_DEFAULT?=		9
 GHOSTSCRIPT_DEFAULT?=	agpl
 # Possible values: 0.6, 0.7, 1.0, 1.1
 JULIA_DEFAULT?=		1.0
-# Possible values: 2.0.4
-LAZARUS_DEFAULT?=	2.0.4
-# Possible values: c6, c7
+# Possible values: 2.0.6
+LAZARUS_DEFAULT?=	2.0.6
+# Possible values: c7
 LINUX_DEFAULT?=		c7
 # Possible values: 60, 70, 80, 90, -devel (to be used when non-base compiler is required)
 # Please give notice to the Graphics Team (x11@FreeBSD.org) in advance before 
@@ -98,9 +98,9 @@ PYTHON3_DEFAULT?=	3.7
 RUBY_DEFAULT?=		2.6
 # Possible values: rust, rust-nightly
 RUST_DEFAULT?=		rust
-# Possible values: 4.8, 4.10
+# Possible values: 4.10
 SAMBA_DEFAULT?=		4.10
-# Possible values: base, openssl, openssl111, libressl, libressl-devel
+# Possible values: base, openssl, libressl, libressl-devel
 .if !defined(SSL_DEFAULT)
 #	If no preference was set, check for an installed base version
 #	but give an installed port preference over it.

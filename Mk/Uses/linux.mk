@@ -4,7 +4,7 @@
 _INCLUDE_USES_LINUX_MK=	yes
 
 .if empty(linux_ARGS)
-linux_ARGS=	c6
+linux_ARGS=	c7
 .endif
 
 IGNORE=	Linux emulation is not supported on DragonFly

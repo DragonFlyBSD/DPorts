@@ -3,9 +3,8 @@
 
 PORTNAME=	fasttracker2
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.04
+DISTVERSION=	1.06
 CATEGORIES=	audio
-DISTNAME=	ft2-clone
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Fasttracker II clone

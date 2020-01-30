@@ -1,0 +1,22 @@
+--- core/CMakeLists.txt.intermediate	2020-01-26 11:25:08.000000000 +0000
++++ core/CMakeLists.txt
+@@ -462,6 +462,10 @@ IF(NOT openssl)
+    unset(HAVE_TLS)
+ ENDIF()
+ 
++IF(${OPENSSL_VERSION} MATCHES "2.0.0")
++   unset(HAVE_TLS)
++ENDIF()
++
+ set(largefile_support "" )
+ 
+ set(got_readline "${READLINE_FOUND}" )
+@@ -494,7 +498,7 @@ set(have_plugins "${have_plugins}" )
+ set(have_afs "" )
+ 
+ if(${acl})
+-  if(NOT HAVE_WIN32)
++  if(NOT HAVE_WIN32 AND NOT ${CMAKE_SYSTEM_NAME} STREQUAL DragonFly)
+       if(${HAVE_SYS_ACL_H})
+          set(HAVE_ACL 1)
+          Message(STATUS "acl found, libs: ${ACL_LIBS}")

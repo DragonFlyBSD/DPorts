@@ -6079,9 +6079,9 @@ devel/alf||2018-03-02|Has expired: Abandonware, unused in the ports tree
 net/remmina-plugin-gnome|net/remmina-plugin-secret|2018-03-04|Renamed upstream
 databases/php71-memcache|databases/php-memcache@php71|2018-03-08|Merge into a flavorized version
 databases/php72-memcache|databases/php-memcache@php72|2018-03-08|Merge into a flavorized version
-ftp/php71-fastdfs|ftp/php-fastdfs@php71|2018-03-08|Merge into flavorized version
+ftp/php71-fastdfs|ftp/php-fastdfs@php72|2018-03-08|Merge into flavorized version
 ftp/php72-fastdfs|ftp/php-fastdfs@php72|2018-03-08|Merge into flavorized version
-www/unit-php71|www/unit-php@php71|2018-03-08|Merge into flavorized version
+www/unit-php71|www/unit-php@php72|2018-03-08|Merge into flavorized version
 www/unit-php72|www/unit-php@php72|2018-03-08|Merge into flavorized version
 databases/php70-memcached|databases/php-memcached|2018-03-08|Move to flavorized version
 www/openxmldir||2018-03-08|Has expired: Unmaintained, all www files wrongly belongs to www user
@@ -6512,7 +6512,6 @@ games/crafty-open-enormous||2018-08-21|Has expired: Broken for more than 5 month
 games/crafty-open-medium||2018-08-21|Has expired: Broken for more than 5 months
 math/jakarta-commons-math||2018-08-21|Has expired: Broken for more than 5 months
 math/hfst||2018-08-21|Has expired: Broken for more than 5 months
-math/octave-forge-communications||2018-08-21|Has expired: Broken for more than 5 months
 lang/v8-devel||2018-08-21|Has expired: Broken for more than 5 months
 sysutils/rubygem-fluentd010||2018-08-21|Has expired: Broken for more than 5 months
 mail/mutt14-lite||2018-08-21|Remove expired slave port
@@ -6913,7 +6912,6 @@ math/surf||2018-12-21|Has expired: Uses obsolete glib12
 math/msieve||2018-12-21|Has expired: Broken for more than 6 months
 math/octave-forge-fl-core||2018-12-21|Has expired: Broken for more than 6 months
 math/octave-forge-pdb||2018-12-21|Has expired: Broken for more than 6 months
-math/octave-forge-audio||2018-12-21|Has expired: Broken for more than 6 months
 math/geg||2018-12-21|Has expired: Uses obsolete glib12
 x11/gdkxft||2018-12-21|Has expired: Uses obsolete glib12
 x11/gtk-theme-switch||2018-12-21|Has expired: Uses obsolete glib12
@@ -7043,7 +7041,6 @@ devel/pecl-spl_types||2018-12-30|Has expired: Works only with EOL php 5.6
 devel/pecl-jsmin2||2018-12-30|Has expired: Works only with EOL php 5.6
 devel/pecl-uri_template||2018-12-30|Has expired: Works only with EOL php 5.6
 devel/pecl-params||2018-12-30|Has expired: Works only with EOL php 5.6
-devel/pecl-expect||2018-12-30|Has expired: Works only with EOL php 5.6
 devel/php5-dav||2018-12-30|Has expired: Works only with EOL php 5.6
 devel/php5-pinba||2018-12-30|Has expired: Works only with EOL php 5.6
 devel/pecl-htscanner||2018-12-30|Has expired: Works only with EOL php 5.6
@@ -8033,7 +8030,6 @@ x11-toolkits/qt4-gui||2019-03-16|Has expired: Qt4 has been EOL since december 20
 x11-toolkits/qt4pas||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 x11-toolkits/qwt5||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 x11-toolkits/qwt5-designerplugin||2019-03-16|Has expired: Qt4 has been EOL since december 2015
-x11-toolkits/soqt||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 x11-wm/qlwm||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 audio/dream||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 audio/liblastfm||2019-03-16|Has expired: Qt4 has been EOL since december 2015
@@ -8047,7 +8043,6 @@ graphics/iccexamin||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 graphics/openfx-io||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 security/yubikey-piv-manager||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 textproc/xxdiff-scripts||2019-03-16|Has expired: Qt4 has been EOL since december 2015
-graphics/py-pivy||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 security/pinentry-qt4||2019-03-17|Has expired: Qt4 has been EOL since december 2015
 www/libsocialweb||2019-03-23|Project was archived upstream
 www/vimb-gtk2|www/vimb|2019-03-24|Merged into www/vimb
@@ -9020,7 +9015,6 @@ irc/irssi-otr||2019-09-05|Has expired: Broken for more than 6 months
 mail/p5-Mail-ClamAV||2019-09-05|Has expired: Broken for more than 6 months
 mail/qmail-ldap||2019-09-05|Has expired: Broken for more than 6 months
 math/fityk||2019-09-05|Has expired: Broken for more than 6 months
-math/octave-forge-mechanics||2019-09-05|Has expired: Broken for more than 6 months
 math/octave-forge-parallel||2019-09-05|Has expired: Broken for more than 6 months
 math/octave-forge-strings||2019-09-05|Has expired: Broken for more than 6 months
 math/octave-forge-tisean||2019-09-05|Has expired: Broken for more than 6 months
@@ -9212,7 +9206,6 @@ benchmarks/filebench||2019-10-16|Has expired: Unfetchable, unmaintained
 biology/chemeq||2019-10-16|Has expired: Unfetchable, unmaintained
 biology/linux-foldingathome||2019-10-16|Has expired: Unfetchable, unmaintained
 cad/dxf2fig||2019-10-16|Has expired: Unfetchable, unmaintained
-cad/gerbv||2019-10-16|Has expired: Unfetchable, unmaintained
 comms/gsmlib||2019-10-16|Has expired: Unfetchable, unmaintained
 comms/nokryptia||2019-10-16|Has expired: Unfetchable, unmaintained
 databases/mrtg-mysql-load||2019-10-16|Has expired: Unfetchable, unmaintained
@@ -9318,7 +9311,6 @@ graphics/xmandel||2019-10-16|Has expired: Unfetchable, unmaintained
 irc/minbif||2019-10-16|Has expired: Unfetchable, unmaintained
 japanese/VTPSfont||2019-10-16|Has expired: Unfetchable, unmaintained
 japanese/asterisk-sounds||2019-10-16|Has expired: Unfetchable, unmaintained
-japanese/cannadic||2019-10-16|Has expired: Unfetchable, unmaintained
 japanese/edict-utf-8||2019-10-16|Has expired: Unfetchable, unmaintained
 japanese/kpcal||2019-10-16|Has expired: Unfetchable, unmaintained
 japanese/multiskkserv||2019-10-16|Has expired: Unfetchable, unmaintained
@@ -9381,9 +9373,7 @@ net/librouteros||2019-10-16|Has expired: Unfetchable, unmaintained
 net/nettest||2019-10-16|Has expired: Unfetchable, unmaintained
 net/py-netstring||2019-10-16|Has expired: Unfetchable, unmaintained
 net/radiusd-cistron||2019-10-16|Has expired: Unfetchable, unmaintained
-net/rtptools||2019-10-16|Has expired: Unfetchable, unmaintained
 net/smbldap-tools||2019-10-16|Has expired: Unfetchable, unmaintained
-net/tcptrace||2019-10-16|Has expired: Unfetchable, unmaintained
 net/wackford-squeers||2019-10-16|Has expired: Unfetchable, unmaintained
 net/wmnet2||2019-10-16|Has expired: Unfetchable, unmaintained
 net-im/pidgin-birthday-reminder||2019-10-16|Has expired: Unfetchable, unmaintained
@@ -9398,7 +9388,6 @@ net-mgmt/pixilate||2019-10-16|Has expired: Unfetchable, unmaintained
 net-mgmt/slate||2019-10-16|Has expired: Unfetchable, unmaintained
 net-mgmt/weplab||2019-10-16|Has expired: Unfetchable, unmaintained
 net-p2p/bnbt||2019-10-16|Has expired: Unfetchable, unmaintained
-net-p2p/btpd||2019-10-16|Has expired: Unfetchable, unmaintained
 net-p2p/gkremldk||2019-10-16|Has expired: Unfetchable, unmaintained
 news/newscache||2019-10-16|Has expired: Unfetchable, unmaintained
 news/nntpbtr||2019-10-16|Has expired: Unfetchable, unmaintained
@@ -9617,7 +9606,7 @@ net-mgmt/zabbix22-frontend|net-mgmt/zabbix3-frontend|2019-12-01|Has expired: End
 net-mgmt/zabbix22-java|net-mgmt/zabbix3-java|2019-12-01|Has expired: End of Life was August, 2019
 net-mgmt/zabbix22-proxy|net-mgmt/zabbix3-proxy|2019-12-01|Has expired: End of Life was August, 2019
 net-mgmt/zabbix22-server|net-mgmt/zabbix3-server|2019-12-01|Has expired: End of Life was August, 2019
-sysutils/fusefs-ext4fuse|sysutils/fusefs-ext2|2019-12-01|Has expired: Please consider using sysutils/fusefs-ext2 as upstream development is stalled.  Contrary to what its name suggests it supports ext2, ext3, ext4 in read/write  mode
+sysutils/fusefs-ext4fuse|sysutils/fusefs-ext2|2019-12-01|Has expired: Please consider using sysutils/fusefs-ext2 as upstream development is stalled.  Contrary to what its name suggests it supports ext2, ext3, ext4 in read/write mode
 www/grafana3|www/grafana4|2019-12-01|Has expired: Depends on expired lang/phantomjs
 www/miniminiweb||2019-12-01|Has expired: Upstream no longer available
 www/py-dj21-django-extensions|www/py-dj22-django-extensions|2019-12-06|Renamed to py-dj22-django-extensions because Django 2.1 has reached its End-of-Life
@@ -9706,3 +9695,166 @@ www/php71-tidy|www/php72-tidy|2019-12-17|Has expired: upstream security support 
 lang/php71-extensions|lang/php72-extensions|2019-12-17|Has expired: upstream security support ended
 devel/pecl-request||2019-12-17|Has expired: upstream security support ended
 devel/googlemock||2019-12-19|Merged into devel/googletest
+lang/chicken|lang/chicken5|2019-12-22|Has expired: Old release; please migrate to lang/chicken5
+math/metis-edf||2019-12-23|No more required by Code_Aster 14.4.0-1
+textproc/py-text-unidecode||2019-12-24|Duplicate of converters/py-text-unidecode
+java/jakarta-bcel|java/apache-bcel|2019-12-24|Renamed upstream
+deskutils/conduit||2019-12-26|Abandonware
+mail/openemm2013|mail/openemm2015|2019-12-26|Has expired: marked BROKEN for 4 months; use mail/openemm2015 instead
+devel/gnome-js-common||2019-12-26|Not used anymore by any gnome components
+devel/liboobs||2019-12-26|Gnome dependency not used anymore
+x11-toolkits/libgnomeprintui||2019-12-26|Gnome2 dependency not used anymore
+x11-toolkits/libgnomeprintuimm||2019-12-26|Gnome2 dependency not used anymore
+print/libgnomeprint||2019-12-26|Gnome2 dependency not used anymore
+print/libgnomeprint-reference||2019-12-26|Gnome2 dependency not used anymore
+print/libgnomeprintmm||2019-12-26|Gnome2 dependency not used anymore
+print/libgnomecups||2019-12-26|Gnome2 dependency not used anymore
+devel/rubygem-gitlab-peek-rails52|devel/rubygem-peek-rails52|2019-12-28|Has expired: use devel/rubygem-peek-rails52 instead
+devel/rubygem-numerizer01|devel/rubygem-numerizer|2019-12-28|Has expired: use devel/rubygem-numerizer instead
+databases/phpmyadmin-devel|databases/phpmyadmin5|2019-12-29|Move to phpmyadmin5
+sysutils/bareos-docs||2019-12-29|PDF is not available anymore. Bareos documentation can be found at https://docs.bareos.org/
+databases/php-memcache|databases/pecl-memcache|2019-12-30|Development from websupport.sk is the official PECL repository now
+java/jakarta-commons-codec|java/apache-commons-codec|2019-12-30|Renamed upstream
+java/jakarta-commons-dbcp|java/apache-commons-dbcp|2019-12-30|Renamed upstream
+java/jakarta-commons-httpclient|java/apache-commons-httpclient|2019-12-30|Renamed upstream
+emulators/linux-c6|emulators/linux-c7|2019-12-31|Removed, part of expired CentOS 6 infrastructure
+accessibility/linux-c6-atk|accessibility/linux-c7-atk|2019-12-31|Has expired: Superseded by CentOS 7
+audio/exaile-devel|audio/exaile|2019-12-31|Has expired: this port is older than audio/exaile
+audio/linux-c6-alsa-lib|audio/linux-c7-alsa-lib|2019-12-31|Has expired: Superseded by CentOS 7
+audio/linux-c6-alsa-plugins-oss|audio/linux-c7-alsa-plugins-oss|2019-12-31|Has expired: Superseded by CentOS 7
+audio/linux-c6-alsa-plugins-pulseaudio|audio/linux-c7-alsa-plugins-pulseaudio|2019-12-31|Has expired: Superseded by CentOS 7
+audio/linux-c6-alsa-utils|audio/linux-c7-alsa-utils|2019-12-31|Has expired: Superseded by CentOS 7
+audio/linux-c6-flac|audio/linux-c7-flac|2019-12-31|Has expired: Superseded by CentOS 7
+audio/linux-c6-libaudiofile|audio/linux-c7-audiofile|2019-12-31|Has expired: Superseded by CentOS 7
+audio/linux-c6-libogg|audio/linux-c7-libogg|2019-12-31|Has expired: Superseded by CentOS 7
+audio/linux-c6-libsndfile|audio/linux-c7-libsndfile|2019-12-31|Has expired: Superseded by CentOS 7
+audio/linux-c6-libvorbis|audio/linux-c7-libvorbis|2019-12-31|Has expired: Superseded by CentOS 7
+audio/linux-c6-mikmod||2019-12-31|Has expired: Superseded by CentOS 7
+audio/linux-c6-nas-libs||2019-12-31|Has expired: Superseded by CentOS 7
+audio/linux-c6-openal-soft|audio/linux-c7-openal-soft|2019-12-31|Has expired: Superseded by CentOS 7
+audio/linux-c6-pulseaudio-libs|audio/linux-c7-pulseaudio-libs|2019-12-31|Has expired: Superseded by CentOS 7
+audio/linux-c6-pulseaudio-utils|audio/linux-c7-pulseaudio-utils|2019-12-31|Has expired: Superseded by CentOS 7
+audio/linux-c6-sdl_mixer|audio/linux-c7-sdl_mixer|2019-12-31|Has expired: Superseded by CentOS 7
+databases/linux-c6-sqlite3|databases/linux-c7-sqlite3|2019-12-31|Has expired: Superseded by CentOS 7
+databases/linux-oracle-instantclient-sqlplus||2019-12-31|Has expired: Depends on deprecated Centos 6 framework
+devel/linux-c6-dbus-glib|devel/linux-c7-dbus-glib|2019-12-31|Has expired: Superseded by CentOS 7
+devel/linux-c6-dbus-libs|devel/linux-c7-dbus-libs|2019-12-31|Has expired: Superseded by CentOS 7
+devel/linux-c6-devtools|devel/linux-c7-devtools|2019-12-31|Has expired: Superseded by CentOS 7
+devel/linux-c6-elfutils-libelf|devel/linux-c7-elfutils-libelf|2019-12-31|Has expired: Superseded by CentOS 7
+devel/linux-c6-icu|devel/linux-c7-icu|2019-12-31|Has expired: Superseded by CentOS 7
+devel/linux-c6-libgfortran|devel/linux-c7-libgfortran|2019-12-31|Has expired: Superseded by CentOS 7
+devel/linux-c6-libglade2|devel/linux-c7-libglade2|2019-12-31|Has expired: Superseded by CentOS 7
+devel/linux-c6-libpciaccess|devel/linux-c7-libpciaccess|2019-12-31|Has expired: Superseded by CentOS 7
+devel/linux-c6-libsigc++20|devel/linux-c7-libsigc++20|2019-12-31|Has expired: Superseded by CentOS 7
+devel/linux-c6-libsoup||2019-12-31|Has expired: Superseded by CentOS 7
+devel/linux-c6-libthai|devel/linux-c7-libthai|2019-12-31|Has expired: Superseded by CentOS 7
+devel/linux-c6-libunwind|devel/linux-c7-libunwind|2019-12-31|Has expired: Superseded by CentOS 7
+devel/linux-c6-nspr|devel/linux-c7-nspr|2019-12-31|Has expired: Superseded by CentOS 7
+devel/linux-c6-qt47|devel/linux-c7-qt|2019-12-31|Has expired: Superseded by CentOS 7
+devel/linux-c6-sdl12|devel/linux-c7-sdl12|2019-12-31|Has expired: Superseded by CentOS 7
+dns/linux-c6-libasyncns|dns/linux-c7-libasyncns|2019-12-31|Has expired: Superseded by CentOS 7
+emulators/linux_base-c6|emulators/linux_base-c7|2019-12-31|Has expired: Superseded by CentOS 7
+ftp/linux-c6-curl|ftp/linux-c7-curl|2019-12-31|Has expired: Superseded by CentOS 7
+graphics/linux-c6-cairo|graphics/linux-c7-cairo|2019-12-31|Has expired: Superseded by CentOS 7
+graphics/linux-c6-dri|graphics/linux-c7-dri|2019-12-31|Has expired: Superseded by CentOS 7
+graphics/linux-c6-gdk-pixbuf2|graphics/linux-c7-gdk-pixbuf2|2019-12-31|Has expired: Superseded by CentOS 7
+graphics/linux-c6-glx-utils|graphics/linux-c7-glx-utils|2019-12-31|Has expired: Superseded by CentOS 7
+graphics/linux-c6-jasper|graphics/linux-c7-jasper|2019-12-31|Has expired: Superseded by CentOS 7
+graphics/linux-c6-jpeg|graphics/linux-c7-jpeg|2019-12-31|Has expired: Superseded by CentOS 7
+graphics/linux-c6-png|graphics/linux-c7-png|2019-12-31|Has expired: Superseded by CentOS 7
+graphics/linux-c6-sdl_image|graphics/linux-c7-sdl_image|2019-12-31|Has expired: Superseded by CentOS 7
+graphics/linux-c6-sdl_ttf|graphics/linux-c7-sdl_ttf|2019-12-31|Has expired: Superseded by CentOS 7
+graphics/linux-c6-tiff|graphics/linux-c7-tiff|2019-12-31|Has expired: Superseded by CentOS 7
+lang/linux-c6-tcl85|lang/linux-c7-tcl85|2019-12-31|Has expired: Superseded by CentOS 7
+multimedia/linux-c6-libtheora|multimedia/linux-c7-libtheora|2019-12-31|Has expired: Superseded by CentOS 7
+multimedia/linux-c6-libv4l|multimedia/linux-c7-libv4l|2019-12-31|Has expired: Superseded by CentOS 7
+net/linux-c6-avahi-libs|net/linux-c7-avahi-libs|2019-12-31|Has expired: Superseded by CentOS 7
+net/linux-c6-openldap|net/linux-c7-openldap|2019-12-31|Has expired: Superseded by CentOS 7
+net/linux-c6-tcp_wrappers-libs|net/linux-c7-tcp_wrappers-libs|2019-12-31|Has expired: Superseded by CentOS 7
+net/py-soappy|net/py-zeep|2019-12-31|Has expired: Please consider using net/py-zeep as upstream development is stalled and recommends using another stalled library stud
+print/linux-c6-cups-libs|print/linux-c7-cups-libs|2019-12-31|Has expired: Superseded by CentOS 7
+security/linux-c6-audit-libs||2019-12-31|Has expired: Superseded by CentOS 7
+security/linux-c6-cyrus-sasl2|security/linux-c7-cyrus-sasl2|2019-12-31|Has expired: Superseded by CentOS 7
+security/linux-c6-gnutls|security/linux-c7-gnutls|2019-12-31|Has expired: Superseded by CentOS 7
+security/linux-c6-libgcrypt|security/linux-c7-libgcrypt|2019-12-31|Has expired: Superseded by CentOS 7
+security/linux-c6-libgpg-error|security/linux-c7-libgpg-error|2019-12-31|Has expired: Superseded by CentOS 7
+security/linux-c6-libssh2|security/linux-c7-libssh2|2019-12-31|Has expired: Superseded by CentOS 7
+security/linux-c6-libtasn1|security/linux-c7-libtasn1|2019-12-31|Has expired: Superseded by CentOS 7
+security/linux-c6-nss|security/linux-c7-nss|2019-12-31|Has expired: Superseded by CentOS 7
+security/linux-c6-openssl|emulators/linux_base-c7|2019-12-31|Has expired: Superseded by CentOS 7
+security/linux-c6-pam||2019-12-31|Has expired: Superseded by CentOS 7
+sysutils/eventlog||2019-12-31|Has expired: No longer supported by Balabit
+sysutils/linux-c6-lttng-ust|sysutils/linux-c7-lttng-ust|2019-12-31|Has expired: Superseded by CentOS 7
+sysutils/linux-c6-userspace-rcu|sysutils/linux-c7-userspace-rcu|2019-12-31|Has expired: Superseded by CentOS 7
+sysutils/mkdesktop||2019-12-31|Has expired: defunct, will be deleted soon
+sysutils/syslog-ng311|sysutils/syslog-ng|2019-12-31|Has expired: No longer supported by Balabit
+sysutils/syslog-ng315|sysutils/syslog-ng|2019-12-31|Has expired: No longer supported by Balabit
+sysutils/syslog-ng317|sysutils/syslog-ng|2019-12-31|Has expired: No longer supported by Balabit
+sysutils/syslog-ng318|sysutils/syslog-ng|2019-12-31|Has expired: No longer supported by Balabit
+sysutils/syslog-ng319|sysutils/syslog-ng|2019-12-31|Has expired: No longer supported by Balabit
+textproc/linux-c6-aspell|textproc/linux-c7-aspell|2019-12-31|Has expired: Superseded by CentOS 7
+textproc/linux-c6-expat|textproc/linux-c7-expat|2019-12-31|Has expired: Superseded by CentOS 7
+textproc/linux-c6-libxml2|textproc/linux-c7-libxml2|2019-12-31|Has expired: Superseded by CentOS 7
+textproc/xml2||2019-12-31|Has expired: Unfetchable, unmaintained
+www/linux-c6-qt47-webkit|www/linux-c7-qtwebkit|2019-12-31|Has expired: Superseded by CentOS 7
+x11/linux-c6-pixman|x11/linux-c7-pixman|2019-12-31|Has expired: Superseded by CentOS 7
+x11/linux-c6-xorg-libs|x11/linux-c7-xorg-libs|2019-12-31|Has expired: Superseded by CentOS 7
+x11-fonts/linux-c6-fontconfig|x11-fonts/linux-c7-fontconfig|2019-12-31|Has expired: Superseded by CentOS 7
+x11-toolkits/linux-c6-gtk2|x11-toolkits/linux-c7-gtk2|2019-12-31|Has expired: Superseded by CentOS 7
+x11-toolkits/linux-c6-openmotif|x11-toolkits/linux-c7-openmotif|2019-12-31|Has expired: Superseded by CentOS 7
+x11-toolkits/linux-c6-pango|x11-toolkits/linux-c7-pango|2019-12-31|Has expired: Superseded by CentOS 7
+x11-toolkits/linux-c6-qt47-x11|x11-toolkits/linux-c7-qt-x11|2019-12-31|Has expired: Superseded by CentOS 7
+x11-toolkits/linux-c6-tk85|x11-toolkits/linux-c7-tk85|2019-12-31|Has expired: Superseded by CentOS 7
+lang/gnatdroid-x86||2019-12-31|Has expired: Unfetchable, unmaintained
+net/py-tweepy||2019-12-31|Has expired: Broken for more than 6 months
+archivers/squeeze|archivers/xarchiver|2020-01-01|Removed, dead upstream and depends on expired x11-fm/thunar-vfs
+x11-fm/thunar-vfs||2020-01-01|Has expired: Functionality included in Thunar
+sysutils/ansible1||2020-01-01|Has expired: please upgrade to sysutils/ansible
+sysutils/bsdploy||2020-01-01|Removed, depends on expired sysutils/ansible1
+sysutils/py-ploy_ansible||2020-01-01|Removed, depends on expired sysutils/ansible1
+databases/couchdb|databases/couchdb2|2020-01-01|Has expired: No longer supported upstream, move to databases/couchdb2
+databases/riak||2020-01-01|Has expired: No longer supported upstream, see riak 2.9.0 and newer
+lang/erlang-runtime15|lang/erlang-runtime21|2020-01-01|Has expired: No longer supported upstream, use lang/erlang >= 21
+lang/erlang-runtime16|lang/erlang-runtime21|2020-01-01|Has expired: No longer supported upstream, use lang/erlang >=21
+lang/erlang-runtime17|lang/erlang-runtime21|2020-01-01|Has expired: No longer supported upstream, use lang/erlang >=21
+lang/erlang-runtime18|lang/erlang-runtime21|2020-01-01|Has expired: No longer supported upstream, use lang/erlang >=21
+lang/erlang-runtime19|lang/erlang-runtime21|2020-01-01|Has expired: No longer supported upstream, use lang/erlang >=21
+security/openssl111|security/openssl|2020-01-01|Upgrade security/openssl to 1.1.1 as promised in deprecation message
+devel/gperf31|devel/gperf|2020-01-04|No longer needed as devel/gperf has been updated to 3.1
+devel/yosys|cad/yosys|2020-01-04|Move to a proper category
+cad/ujprog|comms/ujprog|2020-01-05|Move to a proper category
+net/gnatsd|net/nats-server|2020-01-06|Renamed upstream
+astro/viking||2020-01-10|Has expired: Depends on broken and expiring graphics/mapnik
+audio/slv2||2020-01-10|Has expired: Broken for more than 5 months (last version 0.6.6 released in 2009, replaced by lilv)
+cad/brickutils||2020-01-10|Has expired: Broken for more than 3 months, unmaintained
+devel/elixir-gen_state_machine||2020-01-10|Has expired: Broken for more than 6 months
+devel/elixir-swarm||2020-01-10|Has expired: Depends on broken and expiring devel/elixir-gen_state_machine
+devel/erlang-clique||2020-01-10|Has expired: Depends on broken and expiring devel/erlang-cuttlefish
+devel/erlang-gen_rpc||2020-01-10|Has expired: Broken for more than 6 months
+devel/erlang-msgpack||2020-01-10|Has expired: Broken for more than 6 months
+devel/ocaml-deriving-ocsigen||2020-01-10|Has expired: Broken for more than 6 months
+devel/p5-rpm-build-perl||2020-01-10|Has expired: Broken for more than 7 months
+devel/shedskin||2020-01-10|Has expired: Broken for more than 3 months, unmaintained
+games/stonesoup-sdl||2020-01-10|Has expired: Broken for more than 8 months
+games/xtris||2020-01-10|Has expired: Broken for more than 3 months
+graphics/mapnik||2020-01-10|Has expired: Broken for more than 8 months
+lang/js_of_ocaml||2020-01-10|Has expired: Depends on broken and expiring devel/ocaml-deriving-ocsigen
+lang/rubinius||2020-01-10|Has expired: Broken for more than 7 months
+math/dynare||2020-01-10|Has expired: Broken for more than 9 months
+science/meep||2020-01-10|Has expired: Broken for more than 6 months
+sysutils/hfm||2020-01-10|Has expired: Broken for more than 4 months
+sysutils/u-boot-zedboard||2020-01-10|Has expired: Broken for more than 6 months
+sysutils/u-boot-zybo||2020-01-10|Has expired: Broken for more than 6 months
+x11-themes/kde-icons-kool-gorilla||2020-01-10|Has expired: Broken for more than 3 months, unmaintained
+sysutils/docker-freebsd||2020-01-11|Has expired: Broken for more than 9 months
+science/molden|biology/molden|2020-01-12|The duplicate port was removed in rev.505268
+www/web2ldap||2020-01-13|Broken: unfechable and missing dependencies
+net-mgmt/flow-extract||2020-01-14|Has expired: marked BROKEN for more than 6 months
+textproc/pootle||2020-01-14|Has expired: Unamaintained, marked BROKEN for more than 5 months
+cad/elmerfem|science/elmerfem|2020-01-15|Move to a proper category
+graphics/bugle|devel/apitrace|2020-01-15|Has expired: no longer actively developed; use devel/apitrace instead
+x11-toolkits/soqt-devel|x11-toolkits/soqt|2020-01-17|This is now the stable version
+graphics/py-pivy-devel|graphics/py-pivy|2020-01-17|This is now the stable version
+net/py-coherence||2020-01-18|fails with python-3.X, and python-2.7 is EOLed (GH bug#32)
+net/py-upnp-inspector||2020-01-18|Missing dependency: net/py-coherence is python-2.7-only
+security/py-pymacaroons-pynacl|security/py-pymacaroons|2020-01-20|Rename to match upstream naming

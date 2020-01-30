@@ -1,0 +1,7 @@
+
+USES+=	localbase:ldflags
+
+GCC_BUILD_DEPENDS:=	gmp>0:math/gmp
+GCC_RUN_DEPENDS:=	gmp>0:math/gmp
+GCC_MAKE_ARGS:=		GCC=gcc GXX=g++
+GCC_CFLAGS:=		-I/usr/lib/gcc80/plugin

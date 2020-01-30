@@ -1,0 +1,30 @@
+
+PORTNAME=	openjdk8
+PORTVERSION=	8.181
+CATEGORIES=	java devel
+PKGNAMEPREFIX=	bootstrap-
+DISTNAME=	${JDK_PORT}-${JDK_ARCH}-${PORTVERSION}
+
+MASTER_SITES=	https://avalon.dragonflybsd.org/misc/distfiles/
+MAINTAINER=	zrj@ef.irc
+COMMENT=	Java Development Kit 8 (bootstrap)
+
+LICENSE=	GPLv2
+
+USES=		tar:xz
+
+NO_BUILD=	yes
+PLIST_SUB=	JDK_ROOT=${JDK_ROOT} JDK_ARCH=amd64
+WRKSRC=		${WRKDIR}/${JDK_ROOT}
+
+JDK_PORT=	${PKGNAMEPREFIX}${PORTNAME}
+JDK_ROOT=	${PKGNAMEPREFIX}${PORTNAME}
+JDK_ARCH=	${ARCH}
+
+INSTALLDIR=	${STAGEDIR}${PREFIX}/${JDK_ROOT}
+
+do-install:
+	@cd ${WRKSRC} && ${COPYTREE_SHARE} . ${INSTALLDIR}
+	@cd ${WRKSRC} && ${COPYTREE_BIN} bin ${INSTALLDIR}
+
+.include <bsd.port.mk>

@@ -1,0 +1,4 @@
+
+# attempt to fix stage-qa (sed bak files)
+dfly-install:
+	-${RM} -v ${STAGEDIR}${PREFIX}/libexec/nfsen/Nfcomm.pm.bak

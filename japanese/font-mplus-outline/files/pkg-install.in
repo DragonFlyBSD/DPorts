@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/japanese/font-mplus-outline/files/pkg-install.in 397494 2015-09-21 14:39:18Z hrs $
+# $FreeBSD$
 
 catfontsdir ()
 {

@@ -1,5 +1,4 @@
 USES+= alias
-USE_CXXSTD=	c++98
 
 dfly-patch:
 	${LN} -sv ${WRKSRC}/build/FreeBSD.make ${WRKSRC}/build/DragonFly.make

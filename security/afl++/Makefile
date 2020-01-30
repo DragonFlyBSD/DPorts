@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	afl
-PORTVERSION=	2.59c
+PORTVERSION=	2.60c
+PORTREVISION=	1
 CATEGORIES=	security
 PKGNAMESUFFIX=	++
 
@@ -14,7 +15,7 @@ LICENSE_FILE=	${WRKSRC}/docs/COPYING
 
 # In theory afl supports non-x86 architectures with the LLVM plugin.
 # This has only been run tested on aarch64 so far.
-ONLY_FOR_ARCHS=	aarch64 amd64 i386
+ONLY_FOR_ARCHS=	aarch64 amd64 i386 powerpc64
 ONLY_FOR_ARCHS_REASON=	uses x86-only instrumentation or requires complete LLVM support
 
 USES=		gmake tar:tgz
@@ -30,7 +31,7 @@ TEST_TARGET=	test_build
 CONFLICTS_INSTALL=	afl
 
 OPTIONS_DEFINE=		DEBUG DOCS EXAMPLES GCC LLVM PYTHON
-OPTIONS_DEFAULT=	LLVM PYTHON
+OPTIONS_DEFAULT=	GCC LLVM PYTHON
 # On non-x86 architectures LLVM is mandatory
 OPTIONS_SLAVE=		${ARCH:Namd64:Ni386:S/${ARCH}/LLVM/}
 OPTIONS_SUB=		yes
@@ -39,21 +40,21 @@ GCC_DESC=	Build GCC plugin and afl-gcc-fast
 LLVM_DESC=	LLVM-based instrumentation
 PYTHON_DESC=	Python mutators support
 
-GCC_BUILD_DEPENDS=	gcc${GCC_DEFAULT}:lang/gcc${GCC_DEFAULT}
-GCC_RUN_DEPENDS=	gcc${GCC_DEFAULT}:lang/gcc${GCC_DEFAULT}
-GCC_MAKE_ARGS=		GCC=gcc${GCC_DEFAULT} \
-			GXX=g++${GCC_DEFAULT}
+GCC_BUILD_DEPENDS=	gcc${GCC_DEFAULT}>0:lang/gcc${GCC_DEFAULT}
+GCC_RUN_DEPENDS=	gcc${GCC_DEFAULT}>0:lang/gcc${GCC_DEFAULT}
+GCC_MAKE_ARGS=		GCC=gcc${GCC_DEFAULT:S/-devel$//} \
+			GXX=g++${GCC_DEFAULT:S/-devel$//}
 GCC_ALL_TARGET=		gcc_plugin
 GCC_TEST_TARGET=	test_gcc_plugin
 
 LLVM_BUILD_DEPENDS=	clang${LLVM_DEFAULT}:devel/llvm${LLVM_DEFAULT}
 LLVM_RUN_DEPENDS=	clang${LLVM_DEFAULT}:devel/llvm${LLVM_DEFAULT}
-LLVM_MAKE_ARGS=		LLVM_CONFIG=llvm-config${LLVM_DEFAULT}
+LLVM_MAKE_ARGS=		CC=clang${LLVM_DEFAULT} \
+			CXX=clang++${LLVM_DEFAULT} \
+			LLVM_CONFIG=llvm-config${LLVM_DEFAULT}
 LLVM_ALL_TARGET=	llvm_mode
 LLVM_TEST_TARGET=	test_llvm_mode
 LLVM_BINARY_ALIAS=	llvm-config=llvm-config${LLVM_DEFAULT}
-LLVM_VARS=		CC=clang${LLVM_DEFAULT} \
-			CXX=clang++${LLVM_DEFAULT}
 
 PYTHON_USES=		gettext-runtime python:3.7
 PYTHON_MAKE_ARGS_OFF=	PYTHON_INCLUDE=/nonexistent
@@ -90,8 +91,8 @@ post-patch:
 
 post-patch-GCC-on:
 	@${REINPLACE_CMD} \
-		-e 's|"gcc"|"gcc${GCC_DEFAULT}"|g' \
-		-e 's|"g\+\+"|"g\+\+${GCC_DEFAULT}"|g' \
+		-e 's|"gcc"|"gcc${GCC_DEFAULT:S/-devel$//}"|g' \
+		-e 's|"g\+\+"|"g\+\+${GCC_DEFAULT:S/-devel$//}"|g' \
 		${WRKSRC}/gcc_plugin/afl-gcc-fast.c
 
 post-patch-LLVM-on:

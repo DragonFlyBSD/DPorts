@@ -1,0 +1,4 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(BLEND2D_NO_STDCXX\) 1@\1 0@g' \
+		${WRKSRC}/CMakeLists.txt

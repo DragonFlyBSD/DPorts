@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	geoipupdate
-PORTVERSION=	4.1.4
+PORTVERSION=	4.1.5
+PORTREVISION=	1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	net geography
 
@@ -41,6 +42,7 @@ PLIST_FILES=	bin/geoipupdate \
 		'@sample etc/GeoIP.conf.sample' \
 		'@dir share/GeoIP'
 PORTDOCS=	GeoIP.conf.md geoipupdate.md
+SUB_FILES=	pkg-message
 
 post-extract:
 	${RM} ${WRKSRC}/go.mod

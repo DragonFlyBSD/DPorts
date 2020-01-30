@@ -47,11 +47,11 @@ OPTIONS_SUB=	yes
 
 JAPANESE_FONT_DESC=msgothic.ttc alternatives with verified metrics (unless --font)
 KOCHI_DESC=	kochi-gothic-subst.ttf from japanese/font-kochi
-KOCHI_RUN_DEPENDS=${LOCALBASE}/share/fonts/TTF/kochi-gothic-subst.ttf:japanese/font-kochi
+KOCHI_RUN_DEPENDS=${LOCALBASE}/share/fonts/kochi/kochi-gothic-subst.ttf:japanese/font-kochi
 MONA_DESC=	mona.ttf from japanese/font-mona-ttf
-MONA_RUN_DEPENDS=${LOCALBASE}/share/fonts/TTF/mona.ttf:japanese/font-mona-ttf
+MONA_RUN_DEPENDS=${LOCALBASE}/share/fonts/mona-ttf/mona.ttf:japanese/font-mona-ttf
 SAZANAMI_DESC=	sazanami-gothic.ttf from japanese/font-sazanami
-SAZANAMI_RUN_DEPENDS=${LOCALBASE}/share/fonts/TTF/sazanami-gothic.ttf:japanese/font-sazanami
+SAZANAMI_RUN_DEPENDS=${LOCALBASE}/share/fonts/sazanami/sazanami-gothic.ttf:japanese/font-sazanami
 
 DEBUG_MAKE_ARGS_OFF=--release
 NLS_USES=	gettext
@@ -80,7 +80,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/build/${PORTNAME} \
 		${STAGEDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/debian/${PORTNAME}.6 \
-		${STAGEDIR}${MAN6PREFIX}/man/man6
+		${STAGEDIR}${PREFIX}/share/man/man6
 	${INSTALL_DATA} ${WRKSRC}/src/platforms/gtk/${PORTNAME}.desktop \
 		${STAGEDIR}${DESKTOPDIR}
 	@(cd ${WRKSRC}/resources && for f in */${PORTNAME}.png; do \

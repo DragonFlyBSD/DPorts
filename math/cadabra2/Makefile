@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	cadabra2
-DISTVERSION=	2.2.7
+DISTVERSION=	2.2.8
 PORTREVISION=	1
 CATEGORIES=	math
 
@@ -21,7 +21,7 @@ LIB_DEPENDS=	${PY_BOOST} \
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/sympy/__init__.py:math/py-sympy@${PY_FLAVOR} \
 		${PYTHON_SITELIBDIR}/matplotlib/__init__.py:math/py-matplotlib@${PY_FLAVOR}
 
-USES=		compiler:c++14-lang cmake dos2unix gettext-runtime gnome localbase:ldflags pkgconfig python:3.4+ sqlite # USES=python picks random python versions
+USES=		compiler:c++14-lang cmake:noninja dos2unix gettext-runtime gnome localbase:ldflags pkgconfig python:3.4+ sqlite # USES=python picks random python versions
 USE_GITHUB=	yes
 GH_ACCOUNT=	kpeeters
 DOS2UNIX_FILES=	cmake/version.cmake

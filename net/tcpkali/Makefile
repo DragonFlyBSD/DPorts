@@ -11,13 +11,8 @@ COMMENT=	High performance load generator for TCP and WebSocket servers
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BROKEN_mips=		invokes x86 assembler
-BROKEN_mips64=		invokes x86 assembler
-BROKEN_sparc64=		invokes x86 assembler
-BROKEN_powerpc64=	invokes x86 assembler
-
 GNU_CONFIGURE=	yes
-USES=		autoreconf libtool gmake ncurses
+USES=		autoreconf compiler:c11 libtool gmake ncurses
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	machinezone

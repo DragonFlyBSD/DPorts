@@ -1,0 +1,6 @@
+CONFIGURE_ARGS:= fixed-dragonfly
+
+dfly-patch:
+	${CP} ${WRKSRC}/config.fixed-freebsd ${WRKSRC}/config.fixed-dragonfly
+	${REINPLACE_CMD} -e 's/(INCLUDES)/& -I\/usr\/local\/include /' ${WRKSRC}/config.fixed-dragonfly
+

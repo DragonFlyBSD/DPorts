@@ -6,22 +6,20 @@ PORTVERSION?=	1.40.0
 PORTREVISION?=	0
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/:src \
-		https://static.rust-lang.org/dist/:rust_bootstrap \
-		LOCAL/tobik/rust:rust_bootstrap \
-		https://static.rust-lang.org/dist/:cargo_bootstrap \
-		LOCAL/tobik/rust:cargo_bootstrap \
+		https://static.rust-lang.org/dist/:bootstrap \
+		LOCAL/tobik/rust:bootstrap \
 		https://releases.llvm.org/${COMPILER_RT_VERSION}/:compiler_rt \
 		https://github.com/llvm/llvm-project/releases/download/llvmorg-${COMPILER_RT_VERSION}/:compiler_rt
 DISTNAME?=	${PORTNAME}c-${PORTVERSION}-src
 DISTFILES?=	${NIGHTLY_SUBDIR}${DISTNAME}${EXTRACT_SUFX}:src \
-		${_RUSTC_BOOTSTRAP}${BOOTSTRAPS_SUFFIX}${EXTRACT_SUFX}:rust_bootstrap \
-		${_RUST_STD_BOOTSTRAP}${BOOTSTRAPS_SUFFIX}${EXTRACT_SUFX}:rust_bootstrap \
-		${_CARGO_BOOTSTRAP}${BOOTSTRAPS_SUFFIX}${EXTRACT_SUFX}:cargo_bootstrap \
+		${_RUSTC_BOOTSTRAP}${BOOTSTRAPS_SUFFIX}${EXTRACT_SUFX}:bootstrap \
+		${_RUST_STD_BOOTSTRAP}${BOOTSTRAPS_SUFFIX}${EXTRACT_SUFX}:bootstrap \
+		${_CARGO_BOOTSTRAP}${BOOTSTRAPS_SUFFIX}${EXTRACT_SUFX}:bootstrap \
 		${DISTFILES_${ARCH}}
 DISTFILES_armv6=	compiler-rt-${COMPILER_RT_VERSION}.src.tar.xz:compiler_rt
 DISTFILES_armv7=	compiler-rt-${COMPILER_RT_VERSION}.src.tar.xz:compiler_rt
 DIST_SUBDIR?=	rust
-EXTRACT_ONLY?=	${DISTFILES:N*\:*bootstrap:C/:.*//}
+EXTRACT_ONLY?=	${DISTFILES:N*\:bootstrap:C/:.*//}
 
 MAINTAINER=	rust@FreeBSD.org
 COMMENT=	Language with a focus on memory safety and concurrency
@@ -124,6 +122,7 @@ post-patch:
 # places where they are recorded.
 	@${REINPLACE_CMD} -e 's,^date:.*,date: ${BOOTSTRAPS_DATE_${ARCH}:U${BOOTSTRAPS_DATE}},' \
 		-e 's,^rustc:.*,rustc: ${RUST_BOOTSTRAP_VERSION_${ARCH}:U${RUST_BOOTSTRAP_VERSION}},' \
+		-e '/^rustfmt:/d' \
 		-e 's,^cargo:.*,cargo: ${CARGO_BOOTSTRAP_VERSION_${ARCH}:U${CARGO_BOOTSTRAP_VERSION}},' \
 		${WRKSRC}/src/stage0.txt
 	@${ECHO_MSG} "Bootstrap date and version after patching:"
@@ -141,32 +140,48 @@ post-patch-SOURCES-off:
 	@${REINPLACE_CMD} -e 's/config.tools.*"src".*/false;/' \
 		${WRKSRC}/src/bootstrap/install.rs
 
-.if defined(WITH_CCACHE_BUILD) && !defined(NO_CCACHE)
-CCACHE_VALUE=	"${CCACHE_BIN}"
-.else
-CCACHE_VALUE=	false
-.endif
-
 do-configure:
-	${SED} -E \
-		-e 's,%PREFIX%,${PREFIX},' \
-		-e 's,%SYSCONFDIR%,${PREFIX}/etc,' \
-		-e 's,%MANDIR%,${MANPREFIX}/man,' \
-		-e 's,%PYTHON_CMD%,${PYTHON_CMD},' \
-		-e 's,%CHANNEL%,${PKGNAMESUFFIX:Ustable:S/^-//},' \
-		-e 's,%TARGET%,${_RUST_TARGET},' \
-		-e 's,%CCACHE%,${CCACHE_VALUE},' \
-		-e 's,%CC%,${CC},' \
-		-e 's,%CXX%,${CXX},' \
-		-e 's,%DOCS%,${_RUST_BUILD_DOCS},' \
-		< ${FILESDIR}/config.toml \
-		> ${WRKSRC}/config.toml
+# Check that the running kernel has COMPAT_FREEBSD11 required by lang/rust post-ino64
+	@${SETENV} CC="${CC}" OPSYS="${OPSYS}" OSVERSION="${OSVERSION}" WRKDIR="${WRKDIR}" \
+		${SH} ${SCRIPTSDIR}/rust-compat11-canary.sh
+	@${ECHO_CMD} '[build]' > ${WRKSRC}/config.toml
+	@${ECHO_CMD} 'vendor=true' >> ${WRKSRC}/config.toml
+	@${ECHO_CMD} 'extended=true' >> ${WRKSRC}/config.toml
+	@${ECHO_CMD} 'python="${PYTHON_CMD}"' >> ${WRKSRC}/config.toml
+	@${ECHO_CMD} 'docs=${_RUST_BUILD_DOCS}' >> ${WRKSRC}/config.toml
+	@${ECHO_CMD} 'verbose=2' >> ${WRKSRC}/config.toml
+	@${ECHO_CMD} '[install]' >> ${WRKSRC}/config.toml
+	@${ECHO_CMD} 'prefix="${PREFIX}"' >> ${WRKSRC}/config.toml
+	@${ECHO_CMD} 'sysconfdir="${PREFIX}/etc"' >> ${WRKSRC}/config.toml
+	@${ECHO_CMD} 'mandir="${MANPREFIX}/man"' >> ${WRKSRC}/config.toml
+	@${ECHO_CMD} '[rust]' >> ${WRKSRC}/config.toml
+	@${ECHO_CMD} 'channel="${PKGNAMESUFFIX:Ustable:S/^-//}"' >> ${WRKSRC}/config.toml
+	@${ECHO_CMD} 'default-linker="${CC}"' >> ${WRKSRC}/config.toml
+	@${ECHO_CMD} 'verbose-tests=true' >> ${WRKSRC}/config.toml
+	@${ECHO_CMD} '[llvm]' >> ${WRKSRC}/config.toml
+.if defined(WITH_CCACHE_BUILD) && !defined(NO_CCACHE)
+	@${ECHO_CMD} 'ccache="${CCACHE_BIN}"' >> ${WRKSRC}/config.toml
+.else
+	@${ECHO_CMD} 'ccache=false' >> ${WRKSRC}/config.toml
+.endif
 # no need to build a crosscompiler for these targets
 .if ${ARCH} == aarch64 || ${ARCH} == armv6 || ${ARCH} == armv7 || ${ARCH} == powerpc64
-	@${REINPLACE_CMD} -e 's,^#targets =.*,targets = "${_LLVM_TARGET}",' \
-		-e 's,^#experimental-targets =.*,experimental-targets = "",' \
-		${WRKSRC}/config.toml
+	@${ECHO_CMD} 'targets="${_LLVM_TARGET}"' >> ${WRKSRC}/config.toml
+	@${ECHO_CMD} 'experimental-targets=""' >> ${WRKSRC}/config.toml
 .endif
+	@${ECHO_CMD} '[target.${_RUST_TARGET}]' >> ${WRKSRC}/config.toml
+	@${ECHO_CMD} 'cc="${CC}"' >> ${WRKSRC}/config.toml
+	@${ECHO_CMD} 'cxx="${CXX}"' >> ${WRKSRC}/config.toml
+.if ${PKGNAMESUFFIX:U} == -nightly && ${ARCH} == i386
+# https://github.com/rust-lang/rust/pull/68361
+	@${PRINTF} '#!/bin/sh\nexec ${CC} -Wl,-znotext "$$@"' > ${WRKDIR}/cc-wrapper
+	@${CHMOD} +x ${WRKDIR}/cc-wrapper
+	@${ECHO_CMD} 'linker="${WRKDIR}/cc-wrapper"' >> ${WRKSRC}/config.toml
+.else
+	@${ECHO_CMD} 'linker="${CC}"' >> ${WRKSRC}/config.toml
+.endif
+	@${ECHO_CMD} '[dist]' >> ${WRKSRC}/config.toml
+	@${ECHO_CMD} 'src-tarball=false' >> ${WRKSRC}/config.toml
 	@${REINPLACE_CMD} -e 's,%CC%,${CC},g' \
 		${WRKSRC}/src/librustc_llvm/build.rs \
 		${WRKSRC}/src/bootstrap/native.rs
@@ -175,7 +190,6 @@ do-build:
 	cd ${WRKSRC} && \
 	${SETENV} ${X_PY_ENV} \
 	${X_PY_CMD} build \
-		--verbose \
 		--config ./config.toml \
 		--jobs ${MAKE_JOBS_NUMBER}
 
@@ -184,7 +198,6 @@ do-install:
 	${SETENV} ${X_PY_ENV} \
 		DESTDIR=${STAGEDIR} \
 	${X_PY_CMD} 'install' \
-		--verbose \
 		--config ./config.toml \
 		--jobs ${MAKE_JOBS_NUMBER}
 
@@ -239,7 +252,6 @@ do-test:
 	${SETENV} ${X_PY_ENV} \
 		ALLOW_NONZERO_RLIMIT_CORE=1 \
 	${X_PY_CMD} test \
-		--verbose \
 		--config ./config.toml \
 		--jobs ${MAKE_JOBS_NUMBER}
 
@@ -248,15 +260,12 @@ makesum:
 	${MAKE} -D_RUST_MAKESUM_GUARD makesum ARCH=${ONLY_FOR_ARCHS:O:[1]} DISTINFO_FILE=${DISTINFO_FILE}.tmp
 .for arch in ${ONLY_FOR_ARCHS:O:[2..-1]}
 	${MAKE} -D_RUST_MAKESUM_GUARD makesum PPC_ABI=ELFv1 ARCH=${arch} DISTINFO_FILE=${DISTINFO_FILE}.${arch}
-	${GREP} ${_RUST_ARCH_${arch}:U${arch}} ${DISTINFO_FILE}.${arch} >> ${DISTINFO_FILE}.tmp
-.for file in ${DISTFILES_${arch}}
-	${GREP} ${file:S,:, ,:[1]} ${DISTINFO_FILE}.${arch} >> ${DISTINFO_FILE}.tmp
-.endfor
+	${SED} 1d ${DISTINFO_FILE}.${arch} >> ${DISTINFO_FILE}.tmp
 	${RM} ${DISTINFO_FILE}.${arch}
 .endfor
 .if ${ONLY_FOR_ARCHS:Mpowerpc64}
 	${MAKE} -D_RUST_MAKESUM_GUARD makesum PPC_ABI=ELFv2 ARCH=powerpc64 DISTINFO_FILE=${DISTINFO_FILE}.powerpc64-elfv2
-	${GREP} ${_RUST_ARCH_powerpc64:Upowerpc64} ${DISTINFO_FILE}.powerpc64-elfv2 >> ${DISTINFO_FILE}.tmp
+	${SED} 1d ${DISTINFO_FILE}.powerpc64-elfv2 >> ${DISTINFO_FILE}.tmp
 	${RM} ${DISTINFO_FILE}.powerpc64-elfv2
 .endif
 	${AWK} '!seen[$$0]++' ${DISTINFO_FILE}.tmp > ${DISTINFO_FILE}

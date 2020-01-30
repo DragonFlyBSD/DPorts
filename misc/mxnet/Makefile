@@ -3,7 +3,7 @@
 PORTNAME=	mxnet
 DISTVERSION=	1.6.0
 DISTVERSIONSUFFIX=	.rc0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	misc # machine-learning
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
@@ -16,7 +16,6 @@ COMMENT=	Apache MXNet: Ultra-scalable deep learning framework
 LICENSE=	APACHE20
 
 BUILD_DEPENDS=	googletest>0:devel/googletest \
-		${LOCALBASE}/include/cblas.h:math/cblas \
 		${LOCALBASE}/include/dnnl.h:math/mkl-dnn
 LIB_DEPENDS=	libdmlc.so:devel/dmlc-core \
 		liblapack.so:math/lapack \
@@ -49,6 +48,12 @@ OPENCV_CMAKE_BOOL=	USE_OPENCV
 OPENCV_LIB_DEPENDS=	libopencv_core.so:graphics/opencv-core \
 			libopencv_videoio.so:graphics/opencv
 
+.include <bsd.port.pre.mk>
+
+.if ${ARCH} != x86_64 && ${ARCH} != i386
+CMAKE_OFF+=	USE_SSE
+.endif
+
 post-patch:
 .for lib in mkldnn.h mkldnn_types.h
 	@${RM} ${WRKSRC}/include/mkldnn/${lib}
@@ -58,4 +63,4 @@ post-patch:
 post-install-CPP-on: # https://github.com/apache/incubator-mxnet/issues/17080
 	@cd ${STAGEDIR}${PREFIX} && ${RM} include/mxnet-cpp/.gitignore include/mxnet-cpp/CPPLINT.cfg
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>

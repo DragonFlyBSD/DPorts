@@ -1,6 +1,6 @@
---- third_party/blink/renderer/platform/fonts/font_cache.cc.orig	2019-04-30 22:23:02 UTC
+--- third_party/blink/renderer/platform/fonts/font_cache.cc.orig	2019-09-09 21:55:26 UTC
 +++ third_party/blink/renderer/platform/fonts/font_cache.cc
-@@ -67,7 +67,7 @@ namespace blink {
+@@ -76,7 +76,7 @@ static const char kColorEmojiLocale[] = "und-Zsye";
  
  SkFontMgr* FontCache::static_font_manager_ = nullptr;
  
@@ -9,7 +9,7 @@
  float FontCache::device_scale_factor_ = 1.0;
  #endif
  
-@@ -90,7 +90,7 @@ FontCache::FontCache()
+@@ -115,7 +115,7 @@ FontCache::FontCache()
  FontPlatformData* FontCache::SystemFontPlatformData(
      const FontDescription& font_description) {
    const AtomicString& family = FontCache::SystemFontFamily();

@@ -1,0 +1,11 @@
+--- src/data_mgmt/data_import.c.intermediate	2020-01-29 08:43:31.000000000 +0000
++++ src/data_mgmt/data_import.c
+@@ -39,7 +39,7 @@
+ #include <openssl/evp.h>
+ #include <openssl/err.h>
+ 
+-#if OPENSSL_VERSION_NUMBER < 0x1010000fL
++#if OPENSSL_VERSION_NUMBER < 0x1010000fL || defined(LIBRESSL_VERSION_NUMBER)
+ #define	RSA_get0_n(x)	((x)->n)
+ #define	RSA_get0_e(x)	((x)->e)
+ #define	RSA_get0_d(x)	((x)->d)

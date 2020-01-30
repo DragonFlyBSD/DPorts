@@ -1,0 +1,5 @@
+
+# zrj: just to prevent empty USE_GL, USE_SDL and USE_XORG
+.ifdef SERVER_ONLY
+USES:=	${USES:Ngl:Nsdl:Nxorg}
+.endif

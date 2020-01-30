@@ -1,7 +1,0 @@
-#!/bin/sh
-#
-# $FreeBSD: head/cad/brickutils/files/brickutils.in 347198 2014-03-06 13:34:59Z nemysis $
-#
-
-cd "%%DATADIR%%"
-exec %%PYTHON_CMD%% ./pyBrickUtils.py "${@}"

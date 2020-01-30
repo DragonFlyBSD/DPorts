@@ -1,4 +1,4 @@
---- chrome/browser/ui/views/frame/opaque_browser_frame_view.cc.orig	2019-06-04 18:55:18 UTC
+--- chrome/browser/ui/views/frame/opaque_browser_frame_view.cc.orig	2019-09-09 21:55:11 UTC
 +++ chrome/browser/ui/views/frame/opaque_browser_frame_view.cc
 @@ -47,7 +47,7 @@
  #include "ui/views/window/vector_icons/vector_icons.h"
@@ -9,7 +9,7 @@
  #include "ui/views/controls/menu/menu_runner.h"
  #endif
  
-@@ -353,7 +353,7 @@ void OpaqueBrowserFrameView::ButtonPressed(views::Butt
+@@ -352,7 +352,7 @@ void OpaqueBrowserFrameView::ButtonPressed(views::Butt
  void OpaqueBrowserFrameView::OnMenuButtonClicked(views::Button* source,
                                                   const gfx::Point& point,
                                                   const ui::Event* event) {
@@ -17,8 +17,8 @@
 +#if defined(OS_LINUX) || defined(OS_BSD)
    views::MenuRunner menu_runner(frame()->GetSystemMenuModel(),
                                  views::MenuRunner::HAS_MNEMONICS);
-   menu_runner.RunMenuAt(browser_view()->GetWidget(), window_icon_,
-@@ -479,7 +479,7 @@ bool OpaqueBrowserFrameView::EverHasVisibleBackgroundT
+   menu_runner.RunMenuAt(
+@@ -478,7 +478,7 @@ bool OpaqueBrowserFrameView::EverHasVisibleBackgroundT
  
  OpaqueBrowserFrameView::FrameButtonStyle
  OpaqueBrowserFrameView::GetFrameButtonStyle() const {

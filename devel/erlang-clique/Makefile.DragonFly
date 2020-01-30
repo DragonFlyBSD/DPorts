@@ -1,5 +1,0 @@
-
-# disable warnings_as_errors by default
-dfly-patch:
-	${REINPLACE_CMD} -e 's@warnings_as_errors,@@g' \
-		${WRKSRC}/rebar.config
