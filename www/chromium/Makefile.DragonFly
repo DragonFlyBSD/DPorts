@@ -19,6 +19,10 @@ KERBEROS_LIB_DEPENDS+=	libkrb5.so:security/krb5
 # XXX - Jumbo builds are faster but some work needs to be done for it to work in dfly.
 #GN_ARGS:= ${GN_ARGS:Nuse_jumbo_build=true}
 
+.if ${DFLYVERSION} < 500709
+EXTRA_PATCHES += ${DFLY_PATCHDIR}/extra-patch_release_5_6
+.endif
+
 dfly-patch:
 	# Setup nodejs dependency
 	@${MKDIR} ${WRKSRC}/third_party/node/dragonfly/node-dragonfly-x64/bin
