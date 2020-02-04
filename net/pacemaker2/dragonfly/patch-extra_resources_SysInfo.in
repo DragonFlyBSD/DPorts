@@ -1,22 +1,22 @@
---- extra/resources/SysInfo.in.intermediate	2019-04-02 12:20:27 UTC
+--- extra/resources/SysInfo.in.orig	2020-02-03 19:59:51 UTC
 +++ extra/resources/SysInfo.in
-@@ -173,6 +173,19 @@ SysInfoStats() {
- 	    cpu_cores=`system_profiler SPHardwareDataType | awk -F': ' '/^Number Of/ {print $2; exit}'`
- 	    cpu_load=`uptime | awk '{ print $10 }'`
- 	;;
-+	"DragonFly")
-+	    cpu_type=`sysctl -in hw.model`
-+	    cpu_speed=`sysctl -in hw.clockrate`
-+	    cpu_cores=`sysctl -in hw.ncpu`
-+	    cpu_load=`sysctl -in vm.loadavg | awk '{ print $4 }'`
+@@ -162,6 +162,19 @@ SysInfoStats() {
+             cpu_cores=$(system_profiler SPHardwareDataType | awk -F': ' '/^Number Of/ {print $2; exit}')
+             cpu_load=$(uptime | awk '{ print $10 }')
+         ;;
++        "DragonFly")
++            cpu_type=`sysctl -in hw.model`
++            cpu_speed=`sysctl -in hw.clockrate`
++            cpu_cores=`sysctl -in hw.ncpu`
++            cpu_load=`sysctl -in vm.loadavg | awk '{ print $4 }'`
 +
-+	    free_pages=`sysctl -in vm.stats.vm.v_free_count`
-+	    page_count=`sysctl -in vm.stats.vm.v_page_count`
-+	    page_size=`sysctl -in vm.stats.vm.v_page_size`
++            free_pages=`sysctl -in vm.stats.vm.v_free_count`
++            page_count=`sysctl -in vm.stats.vm.v_page_count`
++            page_size=`sysctl -in vm.stats.vm.v_page_size`
 +
-+	    mem=`expr $free_pages \* $page_size / 1024 / 1024`M
-+	    mem_total=`expr $page_count \* $page_size / 1024 / 1024`M
-+	;;
- 	"FreeBSD")
- 	    cpu_type=`sysctl -in hw.model`
- 	    cpu_speed=`sysctl -in dev.cpu.0.freq`
++            mem=`expr $free_pages \* $page_size / 1024 / 1024`M
++            mem_total=`expr $page_count \* $page_size / 1024 / 1024`M
++        ;;
+         "FreeBSD")
+             cpu_type=$(sysctl -in hw.model)
+             cpu_speed=$(sysctl -in dev.cpu.0.freq)
