@@ -1,11 +1,11 @@
---- extra/resources/ping.intermediate	2019-04-02 12:20:27 UTC
+--- extra/resources/ping.orig	2020-02-03 20:02:20 UTC
 +++ extra/resources/ping
-@@ -274,7 +274,7 @@ ping_check() {
- 	case `uname` in
- 	    Linux) p_args="-n -q -W $OCF_RESKEY_timeout -c $OCF_RESKEY_attempts";;
- 	    Darwin) p_args="-n -q -t $OCF_RESKEY_timeout -c $OCF_RESKEY_attempts -o";;
--	    FreeBSD) p_args="-n -q -t $OCF_RESKEY_timeout -c $OCF_RESKEY_attempts -o";;
-+	    FreeBSD|DragonFly) p_args="-n -q -t $OCF_RESKEY_timeout -c $OCF_RESKEY_attempts -o";;
- 	    *) ocf_log err "Unknown host type: `uname`"; exit $OCF_ERR_INSTALLED;;
- 	esac
+@@ -257,7 +257,7 @@ ping_check() {
+         case $(uname) in
+             Linux) p_args="-n -q -W $OCF_RESKEY_timeout -c $OCF_RESKEY_attempts";;
+             Darwin) p_args="-n -q -t $OCF_RESKEY_timeout -c $OCF_RESKEY_attempts -o";;
+-            FreeBSD) p_args="-n -q -t $OCF_RESKEY_timeout -c $OCF_RESKEY_attempts -o";;
++            FreeBSD|DragonFly) p_args="-n -q -t $OCF_RESKEY_timeout -c $OCF_RESKEY_attempts -o";;
+             *) ocf_log err "Unknown host type: $(uname)"; exit $OCF_ERR_INSTALLED;;
+         esac
  
