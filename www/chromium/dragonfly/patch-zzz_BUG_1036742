@@ -1,0 +1,246 @@
+--- ./ui/base/x/x11_shm_image_pool.h.orig	2020-01-16 21:51:11.000000000 +0000
++++ ./ui/base/x/x11_shm_image_pool.h	2020-02-05 18:33:25.749649000 +0000
+@@ -19,7 +19,7 @@
+       public PlatformEventDispatcher {
+  public:
+   X11ShmImagePool(base::TaskRunner* host_task_runner,
+-                  base::TaskRunner* event_task_runner,
++                  scoped_refptr<base::SequencedTaskRunner> event_task_runner,
+                   XDisplay* display,
+                   XID drawable,
+                   Visual* visual,
+--- ./ui/base/x/x11_shm_image_pool_base.h.orig	2020-01-16 21:51:11.000000000 +0000
++++ ./ui/base/x/x11_shm_image_pool_base.h	2020-02-05 18:53:30.286228000 +0000
+@@ -14,6 +14,7 @@
+ #include "base/macros.h"
+ #include "base/memory/ref_counted.h"
+ #include "base/task_runner.h"
++#include "base/sequenced_task_runner.h"
+ #include "third_party/skia/include/core/SkBitmap.h"
+ #include "third_party/skia/include/core/SkCanvas.h"
+ #include "ui/base/x/x11_util.h"
+@@ -30,7 +31,7 @@
+     : public base::RefCountedThreadSafe<XShmImagePoolBase> {
+  public:
+   XShmImagePoolBase(base::TaskRunner* host_task_runner,
+-                    base::TaskRunner* event_task_runner,
++                    scoped_refptr<base::SequencedTaskRunner> event_task_runner,
+                     XDisplay* display,
+                     XID drawable,
+                     Visual* visual,
+@@ -67,7 +68,7 @@
+   bool CanDispatchXEvent(XEvent* xev);
+ 
+   base::TaskRunner* const host_task_runner_;
+-  base::TaskRunner* const event_task_runner_;
++  const scoped_refptr<base::SequencedTaskRunner> event_task_runner_;
+ 
+ #ifndef NDEBUG
+   bool dispatcher_registered_ = false;
+--- ./ui/base/x/x11_shm_image_pool_base.cc.orig	2020-02-05 17:04:14.198757000 +0000
++++ ./ui/base/x/x11_shm_image_pool_base.cc	2020-02-05 18:36:13.983345000 +0000
+@@ -70,14 +70,14 @@
+ XShmImagePoolBase::SwapClosure::~SwapClosure() = default;
+ 
+ XShmImagePoolBase::XShmImagePoolBase(base::TaskRunner* host_task_runner,
+-                                     base::TaskRunner* event_task_runner,
++                                     scoped_refptr<base::SequencedTaskRunner> event_task_runner,
+                                      XDisplay* display,
+                                      XID drawable,
+                                      Visual* visual,
+                                      int depth,
+                                      std::size_t frames_pending)
+     : host_task_runner_(host_task_runner),
+-      event_task_runner_(event_task_runner),
++      event_task_runner_(std::move(event_task_runner)),
+       display_(display),
+       drawable_(drawable),
+       visual_(visual),
+--- ./ui/base/x/x11_software_bitmap_presenter.h.orig	2020-01-16 21:51:11.000000000 +0000
++++ ./ui/base/x/x11_software_bitmap_presenter.h	2020-02-05 18:19:11.880523000 +0000
+@@ -8,6 +8,7 @@
+ #include "base/component_export.h"
+ #include "base/macros.h"
+ #include "base/memory/scoped_refptr.h"
++#include "base/sequenced_task_runner.h"
+ #include "third_party/skia/include/core/SkRefCnt.h"
+ #include "ui/gfx/geometry/rect.h"
+ #include "ui/gfx/geometry/size.h"
+@@ -33,11 +34,12 @@
+ 
+   X11SoftwareBitmapPresenter(gfx::AcceleratedWidget widget,
+                              base::TaskRunner* host_task_runner,
+-                             base::TaskRunner* event_task_runner);
++                             scoped_refptr<base::SequencedTaskRunner> event_task_runner);
+ 
+   ~X11SoftwareBitmapPresenter();
+ 
+   bool ShmPoolReady() const;
++
+   bool Resize(const gfx::Size& pixel_size);
+   SkCanvas* GetSkCanvas();
+   void EndPaint(sk_sp<SkSurface> sk_surface, const gfx::Rect& damage_rect);
+@@ -57,6 +59,8 @@
+                               GC gc,
+                               const void* data);
+ 
++  void FlushAfterPutImage();
++
+   gfx::AcceleratedWidget widget_;
+   XDisplay* display_;
+   GC gc_;
+@@ -69,6 +73,7 @@
+   scoped_refptr<ui::XShmImagePoolBase> shm_pool_;
+   bool needs_swap_ = false;
+ 
++  scoped_refptr<base::TaskRunner> event_task_runner_;
+   gfx::Size viewport_pixel_size_;
+ 
+   DISALLOW_COPY_AND_ASSIGN(X11SoftwareBitmapPresenter);
+--- ./ui/base/x/x11_software_bitmap_presenter.cc.orig	2020-01-16 21:51:11.000000000 +0000
++++ ./ui/base/x/x11_software_bitmap_presenter.cc	2020-02-05 18:15:08.462049000 +0000
+@@ -12,6 +12,7 @@
+ #include <memory>
+ #include <utility>
+ 
++#include "base/bind.h"
+ #include "base/macros.h"
+ #include "third_party/skia/include/core/SkCanvas.h"
+ #include "third_party/skia/include/core/SkImageInfo.h"
+@@ -117,15 +118,14 @@
+ 
+   XPutImage(display, widget, gc, bg.get(), x, y, x, y, width, height);
+ 
+-  XFlush(display);
+   return true;
+ }
+ 
+ X11SoftwareBitmapPresenter::X11SoftwareBitmapPresenter(
+     gfx::AcceleratedWidget widget,
+     base::TaskRunner* host_task_runner,
+-    base::TaskRunner* event_task_runner)
+-    : widget_(widget), display_(gfx::GetXDisplay()), gc_(nullptr) {
++    scoped_refptr<base::SequencedTaskRunner> event_task_runner)
++    : widget_(widget), display_(gfx::GetXDisplay()), gc_(nullptr), event_task_runner_(event_task_runner) {
+   DCHECK_NE(widget_, gfx::kNullAcceleratedWidget);
+   gc_ = XCreateGC(display_, widget_, 0, nullptr);
+   memset(&attributes_, 0, sizeof(attributes_));
+@@ -162,6 +162,27 @@
+   return shm_pool_ && shm_pool_->Ready();
+ }
+ 
++void X11SoftwareBitmapPresenter::FlushAfterPutImage() {
++  // Ensure the new window content appears immediately. On a TYPE_UI thread we
++  // can rely on the message loop to flush for us so XFlush() isn't necessary.
++  // However, this code can run on a different thread and would have to wait for
++  // the TYPE_UI thread to no longer be idle before a flush happens.
++  XFlush(display_);
++  // Work around a race condition caused by XFlush above.  Explanation: XFlush()
++  // flushes all requests and *also* reads events.  It's unclear why it does
++  // this, but there's no alternative Xlib function that flushes the requests
++  // and *doesn't* read any events, so this workaround is necessary. In
++  // |event_task_runner_|'s message loop, poll() is called on the underlying
++  // XDisplay's fd to dispatch toplevel events.  When the fd is readable, poll()
++  // exits and we (via Xlib) check for new events by read()ing from the fd.  But
++  // if the event dispatcher is currently dispatching an event, then our call to
++  // XFlush() may read events into the event queue which will make the fd
++  // blocking since there's no more data to read, so poll() won't wake up until
++  // a new event comes, which may take a long time.  Forcing the event loop to
++  // wake up with a dummy event fixes the race condition.
++  event_task_runner_->PostTask(FROM_HERE, base::BindOnce([] {}));
++}
++
+ bool X11SoftwareBitmapPresenter::Resize(const gfx::Size& pixel_size) {
+   viewport_pixel_size_ = pixel_size;
+   // Fallback to the non-shm codepath when |composite_| is true, which only
+@@ -198,7 +219,7 @@
+                      rect.x(), rect.y(), rect.x(), rect.y(), rect.width(),
+                      rect.height(), x11::True)) {
+       needs_swap_ = true;
+-      XFlush(display_);
++      FlushAfterPutImage();
+       return;
+     }
+     skia_pixmap = shm_pool_->CurrentBitmap().pixmap();
+@@ -211,6 +232,7 @@
+       CompositeBitmap(display_, widget_, rect.x(), rect.y(), rect.width(),
+                       rect.height(), attributes_.depth, gc_,
+                       skia_pixmap.addr())) {
++    FlushAfterPutImage();
+     return;
+   }
+ 
+@@ -274,11 +296,7 @@
+                       rect.x(), rect.y(), rect.width(), rect.height());
+   }
+ 
+-  // Ensure the new window content appears immediately. On a TYPE_UI thread we
+-  // can rely on the message loop to flush for us so XFlush() isn't necessary.
+-  // However, this code can run on a different thread and would have to wait for
+-  // the TYPE_UI thread to no longer be idle before a flush happens.
+-  XFlush(display_);
++  FlushAfterPutImage();
+ }
+ 
+ void X11SoftwareBitmapPresenter::OnSwapBuffers(
+--- ./ui/base/x/x11_shm_image_pool.cc.orig	2020-01-16 21:51:11.000000000 +0000
++++ ./ui/base/x/x11_shm_image_pool.cc	2020-02-05 18:34:00.230495000 +0000
+@@ -12,14 +12,14 @@
+ namespace ui {
+ 
+ X11ShmImagePool::X11ShmImagePool(base::TaskRunner* host_task_runner,
+-                                 base::TaskRunner* event_task_runner,
++                                 scoped_refptr<base::SequencedTaskRunner> event_task_runner,
+                                  XDisplay* display,
+                                  XID drawable,
+                                  Visual* visual,
+                                  int depth,
+                                  std::size_t frames_pending)
+     : XShmImagePoolBase(host_task_runner,
+-                        event_task_runner,
++                        std::move(event_task_runner),
+                         display,
+                         drawable,
+                         visual,
+--- ./components/viz/service/display_embedder/software_output_device_x11.cc.orig	2020-01-16 21:51:01.000000000 +0000
++++ ./components/viz/service/display_embedder/software_output_device_x11.cc	2020-02-05 18:45:24.619078000 +0000
+@@ -25,10 +25,10 @@
+ 
+ SoftwareOutputDeviceX11::SoftwareOutputDeviceX11(
+     gfx::AcceleratedWidget widget,
+-    base::TaskRunner* gpu_task_runner)
++    scoped_refptr<base::SequencedTaskRunner> gpu_task_runner)
+     : x11_software_bitmap_presenter_(widget,
+                                      task_runner_.get(),
+-                                     gpu_task_runner) {
++                                     std::move(gpu_task_runner)) {
+   DCHECK_CALLED_ON_VALID_THREAD(thread_checker_);
+ }
+ 
+--- ./components/viz/service/display_embedder/software_output_device_x11.h.orig	2020-01-16 21:51:01.000000000 +0000
++++ ./components/viz/service/display_embedder/software_output_device_x11.h	2020-02-05 19:17:09.880553000 +0000
+@@ -19,8 +19,9 @@
+ 
+ class VIZ_SERVICE_EXPORT SoftwareOutputDeviceX11 : public SoftwareOutputDevice {
+  public:
+-  SoftwareOutputDeviceX11(gfx::AcceleratedWidget widget,
+-                          base::TaskRunner* gpu_task_runner);
++  SoftwareOutputDeviceX11(
++                          gfx::AcceleratedWidget widget,
++                          scoped_refptr<base::SequencedTaskRunner> gpu_task_runner);
+ 
+   ~SoftwareOutputDeviceX11() override;
+ 
+--- ./components/viz/service/gl/gpu_service_impl.h.orig	2020-01-16 21:51:01.000000000 +0000
++++ ./components/viz/service/gl/gpu_service_impl.h	2020-02-05 19:25:07.819141000 +0000
+@@ -236,7 +236,9 @@
+   }
+   gpu::Scheduler* scheduler() { return scheduler_.get(); }
+ 
+-  base::TaskRunner* main_runner() { return main_runner_.get(); }
++  scoped_refptr<base::SingleThreadTaskRunner>& main_runner() {
++    return main_runner_;
++  }
+ 
+   gpu::GpuWatchdogThread* watchdog_thread() { return watchdog_thread_.get(); }
+ 
