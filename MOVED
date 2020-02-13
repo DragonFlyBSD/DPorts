@@ -8927,7 +8927,6 @@ www/tomcat8||2019-07-06|Has expired: EoL since 2018-06-30
 devel/libevent-hiphop||2019-07-10|Has expired: Obsoleted with removal of lang/hiphop-php
 textproc/apache-solr3|textproc/apache-solr|2019-07-12|Obsolete
 misc/tcb||2019-07-13|Has expired: Abandonware that uses sys/dir.h
-editors/xed||2019-07-13|Has expired: Abandonware using sys/dir.h
 databases/gtksql||2019-07-13|Has expired: Abandonware using sys/dir.h
 security/snortreport||2019-07-16|Has expired: Abandonware
 net-p2p/zetacoin-nox11|net-p2p/zetacoin-daemon|2019-07-17|Renamed to better align with net-p2p/bitcoin port
@@ -9071,10 +9070,7 @@ mail/fetchmail64|mail/fetchmail|2019-09-28|mail/fetchmail now provides the same 
 devel/rubygem-grape_logging181|devel/rubygem-grape_logging|2019-09-29|Obsolete, please use devel/rubygem-grape_logging
 devel/py-pip-tools3|devel/py-pip-tools|2019-09-30|Use devel/py-pip-tools instead
 textproc/py-openpyxl24|textproc/py-openpyxl|2019-09-30|Has expired: Use textproc/py-openpyxl instead
-textproc/rubygem-elasticsearch-api6|textproc/rubygem-elasticsearch-api|2019-09-30|Has expired: Usetextproc/rubygem-elasticsearch-api instead
-textproc/rubygem-elasticsearch-transport6|textproc/rubygem-elasticsearch-transport|2019-09-30|Has expired: Usetextproc/rubygem-elasticsearch-transport instead
 textproc/rubygem-elasticsearch-xpack6|textproc/rubygem-elasticsearch-xpack|2019-09-30|Has expired: Usetextproc/rubygem-elasticsearch-xpack instead
-textproc/rubygem-elasticsearch6|textproc/rubygem-elasticsearch|2019-09-30|Has expired: Usetextproc/rubygem-elasticsearch instead
 devel/rubygem-sprockets-rails|devel/rubygem-sprockets-rails-rails4|2019-09-30|Rename to match our rubygem- port naming
 java/linux-oracle-jdk9|java/openjdk11|2019-09-30|Has expired: No longer maintained upstream, please migrate to openjdk11
 java/linux-oracle-jdk10|java/openjdk11|2019-09-30|Has expired: No longer maintained upstream, please migrate to openjdk11
@@ -9858,3 +9854,508 @@ graphics/py-pivy-devel|graphics/py-pivy|2020-01-17|This is now the stable versio
 net/py-coherence||2020-01-18|fails with python-3.X, and python-2.7 is EOLed (GH bug#32)
 net/py-upnp-inspector||2020-01-18|Missing dependency: net/py-coherence is python-2.7-only
 security/py-pymacaroons-pynacl|security/py-pymacaroons|2020-01-20|Rename to match upstream naming
+math/jakarta-commons-math3|math/apache-commons-math|2020-01-24|Renamed upstream
+audio/py-mpd2|audio/py-python-mpd2|2020-01-25|Rename to match upstream naming
+devel/py-microversion-parse|devel/py-microversion_parse|2020-01-25|Rename to match upstream naming
+audio/gstreamer1-plugins-spc|audio/gstreamer1-plugins-gme|2020-01-26|spc was removed inflavour for the gme plugin
+accessibility/py-papi||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+archivers/py-czipfile||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+audio/boodler||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+audio/dir2ogg||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+audio/jokosher||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+audio/mpdbrowser||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+audio/nekobee||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+audio/patchage||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+audio/py-ao||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+audio/py-id3||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+audio/py-shout||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+audio/py-speex||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+audio/pytone||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+audio/solfege||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+audio/trommler||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+benchmarks/pybench||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+biology/pycogent||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+biology/unanimity||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+cad/pythoncad||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+chinese/bg5pdf||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+comms/py-libimobiledevice||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+converters/py-bcode||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+converters/py-iconv||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+databases/gadfly||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+databases/metakit||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+databases/openark-kit||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+databases/py-MySQLdb55||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+databases/py-MySQLdb56||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+databases/py-forgetsql||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+databases/py-oops||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+databases/py-rrdtool_lgpl||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+deskutils/conkyemail||2020-01-27|Has expired: No longer maintained by upstream
+deskutils/cycle||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+deskutils/everygui||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+deskutils/ganyremote||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+deskutils/pypanel||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+deskutils/taskcoach||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+deskutils/tel||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+deskutils/tnote||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+deskutils/vnc2flv||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+deskutils/wammu||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+devel/bbfreeze||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+devel/bzr-builder||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+devel/bzr-colo||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+devel/bzr-externals||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+devel/bzr-git||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+devel/bzr-gtk||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+devel/bzr-loom||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+devel/bzr-pipeline||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+devel/bzr-rewrite||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+devel/bzr-scmproj||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+devel/bzr-stats||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+devel/bzr-svn||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+devel/bzr-upload||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+devel/ditrack||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+devel/drpython||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+devel/epydoc||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+devel/fb303||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+devel/fnorb||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+devel/gazpacho||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+devel/libmpsse||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+devel/open-usp-tukubai||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+devel/phpbt||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+devel/py-anonfunc||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+devel/py-bison||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+devel/py-fortran||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+devel/py-grouch||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+devel/py-mwlib.rl||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+devel/py-nagioscheck||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+devel/py-ncurses||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+devel/py-ocempgui||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+devel/py-palm||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+devel/py-pyechonest||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+devel/py-resourcepackage||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+devel/py-rlcompleter2||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+devel/py-spark||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+devel/py-xoltar-toolkit||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+devel/py-zkpython||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+devel/pychecker||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+devel/pymacs||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+devel/trac-bitten||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+devel/wxGlade||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+emulators/catapult||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+emulators/dynagui||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+finance/mybudget||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+finance/sabernetdcs-client||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+games/4stattack||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+games/barbie_seahorse_adventures||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+games/bombz||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+games/bouncy||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+games/bubbros||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+games/childsplay||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+games/crossfire-server||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+games/duckmaze||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+games/farblazer||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+games/gbottler||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+games/glchess||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+games/gretools||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+games/kye||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+games/liquidwar||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+games/mopesnake||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+games/nelly||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+games/oneisenough||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+games/ptkei||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+games/py-poker-eval||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+games/pycadia||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+games/pydance||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+games/pysycache||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+games/pythonchess||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+games/pytowerdefense||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+games/rtb||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+games/schiff||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+games/schwarzweiss||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+games/secrettower||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+games/slune||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+games/super_mario_bros_python||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+games/tuxfighter||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+games/twitch||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+games/vegastrike||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+games/zephulor||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+graphics/boxer||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+graphics/electrix||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+graphics/exact-image||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+graphics/gnofract4d||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+graphics/gsculpt||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+graphics/imgtops||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+graphics/imgv||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+graphics/lcms-python||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+graphics/mirage||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+graphics/partio||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+graphics/py-exif||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+graphics/py-gd||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+graphics/py-paint||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+graphics/pygts||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+graphics/pysvg||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+irc/py-supybot-plugins||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+japanese/kana-no-quiz||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+lang/py-prolog||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+lang/sdcc||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+mail/archivemail||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+mail/mailfmt||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+mail/py-libgmail||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+mail/py-ppolicy||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+mail/rss2email2||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+mail/svnmailer||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+math/biggles||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+math/py-gato||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+math/py-gnuplot||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+math/py-mathdom||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+math/py-probstat||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+math/py-rpy||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+misc/gnome-osd||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+misc/gonvert||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+misc/metalink-editor||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+misc/py-YABT||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+misc/xdg-menu||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+multimedia/devede||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+multimedia/gdvrecv||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+multimedia/mmpython||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+multimedia/pymp||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+net/gtknetcat||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+net/ntlmaps||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+net/polyorb||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+net/py-zsi||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+net/pythondirector||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+net/sippy_b2bua||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+net-im/py-jabber||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+net-im/py-jabberbot||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+net-im/py-libturpial||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+net-im/py-xmpppy-irc||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+net-mgmt/pdagent-integrations||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+net-p2p/tribler||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+news/papercut||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+print/pkipplib||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+print/pkpgcounter||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+print/ttfquery||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+science/gwyddion||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+science/psychopy||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+science/py-hcluster||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+science/py-pyteomics.biolccc||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+science/pycdf||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+security/blindelephant||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+security/cfv||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+security/fsh||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+security/gcipher||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+security/kedpm||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+security/parano||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+security/py-cryptkit||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+security/py-fchksum||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+security/py-mhash||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+security/py-pow||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+security/py-pycryptopp||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+security/py-trustedpickle||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+security/py-twofish||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+security/revelation||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+security/spike-proxy||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+security/umit||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+sysutils/feather||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+sysutils/py-bcfg2||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+sysutils/rdiff-backup-devel||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+sysutils/tentakel||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+textproc/archmage||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+textproc/py-asv||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+textproc/py-dsv||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+textproc/py-excelerator||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+textproc/py-jaxml||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+textproc/py-libtre||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+textproc/py-pyctpp2||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+textproc/py-rstyoutube||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+textproc/py-rxp||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+textproc/py-syck||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+textproc/py-tvgrab||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+textproc/py-xlwriter||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+textproc/py2html||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+textproc/queequeg||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+textproc/rubber||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+textproc/silvercity||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+textproc/xsv||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+textproc/yould||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+www/cherokee||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+www/cppcms||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+www/gaeutilities||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+www/google-sitemapgen||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+www/jtoolkit||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+www/linkchecker||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+www/ljdump||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+www/monast||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+www/py-django-paging||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+www/py-fcgi||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+www/py-http-parser||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+www/py-meld||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+www/py-mt||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+www/py-rhodecode||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+www/qooxdoo||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+www/varnish-libvmod-maxminddb||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+x11/metisse||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+x11/ooxcb||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+x11-toolkits/diorite||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+x11-toolkits/nucleo||2020-01-27|Has expired: Unmaintained, only used by deprecated x11/metisse
+x11-toolkits/py-gui||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+x11-wm/ede||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+x11-wm/obapps||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+x11-wm/obkey||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+x11-wm/obmenu||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+x11-wm/plwm||2020-01-27|Has expired: Unmaintained, uses EOLed python27
+games/vegastrike-data||2020-01-27|Removed
+textproc/gnome-doc-utils||2020-01-27|Abandoned upstream, Python 2.7 only
+java/jakarta-commons-discovery|java/apache-commons-discovery|2020-01-29|Renamed upstream
+java/jakarta-commons-commons-beanutils|java/apache-commons-beanutils|2020-01-30|Renamed upstream
+www/py-dj21-django-auth-ldap|www/py-dj22-django-auth-ldap|2020-01-31|Has expired: Django 2.1 is now End-of-Life (Since December 2 2019) and no longer supported. Switch to Django 2.2+ versions of this port as soon as possible
+www/py-dj21-django-crispy-forms|www/py-dj22-django-crispy-forms|2020-01-31|Has expired: Django 2.1 is now End-of-Life (Since December 2 2019) and no longer supported. Switch to Django 2.2+ versions of this port as soon as possible
+www/sogo3-activesync|www/sogo4|2020-01-31|Has expired: Deprecated, replaced by www/sogo4
+devel/sope3|devel/sope4|2020-01-31|Has expired: Deprecated, replaced by devel/sope4
+www/py-dj21-django-mptt|www/py-dj22-django-mptt|2020-01-31|Has expired: Django 2.1 is now End-of-Life (Since December 2 2019) and no longer supported. Switch to Django 2.2+ versions of this port as soon as possible
+graphics/py-willow11|graphics/py-willow|2020-01-31|Has expired: Use graphics/py-willow instead
+www/py-dj21-django-tables2|www/py-dj22-django-tables2|2020-01-31|Has expired: Django 2.1 is now End-of-Life (Since December 2 2019) and no longer supported. Switch to Django 2.2+ versions of this port as soon as possible
+www/py-dj21-django-debug-toolbar|www/py-dj22-django-debug-toolbar|2020-01-31|Has expired: Django 2.1 is now End-of-Life (Since December 2 2019) and no longer supported. Switch to Django 2.2+ versions of this port as soon as possible
+security/krb5-115|security/krb5|2020-01-31|Has expired: EOL one year after the release of krb5 1.17
+www/py-dj21-django-taggit|www/py-dj22-django-taggit|2020-01-31|Has expired: Django 2.1 is now End-of-Life (Since December 2 2019) and no longer supported. Switch to Django 2.2+ versions of this port as soon as possible
+www/py-dj21-django-cors-headers|www/py-dj22-django-cors-headers|2020-01-31|Has expired: Django 2.1 is now End-of-Life (Since December 2 2019) and no longer supported. Switch to Django 2.2+ versions of this port as soon as possible
+graphics/py-imgurpython||2020-01-31|Has expired: No longer supported by upstream
+www/py-dj21-django-taggit-serializer|www/py-dj22-django-taggit-serializer|2020-01-31|Has expired: Django 2.1 is now End-of-Life (Since December 2 2019) and no longer supported. Switch to Django 2.2+ versions of this port as soon as possible
+www/py-dj21-django-filter|www/py-dj22-django-filter|2020-01-31|Has expired: Django 2.1 is now End-of-Life (Since December 2 2019) and no longer supported. Switch to Django 2.2+ versions of this port as soon as possible
+www/py-dj21-django-timezone-field|www/py-dj22-django-timezone-field|2020-01-31|Has expired: Django 2.1 is now End-of-Life (Since December 2 2019) and no longer supported. Switch to Django 2.2+ versions of this port as soon as possible
+devel/py-xarray011|devel/py-xarray|2020-01-31|Has expired: Use devel/py-xarray instead
+www/py-django-modelcluster4|www/py-django-modelcluster|2020-01-31|Has expired: Use www/py-django-modelcluster instead
+devel/py-semantic_version26|devel/py-semantic_version|2020-01-31|Has expired: Use devel/py-semantic_version instead
+www/py-dj21-django-js-asset|www/py-dj22-django-js-asset|2020-01-31|Has expired: Django 2.1 is now End-of-Life (Since December 2 2019) and no longer supported. Switch to Django 2.2+ versions of this port as soon as possible
+www/py-dj21-drf-yasg||2020-01-31|Has expired: Django 2.1 is now End-of-Life (Since December 2 2019) and no longer supported. Switch to Django 2.2+ versions of this port as soon as possible
+www/sogo3|www/sogo4|2020-01-31|Has expired: Deprecated, replaced by www/sogo4
+www/py-dj21-djangorestframework|www/py-dj22-djangorestframework|2020-01-31|Removed, part of expired Django 2.1
+www/py-django21|www/py-django22|2020-01-31|Has expired: Django 2.1 is now End-of-Life (Since December 2 2019). Switch to Django 2.2+ as soon as possible
+devel/py-Products.ATContentTypes||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+devel/py-Products.ATReferenceBrowserWidget||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+devel/py-Products.Archetypes||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+devel/py-Products.CMFTestCase||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+devel/py-Products.Marshall||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+devel/py-Products.PasswordResetTool||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+devel/py-Products.PloneTestCase||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+devel/py-Products.PortalTransforms||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+devel/py-Products.ResourceRegistries||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+devel/py-archetypes.querywidget||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+devel/py-archetypes.referencebrowserwidget||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+devel/py-archetypes.schemaextender||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+devel/py-five.customerize||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+finance/tryton28||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_account||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_account_asset||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_account_be||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_account_invoice||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_account_invoice_history||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_account_invoice_line_standalone||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_account_product||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_account_statement||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_account_stock_anglo_saxon||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_account_stock_continental||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_analytic_account||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_analytic_invoice||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_analytic_purchase||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_analytic_sale||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_calendar||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_calendar_classification||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_calendar_scheduling||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_calendar_todo||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_carrier||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_carrier_percentage||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_carrier_weight||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_company||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_company_work_time||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_country||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_currency||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_dashboard||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_ldap_authentication||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_ldap_connection||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_party||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_party_siret||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_party_vcarddav||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_product||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_product_attribute||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_product_cost_fifo||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_product_cost_history||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_product_measurements||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_product_price_list||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_production||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_project||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_project_invoice||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_project_plan||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_project_revenue||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_purchase||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_purchase_invoice_line_standalone||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_purchase_shipment_cost||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_sale||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_sale_opportunity||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_sale_price_list||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_sale_shipment_cost||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_sale_supply||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_sale_supply_drop_shipment||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_stock||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_stock_forecast||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_stock_inventory_location||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_stock_location_sequence||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_stock_lot||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_stock_product_location||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_stock_split||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_stock_supply||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_stock_supply_day||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_stock_supply_forecast||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_stock_supply_production||2020-02-03|Has expired: Outdated, uses EOLed python27
+finance/trytond28_timesheet||2020-02-03|Has expired: Outdated, uses EOLed python27
+french/trytond28_account_fr||2020-02-03|Has expired: Outdated, uses EOLed python27
+german/trytond28_account_de_skr03||2020-02-03|Has expired: Outdated, uses EOLed python27
+security/py-Products.PlonePAS||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+security/py-borg.localrole||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+security/py-plone.app.openid||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+security/py-plone.keyring||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+security/py-plone.openid||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+security/py-plone.protect||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+security/py-plone.session||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/plone||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-Products.CMFPlone||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-Products.PloneLDAP||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-Products.TinyMCE||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-collective.easytemplate||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.alterego||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.app.blob||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.app.caching||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.app.collection||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.app.content||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.app.contentlisting||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.app.contentmenu||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.app.contentrules||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.app.controlpanel||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.app.customerize||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.app.dexterity||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.app.discussion||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.app.folder||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.app.form||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.app.i18n||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.app.imaging||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.app.iterate||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.app.jquery||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.app.jquerytools||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.app.layout||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.app.ldap||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.app.linkintegrity||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.app.locales||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.app.portlets||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.app.querystring||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.app.redirector||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.app.registry||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.app.search||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.app.testing||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.app.textfield||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.app.theming||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.app.upgrade||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.app.users||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.app.uuid||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.app.viewletmanager||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.app.vocabularies||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.app.workflow||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.app.z3cform||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.autoform||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.batching||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.behavior||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.browserlayer||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.cachepurging||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.caching||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.contentrules||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.dexterity||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.fieldsets||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.folder||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.formwidget.namedfile||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.i18n||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.indexer||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.intelligenttext||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.locking||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.memoize||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.namedfile||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.outputfilters||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.portlet.collection||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.portlet.static||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.portlets||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.registry||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.resource||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.resourceeditor||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.rfc822||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.scale||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.schemaeditor||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.stringinterp||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.subrequest||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.supermodel||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.synchronize||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.testing||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.theme||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.transformchain||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.uuid||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plone.z3cform||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plonetheme.classic||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/py-plonetheme.sunburst||2020-02-03|Has expired: Outdated version of plone 4.3 (legacy), uses EOLed python27
+www/trytond28_google_maps||2020-02-03|Has expired: Outdated, uses EOLed python27
+archivers/rubygem-rubyzip12|archivers/rubygem-rubyzip|2020-02-03|Has expired: use archivers/rubyge-rubyzip instead
+www/py-blogofile||2020-02-04|Has expired: Outdated, uses EOLed python27
+www/clearsilver-python||2020-02-04|Has expired: Unmaintained, uses EOLed python27
+x11-toolkits/py-sexy||2020-02-04|Has expired: Unmaintained, uses EOLed python27
+x11-themes/xfce-evolution|x11-themes/classiclooks|2020-02-04|Project renamed
+math/mandelbulber2|graphics/mandelbulber|2020-02-04|Remove duplicate port
+devel/rubygem-web-console-rails5|devel/rubygem-web-console3-rails5|2020-02-05|Rename to avoid confusion with rubygem-web-console 4.x
+devel/rubygem-web-console-rails50|devel/rubygem-web-console3-rails50|2020-02-05|Rename to avoid confusion with rubygem-web-console 4.x
+devel/rubygem-web-console-rails52|devel/rubygem-web-console3-rails52|2020-02-05|Rename to avoid confusion with rubygem-web-console 4.x
+devel/py-DocumentTemplate||2020-02-06|Has expired: Outdated, uses EOLed python27
+devel/py-Missing||2020-02-06|Has expired: Outdated, uses EOLed python27
+devel/py-MultiMapping||2020-02-06|Has expired: Outdated, uses EOLed python27
+devel/py-Persistence||2020-02-06|Has expired: Outdated, uses EOLed python27
+devel/py-Products.BTreeFolder2||2020-02-06|Has expired: Outdated, uses EOLed python27
+devel/py-Products.CMFActionIcons||2020-02-06|Has expired: Outdated, uses EOLed python27
+devel/py-Products.CMFCalendar||2020-02-06|Has expired: Outdated, uses EOLed python27
+devel/py-Products.CMFCore||2020-02-06|Has expired: Outdated, uses EOLed python27
+devel/py-Products.CMFDefault||2020-02-06|Has expired: Outdated, uses EOLed python27
+devel/py-Products.CMFDiffTool||2020-02-06|Has expired: Outdated, uses EOLed python27
+devel/py-Products.CMFDynamicViewFTI||2020-02-06|Has expired: Outdated, uses EOLed python27
+devel/py-Products.CMFEditions||2020-02-06|Has expired: Outdated, uses EOLed python27
+devel/py-Products.CMFFormController||2020-02-06|Has expired: Outdated, uses EOLed python27
+devel/py-Products.CMFPlacefulWorkflow||2020-02-06|Has expired: Outdated, uses EOLed python27
+devel/py-Products.CMFQuickInstallerTool||2020-02-06|Has expired: Outdated, uses EOLed python27
+devel/py-Products.CMFUid||2020-02-06|Has expired: Outdated, uses EOLed python27
+devel/py-Products.DCWorkflow||2020-02-06|Has expired: Outdated, uses EOLed python27
+devel/py-Products.ExtendedPathIndex||2020-02-06|Has expired: Outdated, uses EOLed python27
+devel/py-Products.ExternalMethod||2020-02-06|Has expired: Outdated, uses EOLed python27
+devel/py-Products.GenericSetup||2020-02-06|Has expired: Outdated, uses EOLed python27
+devel/py-Products.LDAPMultiPlugins||2020-02-06|Has expired: Outdated, uses EOLed python27
+devel/py-Products.MIMETools||2020-02-06|Has expired: Outdated, uses EOLed python27
+devel/py-Products.MimetypesRegistry||2020-02-06|Has expired: Outdated, uses EOLed python27
+devel/py-Products.OFSP||2020-02-06|Has expired: Outdated, uses EOLed python27
+devel/py-Products.PluginRegistry||2020-02-06|Has expired: Outdated, uses EOLed python27
+devel/py-Products.PythonScripts||2020-02-06|Has expired: Outdated, uses EOLed python27
+devel/py-Products.StandardCacheManagers||2020-02-06|Has expired: Outdated, uses EOLed python27
+devel/py-Products.ZCTextIndex||2020-02-06|Has expired: Outdated, uses EOLed python27
+devel/py-Products.ZCatalog||2020-02-06|Has expired: Outdated, uses EOLed python27
+devel/py-Products.ZSQLMethods||2020-02-06|Has expired: Outdated, uses EOLed python27
+devel/py-Record||2020-02-06|Has expired: Outdated, uses EOLed python27
+devel/py-initgroups||2020-02-06|Has expired: Outdated, uses EOLed python27
+devel/py-zExceptions||2020-02-06|Has expired: Outdated, uses EOLed python27
+mail/py-Products.MailHost||2020-02-06|Has expired: Outdated, uses EOLed python27
+security/py-AccessControl||2020-02-06|Has expired: Outdated, uses EOLed python27
+security/py-Products.PluggableAuthService||2020-02-06|Has expired: Outdated, uses EOLed python27
+www/py-collective.templateengines||2020-02-06|Has expired: Outdated, uses EOLed python27
+www/zope213||2020-02-06|Has expired: Outdated, uses EOLed python27
+misc/py-glance||2020-02-06|Has expired: Outdated, uses EOLed python27
+devel/py-memory_profiler|devel/py-memory-profiler|2020-02-08|Rename to match upstream naming
+graphics/wayland-protocols-devel|graphics/wayland-protocols|2020-02-10|Merged into master port
+devel/hachoir-core||2020-02-11|Has expired: Outdated, uses EOLed python27
+devel/hachoir-parser||2020-02-11|Has expired: Outdated, uses EOLed python27
+devel/hachoir-regex||2020-02-11|Has expired: Outdated, uses EOLed python27
+sysutils/hachoir-metadata||2020-02-11|Has expired: Outdated, uses EOLed python27
+sysutils/hachoir-subfile||2020-02-11|Has expired: Outdated, uses EOLed python27
+sysutils/hachoir-urwid||2020-02-11|Has expired: Outdated, uses EOLed python27
+sysutils/hachoir-wx||2020-02-11|Has expired: Outdated, uses EOLed python27
+net/py-xmlrpc||2020-02-12|Has expired: Unmaintained, uses EOLed python27
+www/py-django-jsonfield2|www/py-jsonfield2|2020-02-13|Rename to match upstream naming
+www/py-dj22-django-jsonfield2|www/py-dj22-jsonfield2|2020-02-13|Rename to match upstream naming

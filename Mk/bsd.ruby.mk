@@ -171,13 +171,22 @@ RUBY_PORTREVISION=	0
 RUBY_PORTEPOCH=		1
 RUBY26=			""	# PLIST_SUB helpers
 
+. elif ${RUBY_VER} == 2.7
+#
+# Ruby 2.7
+#
+RUBY_VERSION=		2.7.0
+RUBY_PORTREVISION=	1
+RUBY_PORTEPOCH=		1
+RUBY27=			""	# PLIST_SUB helpers
+
 # When adding a version, please keep the comment in
 # Mk/bsd.default-versions.mk in sync.
 . else
 #
 # Other versions
 #
-IGNORE=	Only ruby 2.4, 2.5 and 2.6 are supported
+IGNORE=	Only ruby 2.4, 2.5, 2.6 and 2.7 are supported
 _INVALID_RUBY_VER=	1
 . endif
 .endif # defined(RUBY_VER)
@@ -187,6 +196,7 @@ _INVALID_RUBY_VER=	1
 RUBY24?=		"@comment "
 RUBY25?=		"@comment "
 RUBY26?=		"@comment "
+RUBY27?=		"@comment "
 
 .if defined(BROKEN_RUBY${RUBY_VER:R}${RUBY_VER:E})
 .if ${BROKEN_RUBY${RUBY_VER:R}${RUBY_VER:E}} == "yes"
@@ -294,7 +304,8 @@ PLIST_SUB+=		${PLIST_RUBY_DIRS:C,DIR="(${LOCALBASE}|${PREFIX})/,DIR=",} \
 			RUBY_DEFAULT_SUFFIX="${RUBY_DEFAULT_SUFFIX}" \
 			RUBY24=${RUBY24} \
 			RUBY25=${RUBY25} \
-			RUBY26=${RUBY26}
+			RUBY26=${RUBY26} \
+			RUBY27=${RUBY27}
 
 .if defined(USE_RUBY_RDOC)
 MAKE_ENV+=	RUBY_RDOC=${RUBY_RDOC}
