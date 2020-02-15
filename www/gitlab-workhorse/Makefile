@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	gitlab-workhorse
-PORTVERSION=	8.18.0
+PORTVERSION=	8.20.0
+PORTREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	mfechner@FreeBSD.org
@@ -20,12 +21,12 @@ MAKE_ENV=	GOFLAGS="${GO_BUILDFLAGS}"
 USE_GITLAB=	yes
 GL_ACCOUNT=	gitlab-org
 # Find the commit hash here: https://gitlab.com/gitlab-org/gitlab-workhorse/tags
-GL_COMMIT=	9a9a83e7f92ceea5fb0e1542d604171c58615e28
+GL_COMMIT=	3a34323b104be89e92db49828268f0bfd831e75a
 
 # for go dependencies
 USE_GITHUB=	nodefault
 # generated with: make gomod-vendor
-# 51dd
+# 53dd
 GH_TUPLE=	\
 		BurntSushi:toml:v0.3.1:burntsushi_toml/vendor/github.com/BurntSushi/toml \
 		DataDog:dd-trace-go:v1.7.0:datadog_dd_trace_go/vendor/gopkg.in/DataDog/dd-trace-go.v1 \
@@ -43,7 +44,7 @@ GH_TUPLE=	\
 		golang:lint:d0100b6bd8b3:golang_lint/vendor/golang.org/x/lint \
 		golang:net:d28f0bde5980:golang_net/vendor/golang.org/x/net \
 		golang:protobuf:v1.3.2:golang_protobuf/vendor/github.com/golang/protobuf \
-		golang:sys:fde4db37ae7a:golang_sys/vendor/golang.org/x/sys \
+		golang:sys:d101bd2416d5:golang_sys/vendor/golang.org/x/sys \
 		golang:text:v0.3.0:golang_text/vendor/golang.org/x/text \
 		golang:tools:6e04913cbbac:golang_tools/vendor/golang.org/x/tools \
 		gomodule:redigo:v2.0.0:gomodule_redigo/vendor/github.com/gomodule/redigo \
@@ -75,8 +76,7 @@ GH_TUPLE=	\
 		uber:jaeger-client-go:v2.15.0:uber_jaeger_client_go/vendor/github.com/uber/jaeger-client-go \
 		uber:jaeger-lib:v1.5.0:uber_jaeger_lib/vendor/github.com/uber/jaeger-lib
 
-GL_TUPLE=	\
-		gitlab-org:gitaly:acc6be5a2cba43e4a39d05a7c995062fb9279ee6:gitlab_org_gitaly/vendor/gitlab.com/gitlab-org/gitaly \
+GL_TUPLE=	gitlab-org:gitaly:acc6be5a2cba43e4a39d05a7c995062fb9279ee6:gitlab_org_gitaly/vendor/gitlab.com/gitlab-org/gitaly \
 		gitlab-org:labkit:3253d7975ca73714779c0a1fc95a27fb678071b6:gitlab_org_labkit/vendor/gitlab.com/gitlab-org/labkit
 		# Mirrors for the following packages are not currently known, please look them up and handle these tuples manually:
 		#	::v0.0.1-2019.2.2:group_name/vendor/honnef.co/go/tools
