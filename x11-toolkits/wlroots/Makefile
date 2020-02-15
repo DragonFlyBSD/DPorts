@@ -2,7 +2,11 @@
 
 PORTNAME=	wlroots
 DISTVERSION=	0.10.0
+PORTREVISION=	2
 CATEGORIES=	x11-toolkits
+
+PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+PATCHFILES+=	f0594fb73225.patch:-p1 144d2041adfb.patch:-p1
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Modular Wayland compositor library
@@ -38,7 +42,7 @@ OPTIONS_SUB=	yes
 
 CONSOLEKIT_DESC=	DRM sessions without root using ConsoleKit2
 CONSOLEKIT_PATCH_SITES=	https://github.com/myfreeweb/${GH_PROJECT}/commit/:ck2
-CONSOLEKIT_PATCHFILES=	606b009fcdd1.patch:-p1:ck2 # see #1467 upstream
+CONSOLEKIT_PATCHFILES=	e8cc137111bc.patch:-p1:ck2 # see #1467 upstream
 CONSOLEKIT_LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 			libconsolekit.so:sysutils/consolekit2
 CONSOLEKIT_MESON_ENABLED=	consolekit2
@@ -48,7 +52,7 @@ CONSOLEKIT_MESON_ENABLED=	consolekit2
 
 X11_LIB_DEPENDS=libxcb-errors.so:x11/xcb-util-errors \
 		libxcb-icccm.so:x11/xcb-util-wm
-X11_RUN_DEPENDS=Xwayland:x11-servers/xwayland
+X11_RUN_DEPENDS=xwayland-devel>0:x11-servers/xwayland-devel
 X11_USE=	XORG=x11,xcb
 X11_MESON_ENABLED=x11-backend xcb-icccm xwayland
 
