@@ -3,8 +3,7 @@
 
 PORTNAME=	cmake
 # Remember to update devel/cmake-doc and devel/cmake-gui as well.
-DISTVERSION=	3.16.2
-PORTREVISION=	2
+DISTVERSION=	3.16.4
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/Kitware/CMake/releases/download/v${DISTVERSION}/ \
 		https://www.cmake.org/files/v${PORTVERSION}/
@@ -41,7 +40,7 @@ MANPAGES_BUILD_DEPENDS=	sphinx-build:textproc/py-sphinx
 MANPAGES_CONFIGURE_ON=	--sphinx-man
 
 CPACK_DESC=		Enable FreeBSD generator in CPack (experimental)
-CPACK_LIB_DEPENDS=	libpkg.so:ports-mgmt/pkg
+CPACK_LIB_DEPENDS=	libpkg.so:${PKG_ORIGIN}
 CPACK_USES_OFF=		libarchive
 # When CPACK is on, uses base libarchive and won't pass stage-qa
 
