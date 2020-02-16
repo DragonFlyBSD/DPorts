@@ -3,6 +3,7 @@
 
 PORTNAME=	beets
 PORTVERSION=	1.4.9
+PORTREVISION=	2
 CATEGORIES=	audio python
 MASTER_SITES=	CHEESESHOP
 
@@ -12,7 +13,8 @@ COMMENT=	Media library management system for obsessive-compulsive music geeks
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}jellyfish>=0:devel/py-jellyfish@${PY_FLAVOR} \
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}confuse>=1.0.0:devel/py-confuse@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}jellyfish>=0:devel/py-jellyfish@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}munkres10>=0:math/py-munkres10@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}musicbrainzngs>=0.4:audio/py-musicbrainzngs@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}mutagen>=1.33:audio/py-mutagen@${PY_FLAVOR} \
@@ -81,7 +83,7 @@ LASTIMPORT_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}requests>=0:www/py-requests@${PY_
 LYRICS_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}requests>=0:www/py-requests@${PY_FLAVOR}
 LYRICS_GOOGLE_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}beautifulsoup>=4:www/py-beautifulsoup@${PY_FLAVOR}
 METASYNC_DBUS_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}dbus>=0:devel/py-dbus@${PY_FLAVOR}
-MPDSTATS_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mpd2>=0.4.2:audio/py-mpd2@${PY_FLAVOR}
+MPDSTATS_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}python-mpd2>=0.4.2:audio/py-python-mpd2@${PY_FLAVOR}
 PLEXUPDATE_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}requests>=0:www/py-requests@${PY_FLAVOR}
 REPLAYGAIN_RUN_DEPENDS=	mp3gain>=0:audio/mp3gain \
 			aacgain>=0:audio/aacgain
