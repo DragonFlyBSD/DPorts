@@ -1,4 +1,7 @@
 
+# possible makefile race
+MAKE_JOBS_UNSAFE=yes
+
 USES+=	gmake
 
 CXXFLAGS+=	-Wno-error=sign-compare
