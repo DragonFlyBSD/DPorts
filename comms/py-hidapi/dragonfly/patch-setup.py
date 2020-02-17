@@ -1,11 +1,13 @@
---- setup.py.intermediate	2019-05-07 13:49:43 UTC
+--- setup.py.intermediate	2020-02-17 11:05:07 UTC
 +++ setup.py
-@@ -79,7 +79,7 @@ if sys.platform.startswith('win') or sys
+@@ -81,8 +81,8 @@ if sys.platform.startswith('win') or sys
          )
      ]
  
 -if 'bsd' in sys.platform:
+-    if 'freebsd' in sys.platform:
 +if 'bsd' in sys.platform or 'dragonfly' in sys.platform:
-     libs = ['usb-1.0']
-     if system_hidapi == True:
-         libs.append('hidapi-libusb')
++    if 'freebsd' in sys.platform or 'dragonfly' in sys.platform:
+         libs = ['usb', 'hidapi']
+         include_dirs_bsd = ['/usr/local/include/hidapi']
+     else:
