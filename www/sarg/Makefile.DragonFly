@@ -1,1 +1,4 @@
+
+USES+=	alias
+
 CFLAGS+=	-Wno-format-truncation -Wno-format-overflow
