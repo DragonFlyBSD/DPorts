@@ -1,11 +1,6 @@
 MASTER_SITES+=	https://leaf.dragonflybsd.org/~mneumann/rust/:bootstrap \
 		https://leaf.dragonflybsd.org/~mneumann/rust/:bootstrap
 
-RUST_BOOTSTRAP_VERSION=	1.39.0
+RUST_BOOTSTRAP_VERSION=	1.40.0
 
-# non static bootstrap
-X_PY_ENV+="RUST_BACKTRACE=1"
-# required to build libssh2-sys
-X_PY_ENV+="LIBSSH2_SYS_USE_PKG_CONFIG=1"
-
-X_PY_ENV+="LD_LIBRARY_PATH=${WRKSRC}/build/${_RUST_TARGET}/stage0/lib:/usr/lib/gcc80"
+MAKE_ENV+="LD_LIBRARY_PATH=${WRKSRC}/build/${_RUST_TARGET}/stage0/lib:/usr/lib/gcc80"
