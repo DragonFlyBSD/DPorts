@@ -1,3 +1,8 @@
 
 # configure script checks for vendor with cc --version
 CONFIGURE_ARGS+=	CC=gcc
+
+# zrj: disable knl for binutils-2.34 gas(1)
+dfly-patch:
+	${REINPLACE_CMD} -e 's@haswell,knl/@haswell/@g' \
+		${WRKSRC}/configure
