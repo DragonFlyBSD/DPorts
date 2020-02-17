@@ -1,0 +1,11 @@
+--- src/helper/CMakeLists.txt.intermediate	2020-02-17 15:40:29.000000000 +0000
++++ src/helper/CMakeLists.txt
+@@ -37,7 +37,7 @@ if(PAM_FOUND)
+ else()
+     target_link_libraries(sddm-helper crypt)
+ endif()
+-if("${CMAKE_SYSTEM_NAME}" STREQUAL "FreeBSD")
++if("${CMAKE_SYSTEM_NAME}" MATCHES "FreeBSD|DragonFly")
+     target_link_libraries(sddm-helper util)
+ endif()
+ 
