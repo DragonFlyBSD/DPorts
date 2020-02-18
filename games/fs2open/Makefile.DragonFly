@@ -1,4 +1,6 @@
 
+USES+=	alias
+
 dfly-patch:
 	${REINPLACE_CMD} -e '/MATCHES/s@\("FreeBSD\)"@\1|DragonFly"@g' \
 		${WRKSRC}/cmake/platforms.cmake
