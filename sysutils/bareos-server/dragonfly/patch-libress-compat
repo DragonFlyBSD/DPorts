@@ -1,6 +1,6 @@
---- core/src/lib/crypto_openssl.cc.orig	2019-12-12 17:04:14 UTC
+--- core/src/lib/crypto_openssl.cc.orig	2020-02-11 15:58:26 UTC
 +++ core/src/lib/crypto_openssl.cc
-@@ -130,6 +130,13 @@ IMPLEMENT_ASN1_FUNCTIONS(RecipientInfo)
+@@ -138,6 +138,13 @@ IMPLEMENT_ASN1_FUNCTIONS(RecipientInfo)
  IMPLEMENT_ASN1_FUNCTIONS(SignatureData)
  IMPLEMENT_ASN1_FUNCTIONS(CryptoData)
  
