@@ -3,7 +3,7 @@
 
 PORTNAME=	scilab
 PORTVERSION=	5.5.2
-PORTREVISION=	22
+PORTREVISION=	24
 CATEGORIES=	math cad java
 MASTER_SITES=	https://www.scilab.org/download/${PORTVERSION}/
 DISTFILES=	${DISTNAME}-src${EXTRACT_SUFX}
@@ -52,7 +52,7 @@ PLIST_SUB=	SHLIB_VER=${PORTVERSION}
 OPTIONS_DEFINE=	GUI OCAML TK
 OPTIONS_RADIO=	BLAS
 OPTIONS_RADIO_BLAS=	ATLAS NETLIB OPENBLAS
-OPTIONS_DEFAULT=	GUI NETLIB OCAML TK
+OPTIONS_DEFAULT=	NETLIB TK
 OPTIONS_SUB=	yes
 
 ATLAS_USES=	blaslapack:atlas
@@ -80,7 +80,7 @@ _GUI_DEPENDS+=	${LOCALBASE}/share/java/fop/build/fop.jar:textproc/fop \
 		${JAVALIBDIR}/commons-io.jar:devel/apache-commons-io \
 		${JAVALIBDIR}/xmlgraphics-commons.jar:graphics/xmlgraphics-commons
 # Code quality:
-_GUI_DEPENDS+=	${JAVALIBDIR}/commons-beanutils.jar:java/jakarta-commons-beanutils \
+_GUI_DEPENDS+=	${JAVALIBDIR}/commons-beanutils.jar:java/apache-commons-beanutils \
 		${JAVALIBDIR}/antlr.jar:devel/antlr \
 		${JAVALIBDIR}/junit4.jar:java/junit \
 		${LOCALBASE}/bin/splint:devel/splint
