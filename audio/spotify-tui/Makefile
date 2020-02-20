@@ -1,0 +1,260 @@
+# $FreeBSD$
+
+PORTNAME=	spotify-tui
+DISTVERSIONPREFIX=	v
+DISTVERSION=	0.14.0
+CATEGORIES=	audio
+
+MAINTAINER=	vulcan@wired.sh
+COMMENT=	Spotify for the terminal written in Rust
+
+LICENSE=	MIT
+LICENSE_FILE=	${WRKSRC}/LICENSE
+
+USES=		cargo localbase:ldflags python:3.6+,build ssl:build xorg
+USE_GITHUB=	yes
+GH_ACCOUNT=	Rigellute
+USE_XORG=	xcb
+
+CARGO_CRATES=	aho-corasick-0.7.6 \
+		ansi_term-0.11.0 \
+		anyhow-1.0.26 \
+		arc-swap-0.4.4 \
+		arrayref-0.3.5 \
+		arrayvec-0.5.1 \
+		atty-0.2.13 \
+		autocfg-0.1.7 \
+		backtrace-0.3.43 \
+		backtrace-sys-0.1.32 \
+		base64-0.10.1 \
+		base64-0.11.0 \
+		bitflags-1.2.1 \
+		blake2b_simd-0.5.9 \
+		block-0.1.6 \
+		bumpalo-3.1.2 \
+		byteorder-1.3.2 \
+		bytes-0.4.12 \
+		bytes-0.5.4 \
+		c2-chacha-0.2.3 \
+		cassowary-0.3.0 \
+		cc-1.0.47 \
+		cfg-if-0.1.10 \
+		chrono-0.4.9 \
+		clap-2.33.0 \
+		clipboard-0.5.0 \
+		clipboard-win-2.2.0 \
+		cloudabi-0.0.3 \
+		constant_time_eq-0.1.4 \
+		core-foundation-0.6.4 \
+		core-foundation-sys-0.6.2 \
+		crossbeam-utils-0.6.6 \
+		crossterm-0.14.2 \
+		crossterm-0.15.0 \
+		crossterm_winapi-0.5.1 \
+		crossterm_winapi-0.6.1 \
+		darling-0.9.0 \
+		darling_core-0.9.0 \
+		darling_macro-0.9.0 \
+		derefable-0.1.0 \
+		derive_builder-0.7.2 \
+		derive_builder_core-0.5.0 \
+		dirs-2.0.2 \
+		dirs-sys-0.3.4 \
+		dotenv-0.13.0 \
+		dtoa-0.4.4 \
+		either-1.5.3 \
+		encoding_rs-0.8.20 \
+		env_logger-0.6.2 \
+		failure-0.1.6 \
+		failure_derive-0.1.6 \
+		fnv-1.0.6 \
+		foreign-types-0.3.2 \
+		foreign-types-shared-0.1.1 \
+		fuchsia-cprng-0.1.1 \
+		fuchsia-zircon-0.3.3 \
+		fuchsia-zircon-sys-0.3.3 \
+		futures-0.3.1 \
+		futures-channel-0.3.1 \
+		futures-core-0.3.1 \
+		futures-executor-0.3.1 \
+		futures-io-0.3.1 \
+		futures-macro-0.3.1 \
+		futures-sink-0.3.1 \
+		futures-task-0.3.1 \
+		futures-util-0.3.1 \
+		getrandom-0.1.13 \
+		h2-0.2.1 \
+		heck-0.3.1 \
+		hermit-abi-0.1.3 \
+		http-0.2.0 \
+		http-body-0.3.1 \
+		httparse-1.3.4 \
+		humantime-1.3.0 \
+		hyper-0.13.2 \
+		hyper-tls-0.4.1 \
+		ident_case-1.0.1 \
+		idna-0.1.5 \
+		idna-0.2.0 \
+		indexmap-1.3.0 \
+		iovec-0.1.4 \
+		itertools-0.8.1 \
+		itoa-0.4.4 \
+		js-sys-0.3.35 \
+		kernel32-sys-0.2.2 \
+		lazy_static-1.4.0 \
+		libc-0.2.65 \
+		linked-hash-map-0.5.2 \
+		lock_api-0.3.1 \
+		log-0.4.8 \
+		malloc_buf-0.0.6 \
+		matches-0.1.8 \
+		memchr-2.2.1 \
+		mime-0.3.14 \
+		mime_guess-2.0.1 \
+		mio-0.6.21 \
+		miow-0.2.1 \
+		native-tls-0.2.3 \
+		net2-0.2.33 \
+		nom-4.2.3 \
+		num-integer-0.1.41 \
+		num-traits-0.2.9 \
+		num_cpus-1.11.1 \
+		objc-0.2.7 \
+		objc-foundation-0.1.1 \
+		objc_id-0.1.1 \
+		openssl-0.10.25 \
+		openssl-probe-0.1.2 \
+		openssl-sys-0.9.52 \
+		parking_lot-0.10.0 \
+		parking_lot_core-0.7.0 \
+		percent-encoding-1.0.1 \
+		percent-encoding-2.1.0 \
+		pin-project-0.4.8 \
+		pin-project-internal-0.4.8 \
+		pin-project-lite-0.1.4 \
+		pin-utils-0.1.0-alpha.4 \
+		pkg-config-0.3.17 \
+		ppv-lite86-0.2.6 \
+		proc-macro-hack-0.5.11 \
+		proc-macro-nested-0.1.3 \
+		proc-macro2-0.4.30 \
+		proc-macro2-1.0.6 \
+		quick-error-1.2.2 \
+		quote-0.6.13 \
+		quote-1.0.2 \
+		rand-0.6.5 \
+		rand-0.7.2 \
+		rand_chacha-0.1.1 \
+		rand_chacha-0.2.1 \
+		rand_core-0.3.1 \
+		rand_core-0.4.2 \
+		rand_core-0.5.1 \
+		rand_hc-0.1.0 \
+		rand_hc-0.2.0 \
+		rand_isaac-0.1.1 \
+		rand_jitter-0.1.4 \
+		rand_os-0.1.3 \
+		rand_pcg-0.1.2 \
+		rand_xorshift-0.1.1 \
+		random-0.12.2 \
+		rdrand-0.4.0 \
+		redox_syscall-0.1.56 \
+		redox_users-0.3.1 \
+		regex-1.3.1 \
+		regex-syntax-0.6.12 \
+		remove_dir_all-0.5.2 \
+		reqwest-0.10.1 \
+		rspotify-0.8.0 \
+		rust-argon2-0.5.1 \
+		rustc-demangle-0.1.16 \
+		rustc-serialize-0.3.24 \
+		ryu-1.0.2 \
+		schannel-0.1.16 \
+		scopeguard-1.0.0 \
+		security-framework-0.3.4 \
+		security-framework-sys-0.3.3 \
+		serde-1.0.104 \
+		serde_derive-1.0.104 \
+		serde_json-1.0.47 \
+		serde_urlencoded-0.6.1 \
+		serde_yaml-0.8.11 \
+		signal-hook-0.1.13 \
+		signal-hook-registry-1.2.0 \
+		slab-0.4.2 \
+		smallvec-1.0.0 \
+		sourcefile-0.1.4 \
+		strsim-0.7.0 \
+		strsim-0.8.0 \
+		syn-0.15.44 \
+		syn-1.0.8 \
+		synstructure-0.12.3 \
+		tempfile-3.1.0 \
+		termcolor-1.0.5 \
+		textwrap-0.11.0 \
+		thread_local-0.3.6 \
+		time-0.1.42 \
+		tokio-0.2.11 \
+		tokio-socks-0.2.0 \
+		tokio-tls-0.3.0 \
+		tokio-util-0.2.0 \
+		tower-service-0.3.0 \
+		try-lock-0.2.2 \
+		tui-0.8.0 \
+		unicase-2.6.0 \
+		unicode-bidi-0.3.4 \
+		unicode-normalization-0.1.10 \
+		unicode-segmentation-1.6.0 \
+		unicode-width-0.1.7 \
+		unicode-xid-0.1.0 \
+		unicode-xid-0.2.0 \
+		url-1.7.2 \
+		url-2.1.0 \
+		vcpkg-0.2.7 \
+		vec_map-0.8.1 \
+		version_check-0.1.5 \
+		version_check-0.9.1 \
+		want-0.3.0 \
+		wasi-0.7.0 \
+		wasm-bindgen-0.2.58 \
+		wasm-bindgen-backend-0.2.58 \
+		wasm-bindgen-futures-0.4.8 \
+		wasm-bindgen-macro-0.2.58 \
+		wasm-bindgen-macro-support-0.2.58 \
+		wasm-bindgen-shared-0.2.58 \
+		wasm-bindgen-webidl-0.2.58 \
+		web-sys-0.3.35 \
+		webbrowser-0.5.2 \
+		weedle-0.10.0 \
+		widestring-0.4.0 \
+		winapi-0.2.8 \
+		winapi-0.3.8 \
+		winapi-build-0.1.1 \
+		winapi-i686-pc-windows-gnu-0.4.0 \
+		winapi-util-0.1.2 \
+		winapi-x86_64-pc-windows-gnu-0.4.0 \
+		wincolor-1.0.2 \
+		winreg-0.6.2 \
+		ws2_32-sys-0.2.1 \
+		x11-clipboard-0.3.3 \
+		xcb-0.8.2 \
+		yaml-rust-0.4.3
+
+BINARY_ALIAS=	python3=${PYTHON_CMD}
+
+SUB_FILES=	pkg-message
+PLIST_FILES=	bin/spt
+PORTDOCS=	CHANGELOG.md README.md
+
+OPTIONS_DEFINE=	DOCS SPOTIFYD
+SPOTIFYD_DESC=	Lightweight Spotify client daemon
+
+SPOTIFYD_RUN_DEPENDS=	spotifyd:audio/spotifyd
+
+post-install:
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/spt
+
+post-install-DOCS-on:
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
+
+.include <bsd.port.mk>
