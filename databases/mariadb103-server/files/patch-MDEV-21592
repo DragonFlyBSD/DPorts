@@ -4,7 +4,7 @@
  #include <grp.h>
  #include <pwd.h>
  
-+#if defined(__FreeBSD__) || defined(__DragonFly__)
++#ifdef __FreeBSD__
 +#include <security/pam_appl.h>
 +#else
  #include <security/pam_ext.h>
