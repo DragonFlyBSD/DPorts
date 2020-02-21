@@ -1,5 +1,5 @@
---- cargo-crates/winit-0.19.3/src/platform/linux/x11/mod.rs.orig	2019-08-26 22:03:25 UTC
-+++ cargo-crates/winit-0.19.3/src/platform/linux/x11/mod.rs
+--- cargo-crates/winit-0.19.5/src/platform/linux/x11/mod.rs.orig	2019-08-26 22:03:25 UTC
++++ cargo-crates/winit-0.19.5/src/platform/linux/x11/mod.rs
 @@ -20,7 +20,7 @@ use std::ffi::CStr;
  use std::ops::Deref;
  use std::os::raw::*;

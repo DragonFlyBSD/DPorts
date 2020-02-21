@@ -1,5 +1,5 @@
---- ../msgbox-rs-d3e12e1cbfcd280bb4de5ad8032bded37d8e573f/src/lib.rs.orig	2019-12-27 09:39:49 UTC
-+++ ../msgbox-rs-d3e12e1cbfcd280bb4de5ad8032bded37d8e573f/src/lib.rs
+--- ../msgbox-rs-68fe39a60019b38a1569ae4e9ed796a0f0542673/src/lib.rs.orig	2019-12-27 09:39:49 UTC
++++ ../msgbox-rs-68fe39a60019b38a1569ae4e9ed796a0f0542673/src/lib.rs
 @@ -4,13 +4,13 @@ pub use icon::IconType;
  /**
   * GTK+3

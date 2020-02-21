@@ -1,3 +1,0 @@
-.if !defined(DPORTS_BUILDER)
-MANUAL_PACKAGE_BUILD=	few issues with audio detection
-.endif

@@ -1,5 +1,5 @@
---- cargo-crates/getrandom-0.1.12/src/util_libc.rs.orig	2019-08-24 23:12:51 UTC
-+++ cargo-crates/getrandom-0.1.12/src/util_libc.rs
+--- cargo-crates/getrandom-0.1.13/src/util_libc.rs.orig	2019-08-24 23:12:51 UTC
++++ cargo-crates/getrandom-0.1.13/src/util_libc.rs
 @@ -14,11 +14,11 @@ use core::ptr::NonNull;
  cfg_if! {
      if #[cfg(any(target_os = "netbsd", target_os = "openbsd", target_os = "android"))] {
