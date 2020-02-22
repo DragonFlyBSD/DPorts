@@ -1,6 +1,0 @@
-
-dfly-patch:
-	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
-		${WRKSRC}/disc/discinfo.py \
-		${WRKSRC}/factory.py \
-		${WRKSRC}/disc/cdrommodule.c

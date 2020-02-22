@@ -1,0 +1,7 @@
+
+CONFIGURE_ARGS+=	ac_cv_lib_udunits2_ut_read_xml=yes
+
+# hmmm
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(ac_cv_lib_udunits2_ut_read_xml=\)no@\1yes@g' \
+		${WRKSRC}/configure

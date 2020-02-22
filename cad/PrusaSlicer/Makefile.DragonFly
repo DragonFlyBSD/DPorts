@@ -1,0 +1,5 @@
+
+USES+=	alias
+
+# zrj: too noisy
+CXXFLAGS+=	-Wno-return-type -Wno-ignored-attributes

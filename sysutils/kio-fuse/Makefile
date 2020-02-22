@@ -11,9 +11,10 @@ COMMENT=	FUSE Interface for KIO
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-LIB_DEPENDS=	libfuse3.so:sysutils/fusefs-libs3
+LIB_DEPENDS=	libfuse3.so:sysutils/fusefs-libs3 \
+		libboost_thread.so:devel/boost-libs
 
-USES=		cmake kde:5 pkgconfig qt:5
+USES=		cmake compiler:c++11-lang kde:5 pkgconfig qt:5
 USE_KDE=	config coreaddons kio service
 USE_QT=		concurrent core dbus network \
 		buildtools_build qmake_build

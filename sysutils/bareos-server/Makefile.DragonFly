@@ -1,7 +1,7 @@
 USES+=	localbase:ldflags
 
 # exclude for now
-OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NSCSICRYPTO}
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NSCSICRYPTO:NRADOS}
 
 # not ready for ld.gold
 MAKE_ENV+=	LDVER=ld.bfd

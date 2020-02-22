@@ -192,7 +192,7 @@ sems:*:250:
 # free: 251
 # free: 252
 _adsuck:*:253:
-# free: 254
+imds:*:254:
 _i2pd:*:255:
 _tor:*:256:
 _smtpd:*:257:
@@ -272,7 +272,7 @@ orthanc:*:330:
 # free: 331
 # free: 332
 # free: 333
-# free: 334
+honeytrap:*:333:
 # free: 335
 # free: 336
 daapd:*:337:

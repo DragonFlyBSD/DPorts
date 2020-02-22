@@ -16,5 +16,5 @@ dfly-patch:
 	${LN} -sf ${LOCALBASE}/bin/ar ${BUILD_WRKSRC}/BaseTools/Bin/DragonFly-x86_64/gcc-ar
 	${LN} -sf ${LOCALBASE}/bin/nm ${BUILD_WRKSRC}/BaseTools/Bin/DragonFly-x86_64/gcc-nm
 	${LN} -sf ${LOCALBASE}/bin/objcopy ${BUILD_WRKSRC}/BaseTools/Bin/DragonFly-x86_64/objcopy
-	${LN} -sf ${LOCALBASE}/bin/python2.7 ${BUILD_WRKSRC}/BaseTools/Bin/DragonFly-x86_64/python
+	${LN} -sf ${PYTHON_CMD} ${BUILD_WRKSRC}/BaseTools/Bin/DragonFly-x86_64/python
 	${LN} -sf ${LOCALBASE}/bin/nasm ${BUILD_WRKSRC}/BaseTools/Bin/DragonFly-x86_64/nasm

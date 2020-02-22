@@ -1,2 +1,0 @@
-# locale creation is jobs unsafe
-MAKE_JOBS_UNSAFE=yes

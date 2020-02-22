@@ -1,0 +1,23 @@
+--- configure.ac.orig	2017-09-18 15:05:32 UTC
++++ configure.ac
+@@ -296,6 +296,7 @@ AH_TEMPLATE([DARWIN], [Darwin System])
+ AH_TEMPLATE([OPENBSD], [OpenBSD System])
+ AH_TEMPLATE([NETBSD], [NetBSD System])
+ AH_TEMPLATE([FREEBSD], [FreeBSD System])
++AH_TEMPLATE([DRAGONFLY], [DragonFly System])
+ AH_TEMPLATE([SOLARIS_251], [Solaris 2.51 System])
+ AH_TEMPLATE([SOLARIS_26], [Solaris 2.6 System])
+ AH_TEMPLATE([SOLARIS_27], [Solaris 2.7 System])
+@@ -362,6 +363,12 @@ case "$target_os" in
+            esac
+            ;;
+ 
++   *dragonfly*)
++           AC_DEFINE(DRAGONFLY)
++           AC_DEFINE(STRANGE_BSD_BYTE)
++           AC_DEFINE(NEED_USLEEP)
++           ;;
++
+    *freebsd*)
+            AC_DEFINE(FREEBSD)
+            AC_DEFINE(STRANGE_BSD_BYTE)

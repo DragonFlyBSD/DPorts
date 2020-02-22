@@ -1,3 +1,0 @@
-.if !defined(DPORTS_BUILDER)
-MANUAL_PACKAGE_BUILD=	365M package (too big for mirrors)
-.endif

@@ -101,7 +101,7 @@ CONFIGURE_ARGS+=	--enable-dtrace=0
 .endif
 
 .if ${ARCH} == x86_64 || ${ARCH} == i386
-BOOT_GHC_VERSION=	8.4.3
+BOOT_GHC_VERSION=	8.6.5
 .else
 BOOT_GHC_VERSION=	8.6.3
 .endif
