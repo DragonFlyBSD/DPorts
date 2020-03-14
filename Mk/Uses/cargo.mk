@@ -21,6 +21,8 @@ IGNORE+=	USES=cargo takes no arguments
 CARGO_CRATES?=
 
 # List of features to build (space separated list).
+# Use special token --no-default-features to disable default
+# features by passing it to cargo build/install/test.
 CARGO_FEATURES?=
 
 # Name of the local directory for vendoring crates.
@@ -43,7 +45,7 @@ DISTFILES+=	${CARGO_DIST_SUBDIR}/${_crate}.tar.gz:cargo_${_crate:C/[^a-zA-Z0-9_]
 
 CARGO_BUILDDEP?=	yes
 .if ${CARGO_BUILDDEP:tl} == "yes"
-BUILD_DEPENDS+=	${RUST_DEFAULT}>=1.41.0:lang/${RUST_DEFAULT}
+BUILD_DEPENDS+=	${RUST_DEFAULT}>=1.42.0:lang/${RUST_DEFAULT}
 .endif
 
 # Location of cargo binary (default to lang/rust's Cargo binary)
@@ -108,10 +110,15 @@ CARGO_USE_GITHUB?=	no
 CARGO_USE_GITLAB?=	no
 
 # Manage crate features.
-.if !empty(CARGO_FEATURES)
-CARGO_BUILD_ARGS+=	--features='${CARGO_FEATURES}'
-CARGO_INSTALL_ARGS+=	--features='${CARGO_FEATURES}'
-CARGO_TEST_ARGS+=	--features='${CARGO_FEATURES}'
+.if !empty(CARGO_FEATURES:M--no-default-features)
+CARGO_BUILD_ARGS+=	--no-default-features
+CARGO_INSTALL_ARGS+=	--no-default-features
+CARGO_TEST_ARGS+=	--no-default-features
+.endif
+.if !empty(CARGO_FEATURES:N--no-default-features)
+CARGO_BUILD_ARGS+=	--features='${CARGO_FEATURES:N--no-default-features}'
+CARGO_INSTALL_ARGS+=	--features='${CARGO_FEATURES:N--no-default-features}'
+CARGO_TEST_ARGS+=	--features='${CARGO_FEATURES:N--no-default-features}'
 .endif
 
 .if !defined(WITH_DEBUG)

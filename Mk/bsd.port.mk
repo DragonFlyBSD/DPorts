@@ -42,9 +42,11 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 # OPSYS			- Portability clause.  This is the operating system the
 #				  makefile is being used on.  Automatically set to
 #				  "FreeBSD," "NetBSD," or "OpenBSD" as appropriate.
-# OSREL			- The release version (numeric) of the operating system.
+# OSREL			- The release version of the operating system as a text
+#				  string (e.g., "12.1").
 # OSVERSION		- 9999999 - try to ignore FreeBSD version check
-# DFLYVERSION		- The value of __DragonFly_version.
+#				  the value of __FreeBSD_version (e.g., 1201000).
+# DFLYVERSION	- The value of __DragonFly_version.
 #
 # This is the beginning of the list of all variables that need to be
 # defined in a port, listed in order that they should be included
@@ -1161,22 +1163,21 @@ _OSRELEASE!= ${AWK} -v version=${OSVERSION} 'END { printf("%d.%d-CROSS", version
 
 # Get the operating system type
 .if !defined(OPSYS)
+#
+# XXX Not sure why we don't use uname -s as FreeBSD does
+#
 OPSYS=	DragonFly
 .endif
 _EXPORTED_VARS+=	OPSYS
 
 .if !defined(_OSRELEASE)
-.   if defined(.MAKE.DF.OSREL)
 _OSRELEASE=	${.MAKE.DF.OSREL}-DPORTS
-.   else
-_OSRELEASE!=	${UNAME} -r
-.   endif
 .endif
 _EXPORTED_VARS+=	_OSRELEASE
 
 # Get __FreeBSD_version
 .if !defined(OSVERSION)
-OSVERSION=	9999999
+OSVERSION=     9999999
 .endif
 _EXPORTED_VARS+=	OSVERSION
 
@@ -1191,7 +1192,7 @@ OSREL!=		${ECHO} ${DFLYVERSION} | ${AWK} '{a=int($$1/100000); b=int(($$1-(a*1000
 .endif
 _EXPORTED_VARS+=	DFLYVERSION OSREL
 
-.if (${OPSYS} == FreeBSD && ${OSVERSION} < 1103000) || \
+.if (${OPSYS} == FreeBSD && (${OSVERSION} < 1103000 || (${OSVERSION} >= 1200000 && ${OSVERSION} < 1201000))) || \
     (${OPSYS} == DragonFly && ${DFLYVERSION} < 400400)
 _UNSUPPORTED_SYSTEM_MESSAGE=	Ports Collection support for your ${OPSYS} version has ended, and no ports\
 								are guaranteed to build on this system. Please upgrade to a supported release.
