@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	nss
-PORTVERSION=	3.50
+PORTVERSION=	3.51
 CATEGORIES=	security
 MASTER_SITES=	MOZILLA/security/${PORTNAME}/releases/${DISTNAME:tu:C/[-.]/_/g}_RTM/src
 
@@ -57,7 +57,7 @@ BINS=		${DIST}/${OPSYS}${OSREL}_DBG.OBJ
 .endif
 
 .if ${ARCH} == powerpc64
-USES+=		compiler:c++11-lang # -mcrypto -mvsx
+USE_GCC=	yes
 .else
 MAKE_ENV+=	NSS_DISABLE_ALTIVEC=1
 .endif
