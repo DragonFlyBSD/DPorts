@@ -21,4 +21,9 @@ USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes
 
+CONFLICTS_INSTALL=	${PYTHON_PKGNAMEPREFIX}dj22-jsonfield
+
+# jsonfield 3.0.0+ requires Django 2.2+
+PORTSCOUT=	limit:^2\.
+
 .include <bsd.port.mk>
