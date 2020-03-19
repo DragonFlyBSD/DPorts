@@ -3,14 +3,11 @@
 * delete the directory under the symlink, which would cause a reinstall to fail
 * as the target directory is not remade until reinstalling the other port
 *
---- xkb/Makefile.in.orig	2017-03-16 05:24:43 UTC
-+++ xkb/Makefile.in
-@@ -886,7 +886,7 @@ info: info-am
+--- xkb/Makefile.am.orig	2017-03-16 05:24:43 UTC
++++ xkb/Makefile.am
+@@ -39,4 +39,4 @@ libxkbstubs_la_SOURCES = ddxVT.c ddxPriv
+ EXTRA_DIST = xkbDflts.h xkbgeom.h xkb.h
  
- info-am:
- 
--install-data-am: install-dist_xkbcompiledDATA
-+install-data-am:
- 
- install-dvi: install-dvi-am
- 
+ xkbcompileddir = $(XKB_COMPILED_DIR)
+-dist_xkbcompiled_DATA = README.compiled
++#dist_xkbcompiled_DATA = README.compiled
