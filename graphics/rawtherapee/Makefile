@@ -3,6 +3,7 @@
 
 PORTNAME=	rawtherapee
 PORTVERSION=	5.8
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	https://rawtherapee.com/shared/source/ \
 		LOCAL/mandree/
@@ -125,10 +126,7 @@ CMAKE_ARGS+=	-DPROC_TARGET_NUMBER="2"
 .endif
 
 .if !empty(PORT_OPTIONS:MOPENMP) && !empty(OPTIONS_DEFINE:MOPENMP)
-. if ${OPSYS} == "FreeBSD " && ${OSVERSION} < 1102507 || (${OSVERSION} >= 1200000 && ${OSVERSION} < 1200506) || (${OSVERSION} >= 1300000 && ${OSVERSION} < 1300050)
-LIB_DEPENDS+=	
-. endif
-OPENMP_FLAGS=	-lm -lgomp
+OPENMP_FLAGS=	-lm -lomp
 LDFLAGS+=	${OPENMP_FLAGS}
 .endif
 
