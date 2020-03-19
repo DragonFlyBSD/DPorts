@@ -2,8 +2,7 @@
 
 PORTNAME=	libavif
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.5.4
-PORTREVISION=	2
+DISTVERSION=	0.6.2
 CATEGORIES=	graphics
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -11,6 +10,8 @@ COMMENT=	Library for encoding and decoding .avif files
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+LIB_DEPENDS=	libpng.so:graphics/png
 
 USES=		cmake localbase:ldflags pkgconfig
 USE_GITHUB=	yes
