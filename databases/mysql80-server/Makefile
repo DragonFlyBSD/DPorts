@@ -3,7 +3,7 @@
 
 PORTNAME?=		mysql
 PORTVERSION=		8.0.19
-PORTREVISION?=		1
+PORTREVISION?=		2
 CATEGORIES=		databases
 MASTER_SITES=		MYSQL/MySQL-8.0
 PKGNAMESUFFIX?=		80-server
@@ -18,7 +18,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}${DISTVERSIONSUFFIX}
 
 SLAVEDIRS=	databases/mysql80-client
 USES=		bison:build cmake:noninja compiler:c++14-lang cpe \
-		libedit localbase ncurses perl5 pkgconfig shebangfix ssl
+		groff:run libedit localbase ncurses perl5 pkgconfig shebangfix ssl
 
 USE_PERL5=	run
 
@@ -32,10 +32,16 @@ LIB_DEPENDS+=	libcurl.so:ftp/curl \
 		liblz4.so:archivers/liblz4 \
 		libzstd.so:archivers/zstd \
 		libprotobuf.so:devel/protobuf \
-		libunwind.so:devel/libunwind
+		${LIB_DEPENDS_${ARCH}}
+LIB_DEPENDS_aarch64=	libunwind.so:devel/libunwind
+LIB_DEPENDS_x86_64=	libunwind.so:devel/libunwind
+LIB_DEPENDS_i386=	libunwind.so:devel/libunwind
 
 BUILD_DEPENDS=	liblz4>0:archivers/liblz4 \
-		libunwind>0:devel/libunwind
+		${BUILD_DEPENDS_${ARCH}}
+BUILD_DEPENDS_aarch64=	libunwind>0:devel/libunwind
+BUILD_DEPENDS_x86_64=	libunwind>0:devel/libunwind
+BUILD_DEPENDS_i386=	libunwind>0:devel/libunwind
 
 CMAKE_BUILD_TYPE=	Release
 CFLAGS+=		-fPIC
