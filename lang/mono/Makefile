@@ -3,7 +3,7 @@
 
 PORTNAME=	mono
 PORTVERSION=	5.10.1.57
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=	https://download.mono-project.com/sources/mono/
 DISTFILES=	${PORTNAME}-${PORTVERSION}${EXTRACT_SUFX}
@@ -20,8 +20,7 @@ BUILD_DEPENDS=	p5-XML-Parser>=0:textproc/p5-XML-Parser \
 		bash:shells/bash \
 		cmake>0:devel/cmake
 LIB_DEPENDS=	libinotify.so:devel/libinotify
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pillow>=0:graphics/py-pillow@${PY_FLAVOR} \
-		ca_root_nss>=0:security/ca_root_nss
+RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss
 
 CONFLICTS_INSTALL=	czmq-3*
 
@@ -40,7 +39,7 @@ NLS_USES=	gettext
 X11_USES=	display:test
 
 USES=	autoreconf bison compiler:c11 cpe gmake iconv libtool \
-	pathfix perl5 python:2.7 shebangfix tar:bzip2
+	pathfix perl5 python shebangfix tar:bzip2
 USE_PERL5=	build
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
@@ -62,6 +61,14 @@ PORTSCOUT=	limit:^\d+\.\d+\.[1-9]\d*
 LOCALBASE?=	/usr/local
 .if !exists(${LOCALBASE}/bin/mcs)
 OPTIONS_SLAVE=	MONOLITE
+.endif
+
+.include <bsd.port.pre.mk>
+
+.if ${PYTHON_REL} < 3500
+RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}pillow6>=0:graphics/py-pillow6@${PY_FLAVOR}
+.else
+RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}pillow>=0:graphics/py-pillow@${PY_FLAVOR}
 .endif
 
 post-extract-MONOLITE-on:
@@ -92,4 +99,4 @@ post-configure:
 post-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/mono
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
