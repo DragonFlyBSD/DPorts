@@ -2,9 +2,9 @@
 # $FreeBSD$
 
 PORTNAME=	code_saturne
-PORTVERSION=	6.0.1
+PORTVERSION=	6.0.2
 DISTVERSIONPREFIX=	v
-PORTREVISION=	2
+PORTREVISION=	1
 CATEGORIES=	science parallel
 
 MAINTAINER=	thierry@FreeBSD.org
@@ -13,6 +13,7 @@ COMMENT=	EDF's general purpose Computational Fluid Dynamics (CFD) software
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+BUILD_DEPENDS=	gsed:textproc/gsed
 LIB_DEPENDS=	libsysinfo.so:devel/libsysinfo	\
 		libcgns.so:science/cgnslib	\
 		libhdf5.so:science/hdf5		\
@@ -35,6 +36,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include -I${LOCALBASE}/include/libxml2
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--without-salome --without-salome-yacs --without-salome-kernel	\
 		--without-salome-gui
+CONFIGURE_ENV=	ac_cv_path_SED=${LOCALBASE}/bin/gsed
 USE_LDCONFIG=	yes
 BINARY_ALIAS=	python=${PYTHON_CMD} \
 		pyrcc5=pyrcc5-${PYTHON_VER} \
