@@ -3,6 +3,7 @@
 
 PORTNAME=	rpy2
 PORTVERSION=	3.2.6
+PORTREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -36,10 +37,4 @@ PLIST_FILES=	${PYTHON_SITELIBDIR}/__pycache__/_rinterface_cffi_abi.cpython-${PYT
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/_rinterface_cffi_api.abi3.so
 
-.include <bsd.port.pre.mk>
-
-.if ${CHOSEN_COMPILER_TYPE} == clang && !exists(/usr/include/omp.h)
-LIB_DEPENDS+=	
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
