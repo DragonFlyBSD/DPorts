@@ -2,9 +2,9 @@
 # $FreeBSD$
 
 PORTNAME=	libtorrent-rasterbar
-DISTVERSION=	1.2.2
+DISTVERSIONPREFIX=	libtorrent-
+DISTVERSION=	1_2_5
 CATEGORIES=	net-p2p python
-MASTER_SITES=	https://github.com/arvidn/libtorrent/releases/download/libtorrent-${PORTVERSION:S/./_/g}/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -17,6 +17,9 @@ LIB_DEPENDS=	libtorrent-rasterbar.so:net-p2p/libtorrent-rasterbar \
 		${PY_BOOST}
 
 USES=		compiler:c11 iconv localbase python
+USE_GITHUB=	yes
+GH_ACCOUNT=	arvidn
+GH_PROJECT=	libtorrent
 USE_PYTHON=	distutils autoplist
 
 CFLAGS+=	-DTORRENT_DISABLE_LOGGING # undefined symbol: https://github.com/arvidn/libtorrent/issues/3331
@@ -27,5 +30,8 @@ WRKSRC_SUBDIR=	bindings/python
 # ensure python paths are correctly identified
 CONFIGURE_ENV=	PYTHON_INCLUDEDIR="${PYTHON_INCLUDEDIR}" \
 		PYTHON_VERSION="${PYTHON_VERSION}"
+
+post-install:
+	@${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/libtorrent.so
 
 .include <bsd.port.mk>
