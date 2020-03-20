@@ -7,9 +7,7 @@ share/bash-completion/completions/wxmaxima
 %%DOCSDIR%%/Autocomplete2.jpg
 %%DOCSDIR%%/BatchImage.jpg
 %%DOCSDIR%%/BatchImage.png
-%%DOCSDIR%%/Matrix table example.png
 %%DOCSDIR%%/MatrixTableExample.png
-%%DOCSDIR%%/Second table example.png
 %%DOCSDIR%%/SecondTableExample.png
 %%DOCSDIR%%/ezUnits.jpg
 %%DOCSDIR%%/ezUnits.png
@@ -85,6 +83,7 @@ share/wxMaxima/matrixCells.wxm
 share/wxMaxima/multiplication.wxm
 share/wxMaxima/nonsenseConstructs.wxm
 share/wxMaxima/parenthesisCells.wxm
+share/wxMaxima/presubsupcells.wxm
 share/wxMaxima/printf_continuationLines.wxm
 share/wxMaxima/printf_equations.wxm
 share/wxMaxima/printf_simple.wxm
@@ -95,6 +94,7 @@ share/wxMaxima/sqrtCells.wxm
 share/wxMaxima/subCells.wxm
 share/wxMaxima/subsupCells.wxm
 share/wxMaxima/sumCells.wxm
+share/wxMaxima/threadtest.wxm
 share/wxMaxima/unicode.wxm
 share/wxMaxima/unicode_specialchars.wxm
 share/wxMaxima/weirdLabels.wxm
