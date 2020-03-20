@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	statsmodels
-PORTVERSION=	0.11.0
+PORTVERSION=	0.11.1
 CATEGORIES=	math python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -21,9 +21,6 @@ RUN_DEPENDS=	${PYNUMPY} \
 
 USES=		python:3.5+ shebangfix
 USE_PYTHON=	autoplist concurrent cython distutils
-
-PORTDOCS=	README.rst README_l1.txt
-PORTEXAMPLES=	*
 
 SHEBANG_GLOB=	*.py
 
