@@ -32,6 +32,7 @@ include/xorg/dixgrabs.h
 include/xorg/dixstruct.h
 include/xorg/dri.h
 include/xorg/dri2.h
+include/xorg/dri3.h
 include/xorg/dristruct.h
 include/xorg/edid.h
 include/xorg/events.h
