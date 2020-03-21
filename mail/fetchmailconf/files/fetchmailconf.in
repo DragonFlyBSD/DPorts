@@ -2,6 +2,6 @@
 #
 # Wrapper for the real fetchmailconf.
 #
-# $FreeBSD: head/mail/fetchmailconf/files/fetchmailconf.in 508092 2019-08-04 12:44:57Z pi $
+# $FreeBSD$
 
 exec %%PYTHON_CMD%% %%PYTHON_SITELIBDIR%%/fetchmailconf.py "$@"
