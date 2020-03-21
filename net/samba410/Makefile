@@ -301,7 +301,6 @@ NSUPDATE_RUN_DEPENDS=		samba-nsupdate:dns/samba-nsupdate
 DEBUG_CONFIGURE_ON=		--verbose --enable-debug
 DEBUG_MAKE_ARGS=		--verbose
 DEBUG_FLAGS=			-g -ggdb3 -O0
-DEBUG_VARS=			WITH_DEBUG=yes
 
 MEMORY_DEBUG_IMPLIES=		DEBUG
 MEMORY_DEBUG_CONFIGURE_ENV=	ADDITIONAL_CFLAGS="-DENABLE_JEMALLOC `pkg-config --cflags jemalloc`" ADDITIONAL_LDFLAGS="`pkg-config --libs jemalloc`"
@@ -409,7 +408,7 @@ SAMBA4_MODULES+=		auth_skel pdb_test gpext_security gpext_registry gpext_scripts
 .endif
 # Python bindings
 .if defined(NO_PYTHON)
-USES+=				python:2.7+,build,test
+USES+=				python:build,test
 CONFIGURE_ARGS+=		--disable-python
 PLIST_SUB+=			SAMBA4_PYTHON="@comment "
 SUB_LIST+=			SAMBA4_PYTHON="@comment "
