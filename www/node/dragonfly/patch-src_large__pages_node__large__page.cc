@@ -1,6 +1,6 @@
---- src/large_pages/node_large_page.cc.orig	2020-01-21 16:26:43 UTC
+--- src/large_pages/node_large_page.cc.orig	2020-03-05 00:41:47 UTC
 +++ src/large_pages/node_large_page.cc
-@@ -160,6 +160,13 @@ static struct text_region FindNodeTextRe
+@@ -176,6 +176,12 @@ struct text_region FindNodeTextRegion()
    }
  
    ifs.close();
@@ -10,11 +10,10 @@
 +  // by reading /proc/curproc/map but adding a sysctl like the
 +  // one FreeBSD has (KERN_PROC_VMMAP) is more correct so that we
 +  // can get away from procfs. Anyways, for now just do nothing.
-+  struct text_region nregion;
  #elif defined(__FreeBSD__)
-   struct text_region nregion;
-   nregion.found_text_region = false;
-@@ -289,6 +296,11 @@ static bool IsSuperPagesEnabled() {
+   std::string exename;
+   {
+@@ -300,6 +306,11 @@ static bool IsSuperPagesEnabled() {
                        0) != -1 &&
           super_pages >= 1;
  }
@@ -25,13 +24,13 @@
 +} 
  #endif
  
- // Moving the text region to large pages. We need to be very careful.
-@@ -427,7 +439,7 @@ int MapStaticCodeToLargePages() {
- bool IsLargePagesEnabled() {
+ }  // End of anonymous namespace
+@@ -426,7 +437,7 @@ int MapStaticCodeToLargePages() {
+   bool have_thp = false;
  #if defined(__linux__)
-   return IsTransparentHugePagesEnabled();
+   have_thp = IsTransparentHugePagesEnabled();
 -#elif defined(__FreeBSD__)
 +#elif defined(__FreeBSD__) || defined(__DragonFly__)
-   return IsSuperPagesEnabled();
+   have_thp = IsSuperPagesEnabled();
  #elif defined(__APPLE__)
    // pse-36 flag is present in recent mac x64 products.
