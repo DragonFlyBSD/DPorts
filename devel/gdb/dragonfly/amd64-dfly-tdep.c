@@ -24,7 +24,7 @@
 #include "regcache.h"
 #include "osabi.h"
 #include "regset.h"
-#include "common/x86-xstate.h"
+#include "gdbsupport/x86-xstate.h"
 
 #include <string.h>
 

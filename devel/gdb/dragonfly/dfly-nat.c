@@ -18,14 +18,15 @@
    along with this program.  If not, see <http://www.gnu.org/licenses/>.  */
 
 #include "defs.h"
-#include "common/byte-vector.h"
+#include "gdbsupport/byte-vector.h"
 #include "gdbcore.h"
 #include "inferior.h"
 #include "regcache.h"
 #include "regset.h"
+#include "gdbarch.h"
 #include "gdbcmd.h"
 #include "gdbthread.h"
-#include "common/gdb_wait.h"
+#include "gdbsupport/gdb_wait.h"
 #include "inf-ptrace.h"
 #include <sys/types.h>
 #include <sys/procfs.h>
@@ -36,7 +37,7 @@
 #ifdef HAVE_KINFO_GETVMMAP
 #include <libutil.h>
 #endif
-#include "common/filestuff.h"
+#include "gdbsupport/filestuff.h"
 
 #include "elf-bfd.h"
 #include "dfly-nat.h"

@@ -1,4 +1,4 @@
-
+CFLAGS:=  ${CFLAGS:N-Wno-unknown-warning-option}
 OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NKGDB}
 CONFIGURE_TARGET:=	x86_64-portbld-${OPSYS:tl}${OSREL}
 

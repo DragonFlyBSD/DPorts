@@ -395,7 +395,7 @@ dfly_pspace_data_cleanup (struct program_space *pspace, void *data)
 
 /* This is how we want PTIDs from core files to be printed.  */
 
-static const char *
+static std::string
 dfly_core_pid_to_str (struct gdbarch *gdbarch, ptid_t ptid)
 {
   static char buf[80];
