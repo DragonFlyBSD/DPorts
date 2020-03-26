@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	firefox
-DISTVERSION=	68.5.0
-PORTREVISION=	1
+DISTVERSION=	68.6.0
+PORTREVISION=	3
 PORTEPOCH=	1
 CATEGORIES=	www
 MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}esr/source \
@@ -23,7 +23,6 @@ BUILD_DEPENDS=	nspr>=4.21:devel/nspr \
 		png>=1.6.35:graphics/png \
 		libvpx>=1.5.0:multimedia/libvpx \
 		sqlite3>=3.28.0:databases/sqlite3 \
-		${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3@${PY_FLAVOR} \
 		v4l_compat>0:multimedia/v4l_compat \
 		autoconf-2.13:devel/autoconf213 \
 		nasm:devel/nasm \
