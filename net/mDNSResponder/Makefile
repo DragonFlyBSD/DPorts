@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	mDNSResponder
-PORTVERSION=	878.260.1
+PORTVERSION=	1096.0.2
 CATEGORIES=	net dns
 MASTER_SITES=	https://opensource.apple.com/tarballs/mDNSResponder/
 
@@ -17,7 +17,7 @@ CONFLICTS_INSTALL=	avahi-libdns openmdns
 
 OPTIONS_DEFINE=	IPV6
 
-USES=		cpe gmake
+USES=		compiler:c11 cpe gmake
 
 ALL_TARGET=	all dnsextd
 BUILD_WRKSRC=	${WRKSRC}/mDNSPosix
@@ -30,7 +30,7 @@ USE_RC_SUBR=	mdnsd mdnsresponderposix
 CPE_VENDOR=	apple
 CPE_PRODUCT=	${PORTNAME:tl}
 
-EXTRA_BIN=	mDNSClientPosix mDNSIdentify mDNSNetMonitor mDNSProxyResponderPosix mDNSResponderPosix
+EXTRA_BIN=	mDNSClientPosix mDNSNetMonitor mDNSProxyResponderPosix mDNSResponderPosix
 EXTRA_MAN1=	dns-sd.1
 EXTRA_MAN8=	dnsextd.8 mDNSResponderPosix.8
 EXTRA_SBIN=	dnsextd
