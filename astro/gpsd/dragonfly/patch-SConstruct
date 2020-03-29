@@ -1,10 +1,22 @@
---- SConstruct.orig	2017-09-07 11:50:30 UTC
+--- SConstruct.orig	2020-03-29 20:25:01 UTC
 +++ SConstruct
-@@ -666,16 +666,8 @@ else:
+@@ -811,7 +811,7 @@ else:
+                         "-Wl,-compatibility_version,%s" % libgps_version,
+                         "-Wl,-install_name,%s/$TARGET" %
+                         installdir('libdir', add_destdir=False)]
+-    elif sys.platform.startswith('freebsd'):
++    elif sys.platform.startswith('freebsd') or sys.platform.startswith('dragonfly'):
+         # for isascii(), putenv(), nice(), strptime()
+         confdefs.append('#if !defined(_XOPEN_SOURCE)')
+         confdefs.append('#define _XOPEN_SOURCE 700')
+@@ -865,19 +865,8 @@ else:
      # are like FreeBSD.
      ncurseslibs = []
-     if env['ncurses']:
--        if config.CheckPKG('ncurses'):
+     if config.env['ncurses']:
+-        if not config.CheckHeader(["curses.h"]):
+-            announce('Turning off ncurses support, curses.h not found.')
+-            config.env['ncurses'] = False
+-        elif config.CheckPKG('ncurses'):
 -            ncurseslibs = pkg_config('ncurses', rpath_hack=True)
 -            if config.CheckPKG('tinfo'):
 -                ncurseslibs += pkg_config('tinfo', rpath_hack=True)
@@ -19,7 +31,7 @@
          elif sys.platform.startswith('freebsd'):
              ncurseslibs = ['-lncurses']
          elif sys.platform.startswith('openbsd'):
-@@ -696,6 +688,9 @@ else:
+@@ -898,6 +887,9 @@ else:
                  announce("pkg_config is confused about the state "
                           "of libusb-1.0.")
                  usbflags = []
