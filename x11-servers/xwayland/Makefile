@@ -1,28 +1,31 @@
+# $FreeBSD$
+
 PORTNAME=	xwayland
 
-COMMENT=	X server from X.Org for running X11 applications on Wayland.
+COMMENT=	X Clients under Wayland
 
-LIB_DEPENDS+=	libdrm.so:graphics/libdrm \
-		libepoxy.so:graphics/libepoxy
+LICENSE=	MIT
 
-BUILD_DEPENDS=	wayland>=1.9.0:graphics/wayland \
+BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/wayland-protocols.pc:graphics/wayland-protocols \
 		${LOCALBASE}/include/linux/input.h:devel/evdev-proto
+LIB_DEPENDS=	libwayland-client.so:graphics/wayland \
+		libinput.so:x11/libinput
+
+CONFLICTS_INSTALL=	${PORTNAME}-devel
 
 MASTERDIR=	${.CURDIR}/../xorg-server
 DESCR=		${.CURDIR}/pkg-descr
-USE_XORG=	x11 xtrans xinerama xkbfile xfont \
-		xau xdmcp xext fontenc xv pixman
-
-CONFIGURE_ARGS=	--disable-kdrive --disable-xephyr --disable-dmx --disable-xvfb \
-		--disable-xwin --disable-xorg --enable-xwayland \
-		--without-xmlto --disable-docs --disable-devel-docs \
-		--disable-xnest --localstatedir=/var --without-dtrace \
-		--enable-install-setuid=no
 
 SLAVE_PORT=	yes
+USE_XORG=	x11 xext
+USE_GL+=	egl gbm
+
+CONFIGURE_ARGS+=--disable-dmx --disable-xephyr --disable-xnest --disable-xvfb \
+		--enable-xwayland --with-default-xkb-ruleset=evdev
+
 PLIST_FILES=	bin/Xwayland
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/hw/xwayland/Xwayland ${STAGEDIR}${PREFIX}/bin
+	cd ${WRKSRC}/hw/xwayland; DESTDIR=${STAGEDIR} ${MAKE_CMD} install
 
 .include "${MASTERDIR}/Makefile"

@@ -1,3 +1,4 @@
-Xwayland is an Xorg server for running X applications on a Wayland compositor.
+XWayland is an X Server running as a Wayland client, thus capable of displaying
+native X11 client applications in a Wayland compositor environment.
 
-WWW: http://www.x.org/
+WWW: https://wayland.freedesktop.org/xserver.html
