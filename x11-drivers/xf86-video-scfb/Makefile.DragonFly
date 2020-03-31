@@ -1,9 +1,0 @@
-# We can't use EXTRA_PATCHES here because extra patches are applied
-# *before* the freebsd patches, and src/scfb_driver.c is already
-# being patched by freebsd.  This hack hides the dragonfly patch directory.
-
-.if ${DFLYVERSION} < 500100
-EXTRA_PATCHES+=	${DFLY_FILESDIR}/extra-patch-dragonfly50
-.else
-EXTRA_PATCHES+=	${DFLY_FILESDIR}/extra-patch-dragonfly52
-.endif
