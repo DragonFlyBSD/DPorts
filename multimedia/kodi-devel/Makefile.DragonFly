@@ -23,7 +23,7 @@ dfly-patch:
 		${WRKSRC}/tools/buildsteps/dragonfly/*
 	${REINPLACE_CMD} -e 's@defined (TARGET_FREEBSD)@defined(TARGET_FREEBSD)@g' \
 			 -e 's@defined(TARGET_FREEBSD)@(&||defined(TARGET_DRAGONFLY))@g' \
-		${WRKSRC}/xbmc/platform/posix/network/NetworkLinux.cpp
+		${WRKSRC}/xbmc/platform/posix/network/NetworkPosix.cpp
 	${REINPLACE_CMD} -e 's@defined(TARGET_FREEBSD)@(&||defined(TARGET_DRAGONFLY))@g' \
 			 -e 's@#ifdef \(TARGET_FREEBSD\)@#if defined(TARGET_FREEBSD) || defined(TARGET_DRAGONFLY)@g' \
 		${WRKSRC}/xbmc/platform/linux/peripherals/PeripheralBusUSBLibUSB.cpp \
@@ -47,7 +47,6 @@ dfly-patch:
 		${WRKSRC}/xbmc/platform/posix/Filesystem.cpp \
 		${WRKSRC}/xbmc/platform/posix/PlatformDefs.h \
 		${WRKSRC}/xbmc/platform/posix/PosixMountProvider.cpp \
-		${WRKSRC}/xbmc/platform/posix/XFileUtils.cpp \
 		${WRKSRC}/xbmc/platform/posix/main.cpp \
 		${WRKSRC}/xbmc/storage/DetectDVDType.cpp \
 		${WRKSRC}/xbmc/storage/MediaManager.cpp \
