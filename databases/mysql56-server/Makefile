@@ -3,7 +3,7 @@
 
 PORTNAME?=	mysql
 PORTVERSION=	5.6.47
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	databases
 MASTER_SITES=	MYSQL/MySQL-5.6
 PKGNAMESUFFIX?=	56-server
@@ -15,7 +15,7 @@ LICENSE=	GPLv2
 
 SLAVEDIRS=	databases/mysql56-client
 USES=		bison:build cmake:noninja compiler:c11 compiler:c++11-lib \
-		cpe libedit localbase perl5 shebangfix ssl
+		cpe groff:run libedit localbase perl5 shebangfix ssl
 
 USE_PERL5=	run
 
