@@ -1,3 +1,1 @@
-
-# GN does not respect CC CXX flags
-CONFIGURE_ENV+=	CC=${CC} CXX=${CXX} LD=${CXX} AR=${AR}
+USES +=	alias
