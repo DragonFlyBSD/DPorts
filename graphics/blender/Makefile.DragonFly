@@ -1,4 +1,3 @@
-
 # make sure that openmp threading is not used during build!
 MAKE_ENV+= OMP_NUM_THREADS=1
 
@@ -7,3 +6,7 @@ CAMERATRACK_LIB_DEPENDS:=
 
 ## Tests
 #CMAKE_ARGS+= -DWITH_GTESTS:BOOL=ON -DWITH_TESTS_PERFORMANCE:BOOL=ON -DCMAKE_BUILD_TYPE=Debug
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/\(HAVE_UNWIND_H \)./\10/' \
+		${WRKSRC}/extern/glog/src/config_freebsd.h

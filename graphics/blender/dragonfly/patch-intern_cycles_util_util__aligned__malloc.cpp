@@ -1,4 +1,4 @@
---- intern/cycles/util/util_aligned_malloc.cpp.orig	2019-07-24 07:41:39 UTC
+--- intern/cycles/util/util_aligned_malloc.cpp.orig	2020-02-11 13:35:06 UTC
 +++ intern/cycles/util/util_aligned_malloc.cpp
 @@ -21,7 +21,7 @@
  
@@ -9,12 +9,13 @@
  /* Needed for memalign on Linux and _aligned_alloc on Windows. */
  #  ifdef FREE_WINDOWS
  /* Make sure _aligned_malloc is included. */
-@@ -52,7 +52,7 @@ void *util_aligned_malloc(size_t size, i
-    */
-   assert(alignment == 16);
-   return malloc(size);
--#elif defined(__FreeBSD__) || defined(__NetBSD__)
-+#elif defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
+@@ -46,7 +46,8 @@ void *util_aligned_malloc(size_t size, i
+   return MEM_mallocN_aligned(size, alignment, "Cycles Aligned Alloc");
+ #elif defined(_WIN32)
+   return _aligned_malloc(size, alignment);
+-#elif defined(__FreeBSD__) || defined(__NetBSD__) || defined(__APPLE__)
++#elif defined(__FreeBSD__) || defined(__NetBSD__) || defined(__APPLE__) ||
++  defined(__DragonFly__)
    void *result;
    if (posix_memalign(&result, alignment, size)) {
      /* Non-zero means allocation error
