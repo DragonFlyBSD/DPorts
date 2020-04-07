@@ -64,8 +64,8 @@ ${a:tu}_DESC=		Install ${a} ${type} driver
 . endfor
 .endfor
 
-OPTIONS_DEFINE_x86_64=	AMDGPU ATI INTEL29 VMMOUSE VMWARE
-OPTIONS_DEFAULT_x86_64=	ATI INTEL29 VESA
+OPTIONS_DEFINE_x86_64=	AMDGPU ATI INTEL VMMOUSE VMWARE
+OPTIONS_DEFAULT_x86_64=	ATI INTEL VESA
 
 OPTIONS_DEFINE_i386:=	${OPTIONS_DEFINE_x86_64} GEODE
 OPTIONS_DEFAULT_i386:=	${OPTIONS_DEFAULT_x86_64}
@@ -76,20 +76,20 @@ OPTIONS_DEFAULT_sparc64=SUNFFB
 AMDGPU_DESC=		Install amdgpu video driver
 ATI_DESC=		Install ati (radeon) video driver 
 GEODE_DESC=		Install geode video driver
-INTEL29_DESC=		Install intel video driver
+INTEL_DESC=		Install intel video driver
 SUNFFB_DESC=		Install sunffb video driver
 VMMOUSE_DESC=		Install vmmouse input driver
 VMWARE_DESC=		Install vmware video driver
 
 # these drivers have a different module name compared to the plugin they install
-QUIRKS=		keyboard:kbd intel29:intel
+QUIRKS=		keyboard:kbd
 
 .include <bsd.port.options.mk>
 
 # Manual add arch specific drivers so they be added to depend lines.
 .if ${ARCH}==i386 || ${ARCH}==x86_64
 INPUT_DRIVERS+= vmmouse
-VIDEO_DRIVERS+=	amdgpu ati intel29 vmware
+VIDEO_DRIVERS+=	amdgpu ati intel vmware
 .endif
 
 .if ${ARCH}==i386
