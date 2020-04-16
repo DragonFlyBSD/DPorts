@@ -1,8 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	fts-xapian
-PORTVERSION=	1.2.10
-PORTREVISION=	2
+PORTVERSION=	1.3
 CATEGORIES=	mail
 PKGNAMEPREFIX=	dovecot-
 
@@ -13,7 +12,8 @@ LICENSE=	LGPL21
 
 BUILD_DEPENDS=	dovecot>=2.3.7:mail/dovecot
 LIB_DEPENDS=	libxapian.so:databases/xapian-core \
-		libicuuc.so:devel/icu
+		libicuuc.so:devel/icu \
+		libsqlite3.so:databases/sqlite3
 RUN_DEPENDS=	dovecot>=2.3.7:mail/dovecot
 
 USES=		autoreconf compiler:c++11-lang libtool pkgconfig
