@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	python-cinderclient
-PORTVERSION=	5.0.0
+PORTVERSION=	5.0.1
 CATEGORIES=	net python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -30,6 +30,7 @@ USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes
 
+# python-cinderclient 6.0.0+ requires Python 3.6+
 PORTSCOUT=	limit:^5\.
 
 SHEBANG_GLOB=	*.sh
