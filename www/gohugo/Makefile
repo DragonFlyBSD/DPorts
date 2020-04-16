@@ -2,7 +2,7 @@
 
 PORTNAME=	hugo
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.67.0
+DISTVERSION=	0.69.0
 CATEGORIES=	www
 PKGNAMEPREFIX=	go
 DIST_SUBDIR=	${PKGNAMEPREFIX}${PORTNAME}
@@ -27,7 +27,7 @@ GH_TUPLE=	\
 		armon:go-radix:v1.0.0:armon_go_radix/vendor/github.com/armon/go-radix \
 		aws:aws-sdk-go:v1.27.1:aws_aws_sdk_go/vendor/github.com/aws/aws-sdk-go \
 		bep:debounce:v1.2.0:bep_debounce/vendor/github.com/bep/debounce \
-		bep:gitmap:v1.1.1:bep_gitmap/vendor/github.com/bep/gitmap \
+		bep:gitmap:v1.1.2:bep_gitmap/vendor/github.com/bep/gitmap \
 		bep:golibsass:v0.5.0:bep_golibsass/vendor/github.com/bep/golibsass \
 		bep:tmc:v0.5.1:bep_tmc/vendor/github.com/bep/tmc \
 		census-instrumentation:opencensus-go:v0.22.0:census_instrumentation_opencensus_go/vendor/go.opencensus.io \
@@ -70,7 +70,7 @@ GH_TUPLE=	\
 		jmespath:go-jmespath:c2b33e8439af:jmespath_go_jmespath/vendor/github.com/jmespath/go-jmespath \
 		kr:pretty:v0.2.0:kr_pretty/vendor/github.com/kr/pretty \
 		kr:text:v0.1.0:kr_text/vendor/github.com/kr/text \
-		kyokomi:emoji:v2.1.0:kyokomi_emoji/vendor/github.com/kyokomi/emoji \
+		kyokomi:emoji:v2.2.1:kyokomi_emoji/vendor/github.com/kyokomi/emoji \
 		magefile:mage:v1.9.0:magefile_mage/vendor/github.com/magefile/mage \
 		magiconair:properties:v1.8.1:magiconair_properties/vendor/github.com/magiconair/properties \
 		markbates:inflect:a12c3aec81a6:markbates_inflect/vendor/github.com/markbates/inflect \
@@ -86,7 +86,7 @@ GH_TUPLE=	\
 		pelletier:go-toml:v1.6.0:pelletier_go_toml/vendor/github.com/pelletier/go-toml \
 		pkg:errors:v0.8.1:pkg_errors/vendor/github.com/pkg/errors \
 		rogpeppe:go-internal:v1.5.1:rogpeppe_go_internal/vendor/github.com/rogpeppe/go-internal \
-		russross:blackfriday:a477dd164691:russross_blackfriday/vendor/github.com/russross/blackfriday \
+		russross:blackfriday:41c5fccfd6f6:russross_blackfriday/vendor/github.com/russross/blackfriday \
 		rwcarlsen:goexif:9e8deecbddbd:rwcarlsen_goexif/vendor/github.com/rwcarlsen/goexif \
 		sanity-io:litter:v1.2.0:sanity_io_litter/vendor/github.com/sanity-io/litter \
 		spf13:afero:v1.2.2:spf13_afero/vendor/github.com/spf13/afero \
@@ -100,7 +100,7 @@ GH_TUPLE=	\
 		tdewolff:minify:v2.6.1:tdewolff_minify/vendor/github.com/tdewolff/minify/v2 \
 		tdewolff:parse:v2.3.14:tdewolff_parse/vendor/github.com/tdewolff/parse/v2 \
 		yuin:goldmark-highlighting:d1af22c1126f:yuin_goldmark_highlighting/vendor/github.com/yuin/goldmark-highlighting \
-		yuin:goldmark:v1.1.22:yuin_goldmark/vendor/github.com/yuin/goldmark
+		yuin:goldmark:v1.1.25:yuin_goldmark/vendor/github.com/yuin/goldmark
 
 GO_BUILDFLAGS=	-ldflags="\
 		-s -w \
@@ -130,7 +130,7 @@ PORTMANS=	hugo-config.1 hugo-convert-toJSON.1 hugo-convert-toTOML.1 \
 .include <bsd.port.pre.mk>
 
 SOURCE_DATE_EPOCH_CMD=	date -r $$(grep TIMESTAMP ${DISTINFO_FILE} | ${SED} -e 's/[^0-9]//g') '+%FT%TZ%z'
-COMMIT_ID=		7f1da3efcd49c7fc5cf4a9714913a9f87e07e529
+COMMIT_ID=		4205844bcecdc9e1e9456e088a49f38b354ed5a6
 
 do-build-MANPAGES-on:
 	@cd ${GO_WRKSRC} && ${GO_WRKDIR_BIN}/${PORTNAME} gen man --dir man/man1/
