@@ -1,6 +1,6 @@
---- src/corelib/tools/qtimezoneprivate_tz.cpp.orig	2018-06-13 08:09:13.578248000 -0700
-+++ src/corelib/tools/qtimezoneprivate_tz.cpp	2018-06-13 08:11:15.328743000 -0700
-@@ -1072,6 +1072,17 @@ QByteArray QTzTimeZonePrivate::systemTim
+--- src/corelib/time/qtimezoneprivate_tz.cpp.orig	2019-11-01 21:30:15 UTC
++++ src/corelib/time/qtimezoneprivate_tz.cpp
+@@ -1126,6 +1126,17 @@ QByteArray QTzTimeZonePrivate::systemTimeZoneId() cons
          }
      }
  
