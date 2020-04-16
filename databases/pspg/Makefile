@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	pspg
-DISTVERSION=	2.6.6
+DISTVERSION=	3.0.4
 CATEGORIES=	databases
 
 MAINTAINER=	dmgk@FreeBSD.org
@@ -15,6 +15,7 @@ USES=		autoreconf compiler:c11 gmake localbase ncurses pkgconfig \
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	okbob
+
 GNU_CONFIGURE=	yes
 
 SUB_FILES=	pkg-message
@@ -22,14 +23,20 @@ SUB_FILES=	pkg-message
 PLIST_FILES=	bin/pspg
 PORTDOCS=	README.md
 
-OPTIONS_DEFINE=	DOCS PGSQL
-OPTIONS_DEFAULT=	PGSQL
+OPTIONS_DEFINE=		DOCS INOTIFY PGSQL
+OPTIONS_DEFAULT=	INOTIFY PGSQL
 
+INOTIFY_DESC=	Use inotify instead of polling
 PGSQL_DESC=	Work as PostgreSQL interactive client
 
-PGSQL_USES=	pgsql
+INOTIFY_LIB_DEPENDS=	libinotify.so:devel/libinotify
+# configure script doesn't understand --with-inotify
+INOTIFY_CONFIGURE_OFF=	--without-inotify
+INOTIFY_LDFLAGS=	-linotify
+
+PGSQL_USES=		pgsql
 PGSQL_CONFIGURE_WITH=	postgresql=yes
-PGSQL_VARS=	WANT_PGSQL=client
+PGSQL_VARS=		WANT_PGSQL=client
 
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/pspg
