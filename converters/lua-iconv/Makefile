@@ -3,9 +3,9 @@
 
 PORTNAME=	iconv
 PORTVERSION=	7
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	converters
-MASTER_SITES=	GHC
+MASTER_SITES=	https://github.com/downloads/ittner/lua-iconv/
 PKGNAMEPREFIX=	${LUA_PKGNAMEPREFIX}
 DISTNAME=	lua-${PORTNAME}-${PORTVERSION}
 
@@ -15,11 +15,7 @@ COMMENT=	Iconv binding for Lua 5
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		pkgconfig iconv lua
-
-USE_GITHUB=	yes
-GH_ACCOUNT=	ittner
-GH_PROJECT=	lua-${PORTNAME}
+USES=		pkgconfig iconv lua:module
 
 PLIST_FILES=	${LUA_MODLIBDIR}/iconv.so
 CFLAGS+=	`pkgconf --cflags lua-${LUA_VER}` -I${LOCALBASE}/include
