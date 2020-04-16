@@ -4,7 +4,7 @@
 PORTNAME=	shuf
 PORTVERSION=	1.8
 CATEGORIES=	sysutils
-MASTER_SITES=	https://devio.us/~bcallah/shuf/
+MASTER_SITES=	LOCAL/swills
 
 MAINTAINER=	feld@FreeBSD.org
 COMMENT=	Randomly permute input lines
