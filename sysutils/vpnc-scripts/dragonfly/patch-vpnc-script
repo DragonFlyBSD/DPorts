@@ -1,0 +1,60 @@
+--- vpnc-script.orig	2020-04-15 13:52:09 UTC
++++ vpnc-script
+@@ -132,7 +132,7 @@ if [ -r /etc/openwrt_release ] && [ -n "
+ elif [ -x /usr/bin/busctl ] && [ ${RESOLVEDENABLED} = 1 ]; then  # For systemd-resolved (version 229 and above)
+ 	MODIFYRESOLVCONF=modify_resolved_manager
+ 	RESTORERESOLVCONF=restore_resolved_manager
+-elif [ -x /sbin/resolvconf ]; then # Optional tool on Debian, Ubuntu, Gentoo and FreeBSD
++elif [ -x /sbin/resolvconf ]; then # Optional tool on Debian, Ubuntu, Gentoo, FreeBSD and DragonFly BSD
+ 	MODIFYRESOLVCONF=modify_resolvconf_manager
+ 	RESTORERESOLVCONF=restore_resolvconf_manager
+ elif [ -x /sbin/netconfig ]; then # tool on Suse after 11.1
+@@ -215,7 +215,7 @@ destroy_tun_device() {
+ 	NetBSD|OpenBSD) # and probably others...
+ 		ifconfig "$TUNDEV" destroy
+ 		;;
+-	FreeBSD)
++	FreeBSD|DragonFly)
+ 		ifconfig "$TUNDEV" destroy > /dev/null 2>&1 &
+ 		;;
+ 	esac
+@@ -350,7 +350,7 @@ else # use route command
+ 		# isn't -n supposed to give --numeric output?
+ 		# apperently not...
+ 		# Get rid of lines containing IPv6 addresses (':')
+-		netstat -r -n | awk '/:/ { next; } /^(default|0\.0\.0\.0)/ { print $2; }'
++		netstat -r -n | awk '{ if ($1 == "default" || $1 == "0.0.0.0") { print $2 } }'
+ 	}
+ 
+ 	set_vpngateway_route() {
+@@ -802,11 +802,7 @@ do_pre_init() {
+ 				done
+ 			fi
+ 		fi
+-	elif [ "$OS" = "FreeBSD" ]; then
+-		if ! kldstat -q -m if_tun > /dev/null; then
+-			kldload if_tun
+-		fi
+-
++	elif [ "$OS" = "FreeBSD" -o "$OS" = "DragonFly" ]; then
+ 		if ! ifconfig $TUNDEV > /dev/null; then
+ 			ifconfig $TUNDEV create
+ 		fi
+@@ -984,14 +980,15 @@ do_disconnect() {
+ 		fi
+ 	else
+ 		if [ -n "$INTERNAL_IP4_ADDRESS" ]; then
+-			ifconfig "$TUNDEV" 0.0.0.0
++			ifconfig "$TUNDEV" $INTERNAL_IP4_ADDRESS delete
+ 		fi
+ 		if [ -n "$INTERNAL_IP6_ADDRESS" ] && [ -z "$INTERNAL_IP6_NETMASK" ]; then
+ 			INTERNAL_IP6_NETMASK="$INTERNAL_IP6_ADDRESS/128"
+ 		fi
+ 		if [ -n "$INTERNAL_IP6_NETMASK" ]; then
+-			ifconfig "$TUNDEV" inet6 del $INTERNAL_IP6_NETMASK
++			ifconfig "$TUNDEV" inet6 $INTERNAL_IP6_NETMASK delete
+ 		fi
++		ifconfig "$TUNDEV" down
+ 	fi
+ 
+ 	destroy_tun_device
