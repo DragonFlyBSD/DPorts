@@ -3,6 +3,7 @@
 
 PORTNAME=	net2ftp
 PORTVERSION=	1.3
+PORTREVISION=	1
 CATEGORIES=	ftp
 MASTER_SITES=	https://www.net2ftp.com/download/
 DISTNAME=	${PORTNAME}_v${PORTVERSION}
