@@ -107,7 +107,8 @@ GO_BUILDFLAGS+=	-mod=vendor
 GO_TESTFLAGS+=	-mod=vendor
 GO_WRKSRC=	${WRKSRC}
 GO_ENV+=	GOPATH="" \
-		GOBIN="${GO_WRKDIR_BIN}"
+		GOBIN="${GO_WRKDIR_BIN}" \
+		GO_NO_VENDOR_CHECKS=1
 .else
 GO_WRKSRC=	${WRKDIR}/src/${GO_PKGNAME}
 GO_ENV+=	GOPATH="${WRKDIR}" \
@@ -190,7 +191,7 @@ gomod-vendor: gomod-vendor-deps patch
 
 gomod-vendor-diff: gomod-vendor-deps patch
 	@cd ${WRKSRC}; ${SETENV} GOPATH=${WRKDIR}/.gopath GOFLAGS=-modcacherw ${GO_CMD} mod vendor; \
-	[ -r vendor/modules.txt ] && ${_MODULES2TUPLE_CMD} vendor/modules.txt | ${GREP} -v "^GH_TUPLE=" | ${SED} 's| \\$$||' > ${WRKDIR}/GH_TUPLE-new.txt && \
+	[ -r vendor/modules.txt ] && ${_MODULES2TUPLE_CMD} vendor/modules.txt | ${SED} 's|GH_TUPLE=|	|; s| \\$$||' | ${GREP} -v '		\\' > ${WRKDIR}/GH_TUPLE-new.txt && \
 	echo ${GH_TUPLE} | ${TR} -s " " "\n" | ${SED} "s|^|		|" > ${WRKDIR}/GH_TUPLE-old.txt && \
 	${DIFF} ${WRKDIR}/GH_TUPLE-old.txt ${WRKDIR}/GH_TUPLE-new.txt || exit 0
 .endif

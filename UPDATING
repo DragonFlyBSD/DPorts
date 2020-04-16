@@ -5,6 +5,106 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20200408:
+  AFFECTS: users of security/openssh-portable
+  AUTHOR: bdrewery@FreeBSD.org
+
+  OpenSSH was upgraded to 8.2p1 on 2020-03-23.
+
+  A restart of sshd is required after upgrade due to an incompatibility
+  introduced in 8.2.
+
+  Please see https://www.openssh.com/txt/release-8.2 for upcoming
+  deprecation notices.
+
+20200408
+  AFFECTS: users of net/irrd
+  AUTHOR: bofh@FreeBSD.org
+
+  Legacy version of net/irrd has been moved to net/irrd-legacy.
+  net/irrd has been upgraded to 4.X branch. If someone wants to stick with
+  legacy version then pkg users have to do something like
+
+  # pkg set -o net/irrd:net/irrd-legacy
+
+  For portmaster users
+  # portmaster -o net/irrd-legacy net/irrd
+
+  Both of the version can be installed and used concurrently in case there is
+  a need for migration
+
+20200403:
+  AFFECTS: users of x11-fonts/fontconfig
+  AUTHOR: desktop@FreeBSD.org
+
+  Fontconfig 2.13.1 generated .uuid files in the fonts directory which where
+  not properly registered to the packages. To clean them up, please execute the
+  following command:
+
+  	find /usr/local/share/fonts -type f -name .uuid -delete
+
+20200326:
+  AFFECTS: users of devel/sonarqube and devel/sonar-ant-task
+  AUTHOR: netchild@FreeBSD.org
+
+  The outdated port devel/sonarqube has moved to
+  devel/sonarqube-community to make it clear that it is the community
+  edition. The log and DB files are still stored in the same location.
+
+  The devel/sonar-ant-task port has moved to devel/sonarqube-ant-task
+  to match the upstream-name. The install location is renamed
+  accordingly.
+
+  At the same time the user/group of the sonarqube port changed from
+  www:www to sonarqube:sonarqube.
+
+  It is expected that nobody was using the 6.2 version from 2016
+  anymore and no change needs to be done. No analysis was done to check
+  if the old 6.2 version can be updated in-place to the 8.2 version.
+  As such if there is still someone using the old 6.2 version, you may
+  have to delete /var/log/sonarqube and /var/db/sonarqube before
+  installing the new version.
+
+20200320
+  AFFECTS: users of devel/qca
+  AUTHOR: kde@FreeBSD.org
+
+  New versions of devel/qca stopped supporting OpenSSL < 1.1.
+  For this reason devel/qca-legacy has been added, which is
+  held back at an older version until FreeBSD 11 goes EOL.
+
+  Ports depending on devel/qca should stop adding direct LIB_DEPENDS
+  and switch to depending on it via USES=qca.
+
+  FreeBSD 11 users might want to run something like
+
+      pkg set -o devel/qca:devel/qca-legacy
+
+20200320:
+  AFFECTS: users of x11/libxkbcommon
+  AUTHOR: zeising@FreeBSD.org
+
+  The libxkbcommon library (x11/libxkbcommon), used to handle keyboards
+  in some applications, most notably kde and wayland, have been switched
+  to use evdev rules by default on FreeBSD 12 and later.  Some keys, most
+  notably arrow keys, may not work in applications using libxkbcommon if
+  you are using xf86-input-keyboard rather than xf86-input-libinput.
+  If you have trouble with the keyboard keys, and if /var/log/Xorg.*.log
+  shows that the "kbd" or "keyboard" driver is being used, you need to
+  switch to legacy rules by setting the environment variable
+  XKB_DEFAULT_RULES to xorg.
+  This switch is made to match the default configuration on FreeBSD 12.1 and
+  later, the default configuration on FreeBSD 11.3 still uses the legacy
+  rules.
+
+20200316:
+  AFFECTS: users of net-im/slack-term
+  AUTHOR: dmgk@FreeBSD.org
+
+  The config file location was changed from ~/.slack-term to
+  ~/.config/slack-term/config, please move your existing config file
+  accordingly.
+
 20200308
   AFFECTS: users of graphics/mesa-libs and legacy graphics drivers
   AUTHOR: zeising@FreeBSD.org

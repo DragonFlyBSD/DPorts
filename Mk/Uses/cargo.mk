@@ -37,7 +37,7 @@ CARGO_DIST_SUBDIR?=	rust/crates
 
 # Generate list of DISTFILES.
 .for _crate in ${CARGO_CRATES}
-MASTER_SITES+=	CRATESIO/${_crate:C/^(.*)-[0-9].*/\1/}/${_crate:C/^.*-([0-9].*)/\1/}:cargo_${_crate:C/[^a-zA-Z0-9_]//g}
+MASTER_SITES+=	CRATESIO/${_crate:C/^([-_a-zA-Z0-9]+)-[0-9].*/\1/}/${_crate:C/^[-_a-zA-Z0-9]+-([0-9].*)/\1/}:cargo_${_crate:C/[^a-zA-Z0-9_]//g}
 DISTFILES+=	${CARGO_DIST_SUBDIR}/${_crate}.tar.gz:cargo_${_crate:C/[^a-zA-Z0-9_]//g}
 .endfor
 
@@ -185,6 +185,10 @@ DEV_WARNING+=	"CARGO_CRATES=openssl-0.10.3 or older do not support OpenSSL 1.1.1
 .  endif
 . endif
 .undef _openssl_VER
+.endif
+
+.if ${CARGO_CRATES:Mopenssl-src-[0-9]*}
+DEV_WARNING+=	"Please make sure this port uses the system OpenSSL and consider removing CARGO_CRATES=${CARGO_CRATES:Mopenssl-src-[0-9]*} (a vendored copy of OpenSSL) from the build, e.g., by patching Cargo.toml appropriately."
 .endif
 
 .if ${CARGO_CRATES:Mopenssl-sys-[0-9]*}
