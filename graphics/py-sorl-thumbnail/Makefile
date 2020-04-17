@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	sorl-thumbnail
-PORTVERSION=	12.4.1
-PORTREVISION=	2
+PORTVERSION=	12.6.3
 CATEGORIES=	graphics python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -14,10 +13,12 @@ COMMENT=	Sorl-thumbnail provides an easy way to generate image thumbnails
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}django111>=1.8:www/py-django111@${PY_FLAVOR}
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools_scm>0:devel/py-setuptools_scm@${PY_FLAVOR}
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}django22>=1.11:www/py-django22@${PY_FLAVOR}
 
-USES=		python
-USE_PYTHON=	autoplist distutils
+USES=		python:3.5+
+USE_PYTHON=	autoplist concurrent distutils
+
 NO_ARCH=	yes
 PORTDOCS=	*
 
@@ -34,6 +35,7 @@ DOCS_VARS=		PYDISTUTILS_BUILD_TARGET+="build_sphinx -a -E"
 
 GRAPHICSMAGICK_RUN_DEPENDS=	${LOCALBASE}/bin/gm:graphics/GraphicsMagick
 IMAGEMAGICK_RUN_DEPENDS=	${LOCALBASE}/bin/convert:graphics/ImageMagick6
+PILLOW_RUN_DEPENDS=		${PY_PILLOW}
 REDIS_RUN_DEPENDS=		${PYTHON_PKGNAMEPREFIX}redis>0:databases/py-redis@${PY_FLAVOR}
 WAND_RUN_DEPENDS=		${PYTHON_PKGNAMEPREFIX}Wand>0:graphics/py-wand@${PY_FLAVOR}
 
@@ -43,20 +45,10 @@ PILLOW_DESC=		Use internal image processing
 REDIS_DESC=		Use REDIS as Key Value Store
 WAND_DESC=		Use Wand with ImageMagick
 
-.include <bsd.port.pre.mk>
-
-.if ${PORT_OPTIONS:MPILLOW}
-.if ${PYTHON_REL} < 3500
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}pillow6>0:graphics/py-pillow6@${PY_FLAVOR}
-.else
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}pillow>0:graphics/py-pillow@${PY_FLAVOR}
-.endif
-.endif
-
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	(cd ${WRKSRC}/build/sphinx/html && \
 		${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR} \
 			"! -name .buildinfo -and ! -name objects.inv")
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
