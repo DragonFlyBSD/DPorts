@@ -4,10 +4,10 @@
 PORTNAME=	RetroArch
 PORTVERSION=	1.3.6
 DISTVERSIONPREFIX=	v
-PORTREVISION=	17
+PORTREVISION=	18
 CATEGORIES=	games
 
-MAINTAINER=	yuri@FreeBSD.org
+MAINTAINER=	greg@unrelenting.technology
 COMMENT=	Cross-platform entertainment system based on libretro API
 
 LICENSE=	GPLv3
@@ -57,7 +57,8 @@ FBO_CONFIGURE_ENABLE=	fbo
 
 CFLAGS+=	-pthread
 LDFLAGS+=	-pthread
-CONFIGURE_ARGS+=--enable-threads
+LDFLAGS_i386=	-Wl,-znotext
+CONFIGURE_ARGS+=--enable-threads --disable-udev
 CONFIGURE_ENV+=	MAN_DIR=${MANPREFIX}/man
 
 USES=		compiler:c++11-lib gmake pkgconfig shebangfix xorg
@@ -67,7 +68,6 @@ SUB_FILES=	pkg-message
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--global-config-dir=${LOCALBASE}/etc
 USE_XORG=	x11 xcb xext xinerama xv xxf86vm
-LLD_UNSAFE=	yes
 SHEBANG_FILES=	libretro-common/glsym/glgen.py libretro-common/glsym/rglgen.py tools/cg2glsl.py tools/vulkan_loader_generator.py
 
 post-patch:
