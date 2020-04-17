@@ -16,7 +16,7 @@ CONFLICTS_BUILD=	ga # conflicts with include/error.h, already fixed in the head
 
 USES=		blaslapack:openblas cmake:noninja eigen:3 fortran localbase:ldflags shebangfix
 USE_GITHUB=	yes
-GH_TAGNAME=	stable_3Mar2020
+GH_TAGNAME=	patch_19Mar2020
 SHEBANG_GLOB=	*.sh *.bash
 SHEBANG_FILES=	lib/kokkos/bin/nvcc_wrapper
 
