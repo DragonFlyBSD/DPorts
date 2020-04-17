@@ -1,0 +1,1 @@
+MANPAGES_BUILD_DEPENDS+= groff:textproc/groff
