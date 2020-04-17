@@ -3,7 +3,7 @@
 
 PORTNAME=	trigger-rally
 PORTVERSION=	0.6.6.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	SF/trigger-rally/trigger-${PORTVERSION}
 
@@ -23,7 +23,7 @@ USE_SDL=	image2
 USE_GL=		glu glew
 MAKEFILE=	GNUmakefile
 ALL_TARGET=	build
-LLD_UNSAFE=	yes
+LDFLAGS_i386=	-Wl,-znotext
 INSTALLS_ICONS=	yes
 
 WRKSRC_SUBDIR=	src
