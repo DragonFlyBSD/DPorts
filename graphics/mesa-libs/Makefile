@@ -9,6 +9,7 @@ CATEGORIES=	graphics
 COMMENT=	OpenGL libraries that support GLX and EGL clients
 
 USE_XORG=	xorgproto x11 xcb xdamage xext \
+		xrandr \
 		xfixes xshmfence xxf86vm
 
 OPTIONS_DEFINE=	WAYLAND
