@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	vim
-PORTVERSION=	8.2.0345
+PORTVERSION=	8.2.0491
+PORTREVISION=	1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	editors
 
@@ -95,6 +96,8 @@ CONSOLE_CONFIGURE_OFF=	--enable-xim --enable-fontset
 CONSOLE_PLIST_SUB=	GUI="@comment " DESKTOP="@comment "
 CONSOLE_VARS=		GUI=no
 
+GNOME_CONFIGURE_ENABLE=	canberra
+GNOME_LIB_DEPENDS=	libcanberra.so:audio/libcanberra
 GNOME_PLIST_SUB=	GUI="" DESKTOP=""
 GNOME_IMPLIES=		NLS
 GNOME_USE=		GNOME=gdkpixbuf2,libgnomeui XORG=ice,sm,xorgproto,x11,xpm,xt
@@ -186,13 +189,16 @@ post-install:
 
 # OPTIONS
 post-patch-CTAGS_BASE-on:
-	${FIND} ${WRKSRC}/runtime/ -name 'menu*.vim' -print0 | ${XARGS} -0 ${REINPLACE_CMD} -Ee 's!ctags -R ?\.!${FIND} . -type f \\| ${XARGS} ctags!g'
+	${FIND} ${WRKSRC}/runtime -name 'menu*.vim' | ${XARGS} ${GREP} -l 'ctags -R' | \
+		${XARGS} ${REINPLACE_CMD} -Ee 's!ctags -R ?\.!${FIND} . -type f \\| ${XARGS} ctags!g'
 
 post-patch-CTAGS_EXUBERANT-on:
-	${FIND} ${WRKSRC}/runtime/ -name 'menu*.vim' -print0 | ${XARGS} -0 ${REINPLACE_CMD} -e 's|ctags -R|exctags -R|g'
+	${FIND} ${WRKSRC}/runtime -name 'menu*.vim' | ${XARGS} ${GREP} -l 'ctags -R' | \
+		${XARGS} ${REINPLACE_CMD} -e 's|ctags -R|exctags -R|g'
 
 post-patch-CTAGS_UNIVERSAL-on:
-	${FIND} ${WRKSRC}/runtime/ -name 'menu*.vim' -print0 | ${XARGS} -0 ${REINPLACE_CMD} -e 's|ctags -R|uctags -R|g'
+	${FIND} ${WRKSRC}/runtime -name 'menu*.vim' | ${XARGS} ${GREP} -l 'ctags -R' | \
+		${XARGS} ${REINPLACE_CMD} -e 's|ctags -R|uctags -R|g'
 
 post-patch-LUA-on:
 	${REINPLACE_CMD} -e 's|set dummy lua;|set dummy ${LUA_CMD};|g' ${WRKSRC}/src/auto/configure
