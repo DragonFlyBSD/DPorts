@@ -3,19 +3,21 @@ bin/virt-admin
 bin/virt-host-validate
 bin/virt-pki-validate
 bin/virt-xml-validate
+%%QEMU%%bin/virt-qemu-run
 %%BHYVE%%sbin/virtbhyved
 sbin/virtnetworkd
 sbin/virtproxyd
 %%QEMU%%sbin/virtqemud
 sbin/virtsecretd
 sbin/virtstoraged
-sbin/virtvboxd
+%%VBOX%%sbin/virtvboxd
 %%XEN%%sbin/virtxend
 man/man1/virsh.1.gz
 man/man1/virt-admin.1.gz
 man/man1/virt-host-validate.1.gz
 man/man1/virt-pki-validate.1.gz
 man/man1/virt-xml-validate.1.gz
+%%QEMU%%man/man1/virt-qemu-run.1.gz
 man/man7/virkeycode-atset1.7.gz
 man/man7/virkeycode-atset2.7.gz
 man/man7/virkeycode-atset3.7.gz
@@ -42,7 +44,7 @@ man/man8/virtlogd.8.gz
 %%QEMU%%@sample %%ETCDIR%%/virtqemud.conf.sample
 @sample %%ETCDIR%%/virtsecretd.conf.sample
 @sample %%ETCDIR%%/virtstoraged.conf.sample
-@sample %%ETCDIR%%/virtvboxd.conf.sample
+%%VBOX%%@sample %%ETCDIR%%/virtvboxd.conf.sample
 %%XEN%%@sample %%ETCDIR%%/virtxend.conf.sample
 %%EXAMPLESDIR%%/networks/default.xml
 %%BHYVE%%@sample %%ETCDIR%%/bhyve.conf.sample
@@ -116,14 +118,14 @@ share/augeas/lenses/tests/test_virtproxyd.aug
 %%QEMU%%share/augeas/lenses/tests/test_virtqemud.aug
 share/augeas/lenses/tests/test_virtsecretd.aug
 share/augeas/lenses/tests/test_virtstoraged.aug
-share/augeas/lenses/tests/test_virtvboxd.aug
+%%VBOX%%share/augeas/lenses/tests/test_virtvboxd.aug
 %%BHYVE%%share/augeas/lenses/virtbhyved.aug
 share/augeas/lenses/virtnetworkd.aug
 share/augeas/lenses/virtproxyd.aug
 %%QEMU%%share/augeas/lenses/virtqemud.aug
 share/augeas/lenses/virtsecretd.aug
 share/augeas/lenses/virtstoraged.aug
-share/augeas/lenses/virtvboxd.aug
+%%VBOX%%share/augeas/lenses/virtvboxd.aug
 %%BHYVE%%share/augeas/lenses/tests/test_libvirtd_bhyve.aug
 %%QEMU%%share/augeas/lenses/tests/test_libvirtd_qemu.aug
 %%XEN%%share/augeas/lenses/libvirtd_libxl.aug
@@ -134,6 +136,7 @@ share/augeas/lenses/virtvboxd.aug
 %%DATADIR%%/api/libvirt-api.xml
 %%DATADIR%%/api/libvirt-lxc-api.xml
 %%DATADIR%%/api/libvirt-qemu-api.xml
+%%DATADIR%%/cpu_map/arm_features.xml
 %%DATADIR%%/cpu_map/index.xml
 %%DATADIR%%/cpu_map/ppc64_POWER6.xml
 %%DATADIR%%/cpu_map/ppc64_POWER7.xml
@@ -147,15 +150,19 @@ share/augeas/lenses/virtvboxd.aug
 %%DATADIR%%/cpu_map/x86_Broadwell-noTSX-IBRS.xml
 %%DATADIR%%/cpu_map/x86_Broadwell-noTSX.xml
 %%DATADIR%%/cpu_map/x86_Broadwell.xml
+%%DATADIR%%/cpu_map/x86_Cascadelake-Server-noTSX.xml
 %%DATADIR%%/cpu_map/x86_Cascadelake-Server.xml
 %%DATADIR%%/cpu_map/x86_Conroe.xml
+%%DATADIR%%/cpu_map/x86_Dhyana.xml
 %%DATADIR%%/cpu_map/x86_EPYC-IBPB.xml
 %%DATADIR%%/cpu_map/x86_EPYC.xml
 %%DATADIR%%/cpu_map/x86_Haswell-IBRS.xml
 %%DATADIR%%/cpu_map/x86_Haswell-noTSX-IBRS.xml
 %%DATADIR%%/cpu_map/x86_Haswell-noTSX.xml
 %%DATADIR%%/cpu_map/x86_Haswell.xml
+%%DATADIR%%/cpu_map/x86_Icelake-Client-noTSX.xml
 %%DATADIR%%/cpu_map/x86_Icelake-Client.xml
+%%DATADIR%%/cpu_map/x86_Icelake-Server-noTSX.xml
 %%DATADIR%%/cpu_map/x86_Icelake-Server.xml
 %%DATADIR%%/cpu_map/x86_IvyBridge-IBRS.xml
 %%DATADIR%%/cpu_map/x86_IvyBridge.xml
@@ -170,8 +177,10 @@ share/augeas/lenses/virtvboxd.aug
 %%DATADIR%%/cpu_map/x86_SandyBridge-IBRS.xml
 %%DATADIR%%/cpu_map/x86_SandyBridge.xml
 %%DATADIR%%/cpu_map/x86_Skylake-Client-IBRS.xml
+%%DATADIR%%/cpu_map/x86_Skylake-Client-noTSX-IBRS.xml
 %%DATADIR%%/cpu_map/x86_Skylake-Client.xml
 %%DATADIR%%/cpu_map/x86_Skylake-Server-IBRS.xml
+%%DATADIR%%/cpu_map/x86_Skylake-Server-noTSX-IBRS.xml
 %%DATADIR%%/cpu_map/x86_Skylake-Server.xml
 %%DATADIR%%/cpu_map/x86_Westmere-IBRS.xml
 %%DATADIR%%/cpu_map/x86_Westmere.xml
@@ -196,6 +205,7 @@ share/augeas/lenses/virtvboxd.aug
 %%DATADIR%%/schemas/capability.rng
 %%DATADIR%%/schemas/cputypes.rng
 %%DATADIR%%/schemas/domain.rng
+%%DATADIR%%/schemas/domainbackup.rng
 %%DATADIR%%/schemas/domaincaps.rng
 %%DATADIR%%/schemas/domaincheckpoint.rng
 %%DATADIR%%/schemas/domaincommon.rng
@@ -318,9 +328,10 @@ share/augeas/lenses/virtvboxd.aug
 lib/libvirt/connection-driver/libvirt_driver_network.so
 lib/libvirt/connection-driver/libvirt_driver_secret.so
 lib/libvirt/connection-driver/libvirt_driver_storage.so
-lib/libvirt/connection-driver/libvirt_driver_vbox.so
+%%VBOX%%lib/libvirt/connection-driver/libvirt_driver_vbox.so
 %%XEN%%lib/libvirt/connection-driver/libvirt_driver_libxl.so
 lib/libvirt/storage-backend/libvirt_storage_backend_fs.so
+lib/libvirt/storage-backend/libvirt_storage_backend_logical.so
 %%ZFS%%lib/libvirt/storage-backend/libvirt_storage_backend_zfs.so
 lib/libvirt/storage-file/libvirt_storage_file_fs.so
 %%QEMU%%@dir /var/cache/libvirt/qemu
