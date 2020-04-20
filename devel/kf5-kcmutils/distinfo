@@ -1,5 +1,3 @@
-TIMESTAMP = 1583655132
-SHA256 (KDE/frameworks/5.67.0/kcmutils-5.67.0.tar.xz) = ffa61de96a5b11d29b871cd9caf075995236ad3dd432738fb774c97197d9ee8b
-SIZE (KDE/frameworks/5.67.0/kcmutils-5.67.0.tar.xz) = 239872
-SHA256 (KDE/frameworks/5.67.0/ea7120ed901bf6161bb483ab73211a6491daac8f.patch) = 4225469c8a0114aa5656fee5bf4ce69930bd7d222a9c2885265330042f693913
-SIZE (KDE/frameworks/5.67.0/ea7120ed901bf6161bb483ab73211a6491daac8f.patch) = 984
+TIMESTAMP = 1586109061
+SHA256 (KDE/frameworks/5.69.0/kcmutils-5.69.0.tar.xz) = 0213655963d02b5e66918d242d71f08b9cde7c9040a95518437cdefa0959187d
+SIZE (KDE/frameworks/5.69.0/kcmutils-5.69.0.tar.xz) = 240060
