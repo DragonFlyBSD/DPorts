@@ -3,7 +3,7 @@
 
 PORTNAME=	geeqie
 PORTVERSION=	1.5.1
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.geeqie.org/
 
@@ -71,5 +71,9 @@ FFMPEGTHUMBNAILER_CONFIGURE_ENABLE=	ffmpegthumbnailer
 FFMPEGTHUMBNAILER_LIB_DEPENDS=	libffmpegthumbnailer.so:multimedia/ffmpegthumbnailer
 
 NLS_CONFIGURE_ENABLE=	nls
+
+pre-build:
+	# fixes threaded build
+	@cd ${WRKSRC}/src && ${SETENV} ${MAKE_ENV} ${MAKE_CMD} gq-marshal.c
 
 .include <bsd.port.mk>
