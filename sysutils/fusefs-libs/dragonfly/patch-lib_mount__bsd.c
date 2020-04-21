@@ -1,6 +1,16 @@
---- lib/mount_bsd.c.intermediate	2019-05-14 22:19:51.000000000 +0000
+--- lib/mount_bsd.c.orig	2020-04-21 09:40:43 UTC
 +++ lib/mount_bsd.c
-@@ -207,7 +207,13 @@ void fuse_kern_unmount(const char *mount
+@@ -15,7 +15,9 @@
+ #include <sys/stat.h>
+ #include <sys/wait.h>
+ #include <sys/sysctl.h>
++#ifndef __DragonFly__
+ #include <sys/user.h>
++#endif
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <unistd.h>
+@@ -207,7 +209,13 @@ void fuse_kern_unmount(const char *mount
  /* Check if kernel is doing init in background */
  static int init_backgrounded(void)
  {
