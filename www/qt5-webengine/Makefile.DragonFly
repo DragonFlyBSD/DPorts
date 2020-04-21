@@ -9,12 +9,12 @@ dfly-patch:
 	${REINPLACE_CMD} -e '/-fgnu-inline-asm/d' \
 		${WRKSRC}/src/3rdparty/chromium/sandbox/linux/BUILD.gn
 	${RM} -rf ${WRKSRC}/src/3rdparty/chromium/third_party/tcmalloc
-#	${CP} ${WRKSRC}/src/core/config/freebsd.pri ${WRKSRC}/src/core/config/dragonfly.pri
+#	${CP} ${WRKSRC}/src/core/config/freebsd.pri ${WRKSRC}/src/buildtools/config/dragonfly.pri
 # missing remove for files/patch-src_3rdparty_chromium_build_linux_unbundle_libwebp.gn
-	${REINPLACE_CMD} -e '/use_system_libwebp/d' ${WRKSRC}/src/core/config/linux.pri
-	${ECHO} 'include(linux.pri)' > ${WRKSRC}/src/core/config/dragonfly.pri
-	${ECHO} "gn_args += ${dflypri_args1}" >> ${WRKSRC}/src/core/config/dragonfly.pri
-#	${ECHO} "gn_args += ${dflypri_args2}" >> ${WRKSRC}/src/core/config/dragonfly.pri
+	${REINPLACE_CMD} -e '/use_system_libwebp/d' ${WRKSRC}/src/buildtools/config/linux.pri
+	${ECHO} 'include(linux.pri)' > ${WRKSRC}/src/buildtools/config/dragonfly.pri
+	${ECHO} "gn_args += ${dflypri_args1}" >> ${WRKSRC}/src/buildtools/config/dragonfly.pri
+#	${ECHO} "gn_args += ${dflypri_args2}" >> ${WRKSRC}/src/buildtools/config/dragonfly.pri
 	${REINPLACE_CMD} -e 's@freebsd.pri@dragonfly.pri@g' \
 		${WRKSRC}/mkspecs/features/functions.prf
 	${CP} ${WRKSRC}/src/3rdparty/chromium/base/process/process_handle_freebsd.cc \
