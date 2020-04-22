@@ -3,8 +3,8 @@
 
 PORTNAME=	qgis
 DISTVERSIONPREFIX=	final-
-DISTVERSION=	3_10_1
-PORTREVISION=	2
+DISTVERSION=	3_12_1
+PORTREVISION=	1
 CATEGORIES=	graphics geography
 
 MAINTAINER=	rhurlin@gwdg.de
@@ -51,7 +51,7 @@ RUN_DEPENDS=	astyle:devel/astyle \
 		${PYTHON_PKGNAMEPREFIX}OWSLib>=0.18.0:graphics/py-OWSLib@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pandas>=0.24.2:math/py-pandas@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pbr>=3.1.1:devel/py-pbr@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}pillow>=6.0.0:graphics/py-pillow@${PY_FLAVOR} \
+		${PY_PILLOW} \
 		${PYTHON_PKGNAMEPREFIX}pip>=9.0.3:devel/py-pip@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}plotly>=3.0.2:graphics/py-plotly@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}psutil>=5.6.3:sysutils/py-psutil@${PY_FLAVOR} \
@@ -76,7 +76,6 @@ LIB_DEPENDS=	libexiv2.so:graphics/exiv2 \
 		libhdf5.so:science/hdf5 \
 		libnetcdf.so:science/netcdf \
 		libproj.so:graphics/proj \
-		libqca-qt5.so:devel/qca \
 		libqjson-qt5.so:devel/qjson \
 		libqscintilla2_qt5.so:devel/qscintilla2-qt5 \
 		libqt5keychain.so:security/qtkeychain \
@@ -89,7 +88,7 @@ LIB_DEPENDS=	libexiv2.so:graphics/exiv2 \
 
 ### Fortran is needed by numpy, GRASS, etc.
 USES=		bison cmake compiler:features cpe desktop-file-utils \
-		fortran gl gmake gnome pgsql pyqt:5 python:3.6+ qt:5 \
+		fortran gl gmake gnome pgsql pyqt:5 python:3.6+ qca qt:5 \
 		shebangfix sqlite:3
 USE_GNOME=	libxml2
 USE_GL=		gl
@@ -145,8 +144,6 @@ PLIST_SUB=	DISTVERSION=${PORTVERSION}
 .include <bsd.port.pre.mk>
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|markupsafe ||g' \
-		${WRKSRC}/python/ext-libs/CMakeLists.txt
 # On i386, '-mllvm -inline-threshold=128' does not build under all circumstances
 # See bugs 242557 and 241687.
 .if ${OPSYS} == FreeBSD && ${ARCH} == "i386"
@@ -159,6 +156,7 @@ pre-configure:
 
 post-install:
 	@${RM} ${STAGEDIR}${DATADIR}/python/pytz/tzfile.py.bak
+	${FIND} ${STAGEDIR}${LOCALBASE} -name "__pycache__" | ${XARGS} ${RM} -rf
 	@${RM} /tmp/srs.db
 
 check:
