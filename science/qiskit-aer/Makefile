@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	qiskit-aer
-DISTVERSION=	0.4.1
+DISTVERSION=	0.5.0
 CATEGORIES=	science
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -10,10 +10,11 @@ COMMENT=	Simulator for quantum circuits, including noise models
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-BUILD_DEPENDS=	spdlog>0:devel/spdlog
+BROKEN_i386=	undefined reference to `__atomic_load'
+
 LIB_DEPENDS=	libfmt.so:devel/libfmt \
-		libopenblas.so:math/openblas
-RUN_DEPENDS=	spdlog>0:devel/spdlog
+		libopenblas.so:math/openblas \
+		libspdlog.so:devel/spdlog
 
 USES=		cmake compiler:c++11-lang
 USE_GITHUB=	yes
