@@ -1,0 +1,11 @@
+--- Makefile.intermediate	2020-04-29 16:49:15 UTC
++++ Makefile
+@@ -76,7 +76,7 @@ ABC_READLINE_LIBRARIES ?= -lreadline
+ ifndef ABC_USE_NO_READLINE
+   CFLAGS += -DABC_USE_READLINE $(ABC_READLINE_INCLUDES)
+   LIBS += $(ABC_READLINE_LIBRARIES)
+-  ifeq ($(OS), FreeBSD)
++  ifeq ($(OS), $(filter $(OS),FreeBSD DragonFly))
+     CFLAGS += -I/usr/local/include
+     LDFLAGS += -L/usr/local/lib
+   endif
