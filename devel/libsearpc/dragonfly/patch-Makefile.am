@@ -1,0 +1,14 @@
+--- Makefile.am.intermediate	2020-04-29 17:04:50 UTC
++++ Makefile.am
+@@ -22,11 +22,7 @@ install-data-local:
+ if MACOS
+ 	sed -i '' -e "s|(DESTDIR)|${DESTDIR}|g" $(pcfiles)
+ else
+-if FBSD
+ 	${SED} -i '' -e "s|(DESTDIR)||g" $(pcfiles)
+-else
+-	${SED} -i "s|(DESTDIR)|${DESTDIR}|g" $(pcfiles)
+-endif
+ endif
+ 
+ dist-hook:
