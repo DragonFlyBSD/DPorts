@@ -1,6 +1,6 @@
 # $FreeBSD$
 
-PORTREVISION=	2
+PORTREVISION=	3
 PKGNAMEPREFIX=	lib
 
 MASTERDIR=	${.CURDIR}/../rav1e
@@ -18,6 +18,7 @@ do-build:
 do-install:
 	@${CARGO_CARGO_RUN} cinstall \
 		--destdir "${STAGEDIR}" \
+		--prefix "${PREFIX}" \
 		${CARGO_BUILD_ARGS}
 
 post-install:
