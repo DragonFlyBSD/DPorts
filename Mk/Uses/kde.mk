@@ -54,7 +54,7 @@ _KDE_RELNAME=		KDE${_KDE_VERSION}
 
 # === VERSIONS OF THE DIFFERENT COMPONENTS =====================================
 # Current KDE desktop.
-KDE_PLASMA_VERSION?=		5.18.4.1
+KDE_PLASMA_VERSION?=		5.18.5
 KDE_PLASMA_BRANCH?=		stable
 
 # Current KDE frameworks.
@@ -62,8 +62,8 @@ KDE_FRAMEWORKS_VERSION?=	5.69.0
 KDE_FRAMEWORKS_BRANCH?= 	stable
 
 # Current KDE applications.
-KDE_APPLICATIONS_VERSION?=	19.12.3
-KDE_APPLICATIONS_SHLIB_VER?=	5.13.3
+KDE_APPLICATIONS_VERSION?=	20.04.0
+KDE_APPLICATIONS_SHLIB_VER?=	5.14.0
 KDE_APPLICATIONS_BRANCH?=	stable
 # Upstream moves old software to Attic/. Specify the newest applications release there.
 # Only the major version is used for the comparison.
@@ -123,7 +123,7 @@ DIST_SUBDIR?=		KDE/applications/${KDE_APPLICATIONS_VERSION}
 .      elif ${_KDE_CATEGORY:Mkde-plasma}
 PORTVERSION?=		${KDE_PLASMA_VERSION}
 PKGNAMEPREFIX?=		plasma5-
-MASTER_SITES?=		KDE/${KDE_PLASMA_BRANCH}/plasma/${KDE_PLASMA_VERSION:R}
+MASTER_SITES?=		KDE/${KDE_PLASMA_BRANCH}/plasma/${KDE_PLASMA_VERSION}
 DIST_SUBDIR?=		KDE/plasma/${KDE_PLASMA_VERSION}
 .      elif ${_KDE_CATEGORY:Mkde-frameworks}
 PORTVERSION?=		${KDE_FRAMEWORKS_VERSION}
@@ -669,7 +669,7 @@ kde-kontactinterface_PORT=	net/kontactinterface
 kde-kontactinterface_LIB=	libKF5KontactInterface.so
 
 kde-kpimdav_PORT=		net/kdav
-kde-kpimdav_LIB=		libKPimKDAV.so
+kde-kpimdav_LIB=		libKF5DAV.so
 
 kde-kpkpass_PORT=		security/kpkpass
 kde-kpkpass_LIB=		libKPimPkPass.so

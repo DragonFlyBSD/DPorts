@@ -5,6 +5,94 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20200505:
+  AFFECTS: users of net-im/pidgin-rocketchat
+  AUTHOR: tobias.rehbein@web.de
+
+  This port has been turned into a libpurple plugin (net-im/purple-rocketchat)
+  to support other libpurple clients than pidgin.
+
+  This also changes some dependencies and you should run the following command
+  to prevent pidgin from being autoremoved.
+
+  # mark pidgin as being not automatically installed
+  pkg set -A 0 pidgin
+
+20200504:
+  AFFECTS: users of x11-wm/hs-xmonad
+  AUTHOR:  arrowd@FreeBSD.org
+
+  From now, it is recommended to use "build script" method to compile XMonad
+  config. See https://github.com/xmonad/xmonad-testing/ for general info and
+  port's pkg-message for concrete steps.
+
+20200503:
+  AFFECTS: users of net-mgmt/librenms
+  AUTHOR:  dvl@FreeBSD.org
+
+  Polling via cronjob is deprecated as of release 1.63
+  see see https://community.librenms.org/t/dropping-support-for-php-7-1-and-python-2/11851
+
+  Please migrate to the Dispatch Service:
+  https://docs.librenms.org/Extensions/Dispatcher-Service/
+
+  These steps should get you running:
+  * comment out the crontab entries listed above under PYPOLLER
+  * populate %%WWWDIR%%/.env with:
+    * APP_KEY - see farther below for how to create
+    * NODE_ID - see just below for how to create
+    * DB_HOST
+    * DB_DATABASE
+    * DB_USERNAME
+    * DB_PASSWORD
+  * you can create a NODE_ID with: php -r 'echo uniqid() . "\n";'
+  * sysrc librenms_enable="YES"
+  * service librenms start
+
+20200501:
+  AFFECTS: users of www/phpmyfaq
+  AUTHOR: flo@FreeBSD.org
+
+  phpMyFAQ has been updated to 3.0.2, old templates are not compatible with
+  this new version. Please see:
+
+  https://www.phpmyfaq.de/docs/3.0#3.4
+
+20200428:
+  AFFECTS: users of sysutils/ansible
+  AUTHOR: bofh@FreeBSD.org
+
+  Ansible has been updated to 2.9.7. Please follow the porting guide
+  to update the rulesets:
+
+  https://docs.ansible.com/ansible/devel/porting_guides/porting_guide_2.9.html
+
+  If you wish to stay with 2.8 version, you can switch
+  to new sysutils/ansible28 port, which tracks stable 2.8 branch:
+
+  # pkg set -n ansible:ansible28
+
+20200428:
+  AFFECTS: x11-servers/xwayland-devel
+  AUTHOR: jbeich@FreeBSD.org
+
+  DRI3 is enabled by default since mesa-libs-18.3.2_4, so you no
+  longer need to define LIBGL_DRI3_ENABLE in ~/.profile or ~/.login.
+
+  See 20200308 entry for more details.
+
+20200422:
+  AFFECTS: users of devel/kyua
+  AUTHOR: brooks@FreeBSD.org
+
+  A tests group has been added and the tests user should be a member
+  of it by default rather than nobody. You should update your password
+  database to match (change the group from 65534 to 977 after updating).
+
+  Please use the following command to do so:
+
+  pw usermod -n tests -g tests
+
 20200408:
   AFFECTS: users of security/openssh-portable
   AUTHOR: bdrewery@FreeBSD.org
@@ -113,7 +201,7 @@ you update your ports collection, before attempting any port upgrades.
   by default, instead of the older DRI2 interface.  This might cause regressions
   when using the legacy graphics drivers, either through
   graphics/drm-legacy-kmod or the graphics drivers in base.
-  
+
   If you experience issues when running OpenGL applications it is possible
   to force the use of DRI2 by setting the LIBGL_DRI3_DISABLE environment
   variable to 1 before starting any OpenGL application.  The easiest way to
@@ -443,6 +531,7 @@ you update your ports collection, before attempting any port upgrades.
   # pkg upgrade
 
   For portmaster users:
+  # sh
   # portmaster -o lang/python37 python36
   # REINSTALL="$(pkg info -o py36-\* | awk '{printf "%s ", $2}')"
   # pkg delete -f py36-\*

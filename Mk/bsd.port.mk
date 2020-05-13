@@ -810,7 +810,7 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 # MAKE_JOBS_NUMBER_LIMIT
 #				- Set a limit for maximum number of make jobs allowed to be
 #				  used.
-## cacche
+## ccache
 #
 # WITH_CCACHE_BUILD
 # 				- Enable CCACHE support (devel/ccache).  User settable.
@@ -1058,7 +1058,7 @@ _FLAVOR:=	${FLAVOR}
 .if !defined(PORTS_FEATURES) && empty(${PORTS_FEATURES:MFLAVORS})
 PORTS_FEATURES+=	FLAVORS
 .endif
-MINIMAL_PKG_VERSION=	1.6.0
+MINIMAL_PKG_VERSION=	1.13.0
 
 _PORTS_DIRECTORIES+=	${PKG_DBDIR} ${PREFIX} ${WRKDIR} ${EXTRACT_WRKDIR} \
 						${STAGEDIR}${PREFIX} ${WRKDIR}/pkg ${BINARY_LINKDIR}
@@ -1368,6 +1368,9 @@ PKGCOMPATDIR?=		${LOCALBASE}/lib/compat/pkg
 .if defined(USE_LOCAL_MK)
 .include "${PORTSDIR}/Mk/bsd.local.mk"
 .endif
+.for odir in ${OVERLAYS}
+.sinclude "${odir}/Mk/bsd.overlay.mk"
+.endfor
 
 .if defined(USE_XORG) && (!defined(USES) || !${USES:Mxorg})
 DEV_WARNING+=		"Using USE_XORG alone is deprecated, please use USES=xorg"
@@ -1496,9 +1499,9 @@ DEV_ERROR+=		"FLAVORS contains flavors that are not all [a-z0-9_]: ${_BAD_FLAVOR
 
 .if !empty(FLAVOR)
 .  if empty(FLAVORS)
-IGNORE=	FLAVOR is defined (to ${FLAVOR}) while this port does not have FLAVORS.
+IGNORE=	FLAVOR is defined (to ${FLAVOR}) while this port does not have FLAVORS
 .  elif ! ${FLAVORS:M${FLAVOR}}
-IGNORE=	Unknown flavor '${FLAVOR}', possible flavors: ${FLAVORS}.
+IGNORE=	Unknown flavor '${FLAVOR}', possible flavors: ${FLAVORS}
 .  endif
 .endif
 
@@ -1965,6 +1968,9 @@ _FORCE_POST_PATTERNS=	rmdir kldxref mkfontscale mkfontdir fc-cache \
 .if defined(USE_LOCAL_MK)
 .include "${PORTSDIR}/Mk/bsd.local.mk"
 .endif
+.for odir in ${OVERLAYS}
+.sinclude "${odir}/Mk/bsd.overlay.mk"
+.endfor
 
 .if defined(USE_XORG) && (!defined(USES) || ( defined(USES) && !${USES:Mxorg} ))
 DEV_WARNING+=	"Using USE_XORG alone is deprecated, please use USES=xorg"

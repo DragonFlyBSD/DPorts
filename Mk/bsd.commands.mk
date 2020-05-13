@@ -15,7 +15,7 @@ COMMANDS_Include_MAINTAINER=	portmgr@FreeBSD.org
 
 _COMMANDSMKINCLUDED=	yes
 
-.if ${AWK:Mawk}
+.if defined(AWK) && ${AWK} == "awk"
 .undef AWK
 .endif
 AWK?=			/usr/bin/awk
