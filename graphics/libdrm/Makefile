@@ -1,7 +1,7 @@
 # Created by: lesi@FreeBSD.org
 
 PORTNAME=	libdrm
-PORTVERSION=	2.4.100
+PORTVERSION=	2.4.101
 CATEGORIES=	graphics x11
 MASTER_SITES=	http://dri.freedesktop.org/libdrm/
 
@@ -14,7 +14,7 @@ BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/pthread-stubs.pc:devel/libpthread-
 BUILD_DEPENDS+=	${LOCALBASE}/share/xsl/docbook/manpages/docbook.xsl:textproc/docbook-xsl
 LIB_DEPENDS=	libpciaccess.so:devel/libpciaccess
 
-USES=		meson pkgconfig tar:bzip2
+USES=		meson pkgconfig tar:xz
 USE_GNOME=	libxslt:build
 USE_LDCONFIG=	yes
 
