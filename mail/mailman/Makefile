@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	mailman
-DISTVERSION=	2.1.30
+DISTVERSION=	2.1.33
 PORTREVISION=	0
 CATEGORIES=	mail
 MASTER_SITES=	GNU \
@@ -128,11 +128,11 @@ MAIL_GID?=	_smtpd
 PKGNAMESUFFIX+=	-with-htdig
 # how to create PATCHFILES:
 #X identify what is the version of msapiro's patches corresponding to the release.
-#X fetch http://bazaar.launchpad.net/~msapiro/mailman/htdig/tarball/1812
+#X fetch http://bazaar.launchpad.net/~msapiro/mailman/htdig/tarball/1815
 #X unpack this tarball, and the original distfile
-#X diff -NEur original-unpack bazaar-unpack | xz --best -c >msapiro-htdig-1812.patch.xz
+#X diff -NEur original-unpack bazaar-unpack | xz --best -c >msapiro-htdig-1815.patch.xz
 #X upload the latter with mode 0644 or similar to freefall's public_distfiles/ directory
-_HTDIGREV=	1812
+_HTDIGREV=	1815
 PATCHFILES+=	msapiro-htdig-${_HTDIGREV}.patch.xz
 RUN_DEPENDS+=	htdig:textproc/htdig
 PLIST_SUB+=	SUB_HTDIG=""
@@ -237,6 +237,7 @@ post-install:
 	@${MKDIR} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}
 	${ECHO} "This marker file ensures that Python's upgrade-site-packages handles ${PKGNAME}." >${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/mailman-info.txt
 	${INSTALL_SCRIPT} ${PKGINSTALL} ${STAGEDIR}${MAILMANDIR}/bin/FreeBSD-post-install
-	${FIND} ${STAGEDIR}${MAILMANDIR}/templates -type f -exec ${MV} '{}' '{}.sample' \;
+	${MKDIR} ${STAGEDIR}${MAILMANDIR}/templates/site/en
+	${INSTALL_DATA} ${FILESDIR}/templates_site_README.txt ${STAGEDIR}${MAILMANDIR}/templates/site/README.txt
 
 .include <bsd.port.mk>
