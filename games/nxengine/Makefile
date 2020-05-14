@@ -15,7 +15,7 @@ PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
 PATCHFILES+=	d38fcaf80ac5c4b1a2da51b5d1a605ed408a192f.patch:-p1 \
 		f6bbeb2555e7c10dfdc04be57f20fedfc9f401af.patch:-p1
 
-MAINTAINER=	lifanov@FreeBSD.org
+MAINTAINER=	pkubaj@FreeBSD.org
 COMMENT=	Engine-rewrite of the classic platformer Cave Story
 
 LICENSE=	GPLv3 FREEWARE
