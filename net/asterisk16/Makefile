@@ -1,14 +1,17 @@
 # $FreeBSD$
 
 PORTNAME=	asterisk
-PORTVERSION=	16.9.0
+PORTVERSION=	16.10.0
+PORTREVISION=	2
 CATEGORIES=	net
-MASTER_SITES=	https://downloads.asterisk.org/pub/telephony/%SUBDIR%/:DEFAULT,g729
+MASTER_SITES=	https://downloads.asterisk.org/pub/telephony/%SUBDIR%/:DEFAULT,g729 \
+		http://www.pjsip.org/release/${PJSIP_VERSION}/:PJSIP
 MASTER_SITE_SUBDIR=	asterisk/ \
 			asterisk/old-releases/ \
 			sounds/releases/:g729
 PKGNAMESUFFIX=	16
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
+		pjproject-${PJSIP_VERSION}.tar.bz2:PJSIP
 DIST_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	madpilot@FreeBSD.org
@@ -26,18 +29,18 @@ EXTRACT_ONLY:=	${DISTNAME}${EXTRACT_SUFX}
 
 USES=		bison compiler:c11 cpe gmake gnome iconv libedit localbase \
 		shebangfix sqlite ssl ncurses
-USE_CSTD=	gnu89
 USE_GNOME=	libxml2
 USE_LDCONFIG=	yes
 USE_RC_SUBR=	asterisk
 USE_GITHUB=	nodefault
 
+PJSIP_VERSION=	2.9
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--datarootdir=${DATADIR} \
 		--with-ilbc=internal \
 		--with-crypto=${OPENSSLBASE} \
-		--with-pjproject-bundled=no \
-		--with-ssl=${OPENSSLBASE}
+		--with-ssl=${OPENSSLBASE} \
+		--with-externals-cache=${DISTDIR}/${DIST_SUBDIR}
 
 CPE_VENDOR=	digium
 
@@ -57,13 +60,14 @@ MAKE_ARGS+=	NOISY_BUILD=yes \
 
 CONFLICTS=		ossp-uuid-[0-9]*
 CONFLICTS_BUILD=	linuxthreads-*
-CONFLICTS_INSTALL=	asterisk13 asterisk15
+CONFLICTS_INSTALL=	asterisk13
 
 OPTIONS_DEFINE=			ASTVERSION BACKTRACE CURL EXCHANGE FREETDS G729 LDAP LUA MACRO \
 				MP3PLAYER OOH323 OPTIMIZED_CFLAGS PJSIP PORTAUDIO RADIUS SNMP \
-				SPANDSP SRTP SYSINFO XMPP
+				SPANDSP SRTP SYSINFO URIPARSER XMPP
 OPTIONS_DEFAULT=		CURL FREETDS GSM LUA MACRO MP3PLAYER NEWT ODBC MYSQL PGSQL \
-				PJSIP PORTAUDIO RADIUS SNMP SPANDSP SPEEX SQLITE2 SRTP VORBIS
+				PJSIP PORTAUDIO RADIUS SNMP SPANDSP SPEEX SQLITE2 SRTP URIPARSER \
+				VORBIS
 
 OPTIONS_DEFINE_i386=		DAHDI
 OPTIONS_DEFINE_x86_64=		DAHDI
@@ -105,6 +109,7 @@ OPUS_DESC?=	Opus Codec
 PJSIP_DESC?=	Build the PJSIP based SIP channel
 SRTP_DESC?=	SecureRTP support
 SYSINFO_DESC?=	Use devel/libsysinfo to get system information
+URIPARSER_DESC?= Use RFC 3986 compliant uriparser library
 XMPP_DESC?=	XMPP/GTALK support
 
 OPTIONS_SUB=		yes
@@ -113,12 +118,10 @@ ASTVERSION_RUN_DEPENDS=		bash:shells/bash
 
 BACKTRACE_CONFIGURE_WITH=	execinfo
 
-CURL_CONFIGURE_ON=	--with-libcurl
-CURL_CONFIGURE_OFF=	--with-libcurl=no
+CURL_CONFIGURE_WITH=	libcurl
 CURL_LIB_DEPENDS=	libcurl.so:ftp/curl
 
-DAHDI_CONFIGURE_ON=	--with-dahdi --with-openr2
-DAHDI_CONFIGURE_OFF=	--without-dahdi --without-openr2
+DAHDI_CONFIGURE_WITH=	dahdi openr2
 DAHDI_LIB_DEPENDS=	libpri.so:misc/libpri \
 			libopenr2.so:misc/openr2 \
 			libtonezone.so:misc/dahdi
@@ -163,9 +166,10 @@ OPUS_GH_TUPLE=		traud:asterisk-opus:83e1b458c77e0e287adeca494eeb79edb077b0ff:opu
 PGSQL_CONFIGURE_WITH=	postgres
 PGSQL_USES=		pgsql
 
-PJSIP_CONFIGURE_WITH=	pjproject
+PJSIP_CONFIGURE_WITH=	pjproject pjproject-bundled
 PJSIP_USES=		pkgconfig
-PJSIP_LIB_DEPENDS=	libspeex.so:audio/speex \
+PJSIP_LIB_DEPENDS=	libsrtp2.so:net/libsrtp2 \
+			libspeex.so:audio/speex \
 			libspeexdsp.so:audio/speexdsp
 
 PORTAUDIO_CONFIGURE_WITH=	portaudio
@@ -194,6 +198,9 @@ SRTP_LIB_DEPENDS=	libsrtp2.so:net/libsrtp2
 
 SYSINFO_LIB_DEPENDS=	libsysinfo.so:devel/libsysinfo
 
+URIPARSER_CONFIGURE_WITH=	uriparser
+URIPARSER_LIB_DEPENDS=	liburiparser.so:net/uriparser
+
 VORBIS_CONFIGURE_WITH=	ogg
 VORBIS_LIB_DEPENDS=	libvorbis.so:audio/libvorbis \
 			libogg.so:audio/libogg
@@ -206,14 +213,6 @@ ASTERISK_GROUP?=	asterisk
 
 USERS=	${ASTERISK_USER}
 GROUPS=	${ASTERISK_GROUP} dahdi
-
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MPJSIP} && ${PORT_OPTIONS:MSRTP}
-LIB_DEPENDS+=	libpj.so:net/pjsip-extsrtp
-.elif ${PORT_OPTIONS:MPJSIP} && ! ${PORT_OPTIONS:MSRTP}
-LIB_DEPENDS+=   libpj.so:net/pjsip
-.endif
 
 .include <bsd.port.pre.mk>
 
@@ -247,6 +246,8 @@ post-extract-OPUS-on:
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/var/lib|${PREFIX}/share|g' ${WRKSRC}/configs/samples/musiconhold.conf.sample
+	@${CP} ${FILESDIR}/0050-fix-race-parallel-build.patch \
+		${WRKSRC}/third-party/pjproject/patches/
 .if exists(${FILESDIR}/.asterisk.makeopts)
 	${CP} ${FILESDIR}/.asterisk.makeopts ${WRKSRC}/menuselect.makeopts
 .endif
