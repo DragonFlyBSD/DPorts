@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	unit
-PORTVERSION=	1.15.0
-PORTREVISION=	1
+PORTVERSION=	1.17.0
 CATEGORIES=	www
 MASTER_SITES=	https://unit.nginx.org/download/
 
@@ -36,27 +35,38 @@ UNIXSOCK_DESC=	Enable unix sockets
 HAS_CONFIGURE=	yes
 
 UNIT_VARDIR?=	/var
-UNIT_RUNDIR?=	${UNIT_VARDIR}/run/unit
 UNIT_LOGDIR?=	${UNIT_VARDIR}/log/${PORTNAME}
 UNIT_LOGFILE?=	${UNIT_LOGDIR}/${PORTNAME}.log
 UNIT_PIDFILE?=	${UNIT_RUNDIR}/${PORTNAME}.pid
+UNIT_RUNDIR?=	${UNIT_VARDIR}/run/unit
 UNIT_SOCK?=	${UNIT_RUNDIR}/control.unit.sock
+UNIT_TMPDIR?=	${UNIT_VARDIR}/tmp/unit
 
 CONFIGURE_ARGS=	--prefix=${PREFIX} \
-		--modules=libexec/unit/modules \
-		--state=libexec/unit \
+		--ld-opt="-L${LOCALBASE}/lib" \
 		--log=${UNIT_LOGFILE} \
+		--modules=libexec/unit/modules \
 		--pid=${UNIT_PIDFILE} \
-		--ld-opt="-L${LOCALBASE}/lib"
+		--state=libexec/unit \
+		--tmp=${UNIT_TMPDIR} \
+		--user=${WWWOWN} --group=${WWWGRP}
 
-PLIST_FILES?=	sbin/unitd
+USERS?=	${WWWOWN}
+GROUPS?=${WWWGRP}
+
+ALL_TARGET=
+
 PLIST_DIRS?=	libexec/unit/modules \
 		libexec/unit
+PLIST_FILES?=	sbin/unitd
 
 USE_RC_SUBR?=	unitd
-SUB_LIST=	UNIT_PIDFILE=${UNIT_PIDFILE} \
+SUB_LIST=	PREFIX=${PREFIX} \
+		UNIT_PIDFILE=${UNIT_PIDFILE} \
 		UNIT_SOCK=${UNIT_SOCK} \
-		PREFIX=${PREFIX}
+		UNIT_TMPDIR=${UNIT_TMPDIR} \
+		WWWOWN=${WWWOWN} \
+		WWWGRP=${WWWGRP}
 
 .if ${PORT_OPTIONS:MDEBUG}
 CONFIGURE_ARGS+=--debug
@@ -64,12 +74,12 @@ CONFIGURE_ARGS+=--debug
 
 .if ${PORT_OPTIONS:MDEVKIT}
 PLIST_FILES+=	include/nxt_unit_field.h \
-		include/nxt_unit.h \
 		include/nxt_unit_request.h \
 		include/nxt_unit_response.h \
 		include/nxt_unit_sptr.h \
 		include/nxt_unit_typedefs.h \
 		include/nxt_unit_websocket.h \
+		include/nxt_unit.h \
 		include/nxt_version.h \
 		include/nxt_websocket_header.h \
 		lib/libunit.a
@@ -91,18 +101,20 @@ CONFIGURE_ARGS+=--control=unix:${UNIT_SOCK}
 .endif
 
 post-build-DEVKIT-on:
-	@cd ${WRKSRC} && ${GMAKE} build/libunit.a
+	@cd ${WRKSRC} && ${MAKE} build/libunit.a
 
 .if !target(post-install)
 post-install:
 	${MKDIR} ${STAGEDIR}${UNIT_LOGDIR}
 	${MKDIR} ${STAGEDIR}${UNIT_RUNDIR}
+	${MKDIR} ${STAGEDIR}${UNIT_TMPDIR}
 	${ECHO_CMD} @dir ${UNIT_LOGDIR} >> ${TMPPLIST}
 	${ECHO_CMD} @dir ${UNIT_RUNDIR} >> ${TMPPLIST}
+	${ECHO_CMD} @dir ${UNIT_TMPDIR} >> ${TMPPLIST}
 	${MKDIR} ${STAGEDIR}${PREFIX}/libexec/unit/modules
 
 post-install-DEVKIT-on:
-	${GMAKE} -C ${WRKSRC} libunit-install DESTDIR=${STAGEDIR}
+	${MAKE} -C ${WRKSRC} libunit-install DESTDIR=${STAGEDIR}
 .endif
 
 .include <bsd.port.mk>
