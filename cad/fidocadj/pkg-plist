@@ -1,0 +1,3 @@
+bin/fidocadj
+%%DATADIR%%/fidocadj.jar
+%%PORTDOCS%%%%DOCSDIR%%/manual_en.pdf
