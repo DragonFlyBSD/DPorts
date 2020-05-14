@@ -5,7 +5,7 @@ PORTNAME=	tomatoes
 PORTVERSION=	1.55
 PORTREVISION=	1
 CATEGORIES=	games
-MASTER_SITES=	SF
+MASTER_SITES=	https://mirror.amdmi3.ru/distfiles/
 DISTFILES=	${PORTNAME}-linux-src-${PORTVERSION}${EXTRACT_SUFX} \
 		${PORTNAME}-linux-${DATAVERSION}${EXTRACT_SUFX}
 
@@ -17,7 +17,7 @@ LICENSE=	ZLIB
 DATAVERSION=	1.5
 DATA_WRKSRC=	${WRKDIR}/tomatoes-${DATAVERSION}
 
-USES=		tar:bzip2 gmake
+USES=		gl gmake sdl tar:bzip2
 USE_SDL=	mixer image
 USE_GL=		gl glu
 MAKEFILE=	makefile
