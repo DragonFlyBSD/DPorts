@@ -3,6 +3,7 @@
 
 PORTNAME=	alembic
 PORTVERSION=	1.7.12
+PORTREVISION=	2
 CATEGORIES=	graphics
 
 MAINTAINER=	danfe@FreeBSD.org
