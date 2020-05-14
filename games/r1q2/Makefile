@@ -5,7 +5,8 @@ PORTNAME=	r1q2
 PORTVERSION=	8012
 PORTREVISION=	4
 CATEGORIES=	games
-MASTER_SITES=	http://old.r1ch.net/stuff/r1q2/src/
+MASTER_SITES=	http://freebsd.nsu.ru/distfiles/ LOCAL/danfe \
+		http://old.r1ch.net/stuff/r1q2/src/
 DISTNAME=	${PORTNAME}-b${PORTVERSION}-src
 
 MAINTAINER=	danfe@FreeBSD.org
@@ -58,7 +59,7 @@ PLIST_SUB+=	GAME="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MREF_GL}
-USES+=		jpeg
+USES+=		gl jpeg sdl
 USE_GL=		gl
 USE_SDL=	sdl
 LIB_DEPENDS+=	libpng.so:graphics/png
