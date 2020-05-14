@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	nss
-PORTVERSION=	3.51.1
+PORTVERSION=	3.52
 CATEGORIES=	security
 MASTER_SITES=	MOZILLA/security/${PORTNAME}/releases/${DISTNAME:tu:C/[-.]/_/g}_RTM/src
 
@@ -29,6 +29,7 @@ USE_PERL5=	build
 MAKE_ENV=	LIBRARY_PATH="${LOCALBASE}/lib" \
 		SQLITE_INCLUDE_DIR="${LOCALBASE}/include" \
 		FREEBL_LOWHASH=1 \
+		NSS_ENABLE_WERROR=0 \
 		NSS_DISABLE_GTESTS=1 \
 		NSS_USE_SYSTEM_SQLITE=1
 CFLAGS+=	-I${LOCALBASE}/include/nspr -Wno-error=unused-function
@@ -57,7 +58,7 @@ BINS=		${DIST}/${OPSYS}${OSREL}_DBG.OBJ
 .endif
 
 .if ${ARCH} == powerpc64
-USE_GCC=	yes
+USES+=		compiler:c++11-lang # -mcrypto -mvsx
 .else
 MAKE_ENV+=	NSS_DISABLE_ALTIVEC=1
 .endif
