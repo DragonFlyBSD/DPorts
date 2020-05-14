@@ -2,15 +2,16 @@
 
 PORTNAME=	xwayland
 DISTVERSIONPREFIX=	xorg-server-
-DISTVERSION=	1.20.0-626
+DISTVERSION=	1.20.0-641
 DISTVERSIONSUFFIX=	-g${GL_COMMIT:C/(.{12}).*/\1/}
+PORTREVISION=	1
 CATEGORIES=	x11-servers
 PKGNAMESUFFIX=	-devel
 
 PATCH_SITES=	${GL_SITE}/${GL_ACCOUNT}/${GL_PROJECT}/commit/
-PATCHFILES+=	71749de24509.patch:-p1 # https://gitlab.freedesktop.org/xorg/xserver/merge_requests/393
-PATCHFILES+=	1e897704c822.patch:-p1 # https://gitlab.freedesktop.org/xorg/xserver/merge_requests/393
-PATCHFILES+=	83cda3ce3195.patch:-p1 # https://gitlab.freedesktop.org/xorg/xserver/merge_requests/393
+PATCHFILES+=	71749de24509.diff:-p1 # https://gitlab.freedesktop.org/xorg/xserver/merge_requests/393
+PATCHFILES+=	1e897704c822.diff:-p1 # https://gitlab.freedesktop.org/xorg/xserver/merge_requests/393
+PATCHFILES+=	83cda3ce3195.diff:-p1 # https://gitlab.freedesktop.org/xorg/xserver/merge_requests/393
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	X11 server as Wayland client (development snapshot)
@@ -36,15 +37,27 @@ USE_XORG=	pixman xau xdmcp xfont2 xkbfile xshmfence xtrans
 GL_SITE=	https://gitlab.freedesktop.org
 GL_ACCOUNT=	xorg
 GL_PROJECT=	xserver
-GL_COMMIT=	5e91587302e85fd6f0e8d5ffbe30182e18c6913f
+GL_COMMIT=	785e59060c00129e47da6c0877604a56d7e0e32f
 MESON_ARGS=	-Dxwayland=true \
 		-Dxorg=false \
 		-Dxnest=false \
 		-Dxvfb=false \
 		-Dudev=false \
 		-Dudev_kms=false \
-		-Ddefault_font_path=${NONEXISTENT}
+		-Ddefault_font_path="${DEFAULT_FONTPATH_LIST:ts,}"
 PLIST_FILES=	bin/Xwayland
+
+# Keep in sync with xorg-server
+FONTPATH_ROOT?=	${LOCALBASE}/share/fonts
+FONTPATHD?=	${PREFIX}/etc/X11/fontpath.d
+DEFAULT_FONTPATH_LIST= \
+	${FONTPATH_ROOT}/misc/	\
+	${FONTPATH_ROOT}/TTF/ \
+	${FONTPATH_ROOT}/OTF/ \
+	${FONTPATH_ROOT}/Type1/ \
+	${FONTPATH_ROOT}/100dpi/ \
+	${FONTPATH_ROOT}/75dpi/ \
+	catalogue:${FONTPATHD}
 
 OPTIONS_DEFINE=	NVIDIA
 
