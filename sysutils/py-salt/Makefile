@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	salt
-PORTVERSION=	2019.2.3
+PORTVERSION=	2019.2.4
 CATEGORIES=	sysutils python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -26,7 +26,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Jinja2>0:devel/py-Jinja2@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}yaml>0:devel/py-yaml@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pyinotify>0:devel/py-pyinotify@${PY_FLAVOR}
 
-USES=		cpe python:-3.7
+USES=		cpe python:3.6-3.7
 
 CPE_VENDOR=	saltstack
 CPE_PRODUCT=	salt
@@ -85,9 +85,7 @@ post-patch:
 .for file in conf/minion conf/master doc/man/salt-key.1 \
 	doc/man/salt-cp.1 doc/man/salt-minion.1 doc/man/salt-syndic.1 \
 	doc/man/salt-master.1 doc/man/salt-run.1 doc/man/salt.7 doc/man/salt.1 \
-	doc/man/salt-call.1 \
-	salt/modules/mysql.py salt/utils/parsers.py salt/modules/tls.py \
-	salt/modules/postgres.py salt/utils/migrations.py
+	doc/man/salt-call.1 salt/modules/mysql.py salt/modules/tls.py salt/modules/postgres.py
 	@${REINPLACE_CMD} -e 's|/etc/salt|${ETCDIR}|' \
 		-e 's|/srv/salt|${ETCDIR}/states|' \
 		-e 's|/srv/pillar|${ETCDIR}/pillar|' ${WRKSRC}/${file}
