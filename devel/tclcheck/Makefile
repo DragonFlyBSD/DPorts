@@ -5,7 +5,7 @@ PORTNAME=	tclcheck
 PORTVERSION=	1.1.13
 PORTREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=	ftp://catless.ncl.ac.uk/pub/
+MASTER_SITES=	https://BSDforge.com/projects/source/devel/tclcheck/
 DISTNAME=	tclCheck-${PORTVERSION}
 
 MAINTAINER=	tcltk@FreeBSD.org
