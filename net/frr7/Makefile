@@ -18,7 +18,7 @@ LIB_DEPENDS=	libjson-c.so:devel/json-c \
 		libyang.so:net/libyang
 
 USES=		autoreconf bison compiler:c++11-lang gmake pkgconfig libtool \
-		makeinfo python:2.7-3.8,build readline
+		makeinfo python:build readline
 
 BINARY_ALIAS=	python=${PYTHON_VERSION}
 
@@ -69,7 +69,7 @@ CONFIGURE_ARGS=	--enable-user=frr \
 		--disable-vrrpd \
 		--with-vtysh-pager=cat
 
-MANPAGES_BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sphinx>=0:textproc/py-sphinx@${PY_FLAVOR}
+MANPAGES_BUILD_DEPENDS=	${PY_SPHINX}
 MANPAGES_CONFIGURE_OFF=	--disable-doc
 CONFIGROLLBACKS_LIB_DEPENDS=	libsqlite3.so:databases/sqlite3
 CONFIGROLLBACKS_CONFIGURE_ENABLE=	config-rollbacks
