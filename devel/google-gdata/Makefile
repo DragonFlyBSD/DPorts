@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	google-gdata
-PORTVERSION=	2.2.0.0
-PORTREVISION=	2
+PORTVERSION=	2.2.0.0.20150610
 CATEGORIES=	devel
 
 MAINTAINER=	bofh@FreeBSD.org
@@ -16,7 +15,7 @@ NUGET_DEPENDS=	nunit.framework=2.63.0
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	google
-GH_TAGNAME=	edcd096379
+GH_TAGNAME=	b716bbc
 
 USES=		dos2unix gmake mono:nuget pathfix
 NUGET_LAYOUT=	flat
