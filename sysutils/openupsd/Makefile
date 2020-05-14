@@ -5,7 +5,7 @@ PORTNAME=	openupsd
 PORTVERSION=	0.3.1
 PORTREVISION=	1
 CATEGORIES=	sysutils
-MASTER_SITES=	http://frmb.org/download/
+MASTER_SITES=	https://BSDforge.com/projects/source/sysutils/openupsd/
 
 MAINTAINER=	tdb@FreeBSD.org
 COMMENT=	UPS daemon for some Belkin UPS's
