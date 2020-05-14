@@ -3,9 +3,9 @@
 
 PORTNAME=	fishsupper
 PORTVERSION=	0.1.6
-PORTREVISION=	18
+PORTREVISION=	19
 CATEGORIES=	games
-MASTER_SITES=	SF/${PORTNAME}
+MASTER_SITES=	https://mirror.amdmi3.ru/distfiles/
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Guide a cat across a series of rivers, jumping from log to log
@@ -18,7 +18,7 @@ BUILD_DEPENDS=	${LOCALBASE}/include/boost/bind.hpp:devel/boost-libs
 BROKEN_powerpc64=	fails to compile: Log.h: expected initializer before '<' token
 
 GNU_CONFIGURE=	yes
-USES=		gmake localbase:ldflags
+USES=		gl gmake localbase:ldflags sdl
 USE_SDL=	sdl image mixer
 USE_GL=		gl
 USE_CXXSTD=	c++98
