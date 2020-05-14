@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	tacacs
-PORTVERSION=	201906100936
+PORTVERSION=	202004081858
 CATEGORIES=	net
 MASTER_SITES=	http://www.pro-bono-publico.de/projects/src/
 
