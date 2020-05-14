@@ -1,3 +1,0 @@
-# $FreeBSD: head/net/pim6dd/files/pim6dd.conf.sample 396342 2015-09-07 19:23:26Z hrs $
-#
-phyint stf0 disable

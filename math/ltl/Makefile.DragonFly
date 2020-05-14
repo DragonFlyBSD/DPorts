@@ -1,2 +1,0 @@
-# ltl/marray/marray_iter.h:195:17: error: return-statement with a value, in function returning 'void' [-fpermissive]
-CXXFLAGS+=	-fpermissive

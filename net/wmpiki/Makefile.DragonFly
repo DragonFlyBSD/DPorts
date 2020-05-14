@@ -1,5 +1,0 @@
-
-# deal with inline in headers
-dfly-patch:
-	${REINPLACE_CMD} -e 's@INLINE inline@INLINE static inline@g'	\
-		${WRKSRC}/docklib.h

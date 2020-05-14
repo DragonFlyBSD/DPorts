@@ -1,6 +1,0 @@
-
-# replace FP patch-diehard.c patch
-dfly-patch:
-	${REINPLACE_CMD} -e 's@main()@void &@g' \
-			 -e 's@gets(fn);@fgets(fn,100,stdin);@g' \
-		${WRKSRC}/diehard.c

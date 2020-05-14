@@ -1,6 +1,0 @@
-
-LDFLAGS:=	${LDFLAGS:N*libgcc_s.so}
-
-dfly-patch:
-	${REINPLACE_CMD} -e 's@-liomp5@@g' \
-		${WRKSRC}/makefile
