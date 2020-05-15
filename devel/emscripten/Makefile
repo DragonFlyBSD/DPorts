@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	emscripten
-DISTVERSION=	1.39.12
+DISTVERSION=	1.39.15
 CATEGORIES=	devel www
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -28,7 +28,7 @@ PYSCRIPTS=	em++ emar emcc emconfigure emmake emranlib emrun emscons
 NO_BUILD=	yes
 NO_ARCH=	yes
 
-PORTSCOUT=	limit:^[0-9\.]*$$
+PORTSCOUT=	limit:^\d+\. # prevent i64
 
 post-patch:
 	@${REINPLACE_CMD} -i '' -E " \
