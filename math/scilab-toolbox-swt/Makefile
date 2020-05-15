@@ -25,7 +25,7 @@ PLIST_SUB=	TOOLBOXDIR=${TOOLBOXDIR_REL}
 TOOLBOX_SUBDIRS=	demos etc macros
 
 OPTIONS_DEFINE=	HELP
-OPTIONS_DEFAULT=	
+OPTIONS_DEFAULT=	HELP
 OPTIONS_SUB=	yes
 
 HELP_DESC=	Build help files (requires scilab with gui support)
