@@ -20,6 +20,8 @@ bin/markdown-calibre
 bin/web2disk
 lib/calibre/backports/__init__.py
 lib/calibre/backports/functools_lru_cache.py
+lib/calibre/backports/ipaddress.py
+lib/calibre/biplist/__init__.py
 lib/calibre/calibre/__init__.py
 lib/calibre/calibre/constants.py
 lib/calibre/calibre/customize/__init__.py
@@ -1091,6 +1093,7 @@ lib/calibre/calibre/gui2/viewer/__init__.py
 lib/calibre/calibre/gui2/viewer/annotations.py
 lib/calibre/calibre/gui2/viewer/bookmarks.py
 lib/calibre/calibre/gui2/viewer/convert_book.py
+lib/calibre/calibre/gui2/viewer/highlights.py
 lib/calibre/calibre/gui2/viewer/lookup.py
 lib/calibre/calibre/gui2/viewer/main.py
 lib/calibre/calibre/gui2/viewer/mathjax.py
@@ -1447,7 +1450,6 @@ lib/calibre/tinycss/version.py
 %%DATADIR%%/catalog/section_list_templates.conf
 %%DATADIR%%/catalog/stylesheet.css
 %%DATADIR%%/catalog/template.xhtml
-%%DATADIR%%/content-server/calibre.appcache
 %%DATADIR%%/content-server/calibre.png
 %%DATADIR%%/content-server/empty.html
 %%DATADIR%%/content-server/index-generated.html
