@@ -12,7 +12,7 @@ LICENSE=	GPLv3
 
 BUILD_DEPENDS=	volk>0:devel/volk \
 		doxygen>0:devel/doxygen \
-		${PYTHON_PKGNAMEPREFIX}sphinx>0:textproc/py-sphinx@${PY_FLAVOR} \
+		${PY_SPHINX} \
 		${PYTHON_PKGNAMEPREFIX}lxml>0:devel/py-lxml@${PY_FLAVOR} \
 		${PYNUMPY} \
 		${PYTHON_SITELIBDIR}/mako/__init__.py:textproc/py-mako@${PY_FLAVOR} \
@@ -48,8 +48,9 @@ LIB_DEPENDS=	libcodec2.so:audio/codec2 \
 		libzmq.so:net/libzmq4
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USES=		cmake desktop-file-utils fortran gnome iconv \
-		perl5 pkgconfig pyqt:5 python:3.5+ qt:5 shared-mime-info shebangfix
+USES=		cmake compiler:c++11-lang desktop-file-utils fortran gnome \
+		iconv perl5 pkgconfig pyqt:5 python:3.5+ qt:5 shared-mime-info \
+		shebangfix
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	gnuradio
@@ -95,7 +96,7 @@ INSTALLS_ICONS=		yes
 PLIST_SUB+=	PORTVERSION=${PORTVERSION}
 
 DOXYGEN_BUILD_DEPENDS=	doxygen:devel/doxygen \
-			sphinx-apidoc:textproc/py-sphinx@${PY_FLAVOR} \
+			${PY_SPHINX} \
 			dot:graphics/graphviz \
 			xmlto:textproc/xmlto \
 			freefont-ttf>0:x11-fonts/freefont-ttf
