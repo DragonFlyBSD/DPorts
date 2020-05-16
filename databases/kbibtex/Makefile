@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	kbibtex
-DISTVERSION=	0.9.1
-PORTREVISION=	5
+DISTVERSION=	0.9.2
+PORTREVISION=	1
 CATEGORIES=	databases kde
 MASTER_SITES=	KDE/stable/KBibTeX/${DISTVERSION}
 
@@ -21,7 +21,7 @@ USE_GNOME=	libxml2 libxslt
 USE_KDE=	auth bookmarks codecs completion config configwidgets \
 		coreaddons crash ecm i18n iconthemes itemviews jobwidgets \
 		kio parts service solid sonnet texteditor textwidgets wallet \
-		widgetsaddons xmlgui
+		widgetsaddons windowsystem xmlgui
 USE_QT=		concurrent core dbus declarative gui location network \
 		printsupport webchannel widgets xml xmlpatterns \
 		buildtools_build qmake_build
