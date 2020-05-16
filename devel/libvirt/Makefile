@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	libvirt
-PORTVERSION=	6.2.0
+PORTVERSION=	6.3.0
 CATEGORIES=	devel
 MASTER_SITES=	http://libvirt.org/sources/ \
 		ftp://libvirt.org/libvirt/
@@ -96,7 +96,7 @@ PORTSCOUT=	limit:\d+\.\d+\.\d+$$
 LDFLAGS+=	-L${LOCALBASE}/lib -fstack-protector
 
 USES=		gnome charsetfix compiler:c++0x cpe gettext-runtime gmake libtool pathfix \
-		perl5 python:build pkgconfig shebangfix tar:xz
+		perl5 python:3.6+,build pkgconfig shebangfix tar:xz
 USE_GNOME=	glib20
 USE_RC_SUBR=	libvirtd virtlogd
 CPE_VENDOR=	redhat
@@ -104,7 +104,7 @@ USE_PERL5=	build
 USE_LDCONFIG=	yes
 INSTALL_TARGET=	install-strip
 TEST_TARGET=	check
-SHLIB_VER=	0.6002.0
+SHLIB_VER=	0.6003.0
 PLIST_SUB+=	SHLIB_VER=${SHLIB_VER}
 PORTDOCS=	*
 SHEBANG_FILES=	src/keycodemapdb/tools/keymap-gen
