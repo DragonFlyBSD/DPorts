@@ -1,8 +1,8 @@
---- include/fmt/posix.h.orig	2019-08-26 13:23:37 UTC
-+++ include/fmt/posix.h
-@@ -21,7 +21,7 @@
- 
- #include <cstddef>
+--- include/fmt/os.h.orig	2020-05-09 16:13:20 UTC
++++ include/fmt/os.h
+@@ -19,7 +19,7 @@
+ #include <cstdio>
+ #include <cstdlib>  // for strtod_l
  
 -#if defined __APPLE__ || defined(__FreeBSD__)
 +#if defined __APPLE__ || defined(__FreeBSD__) || defined(__DragonFly__)
