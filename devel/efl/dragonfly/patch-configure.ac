@@ -1,0 +1,11 @@
+--- configure.ac.intermediate	2015-01-01 02:47:54 UTC
++++ configure.ac
+@@ -199,7 +199,7 @@ case "$host_os" in
+       have_windows="yes"
+       EFLALL_CFLAGS="${EFLALL_CFLAGS} -D__USE_MINGW_ANSI_STDIO"
+    ;;
+-   freebsd*)
++   dragonfly*|freebsd*)
+       have_freebsd="yes"
+    ;;
+    darwin*)

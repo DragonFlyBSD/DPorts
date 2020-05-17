@@ -1,0 +1,8 @@
+# Seems to have no effect on missing symbol frequent issue
+# MAKE_JOBS_UNSAFE=yes
+# ERR<103739>:ecore_con lib/ecore_con/ecore_con_url_curl.c:288 _c_init() Could not find libcurl.so.5, libcurl.so.4
+# ERR<103739>:elua lib/elua/elua.c:714 _elua_errmsg() /construction/devel/efl/efl-1.19.2/src/bin/elua/.libs/elua: not enough memory
+# also frequently fails to link (see above).  Sorry, bye-bye enlightenment
+
+# no pulse
+OPTIONS_DEFAULT:=       ${OPTIONS_DEFAULT:NPULSEAUDIO}
