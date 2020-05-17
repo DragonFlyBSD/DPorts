@@ -1,0 +1,19 @@
+--- ./meson.build.orig	2020-04-08 15:17:04.718035000 +0300
++++ ./meson.build	2020-04-08 15:17:56.818891000 +0300
+@@ -35,7 +35,6 @@ have_funcs = [
+ 	'mkostemp',
+ 	'posix_fallocate',
+ 	'prctl',
+-	'memfd_create',
+ 	'strndup',
+ ]
+ foreach f: have_funcs
+@@ -46,8 +45,6 @@ if get_option('libraries')
+ 	ffi_dep = dependency('libffi')
+ 
+ 	decls = [
+-		{ 'header': 'sys/signalfd.h', 'symbol': 'SFD_CLOEXEC' },
+-		{ 'header': 'sys/timerfd.h', 'symbol': 'TFD_CLOEXEC' },
+ 		{ 'header': 'time.h', 'symbol': 'CLOCK_MONOTONIC' },
+ 	]
+ 

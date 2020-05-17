@@ -1,14 +1,6 @@
---- src/event-loop.c.orig	2019-05-28 14:40:30.127423000 +0300
-+++ src/event-loop.c	2019-05-28 15:02:39.175522000 +0300
-@@ -25,6 +25,7 @@
- 
- #include <stddef.h>
- #include <stdio.h>
-+#include <err.h>
- #include <errno.h>
- #include <signal.h>
- #include <stdlib.h>
-@@ -34,9 +35,9 @@
+--- src/event-loop.c.orig	2020-04-08 17:13:54.915257000 +0300
++++ src/event-loop.c	2020-05-16 17:46:32.581743000 +0300
+@@ -35,9 +35,8 @@
  #include <fcntl.h>
  #include <sys/socket.h>
  #include <sys/un.h>
@@ -17,12 +9,11 @@
 -#include <sys/timerfd.h>
 +#include <sys/types.h>
 +#include <sys/event.h>
-+#include <sys/time.h>
  #include <unistd.h>
  #include "wayland-util.h"
  #include "wayland-private.h"
-@@ -46,7 +47,7 @@
- /** \cond INTERNAL */
+@@ -68,7 +67,7 @@ struct wl_timer_heap {
+ };
  
  struct wl_event_loop {
 -	int epoll_fd;
@@ -30,7 +21,7 @@
  	struct wl_list check_list;
  	struct wl_list idle_list;
  	struct wl_list destroy_list;
-@@ -56,7 +57,7 @@ struct wl_event_loop {
+@@ -80,10 +79,9 @@ struct wl_event_loop {
  
  struct wl_event_source_interface {
  	int (*dispatch)(struct wl_event_source *source,
@@ -38,8 +29,11 @@
 +			struct kevent *ev);
  };
  
- struct wl_event_source {
-@@ -77,22 +78,22 @@ struct wl_event_source_fd {
+-
+ struct wl_event_source_fd {
+ 	struct wl_event_source base;
+ 	wl_event_loop_fd_func_t func;
+@@ -94,22 +92,22 @@ struct wl_event_source_fd {
  
  static int
  wl_event_source_fd_dispatch(struct wl_event_source *source,
@@ -68,7 +62,7 @@
  }
  
  struct wl_event_source_interface fd_source_interface = {
-@@ -103,30 +104,10 @@ static struct wl_event_source *
+@@ -120,30 +118,10 @@ static struct wl_event_source *
  add_source(struct wl_event_loop *loop,
  	   struct wl_event_source *source, uint32_t mask, void *data)
  {
@@ -99,7 +93,7 @@
  	return source;
  }
  
-@@ -162,6 +143,9 @@ wl_event_loop_add_fd(struct wl_event_loo
+@@ -179,6 +157,9 @@ wl_event_loop_add_fd(struct wl_event_loo
  {
  	struct wl_event_source_fd *source;
  
@@ -109,7 +103,7 @@
  	source = malloc(sizeof *source);
  	if (source == NULL)
  		return NULL;
-@@ -170,8 +154,36 @@ wl_event_loop_add_fd(struct wl_event_loo
+@@ -187,8 +168,36 @@ wl_event_loop_add_fd(struct wl_event_loo
  	source->base.fd = wl_os_dupfd_cloexec(fd, 0);
  	source->func = func;
  	source->fd = fd;
@@ -121,8 +115,7 @@
 +		free(source);
 +		return NULL;
 +	}
- 
--	return add_source(loop, &source->base, mask, data);
++
 +	if (mask & WL_EVENT_READABLE) {
 +		EV_SET(&events[num_events], source->base.fd, EVFILT_READ,
 +		      EV_ADD | EV_ENABLE, 0, 0, &source->base);
@@ -142,12 +135,13 @@
 +		free(source);
 +		return NULL;
 +	}
-+
+ 
+-	return add_source(loop, &source->base, mask, data);
 +	return &source->base;
  }
  
  /** Update a file descriptor source's event mask
-@@ -198,16 +210,22 @@ WL_EXPORT int
+@@ -215,16 +224,22 @@ WL_EXPORT int
  wl_event_source_fd_update(struct wl_event_source *source, uint32_t mask)
  {
  	struct wl_event_loop *loop = source->loop;
@@ -178,97 +172,190 @@
  }
  
  /** \cond INTERNAL */
-@@ -221,18 +239,13 @@ struct wl_event_source_timer {
+@@ -239,7 +254,7 @@ struct wl_event_source_timer {
  
  static int
- wl_event_source_timer_dispatch(struct wl_event_source *source,
--			       struct epoll_event *ep)
-+			       struct kevent *ev)
- {
- 	struct wl_event_source_timer *timer_source =
- 		(struct wl_event_source_timer *) source;
- 	uint64_t expires;
--	int len;
--
--	len = read(source->fd, &expires, sizeof expires);
--	if (!(len == -1 && errno == EAGAIN) && len != sizeof expires)
--		/* Is there anything we can do here?  Will this ever happen? */
--		wl_log("timerfd read error: %m\n");
- 
-+	expires = ev->data;    /* XXX unused?! */
- 	return timer_source->func(timer_source->base.data);
+ noop_dispatch(struct wl_event_source *source,
+-	      struct epoll_event *ep) {
++	      struct kevent *ep) {
+ 	return 0;
  }
  
-@@ -258,18 +271,36 @@ wl_event_loop_add_timer(struct wl_event_
- 			wl_event_loop_timer_func_t func,
- 			void *data)
+@@ -257,25 +272,47 @@ time_lt(struct timespec ta, struct times
+ }
+ 
+ static int
+-set_timer(int timerfd, struct timespec deadline) {
+-	struct itimerspec its;
++set_timer(int timerfd,
++          struct timespec deadline,
++          struct wl_timer_heap *timers)
++{
++	struct kevent ev;
++	struct timespec now;
++	time_t diff_sec;
++	long diff_nsec;
++	long rel_deadline;  /* msec */
++
++	if (clock_gettime(CLOCK_MONOTONIC, &now) == -1)
++		return -1;
+ 
+-	its.it_interval.tv_sec = 0;
+-	its.it_interval.tv_nsec = 0;
+-	its.it_value = deadline;
+-	return timerfd_settime(timerfd, TFD_TIMER_ABSTIME, &its, NULL);
++	if (!time_lt(now, deadline))
++		return -1;
++
++	diff_sec = deadline.tv_sec - now.tv_sec;
++	diff_nsec = deadline.tv_nsec - now.tv_nsec;
++	if (diff_nsec < 0) {
++		diff_sec--;
++		diff_nsec += 1000000000L;
++	}
++
++	rel_deadline = (long) ((diff_sec * 1000) + (diff_nsec / 1000000));
++	if ((diff_nsec % 1000000) > 499999)
++		rel_deadline++;
++
++	EV_SET(&ev, timerfd, EVFILT_TIMER, EV_ADD | EV_ENABLE | EV_ONESHOT,
++	       0, rel_deadline, timers);
++
++	return kevent(timers->base.loop->event_fd, &ev, 1, NULL, 0, NULL);
+ }
+ 
+ static int
+-clear_timer(int timerfd)
++clear_timer(int timerfd, struct wl_timer_heap *timers)
  {
-+	static int timer_id = 0;
- 	struct wl_event_source_timer *source;
+-	struct itimerspec its;
 +	struct kevent ev;
  
- 	source = malloc(sizeof *source);
- 	if (source == NULL)
- 		return NULL;
+-	its.it_interval.tv_sec = 0;
+-	its.it_interval.tv_nsec = 0;
+-	its.it_value.tv_sec = 0;
+-	its.it_value.tv_nsec = 0;
+-	return timerfd_settime(timerfd, 0, &its, NULL);
++	EV_SET(&ev, timerfd, EVFILT_TIMER, EV_ADD | EV_DISABLE,
++	       0, 0, timers);
++	return kevent(timers->base.loop->event_fd, &ev, 1, NULL, 0, NULL);
+ }
+ 
+ static void
+@@ -296,37 +333,43 @@ wl_timer_heap_init(struct wl_timer_heap
+ static void
+ wl_timer_heap_release(struct wl_timer_heap *timers)
+ {
+-	if (timers->base.fd != -1) {
+-		close(timers->base.fd);
+-	}
+ 	free(timers->data);
+ }
+ 
++/*
++ * Timers are now kept in a binary heap. There is only one timer source
++ * which is used for all timer events. This routine ensures that the single
++ * kevent timer is created.
++ */
+ static int
+ wl_timer_heap_ensure_timerfd(struct wl_timer_heap *timers)
+ {
+-	struct epoll_event ep;
+-	int timer_fd;
 -
- 	source->base.interface = &timer_source_interface;
--	source->base.fd = timerfd_create(CLOCK_MONOTONIC,
--					 TFD_CLOEXEC | TFD_NONBLOCK);
-+	source->base.fd = timer_id;
-+	timer_id++;
-+	source->base.loop = loop;
-+	source->base.data = data;
- 	source->func = func;
-+	wl_list_init(&source->base.link);
-+
+-	if (timers->base.fd != -1)
+-		return 0;
+-
+-	memset(&ep, 0, sizeof ep);
+-	ep.events = EPOLLIN;
+-	ep.data.ptr = timers;
+-
+-	timer_fd = timerfd_create(CLOCK_MONOTONIC,
+-				  TFD_CLOEXEC | TFD_NONBLOCK);
+-	if (timer_fd < 0)
+-		return -1;
++	struct kevent ev;
++	/*
++	 * Deprecated.
++	 * We don't need a static counter any more, but keep it here for now.
++	 * It must be => 0.
++	 */
++	static int timer_id = 1;
+ 
+-	if (epoll_ctl(timers->base.loop->epoll_fd,
+-		      EPOLL_CTL_ADD, timer_fd, &ep) < 0) {
+-		close(timer_fd);
 +	/*
 +	 * We need to add timer filter already here. This avoids error messages
 +	 * when the timer filter is removed before ever updating it.
 +	 * Note the timer will not be enabled, this happens only in the update
 +	 * routine which arms/disarms the timer.)
 +	 */
-+	EV_SET(&ev, source->base.fd, EVFILT_TIMER, EV_ADD | EV_DISABLE,
-+	       0, 0, NULL);
-+	if (kevent(loop->event_fd, &ev, 1, NULL, 0, NULL) < 0) {
++	EV_SET(&ev, timer_id,
++	       EVFILT_TIMER, EV_ADD | EV_DISABLE | EV_ONESHOT, 0, 0, timers);
++	if (kevent(timers->base.loop->event_fd, &ev, 1, NULL, 0, NULL) < 0) {
 +		fprintf(stderr, "Could not add timer: %s\n",
 +		        strerror(errno));
-+		return NULL;
-+	}
- 
--	return add_source(loop, &source->base, WL_EVENT_READABLE, data);
-+	return &source->base;
- }
- 
- /** Arm or disarm a timer
-@@ -291,14 +322,21 @@ wl_event_loop_add_timer(struct wl_event_
- WL_EXPORT int
- wl_event_source_timer_update(struct wl_event_source *source, int ms_delay)
- {
--	struct itimerspec its;
-+	struct kevent ev;
-+
-+	if (ms_delay == 0) {
-+		EV_SET(&ev, source->fd, EVFILT_TIMER, EV_ADD | EV_DISABLE,
-+		       0, ms_delay, source);
-+	} else {
-+		EV_SET(&ev, source->fd, EVFILT_TIMER,
-+		       EV_ADD | EV_ENABLE | EV_ONESHOT, 0, ms_delay, source);
-+	}
- 
--	its.it_interval.tv_sec = 0;
--	its.it_interval.tv_nsec = 0;
--	its.it_value.tv_sec = ms_delay / 1000;
--	its.it_value.tv_nsec = (ms_delay % 1000) * 1000 * 1000;
--	if (timerfd_settime(source->fd, 0, &its, NULL) < 0)
-+	if (kevent(source->loop->event_fd, &ev, 1, NULL, 0, NULL) < 0) {
-+		fprintf(stderr, "Could not set kqueue timer: %s\n",
-+		        strerror(errno));
  		return -1;
-+	}
+ 	}
  
+-	timers->base.fd = timer_fd;
++	timers->base.fd = timer_id;
++	/* Deprecated, same as above. */
++	timer_id++;
++
  	return 0;
  }
-@@ -315,19 +353,13 @@ struct wl_event_source_signal {
+ 
+@@ -484,7 +527,6 @@ wl_timer_heap_arm(struct wl_timer_heap *
+ 	heap_sift_up(timers->data, source);
+ }
+ 
+-
+ static int
+ wl_timer_heap_dispatch(struct wl_timer_heap *timers)
+ {
+@@ -511,10 +553,10 @@ wl_timer_heap_dispatch(struct wl_timer_h
+ 		list_tail->next_due = NULL;
+ 
+ 	if (timers->active > 0) {
+-		if (set_timer(timers->base.fd, timers->data[0]->deadline) < 0)
++		if (set_timer(timers->base.fd, timers->data[0]->deadline, timers) < 0)
+ 			return -1;
+ 	} else {
+-		if (clear_timer(timers->base.fd) < 0)
++		if (clear_timer(timers->base.fd, timers) < 0)
+ 			return -1;
+ 	}
+ 
+@@ -531,7 +573,7 @@ wl_timer_heap_dispatch(struct wl_timer_h
+ 
+ static int
+ wl_event_source_timer_dispatch(struct wl_event_source *source,
+-			       struct epoll_event *ep)
++			       struct kevent *ev)
+ {
+ 	struct wl_event_source_timer *timer;
+ 
+@@ -639,7 +681,7 @@ wl_event_source_timer_update(struct wl_e
+ 		if (tsource->heap_idx == 0) {
+ 			/* Only update the timerfd if the new deadline is
+ 			 * the earliest */
+-			if (set_timer(timers->base.fd, deadline) < 0)
++			if (set_timer(timers->base.fd, deadline, timers) < 0)
+ 				return -1;
+ 		}
+ 	} else {
+@@ -650,7 +692,7 @@ wl_event_source_timer_update(struct wl_e
+ 		if (timers->active == 0) {
+ 			/* Only update the timerfd if this was the last
+ 			 * active timer */
+-			if (clear_timer(timers->base.fd) < 0)
++			if (clear_timer(timers->base.fd, timers) < 0)
+ 				return -1;
+ 		}
+ 	}
+@@ -670,17 +712,11 @@ struct wl_event_source_signal {
  
  static int
  wl_event_source_signal_dispatch(struct wl_event_source *source,
@@ -283,17 +370,14 @@
 -	len = read(source->fd, &signal_info, sizeof signal_info);
 -	if (!(len == -1 && errno == EAGAIN) && len != sizeof signal_info)
 -		/* Is there anything we can do here?  Will this ever happen? */
--		wl_log("signalfd read error: %m\n");
+-		wl_log("signalfd read error: %s\n", strerror(errno));
 +	struct wl_event_source_signal *signal_source;
- 
--	return signal_source->func(signal_source->signal_number,
-+	signal_source = (struct wl_event_source_signal *) source;
 +
-+	return signal_source->func(signal_source->base.fd,
- 				   signal_source->base.data);
- }
++	signal_source = (struct wl_event_source_signal *) source;
  
-@@ -362,6 +394,7 @@ wl_event_loop_add_signal(struct wl_event
+ 	return signal_source->func(signal_source->signal_number,
+ 				   signal_source->base.data);
+@@ -717,6 +753,7 @@ wl_event_loop_add_signal(struct wl_event
  {
  	struct wl_event_source_signal *source;
  	sigset_t mask;
@@ -301,7 +385,7 @@
  
  	source = malloc(sizeof *source);
  	if (source == NULL)
-@@ -369,15 +402,26 @@ wl_event_loop_add_signal(struct wl_event
+@@ -724,15 +761,26 @@ wl_event_loop_add_signal(struct wl_event
  
  	source->base.interface = &signal_source_interface;
  	source->signal_number = signal_number;
@@ -315,7 +399,8 @@
 -	source->func = func;
 +	source->base.fd = 0;
 +	add_source(loop, &source->base, WL_EVENT_READABLE, data);
-+
+ 
+-	return add_source(loop, &source->base, WL_EVENT_READABLE, data);
 +	EV_SET(&ev, signal_number, EVFILT_SIGNAL, EV_ADD | EV_ENABLE, 0, 0,
 +	       source);
 +
@@ -325,13 +410,12 @@
 +		free(source);
 +		return NULL;
 +	}
- 
--	return add_source(loop, &source->base, WL_EVENT_READABLE, data);
++
 +	return &source->base;
  }
  
  /** \cond INTERNAL */
-@@ -474,14 +518,84 @@ WL_EXPORT int
+@@ -829,17 +877,72 @@ WL_EXPORT int
  wl_event_source_remove(struct wl_event_source *source)
  {
  	struct wl_event_loop *loop = source->loop;
@@ -382,18 +466,37 @@
 -	if (source->fd >= 0) {
 -		epoll_ctl(loop->epoll_fd, EPOLL_CTL_DEL, source->fd, NULL);
  		close(source->fd);
--		source->fd = -1;
+ 		source->fd = -1;
 +	} else if (source->interface == &timer_source_interface) {
-+		struct kevent ev;
 +
-+		EV_SET(&ev, source->fd, EVFILT_TIMER, EV_DELETE, 0, 0, source);
-+		ret = kevent(loop->event_fd, &ev, 1, NULL, 0, NULL);
-+		saved_errno = errno;
++		/*
++		 * There is only timer event source with fd = 1 which is used
++		 * for all timer events. Generally we do not need to remove
++		 * the event source from kqueue.
++		 */
++		if (source->fd >= 0) {
++			struct kevent ev;
 +
-+		if (ret < 0) {
-+			fprintf(stderr,
-+			        "Error removing timer = %i from kqueue: %s\n",
-+			        source->fd, strerror(saved_errno));
++			EV_SET(&ev, source->fd, EVFILT_TIMER, EV_DELETE, 0, 0, source);
++			ret = kevent(loop->event_fd, &ev, 1, NULL, 0, NULL);
++			saved_errno = errno;
++
++			if (ret < 0) {
++				fprintf(stderr,
++				        "Error removing timer = %i from kqueue: %s\n",
++				        source->fd, strerror(saved_errno));
++			}
+ 	}
+ 
+-	if (source->interface == &timer_source_interface &&
+-	    source->fd != TIMER_REMOVED) {
++		if (source->fd != TIMER_REMOVED) {
+ 		/* Disarm the timer (and the loop's timerfd, if necessary),
+ 		 * before removing its space in the loop timer heap */
+ 		wl_event_source_timer_update(source, 0);
+@@ -848,6 +951,27 @@ wl_event_source_remove(struct wl_event_s
+ 		 * be dispatched in `wl_event_loop_dispatch` */
+ 		source->fd = TIMER_REMOVED;
  	}
 +	} else if (source->interface == &signal_source_interface) {
 +		struct kevent ev;
@@ -414,14 +517,12 @@
 +			        "Error removing signal = %i from kqueue: %s\n",
 +			        source->fd, strerror(saved_errno));
 +		}
++		source->fd = -1;
 +	}
-+
-+	/* Tidy up the source. */
-+	source->fd = -1;
  
  	wl_list_remove(&source->link);
  	wl_list_insert(&loop->destroy_list, &source->link);
-@@ -523,8 +637,8 @@ wl_event_loop_create(void)
+@@ -889,8 +1013,8 @@ wl_event_loop_create(void)
  	if (loop == NULL)
  		return NULL;
  
@@ -432,10 +533,10 @@
  		free(loop);
  		return NULL;
  	}
-@@ -556,22 +670,21 @@ wl_event_loop_destroy(struct wl_event_lo
- 	wl_signal_emit(&loop->destroy_signal, loop);
+@@ -925,22 +1049,21 @@ wl_event_loop_destroy(struct wl_event_lo
  
  	wl_event_loop_process_destroy_list(loop);
+ 	wl_timer_heap_release(&loop->timers);
 -	close(loop->epoll_fd);
 +	close(loop->event_fd);
  	free(loop);
@@ -458,7 +559,7 @@
  		if (dispatch_result < 0) {
  			wl_log("Source dispatch function returned negative value!");
  			wl_log("This would previously accidentally suppress a follow-up dispatch");
-@@ -625,20 +738,27 @@ wl_event_loop_dispatch_idle(struct wl_ev
+@@ -994,19 +1117,25 @@ wl_event_loop_dispatch_idle(struct wl_ev
  WL_EXPORT int
  wl_event_loop_dispatch(struct wl_event_loop *loop, int timeout)
  {
@@ -467,18 +568,28 @@
  	struct wl_event_source *source;
  	int i, count;
 +	struct timespec timeout_spec;
+ 	bool has_timers = false;
  
  	wl_event_loop_dispatch_idle(loop);
  
 -	count = epoll_wait(loop->epoll_fd, ep, ARRAY_LENGTH(ep), timeout);
 +	/* timeout is provided in milliseconds */
-+	timeout_spec.tv_sec = timeout / 1000;
-+	timeout_spec.tv_nsec = (timeout % 1000) * 1000000;
++	timeout_spec.tv_sec = (time_t) (timeout / 1000);
++	timeout_spec.tv_nsec = (long) (timeout % 1000) * 1000000L;
 +
 +	count = kevent(loop->event_fd, NULL, 0, ev, ARRAY_LENGTH(ev),
 +	               (timeout != -1) ? &timeout_spec : NULL);
  	if (count < 0)
  		return -1;
+ 
+ 	for (i = 0; i < count; i++) {
+-		source = ep[i].data.ptr;
++		source = ev[i].udata;
+ 		if (source == &loop->timers.base)
+ 			has_timers = true;
+ 	}
+@@ -1022,9 +1151,10 @@ wl_event_loop_dispatch(struct wl_event_l
+ 	}
  
  	for (i = 0; i < count; i++) {
 -		source = ep[i].data.ptr;
@@ -491,7 +602,7 @@
  	}
  
  	wl_event_loop_process_destroy_list(loop);
-@@ -669,7 +789,7 @@ wl_event_loop_dispatch(struct wl_event_l
+@@ -1055,7 +1185,7 @@ wl_event_loop_dispatch(struct wl_event_l
  WL_EXPORT int
  wl_event_loop_get_fd(struct wl_event_loop *loop)
  {
