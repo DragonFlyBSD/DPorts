@@ -1,6 +1,6 @@
---- vendor/openssl/build.rs.intermediate	2019-11-02 16:50:25 UTC
+--- vendor/openssl/build.rs.orig	2020-05-05 01:35:39 UTC
 +++ vendor/openssl/build.rs
-@@ -61,5 +61,21 @@ fn main() {
+@@ -61,5 +61,25 @@ fn main() {
          if version >= 0x2_09_01_00_0 {
              println!("cargo:rustc-cfg=libressl291");
          }
@@ -18,6 +18,10 @@
 +        }
 +
 +        if version >= 0x3_00_02_00_0 {
++            println!("cargo:rustc-cfg=libressl302");
++        }
++
++        if version >= 0x3_01_01_00_0 {
 +            println!("cargo:rustc-cfg=libressl302");
 +        }
      }
