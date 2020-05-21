@@ -1,11 +1,11 @@
---- laz-perf/portable_endian.hpp.intermediate	2018-07-12 13:01:41 UTC
+--- laz-perf/portable_endian.hpp.orig	2020-04-16 18:53:19 UTC
 +++ laz-perf/portable_endian.hpp
 @@ -43,11 +43,11 @@
  #   define __PDP_ENDIAN    PDP_ENDIAN
  **/
  
--#elif defined(__FreeBSD__) || defined(__OpenBSD__)
-+#elif defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
+-#elif defined(__OpenBSD__)|| defined(__FreeBSD__) 
++#elif defined(__OpenBSD__) || defined(__FreeBSD__) || defined(__DragonFly__)
  
  #   include <sys/endian.h>
  
