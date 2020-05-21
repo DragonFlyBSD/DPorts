@@ -1,4 +1,0 @@
-# [-Werror=class-memaccess]
-dfly-patch:
-	${REINPLACE_CMD} -e 's/-Werror[[:>:]]//g'	\
-		${WRKSRC}/cmake/modules/CppDriver.cmake
