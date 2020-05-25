@@ -1,3 +1,7 @@
 # exclude fake crud
 OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NBATCH:NMPI:NBLAS}
 .undef MPI_CONFIGURE_WITH
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/#define _POSIX_C_SOURCE/d' \
+		${WRKSRC}/src/base/cs_timer.c
