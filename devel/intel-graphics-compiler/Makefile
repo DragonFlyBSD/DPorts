@@ -2,8 +2,11 @@
 
 PORTNAME=	intel-graphics-compiler
 DISTVERSIONPREFIX=	igc-
-DISTVERSION=	1.0.3289
+DISTVERSION=	1.0.3899
 CATEGORIES=	devel
+
+PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+PATCHFILES+=	b4e40a433077.patch:-p1 # https://github.com/intel/intel-graphics-compiler/pull/129
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Intel Graphics Compiler for OpenCL
@@ -23,6 +26,13 @@ GH_ACCOUNT=	intel
 CFLAGS+=	-Wno-macro-redefined # __fastcall
 PLIST_SUB=	ARCH_SUFX=${ARCH:S/i386/32/:S/amd//:S/x86_//}
 
+.if exists(/usr/lib/clang/10.0.0) && ${CXX} == c++
+# https://github.com/intel/intel-graphics-compiler/issues/126
+BUILD_DEPENDS+=	clang++90:devel/llvm90
+USES:=		${USES:Ncompiler*}
+CXX=		clang++90
+.endif
+
 post-patch:
 # lang/python* don't install unsuffixed symlinks
 	@${REINPLACE_CMD} -i .python \
@@ -31,8 +41,7 @@ post-patch:
 		${WRKSRC}/IGC/CMakeLists.txt \
 		${WRKSRC}/IGC/BiFModule/CMakeLists.txt
 # devel/llvm* have different naming from upstream under PATH
-	@${REINPLACE_CMD} -e '/clang-\$$/ { s//clang$$/; \
-			s/MAJOR}/&$${LLVM_VERSION_MINOR}/; }' \
+	@${REINPLACE_CMD} -e '/clang-\$$/s//clang$$/' \
 		${WRKSRC}/IGC/BiFModule/CMakeLists.txt
 # No need to abort on every benign warning enabled by default
 	@${REINPLACE_CMD} -e 's/"-Werror"//; /-Werror/d' \
