@@ -1,0 +1,1 @@
+SHEBANG_FILES+=	${WRKSRC}/${PORTNAME}/addons/mail/static/scripts/odoo-mailgate.py
