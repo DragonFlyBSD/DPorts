@@ -1,0 +1,3 @@
+USE_GCC_VERSION= 9
+
+LDFLAGS+=	-lstdc++fs
