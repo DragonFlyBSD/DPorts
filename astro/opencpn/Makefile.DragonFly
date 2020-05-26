@@ -1,5 +1,2 @@
 USES+=	alias
 
-dfly-patch:
-	${REINPLACE_CMD} -e 's@[[:<:]]isnan[[:>:]]@std::isnan@g' \
-		${WRKSRC}/plugins/wmm_pi/src/MagneticPlotMap.cpp
