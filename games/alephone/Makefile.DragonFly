@@ -1,0 +1,3 @@
+dfly-patch:
+	${REINPLACE_CMD} -e 's,\*bsd\*,*dragonfly*,g' \
+		${WRKSRC}/configure.ac
