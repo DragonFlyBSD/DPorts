@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	citra
-PORTVERSION=	s20200415
+PORTVERSION=	s20200509
 PORTREVISION?=	0
 CATEGORIES=	emulators
 
@@ -19,14 +19,13 @@ LICENSE_FILE_LGPL21+ =	${_LICENSE_STORE}/LGPL21 # soundtouch
 LICENSE_FILE_MIT=	${WRKSRC}/externals/enet/LICENSE
 LICENSE_FILE_OpenSSL=	${WRKSRC}/externals/libressl/COPYING
 
-BUILD_DEPENDS=	boost-libs>=1.66:devel/boost-libs
-
 USE_GITHUB=	yes
 GH_ACCOUNT=	citra-emu
-GH_TAGNAME=	9ae37da29
-GH_TUPLE=	citra-emu:ext-libressl-portable:7d01cb0:libressl/externals/libressl \
+GH_TAGNAME=	8d27b0714
+GH_TUPLE=	citra-emu:ext-boost:36603a1:boost/externals/boost \
+		citra-emu:ext-libressl-portable:7d01cb0:libressl/externals/libressl \
 		citra-emu:ext-soundtouch:060181e:soundtouch/externals/soundtouch \
-		MerryMage:dynarmic:r2-15-gb58048a5:dynarmic/externals/dynarmic \
+		MerryMage:dynarmic:r2-37-g8d1699ba:dynarmic/externals/dynarmic \
 		arsenm:sanitizers-cmake:aab6948:sanitizers_cmake/externals/cubeb/cmake/sanitizers-cmake \
 		arun11299:cpp-jwt:v1.1.1:cpp_jwt/externals/cpp-jwt \
 		benhoyt:inih:r42-6-g2023872:inih/externals/inih/inih \
@@ -39,10 +38,12 @@ GH_TUPLE=	citra-emu:ext-libressl-portable:7d01cb0:libressl/externals/libressl \
 		lvandeve:lodepng:31d9704:lodepng/externals/lodepng/lodepng \
 		neobrain:nihstro:fd69de1:nihstro/externals/nihstro \
 		weidai11:cryptopp:CRYPTOPP_7_0_0-23-gf320e7d9:cryptopp/externals/cryptopp/cryptopp \
-		wwylele:teakra:e6ea0ea:teakra/externals/teakra
+		wwylele:teakra:57bb1d2:teakra/externals/teakra
 
 USES=		cmake compiler:c++17-lang iconv localbase:ldflags sdl
 USE_SDL=	sdl2
+# XXX https://github.com/citra-emu/citra/issues/5234
+#CMAKE_ON=	USE_SYSTEM_BOOST
 LDFLAGS+=	-Wl,--as-needed # Qt5Network
 TEST_TARGET=	test
 
