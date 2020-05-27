@@ -1,0 +1,3 @@
+dfly-patch:
+	${REINPLACE_CMD} '/CMAKE_SYSTEM_NAME STREQUAL/s,FreeBSD,DragonFly,' \
+		${WRKSRC}/CMakeLists.txt
