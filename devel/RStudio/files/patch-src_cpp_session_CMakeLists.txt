@@ -1,4 +1,4 @@
---- src/cpp/session/CMakeLists.txt.orig	2019-09-19 13:59:21 UTC
+--- src/cpp/session/CMakeLists.txt.orig	2020-04-01 16:16:24 UTC
 +++ src/cpp/session/CMakeLists.txt
 @@ -25,9 +25,9 @@ endif()
  if(NOT EXISTS "${RSTUDIO_DEPENDENCIES_DIR}/common/mathjax-26")
@@ -72,3 +72,34 @@
  
     # install rmarkdown package
     # file(GLOB RMARKDOWN_PACKAGE "${RSTUDIO_DEPENDENCIES_DIR}/common/rmarkdown*.tar.gz")
+@@ -534,18 +537,18 @@ if (NOT RSTUDIO_SESSION_WIN32)
+            DESTINATION ${RSTUDIO_INSTALL_SUPPORTING}/resources)
+ 
+    # install libclang
+-   if(WIN32)
+-      file(GLOB LIBCLANG_32_FILES "${LIBCLANG_DIR}/x86/*")
+-      install(PROGRAMS ${LIBCLANG_32_FILES}
+-              DESTINATION  ${RSTUDIO_INSTALL_BIN}/rsclang/x86)
+-      file(GLOB LIBCLANG_64_FILES "${LIBCLANG_DIR}/x86_64/*")
+-      install(PROGRAMS ${LIBCLANG_64_FILES}
+-              DESTINATION  ${RSTUDIO_INSTALL_BIN}/rsclang/x86_64)
+-
+-      # install libclang builtin-headers
+-      install(DIRECTORY "${RSTUDIO_DEPENDENCIES_DIR}/common/libclang/builtin-headers"
+-              DESTINATION "${RSTUDIO_INSTALL_SUPPORTING}/resources/libclang")
+-   endif()
++#   if(WIN32)
++#      file(GLOB LIBCLANG_32_FILES "${LIBCLANG_DIR}/x86/*")
++#      install(PROGRAMS ${LIBCLANG_32_FILES}
++#              DESTINATION  ${RSTUDIO_INSTALL_BIN}/rsclang/x86)
++#      file(GLOB LIBCLANG_64_FILES "${LIBCLANG_DIR}/x86_64/*")
++#      install(PROGRAMS ${LIBCLANG_64_FILES}
++#              DESTINATION  ${RSTUDIO_INSTALL_BIN}/rsclang/x86_64)
++#
++#      # install libclang builtin-headers
++#      install(DIRECTORY "${RSTUDIO_DEPENDENCIES_DIR}/common/libclang/builtin-headers"
++#              DESTINATION "${RSTUDIO_INSTALL_SUPPORTING}/resources/libclang")
++#   endif()
+ 
+    # install winpty on windows
+    if(WIN32)

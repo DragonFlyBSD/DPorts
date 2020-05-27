@@ -1,4 +1,4 @@
---- src/cpp/session/session-config.h.in.orig	2019-10-25 22:16:29 UTC
+--- src/cpp/session/session-config.h.in.orig	2020-04-01 16:16:24 UTC
 +++ src/cpp/session/session-config.h.in
 @@ -13,11 +13,11 @@
   *
