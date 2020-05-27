@@ -1,0 +1,12 @@
+--- native/Makefile.intermediate	2020-05-26 23:30:43 UTC
++++ native/Makefile
+@@ -5,6 +5,9 @@ endif
+ ifeq ($(UNAME), FreeBSD)
+ 	LIB_ANGR_NATIVE=angr_native.so
+ endif
++ifeq ($(UNAME), DragonFly)
++	LIB_ANGR_NATIVE=angr_native.so
++endif
+ ifeq ($(UNAME), Linux)
+ 	LIB_ANGR_NATIVE=angr_native.so
+ endif
