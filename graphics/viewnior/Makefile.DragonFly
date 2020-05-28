@@ -1,0 +1,2 @@
+USES+=		python
+BINARY_ALIAS:=	python3=${PYTHON_CMD}
