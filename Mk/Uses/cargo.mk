@@ -5,15 +5,15 @@
 #
 # Feature:	cargo
 # Usage:	USES=cargo
-# Valid ARGS:	none
+# Valid ARGS:	extra
 #
 # MAINTAINER: rust@FreeBSD.org
 
 .if !defined(_INCLUDE_USES_CARGO_MK)
 _INCLUDE_USES_CARGO_MK=	yes
 
-.if !empty(cargo_ARGS)
-IGNORE+=	USES=cargo takes no arguments
+.if ${cargo_ARGS:Mextra}
+.include "${USESDIR}/cargo-extra.mk"
 .endif
 
 # List of static dependencies.  The format is cratename-version.
