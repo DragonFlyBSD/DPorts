@@ -1,6 +1,6 @@
---- src/protocol.c.orig	2019-04-21 02:29:18 UTC
-+++ src/protocol.c
-@@ -14,7 +14,7 @@
+--- src/terminal.c.orig	2020-02-09 08:37:18 UTC
++++ src/terminal.c
+@@ -8,7 +8,7 @@
  
  #if defined(__OpenBSD__) || defined(__APPLE__)
  #include <util.h>
