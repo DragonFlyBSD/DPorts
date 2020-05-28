@@ -1,3 +1,1 @@
-
-dfly-patch:
-	${CHMOD} +x ${WRKSRC}/meson/post_install.py
+BINARY_ALIAS= python3=${PYTHON_CMD}
