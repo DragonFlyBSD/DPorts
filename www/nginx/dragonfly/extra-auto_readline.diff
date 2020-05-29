@@ -1,0 +1,13 @@
+--- auto/readline.orig	2020-04-23 11:30:25 UTC
++++ auto/readline
+@@ -9,8 +9,8 @@ njs_found=no
+ njs_feature="GNU readline library"
+ njs_feature_name=NJS_HAVE_GNU_READLINE
+ njs_feature_run=no
+-njs_feature_incs=
+-njs_feature_libs="-lreadline"
++njs_feature_incs="-I/usr/local/include"
++njs_feature_libs="-L/usr/local/lib -lreadline"
+ njs_feature_test="#include <stdio.h>
+                   #include <readline/readline.h>
+                   #include <readline/history.h>
