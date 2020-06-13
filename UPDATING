@@ -5,6 +5,112 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+
+20200613:
+  AFFECTS: users of editors/libreoffice
+  AUTHOR: fluffy@FreeBSD.org
+
+  LibreOffice was updated to 6.4 branch with some critical changes:
+  - GTK2 option is obsolete by upstream
+  - GTK3 option is not more set by default because of unstable yet and have visual glitches
+  - QT5 option is set by default to provide comfy visual style for every user
+  - KDE option was renamed to KF5 follows upstream
+
+  Please re-run "make config" to pick up the new defaults
+
+20200610:
+  AFFECTS: users of www/node
+  AUTHOR: bhughes@FreeBSD.org
+
+  The www/node port has been updated to Node.js v14.0.0, the latest
+  upstream release. This is a major release, including many significant
+  changes. Users are encouraged to read the release announcements before
+  upgrading:
+
+  https://nodejs.org/en/blog/release/v14.0.0/
+
+20200602:
+  AFFECTS: users of www/radicale
+  AUTHOR: decke@FreeBSD.org
+
+  Migration from radicale 1.x to 2.x requires that you export the storage
+  with radicale 1.1.6 before updating.
+
+  Migration instructions are available at:
+  https://web.archive.org/web/20190314225402/https://radicale.org/1to2/
+
+20200602:
+  AFFECTS: users of sysutils/py-salt
+  AUTHOR: krion@FreeBSD.org
+
+  This port is moved to sysutils/py-salt-2019 and sysutils/py-salt was
+  updated to version 3000.
+
+  If you wish to use pysalt-2019 in the future, you might run the
+  following command:
+
+  # pkg set -o sysutils/py-salt:sysutils/py-salt-2019
+  # pkg upgrade
+
+20200531:
+  AFFECTS: users of mail/postfix-policyd-spf-python
+  AUTHOR:  yasu@utahime.org
+
+  This port is now deprecated because upstream project is superseded by its
+  successor. So uninstall this port and install mail/py-spf-engine instead.
+  Keep in mind that the path of configuration file is changed from
+  ${PREFIX}/etc/postfix-policyd-spf-python/policyd-spf.conf to
+  ${PREFIX}/etc/python-policyd-spf/policyd-spf.conf. So you need to move
+  it to new location unless you use the default one without changing.
+
+20200526:
+  AFFECTS: users of databases/mariadb104-client, databases/mariadb104-server
+  AUTHOR: brnrd@FreeBSD.org
+
+  The ports now add sample configuration files to /usr/local/etc/mysql. You
+  must merge your client configation with the conf.d/client.cnf and your
+  server configuration with conf.d/server.cnf.
+
+20200518:
+  AFFECTS: users of converters/libiconv
+  AUTHOR: zeising@FreeBSD.org
+
+  Support for the Japanese specific patches have been discontinued.
+  These were previously added in a nondefault ports options, for people who
+  needed them.
+  If you still need them, it might be possible to create a port of libiconv 1.14
+  which includes those patches.
+
+20200517:
+  AFFECTS: users of x11/sddm
+  AUTHOR: arrowd@FreeBSD.org
+
+  The home directory of sddm user has been moved to /var/lib/sddm. It is advised
+  to run following commands as root after updating the package:
+
+    # pw usermod -n sddm -d /var/lib/sddm
+    # pwd_mkdb /etc/master.passwd
+    # mv /usr/local/etc/sddm/home/state.conf /var/lib/sddm/state.conf
+    # rm -rf /usr/local/etc/sddm/home
+
+  Otherwise, SDDM will keep using /usr/local/etc/sddm/home/ as its HOME.
+
+20200515:
+  AFFECTS: users of devel/libphutil, devel/arcanist-lib, devel/phabricator
+  AUTHOR: grembo@FreeBSD.org
+
+  Upstream fully deprecated devel/libphutil and merged its functionality
+  into devel/arcanist-lib and devel/phabricator. As a result, the
+  devel/libphutil port will be removed from the ports tree.
+
+  After upgrading devel/(arcanist-lib|phabricator) to version 20200514, it is
+  recommended to remove the orphaned libphutil package by running:
+
+    # pkg delete php\*-libphutil
+
+  Alternatively, 'pkg autoremove' will also work as expected, but might
+  remove orphaned packages unrelated to this update.
+
 20200505:
   AFFECTS: users of net-im/pidgin-rocketchat
   AUTHOR: tobias.rehbein@web.de
@@ -1120,43 +1226,4 @@ leave you without networking.
 
   In that case, pkg delete -f the qt5-webengine package before building
   the updated version.
-
-20190611:
-  AFFECTS: users of net/routinator
-  AUTHOR: rodrigo@FreeBSD.org
-
-  Release 0.4.0 fundamentally changes the command line options for
-  running the server and introduces a new way to initialize the local RPKI
-  repository used by Routinator.
-  If you have been using previous releases, you will likely have to adjust
-  your tooling. We apologize for this, but we also feel that the new commands
-  are more intuitive and logical.
-
-20190604:
-  AFFECTS: users of net/samba47
-  AUTHOR: antoine@FreeBSD.org
-
-  The default version of samba has been switched from 4.7 to 4.8.
-  Upgrade instructions:
-
-  For package users having samba47 installed indirectly (as a dependency):
-    # pkg upgrade
-
-  For package users having samba47 installed directly (leaf port):
-    # pkg upgrade
-    # pkg install samba48
-
-  For ports users:
-    If you want to keep samba47, add DEFAULT_VERSIONS+= samba=4.7 to make.conf
-
-    If you want to upgrade to samba48, remove samba47:
-    # pkg delete -f samba47
-
-    Portmaster users:
-    # portmaster net/samba48
-    # portmaster -a
-
-    Portupgrade users:
-    # portinstall net/samba48
-    # portupgrade -a
 

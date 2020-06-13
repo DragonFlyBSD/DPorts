@@ -2902,7 +2902,6 @@ www/harvest||2014-09-01|Not staged
 www/htmlobject||2014-09-01|Not staged
 www/lusca-head||2014-09-01|Not staged
 www/mod_auth_form||2014-09-01|Not staged
-www/mod_auth_mellon||2014-09-01|Not staged
 www/mod_ftp||2014-09-01|Not staged
 www/mod_log_dbd||2014-09-01|Not staged
 www/moodle24||2014-09-01|Not staged
@@ -4080,7 +4079,6 @@ www/cakephp21||2016-01-25|Has expired: PHP 5.4 EOL reached
 www/cakephp22||2016-01-25|Has expired: PHP 5.4 EOL reached
 www/cakephp23||2016-01-25|Has expired: PHP 5.4 EOL reached
 www/fluxcms||2016-01-25|Has expired: PHP 5.4 EOL reached
-www/fusionpbx||2016-01-25|Has expired: PHP 5.4 EOL reached
 www/jawstats||2016-01-25|Has expired: PHP 5.4 EOL reached
 www/ojs2||2016-01-25|Has expired: PHP 5.4 EOL reached
 www/webcalendar||2016-01-25|Has expired: PHP 5.4 EOL reached
@@ -5911,8 +5909,6 @@ devel/beautifyphp||2018-01-29|only works for PHP4 which is gone long ago
 devel/clanlib22|devel/clanlib|2018-01-29|No users in the ports tree, newer version available
 devel/php-xdebug|devel/pecl-xdebug|2018-01-30|Moved to pecl
 astro/py-pyfits|astro/py-astropy|2018-01-31|Has expired: Use astro/py-astropy instead
-devel/py-gitdb|devel/py-gitdb2|2018-01-31|Has expired: Use devel/py-gitdb2 instead
-devel/py-smmap|devel/py-smmap2|2018-01-31|Has expired: Use devel/py-smmap2 instead
 devel/rubygem-moneta06|devel/rubygem-moneta|2018-01-31|Has expired: Use devel/rubygem-moneta instead
 lang/ruby22|lang/ruby24|2018-01-31|Has expired: Upgrade to newer version (e.g. lang/ruby24)
 net/tcptraceroute-devel|net/tcptraceroute|2018-01-31|Has expired: Use net/tcptraceroute instead
@@ -9979,7 +9975,6 @@ graphics/pysvg||2020-01-27|Has expired: Unmaintained, uses EOLed python27
 irc/py-supybot-plugins||2020-01-27|Has expired: Unmaintained, uses EOLed python27
 japanese/kana-no-quiz||2020-01-27|Has expired: Unmaintained, uses EOLed python27
 lang/py-prolog||2020-01-27|Has expired: Unmaintained, uses EOLed python27
-lang/sdcc||2020-01-27|Has expired: Unmaintained, uses EOLed python27
 mail/archivemail||2020-01-27|Has expired: Unmaintained, uses EOLed python27
 mail/mailfmt||2020-01-27|Has expired: Unmaintained, uses EOLed python27
 mail/py-libgmail||2020-01-27|Has expired: Unmaintained, uses EOLed python27
@@ -10579,7 +10574,6 @@ devel/py-Products.LDAPUserFolder||2020-03-20|Has expired: Old, uses EOLed python
 devel/py-zLOG||2020-03-20|Has expired: Old, uses EOLed python27
 textproc/py-ltxml||2020-03-20|Has expired: Unmaintained, uses EOLed python27
 x11-toolkits/flowcanvas||2020-03-20|Has expired: Unmaintained, uses EOLed python27
-audio/raul||2020-03-20|Has expired: Unmaintained, uses EOLed python27
 audio/py-vorbis||2020-03-20|Has expired: Unmaintained, uses EOLed python27
 databases/py-cdb||2020-03-20|Has expired: Unmaintained, uses EOLed python27
 devel/py-libplist||2020-03-20|Has expired: Unmaintained, uses EOLed python27
@@ -10706,7 +10700,6 @@ devel/bouml-doc||2020-05-05|Has expired: Broken for more than 6 months
 devel/cobf||2020-05-05|Has expired: Broken for more than 6 months
 devel/djgpp-crx||2020-05-05|Has expired: Broken for more than 6 months
 devel/elfrc||2020-05-05|Has expired: Broken for more than 6 months
-devel/frink||2020-05-05|Has expired: Broken for more than 6 months
 devel/gogland-eap||2020-05-05|Has expired: Broken for more than 6 months
 devel/hive||2020-05-05|Has expired: Broken for more than 6 months
 devel/hs-bytestring-nums||2020-05-05|Has expired: No releases since 2012
@@ -10928,9 +10921,7 @@ print/pmw||2020-05-05|Has expired: Broken for more than 6 months
 print/rprint||2020-05-05|Has expired: Broken for more than 6 months
 russian/p5-cyrillic||2020-05-05|Has expired: Broken for more than 6 months
 russian/tidyup-mail||2020-05-05|Has expired: Broken for more than 6 months
-science/abinit||2020-05-05|Has expired: Broken for more than 6 months
 science/atom||2020-05-05|Has expired: Broken for more than 6 months
-science/cp2k||2020-05-05|Has expired: Broken for more than 6 months
 science/esys-particle||2020-05-05|Has expired: Broken for more than 6 months
 science/openmx||2020-05-05|Has expired: Broken for more than 6 months
 science/p5-Geo-ReadGRIB||2020-05-05|Has expired: Broken for more than 6 months
@@ -11118,3 +11109,87 @@ devel/rubygem-webpacker-rails5|devel/rubygem-webpacker4-rails5|2020-05-12|Rename
 devel/rubygem-webpacker-rails50|devel/rubygem-webpacker4-rails50|2020-05-12|Rename when rubygem-webpacker is 5.x now
 net-p2p/parity-ethereum|net-p2p/openethereum|2020-05-13|Renamed upstream for transition to a DAO ownership and maintainer model
 net-im/linux-telegram-desktop|net-im/telegram-desktop|2020-05-13|Has expired: Broken for more than 6 months, use native version
+devel/libphutil||2020-05-15|Has expired: Upstream merged functionality into downstream projects.
+print/frescobaldi|print/py-frescobaldi|2020-05-16|Renamed to comply with Python Ports Policy
+sysutils/rdiff-backup|sysutils/py-rdiff-backup@py37|2020-05-16|Renamed comply with Python Ports Policy and flavored
+www/py-django-happenings|www/py-django-happenings-update|2020-05-17|Has expired: Doesn't work with Django 2.2+, please use www/py-django-happenings-update instead
+devel/py-django-tastypie-mongoengine||2020-05-17|Has expired: Not necessary anymore, and project unmaintained
+sysutils/py-cpuinfo|sysutils/py-py-cpuinfo|2020-05-18|Rename to match PyPI name
+devel/py-jupyterlab_server|devel/py-jupyterlab-server|2020-05-19|Rename to match upstream naming
+math/py-onnx|misc/py-onnx|2020-05-23|Move to misc category because it's not related to math
+misc/onnx|misc/py-onnx|2020-05-23|Remove duplicate
+net/get_iplayer|multimedia/get_iplayer|2020-05-24|Move to a proper category
+lang/gnatdroid-armv7||2020-05-24|Has expired: Broken for more than 6 months
+devel/breakpad||2020-05-24|Has expired: Broken for more than 6 months
+x11/xcolorsel||2020-05-24|Has expired: Broken for more than 6 months
+textproc/simplexml||2020-05-24|Has expired: Unfetchable, an alternative upstream suggested in bug#235252 only contains the MS C-sharp project which is unbuildable on FreeBSD
+www/py-django-annotations||2020-05-26|Has expired: No longer maintained, not compatible with Django 2.0+
+www/py-django-registration-defaults||2020-05-26|Has expired: No longer maintained, not compatible with newer versions of www/py-django-registration
+devel/py-django-rq-dashboard|devel/py-django-rq|2020-05-26|Has expired: No longer maintained, not compatible with Django 2.0+, please use devel/py-django-rq instead
+www/py-django_openstack_auth||2020-05-26|Has expired: No longer maintained, code was merged into 13.x release of www/py-horizon
+math/hs-semigroups||2020-05-26|Deprecated: Haskell libraries get pushed out of the ports tree
+net/hs-network||2020-05-26|Deprecated: Haskell libraries get pushed out of the ports tree
+devel/hs-extensible-exceptions||2020-05-26|Deprecated: Haskell libraries get pushed out of the ports tree
+devel/hs-random||2020-05-26|Deprecated: Haskell libraries get pushed out of the ports tree
+devel/hs-old-time||2020-05-26|Deprecated: Haskell libraries get pushed out of the ports tree
+devel/hs-data-default-instances-old-locale||2020-05-26|Deprecated: Haskell libraries get pushed out of the ports tree
+devel/hs-data-default-class||2020-05-26|Deprecated: Haskell libraries get pushed out of the ports tree
+devel/hs-data-default-instances-base||2020-05-26|Deprecated: Haskell libraries get pushed out of the ports tree
+devel/hs-data-default-instances-dlist||2020-05-26|Deprecated: Haskell libraries get pushed out of the ports tree
+devel/hs-setlocale||2020-05-26|Deprecated: Haskell libraries get pushed out of the ports tree
+devel/hs-data-default||2020-05-26|Deprecated: Haskell libraries get pushed out of the ports tree
+devel/hs-hashable||2020-05-26|Deprecated: Haskell libraries get pushed out of the ports tree
+devel/hs-transformers-compat||2020-05-26|Deprecated: Haskell libraries get pushed out of the ports tree
+devel/hs-dlist||2020-05-26|Deprecated: Haskell libraries get pushed out of the ports tree
+devel/hs-unordered-containers||2020-05-26|Deprecated: Haskell libraries get pushed out of the ports tree
+devel/hs-mtl||2020-05-26|Deprecated: Haskell libraries get pushed out of the ports tree
+devel/hs-old-locale||2020-05-26|Deprecated: Haskell libraries get pushed out of the ports tree
+devel/hs-utf8-string||2020-05-26|Deprecated: Haskell libraries get pushed out of the ports tree
+devel/hs-data-default-instances-containers||2020-05-26|Deprecated: Haskell libraries get pushed out of the ports tree
+x11-wm/hs-xmonad-contrib||2020-05-26|Deprecated: Haskell libraries get pushed out of the ports tree
+x11/hs-X11||2020-05-26|Deprecated: Haskell libraries get pushed out of the ports tree
+x11/hs-X11-xft||2020-05-26|Deprecated: Haskell libraries get pushed out of the ports tree
+devel/rubygem-peek-redis-rails5|devel/rubygem-peek-redis-rails52|2020-05-29|Obsolete: Please use devel/rubygem-peek-redis-rails52 instead
+devel/rubygem-peek-rblineprof-rails5|devel/rubygem-peek-rblineprof-rails52|2020-05-29|Obsolete, please use devel/rubygem-peek-rblineprof-rails52 instead
+www/moodle36|www/moodle37|2020-05-30|Has expired: EOLed upstream
+sysutils/ansible24|sysutils/ansible|2020-05-31|Has expired: Upstream support ended. Consider upgrading to sysutils/ansible
+sysutils/ansible26|sysutils/ansible|2020-05-31|Has expired: Upstream support ended. Consider upgrading to sysutils/ansible
+sysutils/ansible25|sysutils/ansible|2020-05-31|Has expired: Upstream support ended. Consider upgrading to sysutils/ansible
+www/py-requests-futures097|www/py-requests-futures|2020-05-31|Has expired: Use www/py-requests-futures instead
+sysutils/ansible23|sysutils/ansible|2020-05-31|Has expired: Upstream support ended. Consider upgrading to sysutils/ansible
+devel/graphql.el||2020-05-31|Has expired: No longer required by anything
+lang/perl5.26|lang/perl5.28|2020-05-31|Has expired: Support ends three years after .0 release, please upgrade to a more recent version of Perl
+www/py-beautifulsoup460|www/py-beautifulsoup448|2020-05-31|Has expired: Use www/py-beautifulsoup448 instead
+databases/db48|databases/db5|2020-06-02|Has expired. Use databases/db5 instead
+security/bro||2020-06-02|Has expired: Please migrate to security/zeek
+www/py-djangotoolbox||2020-06-03|Has expired: No longer maintained, not compatible with Django 1.11+
+www/py-dojango||2020-06-03|Has expired: No longer maintained, not compatible with Django 2.2+
+www/py-django-json-rpc||2020-06-03|Has expired: No longer maintained, not compatible with Django 2.0+
+www/mediawiki132|www/mediawiki133|2020-06-03|Has expired: EOLed upstream
+devel/cargo-tree|lang/rust|2020-06-04|Integrated into cargo
+databases/rubygem-peek-mysql2-rails5||2020-06-05|Removed: not required by gitlab-ce anymore
+audio/workman||2020-06-05|Has expired: Depends on expired x11-toolkits/xview
+x11-toolkits/xview||2020-06-05|Has expired: 64-bit unsupported
+math/p5-Algorithm-KMeans||2020-06-05|Has expired: Depends on expired math/p5-Math-GSL
+math/p5-Math-GSL||2020-06-05|Has expired: Broken for more than 6 months
+net/openbsc||2020-06-05|Has expired: Depends on expired devel/libosmo-netif
+devel/libosmo-netif||2020-06-05|Has expired: Broken for more than 6 months
+audio/xvmixer||2020-06-05|Has expired: Depends on expired x11-toolkits/xview
+devel/libosmo-sccp||2020-06-05|Has expired: Depends on expired devel/libosmo-netif
+audio/p5-Audio||2020-06-05|Has expired: Depends on expired math/p5-Math-GSL
+databases/rubygem-peek-pg-rails5||2020-06-05|Removed: not required by gitlab-ce anymore
+devel/rubygem-peek-gc-rails5|devel/rubygem-peek-gc-rails52|2020-06-05|Removed: please use devel/rubygem-peek-gc-rails52 instead
+devel/rubygem-peek-rails5|devel/rubygem-peek-rails60|2020-06-05|Removed: please use devel/rubygem-peek-rails60 instead
+net/freerdp1|net/freerdp|2020-06-06|Has expired: Superseded by the freerdp port/package
+irc/psybnc||2020-06-06|Has expired: Broken for more than 6 months
+www/py-dj22-djangoql|www/py-djangoql|2020-06-06|Renamed to match the naming of other Django ports since Django 2.2 became default
+sysutils/beats|sysutils/beats6|2020-06-07|Renamed to match the naming of other ELK ports
+security/pam_pseudo||2020-06-07|Has expired: Broken for more than 6 months
+multimedia/din|audio/din|2020-06-09|Moved to a better category
+www/py-dj22-django_csp|www/py-django-csp|2020-06-10|Renamed to match upstream naming and to be in sync with other Django ports since Django 2.2 became default
+www/py-dj22-django-jquery-js|www/py-django-jquery-js|2020-06-11|Renamed to match the naming of other Django ports since Django 2.2 became default
+www/py-dj22-django-formset-js-improved|www/py-django-formset-js-improved|2020-06-11|Renamed to match the naming of other Django ports since Django 2.2 became default
+mail/claws-mail-archiver|mail/claws-mail-archive|2020-06-11|Renamed to align port name to plugin name
+mail/claws-mail-attach_warner|mail/claws-mail-attachwarner|2020-06-11|Renamed to align port name to plugin name
+mail/claws-mail-spamreport|mail/claws-mail-spam_report|2020-06-11|Renamed to align port name to plugin name
+mail/claws-mail-tnef|mail/claws-mail-tnef_parse|2020-06-11|Renamed to align port name to plugin name

@@ -59,8 +59,8 @@ GHOSTSCRIPT_DEFAULT?=	agpl
 JAVA_DEFAULT?=		8
 # Possible values: 0.6, 0.7, 1.0, 1.1
 JULIA_DEFAULT?=		1.0
-# Possible values: 2.0.6
-LAZARUS_DEFAULT?=	2.0.6
+# Possible values: 2.0.8
+LAZARUS_DEFAULT?=	2.0.8
 # Possible values: c7
 LINUX_DEFAULT?=		c7
 # Possible values: 60, 70, 80, 90, -devel (to be used when non-base compiler is required)
@@ -71,7 +71,7 @@ LLVM_DEFAULT?=		80
 LUA_DEFAULT?=		5.2
 # Possible values: 5.5, 5.6, 5.7, 8.0, 5.5m, 10.1m, 10.2m, 10.3m, 10.4m, 5.5p, 5.6p, 5.7p, 5.6w
 MYSQL_DEFAULT?=		5.7
-# Possible values: 5.26, 5.28, 5.30, devel
+# Possible values: 5.28, 5.30, 5.32, devel
 .if !exists(${LOCALBASE}/bin/perl) || (!defined(_PORTS_ENV_CHECK) && \
     defined(PACKAGE_BUILDING))
 PERL5_DEFAULT?=		5.30

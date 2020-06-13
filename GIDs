@@ -710,7 +710,7 @@ c-lightning:*:735:
 # free: 769
 postgres:*:770:
 cockroach:*:771:
-# free: 772
+postgrest:*:772:
 # free: 773
 # free: 774
 # free: 775
@@ -818,7 +818,7 @@ bitmark-recorder:*:873:
 # free: 877
 # free: 878
 # free: 879
-# free: 880
+pyspf-milter:*:880:
 ultimaker:*:881:
 midpoint:*:882:
 ipfs-go:*:883:
