@@ -2,10 +2,11 @@
 
 PORTNAME=	mage
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.1
+DISTVERSION=	1.9.0
+PORTEPOCH=	1
 CATEGORIES=	devel
 
-MAINTAINER=	seanc@FreeBSD.org
+MAINTAINER=	gspurki@gmail.com
 COMMENT=	Command-line make-like build tool using Go as input files
 
 LICENSE=	APACHE20
@@ -15,9 +16,6 @@ USES=		go
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	magefile
-GH_SUBDIR=	src/github.com/${GH_ACCOUNT}/${PORTNAME}
-GH_TAGNAME=	2.1
-GH_TAG_COMMIT=	771ebed
 
 PLIST_FILES=	bin/mage
 
