@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/net-mgmt/ipv6mon/files/ipv6mon.in 368273 2014-09-15 16:11:39Z hrs $
+# $FreeBSD$
 
 # PROVIDE: ipv6mon
 # REQUIRE: DAEMON
