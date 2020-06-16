@@ -4,7 +4,7 @@
 PORTNAME=	blame
 PORTVERSION=	1.3.1
 CATEGORIES=	devel
-MASTER_SITES=	SF
+MASTER_SITES=	ftp://ftp.invisible-island.net/rcs-blame/
 
 MAINTAINER=	jhein@symmetricom.com
 COMMENT=	Display last modification for each line in an RCS file
