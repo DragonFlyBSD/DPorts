@@ -1,4 +1,0 @@
-
-OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NJACK} ALSA
-
-LIBS:=	${LIBS:N-lthr:N-ljack} -lasound

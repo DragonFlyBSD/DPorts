@@ -1,5 +1,0 @@
-
-# some strange MF patch, restore
-dfly-patch:
-	${REINPLACE_CMD} -e '/return syscall.Mknod(/s@uint64(dev)@dev@' \
-		${WRKSRC}/vendor/github.com/docker/docker/pkg/system/mknod.go
