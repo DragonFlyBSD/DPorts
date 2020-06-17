@@ -1,3 +1,5 @@
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NFREETDS} BACKTRACE
+
 dfly-patch:
 	${REINPLACE_CMD} \
 		-e 's@\(#if !defined(__FreeBSD__)\)@\1 \&\& !defined(__DragonFly__)@g'			\
