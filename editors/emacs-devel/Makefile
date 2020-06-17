@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	emacs
-DISTVERSION=	28.0.50.20200501
+DISTVERSION=	28.0.50.20200613
 PORTEPOCH=	2
 CATEGORIES=	editors
 PKGNAMESUFFIX=	-devel
@@ -28,7 +28,7 @@ USES=		autoreconf:build cpe gmake localbase:ldflags ncurses pkgconfig
 CPE_VENDOR=	gnu
 USE_GITHUB=	yes
 GH_ACCOUNT=	emacs-mirror
-GH_TAGNAME=	c59e878
+GH_TAGNAME=	f4b99b3
 
 .if ${FLAVOR:U} != nox
 USES+=		desktop-file-utils gnome xorg
@@ -142,7 +142,6 @@ GIF_LIB_DEPENDS=		libgif.so:graphics/giflib
 GIF_CONFIGURE_WITH=		gif
 GNUTLS_LIB_DEPENDS=		libgnutls.so:security/gnutls
 GNUTLS_CONFIGURE_WITH=		gnutls
-GSETTINGS_IMPLIES=		DBUS
 GSETTINGS_USE=			GNOME=glib20
 GSETTINGS_CONFIGURE_WITH=	gsettings
 GTK2_LIB_DEPENDS=		libfontconfig.so:x11-fonts/fontconfig \
