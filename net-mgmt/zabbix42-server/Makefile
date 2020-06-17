@@ -15,9 +15,12 @@ COMMENT=	Enterprise-class open source distributed monitoring (${PKGNAMESUFFIX:S/
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+DEPRECATED=	End of Life
+EXPIRATION_DATE=2020-06-20
+
 LIB_DEPENDS=	libpcre.so:devel/pcre
 
-CONFLICTS=	zabbix[0-35-9][0-9]${PKGNAMESUFFIX} \
+CONFLICTS_INSTALL=	zabbix[0-35-9][0-9]${PKGNAMESUFFIX} \
 		zabbix4[0-13-9]${PKGNAMESUFFIX} \
 		zabbix[0-9]${PKGNAMESUFFIX}
 
