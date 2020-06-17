@@ -1,11 +1,11 @@
 # $FreeBSD$
 
 PORTNAME=	cligen
-PORTVERSION=	4.4.0
+PORTVERSION=	4.5.0
 CATEGORIES=	devel
 
 MAINTAINER=	dcornejo@netgate.com
-COMMENT=	CLIgen is a Command-Line Interface generator
+COMMENT=	Command-line interface generator
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
