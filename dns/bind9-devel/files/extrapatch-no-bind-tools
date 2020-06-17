@@ -1,6 +1,6 @@
 Exclude the "tools" from building and installing.
 
---- bin/Makefile.am.orig	2020-05-10 23:44:14 UTC
+--- bin/Makefile.am.orig	2020-06-01 11:40:58 UTC
 +++ bin/Makefile.am
 @@ -1,4 +1,4 @@
 -SUBDIRS = named rndc dig delv dnssec tools nsupdate check confgen tests plugins
@@ -8,22 +8,20 @@ Exclude the "tools" from building and installing.
  
  if HAVE_PKCS11
  SUBDIRS += pkcs11
---- bin/tools/Makefile.am.orig	2020-05-10 23:44:14 UTC
+--- bin/tools/Makefile.am.orig	2020-06-01 11:40:58 UTC
 +++ bin/tools/Makefile.am
-@@ -8,14 +8,9 @@ LDADD =				\
+@@ -8,13 +8,8 @@
  	$(LIBISC_LIBS)		\
  	$(LIBDNS_LIBS)
  
 -bin_PROGRAMS =			\
 -	arpaname		\
+-	mdig			\
+-	named-journalprint	\
 -	named-rrchecker		\
--	mdig
+-	nsec3hash
 +bin_PROGRAMS =
  
--sbin_PROGRAMS =			\
--	named-journalprint	\
--	nsec3hash
-+sbin_PROGRAMS =
+ arpaname_LDADD =		\
+ 	$(LIBISC_LIBS)
  
- mdig_CPPFLAGS =			\
- 	$(AM_CPPFLAGS)		\
