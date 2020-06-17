@@ -2,7 +2,7 @@
 
 PORTNAME=	uwebsockets
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.17.4
+DISTVERSION=	18.1.0
 CATEGORIES=	www devel
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -13,15 +13,12 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 RUN_DEPENDS=	usockets>0:net/usockets
 
+USES=		gmake
 USE_GITHUB=	yes
 GH_ACCOUNT=	uNetworking
 GH_PROJECT=	uWebSockets
 
 NO_BUILD=	yes
 NO_ARCH=	yes
-
-do-install:
-	cd ${WRKSRC}/src && ${COPYTREE_SHARE} . ${STAGEDIR}${PREFIX}/include/${GH_PROJECT}
-	${RM} ${STAGEDIR}${PREFIX}/include/uWebSockets/f2/LICENSE.txt
 
 .include <bsd.port.mk>
