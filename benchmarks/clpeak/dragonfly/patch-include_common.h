@@ -1,5 +1,5 @@
---- include/common.h.orig	2017-05-25 04:45:41.000000000 +0000
-+++ include/common.h	2017-07-04 13:53:57.000000000 +0000
+--- include/common.h.orig	2019-10-20 08:33:25 UTC
++++ include/common.h
 @@ -2,7 +2,7 @@
  #define COMMON_H
  
@@ -9,7 +9,7 @@
  #include <sys/types.h>
  #endif
  
-@@ -12,7 +12,7 @@
+@@ -13,7 +13,7 @@
  
  #define TAB             "  "
  #define NEWLINE         "\n"
@@ -17,13 +17,13 @@
 +#if ! defined __FreeBSD__ && ! defined __DragonFly__
  #define uint            unsigned int
  #endif
- 
-@@ -43,6 +43,8 @@
- #endif
+ #define ulong           unsigned long
+@@ -53,6 +53,8 @@
+   #endif
  #elif defined(__FreeBSD__)
  #define OS_NAME     "FreeBSD"
 +#elif defined(__DragonFly__)
 +#define OS_NAME     "DragonFly"	
+ #else
+ #define OS_NAME     "Unknown"
  #endif
- 
- 
