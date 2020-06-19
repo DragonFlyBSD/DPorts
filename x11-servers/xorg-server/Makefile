@@ -3,7 +3,7 @@
 
 PORTNAME?=	xorg-server
 PORTVERSION?=	1.20.8
-PORTREVISION?=	1
+PORTREVISION?=	2
 PORTEPOCH?=	1
 CATEGORIES=	x11-servers
 MASTER_SITES=	XORG/individual/xserver
@@ -12,7 +12,7 @@ DISTNAME=	xorg-server-${PORTVERSION}
 MAINTAINER=	x11@FreeBSD.org
 COMMENT?=	X.Org X server and related programs
 
-PATCH_SITES=	https://gitlab.freedesktop.org/xorg/xserver/commit/
+PATCH_SITES=	https://gitlab.freedesktop.org/xorg/xserver/-/commit/
 PATCHFILES=	271934db9f3b1297754b29855646e0a4ee01db59.diff:-p1
 
 LICENSE=	MIT
@@ -66,7 +66,8 @@ USE_XORG+=	pixman xau xdmcp xfont2 xkbfile xorgproto xshmfence xtrans
 CONFIGURE_ARGS+=--without-doxygen --without-xmlto --without-fop \
 		--with-default-font-path="$$(${DEFAULT_FONTPATH_CMD})" \
 		--without-dtrace --disable-config-hal	\
-		--disable-install-setuid --disable-unit-tests
+		--disable-install-setuid --disable-unit-tests \
+		--with-fallback-input-driver=libinput
 INSTALL_TARGET=	install-strip
 CPE_VENDOR=	x.org
 
