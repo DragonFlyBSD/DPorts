@@ -3,7 +3,7 @@
 PORTNAME=	dspdfviewer
 PORTVERSION=	1.15.1
 DISTVERSIONPREFIX=	v
-PORTREVISION=	29
+PORTREVISION=	30
 CATEGORIES=	graphics
 
 MAINTAINER=	fox@FreeBSD.org
@@ -34,4 +34,8 @@ PLIST_FILES=	bin/dspdfviewer \
 		share/applications/dspdfviewer.desktop
 
 .include <bsd.port.pre.mk>
+
+# Prepare for Qt5-5.15
+CFLAGS+=	-Wno-deprecated
+
 .include <bsd.port.post.mk>
