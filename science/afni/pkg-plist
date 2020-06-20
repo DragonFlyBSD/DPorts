@@ -18,8 +18,6 @@ bin/1dTsort
 bin/1dUpsample
 bin/1d_tool.py
 bin/1dcat
-bin/@djunct_ssw_intermed_edge_imgs
-bin/adjunct_simplify_cost.py
 bin/1ddot
 bin/1deval
 bin/1dfft
@@ -323,6 +321,7 @@ bin/@Install_DBSproc
 bin/@Install_FATCAT_DEMO
 bin/@Install_FATCAT_DEMO2
 bin/@Install_FATMVM_DEMO
+bin/@Install_IBT_DATASETS
 bin/@Install_InstaCorr_Demo
 bin/@Install_MACAQUE_DEMO
 bin/@Install_MEICA_Demo
@@ -386,8 +385,10 @@ bin/@djunct_dwi_selector.tcsh
 bin/@djunct_edgy_align_check
 bin/@djunct_glue_imgs_vert
 bin/@djunct_json_value.py
+bin/@djunct_modal_smoothing_with_rep
 bin/@djunct_montage_coordinator
 bin/@djunct_slice_space
+bin/@djunct_ssw_intermed_edge_imgs
 bin/@djunct_vol_3slice_select
 bin/@escape-
 bin/@extract_meica_ortvec
@@ -496,11 +497,13 @@ bin/abids_json_info.py
 bin/abids_json_tool.py
 bin/abids_tool.py
 bin/abut
+bin/adjunct_aw_tableize_roi_info.py
 bin/adjunct_calc_mont_dims.py
 bin/adjunct_combine_str.py
 bin/adjunct_is_label.py
 bin/adjunct_make_script_and_rst.py
 bin/adjunct_select_str.py
+bin/adjunct_simplify_cost.py
 bin/adwarp
 bin/afni
 bin/afni_check_omp
@@ -525,8 +528,10 @@ bin/auto_warp.py
 bin/byteorder
 bin/cat_matvec
 bin/ccalc
+bin/check_dset_for_fs.py
 bin/cifti_tool
 bin/column_cat
+bin/convert_cdiflist_to_grads.py
 bin/count
 bin/dcm2niix_afni
 bin/demo.fixed.niml.do
@@ -538,8 +543,11 @@ bin/dicom_to_raw
 bin/dsetstat2p
 bin/eg_main_chrono.py
 bin/ent16
+bin/epi_b0_correct.py
 bin/fat_lat_csv.py
+bin/fat_mat2d_plot.py
 bin/fat_mat_sel.py
+bin/fat_mat_tableize.py
 bin/fat_mvm_gridconv.py
 bin/fat_mvm_prep.py
 bin/fat_mvm_review.py
@@ -794,9 +802,7 @@ lib/afni/plug_zeropad.so
 %%PYTHON_SITELIBDIR%%/afnipy/afni_util.py
 %%PYTHON_SITELIBDIR%%/afnipy/afni_xmat.py
 %%PYTHON_SITELIBDIR%%/afnipy/ask_me.py
-%%PYTHON_SITELIBDIR%%/afnipy/check_dset_for_fs.py
 %%PYTHON_SITELIBDIR%%/afnipy/db_mod.py
-%%PYTHON_SITELIBDIR%%/afnipy/epi_b0_correct.py
 %%PYTHON_SITELIBDIR%%/afnipy/gui_uber_align_test.py
 %%PYTHON_SITELIBDIR%%/afnipy/gui_uber_proc.py
 %%PYTHON_SITELIBDIR%%/afnipy/gui_uber_skel.py
@@ -811,6 +817,8 @@ lib/afni/plug_zeropad.so
 %%PYTHON_SITELIBDIR%%/afnipy/lib_apqc_io.py
 %%PYTHON_SITELIBDIR%%/afnipy/lib_apqc_tcsh.py
 %%PYTHON_SITELIBDIR%%/afnipy/lib_b0_corr.py
+%%PYTHON_SITELIBDIR%%/afnipy/lib_cdiflist.py
+%%PYTHON_SITELIBDIR%%/afnipy/lib_csv.py
 %%PYTHON_SITELIBDIR%%/afnipy/lib_decay_timing.py
 %%PYTHON_SITELIBDIR%%/afnipy/lib_dti_sundry.py
 %%PYTHON_SITELIBDIR%%/afnipy/lib_fat_Rfactor.py
@@ -819,6 +827,9 @@ lib/afni/plug_zeropad.so
 %%PYTHON_SITELIBDIR%%/afnipy/lib_fs.py
 %%PYTHON_SITELIBDIR%%/afnipy/lib_gershgorin.py
 %%PYTHON_SITELIBDIR%%/afnipy/lib_info_dict.py
+%%PYTHON_SITELIBDIR%%/afnipy/lib_mat2d_base.py
+%%PYTHON_SITELIBDIR%%/afnipy/lib_mat2d_plot.py
+%%PYTHON_SITELIBDIR%%/afnipy/lib_mat2d_tableize.py
 %%PYTHON_SITELIBDIR%%/afnipy/lib_matplot.py
 %%PYTHON_SITELIBDIR%%/afnipy/lib_msar.py
 %%PYTHON_SITELIBDIR%%/afnipy/lib_plot_1D.py
