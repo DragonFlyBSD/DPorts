@@ -1,14 +1,17 @@
 # $FreeBSD$
 
 PORTNAME=	calligra
-DISTVERSION=	3.2.0
-PORTREVISION=	4
+DISTVERSION=	3.2.1
+PORTREVISION=	1
 CATEGORIES=	editors kde
 MASTER_SITES=	KDE/stable/${PORTNAME}/${PORTVERSION}
 DIST_SUBDIR=	KDE/${PORTNAME}
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE office suite
+
+LICENSE=	GPLv2+
+LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libImath.so:graphics/ilmbase \
 		libKPropertyCore3.so:x11-toolkits/kproperty \
