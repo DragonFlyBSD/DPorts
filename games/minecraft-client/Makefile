@@ -5,10 +5,10 @@ PORTNAME=	minecraft-client
 PORTVERSION=	1.7.9
 PORTREVISION=	6
 CATEGORIES=	games java
-MASTER_SITES=	https://s3.amazonaws.com/Minecraft.Download/launcher/:minecraft \
-		https://media-mcw.cursecdn.com/c/c5/:icon
-DISTFILES=	Minecraft.jar:minecraft \
-		Grass.png:icon
+MASTER_SITES=	https://homura.magzu.net/games/ \
+		LOCAL/tagattie/${PORTNAME}/${PORTVERSION}
+DISTFILES=	Minecraft.jar \
+		Grass.png
 DIST_SUBDIR=	${PORTNAME}/${PORTVERSION}
 EXTRACT_ONLY=
 
@@ -20,9 +20,9 @@ RUN_DEPENDS=	${JAVALIBDIR}/lwjgl/lwjgl.jar:games/lwjgl \
 
 USES=		openal
 USE_JAVA=	yes
+JAVA_VERSION=	1.8+
 JAVA_OS=	native
 JAVA_VENDOR=	openjdk
-JAVA_VERSION=	1.8+
 
 DESKTOP_ENTRIES="Minecraft" \
 		"Block building game" \
