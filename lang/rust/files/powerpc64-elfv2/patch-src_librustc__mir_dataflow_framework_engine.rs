@@ -1,9 +1,6 @@
-Revert https://github.com/rust-lang/rust/commit/e82ec2315e5adb1c291c3702cd2ac1f46ecd0fcf
-it causes sigsegv on powerpc64
-
---- src/librustc_mir/dataflow/generic/engine.rs.orig	2020-04-21 00:17:56 UTC
-+++ src/librustc_mir/dataflow/generic/engine.rs
-@@ -239,27 +239,24 @@ where
+--- src/librustc_mir/dataflow/framework/engine.rs.orig	2020-06-07 10:10:36 UTC
++++ src/librustc_mir/dataflow/framework/engine.rs
+@@ -243,27 +243,24 @@ where
              }
  
              SwitchInt { ref targets, ref values, ref discr, .. } => {
@@ -32,7 +29,7 @@ it causes sigsegv on powerpc64
 -                        for target in targets.iter().copied() {
 -                            self.propagate_bits_into_entry_set_for(&in_out, target, dirty_list);
 -                        }
-+                        return;
++                            return;
                      }
                  }
 +
@@ -44,7 +41,7 @@ it causes sigsegv on powerpc64
              }
  
              Call { cleanup, ref destination, ref func, ref args, .. } => {
-@@ -345,27 +342,22 @@ where
+@@ -349,27 +346,22 @@ where
      }
  }
  
@@ -66,15 +63,15 @@ it causes sigsegv on powerpc64
 -    block: &'mir mir::BasicBlockData<'tcx>,
 +    body: &mir::Body<'tcx>,
 +    block: &mir::BasicBlockData<'tcx>,
-     switch_on: &mir::Place<'tcx>,
--) -> Option<(&'mir mir::Place<'tcx>, &'tcx ty::AdtDef)> {
+     switch_on: mir::Place<'tcx>,
+-) -> Option<(mir::Place<'tcx>, &'tcx ty::AdtDef)> {
 +) -> Option<&'tcx ty::AdtDef> {
      match block.statements.last().map(|stmt| &stmt.kind) {
          Some(mir::StatementKind::Assign(box (lhs, mir::Rvalue::Discriminant(discriminated))))
-             if lhs == switch_on =>
+             if *lhs == switch_on =>
          {
              match &discriminated.ty(body, tcx).ty.kind {
--                ty::Adt(def, _) => Some((discriminated, def)),
+-                ty::Adt(def, _) => Some((*discriminated, def)),
 +                ty::Adt(def, _) => Some(def),
  
                  // `Rvalue::Discriminant` is also used to get the active yield point for a

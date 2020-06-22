@@ -1,6 +1,6 @@
 MASTER_SITES+=	https://leaf.dragonflybsd.org/~mneumann/rust/:bootstrap \
 		https://leaf.dragonflybsd.org/~mneumann/rust/:bootstrap
 
-RUST_BOOTSTRAP_VERSION=	1.42.0
+RUST_BOOTSTRAP_VERSION=	1.43.1
 
 MAKE_ENV+="LD_LIBRARY_PATH=${WRKDIR}/bootstrap/lib:/usr/lib/gcc80"
