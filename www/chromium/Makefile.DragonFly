@@ -28,6 +28,11 @@ dfly-patch:
 	@${MKDIR} ${WRKSRC}/third_party/node/dragonfly/node-dragonfly-x64/bin
 	${LN} -sf ${LOCALBASE}/bin/node ${WRKSRC}/third_party/node/dragonfly/node-dragonfly-x64/bin/node
 
+	# Setup buildtools/freebsd
+	@${MKDIR} ${WRKSRC}/buildtools/dragonfly
+	${LN} -sf ${WRKSRC}/buildtools/linux64/clang-format ${WRKSRC}/buildtools/dragonfly
+	${LN} -sf ${WRKSRC}/out/${BUILDTYPE}/gn ${WRKSRC}/buildtools/dragonfly
+
 	# XXX The correct solution is to pass variables to gn
 	# Use the current LLVM version by replacing the hardcoded one
 	${REINPLACE_CMD} -e "s|clang60|clang${LLVM_DEFAULT}|g" \
