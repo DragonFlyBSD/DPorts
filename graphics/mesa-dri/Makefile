@@ -46,20 +46,19 @@ ALL_VULKAN_DRIVERS=	INTEL AMD
 DRI_DRIVERS=	SWRAST	# llvmpipe
 .endif
 
-.if ${OPSYS} == FreeBSD
 .if ${ARCH} == aarch64 || ${ARCH} == x86_64 || ${ARCH} == i386 \
  || ${ARCH} == powerpc || ${ARCH} == powerpc64
 DRI_DRIVERS+=		R100 R200
 GALLIUM_DRIVERS+=	R300 R600 RADEONSI
+.if ${OPSYS} == FreeBSD
 VULKAN_DRIVERS+=	AMD
+.endif
 . if ${PORT_OPTIONS:MPLATFORM_X11}
 USE_XORG+=		xv xvmc
 MESON_ARGS+=		-Dgallium-xvmc=true
 . endif
 .endif
-.endif
 
-.if ${OPSYS} == FreeBSD
 .if ${ARCH} == x86_64 || ${ARCH} == i386
 DRI_DRIVERS+=		I915 I965
 GALLIUM_DRIVERS+=	SVGA
@@ -67,7 +66,6 @@ GALLIUM_DRIVERS+=	SVGA
 EXTRA_PATCHES+=	${PATCHDIR}/extra-src_mesa_drivers_dri_i965_intel__screen.c
 VULKAN_DRIVERS+=	INTEL
 . endif
-.endif
 .endif
 
 .if defined(VULKAN_DRIVERS)
@@ -100,9 +98,9 @@ MESON_ARGS+=	-Ddri-drivers="${DRI_DRIVERS:ts,:tl}" \
 # Disable some options
 MESON_ARGS+=	-Dgallium-xa=false \
 		-Dgles1=false \
-		-Dgles2=false \
+		-Dgles2=true \
 		-Dglx=disabled \
-		-Degl=false \
+		-Degl=true \
 		-Dosmesa=none \
 		-Dtools=""
 
