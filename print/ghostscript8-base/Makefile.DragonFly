@@ -1,5 +1,4 @@
 
 dfly-patch:
 	${REINPLACE_CMD} -e 's@*BSD)@*BSD|DragonFly)@g'			\
-		${WRKSRC}/base/configure.ac				\
-		${WRKSRC}/configure.ac
+		${WRKSRC}/base/configure.ac
