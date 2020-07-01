@@ -1,3 +1,9 @@
+#
+# XXX - Meh, really should fix this
+#
+.if !defined(_INCLUDE_GAMES_CATACLYSM__DDA_MK)
+_INCLUDE_GAMES_CATACLYSM__DDA_MK=     yes
+
 CXXFLAGS+= -Wno-deprecated-declarations
 
 # src/json.cpp:49:12: error: this statement may fall through [-Werror=implicit-fallthrough=]
@@ -5,3 +11,4 @@ dfly-patch:
 	${REINPLACE_CMD} -e "s@ncursesw5-config@ncursesw6-config@g" \
 			 -e 's/-Werror[[:>:]]//g' \
 		${WRKSRC}/Makefile
+.endif
