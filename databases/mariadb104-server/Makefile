@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME?=	mariadb
-PORTVERSION=	10.4.12
-PORTREVISION?=	0
+PORTVERSION=	10.4.13
+PORTREVISION?=	2
 CATEGORIES=	databases
 MASTER_SITES=	http://mirrors.supportex.net/${SITESDIR}/ \
 		http://mirror2.hs-esslingen.de/pub/Mirrors/${SITESDIR}/ \
@@ -98,6 +98,7 @@ DISABLED_PLUGINS+=	DAEMON_EXAMPLE DIALOG_EXAMPLES EXAMPLE \
 		EXAMPLE_KEY_MANAGEMENT FTEXAMPLE
 
 DATADIR=	${PREFIX}/share/mysql
+ETCDIR=		${PREFIX}/etc/mysql
 
 CONFLICTS_INSTALL=	mariadb5*-${PKGNAMESUFFIX:C/^[0-9]*-//}-* \
 			mariadb10[0-24-9]-${PKGNAMESUFFIX:C/^[0-9]*-//}-* \
@@ -118,6 +119,7 @@ CMAKE_ON+=	CONC_WITH_MYSQLCOMPAT WITHOUT_SERVER
 CMAKE_OFF+=	WITH_WSREP
 USES+=		readline
 USE_LDCONFIG=	${PREFIX}/lib/mysql
+SUB_FILES+=	my.cnf.sample client.cnf.sample
 .else # ! ${PKGNAMESUFFIX:M*-client}
 # MySQL-Server part
 USES+=		mysql:104m
@@ -127,6 +129,7 @@ USERS=		mysql
 GROUPS=		mysql
 CMAKE_ON+=	CMAKE_SKIP_BUILD_RPATH WITH_EMBEDDED_SERVER
 CMAKE_OFF+=	WITH_CLIENT
+SUB_FILES+=	server.cnf.sample
 
 .for ENGINE in ${OPTIONS_GROUP_ENGINES:NINNOBASE}
 ${ENGINE}_CMAKE_OFF=	-DPLUGIN_${ENGINE}=NO
@@ -150,6 +153,7 @@ MSGPACK_LIB_DEPENDS=	libmsgpackc.so:devel/msgpack
 OQGRAPH_LIB_DEPENDS=	libboost_system.so:devel/boost-libs \
 			libJudy.so:devel/judy
 ROCKSDB_USES=		python
+ROCKSDB_CMAKE_ON=	-DPYTHON_SHEBANG=${PYTHON_CMD}
 SNAPPY_CMAKE_ON=	-DWITH_INNODB_SNAPPY=ON  -DWITH_ROCKSDB_snappy=ON
 SNAPPY_CMAKE_OFF=	-DWITH_INNODB_SNAPPY=OFF -DWITH_ROCKSDB_snappy=OFF
 SNAPPY_LIB_DEPENDS=	libsnappy.so:archivers/snappy
@@ -158,6 +162,10 @@ TOKUDB_PORTDOCS=	README.md
 TOKUDB_VARS=		LICENSE+=PerconaFT LICENSE_COMB=multi
 WSREP_CMAKE_BOOL=	WITH_WSREP
 WSREP_LIB_DEPENDS=	libgalera.so:databases/galera26
+WSREP_RUN_DEPENDS=	bash:shells/bash \
+			rsync:net/rsync \
+			#stunnel:security/stunnel
+WSREP_SHEBANG_FILES=	bin/wsrep_sst_rsync
 ZMQ_LIB_DEPENDS=	libzmq.so:net/libzmq4
 ZSTD_CMAKE_ON=		-DWITH_ROCKSDB_zstd=ON
 ZSTD_CMAKE_OFF=		-DWITH_ROCKSDB_zstd=OFF
@@ -192,10 +200,9 @@ CMAKE_OFF+=	WITH_TOKUDB
 .endif
 
 post-patch:
-	${REINPLACE_CMD} 's|/usr/bin/env python|${PYTHON_CMD}|' ${WRKSRC}/CMakeLists.txt
-	${REINPLACE_CMD} 's|%%PREFIX%%|${PREFIX}|g' ${WRKSRC}/mysys/my_default.c
-	${REINPLACE_CMD} 's|%%LOCALBASE%%|${LOCALBASE}|g' ${WRKSRC}/scripts/mysql_config.sh \
+	${REINPLACE_CMD} 's|%%LOCALBASE%%|${LOCALBASE}|g' \
 		${WRKSRC}/storage/tokudb/PerconaFT/cmake_modules/TokuThirdParty.cmake
+	${REINPLACE_CMD} 's|%%PREFIX%%|${PREFIX}|' ${WRKSRC}/mysys/my_default.c
 	${MV} ${WRKSRC}/storage/mroonga/version ${WRKSRC}/storage/mroonga/version_txt
 .if ${OPSYS} == DragonFly
 	${CP} ${WRKSRC}/cmake/os/FreeBSD.cmake \
@@ -207,26 +214,36 @@ post-configure:
 		-e 's|(#define LIBS .*)"$$|\1 -L${PREFIX}/lib"|' \
 		${WRKSRC}/libmariadb/mariadb_config/mariadb_config.c
 
-# Fix build failure in mbstream, see https://jira.mariadb.org/browse/MDEV-14072
-post-configure-INNOBASE-on:
-	${REINPLACE_CMD} -e 's| ${PREFIX}/lib/liblz4.so\(.* ${PREFIX}/lib/liblz4.so.*\)|\1|' \
-		-e 's| ${PREFIX}/lib/liblzo2.so\(.* ${PREFIX}/lib/liblzo2.so.*\)|\1|' \
-		-e 's| ${PREFIX}/lib/libsnappy.so\(.* ${PREFIX}/lib/libsnappy.so\)|\1|' \
-		-e 's| -llzma\(.* -llzma\)|\1|;s| -lbz2\(.* -lbz2\)|\1|;' \
-		${WRKSRC}/extra/mariabackup/CMakeFiles/mbstream.dir/link.txt
+pre-install:
+	${MKDIR} -p ${STAGEDIR}${ETCDIR}/conf.d
 
 .if ${PKGNAMESUFFIX:M*-client}
 post-install:
+	${INSTALL_DATA} ${WRKDIR}/my.cnf.sample ${STAGEDIR}${ETCDIR}/my.cnf.sample
+	${INSTALL_DATA} ${WRKDIR}/client.cnf.sample \
+		${STAGEDIR}${ETCDIR}/conf.d/client.cnf.sample
 	${RM} -r ${STAGEDIR}${DATADIR}
 	${RM} -r ${STAGEDIR}${PREFIX}/include/mysql/server
+	${MV} ${STAGEDIR}${PREFIX}/lib/mysql/pkgconfig/mariadb.pc \
+		${STAGEDIR}${PREFIX}/libdata/pkgconfig/mariadb.pc
+	${RMDIR} ${STAGEDIR}${PREFIX}/lib/mysql/pkgconfig
 
 post-install-GSSAPI_NONE-off:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/mysql/plugin/auth_gssapi_client.so
 
 .else # ! ${PKGNAMESUFFIX:M*-client}
 post-install:
+	${INSTALL_DATA} ${WRKDIR}/server.cnf.sample \
+		${STAGEDIR}${ETCDIR}/conf.d/server.cnf.sample
 	${RM} -r ${STAGEDIR}${PREFIX}/share/mysql/policy
 	${RM} -r ${STAGEDIR}${PREFIX}/include/mysql/server/private
+	${RM} -r ${STAGEDIR}${PREFIX}/lib/mysql/pkgconfig
+	${MV} ${STAGEDIR}${PREFIX}/etc/mysql/user_map.conf \
+		${STAGEDIR}${PREFIX}/etc/mysql/user_map.conf.sample
+
+post-install-WSREP-on:
+	${MV} ${STAGEDIR}${DATADIR}/wsrep.cnf \
+		${STAGEDIR}${ETCDIR}/conf.d/wsrep.cnf.sample
 .endif # ${PKGNAMESUFFIX:M*-client}
 
 .include <bsd.port.post.mk>
