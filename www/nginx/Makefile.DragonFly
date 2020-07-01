@@ -1,6 +1,6 @@
 post-patch-NJS-on:
 	(cd ${WRKSRC_njs} && ${PATCH} ${PATCH_ARGS} < ${DFLY_PATCHDIR}/extra-auto_readline.diff)
 
-dfly-patch:
+pre-patch-MODSECURITY-on:
 	-${REINPLACE_CMD} -e 's|\*-\*-freebsd\*|*-*-dragonfly*|' \
 		${WRKSRC_MODSECURITY}/configure
