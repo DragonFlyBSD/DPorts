@@ -1,5 +1,6 @@
-======================================================================
-
+[
+{ type: install
+  message: <<EOM
 This OpenJDK implementation requires procfs(5) mounted on /proc.
 
 If you have not done it yet, please do the following:
@@ -9,5 +10,6 @@ If you have not done it yet, please do the following:
 To make it permanent, you need the following line in /etc/fstab:
 
 	proc	/proc		procfs		rw	0	0
-
-======================================================================
+EOM
+}
+]

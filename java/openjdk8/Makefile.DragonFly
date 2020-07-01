@@ -72,8 +72,6 @@ dfly-patch:
 	${WRKSRC}/jdk/test/sun/security/provider/PolicyFile/getinstance/getinstance.sh \
 	${WRKSRC}/jdk/test/sun/security/ssl/com/sun/net/ssl/internal/ssl/EngineArgs/DebugReportsOneExtraByte.sh \
 	${WRKSRC}/jdk/test/sun/security/ssl/com/sun/net/ssl/internal/ssl/SSLSocketImpl/NotifyHandshakeTest.sh \
-	${WRKSRC}/jdk/test/sun/security/ssl/sun/net/www/protocol/https/HttpsURLConnection/PostThruProxy.sh \
-	${WRKSRC}/jdk/test/sun/security/ssl/sun/net/www/protocol/https/HttpsURLConnection/PostThruProxyWithAuth.sh \
 	${WRKSRC}/jdk/test/sun/security/tools/jarsigner/AlgOptions.sh \
 	${WRKSRC}/jdk/test/sun/security/tools/jarsigner/PercentSign.sh \
 	${WRKSRC}/jdk/test/sun/security/tools/jarsigner/diffend.sh \
