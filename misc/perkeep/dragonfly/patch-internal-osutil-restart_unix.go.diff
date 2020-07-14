@@ -1,0 +1,18 @@
+--- internal/osutil/restart_unix.go.orig	2020-07-13 09:36:35.375336000 +0200
++++ internal/osutil/restart_unix.go	2020-07-13 09:39:50.105764000 +0200
+@@ -1,5 +1,5 @@
+ // +build !appengine
+-// +build linux darwin freebsd netbsd openbsd solaris
++// +build linux darwin freebsd netbsd openbsd solaris dragonfly
+ 
+ /*
+ Copyright 2012 The Perkeep Authors.
+@@ -44,6 +44,8 @@
+ 	switch runtime.GOOS {
+ 	case "linux":
+ 		return "/proc/self/exe", nil
++	case "dragonfly":
++		return "/proc/curproc/file", nil
+ 	case "netbsd":
+ 		return "/proc/curproc/exe", nil
+ 	case "openbsd":
