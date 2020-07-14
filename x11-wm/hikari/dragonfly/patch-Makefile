@@ -1,0 +1,11 @@
+--- Makefile.orig	2020-07-08 14:22:52.009060000 +0200
++++ Makefile	2020-07-08 14:37:47.894571000 +0200
+@@ -228,7 +228,7 @@
+ 	install -m 644 share/man/man1/hikari.1 ${DESTDIR}/${PREFIX}/share/man/man1
+ 	install -m 644 share/backgrounds/hikari/hikari_wallpaper.png ${DESTDIR}/${PREFIX}/share/backgrounds/hikari/hikari_wallpaper.png
+ 	install -m 644 share/wayland-sessions/hikari.desktop ${DESTDIR}/${PREFIX}/share/wayland-sessions/hikari.desktop
+-	install -m 644 etc/pam.d/hikari-unlocker.${OS} ${DESTDIR}/${ETC_PREFIX}/etc/pam.d/hikari-unlocker
++	install -m 644 etc/pam.d/hikari-unlocker.FreeBSD ${DESTDIR}/${ETC_PREFIX}/etc/pam.d/hikari-unlocker
+ 
+ uninstall:
+ 	-rm ${DESTDIR}/${PREFIX}/bin/hikari
