@@ -12,7 +12,7 @@ LICENSE=	BSD2CLAUSE
 USES=		cmake:insource compiler:c++11-lang
 
 USE_GITHUB=	yes
-GH_ACCOUNT=	pathscale
+GH_ACCOUNT=	libcxxrt
 GH_TAGNAME=	f96846e
 
 USE_LDCONFIG=	yes
