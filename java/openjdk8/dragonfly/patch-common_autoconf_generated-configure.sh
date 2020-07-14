@@ -1,6 +1,6 @@
---- common/autoconf/generated-configure.sh.orig	2020-04-15 02:42:06 UTC
-+++ common/autoconf/generated-configure.sh
-@@ -13613,7 +13613,7 @@ test -n "$target_alias" &&
+--- common/autoconf/generated-configure.sh.orig	2017-12-29 01:59:02.000000000 +0000
++++ common/autoconf/generated-configure.sh	2017-12-29 02:02:31.000000000 +0000
+@@ -6825,7 +6825,7 @@
        VAR_OS_API=posix
        VAR_OS_ENV=macosx
        ;;
@@ -9,7 +9,7 @@
        VAR_OS=bsd
        VAR_OS_API=posix
        VAR_OS_ENV=bsd
-@@ -13646,7 +13646,7 @@ test -n "$target_alias" &&
+@@ -6858,7 +6858,7 @@
      *netbsd*)
        VAR_OS_VENDOR=netbsd
        ;;
@@ -18,7 +18,7 @@
        VAR_OS_VENDOR=freebsd
        ;;
      *)
-@@ -13767,7 +13767,7 @@ $as_echo "$OPENJDK_BUILD_OS-$OPENJDK_BUI
+@@ -6978,7 +6978,7 @@
        VAR_OS_API=posix
        VAR_OS_ENV=macosx
        ;;
@@ -27,7 +27,7 @@
        VAR_OS=bsd
        VAR_OS_API=posix
        VAR_OS_ENV=bsd
-@@ -13800,7 +13800,7 @@ $as_echo "$OPENJDK_BUILD_OS-$OPENJDK_BUI
+@@ -7011,7 +7011,7 @@
      *netbsd*)
        VAR_OS_VENDOR=netbsd
        ;;
