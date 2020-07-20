@@ -1,3 +1,3 @@
-
-# ...
-OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NMPI}
+CMAKE_ARGS+= -DMPI_C_COMPILER="${LOCALBASE}/mpi/openmpi/bin/mpicc"
+CMAKE_ARGS+= -DMPI_CXX_COMPILER="${LOCALBASE}/mpi/openmpi/bin/mpicxx"
+CMAKE_ARGS+= -DMPI_Fortran_COMPILER="${LOCALBASE}/mpi/openmpi/bin/mpifort"
