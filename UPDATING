@@ -6,6 +6,112 @@ You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
 
+20200726:
+  AFFECTS: users of net-mgmt/librenms
+  AUTHOR:  dvl@FreeBSD.org
+
+  The %%WWWDIR%%%/logs directory has been relocated to /var/log/librenms/
+  via the APP_LOG directive in %%WWWDIR%%%/.env.example - this won't affect
+  existing installs, but you are strongly encouraged to update your .env file
+  settings and relocate your logs.
+
+  Logs which were going to /var/log/messages and /var/log/librenms/ now only go
+  to /var/log/librenms/
+
+20200720:
+  AFFECTS: users of net-mgmt/librenms
+  AUTHOR:  dvl@FreeBSD.org
+
+  As mentioned previously in 20200503 polling via cronjob has been removed as of
+  release 1.63 - see
+  https://community.librenms.org/t/dropping-support-for-php-7-1-and-python-2/11851
+
+  A database upgrade is required:
+
+     cd /usr/local/www/librenms
+     sudo ./lnms migrate
+
+  You must  migrate to the Dispatch Service:
+  https://docs.librenms.org/Extensions/Dispatcher-Service/
+
+  You may need to add LIBRENMS_USER to .env (see .env.example).
+
+  These steps should get you running:
+  * comment out the crontab entries listed above under PYPOLLER
+  * populate %%WWWDIR%%/.env with:
+    * APP_KEY - see farther below for how to create
+    * NODE_ID - see just below for how to create
+    * DB_HOST
+    * DB_DATABASE
+    * DB_USERNAME
+    * DB_PASSWORD
+  * you can create a NODE_ID with: php -r 'echo uniqid() . "\n";'
+  * sysrc librenms_enable="YES"
+  * service librenms start
+
+20200719:
+  AFFECTS: users of emulators/qemu
+  AUTHOR: bofh@FreeBSD.org
+
+  emulators/qemu has been updated to 4.2.1. Previous 4.1.X branch has
+  been repocopied to emulators/qemu41. If someone wants to stick with 4.1.X
+  branch please use one of the following command:
+
+  # pkg install emulators/qemu41
+    or
+  # portmaster -o emulators/qemu41 emulators/qemu
+    or
+  # portupgrade -o emulators/qemu41 emulators/qemu
+
+20200716:
+  AFFECTS: users of shells/bash, shells/bash-static
+  AUTHOR: ehaupt@FreeBSD.org
+
+  In order to cleanly decouple bash from base, bash now reads `profile` from
+  LOCALBASE/etc insead of from /etc. If you are using system wide bash
+  configuration in /etc/profile please migrate to LOCALBASE/etc/profile
+
+  # cp /etc/profile /usr/local/etc/profile
+
+  or create a symlink
+
+  # ln -s /etc/profile /usr/local/etc/
+
+  If you encounter the following error, you may have the obsolete
+  /lib/libreadline.so.8 lying around after an incomplete base update:
+
+  ld-elf.so.1: Undefined symbol "rl_signal_event_hook" referenced from COPY relocation in /usr/local/bin/bash
+
+  Please refer to to (23.5.6.2) in the FreeBSD Handbook on how to
+  safely check for outdated files and libraries:
+
+  https://www.freebsd.org/doc/en/books/handbook/makeworld.html
+
+20200713:
+  AFFECTS: users of mail/php7[2-4]-imap
+  AUTHOR: tz@FreeBSD.org
+
+  The imap module of PHP was compiled against cclient till now. But this lib is
+  unmaintained for over 7 years. When combined with modern OpenSSL there are
+  various crashes reported.
+
+  Switching to the fork panda-cclient fixes these issues. Therefore we make the
+  usage of Panda cclient the new default. If you want to use the old cclient,
+  you need to enable it now!
+  
+20200616:
+  AFFECTS: users of www/baikal
+  AUTHOR: gahr@FreeBSD.org
+
+  The www/baikal has been upated to 0.7.1. With the 0.7.0 release, our
+  configuration format was updated to use YAML files. You need to go through
+  the installer again but we pre-fill most values with the ones from your old
+  installation. We recommend that you make a full backup of your data, as a
+  safety measure. Starting with 0.7.0, Baikal stores data in both the Specific
+  and the config folders. Keep this in mind when upgrading!
+
+  Known issue:: Upgrading from versions older than 0.6.1 does not work.
+
 20200613:
   AFFECTS: users of editors/libreoffice
   AUTHOR: fluffy@FreeBSD.org
@@ -137,7 +243,7 @@ you update your ports collection, before attempting any port upgrades.
   AUTHOR:  dvl@FreeBSD.org
 
   Polling via cronjob is deprecated as of release 1.63
-  see see https://community.librenms.org/t/dropping-support-for-php-7-1-and-python-2/11851
+  Please see https://community.librenms.org/t/dropping-support-for-php-7-1-and-python-2/11851
 
   Please migrate to the Dispatch Service:
   https://docs.librenms.org/Extensions/Dispatcher-Service/
@@ -1029,201 +1135,4 @@ leave you without networking.
   Users that still use the Python 2.7 version of net-im/py-matrix-synapse
   should switch to a newer Python version, e.g. 3.6, which is the default
   Python version since April 2019.
-
-20190717:
-  AFFECTS: users of net-p2p/zetacoin and net-p2p/zetacoin-nox11
-  AUTHOR: daniel@morante.net
-
-  Zetacoin will default to using modern versions of BDB (5.x or 6.x) when
-  the WALLET option is selected.   See pkg-help for explanation.
-
-  The zetacoin-nox11 slave port was renamed to zetacoin-daemon to align
-  with the net-p2p/bitcoin format.
-
-  The zetacoin-cli and zetacoin-tx utilities have been re-packaged into
-  a separate port. If you require these programs, or use the zetacoin-cli
-  program to access the daemon or the GUI, install net-p2p/zetacoin-utils
-  to reinstall them.
-
-20190717:
-  AFFECTS: users of sysutils/py-borgmatic
-  AUTHOR: egypcio@FreeBSD.org
-
-  The default location for borgmatic's configurations changed. We moved it
-  from '/etc/borgmatic' to '/usr/local/etc/borgmatic' in order to follow
-  recommended standards used on FreeBSD.
-
-20190710:
-  AFFECTS: users with DEFAULT_VERSIONS+=linux=c6 or c6_64 in /etc/make.conf
-  AUTHOR: tijl@FreeBSD.org
-
-  On amd64 adding DEFAULT_VERSIONS+=linux=c6 to /etc/make.conf made Linux
-  infrastructure ports (linux_base-c6 and linux-c6*) install i386 CentOS 6
-  packages.  Using c6_64 instead of c6 made them install mixed amd64/i386
-  CentOS 6 packages and allowed Linux application ports to install amd64
-  binaries when available.  The i386-only configuration was only useful for
-  users of x11/nvidia-driver* which didn't provide Linux amd64 emulation
-  until recently.
-
-  With x11/nvidia-driver* now supporting Linux amd64 there's no longer a
-  need for i386-only Linux on amd64 so DEFAULT_VERSIONS+=linux=c6 has been
-  changed to make Linux infrastructure ports install mixed amd64/i386
-  CentOS 6 packages, like c6_64 before, and support for c6_64 has been
-  removed.
-
-  Users with DEFAULT_VERSIONS+=linux=c6 should reinstall linux_base-c6 and
-  all packages that depend on it.  A list of dependent packages can be
-  obtained with the following command:
-
-    pkg info -r linux_base-c6
-
-  Users with DEFAULT_VERSIONS+=linux=c6_64 only need to replace c6_64 with
-  c6 in /etc/make.conf.
-
-  Users of x11/nvidia-driver* should upgrade to FreeBSD 11.3 or 12.0 if
-  they want to run Linux amd64 OpenGL programs.  If you are running an
-  older version you may want to postpone installing or updating Linux
-  application ports until you find the time to upgrade because application
-  ports may install amd64 binaries now.  Infrastructure ports are safe to
-  reinstall, and so is x11/nvidia-driver*.
-
-  On i386 nothing has changed.
-
-20190707:
-  AFFECTS: users of www/gitlab-ce
-  AUTHOR: mfechner@FreeBSD.org
-
-  You must at first upgrade to version 11.11.5 before you can upgrade
-  to version 12.
-  Support for MySQL will be dropped with next version.
-  Make sure you use at least PostgreSQL version 9.6.
-  Follow the normal upgrade manual that can be found here:
-  https://gitlab.fechner.net/mfechner/Gitlab-docu/blob/master/update/11.11-12.0-freebsd.md
-
-20190705:
-  AFFECTS: users of net/serviio which bought a license for the non-free features
-  AUTHOR: netchild@FreeBSD.org
-
-  Version 2 of serviio needs a new license file. Updating without a new license
-  file will disable the non-free features.
-
-20190701:
-  AFFECTS: users of databases/mysql56-(server|client)
-  AUTHOR: ale@FreeBSD.org
-
-  The default MySQL version has been updated from 5.6 to 5.7.
-
-  If you compile your own ports you may keep 5.6 as the default version by
-  adding the following lines to your /etc/make.conf file:
-
-  #
-  # Keep MySQL 5.6 as default version
-  #
-  DEFAULT_VERSIONS+=mysql=5.6
-
-  If you wish to update to the new default version, you need to first stop any
-  running server instance. Then, you will need to follow these steps, depending
-  on installed packages.
-
-  # pkg set -o databases/mysql56-client:databases/mysql57-client
-  # pkg set -o databases/mysql56-server:databases/mysql57-server
-  # pkg upgrade
-
-20190630:
-  AFFECTS: users of net/samba410
-  AUTHOR: timur@FreeBSD.org
-
-  If you used Samba in AD/DC mode with the previous versions of the port on UFS2
-  backed storage you have to add usage of vfs_freebsd VFS module for at least
-  SYSVOL share and configure it to use 'legacy' mode(see manpage).
-
-  The reason behind this is that previous versions Samba port used a hack to
-  workaround broken mapping of Linux security and trusted extended attributes
-  into FreeBSD namespace. In particular, essential security.NTACL attribute
-  was replaced with the user.NTACL and placed in a insecure USER namespace.
-
-  This port dropped this hack in favor of vfs_freebsd module, which should
-  provide more controlled way of such a mapping.
-
-  To maintain the compatibility with the previous installations on UFS2 storage
-  (as ZFS uses it's own way of mapping SYSVOL, thanks to the iXsystems patches)
-  the vfs_freebsd module provides 'legacy' mode that implements old functionality.
-
-  For the fresh installations it is recommended to use 'secure' mode of operations
-  for this module and use it as a global vfs objects.
-
-  Caution: The given module is still considered EXPERIMENTAL.
-
-20190630:
-  AFFECTS: users of net/samba410, net/samba4[6-8] and devel/talloc?, devel/tevent?, databases/tdb?, databases/ldb*
-  AUTHOR: timur@FreeBSD.org
-
-  The port of the new version of Samba 4.10 is introduced. Due necessarily
-  to keep backwards compatibility for the legacy samba4[6-8] ports the
-  upgrade procedure is a bit convoluted.
-
-  You are safe to perform fresh new install of samba410 port. In case you
-  are upgrading from the previous versions of Samba, please use the
-  following procedure:
-
-  0.  Take backups of all the relevant files, in particular PREFIX/etc/smb4.conf
-      and /var/db/samba4/ subdirectory. Keep in mind that files there (may)
-      have extended attributes, so use appropriate tools to preserve them.
-
-  1a. If you haven't updated Samba between 20190619 and 20190630 then next
-      step should be as simple as:
-
-        portmaster -o net/samba410 net/samba48
-
-  1b. If you have been affected by the archiving legacy versions of
-      Samba-related libraries for legacy versions of Samba, which happened
-      in the given time frame, then you need to reverse operation from the
-       20190619 entry:
-
-      for users of portmaster:
-        portmaster -o devel/talloc devel/talloc1
-        portmaster -o devel/tevent devel/tevent1
-        portmaster -o databases/tdb databases/tdb1
-        portmaster -o net/samba410 net/samba48
-
-      for users of portupgrade:
-        portupgrade -o devel/talloc devel/talloc1
-        portupgrade -o devel/tevent devel/tevent1
-        portupgrade -o databases/tdb databases/tdb1
-        portupgrade -o net/samba410 net/samba48
-
-20190619:
-  AFFECTS: users of samba4[6-8] and devel/talloc, devel/tevent, databases/tdb, databases/ldb*
-  AUTHOR: timur@FreeBSD.org
-
-  To introduce samba410(we deliberately skip samba49 due the complexity of handling)
-  and to drop dependency on deprecated Python 2.7, Samba supplementary libraries
-  talloc, tevent and tdb were split into current Python 3 compatible versions
-  and legacy ones, with the suffix "1".
-
-  Old versions of Samba were changed to depend on the legacy supplementary libraries,
-  so if you need to install samba46, samba47 or samba48 over previous Samba
-  installations you need to downgrade supplementary libs with the following commands:
-
-  for users of portmaster:
-        portmaster -o devel/talloc1 devel/talloc
-        portmaster -o devel/tevent1 devel/tevent
-        portmaster -o databases/tdb1 databases/tdb
-        portmaster -r talloc1
-
-  for users of portupgrade:
-        portupgrade -o devel/talloc1 devel/talloc
-        portupgrade -o devel/tevent1 devel/tevent
-        portupgrade -o databases/tdb1 databases/tdb
-        portupgrade -fr devel/talloc1
-
-20190613:
-  AFFECTS: users of www/qt5-webengine
-  AUTHOR: kai@FreeBSD.org
-
-  Users that upgrade www/qt5-webengine without using pkg/poudriere might
-  experience failures due to conflicts with the installed version of 5.12.2.
-
-  In that case, pkg delete -f the qt5-webengine package before building
-  the updated version.
 

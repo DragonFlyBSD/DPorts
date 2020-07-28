@@ -872,7 +872,6 @@ textproc/xaira||2013-08-27|Has expired: Broken for more than 6 months
 graphics/f90gl||2013-08-27|Has expired: Broken for more than 6 months
 multimedia/linux-gspca-kmod||2013-08-27|Has expired: Broken for more than 6 months
 math/dislin||2013-08-27|Has expired: Broken for more than 6 months
-irc/smuxi||2013-08-27|Has expired: Broken for more than 6 months
 java/icedtea6-stubs||2013-08-27|Has expired: Broken for more than 6 months
 math/octave-forge-es||2013-08-27|Has expired: Broken for more than 6 months
 math/octave-forge-java||2013-08-27|Has expired: Broken for more than 6 months
@@ -4430,7 +4429,6 @@ japanese/jyuroku||2016-07-04|Has expired: Broken for more than 6 months
 japanese/mtools||2016-07-04|Has expired: Broken for more than 6 months
 palm/pdbar||2016-07-04|Has expired: Broken for more than 6 months
 graphics/gplot||2016-07-04|Has expired: Broken for more than 6 months
-graphics/white_dune||2016-07-04|Has expired: Broken for more than 6 months
 graphics/whirlgif||2016-07-04|Has expired: Broken for more than 6 months
 graphics/libaux||2016-07-04|Has expired: Broken for more than 6 months
 graphics/import-pictures||2016-07-04|Has expired: Broken for more than 6 months
@@ -5256,7 +5254,6 @@ sysutils/sievelog||2017-04-30|Has expired: Unfetchable for more than six months 
 sysutils/ldapenter||2017-04-30|Has expired: Unfetchable for more than six months (google code has gone away)
 sysutils/py-danzfs||2017-04-30|Has expired: Unfetchable for more than six months (google code has gone away)
 sysutils/plasma-applet-apcups||2017-04-30|Has expired: Unfetchable for more than six months (google code has gone away)
-sysutils/scanmem||2017-04-30|Has expired: Unfetchable for more than six months (google code has gone away)
 sysutils/pdsh||2017-04-30|Has expired: Unfetchable for more than six months (google code has gone away)
 deskutils/superswitcher||2017-04-30|Has expired: Unfetchable for more than six months (google code has gone away)
 deskutils/plasma-applet-playwolf||2017-04-30|Has expired: Unfetchable for more than six months (google code has gone away)
@@ -5309,7 +5306,6 @@ databases/jdbm2||2017-04-30|Has expired: Unfetchable for more than six months (g
 databases/akonadi-googledata||2017-04-30|Has expired: Unfetchable for more than six months (google code has gone away)
 lang/ofc||2017-04-30|Has expired: Unfetchable for more than six months (google code has gone away)
 comms/esmska||2017-04-30|Has expired: Unfetchable for more than six months (google code has gone away)
-x11/keynav||2017-04-30|Has expired: Unfetchable for more than six months (google code has gone away)
 x11/hotwire-shell||2017-04-30|Has expired: Unfetchable for more than six months (google code has gone away)
 security/fuzzdb||2017-04-30|Has expired: Unfetchable for more than six months (google code has gone away)
 security/truecrack||2017-04-30|Has expired: Unfetchable for more than six months (google code has gone away)
@@ -5974,7 +5970,6 @@ databases/pg_statsinfo||2018-02-10|Removed, only for PosgreSQL 9.2
 databases/postgresql-repmgr2||2018-02-10|Removed, only for PostgreSQL 9.2
 www/mod_security-devel|www/mod_security3|2018-02-12|Renamed, upstream has made a release
 devel/pear-channel-htmlpurifier|devel/pear-channel-htmlpurifier.org|2018-02-13|Rename for consistency
-games/lolcat|games/rubygem-lolcat|2018-02-13|Rename to match our rubygem- port naming
 net-mgmt/prometheus|net-mgmt/prometheus1|2018-02-14|Rename to include major version number in the portname
 textproc/rubygem-tidy||2018-02-14|Has expired: No longer needed and not maintained
 www/rubygem-scrapi||2018-02-14|Has expired: No longer maintained upstream
@@ -7772,7 +7767,6 @@ audio/qmpdclient||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 audio/skype-call-recorder||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 biology/clustalx||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 cad/layouteditor||2019-03-16|Has expired: Qt4 has been EOL since december 2015
-cad/meshlab||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 cad/qfsm||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 cad/qucs||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 chinese/gcin-qt4||2019-03-16|Has expired: Qt4 has been EOL since december 2015
@@ -8822,7 +8816,6 @@ lang/spidermonkey170|lang/spidermonkey52|2019-05-23|Not depended on, use newer v
 lang/spidermonkey38|lang/spidermonkey52|2019-05-23|Not depended on, use newer version
 security/titan|security/ylva|2019-05-24|Project renamed by the developer
 www/npm-node6|www/npm|2019-05-25|node6 expired on Apr 30, 2019
-devel/py-prompt_toolkit2|devel/py-prompt_toolkit|2019-05-26|Has expired: No longer required, use devel/py-prompt_toolkit instead
 security/acme-client||2019-05-26|Removed
 net-im/qq||2019-05-26|Has expired: no longer supported upstream
 databases/rubygem-peek-mysql2-rails50|databases/rubygem-peek-mysql2-rails5|2019-05-28|Obsolete by gitlab-ce upgrade, use databases/rubygem-peek-mysql2-rails5 instead
@@ -10429,7 +10422,6 @@ graphics/py-chart||2020-02-22|Has expired: Broken, uses EOLed python27
 japanese/tegaki-recognize||2020-02-22|Has expired: Broken, uses EOLed python27
 mail/py-zope.sendmail||2020-02-22|Has expired: Old, uses EOLed python27
 mail/pysieved||2020-02-22|Has expired: Broken, uses EOLed python27
-math/ogdf||2020-02-22|Has expired: Broken, uses EOLed python27
 math/py-viper||2020-02-22|Has expired: Broken, uses EOLed python27
 misc/fbless||2020-02-22|Has expired: Broken, uses EOLed python27
 misc/pylize||2020-02-22|Has expired: Broken, uses EOLed python27
@@ -10544,7 +10536,7 @@ textproc/rubygem-actionpack-xml_parser|textproc/rubygem-actionpack-xml_parser-ra
 textproc/rubygem-actionpack-xml_parser1|textproc/rubygem-actionpack-xml_parser1-rails4|2020-03-02|Renamed to match rubygem name convention
 textproc/rubygem-actionpack-xml_parser52|textproc/rubygem-actionpack-xml_parser-rails52|2020-03-02|Renamed to match rubygem name convention
 x11-toolkits/py-kivy||2020-03-02|Has expired: Old, uses EOLed python27
-lang/gcc6|lang/gcc|2020-03-07|Has expired: Unsupported by upstream. Use GCC 9 or newer instead.
+lang/gcc6|lang/gcc|2020-03-07|Has expired: Unsupported by upstream. Use GCC 9 or newer instead
 www/pycarddav|deskutils/py-khard|2020-03-07|Has expired: Deprecated by upstream, please migrate to deskutils/py-khard
 x11-wm/ccsm||2020-03-07|Has expired: Old, uses EOLed python27
 x11-toolkits/py-gtkglext||2020-03-07|Has expired: Old, uses EOLed python27
@@ -10613,7 +10605,6 @@ math/mkl-dnn|math/onednn|2020-04-04|Project renamed
 devel/p5-Glib2|devel/p5-Glib|2020-04-07|Rename to match our p5- port naming
 devel/jucipp|editors/jucipp|2020-04-07|Remove duplicate
 www/py-django_polymorphic|www/py-django-polymorphic|2020-04-11|Match canonical/registered (PyPI/CHEESESHOP) name
-dns/dnsmasq-devel|dns/dnsmasq|2020-04-12|dnsmasq is newer than dnsmasq-devel
 databases/mariadb55-server|databases/mariadb102-server|2020-04-12|Has expired: Upstream end-of-life 2020-04-11, switch to a newer version
 databases/mariadb55-client|databases/mariadb102-client|2020-04-12|Has expired: Upstream end-of-life 2020-04-11, switch to a newer version
 devel/aws-c-commons|devel/aws-c-common|2020-04-12|Renamed to the correct name
@@ -10717,7 +10708,6 @@ devel/mime||2020-05-05|Has expired: Broken for more than 6 months
 devel/motor||2020-05-05|Has expired: Broken for more than 6 months
 devel/mq4cpp||2020-05-05|Has expired: Broken for more than 6 months
 devel/myrepos||2020-05-05|Has expired: Broken for more than 6 months
-devel/notify-sharp||2020-05-05|Has expired: Broken for more than 6 months
 devel/oozie||2020-05-05|Has expired: Broken for more than 6 months
 devel/p5-Cdk||2020-05-05|Has expired: Broken for more than 6 months
 devel/p5-Data-Average||2020-05-05|Has expired: Broken for more than 6 months
@@ -11066,7 +11056,6 @@ x11/keylaunch||2020-05-05|Has expired: Broken for more than 6 months
 x11/props||2020-05-05|Has expired: 64-bit unsupported
 x11/roxbg||2020-05-05|Has expired: Broken for more than 6 months
 x11/sisctrl||2020-05-05|Has expired: Broken for more than 6 months
-x11/wdm||2020-05-05|Has expired: Broken for more than 6 months
 x11/xaniroc||2020-05-05|Has expired: Broken for more than 6 months
 x11/xmove||2020-05-05|Has expired: Broken for more than 6 months
 x11/xnodecor||2020-05-05|Has expired: Broken for more than 6 months
@@ -11101,7 +11090,6 @@ devel/libopensync||2020-05-06|Abandonware, website disappeared
 deskutils/libopensync-plugin-vformat-devel||2020-05-06|Abandonware, website disappeared
 devel/py-ipykernel|devel/py-ipykernel5|2020-05-07|Has expired: Old version, use devel/py-ipykernel5 instead
 sysutils/rundeck|sysutils/rundeck2|2020-05-07|Rename to avoid confusion with sysutils/rundeck3
-x11-wm/compiz-plugins-unsupported||2020-05-07|Has expired: Broken for more than 6 months
 math/darknet|misc/darknet|2020-05-07|DarkNet is a machine learning project, not a math project
 www/rubygem-activeresource5|www/rubygem-activeresource|2020-05-08|Remove PKGNAMESUFFIX 3 years and 4 months after rubygem-activeresource removal
 finance/bitcoinnodestats||2020-05-12|Has expired: No longer maintained and not compatible with Django 2.2+
@@ -11109,7 +11097,7 @@ devel/rubygem-webpacker-rails5|devel/rubygem-webpacker4-rails5|2020-05-12|Rename
 devel/rubygem-webpacker-rails50|devel/rubygem-webpacker4-rails50|2020-05-12|Rename when rubygem-webpacker is 5.x now
 net-p2p/parity-ethereum|net-p2p/openethereum|2020-05-13|Renamed upstream for transition to a DAO ownership and maintainer model
 net-im/linux-telegram-desktop|net-im/telegram-desktop|2020-05-13|Has expired: Broken for more than 6 months, use native version
-devel/libphutil||2020-05-15|Has expired: Upstream merged functionality into downstream projects.
+devel/libphutil||2020-05-15|Has expired: Upstream merged functionality into downstream projects
 print/frescobaldi|print/py-frescobaldi|2020-05-16|Renamed to comply with Python Ports Policy
 sysutils/rdiff-backup|sysutils/py-rdiff-backup@py37|2020-05-16|Renamed comply with Python Ports Policy and flavored
 www/py-django-happenings|www/py-django-happenings-update|2020-05-17|Has expired: Doesn't work with Django 2.2+, please use www/py-django-happenings-update instead
@@ -11171,7 +11159,6 @@ databases/rubygem-peek-mysql2-rails5||2020-06-05|Removed: not required by gitlab
 audio/workman||2020-06-05|Has expired: Depends on expired x11-toolkits/xview
 x11-toolkits/xview||2020-06-05|Has expired: 64-bit unsupported
 math/p5-Algorithm-KMeans||2020-06-05|Has expired: Depends on expired math/p5-Math-GSL
-math/p5-Math-GSL||2020-06-05|Has expired: Broken for more than 6 months
 net/openbsc||2020-06-05|Has expired: Depends on expired devel/libosmo-netif
 devel/libosmo-netif||2020-06-05|Has expired: Broken for more than 6 months
 audio/xvmixer||2020-06-05|Has expired: Depends on expired x11-toolkits/xview
@@ -11193,3 +11180,99 @@ mail/claws-mail-archiver|mail/claws-mail-archive|2020-06-11|Renamed to align por
 mail/claws-mail-attach_warner|mail/claws-mail-attachwarner|2020-06-11|Renamed to align port name to plugin name
 mail/claws-mail-spamreport|mail/claws-mail-spam_report|2020-06-11|Renamed to align port name to plugin name
 mail/claws-mail-tnef|mail/claws-mail-tnef_parse|2020-06-11|Renamed to align port name to plugin name
+x11-themes/numix-theme|x11-themes/numix-gtk-theme|2020-06-15|Renamed to match upstream naming
+www/py-djangorestframework36|www/py-djangorestframework|2020-06-15|Has expired: Not compatible with Django 2.0+, please use www/py-djangorestframework instead
+www/py-flask-restplus|www/py-flask-restx|2020-06-17|No longer maintained upstream, use www/py-flask-restx instead
+devel/swig30|devel/swig|2020-06-17|Remove PKGNAMESUFFIX since it is the only version in ports tree
+net-mgmt/zabbix42-java|net-mgmt/zabbix44-java|2020-06-21|Has expired: End of Life
+net-mgmt/zabbix42-server|net-mgmt/zabbix44-server|2020-06-21|Has expired: End of Life
+sysutils/duplicity07|sysutils/duplicity|2020-06-21|Has expired: Uses deprecated version of Python
+net-mgmt/zabbix42-proxy|net-mgmt/zabbix44-proxy|2020-06-21|Has expired: End of Life
+net-mgmt/zabbix42-agent|net-mgmt/zabbix44-agent|2020-06-21|Has expired: End of Life
+net-mgmt/zabbix42-frontend|net-mgmt/zabbix44-frontend|2020-06-21|Has expired: End of Life
+x11/swappy|graphics/swappy|2020-06-25|Moved to a better category
+www/redmine|www/redmine4|2020-06-25|Has expired: EOLed upstream
+www/redmine-a_common_libs|www/redmine4|2020-06-25|Removed, build-time extension of www/redmine
+www/redmine-basecamp|www/redmine4|2020-06-25|Removed, build-time extension of www/redmine
+www/redmine-default_assign|www/redmine4|2020-06-25|Removed, build-time extension of www/redmine
+www/redmine-graphs|www/redmine4|2020-06-25|Removed, build-time extension of www/redmine
+www/redmine-http-auth|www/redmine4|2020-06-25|Removed, build-time extension of www/redmine
+www/redmine-issue_templates|www/redmine4|2020-06-25|Removed, build-time extension of www/redmine
+www/redmine-knowledgebase|www/redmine4|2020-06-25|Removed, build-time extension of www/redmine
+www/redmine-ldap_sync|www/redmine4|2020-06-25|Removed, build-time extension of www/redmine
+www/redmine-qa_contact|www/redmine4|2020-06-25|Removed, build-time extension of www/redmine
+www/redmine-redcarpet_formatter|www/redmine4|2020-06-25|Removed, build-time extension of www/redmine
+www/redmine-single_auth|www/redmine4|2020-06-25|Removed, build-time extension of www/redmine
+www/redmine-wiki_notes|www/redmine4|2020-06-25|Removed, build-time extension of www/redmine
+devel/p5-IO-stringy|devel/p5-IO-Stringy|2020-06-26|New development starts as IO-Stringy
+devel/looks|devel/jgoodies-looks|2020-06-26|Renamed to match upstream
+comms/py-serial|comms/py-pyserial|2020-06-27|Rename to match upstream naming
+devel/py-usb|devel/py-pyusb|2020-06-27|Rename to match upstream naming
+math/py-igraph|math/py-python-igraph|2020-06-27|Rename to match upstream naming
+net/bnxt-kmod||2020-06-28|Has expired: Unsupported on all supported FreeBSD versions
+databases/p5-Search-Xapian10|databases/p5-Search-Xapian|2020-06-30|Has expired: Depend on unsupported xapian-core. Use databases/p5-Search-Xapian instead
+databases/xapian-core10|databases/xapian-core|2020-06-30|Has expired: Unsupported by upstream. Use databases/xapian-core instead
+devel/py-dj22-django-rq|devel/py-django-rq|2020-06-30|Has expired: Obsolete, please use www/py-django-rq instead
+devel/rubygem-cucumber-expressions|devel/rubygem-cucumber-cucumber-expressions|2020-06-30|Has expired: Use devel/rubygem-cucumber-cucumber-expressions instead
+devel/rubygem-cucumber-expressions6|devel/rubygem-cucumber-cucumber-expressions|2020-06-30|Has expired: Use devel/rubygem-cucumber-cucumber-expressions instead
+devel/rubygem-cucumber-tag_expressions1|devel/rubygem-cucumber-tag-expressions|2020-06-30|Has expired: Use devel/rubygem-cucumber-tag_expressions instead
+print/xpp||2020-06-30|Has expired: Last update as 2004-12-09, unsupported by upstream
+textproc/rubygem-gherkin|textproc/rubygem-cucumber-gherkin|2020-06-30|Has expired: Use textproc/rubygem-cucumber-gherkin instead
+www/p5-Catalyst-Model-Xapian10|www/p5-Catalyst-Model-Xapian|2020-06-30|Has expired: Depend on unsupported xapian-core. Use www/p5-Catalyst-Model-Xapian instead
+www/py-dj22-django-auth-ldap|www/py-django-auth-ldap|2020-06-30|Has expired: Obsolete, please use www/py-django-auth-ldap instead
+www/py-dj22-django-cacheops|www/py-django-cacheops|2020-06-30|Has expired: Obsolete, please use www/py-django-cacheops instead
+www/py-dj22-django-cors-headers|www/py-django-cors-headers|2020-06-30|Has expired: Obsolete, please use www/py-django-cors-headers instead
+www/py-dj22-django-crispy-forms|www/py-django-crispy-forms|2020-06-30|Has expired: Obsolete, please use www/py-django-crispy-forms instead
+www/py-dj22-django-debug-toolbar|www/py-django-debug-toolbar|2020-06-30|Has expired: Obsolete, please use www/py-django-debug-toolbar instead
+www/py-dj22-django-extensions|www/py-django-extensions|2020-06-30|Has expired: Obsolete, please use www/py-django-extensions instead
+www/py-dj22-django-filter|www/py-django-filter|2020-06-30|Has expired: Obsolete, please use www/py-django-filter instead
+www/py-dj22-django-js-asset|www/py-django-js-asset|2020-06-30|Has expired: Obsolete, please use www/py-django-js-asset instead
+www/py-dj22-django-model-utils|www/py-django-model-utils|2020-06-30|Has expired: Obsolete, please use www/py-django-model-utils instead
+www/py-dj22-django-mptt|www/py-django-mptt|2020-06-30|Has expired: Obsolete, please use www/py-django-mptt instead
+www/py-dj22-django-prometheus|www/py-django-prometheus|2020-06-30|Has expired: Obsolete, please use www/py-django-prometheus instead
+www/py-dj22-django-redis|www/py-django-redis|2020-06-30|Has expired: Obsolete, please use www/py-django-redis instead
+www/py-dj22-django-tables2|www/py-django-tables2|2020-06-30|Has expired: Obsolete, please use www/py-django-tables2 instead
+www/py-dj22-django-taggit|www/py-django-taggit|2020-06-30|Has expired: Obsolete after r534835, use www/py-django-taggit instead
+www/py-dj22-django-taggit-serializer|www/py-django-taggit-serializer|2020-06-30|Has expired: Obsolete, please use www/py-django-taggit-serializer instead
+www/py-dj22-django-timezone-field|www/py-django-timezone-field|2020-06-30|Has expired: Obsolete, please use www/py-django-timezone-field instead
+www/py-dj22-django-treebeard|www/py-django-treebeard|2020-06-30|Has expired: Obsolete after r532093, use www/py-django-treebeard instead
+www/py-dj22-djangorestframework|www/py-djangorestframework|2020-06-30|Has expired: Obsolete, please use www/py-djangorestframework instead
+www/py-dj22-drf-yasg|www/py-drf-yasg|2020-06-30|Has expired: Obsolete, please use www/py-drf-yasg instead
+www/py-dj22-jsonfield|www/py-jsonfield|2020-06-30|Has expired: Obsolete, please use www/py-jsonfield instead
+www/py-dj22-jsonfield2|www/py-jsonfield2|2020-06-30|Has expired: Obsolete, please use www/py-jsonfield2 instead
+www/py-dj22-swapper|www/py-swapper|2020-06-30|Has expired: Obsolete, please use www/py-swapper instead
+www/rubygem-heroics00|www/rubygem-heroics|2020-06-30|Has expired: Use www/rubygem-heroics instead
+www/typo3-8|www/typo3-9|2020-06-30|Has expired: Upstream support ended in April 2020
+databases/mariadb101-client|databases/mariadb103-client|2020-07-01|Has expired: Port will be removed when 10.5 is added, please switch to a newer version
+databases/mariadb101-server|databases/mariadb103-server|2020-07-01|Has expired: Port will be removed when 10.5 is added, please switch to a newer version
+databases/mariadb102-server|databases/mariadb103-server|2020-07-01|Has expired: Port will be removed when 10.5 is added, please switch to a newer version
+databases/mariadb102-client|databases/mariadb103-client|2020-07-01|Has expired: Port will be removed when 10.5 is added, please switch to a newer version
+databases/py-django-transaction-hooks||2020-07-02|Has expired: Unmaintained upstream and merged into Django since 1.9
+multimedia/audacious-gtk3|multimedia/audacious|2020-07-08|GTK3 interface abandoned upstream
+multimedia/audacious-plugins-gtk3|multimedia/audacious-plugins|2020-07-08|GTK3 interface abandoned upstream
+devel/pear-channel-phpunit||2020-07-09|Remove obsolete
+multimedia/f3d|graphics/f3d|2020-07-09|Move to a proper category
+textproc/py-sphinx-hieroglyph|textproc/py-hieroglyph|2020-07-11|Renamed to reflect official name at PyPI
+devel/py-Pint|devel/py-pint|2020-07-11|Rename to match our py- port naming
+audio/aucatctl|audio/sndio|2020-07-12|Use sndioctl from audio/sndio instead
+devel/py-freenas.dispatcher||2020-07-14|Uses deprecated version of python
+textproc/scancode-toolkit||2020-07-14|Uses deprecated version of python
+www/py-kallithea||2020-07-14|Uses deprecated version of python
+graphics/white_dune|graphics/wdune|2020-07-18|Expired in 2016, brought back under new name
+www/py-django-subdomains||2020-07-18|Has expired: No longer maintained, not compatible with Django 2.0+
+www/py-django-datetime-widget||2020-07-18|Has expired: No longer maintained, not compatible with Django 2.1
+www/py-django-openid-auth|www/py-django-allauth|2020-07-18|Has expired: No longer maintained, not compatible with Django 2.0+, please use www/py-django-allauth instead
+www/py-django-overextends||2020-07-18|Has expired: No longer maintained, not compatible with Django 2.0+
+net/kdav|net/kf5-kdav|2020-07-21|Has become a proper KDE framework
+devel/py-trio|net/py-trio|2020-07-21|Remove duplicate port
+databases/postgresql94-client|databases/postgresql95-client|2020-07-24|Has expired: PostgreSQL-9.4 has reached end-of-life
+databases/postgresql94-contrib|databases/postgresql95-contrib|2020-07-24|Has expired: PostgreSQL-9.4 has reached end-of-life
+databases/postgresql94-docs|databases/postgresql95-docs|2020-07-24|Has expired: PostgreSQL-9.4 has reached end-of-life
+databases/postgresql94-pgtcl|databases/postgresql95-pgtcl|2020-07-24|Has expired: PostgreSQL-9.4 has reached end-of-life
+databases/postgresql94-plpython|databases/postgresql95-plpython|2020-07-24|Has expired: PostgreSQL-9.4 has reached end-of-life
+databases/postgresql94-server|databases/postgresql95-server|2020-07-24|Has expired: PostgreSQL-9.4 has reached end-of-life
+databases/postgresql94-pltcl|databases/postgresql95-pltcl|2020-07-24|Has expired: PostgreSQL-9.4 has reached end-of-life
+databases/postgresql94-plperl|databases/postgresql95-plperl|2020-07-24|Has expired: PostgreSQL-9.4 has reached end-of-life
+net/dshell||2020-07-24|Uses deprecated version of python
+sysutils/openshift-install|sysutils/openshift-install45|2020-07-25|Duplicate port
+databases/sqliteodbc-sqlite2|databases/sqliteodbc|2020-07-27|Has expired: SQLite2 has stopped development in 2005, please move to SQLite3

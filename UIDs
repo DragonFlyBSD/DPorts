@@ -213,7 +213,7 @@ step:*:266:266::0:0:Step CA:/nonexistent:/usr/sbin/nologin
 odoo:*:267:267::0:0:Odoo ERP:/nonexistent:/usr/sbin/nologin
 # free: 268
 # free: 269
-# free: 270
+_rpki-client:*:270:270::0:0:rpki-client user:/nonexistent:/usr/sbin/nologin
 # free: 271
 # free: 272
 # free: 273
@@ -817,7 +817,7 @@ ebusd:*:854:854::0:0:eBUS Daemon user:/nonexistent:/usr/sbin/nologin
 archiva:*:871:871::0:0:Apache Archiva Daemon:/nonexistent:/usr/sbin/nologin
 bitmark:*:872:872::0:0:Bitmark Property System:/var/lib/bitmarkd:/usr/sbin/nologin
 bitmark-recorder:*:873:873::0:0:Bitmark Property Recorder:/var/lib/recorderd:/usr/sbin/nologin
-# free: 874
+librespeed:*:874:874::0:0:LibreSpeed user:/nonexistent:/usr/sbin/nologin
 # free: 875
 # free: 876
 # free: 877
