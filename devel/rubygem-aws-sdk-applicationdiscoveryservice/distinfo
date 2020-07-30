@@ -1,3 +1,3 @@
-TIMESTAMP = 1590927035
-SHA256 (rubygem/aws-sdk-applicationdiscoveryservice-1.27.0.gem) = 3eaba0a9fb15d33c19ca379ae28e1e795c4b214c8724fbf4cf12f5b1ca600d38
-SIZE (rubygem/aws-sdk-applicationdiscoveryservice-1.27.0.gem) = 34816
+TIMESTAMP = 1594117249
+SHA256 (rubygem/aws-sdk-applicationdiscoveryservice-1.30.0.gem) = bd3b78adb618f76d0afa3b881c38fa18035368296b0bbd3a6b624f34d9dae6a2
+SIZE (rubygem/aws-sdk-applicationdiscoveryservice-1.30.0.gem) = 35328
