@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	aws-sdk-resources
-PORTVERSION=	3.73.0
+PORTVERSION=	3.76.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
@@ -45,6 +45,7 @@ RUN_DEPENDS=	rubygem-aws-sdk-accessanalyzer>=1<2:devel/rubygem-aws-sdk-accessana
 		rubygem-aws-sdk-cloudwatch>=1<2:devel/rubygem-aws-sdk-cloudwatch \
 		rubygem-aws-sdk-cloudwatchevents>=1<2:devel/rubygem-aws-sdk-cloudwatchevents \
 		rubygem-aws-sdk-cloudwatchlogs>=1<2:devel/rubygem-aws-sdk-cloudwatchlogs \
+		rubygem-aws-sdk-codeartifact>=1<2:devel/rubygem-aws-sdk-codeartifact \
 		rubygem-aws-sdk-codebuild>=1<2:devel/rubygem-aws-sdk-codebuild \
 		rubygem-aws-sdk-codecommit>=1<2:devel/rubygem-aws-sdk-codecommit \
 		rubygem-aws-sdk-codedeploy>=1<2:devel/rubygem-aws-sdk-codedeploy \
@@ -108,6 +109,7 @@ RUN_DEPENDS=	rubygem-aws-sdk-accessanalyzer>=1<2:devel/rubygem-aws-sdk-accessana
 		rubygem-aws-sdk-groundstation>=1<2:devel/rubygem-aws-sdk-groundstation \
 		rubygem-aws-sdk-guardduty>=1<2:devel/rubygem-aws-sdk-guardduty \
 		rubygem-aws-sdk-health>=1<2:devel/rubygem-aws-sdk-health \
+		rubygem-aws-sdk-honeycode>=1<2:devel/rubygem-aws-sdk-honeycode \
 		rubygem-aws-sdk-iam>=1<2:devel/rubygem-aws-sdk-iam \
 		rubygem-aws-sdk-imagebuilder>=1<2:devel/rubygem-aws-sdk-imagebuilder \
 		rubygem-aws-sdk-importexport>=1<2:devel/rubygem-aws-sdk-importexport \
@@ -123,6 +125,7 @@ RUN_DEPENDS=	rubygem-aws-sdk-accessanalyzer>=1<2:devel/rubygem-aws-sdk-accessana
 		rubygem-aws-sdk-iotsecuretunneling>=1<2:devel/rubygem-aws-sdk-iotsecuretunneling \
 		rubygem-aws-sdk-iotsitewise>=1<2:devel/rubygem-aws-sdk-iotsitewise \
 		rubygem-aws-sdk-iotthingsgraph>=1<2:devel/rubygem-aws-sdk-iotthingsgraph \
+		rubygem-aws-sdk-ivs>=1<2:devel/rubygem-aws-sdk-ivs \
 		rubygem-aws-sdk-kafka>=1<2:devel/rubygem-aws-sdk-kafka \
 		rubygem-aws-sdk-kendra>=1<2:devel/rubygem-aws-sdk-kendra \
 		rubygem-aws-sdk-kinesis>=1<2:devel/rubygem-aws-sdk-kinesis \
