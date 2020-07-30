@@ -1,4 +1,0 @@
-post-patch:
-	${REINPLACE_CMD} 's,/usr/local,${LOCALBASE},' \
-		${WRKSRC}/setup.py
-
