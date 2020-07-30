@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	redis
-PORTVERSION=	6.0.5.20200609
+PORTVERSION=	6.0.6.20200720
 CATEGORIES=	databases
 PKGNAMESUFFIX=	-devel
 
@@ -10,10 +10,11 @@ MAINTAINER=	osa@FreeBSD.org
 COMMENT=	Persistent key-value database with built-in net interface
 
 LICENSE=	BSD3CLAUSE
+LICENSE_FILE=	${WRKSRC}/COPYING
 
 USES+=		compiler:c11 gmake
 USE_GITHUB=	yes
-GH_TUPLE= 	antirez:${PORTNAME}:51efb7f
+GH_TUPLE= 	antirez:${PORTNAME}:7bf665f
 
 OPTIONS_DEFINE=	JEMALLOC TESTS TLS TRIB
 OPTIONS_RADIO=	EXTLUA
