@@ -72,10 +72,10 @@ LIBEVENT_CPPFLAGS+=	$$(pkg-config libevent --cflags-only-I)
 LIBEVENT_LIB_DEPENDS=	libevent.so:devel/libevent
 LIBEVENT_LDFLAGS+=	$$(pkg-config libevent --libs-only-L)
 MUNIN_PLUGIN_SUB_FILES=	pkg-message
-PYTHON_BUILD_DEPENDS=	swig3.0:devel/swig30
+PYTHON_BUILD_DEPENDS=	swig:devel/swig
 PYTHON_CONFIGURE_ON=	--with-pyunbound=yes --with-pythonmodule=yes \
 			LDFLAGS="-L${LOCALBASE}/lib" \
-			ac_cv_path_SWIG=${LOCALBASE}/bin/swig3.0
+			ac_cv_path_SWIG=${LOCALBASE}/bin/swig
 PYTHON_USES=		python
 PYTHON_VARS=		STRIP_FILES+=.libs/_unbound.so
 THREADS_CONFIGURE_WITH=	pthreads
@@ -89,7 +89,9 @@ post-patch:
 		${WRKSRC}/Makefile.in
 
 post-patch-FILTER_AAAA-on:
-	${CAT} ${WRKSRC}/contrib/aaaa-filter-iterator.patch | ${PATCH} -d ${WRKSRC} -p1 -s
+	${SED} 's/INIT_REQUEST_STATE, FINISHED_STATE, &subq, 1/&, 0/' \
+		${WRKSRC}/contrib/aaaa-filter-iterator.patch | \
+		${PATCH} -d ${WRKSRC} -p1 -s
 
 post-build:
 	@for s in ${STRIP_FILES}; do ${STRIP_CMD} ${WRKSRC}/$$s; done
