@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	http://cocoa.dima.unige.it/cocoalib/tgz/
 DISTNAME=	CoCoALib-${DISTVERSION}
 
-MAINTAINER=	salvadore@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	C++ library for doing Computations in Commutative Algebra
 
 LICENSE=			GPLv3+ GFDL PD
@@ -17,7 +17,7 @@ LICENSE_FILE_GFDL=		${WRKSRC}/doc/COPYING
 BUILD_DEPENDS=	bash:shells/bash
 LIB_DEPENDS=	libgmp.so:math/gmp
 
-USES=		shebangfix tar:tgz
+USES=		compiler:c++11-lang shebangfix tar:tgz
 
 SHEBANG_GLOB=	*.sh
 
