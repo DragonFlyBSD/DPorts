@@ -1,3 +1,3 @@
-TIMESTAMP = 1590927071
-SHA256 (rubygem/aws-sdk-cloudhsmv2-1.23.0.gem) = 7ff84d50829d282f7aaa66d9e31e7eb5a02f8ae382a555f6293fbb6141d947b5
-SIZE (rubygem/aws-sdk-cloudhsmv2-1.23.0.gem) = 21504
+TIMESTAMP = 1594390026
+SHA256 (rubygem/aws-sdk-cloudhsmv2-1.27.0.gem) = bc872377d60caa67863a96b5a40b846026eef0a30a75722e84f7ba67cab84eb4
+SIZE (rubygem/aws-sdk-cloudhsmv2-1.27.0.gem) = 22016
