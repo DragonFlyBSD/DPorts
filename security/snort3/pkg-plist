@@ -66,6 +66,7 @@ include/snort/framework/lua_api.h
 include/snort/framework/module.h
 include/snort/framework/mpse.h
 include/snort/framework/mpse_batch.h
+include/snort/framework/packet_constraints.h
 include/snort/framework/parameter.h
 include/snort/framework/range.h
 include/snort/framework/so_rule.h
@@ -97,10 +98,12 @@ include/snort/lua/snort_config.lua
 include/snort/lua/snort_plugin.lua
 include/snort/main/analyzer_command.h
 include/snort/main/policy.h
+include/snort/main/snort.h
 include/snort/main/snort_config.h
 include/snort/main/snort_debug.h
 include/snort/main/snort_types.h
 include/snort/main/thread.h
+include/snort/main/thread_config.h
 include/snort/managers/codec_manager.h
 include/snort/managers/inspector_manager.h
 include/snort/memory/memory_cap.h
@@ -128,6 +131,7 @@ include/snort/network_inspectors/rna/rna_logger.h
 include/snort/packet_io/active.h
 include/snort/packet_io/sfdaq.h
 include/snort/packet_io/sfdaq_instance.h
+include/snort/payload_injector/payload_injector_module.h
 include/snort/profiler/memory_context.h
 include/snort/profiler/memory_defs.h
 include/snort/profiler/memory_profiler_defs.h
@@ -164,9 +168,11 @@ include/snort/pub_sub/appid_events.h
 include/snort/pub_sub/cip_events.h
 include/snort/pub_sub/daq_message_event.h
 include/snort/pub_sub/data_decrypt_event.h
+include/snort/pub_sub/dcerpc_events.h
 include/snort/pub_sub/expect_events.h
 include/snort/pub_sub/finalize_packet_event.h
 include/snort/pub_sub/http_events.h
+include/snort/pub_sub/opportunistic_tls_event.h
 include/snort/pub_sub/sip_events.h
 include/snort/search_engines/search_common.h
 include/snort/search_engines/search_tool.h
@@ -241,7 +247,6 @@ libdata/pkgconfig/snort.pc
 %%PORTDOCS%%%%DOCSDIR%%/ips_action.txt
 %%PORTDOCS%%%%DOCSDIR%%/ips_option.txt
 %%PORTDOCS%%%%DOCSDIR%%/logger.txt
-%%PORTDOCS%%%%DOCSDIR%%/module_trace.txt
 %%PORTDOCS%%%%DOCSDIR%%/modules.txt
 %%PORTDOCS%%%%DOCSDIR%%/options.txt
 %%PORTDOCS%%%%DOCSDIR%%/overview.txt
@@ -269,6 +274,7 @@ libdata/pkgconfig/snort.pc
 %%PORTDOCS%%%%DOCSDIR%%/telnet.txt
 %%PORTDOCS%%%%DOCSDIR%%/terms.txt
 %%PORTDOCS%%%%DOCSDIR%%/testing_numerical_values.txt
+%%PORTDOCS%%%%DOCSDIR%%/trace.txt
 %%PORTDOCS%%%%DOCSDIR%%/tutorial.txt
 %%PORTDOCS%%%%DOCSDIR%%/usage.txt
 %%PORTDOCS%%%%DOCSDIR%%/version.txt
