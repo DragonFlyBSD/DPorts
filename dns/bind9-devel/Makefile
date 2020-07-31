@@ -48,13 +48,13 @@ RUN_DEPENDS=	bind-tools>0:dns/bind-tools
 # XXX: remove tar:bz2
 USES=		autoreconf compiler:c11 cpe libedit libtool pkgconfig ssl tar:bz2
 # ISC releases things like 9.8.0-P1, which our versioning doesn't like
-ISCVERSION=	9.17.0a0.2020.06.06
+ISCVERSION=	9.17.3a0.2020.07.06
 # XXX: Remove gitlab
 USE_GITLAB=	yes
 GL_SITE=	https://gitlab.isc.org
 GL_ACCOUNT=	isc-projects
 GL_PROJECT=	bind9
-GL_COMMIT=	d95951729025a8775a8a85d61a76fb5389a71adc
+GL_COMMIT=	9dcf229634968dc7d808c1d23f4bab5d3ba7f47f
 
 CPE_VENDOR=	isc
 CPE_VERSION=	${ISCVERSION:C/-.*//}
@@ -64,7 +64,6 @@ CPE_UPDATE=	${ISCVERSION:C/.*-//:tl}
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-linux-caps \
-		--disable-shared \
 		--localstatedir=/var \
 		--sysconfdir=${ETCDIR} \
 		--with-dlopen=yes \
@@ -75,6 +74,7 @@ ETCDIR=		${PREFIX}/etc/namedb
 
 .if defined(BIND_TOOLS_SLAVE)
 EXTRA_PATCHES=		${PATCHDIR}/extrapatch-bind-tools
+CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/bind-tools
 .else
 USE_RC_SUBR=		named
 # XXX: remove the big warning about it being a development version from pkg-message
@@ -228,13 +228,9 @@ SUB_LIST+=	ENGINES=/usr/lib/engines
 SUB_LIST+=	ENGINES=${LOCALBASE}/lib/engines
 .endif
 
-# XXX: Remove
-post-extract:
-	echo "SRCID=${GL_COMMIT}" > ${WRKSRC}/srcid
-
 # XXX: Remove first REINPLACE_CMD
 post-patch:
-	@${REINPLACE_CMD} -e '/^m4_define.*bind_VERSION_EXTRA/s#)#-${GL_COMMIT})#' \
+	@${REINPLACE_CMD} -e '/^m4_define(\[bind_SRCID/s/\[m4.*\]/${GL_COMMIT}/' \
 		${WRKSRC}/configure.ac
 .for FILE in check/named-checkconf.rst named/named.rst nsupdate/nsupdate.rst \
 	rndc/rndc.rst
@@ -276,9 +272,10 @@ post-install-DOCS-on:
 .else
 
 do-install:
-	for dir in bin doc/man; do \
+	for dir in bin lib doc/man; do \
 		(cd ${INSTALL_WRKSRC}/$$dir && ${SETENV} ${MAKE_ENV} ${FAKEROOT} ${MAKE_CMD} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} ${INSTALL_TARGET}) ; \
 	done
+	@${RM} -r ${STAGEDIR}${PREFIX}/include
 
 .endif	# BIND_TOOLS_SLAVE
 
