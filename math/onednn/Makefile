@@ -2,11 +2,8 @@
 
 PORTNAME=	onednn
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.4
+DISTVERSION=	1.5.1
 CATEGORIES=	math # machine-learning
-
-PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES=	1efd9ec1eaf351d6fa4ef614db1ef09742c85e39.patch:-p1
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Intel(R) Math Kernel Library for Deep Neural Networks
@@ -33,6 +30,12 @@ OPENMP_BROKEN_OFF=	still requires omp.h, see https://github.com/intel/mkl-dnn/is
 
 CXXFLAGS_x86_64=	-msse4.1
 CXXFLAGS_i386=	-msse4.1
+
+.include <bsd.port.options.mk>
+
+.if ${ARCH} != aarch64 && ${ARCH} != x86_64
+CMAKE_ARGS+=	-DDNNL_TARGET_ARCH:STRING="GENERIC"
+.endif
 
 post-install:
 	@${RM} -r ${STAGEDIR}${PREFIX}/share/doc
