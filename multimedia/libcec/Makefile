@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	libcec
-PORTVERSION=	5.0.0
+PORTVERSION=	6.0.2
 DISTVERSIONPREFIX=	libcec-
 CATEGORIES=	multimedia
 
@@ -40,7 +40,7 @@ OPTIONS_SUB=	yes
 PYTHON_DESC=	Build python wrapper
 RPI_DESC=	Build libcec support for Raspberry Pi
 
-PYTHON_BUILD_DEPENDS=	swig3.0:devel/swig30
+PYTHON_BUILD_DEPENDS=	swig:devel/swig
 PYTHON_CMAKE_BOOL_OFF=	SKIP_PYTHON_WRAPPER
 PYTHON_USES=		python:build
 RPI_CMAKE_ON=		-DRPI_INCLUDE_DIR=${LOCALBASE}/include -DRPI_LIB_DIR=${LOCALBASE}/lib
