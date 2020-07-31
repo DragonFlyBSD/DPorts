@@ -3,7 +3,7 @@
 
 PORTNAME=	libxatracker
 PORTVERSION=	${MESAVERSION}
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	graphics
 
 COMMENT=	Mesa XA state tracker
@@ -37,7 +37,7 @@ MESON_ARGS+=	-Ddri-drivers="" \
 
 LDFLAGS_i386=		-Wl,-znotext
 
-MESA_ARGS+=	-Dgallium-xa=true
+MESON_ARGS+=	-Dgallium-xa=true
 
 .include "${MASTERDIR}/Makefile.targets"
 .include <bsd.port.post.mk>
