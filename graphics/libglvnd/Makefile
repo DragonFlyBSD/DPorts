@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	libglvnd
-DISTVERSION=	1.3.1
+DISTVERSION=	1.3.2
 CATEGORIES=	graphics
 
 MAINTAINER=	greg@unrelenting.technology
@@ -12,13 +12,13 @@ LICENSE_COMB=	multi
 
 CONFLICTS_INSTALL=	mesa-libs # include/GL/gl.h
 
-USES=		compiler:c++11-lib localbase meson pkgconfig
+USES=		localbase meson pkgconfig
 USE_LDCONFIG=	yes
 
 USE_GITLAB=	yes
 GL_SITE=	https://gitlab.freedesktop.org
 GL_ACCOUNT=	glvnd
-GL_COMMIT=	1c32de07074fee8edcb274899948b6551081ed54
+GL_COMMIT=	da0edd9728d6d33aa0d058037b694ee91a7ecad5
 
 OPTIONS_DEFINE=	X11
 OPTIONS_DEFAULT=X11
@@ -27,6 +27,14 @@ OPTIONS_SUB=	yes
 X11_USES=		xorg
 X11_USE=		XORG=x11,xext,xorgproto
 X11_MESON_ENABLED=	x11 glx
+
+.include <bsd.port.options.mk>
+
+.if ${ARCH} == powerpc64
+USES+=		compiler:gcc-c++11-lib
+.else
+USES+=		compiler:c++11-lib
+.endif
 
 # Lots of software expects gl.pc even when it can build with EGL only
 post-install-X11-off:
