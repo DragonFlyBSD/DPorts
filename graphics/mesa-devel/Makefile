@@ -1,30 +1,23 @@
 # $FreeBSD$
 
 PORTNAME=	mesa
-DISTVERSION=	20.1-branchpoint-1696
-DISTVERSIONSUFFIX=	-g67ad75a282d
+DISTVERSION=	20.1-branchpoint-3450
+DISTVERSIONSUFFIX=	-g12dd5455f43
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	-devel
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
 PATCHFILES+=	ee5c7790fa93.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/1598
 PATCHFILES+=	9f52b5177728.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/1598
-PATCHFILES+=	cefdea8105bf.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/1598
+PATCHFILES+=	2b9168cf579b.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/1598
 PATCHFILES+=	55822330540d.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/1598
 PATCHFILES+=	f6c7569ad9ea.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/1598
-PATCHFILES+=	c7a2ab64144b.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/1598
-PATCHFILES+=	f3b7aba7ed39.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/1598
-PATCHFILES+=	23df7d9971dd.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/1598
-PATCHFILES+=	ec60ac47860a.patch:-p1
+PATCHFILES+=	ba7629156d4e.patch:-p1
 PATCHFILES+=	807ae077ab19.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/3568
-PATCHFILES+=	1b10b42fe65e.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/1619
-PATCHFILES+=	9291544ca0bd.patch:-p1
+PATCHFILES+=	fb7a3759f761.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/1619
 PATCHFILES+=	700efacda59c.patch:-p1
-PATCHFILES+=	227ebbd9e837.patch:-p1
-PATCHFILES+=	de60a36d5836.patch:-p1
-PATCHFILES+=	614e5280165b.patch:-p1
-PATCHFILES+=	15057d74fdb9.patch:-p1
-PATCHFILES+=	4902067868ea.patch:-p1
+PATCHFILES+=	b1216951eb40.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/issues/966#note_394512
+PATCHFILES+=	167fa293d7b7.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5464
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Bleeding edge Mesa drivers (OpenGL, Vulkan)
@@ -49,12 +42,11 @@ GH_ACCOUNT=	mesa3d
 USE_LDCONFIG=	yes
 BINARY_ALIAS=	python=${PYTHON_CMD}
 SHEBANG_FILES=	src/vulkan/overlay-layer/${PORTNAME}-overlay-control.py
-PLATFORMS=	${PORT_OPTIONS:MX11:tl} ${PORT_OPTIONS:MWAYLAND:tl} drm surfaceless
 MESON_ARGS=	-Dgallium-omx=disabled \
 		-Dgallium-opencl=disabled \
 		-Dgallium-xa=disabled \
 		-Dgallium-xvmc=disabled \
-		-Dplatforms=${PLATFORMS:ts,} \
+		-Dplatforms=${PLATFORMS:O:[-1..1]:ts,} \
 		${BINARY_ALIAS:D--native-file=binary_alias.ini} \
 		${NULL}
 PLIST_SUB=	ARCH=${ARCH:S/amd/x86_/}
@@ -64,7 +56,7 @@ PLIST_SUB=	ARCH=${ARCH:S/amd/x86_/}
 LDFLAGS+=	-fuse-ld=lld
 .endif
 
-OPTIONS_DEFINE=		${OPTIONS_MULTI} LIBUNWIND LLVM NLS VAAPI VDPAU WAYLAND X11 ZSTD
+OPTIONS_DEFINE=		${OPTIONS_MULTI} LIBUNWIND LLVM VAAPI VDPAU WAYLAND X11 ZSTD
 OPTIONS_DEFAULT=	${OPTIONS_MULTI} LIBUNWIND LLVM VAAPI VDPAU WAYLAND X11 ZSTD
 OPTIONS_MULTI=		DRI GALLIUM VULKAN
 OPTIONS_MULTI_DRI=	i965
@@ -119,8 +111,6 @@ LLVM_BINARY_ALIAS=	llvm-config=llvm-config${LLVM_DEFAULT}
 ${i}_IMPLIES+=		LLVM
 .endfor
 
-NLS_USES=		gettext-tools
-
 VAAPI_BUILD_DEPENDS=	libva>0:multimedia/libva
 VAAPI_MESON_ENABLED=	gallium-va
 
@@ -135,9 +125,11 @@ radv_DESC=		Southern Islands and newer
 
 WAYLAND_BUILD_DEPENDS=	wayland-protocols>0:graphics/wayland-protocols
 WAYLAND_LIB_DEPENDS=	libwayland-server.so:graphics/wayland
+WAYLAND_VARS=		PLATFORMS+=wayland
 
 X11_USES=		xorg
 X11_USE=		XORG=x11,xcb,xdamage,xext,xfixes,xorgproto,xrandr,xshmfence,xxf86vm
+X11_VARS=		PLATFORMS+=x11
 X11_MESON_OFF=		-Dglx=disabled
 
 ZSTD_DESC=		Use ZSTD for shader cache
@@ -161,10 +153,6 @@ post-patch:
 post-patch-COINST-on:
 	@${MV} ${WRKSRC}/src/util/00-${PORTNAME}-defaults.conf \
 		${WRKSRC}/src/util/00-${PKGBASE}-defaults.conf
-
-pre-build-NLS-on:
-# Meson doesn't automatically generate translations
-	@${DO_MAKE_BUILD} -C ${BUILD_WRKSRC} xmlpool-gmo
 
 post-install-COINST-on:
 	@${INSTALL_DATA} ${WRKDIR}/libmap.conf \
