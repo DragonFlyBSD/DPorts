@@ -1,16 +1,14 @@
 # $FreeBSD$
 
 PORTNAME=	asterisk
-PORTVERSION=	16.11.0
+PORTVERSION=	16.12.0
 CATEGORIES=	net
-MASTER_SITES=	https://downloads.asterisk.org/pub/telephony/%SUBDIR%/:DEFAULT,g729 \
-		http://www.pjsip.org/release/${PJSIP_VERSION}/:PJSIP
+MASTER_SITES=	https://downloads.asterisk.org/pub/telephony/%SUBDIR%/:DEFAULT,g729
 MASTER_SITE_SUBDIR=	asterisk/ \
 			asterisk/old-releases/ \
 			sounds/releases/:g729
 PKGNAMESUFFIX=	16
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
-		pjproject-${PJSIP_VERSION}.tar.bz2:PJSIP
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 DIST_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	madpilot@FreeBSD.org
@@ -19,12 +17,10 @@ COMMENT=	Open Source PBX and telephony toolkit
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-LIB_DEPENDS=	libuuid.so:misc/e2fsprogs-libuuid \
-		libjansson.so:devel/jansson
-
 ONLY_FOR_ARCHS=	amd64 armv6 armv7 i386 powerpc powerpc64 sparc64
 
-EXTRACT_ONLY:=	${DISTNAME}${EXTRACT_SUFX}
+LIB_DEPENDS=	libuuid.so:misc/e2fsprogs-libuuid \
+		libjansson.so:devel/jansson
 
 USES=		bison compiler:c11 cpe gmake gnome iconv libedit localbase \
 		shebangfix sqlite ssl ncurses
@@ -33,7 +29,9 @@ USE_LDCONFIG=	yes
 USE_RC_SUBR=	asterisk
 USE_GITHUB=	nodefault
 
-PJSIP_VERSION=	2.9
+EXTRACT_ONLY:=	${DISTNAME}${EXTRACT_SUFX}
+
+PJSIP_VERSION=	2.10
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--datarootdir=${DATADIR} \
 		--with-ilbc=internal \
@@ -65,7 +63,7 @@ OPTIONS_DEFINE=			ASTVERSION BACKTRACE CURL EXCHANGE FREETDS G729 LDAP LUA MACRO
 				MP3PLAYER OOH323 OPTIMIZED_CFLAGS PJSIP PORTAUDIO RADIUS SNMP \
 				SPANDSP SRTP SYSINFO URIPARSER XMPP
 OPTIONS_DEFAULT=		CURL FREETDS GSM LUA MACRO MP3PLAYER NEWT ODBC OPUS MYSQL PGSQL \
-				PJSIP PORTAUDIO RADIUS SNMP SPANDSP SPEEX SQLITE2 SRTP URIPARSER \
+				PJSIP PORTAUDIO RADIUS SNMP SPANDSP SPEEX SRTP URIPARSER \
 				VORBIS
 
 OPTIONS_DEFINE_i386=		DAHDI
@@ -82,7 +80,7 @@ OPTIONS_GROUP_CODECS=		GSM NEWG711 OPUS SPEEX VORBIS
 CODECS_DESC=			Encoder/Decoder (Codec) Support
 
 OPTIONS_GROUP+=			DATABASE
-OPTIONS_GROUP_DATABASE=		MYSQL ODBC PGSQL SQLITE2
+OPTIONS_GROUP_DATABASE=		MYSQL ODBC PGSQL
 DATABASE_DESC=			Database Support
 
 OPTIONS_MULTI=			MENU
@@ -170,6 +168,7 @@ PJSIP_USES=		pkgconfig
 PJSIP_LIB_DEPENDS=	libsrtp2.so:net/libsrtp2 \
 			libspeex.so:audio/speex \
 			libspeexdsp.so:audio/speexdsp
+PJSIP_GH_TUPLE=		pjsip:pjproject:${PJSIP_VERSION}:pjsip
 
 PORTAUDIO_CONFIGURE_WITH=	portaudio
 PORTAUDIO_LIB_DEPENDS=	libportaudio.so:audio/portaudio
@@ -188,9 +187,6 @@ SPANDSP_LIB_DEPENDS=	libspandsp.so:comms/spandsp \
 SPEEX_CONFIGURE_WITH=	speex
 SPEEX_LIB_DEPENDS=	libspeex.so:audio/speex \
 			libspeexdsp.so:audio/speexdsp
-
-SQLITE2_CONFIGURE_WITH=	sqlite
-SQLITE2_LIB_DEPENDS=	libsqlite.so:databases/sqlite2
 
 SRTP_CONFIGURE_WITH=	srtp
 SRTP_LIB_DEPENDS=	libsrtp2.so:net/libsrtp2
