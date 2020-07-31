@@ -119,6 +119,7 @@ include/folly/concurrency/ConcurrentHashMap.h
 include/folly/concurrency/CoreCachedSharedPtr.h
 include/folly/concurrency/DynamicBoundedQueue.h
 include/folly/concurrency/PriorityUnboundedQueueSet.h
+include/folly/concurrency/QueueObserver.h
 include/folly/concurrency/UnboundedQueue.h
 include/folly/concurrency/detail/AtomicSharedPtr-detail.h
 include/folly/concurrency/detail/ConcurrentHashMap-detail.h
@@ -201,6 +202,7 @@ include/folly/executors/ScheduledExecutor.h
 include/folly/executors/SequencedExecutor.h
 include/folly/executors/SerialExecutor.h
 include/folly/executors/SoftRealTimeExecutor.h
+include/folly/executors/StrandExecutor.h
 include/folly/executors/ThreadPoolExecutor.h
 include/folly/executors/ThreadedExecutor.h
 include/folly/executors/TimedDrivableExecutor.h
@@ -234,8 +236,8 @@ include/folly/experimental/JSONSchema.h
 include/folly/experimental/JemallocHugePageAllocator.h
 include/folly/experimental/JemallocNodumpAllocator.h
 include/folly/experimental/LockFreeRingBuffer.h
-include/folly/experimental/MasterPtr.h
 include/folly/experimental/NestedCommandLineApp.h
+include/folly/experimental/PrimaryPtr.h
 include/folly/experimental/ProgramOptions.h
 include/folly/experimental/QuotientMultiSet-inl.h
 include/folly/experimental/QuotientMultiSet.h
@@ -273,7 +275,10 @@ include/folly/experimental/coro/Concat.h
 include/folly/experimental/coro/CurrentExecutor.h
 include/folly/experimental/coro/Dematerialize-inl.h
 include/folly/experimental/coro/Dematerialize.h
+include/folly/experimental/coro/DetachOnCancel.h
 include/folly/experimental/coro/Error.h
+include/folly/experimental/coro/Filter-inl.h
+include/folly/experimental/coro/Filter.h
 include/folly/experimental/coro/FutureUtil.h
 include/folly/experimental/coro/Generator.h
 include/folly/experimental/coro/GmockHelpers.h
@@ -285,12 +290,15 @@ include/folly/experimental/coro/Merge.h
 include/folly/experimental/coro/Multiplex-inl.h
 include/folly/experimental/coro/Multiplex.h
 include/folly/experimental/coro/Mutex.h
+include/folly/experimental/coro/Retry.h
 include/folly/experimental/coro/SharedLock.h
 include/folly/experimental/coro/SharedMutex.h
 include/folly/experimental/coro/Sleep-inl.h
 include/folly/experimental/coro/Sleep.h
 include/folly/experimental/coro/Task.h
 include/folly/experimental/coro/TimedWait.h
+include/folly/experimental/coro/Timeout-inl.h
+include/folly/experimental/coro/Timeout.h
 include/folly/experimental/coro/Traits.h
 include/folly/experimental/coro/Transform-inl.h
 include/folly/experimental/coro/Transform.h
@@ -364,6 +372,13 @@ include/folly/fibers/WhenN-inl.h
 include/folly/fibers/WhenN.h
 include/folly/fibers/async/Async.h
 include/folly/fibers/async/Baton.h
+include/folly/fibers/async/Collect-inl.h
+include/folly/fibers/async/Collect.h
+include/folly/fibers/async/FiberManager.h
+include/folly/fibers/async/Future.h
+include/folly/fibers/async/Promise.h
+include/folly/fibers/async/Task.h
+include/folly/fibers/async/WaitUtils.h
 include/folly/fibers/detail/AtomicBatchDispatcher.h
 include/folly/fibers/traits.h
 include/folly/folly-config.h
@@ -488,6 +503,7 @@ include/folly/lang/Cast.h
 include/folly/lang/CheckedMath.h
 include/folly/lang/CustomizationPoint.h
 include/folly/lang/Exception.h
+include/folly/lang/Keep.h
 include/folly/lang/Launder.h
 include/folly/lang/Ordering.h
 include/folly/lang/Pretty.h
