@@ -2,6 +2,7 @@
 
 PORTNAME=	obs-studio
 DISTVERSION=	25.0.8
+PORTREVISION=	1
 CATEGORIES=	multimedia
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -13,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 BROKEN_aarch64=	Fails to compile: invalid conversion between vector type and integer type
 
 BUILD_DEPENDS=	v4l_compat>=0:multimedia/v4l_compat \
-		swig3.0:devel/swig30
+		swig:devel/swig
 LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg \
 		libcurl.so:ftp/curl \
 		libdbus-1.so:devel/dbus \
