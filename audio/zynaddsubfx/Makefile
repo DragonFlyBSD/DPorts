@@ -3,7 +3,7 @@
 
 PORTNAME=	zynaddsubfx
 PORTVERSION=	3.0.5
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	SF
 
@@ -44,7 +44,7 @@ DSSI_CMAKE_OFF=			-DDssiEnable:BOOL=OFF
 GUI_LIB_DEPENDS=		libfltk.so:x11-toolkits/fltk \
 				libpng.so:graphics/png \
 				libfontconfig.so:x11-fonts/fontconfig
-GUI_ON=				-DGuiModule:STRING=fltk
+GUI_CMAKE_ON=			-DGuiModule:STRING=fltk
 GUI_CMAKE_OFF=			-DGuiModule:STRING=OFF
 GUI_USE+=			XORG=x11,xext,xfixes,xcursor,xrender,ice,sm,xpm,xinerama,xft
 GUI_USE+=			GL=gl,glu
@@ -86,6 +86,8 @@ CMAKE_ARGS+=	-DZYN_EXAMPLESDIR:STRING=${EXAMPLESDIR}
 
 .if ${ARCH} == "i386" || ${ARCH} == "x86_64"
 CFLAGS+=	-DASM_F2I_YES
+.else
+CMAKE_ARGS+=	-DSUPPORT_SSE:BOOL=OFF
 .endif
 
 post-patch:
