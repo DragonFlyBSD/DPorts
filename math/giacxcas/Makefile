@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	giacxcas
-DISTVERSION=	1.5.0-87
-PORTREVISION=	1
+DISTVERSION=	1.6.0-7
 CATEGORIES=	math
 MASTER_SITES=	http://www-fourier.ujf-grenoble.fr/~parisse/debian/dists/stable/main/source/:giac \
 		http://cocoa.dima.unige.it/cocoalib/tgz/:cocoa \
@@ -127,6 +126,9 @@ pre-configure:
 	@(cd ${FLTKDEV-GIAC} && ${SETENV} ${CONFIGURE_ENV} ./configure \
 		--prefix=${FLTKDEV-GIAC} \
 		CXX="${CXX}" CXXFLAGS="${CXXFLAGS}")
+
+post-configure:	# malloc.h on 13-CURRENT is missing mallinfo and compilation fails after it is discovered
+	@${FIND} ${WRKSRC} -name config.h | ${XARGS} ${REINPLACE_CMD} -e 's|#define HAVE_MALLOC_H 1|/* #undef HAVE_MALLOC_H */|'
 
 pre-build:
 	@cd ${COCOALIB-GIAC} && ${DO_MAKE_BUILD} \
