@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	graphviz
-PORTVERSION=	2.44.0
-PORTREVISION=	4
+PORTVERSION=	2.44.1
+PORTREVISION=	0
 CATEGORIES=	graphics tk
 MASTER_SITES=	https://www2.graphviz.org/Packages/stable/portable_source/
 
@@ -22,8 +22,8 @@ LIB_DEPENDS=	libltdl.so:devel/libltdl \
 		libexpat.so:textproc/expat2 \
 		libgd.so:${GD_PORT}
 
-USES=		cpe pathfix shebangfix gmake bison pkgconfig \
-		libtool:keepla autoreconf localbase:ldflags jpeg \
+USES=		compiler:c++11-lang cpe pathfix shebangfix gmake bison \
+		pkgconfig libtool:keepla autoreconf localbase:ldflags jpeg \
 		tcl:build
 
 GNU_CONFIGURE=	yes
@@ -170,12 +170,6 @@ NVTHREADS_LDFLAGS=	-lpthread
 
 .include <bsd.port.options.mk>
 
-.if ${ARCH} == powerpc64
-USES+=		compiler:gcc-c++11-lib
-.else
-USES+=		compiler:c++11-lang
-.endif
-
 # allow the use localized gd ports in Makefile.local or slave ports.
 GD_PORT?=	graphics/gd
 
@@ -204,10 +198,10 @@ CONFIGURE_ARGS+=	--without-libiconv-prefix
 .if ${PORT_OPTIONS:MPERL} || ${PORT_OPTIONS:MPHP} || ${PORT_OPTIONS:MPYTHON} || \
     ${PORT_OPTIONS:MRUBY} || ${PORT_OPTIONS:MLUA} || ${PORT_OPTIONS:MTCL} || \
     ${PORT_OPTIONS:MGUILE} || ${PORT_OPTIONS:MGO}
-BUILD_DEPENDS+=		swig3.0:devel/swig30
-RUN_DEPENDS+=		swig3.0:devel/swig30
+BUILD_DEPENDS+=		swig:devel/swig
+RUN_DEPENDS+=		swig:devel/swig
 CONFIGURE_ARGS+=	--enable-swig
-CONFIGURE_ENV+=		SWIG="${LOCALBASE}/bin/swig3.0"
+CONFIGURE_ENV+=		SWIG="${LOCALBASE}/bin/swig"
 .else
 CONFIGURE_ARGS+=	--disable-swig
 CONFIGURE_ENV+=		SWIG="/nonexistent"
