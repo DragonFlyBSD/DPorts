@@ -2,13 +2,11 @@
 
 PORTNAME=	wayvnc
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.1.2
-PORTREVISION=	1
+DISTVERSION=	0.2.0
 CATEGORIES=	net
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES+=	720b127dee00.patch:-p1 # https://github.com/any1/wayvnc/pull/31
-PATCHFILES+=	d61007661480.patch:-p1 # https://github.com/any1/wayvnc/pull/31
+PATCHFILES+=	72dd8a159c44.patch:-p1 # https://github.com/any1/wayvnc/pull/59
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	VNC server for wlroots-based compositors
@@ -16,9 +14,9 @@ COMMENT=	VNC server for wlroots-based compositors
 LICENSE=	ISCL
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BUILD_DEPENDS=	evdev-proto>0:devel/evdev-proto \
-		${LOCALBASE}/include/libdrm/drm_fourcc.h:graphics/libdrm
-LIB_DEPENDS=	libuv.so:devel/libuv \
+BUILD_DEPENDS=	evdev-proto>0:devel/evdev-proto
+LIB_DEPENDS=	libaml.so:devel/aml \
+		libdrm.so:graphics/libdrm \
 		libwayland-client.so:graphics/wayland \
 		libneatvnc.so:net/neatvnc \
 		libxkbcommon.so:x11/libxkbcommon
@@ -26,10 +24,20 @@ LIB_DEPENDS=	libuv.so:devel/libuv \
 USES=		compiler:c11 meson pkgconfig xorg
 USE_GITHUB=	yes
 USE_XORG=	pixman
-USE_GL=		egl glesv2
 USE_LDCONFIG=	yes
 GH_ACCOUNT=	any1
 PLIST_FILES=	bin/${PORTNAME}
-PORTDATA=	*
+
+OPTIONS_DEFINE=	OPENGL
+
+OPENGL_USES=		gl
+OPENGL_USE=		GL=gbm
+OPENGL_MESON_ENABLED=	screencopy-dmabuf
+
+post-patch:
+# Extract (snapshot) version from the port instead of meson.build
+	@${REINPLACE_CMD} -i .nogit -e 's/git.found()/false/' \
+		-e '/project_version/s/@0@/${DISTVERSIONFULL}/' \
+		${WRKSRC}/meson.build
 
 .include <bsd.port.mk>
