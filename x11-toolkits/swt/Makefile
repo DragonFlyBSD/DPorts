@@ -12,9 +12,9 @@ COMMENT=	Standard Widget Toolkit for Java
 
 LICENSE=	EPL
 
-ONLY_FOR_ARCHS=	amd64 i386 powerpc64
+ONLY_FOR_ARCHS=	aarch64 amd64 i386 powerpc64
 
-USES=		gl gnome pkgconfig zip:infozip xorg
+USES=		compiler:c++11-lang gl gnome pkgconfig zip:infozip xorg
 
 USE_ANT=	yes
 USE_GL=		glu gl
@@ -43,6 +43,7 @@ CAIRO_LIB_DEPENDS=	libcairo.so:graphics/cairo
 CAIRO_PLIST_FILES=	lib/libswt-cairo-gtk-${SWT_VERSION}.so
 CAIRO_MAKE_ENV=		MAKE_CAIRO=make_cairo
 
+DISTNAME_aarch64=	${PORTNAME}-${DISTVERSION}-gtk-linux-x86_64
 DISTNAME_x86_64=		${PORTNAME}-${DISTVERSION}-gtk-linux-x86_64
 DISTNAME_i386=		${PORTNAME}-${DISTVERSION}-gtk-linux-x86
 # The source code for x86_64 and ppc64 is identical, so prefer x86_64 tarball
