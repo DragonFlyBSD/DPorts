@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	otrs
-DISTVERSION=	6_0_25
 DISTVERSIONPREFIX=	rel-
+DISTVERSION=	6_0_29
 CATEGORIES=	www
 
 MAINTAINER=	m.tsatsenko@gmail.com
@@ -48,7 +48,8 @@ BUILD_DEPENDS=	p5-Archive-Zip>=0:archivers/p5-Archive-Zip \
 		p5-XML-Parser>=0:textproc/p5-XML-Parser \
 		p5-XML-LibXML>=0:textproc/p5-XML-LibXML \
 		p5-XML-LibXML-Simple>=0:textproc/p5-XML-LibXML-Simple \
-		p5-XML-LibXSLT>=0:textproc/p5-XML-LibXSLT
+		p5-XML-LibXSLT>=0:textproc/p5-XML-LibXSLT \
+		p5-Locale-Codes>=0:misc/p5-Locale-Codes
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		cpe shebangfix perl5 tar:bzip2
@@ -80,7 +81,7 @@ SUB_FILES=	pkg-message
 SUB_LIST=	OTRS_USER=${USERS} OTRS_GROUP=${USERS} WWWOWN=${WWWOWN}
 NO_ARCH=	YES
 
-ROOT_DIRS_LIST=	Kernel bin scripts
+ROOT_DIRS_LIST=	Kernel bin scripts doc
 BIN_DIRS_LIST=	"" cgi-bin fcgi-bin
 PM_DIRS_LIST=	Kernel Kernel/Config Kernel/Config/Files Kernel/Language \
 		Modules Kernel/Output/HTML Kernel/Output/HTML/Lite \
