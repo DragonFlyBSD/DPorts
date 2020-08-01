@@ -44,6 +44,7 @@ lib/libKF5ConfigWidgets.so.%%KDE_FRAMEWORKS_VERSION%%
 man/ca/man1/preparetips5.1.gz
 man/de/man1/preparetips5.1.gz
 man/es/man1/preparetips5.1.gz
+man/fr/man1/preparetips5.1.gz
 man/it/man1/preparetips5.1.gz
 man/man1/preparetips5.1.gz
 man/nl/man1/preparetips5.1.gz
@@ -58,6 +59,8 @@ share/locale/ar/LC_MESSAGES/kconfigwidgets5.mo
 share/locale/ar/kf5_entry.desktop
 share/locale/as/LC_MESSAGES/kconfigwidgets5.mo
 share/locale/as/kf5_entry.desktop
+share/locale/az/LC_MESSAGES/kconfigwidgets5.mo
+share/locale/az/kf5_entry.desktop
 share/locale/be/LC_MESSAGES/kconfigwidgets5.mo
 share/locale/be/kf5_entry.desktop
 share/locale/be@latin/LC_MESSAGES/kconfigwidgets5.mo
