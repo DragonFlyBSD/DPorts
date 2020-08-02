@@ -3,7 +3,7 @@
 
 PORTNAME=	saga
 PORTVERSION=	7.6.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	math
 MASTER_SITES=	SF/saga-gis/SAGA%20-%20${PORTVERSION:C/\.[[:digit:]]\.[[:digit:]]*$//}/SAGA%20-%20${PORTVERSION}
 
@@ -14,7 +14,7 @@ LICENSE=	GPLv2 LGPL21
 LICENSE_COMB=	multi
 
 BUILD_DEPENDS=	\
-		swig3.0:devel/swig30
+		swig:devel/swig
 LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libfftw3.so:math/fftw3 \
 		libgdal.so:graphics/gdal \
@@ -29,7 +29,7 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libsvm.so:science/libsvm \
 		libtbb.so:devel/tbb \
 		libtiff.so:graphics/tiff
-RUN_DEPENDS:=	swig3.0:devel/swig30
+RUN_DEPENDS:=	swig:devel/swig
 
 USES=		autoreconf compiler:c++11-lib dos2unix gnome \
 		iconv:wchar_t libtool localbase pkgconfig python
@@ -38,7 +38,7 @@ USE_WX=		3.0+
 
 CONFIGURE_ARGS=	CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" \
 		--enable-python --with-system-svm
-CONFIGURE_ENV=	SWIG="${LOCALBASE}/bin/swig3.0"
+CONFIGURE_ENV=	SWIG="${LOCALBASE}/bin/swig"
 GNU_CONFIGURE=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
