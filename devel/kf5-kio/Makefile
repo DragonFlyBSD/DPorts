@@ -2,8 +2,6 @@
 
 PORTNAME=	kio
 DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
-PORTREVISION=	1
-KDE_FRAMEWORKS_VERSION=	5.70.1
 CATEGORIES=	devel kde kde-frameworks
 
 MAINTAINER=	kde@FreeBSD.org
@@ -17,7 +15,8 @@ USE_KDE=	archive auth bookmarks codecs completion config \
 		i18n iconthemes itemviews jobwidgets kded \
 		notifications service solid sonnet textwidgets wallet \
 		widgetsaddons windowsystem xmlgui
-USE_QT=		buildtools_build concurrent core dbus gui network \
-		qmake_build script widgets x11extras xml
+USE_QT=		concurrent core dbus declarative gui network \
+		script widgets x11extras xml \
+		buildtools_build qmake_build
 
 .include <bsd.port.mk>
