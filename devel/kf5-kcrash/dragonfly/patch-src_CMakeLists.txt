@@ -1,0 +1,11 @@
+--- src/CMakeLists.txt.orig	2020-07-04 09:47:40 UTC
++++ src/CMakeLists.txt
+@@ -31,7 +31,7 @@ target_link_libraries(KF5Crash PRIVATE K
+ # in libc.so.7 -- it is in crt1.o, and so not available to shared
+ # libraries. We just drop the normal no-undefined flag for library building
+ # here, on the assumption that Linux CI will catch any *actual* undefineds.
+-if (CMAKE_SYSTEM_NAME MATCHES "FreeBSD")
++if (CMAKE_SYSTEM_NAME MATCHES "FreeBSD|DragonFly")
+     string(REPLACE "-Wl,--no-undefined" "" CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS}")
+ endif ()
+ 
