@@ -268,10 +268,8 @@ share/desktop-directories/kf5-utilities-xutils.directory
 share/desktop-directories/kf5-utilities.directory
 share/doc/HTML/ca/kcontrol/screenlocker/index.cache.bz2
 share/doc/HTML/ca/kcontrol/screenlocker/index.docbook
-share/doc/HTML/ca/kcontrol/translations/go-top.png
 share/doc/HTML/ca/kcontrol/translations/index.cache.bz2
 share/doc/HTML/ca/kcontrol/translations/index.docbook
-share/doc/HTML/ca/kcontrol/translations/list-remove.png
 share/doc/HTML/ca/klipper/index.cache.bz2
 share/doc/HTML/ca/klipper/index.docbook
 share/doc/HTML/ca/klipper/klipper-widget.png
@@ -943,6 +941,7 @@ share/locale/da/LC_MESSAGES/plasma_applet_org.kde.plasma.mediacontroller.mo
 share/locale/da/LC_MESSAGES/plasma_applet_org.kde.plasma.notifications.mo
 share/locale/da/LC_MESSAGES/plasma_applet_org.kde.plasma.panelspacer.mo
 share/locale/da/LC_MESSAGES/plasma_applet_org.kde.plasma.private.systemtray.mo
+share/locale/da/LC_MESSAGES/plasma_applet_org.kde.plasma.systemmonitor.mo
 share/locale/da/LC_MESSAGES/plasma_containmentactions_applauncher.mo
 share/locale/da/LC_MESSAGES/plasma_containmentactions_contextmenu.mo
 share/locale/da/LC_MESSAGES/plasma_containmentactions_switchwindow.mo
@@ -1131,6 +1130,7 @@ share/locale/en_GB/LC_MESSAGES/plasma_applet_org.kde.plasma.mediacontroller.mo
 share/locale/en_GB/LC_MESSAGES/plasma_applet_org.kde.plasma.notifications.mo
 share/locale/en_GB/LC_MESSAGES/plasma_applet_org.kde.plasma.panelspacer.mo
 share/locale/en_GB/LC_MESSAGES/plasma_applet_org.kde.plasma.private.systemtray.mo
+share/locale/en_GB/LC_MESSAGES/plasma_applet_org.kde.plasma.systemmonitor.mo
 share/locale/en_GB/LC_MESSAGES/plasma_containmentactions_applauncher.mo
 share/locale/en_GB/LC_MESSAGES/plasma_containmentactions_contextmenu.mo
 share/locale/en_GB/LC_MESSAGES/plasma_containmentactions_switchwindow.mo
@@ -1362,6 +1362,7 @@ share/locale/eu/LC_MESSAGES/plasma_applet_org.kde.plasma.mediacontroller.mo
 share/locale/eu/LC_MESSAGES/plasma_applet_org.kde.plasma.notifications.mo
 share/locale/eu/LC_MESSAGES/plasma_applet_org.kde.plasma.panelspacer.mo
 share/locale/eu/LC_MESSAGES/plasma_applet_org.kde.plasma.private.systemtray.mo
+share/locale/eu/LC_MESSAGES/plasma_applet_org.kde.plasma.systemmonitor.mo
 share/locale/eu/LC_MESSAGES/plasma_containmentactions_applauncher.mo
 share/locale/eu/LC_MESSAGES/plasma_containmentactions_contextmenu.mo
 share/locale/eu/LC_MESSAGES/plasma_containmentactions_switchwindow.mo
@@ -1441,6 +1442,7 @@ share/locale/fi/LC_MESSAGES/plasma_applet_org.kde.plasma.mediacontroller.mo
 share/locale/fi/LC_MESSAGES/plasma_applet_org.kde.plasma.notifications.mo
 share/locale/fi/LC_MESSAGES/plasma_applet_org.kde.plasma.panelspacer.mo
 share/locale/fi/LC_MESSAGES/plasma_applet_org.kde.plasma.private.systemtray.mo
+share/locale/fi/LC_MESSAGES/plasma_applet_org.kde.plasma.systemmonitor.mo
 share/locale/fi/LC_MESSAGES/plasma_containmentactions_applauncher.mo
 share/locale/fi/LC_MESSAGES/plasma_containmentactions_contextmenu.mo
 share/locale/fi/LC_MESSAGES/plasma_containmentactions_switchwindow.mo
@@ -2352,6 +2354,7 @@ share/locale/ko/LC_MESSAGES/plasma_applet_org.kde.plasma.mediacontroller.mo
 share/locale/ko/LC_MESSAGES/plasma_applet_org.kde.plasma.notifications.mo
 share/locale/ko/LC_MESSAGES/plasma_applet_org.kde.plasma.panelspacer.mo
 share/locale/ko/LC_MESSAGES/plasma_applet_org.kde.plasma.private.systemtray.mo
+share/locale/ko/LC_MESSAGES/plasma_applet_org.kde.plasma.systemmonitor.mo
 share/locale/ko/LC_MESSAGES/plasma_containmentactions_applauncher.mo
 share/locale/ko/LC_MESSAGES/plasma_containmentactions_contextmenu.mo
 share/locale/ko/LC_MESSAGES/plasma_containmentactions_switchwindow.mo
@@ -4204,6 +4207,7 @@ share/locale/zh_CN/LC_MESSAGES/plasma_applet_org.kde.plasma.mediacontroller.mo
 share/locale/zh_CN/LC_MESSAGES/plasma_applet_org.kde.plasma.notifications.mo
 share/locale/zh_CN/LC_MESSAGES/plasma_applet_org.kde.plasma.panelspacer.mo
 share/locale/zh_CN/LC_MESSAGES/plasma_applet_org.kde.plasma.private.systemtray.mo
+share/locale/zh_CN/LC_MESSAGES/plasma_applet_org.kde.plasma.systemmonitor.mo
 share/locale/zh_CN/LC_MESSAGES/plasma_containmentactions_applauncher.mo
 share/locale/zh_CN/LC_MESSAGES/plasma_containmentactions_contextmenu.mo
 share/locale/zh_CN/LC_MESSAGES/plasma_containmentactions_switchwindow.mo
