@@ -1,11 +1,11 @@
---- make.sh.intermediate	2020-04-29 15:22:32 UTC
-+++ make.sh
-@@ -107,7 +107,7 @@ cp Makefile.in Makefile
- sed_replace "s/\\\$(CFLAGS)/$CFLAGS/g" Makefile
- sed_replace "s/\\\$(LIBS)/$LIBS/g" Makefile
- sed_replace "s/\\\$(LIB_VERSION)/$LIB_VERSION/g" Makefile
--make $1 $2 $3
-+make $1 $2 $3 || exit 1
- 
- if [ "$1" = "clean" ]; then
-   /bin/rm -f Makefile _os_define.h
+--- make.sh.orig	2020-08-09 16:30:23.683928000 +0200
++++ make.sh	2020-08-09 16:56:12.378969000 +0200
+@@ -96,7 +96,7 @@
+ {
+     sed_cmd=$1
+     filename=$2
+-    if [ "$uname" = "FreeBSD" -o "$name" = "DragonFly" ]; then
++    if [ "$uname" = "FreeBSD" -o "$uname" = "DragonFly" ]; then
+        sed -i "" "$sed_cmd" $filename
+     else
+        sed -i "$sed_cmd" $filename
