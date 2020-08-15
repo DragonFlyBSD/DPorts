@@ -1,3 +1,5 @@
+
+.if 0 # XXX
 # zrj: justdoitTM will avoid installing llvmX0 for all Xorg ports.
 STATIC_LLVM=yes
 
@@ -8,3 +10,14 @@ dfly-patch:
 		${WRKSRC}/src/gallium/targets/va/Makefile.in				\
 		${WRKSRC}/src/gallium/targets/vdpau/Makefile.in				\
 		${WRKSRC}/src/gallium/targets/xvmc/Makefile.in
+.endif
+
+# prune some intermediates to fix stage-qa XXX
+dfly-install:
+	${RM} -rv ${STAGEDIR}/${LOCALBASE}/include/EGL
+	${RM} -rv ${STAGEDIR}/${LOCALBASE}/include/GLES2
+	${RM} -rv ${STAGEDIR}/${LOCALBASE}/include/GLES3
+	${RM} -v  ${STAGEDIR}/${LOCALBASE}/lib/libEGL.so*
+	${RM} -v  ${STAGEDIR}/${LOCALBASE}/lib/libGLESv2.so*
+	${RM} -v  ${STAGEDIR}/${LOCALBASE}/libdata/pkgconfig/egl.pc
+	${RM} -v  ${STAGEDIR}/${LOCALBASE}/libdata/pkgconfig/glesv2.pc
