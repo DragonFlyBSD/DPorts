@@ -17,7 +17,6 @@ LICENSE_FILE=	${WRKSRC}/Copyright.txt
 
 LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libexpat.so:textproc/expat2 \
-		libjsoncpp.so:devel/jsoncpp \
 		libuv.so:devel/libuv \
 		librhash.so:security/rhash
 

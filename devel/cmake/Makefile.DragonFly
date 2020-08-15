@@ -1,3 +1,7 @@
+
+# avoid compile dep on meson through json, use internal one
+CONFIGURE_ARGS+=	--no-system-jsoncpp
+
 .if exists(/usr/lib/priv/libprivate_ncursesw.so)
 dfly-patch:
 	${REINPLACE_CMD} -e "s@CYGWIN@true@g" \
