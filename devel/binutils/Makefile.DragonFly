@@ -4,3 +4,9 @@
 dfly-patch:
 	(cd ${WRKSRC} && ${PATCH} ${PATCH_ARGS} < ${DFLY_PATCHDIR}/zzz-patch-targets)
 .endif
+
+# fix stage qa plist
+.if ${FLAVOR:Mriscv32_unknown_elf}
+dfly-install:
+	${RM} -v ${STAGEDIR}${LOCALBASE}/riscv32-unknown-elf/lib/ldscripts/elf64lriscv.*
+.endif
