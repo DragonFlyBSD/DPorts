@@ -1,0 +1,13 @@
+
+# disable run time dep on textproc/highlight (qt5-base)
+# the highlight.py needs patching anyway, so use vim as build dep
+BUILD_DEPENDS:=	${BUILD_DEPENDS:Nhighlight*}
+RUN_DEPENDS:=	${RUN_DEPENDS:Nhighlight*}
+
+OPTIONS_DEFINE+=	HIGHLIGHT
+#OPTIONS_DEFAULT+=	HIGHLIGHT
+
+HIGHLIGHT_BUILD_DEPENDS= xxd:editors/vim-console
+HIGHLIGHT_RUN_DEPENDS=	 xxd:editors/vim-console
+HIGHLIGHT_CONFIGURE_ON=	 --with-highlight=vim
+HIGHLIGHT_CONFIGURE_OFF= --with-highlight=no
