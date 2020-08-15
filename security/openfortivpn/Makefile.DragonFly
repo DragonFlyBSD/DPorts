@@ -4,6 +4,8 @@ USES+=	gmake
 CFLAGS+=	-I${OPENSSLINC}
 LDFLAGS+=	-L${OPENSSLLIB}
 
+PKGMESSAGE=	${DFLY_FILESDIR}/pkg-message
+
 # zrj: XXX work around few kernel leaks to userland
 dfly-patch:
 	${REINPLACE_CMD} -e 's@xFreeBSD@xDragonFly@g' \

@@ -1,0 +1,15 @@
+[
+{ type: install
+  message: <<EOM
+NOTE: currently dns servers will be replaced in /etc/resolv.conf and not
+restored once tunnel is destroyed, original entries will need to be added
+manually if dhclient is default. The dhcpcd client works as expected.
+Also you may need to create /dev/tunX interface first by running
+"ifconfig tun2 create" or by adding cloned_interfaces in /etc/rc.conf.
+Add the following to create /dev/tun0 automatically and use dhcpcd:
+
+cloned_interfaces="tun0"
+dhcp_client="dhcpcd"
+EOM
+}
+]
