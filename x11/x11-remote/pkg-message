@@ -1,0 +1,15 @@
+[
+{ type: install
+  message: <<EOM
+To use ssh -X you need to add the following line to /etc/sshd_config:
+  X11Forwarding yes
+and restart sshd with "rcrestart sshd" or "service sshd restart".
+Make sure /etc/hosts contains "127.0.0.1 HOSTNAME" as in hostname(1).
+
+Some utilities might not function correctly without the RANDR extension
+(Xlib:  extension "RANDR" missing on display "localhost:10.0".).
+In that case, connect to the remote host using "ssh -Y user@remote" to
+enable trusted X11 forwarding (use this only on trusted remote servers).
+EOM
+}
+]
