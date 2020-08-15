@@ -1,1 +1,3 @@
-USE_GCC_VERSION= 9
+
+# disable profiling on gcc
+CMAKE_ARGS+=	-DCODE_COVERAGE:BOOL=OFF
