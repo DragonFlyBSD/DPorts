@@ -1,0 +1,11 @@
+--- gcc/configure.orig	2020-03-12 11:08:30 UTC
++++ gcc/configure
+@@ -29280,7 +29280,7 @@ fi
+ 	 # realistically usable GNU/Hurd configurations.
+ 	 # All supported versions of musl provide it as well
+ 	 gcc_cv_libc_provides_ssp=yes;;
+-       *-*-darwin* | *-*-freebsd* | *-*-netbsd*)
++       *-*-darwin* | *-*-dragonfly* | *-*-freebsd* | *-*-netbsd*)
+ 	 ac_fn_cxx_check_func "$LINENO" "__stack_chk_fail" "ac_cv_func___stack_chk_fail"
+ if test "x$ac_cv_func___stack_chk_fail" = xyes; then :
+   gcc_cv_libc_provides_ssp=yes
