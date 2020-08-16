@@ -1,3 +1,0 @@
-
-# peeter007: FREERDP option segfaults
-OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NFREERDP}
