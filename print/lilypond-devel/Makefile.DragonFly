@@ -1,2 +1,2 @@
 # unhurt lily
-CXXFLAGS+=	-Wno-sequence-point
+CXXFLAGS+=	-Wno-sequence-point -Wno-suggest-override
