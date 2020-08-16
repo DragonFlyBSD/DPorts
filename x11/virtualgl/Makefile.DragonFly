@@ -1,0 +1,7 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e "s@FreeBSD@DragonFly@g" \
+		${WRKSRC}/server/vglserver_config \
+		${WRKSRC}/server/fakerconfig.cpp \
+		${WRKSRC}/server/CMakeLists.txt \
+		${WRKSRC}/CMakeLists.txt
