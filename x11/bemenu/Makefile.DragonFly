@@ -1,0 +1,15 @@
+
+USES+=	gmake
+
+# files/ uses -c foo/bar.c implicit -o foo/bar.o scheme
+MAKEFILE=	GNUmakefile
+
+OPTIONS_MULTI_BACKEND:=	${OPTIONS_MULTI_BACKEND:NWAYLAND}
+PLIST_SUB+=	WAYLAND="@comment "
+
+CFLAGS+=	-fPIC
+
+dfly-patch:
+	${REINPLACE_CMD} -e "/renderers/s@bemenu-renderer-wayland.so@@g" \
+			 -e "/install-renderers/s@install-wayland@@g" \
+		${WRKSRC}/GNUmakefile
