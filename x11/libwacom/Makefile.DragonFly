@@ -1,0 +1,2 @@
+# ld.gold: error: wacom@sha/libwacom_libwacom-deprecated.c.o: multiple definition of 'libwacom_match_new'
+MAKE_ENV+= LDVER=ld.bfd
