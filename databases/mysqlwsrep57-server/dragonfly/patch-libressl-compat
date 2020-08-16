@@ -1,0 +1,22 @@
+--- include/my_openssl.h.orig	2020-05-27 10:17:47 UTC
++++ include/my_openssl.h
+@@ -51,7 +51,7 @@ extern "C" {
+  */
+ static inline int mysql_OPENSSL_init()
+ {
+-#if defined(HAVE_STATIC_OPENSSL)
++#if defined(HAVE_STATIC_OPENSSL) && defined(OPENSSL_INIT_NO_ATEXIT)
+   return OPENSSL_init_crypto(OPENSSL_INIT_NO_ATEXIT, NULL);
+ #else
+   return SSL_library_init();
+--- rapid/plugin/group_replication/libmysqlgcs/src/bindings/xcom/xcom/xcom_ssl_transport.c.orig	2020-05-27 10:17:47 UTC
++++ rapid/plugin/group_replication/libmysqlgcs/src/bindings/xcom/xcom/xcom_ssl_transport.c
+@@ -529,7 +529,7 @@ int xcom_init_ssl(const char *server_key
+     break e.g. ODBC clients (if the client also uses SSL).
+   */
+ 
+-#if defined(HAVE_STATIC_OPENSSL)
++#if defined(HAVE_STATIC_OPENSSL) && defined(OPENSSL_INIT_NO_ATEXIT)
+   OPENSSL_init_crypto(OPENSSL_INIT_NO_ATEXIT, NULL);
+ #else
+   SSL_library_init();
