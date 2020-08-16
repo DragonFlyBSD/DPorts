@@ -3,7 +3,7 @@
 
 PORTNAME=	spectrwm
 DISTVERSIONPREFIX=	SPECTRWM_
-DISTVERSION=	3_3_0
+DISTVERSION=	3_4_1
 CATEGORIES=	x11-wm
 
 MAINTAINER=	zeising@FreeBSD.org
@@ -23,7 +23,7 @@ OPTIONS_DEFINE= EXAMPLES
 
 .include	<bsd.port.options.mk>
 
-USES=		xorg
+USES=		compiler:c11 xorg
 USE_XORG=	x11 xcb xcursor xft xrandr xt
 
 USE_LDCONFIG=	yes
