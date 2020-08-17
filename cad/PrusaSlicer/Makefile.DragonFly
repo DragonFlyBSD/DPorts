@@ -3,3 +3,7 @@ USES+=	alias
 
 # zrj: too noisy
 CXXFLAGS+=	-Wno-return-type -Wno-ignored-attributes
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@ STREQUAL "\(FreeBSD\)"@ MATCHES "\1|DragonFly"@g' \
+		${WRKSRC}/src/hidapi/CMakeLists.txt
