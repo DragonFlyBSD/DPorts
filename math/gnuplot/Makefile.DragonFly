@@ -1,0 +1,4 @@
+
+# zrj: disable wxwidgets for now, still enough for kcollect -w usage.png
+CONFIGURE_ARGS+=	--disable-wxwidgets --without-wx
+.undef USE_WX
