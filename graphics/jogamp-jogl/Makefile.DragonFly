@@ -3,5 +3,5 @@
 dfly-patch:
 	${REINPLACE_CMD} -e 's@BITS=32@BITS=64@g'	\
 			 -e "s@-fno-rtti@-isystem ${LOCALBASE}/include@g"	\
-		${WRKSRC}/../jogl/make/build-oculusvr.xml	\
-		${WRKSRC}/../gluegen/Makefile
+		${BUILD_WRKSRC}/build-oculusvr.xml	\
+		${PATCH_WRKSRC}/gluegen/Makefile
