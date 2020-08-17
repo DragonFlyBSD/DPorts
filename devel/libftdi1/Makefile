@@ -1,31 +1,34 @@
 # $FreeBSD$
 
 PORTNAME=	libftdi1
-PORTVERSION=	1.4
-PORTREVISION=	15
+PORTVERSION=	1.5
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.intra2net.com/en/developer/libftdi/download/
 
 MAINTAINER=	bsam@FreeBSD.org
 COMMENT=	Library (using libusb) to talk to FTDI chips
 
-LICENSE=	GPLv2
+LICENSE=		GPLv2 LGPL21
+LICENSE_COMB=		multi
+LICENSE_FILE_GPLv2=	${WRKSRC}/COPYING.GPL
+LICENSE_FILE_LGPL21=	${WRKSRC}/COPYING.LIB
 
-BROKEN_sparc64=		Does not build: fails to link
+BROKEN_sparc64=	Does not build: fails to link
 
 LIB_DEPENDS=	libconfuse.so:devel/libconfuse
-
-OPTIONS_DEFINE=		PYTHON BOOST DOCS EXAMPLES
-OPTIONS_DEFAULT=	PYTHON BOOST
-OPTIONS_SUB=		yes
-
-BOOST_DESC=	Build with boost
-PYTHON_DESC=	Build Python bindings
 
 USES=		cmake:insource compiler:c++11-lang gettext-runtime pkgconfig tar:bzip2
 USE_LDCONFIG=	yes
 
-PORTDOCS=	COPYING.LIB ChangeLog README
+OPTIONS_DEFINE=	PYTHON BOOST DOCS EXAMPLES
+OPTIONS_DEFAULT=PYTHON BOOST
+OPTIONS_SUB=	yes
+
+BOOST_DESC=	Build with boost
+PYTHON_DESC=	Build Python bindings
+
+PORTDOCS=	ChangeLog README
 
 .include <bsd.port.options.mk>
 
@@ -46,8 +49,7 @@ CMAKE_ARGS+=	-DEXAMPLES:BOOL=false
 USES+=		python
 CMAKE_ARGS+=	-DPYTHON_BINDINGS:BOOL=true \
 		-DDOCUMENTATION:BOOL=false
-BUILD_DEPENDS+=	swig3.0:devel/swig30
-BINARY_ALIAS=	swig=swig3.0
+BUILD_DEPENDS+=	swig:devel/swig
 .else
 CMAKE_ARGS+=	-DPYTHON_BINDINGS:BOOL=false
 .endif
