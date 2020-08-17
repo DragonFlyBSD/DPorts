@@ -1,0 +1,2 @@
+
+CONFIGURE_ARGS+=	--with-blas-libs="-L${LOCALBASE}/lib -lopenblas"
