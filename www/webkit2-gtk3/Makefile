@@ -99,13 +99,6 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/lib/browser/plugins|${BROWSER_PLUGINS_DIR}|' \
 		${WRKSRC}/Source/WebKit/Shared/Plugins/unix/PluginSearchPath.cpp
 
-pre-configure:
-# .if !exists() evaluates too early before cairo has a chance to be installed
-	@if ! pkg-config --exists cairo-egl; then \
-		${ECHO_MSG} "${PKGNAME}: Needs cairo with OPENGL support enabled."; \
-		${FALSE}; \
-	fi
-
 post-install:
 	@${RLN} ${STAGEDIR}${PREFIX}/libexec/webkit2gtk-4.0/jsc \
 		${STAGEDIR}${PREFIX}/bin/jsc-4
