@@ -1,4 +1,7 @@
 
+# don't know how to make ... /progress/p\. Stop
+USES+=	gmake
+
 OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NGBM}
 
 dfly-patch:
