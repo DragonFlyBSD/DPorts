@@ -6,3 +6,6 @@
 
 # no pulse
 OPTIONS_DEFAULT:=       ${OPTIONS_DEFAULT:NPULSEAUDIO}
+
+# but actually provide needed components for like ecore-audio.pc for edje.pc
+PLIST_SUB+=	AUDIO=""
