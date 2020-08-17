@@ -1,8 +1,10 @@
 
 dfly-patch:
-	${CP} ${WRKSRC}/src/pulp/pulp.cfg.freebsd ${WRKSRC}/src/pulp/pulp.cfg.dragonfly
+	${CP} ${WRKSRC}/pulp/pulp.cfg.freebsd ${WRKSRC}/pulp/pulp.cfg.dragonfly
 	${REINPLACE_CMD} -e 's@freebsd@dragonfly@g' \
-		${WRKSRC}/src/pulp/solvers.py
+		${WRKSRC}/pulp/apis/core.py
 	${REINPLACE_CMD} -e '/pulp.cfg./s@linux@dragonfly@g' \
-			 -e '/cbc.linux/d' -e '/cbc.win/d' \
+			 -e "s,'pulp\.solverdir\.cbc\.linux.*,,g" -e '/cbc.win/d' \
 		${WRKSRC}/setup.py
+	${REINPLACE_CMD} -e "s,osx,dragonfly,g" \
+		${WRKSRC}/PuLP.egg-info/SOURCES.txt
