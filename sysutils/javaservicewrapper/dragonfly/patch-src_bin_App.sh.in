@@ -1,0 +1,33 @@
+--- src/bin/App.sh.in.orig	2020-08-18 10:08:52.891767000 +0200
++++ src/bin/App.sh.in	2020-08-18 10:47:24.259253000 +0200
+@@ -1147,7 +1147,7 @@
+                     # The ps statement below looks for the specific wrapper command running as
+                     #  the pid.  If it is not found then the pid file is considered to be stale.
+                     case "$DIST_OS" in
+-                        'freebsd')
++                        'freebsd'|'dragonfly')
+                             pidtest=`$PS_BIN -p $pid -o args | tail -1`
+                             if [ "X$pidtest" = "XCOMMAND" ]
+                             then 
+@@ -2190,8 +2190,8 @@
+                 ln -s "/etc/rc.d/init.d/$APP_NAME" "/etc/rc.d/rc2.d/S${APP_RUN_LEVEL_S}$APP_NAME_LOWER"
+             fi
+         fi
+-    elif [ "$DIST_OS" = "freebsd" ] ; then
+-        eval echo `gettext 'Detected FreeBSD:'`
++    elif [ "$DIST_OS" = "freebsd" -o "$DIST_OS" = "dragonfly" ] ; then
++        eval echo `gettext 'Detected FreeBSD/DragonFly:'`
+         if [ $installedStatus -ne $SERVICE_NOT_INSTALLED ] ; then
+             eval echo `gettext ' The $APP_LONG_NAME daemon is already installed.'`
+         else
+@@ -2445,8 +2445,8 @@
+             eval echo `gettext ' The $APP_LONG_NAME daemon is not currently installed.'`
+             exit 1
+         fi
+-    elif [ "$DIST_OS" = "freebsd" ] ; then
+-        eval echo `gettext 'Detected FreeBSD:'`
++    elif [ "$DIST_OS" = "freebsd" -o "$DIST_OS" = "dragonfly" ] ; then
++        eval echo `gettext 'Detected FreeBSD/DragonFly:'`
+         if [ -f "/etc/rc.d/$APP_NAME" -o -L "/etc/rc.d/$APP_NAME" ] ; then
+             stopit "0"
+             eval echo `gettext ' Removing the $APP_LONG_NAME daemon...'`
