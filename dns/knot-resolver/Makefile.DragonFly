@@ -1,1 +1,6 @@
+
+# needed to avoid patching knot2 public headers for now
 USES+=	alias
+
+# fix pkg-plist, meson really fails to detect base SSL libs?
+PLIST_FILES+=	lib/knot-resolver/debug_opensslkeylog.so
