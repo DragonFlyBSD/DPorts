@@ -1,12 +1,12 @@
---- bin/scilab.intermediate	2016-04-09 20:54:57 UTC
+--- bin/scilab.intermediate	2020-04-09 20:54:57 UTC
 +++ bin/scilab
-@@ -580,6 +580,9 @@ detect_java_vm() {
-                 *FreeBSD*)
-                     proc=$MODEL
+@@ -624,6 +624,9 @@ detect_java_vm() {
+                 *darwin* | *Darwin*) # MacOS X
+                     set_macosx_java_vm
                      ;;
 +                *DragonFly*)
 +                    proc=amd64
 +                    ;;
-                 *)
-                     echo "Could not find the Java configuration for the OS <${OS}>. Please contact us or submit a bug report with your detailed configuration http://bugzilla.scilab.org/"
-                     echo "Fallback on the model <${MODEL}> found by uname -m"
+                 *FreeBSD*)
+                     proc=$MODEL
+                     ;;
