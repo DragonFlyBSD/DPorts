@@ -1,0 +1,58 @@
+From 82540c5428d3818b64d6a8aefb601e722520651f Mon Sep 17 00:00:00 2001
+From: Branden Archer <b.m.archer4@gmail.com>
+Date: Sun, 2 Aug 2020 16:33:15 -0700
+Subject: [PATCH] Add extra NULL argument at the end of fail* APIs
+
+The fail, fail_unless, and fail_if APIS were expected to contain
+a message explaining the failure. This was never enforced, and
+it was possible to write unit tests without providing messages.
+
+In github.com/libcheck/check/pull/249 a change was
+introduced to add printf argument checking to the Check assert
+APIS, including the fail APIs. There were a few fixes for this
+in github.com/libcheck/check/releases/tag/0.15.1. Those changes
+proved problematic for the uses of the fail* APIs without arguments,
+as those uses were now flagged as missing the necessary arguments.
+
+A fix proposed by heftig in github.com/libcheck/check/issues/293
+is to add a new NULL to the end of every fail* call in the macro
+itself. For users of these APIs who do pass a message there will
+be a new warning about too many arguments. As the fail APIs are
+deprecated, this new warning is a reasonable trade-off, and can
+be avoided by switching fail* calls to ck_assert* calls.
+---
+ src/check.h.in | 9 ++++++---
+ 1 file changed, 6 insertions(+), 3 deletions(-)
+
+--- src/check.h.in.orig
++++ src/check.h.in
+@@ -466,7 +466,10 @@ static void __testname ## _fn (int _i CK_ATTRIBUTE_UNUSED)
+  *
+  * This call is deprecated.
+  */
+-#define fail_unless ck_assert_msg
++#define fail_unless(expr, ...) \
++  (expr) ? \
++    _mark_point(__FILE__, __LINE__) : \
++    _ck_assert_failed(__FILE__, __LINE__, "Assertion '"#expr"' failed" , ## __VA_ARGS__, NULL)
+ 
+ /*
+  * Fail the test case if expr is false
+@@ -480,7 +483,7 @@ static void __testname ## _fn (int _i CK_ATTRIBUTE_UNUSED)
+  */
+ #define fail_if(expr, ...)\
+   (expr) ? \
+-     _ck_assert_failed(__FILE__, __LINE__, "Failure '"#expr"' occurred" , ## __VA_ARGS__) \
++     _ck_assert_failed(__FILE__, __LINE__, "Failure '"#expr"' occurred" , ## __VA_ARGS__, NULL) \
+      : _mark_point(__FILE__, __LINE__)
+ 
+ /*
+@@ -488,7 +491,7 @@ static void __testname ## _fn (int _i CK_ATTRIBUTE_UNUSED)
+  *
+  * This call is deprecated.
+  */
+-#define fail ck_abort_msg
++#define fail(...) _ck_assert_failed(__FILE__, __LINE__, "Failed" , ## __VA_ARGS__, NULL)
+ 
+ /*
+  * This is called whenever an assertion fails.
