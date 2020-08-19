@@ -1,0 +1,20 @@
+--- src/3rdparty/chromium/build/config/compiler/BUILD.gn.intermediate	2020-08-18 15:18:51.000000000 +0000
++++ src/3rdparty/chromium/build/config/compiler/BUILD.gn
+@@ -1506,7 +1506,6 @@ config("default_warnings") {
+       cflags_cc += [ "-Wno-subobject-linkage" ]
+       cflags_cc += [ "-Wno-invalid-offsetof" ]
+       cflags_cc += [ "-Wno-return-type" ]
+-      cflags_cc += [ "-Wno-deprecated-copy" ]
+     }
+   }
+ 
+@@ -1569,9 +1568,6 @@ config("default_warnings") {
+ 
+           # TODO(https://crbug.com/1016945) Clean up, enable.
+           "-Wno-builtin-assume-aligned-alignment",
+-
+-          # TODO(https://crbug.com/1028110): Evaluate and possible enable.
+-          "-Wno-deprecated-copy",
+         ]
+ 
+         if (is_fuchsia) {

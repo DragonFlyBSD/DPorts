@@ -25,3 +25,6 @@ dfly-patch:
 		${WRKSRC}/src/3rdparty/chromium/base/process/process_metrics_dragonfly.cc
 	${CP} ${WRKSRC}/src/3rdparty/chromium/base/system/sys_info_freebsd.cc \
 		${WRKSRC}/src/3rdparty/chromium/base/system/sys_info_dragonfly.cc
+	${REINPLACE_CMD} -e '/#pragma GCC diagnostic ignored "-Wthread-safety-analysis/d' \
+		${WRKSRC}/src/3rdparty/chromium/base/synchronization/lock_impl.h \
+		${WRKSRC}/src/3rdparty/chromium/third_party/webrtc/rtc_base/third_party/sigslot/sigslot.h
