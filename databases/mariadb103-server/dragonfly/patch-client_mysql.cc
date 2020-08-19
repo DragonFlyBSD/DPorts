@@ -1,4 +1,4 @@
---- client/mysql.cc.orig	2015-12-16 16:05:44 UTC
+--- client/mysql.cc.orig	2020-05-09 22:11:43 UTC
 +++ client/mysql.cc
 @@ -60,7 +60,7 @@ static char *server_version= NULL;
  #include "sql_string.h"
