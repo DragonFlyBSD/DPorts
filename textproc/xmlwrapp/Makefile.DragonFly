@@ -1,0 +1,5 @@
+
+# try to fix wrong LDFLAGS in MF
+CONFIGURE_ARGS+=	boost_cv_lib_version="1_72"
+CPPFLAGS:=	-I${LOCALBASE}/include ${CPPFLAGS}
+LDFLAGS:=	-L${LOCALBASE}/lib ${LDFLAGS}
