@@ -2,6 +2,7 @@
 
 PORTNAME=	ktp-accounts-kcm
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
+PORTREVISION=	1
 CATEGORIES=	net-im kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -18,7 +19,8 @@ LIB_DEPENDS=	libaccounts-qt5.so:net-im/libaccounts-qt5 \
 		libKF5AkonadiPrivate.so:databases/akonadi \
 		libsignon-qt5.so:sysutils/signon-qt5
 RUN_DEPENDS=	${KDE_PREFIX}/bin/ktp-contactlist:net-im/ktp-contact-list  \
-		${QT_PLUGINDIR}/kaccounts/ui/owncloud_plugin_kaccounts.so:net-im/kaccounts-providers
+		${QT_PLUGINDIR}/kaccounts/ui/owncloud_plugin_kaccounts.so:net-im/kaccounts-providers \
+		accounts-qml-module>=0:sysutils/accounts-qml-module
 
 USES=		compiler:c++11-lang cmake gettext gnome kde:5 \
 		pkgconfig qt:5 tar:xz
