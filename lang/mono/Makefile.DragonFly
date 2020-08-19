@@ -1,5 +1,7 @@
 USES+= alias localbase
 
+DFLY_ALLOW_REMAKE=	increases chances of building exponentially
+
 LIB_DEPENDS+=	libcharset.so:converters/libiconv
 
 CONFIGURE_ARGS+=	ac_cv_header_localcharset_h=yes \
