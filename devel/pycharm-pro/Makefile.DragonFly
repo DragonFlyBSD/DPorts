@@ -1,0 +1,2 @@
+
+NO_ARCH_IGNORE=	libyjpagent.so libyjpagent64.so attach_linux_amd64.so attach_linux_x86.so
