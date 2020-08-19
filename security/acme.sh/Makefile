@@ -57,8 +57,8 @@ do-install-EXAMPLES-on:
 	( cd ${WRKSRC} && ${COPYTREE_BIN} dnsapi ${STAGEDIR}${EXAMPLESDIR} )
 	( cd ${WRKSRC} && ${COPYTREE_BIN} notify ${STAGEDIR}${EXAMPLESDIR} )
 	${INSTALL_DATA} ${FILESDIR}/acme.sh.conf ${STAGEDIR}${EXAMPLESDIR}
-	${RLN} ${STAGEDIR}/${EXAMPLESDIR}/deploy ${STAGEDIR}/var/db/acme/.acme.sh
-	${RLN} ${STAGEDIR}/${EXAMPLESDIR}/dnsapi ${STAGEDIR}/var/db/acme/.acme.sh
-	${RLN} ${STAGEDIR}/${EXAMPLESDIR}/notify ${STAGEDIR}/var/db/acme/.acme.sh
+	${LN} -sf ${EXAMPLESDIR}/deploy ${STAGEDIR}/var/db/acme/.acme.sh
+	${LN} -sf ${EXAMPLESDIR}/dnsapi ${STAGEDIR}/var/db/acme/.acme.sh
+	${LN} -sf ${EXAMPLESDIR}/notify ${STAGEDIR}/var/db/acme/.acme.sh
 
 .include <bsd.port.mk>
