@@ -1,3 +1,4 @@
+
 OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NPULSEAUDIO}
 
 V4L_BUILD_DEPENDS+=	${LOCALBASE}/include/linux/videodev2.h:multimedia/v4l_compat
