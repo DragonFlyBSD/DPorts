@@ -3,7 +3,7 @@
 
 PORTNAME=	ghc
 PORTVERSION=	${GHC_VERSION}
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	lang haskell
 MASTER_SITES=	https://www.haskell.org/ghc/dist/${PORTVERSION}/:source \
 		http://leaf.dragonflybsd.org/~marino/dports-src/:dflyboot \
@@ -56,8 +56,7 @@ DOCS_BUILD_DEPENDS=	sphinx-build:textproc/py-sphinx
 DYNAMIC_CONFIGURE_WITH=	system-libffi \
 			ffi-includes=${LOCALBASE}/include \
 			ffi-libraries=${LOCALBASE}/lib
-# The version number is needed as lang/gcc installs a different version
-DYNAMIC_LIB_DEPENDS=	libffi.so.6:devel/libffi
+DYNAMIC_LIB_DEPENDS=	libffi.so:devel/libffi
 DYNAMIC_SUB_LIST=	WITH_DYNAMIC="YES"
 DYNAMIC_SUB_LIST_OFF=	WITH_DYNAMIC="NO"
 
@@ -206,16 +205,30 @@ CONFIGURE_ARGS+=	${WITH_GHC}=${LOCALBASE}/bin/ghc
 .endif # MBOOT
 
 .if empty(PORT_OPTIONS:MBOOT) && ${OPSYS} == "DragonFly"
-BOOT_GHC_VERSION=	8.4.4
+BOOT_GHC_VERSION=	8.8.4
 DISTFILES+=		ghc-${BOOT_GHC_VERSION}-boot-${ARCH}-dragonfly.tar.xz:dflyboot
 CONFIGURE_TARGET=	${ARCH}-portbld-dragonfly
 CONFIGURE_ENV+=		BOOTDIR=${BOOT_DIR} LBASE=${LOCALBASE}
 
+CONFIGURE_ARGS+=	--target=${CONFIGURE_TARGET}
+LLVM_VERSION:=	${LLVM_DEFAULT}
+# for bootstrap only disable all OPTIONS_DEFAULT except for GMP, previous boots used devel/libffi321
+.if 0
+CONFIGURE_ARGS+=	--with-intree-gmp
+DOCS_BUILD_DEPENDS:=
+PORT_OPTIONS:=
+.endif
+
 # avoid "sed: RE error: Illegal byte sequence" in bootstrap configure script, smth fishy
+# upstream configure does not support target x86_64-unknown-dragonfly5.9, resed solaris2
 BUILD_DEPENDS+=		gsed:textproc/gsed
 dfly-patch:
-	${REINPLACE_CMD} -e 's@sed@gsed@g' \
+	${REINPLACE_CMD} -e 's@solaris2\*@dragonfly*@g' -e 's@"solaris2"@"dragonfly"@g' \
+		${WRKSRC}/configure # this is fragile, but avoid patch-configure diffs...
+	${REINPLACE_CMD} -e 's@solaris2\*@dragonfly*@g' -e 's@"solaris2"@"dragonfly"@g' \
 		${BOOT_DIR}/configure
+#	${REINPLACE_CMD} -e 's@[[:<:]]sed[[:>:]]@gsed@g' \
+#		${BOOT_DIR}/configure
 .endif
 
 # override TMPDIR because /tmp often doesn't have enough space
