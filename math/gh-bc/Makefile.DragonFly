@@ -1,0 +1,13 @@
+
+# locale instalation is too fragile, disable
+CONFIGURE_ARGS+=	-N #--disable-nls
+
+DFLY_PLIST=	${WRKSRC}/pkg-plist
+PLIST:=		${DFLY_PLIST}
+
+dfly-patch:
+	${CP} -v ${.CURDIR:H}/gh-bc/pkg-plist ${DFLY_PLIST}
+	${REINPLACE_CMD} -e '/share\/nls\//d' ${DFLY_PLIST}
+
+dfly-install:
+	${RM} -rfv ${STAGEDIR}${LOCALBASE}/share/nls
