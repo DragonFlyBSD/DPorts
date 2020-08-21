@@ -1,1 +1,4 @@
 USES+=	gmake
+
+# broken files/ patch
+CONFIGURE_ARGS+=	--disable-dependency-tracking
