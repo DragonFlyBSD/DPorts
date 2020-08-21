@@ -1,0 +1,11 @@
+
+# no pulse
+LIB_DEPENDS:=	${LIB_DEPENDS:NlibKF5PulseAudioQt*}
+
+# exclude few plugins
+DFLY_PLIST=	${WRKSRC}/pkg-plist
+PLIST:=		${DFLY_PLIST}
+
+dfly-patch:
+	${CP} -v ${.CURDIR:H}/kdeconnect-kde/pkg-plist ${DFLY_PLIST}
+	${REINPLACE_CMD} -e '/findthisdevice/d' -e '/pausemusic/d' -e '/_systemvolume/d' ${DFLY_PLIST}
