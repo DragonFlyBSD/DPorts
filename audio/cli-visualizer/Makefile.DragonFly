@@ -1,0 +1,5 @@
+
+USES+=	ncurses
+
+# no pulse
+LIB_DEPENDS:=	${LIB_DEPENDS:Nlibpulse*}
