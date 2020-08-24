@@ -1,11 +1,11 @@
---- meson.build.orig	2019-06-21 22:35:28 UTC
+--- meson.build.intermediate	2020-08-24 13:58:00 UTC
 +++ meson.build
-@@ -48,7 +48,7 @@ elif host_machine.system() == 'windows'
-   os_win32 = true
+@@ -62,7 +62,7 @@ if host_machine.system() == 'darwin'
+   lib_suffix = '.dylib'
  elif host_machine.system() == 'linux'
-   os_linux = true
+   os_gnu = true
 -elif host_machine.system() == 'freebsd'
 +elif host_machine.system() == 'freebsd' or host_machine.system() == 'dragonfly'
    os_freebsd = true
- endif
- 
+ elif host_machine.system() == 'windows'
+   os_windows = true
