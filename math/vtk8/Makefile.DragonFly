@@ -1,0 +1,24 @@
+
+USES:=	${USES:Nalias}
+
+# ../../../lib/libvtklibharu-8.2.so.1: error: undefined reference to 'sqrt'
+MAKE_ENV+=	LDVER=ld.bfd
+#MAKE_JOBS_UNSAFE=yes
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(defined(__OpenBSD__)\)@(\1||defined(__DragonFly__))@g' \
+		${WRKSRC}/ThirdParty/vtkm/vtk-m/vtkm/thirdparty/loguru/vtkmloguru/loguru.hpp
+	${REINPLACE_CMD} -e 's@\(defined(__FreeBSD__)\)@(\1||defined(__DragonFly__))@g' \
+		${WRKSRC}/ThirdParty/eigen/vtkeigen/eigen/src/Core/util/Memory.h \
+		${WRKSRC}/ThirdParty/libproj/vtklibproj/src/pj_mutex.c \
+		${WRKSRC}/IO/LSDyna/LSDynaFamily.cxx \
+		${WRKSRC}/Utilities/KWSys/vtksys/ProcessUNIX.c \
+		${WRKSRC}/Utilities/KWSys/vtksys/SharedForward.h.in \
+		${WRKSRC}/CMake/SharedLibraryPathInfo.cxx
+	${REINPLACE_CMD} -e 's@\(defined __FreeBSD__\)@(\1||defined(__DragonFly__))@g' \
+		${WRKSRC}/IO/EnSight/vtkEnSight6BinaryReader.cxx \
+		${WRKSRC}/IO/EnSight/vtkEnSightGoldBinaryReader.cxx
+	${REINPLACE_CMD} -e 's@ifdef \(__FreeBSD__\)@if (defined(\1)||defined(__DragonFly__))@g' \
+		${WRKSRC}/ThirdParty/mpi4py/vtkmpi4py/src/python.c
+	${REINPLACE_CMD} -e 's@MATCHES "BSD"@MATCHES "BSD|DRAGONFLY"@g' \
+		${WRKSRC}/Utilities/KWSys/vtksys/CMakeLists.txt
