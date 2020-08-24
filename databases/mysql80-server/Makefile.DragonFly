@@ -1,1 +1,4 @@
 USES+=	alias
+
+# disable sasl with ldap for now
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NSASLCLIENT}
