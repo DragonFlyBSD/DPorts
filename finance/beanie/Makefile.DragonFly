@@ -1,0 +1,5 @@
+
+# avoid different getdate() symbol conflict with libc, exclude unused source
+dfly-patch:
+	${REINPLACE_CMD} -e 's@getdate.c@@g' -e 's@getdate.o@@g' \
+		${WRKSRC}/lib/Makefile
