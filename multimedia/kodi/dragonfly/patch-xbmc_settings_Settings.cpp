@@ -1,12 +1,12 @@
---- xbmc/settings/Settings.cpp.orig	2018-08-04 15:10:57.018410000 +0200
-+++ xbmc/settings/Settings.cpp	2018-08-04 15:11:29.269108000 +0200
-@@ -815,6 +815,9 @@ bool CSettings::InitializeDefinitions()
- #elif defined(TARGET_FREEBSD)
-   if (CFile::Exists(SETTINGS_XML_FOLDER "freebsd.xml") && !Initialize(SETTINGS_XML_FOLDER "freebsd.xml"))
-     CLog::Log(LOGFATAL, "Unable to load freebsd-specific settings definitions");
+--- xbmc/settings/Settings.cpp.orig	2019-12-29 01:23:43 UTC
++++ xbmc/settings/Settings.cpp
+@@ -537,6 +537,9 @@ bool CSettings::InitializeDefinitions()
+     CLog::Log(LOGFATAL, "Unable to load rbp-specific settings definitions");
+   if (g_RBP.RaspberryPiVersion() > 1 && CFile::Exists(SETTINGS_XML_FOLDER "rbp2.xml") && !Initialize(SETTINGS_XML_FOLDER "rbp2.xml"))
+     CLog::Log(LOGFATAL, "Unable to load rbp2-specific settings definitions");
 +#elif defined(TARGET_DRAGONFLY)
 +  if (CFile::Exists(SETTINGS_XML_FOLDER "dragonfly.xml") && !Initialize(SETTINGS_XML_FOLDER "dragonfly.xml"))
 +    CLog::Log(LOGFATAL, "Unable to load dragonfly-specific settings definitions");
- #elif defined(HAS_IMXVPU)
-   if (CFile::Exists(SETTINGS_XML_FOLDER "imx6.xml") && !Initialize(SETTINGS_XML_FOLDER "imx6.xml"))
-     CLog::Log(LOGFATAL, "Unable to load imx6-specific settings definitions");
+ #elif defined(TARGET_FREEBSD)
+   if (CFile::Exists(SETTINGS_XML_FOLDER "freebsd.xml") && !Initialize(SETTINGS_XML_FOLDER "freebsd.xml"))
+     CLog::Log(LOGFATAL, "Unable to load freebsd-specific settings definitions");

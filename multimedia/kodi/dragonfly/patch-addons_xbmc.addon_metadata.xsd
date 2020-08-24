@@ -1,0 +1,10 @@
+--- addons/xbmc.addon/metadata.xsd.orig	2019-12-16 08:11:03 UTC
++++ addons/xbmc.addon/metadata.xsd
+@@ -47,6 +47,7 @@
+       <xs:enumeration value="windows"/>
+       <xs:enumeration value="windowsstore"/>
+       <xs:enumeration value="android"/>
++      <xs:enumeration value="dragonfly"/>
+       <xs:enumeration value="freebsd"/>
+       <xs:enumeration value="all"/>
+     </xs:restriction>
