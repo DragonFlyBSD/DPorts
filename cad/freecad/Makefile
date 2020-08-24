@@ -2,11 +2,14 @@
 
 PORTNAME=	FreeCAD
 DISTVERSION=	0.18.4
-PORTREVISION=	4
+PORTREVISION=	10
 # use these for bugfixes/snapshots
 # DISTVERSION=	0.18-16093 # git rev-list --count
 # DISTVERSIONSUFFIX=	-g690774c0e
 CATEGORIES=	cad
+
+PATCH_SITES=	https://github.com/FreeCAD/FreeCAD/commit/
+PATCHFILES+=	6eacb17b3e03d20.patch:-p1 # Python 3.8 compat
 
 MAINTAINER=	cmt@FreeBSD.org
 COMMENT=	General purpose 3D CAD modeller
@@ -16,7 +19,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pyside2-tools>5.14.0:devel/pyside2-tools@${PY_FLAVOR} \
 		${PYTHON_SITELIBDIR}/matplotlib/__init__.py:math/py-matplotlib@${PY_FLAVOR} \
-		swig3.0:devel/swig30
+		swig:devel/swig
 LIB_DEPENDS=	libexpat.so:textproc/expat2 \
 		libfreetype.so:print/freetype2 \
 		${PY_BOOST} \
@@ -24,12 +27,13 @@ LIB_DEPENDS=	libexpat.so:textproc/expat2 \
 		libCoin.so:graphics/Coin \
 		libpng.so:graphics/png \
 		libtiff.so:graphics/tiff \
-		libvtkFiltersTexture-6.2.so:math/vtk6 \
+		libvtkFiltersTexture-8.2.so:math/vtk8 \
 		libTKernel.so:cad/opencascade \
 		libxerces-c.so:textproc/xerces-c3 \
 		libboost_thread.so:devel/boost-libs \
 		libarea.so:devel/libarea \
 		libmed.so:french/med \
+		libmpi.so:net/openmpi \
 		libshiboken2.cpython-${PYTHON_SUFFIX}${PYTHON_ABIVER}.so:devel/shiboken2@${PY_FLAVOR} \
 		libhdf5.so:science/hdf5
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pivy>0:graphics/py-pivy@${PY_FLAVOR} \
@@ -47,6 +51,7 @@ USE_LDCONFIG=	yes
 DOS2UNIX_GLOB=	*.txt *.h *.cpp *.py *.qss *.csv *.pov *.stp *.ui *.wrl *.WRL
 
 CMAKE_ARGS+=	-DOCC_INCLUDE_DIR="${LOCALBASE}/include/OpenCASCADE" \
+		-DOPENMPI_INCLUDE_DIRS="${LOCALBASE}/mpi/openmpi/include" \
 		-DBUILD_QT5="ON" \
 		-DPYTHON_LIBRARY="${PYTHONBASE}/lib/libpython${PYTHON_VER}${PYTHON_ABIVER}.so" \
 		-DPYTHON_INCLUDE_DIR="${PYTHON_INCLUDEDIR}" \
@@ -54,7 +59,8 @@ CMAKE_ARGS+=	-DOCC_INCLUDE_DIR="${LOCALBASE}/include/OpenCASCADE" \
 		-DPYTHON_EXECUTABLE="${PYTHON_CMD}" \
 		-DBUILD_ASSEMBLY="OFF" -DBUILD_FLAT_MESH="ON" \
 		-DPYSIDE2RCCBINARY="${LOCALBASE}/bin/rcc" \
-		-DPYSIDE2UICBINARY="${LOCALBASE}/bin/uic"
+		-DPYSIDE2UICBINARY="${LOCALBASE}/bin/uic" \
+		-DVTK_DIR:PATH=${LOCALBASE}/lib/vtk-8.2/cmake/vtk-8.2
 
 CMAKE_INSTALL_PREFIX=	${PREFIX}/${PORTNAME}
 
