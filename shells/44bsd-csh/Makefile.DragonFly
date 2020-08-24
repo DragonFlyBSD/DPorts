@@ -1,1 +1,5 @@
 CFLAGS+= -DMAXNAMLEN=255
+
+# zrj: use of global variables from same header, hack it
+# comes from base bsd.sys.mk
+MAKE_ENV+= CWARNFLAGS=-fcommon
