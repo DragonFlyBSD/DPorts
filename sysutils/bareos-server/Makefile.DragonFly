@@ -11,3 +11,21 @@ LDFLAGS+=	-lintl
 dfly-patch:
 	${REINPLACE_CMD} -e 's@sys/acl.h@sys/not_acl.h@g' \
 		${WRKSRC}/core/cmake/BareosCheckIncludes.cmake
+
+# to avoid orphans
+.if ${PKGNAMESUFFIX} == "-server"
+PLIST_FILES+=	${ETCDIR}/bareos-dir.d/user/...
+.endif
+
+.if ${PKGNAMESUFFIX} == "-client" && defined(PYTHON_PLUGIN)
+PLIST_FILES+=	${ETCDIR}/python-ldap-conf.d/bareos-dir.d/fileset/... \
+		${ETCDIR}/python-ldap-conf.d/bareos-dir.d/job/...
+.endif
+
+dfly-install:
+.if ${PKGNAMESUFFIX} == "-client" && defined(PYTHON_PLUGIN)
+	${TOUCH} ${STAGEDIR}${ETCDIR}/python-ldap-conf.d/bareos-dir.d/fileset/...
+	${TOUCH} ${STAGEDIR}${ETCDIR}/python-ldap-conf.d/bareos-dir.d/job/...
+.elif ${PKGNAMESUFFIX} == "-server"
+	${TOUCH} ${STAGEDIR}${ETCDIR}/bareos-dir.d/user/...
+.endif
