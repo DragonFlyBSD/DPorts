@@ -1,0 +1,4 @@
+
+# to avoid bad orphans
+dfly-install:
+	${RM} -fv ${STAGEDIR}${SITE_PERL}/perltidy.pl
