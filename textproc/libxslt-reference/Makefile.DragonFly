@@ -4,3 +4,7 @@
 BUILD_DEPENDS+=	libgcrypt>=0:security/libgcrypt
 BUILD_DEPENDS+=	libxml2>=0:textproc/libxml2
 #.endif
+
+# to avoid orphans, hmmmm
+dfly-install:
+	${RM} -rfv ${STAGEDIR}${LOCALBASE}/share/doc/${PORTNAME}-${PORTVERSION}
