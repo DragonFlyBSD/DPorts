@@ -1,0 +1,4 @@
+
+# to avoid orphans
+PLIST_FILES+=	%%SITE_ARCH%%/attrs.pm \
+		%%PERL5_MAN3%%/attrs.3.gz
