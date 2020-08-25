@@ -3,7 +3,7 @@
 
 PORTNAME=	llvm
 PORTVERSION=	${LLVM_MAJOR}.0.d${SNAPDATE}
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	devel lang
 PKGNAMESUFFIX=	-devel
 
@@ -73,9 +73,12 @@ GH_TAGNAME=	${LLVM_PROJECT_COMMIT}
 OPTIONS_DEFINE=	CLANG DOCS EXTRAS LIT LLD LLDB
 OPTIONS_DEFINE_x86_64=	COMPILER_RT GOLD OPENMP
 OPTIONS_DEFINE_i386=	COMPILER_RT OPENMP
+OPTIONS_DEFINE_powerpc64=	GOLD OPENMP
 OPTIONS_DEFAULT=	CLANG EXTRAS LIT LLD LLDB
 OPTIONS_DEFAULT_x86_64=	COMPILER_RT GOLD OPENMP
 OPTIONS_DEFAULT_i386=	COMPILER_RT OPENMP
+OPTIONS_DEFAULT_powerpc64=     ${OPTIONS_DEFAULT_powerpc64_${OSREL:R}} OPENMP
+OPTIONS_DEFAULT_powerpc64_13=  GOLD
 OPTIONS_SUB=	yes
 
 # Pre-declared for options framework
@@ -100,7 +103,7 @@ COMPILER_RT_IMPLIES=	CLANG
 COMPILER_RT_PLIST_FILES=${_COMPILER_RT_LIBS:S|^|${_CRTLIBDIR}/|} \
 			${_COMPILER_RT_BLACKLISTS:S|^|${_CRTBLDIR}/|}
 DOCS_PORTDOCS=		llvm
-DOCS_BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sphinx18>=0:textproc/py-sphinx18@${PY_FLAVOR} \
+DOCS_BUILD_DEPENDS=	${PY_SPHINX} \
 			${PYTHON_PKGNAMEPREFIX}recommonmark>=0.0.20180530:textproc/py-recommonmark@${PY_FLAVOR}
 DOCS_CMAKE_ON=		-DLLVM_ENABLE_SPHINX=ON \
 			-DSPHINX_EXECUTABLE=${LOCALBASE}/bin/sphinx-build-${PYTHON_VER} \
@@ -111,7 +114,7 @@ EXTRAS_DESC=		Extra clang tools
 EXTRAS_IMPLIES=		CLANG
 LIT_DESC=		Install lit and FileCheck test tools
 LLD_DESC=		Install lld, the LLVM linker
-LLDB_BUILD_DEPENDS=	swig3.0:devel/swig30
+LLDB_BUILD_DEPENDS=	swig:devel/swig
 LLDB_DESC=		Install lldb, the LLVM debugger
 LLDB_IMPLIES=		CLANG
 LLDB_PORTDOCS=		lldb
@@ -259,7 +262,7 @@ MAN1SRCS+=	lldb.1
 .if ${PORT_OPTIONS:MOPENMP}
 LLVM_ENABLE_PROJECTS+=	openmp
 .endif
-OPENMP_PATTERN=	libarcher|lib[ig]*omp|omp.h|ompt.h|omp-tools.h
+OPENMP_PATTERN=	libarcher|lib[ig]*omp|omp.h|ompt.h|ompt-multiplex.h|omp-tools.h
 
 .if defined(LLVM_ENABLE_PROJECTS)
 CMAKE_ARGS+=	-DLLVM_ENABLE_PROJECTS="${LLVM_ENABLE_PROJECTS:ts;}"
@@ -370,6 +373,10 @@ post-patch-CLANG-on:
 	    ${PATCH_WRKSRC}/clang/tools/clang-format/clang-format.py \
 	    ${PATCH_WRKSRC}/clang/tools/clang-format/clang-format-sublime.py \
 	    ${PATCH_WRKSRC}/clang/tools/clang-format/git-clang-format
+
+post-patch-LLD-on:
+		${REINPLACE_CMD} -e "s|'indexsidebar.html'|['indexsidebar.html']|" \
+			${PATCH_WRKSRC}/lld/docs/conf.py
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/llvm-wrapper.sh \
