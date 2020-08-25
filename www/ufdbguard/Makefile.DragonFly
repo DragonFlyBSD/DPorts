@@ -9,3 +9,7 @@ dfly-patch:
 		${WRKSRC}/src/rwtest.c \
 		${WRKSRC}/src/sg.h.in \
 		${WRKSRC}/src/ufdb.h.in
+
+# to avoid orphans
+dfly-install:
+	${RMDIR} ${STAGEDIR}/etc/urlfilterdb
