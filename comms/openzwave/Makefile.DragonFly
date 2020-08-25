@@ -7,3 +7,11 @@ dfly-patch:
 		${WRKSRC}/cpp/src/value_classes/Value.h
 	${REINPLACE_CMD} -e '/UNAME/s@FreeBSD@DragonFly@g' \
 		${WRKSRC}/cpp/build/Makefile
+
+# to avoid orphans, before post-install in MF
+dfly-install:
+	${RM} -vf ${STAGEDIR}${LOCALBASE}/share/doc/${PORTNAME}-${PORTVERSION}/Doxyfile.in
+	${RM} -vf ${STAGEDIR}${LOCALBASE}/share/doc/${PORTNAME}-${PORTVERSION}/default.htm
+	${RM} -rvf ${STAGEDIR}${LOCALBASE}/share/doc/${PORTNAME}-${PORTVERSION}/general
+	${RM} -rvf ${STAGEDIR}${LOCALBASE}/share/doc/${PORTNAME}-${PORTVERSION}/images+css
+	${RMDIR} ${STAGEDIR}${LOCALBASE}/share/doc/${PORTNAME}-${PORTVERSION}
