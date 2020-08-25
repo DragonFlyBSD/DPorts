@@ -22,3 +22,8 @@ dfly-patch:
 		${WRKSRC}/gcc/config/rs6000/dragonfly.h \
 		${WRKSRC}/gcc/config/rs6000/dragonfly64.h \
 		${WRKSRC}/gcc/config/sparc/dragonfly.h
+
+# to avoid orphans, typo in MF rm -r ${STAGEDIR}/usr/lib
+.if ${PKGNAMEPREFIX} == "amd64-"
+PLIST_FILES+=	lib/gcc/%%GCC_TARGET%%/%%GCC_VERSION%%/include/float.h
+.endif
