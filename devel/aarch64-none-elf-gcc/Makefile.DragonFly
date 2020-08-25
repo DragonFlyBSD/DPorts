@@ -1,0 +1,5 @@
+
+# to avoid orphans, typo in MF rm -r ${STAGEDIR}/usr/lib
+PLIST_FILES+=	lib/gcc/%%GCC_TARGET%%/%%GCC_VERSION%%/include-fixed/README
+dfly-install:
+	${RM} -v ${STAGEDIR}${LOCALBASE}/lib/gcc/${GCC_TARGET}/${PORTVERSION}/include-fixed/*.h
