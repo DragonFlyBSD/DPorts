@@ -1,0 +1,4 @@
+
+# to avoid orphans
+PLIST_FILES+=	sbin/pcm-latency.x \
+		sbin/pcm-pcicfg.x
