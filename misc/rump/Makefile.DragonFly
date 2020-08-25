@@ -1,0 +1,7 @@
+
+# to avoid orphans
+PLIST_FILES+=	lib/librumpnet_virtif.a \
+		lib/librumpnet_virtif.so \
+		lib/librumpnet_virtif.so.0 \
+		lib/librumpnet_virtif.so.0.0 \
+		lib/librumpnet_virtif_pic.a
