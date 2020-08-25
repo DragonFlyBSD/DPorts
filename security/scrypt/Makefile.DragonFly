@@ -1,0 +1,4 @@
+
+# to avoid orphans
+PLIST_FILES+=	lib/libscrypt-kdf.so \
+		lib/libscrypt-kdf.so.1
