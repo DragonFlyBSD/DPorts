@@ -1,0 +1,3 @@
+
+# to avoid orphans
+PLIST_FILES+=	libdata/pkgconfig/uInputPlus.pc
