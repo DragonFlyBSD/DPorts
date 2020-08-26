@@ -1,0 +1,3 @@
+
+# to avoid orphans
+PLIST_FILES+=	%%DATADIR%%/etc/org.apache.karaf.features.xml
