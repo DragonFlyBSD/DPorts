@@ -33,8 +33,8 @@ DESCR?=		${.CURDIR}/pkg-descr
 NO_ARCH=	yes
 
 .if defined(DPORTS_BUILDER)
-PLAT=	rk3328
-BL31=	bl31/bl31.elf
+PLAT?=	rk3328
+BL31?=	bl31/bl31.elf
 .endif
 
 .if !defined(PLAT)
