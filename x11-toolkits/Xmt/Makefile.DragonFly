@@ -1,0 +1,43 @@
+
+# to avoid orphans
+PLIST_FILES+=	lib/libXmt.so.4.0 \
+		man/man3/XmtBuildQueryToplevel.3.gz \
+		man/man3/XmtChangePixmapIcon.3.gz \
+		man/man3/XmtChooserGetSensitivity.3.gz \
+		man/man3/XmtChooserLookupItemByName.3.gz \
+		man/man3/XmtChooserLookupItemByValue.3.gz \
+		man/man3/XmtChooserSetItemValue.3.gz \
+		man/man3/XmtChooserSetSensitive.3.gz \
+		man/man3/XmtCliClear.3.gz \
+		man/man3/XmtColorTableGetParent.3.gz \
+		man/man3/XmtColorTableSetParent.3.gz \
+		man/man3/XmtConvertStringToEnum.3.gz \
+		man/man3/XmtDeiconifyShell.3.gz \
+		man/man3/XmtDialogApplyCallback.3.gz \
+		man/man3/XmtDialogCancelCallback.3.gz \
+		man/man3/XmtDialogDoneCallback.3.gz \
+		man/man3/XmtDialogGetDataAddress.3.gz \
+		man/man3/XmtFreeXmtImage.3.gz \
+		man/man3/XmtGetApplicationShell.3.gz \
+		man/man3/XmtHelpContextHelpCallback.3.gz \
+		man/man3/XmtHelpDisplayContextHelp.3.gz \
+		man/man3/XmtLocalize.3.gz \
+		man/man3/XmtLookupBitmap.3.gz \
+		man/man3/XmtLookupBitmask.3.gz \
+		man/man3/XmtLookupStyle.3.gz \
+		man/man3/XmtLookupSymbol.3.gz \
+		man/man3/XmtLookupTemplate.3.gz \
+		man/man3/XmtMsgLineAppend.3.gz \
+		man/man3/XmtMsgLineClear.3.gz \
+		man/man3/XmtMsgLineGetChar.3.gz \
+		man/man3/XmtMsgLineGetDouble.3.gz \
+		man/man3/XmtMsgLineGetInput.3.gz \
+		man/man3/XmtMsgLineGetInt.3.gz \
+		man/man3/XmtMsgLinePop.3.gz \
+		man/man3/XmtMsgLinePrintf.3.gz \
+		man/man3/XmtRegisterCallbackProcedure.3.gz \
+		man/man3/XmtRegisterLayoutCreateMethod.3.gz \
+		man/man3/XmtRegisterPopupClass.3.gz \
+		man/man3/XmtRegisterPopupConstructor.3.gz \
+		man/man3/XmtSetTypedValue.3.gz \
+		man/man3/XmtSymbolGetValue.3.gz
