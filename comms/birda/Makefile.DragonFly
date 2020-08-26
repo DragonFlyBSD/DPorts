@@ -1,2 +1,6 @@
-post-install:
+
+MAKE_ENV+=	CWARNFLAGS=-fcommon
+
+dfly-install:
+	${RM} -rfv ${STAGEDIR}${LOCALBASE}/man1
 	${INSTALL_MAN} ${WRKSRC}/*/*.1 ${STAGEDIR}${PREFIX}/man/man1/
