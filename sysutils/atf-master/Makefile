@@ -32,14 +32,15 @@ DESCR?=		${.CURDIR}/pkg-descr
 
 NO_ARCH=	yes
 
-.if defined(DPORTS_BUILDER)
-PLAT?=	rk3328
-BL31?=	bl31/bl31.elf
-.endif
-
 .if !defined(PLAT)
+. if defined(DPORTS_BUILDER)
+PKGNAMESUFFIX=-master
+PLAT=	rk3328
+BL31=	bl31/bl31.elf
+. else
 PLAT=		NONE
 IGNORE=		is a metaport; there is nothing to build
+. endif
 .endif
 
 do-install:
