@@ -13,3 +13,5 @@ PLIST_FILES+=	lib/kamailio/libtrie.so.1.0
 dfly-patch:
 	${REINPLACE_CMD} -e 's@clang@gcc@g' \
 		${WRKSRC}/src/Makefile.defs
+	${REINPLACE_CMD} -e "s@LIBS = @& -L${LOCALBASE}/lib @g" \
+		${WRKSRC}/src/modules/db_mysql/Makefile
