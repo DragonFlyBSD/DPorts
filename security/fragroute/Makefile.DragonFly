@@ -1,0 +1,6 @@
+
+# avoid pcap_open() symbol conflict
+dfly-patch:
+	${REINPLACE_CMD} -e 's@pcap_open(@pcap_open1(@' \
+		${WRKSRC}/pcaputil.h ${WRKSRC}/fragtest.c \
+		${WRKSRC}/pcaputil.c ${WRKSRC}/tun-loop.c
