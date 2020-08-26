@@ -1,0 +1,8 @@
+
+# just to avoid orphans, hmmmm
+.if defined(DEVELOPER)
+PLIST_FILES+=	%%JAVAJARDIR%%/serviio/plugins/...
+
+dfly-install:
+	${TOUCH} ${STAGEDIR}${JAVAJARDIR}/serviio/plugins/...
+.endif
