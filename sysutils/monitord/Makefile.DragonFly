@@ -1,0 +1,5 @@
+
+# avoid symbol conflict with getdate()
+dfly-patch:
+	${REINPLACE_CMD} -e 's@getdate@getdate0@g' \
+		${WRKSRC}/monitord.c ${WRKSRC}/monitord.h
