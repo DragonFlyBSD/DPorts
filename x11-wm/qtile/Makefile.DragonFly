@@ -1,0 +1,5 @@
+
+# to avoid orphans, hmmmm
+dfly-install:
+	${RM} -fv ${STAGEDIR}${PYTHON_SITELIBDIR}/libqtile/__pycache__/_ffi_pango.cpython-*.pyc
+	${RM} -fv ${STAGEDIR}${PYTHON_SITELIBDIR}/libqtile/core/__pycache__/_ffi_xcursors.cpython-*.pyc
