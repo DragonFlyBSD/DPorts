@@ -1,9 +1,11 @@
 
-.if ${MODEL} == "clearfog"
+.if ${MODEL} == "clearfog" || ${MODEL} == "qemu-arm" || ${MODEL} == "qemu-arm64"
 USES+=	ssl pkgconfig
 .endif
 
 dfly-patch:
+	${REINPLACE_CMD} -e "s@-DUSE_HOSTCC@-I${LOCALBASE}/include &@g" \
+		${WRKSRC}/tools/Makefile # for <openssl/evp.h>
 	${REINPLACE_CMD} -e "s@HOSTCC)@& -I${WRKSRC}/scripts/dtc/libfdt@g" \
 			 -e 's@--quiet@@g' \
 		${WRKSRC}/scripts/dtc/pylibfdt/Makefile
