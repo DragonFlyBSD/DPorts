@@ -1,2 +1,16 @@
 
 USES+=	ncurses
+
+# attempt at no orphans, empty dirs in /var/log/ and /var/spool/
+.if defined(DEVELOPER)
+DFLY_PLIST=     ${WRKSRC}/pkg-plist
+PLIST:=         ${DFLY_PLIST}
+
+dfly-patch:
+	${CP} -v ${.CURDIR:H}/qico/pkg-plist ${DFLY_PLIST}
+	${REINPLACE_CMD} -e '/\/var\//d' -e '/QBASEDIR/d' -e '/QLOGDIR/d' ${DFLY_PLIST}
+
+dfly-install:
+	${RM} -rfv ${STAGEDIR}/var/log/fido
+	${RM} -rfv ${STAGEDIR}/var/spool/fido
+.endif
