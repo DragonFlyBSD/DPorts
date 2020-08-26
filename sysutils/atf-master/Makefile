@@ -21,16 +21,21 @@ GH_TAGNAME=	${ATF_VERSION}
 
 SSP_UNSAFE=	yes
 MAKE_ENV+=	CROSS_COMPILE="aarch64-none-elf-"
-ALL_TARGET=	ARCH="aarch64" PLAT=${PLAT} V=1 bl31
+ALL_TARGET=	ARCH="aarch64" PLAT=${PLAT} V=1 CFLAGS= bl31
 
 # Default to the latest release
-ATF_VERSION?=	v2.1
+ATF_VERSION?=	v2.3
 
 PLIST_FILES?=	${PREFIX}/share/${PORTNAME}-${PLAT}/${BL31:T}
 
 DESCR?=		${.CURDIR}/pkg-descr
 
 NO_ARCH=	yes
+
+.if defined(DPORTS_BUILDER)
+PLAT=	rk3328
+BL31=	bl31/bl31.elf
+.endif
 
 .if !defined(PLAT)
 PLAT=		NONE
