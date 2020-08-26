@@ -1,0 +1,15 @@
+
+# to avoid orphans
+dfly-install:
+	${RMDIR} ${STAGEDIR}${WWWDIR}/modules/blockcustomerprivacy
+	${RMDIR} ${STAGEDIR}${WWWDIR}/modules/blocklink
+	${RMDIR} ${STAGEDIR}${WWWDIR}/modules/blockpermanentlinks
+	${RMDIR} ${STAGEDIR}${WWWDIR}/modules/blockreinsurance
+	${RMDIR} ${STAGEDIR}${WWWDIR}/modules/blocksharefb
+	${RMDIR} ${STAGEDIR}${WWWDIR}/modules/crossselling
+	${RMDIR} ${STAGEDIR}${WWWDIR}/modules/ecbexchange
+	${RMDIR} ${STAGEDIR}${WWWDIR}/modules/productscategory
+	${RMDIR} ${STAGEDIR}${WWWDIR}/modules/producttooltip
+	${RMDIR} ${STAGEDIR}${WWWDIR}/modules/sendtoafriend
+	${RMDIR} ${STAGEDIR}${WWWDIR}/modules/trackingfront
+	${RMDIR} ${STAGEDIR}${WWWDIR}/modules/vatnumber
