@@ -4,3 +4,7 @@ CXXFLAGS+=	-fpermissive
 dfly-patch:
 	${REINPLACE_CMD} -e 's@"\(FreeBSD\)"@"\1|DragonFly"@g'  \
 		${WRKSRC}/scripts/CMakeLists.txt
+
+# to avoid orphans
+dfly-install:
+	${RM} -rfv ${STAGEDIR}${LOCALBASE}/info
