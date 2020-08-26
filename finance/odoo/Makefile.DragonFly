@@ -1,1 +1,9 @@
 SHEBANG_FILES+=	${WRKSRC}/${PORTNAME}/addons/mail/static/scripts/odoo-mailgate.py
+
+# to avoid orphans, egg info handled implicitly
+DFLY_PLIST=	${WRKSRC}/pkg-plist
+PLIST:=		${DFLY_PLIST}
+
+dfly-patch:
+	${CP} -v ${.CURDIR:H}/odoo/pkg-plist ${DFLY_PLIST}
+	${REINPLACE_CMD} -e '/egg-info/d' ${DFLY_PLIST}
