@@ -1,0 +1,3 @@
+
+# to avoid orphans
+OPTIONS_EXCLUDE=	DOCS
