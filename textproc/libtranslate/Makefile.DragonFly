@@ -1,0 +1,4 @@
+
+# to avoid orphans
+PLIST_FILES+=	lib/libtranslate/modules/generic.a \
+		lib/libtranslate/modules/talkfilters.a
