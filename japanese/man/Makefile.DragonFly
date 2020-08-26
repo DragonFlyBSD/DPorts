@@ -1,1 +1,3 @@
 USES+= alias
+
+MAKE_ENV+=	CWARNFLAGS=-fcommon
