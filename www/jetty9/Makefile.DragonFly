@@ -1,0 +1,3 @@
+
+# to avoid orphans
+PLIST_FILES+=	jetty/bin/jetty.service
