@@ -5,3 +5,7 @@ dfly-patch:
 		${WRKSRC}/libplot/dumb/Makefile
 	${REINPLACE_CMD} -e "s@-lcurses@-lncurses@"	\
 		${WRKSRC}/libplot/crt/Makefile
+
+# zrj: use of global variables from same header, hack it
+# comes from base bsd.sys.mk
+MAKE_ENV+= CWARNFLAGS=-fcommon
