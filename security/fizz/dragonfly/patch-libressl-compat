@@ -1,0 +1,74 @@
+--- crypto/openssl/OpenSSL.h.orig	2020-07-27 01:39:40 UTC
++++ crypto/openssl/OpenSSL.h
+@@ -4,4 +4,8 @@
+ 
+ #include <openssl/opensslv.h>
+ 
++#ifdef LIBRESSL_VERSION_NUMBER
++#define FIZZ_OPENSSL_HAS_ED25519 0
++#else
+ #define FIZZ_OPENSSL_HAS_ED25519 (OPENSSL_VERSION_NUMBER >= 0x10101000L)
++#endif
+--- crypto/aead/AESOCB128.h.orig	2020-07-27 01:39:40 UTC
++++ crypto/aead/AESOCB128.h
+@@ -12,6 +12,10 @@
+ #include <openssl/evp.h>
+ #include <stdexcept>
+ 
++#ifdef LIBRESSL_VERSION_NUMBER
++#define OPENSSL_NO_OCB
++#endif
++
+ namespace fizz {
+ 
+ struct AESOCB128 {
+--- crypto/aead/ChaCha20Poly1305.h.orig	2020-07-27 01:39:40 UTC
++++ crypto/aead/ChaCha20Poly1305.h
+@@ -13,6 +13,11 @@
+ #include <folly/portability/OpenSSL.h>
+ #include <openssl/evp.h>
+ 
++#ifdef LIBRESSL_VERSION_NUMBER
++#undef FOLLY_OPENSSL_HAS_CHACHA
++#define FOLLY_OPENSSL_HAS_CHACHA 0
++#endif
++
+ namespace fizz {
+ 
+ struct ChaCha20Poly1305 {
+--- extensions/delegatedcred/DelegatedCredentialUtils.cpp.orig	2020-07-27 01:39:40 UTC
++++ extensions/delegatedcred/DelegatedCredentialUtils.cpp
+@@ -18,7 +18,11 @@ void DelegatedCredentialUtils::checkExte
+         "cert is missing DelegationUsage extension",
+         AlertDescription::illegal_parameter);
+   }
+-
++#ifdef LIBRESSL_VERSION_NUMBER
++    throw FizzException(
++        "cert is not suported LibreSSL extension",
++        AlertDescription::illegal_parameter);
++#else
+   if ((X509_get_extension_flags(cert.get()) & EXFLAG_KUSAGE) != EXFLAG_KUSAGE) {
+     throw FizzException(
+         "cert is missing KeyUsage extension",
+@@ -31,6 +35,7 @@ void DelegatedCredentialUtils::checkExte
+         "cert lacks digital signature key usage",
+         AlertDescription::illegal_parameter);
+   }
++#endif
+ }
+ 
+ namespace {
+@@ -51,8 +56,12 @@ bool DelegatedCredentialUtils::hasDelega
+   static folly::ssl::ASN1ObjUniquePtr credentialOid = generateCredentialOid();
+   // To be valid for a credential, it has to have the delegated credential
+   // extension and the digitalSignature KeyUsage.
++#ifdef LIBRESSL_VERSION_NUMBER
++  { return false;
++#else
+   auto credentialIdx = X509_get_ext_by_OBJ(cert.get(), credentialOid.get(), -1);
+   if (credentialIdx == -1) {
++#endif
+     return false;
+   }
+ 
