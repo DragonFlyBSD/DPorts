@@ -1,1 +1,5 @@
 RUN_DEPENDS+=	p5-IO-Socket-INET6>=0:net/p5-IO-Socket-INET6
+
+# to avoid bad resed orphans
+dfly-install:
+	${RM} -vf ${STAGEDIR}${LOCALBASE}/man/man1/munin-*.bak.1
