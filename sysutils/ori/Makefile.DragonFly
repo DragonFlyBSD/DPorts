@@ -1,1 +1,3 @@
+
+USES:=	${USES:Nscons} scons:python2
 USES+=	alias
