@@ -1,0 +1,4 @@
+
+# to avoid orphans
+PLIST_FILES+=	share/mime/application/x-mate-saved-search.xml \
+		share/mime/packages/caja.xml
