@@ -1,3 +1,6 @@
+
+MAKE_ENV+=	CWARNFLAGS=-fcommon
+
 dfly-patch:
 	-${REINPLACE_CMD} -e 's/TAILQ_FOREACH_SAFE/TAILQ_FOREACH_MUTABLE/g' \
 		${WRKSRC}/usr.sbin/httpd/server.c \
