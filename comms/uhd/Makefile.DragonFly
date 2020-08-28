@@ -3,3 +3,9 @@
 CMAKE_ARGS+=	-DENABLE_PYTHON_API:STRING="ON"
 BUILD_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}numpy>=1.4.1,1:math/py-numpy@${PY_FLAVOR}
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}numpy>=1.4.1,1:math/py-numpy@${PY_FLAVOR}
+
+# to avoid orphans
+PLIST_FILES+=	%%DATADIR%%/examples/python/benchmark_rate.py \
+		%%DATADIR%%/examples/python/curses_fft.py \
+		%%DATADIR%%/examples/python/rx_to_file.py \
+		%%DATADIR%%/examples/python/tx_waveforms.py
