@@ -19,3 +19,6 @@ dfly-patch:
 dfly-install:
 	${INSTALL_DATA} ${WRKSRC}/src/projectM-qt/images/icons/prjm16-transparent.svg \
 		${STAGEDIR}${PREFIX}/share/pixmaps
+
+# to avoid orphans
+PLIST_FILES+=	share/pixmaps/prjm16-transparent.svg
