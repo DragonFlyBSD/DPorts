@@ -1,0 +1,5 @@
+
+# filter/filter.c:96:1: error: '__thread' before 'static'
+dfly-patch:
+	${REINPLACE_CMD} -e 's@_Thread_local static@static _Thread_local@g' \
+		${WRKSRC}/filter/filter.c
