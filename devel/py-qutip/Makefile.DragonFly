@@ -1,0 +1,3 @@
+
+# incompatible with py2.7
+USES:=	${USES:Npython} python:3.6+
