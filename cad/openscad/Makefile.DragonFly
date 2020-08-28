@@ -1,4 +1,3 @@
-USE_CXXSTD= gnu++11
 
 # zrj: less noise!
 CFLAGS+= -Wno-deprecated-declarations -Wno-unused-variable
