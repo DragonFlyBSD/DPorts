@@ -1,3 +1,0 @@
-
-# gnome shell out for now
-OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NGNOMESHELL}
