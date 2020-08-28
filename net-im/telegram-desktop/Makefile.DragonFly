@@ -2,3 +2,8 @@ CXXFLAGS +=	-DWITHOUT_PULSE
 
 # bad MF
 BUILD_DEPENDS:=	${BUILD_DEPENDS:Npulseaudio*}
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/pkg_check_modules(PULSE/d' \
+			 -e '/PULSE_INCLUDE_DIRS/d' \
+		${WRKSRC}/Telegram/cmake/lib_tgvoip.cmake
