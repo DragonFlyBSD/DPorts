@@ -1,0 +1,23 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@(signbit(@(std::signbit(@g' \
+		${WRKSRC}/src/faust-generated/champ.cc \
+		${WRKSRC}/src/faust-generated/epiphone.cc \
+		${WRKSRC}/src/faust-generated/orangedarkterror.cc \
+		${WRKSRC}/src/faust-generated/plexiel34.cc \
+		${WRKSRC}/src/faust-generated/supersonic.cc \
+		${WRKSRC}/src/LV2/faust-generated/gxechocat.cc \
+		${WRKSRC}/src/LV2/faust-generated/gxtape.cc \
+		${WRKSRC}/src/LV2/faust-generated/gxtape_st.cc \
+		${WRKSRC}/src/LV2/faust-generated/gxtilttone.cc \
+		${WRKSRC}/src/LV2/faust-generated/gxtubedelay.cc \
+		${WRKSRC}/src/LV2/faust-generated/gxtubetremelo.cc \
+		${WRKSRC}/src/LV2/faust-generated/gxtubevibrato.cc \
+		${WRKSRC}/src/LV2/faust-generated/gx_chump.cc \
+		${WRKSRC}/src/LV2/faust-generated/gx_bigchump.cc \
+		${WRKSRC}/src/LV2/faust-generated/gx_studiopre.cc \
+		${WRKSRC}/src/LV2/faust-generated/gx_studiopre_st.cc \
+		${WRKSRC}/src/LV2/faust-generated/gx_vibrochump.cc \
+		${WRKSRC}/src/LV2/faust-generated/gx_w20.cc
+	${REINPLACE_CMD} -e 's@ max(@ fmaxf(@g' \
+		${WRKSRC}/src/LV2/xputty/dialogs/xfile-dialog.cpp
