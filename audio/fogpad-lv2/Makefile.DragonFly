@@ -1,0 +1,4 @@
+
+# missing GL
+USES+=		gl
+USE_GL+=	gl
