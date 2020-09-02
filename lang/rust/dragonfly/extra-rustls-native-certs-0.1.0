@@ -1,0 +1,25 @@
+--- cargo-crates/rustls-native-certs-0.1.0/Cargo.toml.orig	2020-09-01 22:56:17 UTC
++++ cargo-crates/rustls-native-certs-0.1.0/Cargo.toml
+@@ -34,7 +34,7 @@ version = "0.21"
+ 
+ [dev-dependencies.webpki-roots]
+ version = "0"
+-[target."cfg(target_os = \"linux\")".dependencies.openssl-probe]
++[target."cfg(any(target_os = \"linux\", target_os = \"freebsd\", target_os = \"dragonfly\"))".dependencies.openssl-probe]
+ version = "0.1.2"
+ [target."cfg(target_os = \"macos\")".dependencies.security-framework]
+ version = "0.3.2"
+--- cargo-crates/rustls-native-certs-0.1.0/src/lib.rs.orig	2019-10-27 10:15:28 UTC
++++ cargo-crates/rustls-native-certs-0.1.0/src/lib.rs
+@@ -4,9 +4,9 @@
+ //! It consists of a single function [load_native_certs](fn.load_native_certs.html) which returns a
+ //! `rustls::RootCertStore` pre-filled from the native certificate store.
+ 
+-#[cfg(target_os = "linux")]
++#[cfg(any(target_os = "linux", target_os = "freebsd", target_os = "dragonfly"))]
+ mod linux;
+-#[cfg(target_os = "linux")]
++#[cfg(any(target_os = "linux", target_os = "freebsd", target_os = "dragonfly"))]
+ use linux as platform;
+ 
+ #[cfg(target_family = "windows")]
