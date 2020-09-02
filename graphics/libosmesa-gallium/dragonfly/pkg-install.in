@@ -1,0 +1,11 @@
+#!/bin/sh
+
+case "$2" in
+"POST-INSTALL")
+	echo "Applying overlay for lib/libOSMesa.so"
+	if [ ! -f "%%LOCALBASE%%/lib/libOSMesa.so.8.0.0_classic" ]; then
+	  [ -f "%%LOCALBASE%%/lib/libOSMesa.so.8.0.0" ] && mv -v %%LOCALBASE%%/lib/libOSMesa.so.8.0.0 %%LOCALBASE%%/lib/libOSMesa.so.8.0.0_classic || echo "wrong dependencies install order?"
+	fi
+	cp -vf %%LOCALBASE%%/misc/libosmesa-gallium/lib/libOSMesa.so.8.0.0 %%LOCALBASE%%/lib/libOSMesa.so.8.0.0 || /usr/bin/true
+	;;
+esac

@@ -1,0 +1,38 @@
+
+# zrj: use overlay
+LIB_DEPENDS+=	libOSMesa.so:graphics/libosmesa
+SUB_FILES+=	pkg-install pkg-deinstall
+DFLY_FILESDIR=	${.CURDIR}/dragonfly
+
+# relocate
+dfly-install:
+.if defined(DEVELOPER)
+	${MD5} -r ${STAGEDIR}${LOCALBASE}/include/GL/osmesa.h
+	${MD5} -r ${LOCALBASE}/include/GL/osmesa.h
+	${MD5} -r ${STAGEDIR}${LOCALBASE}/libdata/pkgconfig/osmesa.pc
+	${MD5} -r ${LOCALBASE}/libdata/pkgconfig/osmesa.pc
+.endif
+	${MKDIR} ${STAGEDIR}${LOCALBASE}/misc
+	${MKDIR} ${STAGEDIR}${LOCALBASE}/misc/libosmesa-gallium
+	${MKDIR} ${STAGEDIR}${LOCALBASE}/misc/libosmesa-gallium/include
+	${MKDIR} ${STAGEDIR}${LOCALBASE}/misc/libosmesa-gallium/include/GL
+	${MKDIR} ${STAGEDIR}${LOCALBASE}/misc/libosmesa-gallium/lib
+	${MKDIR} ${STAGEDIR}${LOCALBASE}/misc/libosmesa-gallium/libdata
+	${MKDIR} ${STAGEDIR}${LOCALBASE}/misc/libosmesa-gallium/libdata/pkgconfig
+	${MKDIR} ${STAGEDIR}${LOCALBASE}/misc/libosmesa-gallium/share
+	${MV} ${STAGEDIR}${LOCALBASE}/include/GL/osmesa.h ${STAGEDIR}${LOCALBASE}/misc/libosmesa-gallium/include/GL/
+	${RMDIR} ${STAGEDIR}${LOCALBASE}/include/GL
+	${MV} ${STAGEDIR}${LOCALBASE}/lib/libOSMesa* ${STAGEDIR}${LOCALBASE}/misc/libosmesa-gallium/lib/
+	${MV} ${STAGEDIR}${LOCALBASE}/libdata/pkgconfig/osmesa.pc ${STAGEDIR}${LOCALBASE}/misc/libosmesa-gallium/libdata/pkgconfig/
+	${MV} ${STAGEDIR}${LOCALBASE}/share/drirc.d ${STAGEDIR}${LOCALBASE}/misc/libosmesa-gallium/share/
+
+.if 0
+# zrj: justdoitTM will avoid installing llvmX0 for all R-cran octave ports.
+STATIC_LLVM=yes
+
+# llvm environ boilerplate...
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(LD_NO_UNDEFINED)\)@NOP) -Wl,--allow-shlib-undefined@'	\
+		${WRKSRC}/src/gallium/targets/libgl-xlib/Makefile.in			\
+		${WRKSRC}/src/gallium/targets/osmesa/Makefile.in
+.endif

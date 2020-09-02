@@ -1,0 +1,6 @@
+misc/libosmesa-gallium/include/GL/osmesa.h
+misc/libosmesa-gallium/lib/libOSMesa.so
+misc/libosmesa-gallium/lib/libOSMesa.so.8
+misc/libosmesa-gallium/lib/libOSMesa.so.8.0.0
+misc/libosmesa-gallium/libdata/pkgconfig/osmesa.pc
+misc/libosmesa-gallium/share/drirc.d/00-mesa-defaults.conf
