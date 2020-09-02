@@ -1,4 +1,7 @@
 
+# include message about gallium split
+PKGMESSAGE=	${.CURDIR}/dragonfly/pkg-mess
+
 .if 0 # XXX
 # zrj: justdoitTM will avoid installing llvmX0 for all Xorg ports.
 STATIC_LLVM=yes
@@ -12,8 +15,27 @@ dfly-patch:
 		${WRKSRC}/src/gallium/targets/xvmc/Makefile.in
 .endif
 
+# these are actually needed to ensure non outdated headers are used
+MESON_ARGS+=	-Dgles2=true -Degl=true
+
 # prune some intermediates to fix stage-qa XXX
 dfly-install:
+.if defined(DEVELOPER)
+	${MD5} -r ${STAGEDIR}/${LOCALBASE}/include/EGL/*
+	${MD5} -r ${LOCALBASE}/include/EGL/*
+	${MD5} -r ${STAGEDIR}/${LOCALBASE}/include/GLES2/*
+	${MD5} -r ${LOCALBASE}/include/GLES2/*
+	${MD5} -r ${STAGEDIR}/${LOCALBASE}/include/GLES3/*
+	${MD5} -r ${LOCALBASE}/include/GLES3/*
+	${MD5} -r ${STAGEDIR}/${LOCALBASE}/lib/libEGL.so*
+	${MD5} -r ${LOCALBASE}/lib/libEGL.so*
+	${MD5} -r ${STAGEDIR}/${LOCALBASE}/lib/libGLESv2.so*
+	${MD5} -r ${LOCALBASE}/lib/libGLESv2.so*
+	${MD5} -r ${STAGEDIR}/${LOCALBASE}/libdata/pkgconfig/egl.pc
+	${MD5} -r ${LOCALBASE}/libdata/pkgconfig/egl.pc
+	${MD5} -r ${STAGEDIR}/${LOCALBASE}/libdata/pkgconfig/glesv2.pc
+	${MD5} -r ${LOCALBASE}/libdata/pkgconfig/glesv2.pc
+.endif
 	${RM} -rv ${STAGEDIR}/${LOCALBASE}/include/EGL
 	${RM} -rv ${STAGEDIR}/${LOCALBASE}/include/GLES2
 	${RM} -rv ${STAGEDIR}/${LOCALBASE}/include/GLES3

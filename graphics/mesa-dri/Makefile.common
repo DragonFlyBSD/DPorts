@@ -41,11 +41,12 @@ LIB_DEPENDS+=	libdrm.so:graphics/libdrm
 .if ${COMPONENT} != libs
 LIB_DEPENDS+=	libglapi.so:graphics/mesa-libs
 .endif
+# all ports whine on WARNING: Gettext not found, all translation targets will be ignored.
+USES+=		gettext-tools
+.if ${COMPONENT} != libs && ${COMPONENT} != dri
 .if ${ARCH} == x86_64 || ${ARCH} == i386
 LIB_DEPENDS+=	libunwind.so:devel/libunwind
 .endif
-.if ${OPSYS} == DragonFly
-LIB_DEPENDS+=	libelf.so:devel/libelf
 .endif
 
 USES+=		compiler:c++11-lib bison meson pathfix pkgconfig \
@@ -96,6 +97,7 @@ BINARY_ALIAS+=	python3=${PYTHON_VERSION}
 .if ${ARCH} == sparc64
 MESON_ARGS+=	-Dllvm=false
 .else
+. if ${COMPONENT} != libs && ${COMPONENT} != dri && ${COMPONENT} != osmesa
 BUILD_DEPENDS+=	llvm${LLVM_DEFAULT}>=3.9.0_4:devel/llvm${LLVM_DEFAULT}
 .if ${COMPONENT} != libs
 RUN_DEPENDS+=	llvm${LLVM_DEFAULT}>=3.9.0_4:devel/llvm${LLVM_DEFAULT}
@@ -103,6 +105,16 @@ RUN_DEPENDS+=	llvm${LLVM_DEFAULT}>=3.9.0_4:devel/llvm${LLVM_DEFAULT}
 MESON_ARGS+=	--native-file="${WRKSRC}/llvm.ini"
 LDFLAGS+=	-Wl,-rpath=${LOCALBASE}/llvm${LLVM_DEFAULT}/lib
 MESON_ARGS+=	-Dllvm=true
+.if ${OPSYS} == DragonFly
+LIB_DEPENDS+=	libelf.so:devel/libelf
+.endif
+. else
+.  if defined(DEVELOPER)
+# reduces binary differences somewhat while investigating
+LDFLAGS+=	-Wl,-rpath=${LOCALBASE}/llvm${LLVM_DEFAULT}/lib
+.  endif
+MESON_ARGS+=	-Dllvm=false
+. endif
 .endif
 
 # we don't care about GLes v1

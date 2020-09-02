@@ -1,0 +1,8 @@
+[
+{ type: install
+  message: <<EOM
+The gallium(llvm) enabled dri version was moved to graphics/mesa-dri-gallium
+overlay.  Please install gallium version as needed for radeon acceleration.
+EOM
+}
+]

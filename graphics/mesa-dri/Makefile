@@ -52,9 +52,7 @@ DRI_DRIVERS+=		SWRAST # Mesa Classic swrast
  || ${ARCH} == powerpc || ${ARCH} == powerpc64
 DRI_DRIVERS+=		R100 R200
 GALLIUM_DRIVERS+=	R300 R600 RADEONSI
-.if ${OPSYS} == FreeBSD
 VULKAN_DRIVERS+=	AMD
-.endif
 . if ${PORT_OPTIONS:MPLATFORM_X11}
 USE_XORG+=		xv xvmc
 MESON_ARGS+=		-Dgallium-xvmc=true
@@ -65,8 +63,8 @@ DRI_DRIVERS+=		I915 I965
 GALLIUM_DRIVERS+=	SVGA
 . if ${OPSYS} == FreeBSD
 EXTRA_PATCHES+=	${PATCHDIR}/extra-src_mesa_drivers_dri_i965_intel__screen.c
-VULKAN_DRIVERS+=	INTEL
 . endif
+VULKAN_DRIVERS+=	INTEL
 .endif
 
 .if defined(VULKAN_DRIVERS)
@@ -89,6 +87,15 @@ MESA_PLATFORMS+=	surfaceless
 
 .if ${PORT_OPTIONS:MPLATFORM_WAYLAND}
 MESA_PLATFORMS+=	wayland
+.endif
+
+# gallium drivers are installed separately in graphics/mesa-gallium port
+.if ${OPSYS} == DragonFly
+OPTIONS_EXCLUDE:=	VAAPI VDPAU
+DRI_DRIVERS:=		R100 R200 I915 I965 SWRAST
+GALLIUM_DRIVERS:=
+VULKAN_DRIVERS:=
+MESON_ARGS+=		-Dgallium-xvmc=false -Dgallium-xa=false -Dgallium-va=false -Dgallium-vdpau=false
 .endif
 
 MESON_ARGS+=	-Ddri-drivers="${DRI_DRIVERS:ts,:tl}" \
