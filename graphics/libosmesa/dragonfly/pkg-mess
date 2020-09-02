@@ -1,0 +1,8 @@
+[
+{ type: install
+  message: <<EOM
+The gallium(llvm) version was moved to graphics/libosmesa-gallium
+overlay.  Please install gallium version as needed.
+EOM
+}
+]
