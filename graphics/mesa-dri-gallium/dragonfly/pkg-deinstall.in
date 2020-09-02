@@ -1,0 +1,27 @@
+#!/bin/sh
+
+FICHIERS1="dri/swrast_dri.so dri/i915_dri.so dri/i965_dri.so dri/r200_dri.so dri/radeon_dri.so"
+FICHIERS2="dri/kms_swrast_dri.so dri/r300_dri.so dri/r600_dri.so dri/radeonsi_dri.so dri/vmwgfx_dri.so"
+FICHIERS2="${FICHIERS2} dri/r600_drv_video.so dri/radeonsi_drv_video.so libXvMCr600.so.1.0.0"
+FICHIERS2="${FICHIERS2} vdpau/libvdpau_r300.so.1.0.0 vdpau/libvdpau_r600.so.1.0.0 vdpau/libvdpau_radeonsi.so.1.0.0"
+LFICHIERS="libXvMCr600.so libXvMCr600.so.1 libXvMCr600.so.1.0"
+LFICHIERS="${LFICHIERS} vdpau/libvdpau_r300.so vdpau/libvdpau_r300.so.1 vdpau/libvdpau_r300.so.1.0"
+LFICHIERS="${LFICHIERS} vdpau/libvdpau_r600.so vdpau/libvdpau_r600.so.1 vdpau/libvdpau_r600.so.1.0"
+LFICHIERS="${LFICHIERS} vdpau/libvdpau_radeonsi.so vdpau/libvdpau_radeonsi.so.1 vdpau/libvdpau_radeonsi.so.1.0"
+
+case "$2" in
+"POST-DEINSTALL")
+	echo "De-applying gallium overlay for mesa-dri"
+	for f in ${FICHIERS1}; do
+	  [ -f "%%LOCALBASE%%/lib/${f}_classic" ] && /bin/mv -vf %%LOCALBASE%%/lib/${f}_classic %%LOCALBASE%%/lib/${f}
+	done
+	for f in ${FICHIERS2}; do
+	  [ -f "%%LOCALBASE%%/lib/${f}" ] && /bin/rm -vf %%LOCALBASE%%/lib/${f}
+	done
+	for f in ${LFICHIERS}; do
+	  [ -L "%%LOCALBASE%%/lib/${f}" ] && /bin/rm -vf %%LOCALBASE%%/lib/${f}
+	done
+	/bin/rmdir %%LOCALBASE%%/lib/dri/vdpau || /usr/bin/true
+	/bin/rmdir %%LOCALBASE%%/lib/dri || /usr/bin/true
+	;;
+esac

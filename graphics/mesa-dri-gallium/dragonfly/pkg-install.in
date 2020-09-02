@@ -1,0 +1,34 @@
+#!/bin/sh
+
+MISCDRI="misc/mesa-dri-gallium"
+FICHIERS1="dri/swrast_dri.so dri/i915_dri.so dri/i965_dri.so dri/r200_dri.so dri/radeon_dri.so"
+FICHIERS2="dri/kms_swrast_dri.so dri/r300_dri.so dri/r600_dri.so dri/radeonsi_dri.so dri/vmwgfx_dri.so"
+FICHIERS2="${FICHIERS2} dri/r600_drv_video.so dri/radeonsi_drv_video.so libXvMCr600.so.1.0.0"
+FICHIERS2="${FICHIERS2} vdpau/libvdpau_r300.so.1.0.0 vdpau/libvdpau_r600.so.1.0.0 vdpau/libvdpau_radeonsi.so.1.0.0"
+LFICHIERS="libXvMCr600.so libXvMCr600.so.1 libXvMCr600.so.1.0"
+LFICHIERS="${LFICHIERS} vdpau/libvdpau_r300.so vdpau/libvdpau_r300.so.1 vdpau/libvdpau_r300.so.1.0"
+LFICHIERS="${LFICHIERS} vdpau/libvdpau_r600.so vdpau/libvdpau_r600.so.1 vdpau/libvdpau_r600.so.1.0"
+LFICHIERS="${LFICHIERS} vdpau/libvdpau_radeonsi.so vdpau/libvdpau_radeonsi.so.1 vdpau/libvdpau_radeonsi.so.1.0"
+
+# need to use hardsymlinks because of megadrivers in mesa-dri
+# also classic drivers get changed (does not include classic swrast in megadriver)
+# so replace them too, tho should work??
+case "$2" in
+"POST-INSTALL")
+	echo "Applying gallium overlay for mesa-dri"
+	if [ ! -f "%%LOCALBASE%%/lib/dri/swrast_dri.so_classic" ]; then
+	  [ ! -f "%%LOCALBASE%%/lib/dri/swrast_dri.so" ] && echo "wrong dependencies install order?"
+	  for f in ${FICHIERS1}; do
+	    [ -f "%%LOCALBASE%%/lib/${f}" ] && /bin/mv -v %%LOCALBASE%%/lib/${f} %%LOCALBASE%%/lib/${f}_classic || /usr/bin/true
+	  done
+	fi
+	[ -d "%%LOCALBASE%%/lib/dri" ] || /bin/mkdir "%%LOCALBASE%%/lib/dri"
+	[ -d "%%LOCALBASE%%/lib/dri/vdpau" ] || /bin/mkdir "%%LOCALBASE%%/lib/dri/vdpau"
+	for f in ${FICHIERS1} ${FICHIERS2}; do
+	  [ -f "%%LOCALBASE%%/${MISCDRI}/lib/${f}" ] && /bin/ln -vf %%LOCALBASE%%/${MISCDRI}/lib/${f} %%LOCALBASE%%/lib/${f} || /usr/bin/true
+	done
+	for f in ${LFICHIERS}; do
+	  [ -L "%%LOCALBASE%%/${MISCDRI}/lib/${f}" ] && /bin/cp -avf %%LOCALBASE%%/${MISCDRI}/lib/${f} %%LOCALBASE%%/lib/${f} || /usr/bin/true
+	done
+	;;
+esac

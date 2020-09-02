@@ -1,0 +1,104 @@
+
+.if 0 # XXX
+# zrj: justdoitTM will avoid installing llvmX0 for all Xorg ports.
+STATIC_LLVM=yes
+
+# llvm environ boilerplate...
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(LD_NO_UNDEFINED)\)@NOP) -Wl,--allow-shlib-undefined@'	\
+		${WRKSRC}/src/gallium/targets/dri/Makefile.in				\
+		${WRKSRC}/src/gallium/targets/va/Makefile.in				\
+		${WRKSRC}/src/gallium/targets/vdpau/Makefile.in				\
+		${WRKSRC}/src/gallium/targets/xvmc/Makefile.in
+.endif
+
+# zrj: use overlay, graphics/mesa-dri needs to be installed first, hmm INSTALL_DEPENDS???.
+#LIB_DEPENDS+=	lib/dri/swrast_dri.so:graphics/mesa-dri
+BUILD_DEPENDS+=	mesa-dri>0:graphics/mesa-dri
+SUB_FILES+=	pkg-install pkg-deinstall
+DFLY_FILESDIR=	${.CURDIR}/dragonfly
+
+# these are actually needed to ensure non outdated headers are used
+MESON_ARGS+=	-Dgles2=true -Degl=true
+
+# some toolsery resed
+#	-${REINPLACE_CMD} -e "s@, 'xvmcz'@@g" ${WRKSRC}/meson.build
+dfly-patch:
+	-${REINPLACE_CMD} -e "s@\!/bin/bash@\!${LOCALBASE}/bin/bash@g" \
+		${WRKSRC}/src/intel/tools/intel*.in
+	-${REINPLACE_CMD} -e "s@'XvMCW')@'XvMCW' , dirs: [ '${LOCALBASE}/lib/' ])@g" \
+			  -e "s@dep_real_xvmc, @dep_xv, &@g" \
+		${WRKSRC}/src/gallium/state_trackers/xvmc/meson.build
+	-${REINPLACE_CMD} -e 's@<sys/sysmacros.h>@<sys/ioccom.h>@g' \
+			 -e 's@_IOC_TYPE(@IOCGROUP(@g' \
+			 -e 's@program_invocation_short_name@getprogname()@g' \
+		${WRKSRC}/src/intel/tools/intel_sanitize_gpu.c \
+		${WRKSRC}/src/intel/tools/intel_dump_gpu.c
+
+# move everything so special dir, install handled by pkg-install script
+dfly-install:
+.if defined(DEVELOPER)
+	${MD5} -r ${STAGEDIR}/${LOCALBASE}/include/EGL/*
+	${MD5} -r ${LOCALBASE}/include/EGL/*
+	${MD5} -r ${STAGEDIR}/${LOCALBASE}/include/GL/*
+	${MD5} -r ${LOCALBASE}/include/GL/*
+	${MD5} -r ${STAGEDIR}/${LOCALBASE}/include/GL/internal/*
+	${MD5} -r ${LOCALBASE}/include/GL/internal/*
+	${MD5} -r ${STAGEDIR}/${LOCALBASE}/include/GLES2/*
+	${MD5} -r ${LOCALBASE}/include/GLES2/*
+	${MD5} -r ${STAGEDIR}/${LOCALBASE}/include/GLES3/*
+	${MD5} -r ${LOCALBASE}/include/GLES3/*
+	${MD5} -r ${STAGEDIR}/${LOCALBASE}/include/KHR/*
+	${MD5} -r ${LOCALBASE}/include/KHR/*
+	${MD5} -r ${STAGEDIR}/${LOCALBASE}/include/gbm.h
+	${MD5} -r ${LOCALBASE}/include/gbm.h
+	${MD5} -r ${STAGEDIR}/${LOCALBASE}/lib/libEGL.so*
+	${MD5} -r ${LOCALBASE}/lib/libEGL.so*
+	${MD5} -r ${STAGEDIR}/${LOCALBASE}/lib/libGL.so*
+	${MD5} -r ${LOCALBASE}/lib/libGL.so*
+	${MD5} -r ${STAGEDIR}/${LOCALBASE}/lib/libGLESv2.so*
+	${MD5} -r ${LOCALBASE}/lib/libGLESv2.so*
+	${MD5} -r ${STAGEDIR}/${LOCALBASE}/lib/libgbm.so*
+	${MD5} -r ${LOCALBASE}/lib/libgbm.so*
+	${MD5} -r ${STAGEDIR}/${LOCALBASE}/lib/libglapi.so*
+	${MD5} -r ${LOCALBASE}/lib/libglapi.so*
+	${MD5} -r ${STAGEDIR}/${LOCALBASE}/libdata/pkgconfig/dri.pc
+	${MD5} -r ${LOCALBASE}/libdata/pkgconfig/dri.pc
+	${MD5} -r ${STAGEDIR}/${LOCALBASE}/libdata/pkgconfig/egl.pc
+	${MD5} -r ${LOCALBASE}/libdata/pkgconfig/egl.pc
+	${MD5} -r ${STAGEDIR}/${LOCALBASE}/libdata/pkgconfig/gbm.pc
+	${MD5} -r ${LOCALBASE}/libdata/pkgconfig/gbm.pc
+	${MD5} -r ${STAGEDIR}/${LOCALBASE}/libdata/pkgconfig/gl.pc
+	${MD5} -r ${LOCALBASE}/libdata/pkgconfig/gl.pc
+	${MD5} -r ${STAGEDIR}/${LOCALBASE}/libdata/pkgconfig/glesv2.pc
+	${MD5} -r ${LOCALBASE}/libdata/pkgconfig/glesv2.pc
+	${MD5} -r ${STAGEDIR}/${LOCALBASE}/share/drirc.d/00-mesa-defaults.conf
+	${MD5} -r ${LOCALBASE}/share/drirc.d/00-mesa-defaults.conf
+.endif
+	${MKDIR} ${STAGEDIR}${LOCALBASE}/misc
+	${MKDIR} ${STAGEDIR}${LOCALBASE}/misc/mesa-dri-gallium
+	${MKDIR} ${STAGEDIR}${LOCALBASE}/misc/mesa-dri-gallium/include
+	${MKDIR} ${STAGEDIR}${LOCALBASE}/misc/mesa-dri-gallium/lib
+	${MKDIR} ${STAGEDIR}${LOCALBASE}/misc/mesa-dri-gallium/libdata
+	${MKDIR} ${STAGEDIR}${LOCALBASE}/misc/mesa-dri-gallium/share
+	${MV} -v ${STAGEDIR}${LOCALBASE}/bin ${STAGEDIR}${LOCALBASE}/misc/mesa-dri-gallium/
+	${TOUCH} ${STAGEDIR}${LOCALBASE}/misc/mesa-dri-gallium/bin/gallium_dummy
+	-${MV} -v ${STAGEDIR}${LOCALBASE}/libexec/libintel_*.so ${STAGEDIR}${LOCALBASE}/misc/mesa-dri-gallium/bin/
+	${MV} -v ${STAGEDIR}${LOCALBASE}/include/EGL ${STAGEDIR}${LOCALBASE}/misc/mesa-dri-gallium/include/
+	${MV} -v ${STAGEDIR}${LOCALBASE}/include/GL ${STAGEDIR}${LOCALBASE}/misc/mesa-dri-gallium/include/
+	${MV} -v ${STAGEDIR}${LOCALBASE}/include/GLES2 ${STAGEDIR}${LOCALBASE}/misc/mesa-dri-gallium/include/
+	${MV} -v ${STAGEDIR}${LOCALBASE}/include/GLES3 ${STAGEDIR}${LOCALBASE}/misc/mesa-dri-gallium/include/
+	${MV} -v ${STAGEDIR}${LOCALBASE}/include/KHR ${STAGEDIR}${LOCALBASE}/misc/mesa-dri-gallium/include/
+	${MV} -v ${STAGEDIR}${LOCALBASE}/include/gbm.h ${STAGEDIR}${LOCALBASE}/misc/mesa-dri-gallium/include/
+	${MV} -v ${STAGEDIR}${LOCALBASE}/lib/libEGL.so* ${STAGEDIR}${LOCALBASE}/misc/mesa-dri-gallium/lib/
+	${MV} -v ${STAGEDIR}${LOCALBASE}/lib/libGL.so* ${STAGEDIR}${LOCALBASE}/misc/mesa-dri-gallium/lib/
+	${MV} -v ${STAGEDIR}${LOCALBASE}/lib/libGLESv2.so* ${STAGEDIR}${LOCALBASE}/misc/mesa-dri-gallium/lib/
+	${MV} -v ${STAGEDIR}${LOCALBASE}/lib/libgbm.so* ${STAGEDIR}${LOCALBASE}/misc/mesa-dri-gallium/lib/
+	${MV} -v ${STAGEDIR}${LOCALBASE}/lib/libglapi.so* ${STAGEDIR}${LOCALBASE}/misc/mesa-dri-gallium/lib/
+	${MV} -v ${STAGEDIR}${LOCALBASE}/lib/libXvMCr600.so* ${STAGEDIR}${LOCALBASE}/misc/mesa-dri-gallium/lib/
+	${MV} -v ${STAGEDIR}${LOCALBASE}/lib/dri ${STAGEDIR}${LOCALBASE}/misc/mesa-dri-gallium/lib/
+	-${MV} -v ${STAGEDIR}${LOCALBASE}/lib/vdpau ${STAGEDIR}${LOCALBASE}/misc/mesa-dri-gallium/lib/
+	${MV} -v ${STAGEDIR}${LOCALBASE}/libdata/pkgconfig ${STAGEDIR}${LOCALBASE}/misc/mesa-dri-gallium/libdata/
+	${MV} -v ${STAGEDIR}${LOCALBASE}/share/drirc.d ${STAGEDIR}${LOCALBASE}/misc/mesa-dri-gallium/share/
+	-${RMDIR} ${STAGEDIR}${LOCALBASE}/lib/X11/app-defaults
+	-${RMDIR} ${STAGEDIR}${LOCALBASE}/lib/X11
