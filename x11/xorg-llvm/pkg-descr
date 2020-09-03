@@ -1,0 +1,4 @@
+This is a metaport for many of the X.Org packages available in the ports tree.
+This version includes gallium (llvm based) DRI drivers too.
+
+WWW: https://www.x.org/
