@@ -1,0 +1,68 @@
+--- tests/ports/Makefile.in.orig	2020-07-24 14:17:07.706458000 -0700
++++ tests/ports/Makefile.in	2020-07-24 14:20:33.125910000 -0700
+@@ -116,6 +116,7 @@
+ CONFIG_CLEAN_FILES = topology-solaris.c topology-solaris-chiptype.c \
+ 	topology-aix.c topology-osf.c topology-windows.c \
+ 	topology-darwin.c topology-freebsd.c topology-netbsd.c \
++	topology-dragonfly.c \
+ 	topology-hpux.c topology-bgq.c topology-opencl.c \
+ 	topology-cuda.c topology-nvml.c topology-gl.c
+ CONFIG_CLEAN_VPATH_FILES =
+@@ -520,6 +521,7 @@
+ @HWLOC_HAVE_LINUX_TRUE@	libhwloc-port-freebsd.la \
+ @HWLOC_HAVE_LINUX_TRUE@	libhwloc-port-hpux.la \
+ @HWLOC_HAVE_LINUX_TRUE@	libhwloc-port-netbsd.la \
++@HWLOC_HAVE_LINUX_TRUE@	libhwloc-port-dragonfly.la \
+ @HWLOC_HAVE_LINUX_TRUE@	libhwloc-port-osf.la \
+ @HWLOC_HAVE_LINUX_TRUE@	libhwloc-port-solaris.la \
+ @HWLOC_HAVE_LINUX_TRUE@	libhwloc-port-windows.la \
+@@ -612,6 +614,17 @@
+ 	-DHAVE_SYS_SYSCTL_H \
+ 	-DHAVE_SYSCTL
+ 
++nodist_libhwloc_port_dragonfly_la_SOURCES = topology-dragonfly.c
++libhwloc_port_dragonfly_la_SOURCES = \
++	include/dragonfly/pthread.h \
++	include/dragonfly/sys/sysctl.h
++
++libhwloc_port_dragonfly_la_CPPFLAGS = $(common_CPPFLAGS) \
++	-I$(HWLOC_top_srcdir)/tests/ports/include/dragonfly \
++	-DHWLOC_NETBSD_SYS \
++	-DHAVE_SYS_SYSCTL_H \
++	-DHAVE_SYSCTL
++
+ nodist_libhwloc_port_osf_la_SOURCES = topology-osf.c
+ libhwloc_port_osf_la_SOURCES = \
+ 	include/osf/cpuset.h \
+@@ -747,6 +760,9 @@
+ libhwloc-port-netbsd.la: $(libhwloc_port_netbsd_la_OBJECTS) $(libhwloc_port_netbsd_la_DEPENDENCIES) $(EXTRA_libhwloc_port_netbsd_la_DEPENDENCIES) 
+ 	$(AM_V_CCLD)$(LINK) $(am_libhwloc_port_netbsd_la_rpath) $(libhwloc_port_netbsd_la_OBJECTS) $(libhwloc_port_netbsd_la_LIBADD) $(LIBS)
+ 
++libhwloc-port-dragonfly.la: $(libhwloc_port_dragonfly_la_OBJECTS) $(libhwloc_port_dragonfly_la_DEPENDENCIES) $(EXTRA_libhwloc_port_dragonfly_la_DEPENDENCIES) 
++	$(AM_V_CCLD)$(LINK) $(am_libhwloc_port_dragonfly_la_rpath) $(libhwloc_port_dragonfly_la_OBJECTS) $(libhwloc_port_dragonfly_la_LIBADD) $(LIBS)
++
+ libhwloc-port-nvml.la: $(libhwloc_port_nvml_la_OBJECTS) $(libhwloc_port_nvml_la_DEPENDENCIES) $(EXTRA_libhwloc_port_nvml_la_DEPENDENCIES) 
+ 	$(AM_V_CCLD)$(LINK) $(am_libhwloc_port_nvml_la_rpath) $(libhwloc_port_nvml_la_OBJECTS) $(libhwloc_port_nvml_la_LIBADD) $(LIBS)
+ 
+@@ -776,6 +792,7 @@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libhwloc_port_gl_la-topology-gl.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libhwloc_port_hpux_la-topology-hpux.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libhwloc_port_netbsd_la-topology-netbsd.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libhwloc_port_dragonfly_la-topology-dragonfly.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libhwloc_port_nvml_la-topology-nvml.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libhwloc_port_opencl_la-topology-opencl.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libhwloc_port_osf_la-topology-osf.Plo@am__quote@
+@@ -863,6 +880,13 @@
+ @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+ @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libhwloc_port_netbsd_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libhwloc_port_netbsd_la-topology-netbsd.lo `test -f 'topology-netbsd.c' || echo '$(srcdir)/'`topology-netbsd.c
+ 
++libhwloc_port_dragonfly_la-topology-dragonfly.lo: topology-dragonfly.c
++@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libhwloc_port_dragonfly_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libhwloc_port_dragonfly_la-topology-dragonfly.lo -MD -MP -MF $(DEPDIR)/libhwloc_port_dragonfly_la-topology-dragonfly.Tpo -c -o libhwloc_port_dragonfly_la-topology-dragonfly.lo `test -f 'topology-dragonfly.c' || echo '$(srcdir)/'`topology-dragonfly.c
++@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libhwloc_port_dragonfly_la-topology-dragonfly.Tpo $(DEPDIR)/libhwloc_port_dragonfly_la-topology-dragonfly.Plo
++@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='topology-dragonfly.c' object='libhwloc_port_dragonfly_la-topology-dragonfly.lo' libtool=yes @AMDEPBACKSLASH@
++@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
++@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libhwloc_port_dragonfly_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libhwloc_port_dragonfly_la-topology-dragonfly.lo `test -f 'topology-dragonfly.c' || echo '$(srcdir)/'`topology-dragonfly.c
++
+ libhwloc_port_nvml_la-topology-nvml.lo: topology-nvml.c
+ @am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libhwloc_port_nvml_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libhwloc_port_nvml_la-topology-nvml.lo -MD -MP -MF $(DEPDIR)/libhwloc_port_nvml_la-topology-nvml.Tpo -c -o libhwloc_port_nvml_la-topology-nvml.lo `test -f 'topology-nvml.c' || echo '$(srcdir)/'`topology-nvml.c
+ @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libhwloc_port_nvml_la-topology-nvml.Tpo $(DEPDIR)/libhwloc_port_nvml_la-topology-nvml.Plo

@@ -1,0 +1,41 @@
+--- src/Makefile.in.orig	2020-07-24 13:25:38.300817000 -0700
++++ src/Makefile.in	2020-07-24 13:27:18.595332000 -0700
+@@ -131,6 +131,8 @@
+ @HWLOC_HAVE_PLUGINS_TRUE@am__append_30 = $(LTDLINCL)
+ @HWLOC_HAVE_PLUGINS_TRUE@am__append_31 = -export-dynamic
+ @HWLOC_BUILD_STANDALONE_TRUE@am__append_32 = hwloc.dtd
++@HWLOC_HAVE_DRAGONFLY_TRUE@am__append_33 = topology-dragonfly.c
++@HWLOC_HAVE_DRAGONFLY_TRUE@am__append_34 = -lpthread
+ subdir = src
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ am__aclocal_m4_deps = $(top_srcdir)/config/hwloc.m4 \
+@@ -286,6 +288,7 @@
+ @HWLOC_HAVE_DARWIN_TRUE@am__objects_14 = topology-darwin.lo
+ @HWLOC_HAVE_FREEBSD_TRUE@am__objects_15 = topology-freebsd.lo
+ @HWLOC_HAVE_NETBSD_TRUE@am__objects_16 = topology-netbsd.lo
++@HWLOC_HAVE_DRAGONFLY_TRUE@am__objects_19 = topology-dragonfly.lo
+ @HWLOC_HAVE_X86_CPUID_TRUE@am__objects_17 = topology-x86.lo
+ am__objects_18 = topology.lo traversal.lo distances.lo components.lo \
+ 	bind.lo bitmap.lo pci-common.lo diff.lo misc.lo base64.lo \
+@@ -296,7 +299,7 @@
+ 	$(am__objects_8) $(am__objects_9) $(am__objects_10) \
+ 	$(am__objects_11) $(am__objects_12) $(am__objects_13) \
+ 	$(am__objects_14) $(am__objects_15) $(am__objects_16) \
+-	$(am__objects_17)
++	$(am__objects_19) $(am__objects_17)
+ am_libhwloc_la_OBJECTS = $(am__objects_18)
+ libhwloc_la_OBJECTS = $(am_libhwloc_la_OBJECTS)
+ libhwloc_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
+@@ -616,9 +619,10 @@
+ 	$(am__append_11) $(am__append_13) $(am__append_14) \
+ 	$(am__append_15) $(am__append_16) $(am__append_18) \
+ 	$(am__append_20) $(am__append_22) $(am__append_23) \
+-	$(am__append_24) $(am__append_25) $(am__append_27)
++	$(am__append_24) $(am__append_25) $(am__append_27) \
++	${am__append_33)
+ ldflags = $(am__append_17) $(am__append_19) $(am__append_21) \
+-	$(am__append_26) $(am__append_28) $(am__append_29)
++	$(am__append_26) $(am__append_28) $(am__append_29) $(am__append_34)
+ @HWLOC_HAVE_LIBXML2_TRUE@@HWLOC_XML_LIBXML_BUILD_STATIC_FALSE@hwloc_xml_libxml_la_SOURCES = topology-xml-libxml.c
+ @HWLOC_HAVE_LIBXML2_TRUE@@HWLOC_XML_LIBXML_BUILD_STATIC_FALSE@hwloc_xml_libxml_la_CFLAGS = $(AM_CFLAGS) $(HWLOC_LIBXML2_CFLAGS) -DHWLOC_INSIDE_PLUGIN
+ @HWLOC_HAVE_LIBXML2_TRUE@@HWLOC_XML_LIBXML_BUILD_STATIC_FALSE@hwloc_xml_libxml_la_LDFLAGS = $(plugins_ldflags) $(HWLOC_LIBXML2_LIBS)

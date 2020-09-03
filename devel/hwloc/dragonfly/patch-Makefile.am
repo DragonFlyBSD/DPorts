@@ -1,0 +1,14 @@
+--- src/Makefile.am.orig	2020-07-24 11:52:49.513013000 -0700
++++ src/Makefile.am	2020-07-24 11:52:51.923122000 -0700
+@@ -158,6 +158,11 @@
+ ldflags += -lpthread
+ endif HWLOC_HAVE_NETBSD
+ 
++if HWLOC_HAVE_DRAGONFLY
++sources += topology-dragonfly.c
++ldflags += -lpthread
++endif HWLOC_HAVE_DRAGONFLY
++
+ if HWLOC_HAVE_X86_CPUID
+ sources += topology-x86.c
+ endif HWLOC_HAVE_X86_CPUID

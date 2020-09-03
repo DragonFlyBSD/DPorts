@@ -1,0 +1,219 @@
+--- configure.orig	2018-09-02 05:49:27.000000000 -0700
++++ configure	2020-07-24 14:09:13.844646000 -0700
+@@ -694,6 +694,8 @@
+ HWLOC_HAVE_SOLARIS_TRUE
+ HWLOC_HAVE_NETBSD_FALSE
+ HWLOC_HAVE_NETBSD_TRUE
++HWLOC_HAVE_DRAGONFLY_FALSE
++HWLOC_HAVE_DRAGONFLY_TRUE
+ HWLOC_HAVE_FREEBSD_FALSE
+ HWLOC_HAVE_FREEBSD_TRUE
+ HWLOC_HAVE_DARWIN_FALSE
+@@ -7420,10 +7422,19 @@
+ 
+ $as_echo "#define HWLOC_NETBSD_SYS 1" >>confdefs.h
+ 
+-        hwloc_netbsd=yes
+-        { $as_echo "$as_me:${as_lineno-$LINENO}: result: NetBSD" >&5
++	hwloc_netbsd=yes
++	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: NetBSD" >&5
+ $as_echo "NetBSD" >&6; }
+-        hwloc_components="$hwloc_components netbsd"
++	hwloc_components="$hwloc_components netbsd"
++	;;
++      *-*-*dragonfly*)
++
++$as_echo "#define HWLOC_DRAGONFLY_SYS 1" >>confdefs.h
++
++        hwloc_dragonfly=yes
++        { $as_echo "$as_me:${as_lineno-$LINENO}: result: DragonFly" >&5
++$as_echo "DRAGONFLY" >&6; }
++        hwloc_components="$hwloc_components dragonfly"
+         ;;
+       *)
+         { $as_echo "$as_me:${as_lineno-$LINENO}: result: Unsupported! ($target)" >&5
+@@ -17296,7 +17307,7 @@
+     # AC_CONFIG_LINKS.  :-\ Since these tests are only run when
+     # built in standalone mode, only generate them in
+     # standalone mode.
+-    ac_config_links="$ac_config_links tests/ports/topology-solaris.c:src/topology-solaris.c tests/ports/topology-solaris-chiptype.c:src/topology-solaris-chiptype.c tests/ports/topology-aix.c:src/topology-aix.c tests/ports/topology-osf.c:src/topology-osf.c tests/ports/topology-windows.c:src/topology-windows.c tests/ports/topology-darwin.c:src/topology-darwin.c tests/ports/topology-freebsd.c:src/topology-freebsd.c tests/ports/topology-netbsd.c:src/topology-netbsd.c tests/ports/topology-hpux.c:src/topology-hpux.c tests/ports/topology-bgq.c:src/topology-bgq.c tests/ports/topology-opencl.c:src/topology-opencl.c tests/ports/topology-cuda.c:src/topology-cuda.c tests/ports/topology-nvml.c:src/topology-nvml.c tests/ports/topology-gl.c:src/topology-gl.c"
++    ac_config_links="$ac_config_links tests/ports/topology-solaris.c:src/topology-solaris.c tests/ports/topology-solaris-chiptype.c:src/topology-solaris-chiptype.c tests/ports/topology-aix.c:src/topology-aix.c tests/ports/topology-osf.c:src/topology-osf.c tests/ports/topology-windows.c:src/topology-windows.c tests/ports/topology-darwin.c:src/topology-darwin.c tests/ports/topology-freebsd.c:src/topology-freebsd.c tests/ports/topology-netbsd.c:src/topology-netbsd.c tests/ports/topology-dragonfly.c:src/topology-dragonfly.c tests/ports/topology-hpux.c:src/topology-hpux.c tests/ports/topology-bgq.c:src/topology-bgq.c tests/ports/topology-opencl.c:src/topology-opencl.c tests/ports/topology-cuda.c:src/topology-cuda.c tests/ports/topology-nvml.c:src/topology-nvml.c tests/ports/topology-gl.c:src/topology-gl.c"
+ 
+ 
+ fi
+@@ -17555,6 +17566,14 @@
+   HWLOC_HAVE_NETBSD_FALSE=
+ fi
+ 
++         if test "x$hwloc_dragonfly" = "xyes"; then
++  HWLOC_HAVE_DRAGONFLY_TRUE=
++  HWLOC_HAVE_DRAGONFLY_FALSE='#'
++else
++  HWLOC_HAVE_DRAGONFLY_TRUE='#'
++  HWLOC_HAVE_DRAGONFLY_FALSE=
++fi
++
+          if test "x$hwloc_solaris" = "xyes"; then
+   HWLOC_HAVE_SOLARIS_TRUE=
+   HWLOC_HAVE_SOLARIS_FALSE='#'
+@@ -22541,7 +22560,7 @@
+   hardcode_minus_L=no
+   hardcode_shlibpath_var=unsupported
+   inherit_rpath=no
+-  link_all_deplibs=unknown
++  link_all_deplibs=no
+   module_cmds=
+   module_expsym_cmds=
+   old_archive_from_new_cmds=
+@@ -22840,7 +22859,7 @@
+ 	wlarc=
+       else
+ 	archive_cmds='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags $wl-soname $wl$soname -o $lib'
+-	archive_expsym_cmds='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags $wl-soname $wl$soname $wl-retain-symbols-file $wl$export_symbols -o $lib'
++	archive_expsym_cmds='echo "{ global:" > $lib-ver~		 sed -e "s|$|;|" < $export_symbols >> $lib-ver~	 echo "local: *; };" >> $lib-ver~$CC -shared $pic_flag $libobjs $deplibs $compiler_flags $wl-soname $wl$soname $wl-version-script $wl$lib-ver -o $lib'
+       fi
+       ;;
+ 
+@@ -22859,7 +22878,7 @@
+ _LT_EOF
+       elif $LD --help 2>&1 | $GREP ': supported targets:.* elf' > /dev/null; then
+ 	archive_cmds='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags $wl-soname $wl$soname -o $lib'
+-	archive_expsym_cmds='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags $wl-soname $wl$soname $wl-retain-symbols-file $wl$export_symbols -o $lib'
++	archive_expsym_cmds='echo "{ global:" > $lib-ver~		 sed -e "s|$|;|" < $export_symbols >> $lib-ver~	 echo "local: *; };" >> $lib-ver~$CC -shared $pic_flag $libobjs $deplibs $compiler_flags $wl-soname $wl$soname $wl-version-script $wl$lib-ver -o $lib'
+       else
+ 	ld_shlibs=no
+       fi
+@@ -22888,7 +22907,7 @@
+ 	  if $LD --help 2>&1 | $GREP ': supported targets:.* elf' > /dev/null; then
+ 	    hardcode_libdir_flag_spec='$wl-rpath $wl$libdir'
+ 	    archive_cmds='$CC -shared $libobjs $deplibs $compiler_flags $wl-soname $wl$soname -o $lib'
+-	    archive_expsym_cmds='$CC -shared $libobjs $deplibs $compiler_flags $wl-soname $wl$soname $wl-retain-symbols-file $wl$export_symbols -o $lib'
++	    archive_expsym_cmds='echo "{ global:" > $lib-ver~		 sed -e "s|$|;|" < $export_symbols >> $lib-ver~	 echo "local: *; };" >> $lib-ver~$CC -shared $libobjs $deplibs $compiler_flags $wl-soname $wl$soname $wl-version-script $wl$lib-ver -o $lib'
+ 	  else
+ 	    ld_shlibs=no
+ 	  fi
+@@ -22906,7 +22925,7 @@
+     *)
+       if $LD --help 2>&1 | $GREP ': supported targets:.* elf' > /dev/null; then
+ 	archive_cmds='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags $wl-soname $wl$soname -o $lib'
+-	archive_expsym_cmds='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags $wl-soname $wl$soname $wl-retain-symbols-file $wl$export_symbols -o $lib'
++	archive_expsym_cmds='echo "{ global:" > $lib-ver~		 sed -e "s|$|;|" < $export_symbols >> $lib-ver~	 echo "local: *; };" >> $lib-ver~$CC -shared $pic_flag $libobjs $deplibs $compiler_flags $wl-soname $wl$soname $wl-version-script $wl$lib-ver -o $lib'
+       else
+ 	ld_shlibs=no
+       fi
+@@ -23554,7 +23573,7 @@
+ 	hardcode_direct_absolute=yes
+ 	if test -z "`echo __ELF__ | $CC -E - | $GREP __ELF__`"; then
+ 	  archive_cmds='$CC -shared $pic_flag -o $lib $libobjs $deplibs $compiler_flags'
+-	  archive_expsym_cmds='$CC -shared $pic_flag -o $lib $libobjs $deplibs $compiler_flags $wl-retain-symbols-file,$export_symbols'
++	  archive_expsym_cmds='echo "{ global:" > $lib-ver~		 sed -e "s|$|;|" < $export_symbols >> $lib-ver~	 echo "local: *; };" >> $lib-ver~$CC -shared $pic_flag -o $lib $libobjs $deplibs $compiler_flags $wl-version-script,$lib-ver'
+ 	  hardcode_libdir_flag_spec='$wl-rpath,$libdir'
+ 	  export_dynamic_flag_spec='$wl-E'
+ 	else
+@@ -24403,7 +24422,7 @@
+   version_type=freebsd-$objformat
+   case $version_type in
+     freebsd-elf*)
+-      library_names_spec='$libname$release$shared_ext$versuffix $libname$release$shared_ext$major $libname$shared_ext'
++      library_names_spec='$libname$release$shared_ext$versuffix  $libname$release$shared_ext$major	 $libname$shared_ext'			 soname_spec='$libname$release$shared_ext$major'
+       soname_spec='$libname$release$shared_ext$major'
+       need_version=no
+       need_lib_prefix=no
+@@ -25535,7 +25554,7 @@
+ old_striplib=
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether stripping libraries is possible" >&5
+ $as_echo_n "checking whether stripping libraries is possible... " >&6; }
+-if test -n "$STRIP" && $STRIP -V 2>&1 | $GREP "GNU strip" >/dev/null; then
++if test -n "$STRIP" && $STRIP -V 2>&1 | $GREP "strip" >/dev/null; then
+   test -z "$old_striplib" && old_striplib="$STRIP --strip-debug"
+   test -z "$striplib" && striplib="$STRIP --strip-unneeded"
+   { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+@@ -25787,7 +25806,7 @@
+ inherit_rpath_CXX=no
+ module_cmds_CXX=
+ module_expsym_cmds_CXX=
+-link_all_deplibs_CXX=unknown
++link_all_deplibs_CXX=no
+ old_archive_cmds_CXX=$old_archive_cmds
+ reload_flag_CXX=$reload_flag
+ reload_cmds_CXX=$reload_cmds
+@@ -25998,7 +26017,7 @@
+       # archiving commands below assume that GNU ld is being used.
+       if test yes = "$with_gnu_ld"; then
+         archive_cmds_CXX='$CC $pic_flag -shared -nostdlib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags $wl-soname $wl$soname -o $lib'
+-        archive_expsym_cmds_CXX='$CC $pic_flag -shared -nostdlib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags $wl-soname $wl$soname $wl-retain-symbols-file $wl$export_symbols -o $lib'
++        archive_expsym_cmds_CXX='echo "{ global:" > $lib-ver~		 sed -e "s|$|;|" < $export_symbols >> $lib-ver~	 echo "local: *; };" >> $lib-ver~$CC $pic_flag -shared -nostdlib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags $wl-soname $wl$soname $wl-version-script $wl$lib-ver -o $lib'
+ 
+         hardcode_libdir_flag_spec_CXX='$wl-rpath $wl$libdir'
+         export_dynamic_flag_spec_CXX='$wl--export-dynamic'
+@@ -26690,7 +26709,7 @@
+ 	    case `$CC -V 2>&1` in
+ 	      *"Version 7."*)
+ 	        archive_cmds_CXX='$CC -shared $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags $wl-soname $wl$soname -o $lib'
+-		archive_expsym_cmds_CXX='$CC -shared $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags $wl-soname $wl$soname $wl-retain-symbols-file $wl$export_symbols -o $lib'
++		archive_expsym_cmds_CXX='echo "{ global:" > $lib-ver~		 sed -e "s|$|;|" < $export_symbols >> $lib-ver~	 echo "local: *; };" >> $lib-ver~$CC -shared $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags $wl-soname $wl$soname $wl-version-script $wl$lib-ver -o $lib'
+ 		;;
+ 	      *)  # Version 8.0 or newer
+ 	        tmp_idyn=
+@@ -26698,7 +26717,7 @@
+ 		  ia64*) tmp_idyn=' -i_dynamic';;
+ 		esac
+ 	        archive_cmds_CXX='$CC -shared'"$tmp_idyn"' $libobjs $deplibs $compiler_flags $wl-soname $wl$soname -o $lib'
+-		archive_expsym_cmds_CXX='$CC -shared'"$tmp_idyn"' $libobjs $deplibs $compiler_flags $wl-soname $wl$soname $wl-retain-symbols-file $wl$export_symbols -o $lib'
++		archive_expsym_cmds_CXX='echo "{ global:" > $lib-ver~		 sed -e "s|$|;|" < $export_symbols >> $lib-ver~	 echo "local: *; };" >> $lib-ver~$CC -shared'"$tmp_idyn"' $libobjs $deplibs $compiler_flags $wl-soname $wl$soname $wl-version-script $wl$lib-ver -o $lib'
+ 		;;
+ 	    esac
+ 	    archive_cmds_need_lc_CXX=no
+@@ -26730,7 +26749,7 @@
+ 	      ;;
+ 	    *) # Version 6 and above use weak symbols
+ 	      archive_cmds_CXX='$CC -shared $pic_flag $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags $wl-soname $wl$soname -o $lib'
+-	      archive_expsym_cmds_CXX='$CC -shared $pic_flag $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags $wl-soname $wl$soname $wl-retain-symbols-file $wl$export_symbols -o $lib'
++	      archive_expsym_cmds_CXX='echo "{ global:" > $lib-ver~		 sed -e "s|$|;|" < $export_symbols >> $lib-ver~	 echo "local: *; };" >> $lib-ver~$CC -shared $pic_flag $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags $wl-soname $wl$soname $wl-version-script $wl$lib-ver -o $lib'
+ 	      ;;
+ 	    esac
+ 
+@@ -26741,7 +26760,7 @@
+ 	  cxx*)
+ 	    # Compaq C++
+ 	    archive_cmds_CXX='$CC -shared $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags $wl-soname $wl$soname -o $lib'
+-	    archive_expsym_cmds_CXX='$CC -shared $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags $wl-soname $wl$soname  -o $lib $wl-retain-symbols-file $wl$export_symbols'
++	    archive_expsym_cmds_CXX='echo "{ global:" > $lib-ver~		 sed -e "s|$|;|" < $export_symbols >> $lib-ver~	 echo "local: *; };" >> $lib-ver~$CC -shared $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags $wl-soname $wl$soname  -o $lib $wl-version-script $wl$lib-ver'
+ 
+ 	    runpath_var=LD_RUN_PATH
+ 	    hardcode_libdir_flag_spec_CXX='-rpath $libdir'
+@@ -26775,7 +26794,7 @@
+ 	      # Sun C++ 5.9
+ 	      no_undefined_flag_CXX=' -zdefs'
+ 	      archive_cmds_CXX='$CC -G$allow_undefined_flag -h$soname -o $lib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags'
+-	      archive_expsym_cmds_CXX='$CC -G$allow_undefined_flag -h$soname -o $lib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags $wl-retain-symbols-file $wl$export_symbols'
++	      archive_expsym_cmds_CXX='echo "{ global:" > $lib-ver~		 sed -e "s|$|;|" < $export_symbols >> $lib-ver~	 echo "local: *; };" >> $lib-ver~$CC -G$allow_undefined_flag -h$soname -o $lib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags $wl-version-script $wl$lib-ver'
+ 	      hardcode_libdir_flag_spec_CXX='-R$libdir'
+ 	      whole_archive_flag_spec_CXX='$wl--whole-archive`new_convenience=; for conv in $convenience\"\"; do test -z \"$conv\" || new_convenience=\"$new_convenience,$conv\"; done; func_echo_all \"$new_convenience\"` $wl--no-whole-archive'
+ 	      compiler_needs_object_CXX=yes
+@@ -26843,7 +26862,7 @@
+ 	  archive_cmds_CXX='$CC -shared $pic_flag $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags -o $lib'
+ 	  hardcode_libdir_flag_spec_CXX='$wl-rpath,$libdir'
+ 	  if test -z "`echo __ELF__ | $CC -E - | grep __ELF__`"; then
+-	    archive_expsym_cmds_CXX='$CC -shared $pic_flag $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags $wl-retain-symbols-file,$export_symbols -o $lib'
++	    archive_expsym_cmds_CXX='echo "{ global:" > $lib-ver~		 sed -e "s|$|;|" < $export_symbols >> $lib-ver~	 echo "local: *; };" >> $lib-ver~$CC -shared $pic_flag $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags $wl-version-script,$lib-ver -o $lib'
+ 	    export_dynamic_flag_spec_CXX='$wl-E'
+ 	    whole_archive_flag_spec_CXX=$wlarc'--whole-archive$convenience '$wlarc'--no-whole-archive'
+ 	  fi
+@@ -28365,7 +28384,7 @@
+   version_type=freebsd-$objformat
+   case $version_type in
+     freebsd-elf*)
+-      library_names_spec='$libname$release$shared_ext$versuffix $libname$release$shared_ext$major $libname$shared_ext'
++      library_names_spec='$libname$release$shared_ext$versuffix  $libname$release$shared_ext$major	 $libname$shared_ext'			 soname_spec='$libname$release$shared_ext$major'
+       soname_spec='$libname$release$shared_ext$major'
+       need_version=no
+       need_lib_prefix=no
+@@ -30314,6 +30333,7 @@
+     "tests/ports/topology-darwin.c") CONFIG_LINKS="$CONFIG_LINKS tests/ports/topology-darwin.c:src/topology-darwin.c" ;;
+     "tests/ports/topology-freebsd.c") CONFIG_LINKS="$CONFIG_LINKS tests/ports/topology-freebsd.c:src/topology-freebsd.c" ;;
+     "tests/ports/topology-netbsd.c") CONFIG_LINKS="$CONFIG_LINKS tests/ports/topology-netbsd.c:src/topology-netbsd.c" ;;
++    "tests/ports/topology-dragonfly.c") CONFIG_LINKS="$CONFIG_LINKS tests/ports/topology-dragonfly.c:src/topology-dragonfly.c" ;;
+     "tests/ports/topology-hpux.c") CONFIG_LINKS="$CONFIG_LINKS tests/ports/topology-hpux.c:src/topology-hpux.c" ;;
+     "tests/ports/topology-bgq.c") CONFIG_LINKS="$CONFIG_LINKS tests/ports/topology-bgq.c:src/topology-bgq.c" ;;
+     "tests/ports/topology-opencl.c") CONFIG_LINKS="$CONFIG_LINKS tests/ports/topology-opencl.c:src/topology-opencl.c" ;;

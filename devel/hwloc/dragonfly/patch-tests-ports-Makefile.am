@@ -1,0 +1,27 @@
+--- tests/ports/Makefile.am.orig	2020-07-24 14:14:32.199301000 -0700
++++ tests/ports/Makefile.am	2020-07-24 14:15:58.233264000 -0700
+@@ -17,6 +17,7 @@
+ 	libhwloc-port-freebsd.la \
+ 	libhwloc-port-hpux.la \
+ 	libhwloc-port-netbsd.la \
++	libhwloc-port-dragonfly.la \
+ 	libhwloc-port-osf.la \
+ 	libhwloc-port-solaris.la \
+ 	libhwloc-port-windows.la \
+@@ -104,6 +105,16 @@
+ 	-DHAVE_SYS_SYSCTL_H \
+ 	-DHAVE_SYSCTL
+ 
++nodist_libhwloc_port_dragonfly_la_SOURCES = topology-dragonfly.c
++libhwloc_port_dragonfly_la_SOURCES = \
++	include/dragonfly/pthread.h \
++	include/dragonfly/sys/sysctl.h
++libhwloc_port_dragonfly_la_CPPFLAGS = $(common_CPPFLAGS) \
++	-I$(HWLOC_top_srcdir)/tests/ports/include/dragonfly \
++	-DHWLOC_DRAGONFLY_SYS \
++	-DHAVE_SYS_SYSCTL_H \
++	-DHAVE_SYSCTL
++
+ nodist_libhwloc_port_osf_la_SOURCES = topology-osf.c
+ libhwloc_port_osf_la_SOURCES = \
+ 	include/osf/cpuset.h \
