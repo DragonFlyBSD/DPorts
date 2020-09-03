@@ -1890,7 +1890,7 @@ USE_BINUTILS=	yes
 .endif
 
 .if defined(USE_BINUTILS) && !defined(DISABLE_BINUTILS)
-BUILD_DEPENDS+=	${LOCALBASE}/bin/as:devel/binutils
+BUILD_DEPENDS+=	${LOCALBASE}/bin/as:devel/binutils@native
 BINUTILS?=	ADDR2LINE AR AS CPPFILT GPROF LD NM OBJCOPY OBJDUMP RANLIB \
 	READELF SIZE STRINGS
 BINUTILS_NO_MAKE_ENV?=
@@ -3291,6 +3291,14 @@ do-configure:
 DO_MAKE_BUILD?=	${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_FLAGS} ${MAKEFILE} ${_MAKE_JOBS} ${MAKE_ARGS:N${DESTDIRNAME}=*}
 .if !target(do-build)
 do-build:
+.if defined(DFLY_ALLOW_REMAKE)
+	@(cd ${BUILD_WRKSRC}; ${ECHO_CMD} "===> Building with DFLY_ALLOW_REMAKE=${DFLY_ALLOW_REMAKE}" ; \
+	  if ! ${DO_MAKE_BUILD} ${ALL_TARGET}; then \
+	    (${ECHO_CMD} "===> DFLY WARNING: First attempt failed! Retrying ... ${DFLY_ALLOW_REMAKE}") | ${FMT_80} ; \
+	  else \
+	    (${ECHO_CMD} "===> DFLY Built from first attempt? ${DFLY_ALLOW_REMAKE}") | ${FMT_80} ; \
+	  fi)
+.endif
 	@(cd ${BUILD_WRKSRC}; if ! ${DO_MAKE_BUILD} ${ALL_TARGET}; then \
 		if [ -n "${BUILD_FAIL_MESSAGE}" ] ; then \
 			${ECHO_MSG} "===> Compilation failed unexpectedly."; \
