@@ -4,6 +4,7 @@ FICHIERS1="dri/swrast_dri.so dri/i915_dri.so dri/i965_dri.so dri/r200_dri.so dri
 FICHIERS2="dri/kms_swrast_dri.so dri/r300_dri.so dri/r600_dri.so dri/radeonsi_dri.so dri/vmwgfx_dri.so"
 FICHIERS2="${FICHIERS2} dri/r600_drv_video.so dri/radeonsi_drv_video.so libXvMCr600.so.1.0.0"
 FICHIERS2="${FICHIERS2} vdpau/libvdpau_r300.so.1.0.0 vdpau/libvdpau_r600.so.1.0.0 vdpau/libvdpau_radeonsi.so.1.0.0"
+FICHIERS2="${FICHIERS2} libvulkan_intel.so libvulkan_radeon.so"
 LFICHIERS="libXvMCr600.so libXvMCr600.so.1 libXvMCr600.so.1.0"
 LFICHIERS="${LFICHIERS} vdpau/libvdpau_r300.so vdpau/libvdpau_r300.so.1 vdpau/libvdpau_r300.so.1.0"
 LFICHIERS="${LFICHIERS} vdpau/libvdpau_r600.so vdpau/libvdpau_r600.so.1 vdpau/libvdpau_r600.so.1.0"
@@ -23,5 +24,11 @@ case "$2" in
 	done
 	/bin/rmdir %%LOCALBASE%%/lib/dri/vdpau || /usr/bin/true
 	/bin/rmdir %%LOCALBASE%%/lib/dri || /usr/bin/true
+	if [ -d "%%LOCALBASE%%/share/vulkan/icd.d" ]; then
+	  [ ! -f "%%LOCALBASE%%/share/vulkan/icd.d/intel_icd.x86_64.json" ] || /bin/rm -vf %%LOCALBASE%%/share/vulkan/icd.d/intel_icd.x86_64.json
+	  [ ! -f "%%LOCALBASE%%/share/vulkan/icd.d/radeon_icd.x86_64.json" ] || /bin/rm -vf %%LOCALBASE%%/share/vulkan/icd.d/radeon_icd.x86_64.json
+	  /bin/rmdir %%LOCALBASE%%/share/vulkan/icd.d || /usr/bin/true
+	  /bin/rmdir %%LOCALBASE%%/share/vulkan || /usr/bin/true
+	fi
 	;;
 esac

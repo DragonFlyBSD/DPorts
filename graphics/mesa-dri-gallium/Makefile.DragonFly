@@ -100,5 +100,8 @@ dfly-install:
 	-${MV} -v ${STAGEDIR}${LOCALBASE}/lib/vdpau ${STAGEDIR}${LOCALBASE}/misc/mesa-dri-gallium/lib/
 	${MV} -v ${STAGEDIR}${LOCALBASE}/libdata/pkgconfig ${STAGEDIR}${LOCALBASE}/misc/mesa-dri-gallium/libdata/
 	${MV} -v ${STAGEDIR}${LOCALBASE}/share/drirc.d ${STAGEDIR}${LOCALBASE}/misc/mesa-dri-gallium/share/
+	-${MV} -v ${STAGEDIR}${LOCALBASE}/include/vulkan ${STAGEDIR}${LOCALBASE}/misc/mesa-dri-gallium/include/
+	-${MV} -v ${STAGEDIR}${LOCALBASE}/lib/libvulkan_* ${STAGEDIR}${LOCALBASE}/misc/mesa-dri-gallium/lib/
+	-${MV} -v ${STAGEDIR}${LOCALBASE}/share/vulkan ${STAGEDIR}${LOCALBASE}/misc/mesa-dri-gallium/share/
 	-${RMDIR} ${STAGEDIR}${LOCALBASE}/lib/X11/app-defaults
 	-${RMDIR} ${STAGEDIR}${LOCALBASE}/lib/X11

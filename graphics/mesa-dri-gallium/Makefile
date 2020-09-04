@@ -1,7 +1,7 @@
 
 PORTNAME=	mesa-dri-gallium
 PORTVERSION=	${MESAVERSION}
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics
 
 COMMENT=	OpenGL hardware acceleration drivers for DRI2+ using gallium
@@ -100,7 +100,8 @@ MESA_PLATFORMS+=	wayland
 
 # gallium drivers are installed separately in graphics/mesa-gallium port
 .if ${OPSYS} == DragonFly
-VULKAN_DRIVERS:=
+# requires render nodes on INTEL # AMD vulkan driver requires llvm
+#VULKAN_DRIVERS:=
 .endif
 
 .if ${PORT_OPTIONS:MGTOOLS}

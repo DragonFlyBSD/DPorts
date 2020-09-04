@@ -5,6 +5,7 @@ FICHIERS1="dri/swrast_dri.so dri/i915_dri.so dri/i965_dri.so dri/r200_dri.so dri
 FICHIERS2="dri/kms_swrast_dri.so dri/r300_dri.so dri/r600_dri.so dri/radeonsi_dri.so dri/vmwgfx_dri.so"
 FICHIERS2="${FICHIERS2} dri/r600_drv_video.so dri/radeonsi_drv_video.so libXvMCr600.so.1.0.0"
 FICHIERS2="${FICHIERS2} vdpau/libvdpau_r300.so.1.0.0 vdpau/libvdpau_r600.so.1.0.0 vdpau/libvdpau_radeonsi.so.1.0.0"
+FICHIERS2="${FICHIERS2} libvulkan_intel.so libvulkan_radeon.so"
 LFICHIERS="libXvMCr600.so libXvMCr600.so.1 libXvMCr600.so.1.0"
 LFICHIERS="${LFICHIERS} vdpau/libvdpau_r300.so vdpau/libvdpau_r300.so.1 vdpau/libvdpau_r300.so.1.0"
 LFICHIERS="${LFICHIERS} vdpau/libvdpau_r600.so vdpau/libvdpau_r600.so.1 vdpau/libvdpau_r600.so.1.0"
@@ -30,5 +31,10 @@ case "$2" in
 	for f in ${LFICHIERS}; do
 	  [ -L "%%LOCALBASE%%/${MISCDRI}/lib/${f}" ] && /bin/cp -avf %%LOCALBASE%%/${MISCDRI}/lib/${f} %%LOCALBASE%%/lib/${f} || /usr/bin/true
 	done
+	if [ -d "%%LOCALBASE%%/${MISCDRI}/share/vulkan/icd.d" ]; then
+	  [ -d "%%LOCALBASE%%/share/vulkan/icd.d" ] || /bin/mkdir -p "%%LOCALBASE%%/share/vulkan/icd.d"
+	  [ -f "%%LOCALBASE%%/${MISCDRI}/share/vulkan/icd.d/intel_icd.x86_64.json" ] && /bin/cp -avf %%LOCALBASE%%/${MISCDRI}/share/vulkan/icd.d/intel_icd.x86_64.json %%LOCALBASE%%/share/vulkan/icd.d/ || /usr/bin/true
+	  [ -f "%%LOCALBASE%%/${MISCDRI}/share/vulkan/icd.d/radeon_icd.x86_64.json" ] && /bin/cp -avf %%LOCALBASE%%/${MISCDRI}/share/vulkan/icd.d/radeon_icd.x86_64.json %%LOCALBASE%%/share/vulkan/icd.d/ || /usr/bin/true
+	fi
 	;;
 esac
