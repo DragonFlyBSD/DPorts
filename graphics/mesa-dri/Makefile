@@ -94,7 +94,7 @@ MESA_PLATFORMS+=	wayland
 OPTIONS_EXCLUDE:=	VAAPI VDPAU
 DRI_DRIVERS:=		R100 R200 I915 I965 SWRAST
 GALLIUM_DRIVERS:=
-VULKAN_DRIVERS:=
+VULKAN_DRIVERS:=	# requires render nodes on INTEL # AMD vulkan driver requires llvm
 MESON_ARGS+=		-Dgallium-xvmc=false -Dgallium-xa=false -Dgallium-va=false -Dgallium-vdpau=false
 .endif
 
