@@ -17,6 +17,7 @@ LIB_DEPENDS=	libgit2.so:devel/libgit2 \
 		libssh2.so:security/libssh2
 RUN_DEPENDS=	powerline-fonts>0:x11-fonts/powerline-fonts
 
+BROKEN=		pending next sync
 USES=		cargo ssl
 
 CARGO_CRATES=	\
