@@ -13,6 +13,8 @@ COMMENT=	FlightGear flight simulator
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+BROKEN=		pending next sync
+
 LIB_DEPENDS=	libpng.so:graphics/png \
 		libboost_thread.so:devel/boost-libs \
 		libfltk.so:x11-toolkits/fltk \
