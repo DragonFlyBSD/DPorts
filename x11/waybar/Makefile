@@ -26,7 +26,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	spdlog>0:devel/spdlog \
 		wayland-protocols>0:graphics/wayland-protocols
-LIB_DEPENDS=	libtz.so:devel/date \
+LIB_DEPENDS=	libdate-tz.so:devel/date \
 		libjsoncpp.so:devel/jsoncpp \
 		libfmt.so:devel/libfmt \
 		libwayland-client.so:graphics/wayland
