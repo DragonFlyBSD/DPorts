@@ -2,6 +2,10 @@
 #
 # MAINTAINER:	ports@FreeBSD.org
 #
+# Note: before committing to this file, contact portmgr to arrange for an
+# experimental ports run.  Untested commits may be backed out at portmgr's
+# discretion.
+#
 # Provide default versions for ports with multiple versions selectable
 # by the user.
 #
@@ -74,7 +78,7 @@ MYSQL_DEFAULT?=		5.7
 # Possible values: 5.28, 5.30, 5.32, devel
 .if !exists(${LOCALBASE}/bin/perl) || (!defined(_PORTS_ENV_CHECK) && \
     defined(PACKAGE_BUILDING))
-PERL5_DEFAULT?=		5.30
+PERL5_DEFAULT?=		5.32
 .elif !defined(PERL5_DEFAULT)
 # There's no need to replace development versions, like "5.23" with "devel"
 # because 1) nobody is supposed to use it outside of poudriere, and 2) it must

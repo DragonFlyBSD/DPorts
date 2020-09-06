@@ -596,7 +596,8 @@ _RELLIBDIR=		${PYTHONPREFIX_LIBDIR:S;${PREFIX}/;;}
 
 _USES_stage+=	934:add-plist-pymod
 add-plist-pymod:
-	@${SED} -e 's|^${STAGEDIR}${PREFIX}/||' \
+	@${SED} -e 's|^"\(.*\)"$$|\1|' \
+		-e 's|^${STAGEDIR}${PREFIX}/||' \
 		-e 's|^${PREFIX}/||' \
 		-e 's|^\(man/.*man[0-9]\)/\(.*\.[0-9]\)$$|\1/\2.gz|' \
 		-e 's|^\(share/man/.*man[0-9]\)/\(.*\.[0-9]\)$$|\1/\2.gz|' \
@@ -650,7 +651,7 @@ PY_ENUM34=	${PYTHON_PKGNAMEPREFIX}enum34>=1.1<2.0:devel/py-enum34@${PY_FLAVOR}
 PY_PATHLIB=	${PYTHON_PKGNAMEPREFIX}pathlib>0:devel/py-pathlib@${PY_FLAVOR}
 .else
 PY_ENUM34=
-PY_PATHLIB=	
+PY_PATHLIB=
 .endif
 
 .if ${PYTHON_REL} < 3300
@@ -663,6 +664,12 @@ PY_IPADDRESS=
 PY_FUTURES=	${PYTHON_PKGNAMEPREFIX}futures>=3.2:devel/py-futures@${PY_FLAVOR}
 .else
 PY_FUTURES=
+.endif
+
+.if ${PYTHON_VER} != ${PYTHON_DEFAULT}
+PY_MERCURIAL=	${PYTHON_PKGNAMEPREFIX}mercurial>=5.5:devel/mercurial@${PY_FLAVOR}
+.else
+PY_MERCURIAL=	mercurial>=5.5:devel/mercurial@${PY_FLAVOR}
 .endif
 
 CMAKE_ARGS+=	-DBOOST_PYTHON_SUFFIX:STRING=${PYTHON_SUFFIX}

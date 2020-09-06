@@ -456,7 +456,6 @@ proxydeps_suggest_uses() {
 	elif [ ${pkg} = "net/akonadi-calendar" ]; then warn "you need to use USE_KDE+=akonadicalendar"
 	elif [ ${pkg} = "net/akonadi-search" ]; then warn "you need to use USE_KDE+=akonadisearch"
 	elif [ ${pkg} = "net/kalarmcal" ]; then warn "you need to use USE_KDE+=alarmcalendar"
-	elif [ ${pkg} = "net/kblog" ]; then warn "you need to use USE_KDE+=blog"
 	elif [ ${pkg} = "net/calendarsupport" ]; then warn "you need to use USE_KDE+=calendarsupport"
 	elif [ ${pkg} = "net/kcalcore" ]; then warn "you need to use USE_KDE+=calendarcore"
 	elif [ ${pkg} = "net/kcalutils" ]; then warn "you need to use USE_KDE+=calendarutils"
@@ -1028,7 +1027,7 @@ pkgmessage()
 reinplace()
 {
 	if [ -f ${REWARNFILE} ]; then
-		warn "Possible REINPLACE_CMD issues"
+		warn "Possible REINPLACE_CMD issues:"
 		cat ${REWARNFILE}
 	fi
 }
