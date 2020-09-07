@@ -15,9 +15,8 @@ BROTLI_LIB_DEPENDS=	libbrotlicommon.so:archivers/brotli
 BROTLI_GH_TUPLE=	eustas:ngx_brotli:8104036:brotli
 BROTLI_VARS=		DSO_EXTMODS+=brotli
 
-CACHE_PURGE_MASTER_SITES=	http://labs.frickle.com/files/:cache_purge
-CACHE_PURGE_DISTFILES=		ngx_cache_purge-2.3.tar.gz:cache_purge
-CACHE_PURGE_CONFIGURE_ON=	--add-module=${WRKDIR}/ngx_cache_purge-2.3
+CACHE_PURGE_GH_TUPLE=		nginx-modules:ngx_cache_purge:23dc16a:cache_purge
+CACHE_PURGE_CONFIGURE_ON=	--add-module=${WRKDIR}/ngx_cache_purge-23dc16a
 
 CLOJURE_CATEGORIES+=	java
 CLOJURE_USE=		JAVA=yes JAVA_OS=native JAVA_VERSION=1.8 \
@@ -112,6 +111,7 @@ HTTP_IP2LOCATION_VARS=		DSO_EXTMODS+=ip2location
 HTTP_IP2PROXY_GH_TUPLE=		ip2location:ip2proxy-nginx:f9815e3:ip2proxy
 HTTP_IP2PROXY_LIB_DEPENDS=	libIP2Proxy.so:net/ip2proxy
 HTTP_IP2PROXY_VARS=		DSO_EXTMODS+=ip2proxy
+HTTP_IP2PROXY_EXTRA_PATCHES=	${PATCHDIR}/extra-patch-ip2proxy
 
 HTTP_JSON_STATUS_GH_TUPLE=	nginx-modules:ngx_http_json_status_module:1d2f303:json_status
 HTTP_JSON_STATUS_VARS=		DSO_EXTMODS+=json_status
@@ -169,13 +169,12 @@ HTTP_UPLOAD_PROGRESS_GH_TUPLE=	masterzen:nginx-upload-progress-module:afb2d31:up
 HTTP_UPLOAD_PROGRESS_VARS=	DSO_EXTMODS+=uploadprogress
 
 HTTP_UPSTREAM_CHECK_GH_TUPLE=		yaoweibin:nginx_upstream_check_module:9aecf15:upstreamcheck
+HTTP_UPSTREAM_CHECK_CONFIGURE_ON=	--add-module=${WRKSRC_upstreamcheck}
 HTTP_UPSTREAM_CHECK_EXTRA_PATCHES=	${PATCHDIR}/extra-patch-src-http-modules-ngx_http_upstream_hash_module.c \
 					${PATCHDIR}/extra-patch-src-http-modules-ngx_http_upstream_ip_hash_module.c \
 					${PATCHDIR}/extra-patch-src-http-modules-ngx_http_upstream_least_conn_module.c \
 					${PATCHDIR}/extra-patch-src-http-ngx_http_upstream_round_robin.c \
-					${PATCHDIR}/extra-patch-src-http-ngx_http_upstream_round_robin.h  \
-					${PATCHDIR}/extra-patch-nginx_upstream_check_module-config
-HTTP_UPSTREAM_CHECK_VARS=	DSO_EXTMODS+=upstreamcheck
+					${PATCHDIR}/extra-patch-src-http-ngx_http_upstream_round_robin.h
 
 HTTP_UPSTREAM_FAIR_GH_TUPLE=		jaygooby:nginx-upstream-fair:10ecdcf:upstreamfair
 HTTP_UPSTREAM_FAIR_VARS=		DSO_EXTMODS+=upstreamfair
@@ -229,8 +228,9 @@ NAXSI_NGINX_VER=	0.56
 NAXSI_GH_TUPLE=		nbs-system:naxsi:${NAXSI_NGINX_VER}:naxsi
 NAXSI_VARS=		DSO_EXTMODS+=naxsi NAXSI_SUBDIR=/naxsi_src
 
-NJS_GH_TUPLE=		nginx:njs:b12fc23:njs
+NJS_GH_TUPLE=		nginx:njs:0.4.3:njs
 NJS_VARS=		DSO_EXTMODS+=njs NJS_SUBDIR=/nginx
+NJS_USES=		libedit
 
 OPENTRACING_GH_TUPLE=	opentracing-contrib:nginx-opentracing:2d81c29:opentracing
 OPENTRACING_LIB_DEPENDS=	libopentracing.so:devel/libopentracing
