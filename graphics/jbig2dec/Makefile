@@ -3,7 +3,8 @@
 PORTNAME=	jbig2dec
 PORTVERSION=	0.18
 CATEGORIES=	graphics devel
-MASTER_SITES=	LOCAL/sunpoet:tests
+MASTER_SITES=	https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs951/ \
+		LOCAL/sunpoet:tests
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Decoder implementation of the JBIG2 image compression format
@@ -15,7 +16,7 @@ OPTIONS_DEFINE=	PNG TESTS
 OPTIONS_DEFAULT=PNG
 TESTS_DESC=	Download and use test-images for post-build testing
 
-USES=		autoreconf:build libtool
+USES=		autoreconf libtool
 USES+=		ssl
 LDFLAGS+=	-L${OPENSSLLIB} -lcrypto
 FILESDIR=	${.CURDIR}/does-not-exist
@@ -24,9 +25,6 @@ CONFIGURE_ENV=	ac_cv_func_getopt_long=yes
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
 USE_LDCONFIG=	yes
-
-GH_ACCOUNT=	ArtifexSoftware
-USE_GITHUB=	yes
 
 SHEBANG_FILES=	test_jbig2dec.py
 python_CMD=	${PYTHON_CMD}
@@ -44,7 +42,7 @@ pre-configure:
 # maintainer section:
 
 .if defined(MAINTAINER_MODE)
-DISTFILES=	jb2streams${EXTRACT_SUFX}:tests
+DISTFILES+=	jb2streams${EXTRACT_SUFX}:tests
 .endif
 
 .include <bsd.port.mk>
