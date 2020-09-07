@@ -2,7 +2,7 @@
 
 PORTNAME=	media-driver
 DISTVERSIONPREFIX=	intel-media-
-DISTVERSION=	20.3.pre3
+DISTVERSION=	20.3.pre7
 CATEGORIES=	multimedia
 PKGNAMEPREFIX=	libva-intel-
 
@@ -29,8 +29,7 @@ ONLY_FOR_ARCHS_REASON=	Only Intel GPUs on x86 are supported
 
 BUILD_DEPENDS=	gmmlib>=19.3.1:multimedia/gmmlib \
 		libva>=2.7.0:multimedia/libva
-LIB_DEPENDS=	libpciaccess.so:devel/libpciaccess \
-		libigdgmm.so:multimedia/gmmlib \
+LIB_DEPENDS=	libigdgmm.so:multimedia/gmmlib \
 		libva.so:multimedia/libva
 
 USES=		cmake compiler:c++11-lib localbase pkgconfig
@@ -41,7 +40,8 @@ CMAKE_OFF=	MEDIA_BUILD_FATAL_WARNINGS BUILD_CMRTLIB
 CMAKE_ARGS=	-DBUILD_TYPE:STRING="${CMAKE_BUILD_TYPE}" \
 		-DARCH:STRING="${ARCH_SUFX}" \
 		-DUFO_MARCH:STRING="${CPUTYPE}"
-PLIST_FILES=	lib/dri/iHD_drv_video.so
+PLIST_FILES=	lib/dri/iHD_drv_video.so \
+		libdata/pkgconfig/iHD_drv_video.pc
 
 OPTIONS_DEFINE=	TEST X11
 OPTIONS_DEFAULT=X11
