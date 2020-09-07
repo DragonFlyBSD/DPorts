@@ -1,11 +1,11 @@
 # $FreeBSD$
 
 PORTNAME=	exhale
-DISTVERSION=	1.0.5
+DISTVERSION=	1.0.7
 CATEGORIES=	audio
 
 MAINTAINER=	daniel.engberg.lists@pyret.net
-COMMENT=	xHE-AAC (Extended HE-AAC) encoder
+COMMENT=	Open source xHE-AAC (Extended HE-AAC/USAC) encoder
 
 LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/include/License.htm
@@ -14,7 +14,7 @@ USES=		cmake compiler:c++11-lang
 
 USE_GITLAB=	yes
 GL_ACCOUNT=	ecodis
-GL_COMMIT=	ce3641dcdcf29b123dfc077441c56bd7aba293a3
+GL_COMMIT=	54a7bcd78320870f12020bf75489a930731cb308
 
 USE_LDCONFIG=	yes
 
