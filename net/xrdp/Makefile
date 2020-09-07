@@ -3,7 +3,7 @@
 
 PORTNAME=	xrdp
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.9.13.1
+DISTVERSION=	0.9.14
 PORTEPOCH=	1
 CATEGORIES=	net
 DIST_SUBDIR?=	${PORTNAME}
@@ -34,6 +34,7 @@ GH_TAGNAME=	v0.1.5:librfxcodec v0.1.1:libpainter
 
 CONFIGURE_ARGS=	--localstatedir=/var --enable-strict-locations \
 		--with-pkgconfigdir=${LOCALBASE}/libdata/pkgconfig \
+		--enable-pam-config=freebsd \
 		--enable-jpeg --enable-pixman --enable-rfxcodec --enable-painter
 LDFLAGS+=	-lssl
 CONFLICTS=	xrdp-devel[0-9]*
