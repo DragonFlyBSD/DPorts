@@ -3,6 +3,7 @@
 
 PORTNAME=	feedgenerator
 PORTVERSION=	1.9.1
+PORTREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -20,6 +21,7 @@ USES=		python
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes
+USE_LOCALE=	en_US.UTF-8
 
 do-test:
 	@cd ${WRKSRC} && ${PYTHON_CMD} ${PYSETUP} test
