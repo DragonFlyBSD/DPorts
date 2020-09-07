@@ -39,18 +39,29 @@ MESON_ARGS=	-Dexamples=false
 LLD_UNSAFE=	yes
 .endif
 
-OPTIONS_DEFINE=	CONSOLEKIT X11
+OPTIONS_DEFINE=	CONSOLEKIT LIBSEAT X11
 OPTIONS_DEFAULT=X11
 OPTIONS_SUB=	yes
 
 CONSOLEKIT_DESC=	DRM sessions without root using ConsoleKit2
 CONSOLEKIT_PATCH_SITES=	https://github.com/myfreeweb/${GH_PROJECT}/commit/:ck2
-CONSOLEKIT_PATCHFILES=	b59460944208.patch:-p1:ck2 # see #1467 upstream
+CONSOLEKIT_PATCHFILES=	b59460944208.patch:-p1:ck2 # https://github.com/swaywm/wlroots/pull/1467
 CONSOLEKIT_LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 			libconsolekit.so:sysutils/consolekit2
 CONSOLEKIT_MESON_ENABLED=	consolekit2
 .if make(makesum)
 .MAKEFLAGS:		WITH+=CONSOLEKIT
+.endif
+
+LIBSEAT_DESC=		DRM sessions with/without root via libseat (experimental)
+LIBSEAT_PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/:libseat
+LIBSEAT_PATCHFILES=	bad1e9afa8ea.patch:-p1:libseat # https://github.com/swaywm/wlroots/pull/2364
+LIBSEAT_PATCHFILES+=	330c50b48dfe.patch:-p1:libseat # https://github.com/swaywm/wlroots/pull/2379
+LIBSEAT_PATCHFILES+=	4a85ae24c7df.patch:-p1:libseat # https://github.com/swaywm/wlroots/pull/2383
+LIBSEAT_LIB_DEPENDS=	libseat.so:sysutils/seatd
+LIBSEAT_MESON_ENABLED=	libseat
+.if make(makesum)
+.MAKEFLAGS:		WITH+=LIBSEAT
 .endif
 
 X11_LIB_DEPENDS=libxcb-errors.so:x11/xcb-util-errors \
