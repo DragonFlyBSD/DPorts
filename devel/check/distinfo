@@ -1,3 +1,3 @@
-TIMESTAMP = 1595578454
-SHA256 (libcheck-check-0.15.1_GH0.tar.gz) = a67b4972e2fb4bce14e19425d12850c2c0f232f2be93da0a2324767ee6c2995b
-SIZE (libcheck-check-0.15.1_GH0.tar.gz) = 305925
+TIMESTAMP = 1598621565
+SHA256 (check-0.15.2.tar.gz) = a8de4e0bacfb4d76dd1c618ded263523b53b85d92a146d8835eb1a52932fa20a
+SIZE (check-0.15.2.tar.gz) = 774985
