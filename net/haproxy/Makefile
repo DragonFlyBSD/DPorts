@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	haproxy
-DISTVERSION=	2.2.1
+DISTVERSION=	2.2.2
 CATEGORIES=	net www
 MASTER_SITES=	http://www.haproxy.org/download/2.2/src/
 
@@ -43,6 +43,11 @@ LUA_USES=		lua:53
 LUA_MAKE_ARGS=		USE_LUA=1 LUA_INC=${LUA_INCDIR} LUA_LIB=${LUA_LIBDIR} LUA_LIB_NAME=lua-${LUA_VER}
 
 .include <bsd.port.pre.mk>
+
+.if ${ARCH} == "i386"
+MAKE_ARGS+=	ARCH=i586
+USE_GCC=	9+
+.endif
 
 .if ${ARCH} == "x86_64" || ${ARCH} == "i386"
 MAKE_ARGS+=	USE_REGPARM=1
