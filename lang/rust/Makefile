@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	rust
-PORTVERSION?=	1.45.0
+PORTVERSION?=	1.46.0
 PORTREVISION?=	0
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/:src \
@@ -37,7 +37,8 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 
 USES=		pkgconfig python:3.3+,build ssl tar:xz
 
-MAKE_ENV=	LIBGIT2_SYS_USE_PKG_CONFIG=1 \
+MAKE_ENV=	DESTDIR=${STAGEDIR} \
+		LIBGIT2_SYS_USE_PKG_CONFIG=1 \
 		LIBSSH2_SYS_USE_PKG_CONFIG=1 \
 		OPENSSL_DIR="${OPENSSLBASE}" \
 		RUST_BACKTRACE=1
@@ -62,9 +63,9 @@ WASM_VARS=		_RUST_BUILD_WASM=true \
 WASM_VARS_OFF=		_RUST_BUILD_WASM=false
 
 # See WRKSRC/src/stage0.txt for the date and version values.
-BOOTSTRAPS_DATE?=		2020-06-18
-RUST_BOOTSTRAP_VERSION?=	1.44.1
-CARGO_BOOTSTRAP_VERSION?=	0.45.1
+BOOTSTRAPS_DATE?=		2020-08-03
+RUST_BOOTSTRAP_VERSION?=	1.45.2
+CARGO_BOOTSTRAP_VERSION?=	0.46.1
 
 BOOTSTRAPS_SUFFIX?=		${BOOTSTRAPS_SUFFIX_${ARCH}}
 BOOTSTRAPS_SUFFIX_powerpc64?=	-${PPC_ABI:tl}
@@ -180,11 +181,8 @@ do-build:
 		${SETENV} ${MAKE_ENV} ${PYTHON_CMD} x.py build --jobs=${MAKE_JOBS_NUMBER}
 
 do-install:
-# DESTDIR not in MAKE_ENV as it would cause the bundled LLVM to be
-# staged into it during do-build.
 	@cd ${WRKSRC} && \
-		${SETENV} ${MAKE_ENV} DESTDIR=${STAGEDIR} ${PYTHON_CMD} \
-		x.py install --jobs=${MAKE_JOBS_NUMBER}
+		${SETENV} ${MAKE_ENV} ${PYTHON_CMD} x.py install --jobs=${MAKE_JOBS_NUMBER}
 # We autogenerate the plist file.  We do that, instead of the
 # regular pkg-plist, because several libraries have a computed
 # filename based on the absolute path of the source files.  As it
