@@ -3,6 +3,7 @@
 
 PORTNAME=	libunwind
 PORTVERSION=	20200331	# This is the release date on SAVANNAH
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	SAVANNAH \
 		https://github.com/libunwind/libunwind/releases/download/v${PORTVERSION}/
