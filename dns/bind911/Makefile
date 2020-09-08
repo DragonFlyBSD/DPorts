@@ -24,7 +24,7 @@ RUN_DEPENDS=	bind-tools>0:dns/bind-tools
 USES=	cpe libedit pkgconfig
 
 # ISC releases things like 9.8.0-P1, which our versioning doesn't like
-ISCVERSION=	9.11.21
+ISCVERSION=	9.11.22
 
 CPE_VENDOR=	isc
 CPE_VERSION=	${ISCVERSION:C/-.*//}
@@ -54,8 +54,8 @@ PORTDOCS=	*
 
 OPTIONS_DEFAULT=	SSL THREADS SIGCHASE IDN GSSAPI_NONE JSON \
 			DLZ_FILESYSTEM LMDB RPZ_NSDNAME RPZ_NSIP TCP_FASTOPEN \
-			FILTER_AAAA
-OPTIONS_DEFINE=		IDN LARGE_FILE JSON GEOIP \
+			FILTER_AAAA DNSTAP
+OPTIONS_DEFINE=		ACCFDNS IDN LARGE_FILE JSON GEOIP \
 			FIXED_RRSET SIGCHASE IPV6 THREADS FILTER_AAAA \
 			RPZ_NSIP RPZ_NSDNAME DOCS \
 			MINCACHE PORTREVISION QUERYTRACE LMDB DNSTAP \
@@ -72,6 +72,7 @@ OPTIONS_SINGLE_GSSAPI=	GSSAPI_BASE GSSAPI_HEIMDAL GSSAPI_MIT GSSAPI_NONE
 
 OPTIONS_SUB=	yes
 
+ACCFDNS_DESC=		Prefer DNS accept filter over generic one
 CRYPTO_DESC=		Choose which crypto engine to use
 DLZ_BDB_DESC=		DLZ BDB driver
 DLZ_DESC=		Dynamically Loadable Zones
@@ -101,6 +102,8 @@ START_LATE_DESC=	Start BIND late in the boot process (see help)
 TCP_FASTOPEN_DESC=	RFC 7413 support
 TUNING_LARGE_DESC=	Tune named for large systems (**READ HELP**)
 
+ACCFDNS_EXTRA_PATCHES=	${PATCHDIR}/extrapatch-interfacemgr.c
+	
 DLZ_BDB_CONFIGURE_ON=	--with-dlz-bdb=yes
 DLZ_BDB_USES=		bdb
 
@@ -159,7 +162,6 @@ LARGE_FILE_CONFIGURE_ENABLE=	largefile
 
 LMDB_CONFIGURE_WITH=	lmdb=${LOCALBASE}
 LMDB_LIB_DEPENDS=	liblmdb.so:databases/lmdb
-LMDB_EXTRA_PATCHES=	${FILESDIR}/extrapatch-bind-lmdb-lock
 
 MINCACHE_EXTRA_PATCHES=	${FILESDIR}/extrapatch-bind-min-override-ttl
 
