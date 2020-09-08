@@ -2,7 +2,6 @@
 
 PORTNAME=	ktp-accounts-kcm
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
-PORTREVISION=	1
 CATEGORIES=	net-im kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -32,11 +31,8 @@ USE_QT=		core dbus declarative gui network sql widgets xml \
 		buildtools_build qmake_build
 USE_LDCONFIG=	yes
 
-OPTIONS_DEFINE=	HAZE IRC JABBER SALUT DOCS
+OPTIONS_DEFINE=	IRC JABBER SALUT DOCS
 OPTIONS_DEFAULT=JABBER
-
-HAZE_DESC=	libpurple protocols support
-HAZE_RUN_DEPENDS=	${LOCALBASE}/libexec/telepathy-haze:net-im/telepathy-haze
 
 IRC_DESC=	Internet Relay Chat support
 IRC_RUN_DEPENDS=	${LOCALBASE}/libexec/telepathy-idle:net-im/telepathy-idle
