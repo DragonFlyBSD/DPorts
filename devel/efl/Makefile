@@ -3,10 +3,13 @@
 
 PORTNAME=	efl
 DISTVERSION=	1.20.7
-PORTREVISION=	26
+PORTREVISION=	27
 CATEGORIES=	devel enlightenment
 MASTER_SITES=	http://download.enlightenment.org/rel/libs/${PORTNAME}/
 DIST_SUBDIR=	enlightenment
+
+PATCH_SITES=	https://github.com/Enlightenment/efl/commit/
+PATCHFILES=	fa97d86d0fa7301399f7b2b783c5de9b0c8d5ebe.patch:-p1
 
 MAINTAINER=	enlightenment@FreeBSD.org
 COMMENT=	Enlightenment Foundation Libraries
