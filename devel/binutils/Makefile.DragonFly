@@ -8,5 +8,13 @@ dfly-patch:
 # fix stage qa plist
 .if ${FLAVOR:Mriscv32_unknown_elf}
 dfly-install:
-	${RM} -v ${STAGEDIR}${LOCALBASE}/riscv32-unknown-elf/lib/ldscripts/elf64lriscv.*
+	${RM} -v ${STAGEDIR}${LOCALBASE}/${BUTARGET}/lib/ldscripts/elf32lriscv.xd* \
+		${STAGEDIR}${LOCALBASE}/${BUTARGET}/lib/ldscripts/elf32lriscv.xs*  \
+		${STAGEDIR}${LOCALBASE}/${BUTARGET}/lib/ldscripts/elf64lriscv.*
+.elif ${FLAVOR:Mriscv64_none_elf}
+dfly-install:
+	${RM} -v ${STAGEDIR}${LOCALBASE}/${BUTARGET}/lib/ldscripts/elf64lriscv.xd* \
+		${STAGEDIR}${LOCALBASE}/${BUTARGET}/lib/ldscripts/elf64lriscv.xs*  \
+		${STAGEDIR}${LOCALBASE}/${BUTARGET}/lib/ldscripts/elf32lriscv.xd*  \
+		${STAGEDIR}${LOCALBASE}/${BUTARGET}/lib/ldscripts/elf32lriscv.xs*
 .endif
