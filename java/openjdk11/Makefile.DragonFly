@@ -1,3 +1,6 @@
+# Remove Werror. Noisy, because somehow CFLAGS end up in
+# CXXFLAGS. There must be a way to do it properly.
+CONFIGURE_ARGS+=	--with-extra-cflags="-Wno-int-conversion"
 
 # zrj: no idea why needed
 MAKE_ARGS+=	CONF_CHECK=ignore
