@@ -182,7 +182,9 @@ post-patch:
 
 do-install:
 	@${MKDIR} ${STAGEDIR}${INSTALLDIR}
+.if !defined(BUILD_JRE)
 	${CP} -rv ${JDK_IMAGEDIR}/include/freebsd ${JDK_IMAGEDIR}/include/dragonfly
+.endif
 	@cd ${JDK_IMAGEDIR} && ${COPYTREE_SHARE} . ${STAGEDIR}${INSTALLDIR}
 	@cd ${STAGEDIR}${INSTALLDIR} && \
 		${FIND} bin -type f -exec ${CHMOD} ${BINMODE} {} \;
