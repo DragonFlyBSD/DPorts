@@ -1,0 +1,4 @@
+# Modify a patch from FreeBSD used to avoid declaring prototype for sprintf()
+dfly-patch:
+	${REINPLACE_CMD} -e 's,FreeBSD,DragonFly,g' \
+		${WRKSRC}/pgdispd/updatelgtitle.c
