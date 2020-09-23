@@ -2,8 +2,8 @@ bin/virsh
 bin/virt-admin
 bin/virt-host-validate
 bin/virt-pki-validate
-bin/virt-xml-validate
 %%QEMU%%bin/virt-qemu-run
+bin/virt-xml-validate
 %%BHYVE%%sbin/virtbhyved
 sbin/virtnetworkd
 sbin/virtproxyd
@@ -16,8 +16,8 @@ man/man1/virsh.1.gz
 man/man1/virt-admin.1.gz
 man/man1/virt-host-validate.1.gz
 man/man1/virt-pki-validate.1.gz
-man/man1/virt-xml-validate.1.gz
 %%QEMU%%man/man1/virt-qemu-run.1.gz
+man/man1/virt-xml-validate.1.gz
 man/man7/virkeycode-atset1.7.gz
 man/man7/virkeycode-atset2.7.gz
 man/man7/virkeycode-atset3.7.gz
@@ -88,8 +88,6 @@ lib/libvirt-qemu.so.%%SHLIB_VER%%
 lib/libvirt.so
 lib/libvirt.so.0
 lib/libvirt.so.%%SHLIB_VER%%
-%%NSS%%lib/libnss_libvirt.so.1
-%%NSS%%lib/libnss_libvirt_guest.so.1
 %%NSS%%lib/nss_libvirt.so.1
 %%NSS%%lib/nss_libvirt_guest.so.1
 libdata/pkgconfig/libvirt-admin.pc

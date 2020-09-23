@@ -1,15 +1,17 @@
---- src/util/virprocess.c.orig	2019-07-30 02:02:07 UTC
+--- src/util/virprocess.c.orig	2020-09-01 07:09:12 UTC
 +++ src/util/virprocess.c
-@@ -422,6 +422,8 @@ int virProcessSetAffinity(pid_t pid, vir
- {
+@@ -446,8 +446,9 @@ int virProcessSetAffinity(pid_t pid, vir
      size_t i;
-     VIR_DEBUG("Set process affinity on %lld", (long long)pid);
-+# ifdef CPU_ALLOC
-+    /* New method dynamically allocates cpu mask, allowing unlimted cpus */
      int numcpus = 1024;
      size_t masklen;
-     cpu_set_t *mask;
-@@ -460,6 +462,22 @@ int virProcessSetAffinity(pid_t pid, vir
+-    cpu_set_t *mask;
+ 
++# ifdef CPU_ALLOC
++    /* New method dynamically allocates cpu mask, allowing unlimted cpus */
+     VIR_DEBUG("Set process affinity on %lld", (long long)pid);
+ 
+     /* Not only may the statically allocated cpu_set_t be too small,
+@@ -484,6 +485,22 @@ int virProcessSetAffinity(pid_t pid, vir
          return -1;
      }
      CPU_FREE(mask);
@@ -32,7 +34,7 @@
  
      return 0;
  }
-@@ -468,11 +486,16 @@ virBitmapPtr
+@@ -492,11 +509,16 @@ virBitmapPtr
  virProcessGetAffinity(pid_t pid)
  {
      size_t i;
@@ -49,7 +51,7 @@
      /* 262144 cpus ought to be enough for anyone */
      ncpus = 1024 << 8;
      masklen = CPU_ALLOC_SIZE(ncpus);
-@@ -484,8 +507,17 @@ virProcessGetAffinity(pid_t pid)
+@@ -508,8 +530,17 @@ virProcessGetAffinity(pid_t pid)
      }
  
      CPU_ZERO_S(masklen, mask);
@@ -67,7 +69,7 @@
          virReportSystemError(errno,
                               _("cannot get CPU affinity of process %d"), pid);
          goto cleanup;
-@@ -495,13 +527,20 @@ virProcessGetAffinity(pid_t pid)
+@@ -519,13 +550,20 @@ virProcessGetAffinity(pid_t pid)
            goto cleanup;
  
      for (i = 0; i < ncpus; i++) {
@@ -88,7 +90,7 @@
  
      return ret;
  }
-@@ -1000,7 +1039,7 @@ int virProcessGetStartTime(pid_t pid,
+@@ -1019,7 +1057,7 @@ int virProcessGetStartTime(pid_t pid,
  
      return 0;
  }

@@ -1,4 +1,4 @@
---- src/util/virhostcpu.c.orig	2020-03-27 21:37:32 UTC
+--- src/util/virhostcpu.c.orig	2020-09-01 07:09:12 UTC
 +++ src/util/virhostcpu.c
 @@ -32,7 +32,7 @@
  # include <linux/kvm.h>
@@ -30,7 +30,7 @@
  # define BSD_CPU_STATS_ALL 4
  # define BSD_MEMORY_STATS_ALL 4
  
-@@ -949,7 +949,7 @@ virHostCPUGetInfo(virArch hostarch G_GNU
+@@ -933,7 +933,7 @@ virHostCPUGetInfo(virArch hostarch G_GNU
   cleanup:
      VIR_FORCE_FCLOSE(cpuinfo);
      return ret;
@@ -39,7 +39,7 @@
      unsigned long cpu_freq;
      size_t cpu_freq_len = sizeof(cpu_freq);
  
-@@ -962,7 +962,7 @@ virHostCPUGetInfo(virArch hostarch G_GNU
+@@ -946,7 +946,7 @@ virHostCPUGetInfo(virArch hostarch G_GNU
      *cores = *cpus;
      *threads = 1;
  
@@ -48,7 +48,7 @@
      /* dev.cpu.%d.freq reports current active CPU frequency. It is provided by
       * the cpufreq(4) framework. However, it might be disabled or no driver
       * available. In this case fallback to "hw.clockrate" which reports boot time
-@@ -1017,7 +1017,7 @@ virHostCPUGetStats(int cpuNum G_GNUC_UNU
+@@ -1001,7 +1001,7 @@ virHostCPUGetStats(int cpuNum G_GNUC_UNU
  
          return ret;
      }
@@ -57,16 +57,16 @@
      return virHostCPUGetStatsFreeBSD(cpuNum, params, nparams);
  #else
      virReportError(VIR_ERR_NO_SUPPORT, "%s",
-@@ -1032,7 +1032,7 @@ virHostCPUGetCount(void)
+@@ -1016,7 +1016,7 @@ virHostCPUGetCount(void)
  {
  #if defined(__linux__)
-     return virHostCPUParseCountLinux();
+     return virHostCPUCountLinux();
 -#elif defined(__FreeBSD__) || defined(__APPLE__)
 +#elif defined(__FreeBSD__) || defined(__APPLE__) || defined(__DragonFly__)
      return virHostCPUGetCountAppleFreeBSD();
  #else
      virReportError(VIR_ERR_NO_SUPPORT, "%s",
-@@ -1267,7 +1267,7 @@ virHostCPUGetMicrocodeVersion(void)
+@@ -1281,7 +1281,7 @@ virHostCPUGetMicrocodeVersion(virArch ho
  
  #if HAVE_LINUX_KVM_H && defined(KVM_GET_MSRS) && \
      (defined(__i386__) || defined(__x86_64__)) && \
@@ -75,9 +75,12 @@
  static int
  virHostCPUGetMSRFromKVM(unsigned long index,
                          uint64_t *result)
-@@ -1415,4 +1415,4 @@ virHostCPUGetTscInfo(void)
+@@ -1429,7 +1429,7 @@ virHostCPUGetTscInfo(void)
  
  #endif /* HAVE_LINUX_KVM_H && defined(KVM_GET_MSRS) && \
            (defined(__i386__) || defined(__x86_64__)) && \
 -          (defined(__linux__) || defined(__FreeBSD__)) */
 +          (defined(__linux__) || defined(__FreeBSD__) || defined(__DragonFly__)) */
+ 
+ int
+ virHostCPUReadSignature(virArch arch,
