@@ -1,6 +1,6 @@
---- CMakeLists.txt.intermediate	2019-10-28 17:15:29.000000000 +0000
-+++ CMakeLists.txt
-@@ -302,18 +302,6 @@ if(HAS_WVLA_FLAG)
+--- CMakeLists.txt.orig	2020-09-21 20:43:48.540106000 +0200
++++ CMakeLists.txt	2020-09-21 20:44:13.390195000 +0200
+@@ -302,18 +302,6 @@
    add_compile_options(-Wvla)
  endif()
  
@@ -16,6 +16,6 @@
 -  endif()
 -endif()
 -
- check_c_compiler_flag(-fdiagnostics-color=auto HAS_DIAG_COLOR_FLAG)
- if(HAS_DIAG_COLOR_FLAG)
-   if(CMAKE_GENERATOR MATCHES "Ninja")
+ check_c_compiler_flag(-fno-common HAVE_FNO_COMMON)
+ if (HAVE_FNO_COMMON)
+   add_compile_options(-fno-common)
