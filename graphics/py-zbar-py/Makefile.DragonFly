@@ -1,0 +1,5 @@
+# Not sure if this is correct but I think libzbar.so is not needed
+# since zbar is built again during the py-zbar-py build, but I could be wrong.
+# Anyways for now remove it from LIB_DEPEDNS.
+LIB_DEPENDS:=	${LIB_DEPENDS:Nlibzbar.so\:graphics\/zbar}
+LDFLAGS+=	${ICONV_LIB}
