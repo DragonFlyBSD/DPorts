@@ -1,11 +1,10 @@
---- logrotate.c.orig	2017-10-12 15:19:41 UTC
+--- logrotate.c.intermediate	2020-09-25 22:38:19 UTC
 +++ logrotate.c
-@@ -1,8 +1,5 @@
+@@ -1,6 +1,6 @@
  #include "queue.h"
  /* alloca() is defined in stdlib.h in NetBSD */
--#ifndef __NetBSD__
--#include <alloca.h>
--#endif
+-#if !defined(__FreeBSD__) && !defined(__NetBSD__)
++#if !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(__DragonFly__)
+ #include <alloca.h>
+ #endif
  #include <limits.h>
- #include <ctype.h>
- #include <dirent.h>
