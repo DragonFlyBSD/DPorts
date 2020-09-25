@@ -1,0 +1,5 @@
+dfly-patch:
+	${REINPLACE_CMD} -e 's@freebsd@dragonfly@' \
+		${WRKSRC}/meson.build \
+		${WRKSRC}/src/meson.build
+

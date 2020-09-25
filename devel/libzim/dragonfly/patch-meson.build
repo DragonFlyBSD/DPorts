@@ -5,7 +5,7 @@
  conf.set('ENABLE_ZLIB', zlib_dep.found())
  
 -lzma_dep = dependency('liblzma', static:static_linkage)
-+lzma_dep = cc.find_library('lzma')
++lzma_dep = cpp.find_library('lzma')
  
  xapian_dep = dependency('xapian-core',
                          required:false,
