@@ -1,4 +1,4 @@
---- Makefile.PL.orig	2009-09-25 19:50:50 UTC
+--- Makefile.PL.orig	2020-09-25 16:27:20 UTC
 +++ Makefile.PL
 @@ -6,7 +6,7 @@ use Config;
  
@@ -9,10 +9,12 @@
      die "OS unsupported ($Config{osname}). Here's a nickel, go buy yourself a real OS.\n";
  }
  
-@@ -119,3 +119,20 @@ S,xvfsconf	24	auto
+@@ -119,5 +119,22 @@ S,xvfsconf	24	auto
  T,struct_cdev	25	auto
  Q	26	FMT_64
  QU	27	FMT_U64
+-C	28	FMT_INT8
+-CU	29	FMT_UINT8
 +S,timespec	28	auto
 +S,sensor	29	auto
 +S,vmmeter	30	auto
@@ -30,3 +32,5 @@
 +S,file	42	auto
 +S,proc	43	auto
 +T,udev_t	44	auto
++C	45	FMT_INT8
++CU	46	FMT_UINT8
