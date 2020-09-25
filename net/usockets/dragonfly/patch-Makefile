@@ -1,0 +1,20 @@
+--- Makefile.intermediate	2020-09-25 22:14:13 UTC
++++ Makefile
+@@ -34,7 +34,7 @@ ifeq ($(WITH_ASAN),1)
+ endif
+ 
+ override CFLAGS += -std=c11 -Isrc
+-override LDFLAGS += uSockets.a
++#override LDFLAGS += uSockets.a
+ 
+ # By default we build the uSockets.a static library
+ default:
+@@ -44,7 +44,7 @@ default:
+ ifeq ($(WITH_OPENSSL),1)
+ 	$(CXX) $(CXXFLAGS) -fPIC -std=c++17 -flto -O3 -c src/crypto/*.cpp
+ endif
+-	$(CXX) -shared -o libuSockets.so *.o -lssl
++	$(CXX) -shared $(LDFLAGS) -o libuSockets.so *.o -lssl
+ 
+ # Builds all examples
+ .PHONY: examples
