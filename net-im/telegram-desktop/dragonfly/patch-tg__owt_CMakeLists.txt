@@ -1,0 +1,39 @@
+--- tg_owt/CMakeLists.txt.orig	2020-09-27 12:15:25 UTC
++++ tg_owt/CMakeLists.txt
+@@ -38,6 +38,7 @@ include(cmake/libopenh264.cmake)
+ include(cmake/libpffft.cmake)
+ include(cmake/librnnoise.cmake)
+ include(cmake/libsrtp.cmake)
++include(cmake/libusrsctp.cmake)
+ include(cmake/libvpx.cmake)
+ include(cmake/libwebrtcbuild.cmake)
+ include(cmake/libyuv.cmake)
+@@ -60,6 +61,7 @@ PRIVATE
+     tg_owt::libpffft
+     tg_owt::librnnoise
+     tg_owt::libsrtp
++    tg_owt::libusrsctp
+     tg_owt::libvpx
+     tg_owt::libvpx_mmx
+     tg_owt::libvpx_sse2
+@@ -842,12 +844,6 @@ PRIVATE
+     modules/audio_device/linux/audio_mixer_manager_alsa_linux.h
+     modules/audio_device/linux/latebindingsymboltable_linux.cc
+     modules/audio_device/linux/latebindingsymboltable_linux.h
+-    modules/audio_device/linux/audio_device_pulse_linux.cc
+-    modules/audio_device/linux/audio_device_pulse_linux.h
+-    modules/audio_device/linux/audio_mixer_manager_pulse_linux.cc
+-    modules/audio_device/linux/audio_mixer_manager_pulse_linux.h
+-    modules/audio_device/linux/pulseaudiosymboltable_linux.cc
+-    modules/audio_device/linux/pulseaudiosymboltable_linux.h
+     modules/audio_device/mac/audio_device_mac.cc
+     modules/audio_device/mac/audio_device_mac.h
+     modules/audio_device/mac/audio_mixer_manager_mac.cc
+@@ -1755,6 +1751,7 @@ TARGETS
+     libpffft
+     librnnoise
+     libsrtp
++    libusrsctp
+     libvpx
+     libvpx_mmx
+     libvpx_sse2
