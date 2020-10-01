@@ -1,2 +1,15 @@
+# XXX Please fix me, No clue why we get :
+#
+# /usr/libexec/binutils227/elf/ld.gold: error: ext/x64-salsa2012-asm/salsa2012.o: multiple definition of '_zt_salsa2012_amd64_xmm6'
+# /usr/libexec/binutils227/elf/ld.gold: ext/x64-salsa2012-asm/salsa2012.o: previous definition here
+# /usr/libexec/binutils227/elf/ld.gold: error: ext/x64-salsa2012-asm/salsa2012.o: multiple definition of 'zt_salsa2012_amd64_xmm6'
+# /usr/libexec/binutils227/elf/ld.gold: ext/x64-salsa2012-asm/salsa2012.o: previous definition here
+# /usr/libexec/binutils227/elf/ld.gold: error: ext/x64-salsa2012-asm/salsa2012.o: multiple definition of '_zt_salsa2012_amd64_xmm6_xor'
+# /usr/libexec/binutils227/elf/ld.gold: ext/x64-salsa2012-asm/salsa2012.o: previous definition here
+# /usr/libexec/binutils227/elf/ld.gold: error: ext/x64-salsa2012-asm/salsa2012.o: multiple definition of 'zt_salsa2012_amd64_xmm6_xor'
+# /usr/libexec/binutils227/elf/ld.gold: ext/x64-salsa2012-asm/salsa2012.o: previous definition here
+#
+LDFLAGS+=	-Wl,--allow-multiple-definition
+
 SUB_LIST+=     ZEROTIER_SYSLOG=""
 SUB_LIST+=     ZEROTIER_IF_TAP="if_tap"
