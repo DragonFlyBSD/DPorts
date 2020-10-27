@@ -609,7 +609,7 @@ post-extract-gl-DEFAULT:
 .  endif
 .  if !empty(_GITLAB_GROUPS:NDEFAULT)
 .    for _group in ${_GITLAB_GROUPS:NDEFAULT}
-# We set GL_SITE earlier, we need to verify its not empty
+# We set GL_SITE earlier, we need to verify it's not empty
 .      if empty(GL_SITE_${_group})
 GL_SITE_${_group}=	${GL_SITE_DEFAULT}
 .      endif
@@ -973,16 +973,7 @@ MASTER_SITE_PGSQL+= \
 
 .if !defined(IGNORE_MASTER_SITE_PHP)
 MASTER_SITE_PHP+= \
-	http://de.php.net/%SUBDIR%/ \
-	http://es.php.net/%SUBDIR%/ \
-	http://fr.php.net/%SUBDIR%/ \
-	http://it.php.net/%SUBDIR%/ \
-	http://jp.php.net/%SUBDIR%/ \
-	http://se.php.net/%SUBDIR%/ \
-	http://uk3.php.net/%SUBDIR%/ \
-	http://us2.php.net/%SUBDIR%/ \
-	http://br.php.net/%SUBDIR%/ \
-	http://cn.php.net/%SUBDIR%/
+	https://www.php.net/%SUBDIR%/
 .endif
 
 .if !defined(IGNORE_MASTER_SITE_PYTHON)
@@ -1059,7 +1050,7 @@ MASTER_SITE_SAVANNAH+= \
 .if !defined(IGNORE_MASTER_SITE_SOURCEFORGE)
 .for p in https http
 MASTER_SITE_SOURCEFORGE+= ${p}://downloads.sourceforge.net/project/%SUBDIR%/
-.for m in excellmedia freefr jaist kent nchc \
+.for m in excellmedia freefr jaist nchc \
 	netcologne netix superb-dca2 superb-sea2 ufpr vorboss
 MASTER_SITE_SOURCEFORGE+= ${p}://${m}.dl.sourceforge.net/project/%SUBDIR%/
 .endfor

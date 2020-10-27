@@ -90,7 +90,7 @@ kdm:*:147:
 ipv6mon:*:148:
 audit:*:149:
 pgsql:*:150:
-# free: 151
+nixbld:*:151:
 frrvty:*:152:frr
 rbldns:*:153:
 trircd:*:154:
@@ -206,7 +206,7 @@ meta1:*:264:
 sshout:*:265:
 step:*:266:
 odoo:*:267:
-# free: 268
+tenshi:*:268:tenshi
 # free: 269
 _rpki-client:*:270:
 # free: 271
@@ -308,7 +308,7 @@ httptunnel:*:361:
 # free: 367
 # free: 368
 # free: 369
-# free: 370
+_wsdd:*:370:
 # free: 371
 # free: 372
 # free: 373
@@ -745,7 +745,7 @@ clickhouse:*:800:
 # free: 804
 # free: 805
 # free: 806
-# free: 807
+bosun:*:807:
 clixon:*:808:
 # free: 809
 # free: 810
@@ -770,7 +770,7 @@ statsd:*:826:
 # free: 829
 # free: 830
 # free: 831
-# free: 832
+beehive:*:832:
 # free: 833
 # free: 834
 # free: 835

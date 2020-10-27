@@ -3176,7 +3176,6 @@ x11/gnome2-fifth-toe||2014-11-19|GNOME 2 was removed
 x11/gnome2-lite||2014-11-19|GNOME 2 was removed
 x11/gnome2-power-tools||2014-11-19|GNOME 2 was removed
 x11/xfce4-xfapplet-plugin||2014-11-19|Depends on removed gnome-panel
-net-im/telegram-cli||2014-11-19|Duplicate of net-im/tg
 emulators/wine-doors||2014-11-19|Abandonware, depends on non existing USE_GNOME components
 x11/gtstarter||2014-11-19|Abandonware, depends on non existing USE_GNOME components
 sysutils/serpentine||2014-11-19|Abandonware, depends on non existing USE_GNOME components
@@ -4069,7 +4068,6 @@ databases/php5-propel||2016-01-25|Has expired: PHP 5.4 EOL reached
 deskutils/fengoffice||2016-01-25|Has expired: PHP 5.4 EOL reached
 devel/simpletest||2016-01-25|Has expired: PHP 5.4 EOL reached
 graphics/php5-swfed||2016-01-25|Has expired: PHP 5.4 EOL reached
-sysutils/loganalyzer||2016-01-25|Has expired: PHP 5.4 EOL reached
 textproc/simplehtmldom||2016-01-25|Has expired: PHP 5.4 EOL reached
 www/autoindex2||2016-01-25|Has expired: PHP 5.4 EOL reached
 www/cakephp11||2016-01-25|Has expired: PHP 5.4 EOL reached
@@ -5804,7 +5802,7 @@ java/bootstrap-openjdk|java/bootstrap-openjdk6|2017-12-01|Has expired: supersede
 lang/gcc46|lang/gcc6|2017-12-01|Has expired: Unsupported by upstream. Use GCC 6 or newer instead
 security/krb5-113|security/krb5-114|2017-12-03|Has expired: EOL twelve months after release of krb5-1.15
 net/bird6|net/bird@ipv6|2017-12-06|Moved to a flavored version
-devel/kore-notls|devel/kore@notls|2017-12-06|Moved to a flavored version
+devel/kore-notls|devel/kore|2017-12-06|Moved to a flavored version
 devel/llvm-cheri128|devel/llvm-cheri|2017-12-07|A single cheri compiler can now target 128-bit and 256-bit capabilities
 audio/cd-console||2017-12-13|Has expired: No public distfiles
 textproc/pecl-cld||2017-12-13|Has expired: Depends on expired devel/cld
@@ -5895,7 +5893,6 @@ audio/linux-mbrola||2018-01-28|Has expired: Depends on expiring audio/mbrolavox
 audio/gigedit||2018-01-28|Has expired: Broken for more than 6 months
 audio/gnomoradio||2018-01-28|Has expired: Broken for more than 6 months
 math/asir2000||2018-01-28|Has expired: Broken for more than 6 months
-multimedia/librespot||2018-01-28|Has expired: Broken for more than 6 months
 multimedia/bombono||2018-01-28|Has expired: Broken for more than 6 months
 lang/gcl||2018-01-28|Has expired: Broken for more than 6 months
 lang/pike78||2018-01-28|Has expired: Broken for more than 6 months
@@ -9172,7 +9169,6 @@ audio/mbox||2019-10-16|Has expired: Unfetchable, unmaintained
 audio/nuvolaplayer||2019-10-16|Has expired: Unfetchable, unmaintained
 audio/vagalume||2019-10-16|Has expired: Unfetchable, unmaintained
 audio/xmms2-scrobbler||2019-10-16|Has expired: Unfetchable, unmaintained
-benchmarks/filebench||2019-10-16|Has expired: Unfetchable, unmaintained
 biology/chemeq||2019-10-16|Has expired: Unfetchable, unmaintained
 cad/dxf2fig||2019-10-16|Has expired: Unfetchable, unmaintained
 comms/gsmlib||2019-10-16|Has expired: Unfetchable, unmaintained
@@ -9440,7 +9436,6 @@ x11/dynamag||2019-10-16|Has expired: Unfetchable, unmaintained
 x11/xcurs||2019-10-16|Has expired: Unfetchable, unmaintained
 x11/xscreensaver-gnome||2019-10-16|Has expired: Unfetchable, unmaintained
 x11/xscreensaver-gnome-hacks||2019-10-16|Has expired: Unfetchable, unmaintained
-x11-clocks/cairo-clock||2019-10-16|Has expired: Unfetchable, unmaintained
 x11-clocks/pclock||2019-10-16|Has expired: Unfetchable, unmaintained
 x11-clocks/stopwatch||2019-10-16|Has expired: Unfetchable, unmaintained
 x11-clocks/wmfuzzy||2019-10-16|Has expired: Unfetchable, unmaintained
@@ -9959,7 +9954,6 @@ graphics/imgtops||2020-01-27|Has expired: Unmaintained, uses EOLed python27
 graphics/imgv||2020-01-27|Has expired: Unmaintained, uses EOLed python27
 graphics/lcms-python||2020-01-27|Has expired: Unmaintained, uses EOLed python27
 graphics/mirage||2020-01-27|Has expired: Unmaintained, uses EOLed python27
-graphics/partio||2020-01-27|Has expired: Unmaintained, uses EOLed python27
 graphics/py-exif||2020-01-27|Has expired: Unmaintained, uses EOLed python27
 graphics/py-gd||2020-01-27|Has expired: Unmaintained, uses EOLed python27
 graphics/py-paint||2020-01-27|Has expired: Unmaintained, uses EOLed python27
@@ -11293,7 +11287,6 @@ audio/py-openal||2020-08-15|Has expired: Uses deprecated version of python
 audio/py-py-jack||2020-08-15|Has expired: Uses deprecated version of python
 audio/py-xmms2||2020-08-15|Has expired: Uses deprecated version of python
 audio/triceratops-lv2||2020-08-15|Has expired: Uses deprecated version of python
-biology/py-biom-format||2020-08-15|Has expired: Uses deprecated version of python
 comms/py-bulksms||2020-08-15|Has expired: Uses deprecated version of python
 comms/py-gammu||2020-08-15|Has expired: Uses deprecated version of python
 databases/py-geoalchemy||2020-08-15|Has expired: Uses deprecated version of python
@@ -11501,7 +11494,6 @@ games/xminesweep||2020-08-27|Has expired: Broken for more than 6 months
 graphics/backfract||2020-08-27|Has expired: Broken for more than 6 months
 japanese/kanjipad||2020-08-27|Has expired: Broken for more than 6 months
 japanese/xdtp||2020-08-27|Has expired: Broken for more than 6 months
-math/barvinok||2020-08-27|Has expired: Broken for more than 6 months
 math/openmesh||2020-08-27|Has expired: Broken for more than 6 months
 math/rehearse||2020-08-27|Has expired: Broken for more than 6 months
 net/hinfo||2020-08-27|Has expired: Broken for more than 6 months
@@ -11527,3 +11519,250 @@ www/py-pySmartDL|www/py-pysmartdl|2020-09-05|Rename to match our py- port naming
 astro/py-RO|astro/py-ro|2020-09-05|Rename to match our py- port naming
 astro/py-astLib|astro/py-astlib|2020-09-05|Rename to match our py- port naming
 www/py-MechanicalSoup|www/py-mechanicalsoup|2020-09-05|Rename to match our py- port naming
+devel/kore@default|devel/kore|2020-09-07|Flavor removed
+devel/kore@notls|devel/kore|2020-09-07|Flavor removed
+x11-wm/e-module-alarm||2020-09-09|Removed
+x11-wm/e-module-cpu||2020-09-09|Removed
+x11-wm/e-module-deskshow||2020-09-09|Removed
+x11-wm/e-module-everything-places||2020-09-09|Removed
+x11-wm/e-module-mem||2020-09-09|Removed
+x11-wm/e-module-rmb||2020-09-09|Removed
+x11-wm/e-module-wlan||2020-09-09|Removed
+x11-wm/e-modules||2020-09-09|Removed
+net/frr6|net/frr7|2020-09-10|Has expired: Uses deprecated version of python and upstream no longer maintained
+graphics/libdssim||2020-09-13|Removed: C API is empty, only usable from Rust
+cad/opensta|cad/openroad|2020-09-14|OpenSTA is included in OpenRoad and isn't needed as a standalone port
+x11-drivers/xf86-video-ati-legacy||2020-09-16|Has expired: Broken for more than 6 months
+devel/ORBit2-reference||2020-09-19|Remove outdated reference documentation
+devel/gnome-vfs-reference||2020-09-19|Remove outdated reference documentation
+devel/gconf2-reference||2020-09-19|Remove outdated reference documentation
+devel/libbonobo-reference||2020-09-19|Remove outdated reference documentation
+devel/glibmm-reference||2020-09-19|Remove outdated reference documentation
+devel/glib20-reference||2020-09-19|Remove outdated reference documentation
+devel/libglade2-reference||2020-09-19|Remove outdated reference documentation
+devel/libsoup-reference||2020-09-19|Remove outdated reference documentation
+x11-fonts/fontconfig-reference||2020-09-19|Remove outdated reference documentation
+x11/libgnome-reference||2020-09-19|Remove outdated reference documentation
+x11-toolkits/libgnomeui-reference||2020-09-19|Remove outdated reference documentation
+x11-toolkits/libbonoboui-reference||2020-09-19|Remove outdated reference documentation
+x11-toolkits/gtkmm20-reference||2020-09-19|Remove outdated reference documentation
+x11-toolkits/gtkmm24-reference||2020-09-19|Remove outdated reference documentation
+x11-toolkits/gtksourceview2-reference||2020-09-19|Remove outdated reference documentation
+x11-toolkits/gtksourceview3-reference||2020-09-19|Remove outdated reference documentation
+x11-toolkits/libwnck-reference||2020-09-19|Remove outdated reference documentation
+x11-toolkits/gtk20-reference||2020-09-19|Remove outdated reference documentation
+x11-toolkits/gtkmm30-reference||2020-09-19|Remove outdated reference documentation
+x11-toolkits/vte-reference||2020-09-19|Remove outdated reference documentation
+graphics/libgnomecanvas-reference||2020-09-19|Remove outdated reference documentation
+textproc/libxslt-reference||2020-09-19|Remove outdated reference documentation
+textproc/gtkspell-reference||2020-09-19|Remove outdated reference documentation
+textproc/libxml2-reference||2020-09-19|Remove outdated reference documentation
+x11/gnome-desktop-reference||2020-09-19|Remove outdated reference documentation
+x11-toolkits/gtk30-reference||2020-09-19|Remove outdated reference documentation
+x11-toolkits/gtksourceview-reference||2020-09-19|Remove outdated reference documentation
+x11-toolkits/pango-reference||2020-09-19|Remove outdated reference documentation
+x11-toolkits/gnomemm||2020-09-19|Remove metaport for non maintained gnome2 libraries
+x11-toolkits/libgnomeuimm26||2020-09-19|Gnome2 C++ binding not depended on
+x11/libgnomemm26||2020-09-19|Gnome2 C++ binding not depended on
+devel/gnome-vfsmm||2020-09-19|Gnome2 C++ binding not depended on
+audio/abraca||2020-09-19|Has expired: Uses deprecated version of python
+audio/ardour5|audio/ardour6|2020-09-19|Has expired: Uses deprecated version of python
+audio/cplay||2020-09-19|Has expired: Uses deprecated version of python
+audio/cpp-xmms2||2020-09-19|Has expired: Uses deprecated version of python
+audio/p5-xmms2||2020-09-19|Has expired: Uses deprecated version of python
+biology/haplohseq||2020-09-19|Has expired: Uses deprecated version of python
+biology/tophat||2020-09-19|Has expired: Uses deprecated version of python
+chinese/ibus-array||2020-09-19|Has expired: Uses deprecated version of python
+comms/congruity||2020-09-19|Has expired: Uses deprecated version of python
+comms/libbtbb||2020-09-19|Has expired: Uses deprecated version of python
+comms/quisk||2020-09-19|Has expired: Uses deprecated version of python
+databases/mtools-mongodb||2020-09-19|Has expired: Uses deprecated version of python
+databases/mydbf2mysql||2020-09-19|Has expired: Uses deprecated version of python
+databases/ntdb||2020-09-19|Has expired: Uses deprecated version of python
+databases/pgloader|databases/pgloader3|2020-09-19|Has expired: Uses deprecated version of python
+databases/pgtune||2020-09-19|Has expired: Uses deprecated version of python
+databases/postgresql-libpqxx3|databases/postgresql-libpqxx|2020-09-19|Has expired: Uses deprecated version of python
+databases/postgresql-libpqxx4|databases/postgresql-libpqxx|2020-09-19|Has expired: Uses deprecated version of python
+databases/py-sqlite3dbm||2020-09-19|Has expired: Uses deprecated version of python
+databases/pydbx||2020-09-19|Has expired: Uses deprecated version of python
+databases/pyspatialite||2020-09-19|Has expired: Uses deprecated version of python
+deskutils/ljcharm||2020-09-19|Has expired: Uses deprecated version of python
+deskutils/mat||2020-09-19|Has expired: Uses deprecated version of python
+devel/aap||2020-09-19|Has expired: Uses deprecated version of python
+devel/apr2||2020-09-19|Has expired: Uses deprecated version of python
+devel/bbfreeze-loader||2020-09-19|Has expired: Uses deprecated version of python
+devel/bicyclerepair||2020-09-19|Has expired: Uses deprecated version of python
+devel/bzrtools||2020-09-19|Has expired: Uses deprecated version of python
+devel/codeville||2020-09-19|Has expired: Uses deprecated version of python
+devel/cvs2svn||2020-09-19|Has expired: Uses deprecated version of python
+devel/cx_Freeze||2020-09-19|Has expired: Uses deprecated version of python
+devel/euca2ools||2020-09-19|Has expired: Uses deprecated version of python
+devel/evolution-gconf-tools||2020-09-19|Has expired: Uses deprecated version of python
+devel/git-bzr-ng||2020-09-19|Has expired: Uses deprecated version of python
+devel/git-cvs||2020-09-19|Has expired: Uses deprecated version of python
+devel/git-remote-hg||2020-09-19|Has expired: Uses deprecated version of python
+devel/grumpy||2020-09-19|Has expired: Uses deprecated version of python
+devel/hg-git||2020-09-19|Has expired: Uses deprecated version of python
+devel/libnxt||2020-09-19|Has expired: Uses deprecated version of python
+devel/libredblack||2020-09-19|Has expired: Uses deprecated version of python
+devel/phpsh||2020-09-19|Has expired: Uses deprecated version of python
+devel/py-backports.shutil_which||2020-09-19|Has expired: Uses deprecated version of python
+devel/py-notify||2020-09-19|Has expired: Uses deprecated version of python
+devel/py-pybloomfiltermmap||2020-09-19|Has expired: Uses deprecated version of python
+devel/py-qserve||2020-09-19|Has expired: Uses deprecated version of python
+devel/py-subvertpy||2020-09-19|Has expired: Uses deprecated version of python
+devel/py_static_check||2020-09-19|Has expired: Uses deprecated version of python
+devel/pyst||2020-09-19|Has expired: Uses deprecated version of python
+devel/runsnakerun||2020-09-19|Has expired: Uses deprecated version of python
+devel/tailor||2020-09-19|Has expired: Uses deprecated version of python
+devel/uatraits||2020-09-19|Has expired: Uses deprecated version of python
+dns/nsec3walker||2020-09-19|Has expired: Uses deprecated version of python
+dns/sshfp||2020-09-19|Has expired: Uses deprecated version of python
+editors/medit||2020-09-19|Has expired: Uses deprecated version of python
+emulators/dynagen||2020-09-19|Has expired: Uses deprecated version of python
+emulators/wxmupen64plus||2020-09-19|Has expired: Uses deprecated version of python
+games/diameter||2020-09-19|Has expired: Uses deprecated version of python
+games/kiki||2020-09-19|Has expired: Uses deprecated version of python
+games/lightyears||2020-09-19|Has expired: Uses deprecated version of python
+games/outerspace||2020-09-19|Has expired: Uses deprecated version of python
+games/pachi-game-engine||2020-09-19|Has expired: Uses deprecated version of python
+graphics/caffe||2020-09-19|Has expired: Uses deprecated version of python
+graphics/cloudcompare||2020-09-19|Has expired: Uses deprecated version of python
+graphics/kudu||2020-09-19|Has expired: Uses deprecated version of python
+graphics/pecomato||2020-09-19|Has expired: Uses deprecated version of python
+graphics/py-editobj||2020-09-19|Has expired: Uses deprecated version of python
+graphics/py-mayavi||2020-09-19|Has expired: Uses deprecated version of python
+graphics/pymorph||2020-09-19|Has expired: Uses deprecated version of python
+graphics/tilecache||2020-09-19|Has expired: Uses deprecated version of python
+japanese/mailman||2020-09-19|Has expired: Uses deprecated version of python
+java/eclipse-pydev||2020-09-19|Has expired: Uses deprecated version of python
+lang/cdent||2020-09-19|Has expired: Uses deprecated version of python
+lang/julia06|lang/julia10|2020-09-19|Has expired: Uses deprecated version of python
+lang/julia07|lang/julia10|2020-09-19|Has expired: Uses deprecated version of python
+lang/julia11||2020-09-19|Has expired: Uses deprecated version of python
+lang/tinypy||2020-09-19|Has expired: Uses deprecated version of python
+mail/cleanup-maildir||2020-09-19|Has expired: Uses deprecated version of python
+mail/courier-pythonfilter||2020-09-19|Has expired: Uses deprecated version of python
+mail/muttils||2020-09-19|Has expired: Uses deprecated version of python
+mail/nohtml||2020-09-19|Has expired: Uses deprecated version of python
+mail/offlineimap||2020-09-19|Has expired: Uses deprecated version of python
+mail/openemm2015||2020-09-19|Has expired: Uses deprecated version of python
+math/blitz++||2020-09-19|Has expired: Uses deprecated version of python
+math/openfst||2020-09-19|Has expired: Uses deprecated version of python
+math/py-fpconst||2020-09-19|Has expired: Uses deprecated version of python
+misc/hb||2020-09-19|Has expired: Uses deprecated version of python
+misc/mtail||2020-09-19|Has expired: Uses deprecated version of python
+misc/wotsap||2020-09-19|Has expired: Uses deprecated version of python
+multimedia/freevo||2020-09-19|Has expired: Uses deprecated version of python
+multimedia/tovid||2020-09-19|Has expired: Uses deprecated version of python
+net/ceph13|net/ceph14|2020-09-19|Has expired: Uses deprecated version of python
+net/cloud-init-azure||2020-09-19|Has expired: Uses deprecated version of python
+net/exabgp||2020-09-19|Has expired: Uses deprecated version of python
+net/exaddos||2020-09-19|Has expired: Uses deprecated version of python
+net/fb||2020-09-19|Has expired: Uses deprecated version of python
+net/flent||2020-09-19|Has expired: Uses deprecated version of python
+net/flowgrep||2020-09-19|Has expired: Uses deprecated version of python
+net/googlecl||2020-09-19|Has expired: Uses deprecated version of python
+net/mininet||2020-09-19|Has expired: Uses deprecated version of python
+net/nfs-ganesha||2020-09-19|Has expired: Uses deprecated version of python
+net/opensips||2020-09-19|Has expired: Uses deprecated version of python
+net/py-python-ntlm||2020-09-19|Has expired: Uses deprecated version of python
+net/splatd||2020-09-19|Has expired: Uses deprecated version of python
+net-im/centerim-devel||2020-09-19|Has expired: Uses deprecated version of python
+net-im/fugu||2020-09-19|Has expired: Uses deprecated version of python
+net-im/proxy65||2020-09-19|Has expired: Uses deprecated version of python
+net-mgmt/crmsh||2020-09-19|Has expired: Uses deprecated version of python
+net-mgmt/librenms-agent||2020-09-19|Has expired: Uses deprecated version of python
+net-p2p/couchpotato||2020-09-19|Has expired: Uses deprecated version of python
+news/rawdog||2020-09-19|Has expired: Uses deprecated version of python
+ports-mgmt/portell||2020-09-19|Has expired: Uses deprecated version of python
+print/biblio-py||2020-09-19|Has expired: Uses deprecated version of python
+science/brian||2020-09-19|Has expired: Uses deprecated version of python
+science/paraview||2020-09-19|Has expired: Uses deprecated version of python
+security/arm||2020-09-19|Has expired: Uses deprecated version of python
+security/ismtp||2020-09-19|Has expired: Uses deprecated version of python
+security/py-halberd||2020-09-19|Has expired: Uses deprecated version of python
+security/switzerland||2020-09-19|Has expired: Uses deprecated version of python
+security/tsshbatch||2020-09-19|Has expired: Uses deprecated version of python
+shells/lshell||2020-09-19|Has expired: Uses deprecated version of python
+sysutils/abck||2020-09-19|Has expired: Uses deprecated version of python
+sysutils/condor||2020-09-19|Has expired: Uses deprecated version of python
+sysutils/farbot||2020-09-19|Has expired: Uses deprecated version of python
+sysutils/fusefs-wikipediafs||2020-09-19|Has expired: Uses deprecated version of python
+sysutils/heartbeat||2020-09-19|Has expired: Uses deprecated version of python
+sysutils/isomd5sum||2020-09-19|Has expired: Uses deprecated version of python
+sysutils/py-stdiff||2020-09-19|Has expired: Uses deprecated version of python
+sysutils/tren||2020-09-19|Has expired: Uses deprecated version of python
+textproc/doclifter||2020-09-19|Has expired: Uses deprecated version of python
+textproc/ibus-el||2020-09-19|Has expired: Uses deprecated version of python
+textproc/p5-WWW-Google-SiteMap||2020-09-19|Has expired: Deprecated upstream, see textproc/p5-Search-Sitemap
+textproc/plover||2020-09-19|Has expired: Uses deprecated version of python
+textproc/py-esmre||2020-09-19|Has expired: Uses deprecated version of python
+textproc/py-libxslt||2020-09-19|Has expired: Uses deprecated version of python
+textproc/py-pdfminer||2020-09-19|Has expired: Uses deprecated version of python
+www/bluefish||2020-09-19|Has expired: Uses deprecated version of python
+www/calendarserver||2020-09-19|Has expired: Uses deprecated version of python
+www/geeknote||2020-09-19|Has expired: Uses deprecated version of python
+www/go-appengine-sdk||2020-09-19|Has expired: Uses deprecated version of python
+www/google-appengine||2020-09-19|Has expired: Uses deprecated version of python
+www/libhpack||2020-09-19|Has expired: Uses deprecated version of python
+www/mkapachepw||2020-09-19|Has expired: Uses deprecated version of python
+www/mod_pagespeed||2020-09-19|Has expired: Uses deprecated version of python
+www/mod_python35||2020-09-19|Has expired: Uses deprecated version of python
+www/py-qp||2020-09-19|Has expired: Uses deprecated version of python
+www/py-url||2020-09-19|Has expired: Uses deprecated version of python
+www/pyblosxom||2020-09-19|Has expired: Uses deprecated version of python
+www/pyjamas||2020-09-19|Has expired: Uses deprecated version of python
+www/roundup||2020-09-19|Has expired: Uses deprecated version of python
+www/varnish-libvmod-awsrest||2020-09-19|Has expired: Uses deprecated version of python
+www/waccess||2020-09-19|Has expired: Uses deprecated version of python
+www/wadcomblog||2020-09-19|Has expired: Uses deprecated version of python
+www/webcheck||2020-09-19|Has expired: Uses deprecated version of python
+www/woof||2020-09-19|Has expired: Uses deprecated version of python
+x11-drivers/xf86-video-qxl||2020-09-19|Has expired: uses deprecated version of python
+x11-fm/twander||2020-09-19|Has expired: Uses deprecated version of python
+x11-wm/compizconfig-python||2020-09-19|Has expired: Uses deprecated version of python
+x11-wm/fvwm-crystal||2020-09-19|Has expired: Uses deprecated version of python
+mail/opensmtpd-extras-queue-python||2020-09-19|Has expired: Uses deprecated version of python
+mail/opensmtpd-extras-scheduler-python||2020-09-19|Has expired: Uses deprecated version of python
+lang/python35|lang/python36|2020-09-19|Has expired: Deprecated upstream
+deskutils/logjam||2020-09-19|Abandonware does not work anymore
+mail/squirrelmail-tmda-plugin||2020-09-19|Removed, unmaintained and depends on expired mail/tmda
+mail/tmda||2020-09-19|Has expired: Uses EOL Python 2.7
+devel/storm||2020-09-19|Has expired: Uses deprecated version of python
+dns/dnsmasq-devel|dns/dnsmasq|2020-09-24|Has expired: use dns/dnsmasq instead, which is newer
+shells/poshinit|shells/switchBashZsh|2020-09-24|Tracking upstream name change
+net-im/corebird||2020-09-25|Stopped working in august 2018
+devel/py-pyqi||2020-09-25|No longer developed, use devel/py-click instead
+net-im/libnice-gst010|net-im/libnice-gst1|2020-09-25|Not depended on, gstream0.10 support has been removed in newer versions
+graphics/evince-lite|graphics/evince@lite|2020-09-26|Has been replaced by a flavor
+x11/gnome3-lite|x11/gnome3@lite|2020-09-29|Has been replaced by a flavor
+graphics/py-gimp||2020-09-29|Has expired: Uses deprecated version of python
+net/libproxy-gnome2||2020-09-30|Removed gnome2 port not depended on
+sysutils/system-tools-backends||2020-09-30|Abandonware from gnome2 era
+multimedia/py-gstreamer|multimedia/py-gstreamer1|2020-09-30|Has expired: Uses deprecated version of python
+lang/spidermonkey68|lang/spidermonkey78|2020-10-01|Replaced by a more recent version
+audio/zinf||2020-10-02|Has expired: Does not build, no upstream
+emulators/qemu-sbruno|emulators/qemu|2020-10-02|Has expired: Port will be removed in favor of emulators/qemu
+dns/knot2-lib|dns/knot3-lib|2020-10-04|Replaced by a more recent version
+devel/git-gui|devel/git@gui|2020-10-12|Replaced by a flavor
+devel/git-lite|devel/git@lite|2020-10-12|Replaced by a flavor
+graphics/libxatracker|graphics/mesa-gallium-xa|2020-10-12|Rename to have all gallium driver properly named
+sysutils/gnome-mount||2020-10-12|Replaced by gio/gvfs
+sysutils/syslog-ng322|sysutils/syslog-ng|2020-10-12|Has expired: Agreed upon upstream one year deprecation policy
+sysutils/syslog-ng321|sysutils/syslog-ng|2020-10-12|Has expired: Agreed upon upstream one year deprecation policy
+sysutils/syslog-ng320|sysutils/syslog-ng|2020-10-12|Has expired: Agreed upon upstream one year deprecation policy
+dns/opendnssec|dns/opendnssec2|2020-10-12|Has expired: EOLed by upstream
+sysutils/syslog-ng323|sysutils/syslog-ng|2020-10-12|Has expired: Agreed upon upstream one year deprecation policy
+devel/libsoup-gnome|devel/libsoup|2020-10-12|Reunited into on package they have the same dependencies
+sysutils/plasma5-user-manager|x11/plasma5-plasma-desktop|2020-10-13|Reintegrated into other plasma5 components
+devel/geany-plugin-geanypy||2020-10-15|Has expired: Uses deprecated version of python
+comms/chirp||2020-10-16|Use deprecated version of python
+x11-toolkits/py-gtk2||2020-10-16|Remove deprecated binding replace by py-gobject
+www/py-unit|www/unit-python|2020-10-21|Rename to be more consistent with the naming convention
+sysutils/phpfpm_exporter|net-mgmt/phpfpm_exporter|2020-10-24|Move to net-mgmt category
+www/rubygem-uglifier27|www/rubygem-uglifier|2020-10-25|Obsolete, please use www/rubygem-uglifier instead
+www/rubygem-webpack-rails-rails60|devel/rubygem-webpacker-rails60|2020-10-25|Has expired: Upstream no longer maintained, use devel/rubygem-webpacker-rails* instead
+converters/zbase32||2020-10-26|Has expired: does not build with python3
+devel/py-PEAK-Rules||2020-10-26|Has expired: does not build with python3
+editors/nvi-devel|editors/nvi2|2020-10-26|Has expired: Unsupported upstream since 2015, please switch to editors/nvi2

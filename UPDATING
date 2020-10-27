@@ -5,6 +5,199 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20201026:
+  AFFECTS: users of emulators/qemu
+  AUTHOR: bofh@FreeBSD.org
+
+  emulators/qemu has been updated to 5.0.1. Previous 4.2.X branch has
+  been repocopied to emulators/qemu42. If someone wants to stick with 4.2.X
+  branch please use one of the following command:
+
+  # pkg install emulators/qemu42
+    or
+  # portmaster -o emulators/qemu42 emulators/qemu
+    or
+  # portupgrade -o emulators/qemu42 emulators/qemu
+
+20201021:
+  AFFECTS: users of www/py-unit
+  AUTHOR: osa@FreeBSD.org
+
+  The www/py-unit port has been renamed to www/unit-python.
+
+20201012:
+  AFFECTS: Users of mesa-dri with VAAPI or VDPAU options
+  AUTHOR: manu@FreeBSD.org
+
+  The nondefault options VAAPI and VDPAU were removed from the mesa-dri
+  port and two new ports, mesa-gallium-va and mesa-gallium-vdpau now contain
+  the necessary libraries for using VAAPI or VDPAU on AMD hardware.
+
+20201012:
+  AFFECTS: users of devel/libsoup-gnome
+  AUTHOR: bapt@FreeBSD.org
+
+  libsoup-gnome has been merged back into libsoup for people building locally:
+  first delete libsoup-gnome before installing the new libsoup
+
+  $ pkg delete -f libsoup-gnome
+
+20201011:
+  AFFECTS: users of sysutils/rundeck3 who use MySQL as database
+  AUTHOR: daniel.tihanyi@tetragir.com
+
+  Please note that the MySQL JDBC driver is no longer bundled with Rundeck.
+  Please make sure that you migrate to the MariaDB Connector or copy the
+  driver yourself. More instructions:
+
+  https://docs.rundeck.com/docs/upgrading/upgrading-to-rundeck-3.3.4.html
+
+20201006:
+  AFFECTS: users of sysutils/tenshi
+  AUTHOR: 0mp@FreeBSD.org
+
+  The default location for tenshi's configuration file has changed.  It was
+  moved to /usr/local/etc/tenshi/tenshi.conf from /usr/local/etc/tenshi.conf
+  in order to follow upstream defaults.
+
+20201002:
+  AFFECTS: users of mail/fetchmail beginning with 6.4.12_1
+  AUTHOR:  mandree@FreeBSD.org
+
+  Note that if you are using fetchmail in a multi-user setup, i. e. with the
+  fetchmail_users (mind the -s!) variable set, the $fetchmail_home_prefix +
+  user second-guess work has been replaced by a real lookup of the user's home
+  directory. In the majority of configurations, this should not make a
+  difference, in some setups, it may open up some flexibility.
+
+  The fetchmail_home_prefix variable is ignored from 6.4.12_1 onwards.
+
+  Also, the rc script redirects its input from /dev/null so that passwords
+  will not be interactively queried from an rcfile.  Put passwords into
+  the [.]fetchmailrc or into a .netrc file.
+
+20201002:
+  AFFECTS: users of sysutils/modules
+  AUTHOR: 0mp@FreeBSD.org
+
+  The upstream developers of the Modules port encourage users to consult
+  the MIGRATING document, which describes the major changes occurring between
+  versions of Modules. It provides an overview of the new features and changed
+  behaviors that will be encountered when upgrading:
+
+  https://modules.readthedocs.io/en/v4.6.0/MIGRATING.html
+
+20200930:
+  AFFECTS: users of sysutils/syslog-ng32[789]
+  AUTHOR: cy@FreeBSD.org
+
+  rc.conf variables syslog_ng_config and syslog_ng_pid have been replaced
+  by syslog_ng_flags and syslog_ng_pidfile respecively, making them
+  consistent with the rest of the ports tree. syslog_ng_config and
+  syslog_ng_pid will continue to work until syslog-ng331 has been
+  released and imported into ports.
+  
+20200924:
+  AFFECTS: users of net/freeradius3, who need python support
+  AUTHOR: zi@FreeBSD.org
+
+  FreeRADIUS 3.x currently uses python 2.7 for rlm_python support, which has
+  been deprecated and will be removed from the tree at the end of this year.
+
+  Starting in 3.0.21_2, the PYTHON option has been converted to use python 3.x.
+
+  Users should verify their python scripts are 3.x compatible and upgrade to
+  3.0.21_2 (or higher) to bring in python 3.x support.
+
+20200921:
+  AFFECTS: users of databases/postgresql* and other software using PostgreSQL to run
+  AUTHOR: kbowling@FreeBSD.org
+
+  The default version of PostgreSQL has been switched from 11 to 12.
+  The upgrade procedure can use up twice the space the databases
+  currently needs. If you have a big amount of stored data take a
+  closer look at the manpage of pg_upgrade for avoidance and/or
+  speedup of the upgrade.
+
+  The upgrade instructions consider a basic usage and do not match
+  complex scenarios like replication, sharding, or similar.
+
+  Upgrade instructions:
+
+  First stop your PostgreSQL, create PostgreSQL-binaries and backup your data.
+  If you have another Version of PostgreSQL installed, for example 11.9, your
+  files are named according to this.
+
+  # service postgresql stop
+  # pkg create postgresql11-server postgresql11-contrib
+  # mkdir /tmp/pg-upgrade
+  # tar xf postgresql11-server-11.9.txz -C /tmp/pg-upgrade
+  # tar xf postgresql11-contrib-11.9.txz -C /tmp/pg-upgrade
+  # pkg delete -f databases/postgresql11-server databases/postgresql11-contrib databases/postgresql11-client
+
+  Now update PostgreSQL:
+
+    pkg user:
+    # pkg install databases/postgresql12-server databases/postgresql12-contrib
+    # pkg upgrade
+
+    Portmaster users:
+    # portmaster databases/postgresql12-server databases/postgresql12-contrib
+    # portmaster -a
+
+    Portupgrade users:
+    # portinstall databases/postgresql12-server databases/postgresql12-contrib
+    # portupgrade -a
+
+  After installing the new PostgreSQL version you need to convert
+  all your databases to new version:
+
+  # su -l postgres -c "/usr/local/bin/initdb --encoding=utf-8 --lc-collate=C -D /var/db/postgres/data12 -U postgres"
+  # su -l postgres -c "pg_upgrade -b /tmp/pg-upgrade/usr/local/bin/ -d /var/db/postgres/data11/ -B /usr/local/bin/ -D /var/db/postgres/data12/ -U postgres "
+
+  Now the migration is finished. You can start PostgreSQL again with:
+
+  # service postgresql start
+
+  ATTENTION:
+  1) The default user changed from "pgsql" to "postgres" in 11. The migration steps above now assume
+     the "postgres" database user and FreeBSD user.
+  2) See the updating entry 20190829 if you are updating from a release prior to 11.
+  3) If you use non-default initdb options, you have to adjust the initdb-command accordingly
+
+20200918:
+  AFFECTS: users of mail/thunderbird
+  AUTHOR: cmt@FreeBSD.org
+
+  Thunderbird has been updated to the 78esr series. Thunderbird will
+  try to convert old profiles on first start, but conversion may fail
+  especially on old profiles. Also, older versions of Thunderbird will
+  not be able to use a profile once it has been converted. It is
+  strongly recommended to move any ~/.thunderbird folder away before
+  starting Thunderbird 78 for the first time, thus creating a new and
+  empty profile.
+  Also note that OpenPGP functionality has been integrated into Thunderbird,
+  obsoleting the Enigmail extension.
+  Check https://wiki.mozilla.org/Thunderbird:OpenPGP for details, and
+  especially https://wiki.mozilla.org/Thunderbird:OpenPGP:Smartcards
+  if your private key lives on a smartcard.
+
+20200914:
+  AFFECTS: users of lang/php72
+  AUTHOR: tz@FreeBSD.org
+
+  The default version of PHP has been switched from 7.2 to 7.4.
+
+  If you use binary packages you should make a list of php packages
+  before running 'pkg upgrade':
+
+  # pkg info php7\* > ~/installed-php-ports-list
+
+  After the upgrade, check with such list if all your php extensions
+  are still installed, and reinstall them if needed.
+
+  If you use mod_php72 you need to deinstall it and install mod_php74.
+
 20200811:
   AFFECTS: users of *-emacs26-* packages
   AUTHOR: jrm@FreeBSD.org
@@ -885,174 +1078,4 @@ version, however if you had removed device vmx from your kernel, or are
 running an unsupported version of FreeBSD which didn't have the driver
 included in the base system, updating your open-vm-tools version will
 leave you without networking.
-
-20191026:
-  AFFECTS: users of www/qt5-webengine
-  AUTHOR: kai@FreeBSD.org
-
-  Users that upgrade www/qt5-webengine without using pkg/poudriere might
-  experience failures due to conflicts with the installed version of 5.12.2.
-
-  In that case, pkg delete -f the qt5-webengine package before building
-  the updated version.
-
-20191025:
-  AFFECTS: users of x11/nvidia-driver (and slave ports)
-  AUTHOR: danfe@FreeBSD.org
-
-  x11/nvidia-driver* ports no longer install Linux programs and libraries,
-  which had been moved to their own ports (x11/linux-nvidia-libs*).  When
-  updating the driver package next time, remember to install them manually
-  if you need to run Linux OpenGL programs.
-
-20191016:
-  AFFECTS: users of KDE Plasma Desktop (x11/plasma5*)
-  AUTHOR: kde@FreeBSD.org
-
-  With Plasma 5.17 the startup script has been renamed. People who use the
-  .xinitrc method to start Plasma have to call the new binary.
-
-  Previously:
-  	exec ck-launch-session startkde
-  Change to:
-  	exec ck-launch-session startplasma-x11
-
-20191014:
-  AFFECTS: users of mail/rspamd, mail/rspamd-devel
-  AUTHOR: vsevolod@FreeBSD.org
-
-  Sample configuration files has been removed as default configuration files
-  are NOT intended for modification by users and SHOULD be overwritten on
-  port upgrade.
-
-  Make sure the default configuration files are unmodified and migrate all
-  configuration changes to the proper places, before you continue.
-
-20191002:
-  AFFECTS: users of textproc/groff
-  AUTHOR: bapt@FreeBSD.org
-
-  with groff 1.2.4_3, groff does not depend anymore on ghostscript and
-  netpbm. In order to be able to properly use the html backend the user
-  can install ghostscript and netpbm from ports without the need of
-  reinstalling the package.
-
-  Also note that the X11 option has been removed.
-
-20190930:
-  AFFECTS: users of net-mgmt/netbox
-  AUTHOR: kai@FreeBSD.org
-
-  Since the 2.6 release a running Redis server instance is required for
-  caching objects to run.  Also the following settings like below need to be
-  added (or modified) in the existing configuration.py:
-
-  REDIS = {
-    'HOST': 'localhost',
-    'PORT': 6397,
-    'PASSWORD': ''
-    'DATABASE': 0,
-    'CACHE_DATABASE': 1,
-    'DEFAULT_TIMEOUT': 300,
-    'SSL': False,
-  }
-
-  Note that if you were using these settings in a prior release with
-  webhooks, the DATABASE setting remains the same but an additional
-  CACHE_DATABASE settings has been added with a default value of 1 to
-  support the caching backend.
-
-  The DATABASE setting will be renamed in a future release of NetBox to
-  better relay the meaning of the setting.  It is highly recommended to keep
-  the webhook and cache databases separate.  Using the same database number
-  for both may result in webhook processing data being lost during cache
-  flushing events.
-
-  Please also check the pkg-message and the changelogs for further info.
-
-20190927:
-  AFFECTS: users of emulators/qemu-devel
-  AUTHOR: bofh@FreeBSD.org
-
-  qemu-devel has been updated to 4.1.0 and 4.0.0 has been merged into a new port
-  emulators/qemu40. If you want to stick with 4.0.X branch, simply use:
-  # portmaster -o emulators/qemu-devel emulators/qemu40
-
-20190927:
-  AFFECTS: users of XFCE desktop (x11-wm/xfce4)
-  AUTHOR: madpilot@FreeBSD.org
-
-  Due to changes in the XFCE 4.14 metaport, systems could end up with
-  both xscreensaver and xfce4-screensaver installed and enabled
-  simultaneously.
-
-  This can cause conflicts and problems unlocking the screen.
-
-  To avoid problems, please make sure to have only one enabled by
-  going to the Application Autostart tab of the Session and Startup
-  settings applet and enable only one Screensaver there.
-
-  Some further information can be found in the xfce4-session
-  pkg-message displayed on installation and upgrade.
-
-20190920:
-  AFFECTS: users of net-mgmt/pushgateway
-  AUTHOR: 0mp@FreeBSD.org
-
-  The persistent storage format used by pushgateway in the latest version
-  is not backwards compatible. See the pushgateway changelogs for details.
-
-20190911:
-  AFFECTS: users of security/bastillion
-  AUTHOR: netchild@FreeBSD.org
-
-  The datastore of bastillion needs to be updated:
-    java -jar $PREFIX/jetty_bastillion/upgrade/bastillion-upgrade-3.08.00.jar \
-      $PREFIX/jetty_bastillion/bastillion/WEB-INF/classes/BastillionConfig.properties
-
-20190909:
-  AFFECTS: users of lang/ruby25
-  AUTHOR: mfechner@FreeBSD.org
-
-  The default ruby version has been updated from 2.5 to 2.6.
-
-  If you compile your own ports you may keep 2.5 as the default version by
-  adding the following lines to your /etc/make.conf file:
-
-  #
-  # Keep ruby 2.5 as default version
-  #
-  DEFAULT_VERSIONS+=ruby=2.5
-
-  If you wish to update to the new default version, you need to first stop any
-  software that uses ruby. Then, you will need to follow these steps, depending
-  upon how you manage your system.
-
-  If you use pkgng, simply upgrade:
-  # pkg upgrade
-
-  If you do not use pkg, please check entry 20190420.
-  The description there should also work for this version.
-
-20190906:
-  AFFECTS: users of devel/py-fabric
-  AUTHOR: dbaio@FreeBSD.org
-
-  Fabric (devel/py-fabric) was upgraded to 2.5.0, Fabric (2+) represents
-  a near-total reimplementation and reorganization of the software.
-
-  Fabric 2 is not at 100% feature parity with 1.x! Some features have been
-  explicitly dropped, but others simply have not been ported over yet,
-  either due to time constraints or because said features need to be
-  re-examined in a modern context.
-
-  More information at:
-  https://www.fabfile.org/upgrading.html#upgrading
-  https://www.fabfile.org/upgrading.html#upgrade-specifics
-
-  If you would like to keep using 1.x, please run the following command to
-  update pkg database:
-
-    pkg set -n py27-fabric:py27-fabric1
-    pkg set -o devel/py-fabric:devel/py-fabric1
 

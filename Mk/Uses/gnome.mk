@@ -81,7 +81,7 @@ _USE_GNOME_ALL+= atk cairo \
 		libgnomecanvas libgnomekbd \
 		libgnomeui libgsf libgtkhtml libidl librsvg2 libwnck \
 		libxml2 libxslt \
-		orbit2 pango pangox-compat pygobject pygtk2 \
+		orbit2 pango pangox-compat pygobject \
 		vte
 
 # GNOME 3 components
@@ -269,9 +269,9 @@ librsvg2_LIB_DEPENDS=	librsvg-2.so:graphics/librsvg2
 librsvg2_USE_GNOME_IMPL=libgsf gdkpixbuf2 pango
 
 nautilus3_LIB_DEPENDS=	libnautilus-extension.so:x11-fm/nautilus
-nautilus3_USE_GNOME_IMPL=gnomedesktop3 gvfs libxml2
+nautilus3_USE_GNOME_IMPL=gnomedesktop3 libxml2
 
-metacity_LIB_DEPENDS=	libmetacity-private.so:x11-wm/metacity
+metacity_LIB_DEPENDS=	libmetacity.so:x11-wm/metacity
 
 gnomecontrolcenter3_BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-keybindings.pc:sysutils/gnome-control-center
 gnomecontrolcenter3_RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-keybindings.pc:sysutils/gnome-control-center
@@ -302,10 +302,6 @@ pygobject_USE_GNOME_IMPL=	glib20
 pygobject3_BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}gobject3>=0:devel/py-gobject3@${PY_FLAVOR}
 pygobject3_RUN_DEPENDS=		${PYTHON_PKGNAMEPREFIX}gobject3>=0:devel/py-gobject3@${PY_FLAVOR}
 pygobject3_USE_GNOME_IMPL=	glib20
-
-pygtk2_BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/pygtk-2.0.pc:x11-toolkits/py-gtk2
-pygtk2_RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/pygtk-2.0.pc:x11-toolkits/py-gtk2
-pygtk2_USE_GNOME_IMPL=	libglade2 pygobject
 
 intltool_BUILD_DEPENDS=	${LOCALBASE}/bin/intltool-extract:textproc/intltool
 
