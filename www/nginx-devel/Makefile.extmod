@@ -138,6 +138,8 @@ HTTP_NOTICE_VARS=		DSO_EXTMODS+=notice
 
 HTTP_PUSH_GH_TUPLE=		slact:nchan:v1.2.7:push
 HTTP_PUSH_VARS=			DSO_EXTMODS+=push
+HTTP_PUSH_EXTRA_PATCHES=	${PATCHDIR}/extra-patch-nchan-store-private.h \
+				${PATCHDIR}/extra-patch-nchan-store-redis-redis_lua_commands.h
 
 HTTP_PUSH_STREAM_GH_TUPLE=	wandenberg:nginx-push-stream-module:0.5.4:pushstream
 HTTP_PUSH_STREAM_VARS=		DSO_EXTMODS+=pushstream
@@ -224,11 +226,11 @@ MODSECURITY3_LIB_DEPENDS=	libmodsecurity.so:security/modsecurity3
 MODSECURITY3_GH_TUPLE=		SpiderLabs:ModSecurity-nginx:v1.0.1:modsecurity3
 MODSECURITY3_VARS=		DSO_EXTMODS+=modsecurity3
 
-NAXSI_NGINX_VER=	0.56
+NAXSI_NGINX_VER=	1.1a
 NAXSI_GH_TUPLE=		nbs-system:naxsi:${NAXSI_NGINX_VER}:naxsi
 NAXSI_VARS=		DSO_EXTMODS+=naxsi NAXSI_SUBDIR=/naxsi_src
 
-NJS_GH_TUPLE=		nginx:njs:0.4.3:njs
+NJS_GH_TUPLE=		nginx:njs:0.4.4:njs
 NJS_VARS=		DSO_EXTMODS+=njs NJS_SUBDIR=/nginx
 NJS_USES=		libedit
 
