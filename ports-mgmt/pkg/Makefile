@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	pkg
-DISTVERSION=	1.14.7
+DISTVERSION=	1.15.10
 _PKG_VERSION=	${DISTVERSION}
 CATEGORIES=	ports-mgmt
 #MASTER_SITES=	\
@@ -28,6 +28,7 @@ CONFIGURE_ENV=	CC_FOR_BUILD="${CC}"
 # so that pkg-static is used from the wrkdir
 USE_SUBMAKE=	yes
 CFLAGS+=	-Wno-error
+CFLAGS_powerpc64le=	-DSQLITE_BYTEORDER=1234
 
 OPTIONS_DEFINE=	DOCS
 
