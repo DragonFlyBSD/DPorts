@@ -1,5 +1,0 @@
-MAKE_JOBS_UNSAFE=yes
-
-dfly-patch:
-	@${REINPLACE_CMD} -e "s|clang++|c++|g" -e "s@g++${GCC_DEFAULT}@c++@" \
-	${WRKSRC}/Makefile.config ${WRKSRC}/Makefile

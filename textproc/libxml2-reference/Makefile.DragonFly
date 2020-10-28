@@ -1,5 +1,0 @@
-
-# deps for internal libxml2 build
-#.ifdef PORTSBUILDER_DSYNTH
-BUILD_DEPENDS+=	pkgconf>=0:devel/pkgconf
-#.endif

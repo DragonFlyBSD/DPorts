@@ -1,9 +1,0 @@
-
-USES+=	alias
-
-# disable USE_IPV6ADDR (SIOGIFINDEX)
-CONFIGURE_ARGS+=	ac_cv_header_netinet_icmp6_h=no
-
-dfly-patch:
-	${REINPLACE_CMD} -e 's@*freebsd*)@*freebsd*|*dragonfly*)@g' \
-		${WRKSRC}/configure.in

@@ -1,4 +1,0 @@
-
-USES+=	bison localbase:ldflags
-
-MAKE_ARGS+=	ISSMP=yes

@@ -1,2 +1,0 @@
-# cvs is only a FreeBSD requirement
-RUN_DEPENDS:=	${RUN_DEPENDS:Ncvs*}
