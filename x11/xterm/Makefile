@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	xterm
-PORTVERSION=	359
+PORTVERSION=	361
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.invisible-island.net/xterm/:src1 \
 		https://invisible-mirror.net/archives/xterm/:src1 \
@@ -77,6 +77,8 @@ XINERAMA_USE=			XORG=xinerama,xorgproto
 XINERAMA_CONFIGURE_OFF=		--without-xinerama
 
 LIB_DEPENDS+=	libfontconfig.so:x11-fonts/fontconfig
+
+CPPFLAGS+=	-DPIXMAP_ROOTDIR=${LOCALBASE}/share/pixmaps
 
 .include <bsd.port.options.mk>
 
