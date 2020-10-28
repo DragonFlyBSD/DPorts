@@ -1,15 +1,15 @@
 # $FreeBSD$
 
 PORTNAME=	bfs
-DISTVERSION=	1.7
+DISTVERSION=	2.0
 CATEGORIES=	sysutils
 
-MAINTAINER=	tobik@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Breadth-first version of the UNIX find command
 
 LICENSE=	BSD0CLAUSE
 LICENSE_NAME=	BSD Zero Clause License
-LICENSE_FILE=	${WRKSRC}/COPYING
+LICENSE_FILE=	${WRKSRC}/LICENSE
 LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 TEST_DEPENDS=	bash:shells/bash
