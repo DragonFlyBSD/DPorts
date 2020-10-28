@@ -2,9 +2,9 @@
 # $FreeBSD$
 
 PORTNAME=	unit
-PORTVERSION=	1.19.0
+PORTVERSION=	1.20.0
 CATEGORIES=	www
-MASTER_SITES=	https://unit.nginx.org/download/
+MASTER_SITES?=	https://unit.nginx.org/download/
 
 MAINTAINER=	osa@FreeBSD.org
 COMMENT?=	Dynamic web application server
@@ -12,7 +12,6 @@ COMMENT?=	Dynamic web application server
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-PATCH_STRIP=	-p1
 USES+=		compiler:c11 cpe
 
 CPE_VENDOR=	nginx
