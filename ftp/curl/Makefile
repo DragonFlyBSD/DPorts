@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	curl
-PORTVERSION=	7.72.0
+PORTVERSION=	7.73.0
 CATEGORIES=	ftp net www
 MASTER_SITES=	https://curl.haxx.se/download/ \
 		LOCAL/sunpoet
@@ -28,8 +28,7 @@ USE_LDCONFIG=	yes
 
 CPE_VENDOR=	haxx
 
-DOCS=		BUGS FAQ FEATURES INSTALL KNOWN_BUGS MAIL-ETIQUETTE RESOURCES \
-		THANKS TODO TheArtOfHttpScripting options-in-versions
+DOCS=		FAQ FEATURES INSTALL KNOWN_BUGS MAIL-ETIQUETTE THANKS TODO options-in-versions
 
 SHEBANG_FILES=	*/*.pl
 
@@ -140,6 +139,10 @@ WOLFSSL_LIB_DEPENDS=	libwolfssl.so:security/wolfssl
 
 .include <bsd.port.pre.mk>
 
+.if !${PORT_OPTIONS:MCA_BUNDLE} && (${PORT_OPTIONS:MGNUTLS} || ${PORT_OPTIONS:MOPENSSL})
+CONFIGURE_ARGS+=--with-ca-fallback
+.endif
+
 # SSL_DEFAULT only available here if defined in make.conf
 .if ${SSL_DEFAULT:Nlibressl*}
 OPTIONS_DEFAULT+=	TLS_SRP
@@ -173,6 +176,6 @@ post-install-DOCS-on:
 
 post-install-EXAMPLES-on:
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/
-	cd ${WRKSRC}/docs/examples/ && ${INSTALL_DATA} README Makefile.example makefile* *.c *.cpp ${STAGEDIR}${EXAMPLESDIR}/
+	cd ${WRKSRC}/docs/examples/ && ${INSTALL_DATA} README.md Makefile.example makefile* *.c *.cpp ${STAGEDIR}${EXAMPLESDIR}/
 
 .include <bsd.port.post.mk>
