@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	spacetrack
-PORTVERSION=	0.14.0
+PORTVERSION=	0.15.0
 CATEGORIES=	astro python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -24,5 +24,11 @@ USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes
+
+OPTIONS_DEFINE=	ASYNC
+OPTIONS_DEFAULT=ASYNC
+ASYNC_DESC=	Asynchronous support
+
+ASYNC_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}aiohttp>=3.6:www/py-aiohttp@${PY_FLAVOR}
 
 .include <bsd.port.mk>
