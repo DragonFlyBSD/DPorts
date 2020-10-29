@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	aws-sdk-resources
-PORTVERSION=	3.80.0
+PORTVERSION=	3.84.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
@@ -189,6 +189,7 @@ RUN_DEPENDS=	rubygem-aws-sdk-accessanalyzer>=1<2:devel/rubygem-aws-sdk-accessana
 		rubygem-aws-sdk-rds>=1<2:devel/rubygem-aws-sdk-rds \
 		rubygem-aws-sdk-rdsdataservice>=1<2:devel/rubygem-aws-sdk-rdsdataservice \
 		rubygem-aws-sdk-redshift>=1<2:devel/rubygem-aws-sdk-redshift \
+		rubygem-aws-sdk-redshiftdataapiservice>=1<2:devel/rubygem-aws-sdk-redshiftdataapiservice \
 		rubygem-aws-sdk-rekognition>=1<2:devel/rubygem-aws-sdk-rekognition \
 		rubygem-aws-sdk-resourcegroups>=1<2:devel/rubygem-aws-sdk-resourcegroups \
 		rubygem-aws-sdk-resourcegroupstaggingapi>=1<2:devel/rubygem-aws-sdk-resourcegroupstaggingapi \
@@ -198,6 +199,7 @@ RUN_DEPENDS=	rubygem-aws-sdk-accessanalyzer>=1<2:devel/rubygem-aws-sdk-accessana
 		rubygem-aws-sdk-route53resolver>=1<2:devel/rubygem-aws-sdk-route53resolver \
 		rubygem-aws-sdk-s3>=1<2:devel/rubygem-aws-sdk-s3 \
 		rubygem-aws-sdk-s3control>=1<2:devel/rubygem-aws-sdk-s3control \
+		rubygem-aws-sdk-s3outposts>=1<2:devel/rubygem-aws-sdk-s3outposts \
 		rubygem-aws-sdk-sagemaker>=1<2:devel/rubygem-aws-sdk-sagemaker \
 		rubygem-aws-sdk-sagemakerruntime>=1<2:devel/rubygem-aws-sdk-sagemakerruntime \
 		rubygem-aws-sdk-savingsplans>=1<2:devel/rubygem-aws-sdk-savingsplans \
@@ -218,6 +220,7 @@ RUN_DEPENDS=	rubygem-aws-sdk-accessanalyzer>=1<2:devel/rubygem-aws-sdk-accessana
 		rubygem-aws-sdk-sns>=1<2:devel/rubygem-aws-sdk-sns \
 		rubygem-aws-sdk-sqs>=1<2:devel/rubygem-aws-sdk-sqs \
 		rubygem-aws-sdk-ssm>=1<2:devel/rubygem-aws-sdk-ssm \
+		rubygem-aws-sdk-ssoadmin>=1<2:devel/rubygem-aws-sdk-ssoadmin \
 		rubygem-aws-sdk-ssooidc>=1<2:devel/rubygem-aws-sdk-ssooidc \
 		rubygem-aws-sdk-states>=1<2:devel/rubygem-aws-sdk-states \
 		rubygem-aws-sdk-storagegateway>=1<2:devel/rubygem-aws-sdk-storagegateway \
@@ -225,6 +228,8 @@ RUN_DEPENDS=	rubygem-aws-sdk-accessanalyzer>=1<2:devel/rubygem-aws-sdk-accessana
 		rubygem-aws-sdk-swf>=1<2:devel/rubygem-aws-sdk-swf \
 		rubygem-aws-sdk-synthetics>=1<2:devel/rubygem-aws-sdk-synthetics \
 		rubygem-aws-sdk-textract>=1<2:devel/rubygem-aws-sdk-textract \
+		rubygem-aws-sdk-timestreamquery>=1<2:devel/rubygem-aws-sdk-timestreamquery \
+		rubygem-aws-sdk-timestreamwrite>=1<2:devel/rubygem-aws-sdk-timestreamwrite \
 		rubygem-aws-sdk-transcribeservice>=1<2:devel/rubygem-aws-sdk-transcribeservice \
 		rubygem-aws-sdk-transcribestreamingservice>=1<2:devel/rubygem-aws-sdk-transcribestreamingservice \
 		rubygem-aws-sdk-transfer>=1<2:devel/rubygem-aws-sdk-transfer \
