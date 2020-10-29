@@ -1,3 +1,3 @@
-TIMESTAMP = 1599376056
-SHA256 (rubygem/aws-sdk-kafka-1.26.0.gem) = 1b3cafefe6ed5027c528a52fe92e1be9ff1db006eef30e8df6be46d55db93742
-SIZE (rubygem/aws-sdk-kafka-1.26.0.gem) = 31744
+TIMESTAMP = 1601627957
+SHA256 (rubygem/aws-sdk-kafka-1.29.0.gem) = b42edda95f1bd52df952e69aa898f1f2ca28b0e0ed1f69aad916bc5df985cdaf
+SIZE (rubygem/aws-sdk-kafka-1.29.0.gem) = 33280
