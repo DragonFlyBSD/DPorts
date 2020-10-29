@@ -1,3 +1,3 @@
-TIMESTAMP = 1596892233
-SHA256 (certbot-dns-route53-1.7.0.tar.gz) = 748365ee6a995c86d38f1d4561cd7dc1517773fc1fad6f1a09fba376c3979f85
-SIZE (certbot-dns-route53-1.7.0.tar.gz) = 15749
+TIMESTAMP = 1602423484
+SHA256 (certbot-dns-route53-1.9.0.tar.gz) = 7c739ac863354bca3405d45850922557b37571c4cd0b7224a98e56e96d9250c6
+SIZE (certbot-dns-route53-1.9.0.tar.gz) = 15532
