@@ -1,16 +1,17 @@
---- mesonbuild/scripts/depfixer.py.orig	2018-12-09 14:27:16 UTC
+--- mesonbuild/scripts/depfixer.py.orig	2020-09-10 16:39:24 UTC
 +++ mesonbuild/scripts/depfixer.py
-@@ -15,6 +15,7 @@
+@@ -15,6 +15,8 @@
  
  import sys, struct
  import shutil, subprocess
 +import platform
++
  
  from ..mesonlib import OrderedSet
  
-@@ -293,6 +294,32 @@ class Elf(DataSizes):
-         self.fix_rpathtype_entry(new_rpath, DT_RPATH)
-         self.fix_rpathtype_entry(new_rpath, DT_RUNPATH)
+@@ -296,6 +298,32 @@ class Elf(DataSizes):
+         self.fix_rpathtype_entry(rpath_dirs_to_remove, new_rpath, DT_RPATH)
+         self.fix_rpathtype_entry(rpath_dirs_to_remove, new_rpath, DT_RUNPATH)
  
 +    def adjust_new_rpath(self, old, new):
 +        if platform.system().lower() == 'dragonfly':
@@ -38,14 +39,13 @@
 +        # No adjustments.
 +        return new;
 +
-     def fix_rpathtype_entry(self, new_rpath, entrynum):
+     def fix_rpathtype_entry(self, rpath_dirs_to_remove, new_rpath, entrynum):
          if isinstance(new_rpath, str):
              new_rpath = new_rpath.encode('utf8')
-@@ -303,6 +330,13 @@ class Elf(DataSizes):
-             return
-         self.bf.seek(rp_off)
-         old_rpath = self.read_str()
-+
+@@ -325,6 +353,12 @@ class Elf(DataSizes):
+         # Prepend user-specified new entries while preserving the ones that came from pkgconfig etc.
+         new_rpath = b':'.join(new_rpaths)
+ 
 +        # Try to adjust new_rpath, if there was previous rpath.
 +        if old_rpath:
 +            new_rpath = self.adjust_new_rpath(old_rpath, new_rpath)
@@ -53,5 +53,5 @@
 +                new_rpath = new_rpath.encode('utf8')
 +
          if len(old_rpath) < len(new_rpath):
-             sys.exit("New rpath must not be longer than the old one.")
-         # The linker does read-only string deduplication. If there is a
+             msg = "New rpath must not be longer than the old one.\n Old: {}\n New: {}".format(old_rpath, new_rpath)
+             sys.exit(msg)
