@@ -1,0 +1,8 @@
+
+# wrong MF, exclude MPI
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NMPI}
+
+dfly-patch:
+	${REINPLACE_CMD} -e "/FC_SERIAL=/s@gfortran.*@${FC}@g" \
+		${BUILD_WRKSRC}/fortran.mk
+
