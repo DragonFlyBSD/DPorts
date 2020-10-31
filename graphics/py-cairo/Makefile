@@ -4,12 +4,13 @@
 PORTNAME=	cairo
 PORTVERSION=	1.18.1
 PORTREVISION=	1
+PORTEPOCH=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	https://github.com/pygobject/pycairo/releases/download/v${PORTVERSION}/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	py${PORTNAME}-${PORTVERSION}
 
-MAINTAINER=	gnome@FreeBSD.org
+MAINTAINER=	desktop@FreeBSD.org
 COMMENT=	Python 2 bindings for Cairo
 
 LICENSE=	LGPL21 MPL11
