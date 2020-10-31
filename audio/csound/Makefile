@@ -3,6 +3,7 @@
 
 PORTNAME=	csound
 DISTVERSION=	6.14.0
+PORTREVISION=	2
 CATEGORIES=	audio lang
 
 PATCH_SITES=	https://github.com/csound/csound/commit/
@@ -20,7 +21,7 @@ BUILD_DEPENDS=	boost-libs>0:devel/boost-libs \
 LIB_DEPENDS=	libsamplerate.so:audio/libsamplerate \
 		libsndfile.so:audio/libsndfile
 
-USES=		alias bison cmake compiler:c++11-lib eigen:3 localbase ncurses python:2.7
+USES=		alias bison cmake compiler:c++11-lib eigen:3 localbase ncurses python
 USE_GITHUB=	yes
 USE_LDCONFIG=	yes
 
@@ -159,6 +160,12 @@ WIIMOTE_DESC=		Build the Wiimote opcodes
 WIIMOTE_CMAKE_BOOL=	BUILD_WIIMOTE_OPCODES
 WIIMOTE_BROKEN=		Need to port wiiuse: https://github.com/rpavlik/wiiuse
 
+.include <bsd.port.pre.mk>
+
+.if ${ARCH} == "i386"
+BROKEN_FreeBSD_11=	libcsound64.so.6.0: undefined reference to `__atomic_store_8' / undefined reference to `__atomic_load_8'
+.endif
+
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|/usr/local|${LOCALBASE}|' \
@@ -188,4 +195,4 @@ post-install:
 post-install-FLTK-on:
 	@${LN} -sf libCsoundAC.so.6.0 ${STAGEDIR}${PREFIX}/lib/libCsoundAC.so.6
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
