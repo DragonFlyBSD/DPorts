@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	libva
-PORTVERSION=	2.8.0
+PORTVERSION=	2.9.0
 CATEGORIES=	multimedia
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
@@ -25,9 +25,6 @@ USES=		meson pkgconfig
 USE_GITHUB=	yes
 USE_LDCONFIG=	yes
 GH_ACCOUNT=	intel
-# -lpthread is not necessary if pthread_getthreadid_np is a libc stub
-LDFLAGS+=	${LDFLAGS_${OPSYS}_${OSREL}}
-LDFLAGS_FreeBSD_11.3=	-lpthread
 
 OPTIONS_DEFINE=	GLX WAYLAND X11
 OPTIONS_DEFAULT=GLX WAYLAND X11
