@@ -2,7 +2,7 @@
 
 PORTNAME=	xgboost
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.1.1
+DISTVERSION=	1.2.1
 CATEGORIES=	misc # machine-learning
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -24,17 +24,21 @@ GH_ACCOUNT=	dmlc
 USE_PYTHON=	distutils autoplist
 USE_LDCONFIG=	yes
 GH_TUPLE=	\
-		dmlc:rabit:4fb34a008db6437c84d1877635064e09a55c8553:dmlc_rabit/../rabit
+		dmlc:rabit:4acdd7c6f68debe1c39ae07ca75466d74d194dd1:dmlc_rabit/../rabit
 
 WRKSRC_SUBDIR=	python-package
-
-MAKE_ENV+=	FREEBSD_LIBRARY_PATH=${LOCALBASE}/lib
 
 LDFLAGS+=	-lexecinfo
 
 POST_PLIST=	fix-plist
 
+.include <bsd.port.pre.mk>
+
+.if ${OSVERSION} < 1300060
+BROKEN_i386=	undefined symbol: __atomic_load (on 11 and 12, but not on 13)
+.endif
+
 fix-plist: # https://github.com/dmlc/xgboost/issues/5705
 	@${REINPLACE_CMD} 's|/libxgboost.so$$|/xgboost/lib/libxgboost.so|' ${TMPPLIST}
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
