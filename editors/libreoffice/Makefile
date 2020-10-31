@@ -1,4 +1,5 @@
 # $FreeBSD$
+PORTREVISION=	2
 
 .include "${.CURDIR}/Makefile.common"
 
