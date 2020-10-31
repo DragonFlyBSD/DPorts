@@ -4,6 +4,7 @@
 PORTNAME=	emacs
 DISTVERSION=	27.1
 PORTEPOCH=	3
+PORTREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	GNU
 
@@ -14,12 +15,9 @@ PATCH_DIST_STRIP=	-p1
 .endif
 
 MAINTAINER=	emacs@FreeBSD.org
-COMMENT=	GNU editing macros
-.if ${FLAVOR:U} == nox
-COMMENT+=	(No X flavor)
-.elif ${FLAVOR:U} == canna
-COMMENT+=	(Canna Japanese input flavor)
-.endif
+COMMENT=	GNU editing macros ${COMMENT_${FLAVOR}}
+COMMENT_nox=	(No X flavor)
+COMMENT_canna=	(Canna Japanese input flavor)
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -229,10 +227,6 @@ XWIDGETS_USE=			XORG=xcomposite
 XWIDGETS_CONFIGURE_WITH=	xwidgets
 
 .include <bsd.port.options.mk>
-
-.if ${ARCH} == powerpc64
-USE_GCC=	any
-.endif
 
 .if !${PORT_OPTIONS:MGTK2} && !${PORT_OPTIONS:MGTK3} && !${PORT_OPTIONS:MMOTIF} \
 	&& !${PORT_OPTIONS:MXAW} && !${PORT_OPTIONS:MXAW3D}
