@@ -2,6 +2,7 @@
 
 PORTNAME=	feedbackd
 PORTVERSION=	s20200726
+PORTREVISION=	2
 CATEGORIES=	accessibility
 
 MAINTAINER=	jbeich@FreeBSD.org
