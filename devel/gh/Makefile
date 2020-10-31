@@ -2,11 +2,11 @@
 
 PORTNAME=	gh
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.5.4
+DISTVERSION=	1.1.0
 CATEGORIES=	devel
 
 MAINTAINER=	vulcan@wired.sh
-COMMENT=	GitHub command-line tool
+COMMENT=	GitHub's official command line tool
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -16,73 +16,96 @@ RUN_DEPENDS=	git:devel/git
 USES=		go:modules
 USE_GITHUB=	yes
 GH_ACCOUNT=	cli
-GH_PROJECT=	cli
-GH_TUPLE=	AlecAivazis:survey:v2.0.4:alecaivazis_survey/vendor/github.com/AlecAivazis/survey/v2 \
-		alecthomas:chroma:v0.6.8:alecthomas_chroma/vendor/github.com/alecthomas/chroma \
-		aybabtme:rgbterm:cc83f3b3ce59:aybabtme_rgbterm/vendor/github.com/aybabtme/rgbterm \
-		cpuguy83:go-md2man:v1.0.10:cpuguy83_go_md2man/vendor/github.com/cpuguy83/go-md2man \
+GH_PROJECT=	${GH_ACCOUNT}
+GH_TUPLE=	AlecAivazis:survey:v2.1.1:alecaivazis_survey_v2/vendor/github.com/AlecAivazis/survey/v2 \
+		MakeNowJust:heredoc:v1.0.0:makenowjust_heredoc/vendor/github.com/MakeNowJust/heredoc \
+		alecthomas:chroma:v0.7.3:alecthomas_chroma/vendor/github.com/alecthomas/chroma \
+		briandowns:spinner:v1.11.1:briandowns_spinner/vendor/github.com/briandowns/spinner \
+		charmbracelet:glamour:1246d13c1684:charmbracelet_glamour/vendor/github.com/charmbracelet/glamour \
+		cli:shurcooL-graphql:0f7232a2bf7e:cli_shurcool_graphql/vendor/github.com/shurcooL/graphql \
+		cpuguy83:go-md2man:v2.0.0:cpuguy83_go_md2man_v2/vendor/github.com/cpuguy83/go-md2man/v2 \
 		danwakefield:fnmatch:cbb64ac3d964:danwakefield_fnmatch/vendor/github.com/danwakefield/fnmatch \
-		dlclark:regexp2:v1.1.6:dlclark_regexp2/vendor/github.com/dlclark/regexp2 \
-		go-yaml:yaml:fc94e3f71652:go_yaml_yaml/vendor/gopkg.in/yaml.v3 \
-		go-yaml:yaml:v2.2.2:go_yaml_yaml_1/vendor/gopkg.in/yaml.v2 \
-		golang:crypto:20be4c3c3ed5:golang_crypto/vendor/golang.org/x/crypto \
-		golang:sys:fde4db37ae7a:golang_sys/vendor/golang.org/x/sys \
+		davecgh:go-spew:v1.1.1:davecgh_go_spew/vendor/github.com/davecgh/go-spew \
+		dlclark:regexp2:v1.2.0:dlclark_regexp2/vendor/github.com/dlclark/regexp2 \
+		enescakir:emoji:v1.0.0:enescakir_emoji/vendor/github.com/enescakir/emoji \
+		fatih:color:v1.7.0:fatih_color/vendor/github.com/fatih/color \
+		go-yaml:yaml:eeeca48fe776:go_yaml_yaml_1/vendor/gopkg.in/yaml.v3 \
+		go-yaml:yaml:v2.2.8:go_yaml_yaml/vendor/gopkg.in/yaml.v2 \
+		golang:crypto:5c72a883971a:golang_crypto/vendor/golang.org/x/crypto \
+		golang:net:ab3426394381:golang_net/vendor/golang.org/x/net \
+		golang:sys:669c56c373c4:golang_sys/vendor/golang.org/x/sys \
+		golang:text:v0.3.3:golang_text/vendor/golang.org/x/text \
+		google:go-cmp:v0.5.2:google_go_cmp/vendor/github.com/google/go-cmp \
 		google:shlex:e7afc7fbc510:google_shlex/vendor/github.com/google/shlex \
-		hashicorp:go-version:v1.2.0:hashicorp_go_version/vendor/github.com/hashicorp/go-version \
+		hashicorp:go-version:v1.2.1:hashicorp_go_version/vendor/github.com/hashicorp/go-version \
+		henvic:httpretty:v0.0.6:henvic_httpretty/vendor/github.com/henvic/httpretty \
 		inconshreveable:mousetrap:v1.0.0:inconshreveable_mousetrap/vendor/github.com/inconshreveable/mousetrap \
 		kballard:go-shellquote:95032a82bc51:kballard_go_shellquote/vendor/github.com/kballard/go-shellquote \
-		kr:text:v0.1.0:kr_text/vendor/github.com/kr/text \
-		mattn:go-colorable:v0.1.2:mattn_go_colorable/vendor/github.com/mattn/go-colorable \
-		mattn:go-isatty:v0.0.9:mattn_go_isatty/vendor/github.com/mattn/go-isatty \
-		mgutz:ansi:9520e82c474b:mgutz_ansi/vendor/github.com/mgutz/ansi \
+		lucasb-eyer:go-colorful:v1.0.3:lucasb_eyer_go_colorful/vendor/github.com/lucasb-eyer/go-colorful \
+		mattn:go-colorable:v0.1.7:mattn_go_colorable/vendor/github.com/mattn/go-colorable \
+		mattn:go-isatty:v0.0.12:mattn_go_isatty/vendor/github.com/mattn/go-isatty \
+		mattn:go-runewidth:v0.0.9:mattn_go_runewidth/vendor/github.com/mattn/go-runewidth \
+		mgutz:ansi:d51e80ef957d:mgutz_ansi/vendor/github.com/mgutz/ansi \
+		microcosm-cc:bluemonday:v1.0.2:microcosm_cc_bluemonday/vendor/github.com/microcosm-cc/bluemonday \
 		mitchellh:go-homedir:v1.1.0:mitchellh_go_homedir/vendor/github.com/mitchellh/go-homedir \
-		mitchellh:go-wordwrap:v1.0.0:mitchellh_go_wordwrap/vendor/github.com/mitchellh/go-wordwrap \
-		russross:blackfriday:v1.5.2:russross_blackfriday/vendor/github.com/russross/blackfriday \
-		russross:blackfriday:v2.0.1:russross_blackfriday_1/vendor/github.com/russross/blackfriday/v2 \
+		muesli:reflow:v0.1.0:muesli_reflow/vendor/github.com/muesli/reflow \
+		muesli:termenv:v0.7.2:muesli_termenv/vendor/github.com/muesli/termenv \
+		olekukonko:tablewriter:v0.0.4:olekukonko_tablewriter/vendor/github.com/olekukonko/tablewriter \
+		pmezard:go-difflib:v1.0.0:pmezard_go_difflib/vendor/github.com/pmezard/go-difflib \
+		rivo:uniseg:v0.1.0:rivo_uniseg/vendor/github.com/rivo/uniseg \
+		russross:blackfriday:v2.0.1:russross_blackfriday_v2/vendor/github.com/russross/blackfriday/v2 \
+		shurcooL:githubv4:f27d2ca7f6d5:shurcool_githubv4/vendor/github.com/shurcooL/githubv4 \
 		shurcooL:sanitized_anchor_name:v1.0.0:shurcool_sanitized_anchor_name/vendor/github.com/shurcooL/sanitized_anchor_name \
-		spf13:cobra:v0.0.5:spf13_cobra/vendor/github.com/spf13/cobra \
+		spf13:cobra:v1.0.0:spf13_cobra/vendor/github.com/spf13/cobra \
 		spf13:pflag:v1.0.5:spf13_pflag/vendor/github.com/spf13/pflag \
-		tj:go-css:220a796d1705:tj_go_css/vendor/github.com/tj/go-css \
-		vilmibm:go-termd:v0.0.4:vilmibm_go_termd/vendor/github.com/vilmibm/go-termd
+		stretchr:testify:v1.6.1:stretchr_testify/vendor/github.com/stretchr/testify \
+		yuin:goldmark:v1.2.0:yuin_goldmark/vendor/github.com/yuin/goldmark
+
+_BUILD_VERSION=	${DISTVERSION}
+_BUILD_DATE=	$$(date +%Y-%m-%d)
 
 GO_TARGET=	./cmd/${PORTNAME}
 GO_BUILDFLAGS=	-ldflags "\
 		-s -w \
-		-X github.com/${GH_ACCOUNT}/${GH_PROJECT}/command.Version=${BUILD_VERSION} \
-		-X github.com/${GH_ACCOUNT}/${GH_PROJECT}/command.BuildDate=${BUILD_DATE}"
+		-X github.com/${GH_ACCOUNT}/${GH_PROJECT}/command.Version=${_BUILD_VERSION} \
+		-X github.com/${GH_ACCOUNT}/${GH_PROJECT}/command.BuildDate=${_BUILD_DATE}"
 
-BUILD_VERSION=	${DISTVERSION}
-BUILD_DATE=	$$(date +%Y-%m-%d)
+_DOCS=		README.md docs/gh-vs-hub.md docs/releasing.md \
+		docs/command-line-syntax.md docs/source.md
+PORTDOCS=	${_DOCS:T}
 
-PLIST_FILES=	bin/${PORTNAME} \
-		etc/bash_completion.d/${PORTNAME}.bash \
-		share/fish/completions/${PORTNAME}.fish \
-		share/zsh/site_functions/_${PORTNAME}
-PORTDOCS=	README.md
+OPTIONS_DEFINE=		COMPLETIONS DOCS MANPAGES
+OPTIONS_DEFAULT=	COMPLETIONS MANPAGES
+OPTIONS_SUB=		yes
 
-OPTIONS_DEFINE=	DOCS
+COMPLETIONS_DESC=	Build and install shell completions for bash, fish and zsh
+MANPAGES_DESC=		Build and install auto-generated manpages
 
-post-build:
-.for shell in bash zsh fish
-	${WRKDIR}/bin/${PORTNAME} completion -s ${shell} > ${WRKSRC}/${shell}
+do-build-COMPLETIONS-on:
+.for SHELL in bash fish zsh
+	${GO_WRKDIR_BIN}/${PORTNAME} completion -s ${SHELL} > ${GO_WRKSRC}/${SHELL}
 .endfor
 
-post-install:
+do-build-MANPAGES-on:
+	cd ${GO_WRKSRC} && \
+		${SETENV} ${MAKE_ENV} ${GO_ENV} ${GO_CMD} run ${GO_BUILDFLAGS} ./cmd/gen-docs --man-page --doc-path docs/man 2>/dev/null
+
+post-install-COMPLETIONS-on:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/bash_completion.d
-	${INSTALL_DATA} ${WRKSRC}/bash \
-		${STAGEDIR}${PREFIX}/etc/bash_completion.d/${PORTNAME}.bash
+	${INSTALL_DATA} ${GO_WRKSRC}/bash \
+		${STAGEDIR}${PREFIX}/etc/bash_completion.d/${PORTNAME}
 	@${MKDIR} ${STAGEDIR}${PREFIX}/share/fish/completions
-	${INSTALL_DATA} ${WRKSRC}/fish \
+	${INSTALL_DATA} ${GO_WRKSRC}/fish \
 		${STAGEDIR}${PREFIX}/share/fish/completions/${PORTNAME}.fish
-	@${MKDIR} ${STAGEDIR}${PREFIX}/share/zsh/site_functions
-	${INSTALL_DATA} ${WRKSRC}/zsh \
-		${STAGEDIR}${PREFIX}/share/zsh/site_functions/_${PORTNAME}
+	@${MKDIR} ${STAGEDIR}${PREFIX}/share/zsh/site-functions
+	${INSTALL_DATA} ${GO_WRKSRC}/zsh \
+		${STAGEDIR}${PREFIX}/share/zsh/site-functions/_${PORTNAME}
 
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/${PORTDOCS} ${STAGEDIR}${DOCSDIR}
+	cd ${GO_WRKSRC} && ${INSTALL_DATA} ${_DOCS} ${STAGEDIR}${DOCSDIR}
 
-do-test:
-	@cd ${GO_WRKSRC} && ${SETENV} ${GO_ENV} ${GO_CMD} test ./...
+post-install-MANPAGES-on:
+	${INSTALL_MAN} ${GO_WRKSRC}/docs/man/*.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
 
 .include <bsd.port.mk>
