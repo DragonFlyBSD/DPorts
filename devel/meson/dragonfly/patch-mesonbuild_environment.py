@@ -5,7 +5,7 @@
      if mesonlib.is_windows():
          trial = detect_windows_arch(compilers)
 -    elif mesonlib.is_freebsd() or mesonlib.is_netbsd() or mesonlib.is_openbsd() or mesonlib.is_qnx():
-+    elif mesonlib.is_freebsd() or mesonlib.is_netbsd() or mesonlib.is_openbsd() or mesonlib.is_qnx() or or mesonlib.is_dragonflybsd():
++    elif mesonlib.is_freebsd() or mesonlib.is_netbsd() or mesonlib.is_openbsd() or mesonlib.is_qnx() or mesonlib.is_dragonflybsd():
          trial = platform.processor().lower()
      else:
          trial = platform.machine().lower()
