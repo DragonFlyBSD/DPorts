@@ -3,12 +3,12 @@
 
 PORTNAME=	pango
 PORTVERSION=	1.42.4
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
 
-MAINTAINER=	gnome@FreeBSD.org
+MAINTAINER=	desktop@FreeBSD.org
 COMMENT=	Open-source framework for the layout and rendering of i18n text
 
 LICENSE=	LGPL20
