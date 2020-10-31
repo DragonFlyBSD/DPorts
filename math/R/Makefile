@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	R
-DISTVERSION=	4.0.2
+DISTVERSION=	4.0.3
 CATEGORIES=	math lang
 MASTER_SITES=	CRAN/src/base/R-${PORTVERSION:C|\..*||}
 
@@ -11,7 +11,7 @@ COMMENT=	Language for statistical computing and graphics
 
 LICENSE=	GPLv2
 
-ONLY_FOR_ARCHS=	aarch64 amd64 armv6 armv7 i386 powerpc64
+ONLY_FOR_ARCHS=	aarch64 amd64 armv6 armv7 i386 powerpc64 powerpc64le
 
 BUILD_DEPENDS=	texi2any:print/texinfo
 LIB_DEPENDS=	libcurl.so:ftp/curl \
