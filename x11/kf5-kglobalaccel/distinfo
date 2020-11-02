@@ -1,3 +1,3 @@
-TIMESTAMP = 1596319816
-SHA256 (KDE/frameworks/5.73.0/kglobalaccel-5.73.0.tar.xz) = 0062db9adde4dab0be6b64430010c0a5653355d0d1680abc9ec8e71988ff871f
-SIZE (KDE/frameworks/5.73.0/kglobalaccel-5.73.0.tar.xz) = 85012
+TIMESTAMP = 1602005090
+SHA256 (KDE/frameworks/5.75.0/kglobalaccel-5.75.0.tar.xz) = a4d0e1f87317870120772444fa6736ce020668675be08d5e445a3ce5a60355d4
+SIZE (KDE/frameworks/5.75.0/kglobalaccel-5.75.0.tar.xz) = 87244
