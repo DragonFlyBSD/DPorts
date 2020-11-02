@@ -2,6 +2,7 @@
 
 PORTNAME=	kwayland
 DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
+PORTREVISION=	1
 CATEGORIES=	x11 kde kde-frameworks
 
 MAINTAINER=	kde@FreeBSD.org
@@ -14,7 +15,6 @@ LIB_DEPENDS=	libwayland-client.so:graphics/wayland
 
 LICENSE=	LGPL21 LGPL3
 LICENSE_COMB=	dual
-LICENSE_FILE_LGPL21=	${WRKSRC}/COPYING.LIB
 
 USES=		cmake compiler:c++11-lib gettext gl kde:5 pkgconfig \
 		qt:5 tar:xz
