@@ -2,14 +2,14 @@
 # $FreeBSD$
 
 PORTNAME=	librsvg
-PORTVERSION=	2.48.8
-PORTREVISION=	4
+PORTVERSION=	2.50.0
+PORTREVISION=	1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX=	2-rust
 DIST_SUBDIR=	gnome2
 
-MAINTAINER=	tobik@FreeBSD.org
+MAINTAINER=	desktop@FreeBSD.org
 COMMENT=	Library for parsing and rendering SVG vector-graphic files
 
 LICENSE=	LGPL20
