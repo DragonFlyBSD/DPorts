@@ -4,10 +4,10 @@
 PORTNAME=	ja2
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.17.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	games
 
-MAINTAINER=	tobik@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Port of "Jagged Alliance 2" using SDL
 
 LICENSE=		PD SFI-SCLA
@@ -18,7 +18,7 @@ LICENSE_PERMS_SFI-SCLA=	dist-mirror no-dist-sell pkg-mirror no-pkg-sell \
 			auto-accept
 
 # Ignore this if you feel adventurous
-ONLY_FOR_ARCHS=		aarch64 amd64 arm armv6 armv7 i386
+ONLY_FOR_ARCHS=		aarch64 amd64 arm armv6 armv7 i386 powerpc64le
 ONLY_FOR_ARCHS_REASON=	Needs a little endian environment
 
 BUILD_DEPENDS=	string_theory>=3.3:devel/string_theory
