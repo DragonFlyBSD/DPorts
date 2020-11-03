@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	inkscape
-PORTVERSION=	1.0
-PORTREVISION=	4
+PORTVERSION=	1.0.1
+PORTREVISION=	2
 CATEGORIES=	graphics gnome
 MASTER_SITES=	https://media.inkscape.org/dl/resources/file/
 
@@ -43,7 +43,7 @@ RUN_DEPENDS=	${PYNUMPY} \
 		${PYTHON_PKGNAMEPREFIX}lxml>0:devel/py-lxml@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}scour>0:textproc/py-scour@${PY_FLAVOR} \
 		ps2pdf:print/ghostscript9-agpl-base \
-		fig2dev:print/transfig
+		fig2dev:print/fig2dev
 
 USES=		compiler:c++11-lib cmake cpe desktop-file-utils gnome \
 		iconv:wchar_t jpeg pathfix pkgconfig python:3.6+ \
@@ -52,14 +52,14 @@ USE_GNOME=	gtkmm30 libxml2 libxslt
 USE_XORG=	sm ice x11 xext
 USE_LDCONFIG=	yes
 
-WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}_2020-05-01_4035a4fb49
+WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}_2020-09-07_3bc2e813f5
 
 INSTALLS_ICONS=	yes
 
 SHEBANG_FILES=	share/extensions/*.py share/extensions/genpofiles.sh \
 		share/templates/*.py man/fix-roff-punct
 
-OPTIONS_DEFINE=		OPENMP POPPLER VISIO CDR DBUS WPG GVFS NLS
+OPTIONS_DEFINE=		OPENMP POPPLER SCRIBUS VISIO CDR DBUS WPG GVFS NLS
 OPTIONS_DEFAULT=	POPPLER VISIO CDR WPG GM
 OPTIONS_DEFAULT_x86_64=	OPENMP
 OPTIONS_RADIO=		IMAGICK
@@ -84,6 +84,9 @@ POPPLER_DESC=		PDF preview rendering
 POPPLER_CMAKE_BOOL=	ENABLE_POPPLER ENABLE_POPPLER_CAIRO
 POPPLER_LIB_DEPENDS=	libpoppler.so:graphics/poppler \
 			libpoppler-glib.so:graphics/poppler-glib
+
+SCRIBUS_DESC=		Support color-managed PDF export using Scribus (experimental)
+SCRIBUS_RUN_DEPENDS=	scribus:print/scribus-devel
 
 VISIO_DESC=		Support for Microsoft Visio diagrams
 VISIO_CMAKE_BOOL=	WITH_LIBVISIO
