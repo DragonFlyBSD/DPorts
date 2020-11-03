@@ -1,0 +1,86 @@
+# $FreeBSD$
+
+PORTNAME=	spidermonkey
+DISTVERSION=	78.3.1
+PORTREVISION=	1
+CATEGORIES=	lang
+MASTER_SITES=	MOZILLA/firefox/releases/${DISTVERSION}esr/source
+PKGNAMESUFFIX=	${SP_VER}
+DISTNAME=	firefox-${DISTVERSION}esr.source
+
+MAINTAINER=	swills@FreeBSD.org
+COMMENT=	Standalone JavaScript based from Mozilla 78-esr
+
+LICENSE=	MPL20
+LICENSE_FILE=	${WRKSRC}/LICENSE
+
+BUILD_DEPENDS=	${LOCALBASE}/bin/clang++90:devel/llvm90 \
+		${LOCALBASE}/bin/python${PYTHON3_DEFAULT}:lang/python${PYTHON3_DEFAULT:S/.//g} \
+		${RUST_DEFAULT}>=1.35:lang/${RUST_DEFAULT} \
+		autoconf-2.13:devel/autoconf213 \
+		rust-cbindgen>=0.8.7:devel/rust-cbindgen
+LIB_DEPENDS=	libffi.so:devel/libffi \
+		libicudata.so:devel/icu \
+		libnspr4.so:devel/nspr
+
+USES=		compiler:c++17-lang gmake localbase pathfix pkgconfig python:build \
+		readline tar:xz
+USE_LDCONFIG=	yes
+SP_VER=		78
+HAS_CONFIGURE=	yes
+
+WRKSRC=			${WRKDIR}/firefox-${DISTVERSION}
+PATCH_WRKSRC=		${WRKDIR}/firefox-${DISTVERSION}/
+CONFIGURE_OUTSOURCE=	yes
+CONFIGURE_SCRIPT=	../firefox-${DISTVERSION}/js/src/configure
+
+CONFIGURE_ARGS=	--disable-debug \
+		--disable-debug-symbols \
+		--disable-gold \
+		--disable-jemalloc \
+		--disable-tests \
+		--enable-optimize \
+		--enable-readline \
+		--enable-shared-js \
+		--prefix=${PREFIX:Q} \
+		--target=${CONFIGURE_TARGET} \
+		--with-intl-api \
+		--with-system-icu \
+		--with-system-nspr \
+		--with-system-zlib
+
+CONFIGURE_ENV=	HOST_CC=${CC} \
+		HOST_CXX=${CXX}
+
+CONFIGURE_ENV+=	LLVM_CONFIG=llvm-config90 \
+		LLVM_OBJDUMP=llvm-objdump90
+
+BINARY_ALIAS=	python3=${PYTHON_CMD}
+PLIST_SUB=	SP_VER=${SP_VER}
+
+.include <bsd.port.pre.mk>
+
+.if ${ARCH} == x86_64
+CONFIGURE_TARGET=	x86_64-portbld-${OPSYS:tl}${OSREL}
+.endif
+
+# Require newer Clang than what's in base system unless user opted out
+.if ${CHOSEN_COMPILER_TYPE} == gcc
+USE_GCC=	yes
+.elif ${CC} == cc && ${CXX} == c++ && exists(/usr/lib/libc++.so)
+CPP=		${LOCALBASE}/bin/clang-cpp90
+CC=		${LOCALBASE}/bin/clang90
+CXX=		${LOCALBASE}/bin/clang++90
+BUILD_DEPENDS+=	${LOCALBASE}/bin/clang90:devel/llvm90
+.endif
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' ${WRKSRC}/js/moz.configure
+
+post-install:
+	${RM} ${STAGEDIR}${PREFIX}/lib/libjs_static.ajs
+	${LN} -fs libmozjs-${SP_VER}.so ${STAGEDIR}${PREFIX}/lib/libmozjs-${SP_VER}.so.1
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/js${SP_VER}
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libmozjs-${SP_VER}.*
+
+.include <bsd.port.post.mk>
