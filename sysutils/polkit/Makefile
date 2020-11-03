@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	polkit
-PORTVERSION=	0.116
+PORTVERSION=	0.118
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	https://www.freedesktop.org/software/polkit/releases/
 
@@ -13,8 +13,7 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libexpat.so:textproc/expat2 \
-		libmozjs-60.so:lang/spidermonkey60
-LIB_DEPENDS+=	libxml2.so:textproc/libxml2
+		libmozjs-78.so:lang/spidermonkey78
 RUN_DEPENDS=	dbus-launch:devel/dbus
 
 USERS=		polkitd
@@ -30,6 +29,7 @@ CONFIGURE_ARGS=	--disable-gtk-doc-html \
 		--without-html-dir \
 		--with-authfw=pam \
 		--with-pam-include=system \
+		--with-os-type=freebsd \
 		--with-polkitd-user=${USERS} \
 		--disable-static \
 		--disable-examples \
