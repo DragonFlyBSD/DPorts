@@ -2,8 +2,9 @@
 # $FreeBSD$
 
 PORTNAME=	tracker-miners
-PORTVERSION=	2.0.5
-PORTREVISION=	20
+PORTVERSION=	2.3.5
+PORTREVISION=	1
+PÖRTREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 
@@ -31,20 +32,13 @@ LIB_DEPENDS=	libicuuc.so:devel/icu \
 		libexif.so:graphics/libexif \
 		libgexiv2.so:graphics/gexiv2 \
 		libtracker-miner-2.0.so:sysutils/tracker
-#		libhal.so:sysutils/hal \
 
 PORTSCOUT=	limitw:1,even
 
 USES=		gettext gnome jpeg localbase:ldflags meson \
-		pathfix pkgconfig python:3.4+,build shebangfix sqlite tar:xz
+		pathfix pkgconfig python:3.4+,build sqlite tar:xz
 USE_GNOME=	cairo intltool libgsf libxml2
-USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
-GLIB_SCHEMAS=	org.freedesktop.Tracker.Extract.gschema.xml \
-		org.freedesktop.Tracker.Miner.Files.gschema.xml \
-		org.freedesktop.Tracker.Writeback.gschema.xml \
-		org.freedesktop.TrackerMiners.enums.xml
-SHEBANG_FILES=	tests/tracker-writeback/01-writeback.py
 
 MESON_ARGS=	-Dsystemd_user_services=no \
 		-Dcharset_detenction=icu \
@@ -65,6 +59,11 @@ RSS_MESON_TRUE=		miner_rss
 RSS_LIB_DEPENDS=	libgrss.so:net/libgrss
 
 PLIST_SUB=	LIBVER=0.2.0
+
+GLIB_SCHEMAS=	org.freedesktop.Tracker.Extract.gschema.xml \
+		org.freedesktop.Tracker.Miner.Files.gschema.xml \
+		org.freedesktop.Tracker.Writeback.gschema.xml \
+		org.freedesktop.TrackerMiners.enums.xml
 
 #post-install:
 #	${RM} -rf ${STAGEDIR}/${PREFIX}/lib/systemd
