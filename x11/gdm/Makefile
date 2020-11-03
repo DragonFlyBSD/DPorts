@@ -3,13 +3,16 @@
 
 PORTNAME=	gdm
 PORTVERSION=	3.28.4
-PORTREVISION=	1
+PORTREVISION=	5
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME 3 display manager
+
+LICENSE=	GPLv2
+LICENSE_FILES=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	zenity>=3.0.0:x11/zenity \
 		itstool:textproc/itstool \
@@ -20,7 +23,6 @@ LIB_DEPENDS=	libck-connector.so:sysutils/consolekit2 \
 		libcanberra.so:audio/libcanberra \
 		libcanberra-gtk3.so:audio/libcanberra-gtk3
 RUN_DEPENDS=	zenity>=3.0.0:x11/zenity \
-		gnome-shell>=3.15.92:x11/gnome-shell \
 		gnome-settings-daemon>=3.0.0:sysutils/gnome-settings-daemon \
 		gnome-keyring-3:security/gnome-keyring \
 		gnome-session>=3.0.0:x11/gnome-session \
@@ -41,10 +43,10 @@ GROUPS=		gdm video
 
 PORTSCOUT=	limitw:1,even
 
-USES=		cpe gettext gmake gnome libtool pathfix pkgconfig tar:xz xorg
+USES=		cpe gettext gmake gnome libtool localbase:ldflags pathfix pkgconfig tar:xz xorg
 CPE_VENDOR=	gnome
 CPE_PRODUCT=	gnome_display_manager
-USE_GNOME=	cairo dconf gtk30 intltool introspection
+USE_GNOME=	cairo dconf gconf2 gtk30 intltool introspection
 USE_LDCONFIG=	yes
 USE_XORG=	x11 xau xcb xdmcp xorgproto
 INSTALLS_ICONS=	yes
@@ -80,8 +82,7 @@ CONFIGURE_ARGS=	--disable-static \
 
 # this is a hack until we can get our own pam dir and dir in order.
 CONFIGURE_ARGS+=--with-default-pam-config=redhat
-CPPFLAGS+=	-I${LOCALBASE}/include -DHAS_SA_LEN
-LDFLAGS+=	-L${LOCALBASE}/lib
+CPPFLAGS+=	-DHAS_SA_LEN
 INSTALL_TARGET=	install-strip
 
 SUB_FILES+=	gdm-launch-environment \
@@ -91,7 +92,6 @@ SUB_FILES+=	gdm-launch-environment \
 		locale.conf
 
 GDMDIR?=	${PREFIX}/etc/gdm
-PKGMESSAGE=	${WRKDIR}/pkg-message
 
 GNOME_LOCALSTATEDIR=	/var
 
@@ -137,6 +137,12 @@ post-install:
 		${STAGEDIR}${PREFIX}/etc/gdm/PostSession/Default.sample
 	${MV} ${STAGEDIR}${PREFIX}/etc/gdm/PreSession/Default \
 		${STAGEDIR}${PREFIX}/etc/gdm/PreSession/Default.sample
+	${MV} ${STAGEDIR}${PREFIX}/etc/gdm/Init/Default \
+		${STAGEDIR}${PREFIX}/etc/gdm/Init/Default.sample
+	${MV} ${STAGEDIR}${PREFIX}/etc/gdm/Xsession \
+		${STAGEDIR}${PREFIX}/etc/gdm/Xsession.sample
+	${MV} ${STAGEDIR}${PREFIX}/etc/dbus-1/system.d/gdm.conf \
+		${STAGEDIR}${PREFIX}/etc/dbus-1/system.d/gdm.conf.sample
 
 	${MKDIR} ${STAGEDIR}${PREFIX}/share/xsessions
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/gdm/Sessions
@@ -146,11 +152,11 @@ post-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/gdm/home/.pulse/
 
 	${INSTALL_DATA} ${WRKDIR}/gdm-autologin \
-		${STAGEDIR}${PREFIX}/etc/pam.d/gdm-autologin
+		${STAGEDIR}${PREFIX}/etc/pam.d/gdm-autologin.sample
 	${INSTALL_DATA} ${WRKDIR}/gdm-launch-environment \
-		${STAGEDIR}${PREFIX}/etc/pam.d/gdm-launch-environment
+		${STAGEDIR}${PREFIX}/etc/pam.d/gdm-launch-environment.sample
 	${INSTALL_DATA} ${WRKDIR}/gdm-password \
-		${STAGEDIR}${PREFIX}/etc/pam.d/gdm-password
+		${STAGEDIR}${PREFIX}/etc/pam.d/gdm-password.sample
 
 	${INSTALL_DATA} ${WRKDIR}/client.conf \
 		${STAGEDIR}${PREFIX}/etc/gdm/home/.pulse/client.conf.sample
@@ -161,8 +167,5 @@ post-install:
 	@${RM} ${STAGEDIR}${PREFIX}/lib/udev/rules.d/61-gdm.rules
 	@${RMDIR} ${STAGEDIR}${PREFIX}/lib/udev/rules.d
 	@${RMDIR} ${STAGEDIR}${PREFIX}/lib/udev
-
-	@${SED} -e 's|%%PREFIX%%|${PREFIX}|g' < ${PKGDIR}/pkg-message \
-		| /usr/bin/fmt 75 79 > ${PKGMESSAGE}
 
 .include <bsd.port.mk>
