@@ -1178,6 +1178,7 @@ _EXPORTED_VARS+=	_OSRELEASE
 # Get __FreeBSD_version
 .if !defined(OSVERSION)
 OSVERSION=     9999999
+.endif
 _EXPORTED_VARS+=	OSVERSION
 
 .if !defined(DFLYVERSION)

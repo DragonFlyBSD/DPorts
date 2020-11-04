@@ -1053,29 +1053,3 @@ you update your ports collection, before attempting any port upgrades.
     or
   # portupgrade -o databases/redis4 databases/redis
 
-20191103:
-  AFFECTS: users of www/node
-  AUTHOR: bhughes@FreeBSD.org
-
-  The www/node port has been updated to Node.js v13.0.0, the latest
-  upstream release. A new port, www/node12, has been created for the
-  v12.x LTS branch. Users wanting to stay on v12.x can replace www/node
-  with www/node12 with one of the following commands:
-
-  # pkg install www/node12
-    or
-  # portmaster -o www/node12 www/node
-    or
-  # portupgrade -o www/node12 www/node
-
-20191029:
-  AFFECTS: users of emulators/open-vm-tools[-nox11]
-  AUTHOR: jpaetzel@FreeBSD.org
-
-open-vm-tools 11.0.1 has removed the vmxnet driver.  This driver has been
-in tree for quite some time and hopefully everyone is using the in tree
-version, however if you had removed device vmx from your kernel, or are
-running an unsupported version of FreeBSD which didn't have the driver
-included in the base system, updating your open-vm-tools version will
-leave you without networking.
-
