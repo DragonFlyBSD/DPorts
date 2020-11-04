@@ -4,13 +4,13 @@
 PORTNAME=	mpv
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.32.0
-PORTREVISION=	4
+PORTREVISION=	5
 PORTEPOCH=	1
 CATEGORIES=	multimedia audio
 MASTER_SITES=	https://waf.io/:waf
 DISTFILES=	${WAF_RELEASE}${EXTRACT_SUFX}:waf
 
-MAINTAINER=	cpm@FreeBSD.org
+MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	Free and open-source general-purpose video player
 
 LICENSE=	GPLv2+ LGPL21+
