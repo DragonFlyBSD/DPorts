@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	pyteomics
-PORTVERSION=	4.3.2
+PORTVERSION=	4.3.3
 CATEGORIES=	science python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -11,7 +11,7 @@ COMMENT=	Python modules for proteomics data analysis
 
 LICENSE=	APACHE20
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes
