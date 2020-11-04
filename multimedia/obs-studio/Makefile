@@ -1,8 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	obs-studio
-DISTVERSION=	25.0.8
-PORTREVISION=	1
+DISTVERSION=	26.0.2
 CATEGORIES=	multimedia
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -11,7 +10,7 @@ COMMENT=	Open source streaming/recording software
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BROKEN_aarch64=	Fails to compile: invalid conversion between vector type and integer type
+BROKEN_i386=	https://github.com/obsproject/obs-browser/issues/241
 
 BUILD_DEPENDS=	v4l_compat>=0:multimedia/v4l_compat \
 		swig:devel/swig
@@ -36,6 +35,7 @@ LIB_DEPENDS_x86_64=	libluajit-5.1.so:lang/luajit
 LIB_DEPENDS_armv7=	libluajit-5.1.so:lang/luajit
 LIB_DEPENDS_i386=	libluajit-5.1.so:lang/luajit
 LIB_DEPENDS_powerpc=	libluajit-5.1.so:lang/luajit
+LIB_DEPENDS_powerpc64=	libluajit-5.1.so:lang/luajit-openresty
 
 USES=		cmake gl lua pkgconfig python:3.4+ qt:5 xorg
 USE_GITHUB=	yes
@@ -49,6 +49,8 @@ CMAKE_ON=	UNIX_STRUCTURE
 CMAKE_ARGS=	-DOBS_VERSION_OVERRIDE:STRING="${PORTVERSION}"
 CFLAGS+=	-D_WITH_GETLINE
 
+LDFLAGS+=	-fPIC # pending https://github.com/obsproject/obs-studio/issues/3436
+
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == powerpc64
@@ -59,7 +61,7 @@ USES+=		compiler:c++11-lib
 
 .include <bsd.port.pre.mk>
 
-.if ${ARCH} != x86_64 && ${ARCH} != armv7 && ${ARCH} != i386 && ${ARCH} != powerpc
+.if ${ARCH} != x86_64 && ${ARCH} != armv7 && ${ARCH} != i386 && ${ARCH} != powerpc && ${ARCH} != powerpc64
 PLIST_SUB+=	LUAJIT="@comment "
 .else
 PLIST_SUB+=	LUAJIT=""
