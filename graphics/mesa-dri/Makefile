@@ -3,43 +3,35 @@
 
 PORTNAME=	mesa-dri
 PORTVERSION=	${MESAVERSION}
-PORTREVISION=	9
+PORTREVISION=	1
 CATEGORIES=	graphics
 
 COMMENT=	OpenGL hardware acceleration drivers for DRI2+
 
-USES=		xorg
-USE_XORG=	xorgproto x11 xdamage xext xfixes xshmfence
-
 OPTIONS_GROUP=			PLATFORM
-OPTIONS_GROUP_PLATFORM=		PLATFORM_X11 PLATFORM_WAYLAND PLATFORM_DRM PLATFORM_SURFACELESS
+OPTIONS_GROUP_PLATFORM=		PLATFORM_X11 PLATFORM_WAYLAND
 PLATFORM_X11_DESC=		Enable X11 support for GBM/EGL
 PLATFORM_WAYLAND_DESC=		Enable Wayland support for GBM/EGL
-PLATFORM_DRM_DESC=		Enable DRM support for GBM/EGL
-PLATFORM_SURFACELESS_DESC=	Enable Surfaceless support for GBM/EGL
 PLATFORM_WAYLAND_IMPLIES=	WAYLAND
 
-OPTIONS_DEFINE=	VAAPI VDPAU WAYLAND
-OPTIONS_DEFAULT=WAYLAND PLATFORM_X11 PLATFORM_WAYLAND PLATFORM_DRM PLATFORM_SURFACELESS
-OPTIONS_SUB=	yes
-
-VAAPI_MESON_ON=		-Dgallium-va=true
-VAAPI_LIB_DEPENDS=	libva.so:multimedia/libva
-VAAPI_USE=		XORG=xcb
-
-VDPAU_MESON_ON=		-Dgallium-vdpau=true
-VDPAU_LIB_DEPENDS=	libvdpau.so:multimedia/libvdpau
+OPTIONS_DEFINE=		WAYLAND ZSTD
+OPTIONS_DEFAULT=	WAYLAND PLATFORM_X11 PLATFORM_WAYLAND ZSTD
+OPTIONS_SUB=		yes
 
 WAYLAND_DESC=		Enable support for the Wayland platform in Vulkan drivers
 WAYLAND_BUILD_DEPENDS=	wayland-protocols>=1.8:graphics/wayland-protocols
 WAYLAND_LIB_DEPENDS=	libwayland-client.so:graphics/wayland
 WAYLAND_IMPLIES=	PLATFORM_WAYLAND
 
+ZSTD_DESC=		Use ZSTD for shader cache
+ZSTD_LIB_DEPENDS=	libzstd.so:archivers/zstd
+ZSTD_MESON_ENABLED=	zstd
+
 .include <bsd.port.options.mk>
 .include "${.CURDIR:H:H}/graphics/mesa-dri/Makefile.common"
 
 ALL_DRI_DRIVERS=	I915 I965 R100 R200 SWRAST
-ALL_GALLIUM_DRIVERS=	R300 R600 RADEONSI SVGA SWRAST
+ALL_GALLIUM_DRIVERS=	IRIS R300 R600 RADEONSI SVGA SWRAST
 ALL_VULKAN_DRIVERS=	INTEL AMD
 
 .if ${ARCH} == aarch64 || ${ARCH} == x86_64 || ${ARCH} == i386 || ${ARCH} == powerpc64
@@ -55,34 +47,23 @@ GALLIUM_DRIVERS+=	R300 R600 RADEONSI
 VULKAN_DRIVERS+=	AMD
 . if ${PORT_OPTIONS:MPLATFORM_X11}
 USE_XORG+=		xv xvmc
-MESON_ARGS+=		-Dgallium-xvmc=true
+MESON_ARGS+=		-Dgallium-xvmc=enabled
 . endif
 .endif
 .if ${ARCH} == x86_64 || ${ARCH} == i386
 DRI_DRIVERS+=		I915 I965
-GALLIUM_DRIVERS+=	SVGA
-. if ${OPSYS} == FreeBSD
-EXTRA_PATCHES+=	${PATCHDIR}/extra-src_mesa_drivers_dri_i965_intel__screen.c
-. endif
+GALLIUM_DRIVERS+=	IRIS SVGA
 VULKAN_DRIVERS+=	INTEL
-.endif
-
-.if defined(VULKAN_DRIVERS)
-USE_XORG+=		xcb xrandr
 .endif
 
 LDFLAGS_i386=		-Wl,-znotext
 
 .if ${PORT_OPTIONS:MPLATFORM_X11}
 MESA_PLATFORMS+=	x11
+USE_XORG+=		xorgproto x11 xdamage xext xfixes xshmfence xv
+.if defined(VULKAN_DRIVERS)
+USE_XORG+=		xcb xrandr
 .endif
-
-.if ${PORT_OPTIONS:MPLATFORM_DRM}
-MESA_PLATFORMS+=	drm
-.endif
-
-.if ${PORT_OPTIONS:MPLATFORM_SURFACELESS}
-MESA_PLATFORMS+=	surfaceless
 .endif
 
 .if ${PORT_OPTIONS:MPLATFORM_WAYLAND}
@@ -104,11 +85,11 @@ MESON_ARGS+=	-Ddri-drivers="${DRI_DRIVERS:ts,:tl}" \
 			-Dplatforms="${MESA_PLATFORMS:ts,:tl}"
 
 # Disable some options
-MESON_ARGS+=	-Dgallium-xa=false \
-		-Dgles1=false \
-		-Dgles2=true \
+MESON_ARGS+=	-Dgallium-xa=disabled \
+		-Dgles1=disabled \
+		-Dgles2=enabled \
 		-Dglx=disabled \
-		-Degl=true \
+		-Degl=enabled \
 		-Dosmesa=none \
 		-Dtools=""
 

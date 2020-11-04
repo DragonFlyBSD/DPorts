@@ -1,23 +1,16 @@
-- Implement futex_wake() and futex_wait() via umtx_wakeup() and umtx_sleep()
-  EXPERIMENTAL and UNTESTED so far.
-
---- src/util/futex.h.intermediate	2020-09-03 05:33:19.000000000 +0000
+--- src/util/futex.h.orig	2020-09-28 22:52:13 UTC
 +++ src/util/futex.h
-@@ -32,6 +32,9 @@
- #if defined(__FreeBSD__)
- #include <errno.h>
- #include <sys/umtx.h>
-+#elif defined(__DragonFly__)
-+#include <errno.h>
-+#include <unistd.h>
- #else
- #include <linux/futex.h>
- #include <sys/syscall.h>
-@@ -54,6 +57,33 @@ static inline int futex_wait(uint32_t *a
-    }
+@@ -86,6 +86,39 @@ static inline int futex_wait(uint32_t *a
+ 
     return _umtx_op(addr, UMTX_OP_WAIT_UINT, (uint32_t)value, uaddr, uaddr2) == -1 ? errno : 0;
  }
 +#elif defined(__DragonFly__)
++#define UTIL_FUTEX_SUPPORTED 1
++
++#include <errno.h>
++#include <unistd.h>
++#include <time.h>
++
 +static inline int futex_wake(uint32_t *ptr, int count)
 +{
 +   return umtx_wakeup((volatile const int*)ptr, count);
@@ -44,6 +37,6 @@
 +      return ETIMEDOUT;
 +   return errno;
 +}
- #else
- static inline long sys_futex(void *addr1, int op, int val1, const struct timespec *timeout, void *addr2, int val3)
- {
+ 
+ #elif defined(__OpenBSD__)
+ #define UTIL_FUTEX_SUPPORTED 1
