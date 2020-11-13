@@ -2,11 +2,11 @@
 
 PORTNAME=	kodi
 DISTVERSION=	19.0.a20200727
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	multimedia
 PKGNAMESUFFIX=	-devel
 
-MAINTAINER=	tobik@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Award winning media center application
 
 LICENSE=	GPLv2+
