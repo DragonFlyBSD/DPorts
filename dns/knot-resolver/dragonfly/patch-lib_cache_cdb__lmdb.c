@@ -1,11 +1,11 @@
---- lib/cache/cdb_lmdb.c.orig	2020-07-01 12:27:52 UTC
+--- lib/cache/cdb_lmdb.c.orig	2020-09-08 11:12:43 UTC
 +++ lib/cache/cdb_lmdb.c
-@@ -322,7 +322,7 @@ static int cdb_open(struct lmdb_env *env
- 		return lmdb_error(ret);
+@@ -355,7 +355,7 @@ static int cdb_open_env(struct lmdb_env
+ 		goto error_mdb;
  	}
  
 -#if !defined(__MACOSX__) && !(defined(__APPLE__) && defined(__MACH__))
 +#if !defined(__DragonFly__) && !defined(__MACOSX__) && !(defined(__APPLE__) && defined(__MACH__))
- 	mdb_filehandle_t fd = -1;
- 	ret = mdb_env_get_fd(env->env, &fd);
- 	if (ret != MDB_SUCCESS) {
+ 	if (size_requested) {
+ 		ret = posix_fallocate(fd, 0, MAX(env->mapsize, env->st_size));
+ 	} else {
