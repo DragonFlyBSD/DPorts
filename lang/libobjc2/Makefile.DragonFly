@@ -1,2 +1,2 @@
 CFLAGS+=	-I${LOCALBASE}/cxx_atomics
-BUILD_DEPENDS+=	${LOCALBASE}/cxx_atomics/stdatomic.h:misc/cxx_atomics/
+BUILD_DEPENDS+=	${LOCALBASE}/cxx_atomics/stdatomic.h:misc/cxx_atomics
