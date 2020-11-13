@@ -1,4 +1,5 @@
 # GOOGLE causes webkit2-gtk3 to get pulled in!
 
 OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NHAL:NGPHOTO2:NCDDA:NFUSE:NGOOGLE}
+RUN_DEPENDS:=	${RUN_DEPENDS:Nbsdisks*}
 
