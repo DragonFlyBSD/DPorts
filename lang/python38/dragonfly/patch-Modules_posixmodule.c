@@ -1,11 +1,11 @@
---- Modules/posixmodule.c.intermediate	2019-12-21 11:34:51.000000000 +0000
+--- Modules/posixmodule.c.intermediate	2020-11-13 15:20:30.000000000 +0000
 +++ Modules/posixmodule.c
-@@ -8461,7 +8461,7 @@ os_closerange_impl(PyObject *module, int
-     fdwalk(_fdwalk_close_func, lohi);
- #else
-     fd_low = Py_MAX(fd_low, 0);
+@@ -8566,7 +8566,7 @@ os_close_impl(PyObject *module, int fd)
+  *    non-opened fd in the middle.
+  * 2b. If fdwalk(3) isn't available, just do a plain close(2) loop.
+  */
 -#ifdef __FreeBSD__
 +#if defined(__FreeBSD__) || defined(__DragonFly__)
-     if (fd_high >= sysconf(_SC_OPEN_MAX)) {
-         closefrom(fd_low);
-     } else
+ #define USE_CLOSEFROM
+ #endif /* __FreeBSD__ */
+ 

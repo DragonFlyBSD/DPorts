@@ -1,4 +1,4 @@
---- Modules/_posixsubprocess.c.intermediate	2019-12-21 11:34:51.000000000 +0000
+--- Modules/_posixsubprocess.c.intermediate	2020-11-13 15:20:30.000000000 +0000
 +++ Modules/_posixsubprocess.c
 @@ -8,7 +8,7 @@
  #ifdef HAVE_SYS_TYPES_H
@@ -9,7 +9,7 @@
  #include <sys/stat.h>
  #endif
  #ifdef HAVE_SYS_SYSCALL_H
-@@ -41,7 +41,7 @@
+@@ -43,7 +43,7 @@
  # endif
  #endif
  
@@ -18,7 +18,7 @@
  # define FD_DIR "/dev/fd"
  #else
  # define FD_DIR "/proc/self/fd"
-@@ -88,7 +88,7 @@ _pos_int_from_ascii(const char *name)
+@@ -90,7 +90,7 @@ _pos_int_from_ascii(const char *name)
  }
  
  
@@ -27,16 +27,7 @@
  /* When /dev/fd isn't mounted it is often a static directory populated
   * with 0 1 2 or entries for 0 .. 63 on FreeBSD, NetBSD and OpenBSD.
   * NetBSD and OpenBSD have a /proc fs available (though not necessarily
-@@ -236,7 +236,7 @@ _close_fds_by_brute_force(long start_fd,
-         start_fd = keep_fd + 1;
-     }
-     if (start_fd <= end_fd) {
--#if defined(__FreeBSD__)
-+#if defined(__FreeBSD__) || defined(__DragonFly__)
-         if (end_fd >= sysconf(_SC_OPEN_MAX)) {
-             closefrom(start_fd);
-         } else
-@@ -350,7 +350,7 @@ _close_open_fds_maybe_unsafe(long start_
+@@ -340,7 +340,7 @@ _close_open_fds_maybe_unsafe(long start_
      ++start_fd;
  #endif
  
