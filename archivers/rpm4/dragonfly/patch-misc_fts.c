@@ -4,8 +4,8 @@
  #endif /* LIBC_SCCS and not lint */
  
  /* Conditional to set up proper fstat64 implementation */
--#if defined(hpux) || defined(__FreeBSD__) || defined(sun)
-+#if defined(hpux) || defined(__FreeBSD__) ||  defined(sun) || defined(__DragonFly__)
+-#if defined(hpux) || defined(sun) || defined(__FreeBSD__)
++#if defined(hpux) || defined(sun) || defined(__FreeBSD__) || defined(__DragonFly__)
  #   define FTS_FSTAT64(_fd, _sbp)   fstat((_fd), (_sbp))
  #else
  #   define FTS_FSTAT64(_fd, _sbp)   fstat64((_fd), (_sbp))
