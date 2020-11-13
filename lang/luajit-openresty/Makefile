@@ -3,9 +3,12 @@
 
 PORTNAME=	luajit
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.1-20200102
+DISTVERSION=	2.1-20201002
+PORTREVISION=	1
 CATEGORIES=	lang
 PKGNAMESUFFIX=	-openresty
+
+PATCH_SITES=	https://github.com/openresty/luajit2/commit/
 
 MAINTAINER=	mm@FreeBSD.org
 COMMENT=	Just-In-Time Compiler for Lua (OpenResty branch)
@@ -13,8 +16,6 @@ COMMENT=	Just-In-Time Compiler for Lua (OpenResty branch)
 LICENSE=	MIT PD
 LICENSE_COMB=	multi
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
-
-BROKEN_powerpc64=	fails to build: gmake[2]: *** No rule to make target 'vm_ppc64.dasc', needed by 'host/buildvm_arch.h'.
 
 USES=		gmake
 
@@ -38,9 +39,15 @@ PLIST_SUB+=	VERSION=${LUAJIT_VERSION} SOVERSION=${LUAJIT_SOVERSION}
 USE_GCC=yes
 .endif
 
+.include <bsd.port.pre.mk>
+
+.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1200000
+MAKE_ARGS+=	XCFLAGS=-DLJ_TARGET_HAS_GETENTROPY=0 Q=
+.endif
+
 post-install:
 	${LN} -sf ${PORTNAME}-${LUAJIT_VERSION} \
 		${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 	${INSTALL_MAN} ${WRKSRC}/etc/luajit.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>

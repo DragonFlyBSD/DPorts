@@ -1,0 +1,3 @@
+
+# zrj: same as in MF
+MAKE_ARGS+=	XCFLAGS=-DLJ_TARGET_HAS_GETENTROPY=0
