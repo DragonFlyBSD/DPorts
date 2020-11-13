@@ -1,1 +1,6 @@
 OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NP4}
+
+# exclude ruby from nrelease
+.if ${FLAVOR:U} == lite
+OPTIONS_EXCLUDE+=	P4 SUBTREE
+.endif
