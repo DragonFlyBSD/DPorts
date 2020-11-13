@@ -2,6 +2,8 @@
 # qt5-examples requires qt5-docs DISTINFO file, so remove it as well
 #OPTIONS_EXCLUDE=DOCS EXAMPLES
 
+CFLAGS+=	-Dfdatasync=fsync
+
 # attempt to fix plist
 PLIST= ${WRKDIR}/qtcreator-plist
 
