@@ -1,0 +1,5 @@
+
+# just to satisfy stage-qa in py27
+dfly-install:
+	-${RM} -fv ${STAGEDIR}${PYTHON_SITELIBDIR}/_sounddevice.pyc
+	-${RM} -fv ${STAGEDIR}${PYTHON_SITELIBDIR}/_sounddevice.pyo
