@@ -1,14 +1,23 @@
---- config/get_dlld.orig	2016-09-24 16:50:04 UTC
+--- config/get_dlld.orig	2020-10-15 08:36:36 UTC
 +++ config/get_dlld
 @@ -9,7 +9,7 @@ DLSUFFIX=so
  soname=.$soname_num
  do_dll=yes
  case "$osname" in
--  gnu*|aix|osf1|solaris|linux|freebsd|netbsd)
-+  gnu*|aix|osf1|solaris|linux|dragonfly|freebsd|netbsd)
+-  gnu*|aix|osf1|solaris|linux|*bsd)
++  gnu*|aix|osf1|solaris|linux|dragonfly|*bsd)
      case $pari_release_verbose in
        *STABLE*)      sodest=.$version.$patch;; # released version
        *DEVELOPMENT*) sodest=.$patch.0.0;;      # unstable version
+@@ -34,7 +34,7 @@ esac
+ # dlopen(NULL) should return a handle to the running process.
+ # On FreeBSD 2.2.5 (Y. Uchikawa) and Cygwin, this does not work.
+ case "$osname" in
+-  freebsd|cygwin) DL_DFLT_NAME="\\\"\$(LIBPARI_DYN)\\\"" ;;
++  dragonfly|freebsd|cygwin) DL_DFLT_NAME="\\\"\$(LIBPARI_DYN)\\\"" ;;
+   mingw) DL_DFLT_NAME="\\\"\$(LIBPARI_SO)\\\"" ;;
+   *) DL_DFLT_NAME=NULL ;;
+ esac
 @@ -76,6 +76,7 @@ if test -n "$DLLD"; then
      case "$osname" in
        aix)     DLLDFLAGS='-r' ;;
