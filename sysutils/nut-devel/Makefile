@@ -3,6 +3,7 @@
 
 PORTNAME=	nut
 PORTVERSION=	${NUT_COMMIT_DATE}
+PORTREVISION=	1
 CATEGORIES=	sysutils
 PKGNAMESUFFIX=	-devel
 # MASTER_SITES=	http://www.networkupstools.org/source/${PORTVERSION:R}/
@@ -14,8 +15,8 @@ COMMENT=	Network UPS Tools
 
 USE_GITHUB=	yes
 GH_ACCOUNT=     networkupstools 
-GH_TAGNAME=     e24b9a84
-NUT_COMMIT_DATE=	2020.07.11
+GH_TAGNAME=     82ba1704
+NUT_COMMIT_DATE=	2020.10.25
 
 BROKEN_powerpc64=	Poudriere builds fail.
 BROKEN_powerpc=		Poudriere builds fail.
@@ -192,6 +193,7 @@ pre-install:
 
 post-install:
 	@${MKDIR} ${STAGEDIR}${STATEDIR}
+	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/syslog.d
 .if ${PORT_OPTIONS:MBASH}
 	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/bash_completion.d/
 	${INSTALL_DATA} ${WRKSRC}/scripts/misc/nut.bash_completion ${STAGEDIR}${PREFIX}/etc/bash_completion.d/
