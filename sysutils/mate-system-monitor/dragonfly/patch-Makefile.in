@@ -1,0 +1,13 @@
+Allow to build mate-system-monitor without polkit installed.
+
+--- Makefile.in.intermediate	2020-11-14 17:32:17.000000000 +0000
++++ Makefile.in
+@@ -1057,7 +1057,7 @@ org.mate.mate-system-monitor.policy.in:
+ 	$(AM_V_GEN) sed -e "s|\@pkglibexecdir\@|$(pkglibexecdir)|" $< > $@
+ 
+ $(polkit_policy_DATA): $(polkit_policy_in_files)
+-	$(AM_V_GEN) $(MSGFMT) --xml --template $< -d $(top_srcdir)/po -o $@
++	$(AM_V_GEN) $(MSGFMT) --xml --template $< -d $(top_srcdir)/po -o $@ || touch $@
+ 
+ $(Applications_DATA): $(Applications_in_files)
+ 	$(AM_V_GEN) $(MSGFMT) --desktop --template $< -d $(top_srcdir)/po -o $@
