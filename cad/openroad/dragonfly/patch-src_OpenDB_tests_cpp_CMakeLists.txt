@@ -1,0 +1,10 @@
+--- src/OpenDB/tests/cpp/CMakeLists.txt.orig	2020-09-02 19:40:26 UTC
++++ src/OpenDB/tests/cpp/CMakeLists.txt
+@@ -7,7 +7,6 @@ link_libraries(opendb
+         defout
+         lefout
+         lefin
+-        tcl
+ )
+ include_directories(${PROJECT_SOURCE_DIR}/include/opendb)
+ add_executable( test1 ${PROJECT_SOURCE_DIR}/tests/cpp/test.cpp )

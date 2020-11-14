@@ -1,0 +1,9 @@
+--- src/OpenDB/src/db/CMakeLists.txt.orig	2020-09-02 19:40:26 UTC
++++ src/OpenDB/src/db/CMakeLists.txt
+@@ -120,6 +120,4 @@ target_link_libraries(opendb
+         lefout
+         zutil
+         lefin
+-    PRIVATE
+-        tcl
+ )
