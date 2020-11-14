@@ -1,6 +1,9 @@
 # make sure that openmp threading is not used during build!
 MAKE_ENV+= OMP_NUM_THREADS=1
 
+# until graphics/oidn is free of fetch crisis
+OPTIONS_DEFAULT_x86_64:=	${OPTIONS_DEFAULT_x86_64:NOPENIMAGEDN}
+
 # no libunwind
 CAMERATRACK_LIB_DEPENDS:=
 
