@@ -1,5 +1,9 @@
 # Port requires libssp*
 
+USES+=	ncurses
+
+OPTIONS_DEFAULT+=	NOLIBPKG
+
 MAKE_ENV+=		OPSYS=${OPSYS}
 MAKE_ENV+=		MIB_SYSTEM_LIBS="-lkinfo"
 
