@@ -1,6 +1,4 @@
 bin/evince
-bin/evince-previewer
-bin/evince-thumbnailer
 include/evince/%%VERSION%%/evince-document.h
 include/evince/%%VERSION%%/evince-view.h
 include/evince/%%VERSION%%/libdocument/ev-annotation.h
@@ -64,23 +62,17 @@ lib/evince/4/backends/pdfdocument.evince-backend
 lib/evince/4/backends/psdocument.evince-backend
 lib/evince/4/backends/tiffdocument.evince-backend
 %%XPS%%lib/evince/4/backends/xpsdocument.evince-backend
-lib/girepository-1.0/EvinceDocument-%%VERSION%%.typelib
-lib/girepository-1.0/EvinceView-%%VERSION%%.typelib
 lib/libevdocument3.so
 lib/libevdocument3.so.4
 lib/libevdocument3.so.4.0.0
 lib/libevview3.so
 lib/libevview3.so.3
 lib/libevview3.so.%%GTK3_VERSION%%
-%%NAUTILUS%%lib/nautilus/extensions-%%VERSION%%/libevince-properties-page.so
 libdata/pkgconfig/evince-document-%%VERSION%%.pc
 libdata/pkgconfig/evince-view-%%VERSION%%.pc
-%%DBUS%%libexec/evinced
 man/man1/evince.1.gz
 share/GConf/gsettings/evince.convert
-share/applications/org.gnome.Evince-previewer.desktop
 share/applications/org.gnome.Evince.desktop
-%%DBUS%%share/dbus-1/services/org.gnome.evince.Daemon.service
 %%DATADIR%%/hand-open.png
 %%DATADIR%%/icons/hicolor/16x16/actions/object-rotate-left.png
 %%DATADIR%%/icons/hicolor/16x16/actions/object-rotate-right.png
@@ -126,8 +118,6 @@ share/applications/org.gnome.Evince.desktop
 %%DATADIR%%/icons/hicolor/scalable/actions/view-sidebar-symbolic.svg
 %%DATADIR%%/icons/hicolor/scalable/actions/visible-symbolic.svg
 %%DATADIR%%/icons/hicolor/scalable/mimetypes/x-office-presentation.svg
-share/gir-1.0/EvinceDocument-%%VERSION%%.gir
-share/gir-1.0/EvinceView-%%VERSION%%.gir
 share/help/C/evince/annotation-properties.page
 share/help/C/evince/annotations-delete.page
 share/help/C/evince/annotations-disabled.page
@@ -2886,4 +2876,3 @@ share/metainfo/evince-psdocument.metainfo.xml
 share/metainfo/evince-tiffdocument.metainfo.xml
 %%XPS%%share/metainfo/evince-xpsdocument.metainfo.xml
 share/metainfo/org.gnome.Evince.appdata.xml
-share/thumbnailers/evince.thumbnailer
