@@ -1,4 +1,9 @@
 
+# zrj: for now avoid graphics/colord->sysutils/polkit->lang/spidermonkey78->devel/llvm90
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NCOLORD}
+
+# should be solved by ATK_BRIDGE option now
+.if 0
 # zrj: mark hidden dbus dependencies us such (respect users freedom!)
 # https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=194460
 
@@ -11,6 +16,7 @@ OPTIONS_DEFAULT+=	DBUS
 DBUS_CONFIGURE_WITH=atk-bridge
 DBUS_LIB_DEPENDS=libatk-bridge-2.0.so:accessibility/at-spi2-atk
 DBUS_DESC=	AT-SPI ATK bridge support (hidden depends on devel/dbus)
+.endif
 
 dfly-patch:
 	${REINPLACE_CMD} -e 's/\(PANGO_PACKAGES="pango pangocairo\)"/\1 fribidi"/' \
