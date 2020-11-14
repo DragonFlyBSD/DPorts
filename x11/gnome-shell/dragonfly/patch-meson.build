@@ -1,6 +1,6 @@
---- meson.build.intermediate	2019-12-22 10:45:30.000000000 +0000
+--- meson.build.intermediate	2020-11-14 16:49:52.000000000 +0000
 +++ meson.build
-@@ -167,19 +167,6 @@ config_h = configure_file(
+@@ -229,19 +229,6 @@ config_h = configure_file(
  
  conf_inc = include_directories('.')
  
@@ -17,6 +17,6 @@
 -)
 -libgvc_gir = libgvc.get_variable('libgvc_gir')
 -
- subdir('js')
- subdir('src')
- subdir('po')
+ libshew = subproject('shew',
+   default_options: [
+     'package_name=@0@'.format(meson.project_name()),
