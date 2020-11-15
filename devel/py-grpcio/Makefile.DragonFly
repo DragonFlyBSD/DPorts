@@ -1,6 +1,10 @@
 dfly-patch:
 	${REINPLACE_CMD} -e 's|FreeBSD|DragonFly|' \
 		${WRKSRC}/Makefile \
+		${WRKSRC}/third_party/abseil-cpp/absl/base/config.h \
+		${WRKSRC}/third_party/abseil-cpp/absl/base/internal/endian.h \
+		${WRKSRC}/third_party/abseil-cpp/absl/base/internal/sysinfo.cc \
+		${WRKSRC}/third_party/abseil-cpp/absl/base/internal/raw_logging.cc \
 		${WRKSRC}/include/grpc/impl/codegen/port_platform.h \
 		${WRKSRC}/third_party/zlib/contrib/minizip/ioapi.h \
 		${WRKSRC}/third_party/boringssl-with-bazel/src/third_party/googletest/include/gtest/internal/gtest-port-arch.h
