@@ -1,7 +1,10 @@
 USES+=	ncurses
 
+# expose ncurses internals for KEY_EVENT
+CFLAGS+=	-DKEY_EVENT=0633
+
 # sigh
 dfly-patch:
-	${REINPLACE_CMD} -e "s@\(-DHSNCURSES_NARROW_HEADER\)@\1 ${CFLAGS}@g" \
+	${REINPLACE_CMD} -e "s@\(-DHSNCURSES_NARROW_HEADER\)@\1 -DNCURSES_INTERNALS ${CFLAGS} @g" \
 			 -e 's@\(\|\| os(freebsd)\)@\1 || os(dragonfly)@g' \
 		${WRKSRC}/ncurses-0.2.16/ncurses.cabal
