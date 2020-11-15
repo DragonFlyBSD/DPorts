@@ -1,0 +1,13 @@
+--- main/Makefile.intermediate	2019-05-28 17:20:06.000000000 +0000
++++ main/Makefile
+@@ -78,6 +78,10 @@ else
+   endif
+ endif
+ 
++ifeq ($(OSARCH),DragonFly)
++  AST_LIBS+=-pthread -L/usr/local/lib -lcrypto -lm
++endif
++
+ ifeq ($(OSARCH),FreeBSD)
+   # -V is understood by BSD Make, not by GNU make.
+   BSDVERSION=$(OSVERSION)
