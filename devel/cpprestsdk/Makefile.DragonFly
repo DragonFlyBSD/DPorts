@@ -1,2 +1,3 @@
 
-CXXFLAGS+=	-Wno-error=conversion -Wno-format-truncation
+CXXFLAGS:=	${CXXFLAGS:N-Wno-c11-extensions}
+CXXFLAGS+=	-Wno-error=conversion -Wno-format-truncation -Wno-format-overflow
