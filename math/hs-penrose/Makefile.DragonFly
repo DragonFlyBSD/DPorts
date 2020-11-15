@@ -1,0 +1,13 @@
+
+# OVERRIDE
+LIB_DEPENDS:=	${LIB_DEPENDS:Nlibgfortran*}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@os(freebsd)@os(dragonfly)@g' \
+		${WRKSRC}/simple-sendfile-*/simple-sendfile.cabal \
+		${WRKSRC}/warp-*/warp.cabal
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
+		${WRKSRC}/hmatrix-*/src/Internal/C/vector-aux.c
+	${REINPLACE_CMD} -e 's@linux@dragonfly@g' \
+			 -e "s@/usr/lib/openblas/lib@${LOCALBASE}/lib@g" \
+		${WRKSRC}/hmatrix-*/hmatrix.cabal
