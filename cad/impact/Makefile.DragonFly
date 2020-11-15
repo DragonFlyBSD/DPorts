@@ -1,0 +1,7 @@
+
+# clean up foreign binaries
+dfly-install:
+	${RM} -rfv ${STAGEDIR}${LOCALBASE}/share/java/Impact/lib_j3d/linux_*
+	${RM} -rfv ${STAGEDIR}${LOCALBASE}/share/java/Impact/lib_j3d/solaris_*
+	${RM} -rfv ${STAGEDIR}${LOCALBASE}/share/java/Impact/lib_j3d/windows_*
+	${RM} -fv ${STAGEDIR}${LOCALBASE}/share/java/Impact/lib/lib*.so
