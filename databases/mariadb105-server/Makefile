@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME?=	mariadb
-PORTVERSION=	10.5.4
-PORTREVISION?=	1
+PORTVERSION=	10.5.6
+PORTREVISION?=	0
 CATEGORIES=	databases
 MASTER_SITES=	http://mirrors.supportex.net/${SITESDIR}/ \
 		http://mirror2.hs-esslingen.de/pub/Mirrors/${SITESDIR}/ \
@@ -40,6 +40,7 @@ DOCSDIR=	${PREFIX}/share/doc/mysql
 
 MARIADB_USER?=		mysql
 MARIADB_GROUP?=		mysql
+MARIADB_DBDIR?=		/var/db/mysql
 MARIADB_RUNDIR?=	/var/run/mysql
 MARIADB_SOCK?=		mysql.sock
 MARIADB_LOGDIR?=	/var/log/mysql
@@ -85,7 +86,7 @@ CMAKE_ARGS+=	-DCMAKE_PREFIX_PATH=${PREFIX} \
 		-DINSTALL_DOCREADMEDIR="share/doc/mysql" \
 		-DINSTALL_INFODIR="info" \
 		-DINSTALL_LIBDIR="lib/mysql" \
-		-DINSTALL_MYSQLDATADIR="/var/db/mysql" \
+		-DINSTALL_MYSQLDATADIR="${MARIADB_DBDIR}" \
 		-DINSTALL_MYSQLSHAREDIR="share/mysql" \
 		-DINSTALL_MYSQLTESTDIR= \
 		-DINSTALL_PLUGINDIR="lib/mysql/plugin" \
@@ -125,6 +126,7 @@ GSSAPI_MIT_USES=	gssapi:mit
 GSSAPI_NONE_CMAKE_ON=	-DPLUGIN_AUTH_GSSAPI_CLIENT=OFF
 OPTIONS_SUB=		yes
 SUB_LIST+=	MARIADB_USER="${MARIADB_USER}" \
+		MARIADB_DBDIR="${MARIADB_DBDIR}" \
 		MARIADB_RUNDIR="${MARIADB_RUNDIR}" \
 		MARIADB_SOCK="${MARIADB_SOCK}"
 PLIST_SUB+=	MARIADB_USER="${MARIADB_USER}" \
@@ -158,7 +160,7 @@ ${ENGINE}_CMAKE_OFF=	-DPLUGIN_${ENGINE}=NO
 ${ENGINE}_CMAKE_ON=	-DPLUGIN_${ENGINE}=DYNAMIC
 .endfor
 INNOBASE_VARS_OFF=	disabled_plugins+=INNOBASE
-COLUMNSTORE_BROKEN=	fatal error: 'sys/sysinfo.h' file not found
+#COLUMNSTORE_BROKEN=	fatal error: 'sys/sysinfo.h' file not found
 CONNECT_EXTRA_LIB_DEPENDS=	libodbc.so:databases/unixODBC
 CONNECT_EXTRA_USE=		gnome=libxml2
 CONNECT_EXTRA_USES=		gnome

@@ -1,1 +1,5 @@
 OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NGSSAPI_BASE} GSSAPI_MIT
+
+# just to fix stage-qa (orphans)
+dfly-install:
+	-${RM} ${STAGEDIR}${LOCALBASE}/man/man1/aria_s3_copy.1
