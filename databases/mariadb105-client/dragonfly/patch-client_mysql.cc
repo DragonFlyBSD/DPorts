@@ -1,7 +1,7 @@
---- client/mysql.cc.orig	2020-06-23 15:10:16 UTC
+--- client/mysql.cc.orig	2015-12-16 16:05:44 UTC
 +++ client/mysql.cc
-@@ -61,7 +61,7 @@ static char *server_version= NULL;
- #include "client_metadata.h"
+@@ -60,7 +60,7 @@ static char *server_version= NULL;
+ #include "sql_string.h"
  
  extern "C" {
 -#if defined(HAVE_CURSES_H) && defined(HAVE_TERM_H)
