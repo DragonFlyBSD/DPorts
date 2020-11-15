@@ -1,0 +1,10 @@
+--- src/modules/ecore_evas/vnc_server/ecore_evas_vnc_server_fb_keymap.c.orig	2020-06-17 07:47:44 UTC
++++ src/modules/ecore_evas/vnc_server/ecore_evas_vnc_server_fb_keymap.c
+@@ -1,5 +1,7 @@
+ #if defined(__linux__)
+  #include <linux/input-event-codes.h>
++#elif defined(__DragonFly__)
++ #include <dev/misc/evdev/input-event-codes.h>
+ #elif defined(__FreeBSD__)
+  #include <dev/evdev/input-event-codes.h>
+ #endif
