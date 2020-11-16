@@ -25,7 +25,7 @@ include/lammps/lmppython.h
 include/lammps/lmptype.h
 include/lammps/memory.h
 include/lammps/modify.h
-%%NO_MPI%%include/lammps/mpi/mpi.h
+%%MPI%%include/lammps/mpi/mpi.h
 include/lammps/neigh_list.h
 include/lammps/neighbor.h
 include/lammps/output.h
@@ -35,6 +35,7 @@ include/lammps/region.h
 include/lammps/timer.h
 include/lammps/universe.h
 include/lammps/update.h
+include/lammps/utils.h
 include/lammps/variable.h
 lib/cmake/LAMMPS/LAMMPSConfig.cmake
 lib/cmake/LAMMPS/LAMMPSConfigVersion.cmake
