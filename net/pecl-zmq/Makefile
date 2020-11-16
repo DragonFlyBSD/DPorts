@@ -13,5 +13,6 @@ LICENSE=	BSD3CLAUSE
 LIB_DEPENDS=	libzmq.so:net/libzmq4
 
 USES=		php:pecl pkgconfig
+IGNORE_WITH_PHP= 80
 
 .include <bsd.port.mk>
