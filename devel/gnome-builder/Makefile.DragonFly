@@ -1,1 +1,7 @@
+
 OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NCLANG}
+
+# work around bad pkg-plist w/o clang option
+dfly-install:
+	${TOUCH} ${STAGEDIR}${LOCALBASE}/libexec/gnome-builder-clang
+	${TOUCH} ${STAGEDIR}${LOCALBASE}/share/glib-2.0/schemas/org.gnome.builder.clang.gschema.xml
