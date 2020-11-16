@@ -15,6 +15,7 @@ include/libsemigroups/HPCombi/include/vect16.hpp
 include/libsemigroups/HPCombi/include/vect_generic.hpp
 include/libsemigroups/action.hpp
 include/libsemigroups/adapters.hpp
+include/libsemigroups/bitset.hpp
 include/libsemigroups/blocks.hpp
 include/libsemigroups/bmat8.hpp
 include/libsemigroups/bruidhinn-traits.hpp
@@ -29,6 +30,7 @@ include/libsemigroups/coset.hpp
 include/libsemigroups/deprecated.hpp
 include/libsemigroups/digraph-helper.hpp
 include/libsemigroups/digraph.hpp
+include/libsemigroups/element-adapters.hpp
 include/libsemigroups/element-helper.hpp
 include/libsemigroups/element.hpp
 include/libsemigroups/forest.hpp
@@ -43,12 +45,14 @@ include/libsemigroups/int-range.hpp
 include/libsemigroups/iterator.hpp
 include/libsemigroups/kbe.hpp
 include/libsemigroups/knuth-bendix.hpp
+include/libsemigroups/konieczny.hpp
 include/libsemigroups/libsemigroups-config.hpp
 include/libsemigroups/libsemigroups-debug.hpp
 include/libsemigroups/libsemigroups-exception.hpp
 include/libsemigroups/libsemigroups.hpp
 include/libsemigroups/obvinf.hpp
 include/libsemigroups/order.hpp
+include/libsemigroups/pool.hpp
 include/libsemigroups/race.hpp
 include/libsemigroups/report.hpp
 include/libsemigroups/runner.hpp
