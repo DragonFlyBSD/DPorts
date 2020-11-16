@@ -19,5 +19,6 @@ GH_PROJECT=	php-${PORTNAME}
 
 USES=		php:ext
 CONFIGURE_ARGS=	--with-bsdconv=${LOCALBASE}
+IGNORE_WITH_PHP= 80
 
 .include <bsd.port.mk>
