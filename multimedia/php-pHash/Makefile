@@ -20,6 +20,7 @@ LIB_DEPENDS=	libpHash.so:multimedia/pHash
 USES=		compiler:c++11-lang php:ext
 
 WRKSRC_SUBDIR=	bindings/php
+IGNORE_WITH_PHP= 80
 
 # The tarball contains stale pre-built files that interfere with building this
 # ourselves.
