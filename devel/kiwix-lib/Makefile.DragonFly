@@ -1,1 +1,4 @@
 USES+=	localbase:ldflags
+
+# for compressBound()
+LDFLAGS+=	-lz
