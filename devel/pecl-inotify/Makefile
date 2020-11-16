@@ -14,5 +14,6 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 LIB_DEPENDS=	libinotify.so:devel/libinotify
 
 USES=		php:pecl
+IGNORE_WITH_PHP= 80
 
 .include <bsd.port.mk>
