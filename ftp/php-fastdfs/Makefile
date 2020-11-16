@@ -24,5 +24,6 @@ WRKSRC_SUBDIR=	php_client
 CONFIGURE_ENV=	ROOT=${LOCALBASE}
 
 PHP_MODNAME=	fastdfs_client
+IGNORE_WITH_PHP= 80
 
 .include <bsd.port.mk>
