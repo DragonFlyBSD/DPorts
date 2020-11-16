@@ -1,0 +1,22 @@
+Hack for hack, same in uppsrc/plugin/FT_fontsys/FT_fontsys.cpp
+
+--- uppsrc/Draw/FontFc.cpp.orig	2020-05-03 14:21:42 UTC
++++ uppsrc/Draw/FontFc.cpp
+@@ -11,7 +11,7 @@
+ #include <fontconfig/fcfreetype.h>
+ 
+ // #include <ftxf86.h> // The only function required from that header:
+-FT_EXPORT( const char* ) FT_Get_X11_Font_Format( FT_Face  face ); // Put here to avoid include path issues...
++//FT_EXPORT( const char* ) FT_Get_X11_Font_Format( FT_Face  face ); // Put here to avoid include path issues...
+ 
+ namespace Upp {
+ 
+@@ -151,7 +151,7 @@ CommonFontInfo GetFontInfoSys(Font font)
+ 		fi.avewidth = fi.maxwidth;
+ 		fi.default_char = '?';
+ 		fi.fixedpitch = font.GetFaceInfo() & Font::FIXEDPITCH;
+-		fi.ttf = strcmp(FT_Get_X11_Font_Format(face), "TrueType") == 0;
++		fi.ttf = true;//strcmp(FT_Get_X11_Font_Format(face), "TrueType") == 0; // ????
+ 		if(path.GetCount() < 250)
+ 			strcpy(fi.path, ~path);
+ 		else
