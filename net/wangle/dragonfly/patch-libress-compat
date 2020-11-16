@@ -1,0 +1,11 @@
+--- ssl/SSLUtil.h.orig	2020-10-25 13:24:25 UTC
++++ ssl/SSLUtil.h
+@@ -100,7 +100,7 @@ class SSLUtil {
+  private:
+    // The following typedefs are needed for compatibility across various OpenSSL
+    // versions since each change the dup function param types ever so slightly
+-#if FOLLY_OPENSSL_IS_110 || defined(OPENSSL_IS_BORINGSSL)
++#if (FOLLY_OPENSSL_IS_110 || defined(OPENSSL_IS_BORINGSSL)) && !defined(LIBRESSL_VERSION_NUMBER)
+   using ex_data_dup_from_arg_t = const CRYPTO_EX_DATA*;
+ #else
+   using ex_data_dup_from_arg_t = CRYPTO_EX_DATA*;
