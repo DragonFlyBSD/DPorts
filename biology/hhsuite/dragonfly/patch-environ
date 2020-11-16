@@ -1,0 +1,13 @@
+Ummm srsly??
+
+--- src/cs/getopt_pp.cc.orig	2020-08-16 23:16:36 UTC
++++ src/cs/getopt_pp.cc
+@@ -21,7 +21,7 @@
+ #include <unistd.h>
+ #include "getopt_pp.h"
+ 
+-#if defined(__llvm__) || defined(__APPLE__)
++#if defined(__llvm__) || defined(__APPLE__) || defined(__DragonFly__)
+ extern char** environ;
+ #endif
+ 
