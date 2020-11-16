@@ -1,3 +1,4 @@
 
 USES+=	ncurses pkgconfig
+CFLAGS+=	-L${LOCALBASE}/lib
 MAKE_ARGS:=	${MAKE_ARGS:NNCURSES*}
