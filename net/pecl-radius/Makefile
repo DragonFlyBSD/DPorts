@@ -15,6 +15,7 @@ USES=		php:pecl
 CONFIGURE_ARGS=	--enable-radius
 
 OPTIONS_DEFINE=	EXAMPLES
+IGNORE_WITH_PHP= 80
 
 post-install-EXAMPLES-on:
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
