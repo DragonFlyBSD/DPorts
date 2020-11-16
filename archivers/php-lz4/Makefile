@@ -20,5 +20,6 @@ GH_ACCOUNT=	kjdev
 GH_PROJECT=	php-ext-lz4
 
 CONFIGURE_ARGS=	--with-lz4-includedir=${LOCALBASE}
+IGNORE_WITH_PHP= 80
 
 .include <bsd.port.mk>
