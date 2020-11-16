@@ -1,0 +1,5 @@
+
+# yeet some foreign libs
+dfly-patch:
+	${REINPLACE_CMD} -e 's@, "mip.libraries"@@g' \
+		${WRKSRC}/setup.py
