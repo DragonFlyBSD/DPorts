@@ -26,6 +26,7 @@ USE_GITHUB=	yes
 GH_PROJECT=	c${PORTNAME}
 
 CONFIGURE_ARGS=	--enable-phalcon
+IGNORE_WITH_PHP= 80
 
 .include <bsd.port.pre.mk>
 
