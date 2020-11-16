@@ -39,6 +39,7 @@ SUB_LIST=	MOODLEDIR=${MOODLEDIR} \
 
 MOODLEDIR?=	www/moodle
 MOODLEDATADIR?=	moodledata
+IGNORE_WITH_PHP= 80
 
 pre-install:
 	@${ECHO_CMD} "@owner ${WWWOWN}" >> ${PLIST}
