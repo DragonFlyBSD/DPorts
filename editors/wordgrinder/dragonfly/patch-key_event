@@ -1,0 +1,12 @@
+--- src/c/arch/unix/cursesw/dpy.c.orig	2015-09-23 18:15:17 UTC
++++ src/c/arch/unix/cursesw/dpy.c
+@@ -183,7 +183,9 @@ const char* dpy_getkeyname(uni_t k)
+ 		case KEY_SRIGHT: return "KEY_SRIGHT";
+ 		case KEY_MOUSE: return "KEY_MOUSE";
+ 		case KEY_RESIZE: return "KEY_RESIZE";
++#ifdef KEY_EVENT
+ 		case KEY_EVENT: return "KEY_EVENT";
++#endif
+ 		case 13: return "KEY_RETURN";
+ 		case 27: return "KEY_ESCAPE";
+ 	}
