@@ -1,0 +1,18 @@
+Missing SSL_CONF_CTX SSL_CLIENT_HELLO_RETRY SSL_CLIENT_HELLO_SUCCESS SSL_CONF_FLAG_FILE
+
+--- src/ec_sslwrap.c.orig	2020-08-01 14:32:06 UTC
++++ src/ec_sslwrap.c
+@@ -71,11 +71,11 @@
+ #define TLS_server_method SSLv23_server_method
+ #endif
+ 
+-#if (OPENSSL_VERSION_NUMBER >= 0x10100000L)
++#if (OPENSSL_VERSION_NUMBER >= 0x10100000L) && !defined(LIBRESSL_VERSION_NUMBER)
+ #define HAVE_OPENSSL_1_1_0
+ #endif
+ 
+-#if (OPENSSL_VERSION_NUMBER >= 0x10101000L)
++#if (OPENSSL_VERSION_NUMBER >= 0x10101000L) && !defined(LIBRESSL_VERSION_NUMBER)
+ #define HAVE_OPENSSL_1_1_1
+ #endif
+ 
