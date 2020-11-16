@@ -1,13 +1,15 @@
---- meson.build.orig	2019-05-29 10:00:23 UTC
+--- meson.build.orig	2020-07-02 13:20:01 UTC
 +++ meson.build
-@@ -1,21 +1,23 @@
+@@ -1,23 +1,25 @@
  project('kiwix-tools', 'cpp',
-   version : '2.0.0',
+   version : '3.1.2',
    license : 'GPL',
 -  default_options: ['c_std=c11', 'cpp_std=c++11', 'werror=true'])
 +  default_options: ['c_std=c11', 'cpp_std=c++11', 'werror=false'])
  
  compiler = meson.get_compiler('cpp')
+ 
+ add_global_arguments('-DKIWIX_TOOLS_VERSION="@0@"'.format(meson.project_version()), language : 'cpp')
  
 -static_linkage = get_option('static-linkage')
 +static_linkage = false
@@ -16,7 +18,7 @@
  endif
  
  thread_dep = dependency('threads')
--kiwixlib_dep = dependency('kiwix', version:'>=5.1.0', static:static_linkage)
+-kiwixlib_dep = dependency('kiwix', version:'>=9.3.0', static:static_linkage)
 -microhttpd_dep = dependency('libmicrohttpd', static:static_linkage)
 -z_dep = dependency('zlib', static:static_linkage)
 +lzmalib_dep = compiler.find_library('lzma')
