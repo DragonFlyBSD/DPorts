@@ -16,5 +16,6 @@ USES=		php:pecl samba:lib
 CONFIGURE_ARGS=	--with-libsmbclient=${LOCALBASE}
 CPPFLAGS+=	-I${SAMBAINCLUDES}
 LDFLAGS+=	-L${SAMBALIBS}
+IGNORE_WITH_PHP= 80
 
 .include <bsd.port.mk>
