@@ -13,5 +13,6 @@ LICENSE=	PHP301
 USES=		php:pecl
 
 CONFIGURE_ARGS=	--enable-eio
+IGNORE_WITH_PHP= 80
 
 .include <bsd.port.mk>
