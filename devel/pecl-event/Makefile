@@ -16,6 +16,6 @@ LIB_DEPENDS=	libevent.so:devel/libevent
 USES=		php:pecl ssl
 CONFIGURE_ARGS=	--with-openssl-dir=${OPENSSLBASE}
 USE_PHP=	sockets:build
-IGNORE_WITH_PHP=	74
+IGNORE_WITH_PHP=	74 80
 
 .include <bsd.port.mk>
