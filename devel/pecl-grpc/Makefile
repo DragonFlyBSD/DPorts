@@ -15,6 +15,7 @@ BROKEN_mips=		fails to compile: fatal error: sys/auxv.h file not found
 BROKEN_mips64=		fails to compile: fatal error: sys/auxv.h file not found
 
 USES=		compiler:c++11-lang php:pecl
+IGNORE_WITH_PHP= 80
 
 .include <bsd.port.pre.mk>
 
