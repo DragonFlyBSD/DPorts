@@ -7,7 +7,9 @@ dfly-patch:
 			 -e 's@"loop-strip-mine",@@g' \
 		${WRKSRC}/src/common/fast_guided_filter.h \
 		${WRKSRC}/src/common/iop_order.c \
+		${WRKSRC}/src/common/iop_profile.c \
 		${WRKSRC}/src/common/luminance_mask.h \
 		${WRKSRC}/src/iop/choleski.h \
 		${WRKSRC}/src/iop/filmicrgb.c \
+		${WRKSRC}/src/iop/negadoctor.c \
 		${WRKSRC}/src/iop/toneequal.c
