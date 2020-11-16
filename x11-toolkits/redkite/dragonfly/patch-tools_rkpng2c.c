@@ -16,7 +16,7 @@ const unsigned char about.png[] = {
 };
 
 
---- tools/rkpng2c.c.orig	2019-08-06 19:58:51 UTC
+--- tools/rkpng2c.c.orig	2020-10-25 12:39:57 UTC
 +++ tools/rkpng2c.c
 @@ -29,6 +29,10 @@
  #define RK_VERSION_STR "1.0.0"
@@ -34,21 +34,21 @@ const unsigned char about.png[] = {
  
          const unsigned char *buff = cairo_image_surface_get_data(image);
 +#ifdef __DragonFly__
-+	char *b1 = strdup(basename(argv[1]));
-+	char *b3 = strdup(basename(argv[3]));
++        char *b1 = strdup(basename(argv[1]));
++        char *b3 = strdup(basename(argv[3]));
 +#endif
          fprintf(fptr, "/**\n"
-                       " * Generated with png2c\n"
+                       " * Generated with rkpng2c version %s, part of Redkite GUI toolkit.\n"
                        " * File name: %s\n"
-                       " * Image size name: %dx%d\n"
+                       " * Image size: %dx%d\n"
                        " */\n"
                        "\n"
 +#ifdef __DragonFly__
-+                "const unsigned char %s[] = {\n", b1, w, h, b3);
-+		free(b1);
-+		free(b3);
++               "const unsigned char %s[] = {\n", RK_VERSION_STR, b1, w, h, b3);
++               free(b1);
++               free(b3);
 +#else
-                 "const unsigned char %s[] = {\n", basename(argv[1]), w, h, basename(argv[3]));
+                 "const unsigned char %s[] = {\n", RK_VERSION_STR, basename(argv[1]), w, h, basename(argv[3]));
 +#endif
          for (int i = 0; i < w * h * 4; i++) {
                  if ((i + 1) == 12 || (i + 1) % 12 == 0)
