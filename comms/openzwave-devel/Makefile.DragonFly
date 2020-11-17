@@ -7,4 +7,5 @@ dfly-patch:
 		${WRKSRC}/cpp/src/platform/unix/ThreadImpl.cpp \
 		${WRKSRC}/cpp/src/value_classes/Value.h
 	${REINPLACE_CMD} -e '/UNAME/s@FreeBSD@DragonFly@g' \
+			 -e '/error FreeBSD pre/d' \
 		${WRKSRC}/cpp/build/Makefile
