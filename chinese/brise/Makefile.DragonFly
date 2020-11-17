@@ -1,0 +1,9 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's,@,,g' ${WRKSRC}/Makefile
+
+# some strangeness, just get it to stage for now
+dfly-build:
+	${MV} -fv ${WRKSRC}/data/build/*.bin ${WRKSRC}/data/
+	${RM} -rfv ${WRKSRC}/data/build
+	${RM} -fv ${WRKSRC}/data/user.yaml
