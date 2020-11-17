@@ -6,6 +6,7 @@ dfly-patch:
 		${WRKSRC}/cpp/src/aes/brg_endian.h \
 		${WRKSRC}/cpp/src/value_classes/Value.h
 	${REINPLACE_CMD} -e '/UNAME/s@FreeBSD@DragonFly@g' \
+			 -e '/error FreeBSD pre/d' \
 		${WRKSRC}/cpp/build/Makefile
 
 # to avoid orphans, before post-install in MF
