@@ -293,19 +293,7 @@ post-build:
 .endif
 
 post-install:
-	# pkg workaround time again;
-	# the whole purpose of this dance is to move the necessities for
-	# /etc/fstab fsck'ing into /sbin, and symlink to these guys
-	# in the regular hierarchy, normally $PREFIX/sbin. Hard links may
-	# crash the install if /usr[/local] is a separate file system from /,
-	# and pkg 1.15.4 can't automatically unroll or install relative symlinks.
-	${MKDIR} ${STAGEDIR}/sbin
-	${MV} -f ${STAGEDIR}${PREFIX}/sbin/e2fsck ${STAGEDIR}/sbin/ # from INSTALL_TARGET
-	${INSTALL_PROGRAM} ${WRKSRC}/fsck_ext2fs ${STAGEDIR}/sbin/  # from port
-	# according to TPH 6.1.1 Handling Symbolic Links, these are to be absolute,
-	# yet stage-qa warns about these on 2020-09-16:
-	${LN} -fs /sbin/fsck_ext2fs ${STAGEDIR}${PREFIX}/sbin/
-	${LN} -fs /sbin/e2fsck      ${STAGEDIR}${PREFIX}/sbin/
+	${INSTALL_PROGRAM} ${WRKSRC}/fsck_ext2fs ${STAGEDIR}${PREFIX}/sbin/
 	# these are made hardlinks to symlinks - -P avoids following them to /sbin:
 	${LN} -fP ${STAGEDIR}${PREFIX}/sbin/e2fsck ${STAGEDIR}${PREFIX}/sbin/fsck.ext2
 	${LN} -fP ${STAGEDIR}${PREFIX}/sbin/e2fsck ${STAGEDIR}${PREFIX}/sbin/fsck.ext3
