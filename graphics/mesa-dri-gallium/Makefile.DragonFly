@@ -19,11 +19,15 @@ SUB_FILES+=	pkg-install pkg-deinstall
 DFLY_FILESDIR=	${.CURDIR}/dragonfly
 
 # these are actually needed to ensure non outdated headers are used
-MESON_ARGS+=	-Dgles2=true -Degl=true
+MESON_ARGS+=	-Dgles2=enabled -Degl=enabled
 
+# XXX ENOTIME atm
+.if 0
 # some toolsery resed
 #	-${REINPLACE_CMD} -e "s@, 'xvmcz'@@g" ${WRKSRC}/meson.build
 dfly-patch:
+	-${REINPLACE_CMD} -e "/error('Intel tools/d" \
+		${WRKSRC}/meson.build
 	-${REINPLACE_CMD} -e "s@\!/bin/bash@\!${LOCALBASE}/bin/bash@g" \
 		${WRKSRC}/src/intel/tools/intel*.in
 	-${REINPLACE_CMD} -e "s@'XvMCW')@'XvMCW' , dirs: [ '${LOCALBASE}/lib/' ])@g" \
@@ -34,8 +38,9 @@ dfly-patch:
 			 -e 's@program_invocation_short_name@getprogname()@g' \
 		${WRKSRC}/src/intel/tools/intel_sanitize_gpu.c \
 		${WRKSRC}/src/intel/tools/intel_dump_gpu.c
+.endif
 
-# move everything so special dir, install handled by pkg-install script
+# move everything to a special dir, overlay install handled by pkg-install script
 dfly-install:
 .if defined(DEVELOPER)
 	${MD5} -r ${STAGEDIR}/${LOCALBASE}/include/EGL/*
