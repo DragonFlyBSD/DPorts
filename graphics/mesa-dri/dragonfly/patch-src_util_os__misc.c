@@ -9,7 +9,12 @@
  #  include <sys/resource.h>
  #  include <sys/sysctl.h>
  #elif DETECT_OS_APPLE || DETECT_OS_BSD
-@@ -217,7 +217,7 @@ os_get_available_system_memory(uint64_t
+@@ -213,11 +213,11 @@ os_get_available_system_memory(uint64_t
+ 
+    free(meminfo);
+    return false;
+-#elif defined(DETECT_OS_OPENBSD) || defined(DETECT_OS_FREEBSD)
++#elif defined(DETECT_OS_OPENBSD) || defined(DETECT_OS_FREEBSD) || defined(DETECT_OS_DRAGONFLY)
     struct rlimit rl;
  #if DETECT_OS_OPENBSD
     int mib[] = { CTL_HW, HW_USERMEM64 };

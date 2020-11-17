@@ -73,10 +73,10 @@ MESA_PLATFORMS+=	wayland
 # gallium drivers are installed separately in graphics/mesa-gallium port
 .if ${OPSYS} == DragonFly
 OPTIONS_EXCLUDE:=	VAAPI VDPAU
-DRI_DRIVERS:=		R100 R200 I915 I965 SWRAST
+DRI_DRIVERS:=		I915 I965 R100 R200 SWRAST
 GALLIUM_DRIVERS:=
 VULKAN_DRIVERS:=	# requires render nodes on INTEL # AMD vulkan driver requires llvm
-MESON_ARGS+=		-Dgallium-xvmc=false -Dgallium-xa=false -Dgallium-va=false -Dgallium-vdpau=false
+MESON_ARGS+=		-Dgallium-xvmc=disabled -Dgallium-xa=disabled -Dgallium-va=disabled -Dgallium-vdpau=disabled
 .endif
 
 MESON_ARGS+=	-Ddri-drivers="${DRI_DRIVERS:ts,:tl}" \

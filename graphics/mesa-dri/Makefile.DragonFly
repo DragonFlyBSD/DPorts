@@ -16,7 +16,7 @@ dfly-patch:
 .endif
 
 # these are actually needed to ensure non outdated headers are used
-MESON_ARGS+=	-Dgles2=true -Degl=true
+MESON_ARGS+=	-Dgles2=enabled -Degl=enabled
 
 # prune some intermediates to fix stage-qa XXX
 dfly-install:
