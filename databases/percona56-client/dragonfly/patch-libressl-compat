@@ -1,0 +1,62 @@
+--- vio/viosslfactories.c.intermediate	2020-11-17 07:05:45.000000000 +0000
++++ vio/viosslfactories.c
+@@ -342,9 +342,11 @@ new_VioSSLFd(const char *key_file, const
+   struct st_VioSSLFd *ssl_fd;
+   /* MySQL 5.6 supports TLS up to v1.2, explicitly disable TLSv1.3. */
+   long ssl_ctx_options= SSL_OP_NO_SSLv2 | SSL_OP_NO_SSLv3 |
++#if !defined(LIBRESSL_VERSION_NUMBER) || defined(SSL_OP_NO_TLSv1_3)
+ #ifdef HAVE_TLSv13
+                         SSL_OP_NO_TLSv1_3 |
+ #endif /* HAVE_TLSv13 */
++#endif
+                         SSL_OP_NO_TICKET;
+   int ret_set_cipherlist= 0;
+   char cipher_list[SSL_CIPHER_LIST_SIZE]= {0};
+@@ -375,9 +377,11 @@ new_VioSSLFd(const char *key_file, const
+   ssl_ctx_options= (ssl_ctx_options | ssl_ctx_flags) &
+     (SSL_OP_NO_SSLv2 |
+      SSL_OP_NO_SSLv3 |
++#if !defined(LIBRESSL_VERSION_NUMBER) || defined(SSL_OP_NO_TLSv1_3)
+ #ifdef HAVE_TLSv13
+      SSL_OP_NO_TLSv1_3 |
+ #endif /* HAVE_TLSv13 */
++#endif
+      SSL_OP_NO_TLSv1
+ #ifdef SSL_OP_NO_TLSv1_1
+      | SSL_OP_NO_TLSv1_1
+@@ -412,6 +416,7 @@ new_VioSSLFd(const char *key_file, const
+ 
+   SSL_CTX_set_options(ssl_fd->ssl_context, ssl_ctx_options);
+ 
++#ifndef LIBRESSL_VERSION_NUMBER
+ #ifdef HAVE_TLSv13
+   /*
+     MySQL 5.6 doesn't support TLSv1.3 - set empty TLSv1.3 ciphersuites.
+@@ -426,6 +431,7 @@ new_VioSSLFd(const char *key_file, const
+     DBUG_RETURN(0);
+   }
+ #endif /* HAVE_TLSv13 */
++#endif
+ 
+   /*
+     Set the ciphers that can be used
+--- sql/mysqld.cc.intermediate	2020-11-17 07:42:17.000000000 +0000
++++ sql/mysqld.cc
+@@ -4694,6 +4694,7 @@ static void openssl_lock(int mode, opens
+ static int init_ssl()
+ {
+ #ifdef HAVE_OPENSSL
++#ifndef LIBRESSL_VERSION_NUMBER
+   int fips_mode= FIPS_mode();
+   if (fips_mode != 0)
+   {
+@@ -4703,7 +4704,8 @@ static int init_ssl()
+         " Disabling FIPS.");
+     FIPS_mode_set(0);
+   }
+-#if OPENSSL_VERSION_NUMBER < 0x10100000L
++#endif
++#if OPENSSL_VERSION_NUMBER < 0x10100000L || defined(LIBRESSL_VERSION_NUMBER)
+   CRYPTO_malloc_init();
+ #else /* OPENSSL_VERSION_NUMBER < 0x10100000L */
+   OPENSSL_malloc_init();
