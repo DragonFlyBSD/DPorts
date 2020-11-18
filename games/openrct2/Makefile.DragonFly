@@ -5,7 +5,12 @@ BUILD_DEPENDS+= cxxfs_gcc8>0:misc/cxxfs_gcc8
 CXXFLAGS+=	-isystem ${LOCALBASE}/cxxfs_gcc8
 LDFLAGS+=	-L${LOCALBASE}/cxxfs_gcc8
 
+# some libduktape.so missing libm
+MAKE_ENV+=	LDVER=ld.bfd
+
 # if using base c++
 dfly-patch:
 	${REINPLACE_CMD} -e 's@gcc_s gcc@gcc_pic gcc@g' \
 		${WRKSRC}/src/openrct2/CMakeLists.txt
+	${REINPLACE_CMD} -e '/ -Wnull-dereference)/d' \
+		${WRKSRC}/CMakeLists.txt
