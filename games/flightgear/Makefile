@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	flightgear
-PORTVERSION=	2019.1.1
-PORTREVISION=	2
+PORTVERSION=	2020.1.3
+PORTREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	SF/flightgear/release-${PORTVERSION:R}
 
@@ -13,13 +13,11 @@ COMMENT=	FlightGear flight simulator
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BROKEN=		pending next sync
-
 LIB_DEPENDS=	libpng.so:graphics/png \
 		libboost_thread.so:devel/boost-libs \
 		libfltk.so:x11-toolkits/fltk \
 		libfreetype.so:print/freetype2 \
-		libosg.so:graphics/osg34 \
+		libosg.so:graphics/osg \
 		libspeex.so:audio/speex \
 		libspeexdsp.so:audio/speexdsp \
 		libcurl.so:ftp/curl \
@@ -27,7 +25,8 @@ LIB_DEPENDS=	libpng.so:graphics/png \
 		libexpat.so:textproc/expat2 \
 		libSimGearCore.so:devel/simgear
 BUILD_DEPENDS=	${LOCALBASE}/lib/libplibsl.a:x11-toolkits/plib \
-		${LOCALBASE}/include/linux/input.h:devel/evdev-proto
+		${LOCALBASE}/include/linux/input.h:devel/evdev-proto \
+		${LOCALBASE}/share/flightgear/version:games/flightgear-data
 RUN_DEPENDS=	${LOCALBASE}/lib/libplibsl.a:x11-toolkits/plib \
 		${LOCALBASE}/share/flightgear/version:games/flightgear-data
 
@@ -39,6 +38,7 @@ USE_GL=		gl glew glu glut
 
 DOS2UNIX_REGEX=	.*\.(c|h|cxx|cpp|hxx|hpp)
 CMAKE_ARGS+=	-DSYSTEM_SQLITE:BOOL=ON \
+		-DENABLE_HID_INPUT:BOOL=OFF \
 		-DFG_DATA_DIR:PATH=${LOCALBASE}/share/${PORTNAME} \
 		-DCMAKE_INSTALL_MANDIR:PATH=${MANPREFIX}/man \
 		-DFGCOM_DATA_PATH:PATH=${DATADIR}
@@ -54,7 +54,7 @@ DBUS_CMAKE_OFF=	-DUSE_DBUS:BOOL=OFF
 QT5_CMAKE_ON=	-DENABLE_QT:BOOL=ON
 QT5_CMAKE_OFF=	-DENABLE_QT:BOOL=OFF
 QT5_USES=	qt:5
-QT5_USE=	QT=core,buildtools,gui,declarative,network,qmake,widgets,svg
+QT5_USE=	QT=core,buildtools,linguisttools,gui,declarative,network,qmake,widgets,svg
 
 post-patch:
 # Avoid conflict with C++20 <version> by adding .txt suffix
