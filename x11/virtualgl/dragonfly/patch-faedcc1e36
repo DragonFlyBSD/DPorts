@@ -1,0 +1,52 @@
+--- server/faker-glx.cpp.orig	2019-10-20 21:29:00 UTC
++++ server/faker-glx.cpp
+@@ -2192,11 +2192,18 @@ void glXQueryDrawable(Display *dpy, GLXD
+ 	CATCH();
+ }
+ 
++#if defined(GLX_GLXEXT_VERSION) && GLX_GLXEXT_VERSION >= 20190000
++void glXQueryGLXPbufferSGIX(Display *dpy, GLXPbuffer pbuf, int attribute,
++	unsigned int *value)
++#else
+ int glXQueryGLXPbufferSGIX(Display *dpy, GLXPbuffer pbuf, int attribute,
+ 	unsigned int *value)
++#endif
+ {
+ 	glXQueryDrawable(dpy, pbuf, attribute, value);
++#if !defined(GLX_GLXEXT_VERSION) || GLX_GLXEXT_VERSION < 20190000
+ 	return 0;
++#endif
+ }
+ 
+ 
+@@ -2358,8 +2365,13 @@ void glXSwapBuffers(Display *dpy, GLXDra
+ 
+ // Returns the transparent index from the overlay visual on the 2D X server
+ 
++#if defined(GLX_GLXEXT_VERSION) && GLX_GLXEXT_VERSION >= 20190000
++int glXGetTransparentIndexSUN(Display *dpy, Window overlay, Window underlay,
++	unsigned long *transparentIndex)
++#else
+ int glXGetTransparentIndexSUN(Display *dpy, Window overlay, Window underlay,
+ 	long *transparentIndex)
++#endif
+ {
+ 	int retval = False;
+ 	XWindowAttributes xwa;
+--- server/faker-sym.h.orig	2019-10-20 21:29:00 UTC
++++ server/faker-sym.h
+@@ -535,8 +535,14 @@ FUNCDEF2(GLXFBConfigSGIX, glXGetFBConfig
+ 
+ // GLX_SUN_get_transparent_index
+ 
++#if defined(GLX_GLXEXT_VERSION) && GLX_GLXEXT_VERSION >= 20190000
++FUNCDEF4(int, glXGetTransparentIndexSUN, Display *, dpy, Window, overlay,
++	Window, underlay, unsigned long *, transparentIndex,
++	glXGetTransparentIndexSUN);
++#else
+ FUNCDEF4(int, glXGetTransparentIndexSUN, Display *, dpy, Window, overlay,
+ 	Window, underlay, long *, transparentIndex, glXGetTransparentIndexSUN);
++#endif
+ 
+ 
+ // GL functions
