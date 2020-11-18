@@ -1,7 +1,6 @@
-# zrj: needed for lib/clc/oland-r600--.bc dep
-RUN_DEPENDS+=	libclc>=0:devel/libclc
 
-# zrj: FP prunes standard headers from ports clangs.
+# unbreak linkage from files/extra-src_gallium_auxiliary_vl_vl__stubs.c
 dfly-patch:
-	${REINPLACE_CMD} -e '/CLANG_RESOURCE_DIR/s@stddef.h@msa.h@g' \
-		${WRKSRC}/configure
+	${REINPLACE_CMD} -e "s@'vl/vl_decoder.h',@& 'vl/vl_decoder.c',@g" \
+			 -e "s@'vl/vl_video_buffer.h',@& 'vl/vl_video_buffer.c',@g" \
+		${WRKSRC}/src/gallium/auxiliary/meson.build
