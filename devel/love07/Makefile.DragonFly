@@ -1,2 +1,5 @@
 # libgcc_pic.a + ld.gold + pthread issue
 CONFIGURE_ENV+= LDVER=ld.bfd
+
+# expose glGenBuffers() etc proto
+CXXFLAGS+=	-DGL_GLEXT_PROTOTYPES
