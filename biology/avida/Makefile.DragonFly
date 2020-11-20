@@ -1,2 +1,15 @@
 # smth error: redefinition of in stl_numeric.h
 USE_CXXSTD=	gnu++98
+
+CFALGS+=	-Wundef
+
+# deal with not portable exansion to defined
+dfly-patch:
+	${FIND} ${WRKSRC}/ -type f | ${XARGS} ${GREP} -l "APTO_PLATFORM(" | ${XARGS} \
+		${REINPLACE_CMD} -e 's@APTO_PLATFORM(WINDOWS)@APTO_PLATFORM_WINDOWS@g' \
+				 -e 's@APTO_PLATFORM(APPLE)@APTO_PLATFORM_APPLE@g' \
+				 -e 's@APTO_PLATFORM(UNIX)@APTO_PLATFORM_UNIX@g' \
+				 -e 's@APTO_PLATFORM(UNIX)@APTO_PLATFORM_UNIX@g' \
+				 -e 's@APTO_PLATFORM(GNUC)@APTO_PLATFORM_GNUC@g' \
+				 -e 's@APTO_PLATFORM(MSVC)@APTO_PLATFORM_MSVC@g' \
+				 -e 's@APTO_PLATFORM(THREADS)@APTO_PLATFORM_THREADS@g'
