@@ -1,0 +1,13 @@
+Emmm.... just use 12 for little instead of hmm else paths
+
+--- lib/expat/xmltok/Makefile.orig	2019-03-29 03:33:33 UTC
++++ lib/expat/xmltok/Makefile
+@@ -24,7 +24,7 @@ include $(BLDDIR)/config.mk
+ # we started using the Gcc -Wundef option, that generates a warning, so
+ # se set it explicitly to 0 here.
+ 
+-CFLAGS_LOCAL = -DXML_BYTE_ORDER=0
++CFLAGS_LOCAL = -DXML_BYTE_ORDER=12
+ 
+ # -I. is necessary when blddir != srcdir
+ INCLUDES = -I. -I$(BLDDIR) -Isrcdir/lib/util/include -Isrcdir/include
