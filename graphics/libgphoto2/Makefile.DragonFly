@@ -9,3 +9,5 @@ dfly-patch:
 		${WRKSRC}/camlibs/kodak/dc120/dc120.c \
 		${WRKSRC}/camlibs/panasonic/coolshot/library.c \
 		${WRKSRC}/camlibs/st2205/st2205.c
+	${REINPLACE_CMD} -e 's@machine/endian.h@sys/endian.h@g' \
+		${WRKSRC}/configure
