@@ -1,0 +1,5 @@
+
+# zrj: for various standard functions visibility
+dfly-patch:
+	${REINPLACE_CMD} -e 's@machine/endian.h@sys/endian.h@g' \
+		${WRKSRC}/configure
