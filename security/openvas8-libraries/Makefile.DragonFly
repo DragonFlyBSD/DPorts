@@ -1,3 +1,4 @@
 .if defined(OPENVAS_VER) && ${OPENVAS_VER} == 8
 EXTRA_PATCHES+=	${DFLY_FILESDIR}/extra_patch-base_CMakeLists.txt
+EXTRA_PATCHES+=	${DFLY_FILESDIR}/extra-patch-nasl_nasl_builtin_synscan.c
 .endif
