@@ -1,0 +1,3 @@
+
+# to suppress matches
+CXXFLAGS+=	-Wno-write-strings
