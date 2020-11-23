@@ -1,4 +1,7 @@
 
+CFLAGS+=	-Wno-declaration-after-statement
+CXXFLAGS:=	${CXXFLAGS:N-Wno-declaration-after-statement}
+
 dfly-patch:
 	${REINPLACE_CMD} -e 's@\(MATCHES "FreeBSD\)"@\1|DragonFly"@g' \
 		${WRKSRC}/scripts/CMakeLists.txt
