@@ -1,0 +1,2 @@
+
+CFLAGS+=	-DHAVE_GETIFADDRS -Wno-pointer-sign
