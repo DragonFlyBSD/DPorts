@@ -1,8 +1,14 @@
-
-Not sure if ntohl is needed
---- cd-discid.c.orig	2003-12-16 01:55:00.000000000 +0200
+--- cd-discid.c.orig	2003-12-15 23:55:00 UTC
 +++ cd-discid.c
-@@ -37,7 +37,7 @@
+@@ -11,6 +11,7 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
++#include <arpa/inet.h>
+ 
+ #include <fcntl.h>
+ #include <sys/ioctl.h>
+@@ -37,7 +38,7 @@
   * to compile on Solaris */
  #define cdte_track_address cdte_addr.lba
  
@@ -11,7 +17,7 @@ Not sure if ntohl is needed
  
  #include <sys/cdio.h>
  #define        CDROM_LBA       CD_LBA_FORMAT   /* first frame is 0 */
-@@ -214,12 +214,12 @@ int main(int argc, char *argv[])
+@@ -214,12 +215,12 @@ int main(int argc, char *argv[])
  	}
  #endif
  
