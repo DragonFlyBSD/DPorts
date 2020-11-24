@@ -1,0 +1,4 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-D_REENTRANT @&-Wno-stringop-truncation @g' \
+		${WRKSRC}/build/Makefile.FreeBSD
