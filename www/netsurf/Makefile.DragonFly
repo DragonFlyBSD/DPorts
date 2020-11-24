@@ -1,0 +1,6 @@
+
+# expose inet_aton() in <arpa/inet.h>
+dfly-patch:
+	${REINPLACE_CMD} -e 's@D_XOPEN_SOURCE@&__@g' \
+			 -e 's@D_POSIX_C_SOURCE@&__@g' \
+		${WRKSRC}/frontends/gtk/Makefile
