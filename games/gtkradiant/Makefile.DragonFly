@@ -1,1 +1,3 @@
 USES+= alias
+
+CFLAGS+=	-Wno-deprecated-declarations
