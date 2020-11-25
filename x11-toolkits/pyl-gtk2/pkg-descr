@@ -1,0 +1,9 @@
+Excerpt from the README:
+
+ PyGTK
+ =====
+
+ This archive contains modules that allow you to use gtk in Python
+ programs.  At present, it is a fairly complete set of bindings.
+
+WWW: http://www.pygtk.org/

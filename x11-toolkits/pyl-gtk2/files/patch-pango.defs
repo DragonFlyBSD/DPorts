@@ -1,0 +1,20 @@
+Do not bind unused pango API.
+
+--- pango.defs.orig	2011-04-01 10:37:25 UTC
++++ pango.defs
+@@ -1391,15 +1391,6 @@
+   )
+ )
+ 
+-(define-virtual find_shaper
+-  (of-object "PangoFont")
+-  (return-type "PangoEngineShape*")
+-  (parameters
+-    '("PangoLanguage*" "lang")
+-    '("guint32" "ch")
+-  )
+-)
+-
+ (define-virtual get_glyph_extents
+   (of-object "PangoFont")
+   (return-type "none")
