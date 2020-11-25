@@ -1,0 +1,20 @@
+--- configure.intermediate	2014-09-14 16:06:28 UTC
++++ configure
+@@ -3287,7 +3287,7 @@ $as_echo "#define _BSD_SOURCE 1" >>confd
+   SCO_SV/3.2)
+     define_xopen_source=no;;
+   # On FreeBSD,  defining _XOPEN_SOURCE to 600 requests a strict environment.
+-  FreeBSD/*)
++  FreeBSD/* | DragonFly/*)
+     define_xopen_source=no;;
+   # On MacOS X 10.2, a bug in ncurses.h means that it craps out if
+   # _XOPEN_EXTENDED_SOURCE is defined. Apparently, this is fixed in 10.3, which
+@@ -5351,7 +5351,7 @@ $as_echo "#define Py_ENABLE_SHARED 1" >>
+ 	  BLDLIBRARY='-L. -lpython$(VERSION)'
+ 	  RUNSHARED=LD_LIBRARY_PATH=`pwd`${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+ 	  case $ac_sys_system in
+-	      FreeBSD*)
++	      DragonFly*|FreeBSD*)
+ 		SOVERSION=`echo $SOVERSION|cut -d "." -f 1`
+ 		;;
+ 	  esac
