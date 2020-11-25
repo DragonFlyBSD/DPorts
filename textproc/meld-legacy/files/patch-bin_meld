@@ -1,0 +1,60 @@
+Disable locales and dbus (use ~/.config/meld/meldrc.ini
+
+--- bin/meld	2014-07-18 22:21:38.000000000 +0000
++++ bin/meld	2020-11-25 07:16:04.979827000 +0000
+@@ -79,42 +79,6 @@ else:
+ 
+ # i18n support
+ import meld.paths
+-import gettext
+-_ = gettext.gettext
+-
+-# Locale setting in gtk.Builder appears somewhat broken under Python. See:
+-#   https://bugzilla.gnome.org/show_bug.cgi?id=574520
+-locale_domain = "meld"
+-locale_dir = meld.paths.locale_dir()
+-
+-gettext.bindtextdomain(locale_domain, locale_dir)
+-locale.setlocale(locale.LC_ALL, '')
+-gettext.textdomain(locale_domain)
+-gettext.install(locale_domain, localedir=locale_dir, unicode=True)
+-
+-try:
+-    if os.name == 'nt':
+-        from ctypes import cdll
+-        libintl = cdll.intl
+-        libintl.bindtextdomain(locale_domain, locale_dir)
+-        libintl.bind_textdomain_codeset(locale_domain, 'UTF-8')
+-    else:
+-        locale.bindtextdomain(locale_domain, locale_dir)
+-        locale.bind_textdomain_codeset(locale_domain, 'UTF-8')
+-except AttributeError as e:
+-    # Python builds linked without libintl doesn't have bindtextdomain(), which
+-    # causes gtk.Builder translations to fail.
+-    print "Couldn't bind the translation domain. Some translations won't work."
+-    print e
+-except locale.Error as e:
+-    print "Couldn't bind the translation domain. Some translations won't work."
+-    print e
+-except WindowsError as e:
+-    # Accessing cdll.intl sometimes fails on Windows for unknown reasons.
+-    # Let's just continue, as translations are non-essential.
+-    print "Couldn't bind the translation domain. Some translations won't work."
+-    print e
+-
+ 
+ # Check requirements: Python 2.6, pygtk 2.14
+ pyver = (2, 6)
+@@ -159,11 +123,7 @@ gtk.rc_parse(meld.paths.share_dir("gtkrc
+ def main():
+     import meld.meldapp
+     app = meld.meldapp.app
+-    try:
+-        import meld.dbus_service
+-        already_running, dbus_app = meld.dbus_service.setup(app)
+-    except ImportError:
+-        already_running, dbus_app = False, None
++    already_running, dbus_app = False, None
+     meld.meldapp.dbus_app = dbus_app
+ 
+     app.create_window()
