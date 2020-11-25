@@ -1,0 +1,9 @@
+include/pycairo/pylcairo.h
+%%PYTHONL_SITELIBDIR%%/cairo/__init__.py
+%%PYTHONL_SITELIBDIR%%/cairo/__init__.pyc
+%%PYTHONL_SITELIBDIR%%/cairo/__init__.pyi
+%%PYTHONL_SITELIBDIR%%/cairo/__init__.pyo
+%%PYTHONL_SITELIBDIR%%/cairo/_cairo.so
+%%PYTHONL_SITELIBDIR%%/cairo/include/pylcairo.h
+%%PYTHONL_SITELIBDIR%%/cairo/py.typed
+libdata/pkgconfig/pylcairo.pc
