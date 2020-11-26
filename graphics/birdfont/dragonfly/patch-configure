@@ -1,0 +1,11 @@
+--- configure.intermediate	2020-11-26 17:27:00.000000000 +0000
++++ configure
+@@ -153,7 +153,7 @@ for target in TARGETS:
+ 	valacflags[target] = valacflags[target].strip()
+ 	
+ if not options.prefix:
+-	if 'bsd' in sys.platform:
++	if 'bsd' in sys.platform or 'dragonfly' in sys.platform:
+ 		options.prefix = '${DESTDIR}${PREFIX}'
+ 	else:
+ 		options.prefix = '/usr'
