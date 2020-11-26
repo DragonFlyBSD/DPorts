@@ -1,0 +1,3 @@
+
+# DragonFly BSD does not define this
+CFLAGS+=	-D__WORDSIZE=64
