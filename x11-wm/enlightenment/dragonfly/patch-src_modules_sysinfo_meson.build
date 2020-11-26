@@ -1,0 +1,11 @@
+--- src/modules/sysinfo/meson.build.orig	2020-07-26 16:39:12 UTC
++++ src/modules/sysinfo/meson.build
+@@ -30,7 +30,7 @@ if config_h.has('HAVE_EEZE') == true
+   src += files(
+     'batman/batman_udev.c',
+     'thermal/thermal_udev.c')
+-elif host_machine.system().contains('bsd') == true
++elif host_machine.system().contains('bsd') == true or dragonfly == true
+   src += files(
+     'batman/batman_sysctl.c',
+     'thermal/thermal_sysctl.c',

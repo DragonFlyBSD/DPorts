@@ -1,0 +1,11 @@
+--- src/bin/meson.build.orig	2020-07-26 16:39:12 UTC
++++ src/bin/meson.build
+@@ -38,7 +38,7 @@ deps_e = [
+ 
+ deps_ckpass = [ dep_eina, dep_ecore, dep_eldbus ]
+ 
+-if freebsd == true
++if freebsd == true or dragonfly == true
+   deps_ckpass += dep_crypt
+ endif
+ 

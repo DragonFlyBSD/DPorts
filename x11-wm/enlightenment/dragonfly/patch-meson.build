@@ -1,0 +1,33 @@
+--- meson.build.orig	2020-07-26 16:39:12 UTC
++++ meson.build
+@@ -109,10 +109,11 @@ endif
+ openbsd      = host_machine.system().startswith('openbsd')
+ netbsd       = host_machine.system().startswith('netbsd')
+ freebsd      = host_machine.system().startswith('freebsd')
++dragonfly    = host_machine.system().startswith('dragonfly')
+ suid_cflags  = []
+ suid_ldflags = []
+ dep_crypt    = []
+-if freebsd == true or host_machine.system().startswith('pcbsd')
++if freebsd == true or host_machine.system().startswith('pcbsd') or dragonfly == true
+   dep_crypt = cc.find_library('crypt', required: true)
+   if cc.links('', args: '-fPIE', link_args: '-pie') == true
+     suid_cflags  = '-fPIE'
+@@ -224,7 +225,7 @@ if get_option('pam') == true
+     config_h.set('HAVE_PAM', '1')
+     dep_pam = cc.find_library('pam', required: true)
+   else
+-    if openbsd == false and freebsd == false
++    if openbsd == false and freebsd == false and dragonfly == false
+       error('PAM is not disabled and not found on non-free+open BSD platforms')
+     endif
+   endif
+@@ -363,7 +364,7 @@ endif
+ requires_e = []
+ 
+ dir_pkgconfig = join_paths(dir_lib, 'pkgconfig')
+-if freebsd == true
++if freebsd == true or dragonfly == true
+   dir_pkgconfig = join_paths(dir_lib, 'data/pkgconfig')
+ endif
+ 
