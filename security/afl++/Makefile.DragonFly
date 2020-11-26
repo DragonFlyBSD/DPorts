@@ -1,7 +1,23 @@
 
 USES+=	localbase:ldflags
 
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NLLVM}
+OPTIONS_SLAVE:=		${OPTIONS_SLAVE:NLLVM}
+
 GCC_BUILD_DEPENDS:=	gmp>0:math/gmp
 GCC_RUN_DEPENDS:=	gmp>0:math/gmp
 GCC_MAKE_ARGS:=		GCC=gcc GXX=g++
 GCC_CFLAGS:=		-I/usr/lib/gcc80/plugin
+
+# attempt to fix plist for non LLVM option
+dfly-install:
+	${TOUCH} ${STAGEDIR}${LOCALBASE}/share/doc/afl/README.cmplog.md
+	${TOUCH} ${STAGEDIR}${LOCALBASE}/share/doc/afl/README.ctx.md
+	${TOUCH} ${STAGEDIR}${LOCALBASE}/share/doc/afl/README.instrim.md
+	${TOUCH} ${STAGEDIR}${LOCALBASE}/share/doc/afl/README.laf-intel.md
+	${TOUCH} ${STAGEDIR}${LOCALBASE}/share/doc/afl/README.llvm_mode.md
+	${TOUCH} ${STAGEDIR}${LOCALBASE}/share/doc/afl/README.lto.md
+	${TOUCH} ${STAGEDIR}${LOCALBASE}/share/doc/afl/README.neverzero.md
+	${TOUCH} ${STAGEDIR}${LOCALBASE}/share/doc/afl/README.ngram.md
+	${TOUCH} ${STAGEDIR}${LOCALBASE}/share/doc/afl/README.snapshot.md
+	${TOUCH} ${STAGEDIR}${LOCALBASE}/share/doc/afl/README.whitelist.md
