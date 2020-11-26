@@ -1,0 +1,14 @@
+--- sdk/src/posix/net.cpp.orig	2018-10-02 11:03:00 UTC
++++ sdk/src/posix/net.cpp
+@@ -32,6 +32,11 @@ namespace mega {
+ 
+ MUTEX_CLASS CurlHttpIO::curlMutex(false);
+ 
++#ifdef LIBRESSL_VERSION_NUMBER
++/* missing RSA_get0_n() RSA_get0_e() */
++#undef USE_OPENSSL
++#endif
++
+ #if defined(USE_OPENSSL) && !defined(OPENSSL_IS_BORINGSSL)
+ 
+ MUTEX_CLASS **CurlHttpIO::sslMutexes = NULL;

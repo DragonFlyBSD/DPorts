@@ -1,0 +1,12 @@
+--- Makefile.am.orig	2018-09-27 07:53:46 UTC
++++ Makefile.am
+@@ -31,9 +31,7 @@ else
+ AM_CPPFLAGS+=-I$(top_srcdir)/sdk/include/mega/posix
+ endif
+ 
+-if ANDROID
+ AM_LIBTOOLFLAGS="--tag=CXX"
+-endif
+ 
+ VERSION_INFO=$(LT_CURRENT):$(LT_REVISION):$(LT_AGE)
+ 
