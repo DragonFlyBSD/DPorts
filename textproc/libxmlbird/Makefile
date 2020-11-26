@@ -27,9 +27,9 @@ CONFIGURE_ARGS=	--cc="${CC}" \
 		--prefix="${PREFIX}"
 
 PLIST_FILES=	include/xmlbird.h \
-		lib64/libxmlbird.so \
-		lib64/libxmlbird.so.1 \
-		lib64/pkgconfig/xmlbird.pc \
+		lib/libxmlbird.so \
+		lib/libxmlbird.so.1 \
+		libdata/pkgconfig/xmlbird.pc \
 		share/vala/vapi/xmlbird.vapi
 
 do-build:
@@ -37,6 +37,6 @@ do-build:
 
 do-install:
 	(cd ${WRKSRC} && ./install.py --dest="${STAGEDIR}")
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib64/libxmlbird.so.1
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libxmlbird.so.1
 
 .include <bsd.port.mk>

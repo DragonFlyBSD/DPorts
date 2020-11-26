@@ -1,0 +1,4 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@lib64@lib@g' \
+		${WRKSRC}/configure
