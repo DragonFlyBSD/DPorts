@@ -1,0 +1,6 @@
+
+# fix plist locales
+dfly-install:
+	${RM} -rfv ${STAGEDIR}${LOCALBASE}/share/locale/eu
+	${RM} -rfv ${STAGEDIR}${LOCALBASE}/share/locale/nb
+	${RM} -rfv ${STAGEDIR}${LOCALBASE}/share/locale/nn
