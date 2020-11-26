@@ -8,3 +8,9 @@ MANUAL_PACKAGE_BUILD=	huge (417M packaged)
 DFLY_ALLOW_FOREIGN_BINARIES=yes
 NO_ARCH_IGNORE+=	libdbm64.so libwebp_jni.so libwebp_jni64.so
 .endif
+
+# avoid orphans
+PLIST_FILES+=	%%DATADIR%%/lib/jnaerator-runtime-0.12.jar \
+		%%DATADIR%%/lib/jstun-0.7.5.20200723.jar \
+		%%DATADIR%%/lib/quiche-jna-stubs-15.jar \
+		%%DATADIR%%/lib/tls-channel-0.3.2.jar
