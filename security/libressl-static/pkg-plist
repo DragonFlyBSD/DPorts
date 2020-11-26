@@ -74,6 +74,7 @@ libressl-static/include/openssl/ui.h
 libressl-static/include/openssl/ui_compat.h
 libressl-static/include/openssl/whrlpool.h
 libressl-static/include/openssl/x509.h
+libressl-static/include/openssl/x509_verify.h
 libressl-static/include/openssl/x509_vfy.h
 libressl-static/include/openssl/x509v3.h
 libressl-static/include/tls.h
