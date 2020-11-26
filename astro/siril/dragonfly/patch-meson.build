@@ -1,0 +1,11 @@
+--- meson.build.orig	2020-09-22 20:01:48 UTC
++++ meson.build
+@@ -90,7 +90,7 @@ platform_osx = (
+ )
+ 
+ platform_bsd = (
+-  host_os.contains('bsd')
++  host_os.contains('bsd') or host_os.contains('dragonfly')
+ )
+ 
+ ################################################################################
