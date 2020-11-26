@@ -1,5 +1,5 @@
 PORTNAME=	openssl
-PORTVERSION=	1.1.1d
+PORTVERSION=	1.1.1h
 CATEGORIES=	security devel
 MASTER_SITES=	https://www.openssl.org/source/ \
 		ftp://ftp.cert.dfn.de/pub/tools/net/openssl/source/
@@ -64,9 +64,9 @@ RC4_DESC=	RC4 (unsafe)
 RC5_DESC=	RC5 (patented)
 RMD160_DESC=	RIPEMD-160
 RFC3779_DESC=	RFC3779 support (BGP)
-SM2_DESC=	SM2 (Chinese standard)
-SM3_DESC=	SM3 (Chinese standard)
-SM4_DESC=	SM4 (Chinese standard)
+SM2_DESC=	SM2 Elliptic Curve DH (Chinese standard)
+SM3_DESC=	SM3 256bit (Chinese standard)
+SM4_DESC=	SM4 128bit (Chinese standard)
 SSE2_DESC=	Runtime SSE2 detection
 SSL3_DESC=	SSLv3 (unsafe)
 TLS1_DESC=	TLSv1.0 (requires TLS1_1, TLS1_2)
