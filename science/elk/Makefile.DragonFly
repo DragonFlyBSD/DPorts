@@ -1,2 +1,6 @@
 
 LDFLAGS:=	${LDFLAGS:N*libgcc_s.so}
+
+dfly-patch:
+	${REINPLACE_CMD} -e "/F90/s@ -o @ -L${LOCALBASE}/lib &@g" \
+		${WRKSRC}/src/Makefile
