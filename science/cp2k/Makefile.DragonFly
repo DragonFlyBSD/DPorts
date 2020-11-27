@@ -1,0 +1,2 @@
+
+MAKE_ARGS:=	${MAKE_ARGS:NFC*:NCC*:NLD*} FC=gfortran8 LD=gfortran8
