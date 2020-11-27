@@ -1,0 +1,11 @@
+--- configure.ac.orig	2020-07-23 09:26:04 UTC
++++ configure.ac
+@@ -214,7 +214,7 @@ AS_CASE([${host_os}],
+      [linux_os=yes],
+   [*darwin*],
+      [darwin_os=yes],
+-  [*bsd*],
++  [*bsd*|*dragonfly*],
+      [bsd_os=yes])
+ AM_CONDITIONAL([LINUX], [test "x$linux_os" = xyes])
+ AM_CONDITIONAL([DARWIN], [test "x$darwin_os" = xyes])

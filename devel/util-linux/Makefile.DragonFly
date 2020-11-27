@@ -1,0 +1,20 @@
+
+CONFIGURE_ARGS+=	--disable-login --disable-last --disable-utmpdump
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@sched\.h@&__@g' \
+		${WRKSRC}/configure.ac
+
+# kill the orphans, save the animals
+dfly-install:
+	${RM} -fv ${STAGEDIR}${LOCALBASE}/bin/ionice
+	${RM} -fv ${STAGEDIR}${LOCALBASE}/bin/su
+	${RM} -fv ${STAGEDIR}${LOCALBASE}/man/man1/ionice.1
+	${RM} -fv ${STAGEDIR}${LOCALBASE}/man/man1/runuser.1
+	${RM} -fv ${STAGEDIR}${LOCALBASE}/man/man1/su.1
+	${RM} -fv ${STAGEDIR}${LOCALBASE}/man/man8/agetty.8
+	${RM} -fv ${STAGEDIR}${LOCALBASE}/sbin/agetty
+	${RM} -fv ${STAGEDIR}${LOCALBASE}/sbin/runuser
+	${RM} -fv ${STAGEDIR}${LOCALBASE}/share/bash-completion/completions/ionice
+	${RM} -fv ${STAGEDIR}${LOCALBASE}/share/bash-completion/completions/runuser
+	${RM} -fv ${STAGEDIR}${LOCALBASE}/share/bash-completion/completions/su
