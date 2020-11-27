@@ -1,0 +1,2 @@
+
+CFLAGS+=	-Wno-format-truncation -Wno-stringop-truncation -Wno-maybe-uninitialized
