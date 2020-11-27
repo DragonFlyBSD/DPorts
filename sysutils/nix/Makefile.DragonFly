@@ -1,0 +1,4 @@
+
+USES+= alias
+
+CONFIGURE_ENV+=	LIBLZMA_CFLAGS="-I/usr/local" LIBLZMA_LIBS=-llzma
