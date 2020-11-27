@@ -1,11 +1,11 @@
---- src/OCP_DataStreamInput_Thread.cpp.orig	2016-06-25 12:26:20 UTC
+--- src/OCP_DataStreamInput_Thread.cpp.orig	2020-07-15 18:02:29 UTC
 +++ src/OCP_DataStreamInput_Thread.cpp
-@@ -27,7 +27,7 @@
- #include "dychart.h"
- 
- #ifdef __POSIX__
--	#include <sys/termios.h>
-+	#include <termios.h>
+@@ -32,7 +32,7 @@
  #endif
  
- #define DS_RX_BUFFER_SIZE 4096
+ #ifdef __POSIX__
+-    #ifdef __OCPN__ANDROID__
++    #if defined(__OCPN__ANDROID__) || defined(__DragonFly__)
+         #include <termios.h>
+     #else
+ 	#include <sys/termios.h>
