@@ -1,0 +1,4 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/#define LJ_TARGET_HAS_GETENTROPY/s@1@0@g' \
+		${WRKSRC}/lib/luajit-*/src/lj_prng.c
