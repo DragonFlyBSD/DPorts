@@ -1,0 +1,8 @@
+[
+{ type: install
+  message: <<EOM
+Copy needed configurations from %%LOCALBASE%%/share/X11/xorg-conf-examples/
+to %%LOCALBASE%%/etc/X11/xorg.conf.d/ as needed.
+EOM
+}
+]

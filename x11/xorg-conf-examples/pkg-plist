@@ -1,0 +1,3 @@
+share/X11/xorg-conf-examples/driver-i915-noaccel.conf
+share/X11/xorg-conf-examples/driver-modesetting.conf
+share/X11/xorg-conf-examples/driver-scfb.conf
