@@ -1,1 +1,2 @@
 CXXFLAGS+=	-fpermissive
+CXXFLAGS+=	-Wno-parentheses
