@@ -1,0 +1,12 @@
+--- src/common/Constants.h.in.orig	2019-03-13 09:22:35 UTC
++++ src/common/Constants.h.in
+@@ -39,6 +39,9 @@
+ #define LOG_FILE                    "@LOG_FILE@"
+ #define MINIMUM_VT                  @MINIMUM_VT@
+ 
++#ifdef UID_MAX
++#undef UID_MAX
++#endif
+ #define UID_MIN                     @UID_MIN@
+ #define UID_MAX                     @UID_MAX@
+ 
