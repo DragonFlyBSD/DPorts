@@ -1,0 +1,4 @@
+
+USES+=	alias
+
+CFLAGS+=	-Wno-address
