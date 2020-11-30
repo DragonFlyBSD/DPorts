@@ -1,6 +1,8 @@
 BSDVIDEO_BROKEN=	bsdvideo plugin doesn't build on DragonFly
 OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NBSDVIDEO}
 
+CFLAGS+=	-Wno-deprecated-declarations
+
 #.if defined(SSL_DEFAULT) && ${SSL_DEFAULT} == libressl
 # ptclib/pssl.cxx:143:54: error: invalid conversion
 # from 'const BIO_METHOD*' {aka 'const bio_method_st*'}
