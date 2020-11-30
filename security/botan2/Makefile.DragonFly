@@ -1,0 +1,5 @@
+
+# suppress false positives from boost headers
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-Wzero-as-null-pointer-constant@@g' \
+		${WRKSRC}/src/build-data/cc/gcc.txt
