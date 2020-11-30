@@ -9,12 +9,14 @@
  #include <pthread_np.h>
  #endif
  
-@@ -110,7 +110,7 @@ void logLog(enum llevel_t ll, const char
+@@ -110,8 +110,8 @@ void logLog(enum llevel_t ll, const char
          dprintf(log_fd, "%s", logLevels[ll].prefix);
      }
      if (logLevels[ll].print_funcline) {
 -#ifdef __FreeBSD__
+-        dprintf(log_fd, "[%s][%s][%d] %s():%d ", timestr, logLevels[ll].descr, (pid_t)pthread_getthreadid_np, fn, ln);
 +#if defined(__FreeBSD__) || defined(__DragonFly__)
-         dprintf(log_fd, "[%s][%s][%d] %s():%d ", timestr, logLevels[ll].descr, (pid_t)pthread_getthreadid_np, fn, ln);
++        dprintf(log_fd, "[%s][%s][%d] %s():%d ", timestr, logLevels[ll].descr, (pid_t)pthread_getthreadid_np(), fn, ln);
  #else
          dprintf(log_fd, "[%s][%s][%d] %s():%d ", timestr, logLevels[ll].descr, (pid_t)syscall(__NR_gettid), fn, ln);
+ #endif
