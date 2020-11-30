@@ -1,4 +1,7 @@
 
+CFLAGS+=	-Wno-maybe-uninitialized -Wno-int-to-pointer-cast -Wno-pointer-sign
+CFLAGS+=	-Wno-implicit-fallthrough -Wno-cast-qual -Wno-sign-compare -Wno-format-overflow
+
 dfly-patch:
 	${REINPLACE_CMD} -e 's@\(Linux FreeBSD\)@\1 DragonFly@g'	\
 		${WRKSRC}/Makefile
