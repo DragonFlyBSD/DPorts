@@ -1,0 +1,5 @@
+
+# suppress false positive
+dfly-patch:
+	${REINPLACE_CMD} -e 's@Wbad-function-cast@&__z@g' \
+		${WRKSRC}/configure
