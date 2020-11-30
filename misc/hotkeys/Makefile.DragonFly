@@ -3,3 +3,4 @@
 # <xlocale.h> through <regex.h>
 
 CFLAGS+= -DHAVE_LOCALE_H
+CFLAGS+= -Wno-unused-function -Wno-incompatible-pointer-types -Wno-pointer-sign
