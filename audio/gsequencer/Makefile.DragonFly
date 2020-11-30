@@ -1,0 +1,4 @@
+
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NPULSEAUDIO}
+
+CFLAGS+=	-Wno-deprecated-declarations -Wno-incompatible-pointer-types -Wno-unused_variable -Wno-unused-but-set-variable
