@@ -1,0 +1,10 @@
+
+CFLAGS+=	-Wno-deprecated-declarations
+
+# expose gettimeofday() and rename index name conflict
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-D_POSIX_C_SOURCE@&__z@g' \
+			 -e 's@-D_ISOC99_SOURCE@&__z@g' \
+		${WRKSRC}/configure ${WRKSRC}/configure.ac
+	${REINPLACE_CMD} -e 's@[[:<:]]index[[:>:]]@dump_index@g' \
+		${WRKSRC}/src/examples/convtab_dump.c
