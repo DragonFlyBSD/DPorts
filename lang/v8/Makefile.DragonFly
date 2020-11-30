@@ -1,2 +1,4 @@
 # smth smth very outdated V8 sources (2013-04-30)
 USE_CLANG_FALLBACK= default
+
+CXXFLAGS+= -Wno-null-pointer-arithmetic
