@@ -1,0 +1,2 @@
+
+CFLAGS+=	-Wno-cast-function-type -Wno-implicit-fallthrough
