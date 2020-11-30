@@ -1,0 +1,3 @@
+
+# too much assumptions on pid_t in pthreads
+CFLAGS+=	-Wno-deprecated-declarations -Wno-pointer-to-int-cast -Wno-int-to-pointer-cast -Wno-int-conversion
