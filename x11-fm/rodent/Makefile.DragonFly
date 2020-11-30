@@ -1,3 +1,6 @@
-post-patch:
+
+dfly-patch:
 	${REINPLACE_CMD} -e 's|"FreeBSD"|"DragonFly"|' \
 		${WRKSRC}/apps/*/configure
+	${REINPLACE_CMD} -e 's@G_STATIC_MUTEX_INIT@PTHREAD_MUTEX_INITIALIZER@g' \
+		${WRKSRC}/apps/rodent-fstab/src/fstab-bsd.i
