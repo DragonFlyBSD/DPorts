@@ -1,0 +1,6 @@
+
+# fix configure check: error: void value not ignored as it ought to be
+#       return pthread_set_name_np(pthread_self(), "foo");
+dfly-patch:
+	${REINPLACE_CMD} -e 's@return pthread_set_name_np@pthread_set_name_np@g' \
+		${WRKSRC}/configure
