@@ -1,0 +1,8 @@
+
+# fix failing test DUNE_CV_PTHREAD_TLS_COMPILES
+CMAKE_ARGS+=	-DDUNE_CV_PTHREAD_TLS_COMPILES:bool=TRUE
+zdfly-patch:
+	${REINPLACE_CMD} -e 's@"include <pthread.h>@"#include <pthread.h>@g' \
+			 -e '/CMAKE_CXX_FLAGS/s@-DUSE_PTHREADS=1"@-pthread &@g' \
+			 -e 's@#message@message@g' \
+		${WRKSRC}/cmake/modules/FindPThreads.cmake
