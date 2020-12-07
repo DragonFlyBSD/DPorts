@@ -1,0 +1,3 @@
+.undef WITH_SENDMAIL_BASE
+
+CFLAGS+=	-Wno-implicit-fallthrough
