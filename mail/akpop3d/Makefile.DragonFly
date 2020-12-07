@@ -1,0 +1,4 @@
+
+# help to find SSL
+CFLAGS+=	-I${OPENSSLINC}
+LDFLAGS+=	-L${OPENSSLLIB}
