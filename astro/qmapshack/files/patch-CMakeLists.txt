@@ -1,0 +1,22 @@
+--- CMakeLists.txt.orig	2020-03-27 08:07:31 UTC
++++ CMakeLists.txt
+@@ -65,6 +65,7 @@ include(TranslateDesktop)
+ include(DefineCMakeDefaults)
+ include(DefineCompilerFlags)
+ include(DefineInstallationPaths)
++include(FindPkgConfig)
+ include(CPackConfig.cmake)
+ include(ConfigureChecks.cmake)
+ 
+@@ -167,7 +168,10 @@ find_package(Qt5WebEngineWidgets    REQUIRED)
+ find_package(Qt5Qml                 REQUIRED)
+ find_package(Qt5Help                REQUIRED)
+ find_package(GDAL                   REQUIRED)
+-find_package(PROJ4                  REQUIRED)
++find_package(PROJ4)
++if (NOT PROJ4_FOUND)
++  pkg_search_module(PROJ4 REQUIRED proj)
++endif()
+ find_package(JPEG                   REQUIRED)
+ find_package(ROUTINO                REQUIRED)
+ find_package(QuaZip5                REQUIRED)
