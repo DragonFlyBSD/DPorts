@@ -1,8 +1,11 @@
---- dragonflybsd/Platform.c.orig	2018-04-10 13:42:59 UTC
+--- dragonflybsd/Platform.c.orig	2020-09-14 23:43:36 UTC
 +++ dragonflybsd/Platform.c
-@@ -204,7 +204,21 @@ void Platform_setTasksValues(Meter* this
+@@ -194,8 +194,24 @@ void Platform_setTasksValues(Meter* this
+    (void)this;	// prevent unused warning
  }
  
++extern char **DragonFlyBSDGet_env(pid_t pid);
++
  char* Platform_getProcessEnv(pid_t pid) {
 -   // TODO
 -   (void)pid;	// prevent unused warning
