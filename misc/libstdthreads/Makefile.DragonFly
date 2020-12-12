@@ -1,0 +1,4 @@
+
+.if ${DFLYVERSION} >= 500906
+EXTRA_PATCHES+=	${DFLY_PATCHDIR}/extra-threads.h
+.endif
