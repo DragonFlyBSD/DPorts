@@ -5,6 +5,7 @@ MANUAL_PACKAGE_BUILD=   huge (399M packaged)
 # LLDB needs to be ported to dragonfly
 OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NLLDB}
 OPTIONS_DEFAULT_x86_64:= ${OPTIONS_DEFAULT_x86_64:NCOMPILER_RT}
+OPTIONS_DEFINE+=	LLD_LINK
 
 dfly-patch:
 	${REINPLACE_CMD} -e 's|gcc50|gcc80|g' -e 's|5.0"|8.0"|' \

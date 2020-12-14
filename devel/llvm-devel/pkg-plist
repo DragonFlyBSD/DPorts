@@ -160,7 +160,7 @@ llvm-devel/bin/dsymutil
 %%FLANG%%llvm-devel/bin/flang
 %%CLANG%%llvm-devel/bin/git-clang-format
 %%CLANG%%llvm-devel/bin/hmaptool
-%%LLD%%llvm-devel/bin/ld
+%%LLD_LINK%%%%LLD%%llvm-devel/bin/ld
 %%LLD%%llvm-devel/bin/ld.lld
 %%LLD%%llvm-devel/bin/ld64.lld
 llvm-devel/bin/llc
