@@ -1,6 +1,6 @@
 --- vendor/openssl-sys/build/main.rs.orig	2019-11-30 10:09:17 UTC
 +++ vendor/openssl-sys/build/main.rs
-@@ -183,28 +183,33 @@ See rust-openssl README for more informa
+@@ -183,28 +183,34 @@ See rust-openssl README for more informa
      if let Some(libressl_version) = libressl_version {
          println!("cargo:libressl_version_number={:x}", libressl_version);
  
@@ -43,6 +43,7 @@
 +            (3, 0, 1) => ('3', '0', '1'),
 +            (3, 0, _) => ('3', '0', 'x'),
 +            (3, 1, _) => ('3', '1', 'x'),
++            (3, 2, _) => ('3', '2', 'x'),
 +             _ => version_error(),
 +         };
  
@@ -52,12 +53,12 @@
          println!("cargo:version=101");
          Version::Libressl
      } else {
-@@ -240,7 +245,7 @@ fn version_error() -> ! {
+@@ -240,7 +246,7 @@ fn version_error() -> ! {
          "
  
  This crate is only compatible with OpenSSL 1.0.1 through 1.1.1, or LibreSSL 2.5
 -through 2.9.x, but a different version of OpenSSL was found. The build is now aborting
-+through 3.1.x, but a different version of OpenSSL was found. The build is now aborting
++through 3.2.x, but a different version of OpenSSL was found. The build is now aborting
  due to this version mismatch.
  
  "
