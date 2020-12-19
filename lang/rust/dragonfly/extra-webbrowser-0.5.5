@@ -1,0 +1,26 @@
+--- cargo-crates/webbrowser-0.5.5/src/lib.rs.orig	2020-07-19 21:06:18 UTC
++++ cargo-crates/webbrowser-0.5.5/src/lib.rs
+@@ -44,6 +44,7 @@ use macos::*;
+ #[cfg(any(
+     target_os = "linux",
+     target_os = "freebsd",
++    target_os = "dragonfly",
+     target_os = "netbsd",
+     target_os = "openbsd",
+     target_os = "haiku"
+@@ -51,6 +52,7 @@ use macos::*;
+ mod unix;
+ #[cfg(any(
+     target_os = "linux",
++    target_os = "dragonfly",
+     target_os = "freebsd",
+     target_os = "netbsd",
+     target_os = "openbsd",
+@@ -223,6 +225,7 @@ pub fn open_browser(browser: Browser, ur
+     target_os = "windows",
+     target_os = "macos",
+     target_os = "linux",
++    target_os = "dragonfly",
+     target_os = "freebsd",
+     target_os = "netbsd",
+     target_os = "openbsd",

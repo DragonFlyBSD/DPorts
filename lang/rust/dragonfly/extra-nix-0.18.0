@@ -1,0 +1,20 @@
+--- cargo-crates/nix-0.18.0/src/sys/statfs.rs.orig	2020-07-25 20:06:17 UTC
++++ cargo-crates/nix-0.18.0/src/sys/statfs.rs
+@@ -18,6 +18,9 @@ pub struct Statfs(libc::statfs);
+ #[cfg(target_os = "freebsd")]
+ #[derive(Eq, Copy, Clone, PartialEq, Debug)]
+ pub struct FsType(pub u32);
++#[cfg(target_os = "dragonfly")]
++#[derive(Eq, Copy, Clone, PartialEq, Debug)]
++pub struct FsType(pub i32);
+ #[cfg(target_os = "android")]
+ #[derive(Eq, Copy, Clone, PartialEq, Debug)]
+ pub struct FsType(pub libc::c_ulong);
+--- cargo-crates/nix-0.18.0/src/errno.rs.orig	2020-07-25 20:06:16 UTC
++++ cargo-crates/nix-0.18.0/src/errno.rs
+@@ -1,5 +1,4 @@
+ use cfg_if::cfg_if;
+-#[cfg(not(target_os = "dragonfly"))]
+ use libc::{c_int, c_void};
+ use std::{fmt, io, error};
+ use crate::{Error, Result};

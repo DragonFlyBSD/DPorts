@@ -1,0 +1,20 @@
+--- cargo-crates/get_if_addrs-0.5.3/src/lib.rs.orig	2018-06-21 12:35:24 UTC
++++ cargo-crates/get_if_addrs-0.5.3/src/lib.rs
+@@ -197,7 +197,7 @@ mod getifaddrs_posix {
+     }
+ 
+     #[cfg(
+-        any(target_os = "freebsd", target_os = "ios", target_os = "macos", target_os = "openbsd")
++        any(target_os = "freebsd", target_os = "ios", target_os = "macos", target_os = "openbsd", target_os = "dragonfly")
+     )]
+     fn do_broadcast(ifaddr: &posix_ifaddrs) -> Option<IpAddr> {
+         sockaddr_to_ipaddr(ifaddr.ifa_dstaddr)
+@@ -626,7 +626,7 @@ mod tests {
+             .collect()
+     }
+ 
+-    #[cfg(any(target_os = "freebsd", target_os = "macos", target_os = "ios"))]
++    #[cfg(any(target_os = "freebsd", target_os = "dragonfly", target_os = "macos", target_os = "ios"))]
+     fn list_system_addrs() -> Vec<IpAddr> {
+         list_system_interfaces("ifconfig", "")
+             .lines()
