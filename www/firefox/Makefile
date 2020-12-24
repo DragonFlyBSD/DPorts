@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	firefox
-DISTVERSION=	80.0.1
-PORTEPOCH=	1
+DISTVERSION=	82.0.1
+PORTEPOCH=	2
 CATEGORIES=	www
 MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}/source \
 		MOZILLA/${PORTNAME}/candidates/${DISTVERSION}-candidates/build1/source
@@ -13,14 +13,14 @@ MAINTAINER=	gecko@FreeBSD.org
 COMMENT=	Web browser based on the browser portion of Mozilla
 
 BUILD_DEPENDS=	nspr>=4.26:devel/nspr \
-		nss>=3.55:security/nss \
+		nss>=3.56:security/nss \
 		icu>=67.1,1:devel/icu \
 		libevent>=2.1.8:devel/libevent \
 		harfbuzz>=2.6.8:print/harfbuzz \
 		graphite2>=1.3.14:graphics/graphite2 \
 		png>=1.6.35:graphics/png \
 		libvpx>=1.8.2:multimedia/libvpx \
-		py${PYTHON3_DEFAULT:S/.//}-sqlite3>0:databases/py-sqlite3@py${PYTHON3_DEFAULT:S/.//} \
+		${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3@${PY_FLAVOR} \
 		v4l_compat>0:multimedia/v4l_compat \
 		autoconf-2.13:devel/autoconf213 \
 		nasm:devel/nasm \

@@ -1,6 +1,6 @@
---- third_party/rust/libc/src/unix/bsd/freebsdlike/dragonfly/mod.rs.orig	2020-01-08 01:23:40 UTC
+--- third_party/rust/libc/src/unix/bsd/freebsdlike/dragonfly/mod.rs.orig	2020-10-26 15:49:49 UTC
 +++ third_party/rust/libc/src/unix/bsd/freebsdlike/dragonfly/mod.rs
-@@ -7,6 +7,8 @@ pub type nlink_t = u32;
+@@ -8,6 +8,8 @@ pub type nlink_t = u32;
  pub type blksize_t = i64;
  pub type clockid_t = ::c_ulong;
  
@@ -9,7 +9,7 @@
  pub type c_long = i64;
  pub type c_ulong = u64;
  pub type time_t = i64;
-@@ -20,6 +22,10 @@ pub type fsfilcnt_t = u64;
+@@ -21,6 +23,10 @@ pub type fsfilcnt_t = u64;
  pub type mqd_t = ::c_int;
  pub type sem_t = *mut sem;
  
@@ -20,7 +20,7 @@
  #[cfg_attr(feature = "extra_traits", derive(Debug))]
  pub enum sem {}
  impl ::Copy for sem {}
-@@ -235,6 +241,48 @@ s_no_extra_traits! {
+@@ -238,6 +244,48 @@ s_no_extra_traits! {
          __unused3: *mut ::c_void        //actually a function pointer
      }
  
@@ -69,7 +69,7 @@
  }
  
  cfg_if! {
-@@ -925,6 +973,23 @@ pub const NET_RT_FLAGS: ::c_int = 2;
+@@ -929,6 +977,23 @@ pub const NET_RT_FLAGS: ::c_int = 2;
  pub const NET_RT_IFLIST: ::c_int = 3;
  pub const NET_RT_MAXID: ::c_int = 4;
  
@@ -93,17 +93,17 @@
  pub const SOMAXOPT_SIZE: ::c_int = 65536;
  
  pub const MSG_UNUSED09: ::c_int = 0x00000200;
-@@ -1039,6 +1104,7 @@ f! {
+@@ -1059,6 +1124,7 @@ f! {
  }
  
- extern {
+ extern "C" {
 +    pub fn __errno_location() -> *mut ::c_int;
      pub fn setgrent();
-     pub fn mprotect(addr: *mut ::c_void, len: ::size_t, prot: ::c_int)
-                     -> ::c_int;
-@@ -1046,6 +1112,30 @@ extern {
-     pub fn clock_gettime(clk_id: ::clockid_t, tp: *mut ::timespec) -> ::c_int;
-     pub fn clock_settime(clk_id: ::clockid_t, tp: *const ::timespec) -> ::c_int;
+     pub fn mprotect(
+         addr: *mut ::c_void,
+@@ -1072,6 +1138,30 @@ extern "C" {
+         tp: *const ::timespec,
+     ) -> ::c_int;
  
 +    pub fn shmget(key: ::key_t, size: ::size_t, shmflg: ::c_int) -> ::c_int;
 +    pub fn shmat(
@@ -131,4 +131,4 @@
 +    ) -> ::c_int;
      pub fn setutxdb(_type: ::c_uint, file: *mut ::c_char) -> ::c_int;
  
-     pub fn aio_waitcomplete(iocbp: *mut *mut aiocb,
+     pub fn aio_waitcomplete(
