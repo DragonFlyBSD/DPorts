@@ -5,8 +5,14 @@ OPTIONS_DEFAULT:=        ${OPTIONS_DEFAULT:NPULSEAUDIO}
 MOZ_OPTIONS+=	--disable-webrtc
 CXXFLAGS+=	-Wno-multistatement-macros -Wno-class-memaccess
 
+# moz.configure does not use llvm-config to get paths, why?
+# clang to generate C/c++ bindings...  assume default llvm
+MOZ_OPTIONS+=   --with-clang-path=${LOCALBASE}/llvm${LLVM_DEFAULT}/bin/clang \
+                --with-libclang-path=${LOCALBASE}/llvm${LLVM_DEFAULT}/lib
+
 # alsa headers use 'u_int32_t' and other BerkeleyDB/nvi fixed types (_XOPEN_SOURCE)
 # fix error: 'snprintf' was not declared in this scope
+# disable finding of wayland components, depends on eventfd.h from libepoll-shim
 dfly-patch:
 	# disable SCTP
 	${REINPLACE_CMD} -e 's|MOZ_SCTP|MOZ_DISABLE_SCTP|' \
@@ -18,3 +24,5 @@ dfly-patch:
 		${WRKSRC}/media/libcubeb/src/cubeb_alsa.c
 	${REINPLACE_CMD} -e 's@_POSIX_SOURCE@&___@g' \
 		${WRKSRC}/media/libcubeb/src/cubeb_jack.cpp
+	${REINPLACE_CMD} -e 's@gtk+-wayland@&z@g' \
+		${WRKSRC}/toolkit/moz.configure
