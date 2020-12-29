@@ -5,6 +5,11 @@ MAKE_ENV+=		AR=/usr/bin/ar LD=/usr/bin/ld \
 
 MOZ_OPTIONS+=	--host=${ARCH}-dports-${OPSYS:tl}${OSREL}
 MOZ_OPTIONS+=	--disable-webrtc
+# clang to generate C/c++ bindings...  assume default llvm
+MOZ_OPTIONS+=   --with-clang-path=${LOCALBASE}/llvm80/bin/clang \
+                --with-libclang-path=${LOCALBASE}/llvm80/lib
+CXXFLAGS+=      -Wno-multistatement-macros -Wno-class-memaccess
+
 
 
 # alsa headers use 'u_int32_t' and other BerkeleyDB/nvi fixed types (_XOPEN_SOURCE)
@@ -22,3 +27,6 @@ dfly-patch:
 		${WRKSRC}/media/libcubeb/src/cubeb_alsa.c
 	${REINPLACE_CMD} -e 's@_POSIX_SOURCE@&___@g' \
 		${WRKSRC}/media/libcubeb/src/cubeb_jack.cpp
+	${REINPLACE_CMD} -e 's@gtk+-wayland@&z@g' \
+		${WRKSRC}/toolkit/moz.configure
+
