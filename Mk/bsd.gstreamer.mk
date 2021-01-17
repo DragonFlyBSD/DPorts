@@ -128,7 +128,6 @@ _GSTREAMER_PLUGINS+= \
 		hal \
 		libpng \
 		mad \
-		mm \
 		mp3 \
 		nas \
 		schroedinger \
@@ -158,6 +157,7 @@ _GSTREAMER_PLUGINS+= \
 		libav \
 		libde265 \
 		lv2 \
+		mm \
 		modplug \
 		mpg123 \
 		mplex \
@@ -480,7 +480,7 @@ libde265_IMPL=		bad
 mm_DEPENDS=	multimedia/gstreamermm
 mm_GST_PREFIX=	gstreamer
 mm_GST_SUFX=	# empty
-mm_GST_VERSION=	0.9.4
+mm_GST_VERSION=	1.10.0
 mm_IMPL=	#
 
 mpeg2dec_DEPENDS=	multimedia/gstreamer-plugins-mpeg2dec
