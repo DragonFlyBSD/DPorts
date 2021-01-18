@@ -3,18 +3,19 @@
 
 PORTNAME=	gcc
 PORTVERSION=	7.5.0
+PORTREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	GCC
 PKGNAMESUFFIX=	${SUFFIX}
 
-MAINTAINER=	gerald@FreeBSD.org
+MAINTAINER=	leres@FreeBSD.org
 COMMENT=	GNU Compiler Collection 7
 
 LICENSE=	GPLv3 GPLv3RLE
 LICENSE_COMB=	multi
 
 DEPRECATED=	Unsupported by upstream. Use GCC 9 or newer instead.
-ONLY_FOR_ARCHS=	amd64 i386
+ONLY_FOR_ARCHS=	amd64
 
 LIB_DEPENDS=	libgmp.so:math/gmp \
 		libmpfr.so:math/mpfr \
@@ -33,13 +34,8 @@ CPE_VENDOR=	gnu
 
 GCC_VERSION=	${PORTVERSION}
 SUFFIX=		${PORTVERSION:C/([0-9]+).*/\1/}
-SSP_UNSAFE=	yes
 CFLAGS:=	${CFLAGS:N-mretpoline}
 CXXFLAGS:=	${CXXFLAGS:N-mretpoline}
-
-OPTIONS_DEFINE=		BOOTSTRAP
-OPTIONS_DEFAULT=	BOOTSTRAP
-BOOTSTRAP_DESC=		Build using a full bootstrap
 
 .include <bsd.port.pre.mk>
 
@@ -47,18 +43,14 @@ BOOTSTRAP_DESC=		Build using a full bootstrap
 CONFIGURE_TARGET=	x86_64-portbld-${OPSYS:tl}${OSREL}
 .endif
 
-LANGUAGES:=	c,c++,objc,fortran
+LANGUAGES:=	c,c++
 TARGLIB=	${PREFIX}/lib/gcc${SUFFIX}
 TARGLIB32=	${PREFIX}/lib32	# The version information is added later
 LIBEXEC=	${PREFIX}/libexec/gcc${SUFFIX}
 GNU_CONFIGURE=	yes
 CONFIGURE_OUTSOURCE=	yes
-.if empty(PORT_OPTIONS:MBOOTSTRAP)
-CONFIGURE_ARGS+=--disable-bootstrap
-.else
 CONFIGURE_ARGS+=--with-build-config=bootstrap-debug
 ALL_TARGET=	bootstrap-lean
-.endif
 INSTALL_TARGET=	install-strip
 .if ${UID} != 0
 BINMODE=	755
@@ -66,6 +58,7 @@ BINMODE=	755
 CONFIGURE_ARGS+=--disable-nls \
 		--disable-multilib \
 		--enable-gnu-indirect-function \
+		--enable-languages=${LANGUAGES} \
 		--libdir=${TARGLIB} \
 		--libexecdir=${LIBEXEC} \
 		--program-suffix=${SUFFIX} \
@@ -93,8 +86,6 @@ INFO+=		gcc${SUFFIX}/libquadmath \
 		gcc${SUFFIX}/libitm
 SUB_FILES=	pkg-message
 SUB_LIST+=	TARGLIB=${TARGLIB}
-
-CONFIGURE_ARGS+=--enable-languages=${LANGUAGES}
 
 pre-everything::
 	@${ECHO_MSG} "Making GCC ${PORTVERSION} for ${CONFIGURE_TARGET} [${LANGUAGES}]"
