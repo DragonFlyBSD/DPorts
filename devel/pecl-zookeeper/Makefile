@@ -18,7 +18,6 @@ USES=		php:pecl
 USE_PHP=	session:build
 
 PORTDATA=	zookeeper-api.php
-IGNORE_WITH_PHP= 80
 
 post-install:
 	${MKDIR} ${STAGEDIR}${DATADIR}/
