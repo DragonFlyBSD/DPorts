@@ -13,7 +13,7 @@ LICENSE=	GPLv3
 
 RUN_DEPENDS=	net-snmp>=0:net-mgmt/net-snmp
 
-USES=		python
+USES=		python:3.6+
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	nagius
@@ -21,10 +21,4 @@ GH_TAGNAME=	fb0af0d
 
 USE_PYTHON=	autoplist distutils
 
-.include <bsd.port.pre.mk>
-
-.if ${PYTHON_REL} < 3000
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}future>0:devel/py-future@${PY_FLAVOR}
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
