@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	botan
-DISTVERSION=	2.15.0
+DISTVERSION=	2.17.3
 CATEGORIES=	security
 MASTER_SITES=	http://botan.randombit.net/releases/
 PKGNAMESUFFIX=	2
@@ -36,7 +36,7 @@ LDFLAGS+=		-pthread
 
 DOCSDIR=	${LOCALBASE}/share/doc/${PORTNAME}-${PORTVERSION}
 
-_SOABIVER=	15
+_SOABIVER=	17
 _SHLIBVER=	${DISTVERSION:S/./ /g:[2]}
 _SHLIBVERPATCH=	${DISTVERSION:S/./ /g:[3]}
 PLIST_SUB=	SOABIVER=${_SOABIVER} SHLIBVER=${_SHLIBVER} SHLIBVERPATCH=${_SHLIBVERPATCH}
@@ -73,6 +73,12 @@ CONFIGURE_ARGS+=	--without-os-features=getentropy,elf_aux_info
 PLIST_SUB+=	HAS_RDRAND_RNG=""
 .else
 PLIST_SUB+=	HAS_RDRAND_RNG="@comment "
+.endif
+
+.if ${ARCH} == i386 || ${ARCH} == x86_64 || ${ARCH:Mpowerpc64*}
+PLIST_SUB+=	HAS_PROCESSOR_RNG=""
+.else
+PLIST_SUB+=	HAS_PROCESSOR_RNG="@comment "
 .endif
 
 post-patch:
