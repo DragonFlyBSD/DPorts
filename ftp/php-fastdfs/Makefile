@@ -14,6 +14,7 @@ LIB_DEPENDS=	libfastcommon.so:devel/libfastcommon \
 		libfdfsclient.so:ftp/fastdfs
 
 USES=		php:ext
+IGNORE_WITH_PHP=	80
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	happyfish100
@@ -24,6 +25,5 @@ WRKSRC_SUBDIR=	php_client
 CONFIGURE_ENV=	ROOT=${LOCALBASE}
 
 PHP_MODNAME=	fastdfs_client
-IGNORE_WITH_PHP= 80
 
 .include <bsd.port.mk>
