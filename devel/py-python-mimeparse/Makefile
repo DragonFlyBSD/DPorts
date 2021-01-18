@@ -13,12 +13,12 @@ COMMENT=	Basic functions for handling mime-types in Python
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes
 
 do-test:
-	cd ${TEST_WRKSRC} && ${SETENV} ${TEST_ENV} python${PYTHON_VER} mimeparse_test.py
+	cd ${WRKSRC} && ${PYTHON_CMD} mimeparse_test.py
 
 .include <bsd.port.mk>
