@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	calendar
-DISTVERSION=	0.1
+DISTVERSION=	0.9
 CATEGORIES=	deskutils
 
 MAINTAINER=	se@FreeBSD.org
@@ -12,10 +12,9 @@ LICENSE=	BSD3CLAUSE
 RUN_DEPENDS=	${LOCALBASE}/share/calendar/calendar.all:deskutils/calendar-data
 
 USE_GITHUB=	yes
-GH_ACCOUNT=	bsdimp
-GH_TAGNAME=	fcc5d31
+GH_ACCOUNT=	stesser
 
-CFLAGS+=	-DLOCALBASE=${LOCALBASE}
+CFLAGS+=	-D_PATH_LOCALBASE='\"${LOCALBASE}\"'
 LDFLAGS+=	-lm -lutil
 
 PLIST_FILES=	bin/calendar \
