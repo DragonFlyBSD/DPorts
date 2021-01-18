@@ -1,3 +1,3 @@
-TIMESTAMP = 1598029575
-SHA256 (rubygem/elasticsearch-api-7.9.0.gem) = fff8d1367f54a29e7757182c2c46041c85ebe05abfd2d9c364797413d04d535b
-SIZE (rubygem/elasticsearch-api-7.9.0.gem) = 88576
+TIMESTAMP = 1610174231
+SHA256 (rubygem/elasticsearch-api-7.10.1.gem) = 2fa6c614db40dd91efec54c022336c877cfc07d4bcfc5209a1c9c6ca2e4a43f9
+SIZE (rubygem/elasticsearch-api-7.10.1.gem) = 89600
