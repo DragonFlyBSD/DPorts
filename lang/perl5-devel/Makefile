@@ -33,7 +33,7 @@ USES=		cpe
 USE_GITHUB=	yes
 GH_ACCOUNT=	Perl
 GH_PROJECT=	perl5
-GH_TAGNAME=	v5.33.3-26-gbb58640a40
+GH_TAGNAME=	v5.33.5-127-gb52b12abf8
 
 # Give a hint of where libperl.so can be found.
 USE_LDCONFIG=	${PREFIX}/${_ARCH_LIB}/CORE
@@ -160,7 +160,7 @@ OPTIONS_EXCLUDE=	DTRACE
 .endif
 .for a in aarch64 arm armv6 armv7 \
 	mips mips64 mips64el mips64elhf mips64hf mipsel mipselhf mipshf mipsn32 \
-	powerpc powerpc64 powerpcspe \
+	powerpc \
 	riscv64 riscv64sf sparc64
 OPTIONS_EXCLUDE_${a}=	DTRACE
 .endfor
