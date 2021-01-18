@@ -18,6 +18,5 @@ CONFIGURE_ARGS=	--with-tarantool
 
 USE_GITHUB=	yes
 GH_PROJECT=	tarantool-php
-IGNORE_WITH_PHP= 80
 
 .include <bsd.port.mk>
