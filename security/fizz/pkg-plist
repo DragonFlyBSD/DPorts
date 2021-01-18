@@ -45,6 +45,7 @@ include/fizz/crypto/hpke/Hkdf.h
 include/fizz/crypto/hpke/Hpke.h
 include/fizz/crypto/hpke/Types.h
 include/fizz/crypto/hpke/Utils.h
+include/fizz/crypto/hpke/test/Mocks.h
 include/fizz/crypto/openssl/OpenSSL.h
 include/fizz/crypto/openssl/OpenSSLKeyUtils.h
 include/fizz/crypto/signature/Signature-inl.h
@@ -100,6 +101,12 @@ include/fizz/protocol/ZstdCertificateDecompressor.h
 include/fizz/protocol/clock/Clock.h
 include/fizz/protocol/clock/SystemClock.h
 include/fizz/protocol/clock/test/Mocks.h
+include/fizz/protocol/ech/Decrypter.h
+include/fizz/protocol/ech/ECHExtensions-inl.h
+include/fizz/protocol/ech/ECHExtensions.h
+include/fizz/protocol/ech/Encryption.h
+include/fizz/protocol/ech/Types-inl.h
+include/fizz/protocol/ech/Types.h
 include/fizz/protocol/test/Matchers.h
 include/fizz/protocol/test/Mocks.h
 include/fizz/protocol/test/ProtocolTest.h
@@ -145,6 +152,7 @@ include/fizz/server/test/Mocks.h
 include/fizz/server/test/Utils.h
 include/fizz/test/HandshakeTest.h
 include/fizz/test/LocalTransport.h
+include/fizz/tool/CertificateVerifiers.h
 include/fizz/tool/Commands.h
 include/fizz/tool/FizzCommandCommon.h
 include/fizz/util/FizzUtil.h
