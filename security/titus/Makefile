@@ -2,14 +2,17 @@
 # $FreeBSD$
 
 PORTNAME=	titus
-PORTVERSION=	0.3
-PORTREVISION=	5
+PORTVERSION=	0.4
+PORTREVISION=	0
 CATEGORIES=	security
 
 MAINTAINER=	feld@FreeBSD.org
 COMMENT=	TLS/SSL proxy server
 
 LICENSE=	MIT
+
+DEPRECATED=	Development has officially ceased
+EXPIRATION_DATE=	2021-02-01
 
 USES=		compiler:c++11-lang ssl
 USE_RC_SUBR=	titus
@@ -21,14 +24,16 @@ USERS=		titus titus-keys
 GROUPS=		nogroup
 
 MAKE_ENV+=	MANDIR=${MANPREFIX}/man
-CFLAGS+=	-I${OPENSSLINC}
-LDFLAGS+=	-L${OPENSSLLIB}
 
 .include <bsd.port.pre.mk>
 
 .if ${SSL_DEFAULT} == base
-BROKEN_FreeBSD_12=	member access into incomplete type 'dh_st'
-BROKEN_FreeBSD_13=	member access into incomplete type 'dh_st'
+BROKEN_FreeBSD_11=	Requires OpenSSL 1.1.0+
+.endif
+
+.if ${SSL_DEFAULT} != base
+CFLAGS+=	-I${OPENSSLINC}
+LDFLAGS+=	-L${OPENSSLLIB}
 .endif
 
 post-patch:
