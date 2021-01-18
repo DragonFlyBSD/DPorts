@@ -15,9 +15,7 @@ COMMENT=	BGP engine and route injector
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENCE.txt
 
-RUN_DEPENDS=	${PY_IPADDRESS}
-
-USES=		python shebangfix
+USES=		python:3.6+ shebangfix
 USE_PYTHON=	distutils autoplist
 
 CONFLICTS_INSTALL=	exabgp-[0-9]*
