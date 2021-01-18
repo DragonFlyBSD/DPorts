@@ -20,13 +20,13 @@ LICENSE_FILE_MPL11=	${WRKSRC}/COPYING-MPL-1.1
 
 PORTSCOUT=	limitw:1,even
 
-USES=		compiler:c11 gnome pkgconfig python
+USES=		compiler:c11 gnome pkgconfig python:3.6+
 USE_PYTHON=	distutils py3kplist
 USE_GNOME=	cairo
 
 PLIST_SUB=	PORTVER=${PORTVERSION}
 
 post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/cairo/_cairo.so
+	@${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/cairo/_cairo*.so
 
 .include <bsd.port.mk>
