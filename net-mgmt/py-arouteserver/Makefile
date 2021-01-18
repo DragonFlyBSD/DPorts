@@ -23,17 +23,11 @@ RUN_DEPENDS=	bash>0:shells/bash \
 		${PYTHON_PKGNAMEPREFIX}yaml>=3.13:devel/py-yaml@${PY_FLAVOR}
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}nose>=1.3.7:devel/py-nose@${PY_FLAVOR}
 
-USES=		python shebangfix
+USES=		python:3.6+ shebangfix
 USE_PYTHON=	autoplist concurrent distutils
 
 SHEBANG_FILES=	pierky/arouteserver/config.d/rtt_getter.sh
 NO_ARCH=	yes
-
-.include <bsd.port.pre.mk>
-
-.if ${PYTHON_REL} < 3300
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}ipaddr>=2.1.11:devel/py-ipaddr@${PY_FLAVOR}
-.endif
 
 post-patch:
 	${REINPLACE_CMD} -e 's|#bgpq3_path: "bgpq3"|bgpq3_path: "bgpq4"|' \
@@ -42,4 +36,4 @@ post-patch:
 do-test:
 	@(cd ${WRKSRC} && ${SETENV} nosetests -vs --tests=tests/external_resources/)
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
