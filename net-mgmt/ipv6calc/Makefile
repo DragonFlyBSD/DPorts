@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	ipv6calc
-PORTVERSION=	2.2.0
+PORTVERSION=	3.0.2
 CATEGORIES=	net-mgmt
 MASTER_SITES=	ftp://ftp.bieringer.de/pub/linux/IPv6/ipv6calc/
 
@@ -12,10 +12,11 @@ COMMENT=	Convert, change, and calculate with IPv6 addresses
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+BUILD_DEPENDS=	bash>0:shells/bash
+
 USES=		gmake perl5 shebangfix ssl
 
 GNU_CONFIGURE=	yes
-CFLAGS+=	-fcommon
 
 SHEBANG_FILES=	tools/*.pl tools/*.sh.in
 
