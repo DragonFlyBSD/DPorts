@@ -3,10 +3,11 @@
 
 PORTNAME=	recutils
 PORTVERSION=	1.8
+PORTREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	GNU
 
-MAINTAINER=	zeus@ibs.dn.ua
+MAINTAINER=	zeus@gnu.org.ua
 COMMENT=	Tools and libraries to access human-editable, plain text databases
 
 LICENSE=	GPLv3+
