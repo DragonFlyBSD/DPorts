@@ -3,7 +3,7 @@
 
 PORTNAME=	unison
 PORTVERSION=	2.32.52
-PORTREVISION=	11
+PORTREVISION=	12
 CATEGORIES=	net
 MASTER_SITES=	https://www.cis.upenn.edu/~bcpierce/unison/download/releases/${DISTNAME}/
 DISTFILES=	${EXTRACT_ONLY} ${_EXTRA_DOCS}
@@ -66,7 +66,7 @@ post-patch:
 		${WRKSRC}/Makefile.OCaml
 
 post-build:
-	( cd ${WRKSRC} && ./unison -selftest -ui text -batch )
+	d=$$(mktemp -d) && trap "rm -rf $$d" 0 && ( cd ${WRKSRC} && HOME=$$d ./unison -selftest -ui text -batch )
 .if ${FLAVOR} == x11
 	@${ECHO} Building text-only version in ${WRKSRC}
 	${SETENV} ${MAKE_ENV} ${MAKE_CMD} -C ${WRKSRC} CFLAGS="" UISTYLE=text NAME=${PORTNAME}-text
