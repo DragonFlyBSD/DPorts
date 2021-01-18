@@ -3,6 +3,7 @@
 
 PORTNAME=	rb-kqueue
 PORTVERSION=	0.2.5
+PORTREVISION=	1
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
