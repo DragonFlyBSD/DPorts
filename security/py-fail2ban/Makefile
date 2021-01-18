@@ -1,14 +1,9 @@
 # $FreeBSD$
 
 PORTNAME=	fail2ban
-PORTVERSION=	0.11.1
-PORTREVISION=	2
+PORTVERSION=	0.11.2
 CATEGORIES=	security python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
-
-PATCHFILES=	55e76c0b807e87f6a04d459bb9c59da33c98572b.patch:-p1 \
-		9d7388e68448e9294e568a8ad21599e719c914b0.patch:-p1
-PATCH_SITES=	https://github.com/fail2ban/fail2ban/commit/
 
 MAINTAINER=	theis@gmx.at
 COMMENT=	Scans log files and bans IP that makes too many password failures
@@ -18,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3@${PY_FLAVOR}
 
-USES=		python:patch shebangfix
+USES=		python:3.6+,patch shebangfix
 USE_GITHUB=	yes
 USE_PYTHON=	autoplist distutils
 USE_RC_SUBR=	fail2ban
@@ -30,7 +25,8 @@ SHEBANG_LANG=	fail2ban-python
 
 SUB_LIST+=	PYTHON_CMD=${PYTHON_CMD}
 
-PYDISTUTILS_INSTALLARGS+=	--install-data=${ETCDIR} --without-test
+PYDISTUTILS_BUILDARGS+=		--without-tests
+PYDISTUTILS_INSTALLARGS+=	--install-data=${ETCDIR}
 
 PORTDOCS=	README.md DEVELOP
 
@@ -60,8 +56,6 @@ FAIL2BAN_DBDIR=	/var/db/${PORTNAME}
 PY2TO3_CMD=	${LOCALBASE}/bin/2to3-${PYTHON_VER}
 PY2TO3_ARG=	--no-diffs --write --nobackups --fix=all
 
-.include <bsd.port.pre.mk>
-
 post-patch:
 	@${REINPLACE_CMD} -e 's,/etc/fail2ban,${ETCDIR},g' ${FILES}
 	@${REINPLACE_CMD} -e 's,paths-debian.conf,paths-freebsd.conf,g' \
@@ -73,9 +67,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's, sed , ${SED} ,g' \
 		${WRKSRC}/config/action.d/hostsdeny.conf
 
-.	if ${PYTHON_MAJOR_VER} >= 3
-		(cd ${WRKSRC}/ && ${PY2TO3_CMD} ${PY2TO3_ARG} bin/* fail2ban)
-.	endif
+	(cd ${WRKSRC}/ && ${PY2TO3_CMD} ${PY2TO3_ARG} bin/* fail2ban)
 
 post-install:
 	@${MKDIR} ${STAGEDIR}${FAIL2BAN_DBDIR} ${STAGEDIR}/var/run/fail2ban
@@ -91,4 +83,4 @@ post-install-DOCS-on:
 do-test:
 	@cd ${WRKSRC} && ${PYTHON_CMD} ${PYDISTUTILS_SETUP} test
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
