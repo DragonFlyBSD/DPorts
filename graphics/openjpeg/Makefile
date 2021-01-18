@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	openjpeg
-PORTVERSION=	2.3.1
+PORTVERSION=	2.4.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	graphics
 
@@ -25,8 +25,5 @@ PLIST_SUB=	PORTVERSION=${PORTVERSION} VER=${PORTVERSION:R}
 
 GH_ACCOUNT=	uclouvain
 USE_GITHUB=	yes
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|$${OPENJPEG_INSTALL_LIB_DIR}/pkgconfig|libdata/pkgconfig|' ${WRKSRC}/CMakeLists.txt
 
 .include <bsd.port.mk>
