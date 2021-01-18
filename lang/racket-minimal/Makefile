@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	racket
-PORTVERSION=	7.8
+PORTVERSION=	7.9
 CATEGORIES=	lang scheme
 MASTER_SITES=	http://mirror.racket-lang.org/installers/${PORTVERSION}/ \
 		http://www.cs.utah.edu/plt/installers/${PORTVERSION}/ \
@@ -21,10 +21,7 @@ LICENSE=	APACHE20 MIT
 LICENSE_COMB=	dual
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-BROKEN_armv6=	fails to compile: ./lightning/lightning.h:81:2: error: GNU lightning does not support the current target
-BROKEN_armv7=	fails to compile: ./lightning/lightning.h:81:2: error: GNU lightning does not support the current target
-BROKEN_powerpc64=	fails to build: jit.c: 'JIT_LOCAL4' undeclared (first use in this function)
-NOT_FOR_ARCHS=	aarch64 mips mips64 sparc64
+NOT_FOR_ARCHS=	aarch64 mips mips64 riscv64 sparc64
 NOT_FOR_ARCHS_REASON=	not yet ported to this arch
 
 LIB_DEPENDS=	libffi.so:devel/libffi
@@ -43,10 +40,8 @@ USE_LDCONFIG=	yes
 REINPLACE_ARGS=	-i ""
 MAKE_JOBS_UNSAFE=	yes
 CONFLICTS=	racket-[0-9]*
-OPTIONS_DEFINE=	DOCS
+OPTIONS_DEFINE=	DOCS FUTURES JIT
 
-OPTIONS_DEFINE_x86_64=	FUTURES JIT
-OPTIONS_DEFINE_i386=	FUTURES JIT
 OPTIONS_DEFAULT_x86_64=	FUTURES JIT
 OPTIONS_DEFAULT_i386=	FUTURES JIT
 
