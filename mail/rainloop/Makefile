@@ -2,6 +2,7 @@
 
 PORTNAME=	rainloop
 PORTVERSION=	1.14.0
+PORTREVISION=	1
 CATEGORIES=	mail www
 MASTER_SITES=	https://github.com/RainLoop/rainloop-webmail/releases/download/v${PORTVERSION}/
 PKGNAMESUFFIX?=	${PHP_PKGNAMESUFFIX}
@@ -9,7 +10,7 @@ PKGNAMESUFFIX?=	${PHP_PKGNAMESUFFIX}
 MAINTAINER=	yasu@utahime.org
 COMMENT?=	Modern and interactive webmail
 
-.if "${PKGNAMESUFFIX"} == "${PHP_PKGNAMESUFFIX}"
+.if "${PKGNAMESUFFIX}" == "${PHP_PKGNAMESUFFIX}"
 LICENSE=	RainLoop
 LICENSE_NAME=	RainLoop Software License
 LICENSE_TEXT=	License can be found at: http://www.rainloop.net/licensing/
@@ -20,7 +21,7 @@ USES=		php:web,flavors zip
 NO_BUILD=	yes
 NO_ARCH=	yes
 NO_WRKSUBDIR=	yes
-USE_PHP=	curl iconv json xml dom openssl pcre spl zlib
+USE_PHP=	curl dom iconv json openssl pcre simplexml spl xml zlib
 PLIST_SUB=	VER="${PORTVERSION}" WWWOWN="${WWWOWN}" WWWGRP="${WWWGRP}"
 
 .if "${PKGNAMESUFFIX}" == "${PHP_PKGNAMESUFFIX}"
