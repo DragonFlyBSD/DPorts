@@ -13,9 +13,9 @@ COMMENT=	Sphinx Adadomain Extension
 
 LICENSE=	BSD2CLAUSE
 
-RUN_DEPENDS=	${PY_SPHINX}
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sphinx>=1.0,1:textproc/py-sphinx@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes
