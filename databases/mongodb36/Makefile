@@ -2,11 +2,10 @@
 
 PORTNAME=	mongodb
 DISTVERSIONPREFIX=	r
-DISTVERSION=	3.6.20
+DISTVERSION=	3.6.21
 CATEGORIES=	databases net
 MASTER_SITES=	https://fastdl.mongodb.org/src/ \
-		http://fastdl.mongodb.org/src/ \
-		http://download.mongodb.org/src/
+		http://fastdl.mongodb.org/src/
 PKGNAMESUFFIX=	${PORTVERSION:R:S/.//}
 DISTNAME=	mongodb-src-${DISTVERSIONPREFIX}${DISTVERSION}
 
@@ -24,7 +23,6 @@ ONLY_FOR_ARCHS=	aarch64 amd64
 ONLY_FOR_ARCHS_REASON=	"Only supported on amd64 and aarch64 (i386 deprecated in v3)"
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cheetah3>0:devel/py-cheetah3@${PY_FLAVOR} \
-		${PY_TYPING} \
 		${PYTHON_PKGNAMEPREFIX}yaml>=3.11:devel/py-yaml@${PY_FLAVOR}
 LIB_DEPENDS=	libboost_system.so:devel/boost-libs \
 		libpcre.so:devel/pcre \
