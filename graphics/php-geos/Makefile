@@ -24,6 +24,5 @@ LIB_DEPENDS=	libgeos_c.so:graphics/geos
 USES=		localbase:ldflags php:ext
 
 WRKSRC=		${WRKDIR}/php-${PORTNAME}
-IGNORE_WITH_PHP= 80
 
 .include <bsd.port.mk>
