@@ -2,13 +2,13 @@
 # $FreeBSD$
 
 PORTNAME=		krb5
-PORTVERSION=		1.18.${MIT_COMMIT_DATE}
+PORTVERSION=		1.19.${MIT_COMMIT_DATE}
 CATEGORIES=		security
 .if !defined(MASTERDIR)
 PKGNAMESUFFIX=		-devel
 .endif
-HASH=			6dbf0b755
-MIT_COMMIT_DATE=	2020.10.15
+HASH=			722b77ba3
+MIT_COMMIT_DATE=	2020.12.15
 
 PATCH_SITES=		http://web.mit.edu/kerberos/advisories/
 PATCH_DIST_STRIP=	-p2
