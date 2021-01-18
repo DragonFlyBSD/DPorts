@@ -3,8 +3,7 @@
 
 PORTNAME=	luajit
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.1-20201002
-PORTREVISION=	1
+DISTVERSION=	2.1-20201027
 CATEGORIES=	lang
 PKGNAMESUFFIX=	-openresty
 
@@ -17,12 +16,14 @@ LICENSE=	MIT PD
 LICENSE_COMB=	multi
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
 
+IGNORE_riscv64=		fails to compile: lj_arch.h:73:2: No support for this architecture (yet)
+
 USES=		gmake
 
 CONFLICTS_INSTALL=	luajit
 
 USE_LDCONFIG=	yes
-MAKE_ARGS=	CC=${CC}
+MAKE_ARGS=	CC=${CC} Q=
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	openresty
@@ -42,7 +43,7 @@ USE_GCC=yes
 .include <bsd.port.pre.mk>
 
 .if ${OPSYS} == FreeBSD && ${OSVERSION} < 1200000
-MAKE_ARGS+=	XCFLAGS=-DLJ_TARGET_HAS_GETENTROPY=0 Q=
+MAKE_ARGS+=	XCFLAGS=-DLJ_TARGET_HAS_GETENTROPY=0
 .endif
 
 post-install:
