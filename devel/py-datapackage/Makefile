@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	datapackage
-PORTVERSION=	1.14.1
+PORTVERSION=	1.15.1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -27,5 +27,10 @@ USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes
+
+OPTIONS_DEFINE=	CCHARDET
+CCHARDET_DESC=	Character detector support
+
+CCHARDET_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cchardet>=2.0:textproc/py-cchardet@${PY_FLAVOR}
 
 .include <bsd.port.mk>
