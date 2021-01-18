@@ -1,8 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	redis
-PORTVERSION=	5.3.1
-PORTREVISION=	0
+PORTVERSION=	5.3.2
 CATEGORIES=	databases
 
 MAINTAINER=	daniel@blodan.se
@@ -19,6 +18,5 @@ IGBINARY_DESC=	Build with Igbinary serializer
 
 IGBINARY_CONFIGURE_ENABLE=	redis-igbinary
 IGBINARY_USE=			PHP=igbinary:build
-IGNORE_WITH_PHP= 80
 
 .include <bsd.port.mk>
