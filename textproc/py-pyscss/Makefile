@@ -13,8 +13,7 @@ COMMENT=	Compiler for SCSS flavor of the Sass language
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}six>0:devel/py-six@${PY_FLAVOR} \
-		${PY_ENUM34} ${PY_PATHLIB}
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}six>0:devel/py-six@${PY_FLAVOR}
 LIB_DEPENDS=	libpcre.so:devel/pcre
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>0:devel/py-pytest@${PY_FLAVOR}
 
@@ -22,7 +21,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	Kronuz
 GH_PROJECT=	pyScss
 
-USES=		python localbase:ldflags
+USES=		python:3.6+ localbase:ldflags
 USE_PYTHON=	distutils autoplist
 
 do-test:
