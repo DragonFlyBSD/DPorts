@@ -19,16 +19,10 @@ RUN_DEPENDS=	flac:audio/flac \
 		${PYTHON_PKGNAMEPREFIX}pyaudio>0:audio/py-pyaudio@${PY_FLAVOR}
 
 NO_ARCH=	yes
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 
 post-extract:       
 	@cd ${WRKSRC}/speech_recognition && ${RM} flac-*
 
-.include <bsd.port.pre.mk>
-
-.if ${PYTHON_REL} < 3000
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}monotonic>=0.3:devel/py-monotonic@${PY_FLAVOR}
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
