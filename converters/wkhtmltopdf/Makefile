@@ -11,7 +11,6 @@ COMMENT=	Convert HTML (or live webpages) to PDF or image
 LICENSE=	LGPL3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BROKEN_aarch64=		fails to build: error: cast from pointer to smaller type loses information
 BROKEN_armv6=		fails to build: error: Not supported ARM architecture
 BROKEN_armv7=		fails to build: error: invalid operand for instruction
 BROKEN_mips64=		fails to link: undefined reference to __sync_add_and_fetch_4
@@ -21,8 +20,7 @@ LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2 \
 		libpng.so:graphics/png
 
-USES=		gmake iconv jpeg perl5 pkgconfig ssl xorg
-USE_GCC=	8
+USES=		compiler gmake iconv jpeg perl5 pkgconfig ssl xorg
 USE_XORG=	x11 xext xrender
 USE_PERL5=	build
 USE_LDCONFIG=	yes
@@ -55,6 +53,12 @@ CONFIGURE_ARGS=	-prefix ${WRKSRC}/build/qt \
 	-no-neon
 
 MAKE_ARGS=	INSTALL_ROOT="${STAGEDIR}${PREFIX}"
+
+.include <bsd.port.pre.mk>
+
+.if ${ARCH} == "i386" || ${CHOSEN_COMPILER_TYPE} == gcc
+USE_GCC=	8
+.endif
 
 pre-patch:
 	${RMDIR} ${WRKSRC}/qt
@@ -89,4 +93,4 @@ post-install:
 		${STAGEDIR}${PREFIX}/bin/wkhtmltopdf \
 		${STAGEDIR}${PREFIX}/lib/libwkhtmltox.so.${PORTVERSION}
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
