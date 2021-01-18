@@ -1,9 +1,0 @@
-
-# to avoid bad orphans, installed by devel/tevent
-.if !defined(NO_PYTHON)
-dfly-install:
-	${RM} -vf ${STAGEDIR}${PYTHON_SITELIBDIR}/_tdb_text.py
-	${RM} -vf ${STAGEDIR}${PYTHON_SITELIBDIR}/_tevent.so
-	${RM} -vf ${STAGEDIR}${PYTHON_SITELIBDIR}/tdb.so
-	${RM} -vf ${STAGEDIR}${PYTHON_SITELIBDIR}/tevent.py
-.endif

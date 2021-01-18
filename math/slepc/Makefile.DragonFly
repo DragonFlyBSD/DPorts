@@ -1,1 +1,0 @@
-OS_VER:=	${OPSYS:tl}${DFLYVERSION:C/(.*)...../\\1/}

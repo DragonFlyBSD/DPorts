@@ -1,7 +1,0 @@
-# too much -Wdeprecated
-USE_CXXSTD=	c++98
-
-# don't use alias, conflicsts in libpcap headers
-USES+= ssl
-
-LDFLAGS+= -lcrypto

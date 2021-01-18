@@ -1,4 +1,0 @@
-# [-Werror=cast-function-type]
-dfly-patch:
-	${REINPLACE_CMD} -e 's/-Werror[[:>:]]//g'	\
-		${WRKSRC}/Makefile.in ${WRKSRC}/tgl/Makefile.in

@@ -1,6 +1,0 @@
-
-# zrj: remove #version (upstream trunk r2101) (some incompat)
-dfly-patch:
-	${REINPLACE_CMD} -e '/#version/d'	\
-		${WRKSRC}/shaders/*.*shader
-	-${RM} -fv ${WRKSRC}/shaders/*.bak ${WRKSRC}/shaders/*.orig
