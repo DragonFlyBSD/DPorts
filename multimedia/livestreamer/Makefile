@@ -16,11 +16,10 @@ LICENSE_COMB=	multi
 
 RUN_DEPENDS=	rtmpdump:multimedia/rtmpdump \
 		${PYTHON_PKGNAMEPREFIX}requests>=0:www/py-requests@${PY_FLAVOR} \
-		${PY_FUTURES} \
 		${PYTHON_PKGNAMEPREFIX}six>0:devel/py-six@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}librtmp>=0:multimedia/py-librtmp@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
 PATCH_STRIP=	-p1
 
