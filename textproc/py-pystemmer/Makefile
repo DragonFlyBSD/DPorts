@@ -15,10 +15,10 @@ COMMENT=	Snowball Stemming Algorithms for Information Retrieval
 LICENSE=	MIT BSD3CLAUSE
 LICENSE_COMB=	dual
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist cython distutils
 
 post-install:
-	${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/Stemmer.so
+	${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/Stemmer*.so
 
 .include <bsd.port.mk>
