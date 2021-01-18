@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	wolfssl
-PORTVERSION=	4.5.0
+PORTVERSION=	4.6.0
 CATEGORIES=	security devel
 MASTER_SITES=	https://www.wolfssl.com/ \
 		LOCAL/fox
@@ -10,9 +10,6 @@ COMMENT=	Embedded SSL C-Library
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
-
-BROKEN_mips=	fails to package: pkg-static: Unable to access file libwolfssl.so.3: No such file or directory
-BROKEN_mips64=	fails to package: pkg-static: Unable to access file libwolfssl.so.3: No such file or directory
 
 USES=		libtool zip
 USE_LDCONFIG=	yes
@@ -33,11 +30,7 @@ CONFIGURE_ARGS=	--disable-dependency-tracking \
 		--enable-ssh \
 		--enable-static \
 		--enable-tls13 \
-		--enable-tls13-draft18 \
-		--enable-tls13-draft22 \
-		--enable-tls13-draft23 \
-		--enable-tls13-draft26 \
-		--enable-tls13-draft28
+		--enable-tls13-draft18
 TEST_TARGET=	check
 PORTDOCS=	*
 OPTIONS_DEFINE=	DOCS
