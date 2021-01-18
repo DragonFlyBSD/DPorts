@@ -3,7 +3,7 @@
 
 PORTNAME=			${SAMBA4_BASENAME}412
 PORTVERSION=			${SAMBA4_VERSION}
-PORTREVISION=			0
+PORTREVISION=			1
 CATEGORIES?=			net
 MASTER_SITES=			SAMBA/samba/stable SAMBA/samba/rc
 DISTNAME=			${SAMBA4_DISTNAME}
@@ -23,7 +23,7 @@ EXTRA_PATCHES+=			${PATCHDIR}/0001-Zfs-provision-1.patch:-p1
 
 SAMBA4_BASENAME=		samba
 SAMBA4_PORTNAME=		${SAMBA4_BASENAME}4
-SAMBA4_VERSION=			4.12.8
+SAMBA4_VERSION=			4.12.9
 SAMBA4_DISTNAME=		${SAMBA4_BASENAME}-${SAMBA4_VERSION:S|.p|pre|:S|.r|rc|:S|.t|tp|:S|.a|alpha|}
 
 WRKSRC?=			${WRKDIR}/${DISTNAME}
@@ -137,8 +137,6 @@ NSUPDATE_DESC=			Use samba NSUPDATE utility for AD DC
 
 # Iconv(picked up unconditionaly)
 LIB_DEPENDS+=			libiconv.so:converters/libiconv
-# unwind
-LIB_DEPENDS+=			libunwind.so:devel/libunwind
 # Readline(sponsored by Python)
 # XXX: USES=readline pollutes CPPFLAGS, so we explicitly put dependency
 LIB_DEPENDS+=			libreadline.so:devel/readline
@@ -383,6 +381,11 @@ MANDOC_CONFIGURE_ENV_OFF=	XSLTPROC="true"
 ##############################################################################
 .include <bsd.port.options.mk>
 ##############################################################################
+
+.if ${ARCH} == aarch64 || ${ARCH} == x86_64 || ${ARCH} == i386 || ${ARCH} == powerpc64 || ${ARCH} == powerpc64le
+# unwind
+LIB_DEPENDS+=			libunwind.so:devel/libunwind
+.endif
 
 .if !defined(WANT_EXP_MODULES) || empty(WANT_EXP_MODULES)
 WANT_EXP_MODULES=		vfs_cacheprime
