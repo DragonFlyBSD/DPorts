@@ -12,8 +12,8 @@ LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USES=		php:pecl
+IGNORE_WITH_PHP=	80
 
 CONFIGURE_ARGS=	--enable-vld
-IGNORE_WITH_PHP= 80
 
 .include <bsd.port.mk>
