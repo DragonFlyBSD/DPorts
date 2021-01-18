@@ -2,7 +2,7 @@
 
 PORTNAME=	gui
 DISTVERSION=	${QT5_VERSION}
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11-toolkits graphics
 PKGNAMEPREFIX=	qt5-
 
@@ -10,7 +10,7 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Qt graphical user interface module
 
 BUILD_DEPENDS=	${LOCALBASE}/include/linux/input.h:devel/evdev-proto \
-		${LOCALBASE}/include/vulkan/vulkan.h:devel/vulkan-headers \
+		${LOCALBASE}/include/vulkan/vulkan.h:graphics/vulkan-headers \
 		${LOCALBASE}/include/xf86drm.h:graphics/libdrm \
 		at-spi2-core>=0:accessibility/at-spi2-core
 LIB_DEPENDS=	libdbus-1.so:devel/dbus \
@@ -26,14 +26,13 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libxcb-render-util.so:x11/xcb-util-renderutil \
 		libxcb.so:x11/libxcb \
 		libxkbcommon.so:x11/libxkbcommon
-RUN_DEPENDS=	${LOCALBASE}/include/vulkan/vulkan.h:devel/vulkan-headers \
+RUN_DEPENDS=	${LOCALBASE}/include/vulkan/vulkan.h:graphics/vulkan-headers \
 		xdg-open:devel/xdg-utils
 
 USES=			compiler:c++11-lang gl gnome jpeg localbase \
 			qmake:no_env qt-dist:5,base
 USE_GL=			egl gl
 USE_GNOME=		glib20
-USE_LDCONFIG=		${PREFIX}/${QT_LIBDIR_REL}
 USE_QT=			core dbus network buildtools_build qmake_build
 QT_BINARIES=		yes
 QT_CONFIG=		accessibility accessibility-atspi-bridge dbus \
