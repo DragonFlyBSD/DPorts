@@ -2,15 +2,14 @@
 # $FreeBSD$
 
 PORTNAME=	msgpack
-PORTVERSION=	2.1.0
+PORTVERSION=	2.1.2
 CATEGORIES=	devel
 
-MAINTAINER=	miwi@FreeBSD.org
+MAINTAINER=	fluffy@FreeBSD.org
 COMMENT=	Provides API for communicating with MessagePack serialization
 
 LICENSE=	BSD3CLAUSE
 
 USES=		php:pecl
-IGNORE_WITH_PHP= 80
 
 .include <bsd.port.mk>
