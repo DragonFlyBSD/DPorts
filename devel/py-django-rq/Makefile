@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	django-rq
-PORTVERSION=	2.3.2
+PORTVERSION=	2.4.0
+PORTREVISION=	1
 CATEGORIES=	devel python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MASTER_SITES=	CHEESESHOP
@@ -27,7 +28,7 @@ USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes
 
-CONFLICTS_INSTALL=	${PYTHON_PKGNAMEPREFIX}dj22-django-rq
+CONFLICTS_INSTALL=	${PYTHON_PKGNAMEPREFIX}dj31-django-rq
 
 # https://github.com/rq/django-rq/blob/master/Makefile
 do-test:
