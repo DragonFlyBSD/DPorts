@@ -59,11 +59,13 @@ OPTIONS_DEFINE=	BE_AMDGPU CLANG DOCS EXTRAS LIT LLD LLDB PYCLANG
 OPTIONS_DEFINE_x86_64=	COMPILER_RT GOLD OPENMP
 OPTIONS_DEFINE_i386=	COMPILER_RT OPENMP
 OPTIONS_DEFINE_powerpc64=	GOLD OPENMP
+OPTIONS_DEFINE_powerpc64le=	GOLD OPENMP
 OPTIONS_DEFAULT=	BE_AMDGPU BE_STANDARD CLANG EXTRAS LIT LLD LLDB PYCLANG
 OPTIONS_DEFAULT_x86_64=	COMPILER_RT GOLD OPENMP
 OPTIONS_DEFAULT_i386=	COMPILER_RT OPENMP
 OPTIONS_DEFAULT_powerpc64=	${OPTIONS_DEFAULT_powerpc64_${OSREL:R}} OPENMP
 OPTIONS_DEFAULT_powerpc64_13=	GOLD
+OPTIONS_DEFAULT_powerpc64le=	GOLD OPENMP
 OPTIONS_SINGLE=		BACKENDS
 OPTIONS_SINGLE_BACKENDS=BE_FREEBSD BE_NATIVE BE_STANDARD
 OPTIONS_SUB=	yes
@@ -88,7 +90,7 @@ COMPILER_RT_DESC=	Sanitizer libraries
 COMPILER_RT_DISTFILES=	compiler-rt-${DISTVERSION}.src${EXTRACT_SUFX}
 COMPILER_RT_PLIST_FILES=${_COMPILER_RT_LIBS:S|^|${_CRTLIBDIR}/|} \
 			${_COMPILER_RT_BLACKLISTS:S|^|${_CRTBLDIR}/|}
-DOCS_BUILD_DEPENDS=	${PY_SPHINX} \
+DOCS_BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sphinx>=0,1:textproc/py-sphinx@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}recommonmark>=0.0.20180530:textproc/py-recommonmark@${PY_FLAVOR}
 DOCS_CONFLICTS_BUILD=	commonmark-cmark-*
 DOCS_PORTDOCS=		llvm
@@ -109,8 +111,7 @@ LIT_VARS=		_USES_PYTHON=python:3.6+
 LLD_DESC=		Install lld, the LLVM linker
 LLD_DISTFILES=		lld-${DISTVERSION}.src${EXTRACT_SUFX}
 LLD_EXTRA_PATCHES=	${PATCHDIR}/lld
-LLDB_BUILD_DEPENDS=	swig:devel/swig \
-			${PY_ENUM34}
+LLDB_BUILD_DEPENDS=	swig:devel/swig
 LLDB_DESC=		Install lldb, the LLVM debugger
 LLDB_DISTFILES=		lldb-${DISTVERSION}.src${EXTRACT_SUFX}
 LLDB_EXTRA_PATCHES=	${PATCHDIR}/lldb
@@ -257,7 +258,8 @@ _NATIVE_BACKENDS=	Mips
 .elif ${ARCH:Mpowerpc*}
 _NATIVE_BACKENDS=	PowerPC
 .elif ${ARCH:Mriscv*}
-BROKEN_riscv=	No non-experimental native backend
+BROKEN_riscv=		No non-experimental native backend.  Use llvm 9 or above.
+BROKEN_riscv64=		No non-experimental native backend.  Use llvm 9 or above.
 .endif
 NATIVE_BACKENDS=	${_NATIVE_BACKENDS}
 .if ${PORT_OPTIONS:MBE_AMDGPU}
@@ -270,7 +272,7 @@ _BE_LIBS_COMMON=	CodeGen Desc Info
 _BE_LIBS_AArch64=	AsmParser AsmPrinter Disassembler Utils
 _BE_LIBS_AMDGPU=	AsmParser AsmPrinter Disassembler Utils
 _BE_LIBS_ARM=		AsmParser AsmPrinter Disassembler Utils
-_BE_LIBS_BPF=		AsmParser AsmPrinter Disassembler 
+_BE_LIBS_BPF=		AsmParser AsmPrinter Disassembler
 _BE_LIBS_Hexagon=	AsmParser Disassembler
 _BE_LIBS_Lanai=		AsmParser AsmPrinter Disassembler
 _BE_LIBS_MSP430=	AsmParser AsmPrinter Disassembler
