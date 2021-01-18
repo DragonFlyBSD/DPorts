@@ -17,6 +17,5 @@ USES=		php:pecl tcl
 
 CFLAGS+=	-I${TCL_INCLUDEDIR}
 CONFIGURE_ARGS=	--with-expect=${LOCALBASE}
-IGNORE_WITH_PHP= 80
 
 .include <bsd.port.mk>
