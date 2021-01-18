@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	bsdconv
-PORTVERSION=	11.5.0
+PORTVERSION=	11.6.0
 CATEGORIES=	converters
 PKGNAMEPREFIX=	${PHP_PKGNAMEPREFIX}
 
@@ -19,6 +19,5 @@ GH_PROJECT=	php-${PORTNAME}
 
 USES=		php:ext
 CONFIGURE_ARGS=	--with-bsdconv=${LOCALBASE}
-IGNORE_WITH_PHP= 80
 
 .include <bsd.port.mk>
