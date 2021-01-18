@@ -1,3 +1,3 @@
-TIMESTAMP = 1602721379
-SHA256 (azure-mgmt-compute-13.1.1.zip) = 5df73b570183c7709c69fdc0719ee7d92350d0d003f60d153dc1727d5e6bd7bf
-SIZE (azure-mgmt-compute-13.1.1.zip) = 2566363
+TIMESTAMP = 1609620490
+SHA256 (azure-mgmt-compute-18.0.0.zip) = 34815c91193640ad8ff0c4dad7f2d997548c853d2e8b10250329ed516e55879e
+SIZE (azure-mgmt-compute-18.0.0.zip) = 3208589
