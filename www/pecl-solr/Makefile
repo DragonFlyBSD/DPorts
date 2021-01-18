@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	solr
-PORTVERSION=	2.5.0
-PORTREVISION=	1
+PORTVERSION=	2.5.1
 CATEGORIES=	www
 
 MAINTAINER=	gaod@hychen.org
@@ -20,6 +19,5 @@ USE_PHP=	json:build
 
 CONFIGURE_ARGS=	LIBXML_CFLAGS=-I${LOCALBASE}/include/libxml2 \
 		LIBXML_LIBS=-L${LOCALBASE}/include/libxml2
-IGNORE_WITH_PHP= 80
 
 .include <bsd.port.mk>
