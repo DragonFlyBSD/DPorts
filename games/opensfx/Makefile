@@ -5,9 +5,7 @@ PORTNAME=	opensfx
 PORTVERSION=	0.2.3
 PORTREVISION=	2
 CATEGORIES=	games
-MASTER_SITES=	http://hu.binaries.openttd.org/binaries/extra/${PORTNAME}/${PORTVERSION}/ \
-		http://us.binaries.openttd.org/binaries/extra/${PORTNAME}/${PORTVERSION}/ \
-		http://cz.binaries.openttd.org/openttd/binaries/extra/${PORTNAME}/${PORTVERSION}/
+MASTER_SITES=	https://cdn.openttd.org/opensfx-releases/${PORTVERSION}/
 DISTNAME=	${PORTNAME}-${PORTVERSION}-all
 
 MAINTAINER=	rum1cro@yandex.ru
