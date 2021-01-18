@@ -30,7 +30,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}acme>=${ACME_VERSION},1:security/py-acme@${P
 		${PYTHON_PKGNAMEPREFIX}mock>0:devel/py-mock@${PY_FLAVOR}
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>=0:devel/py-pytest@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes
@@ -42,7 +42,7 @@ OPTIONS_DEFINE=	MANPAGES
 OPTIONS_DEFAULT=	MANPAGES
 
 MANPAGES_BUILD_DEPENDS=	${RUN_DEPENDS} \
-			${PY_SPHINX} \
+			${PYTHON_PKGNAMEPREFIX}sphinx>=1.2,1:textproc/py-sphinx@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}sphinx_rtd_theme>0:textproc/py-sphinx_rtd_theme@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}repoze.sphinx.autointerface>0:devel/py-repoze.sphinx.autointerface@${PY_FLAVOR} \
 
