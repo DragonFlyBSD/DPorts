@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	xmlsec
-PORTVERSION=	1.3.8
+PORTVERSION=	1.3.9
 CATEGORIES=	security python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -21,14 +21,14 @@ LIB_DEPENDS=	libltdl.so:devel/libltdl \
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>0:devel/py-pytest@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}hypothesis>0:devel/py-hypothesis@${PY_FLAVOR}
 
-USES=		gnome pkgconfig python
+USES=		gnome pkgconfig python:3.6+
 USE_GNOME=	libxml2 libxslt
 USE_PYTHON=	autoplist distutils flavors
 
 INSTALL_TARGET=	install-strip
 
 post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/xmlsec.so
+	@${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/xmlsec*.so
 
 do-test:
 	@cd ${WRKSRC} && ${LOCALBASE}/bin/pytest-${PYTHON_VER} tests
