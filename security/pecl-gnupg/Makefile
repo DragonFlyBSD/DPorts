@@ -17,7 +17,6 @@ LIB_DEPENDS=	libgpgme.so:security/gpgme
 USES=		localbase php:pecl
 
 CONFIGURE_ARGS=	--with-gnupg=${LOCALBASE}/include
-IGNORE_WITH_PHP= 80
 
 post-patch:
 	@${REINPLACE_CMD} -e '/GNUPG_DL/ s|-ldl||; s|$$GNUPG_DIR/lib|${LOCALBASE}/lib|' ${WRKSRC}/config.m4
