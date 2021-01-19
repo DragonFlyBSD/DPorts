@@ -1,0 +1,47 @@
+--- configure.orig	2019-06-16 08:51:06 UTC
++++ configure
+@@ -17381,7 +17381,7 @@ $as_echo "Auto setting gui based on host
+ 	     case $host_os in #(
+   darwin*) :
+     enable_gui="cocoa" ;; #(
+-  linux*|*bsd*) :
++  linux*|*bsd*|dragonfly*) :
+     enable_gui="x11" ;; #(
+   msys|mingw*|windows*|winnt|cygwin) :
+     enable_gui="win32" ;; #(
+@@ -18144,7 +18144,7 @@ if test "x$enable_vst" = "xyes"; then :
+ 	case $host_os in #(
+   darwin*) :
+       ;; #(
+-  linux*|*bsd*) :
++  linux*|*bsd*|dragonfly*) :
+     VST_CPPFLAGS="$VST_CPPFLAGS -D__cdecl=" ;; #(
+   msys|mingw*|windows*|winnt|cygwin) :
+       ;; #(
+@@ -18373,7 +18373,7 @@ $as_echo "*** input midifile plugin disa
+ fi
+ 
+     case $host_os in
+-    freebsd*)
++    freebsd*|dragonfly*)
+       enable_oss_midi_value=yes
+       ;;
+     *)
+@@ -18587,7 +18587,7 @@ $as_echo "*** output wavfile plugin disa
+ fi
+ 
+     case $host_os in
+-    freebsd*)
++    freebsd*|dragonfly*)
+       enable_oss_value=yes
+       ;;
+     *)
+@@ -19042,7 +19042,7 @@ LIBS="$tmp_LIBS"
+ case $host_os in #(
+   darwin*) :
+     PTHREAD_LIBS="$PTHREAD_LIBS -framework CoreServices" ;; #(
+-  linux*|*bsd*) :
++  linux*|*bsd*|dragonfly) :
+      ;; #(
+   msys|mingw*|windows*|winnt|cygwin) :
+      ;; #(
