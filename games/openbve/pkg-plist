@@ -47,6 +47,7 @@ bin/openbve-routeviewer
 %%DATADIR%%/Data/Compatibility/RoutePatches/Brazil.xml
 %%DATADIR%%/Data/Compatibility/RoutePatches/Germany.xml
 %%DATADIR%%/Data/Compatibility/RoutePatches/Holland.xml
+%%DATADIR%%/Data/Compatibility/RoutePatches/HongKong.xml
 %%DATADIR%%/Data/Compatibility/RoutePatches/Hungary.xml
 %%DATADIR%%/Data/Compatibility/RoutePatches/Italy.xml
 %%DATADIR%%/Data/Compatibility/RoutePatches/Japan.xml
@@ -432,6 +433,14 @@ bin/openbve-routeviewer
 %%DATADIR%%/Data/Compatibility/UchiboV1/slab.png
 %%DATADIR%%/Data/Compatibility/UchiboV1/slab2.png
 %%DATADIR%%/Data/Compatibility/UchiboV1Base.xml
+%%DATADIR%%/Data/Compatibility/Windscreen/Day/drop1.png
+%%DATADIR%%/Data/Compatibility/Windscreen/Day/drop2.png
+%%DATADIR%%/Data/Compatibility/Windscreen/Day/drop3.png
+%%DATADIR%%/Data/Compatibility/Windscreen/Day/drop4.png
+%%DATADIR%%/Data/Compatibility/Windscreen/Night/drop1.png
+%%DATADIR%%/Data/Compatibility/Windscreen/Night/drop2.png
+%%DATADIR%%/Data/Compatibility/Windscreen/Night/drop3.png
+%%DATADIR%%/Data/Compatibility/Windscreen/Night/drop4.png
 %%DATADIR%%/Data/Compatibility/exterior.csv
 %%DATADIR%%/Data/Compatibility/needle_hour.png
 %%DATADIR%%/Data/Compatibility/needle_minute.png
@@ -468,7 +477,6 @@ bin/openbve-routeviewer
 %%DATADIR%%/Data/Cursors/nm.png
 %%DATADIR%%/Data/Cursors/nr.png
 %%DATADIR%%/Data/Cursors/ny.png
-%%DATADIR%%/Data/Dependencies/Win32/oalinst.exe
 %%DATADIR%%/Data/Flags/AT.png
 %%DATADIR%%/Data/Flags/BE.png
 %%DATADIR%%/Data/Flags/BR.png
@@ -558,6 +566,9 @@ bin/openbve-routeviewer
 %%DATADIR%%/Data/InputDevicePlugins/DefaultDisplayPlugin.dll
 %%DATADIR%%/Data/InputDevicePlugins/DefaultDisplayPlugin.dll.config
 %%DATADIR%%/Data/InputDevicePlugins/DefaultDisplayPlugin.pdb
+%%DATADIR%%/Data/InputDevicePlugins/DenshaDeGoInput.dll
+%%DATADIR%%/Data/InputDevicePlugins/DenshaDeGoInput.dll.config
+%%DATADIR%%/Data/InputDevicePlugins/DenshaDeGoInput.pdb
 %%DATADIR%%/Data/InputDevicePlugins/SanYingInput.dll
 %%DATADIR%%/Data/InputDevicePlugins/SanYingInput.dll.config
 %%DATADIR%%/Data/InputDevicePlugins/SanYingInput.pdb
@@ -869,6 +880,8 @@ bin/openbve-routeviewer
 %%DATADIR%%/TrainEditor2.exe
 %%DATADIR%%/TrainEditor2.exe.config
 %%DATADIR%%/TrainEditor2.pdb
+%%DATADIR%%/TrainManager.dll
+%%DATADIR%%/TrainManager.pdb
 %%DATADIR%%/Ude.NetStandard.dll
 %%DATADIR%%/netstandard.dll
 man/man6/openbve-objectviewer.6.gz
