@@ -1,8 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	smbclient
-PORTVERSION=	1.0.0
-PORTREVISION=	1
+PORTVERSION=	1.0.1
 CATEGORIES=	net pear
 
 MAINTAINER=	sunpoet@FreeBSD.org
@@ -16,6 +15,5 @@ USES=		php:pecl samba:lib
 CONFIGURE_ARGS=	--with-libsmbclient=${LOCALBASE}
 CPPFLAGS+=	-I${SAMBAINCLUDES}
 LDFLAGS+=	-L${SAMBALIBS}
-IGNORE_WITH_PHP= 80
 
 .include <bsd.port.mk>
