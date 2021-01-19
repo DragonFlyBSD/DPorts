@@ -2,6 +2,7 @@
 
 PORTNAME=	tortoisehg
 DISTVERSION=	5.5.2
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	arrowd@FreeBSD.org
@@ -15,7 +16,7 @@ RUN_DEPENDS=	${PY_MERCURIAL} \
 		${PYTHON_PKGNAMEPREFIX}iniparse>=0.4:devel/py-iniparse@${PY_FLAVOR} \
 		${PY_PYGMENTS}
 
-USES=		pyqt:5 python
+USES=		pyqt:5 python:3.5+
 USE_PYQT=	core gui network qscintilla2 xml
 USE_PYTHON=	distutils autoplist
 
