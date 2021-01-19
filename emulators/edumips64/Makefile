@@ -1,8 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	edumips64
-DISTVERSION=	1.2.8
-CATEGORIES=	emulators java
+DISTVERSION=	1.2.9
+CATEGORIES=	emulators education java
 MASTER_SITES=	https://github.com/lupino3/${PORTNAME}/releases/download/v${DISTVERSION}/
 EXTRACT_SUFX=	.jar
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
