@@ -1,7 +1,10 @@
 --- Gemfile.orig	2020-04-06 17:00:48 UTC
 +++ Gemfile
-@@ -3,7 +3,7 @@ source 'https://rubygems.org'
- ruby '>= 2.3.0', '< 2.7.0' if Bundler::VERSION >= '1.12.0'
+@@ -1,9 +1,9 @@
+ source 'https://rubygems.org'
+ 
+-ruby '>= 2.3.0', '< 2.7.0' if Bundler::VERSION >= '1.12.0'
++ruby '>= 2.3.0', '< 2.8.0' if Bundler::VERSION >= '1.12.0'
  gem "bundler", ">= 1.5.0"
  
 -gem 'rails', '5.2.4.2'
@@ -18,6 +21,15 @@
  gem "rbpdf", "~> 1.20.0"
  
  # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+@@ -22,7 +22,7 @@ gem 'tzinfo-data', platforms: [:mingw, :x64_mingw, :ms
+ 
+ # Optional gem for LDAP authentication
+ group :ldap do
+-  gem "net-ldap", "~> 0.16.0"
++  gem "net-ldap", "~> 0.17.0"
+ end
+ 
+ # Optional gem for OpenID authentication
 @@ -31,66 +31,6 @@ group :openid do
    gem "rack-openid"
  end
