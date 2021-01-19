@@ -6,13 +6,10 @@ CATEGORIES=	x11-toolkits devel python
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Python bindings for the Qt5 toolkit, QtWidgets module
 
-BUILD_DEPENDS=	${PY_ENUM34}
-RUN_DEPENDS=	${PY_ENUM34}
-
 CONFIGURE_ARGS=	--enable QtWidgets
 PYQT_DIST=	yes
 
-USES=		gl python pyqt:5 qt:5
+USES=		gl python:3.5+ pyqt:5 qt:5
 USE_GL=		gl
 USE_PYQT=	sip_build core_run gui_run 
 USE_PYTHON=	concurrent flavors py3kplist
