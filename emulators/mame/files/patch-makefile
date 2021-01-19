@@ -1,30 +1,41 @@
---- makefile.orig	2019-06-26 10:25:30 UTC
+--- makefile.orig	2020-10-27 01:00:36 UTC
 +++ makefile
-@@ -195,19 +195,19 @@ GENIEOS := solaris
+@@ -319,6 +319,9 @@ endif
+ ifeq ($(firstword $(filter ppc64,$(UNAME))),ppc64)
+ ARCHITECTURE := _x64
  endif
- ifeq ($(firstword $(filter FreeBSD,$(UNAME))),FreeBSD)
- OS := freebsd
--GENIEOS := freebsd
-+GENIEOS := bsd
++ifeq ($(firstword $(filter powerpc64,$(UNAME))),powerpc64)
++ARCHITECTURE := _x64
++endif
+ ifeq ($(firstword $(filter ppc64le,$(UNAME))),ppc64le)
+ ARCHITECTURE := _x64
  endif
- ifeq ($(firstword $(filter GNU/kFreeBSD,$(UNAME))),GNU/kFreeBSD)
- OS := freebsd
--GENIEOS := freebsd
-+GENIEOS := bsd
+@@ -399,6 +402,13 @@ ifndef FORCE_DRC_C_BACKEND
  endif
- ifeq ($(firstword $(filter NetBSD,$(UNAME))),NetBSD)
- OS := netbsd
--GENIEOS := freebsd
-+GENIEOS := bsd
  endif
- ifeq ($(firstword $(filter OpenBSD,$(UNAME))),OpenBSD)
- OS := openbsd
--GENIEOS := freebsd
-+GENIEOS := bsd
+ 
++# powerpc has inline assembly support but no DRC
++ifeq ($(findstring powerpc,$(UNAME)),powerpc)
++ifndef FORCE_DRC_C_BACKEND
++	FORCE_DRC_C_BACKEND := 1
++endif
++endif
++
+ # Autodetect BIGENDIAN
+ # MacOSX
+ ifndef BIGENDIAN
+@@ -416,18 +426,26 @@ endif
+ ifneq (,$(findstring s390x,$(UNAME)))
+ BIGENDIAN := 1
  endif
- ifeq ($(firstword $(filter Darwin,$(UNAME))),Darwin)
- OS := macosx
-@@ -396,13 +396,13 @@ endif
++# FreeBSD
++ifneq (,$(findstring powerpc,$(UNAME)))
++ifneq (,$(findstring powerpc64le,$(UNAME)))
++BIGENDIAN := 0
++else
++BIGENDIAN := 1
++endif
++endif
  endif # BIGENDIAN
  
  ifndef PYTHON_EXECUTABLE
@@ -34,16 +45,18 @@
 -PYTHON := $(PYTHON_EXECUTABLE)
 +#PYTHON := $(PYTHON_EXECUTABLE)
  endif
+ 
+ ifneq ($(TARGETOS),asmjs)
 -CC := $(SILENT)gcc
 -LD := $(SILENT)g++
 -CXX:= $(SILENT)g++
 +#CC := $(SILENT)gcc
 +#LD := $(SILENT)g++
 +#CXX:= $(SILENT)g++
+ endif
  
  #-------------------------------------------------
- # specify OSD layer: windows, sdl, etc.
-@@ -532,19 +532,19 @@ endif
+@@ -558,19 +576,19 @@ endif
  ifdef OVERRIDE_CC
  PARAMS += --CC='$(OVERRIDE_CC)'
  ifndef CROSS_BUILD
