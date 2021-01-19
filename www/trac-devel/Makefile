@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	trac
-DISTVERSION=	1.3.3
+DISTVERSION=	1.5.2
 PORTREVISION=	1
 CATEGORIES=	www devel python
 MASTER_SITES=	http://ftp.edgewall.com/pub/trac/ \
@@ -9,26 +9,22 @@ MASTER_SITES=	http://ftp.edgewall.com/pub/trac/ \
 PKGNAMESUFFIX=	-devel
 DISTNAME=	Trac-${DISTVERSION}
 
-MAINTAINER=	joneum@FreeBSD.org
+MAINTAINER=	samm@FreeBSD.org
 COMMENT=	Enhanced wiki and issue tracking system for software projects
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Babel>=2.3.4:devel/py-babel@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}Genshi>=0.7:textproc/py-genshi@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}Jinja2>=2.10:devel/py-Jinja2@${PY_FLAVOR}
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Babel>=2.3.4:devel/py-babel@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}Genshi>=0.7:textproc/py-genshi@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}Jinja2>=2.10:devel/py-Jinja2@${PY_FLAVOR}
+
+# some tests are failing with 3.8
+USES=		python:3.7
 
 CONFLICTS_INSTALL=	trac
 
-USES=		python:2.7 shebangfix
-SHEBANG_FILES=	trac/tests/functional/better_twill.py trac/tests/functional/tester.py \
-		trac/tests/functional/testenv.py trac/tests/functional/compat.py \
-		trac/tests/functional/__init__.py contrib/emailfilter.py \
-		contrib/checkwiki.py contrib/htpasswd.py
 USE_PYTHON=	distutils autoplist
 USE_RC_SUBR=	tracd
 SUB_LIST=	PYTHON_CMD=${PYTHON_CMD}
@@ -38,20 +34,28 @@ PORTDATA=	*
 
 NO_ARCH=	yes
 
-OPTIONS_DEFINE=		DOCUTILS PYGMENTS TZ SVN EXAMPLES
-OPTIONS_DEFAULT=	DOCUTILS PYGMENTS TZ SVN SQLITE
+OPTIONS_DEFINE=		DOCUTILS PYGMENTS TZ SVN GIT EXAMPLES TEXTILE FCGI
+OPTIONS_DEFAULT=	DOCUTILS PYGMENTS TZ SVN SQLITE TEXTILE FCGI
 OPTIONS_RADIO=		DATABASE
-OPTIONS_RADIO_DATABASE=	PGSQL SQLITE
+OPTIONS_RADIO_DATABASE=	PGSQL SQLITE MYSQL
 DOCUTILS_DESC=		Allow additional text markup
 PYGMENTS_DESC=		Use generic syntax highlighter
+TEXTILE_DESC=		Support for the Textile markup
 TZ_DESC=		Process Time Zones
+SVN_DESC=		Enable SVN support
+GIT_DESC=		Enable GIT support
+FCGI_DESC=		Enable FastCGI support
 
 DOCUTILS_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}docutils>=0.14:textproc/py-docutils@${PY_FLAVOR}
 PYGMENTS_RUN_DEPENDS=	${PY_PYGMENTS}
 TZ_RUN_DEPENDS=		${PYTHON_PKGNAMEPREFIX}pytz>0:devel/py-pytz@${PY_FLAVOR}
 PGSQL_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}psycopg2>0:databases/py-psycopg2@${PY_FLAVOR}
 SQLITE_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3@${PY_FLAVOR}
-SVN_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}subversion-lts>0:devel/py-subversion@${PY_FLAVOR}
+MYSQL_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mysqlclient>=0:databases/py-mysqlclient@${PY_FLAVOR}
+SVN_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}subversion>0:devel/py-subversion@${PY_FLAVOR}
+GIT_RUN_DEPENDS=	git:devel/git
+TEXTILE_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}textile>0:www/py-textile@${PY_FLAVOR}
+FCGI_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}flup6>0:www/py-flup6@${PY_FLAVOR}
 
 post-install-EXAMPLES-on:
 	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/sample-plugins
