@@ -1,8 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	phabricator
-PORTVERSION=	20200514
-PORTREVISION=	2
+PORTVERSION=	20201119
+PORTREVISION=	1
 CATEGORIES=	devel
 PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
 
@@ -20,7 +20,6 @@ RUN_DEPENDS=	arcanist-lib${PHP_PKGNAMESUFFIX}>=20200514:devel/arcanist-lib@${PHP
 
 USES=		php:flavors shebangfix
 
-REINPLACE_ARGS=	-i ""
 SHEBANG_FILES=	resources/timezones/*.php \
 		scripts/*.php \
 		scripts/almanac/*.php \
@@ -64,7 +63,7 @@ USE_RC_SUBR=	phd
 SUB_FILES=	pkg-message
 PORTSCOUT=	ignore:1
 GH_ACCOUNT=	phacility
-GH_TAGNAME=	3ee6b53
+GH_TAGNAME=	b2ab18f
 
 PHP_DESTDIR=	lib/php/phabricator
 
