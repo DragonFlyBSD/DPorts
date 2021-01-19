@@ -3,7 +3,7 @@
 
 PORTNAME?=	openvas8-scanner
 PORTVERSION?=	5.0.8
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	security
 MASTER_SITES?=	http://wald.intevation.org/frs/download.php/2436/
 DISTNAME=	${PORTNAME:S/${OPENVAS_VER}//}-${PORTVERSION}
@@ -31,6 +31,9 @@ USE_RC_SUBR=	openvassd
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME:S/${OPENVAS_VER}//}
 
 OPENVAS_VER?=	8
+
+DEPRECATED=	End of life, please migrate to security/openvas port
+EXPIRATION_DATE=2021-02-06
 
 OPTIONS_DEFINE=	DOCS
 
