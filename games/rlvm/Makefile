@@ -2,13 +2,10 @@
 
 PORTNAME=	rlvm
 DISTVERSIONPREFIX=	release-
-DISTVERSION=	0.14-67
-DISTVERSIONSUFFIX=	-g9350209
-PORTREVISION=	22
+DISTVERSION=	0.14-75
+DISTVERSIONSUFFIX=	-g975e740c
+PORTREVISION=	1
 CATEGORIES=	games
-
-PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES=	fb627bad9129.patch:-p1
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	RealLive virtual machine clone
@@ -19,8 +16,9 @@ LICENSE_COMB=	multi
 BROKEN_FreeBSD_11_powerpc64=	fails to link on powerpc64 elfv1: gcn_platform.cc: undefined reference to gcn::Exception::Exception
 BROKEN_FreeBSD_12_powerpc64=	fails to link on powerpc64 elfv1: gcn_platform.cc: undefined reference to gcn::Exception::Exception
 
-BUILD_DEPENDS=	${LOCALBASE}/include/utf8.h:devel/utf8cpp
-LIB_DEPENDS=	libvorbisfile.so:audio/libvorbis \
+BUILD_DEPENDS=	${LOCALBASE}/include/utf8cpp/utf8.h:devel/utf8cpp
+LIB_DEPENDS=	libsndfile.so:audio/libsndfile \
+		libvorbisfile.so:audio/libvorbis \
 		libboost_serialization.so:devel/boost-libs \
 		libguichan.so:devel/guichan
 RUN_DEPENDS=	${LOCALBASE}/share/fonts/dejavu/DejaVuSans.ttf:x11-fonts/dejavu
@@ -28,7 +26,7 @@ RUN_DEPENDS=	${LOCALBASE}/share/fonts/dejavu/DejaVuSans.ttf:x11-fonts/dejavu
 USE_GITHUB=	yes
 GH_ACCOUNT=	eglaysher
 
-USES=		compiler:c++11-lib gl gnome pkgconfig scons:python2 sdl
+USES=		compiler:c++11-lib gl gnome pkgconfig scons sdl
 USE_GL=		glew glu
 USE_GNOME=	gtk20
 USE_SDL=	image mixer ttf
@@ -63,13 +61,12 @@ TEST_BUILD_DEPENDS=googletest>=1.7.0:devel/googletest \
 TEST_EXTRA_PATCHES_OFF=${FILESDIR}/extra-patch-disable-test
 
 post-patch:
-	@${GREP} -Flr 'utf8cpp/' ${WRKSRC} | ${XARGS} ${REINPLACE_CMD} \
-		-i .bak.utf8cpp -e 's,utf8cpp/,,'
 	@${REINPLACE_CMD} -e 's,/usr/share,${PREFIX}/share,' \
 		${WRKSRC}/src/platforms/gtk/gtk_rlvm_instance.cc
 	@${REINPLACE_CMD} -e 's,/usr/share,${LOCALBASE}/share,' \
 		-e 's,truetype/ttf-dejavu,dejavu,' \
-		-e 's,truetype/[^/"]*/,TTF/,' \
+		-e 's,truetype/mona,mona-ttf,' \
+		-e 's,truetype/,,' \
 		${WRKSRC}/src/utilities/find_font_file.cc
 
 do-test-TEST-on:
