@@ -13,7 +13,7 @@ COMMENT=	JSW enables a Java application to be run as a Unix daemon
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual
 
-ONLY_FOR_ARCHS=	amd64 i386
+ONLY_FOR_ARCHS=	amd64 i386 powerpc64 powerpc64le
 
 USES=		gmake iconv
 USE_JAVA=	yes
@@ -28,7 +28,7 @@ OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.options.mk>
 
-.if (${ARCH} == x86_64)
+.if ${ARCH} == x86_64 || ${ARCH:Mpowerpc64*}
 MAKE_ARGS+=	-Dbits=64
 .else
 MAKE_ARGS+=	-Dbits=32
@@ -43,6 +43,10 @@ post-patch:
 		${WRKSRC}/src/c/Makefile-freebsd-x86-64.gmake
 	@${REINPLACE_CMD} -e 's|\(javac\.target\.version\)=.*|\1=1.8|' \
 		${WRKSRC}/default.properties
+	@${CP} ${WRKSRC}/src/c/Makefile-freebsd-x86-64.gmake \
+		${WRKSRC}/src/c/Makefile-freebsd-ppcbe-64.gmake
+	@${CP} ${WRKSRC}/src/c/Makefile-freebsd-x86-64.gmake \
+		${WRKSRC}/src/c/Makefile-freebsd-ppcle-64.gmake
 
 do-install:
 	@${MKDIR} ${STAGEDIR}${DATADIR}
