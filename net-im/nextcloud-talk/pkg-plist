@@ -30,6 +30,7 @@
 %%WWWDIR%%/img/lobby.svg
 %%WWWDIR%%/img/menu-people.svg
 %%WWWDIR%%/img/no-password.svg
+%%WWWDIR%%/img/phone.png
 %%WWWDIR%%/img/promoted-view.svg
 %%WWWDIR%%/img/reply.svg
 %%WWWDIR%%/img/share-window.svg
@@ -41,6 +42,8 @@
 %%WWWDIR%%/js/dashboard.js.map
 %%WWWDIR%%/js/flow.js
 %%WWWDIR%%/js/flow.js.map
+%%WWWDIR%%/js/image-blurrer-worker.js
+%%WWWDIR%%/js/image-blurrer-worker.js.map
 %%WWWDIR%%/js/talk-files-sidebar.js
 %%WWWDIR%%/js/talk-files-sidebar.js.map
 %%WWWDIR%%/js/talk-public-share-auth-sidebar.js
@@ -144,8 +147,6 @@
 %%WWWDIR%%/l10n/ka_GE.json
 %%WWWDIR%%/l10n/ko.js
 %%WWWDIR%%/l10n/ko.json
-%%WWWDIR%%/l10n/lb.js
-%%WWWDIR%%/l10n/lb.json
 %%WWWDIR%%/l10n/lt_LT.js
 %%WWWDIR%%/l10n/lt_LT.json
 %%WWWDIR%%/l10n/lv.js
@@ -158,6 +159,8 @@
 %%WWWDIR%%/l10n/nb.json
 %%WWWDIR%%/l10n/nl.js
 %%WWWDIR%%/l10n/nl.json
+%%WWWDIR%%/l10n/oc.js
+%%WWWDIR%%/l10n/oc.json
 %%WWWDIR%%/l10n/pl.js
 %%WWWDIR%%/l10n/pl.json
 %%WWWDIR%%/l10n/pt_BR.js
@@ -266,7 +269,6 @@
 %%WWWDIR%%/lib/Controller/RoomController.php
 %%WWWDIR%%/lib/Controller/SettingsController.php
 %%WWWDIR%%/lib/Controller/SignalingController.php
-%%WWWDIR%%/lib/Controller/WebinarController.php
 %%WWWDIR%%/lib/Dashboard/TalkWidget.php
 %%WWWDIR%%/lib/DataObjects/AccountId.php
 %%WWWDIR%%/lib/DataObjects/RegisterAccountData.php
@@ -321,6 +323,10 @@
 %%WWWDIR%%/lib/Migration/CreateHelpCommand.php
 %%WWWDIR%%/lib/Migration/FixNamespaceInDatabaseTables.php
 %%WWWDIR%%/lib/Migration/Version10000Date20200819121721.php
+%%WWWDIR%%/lib/Migration/Version10000Date20201012144235.php
+%%WWWDIR%%/lib/Migration/Version10000Date20201015134000.php
+%%WWWDIR%%/lib/Migration/Version10000Date20201015143852.php
+%%WWWDIR%%/lib/Migration/Version10000Date20201015150000.php
 %%WWWDIR%%/lib/Migration/Version11000Date20200922161218.php
 %%WWWDIR%%/lib/Migration/Version2000Date20170707093535.php
 %%WWWDIR%%/lib/Migration/Version2000Date20171026140256.php
@@ -354,9 +360,13 @@
 %%WWWDIR%%/lib/Migration/Version8000Date20200402124456.php
 %%WWWDIR%%/lib/Migration/Version8000Date20200407073807.php
 %%WWWDIR%%/lib/Migration/Version8000Date20200407115318.php
+%%WWWDIR%%/lib/Model/Attendee.php
+%%WWWDIR%%/lib/Model/AttendeeMapper.php
 %%WWWDIR%%/lib/Model/Command.php
 %%WWWDIR%%/lib/Model/CommandMapper.php
 %%WWWDIR%%/lib/Model/Message.php
+%%WWWDIR%%/lib/Model/Session.php
+%%WWWDIR%%/lib/Model/SessionMapper.php
 %%WWWDIR%%/lib/Notification/Listener.php
 %%WWWDIR%%/lib/Notification/Notifier.php
 %%WWWDIR%%/lib/Participant.php
@@ -370,7 +380,9 @@
 %%WWWDIR%%/lib/Search/UnifiedSearchCSSLoader.php
 %%WWWDIR%%/lib/Service/CommandService.php
 %%WWWDIR%%/lib/Service/HostedSignalingServerService.php
+%%WWWDIR%%/lib/Service/ParticipantService.php
 %%WWWDIR%%/lib/Service/RoomService.php
+%%WWWDIR%%/lib/Service/SessionService.php
 %%WWWDIR%%/lib/Settings/Admin/AdminSettings.php
 %%WWWDIR%%/lib/Settings/Admin/Section.php
 %%WWWDIR%%/lib/Settings/Personal.php
