@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	elementary
-PORTVERSION=	0.15.1
+PORTVERSION=	0.15.2
 DISTVERSIONPREFIX=v
 CATEGORIES=	x11-themes xfce
 PKGNAMEPREFIX=	xfce-icons-
@@ -14,7 +14,7 @@ LICENSE=	GPLv2
 
 BUILD_DEPENDS=	optipng:graphics/optipng
 
-USES=		gnome pkgconfig
+USES=		compiler:c11 gnome pkgconfig
 USE_GNOME=	gdkpixbuf2:build gtk30:build
 
 HAS_CONFIGURE=	yes
