@@ -1,7 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	musicpd
-PORTVERSION=	0.22.1
+PORTVERSION=	0.22.3
+PORTREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	https://www.musicpd.org/download/mpd/${PORTVERSION:R}/
 DISTNAME=	mpd-${PORTVERSION}
@@ -16,7 +17,8 @@ BUILD_DEPENDS=	${LOCALBASE}/bin/sphinx-build:textproc/py-sphinx@${PY_FLAVOR}
 LIB_DEPENDS=	libboost_iostreams.so:devel/boost-libs \
 		libicudata.so:devel/icu
 
-USES=		compiler:c++17-lang gnome meson pkgconfig python:build tar:xz
+USES=		compiler:c++17-lang gnome localbase:ldflags meson pkgconfig \
+		python:build tar:xz
 
 USE_GNOME=	glib20
 
@@ -30,16 +32,13 @@ MESON_ARGS=	-Dauto_features=disabled \
 		-Dpipe=true \
 		-Dsyslog=enabled \
 		-Dzlib=enabled
-CFLAGS+=	-I${PREFIX}/include
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
 
 PORTDOCS=	AUTHORS README.md NEWS
 
 SUB_FILES=	pkg-message
 
 OPTIONS_DEFINE=	DOCS ID3TAG IPV6 ISO9660 SQLITE3 \
-		PROXYDB LAME VORBISENC ZZIP
+		PROXYDB VORBISENC ZZIP
 
 OPTIONS_RADIO=	RESAMPLER ZEROCONF
 
@@ -51,12 +50,12 @@ OPTIONS_MULTI=	DOCUMENTATION FILE_FORMAT
 OPTIONS_MULTI_FILE_FORMAT=	\
 			ADPLUG AUDIOFILE FAAD FFMPEG FLAC FLUIDSYNTH \
 			GME MAD MIKMOD MODPLUG MPG123 MUSEPACK \
-			OPUS SIDPLAY2 SNDFILE TWOLAME \
+			OPUS SIDPLAY SNDFILE TWOLAME \
 			VORBIS WAVPACK WILDMIDI
 
 OPTIONS_GROUP=	ACCESS PLAYBACK
 
-OPTIONS_GROUP_ACCESS=	CDPARANOIA CURL MMS NFS PLAYLISTS QOBUZ \
+OPTIONS_GROUP_ACCESS=	CDPARANOIA CURL LAME MMS NFS PLAYLISTS QOBUZ \
 			SMB SOUNDCLOUD TIDAL YAJL
 
 OPTIONS_GROUP_PLAYBACK=	AO JACK OPENAL PULSEAUDIO \
@@ -70,7 +69,8 @@ PROXYDB_DESC=	Proxy database support via libmpdclient
 LAME_DESC=	Support for MP3 Icecast Streams
 PLAYLISTS_DESC=	Enable extra playlist support (wma, RSS)
 QOBUZ_DESC=	Streaming service support: Qobuz
-SIDPLAY2_DESC=	Sidplay support (C64 mono and stereo files)
+SIDPLAY_DESC=	Sidplay support (C64 mono and stereo files)
+SMB_DESC=	SMB network support (currently strongly discouraged)
 SOUNDCLOUD_DESC=Streaming service support: SoundCloud
 TIDAL_DESC=	Streaming service support: TIDAL (currently defunct)
 TWOLAME_DESC=	TwoLAME support (mp2)
@@ -79,8 +79,8 @@ WILDMIDI_DESC=	WildMIDI support (MIDI files)
 YAJL_DESC=	JSON support via libyajl
 ZZIP_DESC=	Support for zzip archives
 
-OPTIONS_DEFAULT=CURL FFMPEG FLAC ID3TAG \
-		PLAYLISTS SNDFILE VORBIS VORBISENC
+OPTIONS_DEFAULT=CURL FFMPEG FLAC ID3TAG LAME OPUS \
+		PLAYLISTS PROXYDB SNDFILE VORBIS VORBISENC
 
 # Decoder plugins
 ADPLUG_MESON_ENABLED=	adplug
@@ -116,9 +116,9 @@ OPUS_LIB_DEPENDS=	libopus.so:audio/opus \
 			libogg.so:audio/libogg
 PLAYLISTS_MESON_ENABLED=expat
 PLAYLISTS_LIB_DEPENDS=	libexpat.so:textproc/expat2
-SIDPLAY2_MESON_ENABLED=	sidplay
-SIDPLAY2_LIB_DEPENDS=	libsidplay2.so:audio/libsidplay2
-SIDPLAY2_LDFLAGS=	-L${LOCALBASE}/lib/sidplay/builders
+SIDPLAY_MESON_ENABLED=	sidplay
+SIDPLAY_LIB_DEPENDS=	libsidplayfp.so:audio/libsidplayfp
+SIDPLAY_CXXFLAGS=	-D_LIBCPP_ENABLE_CXX17_REMOVED_AUTO_PTR
 SNDFILE_MESON_ENABLED=	sndfile
 SNDFILE_LIB_DEPENDS=	libsndfile.so:audio/libsndfile
 VORBIS_MESON_ENABLED=	vorbis
