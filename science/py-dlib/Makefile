@@ -16,7 +16,7 @@ BUILD_DEPENDS=		cmake:devel/cmake
 LIB_DEPENDS=		${PY_BOOST} \
 			libpng.so:graphics/png
 
-USES=			compiler:c++11-lang pkgconfig python shebangfix \
+USES=			compiler:c++11-lang pkgconfig python:3.6+ shebangfix \
 			tar:bzip2
 USE_PYTHON=		autoplist distutils
 SHEBANG_FILES=		python_examples/*.py
@@ -49,12 +49,6 @@ AVX_VARS_OFF=		avxargs="--no USE_AVX_INSTRUCTIONS"
 
 PYDISTUTILS_BUILDARGS=	--set BOOST_PYTHON_SUFFIX:STRING=${PYTHON_SUFFIX} ${X11ARGS} ${JPEGARGS} ${PNGARGS} ${GIFARGS} ${SQLITEARGS} ${BLASLAPACKARGS} ${AVXARGS} ${BLASLAPACK}
 
-.include <bsd.port.pre.mk>
+PLIST_SUB=		PYTHON2="@comment " PYTHON3=""
 
-.if ${FLAVOR} == py27
-PLIST_SUB+=		PYTHON2="" PYTHON3="@comment "
-.else
-PLIST_SUB+=		PYTHON2="@comment " PYTHON3=""
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
