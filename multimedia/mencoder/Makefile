@@ -3,7 +3,7 @@
 
 PORTNAME=	mencoder
 PORTVERSION=	${MPLAYER_PORT_VERSION}.${MPLAYER_SNAPSHOT_DATE:S/-//g}
-PORTREVISION=	2
+PORTREVISION=	1
 CATEGORIES=	multimedia audio
 
 MAINTAINER=	riggs@FreeBSD.org
@@ -32,8 +32,6 @@ BLURAY_DESC?=	BluRay support
 DVDNAV_DESC?=	DVD navigation features support
 LZO_DESC?=	Enable external liblzo library
 RTCPU_DESC?=	Use runtime CPU detection
-
-RESTRICTED=	Port has restricted dependencies
 
 PATCHDIR=	${.CURDIR}/../mplayer/files
 FILESDIR=	${PATCHDIR}
@@ -75,7 +73,8 @@ CONFIGURE_ARGS+=	--disable-mplayer \
 			--disable-directfb \
 			--disable-mpg123 \
 			--disable-enca \
-			--disable-musepack
+			--disable-musepack \
+			--disable-sndio
 
 LIB_DEPENDS+=	libmp3lame.so:audio/lame
 
