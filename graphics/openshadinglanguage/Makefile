@@ -4,6 +4,7 @@
 PORTNAME=	openshadinglanguage
 DISTVERSIONPREFIX=	Release-
 DISTVERSION=	1.11.7.3
+PORTREVISION=	2
 CATEGORIES=	graphics devel
 
 MAINTAINER=	FreeBSD@Shaneware.biz
@@ -33,11 +34,10 @@ GH_PROJECT=	OpenShadingLanguage
 LDFLAGS+=	-fuse-ld=lld
 .endif
 
-LLVM_VER=	90
 CMAKE_ON=	ENABLERTTI OSL_BUILD_TESTS USE_LLVM_BITCODE USE_LIBCPLUSPLUS
 CMAKE_OFF=	USE_BOOST_WAVE
 CMAKE_ARGS+=	-DLLVM_CONFIG:STRING="${LOCALBASE}/bin/llvm-config${LLVM_VER}" \
-		-DCMAKE_INSTALL_DOCDIR:STRING=${DOCSDIR}
+		-DCMAKE_INSTALL_DOCDIR:STRING=${DOCSDIR} -DCMAKE_CXX_STANDARD=14
 # This flag fixes linking with clang 9.0 ??
 CXXFLAGS+=	-DNDEBUG
 
@@ -60,6 +60,12 @@ PLIST_SUB+=	LIBVERS=${DISTVERSION:C/([0-9]*)\.([0-9]*)\.([0-9]*)(.*)/\1.\2.\3/}
 
 .include <bsd.port.options.mk>
 
+.if ${LLVM_DEFAULT:M[678]0}
+LLVM_VER=	90
+.else
+LLVM_VER=	${LLVM_DEFAULT}
+.endif
+
 post-patch:
 	@${REINPLACE_CMD} -e 's,%%DATADIR%%,${DATADIR},' \
 		-e 's,%%PYCMD%%,${PYTHON_CMD},' \
@@ -73,7 +79,7 @@ BUILD_DEPENDS+=	${PREFIX}/share/cmake/pybind11/pybind11Config.cmake:devel/pybind
 LIB_DEPENDS+=	liboslquery.so:graphics/openshadinglanguage
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}openimageio>0:graphics/py-openimageio@${PY_FLAVOR}
 PLIST=		${PKGDIR}/pkg-plist-pybind
-USES+=		python
+USES+=		python:3.6+
 USE_PYTHON=	flavors
 CMAKE_ON+=	USE_PYTHON
 CMAKE_ARGS+=	-DPYTHON_VERSION=${PYTHON_VER}
@@ -82,7 +88,7 @@ do-install:
 	${MKDIR} ${STAGEDIR}${PYTHON_SITELIBDIR}
 	${INSTALL_LIB} ${BUILD_WRKSRC}/lib/python/site-packages/oslquery.so ${STAGEDIR}${PYTHON_SITELIBDIR}
 .else # SLAVE_PORT != yes
-USES+=		python:build
+USES+=		python:3.6+,build
 CMAKE_OFF+=	USE_PYTHON
 USE_LDCONFIG=	yes
 .endif # SLAVE_PORT
