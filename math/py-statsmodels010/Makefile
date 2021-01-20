@@ -13,6 +13,9 @@ COMMENT=	Complement to SciPy for statistical computations
 
 LICENSE=	BSD3CLAUSE
 
+DEPRECATED=	Use math/py-statsmodels instead
+EXPIRATION_DATE=2021-01-31
+
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cython>=0.24:lang/cython@${PY_FLAVOR} \
 		${RUN_DEPENDS}
 RUN_DEPENDS=	${PYNUMPY} \
@@ -20,7 +23,7 @@ RUN_DEPENDS=	${PYNUMPY} \
 		${PYTHON_PKGNAMEPREFIX}patsy>=0.4.0:math/py-patsy@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}scipy>=0.18:science/py-scipy@${PY_FLAVOR}
 
-USES=		python shebangfix
+USES=		python:3.6+ shebangfix
 USE_PYTHON=	autoplist concurrent cython distutils
 
 # statsmodels 0.11.0+ requires Python 3.5+
