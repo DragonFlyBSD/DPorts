@@ -3,6 +3,7 @@
 PORTNAME=	openmvg
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.6
+PORTREVISION=	1
 CATEGORIES=	misc science
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -11,7 +12,7 @@ COMMENT=	Multiple View Geometry (MVG) library
 LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/../LICENSE
 
-ONLY_FOR_ARCHS=	amd64 i386
+ONLY_FOR_ARCHS=	amd64 i386 powerpc64
 ONLY_FOR_ARCHS_REASON=	need to figure out which TARGET_ARCHITECTURE values correspond to other architectures, plus "generic" is broken
 
 LIB_DEPENDS=	libflann_cpp.so:math/flann \
@@ -20,7 +21,7 @@ LIB_DEPENDS=	libflann_cpp.so:math/flann \
 		libtiff.so:graphics/tiff
 LIB_DEPENDS+=	liblz4.so:archivers/liblz4 # workaround for https://github.com/openMVG/openMVG/issues/1798
 
-USES=		cmake eigen:3 jpeg qt:5
+USES=		cmake compiler:c++11-lang eigen:3 jpeg qt:5
 USE_GITHUB=	yes
 GH_ACCOUNT=	openMVG
 GH_PROJECT=	openMVG
