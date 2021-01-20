@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	numexpr
-PORTVERSION=	2.7.1
+PORTVERSION=	2.7.2
 CATEGORIES=	math python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -16,10 +16,10 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	${PYNUMPY}
 
-USES=		dos2unix python
+USES=		dos2unix python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 
 post-install:
-	${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/numexpr/interpreter.so
+	${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/numexpr/interpreter*.so
 
 .include <bsd.port.mk>
