@@ -1,5 +1,5 @@
 # $FreeBSD$
-PORTREVISION=	2
+PORTREVISION=	1
 
 .include "${.CURDIR}/Makefile.common"
 
@@ -95,7 +95,7 @@ RUN_DEPENDS=	xdg-open:devel/xdg-utils \
 
 DISTFILES+=	884ed41809687c3e168fc7c19b16585149ff058eca79acbf3ee784f6630704cc-opens___.ttf:ext
 DISTFILES+=	dtoa-20180411.tgz:src
-DISTFILES+=	skia-m84-c1baf6e1c2a5454148adb516f0f833483b5a0353.tar.xz:src
+DISTFILES+=	skia-m85-e684c6daef6bfb774a325a069eda1f76ca6ac26c.tar.xz:src
 
 NOT_FOR_ARCHS=		armv6 armv7
 NOT_FOR_ARCHS_REASON=	Unsupported host_cpu
@@ -121,10 +121,12 @@ USES=		autoreconf:build bison compiler:c++17-lang cpe desktop-file-utils \
 		pkgconfig python:3.5+ shebangfix shared-mime-info ssl tar:xz xorg
 
 OPTIONS_DEFINE=	COINMP CUPS DOCS GNOME GTK3 JAVA KF5 MMEDIA PGSQL QT5 SDK TEST WEBDAV
-OPTIONS_DEFAULT=	CUPS MMEDIA
-OPTIONS_DEFAULT_FreeBSD_12=	QT5
-OPTIONS_DEFAULT_FreeBSD_13=	QT5
-OPTIONS_DEFAULT+=	${OPTIONS_DEFAULT_${OPSYS}_${OSREL:R}}
+OPTIONS_DEFAULT=	CUPS MMEDIA QT5
+
+.if !defined(DEFAULT_VERSIONS) || ! ${DEFAULT_VERSIONS:Mssl=*}
+# Blocked by net/qt5-network: cannot use QT5 with default OpenSSL
+OPTIONS_EXCLUDE_FreeBSD_11+=	QT5
+.endif
 
 COINMP_DESC=	Enable CoinMP (deprecated) math solver
 GTK3_DESC=	GTK+ 3 GUI toolkit support (incomplete visual style)
@@ -218,9 +220,12 @@ SDK_CONFIGURE_OFF=	--without-doxygen
 SDK_CONFIGURE_ON=	--with-doxygen=${LOCALBASE}/bin/doxygen
 SDK_DISTFILES=	185d60944ea767075d27247c3162b3bc-unowinreg.dll:ext
 
+TEST_ALL_TARGET=	build
 TEST_ALL_TARGET_OFF=	build-nocheck
 TEST_CONFIGURE_ENABLE=	cve-tests
 
+WEBDAV_CONFIGURE_ON=	--with-webdav=neon
+WEBDAV_CONFIGURE_OFF=	--with-webdav=no
 WEBDAV_CONFIGURE_ENABLE=	neon
 WEBDAV_LIB_DEPENDS=	libneon.so:www/neon
 
@@ -277,7 +282,7 @@ MAKE_ENV+=	verbose=1
 
 .include <bsd.port.pre.mk>
 
-.if ${ARCH:Mpowerpc*}
+.if ${ARCH} == powerpc || ${ARCH} == powerpcspe || ${ARCH} == powerpc64
 CONFIGURE_ARGS+=	--disable-skia
 .endif
 
