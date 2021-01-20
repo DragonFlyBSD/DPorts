@@ -22,8 +22,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}confuse>=1.0.0:devel/py-confuse@${PY_FLAVOR}
 		${PYTHON_PKGNAMEPREFIX}six>=1.9:devel/py-six@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>=0:databases/py-sqlite3@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}unidecode>=0:converters/py-unidecode@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}yaml>=0:devel/py-yaml@${PY_FLAVOR} \
-		${PY_ENUM34}
+		${PYTHON_PKGNAMEPREFIX}yaml>=0:devel/py-yaml@${PY_FLAVOR}
 
 USES=		python:3.6+
 USE_PYTHON=	autoplist distutils optsuffix
@@ -33,7 +32,7 @@ PLIST_FILES=	man/man1/beet.1.gz man/man5/beetsconfig.5.gz
 NO_ARCH=	yes
 
 OPTIONS_DEFINE=	ACOUSTICBRAINZ BADFILES BEATPORT CHROMA DISCOGS EMBYUPDATE \
-		FETCHART FFMPEG GMUSIC IMAGEMAGICK IPFS KODIUPDATE LASTFM \
+		FETCHART FFMPEG IMAGEMAGICK IPFS KODIUPDATE LASTFM \
 		LASTIMPORT LYRICS LYRICS_GOOGLE MPDSTATS METASYNC_DBUS \
 		PLEXUPDATE REPLAYGAIN SONOS_UPDATE SPOTIFY THUMBNAILS WEB \
 		WEB_CORS
@@ -44,7 +43,6 @@ BEATPORT_DESC=	Beatport Catalog Autotagging Support
 DISCOGS_DESC=	Discogs Search Plugin
 EMBYUPDATE_DESC=	Emby Update Plugin
 FETCHART_DESC=	Cover Art Fetch Plugin
-GMUSIC_DESC=	Google Play Music Plugin
 IMAGEMAGICK_DESC=	Cover Art Resizing and Comparison
 IPFS_DESC=	IPFS Plugin
 KODIUPDATE_DESC=	Kodi Update Plugin
@@ -71,7 +69,6 @@ DISCOGS_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}discogs-client>=2.2.1:audio/py-disco
 EMBYUPDATE_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}requests>=0:www/py-requests@${PY_FLAVOR}
 FETCHART_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}requests>=0:www/py-requests@${PY_FLAVOR}
 FFMPEG_RUN_DEPENDS=	ffmpeg>=2:multimedia/ffmpeg
-GMUSIC_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}gmusicapi>=0:audio/py-gmusicapi@${PY_FLAVOR}
 IMAGEMAGICK_RUN_DEPENDS=	convert:graphics/ImageMagick6
 IPFS_RUN_DEPENDS=	ipfs-go:sysutils/ipfs-go
 KODIUPDATE_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}requests>=0:www/py-requests@${PY_FLAVOR}
@@ -86,8 +83,7 @@ REPLAYGAIN_RUN_DEPENDS=	mp3gain>=0:audio/mp3gain \
 			aacgain>=0:audio/aacgain
 SONOS_UPDATE_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}soco>=0:multimedia/py-soco@${PY_FLAVOR}
 SPOTIFY_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}requests>=0:www/py-requests@${PY_FLAVOR}
-THUMBNAILS_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}xdg>=0:devel/py-xdg@${PY_FLAVOR} \
-			${PY_PATHLIB}
+THUMBNAILS_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}xdg>=0:devel/py-xdg@${PY_FLAVOR}
 WEB_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Flask>=0:www/py-flask@${PY_FLAVOR}
 WEB_CORS_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Flask-Cors>=0:www/py-flask-cors@${PY_FLAVOR}
 
