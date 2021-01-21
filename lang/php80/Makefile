@@ -1,10 +1,10 @@
 # $FreeBSD$
 
 PORTNAME=	php80
-DISTVERSION=	8.0.0RC2
-PORTREVISION?=	1
+DISTVERSION=	8.0.1
+PORTREVISION?=	0
 CATEGORIES?=	lang devel www
-MASTER_SITES=   https://downloads.php.net/~pollita/
+MASTER_SITES=   PHP/distributions
 DISTNAME=	php-${DISTVERSION}
 
 MAINTAINER=	tz@FreeBSD.org
@@ -46,7 +46,9 @@ OPTIONS_EXCLUDE_armv7=		DTRACE
 OPTIONS_EXCLUDE_mips=		DTRACE FPM
 OPTIONS_EXCLUDE_mips64=		DTRACE FPM
 OPTIONS_EXCLUDE_powerpc=		DTRACE
-OPTIONS_EXCLUDE_powerpc64=		DTRACE
+OPTIONS_EXCLUDE_powerpc64=		${OPTIONS_EXCLUDE_${ARCH}_${OSREL:R}}
+OPTIONS_EXCLUDE_powerpc64_11=	DTRACE
+OPTIONS_EXCLUDE_powerpc64_12=	DTRACE
 OPTIONS_EXCLUDE_sparc64=	DTRACE
 OPTIONS_SUB=	yes
 
@@ -100,7 +102,7 @@ CONFIGURE_ARGS+=--with-apxs2=${APXS}
 PLIST=		${PKGDIR}/pkg-plist.mod
 PKGMESSAGE=	${PKGDIR}/pkg-message.mod
 MODULENAME=	libphp
-SHORTMODNAME=	php8
+SHORTMODNAME=	php
 WARNING=	"!!! If you have a threaded Apache, you must build ${PHP_PORT} with ZTS support to enable thread-safety in extensions !!!"
 .endif
 
@@ -135,7 +137,7 @@ CONFIGURE_ARGS+=--enable-debug
 .endif
 
 .if ${PORT_OPTIONS:MZTS}
-CONFIGURE_ARGS+=--enable-maintainer-zts
+CONFIGURE_ARGS+=--enable-zts
 CONFIGURE_ENV+=	pthreads_working="yes"
 .endif
 
