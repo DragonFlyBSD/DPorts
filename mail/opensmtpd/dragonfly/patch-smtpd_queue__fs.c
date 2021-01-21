@@ -1,5 +1,5 @@
---- smtpd/queue_fs.c.orig	2019-11-05 19:08:33 UTC
-+++ smtpd/queue_fs.c
+--- usr.sbin/smtpd/queue_fs.c.orig	2019-11-05 19:08:33 UTC
++++ usr.sbin/smtpd/queue_fs.c
 @@ -16,6 +16,17 @@
   * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
   */
