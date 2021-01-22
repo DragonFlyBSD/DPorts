@@ -1,5 +1,5 @@
---- php7/memcache_binary_protocol.c.intermediate	2020-11-20 20:58:09.000000000 +0000
-+++ php7/memcache_binary_protocol.c
+--- src/memcache_binary_protocol.c.orig	2021-01-21 18:50:21.118445000 +0100
++++ src/memcache_binary_protocol.c	2021-01-21 18:51:22.258794000 +0100
 @@ -36,6 +36,15 @@
  #include "memcache_pool.h"
  #include "ext/standard/php_smart_string.h"
@@ -7,9 +7,9 @@
 +#ifdef __DragonFly__
 +#include <sys/endian.h>
 +#ifndef __BYTE_ORDER
-+#define __BYTE_ORDER	_BYTE_ORDER
-+#define __LITTLE_ENDIAN	_LITTLE_ENDIAN
-+#define __BIG_ENDIAN	_BIG_ENDIAN
++#define __BYTE_ORDER   _BYTE_ORDER
++#define __LITTLE_ENDIAN        _LITTLE_ENDIAN
++#define __BIG_ENDIAN   _BIG_ENDIAN
 +#endif
 +#endif
 +
