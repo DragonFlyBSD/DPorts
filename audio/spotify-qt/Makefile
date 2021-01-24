@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	spotify-qt
-PORTVERSION=	2.12
+PORTVERSION=	3.3
 DISTVERSIONPREFIX=	v
 CATEGORIES=	audio
 
@@ -14,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/license
 
 RUN_DEPENDS=	librespot:multimedia/librespot
 
-USES=		cmake qt:5
+USES=		cmake compiler:c++11-lang qt:5
 USE_GITHUB=	yes
 GH_ACCOUNT=	kraxarn
 USE_QT=		core dbus gui network svg widgets buildtools_build qmake_build
