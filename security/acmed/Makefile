@@ -3,6 +3,7 @@
 PORTNAME=	acmed
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.13.0
+PORTREVISION=	2
 CATEGORIES=	security
 
 MAINTAINER=	greg@unrelenting.technology
