@@ -1,7 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	slurm
-DISTVERSION=	19.05.5
+DISTVERSION=	20.02.1
+PORTREVISION=	5
 CATEGORIES=	sysutils python
 MASTER_SITES=	https://download.schedmd.com/slurm/
 PKGNAMESUFFIX=	-wlm
@@ -12,7 +13,7 @@ COMMENT=	Simple Linux Utility for Resource Management
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-NOT_FOR_ARCHS=		armv6 armv7 i386 powerpc
+NOT_FOR_ARCHS=		armv6 armv7 i386 mips powerpc powerpcspe
 NOT_FOR_ARCHS_REASON=	32-bit support is deprecated
 
 LIB_DEPENDS=	libjson-c.so:devel/json-c \
@@ -63,7 +64,7 @@ HDF5_LIB_DEPENDS=	libhdf5.so:science/hdf5 \
 			libsz.so:science/szip
 HDF5_CONFIGURE_WITH=	hdf5
 
-HWLOC_LIB_DEPENDS=	libhwloc.so:devel/hwloc
+HWLOC_LIB_DEPENDS=	libhwloc.so.15:devel/hwloc2
 HWLOC_CONFIGURE_WITH=	hwloc
 
 IPMI_LIB_DEPENDS=	libfreeipmi.so:sysutils/freeipmi
@@ -81,8 +82,8 @@ RRD_CONFIGURE_WITH=	rrdtool
 CONFIGURE_ARGS=	--without-ofed
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}-${DISTVERSION}
 
-CFLAGS+=	-I${WRKSRC}/slurm -I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib -lsysinfo -lkvm
+CFLAGS+=	-I${WRKSRC}/slurm -I${LOCALBASE}/include -fcommon
+LDFLAGS+=	-L${LOCALBASE}/lib -lsysinfo -fcommon
 
 # Hack around nonfunctional --disable-gtktest flag
 pre-configure-GUI-off:
@@ -96,16 +97,9 @@ pre-configure:
 	@${CP} ${FILESDIR}/pty.h ${WRKSRC}/slurm
 	@${REINPLACE_CMD} -e 's|sched_setaffinity|cpuset_setaffinity|g' \
 		${WRKSRC}/configure
-	@${REINPLACE_CMD} -e 's|/bin/mail|/usr/bin/mail|g' \
-		${WRKSRC}/src/common/read_config.h \
-		${WRKSRC}/contribs/seff/smail \
-		${WRKSRC}/doc/html/configurator.easy.html.in \
-		${WRKSRC}/doc/html/configurator.html.in \
-		${WRKSRC}/contribs/cray/slurm.conf.template \
-		${WRKSRC}/doc/man/man1/strigger.1 \
-		${WRKSRC}/doc/man/man5/slurm.conf.5
 
 	@${REINPLACE_CMD} -e 's|"/proc|"/compat/linux/proc|g' \
+		-e 's|(/proc)|(/compat/linux/proc)|g' \
 		${WRKSRC}/src/slurmd/slurmstepd/req.c \
 		${WRKSRC}/src/slurmd/slurmstepd/pdebug.c \
 		${WRKSRC}/src/slurmd/common/xcpuinfo.c \
