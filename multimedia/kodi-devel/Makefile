@@ -2,7 +2,7 @@
 
 PORTNAME=	kodi
 DISTVERSION=	19.0.a20200727
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	multimedia
 PKGNAMESUFFIX=	-devel
 
@@ -11,7 +11,7 @@ COMMENT=	Award winning media center application
 
 LICENSE=	GPLv2+
 
-ONLY_FOR_ARCHS=	aarch64 amd64 armv6 armv7 i386
+ONLY_FOR_ARCHS=	aarch64 amd64 armv6 armv7 i386 powerpc64 powerpc64le
 
 BUILD_DEPENDS=	flatbuffers>=0:devel/flatbuffers \
 		rapidjson>=0:devel/rapidjson \
