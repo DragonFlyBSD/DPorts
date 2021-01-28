@@ -1,4 +1,0 @@
-
-# pkg-static: duplicate file listing: /usr/local/share/info/libmicrohttpd.info, ignoring
-# pkg-plist and MF issue
-.undef INFO
