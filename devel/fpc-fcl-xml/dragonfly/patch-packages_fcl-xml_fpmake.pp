@@ -1,15 +1,15 @@
---- packages/fcl-xml/fpmake.pp.orig	2017-09-02 16:48:24 UTC
-+++ packages/fcl-xml/fpmake.pp
-@@ -22,7 +22,7 @@ begin
+--- packages/fcl-xml/fpmake.pp.orig	2021-01-31 18:11:35.608481000 +0100
++++ packages/fcl-xml/fpmake.pp	2021-01-31 18:12:15.078632000 +0100
+@@ -21,7 +21,7 @@
+     P.Version:='3.2.0';
      P.Options.Add('-S2h');
      D:=P.Dependencies.Add('fcl-base');
-       D.Version:='3.0.4';
 -    D:=P.Dependencies.Add('iconvenc',[linux,darwin,iphonesim,freebsd,haiku,beos,aix]);
 +    D:=P.Dependencies.Add('iconvenc',[linux,darwin,iphonesim,dragonfly,freebsd,haiku,beos,aix]);
  
      P.Author := 'Sebastian Guenther, Sergei Gorelkin and FPC development team';
      P.License := 'LGPL with modification, ';
-@@ -151,7 +151,7 @@ begin
+@@ -152,7 +152,7 @@
            AddUnit('dom');
            AddUnit('htmldefs');
          end;
