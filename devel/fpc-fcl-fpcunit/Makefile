@@ -1,5 +1,6 @@
 # $FreeBSD$
 
+PORTREVISION=	2
 CATEGORIES=	devel lang
 PKGNAMESUFFIX=	-fcl-fpcunit
 
