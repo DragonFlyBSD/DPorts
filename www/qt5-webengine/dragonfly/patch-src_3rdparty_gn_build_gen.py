@@ -1,4 +1,4 @@
---- src/3rdparty/gn/build/gen.py.orig	2020-04-28 22:39:30 UTC
+--- src/3rdparty/gn/build/gen.py.orig	2021-01-24 19:03:12 UTC
 +++ src/3rdparty/gn/build/gen.py
 @@ -43,10 +43,12 @@ class Platform(object):
        self._platform = 'freebsd'
@@ -35,14 +35,15 @@
        'aix': 'build_aix.ninja.template',
        'openbsd': 'build_openbsd.ninja.template',
    }[platform.platform()])
-@@ -379,13 +385,17 @@ def WriteGNNinja(path, platform, host, o
+@@ -381,13 +387,18 @@ def WriteGNNinja(path, platform, host, o
        ldflags.extend(['-pthread'])
        libs.extend(['-lexecinfo', '-lkvm', '-lutil'])
-       include_dirs += ['/usr/local/include']
+       include_dirs += ['%%LOCALBASE%%/include']
 +    elif platform.is_dragonfly():
++      cflags.extend(['-Wno-deprecated-register', '-Wno-parentheses-equality'])
 +      ldflags.extend(['-pthread'])
 +      libs.extend(['-lexecinfo', '-lkvm', '-lutil'])
-+      include_dirs += ['/usr/local/include']
++      include_dirs += ['%%LOCALBASE%%/include']
  
      if platform.is_posix():
        ldflags.append('-pthread')
