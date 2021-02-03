@@ -18,6 +18,7 @@ share/locale/fi/LC_MESSAGES/svgpart.mo
 share/locale/fr/LC_MESSAGES/svgpart.mo
 share/locale/ga/LC_MESSAGES/svgpart.mo
 share/locale/gl/LC_MESSAGES/svgpart.mo
+share/locale/hi/LC_MESSAGES/svgpart.mo
 share/locale/hr/LC_MESSAGES/svgpart.mo
 share/locale/hu/LC_MESSAGES/svgpart.mo
 share/locale/ia/LC_MESSAGES/svgpart.mo
@@ -50,3 +51,4 @@ share/locale/uk/LC_MESSAGES/svgpart.mo
 share/locale/wa/LC_MESSAGES/svgpart.mo
 share/locale/zh_CN/LC_MESSAGES/svgpart.mo
 share/locale/zh_TW/LC_MESSAGES/svgpart.mo
+share/metainfo/org.kde.svgpart.metainfo.xml
