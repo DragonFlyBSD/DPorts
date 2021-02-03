@@ -12,10 +12,7 @@ COMMENT=	Python bindings for the Qt5 toolkit, QtWebEngine module
 
 LICENSE=	GPLv3
 
-BUILD_DEPENDS=	${PY_ENUM34}
-RUN_DEPENDS=	${PY_ENUM34}
-
-USES=		gl python pyqt:5 qt:5
+USES=		gl python:3.5+ pyqt:5 qt:5
 USE_GL=		gl
 USE_PYQT=	sip_build core gui network printsupport webchannel
 USE_PYTHON=	concurrent flavors py3kplist
@@ -43,6 +40,9 @@ PLIST_SUB=		PYQT_WEBENGINE_VERSION=${DISTVERSION}
 
 post-install-DEBUG-off:
 	${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/PyQt5/QtWebEngine*.so
+
+post-patch:
+	${REINPLACE_CMD} -e "s/sip-module/sip-module-${PYTHON_VER}/" ${WRKSRC}/configure.py
 
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} \
