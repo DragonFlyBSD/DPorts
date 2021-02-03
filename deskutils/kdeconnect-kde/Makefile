@@ -2,7 +2,6 @@
 
 PORTNAME=	kdeconnect-kde
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
-PORTREVISION=	1
 CATEGORIES=	deskutils kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -32,5 +31,7 @@ USE_XORG=	ice sm x11 xext xtst
 USE_LDCONFIG=	${QT_QMLDIR}/org/kde/kdeconnect
 
 OPTIONS_DEFINE=	DOCS
+
+KDE_APPLICATIONS_SHLIB_VER=${KDE_APPLICATIONS_VERSION}
 
 .include <bsd.port.mk>
