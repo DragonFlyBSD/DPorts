@@ -1,0 +1,11 @@
+--- CMakeLists.txt.intermediate	2021-02-03 19:58:57 UTC
++++ CMakeLists.txt
+@@ -155,7 +155,7 @@ if (APPLE)
+     endif ()
+ endif ()
+ 
+-if (CMAKE_SYSTEM_NAME STREQUAL "Linux" OR CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
++if (CMAKE_SYSTEM_NAME MATCHES "Linux|FreeBSD|DragonFly")
+     find_package(PkgConfig REQUIRED)
+ 
+     if (CMAKE_VERSION VERSION_LESS "3.1")
