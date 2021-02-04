@@ -4,11 +4,11 @@
 PORTNAME=	spyder
 DISTVERSIONPREFIX=	v
 DISTVERSION=	3.2.7
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	devel science python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	lbartoletti@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Scientific PYthon Development EnviRonment, an alternative to IDLE
 
 LICENSE=	MIT
@@ -53,7 +53,7 @@ SCIPY_DESC=	Signal/image processing
 SPHINX_DESC=	Rich text help on the Object Inspector
 SYMPY_DESC=	Symbolic mathematics in the IPython Console
 
-DOCS_BUILD_DEPENDS=	${PY_SPHINX}
+DOCS_BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sphinx>=0,1:textproc/py-sphinx@${PY_FLAVOR}
 IPYTHON_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}ipython>=6.0:devel/ipython@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}pyzmq>=2.1.11:net/py-pyzmq@${PY_FLAVOR}
 MATPLOT_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}matplotlib>=1.0:math/py-matplotlib@${PY_FLAVOR}
