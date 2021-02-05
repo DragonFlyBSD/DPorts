@@ -1,1 +1,2 @@
 USE_KDE:=	${USE_KDE:Nwayland}
+USES+=	gmake
