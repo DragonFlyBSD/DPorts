@@ -13,7 +13,7 @@ COMMENT=	Python bindings for MPI
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.rst
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	distutils cython autoplist concurrent
 
 OPTIONS_DEFINE=		DOCS MANPAGES
@@ -45,7 +45,7 @@ do-install-MANPAGES-on:
 	@${ECHO} man/man1/mpi4py.1.gz >> ${TMPPLIST}
 
 post-install:
-	@cd ${STAGEDIR}${PYTHON_SITELIBDIR}/mpi4py && ${STRIP_CMD} dl.so MPI.so lib-pmpi/libvt-hyb.so lib-pmpi/libvt.so lib-pmpi/libvt-mpi.so lib-pmpi/libmpe.so
+	@cd ${STAGEDIR}${PYTHON_SITELIBDIR}/mpi4py && ${STRIP_CMD} dl*.so MPI*.so lib-pmpi/libvt-hyb*.so lib-pmpi/libvt*.so lib-pmpi/libvt-mpi*.so lib-pmpi/libmpe*.so
 
 do-test:
 	# tests fail with MPICH2=on: https://bitbucket.org/mpi4py/mpi4py/issues/110/tests-fail-with-mpich2-on-freebsd-error
