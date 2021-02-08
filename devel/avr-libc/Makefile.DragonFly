@@ -1,6 +1,0 @@
-
-# to avoid orphans
-PLIST_FILES+=	avr/lib/avr4/crtatmega48pb.o \
-		avr/lib/avr4/crtatmega88pb.o \
-		avr/lib/avr4/libatmega48pb.a \
-		avr/lib/avr4/libatmega88pb.a
