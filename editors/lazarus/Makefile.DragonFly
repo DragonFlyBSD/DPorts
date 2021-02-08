@@ -1,6 +1,7 @@
 BUILD_DEPENDS+= ${LOCALBASE}/bin/fpcmake:lang/fpc
-MAKE_ENV+= FPCDIR="${LOCALBASE}/lib/fpc/3.0.4"
+MAKE_ENV+= FPCDIR="${LOCALBASE}/lib/fpc/${FPC_DEFAULT}"
 #MAKE_ENV+= LDVER=ld.bfd
+
 # bootstrap dragonfly
 pre-build-script:
 	cd ${WRKDIR}/${PORTNAME}/packager/registration && \
