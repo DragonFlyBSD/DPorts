@@ -1,6 +1,6 @@
---- meson.build.orig	2020-10-01 07:50:39 UTC
+--- meson.build.orig	2020-12-01 08:51:29 UTC
 +++ meson.build
-@@ -902,7 +902,7 @@ required_programs_groups = [
+@@ -897,7 +897,7 @@ required_programs_groups = [
    {'name':'rst2man', 'prog':['rst2man', 'rst2man.py', 'rst2man-3']},
  ]
  
@@ -9,25 +9,16 @@
    required_programs += 'ifconfig'
  endif
  
-@@ -1026,7 +1026,7 @@ devmapper_dep = dependency('devmapper',
- if not devmapper_dep.found()
-   # devmapper is missing pkg-config files in ubuntu, suse, etc
-   devmapper_dep = cc.find_library('devmapper', required: false)
--  if devmapper_dep.found() and not cc.has_function('dm_task_run', dependencies: tmp)
-+  if devmapper_dep.found() and not cc.has_function('dm_task_run')
-     devmapper_dep = dependency('', required: false)
-   endif
- endif
-@@ -1068,7 +1068,7 @@ gnutls_version = '3.2.0'
+@@ -1056,7 +1056,7 @@ gnutls_version = '3.2.0'
  gnutls_dep = dependency('gnutls', version: '>=' + gnutls_version)
  
  # Check for BSD kvm (kernel memory interface)
 -if host_machine.system() == 'freebsd'
-+if host_machine.system() in [ 'freebsd', 'dragonfly' ]
-   kvm_dep = cc.find_library('kvm')
++if host_machine.system() in  [ 'freebsd', 'dragonfly' ]
+   libkvm_dep = cc.find_library('kvm')
  else
-   kvm_dep = dependency('', required: false)
-@@ -1521,7 +1521,7 @@ if bash_completion_dep.found()
+   libkvm_dep = dependency('', required: false)
+@@ -1465,7 +1465,7 @@ if bash_completion_dep.found()
    endif
  endif
  
@@ -36,7 +27,7 @@
    if not get_option('firewalld').disabled()
      conf.set('WITH_FIREWALLD', 1)
    endif
-@@ -1553,7 +1553,7 @@ endif
+@@ -1489,7 +1489,7 @@ endif
  # build driver options
  
  if get_option('driver_remote').enabled()
@@ -45,7 +36,7 @@
      error('XDR is required for remote driver')
    endif
    conf.set('WITH_REMOTE', 1)
-@@ -1744,7 +1744,7 @@ if not get_option('driver_qemu').disable
+@@ -1680,7 +1680,7 @@ if not get_option('driver_qemu').disable
      endif
      conf.set_quoted('QEMU_MODDIR', qemu_moddir)
  
