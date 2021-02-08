@@ -1,0 +1,12 @@
+.if defined(LIBNICE_SLAVE)
+post-install:
+	# A bit meh, but does the job and prevents future problems.
+	# But I think the correct solution would be to specify each file
+	# to be removed.
+	${RM} -rf ${STAGEDIR}${PREFIX}/bin
+	${RM} -rf ${STAGEDIR}${PREFIX}/lib/libnice.so*
+	${RM} -rf ${STAGEDIR}${PREFIX}/lib/girepository-1.0
+	${RM} -rf ${STAGEDIR}${PREFIX}/include
+	${RM} -rf ${STAGEDIR}${PREFIX}/libdata
+	${RM} -rf ${STAGEDIR}${PREFIX}/share
+.endif
