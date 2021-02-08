@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	unit
-PORTVERSION=	1.20.0
+PORTVERSION=	1.21.0
+PORTREVISION=	4
 CATEGORIES=	www
 MASTER_SITES?=	https://unit.nginx.org/download/
 
@@ -19,14 +20,20 @@ CPE_PRODUCT=	unit
 
 OPTIONS_DEFINE?=	\
 	DEBUG \
-	DEVKIT \
 	IPV6 \
 	SSL \
 	UNIXSOCK
-OPTIONS_DEFAULT?=UNIXSOCK
+OPTIONS_DEFAULT?=	IPV6 PCRE2 SSL UNIXSOCK
+
+OPTIONS_RADIO+=		REGEX
+OPTIONS_RADIO_REGEX=	NOPCRE PCRE PCRE2
 
 DEBUG_DESC=	Enable debug logging
 DEVKIT_DESC=	Install headers and library
+REGEX_DESC=	Support regular expressions
+NOPCRE_DESC=	No support for Regular Expressions
+PCRE_DESC=	Regular Expressions via devel/pcre
+PCRE2_DESC=	Regular Expressions via devel/pcre2
 SSL_DESC=	Enable SSL/TLS
 UNIXSOCK_DESC=	Enable unix sockets
 
@@ -72,21 +79,21 @@ SUB_LIST=	PREFIX=${PREFIX} \
 CONFIGURE_ARGS+=--debug
 .endif
 
-.if ${PORT_OPTIONS:MDEVKIT}
-PLIST_FILES+=	include/nxt_unit_field.h \
-		include/nxt_unit_request.h \
-		include/nxt_unit_response.h \
-		include/nxt_unit_sptr.h \
-		include/nxt_unit_typedefs.h \
-		include/nxt_unit_websocket.h \
-		include/nxt_unit.h \
-		include/nxt_version.h \
-		include/nxt_websocket_header.h \
-		lib/libunit.a
-.endif
-
 .if empty(PORT_OPTIONS:MIPV6)
 CONFIGURE_ARGS+=--no-ipv6
+.endif
+
+.if ${PORT_OPTIONS:MNOPCRE}
+CONFIGURE_ARGS+=--no-regex
+.endif
+
+.if ${PORT_OPTIONS:MPCRE}
+CONFIGURE_ARGS+=--no-pcre2
+LIB_DEPENDS+=	libpcre.so:devel/pcre
+.endif
+
+.if ${PORT_OPTIONS:MPCRE2}
+LIB_DEPENDS+=	libpcre2-8.so:devel/pcre2
 .endif
 
 .if ${PORT_OPTIONS:MSSL}
@@ -100,9 +107,6 @@ CONFIGURE_ARGS+=--no-unix-sockets
 CONFIGURE_ARGS+=--control=unix:${UNIT_SOCK}
 .endif
 
-post-build-DEVKIT-on:
-	@cd ${WRKSRC} && ${MAKE} build/libunit.a
-
 .if !target(post-install)
 post-install:
 	${MKDIR} ${STAGEDIR}${UNIT_LOGDIR}
@@ -112,9 +116,6 @@ post-install:
 	${ECHO_CMD} @dir ${UNIT_RUNDIR} >> ${TMPPLIST}
 	${ECHO_CMD} @dir ${UNIT_TMPDIR} >> ${TMPPLIST}
 	${MKDIR} ${STAGEDIR}${PREFIX}/libexec/unit/modules
-
-post-install-DEVKIT-on:
-	${MAKE} -C ${WRKSRC} libunit-install DESTDIR=${STAGEDIR}
 .endif
 
 .include <bsd.port.mk>
