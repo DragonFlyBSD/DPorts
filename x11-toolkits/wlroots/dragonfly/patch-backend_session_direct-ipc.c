@@ -1,5 +1,5 @@
---- backend/session/direct-ipc.c.orig	2019-05-24 11:03:22.405311000 +0300
-+++ backend/session/direct-ipc.c	2019-05-24 11:14:46.419242000 +0300
+--- backend/session/direct-ipc.c.orig	2021-02-01 18:23:09.426045000 +0100
++++ backend/session/direct-ipc.c	2021-02-01 18:28:54.028055000 +0100
 @@ -1,5 +1,5 @@
  #define _POSIX_C_SOURCE 200809L
 -#ifdef __FreeBSD__
@@ -7,14 +7,7 @@
  #define __BSD_VISIBLE 1
  #include <linux/input.h>
  #endif
-@@ -137,12 +137,13 @@ static void communicate(int sock) {
- 
- 			// These are the same flags that logind opens files with
- 			int fd = open(msg.path, O_RDWR|O_CLOEXEC|O_NOCTTY|O_NONBLOCK);
--			int ret = errno;
-+			int ret = 0;
- 			if (fd == -1) {
-+				ret = errno;
+@@ -114,7 +114,7 @@
  				goto error;
  			}
  

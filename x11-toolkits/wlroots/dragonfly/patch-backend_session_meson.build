@@ -1,6 +1,6 @@
---- backend/session/meson.build.orig	2020-01-06 14:01:10 UTC
-+++ backend/session/meson.build
-@@ -6,6 +6,8 @@ wlr_files += files(
+--- backend/session/meson.build.orig	2021-02-01 18:27:19.947340000 +0100
++++ backend/session/meson.build	2021-02-01 18:27:39.777681000 +0100
+@@ -6,6 +6,8 @@
  
  if host_machine.system().startswith('freebsd')
  	wlr_files += files('direct-freebsd.c')
