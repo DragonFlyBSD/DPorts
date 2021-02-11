@@ -3,7 +3,7 @@
 
 PORTNAME=	xine
 PORTVERSION=	1.0.2
-PORTREVISION=	12
+PORTREVISION=	13
 DISTVERSIONPREFIX=	plugin-
 CATEGORIES=	www multimedia
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-plugin/${PORTVERSION}
@@ -11,6 +11,8 @@ PKGNAMEPREFIX=	npapi-
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Embed Xine player into browser
+
+BROKEN_aarch64=		fails to build: ../include/prcpucfg.h:604:2: Unknown CPU architecture
 
 LIB_DEPENDS=	libxine.so:multimedia/libxine
 
