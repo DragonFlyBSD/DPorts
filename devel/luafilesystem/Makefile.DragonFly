@@ -1,0 +1,12 @@
+# For the following Makefile excerpt, (current) bmake won't create the .o
+# file within the src directory whereas gmake will. In order to not touch
+# the source code itself, use gmake.
+#
+# [...]
+# SRCS= src/$T.c
+# OBJS= src/$T.o
+#
+# src/lfs.so: $(OBJS)
+# [...]
+#
+USES+=	gmake
