@@ -13,3 +13,6 @@ CAMERATRACK_LIB_DEPENDS:=
 dfly-patch:
 	${REINPLACE_CMD} -e 's/\(HAVE_UNWIND_H \)./\10/' \
 		${WRKSRC}/extern/glog/src/config_freebsd.h
+	${REINPLACE_CMD} -e 's/[[:<:]]isinf[[:>:]]/std::isinf/g' \
+		-e 's@[[:<:]]isnan[[:>:]]@std::isnan@g' \
+		${WRKSRC}/source/blender/gpu/intern/gpu_matrix.cc
