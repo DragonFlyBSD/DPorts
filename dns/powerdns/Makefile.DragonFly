@@ -1,3 +1,0 @@
-
-# to avoid orphans
-PLIST_FILES+=	%%DOCSDIR%%/4.3.0_to_4.3.1_schema.sqlite3.sql
