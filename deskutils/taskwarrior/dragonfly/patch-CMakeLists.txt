@@ -1,11 +1,24 @@
---- CMakeLists.txt.orig	2014-01-15 22:43:05.000000000 +0000
+--- CMakeLists.txt.orig	2020-12-05 22:11:36 UTC
 +++ CMakeLists.txt
-@@ -15,6 +15,8 @@ elseif (${CMAKE_SYSTEM_NAME} MATCHES "Da
-   set (DARWIN true)
- elseif (${CMAKE_SYSTEM_NAME} MATCHES "kFreeBSD")
-   set (KFREEBSD true)
-+elseif (${CMAKE_SYSTEM_NAME} MATCHES "DragonFly")
-+  set (FREEBSD true)
- elseif (${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
-   set (FREEBSD true)
- elseif (${CMAKE_SYSTEM_NAME} MATCHES "OpenBSD")
+@@ -87,10 +87,10 @@ check_struct_has_member ("struct tm" tm_
+ check_struct_has_member ("struct stat" st_birthtime "sys/types.h;sys/stat.h" HAVE_ST_BIRTHTIME)
+ 
+ message ("-- Looking for libuuid")
+-if (DARWIN OR FREEBSD OR OPENBSD)
++if (DARWIN OR FREEBSD OR OPENBSD OR DRAGONFLY)
+   # Apple and FreeBSD include the uuid functions in their libc, rather than libuuid
+   check_function_exists (uuid_unparse_lower HAVE_UUID_UNPARSE_LOWER)
+-else (DARWIN OR FREEBSD OR OPENBSD)
++else (DARWIN OR FREEBSD OR OPENBSD OR DRAGONFLY)
+   find_path    (UUID_INCLUDE_DIR   uuid/uuid.h)
+   find_library (UUID_LIBRARY NAMES uuid)
+   if (UUID_INCLUDE_DIR AND UUID_LIBRARY)
+@@ -103,7 +103,7 @@ else (DARWIN OR FREEBSD OR OPENBSD)
+   else (UUID_INCLUDE_DIR AND UUID_LIBRARY)
+     message (FATAL_ERROR "-- libuuid not found.")
+   endif (UUID_INCLUDE_DIR AND UUID_LIBRARY)
+-endif (DARWIN OR FREEBSD OR OPENBSD)
++endif (DARWIN OR FREEBSD OR OPENBSD OR DRAGONFLY)
+ 
+ if (HAVE_UUID_UNPARSE_LOWER)
+   message ("-- Found libuuid")
