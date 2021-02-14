@@ -4,8 +4,8 @@ OPTIONS_DEFAULT:=        ${OPTIONS_DEFAULT:NPULSEAUDIO}
 # turn it off again
 MOZ_OPTIONS+=	--disable-webrtc
 # clang to generate C/c++ bindings...  assume default llvm
-MOZ_OPTIONS+=	--with-clang-path=${LOCALBASE}/llvm80/bin/clang \
-		--with-libclang-path=${LOCALBASE}/llvm80/lib
+MOZ_OPTIONS+=	--with-clang-path=${LOCALBASE}/llvm${LLVM_DEFAULT}/bin/clang \
+		--with-libclang-path=${LOCALBASE}/llvm${LLVM_DEFAULT}/lib
 CXXFLAGS+=	-Wno-multistatement-macros -Wno-class-memaccess
 
 # alsa headers use 'u_int32_t' and other BerkeleyDB/nvi fixed types (_XOPEN_SOURCE)
