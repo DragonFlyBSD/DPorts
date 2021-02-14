@@ -1,6 +1,6 @@
---- xbmc/addons/binary-addons/BinaryAddonType.cpp.orig	2020-05-31 13:31:35 UTC
-+++ xbmc/addons/binary-addons/BinaryAddonType.cpp
-@@ -50,8 +50,11 @@ const char* CBinaryAddonType::GetPlatfor
+--- xbmc/addons/addoninfo/AddonInfoBuilder.cpp.orig	2019-12-16 08:11:03 UTC
++++ xbmc/addons/addoninfo/AddonInfoBuilder.cpp
+@@ -539,8 +539,11 @@ const char* CAddonInfoBuilder::GetPlatfo
    const char* libraryName;
  #if defined(TARGET_ANDROID)
    libraryName = element->Attribute("library_android");
@@ -14,3 +14,13 @@
    libraryName = element->Attribute("library_freebsd");
    if (libraryName == nullptr)
  #elif defined(TARGET_RASPBERRY_PI)
+@@ -583,6 +586,9 @@ bool CAddonInfoBuilder::PlatformSupports
+ #else
+     #warning no architecture dependant platform tag
+ #endif
++#elif defined(TARGET_DRAGONFLY)
++    "dragonfly",
++    "linux",
+ #elif defined(TARGET_FREEBSD)
+     "freebsd",
+     "linux",

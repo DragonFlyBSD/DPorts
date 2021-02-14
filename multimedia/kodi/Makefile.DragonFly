@@ -1,12 +1,10 @@
-
 # don't know how to make ... /progress/p\. Stop
 USES+=	gmake
 
-OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NGBM}
+# Replace OPSYS
+PLIST_SUB +=	OPSYS=${OPSYS:tl}
 
-# rename one plugin
-DFLY_PLIST=     ${WRKSRC}/pkg-plist
-PLIST:=         ${DFLY_PLIST}
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NGBM}
 
 dfly-patch:
 	${CP} -v ${WRKSRC}/system/settings/freebsd.xml ${WRKSRC}/system/settings/dragonfly.xml
@@ -22,15 +20,13 @@ dfly-patch:
 	${CP} -Rv ${WRKSRC}/xbmc/platform/freebsd  ${WRKSRC}/xbmc/platform/dragonfly
 	${REINPLACE_CMD} -e 's@freebsd@dragonfly@' \
 		${WRKSRC}/xbmc/platform/dragonfly/CMakeLists.txt
-	${CP} -Rv ${WRKSRC}/xbmc/platform/overrides/freebsd \
-		  ${WRKSRC}/xbmc/platform/overrides/dragonfly
 	${CP} -Rv ${WRKSRC}/tools/buildsteps/freebsd \
 		  ${WRKSRC}/tools/buildsteps/dragonfly
 	${REINPLACE_CMD} -e 's@freebsd@dragonfly@g' \
 		${WRKSRC}/tools/buildsteps/dragonfly/*
 	${REINPLACE_CMD} -e 's@defined (TARGET_FREEBSD)@defined(TARGET_FREEBSD)@g' \
 			 -e 's@defined(TARGET_FREEBSD)@(&||defined(TARGET_DRAGONFLY))@g' \
-		${WRKSRC}/xbmc/platform/linux/network/NetworkLinux.cpp
+		${WRKSRC}/xbmc/platform/posix/network/NetworkPosix.cpp
 	${REINPLACE_CMD} -e 's@defined(TARGET_FREEBSD)@(&||defined(TARGET_DRAGONFLY))@g' \
 			 -e 's@#ifdef \(TARGET_FREEBSD\)@#if defined(TARGET_FREEBSD) || defined(TARGET_DRAGONFLY)@g' \
 		${WRKSRC}/xbmc/platform/linux/peripherals/PeripheralBusUSBLibUSB.cpp \
@@ -39,7 +35,8 @@ dfly-patch:
 		${WRKSRC}/tools/depends/native/TexturePacker/src/XBTFWriter.cpp \
 		${WRKSRC}/xbmc/LangInfo.cpp \
 		${WRKSRC}/xbmc/Util.cpp \
-		${WRKSRC}/xbmc/addons/kodi-addon-dev-kit/include/kodi/Filesystem.h \
+		${WRKSRC}/xbmc/addons/kodi-dev-kit/include/kodi/Filesystem.h \
+		${WRKSRC}/xbmc/addons/kodi-dev-kit/include/kodi/gui/gl/GL.h \
 		${WRKSRC}/xbmc/cores/AudioEngine/Sinks/AESinkOSS.cpp \
 		${WRKSRC}/xbmc/cores/DllLoader/exports/emu_msvcrt.cpp \
 		${WRKSRC}/xbmc/cores/DllLoader/exports/emu_msvcrt.h \
@@ -51,6 +48,8 @@ dfly-patch:
 		${WRKSRC}/xbmc/interfaces/python/XBPython.cpp \
 		${WRKSRC}/xbmc/peripherals/bus/PeripheralBusUSB.h \
 		${WRKSRC}/xbmc/platform/posix/Filesystem.cpp \
+		${WRKSRC}/xbmc/platform/posix/PlatformDefs.h \
+		${WRKSRC}/xbmc/platform/posix/PosixMountProvider.cpp \
 		${WRKSRC}/xbmc/platform/posix/main.cpp \
 		${WRKSRC}/xbmc/storage/DetectDVDType.cpp \
 		${WRKSRC}/xbmc/storage/MediaManager.cpp \
@@ -58,17 +57,4 @@ dfly-patch:
 		${WRKSRC}/xbmc/utils/CharsetConverter.cpp \
 		${WRKSRC}/xbmc/utils/Stopwatch.cpp \
 		${WRKSRC}/xbmc/utils/test/TestCPUInfo.cpp \
-		${WRKSRC}/xbmc/windowing/X11/XRandR.cpp \
-		${WRKSRC}/xbmc/platform/linux/PlatformDefs.h \
-		${WRKSRC}/xbmc/platform/linux/PosixMountProvider.cpp \
-		${WRKSRC}/xbmc/platform/linux/XFileUtils.cpp \
-		${WRKSRC}/xbmc/platform/linux/XMemUtils.cpp
-	${REINPLACE_CMD} -e 's@hfs,udf,zfs@hammer,hammer2,udf@g' \
-		${WRKSRC}/xbmc/platform/linux/PosixMountProvider.cpp
-	${REINPLACE_CMD} -e "s@FreeBSD@DragonFly@g" -e "s@amd64@x86_64@g" \
-		${WRKSRC}/cmake/modules/FindSSE.cmake
-	${REINPLACE_CMD} -e 's@core_optional_dyload_dep@#&@g' \
-		${WRKSRC}/CMakeLists.txt # XXX
-	${CP} -v ${.CURDIR:H}/kodi/pkg-plist ${DFLY_PLIST}
-	${REINPLACE_CMD} -e 's@-freebsd.so@-dragonfly.so@g' ${DFLY_PLIST}
-	${ECHO} '%%DATADIR%%/system/settings/dragonfly.xml' >> ${DFLY_PLIST}
+		${WRKSRC}/xbmc/windowing/X11/XRandR.cpp
