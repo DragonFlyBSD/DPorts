@@ -112,7 +112,6 @@ MESON_ARGS+=	-Dllvm=enabled
 .if ${OPSYS} == DragonFly
 # XXX disable dri3 until ftigeot figure it out
 MESON_ARGS+=	-Ddri3=disabled
-LLVM_DEFAULT=	10
 . if ${COMPONENT} == libs || ${COMPONENT} == dri || ${COMPONENT} == osmesa
 MESON_ARGS+=	-Dllvm=disabled
 .  if defined(DEVELOPER)
@@ -123,8 +122,5 @@ LDFLAGS+=	-Wl,-rpath=${LOCALBASE}/llvm${LLVM_DEFAULT}/lib
 LIB_DEPENDS+=	libelf.so:devel/libelf
 BUILD_DEPENDS+=	llvm${LLVM_DEFAULT}>=0:devel/llvm${LLVM_DEFAULT}
 RUN_DEPENDS+=	llvm${LLVM_DEFAULT}>=0:devel/llvm${LLVM_DEFAULT}
-MESON_ARGS+=	--native-file="${WRKSRC}/llvm.ini"
-LDFLAGS+=	-Wl,-rpath=${LOCALBASE}/llvm${LLVM_DEFAULT}/lib
-MESON_ARGS+=	-Dllvm=enabled
 . endif
 .endif
