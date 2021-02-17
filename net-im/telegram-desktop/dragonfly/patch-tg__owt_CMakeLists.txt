@@ -1,4 +1,4 @@
---- tg_owt/CMakeLists.txt.orig	2020-09-27 12:15:25 UTC
+--- tg_owt/CMakeLists.txt.orig	2021-02-17 15:41:08 UTC
 +++ tg_owt/CMakeLists.txt
 @@ -38,6 +38,7 @@ include(cmake/libopenh264.cmake)
  include(cmake/libpffft.cmake)
@@ -8,15 +8,25 @@
  include(cmake/libvpx.cmake)
  include(cmake/libwebrtcbuild.cmake)
  include(cmake/libyuv.cmake)
-@@ -60,6 +61,7 @@ PRIVATE
-     tg_owt::libpffft
-     tg_owt::librnnoise
-     tg_owt::libsrtp
-+    tg_owt::libusrsctp
-     tg_owt::libvpx
-     tg_owt::libvpx_mmx
-     tg_owt::libvpx_sse2
-@@ -842,12 +844,6 @@ PRIVATE
+@@ -62,7 +63,8 @@ if (is_x86 OR is_x64)
+         tg_owt::librnnoise
+         tg_owt::libsrtp
+         tg_owt::libvpx
+-        tg_owt::libvpx_mmx
++	tg_owt::libusrsctp
++	tg_owt::libvpx_mmx
+         tg_owt::libvpx_sse2
+         tg_owt::libvpx_ssse3
+         tg_owt::libvpx_sse4
+@@ -105,7 +107,6 @@ link_opus(tg_owt)
+ 
+ if (UNIX AND NOT APPLE)
+     link_libalsa(tg_owt)
+-    link_libpulse(tg_owt)
+     link_dl(tg_owt)
+ endif()
+ 
+@@ -869,12 +870,6 @@ PRIVATE
      modules/audio_device/linux/audio_mixer_manager_alsa_linux.h
      modules/audio_device/linux/latebindingsymboltable_linux.cc
      modules/audio_device/linux/latebindingsymboltable_linux.h
@@ -29,11 +39,11 @@
      modules/audio_device/mac/audio_device_mac.cc
      modules/audio_device/mac/audio_device_mac.h
      modules/audio_device/mac/audio_mixer_manager_mac.cc
-@@ -1755,6 +1751,7 @@ TARGETS
+@@ -1837,6 +1832,7 @@ TARGETS
      libpffft
      librnnoise
      libsrtp
 +    libusrsctp
      libvpx
-     libvpx_mmx
-     libvpx_sse2
+     ${vpx_export}
+     libwebrtcbuild
