@@ -8,3 +8,7 @@ pre-patch-MODSECURITY-on:
 pre-patch-HTTP_ZIP-on:
 	-${REINPLACE_CMD} -e 's@\(defined(__OpenBSD__)\)@(\1 || defined(__FreeBSD__) || defined(__DragonFly__))@g' \
 		${WRKSRC_mod_zip}/ngx_http_zip_endian.h
+
+pre-patch-NAXSI-on:
+	-${REINPLACE_CMD} -e 's@__FreeBSD__@__DragonFly__@g' \
+		${WRKSRC_naxsi}/naxsi_src/naxsi_net.h
