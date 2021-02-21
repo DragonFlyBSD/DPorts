@@ -43,9 +43,9 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #				  makefile is being used on.  Automatically set to
 #				  "FreeBSD," "NetBSD," or "OpenBSD" as appropriate.
 # OSREL			- The release version of the operating system as a text
-#				  string (e.g., "12.1").
+#				  string (e.g., "12.2").
 # OSVERSION		- 9999999 - try to ignore FreeBSD version check
-#				  the value of __FreeBSD_version (e.g., 1201000).
+#				  the value of __FreeBSD_version (e.g., 1202000).
 # DFLYVERSION	- The value of __DragonFly_version.
 #
 # This is the beginning of the list of all variables that need to be
@@ -1161,16 +1161,19 @@ OSVERSION!=	${AWK} '/^\#define[[:blank:]]__FreeBSD_version/ {print $$3}' < ${CRO
 _OSRELEASE!= ${AWK} -v version=${OSVERSION} 'END { printf("%d.%d-CROSS", version / 100000, version / 1000 % 100) }' < /dev/null
 .endif
 
-# Get the operating system type
+# Get the operating system type.
+# tuxillo (02/2021): Not worth saving up some fork cycles, also dsynth
+# sets OPSYS so no point in hardcoding OPSYS, really.
+#
 .if !defined(OPSYS)
-#
-# XXX Not sure why we don't use uname -s as FreeBSD does
-#
-OPSYS=	DragonFly
+OPSYS!=	${UNAME} -s
 .endif
 _EXPORTED_VARS+=	OPSYS
 
 .if !defined(_OSRELEASE)
+. if !defined(.MAKE.DF.OSREL)
+.  error make(1) is not defining global variable .MAKE.DF.OSREL . This is a DF specific global variable.
+. endif
 _OSRELEASE=	${.MAKE.DF.OSREL}-DPORTS
 .endif
 _EXPORTED_VARS+=	_OSRELEASE
@@ -1184,7 +1187,7 @@ _EXPORTED_VARS+=	OSVERSION
 .if !defined(DFLYVERSION)
 . if defined(.MAKE.DF.OSREL)
 DFLYVERSION=	${.MAKE.DF.VERSION}
-OSREL=		${.MAKE.DF.OSREL}
+OSREL=			${.MAKE.DF.OSREL}
 . else
 DFLYVERSION!=	${AWK} '/^\#define[[:blank:]]__DragonFly_version/ {print $$3}' < /usr/include/sys/param.h
 OSREL!=		${ECHO} ${DFLYVERSION} | ${AWK} '{a=int($$1/100000); b=int(($$1-(a*100000))/100); print a "." b}'
@@ -1192,7 +1195,8 @@ OSREL!=		${ECHO} ${DFLYVERSION} | ${AWK} '{a=int($$1/100000); b=int(($$1-(a*1000
 .endif
 _EXPORTED_VARS+=	DFLYVERSION OSREL
 
-.if (${OPSYS} == FreeBSD && (${OSVERSION} < 1104000 || (${OSVERSION} >= 1200000 && ${OSVERSION} < 1201000))) || \
+
+.if (${OPSYS} == FreeBSD && (${OSVERSION} < 1104000 || (${OSVERSION} >= 1200000 && ${OSVERSION} < 1202000))) || \
     (${OPSYS} == DragonFly && ${DFLYVERSION} < 400400)
 _UNSUPPORTED_SYSTEM_MESSAGE=	Ports Collection support for your ${OPSYS} version has ended, and no ports\
 								are guaranteed to build on this system. Please upgrade to a supported release.
@@ -1977,7 +1981,7 @@ DEV_WARNING+=	"Using USE_XORG alone is deprecated, please use USES=xorg"
 _USES_POST+=	xorg
 .endif
 
-.if defined(WANT_GSTREAMER) || defined(USE_GSTREAMER) || defined(USE_GSTREAMER1)
+.if defined(USE_GSTREAMER1)
 .include "${PORTSDIR}/Mk/bsd.gstreamer.mk"
 .endif
 
