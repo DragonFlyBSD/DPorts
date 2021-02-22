@@ -2,7 +2,7 @@
 
 PORTNAME=	openntpd
 PORTVERSION=	6.8p1
-PORTREVISION=	1
+PORTREVISION=	2
 PORTEPOCH=	2
 CATEGORIES=	net
 MASTER_SITES=	OPENBSD/OpenNTPD
@@ -14,7 +14,7 @@ LICENSE=	ISCL
 
 RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss
 
-USES=		ssl
+USES=		localbase ssl
 
 CONFLICTS=	ntp ntp-devel ntpsec
 
@@ -40,23 +40,25 @@ post-install:
 
 .include <bsd.port.pre.mk>
 
-# Requires libtls from LibreSSL
+# When using LibreSSL use its own libtls, but when using OpenSSL
+# use libtls from libretls.
 .if ${SSL_DEFAULT:Mlibressl*}
-CPPFLAGS+=		-I${OPENSSLINC}
-LDFLAGS+=		-L${OPENSSLLIB}
-.else # SSL_DEFAULT
-USES:=			${USES:Nssl}
-BUILD_DEPENDS+=		libressl-static>=0:security/libressl-static
-CPPFLAGS+=		-I${LOCALBASE}/libressl-static/include
-CFLAGS+=		-I${LOCALBASE}/libressl-static/include
-LDFLAGS+=		-L${LOCALBASE}/libressl-static/lib
+#	/* empty */
 
-dfly-patch:
-	${REINPLACE_CMD} -e '/LIBS=/s@-l$$ac_lib -lssl@-ltls -lssl@g' \
-			 -e 's@-ltls@${LOCALBASE}/libressl-static/lib/libtls.a@g' \
-			 -e 's@-lssl@${LOCALBASE}/libressl-static/lib/libssl.a@g' \
-			 -e 's@-lcrypto@${LOCALBASE}/libressl-static/lib/libcrypto.a@g' \
-                ${WRKSRC}/configure
+# Drop after FreeBSD 11 EOL: requires libtls from LibreSSL
+.elif ${SSL_DEFAULT:Mbase} && exists(/usr/include/openssl/ssl23.h)
+BUILD_DEPENDS+=		${NONEXISTENT}:security/libressl:stage
+CPPFLAGS+=		-I${WRKDIR}/libressl/include
+LDFLAGS+=		-L${WRKDIR}/libressl/lib
+
+# Don't use COPYTREE_SHARE here as it hard links files, and the original files
+# are owned by root, which creates problems of its own.
+pre-configure:
+	@cd `${MAKE} -V STAGEDIR -C ${PORTSDIR}/security/libressl`${PREFIX} \
+	    && ${FIND} . ! -name *.so\* | ${CPIO} -dump ${WRKDIR}/libressl >/dev/null 2>&1
+
+.else
+LIB_DEPENDS+=	libtls.so:security/libretls
 .endif # SSL_DEFAULT
 
 .include <bsd.port.post.mk>
