@@ -1,3 +1,7 @@
+USES+=	ssl autoreconf
+
+LDFLAGS+=	-L${OPENSSLLIB} -lcrypto
+FILESDIR=	${.CURDIR}/does-not-exist
 
 # link with libcrypto, not libmd
 dfly-patch:
