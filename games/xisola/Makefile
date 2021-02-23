@@ -10,9 +10,12 @@ MASTER_SITES=	XCONTRIB/games
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple board game for X Window System
 
-WRKSRC=		${WRKDIR}/${PORTNAME}
 USES=		imake:noman xorg
 USE_XORG=	x11 xext xaw xmu xt sm ice
+
+CFLAGS+=	-fcommon
+
+WRKSRC=		${WRKDIR}/${PORTNAME}
 
 PLIST_FILES=	bin/xisola
 PORTDOCS=	README
