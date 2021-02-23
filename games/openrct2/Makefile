@@ -4,7 +4,7 @@
 PORTNAME=	openrct2
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.3.2
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	games
 
 MAINTAINER=	pkubaj@FreeBSD.org
@@ -24,7 +24,7 @@ LIB_DEPENDS=	libpng.so:graphics/png \
 		libcurl.so:ftp/curl \
 		libfreetype.so:print/freetype2 \
 		libicuuc.so:devel/icu \
-		libbenchmark.so:devel/grpc \
+		libbenchmark.so:devel/benchmark \
 		libduktape.so:lang/duktape-lib
 
 USES=		cmake compiler:c++17-lang desktop-file-utils gnome gl iconv \
@@ -32,7 +32,7 @@ USES=		cmake compiler:c++17-lang desktop-file-utils gnome gl iconv \
 USE_GITHUB=	yes
 GH_ACCOUNT=	OpenRCT2
 GH_PROJECT=	OpenRCT2
-GH_TUPLE=	OpenRCT2:objects:v1.0.18:objects \
+GH_TUPLE=	OpenRCT2:objects:v1.0.20:objects \
 		OpenRCT2:title-sequences:v0.1.2c:title_sequences
 USE_GL=		gl
 USE_LDCONFIG=	yes
