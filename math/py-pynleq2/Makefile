@@ -2,7 +2,7 @@
 
 PORTNAME=	pynleq2
 DISTVERSION=	0.0.2
-PORTREVISION=	5
+PORTREVISION=	7
 CATEGORIES=	math python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -19,7 +19,7 @@ BUILD_DEPENDS=	${PYNUMPY}
 USES=		fortran python:3.6+
 USE_PYTHON=	distutils autoplist
 USE_GITHUB=	nodefault
-GH_TUPLE=	PySCeS:pysces:0.9.6:fortran
+GH_TUPLE=	PySCeS:pysces:0.9.8:fortran
 
 FORTRAN_FILES=	linalg_nleq2.f nleq2.f wnorm.f zibconst.f zibmon.f zibsec.f
 
