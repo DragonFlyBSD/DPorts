@@ -36,6 +36,7 @@ include/proxygen/lib/http/HTTPHeaders.h
 include/proxygen/lib/http/HTTPMessage.h
 include/proxygen/lib/http/HTTPMessageFilters.h
 include/proxygen/lib/http/HTTPMethod.h
+include/proxygen/lib/http/HTTPPriorityFunctions.h
 include/proxygen/lib/http/ProxyStatus.h
 include/proxygen/lib/http/ProxygenErrorEnum.h
 include/proxygen/lib/http/RFC2616.h
@@ -225,4 +226,5 @@ lib/cmake/proxygen/proxygen-config.cmake
 lib/cmake/proxygen/proxygen-targets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/proxygen/proxygen-targets.cmake
 lib/libproxygen.so
+lib/libproxygencurl.so
 lib/libproxygenhttpserver.so
