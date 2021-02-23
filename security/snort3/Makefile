@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	snort
-DISTVERSION=	3.0.3-6
+DISTVERSION=	3.1.1.0
 PORTEPOCH=	1
 CATEGORIES=	security
 PKGNAMESUFFIX=	3
@@ -15,7 +15,8 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libpcre.so:devel/pcre \
 		libdnet.so:net/libdnet \
-		libhwloc.so:devel/hwloc \
+		libpcap.so.1:net/libpcap \
+		libhwloc.so:devel/hwloc2 \
 		libuuid.so:misc/e2fsprogs-libuuid \
 		libdaq.so:net/libdaq
 
@@ -57,7 +58,7 @@ CONFLICTS=	snort-2*
 
 .include <bsd.port.options.mk>
 
-.if ${ARCH} == powerpc64
+.if ${ARCH:Mpowerpc64*}
 LIB_DEPENDS+=	libluajit-5.1.so:lang/luajit-openresty
 .else
 LIB_DEPENDS+=	libluajit-5.1.so:lang/luajit
