@@ -70,6 +70,7 @@
 %%DATADIR%%/overlays/draws.dtbo
 %%DATADIR%%/overlays/dwc-otg.dtbo
 %%DATADIR%%/overlays/dwc2.dtbo
+%%DATADIR%%/overlays/edt-ft5406.dtbo
 %%DATADIR%%/overlays/enc28j60-spi2.dtbo
 %%DATADIR%%/overlays/enc28j60.dtbo
 %%DATADIR%%/overlays/exc3000.dtbo
@@ -190,6 +191,8 @@
 %%DATADIR%%/overlays/sc16is752-spi1.dtbo
 %%DATADIR%%/overlays/sdhost.dtbo
 %%DATADIR%%/overlays/sdio.dtbo
+%%DATADIR%%/overlays/seeed-can-fd-hat-v1.dtbo
+%%DATADIR%%/overlays/seeed-can-fd-hat-v2.dtbo
 %%DATADIR%%/overlays/sh1106-spi.dtbo
 %%DATADIR%%/overlays/smi-dev.dtbo
 %%DATADIR%%/overlays/smi-nand.dtbo
@@ -232,6 +235,7 @@
 %%DATADIR%%/overlays/upstream-pi4.dtbo
 %%DATADIR%%/overlays/upstream.dtbo
 %%DATADIR%%/overlays/vc4-fkms-v3d.dtbo
+%%DATADIR%%/overlays/vc4-kms-dsi-7inch.dtbo
 %%DATADIR%%/overlays/vc4-kms-kippah-7inch.dtbo
 %%DATADIR%%/overlays/vc4-kms-v3d-pi4.dtbo
 %%DATADIR%%/overlays/vc4-kms-v3d.dtbo
@@ -240,6 +244,7 @@
 %%DATADIR%%/overlays/w1-gpio.dtbo
 %%DATADIR%%/overlays/w5500.dtbo
 %%DATADIR%%/overlays/wittypi.dtbo
+%%DATADIR%%/overlays/wm8960-soundcard.dtbo
 %%DATADIR%%/start.elf
 %%DATADIR%%/start4.elf
 %%DATADIR%%/start4cd.elf
