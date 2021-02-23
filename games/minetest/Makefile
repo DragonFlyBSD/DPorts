@@ -3,7 +3,7 @@
 
 PORTNAME=	minetest
 PORTVERSION=	5.3.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	games
 
 MAINTAINER=	amdmi3@FreeBSD.org
@@ -87,7 +87,7 @@ NLS_LDFLAGS=		-L${LOCALBASE}/lib
 
 .include <bsd.port.options.mk>
 
-.if ${ARCH} == powerpc64
+.if ${ARCH:Mpowerpc64*}
 LUAJIT_LIB_DEPENDS=	libluajit-5.1.so:lang/luajit-openresty
 .endif
 
