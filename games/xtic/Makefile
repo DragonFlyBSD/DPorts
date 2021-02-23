@@ -12,7 +12,9 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	X version of a simple but tricky board game
 
 USES=		imake xorg
-USE_XORG=	xaw
+USE_XORG=	ice sm x11 xaw xext xmu xpm xt
+CFLAGS+=	-fcommon
+
 PLIST_FILES=	bin/xtic man/man1/xtic.1.gz
 
 post-patch:
