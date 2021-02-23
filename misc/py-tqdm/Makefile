@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	tqdm
-PORTVERSION=	4.55.2
+PORTVERSION=	4.56.1
 CATEGORIES=	misc
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -15,7 +15,7 @@ LICENSE_FILE_MIT=	${WRKSRC}/LICENCE
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools_scm>=3.4:devel/py-setuptools_scm@${PY_FLAVOR}
 
-USES=		python
+USES=		python:2.7+
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes
