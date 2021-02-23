@@ -14,6 +14,7 @@ include/folly/CancellationToken.h
 include/folly/Chrono.h
 include/folly/ClockGettimeWrappers.h
 include/folly/ConcurrentBitSet.h
+include/folly/ConcurrentLazy.h
 include/folly/ConcurrentSkipList-inl.h
 include/folly/ConcurrentSkipList.h
 include/folly/ConstexprMath.h
@@ -275,6 +276,7 @@ include/folly/experimental/coro/Collect-inl.h
 include/folly/experimental/coro/Collect.h
 include/folly/experimental/coro/Concat-inl.h
 include/folly/experimental/coro/Concat.h
+include/folly/experimental/coro/Coroutine.h
 include/folly/experimental/coro/CurrentExecutor.h
 include/folly/experimental/coro/Dematerialize-inl.h
 include/folly/experimental/coro/Dematerialize.h
@@ -598,6 +600,7 @@ include/folly/portability/Constexpr.h
 include/folly/portability/Dirent.h
 include/folly/portability/Event.h
 include/folly/portability/Fcntl.h
+include/folly/portability/FmtCompile.h
 include/folly/portability/GFlags.h
 include/folly/portability/GMock.h
 include/folly/portability/GTest.h
@@ -675,6 +678,7 @@ include/folly/synchronization/AtomicUtil-inl.h
 include/folly/synchronization/AtomicUtil.h
 include/folly/synchronization/Baton.h
 include/folly/synchronization/CallOnce.h
+include/folly/synchronization/DelayedInit.h
 include/folly/synchronization/DistributedMutex-inl.h
 include/folly/synchronization/DistributedMutex.h
 include/folly/synchronization/DistributedMutexSpecializations.h
