@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	unit
-PORTVERSION=	1.21.0
-PORTREVISION=	4
+PORTVERSION=	${UNIT_VERSION}
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES?=	https://unit.nginx.org/download/
 
@@ -42,6 +42,7 @@ UNIXSOCK_DESC=	Enable unix sockets
 HAS_CONFIGURE=	yes
 
 UNIT_VARDIR?=	/var
+UNIT_DBDIR?=	${UNIT_VARDIR}/db/${PORTNAME}
 UNIT_LOGDIR?=	${UNIT_VARDIR}/log/${PORTNAME}
 UNIT_LOGFILE?=	${UNIT_LOGDIR}/${PORTNAME}.log
 UNIT_PIDFILE?=	${UNIT_RUNDIR}/${PORTNAME}.pid
@@ -54,7 +55,7 @@ CONFIGURE_ARGS=	--prefix=${PREFIX} \
 		--log=${UNIT_LOGFILE} \
 		--modules=libexec/unit/modules \
 		--pid=${UNIT_PIDFILE} \
-		--state=libexec/unit \
+		--state=${UNIT_DBDIR} \
 		--tmp=${UNIT_TMPDIR} \
 		--user=${WWWOWN} --group=${WWWGRP}
 
@@ -109,13 +110,16 @@ CONFIGURE_ARGS+=--control=unix:${UNIT_SOCK}
 
 .if !target(post-install)
 post-install:
+	${MKDIR} ${STAGEDIR}${UNIT_DBDIR}
 	${MKDIR} ${STAGEDIR}${UNIT_LOGDIR}
 	${MKDIR} ${STAGEDIR}${UNIT_RUNDIR}
 	${MKDIR} ${STAGEDIR}${UNIT_TMPDIR}
+	${ECHO_CMD} @dir ${UNIT_DBDIR} >> ${TMPPLIST}
 	${ECHO_CMD} @dir ${UNIT_LOGDIR} >> ${TMPPLIST}
 	${ECHO_CMD} @dir ${UNIT_RUNDIR} >> ${TMPPLIST}
 	${ECHO_CMD} @dir ${UNIT_TMPDIR} >> ${TMPPLIST}
 	${MKDIR} ${STAGEDIR}${PREFIX}/libexec/unit/modules
 .endif
 
+.include "../../www/unit/version.mk"
 .include <bsd.port.mk>
