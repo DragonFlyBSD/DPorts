@@ -3,7 +3,7 @@
 
 PORTNAME=	rawtherapee
 PORTVERSION=	5.8
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=	graphics
 MASTER_SITES=	https://rawtherapee.com/shared/source/ \
 		LOCAL/mandree/
@@ -37,7 +37,7 @@ DOS2UNIX_REGEX=	.*\.(cc|h)
 USE_BINUTILS=	yes
 
 # As of 2019-09-29, this port is known to be miscompiled by clang90
-# (SIGSEGV or SIBGUS) and 12.1's base clang.
+# (SIGSEGV or SIBGUS).
 # So we shall stick to a modern GCC for now,
 # XXX FIXME note that rawtherapee is somewhat sensitive 
 # versus compiler details so we may need to pin GCC 9.x
