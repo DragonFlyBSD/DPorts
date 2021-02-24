@@ -2,7 +2,7 @@
 
 PORTNAME=	fortunate
 PORTVERSION=	3.1
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=	games gnustep
 MASTER_SITES=	https://broken_for_developer_mode.z/
 
