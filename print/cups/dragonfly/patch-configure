@@ -1,6 +1,6 @@
---- configure.orig	2017-11-17 14:47:06 UTC
+--- configure.orig	2021-02-23 23:43:43 UTC
 +++ configure
-@@ -5731,7 +5731,7 @@ fi
+@@ -6444,7 +6444,7 @@ fi
  
  
  case $host_os_name in
@@ -9,7 +9,7 @@
                  ARFLAGS="-rcv"
                  ;;
          *)
-@@ -6390,7 +6390,7 @@ _ACEOF
+@@ -7097,7 +7097,7 @@ printf "%s\n" "#define CUPS_FONTPATH \"$
  # Locale data
  if test "$localedir" = "\${datarootdir}/locale"; then
  	case "$host_os_name" in
@@ -18,16 +18,16 @@
  			CUPS_LOCALEDIR="$datarootdir/locale"
  			;;
  
-@@ -6444,7 +6444,7 @@ _ACEOF
- 
- # Server executables...
- case "$host_os_name" in
+@@ -7149,7 +7149,7 @@ case "$host_os_name" in
+ 		INSTALL_SYSV="install-sysv"
+ 		CUPS_SERVERBIN="$exec_prefix/lib/cups"
+ 		;;
 -	*bsd* | darwin*)
 +	*bsd* | darwin* | dragonfly*)
  		# *BSD and Darwin (macOS)
  		INSTALL_SYSV=""
  		CUPS_SERVERBIN="$exec_prefix/libexec/cups"
-@@ -6505,7 +6505,7 @@ fi
+@@ -7205,7 +7205,7 @@ fi
  
  if test "$mandir" = "\${prefix}/man" -a "$prefix" = "/"; then
  	case "$host_os_name" in
@@ -35,17 +35,17 @@
 +        	darwin* | linux* | gnu* | *bsd* | dragonfly*)
          		# Darwin, macOS, Linux, GNU HURD, and *BSD
          		mandir="/usr/share/man"
-         		AMANDIR="/usr/share/man"
-@@ -6586,7 +6586,7 @@ if test x$enable_shared != xno; then
+         		;;
+@@ -7244,7 +7244,7 @@ if test x$enable_shared != xno; then
  			DSOXX="\$(CXX)"
- 			DSOFLAGS="$DSOFLAGS -Wl,-h\`basename \$@\` -G \$(OPTIM)"
+ 			DSOFLAGS="$DSOFLAGS -Wl,-h\`basename \$@\` -G"
  			;;
 -		linux* | gnu* | *bsd*)
 +		linux* | gnu* | *bsd* | dragonfly*)
  			LIBCUPS="lib$cupsbase.so.2"
- 			LIBCUPSCGI="libcupscgi.so.1"
- 			LIBCUPSIMAGE="libcupsimage.so.2"
-@@ -6682,7 +6682,7 @@ if test "$DSO" != ":"; then
+ 			if test "x$cupsimagebase" != x; then
+ 				LIBCUPSIMAGE="lib$cupsimagebase.so.2"
+@@ -7318,7 +7318,7 @@ if test "$DSO" != ":"; then
  				EXPORT_LDFLAGS="-R$libdir"
  			fi
  			;;
