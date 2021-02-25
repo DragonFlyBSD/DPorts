@@ -68,6 +68,7 @@
 %%QT_DATADIR%%/qsci/api/python/Python-3.6.api
 %%QT_DATADIR%%/qsci/api/python/Python-3.7.api
 %%QT_DATADIR%%/qsci/api/python/Python-3.8.api
+%%QT_DATADIR%%/qsci/api/python/Python-3.9.api
 %%NLS%%%%QT_L10NDIR%%/qscintilla_cs.qm
 %%NLS%%%%QT_L10NDIR%%/qscintilla_de.qm
 %%NLS%%%%QT_L10NDIR%%/qscintilla_es.qm
