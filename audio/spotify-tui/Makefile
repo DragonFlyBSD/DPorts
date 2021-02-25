@@ -3,9 +3,10 @@
 PORTNAME=	spotify-tui
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.23.0
+PORTREVISION=	1
 CATEGORIES=	audio
 
-MAINTAINER=	vulcan@wired.sh
+MAINTAINER=	lcook@FreeBSD.org
 COMMENT=	Spotify for the terminal written in Rust
 
 LICENSE=	MIT
