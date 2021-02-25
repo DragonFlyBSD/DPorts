@@ -2,10 +2,10 @@
 
 PORTNAME=	fselect
 DISTVERSION=	0.7.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	sysutils
 
-MAINTAINER=	vulcan@wired.sh
+MAINTAINER=	lcook@FreeBSD.org
 COMMENT=	Find files with SQL-like queries
 
 LICENSE=	APACHE20 MIT
