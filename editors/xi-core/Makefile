@@ -3,10 +3,10 @@
 PORTNAME=	xi-core
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.3.0
-PORTREVISION=	11
+PORTREVISION=	12
 CATEGORIES=	editors
 
-MAINTAINER=	ed.arrakis@gmail.com
+MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Modern editor backend written in Rust
 
 LICENSE=	APACHE20
