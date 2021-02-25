@@ -3,10 +3,10 @@
 PORTNAME=	dtool
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.10.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	devel
 
-MAINTAINER=	vulcan@wired.sh
+MAINTAINER=	lcook@FreeBSD.org
 COMMENT=	Command-line tool collection to assist development
 
 LICENSE=	GPLv3
