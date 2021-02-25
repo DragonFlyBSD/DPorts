@@ -2,10 +2,10 @@
 
 PORTNAME=	xi-term
 DISTVERSION=	g20190913
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	editors
 
-MAINTAINER=	ed.arrakis@gmail.com
+MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Terminal frontend for xi-editor
 
 LICENSE=	MIT
