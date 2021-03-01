@@ -1,0 +1,5 @@
+
+# expose PF_UNET, pipe2() etc
+dfly-patch:
+	${REINPLACE_CMD} -e 's@_XOPEN_SOURCE@&__@g' -e 's@__BSD_VISIBLE@&__@g' \
+		${WRKSRC}/configure
