@@ -1,0 +1,3 @@
+
+# disable IDE for now, something with packaging
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NIDE}
