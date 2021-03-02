@@ -75,7 +75,7 @@ BOOT_SUB_LIST_OFF=	HSC2HS=${BOOT_HSC2HS}
 PROFILE_SUB_LIST=	WITH_PROFILE="YES"
 PROFILE_SUB_LIST_OFF=	WITH_PROFILE="NO"
 
-GHC_VERSION=		8.10.3
+GHC_VERSION=		8.10.4
 CABAL_VERSION=		3.2.1.0
 HSCOLOUR_VERSION=	1.24.4
 LLVM_VERSION=		90
@@ -97,10 +97,10 @@ BUILD_DEPENDS+=	${LOCALBASE}/lib/compat/libncursesw.so.8:misc/compat12x
 CONFIGURE_ARGS+=	--enable-dtrace=0
 .endif
 
-.if ${ARCH} == i386
-EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-libraries_ghc-prim_cbits_atomic.c \
-		${PATCHDIR}/extra-patch-rts_posix_TTY.c
-.endif
+# .if ${ARCH} == i386
+# EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-libraries_ghc-prim_cbits_atomic.c \
+# 		${PATCHDIR}/extra-patch-rts_posix_TTY.c
+# .endif
 
 .if defined(PPC_ABI) && ${PPC_ABI} == ELFv1
 BOOT_GHC_VERSION=      8.6.3
@@ -134,8 +134,6 @@ _EXECUTABLES+=	${GHC_LIBDIR}/bin/ghc-iserv-prof
 _EXECUTABLES+=	${GHC_LIBDIR}/bin/ghc-iserv-dyn
 .endif
 
-.include <bsd.port.options.mk>
-
 .if empty(PORT_OPTIONS:MBOOT) && ${OPSYS} == "FreeBSD"
 BOOTSTRAPS_SUFFIX?=		${BOOTSTRAPS_SUFFIX_${ARCH}}
 BOOTSTRAPS_SUFFIX_powerpc64?=	-${PPC_ABI:tl}
@@ -151,9 +149,10 @@ CONFIGURE_TARGET=	${ARCH}-unknown-freebsd${"${ARCH:Maarch64}" != "":?:-gnueabihf
 EXTRA_PATCHES+=		${PATCHDIR}/extra-patch-aclocal.m4
 BUILD_DEPENDS+=		llc${LLVM_VERSION}:devel/llvm${LLVM_VERSION}
 RUN_DEPENDS+=		llc${LLVM_VERSION}:devel/llvm${LLVM_VERSION}
-# Keep in sync with LLVM_VERSION
-BINARY_ALIAS=		llc-9.0=llc90 \
-			opt-9.0=opt90
+CONFIGURE_ENV+=		LLC=llc${LLVM_VERSION} \
+			OPT=opt${LLVM_VERSION} \
+			CLANG=clang${LLVM_VERSION} \
+			CC=clang${LLVM_VERSION}
 
 # When GHC being compiled and GHC used for bootstrapping support different
 # LLVM versions, we have to pull in both. Luckily, this is relatively rare.
@@ -190,6 +189,7 @@ CONFIGURE_ARGS+=	GHC=${LOCALBASE}/bin/ghc
 .endif # MBOOT
 
 .if empty(PORT_OPTIONS:MBOOT) && ${OPSYS} == "DragonFly"
+BUILD_DEPENDS+=		libtinfow-compat>0:misc/libtinfow-compat
 BOOT_GHC_VERSION=	8.8.4
 DISTFILES+=		ghc-${BOOT_GHC_VERSION}-boot-${ARCH}-dragonfly.tar.xz:dflyboot
 CONFIGURE_TARGET=	${ARCH}-portbld-dragonfly
