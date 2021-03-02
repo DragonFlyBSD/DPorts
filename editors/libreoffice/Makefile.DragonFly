@@ -1,3 +1,4 @@
+CXXFLAGS+=	-fpermissive
 # for now, disabled Firebird SQL support.  It emits
 # z->z_Magic == ZALLOC_SLAB_MAGIC in _slabfree when running
 # the CppunitTest_dbaccess_firebird_test unit test
@@ -39,7 +40,6 @@ PERCENT_BSD_LIST= \
 	desktop/CppunitTest_desktop_app.mk \
 	desktop/Library_crashreport.mk\
 	desktop/Library_sofficeapp.mk \
-	emfio/CppunitTest_emfio_wmf_test.mk \
 	libreofficekit/Module_libreofficekit.mk \
 	libreofficekit/Executable_gtktiledviewer.mk \
 	libreofficekit/Library_libreofficekitgtk.mk \
