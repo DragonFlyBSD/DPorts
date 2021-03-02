@@ -1,5 +1,11 @@
 USES:=	${USES:Ncmake*} cmake:noninja
 
+CMAKE_OFF+=	WITH_IPP BUILD_IPP_IW
+
 dfly-patch:
 	${REINPLACE_CMD} -e 's|__FreeBSD__|__DragonFly__|' \
+		${WRKSRC}/3rdparty/ittnotify/src/ittnotify/ittnotify_config.h \
+		${WRKSRC}/modules/dnn/src/vkcom/vulkan/vk_loader.cpp \
+		${WRKSRC}/modules/videoio/src/backend_plugin.cpp \
+		${WRKSRC}/modules/core/src/parallel.cpp \
 		${WRKSRC}/modules/core/src/system.cpp
