@@ -1,0 +1,7 @@
+[
+{ type: install
+  message: <<EOM
+Use as BUILD_DEPENDS only.
+EOM
+}
+]
