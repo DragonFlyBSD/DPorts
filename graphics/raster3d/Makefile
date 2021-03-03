@@ -37,7 +37,6 @@ IMAGEMAGICK_RUN_DEPENDS=	convert:graphics/ImageMagick6
 .include <bsd.port.options.mk>
 
 .if ${FORTRAN_DEFAULT} == gfortran && ${GCC_DEFAULT} >= 10
-FFLAGS+=	-fallow-invalid-boz
 .endif
 
 pre-build: # generation of Makefile.incl has to be separate from 'make all', otherwise the generated Makefile.incl isn't read by 'make all'
