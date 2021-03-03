@@ -1,0 +1,6 @@
+
+# exclude libfabric (basically MPI option)
+LIB_DEPENDS:=	${LIB_DEPENDS:Nlibfabric*}
+OPTIONS_DEFINE+=	MPI
+MPI_LIB_DEPENDS+=	libfabric.so:net/libfabric
+PLIST_SUB+=	MPI="@comment "
