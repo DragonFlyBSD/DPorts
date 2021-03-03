@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	octopus
-DISTVERSION=	10.1
+DISTVERSION=	10.3
 CATEGORIES=	science
 MASTER_SITES=	https://octopus-code.org/download/${DISTVERSION}/
 
@@ -41,7 +41,15 @@ OPTIONS_DEFINE=			OPENMP
 OPTIONS_DEFAULT=		OPENMP
 OPENMP_CONFIGURE_ENABLE=	openmp
 
+.include <bsd.port.pre.mk>
+
+# workaround for:
+# Error: BOZ literal constant at (1) is neither a data-stmt-constant nor an actual argument to INT, REAL, DBLE, or CMPLX intrinsic function [see '-fno-allow-invalid-boz']
+.if ${GCC_DEFAULT} >= 10
+FCFLAGS+=	-fallow-argument-mismatch
+.endif
+
 post-stage: # https://gitlab.com/octopus-code/octopus/issues/108
 	@${RM} ${STAGEDIR}${PREFIX}/include/yaml.h
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
