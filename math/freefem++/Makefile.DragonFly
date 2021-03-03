@@ -1,0 +1,6 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@FreeBSD|@&DragonFly|@g' \
+		${WRKSRC}/plugin/seq/load.link.in
+	${REINPLACE_CMD} -e 's@|FreeBSD@|DragonFly&@g' \
+		${WRKSRC}/plugin/seq/mkdll-ff.sh
