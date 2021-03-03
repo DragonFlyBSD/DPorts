@@ -1,2 +1,7 @@
 LDFLAGS+= -lexecinfo
 OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NMPI}
+
+# deal with pkg-plist...
+dfly-install:
+	${MKDIR} ${STAGEDIR}${LOCALBASE}/include/lammps/mpi
+	${TOUCH} ${STAGEDIR}${LOCALBASE}/include/lammps/mpi/mpi.h
