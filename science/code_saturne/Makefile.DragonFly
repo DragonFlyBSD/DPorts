@@ -1,3 +1,6 @@
+# For check-plist and disabled options
+OPTIONS_SUB=	yes
+
 # exclude fake crud
 OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NBATCH:NMPI:NBLAS:NSCOTCH}
 CFLAGS:=	${CFLAGS:N-D__XSI_VISIBLE*}
