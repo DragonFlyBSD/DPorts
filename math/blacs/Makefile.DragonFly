@@ -1,0 +1,2 @@
+
+FFLAGS+=	-L${LOCALBASE}/lib
