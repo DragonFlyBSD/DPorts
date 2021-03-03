@@ -1,4 +1,7 @@
 
+# heh, nice try
+LDFLAGS_gcc:= ${LDFLAGS_gcc:N-latomic}
+
 # missing dep on numpy
 CMAKE_ARGS+=	-DENABLE_PYTHON_API:STRING="ON"
 BUILD_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}numpy>=1.4.1,1:math/py-numpy@${PY_FLAVOR}
