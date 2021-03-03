@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	mumps
-DISTVERSION=	5.1.2-aster6
-PORTREVISION=	2
+DISTVERSION=	5.1.2-aster7
+PORTREVISION=	3
 CATEGORIES=	math
 PKGNAMESUFFIX=	-edf
 
@@ -30,10 +30,10 @@ PLIST_SUB=	VE=${VEM} MUMPSVERSION=${MUMPSVERSION}
 
 OPTIONS_DEFINE=	DOCS EXAMPLES MPI
 
-MPI_BUILD_DEPENDS_OFF=	${LOCALBASE}/lib/libscotch.a:cad/scotch
-MPI_BUILD_DEPENDS=	${LOCALBASE}/lib/libptscotch.a:cad/scotch
+MPI_LIB_DEPENDS_OFF=	libscotch.so:cad/scotch
 MPI_LIB_DEPENDS=	libmpi.so:net/mpich		\
 			libparmetis.so:math/parmetis	\
+			libptscotch.so:cad/scotch	\
 			libscalapack.so:math/scalapack
 MPI_PLIST_SUB=		WITH_LIBSEQ="@comment "
 MPI_PLIST_SUB_OFF=	WITH_LIBSEQ=""
@@ -44,8 +44,17 @@ MAKE_JOBS_UNSAFE=yes
 .include <bsd.port.pre.mk>
 .include "${.CURDIR}/../../french/aster/bsd.aster.mk"
 
+.if ${GCC_DEFAULT} >= 10
+# workaround for Type mismatch in argument 's' at (1); passed INTEGER(4) to LOGICAL(4)
+FCFLAGS+=	-fallow-argument-mismatch
+.endif
+
 .ifdef WITH_MPI
 PKGNAMESUFFIX+=		-mpich
+.endif
+
+.if ${FORTRAN_DEFAULT} == gfortran && ${GCC_DEFAULT} >= 10
+FCFLAGS+=	-fallow-argument-mismatch
 .endif
 
 post-patch-MPI-on:
@@ -71,6 +80,12 @@ pre-configure:
 	s+@LOCALBASE@+${LOCALBASE}+g;' \
 		${WRKSRC}/${MF}
 .endfor
+.ifdef WITH_MPI
+	${REINPLACE_CMD} -e '/lptscotch/s|#LSCOTCH|LSCOTCH|'	\
+		-e 's|^LMETIS|##LMETIS|;s|^#LMETIS|LMETIS|' ${WRKSRC}/Makefile.inc
+.else
+	${REINPLACE_CMD} -e '/lscotch/s|#LSCOTCH|LSCOTCH|' ${WRKSRC}/Makefile.inc
+.endif
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/include/*.h ${STAGEDIR}${PREFIX}/include
