@@ -1,0 +1,6 @@
+
+# chase devel/ncurses hacks
+dfly-patch:
+	${REINPLACE_CMD} -e 's@lncursesw@lncurses@g' \
+			 -e 's@NCURSESLIBSUFFIX="w"@NCURSESLIBSUFFIX=""@g' \
+		${WRKSRC}/configure
