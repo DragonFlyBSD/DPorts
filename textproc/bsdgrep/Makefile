@@ -14,12 +14,18 @@ COMMENT=	BSD-licensed version of grep
 
 LICENSE=	BSD2CLAUSE
 
+# This port should be deprecated once stable/12 goes EoL.  bsdgrep shipped by
+# default in FreeBSD 13.0.
+IGNORE_FreeBSD_13=	only for FreeBSD 11.x and 12.x
+IGNORE_FreeBSD_14=	only for FreeBSD 11.x and 12.x
+
 USES=	uidfix
 
 MAKE_ENV+=	BINDIR="${PREFIX}/bin" \
 		MANDIR="${MANPREFIX}/man/man" \
 		CATDIR="${MANPREFIX}/man/man" \
-		NLSDIR="${PREFIX}/share/nls"
+		NLSDIR="${PREFIX}/share/nls" \
+		WITHOUT_TESTS=yes
 CFLAGS+=	-std=gnu99
 
 OPTIONS_DEFINE=	GNU_COMPAT NLS
@@ -38,6 +44,6 @@ pre-install-NLS-on:
 	${MKDIR} ${STAGEDIR}${PREFIX}/share/nls/gl_ES.ISO8859-1
 
 post-install:
-	${LN} -sf ${PREFIX}/bin/grep ${STAGEDIR}${PREFIX}/bin/bsdgrep
+	${RLN} ${STAGEDIR}${PREFIX}/bin/grep ${STAGEDIR}${PREFIX}/bin/bsdgrep
 
 .include <bsd.port.mk>
