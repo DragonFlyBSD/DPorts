@@ -11,3 +11,7 @@ lib/fpc/%%PORTVERSION%%/units/%%BUILDNAME%%/fcl-pdf/fpttfencodings.o
 lib/fpc/%%PORTVERSION%%/units/%%BUILDNAME%%/fcl-pdf/fpttfencodings.ppu
 lib/fpc/%%PORTVERSION%%/units/%%BUILDNAME%%/fcl-pdf/fpttfsubsetter.o
 lib/fpc/%%PORTVERSION%%/units/%%BUILDNAME%%/fcl-pdf/fpttfsubsetter.ppu
+lib/fpc/%%PORTVERSION%%/units/%%BUILDNAME%%/fcl-pdf/fpparsettf.rsj
+lib/fpc/%%PORTVERSION%%/units/%%BUILDNAME%%/fcl-pdf/fppdf.rsj
+lib/fpc/%%PORTVERSION%%/units/%%BUILDNAME%%/fcl-pdf/fpttf.rsj
+lib/fpc/%%PORTVERSION%%/units/%%BUILDNAME%%/fcl-pdf/fpttfsubsetter.rsj
