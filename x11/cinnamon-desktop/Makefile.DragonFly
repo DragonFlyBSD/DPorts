@@ -1,0 +1,14 @@
+
+# no pulse
+LIB_DEPENDS:=	${LIB_DEPENDS:Nlibpulse*}
+
+OPTIONS_DEFAULT+=	ALSA
+
+PLIST= ${WRKDIR}/pulseless-plist
+
+# gut it out
+dfly-patch:
+	${REINPLACE_CMD} -e '/pulse/d' -e '/libcvc/d' \
+		${WRKSRC}/meson.build
+	${RM} -rf ${WRKSRC}/libcvc
+	${CAT} ${.CURDIR}/pkg-plist | ${SED} -e '/libcvc/d' -e '/Cvc/d' -e '/cvc.pc/d' > ${PLIST}
