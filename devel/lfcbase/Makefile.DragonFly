@@ -1,2 +1,1 @@
 USES+= ncurses
-PLIST_FILES +=	include/lfcbase/GraphT.h
