@@ -1,13 +1,6 @@
 USES+=	alias
 
 # no pulse
-LIB_DEPENDS:=	${LIB_DEPENDS:Nlibpulse*}
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NPULSEAUDIO}
 
-PLIST= ${WRKDIR}/pulseless-plist
-
-# gut it out
-dfly-patch:
-	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
-		${WRKSRC}/libobs/CMakeLists.txt \
-		${WRKSRC}/plugins/CMakeLists.txt
-	${CAT} ${.CURDIR}/pkg-plist | ${SED} -e '/linux-pulseaudio/d' -e '/pulseaudio-wrapper/d' > ${PLIST}
+.undef PULSEAUDIO_BROKEN_OFF

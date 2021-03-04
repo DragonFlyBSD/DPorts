@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	obs-studio
-DISTVERSION=	26.0.2
+DISTVERSION=	26.1.2
 CATEGORIES=	multimedia
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -20,10 +20,8 @@ LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg \
 		libfdk-aac.so:audio/fdk-aac \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2 \
-		libjack.so:audio/jack \
 		libjansson.so:devel/jansson \
 		libmbedtls.so:security/mbedtls \
-		libpulse.so:audio/pulseaudio \
 		libspeexdsp.so:audio/speexdsp \
 		libsysinfo.so:devel/libsysinfo \
 		libudev.so:devel/libudev-devd \
@@ -36,8 +34,10 @@ LIB_DEPENDS_armv7=	libluajit-5.1.so:lang/luajit
 LIB_DEPENDS_i386=	libluajit-5.1.so:lang/luajit
 LIB_DEPENDS_powerpc=	libluajit-5.1.so:lang/luajit
 LIB_DEPENDS_powerpc64=	libluajit-5.1.so:lang/luajit-openresty
+LIB_DEPENDS_powerpc64le=	libluajit-5.1.so:lang/luajit-openresty
 
 USES=		cmake gl lua pkgconfig python:3.4+ qt:5 xorg
+
 USE_GITHUB=	yes
 GH_ACCOUNT=	obsproject
 USE_QT=		core gui svg widgets x11extras xml buildtools_build imageformats_run qmake_build
@@ -51,9 +51,29 @@ CFLAGS+=	-D_WITH_GETLINE
 
 LDFLAGS+=	-fPIC # pending https://github.com/obsproject/obs-studio/issues/3436
 
+OPTIONS_MULTI=		AUDIO
+OPTIONS_MULTI_AUDIO=	JACK PULSEAUDIO SNDIO
+OPTIONS_DEFAULT=	JACK PULSEAUDIO SNDIO
+OPTIONS_SUB=		yes
+AUDIO_DESC=		Audio backends
+
+JACK_LIB_DEPENDS=	libjack.so:audio/jack
+JACK_CMAKE_ON=		-DENABLE_JACK=TRUE
+JACK_CMAKE_OFF=		-DDISABLE_JACK=TRUE
+
+PULSEAUDIO_LIB_DEPENDS=	libpulse.so:audio/pulseaudio
+PULSEAUDIO_CMAKE_ON=	-DENABLE_PULSEAUDIO=TRUE
+PULSEAUDIO_CMAKE_OFF=	-DDISABLE_PULSEAUDIO=TRUE
+PULSEAUDIO_BROKEN_OFF=	https://github.com/obsproject/obs-studio/issues/4025
+
+SNDIO_LIB_DEPENDS=	libsndio.so:audio/sndio
+SNDIO_CMAKE_ON=		-DENABLE_SNDIO=TRUE
+SNDIO_CMAKE_OFF=	-DDISABLE_SNDIO=TRUE
+
 .include <bsd.port.options.mk>
 
-.if ${ARCH} == powerpc64
+.if ${ARCH:Mpowerpc64*}
+CFLAGS+=	-Wno-unused-label
 USES+=		compiler:gcc-c++11-lib
 .else
 USES+=		compiler:c++11-lib
