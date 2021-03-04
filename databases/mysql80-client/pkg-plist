@@ -203,7 +203,6 @@ man/man1/mysqlman.1.gz
 man/man1/mysqlpump.1.gz
 man/man1/mysqlshow.1.gz
 man/man1/mysqlslap.1.gz
-man/man1/mysqldumpslow.1.gz
 man/man1/perror.1.gz
 man/man1/zlib_decompress.1.gz
 share/aclocal/mysql.m4
