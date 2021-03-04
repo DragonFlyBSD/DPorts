@@ -1,0 +1,4 @@
+
+# reduce graphics/librsvg2 min version req
+dfly-patch:
+	${REINPLACE_CMD} -e '/librsvg/s@2\.44\.@2.40.0@g' ${WRKSRC}/meson.build
