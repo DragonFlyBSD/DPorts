@@ -1,6 +1,2 @@
 # force use of utmpx, __FreeBSD_version >= 900007
 CFLAGS+=	-D__FreeBSD_version=1300000
-
-# to avoid orphans
-dfly-install:
-	${RMDIR} ${STAGEDIR}${LOCALBASE}/info
