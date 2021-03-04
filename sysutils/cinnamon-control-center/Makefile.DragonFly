@@ -1,10 +1,2 @@
-# build without pulseaudio support
-# sound functionality has to be eliminated
 
-CONFIGURE_ENV+=	SOUND_PANEL_LIBS=dummy SOUND_PANEL_CFLAGS=dummy
-
-dfly-patch:
-	${REINPLACE_CMD} -e "/panels\/sound/d" ${WRKSRC}/configure.ac
-	${REINPLACE_CMD} -e "/sound/d" ${WRKSRC}/panels/Makefile.am
-	${RM} -r ${WRKSRC}/panels/sound
-	${RM} -r ${WRKSRC}/panels/sound-nua
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NONLINEACCOUNTS:NWACOM}
