@@ -1,0 +1,8 @@
+USES+=	alias
+
+# no pulse
+RUN_DEPENDS:=   ${RUN_DEPENDS:N*pulseaudio-module-xrdp}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(\*freebsd\*\))@\1|*dragonfly*)@g' \
+		${WRKSRC}/configure.ac
