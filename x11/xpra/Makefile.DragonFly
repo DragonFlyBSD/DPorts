@@ -1,0 +1,9 @@
+
+USES+=	localbase:ldflags
+
+# no pulse (through gstreamer)
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NGSTREAMER}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@FREEBSD@DRAGONFLY@g' \
+		${WRKSRC}/setup.py
