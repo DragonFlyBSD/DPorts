@@ -26,7 +26,6 @@ lib/audacious/General/delete-files.so
 %%GTK2%%lib/audacious/General/gtkui.so
 %%GTK2%%lib/audacious/General/hotkey.so
 %%LIRC%%lib/audacious/General/lirc.so
-%%GTK2%%lib/audacious/General/lyricwiki.so
 %%QT5%%lib/audacious/General/lyricwiki-qt.so
 %%MPRIS%%lib/audacious/General/mpris2.so
 %%NOTIFY%%lib/audacious/General/notify.so
@@ -50,6 +49,8 @@ lib/audacious/General/song_change.so
 lib/audacious/Input/madplug.so
 lib/audacious/Input/metronom.so
 %%MODPLUG%%lib/audacious/Input/modplug.so
+%%ADPLUG%%lib/audacious/Input/adplug.so
+%%OPENMPT%%lib/audacious/Input/openmpt.so
 lib/audacious/Input/psf2.so
 %%SID%%lib/audacious/Input/sid.so
 %%SNDFILE%%lib/audacious/Input/sndfile.so
@@ -226,6 +227,8 @@ share/audacious/Skins/TinyPlayer/volume.png
 %%NLS%%share/locale/ru/LC_MESSAGES/audacious-plugins.mo
 %%NLS%%share/locale/si/LC_MESSAGES/audacious-plugins.mo
 %%NLS%%share/locale/sk/LC_MESSAGES/audacious-plugins.mo
+%%NLS%%share/locale/sl/LC_MESSAGES/audacious-plugins.mo
+%%NLS%%share/locale/sq/LC_MESSAGES/audacious-plugins.mo
 %%NLS%%share/locale/sr/LC_MESSAGES/audacious-plugins.mo
 %%NLS%%share/locale/sr_RS/LC_MESSAGES/audacious-plugins.mo
 %%NLS%%share/locale/sv/LC_MESSAGES/audacious-plugins.mo
