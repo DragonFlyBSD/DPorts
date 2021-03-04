@@ -1,0 +1,3 @@
+
+# use of %APPNAMELC that bmake does not grok
+USES+=	gmake
