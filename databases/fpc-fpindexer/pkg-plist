@@ -21,3 +21,5 @@ lib/fpc/%%PORTVERSION%%/units/%%BUILDNAME%%/fpindexer/sqldbindexdb.o
 lib/fpc/%%PORTVERSION%%/units/%%BUILDNAME%%/fpindexer/sqldbindexdb.ppu
 lib/fpc/%%PORTVERSION%%/units/%%BUILDNAME%%/fpindexer/sqliteindexdb.o
 lib/fpc/%%PORTVERSION%%/units/%%BUILDNAME%%/fpindexer/sqliteindexdb.ppu
+lib/fpc/%%PORTVERSION%%/units/%%BUILDNAME%%/fpindexer/pgindexdb.o
+lib/fpc/%%PORTVERSION%%/units/%%BUILDNAME%%/fpindexer/pgindexdb.ppu
