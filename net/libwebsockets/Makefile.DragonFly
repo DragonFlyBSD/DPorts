@@ -1,0 +1,6 @@
+
+CFLAGS+=	-I${OPENSSLINC}
+LDFLAGS+=	-L${OPENSSLLIB}
+
+# XXX: some cmake detection issue failing all feature tests
+OPENSSL_CMAKE_BOOL+=	LWS_HAVE_HMAC_CTX_new LWS_HAVE_EVP_MD_CTX_free LWS_HAVE_SSL_EXTRA_CHAIN_CERTS
