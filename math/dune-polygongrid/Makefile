@@ -16,7 +16,7 @@ LIB_DEPENDS=	libdunecommon.so:math/dune-common \
 		libdunegrid.so:math/dune-grid \
 		libugL.so:math/dune-uggrid \
 		libopenblas.so:math/openblas \
-		libtbb.so:devel/tbb
+		libtbb.so:devel/onetbb
 RUN_DEPENDS=	${LOCALBASE}/mpi/openmpi/lib/libmpi.so:net/openmpi
 
 USES=		cmake compiler:c++17-lang fortran pkgconfig
