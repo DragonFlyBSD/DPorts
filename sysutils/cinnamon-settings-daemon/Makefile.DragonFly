@@ -1,16 +1,17 @@
-# all this crap is to build gsd without pulseaudio support
-# Obviously functionality has to be eliminated
 
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NSMARTCARD:NWACOM}
+
+# no pulse
 LIB_DEPENDS:=	${LIB_DEPENDS:Nlibpulse*}
-CONFIGURE_ENV+=	MEDIA_KEYS_LIBS=dummy MEDIA_KEYS_CFLAGS=dummy \
-		SOUND_LIBS=dummy SOUND_CFLAGS=dummy
+
+PLIST= ${WRKDIR}/pulseless-plist
 
 dfly-patch:
-	${REINPLACE_CMD} \
-		-e "s|plugins/media-keys/Makefile||" \
-		-e "s|plugins/media-keys/cut-n-paste/Makefile||" \
-		-e "s|plugins/sound/Makefile||" ${WRKSRC}/configure.ac
-	${REINPLACE_CMD} -e "s|media-keys||; s|sound||" \
-		${WRKSRC}/plugins/Makefile.am
+	${REINPLACE_CMD} -e '/pulse/d' -e '/cvc/d' ${WRKSRC}/meson.build
+	${REINPLACE_CMD} -e '/sound/d' -e '/media-keys/d' ${WRKSRC}/plugins/meson.build
 	${RM} -r ${WRKSRC}/plugins/media-keys
 	${RM} -r ${WRKSRC}/plugins/sound
+	${CAT} ${.CURDIR}/pkg-plist | ${SED} -e '/bin\/csd-media-keys/d' -e '/bin\/csd-sound/d' \
+		-e '/media-keys\.desktop/d' -e '/sound\.desktop/d' \
+		-e '/daemon\/csd-media-keys/d' -e '/daemon\/csd-sound/d' \
+		-e '/libexec\/csd-media-keys/d' -e '/libexec\/csd-sound/d' > ${PLIST}
