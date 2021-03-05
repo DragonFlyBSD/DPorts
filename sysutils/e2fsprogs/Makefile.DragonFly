@@ -7,3 +7,10 @@
 
 # jrm: try this instead
 OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NSMALLTESTS} NOTESTS
+
+# zrj: try linking e2fsck without pthread support
+dfly-patch:
+	${REINPLACE_CMD} -e 's@HAVE_PTHREAD[[:>:]]@&__@g' \
+		${WRKSRC}/lib/ext2fs/rw_bitmaps.c
+	${REINPLACE_CMD} -e '/ -o e2fsck /s@ALL_LDFLAGS@&__@g' \
+		${WRKSRC}/e2fsck/Makefile.in

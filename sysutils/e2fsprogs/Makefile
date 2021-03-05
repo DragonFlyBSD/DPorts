@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	e2fsprogs
-PORTVERSION=	1.45.6
-PORTREVISION?=	5
+PORTVERSION=	1.46.1
+PORTREVISION?=	0
 CATEGORIES?=	sysutils
 MASTER_SITES=	KERNEL_ORG/linux/kernel/people/tytso/${PORTNAME}/v${PORTVERSION}
 
@@ -41,6 +41,7 @@ CONFIGURE_ARGS?=--disable-fsck \
 		--without-included-gettext \
 		LDFLAGS='${LDFLAGS} -L${LOCALBASE}/lib -Wl,--rpath -Wl,${LOCALBASE}/lib/e2fsprogs'
 CONFIGURE_ENV?=	LIBS='-Wl,--as-needed ${LIBS} -lexecinfo'
+# apparently HAVE_PTHREAD_H checks go missing if the FUSEFS option is unset, force it:
 CPPFLAGS+=	-I${WRKSRC}/lib -I${LOCALBASE}/include # -D_EXT2_USE_C_VERSIONS
 MAKE_ARGS+=	pkgconfigdir='${PREFIX}/libdata/pkgconfig'
 MAKE_ENV+=	CHECK_CMD=@true
@@ -213,19 +214,16 @@ _CHECK_JOBS=${_MAKE_JOBS}
 _CHECK_JOBS=
 .endif
 
+_checkaddargs=
 .if ${PORT_OPTIONS:MBASHTESTS}
-_CHECK_SHELL=${SHELL}
-.else
 _CHECK_SHELL=${LOCALBASE}/bin/bash
+_checkaddargs+=--eval SHELL:=${BASH_CMD}
+.else
+_CHECK_SHELL=${SH}
 .endif
 
-_checkaddargs=
 .if !defined(TMPDIR)
 _checkaddargs+=TMPDIR=${WRKDIR}/tmp
-.endif
-
-.if ${PORT_OPTIONS:MBASHTESTS}
-_checkaddargs+=--eval SHELL:=${BASH_CMD}
 .endif
 
 .if ${PORT_OPTIONS:MSLOWTESTS}
