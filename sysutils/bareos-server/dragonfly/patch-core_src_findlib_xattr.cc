@@ -1,6 +1,6 @@
---- core/src/findlib/xattr.cc.orig	2020-02-11 15:58:26 UTC
-+++ core/src/findlib/xattr.cc
-@@ -3781,9 +3781,13 @@ BxattrExitCode BuildXattrStreams(JobCont
+--- core/src/findlib/xattr.cc.orig	2021-03-04 10:33:16.662851000 +0100
++++ core/src/findlib/xattr.cc	2021-03-04 10:40:20.565271000 +0100
+@@ -3803,9 +3803,13 @@
      xattr_data->current_dev = ff_pkt->statp.st_dev;
    }
  
@@ -14,17 +14,17 @@
      return BxattrExitCode::kSuccess;
    }
  }
-@@ -3842,6 +3846,9 @@ BxattrExitCode ParseXattrStreams(JobCont
+@@ -3858,6 +3862,9 @@
    /*
     * See if we are still restoring native xattr to this filesystem.
     */
 +#ifdef __DragonFly__
 +  {
 +#else
-   if ((xattr_data->flags & BXATTR_FLAG_RESTORE_NATIVE) &&
-       os_parse_xattr_streams) {
+   if ((xattr_data->flags & BXATTR_FLAG_RESTORE_NATIVE)
+       && os_parse_xattr_streams) {
      /*
-@@ -3855,6 +3862,7 @@ BxattrExitCode ParseXattrStreams(JobCont
+@@ -3871,6 +3878,7 @@
        }
      }
    } else {

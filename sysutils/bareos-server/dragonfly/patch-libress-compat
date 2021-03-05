@@ -1,16 +1,16 @@
---- core/src/lib/crypto_openssl.cc.orig	2020-02-11 15:58:26 UTC
-+++ core/src/lib/crypto_openssl.cc
-@@ -138,6 +138,13 @@ IMPLEMENT_ASN1_FUNCTIONS(RecipientInfo)
+--- core/src/lib/crypto_openssl.cc.orig	2021-03-04 10:10:31.835058000 +0100
++++ core/src/lib/crypto_openssl.cc	2021-03-04 10:11:21.345341000 +0100
+@@ -138,6 +138,13 @@
  IMPLEMENT_ASN1_FUNCTIONS(SignatureData)
  IMPLEMENT_ASN1_FUNCTIONS(CryptoData)
  
 +#ifdef LIBRESSL_VERSION_NUMBER
-+//#define M_ASN1_OCTET_STRING_free(a)	ASN1_STRING_free((ASN1_STRING *)a)
-+#define M_ASN1_OCTET_STRING_cmp(a,b)	ASN1_STRING_cmp((const ASN1_STRING *)a,(const ASN1_STRING *)b)
-+#define M_ASN1_OCTET_STRING_dup(a)	(ASN1_OCTET_STRING *) ASN1_STRING_dup((const ASN1_STRING *)a)
-+#define M_ASN1_OCTET_STRING_set(a,b,c)	ASN1_STRING_set((ASN1_STRING *)a,b,c)
++//#define M_ASN1_OCTET_STRING_free(a)  ASN1_STRING_free((ASN1_STRING *)a)
++#define M_ASN1_OCTET_STRING_cmp(a,b)   ASN1_STRING_cmp((const ASN1_STRING *)a,(const ASN1_STRING *)b)
++#define M_ASN1_OCTET_STRING_dup(a)     (ASN1_OCTET_STRING *) ASN1_STRING_dup((const ASN1_STRING *)a)
++#define M_ASN1_OCTET_STRING_set(a,b,c) ASN1_STRING_set((ASN1_STRING *)a,b,c)
 +#endif
 +
- #if OPENSSL_VERSION_NUMBER < 0x10100000L || defined(LIBRESSL_VERSION_NUMBER)
+ #    if OPENSSL_VERSION_NUMBER < 0x10100000L || defined(LIBRESSL_VERSION_NUMBER)
  /* Openssl Version < 1.1 */
  
