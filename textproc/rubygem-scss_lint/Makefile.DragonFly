@@ -1,0 +1,4 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/rake>/s@, "< 13"@@g' \
+		${WRKSRC}/scss_lint.gemspec
