@@ -1,3 +1,5 @@
+# g++ v8 does not ship <bit> yet
+USE_GCC_VERSION= 9
 
 # no pulse
 OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NPULSEAUDIO:NJACK}
@@ -9,3 +11,5 @@ dfly-patch:
 		${WRKSRC}/externals/cubeb/src/cubeb_alsa.c
 	${REINPLACE_CMD} -e 's@_POSIX_SOURCE@&___@g' \
 		${WRKSRC}/externals/cubeb/src/cubeb_jack.cpp
+	${REINPLACE_CMD} -e 's@-Werror=redundant-move@@g' -e 's@-Werror=pessimizing-move@@g' \
+		${WRKSRC}/src/video_core/CMakeLists.txt
