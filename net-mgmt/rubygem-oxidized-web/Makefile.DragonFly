@@ -1,0 +1,4 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/puma>/s@~>@>=@g' \
+		${WRKSRC}/oxidized-web.gemspec
