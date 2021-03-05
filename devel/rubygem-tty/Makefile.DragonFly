@@ -1,0 +1,4 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/tty-command>/s@0.9.0@0.10.0@g' \
+		${WRKSRC}/tty.gemspec
