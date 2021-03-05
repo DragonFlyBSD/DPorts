@@ -1,0 +1,3 @@
+
+# missing rundep for stage-qa
+RUN_DEPENDS+=	rubygem-nanoc-checking>=1.0:www/rubygem-nanoc-checking
