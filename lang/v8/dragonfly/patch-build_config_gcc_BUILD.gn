@@ -1,0 +1,11 @@
+--- build/config/gcc/BUILD.gn.orig	2020-11-16 13:30:51 UTC
++++ build/config/gcc/BUILD.gn
+@@ -68,7 +68,7 @@ config("rpath_for_built_shared_libraries
+     if (current_toolchain != default_toolchain || gcc_target_rpath == "") {
+       ldflags = [
+         # Want to pass "\$". GN will re-escape as required for ninja.
+-        "-Wl,-rpath=\$ORIGIN",
++        "-Wl,-rpath=\$ORIGIN", "-Wl,-z,origin",
+       ]
+     } else {
+       ldflags = [ "-Wl,-rpath=${gcc_target_rpath}" ]
