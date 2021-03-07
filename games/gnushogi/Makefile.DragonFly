@@ -1,0 +1,9 @@
+
+USES+=	ncurses localbase:ldflags
+
+CONFIGURE_ARGS+=	--with-curses=yes
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-ltermcap@-ltinfo@g' \
+			 -e 's@lcurses@lncurses@g' \
+		${WRKSRC}/configure
