@@ -1,8 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	kodi
-DISTVERSION=	19.0.a20200727
-PORTREVISION=	4
+DISTVERSION=	19.0.a20201006
+PORTREVISION=	0
 CATEGORIES=	multimedia
 PKGNAMESUFFIX=	-devel
 
@@ -10,6 +10,9 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Award winning media center application
 
 LICENSE=	GPLv2+
+
+DEPRECATED=	Deprecated. Please use multimedia/kodi instead.
+EXPIRATION_DATE=2021-02-28
 
 ONLY_FOR_ARCHS=	aarch64 amd64 armv6 armv7 i386 powerpc64 powerpc64le
 
@@ -55,7 +58,7 @@ USES=		cmake compiler:c++14-lang gettext gl gnome iconv:wchar_t jpeg \
 USE_GITHUB=	yes
 GH_ACCOUNT=	xbmc
 GH_PROJECT=	xbmc
-GH_TAGNAME=	19.0a1-Matrix
+GH_TAGNAME=	19.0a2-Matrix
 USE_GL=		egl gl glu
 USE_GNOME=	libxml2 libxslt
 USE_JAVA=	yes

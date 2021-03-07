@@ -35,8 +35,8 @@ dfly-patch:
 		${WRKSRC}/tools/depends/native/TexturePacker/src/XBTFWriter.cpp \
 		${WRKSRC}/xbmc/LangInfo.cpp \
 		${WRKSRC}/xbmc/Util.cpp \
-		${WRKSRC}/xbmc/addons/kodi-addon-dev-kit/include/kodi/Filesystem.h \
-		${WRKSRC}/xbmc/addons/kodi-addon-dev-kit/include/kodi/gui/gl/GL.h \
+		${WRKSRC}/xbmc/addons/kodi-dev-kit/include/kodi/Filesystem.h \
+		${WRKSRC}/xbmc/addons/kodi-dev-kit/include/kodi/gui/gl/GL.h \
 		${WRKSRC}/xbmc/cores/AudioEngine/Sinks/AESinkOSS.cpp \
 		${WRKSRC}/xbmc/cores/DllLoader/exports/emu_msvcrt.cpp \
 		${WRKSRC}/xbmc/cores/DllLoader/exports/emu_msvcrt.h \
