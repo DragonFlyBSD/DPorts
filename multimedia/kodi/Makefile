@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	kodi
-DISTVERSION=	19.0b2
+DISTVERSION=	19.0
 CATEGORIES=	multimedia java
 
 MAINTAINER=	yzrh@noema.org
@@ -80,8 +80,8 @@ OPTIONS_DEFINE=		AIRPLAY AVAHI LIBBLURAY CEC DBUS DVDCSS LCMS2 \
 			LIRC WEBSERVER NFS DVD SMB TEST UDEV UPNP \
 			VAAPI VDPAU XSLT DOCS
 OPTIONS_DEFAULT=	LIBBLURAY CEC DVDCSS LCMS2 WEBSERVER \
-			DVD UPNP VAAPI VDPAU XSLT X11 GL
-OPTIONS_DEFAULT_x86_64=	SSE SSE2 SSE3
+			DVD UPNP VAAPI VDPAU XSLT WAYLAND X11 GL
+OPTIONS_DEFAULT_x86_64=	SSE SSE2 SSE3 SSSE3 SSE4_1 SSE4_2
 OPTIONS_DEFAULT_i386=	SSE SSE2 SSE3
 OPTIONS_SINGLE=		RENDER
 OPTIONS_SINGLE_RENDER=	GL GLES
@@ -122,7 +122,7 @@ SSE4_2_DESC=	Use SSE4.2 optimized routines
 AVX_DESC=	Use AVX optimized routines
 AVX2_DESC=	Use AVX2 optimized routines
 
-AIRPLAY_LIB_DEPENDS=	libplist.so:devel/libplist \
+AIRPLAY_LIB_DEPENDS=	libplist-2.0.so:devel/libplist \
 			libshairplay.so:audio/shairplay
 AIRPLAY_CMAKE_BOOL=	ENABLE_PLIST \
 			ENABLE_AIRTUNES
@@ -230,7 +230,7 @@ WAYLAND_LIB_DEPENDS=	libdrm.so:graphics/libdrm \
 			libwayland-client++.so:graphics/waylandpp
 
 X11_USES=		xorg gl
-X11_USE=		XORG=x11,xext,xrandr GL=egl,gl,glu
+X11_USE=		XORG=x11,xext,xrandr GL=egl,gbm,gl,glu
 X11_LIB_DEPENDS=	libdrm.so:graphics/libdrm
 
 .include <bsd.port.options.mk>
