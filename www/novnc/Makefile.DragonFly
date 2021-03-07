@@ -1,6 +1,0 @@
-
-# to avoid orphans
-PLIST_FILES+=	libexec/novnc/.eslintignore \
-		libexec/novnc/.eslintrc \
-		libexec/novnc/.github/ISSUE_TEMPLATE/bug_report.md \
-		libexec/novnc/.github/ISSUE_TEMPLATE/feature_request.md
