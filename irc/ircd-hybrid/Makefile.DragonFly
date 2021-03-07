@@ -1,0 +1,3 @@
+
+# try to fix plist (orphans)
+PLIST_FILES+=	%%DATADIR%%-%%PORTVERSION%%/ircd-hybrid/help/monitor
