@@ -13,7 +13,8 @@ COMMENT=		Schematic and PCB editing software
 
 LICENSE=	GPLv3
 
-BUILD_DEPENDS=	${LOCALBASE}/include/glm/glm.hpp:math/glm \
+BUILD_DEPENDS=	${LOCALBASE}/bin/git:devel/git \
+		${LOCALBASE}/include/glm/glm.hpp:math/glm \
 		${LOCALBASE}/bin/swig:devel/swig
 LIB_DEPENDS=	libboost_thread.so:devel/boost-libs \
 		libngspice.so:cad/ngspice_rework@shlib \
@@ -24,10 +25,11 @@ LIB_DEPENDS=	libboost_thread.so:devel/boost-libs \
 
 CONFLICTS=	kicad-4.*
 
-USE_GITHUB=     yes
-GH_ACCOUNT=     KiCad
-GH_PROJECT=     kicad-source-mirror
-GH_TAGNAME=	${GIT_SRC_HASH}
+USE_GITLAB=	yes
+GL_ACCOUNT=	kicad
+GL_PROJECT=	code/kicad
+GL_COMMIT=	${GIT_SRC_HASH}
+WRKSRC=		${WRKDIR}/${PORTNAME}-${GL_COMMIT}-${GL_COMMIT}
 
 CXXFLAGS+=	--std=c++14 -I${WRKSRC} -I${WRKSRC}/include -I${LOCALBASE}/include
 USE_GL=		gl glew glu glut
@@ -47,7 +49,7 @@ BINS=		cvpcb eeschema gerbview kicad pcbnew
 EXTRAS2RM=	linux-non_unicode linux wings3d LINUX.README	\
 		contrib_makefiles.txt running_kicad_under_W98.txt
 USES=		desktop-file-utils shared-mime-info compiler:c++14-lang tar:bzip2 cmake:insource,noninja \
-		gettext python:3.5+ shebangfix ssl gl xorg gnome
+		gettext pkgconfig python:3.5+ shebangfix ssl gl xorg gnome
 SHEBANG_FILES=	pcbnew/python/plugins/touch_slider_wizard.py
 
 CMAKE_ARGS=	-DLOCALBASE="${LOCALBASE}" \
@@ -69,9 +71,8 @@ CMAKE_ARGS=	-DLOCALBASE="${LOCALBASE}" \
 		-DKICAD_USE_OCE=OFF \
 		-DKICAD_USE_OCC=ON \
 		-DOCC_INCLUDE_DIR=${LOCALBASE}/include/OpenCASCADE
-USE_LDCONFIG=   yes
-INSTALLS_ICONS= yes
-
+USE_LDCONFIG=	yes
+INSTALLS_ICONS=	yes
 
 .include "Makefile.git_rev"
 
@@ -163,10 +164,4 @@ PLIST_DIR_LIST=		lib/kicad
 PLIST_SHAREDDIR_LIST=	share/mimelnk/application \
 			share/mimelnk
 
-.include <bsd.port.pre.mk>
-
-.if ${OPSYS} == FreeBSD && ${CHOSEN_COMPILER_TYPE} == gcc
-IGNORE=		builds only with clang
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
