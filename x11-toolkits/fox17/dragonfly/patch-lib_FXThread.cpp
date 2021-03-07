@@ -1,11 +1,14 @@
---- lib/FXThread.cpp.orig	2016-01-07 03:46:26.000000000 +0200
+Explictly ignore get_name_np() for now, just return null
+because it returns temp stack pointer here.
+
+--- lib/FXThread.cpp.intermediate	2021-03-07 14:53:24.000000000 +0000
 +++ lib/FXThread.cpp
-@@ -402,7 +402,7 @@ FXint FXThread::processors(){
-     return result;
-     }
-   return 1;
--#elif defined(__APPLE__) || defined(__FreeBSD__)
-+#elif defined(__APPLE__) || defined(__FreeBSD__) || defined(__DragonFly__)
-   int result=1;
-   size_t len=sizeof(result);
-   if(sysctlbyname("hw.ncpu",&result,&len,NULL,0)!=-1){
+@@ -925,7 +925,7 @@ FXbool FXThread::description(const FXStr
+     return pthread_setname_np(desc.text())==0;
+ #elif defined(__NetBSD__)
+     return pthread_setname_np(tid,"%s",desc.text())==0;
+-#elif defined(__FreeBSD__)
++#elif defined(__FreeBSD__) || defined(__DragonFly__)
+     pthread_set_name_np((pthread_t)tid,desc.text());
+     return true;
+ #elif defined(__OpenBSD__)
