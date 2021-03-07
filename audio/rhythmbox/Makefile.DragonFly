@@ -1,4 +1,0 @@
-
-# just to satisfy stage-qa (orphans) --with-gudev
-PLIST_FILES+=	lib/rhythmbox/plugins/android/android.plugin \
-		lib/rhythmbox/plugins/android/libandroid.so
