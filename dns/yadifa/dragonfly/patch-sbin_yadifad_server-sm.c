@@ -1,8 +1,8 @@
---- sbin/yadifad/server-mt.c.orig	2019-02-11 12:45:56 UTC
-+++ sbin/yadifad/server-mt.c
+--- sbin/yadifad/server-sm.c.orig	2020-12-09 09:23:22 UTC
++++ sbin/yadifad/server-sm.c
 @@ -65,7 +65,10 @@
- #define _GNU_SOURCE 1
  #include <sched.h>
+ #endif
  
 -#if defined __FreeBSD__
 +#if defined(__DragonFly__)
