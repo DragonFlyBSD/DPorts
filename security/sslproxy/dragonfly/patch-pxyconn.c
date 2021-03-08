@@ -1,6 +1,6 @@
---- pxyconn.c.orig	2019-08-13 07:12:20 UTC
-+++ pxyconn.c
-@@ -938,7 +938,7 @@ pxy_try_remove_sslproxy_header(pxy_conn_
+--- src/pxyconn.c.orig	2021-02-11 07:56:11 UTC
++++ src/pxyconn.c
+@@ -847,7 +847,7 @@ pxy_try_remove_sslproxy_header(pxy_conn_
  	}
  }
  
@@ -9,7 +9,7 @@
  #define getdtablecount() 0
  
  /*
-@@ -1051,7 +1051,7 @@ check_fd_usage(
+@@ -957,7 +957,7 @@ check_fd_usage(
  		goto out;
  	}
  
