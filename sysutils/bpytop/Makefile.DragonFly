@@ -1,0 +1,3 @@
+
+# attempt to fix pkg-plist (orphans)
+PLIST_FILES+=	%%DATADIR%%/themes/adapta.theme
