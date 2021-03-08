@@ -1,0 +1,6 @@
+
+.if defined(OPTIONS_SLAVE) && ${OPTIONS_SLAVE:MLIBRETRO}
+# do not install share/ compononents
+do-install:
+
+.endif
