@@ -1,6 +1,9 @@
 
 USES+=	ncurses
 
+# chase devel/ncurses hacks
 dfly-patch:
+	${REINPLACE_CMD} -e 's@"panelw"@panel@g' -e 's@"ncursesw"@"ncurses"@g' -e 's@"formw"@"form"@g' \
+		${WRKSRC}/cmake/Modules/FindCurses.cmake
 	${REINPLACE_CMD} -e 's@STREQUAL FreeBSD@MATCHES "FreeBSD|DragonFly"@g' \
 		${WRKSRC}/CMakeLists.txt
