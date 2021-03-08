@@ -1,4 +1,7 @@
 
+# MF removed this
+USES+=	readline
+
 # zrj: disable use of sched_setaffinity() (linux internals)
 dfly-patch:
 	${REINPLACE_CMD} -e 's@STREQUAL "FreeBSD"@MATCHES "DragonFly|FreeBSD"@g' \
