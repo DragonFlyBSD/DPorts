@@ -1,0 +1,7 @@
+
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NDSAPARAM}
+
+# zrj: actually use correct openssl(1) provided by port
+dfly-patch:
+	${REINPLACE_CMD} -e "s@openssl dhparam@${LOCALBASE}/bin/&@g" \
+		${WRKSRC}/Makefile.in
