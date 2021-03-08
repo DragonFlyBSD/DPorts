@@ -1,0 +1,12 @@
+--- src/Makefile.orig	2021-02-04 12:27:26 UTC
++++ src/Makefile
+@@ -88,6 +88,9 @@ endif
+ ifeq ($(OS),Windows_NT)
+ PLATFORM := mingw
+ endif
++ifeq ($(OS),DragonFly)
++PLATFORM := bsd
++endif
+ ifeq ($(OS),FreeBSD)
+ PLATFORM := bsd
+ endif
