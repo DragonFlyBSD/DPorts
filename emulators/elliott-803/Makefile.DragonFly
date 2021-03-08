@@ -1,0 +1,16 @@
+
+USES+= ncurses
+
+CFLAGS+=	-Wno-format -Wno-unused-but-set-variable
+LDFLAGS+=	-pthread
+
+# strip unicode characters from variable names in sources
+dfly-patch:
+	${AWK} '{gsub(/\316/,"a"); gsub(/\265/,"b")}1' \
+		${WRKSRC}/emulator/cpu/fpu_test.c > ${WRKSRC}/temp.c
+	${MV} ${WRKSRC}/temp.c ${WRKSRC}/emulator/cpu/fpu_test.c
+	${REINPLACE_CMD} -e 's@<curses.h>@<ncurses/ncurses.h>@g' \
+		${WRKSRC}/emulator/emulator.c
+	${REINPLACE_CMD} -e 's@-lthr @@g' -e "s@-lcursesw@${LDFLAGS} -lncurses@g" \
+			 -e "s@ -Wall @& ${CFLAGS}@g" \
+		${WRKSRC}/emulator/Makefile
