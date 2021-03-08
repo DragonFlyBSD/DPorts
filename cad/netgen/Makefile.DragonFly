@@ -1,0 +1,3 @@
+
+# triest to run make --silent
+USES+=	gmake
