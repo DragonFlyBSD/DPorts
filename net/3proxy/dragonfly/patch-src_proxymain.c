@@ -1,4 +1,4 @@
---- src/proxymain.c.orig	2019-08-01 14:54:28 UTC
+--- src/proxymain.c.orig	2020-12-03 18:14:59 UTC
 +++ src/proxymain.c
 @@ -7,6 +7,7 @@
  */
@@ -6,19 +6,19 @@
  #include "proxy.h"
 +#include <stdint.h>
  
- pthread_mutex_t log_mutex;
- 
-@@ -471,7 +472,7 @@ int MODULEMAINFUNC (int argc, char** arg
+ #define param ((struct clientparam *) p)
+ #ifdef _WIN32
+@@ -631,7 +632,7 @@ int MODULEMAINFUNC (int argc, char** arg
  		defparam.clisock = sock;
  
  	if(!srv.silent && !iscbc){
 -		sprintf((char *)buf, "Accepting connections [%u/%u]", (unsigned)getpid(), (unsigned)pthread_self());
-+		sprintf((char *)buf, "Accepting connections [%u/%ju]", (unsigned)getpid(), (uintmax_t)pthread_self());
- 		(*srv.logfunc)(&defparam, buf);
++		sprintf((char *)buf, "Accepting connections [%ju/%ju]", (unsigned)getpid(), (uintmax_t)pthread_self());
+ 		dolog(&defparam, buf);
  	}
   }
-@@ -677,7 +678,7 @@ int MODULEMAINFUNC (int argc, char** arg
- 		if(!srv.silent)(*srv.logfunc)(&defparam, buf);
+@@ -843,7 +844,7 @@ int MODULEMAINFUNC (int argc, char** arg
+ 		if(!srv.silent)dolog(&defparam, buf);
  	}
  	else {
 -		newparam->threadid = (unsigned)thread;
