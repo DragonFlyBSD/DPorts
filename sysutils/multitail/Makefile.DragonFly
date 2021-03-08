@@ -1,0 +1,5 @@
+
+# chase devel/ncurses hacks
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-lpanelw -lncursesw@-lpanel -lncurses@g' \
+		${WRKSRC}/Makefile
