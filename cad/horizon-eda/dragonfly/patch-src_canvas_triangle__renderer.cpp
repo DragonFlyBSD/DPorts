@@ -1,4 +1,4 @@
---- src/canvas/triangle_renderer.cpp.orig	2020-08-05 20:33:52 UTC
+--- src/canvas/triangle_renderer.cpp.orig	2021-01-29 20:49:36 UTC
 +++ src/canvas/triangle_renderer.cpp
 @@ -3,6 +3,7 @@
  #include "gl_util.hpp"
@@ -8,9 +8,9 @@
  
  namespace horizon {
  
-@@ -424,19 +425,19 @@ void TriangleRenderer::push()
-                 if (tri_info.flags & TriangleInfo::FLAG_GLYPH) {
-                     ty = Type::GLYPH;
+@@ -459,17 +460,17 @@ void TriangleRenderer::push()
+                 else if (tri_info.flags & TriangleInfo::FLAG_BUTT) {
+                     ty = Type::LINE_BUTT;
                  }
 -                else if (!isnan(tri.y2)) {
 +                else if (!std::isnan(tri.y2)) {
@@ -24,10 +24,7 @@
 +                else if (std::isnan(tri.y1) && std::isnan(tri.x2) && std::isnan(tri.y2)) {
                      ty = Type::CIRCLE;
                  }
--                else if (isnan(tri.y2) && (tri_info.flags & TriangleInfo::FLAG_BUTT)) {
-+                else if (std::isnan(tri.y2) && (tri_info.flags & TriangleInfo::FLAG_BUTT)) {
-                     ty = Type::LINE_BUTT;
-                 }
+ 
 -                else if (isnan(tri.y2)) {
 +                else if (std::isnan(tri.y2)) {
                      ty = Type::LINE;
