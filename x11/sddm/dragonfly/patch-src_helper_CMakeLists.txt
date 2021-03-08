@@ -1,11 +1,20 @@
---- src/helper/CMakeLists.txt.intermediate	2020-02-17 15:40:29.000000000 +0000
+--- src/helper/CMakeLists.txt.orig	2020-11-03 09:55:31 UTC
 +++ src/helper/CMakeLists.txt
-@@ -37,7 +37,7 @@ if(PAM_FOUND)
+@@ -17,7 +17,7 @@ set(HELPER_SOURCES
+ 
+ # Different implementations of the VT switching code
+ # (where the FreeBSD version does nothing).
+-if(${CMAKE_SYSTEM} MATCHES "FreeBSD")
++if(${CMAKE_SYSTEM} MATCHES "FreeBSD|DragonFly")
+     list(APPEND HELPER_SOURCES ${CMAKE_SOURCE_DIR}/src/common/VirtualTerminal_FreeBSD.cpp)
  else()
-     target_link_libraries(sddm-helper crypt)
- endif()
+     list(APPEND HELPER_SOURCES ${CMAKE_SOURCE_DIR}/src/common/VirtualTerminal.cpp)
+@@ -42,7 +42,7 @@ endif()
+ 
+ add_executable(sddm-helper ${HELPER_SOURCES})
+ target_link_libraries(sddm-helper Qt5::Network Qt5::DBus Qt5::Qml)
 -if("${CMAKE_SYSTEM_NAME}" STREQUAL "FreeBSD")
 +if("${CMAKE_SYSTEM_NAME}" MATCHES "FreeBSD|DragonFly")
-     target_link_libraries(sddm-helper util)
- endif()
- 
+     # On FreeBSD (possibly other BSDs as well), we want to use
+     # setusercontext() to set up the login configuration from login.conf
+     find_library(_have_libutil util)
