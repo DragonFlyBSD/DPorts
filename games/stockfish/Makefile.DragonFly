@@ -1,7 +1,10 @@
 
+USES+=	gmake
+
 # undo damage
 LDFLAGS:=	${LDFLAGS:N-fuse-ld*}
 
 dfly-patch:
 	${REINPLACE_CMD} -e 's@CXX=g++.*@CXX=g++@g' \
+			 -e 's@-flto=jobserver@@g' \
 		${WRKSRC}/Makefile
