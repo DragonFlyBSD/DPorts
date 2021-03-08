@@ -1,0 +1,5 @@
+
+# fix build dep in MF
+USES+=	python:3.6+,build
+DOCS_BUILD_DEPENDS:=	${DOCS_BUILD_DEPENDS:N*py-sphinx_rtd_theme} \
+		${PYTHON_PKGNAMEPREFIX}sphinx_rtd_theme>0:textproc/py-sphinx_rtd_theme@${PY_FLAVOR}

@@ -2,9 +2,10 @@
 
 PORTNAME=	colmap
 DISTVERSION=	3.6
+PORTREVISION=	2
 CATEGORIES=	graphics
 
-MAINTAINER=	jbeich@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Structure from motion and multi-view stereo
 
 LICENSE=	BSD2CLAUSE BSD3CLAUSE CC-BY-3.0 GPLv3+ MIT SIFTGPU
@@ -42,14 +43,14 @@ CGAL_BUILD_DEPENDS=	cgal>0:math/cgal
 CGAL_CMAKE_BOOL=	CGAL_ENABLED
 
 DOCS_BUILD_DEPENDS=	gmake:devel/gmake \
-			sphinx-build:textproc/py-sphinx18
+			sphinx-build:textproc/py-sphinx \
+			${NONEXISTENT}:textproc/py-sphinx_rtd_theme
 DOCS_PORTDOCS=		*
 
 OPENMP_USES=		compiler:openmp
 OPENMP_CMAKE_BOOL=	OPENMP_ENABLED
-.if ${MACHINE_ARCH} == i386 || !exists(/usr/include/omp.h)
-# XXX base/230888 via #pragma omp atomic
-# XXX ports/199603: LLVM openmp in base doesn't support aarch64, armv6, armv7 yet
+.if !exists(/usr/include/omp.h)
+# XXX ports/199603: LLVM openmp in base doesn't support armv6, armv7 yet
 OPENMP_VARS=		OPENMP=gcc-
 .endif
 
