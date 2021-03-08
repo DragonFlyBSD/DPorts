@@ -1,0 +1,6 @@
+
+# attempt to fix stage-qa, mangle /construction in eric6install.json
+dfly-install:
+	${REINPLACE_CMD} -e 's@devel/eric6/stage@devel/eric6/out@g' \
+		${STAGEDIR}${DATADIR}/eric6install.json
+	${RM} -fv ${STAGEDIR}${DATADIR}/eric6install.json.bak
