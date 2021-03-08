@@ -1,0 +1,5 @@
+
+# expose u_int/u_long types
+dfly-patch:
+	${REINPLACE_CMD} -e 's@_POSIX_C_SOURCE@&__@g' \
+		${WRKSRC}/src/igmpproxy.c
