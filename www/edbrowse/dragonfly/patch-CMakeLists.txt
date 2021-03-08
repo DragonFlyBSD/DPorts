@@ -1,0 +1,11 @@
+--- CMakeLists.txt.orig	2020-11-07 16:19:44 UTC
++++ CMakeLists.txt
+@@ -250,7 +250,7 @@ if (UNIX)
+     FILE (GLOB UnixManFile "doc/man-edbrowse-debian.1")
+     set (UnixManDir "/usr/share/man/man1")
+     set (UnixDocDir "/usr/share/doc/edbrowse")
+-    if (${CMAKE_SYSTEM_NAME} STREQUAL  "FreeBSD")
++    if (${CMAKE_SYSTEM_NAME} STREQUAL  "FreeBSD" OR ${CMAKE_SYSTEM_NAME} STREQUAL  "DragonFly")
+ 	FILE (GLOB UnixManFile "doc/man-edbrowse-freebsd.1")
+         set (UnixManDir "/usr/local/man/man1")
+         set (UnixDocDir "/usr/local/share/doc/edbrowse")
