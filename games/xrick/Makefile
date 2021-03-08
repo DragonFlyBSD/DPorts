@@ -1,4 +1,4 @@
-# Created by: David Siebörger <drs@rucus.ru.ac.za>
+# Created by: David SiebÃ¶rger <drs@rucus.ru.ac.za>
 # $FreeBSD$
 
 PORTNAME=	xrick
@@ -21,6 +21,10 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|sysarg_args_data = NULL|sysarg_args_data = "${PREFIX}/share/xrick/data.zip"|' ${WRKSRC}/src/sysarg.c
 	@${REINPLACE_CMD} 's|gcc|${CC}|; s|-g||; s|-O2|${CFLAGS}|' \
 		${WRKSRC}/Makefile
+	@${REINPLACE_CMD} -e '/IMG_SPLASH/s,^,extern ,' \
+		${WRKSRC}/include/img.h
+	@${REINPLACE_CMD} -E '/WAV_(BOMBSHHT|BONUS|BOX|BULLET|JUMP|WALK);/ \
+		s,^,//,' ${WRKSRC}/src/game.c
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xrick ${STAGEDIR}${PREFIX}/bin
