@@ -2,19 +2,6 @@ HhrrrrrR who made process.platform to return freebsd?????
 
 --- node_build/make.js.orig	2016-06-15 00:58:54.000000000 +0300
 +++ node_build/make.js
-@@ -41,6 +41,12 @@ if (GCC) {
-     GCC = 'gcc';
- }
- 
-+if (Os.type() == 'DragonFly') {
-+    GCC = 'gcc';
-+    console.error('system= ' + SYSTEM + "  " + process.env['SYSTEM'] + " " + process.platform);
-+    console.error('gcc=    ' + GCC + " " + Os.type());
-+}
-+
- Builder.configure({
-     systemName:     SYSTEM,
-     crossCompiling: process.env['CROSS'] !== undefined,
 @@ -113,6 +119,7 @@ Builder.configure({
      }
  
