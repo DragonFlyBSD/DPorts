@@ -15,12 +15,9 @@ COMMENT=	Program to create standalone executables from Python scripts
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING.txt
 
-BROKEN_FreeBSD_12_powerpc64=	fails to compile: /usr/include/machine/ieeefp.h:36: expected '=', ',', ';', 'asm' or '__attribute__' before 'extern'
-BROKEN_FreeBSD_13_powerpc64=	fails to compile: /usr/include/machine/ieeefp.h:35:1: error: unknown type name '__BEGIN_DECLS'
-
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}altgraph>0:math/py-altgraph@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 
 EXTRACT_AFTER_ARGS=	--exclude doc/source --no-same-owner --no-same-permissions
@@ -31,21 +28,13 @@ OPTIONS_DEFINE=		DOCS MANPAGES
 OPTIONS_DEFAULT=	MANPAGES
 OPTIONS_SUB=		yes
 
-DOCS_BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sphinx18>0:textproc/py-sphinx18@${PY_FLAVOR}
+DOCS_BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sphinx>0:textproc/py-sphinx@${PY_FLAVOR} \
+			${PYTHON_PKGNAMEPREFIX}sphinx_rtd_theme>0:textproc/py-sphinx_rtd_theme@${PY_FLAVOR}
 DOCS_MAKE_ARGS=		SPHINXBUILD=sphinx-build-${PYTHON_VER}
 DOCS_USES=		gmake
 MANPAGES_BUILD_DEPENDS=	${DOCS_BUILD_DEPENDS}
 MANPAGES_MAKE_ARGS=	${DOCS_MAKE_ARGS}
 MANPAGES_USES=		gmake
-
-.include <bsd.port.pre.mk>
-
-.if ${PYTHON_REL} < 3000
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}dis3>0:devel/py-dis3@${PY_FLAVOR}
-.if ${PORT_OPTIONS:MDOCS}
-BUILD_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}dis3>0:devel/py-dis3@${PY_FLAVOR}
-.endif
-.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e '/install_requires/s,distribute,setuptools,' \
@@ -68,4 +57,4 @@ do-install-DOCS-on:
 	(cd ${WRKSRC}/doc ; ${SETENV} ${MAKE_ENV} ${MAKE_CMD} text ${MAKE_ARGS})
 	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/doc/_build/text/|} ${STAGEDIR}${DOCSDIR}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
