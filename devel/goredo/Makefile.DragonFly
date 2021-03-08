@@ -1,0 +1,3 @@
+
+# missing extract depends
+EXTRACT_DEPENDS+=      zstd>0:archivers/zstd
