@@ -1,0 +1,8 @@
+
+USES+=	alias
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
+		${WRKSRC}/Source/ui_qt/CMakeLists.txt
+	${REINPLACE_CMD} -e '/stdc++fs/d' \
+		${WRKSRC}/Source/ui_libretro/CMakeLists.txt
