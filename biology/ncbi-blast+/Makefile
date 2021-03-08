@@ -1,8 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	ncbi-blast+
-DISTVERSION=	2.10.0
-PORTREVISION=	2
+DISTVERSION=	2.11.0
+PORTREVISION=	1
 CATEGORIES=	biology perl5 python
 MASTER_SITES=	https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ \
 		https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/${PORTVERSION}/
@@ -33,7 +33,7 @@ LIB_DEPENDS=	libpcre.so:devel/pcre \
 RUN_DEPENDS=	p5-List-MoreUtils>=0:lang/p5-List-MoreUtils \
 		p5-JSON>=0:converters/p5-JSON
 
-USES=		compiler:openmp gmake shebangfix perl5 python
+USES=		compiler:c++14-lang gmake localbase:ldflags shebangfix perl5 python
 USE_LDCONFIG=	yes
 
 SHEBANG_FILES=	src/app/blast/legacy_blast.pl \
@@ -53,9 +53,8 @@ WRKSRC_SUBDIR=		c++
 
 .include <bsd.port.pre.mk>
 
-# Force newer GCC on platforms using GCC 4.2 as base
 .if ${CHOSEN_COMPILER_TYPE} == gcc
-USE_GCC=	yes
+# In case of problems: https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=220822
 .endif
 
 post-install:
