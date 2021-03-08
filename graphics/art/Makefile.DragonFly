@@ -1,0 +1,4 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/"atomic"/d' \
+		${WRKSRC}/rtgui/CMakeLists.txt
