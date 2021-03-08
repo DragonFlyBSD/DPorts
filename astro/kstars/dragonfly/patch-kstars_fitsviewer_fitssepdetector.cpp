@@ -1,10 +1,10 @@
---- kstars/fitsviewer/fitssepdetector.cpp.orig	2020-05-25 14:48:57 UTC
+--- kstars/fitsviewer/fitssepdetector.cpp.orig	2021-01-07 20:12:29 UTC
 +++ kstars/fitsviewer/fitssepdetector.cpp
-@@ -18,6 +18,7 @@
-  ***************************************************************************/
+@@ -25,6 +25,7 @@
+ #include "kspaths.h"
  
  #include <math.h>
 +#include <cstddef>
+ #include <QPointer>
+ #include <QtConcurrent>
  
- #include "sep/sep.h"
- #include "fits_debug.h"
