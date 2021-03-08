@@ -1,0 +1,4 @@
+@mode 4111
+libexec/anongitssh
+@mode
+share/man/man1/anongitssh.1.gz
