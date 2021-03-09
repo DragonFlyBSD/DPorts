@@ -1,0 +1,11 @@
+--- meson.build.intermediate	2021-03-09 13:57:49.000000000 +0000
++++ meson.build
+@@ -19,7 +19,7 @@ if target_machine.system() == 'windows'
+ 		'-static',
+ 	]
+ endif
+-if target_machine.system() == 'linux' or target_machine.system() == 'freebsd'
++if target_machine.system() == 'linux' or target_machine.system() == 'freebsd' or target_machine.system() == 'dragonfly'
+ 	spc2it_ldflags += [
+ 		'-lm',
+ 	]
