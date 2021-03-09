@@ -1,5 +1,5 @@
 
-.if ${PORTVERSION} != "0.174"
+.if ${PORTVERSION} != "0.179"
 BROKEN= needs recheck on new version
 .endif
 
@@ -47,6 +47,7 @@ dfly-patch:
 dfly-install:
 	${MV} -v ${STAGEDIR}${PREFIX}/include/*.h \
 		${STAGEDIR}${PREFIX}/include/elfutils/
+	${MKDIR} ${STAGEDIR}${PREFIX}/lib/elfutils
 	${MV} -v ${STAGEDIR}${PREFIX}/lib/lib* \
 		${STAGEDIR}${PREFIX}/lib/elfutils/
 	${MV} -v ${STAGEDIR}${PREFIX}/libdata/pkgconfig/libelf.pc \
