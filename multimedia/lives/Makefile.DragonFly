@@ -1,4 +1,11 @@
-USES+= alias
 
 # no pulse
-LIB_DEPENDS:=	${LIB_DEPENDS:Nlibpulse*}
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NPULSEAUDIO}
+
+# to check for dragonfly/ patches
+#CFLAGS+=	-DIS_FREEBSD
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
+		${WRKSRC}/lives-plugins/plugins/decoders/asf_decoder.c \
+		${WRKSRC}/lives-plugins/plugins/decoders/mpegts_decoder.c
