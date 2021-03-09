@@ -3,6 +3,7 @@
 
 PORTNAME=	recursor
 DISTVERSION=	4.4.2
+PORTREVISION=	1
 CATEGORIES=	dns
 MASTER_SITES=	http://downloads.powerdns.com/releases/
 PKGNAMEPREFIX=	powerdns-
@@ -23,8 +24,8 @@ BUILD_DEPENDS=	${LOCALBASE}/include/boost/shared_ptr.hpp:devel/boost-libs
 LIB_DEPENDS=	libboost_context.so:devel/boost-libs \
 		libprotobuf.so:devel/protobuf
 
-USES=		compiler:c++11-lib cpe gmake localbase:ldflags pkgconfig ssl \
-		tar:bzip2
+USES=		autoreconf compiler:c++11-lib cpe gmake libtool localbase:ldflags \
+		pkgconfig ssl tar:bzip2
 
 CPE_VENDOR=	powerdns
 USE_RC_SUBR=	pdns-recursor
