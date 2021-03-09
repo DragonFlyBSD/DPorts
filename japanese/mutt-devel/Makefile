@@ -64,7 +64,7 @@ USES=		gmake iconv ncurses shebangfix autoreconf fakeroot ssl
 SHEBANG_FILES=	smime_keys.pl contrib/smime_keys_test.pl
 GNU_CONFIGURE=	yes
 WRKSRC=		${WRKDIR}/mutt-${VERSION}
-LDFLAGS+=	-L${LOCALBASE}/lib -ltinfow
+LDFLAGS+=	-L${LOCALBASE}/lib -ltinfo
 CONFIGURE_ENV=	CC="${CC} -D_DONT_USE_CTYPE_INLINE_ -D_XLOCALE_CTYPE_H ${DB_CFLAGS} -I${LOCALBASE}/include -I${LOCALBASE}/include/ncurses"
 CONFIGURE_ARGS=	--with-ncurses --enable-locales-fix \
 		${ICONV_CONFIGURE_ARG} \

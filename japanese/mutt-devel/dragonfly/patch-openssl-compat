@@ -1,0 +1,41 @@
+--- mutt_ssl.ci.orig	2010-08-25 16:31:40 UTC
++++ mutt_ssl.c
+@@ -535,7 +535,7 @@ static char *asn1time_to_string (ASN1_UT
+ 
+ static int check_certificate_by_signer (X509 *peercert)
+ {
+-  X509_STORE_CTX xsc;
++  X509_STORE_CTX *xscp;
+   X509_STORE *ctx;
+   int pass = 0, i;
+ 
+@@ -565,23 +565,25 @@ static int check_certificate_by_signer (
+     return 0;
+   }
+ 
+-  X509_STORE_CTX_init (&xsc, ctx, peercert, SslSessionCerts);
++  xscp = X509_STORE_CTX_new ();
++  X509_STORE_CTX_init (xscp, ctx, peercert, SslSessionCerts);
+ 
+-  pass = (X509_verify_cert (&xsc) > 0);
++  pass = (X509_verify_cert (xscp) > 0);
+ #ifdef DEBUG
+   if (! pass)
+   {
+     char buf[SHORT_STRING];
+     int err;
+ 
+-    err = X509_STORE_CTX_get_error (&xsc);
++    err = X509_STORE_CTX_get_error (xscp);
+     snprintf (buf, sizeof (buf), "%s (%d)",
+ 	X509_verify_cert_error_string(err), err);
+     dprint (2, (debugfile, "X509_verify_cert: %s\n", buf));
+     dprint (2, (debugfile, " [%s]\n", peercert->name));
+   }
+ #endif
+-  X509_STORE_CTX_cleanup (&xsc);
++  X509_STORE_CTX_cleanup (xscp);
++  X509_STORE_CTX_free (xscp);
+   X509_STORE_free (ctx);
+ 
+   return pass;
