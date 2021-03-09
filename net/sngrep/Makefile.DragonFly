@@ -1,0 +1,6 @@
+
+# help to find ncurses after devel/ncurses hacks
+dfly-patch:
+	${REINPLACE_CMD} -e 's@ncursesw@ncurses@g' -e 's@menuw@menu@g' \
+			 -e 's@panelw@panel@g' -e 's@formw@form@g' \
+		${WRKSRC}/configure.ac
