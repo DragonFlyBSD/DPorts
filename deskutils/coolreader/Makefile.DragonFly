@@ -1,0 +1,6 @@
+
+USES+=	pkgconfig
+
+# deal with empty orphans
+dfly-install:
+	${RM} -rfv ${STAGEDIR}${PREFIX}/share/cr3/hyph/obsolete
