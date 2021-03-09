@@ -1,0 +1,3 @@
+
+# uses partial linking for sqlite3_exec?
+MAKE_ENV+=	LDVER=ld.bfd
