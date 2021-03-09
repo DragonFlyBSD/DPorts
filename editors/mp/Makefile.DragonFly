@@ -1,0 +1,3 @@
+
+USES+=	localbase:ldflags
+CFLAGS+=	-DCONFOPT_WGET_WCH
