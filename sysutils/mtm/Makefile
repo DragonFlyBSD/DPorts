@@ -22,7 +22,7 @@ PLIST_FILES=	bin/mtm \
 		share/man/man1/mtm.1.gz
 
 CFLAGS+=	-I${NCURSESINC}
-LDFLAGS+=	-L${NCURSESLIB} -ltinfow
+LDFLAGS+=	-L${NCURSESLIB} -ltinfo
 
 PORTDATA=	mtm.ti
 
