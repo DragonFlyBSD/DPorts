@@ -1,0 +1,5 @@
+
+# common from MF
+dfly-patch:
+	${REINPLACE_CMD} -e 's,SSLeay_version,OpenSSL_version,g' \
+		${WRKSRC}/ssl/configure
