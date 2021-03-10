@@ -1,1 +1,5 @@
+
+# no pulse
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NBASU}
+
 CFLAGS+=	-Wno-error=return-type
