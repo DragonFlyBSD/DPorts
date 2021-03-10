@@ -1,0 +1,3 @@
+
+# attempt to fix plist in stage-qa
+PLIST_FILES+=	"@dir /var/run/gvm"
