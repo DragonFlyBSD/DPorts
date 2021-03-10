@@ -1,0 +1,3 @@
+
+# attempt to fix plist
+PLIST_FILES+=	"@dir /var/lib"
