@@ -1,0 +1,110 @@
+Taken from https://github.com/cdidier/irssi-xmpp/pull/53
+
+--- src/core/xep/ping.c.orig
++++ src/core/xep/ping.c
+@@ -36,15 +36,40 @@
+ 
+ #define XMLNS_PING "urn:xmpp:ping"
+ 
++#if defined(IRSSI_ABI_VERSION) && IRSSI_ABI_VERSION >= 25
++#define NO_TIMEVAL
++#define TimeType gint64
++#else
++#define TimeType GTimeVal
++#endif
++
+ struct ping_data {
+-	char	 *id;
+-	GTimeVal  time;
++	char    *id;
++	TimeType time;
+ };
+ 
+ static int	 timeout_tag;
+ static GSList	*supported_servers;
+ static DATALIST *pings;
+ 
++#ifdef NO_TIMEVAL
++
++#define set_current_time(var)   (var) = g_get_real_time()
++#define clear_time(var)         (var) = 0
++#define has_time(var)           ((var) != 0)
++#define get_time_sec(var)       ((var) / G_TIME_SPAN_SECOND)
++#define get_time_diff(to, from) (to) - (from)
++
++#else
++
++#define set_current_time(var)   g_get_current_time(&(var))
++#define clear_time(var)         memset(&(var), 0, sizeof((var)))
++#define has_time(var)           ((var).tv_sec != 0)
++#define get_time_sec(var)       ((var).tv_sec)
++#define get_time_diff(to, from) (int) get_timeval_diff(&(to), &(from))
++
++#endif
++
+ static void
+ request_ping(XMPP_SERVER_REC *server, const char *dest)
+ {
+@@ -63,13 +88,13 @@ request_ping(XMPP_SERVER_REC *server, const char *dest)
+ 		g_free(server->ping_id);
+ 		server->ping_id =
+ 		    g_strdup(lm_message_node_get_attribute(lmsg->node, "id"));
+-		g_get_current_time(&server->lag_sent);
++		set_current_time(server->lag_sent);
+ 		server->lag_last_check = time(NULL);
+ 	} else {
+ 		pd = g_new0(struct ping_data, 1);
+ 		pd->id =
+ 		    g_strdup(lm_message_node_get_attribute(lmsg->node, "id"));
+-		g_get_current_time(&pd->time);
++		set_current_time(pd->time);
+ 		datalist_add(pings, server, dest, pd);
+ 	}
+ 	signal_emit("xmpp send iq", 2, server, lmsg);
+@@ -98,7 +123,7 @@ sig_recv_iq(XMPP_SERVER_REC *server, LmMessage *lmsg, const int type,
+ {
+ 	DATALIST_REC *rec;
+ 	LmMessageNode *node;
+-	GTimeVal now;
++	TimeType now;
+ 	struct ping_data *pd;
+ 
+ 	if (type == LM_MESSAGE_SUB_TYPE_RESULT) {
+@@ -106,19 +131,18 @@ sig_recv_iq(XMPP_SERVER_REC *server, LmMessage *lmsg, const int type,
+ 		if (server->ping_id != NULL
+ 		    && (*from == '\0' || strcmp(from, server->domain) == 0)
+ 	    	    && strcmp(id, server->ping_id) == 0) {
+-			g_get_current_time(&now);
+-			server->lag =
+-			    (int)get_timeval_diff(&now, &server->lag_sent);
+-			memset(&server->lag_sent, 0, sizeof(server->lag_sent));
++			set_current_time(now);
++			server->lag = get_time_diff(now, server->lag_sent);
++			clear_time(server->lag_sent);
+ 			g_free_and_null(server->ping_id);
+ 			signal_emit("server lag", 1, server);
+ 		} else if (lmsg->node->children == NULL
+ 		    && (rec = datalist_find(pings, server, from)) != NULL) {
+ 			pd = rec->data;
+ 			if (strcmp(id, pd->id) == 0) {
+-				g_get_current_time(&now);
++				set_current_time(now);
+ 				signal_emit("xmpp ping", 3, server, from,
+-				    get_timeval_diff(&now, &pd->time));
++				    get_time_diff(now, pd->time));
+ 			}
+ 		}
+ 	} else if (type == LM_MESSAGE_SUB_TYPE_GET) {
+@@ -166,10 +190,10 @@ check_ping_func(void)
+ 	now = time(NULL);
+ 	for (tmp = supported_servers; tmp != NULL; tmp = tmp->next) {
+ 		server = XMPP_SERVER(tmp->data);
+-		if (server->lag_sent.tv_sec != 0) {
++		if (has_time(server->lag_sent)) {
+ 			/* waiting for lag reply */
+ 			if (max_lag > 1 &&
+-			    (now - server->lag_sent.tv_sec) > max_lag) {
++			    (now - get_time_sec(server->lag_sent)) > max_lag) {
+ 				/* too much lag - disconnect */
+ 				signal_emit("server lag disconnect", 1,
+ 				    server);
