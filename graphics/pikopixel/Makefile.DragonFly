@@ -1,0 +1,6 @@
+
+# prevent clang segfaults, remove stale .pch
+dfly-patch:
+	${REINPLACE_CMD} -e '/PikoPixel_Prefix.pch/d' \
+		${WRKSRC}/GNUmakefile
+#	${RM} -v ${WRKSRC}/PikoPixel_Prefix.pch
