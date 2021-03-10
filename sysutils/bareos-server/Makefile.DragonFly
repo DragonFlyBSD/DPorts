@@ -1,5 +1,8 @@
 USES+=	localbase:ldflags
 
+BROKEN_SSL=	libressl
+BROKEN_SSL_REASON_libressl=	port requires SSL_CONF_CTX
+
 # exclude for now
 OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NSCSICRYPTO:NRADOS}
 
