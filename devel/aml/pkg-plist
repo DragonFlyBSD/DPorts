@@ -1,5 +1,0 @@
-include/aml.h
-lib/libaml.so
-lib/libaml.so.0
-lib/libaml.so.0.0.0
-libdata/pkgconfig/aml.pc
