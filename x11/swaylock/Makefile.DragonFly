@@ -1,0 +1,7 @@
+
+# disable __SSE2__ if gcc8 for swaylock-effects
+.if defined(PKGNAMESUFFIX) && ${PKGNAMESUFFIX:M-effects}
+dfly-patch:
+	${REINPLACE_CMD} -e 's@#ifdef __SSE2__@#if defined(__SSE2__) \&\& __GNUC__ \!= 8@g' \
+		${WRKSRC}/fade.c
+.endif
