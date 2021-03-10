@@ -1,0 +1,8 @@
+
+# some strangeness, sedlineit
+dfly-patch:
+	${REINPLACE_CMD} -e 's@#include "ac/sys_sysinfo.h"@extern "C" { int get_nprocs_conf(void); int get_nprocs(void); }@g' \
+		${WRKSRC}/mbdyn/base/invsolver.cc \
+		${WRKSRC}/mbdyn/base/readlinsol.cc \
+		${WRKSRC}/mbdyn/base/rtsolver.cc \
+		${WRKSRC}/mbdyn/base/solver.cc
