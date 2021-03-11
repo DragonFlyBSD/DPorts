@@ -1,0 +1,3 @@
+
+# force lang cpp sypport for ports like faust-lv2
+CXXFLAGS+=	-DCPP_BUILD
