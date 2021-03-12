@@ -1,6 +1,17 @@
---- hotspot/src/os/bsd/vm/os_bsd.cpp.orig	2017-12-06 14:50:04 UTC
+--- hotspot/src/os/bsd/vm/os_bsd.cpp.orig	2021-01-20 00:41:17 UTC
 +++ hotspot/src/os/bsd/vm/os_bsd.cpp
-@@ -114,7 +114,7 @@
+@@ -104,13 +104,18 @@
+ # include <sys/ioctl.h>
+ # include <sys/syscall.h>
+ 
++#ifdef __DragonFly__
++# include <pthread_np.h>
++# include <vm/vm_param.h>
++#endif
++
+ #ifdef __FreeBSD__
+ # include <pthread_np.h>
+ # include <sys/cpuset.h>
  # include <vm/vm_param.h>
  #endif
  
@@ -9,30 +20,67 @@
  # include <elf.h>
  #endif
  
-@@ -2396,6 +2396,8 @@ bool os::remove_stack_guard_pages(char*
+@@ -186,17 +191,21 @@ julong os::available_memory() {
  
- static address _highest_vm_reserved_address = NULL;
+ // available here means free
+ julong os::Bsd::available_memory() {
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__DragonFly__)
+   static const char *vm_stats[] = {
+     "vm.stats.vm.v_free_count",
+-#if __FreeBSD_version < 1200016
++#if defined(__DragonFly__) || __FreeBSD_version < 1200016
+     "vm.stats.vm.v_cache_count",
+ #endif
+     "vm.stats.vm.v_inactive_count"
+   };
+   size_t size;
+   julong free_pages;
++#ifdef __DragonFly__
++  u_long i, npages;
++#else
+   u_int i, npages;
++#endif
  
-+#define MAP_ALIGNED(n)	((n) << 24)
-+
- // If 'fixed' is true, anon_mmap() will attempt to reserve anonymous memory
- // at 'requested_addr'. If there are existing memory mappings at the same
- // location, however, they will be overwritten. If 'fixed' is false,
-@@ -2983,7 +2985,7 @@ OSReturn os::set_native_priority(Thread*
- #ifdef __OpenBSD__
-   // OpenBSD pthread_setprio starves low priority threads
-   return OS_OK;
+   for (i = 0, free_pages = 0; i < sizeof(vm_stats) / sizeof(vm_stats[0]); i++) {
+     size = sizeof(npages);
+@@ -1274,8 +1283,8 @@ pid_t os::Bsd::gettid() {
+   guarantee(retval != 0, "just checking");
+   return retval;
+ 
 -#elif defined(__FreeBSD__)
+-#if __FreeBSD_version > 900030
 +#elif defined(__FreeBSD__) || defined(__DragonFly__)
-   int ret = pthread_setprio(thread->osthread()->pthread_id(), newpri);
-   return (ret == 0) ? OS_OK : OS_ERR;
- #elif defined(__APPLE__) || defined(__NetBSD__)
-@@ -3012,7 +3014,7 @@ OSReturn os::get_native_priority(const T
-   }
++#if defined(__DragonFly__) || __FreeBSD_version > 900030
+   return ::pthread_getthreadid_np();
+ #else
+   long tid;
+@@ -2436,7 +2445,7 @@ static char* anon_mmap(char* requested_a
+   if (fixed) {
+     assert((uintptr_t)requested_addr % os::Bsd::page_size() == 0, "unaligned address");
+     flags |= MAP_FIXED;
+-#ifndef __OpenBSD__
++#if !defined(__OpenBSD__) && !defined(__DragonFly__)
+   } else if (alignment_hint > 0) {
+     flags |= MAP_ALIGNED(ffs(alignment_hint) - 1);
+ #endif
+@@ -4049,6 +4058,10 @@ int os::active_processor_count() {
+     return online_cpus;
+ #endif
  
-   errno = 0;
--#if defined(__OpenBSD__) || defined(__FreeBSD__)
-+#if defined(__OpenBSD__) || defined(__FreeBSD__) || defined(__DragonFly__)
-   *priority_ptr = pthread_getprio(thread->osthread()->pthread_id());
- #elif defined(__APPLE__) || defined(__NetBSD__)
-   int policy;
++#ifdef __DragonFly__
++  return sysconf(_SC_NPROCESSORS_ONLN);
++#endif
++
+   return _processor_count;
+ }
+ 
+@@ -4060,7 +4073,7 @@ void os::set_native_thread_name(const ch
+     char buf[MAXTHREADNAMESIZE];
+     snprintf(buf, sizeof(buf), "Java: %s", name);
+     pthread_setname_np(buf);
+-#elif defined(__FreeBSD__) || defined(__OpenBSD__)
++#elif defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
+     pthread_set_name_np(pthread_self(), name);
+ #elif defined(__NetBSD__)
+     pthread_setname_np(pthread_self(), "%s", name);

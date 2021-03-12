@@ -1,6 +1,7 @@
 MAKE_ENV+=     DONT_ENABLE_IPV6="YES"
 
-dfly-patch:
+# developer only
+zdfly-patch:
 	-${REINPLACE_CMD} -e 's@*BSD @*BSD | DragonFly @g' \
 	${WRKSRC}/hotspot/test/compiler/6894807/Test6894807.sh \
 	${WRKSRC}/hotspot/test/runtime/7110720/Test7110720.sh \
