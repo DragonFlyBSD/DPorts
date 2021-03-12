@@ -1,0 +1,5 @@
+
+# avoid dealing w/ FP files/ patches
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(HOST_CC=\).*@\1gcc@g' -e 's@\([[:<:]]CC=\).*@\1gcc@g' \
+		${WRKSRC}/Makefile

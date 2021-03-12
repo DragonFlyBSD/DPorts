@@ -1,8 +1,6 @@
-The malloc_usable_size() is not exposed in libc on purpose.
-
---- quickjs.c.intermediate	2021-03-12 08:04:36.000000000 +0000
-+++ quickjs.c
-@@ -1663,7 +1663,7 @@ static inline size_t js_def_malloc_usabl
+--- qjs.c.intermediate	2021-03-12 08:04:36.000000000 +0000
++++ qjs.c
+@@ -148,7 +148,7 @@ static inline size_t js_trace_malloc_usa
      return malloc_size(ptr);
  #elif defined(_WIN32)
      return _msize(ptr);
@@ -11,7 +9,7 @@ The malloc_usable_size() is not exposed in libc on purpose.
      return 0;
  #elif defined(__linux__)
      return malloc_usable_size(ptr);
-@@ -1737,7 +1737,7 @@ static const JSMallocFunctions def_mallo
+@@ -264,7 +264,7 @@ static const JSMallocFunctions trace_mf
      malloc_size,
  #elif defined(_WIN32)
      (size_t (*)(const void *))_msize,

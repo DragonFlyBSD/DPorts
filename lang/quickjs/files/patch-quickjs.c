@@ -1,11 +1,11 @@
---- quickjs.c.orig	2019-09-18 18:34:20 UTC
+--- quickjs.c.orig	2020-09-06 09:31:51 UTC
 +++ quickjs.c
-@@ -1423,7 +1423,7 @@ static const JSMallocFunctions def_malloc_funcs = {
-     (size_t (*)(const void *))malloc_usable_size,
- #else
-     /* change this to `NULL,` if compilation fails */
--    malloc_usable_size,
-+    NULL, //malloc_usable_size,
+@@ -36,6 +36,8 @@
+ #include <malloc/malloc.h>
+ #elif defined(__linux__)
+ #include <malloc.h>
++#elif defined(__FreeBSD__)
++#include <malloc_np.h>
  #endif
- };
  
+ #include "cutils.h"
