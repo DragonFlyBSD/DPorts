@@ -1,0 +1,2 @@
+# race in makefiles when generating classes
+MAKE_JOBS_UNSAFE= yes
