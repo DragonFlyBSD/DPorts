@@ -1,0 +1,12 @@
+--- auto/modules/java	2021-02-04 15:22:33 UTC
++++ auto/modules/java
+@@ -145,6 +145,9 @@ case "$NXT_SYSTEM" in
+     Darwin)
+         NXT_JAVA_INCLUDE="${NXT_JAVA_INCLUDE} -I${NXT_JAVA_HOME}/include/darwin"
+         ;;
++    DragonFly)
++        NXT_JAVA_INCLUDE="${NXT_JAVA_INCLUDE} -I${NXT_JAVA_HOME}/include/dragonfly"
++        ;;
+     FreeBSD)
+         NXT_JAVA_INCLUDE="${NXT_JAVA_INCLUDE} -I${NXT_JAVA_HOME}/include/freebsd"
+         ;;
