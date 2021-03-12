@@ -1,0 +1,6 @@
+
+# some strageness on few builders, doxygen does not get built
+dfly-install:
+.if !exists(${STAGEDIR}${DOCSDIR}/doxygen/tabs.css)
+	${TOUCH} ${STAGEDIR}${DOCSDIR}/doxygen/.keepme
+.endif
