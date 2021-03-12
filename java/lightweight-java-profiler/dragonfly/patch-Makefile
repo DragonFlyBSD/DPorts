@@ -1,0 +1,18 @@
+--- Makefile.intermediate	2021-03-12 20:52:23.000000000 +0000
++++ Makefile
+@@ -23,6 +23,15 @@ else ifeq ($(UNAME), linux)
+   HEADERS:=include
+   CC=g++
+   LDFLAGS=-Wl,--fatal-warnings
++else ifeq ($(UNAME), dragonfly)
++  READLINK_ARGS:=""
++  PLATFORM_COPTS:=-std=gnu++11
++  PLATFORM_WARNINGS:=-Wframe-larger-than=16384 -Wno-unused-but-set-variable \
++    -Wunused-but-set-parameter -Wvla -Wno-conversion-null \
++    -Wno-builtin-macro-redefined
++  HEADERS:=include
++  CC=g++
++  LDFLAGS=-Wl,--fatal-warnings
+ else ifeq ($(UNAME), freebsd)
+   READLINK_ARGS:=""
+   PLATFORM_WARNINGS:=-Weverything -Wno-c++98-compat-pedantic -Wno-padded \
