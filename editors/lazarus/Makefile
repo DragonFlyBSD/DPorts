@@ -15,9 +15,9 @@ COMMENT?=	Portable Delphi-like IDE for the FreePascal compiler (GTK2)
 
 CONFLICTS?=	${PORTNAME}-qt5-*
 
-BUILD_DEPENDS?=	${LOCALBASE}/bin/as:devel/binutils \
+BUILD_DEPENDS?=	${LOCALBASE}/bin/as:devel/binutils@native \
 		fpcres:lang/fpc-utils
-RUN_DEPENDS?=	${LOCALBASE}/bin/as:devel/binutils \
+RUN_DEPENDS?=	${LOCALBASE}/bin/as:devel/binutils@native \
 		gmake:devel/gmake \
 		fpcres:lang/fpc-utils \
 		${LOCALBASE}/share/fpc-source-${FPC_DEFAULT}/Makefile.fpc:lang/fpc-source
