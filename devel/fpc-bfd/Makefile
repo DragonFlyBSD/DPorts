@@ -11,6 +11,6 @@ MASTERDIR=	${.CURDIR}/../../lang/fpc
 WRKUNITDIR=	${FPCSRCDIR}/packages/${PKGNAMESUFFIX:S/-//}
 EXTRACTUNITDIR=	${WRKUNITDIR}
 
-RUN_DEPENDS=	${LOCALBASE}/lib/libbfd.a:devel/binutils
+RUN_DEPENDS=	${LOCALBASE}/lib/libbfd.a:devel/binutils@native
 
 .include "${MASTERDIR}/Makefile"
