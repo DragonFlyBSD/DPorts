@@ -1,0 +1,38 @@
+--- CMakeLists.txt.intermediate	2021-03-19 12:08:24.000000000 +0000
++++ CMakeLists.txt
+@@ -51,7 +51,7 @@ if(PIGLIT_BUILD_GL_TESTS)
+ 	find_package(OpenGL REQUIRED)
+ endif()
+ 
+-if(${CMAKE_SYSTEM_NAME} MATCHES "Linux|FreeBSD")
++if(${CMAKE_SYSTEM_NAME} MATCHES "Linux|FreeBSD|DragonFly")
+ 	option(PIGLIT_USE_WAFFLE "Use Waffle in place of GLUT" ON)
+ else()
+ 	option(PIGLIT_USE_WAFFLE "Use Waffle in place of GLUT" OFF)
+@@ -130,7 +130,7 @@ if(PIGLIT_BUILD_CL_TESTS)
+ 	find_package(OpenCL 1.2 REQUIRED)
+ endif(PIGLIT_BUILD_CL_TESTS)
+ 
+-IF(${CMAKE_SYSTEM_NAME} MATCHES "Linux|FreeBSD")
++IF(${CMAKE_SYSTEM_NAME} MATCHES "Linux|FreeBSD|DragonFly")
+ 	if(X11_FOUND AND OPENGL_gl_LIBRARY)
+ 		# Assume the system has GLX. In the future, systems may exist
+ 		# with libGL and libX11 but no GLX, but that world hasn't
+@@ -424,7 +424,7 @@ if(HAVE_LIBCACA)
+ endif(HAVE_LIBCACA)
+ endif(GBM_FOUND)
+ 
+-if(PIGLIT_USE_WAFFLE AND (${CMAKE_SYSTEM_NAME} MATCHES "Linux|FreeBSD"))
++if(PIGLIT_USE_WAFFLE AND (${CMAKE_SYSTEM_NAME} MATCHES "Linux|FreeBSD|DragonFly"))
+ 	pkg_check_modules(EGL egl)
+ endif()
+ 
+@@ -469,7 +469,7 @@ check_function_exists(fopen_s   HAVE_FOP
+ endif()
+ check_function_exists(setrlimit HAVE_SETRLIMIT)
+ 
+-if(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
++if(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD|DragonFly")
+ 	check_symbol_exists(htobe32 "sys/endian.h" HAVE_HTOBE32)
+ else()
+ 	check_symbol_exists(htobe32 "endian.h" HAVE_HTOBE32)

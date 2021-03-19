@@ -1,0 +1,3 @@
+.if !defined(DPORTS_BUILDER)
+MANUAL_PACKAGE_BUILD=	lots of small files
+.endif
