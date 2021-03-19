@@ -3,6 +3,9 @@ USES+=	alias
 # grass7 has packaging issues
 OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NGRASS}
 
+# too noisy logs
+CXXFLAGS+=	-Wno-deprecated-declarations
+
 dfly-patch:
 	${REINPLACE_CMD} -e 's@STREQUAL "FreeBSD"@MATCHES "FreeBSD|DragonFly"@g' \
 		${WRKSRC}/cmake/FindGRASS.cmake \
