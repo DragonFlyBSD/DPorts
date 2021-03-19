@@ -22,7 +22,7 @@ DIST_SUBDIR=	freepascal
 MAINTAINER?=	acm@FreeBSD.org
 COMMENT?=	Free Pascal compiler with Turbo and Delphi
 
-RUN_DEPENDS?=	${LOCALBASE}/bin/as:devel/binutils
+RUN_DEPENDS?=	${LOCALBASE}/bin/as:devel/binutils@native
 
 ONLY_FOR_ARCHS=	amd64 i386
 
