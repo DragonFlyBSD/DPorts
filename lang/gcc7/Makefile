@@ -20,8 +20,8 @@ ONLY_FOR_ARCHS=	amd64
 LIB_DEPENDS=	libgmp.so:math/gmp \
 		libmpfr.so:math/mpfr \
 		libmpc.so:math/mpc
-BUILD_DEPENDS+=	${LOCALBASE}/bin/as:devel/binutils
-RUN_DEPENDS+=	${LOCALBASE}/bin/as:devel/binutils
+BUILD_DEPENDS+=	${LOCALBASE}/bin/as:devel/binutils@native
+RUN_DEPENDS+=	${LOCALBASE}/bin/as:devel/binutils@native
 .if defined(MAINTAINER_MODE)
 BUILD_DEPENDS+=	runtest:misc/dejagnu
 .endif
