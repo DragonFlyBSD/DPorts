@@ -74,7 +74,7 @@ BUILD_DEPENDS+=	brotli>=1.0.9,1:archivers/brotli \
 		c-ares>=1.17.1:dns/c-ares \
 		libuv>=1.40.0:devel/libuv \
 		libnghttp2>=1.42.0:www/libnghttp2 \
-		objdump:devel/binutils
+		
 LIB_DEPENDS+=	libbrotlidec.so:archivers/brotli \
 		libcares.so:dns/c-ares \
 		libuv.so:devel/libuv \
