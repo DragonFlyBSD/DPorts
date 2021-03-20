@@ -1,4 +1,6 @@
 
+BUILD_DEPENDS:=	${BUILD_DEPENDS:N*binutils}
+
 # use of __atomic_fetch_add_8 atomics
 USE_CLANG_FALLBACK=	default
 
