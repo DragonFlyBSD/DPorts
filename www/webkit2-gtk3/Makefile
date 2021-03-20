@@ -15,7 +15,6 @@ COMMENT=	Opensource browser engine using the GTK+ 3 toolkit
 LICENSE=	GPLv2 BSD2CLAUSE
 LICENSE_COMB=	dual
 
-BUILD_DEPENDS=	${LOCALBASE}/bin/ar:devel/binutils
 LIB_DEPENDS=	libenchant-2.so:textproc/enchant2 \
 		libfribidi.so:converters/fribidi \
 		libfontconfig.so:x11-fonts/fontconfig \
@@ -74,15 +73,6 @@ OPTIONS_SUB=		yes
 # Building WebKit with debugging symbols requires ar and ld with
 # support for thin archives.  Also see
 # https://bugs.webkit.org/show_bug.cgi?id=140384
-DEBUG_CMAKE_ON=		-DCMAKE_AR=${LOCALBASE}/bin/ar \
-			-DCMAKE_RANLIB=${LOCALBASE}/bin/ranlib \
-			-DCMAKE_LINKER=${LOCALBASE}/bin/ld
-DEBUG_CXXFLAGS=		-B${LOCALBASE}/bin
-
-DEBUG_CMAKE_OFF=	-DCMAKE_AR=/usr/bin/ar \
-			-DCMAKE_RANLIB=/usr/bin/ranlib \
-			-DCMAKE_LINKER=/usr/bin/ld
-DEBUG_CXXFLAGS_OFF=	-B/usr/bin
 DEBUG_CFLAGS_OFF=	-DNDEBUG
 
 GEOIP_CMAKE_BOOL=	ENABLE_GEOLOCATION
