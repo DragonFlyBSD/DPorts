@@ -1,0 +1,3 @@
+
+BUILD_DEPENDS:=	${BUILD_DEPENDS:N*binutils}
+RUN_DEPENDS:=	${RUN_DEPENDS:N*binutils}
