@@ -1,4 +1,6 @@
 
+BUILD_DEPENDS:=	${BUILD_DEPENDS:N*binutils}
+
 # some icu madness
 #USES+=	localbase:ldflags
 GN_ARGS+=	v8_enable_i18n_support=false
