@@ -1,0 +1,4 @@
+
+# race in convertconf.h generation
+MAKE_JOBS_UNSAFE= yes
+USES+=	gmake
