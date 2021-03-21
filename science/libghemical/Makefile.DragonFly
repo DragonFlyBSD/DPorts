@@ -1,3 +1,5 @@
 
+BUILD_DEPENDS:=	${BUILD_DEPENDS:N*binutils}
+
 # zrj: srsly???
 CONFIGURE_ENV:=	${CONFIGURE_ENV:NLD_PRELOAD*}
