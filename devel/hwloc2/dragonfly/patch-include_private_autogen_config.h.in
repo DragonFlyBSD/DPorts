@@ -1,0 +1,12 @@
+--- include/private/autogen/config.h.in.orig	2020-11-26 09:14:50 UTC
++++ include/private/autogen/config.h.in
+@@ -458,6 +458,9 @@
+ /* Whether we are in debugging mode or not */
+ #undef HWLOC_DEBUG
+ 
++/* Define to 1 on *DRAGONFLY */
++#undef HWLOC_DRAGONFLY_SYS
++
+ /* Define to 1 on *FREEBSD */
+ #undef HWLOC_FREEBSD_SYS
+ 
