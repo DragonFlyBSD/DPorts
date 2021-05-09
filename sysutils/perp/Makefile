@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	perp
 PORTVERSION=	2.07
@@ -6,7 +5,7 @@ CATEGORIES=	sysutils
 MASTER_SITES =	http://b0llix.net/perp/distfiles/
 
 MAINTAINER=	ports@jpmens.net
-COMMENT=	Persistent process supervisor & service managment framework for un!x
+COMMENT=	Persistent process supervisor and service management framework
 
 LICENSE=	UNKNOWN
 LICENSE_NAME=	unknown
