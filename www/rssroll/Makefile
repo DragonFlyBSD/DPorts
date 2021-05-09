@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	rssroll
 PORTVERSION=	0.6.2
@@ -29,6 +28,9 @@ CFLAGS+=	-I${WRKSRC_libcez}/src/config \
 LDFLAGS+=	-L${WRKSRC_libcez}/src/config \
 		-L${WRKSRC_libcez}/src/fossil \
 		-L${WRKSRC_libcez}/src/misc
+
+# XXX Static libraries with PIE are currently unsupported.
+MAKE_ENV+=	WITHOUT_PIE=true
 
 pre-configure:
 	@(cd ${WRKSRC_libcez} && ${SETENV} ${MAKE_ENV} ${MAKE})
