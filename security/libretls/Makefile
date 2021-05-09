@@ -1,7 +1,6 @@
-# $FreeBSD$
 
 PORTNAME=	libretls
-PORTVERSION=	3.3.1
+PORTVERSION=	3.3.1p1
 CATEGORIES=	security devel
 MASTER_SITES=	https://causal.agency/libretls/
 
