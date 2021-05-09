@@ -1,8 +1,7 @@
 # Created by: Dirk Froemberg <dirk@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	openssl
-DISTVERSION=	3.0.0-alpha12
+DISTVERSION=	3.0.0-alpha13
 CATEGORIES=	security devel
 MASTER_SITES=	https://www.openssl.org/source/ \
 		ftp://ftp.cert.dfn.de/pub/tools/net/openssl/source/
@@ -98,7 +97,6 @@ TLS1_DESC=	TLSv1.0 (requires TLS1_1, TLS1_2)
 TLS1_1_DESC=	TLSv1.1 (requires TLS1_2)
 TLS1_2_DESC=	TLSv1.2
 WEAK-SSL-CIPHERS_DESC=	Weak cipher support (unsafe)
-ZLIB_DESC=	zlib compression support
 
 # Upstream default disabled options
 .for _option in md2 ktls rc5 sctp ssl3 weak-ssl-ciphers zlib
