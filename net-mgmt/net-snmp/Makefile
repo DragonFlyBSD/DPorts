@@ -1,9 +1,8 @@
 # Created by: gpalmer
-# $FreeBSD$
 
 PORTNAME=	snmp
 PORTVERSION=	5.9
-PORTREVISION=   2
+PORTREVISION=   3
 PORTEPOCH=	1
 CATEGORIES=	net-mgmt
 MASTER_SITES=	SF/net-${PORTNAME}/net-${PORTNAME}/${PORTVERSION} \
@@ -22,7 +21,7 @@ NOT_FOR_ARCHS_REASON=	SSP is currently broken on MIPS
 
 OPTIONS_DEFINE=	IPV6 MFD_REWRITES PERL PERL_EMBEDDED PYTHON DUMMY TKMIB \
 		MYSQL AX_SOCKONLY UNPRIVILEGED SMUX DOCS JAIL AX_DISABLE_TRAP \
-		TLS NEWSYSLOG NOLIBPKG
+		TLS NEWSYSLOG NOLIBPKG SCTP
 OPTIONS_DEFAULT=PERL PERL_EMBEDDED DUMMY SMUX NEWSYSLOG
 OPTIONS_SUB=	yes
 
@@ -37,6 +36,7 @@ SMUX_DESC=		Build with SNMP multiplexing (SMUX) support
 JAIL_DESC=		Options for running snmpd within a jail(8)
 NEWSYSLOG_DESC=		Automatically rotate snmpd.log via newsyslog
 NOLIBPKG_DESC=		Build without libpkg
+SCTP_DESC=		Build with SCTP MIB support
 
 MAKE_JOBS_UNSAFE=	yes
 
@@ -160,6 +160,10 @@ NET_SNMP_WITH_MIB_MODULE_LIST+=	host disman/event-mib mibII/mta_sendmail mibII/t
 
 .if ${OPSYS} == FreeBSD
 NET_SNMP_WITHOUT_MIB_MODULE_LIST+=	mibII/ipv6
+.endif
+
+.if ${PORT_OPTIONS:MSCTP}
+NET_SNMP_WITH_MIB_MODULE_LIST+=	sctp-mib
 .endif
 
 .if ${PORT_OPTIONS:MMFD_REWRITES}
