@@ -1,14 +1,14 @@
+bin/captoinfo
 bin/clear
 bin/infocmp
+bin/infotocap
+bin/ncurses%%ABI_VER%%-config
 bin/reset
 bin/tabs
-bin/tput
-bin/tset
 bin/tic
 bin/toe
-bin/infotocap
-bin/captoinfo
-bin/ncurses%%ABI_VER%%-config
+bin/tput
+bin/tset
 include/ncurses/curses.h
 include/ncurses/cursesapp.h
 include/ncurses/cursesf.h
@@ -50,6 +50,7 @@ lib/libncurses.so.%%ABI_VER%%
 lib/libncurses.so.%%REL_VER%%
 %%DEBUG%%lib/libncurses_g.a
 %%PROFILE%%lib/libncurses_p.a
+lib/libncursesw.so
 lib/libpanel.a
 lib/libpanel.so
 lib/libpanel.so.%%ABI_VER%%
@@ -62,7 +63,6 @@ lib/libtinfo.so.%%ABI_VER%%
 lib/libtinfo.so.%%REL_VER%%
 %%DEBUG%%lib/libtinfo_g.a
 %%PROFILE%%lib/libtinfo_p.a
-lib/libncursesw.so
 libdata/pkgconfig/form.pc
 libdata/pkgconfig/menu.pc
 libdata/pkgconfig/ncurses++.pc
@@ -966,8 +966,3 @@ libdata/pkgconfig/tinfo.pc
 %%MANPAGES%%man/man5/terminfo.5.gz
 %%MANPAGES%%man/man5/user_caps.5.gz
 %%MANPAGES%%man/man7/term.7.gz
-share/misc/tabset/std
-share/misc/tabset/stdcrt
-share/misc/tabset/vt100
-share/misc/tabset/vt300
-share/misc/terminfo.db.default

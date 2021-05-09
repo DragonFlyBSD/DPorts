@@ -1,8 +1,8 @@
 # Created by: Andrey Zakhvatov
-# $FreeBSD$
 
 PORTNAME=	ncurses
 DISTVERSION=	6.2-${SNAPSHOT}
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.invisible-island.net/${PORTNAME}/current/ \
 		https://invisible-mirror.net/archives/ncurses/current/
@@ -16,15 +16,17 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 BROKEN_sparc64=	cannot build: coredump: illegal instruction
 
-USES=		cpe pkgconfig shebangfix tar:tgz terminfo
+USES=		cpe pkgconfig shebangfix tar:tgz
 
-SNAPSHOT=		20210213
+SNAPSHOT=		20210313
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS=		--datadir=${PREFIX}/share/misc \
+CONFIGURE_ARGS=		--datadir=${PREFIX}/share \
+			--with-terminfo-dirs="${PREFIX}/share/terminfo:${LOCALBASE}/share/site-terminfo" \
 			--disable-home-terminfo \
 			--disable-overwrite \
 			--disable-root-environ \
 			--disable-lib-suffixes \
+			--disable-db-install \
 			--enable-bsdpad \
 			--enable-colorfgbg \
 			--enable-getcap \
@@ -34,15 +36,13 @@ CONFIGURE_ARGS=		--datadir=${PREFIX}/share/misc \
 			--enable-widec \
 			--includedir=${PREFIX}/include/ncurses \
 			--program-prefix= \
-			--with-hashed-db \
+			--without-hashed-db \
 			--with-manpage-format=gzip \
 			--with-pkg-config-libdir=${PREFIX}/libdata/pkgconfig \
 			--with-pkg-config=yes \
 			--with-shared \
 			--with-termlib \
 			--without-manpage-renames
-
-MAKE_JOBS_UNSAFE=	yes
 
 OPTIONS_DEFINE=		DEBUG DOCS EXAMPLES MANPAGES PROFILE TRACE
 OPTIONS_DEFAULT=	DOCS EXAMPLES MANPAGES
@@ -99,8 +99,6 @@ post-install:
 
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/*.so.${DISTVERSION:S/-${SNAPSHOT}//}
 
-	${MV} ${STAGEDIR}${PREFIX}/share/misc/terminfo.db \
-		${STAGEDIR}${PREFIX}/share/misc/terminfo.db.default
 	# backwards compatibility, remove 2021-07-02
 	${RLN} ${STAGEDIR}${PREFIX}/lib/libncurses.so ${STAGEDIR}${PREFIX}/lib/libncursesw.so
 	${RLN} ${STAGEDIR}${PREFIX}/libdata/pkgconfig/ncurses.pc ${STAGEDIR}${PREFIX}/libdata/pkgconfig/ncursesw.pc
