@@ -1,8 +1,7 @@
 # Created by: Sergey A. Osokin <osa@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME?=	nginx
-PORTVERSION=	1.19.7
+PORTVERSION=	1.19.9
 PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://nginx.org/download/ \
@@ -320,6 +319,9 @@ post-patch-VOD-on:
 
 pre-configure-SMALL_LIGHT-on:
 	( cd ${WRKSRC_small_light} && ./setup )
+
+do-configure-NJS-on:
+	( cd ${WRKSRC_njs} && ${SETENV} ${CONFIGURE_ENV} ${CONFIGURE_CMD} )
 
 .if !target(do-install)
 do-install:
