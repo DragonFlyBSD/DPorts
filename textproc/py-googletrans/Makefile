@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	googletrans
 DISTVERSION=	3.0.0
@@ -7,7 +6,7 @@ CATEGORIES=	textproc python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	kai@FreeBSD.org
+MAINTAINER=	lbartoletti@FreeBSD.org
 COMMENT=	Free Google Translate API that translates totally free of charge
 
 LICENSE=	MIT
