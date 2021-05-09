@@ -1,9 +1,7 @@
 # Created by: dpejesh@yahoo.com
-# $FreeBSD$
 
 PORTNAME=	resource-agents
-PORTVERSION=	4.6.1
-PORTREVISION=	1
+PORTVERSION=	4.8.0
 DISTVERSIONPREFIX=v
 CATEGORIES=	net-mgmt
 
