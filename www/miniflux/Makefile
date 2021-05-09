@@ -1,7 +1,6 @@
-# $FreeBSD$
 
 PORTNAME=	miniflux
-DISTVERSION=	2.0.28
+DISTVERSION=	2.0.29
 CATEGORIES=	www
 
 MAINTAINER=	krion@FreeBSD.org
@@ -14,11 +13,7 @@ RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:security/ca_root_nss
 
 USES=		go:modules
 
-USERS=	miniflux
-GROUPS=	miniflux
-
 WANT_PGSQL=	client
-USE_RC_SUBR=	miniflux
 
 USE_GITHUB=	yes
 GH_PROJECT=	v2
@@ -37,7 +32,7 @@ GH_TUPLE=	PuerkitoBio:goquery:v1.6.1:puerkitobio_goquery/vendor/github.com/Puerk
 		golang:sys:f9fddec55a1e:golang_sys/vendor/golang.org/x/sys \
 		golang:text:v0.3.3:golang_text/vendor/golang.org/x/text \
 		gorilla:mux:v1.8.0:gorilla_mux/vendor/github.com/gorilla/mux \
-		lib:pq:v1.9.0:lib_pq/vendor/github.com/lib/pq \
+		lib:pq:v1.10.0:lib_pq/vendor/github.com/lib/pq \
 		matttproud:golang_protobuf_extensions:v1.0.1:matttproud_golang_protobuf_extensions/vendor/github.com/matttproud/golang_protobuf_extensions \
 		mitchellh:go-server-timing:feb680ab92c2:mitchellh_go_server_timing/vendor/github.com/mitchellh/go-server-timing \
 		mvdan:xurls:v2.2.0:mvdan_xurls/vendor/mvdan.cc/xurls/v2 \
@@ -50,12 +45,18 @@ GH_TUPLE=	PuerkitoBio:goquery:v1.6.1:puerkitobio_goquery/vendor/github.com/Puerk
 		rylans:getlang:4c3188ff8a2d:rylans_getlang/vendor/github.com/rylans/getlang \
 		square:go-jose:v2.5.0:square_go_jose/vendor/gopkg.in/square/go-jose.v2 \
 		stretchr:testify:v1.6.1:stretchr_testify/vendor/github.com/stretchr/testify \
-		tdewolff:minify:v2.9.11:tdewolff_minify_v2/vendor/github.com/tdewolff/minify/v2
+		tdewolff:minify:v2.9.13:tdewolff_minify_v2/vendor/github.com/tdewolff/minify/v2 \
+		tdewolff:parse:v2.5.10:tdewolff_parse_v2/vendor/github.com/tdewolff/parse/v2
+
+USE_RC_SUBR=	miniflux
 
 GO_PKGNAME=	miniflux.app
 GO_TARGET=	:${PORTNAME}
 GO_BUILDFLAGS=	-ldflags="-X miniflux.app/version.Version=${DISTVERSION} \
 		-X miniflux.app/version.BuildDate=$$(date +'%Y-%m-%dT%H:%M:%SZ')"
+
+USERS=		miniflux
+GROUPS=		miniflux
 
 OPTIONS_DEFINE=		PGSQL_SERVER
 PGSQL_SERVER_DESC=	Install the PostgreSQL Server Component
