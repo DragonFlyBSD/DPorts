@@ -1,5 +1,4 @@
 # Created by: Masafumi NAKANE <max@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	mailagent
 PORTVERSION=	3.1.106
@@ -9,7 +8,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Sophisticated automatic mail-processing tool
 
 LICENSE=	ART10
-LICENSE_FILES=	${WRKSRC}/Artistic
+LICENSE_FILE=	${WRKSRC}/Artistic
 
 USES=		perl5 tar:bzip2
 USE_GITHUB=	yes
