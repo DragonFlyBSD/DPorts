@@ -1,7 +1,6 @@
-# $FreeBSD$
 
 PORTNAME=	automuteus
-DISTVERSION=	6.11.0
+DISTVERSION=	6.11.2
 CATEGORIES=	games
 
 MAINTAINER=	nc@FreeBSD.org
@@ -58,7 +57,6 @@ GH_TUPLE=	\
 		protocolbuffers:protobuf-go:v1.25.0:protocolbuffers_protobuf_go/vendor/google.golang.org/protobuf \
 		stretchr:objx:v0.2.0:stretchr_objx/vendor/github.com/stretchr/objx \
 		stretchr:testify:v1.6.1:stretchr_testify/vendor/github.com/stretchr/testify
-
 
 USE_RC_SUBR=	${PORTNAME}
 
