@@ -1,10 +1,8 @@
 # Created by: Ting-Wei Lan <lantw44@gmail.com>
-# $FreeBSD$
 
 PORTNAME=	hwdata
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.344
-PORTREVISION=	2
+DISTVERSION=	0.346
 PORTEPOCH=	1
 CATEGORIES=	misc
 
