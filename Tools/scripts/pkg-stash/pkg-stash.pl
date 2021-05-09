@@ -1,5 +1,4 @@
 #!/usr/local/bin/perl -wT
-# $FreeBSD$
 
 use strict;
 

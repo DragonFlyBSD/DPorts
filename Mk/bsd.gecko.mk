@@ -4,8 +4,6 @@
 # Date created:		12 Nov 2005
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD$
-#
 # 4 column tabs prevent hair loss and tooth decay!
 
 # bsd.gecko.mk abstracts the selection of gecko-based backends. It allows users
@@ -77,8 +75,8 @@ BINARY_ALIAS+=	python3=${PYTHON_CMD}
 BUNDLE_LIBS=	yes
 
 BUILD_DEPENDS+=	llvm${LLVM_DEFAULT}>0:devel/llvm${LLVM_DEFAULT} \
-				rust-cbindgen>=0.15.0:devel/rust-cbindgen \
-				${RUST_DEFAULT}>=1.50:lang/${RUST_DEFAULT} \
+				rust-cbindgen>=0.16.0:devel/rust-cbindgen \
+				${RUST_DEFAULT}>=1.51.0:lang/${RUST_DEFAULT} \
 				node:www/node
 LIB_DEPENDS+=	libdrm.so:graphics/libdrm
 MOZ_EXPORT+=	${CONFIGURE_ENV} \
@@ -94,7 +92,7 @@ MOZ_EXPORT+=	LLVM_OBJDUMP="${LOCALBASE}/bin/llvm-objdump${LLVM_DEFAULT}"
 .endif
 # Ignore Mk/bsd.default-versions.mk but respect make.conf(5)
 .if !defined(DEFAULT_VERSIONS) || ! ${DEFAULT_VERSIONS:Mllvm*}
-LLVM_DEFAULT=	11 # bump if not latest release
+LLVM_DEFAULT=	11 # chase bundled LLVM in lang/rust for LTO
 .endif
 # Require newer Clang than what's in base system unless user opted out
 . if ${CC} == cc && ${CXX} == c++ && exists(/usr/lib/libc++.so)

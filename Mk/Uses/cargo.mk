@@ -1,5 +1,3 @@
-# $FreeBSD$
-#
 # This file contains logic to ease porting of Rust packages or
 # binaries using the `cargo` command.
 #
@@ -17,7 +15,7 @@ _INCLUDE_USES_CARGO_MK=	yes
 .endif
 
 # List of static dependencies.  The format is cratename-version.
-# CARGO_CRATES will be downloaded from MASTER_SITES_CRATESIO.
+# CARGO_CRATES will be downloaded from MASTER_SITE_CRATESIO.
 CARGO_CRATES?=
 
 # List of features to build (space separated list).
@@ -36,16 +34,27 @@ CARGO_CARGOLOCK?=	${WRKSRC}/Cargo.lock
 CARGO_DIST_SUBDIR?=	rust/crates
 
 # Generate list of DISTFILES.
+# Prefer canonical file extension .crate going forward
+.if make(makesum)
+CARGO_CRATE_EXT=	.crate
+.else
+# If there is a rust/crates/*.tar.gz in distinfo keep using the old
+# extension.  We need to delay eval until the last moment for
+# DISTINFO_FILE.  We cache the command output to avoid multiple
+# slow grep runs for every CARGO_CRATE_EXT access.
+CARGO_CRATE_EXT=	${defined(_CARGO_CRATE_EXT_CACHE):?${_CARGO_CRATE_EXT_CACHE}:${:!if ${GREP} -q '\(${CARGO_DIST_SUBDIR}/.*\.tar\.gz\)' "${DISTINFO_FILE}" 2>/dev/null; then ${ECHO_CMD} .tar.gz; else ${ECHO_CMD} .crate; fi!:_=_CARGO_CRATE_EXT_CACHE}}
+.endif
 .for _crate in ${CARGO_CRATES}
-MASTER_SITES+=	CRATESIO/${_crate:C/^([-_a-zA-Z0-9]+)-[0-9].*/\1/}/${_crate:C/^[-_a-zA-Z0-9]+-([0-9].*)/\1/}:cargo_${_crate:C/[^a-zA-Z0-9_]//g}
-DISTFILES+=	${CARGO_DIST_SUBDIR}/${_crate}.tar.gz:cargo_${_crate:C/[^a-zA-Z0-9_]//g}
+# Resolving CRATESIO alias is very inefficient with many MASTER_SITES, consume MASTER_SITE_CRATESIO directly
+MASTER_SITES+=	${MASTER_SITE_CRATESIO:S,%SUBDIR%,${_crate:C/^([-_a-zA-Z0-9]+)-[0-9].*/\1/}/${_crate:C/^[-_a-zA-Z0-9]+-([0-9].*)/\1/},:S,$,:cargo_${_crate:C/[^a-zA-Z0-9_]//g},}
+DISTFILES+=	${CARGO_DIST_SUBDIR}/${_crate}${CARGO_CRATE_EXT}:cargo_${_crate:C/[^a-zA-Z0-9_]//g}
 .endfor
 
 # Build dependencies.
 
 CARGO_BUILDDEP?=	yes
 .if ${CARGO_BUILDDEP:tl} == "yes"
-BUILD_DEPENDS+=	${RUST_DEFAULT}>=1.50.0:lang/${RUST_DEFAULT}
+BUILD_DEPENDS+=	${RUST_DEFAULT}>=1.51.0:lang/${RUST_DEFAULT}
 .endif
 
 # Location of cargo binary (default to lang/rust's Cargo binary)
@@ -212,7 +221,7 @@ cargo-extract:
 .for _crate in ${CARGO_CRATES}
 	@${MV} ${WRKDIR}/${_crate} ${CARGO_VENDOR_DIR}/${_crate}
 	@${PRINTF} '{"package":"%s","files":{}}' \
-		$$(${SHA256} -q ${DISTDIR}/${CARGO_DIST_SUBDIR}/${_crate}.tar.gz) \
+		$$(${SHA256} -q ${DISTDIR}/${CARGO_DIST_SUBDIR}/${_crate}${CARGO_CRATE_EXT}) \
 		> ${CARGO_VENDOR_DIR}/${_crate}/.cargo-checksum.json
 	@if [ -r ${CARGO_VENDOR_DIR}/${_crate}/Cargo.toml.orig ]; then \
 		${MV} ${CARGO_VENDOR_DIR}/${_crate}/Cargo.toml.orig \
@@ -225,11 +234,11 @@ _CARGO_GIT_PATCH_CARGOTOML=
 .  for _group in ${GH_TUPLE:C@^[^:]*:[^:]*:[^:]*:(([^:/]*)?)((/.*)?)@\2@}
 .    if empty(CARGO_GIT_SUBDIR:M${_group}\:*)
 _CARGO_GIT_PATCH_CARGOTOML:= ${_CARGO_GIT_PATCH_CARGOTOML} \
-	-e "s@git = ['\"](https|http|git)://github.com/${GH_ACCOUNT_${_group}}/${GH_PROJECT_${_group}}(\.git)?/?[\"']@path = \"${WRKSRC_${_group}}\"@"
+	-e "s@git *= *['\"](https|http|git)://github.com/${GH_ACCOUNT_${_group}}/${GH_PROJECT_${_group}}(\.git)?/?[\"']@path = \"${WRKSRC_${_group}}\"@"
 .    else
 .      for _group2 _crate _subdir in ${CARGO_GIT_SUBDIR:M${_group}\:*:S,:, ,g}
 _CARGO_GIT_PATCH_CARGOTOML:= ${_CARGO_GIT_PATCH_CARGOTOML} \
-	-e "/^${_crate} =/ s@git = ['\"](https|http|git)://github.com/${GH_ACCOUNT_${_group}}/${GH_PROJECT_${_group}}(\.git)?/?[\"']@path = \"${WRKSRC_${_group}}/${_subdir}\"@"
+	-e "/^${_crate} =/ s@git *= *['\"](https|http|git)://github.com/${GH_ACCOUNT_${_group}}/${GH_PROJECT_${_group}}(\.git)?/?[\"']@path = \"${WRKSRC_${_group}}/${_subdir}\"@"
 .	endfor
 .    endif
 .  endfor
@@ -238,11 +247,11 @@ _CARGO_GIT_PATCH_CARGOTOML:= ${_CARGO_GIT_PATCH_CARGOTOML} \
 .  for _group in ${GL_TUPLE:C@^(([^:]*://[^:/]*(:[0-9]{1,5})?(/[^:]*[^/])?:)?)([^:]*):([^:]*):([^:]*)(:[^:/]*)((/.*)?)@\8@:S/^://}
 .    if empty(CARGO_GIT_SUBDIR:M${_group}\:*)
 _CARGO_GIT_PATCH_CARGOTOML:= ${_CARGO_GIT_PATCH_CARGOTOML} \
-	-e "s@git = ['\"]${GL_SITE_${_group}}/${GL_ACCOUNT_${_group}}/${GL_PROJECT_${_group}}(\.git)?/?['\"]@path = \"${WRKSRC_${_group}}\"@"
+	-e "s@git *= *['\"]${GL_SITE_${_group}}/${GL_ACCOUNT_${_group}}/${GL_PROJECT_${_group}}(\.git)?/?['\"]@path = \"${WRKSRC_${_group}}\"@"
 .    else
 .      for _group2 _crate _subdir in ${CARGO_GIT_SUBDIR:M${_group}\:*:S,:, ,g}
 _CARGO_GIT_PATCH_CARGOTOML:= ${_CARGO_GIT_PATCH_CARGOTOML} \
-	-e "/^${_crate} = / s@git = ['\"]${GL_SITE_${_group}}/${GL_ACCOUNT_${_group}}/${GL_PROJECT_${_group}}(\.git)?/?['\"]@path = \"${WRKSRC_${_group}}/${_subdir}\"@"
+	-e "/^${_crate} = / s@git *= *['\"]${GL_SITE_${_group}}/${GL_ACCOUNT_${_group}}/${GL_PROJECT_${_group}}(\.git)?/?['\"]@path = \"${WRKSRC_${_group}}/${_subdir}\"@"
 .      endfor
 .    endif
 .  endfor

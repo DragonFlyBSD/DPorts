@@ -1,5 +1,3 @@
-# $FreeBSD$
-#
 # Provide support for Python related ports. This includes detecting Python
 # interpreters, ports providing package and modules for python as well as
 # consumer ports requiring Python at build or run time.
@@ -224,7 +222,7 @@
 #			  packages for different Python versions.
 #			  default: -py${PYTHON_SUFFIX}
 #
-# Using USES=python.mk also will add some useful entries to PLIST_SUB:
+# Using USES=python also will add some useful entries to PLIST_SUB:
 #
 #	PYTHON_INCLUDEDIR=${PYTHONPREFIX_INCLUDEDIR:S;${PREFIX}/;;}
 #	PYTHON_LIBDIR=${PYTHONPREFIX_LIBDIR:S;${PREFIX}/;;}
@@ -447,7 +445,7 @@ PYTHON_REL=		# empty
 PYTHON_ABIVER=		# empty
 PYTHON_PORTSDIR=	${_PYTHON_RELPORTDIR}${PYTHON_SUFFIX}
 
-.if ${PYTHON_VER} == 3.8
+.if ${PYTHON_VER} >= 3.8
 PYTHON_EXT_SUFFIX=	.cpython-${PYTHON_SUFFIX}
 .else
 PYTHON_EXT_SUFFIX=	# empty
@@ -498,13 +496,6 @@ PYTHONPREFIX_SITELIBDIR=	${PYTHON_SITELIBDIR:S;${PYTHONBASE};${PREFIX};}
 
 # Used for recording the installed files.
 _PYTHONPKGLIST=	${WRKDIR}/.PLIST.pymodtmp
-
-# PEP 0488 (https://www.python.org/dev/peps/pep-0488/)
-.if ${PYTHON_REL} < 3500
-PYTHON_PYOEXTENSION=	pyo
-.else
-PYTHON_PYOEXTENSION=	opt-1.pyc
-.endif
 
 # Ports bound to a certain python version SHOULD
 # - use the PYTHON_PKGNAMEPREFIX

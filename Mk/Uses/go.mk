@@ -1,5 +1,3 @@
-# $FreeBSD$
-#
 # This file contains logic to ease porting of Go binaries using the
 # `go` command.
 #
@@ -126,7 +124,7 @@ GO_MODVERSION=	${GO_MODULE:C/^([^@]*)(@([^@]*)?)/\2/:M@*:S/^@//:S/^$/${DISTVERSI
 GO_MODFILE=	${GO_MODVERSION}.mod
 GO_DISTFILE=	${GO_MODVERSION}.zip
 DIST_SUBDIR=	go/${PKGORIGIN:S,/,_,g}/${DISTNAME}
-MASTER_SITES=	${GO_GOPROXY}/${GO_MODNAME}/@v/
+MASTER_SITES=	${GO_GOPROXY}/${GO_MODNAME:C/([A-Z])/!\1/g:tl}/@v/
 DISTFILES=	${GO_MODFILE} ${GO_DISTFILE}
 EXTRACT_ONLY=	${GO_DISTFILE}
 WRKSRC=		${WRKDIR}/${GO_MODNAME}@${GO_MODVERSION}
@@ -162,7 +160,7 @@ post-fetch:
 	@${ECHO_MSG} "===> Fetching ${GO_MODNAME} dependencies";
 	@(cd ${DISTDIR}/${DIST_SUBDIR}; \
 		[ -e go.mod ] || ${RLN} ${GO_MODFILE} go.mod; \
-		${SETENV} ${GO_ENV} ${GO_CMD} mod download -x)
+		${SETENV} ${GO_ENV} GOPROXY=${GO_GOPROXY} ${GO_CMD} mod download -x)
 .endif
 
 .if !target(post-extract)
@@ -172,7 +170,7 @@ post-extract:
 	@${LN} -sf ${WRKSRC} ${GO_WRKSRC}
 .  elif ${go_ARGS:Mmodules} && defined(GO_MODULE)
 post-extract:
-	@(cd ${GO_WRKSRC}; ${SETENV} ${GO_ENV} ${GO_CMD} mod vendor)
+	@(cd ${GO_WRKSRC}; ${SETENV} ${GO_ENV} GOPROXY=off ${GO_CMD} mod vendor)
 .  endif 
 .endif
 
@@ -211,7 +209,7 @@ do-test:
 	(cd ${GO_WRKSRC}; \
 	for t in ${GO_TESTTARGET}; do \
 		${ECHO_MSG} "===>  Testing $${t}"; \
-		${SETENV} ${MAKE_ENV} ${GO_ENV} ${GO_CMD} test ${GO_TESTFLAGS} $${t}; \
+		${SETENV} ${MAKE_ENV} ${GO_ENV} GOPROXY=off ${GO_CMD} test ${GO_TESTFLAGS} $${t}; \
 	done)
 .endif
 
