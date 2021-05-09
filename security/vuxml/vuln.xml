@@ -47,8 +47,6 @@ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION,
 EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-  $FreeBSD$
-
 
 QUICK GUIDE TO ADDING A NEW ENTRY
 
@@ -78,6 +76,1275 @@ Notes:
   * Do not forget port variants (linux-f10-libxml2, libxml2, etc.)
 -->
 <vuxml xmlns="http://www.vuxml.org/apps/vuxml-1">
+  <vuln vid="dec7e4b6-961a-11eb-9c34-080027f515ea">
+    <topic>ruby -- XML round-trip vulnerability in REXML</topic>
+    <affects>
+      <package>
+	<name>ruby</name>
+	<range><ge>2.5.0,1</ge><lt>2.5.9,1</lt></range>
+	<range><ge>2.6.0,1</ge><lt>2.6.7,1</lt></range>
+	<range><ge>2.7.0,1</ge><lt>2.7.3,1</lt></range>
+	<range><ge>3.0.0.p1,1</ge><lt>3.0.1,1</lt></range>
+      </package>
+      <package>
+	<name>rubygem-rexml</name>
+	<range><lt>3.2.5</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Juho Nurminen  reports:</p>
+	<blockquote cite="https://www.ruby-lang.org/en/news/2021/04/05/xml-round-trip-vulnerability-in-rexml-cve-2021-28965/">
+	  <p>
+	    When parsing and serializing a crafted XML document, REXML gem
+	    (including the one bundled with Ruby) can create a wrong XML
+	    document whose structure is different from the original one.
+	    The impact of this issue highly depends on context, but it may
+	    lead to a vulnerability in some programs that are using REXML.
+	  </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-28965</cvename>
+      <url>https://www.ruby-lang.org/en/news/2021/04/05/xml-round-trip-vulnerability-in-rexml-cve-2021-28965/</url>
+    </references>
+    <dates>
+      <discovery>2021-04-05</discovery>
+      <entry>2021-04-05</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="bddadaa4-9227-11eb-99c5-e09467587c17">
+    <topic>chromium -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>chromium</name>
+	<range><lt>89.0.4389.114</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Chrome Releases reports:</p>
+	<blockquote cite="https://chromereleases.googleblog.com/2021/03/stable-channel-update-for-desktop_30.html">
+	  <p>This update contains 8 security fixes, including:</p>
+	  <ul>
+	    <li>[1181228] High CVE-2021-21194: Use after free in screen capture.
+	      Reported by Leecraso and Guang Gong of 360 Alpha Lab on
+	      2021-02-23</li>
+	    <li>[1182647] High CVE-2021-21195: Use after free in V8.
+	      Reported by Bohan Liu (@P4nda20371774) and Moon Liang of Tencent
+	      Security Xuanwu Lab on 2021-02-26</li>
+	    <li>[1175992] High CVE-2021-21196: Heap buffer overflow in
+	      TabStrip. Reported by Khalil Zhani on 2021-02-08</li>
+	    <li>[1173903] High CVE-2021-21197: Heap buffer overflow in
+	      TabStrip. Reported by Abdulrahman Alqabandi, Microsoft Browser
+	      Vulnerability Research on 2021-02-03</li>
+	    <li>[1184399] High CVE-2021-21198: Out of bounds read in IPC.
+	      Reported by Mark Brand of Google Project Zero on 2021-03-03</li>
+	    <li>[1179635] High CVE-2021-21199: Use Use after free in Aura.
+	      Reported by Weipeng Jiang (@Krace) from Codesafe Team of
+	      Legendsec at Qi'anxin Group and Evangelos Foutras</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-21194</cvename>
+      <cvename>CVE-2021-21195</cvename>
+      <cvename>CVE-2021-21196</cvename>
+      <cvename>CVE-2021-21197</cvename>
+      <cvename>CVE-2021-21198</cvename>
+      <cvename>CVE-2021-21199</cvename>
+      <url>https://chromereleases.googleblog.com/2021/03/stable-channel-update-for-desktop_30.html</url>
+    </references>
+    <dates>
+      <discovery>2021-03-31</discovery>
+      <entry>2021-03-31</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="56abf87b-96ad-11eb-a218-001b217b3468">
+    <topic>Gitlab -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>gitlab-ce</name>
+	<range><ge>13.10.0</ge><lt>13.10.1</lt></range>
+	<range><ge>13.9.0</ge><lt>13.9.5</lt></range>
+	<range><ge>9</ge><lt>13.8.7</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Gitlab reports:</p>
+	<blockquote cite="https://about.gitlab.com/releases/2021/03/31/security-release-gitlab-13-10-1-released/">
+	  <p>Arbitrary File Read During Project Import</p>
+	  <p>Kroki Arbitrary File Read/Write</p>
+	  <p>Stored Cross-Site-Scripting in merge requests</p>
+	  <p>Access data of an internal project through a public project fork as an anonymous user</p>
+	  <p>Incident metric images can be deleted by any user</p>
+	  <p>Infinite Loop When a User Access a Merge Request</p>
+	  <p>Stored XSS in scoped labels</p>
+	  <p>Admin CSRF in System Hooks Execution Through API</p>
+	  <p>Update OpenSSL dependency</p>
+	  <p>Update PostgreSQL dependency</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://about.gitlab.com/releases/2021/03/31/security-release-gitlab-13-10-1-released/</url>
+    </references>
+    <dates>
+      <discovery>2021-03-31</discovery>
+      <entry>2021-04-06</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="1f6d97da-8f72-11eb-b3f1-005056a311d1">
+    <topic>samba -- Multiple Vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>samba411</name>
+	<range><le>4.11.15</le></range>
+      </package>
+      <package>
+	<name>samba412</name>
+	<range><lt>4.12.14</lt></range>
+      </package>
+      <package>
+	<name>samba413</name>
+	<range><lt>4.13.7</lt></range>
+      </package>
+      <package>
+	<name>samba414</name>
+	<range><lt>4.14.2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Samba Team reports:</p>
+	<blockquote cite="https://www.samba.org/samba/history/security.html">
+	  <ul>
+	  <li>CVE-2020-27840: An anonymous attacker can crash the Samba AD DC
+		LDAP server by sending easily crafted DNs as
+		part of a bind request. More serious heap corruption
+		is likely also possible.</li>
+	  <li>CVE-2021-20277: User-controlled LDAP filter strings against
+		the AD DC LDAP server may crash the LDAP server.</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://www.samba.org/samba/security/CVE-2020-27840.html</url>
+      <url>https://www.samba.org/samba/security/CVE-2021-20277.html</url>
+      <cvename>CVE-2020-27840</cvename>
+      <cvename>CVE-2021-20277</cvename>
+    </references>
+    <dates>
+      <discovery>2021-03-24</discovery>
+      <entry>2021-03-28</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="80f9dbd3-8eec-11eb-b9e8-3525f51429a0">
+    <topic>nettle 3.7.2 -- fix serious ECDSA signature verify bug</topic>
+    <affects>
+      <package>
+	<name>nettle</name>
+	<range><lt>3.7.2</lt></range>
+      </package>
+      <package>
+	<name>linux-c7-nettle</name>
+	<range><lt>3.7.2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Niels Möller reports:</p>
+	<blockquote cite="https://lists.lysator.liu.se/pipermail/nettle-bugs/2021/009458.html">
+	  <p>
+	    I've prepared a new bug-fix release of Nettle, a low-level
+	    cryptographics library, to fix a serious bug in the function to
+	    verify ECDSA signatures. Implications include an assertion failure,
+	    which could be used for denial-of-service, when verifying signatures
+	    on the secp_224r1 and secp521_r1 curves.
+	  </p>
+	  <p>
+	    Even when no assert is triggered in ecdsa_verify, ECC point
+	    multiplication may get invalid intermediate values as input, and
+	    produce incorrect results. [...] It appears difficult to construct
+	    an alleged signature that makes the function misbehave in such a way
+	    that an invalid signature is accepted as valid, but such attacks
+	    can't be ruled out without further analysis.
+	  </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://lists.lysator.liu.se/pipermail/nettle-bugs/2021/009458.html</url>
+    </references>
+    <dates>
+      <discovery>2021-03-21</discovery>
+      <entry>2021-03-27</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="5a668ab3-8d86-11eb-b8d6-d4c9ef517024">
+    <topic>OpenSSL -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>openssl</name>
+	<range><lt>1.1.1k,1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The OpenSSL project reports:</p>
+	<blockquote cite="https://www.openssl.org/news/secadv/20210325.txt">
+	  <p>High: CA certificate check bypass with X509_V_FLAG_X509_STRICT
+	    (CVE-2021-3450)<br/>The X509_V_FLAG_X509_STRICT flag enables
+	    additional security checks of the certificates present in a
+	    certificate chain. It is not set by default.</p>
+	  <p>High: NULL pointer deref in signature_algorithms processing
+	    (CVE-2021-3449)<br/>An OpenSSL TLS server may crash if sent a
+	    maliciously crafted renegotiation ClientHello message from a client.
+	    If a TLSv1.2 renegotiation ClientHello omits the
+	    signature_algorithms extension (where it was present in the initial
+	    ClientHello), but includes a signature_algorithms_cert extension
+	    then a NULL pointer dereference will result, leading to a crash and
+	    a denial of service attack.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://www.openssl.org/news/secadv/20210325.txt</url>
+      <cvename>CVE-2021-3449</cvename>
+      <cvename>CVE-2021-3450</cvename>
+    </references>
+    <dates>
+      <discovery>2021-03-25</discovery>
+      <entry>2021-03-26</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="ec04f3d0-8cd9-11eb-bb9f-206a8a720317">
+    <topic>spamassassin -- Malicious rule configuration (.cf) files can be configured to run system commands</topic>
+    <affects>
+      <package>
+	<name>spamassassin</name>
+	<range><lt>3.4.5</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Apache SpamAssassin project reports:</p>
+	<blockquote cite="https://mail-archives.apache.org/mod_mbox/spamassassin-announce/202103.mbox/%3C5b7cfd35-27b7-584b-1b39-b7ff0a55f586%40apache.org%3E">
+	  <p>Apache SpamAssassin 3.4.5 was recently released [1], and fixes
+	     an issue of security note where malicious rule configuration (.cf)
+	     files can be configured to run system commands.</p>
+	  <p>In Apache SpamAssassin before 3.4.5, exploits can be injected in
+	     a number of scenarios. In addition to upgrading to SA 3.4.5,
+	     users should only use update channels or 3rd party .cf files from
+	     trusted places.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://spamassassin.apache.org/news.html</url>
+      <url>https://mail-archives.apache.org/mod_mbox/spamassassin-announce/202103.mbox/%3C5b7cfd35-27b7-584b-1b39-b7ff0a55f586%40apache.org%3E</url>
+      <url>https://cve.mitre.org/cgi-bin/cvename.cgi?name=2020-1946</url>
+      <cvename>CVE-2020-1946</cvename>
+    </references>
+    <dates>
+      <discovery>2021-03-24</discovery>
+      <entry>2021-03-24</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="c4d2f950-8c27-11eb-a3ae-0800278d94f0">
+    <topic>gitea -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>gitea</name>
+	<range><lt>1.13.6</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Gitea Team reports for release 1.13.6:</p>
+	<blockquote cite="https://blog.gitea.io/2021/03/gitea-1.13.6-is-released/">
+	  <ul>
+	    <li>Fix bug on avatar middleware</li>
+	    <li>Fix another clusterfuzz identified issue</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://github.com/go-gitea/gitea/releases/tag/v1.13.5</url>
+      <freebsdpr>ports/254515</freebsdpr>
+    </references>
+    <dates>
+      <discovery>2021-03-21</discovery>
+      <entry>2021-03-23</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="1431a25c-8a70-11eb-bd16-0800278d94f0">
+    <topic>gitea -- quoting in markdown text</topic>
+    <affects>
+      <package>
+	<name>gitea</name>
+	<range><lt>1.13.5</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Gitea Team reports for release 1.13.5:</p>
+	<blockquote cite="https://blog.gitea.io/2021/03/gitea-1.13.5-is-released/">
+	  <ul>
+	    <li>Update to goldmark 1.3.3</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://github.com/go-gitea/gitea/releases/tag/v1.13.5</url>
+      <freebsdpr>ports/254130</freebsdpr>
+    </references>
+    <dates>
+      <discovery>2021-03-20</discovery>
+      <entry>2021-03-21</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="76b5068c-8436-11eb-9469-080027f515ea">
+    <topic>OpenSSH -- Double-free memory corruption in ssh-agent</topic>
+    <affects>
+      <package>
+	<name>openssh-portable</name>
+	<name>openssh-portable-hpn</name>
+	<name>openssh-portable-gssapi</name>
+	<range><ge>8.2.p1,1</ge><lt>8.4.p1_4,1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>OpenBSD Project reports:</p>
+	<blockquote cite="https://www.openssh.com/txt/release-8.5">
+	  <p>
+	    ssh-agent(1): fixed a double-free memory corruption that was
+	    introduced in OpenSSH 8.2 . We treat all such memory faults as
+	    potentially exploitable. This bug could be reached by an attacker
+	    with access to the agent socket.
+	  </p>
+	  <p>
+	    On modern operating systems where the OS can provide information
+	    about the user identity connected to a socket, OpenSSH ssh-agent
+	    and sshd limit agent socket access only to the originating user
+	    and root. Additional mitigation may be afforded by the system's
+	    malloc(3)/free(3) implementation, if it detects double-free
+	    conditions.
+	  </p>
+	  <p>
+	    The most likely scenario for exploitation is a user forwarding an
+	    agent either to an account shared with a malicious user or to a
+	    host with an attacker holding root access.
+	  </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-28041</cvename>
+      <url>https://www.openssh.com/txt/release-8.5</url>
+    </references>
+    <dates>
+      <discovery>2021-03-03</discovery>
+      <entry>2021-03-13</entry>
+      <modified>2021-04-20</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="50e59056-87f2-11eb-b6a2-001b217b3468">
+    <topic>Gitlab -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>gitlab-ce</name>
+	<range><ge>13.9.0</ge><lt>13.9.4</lt></range>
+	<range><ge>13.8.0</ge><lt>13.8.6</lt></range>
+	<range><ge>13.2.0</ge><lt>13.7.9</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Gigtlab reports:</p>
+	<blockquote cite="https://about.gitlab.com/releases/2021/03/17/security-release-gitlab-13-9-4-released/">
+	  <p>Remote code execution via unsafe user-controlled markdown rendering options</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://about.gitlab.com/releases/2021/03/17/security-release-gitlab-13-9-4-released/</url>
+    </references>
+    <dates>
+      <discovery>2021-03-17</discovery>
+      <entry>2021-03-18</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="5b72b1ff-877c-11eb-bd4f-2f1d57dafe46">
+    <topic>dnsmasq -- cache poisoning vulnerability in certain configurations</topic>
+    <affects>
+      <package>
+	<name>dnsmasq</name>
+	<range><lt>2.85.r1,1</lt></range>
+      </package>
+      <package>
+	<name>dnsmasq-devel</name>
+	<range><lt>2.85.r1,3</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Simon Kelley reports:</p>
+	<blockquote cite="https://lists.thekelleys.org.uk/pipermail/dnsmasq-discuss/2021q1/014835.html">
+	  <p>
+	    [In configurations where the forwarding server address contains an @
+	    character for specifying a sending interface or source address, the]
+	    random source port behavior was disabled, making cache poisoning
+	    attacks possible.
+	  </p>
+	</blockquote>
+	<p>
+	  This only affects configurations of the form server=1.1.1.1@em0 or
+	  server=1.1.1.1@192.0.2.1, i. e. those that specify an interface to
+	  send through, or an IP address to send from, or use together with
+	  NetworkManager.
+	</p>
+      </body>
+    </description>
+    <references>
+      <url>https://lists.thekelleys.org.uk/pipermail/dnsmasq-discuss/2021q1/014835.html</url>
+      <cvename>CVE-2021-3448</cvename>
+    </references>
+    <dates>
+      <discovery>2021-03-17</discovery>
+      <entry>2021-03-18</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="b073677f-253a-41f9-bf2b-2d16072a25f6">
+    <topic>minio -- MITM attack</topic>
+    <affects>
+      <package>
+	<name>minio</name>
+	<range><lt>2021.03.17.02.33.02</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>minio developer report:</p>
+	<blockquote cite="https://github.com/minio/minio/security/advisories/GHSA-xr7r-7gpj-5pgp">
+	  <p>
+	    This is a security issue because it enables MITM modification of
+	    request bodies that are meant to have integrity guaranteed by chunk
+	    signatures.
+	  </p>
+	  <p>
+	    In a PUT request using aws-chunked encoding, MinIO ordinarily
+	    verifies signatures at the end of a chunk. This check can be skipped
+	    if the client sends a false chunk size that is much greater than the
+	    actual data sent: the server accepts and completes the request
+	    without ever reaching the end of the chunk + thereby without ever
+	    checking the chunk signature.
+	  </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://github.com/minio/minio/security/advisories/GHSA-xr7r-7gpj-5pgp</url>
+    </references>
+    <dates>
+      <discovery>2021-03-17</discovery>
+      <entry>2021-03-17</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="eeca52dc-866c-11eb-b8d6-d4c9ef517024">
+    <topic>LibreSSL -- use-after-free</topic>
+    <affects>
+      <package>
+	<name>libressl</name>
+	<range><lt>3.2.4_1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>OpenBSD reports:</p>
+	<blockquote cite="https://marc.info/?l=openbsd-announce&amp;m=161582456312832&amp;w=2">
+	  <p>A TLS client using session resumption may cause a use-after-free.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://marc.info/?l=openbsd-announce&amp;m=161582456312832&amp;w=2</url>
+      <url>https://ftp.openbsd.org/pub/OpenBSD/patches/6.8/common/017_libssl.patch.sig</url>
+    </references>
+    <dates>
+      <discovery>2021-03-15</discovery>
+      <entry>2021-03-16</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="b81ad6d6-8633-11eb-99c5-e09467587c17">
+    <topic>chromium -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>chromium</name>
+	<range><lt>89.0.4389.90</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Chrome Releases reports:</p>
+	<blockquote cite="https://chromereleases.googleblog.com/2021/03/stable-channel-update-for-desktop_12.html">
+	  <p>This release includes 5 security fixes, including:</p>
+	  <ul>
+	    <li>[1167357] High CVE-2021-21191: Use after free in WebRTC.
+	      Reported by raven (@raid_akame)  on 2021-01-15</li>
+	    <li>[1181387] High CVE-2021-21192: Heap buffer overflow in tab
+	      groups. Reported by Abdulrahman Alqabandi, Microsoft Browser
+	      Vulnerability Research on 2021-02-23</li>
+	    <li>[1186287] High CVE-2021-21193: Use after free in Blink.
+	      Reported by Anonymous on 2021-03-09</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-11191</cvename>
+      <cvename>CVE-2021-11192</cvename>
+      <cvename>CVE-2021-11193</cvename>
+      <url>https://chromereleases.googleblog.com/2021/03/stable-channel-update-for-desktop_12.html</url>
+    </references>
+    <dates>
+      <discovery>2021-03-12</discovery>
+      <entry>2021-03-16</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="317487c6-85ca-11eb-80fa-14dae938ec40">
+    <topic>squashfs-tools -- Integer overflow</topic>
+    <affects>
+      <package>
+	<name>squashfs-tools</name>
+	<range><lt>4.4</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Phillip Lougher reports:</p>
+	<blockquote cite="https://github.com/plougher/squashfs-tools/commit/f95864afe8833fe3ad782d714b41378e860977b1">
+	  <p>Integer overflow in the read_fragment_table_4 function in unsquash-4.c in Squashfs and sasquatch allows remote attackers to cause a denial of service (application crash) via a crafted input, which triggers a stack-based buffer overflow.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-4645</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2015-4645</url>
+    </references>
+    <dates>
+      <discovery>2017-03-17</discovery>
+      <entry>2021-03-15</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="72709326-81f7-11eb-950a-00155d646401">
+    <topic>go -- encoding/xml: infinite loop when using xml.NewTokenDecoder with a custom TokenReader; archive/zip: panic when calling Reader.Open</topic>
+    <affects>
+      <package>
+	<name>go</name>
+	<range><lt>1.16.1,1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Go project reports:</p>
+	<blockquote cite="https://github.com/golang/go/issues/44913">
+	  <p>The Decode, DecodeElement, and Skip methods of an xml.Decoder
+	    provided by xml.NewTokenDecoder may enter an infinite loop when
+	    operating on a custom xml.TokenReader which returns an EOF in the
+	    middle of an open XML element.</p>
+	</blockquote>
+	<blockquote cite="https://github.com/golang/go/issues/44916">
+	  <p>The Reader.Open API, new in Go 1.16, will panic when used on a ZIP
+	    archive containing files that start with "../".</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-27918</cvename>
+      <url>http://golang.org/issue/44913</url>
+      <cvename>CVE-2021-27919</cvename>
+      <url>http://golang.org/issue/44916</url>
+    </references>
+    <dates>
+      <discovery>2021-03-05</discovery>
+      <entry>2021-03-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="502ba001-7ffa-11eb-911c-0800278d94f0">
+    <topic>gitea -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>gitea</name>
+	<range><lt>1.13.4</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Gitea Team reports for release 1.13.3:</p>
+	<blockquote cite="https://blog.gitea.io/2021/03/gitea-1.13.3-is-released/">
+	  <ul>
+	    <li>Turn default hash password algorithm back to pbkdf2 from argon2 until we find a better one </li>
+	  </ul>
+	</blockquote>
+	<p>The Gitea Team reports for release 1.13.4:</p>
+	<blockquote cite="https://blog.gitea.io/2021/03/gitea-1.13.4-is-released/">
+	  <ul>
+	    <li>Fix issue popups</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://github.com/go-gitea/gitea/releases/tag/v1.13.3</url>
+      <url>https://github.com/go-gitea/gitea/releases/tag/v1.13.4</url>
+      <freebsdpr>ports/254130</freebsdpr>
+    </references>
+    <dates>
+      <discovery>2021-01-07</discovery>
+      <entry>2021-02-06</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="2dc8927b-54e0-11eb-9342-1c697a013f4b">
+    <topic>mantis -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>mantis-php72</name>
+	<name>mantis-php73</name>
+	<name>mantis-php74</name>
+	<name>mantis-php80</name>
+	<range><lt>2.24.4,1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Mantis 2.24.4 release reports:</p>
+	<blockquote cite="https://mantisbt.org/bugs/changelog_page.php?project=mantisbt&amp;version=2.24.4">
+	  <p>Security and maintenance release, addressing 6 CVEs:</p>
+	  <ul>
+	    <li>0027726: CVE-2020-29603: disclosure of private project name</li>
+	    <li>0027727: CVE-2020-29605: disclosure of private issue summary</li>
+	    <li>0027728: CVE-2020-29604: full disclosure of private issue contents, including bugnotes and attachments</li>
+	    <li>0027361: Private category can be access/used by a non member of a private project (IDOR)</li>
+	    <li>0027779: CVE-2020-35571: XSS in helper_ensure_confirmed() calls</li>
+	    <li>0026794: User Account - Takeover</li>
+	    <li>0027363: Fixed in version can be changed to a version that doesn't exist</li>
+	    <li>0027350: When updating an issue, a Viewer user can be set as Reporter</li>
+	    <li>0027370: CVE-2020-35849: Revisions allow viewing private bugnotes id and summary</li>
+	    <li>0027495: CVE-2020-28413: SQL injection in the parameter "access" on the mc_project_get_users function throught the API SOAP.</li>
+	    <li>0027444: Printing unsanitized user input in install.php</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2020-28413</cvename>
+      <url>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-28413</url>
+      <cvename>CVE-2020-35849</cvename>
+      <url>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-35849</url>
+    </references>
+    <dates>
+      <discovery>2020-11-10</discovery>
+      <entry>2021-03-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="2f3cd69e-7dee-11eb-b92e-0022489ad614">
+    <topic>Node.js -- February 2021 Security Releases</topic>
+    <affects>
+      <package>
+	<name>node10</name>
+	<range><lt>10.24.0</lt></range>
+      </package>
+      <package>
+	<name>node12</name>
+	<range><lt>12.21.0</lt></range>
+      </package>
+      <package>
+	<name>node14</name>
+	<range><lt>14.16.0</lt></range>
+      </package>
+      <package>
+	<name>node</name>
+	<range><lt>15.10.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Node.js reports:</p>
+	<blockquote cite="https://nodejs.org/en/blog/vulnerability/february-2021-security-releases/">
+	  <h1>HTTP2 'unknownProtocol' cause Denial of Service by resource exhaustion (Critical) (CVE-2021-22883)</h1>
+	  <p>Affected Node.js versions are vulnerable to denial of service attacks when too many connection attempts with an 'unknownProtocol' are established. This leads to a leak of file descriptors. If a file descriptor limit is configured on the system, then the server is unable to accept new connections and prevent the process also from opening, e.g. a file. If no file descriptor limit is configured, then this lead to an excessive memory usage and cause the system to run out of memory.</p>
+	  <h1>DNS rebinding in --inspect (CVE-2021-22884)</h1>
+	  <p>Affected Node.js versions are vulnerable to a DNS rebinding attack when the whitelist includes "localhost6". When "localhost6" is not present in /etc/hosts, it is just an ordinary domain that is resolved via DNS, i.e., over network. If the attacker controls the victim's DNS server or can spoof its responses, the DNS rebinding protection can be bypassed by using the "localhost6" domain. As long as the attacker uses the "localhost6" domain, they can still apply the attack described in CVE-2018-7160.</p>
+	  <h1>OpenSSL - Integer overflow in CipherUpdate (CVE-2021-23840)</h1>
+	  <p>This is a vulnerability in OpenSSL which may be exploited through Node.js. You can read more about it in https://www.openssl.org/news/secadv/20210216.txt</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://nodejs.org/en/blog/vulnerability/february-2021-security-releases/</url>
+      <cvename>CVE-2021-22883</cvename>
+      <cvename>CVE-2021-22884</cvename>
+      <cvename>CVE-2021-23840</cvename>
+    </references>
+    <dates>
+      <discovery>2021-02-23</discovery>
+      <entry>2021-03-09</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="8bf856ea-7df7-11eb-9aad-001b217b3468">
+    <topic>Gitlab -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>gitlab-ce</name>
+	<range><ge>13.9.0</ge><lt>13.9.2</lt></range>
+	<range><ge>13.8.0</ge><lt>13.8.5</lt></range>
+	<range><lt>13.7.8</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Gitlab reports:</p>
+	<blockquote cite="https://about.gitlab.com/releases/2021/03/04/security-release-gitlab-13-9-2-released/">
+	  <p>JWT token leak via Workhorse</p>
+	  <p>Stored XSS in wiki pages</p>
+	  <p>Group Maintainers are able to use the Group CI/CD Variables API</p>
+	  <p>Insecure storage of GitLab session keys</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://about.gitlab.com/releases/2021/03/04/security-release-gitlab-13-9-2-released/</url>
+      <cvename>CVE-2021-22185</cvename>
+      <cvename>CVE-2021-22186</cvename>
+    </references>
+    <dates>
+      <discovery>2021-03-04</discovery>
+      <entry>2021-03-05</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="9e8f0766-7d21-11eb-a2be-001999f8d30b">
+    <topic>asterisk -- Crash when negotiating T.38 with a zero port</topic>
+    <affects>
+      <package>
+	<name>asterisk16</name>
+	<range><lt>16.16.2</lt></range>
+      </package>
+      <package>
+	<name>asterisk18</name>
+	<range><lt>18.2.2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Asterisk project reports:</p>
+	<blockquote cite="https://www.asterisk.org/downloads/security-advisories">
+	  <p>When Asterisk sends a re-invite initiating T.38 faxing
+	  and the endpoint responds with a m=image line and zero
+	  port, a crash will occur in Asterisk. This is a reoccurrence
+	  of AST-2019-004.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2019-15297</cvename>
+      <url>https://downloads.asterisk.org/pub/security/AST-2021-006.html</url>
+    </references>
+    <dates>
+      <discovery>2021-02-20</discovery>
+      <entry>2021-03-04</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="f00b65d8-7ccb-11eb-b3be-e09467587c17">
+    <topic>chromium -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>chromium</name>
+	<range><lt>89.0.4389.72</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Chrome Releases reports:</p>
+	<blockquote cite="https://chromereleases.googleblog.com/2021/03/stable-channel-update-for-desktop.html">
+	  <p>This release includes 47 security fixes, including the below.
+	  Google is aware of reports that an exploit for CVE-2021-21166 exists
+	  in the wild.</p>
+	  <ul>
+	    <li>[1171049] High CVE-2021-21159: Heap buffer overflow in
+	      TabStrip. Reported by Khalil Zhani on 2021-01-27</li>
+	    <li>[1170531] High CVE-2021-21160: Heap buffer overflow in
+	      WebAudio. Reported by Marcin 'Icewall' Noga of Cisco Talos on
+	      2021-01-25</li>
+	    <li>[1173702] High CVE-2021-21161: Heap buffer overflow in
+	      TabStrip. Reported by Khalil Zhani on 2021-02-02</li>
+	    <li>[1172054] High CVE-2021-21162: Use after free in WebRTC.
+	      Reported by Anonymous on 2021-01-29</li>
+	    <li>[1111239] High CVE-2021-21163: Insufficient data validation in
+	      Reader Mode. Reported by Alison Huffman, Microsoft Browser
+	      Vulnerability Research on 2020-07-30</li>
+	    <li>[1164846] High CVE-2021-21164: Insufficient data validation in
+	      Chrome for iOS. Reported by Muneaki Nishimura (nishimunea) on
+	      2021-01-11</li>
+	    <li>[1174582] High CVE-2021-21165: Object lifecycle issue in audio.
+	      Reported by Alison Huffman, Microsoft Browser Vulnerability
+	      Research on 2021-02-04</li>
+	    <li>[1177465] High CVE-2021-21166: Object lifecycle issue in audio.
+	      Reported by Alison Huffman, Microsoft Browser Vulnerability
+	      Research on 2021-02-11</li>
+	    <li>[1161144] Medium CVE-2021-21167: Use after free in bookmarks.
+	      Reported by Leecraso and Guang Gong of 360 Alpha Lab on
+	      2020-12-22</li>
+	    <li>[1152226] Medium CVE-2021-21168: Insufficient policy
+	      enforcement in appcache. Reported by Luan Herrera (@lbherrera_)
+	      on 2020-11-24</li>
+	    <li>[1166138] Medium CVE-2021-21169: Out of bounds memory access in
+	      V8. Reported by Bohan Liu (@P4nda20371774) and Moon Liang of
+	      Tencent Security Xuanwu Lab on 2021-01-13</li>
+	    <li>[1111646] Medium CVE-2021-21170: Incorrect security UI in
+	      Loader. Reported by David Erceg on 2020-07-31</li>
+	    <li>[1152894] Medium CVE-2021-21171: Incorrect security UI in
+	      TabStrip and Navigation. Reported by Irvan Kurniawan (sourc7) on
+	      2020-11-25</li>
+	    <li>[1150810] Medium CVE-2021-21172: Insufficient policy
+	      enforcement in File System API. Reported by Maciej Pulikowski on
+	      2020-11-19</li>
+	    <li>[1154250] Medium CVE-2021-21173: Side-channel information
+	      leakage in Network Internals. Reported by Tom Van Goethem from
+	      imec-DistriNet, KU Leuven on 2020-12-01</li>
+	    <li>[1158010] Medium CVE-2021-21174: Inappropriate implementation
+	      in Referrer. Reported by Ashish Gautam Kamble on 2020-12-11</li>
+	    <li>[1146651] Medium CVE-2021-21175: Inappropriate implementation
+	      in Site isolation. Reported by Jun Kokatsu, Microsoft Browser
+	      Vulnerability Research on 2020-11-07</li>
+	    <li>[1170584] Medium CVE-2021-21176: Inappropriate implementation
+	      in full screen mode. Reported by Luan Herrera (@lbherrera_) on
+	      2021-01-26</li>
+	    <li>[1173879] Medium CVE-2021-21177: Insufficient policy
+	      enforcement in Autofill. Reported by Abdulrahman Alqabandi,
+	      Microsoft Browser Vulnerability Research on 2021-02-03</li>
+	    <li>[1174186] Medium CVE-2021-21178: Inappropriate implementation
+	      in Compositing. Reported by Japong on 2021-02-03</li>
+	    <li>[1174943] Medium CVE-2021-21179: Use after free in Network
+	      Internals. Reported by Anonymous on 2021-02-05</li>
+	    <li>[1175507] Medium CVE-2021-21180: Use after free in tab search.
+	      Reported by Abdulrahman Alqabandi, Microsoft Browser
+	      Vulnerability Research on 2021-02-07</li>
+	    <li>[1177875] Medium CVE-2020-27844: Heap buffer overflow in
+	      OpenJPEG. Reported by Sean Campbell at Tableau on 2021-02-12</li>
+	    <li>[1182767] Medium CVE-2021-21181: Side-channel information
+	      leakage in autofill. Reported by Xu Lin (University of Illinois
+	      at Chicago), Panagiotis Ilia (University of Illinois at Chicago),
+	      Jason Polakis (University of Illinois at Chicago) on
+	      2021-02-26</li>
+	    <li>[1049265] Low CVE-2021-21182: Insufficient policy enforcement
+	      in navigations. Reported by Luan Herrera (@lbherrera_) on
+	      2020-02-05</li>
+	    <li>[1105875] Low CVE-2021-21183: Inappropriate implementation in
+	      performance APIs. Reported by Takashi Yoneuchi (@y0n3uchy) on
+	      2020-07-15</li>
+	    <li>[1131929] Low CVE-2021-21184: Inappropriate implementation in
+	      performance APIs. Reported by James Hartig on 2020-09-24</li>
+	    <li>[1100748] Low CVE-2021-21185: Insufficient policy enforcement
+	      in extensions. Reported by David Erceg on 2020-06-30</li>
+	    <li>[1153445] Low CVE-2021-21186: Insufficient policy enforcement
+	      in QR scanning. Reported by dhirajkumarnifty on 2020-11-28</li>
+	    <li>[1155516] Low CVE-2021-21187: Insufficient data validation in
+	      URL formatting. Reported by Kirtikumar Anandrao Ramchandani on
+	      2020-12-04</li>
+	    <li>[1161739] Low CVE-2021-21188: Use after free in Blink. Reported
+	      by Woojin Oh(@pwn_expoit) of STEALIEN on 2020-12-24</li>
+	    <li>[1165392] Low CVE-2021-21189: Insufficient policy enforcement
+	      in payments. Reported by Khalil Zhani on 2021-01-11</li>
+	    <li>[1166091] Low CVE-2021-21190: Uninitialized Use in PDFium.
+	      Reported by Zhou Aiting(@zhouat1) of Qihoo 360 Vulcan Team on
+	      2021-01-13</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-21159</cvename>
+      <cvename>CVE-2021-21160</cvename>
+      <cvename>CVE-2021-21161</cvename>
+      <cvename>CVE-2021-21162</cvename>
+      <cvename>CVE-2021-21163</cvename>
+      <cvename>CVE-2021-21164</cvename>
+      <cvename>CVE-2021-21165</cvename>
+      <cvename>CVE-2021-21166</cvename>
+      <cvename>CVE-2021-21167</cvename>
+      <cvename>CVE-2021-21168</cvename>
+      <cvename>CVE-2021-21169</cvename>
+      <cvename>CVE-2021-21170</cvename>
+      <cvename>CVE-2021-21171</cvename>
+      <cvename>CVE-2021-21172</cvename>
+      <cvename>CVE-2021-21173</cvename>
+      <cvename>CVE-2021-21174</cvename>
+      <cvename>CVE-2021-21175</cvename>
+      <cvename>CVE-2021-21176</cvename>
+      <cvename>CVE-2021-21177</cvename>
+      <cvename>CVE-2021-21178</cvename>
+      <cvename>CVE-2021-21179</cvename>
+      <cvename>CVE-2021-21180</cvename>
+      <cvename>CVE-2021-21181</cvename>
+      <cvename>CVE-2021-21182</cvename>
+      <cvename>CVE-2021-21183</cvename>
+      <cvename>CVE-2021-21184</cvename>
+      <cvename>CVE-2021-21185</cvename>
+      <cvename>CVE-2021-21186</cvename>
+      <cvename>CVE-2021-21187</cvename>
+      <cvename>CVE-2021-21188</cvename>
+      <cvename>CVE-2021-21189</cvename>
+      <cvename>CVE-2021-21190</cvename>
+      <cvename>CVE-2020-27844</cvename>
+      <url>https://chromereleases.googleblog.com/2021/03/stable-channel-update-for-desktop.html</url>
+    </references>
+    <dates>
+      <discovery>2021-03-02</discovery>
+      <entry>2021-03-04</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="3a469cbc-7a66-11eb-bd3f-08002728f74c">
+    <topic>jasper -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>jasper</name>
+	<range><lt>2.0.25</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>JasPer Releases:</p>
+	<blockquote cite="https://github.com/jasper-software/jasper/releases">
+	  <p>- Fix memory-related bugs in the JPEG-2000 codec resulting from
+	    attempting to decode invalid code streams. (#264, #265)</p>
+	  <p>  This fix is associated with CVE-2021-26926 and CVE-2021-26927.</p>
+	  <p>- Fix wrong return value under some compilers (#260)</p>
+	  <p>- Fix CVE-2021-3272 heap buffer overflow in jp2_decode (#259)</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://github.com/jasper-software/jasper/releases</url>
+      <cvename>CVE-2021-26926</cvename>
+      <cvename>CVE-2021-26927</cvename>
+      <cvename>CVE-2021-3272</cvename>
+    </references>
+    <dates>
+      <discovery>2021-02-07</discovery>
+      <entry>2021-03-03</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a1e03a3d-7be0-11eb-b392-20cf30e32f6d">
+    <topic>salt -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>py36-salt-2019</name>
+	<name>py37-salt-2019</name>
+	<name>py38-salt-2019</name>
+	<name>py36-salt</name>
+	<name>py37-salt</name>
+	<name>py38-salt</name>
+	<name>py39-salt</name>
+	<range><lt>2019.2.8</lt></range>
+	<range><ge>3000</ge><lt>3002.5</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>SaltStack reports multiple security vulnerabilities in Salt</p>
+	<blockquote cite="https://saltproject.io/security_announcements/active-saltstack-cve-release-2021-feb-25/">
+	  <ul>
+	  <li>CVE-2021-3197: The Salt-API.s SSH client is vulnerable to a shell injection by including ProxyCommand in an argument, or via ssh_options provided in an API request.</li>
+	  <li>CVE-2021-25281: The Salt-API does not have eAuth credentials for the wheel_async client.</li>
+	  <li>CVE-2021-25282: The salt.wheel.pillar_roots.write method is vulnerable to directory traversal.</li>
+	  <li>CVE-2021-25283: The jinja renderer does not protect against server-side template injection attacks.</li>
+	  <li>CVE-2021-25284: webutils write passwords in cleartext to /var/log/salt/minion</li>
+	  <li>CVE-2021-3148: command injection in salt.utils.thin.gen_thin()</li>
+	  <li>CVE-2020-35662: Several places where Salt was not verifying the SSL cert by default.</li>
+	  <li>CVE-2021-3144: eauth Token can be used once after expiration.</li>
+	  <li>CVE-2020-28972: Code base not validating SSL/TLS certificate of the server, which might allow attackers to obtain sensitive information via a man-in-the-middle attack</li>
+	  <li>CVE-2020-28243: Local Privilege Escalation in the Minion.</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>"https://saltproject.io/security_announcements/active-saltstack-cve-release-2021-feb-25/"</url>
+      <cvename>CVE-2021-3197</cvename>
+      <cvename>CVE-2021-25281</cvename>
+      <cvename>CVE-2021-25282</cvename>
+      <cvename>CVE-2021-25283</cvename>
+      <cvename>CVE-2021-25284</cvename>
+      <cvename>CVE-2021-3148</cvename>
+      <cvename>CVE-2020-35662</cvename>
+      <cvename>CVE-2021-3144</cvename>
+      <cvename>CVE-2020-28972</cvename>
+      <cvename>CVE-2020-28243</cvename>
+    </references>
+    <dates>
+      <discovery>2021-02-25</discovery>
+      <entry>2021-03-03</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="52bd2d59-4ab5-4bef-a599-7aac4e92238b">
+    <topic>vault -- unauthenticated license read</topic>
+    <affects>
+      <package>
+	<name>vault</name>
+	<range><lt>1.6.3</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>vault developers report:</p>
+	<blockquote cite="https://github.com/hashicorp/vault/releases/tag/v1.6.3">
+	  <p>Limited Unauthenticated License Read: We addressed a security vulnerability that allowed for the unauthenticated reading of Vault licenses from DR Secondaries.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-27668</cvename>
+      <url>https://github.com/hashicorp/vault/releases/tag/v1.6.3</url>
+    </references>
+    <dates>
+      <discovery>2021-02-26</discovery>
+      <entry>2021-02-27</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="31ad2f10-7711-11eb-b87a-901b0ef719ab">
+    <topic>FreeBSD -- jail_remove(2) fails to kill all jailed processes</topic>
+    <affects>
+      <package>
+	<name>FreeBSD-kernel</name>
+	<range><ge>12.2</ge><lt>12.2_4</lt></range>
+	<range><ge>11.4</ge><lt>11.4_8</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	<p>Due to a race condition in the jail_remove(2) implementation, it
+	may fail to kill some of the processes.</p>
+	<h1>Impact:</h1>
+	<p>A process running inside a jail can avoid being killed during jail
+	termination.  If a jail is subsequently started with the same root
+	path, a lingering jailed process may be able to exploit the window
+	during which a devfs filesystem is mounted but the jail's devfs
+	ruleset has not been applied, to access device nodes which are
+	ordinarily inaccessible.  If the process is privileged, it may be able
+	to escape the jail and gain full access to the system.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2020-25581</cvename>
+      <freebsdsa>SA-21:04.jail_remove</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2021-02-24</discovery>
+      <entry>2021-02-25</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="5b8c6e1e-770f-11eb-b87a-901b0ef719ab">
+    <topic>FreeBSD -- Xen grant mapping error handling issues</topic>
+    <affects>
+      <package>
+	<name>FreeBSD-kernel</name>
+	<range><ge>12.2</ge><lt>12.2_4</lt></range>
+	<range><ge>11.4</ge><lt>11.4_8</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	<p>Grant mapping operations often occur in batch hypercalls, where a
+	number of operations are done in a single hypercall, the success or
+	failure of each one reported to the backend driver, and the backend
+	driver then loops over the results, performing follow-up actions
+	based on the success or failure of each operation.</p>
+	<p>Unfortunately, when running in HVM/PVH mode, the FreeBSD backend
+	drivers mishandle this: Some errors are ignored, effectively implying
+	their success from the success of related batch elements. In other
+	cases, errors resulting from one batch element lead to further batch
+	elements not being inspected, and hence successful ones to not be
+	possible to properly unmap upon error recovery.</p>
+	<h1>Impact:</h1>
+	<p>A malicious or buggy frontend driver may be able to cause resource
+	leaks in the domain running the corresponding backend driver.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-26932</cvename>
+      <freebsdsa>SA-21:06.xen</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2021-02-24</discovery>
+      <entry>2021-02-25</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="bba850fd-770e-11eb-b87a-901b0ef719ab">
+    <topic>FreeBSD -- jail_attach(2) relies on the caller to change the cwd</topic>
+    <affects>
+      <package>
+	<name>FreeBSD-kernel</name>
+	<range><ge>12.2</ge><lt>12.2_4</lt></range>
+	<range><ge>11.4</ge><lt>11.4_8</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	<p>When a process, such as jexec(8) or killall(1), calls jail_attach(2)
+	to enter a jail, the jailed root can attach to it using ptrace(2) before
+	the current working directory is changed.</p>
+	<h1>Impact:</h1>
+	<p>A process with superuser privileges running inside a jail could change
+	the root directory outside of the jail, thereby gaining full read and
+	writing access to all files and directories in the system.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2020-25582</cvename>
+      <freebsdsa>SA-21:05.jail_chdir</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2021-02-24</discovery>
+      <entry>2021-02-25</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a8654f1d-770d-11eb-b87a-901b0ef719ab">
+    <topic>FreeBSD -- login.access fails to apply rules</topic>
+    <affects>
+      <package>
+	<name>FreeBSD</name>
+	<range><ge>12.2</ge><lt>12.2_4</lt></range>
+	<range><ge>11.4</ge><lt>11.4_8</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	<p>A regression in the login.access(5) rule processor has the effect
+	of causing rules to fail to match even when they should not. This
+	means that rules denying access may be ignored.</p>
+	<h1>Impact:</h1>
+	<p>The configuration in login.access(5) may not be applied, permitting
+	login access to users even when the system is configured to deny it.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2020-25580</cvename>
+      <freebsdsa>SA-21:03.pam_login_access</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2021-02-24</discovery>
+      <entry>2021-02-25</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="0e38b8f8-75dd-11eb-83f2-8c164567ca3c">
+    <topic>redis -- Integer overflow on 32-bit systems</topic>
+    <affects>
+      <package>
+	<name>redis-devel</name>
+	<range><lt>6.2.0</lt></range>
+      </package>
+      <package>
+	<name>redis</name>
+	<range><lt>6.0.11</lt></range>
+      </package>
+      <package>
+	<name>redis5</name>
+	<range><lt>5.0.11</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Redis Development team reports:</p>
+	<blockquote cite="https://github.com/redis/redis/releases/tag/6.2.0">
+	  <p>Redis 4.0 or newer uses a configurable limit for
+	  the maximum supported bulk input size. By default,
+	  it is 512MB which is a safe value for all platforms.
+	  If the limit is significantly increased, receiving a
+	  large request from a client may trigger several
+	  integer overflow scenarios, which would result with
+	  buffer overflow and heap corruption.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-21309</cvename>
+    </references>
+    <dates>
+      <discovery>2021-02-22</discovery>
+      <entry>2021-02-23</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="3e9624b3-e92b-4460-8a5a-93247c52c5a1">
+    <topic>zeek -- Remote crash vulnerability</topic>
+    <affects>
+      <package>
+	<name>zeek</name>
+	<range><lt>3.0.13</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Jon Siwek of Corelight reports:</p>
+	<blockquote cite="https://github.com/zeek/zeek/releases/tag/v3.0.13">
+	  <p>Fix ASCII Input reader's treatment of input files
+	  containing null-bytes. An input file containing null-bytes
+	  could lead to a buffer-over-read, crash Zeek, and be
+	  exploited to cause Denial of Service. </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://github.com/zeek/zeek/releases/tag/v3.0.13</url>
+    </references>
+    <dates>
+      <discovery>2021-02-10</discovery>
+      <entry>2021-02-22</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="9c03845c-7398-11eb-bc0e-2cf05d620ecc">
     <topic>raptor2 -- malformed input file can lead to a segfault</topic>
     <affects>
