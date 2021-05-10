@@ -1,9 +1,8 @@
-# $FreeBSD$
 
 PORTNAME=	uefi-edk2-bhyve-csm
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.2
-PORTREVISION=	2
+PORTREVISION=	3
 PORTEPOCH=	1
 CATEGORIES=	sysutils
 
@@ -20,7 +19,7 @@ BUILD_DEPENDS=	bash:shells/bash \
 
 USES=		gmake \
 		python:2.7,build
-USE_GCC=	4.8
+USE_GCC=	4.8:build
 USE_GITHUB=	yes
 GH_ACCOUNT=	freebsd
 GH_PROJECT=	uefi-edk2
