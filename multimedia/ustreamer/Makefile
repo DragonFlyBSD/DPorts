@@ -1,8 +1,7 @@
-# $FreeBSD$
 
 PORTNAME=	ustreamer
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.17
+DISTVERSION=	3.23
 CATEGORIES=	multimedia net
 
 MAINTAINER=	yuri@FreeBSD.org
