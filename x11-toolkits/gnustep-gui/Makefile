@@ -1,5 +1,4 @@
 # Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	gnustep-gui
 DISTVERSIONPREFIX=	gui-
@@ -19,6 +18,8 @@ LIB_DEPENDS+=	libicui18n.so:devel/icu
 LIB_DEPENDS+=	libsndfile.so:audio/libsndfile
 LIB_DEPENDS+=	libao.so:audio/libao
 LIB_DEPENDS+=	libflite.so:audio/flite
+
+BROKEN_FreeBSD_11=	compiler segfault
 
 USES=		gnustep jpeg pkgconfig xorg
 USE_GNUSTEP=	base build
