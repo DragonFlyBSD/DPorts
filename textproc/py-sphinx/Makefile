@@ -1,8 +1,7 @@
 # Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	sphinx
-PORTVERSION=	3.4.3
+PORTVERSION=	3.5.2
 PORTEPOCH=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	CHEESESHOP
