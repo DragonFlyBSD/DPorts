@@ -1,5 +1,4 @@
 # Created by: Oliver Eikemeier
-# $FreeBSD$
 
 PORTNAME=		bash
 PATCHLEVEL=		4
@@ -59,10 +58,11 @@ CONFIGURE_ARGS+=	--without-bash-malloc \
 MAKE_ARGS+=	TERMCAP_LIB=-lncursesw
 
 .if empty(PKGNAMESUFFIX)
-CONFLICTS+=		bash-static-[0-9]*
+CONFLICTS+=	bash-static-[0-9]*
 .else
-CONFLICTS+=		bash-[0-9]*
+CONFLICTS+=	bash-[0-9]*
 .endif
+CONFLICTS+=	bashc
 
 .include <bsd.port.options.mk>
 
