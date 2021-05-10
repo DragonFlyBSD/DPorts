@@ -1,9 +1,7 @@
 # Created by: Ivan Lago <ivan.lago@ifom-ieo-campus.it>
-# $FreeBSD$
 
 PORTNAME=	syslog-ng
-DISTVERSION=	3.30.1
-PORTREVISION=	4
+DISTVERSION=	3.31.2
 CATEGORIES=	sysutils
 MASTER_SITES=	https://github.com/balabit/syslog-ng/releases/download/syslog-ng-${DISTVERSION}/
 
