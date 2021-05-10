@@ -1,8 +1,7 @@
-# $FreeBSD$
 
 PORTNAME=	cpp-httplib
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.8.4
+DISTVERSION=	0.8.6
 CATEGORIES=	www devel
 
 MAINTAINER=	yuri@FreeBSD.org
