@@ -1,5 +1,4 @@
 # Created by: pb@FreeBSD.org
-# $FreeBSD$
 
 PORTNAME=	dvdauthor
 PORTVERSION=	0.7.2.20190419
@@ -21,7 +20,6 @@ LIB_DEPENDS=	libdvdread.so:multimedia/libdvdread \
 USE_GITHUB=	yes
 GH_ACCOUNT=	ldo
 GH_TAGNAME=	d5bb0b
-WRKSRC=		${WRKDIR}/${PORTNAME}-${GH_TAGNAME}
 
 USES=		autoreconf:build bison:alias gettext-tools \
 		gmake gnome iconv localbase pkgconfig
