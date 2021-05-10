@@ -1,9 +1,9 @@
 # Created by: jseger@FreeBSD.org
-# $FreeBSD$
 #    $MCom: ports/lang/guile/Makefile,v 1.1 2006/09/12 14:57:06 ahze Exp $
 
 PORTNAME=	guile
 PORTVERSION=	3.0.5
+PORTREVISION=	1
 CATEGORIES=	lang scheme
 MASTER_SITES=	GNU
 
@@ -52,8 +52,5 @@ post-patch:
 
 post-patch-THREADS-on:
 	@${REINPLACE_CMD} -e 's|bdw-gc|bdw-gc-threaded|g' ${WRKSRC}/configure
-
-post-install:
-	${FIND} ${STAGEDIR}${PREFIX}/lib/guile/${PORTVERSION:R}/ccache/ -type f -name '*\.go' -exec ${STRIP_CMD} {} \;
 
 .include <bsd.port.mk>
