@@ -1,5 +1,4 @@
 # Created by: ijliao
-# $FreeBSD$
 
 PORTNAME=	gsasl
 PORTVERSION=	1.10.0
@@ -38,9 +37,6 @@ GSSAPI_MIT_USES=	gssapi:mit
 GSSAPI_NONE_CONFIGURE_ON=	--disable-gssapi
 NLS_CONFIGURE_ENABLE=	nls
 NLS_USES=		gettext
-
-post-patch:
-	@${REINPLACE_CMD} -e '/^en@/d' ${WRKSRC}/lib/po/LINGUAS
 
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR} ${STAGEDIR}${DOCSDIR}/reference
