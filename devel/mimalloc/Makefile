@@ -1,9 +1,8 @@
 # Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	mimalloc
-PORTVERSION=	1.1.0
 DISTVERSIONPREFIX=	v
+DISTVERSION=	2.0.0
 CATEGORIES=	devel
 
 MAINTAINER=	ehaupt@FreeBSD.org
@@ -12,14 +11,16 @@ COMMENT=	General-purpose allocator with excellent performance characteristics
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		cmake compiler:c11
+BUILD_DEPENDS_i386=	libatomic_ops>0:devel/libatomic_ops
+
+USES=		cmake compiler:gcc-c++11-lib
 
 USE_GITHUB=	yes
-USE_LDCONFIG=	yes
-
 GH_ACCOUNT=	microsoft
 
-# shows broken links: 400: Invalid request
+LDFLAGS_i386+=	-latomic
+
+# ci pipeline creates transient tags
 PORTSCOUT=	ignore:1
 
 .include <bsd.port.mk>
