@@ -1,8 +1,7 @@
 # Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	aws-sdk-appflow
-PORTVERSION=	1.6.0
+PORTVERSION=	1.7.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
