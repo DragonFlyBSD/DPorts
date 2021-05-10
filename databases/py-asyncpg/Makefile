@@ -1,5 +1,4 @@
 # Created by: Babak Farrokhi <farrokhi@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	asyncpg
 PORTVERSION=	0.22.0
@@ -20,8 +19,8 @@ OPTIONS_DEFINE=	DOCS
 PORTDOCS=	PKG-INFO README.rst
 
 post-install:
-	${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/asyncpg/protocol/protocol.so
-	${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/asyncpg/pgproto/pgproto.so
+	@${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/asyncpg/protocol/protocol*.so
+	@${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/asyncpg/pgproto/pgproto*.so
 
 post-install-DOCS-on:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}/
