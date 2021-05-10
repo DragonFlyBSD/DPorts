@@ -1,8 +1,7 @@
 # Created by: Sergey Skvortsov <skv@protey.ru>
-# $FreeBSD$
 
 PORTNAME=	redis
-PORTVERSION=	6.0.10
+PORTVERSION=	6.0.13
 CATEGORIES=	databases
 MASTER_SITES=	https://download.redis.io/releases/
 
