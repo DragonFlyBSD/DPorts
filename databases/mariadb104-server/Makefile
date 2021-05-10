@@ -1,8 +1,7 @@
 # Created by: Bernard Spil <brnrd@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME?=	mariadb
-PORTVERSION=	10.4.17
+PORTVERSION=	10.4.18
 PORTREVISION?=	0
 CATEGORIES=	databases
 MASTER_SITES=	http://mirrors.supportex.net/${SITESDIR}/ \
