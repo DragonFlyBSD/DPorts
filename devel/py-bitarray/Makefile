@@ -1,8 +1,7 @@
 # Created by: Sofian Brabez <sbrabez@gmail.com>
-# $FreeBSD$
 
 PORTNAME=	bitarray
-PORTVERSION=	1.6.3
+PORTVERSION=	1.8.1
 CATEGORIES=	devel python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
