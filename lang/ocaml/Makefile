@@ -1,5 +1,4 @@
 # Created by: Kiriyama Kazuhiko <kiri@kiri.toba-cmt.ac.jp>
-# $FreeBSD$
 # for committer: bump PORTREVISION for math/facile whenever ocaml gets updated
 
 PORTNAME=	ocaml
@@ -36,6 +35,7 @@ ALL_TARGET=	world.opt
 STRIP=
 SSP_UNSAFE=	yes
 MAKE_JOBS_UNSAFE=	yes
+LDFLAGS_armv6=	-Wl,-znotext
 LDFLAGS_armv7=	-Wl,-znotext
 LDFLAGS_i386=	-Wl,-znotext
 
@@ -165,7 +165,7 @@ post-install:
 	${INSTALL_DATA} ${_DISTDIR}${DOCSDISTNAME}-refman.pdf ${STAGEDIR}${DOCSDIR}
 .endif
 # Spacetime profiling is only available for native code on 64-bit targets
-.if ${ARCH} == armv7 || ${ARCH} == i386 || ${ARCH} == powerpc
+.if ${ARCH} == armv6 || ${ARCH} == armv7 || ${ARCH} == i386 || ${ARCH} == powerpc
 	@${REINPLACE_CMD} -e '/raw_spacetime_lib/d' ${TMPPLIST}
 .endif
 
