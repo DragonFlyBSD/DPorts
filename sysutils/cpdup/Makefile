@@ -1,11 +1,10 @@
 # Created by: Matthew Dillon <dillon@backplane.com>
-# $FreeBSD$
 
 PORTNAME=	cpdup
 PORTVERSION=	1.22
 CATEGORIES=	sysutils
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	gmarco@giovannelli.it
 COMMENT=	Comprehensive filesystem mirroring and backup program
 
 LICENSE=	BSD2CLAUSE # clarified by Matthew Dillon himself
