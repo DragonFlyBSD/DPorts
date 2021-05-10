@@ -1,9 +1,9 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	ghdl
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.0.0
+PORTREVISION=	1
 CATEGORIES=	cad
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${PORTNAME}/commit/
