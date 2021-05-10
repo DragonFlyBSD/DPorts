@@ -1,8 +1,7 @@
-# $FreeBSD$
 
 PORTNAME=	mongodb
 DISTVERSIONPREFIX=	r
-DISTVERSION=	3.6.22
+DISTVERSION=	3.6.23
 CATEGORIES=	databases net
 MASTER_SITES=	https://fastdl.mongodb.org/src/ \
 		http://fastdl.mongodb.org/src/
