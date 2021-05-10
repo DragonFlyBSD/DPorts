@@ -1,8 +1,7 @@
 # Created by: Ka Ho Ng <khng300@gmail.com>
-# $FreeBSD$
 
 PORTNAME=	rime-cantonese
-DISTVERSION=	g20210208
+DISTVERSION=	g20210218
 CATEGORIES=	chinese textproc
 
 MAINTAINER=	khng300@gmail.com
@@ -28,7 +27,7 @@ OPTIONS_SUB=	yes
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	rime
-GH_TAGNAME=	40e6ab15124252307e0b321c8fe54e710392cc74
+GH_TAGNAME=	cbe80d3fd80c2679212cea68417f536eeba30395
 
 NO_ARCH=	yes
 
