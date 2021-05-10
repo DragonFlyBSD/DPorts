@@ -1,8 +1,7 @@
 # Created by: neuroworker@gmail.com
-# $FreeBSD$
 
 PORTNAME=	instead
-PORTVERSION=	3.3.3
+PORTVERSION=	3.3.4
 CATEGORIES=	games
 MASTER_SITES=	SF
 DISTNAME=	${PORTNAME}_${PORTVERSION}
