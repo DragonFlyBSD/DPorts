@@ -1,8 +1,7 @@
 # Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	aws-sdk-emr
-PORTVERSION=	1.41.0
+PORTVERSION=	1.42.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
