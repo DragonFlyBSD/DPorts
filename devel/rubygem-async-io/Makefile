@@ -1,5 +1,4 @@
 # Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	async-io
 PORTVERSION=	1.30.2
@@ -7,7 +6,7 @@ CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	Provides support for asynchonous TCP, UDP, UNIX and SSL sockets
+COMMENT=	Provides support for asynchronous TCP, UDP, Unix, and SSL sockets
 
 LICENSE=	MIT
 
