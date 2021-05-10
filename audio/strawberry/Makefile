@@ -1,8 +1,6 @@
-# $FreeBSD$
 
 PORTNAME=	strawberry
-DISTVERSION=	0.8.5
-PORTREVISION=	1
+DISTVERSION=	0.9.1
 CATEGORIES=	audio
 MASTER_SITES=	https://github.com/strawberrymusicplayer/${PORTNAME}/releases/download/${DISTVERSION}/ \
 		https://files.jkvinge.net/packages/strawberry/
@@ -47,7 +45,6 @@ TEST_TARGET=	strawberry_test
 OPTIONS_DEFINE=		AUDIOCD IPOD MOODBAR MTPDEV MUSICBRAINZ \
 			SUBSONIC TIDAL VLC
 
-APPLEDEV_IMPLIES=	IPOD
 OPTIONS_DEFAULT=	PULSEAUDIO MOODBAR
 
 OPTIONS_MULTI=		SOUND
