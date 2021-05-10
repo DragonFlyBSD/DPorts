@@ -1,8 +1,7 @@
 # Created by: Alexander Moisseev <moiseev@mezonplus.ru>
-# $FreeBSD$
 
 PORTNAME=	thunderbird_labels
-PORTVERSION=	1.4.8
+PORTVERSION=	1.4.10
 DISTVERSIONPREFIX=	v
 CATEGORIES=	mail
 PKGNAMEPREFIX=	roundcube-
