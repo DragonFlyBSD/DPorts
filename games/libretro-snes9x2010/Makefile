@@ -1,7 +1,6 @@
-# $FreeBSD$
 
 PORTNAME=	libretro-snes9x2010
-PORTVERSION=	0.20200504
+PORTVERSION=	0.20210214
 CATEGORIES=	games
 
 MAINTAINER=	menelkir@itroll.org
@@ -20,12 +19,20 @@ NO_CDROM=	Commercial users must seek permission from copyright holders.
 USE_GITHUB=	yes
 GH_ACCOUNT=	libretro
 GH_PROJECT=	snes9x2010
-GH_TAGNAME=	ba9f224
+GH_TAGNAME=	a3e65b8
 
 PLIST_FILES=	lib/libretro/snes9x2010_libretro.so
 
-do-install:
-	${MKDIR} ${STAGEDIR}/${PREFIX}/lib/libretro;
-	${INSTALL_LIB} ${WRKSRC}/snes9x2010_libretro.so ${STAGEDIR}/${PREFIX}/lib/libretro;
+.include <bsd.port.pre.mk>
 
-.include <bsd.port.mk>
+.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1200000
+MAKE_ENV=	LTO=
+.else
+MAKE_ENV=	LTO=-flto  # may drop this branch on next port update
+.endif
+
+do-install:
+	@${MKDIR} ${STAGEDIR}/${PREFIX}/lib/libretro
+	${INSTALL_LIB} ${WRKSRC}/snes9x2010_libretro.so ${STAGEDIR}/${PREFIX}/lib/libretro
+
+.include <bsd.port.post.mk>
