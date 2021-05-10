@@ -1,8 +1,7 @@
 # Created by: Oddbjorn Steffensen <oddbjorn@tricknology.org>
-# $FreeBSD$
 
 PORTNAME=	web2ldap
-PORTVERSION=	1.5.114
+PORTVERSION=	1.5.116
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP https://www.web2ldap.de/download/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
