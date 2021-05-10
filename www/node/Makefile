@@ -1,8 +1,7 @@
-# $FreeBSD$
 
 PORTNAME=	node
 DISTVERSIONPREFIX=	v
-DISTVERSION=	15.8.0
+DISTVERSION=	15.14.0
 CATEGORIES=	www
 MASTER_SITES=	http://nodejs.org/dist/v${DISTVERSION}/
 
@@ -15,6 +14,9 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 BROKEN_SSL=		libressl libressl-devel
 BROKEN_SSL_REASON=	Node.js 15.x requires OpenSSL 1.1.x or the BUNDLED_SSL option enabled
 ONLY_FOR_ARCHS=		aarch64 amd64 armv6 armv7 i386 powerpc64 powerpc64le
+
+USES=		compiler:c++11-lib gmake python:build pkgconfig \
+		localbase shebangfix
 
 OPTIONS_DEFINE=		BUNDLED_SSL DOCS NLS DTRACE
 OPTIONS_DEFAULT=	DTRACE
@@ -44,9 +46,6 @@ NLS_LIB_DEPENDS=	libicui18n.so:devel/icu
 
 DTRACE_CONFIGURE_ON=	--with-dtrace
 
-USES=		compiler:c++11-lib gmake python:build pkgconfig \
-		localbase shebangfix
-
 HAS_CONFIGURE=	yes
 
 CONFLICTS_INSTALL=	node10-[0-9]* node12-[0-9]* node14-[0-9]*
@@ -72,7 +71,7 @@ MAKE_ENV+=	CC.host=${CC} CFLAGS.host="${CFLAGS}" \
 
 BUILD_DEPENDS+=	brotli>=1.0.9,1:archivers/brotli \
 		c-ares>=1.17.1:dns/c-ares \
-		libuv>=1.40.0:devel/libuv \
+		libuv>=1.41.0:devel/libuv \
 		libnghttp2>=1.42.0:www/libnghttp2 \
 		
 LIB_DEPENDS+=	libbrotlidec.so:archivers/brotli \
