@@ -1,8 +1,8 @@
 # Created by: KIMURA Yasuhiro <yasu@utahime.org>
-# $FreeBSD$
 
 PORTNAME=	yaml-mode.el
 PORTVERSION=	0.0.15
+PORTREVISION=	1
 CATEGORIES=	textproc elisp
 PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
 
