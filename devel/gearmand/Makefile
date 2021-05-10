@@ -1,5 +1,4 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD$
 
 PORTNAME=	gearmand
 PORTVERSION=	1.0.6
@@ -9,6 +8,9 @@ MASTER_SITES=	http://launchpad.net/gearmand/1.0/${PORTVERSION}/+download/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Gearman C Server and Library
+
+BROKEN_FreeBSD_12=	error: use of undeclared identifier 'abi'
+BROKEN_FreeBSD_13=	error: use of undeclared identifier 'abi'
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sphinx>=0,1:textproc/py-sphinx@${PY_FLAVOR}
 LIB_DEPENDS=	libboost_program_options.so:devel/boost-libs \
