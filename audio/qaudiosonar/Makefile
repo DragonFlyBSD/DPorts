@@ -1,9 +1,8 @@
 # Created by: Hans Petter Selasky <hselasky@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	qaudiosonar
 DISTVERSIONPREFIX=	v
-DISTVERSION=		1.7.2
+DISTVERSION=		1.7.4
 CATEGORIES=	audio
 
 MAINTAINER=	hselasky@FreeBSD.org
