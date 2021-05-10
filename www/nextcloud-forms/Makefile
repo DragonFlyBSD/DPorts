@@ -1,8 +1,7 @@
 # Created by: Bernard Spil <brnrd@freebsd.org>
-# $FreeBSD$
 
 PORTNAME=	forms
-PORTVERSION=	2.1.0
+PORTVERSION=	2.2.3
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www
 MASTER_SITES=	https://github.com/${PKGNAMEPREFIX:S/-//}/${PORTNAME}/releases/download/${DISTVERSIONPREFIX}${PORTVERSION}/
@@ -20,7 +19,6 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 RUN_DEPENDS=	nextcloud${PHP_PKGNAMESUFFIX}>=17:www/nextcloud@${PHP_FLAVOR}
 
 USES=		php:flavors
-IGNORE_WITH_PHP=	80
 NO_BUILD=	yes
 NO_ARCH=	yes
 
