@@ -1,9 +1,8 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD$
 
 PORTNAME=	libuv
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.40.0
+DISTVERSION=	1.41.0
 CATEGORIES=	devel
 MASTER_SITES=	https://dist.libuv.org/dist/v${DISTVERSION}/
 
