@@ -1,5 +1,4 @@
 # Created by: Francisco Cabrita <include@npf.pt.freebsd.org>
-# $FreeBSD$
 
 PORTNAME=	joomla
 DISTVERSION=	3-9-24
@@ -38,7 +37,7 @@ WWWDIR=		${PREFIX}/www/${PORTNAME}${PORTVERSION:R:R}
 
 .include <bsd.port.options.mk>
 
-.if ${FLAVOR} != php80
+.if ${FLAVOR} != php80 && !defined(PACKAGE_BUILDING)
 USE_PHP+=	pdf
 .endif
 
