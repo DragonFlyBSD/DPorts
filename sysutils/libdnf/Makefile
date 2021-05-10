@@ -1,7 +1,6 @@
-# $FreeBSD$
 
 PORTNAME=	libdnf
-DISTVERSION=	0.55.2
+DISTVERSION=	0.60.0
 CATEGORIES=	sysutils
 
 MAINTAINER=	yuri@FreeBSD.org
