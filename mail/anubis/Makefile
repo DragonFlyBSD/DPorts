@@ -1,9 +1,8 @@
 # Created by: ijliao
-# $FreeBSD$
 
 PORTNAME=	anubis
 PORTVERSION=	4.2
-PORTREVISION=	12
+PORTREVISION=	13
 CATEGORIES=	mail
 MASTER_SITES=	GNU
 
@@ -91,7 +90,6 @@ PGSQL_USES=		pgsql
 PGSQL_CONFIGURE_WITH=	postgres
 PGSQL_VARS=		REQUIRE+=postgresql
 
-SOCKS_DESC=		SOCKS proxy support
 SOCKS_CONFIGURE_WITH=	socks-proxy
 
 .include <bsd.port.options.mk>
