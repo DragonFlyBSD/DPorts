@@ -1,8 +1,8 @@
 # Created by: Michael Reifenberger <mr@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	openscad
 PORTVERSION=	2021.01.01
+PORTREVISION=	2
 #PORTREVISION=	1
 CATEGORIES=	cad
 
