@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	solvespace
 PORTVERSION=	2.3
@@ -6,7 +5,7 @@ DISTVERSIONPREFIX=	v
 PORTREVISION=	5
 CATEGORIES=	cad
 
-MAINTAINER=	swills@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Parametric 2d/3d CAD
 
 LICENSE=	GPLv3+
