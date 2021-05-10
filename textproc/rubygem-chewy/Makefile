@@ -1,8 +1,7 @@
 # Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	chewy
-PORTVERSION=	6.0.0
+PORTVERSION=	7.0.0
 CATEGORIES=	textproc rubygems
 MASTER_SITES=	RG
 
