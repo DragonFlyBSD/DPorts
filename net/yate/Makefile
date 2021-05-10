@@ -1,5 +1,4 @@
 # Created by: Valery Komarov <komarov@valerka.net>
-# $FreeBSD$
 
 PORTNAME=	yate
 PORTVERSION=	6.3.0
@@ -51,7 +50,6 @@ DAHDI_DESC=	Dahdi support
 H323_DESC=	H323 software channel/protocol support
 ILBC_DESC=	iLBC narrowband speech codec support
 SCTP_DESC=	Stream Control Transmission Protocol support
-SPANDSP_DESC=	Spandsp faxing support
 
 OPTIONS_SUB=	yes
 
