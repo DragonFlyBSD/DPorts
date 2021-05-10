@@ -1,9 +1,8 @@
 # Created by: ruslan@shevchenko.kiev.ua
-# $FreeBSD$
 
 PORTNAME=	erlang
 DISTVERSIONPREFIX=	OTP-
-DISTVERSION=	21.3.8.20
+DISTVERSION=	21.3.8.21
 PORTREVISION=	0
 PORTEPOCH=	4
 CATEGORIES=	lang parallel java
