@@ -1,7 +1,6 @@
-# $FreeBSD$
 
 PORTNAME=	node
-PORTVERSION=	10.23.3
+PORTVERSION=	10.24.1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www
 MASTER_SITES=	http://nodejs.org/dist/v${PORTVERSION}/
@@ -13,9 +12,14 @@ COMMENT=	V8 JavaScript for client and server
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+DEPRECATED=		Node.js v10.x reaches end-of-life on 2021-04-30, see https://github.com/nodejs/Release
+EXPIRATION_DATE=	2021-04-30
 BROKEN_SSL=		libressl libressl-devel
 BROKEN_SSL_REASON=	Node.js 10.x LTS requires OpenSSL 1.1.x or the BUNDLED_SSL option enabled
 ONLY_FOR_ARCHS=		aarch64 amd64 armv6 armv7 i386 powerpc64 powerpc64le
+
+USES=		compiler:c++11-lib gmake python:2.7,build pkgconfig \
+		localbase shebangfix
 
 OPTIONS_DEFINE=		BUNDLED_SSL DOCS NLS DTRACE
 OPTIONS_DEFAULT=	DTRACE
@@ -44,9 +48,6 @@ NLS_BUILD_DEPENDS=	icu>=64.2:devel/icu
 NLS_LIB_DEPENDS=	libicui18n.so:devel/icu
 
 DTRACE_CONFIGURE_ON=	--with-dtrace
-
-USES=		compiler:c++11-lib gmake python:2.7,build pkgconfig \
-		localbase shebangfix
 
 HAS_CONFIGURE=	yes
 
