@@ -10,6 +10,7 @@ lib/daq/daq_divert.so
 lib/daq/daq_dump.so
 lib/daq/daq_fst.so
 lib/daq/daq_pcap.so
+lib/daq/daq_savefile.so
 lib/daq/daq_trace.so
 lib/libdaq.a
 lib/libdaq.so
@@ -20,6 +21,7 @@ lib/libdaq_static_divert.a
 lib/libdaq_static_dump.a
 lib/libdaq_static_fst.a
 lib/libdaq_static_pcap.a
+lib/libdaq_static_savefile.a
 lib/libdaq_static_trace.a
 libdata/pkgconfig/libdaq.pc
 libdata/pkgconfig/libdaq_static_bpf.pc
@@ -27,4 +29,5 @@ libdata/pkgconfig/libdaq_static_divert.pc
 libdata/pkgconfig/libdaq_static_dump.pc
 libdata/pkgconfig/libdaq_static_fst.pc
 libdata/pkgconfig/libdaq_static_pcap.pc
+libdata/pkgconfig/libdaq_static_savefile.pc
 libdata/pkgconfig/libdaq_static_trace.pc
