@@ -1,13 +1,12 @@
 # Created by: Meno Abels <meno.abels@adviser.com>
-# $FreeBSD$
 
 PORTNAME=	po4a
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.62
+DISTVERSION=	0.63
 PORTREVISION=	1
 CATEGORIES=	textproc perl5
 
-MAINTAINER=	garga@FreeBSD.org
+MAINTAINER=	dbaio@FreeBSD.org
 COMMENT=	Brings gettext translation tools to all kinds of docs
 
 LICENSE=	GPLv2
@@ -31,5 +30,7 @@ USE_PERL5=	modbuild
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	mquinson
+
+NO_ARCH=	yes
 
 .include <bsd.port.mk>
