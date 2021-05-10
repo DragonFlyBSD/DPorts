@@ -1,5 +1,4 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	freeblocks
 PORTVERSION=	0.5
@@ -11,9 +10,6 @@ COMMENT=	Puzzle game with similar gameplay to Tetris Attack
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
-
-BROKEN_FreeBSD_13=	ld: error: duplicate symbol: BLOCK_MOVE_SPEED
-BROKEN_FreeBSD_14=	ld: error: duplicate symbol: BLOCK_MOVE_SPEED
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	dorkster
