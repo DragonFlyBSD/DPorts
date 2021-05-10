@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	lsp-plugins
 DISTVERSION=	1.1.29
@@ -25,9 +24,6 @@ GH_ACCOUNT=	sadko4u
 USE_GNOME=	cairo
 USE_XORG=	x11
 USE_GL=		gl
-
-USE_GITHUB=	yes
-GH_ACCOUNT=	sadko4u
 
 BINARY_ALIAS=	g++=${CXX} c++=${CXX}
 MAKE_ARGS=	BUILD_MODULES='lv2' ETC_PATH=${PREFIX}/etc VERSION=${DISTVERSION}
