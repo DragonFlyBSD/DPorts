@@ -1,8 +1,7 @@
 # Created by: eivind
-# $FreeBSD$
 
 PORTNAME=	isync
-PORTVERSION=	1.4.0
+PORTVERSION=	1.4.1
 CATEGORIES=	mail
 MASTER_SITES=	SF
 
