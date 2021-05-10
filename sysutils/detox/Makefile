@@ -1,8 +1,7 @@
 # Created by: Doug Harple
-# $FreeBSD$
 
 PORTNAME=	detox
-PORTVERSION=	1.4.1
+PORTVERSION=	1.4.2
 DISTVERSIONPREFIX=v
 CATEGORIES=	sysutils
 
