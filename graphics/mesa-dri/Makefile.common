@@ -8,8 +8,6 @@
 #    - graphics/mesa-dri
 #    - graphics/mesa-libs
 #    - lang/clover
-#
-# $FreeBSD$
 
 MESAVERSION=	${MESABASEVERSION}${MESASUBVERSION:C/^(.)/.\1/}
 MESADISTVERSION=${MESABASEVERSION}${MESASUBVERSION:C/^(.)/-\1/}
@@ -96,9 +94,9 @@ BINARY_ALIAS+=	python3=${PYTHON_VERSION}
 
 LLVM_DEFAULT=	10
 .if ${OPSYS} != DragonFly
-BUILD_DEPENDS+=	llvm${LLVM_DEFAULT}>=10.0.1_1:devel/llvm${LLVM_DEFAULT}
+BUILD_DEPENDS+=	llvm-config${LLVM_DEFAULT}:devel/llvm${LLVM_DEFAULT}
 .if ${COMPONENT} != libs
-RUN_DEPENDS+=	llvm${LLVM_DEFAULT}>=10.0.1_1:devel/llvm${LLVM_DEFAULT}
+RUN_DEPENDS+=	llvm-config${LLVM_DEFAULT}:devel/llvm${LLVM_DEFAULT}
 .endif
 .endif
 
