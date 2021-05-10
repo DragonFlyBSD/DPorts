@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	openmvg
 DISTVERSIONPREFIX=	v
@@ -12,7 +11,7 @@ COMMENT=	Multiple View Geometry (MVG) library
 LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/../LICENSE
 
-ONLY_FOR_ARCHS=	amd64 i386 powerpc64
+ONLY_FOR_ARCHS=	amd64 i386 powerpc64 powerpc64le
 ONLY_FOR_ARCHS_REASON=	need to figure out which TARGET_ARCHITECTURE values correspond to other architectures, plus "generic" is broken
 
 HPP_DEPENDS=	cereal>0:devel/cereal
