@@ -1,5 +1,4 @@
 # Created by: Marc G. Fournier <scrappy@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME?=	postgresql
 DISTVERSION?=	13.2
@@ -88,7 +87,6 @@ CONFIGURE_ENV+=	PATH=${PREFIX}/bin:${PATH}
 .if defined(SERVER_ONLY)
 OPTIONS_DEFINE=	DTRACE LDAP INTDATE TZDATA XML DOCS
 LDAP_DESC=	Build with LDAP authentication support
-DTRACE_DESC=	Build with DTrace probes
 TZDATA_DESC=	Use internal timezone database
 XML_DESC=	Build with XML data type
 
@@ -173,9 +171,9 @@ OPTIMIZED_CFLAGS_CFLAGS=-O3 -funroll-loops
 DEBUG_CONFIGURE_ENABLE=	debug
 
 PLIST_SUB+=		PG_USER=${PG_USER} \
-			PG_USER_regex=\b${PG_USER}\b \
+			PG_USER_regex=[[:<:]]${PG_USER}[[:>:]] \
 			PG_GROUP=${PG_GROUP} \
-			PG_GROUP_regex=\b${PG_GROUP}\b
+			PG_GROUP_regex=[[:<:]]${PG_GROUP}[[:>:]]
 SUB_LIST+=		PG_GROUP=${PG_GROUP} \
 			PG_USER=${PG_USER} \
 			PG_UID=${PG_UID}
