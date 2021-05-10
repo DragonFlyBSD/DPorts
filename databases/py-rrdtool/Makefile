@@ -1,5 +1,4 @@
 # Created by: Daniel O'Connor
-# $FreeBSD$
 
 PORTNAME=	rrdtool
 DISTVERSION=	0.1.15
@@ -20,6 +19,6 @@ USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 
 post-install:
-	${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/rrdtool.so
+	${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/rrdtool*.so
 
 .include <bsd.port.mk>
