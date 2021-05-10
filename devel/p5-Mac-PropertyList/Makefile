@@ -1,8 +1,7 @@
 # Created by: Nobutaka Mantani <nobutaka@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	Mac-PropertyList
-PORTVERSION=	1.501
+PORTVERSION=	1.502
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
