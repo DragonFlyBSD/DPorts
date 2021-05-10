@@ -1,10 +1,9 @@
 # Created by: Randall Hopper <aa8vb@nc.rr.com>
-# $FreeBSD$
 
 PORTNAME=	osg
 PORTVERSION=	3.6.5
 DISTVERSIONPREFIX=	OpenSceneGraph-
-PORTREVISION=	16
+PORTREVISION=	18
 CATEGORIES=	graphics
 
 MAINTAINER=	amdmi3@FreeBSD.org
