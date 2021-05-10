@@ -1,8 +1,7 @@
 # Created by: Kozlov Sergey <kozlov.sergey.404@gmail.com>
-# $FreeBSD$
 
 PORTNAME=	django-tables2
-DISTVERSION=	2.3.3
+DISTVERSION=	2.3.4
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
