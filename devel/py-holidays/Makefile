@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	holidays
 PORTVERSION=	0.9.12
@@ -7,7 +6,7 @@ MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	gmm@tutanota.com
-COMMENT=	Generate country, province, & state specific holiday sets on the fly
+COMMENT=	Generate country, province, and state specific holiday sets on the fly
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
