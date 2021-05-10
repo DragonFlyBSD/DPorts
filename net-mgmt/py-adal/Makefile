@@ -1,5 +1,4 @@
 # Created by: Johannes Jost Meixner <johannes@perceivon.net>
-# $FreeBSD$
 
 PORTNAME=	adal
 PORTVERSION=	1.2.6
@@ -8,7 +7,7 @@ MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	Authentication ot Azure Active Directory for python apps
+COMMENT=	Authentication to Azure Active Directory for Python applications
 
 LICENSE=	MIT
 
