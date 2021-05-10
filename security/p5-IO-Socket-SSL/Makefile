@@ -1,8 +1,7 @@
 # Created by: scrappy
-# $FreeBSD$
 
 PORTNAME=	IO-Socket-SSL
-PORTVERSION=	2.069
+PORTVERSION=	2.070
 CATEGORIES=	security perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
