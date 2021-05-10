@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	cairo-dock
 PORTVERSION=	3.4.1
@@ -6,7 +5,7 @@ PORTREVISION=	5
 CATEGORIES=	deskutils
 
 MAINTAINER=	ports@FreeBSD.org
-COMMENT=	Cairo-Dock is a light and eye-candy dock
+COMMENT=	Lightweight and eye-candy dock (program launcher)
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE
