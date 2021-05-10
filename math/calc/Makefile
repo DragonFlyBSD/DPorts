@@ -1,8 +1,8 @@
 # Created by: jmz
-# $FreeBSD$
 
 PORTNAME=	calc
-PORTVERSION=	2.12.8.2
+PORTVERSION=	2.13.0.0
+DISTVERSIONPREFIX=	v
 CATEGORIES=	math
 
 MAINTAINER=	adamw@FreeBSD.org
