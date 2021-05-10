@@ -1,8 +1,7 @@
-# $FreeBSD$
-
 PORTNAME=	gh
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.6.0
+DISTVERSION=	1.8.1
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	lcook@FreeBSD.org
@@ -22,7 +21,7 @@ GH_TUPLE=	AlecAivazis:survey:v2.2.7:alecaivazis_survey_v2/vendor/github.com/Alec
 		alecthomas:chroma:v0.7.3:alecthomas_chroma/vendor/github.com/alecthomas/chroma \
 		briandowns:spinner:v1.11.1:briandowns_spinner/vendor/github.com/briandowns/spinner \
 		charmbracelet:glamour:1246d13c1684:charmbracelet_glamour/vendor/github.com/charmbracelet/glamour \
-		cli:browser:v1.0.0:cli_browser/vendor/github.com/cli/browser \
+		cli:browser:v1.1.0:cli_browser/vendor/github.com/cli/browser \
 		cli:oauth:v0.8.0:cli_oauth/vendor/github.com/cli/oauth \
 		cli:safeexec:v1.0.0:cli_safeexec/vendor/github.com/cli/safeexec \
 		cli:shurcooL-graphql:0f7232a2bf7e:cli_shurcool_graphql/vendor/github.com/shurcooL/graphql \
@@ -32,16 +31,21 @@ GH_TUPLE=	AlecAivazis:survey:v2.2.7:alecaivazis_survey_v2/vendor/github.com/Alec
 		dlclark:regexp2:v1.2.0:dlclark_regexp2/vendor/github.com/dlclark/regexp2 \
 		enescakir:emoji:v1.0.0:enescakir_emoji/vendor/github.com/enescakir/emoji \
 		fatih:color:v1.7.0:fatih_color/vendor/github.com/fatih/color \
-		go-yaml:yaml:eeeca48fe776:go_yaml_yaml/vendor/gopkg.in/yaml.v3 \
+		gabriel-vasile:mimetype:v1.1.2:gabriel_vasile_mimetype/vendor/github.com/gabriel-vasile/mimetype \
+		go-yaml:yaml:496545a6307b:go_yaml_yaml/vendor/gopkg.in/yaml.v3 \
 		golang:crypto:9e8e0b390897:golang_crypto/vendor/golang.org/x/crypto \
 		golang:net:ab3426394381:golang_net/vendor/golang.org/x/net \
-		golang:sys:669c56c373c4:golang_sys/vendor/golang.org/x/sys \
+		golang:sync:112230192c58:golang_sync/vendor/golang.org/x/sync \
+		golang:sys:635bc2c9138d:golang_sys/vendor/golang.org/x/sys \
 		golang:text:v0.3.4:golang_text/vendor/golang.org/x/text \
 		google:go-cmp:v0.5.2:google_go_cmp/vendor/github.com/google/go-cmp \
 		google:shlex:e7afc7fbc510:google_shlex/vendor/github.com/google/shlex \
 		hashicorp:go-version:v1.2.1:hashicorp_go_version/vendor/github.com/hashicorp/go-version \
 		henvic:httpretty:v0.0.6:henvic_httpretty/vendor/github.com/henvic/httpretty \
 		inconshreveable:mousetrap:v1.0.0:inconshreveable_mousetrap/vendor/github.com/inconshreveable/mousetrap \
+		itchyny:astgen-go:0da0671862a3:itchyny_astgen_go/vendor/github.com/itchyny/astgen-go \
+		itchyny:gojq:v0.12.1:itchyny_gojq/vendor/github.com/itchyny/gojq \
+		itchyny:timefmt-go:v0.1.1:itchyny_timefmt_go/vendor/github.com/itchyny/timefmt-go \
 		kballard:go-shellquote:95032a82bc51:kballard_go_shellquote/vendor/github.com/kballard/go-shellquote \
 		lucasb-eyer:go-colorful:v1.0.3:lucasb_eyer_go_colorful/vendor/github.com/lucasb-eyer/go-colorful \
 		mattn:go-colorable:v0.1.8:mattn_go_colorable/vendor/github.com/mattn/go-colorable \
@@ -96,9 +100,9 @@ post-install-COMPLETIONS-on:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/bash_completion.d
 	${INSTALL_DATA} ${GO_WRKSRC}/bash \
 		${STAGEDIR}${PREFIX}/etc/bash_completion.d/${PORTNAME}
-	@${MKDIR} ${STAGEDIR}${PREFIX}/share/fish/completions
+	@${MKDIR} ${STAGEDIR}${PREFIX}/share/fish/vendor_completions.d
 	${INSTALL_DATA} ${GO_WRKSRC}/fish \
-		${STAGEDIR}${PREFIX}/share/fish/completions/${PORTNAME}.fish
+		${STAGEDIR}${PREFIX}/share/fish/vendor_completions.d/${PORTNAME}.fish
 	@${MKDIR} ${STAGEDIR}${PREFIX}/share/zsh/site-functions
 	${INSTALL_DATA} ${GO_WRKSRC}/zsh \
 		${STAGEDIR}${PREFIX}/share/zsh/site-functions/_${PORTNAME}
