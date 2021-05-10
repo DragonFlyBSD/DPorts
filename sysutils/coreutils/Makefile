@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	coreutils
 PORTVERSION=	8.32
@@ -32,8 +31,6 @@ GMP_LIB_DEPENDS=	libgmp.so:math/gmp
 GMP_CONFIGURE_WITH=	gmp
 NLS_USES=	gettext
 NLS_CONFIGURE_ENABLE=	nls
-
-CONFLICTS=	idutils-[0-9]*
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LIBS+=		-L${LOCALBASE}/lib
