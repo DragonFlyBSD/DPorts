@@ -20,9 +20,6 @@ extra_commands="reload"
 load_rc_config hostapd
 run_rc_command "$1"
 #!/bin/sh
-#
-# $FreeBSD$
-#
 
 # PROVIDE: hostapd
 # REQUIRE: mountcritremote
