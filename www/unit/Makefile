@@ -1,9 +1,7 @@
 # Created by: Sergey A. Osokin <osa@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	unit
 PORTVERSION=	${UNIT_VERSION}
-PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES?=	https://unit.nginx.org/download/
 
@@ -29,7 +27,6 @@ OPTIONS_RADIO+=		REGEX
 OPTIONS_RADIO_REGEX=	NOPCRE PCRE PCRE2
 
 DEBUG_DESC=	Enable debug logging
-DEVKIT_DESC=	Install headers and library
 REGEX_DESC=	Support regular expressions
 NOPCRE_DESC=	No support for Regular Expressions
 PCRE_DESC=	Regular Expressions via devel/pcre
@@ -66,7 +63,8 @@ ALL_TARGET=
 
 PLIST_DIRS?=	libexec/unit/modules \
 		libexec/unit
-PLIST_FILES?=	sbin/unitd
+PLIST_FILES?=	sbin/unitd \
+		share/man/man8/unitd.8.gz
 
 USE_RC_SUBR?=	unitd
 SUB_LIST=	PREFIX=${PREFIX} \
@@ -119,6 +117,7 @@ post-install:
 	${ECHO_CMD} @dir ${UNIT_RUNDIR} >> ${TMPPLIST}
 	${ECHO_CMD} @dir ${UNIT_TMPDIR} >> ${TMPPLIST}
 	${MKDIR} ${STAGEDIR}${PREFIX}/libexec/unit/modules
+	${INSTALL_MAN} ${WRKSRC}/build/unitd.8 ${STAGEDIR}${MAN8PREFIX}/share/man/man8
 .endif
 
 .include "../../www/unit/version.mk"
