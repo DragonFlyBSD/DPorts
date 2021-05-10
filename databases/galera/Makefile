@@ -1,5 +1,4 @@
 # Created by: Horia Racoviceanu <horia@racoviceanu.com>
-# $FreeBSD$
 
 PORTNAME=	galera
 PORTVERSION?=	25.3.32
@@ -12,8 +11,6 @@ COMMENT=	Synchronous multi-master replication engine
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BROKEN_FreeBSD_13=	galerautils/src/gu_int128.h:163:20: error: use of undeclared identifier '__bswap64_var'
-BROKEN_FreeBSD_14=	galerautils/src/gu_int128.h:163:20: error: use of undeclared identifier '__bswap64_var'
 BROKEN_aarch64=		fails to compile: gu_int128.h: use of undeclared identifier '__bswap64_var'
 BROKEN_armv6=		fails to compile: gu_int128.h: use of undeclared identifier '__bswap64_var'
 BROKEN_armv7=		fails to compile: gu_int128.h: use of undeclared identifier '__bswap64_var'
