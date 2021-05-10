@@ -1,5 +1,4 @@
 # Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	tabulator
 PORTVERSION=	1.53.2
@@ -14,7 +13,7 @@ LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}boto3>=1.9:www/py-boto3@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}chardet>=3.0:textproc/py-chardet@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}chardet>=3.0,1:textproc/py-chardet@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}click>=6.0:devel/py-click@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}ijson>=3.0.3:devel/py-ijson@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}jsonlines>=1.1:devel/py-jsonlines@${PY_FLAVOR} \
@@ -31,9 +30,11 @@ USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes
 
-OPTIONS_DEFINE=	CCHARDET
-CCHARDET_DESC=	Character encoding detection via cchardet
+OPTIONS_DEFINE=	CCHARDET DATAPACKAGE
+CCHARDET_DESC=		Character encoding detection via cchardet
+DATAPACKAGE_DESC=	Data Package support
 
 CCHARDET_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cchardet>=2.0:textproc/py-cchardet@${PY_FLAVOR}
+DATAPACKAGE_RUN_DEPENDS=${PYTHON_PKGNAMEPREFIX}datapackage>=1.12:devel/py-datapackage@${PY_FLAVOR}
 
 .include <bsd.port.mk>
