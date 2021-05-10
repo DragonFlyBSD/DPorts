@@ -1,7 +1,7 @@
-# $FreeBSD$
 
 PORTNAME=	lagrange
-DISTVERSION=	1.1.3
+DISTVERSION=	1.2.2
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://git.skyjake.fi/skyjake/${PORTNAME}/releases/download/v${DISTVERSION}/
 
@@ -18,6 +18,11 @@ LIB_DEPENDS=	libmpg123.so:audio/mpg123 \
 
 USES=		cmake compiler:c11 desktop-file-utils pkgconfig sdl ssl
 USE_SDL=	sdl2
+
+OPTIONS_DEFINE=	SSE41
+
+SSE41_DESC=	Enable SSE4.1 support
+SSE41_CMAKE_ON=	-DTFDN_ENABLE_SSE41:BOOL=ON
 
 OPENSSL_LDFLAGS=	-lssl -lcrypto
 
