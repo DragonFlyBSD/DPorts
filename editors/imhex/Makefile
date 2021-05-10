@@ -1,7 +1,8 @@
-# $FreeBSD$
 
 PORTNAME=	imhex
 PORTVERSION=	1.7.0
+DISTVERSIONPREFIX=	v
+PORTREVISION=	1
 CATEGORIES=	editors
 
 MAINTAINER=	nobutaka@FreeBSD.org
@@ -28,7 +29,6 @@ USE_XORG=	x11 xcb xau xdmcp
 USE_GITHUB=	yes
 GH_ACCOUNT=	WerWolv
 GH_PROJECT=	ImHex
-GH_TAGNAME=	v${PORTVERSION}
 
 CC=	${LOCALBASE}/bin/gcc10
 CXX=	${LOCALBASE}/bin/c++10
