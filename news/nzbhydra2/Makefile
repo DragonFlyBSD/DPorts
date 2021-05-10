@@ -1,7 +1,6 @@
-# $FreeBSD$
 
 PORTNAME=	nzbhydra2
-DISTVERSION=	2.29.1
+DISTVERSION=	3.13.1
 DISTVERSIONSUFFIX=	-linux
 CATEGORIES=	news java
 MASTER_SITES=	https://github.com/theotherp/${PORTNAME}/releases/download/v${DISTVERSION}/
