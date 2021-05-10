@@ -1,5 +1,4 @@
 # Created by: Jerry Hicks
-# $FreeBSD$
 
 PORTNAME=	bison
 PORTVERSION=	3.7.5
@@ -34,9 +33,5 @@ NLS_CONFIGURE_OFF=	ac_cv_libtextstyle=no
 NLS_BUILD_DEPENDS=	libtextstyle>=0.21:devel/libtextstyle
 NLS_LIB_DEPENDS=	libtextstyle.so:devel/libtextstyle
 NLS_USES=		gettext
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|$$(docdir)\(/examples\)|$$(datarootdir)\1/bison|' ${WRKSRC}/Makefile.in
-	@${GREP} -l '_Noreturn void' ${WRKSRC}/lib/*.[ch] | ${XARGS} -J % ${REINPLACE_CMD} -e 's|\(.*\) _Noreturn void|_Noreturn \1 void|' %
 
 .include <bsd.port.mk>
