@@ -1,8 +1,7 @@
 # Created by: Victor Yagofarov <xnasx@yandex.ru>
-# $FreeBSD$
 
 PORTNAME=	librdkafka
-PORTVERSION=	1.6.0
+PORTVERSION=	1.6.1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	net
 
