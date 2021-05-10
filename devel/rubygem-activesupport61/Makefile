@@ -1,8 +1,7 @@
 # Created by: Jonathan Weiss (<jw@innerewut.de>)
-# $FreeBSD$
 
 PORTNAME=	activesupport
-PORTVERSION=	6.1.2
+PORTVERSION=	6.1.3
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 PKGNAMESUFFIX=	61
