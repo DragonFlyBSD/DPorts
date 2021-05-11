@@ -1,10 +1,9 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	ogre3d
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.11.6
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics devel
 
 MAINTAINER=	oliver@FreeBSD.org
