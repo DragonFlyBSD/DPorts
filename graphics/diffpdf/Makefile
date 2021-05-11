@@ -1,8 +1,7 @@
-# $FreeBSD$
 
 PORTNAME=	diffpdf
 PORTVERSION=	2.1.3
-PORTREVISION=	27
+PORTREVISION=	28
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.qtrac.eu/
 
