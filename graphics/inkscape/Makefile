@@ -1,9 +1,8 @@
 # Created by: Alexander Nedotsukov <bland@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	inkscape
 PORTVERSION=	1.0.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics gnome
 MASTER_SITES=	https://media.inkscape.org/dl/resources/file/
 
