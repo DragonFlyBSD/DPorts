@@ -1,9 +1,8 @@
-# $FreeBSD$
 
 PORTNAME=	gnuradio
 DISTVERSIONPREFIX=	v
 DISTVERSION=	3.8.1.0
-PORTREVISION=	4
+PORTREVISION=	6
 CATEGORIES=	comms astro hamradio
 
 MAINTAINER=	hamradio@FreeBSD.org
