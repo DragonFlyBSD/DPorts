@@ -1,8 +1,7 @@
 # Created by: Igor Pokrovsky <ip@unixway.org>
-# $FreeBSD$
 
 PORTNAME=	wmforecast
-DISTVERSION=	1.4
+DISTVERSION=	1.5
 CATEGORIES=	misc windowmaker geography
 MASTER_SITES=	https://github.com/d-torrance/${PORTNAME}/releases/download/v${DISTVERSION}/
 
