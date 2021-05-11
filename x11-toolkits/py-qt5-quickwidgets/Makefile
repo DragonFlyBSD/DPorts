@@ -1,7 +1,5 @@
-# $FreeBSD$
 
 PORTNAME=	quickwidgets
-PORTREVISION=	1
 CATEGORIES=	x11-toolkits devel python
 
 MAINTAINER=	kde@FreeBSD.org
