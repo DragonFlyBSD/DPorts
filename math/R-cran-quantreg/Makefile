@@ -1,8 +1,7 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	quantreg
-PORTVERSION=	5.83
+PORTVERSION=	5.85
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
