@@ -1,4 +1,6 @@
 bin/zrythm
+bin/zrythm_gdb
+bin/zrythm_valgrind
 bin/zrythm_launch
 etc/bash_completion.d/zrythm
 share/applications/zrythm.desktop
@@ -30,6 +32,7 @@ share/locale/de/LC_MESSAGES/zrythm.mo
 share/locale/el/LC_MESSAGES/zrythm.mo
 share/locale/en_GB/LC_MESSAGES/zrythm.mo
 share/locale/es/LC_MESSAGES/zrythm.mo
+share/locale/fa/LC_MESSAGES/zrythm.mo
 share/locale/fr/LC_MESSAGES/zrythm.mo
 share/locale/gl/LC_MESSAGES/zrythm.mo
 share/locale/hi/LC_MESSAGES/zrythm.mo
@@ -49,6 +52,9 @@ share/man/man1/zrythm.1.gz
 share/mime/packages/org.zrythm.Zrythm-mime.xml
 %%DATADIR%%/samples/square_emphasis.wav
 %%DATADIR%%/samples/square_normal.wav
+%%DATADIR%%/scripts/create-midi-track-with-notes.scm
+%%DATADIR%%/scripts/hello-world.scm
+%%DATADIR%%/scripts/print-all-tracks.scm
 %%DATADIR%%/sourceview-styles/monokai-extended-zrythm.xml
 %%DATADIR%%/themes/icons/zrythm-dark/index.theme
 %%DATADIR%%/themes/icons/zrythm-dark/scalable/README.md
