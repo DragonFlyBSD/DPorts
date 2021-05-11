@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	redisdesktopmanager
 PORTVERSION=	2021.2
@@ -26,7 +25,6 @@ CONFIGURE_WRKSRC=	${WRKSRC}/src
 INSTALL_WRKSRC=		${WRKSRC}/bin/linux/release
 PLIST_FILES=		bin/rdm \
 			share/pixmaps/rdm.png
-BINARY_ALIAS=		python3-config=${PYTHON_CMD}-config
 DESKTOP_ENTRIES=	"Redis Desktop Manager" \
 			"Redis Desktop Manager" \
 			"rdm" \
