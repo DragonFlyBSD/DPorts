@@ -1,8 +1,7 @@
-# $FreeBSD$
 
 PORTNAME=	kImageAnnotator
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.4.1
+DISTVERSION=	0.4.2
 CATEGORIES=	graphics kde
 
 MAINTAINER=	kde@FreeBSD.org
