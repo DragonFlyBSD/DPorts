@@ -1,4 +1,3 @@
-# $FreeBSD$
 # pkg-help formatted with fmt 59 63
 
 PORTNAME=	bind
@@ -24,7 +23,7 @@ RUN_DEPENDS=	bind-tools>0:dns/bind-tools
 USES=	cpe libedit pkgconfig
 
 # ISC releases things like 9.8.0-P1, which our versioning doesn't like
-ISCVERSION=	9.11.28
+ISCVERSION=	9.11.31
 
 CPE_VENDOR=	isc
 CPE_VERSION=	${ISCVERSION:C/-.*//}
