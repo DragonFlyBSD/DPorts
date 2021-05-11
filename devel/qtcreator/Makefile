@@ -1,5 +1,4 @@
 # Created by: Kris Moore <kris@pcbsd.org>
-# $FreeBSD$
 
 PORTNAME=	qtcreator
 DISTVERSION=	4.13.3
@@ -85,6 +84,11 @@ SHEBANG_FILES=		tests/system/tools/objectsToTable.py \
 			scripts/makedmg.py
 
 .include <bsd.port.pre.mk>
+
+.if ${PORT_OPTIONS:MWEBENGINE}
+DEPRECATED=	Uses EOL Python 2.7 via www/qt5-webengine
+EXPIRATION_DATE=2021-06-23
+.endif
 
 .if ${LLVM_DEFAULT:C/[1-5]./&0/:S,-devel,990,} >= 90
 LLVM_DEFAULT=	80
