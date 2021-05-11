@@ -1,16 +1,17 @@
 # Created by: Mathieu Arnold
-# $FreeBSD$
 
 PORTNAME=	nextcloudclient
-PORTVERSION=	3.1.2
+PORTVERSION=	3.1.3
 DISTVERSIONPREFIX=	v
-CATEGORIES=	deskutils
 CATEGORIES=	deskutils
 
 MAINTAINER=	mr@FreeBSD.org
 COMMENT=	NextCloud Desktop Syncing Client
 
 LICENSE=	GPLv2
+
+DEPRECATED=	Uses EOL Python 2.7 via www/qt5-webengine
+EXPIRATION_DATE=2021-06-23
 
 LIB_DEPENDS=	libinotify.so:devel/libinotify \
 		libqt5keychain.so:security/qtkeychain
