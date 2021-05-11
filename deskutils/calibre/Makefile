@@ -1,8 +1,8 @@
 # Created by: stas
-# $FreeBSD$
 
 PORTNAME=	calibre
-PORTVERSION=	5.11.0
+PORTVERSION=	5.14.0
+PORTREVISION=	1
 CATEGORIES=	deskutils python
 MASTER_SITES=	http://download.calibre-ebook.com/${PORTVERSION}/
 
@@ -10,6 +10,9 @@ MAINTAINER=	madpilot@FreeBSD.org
 COMMENT=	Ebook management application
 
 LICENSE=	GPLv3
+
+DEPRECATED=	Uses EOL Python 2.7 via www/py-qt5-webengine
+EXPIRATION_DATE=2021-06-23
 
 LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 		libpoppler-qt5.so:graphics/poppler-qt5 \
@@ -47,6 +50,7 @@ RUN_DEPENDS=	xdg-open:devel/xdg-utils \
 		${PYTHON_PKGNAMEPREFIX}regex>=0:textproc/py-regex@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}markdown>=0:textproc/py-markdown@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}chardet>=0:textproc/py-chardet@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}cchardet>=0:textproc/py-cchardet@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}html5-parser>=0.4.3:www/py-html5-parser@${PY_FLAVOR} \
 		${PY_PILLOW} \
 		pdftohtml:graphics/poppler-utils \
