@@ -1,9 +1,8 @@
 # Created by: Mikael URANKAR and Loïc BARTOLETTI
-# $FreeBSD$
 
 PORTNAME=	grass
 PORTVERSION=	7.8.5
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	databases geography
 MASTER_SITES=	https://grass.osgeo.org/%SUBDIR%/ \
 		http://grass.cict.fr/%SUBDIR%/ \
@@ -26,6 +25,7 @@ LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/GPL.TXT
 
 BROKEN_sparc64=	Does not configure on sparc64
+BROKEN_i386=	Does not configure on i386: Could not determine External PROJ major version
 
 BUILD_DEPENDS=	${PY_NUMPY} \
 		${PYTHON_SITELIBDIR}/six.py:devel/py-six@${PY_FLAVOR}
