@@ -1,5 +1,4 @@
 # Created by: Markus Brueffer <markus@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	kst
 DISTVERSION=	${KST_VERSION}.${KST_DATE}
@@ -57,8 +56,5 @@ NETCDF_DESC=	Support for data in NetCDF format (broken)
 NETCDF_LIB_DEPENDS=	libnetcdf.so:science/netcdf
 NETCDF_IGNORE=	does not support NetCDF 4
 NETCDF_CMAKE_OFF=	-DCMAKE_DISABLE_FIND_PACKAGE_Netcdf=ON
-
-post-patch:
-	${REINPLACE_CMD} 's,hdf5/serial/,,' ${WRKSRC}/src/datasources/hdf5/hdf5.h
 
 .include <bsd.port.mk>
