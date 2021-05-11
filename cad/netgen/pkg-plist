@@ -17,6 +17,7 @@ include/core/python_ngcore.hpp
 include/core/ranges.hpp
 include/core/signal.hpp
 include/core/simd.hpp
+include/core/simd_arm64.hpp
 include/core/simd_avx.hpp
 include/core/simd_avx512.hpp
 include/core/simd_generic.hpp
@@ -226,7 +227,7 @@ lib/libvisual.so
 %%PYTHON_SITELIBDIR%%/netgen/occ.py
 %%PYTHON_SITELIBDIR%%/netgen/read_gmsh.py
 %%PYTHON_SITELIBDIR%%/netgen/stl.py
-%%PYTHON_SITELIBDIR%%/pyngcore.so
+%%PYTHON_SITELIBDIR%%/pyngcore%%PYTHON_EXT_SUFFIX%%.so
 %%DATADIR%%/boundarycondition.geo
 %%DATADIR%%/boxcyl.geo
 %%DATADIR%%/circle_on_cube.geo
