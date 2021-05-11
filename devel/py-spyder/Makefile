@@ -1,10 +1,9 @@
 # Created by: Rod Person <rodperson@rodperson.com>
-# $FreeBSD$
 
 PORTNAME=	spyder
 DISTVERSIONPREFIX=	v
 DISTVERSION=	3.2.7
-PORTREVISION=	11
+PORTREVISION=	13
 CATEGORIES=	devel science python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
