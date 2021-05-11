@@ -1,9 +1,8 @@
 # Created by: Laurent Courty
-# $FreeBSD$
 
 PORTNAME=	qgis
 DISTVERSIONPREFIX=	final-
-DISTVERSION=	3_18_0
+DISTVERSION=	3_18_1
 CATEGORIES=	graphics geography
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
@@ -13,6 +12,9 @@ COMMENT=	Free and Open Source Geographic Information System
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/doc/LICENSE
+
+DEPRECATED=	Uses EOL Python 2.7 via www/qt5-webengine
+EXPIRATION_DATE=2021-06-23
 
 BUILD_DEPENDS=	gpsbabel>=1.5.4:astro/gpsbabel \
 		opencl>=0:devel/opencl \
@@ -129,8 +131,6 @@ CMAKE_ON=	BUILD_TESTING ENABLE_TESTS USE_OPENCL WITH_3D WITH_ASTYLE \
 CMAKE_OFF=	WITH_GLOBE WITH_QWTPOLAR
 
 CONFLICTS_INSTALL=	qgis-ltr
-
-SUB_FILES=	pkg-message
 
 PLIST_SUB=	DISTVERSION=${PORTVERSION}
 
