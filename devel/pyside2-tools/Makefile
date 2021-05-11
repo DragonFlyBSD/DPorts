@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	pyside2-tools
 DISTVERSION=	5.15.2
@@ -36,6 +35,8 @@ CMAKE_ARGS+=	"-DUSE_PYTHON_VERSION=${PYTHON_VER}"
 WRKSRC=		${WRKDIR}/pyside-setup-opensource-src-${DISTVERSION:C/^([0-9].[0-9]+.[0-9])(.[0-9])?/\1/}/sources/pyside2-tools
 
 .if ${ARCH} == x86_64 || ${ARCH} == i386
+DEPRECATED=	Uses EOL Python 2.7 via www/qt5-webengine
+EXPIRATION_DATE=2021-06-23
 USE_QT+=	webengine
 .endif
 
