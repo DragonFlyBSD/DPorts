@@ -1,8 +1,7 @@
 # Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	aws-sdk-mediapackagevod
-PORTVERSION=	1.20.0
+PORTVERSION=	1.21.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
