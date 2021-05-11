@@ -1,9 +1,8 @@
 # Created by: Jun Kuriyama <kuriyama@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	magit
 PORTVERSION=	2.90.1
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	devel elisp
 MASTER_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/releases/download/v${PORTVERSION}/
 PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
