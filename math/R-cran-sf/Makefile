@@ -1,8 +1,7 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	sf
-DISTVERSION=	0.9-7
+DISTVERSION=	0.9-8
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
