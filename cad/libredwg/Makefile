@@ -1,8 +1,7 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	libredwg
-PORTVERSION=	0.12.1
+PORTVERSION=	0.12.3
 CATEGORIES=	cad devel
 MASTER_SITES=	GNU
 
