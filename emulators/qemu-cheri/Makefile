@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	qemu
 PORTVERSION=	0.d${SNAPDATE}
@@ -32,7 +31,7 @@ USE_XORG=	pixman
 USE_GNOME+=	glib20 libxml2
 USE_PERL5=	build
 USE_GL+=	gl
-ONLY_FOR_ARCHS=	amd64 powerpc64
+ONLY_FOR_ARCHS=	amd64 powerpc64 powerpc64le
 
 OPTIONS_DEFINE=	DOCS
 
