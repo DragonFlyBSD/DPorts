@@ -1,8 +1,7 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	caTools
-PORTVERSION=	1.18.1
+PORTVERSION=	1.18.2
 CATEGORIES=	devel
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
