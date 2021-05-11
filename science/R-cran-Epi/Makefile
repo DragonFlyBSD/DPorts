@@ -1,8 +1,7 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	Epi
-PORTVERSION=	2.43
+PORTVERSION=	2.44
 CATEGORIES=	science
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
