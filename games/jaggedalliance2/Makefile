@@ -1,10 +1,9 @@
 # Created by: Christoph Mallon <christoph.mallon@gmx.de>
-# $FreeBSD$
 
 PORTNAME=	ja2
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.17.0
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	games
 
 MAINTAINER=	timp87@gmail.com
