@@ -1,8 +1,8 @@
 # Created by: Sergey A. Osokin <osa@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	jwt-cli
 PORTVERSION=	4.0.0
+PORTREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	osa@FreeBSD.org
