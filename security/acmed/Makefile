@@ -1,9 +1,8 @@
-# $FreeBSD$
 
 PORTNAME=	acmed
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.13.0
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	security
 
 MAINTAINER=	greg@unrelenting.technology
