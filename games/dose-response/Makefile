@@ -1,9 +1,8 @@
-# $FreeBSD$
 
 PORTNAME=	dose-response
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.0.0
-PORTREVISION=	13
+PORTREVISION=	14
 CATEGORIES=	games
 
 MAINTAINER=	greg@unrelenting.technology
