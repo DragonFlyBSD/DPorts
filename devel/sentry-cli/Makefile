@@ -1,7 +1,6 @@
-# $FreeBSD$
 
 PORTNAME=	sentry-cli
-DISTVERSION=	1.62.0
+DISTVERSION=	1.63.2
 CATEGORIES=	devel
 
 MAINTAINER=	lcook@FreeBSD.org
@@ -192,7 +191,7 @@ CARGO_CRATES=	addr2line-0.14.0 \
 		proc-macro-error-attr-1.0.4 \
 		proc-macro2-0.4.30 \
 		proc-macro2-1.0.24 \
-		proguard-4.0.1 \
+		proguard-4.1.1 \
 		quote-0.6.13 \
 		quote-1.0.7 \
 		r2d2-0.8.9 \
@@ -236,7 +235,9 @@ CARGO_CRATES=	addr2line-0.14.0 \
 		scroll_derive-0.9.5 \
 		scroll_derive-0.10.4 \
 		semver-0.9.0 \
+		semver-0.11.0 \
 		semver-parser-0.7.0 \
+		semver-parser-0.10.2 \
 		sentry-0.18.1 \
 		sentry-types-0.14.1 \
 		serde-1.0.118 \
@@ -257,9 +258,9 @@ CARGO_CRATES=	addr2line-0.14.0 \
 		stable_deref_trait-1.2.0 \
 		string_cache-0.8.1 \
 		strsim-0.8.0 \
-		symbolic-8.0.3 \
-		symbolic-common-8.0.3 \
-		symbolic-debuginfo-8.0.3 \
+		symbolic-8.0.5 \
+		symbolic-common-8.0.5 \
+		symbolic-debuginfo-8.0.5 \
 		syn-0.15.44 \
 		syn-1.0.54 \
 		synstructure-0.12.4 \
