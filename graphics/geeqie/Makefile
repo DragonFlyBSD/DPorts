@@ -1,9 +1,8 @@
 # Created by: Martin Tournoij <carpetsmoker@rwxrwxrwx.net>
-# $FreeBSD$
 
 PORTNAME=	geeqie
 PORTVERSION=	1.6
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.geeqie.org/
 
