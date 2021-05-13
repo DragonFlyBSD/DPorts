@@ -1,9 +1,7 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	darktable
-PORTVERSION=	3.4.0
-PORTREVISION=	1
+PORTVERSION=	3.4.1
 CATEGORIES=	graphics
 MASTER_SITES=	https://github.com/darktable-org/${PORTNAME}/releases/download/release-${PORTVERSION:C/\.rc/rc/}/
 
@@ -18,7 +16,8 @@ ONLY_FOR_ARCHS_REASON=	uses 64-bit address space
 BUILD_DEPENDS=	iso-codes>=0:misc/iso-codes \
 		p5-Pod-Parser>=0:textproc/p5-Pod-Parser \
 		po4a-translate:textproc/po4a \
-		xsltproc:textproc/libxslt
+		xsltproc:textproc/libxslt \
+		bash:shells/bash
 LIB_DEPENDS=	libcolord-gtk.so:graphics/colord-gtk \
 		libcolord.so:graphics/colord \
 		libcurl.so:ftp/curl \
@@ -50,7 +49,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION:C/\.rc/~rc/}
 
-OPTIONS_DEFINE=		DOCS GEO GPHOTO GRAPHMAGICK LIBAVIF LIBSECRET LUA \
+OPTIONS_DEFINE=		DOCS GEO GPHOTO GRAPHMAGICK LIBAVIF LIBSECRET LTO LUA \
 			NLS OPENEXR OPENJPEG PRINT TOOLS WEBP
 OPTIONS_DEFAULT=	GEO GPHOTO LUA OPENEXR OPENJPEG PRINT WEBP
 OPTIONS_SUB=		yes
@@ -73,6 +72,8 @@ LIBAVIF_CMAKE_OFF=	-DUSE_LIBAVIF:BOOL=OFF
 
 LIBSECRET_LIB_DEPENDS=	libsecret-1.so:security/libsecret
 LIBSECRET_CMAKE_OFF=	-DUSE_LIBSECRET:BOOL=OFF
+
+LTO_CMAKE_BOOL=		RAWSPEED_ENABLE_LTO
 
 LUA_USES=		lua:53
 LUA_CMAKE_OFF=		-DUSE_LUA:BOOL=OFF
@@ -100,6 +101,16 @@ TOOLS_RUN_DEPENDS=	exiftool:graphics/p5-Image-ExifTool
 
 WEBP_LIB_DEPENDS=	libwebp.so:graphics/webp
 WEBP_CMAKE_OFF=		-DUSE_WEBP:BOOL=OFF
+
+.include <bsd.port.options.mk>
+
+.if ${ARCH} == powerpc64le
+CMAKE_ARGS+=	-DUSE_OPENCL:BOOL=OFF
+CXXFLAGS+=	-DGDK_DISABLE_DEPRECATED
+PLIST_SUB+=	NO_OPENCL="@comment "
+.else
+PLIST_SUB+=	NO_OPENCL=""
+.endif
 
 .include <bsd.port.pre.mk>
 
