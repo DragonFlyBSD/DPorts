@@ -75,7 +75,7 @@ BINARY_ALIAS+=	python3=${PYTHON_CMD}
 BUNDLE_LIBS=	yes
 
 BUILD_DEPENDS+=	llvm${LLVM_DEFAULT}>0:devel/llvm${LLVM_DEFAULT} \
-				rust-cbindgen>=0.16.0:devel/rust-cbindgen \
+				rust-cbindgen>=0.19.0:devel/rust-cbindgen \
 				${RUST_DEFAULT}>=1.51.0:lang/${RUST_DEFAULT} \
 				node:www/node
 LIB_DEPENDS+=	libdrm.so:graphics/libdrm
@@ -90,8 +90,8 @@ MOZ_OPTIONS+=	--with-libclang-path="${LOCALBASE}/llvm${LLVM_DEFAULT}/lib"
 .if !exists(/usr/bin/llvm-objdump)
 MOZ_EXPORT+=	LLVM_OBJDUMP="${LOCALBASE}/bin/llvm-objdump${LLVM_DEFAULT}"
 .endif
-# Ignore Mk/bsd.default-versions.mk but respect make.conf(5)
-.if !defined(DEFAULT_VERSIONS) || ! ${DEFAULT_VERSIONS:Mllvm*}
+# Ignore Mk/bsd.default-versions.mk but respect make.conf(5) unless LTO is enabled
+.if !defined(DEFAULT_VERSIONS) || ! ${DEFAULT_VERSIONS:Mllvm*} || ${PORT_OPTIONS:MLTO}
 LLVM_DEFAULT=	11 # chase bundled LLVM in lang/rust for LTO
 .endif
 # Require newer Clang than what's in base system unless user opted out

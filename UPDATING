@@ -5,6 +5,14 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20210515:
+  AFFECTS: users of databases/postgresql??-server
+  AUTHOR: girgen@FreeBSD.org
+
+  The rc.conf parameter for the login class of the postgresql daemon has
+  changed name from postgresql_class to postgresql_login_class.
+  rc.subr(8) states that the parameter should be named ${name}_login_class.
+
 20210406:
   AFFECTS: users of www/phpvirtualbox
   AUTHOR: dereks@lifeofadishwasher.com
@@ -801,52 +809,4 @@ you update your ports collection, before attempting any port upgrades.
   ${PREFIX}/etc/postfix-policyd-spf-python/policyd-spf.conf to
   ${PREFIX}/etc/python-policyd-spf/policyd-spf.conf. So you need to move
   it to new location unless you use the default one without changing.
-
-20200526:
-  AFFECTS: users of databases/mariadb104-client, databases/mariadb104-server
-  AUTHOR: brnrd@FreeBSD.org
-
-  The ports now add sample configuration files to /usr/local/etc/mysql. You
-  must merge your client configuration with the conf.d/client.cnf and your
-  server configuration with conf.d/server.cnf.
-
-20200518:
-  AFFECTS: users of converters/libiconv
-  AUTHOR: zeising@FreeBSD.org
-
-  Support for the Japanese specific patches have been discontinued.
-  These were previously added in a nondefault ports options, for people who
-  needed them.
-  If you still need them, it might be possible to create a port of libiconv 1.14
-  which includes those patches.
-
-20200517:
-  AFFECTS: users of x11/sddm
-  AUTHOR: arrowd@FreeBSD.org
-
-  The home directory of sddm user has been moved to /var/lib/sddm. It is advised
-  to run following commands as root after updating the package:
-
-    # pw usermod -n sddm -d /var/lib/sddm
-    # pwd_mkdb /etc/master.passwd
-    # mv /usr/local/etc/sddm/home/state.conf /var/lib/sddm/state.conf
-    # rm -rf /usr/local/etc/sddm/home
-
-  Otherwise, SDDM will keep using /usr/local/etc/sddm/home/ as its HOME.
-
-20200515:
-  AFFECTS: users of devel/libphutil, devel/arcanist-lib, devel/phabricator
-  AUTHOR: grembo@FreeBSD.org
-
-  Upstream fully deprecated devel/libphutil and merged its functionality
-  into devel/arcanist-lib and devel/phabricator. As a result, the
-  devel/libphutil port will be removed from the ports tree.
-
-  After upgrading devel/(arcanist-lib|phabricator) to version 20200514, it is
-  recommended to remove the orphaned libphutil package by running:
-
-    # pkg delete php\*-libphutil
-
-  Alternatively, 'pkg autoremove' will also work as expected, but might
-  remove orphaned packages unrelated to this update.
 
