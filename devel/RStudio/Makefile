@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 # This port opens too many files during build, more than the default setting.
 # Its build is known to succeed with MAX_FILES_RStudio=4096 and MAX_FILES_RStudio_server=4096 in poudriere.conf
@@ -61,6 +60,8 @@ GWT_VERSION=	2.8.1
 GIN_VERSION=	2.1.2
 
 .if ${FLAVOR:U} == desktop
+DEPRECATED=	Uses EOL Python 2.7 via www/qt5-webengine
+EXPIRATION_DATE=2021-06-23
 COMMENT+=	(desktop UI version)
 USES+=		desktop-file-utils qt:5 shared-mime-info
 USE_QT=		core dbus declarative gui location network opengl printsupport quickcontrols sensors \
