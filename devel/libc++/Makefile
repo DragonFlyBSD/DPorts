@@ -3,9 +3,10 @@
 
 PORTNAME?=	libc++
 DISTNAME=	libcxx-${PORTVERSION}.src
-PORTVERSION=	8.0.0
+PORTVERSION=	10.0.1
 CATEGORIES=	devel
-MASTER_SITES=	http://releases.llvm.org/${PORTVERSION}/
+MASTER_SITES=	http://releases.llvm.org/${PORTVERSION}/ \
+		 https://github.com/llvm/llvm-project/releases/download/llvmorg-${PORTVERSION}/
 
 MAINTAINER=	tuxillo@quantumachine.net
 COMMENT?=	LLVM C++ standard library with c++11 support
@@ -26,6 +27,9 @@ CXXRT_LIB=	${LOCALBASE}/lib/libcxxrt.so
 LIB_DEPENDS+=	libcxxrt.so:devel/libcxxrt
 
 .include <bsd.port.options.mk>
+
+# Force build with llvm
+USE_CLANG_FALLBACK=     default
 
 CMAKE_ARGS=	-DLIBCXX_CXX_ABI=libcxxrt -DLIBCXX_CXX_ABI_INCLUDE_PATHS=${CXXRT_INCS}
 

@@ -1,3 +1,3 @@
-TIMESTAMP = 1553383583
-SHA256 (libcxx-8.0.0.src.tar.xz) = c2902675e7c84324fb2c1e45489220f250ede016cc3117186785d9dc291f9de2
-SIZE (libcxx-8.0.0.src.tar.xz) = 1752308
+TIMESTAMP = 1622983163
+SHA256 (libcxx-10.0.1.src.tar.xz) = def674535f22f83131353b3c382ccebfef4ba6a35c488bdb76f10b68b25be86c
+SIZE (libcxx-10.0.1.src.tar.xz) = 1839172
