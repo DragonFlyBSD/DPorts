@@ -77,7 +77,7 @@ LINUX_DEFAULT?=		c7
 .if ${ARCH} == powerpc
 LLVM_DEFAULT?=		10
 .else
-LLVM_DEFAULT?=		80
+LLVM_DEFAULT?=		10
 .endif
 # Possible values: 5.1, 5.2, 5.3, 5.4
 LUA_DEFAULT?=		5.2
