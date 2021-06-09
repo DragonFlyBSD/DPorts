@@ -9,18 +9,17 @@ pre-configure-script:
 dfly-patch:
 	${REINPLACE_CMD} -e 's|cpuset_setaffinity|sched_setaffinity|g' \
 			 -e "s@WITH_GNU_LD_TRUE=@WITH_GNU_LD_TRUE='#'@g" \
+			 -e "s@WITH_CGROUP_TRUE=@WITH_CGROUP_TRUE='#'@g" \
+			 -e "s@WITH_SWITCH_CRAY_ARIES_TRUE=@WITH_SWITCH_CRAY_ARIES_TRUE='#'@g" \
 		${WRKSRC}/configure
 	${TOUCH} ${WRKSRC}/src/api/full_version.map #${WRKSRC}/src/db_api/version.map
 	${REINPLACE_CMD} -e 's|FreeBSD|DragonFly|' \
 		${WRKSRC}/src/common/net.c \
 		${WRKSRC}/src/common/callerid.h \
 		${WRKSRC}/src/common/callerid.c \
-		${WRKSRC}/src/common/half_duplex.c \
 		${WRKSRC}/src/plugins/task/cgroup/task_cgroup_cpuset.c \
-		${WRKSRC}/src/plugins/acct_gather_energy/rapl/acct_gather_energy_rapl.c \
 		${WRKSRC}/src/plugins/burst_buffer/common/burst_buffer_common.c \
 		${WRKSRC}/src/plugins/priority/multifactor/priority_multifactor.c \
-		${WRKSRC}/src/plugins/switch/cray_aries/switch_cray_aries.c \
 		${WRKSRC}/src/plugins/switch/generic/switch_generic.c \
 		${WRKSRC}/src/plugins/power/common/power_common.c \
 		${WRKSRC}/src/plugins/mpi/pmi2/setup.c \
