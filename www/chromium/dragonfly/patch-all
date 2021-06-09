@@ -18,6 +18,77 @@ index 9243b7af1c9..bbdccb6eb4e 100644
              'F': 'OS_FREEBSD',
              'I': 'OS_IOS',
              'L': 'OS_LINUX',
+diff --git base/allocator/partition_allocator/address_pool_manager.cc base/allocator/partition_allocator/address_pool_manager.cc
+index 387e926cb48..1b1c62e3abd 100644
+--- base/allocator/partition_allocator/address_pool_manager.cc
++++ base/allocator/partition_allocator/address_pool_manager.cc
+@@ -8,7 +8,7 @@
+ #include <sys/mman.h>
+ #endif
+ 
+-#if defined(OS_FREEBSD)
++#if defined(OS_FREEBSD) || defined(OS_DRAGONFLY)
+ #include <sys/mman.h>
+ #include <fcntl.h>
+ 
+@@ -57,7 +57,7 @@ void DecommitPages(void* address, size_t size) {
+   void* ptr = mmap(address, size, PROT_NONE,
+                    MAP_FIXED | MAP_ANONYMOUS | MAP_PRIVATE, -1, 0);
+   PA_CHECK(ptr == address);
+-#elif defined(OS_FREEBSD)
++#elif defined(OS_FREEBSD) || defined(OS_DRAGONFLY)
+   int fd = HANDLE_EINTR(open("/dev/zero", O_RDONLY));
+   PA_CHECK(fd != -1);
+ 
+diff --git base/allocator/partition_allocator/page_allocator_internals_posix.h base/allocator/partition_allocator/page_allocator_internals_posix.h
+index 07853d189ed..e8238b4b880 100644
+--- base/allocator/partition_allocator/page_allocator_internals_posix.h
++++ base/allocator/partition_allocator/page_allocator_internals_posix.h
+@@ -34,7 +34,7 @@
+ #include <algorithm>
+ #endif
+ 
+-#if defined(OS_FREEBSD)
++#if defined(OS_FREEBSD) || defined(OS_DRAGONFLY)
+ #include <fcntl.h>
+ #endif
+ 
+@@ -157,7 +157,7 @@ void* SystemAllocPagesInternal(void* hint,
+   PA_DCHECK(PageTag::kFirst <= page_tag);
+   PA_DCHECK(PageTag::kLast >= page_tag);
+   int fd = VM_MAKE_TAG(static_cast<int>(page_tag));
+-#elif defined(OS_FREEBSD)
++#elif defined(OS_FREEBSD) || defined(OS_DRAGONFLY)
+   int fd = HANDLE_EINTR(open("/dev/zero", O_RDWR | O_CLOEXEC));
+   PA_PCHECK(fd != -1);
+ #else
+@@ -165,7 +165,7 @@ void* SystemAllocPagesInternal(void* hint,
+ #endif
+ 
+   int access_flag = GetAccessFlags(accessibility);
+-#if defined(OS_FREEBSD)
++#if defined(OS_FREEBSD) || defined(OS_DRAGONFLY)
+   int map_flags = MAP_PRIVATE;
+ #else
+   int map_flags = MAP_ANONYMOUS | MAP_PRIVATE;
+@@ -196,7 +196,7 @@ void* SystemAllocPagesInternal(void* hint,
+     prctl(PR_SET_VMA, PR_SET_VMA_ANON_NAME, ret, length,
+           PageTagToName(page_tag));
+   }
+-#elif defined(OS_FREEBSD)
++#elif defined(OS_FREEBSD) || defined(OS_DRAGONFLY)
+   HANDLE_EINTR(close(fd));
+ #endif
+ 
+@@ -330,7 +330,7 @@ void DiscardSystemPagesInternal(void* address, size_t length) {
+     ret = madvise(address, length, MADV_DONTNEED);
+   }
+   PA_PCHECK(ret == 0);
+-#elif defined(OS_FREEBSD)
++#elif defined(OS_FREEBSD) || defined(OS_DRAGONFLY)
+   PA_PCHECK(0 == madvise(address, length, MADV_FREE));
+ #else
+   // We have experimented with other flags, but with suboptimal results.
 diff --git base/base_paths_posix.cc base/base_paths_posix.cc
 index 11cbe735841..ce255062176 100644
 --- base/base_paths_posix.cc
@@ -422,7 +493,7 @@ index 5641b8295a2..fdbf8cced54 100644
        break;
  
 diff --git base/process/launch_posix.cc base/process/launch_posix.cc
-index 1fa5b322283..5bca888e70a 100644
+index 1fa5b322283..f010c5be1bc 100644
 --- base/process/launch_posix.cc
 +++ base/process/launch_posix.cc
 @@ -56,7 +56,7 @@
@@ -443,6 +514,39 @@ index 1fa5b322283..5bca888e70a 100644
  #elif defined(OS_FREEBSD)
  static const char kFDDir[] = "/dev/fd";
  #elif defined(OS_OPENBSD)
+@@ -224,7 +226,7 @@ void CloseSuperfluousFds(const base::InjectiveMultimap& saved_mapping) {
+   if (!fd_dir.IsValid()) {
+     // Fallback case: Try every possible fd.
+ 
+-#if defined(OS_FREEBSD)
++#if defined(OS_FREEBSD) || defined(OS_DRAGONFLY)
+     // CEM: blast away most of the range with closefrom().  A common use case
+     // of this function only maps STDIN/STDOUT/STDERR and closefrom(3) is much
+     // cheaper than x00,000 close(2) invocations with a high RLIMIT_NOFILE.
+@@ -468,11 +470,12 @@ Process LaunchProcess(const std::vector<std::string>& argv,
+ 
+     // Set NO_NEW_PRIVS by default. Since NO_NEW_PRIVS only exists in kernel
+     // 3.5+, do not check the return value of prctl here.
+-#if defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_AIX) || defined(OS_FREEBSD)
++#if defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_AIX) || \
++  defined(OS_FREEBSD) || defined(OS_DRAGONFLY)
+ #ifndef PR_SET_NO_NEW_PRIVS
+ #define PR_SET_NO_NEW_PRIVS 38
+ #endif
+-#if !defined(OS_FREEBSD)
++#if !defined(OS_FREEBSD) && !defined(OS_DRAGONFLY)
+     if (!options.allow_new_privs) {
+       if (prctl(PR_SET_NO_NEW_PRIVS, 1, 0, 0, 0) && errno != EINVAL) {
+         // Only log if the error is not EINVAL (i.e. not supported).
+@@ -482,7 +485,7 @@ Process LaunchProcess(const std::vector<std::string>& argv,
+ #endif
+ 
+     if (options.kill_on_parent_death) {
+-#if defined(OS_FREEBSD)
++#if defined(OS_FREEBSD) || defined(OS_DRAGONFLY)
+       int procctl_value = SIGKILL;
+       if (procctl(P_PID, 0, PROC_PDEATHSIG_CTL, &procctl_value)) {
+         RAW_LOG(ERROR, "procctl(PROC_PDEATHSIG_CTL) failed");
 diff --git base/process/process_handle_freebsd.cc base/process/process_handle_freebsd.cc
 index f466c016758..8bba99e6054 100644
 --- base/process/process_handle_freebsd.cc
@@ -1262,6 +1366,28 @@ index 357f273db31..da6bf08ef88 100644
  #elif defined(OS_FREEBSD)
    return data_reduction_proxy::Client::CHROME_FREEBSD;
  #elif defined(OS_OPENBSD)
+diff --git chrome/browser/enterprise/signals/device_info_fetcher.cc chrome/browser/enterprise/signals/device_info_fetcher.cc
+index 6697725f92b..04fcdacd9c1 100644
+--- chrome/browser/enterprise/signals/device_info_fetcher.cc
++++ chrome/browser/enterprise/signals/device_info_fetcher.cc
+@@ -12,7 +12,7 @@
+ #include "chrome/browser/enterprise/signals/device_info_fetcher_win.h"
+ #elif defined(OS_LINUX) || defined(OS_CHROMEOS)
+ #include "chrome/browser/enterprise/signals/device_info_fetcher_linux.h"
+-#elif defined(OS_FREEBSD)
++#elif defined(OS_FREEBSD) || defined(OS_DRAGONFLY)
+ #include "chrome/browser/enterprise/signals/device_info_fetcher_freebsd.h"
+ #endif
+ 
+@@ -62,7 +62,7 @@ std::unique_ptr<DeviceInfoFetcher> DeviceInfoFetcher::CreateInstance() {
+   return std::make_unique<DeviceInfoFetcherWin>();
+ #elif defined(OS_LINUX) || defined(OS_CHROMEOS)
+   return std::make_unique<DeviceInfoFetcherLinux>();
+-#elif defined(OS_FREEBSD)
++#elif defined(OS_FREEBSD) || defined(OS_DRAGONFLY)
+   return std::make_unique<DeviceInfoFetcherFreeBSD>();
+ #else
+   return std::make_unique<StubDeviceFetcher>();
 diff --git chrome/browser/extensions/api/runtime/chrome_runtime_api_delegate.cc chrome/browser/extensions/api/runtime/chrome_runtime_api_delegate.cc
 index b1e829feb9d..5984128cb4d 100644
 --- chrome/browser/extensions/api/runtime/chrome_runtime_api_delegate.cc
@@ -2549,6 +2675,20 @@ index 207d7be91ca..266297ca515 100644
  	char kbusid[1024], sbusid[1024];
  	char oid[128];
  	int domain, bus, dev, func;
+diff --git third_party/libgav1/src/src/utils/entropy_decoder.cc third_party/libgav1/src/src/utils/entropy_decoder.cc
+index 1df36743123..4abde836790 100644
+--- third_party/libgav1/src/src/utils/entropy_decoder.cc
++++ third_party/libgav1/src/src/utils/entropy_decoder.cc
+@@ -33,7 +33,8 @@
+ #include <arm_neon.h>
+ #endif
+ 
+-#if (defined(__SSE2__) || defined(LIBGAV1_X86_MSVC)) && !defined(__FreeBSD__)
++#if (defined(__SSE2__) || defined(LIBGAV1_X86_MSVC)) && \
++  !defined(__FreeBSD__) && !defined(__DragonFly__)
+ #define LIBGAV1_ENTROPY_DECODER_ENABLE_SSE2 1
+ #else
+ #define LIBGAV1_ENTROPY_DECODER_ENABLE_SSE2 0
 diff --git third_party/libphonenumber/dist/cpp/src/phonenumbers/base/memory/singleton.h third_party/libphonenumber/dist/cpp/src/phonenumbers/base/memory/singleton.h
 index 99a1fdbf4e7..74a009b4316 100644
 --- third_party/libphonenumber/dist/cpp/src/phonenumbers/base/memory/singleton.h
