@@ -1,20 +1,20 @@
---- headless/lib/headless_content_main_delegate.cc.orig	2019-10-21 19:06:35 UTC
+--- headless/lib/headless_content_main_delegate.cc.orig	2021-01-18 21:28:59 UTC
 +++ headless/lib/headless_content_main_delegate.cc
-@@ -328,7 +328,7 @@ int HeadlessContentMainDelegate::RunProcess(
+@@ -326,7 +326,7 @@ void HeadlessContentMainDelegate::InitCrashReporter(
+     const base::CommandLine& command_line) {
+   if (command_line.HasSwitch(::switches::kDisableBreakpad))
+     return;
+-#if defined(OS_FUCHSIA)
++#if defined(OS_FUCHSIA) || defined(OS_BSD)
+   // TODO(fuchsia): Implement this when crash reporting/Breakpad are available
+   // in Fuchsia. (crbug.com/753619)
+   NOTIMPLEMENTED();
+@@ -355,7 +355,7 @@ void HeadlessContentMainDelegate::InitCrashReporter(
+   crash_reporter::InitializeCrashpadWithEmbeddedHandler(
+       process_type.empty(), process_type, "", base::FilePath());
+ #endif  // defined(HEADLESS_USE_BREAKPAD)
+-#endif  // defined(OS_FUCHSIA)
++#endif  // defined(OS_FUCHSIA) || defined(OS_BSD)
  }
- #endif  // !defined(CHROME_MULTIPLE_DLL_CHILD)
  
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
- void SIGTERMProfilingShutdown(int signal) {
-   content::Profiling::Stop();
-   struct sigaction sigact;
-@@ -363,7 +363,7 @@ void HeadlessContentMainDelegate::ZygoteForked() {
-   breakpad::InitCrashReporter(process_type);
- #endif
- }
--#endif  // defined(OS_LINUX)
-+#endif  // defined(OS_LINUX) || defined(OS_BSD)
  
- // static
- HeadlessContentMainDelegate* HeadlessContentMainDelegate::GetInstance() {

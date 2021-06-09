@@ -1,8 +1,8 @@
---- chrome/test/BUILD.gn.orig	2019-10-21 19:06:26 UTC
+--- chrome/test/BUILD.gn.orig	2021-01-18 21:28:52 UTC
 +++ chrome/test/BUILD.gn
-@@ -5797,7 +5797,7 @@ test("chrome_app_unittests") {
+@@ -6791,7 +6791,7 @@ test("chrome_app_unittests") {
      "//components/safe_browsing:buildflags",
-     "//components/tracing",
+     "//pdf:pdf_ppapi",
    ]
 -  if (!is_fuchsia) {
 +  if (!is_fuchsia && !is_bsd) {

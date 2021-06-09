@@ -1,24 +1,24 @@
---- chrome/browser/themes/theme_service_factory.cc.orig	2019-10-30 15:53:20 UTC
+--- chrome/browser/themes/theme_service_factory.cc.orig	2020-11-13 06:36:37 UTC
 +++ chrome/browser/themes/theme_service_factory.cc
-@@ -18,7 +18,7 @@
+@@ -22,7 +22,7 @@
+ #include "chrome/browser/themes/theme_helper_win.h"
+ #endif
  
- #if defined(OS_WIN)
- #include "chrome/browser/themes/theme_service_win.h"
--#elif defined(OS_LINUX) && !defined(OS_CHROMEOS)
-+#elif (defined(OS_LINUX) && !defined(OS_CHROMEOS)) || defined(OS_BSD)
+-#if defined(OS_LINUX) && !defined(OS_CHROMEOS)
++#if (defined(OS_LINUX) && !defined(OS_CHROMEOS)) || defined(OS_BSD)
  #include "chrome/browser/themes/theme_service_aura_linux.h"
  #include "ui/views/linux_ui/linux_ui.h"
  #endif
-@@ -60,7 +60,7 @@ KeyedService* ThemeServiceFactory::BuildServiceInstanc
-   ThemeService* provider = NULL;
- #if defined(OS_WIN)
-   provider = new ThemeServiceWin;
--#elif defined(OS_LINUX) && !defined(OS_CHROMEOS)
-+#elif (defined(OS_LINUX) && !defined(OS_CHROMEOS)) || defined(OS_BSD)
-   provider = new ThemeServiceAuraLinux;
- #else
-   provider = new ThemeService;
-@@ -72,7 +72,7 @@ KeyedService* ThemeServiceFactory::BuildServiceInstanc
+@@ -77,7 +77,7 @@ ThemeServiceFactory::~ThemeServiceFactory() {}
+ 
+ KeyedService* ThemeServiceFactory::BuildServiceInstanceFor(
+     content::BrowserContext* profile) const {
+-#if defined(OS_LINUX) && !defined(OS_CHROMEOS)
++#if (defined(OS_LINUX) && !defined(OS_CHROMEOS)) || defined(OS_BSD)
+   using ThemeService = ThemeServiceAuraLinux;
+ #endif
+ 
+@@ -89,7 +89,7 @@ KeyedService* ThemeServiceFactory::BuildServiceInstanc
  
  void ThemeServiceFactory::RegisterProfilePrefs(
      user_prefs::PrefRegistrySyncable* registry) {

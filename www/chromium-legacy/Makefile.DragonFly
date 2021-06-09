@@ -7,7 +7,7 @@ CXXFLAGS+=	-stdlib=libc++ -cxx-isystem ${LOCALBASE}/include/c++/v1 -I${LOCALBASE
 LDFLAGS=	-L${LOCALBASE}/lib/c++ -L${LOCALBASE}/lib -L /usr/lib -L /lib
 
 # clean up clang++80 warnings somewhat
-CXXFLAGS+=	-Wno-implicit-float-conversion -Wno-implicit-int-conversion -Wno-deprecated-declarations
+CXXFLAGS+=     -Wno-implicit-float-conversion -Wno-implicit-int-conversion -Wno-deprecated-declarations
 
 # Since FreeBSD has libc++ in base we need to rely on DPorts' libc++
 LIB_DEPENDS+=  	libc++.so.1:devel/libc++
@@ -22,10 +22,19 @@ KERBEROS_LIB_DEPENDS+=	libkrb5.so:security/krb5
 # XXX - Jumbo builds are faster but some work needs to be done for it to work in dfly.
 #GN_ARGS:= ${GN_ARGS:Nuse_jumbo_build=true}
 
+.if ${DFLYVERSION} < 500709
+EXTRA_PATCHES += ${DFLY_PATCHDIR}/extra-patch_release_5_6
+.endif
+
 dfly-patch:
 	# Setup nodejs dependency
 	@${MKDIR} ${WRKSRC}/third_party/node/dragonfly/node-dragonfly-x64/bin
 	${LN} -sf ${LOCALBASE}/bin/node ${WRKSRC}/third_party/node/dragonfly/node-dragonfly-x64/bin/node
+
+	# Setup buildtools/freebsd
+	@${MKDIR} ${WRKSRC}/buildtools/dragonfly
+	${LN} -sf ${WRKSRC}/buildtools/linux64/clang-format ${WRKSRC}/buildtools/dragonfly
+	${LN} -sf ${WRKSRC}/out/${BUILDTYPE}/gn ${WRKSRC}/buildtools/dragonfly
 
 	# XXX The correct solution is to pass variables to gn
 	# Use the current LLVM version by replacing the hardcoded one

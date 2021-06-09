@@ -1,6 +1,6 @@
---- build/config/compiler/compiler.gni.orig	2019-10-21 19:06:18 UTC
+--- build/config/compiler/compiler.gni.orig	2021-01-18 21:28:45 UTC
 +++ build/config/compiler/compiler.gni
-@@ -188,7 +188,7 @@ declare_args() {
+@@ -196,7 +196,7 @@ declare_args() {
  declare_args() {
    # Whether to use the gold linker from binutils instead of lld or bfd.
    use_gold =

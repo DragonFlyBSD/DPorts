@@ -1,6 +1,6 @@
---- content/test/content_test_suite.cc.orig	2019-04-30 22:22:48 UTC
+--- content/test/content_test_suite.cc.orig	2021-01-18 21:28:58 UTC
 +++ content/test/content_test_suite.cc
-@@ -81,6 +81,7 @@ void ContentTestSuite::Initialize() {
+@@ -83,6 +83,7 @@ void ContentTestSuite::Initialize() {
    // to initialize GL, so don't do it here.
    base::CommandLine* command_line = base::CommandLine::ForCurrentProcess();
    bool is_child_process = command_line->HasSwitch(switches::kTestChildProcess);
@@ -8,11 +8,11 @@
    if (!is_child_process) {
      gl::GLSurfaceTestSupport::InitializeNoExtensionsOneOff();
      auto* gpu_feature_info = gpu::GetTestGpuThreadHolder()->GetGpuFeatureInfo();
-@@ -88,6 +89,7 @@ void ContentTestSuite::Initialize() {
+@@ -90,6 +91,7 @@ void ContentTestSuite::Initialize() {
          gpu_feature_info->disabled_extensions);
      gl::init::InitializeExtensionSettingsOneOffPlatform();
    }
 +#endif
-   testing::TestEventListeners& listeners =
-       testing::UnitTest::GetInstance()->listeners();
-   listeners.Append(new TestInitializationListener);
+   // TestEventListeners repeater event propagation is disabled in death test
+   // child process.
+   if (command_line->HasSwitch("gtest_internal_run_death_test")) {

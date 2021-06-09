@@ -1,6 +1,6 @@
---- chrome/browser/renderer_preferences_util.cc.orig	2019-07-24 18:58:10 UTC
+--- chrome/browser/renderer_preferences_util.cc.orig	2021-01-18 21:28:50 UTC
 +++ chrome/browser/renderer_preferences_util.cc
-@@ -30,7 +30,7 @@
+@@ -34,7 +34,7 @@
  #include "ui/base/cocoa/defaults_utils.h"
  #endif
  
@@ -9,7 +9,7 @@
  #include "chrome/browser/themes/theme_service.h"
  #include "chrome/browser/themes/theme_service_factory.h"
  #include "ui/views/linux_ui/linux_ui.h"
-@@ -130,7 +130,7 @@ void UpdateFromSystemSettings(blink::mojom::RendererPr
+@@ -153,7 +153,7 @@ void UpdateFromSystemSettings(blink::RendererPreferenc
      prefs->caret_blink_interval = interval;
  #endif
  
@@ -18,12 +18,12 @@
    views::LinuxUI* linux_ui = views::LinuxUI::instance();
    if (linux_ui) {
      if (ThemeServiceFactory::GetForProfile(profile)->UsingSystemTheme()) {
-@@ -149,7 +149,7 @@ void UpdateFromSystemSettings(blink::mojom::RendererPr
+@@ -172,7 +172,7 @@ void UpdateFromSystemSettings(blink::RendererPreferenc
    }
  #endif
  
--#if defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_WIN)
-+#if defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_WIN) || defined(OS_BSD)
+-#if defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_ANDROID) || \
++#if defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_ANDROID) || defined(OS_BSD) || \
+     defined(OS_WIN)
    content::UpdateFontRendererPreferencesFromSystemSettings(prefs);
  #endif
- 

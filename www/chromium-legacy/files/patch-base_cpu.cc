@@ -1,38 +1,35 @@
---- base/cpu.cc.orig	2019-10-21 19:06:18 UTC
+--- base/cpu.cc.orig	2021-01-18 21:28:44 UTC
 +++ base/cpu.cc
-@@ -14,7 +14,7 @@
+@@ -16,7 +16,7 @@
  
  #include "base/stl_util.h"
  
--#if defined(ARCH_CPU_ARM_FAMILY) && (defined(OS_ANDROID) || defined(OS_LINUX))
-+#if defined(ARCH_CPU_ARM_FAMILY) && (defined(OS_ANDROID) || defined(OS_LINUX) || defined(OS_BSD))
+-#if defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_ANDROID) || \
++#if defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_ANDROID) || defined(OS_BSD) || \
+     defined(OS_AIX)
+ #include "base/containers/flat_set.h"
  #include "base/files/file_util.h"
- #endif
+@@ -182,6 +182,14 @@ std::string* CpuInfoBrand() {
  
-@@ -135,7 +135,7 @@ uint64_t xgetbv(uint32_t xcr) {
- 
- #endif  // ARCH_CPU_X86_FAMILY
- 
--#if defined(ARCH_CPU_ARM_FAMILY) && (defined(OS_ANDROID) || defined(OS_LINUX))
-+#if defined(ARCH_CPU_ARM_FAMILY) && (defined(OS_ANDROID) || defined(OS_LINUX) || defined(OS_BSD))
- std::string* CpuInfoBrand() {
-   static std::string* brand = []() {
-     // This function finds the value from /proc/cpuinfo under the key "model
-@@ -165,7 +165,7 @@ std::string* CpuInfoBrand() {
    return brand;
  }
++#elif defined(OS_BSD)
++std::string* CpuInfoBrand() {
++  static std::string* brand = []() {
++    return new std::string(SysInfo::CPUModelName());
++  }();
++
++  return brand;
++}
  #endif  // defined(ARCH_CPU_ARM_FAMILY) && (defined(OS_ANDROID) ||
--        // defined(OS_LINUX))
-+        // defined(OS_LINUX) || defined(OS_BSD))
+         // defined(OS_LINUX) || defined(OS_CHROMEOS))
  
- }  // namespace
- 
-@@ -287,7 +287,7 @@ void CPU::Initialize() {
+@@ -305,7 +313,7 @@ void CPU::Initialize() {
      }
    }
  #elif defined(ARCH_CPU_ARM_FAMILY)
--#if (defined(OS_ANDROID) || defined(OS_LINUX))
-+#if (defined(OS_ANDROID) || defined(OS_LINUX) || defined(OS_BSD))
+-#if defined(OS_ANDROID) || defined(OS_LINUX) || defined(OS_CHROMEOS)
++#if defined(OS_ANDROID) || defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_BSD)
    cpu_brand_ = *CpuInfoBrand();
  #elif defined(OS_WIN)
    // Windows makes high-resolution thread timing information available in

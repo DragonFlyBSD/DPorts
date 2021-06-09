@@ -1,8 +1,8 @@
---- net/http/http_auth_gssapi_posix.cc.orig	2019-10-21 19:06:38 UTC
+--- net/http/http_auth_gssapi_posix.cc.orig	2020-11-13 06:36:45 UTC
 +++ net/http/http_auth_gssapi_posix.cc
-@@ -366,8 +366,9 @@ base::NativeLibrary GSSAPISharedLibrary::LoadSharedLib
+@@ -367,8 +367,9 @@ base::NativeLibrary GSSAPISharedLibrary::LoadSharedLib
      static const char* const kDefaultLibraryNames[] = {
- #if defined(OS_MACOSX)
+ #if defined(OS_APPLE)
        "/System/Library/Frameworks/GSS.framework/GSS"
 -#elif defined(OS_OPENBSD)
 -      "libgssapi.so"          // Heimdal - OpenBSD

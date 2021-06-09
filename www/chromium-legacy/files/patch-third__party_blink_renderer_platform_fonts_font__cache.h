@@ -1,6 +1,15 @@
---- third_party/blink/renderer/platform/fonts/font_cache.h.orig	2019-10-21 19:06:44 UTC
+--- third_party/blink/renderer/platform/fonts/font_cache.h.orig	2021-01-18 21:29:05 UTC
 +++ third_party/blink/renderer/platform/fonts/font_cache.h
-@@ -158,7 +158,7 @@ class PLATFORM_EXPORT FontCache {
+@@ -58,7 +58,7 @@
+ #include "third_party/skia/include/core/SkFontMgr.h"
+ #include "third_party/skia/include/core/SkRefCnt.h"
+ 
+-#if defined(OS_LINUX) || defined(OS_CHROMEOS)
++#if defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_BSD)
+ #include "ui/gfx/font_fallback_linux.h"
+ #endif
+ 
+@@ -173,7 +173,7 @@ class PLATFORM_EXPORT FontCache {
    sk_sp<SkFontMgr> FontManager() { return font_manager_; }
    static void SetFontManager(sk_sp<SkFontMgr>);
  
@@ -9,41 +18,37 @@
    // These are needed for calling QueryRenderStyleForStrike, since
    // gfx::GetFontRenderParams makes distinctions based on DSF.
    static float DeviceScaleFactor() { return device_scale_factor_; }
-@@ -233,7 +233,7 @@ class PLATFORM_EXPORT FontCache {
+@@ -248,11 +248,11 @@ class PLATFORM_EXPORT FontCache {
        const FontDescription&);
  #endif  // defined(OS_ANDROID)
  
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
-   struct PlatformFallbackFont {
-     String name;
-     std::string filename;
-@@ -245,7 +245,7 @@ class PLATFORM_EXPORT FontCache {
-   static void GetFontForCharacter(UChar32,
+-#if defined(OS_LINUX) || defined(OS_CHROMEOS)
++#if defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_BSD)
+   static bool GetFontForCharacter(UChar32,
                                    const char* preferred_locale,
-                                   PlatformFallbackFont*);
--#endif  // defined(OS_LINUX)
-+#endif  // defined(OS_LINUX) || defined(OS_BSD)
+                                   gfx::FallbackFontData*);
+-#endif  // defined(OS_LINUX) || defined(OS_CHROMEOS)
++#endif  // defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_BSD)
  
    scoped_refptr<SimpleFontData> FontDataFromFontPlatformData(
        const FontPlatformData*,
-@@ -317,12 +317,12 @@ class PLATFORM_EXPORT FontCache {
+@@ -326,12 +326,12 @@ class PLATFORM_EXPORT FontCache {
                                     const FontFaceCreationParams&,
                                     std::string& name);
  
--#if defined(OS_ANDROID) || defined(OS_LINUX)
-+#if defined(OS_ANDROID) || defined(OS_LINUX) || defined(OS_BSD)
+-#if defined(OS_ANDROID) || defined(OS_LINUX) || defined(OS_CHROMEOS)
++#if defined(OS_ANDROID) || defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_BSD)
    static AtomicString GetFamilyNameForCharacter(SkFontMgr*,
                                                  UChar32,
                                                  const FontDescription&,
                                                  FontFallbackPriority);
--#endif  // defined(OS_ANDROID) || defined(OS_LINUX)
-+#endif  // defined(OS_ANDROID) || defined(OS_LINUX) || defined(OS_BSD)
+-#endif  // defined(OS_ANDROID) || defined(OS_LINUX) || defined(OS_CHROMEOS)
++#endif  // defined(OS_ANDROID) || defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_BSD)
  
    scoped_refptr<SimpleFontData> FallbackOnStandardFontStyle(
        const FontDescription&,
-@@ -355,7 +355,7 @@ class PLATFORM_EXPORT FontCache {
-   mojom::blink::DWriteFontProxyPtr service_;
+@@ -371,7 +371,7 @@ class PLATFORM_EXPORT FontCache {
+   std::unique_ptr<FallbackFamilyStyleCache> fallback_params_cache_;
  #endif  // defined(OS_WIN)
  
 -#if defined(OS_LINUX) || defined(OS_CHROMEOS)

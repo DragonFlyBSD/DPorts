@@ -1,6 +1,6 @@
---- chrome/browser/extensions/api/webrtc_logging_private/webrtc_logging_private_api.cc.orig	2019-10-21 19:06:21 UTC
+--- chrome/browser/extensions/api/webrtc_logging_private/webrtc_logging_private_api.cc.orig	2020-11-13 06:36:36 UTC
 +++ chrome/browser/extensions/api/webrtc_logging_private/webrtc_logging_private_api.cc
-@@ -29,7 +29,7 @@
+@@ -30,7 +30,7 @@
  #include "extensions/browser/process_manager.h"
  #include "extensions/common/error_utils.h"
  
@@ -9,7 +9,7 @@
  #include "extensions/common/permissions/permissions_data.h"
  #endif
  
-@@ -38,7 +38,7 @@ namespace {
+@@ -39,7 +39,7 @@ namespace {
  bool CanEnableAudioDebugRecordingsFromExtension(
      const extensions::Extension* extension) {
    bool enabled_by_permissions = false;
@@ -18,24 +18,22 @@
    if (extension) {
      enabled_by_permissions =
          extension->permissions_data()->active_permissions().HasAPIPermission(
-@@ -557,7 +557,7 @@ void WebrtcLoggingPrivateStartEventLoggingFunction::Fi
- }
+@@ -571,7 +571,7 @@ void WebrtcLoggingPrivateStartEventLoggingFunction::Fi
  
- bool WebrtcLoggingPrivateGetLogsDirectoryFunction::RunAsync() {
+ ExtensionFunction::ResponseAction
+ WebrtcLoggingPrivateGetLogsDirectoryFunction::Run() {
 -#if defined(OS_LINUX) || defined(OS_CHROMEOS)
 +#if defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_BSD)
    // Unlike other WebrtcLoggingPrivate functions that take a RequestInfo object,
    // this function shouldn't be called by a component extension on behalf of
    // some web code. It returns a DirectoryEntry for use directly in the calling
-@@ -580,11 +580,11 @@ bool WebrtcLoggingPrivateGetLogsDirectoryFunction::Run
+@@ -594,9 +594,9 @@ WebrtcLoggingPrivateGetLogsDirectoryFunction::Run() {
            &WebrtcLoggingPrivateGetLogsDirectoryFunction::FireErrorCallback,
            this));
-   return true;
+   return RespondLater();
 -#else   // defined(OS_LINUX) || defined(OS_CHROMEOS)
 +#else   // defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_BSD)
-   SetError("Not supported on the current OS");
-   SendResponse(false);
-   return false;
+   return RespondNow(Error("Not supported on the current OS"));
 -#endif  // defined(OS_LINUX) || defined(OS_CHROMEOS)
 +#endif  // defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_BSD)
  }

@@ -1,28 +1,28 @@
 diff --git PRESUBMIT.py PRESUBMIT.py
-index bdaca7ad0d..222b81d354 100644
+index 0b09333e2f4..3b90d04f674 100644
 --- PRESUBMIT.py
 +++ PRESUBMIT.py
-@@ -1166,6 +1166,7 @@ _VALID_OS_MACROS = (
+@@ -1270,6 +1270,7 @@ _VALID_OS_MACROS = (
      'OS_CAT',       # For testing.
      'OS_CHROMEOS',
      'OS_CYGWIN',    # third_party code.
-+    'OS_DRAGONFLY', 
++    'OS_DRAGONFLY',
      'OS_FREEBSD',
      'OS_FUCHSIA',
      'OS_IOS',
-@@ -3985,6 +3986,7 @@ def _DidYouMeanOSMacro(bad_macro):
+@@ -4410,6 +4411,7 @@ def _DidYouMeanOSMacro(bad_macro):
      return {'A': 'OS_ANDROID',
              'B': 'OS_BSD',
              'C': 'OS_CHROMEOS',
 +            'D': 'OS_DRAGONFLY',
              'F': 'OS_FREEBSD',
+             'I': 'OS_IOS',
              'L': 'OS_LINUX',
-             'M': 'OS_MACOSX',
 diff --git base/base_paths_posix.cc base/base_paths_posix.cc
-index 00a15696ca..a16ceb7ee2 100644
+index 11cbe735841..ce255062176 100644
 --- base/base_paths_posix.cc
 +++ base/base_paths_posix.cc
-@@ -24,7 +24,7 @@
+@@ -25,7 +25,7 @@
  #include "base/process/process_metrics.h"
  #include "build/build_config.h"
  
@@ -31,7 +31,7 @@ index 00a15696ca..a16ceb7ee2 100644
  #include <sys/param.h>
  #include <sys/sysctl.h>
  #elif defined(OS_SOLARIS) || defined(OS_AIX)
-@@ -45,7 +45,7 @@ bool PathProviderPosix(int key, FilePath* result) {
+@@ -46,7 +46,7 @@ bool PathProviderPosix(int key, FilePath* result) {
        }
        *result = bin_dir;
        return true;
@@ -41,10 +41,10 @@ index 00a15696ca..a16ceb7ee2 100644
        char bin_dir[PATH_MAX + 1];
        size_t length = sizeof(bin_dir);
 diff --git base/debug/debugger_posix.cc base/debug/debugger_posix.cc
-index bd39c20a7f..0b92d9ed48 100644
+index 78a6136bdbb..5d5227b0220 100644
 --- base/debug/debugger_posix.cc
 +++ base/debug/debugger_posix.cc
-@@ -35,7 +35,7 @@
+@@ -38,7 +38,7 @@
  #include <sys/sysctl.h>
  #endif
  
@@ -53,7 +53,7 @@ index bd39c20a7f..0b92d9ed48 100644
  #include <sys/user.h>
  #endif
  
-@@ -119,6 +119,8 @@ bool BeingDebugged() {
+@@ -127,6 +127,8 @@ bool BeingDebugged() {
    is_set = true;
  #if defined(OS_FREEBSD)
    being_debugged = (info->ki_flag & P_TRACED) != 0;
@@ -63,10 +63,10 @@ index bd39c20a7f..0b92d9ed48 100644
    being_debugged = (info->p_flag & P_TRACED) != 0;
  #else
 diff --git base/debug/proc_maps_linux.cc base/debug/proc_maps_linux.cc
-index 7d1be154ef..16e28e6865 100644
+index 53657d1522a..d354de3e4b3 100644
 --- base/debug/proc_maps_linux.cc
 +++ base/debug/proc_maps_linux.cc
-@@ -48,10 +48,15 @@ bool ReadProcMaps(std::string* proc_maps) {
+@@ -55,6 +55,11 @@ bool ReadProcMaps(std::string* proc_maps) {
    // seq_file only writes out a page-sized amount on each call. Refer to header
    // file for details.
    const long kReadSize = sysconf(_SC_PAGESIZE);
@@ -76,52 +76,9 @@ index 7d1be154ef..16e28e6865 100644
 +  const char *MapPath = "/proc/self/maps";
 +#endif
  
--  base::ScopedFD fd(HANDLE_EINTR(open("/proc/self/maps", O_RDONLY)));
-+  base::ScopedFD fd(HANDLE_EINTR(open(MapPath, O_RDONLY)));
+   base::ScopedFD fd(HANDLE_EINTR(open(kProcSelfMapsPath, O_RDONLY)));
    if (!fd.is_valid()) {
--    DPLOG(ERROR) << "Couldn't open /proc/self/maps";
-+    DPLOG(ERROR) << "Couldn't open " << MapPath;
-     return false;
-   }
-   proc_maps->clear();
-@@ -65,7 +70,7 @@ bool ReadProcMaps(std::string* proc_maps) {
- 
-     ssize_t bytes_read = HANDLE_EINTR(read(fd.get(), buffer, kReadSize));
-     if (bytes_read < 0) {
--      DPLOG(ERROR) << "Couldn't read /proc/self/maps";
-+      DPLOG(ERROR) << "Couldn't read " << MapPath;
-       proc_maps->clear();
-       return false;
-     }
-@@ -111,12 +116,24 @@ bool ParseProcMaps(const std::string& input,
-       break;
-     }
- 
--    MappedMemoryRegion region;
--    const char* line = lines[i].c_str();
--    char permissions[5] = {'\0'};  // Ensure NUL-terminated string.
-+#if defined(OS_BSD)
-+    char e_eflags1[5] = { '\0' };
-+    char e_eflags2[5] = { '\0' };
-+    char type[16] = { '\0' };
-+    u_long obj = 0 ;
-+    u_long ref_count = 0;
-+    u_long shadow_count = 0;
-+    u_long flags = 0;
-+    u_int resident = 0;
-+    u_int privateresident = 0;
-+#else
-     uint8_t dev_major = 0;
-     uint8_t dev_minor = 0;
-     long inode = 0;
-+#endif
-+    MappedMemoryRegion region;
-+    const char* line = lines[i].c_str();
-+    char permissions[5] = {'\0'};  // Ensure NUL-terminated string.
-     int path_index = 0;
- 
-     // Sample format from man 5 proc:
-@@ -127,9 +144,16 @@ bool ParseProcMaps(const std::string& input,
+@@ -158,9 +163,16 @@ bool ParseProcMaps(const std::string& input,
      // The final %n term captures the offset in the input string, which is used
      // to determine the path name. It *does not* increment the return value.
      // Refer to man 3 sscanf for details.
@@ -138,24 +95,11 @@ index 7d1be154ef..16e28e6865 100644
        DPLOG(WARNING) << "sscanf failed for line: " << line;
        return false;
      }
-@@ -151,10 +175,12 @@ bool ParseProcMaps(const std::string& input,
-     else if (permissions[2] != '-')
-       return false;
- 
-+#if defined(OS_LINUX)
-     if (permissions[3] == 'p')
-       region.permissions |= MappedMemoryRegion::PRIVATE;
-     else if (permissions[3] != 's' && permissions[3] != 'S')  // Shared memory.
-       return false;
-+#endif
- 
-     // Pushing then assigning saves us a string copy.
-     regions.push_back(region);
 diff --git base/debug/stack_trace_posix.cc base/debug/stack_trace_posix.cc
-index 4537c2146e..a7e6db35af 100644
+index 5d0494a0c52..114c2dc3299 100644
 --- base/debug/stack_trace_posix.cc
 +++ base/debug/stack_trace_posix.cc
-@@ -603,7 +603,12 @@ class SandboxSymbolizeHelper {
+@@ -602,7 +602,12 @@ class SandboxSymbolizeHelper {
    // process memory.
    void SetBaseAddressesForMemoryRegions() {
      base::ScopedFD mem_fd(
@@ -168,17 +112,12 @@ index 4537c2146e..a7e6db35af 100644
      if (!mem_fd.is_valid())
        return;
  
-@@ -656,22 +661,26 @@ class SandboxSymbolizeHelper {
+@@ -655,17 +660,26 @@ class SandboxSymbolizeHelper {
    // Parses /proc/self/maps in order to compile a list of all object file names
    // for the modules that are loaded in the current process.
    // Returns true on success.
 +  // XXX (tuxillo) needs review, not complete?
    bool CacheMemoryRegions() {
--#if defined(OS_BSD)
--    // TODO (rene) avoid link error, implement something?
--    NOTIMPLEMENTED();
--    return false;
--#else
      // Reads /proc/self/maps.
      std::string contents;
      if (!ReadProcMaps(&contents)) {
@@ -200,25 +139,8 @@ index 4537c2146e..a7e6db35af 100644
        return false;
      }
  
-@@ -679,7 +688,6 @@ class SandboxSymbolizeHelper {
- 
-     is_initialized_ = true;
-     return true;
--#endif
-   }
- 
-   // Opens all object files and caches their file descriptors.
-@@ -703,7 +711,7 @@ class SandboxSymbolizeHelper {
-           // Skip regions with empty file names.
-           continue;
-         }
--        if (region.path[0] == '[') {
-+        if (region.path[0] == '[' || region.path[0] == '-') {
-           // Skip pseudo-paths, like [stack], [vdso], [heap], etc ...
-           continue;
-         }
 diff --git base/files/file_path_watcher_kqueue.h base/files/file_path_watcher_kqueue.h
-index 0edee3f0f1..51239ca6f4 100644
+index 08a08a5a444..252cb3741bc 100644
 --- base/files/file_path_watcher_kqueue.h
 +++ base/files/file_path_watcher_kqueue.h
 @@ -5,12 +5,19 @@
@@ -242,9 +164,33 @@ index 0edee3f0f1..51239ca6f4 100644
  #include <memory>
  #include <vector>
  
+diff --git base/files/file_util_posix.cc base/files/file_util_posix.cc
+index 4db308686da..99ccd3683f7 100644
+--- base/files/file_util_posix.cc
++++ base/files/file_util_posix.cc
+@@ -953,6 +953,10 @@ bool AllocateFileRegion(File* file, int64_t offset, size_t size) {
+   // space. It can fail because the filesystem doesn't support it. In that case,
+   // use the manual method below.
+ 
++//
++// We don't have posix_fallocate() or even fallocate()
++//
++#ifndef __DragonFly__
+ #if defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_BSD)
+ #if defined(OS_BSD)
+   if (HANDLE_EINTR(posix_fallocate(file->GetPlatformFile(), offset, size)) != -1)
+@@ -972,6 +976,8 @@ bool AllocateFileRegion(File* file, int64_t offset, size_t size) {
+   DPLOG(ERROR) << "F_PREALLOCATE";
+ #endif
+ 
++#endif	/* __DragonFly__ */
++
+   // Manually realize the extended file by writing bytes to it at intervals.
+   int64_t block_size = 512;  // Start with something safe.
+   stat_wrapper_t statbuf;
 diff --git base/message_loop/message_loop_task_runner.cc base/message_loop/message_loop_task_runner.cc
 new file mode 100644
-index 0000000000..72989b078c
+index 00000000000..72989b078cb
 --- /dev/null
 +++ base/message_loop/message_loop_task_runner.cc
 @@ -0,0 +1,185 @@
@@ -434,10 +380,10 @@ index 0000000000..72989b078c
 +
 +}  // namespace base
 diff --git base/message_loop/message_pump.h base/message_loop/message_pump.h
-index b8dc052a17..46da18e7ee 100644
+index babe0174d61..d84a9881467 100644
 --- base/message_loop/message_pump.h
 +++ base/message_loop/message_pump.h
-@@ -195,6 +195,13 @@ class BASE_EXPORT MessagePump {
+@@ -217,6 +217,13 @@ class BASE_EXPORT MessagePump {
  
    // Sets the timer slack to the specified value.
    virtual void SetTimerSlack(TimerSlack timer_slack);
@@ -452,19 +398,19 @@ index b8dc052a17..46da18e7ee 100644
  
  }  // namespace base
 diff --git base/message_loop/message_pump_glib.cc base/message_loop/message_pump_glib.cc
-index 6374c753ef..e6e6567a23 100644
+index 5641b8295a2..fdbf8cced54 100644
 --- base/message_loop/message_pump_glib.cc
 +++ base/message_loop/message_pump_glib.cc
-@@ -6,6 +6,7 @@
- 
+@@ -7,6 +7,7 @@
  #include <fcntl.h>
+ #include <glib.h>
  #include <math.h>
 +#include <poll.h>
  
- #include <glib.h>
- 
-@@ -392,6 +393,14 @@ void MessagePumpGlib::HandleDispatch() {
-   state_->next_work_info = state_->delegate->DoSomeWork();
+ #if defined(OS_BSD)
+ #include <pthread.h>
+@@ -383,6 +384,14 @@ void MessagePumpGlib::HandleDispatch() {
+   state_->next_work_info = state_->delegate->DoWork();
  }
  
 +_Static_assert(sizeof(GPollFD) == sizeof(pollfd),
@@ -476,9 +422,9 @@ index 6374c753ef..e6e6567a23 100644
 +}
 +
  void MessagePumpGlib::Run(Delegate* delegate) {
- #ifndef NDEBUG
-   CheckThread(this);
-@@ -419,7 +428,15 @@ void MessagePumpGlib::Run(Delegate* delegate) {
+   RunState state;
+   state.delegate = delegate;
+@@ -406,7 +415,15 @@ void MessagePumpGlib::Run(Delegate* delegate) {
      // Don't block if we think we have more work to do.
      bool block = !more_work_is_plausible;
  
@@ -494,27 +440,8 @@ index 6374c753ef..e6e6567a23 100644
      if (state_->should_quit)
        break;
  
-diff --git base/message_loop/message_pump_libevent.cc base/message_loop/message_pump_libevent.cc
-index 6636e4fe7f..dee1caccac 100644
---- base/message_loop/message_pump_libevent.cc
-+++ base/message_loop/message_pump_libevent.cc
-@@ -239,7 +239,13 @@ void MessagePumpLibevent::Run(Delegate* delegate) {
-         event_set(timer_event.get(), -1, 0, timer_callback, event_base_);
-         event_base_set(event_base_, timer_event.get());
-         event_add(timer_event.get(), &poll_tv);
--        event_base_loop(event_base_, EVLOOP_ONCE);
-+        if (high_res_mode_) {
-+          // XXX When high-precision kqueue event is available, this should
-+          //     instead be setting a flag for the libevent2 timer-event.
-+          event_base_loop(event_base_, EVLOOP_ONCE | EVLOOP_PRECISE);
-+        } else {
-+          event_base_loop(event_base_, EVLOOP_ONCE);
-+        }
-         event_del(timer_event.get());
-       }
-     }
 diff --git base/process/launch_posix.cc base/process/launch_posix.cc
-index ab15a23c92..89ff518271 100644
+index a4889782e68..d8ab2e942a3 100644
 --- base/process/launch_posix.cc
 +++ base/process/launch_posix.cc
 @@ -56,7 +56,7 @@
@@ -536,7 +463,7 @@ index ab15a23c92..89ff518271 100644
  static const char kFDDir[] = "/dev/fd";
  #elif defined(OS_OPENBSD)
 diff --git base/process/process_handle_freebsd.cc base/process/process_handle_freebsd.cc
-index f466c01675..8bba99e605 100644
+index f466c016758..8bba99e6054 100644
 --- base/process/process_handle_freebsd.cc
 +++ base/process/process_handle_freebsd.cc
 @@ -25,7 +25,11 @@ ProcessId GetParentProcessId(ProcessHandle process) {
@@ -552,12 +479,12 @@ index f466c01675..8bba99e605 100644
  
  FilePath GetProcessExecutablePath(ProcessHandle process) {
 diff --git base/process/process_iterator.h base/process/process_iterator.h
-index 767f3812ae..102f070f05 100644
+index 3d02bdd4842..bc16ab6da49 100644
 --- base/process/process_iterator.h
 +++ base/process/process_iterator.h
 @@ -26,7 +26,7 @@
  #include <tlhelp32.h>
- #elif defined(OS_MACOSX) || defined(OS_OPENBSD)
+ #elif defined(OS_APPLE) || defined(OS_OPENBSD)
  #include <sys/sysctl.h>
 -#elif defined(OS_FREEBSD)
 +#elif defined(OS_FREEBSD) || defined(OS_DRAGONFLY)
@@ -565,7 +492,7 @@ index 767f3812ae..102f070f05 100644
  #elif defined(OS_POSIX) || defined(OS_FUCHSIA)
  #include <dirent.h>
 diff --git base/process/process_iterator_freebsd.cc base/process/process_iterator_freebsd.cc
-index 2cae86ce5c..67390708c4 100644
+index b4429ff3e4e..67390708c46 100644
 --- base/process/process_iterator_freebsd.cc
 +++ base/process/process_iterator_freebsd.cc
 @@ -30,6 +30,7 @@ ProcessIterator::ProcessIterator(const ProcessFilter* filter)
@@ -585,15 +512,6 @@ index 2cae86ce5c..67390708c4 100644
        // Leave some spare room for process table growth (more could show up
        // between when we check and now)
        num_of_kinfo_proc += 16;
-@@ -54,7 +55,7 @@ ProcessIterator::ProcessIterator(const ProcessFilter* filter)
-         }
-       } else {
-         // Got the list, just make sure we're sized exactly right
--        size_t num_of_kinfo_proc = len / sizeof(struct kinfo_proc);
-+        num_of_kinfo_proc = len / sizeof(struct kinfo_proc);
-         kinfo_procs_.resize(num_of_kinfo_proc);
-         done = true;
-       }
 @@ -76,11 +77,17 @@ bool ProcessIterator::CheckForNextProcess() {
    for (; index_of_kinfo_proc_ < kinfo_procs_.size(); ++index_of_kinfo_proc_) {
      size_t length;
@@ -630,11 +548,11 @@ index 2cae86ce5c..67390708c4 100644
      size_t last_slash = data.rfind('/', exec_name_end);
      if (last_slash == std::string::npos) {
 diff --git base/process/process_metrics.cc base/process/process_metrics.cc
-index 429d4122ad..02d5d21c7f 100644
+index 3da62a1ad18..5e7749c1618 100644
 --- base/process/process_metrics.cc
 +++ base/process/process_metrics.cc
-@@ -100,7 +100,7 @@ std::unique_ptr<ProcessMetrics> ProcessMetrics::CreateCurrentProcessMetrics() {
- #endif  // !defined(OS_MACOSX) || defined(OS_IOS)
+@@ -94,7 +94,7 @@ std::unique_ptr<ProcessMetrics> ProcessMetrics::CreateCurrentProcessMetrics() {
+ #endif  // !defined(OS_MAC)
  }
  
 -#if !defined(OS_FREEBSD) || !defined(OS_POSIX)
@@ -643,11 +561,11 @@ index 429d4122ad..02d5d21c7f 100644
    TimeDelta cumulative_cpu = GetCumulativeCPUUsage();
    TimeTicks time = TimeTicks::Now();
 diff --git base/process/process_metrics.h base/process/process_metrics.h
-index 8c2c3d8fb0..932f3c1544 100644
+index 721ced0e25e..ba2d0407122 100644
 --- base/process/process_metrics.h
 +++ base/process/process_metrics.h
-@@ -244,6 +244,10 @@ class BASE_EXPORT ProcessMetrics {
- #endif  // defined(OS_MACOSX)
+@@ -296,6 +296,10 @@ class BASE_EXPORT ProcessMetrics {
+ #endif  // defined(OS_APPLE)
  #endif  // !defined(OS_IOS)
  
 +#if defined(OS_FREEBSD) || defined(OS_DRAGONFLY)
@@ -658,10 +576,10 @@ index 8c2c3d8fb0..932f3c1544 100644
  };
  
 diff --git base/process/process_metrics_freebsd.cc base/process/process_metrics_freebsd.cc
-index 303d9781c3..a4ca440e38 100644
+index 9ebd211c048..d9f5edfb470 100644
 --- base/process/process_metrics_freebsd.cc
 +++ base/process/process_metrics_freebsd.cc
-@@ -37,7 +37,19 @@ int GetPageShift() {
+@@ -38,7 +38,19 @@ int GetPageShift() {
  }
  
  ProcessMetrics::ProcessMetrics(ProcessHandle process)
@@ -682,7 +600,7 @@ index 303d9781c3..a4ca440e38 100644
  
  // static
  std::unique_ptr<ProcessMetrics> ProcessMetrics::CreateProcessMetrics(
-@@ -46,14 +58,48 @@ std::unique_ptr<ProcessMetrics> ProcessMetrics::CreateProcessMetrics(
+@@ -47,14 +59,48 @@ std::unique_ptr<ProcessMetrics> ProcessMetrics::CreateProcessMetrics(
  }
  
  double ProcessMetrics::GetPlatformIndependentCPUUsage() {
@@ -733,7 +651,7 @@ index 303d9781c3..a4ca440e38 100644
  }
  
  TimeDelta ProcessMetrics::GetCumulativeCPUUsage() {
-@@ -66,26 +112,30 @@ bool ProcessMetrics::GetIOCounters(IoCounters* io_counters) const {
+@@ -67,26 +113,30 @@ bool ProcessMetrics::GetIOCounters(IoCounters* io_counters) const {
  }
  
  size_t GetSystemCommitCharge() {
@@ -769,7 +687,7 @@ index 303d9781c3..a4ca440e38 100644
  }
  
  int GetNumberOfThreads(ProcessHandle process) {
-@@ -143,15 +193,20 @@ bool GetSystemMemoryInfo(SystemMemoryInfoKB *meminfo) {
+@@ -144,15 +194,20 @@ bool GetSystemMemoryInfo(SystemMemoryInfoKB *meminfo) {
  }
  
  int ProcessMetrics::GetOpenFdCount() const {
@@ -790,7 +708,7 @@ index 303d9781c3..a4ca440e38 100644
  }
  
  int ProcessMetrics::GetOpenFdSoftLimit() const {
-@@ -185,7 +240,11 @@ size_t ProcessMetrics::GetResidentSetSize() const {
+@@ -186,7 +241,11 @@ size_t ProcessMetrics::GetResidentSetSize() const {
    size_t rss;
  
    if (nproc > 0) {
@@ -802,7 +720,7 @@ index 303d9781c3..a4ca440e38 100644
    } else {
      rss = 0;
    }
-@@ -211,9 +270,15 @@ uint64_t ProcessMetrics::GetVmSwapBytes() const {
+@@ -212,9 +271,15 @@ uint64_t ProcessMetrics::GetVmSwapBytes() const {
    size_t swrss;
  
    if (nproc > 0) {
@@ -819,12 +737,12 @@ index 303d9781c3..a4ca440e38 100644
      swrss = 0;
    }
 diff --git base/process/process_metrics_posix.cc base/process/process_metrics_posix.cc
-index 37d5ffee23..76b7ab326b 100644
+index aba40e5b0b7..2960462d8e4 100644
 --- base/process/process_metrics_posix.cc
 +++ base/process/process_metrics_posix.cc
 @@ -20,7 +20,7 @@
  
- #if defined(OS_MACOSX)
+ #if defined(OS_APPLE)
  #include <malloc/malloc.h>
 -#elif defined(OS_FREEBSD)
 +#elif defined(OS_FREEBSD) || defined(OS_DRAGONFLY)
@@ -840,11 +758,46 @@ index 37d5ffee23..76b7ab326b 100644
  static const rlim_t kSystemDefaultMaxFds = 8192;
  #elif defined(OS_NETBSD)
  static const rlim_t kSystemDefaultMaxFds = 1024;
+diff --git base/profiler/register_context.h base/profiler/register_context.h
+index aa9a826f1dd..a728172efd6 100644
+--- base/profiler/register_context.h
++++ base/profiler/register_context.h
+@@ -191,7 +191,7 @@ inline uintptr_t& RegisterContextInstructionPointer(mcontext_t* context) {
+ 
+ #endif  // #if defined(ARCH_CPU_ARM_FAMILY) && defined(ARCH_CPU_32_BITS)
+ 
+-#elif defined(OS_FREEBSD)
++#elif defined(OS_FREEBSD) || defined(OS_DRAGONFLY)
+ 
+ using RegisterContext = mcontext_t;
+ 
+diff --git base/profiler/thread_delegate_posix.cc base/profiler/thread_delegate_posix.cc
+index 3bdefaef97f..29263eb5bb8 100644
+--- base/profiler/thread_delegate_posix.cc
++++ base/profiler/thread_delegate_posix.cc
+@@ -46,7 +46,7 @@ base::Optional<uintptr_t> GetAndroidMainThreadStackBaseAddressImpl() {
+ uintptr_t GetThreadStackBaseAddressImpl(
+     SamplingProfilerThreadToken thread_token) {
+   pthread_attr_t attr;
+-#if defined(OS_FREEBSD)
++#if defined(OS_FREEBSD) || defined(OS_DRAGONFLY)
+   pthread_attr_init(&attr);
+   pthread_attr_get_np(thread_token.pthread_id, &attr);
+ #elif defined(OS_LINUX)
+@@ -156,7 +156,7 @@ std::vector<uintptr_t*> ThreadDelegatePosix::GetRegistersToRewrite(
+   return {
+       // Return the set of callee-save registers per the x86-64 System V ABI
+       // section 3.2.1, plus the stack pointer.
+-#if defined(OS_FREEBSD)
++#if defined(OS_FREEBSD) || defined(OS_DRAGONFLY)
+       reinterpret_cast<uintptr_t*>(&thread_context->mc_rbp),
+       reinterpret_cast<uintptr_t*>(&thread_context->mc_rbx),
+       reinterpret_cast<uintptr_t*>(&thread_context->mc_r12),
 diff --git base/test/launcher/test_launcher.cc base/test/launcher/test_launcher.cc
-index 250108558f..3cff97b93d 100644
+index 989016d2f71..580cb44a058 100644
 --- base/test/launcher/test_launcher.cc
 +++ base/test/launcher/test_launcher.cc
-@@ -1368,6 +1368,10 @@ bool TestLauncher::Init(CommandLine* command_line) {
+@@ -1504,6 +1504,10 @@ bool TestLauncher::Init(CommandLine* command_line) {
    results_tracker_.AddGlobalTag("OS_BSD");
  #endif
  
@@ -856,10 +809,10 @@ index 250108558f..3cff97b93d 100644
    results_tracker_.AddGlobalTag("OS_FREEBSD");
  #endif
 diff --git base/test/test_file_util_linux.cc base/test/test_file_util_linux.cc
-index cd599778d9..6e35060df3 100644
+index 85fb69fdfbe..a067abc974f 100644
 --- base/test/test_file_util_linux.cc
 +++ base/test/test_file_util_linux.cc
-@@ -49,7 +49,11 @@ bool EvictFileFromSystemCache(const FilePath& file) {
+@@ -50,7 +50,11 @@ bool EvictFileFromSystemCache(const FilePath& file) {
    ScopedFD fd(open(file.value().c_str(), O_RDONLY));
    if (!fd.is_valid())
      return false;
@@ -869,10 +822,10 @@ index cd599778d9..6e35060df3 100644
    if (fdatasync(fd.get()) != 0)
 +#endif
      return false;
- #if !defined(OS_BSD)
    if (posix_fadvise(fd.get(), 0, 0, POSIX_FADV_DONTNEED) != 0)
+     return false;
 diff --git base/third_party/cityhash/city.cc base/third_party/cityhash/city.cc
-index b0d2294aab..633df5c900 100644
+index b0d2294aabb..633df5c9007 100644
 --- base/third_party/cityhash/city.cc
 +++ base/third_party/cityhash/city.cc
 @@ -54,7 +54,7 @@ using std::pair;
@@ -885,7 +838,7 @@ index b0d2294aab..633df5c900 100644
  #include <sys/endian.h>
  #define bswap_32(x) bswap32(x)
 diff --git base/third_party/libevent/event-config.h base/third_party/libevent/event-config.h
-index bbd23f1d81..3d9950cc1a 100644
+index bbd23f1d81b..3d9950cc1aa 100644
 --- base/third_party/libevent/event-config.h
 +++ base/third_party/libevent/event-config.h
 @@ -13,7 +13,7 @@
@@ -898,7 +851,7 @@ index bbd23f1d81..3d9950cc1a 100644
  #elif defined(__sun)
  #include "base/third_party/libevent/solaris/event-config.h"
 diff --git base/third_party/libevent/event-internal.h base/third_party/libevent/event-internal.h
-index b7f00402be..64e07ba2f0 100644
+index b7f00402be5..64e07ba2f0d 100644
 --- base/third_party/libevent/event-internal.h
 +++ base/third_party/libevent/event-internal.h
 @@ -68,6 +68,8 @@ struct event_base {
@@ -911,7 +864,7 @@ index b7f00402be..64e07ba2f0 100644
  
  /* Internal use only: Functions that might be missing from <sys/queue.h> */
 diff --git base/third_party/libevent/event.c base/third_party/libevent/event.c
-index 4aa326e0e4..f3d0db6adf 100644
+index 4aa326e0e46..f3d0db6adf0 100644
 --- base/third_party/libevent/event.c
 +++ base/third_party/libevent/event.c
 @@ -165,6 +165,8 @@ event_base_new(void)
@@ -936,7 +889,7 @@ index 4aa326e0e4..f3d0db6adf 100644
  		if (res == -1)
  			return (-1);
 diff --git base/third_party/libevent/event.h base/third_party/libevent/event.h
-index f0887b9616..7eb5388c14 100644
+index f0887b96163..7eb5388c145 100644
 --- base/third_party/libevent/event.h
 +++ base/third_party/libevent/event.h
 @@ -364,6 +364,7 @@ int event_base_set(struct event_base *, struct event *);
@@ -948,7 +901,7 @@ index f0887b9616..7eb5388c14 100644
  
  /**
 diff --git base/third_party/libevent/kqueue.c base/third_party/libevent/kqueue.c
-index 3c2ffd5524..d0c4597125 100644
+index 3c2ffd5524c..d0c4597125d 100644
 --- base/third_party/libevent/kqueue.c
 +++ base/third_party/libevent/kqueue.c
 @@ -40,6 +40,7 @@
@@ -997,15 +950,12 @@ index 3c2ffd5524..d0c4597125 100644
  		if (errno != EINTR) {
                          event_warn("kevent");
 diff --git base/threading/platform_thread.h base/threading/platform_thread.h
-index 207157d115..5ad1611d13 100644
+index 18090e15a20..1399314ac96 100644
 --- base/threading/platform_thread.h
 +++ base/threading/platform_thread.h
-@@ -36,8 +36,10 @@ typedef DWORD PlatformThreadId;
- typedef zx_handle_t PlatformThreadId;
- #elif defined(OS_MACOSX)
+@@ -38,6 +38,8 @@ typedef zx_handle_t PlatformThreadId;
  typedef mach_port_t PlatformThreadId;
--#elif defined(OS_POSIX)
-+#elif defined(OS_POSIX) && !defined(OS_DRAGONFLY)
+ #elif defined(OS_POSIX)
  typedef pid_t PlatformThreadId;
 +#elif defined(OS_DRAGONFLY)
 +typedef lwpid_t PlatformThreadId;
@@ -1013,7 +963,7 @@ index 207157d115..5ad1611d13 100644
  
  // Used for thread checking and debugging.
 diff --git base/threading/platform_thread_internal_posix.h base/threading/platform_thread_internal_posix.h
-index d248fa9bfd..b6157482b2 100644
+index 5c7d76bb166..5f3f275cd30 100644
 --- base/threading/platform_thread_internal_posix.h
 +++ base/threading/platform_thread_internal_posix.h
 @@ -9,6 +9,9 @@
@@ -1027,7 +977,7 @@ index d248fa9bfd..b6157482b2 100644
  namespace base {
  
 diff --git base/threading/platform_thread_posix.cc base/threading/platform_thread_posix.cc
-index 6edc2c3daa..1c8088a299 100644
+index d533ffec678..95f4f2b8be6 100644
 --- base/threading/platform_thread_posix.cc
 +++ base/threading/platform_thread_posix.cc
 @@ -13,6 +13,10 @@
@@ -1041,7 +991,7 @@ index 6edc2c3daa..1c8088a299 100644
  #include <memory>
  
  #include "base/debug/activity_tracker.h"
-@@ -197,6 +201,8 @@ PlatformThreadId PlatformThread::CurrentId() {
+@@ -209,6 +213,8 @@ PlatformThreadId PlatformThread::CurrentId() {
  #elif defined(OS_NACL) && !defined(__GLIBC__)
    // Pointers are 32-bits in NaCl.
    return reinterpret_cast<int32_t>(pthread_self());
@@ -1051,10 +1001,10 @@ index 6edc2c3daa..1c8088a299 100644
    return pthread_self();
  #elif defined(OS_POSIX) && !defined(OS_AIX)
 diff --git base/time/time.h base/time/time.h
-index 6abe411264..14701116e7 100644
+index 7f4a1c6e1d2..9496a385955 100644
 --- base/time/time.h
 +++ base/time/time.h
-@@ -609,7 +609,9 @@ class BASE_EXPORT Time : public time_internal::TimeBase<Time> {
+@@ -672,7 +672,9 @@ class BASE_EXPORT Time : public time_internal::TimeBase<Time> {
    CFAbsoluteTime ToCFAbsoluteTime() const;
  #endif
  
@@ -1066,10 +1016,10 @@ index 6abe411264..14701116e7 100644
    FILETIME ToFileTime() const;
  
 diff --git build/build_config.h build/build_config.h
-index d3cdd2db4a..5c8947163e 100644
+index c37c7429aa4..738b61e39c1 100644
 --- build/build_config.h
 +++ build/build_config.h
-@@ -57,6 +57,8 @@
+@@ -82,6 +82,8 @@
  #define OS_NETBSD 1
  #elif defined(__OpenBSD__)
  #define OS_OPENBSD 1
@@ -1078,7 +1028,7 @@ index d3cdd2db4a..5c8947163e 100644
  #elif defined(__sun)
  #define OS_SOLARIS 1
  #elif defined(__QNXNTO__)
-@@ -73,7 +75,8 @@
+@@ -102,7 +104,8 @@
  
  // For access to standard BSD features, use OS_BSD instead of a
  // more specific macro.
@@ -1088,33 +1038,20 @@ index d3cdd2db4a..5c8947163e 100644
  #define OS_BSD 1
  #endif
  
-@@ -82,7 +85,7 @@
- #if defined(OS_AIX) || defined(OS_ANDROID) || defined(OS_ASMJS) ||    \
-     defined(OS_FREEBSD) || defined(OS_LINUX) || defined(OS_MACOSX) || \
-     defined(OS_NACL) || defined(OS_NETBSD) || defined(OS_OPENBSD) ||  \
--    defined(OS_QNX) || defined(OS_SOLARIS)
-+    defined(OS_QNX) || defined(OS_SOLARIS) || defined(OS_DRAGONFLY)
+@@ -112,7 +115,7 @@
+     defined(OS_FREEBSD) || defined(OS_IOS) || defined(OS_LINUX) ||  \
+     defined(OS_CHROMEOS) || defined(OS_MAC) || defined(OS_NACL) ||  \
+     defined(OS_NETBSD) || defined(OS_OPENBSD) || defined(OS_QNX) || \
+-    defined(OS_SOLARIS)
++    defined(OS_SOLARIS) || defined(OS_DRAGONFLY)
  #define OS_POSIX 1
  #endif
  
 diff --git build/config/BUILDCONFIG.gn build/config/BUILDCONFIG.gn
-index d9e5c389a8..f9b27cdc98 100644
+index c1c85446339..2465d8f2883 100644
 --- build/config/BUILDCONFIG.gn
 +++ build/config/BUILDCONFIG.gn
-@@ -131,10 +131,11 @@ declare_args() {
-   is_official_build = false
- 
-   # Whether we're a traditional desktop unix.
--  is_desktop_linux = current_os == "linux" || current_os == "freebsd"
-+  is_desktop_linux = current_os == "linux" || current_os == "freebsd" || current_os == "dragonfly"
- 
-   # Set to true when compiling with the Clang compiler.
-   is_clang = current_os != "linux" || current_os == "freebsd" ||
-+             current_os == "dragonfly" ||
-              (current_cpu != "s390x" && current_cpu != "s390" &&
-               current_cpu != "ppc64" && current_cpu != "ppc" &&
-               current_cpu != "mips" && current_cpu != "mips64")
-@@ -186,8 +187,8 @@ if (host_toolchain == "") {
+@@ -183,8 +183,8 @@ if (host_toolchain == "") {
    # TODO(dpranke): Add some sort of assert here that verifies that
    # no toolchain omitted host_toolchain from its toolchain_args().
  
@@ -1125,7 +1062,7 @@ index d9e5c389a8..f9b27cdc98 100644
        host_toolchain = "//build/toolchain/linux:clang_$host_cpu"
      } else if (is_clang) {
        host_toolchain = "//build/toolchain/linux:clang_$host_cpu"
-@@ -224,7 +225,7 @@ if (target_os == "android") {
+@@ -221,7 +221,7 @@ if (target_os == "android") {
    assert(host_os == "linux" || host_os == "mac",
           "Android builds are only supported on Linux and Mac hosts.")
    _default_toolchain = "//build/toolchain/android:android_clang_$target_cpu"
@@ -1134,22 +1071,36 @@ index d9e5c389a8..f9b27cdc98 100644
    # See comments in build/toolchain/cros/BUILD.gn about board compiles.
    if (is_clang) {
      _default_toolchain = "//build/toolchain/linux:clang_$target_cpu"
-@@ -288,11 +289,11 @@ is_android = current_os == "android"
+@@ -282,11 +282,11 @@ if (custom_toolchain != "") {
+ # current_os value directly.
+ 
+ is_android = current_os == "android"
+-is_bsd = current_os == "freebsd"
++is_bsd = current_os == "freebsd" || current_os == "dragonfly"
  is_chromeos = current_os == "chromeos"
  is_fuchsia = current_os == "fuchsia"
  is_ios = current_os == "ios"
--is_linux = current_os == "chromeos" || current_os == "linux" || current_os == "freebsd"
-+is_linux = current_os == "chromeos" || current_os == "linux" || current_os == "freebsd" || current_os == "dragonfly"
+-is_linux = current_os == "linux" || current_os == "freebsd"
++is_linux = current_os == "linux" || current_os == "freebsd" || current_os == "dragonfly"
  is_mac = current_os == "mac"
  is_nacl = current_os == "nacl"
  is_win = current_os == "win" || current_os == "winuwp"
--is_bsd = current_os == "freebsd"
-+is_bsd = current_os == "freebsd" || current_os == "dragonfly"
- 
- is_posix = !is_win && !is_fuchsia
+diff --git build/config/compiler/pgo/pgo.gni build/config/compiler/pgo/pgo.gni
+index 88393d34455..85b77f4eb9f 100644
+--- build/config/compiler/pgo/pgo.gni
++++ build/config/compiler/pgo/pgo.gni
+@@ -13,7 +13,8 @@ declare_args() {
+   #     2 : Used during the PGO (optimization) phase.
+   chrome_pgo_phase = 0
+   if (is_official_build &&
+-      (is_win || is_mac || (is_linux && !chromeos_is_browser_only && !is_chromecast))) {
++      (is_win || is_mac || (is_linux && !chromeos_is_browser_only && !is_chromecast)) &&
++      !is_bsd) {
+     chrome_pgo_phase = 2
+   }
  
 diff --git build/config/linux/pkg-config.py build/config/linux/pkg-config.py
-index 50613af3b7..f9e3cdea55 100755
+index a3f313a2db6..28e6fcb1bd7 100755
 --- build/config/linux/pkg-config.py
 +++ build/config/linux/pkg-config.py
 @@ -62,7 +62,7 @@ def SetConfigPath(options):
@@ -1171,7 +1122,7 @@ index 50613af3b7..f9e3cdea55 100755
      return 0
  
 diff --git build/landmine_utils.py build/landmine_utils.py
-index a3f21ff1b8..1c9c8f5e01 100644
+index a3f21ff1b83..1c9c8f5e01d 100644
 --- build/landmine_utils.py
 +++ build/landmine_utils.py
 @@ -11,7 +11,7 @@ def IsWindows():
@@ -1184,10 +1135,10 @@ index a3f21ff1b8..1c9c8f5e01 100644
  
  def IsMac():
 diff --git build/toolchain/gcc_toolchain.gni build/toolchain/gcc_toolchain.gni
-index b3ce2e1d3d..9e114bbe7c 100644
+index 044f2b9afd2..0f8722f5056 100644
 --- build/toolchain/gcc_toolchain.gni
 +++ build/toolchain/gcc_toolchain.gni
-@@ -331,7 +331,7 @@ template("gcc_toolchain") {
+@@ -356,7 +356,7 @@ template("gcc_toolchain") {
        } else {
          rspfile = "{{output}}.rsp"
          rspfile_content = "{{inputs}}"
@@ -1196,7 +1147,7 @@ index b3ce2e1d3d..9e114bbe7c 100644
        }
  
        # Remove the output file first so that ar doesn't try to modify the
-@@ -595,13 +595,12 @@ template("clang_toolchain") {
+@@ -632,13 +632,12 @@ template("clang_toolchain") {
  
    gcc_toolchain(target_name) {
      if (is_bsd) {
@@ -1215,10 +1166,10 @@ index b3ce2e1d3d..9e114bbe7c 100644
        prefix = rebase_path("$clang_base_path/bin", root_build_dir)
        cc = "$prefix/clang"
 diff --git build/toolchain/get_concurrent_links.py build/toolchain/get_concurrent_links.py
-index d91e04d944..59b381bace 100644
+index cc6f949499a..de90a81b7ad 100755
 --- build/toolchain/get_concurrent_links.py
 +++ build/toolchain/get_concurrent_links.py
-@@ -56,6 +56,14 @@ def _GetTotalMemoryInBytes():
+@@ -61,6 +61,14 @@ def _GetTotalMemoryInBytes():
        return max(1, avail_bytes / (1 * (2 ** 30)))  # total / 4GB
      except Exception:
        return 1
@@ -1234,7 +1185,7 @@ index d91e04d944..59b381bace 100644
    return 0
  
 diff --git buildtools/third_party/libc++/trunk/test/support/filesystem_dynamic_test_helper.py buildtools/third_party/libc++/trunk/test/support/filesystem_dynamic_test_helper.py
-index 0789582749..42ffb4d5cc 100644
+index 07895827497..42ffb4d5ccb 100644
 --- buildtools/third_party/libc++/trunk/test/support/filesystem_dynamic_test_helper.py
 +++ buildtools/third_party/libc++/trunk/test/support/filesystem_dynamic_test_helper.py
 @@ -6,7 +6,7 @@ import stat
@@ -1247,7 +1198,7 @@ index 0789582749..42ffb4d5cc 100644
  def env_path():
      ep = os.environ.get('LIBCXX_FILESYSTEM_DYNAMIC_TEST_ROOT')
 diff --git buildtools/third_party/libc++/trunk/utils/google-benchmark/src/internal_macros.h buildtools/third_party/libc++/trunk/utils/google-benchmark/src/internal_macros.h
-index 5dbf4fd275..afb3aa15db 100644
+index 5dbf4fd2752..afb3aa15dba 100644
 --- buildtools/third_party/libc++/trunk/utils/google-benchmark/src/internal_macros.h
 +++ buildtools/third_party/libc++/trunk/utils/google-benchmark/src/internal_macros.h
 @@ -52,6 +52,8 @@
@@ -1260,7 +1211,7 @@ index 5dbf4fd275..afb3aa15db 100644
    #define BENCHMARK_OS_FREEBSD 1
  #elif defined(__NetBSD__)
 diff --git buildtools/third_party/libc++/trunk/utils/google-benchmark/src/sysinfo.cc buildtools/third_party/libc++/trunk/utils/google-benchmark/src/sysinfo.cc
-index c0c07e5e62..551cd5662b 100644
+index c0c07e5e62a..551cd5662b3 100644
 --- buildtools/third_party/libc++/trunk/utils/google-benchmark/src/sysinfo.cc
 +++ buildtools/third_party/libc++/trunk/utils/google-benchmark/src/sysinfo.cc
 @@ -29,7 +29,8 @@
@@ -1292,7 +1243,7 @@ index c0c07e5e62..551cd5662b 100644
    std::vector<double> res(kMaxSamples, 0.0);
    const int nelem = getloadavg(res.data(), kMaxSamples);
 diff --git buildtools/third_party/libc++/trunk/utils/google-benchmark/src/timers.cc buildtools/third_party/libc++/trunk/utils/google-benchmark/src/timers.cc
-index 7613ff92c6..fc0e9fa3e8 100644
+index 7613ff92c6e..fc0e9fa3e8e 100644
 --- buildtools/third_party/libc++/trunk/utils/google-benchmark/src/timers.cc
 +++ buildtools/third_party/libc++/trunk/utils/google-benchmark/src/timers.cc
 @@ -28,7 +28,7 @@
@@ -1305,7 +1256,7 @@ index 7613ff92c6..fc0e9fa3e8 100644
  #endif
  #if defined(BENCHMARK_OS_MACOSX)
 diff --git chrome/browser/apps/platform_apps/api/music_manager_private/device_id_linux.cc chrome/browser/apps/platform_apps/api/music_manager_private/device_id_linux.cc
-index e051f2eb3c..65118b81d3 100644
+index dd09e7f1a65..ecc512429d2 100644
 --- chrome/browser/apps/platform_apps/api/music_manager_private/device_id_linux.cc
 +++ chrome/browser/apps/platform_apps/api/music_manager_private/device_id_linux.cc
 @@ -4,7 +4,7 @@
@@ -1317,7 +1268,7 @@ index e051f2eb3c..65118b81d3 100644
  #include <sys/types.h>
  #include <net/if_dl.h>
  #endif
-@@ -111,7 +111,7 @@ class MacAddressProcessor {
+@@ -110,7 +110,7 @@ class MacAddressProcessor {
                          const char* const prefixes[],
                          size_t prefixes_count) {
      const int MAC_LENGTH = 6;
@@ -1326,7 +1277,7 @@ index e051f2eb3c..65118b81d3 100644
      struct ifaddrs *ifap, *ifinfo;
  #else
      struct ifreq ifinfo;
-@@ -119,7 +119,7 @@ class MacAddressProcessor {
+@@ -118,7 +118,7 @@ class MacAddressProcessor {
  
      memset(&ifinfo, 0, sizeof(ifinfo));
  
@@ -1335,7 +1286,7 @@ index e051f2eb3c..65118b81d3 100644
      int result = getifaddrs(&ifap);
  
      if (result != 0)
-@@ -157,7 +157,7 @@ class MacAddressProcessor {
+@@ -156,7 +156,7 @@ class MacAddressProcessor {
      if (!is_valid_mac_address_.Run(mac_address, MAC_LENGTH))
        return true;
  
@@ -1345,10 +1296,10 @@ index e051f2eb3c..65118b81d3 100644
        return true;
  #else
 diff --git chrome/browser/data_reduction_proxy/data_reduction_proxy_chrome_settings.cc chrome/browser/data_reduction_proxy/data_reduction_proxy_chrome_settings.cc
-index 9a212d1865..e823403c8c 100644
+index fbea49934a3..5dabe3530e8 100644
 --- chrome/browser/data_reduction_proxy/data_reduction_proxy_chrome_settings.cc
 +++ chrome/browser/data_reduction_proxy/data_reduction_proxy_chrome_settings.cc
-@@ -347,6 +347,8 @@ data_reduction_proxy::Client DataReductionProxyChromeSettings::GetClient() {
+@@ -293,6 +293,8 @@ data_reduction_proxy::Client DataReductionProxyChromeSettings::GetClient() {
    return data_reduction_proxy::Client::CHROME_LINUX;
  #elif defined(OS_WIN)
    return data_reduction_proxy::Client::CHROME_WINDOWS;
@@ -1358,10 +1309,10 @@ index 9a212d1865..e823403c8c 100644
    return data_reduction_proxy::Client::CHROME_FREEBSD;
  #elif defined(OS_OPENBSD)
 diff --git chrome/browser/extensions/api/runtime/chrome_runtime_api_delegate.cc chrome/browser/extensions/api/runtime/chrome_runtime_api_delegate.cc
-index 21f7f272e5..89711539c0 100644
+index 1a55d1275f3..a0717ad968f 100644
 --- chrome/browser/extensions/api/runtime/chrome_runtime_api_delegate.cc
 +++ chrome/browser/extensions/api/runtime/chrome_runtime_api_delegate.cc
-@@ -301,6 +301,8 @@ bool ChromeRuntimeAPIDelegate::GetPlatformInfo(PlatformInfo* info) {
+@@ -286,6 +286,8 @@ bool ChromeRuntimeAPIDelegate::GetPlatformInfo(PlatformInfo* info) {
      info->os = extensions::api::runtime::PLATFORM_OS_LINUX;
    } else if (strcmp(os, "freebsd") == 0) {
      info->os = extensions::api::runtime::PLATFORM_OS_FREEBSD;
@@ -1370,11 +1321,24 @@ index 21f7f272e5..89711539c0 100644
    } else if (strcmp(os, "openbsd") == 0) {
      info->os = extensions::api::runtime::PLATFORM_OS_OPENBSD;
    } else {
+diff --git chrome/browser/media/webrtc/webrtc_event_log_uploader.cc chrome/browser/media/webrtc/webrtc_event_log_uploader.cc
+index 01cd3b4e062..e30db2eb53a 100644
+--- chrome/browser/media/webrtc/webrtc_event_log_uploader.cc
++++ chrome/browser/media/webrtc/webrtc_event_log_uploader.cc
+@@ -42,6 +42,8 @@ const char kProduct[] = "Chrome_ChromeOS";
+ const char kProduct[] = "Chrome_Linux";
+ #elif defined(OS_FREEBSD)
+ const char kProduct[] = "Chrome_FreeBSD";
++#elif defined (OS_DRAGONFLY)
++const char kProduct[] = "Chrome_DragonFly";
+ #elif defined(OS_ANDROID)
+ const char kProduct[] = "Chrome_Android";
+ #else
 diff --git chrome/browser/media/webrtc/webrtc_log_uploader.cc chrome/browser/media/webrtc/webrtc_log_uploader.cc
-index afb1a34934..4fa5e14080 100644
+index 4d71014e139..90b6b3aafbf 100644
 --- chrome/browser/media/webrtc/webrtc_log_uploader.cc
 +++ chrome/browser/media/webrtc/webrtc_log_uploader.cc
-@@ -360,6 +360,8 @@ void WebRtcLogUploader::SetupMultipart(
+@@ -359,6 +359,8 @@ void WebRtcLogUploader::SetupMultipart(
    const char product[] = "Chrome_ChromeOS";
  #elif defined(OS_FREEBSD)
    const char product[] = "Chrome_FreeBSD";
@@ -1384,7 +1348,7 @@ index afb1a34934..4fa5e14080 100644
  #error Platform not supported.
  #endif
 diff --git chrome/browser/media_galleries/fileapi/mtp_device_map_service.cc chrome/browser/media_galleries/fileapi/mtp_device_map_service.cc
-index 8c17eb692e..c58315cde7 100644
+index 654fc7d9567..1a19aa7cf37 100644
 --- chrome/browser/media_galleries/fileapi/mtp_device_map_service.cc
 +++ chrome/browser/media_galleries/fileapi/mtp_device_map_service.cc
 @@ -39,7 +39,7 @@ void MTPDeviceMapService::RegisterMTPFileSystem(
@@ -1396,24 +1360,11 @@ index 8c17eb692e..c58315cde7 100644
      CreateMTPDeviceAsyncDelegate(
          device_location, read_only,
          base::Bind(&MTPDeviceMapService::AddAsyncDelegate,
-diff --git chrome/browser/policy/policy_prefs_browsertest.cc chrome/browser/policy/policy_prefs_browsertest.cc
-index ad60feb173..664ea3c006 100644
---- chrome/browser/policy/policy_prefs_browsertest.cc
-+++ chrome/browser/policy/policy_prefs_browsertest.cc
-@@ -186,6 +186,8 @@ class PolicyTestCase {
-     const std::string os("linux");
- #elif defined(OS_FREEBSD)
-     const std::string os("freebsd");
-+#elif defined(OS_DRAGONFLY)
-+    const std::string os("dragonfly");
- #else
- #error "Unknown platform"
- #endif
 diff --git chrome/browser/tracing/crash_service_uploader.cc chrome/browser/tracing/crash_service_uploader.cc
-index 3475a4c20a..c0f5cfc315 100644
+index 7a4deb960b3..2ac564a3fb9 100644
 --- chrome/browser/tracing/crash_service_uploader.cc
 +++ chrome/browser/tracing/crash_service_uploader.cc
-@@ -163,6 +163,8 @@ void TraceCrashServiceUploader::DoCompressOnBackgroundThread(
+@@ -162,6 +162,8 @@ void TraceCrashServiceUploader::DoCompressOnBackgroundThread(
    const char product[] = "Chrome_Android";
  #elif defined(OS_FREEBSD)
    const char product[] = "Chrome_FreeBSD";
@@ -1422,25 +1373,11 @@ index 3475a4c20a..c0f5cfc315 100644
  #else
  #error Platform not supported.
  #endif
-diff --git chrome/browser/ui/views/frame/opaque_browser_frame_view_platform_specific.cc chrome/browser/ui/views/frame/opaque_browser_frame_view_platform_specific.cc
-index 097fecdebc..71aef0f134 100644
---- chrome/browser/ui/views/frame/opaque_browser_frame_view_platform_specific.cc
-+++ chrome/browser/ui/views/frame/opaque_browser_frame_view_platform_specific.cc
-@@ -6,8 +6,7 @@
- 
- #include "build/build_config.h"
- 
--#if !defined(OS_LINUX) && !defined(OS_FREEBSD)
--
-+#if !defined(OS_LINUX) && !defined(OS_FREEBSD) && !defined(OS_DRAGONFLY)
- // static
- std::unique_ptr<OpaqueBrowserFrameViewPlatformSpecific>
- OpaqueBrowserFrameViewPlatformSpecific::Create(
 diff --git chrome/test/base/in_process_browser_test.cc chrome/test/base/in_process_browser_test.cc
-index 2d92036ec9..67a2a0d8ca 100644
+index 4de5baa97f1..f4e34dd97f2 100644
 --- chrome/test/base/in_process_browser_test.cc
 +++ chrome/test/base/in_process_browser_test.cc
-@@ -76,7 +76,7 @@
+@@ -79,7 +79,7 @@
  #include "chrome/test/base/scoped_bundle_swizzler_mac.h"
  #endif
  
@@ -1450,10 +1387,10 @@ index 2d92036ec9..67a2a0d8ca 100644
  #endif
  
 diff --git chrome/test/base/testing_browser_process.h chrome/test/base/testing_browser_process.h
-index 5ad7302827..159a842426 100644
+index 1b86364e621..805891d2410 100644
 --- chrome/test/base/testing_browser_process.h
 +++ chrome/test/base/testing_browser_process.h
-@@ -116,7 +116,8 @@ class TestingBrowserProcess : public BrowserProcess {
+@@ -125,7 +125,8 @@ class TestingBrowserProcess : public BrowserProcess {
    DownloadRequestLimiter* download_request_limiter() override;
    StartupData* startup_data() override;
  
@@ -1464,10 +1401,10 @@ index 5ad7302827..159a842426 100644
  #endif
  
 diff --git components/data_reduction_proxy/core/browser/data_reduction_proxy_request_options_unittest.cc components/data_reduction_proxy/core/browser/data_reduction_proxy_request_options_unittest.cc
-index e57b6b3ff9..bc94160468 100644
+index 171ead74069..fd1b7c4c568 100644
 --- components/data_reduction_proxy/core/browser/data_reduction_proxy_request_options_unittest.cc
 +++ components/data_reduction_proxy/core/browser/data_reduction_proxy_request_options_unittest.cc
-@@ -68,6 +68,9 @@ const char kClientStr[] = "linux";
+@@ -66,6 +66,9 @@ const char kClientStr[] = "linux";
  #elif defined(OS_WIN)
  const Client kClient = Client::CHROME_WINDOWS;
  const char kClientStr[] = "win";
@@ -1478,7 +1415,7 @@ index e57b6b3ff9..bc94160468 100644
  const Client kClient = Client::CHROME_FREEBSD;
  const char kClientStr[] = "freebsd";
 diff --git components/data_reduction_proxy/core/browser/data_reduction_proxy_util.cc components/data_reduction_proxy/core/browser/data_reduction_proxy_util.cc
-index 3cb61d80ae..2b462206b5 100644
+index 82bde6cab0a..50ab345cee4 100644
 --- components/data_reduction_proxy/core/browser/data_reduction_proxy_util.cc
 +++ components/data_reduction_proxy/core/browser/data_reduction_proxy_util.cc
 @@ -96,6 +96,8 @@ const char* GetStringForClient(Client client) {
@@ -1491,10 +1428,10 @@ index 3cb61d80ae..2b462206b5 100644
        return "freebsd";
      case Client::CHROME_OPENBSD:
 diff --git components/data_reduction_proxy/core/browser/data_reduction_proxy_util.h components/data_reduction_proxy/core/browser/data_reduction_proxy_util.h
-index d562ecb0f7..cbd7aca185 100644
+index 02270348a1a..9c42b81b3fe 100644
 --- components/data_reduction_proxy/core/browser/data_reduction_proxy_util.h
 +++ components/data_reduction_proxy/core/browser/data_reduction_proxy_util.h
-@@ -33,6 +33,7 @@ enum class Client {
+@@ -32,6 +32,7 @@ enum class Client {
    CHROME_CHROMEOS,
    CHROME_LINUX,
    CHROME_WINDOWS,
@@ -1503,12 +1440,12 @@ index d562ecb0f7..cbd7aca185 100644
    CHROME_OPENBSD,
    CHROME_SOLARIS,
 diff --git components/flags_ui/flags_state.cc components/flags_ui/flags_state.cc
-index 8a1380fe88..87d235f247 100644
+index c374b057166..6b636615f50 100644
 --- components/flags_ui/flags_state.cc
 +++ components/flags_ui/flags_state.cc
-@@ -690,7 +690,8 @@ int FlagsState::GetCurrentPlatform() {
+@@ -687,7 +687,8 @@ int FlagsState::GetCurrentPlatform() {
    return kOsWin;
- #elif defined(OS_CHROMEOS)  // Needs to be before the OS_LINUX check.
+ #elif defined(OS_CHROMEOS)
    return kOsCrOS;
 -#elif defined(OS_LINUX) || defined(OS_OPENBSD) || defined(OS_FREEBSD)
 +#elif defined(OS_LINUX) || defined(OS_OPENBSD) || defined(OS_FREEBSD) || \
@@ -1516,33 +1453,11 @@ index 8a1380fe88..87d235f247 100644
    return kOsLinux;
  #elif defined(OS_ANDROID)
    return kOsAndroid;
-diff --git components/metrics/system_memory_stats_recorder_linux.cc components/metrics/system_memory_stats_recorder_linux.cc
-index be00f226eb..82b910a833 100644
---- components/metrics/system_memory_stats_recorder_linux.cc
-+++ components/metrics/system_memory_stats_recorder_linux.cc
-@@ -30,7 +30,7 @@ namespace metrics {
-   UMA_HISTOGRAM_LINEAR(name, sample, 2500, 50)
- 
- void RecordMemoryStats(RecordMemoryStatsType type) {
--#if !defined(OS_FREEBSD)
-+#if !defined(OS_FREEBSD) && !defined(OS_DRAGONFLY)
-   base::SystemMemoryInfoKB memory;
-   if (!base::GetSystemMemoryInfo(&memory))
-     return;
-@@ -82,7 +82,7 @@ void RecordMemoryStats(RecordMemoryStatsType type) {
-       break;
-     }
-   }
--#endif // !defined(OS_FREEBSD)
-+#endif // !defined(OS_FREEBSD) && !defined(OS_DRAGONFLY)
- }
- 
- }  // namespace metrics
 diff --git components/policy/core/common/schema.cc components/policy/core/common/schema.cc
-index dfab0cb0b0..93eb51f97d 100644
+index 19381d002ba..212108015bb 100644
 --- components/policy/core/common/schema.cc
 +++ components/policy/core/common/schema.cc
-@@ -23,7 +23,7 @@
+@@ -24,7 +24,7 @@
  #include "base/strings/stringprintf.h"
  #include "components/policy/core/common/json_schema_constants.h"
  #include "components/policy/core/common/schema_internal.h"
@@ -1552,23 +1467,33 @@ index dfab0cb0b0..93eb51f97d 100644
  #else
  #include "third_party/re2/src/re2/re2.h"
 diff --git components/policy/tools/generate_policy_source.py components/policy/tools/generate_policy_source.py
-index cc40836b2c..c2a74eb3e4 100755
+index 55a78c40a72..8157c255512 100755
 --- components/policy/tools/generate_policy_source.py
 +++ components/policy/tools/generate_policy_source.py
-@@ -115,7 +115,7 @@ class PolicyDetails:
-       if platform.startswith('chrome.'):
-         platform_sub = platform[7:]
-         if platform_sub == '*':
--          self.platforms.extend(['win', 'mac', 'linux', 'fuchsia', 'freebsd'])
-+          self.platforms.extend(['win', 'mac', 'linux', 'fuchsia', 'freebsd', 'dragonfly'])
-         elif platform_sub == 'win7':
-           self.platforms.append('win')
-         else:
-diff --git components/sync/driver/sync_util.cc components/sync/driver/sync_util.cc
-index 68d590252d..eb7ba6ec11 100644
---- components/sync/driver/sync_util.cc
-+++ components/sync/driver/sync_util.cc
-@@ -35,6 +35,8 @@ std::string GetSystemString() {
+@@ -38,8 +38,9 @@ PLATFORM_STRINGS = {
+     'chrome.win': ['win'],
+     'chrome.linux': ['linux'],
+     'chrome.freebsd': ['freebsd'],
++    'chrome.dragonfly': ['dragonfly'],
+     'chrome.mac': ['mac'],
+-    'chrome.*': ['win', 'mac', 'linux', 'freebsd'],
++    'chrome.*': ['win', 'mac', 'linux', 'freebsd', 'dragonfly'],
+     'chrome.win7': ['win']
+ }
+ 
+@@ -127,7 +128,6 @@ class PolicyDetails:
+         ['chrome_os']):
+       raise RuntimeError('device_only is only allowed for Chrome OS: "%s"' %
+                          self.name)
+-
+     self.is_supported = (target_platform in self.platforms
+                          or target_platform in self.future_on)
+     self.is_future_on = target_platform in self.future_on
+diff --git components/sync/base/sync_util.cc components/sync/base/sync_util.cc
+index 5ff55dde867..1b3e65cfe82 100644
+--- components/sync/base/sync_util.cc
++++ components/sync/base/sync_util.cc
+@@ -36,6 +36,8 @@ std::string GetSystemString() {
    system = "WIN ";
  #elif defined(OS_LINUX)
    system = "LINUX ";
@@ -1578,7 +1503,7 @@ index 68d590252d..eb7ba6ec11 100644
    system = "FREEBSD ";
  #elif defined(OS_OPENBSD)
 diff --git components/update_client/update_query_params.cc components/update_client/update_query_params.cc
-index c984f1fb7c..d7c4296817 100644
+index 00ee4f0293b..afda72b449f 100644
 --- components/update_client/update_query_params.cc
 +++ components/update_client/update_query_params.cc
 @@ -41,12 +41,14 @@ const char kOs[] =
@@ -1598,10 +1523,10 @@ index c984f1fb7c..d7c4296817 100644
  #elif defined(__i386__) || defined(_WIN32)
      "x86";
 diff --git components/version_info/version_info.cc components/version_info/version_info.cc
-index 57cf7a7fef..8b04df413f 100644
+index 807c8996e0f..99427613009 100644
 --- components/version_info/version_info.cc
 +++ components/version_info/version_info.cc
-@@ -62,6 +62,8 @@ std::string GetOSType() {
+@@ -63,6 +63,8 @@ std::string GetOSType() {
    return "Android";
  #elif defined(OS_LINUX)
    return "Linux";
@@ -1611,24 +1536,23 @@ index 57cf7a7fef..8b04df413f 100644
    return "FreeBSD";
  #elif defined(OS_OPENBSD)
 diff --git content/browser/utility_process_host.cc content/browser/utility_process_host.cc
-index 90e1aa2b2f..f272a10d3b 100644
+index 4ab805dfad3..13e44e93d1d 100644
 --- content/browser/utility_process_host.cc
 +++ content/browser/utility_process_host.cc
-@@ -430,7 +430,8 @@ bool UtilityProcessHost::StartProcess() {
-       switches::kMuteAudio,
+@@ -270,7 +270,7 @@ bool UtilityProcessHost::StartProcess() {
        switches::kUseFileForFakeAudioCapture,
        switches::kAgcStartupMinVolume,
--#if defined(OS_LINUX) || defined(OS_FREEBSD) || defined(OS_SOLARIS)
-+#if defined(OS_LINUX) || defined(OS_FREEBSD) || defined(OS_SOLARIS) || \
-+    defined(OS_DRAGONFLY)
+ #if defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_FREEBSD) || \
+-    defined(OS_SOLARIS)
++    defined(OS_SOLARIS) || defined(OS_DRAGONFLY)
        switches::kAlsaInputDevice,
        switches::kAlsaOutputDevice,
  #endif
 diff --git content/public/common/content_switches.cc content/public/common/content_switches.cc
-index e32b465835..173d54fdc4 100644
+index 4a7a60fb71c..446036adcf2 100644
 --- content/public/common/content_switches.cc
 +++ content/public/common/content_switches.cc
-@@ -980,7 +980,8 @@ const char kEnableAggressiveDOMStorageFlushing[] =
+@@ -959,7 +959,8 @@ const char kEnableAggressiveDOMStorageFlushing[] =
  // Enable indication that browser is controlled by automation.
  const char kEnableAutomation[] = "enable-automation";
  
@@ -1639,10 +1563,10 @@ index e32b465835..173d54fdc4 100644
  // Linux speech service. Because it's buggy, the user must explicitly
  // enable it so that visiting a random webpage can't cause instability.
 diff --git content/public/common/content_switches.h content/public/common/content_switches.h
-index a224c68542..3a590510be 100644
+index 45ee2fc27af..c8046b9019e 100644
 --- content/public/common/content_switches.h
 +++ content/public/common/content_switches.h
-@@ -270,7 +270,8 @@ CONTENT_EXPORT extern const char kRemoteDebuggingSocketName[];
+@@ -266,7 +266,8 @@ CONTENT_EXPORT extern const char kRemoteDebuggingSocketName[];
  CONTENT_EXPORT extern const char kRendererWaitForJavaDebugger[];
  #endif
  
@@ -1653,10 +1577,10 @@ index a224c68542..3a590510be 100644
  #endif
  
 diff --git content/public/test/browser_test_base.cc content/public/test/browser_test_base.cc
-index fe4ac81874..d89202f2d0 100644
+index 1e0b3664381..ee564a02d7d 100644
 --- content/public/test/browser_test_base.cc
 +++ content/public/test/browser_test_base.cc
-@@ -96,7 +96,7 @@
+@@ -106,7 +106,7 @@
  #include "ui/views/test/event_generator_delegate_mac.h"
  #endif
  
@@ -1666,10 +1590,10 @@ index fe4ac81874..d89202f2d0 100644
  #endif
  
 diff --git extensions/common/api/runtime.json extensions/common/api/runtime.json
-index b26af31fdd..f22a818fdf 100644
+index 7ecd83dbdb2..612219b836f 100644
 --- extensions/common/api/runtime.json
 +++ extensions/common/api/runtime.json
-@@ -67,7 +67,7 @@
+@@ -68,7 +68,7 @@
          "id": "PlatformOs",
          "type": "string",
          "description": "The operating system chrome is running on.",
@@ -1679,142 +1603,47 @@ index b26af31fdd..f22a818fdf 100644
        {
          "id": "PlatformArch",
 diff --git media/base/media_switches.cc media/base/media_switches.cc
-index 19c6682046..c0cf330165 100644
+index fbe462b108b..95d4afffbd1 100644
 --- media/base/media_switches.cc
 +++ media/base/media_switches.cc
-@@ -37,7 +37,8 @@ const char kDisableMediaSuspend[] = "disable-media-suspend";
- const char kReportVp9AsAnUnsupportedMimeType[] =
+@@ -39,7 +39,7 @@ const char kReportVp9AsAnUnsupportedMimeType[] =
      "report-vp9-as-an-unsupported-mime-type";
  
--#if defined(OS_LINUX) || defined(OS_FREEBSD) || defined(OS_SOLARIS)
-+#if defined(OS_LINUX) || defined(OS_FREEBSD) || defined(OS_SOLARIS) || \
-+    defined(OS_DRAGONFLY)
+ #if defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_FREEBSD) || \
+-    defined(OS_SOLARIS)
++    defined(OS_SOLARIS) || defined(OS_DRAGONFLY)
  // The Alsa device to use when opening an audio input stream.
  const char kAlsaInputDevice[] = "alsa-input-device";
  // The Alsa device to use when opening an audio stream.
 diff --git media/base/media_switches.h media/base/media_switches.h
-index 5c18a90ee5..f91b5248dc 100644
+index e08ba0324d0..7951f3694f6 100644
 --- media/base/media_switches.h
 +++ media/base/media_switches.h
-@@ -37,7 +37,8 @@ MEDIA_EXPORT extern const char kDisableMediaSuspend[];
- 
+@@ -37,7 +37,7 @@ MEDIA_EXPORT extern const char kDisableBackgroundMediaSuspend[];
  MEDIA_EXPORT extern const char kReportVp9AsAnUnsupportedMimeType[];
  
--#if defined(OS_LINUX) || defined(OS_FREEBSD) || defined(OS_SOLARIS)
-+#if defined(OS_LINUX) || defined(OS_FREEBSD) || defined(OS_SOLARIS) || \
-+    defined(OS_DRAGONFLY)
+ #if defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_FREEBSD) || \
+-    defined(OS_SOLARIS)
++    defined(OS_SOLARIS) || defined(OS_DRAGONFLY)
  MEDIA_EXPORT extern const char kAlsaInputDevice[];
  MEDIA_EXPORT extern const char kAlsaOutputDevice[];
  #endif
-diff --git media/capture/video/linux/video_capture_device_factory_linux.cc media/capture/video/linux/video_capture_device_factory_linux.cc
-index 58ceb331db..8f3c7bab0a 100644
---- media/capture/video/linux/video_capture_device_factory_linux.cc
-+++ media/capture/video/linux/video_capture_device_factory_linux.cc
-@@ -259,7 +259,7 @@ bool VideoCaptureDeviceFactoryLinux::HasUsableFormats(int fd,
-   if (!(capabilities & V4L2_CAP_VIDEO_CAPTURE))
-     return false;
- 
--#if !defined(OS_FREEBSD)
-+#if !defined(OS_FREEBSD) && !defined(OS_DRAGONFLY)
-   const std::vector<uint32_t>& usable_fourccs =
-       VideoCaptureDeviceLinux::GetListOfUsableFourCCs(false);
-   v4l2_fmtdesc fmtdesc = {};
-@@ -314,7 +314,7 @@ void VideoCaptureDeviceFactoryLinux::GetSupportedFormatsForV4L2BufferType(
-   v4l2_format.type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
-   for (; DoIoctl(fd, VIDIOC_ENUM_FMT, &v4l2_format) == 0; ++v4l2_format.index) {
-     VideoCaptureFormat supported_format;
--#if !defined(OS_FREEBSD)
-+#if !defined(OS_FREEBSD) && !defined(OS_DRAGONFLY)
-     supported_format.pixel_format =
-         VideoCaptureDeviceLinux::V4l2FourCcToChromiumPixelFormat(
-             v4l2_format.pixelformat);
-diff --git media/capture/video/linux/video_capture_device_linux.cc media/capture/video/linux/video_capture_device_linux.cc
-index 383cf90171..7aa3b23edf 100644
---- media/capture/video/linux/video_capture_device_linux.cc
-+++ media/capture/video/linux/video_capture_device_linux.cc
-@@ -37,7 +37,7 @@ int TranslatePowerLineFrequencyToV4L2(PowerLineFrequency frequency) {
- 
- }  // namespace
- 
--#if !defined(OS_FREEBSD)
-+#if !defined(OS_FREEBSD) && !defined(OS_DRAGONFLY)
- // Translates Video4Linux pixel formats to Chromium pixel formats.
- // static
- VideoPixelFormat VideoCaptureDeviceLinux::V4l2FourCcToChromiumPixelFormat(
-@@ -51,7 +51,7 @@ std::vector<uint32_t> VideoCaptureDeviceLinux::GetListOfUsableFourCCs(
-     bool favour_mjpeg) {
-   return V4L2CaptureDelegate::GetListOfUsableFourCcs(favour_mjpeg);
- }
--#endif // !defined(OS_FREEBSD)
-+#endif // !defined(OS_FREEBSD) && !defined(OS_DRAGONFLY)
- 
- VideoCaptureDeviceLinux::VideoCaptureDeviceLinux(
-     scoped_refptr<V4L2CaptureDevice> v4l2,
-@@ -73,7 +73,7 @@ void VideoCaptureDeviceLinux::AllocateAndStart(
-     const VideoCaptureParams& params,
-     std::unique_ptr<VideoCaptureDevice::Client> client) {
-   DCHECK_CALLED_ON_VALID_SEQUENCE(sequence_checker_);
--#if !defined(OS_FREEBSD)
-+#if !defined(OS_FREEBSD) && !defined(OS_DRAGONFLY)
-   DCHECK(!capture_impl_);
-   if (v4l2_thread_.IsRunning())
-     return;  // Wrong state.
-@@ -101,12 +101,12 @@ void VideoCaptureDeviceLinux::AllocateAndStart(
-   for (auto& request : photo_requests_queue_)
-     v4l2_thread_.task_runner()->PostTask(FROM_HERE, std::move(request));
-   photo_requests_queue_.clear();
--#endif // !defined(OS_FREEBSD)
-+#endif // !defined(OS_FREEBSD) && !defined(OS_DRAGONFLY)
- }
- 
- void VideoCaptureDeviceLinux::StopAndDeAllocate() {
-   DCHECK_CALLED_ON_VALID_SEQUENCE(sequence_checker_);
--#if !defined(OS_FREEBSD)
-+#if !defined(OS_FREEBSD) && !defined(OS_DRAGONFLY)
-   if (!v4l2_thread_.IsRunning())
-     return;  // Wrong state.
-   v4l2_thread_.task_runner()->PostTask(
-@@ -116,7 +116,7 @@ void VideoCaptureDeviceLinux::StopAndDeAllocate() {
-   v4l2_thread_.Stop();
- 
-   capture_impl_ = nullptr;
--#endif // !defined(OS_FREEBSD)
-+#endif // !defined(OS_FREEBSD) && !defined(OS_DRAGONFLY)
- }
- 
- void VideoCaptureDeviceLinux::TakePhoto(TakePhotoCallback callback) {
-@@ -164,13 +164,13 @@ void VideoCaptureDeviceLinux::SetPhotoOptions(
- void VideoCaptureDeviceLinux::SetRotation(int rotation) {
-   DCHECK_CALLED_ON_VALID_SEQUENCE(sequence_checker_);
-   rotation_ = rotation;
--#if !defined(OS_FREEBSD)
-+#if !defined(OS_FREEBSD) && !defined(OS_DRAGONFLY)
-   if (v4l2_thread_.IsRunning()) {
-     v4l2_thread_.task_runner()->PostTask(
-         FROM_HERE, base::BindOnce(&V4L2CaptureDelegate::SetRotation,
-                                   capture_impl_->GetWeakPtr(), rotation));
-   }
--#endif // !defined(OS_FREEBSD)
-+#endif // !defined(OS_FREEBSD) && !defined(OS_DRAGONFLY)
- }
- 
- }  // namespace media
 diff --git mojo/public/cpp/platform/socket_utils_posix.cc mojo/public/cpp/platform/socket_utils_posix.cc
-index 6199a36a69..58941c8994 100644
+index 920211d0c18..46af2112354 100644
 --- mojo/public/cpp/platform/socket_utils_posix.cc
 +++ mojo/public/cpp/platform/socket_utils_posix.cc
-@@ -28,7 +28,8 @@ bool IsRecoverableError() {
+@@ -29,7 +29,8 @@ bool IsRecoverableError() {
  }
  
  bool GetPeerEuid(base::PlatformFile fd, uid_t* peer_euid) {
--#if defined(OS_MACOSX) || defined(OS_OPENBSD) || defined(OS_FREEBSD)
-+#if defined(OS_MACOSX) || defined(OS_OPENBSD) || defined(OS_FREEBSD) || \
+-#if defined(OS_APPLE) || defined(OS_OPENBSD) || defined(OS_FREEBSD)
++#if defined(OS_APPLE) || defined(OS_OPENBSD) || defined(OS_FREEBSD) || \
 +  defined(OS_DRAGONFLY)
    uid_t socket_euid;
    gid_t socket_gid;
    if (getpeereid(fd, &socket_euid, &socket_gid) < 0) {
 diff --git native_client/src/third_party/dlmalloc/malloc.c native_client/src/third_party/dlmalloc/malloc.c
-index 17baa50a9a..c412cab299 100644
+index 17baa50a9a2..c412cab299e 100644
 --- native_client/src/third_party/dlmalloc/malloc.c
 +++ native_client/src/third_party/dlmalloc/malloc.c
 @@ -1483,7 +1483,8 @@ DLMALLOC_EXPORT int mspace_mallopt(int, int);
@@ -1828,28 +1657,28 @@ index 17baa50a9a..c412cab299 100644
  #endif /* FreeBSD etc */
  #endif /* LACKS_UNISTD_H */
 diff --git net/base/address_tracker_linux.cc net/base/address_tracker_linux.cc
-index 6ee8720588..966aea20f0 100644
+index 08e092f69cb..0910cf7defb 100644
 --- net/base/address_tracker_linux.cc
 +++ net/base/address_tracker_linux.cc
-@@ -61,7 +61,7 @@ AddressTrackerLinux::AddressTrackerLinux(
- AddressTrackerLinux::~AddressTrackerLinux() = default;
- 
- void AddressTrackerLinux::Init() {
+@@ -192,7 +192,7 @@ void AddressTrackerLinux::Init() {
+   DCHECK_LT(base::android::BuildInfo::GetInstance()->sdk_int(),
+             base::android::SDK_VERSION_P);
+ #endif
 -#if !defined(OS_FREEBSD)
 +#if !defined(OS_FREEBSD) && !defined(OS_DRAGONFLY)
    netlink_fd_.reset(socket(AF_NETLINK, SOCK_RAW, NETLINK_ROUTE));
    if (!netlink_fd_.is_valid()) {
      PLOG(ERROR) << "Could not create NETLINK socket";
-@@ -235,7 +235,7 @@ void AddressTrackerLinux::HandleMessage(char* buffer,
+@@ -367,7 +367,7 @@ void AddressTrackerLinux::HandleMessage(const char* buffer,
                                          bool* address_changed,
                                          bool* link_changed,
                                          bool* tunnel_changed) {
 -#if !defined(OS_FREEBSD)
 +#if !defined(OS_FREEBSD) && !defined(OS_DRAGONFLY)
    DCHECK(buffer);
-   for (struct nlmsghdr* header = reinterpret_cast<struct nlmsghdr*>(buffer);
-        NLMSG_OK(header, length);
-@@ -332,10 +332,10 @@ void AddressTrackerLinux::HandleMessage(char* buffer,
+   // Note that NLMSG_NEXT decrements |length| to reflect the number of bytes
+   // remaining in |buffer|.
+@@ -480,10 +480,10 @@ void AddressTrackerLinux::HandleMessage(const char* buffer,
          break;
      }
    }
@@ -1862,57 +1691,65 @@ index 6ee8720588..966aea20f0 100644
  }
  
  void AddressTrackerLinux::OnFileCanReadWithoutBlocking() {
+diff --git net/dns/address_info.cc net/dns/address_info.cc
+index 67a357a112e..72e4eeccf9c 100644
+--- net/dns/address_info.cc
++++ net/dns/address_info.cc
+@@ -68,7 +68,7 @@ AddressInfo::AddressInfoAndResult AddressInfo::Get(
+     // error.
+     // http://crbug.com/134142
+     err = ERR_NAME_NOT_RESOLVED;
+-#elif defined(OS_POSIX) && !defined(OS_FREEBSD)
++#elif defined(OS_POSIX) && !defined(OS_FREEBSD) && !defined(OS_DRAGONFLY)
+     if (os_error != EAI_NONAME && os_error != EAI_NODATA)
+       err = ERR_NAME_RESOLUTION_FAILED;
+ #endif
 diff --git net/dns/dns_config_service_posix.cc net/dns/dns_config_service_posix.cc
-index 2e0f06b0c1..cae399ff27 100644
+index 4d4df80fe6c..34939708c05 100644
 --- net/dns/dns_config_service_posix.cc
 +++ net/dns/dns_config_service_posix.cc
-@@ -168,11 +168,11 @@ ConfigParsePosixResult ReadDnsConfig(DnsConfig* dns_config) {
+@@ -169,7 +169,7 @@ ConfigParsePosixResult ReadDnsConfig(DnsConfig* dns_config) {
      result = CONFIG_PARSE_POSIX_RES_INIT_FAILED;
    }
    // Prefer res_ndestroy where available.
--#if defined(OS_MACOSX) || defined(OS_FREEBSD)
-+#if defined(OS_MACOSX) || defined(OS_FREEBSD) || defined(OS_DRAGONFLY)
+-#if defined(OS_APPLE) || defined(OS_FREEBSD)
++#if defined(OS_APPLE) || defined(OS_FREEBSD) || defined(OS_DRAGONFLY)
    res_ndestroy(&res);
  #else
    res_nclose(&res);
--#endif  // defined(OS_MACOSX) || defined(OS_FREEBSD)
-+#endif  // defined(OS_MACOSX) || defined(OS_FREEBSD) || defined(OS_DRAGONFLY)
- #endif  // defined(OS_OPENBSD)
- 
- #if defined(OS_MACOSX) && !defined(OS_IOS)
-@@ -477,7 +477,7 @@ ConfigParsePosixResult ConvertResStateToDnsConfig(const struct __res_state& res,
+@@ -478,7 +478,7 @@ ConfigParsePosixResult ConvertResStateToDnsConfig(const struct __res_state& res,
  
    dns_config->nameservers.clear();
  
--#if defined(OS_MACOSX) || defined(OS_FREEBSD)
-+#if defined(OS_MACOSX) || defined(OS_FREEBSD) || defined(OS_DRAGONFLY)
+-#if defined(OS_APPLE) || defined(OS_FREEBSD)
++#if defined(OS_APPLE) || defined(OS_FREEBSD) || defined(OS_DRAGONFLY)
    union res_sockaddr_union addresses[MAXNS];
    int nscount = res_getservers(const_cast<res_state>(&res), addresses, MAXNS);
    DCHECK_GE(nscount, 0);
-@@ -516,7 +516,7 @@ ConfigParsePosixResult ConvertResStateToDnsConfig(const struct __res_state& res,
-       return CONFIG_PARSE_POSIX_BAD_ADDRESS;
+@@ -518,7 +518,7 @@ ConfigParsePosixResult ConvertResStateToDnsConfig(const struct __res_state& res,
      dns_config->nameservers.push_back(ipe);
    }
--#else  // !(defined(OS_LINUX) || defined(OS_MACOSX) || defined(OS_FREEBSD))
-+#else  // !(defined(OS_LINUX) || defined(OS_MACOSX) || defined(OS_FREEBSD)) || defined(OS_DRAGONFLY)
+ #else   // !(defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_APPLE) ||
+-        // defined(OS_FREEBSD))
++        // defined(OS_FREEBSD)) || defined(OS_DRAGONFLY)
    DCHECK_LE(res.nscount, MAXNS);
    for (int i = 0; i < res.nscount; ++i) {
      IPEndPoint ipe;
-@@ -527,7 +527,7 @@ ConfigParsePosixResult ConvertResStateToDnsConfig(const struct __res_state& res,
+@@ -529,7 +529,7 @@ ConfigParsePosixResult ConvertResStateToDnsConfig(const struct __res_state& res,
      }
      dns_config->nameservers.push_back(ipe);
    }
--#endif  // defined(OS_MACOSX) || defined(OS_FREEBSD)
-+#endif  // defined(OS_MACOSX) || defined(OS_FREEBSD) || defined(OS_DRAGONFLY)
+-#endif  // defined(OS_APPLE) || defined(OS_FREEBSD)
++#endif  // defined(OS_APPLE) || defined(OS_FREEBSD) || defined(OS_DRAGONFLY)
  
    dns_config->search.clear();
    for (int i = 0; (i < MAXDNSRCH) && res.dnsrch[i]; ++i) {
 diff --git net/dns/dns_reloader.cc net/dns/dns_reloader.cc
-index 19ebf3e613..f19ffbc004 100644
+index 2bde1260922..3be52232d5f 100644
 --- net/dns/dns_reloader.cc
 +++ net/dns/dns_reloader.cc
 @@ -7,7 +7,7 @@
- #if defined(OS_POSIX) && !defined(OS_MACOSX) && !defined(OS_OPENBSD) && \
+ #if defined(OS_POSIX) && !defined(OS_APPLE) && !defined(OS_OPENBSD) && \
      !defined(OS_ANDROID) && !defined(OS_FUCHSIA)
  
 -#if defined(OS_FREEBSD)
@@ -1920,47 +1757,86 @@ index 19ebf3e613..f19ffbc004 100644
  #include <netinet/in.h>
  #endif
  
-diff --git net/dns/host_resolver_proc.cc net/dns/host_resolver_proc.cc
-index 48eea4ff63..a3d33ee07c 100644
---- net/dns/host_resolver_proc.cc
-+++ net/dns/host_resolver_proc.cc
-@@ -240,7 +240,7 @@ int SystemHostResolverCall(const std::string& host,
- #if defined(OS_WIN)
-     if (err != WSAHOST_NOT_FOUND && err != WSANO_DATA)
-       return ERR_NAME_RESOLUTION_FAILED;
--#elif defined(OS_POSIX) && !defined(OS_FREEBSD)
-+#elif defined(OS_POSIX) && !defined(OS_FREEBSD) && !defined(OS_DRAGONFLY)
-     if (err != EAI_NONAME && err != EAI_NODATA)
-       return ERR_NAME_RESOLUTION_FAILED;
- #endif
 diff --git net/http/http_auth_gssapi_posix.h net/http/http_auth_gssapi_posix.h
-index 24046ab30a..4b3abd5921 100644
+index c2b148e1a1b..7a194c74fcd 100644
 --- net/http/http_auth_gssapi_posix.h
 +++ net/http/http_auth_gssapi_posix.h
 @@ -19,7 +19,7 @@
  
- #if defined(OS_MACOSX)
+ #if defined(OS_APPLE)
  #include <GSS/gssapi.h>
 -#elif defined(OS_FREEBSD)
 +#elif defined(OS_FREEBSD) || defined(OS_DRAGONFLY)
  #include <gssapi/gssapi.h>
  #ifndef GSS_C_DELEG_POLICY_FLAG
  #define GSS_C_DELEG_POLICY_FLAG 32768
+diff --git net/socket/udp_socket_posix.cc net/socket/udp_socket_posix.cc
+index 31cf7b3d159..aae43090a71 100644
+--- net/socket/udp_socket_posix.cc
++++ net/socket/udp_socket_posix.cc
+@@ -939,12 +939,28 @@ int UDPSocketPosix::SetMulticastOptions() {
+   if (multicast_interface_ != 0) {
+     switch (addr_family_) {
+       case AF_INET: {
++        //
++        // DragonFly BSD does not define ip_mreqn and setsockopt() doesn't allow
++        // to use this struct to set options via imr_ifindex.
++        //
++#if defined(__FreeBSD__)
+         ip_mreqn mreq = {};
+         mreq.imr_ifindex = multicast_interface_;
+         mreq.imr_address.s_addr = htonl(INADDR_ANY);
++#else
++        ip_mreq mreq = {};
++        int error = GetIPv4AddressFromIndex(socket_, multicast_interface_,
++                                            &mreq.imr_interface.s_addr);
++        if (error != OK)
++          return error;
++#endif    // defined(__FreeBSD__)
+         int rv = setsockopt(socket_, IPPROTO_IP, IP_MULTICAST_IF,
+ #if defined(OS_BSD)
++#    if defined(__FreeBSD__)
+                             reinterpret_cast<const char*>(&mreq.imr_address.s_addr), sizeof(mreq.imr_address.s_addr));
++#    else
++                            reinterpret_cast<const char*>(&mreq.imr_interface.s_addr), sizeof(mreq.imr_interface.s_addr));
++#    endif
+ #else
+                             reinterpret_cast<const char*>(&mreq), sizeof(mreq));
+ #endif
+@@ -1008,9 +1024,17 @@ int UDPSocketPosix::JoinGroup(const IPAddress& group_address) const {
+     case IPAddress::kIPv4AddressSize: {
+       if (addr_family_ != AF_INET)
+         return ERR_ADDRESS_INVALID;
++#if defined(OS_BSD) && defined(__DragonFly__)
++      ip_mreq mreq = {};
++      int error = GetIPv4AddressFromIndex(socket_, multicast_interface_,
++                                          &mreq.imr_interface.s_addr);
++      if (error != OK)
++        return error;
++#else
+       ip_mreqn mreq = {};
+       mreq.imr_ifindex = multicast_interface_;
+       mreq.imr_address.s_addr = htonl(INADDR_ANY);
++#endif
+       memcpy(&mreq.imr_multiaddr, group_address.bytes().data(),
+              IPAddress::kIPv4AddressSize);
+       int rv = setsockopt(socket_, IPPROTO_IP, IP_ADD_MEMBERSHIP,
 diff --git net/socket/udp_socket_posix.h net/socket/udp_socket_posix.h
-index 203a1ac63c..6560059600 100644
+index 1b364999069..fa4cc2914fe 100644
 --- net/socket/udp_socket_posix.h
 +++ net/socket/udp_socket_posix.h
-@@ -33,7 +33,7 @@
+@@ -35,7 +35,8 @@
  
  #if defined(__ANDROID__) && defined(__aarch64__)
  #define HAVE_SENDMMSG 1
--#elif defined(OS_LINUX) || defined(OS_BSD)
-+#elif defined(OS_LINUX) || defined(OS_BSD) && !defined(OS_DRAGONFLY)
+-#elif defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_BSD)
++#elif (defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_BSD)) && \
++  !defined(__DragonFly__)
  #define HAVE_SENDMMSG 1
  #else
  #define HAVE_SENDMMSG 0
 diff --git ppapi/tests/test_utils.h ppapi/tests/test_utils.h
-index afa8f2d5ec..ebe58950da 100644
+index afa8f2d5ec7..ebe58950da2 100644
 --- ppapi/tests/test_utils.h
 +++ ppapi/tests/test_utils.h
 @@ -312,6 +312,8 @@ do { \
@@ -1982,27 +1858,8 @@ index afa8f2d5ec..ebe58950da 100644
  #define PPAPI_POSIX 1
  #endif
  
-diff --git remoting/webapp/base/js/platform.js remoting/webapp/base/js/platform.js
-index d0588efb23..18a1a08ca4 100644
---- remoting/webapp/base/js/platform.js
-+++ remoting/webapp/base/js/platform.js
-@@ -115,6 +115,14 @@ remoting.getSystemInfo = function() {
-     return result;
-   }
- 
-+  match = new RegExp('DragonFly ([a-zA-Z0-9_]*)').exec(userAgent);
-+  if (match && (match.length >= 2)) {
-+    result.osName = remoting.Os.LINUX;
-+    result.osVersion = '';
-+    result.cpu = match[1];
-+    return result;
-+  }
-+
-   match = new RegExp('([a-zA-Z]*) Mac OS X ([0-9_]*)').exec(userAgent);
-   if (match && (match.length >= 3)) {
-     result.osName = remoting.Os.MAC;
 diff --git services/device/hid/hid_connection_freebsd.cc services/device/hid/hid_connection_freebsd.cc
-index 6b7623c1ce..823781d7ae 100644
+index 67c44944ba0..297a6651453 100644
 --- services/device/hid/hid_connection_freebsd.cc
 +++ services/device/hid/hid_connection_freebsd.cc
 @@ -4,8 +4,13 @@
@@ -2020,7 +1877,7 @@ index 6b7623c1ce..823781d7ae 100644
  #include "base/bind.h"
  #include "base/files/file_descriptor_watcher_posix.h"
 diff --git services/device/hid/hid_service_freebsd.cc services/device/hid/hid_service_freebsd.cc
-index 30a5e65a47..af184222c6 100644
+index 9c5cfc0dfe9..85ace63b0ca 100644
 --- services/device/hid/hid_service_freebsd.cc
 +++ services/device/hid/hid_service_freebsd.cc
 @@ -4,7 +4,12 @@
@@ -2036,34 +1893,8 @@ index 30a5e65a47..af184222c6 100644
  #include <stdint.h>
  #include <sys/socket.h>
  #include <sys/un.h>
-diff --git services/service_manager/embedder/set_process_title_linux.cc services/service_manager/embedder/set_process_title_linux.cc
-index 9d47884f48..6ae00a2497 100644
---- services/service_manager/embedder/set_process_title_linux.cc
-+++ services/service_manager/embedder/set_process_title_linux.cc
-@@ -50,7 +50,7 @@ extern char** environ;
- 
- static char** g_main_argv = NULL;
- 
--#if !defined(OS_FREEBSD)
-+#if !defined(OS_FREEBSD) && !defined(OS_DRAGONFLY)
- static char* g_orig_argv0 = NULL;
- 
- void setproctitle(const char* fmt, ...) {
-diff --git services/service_manager/embedder/set_process_title_linux.h services/service_manager/embedder/set_process_title_linux.h
-index 964532f594..be55631471 100644
---- services/service_manager/embedder/set_process_title_linux.h
-+++ services/service_manager/embedder/set_process_title_linux.h
-@@ -7,7 +7,7 @@
- 
- #include "build/build_config.h"
- 
--#if !defined(OS_FREEBSD)
-+#if !defined(OS_FREEBSD) && !defined(OS_DRAGONFLY)
- // Set the process title that will show in "ps" and similar tools. Takes
- // printf-style format string and arguments. After calling setproctitle()
- // the original main() argv[] array should not be used. By default, the
 diff --git skia/ext/platform_canvas.h skia/ext/platform_canvas.h
-index c31e7c0214..553ed7a76e 100644
+index dd6d354ead5..b7d81104b86 100644
 --- skia/ext/platform_canvas.h
 +++ skia/ext/platform_canvas.h
 @@ -58,7 +58,7 @@ SK_API HDC GetNativeDrawingContext(SkCanvas* canvas);
@@ -2076,19 +1907,20 @@ index c31e7c0214..553ed7a76e 100644
  // first. @data must be, at least, @height * StrideForWidth(@width) bytes.
  SK_API std::unique_ptr<SkCanvas> CreatePlatformCanvasWithPixels(
 diff --git third_party/abseil-cpp/absl/base/config.h third_party/abseil-cpp/absl/base/config.h
-index 1c3cb08e74..067f89d03b 100644
+index 3f7f32b9e6e..65cdcfd826f 100644
 --- third_party/abseil-cpp/absl/base/config.h
 +++ third_party/abseil-cpp/absl/base/config.h
-@@ -280,7 +280,7 @@
+@@ -364,7 +364,8 @@ static_assert(ABSL_INTERNAL_INLINE_NAMESPACE_STR[0] != 'h' ||
  #elif defined(__linux__) || defined(__APPLE__) || defined(__FreeBSD__) ||   \
      defined(__ros__) || defined(__native_client__) || defined(__asmjs__) || \
      defined(__wasm__) || defined(__Fuchsia__) || defined(__sun) || \
--    defined(__ASYLO__)
-+    defined(__ASYLO__) || defined(__DragonFly__)
+-    defined(__ASYLO__) || defined(__myriad2__)
++    defined(__ASYLO__) || defined(__myriad2__) || defined(__DragonFly__)
++
  #define ABSL_HAVE_MMAP 1
  #endif
  
-@@ -291,7 +291,7 @@
+@@ -375,7 +376,7 @@ static_assert(ABSL_INTERNAL_INLINE_NAMESPACE_STR[0] != 'h' ||
  #ifdef ABSL_HAVE_PTHREAD_GETSCHEDPARAM
  #error ABSL_HAVE_PTHREAD_GETSCHEDPARAM cannot be directly set
  #elif defined(__linux__) || defined(__APPLE__) || defined(__FreeBSD__) || \
@@ -2098,30 +1930,30 @@ index 1c3cb08e74..067f89d03b 100644
  #endif
  
 diff --git third_party/abseil-cpp/absl/base/internal/endian.h third_party/abseil-cpp/absl/base/internal/endian.h
-index 296e92d9e5..ff0b3d7298 100644
+index 9677530e8de..7bfb0053b9d 100644
 --- third_party/abseil-cpp/absl/base/internal/endian.h
 +++ third_party/abseil-cpp/absl/base/internal/endian.h
-@@ -22,7 +22,7 @@
- #elif defined(__APPLE__)
- // macOS / Darwin features
- #include <libkern/OSByteOrder.h>
+@@ -19,7 +19,7 @@
+ // The following guarantees declaration of the byte swap functions
+ #ifdef _MSC_VER
+ #include <stdlib.h>  // NOLINT(build/include)
 -#elif defined(__FreeBSD__)
 +#elif defined(__FreeBSD__) || defined(__DragonFly__)
  #include <sys/endian.h>
  #elif defined(__GLIBC__)
  #include <byteswap.h>  // IWYU pragma: export
 diff --git third_party/abseil-cpp/absl/base/internal/raw_logging.cc third_party/abseil-cpp/absl/base/internal/raw_logging.cc
-index 878fe6c6c2..8afbbd5886 100644
+index ae8754c6a13..233ba645e5c 100644
 --- third_party/abseil-cpp/absl/base/internal/raw_logging.cc
 +++ third_party/abseil-cpp/absl/base/internal/raw_logging.cc
 @@ -37,7 +37,7 @@
  // this, consider moving both to config.h instead.
  #if defined(__linux__) || defined(__APPLE__) || defined(__FreeBSD__) || \
      defined(__Fuchsia__) || defined(__native_client__) || \
--    defined(__EMSCRIPTEN__)
-+    defined(__EMSCRIPTEN__) || defined(__DragonFly__)
- #include <unistd.h>
+-    defined(__EMSCRIPTEN__) || defined(__ASYLO__)
++    defined(__EMSCRIPTEN__) || defined(__ASYLO__) || defined(__DragonFly__)
  
+ #include <unistd.h>
  
 @@ -50,7 +50,7 @@
  // ABSL_HAVE_SYSCALL_WRITE is defined when the platform provides the syscall
@@ -2133,10 +1965,10 @@ index 878fe6c6c2..8afbbd5886 100644
  #define ABSL_HAVE_SYSCALL_WRITE 1
  #define ABSL_LOW_LEVEL_WRITE_SUPPORTED 1
 diff --git third_party/abseil-cpp/absl/base/internal/sysinfo.cc third_party/abseil-cpp/absl/base/internal/sysinfo.cc
-index e5e131f71d..62bf58c550 100644
+index 4a3b205034a..8404becd902 100644
 --- third_party/abseil-cpp/absl/base/internal/sysinfo.cc
 +++ third_party/abseil-cpp/absl/base/internal/sysinfo.cc
-@@ -31,7 +31,7 @@
+@@ -30,7 +30,7 @@
  #include <sys/syscall.h>
  #endif
  
@@ -2145,8 +1977,78 @@ index e5e131f71d..62bf58c550 100644
  #include <sys/sysctl.h>
  #endif
  
+diff --git third_party/afl/src/afl-fuzz.c third_party/afl/src/afl-fuzz.c
+index f0d564a3303..36ae23e6283 100644
+--- third_party/afl/src/afl-fuzz.c
++++ third_party/afl/src/afl-fuzz.c
+@@ -58,9 +58,10 @@
+ #include <sys/ioctl.h>
+ #include <sys/file.h>
+ 
+-#if defined(__APPLE__) || defined(__FreeBSD__) || defined (__OpenBSD__)
++#if defined(__APPLE__) || defined(__FreeBSD__) || defined (__OpenBSD__) || \
++  defined(__DragonFly__)
+ #  include <sys/sysctl.h>
+-#endif /* __APPLE__ || __FreeBSD__ || __OpenBSD__ */
++#endif /* __APPLE__ || __FreeBSD__ || __OpenBSD__ || __DragonFly__ */
+ 
+ /* For systems that have sched_setaffinity; right now just Linux, but one
+    can hope... */
+@@ -3531,7 +3532,8 @@ static double get_runnable_processes(void) {
+ 
+   static double res;
+ 
+-#if defined(__APPLE__) || defined(__FreeBSD__) || defined (__OpenBSD__)
++#if defined(__APPLE__) || defined(__FreeBSD__) || defined (__OpenBSD__) || \
++  defined(__DragonFly__)
+ 
+   /* I don't see any portable sysctl or so that would quickly give us the
+      number of runnable processes; the 1-minute load average can be a
+@@ -3571,7 +3573,7 @@ static double get_runnable_processes(void) {
+ 
+   }
+ 
+-#endif /* ^(__APPLE__ || __FreeBSD__ || __OpenBSD__) */
++#endif /* ^(__APPLE__ || __FreeBSD__ || __OpenBSD__) || __DragonFly__ */
+ 
+   return res;
+ 
+@@ -7347,7 +7349,8 @@ static void get_core_count(void) {
+ 
+   u32 cur_runnable = 0;
+ 
+-#if defined(__APPLE__) || defined(__FreeBSD__) || defined (__OpenBSD__)
++#if defined(__APPLE__) || defined(__FreeBSD__) || defined (__OpenBSD__) || \
++  defined(__DragonFly__)
+ 
+   size_t s = sizeof(cpu_core_count);
+ 
+@@ -7386,19 +7389,20 @@ static void get_core_count(void) {
+ 
+ #endif /* ^HAVE_AFFINITY */
+ 
+-#endif /* ^(__APPLE__ || __FreeBSD__ || __OpenBSD__) */
++#endif /* ^(__APPLE__ || __FreeBSD__ || __OpenBSD__) || __DragonFly__ */
+ 
+   if (cpu_core_count > 0) {
+ 
+     cur_runnable = (u32)get_runnable_processes();
+ 
+-#if defined(__APPLE__) || defined(__FreeBSD__) || defined (__OpenBSD__)
++#if defined(__APPLE__) || defined(__FreeBSD__) || defined (__OpenBSD__) || \
++  defined(__DragonFly__)
+ 
+     /* Add ourselves, since the 1-minute average doesn't include that yet. */
+ 
+     cur_runnable++;
+ 
+-#endif /* __APPLE__ || __FreeBSD__ || __OpenBSD__ */
++#endif /* __APPLE__ || __FreeBSD__ || __OpenBSD__ || __DragonFly__ */
+ 
+     OKF("You have %u CPU core%s and %u runnable tasks (utilization: %0.0f%%).",
+         cpu_core_count, cpu_core_count > 1 ? "s" : "",
 diff --git third_party/angle/third_party/glmark2/src/waflib/Tools/c_config.py third_party/angle/third_party/glmark2/src/waflib/Tools/c_config.py
-index 9c627c1cf6..761f0fc8cc 100644
+index 9c627c1cf6c..761f0fc8cc2 100644
 --- third_party/angle/third_party/glmark2/src/waflib/Tools/c_config.py
 +++ third_party/angle/third_party/glmark2/src/waflib/Tools/c_config.py
 @@ -40,7 +40,7 @@ int main(int argc, char **argv) {
@@ -2159,7 +2061,7 @@ index 9c627c1cf6..761f0fc8cc 100644
  @conf
  def parse_flags(self,line,uselib_store,env=None,force_static=False,posix=None):
 diff --git third_party/angle/third_party/glmark2/src/waflib/Tools/javaw.py third_party/angle/third_party/glmark2/src/waflib/Tools/javaw.py
-index a07c7c5d61..f95df5bd27 100644
+index a07c7c5d618..f95df5bd273 100644
 --- third_party/angle/third_party/glmark2/src/waflib/Tools/javaw.py
 +++ third_party/angle/third_party/glmark2/src/waflib/Tools/javaw.py
 @@ -285,6 +285,8 @@ def check_jni_headers(conf):
@@ -2172,7 +2074,7 @@ index a07c7c5d61..f95df5bd27 100644
  		try:
  			conf.check(header_name='jni.h',define_name='HAVE_JNI_H',lib='jvm',libpath=d,includes=incDirs,uselib_store='JAVA',uselib='JAVA')
 diff --git third_party/angle/third_party/glmark2/src/waflib/Tools/qt5.py third_party/angle/third_party/glmark2/src/waflib/Tools/qt5.py
-index 4cac93260e..7b095117b1 100644
+index 4cac93260e0..7b095117b19 100644
 --- third_party/angle/third_party/glmark2/src/waflib/Tools/qt5.py
 +++ third_party/angle/third_party/glmark2/src/waflib/Tools/qt5.py
 @@ -281,6 +281,12 @@ def configure(self):
@@ -2189,39 +2091,39 @@ index 4cac93260e..7b095117b1 100644
  def find_qt5_binaries(self):
  	env=self.env
 diff --git third_party/angle/third_party/vulkan-loader/src/loader/loader.c third_party/angle/third_party/vulkan-loader/src/loader/loader.c
-index c48c36f07d..73e5a62072 100644
+index 0c631956cf7..3ef37a3b47a 100644
 --- third_party/angle/third_party/vulkan-loader/src/loader/loader.c
 +++ third_party/angle/third_party/vulkan-loader/src/loader/loader.c
-@@ -229,7 +229,8 @@ void *loader_device_heap_realloc(const struct loader_device *device, void *pMemo
+@@ -253,7 +253,8 @@ void *loader_device_heap_realloc(const struct loader_device *device, void *pMemo
  }
  
  // Environment variables
--#if defined(__linux__) || defined(__APPLE__) || defined(__FreeBSD__)
-+#if defined(__linux__) || defined(__APPLE__) || defined(__FreeBSD__) || \
+-#if defined(__linux__) || defined(__APPLE__) || defined(__Fuchsia__) || defined(__FreeBSD__)
++#if defined(__linux__) || defined(__APPLE__) || defined(__Fuchsia__) || defined(__FreeBSD__) || \
 +  defined(__DragonFly__)
  
- static inline char *loader_getenv(const char *name, const struct loader_instance *inst) {
-     // No allocation of memory necessary for Linux, but we should at least touch
+ static inline bool IsHighIntegrity() {
+     return geteuid() != getuid() || getegid() != getgid();
 diff --git third_party/angle/third_party/vulkan-loader/src/loader/vk_loader_platform.h third_party/angle/third_party/vulkan-loader/src/loader/vk_loader_platform.h
-index 5db5db5c8d..89b57f6dc6 100644
+index a8d01d7f840..166095b05d3 100644
 --- third_party/angle/third_party/vulkan-loader/src/loader/vk_loader_platform.h
 +++ third_party/angle/third_party/vulkan-loader/src/loader/vk_loader_platform.h
-@@ -31,7 +31,8 @@
+@@ -35,7 +35,8 @@
  #include "vulkan/vk_platform.h"
  #include "vulkan/vk_sdk_platform.h"
  
--#if defined(__linux__) || defined(__APPLE__) || defined(__FreeBSD__)
-+#if defined(__linux__) || defined(__APPLE__) || defined(__FreeBSD__) || \
+-#if defined(__linux__) || defined(__APPLE__) || defined(__Fuchsia__) || defined(__FreeBSD__)
++#if defined(__linux__) || defined(__APPLE__) || defined(__Fuchsia__) || defined(__FreeBSD__) || \
 +  defined(__DragonFly__)
  /* Linux-specific common code: */
  
  // Headers:
 diff --git third_party/angle/third_party/vulkan-validation-layers/src/layers/vk_loader_platform.h third_party/angle/third_party/vulkan-validation-layers/src/layers/vk_loader_platform.h
-index 269523d8e7..606f5659ec 100644
+index c4d4030341a..e656ef1c244 100644
 --- third_party/angle/third_party/vulkan-validation-layers/src/layers/vk_loader_platform.h
 +++ third_party/angle/third_party/vulkan-validation-layers/src/layers/vk_loader_platform.h
-@@ -31,7 +31,8 @@
- #include "vulkan/vk_platform.h"
+@@ -33,7 +33,8 @@
+ #undef NOMINMAX
  #include "vulkan/vk_sdk_platform.h"
  
 -#if defined(__linux__) || defined(__APPLE__) || defined(__FreeBSD__)
@@ -2230,11 +2132,25 @@ index 269523d8e7..606f5659ec 100644
  /* Linux-specific common code: */
  
  // Headers:
-diff --git third_party/blink/renderer/platform/heap/thread_state.cc third_party/blink/renderer/platform/heap/thread_state.cc
-index 662d65a94d..45b142647c 100644
---- third_party/blink/renderer/platform/heap/thread_state.cc
-+++ third_party/blink/renderer/platform/heap/thread_state.cc
-@@ -86,7 +86,7 @@
+diff --git third_party/blink/renderer/bindings/scripts/bind_gen/style_format.py third_party/blink/renderer/bindings/scripts/bind_gen/style_format.py
+index be4a620605c..c4f119e2735 100644
+--- third_party/blink/renderer/bindings/scripts/bind_gen/style_format.py
++++ third_party/blink/renderer/bindings/scripts/bind_gen/style_format.py
+@@ -32,6 +32,9 @@ def init(root_src_dir):
+     elif sys.platform.startswith("freebsd"):
+         platform = "freebsd"
+         exe_suffix = ""
++    elif sys.platform.startswith("dragonfly"):
++        platform = "dragonfly"
++        exe_suffix = ""
+     else:
+         assert False, "Unknown platform: {}".format(sys.platform)
+     buildtools_platform_dir = os.path.join(root_src_dir, "buildtools",
+diff --git third_party/blink/renderer/platform/heap/impl/thread_state.cc third_party/blink/renderer/platform/heap/impl/thread_state.cc
+index 228902f91f7..b457a3618bc 100644
+--- third_party/blink/renderer/platform/heap/impl/thread_state.cc
++++ third_party/blink/renderer/platform/heap/impl/thread_state.cc
+@@ -88,7 +88,7 @@
  #include <sanitizer/msan_interface.h>
  #endif
  
@@ -2244,10 +2160,10 @@ index 662d65a94d..45b142647c 100644
  #endif
  
 diff --git third_party/blink/renderer/platform/wtf/stack_util.cc third_party/blink/renderer/platform/wtf/stack_util.cc
-index 17f310a2e8..50ebb71b6f 100644
+index 213a8e2df79..fa08bd2e7bc 100644
 --- third_party/blink/renderer/platform/wtf/stack_util.cc
 +++ third_party/blink/renderer/platform/wtf/stack_util.cc
-@@ -17,7 +17,7 @@
+@@ -18,7 +18,7 @@
  extern "C" void* __libc_stack_end;  // NOLINT
  #endif
  
@@ -2259,7 +2175,7 @@ index 17f310a2e8..50ebb71b6f 100644
 @@ -35,14 +35,14 @@ size_t GetUnderestimatedStackSize() {
  // correctly for the main thread.
  
- #if defined(__GLIBC__) || defined(OS_ANDROID) || defined(OS_FREEBSD) || \
+ #elif defined(__GLIBC__) || defined(OS_ANDROID) || defined(OS_FREEBSD) || \
 -    defined(OS_FUCHSIA)
 +    defined(OS_FUCHSIA) || defined(OS_DRAGONFLY)
    // pthread_getattr_np() can fail if the thread is not invoked by
@@ -2305,7 +2221,7 @@ index 17f310a2e8..50ebb71b6f 100644
  #endif
  #if defined(__GLIBC__)
 diff --git third_party/blink/renderer/platform/wtf/thread_specific.h third_party/blink/renderer/platform/wtf/thread_specific.h
-index d691242161..a1ed2a8c62 100644
+index d6912421614..a1ed2a8c624 100644
 --- third_party/blink/renderer/platform/wtf/thread_specific.h
 +++ third_party/blink/renderer/platform/wtf/thread_specific.h
 @@ -105,7 +105,8 @@ inline bool ThreadSpecific<T>::IsSet() {
@@ -2319,20 +2235,20 @@ index d691242161..a1ed2a8c62 100644
    // TODO(csharrison): Qualify this statement for Android.
    const bool kMainThreadAlwaysChecksTLS = true;
 diff --git third_party/brotli/common/platform.h third_party/brotli/common/platform.h
-index 84c448c4cf..0c38775d73 100644
+index 4113a4bebd3..ef600a425ef 100644
 --- third_party/brotli/common/platform.h
 +++ third_party/brotli/common/platform.h
 @@ -31,7 +31,7 @@
  
- #if defined(OS_LINUX) || defined(OS_CYGWIN)
+ #if defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_CYGWIN)
  #include <endian.h>
 -#elif defined(OS_FREEBSD)
 +#elif defined(OS_FREEBSD) || defined(OS_DRAGONFLY)
  #include <machine/endian.h>
- #elif defined(OS_MACOSX)
+ #elif defined(OS_APPLE)
  #include <machine/endian.h>
 diff --git third_party/catapult/common/py_trace_event/py_trace_event/trace_time.py third_party/catapult/common/py_trace_event/py_trace_event/trace_time.py
-index c5e3fe1ed9..5ac07af38f 100644
+index c5e3fe1ed92..5ac07af38f1 100644
 --- third_party/catapult/common/py_trace_event/py_trace_event/trace_time.py
 +++ third_party/catapult/common/py_trace_event/py_trace_event/trace_time.py
 @@ -26,6 +26,7 @@ _PLATFORMS = {
@@ -2360,7 +2276,7 @@ index c5e3fe1ed9..5ac07af38f 100644
          or plat.startswith(_PLATFORMS['sunos'])):
      InitializeLinuxNowFunction(plat)
 diff --git third_party/catapult/common/py_trace_event/py_trace_event/trace_time_unittest.py third_party/catapult/common/py_trace_event/py_trace_event/trace_time_unittest.py
-index bae7ea81fe..d2fee128f7 100644
+index bae7ea81fe5..d2fee128f74 100644
 --- third_party/catapult/common/py_trace_event/py_trace_event/trace_time_unittest.py
 +++ third_party/catapult/common/py_trace_event/py_trace_event/trace_time_unittest.py
 @@ -103,6 +103,9 @@ class TimerTest(unittest.TestCase):
@@ -2374,7 +2290,7 @@ index bae7ea81fe..d2fee128f7 100644
      self.assertEquals(trace_time.GetClockGetTimeClockNumber('bsd'), 3)
  
 diff --git third_party/catapult/third_party/gsutil/third_party/monotonic/monotonic.py third_party/catapult/third_party/gsutil/third_party/monotonic/monotonic.py
-index e36b7f7943..c48cc7bb6c 100644
+index e36b7f7943b..c48cc7bb6c4 100644
 --- third_party/catapult/third_party/gsutil/third_party/monotonic/monotonic.py
 +++ third_party/catapult/third_party/gsutil/third_party/monotonic/monotonic.py
 @@ -146,6 +146,8 @@ except AttributeError:
@@ -2387,7 +2303,7 @@ index e36b7f7943..c48cc7bb6c 100644
                  CLOCK_MONOTONIC = 4
              elif 'bsd' in sys.platform:
 diff --git third_party/catapult/third_party/pyserial/serial/serialposix.py third_party/catapult/third_party/pyserial/serial/serialposix.py
-index b9b4b28268..538f943814 100755
+index b9b4b282682..538f943814c 100755
 --- third_party/catapult/third_party/pyserial/serial/serialposix.py
 +++ third_party/catapult/third_party/pyserial/serial/serialposix.py
 @@ -125,7 +125,8 @@ elif plat[:7] == 'openbsd':    # OpenBSD
@@ -2401,7 +2317,7 @@ index b9b4b28268..538f943814 100755
      def device(port):
          return '/dev/cuad%d' % port
 diff --git third_party/catapult/third_party/pyserial/serial/tools/list_ports_posix.py third_party/catapult/third_party/pyserial/serial/tools/list_ports_posix.py
-index 09f115fbfd..56ab9e9337 100755
+index 09f115fbfdb..56ab9e93379 100755
 --- third_party/catapult/third_party/pyserial/serial/tools/list_ports_posix.py
 +++ third_party/catapult/third_party/pyserial/serial/tools/list_ports_posix.py
 @@ -40,7 +40,8 @@ elif plat[:7] == 'openbsd':    # OpenBSD
@@ -2416,7 +2332,7 @@ index 09f115fbfd..56ab9e9337 100755
          devices = glob.glob('/dev/cuad*')
 diff --git third_party/dav1d/libdav1d/include/stdatomic.h third_party/dav1d/libdav1d/include/stdatomic.h
 new file mode 100644
-index 0000000000..b4845a74e4
+index 00000000000..b4845a74e49
 --- /dev/null
 +++ third_party/dav1d/libdav1d/include/stdatomic.h
 @@ -0,0 +1,190 @@
@@ -2611,7 +2527,7 @@ index 0000000000..b4845a74e4
 +#endif /* __CLANG_STDATOMIC_H */
 +
 diff --git third_party/googletest/src/googletest/include/gtest/internal/gtest-port.h third_party/googletest/src/googletest/include/gtest/internal/gtest-port.h
-index 830aa1918d..2103120f3d 100644
+index 650bb1691d8..a5cb9a486c4 100644
 --- third_party/googletest/src/googletest/include/gtest/internal/gtest-port.h
 +++ third_party/googletest/src/googletest/include/gtest/internal/gtest-port.h
 @@ -115,6 +115,7 @@
@@ -2623,10 +2539,10 @@ index 830aa1918d..2103120f3d 100644
  //   GTEST_OS_GNU_KFREEBSD - GNU/kFreeBSD
  //   GTEST_OS_HAIKU    - Haiku
 diff --git third_party/googletest/src/googletest/src/gtest-port.cc third_party/googletest/src/googletest/src/gtest-port.cc
-index 638b8971b4..24536864ac 100644
+index 22854de28e2..c02e92d87ef 100644
 --- third_party/googletest/src/googletest/src/gtest-port.cc
 +++ third_party/googletest/src/googletest/src/gtest-port.cc
-@@ -63,7 +63,7 @@
+@@ -64,7 +64,7 @@
  # endif
  #endif
  
@@ -2635,7 +2551,7 @@ index 638b8971b4..24536864ac 100644
  #include <sys/sysctl.h>
  #include <sys/user.h>
  #endif
-@@ -144,9 +144,13 @@ size_t GetThreadCount() {
+@@ -145,9 +145,13 @@ size_t GetThreadCount() {
    }
  }
  
@@ -2651,7 +2567,7 @@ index 638b8971b4..24536864ac 100644
  // Return the number of threads running in the process, or 0 to indicate that
  // we cannot detect it.
 diff --git third_party/grpc/src/include/grpc/impl/codegen/port_platform.h third_party/grpc/src/include/grpc/impl/codegen/port_platform.h
-index d7294d59d4..b2325f2eec 100644
+index d7294d59d41..b2325f2eec0 100644
 --- third_party/grpc/src/include/grpc/impl/codegen/port_platform.h
 +++ third_party/grpc/src/include/grpc/impl/codegen/port_platform.h
 @@ -248,7 +248,7 @@
@@ -2664,7 +2580,7 @@ index d7294d59d4..b2325f2eec 100644
  #ifndef _BSD_SOURCE
  #define _BSD_SOURCE
 diff --git third_party/grpc/src/setup.py third_party/grpc/src/setup.py
-index 1e205bdf91..403e293d1a 100644
+index 1e205bdf91d..403e293d1ad 100644
 --- third_party/grpc/src/setup.py
 +++ third_party/grpc/src/setup.py
 @@ -45,6 +45,8 @@ if 'darwin' in sys.platform:
@@ -2677,7 +2593,7 @@ index 1e205bdf91..403e293d1a 100644
    CARES_INCLUDE += (os.path.join('third_party', 'cares', 'config_linux'),)
  if 'openbsd' in sys.platform:
 diff --git third_party/grpc/src/src/c-ares/gen_build_yaml.py third_party/grpc/src/src/c-ares/gen_build_yaml.py
-index 6e832edcea..e8d3c55993 100755
+index 6e832edcea3..e8d3c559931 100755
 --- third_party/grpc/src/src/c-ares/gen_build_yaml.py
 +++ third_party/grpc/src/src/c-ares/gen_build_yaml.py
 @@ -33,6 +33,8 @@ try:
@@ -2690,7 +2606,7 @@ index 6e832edcea..e8d3c55993 100755
        return 'src/cares/cares/config_linux/ares_config.h'
      if 'openbsd' in sys.platform:
 diff --git third_party/grpc/src/test/cpp/qps/json_run_localhost.cc third_party/grpc/src/test/cpp/qps/json_run_localhost.cc
-index 42cc9e0ed7..6b2cc2b3b1 100644
+index 42cc9e0ed76..6b2cc2b3b15 100644
 --- third_party/grpc/src/test/cpp/qps/json_run_localhost.cc
 +++ third_party/grpc/src/test/cpp/qps/json_run_localhost.cc
 @@ -24,7 +24,7 @@
@@ -2703,10 +2619,10 @@ index 42cc9e0ed7..6b2cc2b3b1 100644
  #endif
  
 diff --git third_party/icu/source/common/unicode/platform.h third_party/icu/source/common/unicode/platform.h
-index a3623f5da6..df6efe9245 100644
+index 2bb2f8b318d..ca2fd77268b 100644
 --- third_party/icu/source/common/unicode/platform.h
 +++ third_party/icu/source/common/unicode/platform.h
-@@ -165,8 +165,8 @@
+@@ -173,8 +173,8 @@
  #   else
  #       define U_PLATFORM U_PF_DARWIN
  #   endif
@@ -2718,10 +2634,10 @@ index a3623f5da6..df6efe9245 100644
  #   endif
  #   define U_PLATFORM U_PF_BSD
 diff --git third_party/libFuzzer/src/FuzzerDefs.h third_party/libFuzzer/src/FuzzerDefs.h
-index 320b37d5f8..6e616f14bd 100644
+index 5dc2d8e1ac0..37692bb3a51 100644
 --- third_party/libFuzzer/src/FuzzerDefs.h
 +++ third_party/libFuzzer/src/FuzzerDefs.h
-@@ -45,7 +45,7 @@
+@@ -46,7 +46,7 @@
  #define LIBFUZZER_FREEBSD 0
  #define LIBFUZZER_OPENBSD 0
  #define LIBFUZZER_WINDOWS 0
@@ -2731,7 +2647,7 @@ index 320b37d5f8..6e616f14bd 100644
  #define LIBFUZZER_FUCHSIA 0
  #define LIBFUZZER_LINUX 0
 diff --git third_party/libFuzzer/src/afl/afl_driver.cpp third_party/libFuzzer/src/afl/afl_driver.cpp
-index f21dfc58fe..cbfc0b6918 100644
+index f21dfc58fed..cbfc0b69187 100644
 --- third_party/libFuzzer/src/afl/afl_driver.cpp
 +++ third_party/libFuzzer/src/afl/afl_driver.cpp
 @@ -72,7 +72,7 @@ If 1, close stdout at startup. If 2 close stderr; if 3 close both.
@@ -2743,55 +2659,11 @@ index f21dfc58fe..cbfc0b6918 100644
  #define LIBFUZZER_LINUX 0
  #define LIBFUZZER_APPLE 0
  #define LIBFUZZER_NETBSD 0
-diff --git third_party/libaom/source/libaom/third_party/googletest/src/googletest/include/gtest/internal/gtest-port-arch.h third_party/libaom/source/libaom/third_party/googletest/src/googletest/include/gtest/internal/gtest-port-arch.h
-index 74ab949057..1c931c32cd 100644
---- third_party/libaom/source/libaom/third_party/googletest/src/googletest/include/gtest/internal/gtest-port-arch.h
-+++ third_party/libaom/source/libaom/third_party/googletest/src/googletest/include/gtest/internal/gtest-port-arch.h
-@@ -67,6 +67,8 @@
- # if TARGET_OS_IPHONE
- #  define GTEST_OS_IOS 1
- # endif
-+#elif defined __DragonFly__
-+# define GTEST_OS_DRAGONFLY 1
- #elif defined __FreeBSD__
- # define GTEST_OS_FREEBSD 1
- #elif defined __linux__
-diff --git third_party/libaom/source/libaom/third_party/googletest/src/googletest/include/gtest/internal/gtest-port.h third_party/libaom/source/libaom/third_party/googletest/src/googletest/include/gtest/internal/gtest-port.h
-index da57e65d33..0862d7bb37 100644
---- third_party/libaom/source/libaom/third_party/googletest/src/googletest/include/gtest/internal/gtest-port.h
-+++ third_party/libaom/source/libaom/third_party/googletest/src/googletest/include/gtest/internal/gtest-port.h
-@@ -121,6 +121,7 @@
- //
- //   GTEST_OS_AIX      - IBM AIX
- //   GTEST_OS_CYGWIN   - Cygwin
-+//   GTEST_OS_DRAGONFLY - DragonFly
- //   GTEST_OS_FREEBSD  - FreeBSD
- //   GTEST_OS_HPUX     - HP-UX
- //   GTEST_OS_LINUX    - Linux
-@@ -601,7 +602,7 @@ struct _RTL_CRITICAL_SECTION;
- // To disable threading support in Google Test, add -DGTEST_HAS_PTHREAD=0
- // to your compiler flags.
- # define GTEST_HAS_PTHREAD (GTEST_OS_LINUX || GTEST_OS_MAC || GTEST_OS_HPUX \
--    || GTEST_OS_QNX || GTEST_OS_FREEBSD || GTEST_OS_NACL)
-+    || GTEST_OS_QNX || GTEST_OS_FREEBSD || GTEST_OS_DRAGONFLY || GTEST_OS_NACL)
- #endif  // GTEST_HAS_PTHREAD
- 
- #if GTEST_HAS_PTHREAD
-@@ -790,7 +791,8 @@ using ::std::tuple_size;
-      (GTEST_OS_MAC && !GTEST_OS_IOS) || \
-      (GTEST_OS_WINDOWS_DESKTOP && _MSC_VER >= 1400) || \
-      GTEST_OS_WINDOWS_MINGW || GTEST_OS_AIX || GTEST_OS_HPUX || \
--     GTEST_OS_OPENBSD || GTEST_OS_QNX || GTEST_OS_FREEBSD)
-+     GTEST_OS_OPENBSD || GTEST_OS_QNX || GTEST_OS_FREEBSD || \
-+     GTEST_OS_DRAGONFLY)
- # define GTEST_HAS_DEATH_TEST 1
- #endif
- 
 diff --git third_party/libdrm/src/xf86drmMode.c third_party/libdrm/src/xf86drmMode.c
-index 15957ffcba..24d7fc7923 100644
+index 207d7be91ca..266297ca515 100644
 --- third_party/libdrm/src/xf86drmMode.c
 +++ third_party/libdrm/src/xf86drmMode.c
-@@ -796,7 +796,7 @@ int drmCheckModesettingSupported(const char *busid)
+@@ -799,7 +799,7 @@ drm_public int drmCheckModesettingSupported(const char *busid)
  	closedir(sysdir);
  	if (found)
  		return 0;
@@ -2800,17 +2672,8 @@ index 15957ffcba..24d7fc7923 100644
  	char kbusid[1024], sbusid[1024];
  	char oid[128];
  	int domain, bus, dev, func;
-@@ -829,8 +829,6 @@ int drmCheckModesettingSupported(const char *busid)
- 			return -EINVAL;
- 		return (modesetting ? 0 : -ENOSYS);
- 	}
--#elif defined(__DragonFly__)
--	return 0;
- #endif
- #ifdef __OpenBSD__
- 	int	fd;
 diff --git third_party/libphonenumber/dist/cpp/src/phonenumbers/base/memory/singleton.h third_party/libphonenumber/dist/cpp/src/phonenumbers/base/memory/singleton.h
-index 99a1fdbf4e..74a009b431 100644
+index 99a1fdbf4e7..74a009b4316 100644
 --- third_party/libphonenumber/dist/cpp/src/phonenumbers/base/memory/singleton.h
 +++ third_party/libphonenumber/dist/cpp/src/phonenumbers/base/memory/singleton.h
 @@ -56,7 +56,8 @@ template <class T> boost::once_flag Singleton<T>::flag = BOOST_ONCE_INIT;
@@ -2824,7 +2687,7 @@ index 99a1fdbf4e..74a009b431 100644
  namespace i18n {
  namespace phonenumbers {
 diff --git third_party/libphonenumber/dist/cpp/src/phonenumbers/base/synchronization/lock.h third_party/libphonenumber/dist/cpp/src/phonenumbers/base/synchronization/lock.h
-index 6ce10fd8ab..046c338f52 100644
+index 6ce10fd8ab2..046c338f52a 100644
 --- third_party/libphonenumber/dist/cpp/src/phonenumbers/base/synchronization/lock.h
 +++ third_party/libphonenumber/dist/cpp/src/phonenumbers/base/synchronization/lock.h
 @@ -63,7 +63,8 @@ private:
@@ -2838,7 +2701,7 @@ index 6ce10fd8ab..046c338f52 100644
  namespace i18n {
  namespace phonenumbers {
 diff --git third_party/libphonenumber/dist/cpp/src/phonenumbers/base/thread_checker.h third_party/libphonenumber/dist/cpp/src/phonenumbers/base/thread_checker.h
-index 14a5d98878..21a242bebd 100644
+index 14a5d98878e..21a242bebd4 100644
 --- third_party/libphonenumber/dist/cpp/src/phonenumbers/base/thread_checker.h
 +++ third_party/libphonenumber/dist/cpp/src/phonenumbers/base/thread_checker.h
 @@ -24,7 +24,7 @@
@@ -2861,7 +2724,7 @@ index 14a5d98878..21a242bebd 100644
  #include <pthread.h>
  
 diff --git third_party/libpng/arm/filter_neon.S third_party/libpng/arm/filter_neon.S
-index 2308aad13e..df123cd0bb 100644
+index 2308aad13e6..df123cd0bbe 100644
 --- third_party/libpng/arm/filter_neon.S
 +++ third_party/libpng/arm/filter_neon.S
 @@ -16,7 +16,7 @@
@@ -2873,52 +2736,8 @@ index 2308aad13e..df123cd0bb 100644
  .section .note.GNU-stack,"",%progbits /* mark stack as non-executable */
  #endif
  
-diff --git third_party/libvpx/source/libvpx/third_party/googletest/src/include/gtest/internal/gtest-port-arch.h third_party/libvpx/source/libvpx/third_party/googletest/src/include/gtest/internal/gtest-port-arch.h
-index f83700e06d..5274712ef9 100644
---- third_party/libvpx/source/libvpx/third_party/googletest/src/include/gtest/internal/gtest-port-arch.h
-+++ third_party/libvpx/source/libvpx/third_party/googletest/src/include/gtest/internal/gtest-port-arch.h
-@@ -70,6 +70,8 @@
- # if TARGET_OS_IPHONE
- #  define GTEST_OS_IOS 1
- # endif
-+#elif defined __DragonFly__
-+# define GTEST_OS_DRAGONFLY 1
- #elif defined __FreeBSD__
- # define GTEST_OS_FREEBSD 1
- #elif defined __Fuchsia__
-diff --git third_party/libvpx/source/libvpx/third_party/googletest/src/include/gtest/internal/gtest-port.h third_party/libvpx/source/libvpx/third_party/googletest/src/include/gtest/internal/gtest-port.h
-index 786497d854..07f2f86006 100644
---- third_party/libvpx/source/libvpx/third_party/googletest/src/include/gtest/internal/gtest-port.h
-+++ third_party/libvpx/source/libvpx/third_party/googletest/src/include/gtest/internal/gtest-port.h
-@@ -125,6 +125,7 @@
- //
- //   GTEST_OS_AIX      - IBM AIX
- //   GTEST_OS_CYGWIN   - Cygwin
-+//   GTEST_OS_DRAGONFLY - DragonFly
- //   GTEST_OS_FREEBSD  - FreeBSD
- //   GTEST_OS_FUCHSIA  - Fuchsia
- //   GTEST_OS_HPUX     - HP-UX
-@@ -637,7 +638,8 @@ typedef struct _RTL_CRITICAL_SECTION GTEST_CRITICAL_SECTION;
- // to your compiler flags.
- #define GTEST_HAS_PTHREAD                                             \
-   (GTEST_OS_LINUX || GTEST_OS_MAC || GTEST_OS_HPUX || GTEST_OS_QNX || \
--   GTEST_OS_FREEBSD || GTEST_OS_NACL || GTEST_OS_NETBSD || GTEST_OS_FUCHSIA)
-+   GTEST_OS_FREEBSD || GTEST_OS_NACL || GTEST_OS_NETBSD || \
-+   GTEST_OS_FUCHSIA || GTEST_OS_DRAGONFLY)
- #endif  // GTEST_HAS_PTHREAD
- 
- #if GTEST_HAS_PTHREAD
-@@ -829,7 +831,7 @@ typedef struct _RTL_CRITICAL_SECTION GTEST_CRITICAL_SECTION;
-      (GTEST_OS_WINDOWS_DESKTOP && _MSC_VER >= 1400) ||          \
-      GTEST_OS_WINDOWS_MINGW || GTEST_OS_AIX || GTEST_OS_HPUX || \
-      GTEST_OS_OPENBSD || GTEST_OS_QNX || GTEST_OS_FREEBSD || \
--     GTEST_OS_NETBSD || GTEST_OS_FUCHSIA)
-+     GTEST_OS_NETBSD || GTEST_OS_FUCHSIA || GTEST_OS_DRAGONFLY)
- # define GTEST_HAS_DEATH_TEST 1
- #endif
- 
 diff --git third_party/llvm/compiler-rt/test/fuzzer/lit.cfg.py third_party/llvm/compiler-rt/test/fuzzer/lit.cfg.py
-index 7066e6a1ef..5430f94c4f 100644
+index 00871b8a94a..71c5dcb2035 100644
 --- third_party/llvm/compiler-rt/test/fuzzer/lit.cfg.py
 +++ third_party/llvm/compiler-rt/test/fuzzer/lit.cfg.py
 @@ -28,6 +28,7 @@ config.test_format = lit.formats.ShTest(execute_external)
@@ -2926,11 +2745,11 @@ index 7066e6a1ef..5430f94c4f 100644
  if (sys.platform.startswith('darwin') or
      sys.platform.startswith('freebsd') or
 +    sys.platform.startswith('dragonfly') or
-     sys.platform.startswith('netbsd') or
      sys.platform.startswith('win')):
    lit_config.note('lsan feature unavailable')
+ else:
 diff --git third_party/llvm/libcxx/utils/google-benchmark/src/timers.cc third_party/llvm/libcxx/utils/google-benchmark/src/timers.cc
-index 7613ff92c6..fc0e9fa3e8 100644
+index 7613ff92c6e..fc0e9fa3e8e 100644
 --- third_party/llvm/libcxx/utils/google-benchmark/src/timers.cc
 +++ third_party/llvm/libcxx/utils/google-benchmark/src/timers.cc
 @@ -28,7 +28,7 @@
@@ -2943,7 +2762,7 @@ index 7613ff92c6..fc0e9fa3e8 100644
  #endif
  #if defined(BENCHMARK_OS_MACOSX)
 diff --git third_party/llvm/llvm/utils/benchmark/src/internal_macros.h third_party/llvm/llvm/utils/benchmark/src/internal_macros.h
-index f2d54bfcbd..3a8a3ca725 100644
+index f2d54bfcbd9..3a8a3ca725c 100644
 --- third_party/llvm/llvm/utils/benchmark/src/internal_macros.h
 +++ third_party/llvm/llvm/utils/benchmark/src/internal_macros.h
 @@ -47,6 +47,8 @@
@@ -2956,7 +2775,7 @@ index f2d54bfcbd..3a8a3ca725 100644
    #define BENCHMARK_OS_FREEBSD 1
  #elif defined(__NetBSD__)
 diff --git third_party/llvm/llvm/utils/benchmark/src/sysinfo.cc third_party/llvm/llvm/utils/benchmark/src/sysinfo.cc
-index 01dd8a0317..d36b7bbf40 100644
+index 04254bbed36..dbfbc4fbb20 100644
 --- third_party/llvm/llvm/utils/benchmark/src/sysinfo.cc
 +++ third_party/llvm/llvm/utils/benchmark/src/sysinfo.cc
 @@ -28,7 +28,8 @@
@@ -2969,7 +2788,7 @@ index 01dd8a0317..d36b7bbf40 100644
  #define BENCHMARK_HAS_SYSCTL
  #include <sys/sysctl.h>
  #endif
-@@ -507,6 +508,8 @@ double GetCPUCyclesPerSecond() {
+@@ -506,6 +507,8 @@ double GetCPUCyclesPerSecond() {
    constexpr auto* FreqStr =
  #if defined(BENCHMARK_OS_FREEBSD) || defined(BENCHMARK_OS_NETBSD)
        "machdep.tsc_freq";
@@ -2979,7 +2798,7 @@ index 01dd8a0317..d36b7bbf40 100644
        "hw.cpuspeed";
  #else
 diff --git third_party/llvm/llvm/utils/unittest/googletest/include/gtest/internal/gtest-port-arch.h third_party/llvm/llvm/utils/unittest/googletest/include/gtest/internal/gtest-port-arch.h
-index f1319c7f2e..d4185a2a4a 100644
+index f1319c7f2e2..d4185a2a4a9 100644
 --- third_party/llvm/llvm/utils/unittest/googletest/include/gtest/internal/gtest-port-arch.h
 +++ third_party/llvm/llvm/utils/unittest/googletest/include/gtest/internal/gtest-port-arch.h
 @@ -67,6 +67,8 @@
@@ -2992,7 +2811,7 @@ index f1319c7f2e..d4185a2a4a 100644
  # define GTEST_OS_FREEBSD 1
  #elif defined __linux__
 diff --git third_party/llvm/llvm/utils/unittest/googletest/include/gtest/internal/gtest-port.h third_party/llvm/llvm/utils/unittest/googletest/include/gtest/internal/gtest-port.h
-index d36e8203bc..bcd98f398b 100644
+index 17410d37f9c..fe371bdea6a 100644
 --- third_party/llvm/llvm/utils/unittest/googletest/include/gtest/internal/gtest-port.h
 +++ third_party/llvm/llvm/utils/unittest/googletest/include/gtest/internal/gtest-port.h
 @@ -121,6 +121,7 @@
@@ -3021,7 +2840,7 @@ index d36e8203bc..bcd98f398b 100644
  # define GTEST_HAS_DEATH_TEST 1
  #endif
 diff --git third_party/minizip/src/lib/brg/brg_endian.h third_party/minizip/src/lib/brg/brg_endian.h
-index 9ef4af5803..ec51db6a95 100644
+index 9ef4af58030..ec51db6a952 100644
 --- third_party/minizip/src/lib/brg/brg_endian.h
 +++ third_party/minizip/src/lib/brg/brg_endian.h
 @@ -27,7 +27,8 @@ Issue Date: 20/12/2007
@@ -3034,11 +2853,23 @@ index 9ef4af5803..ec51db6a95 100644
  #  include <sys/endian.h>
  #elif defined( BSD ) && ( BSD >= 199103 ) || defined( __APPLE__ ) || \
        defined( __CYGWIN32__ ) || defined( __DJGPP__ ) || defined( __osf__ ) || \
+diff --git third_party/nasm/config/config-linux.h third_party/nasm/config/config-linux.h
+index ed7f98bd759..cf695b5cd02 100644
+--- third_party/nasm/config/config-linux.h
++++ third_party/nasm/config/config-linux.h
+@@ -336,6 +336,7 @@
+ #define HAVE_MEMORY_H 1
+ 
+ /* Define to 1 if you have the `mempcpy' function. */
++#define HAVE_MEMPCPY 1
+ /* #undef HAVE_MEMPCPY */
+ 
+ /* Define to 1 if you have a working `mmap' system call. */
 diff --git third_party/node/node.py third_party/node/node.py
-index cc0c2f0518..19d90e3267 100755
+index 37ae76c2d08..0ae1c4bd3b4 100755
 --- third_party/node/node.py
 +++ third_party/node/node.py
-@@ -12,6 +12,7 @@ import sys
+@@ -13,6 +13,7 @@ import os
  def GetBinaryPath():
    return os_path.join(os_path.dirname(__file__), *{
      'Darwin': ('mac', 'node-darwin-x64', 'bin', 'node'),
@@ -3046,24 +2877,11 @@ index cc0c2f0518..19d90e3267 100755
      'FreeBSD': ('freebsd', 'node-freebsd-x64', 'bin', 'node'),
      'Linux': ('linux', 'node-linux-x64', 'bin', 'node'),
      'Windows': ('win', 'node.exe'),
-diff --git third_party/pdfium/core/fxcrt/fx_system.h third_party/pdfium/core/fxcrt/fx_system.h
-index cb45f705d2..d873fa71bf 100644
---- third_party/pdfium/core/fxcrt/fx_system.h
-+++ third_party/pdfium/core/fxcrt/fx_system.h
-@@ -26,7 +26,7 @@
- #define _FX_PLATFORM_ _FX_PLATFORM_WINDOWS_
- #elif defined(_WIN64)
- #define _FX_PLATFORM_ _FX_PLATFORM_WINDOWS_
--#elif defined(__linux__) || defined(__FreeBSD__)
-+#elif defined(__linux__) || defined(__FreeBSD__) || defined(__DragonFly__)
- #define _FX_PLATFORM_ _FX_PLATFORM_LINUX_
- #elif defined(__APPLE__)
- #define _FX_PLATFORM_ _FX_PLATFORM_APPLE_
 diff --git third_party/pdfium/fxjs/cjs_publicmethods.cpp third_party/pdfium/fxjs/cjs_publicmethods.cpp
-index 6dbc9d5627..b668356b37 100644
+index 13203b08612..d01d87c6e3b 100644
 --- third_party/pdfium/fxjs/cjs_publicmethods.cpp
 +++ third_party/pdfium/fxjs/cjs_publicmethods.cpp
-@@ -86,7 +86,7 @@ constexpr const wchar_t* kDateFormats[] = {L"m/d",
+@@ -87,7 +87,7 @@ constexpr const wchar_t* kDateFormats[] = {L"m/d",
  constexpr const wchar_t* kTimeFormats[] = {L"HH:MM", L"h:MM tt", L"HH:MM:ss",
                                             L"h:MM:ss tt"};
  
@@ -3073,10 +2891,10 @@ index 6dbc9d5627..b668356b37 100644
   * cvt.c - IEEE floating point formatting routines for FreeBSD
   * from GNU libc-4.6.27
 diff --git third_party/pdfium/fxjs/fx_date_helpers.cpp third_party/pdfium/fxjs/fx_date_helpers.cpp
-index 0238efcc82..4b747ce2e2 100644
+index cd2c8618c1a..f8403d30227 100644
 --- third_party/pdfium/fxjs/fx_date_helpers.cpp
 +++ third_party/pdfium/fxjs/fx_date_helpers.cpp
-@@ -35,7 +35,7 @@ double GetLocalTZA() {
+@@ -36,7 +36,7 @@ double GetLocalTZA() {
      return 0;
    time_t t = 0;
    FXSYS_time(&t);
@@ -3085,7 +2903,7 @@ index 0238efcc82..4b747ce2e2 100644
    struct tm lt;
    localtime_r(&t, &lt);
    return (double)(-(lt.tm_gmtoff * 1000));
-@@ -48,7 +48,7 @@ double GetLocalTZA() {
+@@ -49,7 +49,7 @@ double GetLocalTZA() {
    _get_timezone(&timezone);
  #endif
    return (double)(-(timezone * 1000));
@@ -3095,7 +2913,7 @@ index 0238efcc82..4b747ce2e2 100644
  
  int GetDaylightSavingTA(double d) {
 diff --git third_party/pdfium/fxjs/js_define.cpp third_party/pdfium/fxjs/js_define.cpp
-index 0c0c02cdc2..d5b617d868 100644
+index 2bc128487f1..85c9777050f 100644
 --- third_party/pdfium/fxjs/js_define.cpp
 +++ third_party/pdfium/fxjs/js_define.cpp
 @@ -14,6 +14,7 @@
@@ -3104,23 +2922,10 @@ index 0c0c02cdc2..d5b617d868 100644
  #include "fxjs/cjs_object.h"
 +
  #include "fxjs/fx_date_helpers.h"
+ #include "fxjs/fxv8.h"
  
- void JSDestructor(v8::Local<v8::Object> obj) {
-diff --git third_party/pdfium/third_party/libopenjpeg20/opj_malloc.h third_party/pdfium/third_party/libopenjpeg20/opj_malloc.h
-index 79b3a64102..664877964e 100644
---- third_party/pdfium/third_party/libopenjpeg20/opj_malloc.h
-+++ third_party/pdfium/third_party/libopenjpeg20/opj_malloc.h
-@@ -98,7 +98,7 @@ Allocate memory aligned to a 16 byte boundary
- #else /* Not _WIN32 */
-   #if defined(__sun)
-     #define HAVE_MEMALIGN
--  #elif defined(__FreeBSD__)
-+  #elif defined(__FreeBSD__) || defined(__DragonFly__)
-     #define HAVE_POSIX_MEMALIGN
-   /* Linux x86_64 and OSX always align allocations to 16 bytes */
-   #elif !defined(__amd64__) && !defined(__APPLE__) && !defined(_AIX)
 diff --git third_party/pdfium/third_party/libpng16/arm/filter_neon.S third_party/pdfium/third_party/libpng16/arm/filter_neon.S
-index 2308aad13e..df123cd0bb 100644
+index 2308aad13e6..df123cd0bbe 100644
 --- third_party/pdfium/third_party/libpng16/arm/filter_neon.S
 +++ third_party/pdfium/third_party/libpng16/arm/filter_neon.S
 @@ -16,7 +16,7 @@
@@ -3133,64 +2938,94 @@ index 2308aad13e..df123cd0bb 100644
  #endif
  
 diff --git third_party/perfetto/include/perfetto/base/build_config.h third_party/perfetto/include/perfetto/base/build_config.h
-index 5dc6a30c65..a1db5333b7 100644
+index 071014a21a1..cd27955553f 100644
 --- third_party/perfetto/include/perfetto/base/build_config.h
 +++ third_party/perfetto/include/perfetto/base/build_config.h
-@@ -41,6 +41,7 @@
- #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_MACOSX() 0
+@@ -28,6 +28,7 @@
+ #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_ANDROID() 1
+ #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_LINUX() 0
+ #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_FREEBSD() 0
++#define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_DRAGONFLY() 0
+ #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_WIN() 0
+ #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_APPLE() 0
+ #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_MAC() 0
+@@ -40,6 +41,7 @@
+ #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_APPLE() 1
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_LINUX() 0
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_FREEBSD() 0
 +#define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_DRAGONFLY() 0
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_WIN() 0
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_WASM() 0
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_FUCHSIA() 0
-@@ -49,14 +50,16 @@
- #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_MACOSX() 1
- #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_LINUX() 0
- #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_FREEBSD() 0
-+#define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_DRAGONFLY() 0
- #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_WIN() 0
+@@ -64,10 +66,11 @@
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_WASM() 0
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_FUCHSIA() 0
--#elif defined(__linux__) || defined(__FreeBSD__)
-+#elif defined(__linux__) || defined(__FreeBSD__) || defined(__DragonFly__)
+ #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_NACL() 0
+-#elif defined(__FreeBSD__)
++#elif defined(__FreeBSD__) || defined(__DragonFly__)
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_ANDROID() 0
- #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_MACOSX() 0
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_LINUX() 1
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_FREEBSD() 1
 +#define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_DRAGONFLY() 1
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_WIN() 0
- #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_WASM() 0
- #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_FUCHSIA() 0
-@@ -65,6 +68,7 @@
- #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_MACOSX() 0
+ #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_APPLE() 0
+ #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_MAC() 0
+@@ -79,6 +82,7 @@
+ #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_ANDROID() 0
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_LINUX() 0
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_FREEBSD() 0
 +#define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_DRAGONFLY() 0
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_WIN() 1
- #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_WASM() 0
- #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_FUCHSIA() 0
-@@ -73,6 +77,7 @@
- #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_MACOSX() 0
+ #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_APPLE() 0
+ #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_MAC() 0
+@@ -90,6 +94,7 @@
+ #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_ANDROID() 0
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_LINUX() 0
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_FREEBSD() 0
 +#define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_DRAGONFLY() 0
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_WIN() 0
- #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_WASM() 1
- #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_FUCHSIA() 0
-@@ -81,6 +86,7 @@
- #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_MACOSX() 0
+ #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_APPLE() 0
+ #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_MAC() 0
+@@ -104,6 +109,7 @@
+ #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_IOS() 0
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_LINUX() 0
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_FREEBSD() 0
 +#define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_DRAGONFLY() 0
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_WIN() 0
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_WASM() 0
  #define PERFETTO_BUILDFLAG_DEFINE_PERFETTO_OS_FUCHSIA() 1
+diff --git third_party/perfetto/include/perfetto/base/thread_utils.h third_party/perfetto/include/perfetto/base/thread_utils.h
+index b2196c89311..c47c1ce3fb0 100644
+--- third_party/perfetto/include/perfetto/base/thread_utils.h
++++ third_party/perfetto/include/perfetto/base/thread_utils.h
+@@ -35,7 +35,9 @@
+ #else
+ #include <pthread.h>
+ #endif
+-#if PERFETTO_BUILDFLAG(PERFETTO_OS_FREEBSD)
++
++#if PERFETTO_BUILDFLAG(PERFETTO_OS_FREEBSD) || \
++    PERFETTO_BUILDFLAG(PERFETTO_OS_DRAGONFLY)
+ #include <pthread_np.h>
+ #endif
+ 
+@@ -47,6 +49,11 @@ using PlatformThreadId = pid_t;
+ inline PlatformThreadId GetThreadId() {
+   return gettid();
+ }
++#elif PERFETTO_BUILDFLAG(PERFETTO_OS_DRAGONFLY)
++using PlatformThreadId = int;
++inline PlatformThreadId GetThreadId() {
++  return pthread_getthreadid_np();
++}
+ #elif PERFETTO_BUILDFLAG(PERFETTO_OS_FREEBSD)
+ using PlatformThreadId = pid_t;
+ inline PlatformThreadId GetThreadId() {
 diff --git third_party/perfetto/include/perfetto/base/time.h third_party/perfetto/include/perfetto/base/time.h
-index 7debf2db3f..4677b0a61d 100644
+index 0f57698b786..9cfbcf4ad5e 100644
 --- third_party/perfetto/include/perfetto/base/time.h
 +++ third_party/perfetto/include/perfetto/base/time.h
-@@ -123,7 +123,8 @@ inline TimeNanos GetTimeInternalNs(clockid_t clk_id) {
+@@ -141,7 +141,8 @@ inline TimeNanos GetTimeInternalNs(clockid_t clk_id) {
  // Return ns from boot. Conversely to GetWallTimeNs, this clock counts also time
  // during suspend (when supported).
  inline TimeNanos GetBootTimeNs() {
@@ -3201,7 +3036,7 @@ index 7debf2db3f..4677b0a61d 100644
  #else
    // Determine if CLOCK_BOOTTIME is available on the first call.
 diff --git third_party/perfetto/include/perfetto/ext/base/event_fd.h third_party/perfetto/include/perfetto/ext/base/event_fd.h
-index ad46cde38a..c10b3d10cc 100644
+index ad46cde38a2..c10b3d10cc1 100644
 --- third_party/perfetto/include/perfetto/ext/base/event_fd.h
 +++ third_party/perfetto/include/perfetto/ext/base/event_fd.h
 @@ -20,8 +20,10 @@
@@ -3217,38 +3052,11 @@ index ad46cde38a..c10b3d10cc 100644
  #define PERFETTO_USE_EVENTFD() 1
  #else
  #define PERFETTO_USE_EVENTFD() 0
-diff --git third_party/perfetto/include/perfetto/ext/base/thread_utils.h third_party/perfetto/include/perfetto/ext/base/thread_utils.h
-index 835811e3c0..07ae87664d 100644
---- third_party/perfetto/include/perfetto/ext/base/thread_utils.h
-+++ third_party/perfetto/include/perfetto/ext/base/thread_utils.h
-@@ -33,7 +33,9 @@
- #include <sys/types.h>
- #include <unistd.h>
- #endif
--#if PERFETTO_BUILDFLAG(PERFETTO_OS_FREEBSD)
-+
-+#if PERFETTO_BUILDFLAG(PERFETTO_OS_FREEBSD) || \
-+    PERFETTO_BUILDFLAG(PERFETTO_OS_DRAGONFLY)
- #include <pthread_np.h>
- #endif
- 
-@@ -45,6 +47,11 @@ using PlatformThreadID = pid_t;
- inline PlatformThreadID GetThreadId() {
-   return gettid();
- }
-+#elif PERFETTO_BUILDFLAG(PERFETTO_OS_DRAGONFLY)
-+      using PlatformThreadID = int;
-+inline PlatformThreadID GetThreadId() {
-+  return pthread_getthreadid_np();
-+}
- #elif PERFETTO_BUILDFLAG(PERFETTO_OS_FREEBSD)
- using PlatformThreadID = int;
- inline PlatformThreadID GetThreadId() {
 diff --git third_party/perfetto/src/base/file_utils.cc third_party/perfetto/src/base/file_utils.cc
-index 74c985a62f..6b4e2e238d 100644
+index b8020adcb0b..3697bbc843f 100644
 --- third_party/perfetto/src/base/file_utils.cc
 +++ third_party/perfetto/src/base/file_utils.cc
-@@ -90,7 +90,11 @@ bool FlushFile(int fd) {
+@@ -91,7 +91,11 @@ bool FlushFile(int fd) {
    PERFETTO_DCHECK(fd != 0);
  #if PERFETTO_BUILDFLAG(PERFETTO_OS_LINUX) || \
      PERFETTO_BUILDFLAG(PERFETTO_OS_ANDROID)
@@ -3261,35 +3069,35 @@ index 74c985a62f..6b4e2e238d 100644
    return !PERFETTO_EINTR(_commit(fd));
  #else
 diff --git third_party/perfetto/src/base/unix_socket.cc third_party/perfetto/src/base/unix_socket.cc
-index 7972c9d328..a65e7d8652 100644
+index 75e773f54c6..3c1195b87b3 100644
 --- third_party/perfetto/src/base/unix_socket.cc
 +++ third_party/perfetto/src/base/unix_socket.cc
-@@ -524,7 +524,8 @@ void UnixSocket::DoConnect(const std::string& socket_name) {
- void UnixSocket::ReadPeerCredentials() {
- #if PERFETTO_BUILDFLAG(PERFETTO_OS_LINUX) || \
-     PERFETTO_BUILDFLAG(PERFETTO_OS_ANDROID) || \
--    PERFETTO_BUILDFLAG(PERFETTO_OS_FREEBSD)
-+    PERFETTO_BUILDFLAG(PERFETTO_OS_FREEBSD) || \
-+    PERFETTO_BUILDFLAG(PERFETTO_OS_DRAGONFLY)
+@@ -630,8 +630,9 @@ void UnixSocket::ReadPeerCredentials() {
+   if (sock_raw_.family() != SockFamily::kUnix)
+     return;
+ 
+-#if (PERFETTO_BUILDFLAG(PERFETTO_OS_LINUX) && !PERFETTO_BUILDFLAG(PERFETTO_OS_FREEBSD)) || \
+-    PERFETTO_BUILDFLAG(PERFETTO_OS_ANDROID)
++#if (PERFETTO_BUILDFLAG(PERFETTO_OS_LINUX) && \
++     (!PERFETTO_BUILDFLAG(PERFETTO_OS_FREEBSD) && !PERFETTO_BUILDFLAG(PERFETTO_OS_DRAGONFLY)) || \
++     PERFETTO_BUILDFLAG(PERFETTO_OS_ANDROID))
    struct ucred user_cred;
    socklen_t len = sizeof(user_cred);
    int fd = sock_raw_.fd();
 diff --git third_party/perfetto/src/tracing/core/tracing_service_impl.cc third_party/perfetto/src/tracing/core/tracing_service_impl.cc
-index 5e4356837b..1b47d9072e 100644
+index 12e2a487cad..e2871a1a996 100644
 --- third_party/perfetto/src/tracing/core/tracing_service_impl.cc
 +++ third_party/perfetto/src/tracing/core/tracing_service_impl.cc
-@@ -2181,7 +2181,8 @@ void TracingServiceImpl::SnapshotClocks(std::vector<TracePacket>* packets,
- 
- #if !PERFETTO_BUILDFLAG(PERFETTO_OS_MACOSX) && \
-     !PERFETTO_BUILDFLAG(PERFETTO_OS_WIN) && \
--    !PERFETTO_BUILDFLAG(PERFETTO_OS_FREEBSD)
-+    !PERFETTO_BUILDFLAG(PERFETTO_OS_FREEBSD) && \
-+    !PERFETTO_BUILDFLAG(PERFETTO_OS_DRAGONFLY)
+@@ -2567,6 +2567,7 @@ bool TracingServiceImpl::SnapshotClocks(
+ #if !PERFETTO_BUILDFLAG(PERFETTO_OS_APPLE) &&   \
+     !PERFETTO_BUILDFLAG(PERFETTO_OS_WIN) &&     \
+     !PERFETTO_BUILDFLAG(PERFETTO_OS_FREEBSD) && \
++    !PERFETTO_BUILDFLAG(PERFETTO_OS_DRAGONFLY) && \
+     !PERFETTO_BUILDFLAG(PERFETTO_OS_NACL)
    struct {
      clockid_t id;
-     protos::ClockSnapshot::Clock::BuiltinClocks type;
 diff --git third_party/protobuf/src/google/protobuf/stubs/platform_macros.h third_party/protobuf/src/google/protobuf/stubs/platform_macros.h
-index fb93f21ecf..f1e1c843c2 100644
+index fb93f21ecf4..f1e1c843c2a 100644
 --- third_party/protobuf/src/google/protobuf/stubs/platform_macros.h
 +++ third_party/protobuf/src/google/protobuf/stubs/platform_macros.h
 @@ -118,7 +118,8 @@ GOOGLE_PROTOBUF_PLATFORM_ERROR
@@ -3303,7 +3111,7 @@ index fb93f21ecf..f1e1c843c2 100644
  // we use pthread_key_create()/pthread_getspecific()/... methods for
  // TLS support on android.
 diff --git third_party/skia/src/gpu/GrAutoLocaleSetter.h third_party/skia/src/gpu/GrAutoLocaleSetter.h
-index c0b75ea167..d96cba3306 100644
+index c0b75ea1671..d96cba3306b 100644
 --- third_party/skia/src/gpu/GrAutoLocaleSetter.h
 +++ third_party/skia/src/gpu/GrAutoLocaleSetter.h
 @@ -27,7 +27,8 @@
@@ -3317,10 +3125,10 @@ index c0b75ea167..d96cba3306 100644
  #else
  #define HAVE_LOCALE_T 1
 diff --git third_party/skia/src/ports/SkOSFile_stdio.cpp third_party/skia/src/ports/SkOSFile_stdio.cpp
-index 6e6eb2870d..2ee2e43557 100644
+index 7234e3c0f83..8d6565d54e9 100644
 --- third_party/skia/src/ports/SkOSFile_stdio.cpp
 +++ third_party/skia/src/ports/SkOSFile_stdio.cpp
-@@ -129,7 +129,7 @@ void sk_fflush(FILE* f) {
+@@ -132,7 +132,7 @@ void sk_fflush(FILE* f) {
  
  void sk_fsync(FILE* f) {
  #if !defined(_WIN32) && !defined(SK_BUILD_FOR_ANDROID) && !defined(__UCLIBC__) \
@@ -3329,25 +3137,12 @@ index 6e6eb2870d..2ee2e43557 100644
      int fd = fileno(f);
      fsync(fd);
  #endif
-diff --git third_party/skia/third_party/vulkanmemoryallocator/include/vk_mem_alloc.h third_party/skia/third_party/vulkanmemoryallocator/include/vk_mem_alloc.h
-index af2595f97f..7451d7be4d 100644
---- third_party/skia/third_party/vulkanmemoryallocator/include/vk_mem_alloc.h
-+++ third_party/skia/third_party/vulkanmemoryallocator/include/vk_mem_alloc.h
-@@ -2232,7 +2232,7 @@ remove them if not needed.
- #include <mutex> // for std::mutex
- #include <atomic> // for std::atomic
- 
--#if !defined(_WIN32) && !defined(__APPLE__) && !defined(__FreeBSD__)
-+#if !defined(__DragonFly__) && !defined(_WIN32) && !defined(__APPLE__) && !defined(__FreeBSD__)
-     #include <malloc.h> // for aligned_alloc()
- #endif
- 
 diff --git third_party/sqlite/BUILD.gn third_party/sqlite/BUILD.gn
-index d8c2e34ed0..0631c9c3ed 100644
+index 4c8862361d3..b4c305d38e4 100644
 --- third_party/sqlite/BUILD.gn
 +++ third_party/sqlite/BUILD.gn
-@@ -318,7 +318,7 @@ component("chromium_sqlite3") {
-   if (is_linux || is_android) {
+@@ -194,7 +194,7 @@ component("chromium_sqlite3") {
+   if (is_linux || is_chromeos || is_android) {
      defines += [
        # Linux provides fdatasync(), a faster equivalent of fsync().
 -      "fdatasync=fdatasync",
@@ -3356,7 +3151,7 @@ index d8c2e34ed0..0631c9c3ed 100644
    }
  
 diff --git third_party/swiftshader/src/Common/Configurator.cpp third_party/swiftshader/src/Common/Configurator.cpp
-index 0e74b12751..50fb2b47ec 100644
+index 0e74b12751a..50fb2b47ec1 100644
 --- third_party/swiftshader/src/Common/Configurator.cpp
 +++ third_party/swiftshader/src/Common/Configurator.cpp
 @@ -42,7 +42,7 @@ namespace sw
@@ -3369,7 +3164,7 @@ index 0e74b12751..50fb2b47ec 100644
  #endif      
  		#if defined(__unix__)
 diff --git third_party/swiftshader/src/Common/MutexLock.hpp third_party/swiftshader/src/Common/MutexLock.hpp
-index 8784278b53..62df5eacc3 100644
+index 8784278b535..62df5eacc35 100644
 --- third_party/swiftshader/src/Common/MutexLock.hpp
 +++ third_party/swiftshader/src/Common/MutexLock.hpp
 @@ -17,7 +17,7 @@
@@ -3382,7 +3177,7 @@ index 8784278b53..62df5eacc3 100644
  // at the same time it's best to just have the scheduler overhead.
  #include <pthread.h>
 diff --git third_party/swiftshader/src/Common/SharedLibrary.hpp third_party/swiftshader/src/Common/SharedLibrary.hpp
-index d0f48e7c0b..36b8081360 100644
+index d0f48e7c0bd..36b8081360e 100644
 --- third_party/swiftshader/src/Common/SharedLibrary.hpp
 +++ third_party/swiftshader/src/Common/SharedLibrary.hpp
 @@ -97,7 +97,7 @@ void *loadLibrary(const std::string &libraryDirectory, const char *(&names)[n],
@@ -3395,7 +3190,7 @@ index d0f48e7c0b..36b8081360 100644
  			return dlopen(path, RTLD_NOW | RTLD_LOCAL);
  		#else
 diff --git third_party/swiftshader/src/Main/SwiftConfig.cpp third_party/swiftshader/src/Main/SwiftConfig.cpp
-index a09536d5c5..4d193b5308 100644
+index a09536d5c52..4d193b5308e 100644
 --- third_party/swiftshader/src/Main/SwiftConfig.cpp
 +++ third_party/swiftshader/src/Main/SwiftConfig.cpp
 @@ -764,7 +764,7 @@ namespace sw
@@ -3408,7 +3203,7 @@ index a09536d5c5..4d193b5308 100644
  #else
                 bool noConfig = false;
 diff --git third_party/swiftshader/src/OpenGL/compiler/osinclude.h third_party/swiftshader/src/OpenGL/compiler/osinclude.h
-index 54d4c75025..46cbcf125f 100644
+index 54d4c75025a..46cbcf125fd 100644
 --- third_party/swiftshader/src/OpenGL/compiler/osinclude.h
 +++ third_party/swiftshader/src/OpenGL/compiler/osinclude.h
 @@ -26,7 +26,7 @@
@@ -3421,10 +3216,10 @@ index 54d4c75025..46cbcf125f 100644
  #else
  #error Unsupported platform.
 diff --git third_party/swiftshader/src/OpenGL/libEGL/Display.cpp third_party/swiftshader/src/OpenGL/libEGL/Display.cpp
-index d94fbf3dd5..ad24979b86 100644
+index c90ca1979f1..3c063cd0143 100644
 --- third_party/swiftshader/src/OpenGL/libEGL/Display.cpp
 +++ third_party/swiftshader/src/OpenGL/libEGL/Display.cpp
-@@ -690,7 +690,7 @@ bool Display::isValidWindow(EGLNativeWindowType window)
+@@ -684,7 +684,7 @@ bool Display::isValidWindow(EGLNativeWindowType window)
  			return status != 0;
  		}
  		return false;
@@ -3433,7 +3228,7 @@ index d94fbf3dd5..ad24979b86 100644
  		return false;  // Non X11 linux is headless only
  	#elif defined(__APPLE__)
  		return sw::OSX::IsValidWindow(window);
-@@ -868,7 +868,7 @@ sw::Format Display::getDisplayFormat() const
+@@ -862,7 +862,7 @@ sw::Format Display::getDisplayFormat() const
  		{
  			return sw::FORMAT_X8R8G8B8;
  		}
@@ -3443,10 +3238,10 @@ index d94fbf3dd5..ad24979b86 100644
  	#elif defined(__APPLE__)
  		return sw::FORMAT_A8B8G8R8;
 diff --git third_party/swiftshader/src/OpenGL/libEGL/Surface.cpp third_party/swiftshader/src/OpenGL/libEGL/Surface.cpp
-index b06d627e6c..febd2d5eb0 100644
+index e163f426280..e6d4fa964f2 100644
 --- third_party/swiftshader/src/OpenGL/libEGL/Surface.cpp
 +++ third_party/swiftshader/src/OpenGL/libEGL/Surface.cpp
-@@ -362,7 +362,7 @@ bool WindowSurface::checkForResize()
+@@ -357,7 +357,7 @@ bool WindowSurface::checkForResize()
  
  		int windowWidth = windowAttributes.width;
  		int windowHeight = windowAttributes.height;
@@ -3456,10 +3251,10 @@ index b06d627e6c..febd2d5eb0 100644
  		int windowWidth = 100;
  		int windowHeight = 100;
 diff --git third_party/swiftshader/src/OpenGL/libEGL/libEGL.cpp third_party/swiftshader/src/OpenGL/libEGL/libEGL.cpp
-index 4a69968dbd..39facec8f4 100644
+index 162cdb030eb..29b5cce9f41 100644
 --- third_party/swiftshader/src/OpenGL/libEGL/libEGL.cpp
 +++ third_party/swiftshader/src/OpenGL/libEGL/libEGL.cpp
-@@ -148,7 +148,7 @@ EGLDisplay GetDisplay(EGLNativeDisplayType display_id)
+@@ -153,7 +153,7 @@ EGLDisplay EGLAPIENTRY GetDisplay(EGLNativeDisplayType display_id)
  		// FIXME: Check if display_id is the default display
  	}
  
@@ -3468,7 +3263,7 @@ index 4a69968dbd..39facec8f4 100644
  		#if defined(USE_X11)
  		if(!libX11)
  		#endif  // Non X11 linux is headless only
-@@ -207,7 +207,7 @@ const char *QueryString(EGLDisplay dpy, EGLint name)
+@@ -216,7 +216,7 @@ const char *EGLAPIENTRY QueryString(EGLDisplay dpy, EGLint name)
  	{
  		return success(
  			"EGL_KHR_client_get_all_proc_addresses "
@@ -3477,7 +3272,7 @@ index 4a69968dbd..39facec8f4 100644
  			"EGL_KHR_platform_gbm "
  #endif
  #if defined(USE_X11)
-@@ -1243,7 +1243,7 @@ EGLDisplay GetPlatformDisplay(EGLenum platform, void *native_display, const EGLA
+@@ -1307,7 +1307,7 @@ EGLDisplay EGLAPIENTRY GetPlatformDisplay(EGLenum platform, void *native_display
  {
  	TRACE("(EGLenum platform = 0x%X, void *native_display = %p, const EGLAttrib *attrib_list = %p)", platform, native_display, attrib_list);
  
@@ -3487,7 +3282,7 @@ index 4a69968dbd..39facec8f4 100644
  		{
  		#if defined(USE_X11)
 diff --git third_party/swiftshader/src/OpenGL/libEGL/libEGL.hpp third_party/swiftshader/src/OpenGL/libEGL/libEGL.hpp
-index 36cf0f9013..2552fd5833 100644
+index 32feaec2932..fabc19b1dd6 100644
 --- third_party/swiftshader/src/OpenGL/libEGL/libEGL.hpp
 +++ third_party/swiftshader/src/OpenGL/libEGL/libEGL.hpp
 @@ -100,7 +100,7 @@ private:
@@ -3500,7 +3295,7 @@ index 36cf0f9013..2552fd5833 100644
  					const char *libEGL_lib[] = {"lib64EGL_translator.so", "libEGL.so.1", "libEGL.so"};
  				#else
 diff --git third_party/swiftshader/src/OpenGL/libGLES_CM/libGLES_CM.hpp third_party/swiftshader/src/OpenGL/libGLES_CM/libGLES_CM.hpp
-index 3a9ba50615..40e2769262 100644
+index 690d8b38429..f7695cb7a8a 100644
 --- third_party/swiftshader/src/OpenGL/libGLES_CM/libGLES_CM.hpp
 +++ third_party/swiftshader/src/OpenGL/libGLES_CM/libGLES_CM.hpp
 @@ -261,7 +261,7 @@ private:
@@ -3513,7 +3308,7 @@ index 3a9ba50615..40e2769262 100644
  					const char *libGLES_CM_lib[] = {"lib64GLES_CM_translator.so", "libGLES_CM.so.1", "libGLES_CM.so"};
  				#else
 diff --git third_party/swiftshader/src/OpenGL/libGLESv2/libGLESv2.hpp third_party/swiftshader/src/OpenGL/libGLESv2/libGLESv2.hpp
-index b6057ef524..6790e7154e 100644
+index 4352c26013a..367b3d3bda9 100644
 --- third_party/swiftshader/src/OpenGL/libGLESv2/libGLESv2.hpp
 +++ third_party/swiftshader/src/OpenGL/libGLESv2/libGLESv2.hpp
 @@ -286,7 +286,7 @@ private:
@@ -3525,169 +3320,188 @@ index b6057ef524..6790e7154e 100644
  				#if defined(__LP64__)
  					const char *libGLESv2_lib[] = {"lib64GLES_V2_translator.so", "libGLESv2.so.2", "libGLESv2.so"};
  				#else
-diff --git third_party/swiftshader/src/Yarn/Thread.cpp third_party/swiftshader/src/Yarn/Thread.cpp
-index 708c4a3d44..97941507c5 100644
---- third_party/swiftshader/src/Yarn/Thread.cpp
-+++ third_party/swiftshader/src/Yarn/Thread.cpp
-@@ -27,7 +27,7 @@
- #   include <pthread.h>
- #   include <mach/thread_act.h>
- #   include <unistd.h>
+diff --git third_party/swiftshader/src/Reactor/Debug.cpp third_party/swiftshader/src/Reactor/Debug.cpp
+index 10f38250978..c9392197f62 100644
+--- third_party/swiftshader/src/Reactor/Debug.cpp
++++ third_party/swiftshader/src/Reactor/Debug.cpp
+@@ -23,18 +23,19 @@
+ #	include <android/log.h>
+ #endif
+ 
+-#if defined(__unix__) && !defined(__FreeBSD__)
++#if defined(__unix__) && !defined(__FreeBSD__) && !defined(__DragonFly__)
+ #	define PTRACE
+ #	include <sys/ptrace.h>
+ #	include <sys/types.h>
+ #elif defined(_WIN32) || defined(_WIN64)
+ #	include <windows.h>
+-#elif defined(__APPLE__) || defined(__MACH__) || defined(__FreeBSD__)
++#elif defined(__APPLE__) || defined(__MACH__) || defined(__FreeBSD__) || \
++	defined(__DragonFly__)
+ #	include <sys/types.h>
+ #	include <sys/sysctl.h>
+ #	include <unistd.h>
+ #endif
+-#if defined(__FreeBSD__)
++#if defined(__FreeBSD__) || defined(__DragonFly__)
+ #	include <sys/user.h>
+ #endif
+ 
+@@ -50,7 +51,8 @@ namespace {
+ 
+ bool IsUnderDebugger()
+ {
+-#if defined(PTRACE) && !defined(__APPLE__) && !defined(__MACH__)
++#if defined(PTRACE) && !defined(__APPLE__) && !defined(__MACH__) && \
++	!defined(__DragonFly__)
+ 	static bool checked = false;
+ 	static bool res = false;
+ 
+@@ -72,13 +74,14 @@ bool IsUnderDebugger()
+ 	return res;
+ #elif defined(_WIN32) || defined(_WIN64)
+ 	return IsDebuggerPresent() != 0;
+-#elif defined(__APPLE__) || defined(__MACH__) || defined(__FreeBSD__)
++#elif defined(__APPLE__) || defined(__MACH__) || defined(__FreeBSD__) || \
++	defined(__DragonFly__)
+ 	// Code comes from the Apple Technical Q&A QA1361
+ 
+ 	// Tell sysctl what info we're requestion. Specifically we're asking for
+ 	// info about this our PID.
+ 	int res = 0;
+-#if defined(__FreeBSD__)
++#if defined(__FreeBSD__) || defined(__DragonFly__)
+ 	int request[6] = {
+ 		CTL_KERN,
+ 		KERN_PROC,
+@@ -100,6 +103,8 @@ bool IsUnderDebugger()
+ 
+ #if defined(__FreeBSD__)
+ 	info.ki_flag = 0;
++#elif defined(__DragonFly__)
++	info.kp_flags = 0;
+ #else
+ 	info.kp_proc.p_flag = 0;
+ #endif
+@@ -111,6 +116,8 @@ bool IsUnderDebugger()
+ 	// We're being debugged if the P_TRACED flag is set
+ #if defined(__FreeBSD__)
+ 	return ((info.ki_flag & P_TRACED) != 0);
++#elif defined(__DragonFly__)
++	return ((info.kp_flags & P_TRACED) != 0);
+ #else
+ 	return ((info.kp_proc.p_flag & P_TRACED) != 0);
+ #endif
+diff --git third_party/swiftshader/src/System/Debug.cpp third_party/swiftshader/src/System/Debug.cpp
+index 13b26e621e0..aa3150a5704 100644
+--- third_party/swiftshader/src/System/Debug.cpp
++++ third_party/swiftshader/src/System/Debug.cpp
+@@ -18,18 +18,19 @@
+ #	include <android/log.h>
+ #endif
+ 
+-#if defined(__unix__) && !defined(__FreeBSD__)
++#if defined(__unix__) && !defined(__FreeBSD__) && !defined(__DragonFly__)
+ #	define PTRACE
+ #	include <sys/ptrace.h>
+ #	include <sys/types.h>
+ #elif defined(_WIN32) || defined(_WIN64)
+ #	include <windows.h>
+-#elif defined(__APPLE__) || defined(__MACH__) || defined(__FreeBSD__)
++#elif defined(__APPLE__) || defined(__MACH__) || defined(__FreeBSD__) || \
++	defined(__DragonFly__)
+ #	include <sys/types.h>
+ #	include <sys/sysctl.h>
+ #	include <unistd.h>
+ #endif
+-#if defined(__FreeBSD__)
++#if defined(__FreeBSD__) || defined(__DragonFly__)
+ #	include <sys/user.h>
+ #endif
+ 
+@@ -50,7 +51,8 @@ namespace {
+ 
+ bool IsUnderDebugger()
+ {
+-#if defined(PTRACE) && !defined(__APPLE__) && !defined(__MACH__)
++#if defined(PTRACE) && !defined(__APPLE__) && !defined(__MACH__) && \
++	!defined(__DragonFly__)
+ 	static bool checked = false;
+ 	static bool res = false;
+ 
+@@ -72,13 +74,14 @@ bool IsUnderDebugger()
+ 	return res;
+ #elif defined(_WIN32) || defined(_WIN64)
+ 	return IsDebuggerPresent() != 0;
+-#elif defined(__APPLE__) || defined(__MACH__) || defined(__FreeBSD__)
++#elif defined(__APPLE__) || defined(__MACH__) || defined(__FreeBSD__) || \
++	defined(__DragonFly__)
+ 	// Code comes from the Apple Technical Q&A QA1361
+ 
+ 	// Tell sysctl what info we're requestion. Specifically we're asking for
+ 	// info about this our PID.
+ 	int res = 0;
+-#if defined(__FreeBSD__)
++#if defined(__FreeBSD__) || defined(__DragonFly__)
+ 	int request[6] = {
+ 		CTL_KERN,
+ 		KERN_PROC,
+@@ -100,6 +103,8 @@ bool IsUnderDebugger()
+ 
+ #if defined(__FreeBSD__)
+ 	info.ki_flag = 0;
++#elif defined(__DragonFly__)
++	info.kp_flags = 0;
+ #else
+ 	info.kp_proc.p_flag = 0;
+ #endif
+@@ -111,6 +116,8 @@ bool IsUnderDebugger()
+ 	// We're being debugged if the P_TRACED flag is set
+ #if defined(__FreeBSD__)
+ 	return ((info.ki_flag & P_TRACED) != 0);
++#elif defined(__DragonFly__)
++	return ((info.kp_flags & P_TRACED) != 0);
+ #else
+ 	return ((info.kp_proc.p_flag & P_TRACED) != 0);
+ #endif
+diff --git third_party/swiftshader/third_party/marl/src/memory.cpp third_party/swiftshader/third_party/marl/src/memory.cpp
+index b8cbaa2a605..71d4eb7d6d8 100644
+--- third_party/swiftshader/third_party/marl/src/memory.cpp
++++ third_party/swiftshader/third_party/marl/src/memory.cpp
+@@ -19,7 +19,8 @@
+ 
+ #include <cstring>
+ 
+-#if defined(__linux__) || defined(__FreeBSD__) || defined(__APPLE__)
++#if defined(__linux__) || defined(__FreeBSD__) || defined(__APPLE__) || \
++    defined(__DragonFly__)
+ #include <sys/mman.h>
+ #include <unistd.h>
+ namespace {
+diff --git third_party/swiftshader/third_party/marl/src/thread.cpp third_party/swiftshader/third_party/marl/src/thread.cpp
+index d0750fa44a1..e262570ba79 100644
+--- third_party/swiftshader/third_party/marl/src/thread.cpp
++++ third_party/swiftshader/third_party/marl/src/thread.cpp
+@@ -36,7 +36,7 @@
+ #include <pthread.h>
+ #include <unistd.h>
+ #include <thread>
 -#elif defined(__FreeBSD__)
 +#elif defined(__FreeBSD__) || defined(__DragonFly__)
- #   include <pthread.h>
- #   include <pthread_np.h>
- #   include <unistd.h>
-@@ -92,7 +92,7 @@ void Thread::setName(const char* fmt, ...)
+ #include <pthread.h>
+ #include <pthread_np.h>
+ #include <unistd.h>
+@@ -420,7 +420,7 @@ void Thread::setName(const char* fmt, ...) {
  
  #if defined(__APPLE__)
-     pthread_setname_np(name);
+   pthread_setname_np(name);
 -#elif defined(__FreeBSD__)
 +#elif defined(__FreeBSD__) || defined(__DragonFly__)
-     pthread_set_name_np(pthread_self(), name);
+   pthread_set_name_np(pthread_self(), name);
  #elif !defined(__Fuchsia__)
-     pthread_setname_np(pthread_self(), name);
-diff --git third_party/swiftshader/third_party/llvm-7.0/configs/linux/include/llvm/Config/config.h third_party/swiftshader/third_party/llvm-7.0/configs/linux/include/llvm/Config/config.h
-index e8e8784da9..74a0d29e44 100644
---- third_party/swiftshader/third_party/llvm-7.0/configs/linux/include/llvm/Config/config.h
-+++ third_party/swiftshader/third_party/llvm-7.0/configs/linux/include/llvm/Config/config.h
-@@ -119,7 +119,7 @@
- /* #undef HAVE_MACH_MACH_H */
- 
- /* Define to 1 if you have the `mallctl' function. */
--#define HAVE_MALLCTL 1
-+/* #define HAVE_MALLCTL 1 */
- 
- /* Define to 1 if you have the `mallinfo' function. */
- /* #undef HAVE_MALLINFO */
-@@ -134,7 +134,7 @@
- /* #undef HAVE_MALLOC_ZONE_STATISTICS */
- 
- /* Define to 1 if you have the `posix_fallocate' function. */
--#define HAVE_POSIX_FALLOCATE 1
-+/* #define HAVE_POSIX_FALLOCATE 1 */
- 
- /* Define to 1 if you have the `posix_spawn' function. */
- #define HAVE_POSIX_SPAWN 1
-diff --git third_party/swiftshader/third_party/llvm-7.0/llvm/lib/Support/Unix/Path.inc third_party/swiftshader/third_party/llvm-7.0/llvm/lib/Support/Unix/Path.inc
-index b4279d4fcc..da95d7e9d0 100644
---- third_party/swiftshader/third_party/llvm-7.0/llvm/lib/Support/Unix/Path.inc
-+++ third_party/swiftshader/third_party/llvm-7.0/llvm/lib/Support/Unix/Path.inc
-@@ -53,13 +53,13 @@
- 
- #include <sys/types.h>
- #if !defined(__APPLE__) && !defined(__OpenBSD__) && !defined(__FreeBSD__) &&   \
--    !defined(__linux__)
-+    !defined(__linux__) && !defined(__DragonFly__)
- #include <sys/statvfs.h>
- #define STATVFS statvfs
- #define FSTATVFS fstatvfs
- #define STATVFS_F_FRSIZE(vfs) vfs.f_frsize
- #else
--#if defined(__OpenBSD__) || defined(__FreeBSD__)
-+#if defined(__OpenBSD__) || defined(__FreeBSD__) || defined(__DragonFly__)
- #include <sys/mount.h>
- #include <sys/param.h>
- #elif defined(__linux__)
-diff --git third_party/swiftshader/third_party/llvm-7.0/llvm/lib/Support/Unix/Threading.inc third_party/swiftshader/third_party/llvm-7.0/llvm/lib/Support/Unix/Threading.inc
-index 2d49ce1ad7..8a40690268 100644
---- third_party/swiftshader/third_party/llvm-7.0/llvm/lib/Support/Unix/Threading.inc
-+++ third_party/swiftshader/third_party/llvm-7.0/llvm/lib/Support/Unix/Threading.inc
-@@ -21,11 +21,11 @@
- 
- #include <pthread.h>
- 
--#if defined(__FreeBSD__) || defined(__OpenBSD__)
-+#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
- #include <pthread_np.h> // For pthread_getthreadid_np() / pthread_set_name_np()
- #endif
- 
--#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
-+#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
- #include <errno.h>
- #include <sys/sysctl.h>
- #include <sys/user.h>
-@@ -90,7 +90,7 @@ uint64_t llvm::get_threadid() {
-   thread_port_t Self = mach_thread_self();
-   mach_port_deallocate(mach_task_self(), Self);
-   return Self;
--#elif defined(__FreeBSD__)
-+#elif defined(__FreeBSD__) || defined(__DragonFly__)
-   return uint64_t(pthread_getthreadid_np());
- #elif defined(__NetBSD__)
-   return uint64_t(_lwp_self());
-@@ -115,7 +115,8 @@ static constexpr uint32_t get_max_thread_name_length_impl() {
- #else
-   return 0;
- #endif
--#elif defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
-+// In DragonFly BSD case, it's MAXCOMLEN which is actually 16
-+#elif defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
-   return 16;
- #elif defined(__OpenBSD__)
-   return 32;
-@@ -148,7 +149,7 @@ void llvm::set_thread_name(const Twine &Name) {
-   ::pthread_setname_np(::pthread_self(), NameStr.data());
- #endif
- #endif
--#elif defined(__FreeBSD__) || defined(__OpenBSD__)
-+#elif defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
-   ::pthread_set_name_np(::pthread_self(), NameStr.data());
- #elif defined(__NetBSD__)
-   ::pthread_setname_np(::pthread_self(), "%s",
-@@ -161,7 +162,7 @@ void llvm::set_thread_name(const Twine &Name) {
- void llvm::get_thread_name(SmallVectorImpl<char> &Name) {
-   Name.clear();
- 
--#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
-+#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
-   int pid = ::getpid();
-   uint64_t tid = get_threadid();
- 
-diff --git third_party/swiftshader/third_party/llvm-7.0/llvm/utils/unittest/googletest/include/gtest/internal/gtest-port-arch.h third_party/swiftshader/third_party/llvm-7.0/llvm/utils/unittest/googletest/include/gtest/internal/gtest-port-arch.h
-index f1319c7f2e..d4185a2a4a 100644
---- third_party/swiftshader/third_party/llvm-7.0/llvm/utils/unittest/googletest/include/gtest/internal/gtest-port-arch.h
-+++ third_party/swiftshader/third_party/llvm-7.0/llvm/utils/unittest/googletest/include/gtest/internal/gtest-port-arch.h
-@@ -67,6 +67,8 @@
- # if TARGET_OS_IPHONE
- #  define GTEST_OS_IOS 1
- # endif
-+#elif defined __DragonFly__
-+# define GTEST_OS_DRAGONFLY 1
- #elif defined __FreeBSD__
- # define GTEST_OS_FREEBSD 1
- #elif defined __linux__
-diff --git third_party/swiftshader/third_party/llvm-7.0/llvm/utils/unittest/googletest/include/gtest/internal/gtest-port.h third_party/swiftshader/third_party/llvm-7.0/llvm/utils/unittest/googletest/include/gtest/internal/gtest-port.h
-index d36e8203bc..bcd98f398b 100644
---- third_party/swiftshader/third_party/llvm-7.0/llvm/utils/unittest/googletest/include/gtest/internal/gtest-port.h
-+++ third_party/swiftshader/third_party/llvm-7.0/llvm/utils/unittest/googletest/include/gtest/internal/gtest-port.h
-@@ -121,6 +121,7 @@
- //
- //   GTEST_OS_AIX      - IBM AIX
- //   GTEST_OS_CYGWIN   - Cygwin
-+//   GTEST_OS_DRAGONFLY - DragonFly
- //   GTEST_OS_FREEBSD  - FreeBSD
- //   GTEST_OS_HAIKU    - Haiku
- //   GTEST_OS_HPUX     - HP-UX
-@@ -604,7 +605,7 @@ struct _RTL_CRITICAL_SECTION;
- // To disable threading support in Google Test, add -DGTEST_HAS_PTHREAD=0
- // to your compiler flags.
- # define GTEST_HAS_PTHREAD (GTEST_OS_LINUX || GTEST_OS_MAC || GTEST_OS_HPUX \
--    || GTEST_OS_QNX || GTEST_OS_FREEBSD || GTEST_OS_NACL)
-+    || GTEST_OS_QNX || GTEST_OS_FREEBSD || GTEST_OS_NACL || GTEST_OS_DRAGONFLY)
- #endif  // GTEST_HAS_PTHREAD
- 
- #if GTEST_HAS_PTHREAD
-@@ -793,6 +794,7 @@ using ::std::tuple_size;
-      (GTEST_OS_MAC && !GTEST_OS_IOS) || \
-      (GTEST_OS_WINDOWS_DESKTOP && _MSC_VER >= 1400) || \
-      GTEST_OS_WINDOWS_MINGW || GTEST_OS_AIX || GTEST_OS_HPUX || \
-+     GTEST_OS_DRAGONFLY || \
-      GTEST_OS_OPENBSD || GTEST_OS_QNX || GTEST_OS_FREEBSD || GTEST_OS_NETBSD)
- # define GTEST_HAS_DEATH_TEST 1
- #endif
+   pthread_setname_np(pthread_self(), name);
 diff --git third_party/unrar/src/os.hpp third_party/unrar/src/os.hpp
-index 707d604fc7..ce2d5b773c 100644
+index 707d604fc72..ce2d5b773c2 100644
 --- third_party/unrar/src/os.hpp
 +++ third_party/unrar/src/os.hpp
 @@ -177,7 +177,7 @@
@@ -3700,26 +3514,30 @@ index 707d604fc7..ce2d5b773c 100644
  #define USE_LUTIMES
  #endif
 diff --git third_party/usrsctp/BUILD.gn third_party/usrsctp/BUILD.gn
-index 608a5104db..3db0129957 100644
+index 0e5e0f6aae8..b472b31010e 100644
 --- third_party/usrsctp/BUILD.gn
 +++ third_party/usrsctp/BUILD.gn
-@@ -122,10 +122,10 @@ static_library("usrsctp") {
-       "_GNU_SOURCE",
-     ]
-   } else if (is_bsd) {
--    defines += [
--      "__Userspace_os_FreeBSD",
--    ]
--    cflags += [ "-U__FreeBSD__" ]
-+      defines += [
+@@ -14,6 +14,10 @@ config("usrsctp_config") {
+   # the client (WebRTC), to determine if the length field needs populating.
+   if (is_mac || is_ios || target_os == "freebsd") {
+     defines = [ "HAVE_SCONN_LEN" ]
++  } else if (target_os == "dragonfly") {
++      defines = [
 +        "__Userspace_os_DragonFly",
-+        "HAVE_SYS_QUEUE_H",
 +      ]
-   } else if (is_mac || is_ios) {
+   }
+ }
+ 
+@@ -134,6 +138,7 @@ static_library("usrsctp") {
      defines += [
        "HAVE_SA_LEN",
+       "__APPLE_USE_RFC_2292",
++      "__Userspace_os_Darwin",
+     ]
+   }
+ 
 diff --git third_party/usrsctp/usrsctplib/usrsctplib/netinet/sctp_os_userspace.h third_party/usrsctp/usrsctplib/usrsctplib/netinet/sctp_os_userspace.h
-index 8613301ab0..23932f1e64 100755
+index 1476660540c..268a103f798 100755
 --- third_party/usrsctp/usrsctplib/usrsctplib/netinet/sctp_os_userspace.h
 +++ third_party/usrsctp/usrsctplib/usrsctplib/netinet/sctp_os_userspace.h
 @@ -43,6 +43,10 @@
@@ -3730,11 +3548,22 @@ index 8613301ab0..23932f1e64 100755
 +#include <sys/param.h>
 +#endif
 +
- #if defined(__Userspace_os_Windows)
+ #if defined(_WIN32)
  #include <winsock2.h>
  #include <ws2tcpip.h>
+@@ -1118,10 +1122,6 @@ sctp_get_mbuf_for_msg(unsigned int space_needed, int want_header, int how, int a
+               (var) = (tvar))
+ #endif
+ #endif
+-#if defined(__DragonFly__)
+-#define TAILQ_FOREACH_SAFE TAILQ_FOREACH_MUTABLE
+-#define LIST_FOREACH_SAFE LIST_FOREACH_MUTABLE
+-#endif
+ 
+ #if defined(__native_client__)
+ #define	timercmp(tvp, uvp, cmp)						\
 diff --git third_party/webrtc/rtc_base/platform_thread_types.cc third_party/webrtc/rtc_base/platform_thread_types.cc
-index 356eb4a23e..f44a4d8b2c 100644
+index c7c1f2faaf4..ff4d457214d 100644
 --- third_party/webrtc/rtc_base/platform_thread_types.cc
 +++ third_party/webrtc/rtc_base/platform_thread_types.cc
 @@ -11,7 +11,7 @@
@@ -3746,7 +3575,7 @@ index 356eb4a23e..f44a4d8b2c 100644
  #include <sys/prctl.h>
  #else
  #include <pthread_np.h>
-@@ -31,7 +31,7 @@ PlatformThreadId CurrentThreadId() {
+@@ -41,7 +41,7 @@ PlatformThreadId CurrentThreadId() {
    return gettid();
  #elif defined(WEBRTC_FUCHSIA)
    return zx_thread_self();
@@ -3755,17 +3584,17 @@ index 356eb4a23e..f44a4d8b2c 100644
    return pthread_getthreadid_np();
  #elif defined(WEBRTC_LINUX)
    return syscall(__NR_gettid);
-@@ -63,7 +63,7 @@ bool IsThreadRefEqual(const PlatformThreadRef& a, const PlatformThreadRef& b) {
+@@ -73,7 +73,7 @@ bool IsThreadRefEqual(const PlatformThreadRef& a, const PlatformThreadRef& b) {
  }
  
  void SetCurrentThreadName(const char* name) {
 -#if !defined(__FreeBSD__)
 +#if !defined(__FreeBSD__) && !defined(__DragonFly__)
  #if defined(WEBRTC_WIN)
-   struct {
-     DWORD dwType;
+   // The SetThreadDescription API works even if no debugger is attached.
+   // The names set with this API also show up in ETW traces. Very handy.
 diff --git third_party/zlib/contrib/minizip/ioapi.h third_party/zlib/contrib/minizip/ioapi.h
-index c1b7a54847..09e2485ebb 100644
+index c1b7a54847f..09e2485ebb6 100644
 --- third_party/zlib/contrib/minizip/ioapi.h
 +++ third_party/zlib/contrib/minizip/ioapi.h
 @@ -50,7 +50,7 @@
@@ -3777,21 +3606,8 @@ index c1b7a54847..09e2485ebb 100644
  #define fopen64 fopen
  #define ftello64 ftello
  #define fseeko64 fseeko
-diff --git tools/gn/base/files/file_posix.cc tools/gn/base/files/file_posix.cc
-index 601a11c087..e6a20bf1ce 100644
---- tools/gn/base/files/file_posix.cc
-+++ tools/gn/base/files/file_posix.cc
-@@ -414,7 +414,7 @@ void File::DoInitialize(const FilePath& path, uint32_t flags) {
- bool File::Flush() {
-   DCHECK(IsValid());
- 
--#if defined(OS_LINUX) || defined(OS_BSD)
-+#if defined(OS_LINUX) || defined(OS_BSD) && !defined(OS_DRAGONFLY)
-   return !HANDLE_EINTR(fdatasync(file_.get()));
- #else
-   return !HANDLE_EINTR(fsync(file_.get()));
 diff --git tools/gn/bootstrap/bootstrap.py tools/gn/bootstrap/bootstrap.py
-index 8e121b59f3..203ee2c7d5 100755
+index 8955e051acd..4756351643f 100755
 --- tools/gn/bootstrap/bootstrap.py
 +++ tools/gn/bootstrap/bootstrap.py
 @@ -29,7 +29,6 @@ BOOTSTRAP_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -3803,24 +3619,28 @@ index 8e121b59f3..203ee2c7d5 100755
    parser = optparse.OptionParser(description=sys.modules[__name__].__doc__)
    parser.add_option(
 diff --git tools/gn/build/gen.py tools/gn/build/gen.py
-index a54c9fd6b6..ab2efecf0b 100755
+index d4031ce3155..b057e765e12 100755
 --- tools/gn/build/gen.py
 +++ tools/gn/build/gen.py
-@@ -43,10 +43,12 @@ class Platform(object):
-       self._platform = 'freebsd'
+@@ -51,6 +51,8 @@ class Platform(object):
+       self._platform = 'netbsd'
      elif self._platform.startswith('openbsd'):
        self._platform = 'openbsd'
 +    elif self._platform.lower().startswith('dragonfly'):
 +      self._platform = 'dragonfly'
+     elif self._platform.startswith('haiku'):
+       self._platform = 'haiku'
+     elif self._platform.startswith('sunos'):
+@@ -58,7 +60,7 @@ class Platform(object):
  
    @staticmethod
    def known_platforms():
--    return ['linux', 'darwin', 'msvc', 'aix', 'fuchsia', 'freebsd', 'openbsd']
-+    return ['linux', 'darwin', 'msvc', 'aix', 'fuchsia', 'freebsd', 'openbsd', 'dragonfly']
+-    return ['linux', 'darwin', 'mingw', 'msys', 'msvc', 'aix', 'fuchsia', 'freebsd', 'netbsd', 'openbsd', 'haiku', 'solaris']
++    return ['linux', 'darwin', 'mingw', 'msys', 'msvc', 'aix', 'fuchsia', 'freebsd', 'netbsd', 'openbsd', 'haiku', 'solaris', 'dragonfly']
  
    def platform(self):
      return self._platform
-@@ -72,8 +74,11 @@ class Platform(object):
+@@ -93,8 +95,11 @@ class Platform(object):
    def is_freebsd(self):
      return self._platform == 'freebsd'
  
@@ -3828,20 +3648,20 @@ index a54c9fd6b6..ab2efecf0b 100755
 +    return self._platform == 'dragonfly'
 +
    def is_posix(self):
--    return self._platform in ['linux', 'freebsd', 'darwin', 'aix', 'openbsd']
-+    return self._platform in ['linux', 'freebsd', 'darwin', 'aix', 'openbsd', 'dragonfly']
+-    return self._platform in ['linux', 'freebsd', 'darwin', 'aix', 'openbsd', 'haiku', 'solaris', 'msys', 'netbsd']
++    return self._platform in ['linux', 'freebsd', 'darwin', 'aix', 'openbsd', 'haiku', 'solaris', 'msys', 'netbsd', 'dragonfly']
  
  
  def main(argv):
-@@ -177,6 +182,7 @@ def WriteGenericNinja(path, static_libraries, executables,
+@@ -216,6 +221,7 @@ def WriteGenericNinja(path, static_libraries, executables,
        'darwin': 'build_mac.ninja.template',
        'linux': 'build_linux.ninja.template',
        'freebsd': 'build_linux.ninja.template',
 +      'dragonfly': 'build_linux.ninja.template',
        'aix': 'build_aix.ninja.template',
        'openbsd': 'build_openbsd.ninja.template',
-   }[platform.platform()])
-@@ -345,6 +351,11 @@ def WriteGNNinja(path, platform, host, options):
+       'haiku': 'build_haiku.ninja.template',
+@@ -413,6 +419,11 @@ def WriteGNNinja(path, platform, host, options):
        ldflags.extend(['-pthread'])
        libs.extend(['-lexecinfo', '-lkvm', '-lutil'])
        include_dirs += ['/usr/local/include']
@@ -3851,12 +3671,25 @@ index a54c9fd6b6..ab2efecf0b 100755
 +      libs.extend(['-lexecinfo', '-lkvm', '-lutil'])
 +      include_dirs += ['/usr/local/include']
  
-     if platform.is_posix():
+     if platform.is_posix() and not platform.is_haiku():
        ldflags.append('-pthread')
-diff --git tools/gn/tools/gn/args.cc tools/gn/tools/gn/args.cc
-index 802c3731d5..d7845b2acc 100644
---- tools/gn/tools/gn/args.cc
-+++ tools/gn/tools/gn/args.cc
+diff --git tools/gn/src/base/files/file_posix.cc tools/gn/src/base/files/file_posix.cc
+index 876ae7eeaaf..534639038fb 100644
+--- tools/gn/src/base/files/file_posix.cc
++++ tools/gn/src/base/files/file_posix.cc
+@@ -372,7 +372,7 @@ void File::DoInitialize(const FilePath& path, uint32_t flags) {
+ bool File::Flush() {
+   DCHECK(IsValid());
+ 
+-#if defined(OS_LINUX) || defined(OS_BSD)
++#if defined(OS_LINUX) || defined(OS_BSD) && !defined(OS_DRAGONFLY)
+   return !HANDLE_EINTR(fdatasync(file_.get()));
+ #else
+   return !HANDLE_EINTR(fsync(file_.get()));
+diff --git tools/gn/src/gn/args.cc tools/gn/src/gn/args.cc
+index e59b03487e3..f2f332a6b55 100644
+--- tools/gn/src/gn/args.cc
++++ tools/gn/src/gn/args.cc
 @@ -308,6 +308,8 @@ void Args::SetSystemVarsLocked(Scope* dest) const {
    os = "mac";
  #elif defined(OS_LINUX)
@@ -3866,25 +3699,25 @@ index 802c3731d5..d7845b2acc 100644
  #elif defined(OS_FREEBSD)
    os = "freebsd";
  #elif defined(OS_AIX)
-diff --git tools/gn/tools/gn/format_test_data/016.gn tools/gn/tools/gn/format_test_data/016.gn
-index 00a7992282..e0e08f864c 100644
---- tools/gn/tools/gn/format_test_data/016.gn
-+++ tools/gn/tools/gn/format_test_data/016.gn
+diff --git tools/gn/src/gn/format_test_data/016.gn tools/gn/src/gn/format_test_data/016.gn
+index 00a79922828..e0e08f864c5 100644
+--- tools/gn/src/gn/format_test_data/016.gn
++++ tools/gn/src/gn/format_test_data/016.gn
 @@ -1 +1 @@
 -something = !is_win && is_linux || is_mac && !(is_freebsd || is_ios)
 +something = !is_win && is_linux || is_mac && !(is_freebsd || is_ios || is_dragonfly)
-diff --git tools/gn/tools/gn/format_test_data/016.golden tools/gn/tools/gn/format_test_data/016.golden
-index 3f4f15bc50..e9610a0be3 100644
---- tools/gn/tools/gn/format_test_data/016.golden
-+++ tools/gn/tools/gn/format_test_data/016.golden
+diff --git tools/gn/src/gn/format_test_data/016.golden tools/gn/src/gn/format_test_data/016.golden
+index 3f4f15bc507..e9610a0be38 100644
+--- tools/gn/src/gn/format_test_data/016.golden
++++ tools/gn/src/gn/format_test_data/016.golden
 @@ -1 +1 @@
 -something = (!is_win && is_linux) || (is_mac && !(is_freebsd || is_ios))
 +something = (!is_win && is_linux) || (is_mac && !(is_freebsd || is_ios || is_dragonfly))
-diff --git tools/gn/util/build_config.h tools/gn/util/build_config.h
-index addd7cfb08..57bc8f8b17 100644
---- tools/gn/util/build_config.h
-+++ tools/gn/util/build_config.h
-@@ -57,6 +57,8 @@
+diff --git tools/gn/src/util/build_config.h tools/gn/src/util/build_config.h
+index 717b4e345c0..a12bdf20d3f 100644
+--- tools/gn/src/util/build_config.h
++++ tools/gn/src/util/build_config.h
+@@ -46,6 +46,8 @@
  #define OS_NETBSD 1
  #elif defined(__OpenBSD__)
  #define OS_OPENBSD 1
@@ -3893,7 +3726,7 @@ index addd7cfb08..57bc8f8b17 100644
  #elif defined(__sun)
  #define OS_SOLARIS 1
  #elif defined(__QNXNTO__)
-@@ -73,7 +75,8 @@
+@@ -64,7 +66,8 @@
  
  // For access to standard BSD features, use OS_BSD instead of a
  // more specific macro.
@@ -3903,34 +3736,29 @@ index addd7cfb08..57bc8f8b17 100644
  #define OS_BSD 1
  #endif
  
-@@ -82,7 +85,7 @@
- #if defined(OS_AIX) || defined(OS_ANDROID) || defined(OS_ASMJS) ||    \
+@@ -74,7 +77,7 @@
      defined(OS_FREEBSD) || defined(OS_LINUX) || defined(OS_MACOSX) || \
      defined(OS_NACL) || defined(OS_NETBSD) || defined(OS_OPENBSD) ||  \
--    defined(OS_QNX) || defined(OS_SOLARIS)
-+    defined(OS_QNX) || defined(OS_SOLARIS) || defined(OS_DRAGONFLY)
+     defined(OS_QNX) || defined(OS_SOLARIS) || defined(OS_HAIKU) || \
+-    defined(OS_MSYS)
++    defined(OS_MSYS) || defined(OS_DRAGONFLY)
  #define OS_POSIX 1
  #endif
  
-diff --git tools/gn/util/exe_path.cc tools/gn/util/exe_path.cc
-index 3c9c9deb35..b5e081df59 100644
---- tools/gn/util/exe_path.cc
-+++ tools/gn/util/exe_path.cc
-@@ -13,10 +13,12 @@
- #include <mach-o/dyld.h>
- #elif defined(OS_WIN)
+diff --git tools/gn/src/util/exe_path.cc tools/gn/src/util/exe_path.cc
+index b67318c4b2b..d026aa0effd 100644
+--- tools/gn/src/util/exe_path.cc
++++ tools/gn/src/util/exe_path.cc
+@@ -15,7 +15,7 @@
  #include <windows.h>
--#elif defined(OS_FREEBSD)
-+#elif defined(OS_FREEBSD) || defined(OS_DRAGONFLY)
+ 
+ #include "base/win/win_util.h"
+-#elif defined(OS_FREEBSD) || defined(OS_NETBSD)
++#elif defined(OS_FREEBSD) || defined(OS_NETBSD) || defined(OS_DRAGONFLY)
  #include <limits.h>
  #include <sys/sysctl.h>
  #include <sys/types.h>
-+#include <sys/param.h>
-+#include <sys/syslimits.h>
- #endif
- 
- #if defined(OS_MACOSX)
-@@ -50,7 +52,7 @@ base::FilePath GetExePath() {
+@@ -57,7 +57,7 @@ base::FilePath GetExePath() {
    return base::FilePath(system_buffer);
  }
  
@@ -3938,12 +3766,12 @@ index 3c9c9deb35..b5e081df59 100644
 +#elif defined(OS_FREEBSD) || defined(OS_DRAGONFLY)
  
  base::FilePath GetExePath() {
-   int mib[] = { CTL_KERN, KERN_PROC, KERN_PROC_PATHNAME, -1 };
+   int mib[] = {CTL_KERN, KERN_PROC, KERN_PROC_PATHNAME, -1};
 diff --git tools/grit/grit/node/base.py tools/grit/grit/node/base.py
-index cbc9b9dc64..76d71a0916 100644
+index 521f779ad3c..78c4b2b1961 100644
 --- tools/grit/grit/node/base.py
 +++ tools/grit/grit/node/base.py
-@@ -483,12 +483,15 @@ class Node(object):
+@@ -496,12 +496,15 @@ class Node(object):
          value = target_platform == 'android'
        elif name == 'is_ios':
          value = target_platform == 'ios'
@@ -3962,58 +3790,32 @@ index cbc9b9dc64..76d71a0916 100644
        elif name == 'pp_ifdef':
          def pp_ifdef(symbol):
 diff --git tools/variations/fieldtrial_to_struct.py tools/variations/fieldtrial_to_struct.py
-index 04ce418efe..18fa69ff63 100755
+index bc66c92c1a5..2c9fda60fe5 100755
 --- tools/variations/fieldtrial_to_struct.py
 +++ tools/variations/fieldtrial_to_struct.py
-@@ -34,6 +34,7 @@ _platforms = [
-   'android',
-   'android_webview',
-   'freebsd',
-+  'dragonfly',
-   'chromeos',
-   'fuchsia',
-   'ios',
+@@ -36,6 +36,7 @@ _platforms = [
+     'android_webview',
+     'chromeos',
+     'freebsd',
++    'dragonfly',
+     'fuchsia',
+     'ios',
+     'linux',
 diff --git ui/base/x/x11_util.cc ui/base/x/x11_util.cc
-index 4f7157487e..0a4b37bf81 100644
+index e9e4671a80c..8414554dd74 100644
 --- ui/base/x/x11_util.cc
 +++ ui/base/x/x11_util.cc
-@@ -61,7 +61,7 @@
- #include "ui/gfx/x/x11_atom_cache.h"
- #include "ui/gfx/x/x11_error_tracker.h"
+@@ -72,7 +72,7 @@
+ #include "ui/gfx/x/xproto.h"
+ #include "ui/gfx/x/xproto_util.h"
  
 -#if defined(OS_FREEBSD)
 +#if defined(OS_FREEBSD) || defined(OS_DRAGONFLY)
  #include <sys/sysctl.h>
  #include <sys/types.h>
  #endif
-diff --git ui/events/event_switches.cc ui/events/event_switches.cc
-index afa63e7895..00777bb135 100644
---- ui/events/event_switches.cc
-+++ ui/events/event_switches.cc
-@@ -14,7 +14,7 @@ namespace switches {
- const char kCompensateForUnstablePinchZoom[] =
-     "compensate-for-unstable-pinch-zoom";
- 
--#if defined(OS_LINUX) || defined(OS_FREEBSD)
-+#if defined(OS_LINUX) || defined(OS_FREEBSD) || defined(OS_DRAGONFLY)
- // Tells chrome to interpret events from these devices as touch events. Only
- // available with XInput 2 (i.e. X server 1.8 or above). The id's of the
- // devices can be retrieved from 'xinput list'.
-diff --git ui/events/event_switches.h ui/events/event_switches.h
-index 5d8dd348a7..a83975575e 100644
---- ui/events/event_switches.h
-+++ ui/events/event_switches.h
-@@ -13,7 +13,7 @@ namespace switches {
- 
- EVENTS_BASE_EXPORT extern const char kCompensateForUnstablePinchZoom[];
- 
--#if defined(OS_LINUX) || defined(OS_FREEBSD)
-+#if defined(OS_LINUX) || defined(OS_FREEBSD) || defined(OS_DRAGONFLY)
- EVENTS_BASE_EXPORT extern const char kTouchDevices[];
- EVENTS_BASE_EXPORT extern const char kPenDevices[];
- #endif
 diff --git ui/gfx/linux/client_native_pixmap_dmabuf.cc ui/gfx/linux/client_native_pixmap_dmabuf.cc
-index 4bd14fc1d0..aa1a6bbb67 100644
+index c42bd028495..8690664469e 100644
 --- ui/gfx/linux/client_native_pixmap_dmabuf.cc
 +++ ui/gfx/linux/client_native_pixmap_dmabuf.cc
 @@ -5,7 +5,7 @@
@@ -4025,8 +3827,8 @@ index 4bd14fc1d0..aa1a6bbb67 100644
  #include <linux/version.h>
  #endif
  #include <stddef.h>
-@@ -26,7 +26,7 @@
- #include "build/build_config.h"
+@@ -29,7 +29,7 @@
+ #include "ui/gfx/buffer_format_util.h"
  #include "ui/gfx/switches.h"
  
 -#if defined(__FreeBSD__)
@@ -4034,25 +3836,11 @@ index 4bd14fc1d0..aa1a6bbb67 100644
  struct dma_buf_sync {
    __u64 flags;
  };
-diff --git ui/gl/gl_fence.cc ui/gl/gl_fence.cc
-index 49054e45a1..3c47734760 100644
---- ui/gl/gl_fence.cc
-+++ ui/gl/gl_fence.cc
-@@ -18,7 +18,8 @@
- #include "ui/gl/gl_fence_apple.h"
- #endif
- 
--#if defined(USE_EGL) && defined(OS_POSIX) && !defined(OS_MACOSX) && !defined(OS_FREEBSD)
-+#if defined(USE_EGL) && defined(OS_POSIX) && !defined(OS_MACOSX) && !defined(OS_FREEBSD) && \
-+  !defined(OS_DRAGONFLY)
- #define USE_GL_FENCE_ANDROID_NATIVE_FENCE_SYNC
- #include "ui/gl/gl_fence_android_native_fence_sync.h"
- #include "ui/gl/gl_surface_egl.h"
 diff --git ui/strings/app_locale_settings.grd ui/strings/app_locale_settings.grd
-index 7364f7a619..2b9e21b8e3 100644
+index 23240b4d40d..4353bc4ca73 100644
 --- ui/strings/app_locale_settings.grd
 +++ ui/strings/app_locale_settings.grd
-@@ -187,7 +187,7 @@
+@@ -217,7 +217,7 @@
            75%
          </message>
        </if>
@@ -4061,49 +3849,21 @@ index 7364f7a619..2b9e21b8e3 100644
          <!-- The font used in Web UI (e.g. History). Note that these are only
               backups. We try to use the system font if possible. -->
          <message name="IDS_WEB_FONT_FAMILY" use_name_for_id="true">
-diff --git ui/views/views_delegate.cc ui/views/views_delegate.cc
-index c8436f6241..dbacad840b 100644
---- ui/views/views_delegate.cc
-+++ ui/views/views_delegate.cc
-@@ -85,7 +85,8 @@ HICON ViewsDelegate::GetSmallWindowIcon() const {
- bool ViewsDelegate::IsWindowInMetro(gfx::NativeWindow window) const {
-   return false;
- }
--#elif (defined(OS_LINUX) && !defined(OS_CHROMEOS)) || defined(OS_FREEBSD)
-+#elif (defined(OS_LINUX) && !defined(OS_CHROMEOS)) || defined(OS_FREEBSD) || \
-+  defined(OS_DRAGONFLY)
- gfx::ImageSkia* ViewsDelegate::GetDefaultWindowIcon() const {
-   return nullptr;
- }
-diff --git ui/views/views_delegate.h ui/views/views_delegate.h
-index 1e472761ce..878b7259d7 100644
---- ui/views/views_delegate.h
-+++ ui/views/views_delegate.h
-@@ -130,7 +130,8 @@ class VIEWS_EXPORT ViewsDelegate {
-   // Returns true if the window passed in is in the Windows 8 metro
-   // environment.
-   virtual bool IsWindowInMetro(gfx::NativeWindow window) const;
--#elif defined(OS_LINUX) && !defined(OS_CHROMEOS) || defined(OS_FREEBSD)
-+#elif (defined(OS_LINUX) && !defined(OS_CHROMEOS)) || defined(OS_FREEBSD) || \
-+  defined(OS_DRAGONFLY)
-   virtual gfx::ImageSkia* GetDefaultWindowIcon() const;
- #endif
- 
 diff --git v8/src/api/api.cc v8/src/api/api.cc
-index 2dd25cd4f8..1f938724a3 100644
+index 8304f601cce..82c28f322a8 100644
 --- v8/src/api/api.cc
 +++ v8/src/api/api.cc
-@@ -111,7 +111,8 @@
+@@ -119,7 +119,8 @@
  #include "src/wasm/wasm-result.h"
  #include "src/wasm/wasm-serialization.h"
  
--#if V8_OS_LINUX || V8_OS_MACOSX || V8_OS_OPENBSD || V8_OS_FREEBSD
-+#if V8_OS_LINUX || V8_OS_MACOSX || V8_OS_OPENBSD || V8_OS_FREEBSD || \
+-#if V8_OS_LINUX || V8_OS_MACOSX || V8_OS_FREEBSD
++#if V8_OS_LINUX || V8_OS_MACOSX || V8_OS_FREEBSD || \
 +  V8_OS_DRAGONFLYBSD
  #include <signal.h>
  #include "include/v8-wasm-trap-handler-posix.h"
  #include "src/trap-handler/handler-inside-posix.h"
-@@ -5573,7 +5574,8 @@ bool v8::V8::Initialize() {
+@@ -5775,7 +5776,8 @@ bool v8::V8::Initialize(const int build_config) {
    return true;
  }
  
@@ -4114,7 +3874,7 @@ index 2dd25cd4f8..1f938724a3 100644
                                     void* context) {
  #if V8_TARGET_ARCH_X64 && !V8_OS_ANDROID
 diff --git v8/src/base/platform/condition-variable.cc v8/src/base/platform/condition-variable.cc
-index 5ea70835ee..4bd7557cb2 100644
+index 04ea29181bb..f110afd4709 100644
 --- v8/src/base/platform/condition-variable.cc
 +++ v8/src/base/platform/condition-variable.cc
 @@ -15,7 +15,7 @@ namespace base {
@@ -4135,11 +3895,31 @@ index 5ea70835ee..4bd7557cb2 100644
       (V8_OS_LINUX && V8_LIBC_GLIBC))
    // On Free/Net/OpenBSD and Linux with glibc we can change the time
    // source for pthread_cond_timedwait() to use the monotonic clock.
+diff --git v8/src/base/platform/platform-freebsd.cc v8/src/base/platform/platform-freebsd.cc
+index fbf4909e6ff..2ea977aefcd 100644
+--- v8/src/base/platform/platform-freebsd.cc
++++ v8/src/base/platform/platform-freebsd.cc
+@@ -49,6 +49,7 @@ static unsigned StringToLong(char* buffer) {
+ 
+ std::vector<OS::SharedLibraryAddress> OS::GetSharedLibraryAddresses() {
+   std::vector<SharedLibraryAddress> result;
++#ifndef __DragonFly__
+   int mib[4] = {CTL_KERN, KERN_PROC, KERN_PROC_VMMAP, getpid()};
+   size_t miblen = sizeof(mib) / sizeof(mib[0]);
+   size_t buffer_size;
+@@ -90,6 +91,7 @@ std::vector<OS::SharedLibraryAddress> OS::GetSharedLibraryAddresses() {
+       }
+     }
+   }
++#endif
+   return result;
+ }
+ 
 diff --git v8/src/base/platform/platform-posix.cc v8/src/base/platform/platform-posix.cc
-index bf2560d358..c1f5b4367e 100644
+index 7b304347fe9..c31d0aeed5c 100644
 --- v8/src/base/platform/platform-posix.cc
 +++ v8/src/base/platform/platform-posix.cc
-@@ -64,7 +64,7 @@
+@@ -65,7 +65,7 @@
  #include <sys/syscall.h>
  #endif
  
@@ -4148,9 +3928,9 @@ index bf2560d358..c1f5b4367e 100644
  #define MAP_ANONYMOUS MAP_ANON
  #endif
  
-@@ -127,9 +127,9 @@ int GetProtectionFromMemoryPermission(OS::MemoryPermission access) {
- int GetFlagsForMemoryPermission(OS::MemoryPermission access) {
-   int flags = MAP_PRIVATE | MAP_ANONYMOUS;
+@@ -146,9 +146,9 @@ int GetFlagsForMemoryPermission(OS::MemoryPermission access,
+   int flags = MAP_ANONYMOUS;
+   flags |= (page_type == PageType::kShared) ? MAP_SHARED : MAP_PRIVATE;
    if (access == OS::MemoryPermission::kNoAccess) {
 -#if !V8_OS_AIX && !V8_OS_FREEBSD && !V8_OS_QNX
 +#if !V8_OS_AIX && !V8_OS_FREEBSD && !V8_OS_QNX && !V8_OS_DRAGONFLYBSD
@@ -4160,7 +3940,7 @@ index bf2560d358..c1f5b4367e 100644
  #if V8_OS_QNX
      flags |= MAP_LAZY;
  #endif  // V8_OS_QNX
-@@ -382,7 +382,7 @@ bool OS::DiscardSystemPages(void* address, size_t size) {
+@@ -464,7 +464,7 @@ bool OS::DiscardSystemPages(void* address, size_t size) {
  
  // static
  bool OS::HasLazyCommits() {
@@ -4169,8 +3949,17 @@ index bf2560d358..c1f5b4367e 100644
    return true;
  #else
    // TODO(bbudge) Return true for all POSIX platforms.
+@@ -1006,7 +1006,7 @@ void Thread::SetThreadLocal(LocalStorageKey key, void* value) {
+ // keep this version in POSIX as most Linux-compatible derivatives will
+ // support it. MacOS and FreeBSD are different here.
+ #if !defined(V8_OS_FREEBSD) && !defined(V8_OS_MACOSX) && !defined(_AIX) && \
+-    !defined(V8_OS_SOLARIS)
++    !defined(V8_OS_SOLARIS) && !defined(V8_OS_DRAGONFLYBSD)
+ 
+ // static
+ Stack::StackSlot Stack::GetStackStart() {
 diff --git v8/src/base/sys-info.cc v8/src/base/sys-info.cc
-index 3d47ebe8f7..6795a43bc0 100644
+index 3d47ebe8f78..6795a43bc03 100644
 --- v8/src/base/sys-info.cc
 +++ v8/src/base/sys-info.cc
 @@ -63,7 +63,7 @@ int64_t SysInfo::AmountOfPhysicalMemory() {
@@ -4182,11 +3971,24 @@ index 3d47ebe8f7..6795a43bc0 100644
    int pages, page_size;
    size_t size = sizeof(pages);
    sysctlbyname("vm.stats.vm.v_page_count", &pages, &size, nullptr, 0);
+diff --git v8/src/base/utils/random-number-generator.cc v8/src/base/utils/random-number-generator.cc
+index 61b78f1bdff..3e5d72c70e4 100644
+--- v8/src/base/utils/random-number-generator.cc
++++ v8/src/base/utils/random-number-generator.cc
+@@ -51,7 +51,7 @@ RandomNumberGenerator::RandomNumberGenerator() {
+   result = rand_s(&second_half);
+   DCHECK_EQ(0, result);
+   SetSeed((static_cast<int64_t>(first_half) << 32) + second_half);
+-#elif V8_OS_MACOSX || V8_OS_FREEBSD || V8_OS_OPENBSD
++#elif V8_OS_MACOSX || V8_OS_FREEBSD || V8_OS_OPENBSD || V8_OS_DRAGONFLYBSD
+   // Despite its prefix suggests it is not RC4 algorithm anymore.
+   // It always succeeds while having decent performance and
+   // no file descriptor involved.
 diff --git v8/src/d8/d8-posix.cc v8/src/d8/d8-posix.cc
-index 23767ba2b5..66af21c483 100644
+index c7313b44356..a15b1f4505f 100644
 --- v8/src/d8/d8-posix.cc
 +++ v8/src/d8/d8-posix.cc
-@@ -350,7 +350,7 @@ static Local<Value> GetStdout(Isolate* isolate, int child_fd,
+@@ -334,7 +334,7 @@ static Local<Value> GetStdout(Isolate* isolate, int child_fd,
  // See http://code.google.com/p/v8/issues/detail?id=401.
  #if defined(WNOWAIT) && !defined(ANDROID) && !defined(__APPLE__) && \
      !defined(__NetBSD__) && !defined(__Fuchsia__)
@@ -4196,20 +3998,20 @@ index 23767ba2b5..66af21c483 100644
  #endif
  #endif
 diff --git v8/src/libsampler/sampler.cc v8/src/libsampler/sampler.cc
-index e445dfc65a..faa17becc0 100644
+index 1dac5462623..70c2f7780e4 100644
 --- v8/src/libsampler/sampler.cc
 +++ v8/src/libsampler/sampler.cc
-@@ -467,7 +467,7 @@ void SignalHandler::FillRegisterState(void* context, RegisterState* state) {
-   state->sp = reinterpret_cast<void*>(mcontext->__ss.__esp);
-   state->fp = reinterpret_cast<void*>(mcontext->__ss.__ebp);
- #endif  // V8_HOST_ARCH_IA32
+@@ -476,7 +476,7 @@ void SignalHandler::FillRegisterState(void* context, RegisterState* state) {
+   state->fp =
+       reinterpret_cast<void*>(arm_thread_state64_get_fp(mcontext->__ss));
+ #endif  // V8_HOST_ARCH_*
 -#elif V8_OS_FREEBSD
 +#elif V8_OS_FREEBSD || V8_OS_DRAGONFLYBSD
  #if V8_HOST_ARCH_IA32
    state->pc = reinterpret_cast<void*>(mcontext.mc_eip);
    state->sp = reinterpret_cast<void*>(mcontext.mc_esp);
 diff --git v8/src/trap-handler/handler-inside-posix.cc v8/src/trap-handler/handler-inside-posix.cc
-index 6228e87e84..ec2a0a500e 100644
+index b943d3222aa..967c37d4b5e 100644
 --- v8/src/trap-handler/handler-inside-posix.cc
 +++ v8/src/trap-handler/handler-inside-posix.cc
 @@ -27,7 +27,7 @@
@@ -4231,23 +4033,23 @@ index 6228e87e84..ec2a0a500e 100644
  #else
  #error Unsupported platform
 diff --git v8/src/trap-handler/handler-inside-posix.h v8/src/trap-handler/handler-inside-posix.h
-index 1233a3cfed..29e37c2217 100644
+index 49fe23a7128..01ede742839 100644
 --- v8/src/trap-handler/handler-inside-posix.h
 +++ v8/src/trap-handler/handler-inside-posix.h
 @@ -12,7 +12,7 @@ namespace v8 {
  namespace internal {
  namespace trap_handler {
  
--#if defined(V8_OS_LINUX) || defined(V8_OS_FREEBSD)
-+#if defined(V8_OS_LINUX) || defined(V8_OS_FREEBSD) || defined(V8_OS_DRAGONFLYBSD)
+-#if V8_OS_LINUX || V8_OS_FREEBSD
++#if V8_OS_LINUX || V8_OS_FREEBSD || V8_OS_DRAGONFLYBSD
  constexpr int kOobSignal = SIGSEGV;
  #elif V8_OS_MACOSX
  constexpr int kOobSignal = SIGBUS;
 diff --git v8/src/trap-handler/trap-handler.h v8/src/trap-handler/trap-handler.h
-index f6fdca553e..a8d14ed52d 100644
+index e75355decd8..05dc180d473 100644
 --- v8/src/trap-handler/trap-handler.h
 +++ v8/src/trap-handler/trap-handler.h
-@@ -25,6 +25,8 @@ namespace trap_handler {
+@@ -27,6 +27,8 @@ namespace trap_handler {
  #define V8_TRAP_HANDLER_SUPPORTED true
  #elif V8_TARGET_ARCH_X64 && V8_OS_FREEBSD
  #define V8_TRAP_HANDLER_SUPPORTED true
@@ -4257,10 +4059,10 @@ index f6fdca553e..a8d14ed52d 100644
  #define V8_TRAP_HANDLER_SUPPORTED false
  #endif
 diff --git v8/tools/testrunner/local/utils.py v8/tools/testrunner/local/utils.py
-index 9128c433a0..780e284e04 100644
+index a6b92dc7566..bfd5379de72 100644
 --- v8/tools/testrunner/local/utils.py
 +++ v8/tools/testrunner/local/utils.py
-@@ -83,6 +83,10 @@ def GuessOS():
+@@ -82,6 +82,10 @@ def GuessOS():
      # On Windows Vista platform.system() can return 'Microsoft' with some
      # versions of Python, see http://bugs.python.org/issue1082
      return 'windows'

@@ -1,6 +1,6 @@
---- chrome/test/chromedriver/chrome_launcher.cc.orig	2019-09-09 21:55:12 UTC
+--- chrome/test/chromedriver/chrome_launcher.cc.orig	2020-11-13 06:36:38 UTC
 +++ chrome/test/chromedriver/chrome_launcher.cc
-@@ -67,6 +67,10 @@
+@@ -71,6 +71,10 @@
  #include "chrome/test/chromedriver/keycode_text_conversion.h"
  #endif
  
@@ -10,4 +10,4 @@
 +
  namespace {
  
- // TODO(eseckler): Remove --ignore-certificate-errors for newer Chrome versions
+ const char* const kCommonSwitches[] = {

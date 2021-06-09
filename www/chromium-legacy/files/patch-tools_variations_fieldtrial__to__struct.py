@@ -1,10 +1,10 @@
---- tools/variations/fieldtrial_to_struct.py.orig	2019-07-24 18:59:17 UTC
+--- tools/variations/fieldtrial_to_struct.py.orig	2020-11-13 06:37:05 UTC
 +++ tools/variations/fieldtrial_to_struct.py
-@@ -33,6 +33,7 @@ finally:
- _platforms = [
-   'android',
-   'android_webview',
-+  'freebsd',
-   'chromeos',
-   'fuchsia',
-   'ios',
+@@ -35,6 +35,7 @@ _platforms = [
+     'android_weblayer',
+     'android_webview',
+     'chromeos',
++    'freebsd',
+     'fuchsia',
+     'ios',
+     'linux',

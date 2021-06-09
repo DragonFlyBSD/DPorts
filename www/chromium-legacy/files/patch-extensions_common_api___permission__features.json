@@ -1,4 +1,4 @@
---- extensions/common/api/_permission_features.json.orig	2019-10-21 19:06:34 UTC
+--- extensions/common/api/_permission_features.json.orig	2021-01-18 21:28:59 UTC
 +++ extensions/common/api/_permission_features.json
 @@ -135,7 +135,7 @@
      {
@@ -9,7 +9,7 @@
        "whitelist": [
          "1C93BD3CF875F4A73C0B2A163BB8FBDA8B8B3D80",  // http://crbug.com/387169
          "A3BC37E2148AC4E99BE4B16AF9D42DD1E592BBBE",  // http://crbug.com/387169
-@@ -461,7 +461,7 @@
+@@ -457,7 +457,7 @@
    }, {
      "channel": "stable",
      "extension_types": ["extension", "legacy_packaged_app", "platform_app"],

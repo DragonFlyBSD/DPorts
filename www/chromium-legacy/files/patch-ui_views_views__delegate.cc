@@ -1,11 +1,11 @@
---- ui/views/views_delegate.cc.orig	2019-03-11 22:01:19 UTC
+--- ui/views/views_delegate.cc.orig	2020-11-13 06:37:06 UTC
 +++ ui/views/views_delegate.cc
-@@ -85,7 +85,7 @@ HICON ViewsDelegate::GetSmallWindowIcon() const {
- bool ViewsDelegate::IsWindowInMetro(gfx::NativeWindow window) const {
+@@ -86,7 +86,7 @@ bool ViewsDelegate::IsWindowInMetro(gfx::NativeWindow 
    return false;
  }
--#elif defined(OS_LINUX) && !defined(OS_CHROMEOS)
-+#elif (defined(OS_LINUX) && !defined(OS_CHROMEOS)) || defined(OS_FREEBSD)
+ #elif BUILDFLAG(ENABLE_DESKTOP_AURA) && \
+-  (defined(OS_LINUX) || defined(OS_CHROMEOS))
++  (defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_BSD))
  gfx::ImageSkia* ViewsDelegate::GetDefaultWindowIcon() const {
    return nullptr;
  }

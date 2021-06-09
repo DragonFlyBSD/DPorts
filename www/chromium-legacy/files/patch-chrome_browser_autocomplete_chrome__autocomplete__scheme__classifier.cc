@@ -1,17 +1,20 @@
---- chrome/browser/autocomplete/chrome_autocomplete_scheme_classifier.cc.orig	2019-09-09 21:55:09 UTC
+--- chrome/browser/autocomplete/chrome_autocomplete_scheme_classifier.cc.orig	2021-01-18 21:28:49 UTC
 +++ chrome/browser/autocomplete/chrome_autocomplete_scheme_classifier.cc
-@@ -59,12 +59,12 @@ ChromeAutocompleteSchemeClassifier::GetInputTypeForSch
+@@ -87,7 +87,7 @@ ChromeAutocompleteSchemeClassifier::GetInputTypeForSch
        return metrics::OmniboxInputType::QUERY;
  
      case ExternalProtocolHandler::UNKNOWN: {
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if defined(OS_LINUX) || defined(OS_CHROMEOS)
++#if defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_BSD)
        // Linux impl of GetApplicationNameForProtocol doesn't distinguish
        // between URL schemes with handers and those without. This will
        // make the default behaviour be search on Linux.
-       return metrics::OmniboxInputType::EMPTY;
--#endif // defined(OS_LINUX)
-+#endif // defined(OS_LINUX) || defined(OS_BSD)
-       // If block state is unknown, check if there is an application registered
-       // for the url scheme.
-       GURL url(scheme + "://");
+@@ -100,7 +100,7 @@ ChromeAutocompleteSchemeClassifier::GetInputTypeForSch
+           shell_integration::GetApplicationNameForProtocol(url);
+       return application_name.empty() ? metrics::OmniboxInputType::EMPTY
+                                       : metrics::OmniboxInputType::URL;
+-#endif  // defined(OS_LINUX) || defined(OS_CHROMEOS)
++#endif  // defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_BSD)
+     }
+   }
+   NOTREACHED();
