@@ -1,8 +1,7 @@
 # Created by: thierry@pompo.net
-# $FreeBSD$
 
 PORTNAME=	jupyter-jsmol
-PORTVERSION=	0.2.6
+PORTVERSION=	2021.3.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	science devel python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
