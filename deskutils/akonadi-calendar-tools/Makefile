@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	akonadi-calendar-tools
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
@@ -6,6 +5,9 @@ CATEGORIES=	deskutils kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	CLI tools to manage akonadi calendars
+
+DEPRECATED=	Uses EOL Python 2.7 via www/qt5-webengine
+EXPIRATION_DATE=2021-06-23
 
 LIB_DEPENDS=	libical.so:devel/libical
 
