@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	kdeedu
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
@@ -71,5 +70,12 @@ ROCS_RUN_DEPENDS=	rocs>=${KDE_APPLICATIONS_VERSION}:math/rocs
 
 STEP_DESC=		Interactive physics simulator
 STEP_RUN_DEPENDS=	step>=${KDE_APPLICATIONS_VERSION}:science/step
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MPARLEY}
+DEPRECATED=	Uses EOL Python 2.7 via misc/parley
+EXPIRATION_DATE=2021-06-23
+.endif
 
 .include <bsd.port.mk>
