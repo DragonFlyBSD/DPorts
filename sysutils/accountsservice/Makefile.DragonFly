@@ -1,0 +1,2 @@
+LIB_DEPENDS+=libffi.so:devel/libffi libpcre.so:devel/pcre libiconv.so:converters/libiconv
+USES+=iconv
