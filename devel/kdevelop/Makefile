@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 # When updating this port, also chase
 #  devel/kdev-php
@@ -58,5 +57,12 @@ WEBENGINE_CMAKE_OFF=	-DCMAKE_DISABLE_FIND_PACKAGE_Qt5WebEngineWidgets:BOOL=TRUE
 SHEBANG_LANG=	zsh
 zsh_OLD_CMD=	/bin/zsh
 zsh_CMD=	${LOCALBASE}/bin/zsh
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MWEBENGINE}
+DEPRECATED=	Uses EOL Pyton 2.7 via www/qt5-webengine
+EXPIRATION_DATE=2021-06-23
+.endif
 
 .include <bsd.port.mk>
