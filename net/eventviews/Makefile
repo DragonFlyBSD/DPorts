@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	eventviews
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
@@ -8,6 +7,9 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Event view libriares for KDEPim
 
 LICENSE=	LGPL21
+
+DEPRECATED=	Uses EOL Python 2.7 via www/qt5-webengine
+EXPIRATION_DATE=2021-06-23
 
 LIB_DEPENDS=	libKGantt.so:graphics/kdiagram  \
 		libboost_system.so:devel/boost-libs
