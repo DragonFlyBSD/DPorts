@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	knotes
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
@@ -8,6 +7,9 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Popup notes
 
 LICENSE=	LGPL21
+
+DEPRECATED=	Uses EOL Python 2.7 via www/qt5-webengine
+EXPIRATION_DATE=2021-06-23
 
 LIB_DEPENDS=	libical.so:devel/libical
 
