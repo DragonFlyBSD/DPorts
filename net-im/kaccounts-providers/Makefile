@@ -1,4 +1,3 @@
-# $FreeBSD$
 
 PORTNAME=	kaccounts-providers
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
@@ -6,6 +5,9 @@ CATEGORIES=	net-im kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	System to administer web accounts for the KDE desktop
+
+DEPRECATED=	Uses EOL Python 2.7 via www/qt5-webengine
+EXPIRATION_DATE=2021-06-23
 
 LIB_DEPENDS=	libaccounts-glib.so:net-im/libaccounts-glib \
 		libkaccounts.so:net-im/kaccounts-integration \
