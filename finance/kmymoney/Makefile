@@ -1,8 +1,7 @@
-# $FreeBSD$
 
 PORTNAME=	kmymoney
 PORTVERSION=	5.1.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	finance kde
 MASTER_SITES=	KDE/stable/${PORTNAME}/${PORTVERSION}/src
 
@@ -108,6 +107,13 @@ create-plist: stage
 		-e '/ofximport/s|^|%%OFX%%|g' -e '/qsqlcipher/s|^|%%SQLCIPHER%%|g' \
 		-e '/weboob/s|^|%%WEBOOB%%|g' \
 		pkg-plist)
+.endif
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MQTWEBENGINE}
+DEPRECATED=	Uses EOL Python 2.7 via www/qt5-webengine
+EXPIRATION_DATE=2021-06-23
 .endif
 
 .include <bsd.port.mk>
