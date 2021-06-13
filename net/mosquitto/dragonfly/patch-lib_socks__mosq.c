@@ -1,11 +1,11 @@
---- lib/socks_mosq.c.intermediate	2018-10-14 17:30:53 UTC
-+++ lib/socks_mosq.c
-@@ -24,7 +24,7 @@ Contributors:
+--- lib/socks_mosq.c.orig	2021-06-11 10:07:38.501387000 +0200
++++ lib/socks_mosq.c	2021-06-11 10:08:01.790864000 +0200
+@@ -30,7 +30,7 @@
  #else
  #  include <arpa/inet.h>
  #endif
--#ifdef __FreeBSD__
-+#if defined __FreeBSD__ || defined __DragonFly__
+-#if defined(__FreeBSD__) || defined(__OpenBSD__)
++#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
  #  include <sys/socket.h>
  #  include <netinet/in.h>
  #endif
