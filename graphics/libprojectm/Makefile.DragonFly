@@ -1,13 +1,10 @@
 
 OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NPULSEAUDIO} JACK
 
-# missing Intrinsics.h for Common.hpp as seen in multimedia/qmmp-qt5
 # missing install for .desktop Icon=
 dfly-install:
-	${INSTALL_DATA} ${WRKSRC}/src/libprojectM/Intrinsics.h \
-		${STAGEDIR}${PREFIX}/include/libprojectM
 	${INSTALL_DATA} ${WRKSRC}/src/projectM-qt/images/icons/prjm16-transparent.svg \
 		${STAGEDIR}${PREFIX}/share/pixmaps
 
 # to avoid orphans
-PLIST_FILES+=	share/pixmaps/prjm16-transparent.svg include/libprojectM/Intrinsics.h
+PLIST_FILES+=	share/pixmaps/prjm16-transparent.svg
