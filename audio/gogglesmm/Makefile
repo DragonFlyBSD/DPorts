@@ -1,8 +1,8 @@
 # Created by: Sascha Klauder <sklauder@trimind.de>
-# $FreeBSD$
 
 PORTNAME=	gogglesmm
 PORTVERSION=	1.2.2
+PORTREVISION=	1
 CATEGORIES=	audio
 
 MAINTAINER=	jhale@FreeBSD.org
