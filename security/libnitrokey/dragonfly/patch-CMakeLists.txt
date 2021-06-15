@@ -1,0 +1,11 @@
+--- CMakeLists.txt.orig	2021-06-15 08:59:52.341752000 +0200
++++ CMakeLists.txt	2021-06-15 09:00:03.901493000 +0200
+@@ -83,7 +83,7 @@
+ ELSEIF(UNIX)
+ #    add_library(hidapi-libusb STATIC hidapi/libusb/hid.c )
+     find_package(PkgConfig)
+-    IF(${CMAKE_SYSTEM_NAME} STREQUAL "FreeBSD")
++	IF(${CMAKE_SYSTEM_NAME} STREQUAL "DragonFly")
+         pkg_search_module(HIDAPI_LIBUSB REQUIRED hidapi)
+         set(HIDAPI_LIBUSB_NAME hidapi)
+     ELSE()
