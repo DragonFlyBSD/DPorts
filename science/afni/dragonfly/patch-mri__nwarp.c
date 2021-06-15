@@ -1,15 +1,15 @@
---- mri_nwarp.c.orig	2020-08-10 17:42:08 UTC
-+++ mri_nwarp.c
-@@ -87,7 +87,7 @@ static char * wans(void)
- # define MEMORY_CHECK(mm)  show_malloc_stats(mm) ;
- # define MEMORY_SHORT     "\0"
+--- mri_nwarp.c.orig	2021-06-15 11:32:12.715516000 +0200
++++ mri_nwarp.c	2021-06-15 11:33:03.404371000 +0200
+@@ -99,7 +99,7 @@
  
--#if defined(__FreeBSD__)
-+#if defined(__FreeBSD__) && !defined(__DragonFly__)
-   #include <stdlib.h>
-   #include <malloc_np.h>
+ #if defined(__linux__)
+ #  include <malloc.h>
+-#elif defined(__FreeBSD__)
++#elif defined(__FreeBSD__) && !defined(__DragonFly__)
+ #  include <stdlib.h>
+ #  include <malloc_np.h>
  #endif
-@@ -97,7 +97,7 @@ static void show_malloc_stats(char *mesg
+@@ -109,7 +109,7 @@
  #if defined(__linux__)
        INFO_message("Memory usage: %s",mesg) ;
        malloc_stats();

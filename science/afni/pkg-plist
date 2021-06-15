@@ -477,6 +477,8 @@ bin/Xphace
 bin/abids_json_info.py
 bin/abids_json_tool.py
 bin/abids_tool.py
+bin/adjunct_apqc_tsnr_no_mask
+bin/adjunct_apqc_tsnr_with_mask
 bin/adjunct_aw_tableize_roi_info.py
 bin/adjunct_calc_mont_dims.py
 bin/adjunct_combine_str.py
@@ -806,6 +808,7 @@ lib/afni/plug_zeropad.so
 %%PYTHON_SITELIBDIR%%/afnipy/lib_system_check.py
 %%PYTHON_SITELIBDIR%%/afnipy/lib_textdata.py
 %%PYTHON_SITELIBDIR%%/afnipy/lib_timing.py
+%%PYTHON_SITELIBDIR%%/afnipy/lib_tsv.py
 %%PYTHON_SITELIBDIR%%/afnipy/lib_uber_align.py
 %%PYTHON_SITELIBDIR%%/afnipy/lib_uber_proc.py
 %%PYTHON_SITELIBDIR%%/afnipy/lib_uber_skel.py
