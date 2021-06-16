@@ -1,7 +1,6 @@
-# $FreeBSD$
 
 PORTNAME=	bashdb
-DISTVERSION=	5.0-1.1.0
+DISTVERSION=	5.0-1.1.2
 CATEGORIES=	devel
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${DISTVERSION}/
 
@@ -17,7 +16,10 @@ RUN_DEPENDS=	bash:shells/bash
 USES=		gmake python shebangfix
 
 SHEBANG_FILES=	lib/term-highlight.py
+
 GNU_CONFIGURE=	yes
+CONFIGURE_SHELL=	${LOCALBASE}/bin/bash
+
 NO_BUILD=	yes
 NO_ARCH=	yes
 
