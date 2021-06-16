@@ -1,0 +1,13 @@
+@@ -57,6 +57,12 @@
+ OPTIONS_RADIO_HASH=	FNV SIPHASH
+ OPTIONS_SUB=		yes
+ 
++OPTIONS_DEFINE+=	EXPAT
++OPTIONS_DEFAULT+=	EXPAT
++EXPAT_DESC=		Use expat from ports instead of bundled version
++EXPAT_LIB_DEPENDS=	libexpat.so:textproc/expat2
++EXPAT_CONFIGURE_ON=	--with-system-expat
++
+ LIBFFI_DESC=		Use libffi from ports instead of bundled version
+ NLS_DESC=		Enable gettext support for the locale module
+ PYMALLOC_DESC=		Enable specialized mallocs
