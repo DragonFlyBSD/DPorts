@@ -1,11 +1,11 @@
---- Makefile.orig	2008-08-29 00:37:00.000000000 +0300
-+++ Makefile
-@@ -65,7 +65,7 @@ ifeq ($(SYSTYPE), SunOS)
+--- Makefile.orig	2021-06-15 16:46:50.581546000 +0200
++++ Makefile	2021-06-15 16:47:04.051233000 +0200
+@@ -62,7 +62,7 @@
    LIBS   += -lposix4
  endif
  
 -ifeq ($(SYSTYPE), FreeBSD)
 +ifeq ($(SYSTYPE), $(filter $(SYSTYPE), FreeBSD DragonFly))
-   CFLAGS += -DFREEBSD
+   EXTRACFLAGS += -DFREEBSD
  endif
  
