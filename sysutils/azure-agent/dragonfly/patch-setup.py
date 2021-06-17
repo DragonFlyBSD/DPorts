@@ -1,11 +1,11 @@
---- setup.py.intermediate	2019-04-07 10:21:37 UTC
-+++ setup.py
-@@ -144,7 +144,7 @@ def get_data_files(name, version, fullna
+--- setup.py.orig	2021-06-15 18:09:33.497486000 +0200
++++ setup.py	2021-06-15 18:10:19.656427000 +0200
+@@ -165,7 +165,7 @@
          else:
              # sles 12+ and openSUSE 13.2+ use systemd
-             set_systemd_files(data_files, dest='/usr/lib/systemd/system')
+             set_systemd_files(data_files, dest=systemd_dir_path)
 -    elif name == 'freebsd':
-+    elif name == 'freebsd' or 'dragonfly':
-         set_bin_files(data_files, dest="/usr/local/sbin")
- #        set_conf_files(data_files, src=["config/freebsd/waagent.conf"])
++    elif name == 'freebsd' or name == 'dragonfly':
+         set_conf_files(data_files, src=["config/freebsd/waagent.conf"])
          set_freebsd_rc_files(data_files)
+     elif name == 'openbsd':
