@@ -1,5 +1,5 @@
 
-USES+=	alias
+LDFLAGS+=     -L${LOCALBASE}/lib -ltinfo -lncurses
 
 dfly-patch:
 	${REINPLACE_CMD} -e 's@freebsd@dragonfly@g' \
