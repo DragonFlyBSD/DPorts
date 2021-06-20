@@ -1,0 +1,28 @@
+--- CMakeLists.txt.orig	2021-06-19 22:34:52 UTC
++++ CMakeLists.txt
+@@ -54,6 +54,7 @@ include(cmake/libopenh264.cmake)
+ include(cmake/libpffft.cmake)
+ include(cmake/librnnoise.cmake)
+ include(cmake/libsrtp.cmake)
++include(cmake/libusrsctp.cmake)
+ include(cmake/libvpx.cmake)
+ include(cmake/libwebrtcbuild.cmake)
+ include(cmake/libyuv.cmake)
+@@ -88,7 +89,8 @@ if (is_x86 OR is_x64)
+         tg_owt::librnnoise
+         tg_owt::libsrtp
+         tg_owt::libvpx
+-        tg_owt::libvpx_mmx
++	tg_owt::libusrsctp
++	tg_owt::libvpx_mmx
+         tg_owt::libvpx_sse2
+         tg_owt::libvpx_ssse3
+         tg_owt::libvpx_sse4
+@@ -2185,6 +2187,7 @@ set(export_targets
+     libpffft
+     librnnoise
+     libsrtp
++    libusrsctp
+     libvpx
+     ${vpx_export}
+     libwebrtcbuild

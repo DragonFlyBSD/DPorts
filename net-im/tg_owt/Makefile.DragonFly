@@ -1,0 +1,12 @@
+
+#BROKEN= needs porting
+
+USES+=	xorg
+USE_XORG+=	x11 xtst
+
+# no pulse
+BUILD_DEPENDS:=	${BUILD_DEPENDS:Npulseaudio*}
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/pulse/d' \
+		${WRKSRC}/CMakeLists.txt
