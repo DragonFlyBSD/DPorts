@@ -1,5 +1,5 @@
---- config.m4.orig	2021-01-21 10:52:20.549416000 +0100
-+++ config.m4	2021-01-21 10:52:10.639373000 +0100
+--- config.m4.orig	2021-06-19 22:06:16.127762000 +0200
++++ config.m4	2021-06-19 22:06:56.896825000 +0200
 @@ -24,13 +24,10 @@
    ext_shared=yes
  
@@ -9,7 +9,7 @@
  
    if test "$PHP_OPCACHE_JIT" = "yes"; then
      case $host_cpu in
--      x86*|amd64|i386)
+-      i[[34567]]86*|x86*|amd64)
 -        ;;
        *)
          AC_MSG_WARN([JIT not supported by host architecture])
