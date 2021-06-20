@@ -1,8 +1,8 @@
---- vendor/github.com/docker/docker/pkg/term/termios_bsd.go.orig	2020-07-18 18:16:35.048834000 +0200
-+++ vendor/github.com/docker/docker/pkg/term/termios_bsd.go	2020-07-18 18:16:48.698806000 +0200
+--- vendor/github.com/docker/docker/pkg/term/termios_bsd.go.orig	2021-06-20 13:04:48.978746000 +0200
++++ vendor/github.com/docker/docker/pkg/term/termios_bsd.go	2021-06-20 13:05:00.678611000 +0200
 @@ -1,4 +1,4 @@
--// +build darwin freebsd openbsd netbsd
-+// +build darwin freebsd openbsd netbsd dragonfly
+-// +build darwin freebsd openbsd
++// +build darwin dragonfly freebsd openbsd
  
- package term // import "github.com/docker/docker/pkg/term"
+ package term
  
