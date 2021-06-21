@@ -1,0 +1,60 @@
+diff --git a/include/sysemu/hw_accel.h b/include/sysemu/hw_accel.h
+index 61672f9b32..01b5ebf442 100644
+--- include/sysemu/hw_accel.h
++++ include/sysemu/hw_accel.h
+@@ -16,6 +16,7 @@
+ #include "sysemu/kvm.h"
+ #include "sysemu/hvf.h"
+ #include "sysemu/whpx.h"
++#include "sysemu/nvmm.h"
+ 
+ void cpu_synchronize_state(CPUState *cpu);
+ void cpu_synchronize_post_reset(CPUState *cpu);
+diff --git a/include/sysemu/nvmm.h b/include/sysemu/nvmm.h
+new file mode 100644
+index 0000000000..6d216599b0
+--- /dev/null
++++ include/sysemu/nvmm.h
+@@ -0,0 +1,26 @@
++/*
++ * Copyright (c) 2018-2019 Maxime Villard, All rights reserved.
++ *
++ * NetBSD Virtual Machine Monitor (NVMM) accelerator support.
++ *
++ * This work is licensed under the terms of the GNU GPL, version 2 or later.
++ * See the COPYING file in the top-level directory.
++ */
++
++#ifndef QEMU_NVMM_H
++#define QEMU_NVMM_H
++
++#include "config-host.h"
++#include "qemu-common.h"
++
++#ifdef CONFIG_NVMM
++
++int nvmm_enabled(void);
++
++#else /* CONFIG_NVMM */
++
++#define nvmm_enabled() (0)
++
++#endif /* CONFIG_NVMM */
++
++#endif /* CONFIG_NVMM */
+diff --git a/target/i386/helper.c b/target/i386/helper.c
+index 618ad1c409..8c180b5b2b 100644
+--- target/i386/helper.c
++++ target/i386/helper.c
+@@ -495,7 +495,7 @@ void cpu_report_tpr_access(CPUX86State *env, TPRAccess access)
+     X86CPU *cpu = env_archcpu(env);
+     CPUState *cs = env_cpu(env);
+ 
+-    if (kvm_enabled() || whpx_enabled()) {
++    if (kvm_enabled() || whpx_enabled() || nvmm_enabled()) {
+         env->tpr_access_type = access;
+ 
+         cpu_interrupt(cs, CPU_INTERRUPT_TPR);
+-- 
+2.31.1
+

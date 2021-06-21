@@ -1,0 +1,45 @@
+--- configure.orig	2021-06-21 22:25:40 UTC
++++ configure
+@@ -1602,7 +1602,7 @@ if test "$mingw32" = "yes" ; then
+ else
+     bindir="${bindir:-$prefix/bin}"
+ fi
+-mandir="${mandir:-$prefix/share/man}"
++mandir="${mandir:-$prefix/man}"
+ datadir="${datadir:-$prefix/share}"
+ docdir="${docdir:-$prefix/share/doc}"
+ sysconfdir="${sysconfdir:-$prefix/etc}"
+@@ -2989,6 +2989,14 @@ EOF
+ fi
+ 
+ ##########################################
++# getifaddrs (for tests/test-io-channel-socket )
++
++have_ifaddrs_h=yes
++if ! check_include "ifaddrs.h" ; then
++  have_ifaddrs_h=no
++fi
++
++##########################################
+ # VTE probe
+ 
+ if test "$vte" != "no"; then
+@@ -4191,7 +4199,7 @@ fi
+ 
+ # check for libusb
+ if test "$libusb" != "no" ; then
+-    if $pkg_config --atleast-version=1.0.13 libusb-1.0; then
++    if $pkg_config libusb-1.0; then
+         libusb="yes"
+         libusb_cflags=$($pkg_config --cflags libusb-1.0)
+         libusb_libs=$($pkg_config --libs libusb-1.0)
+@@ -5729,6 +5737,9 @@ fi
+ if test "$have_fsxattr" = "yes" ; then
+     echo "HAVE_FSXATTR=y" >> $config_host_mak
+ fi
++if test "$have_ifaddrs_h" = "yes" ; then
++    echo "HAVE_IFADDRS_H=y" >> $config_host_mak
++fi
+ if test "$have_copy_file_range" = "yes" ; then
+     echo "HAVE_COPY_FILE_RANGE=y" >> $config_host_mak
+ fi
