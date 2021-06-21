@@ -1,3 +1,5 @@
+CFLAGS+=	-DNDEBUG
+
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 dfly-patch:
