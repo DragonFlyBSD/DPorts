@@ -77,7 +77,7 @@ index 1ffdc9e6c4..2829ed2b86 100644
    endif
  endif
 +if targetos in [ 'netbsd', 'dragonfly' ]
-+  if cc.has_header_symbol('nvmm.h', 'nvmm_cpu_stop', required: get_option('nvmm'))
++  if cc.has_header_symbol('nvmm.h', 'nvmm_vcpu_stop', required: get_option('nvmm'))
 +    nvmm = cc.find_library('nvmm', required: get_option('nvmm'))
 +  endif
 +  if nvmm.found()
