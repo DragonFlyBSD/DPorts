@@ -1,0 +1,3 @@
+dfly-patch:
+	${CP} ${WRKSRC}/wg-quick/freebsd.bash \
+	      ${WRKSRC}/wg-quick/dragonfly.bash
