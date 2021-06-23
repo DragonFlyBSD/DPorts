@@ -1,16 +1,17 @@
-+++ tun/tun_dragonfly.go.orig	2019-08-10 13:38:10 UTC
+--- tun/tun_dragonfly.go.orig	2021-06-23 22:50:23 UTC
 +++ tun/tun_dragonfly.go
-@@ -0,0 +1,332 @@
+@@ -0,0 +1,411 @@
 +/* SPDX-License-Identifier: MIT
 + *
-+ * Copyright (C) 2017-2019 WireGuard LLC. All Rights Reserved.
++ * Copyright (C) 2020-2021 WireGuard LLC. All Rights Reserved.
 + */
 +
 +package tun
 +
 +import (
++	"bytes"
++	"errors"
 +	"fmt"
-+	"io/ioutil"
 +	"net"
 +	"os"
 +	"syscall"
@@ -20,6 +21,25 @@
 +	"golang.org/x/sys/unix"
 +)
 +
++
++// IOCTL numbers derived from <sys/net/tun/if_tun.h> (print them in C)
++const (
++	_TUNSIFHEAD = 0x80047460  // _IOW('t', 96, int)
++	_TUNGIFNAME = 0x40207462  // _IOR('t', 98, struct ifreq)
++)
++
++// Iface status string max len
++const _IFSTATMAX = 800
++
++const SIZEOF_UINTPTR = 4 << (^uintptr(0) >> 32 & 1)
++
++// structure for iface requests with a pointer
++type ifreq_ptr struct {
++	Name [unix.IFNAMSIZ]byte
++	Data uintptr
++	Pad0 [16 - SIZEOF_UINTPTR]byte
++}
++
 +// Structure for iface mtu get/set ioctls
 +type ifreq_mtu struct {
 +	Name [unix.IFNAMSIZ]byte
@@ -27,7 +47,11 @@
 +	Pad0 [12]byte
 +}
 +
-+const _TUNSIFMODE = 0x8004745d
++// Structure for interface status request ioctl
++type ifstat struct {
++	IfsName [unix.IFNAMSIZ]byte
++	Ascii   [_IFSTATMAX]byte
++}
 +
 +type NativeTun struct {
 +	name        string
@@ -57,14 +81,14 @@
 +			return
 +		}
 +
-+		if n < 8 {
++		if n < 14 {
 +			continue
 +		}
 +
 +		if data[3 /* type */] != unix.RTM_IFINFO {
 +			continue
 +		}
-+		ifindex := int(*(*uint16)(unsafe.Pointer(&data[6 /* ifindex */])))
++		ifindex := int(*(*uint16)(unsafe.Pointer(&data[4 /* ifindex */])))
 +		if ifindex != tunIfindex {
 +			continue
 +		}
@@ -93,57 +117,128 @@
 +	}
 +}
 +
-+func errorIsEBUSY(err error) bool {
-+	if pe, ok := err.(*os.PathError); ok {
-+		err = pe.Err
++func tunName(fd uintptr) (string, error) {
++	var ifr ifreq_ptr;
++	_, _, errno := unix.Syscall(
++		unix.SYS_IOCTL,
++		uintptr(fd),
++		uintptr(_TUNGIFNAME),
++		uintptr(unsafe.Pointer(&ifr)),
++	)
++	if errno != 0 {
++		return "", errors.New("failed to get name of TUN device: " + errno.Error())
 +	}
-+	if errno, ok := err.(syscall.Errno); ok && errno == syscall.EBUSY {
-+		return true
++
++	name := ifr.Name[:]
++	if i := bytes.IndexByte(name, 0); i != -1 {
++		name = name[:i]
 +	}
-+	return false
++	return string(name), nil
++}
++
++func tunDestroy(name string) error {
++	fd, err := unix.Socket(
++		unix.AF_INET,
++		unix.SOCK_DGRAM,
++		0,
++	)
++	if err != nil {
++		return err
++	}
++	defer unix.Close(fd)
++
++	var ifr [unix.IFNAMSIZ]byte
++	copy(ifr[:], name)
++	_, _, errno := unix.Syscall(
++		unix.SYS_IOCTL,
++		uintptr(fd),
++		uintptr(unix.SIOCIFDESTROY),
++		uintptr(unsafe.Pointer(&ifr[0])),
++	)
++	if errno != 0 {
++		return fmt.Errorf("failed to destroy interface %s: %s", name, errno.Error())
++	}
++
++	return nil
 +}
 +
 +func CreateTUN(name string, mtu int) (Device, error) {
-+	ifIndex := -1
-+	if name != "tun" {
-+		_, err := fmt.Sscanf(name, "tun%d", &ifIndex)
-+		if err != nil || ifIndex < 0 {
-+			return nil, fmt.Errorf("Interface name must be tun[0-9]*")
-+		}
++	if len(name) > unix.IFNAMSIZ-1 {
++		return nil, errors.New("interface name too long")
 +	}
 +
-+	var tunfile *os.File
-+	var err error
-+
-+	if ifIndex != -1 {
-+		tunfile, err = os.OpenFile(fmt.Sprintf("/dev/tun%d", ifIndex), unix.O_RDWR, 0)
-+	} else {
-+		for ifIndex = 0; ifIndex < 256; ifIndex += 1 {
-+			tunfile, err = os.OpenFile(fmt.Sprintf("/dev/tun%d", ifIndex), unix.O_RDWR, 0)
-+			if err == nil || !errorIsEBUSY(err) {
-+				break
-+			}
-+		}
++	iface, _ := net.InterfaceByName(name)
++	if iface != nil {
++		return nil, fmt.Errorf("interface %s already exists", name)
 +	}
 +
++	tunFile, err := os.OpenFile("/dev/tun", unix.O_RDWR, 0)
 +	if err != nil {
 +		return nil, err
 +	}
 +
-+	tun, err := CreateTUNFromFile(tunfile, mtu)
-+
-+	if err == nil && name == "tun" {
-+		fname := os.Getenv("WG_TUN_NAME_FILE")
-+		if fname != "" {
-+			ioutil.WriteFile(fname, []byte(tun.(*NativeTun).name+"\n"), 0400)
-+		}
++	tun := NativeTun{tunFile: tunFile}
++	var assignedName string
++	tun.operateOnFd(func(fd uintptr) {
++		assignedName, err = tunName(fd)
++	})
++	if err != nil {
++		tunFile.Close()
++		return nil, err
 +	}
 +
-+	return tun, err
++	// Enable ifhead mode, otherwise tun will complain if it gets a non-AF_INET packet
++	ifheadmode := 1
++	var errno syscall.Errno
++	tun.operateOnFd(func(fd uintptr) {
++		_, _, errno = unix.Syscall(
++			unix.SYS_IOCTL,
++			fd,
++			uintptr(_TUNSIFHEAD),
++			uintptr(unsafe.Pointer(&ifheadmode)),
++		)
++	})
++	if errno != 0 {
++		tunFile.Close()
++		tunDestroy(assignedName)
++		return nil, fmt.Errorf("unable to put into IFHEAD mode: %v", errno)
++	}
++
++	// Rename tun interface
++
++	confd, err := unix.Socket(
++		unix.AF_INET,
++		unix.SOCK_DGRAM,
++		0,
++	)
++	if err != nil {
++		return nil, err
++	}
++	defer unix.Close(confd)
++
++	var newnp [unix.IFNAMSIZ]byte
++	copy(newnp[:], name)
++
++	var ifr ifreq_ptr
++	copy(ifr.Name[:], assignedName)
++	ifr.Data = uintptr(unsafe.Pointer(&newnp[0]))
++
++	_, _, errno = unix.Syscall(
++		unix.SYS_IOCTL,
++		uintptr(confd),
++		uintptr(unix.SIOCSIFNAME),
++		uintptr(unsafe.Pointer(&ifr)),
++	)
++	if errno != 0 {
++		tunFile.Close()
++		tunDestroy(assignedName)
++		return nil, fmt.Errorf("failed to rename %s to %s: %v", assignedName, name, errno)
++	}
++
++	return CreateTUNFromFile(tunFile, mtu)
 +}
 +
 +func CreateTUNFromFile(file *os.File, mtu int) (Device, error) {
-+
 +	tun := &NativeTun{
 +		tunFile: file,
 +		events:  make(chan Event, 10),
@@ -176,27 +271,27 @@
 +
 +	go tun.routineRouteListener(tunIfindex)
 +
-+	currentMTU, err := tun.MTU()
-+	if err != nil || currentMTU != mtu {
-+		err = tun.setMTU(mtu)
-+		if err != nil {
-+			tun.Close()
-+			return nil, err
-+		}
++	err = tun.setMTU(mtu)
++	if err != nil {
++		tun.Close()
++		return nil, err
 +	}
 +
 +	return tun, nil
 +}
 +
 +func (tun *NativeTun) Name() (string, error) {
-+	gostat, err := tun.tunFile.Stat()
++	var name string
++	var err error
++	tun.operateOnFd(func(fd uintptr) {
++		name, err = tunName(fd)
++	})
 +	if err != nil {
-+		tun.name = ""
 +		return "", err
 +	}
-+	stat := gostat.Sys().(*syscall.Stat_t)
-+	tun.name = fmt.Sprintf("tun%d", stat.Rdev%256)
-+	return tun.name, nil
++
++	tun.name = name
++	return name, nil
 +}
 +
 +func (tun *NativeTun) File() *os.File {
@@ -222,24 +317,18 @@
 +}
 +
 +func (tun *NativeTun) Write(buff []byte, offset int) (int, error) {
-+
 +	// reserve space for header
-+
 +	buff = buff[offset-4:]
 +
 +	// add packet information header
-+
 +	buff[0] = 0x00
 +	buff[1] = 0x00
 +	buff[2] = 0x00
-+
 +	if buff[4]>>4 == ipv6.Version {
 +		buff[3] = unix.AF_INET6
 +	} else {
 +		buff[3] = unix.AF_INET
 +	}
-+
-+	// write
 +
 +	return tun.tunFile.Write(buff)
 +}
@@ -250,11 +339,12 @@
 +}
 +
 +func (tun *NativeTun) Close() error {
-+	var err2 error
++	var err3 error
 +	err1 := tun.tunFile.Close()
++	err2 := tunDestroy(tun.name)
 +	if tun.routeSocket != -1 {
 +		unix.Shutdown(tun.routeSocket, unix.SHUT_RDWR)
-+		err2 = unix.Close(tun.routeSocket)
++		err3 = unix.Close(tun.routeSocket)
 +		tun.routeSocket = -1
 +	} else if tun.events != nil {
 +		close(tun.events)
@@ -262,27 +352,22 @@
 +	if err1 != nil {
 +		return err1
 +	}
-+	return err2
++	if err2 != nil {
++		return err2
++	}
++	return err3
 +}
 +
 +func (tun *NativeTun) setMTU(n int) error {
-+	// open datagram socket
-+
-+	var fd int
-+
 +	fd, err := unix.Socket(
 +		unix.AF_INET,
 +		unix.SOCK_DGRAM,
 +		0,
 +	)
-+
 +	if err != nil {
 +		return err
 +	}
-+
 +	defer unix.Close(fd)
-+
-+	// do ioctl call
 +
 +	var ifr ifreq_mtu
 +	copy(ifr.Name[:], tun.name)
@@ -294,7 +379,6 @@
 +		uintptr(unix.SIOCSIFMTU),
 +		uintptr(unsafe.Pointer(&ifr)),
 +	)
-+
 +	if errno != 0 {
 +		return fmt.Errorf("failed to set MTU on %s", tun.name)
 +	}
@@ -303,21 +387,16 @@
 +}
 +
 +func (tun *NativeTun) MTU() (int, error) {
-+	// open datagram socket
-+
 +	fd, err := unix.Socket(
 +		unix.AF_INET,
 +		unix.SOCK_DGRAM,
 +		0,
 +	)
-+
 +	if err != nil {
 +		return 0, err
 +	}
-+
 +	defer unix.Close(fd)
 +
-+	// do ioctl call
 +	var ifr ifreq_mtu
 +	copy(ifr.Name[:], tun.name)
 +
