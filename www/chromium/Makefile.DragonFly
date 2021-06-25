@@ -26,6 +26,15 @@ EXTRA_PATCHES += ${DFLY_PATCHDIR}/extra-patch_release_5_6
 .endif
 
 dfly-patch:
+	# Sandbox stuff
+	@${MKDIR} ${WRKSRC}/sandbox/policy/dragonfly
+	@${CP} ${FILESDIR}/sandbox_freebsd.h ${WRKSRC}/sandbox/policy/dragonfly/sandbox_dragonfly.h
+	@${CP} ${FILESDIR}/sandbox_freebsd.cc ${WRKSRC}/sandbox/policy/dragonfly/sandbox_dragonfly.cc
+	${REINPLACE_CMD} -e "s|FreeBSD|DragonFly|g" \
+		-e "s|freebsd\/sandbox_freebsd.h|dragonfly\/sandbox_dragonfly.h|g" \
+		${WRKSRC}/sandbox/policy/dragonfly/sandbox_dragonfly.h \
+		${WRKSRC}/sandbox/policy/dragonfly/sandbox_dragonfly.cc \
+
 	# Setup nodejs dependency
 	@${MKDIR} ${WRKSRC}/third_party/node/dragonfly/node-dragonfly-x64/bin
 	${LN} -sf ${LOCALBASE}/bin/node ${WRKSRC}/third_party/node/dragonfly/node-dragonfly-x64/bin/node
@@ -39,6 +48,6 @@ dfly-patch:
 	# Use the current LLVM version by replacing the hardcoded one
 	${REINPLACE_CMD} -e "s|clang60|clang${LLVM_DEFAULT}|g" \
 		-e "s|clang\+\+60|clang++${LLVM_DEFAULT}|g" \
-		-e "s|ar60|ar${LLVM_DEFAULT}|g" \
-		-e "s|nm60|nm${LLVM_DEFAULT}|g" \
+		-e "s|llvm-ar|llvm-ar${LLVM_DEFAULT}|g" \
+		-e "s|llvm-nm|llvm-nm${LLVM_DEFAULT}|g" \
 		${WRKSRC}/build/toolchain/gcc_toolchain.gni
