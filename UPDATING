@@ -5,6 +5,78 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20210628:
+  AFFECTS: users of misc/openhab
+  AUTHOR: netchild@FreeBSD.org
+
+  You need to run
+    sed -i -e 's:^karaf.framework.equinox=.*:karaf.framework.equinox=mvn\:org.eclipse.platform/org.eclipse.osgi/3.16.200: ; s:^karaf.framework.felix=.*:karaf.framework.felix=mvn\:org.apache.felix/org.apache.felix.framework/6.0.4:' /var/db/openhab/userdata/etc/config.properties
+  to update the version numbers of some components in a config file.
+
+20210621:
+  AFFECTS: users of www/gitlab-ce
+  AUTHOR: mfechner@FreeBSD.org
+
+  The upgrade of Gitlab 14.0.0 is in preparation.
+  You must upgrade first to 13.12.
+  For more information see here:
+  https://about.gitlab.com/blog/2021/06/04/gitlab-moving-to-14-breaking-changes/
+
+  To do the upgrade, make sure you follow the upgrade manuals:
+  https://gitlab.fechner.net/mfechner/Gitlab-docu/-/tree/master/update
+
+  I will merge the 14.0.0 upgrade later to quarterly branch to give you
+  some time for the upgrade to 13.12.
+
+20210620:
+  AFFECTS: users of misc/openhab2
+  AUTHOR: netchild@FreeBSD.org
+
+  The openhab v3 port has been committed. Upstream has removed the
+  version from the name, as such the FreeBSD port follows in all places
+  (start script name, directory names, ...).
+  Users are encuraged to migrate from misc/openhab2 to misc/openhab.
+
+  No automatic config migration is available Both versions can be
+  installed in parallel, but an users has to take care to not run
+  both at the same time on the same port.
+
+20210617:
+  AFFECTS: users of graphics/mesa-libs and x11/nvidia-driver
+  AUTHOR: kbowling@FreeBSD.org
+
+  Some libraries from mesa-libs are now provided by libglvnd while
+  others were renamed. nvidia-driver already used libglvnd but bundled
+  a copy which is now provided as a separate package. When building
+  outside poudriere make sure to remove mesa-libs and nvidia-driver
+  first in order to avoid conflict with libglvnd.
+
+  For portmaster users:
+  # pkg delete -f mesa-libs nvidia-driver
+  # portmaster -a
+
+  For portupgrade users:
+  # pkg delete -f mesa-libs nvidia-driver
+  # portupgrade -a
+
+20210523:
+  AFFECTS: users of www/tt-rss
+  AUTHOR: dereks@lifeofadishwasher.com
+
+  tt-rss config.php syntax has changed.  You can find detailed changes
+  here https://tt-rss.org/wiki/GlobalConfig or look at config.php.sample.
+  Expect your config.php to not work with newer www/tt-rss releases.
+
+  Due to changes in ttrssd before updating you should stop ttrssd or
+  otherwise kill the php process running update_daemon2.php.
+
+20210516:
+  AFFECTS: users of security/bitwarden_rs
+  AUTHOR: mr@FreeBSD.org
+
+  bitwarden_rs has been renamed to vaultwarden upstream.
+  So switch to security/vaultwarden instead.
+
 20210515:
   AFFECTS: users of databases/postgresql??-server
   AUTHOR: girgen@FreeBSD.org
@@ -12,744 +84,4 @@ you update your ports collection, before attempting any port upgrades.
   The rc.conf parameter for the login class of the postgresql daemon has
   changed name from postgresql_class to postgresql_login_class.
   rc.subr(8) states that the parameter should be named ${name}_login_class.
-
-20210406:
-  AFFECTS: users of www/phpvirtualbox
-  AUTHOR: dereks@lifeofadishwasher.com
-
-  www/phpvirtualbox has been updated to version 6.1. This new version
-  only supports version 6.1 of VirtualBox.
-
-  Version 5.x of phpvirtualbox has been preserved as
-  www/phpvirtualbox-legacy. If you require support for VirtualBox
-  5.x please install this version. Remember to copy your configuration
-  file in the new legacy installation.
-
-20210328:
-  AFFECTS: users of www/caddy
-  AUTHOR: adamw@FreeBSD.org
-
-  The default locations for caddy runtime files have changed.
-
-  - Caddy's runtime log is now /var/log/caddy/caddy.log
-    (was /var/log/caddy.log)
-
-  - Automatic SSL certs are now stored in /var/db/caddy/data/caddy
-    (was /root/.local/share/caddy)
-
-  - Configuration autosaves are now stored in /var/db/caddy/config/caddy
-    (was /root/.config/caddy)
-
-  You can change these defaults. See /usr/local/etc/rc.d/caddy for the
-  list of settings.
-
-20210322:
-  AFFECTS: users of net/wireguard
-  AUTHOR: decke@FreeBSD.org
-
-  A wireguard kernel implementation supporting FreeBSD 12.1 and newer was
-  added as net/wireguard-kmod recently.
-
-  The new default for users of net/wireguard is the kernel module.
-
-  If you experience problems with it you can switch back to wireguard-go
-  by removing net/wireguard-kmod and making sure net/wireguard-go is
-  installed.
-  The userland tools wg-quick(8) and wg(8) try to use kernel support if
-  the kernel module is available and otherwise fall back to wireguard-go
-  automatically. Config files are fully compatible.
-
-20210317:
-  AFFECTS: users of security/strongswan
-  AUTHOR: driesm.michiels@gmail.com
-
-  The stroke starter interface has been deprecated by upstream
-  for some time now.  The default interface for controlling the charon
-  daemon has switched from stroke to vici. Users still using the
-  legacy config files such as ipsec.conf and ipsec.secret (stroke, starter)
-  can easily revert to the old behavior by:
-
-  # sysrc strongswan_interface="stroke"
-
-  It is recommended to use the vici interface which is configured by swanctl.conf.
-  Check : https://wiki.strongswan.org/projects/strongswan/wiki/Fromipsecconf
-  to ease the transition from ipsec.* to swanctl.conf
-
-20210313:
-  AFFECTS: users of net-mgmt/phpipam
-  AUTHOR: marko.cupac@mimar.rs
-
-  ipaddresses table in phpipam database is likely to contain incorrect datetime
-  values which prevent successful upgrade.  Make sure to create backup of
-  phpipam database.  Before starting upgrade wizard in web interface run the
-  following SQL query on phpipam database:
-
-    UPDATE ipaddresses SET lastSeen='1970-01-01 00:00:01' WHERE lastSeen < '0000-01-01 00:00:00';
-
-20210310:
-  AFFECTS: users of textproc/redisearch
-  AUTHOR: osa@FreeBSD.org
-
-  The textproc/redisearch port has been updated to the recent stable
-  release - v2.0.  Users wanting to stay on v1.6 can replace
-  textproc/redisearch with textproc/redisearch16 with one of the
-  following commands:
-
-  # pkg install textproc/redisearch16
-    or
-  # portmaster -o textproc/redisearch16 textproc/redisearch
-    or
-  # portupgrade -o textproc/redisearch16 textproc/redisearch
-
-  NOTE: The textproc/redisearch16 brings a new name for the module,
-  i.e. redisearch16.so, so be careful.
-
-20210309:
-  AFFECTS: users of emulators/virtualbox-ose
-  AUTHOR: madpilot@FreeBSD.org
-
-  emulators/virtualbox-ose has been updated to 6.1.18. This new
-  version only works on amd64 hardware.
-
-  Previous version 5.x of the virtualbox ports have been preserved
-  as emulators/virtualbox-ose-legacy and similarly named ports for
-  the other parts.
-
-  If you can't run the latest version or wish to stay with the old
-  version, please install the legacy ports.
-
-  Also the additions at present build successfully only for amd64.
-  If you need i386 additions you can fallback to the old legacy
-  ones.
-
-  NOTE: There is no support for moving saved running machine states 
-  across major updates of virtualbox. It is recommended to properly 
-  shutdown all virtual machines before upgrading. Otherwise the saved 
-  state can simply be discarded after the upgrade, if it's not 
-  important to preserve it.
-
-  It should also be possible to downgrade to the legacy ports and
-  shutdown the machine properly from the saved state and then upgrade
-  back again.
-
-20210302:
-  AFFECTS: users of editors/emacs-devel
-  AUTHOR: jrm@FreeBSD.org
-
-  If you get the error "Symbol's value as variable is void: minor-modes",
-  rebuild the offending Emacs packages.  See
-  https://lists.gnu.org/archive/html/emacs-devel/2021-02/msg01164.html
-  for details.
-
-20210220:
-  AFFECTS: users of math/py-mathics
-  AUTHOR: thierry@FreeBSD.org
-
-  math/py-mathics has been split into several ports, and Mathics Core
-  only provides a rudimentary command-line shell called mathics.
-  To get the same functionality as in 1.x, you need to install either
-  mathicsscript or Mathics-Django.
-
-20210219:
-  AFFECTS: users of games/mangband
-  AUTHOR: adridg@FreeBSD.org
-
-  The client has updated from 1.1.3 (which has a single public server
-  left) to the current 1.5.3 (which has more public servers). If you
-  update, you can NOT connect to the old server any more. Remember
-  to finish your game before updating.
-
-20210210:
-  AFFECTS: users of audio/spotifyd
-  AUTHOR: rodrigo@FreeBSD.org
-
-  The configuration format for audio/spotifyd is now TOML, make
-  sure to update your configuration file after upgrading the port.
-  Look at the sample configuration file for a working example.
-  https://github.com/Spotifyd/spotifyd/blob/master/docs/src/config/File.md
-
-20210208:
-  AFFECTS: users of mail/mailscanner
-  AUTHOR: crees@FreeBSD.org
-
-  The clamavmodule has finally been removed after a long deprecation
-  period.  Please remove all references to it in your mailscanner.conf as
-  it will now count as a syntax error and may stop MailScanner starting!
-
-20210204:
-  AFFECTS: users of www/unit
-  AUTHOR: osa@FreeBSD.org
-
-  The default location for NGINX Unit's state directory has changed.  It
-  was moved from /usr/local/libexec/unit to /var/db/unit in order to
-  avoid write operations on /usr/local filesystem.
-
-20210130:
-  AFFECTS: users of graphics/opencv-core
-  AUTHOR: tcberner@FreeBSD.org
-
-  graphics/opencv-core has been reintegrated into graphics/opencv.
-  So there is no longer a circular dependency
-     opencv-core -> ffmpeg -> opencv
-
-  If you experience problems updating the packages, try
-      pkg delete -f opencv-core
-
-20210124:
-  AFFECTS: users of net-mgmt/netbox
-  AUTHOR: kai@FreeBSD.org
-
-  The Django templating language (DTL) is no longer supported for export
-  templates.  Please ensure that all export templates use Jinja2 before
-  upgrading.
-
-  Also the support for embedded graphs was completely removed and several
-  changes to the REST API were made.  Please check the changelogs for
-  further details.
-
-20210114:
-  AFFECTS: users of net-im/matterircd
-  AUTHOR: norrland@nullbyte.se
-
-  Commandline switches
-
-  Switched to viper for cmdline parsing, which does not support "short" flags.
-  You'll need to use --flag instead of -flag. Eg ./matterircd --debug
-  Bridge specific configuration is now only in configuration file. This means
-  the following flags have been removed: -restrict,-mmteam,-mmserver,
-  -mminsecure,-mmskiptlsverify.
-  You can set those in matterircd.toml, see the example file.
-
-  Config changes
-
-  BlacklistUser feature for slack has been renamed to DenyUsers.
-  JoinMpImOnTalk feature has been renamed to JoinDM and is available for
-  slack/mattermost
-  JoinInclude, JoinExclude now support regexp (see matterircd.toml.example)
-
-20210113:
-  AFFECTS: users of databases/redis[-devel]
-  AUTHOR: osa@FreeBSD.org
-
-  The databases/redis port has been updated to the recent stable release.
-  Users wanting to stay on v5.x can replace databases/redis with
-  databases/redis5 with one of the following commands:
-
-  # pkg install databases/redis5
-    or
-  # portmaster -o databases/redis5 databases/redis
-    or
-  # portupgrade -o databases/redis5 databases/redis
-
-20210106:
-  AFFECTS: mail/dovecot
-  AUTHOR: pi@FreeBSD.org
-
-  The VPOPMAIL option was removed, because it was dropped upstream,
-  so please check your config before upgrading.
-
-20210106:
-  AFFECTS: sysutils/graylog
-  AUTHOR: dch@FreeBSD.org
-
-  graylog 4.0 and higher now use a new license, the SSPL. For more
-  details, see https://www.graylog.org/post/graylog-v4-0-licensing-sspl
-
-20210102:
-  AFFECTS: x11/libexo, XFCE4 desktop users
-  AUTHOR: madpilot@FreeBSD.org
-
-  XFCE4 has been updated to version 4.16. Unluckily due to how the
-  update works out it interacts badly with a defect in pkg which can
-  cause files from the libexo package to be absent after upgrade.
-
-  To avoid the issue, before upgrading all packages, please update
-  libexo by itself:
-
-  # pkg upgrade libexo
-  # pkg upgrade
-
-  If you have already upgraded and you notice XFCE issues due to
-  missing libraries you can recover easily by forcing reinstallation
-  of libexo:
-
-  # pkg upgrade -f libexo
-
-  Users upgrading via ports should not be affected.
-
-20201228:
-  AFFECTS: www/py-flexget
-  AUTHOR: jbeich@FreeBSD.org
-
-  py-flexget (or py37-flexget) has been renamed to flexget.
-  "pkg upgrade" doesn't track MOVED file unlike portmaster, so
-  provide a hint e.g.,
-
-    $ pkg upgrade -x flexget
-
-  or install again, letting pkg remove the old version
-
-    $ pkg install flexget
-
-20201218:
-  AFFECTS: users of www/qt5-webengine
-  AUTHOR: kai@FreeBSD.org
-
-  Users that upgrade www/qt5-webengine without using pkg/poudriere might
-  experience failures due to conflicts with the installed version of 5.15.2.
-
-  In that case, pkg delete -f the qt5-webengine package before building
-  the updated version.
-
-20201130:
-  AFFECTS: users of graphics/jpeg
-  AUTHOR: rene@FreeBSD.org
-
-  The graphics/jpeg port has been removed in favor of graphics/jpeg-turbo.
-  The former port was vulnerable and used an outdated ABI and API.
-
-  Please check your make configuration for JPEG_PORT and remove it or
-  set it to "jpeg-turbo" if it is currently set to "jpeg".
-
-20201128:
-  AFFECTS: users of databases/cego
-  AUTHOR: pi@FreeBSD.org
-
-  Database updates from 2.45.x to 2.46.x require a xml tableset export
-  and import, since table structure information has been changed.
-
-20201128:
-  AFFECTS: users of lang/ruby26
-  AUTHOR: mfechner@FreeBSD.org
-
-  The default ruby version has been updated from 2.6 to 2.7.
-
-  If you compile your own ports you may keep 2.6 as the default version by
-  adding the following lines to your /etc/make.conf file:
-
-  #
-  # Keep ruby 2.6 as default version
-  #
-  DEFAULT_VERSIONS+=ruby=2.6
-
-  If you wish to update to the new default version, you need to first stop any
-  software that uses ruby. Then, you will need to follow these steps, depending
-  upon how you manage your system.
-
-  If you use pkg, simply upgrade:
-  # pkg upgrade
-
-  If you do not use pkg, please check entry 20190420.
-  The description there should also work for this version.
-
-20201112:
-  AFFECTS: users of net-mgmt/pushgateway
-  AUTHOR: rhurlin@FreeBSD.org
-
-  The v0.10.0 release changes the storage format. v0.10 can read the
-  storage format of v0.5--v0.9. It will then persist the new format so
-  that a downgrade won't be possible anymore [1].
-
-  For later releases >= v1.0.0 only persistence files created by v0.10+
-  are usable. So please, upgrade to v0.10 first to convert existing
-  persistence files.
-
-  It is intended to replace v0.10.0 in about four weeks from now (not
-  before 2020-12-12) by >= v1.3.0.
-
-  [1] https://github.com/prometheus/pushgateway/releases/tag/v0.10.0
-
-20201110:
-  AFFECTS: users of net-mgmt/netbox
-  AUTHOR: kai@FreeBSD.org
-
-  Changes related to the NetBox configuration:
-
-  1. If in use, LDAP authentication must be enabled by setting
-     REMOTE_AUTH_BACKEND to 'netbox.authentication.LDAPBackend'.  (The LDAP
-     configuration parameters in ldap_config.py remain unchanged.)
-
-  2. REMOTE_AUTH_DEFAULT_PERMISSIONS now takes a dictionary rather than a
-     list.  This is a mapping of permission names to a dictionary of
-     constraining attributes, or None.
-
-     For example, ['dcim.add_site', 'dcim.change_site'] would become
-     {'dcim.add_site': None, 'dcim.change_site': None}.
-
-  3. Support for the DEFAULT_TIMEOUT parameter under REDIS database
-     configuration was removed.  Set RQ_DEFAULT_TIMEOUT as a global
-     configuration parameter instead.
-
-  Please also check the pkg-message and the changelogs for further info.
-
-20201106:
-  AFFECTS: users of www/samdruckerserver
-  AUTHOR: dvl@FreeBSD.org
-
-  If upgrading from < 0.2.4, the database schema has changed.
-
-  Run these scripts to update your database:
-
-  * PostgreSQL/updates-2020.08.28.sql
-  * PostgreSQL/procedures.sql
-
-  These scripts are in /usr/local/share/samdrucker/PostgreSQL
-
-20201030:
-  AFFECTS: users of security/openvpn
-  AUTHOR: mandree@FreeBSD.org
-
-  The security/openvpn port has been updated to v2.5.0, which brings a
-  change to the default ciphersuite, which no longer contains BF-CBC.
-
-  Some options have been removed. Also, if you need to support very old (v2.3)
-  and unsupported clients or servers, you will need to adjust the
-  configuration. For details, see:
-  https://github.com/OpenVPN/openvpn/blob/release/2.5/Changes.rst#overview-of-changes-in-25
-
-20201029:
-  AFFECTS: users of www/node
-  AUTHOR: bhughes@FreeBSD.org
-
-  The www/node port has been updated to Node.js v15.0.0, the latest
-  upstream release. A new port, www/node14, has been created for the
-  v14.x LTS branch. Users wanting to stay on v14.x can replace www/node
-  with www/node14 with one of the following commands:
-
-  # pkg install www/node14
-    or
-  # portmaster -o www/node14 www/node
-    or
-  # portupgrade -o www/node14 www/node
-
-20201026:
-  AFFECTS: users of emulators/qemu
-  AUTHOR: bofh@FreeBSD.org
-
-  emulators/qemu has been updated to 5.0.1. Previous 4.2.X branch has
-  been repocopied to emulators/qemu42. If someone wants to stick with 4.2.X
-  branch please use one of the following command:
-
-  # pkg install emulators/qemu42
-    or
-  # portmaster -o emulators/qemu42 emulators/qemu
-    or
-  # portupgrade -o emulators/qemu42 emulators/qemu
-
-20201021:
-  AFFECTS: users of www/py-unit
-  AUTHOR: osa@FreeBSD.org
-
-  The www/py-unit port has been renamed to www/unit-python.
-
-20201012:
-  AFFECTS: Users of mesa-dri with VAAPI or VDPAU options
-  AUTHOR: manu@FreeBSD.org
-
-  The nondefault options VAAPI and VDPAU were removed from the mesa-dri
-  port and two new ports, mesa-gallium-va and mesa-gallium-vdpau now contain
-  the necessary libraries for using VAAPI or VDPAU on AMD hardware.
-
-20201012:
-  AFFECTS: users of devel/libsoup-gnome
-  AUTHOR: bapt@FreeBSD.org
-
-  libsoup-gnome has been merged back into libsoup for people building locally:
-  first delete libsoup-gnome before installing the new libsoup
-
-  $ pkg delete -f libsoup-gnome
-
-20201011:
-  AFFECTS: users of sysutils/rundeck3 who use MySQL as database
-  AUTHOR: daniel.tihanyi@tetragir.com
-
-  Please note that the MySQL JDBC driver is no longer bundled with Rundeck.
-  Please make sure that you migrate to the MariaDB Connector or copy the
-  driver yourself. More instructions:
-
-  https://docs.rundeck.com/docs/upgrading/upgrading-to-rundeck-3.3.4.html
-
-20201006:
-  AFFECTS: users of sysutils/tenshi
-  AUTHOR: 0mp@FreeBSD.org
-
-  The default location for tenshi's configuration file has changed.  It was
-  moved to /usr/local/etc/tenshi/tenshi.conf from /usr/local/etc/tenshi.conf
-  in order to follow upstream defaults.
-
-20201002:
-  AFFECTS: users of mail/fetchmail beginning with 6.4.12_1
-  AUTHOR:  mandree@FreeBSD.org
-
-  Note that if you are using fetchmail in a multi-user setup, i. e. with the
-  fetchmail_users (mind the -s!) variable set, the $fetchmail_home_prefix +
-  user second-guess work has been replaced by a real lookup of the user's home
-  directory. In the majority of configurations, this should not make a
-  difference, in some setups, it may open up some flexibility.
-
-  The fetchmail_home_prefix variable is ignored from 6.4.12_1 onwards.
-
-  Also, the rc script redirects its input from /dev/null so that passwords
-  will not be interactively queried from an rcfile.  Put passwords into
-  the [.]fetchmailrc or into a .netrc file.
-
-20201002:
-  AFFECTS: users of sysutils/modules
-  AUTHOR: 0mp@FreeBSD.org
-
-  The upstream developers of the Modules port encourage users to consult
-  the MIGRATING document, which describes the major changes occurring between
-  versions of Modules. It provides an overview of the new features and changed
-  behaviors that will be encountered when upgrading:
-
-  https://modules.readthedocs.io/en/v4.6.0/MIGRATING.html
-
-20200930:
-  AFFECTS: users of sysutils/syslog-ng32[789]
-  AUTHOR: cy@FreeBSD.org
-
-  rc.conf variables syslog_ng_config and syslog_ng_pid have been replaced
-  by syslog_ng_flags and syslog_ng_pidfile respectively, making them
-  consistent with the rest of the ports tree. syslog_ng_config and
-  syslog_ng_pid will continue to work until syslog-ng331 has been
-  released and imported into ports.
-
-20200924:
-  AFFECTS: users of net/freeradius3, who need python support
-  AUTHOR: zi@FreeBSD.org
-
-  FreeRADIUS 3.x currently uses python 2.7 for rlm_python support, which has
-  been deprecated and will be removed from the tree at the end of this year.
-
-  Starting in 3.0.21_2, the PYTHON option has been converted to use python 3.x.
-
-  Users should verify their python scripts are 3.x compatible and upgrade to
-  3.0.21_2 (or higher) to bring in python 3.x support.
-
-20200921:
-  AFFECTS: users of databases/postgresql* and other software using PostgreSQL to run
-  AUTHOR: kbowling@FreeBSD.org
-
-  The default version of PostgreSQL has been switched from 11 to 12.
-  The upgrade procedure can use up twice the space the databases
-  currently needs. If you have a big amount of stored data take a
-  closer look at the manpage of pg_upgrade for avoidance and/or
-  speedup of the upgrade.
-
-  The upgrade instructions consider a basic usage and do not match
-  complex scenarios like replication, sharding, or similar.
-
-  Upgrade instructions:
-
-  First stop your PostgreSQL, create PostgreSQL-binaries and backup your data.
-  If you have another Version of PostgreSQL installed, for example 11.9, your
-  files are named according to this.
-
-  # service postgresql stop
-  # pkg create postgresql11-server postgresql11-contrib
-  # mkdir /tmp/pg-upgrade
-  # tar xf postgresql11-server-11.9.txz -C /tmp/pg-upgrade
-  # tar xf postgresql11-contrib-11.9.txz -C /tmp/pg-upgrade
-  # pkg delete -f databases/postgresql11-server databases/postgresql11-contrib databases/postgresql11-client
-
-  Now update PostgreSQL:
-
-    pkg user:
-    # pkg install databases/postgresql12-server databases/postgresql12-contrib
-    # pkg upgrade
-
-    Portmaster users:
-    # portmaster databases/postgresql12-server databases/postgresql12-contrib
-    # portmaster -a
-
-    Portupgrade users:
-    # portinstall databases/postgresql12-server databases/postgresql12-contrib
-    # portupgrade -a
-
-  After installing the new PostgreSQL version you need to convert
-  all your databases to new version:
-
-  # su -l postgres -c "/usr/local/bin/initdb --encoding=utf-8 --lc-collate=C -D /var/db/postgres/data12 -U postgres"
-  # su -l postgres -c "pg_upgrade -b /tmp/pg-upgrade/usr/local/bin/ -d /var/db/postgres/data11/ -B /usr/local/bin/ -D /var/db/postgres/data12/ -U postgres "
-
-  Now the migration is finished. You can start PostgreSQL again with:
-
-  # service postgresql start
-
-  ATTENTION:
-  1) The default user changed from "pgsql" to "postgres" in 11. The migration steps above now assume
-     the "postgres" database user and FreeBSD user.
-  2) See the updating entry 20190829 if you are updating from a release prior to 11.
-  3) If you use non-default initdb options, you have to adjust the initdb-command accordingly
-
-20200918:
-  AFFECTS: users of mail/thunderbird
-  AUTHOR: cmt@FreeBSD.org
-
-  Thunderbird has been updated to the 78esr series. Thunderbird will
-  try to convert old profiles on first start, but conversion may fail
-  especially on old profiles. Also, older versions of Thunderbird will
-  not be able to use a profile once it has been converted. It is
-  strongly recommended to move any ~/.thunderbird folder away before
-  starting Thunderbird 78 for the first time, thus creating a new and
-  empty profile.
-  Also note that OpenPGP functionality has been integrated into Thunderbird,
-  obsoleting the Enigmail extension.
-  Check https://wiki.mozilla.org/Thunderbird:OpenPGP for details, and
-  especially https://wiki.mozilla.org/Thunderbird:OpenPGP:Smartcards
-  if your private key lives on a smartcard.
-
-20200914:
-  AFFECTS: users of lang/php72
-  AUTHOR: tz@FreeBSD.org
-
-  The default version of PHP has been switched from 7.2 to 7.4.
-
-  If you use binary packages you should make a list of php packages
-  before running 'pkg upgrade':
-
-  # pkg info php7\* > ~/installed-php-ports-list
-
-  After the upgrade, check with such list if all your php extensions
-  are still installed, and reinstall them if needed.
-
-  If you use mod_php72 you need to deinstall it and install mod_php74.
-
-20200811:
-  AFFECTS: users of *-emacs26-* packages
-  AUTHOR: jrm@FreeBSD.org
-
-  With the release of Emacs version 27.1, the major version of editors/emacs has
-  changed from 26 to 27.  This means the names of some dependent packages have
-  also changed, so simply running `pkg upgrade` will not upgrade foo-emacs26-x
-  to foo-emacs27-x.  To update these packages, run these commands with superuser
-  privileges.
-
-  Binary package users:
-
-    # sh
-    # for i in $(pkg query -g %n '*-emacs26*'); do \
-        nn=$(echo "$i" | sed -e 's/emacs26/emacs27/'); \
-        pkg set -yn "$i":"$nn"; \
-      done;
-    # pkg upgrade
-
-  portmaster users:
-
-    # portmaster -r emacs
-
-20200803:
-  AFFECTS: users of lang/perl5*
-  AUTHOR: mat@FreeBSD.org
-
-  The default Perl version has been switched to Perl 5.32.  If you are using
-  binary packages to upgrade your system, you do not have anything to do, pkg
-  upgrade will do the right thing.  For the other people, follow the
-  instructions in entry 20161103, it should still be the same.
-
-20200726:
-  AFFECTS: users of net-mgmt/librenms
-  AUTHOR:  dvl@FreeBSD.org
-
-  The %%WWWDIR%%%/logs directory has been relocated to /var/log/librenms/
-  via the APP_LOG directive in %%WWWDIR%%%/.env.example - this won't affect
-  existing installs, but you are strongly encouraged to update your .env file
-  settings and relocate your logs.
-
-  Logs which were going to /var/log/messages and /var/log/librenms/ now only go
-  to /var/log/librenms/
-
-20200720:
-  AFFECTS: users of net-mgmt/librenms
-  AUTHOR:  dvl@FreeBSD.org
-
-  As mentioned previously in 20200503 polling via cronjob has been removed as of
-  release 1.63 - see
-  https://community.librenms.org/t/dropping-support-for-php-7-1-and-python-2/11851
-
-  A database upgrade is required:
-
-     cd /usr/local/www/librenms
-     sudo ./lnms migrate
-
-  You must  migrate to the Dispatch Service:
-  https://docs.librenms.org/Extensions/Dispatcher-Service/
-
-  You may need to add LIBRENMS_USER to .env (see .env.example).
-
-  These steps should get you running:
-  * comment out the crontab entries listed above under PYPOLLER
-  * populate %%WWWDIR%%/.env with:
-    * APP_KEY - see farther below for how to create
-    * NODE_ID - see just below for how to create
-    * DB_HOST
-    * DB_DATABASE
-    * DB_USERNAME
-    * DB_PASSWORD
-  * you can create a NODE_ID with: php -r 'echo uniqid() . "\n";'
-  * sysrc librenms_enable="YES"
-  * service librenms start
-
-20200719:
-  AFFECTS: users of emulators/qemu
-  AUTHOR: bofh@FreeBSD.org
-
-  emulators/qemu has been updated to 4.2.1. Previous 4.1.X branch has
-  been repocopied to emulators/qemu41. If someone wants to stick with 4.1.X
-  branch please use one of the following command:
-
-  # pkg install emulators/qemu41
-    or
-  # portmaster -o emulators/qemu41 emulators/qemu
-    or
-  # portupgrade -o emulators/qemu41 emulators/qemu
-
-20200716:
-  AFFECTS: users of shells/bash, shells/bash-static
-  AUTHOR: ehaupt@FreeBSD.org
-
-  In order to cleanly decouple bash from base, bash now reads `profile` from
-  LOCALBASE/etc insead of from /etc. If you are using system wide bash
-  configuration in /etc/profile please migrate to LOCALBASE/etc/profile
-
-  # cp /etc/profile /usr/local/etc/profile
-
-  or create a symlink
-
-  # ln -s /etc/profile /usr/local/etc/
-
-  If you encounter the following error, you may have the obsolete
-  /lib/libreadline.so.8 lying around after an incomplete base update:
-
-  ld-elf.so.1: Undefined symbol "rl_signal_event_hook" referenced from COPY relocation in /usr/local/bin/bash
-
-  Please refer to to (23.5.6.2) in the FreeBSD Handbook on how to
-  safely check for outdated files and libraries:
-
-  https://www.freebsd.org/doc/en/books/handbook/makeworld.html
-
-20200713:
-  AFFECTS: users of mail/php7[2-4]-imap
-  AUTHOR: tz@FreeBSD.org
-
-  The imap module of PHP was compiled against cclient till now. But this lib is
-  unmaintained for over 7 years. When combined with modern OpenSSL there are
-  various crashes reported.
-
-  Switching to the fork panda-cclient fixes these issues. Therefore we make the
-  usage of Panda cclient the new default. If you want to use the old cclient,
-  you need to enable it now!
-
-20200616:
-  AFFECTS: users of www/baikal
-  AUTHOR: gahr@FreeBSD.org
-
-  The www/baikal has been updated to 0.7.1. With the 0.7.0 release, our
-  configuration format was updated to use YAML files. You need to go through
-  the installer again but we pre-fill most values with the ones from your old
-  installation. We recommend that you make a full backup of your data, as a
-  safety measure. Starting with 0.7.0, Baikal stores data in both the Specific
-  and the config folders. Keep this in mind when upgrading!
-
-  Known issue:: Upgrading from versions older than 0.6.1 does not work.
 
