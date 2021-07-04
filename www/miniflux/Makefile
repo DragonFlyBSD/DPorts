@@ -1,4 +1,3 @@
-
 PORTNAME=	miniflux
 DISTVERSION=	2.0.31
 CATEGORIES=	www
