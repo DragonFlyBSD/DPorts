@@ -1,4 +1,3 @@
-
 PORTNAME=		cd-hit
 DISTVERSIONPREFIX=	V
 DISTVERSION=		4.8.1
@@ -18,6 +17,12 @@ GH_PROJECT=	cdhit
 SHEBANG_FILES=	${WRKSRC}/*.pl
 
 MAKE_FLAGS=	openmp=yes
+
+.include <bsd.port.options.mk>
+
+.if ${ARCH} == powerpc
+USES+=		compiler:gcc-c++11-lib
+.endif
 
 post-patch:
 	@${REINPLACE_CMD} \
