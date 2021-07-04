@@ -1,4 +1,3 @@
-
 PORTNAME=	keybase
 PORTVERSION=	5.6.1
 DISTVERSIONPREFIX=	v
@@ -19,8 +18,5 @@ GO_TARGET=	${GO_PKGNAME}/keybase ${GO_PKGNAME}/kbfs/kbfsfuse ${GO_PKGNAME}/kbfs/
 WRKSRC=		${WRKDIR}/client-v${PORTVERSION}/go
 
 PLIST_FILES=	bin/git-remote-keybase bin/kbfsfuse bin/kbfstool bin/keybase 
-
-post-patch:
-	@${REINPLACE_CMD} -e '/+build/ s|,amd64||' ${WRKSRC}/vendor/github.com/keybase/go-ps/process_freebsd.go
 
 .include <bsd.port.mk>
