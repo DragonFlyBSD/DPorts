@@ -1,4 +1,3 @@
-
 PORTNAME=	amanda-perl-wrapper
 PORTVERSION=	1.01
 CATEGORIES=	misc perl5
@@ -18,8 +17,6 @@ PLIST_FILES=	bin/perl-amanda
 
 do-fetch:
 	@${DO_NADA}
-
-pre-build: apply-slist
 
 do-build:
 	cd ${WRKSRC} && ${CC} -o perl-amanda ${WRKDIR}/perl-amanda.c
