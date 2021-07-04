@@ -1,4 +1,3 @@
-
 PORTNAME=	rgen
 PORTVERSION=	0.8.2
 CATEGORIES=	devel rubygems
@@ -12,5 +11,7 @@ LICENSE_FILE=	${WRKSRC}/MIT-LICENSE
 
 USES=		gem
 USE_RUBY=	yes
+
+NO_ARCH=	yes
 
 .include <bsd.port.mk>
