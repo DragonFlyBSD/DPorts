@@ -1,4 +1,3 @@
-
 PORTNAME=	rdoc
 PORTVERSION=	6.3.1
 CATEGORIES=	devel rubygems
