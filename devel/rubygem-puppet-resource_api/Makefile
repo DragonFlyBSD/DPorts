@@ -1,4 +1,3 @@
-
 PORTNAME=	puppet-resource_api
 PORTVERSION=	1.8.4
 CATEGORIES=	devel rubygems
@@ -13,5 +12,7 @@ RUN_DEPENDS=	rubygem-hocon>=1.0:devel/rubygem-hocon
 
 USES=		gem
 USE_RUBY=	yes
+
+NO_ARCH=	yes
 
 .include <bsd.port.mk>
