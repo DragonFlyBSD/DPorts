@@ -1,6 +1,0 @@
-USES+= alias
-
-# avoid getdate(3) symbol conflict
-dfly-patch:
-	${REINPLACE_CMD} -e 's@getdate(@getdate0(@g' \
-		${WRKSRC}/include/util.c ${WRKSRC}/include/util.h

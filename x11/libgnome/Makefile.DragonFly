@@ -1,2 +1,0 @@
-LIB_DEPENDS+=	libltdl.so:devel/libltdl
-LIB_DEPENDS+=	libpopt.so:devel/popt

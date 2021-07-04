@@ -1,8 +1,0 @@
-.if !defined(DPORTS_BUILDER)
-MANUAL_PACKAGE_BUILD=	requires lsof at runtime
-.endif
-
-BUILD_DEPENDS:=	${BUILD_DEPENDS:N*lsof}
-RUN_DEPENDS:=	${RUN_DEPENDS:N*lsof}
-
-CFLAGS+=	-Wno-stringop-truncation -Wno-pointer-sign

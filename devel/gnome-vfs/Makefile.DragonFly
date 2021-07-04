@@ -1,5 +1,0 @@
-
-# for now do not enable samba and mdns by default (manual options OK)
-OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NHAL:NSAMBA:NMDNS}
-
-SAMBA_USES+=	gssapi:mit
