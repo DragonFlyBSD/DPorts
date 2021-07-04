@@ -1,4 +1,3 @@
-
 PORTNAME=	scanf
 DISTVERSION=	1.0.0
 CATEGORIES=	devel rubygems
@@ -11,5 +10,7 @@ LICENSE=	BSD2CLAUSE
 
 USES=		gem
 USE_RUBY=	yes
+
+NO_ARCH=	yes
 
 .include <bsd.port.mk>
