@@ -1,6 +1,5 @@
-
 PORTNAME=	jasmine-core
-PORTVERSION=	3.6.0
+PORTVERSION=	3.7.1
 CATEGORIES=	devel ruby
 MASTER_SITES=	RG
 
