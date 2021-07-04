@@ -1,4 +1,3 @@
-
 PORTNAME=	libsidplayfp
 DISTVERSION=	2.2.0
 CATEGORIES=	audio
@@ -18,7 +17,8 @@ USES=		compiler:c++11-lang libtool pathfix pkgconfig
 USE_LDCONFIG=	yes
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--with-exsid=no \
+CONFIGURE_ARGS=	--disable-static \
+		--with-exsid=no \
 		--with-gcrypt
 
 INSTALL_TARGET=	install-strip
