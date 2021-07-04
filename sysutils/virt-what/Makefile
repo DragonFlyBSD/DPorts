@@ -1,4 +1,3 @@
-
 PORTNAME=	virt-what
 PORTVERSION=	1.21
 CATEGORIES=	sysutils
