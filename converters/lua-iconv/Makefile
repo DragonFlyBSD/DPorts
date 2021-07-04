@@ -25,6 +25,7 @@ CFLAGS_x86_64=	-fPIC
 CFLAGS_armv6=	-fPIC
 CFLAGS_armv7=	-fPIC
 CFLAGS_i386=	-fPIC
+CFLAGS_powerpc=	-fPIC
 
 do-install:
 	@${MKDIR} ${STAGEDIR}${LUA_MODLIBDIR}
