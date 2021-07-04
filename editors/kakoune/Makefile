@@ -1,16 +1,16 @@
-
 PORTNAME=	kakoune
 DISTVERSION=	2020.09.01
+PORTREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	https://github.com/mawww/kakoune/releases/download/v${DISTVERSION}/
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	tobik@FreeBSD.org
 COMMENT=	Modal code editor with a focus on interactivity
 
 LICENSE=	UNLICENSE
 LICENSE_FILE=	${WRKSRC:H}/UNLICENSE
 
-RUN_DEPENDS=	setsid:sysutils/ssid
+RUN_DEPENDS=	setsid:sysutils/setsid
 
 USES=		compiler:c++17-lang gmake ncurses tar:bzip2
 DATADIR=	${PREFIX}/share/kak
