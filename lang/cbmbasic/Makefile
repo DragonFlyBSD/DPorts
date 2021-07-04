@@ -1,4 +1,3 @@
-
 PORTNAME=	cbmbasic
 PORTVERSION=	20180708
 CATEGORIES=	lang
@@ -6,9 +5,9 @@ CATEGORIES=	lang
 MAINTAINER=	trasz@FreeBSD.org
 COMMENT=	Portable version of Commodore 64 BASIC
 
-LICENSE=	BSD
-
-RESTRICTED=	Not really sure about the legal status
+LICENSE=	BSD NONE
+# Not really sure about the legal status
+LICENSE_COMB=	multi
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	mist64
