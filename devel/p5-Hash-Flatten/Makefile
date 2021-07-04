@@ -1,4 +1,3 @@
-
 PORTNAME=	Hash-Flatten
 PORTVERSION=	1.19
 PORTREVISION=	2
@@ -17,5 +16,7 @@ TEST_DEPENDS=	p5-Log-Trace>0:devel/p5-Log-Trace \
 
 USES=		perl5
 USE_PERL5=	configure
+
+NO_ARCH=	yes
 
 .include <bsd.port.mk>
