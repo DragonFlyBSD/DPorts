@@ -1,4 +1,3 @@
-
 PORTNAME=	Graphics-ColorUtils
 PORTVERSION=	0.17
 CATEGORIES=	graphics perl5
@@ -13,5 +12,7 @@ LICENSE_COMB=	dual
 
 USES=		perl5
 USE_PERL5=	configure
+
+NO_ARCH=	yes
 
 .include <bsd.port.mk>
