@@ -1,4 +1,3 @@
-
 PORTNAME=	intervaltree
 DISTVERSION=	g20151213
 PORTREVISION=	2
@@ -19,7 +18,7 @@ PLIST_FILES=	bin/interval_tree_test include/${PORTNAME}/IntervalTree.h
 
 .include <bsd.port.pre.mk>
 
-.if ${ARCH} == i386
+.if ${ARCH} == i386 || ${ARCH} == powerpc
 post-patch:
 	${REINPLACE_CMD} -e 's|<bool, unsigned long>|<bool, unsigned int>|g' \
 		${WRKSRC}/interval_tree_test.cpp
