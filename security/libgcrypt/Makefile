@@ -1,4 +1,3 @@
-
 PORTNAME=	libgcrypt
 DISTVERSION=	1.9.3
 CATEGORIES=	security
