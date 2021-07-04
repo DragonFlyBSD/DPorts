@@ -1,4 +1,3 @@
-
 PORTNAME=	ipv6toolkit
 PORTVERSION=	2.0
 DISTVERSIONPREFIX=	v
@@ -18,6 +17,8 @@ SUB_FILES=	BSDMakefile Makefile Makefile.lib
 MAKEFILE=	BSDMakefile
 PORTDOCS=	README.TXT CHANGES.TXT CREDITS.TXT
 
+CFLAGS_riscv64=	-fPIC
+
 PROGDIRS=	addr6 flow6 frag6 icmp6 jumbo6 na6 ni6 ns6 path6 ra6 rd6 rs6 \
 		scan6 tcp6 udp6
 LIBDIRS=	libipv6
@@ -27,7 +28,7 @@ OPTIONS_DEFINE=	DOCS
 post-extract:
 	@cd ${WRKSRC} && ${MKDIR} ${PROGDIRS} ${LIBDIRS}
 
-post-patch: apply-slist
+pre-build:
 	${INSTALL_DATA} ${WRKDIR}/BSDMakefile ${WRKSRC}
 	for D in ${PROGDIRS}; do \
 		${INSTALL_DATA} ${WRKDIR}/Makefile ${WRKSRC}/$$D; \
