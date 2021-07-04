@@ -1,4 +1,3 @@
-
 PORTNAME=	libretro-genesis_plus_gx
 PORTVERSION=	0.20210214
 CATEGORIES=	games
@@ -6,6 +5,7 @@ CATEGORIES=	games
 MAINTAINER=	menelkir@itroll.org
 COMMENT=	Enhanced port of Genesis Plus
 
+# Commercial users must seek permission from copyright holders.
 LICENSE=	GPGX
 LICENSE_NAME=	GPGX
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
@@ -13,8 +13,6 @@ LICENSE_PERMS=	dist-mirror no-dist-sell pkg-mirror no-pkg-sell auto-accept
 
 USES=		compiler:c++11-lib gmake
 USE_LDCONFIG=	yes
-
-NO_CDROM=	Commercial users must seek permission from copyright holders.
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	libretro
