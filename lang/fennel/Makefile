@@ -1,9 +1,7 @@
-
 PORTNAME=	fennel
-DISTVERSION=	0.8.1
+DISTVERSION=	0.9.2
 CATEGORIES=	lang
 MASTER_SITES=	https://git.sr.ht/~technomancy/${PORTNAME}/archive/${DISTVERSION}${EXTRACT_SUFX}?dummy=/
-#MASTER_SITES=	https://fennel-lang.org/downloads/
 
 MAINTAINER=	jrm@FreeBSD.org
 COMMENT=	Lisp that compiles to Lua
