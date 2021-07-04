@@ -1,10 +1,9 @@
-
 PORTNAME=	rtorrent
 PORTVERSION=	0.9.8
 CATEGORIES=	net-p2p
 MASTER_SITES=	https://rtorrent.net/downloads/
 
-MAINTAINER=	dbaio@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	BitTorrent Client written in C++
 
 LICENSE=	GPLv2 GPLv3
