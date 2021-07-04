@@ -1,4 +1,3 @@
-
 PORTNAME=	libhdhomerun
 PORTVERSION=	20200907
 CATEGORIES=	multimedia
