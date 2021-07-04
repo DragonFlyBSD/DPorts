@@ -1,4 +1,3 @@
-
 PORTNAME=	Data-MessagePack-Stream
 PORTVERSION=	0.07
 PORTREVISION=	2
@@ -23,5 +22,6 @@ CFLAGS_aarch64=	-fPIC
 CFLAGS_armv7=	-fPIC
 CFLAGS_i386=	-fPIC
 CFLAGS_powerpc=	-fPIC
+CFLAGS_riscv64=	-fPIC
 
 .include <bsd.port.mk>
