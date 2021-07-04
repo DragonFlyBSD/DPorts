@@ -1,4 +1,3 @@
-
 PORTNAME=	Test-LWP-UserAgent
 PORTVERSION=	0.030
 CATEGORIES=	www perl5
@@ -27,5 +26,7 @@ TEST_DEPENDS=	p5-Plack>=0:www/p5-Plack \
 
 USE_PERL5=	configure
 USES=		perl5
+
+NO_ARCH=	yes
 
 .include <bsd.port.mk>
