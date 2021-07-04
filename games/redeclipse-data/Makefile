@@ -1,5 +1,3 @@
-# Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-
 PORTNAME=	redeclipse-data
 PORTVERSION=	2.0.0
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,8 @@ CATEGORIES=	games
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Data files for Red Eclipse first-person shooter
+
+CONFLICTS_INSTALL=redeclipse-data16-[0-9]*
 
 USE_GITHUB=	nodefault
 
