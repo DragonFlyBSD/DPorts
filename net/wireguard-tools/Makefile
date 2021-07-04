@@ -1,4 +1,3 @@
-
 PORTNAME=	wireguard-tools
 PORTVERSION=	1.0.20210424
 CATEGORIES=	net net-vpn
