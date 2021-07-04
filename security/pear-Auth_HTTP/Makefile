@@ -1,9 +1,8 @@
-
 PORTNAME=	Auth_HTTP
 PORTVERSION=	2.1.8
 CATEGORIES=	security www pear
 
-MAINTAINER=	miwi@FreeBSD.org
+MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	PEAR HTTP authentication
 
 USES=		pear
