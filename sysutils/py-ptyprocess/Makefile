@@ -1,4 +1,3 @@
-
 PORTNAME=	ptyprocess
 PORTVERSION=	0.6.0
 CATEGORIES=	sysutils python
@@ -12,5 +11,7 @@ LICENSE=	ISCL
 
 USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
+
+NO_ARCH=	yes
 
 .include <bsd.port.mk>
