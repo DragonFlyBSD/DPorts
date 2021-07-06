@@ -1,7 +1,5 @@
-# Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-
 PORTNAME=	pyglet
-PORTVERSION=	1.5.15
+PORTVERSION=	1.5.18
 CATEGORIES=	graphics multimedia x11-toolkits python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
