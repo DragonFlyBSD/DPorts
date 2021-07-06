@@ -1,4 +1,3 @@
-
 PORTNAME=	aniso8601
 PORTVERSION=	6.0.0
 CATEGORIES=	devel python
@@ -18,5 +17,8 @@ USE_PYTHON=	autoplist concurrent distutils
 NO_ARCH=	yes
 
 PORTSCOUT=	limit:^6\.
+
+do-test:
+	cd ${WRKSRC} && ${PYTHON_CMD} -m unittest -v
 
 .include <bsd.port.mk>
