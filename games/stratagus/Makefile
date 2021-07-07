@@ -3,6 +3,7 @@
 PORTNAME=	stratagus
 PORTVERSION=	2.4.2
 DISTVERSIONPREFIX=	v
+PORTREVISION=	1
 CATEGORIES=	games
 
 MAINTAINER=	amdmi3@FreeBSD.org
@@ -10,9 +11,6 @@ COMMENT=	Free cross-platform real-time strategy gaming engine
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
-
-DEPRECATED=	Uses EOL Python 2.7 via lang/tolua++
-EXPIRATION_DATE=2021-06-23
 
 LIB_DEPENDS=	libpng.so:graphics/png \
 		libtolua++-${LUA_VER}.so:lang/tolua++
