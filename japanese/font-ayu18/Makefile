@@ -1,4 +1,3 @@
-
 PORTNAME=	ayu18
 PORTVERSION=	1.3.1.1
 PORTREVISION=	3
@@ -25,8 +24,6 @@ MAKEFILE=	${WRKDIR}/Makefile
 PORTDOCS=	README.txt
 
 OPTIONS_DEFINE=	DOCS
-
-pre-build: apply-slist
 
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
