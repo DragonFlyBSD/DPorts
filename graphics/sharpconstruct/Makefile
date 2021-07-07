@@ -1,8 +1,6 @@
-# Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-
 PORTNAME=	sharpconstruct
 PORTVERSION=	0.11
-PORTREVISION=	16
+PORTREVISION=	17
 CATEGORIES=	graphics
 MASTER_SITES=	SF/sharp3d/SharpConstruct/${PORTVERSION}
 
@@ -21,7 +19,7 @@ ONLY_FOR_ARCHS_REASON=	uses SSE instructions
 USES=		compiler:c++11-lang gl tar:bzip2 gmake pkgconfig
 USE_CXXSTD=	c++11
 GNU_CONFIGURE=	yes
-USE_GL=		yes
+USE_GL=		gl glu
 
 PLIST_FILES=	bin/${PORTNAME} \
 		man/man1/${PORTNAME}.1.gz
