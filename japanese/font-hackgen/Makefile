@@ -1,7 +1,6 @@
-
 PORTNAME=	hackgen
-PORTVERSION=	2.2.3
-#PORTREVISION=	0
+PORTVERSION=	2.3.2
+PORTREVISION=	0
 CATEGORIES=	japanese x11-fonts
 MASTER_SITES=	https://github.com/yuru7/HackGen/releases/download/v${PORTVERSION}/
 PKGNAMEPREFIX=	ja-font-
