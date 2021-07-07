@@ -2,7 +2,7 @@
 
 PORTNAME=			${SAMBA4_BASENAME}412
 PORTVERSION=			${SAMBA4_VERSION}
-PORTREVISION=			0
+PORTREVISION=			1
 CATEGORIES?=			net
 MASTER_SITES=			SAMBA/samba/stable SAMBA/samba/rc
 DISTNAME=			${SAMBA4_DISTNAME}
@@ -381,7 +381,7 @@ MANDOC_CONFIGURE_ENV_OFF=	XSLTPROC="true"
 .include <bsd.port.options.mk>
 ##############################################################################
 
-.if ${ARCH} == aarch64 || ${ARCH} == x86_64 || ${ARCH} == i386 || ${ARCH} == powerpc64 || ${ARCH} == powerpc64le
+.if ${ARCH} == aarch64 || ${ARCH} == x86_64 || ${ARCH} == armv7 || ${ARCH} == i386 || ${ARCH} == powerpc64 || ${ARCH} == powerpc64le
 # unwind
 LIB_DEPENDS+=			libunwind.so:devel/libunwind
 .endif
