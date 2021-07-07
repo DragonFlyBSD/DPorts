@@ -1,7 +1,6 @@
-# Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-
 PORTNAME=	sdl-ball
 PORTVERSION=	1.04
+PORTREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	SF
 DISTNAME=	SDL-Ball_${PORTVERSION}_src
