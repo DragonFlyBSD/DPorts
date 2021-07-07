@@ -1,8 +1,6 @@
-# Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-
 PORTNAME=	cave9
 PORTVERSION=	0.4.1.git20150408
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	games
 
 MAINTAINER=	amdmi3@FreeBSD.org
