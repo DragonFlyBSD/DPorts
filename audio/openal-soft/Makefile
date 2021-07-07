@@ -1,4 +1,3 @@
-
 PORTNAME=	openal-soft
 PORTVERSION=	1.21.0
 CATEGORIES=	audio
