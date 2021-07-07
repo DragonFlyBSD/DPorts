@@ -1,8 +1,6 @@
-# Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-
 PORTNAME=	shootingstar
 PORTVERSION=	1.2.0
-PORTREVISION=	12
+PORTREVISION=	13
 CATEGORIES=	games
 MASTER_SITES=	http://www.2ndpoint.fi/projektit.xml/shootingstar/files/ \
 		http://mirror.amdmi3.ru/distfiles/
