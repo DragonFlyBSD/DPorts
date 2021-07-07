@@ -2,7 +2,7 @@
 
 PORTNAME=	swi-pl
 DISTVERSION=	8.2.3
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=	http://www.swi-prolog.org/download/stable/src/
 DISTNAME=	swipl-${DISTVERSION}
@@ -20,8 +20,8 @@ LIB_DEPENDS=	libpcre.so:devel/pcre \
 		libossp-uuid.so:misc/ossp-uuid \
 		libyaml.so:textproc/libyaml
 
-USES=		compiler:c11 libedit cmake libarchive pathfix pkgconfig \
-		shebangfix ssl
+USES=		cmake compiler:c11 libarchive libedit pathfix pkgconfig \
+		readline shebangfix ssl xorg
 USE_XORG=	ice sm x11 xext xft xinerama xpm xt
 
 OPTIONS_DEFINE=		DOCS TCMALLOC EXAMPLES XPCE GMP THREADED ODBC
@@ -43,9 +43,8 @@ XPCE_DESC=		Install XPCE graphical support
 XPCE_CMAKE_ON=		-DSWIPL_PACKAGES_X=ON
 XPCE_CMAKE_OFF=		-DSWIPL_PACKAGES_X=OFF
 XPCE_LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
-			libfreetype.so:print/freetype2 \
-			libjpeg.so:graphics/jpeg-turbo
-XCPE_USES=		jpeg xorg
+			libfreetype.so:print/freetype2
+XPCE_USES=		jpeg
 
 GMP_DESC=		Enable bignum and rational numbers
 GMP_CMAKE_ON=		-DUSE_GMP=ON
@@ -76,7 +75,7 @@ USE_LDCONFIG=	${PREFIX}/lib/swipl/lib/${ARCH}-${OPSYS:tl}
 
 PLIST_SUB+=	ARCH=${ARCH} OS=${OPSYS:tl}
 
-.if ${ARCH} == "i386" || ${ARCH} == "x86_64"
+.if ${ARCH} == aarch64 || ${ARCH} == x86_64 || ${ARCH} == armv7 || ${ARCH} == i386 || ${ARCH} == powerpc64 || ${ARCH} == powerpc64le
 LIB_DEPENDS+=	libunwind.so:devel/libunwind
 .endif
 
