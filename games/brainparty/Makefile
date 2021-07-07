@@ -1,8 +1,6 @@
-# Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-
 PORTNAME=	brainparty
 PORTVERSION=	0.61
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	https://launchpad.net/brainparty/trunk/${PORTVERSION}/+download/ \
 		http://mirror.amdmi3.ru/distfiles/
