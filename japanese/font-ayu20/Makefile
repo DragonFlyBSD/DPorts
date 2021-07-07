@@ -1,4 +1,3 @@
-
 PORTNAME=	ayu20
 PORTVERSION=	1.7.a
 PORTREVISION=	3
@@ -24,8 +23,6 @@ PORTDOCS=	README.txt
 MAKEFILE=	${WRKDIR}/Makefile
 
 OPTIONS_DEFINE=	DOCS
-
-pre-build: apply-slist
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/fonts.alias \
