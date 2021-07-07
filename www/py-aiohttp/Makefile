@@ -35,7 +35,7 @@ USE_PYTHON=	autoplist distutils cython
 
 .include <bsd.port.pre.mk>
 
-.if ${PYTHON_VER} < 3.7
+.if ${PYTHON_REL} < 30700
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}idna_ssl>=1.0:dns/py-idna_ssl@${PY_FLAVOR}
 .endif
 
