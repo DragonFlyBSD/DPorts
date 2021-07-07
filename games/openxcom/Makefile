@@ -1,9 +1,7 @@
-# Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-
 PORTNAME=	openxcom
 PORTVERSION=	1.0
 DISTVERSIONPREFIX=	v
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	games
 
 MAINTAINER=	amdmi3@FreeBSD.org
