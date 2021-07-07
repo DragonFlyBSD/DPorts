@@ -1,7 +1,6 @@
-# Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-
 PORTNAME=	supertuxkart
 PORTVERSION=	1.2
+PORTREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	SF/supertuxkart/SuperTuxKart/${PORTVERSION}
 DISTNAME=	SuperTuxKart-${PORTVERSION}-src
