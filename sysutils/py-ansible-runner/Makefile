@@ -1,4 +1,3 @@
-
 PORTNAME=	ansible-runner
 DISTVERSION=	1.4.7
 CATEGORIES=	sysutils python
@@ -23,7 +22,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}ansible>2.0:sysutils/ansible@${PY_FLAVOR} \
 USES=		cpe python:3.6+
 USE_PYTHON=	distutils autoplist concurrent
 
-CPE_VENDOR=	ansibleworks
+CPE_VENDOR=	redhat
 
 NO_ARCH=	yes
 
