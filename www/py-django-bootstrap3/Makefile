@@ -1,4 +1,3 @@
-
 PORTNAME=	django-bootstrap3
 PORTVERSION=	14.2.0
 CATEGORIES=	www python
@@ -20,7 +19,7 @@ NO_ARCH=	yes
 
 .include <bsd.port.pre.mk>
 
-.if ${PYTHON_REL} < 3800
+.if ${PYTHON_REL} < 30800
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}importlib-metadata>=1.5.0:devel/py-importlib-metadata@${PY_FLAVOR}
 .endif
 
