@@ -1,6 +1,6 @@
---- libopenjpeg/opj_malloc.h.orig	2014-10-25 11:12:01.310661000 +0000
-+++ libopenjpeg/opj_malloc.h
-@@ -83,7 +83,7 @@ Allocate memory aligned to a 16 byte bou
+--- libopenjpeg/opj_malloc.h.orig	2021-07-07 14:32:23.831388000 +0200
++++ libopenjpeg/opj_malloc.h	2021-07-07 14:32:40.291009000 +0200
+@@ -83,7 +83,7 @@
  #else /* Not _WIN32 */
  	#if defined(__sun)
  		#define HAVE_MEMALIGN
