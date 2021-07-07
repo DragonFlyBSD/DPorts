@@ -1,8 +1,7 @@
 # Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	chef-bin
-PORTVERSION=	15.15.0
+PORTVERSION=	16.13.16
 CATEGORIES=	sysutils rubygems
 MASTER_SITES=	RG
 
@@ -17,6 +16,8 @@ RUN_DEPENDS=	rubygem-chef>=${PORTVERSION}:sysutils/rubygem-chef
 USES=		gem
 USE_RUBY=	yes
 
+NO_ARCH=	yes
+
 PLIST_FILES=	bin/chef-apply \
 		bin/chef-client \
 		bin/chef-resource-inspector \
@@ -24,7 +25,5 @@ PLIST_FILES=	bin/chef-apply \
 		bin/chef-shell \
 		bin/chef-solo \
 		bin/chef-windows-service
-
-NO_ARCH=	yes
 
 .include <bsd.port.mk>
