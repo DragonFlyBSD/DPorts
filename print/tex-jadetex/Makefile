@@ -1,4 +1,3 @@
-
 PORTNAME=	jadetex
 PORTVERSION=	3.13
 PORTREVISION=	3
@@ -9,7 +8,7 @@ DISTNAME=	texlive-20150523-texmf
 DIST_SUBDIR=	TeX
 EXTRACT_ONLY=
 
-MAINTAINER=	hrs@FreeBSD.org
+MAINTAINER=	freebsd-tex@FreeBSD.org
 COMMENT=	TeX backend for Jade, DSSSL processor for SGML/XML documents
 
 USES=		tar:xz
@@ -22,6 +21,7 @@ EXTRACT_FILES= \
 	texmf-dist/doc/otherformats/jadetex \
 	texmf-dist/source/jadetex/base \
 	texmf-dist/tex/jadetex/base
+NO_ARCH=	yes
 NO_BUILD=	yes
 TEX_FORMATS=	jadetex
 
