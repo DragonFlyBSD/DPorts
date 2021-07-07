@@ -1,8 +1,6 @@
-# Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-
 PORTNAME=	openspades
 PORTVERSION=	0.1.3
-PORTREVISION=	1
+PORTREVISION=	2
 DISTVERSIONPREFIX=	v
 CATEGORIES=	games
 MASTER_SITES=	https://github.com/yvt/openspades-paks/releases/download/r33/:data
