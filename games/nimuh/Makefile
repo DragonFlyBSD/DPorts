@@ -1,8 +1,6 @@
-# Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-
 PORTNAME=	nimuh
 PORTVERSION=	1.02
-PORTREVISION=	11
+PORTREVISION=	12
 CATEGORIES=	games education
 MASTER_SITES=	https://mirror.amdmi3.ru/distfiles/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${PORTNAME}-data-${PORTVERSION}${EXTRACT_SUFX}
