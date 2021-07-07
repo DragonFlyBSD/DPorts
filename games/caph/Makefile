@@ -1,8 +1,6 @@
-# Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-
 PORTNAME=	caph
 PORTVERSION=	1.1
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	games
 MASTER_SITES=	SF/caphgame/${PORTNAME}/caphgame-${PORTVERSION}/
 
