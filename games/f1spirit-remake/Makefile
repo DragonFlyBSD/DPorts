@@ -1,8 +1,6 @@
-# Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-
 PORTNAME=	f1spirit-remake
 PORTVERSION=	1.0
-PORTREVISION=	14
+PORTREVISION=	15
 CATEGORIES=	games
 # Original braingames site is really slow
 MASTER_SITES=	http://mirror.amdmi3.ru/distfiles/ \
