@@ -1,8 +1,8 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
 
 PORTNAME=	alembic
-PORTVERSION=	1.7.16
-PORTREVISION=	2
+PORTVERSION=	1.8.2
+PORTREVISION=	1
 CATEGORIES=	graphics
 
 MAINTAINER=	danfe@FreeBSD.org
@@ -10,7 +10,8 @@ COMMENT=	Open framework for storing and sharing graphic scene data
 
 LICENSE=	BSD3CLAUSE
 
-LIB_DEPENDS=	libImath.so:graphics/ilmbase
+LIB_DEPENDS=	libImath.so:math/Imath
+LIB_DEPENDS+=	libsz.so:science/szip
 
 USES=		cmake compiler:c++11-lang
 USE_CXXSTD=	c++11
