@@ -1,7 +1,6 @@
-# Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-
 PORTNAME=	simplevaders
 PORTVERSION=	0.8.1
+PORTREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://dusted.dk/pages/simplevaders/ \
 		https://mirror.amdmi3.ru/distfiles/
