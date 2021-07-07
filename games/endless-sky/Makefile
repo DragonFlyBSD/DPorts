@@ -1,8 +1,7 @@
-# Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-
 PORTNAME=	endless-sky
 PORTVERSION=	0.9.12
 DISTVERSIONPREFIX=	v
+PORTREVISION=	1
 CATEGORIES=	games
 
 MAINTAINER=	amdmi3@FreeBSD.org
