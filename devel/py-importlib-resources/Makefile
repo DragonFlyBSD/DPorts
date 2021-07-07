@@ -1,4 +1,3 @@
-
 PORTNAME=	importlib-resources
 PORTVERSION=	3.3.0
 CATEGORIES=	devel
@@ -20,7 +19,7 @@ USE_PYTHON=	autoplist distutils
 
 .include <bsd.port.pre.mk>
 
-.if ${PYTHON_REL} < 3800
+.if ${PYTHON_REL} < 30800
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zipp>=0:devel/py-zipp@${PY_FLAVOR}
 .endif
 
