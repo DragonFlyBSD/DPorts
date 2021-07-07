@@ -1,8 +1,7 @@
-# Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-
 PORTNAME=	freeorion
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.4.10.1
+PORTREVISION=	1
 CATEGORIES=	games
 
 MAINTAINER=	amdmi3@FreeBSD.org
