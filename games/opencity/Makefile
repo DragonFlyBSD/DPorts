@@ -1,8 +1,6 @@
-# Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-
 PORTNAME=	opencity
 PORTVERSION=	0.0.6.5
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/Stable/${PORTVERSION:C/^([0-9]+\.[0-9]+\.[0-9]+)\..*$/\1/}/
 DISTNAME=	${PORTNAME}-${PORTVERSION}stable
