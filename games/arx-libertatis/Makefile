@@ -1,8 +1,6 @@
-# Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-
 PORTNAME=	arx-libertatis
 PORTVERSION=	1.1.2
-PORTREVISION=	17
+PORTREVISION=	18
 CATEGORIES=	games
 MASTER_SITES=	http://downloads.sourceforge.net/arx/ \
 		http://arx-libertatis.org/files/
