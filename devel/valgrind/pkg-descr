@@ -1,3 +1,3 @@
-Valgrind is a flexible program for debugging and profiling Linux executables.
+Valgrind is a flexible program for debugging and profiling Dragonfly executables.
 It consists of a core, which provides a synthetic CPU in software, and a series of debugging and profiling tools.
 The architecture is modular, so that new tools can be created easily and without disturbing the existing structure.
