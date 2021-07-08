@@ -1,7 +1,6 @@
-
 PORTNAME=	openfpgaloader
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.2.5
+DISTVERSION=	0.4.0
 CATEGORIES=	cad
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -19,12 +18,6 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	trabucayre
 GH_PROJECT=	openFPGALoader
 
-PLIST_FILES=	bin/openFPGALoader \
-		share/openFPGALoader/test_sfl.svf \
-		share/openFPGALoader/spiOverJtag_xc7a100.bit \
-		share/openFPGALoader/spiOverJtag_xc7a200.bit \
-		share/openFPGALoader/spiOverJtag_xc7a35.bit \
-		share/openFPGALoader/spiOverJtag_xc7a50t.bit \
-		share/openFPGALoader/spiOverJtag_xc7s50.bit
+DATADIR=	${PREFIX}/share/openFPGALoader
 
 .include <bsd.port.mk>
