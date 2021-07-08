@@ -2,7 +2,7 @@
 
 PORTNAME=	libquicktime
 PORTVERSION=	1.2.4
-PORTREVISION?=	30
+PORTREVISION?=	31
 CATEGORIES=	multimedia
 MASTER_SITES=	SF
 
@@ -63,7 +63,7 @@ CONFIGURE_ARGS+=	--without-alsa
 
 .if ${PORT_OPTIONS:MOPENGL}
 USES+=		gl
-USE_GL=		yes
+USE_GL=		gl
 CONFIGURE_ARGS+=	--with-opengl
 .else
 CONFIGURE_ARGS+=	--without-opengl
