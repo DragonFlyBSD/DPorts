@@ -1,8 +1,6 @@
-# Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-
 PORTNAME=	gmerlin
 PORTVERSION=	1.2.0
-PORTREVISION=	17
+PORTREVISION=	18
 CATEGORIES=	multimedia
 MASTER_SITES=	SF
 
