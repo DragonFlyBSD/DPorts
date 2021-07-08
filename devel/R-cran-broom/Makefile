@@ -1,7 +1,7 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
 
 PORTNAME=	broom
-DISTVERSION=	0.7.5
+DISTVERSION=	0.7.8
 CATEGORIES=	devel
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
