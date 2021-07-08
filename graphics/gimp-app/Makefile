@@ -2,6 +2,7 @@
 
 PORTNAME?=	gimp-app
 PORTVERSION=	2.10.24
+PORTREVISION=	7
 PORTEPOCH?=	1
 CATEGORIES?=	graphics gnome
 MASTER_SITES=	GIMP/gimp/v${PORTVERSION:R}
@@ -38,6 +39,7 @@ LIB_DEPENDS+=	libjson-glib-1.0.so:devel/json-glib \
 
 LIB_DEPENDS_aarch64=	libunwind.so:devel/libunwind
 LIB_DEPENDS_x86_64=	libunwind.so:devel/libunwind
+LIB_DEPENDS_armv7=	libunwind.so:devel/libunwind
 LIB_DEPENDS_i386=	libunwind.so:devel/libunwind
 LIB_DEPENDS_powerpc64=		libunwind.so:devel/libunwind
 LIB_DEPENDS_powerpc64le=	libunwind.so:devel/libunwind
@@ -116,8 +118,7 @@ LIBMNG_LIB_DEPENDS=	libmng.so:graphics/libmng
 LIBMNG_CONFIGURE_WITH=	libmng
 
 OPENEXR_CONFIGURE_WITH=	openexr
-OPENEXR_LIB_DEPENDS=	libIlmImf.so:graphics/openexr \
-			libIex.so:graphics/ilmbase
+OPENEXR_LIB_DEPENDS=	libOpenEXR.so:graphics/openexr
 
 OPENJPEG_DESC=		Enhanced JPEG (jpeg2000) graphics support
 OPENJPEG_LIB_DEPENDS=	libopenjp2.so:graphics/openjpeg
