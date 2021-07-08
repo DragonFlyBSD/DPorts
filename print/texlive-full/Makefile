@@ -1,10 +1,9 @@
-
 PORTNAME=	texlive
 DISTVERSION=	20150521
 CATEGORIES=	print
 PKGNAMESUFFIX=	-full
 
-MAINTAINER=	hrs@FreeBSD.org
+MAINTAINER=	freebsd-tex@FreeBSD.org
 COMMENT=	TeX Live, Full Version
 
 USE_TEX=	full texhash
