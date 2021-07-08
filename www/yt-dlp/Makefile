@@ -1,6 +1,5 @@
-
 PORTNAME=	yt-dlp
-DISTVERSION=	2021.04.03
+DISTVERSION=	2021.06.23
 CATEGORIES=	www
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -9,7 +8,9 @@ COMMENT=	Command-line program for downloading videos from various platforms
 LICENSE=	UNLICENSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		gmake python shebangfix
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pycryptodome>0:security/py-pycryptodome@${PY_FLAVOR}
+
+USES=		gmake python:3.6+ shebangfix
 SHEBANG_GLOB=	devscripts/*.py
 
 USE_GITHUB=	yes
