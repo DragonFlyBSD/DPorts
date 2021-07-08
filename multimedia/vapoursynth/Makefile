@@ -1,4 +1,3 @@
-
 PORTNAME=	vapoursynth
 DISTVERSION=	R53
 CATEGORIES=	multimedia
