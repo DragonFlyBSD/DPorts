@@ -120,7 +120,7 @@ CFLAGS+=	-Wno-extended-offsetof
 .endif
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|$$| [GDB v${DISTVERSION} for FreeBSD]|' \
+	@${REINPLACE_CMD} -e 's|$$| [GDB v${DISTVERSION} for ${OPSYS}]|' \
 		${WRKSRC}/gdb/version.in
 
 post-patch-KGDB-on:
