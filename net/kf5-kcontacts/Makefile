@@ -1,4 +1,3 @@
-
 PORTNAME=	kcontacts
 DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
 PORTEPOCH=	1
@@ -19,9 +18,5 @@ USE_QT=		core dbus gui \
 USE_LDCONFIG=	yes
 
 DESCR=		${.CURDIR:H:H}/deskutils/kdepim/pkg-descr
-
-OPTIONS_DEFINE=	DOCS
-
-CONFLICTS_INSTALL=	kcontacts-1*
 
 .include <bsd.port.mk>
