@@ -1,6 +1,6 @@
-
 PORTNAME=	olive
 DISTVERSION=	0.1.2
+PORTREVISION=	1
 CATEGORIES=	multimedia
 PKGNAMESUFFIX=	-video-editor
 
@@ -24,8 +24,8 @@ DOS2UNIX_FILES=	olive.pro \
 USE_QT=		core gui multimedia network opengl svg widgets buildtools_build linguisttools_build
 USE_GL=		gl
 
-CMAKE_ARGS=	-DGIT_HASH:STRING=NoGitHashVersion${DISTVERSION}
-
 DATADIR=	${PREFIX}/share/olive-editor
+
+PORTSCOUT=	limit:^.*[1-9]\..* # prevent tags like 20181223
 
 .include <bsd.port.mk>
