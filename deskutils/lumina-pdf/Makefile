@@ -1,7 +1,6 @@
-
 PORTNAME=	lumina-pdf
 DISTVERSION=	1.6.0
-PORTREVISION=	13
+PORTREVISION=	17
 CATEGORIES=	deskutils
 
 MAINTAINER=	lbartoletti@FreeBSD.org
