@@ -1,6 +1,5 @@
-
 PORTNAME=	shelxle
-DISTVERSION=	1.0.1235
+DISTVERSION=	1.0.1278
 CATEGORIES=	science # chemistry
 MASTER_SITES=	SF/${PORTNAME}/code/
 
