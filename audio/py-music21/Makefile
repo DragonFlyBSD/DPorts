@@ -1,4 +1,3 @@
-
 PORTNAME=	music21
 DISTVERSION=	6.7.1
 CATEGORIES=	audio python
@@ -24,7 +23,7 @@ RUN_DEPENDS=	${PYNUMPY} \
 		mscore:audio/musescore \
 		xdg-open:devel/xdg-utils
 
-USES=		python:3.5+
+USES=		python:3.7+
 USE_PYTHON=	distutils autoplist
 
 NO_ARCH=	yes
