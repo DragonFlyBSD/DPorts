@@ -4578,15 +4578,33 @@ ${i:S/-//:tu}=	${WRKDIR}/${SUB_FILES:M${i}*}
 
 PLIST_SUB_SANITIZED=	${PLIST_SUB:N*_regex=*}
 
+#
+# XXX Horrible hack below to avoid bumping ARG_MAX above 256KB. Split the
+# plist files list in two and hope a half does not go above the limit.
+#
+_PLIST_TOTAL_WORDS=${PLIST_FILES:[#]}
+_PLIST_FIRST_HALF=$$(( ${_PLIST_TOTAL_WORDS} / 2 ))
+_PLIST_SECOND_HALF=$$(( ${_PLIST_FIRST_HALF} + 1 ))
+
 .if !target(generate-plist)
 generate-plist: ${WRKDIR}
 	@${ECHO_MSG} "===>   Generating temporary packing list"
 	@${MKDIR} ${TMPPLIST:H}
 	@if [ ! -f ${DESCR} ]; then ${ECHO_MSG} "** Missing pkg-descr for ${PKGNAME}."; exit 1; fi
 	@>${TMPPLIST}
-	@for file in ${PLIST_FILES}; do \
+.if ${_PLIST_TOTAL_WORDS} < 3
+	@for file in ${PLIST_FILE}; do \
 		${ECHO_CMD} $${file} | ${SED} ${PLIST_SUB_SANITIZED:S/$/!g/:S/^/ -e s!%%/:S/=/%%!/} >> ${TMPPLIST}; \
 	done
+.else
+	@for file in ${PLIST_FILES:[1..${_PLIST_FIRST_HALF}]}; do \
+		${ECHO_CMD} $${file} | ${SED} ${PLIST_SUB_SANITIZED:S/$/!g/:S/^/ -e s!%%/:S/=/%%!/} >> ${TMPPLIST}; \
+	done
+	@for file in ${PLIST_FILES:[${_PLIST_SECOND_HALF}..-1]}; do \
+		${ECHO_CMD} $${file} | ${SED} ${PLIST_SUB_SANITIZED:S/$/!g/:S/^/ -e s!%%/:S/=/%%!/} >> ${TMPPLIST}; \
+	done
+.endif
+
 .if !empty(PLIST)
 .for f in ${PLIST}
 	@if [ -f "${f}" ]; then \
