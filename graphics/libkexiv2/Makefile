@@ -1,4 +1,3 @@
-
 PORTNAME=	libkexiv2
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	graphics kde kde-applications
@@ -13,7 +12,5 @@ USE_KDE=	ecm
 USE_QT=		core gui \
 		buildtools_build qmake_build
 USE_LDCONFIG=	yes
-
-OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.mk>
