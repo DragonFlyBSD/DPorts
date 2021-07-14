@@ -1,7 +1,6 @@
-
 PORTNAME=	opencv
 DISTVERSION=	4.5.1
-PORTREVISION=	1
+PORTREVISION=	4
 CATEGORIES=	graphics
 
 MAINTAINER=	tcberner@FreeBSD.org
@@ -14,7 +13,7 @@ BUILD_DEPENDS=	vulkan-headers>0:graphics/vulkan-headers \
 		opencl>=0:devel/opencl
 RUN_DEPENDS=	opencl>=0:devel/opencl
 LIB_DEPENDS=	\
-		libIlmImf.so:graphics/openexr \
+		libOpenEXR.so:graphics/openexr \
 		libavcodec.so:multimedia/ffmpeg \
 		libfreetype.so:print/freetype2 \
 		libgflags.so:devel/gflags \
@@ -23,7 +22,7 @@ LIB_DEPENDS=	\
 		libharfbuzz.so:print/harfbuzz \
 		libhdf5.so:science/hdf5 \
 		libopenblas.so:math/openblas \
-		libpng16.so:graphics/png \
+		libpng.so:graphics/png \
 		libtiff.so:graphics/tiff \
 		libwebp.so:graphics/webp
 #		libtbb.so:devel/tbb
@@ -62,6 +61,7 @@ CMAKE_OFF=	OPENCV_GENERATE_SETUPVARS \
 CMAKE_ARGS=	-DOPENCV_EXTRA_MODULES_PATH="${WRKSRC}/contrib/modules" \
 		-DOPENCV_PYTHON3_INSTALL_PATH=${PYTHON_SITELIBDIR} \
 		-DVULKAN_INCLUDE_DIRS=${LOCALBASE}/include
+LDFLAGS+=	-lglog
 
 DATADIR=	${PREFIX}/share/${PORTNAME}4
 
