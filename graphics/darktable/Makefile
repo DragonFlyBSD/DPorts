@@ -2,6 +2,7 @@
 
 PORTNAME=	darktable
 PORTVERSION=	3.4.1
+PORTREVISION=	6
 CATEGORIES=	graphics
 MASTER_SITES=	https://github.com/darktable-org/${PORTNAME}/releases/download/release-${PORTVERSION:C/\.rc/rc/}/
 
@@ -85,8 +86,9 @@ NLS_USES_OFF=		gettext-runtime
 NLS_CMAKE_OFF=		-DUSE_NLS:BOOL=OFF
 NLS_LDFLAGS=		-L${LOCALBASE}/lib -lintl
 
-OPENEXR_LIB_DEPENDS=	libIlmImf.so:graphics/openexr \
-			libIlmThread.so:graphics/ilmbase
+OPENEXR_LIB_DEPENDS=	libOpenEXR.so:graphics/openexr \
+			libImath.so:math/Imath
+OPENEXR_CFLAGS=		-I${LOCALBASE}/include/Imath
 OPENEXR_CMAKE_OFF=	-DUSE_OPENEXR:BOOL=OFF
 
 OPENJPEG_LIB_DEPENDS=	libopenjp2.so:graphics/openjpeg
