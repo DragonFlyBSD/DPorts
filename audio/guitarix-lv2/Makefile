@@ -1,7 +1,5 @@
-# $FreeBSD$
-
 PORTNAME=	guitarix
-DISTVERSION=	0.40.0
+DISTVERSION=	0.42.1
 CATEGORIES=	audio
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/
 PKGNAMESUFFIX=	-lv2
@@ -37,7 +35,7 @@ LIB_DEPENDS=	libavahi-common.so:net/avahi-app \
 RUN_DEPENDS=	roboto-fonts-ttf>0:x11-fonts/roboto-fonts-ttf
 
 USES=		compiler:c++11-lang eigen:3 gnome libarchive localbase:ldflags \
-		pkgconfig python:build readline waf tar:xz
+		pkgconfig python:build readline waf xorg tar:xz
 USE_GNOME=	atkmm cairo gtk30 gtkmm30 pangomm
 USE_XORG=	x11
 USE_LDCONFIG=	yes
