@@ -1,0 +1,8 @@
+# XXX No time to find out why WRKSRC is not expanded by when the
+# shell command is called in _GET_SOVER.
+
+_GET_SOVER=	${GREP} SOVERSION ${WRKDIR}/${GH_PROJECT}-${DISTVERSION}/CMake/AbseilHelpers.cmake \
+		| ${CUT} -d\" -f2
+
+PLIST_SUB+=	LIBSUFX=${_GET_SOVER:sh}
+
