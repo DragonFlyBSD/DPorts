@@ -1,8 +1,8 @@
 # Created by: Devon H. O'Dell <devon.odell@gmail.com>
 
 PORTNAME=	go
-PORTVERSION?=	1.16.5
-PORTREVISION?=	1
+PORTVERSION?=	1.16.6
+PORTREVISION?=	0
 PORTEPOCH?=	1
 CATEGORIES=	lang
 MASTER_SITES?=	https://golang.org/dl/ \
