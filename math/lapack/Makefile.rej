@@ -1,0 +1,10 @@
+@@ -175,8 +177,7 @@
+ 	${LN} -sf libtmglib.so.${PORTVERSION} ${STAGEDIR}${PREFIX}/lib/libtmglib.so.${SVERSION}
+ .endif
+ .if !(defined(BLAS_SLAVEPORT) || defined(CBLAS_SLAVEPORT) || defined(XLAPACK_SLAVEPORT) || defined(LAPACKE_SLAVEPORT))
+-	cd ${WRKDIR}/man ; ${ECHO_CMD} ${MAN3L:S|^|man3/|} \
++	cd ${WRKDIR}/man ; ${MAKE} -V ALL_MAN3 \
+ 	| ${XARGS} -J @ ${INSTALL_MAN} @ ${STAGEDIR}${MAN3PREFIX}/man/man3
+ .endif
+-
+ .include <bsd.port.post.mk>
