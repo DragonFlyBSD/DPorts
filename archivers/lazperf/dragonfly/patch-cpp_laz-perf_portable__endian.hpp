@@ -1,5 +1,5 @@
---- cpp/laz-perf/portable_endian.hpp.orig	2020-10-02 13:47:27 UTC
-+++ cpp/laz-perf/portable_endian.hpp
+--- cpp/lazperf/portable_endian.hpp.orig	2021-07-27 11:22:16.328502000 +0200
++++ cpp/lazperf/portable_endian.hpp	2021-07-27 11:22:28.208233000 +0200
 @@ -43,11 +43,11 @@
  #   define __PDP_ENDIAN    PDP_ENDIAN
  **/
