@@ -1,6 +1,6 @@
---- SWIG/_bio.i.orig	2018-03-06 22:45:31 UTC
-+++ SWIG/_bio.i
-@@ -433,6 +433,10 @@ static int pyfd_new(BIO* b) {
+--- src/SWIG/_bio.i.orig	2021-08-03 21:36:51.820240000 +0200
++++ src/SWIG/_bio.i	2021-08-03 21:37:49.198938000 +0200
+@@ -433,6 +433,10 @@
      return 1;
      }
  

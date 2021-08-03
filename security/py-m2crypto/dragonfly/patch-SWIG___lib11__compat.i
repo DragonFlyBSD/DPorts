@@ -1,5 +1,5 @@
---- SWIG/_lib11_compat.i.orig	2017-10-06 19:46:00 UTC
-+++ SWIG/_lib11_compat.i
+--- src/SWIG/_lib11_compat.i.orig	2017-10-06 19:46:00 UTC
++++ src/SWIG/_lib11_compat.i
 @@ -8,6 +8,20 @@
   */
  
