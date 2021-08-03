@@ -1,6 +1,6 @@
---- CMakeLists.txt.orig	2020-09-21 20:43:48.540106000 +0200
-+++ CMakeLists.txt	2020-09-21 20:44:13.390195000 +0200
-@@ -302,18 +302,6 @@
+--- CMakeLists.txt.orig	2021-08-03 21:50:35.291526000 +0200
++++ CMakeLists.txt	2021-08-03 21:50:52.561134000 +0200
+@@ -310,20 +310,6 @@
    add_compile_options(-Wvla)
  endif()
  
@@ -11,8 +11,10 @@
 -
 -  if(HAS_FSTACK_PROTECTOR_STRONG_FLAG)
 -    add_compile_options(-fstack-protector-strong)
+-    link_libraries(-fstack-protector-strong)
 -  elseif(HAS_FSTACK_PROTECTOR_FLAG)
 -    add_compile_options(-fstack-protector --param ssp-buffer-size=4)
+-    link_libraries(-fstack-protector --param ssp-buffer-size=4)
 -  endif()
 -endif()
 -
