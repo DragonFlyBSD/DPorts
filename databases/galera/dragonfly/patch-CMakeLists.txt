@@ -1,11 +1,11 @@
---- CMakeLists.txt.intermediate	2021-03-04 13:52:01.000000000 +0000
-+++ CMakeLists.txt
-@@ -105,7 +105,7 @@ add_subdirectory(galera)
+--- CMakeLists.txt.orig	2021-08-03 22:33:54.662440000 +0200
++++ CMakeLists.txt	2021-08-03 22:33:57.102385000 +0200
+@@ -106,7 +106,7 @@
  add_subdirectory(scripts/packages)
  add_subdirectory(wsrep/tests)
  
--if (NOT CMAKE_SYSTEM MATCHES ".*BSD")
-+if (NOT CMAKE_SYSTEM MATCHES ".*BSD|DragonFly")
+-if (NOT ${CMAKE_SYSTEM_NAME} MATCHES ".*BSD")
++if (NOT ${CMAKE_SYSTEM_NAME} MATCHES ".*BSD|DragonFly")
    install(FILES
      ${CMAKE_SOURCE_DIR}/AUTHORS
      ${CMAKE_SOURCE_DIR}/COPYING

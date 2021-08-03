@@ -1,11 +1,11 @@
---- garb/CMakeLists.txt.intermediate	2021-03-04 13:52:01.000000000 +0000
-+++ garb/CMakeLists.txt
-@@ -32,7 +32,7 @@ target_link_libraries(garbd gcs4garb gco
+--- garb/CMakeLists.txt.orig	2021-08-03 22:53:13.156102000 +0200
++++ garb/CMakeLists.txt	2021-08-03 22:53:23.575864000 +0200
+@@ -32,7 +32,7 @@
    ${Boost_PROGRAM_OPTIONS_LIBRARIES})
  
  install(TARGETS garbd DESTINATION bin)
--if (NOT CMAKE_SYSTEM MATCHES ".*BSD")
-+if (NOT CMAKE_SYSTEM MATCHES ".*BSD|DragonFly")
+-if (NOT ${CMAKE_SYSTEM_NAME} MATCHES ".*BSD")
++if (NOT ${CMAKE_SYSTEM_NAME} MATCHES ".*BSD|DragonFly")
    install(FILES
      ${CMAKE_CURRENT_SOURCE_DIR}/files/garb.cnf
      ${CMAKE_CURRENT_SOURCE_DIR}/files/garb.service
