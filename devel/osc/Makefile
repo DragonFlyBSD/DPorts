@@ -1,7 +1,5 @@
-# Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
-
 PORTNAME=	osc
-PORTVERSION=	0.172.0
+PORTVERSION=	0.173.0
 CATEGORIES=	devel
 
 MAINTAINER=	amdmi3@FreeBSD.org
