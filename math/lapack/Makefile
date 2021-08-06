@@ -134,8 +134,6 @@ pre-su-install:
 	${XARGS} -J @ ${INSTALL_MAN} @ ${STAGEDIR}${MAN3PREFIX}/man/man3 < ${WRKDIR}/manpages
 .endif
 
-ALL_MAN3=	${MAN3L:S|^|man3/|}
-
 post-install:
 .if defined(BLAS_SLAVEPORT)
 	${INSTALL_DATA} ${CONFIGURE_WRKSRC}/BLAS/SRC/${BLASLIB} ${STAGEDIR}${PREFIX}/lib
