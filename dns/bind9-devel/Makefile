@@ -49,15 +49,13 @@ RUN_DEPENDS=	bind-tools>0:dns/bind-tools
 # XXX: remove tar:bz2
 USES=		autoreconf compiler:c11 cpe libedit libtool pkgconfig ssl tar:bz2
 # ISC releases things like 9.8.0-P1, which our versioning doesn't like
-ISCVERSION=	9.17.11a0.2021.04.02
+ISCVERSION=	9.17.15a0.2021.06.28
 # XXX: Remove gitlab
 USE_GITLAB=	yes
 GL_SITE=	https://gitlab.isc.org
 GL_ACCOUNT=	isc-projects
 GL_PROJECT=	bind9
-GL_COMMIT=	8556c7f854837facf43a4c57fd03f5d4111b5732
-# This is required till https://gitlab.isc.org is upgraded to newer gitlab version
-WRKSRC=		${WRKDIR}/${GL_PROJECT}-${GL_COMMIT}-${GL_COMMIT}
+GL_COMMIT=	f4c4217eec2a8422c9af89833602c5353bd61ebe
 
 CPE_VENDOR=	isc
 CPE_VERSION=	${ISCVERSION:C/-.*//}
@@ -268,7 +266,7 @@ post-install:
 
 post-install-DOCS-on:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/CHANGES* ${WRKSRC}/HISTORY.md \
+	${INSTALL_DATA} ${WRKSRC}/CHANGES* \
 		${WRKSRC}/README.md ${STAGEDIR}${DOCSDIR}
 .else
 
