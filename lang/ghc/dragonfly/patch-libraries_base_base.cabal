@@ -1,0 +1,11 @@
+--- libraries/base/base.cabal.intermediate	2021-08-08 02:04:32 UTC
++++ libraries/base/base.cabal
+@@ -404,7 +404,7 @@ Library
+             System.CPUTime.Posix.RUsage
+             System.CPUTime.Unsupported
+ 
+-    if os(freebsd)
++    if os(freebsd) || os(dragonfly)
+         cc-options: -DLIBICONV_PLUG
+ 
+     -- We need to set the unit id to base (without a version number)
