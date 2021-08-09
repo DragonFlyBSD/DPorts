@@ -1,7 +1,5 @@
-# $FreeBSD$
-
 PORTNAME=	asterisk
-PORTVERSION=	13.38.2
+PORTVERSION=	13.38.3
 CATEGORIES=	net
 MASTER_SITES=	https://downloads.asterisk.org/pub/telephony/%SUBDIR%/:DEFAULT,g729
 MASTER_SITE_SUBDIR=	asterisk/ \
@@ -17,7 +15,8 @@ COMMENT=	Open Source PBX and telephony toolkit
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-ONLY_FOR_ARCHS=	amd64 armv6 armv7 i386 powerpc powerpc64 powerpc64le sparc64
+DEPRECATED=	Asterisk 13.x will reach EOL on 2021-10-24. Please migrate to net/asterisk18
+EXPIRATION_DATE=2021-10-24
 
 LIB_DEPENDS=	libuuid.so:misc/e2fsprogs-libuuid \
 		libjansson.so:devel/jansson

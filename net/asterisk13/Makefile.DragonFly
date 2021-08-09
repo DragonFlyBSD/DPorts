@@ -1,5 +1,9 @@
 OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NFREETDS} BACKTRACE
 
+USES+=gettext-runtime jpeg
+
+LIB_DEPENDS+=libnghttp2.so:www/libnghttp2 libjbig.so:graphics/jbigkit
+
 dfly-patch:
 	${REINPLACE_CMD} \
 		-e 's@\(#if !defined(__FreeBSD__)\)@\1 \&\& !defined(__DragonFly__)@g'			\

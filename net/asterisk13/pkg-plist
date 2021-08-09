@@ -386,6 +386,8 @@ sbin/safe_asterisk
 %%PJSIP%%@dir %%DATADIR%%/third-party/pjproject
 @owner %%ASTERISK_USER%%
 @group %%ASTERISK_GROUP%%
+@dir %%VARDIR%%/lib
+@dir %%VARDIR%%/lib/asterisk
 @dir %%VARDIR%%/log/asterisk/cdr-csv
 @dir %%VARDIR%%/log/asterisk/cdr-custom
 @dir %%VARDIR%%/log/asterisk/cel-custom
@@ -399,7 +401,5 @@ sbin/safe_asterisk
 @dir %%VARDIR%%/spool/asterisk/system
 @dir %%VARDIR%%/spool/asterisk/tmp
 @dir %%VARDIR%%/run/asterisk
-@dir %%VARDIR%%/%%LUA_LIBDIR%%/asterisk
-@dir %%VARDIR%%/%%LUA_LIBDIR%%
 @owner
 @group
