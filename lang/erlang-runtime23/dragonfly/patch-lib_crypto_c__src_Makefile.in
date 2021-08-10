@@ -1,0 +1,16 @@
+--- lib/crypto/c_src/Makefile.in.orig	2021-08-09 22:58:25 UTC
++++ lib/crypto/c_src/Makefile.in
+@@ -204,11 +204,11 @@ $(LIBDIR)/crypto$(TYPEMARKER).dll: $(CRY
+ ifeq ($(DYNAMIC_CRYPTO_LIB),yes)
+ $(LIBDIR)/crypto_callback$(TYPEMARKER).so: $(CALLBACK_OBJS)
+ 	$(INSTALL_DIR) $(LIBDIR)
+-	$(LD) $(LDFLAGS) -o $@ $^ $(LDLIBS)
++	$(CC) $(LDFLAGS) -o $@ $^ $(LDLIBS)
+ 
+ $(LIBDIR)/crypto_callback$(TYPEMARKER).dll: $(CALLBACK_OBJS)
+ 	$(INSTALL_DIR) $(LIBDIR)
+-	$(LD) $(LDFLAGS) -o $@ $(CALLBACK_OBJS)
++	$(CC) $(LDFLAGS) -o $@ $(CALLBACK_OBJS)
+ endif
+ 
+ 
