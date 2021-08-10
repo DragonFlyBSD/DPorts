@@ -8,3 +8,5 @@ CFLAGS:= ${CFLAGS:N-W*} -Wno-stringop-truncation -Wno-stringop-overflow -Wno-for
 dfly-patch:
 	${REINPLACE_CMD} -e 's|asm|__asm|' \
 		${WRKSRC}/libs/srtp/crypto/include/datatypes.h
+	${REINPLACE_CMD} -e '/APR_ADDTO(SWITCH_AM_CFLAGS, -Werror)/d' \
+		${WRKSRC}/configure.ac
