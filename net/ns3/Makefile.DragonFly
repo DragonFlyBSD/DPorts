@@ -8,5 +8,5 @@ PLIST_FILES+=	bin/ns%%VERSION%%-dummy-network \
 		include/ns%%VERSION%%/ns3/fd-net-device-module.h \
 		include/ns%%VERSION%%/ns3/fd-net-device.h \
 		lib/libns%%VERSION%%-fd-net-device.so \
-		%%PYTHON_SITELIBDIR%%/ns/fd_net_device.so \
+		%%PYTHON_SITELIBDIR%%/ns/fd_net_device%%PYTHON_EXT_SUFFIX%%.so \
 		libdata/pkgconfig/libns%%VERSION%%-fd-net-device.pc
