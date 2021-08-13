@@ -7,6 +7,14 @@ OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NLLDB:NFLANG}
 OPTIONS_DEFAULT_x86_64:= ${OPTIONS_DEFAULT_x86_64:NCOMPILER_RT}
 OPTIONS_DEFINE+=	LLD_LINK
 
+# meh, just to fix check-plist but it should be fixed properly
+PLIST_FILES+=	llvm-devel/lib/libomptarget-amdgcn-gfx700.bc
+PLIST_FILES+=	llvm-devel/lib/libomptarget-amdgcn-gfx701.bc
+PLIST_FILES+=	llvm-devel/lib/libomptarget-amdgcn-gfx801.bc
+PLIST_FILES+=	llvm-devel/lib/libomptarget-amdgcn-gfx803.bc
+PLIST_FILES+=	llvm-devel/lib/libomptarget-amdgcn-gfx900.bc
+PLIST_FILES+=	llvm-devel/lib/libomptarget-amdgcn-gfx906.bc
+
 dfly-patch:
 	${REINPLACE_CMD} -e 's|gcc50|gcc80|g' -e 's|5.0"|8.0"|' \
 		${WRKSRC}/clang/lib/Driver/ToolChains/DragonFly.cpp \
