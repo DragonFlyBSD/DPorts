@@ -1,9 +1,10 @@
-# $FreeBSD$
-
 PORTNAME=	folly
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2021.02.15.00
+DISTVERSION=	2021.05.17.00
 CATEGORIES=	devel
+
+PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+PATCHFILES=	e4cfd54f6bbfa990a0a38223a7540f2aed249a97.patch:-p1 # port exception_ptr_get_object to freebsd
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	C++ library developed and used at Facebook
@@ -36,6 +37,7 @@ CMAKE_ON=	BUILD_SHARED_LIBS
 CMAKE_OFF=	FREEBSD_BUILD_EXAMPLES FREEBSD_FOLLY_USE_SYMBOLIZER # enabling symbolizer causes undefined symbol _r_debug, see https://github.com/facebook/folly/issues/1373
 
 CXXFLAGS+=	-fPIC
+CXXFLAGS_powerpc64=	-DFOLLY_QUOTIENT_MULTI_SET_SUPPORTED=0
 
 do-test:
 	@cd ${BUILD_WRKSRC} && \

@@ -18,6 +18,7 @@ include/folly/ConcurrentLazy.h
 include/folly/ConcurrentSkipList-inl.h
 include/folly/ConcurrentSkipList.h
 include/folly/ConstexprMath.h
+include/folly/ConstructorCallback.h
 include/folly/Conv.h
 include/folly/CppAttributes.h
 include/folly/CpuId.h
@@ -37,6 +38,7 @@ include/folly/File.h
 include/folly/FileUtil.h
 include/folly/Fingerprint.h
 include/folly/FixedString.h
+include/folly/FollyMemcpy.h
 include/folly/Format-inl.h
 include/folly/Format.h
 include/folly/FormatArg.h
@@ -141,6 +143,7 @@ include/folly/container/HeterogeneousAccess.h
 include/folly/container/Iterator.h
 include/folly/container/Merge.h
 include/folly/container/SparseByteSet.h
+include/folly/container/View.h
 include/folly/container/detail/BitIteratorDetail.h
 include/folly/container/detail/F14Defaults.h
 include/folly/container/detail/F14IntrinsicsAvailability.h
@@ -156,9 +159,9 @@ include/folly/detail/AsyncTrace.h
 include/folly/detail/AtFork.h
 include/folly/detail/AtomicHashUtils.h
 include/folly/detail/AtomicUnorderedMapUtils.h
-include/folly/detail/Demangle.h
 include/folly/detail/DiscriminatedPtrDetail.h
 include/folly/detail/FileUtilDetail.h
+include/folly/detail/FileUtilVectorDetail.h
 include/folly/detail/FingerprintPolynomial.h
 include/folly/detail/Futex-inl.h
 include/folly/detail/Futex.h
@@ -297,6 +300,7 @@ include/folly/experimental/coro/Multiplex.h
 include/folly/experimental/coro/Mutex.h
 include/folly/experimental/coro/Result.h
 include/folly/experimental/coro/Retry.h
+include/folly/experimental/coro/RustAdaptors.h
 include/folly/experimental/coro/SharedLock.h
 include/folly/experimental/coro/SharedMutex.h
 include/folly/experimental/coro/Sleep-inl.h
@@ -309,7 +313,6 @@ include/folly/experimental/coro/Traits.h
 include/folly/experimental/coro/Transform-inl.h
 include/folly/experimental/coro/Transform.h
 include/folly/experimental/coro/UnboundedQueue.h
-include/folly/experimental/coro/Utils.h
 include/folly/experimental/coro/ViaIfAsync.h
 include/folly/experimental/coro/Wait.h
 include/folly/experimental/coro/WithAsyncStack.h
@@ -498,6 +501,7 @@ include/folly/io/async/TimeoutManager.h
 include/folly/io/async/VirtualEventBase.h
 include/folly/io/async/WriteChainAsyncTransportWrapper.h
 include/folly/io/async/ssl/BasicTransportCertificate.h
+include/folly/io/async/ssl/OpenSSLTransportCertificate.h
 include/folly/io/async/ssl/OpenSSLUtils.h
 include/folly/io/async/ssl/SSLErrors.h
 include/folly/io/async/ssl/TLSDefinitions.h
@@ -517,6 +521,8 @@ include/folly/io/async/test/TestSSLServer.h
 include/folly/io/async/test/TimeUtil.h
 include/folly/io/async/test/UndelayedDestruction.h
 include/folly/io/async/test/Util.h
+include/folly/io/coro/ServerSocket.h
+include/folly/io/coro/Transport.h
 include/folly/json.h
 include/folly/json_patch.h
 include/folly/json_pointer.h
@@ -532,6 +538,7 @@ include/folly/lang/Cast.h
 include/folly/lang/CheckedMath.h
 include/folly/lang/CustomizationPoint.h
 include/folly/lang/Exception.h
+include/folly/lang/Extern.h
 include/folly/lang/Keep.h
 include/folly/lang/Launder.h
 include/folly/lang/Ordering.h
@@ -540,6 +547,8 @@ include/folly/lang/PropagateConst.h
 include/folly/lang/RValueReferenceWrapper.h
 include/folly/lang/SafeAssert.h
 include/folly/lang/StaticConst.h
+include/folly/lang/Thunk.h
+include/folly/lang/ToAscii.h
 include/folly/lang/TypeInfo.h
 include/folly/lang/UncaughtExceptions.h
 include/folly/logging/AsyncFileWriter.h
@@ -588,6 +597,7 @@ include/folly/memory/detail/MallocImpl.h
 include/folly/memory/not_null-inl.h
 include/folly/memory/not_null.h
 include/folly/net/NetOps.h
+include/folly/net/NetOpsDispatcher.h
 include/folly/net/NetworkSocket.h
 include/folly/net/detail/SocketFileDescriptorMap.h
 include/folly/poly/Nullable.h
@@ -600,19 +610,20 @@ include/folly/portability/Constexpr.h
 include/folly/portability/Dirent.h
 include/folly/portability/Event.h
 include/folly/portability/Fcntl.h
+include/folly/portability/Filesystem.h
 include/folly/portability/FmtCompile.h
 include/folly/portability/GFlags.h
 include/folly/portability/GMock.h
 include/folly/portability/GTest.h
 include/folly/portability/IOVec.h
 include/folly/portability/Libgen.h
+include/folly/portability/Libunwind.h
 include/folly/portability/Malloc.h
 include/folly/portability/Math.h
 include/folly/portability/Memory.h
 include/folly/portability/OpenSSL.h
 include/folly/portability/PThread.h
 include/folly/portability/Sched.h
-include/folly/portability/Semaphore.h
 include/folly/portability/Sockets.h
 include/folly/portability/Stdio.h
 include/folly/portability/Stdlib.h
@@ -657,6 +668,7 @@ include/folly/stats/MultiLevelTimeSeries-inl.h
 include/folly/stats/MultiLevelTimeSeries.h
 include/folly/stats/QuantileEstimator-inl.h
 include/folly/stats/QuantileEstimator.h
+include/folly/stats/StreamingStats.h
 include/folly/stats/TDigest.h
 include/folly/stats/TimeseriesHistogram-inl.h
 include/folly/stats/TimeseriesHistogram.h
@@ -694,6 +706,7 @@ include/folly/synchronization/HazptrThreadPoolExecutor.h
 include/folly/synchronization/LifoSem.h
 include/folly/synchronization/Lock.h
 include/folly/synchronization/MicroSpinLock.h
+include/folly/synchronization/NativeSemaphore.h
 include/folly/synchronization/ParkingLot.h
 include/folly/synchronization/PicoSpinLock.h
 include/folly/synchronization/RWSpinLock.h
