@@ -1,6 +1,5 @@
-
 PORTNAME=	gvm
-DISTVERSION=	20.8.1
+DISTVERSION=	21.4.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	security
 PKGNAMESUFFIX=	-libs
@@ -11,11 +10,14 @@ COMMENT=	libraries module for the GVM solution
 LICENSE=	GPLv2+
 
 BUILD_DEPENDS=	doxygen>0:devel/doxygen
-LIB_DEPENDS=	libgpgme.so:security/gpgme \
+LIB_DEPENDS=	libassuan.so:security/libassuan \
+		libgpgme.so:security/gpgme \
+		libgpg-error.so:security/libgpg-error \
 		libgnutls.so:security/gnutls \
 		libuuid.so:misc/e2fsprogs-libuuid \
 		libssh.so:security/libssh \
 		libhiredis.so:databases/hiredis \
+		libnet.so:net/libnet \
 		libgcrypt.so:security/libgcrypt
 RUN_DEPENDS=	doxygen>0:devel/doxygen
 
