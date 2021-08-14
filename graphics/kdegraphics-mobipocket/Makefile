@@ -1,4 +1,3 @@
-
 PORTNAME=	kdegraphics-mobipocket
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	graphics kde kde-applications
@@ -13,7 +12,5 @@ USE_QT=		concurrent core dbus gui network widgets \
 		buildtools_build qmake_build
 
 USE_LDCONFIG=	yes
-
-OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.mk>
