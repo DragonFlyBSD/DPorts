@@ -1,9 +1,7 @@
-
 # TODO: ensure only ${PYTON_CMD} is pixked again
 
 PORTNAME=	cantor
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
-PORTREVISION=	1
 CATEGORIES=	math kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
