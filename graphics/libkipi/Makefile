@@ -1,4 +1,3 @@
-
 PORTNAME=	libkipi
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	graphics kde kde-applications
@@ -15,7 +14,5 @@ USE_KDE=	auth codecs config configwidgets coreaddons ecm i18n \
 USE_QT=		core dbus gui widgets xml \
 		buildtools_build qmake_build
 USE_LDCONFIG=	yes
-
-OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.mk>
