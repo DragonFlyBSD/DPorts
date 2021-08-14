@@ -1,4 +1,3 @@
-
 PORTNAME=	kdialog
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	sysutils kde kde-applications
@@ -16,7 +15,5 @@ USE_KDE=	auth bookmarks codecs completion config configwidgets \
 USE_QT=		concurrent core dbus gui network printsupport widgets xml \
 		buildtools_build qmake_build
 USE_XORG=	x11
-
-OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.mk>
