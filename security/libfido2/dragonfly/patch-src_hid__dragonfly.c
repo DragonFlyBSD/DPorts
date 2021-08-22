@@ -1,6 +1,6 @@
---- src/hid_dragonfly.c.orig	1970-01-01 01:00:00.000000000 +0100
-+++ src/hid_dragonfly.c	2021-06-11 14:27:55.028202000 +0200
-@@ -0,0 +1,226 @@
+--- src/hid_dragonfly.c.orig	2021-08-22 12:08:45 UTC
++++ src/hid_dragonfly.c
+@@ -0,0 +1,253 @@
 +/*
 + * Copyright (c) 2020 Yubico AB. All rights reserved.
 + * Use of this source code is governed by a BSD-style
@@ -12,7 +12,7 @@
 +#include <bus/u4b/usb_ioctl.h>
 +#include <bus/u4b/usbhid.h>
 +
-+#include <string.h>
++#include <errno.h>
 +#include <unistd.h>
 +
 +#include "fido.h"
@@ -20,9 +20,11 @@
 +#define MAX_UHID	64
 +
 +struct hid_dragonfly {
-+	int	fd;
-+	size_t	report_in_len;
-+	size_t	report_out_len;
++	int             fd;
++	size_t          report_in_len;
++	size_t          report_out_len;
++	sigset_t        sigmask;
++	const sigset_t *sigmaskp;
 +};
 +
 +static bool
@@ -40,12 +42,11 @@
 +	ugd.ugd_maxlen = sizeof(buf);
 +
 +	if (ioctl(fd, USB_GET_REPORT_DESC, &ugd) == -1) {
-+		fido_log_debug("%s: ioctl", __func__);
++		fido_log_error(errno, "%s: ioctl", __func__);
 +		return (false);
 +	}
-+
-+	if (ugd.ugd_actlen > sizeof(buf) ||
-+	    fido_hid_get_usage(ugd.ugd_data, ugd.ugd_actlen, &usage_page) < 0) {
++	if (ugd.ugd_actlen > sizeof(buf) || fido_hid_get_usage(ugd.ugd_data,
++	    ugd.ugd_actlen, &usage_page) < 0) {
 +		fido_log_debug("%s: fido_hid_get_usage", __func__);
 +		return (false);
 +	}
@@ -67,6 +68,7 @@
 +		goto fail;
 +
 +	if (ioctl(fd, USB_GET_DEVICEINFO, &udi) == -1) {
++		fido_log_error(errno, "%s: ioctl", __func__);
 +		strlcpy(udi.udi_vendor, "dragonfly", sizeof(udi.udi_vendor));
 +		strlcpy(udi.udi_product, "uhid(4)", sizeof(udi.udi_product));
 +		udi.udi_vendorNo = 0x0b5d; /* stolen from PCI_VENDOR_OPENBSD */
@@ -131,6 +133,7 @@
 +	char				 buf[64];
 +	struct hid_dragonfly		*ctx;
 +	struct usb_gen_descriptor	 ugd;
++	int				 r;
 +
 +	memset(&buf, 0, sizeof(buf));
 +	memset(&ugd, 0, sizeof(ugd));
@@ -147,10 +150,12 @@
 +	ugd.ugd_data = buf;
 +	ugd.ugd_maxlen = sizeof(buf);
 +
-+	if (ioctl(ctx->fd, USB_GET_REPORT_DESC, &ugd) == -1 ||
++	if ((r = ioctl(ctx->fd, USB_GET_REPORT_DESC, &ugd) == -1) ||
 +	    ugd.ugd_actlen > sizeof(buf) ||
 +	    fido_hid_get_report_len(ugd.ugd_data, ugd.ugd_actlen,
 +	    &ctx->report_in_len, &ctx->report_out_len) < 0) {
++		if (r == -1)
++			fido_log_error(errno, "%s: ioctl", __func__);
 +		fido_log_debug("%s: using default report sizes", __func__);
 +		ctx->report_in_len = CTAP_MAX_REPORT_LEN;
 +		ctx->report_out_len = CTAP_MAX_REPORT_LEN;
@@ -164,8 +169,21 @@
 +{
 +	struct hid_dragonfly *ctx = handle;
 +
-+	close(ctx->fd);
++	if (close(ctx->fd) == -1)
++		fido_log_error(errno, "%s: close", __func__);
++
 +	free(ctx);
++}
++
++int
++fido_hid_set_sigmask(void *handle, const fido_sigset_t *sigmask)
++{
++	struct hid_dragonfly *ctx = handle;
++
++	ctx->sigmask = *sigmask;
++	ctx->sigmaskp = &ctx->sigmask;
++
++	return (FIDO_OK);
 +}
 +
 +int
@@ -179,13 +197,18 @@
 +		return (-1);
 +	}
 +
-+	if (fido_hid_unix_wait(ctx->fd, ms) < 0) {
++	if (fido_hid_unix_wait(ctx->fd, ms, ctx->sigmaskp) < 0) {
 +		fido_log_debug("%s: fd not ready", __func__);
 +		return (-1);
 +	}
 +
-+	if ((r = read(ctx->fd, buf, len)) == -1 || (size_t)r != len) {
-+		fido_log_debug("%s: read", __func__);
++	if ((r = read(ctx->fd, buf, len)) == -1) {
++		fido_log_error(errno, "%s: read", __func__);
++		return (-1);
++	}
++
++	if (r < 0 || (size_t)r != len) {
++		fido_log_debug("%s: %zd != %zu", __func__, r, len);
 +		return (-1);
 +	}
 +
@@ -203,9 +226,13 @@
 +		return (-1);
 +	}
 +
-+	if ((r = write(ctx->fd, buf + 1, len - 1)) == -1 ||
-+	    (size_t)r != len - 1) {
-+		fido_log_debug("%s: write", __func__);
++	if ((r = write(ctx->fd, buf + 1, len - 1)) == -1) {
++		fido_log_error(errno, "%s: write", __func__);
++		return (-1);
++	}
++
++	if (r < 0 || (size_t)r != len - 1) {
++		fido_log_debug("%s: %zd != %zu", __func__, r, len - 1);
 +		return (-1);
 +	}
 +
