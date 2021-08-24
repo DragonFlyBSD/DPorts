@@ -1,32 +1,76 @@
-diff --git a/MAINTAINERS b/MAINTAINERS
-index 8e4e329810..498db7a07c 100644
---- MAINTAINERS
-+++ MAINTAINERS
-@@ -510,6 +510,15 @@ F: accel/stubs/hax-stub.c
- F: include/sysemu/hax.h
- F: target/i386/hax/
+--- target/i386/nvmm/nvmm-all.c	2021-06-23 19:45:01.316793000 +0000
++++ target/i386/nvmm/nvmm-all.c	2021-06-23 19:50:11.581464000 +0000
+@@ -406,12 +406,15 @@
+     uint8_t tpr;
+     int ret;
  
-+Guest CPU Cores (NVMM)
-+----------------------
-+NetBSD Virtual Machine Monitor (NVMM) CPU support
-+M: Kamil Rytarowski <kamil@netbsd.org>
-+M: Reinoud Zandijk <reinoud@netbsd.org>
-+S: Maintained
-+F: include/sysemu/nvmm.h
-+F: target/i386/nvmm/
-+
- Hosts
- -----
- LINUX
-@@ -530,6 +539,8 @@ F: include/qemu/*posix*.h
+-    qemu_mutex_lock_iothread();
+-
+     tpr = cpu_get_apic_tpr(x86_cpu->apic_state);
+     if (tpr != qcpu->tpr) {
+-        qcpu->tpr = tpr;
+-        sync_tpr = true;
++        qemu_mutex_lock_iothread();
++        tpr = cpu_get_apic_tpr(x86_cpu->apic_state);
++        if (tpr != qcpu->tpr) {
++            qcpu->tpr = tpr;
++            sync_tpr = true;
++        }
++        qemu_mutex_unlock_iothread();
+     }
  
- NETBSD
- M: Kamil Rytarowski <kamil@netbsd.org>
-+M: Reinoud Zandijk <reinoud@netbsd.org>
-+M: Ryo ONODERA <ryoon@netbsd.org>
- S: Maintained
- K: ^Subject:.*(?i)NetBSD
+     /*
+@@ -423,29 +426,36 @@
+     }
  
--- 
-2.31.1
-
+     if (!has_event && (cpu->interrupt_request & CPU_INTERRUPT_NMI)) {
++        qemu_mutex_lock_iothread();
+         if (nvmm_can_take_nmi(cpu)) {
+             cpu->interrupt_request &= ~CPU_INTERRUPT_NMI;
+             event->type = NVMM_VCPU_EVENT_INTR;
+             event->vector = 2;
+             has_event = true;
+         }
++        qemu_mutex_unlock_iothread();
+     }
+ 
+     if (!has_event && (cpu->interrupt_request & CPU_INTERRUPT_HARD)) {
++        qemu_mutex_lock_iothread();
+         if (nvmm_can_take_int(cpu)) {
+             cpu->interrupt_request &= ~CPU_INTERRUPT_HARD;
+             event->type = NVMM_VCPU_EVENT_INTR;
+             event->vector = cpu_get_pic_interrupt(env);
+             has_event = true;
+         }
++        qemu_mutex_unlock_iothread();
+     }
+ 
+     /* Don't want SMIs. */
+     if (cpu->interrupt_request & CPU_INTERRUPT_SMI) {
++        qemu_mutex_lock_iothread();
+         cpu->interrupt_request &= ~CPU_INTERRUPT_SMI;
++        qemu_mutex_unlock_iothread();
+     }
+ 
+     if (sync_tpr) {
++        qemu_mutex_lock_iothread();
+         ret = nvmm_vcpu_getstate(mach, vcpu, NVMM_X64_STATE_CRS);
+         if (ret == -1) {
+             error_report("NVMM: Failed to get CPU state,"
+@@ -459,6 +469,7 @@
+             error_report("NVMM: Failed to set CPU state,"
+                 " error=%d", errno);
+         }
++        qemu_mutex_unlock_iothread();
+     }
+ 
+     if (has_event) {
+@@ -468,8 +479,6 @@
+                 " error=%d", errno);
+         }
+     }
+-
+-    qemu_mutex_unlock_iothread();
+ }
+ 
+ /*

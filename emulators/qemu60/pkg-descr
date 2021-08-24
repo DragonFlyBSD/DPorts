@@ -1,19 +1,13 @@
-QEMU is a FAST! processor emulator using dynamic translation to achieve
-good emulation speed.
-QEMU has two operating modes:
+QEMU is a generic and open source machine emulator and virtualizer.
 
-    * Full system emulation. In this mode, QEMU emulates a full system
-(for example a PC), including a processor and various peripherials.
-It can be used to launch different Operating Systems without rebooting
-the PC or to debug system code.
-    * User mode emulation (Linux host only). In this mode, QEMU can launch
-Linux processes compiled for one CPU on another CPU. It can be used to
-launch the Wine Windows API emulator or to ease cross-compilation and
-cross-debugging.
+When used as a machine emulator, QEMU can run OSes and programs made for one
+machine (e.g. an ARM board) on a different machine (e.g. your own PC). By using
+dynamic translation, it achieves very good performance.
 
-As QEMU requires no host kernel patches to run, it is very safe and easy to use.
+When used as a virtualizer, QEMU achieves near native performance by executing
+the guest code directly on the host CPU. QEMU supports virtualization when
+executing under the Xen hypervisor or using the KVM kernel module in Linux.
+In NetBSD and DragonFly BSD, NVMM is employed to achieve hardware-accelerated
+virtualization.
 
-See also the preconfigured system images on http://oszoo.org/
-Many live cd isos also work.
-
-WWW: http://wiki.qemu.org/Main_Page
+WWW: https://www.qemu.org/

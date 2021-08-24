@@ -1,0 +1,22 @@
+[
+{ type: install
+  message: <<EOM
+DragonFly Host Notes
+====================
+
+- To use NVMM for QEMU:
+
+  1. Add yourself to the 'nvmm' group and re-login.
+  2. Load the NVMM kernel module: kldload nvmm
+  3. Append '-accel nvmm' to your usual QEMU command line.
+
+- Set 'net.link.tap.up_on_open' sysctl to make '/dev/tap*' devices persisent
+  across QEMU reboots.
+
+- Set 'net.link.tap.user_open' sysctl in order to use '/dev/tap*' for
+  networking as non-root.  Don't forget to adjust device node permissions
+  in '/etc/devfs.rules'.
+
+EOM
+}
+]

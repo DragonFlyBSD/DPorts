@@ -1,0 +1,62 @@
+--- meson.build.orig	2021-07-05 23:46:08.472470000 +0800
++++ meson.build	2021-07-05 23:46:26.744759000 +0800
+@@ -230,7 +230,7 @@ if not get_option('hax').disabled()
+   endif
+ endif
+ if targetos in [ 'netbsd', 'dragonfly' ]
+-  if cc.has_header_symbol('nvmm.h', 'nvmm_vcpu_stop', required: get_option('nvmm'))
++  if cc.has_header('nvmm.h', required: get_option('nvmm'))
+     nvmm = cc.find_library('nvmm', required: get_option('nvmm'))
+   endif
+   if nvmm.found()
+--- target/i386/nvmm/nvmm-all.c.orig	2021-07-05 23:46:57.775695000 +0800
++++ target/i386/nvmm/nvmm-all.c	2021-07-05 23:51:00.063178000 +0800
+@@ -25,6 +25,7 @@
+ 
+ #include "nvmm-accel-ops.h"
+ 
++#include <sys/bitops.h>
+ #include <nvmm.h>
+ 
+ struct qemu_vcpu {
+@@ -759,7 +760,11 @@ nvmm_vcpu_loop(CPUState *cpu)
+         nvmm_vcpu_pre_run(cpu);
+ 
+         if (qatomic_read(&cpu->exit_request)) {
++#if NVMM_USER_VERSION >= 2
+             nvmm_vcpu_stop(vcpu);
++#else
++            qemu_cpu_kick_self();
++#endif
+         }
+ 
+         /* Read exit_request before the kernel reads the immediate exit flag */
+@@ -776,6 +781,7 @@ nvmm_vcpu_loop(CPUState *cpu)
+         switch (exit->reason) {
+         case NVMM_VCPU_EXIT_NONE:
+             break;
++#if NVMM_USER_VERSION >= 2
+         case NVMM_VCPU_EXIT_STOPPED:
+             /*
+              * The kernel cleared the immediate exit flag; cpu->exit_request
+@@ -784,6 +790,7 @@ nvmm_vcpu_loop(CPUState *cpu)
+             smp_wmb();
+             qcpu->stop = true;
+             break;
++#endif
+         case NVMM_VCPU_EXIT_MEMORY:
+             ret = nvmm_handle_mem(mach, vcpu);
+             break;
+@@ -897,8 +904,12 @@ nvmm_ipi_signal(int sigcpu)
+ {
+     if (current_cpu) {
+         struct qemu_vcpu *qcpu = get_qemu_vcpu(current_cpu);
++#if NVMM_USER_VERSION >= 2
+         struct nvmm_vcpu *vcpu = &qcpu->vcpu;
+         nvmm_vcpu_stop(vcpu);
++#else
++        qcpu->stop = true;
++#endif
+     }
+ }
+ 
