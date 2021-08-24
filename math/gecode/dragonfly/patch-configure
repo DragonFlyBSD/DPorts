@@ -1,0 +1,11 @@
+--- configure.orig	2021-05-20 06:12:58 UTC
++++ configure
+@@ -2778,7 +2778,7 @@ $as_echo_n "checking for the host operat
+        guess_host_os=${with_host_os}
+         fi
+           case ${guess_host_os} in
+-       GNU/kFreeBSD|*inux*|FreeBSD|NetBSD)
++       GNU/kFreeBSD|*inux*|FreeBSD|NetBSD|DragonFly)
+        host_os=linux
+        { $as_echo "$as_me:${as_lineno-$LINENO}: result: Linux" >&5
+ $as_echo "Linux" >&6; }
