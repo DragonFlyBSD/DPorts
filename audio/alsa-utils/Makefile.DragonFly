@@ -1,6 +1,5 @@
-
 # chase devel/ncurses hacks
+# replacing just the suffix should work
 dfly-patch:
-	${REINPLACE_CMD} -e 's@lncursesw@lncurses@g' \
-			 -e 's@NCURSESLIBSUFFIX="w"@NCURSESLIBSUFFIX=""@g' \
-		${WRKSRC}/configure
+	${REINPLACE_CMD} -e 's@NCURSESLIBSUFFIX="w"@NCURSESLIBSUFFIX=""@g' \
+		${WRKSRC}/configure.ac
