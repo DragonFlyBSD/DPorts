@@ -1,20 +1,11 @@
---- CMakeLists.txt.intermediate	2019-10-29 08:14:37.000000000 +0000
+--- CMakeLists.txt.orig	2021-08-25 23:25:01 UTC
 +++ CMakeLists.txt
-@@ -84,7 +84,7 @@ if(NOT ${CMAKE_SYSTEM_NAME} MATCHES "Win
-     endif()
+@@ -111,7 +111,7 @@ else()
+ 	message(FATAL_ERROR "Program pkg-config not found")
  endif()
  
 -if(${CMAKE_SYSTEM} MATCHES "Linux|FreeBSD")
 +if(${CMAKE_SYSTEM} MATCHES "Linux|FreeBSD|DragonFly")
-     #pkg_check_modules(ALSA alsa>=1.0.0)
+     #pkg_check_modules(ALSA REQUIRED IMPORTED_TARGET alsa>=1.0.0)
      if(ALSA_FOUND)
-         set(ALSA_LIBS ${ALSA_LIBRARIES})
-@@ -119,7 +119,7 @@ if(BUILD_TESTING)
-   add_subdirectory(tests)
- endif()
- 
--if(${CMAKE_SYSTEM} MATCHES "Linux|FreeBSD")
-+if(${CMAKE_SYSTEM} MATCHES "Linux|FreeBSD|DragonFly")
-     find_package(Doxygen)
-     if(DOXYGEN_FOUND)
-         configure_file(
+         message(STATUS "Found ALSA version = ${ALSA_VERSION}")
