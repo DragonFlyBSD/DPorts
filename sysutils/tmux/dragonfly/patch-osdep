@@ -1,0 +1,11 @@
+--- osdep-dragonfly.c.orig	2021-09-01 21:07:17.646835000 -0700
++++ osdep-dragonfly.c	2021-09-01 21:07:25.007177000 -0700
+@@ -28,6 +28,8 @@
+ #include <string.h>
+ #include <unistd.h>
+ 
++#include "compat.h"
++
+ struct kinfo_proc	*cmp_procs(struct kinfo_proc *, struct kinfo_proc *);
+ char			*osdep_get_name(int, char *);
+ char			*osdep_get_cwd(int);
