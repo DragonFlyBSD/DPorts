@@ -1,3 +1,5 @@
+# When NCURSES option is selected, we need ncurses from dports.
+NCURSES_USES+=	ncurses
 
 # sed: RE error: Illegal byte sequence mc.1
 BUILD_DEPENDS+=	gsed:textproc/gsed
