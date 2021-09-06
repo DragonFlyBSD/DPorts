@@ -1,3 +1,6 @@
+# We do not have MAP_GUARD (like freebsd) or MAP_NORESERVE (like linux)
+# so no large address space for us.
+CONFIGURE_ARGS+=	--disable-large-address-space
 
 # zrj: when making bootstrap compile w/o DINAMIC (libffi) and --with-intree-gmp
 MAKE_ENV+=	LDVER=ld.bfd
