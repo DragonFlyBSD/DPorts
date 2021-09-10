@@ -1,11 +1,10 @@
-
 # This port opens too many files during build, more than the default setting.
-# Its build is known to succeed with MAX_FILES_RStudio=4096 and MAX_FILES_RStudio_server=4096 in poudriere.conf
+# Its build is known to succeed with MAX_FILES_RStudio=4096 in poudriere.conf
 
 PORTNAME=	RStudio
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.3.1093
-PORTREVISION=	2
+DISTVERSION=	1.4.1717
+PORTREVISION=	3
 CATEGORIES=	devel math java
 MASTER_SITES=	https://s3.amazonaws.com/rstudio-buildtools/dictionaries/:dictionaries \
 		https://s3.amazonaws.com/rstudio-buildtools/:buildtools
@@ -24,18 +23,21 @@ BROKEN_i386=	[ERROR] Line 101: Failed to resolve 'org.rstudio.studio.client.work
 
 BUILD_DEPENDS=	ant:devel/apache-ant \
 		${LOCALBASE}/include/sys/sysinfo.h:devel/libsysinfo \
+		node:www/node \
 		pandoc:textproc/hs-pandoc \
 		R-cran-rstudioapi>0:devel/R-cran-rstudioapi
 LIB_DEPENDS=	libR.so:math/R \
 		libboost_thread.so:devel/boost-libs \
 		libinotify.so:devel/libinotify \
-		libuuid.so:misc/e2fsprogs-libuuid
+		libsoci_core.so:databases/soci \
+		libuuid.so:misc/e2fsprogs-libuuid \
+		libyaml-cpp.so:devel/yaml-cpp
 
 FLAVORS=	desktop server
 FLAVOR?=	${FLAVORS:[1]}
 server_PKGNAMESUFFIX=	-server
 
-USES=		cmake fortran localbase:ldflags pkgconfig ssl
+USES=		cmake fortran localbase:ldflags pgsql pkgconfig sqlite ssl
 USE_JAVA=	yes
 JAVA_VERSION=	8
 JAVA_BUILD=	yes
@@ -51,6 +53,9 @@ CMAKE_ARGS=	-DFREEBSD_RSTUDIO_VERSION:STRING=${PORTVERSION} \
 CMAKE_ARGS+=	-DQT_QMAKE_EXECUTABLE:STRING=${QMAKE}
 CMAKE_ARGS+=	-DRSTUDIO_BOOST_SIGNALS_VERSION=2
 CMAKE_ARGS+=	-DFREEBSD_PORT_VERSION:STRING=${DISTVERSION}
+CMAKE_ARGS+=	-DFREEBSD_LOCALBASE:STRING=${LOCALBASE} # SOCI package is looked up here, see patch patch-src_cpp_CMakeLists.txt
+CMAKE_ON=	RSTUDIO_USE_SYSTEM_YAML_CPP \
+		RSTUDIO_USE_SYSTEM_SOCI
 MAKE_ENV=	HOME=${WRKDIR} \
 		JAVA_HOME=${JAVA_HOME} \
 		PATH=${JAVA_HOME}/bin:${PATH} \
@@ -74,6 +79,7 @@ EXECUTABLE=	${PORTNAME:tl}
 .if ${FLAVOR:U} == server
 COMMENT+=	(web UI version)
 CMAKE_ARGS+=	-DRSTUDIO_TARGET=Server
+LDFLAGS+=	-linotify
 INSTALL_SUBDIR=	${PORTNAME:tl}-server
 EXECUTABLE=	rserver
 USER=		nobody
@@ -82,8 +88,8 @@ USE_RC_SUBR=	${PORTNAME:tl}-server
 .endif
 
 post-extract:
-	@${MKDIR} ${WRKSRC}/dependencies/common/dictionaries && ${MV} ${WRKDIR}/en_* ${WRKSRC}/dependencies/common/dictionaries/
-	@${MV} ${WRKDIR}/mathjax-* ${WRKSRC}/dependencies/common/
+	@${MKDIR} ${WRKSRC}/dependencies/dictionaries && ${MV} ${WRKDIR}/en_* ${WRKSRC}/dependencies/dictionaries/
+	@${MV} ${WRKDIR}/mathjax-* ${WRKSRC}/dependencies/
 	@${MKDIR} ${WRKSRC}/src/gwt/lib/gwt && ${MV} ${WRKDIR}/gwt-${GWT_VERSION} ${WRKSRC}/src/gwt/lib/gwt/${GWT_VERSION}
 	@${MKDIR} ${WRKSRC}/src/gwt/lib/gin/${GIN_VERSION} && ${MV} ${WRKDIR}/*.jar ${WRKSRC}/src/gwt/lib/gin/${GIN_VERSION}/
 
@@ -97,10 +103,13 @@ post-patch:
 	@${REINPLACE_CMD} -e ' \
 		s|</java>|<jvmarg value="-Duser.home=${WRKDIR}"/></java>|' \
 		${WRKSRC}/src/gwt/build.xml
-	@${REINPLACE_CMD} -e '\
+	@${REINPLACE_CMD} -e ' \
 		s|rHomePaths.push_back|//rHomePaths.push_back|; \
 		s|//rHomePaths.push_back(FilePath("/usr/local/lib/|rHomePaths.push_back(FilePath("${PREFIX}/lib/|' \
 		${WRKSRC}/src/cpp/core/r_util/RVersionsPosix.cpp
+	@${REINPLACE_CMD} -e ' \
+		s|<condition property="node.bin" value="../../../$${node.dir}/bin/node">|<condition property="node.bin" value="${LOCALBASE}/bin/node">|' \
+		${WRKSRC}/src/gwt/build.xml
 
 pre-build:
 	@${CP} ${FILESDIR}/global-setenv.h ${WRKSRC}/src/cpp/desktop/
@@ -126,6 +135,12 @@ post-install:
 	# Some functions expect the pandoc symlink.
 	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/${INSTALL_SUBDIR}/bin/pandoc
 	@cd ${STAGEDIR}${PREFIX}/lib/${INSTALL_SUBDIR}/bin/pandoc && ${LN} -s ../../../../bin/pandoc
+	# Add $LOCALBASE/bin to PATH to allow RStudio-server to run gmake (R_HOME/etc/Renviron.site is installed, see https://stat.ethz.ch/R-manual/R-devel/library/base/html/Startup.html)
+.if ${FLAVOR:U} == server
+	#@${MKDIR} ${STAGEDIR}${LOCALBASE}/lib/R/etc
+	#@${ECHO} "PATH=\"${LOCALBASE}/bin:\$$PATH\"" > ${STAGEDIR}${LOCALBASE}/lib/R/etc/Renviron.site # it should be this way, but this fails: https://github.com/rstudio/rstudio/issues/9815
+	@${LN} -s ${LOCALBASE}/bin/${GMAKE} ${STAGEDIR}${PREFIX}/lib/rstudio-server/bin/postback/${GMAKE} # hack, should be as above, but at least gmake is in the path now
+.endif
 	# There is a variability in .js file names due to use of random numbers, so we use the automatic plist.
 	@${SETENV} ${CO_ENV} ${SH} ${SCRIPTSDIR}/check-stagedir.sh makeplist | ${GREP} -v ^\/ | ${SED} -e 's|%%WWWDIR%%|www/rstudio| ; s|%%CMAKE_BUILD_TYPE%%|${CMAKE_BUILD_TYPE:tl}|' > ${TMPPLIST}
 
