@@ -36,6 +36,8 @@ LIB_DEPENDS=	libevent.so:devel/libevent libffi.so:devel/libffi libexpat.so:textp
 		libicui18n.so:devel/icu libwebp.so:graphics/webp libvpx.so:multimedia/libvpx
 RUN_DEPENDS+=	alsa-plugins>0:audio/alsa-plugins ffmpeg>0:multimedia/ffmpeg
 
+BROKEN=		does not build currently, waiting for zrj
+
 ##USE_GECKO=	gecko
 CPE_PRODUCT=	${PORTNAME}_legacy
 CONFLICTS_INSTALL=	firefox firefox-esr
