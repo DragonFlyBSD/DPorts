@@ -1,216 +1,98 @@
---- Sysctl.xs.intermediate	2019-05-08 16:11:18 UTC
+--- Sysctl.xs.orig	2021-03-05 17:25:15 UTC
 +++ Sysctl.xs
-@@ -8,7 +8,7 @@
- #include "XSUB.h"
- 
- /* define _FreeBSD_version where applicable */
--#if __FreeBSD__ >= 2
-+#if defined(__FreeBSD__) && __FreeBSD__ >= 2
- #include <osreldate.h>
- #endif
- 
-@@ -20,7 +20,11 @@
+@@ -22,6 +22,10 @@
  #include <sys/time.h>       /* struct clockinfo */
  #include <sys/vmmeter.h>    /* struct vmtotal */
  #include <sys/resource.h>   /* struct loadavg */
--#if __FreeBSD_version < 1000000
-+#if (defined(__FreeBSD__) && __FreeBSD_version < 1000000) || defined(__DragonFly__)
 +#if defined(__DragonFly__)
 +#include <sys/sensors.h>
 +#define _KERNEL_STRUCTURES
 +#endif
- #include <sys/mbuf.h>       /* struct mbstat (opaque mib) */
- #endif
  #include <sys/timex.h>      /* struct ntptimeval (opaque mib) */
-@@ -32,7 +36,7 @@
- #include <netinet/in_systm.h>
- #include <netinet/ip.h>
- #include <netinet/ip_icmp.h>
--#if __FreeBSD_version < 500000
-+#if (defined(__FreeBSD__) && __FreeBSD_version < 500000) || defined(__DragonFly__)
- #include <netinet/tcp.h>  /* struct tcpstat prerequisite */
- #endif
- 
-@@ -238,6 +242,26 @@ _mib_info(const char *arg)
-         case 'S': {
-             if (strcmp(f,"S,clockinfo") == 0)    { fmt_type = FMT_CLOCKINFO; }
-             else if (strcmp(f,"S,loadavg") == 0) { fmt_type = FMT_LOADAVG; }
-+#ifdef __DragonFly__
-+            else if (strcmp(f,"S,timespec") == 0) { fmt_type = FMT_TIMESPEC; }
-+            else if (strcmp(f,"S,sensor") == 0)   { fmt_type = FMT_SENSOR; }
-+            else if (strcmp(f,"S,vmmeter") == 0)  { fmt_type = FMT_VMMETER; }
-+            else if (strcmp(f,"S,vmstats") == 0)  { fmt_type = FMT_VMSTATS; }
-+            else if (strcmp(f,"S,xtcpcb") == 0)   { fmt_type = FMT_XTCPCB; }
-+            else if (strcmp(f,"S,xunpcb") == 0)   { fmt_type = FMT_XUNPCB; }
-+
-+            else if (strcmp(f,"S,ip_stats") == 0)  { fmt_type = FMT_IP_STATS; }
-+            else if (strcmp(f,"S,tcp_stats") == 0) { fmt_type = FMT_TCP_STATS; }
-+            else if (strcmp(f,"S,carpstats") == 0)    { fmt_type = FMT_CARPSTATS; }
-+            else if (strcmp(f,"S,rtstatistics") == 0) { fmt_type = FMT_RTSTATISTICS; }
-+
-+            else if (strcmp(f,"S,nchstats") == 0)      { fmt_type = FMT_NCHSTATS; }
-+            else if (strcmp(f,"S,cryptostats") == 0)   { fmt_type = FMT_CRYPTOSTATS; }
-+            else if (strcmp(f,"S,tty") == 0)           { fmt_type = FMT_TTY; }
-+            else if (strcmp(f,"S,file") == 0)          { fmt_type = FMT_FILE; }
-+            else if (strcmp(f,"S,proc") == 0)          { fmt_type = FMT_PROC; }
-+            else if (strcmp(f,"S,kinfo_cputime") == 0) { fmt_type = FMT_KINFO_CPUTIME; }
-+#endif
-             else if (strcmp(f,"S,timeval") == 0) { fmt_type = FMT_TIMEVAL; }
-             else if (strcmp(f,"S,vmtotal") == 0) { fmt_type = FMT_VMTOTAL; }
-             /* now the opaque OIDs */
-@@ -264,6 +288,9 @@ _mib_info(const char *arg)
-             if (strcmp(f,"T,struct cdev *") == 0) {
-                 fmt_type = FMT_STRUCT_CDEV;
-             }
-+            else if (strcmp(f,"T,udev_t") == 0) {
-+                fmt_type = FMT_UDEV_T;
-+            }
-             else {
-                 /* bleah */
-             }
-@@ -517,6 +544,35 @@ _mib_lookup(const char *arg)
-             av_store(c, 2, newSVnv((double)inf->ldavg[2]/scale));
-             break;
-         }
-+#ifdef __DragonFly__
-+        case FMT_TIMESPEC: {
-+            struct timespec *inf = (struct timespec *)buf;
-+            RETVAL = newSVnv(
-+                (double)inf->tv_sec + ((double)inf->tv_nsec/1000000000)
-+            );
-+            break;
-+        }
-+        case FMT_SENSOR: {
-+            struct sensor *inf = (struct sensor *)buf;
-+            switch(inf->type) {
-+            case SENSOR_TEMP:
-+              RETVAL = newSVnv(
-+                  (double)(inf->value - 273150000) / 1000000.0
-+              );
-+              break;
-+            case SENSOR_WATTS:
-+              RETVAL = newSVnv(
-+                  (double)(inf->value / 1000000.0)
-+              );
-+              break;
-+            default:
-+               warn("unhandled sensor type");
-+               XSRETURN_UNDEF;
-+               break;
-+           }
-+           break;
-+        }
-+#endif
-         case FMT_TIMEVAL: {
-             struct timeval *inf = (struct timeval *)buf;
-             RETVAL = newSVnv(
-@@ -525,7 +581,7 @@ _mib_lookup(const char *arg)
-             break;
-         }
-         /* the remaining custom formats are for opaque mibs */
--#if __FreeBSD_version < 1000000
-+#if (defined(__FreeBSD__) && __FreeBSD_version < 1000000) || defined(__DragonFly__)
-         case FMT_MBSTAT: {
-             HV *c = (HV *)sv_2mortal((SV *)newHV());
-             struct mbstat *inf = (struct mbstat *)buf;
-@@ -538,12 +594,12 @@ _mib_lookup(const char *arg)
-             hv_store(c, "mbuflen",        7, newSVuv(inf->m_mlen), 0);
-             hv_store(c, "mbufhead",       8, newSVuv(inf->m_mhlen), 0);
-             hv_store(c, "drain",          5, newSVuv(inf->m_drain), 0);
--#if __FreeBSD_version < 500000
-+#if (defined(__FreeBSD__) && __FreeBSD_version < 500000) || defined(__DragonFly__)
-             hv_store(c, "numtypes",       8, newSVpvn("", 0), 0);
- #else
-             hv_store(c, "numtypes",       8, newSViv(inf->m_numtypes), 0);
- #endif
--#if __FreeBSD_version < 600000
-+#if (defined(__FreeBSD__) && __FreeBSD_version < 600000) || defined(__DragonFly__)
-             hv_store(c, "mbufs",          5, newSVpvn("", 0), 0);
-             hv_store(c, "mclusts",        7, newSVpvn("", 0), 0);
-             hv_store(c, "sfallocwait",   11, newSVpvn("", 0), 0);
-@@ -582,6 +638,7 @@ _mib_lookup(const char *arg)
+ #include <sys/devicestat.h> /* struct devstat (opaque mib) */
+ #include <sys/mount.h>      /* struct xvfsconf (opaque mib) */
+@@ -474,6 +478,7 @@ _mib_lookup(const char *arg)
                  hv_store(c, name, strlen(name), newSVpvn(inf->device_name, strlen(inf->device_name)), 0);
                  strcpy(name, "#.unitno"); name[0] = *p;
                  hv_store(c, name, strlen(name), newSViv(inf->unit_number), 0);
-+#ifdef __FreeBSD__
- #if __FreeBSD_version < 500000
++#ifndef __DragonFly__
                  strcpy(name, "#.sequence"); name[0] = *p;
-                 hv_store(c, name, strlen(name), newSVpvn("", 0)), 0);
-@@ -641,12 +698,13 @@ _mib_lookup(const char *arg)
+                 hv_store(c, name, strlen(name), newSVuv(inf->sequence0), 0);
+                 strcpy(name, "#.allocated"); name[0] = *p;
+@@ -502,6 +507,7 @@ _mib_lookup(const char *arg)
+                 hv_store(c, name, strlen(name), newSVuv(inf->operations[DEVSTAT_WRITE]), 0);
                  strcpy(name, "#.operations_free"); name[0] = *p;
                  hv_store(c, name, strlen(name), newSVuv(inf->operations[DEVSTAT_FREE]), 0);
- #endif
 +#endif
                  ++p;
                  ++inf;
              } while (inf < (struct devstat *)(buf + buflen));
+@@ -509,7 +515,11 @@ _mib_lookup(const char *arg)
+         }
+         case CTLTYPE_XVFSCONF: {
+             HV *c = (HV *)sv_2mortal((SV *)newHV());
++#ifndef __DragonFly__
+             struct xvfsconf *inf = (struct xvfsconf *)buf;
++#else
++            struct vfsconf *inf = (struct vfsconf *)buf;
++#endif
+             RETVAL = newRV((SV *)c);
+             hv_store(c, "name",         4, newSVpv(inf->vfc_name, 0), 0);
+             hv_store(c, "typenum",      7, newSViv(inf->vfc_typenum), 0);
+@@ -540,28 +550,40 @@ _mib_lookup(const char *arg)
+             /* Message statistics */
+             hv_store(c, "total",             5, newSVuv(inf->igps_rcv_total), 0);
+             hv_store(c, "tooshort",          8, newSVuv(inf->igps_rcv_tooshort), 0);
++#ifndef __DragonFly__
+             hv_store(c, "badttl",            6, newSVuv(inf->igps_rcv_badttl), 0);
++#endif
+             hv_store(c, "badsum",            6, newSVuv(inf->igps_rcv_badsum), 0);
+             /* Query statistics */
++#ifndef __DragonFly__
+             hv_store(c, "queries",           7, newSVuv(inf->igps_rcv_v1v2_queries + inf->igps_rcv_v3_queries), 0);
+             hv_store(c, "v1v2_queries",     12, newSVuv(inf->igps_rcv_v1v2_queries), 0);
+             hv_store(c, "v3_queries",       10, newSVuv(inf->igps_rcv_v3_queries), 0);
++#endif
+             hv_store(c, "badqueries",       10, newSVuv(inf->igps_rcv_badqueries), 0);
++#ifndef __DragonFly__
+             hv_store(c, "gen_queries",      11, newSVuv(inf->igps_rcv_gen_queries), 0);
+             hv_store(c, "group_queries",    13, newSVuv(inf->igps_rcv_group_queries), 0);
+             hv_store(c, "gsr_queries",      11, newSVuv(inf->igps_rcv_gsr_queries), 0);
+             hv_store(c, "drop_gsr_queries", 16, newSVuv(inf->igps_drop_gsr_queries), 0);
++#endif
+             /* Report statistics */
+             hv_store(c, "reports",           7, newSVuv(inf->igps_rcv_reports), 0);
+             hv_store(c, "badreports",       10, newSVuv(inf->igps_rcv_badreports), 0);
+             hv_store(c, "ourreports",       10, newSVuv(inf->igps_rcv_ourreports), 0);
++#ifndef __DragonFly__
+             hv_store(c, "nore",              4, newSVuv(inf->igps_rcv_nora), 0);
++#endif
+             hv_store(c, "sent",              4, newSVuv(inf->igps_snd_reports), 0);
              break;
          }
--#if __FreeBSD_version >= 500000
-+#if defined(__FreeBSD__) && __FreeBSD_version >= 500000
-         case FMT_XVFSCONF: {
+         case CTLTYPE_TCPSTAT: {
              HV *c = (HV *)sv_2mortal((SV *)newHV());
-             struct xvfsconf *inf = (struct xvfsconf *)buf;
-@@ -678,7 +736,7 @@ _mib_lookup(const char *arg)
-             HV *c = (HV *)sv_2mortal((SV *)newHV());
-             struct igmpstat *inf = (struct igmpstat *)buf;
-             RETVAL = newRV((SV *)c);
--#if __FreeBSD_version < 800070
-+#if (defined(__FreeBSD__) && __FreeBSD_version < 800070) || defined(__DragonFly__)
-             hv_store(c, "total",       5, newSVuv(inf->igps_rcv_total), 0);
-             hv_store(c, "tooshort",    8, newSVuv(inf->igps_rcv_tooshort), 0);
-             hv_store(c, "badsum",      6, newSVuv(inf->igps_rcv_badsum), 0);
-@@ -714,7 +772,11 @@ _mib_lookup(const char *arg)
-         }
-         case FMT_TCPSTAT: {
-             HV *c = (HV *)sv_2mortal((SV *)newHV());
-+#if defined(__DragonFly__)
-+            struct tcp_stats *inf = (struct tcp_stats *)buf;
-+#else
++#ifndef __DragonFly__
              struct tcpstat *inf = (struct tcpstat *)buf;
++#else
++            struct tcp_stats *inf = (struct tcp_stats *)buf;
 +#endif
              RETVAL = newRV((SV *)c);
              hv_store(c, "connattempt",      11, newSVuv(inf->tcps_connattempt), 0);
              hv_store(c, "accepts",           7, newSVuv(inf->tcps_accepts), 0);
-@@ -793,7 +855,7 @@ _mib_lookup(const char *arg)
-             hv_store(c, "zonefail",          8, newSVuv(inf->tcps_sc_zonefail), 0);
+@@ -641,6 +663,7 @@ _mib_lookup(const char *arg)
              hv_store(c, "sendcookie",       10, newSVuv(inf->tcps_sc_sendcookie), 0);
              hv_store(c, "recvcookie",       10, newSVuv(inf->tcps_sc_recvcookie), 0);
--#if __FreeBSD_version < 500000
-+#if (defined(__FreeBSD__) && __FreeBSD_version < 500000) || defined(__DragonFly__)
-             hv_store(c, "minmssdrops",      11, newSVpvn("", 0), 0);
-             hv_store(c, "sendrexmitbad",    13, newSVpvn("", 0), 0);
-             hv_store(c, "hostcacheadd",     12, newSVpvn("", 0), 0);
-@@ -804,7 +866,7 @@ _mib_lookup(const char *arg)
+             hv_store(c, "minmssdrops",      11, newSVuv(inf->tcps_minmssdrops), 0);
++#ifndef __DragonFly__
+             hv_store(c, "sendrexmitbad",    13, newSVuv(inf->tcps_sndrexmitbad), 0);
              hv_store(c, "hostcacheadd",     12, newSVuv(inf->tcps_hc_added), 0);
              hv_store(c, "hostcacheover",    13, newSVuv(inf->tcps_hc_bucketoverflow), 0);
- #endif
--#if __FreeBSD_version < 600000
-+#if (defined(__FreeBSD__) && __FreeBSD_version < 600000) || defined(__DragonFly__)
-             hv_store(c, "badrst",            6, newSVpvn("", 0), 0);
-             hv_store(c, "sackrecover",      11, newSVpvn("", 0), 0);
-             hv_store(c, "sackrexmitsegs",   14, newSVpvn("", 0), 0);
-@@ -894,6 +956,23 @@ _mib_lookup(const char *arg)
-         case FMT_NFSRVSTATS:
-         case FMT_NFSSTATS:
-         case FMT_XINPCB:
-+#ifdef __DragonFly__
-+        case FMT_VMMETER:
-+        case FMT_VMSTATS:
-+        case FMT_XTCPCB:
-+        case FMT_XUNPCB:
-+        case FMT_IP_STATS:
-+        case FMT_TCP_STATS:
-+        case FMT_CARPSTATS:
-+        case FMT_RTSTATISTICS:
-+        case FMT_NCHSTATS:
-+        case FMT_CRYPTOSTATS:
-+        case FMT_KINFO_CPUTIME:
-+        case FMT_TTY:
-+        case FMT_FILE:
-+        case FMT_PROC:
-+        case FMT_UDEV_T:
+@@ -651,6 +674,7 @@ _mib_lookup(const char *arg)
+             hv_store(c, "sackrecv",          8, newSVuv(inf->tcps_sack_rcv_blocks), 0);
+             hv_store(c, "sacksend",          8, newSVuv(inf->tcps_sack_send_blocks), 0);
+             hv_store(c, "sackscorebover",   14, newSVuv(inf->tcps_sack_sboverflow), 0);
 +#endif
-         case FMT_STRUCT_CDEV:
-             /* don't know how to interpret the results */
-             SvREFCNT_dec(sv_buf);
+             break;
+         }
+         case CTLTYPE_UDPSTAT: {
