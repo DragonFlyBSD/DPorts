@@ -1,0 +1,160 @@
+--- examples/Makefile.in.orig	2021-03-18 08:57:40 UTC
++++ examples/Makefile.in
+@@ -90,10 +90,8 @@ POST_UNINSTALL = :
+ build_triplet = @build@
+ host_triplet = @host@
+ @USE_WRITE_TRUE@bin_PROGRAMS = dwgadd$(EXEEXT)
+-check_PROGRAMS = load_dwg$(EXEEXT) dwg2svg2$(EXEEXT) dwgfuzz$(EXEEXT) \
+-	llvmfuzz_standalone$(EXEEXT)
+-EXTRA_PROGRAMS = unknown$(EXEEXT) bd$(EXEEXT) bits$(EXEEXT) \
+-	llvmfuzz$(EXEEXT)
++check_PROGRAMS = load_dwg$(EXEEXT) dwg2svg2$(EXEEXT) dwgfuzz$(EXEEXT)
++EXTRA_PROGRAMS = unknown$(EXEEXT) bd$(EXEEXT) bits$(EXEEXT)
+ @ENABLE_GCOV_TRUE@am__append_1 = @GCOV_CFLAGS@
+ @ENABLE_GCOV_TRUE@am__append_2 = @GCOV_LIBS@
+ @ENABLE_GCOV_TRUE@am__append_3 = *.gcov *.gcno *.gcda gcov.log
+@@ -158,22 +156,6 @@ am_dwgfuzz_OBJECTS = dwgfuzz.$(OBJEXT)
+ dwgfuzz_OBJECTS = $(am_dwgfuzz_OBJECTS)
+ dwgfuzz_LDADD = $(LDADD)
+ dwgfuzz_DEPENDENCIES = $(top_builddir)/src/libredwg.la
+-am_llvmfuzz_OBJECTS = llvmfuzz-llvmfuzz.$(OBJEXT)
+-llvmfuzz_OBJECTS = $(am_llvmfuzz_OBJECTS)
+-llvmfuzz_DEPENDENCIES = $(top_builddir)/src/libredwg.la \
+-	$(top_builddir)/src/bits.lo
+-llvmfuzz_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
+-	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(llvmfuzz_CFLAGS) \
+-	$(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
+-am_llvmfuzz_standalone_OBJECTS =  \
+-	llvmfuzz_standalone-llvmfuzz.$(OBJEXT)
+-llvmfuzz_standalone_OBJECTS = $(am_llvmfuzz_standalone_OBJECTS)
+-llvmfuzz_standalone_DEPENDENCIES = $(top_builddir)/src/libredwg.la \
+-	$(top_builddir)/src/bits.lo
+-llvmfuzz_standalone_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
+-	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CCLD) \
+-	$(llvmfuzz_standalone_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) \
+-	$(LDFLAGS) -o $@
+ am_load_dwg_OBJECTS = load_dwg.$(OBJEXT)
+ load_dwg_OBJECTS = $(am_load_dwg_OBJECTS)
+ load_dwg_LDADD = $(LDADD)
+@@ -199,8 +181,7 @@ depcomp = $(SHELL) $(top_srcdir)/build-a
+ am__maybe_remake_depfiles = depfiles
+ am__depfiles_remade = ./$(DEPDIR)/bd.Po ./$(DEPDIR)/bits.Po \
+ 	./$(DEPDIR)/dwg2svg2.Po ./$(DEPDIR)/dwgadd.Po \
+-	./$(DEPDIR)/dwgfuzz.Po ./$(DEPDIR)/llvmfuzz-llvmfuzz.Po \
+-	./$(DEPDIR)/llvmfuzz_standalone-llvmfuzz.Po \
++	./$(DEPDIR)/dwgfuzz.Po \
+ 	./$(DEPDIR)/load_dwg.Po ./$(DEPDIR)/unknown.Po
+ am__mv = mv -f
+ COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
+@@ -222,12 +203,12 @@ am__v_CCLD_ = $(am__v_CCLD_@AM_DEFAULT_V
+ am__v_CCLD_0 = @echo "  CCLD    " $@;
+ am__v_CCLD_1 = 
+ SOURCES = bd.c bits.c $(dwg2svg2_SOURCES) $(dwgadd_SOURCES) \
+-	$(dwgfuzz_SOURCES) $(llvmfuzz_SOURCES) \
+-	$(llvmfuzz_standalone_SOURCES) $(load_dwg_SOURCES) \
++	$(dwgfuzz_SOURCES) \
++	$(load_dwg_SOURCES) \
+ 	$(unknown_SOURCES)
+ DIST_SOURCES = bd.c bits.c $(dwg2svg2_SOURCES) $(dwgadd_SOURCES) \
+-	$(dwgfuzz_SOURCES) $(llvmfuzz_SOURCES) \
+-	$(llvmfuzz_standalone_SOURCES) $(load_dwg_SOURCES) \
++	$(dwgfuzz_SOURCES) \
++	$(load_dwg_SOURCES) \
+ 	$(unknown_SOURCES)
+ am__can_run_installinfo = \
+   case $$AM_UPDATE_INFO_DIR in \
+@@ -521,17 +502,8 @@ bits_LDADD = $(top_builddir)/src/libredw
+ dwgfuzz_SOURCES = dwgfuzz.c
+ #would need HAVE_ASAN am var set
+ #dwgfuzz_CFLAGS              = $(CFLAGS) $(AM_CFLAGS) -fsanitize=address,undefined -fno-omit-frame-pointer
+-llvmfuzz_SOURCES = llvmfuzz.c
+-llvmfuzz_CFLAGS = $(CFLAGS) $(AM_CFLAGS)  -DHAVE_ASAN \
+-                              -fsanitize=fuzzer,address,undefined -fno-omit-frame-pointer
+-
+-llvmfuzz_LDADD = $(top_builddir)/src/libredwg.la $(top_builddir)/src/bits.lo -lm
+-llvmfuzz_standalone_SOURCES = llvmfuzz.c
+-@HAVE_MINGW_FALSE@llvmfuzz_standalone_CFLAGS = $(CFLAGS) $(AM_CFLAGS) -DSTANDALONE -DHAVE_ASAN \
+-@HAVE_MINGW_FALSE@                              -fsanitize=address,undefined -fno-omit-frame-pointer
+ 
+-@HAVE_MINGW_TRUE@llvmfuzz_standalone_CFLAGS = $(CFLAGS) $(AM_CFLAGS) -DSTANDALONE
+-llvmfuzz_standalone_LDADD = $(top_builddir)/src/libredwg.la $(top_builddir)/src/bits.lo -lm
++
+ @HAVE_WINE_FALSE@TESTS_ENVIRONMENT = \
+ @HAVE_WINE_FALSE@ PROGS='$(check_PROGRAMS)' \
+ @HAVE_WINE_FALSE@ DATADIR='$(top_srcdir)/test/test-data' \
+@@ -752,13 +724,6 @@ dwgfuzz$(EXEEXT): $(dwgfuzz_OBJECTS) $(d
+ 	@rm -f dwgfuzz$(EXEEXT)
+ 	$(AM_V_CCLD)$(LINK) $(dwgfuzz_OBJECTS) $(dwgfuzz_LDADD) $(LIBS)
+ 
+-llvmfuzz$(EXEEXT): $(llvmfuzz_OBJECTS) $(llvmfuzz_DEPENDENCIES) $(EXTRA_llvmfuzz_DEPENDENCIES) 
+-	@rm -f llvmfuzz$(EXEEXT)
+-	$(AM_V_CCLD)$(llvmfuzz_LINK) $(llvmfuzz_OBJECTS) $(llvmfuzz_LDADD) $(LIBS)
+-
+-llvmfuzz_standalone$(EXEEXT): $(llvmfuzz_standalone_OBJECTS) $(llvmfuzz_standalone_DEPENDENCIES) $(EXTRA_llvmfuzz_standalone_DEPENDENCIES) 
+-	@rm -f llvmfuzz_standalone$(EXEEXT)
+-	$(AM_V_CCLD)$(llvmfuzz_standalone_LINK) $(llvmfuzz_standalone_OBJECTS) $(llvmfuzz_standalone_LDADD) $(LIBS)
+ 
+ load_dwg$(EXEEXT): $(load_dwg_OBJECTS) $(load_dwg_DEPENDENCIES) $(EXTRA_load_dwg_DEPENDENCIES) 
+ 	@rm -f load_dwg$(EXEEXT)
+@@ -779,8 +744,6 @@ distclean-compile:
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/dwg2svg2.Po@am__quote@ # am--include-marker
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/dwgadd.Po@am__quote@ # am--include-marker
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/dwgfuzz.Po@am__quote@ # am--include-marker
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/llvmfuzz-llvmfuzz.Po@am__quote@ # am--include-marker
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/llvmfuzz_standalone-llvmfuzz.Po@am__quote@ # am--include-marker
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/load_dwg.Po@am__quote@ # am--include-marker
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/unknown.Po@am__quote@ # am--include-marker
+ 
+@@ -811,34 +774,6 @@ am--depfiles: $(am__depfiles_remade)
+ @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+ @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LTCOMPILE) -c -o $@ $<
+ 
+-llvmfuzz-llvmfuzz.o: llvmfuzz.c
+-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(llvmfuzz_CFLAGS) $(CFLAGS) -MT llvmfuzz-llvmfuzz.o -MD -MP -MF $(DEPDIR)/llvmfuzz-llvmfuzz.Tpo -c -o llvmfuzz-llvmfuzz.o `test -f 'llvmfuzz.c' || echo '$(srcdir)/'`llvmfuzz.c
+-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/llvmfuzz-llvmfuzz.Tpo $(DEPDIR)/llvmfuzz-llvmfuzz.Po
+-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='llvmfuzz.c' object='llvmfuzz-llvmfuzz.o' libtool=no @AMDEPBACKSLASH@
+-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(llvmfuzz_CFLAGS) $(CFLAGS) -c -o llvmfuzz-llvmfuzz.o `test -f 'llvmfuzz.c' || echo '$(srcdir)/'`llvmfuzz.c
+-
+-llvmfuzz-llvmfuzz.obj: llvmfuzz.c
+-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(llvmfuzz_CFLAGS) $(CFLAGS) -MT llvmfuzz-llvmfuzz.obj -MD -MP -MF $(DEPDIR)/llvmfuzz-llvmfuzz.Tpo -c -o llvmfuzz-llvmfuzz.obj `if test -f 'llvmfuzz.c'; then $(CYGPATH_W) 'llvmfuzz.c'; else $(CYGPATH_W) '$(srcdir)/llvmfuzz.c'; fi`
+-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/llvmfuzz-llvmfuzz.Tpo $(DEPDIR)/llvmfuzz-llvmfuzz.Po
+-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='llvmfuzz.c' object='llvmfuzz-llvmfuzz.obj' libtool=no @AMDEPBACKSLASH@
+-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(llvmfuzz_CFLAGS) $(CFLAGS) -c -o llvmfuzz-llvmfuzz.obj `if test -f 'llvmfuzz.c'; then $(CYGPATH_W) 'llvmfuzz.c'; else $(CYGPATH_W) '$(srcdir)/llvmfuzz.c'; fi`
+-
+-llvmfuzz_standalone-llvmfuzz.o: llvmfuzz.c
+-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(llvmfuzz_standalone_CFLAGS) $(CFLAGS) -MT llvmfuzz_standalone-llvmfuzz.o -MD -MP -MF $(DEPDIR)/llvmfuzz_standalone-llvmfuzz.Tpo -c -o llvmfuzz_standalone-llvmfuzz.o `test -f 'llvmfuzz.c' || echo '$(srcdir)/'`llvmfuzz.c
+-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/llvmfuzz_standalone-llvmfuzz.Tpo $(DEPDIR)/llvmfuzz_standalone-llvmfuzz.Po
+-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='llvmfuzz.c' object='llvmfuzz_standalone-llvmfuzz.o' libtool=no @AMDEPBACKSLASH@
+-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(llvmfuzz_standalone_CFLAGS) $(CFLAGS) -c -o llvmfuzz_standalone-llvmfuzz.o `test -f 'llvmfuzz.c' || echo '$(srcdir)/'`llvmfuzz.c
+-
+-llvmfuzz_standalone-llvmfuzz.obj: llvmfuzz.c
+-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(llvmfuzz_standalone_CFLAGS) $(CFLAGS) -MT llvmfuzz_standalone-llvmfuzz.obj -MD -MP -MF $(DEPDIR)/llvmfuzz_standalone-llvmfuzz.Tpo -c -o llvmfuzz_standalone-llvmfuzz.obj `if test -f 'llvmfuzz.c'; then $(CYGPATH_W) 'llvmfuzz.c'; else $(CYGPATH_W) '$(srcdir)/llvmfuzz.c'; fi`
+-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/llvmfuzz_standalone-llvmfuzz.Tpo $(DEPDIR)/llvmfuzz_standalone-llvmfuzz.Po
+-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='llvmfuzz.c' object='llvmfuzz_standalone-llvmfuzz.obj' libtool=no @AMDEPBACKSLASH@
+-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(llvmfuzz_standalone_CFLAGS) $(CFLAGS) -c -o llvmfuzz_standalone-llvmfuzz.obj `if test -f 'llvmfuzz.c'; then $(CYGPATH_W) 'llvmfuzz.c'; else $(CYGPATH_W) '$(srcdir)/llvmfuzz.c'; fi`
+-
+ mostlyclean-libtool:
+ 	-rm -f *.lo
+ 
+@@ -1204,8 +1139,6 @@ distclean: distclean-am
+ 	-rm -f ./$(DEPDIR)/dwg2svg2.Po
+ 	-rm -f ./$(DEPDIR)/dwgadd.Po
+ 	-rm -f ./$(DEPDIR)/dwgfuzz.Po
+-	-rm -f ./$(DEPDIR)/llvmfuzz-llvmfuzz.Po
+-	-rm -f ./$(DEPDIR)/llvmfuzz_standalone-llvmfuzz.Po
+ 	-rm -f ./$(DEPDIR)/load_dwg.Po
+ 	-rm -f ./$(DEPDIR)/unknown.Po
+ 	-rm -f Makefile
+@@ -1258,8 +1191,6 @@ maintainer-clean: maintainer-clean-am
+ 	-rm -f ./$(DEPDIR)/dwg2svg2.Po
+ 	-rm -f ./$(DEPDIR)/dwgadd.Po
+ 	-rm -f ./$(DEPDIR)/dwgfuzz.Po
+-	-rm -f ./$(DEPDIR)/llvmfuzz-llvmfuzz.Po
+-	-rm -f ./$(DEPDIR)/llvmfuzz_standalone-llvmfuzz.Po
+ 	-rm -f ./$(DEPDIR)/load_dwg.Po
+ 	-rm -f ./$(DEPDIR)/unknown.Po
+ 	-rm -f Makefile
