@@ -1,11 +1,11 @@
---- readchar/readchar.py.intermediate	2021-03-07 15:49:46.000000000 +0000
+--- readchar/readchar.py.orig	2021-09-11 13:08:37 UTC
 +++ readchar/readchar.py
-@@ -9,7 +9,7 @@ if sys.platform.startswith('linux'):
+@@ -6,7 +6,7 @@ import sys
+ 
+ if sys.platform.startswith("linux"):
      from .readchar_linux import readchar
- elif sys.platform == 'darwin':
+-elif sys.platform.startswith("freebsd"):
++elif sys.platform.startswith("freebsd") or sys.platform.startswith('dragonfly'):
      from .readchar_linux import readchar
--elif sys.platform.startswith('freebsd'):
-+elif sys.platform.startswith('freebsd') or sys.platform.startswith('dragonfly'):
+ elif sys.platform == "darwin":
      from .readchar_linux import readchar
- elif sys.platform in ('win32', 'cygwin'):
-     import msvcrt
