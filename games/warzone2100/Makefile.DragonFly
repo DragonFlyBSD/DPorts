@@ -1,4 +1,0 @@
-
-dfly-patch:
-	${REINPLACE_CMD} -e '/_XOPEN_SOURCE/d' \
-		${WRKSRC}/3rdparty/miniupnp/miniupnpc/CMakeLists.txt
