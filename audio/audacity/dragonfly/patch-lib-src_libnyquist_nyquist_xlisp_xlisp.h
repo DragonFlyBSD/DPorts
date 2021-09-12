@@ -1,9 +1,9 @@
---- lib-src/libnyquist/nyquist/xlisp/xlisp.h	2015-10-11 11:24:47.765937000 +0200
-+++ lib-src/libnyquist/nyquist/xlisp/xlisp.h	2015-10-11 11:25:23.204292000 +0200
-@@ -177,6 +177,19 @@
+--- lib-src/libnyquist/nyquist/xlisp/xlisp.h.intermediate	2021-09-12 11:50:39 UTC
++++ lib-src/libnyquist/nyquist/xlisp/xlisp.h
+@@ -194,6 +194,19 @@ extern long ptrtoabs();
+   #endif
  #endif
- #endif
-
+ 
 +/* DragonFly */
 +#ifdef __DragonFly__
 +  #if defined(_BYTE_ORDER)
@@ -17,6 +17,6 @@
 +  #endif
 +#endif
 +
- /* Apple CC */
+ /* Apple CC (xcode, macOS, macintosh) */
  #ifdef __APPLE__
  #define NNODES 2000

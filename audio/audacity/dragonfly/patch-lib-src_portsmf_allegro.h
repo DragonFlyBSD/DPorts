@@ -1,4 +1,4 @@
---- lib-src/portsmf/allegro.h.orig	2020-07-18 17:54:26 UTC
+--- lib-src/portsmf/allegro.h.orig	2021-03-31 11:56:41 UTC
 +++ lib-src/portsmf/allegro.h
 @@ -51,6 +51,7 @@
  #include <assert.h>
