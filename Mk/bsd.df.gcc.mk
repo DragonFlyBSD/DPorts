@@ -13,12 +13,26 @@ _INCLUDE_BSD_DF_GCC_MK=	yes
 
 .include "${PORTSDIR}/Mk/bsd.default-versions.mk"
 
+# All GCC versions supported by this framework.
+#
+# When updating this, keep Mk/bsd.default-versions.mk in sync.
+GCCVERSIONS=    4.8 8.0 9 10 11 12
+
 .undef PORT_COMPILER
 .undef BASE_COMPILER
 
 BASE_COMPILER=gcc80
 
-.if defined(USE_GCC_VERSION) && ${USE_GCC_VERSION:M[679]}
+_GCCVERSION_OKAY=       false
+# See whether we have the specific version requested installed already
+# and save that into _GCC_FOUND.
+.for v in ${GCCVERSIONS}
+. if ${USE_GCC_VERSION} == ${v}
+_GCCVERSION_OKAY=       true
+. endif
+.endfor
+
+.if defined(USE_GCC_VERSION) && ${_GCCVERSION_OKAY} == true
 .   if ${BASE_COMPILER:Mgcc80}
 PORT_COMPILER=${USE_GCC_VERSION}
 .   endif
