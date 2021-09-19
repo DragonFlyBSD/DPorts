@@ -1,15 +1,6 @@
---- js/src/old-configure.in.orig	2016-09-05 20:12:56 UTC
+--- js/src/old-configure.in.orig	2021-09-04 13:25:05 UTC
 +++ js/src/old-configure.in
-@@ -1305,7 +1305,7 @@ dnl Checks for header files.
- dnl ========================================================
- AC_HEADER_DIRENT
- case "$target_os" in
--freebsd*)
-+freebsd*|dragonfly*)
- # for stuff like -lXshm
-     CPPFLAGS="${CPPFLAGS} ${X_CFLAGS}"
-     ;;
-@@ -1448,7 +1448,7 @@ then
+@@ -858,7 +858,7 @@ then
      fi
  
  	case "$target" in
