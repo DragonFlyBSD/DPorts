@@ -27,7 +27,7 @@ _GCCVERSION_OKAY=       false
 # See whether we have the specific version requested installed already
 # and save that into _GCC_FOUND.
 .for v in ${GCCVERSIONS}
-. if ${USE_GCC_VERSION} == ${v}
+. if defined(USE_GCC_VERSION) && ${USE_GCC_VERSION} == ${v}
 _GCCVERSION_OKAY=       true
 . endif
 .endfor
