@@ -3,7 +3,7 @@
 dfly-patch:
 	${REINPLACE_CMD} -e 's@\(\|\| os(freebsd)\)@\1 || os(dragonfly)@g' \
 			 -e 's@-D_Noreturn=@& -D_Bool=int @g' \
-		${WRKSRC}/cairo-*/cairo.cabal \
-		${WRKSRC}/glib-*/glib.cabal \
-		${WRKSRC}/gtk3-*/gtk3.cabal \
-		${WRKSRC}/pango-*/pango.cabal
+		${WRKSRC}/_cabal_deps/cairo-*/cairo.cabal \
+		${WRKSRC}/_cabal_deps/glib-*/glib.cabal \
+		${WRKSRC}/_cabal_deps/gtk3-*/gtk3.cabal \
+		${WRKSRC}/_cabal_deps/pango-*/pango.cabal

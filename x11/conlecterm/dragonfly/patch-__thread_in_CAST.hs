@@ -1,7 +1,7 @@
 Parse statements like: "extern __thread int errno;"
 
---- gtk2hs-buildtools-0.13.8.0/c2hs/c/CAST.hs.orig	2001-09-09 01:46:40 UTC
-+++ gtk2hs-buildtools-0.13.8.0/c2hs/c/CAST.hs
+--- _cabal_deps/gtk2hs-buildtools-0.13.8.0/c2hs/c/CAST.hs.orig	2001-09-09 01:46:40 UTC
++++ _cabal_deps/gtk2hs-buildtools-0.13.8.0/c2hs/c/CAST.hs
 @@ -1140,6 +1140,9 @@ instance Binary CStorageSpec where
      put_ bh (CTypedef ae) = do
              putByte bh 4
