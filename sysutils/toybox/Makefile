@@ -1,7 +1,5 @@
-# $FreeBSD$
-
 PORTNAME=	toybox
-PORTVERSION=	0.8.2
+PORTVERSION=	0.8.5
 CATEGORIES=	sysutils
 
 MAINTAINER=	vidar@karlsen.tech
@@ -17,23 +15,27 @@ LIB_DEPENDS=	libinotify.so:devel/libinotify
 
 USES=		gmake shebangfix
 
-SHEBANG_FILES=	scripts/change.sh scripts/findglobals.sh \
-		scripts/genconfig.sh scripts/install.sh \
-		scripts/make.sh scripts/minicom.sh \
-		scripts/portability.sh scripts/runtest.sh \
-		scripts/single.sh scripts/test.sh configure
-
-PLIST_FILES=	bin/toybox
-
 USE_GITHUB=	yes
 GH_ACCOUNT=	landley
 
+SHEBANG_FILES=	scripts/bloatcheck scripts/mcm-buildall.sh \
+		scripts/change.sh scripts/findglobals.sh \
+		scripts/genconfig.sh scripts/install.sh \
+		scripts/make.sh scripts/mkroot.sh \
+		scripts/portability.sh scripts/record-commands \
+		scripts/runtest.sh scripts/single.sh \
+		scripts/test.sh configure \
+		tests/*
+
+PLIST_FILES=	bin/toybox
+
 post-patch:
-	@${REINPLACE_CMD} -e 's|<sys/inotify.h>|"${LOCALBASE}/include/sys/inotify.h"|' \
+	${REINPLACE_CMD} -e 's|<sys/inotify.h>|"${LOCALBASE}/include/sys/inotify.h"|' \
 		${WRKSRC}/lib/portability.c
+	${REINPLACE_CMD} -e 's|sed|gsed|' ${WRKSRC}/scripts/single.sh
 
 do-configure:
-	cd ${WRKSRC} && ${GMAKE} bsd_defconfig
+	cd ${WRKSRC} && HOSTCC=${CC} ${GMAKE} bsd_defconfig
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/toybox ${STAGEDIR}${PREFIX}/bin
