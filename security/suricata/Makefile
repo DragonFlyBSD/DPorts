@@ -1,8 +1,5 @@
-# Created by: Patrick Tracanelli <eksffa@freebsdbrasil.com.br>
-# $FreeBSD$
-
 PORTNAME=	suricata
-DISTVERSION=	5.0.5
+DISTVERSION=	6.0.3
 PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	https://www.openinfosecfoundation.org/download/
@@ -51,6 +48,8 @@ OPTIONS_RADIO_SCRIPTS=	LUA LUAJIT
 
 OPTIONS_SUB=		yes
 
+PRELUDE_BROKEN=		Compilation broken, see https://redmine.openinfosecfoundation.org/issues/4065
+
 GEOIP_DESC=		GeoIP support
 HYPERSCAN_DESC=		Hyperscan support
 IPFW_DESC=		IPFW and IP Divert support for inline IDP
@@ -72,11 +71,11 @@ HYPERSCAN_LIB_DEPENDS=		libhs.so:devel/hyperscan
 
 IPFW_CONFIGURE_ON=		--enable-ipfw
 
-LUAJIT_LIB_DEPENDS=		libluajit-5.1.so:lang/luajit
+LUAJIT_LIB_DEPENDS=		libluajit-5.1.so:lang/luajit-openresty
 LUAJIT_CONFIGURE_ON=		--enable-luajit
 
 LUA_USES=			lua:51
-LUA_CONFIGURE_ON=		--enable-lua \
+LUA_CONFIGURE_ON=		--enable-lua
 
 NETMAP_CONFIGURE_ENABLE=	netmap
 
@@ -100,13 +99,19 @@ PYTHON_USES=			python
 PYTHON_USE=			PYTHON=py3kplist
 PYTHON_CONFIGURE_ENABLE=	python
 
-REDIS_LIB_DEPENDS=		libhiredis.so:databases/hiredis
+REDIS_LIB_DEPENDS=		libhiredis.so:databases/hiredis \
+				libevent_pthreads.so:devel/libevent
 REDIS_CONFIGURE_ON=		--enable-hiredis \
 
 TESTS_CONFIGURE_ENABLE=		unittests
 
 pre-patch:
 	@${CP} ${FILESDIR}/ax_check_compile_flag.m4 ${WRKSRC}/m4
+
+post-patch:
+# Disable vendor checksums
+	@${REINPLACE_CMD} 's,"files":{[^}]*},"files":{},' \
+		${WRKSRC}/rust/vendor/*/.cargo-checksum.json
 
 post-patch-PYTHON-on:
 	@${REINPLACE_CMD} -e "/AC_PATH_PROGS.*HAVE_PYTHON/ s/python[^,]*,/${PYTHON_VERSION},/g" \
