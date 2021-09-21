@@ -1,4 +1,4 @@
---- external/astyle/astyle_main.cpp.orig	2019-04-19 12:00:08 UTC
+--- external/astyle/astyle_main.cpp.orig	2019-04-19 12:00:05 UTC
 +++ external/astyle/astyle_main.cpp
 @@ -60,6 +60,10 @@
  	#endif /* __VMS */

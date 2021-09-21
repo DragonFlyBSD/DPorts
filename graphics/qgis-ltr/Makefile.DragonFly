@@ -13,6 +13,4 @@ dfly-patch:
 	${REINPLACE_CMD} -e '/-lulog/d' \
 		${WRKSRC}/src/plugins/grass/CMakeLists.txt
 	${REINPLACE_CMD} -e 's@txt2tags --encoding=utf-8@txt2tags@g' \
-		${WRKSRC}/scripts/release.pl ${WRKSRC}/scripts/update-news.pl
-	${REINPLACE_CMD} -e 's@--encoding=utf-8@@g' \
-		${WRKSRC}/cmake/Txt2Tags.cmake
+		${WRKSRC}/scripts/release.pl
