@@ -69,6 +69,7 @@ ZSH_PLIST_FILES=	share/share/zsh/site-functions/_vagrant
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|@PREFIX@|${PREFIX}|g' ${WRKSRC}/bin/vagrant
+	@${REINPLACE_CMD} -e 's|@DATADIR@|${DATADIR}|g' ${WRKSRC}/lib/vagrant/plugin/manager.rb
 
 do-build:
 	(cd ${WRKSRC}; (${ECHO_CMD} -e "install:\n\techo\n") > Makefile)
@@ -83,6 +84,8 @@ do-build:
 		${STAGEDIR}${DATADIR}/embedded/rgloader/loader.rb
 
 post-install:
+	${MKDIR} ${STAGEDIR}${DATADIR}/plugins.d
+	${ECHO} '{}' > ${STAGEDIR}${DATADIR}/plugins.json
 	${RMDIR} ${STAGEDIR}${PREFIX}/lib/ruby/gems/${RUBY_VER}/doc
 	${RM} ${STAGEDIR}${PREFIX}/lib/ruby/gems/${RUBY_VER}/gems/${PORTNAME}-${PORTVERSION}/.runner.sh
 

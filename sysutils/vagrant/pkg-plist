@@ -1056,4 +1056,6 @@ bin/vagrant
 %%GEM_BASE_DIR%%/vagrant-%%PORTVERSION%%/version.txt
 %%GEMS_DIR%%specifications/vagrant-%%PORTVERSION%%.gemspec
 %%DATADIR%%/embedded/rgloader/loader.rb
+%%DATADIR%%/plugins.json
+@dir %%DATADIR%%/plugins.d
 @dir %%GEMS_DIR%%extensions
