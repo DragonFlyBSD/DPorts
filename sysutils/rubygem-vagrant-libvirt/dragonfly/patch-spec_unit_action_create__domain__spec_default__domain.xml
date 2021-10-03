@@ -1,0 +1,8 @@
+--- spec/unit/action/create_domain_spec/default_domain.xml.orig	2021-10-03 14:59:04 UTC
++++ spec/unit/action/create_domain_spec/default_domain.xml
+@@ -1,4 +1,4 @@
+-<domain type='kvm' xmlns:qemu='http://libvirt.org/schemas/domain/qemu/1.0'>
++<domain type='nvmm' xmlns:qemu='http://libvirt.org/schemas/domain/qemu/1.0'>
+   <name>vagrant-test_default</name>
+   <title></title>
+   <description>Source: /rootpath/Vagrantfile</description>

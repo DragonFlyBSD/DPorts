@@ -1,0 +1,8 @@
+--- spec/unit/templates/domain_all_settings.xml.orig	2021-10-03 14:59:04 UTC
++++ spec/unit/templates/domain_all_settings.xml
+@@ -1,4 +1,4 @@
+-<domain type='kvm' xmlns:qemu='http://libvirt.org/schemas/domain/qemu/1.0'>
++<domain type='nvmm' xmlns:qemu='http://libvirt.org/schemas/domain/qemu/1.0'>
+   <name></name>
+   <title>title</title>
+   <description>description</description>

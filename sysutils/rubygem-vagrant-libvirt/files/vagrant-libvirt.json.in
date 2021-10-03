@@ -1,0 +1,9 @@
+{
+  "vagrant-libvirt": {
+    "ruby_version":"%%RUBY_VERSION%%",
+    "vagrant_version":"2.2.14",
+    "gem_version":"",
+    "require":"",
+    "sources":[]
+  }
+}
