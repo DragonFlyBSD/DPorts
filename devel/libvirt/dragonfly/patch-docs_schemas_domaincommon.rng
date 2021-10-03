@@ -1,0 +1,10 @@
+--- docs/schemas/domaincommon.rng.orig	2021-06-01 09:58:21 UTC
++++ docs/schemas/domaincommon.rng
+@@ -230,6 +230,7 @@
+         <value>phyp</value> <!-- NOT USED ANYMORE -->
+         <value>vz</value>
+         <value>bhyve</value>
++        <value>nvmm</value>
+       </choice>
+     </attribute>
+   </define>

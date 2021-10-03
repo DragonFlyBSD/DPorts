@@ -1,6 +1,19 @@
---- meson.build.orig	2020-12-01 08:51:29 UTC
+--- meson.build.orig	2021-06-01 09:58:21 UTC
 +++ meson.build
-@@ -897,7 +897,7 @@ required_programs_groups = [
+@@ -705,9 +705,9 @@ endforeach
+ brd_required_headers = '''#include <stdint.h>
+ #include <net/if.h>
+ #include <net/ethernet.h>'''
+-if (cc.has_header_symbol('net/if_bridgevar.h', 'BRDGSFD', prefix: brd_required_headers) and
+-    cc.has_header_symbol('net/if_bridgevar.h', 'BRDGADD', prefix: brd_required_headers) and
+-    cc.has_header_symbol('net/if_bridgevar.h', 'BRDGDEL', prefix: brd_required_headers))
++if (cc.has_header_symbol('net/bridge/if_bridgevar.h', 'BRDGSFD', prefix: brd_required_headers) and
++    cc.has_header_symbol('net/bridge/if_bridgevar.h', 'BRDGADD', prefix: brd_required_headers) and
++    cc.has_header_symbol('net/bridge/if_bridgevar.h', 'BRDGDEL', prefix: brd_required_headers))
+   conf.set('WITH_BSD_BRIDGE_MGMT', 1)
+ endif
+ 
+@@ -799,7 +799,7 @@ required_programs_groups = [
    {'name':'rst2man', 'prog':['rst2man', 'rst2man.py', 'rst2man-3']},
  ]
  
@@ -9,7 +22,7 @@
    required_programs += 'ifconfig'
  endif
  
-@@ -1056,7 +1056,7 @@ gnutls_version = '3.2.0'
+@@ -965,7 +965,7 @@ gnutls_version = '3.2.0'
  gnutls_dep = dependency('gnutls', version: '>=' + gnutls_version)
  
  # Check for BSD kvm (kernel memory interface)
@@ -18,7 +31,7 @@
    libkvm_dep = cc.find_library('kvm')
  else
    libkvm_dep = dependency('', required: false)
-@@ -1465,7 +1465,7 @@ if bash_completion_dep.found()
+@@ -1382,7 +1382,7 @@ if bash_completion_dep.found()
    endif
  endif
  
@@ -27,7 +40,7 @@
    if not get_option('firewalld').disabled()
      conf.set('WITH_FIREWALLD', 1)
    endif
-@@ -1489,7 +1489,7 @@ endif
+@@ -1406,7 +1406,7 @@ endif
  # build driver options
  
  if get_option('driver_remote').enabled()
@@ -36,7 +49,7 @@
      error('XDR is required for remote driver')
    endif
    conf.set('WITH_REMOTE', 1)
-@@ -1680,7 +1680,7 @@ if not get_option('driver_qemu').disable
+@@ -1602,7 +1602,7 @@ if not get_option('driver_qemu').disable
      endif
      conf.set_quoted('QEMU_MODDIR', qemu_moddir)
  
