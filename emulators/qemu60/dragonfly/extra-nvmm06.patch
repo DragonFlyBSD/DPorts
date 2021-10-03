@@ -1,0 +1,149 @@
+--- accel/stubs/meson.build.orig	2021-04-29 17:18:58 UTC
++++ accel/stubs/meson.build
+@@ -1,4 +1,5 @@
+ specific_ss.add(when: 'CONFIG_HAX', if_false: files('hax-stub.c'))
+ specific_ss.add(when: 'CONFIG_XEN', if_false: files('xen-stub.c'))
+ specific_ss.add(when: 'CONFIG_KVM', if_false: files('kvm-stub.c'))
++specific_ss.add(when: 'CONFIG_NVMM', if_false: files('nvmm-stub.c'))
+ specific_ss.add(when: 'CONFIG_TCG', if_false: files('tcg-stub.c'))
+--- accel/stubs/nvmm-stub.c.orig	2021-09-25 15:45:08 UTC
++++ accel/stubs/nvmm-stub.c
+@@ -0,0 +1,15 @@
++/*
++ * QEMU NVMM stub
++ *
++ * Copyright DragonFly BSD, Inc. 2021
++ *
++ *
++ * This work is licensed under the terms of the GNU GPL, version 2 or later.
++ * See the COPYING file in the top-level directory.
++ *
++ */
++
++#include "qemu/osdep.h"
++#include "sysemu/kvm.h"
++
++bool nvmm_allowed;
+--- include/sysemu/nvmm.h.intermediate	2021-09-25 14:43:18 UTC
++++ include/sysemu/nvmm.h
+@@ -10,17 +10,23 @@
+ #ifndef QEMU_NVMM_H
+ #define QEMU_NVMM_H
+ 
+-#include "config-host.h"
+-#include "qemu-common.h"
++#ifdef NEED_CPU_H
++# ifdef CONFIG_NVMM
++#  define CONFIG_NVMM_IS_POSSIBLE
++# endif /* CONFIG_NVMM */
++#else
++# define CONFIG_NVMM_IS_POSSIBLE
++#endif /* CONFIG_NVMM_IS_POSSIBLE */
+ 
+-#ifdef CONFIG_NVMM
++#ifdef CONFIG_NVMM_IS_POSSIBLE
++extern bool nvmm_allowed;
+ 
+-int nvmm_enabled(void);
++#define nvmm_enabled() (nvmm_allowed)
+ 
+-#else /* CONFIG_NVMM */
++#else /* CONFIG_NVMM_IS_POSSIBLE */
+ 
+ #define nvmm_enabled() (0)
+ 
+-#endif /* CONFIG_NVMM */
++#endif /* CONFIG_NVMM_IS_POSSIBLE */
+ 
+-#endif /* CONFIG_NVMM */
++#endif /* QEMU_NVMM_H */
+--- monitor/qmp-cmds.c.orig	2021-04-29 17:18:58 UTC
++++ monitor/qmp-cmds.c
+@@ -25,6 +25,7 @@
+ #include "ui/qemu-spice.h"
+ #include "ui/console.h"
+ #include "sysemu/kvm.h"
++#include "sysemu/nvmm.h"
+ #include "sysemu/runstate.h"
+ #include "sysemu/runstate-action.h"
+ #include "sysemu/arch_init.h"
+@@ -52,6 +53,16 @@ NameInfo *qmp_query_name(Error **errp)
+ 
+     return info;
+ }
++
++NvmmInfo *qmp_query_nvmm(Error **errp)
++{
++    NvmmInfo *info = g_malloc0(sizeof(*info));
++
++    info->enabled = nvmm_enabled();
++    info->present = accel_find("nvmm");
++
++    return info;
++}
+ 
+ KvmInfo *qmp_query_kvm(Error **errp)
+ {
+--- qapi/machine.json.orig	2021-04-29 17:18:58 UTC
++++ qapi/machine.json
+@@ -415,6 +415,36 @@
+ { 'command': 'query-kvm', 'returns': 'KvmInfo' }
+ 
+ ##
++# @NvmmInfo:
++#
++# Information about support for NVMM acceleration
++#
++# @enabled: true if NVMM acceleration is active
++#
++# @present: true if NVMM acceleration is built into this executable
++#
++# Since: 6.x
++##
++{ 'struct': 'NvmmInfo', 'data': {'enabled': 'bool', 'present': 'bool'} }
++
++##
++# @query-nvmm:
++#
++# Returns information about NVMM acceleration
++#
++# Returns: @NvmmInfo
++#
++# Since: 6.x
++#
++# Example:
++#
++# -> { "execute": "query-nvmm" }
++# <- { "return": { "enabled": true, "present": true } }
++#
++##
++{ 'command': 'query-nvmm', 'returns': 'NvmmInfo' }
++
++##
+ # @NumaOptionsType:
+ #
+ # @node: NUMA nodes configuration
+--- target/i386/nvmm/nvmm-all.c.intermediate	2021-09-25 14:43:18 UTC
++++ target/i386/nvmm/nvmm-all.c
+@@ -48,7 +48,7 @@ struct qemu_machine {
+ 
+ /* -------------------------------------------------------------------------- */
+ 
+-static bool nvmm_allowed;
++bool nvmm_allowed;
+ static struct qemu_machine qemu_mach;
+ 
+ static struct qemu_vcpu *
+@@ -1216,12 +1216,6 @@ nvmm_accel_init(MachineState *ms)
+     return 0;
+ }
+ 
+-int
+-nvmm_enabled(void)
+-{
+-    return nvmm_allowed;
+-}
+-
+ static void
+ nvmm_accel_class_init(ObjectClass *oc, void *data)
+ {
