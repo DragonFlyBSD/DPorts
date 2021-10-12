@@ -1,8 +1,7 @@
 # Created by: Vsevolod Stakhov <vsevolod@FreeBSD.org>
 
 PORTNAME=	libressl
-PORTVERSION=	3.3.3
-PORTREVISION=	1
+PORTVERSION=	3.3.5
 CATEGORIES=	security devel
 MASTER_SITES=	OPENBSD/LibreSSL
 
@@ -60,5 +59,9 @@ post-patch-MAN3-off:
 
 post-install:
 	${RM} -r ${STAGEDIR}/${PREFIX}/etc/ssl/cert.pem
+
+post-stage-MAN3-on:
+	(cd ${STAGEDIR}${MANPREFIX}; find man/man3 -not -type d | \
+		${SED} 's/$$/.gz/' >> ${TMPPLIST})
 
 .include <bsd.port.mk>
