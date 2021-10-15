@@ -31,13 +31,9 @@ _l=		${lang:C/=.*//g}
 ${_l:tu}_DEFAULT=	${lang:C/.*=//g}
 .endfor
 
-.if exists(/usr/lib/priv/libprivate_ssl.so)
-SSL_DEFAULT?=  libressl
-.endif
-
 # Possible values: 2.4
 APACHE_DEFAULT?=	2.4
-# Possible values: 5, 6, 18
+# Possible values: 5, 18
 BDB_DEFAULT?=		5
 # Possible values: 2, 3
 COROSYNC_DEFAULT?=	2
@@ -47,8 +43,8 @@ COROSYNC_DEFAULT?=	2
 FIREBIRD_DEFAULT?=	2.5
 # Possible values: flang (experimental), gfortran
 FORTRAN_DEFAULT?=	gfortran
-# Possible values: 3.2.0
-FPC_DEFAULT?=		3.2.0
+# Possible values: 3.2.2
+FPC_DEFAULT?=		3.2.2
 # Possible values: 8 (last to support powerpcspe), 9, 10, 11
 # (Any other version is completely unsupported and not meant for general use.)
 .if ${ARCH} == "powerpcspe"
@@ -56,16 +52,20 @@ GCC_DEFAULT?=		8
 .else
 GCC_DEFAULT?=		10
 .endif
-# Possible values (tuple): libglvnd, mesa-libs, mesa-devel
-GL_DEFAULT?=		libglvnd,mesa-libs
+# Possible values: mesa-libs, mesa-devel
+GL_DEFAULT?=		mesa-libs
 # Possible values: 7, 8, 9, agpl
 GHOSTSCRIPT_DEFAULT?=	agpl
 # Possible values: 6, 6-nox11, 7, 7-nox11
 IMAGEMAGICK_DEFAULT?=	7
 # Possible values: 7, 8, 11, 12, 13, 14, 15, 16
 JAVA_DEFAULT?=		8
-# Possible values: 2.0.10
-LAZARUS_DEFAULT?=	2.0.10
+# Possible values: 2.0.12, 2.3.0
+.if !defined(WANT_LAZARUS_DEVEL)
+LAZARUS_DEFAULT?=       2.0.12
+.else
+LAZARUS_DEFAULT?=       2.3.0
+.endif
 # Possible values: rust, legacy
 .if empty(ARCH:Naarch64:Narmv6:Narmv7:Namd64:Ni386:Npowerpc64:Npowerpc64le:Npowerpc)
 LIBRSVG2_DEFAULT?=	rust
@@ -74,7 +74,7 @@ LIBRSVG2_DEFAULT?=	legacy
 .endif
 # Possible values: c7
 LINUX_DEFAULT?=		c7
-# Possible values: 70, 80, 90, 10, 11, -devel (to be used when non-base compiler is required)
+# Possible values: 70, 80, 90, 10, 11, 12, 13, -devel (to be used when non-base compiler is required)
 # Please give notice to the Graphics Team (x11@FreeBSD.org) in advance before
 # bumping the LLVM version.
 .if ${ARCH} == powerpc
@@ -109,11 +109,11 @@ PERL5_DEFAULT:=		${_PERL5_FROM_BIN:R}
 PGSQL_DEFAULT?=		12
 # Possible values: 7.3, 7.4, 8.0
 PHP_DEFAULT?=		7.4
-# Possible values: 2.7, 3.6, 3.7, 3.8, 3.9
+# Possible values: 2.7, 3.6, 3.7, 3.8, 3.9, 3.10
 PYTHON_DEFAULT?=	3.8
 # Possible values: 2.7
 PYTHON2_DEFAULT?=	2.7
-# Possible values: 3.6, 3.7, 3.8, 3.9
+# Possible values: 3.6, 3.7, 3.8, 3.9, 3.10
 PYTHON3_DEFAULT?=	3.8
 # Possible values: 2.6, 2.7, 3.0
 RUBY_DEFAULT?=		2.7

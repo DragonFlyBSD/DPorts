@@ -35,9 +35,6 @@ ncurses_ARGS=	port
 .if ${ncurses_ARGS} == base
 NCURSESBASE=	/usr
 NCURSESINC=	${NCURSESBASE}/include
-.if !exists(/usr/lib/libncursesw.so)
-NCURSES_IMPL=	ncurses
-.endif
 
 .  if exists(${LOCALBASE}/lib/libncurses.so)
 _USES_sanity+=	400:check-depends-ncurses
@@ -81,9 +78,11 @@ RUN_DEPENDS+=		${LOCALBASE}/lib/libncurses.so.${NCURSES_SHLIBVER}:${NCURSES_PORT
 NCURSESRPATH=		${NCURSESBASE}/lib
 LDFLAGS+=		-L${NCURSESRPATH} -Wl,-rpath=${NCURSESRPATH}
 CFLAGS+=		-I${NCURSESBASE}/include -I${NCURSESINC}
+TINFO_LIB=		-ltinfo
+NCURSES_LIB=		-lncurses
 
 .if defined(NCURSES_RPATH)
-CFLAGS+=		-Wl,-rpath,${NCURSESRPATH}
+CFLAGS+=	-Wl,-rpath,${NCURSESRPATH}
 .endif
 
 .else
@@ -92,5 +91,8 @@ CFLAGS+=		-Wl,-rpath,${NCURSESRPATH}
 
 NCURSESLIB=	${NCURSESBASE}/lib
 NCURSES_IMPL?=	ncursesw
+TINFO_LIB?=	-ltinfow
+NCURSES_LIB?=	-lncursesw
+NCURSESLIBS=		${NCURSES_LIB} ${TINFO_LIB}
 
 .endif

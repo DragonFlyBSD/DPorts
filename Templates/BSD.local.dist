@@ -270,6 +270,10 @@
         ..
         applications
         ..
+        bash-completion
+            completions
+            ..
+        ..
         dict
         ..
         doc
@@ -281,6 +285,12 @@
             ..
         ..
         examples
+        ..
+        fish
+            vendor_completions.d
+            ..
+        ..
+        icons
         ..
         info
         ..
@@ -973,6 +983,10 @@
         skel
         ..
         xml
+        ..
+        zsh
+            site-functions
+            ..
         ..
     ..
     tests

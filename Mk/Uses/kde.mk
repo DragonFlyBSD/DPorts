@@ -75,16 +75,16 @@ _KDE_RELNAME=		KDE${_KDE_VERSION}
 
 # === VERSIONS OF THE DIFFERENT COMPONENTS =====================================
 # Current KDE desktop.
-KDE_PLASMA_VERSION?=		5.22.4
+KDE_PLASMA_VERSION?=		5.22.5
 KDE_PLASMA_BRANCH?=		stable
 
 # Current KDE frameworks.
-KDE_FRAMEWORKS_VERSION?=	5.82.0
+KDE_FRAMEWORKS_VERSION?=	5.86.0
 KDE_FRAMEWORKS_BRANCH?= 	stable
 
 # Current KDE applications.
-KDE_APPLICATIONS_VERSION?=	21.04.3
-KDE_APPLICATIONS_SHLIB_VER?=	5.17.3
+KDE_APPLICATIONS_VERSION?=	21.08.1
+KDE_APPLICATIONS_SHLIB_VER?=	5.18.1
 KDE_APPLICATIONS_BRANCH?=	stable
 
 # Extended KDE universe applications.
@@ -255,14 +255,15 @@ _USE_FRAMEWORKS_ALL=	ecm \
 			${_USE_FRAMEWORKS_TIER4} \
 			${_USE_FRAMEWORKS_PORTING} \
 			${_USE_FRAMEWORKS_EXTRA} \
-			kpublictransport kosm
+			kpublictransport kosm \
+			plasma-wayland-protocols
 
 # List of components of the KDE Plasma distribution.
 _USE_PLASMA_ALL=	activitymanagerd breeze breeze-gtk \
 			decoration discover drkonqi hotkeys \
 			infocenter kde-cli-tools kde-gtk-config \
 			kdeplasma-addons kgamma5 kmenuedit kscreen \
-			kscreenlocker ksshaskpass ksysguard kwallet-pam \
+			kscreenlocker ksshaskpass ksysguard ksystemstats kwallet-pam \
 			kwayland-integration kwin kwrited layer-shell-qt libkscreen \
 			libksysguard milou oxygen plasma-browser-integration \
 			plasma-desktop plasma-disks plasma-integration plasma-pa \
@@ -436,9 +437,6 @@ kde-kquickcharts_PATH=		${QT_QMLDIR}/org/kde/quickcharts/controls/libchartscontr
 kde-kross_PORT=			lang/kf5-kross
 kde-kross_LIB=			libKF5KrossCore.so
 
-kde-kwayland-protocols_PORT=	x11/plasma-wayland-protocols
-kde-kwayland-protocols_LIB=	${KDE_PREFIX}/lib/cmake/PlasmaWaylandProtocols/PlasmaWaylandProtocolsConfig.cmake
-
 kde-kwayland-server_PORT=	x11/plasma5-kwayland-server
 kde-kwayland-server_LIB=	libKWaylandServer.so
 
@@ -472,6 +470,9 @@ kde-people_LIB=			libKF5People.so
 
 kde-plasma-framework_PORT=	x11/kf5-plasma-framework
 kde-plasma-framework_LIB=	libKF5Plasma.so
+
+kde-plasma-wayland-protocols_PORT=	x11/plasma-wayland-protocols
+kde-plasma-wayland-protocols_PATH=	${KDE_PREFIX}/lib/cmake/PlasmaWaylandProtocols/PlasmaWaylandProtocolsConfig.cmake
 
 kde-plotting_PORT=		graphics/kf5-kplotting
 kde-plotting_LIB=		libKF5Plotting.so
@@ -588,6 +589,9 @@ kde-ksshaskpass_PATH=		${KDE_PREFIX}/bin/ksshaskpass
 
 kde-ksysguard_PORT=		sysutils/plasma5-ksysguard
 kde-ksysguard_PATH=		${KDE_PREFIX}/bin/ksysguard
+
+kde-ksystemstats_PORT=		sysutils/plasma5-ksystemstats
+kde-ksystemstats_PATH=		${KDE_PREFIX}/bin/ksystemstats
 
 kde-kwallet-pam_PORT=		security/plasma5-kwallet-pam
 kde-kwallet-pam_PATH=		${KDE_PREFIX}/lib/pam_kwallet5.so

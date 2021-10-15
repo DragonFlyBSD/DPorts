@@ -549,12 +549,16 @@ proxydeps_suggest_uses() {
 	# gl-related
 	elif expr ${lib_file} : "${LOCALBASE}/lib/libGL.so.*$" > /dev/null; then
 		warn "you need USE_GL+=gl"
+	elif expr ${lib_file} : "${LOCALBASE}/lib/libGLX.so.*$" > /dev/null; then
+		warn "you need USE_GL+=gl"
 	elif expr ${lib_file} : "${LOCALBASE}/lib/libgbm.so.*$" > /dev/null; then
 		warn "you need USE_GL+=gbm"
 	elif expr ${lib_file} : "${LOCALBASE}/lib/libGLESv2.so.*$" > /dev/null; then
 		warn "you need USE_GL+=glesv2"
 	elif expr ${lib_file} : "${LOCALBASE}/lib/libEGL.so.*$" > /dev/null; then
 		warn "you need USE_GL+=egl"
+	elif expr ${lib_file} : "${LOCALBASE}/lib/libOpenGL.so.*$" > /dev/null; then
+		warn "you need USE_GL+=opengl"
 	elif [ ${pkg} = 'graphics/glew' ]; then
 		warn "you need USE_GL+=glew"
 	elif [ ${pkg} = 'graphics/libGLU' ]; then
@@ -1010,7 +1014,7 @@ pkgmessage()
 		if [ -f "${message}" ]; then
 			if ! head -1 "${message}" | grep -q '^\['; then
 				warn "${message} not in UCL format, will be shown on initial install only."
-				warn "See https://www.freebsd.org/doc/en/books/porters-handbook/pkg-files.html#porting-message"
+				warn "See https://docs.freebsd.org/en/books/porters-handbook/pkg-files/#porting-message"
 			fi
 		fi
 	done

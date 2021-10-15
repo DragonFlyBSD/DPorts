@@ -235,11 +235,11 @@ victoria-metrics:*:289:289::0:0:VictoriaMetrics user:/nonexistent:/usr/sbin/nolo
 _gmid:*:290:290::0:0:gmid daemon user:/var/empty:/usr/sbin/nologin
 pydio:*:291:291::0:0:pydio cells user:/var/pydio:/bin/sh
 sftpgo:*:292:292::0:0:SFTPGo user:/nonexistent:/usr/sbin/nologin
-# free: 293
+biboumi:*:293:293::0:0:biboumi:/nonexistent:/usr/sbin/nologin
 krill:*:294:294::0:0:krill Pseudo User:/nonexistent:/usr/sbin/nologin
-# free: 295
-# free: 296
-# free: 297
+jottad:*:295:295::0:0:Jotta Cloud Daemon:/nonexisten:/usr/sbin/nologin
+writefreely:*:296:296::0:0:WriteFreely daemon:/var/db/writefreely:/usr/sbin/nologin
+conduit:*:297:297::0:0:Conduit daemon:/var/db/conduit:/usr/sbin/nologin
 # free: 298
 owncast:*:299:299::0:0:& daemon:/nonexistent:/usr/sbin/nologin
 backuppc:*:300:300::0:0:BackupPC pseudo-user:/nonexistent:/usr/sbin/nologin
@@ -299,7 +299,7 @@ _iodined:*:353:353::0:0:Iodine Daemon:/nonexistent:/usr/sbin/nologin
 jackett:*:354:354::0:0:Jackett Torznab Proxy Daemon:/nonexistent:/usr/sbin/nologin
 nzbhydra2:*:355:355::0:0:NZBHydra 2 Daemon:/nonexistent:/usr/sbin/nologin
 lidarr:*:356:356::0:0:Lidarr Daemon:/nonexistent:/usr/sbin/nologin
-# free: 357
+bazarr:*:357:357::0:0:Bazarr Daemon:/nonexistent:/usr/sbin/nologin
 # free: 358
 # free: 359
 v2ray:*:360:360::0:0:V2Ray Daemon:/nonexistent:/usr/sbin/nologin
@@ -395,7 +395,7 @@ callweaver:*:444:444::0:0:Callweaver account:/var/lib/callweaver:/usr/sbin/nolog
 ecartis:*:450:450::0:0:Ecartis Listserver:/usr/local/ecartis:/usr/sbin/nologin
 # free: 451
 # free: 452
-# free: 453
+yadifa:*:453:453::0:0:Yadifa DNS Server:/nonexistent:/usr/sbin/nologin
 # free: 454
 inadyn:*:455:455::0:0:inadyn user:/nonexistent:/usr/sbin/nologin
 # free: 456
@@ -798,7 +798,7 @@ cassandra:*:851:851::0:0:Cassandra DB Daemon User:/var/db/cassandra:/usr/sbin/no
 p0f:*:852:852::0:0:p0f unprivileged user:/var/empty:/usr/sbin/nologin
 _geodns:*:853:853::0:0:GeoDNS User:/var/empty:/usr/sbin/nologin
 ebusd:*:854:854::0:0:eBUS Daemon user:/nonexistent:/usr/sbin/nologin
-# free: 855
+opensearch:*:855:855::0:0:opensearch user:/nonexistent:/usr/sbin/nologin
 # free: 856
 # free: 857
 # free: 858

@@ -2140,7 +2140,6 @@ devel/bugzilla40|devel/bugzilla44|2014-06-21|Has expired
 devel/bugzilla42|devel/bugzilla44|2014-06-21|Has expired
 sysutils/sysupdate||2014-06-21|Removed, no longer needed/relevant with FreeBSD in SVN
 www/phpbb-devel|www/phpbb3|2014-06-22|Has expired: Use www/phpbb3 instead
-math/polymake||2014-06-22|Has expired: Does not build with any supported version of Perl
 www/phpsysinfo-dev|www/phpsysinfo|2014-06-22|Has expired: Use www/phpsysinfo instead
 print/pkg-texinfo|print/texinfo-minimal|2014-06-24|Has been renamed
 sysutils/pc-sysinstall|sysutils/pcbsd-utils|2014-06-24|Removed: pc-sysinstall is included in sysutils/pcbsd-utils
@@ -4368,7 +4367,6 @@ devel/py-EnthoughtBase||2016-07-04|Has expired: Broken for more than 6 months
 devel/cl-uffi||2016-07-04|Has expired: Broken for more than 6 months
 devel/ruby-event-loop||2016-07-04|Has expired: Broken for more than 6 months
 devel/libqxt||2016-07-04|Has expired: Broken for more than 6 months
-devel/dasm||2016-07-04|Has expired: Broken for more than 6 months
 devel/libopendaap||2016-07-04|Has expired: Broken for more than 6 months
 devel/cl-uffi-sbcl||2016-07-04|Has expired: Depends on expiring devel/cl-uffi
 devel/cvs2p4||2016-07-04|Has expired: Broken for more than 6 months
@@ -5240,7 +5238,6 @@ sysutils/sievelog||2017-04-30|Has expired: Unfetchable for more than six months 
 sysutils/ldapenter||2017-04-30|Has expired: Unfetchable for more than six months (google code has gone away)
 sysutils/py-danzfs||2017-04-30|Has expired: Unfetchable for more than six months (google code has gone away)
 sysutils/plasma-applet-apcups||2017-04-30|Has expired: Unfetchable for more than six months (google code has gone away)
-sysutils/pdsh||2017-04-30|Has expired: Unfetchable for more than six months (google code has gone away)
 deskutils/superswitcher||2017-04-30|Has expired: Unfetchable for more than six months (google code has gone away)
 deskutils/plasma-applet-playwolf||2017-04-30|Has expired: Unfetchable for more than six months (google code has gone away)
 deskutils/nagaina||2017-04-30|Has expired: Unfetchable for more than six months (google code has gone away)
@@ -6263,9 +6260,6 @@ audio/deforaos-mixer||2018-06-07|Has expired: Broken for more than 6 months
 audio/gkrellmss2||2018-06-07|Has expired: Broken for more than 6 months
 audio/abcmidi||2018-06-07|Has expired: Broken for more than 6 months
 benchmarks/netpipe||2018-06-07|Has expired: Broken for more than 6 months
-science/orthanc-dicomweb||2018-06-07|Removed, depends on expired science/orthanc
-science/orthanc-postgresql||2018-06-07|Removed, depends on expired science/orthanc
-science/orthanc-webviewer||2018-06-07|Removed, depends on expired science/orthanc
 graphics/libkface||2018-06-09|Has expired: No longer maintained upstream
 math/scilab-toolbox-sivp||2018-06-09|Has expired: Cannot build with newer opencv
 math/clipper|graphics/polyclipping|2018-06-11|Duplicate port
@@ -8766,8 +8760,6 @@ net/linuxigd||2019-05-09|Has expired: Abandonware; use net/miniupnpd instead
 net/openafs||2019-05-09|Has expired: Broken for more than 6 months
 security/quantis||2019-05-09|Has expired: Broken for more than 6 months
 sysutils/boxbackup||2019-05-09|Has expired: Broken for more than 6 months
-sysutils/grub2-efi||2019-05-09|Has expired: Broken for more than 6 months
-sysutils/grub2-pcbsd||2019-05-09|Has expired: Broken for more than 6 months
 sysutils/mdcp||2019-05-09|Has expired: Broken for more than 6 months
 sysutils/sbsigntool||2019-05-09|Has expired: Broken for more than 6 months
 www/py-cherrypy-old||2019-05-09|Has expired: Lates version is in tree and no dependent ports
@@ -9771,7 +9763,6 @@ games/xtris||2020-01-10|Has expired: Broken for more than 3 months
 graphics/mapnik||2020-01-10|Has expired: Broken for more than 8 months
 lang/js_of_ocaml||2020-01-10|Has expired: Depends on broken and expiring devel/ocaml-deriving-ocsigen
 lang/rubinius||2020-01-10|Has expired: Broken for more than 7 months
-math/dynare||2020-01-10|Has expired: Broken for more than 9 months
 science/meep||2020-01-10|Has expired: Broken for more than 6 months
 sysutils/hfm||2020-01-10|Has expired: Broken for more than 4 months
 sysutils/u-boot-zedboard||2020-01-10|Has expired: Broken for more than 6 months
@@ -9969,7 +9960,6 @@ science/py-hcluster||2020-01-27|Has expired: Unmaintained, uses EOLed python27
 science/py-pyteomics.biolccc||2020-01-27|Has expired: Unmaintained, uses EOLed python27
 science/pycdf||2020-01-27|Has expired: Unmaintained, uses EOLed python27
 security/blindelephant||2020-01-27|Has expired: Unmaintained, uses EOLed python27
-security/cfv||2020-01-27|Has expired: Unmaintained, uses EOLed python27
 security/fsh||2020-01-27|Has expired: Unmaintained, uses EOLed python27
 security/gcipher||2020-01-27|Has expired: Unmaintained, uses EOLed python27
 security/kedpm||2020-01-27|Has expired: Unmaintained, uses EOLed python27
@@ -10592,7 +10582,6 @@ sysutils/DTraceToolkit|sysutils/dtrace-toolkit|2020-04-26|Renamed to match the p
 devel/k8048|devel/pickle|2020-04-28|Project renamed
 net-mgmt/bgpq|net-mgmt/bgpq3|2020-04-30|Has expired: Use net-mgmt/bgpq3 or net-mgmt/bgpq4
 net/boringtun||2020-04-30|Has expired: Status of the project and motivation is unclear
-dns/dnsperf||2020-04-30|Removed, depends on expired dns/bind914, not compatible with dns/bind916
 dns/bind914|dns/bind916|2020-04-30|Has expired: End of life, please migrate to a newer version of BIND9
 net/py-pcap|net/py-pypcap|2020-05-01|Has expired: Broken with python3 please consider using net/py-pypcap
 x11-drivers/xf86-video-tseng||2020-05-01|Has expired: broken
@@ -10798,7 +10787,6 @@ misc/yaunc||2020-05-05|Has expired: Broken for more than 6 months
 multimedia/clipgrab||2020-05-05|Has expired: Broken for more than 6 months
 multimedia/libsmacker||2020-05-05|Has expired: Broken for more than 6 months
 multimedia/lxdvdrip||2020-05-05|Has expired: Broken for more than 6 months
-multimedia/mjpg-streamer||2020-05-05|Has expired: Broken for more than 6 months
 multimedia/vcdpad||2020-05-05|Has expired: Broken for more than 6 months
 net/erlang-xmlrpc||2020-05-05|Has expired: Broken for more than 6 months
 net/etrace||2020-05-05|Has expired: Broken for more than 6 months
@@ -10864,7 +10852,6 @@ russian/p5-cyrillic||2020-05-05|Has expired: Broken for more than 6 months
 russian/tidyup-mail||2020-05-05|Has expired: Broken for more than 6 months
 science/atom||2020-05-05|Has expired: Broken for more than 6 months
 science/esys-particle||2020-05-05|Has expired: Broken for more than 6 months
-science/openmx||2020-05-05|Has expired: Broken for more than 6 months
 science/p5-Geo-ReadGRIB||2020-05-05|Has expired: Broken for more than 6 months
 science/py-tensorflow-estimator||2020-05-05|Has expired: Broken for more than 6 months
 security/firewalk||2020-05-05|Has expired: Broken for more than 6 months
@@ -10914,7 +10901,6 @@ sysutils/phantom||2020-05-05|Has expired: Broken for more than 6 months
 sysutils/ptools||2020-05-05|Has expired: Broken for more than 6 months
 sysutils/realsync||2020-05-05|Has expired: Broken for more than 6 months
 sysutils/rmonitor||2020-05-05|Has expired: Broken for more than 6 months
-sysutils/roottail||2020-05-05|Has expired: Broken for more than 6 months
 sysutils/sb16config||2020-05-05|Has expired: Broken for more than 6 months
 sysutils/sbase||2020-05-05|Has expired: Broken for more than 6 months
 sysutils/setquota||2020-05-05|Has expired: Broken for more than 6 months
@@ -11221,7 +11207,6 @@ databases/postgresql94-server|databases/postgresql95-server|2020-07-24|Has expir
 databases/postgresql94-pltcl|databases/postgresql95-pltcl|2020-07-24|Has expired: PostgreSQL-9.4 has reached end-of-life
 databases/postgresql94-plperl|databases/postgresql95-plperl|2020-07-24|Has expired: PostgreSQL-9.4 has reached end-of-life
 net/dshell||2020-07-24|Uses deprecated version of python
-sysutils/openshift-install|sysutils/openshift-install45|2020-07-25|Duplicate port
 databases/sqliteodbc-sqlite2|databases/sqliteodbc|2020-07-27|Has expired: SQLite2 has stopped development in 2005, please move to SQLite3
 graphics/wayland-info|graphics/wayland-utils|2020-08-02|Project renamed
 devel/rubygem-grape11|devel/rubygem-grape|2020-08-03|Has expired: use devel/rubygem-grape instead
@@ -11591,7 +11576,6 @@ mail/nohtml||2020-09-19|Has expired: Uses deprecated version of python
 mail/offlineimap||2020-09-19|Has expired: Uses deprecated version of python
 mail/openemm2015||2020-09-19|Has expired: Uses deprecated version of python
 math/blitz++||2020-09-19|Has expired: Uses deprecated version of python
-math/openfst||2020-09-19|Has expired: Uses deprecated version of python
 math/py-fpconst||2020-09-19|Has expired: Uses deprecated version of python
 misc/hb||2020-09-19|Has expired: Uses deprecated version of python
 misc/mtail||2020-09-19|Has expired: Uses deprecated version of python
@@ -11851,7 +11835,6 @@ www/py-pylons||2020-12-12|Has expired: Uses deprecated version of python
 www/py-qpy||2020-12-12|Has expired: Uses deprecated version of python
 news/py-sabyenc|news/py-sabyenc3|2020-12-12|Has expired: Uses deprecated version of python
 devel/py-gobject||2020-12-12|Has expired: Uses deprecated version of python
-games/gemrb||2020-12-18|Has expired: Uses deprecated version of python
 net/iplog||2020-12-18|Has expired: Unmaintained and dead upstream. Does not build with modern compilers
 www/rubygem-rack21|www/rubygem-rack|2020-12-18|Obsolete, please use www/rubygem-rack
 chinese/rime-data||2020-12-23|Unneeded metaport
@@ -12307,7 +12290,6 @@ textproc/elasticsearch5-search-guard||2021-04-06|Has expired: textproc/elasticse
 multimedia/gnome-subtitles||2021-04-06|Has expired: outdated, depends on deprecated library www/gtkhtml3
 net/libproxy-mozjs||2021-04-06|Has expired: Uses EOL Python 2.7 via lang/spidermonkey52
 lang/spidermonkey52|lang/spidermonkey78|2021-04-06|Has expired: Uses Python 2.7 which is EOLed upstream
-ftp/wzdftpd||2021-04-07|Has expired: Unmaintained and dead upstream, does not build with -fno-common (llvm 11)
 astro/roadmap||2021-04-07|Has expired: Unmaintained and dead upstream, does not build with -fno-common (llvm 11)
 games/cosmo||2021-04-07|Has expired: Unmaintained and dead upstream, does not build with -fno-common (llvm 11)
 games/bomberinstinct||2021-04-07|Has expired: Unmaintained and dead upstream, does not build with -fno-common (llvm 11)
@@ -12503,7 +12485,7 @@ databases/postgresql95-plpython||2021-06-13|Has expired: PostgreSQL-9.5 has reac
 databases/postgresql95-pltcl||2021-06-13|Has expired: PostgreSQL-9.5 has reached end-of-life
 databases/postgresql95-server||2021-06-13|Has expired: PostgreSQL-9.5 has reached end-of-life
 databases/pg_reorg||2021-06-13|Removed, abandonware only for PostgreSQL 9.5
-databases/pgespresso||2021-06-13|Removed, functionality part of PostgreSQL 9.6 and later.
+databases/pgespresso||2021-06-13|Removed, functionality part of PostgreSQL 9.6 and later
 x11-fonts/urw-core35-fonts|x11-fonts/urw-base35-fonts|2021-06-15|Project was renamed upstream
 graphics/jpeg-xl|graphics/libjxl|2021-06-16|Project was renamed upstream
 chinese/docproj|textproc/docproj|2021-06-17|Deprecated after the doc transition
@@ -12524,7 +12506,7 @@ devel/sparc64-xtoolchain-gcc|devel/freebsd-gcc6@sparc64|2021-06-18|Replaced by a
 devel/riscv64-xtoolchain-gcc|devel/freebsd-gcc9@riscv64|2021-06-19|Replaced by a flavor
 www/py-beautifulsoup448|www/py-beautifulsoup|2021-06-20|Remove obsoleted port. Use www/py-beautifulsoup instead
 comms/rtl-443|comms/rtl-433|2021-06-21|Fix typo in port directory name
-devel/elixir-tirexs||2021-06-24|Remove obsoleted port. No releases on hex.pm.
+devel/elixir-tirexs||2021-06-24|Remove obsoleted port. No releases on hex.pm
 lang/perl5.28||2021-06-26|Has expired: Support ends three years after .0 release. Please upgrade to a more recent version of Perl
 sysutils/cfengine314||2021-06-26|Has expired: Expire one year after cfengine 3.16.0 released
 sysutils/cfengine-masterfiles314||2021-06-26|Has expired: Expire one year after cfengine 3.16.0 released
@@ -12568,3 +12550,62 @@ sysutils/ssid|sysutils/setsid|2021-06-27|Move to more obvious package name
 databases/pgpool-II-35||2021-07-01|Has expired: EOL since January 2021, please use one of the other pgpool-II-* ports
 sysutils/cdrtools-devel|sysutils/cdrtools|2021-07-01|Obsolete, use sysutils/cdrtools instead
 sysutils/sformat|sysutils/schilyutils|2021-07-01|Subsumed under sysutils/schilyutils
+misc/qtchooser||2021-07-04|No longer supported upstream
+databases/puppetdb5||2021-07-05|Has expired: Puppet 5 has reached EOL
+sysutils/puppet5||2021-07-05|Has expired: Puppet 5 has reached EOL
+sysutils/puppetserver5||2021-07-05|Has expired: Puppet 5 has reached EOL
+databases/puppetdb-terminus5||2021-07-05|Has expired: Puppet 5 has reached EOL
+devel/synfig|graphics/synfig|2021-07-06|The Graphics category is a more appropriate category for an image manipulation program
+www/nextcloud-circles|www/nextcloud|2021-07-09|Included in the Nextcloud port with 22.0.0
+net-mgmt/unifi-lts||2021-07-18|Has expired: Upstream EoL the hardware supported by this release
+audio/ripit|audio/abcde|2021-07-18|Has expired: Upstream no longer maintained, use audio/abcde instead
+x11-toolkits/libsexymm||2021-07-19|Discontinued in 2006, no dependency left in the ports tree
+sysutils/rubygem-fluent-plugin-graylog||2021-07-21|Has expired: Project is abandoned upstreams
+www/rubygem-toml-rb10|www/rubygem-toml-rb|2021-07-25|Obsolete, use www/rubygem-toml-rb
+devel/rubygem-grape-entity07|devel/rubygem-grape-entity|2021-07-25|Obsolete, use devel/rubygem-grape-entity
+net/rubygem-gitlab-fog-google|net/rubygem-fog-google|2021-07-25|Obsolete, use net/rubygem-fog-google
+devel/rubygem-gitlab-rdoc|devel/rubygem-rdoc|2021-07-25|Obsolete, use devel/rubygem-rdoc
+databases/rubygem-redis-namespace17|databases/rubygem-redis-namespace|2021-07-25|Obsolete, use databases/rubygem-redis-namespace
+multimedia/mlt|multimedia/mlt6|2021-07-30|Moved to a versioned directory to make place for future versions
+multimedia/mlt-qt5|multimedia/mlt6-qt5|2021-07-30|Moved to a versioned directory to make place for future versions
+multimedia/py-mlt|multimedia/py-mlt6|2021-07-30|Moved to a versioned directory to make place for future versions
+net/openldap24-sasl-client|net/openldap24-client|2021-08-01|SASL is always enabled for OpenLDAP
+textproc/py-python-language-server|textproc/py-python-lsp-server|2021-08-01|Has expired: Upstream forked and replaced by py-python-lsp-server
+games/ponscripter-sekai|games/ponscripter-07th-mod|2021-08-13|Switch to active fork
+sysutils/graid5||2021-08-21|Has expired: Module contains subtile errors and is obsolete by ZFS raidz. Consider migrating to ZFS
+x11-wm/gcompmgr||2021-08-21|Has expired: Abandonware since 2005, using discontinued libraries
+irc/lostirc||2021-08-21|Has expired: Abandonware since 2005, dependens on discontinued libraries
+math/normaliz|math/libnormaliz|2021-08-21|Remove duplicate
+devel/rubygem-paperclip||2021-08-28|Has expired: Use ActiveStorage or a fork kt-paperclip
+textproc/rubygem-rich||2021-08-28|Has expired: Depends on expired devel/rubygem-paperclip
+devel/magit-popup||2021-09-01|Has expired: No consumer in the ports tree any more
+databases/mongodb49|databases/mongodb50|2021-09-01|Has expired: This was a developer version which became MongoDB 5.0
+editors/vim-console|editors/vim|2021-09-02|The "vim" package is now console-only
+editors/vim-tiny|editors/vim@tiny|2021-09-02|The vim-tiny package is now a vim flavor
+lang/gcc7|lang/gcc10|2021-09-05|Has expired: Unsupported by upstream. Use GCC 10 or newer instead
+www/py-django-rest-swagger|www/py-drf-yasg|2021-09-17|Has expired: Has expired: Upstream no longer maintained, please use www/py-drf-yasg instead
+www/py-django-taggit-serializer|www/py-django-taggit|2021-09-17|Has expired: Obsolete, please use www/py-django-taggit instead
+www/efront||2021-09-17|Has expired: Unsupported by upstream
+devel/pear-PHPDoc|devel/pear-PhpDocumentor|2021-09-19|This package is not maintained anymore and has been superseded. Use devel/pear-PhpDocumentor instead
+devel/py-application|devel/py-python-application|2021-09-19|Rename to match upstream naming
+net-mgmt/zabbix52-agent||2021-09-19|Has expired: Unsupported by upstream
+net-mgmt/zabbix52-frontend||2021-09-19|Has expired: Unsupported by upstream
+net-mgmt/zabbix52-java||2021-09-19|Has expired: Unsupported by upstream
+net-mgmt/zabbix52-proxy||2021-09-19|Has expired: Unsupported by upstream
+net-mgmt/zabbix52-server||2021-09-19|Has expired: Unsupported by upstream
+sysutils/roottail|sysutils/root-tail|2021-09-26|Renamed to match upstream
+devel/py-pyyaml-env-tag|devel/py-pyyaml_env_tag|2021-09-28|Renamed to match upstream naming
+mail/opensmtpd-devel|mail/opensmtpd|2021-09-28|Has expired: move to offical releases
+devel/erlang-exmpp||2021-09-30|Removed, last upstream patches over 10 years ago
+sysutils/showbeastie||2021-09-30|Broken on FreeBSD 12 and above since 2018
+www/squid3|www/squid|2021-09-30|Has expired: Unsupported by upstream
+sysutils/cfengine310|sysutils/cfengine317|2021-09-30|Has expired: OpenSSL 1.1.X is not supported
+security/py-paramiko1|security/py-paramiko|2021-09-30|Has expired: Out of date version.  No consumer now.  Use security/py-paramiko
+sysutils/cfengine-masterfiles310|sysutils/cfengine-masterfiles317|2021-09-30|Has expired: cfengine310 will retire at FreeBSD 11 EOL
+security/openca-tools-forked|security/libscep|2021-09-30|Has expired: Use modern port security/libscep instead
+multimedia/sms1xxx-kmod|multimedia/webcamd|2021-09-30|Has expired: Supports DVB API v3 only. Use multimedia/webcamd instead
+sysutils/cfengine311|sysutils/cfengine317|2021-09-30|Has expired: OpenSSL 1.1.X is not supported
+sysutils/cfengine-masterfiles311|sysutils/cfengine-masterfiles317|2021-09-30|Has expired: cfengine311 will retire at FreeBSD 11 EOL
+mail/postfix35|mail/postfix|2021-09-30|Has expired: It is only here until FreeBSD 11 is EoL (Postfix >= 3.6 requires OpenSSL >= 1.1.x)
+graphics/drm-fbsd11.2-kmod||2021-09-30|Removed, only useful on EOL FreeBSD 11.4
+devel/qca-legacy|devel/qca|2021-09-30|Removed, only useful on EOL FreeBSD 11.4
