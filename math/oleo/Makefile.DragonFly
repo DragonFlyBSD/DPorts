@@ -1,4 +1,0 @@
-
-# gcc80 freezes at configure
-# checking for working mktime... ###  Watchdog killed runaway process!  (no activity for 25 minutes)  ###
-USE_CLANG_FALLBACK= default
