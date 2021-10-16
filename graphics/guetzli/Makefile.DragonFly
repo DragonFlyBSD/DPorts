@@ -1,3 +1,0 @@
-
-# sometimes rase obj/ directory creation
-MAKE_JOBS_UNSAFE= yes
