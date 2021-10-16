@@ -1,7 +1,7 @@
 # Created by: Zhen REN <bg1tpt@gmail.com>
 
 PORTNAME=	phpbb
-DISTVERSION=	3.3.1
+DISTVERSION=	3.3.4
 CATEGORIES=	www
 MASTER_SITES=	https://download.phpbb.com/pub/release/${PORTVERSION:C/([0-9]+\.[0-9]+).*/\1/}/${PORTVERSION}/
 PKGNAMESUFFIX=	3
@@ -13,7 +13,7 @@ COMMENT=	PHP-based bulletin board / discussion forum system
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/docs/LICENSE.txt
 
-USES=		php tar:bzip2
+USES=		cpe php tar:bzip2
 USE_PHP=	ctype dom filter hash json tokenizer
 
 CONFLICTS=	phpbb-[0-2]*
