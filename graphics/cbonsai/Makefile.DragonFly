@@ -1,5 +1,0 @@
-
-# port does not respect CFLAGS
-dfly-patch:
-	${REINPLACE_CMD} -e "s@-Wall @&${CFLAGS}@g" \
-		${WRKSRC}/Makefile
