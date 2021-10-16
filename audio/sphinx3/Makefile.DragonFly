@@ -1,7 +1,0 @@
-
-# zrj: add missing link against -lm in libs3decoder.so
-# NOTYPE  GLOBAL DEFAULT  UND {exp, log, sqrt}
-# fixes audio/sphinx3 build (binutils 2.27 ld.gold is unhappy)
-dfly-patch:
-	${REINPLACE_CMD} -e "/LINK) -rpath/s/$$/ -lm/g"	\
-		${WRKSRC}/src/libs3decoder/Makefile.in
