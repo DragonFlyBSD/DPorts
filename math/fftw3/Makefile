@@ -110,12 +110,7 @@ FFTW3_SUFX=	q
 FFTW3_PKGNAMESUFFIX=	-quad
 CONFIGURE_ARGS+=--enable-quad-precision
 ONLY_FOR_ARCHS=		i386 amd64
-USES+=		fortran
-CC=		gcc${_GCC_VER}
-CXX=		g++${_GCC_VER}
-CPP=		cpp${_GCC_VER}
-CFLAGS+=	-Wl,-rpath=${LOCALBASE}/lib/gcc${_GCC_VER}
-CXXFLAGS+=	-Wl,-rpath=${LOCALBASE}/lib/gcc${_GCC_VER}
+USE_GCC=	yes
 .endif
 
 .if ${FFTW3_FLAVOR} == "default"
