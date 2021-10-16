@@ -1,7 +1,0 @@
-
-# zrj: add missing link against -lstdc++ in libid3.so
-# NOTYPE  GLOBAL DEFAULT  UND {all those mangled ones}
-# fixes audio/easytag build (binutils 2.27 ld.gold is unhappy)
-dfly-patch:
-	${REINPLACE_CMD} -e "/CXXLINK) -rpath/s/$$/ -lstdc++/g"	\
-		${WRKSRC}/src/Makefile.in
