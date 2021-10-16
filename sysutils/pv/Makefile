@@ -1,7 +1,7 @@
 # Created by: Daniel Roethlisberger <daniel@roe.ch>
 
 PORTNAME=	pv
-PORTVERSION=	1.6.6
+PORTVERSION=	1.6.20
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.ivarch.com/programs/sources/
 
@@ -10,10 +10,12 @@ COMMENT=	Pipe throughput monitor
 
 LICENSE=	ART20
 
+USES=	tar:bzip2 gmake
+
 CONFLICTS=	waon-[0-9]*
 
-USES=	tar:bzip2 gmake
 GNU_CONFIGURE=	yes
+MAKE_ENV+=	LD=${LD}
 
 PLIST_FILES=	bin/pv man/man1/pv.1.gz
 
