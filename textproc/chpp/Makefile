@@ -29,10 +29,21 @@ OPTIONS_DEFINE=	DOCS EXAMPLES
 
 .include <bsd.port.pre.mk>
 
+post-extract:
+.for i in getopt.h regex.h gc/gc.h
+	@cd ${WRKSRC} && ${MV} -f ${i} ${i}.dist
+.endfor
+
 post-patch:
 	@${REINPLACE_CMD} -e \
-		'/LDADD/s| gc/gc.a | -lgc | ; \
+		's| getopt.c getopt.h getopt1.c | | ; \
+		 s| regex.c regex.h | | ; \
+		 /LDADD/s| gc/gc.a | -lgc -lgnuregex | ; \
 		 s|^YFLAGS|AM_YFLAGS|' ${WRKSRC}/Makefile.am
+.for i in arrayops.c builtins.c stringops.c
+	@${REINPLACE_CMD} -e \
+		's|"../regex.h"|<gnu/regex.h>|' ${WRKSRC}/builtins/${i}
+.endfor
 
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
