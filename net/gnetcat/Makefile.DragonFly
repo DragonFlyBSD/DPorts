@@ -1,2 +1,0 @@
-
-CFLAGS+=	-Wno-pointer-sign -Wno-stringop-truncation
