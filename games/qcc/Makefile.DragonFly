@@ -1,4 +1,0 @@
-
-dfly-patch:
-	${ECHO} "#include <unistd.h>" >> ${WRKSRC}/cmdlib.h
-	${ECHO} "#include <unistd.h>" >> ${WRKSRC}/qcc.h
