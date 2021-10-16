@@ -26,7 +26,7 @@ do-install:
 
 .include <bsd.port.pre.mk>
 
-LIBTHR=		/usr/lib/thread/libthread_xu.so.2
+LIBTHR!=	${LS} /lib/libthr.so.* | ${TAIL} -1
 SUB_LIST+=	LIBTHR=${LIBTHR}
 
 .include <bsd.port.post.mk>
