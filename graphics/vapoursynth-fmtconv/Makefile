@@ -1,33 +1,23 @@
 PORTNAME=	fmtconv
-PORTVERSION=	r22
+PORTVERSION=	r25
 CATEGORIES=	graphics
 PKGNAMEPREFIX=	vapoursynth-
 
-PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES+=	3b64292dd274.patch:-p1
-PATCHFILES+=	5e0340d35e4d.patch:-p1
-PATCHFILES+=	c62063bc34c6.patch:-p1
-
 MAINTAINER=	jbeich@FreeBSD.org
-COMMENT=	Format conversion tools for Vapoursynth
+COMMENT=	Format conversion tools for Vapoursynth and Avisyth+
 
 LICENSE=	WTFPL
 
 BROKEN_powerpc64=	fails to compile on powerpc64: \#error
 
-BUILD_DEPENDS=	${LOCALBASE}/include/vapoursynth/VapourSynth.h:multimedia/vapoursynth
-
 USE_GITHUB=	yes
 GH_ACCOUNT=	EleonoreMizo
 
-USES=		autoreconf compiler:c++11-lib gmake libtool pkgconfig
-EXCLUDE=	VapourSynth.h *.txt
-EXTRACT_AFTER_ARGS=	${EXCLUDE:S,^,--exclude ,}
+USES=		autoreconf compiler:c++11-lib gmake libtool
 WRKSRC_SUBDIR=	build/unix
 PATCH_WRKSRC=	${WRKSRC:H:H}
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--libdir="${DATADIR}"
-CPPFLAGS+=	`pkg-config vapoursynth --cflags`
 INSTALL_TARGET=	install-strip
 DATADIR=	${PREFIX}/lib/vapoursynth
 DOCSDIR=	${PREFIX}/share/doc/${PKGBASE}
