@@ -1,5 +1,4 @@
-DISTVERSION=	2021-06-07
-PORTREVISION=	1
+DISTVERSION=	2021-09-18
 MASTER_SITES=	SF/schilytools
 DISTNAME=	schily-${DISTVERSION}
 
@@ -55,8 +54,8 @@ PKGMESSAGE?=	${.CURDIR}/pkg-message
 DESCR=		${.CURDIR}/pkg-descr
 
 post-extract:
-	cd ${WRKSRC}/rmt && ${MV} rmt.dfl srmt.dfl
-	cd ${WRKSRC}/rmt && ${MV} default-rmt.sample default-srmt.sample
+	@cd ${WRKSRC}/rmt && ${MV} rmt.dfl srmt.dfl
+	@cd ${WRKSRC}/rmt && ${MV} default-rmt.sample default-srmt.sample
 
 
 do-configure:
@@ -65,25 +64,26 @@ do-configure:
 	cd ${WRKSRC}/psmake && ${SETENV} ${MAKE_ENV} ${SH} ./MAKE-all
 .endif
 	@${ECHO_MSG} "=> configuring components"
-	for component in ${COMPONENTS} ; \
-	do \
-		cd ${WRKSRC}/$$component && \
-		${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} config ; \
-	done
+.for component in ${COMPONENTS}
+	cd ${WRKSRC}/${component} && ${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} config
+.endfor
 
 do-build:
-	for component in ${COMPONENTS} ; \
-	do \
-		cd ${WRKSRC}/$$component && \
-		${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} all ; \
-	done
+.for component in ${COMPONENTS}
+	cd ${WRKSRC}/${component} && ${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} all
+.endfor
 
 do-install:
-	for component in ${COMPONENTS} ; \
-	do \
-		cd ${WRKSRC}/$$component && \
-		${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} install ; \
-	done
-	[ -z "${COMPONENTS:Mlib*}" ] || ${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/*.so.*.* 
+.for component in ${COMPONENTS}
+	cd ${WRKSRC}/${component} && ${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} install
+.endfor
+.if "${COMPONENTS:Mlib}" != ""
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/*.so.*.* 
+.endif
+
+do-test:
+.for component in ${COMPONENTS}
+	cd ${WRKSRC}/${component} && ${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} tests
+.endfor
 
 .include <bsd.port.mk>
