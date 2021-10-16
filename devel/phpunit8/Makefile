@@ -1,11 +1,11 @@
 PORTNAME=	phpunit
-DISTVERSION=	8.5.15
+DISTVERSION=	8.5.20
 CATEGORIES=	devel www
 MASTER_SITES=	https://phar.phpunit.de/
 PKGNAMESUFFIX=	8${PHP_PKGNAMESUFFIX}
 EXTRACT_SUFX=	.phar
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	joneum@FreeBSD.org
 COMMENT=	Testing framework for unit tests
 
 LICENSE=	BSD3CLAUSE
