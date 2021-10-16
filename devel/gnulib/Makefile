@@ -13,8 +13,9 @@ LICENSE_COMB=	multi
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/makeinfo:print/texinfo
 
-USES=		gmake perl5 shebangfix
+USES=		cpe gmake perl5 shebangfix
 SHEBANG_FILES=	check-module
+CPE_VENDOR=	gnu
 
 PLIST_FILES=	bin/check-module bin/gnulib-tool
 INFO=		${PORTNAME}
@@ -25,6 +26,7 @@ OPTIONS_DEFINE=	DOCS
 
 post-patch:
 	@${REINPLACE_CMD} -e 's,date -u.*,stat -f %Sa -t "@set UPDATED %F %T" `${LS} -t $$^ | ${SED} 1q` > $$@,' \
+		-e 's: makeinfo$$: ${LOCALBASE}/bin/makeinfo:' \
 		${WRKSRC}/doc/Makefile
 
 do-build:
