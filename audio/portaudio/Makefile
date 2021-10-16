@@ -2,7 +2,7 @@
 
 PORTNAME=	portaudio
 PORTVERSION=	19.6.0
-PORTREVISION=	5
+PORTREVISION=	6
 PORTEPOCH=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://www.portaudio.com/archives/
@@ -14,9 +14,10 @@ COMMENT=	Portable cross-platform Audio API
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-USES=		autoreconf dos2unix gmake libtool localbase:ldflags pathfix \
+USES=		autoreconf cpe dos2unix gmake libtool localbase:ldflags pathfix \
 		pkgconfig tar:tgz
 USE_LDCONFIG=	yes
+CPE_VENDOR=	portaudio_project
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-dependency-tracking \
