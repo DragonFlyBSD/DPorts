@@ -10,6 +10,9 @@ MASTER_SITES=	http://www.ginac.de/CLN/ \
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Class Library for Numbers
 
+LICENSE=	GPLv2
+LICENSE_FILE=	${WRKSRC}/COPYING
+
 LIB_DEPENDS=	libgmp.so:math/gmp
 
 GNU_CONFIGURE=	yes
@@ -20,6 +23,7 @@ USE_LDCONFIG=	yes
 
 INFO=		cln
 
+CPPFLAGS+=	${CPPFLAGS_${ARCH}}
 CPPFLAGS_aarch64=	-DNO_ASM
 CPPFLAGS_armv6=	-DNO_ASM
 CPPFLAGS_armv7=	-DNO_ASM
