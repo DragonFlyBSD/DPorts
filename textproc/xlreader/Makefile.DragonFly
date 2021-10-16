@@ -1,4 +1,0 @@
-
-# 32-bit sparc binary as contrib
-dfly-patch:
-	${RM} -fv ${WRKSRC}/xlreader
