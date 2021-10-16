@@ -35,6 +35,7 @@ PLIST_FILES=	${DATADIR}/README_en_AU${AU_VARIANT}.txt \
 		${DATADIR}/en_GB.dic \
 		${DATADIR}/en_GB.aff
 
+COPY=		-lh	# Use hardlinks rather than copies under stage/
 
 OPTIONS_RADIO=	AU CA GB US
 OPTIONS_RADIO_AU=	AU_STANDARD AU_LARGE
