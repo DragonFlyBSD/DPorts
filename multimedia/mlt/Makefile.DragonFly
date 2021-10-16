@@ -1,7 +1,0 @@
-# Silence some warnings
-CFLAGS+= -Wno-deprecated-declarations
-CFLAGS+= -Wno-maybe-uninitialized
-
-dfly-patch:
-	${REINPLACE_CMD} -e 's@-latomic@@g' \
-		${WRKSRC}/src/modules/avformat/Makefile
