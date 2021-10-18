@@ -1,3 +1,0 @@
-
-# to avoid orphans, PORTDOCS in MF
-PLIST_SUB+=	PORTDOCS="@comment "
