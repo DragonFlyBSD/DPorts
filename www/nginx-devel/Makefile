@@ -1,7 +1,7 @@
 # Created by: Sergey A. Osokin <osa@FreeBSD.org>
 
 PORTNAME?=	nginx
-PORTVERSION=	1.21.0
+PORTVERSION=	1.21.3
 PORTREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	https://nginx.org/download/ \
@@ -17,7 +17,7 @@ LICENSE_FILE?=	${WRKSRC}/LICENSE
 
 CONFLICTS_INSTALL=	nginx
 
-PORTSCOUT=	limit:^1\.19\.[0-9]*
+PORTSCOUT=	limit:^1\.21\.[0-9]*
 
 USES=		cpe
 
