@@ -1,2 +1,0 @@
-
-MEMCACHED_EXTRA_PATCHES+=	${FILESDIR}/../dragonfly/extra-memcached-configure.ac
