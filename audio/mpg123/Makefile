@@ -42,7 +42,7 @@ OPTCPU_CONFIGURE_OFF=	--with-cpu=generic_fpu
 
 .include <bsd.port.pre.mk>
 
-.if ${ARCH} == "x86_64"
+.if ${ARCH} == "amd64"
 CONFIGURE_ARGS+=	--with-cpu=x86-64
 .endif
 
