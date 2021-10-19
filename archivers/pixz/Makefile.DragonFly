@@ -1,3 +1,0 @@
-
-# we do not install lzma.pc
-CONFIGURE_ARGS+=	LZMA_CFLAGS="-I/usr/include" LZMA_LIBS="-llzma"
