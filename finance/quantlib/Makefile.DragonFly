@@ -1,3 +1,0 @@
-
-# zrj: Error: .la libraries found, port needs USES=libtool
-USES+=	libtool
