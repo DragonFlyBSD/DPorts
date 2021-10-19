@@ -1,5 +1,0 @@
-
-# just to get through the stage-qa
-dfly-patch:
-	${REINPLACE_CMD} -e '/nokogiri/s@1\.8\.0@1.8@g'	\
-		${WRKSRC}/cms_scanner.gemspec
