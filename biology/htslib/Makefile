@@ -1,7 +1,7 @@
 # Created by: Reed A. Cartwright <cartwright@asu.edu>
 
 PORTNAME=	htslib
-DISTVERSION=	1.12
+DISTVERSION=	1.13
 CATEGORIES=	biology devel
 # Github generated distfiles are incomplete, so use custom tarball
 MASTER_SITES=	https://github.com/samtools/htslib/releases/download/${DISTVERSION}/
@@ -16,7 +16,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 LIB_DEPENDS=	libdeflate.so:archivers/libdeflate
 TEST_DEPENDS=	bash:shells/bash
 
-USES=		autoreconf gmake localbase pathfix perl5 shebangfix tar:bzip2
+USES=		autoreconf cpe gmake localbase pathfix perl5 shebangfix tar:bzip2
 USE_PERL5=	test
 USE_LDCONFIG=	yes
 
