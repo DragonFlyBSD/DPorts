@@ -11,7 +11,7 @@ COMMENT=	Web caching proxy server based on haproxy
 LICENSE=	GPLv2 LGPL21
 LICENSE_COMB=	multi
 
-USES=		compiler:c++11-lang cpe gmake
+USES=		compiler:c++11-lang gmake
 USE_RC_SUBR=	nuster
 USE_GITHUB=	yes
 GH_ACCOUNT=	jiangwenyuan
@@ -50,7 +50,7 @@ PORTEXAMPLES=	*
 
 .include <bsd.port.pre.mk>
 
-.if ${ARCH} == "x86_64" || ${ARCH} == "i386"
+.if ${ARCH} == "amd64" || ${ARCH} == "i386"
 MAKE_ARGS+=	USE_REGPARM=1
 .endif
 
