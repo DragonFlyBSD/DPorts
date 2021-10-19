@@ -33,7 +33,7 @@ SDL_MAKE_ENV_OFF=	X11_VERSION=1 X11_JOYSTICK="joy_bsd_usb"
 
 .include <bsd.port.options.mk>
 
-.if ${ARCH} == x86_64 || ${ARCH} == i386
+.if ${ARCH} == amd64 || ${ARCH} == i386
 MAKE_ENV+=	X11_LSB_FIRST=1
 .endif
 
