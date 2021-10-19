@@ -1,1 +1,0 @@
-MESON_ARGS+=	-Dcurses=ncurses
