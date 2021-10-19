@@ -28,7 +28,7 @@ SUB_FILES=	bowtie2-test
 
 .include <bsd.port.options.mk>
 
-.if ${ARCH} != x86_64
+.if ${ARCH} != amd64
 post-extract:
 	(cd ${WRKSRC_simde}; \
 		${COPYTREE_SHARE} . ${WRKSRC}/third_party/simde/)
