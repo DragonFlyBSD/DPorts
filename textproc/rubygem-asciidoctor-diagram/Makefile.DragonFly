@@ -1,4 +1,0 @@
-
-dfly-patch:
-	${REINPLACE_CMD} -e '/asciidoctor>/s@~>@>=@g' \
-		${WRKSRC}/asciidoctor-diagram.gemspec
