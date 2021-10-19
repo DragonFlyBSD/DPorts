@@ -1,3 +1,0 @@
-
-# suppress false positive
-CFLAGS+=	-Wno-int-conversion
