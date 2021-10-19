@@ -51,7 +51,7 @@ post-patch:
 		${WRKSRC}/src/Mayaqua/FileIO.c
 
 	# skip configure at all and copy the corresponding Makefile in place
-.if ${ARCH} != "x86_64"
+.if ${ARCH} != "amd64"
 	@${CP} ${WRKSRC}/src/makefiles/freebsd_32bit.mak ${WRKSRC}/Makefile
 .else
 	@${CP} ${WRKSRC}/src/makefiles/freebsd_64bit.mak ${WRKSRC}/Makefile
