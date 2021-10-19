@@ -1,4 +1,4 @@
---- src/parse.c.orig	2016-09-03 19:34:06.000000000 +0000
+--- src/parse.c.orig	2016-09-03 19:34:06 UTC
 +++ src/parse.c
 @@ -156,7 +156,7 @@ void ban_flooder(aClient *cptr)
  /*
