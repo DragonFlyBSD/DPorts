@@ -19,7 +19,7 @@ MAKE_ARGS+=	PREFIX=${PREFIX}
 
 .include <bsd.port.pre.mk>
 
-.if ${ARCH} == "x86_64"
+.if ${ARCH} == "amd64"
 MAKE_ARGS+=	ARCH=x86_64
 .endif
 
