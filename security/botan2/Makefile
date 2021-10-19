@@ -65,17 +65,13 @@ CONFIGURE_ARGS+=	--cc-abi="-march=armv8-a+crypto"
 CONFIGURE_ARGS+=	--cpu="ppc64"
 .endif
 
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1200000
-CONFIGURE_ARGS+=	--without-os-features=getentropy,elf_aux_info
-.endif
-
-.if ${ARCH} == i386 || ${ARCH} == x86_64
+.if ${ARCH} == i386 || ${ARCH} == amd64
 PLIST_SUB+=	HAS_RDRAND_RNG=""
 .else
 PLIST_SUB+=	HAS_RDRAND_RNG="@comment "
 .endif
 
-.if ${ARCH} == i386 || ${ARCH} == x86_64 || ${ARCH:Mpowerpc64*}
+.if ${ARCH} == i386 || ${ARCH} == amd64 || ${ARCH:Mpowerpc64*}
 PLIST_SUB+=	HAS_PROCESSOR_RNG=""
 .else
 PLIST_SUB+=	HAS_PROCESSOR_RNG="@comment "
