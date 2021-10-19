@@ -18,7 +18,7 @@ BUILD_DEPENDS=	gauche-config:lang/gauche
 
 USES=		tar:tgz
 
-GAUCHE_LIBDIR=	share/gauche/site/lib
+GAUCHE_LIBDIR=	${:!gauche-config --sitelibdir!:S,^${PREFIX}/,,}
 PLIST_SUB+=	GAUCHE_LIBDIR=${GAUCHE_LIBDIR}
 
 DOCSDIR=	${PREFIX}/share/doc/gauche/${PORTNAME}
