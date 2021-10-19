@@ -55,11 +55,10 @@ RRTYPERKEY_CONFIGURE_ENABLE=		rrtype-rkey
 RRTYPETA_CONFIGURE_ENABLE=		rrtype-ta
 RRTYPEAVC_CONFIGURE_ENABLE=		rrtype-avc
 RRTYPEAMTRELAY_CONFIGURE_ENABLE=	rrtype-amtrelay
-#EXAMPLES_CONFIGURE_WITH=		examples
+EXAMPLES_CONFIGURE_WITH=		examples
 DRILL_CONFIGURE_WITH=			drill
 DRILL_INSTALL_TARGET=			install-drill
-#EXAMPLES_INSTALL_TARGET=		install-examples
-PLIST_SUB+=                    EXAMPLES="@comment "
+EXAMPLES_INSTALL_TARGET=		install-examples
 
 .if defined(BUILD_PYLDNS)
 USES+=		python:3.6+
@@ -104,11 +103,6 @@ INSTALL_TARGET=	install-lib install-h install-config
 
 .include <bsd.port.pre.mk>
 
-.if ${PORT_OPTIONS:MDANETAUSAGE} && \
-    ((${OSVERSION} < 1200084 && ${SSL_DEFAULT} == base))
-BROKEN=		this option requires openssl >= 1.1.0 ${OSVERSION} ${SSL_DEFAULT}
-.endif
-
 .if ! ${PORT_OPTIONS:MGOST}
 NO_GOST=	--disable-gost
 .endif
@@ -131,7 +125,7 @@ post-install:
 .if ${PORT_OPTIONS:MDRILL}
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/drill
 .endif
-.if ${PORT_OPTIONS:MXEXAMPLES}
+.if ${PORT_OPTIONS:MEXAMPLES}
 	for p in ldns-chaos ldns-compare-zones ldns-dane ldns-dpa ldns-gen-zone ldns-key2ds \
 		ldns-keyfetcher ldns-keygen ldns-mx ldns-notify ldns-nsec3-hash \
 		ldns-read-zone ldns-resolver ldns-revoke ldns-rrsig ldns-signzone \
