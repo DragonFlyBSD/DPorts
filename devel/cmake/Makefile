@@ -2,7 +2,7 @@
 
 PORTNAME=	cmake
 # Remember to update devel/cmake-doc and devel/cmake-gui as well.
-DISTVERSION=	3.20.4
+DISTVERSION=	3.21.3
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/Kitware/CMake/releases/download/v${DISTVERSION}/ \
 		https://www.cmake.org/files/v${PORTVERSION}/
@@ -18,8 +18,9 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libuv.so:devel/libuv \
 		librhash.so:security/rhash
 
-USES=		compiler:c++11-lang ncurses
+USES=		compiler:c++11-lang cpe ncurses
 
+CPE_VENDOR=	cmake_project
 HAS_CONFIGURE=	yes
 CONFIGURE_ENV=	MAKE=make
 CONFIGURE_ARGS=	--prefix=${PREFIX} \
