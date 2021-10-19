@@ -47,7 +47,7 @@ CONFIGURE_ARGS+=	-t pthreads
 CONFIGURE_ARGS+=	--enable-cblas
 .endif
 
-.if ${ARCH} == x86_64
+.if ${ARCH} == amd64
 CONFIGURE_ARGS+=	x86_64
 PLIST_SUB+=	ARCH="x86_64"
 .elif ${ARCH} == powerpc64
