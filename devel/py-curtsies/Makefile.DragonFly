@@ -1,5 +1,0 @@
-
-# hmmmm
-dfly-patch:
-	${REINPLACE_CMD} -e 's@=open@=io.open@g' \
-		${WRKSRC}/setup.py
