@@ -25,7 +25,7 @@ MAKEFILE=	Makefile.freebsd
 
 .include <bsd.port.options.mk>
 
-.if ${ARCH} != aarch64 || ${ARCH} != x86_64 || !${ARCH:Marmv*} || ${ARCH} != i386
+.if ${ARCH} != aarch64 || ${ARCH} != amd64 || !${ARCH:Marmv*} || ${ARCH} != i386
 MAKE_ENV+=	DESMUME_JIT=0
 .endif
 
