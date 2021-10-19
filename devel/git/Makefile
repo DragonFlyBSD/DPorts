@@ -32,7 +32,9 @@ tiny_CONFLICTS_INSTALL=		git git-gui git-svn git-lite
 tiny_DESCR=			${.CURDIR}/pkg-descr-tiny
 tiny_PKGNAMESUFFIX=		-tiny
 
-USES=		autoreconf gmake iconv shebangfix ssl tar:xz
+USES=		autoreconf cpe gmake iconv shebangfix ssl tar:xz
+
+CPE_VENDOR=	git-scm
 
 COMMENT_gui=	(GUI enabled flavor)
 COMMENT_lite=	(lite flavor)
@@ -176,7 +178,7 @@ RMMAN7+=	gitcvs-migration.7
 
 post-extract-HTMLDOCS-on:
 	@${MKDIR} ${WRKDIR}/htmldocs
-	@cd ${WRKDIR}/htmldocs && ${TAR} ${EXTRACT_BEFORE_ARGS} \
+	@cd ${WRKDIR}/htmldocs && ${EXTRACT_CMD} ${EXTRACT_BEFORE_ARGS} \
 		${DISTDIR}/${PORTNAME}-htmldocs-${DISTVERSION}${EXTRACT_SUFX} \
 		${EXTRACT_AFTER_ARGS}
 
