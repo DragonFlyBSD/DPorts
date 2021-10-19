@@ -25,7 +25,7 @@ PLIST_SUB+=	NEWSBIN=${NEWSBIN:S=${PREFIX}/==}
 PLIST_FILES=	%%NEWSBIN%%/fastcancel %%NEWSBIN%%/c-nocem
 
 post-patch:
-	${REINPLACE_CMD} -e 's|@newsbin@|${STAGEDIR}${NEWSBIN}|' \
+	${REINPLACE_CMD} -e 's|@newsbin@|${STAGEDIR}@newsbin@|' \
 		${WRKSRC}/Makefile.in
 
 pre-install:
