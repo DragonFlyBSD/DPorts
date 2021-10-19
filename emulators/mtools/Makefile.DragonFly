@@ -1,7 +1,0 @@
-
-# missing runtime dep
-LIB_DEPENDS+=	libiconv.so:converters/libiconv
-
-# fix sample for runtime at build
-dfly-patch:
-	${REINPLACE_CMD} -e 's@^SAMPLE FILE@#&@g' ${WRKSRC}/mtools.conf
