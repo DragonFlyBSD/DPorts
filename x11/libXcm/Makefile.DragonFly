@@ -1,7 +1,0 @@
-
-# zrj: add missing link against -lm in libXcmEDID.so
-# NOTYPE  GLOBAL DEFAULT  UND {pow}
-# fixes graphics/oyranos build (binutils 2.27 ld.gold is unhappy)
-dfly-patch:
-	${REINPLACE_CMD} -e "/libXcmEDID_la_LINK) -rpath/s/$$/ -lm/g"	\
-		${WRKSRC}/src/Makefile.in
