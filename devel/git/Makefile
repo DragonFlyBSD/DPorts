@@ -178,7 +178,7 @@ RMMAN7+=	gitcvs-migration.7
 
 post-extract-HTMLDOCS-on:
 	@${MKDIR} ${WRKDIR}/htmldocs
-	@cd ${WRKDIR}/htmldocs && ${EXTRACT_CMD} ${EXTRACT_BEFORE_ARGS} \
+	@cd ${WRKDIR}/htmldocs && ${TAR} ${EXTRACT_BEFORE_ARGS} \
 		${DISTDIR}/${PORTNAME}-htmldocs-${DISTVERSION}${EXTRACT_SUFX} \
 		${EXTRACT_AFTER_ARGS}
 
