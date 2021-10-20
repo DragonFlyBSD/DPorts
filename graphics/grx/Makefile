@@ -53,7 +53,7 @@ ZLIB_CONFIGURE_ENABLE=	zlib
 IGNORE=		PNG support requires ZLIB support
 .endif
 
-.if ${ARCH} == "amd64"
+.if ${ARCH} == "x86_64"
 CONFIGURE_ARGS+=--enable-x86_64
 .endif
 
