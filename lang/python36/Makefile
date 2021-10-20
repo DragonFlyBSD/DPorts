@@ -18,6 +18,9 @@ COMMENT=	Interpreted object-oriented programming language
 
 LICENSE=	PSFL
 
+DEPRECATED=	Upgrade to a newer Python version. 3.6 is in maintenance status and gets security fixes only. End-of-Life: 2021-12-23. See https://devguide.python.org/#status-of-python-branches
+EXPIRATION_DATE=	2021-12-31
+
 USES=		cpe ncurses pathfix pkgconfig readline shebangfix ssl tar:xz
 PATHFIX_MAKEFILEIN=	Makefile.pre.in
 USE_LDCONFIG=	yes
@@ -125,6 +128,12 @@ DISABLED_EXTENSIONS+=	nis
 .else
 PLIST_SUB+=	NO_NIS=""
 .endif
+
+post-patch:
+# disable detection of multiarch as it breaks with clang >= 13, which adds a
+# major.minor version number in -print-multiarch output, confusing Python
+	@${REINPLACE_CMD} -e 's|^MULTIARCH=.*|MULTIARCH=|' ${WRKSRC}/configure \
+		${WRKSRC}/configure.ac
 
 dfly-patch:
 	${REINPLACE_CMD} -e 's|`uname -r`|"${_OSRELEASE}"|g' \
