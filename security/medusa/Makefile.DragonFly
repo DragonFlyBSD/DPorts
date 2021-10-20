@@ -1,0 +1,2 @@
+
+CFLAGS+=	-Wno-stringop-overflow
