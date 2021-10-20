@@ -20,7 +20,7 @@ USES=		perl5
 USE_CSTD=	c99
 USE_PERL5=	modbuild
 
-CFLAGS_amd64=	-fPIC
+CFLAGS_x86_64=	-fPIC
 USE_LDCONFIG=	yes
 
 post-install:
