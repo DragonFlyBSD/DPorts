@@ -1,0 +1,13 @@
+--- configure.orig	2016-07-31 23:08:09 UTC
++++ configure
+@@ -12092,6 +12092,10 @@ case $host_os in
+ 		# http://www.opensource.apple.com/source/Libc/Libc-997.90.3/gen/FreeBSD/arc4random.c
+ 		USE_BUILTIN_ARC4RANDOM=yes
+ 		;;
++	*dragonfly*)
++		HOST_OS=dragonfly
++		HOST_ABI=elf
++		;;
+ 	*freebsd*)
+ 		HOST_OS=freebsd
+ 		HOST_ABI=elf
