@@ -22,7 +22,7 @@ GH_TAGNAME=	61a48c06c79f13f5766a35bb6af4816f481f0940
 # The directory we need to install Pty4J's native library in depends
 # on the install target's architecture.  We rebuild libpty.so instead
 # of using one of the bundled ones which are FreeBSD 10.x only.
-.if ${ARCH} == "amd64"
+.if ${ARCH} == "x86_64"
 PTY4J_ARCH=	x86-64
 .elif ${ARCH} == "i386"
 PTY4J_ARCH=	x86
