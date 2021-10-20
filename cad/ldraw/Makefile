@@ -23,6 +23,7 @@ NO_ARCH=	yes
 do-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/share/ldraw
 	cd ${WRKDIR}/ldraw && \
+		${COPYTREE_SHARE} models ${STAGEDIR}${PREFIX}/share/ldraw && \
 		${COPYTREE_SHARE} p ${STAGEDIR}${PREFIX}/share/ldraw && \
 		${COPYTREE_SHARE} parts ${STAGEDIR}${PREFIX}/share/ldraw
 	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/LDConfig.ldr ${STAGEDIR}${PREFIX}/share/ldraw
