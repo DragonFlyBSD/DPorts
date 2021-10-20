@@ -20,7 +20,7 @@ PLIST_FILES=	bin/pearRM man/man1/pearRM.1.gz
 
 .include <bsd.port.options.mk>
 
-.if ${ARCH} != amd64 && ${ARCH} != i386
+.if ${ARCH} != x86_64 && ${ARCH} != i386
 USE_GCC=	yes
 .endif
 
