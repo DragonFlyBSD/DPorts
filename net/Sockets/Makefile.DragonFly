@@ -1,0 +1,3 @@
+
+# missing link against -lcrypto for OPENSSL_init_crypto
+LDFLAGS+=	-L${OPENSSLLIB} -lcrypto
