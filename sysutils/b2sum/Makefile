@@ -20,7 +20,7 @@ GH_ACCOUNT=	BLAKE2
 GH_PROJECT=	BLAKE2
 
 OPTIONS_DEFINE=	OPENMP OPTIMIZED_CFLAGS SSE
-OPTIONS_DEFAULT_amd64=	SSE
+OPTIONS_DEFAULT_x86_64=	SSE
 SSE_DESC=	Use SSE2, SSSE3, SSE4.1, AVX or XOP instructions
 
 OPENMP_USES+=	compiler:openmp
@@ -35,7 +35,7 @@ CFLAGS+=	-march=native
 .endif
 .endif
 
-.if (${PORT_OPTIONS:MSSE} && (${ARCH} == "i386" || ${ARCH} == "amd64"))
+.if (${PORT_OPTIONS:MSSE} && (${ARCH} == "i386" || ${ARCH} == "x86_64"))
 CFLAGS+=	-I../sse -flax-vector-conversions
 .else
 CFLAGS+=	-I../ref
