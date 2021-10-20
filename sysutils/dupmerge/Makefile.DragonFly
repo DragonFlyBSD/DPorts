@@ -1,0 +1,7 @@
+
+# zrj: remove roken (heimdal) additions from MF
+LDFLAGS:= ${LDFLAGS:N-lroken}
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/roken.h/d'	\
+		${WRKSRC}/dupmerge.c
