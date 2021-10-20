@@ -31,7 +31,7 @@ PLIST_FILES=	bin/bwa bin/qualfa2fq.pl bin/xa2multi.pl man/man1/bwa.1.gz
 
 .include <bsd.port.options.mk>
 
-.if ${ARCH} == amd64 || ${ARCH} == i386
+.if ${ARCH} == x86_64 || ${ARCH} == i386
 # Avoid #error in emmintrin.h
 CFLAGS+=	-msse2
 .elif ${ARCH} == powerpc64le
