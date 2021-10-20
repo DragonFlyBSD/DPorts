@@ -28,9 +28,9 @@ OPTIONS_DEFINE=	DOCS
 
 do-extract:
 	@${MKDIR} ${WRKDIR}
-	@${TAR} zxf ${DISTDIR}/${DIST_SUBDIR}/${CTF_SRC} -C ${WRKDIR} \
+	@${TAR} -xzf ${DISTDIR}/${DIST_SUBDIR}/${CTF_SRC} -C ${WRKDIR} \
 		--include "${CTF_SRC:S/.tar.gz//}/src/ctf/*"
-	@${UNZIP_CMD} ${EXTRACT_BEFORE_ARGS} -d ${WRKDIR}/ctf \
+	@${UNZIP_CMD} -qo -d ${WRKDIR}/ctf \
 		${DISTDIR}/${DIST_SUBDIR}/${CTF_DATA} -x *.dll *.ico
 
 post-extract:
