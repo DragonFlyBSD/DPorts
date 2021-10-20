@@ -1,0 +1,8 @@
+
+# zrj: needed for selftests during build openssl.cnf and LibreSSL compat
+USES+=	ssl
+BINARY_ALIAS=	openssl=${LOCALBASE}/bin/openssl
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/rxmatch/s@OpenSSL@\\w+SSL@' \
+		${WRKSRC}/ext/tls/ssltest-mod.scm
