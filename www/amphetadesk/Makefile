@@ -72,12 +72,12 @@ do-install:
 	@${MKDIR} ${SITE_PERL:S|${LOCALBASE}|${STAGEDIR}${PREFIX}|}/AmphetaDesk
 	@(cd ${WRKSRC}/lib && \
 		${FIND} * -type d ! -empty -print0 | \
-		${XARGS} -0 -x -n 10 -I {} \
+		${XARGS} -0 -x -n 1 -I {} \
 		${MKDIR} ${SITE_PERL:S|${LOCALBASE}|${STAGEDIR}${PREFIX}|}/AmphetaDesk/{})
 # files
 	(cd ${WRKSRC}/lib && \
 		${FIND} * -type f -name "*pm" -print0 | \
-		${XARGS} -0 -x -n 10 -I {} \
+		${XARGS} -0 -x -n 1 -I {} \
 		${INSTALL_DATA} {} ${SITE_PERL:S|${LOCALBASE}|${STAGEDIR}${PREFIX}|}/AmphetaDesk/{})
 # script
 	${INSTALL_DATA} ${WRKSRC}/AmphetaDesk.pl \
@@ -102,13 +102,13 @@ do-install:
 # dirs
 	(cd ${WRKSRC} && \
 		${FIND} templates -type d ! -empty -print0 | \
-		${XARGS} -0 -x -n 10 -I {} \
+		${XARGS} -0 -x -n 1 -I {} \
 		${MKDIR} ${STAGEDIR}${DATADIR}/{})
 # files
 .for ext in gif html ico png pict
 	(cd ${WRKSRC} && \
 		${FIND} templates -type f -name "*.${ext}" -print0 | \
-		${XARGS} -0 -x -n 10 -I {} \
+		${XARGS} -0 -x -n 1 -I {} \
 		${INSTALL_DATA} {} ${STAGEDIR}${DATADIR}/{})
 .endfor
 
