@@ -33,7 +33,7 @@ M4?=	m4
 M4_OPTS?=	#empty
 MANGLING?=	-DCONFIG_FC_UNDERSCORE
 
-.if ${ARCH} == "i386" || ${ARCH} == "amd64"
+.if ${ARCH} == "i386" || ${ARCH} == "x86_64"
 CFLAGS+=	-Dx86
 .endif
 
