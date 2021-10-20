@@ -100,7 +100,7 @@ PATCH_SITES+=		LOCAL/garga/ucspi-tcp/:rss,ssl,rbl2smtpd
 .include <bsd.port.pre.mk>
 
 # Restrict optimization to -O - -O2 causes problems at least on amd64
-.if ${ARCH} == "amd64"
+.if ${ARCH} == "x86_64"
 CFLAGS+=	-O
 .endif
 
