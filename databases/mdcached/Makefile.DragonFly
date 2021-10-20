@@ -1,0 +1,5 @@
+
+# suppress false possitive
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-Wall @-Wall -Wno-restrict @g' \
+		${WRKSRC}/Makefile
