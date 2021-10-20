@@ -1,0 +1,1 @@
+CONFIGURE_ARGS+= ac_cv_lib_kyotocabinet_main=yes
