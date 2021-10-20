@@ -1,0 +1,5 @@
+
+# must be invoked after autotools but before configure step
+run-autotools-fixup:
+	${REINPLACE_CMD} -e 's@\(FreeBSD-\*\)@\1|DragonFly-*@g'		\
+		${WRKSRC}/configure
