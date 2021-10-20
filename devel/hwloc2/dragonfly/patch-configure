@@ -1,0 +1,26 @@
+--- configure.orig	2020-11-26 09:14:52 UTC
++++ configure
+@@ -19084,6 +19084,15 @@ $as_echo "#define HWLOC_WIN_SYS 1" >>con
+ $as_echo "Windows" >&6; }
+         hwloc_components="$hwloc_components windows"
+         ;;
++      *-*-*dragonfly*)
++
++$as_echo "#define HWLOC_DRAGONFLY_SYS 1" >>confdefs.h
++
++        hwloc_dragonfly=yes
++        { $as_echo "$as_me:${as_lineno-$LINENO}: result: DragonFly" >&5
++$as_echo "DragonFly" >&6; }
++        hwloc_components="$hwloc_components dragonfly"
++        ;;
+       *-*-*freebsd*)
+ 
+ $as_echo "#define HWLOC_FREEBSD_SYS 1" >>confdefs.h
+@@ -32165,6 +32174,7 @@ do
+     "tests/hwloc/ports/topology-aix.c") CONFIG_LINKS="$CONFIG_LINKS tests/hwloc/ports/topology-aix.c:hwloc/topology-aix.c" ;;
+     "tests/hwloc/ports/topology-windows.c") CONFIG_LINKS="$CONFIG_LINKS tests/hwloc/ports/topology-windows.c:hwloc/topology-windows.c" ;;
+     "tests/hwloc/ports/topology-darwin.c") CONFIG_LINKS="$CONFIG_LINKS tests/hwloc/ports/topology-darwin.c:hwloc/topology-darwin.c" ;;
++    "tests/hwloc/ports/topology-dragonfly.c") CONFIG_LINKS="$CONFIG_LINKS tests/hwloc/ports/topology-dragonfly.c:hwloc/topology-dragonfly.c" ;;
+     "tests/hwloc/ports/topology-freebsd.c") CONFIG_LINKS="$CONFIG_LINKS tests/hwloc/ports/topology-freebsd.c:hwloc/topology-freebsd.c" ;;
+     "tests/hwloc/ports/topology-netbsd.c") CONFIG_LINKS="$CONFIG_LINKS tests/hwloc/ports/topology-netbsd.c:hwloc/topology-netbsd.c" ;;
+     "tests/hwloc/ports/topology-hpux.c") CONFIG_LINKS="$CONFIG_LINKS tests/hwloc/ports/topology-hpux.c:hwloc/topology-hpux.c" ;;

@@ -1,0 +1,15 @@
+--- hwloc/Makefile.am.orig	2020-11-23 14:37:17 UTC
++++ hwloc/Makefile.am
+@@ -157,9 +157,9 @@ if HWLOC_HAVE_DARWIN
+ sources += topology-darwin.c
+ endif HWLOC_HAVE_DARWIN
+ 
+-if HWLOC_HAVE_FREEBSD
+-sources += topology-freebsd.c
+-endif HWLOC_HAVE_FREEBSD
++#if HWLOC_HAVE_DRAGONFLY
++sources += topology-dragonfly.c
++#endif HWLOC_HAVE_DRAGONFLY
+ 
+ if HWLOC_HAVE_NETBSD
+ sources += topology-netbsd.c

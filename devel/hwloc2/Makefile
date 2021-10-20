@@ -43,7 +43,7 @@ DEBUG_CONFIGURE_ENABLE=	debug # 'lstopo -' prints a lot of debug details when de
 
 .include <bsd.port.pre.mk>
 
-.if ${ARCH} != amd64 && ${ARCH} != i386
+.if ${ARCH} != x86_64 && ${ARCH} != i386
 PLIST_SUB=	X86="@comment "
 .else
 PLIST_SUB=	X86=""
