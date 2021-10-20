@@ -1,3 +1,3 @@
-TIMESTAMP = 1616750013
-SHA256 (nextcloud/forms-v2.2.3/forms.tar.gz) = c5b926df7b0b3195eb41558d6b1acc7dc97b06352632fe70e3e2c6c389353b25
-SIZE (nextcloud/forms-v2.2.3/forms.tar.gz) = 3380678
+TIMESTAMP = 1627501324
+SHA256 (nextcloud/forms-2.3.0/forms.tar.gz) = 626309f7fdd84f23867a5cd3f9cb4c25f47926b4cc97bc82f5584b68d7f2b495
+SIZE (nextcloud/forms-2.3.0/forms.tar.gz) = 3572043
