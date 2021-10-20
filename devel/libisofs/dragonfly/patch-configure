@@ -1,0 +1,11 @@
+--- configure.orig	2012-07-20 12:26:53.000000000 +0000
++++ configure
+@@ -22130,7 +22130,7 @@ echo $ECHO_N "checking target operating
+       LIBBURN_ARCH_LIBS=
+       LIBBURNIA_LDCONFIG_CMD=ldconfig
+       ;;
+-    *-*-freebsd*)
++    *-*-freebsd*|*-*-dragonfly*)
+       ARCH=freebsd
+       LIBBURN_ARCH_LIBS=-lcam
+ 
