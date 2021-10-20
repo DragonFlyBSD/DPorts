@@ -1,0 +1,15 @@
+avoid segfault in libc.so built by gcc80 during configure,
+the sprintf() takes three arguments (missing va_list)
+no-op since VSPRINTF_RETURNS_INT is not used if HAVE_VSNPRINTF
+
+--- argp/configure.orig	2006-05-22 19:49:23.000000000 +0300
++++ argp/configure
+@@ -4071,7 +4071,7 @@ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+ main() {
+ 	char *buf = malloc(16);
+-	if (2 == (int)vsprintf(buf, "12"))
++	if (2 == (int)vsprintf(buf, "12", buf))
+ 	  exit (0);
+ 	exit (-1);}
+ _ACEOF
