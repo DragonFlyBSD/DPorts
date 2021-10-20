@@ -46,7 +46,7 @@ BIN_SUFFIX=		# none
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|-O2 .* $${ARCH_flag}|$${CFLAGS}|' ${WRKSRC}/configure.ac
-.if ${ARCH} != amd64 && ${ARCH} != i386
+.if ${ARCH} != x86_64 && ${ARCH} != i386
 	@${REINPLACE_CMD} -e 's|VECTOR_FLAG=-march=native|dnl &|' ${WRKSRC}/configure.ac
 .endif
 	@${REINPLACE_CMD} -e 's|malloc.h|stdlib.h|' ${WRKSRC}/src/utilities.h
