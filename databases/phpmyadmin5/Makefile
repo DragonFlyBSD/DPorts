@@ -1,5 +1,5 @@
 PORTNAME=	phpMyAdmin
-DISTVERSION=	5.1.0
+DISTVERSION=	5.1.1
 CATEGORIES=	databases www
 MASTER_SITES=	https://files.phpmyadmin.net/${PORTNAME}/${DISTVERSION}/
 DISTNAME=	${PORTNAME}-${DISTVERSION}-all-languages
@@ -26,7 +26,7 @@ NO_BUILD=	yes
 # could, in principle, also use the PHP dbase extension, but it's not
 # available for PHP >= 7.0 and of only minority interest.
 
-USE_PHP=	ctype filter hash json mysqli session spl xml xmlwriter
+USE_PHP=	ctype filter hash iconv json mysqli session spl xml xmlwriter
 .endif
 
 # Note: default settings will pull in X11 client support.  If you don't
