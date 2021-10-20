@@ -1,0 +1,9 @@
+Missing -lm, undef refs for log2(), log10(), pow()
+--- libmpcdec/Makefile.am.orig	2009-07-29 21:00:32 UTC
++++ libmpcdec/Makefile.am	2019-03-28 20:50:45
+@@ -16,4 +16,4 @@ libmpcdec_la_SOURCES = huffman.c mpc_dec
+ 	mpc_bits_reader.h huffman.h decoder.h internal.h requant.h mpcdec_math.h \
+ 	$(common_sources)
+ 
+-libmpcdec_la_LDFLAGS = -no-undefined -version-info 7:0:1
++libmpcdec_la_LDFLAGS = -no-undefined -version-info 7:0:1 -lm
