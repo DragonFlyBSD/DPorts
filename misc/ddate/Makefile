@@ -30,7 +30,7 @@ KILLBOB_CFLAGS=		-DKILL_BOB=\"13013\"
 PLIST_FILES=	bin/ddate man/man1/ddate.1.gz
 
 do-build:
-	${CC} ${CFLAGS} ${WRKSRC}/${PORTNAME}.c -o ${WRKSRC}/${PORTNAME}
+	${CC} ${CFLAGS} ${LDFLAGS} ${WRKSRC}/${PORTNAME}.c -o ${WRKSRC}/${PORTNAME}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
