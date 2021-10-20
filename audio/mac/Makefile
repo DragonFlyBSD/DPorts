@@ -25,7 +25,7 @@ OPTIONS_DEFINE=	DOCS
 .include <bsd.port.pre.mk>
 
 .if ${OPSYS} == FreeBSD
-.if ${ARCH} == "i386" || ${ARCH} == "amd64"
+.if ${ARCH} == "i386" || ${ARCH} == "x86_64"
 BUILD_DEPENDS+=	yasm:devel/yasm
 .endif
 .endif
