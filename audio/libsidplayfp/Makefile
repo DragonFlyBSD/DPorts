@@ -44,7 +44,7 @@ DOXYGEN_CONFIGURE_ENV_OFF=	ac_cv_prog_HAVE_DOXYGEN=false
 CONFIGURE_ARGS+=	--with-simd=neon
 .endif
 
-.if ${ARCH} == "amd64"
+.if ${ARCH} == "x86_64"
 CONFIGURE_ARGS+=	--with-simd=sse2
 .endif
 
