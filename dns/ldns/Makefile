@@ -55,10 +55,11 @@ RRTYPERKEY_CONFIGURE_ENABLE=		rrtype-rkey
 RRTYPETA_CONFIGURE_ENABLE=		rrtype-ta
 RRTYPEAVC_CONFIGURE_ENABLE=		rrtype-avc
 RRTYPEAMTRELAY_CONFIGURE_ENABLE=	rrtype-amtrelay
-EXAMPLES_CONFIGURE_WITH=		examples
+#EXAMPLES_CONFIGURE_WITH=		examples
 DRILL_CONFIGURE_WITH=			drill
 DRILL_INSTALL_TARGET=			install-drill
-EXAMPLES_INSTALL_TARGET=		install-examples
+#EXAMPLES_INSTALL_TARGET=		install-examples
+PLIST_SUB+=                    EXAMPLES="@comment "
 
 .if defined(BUILD_PYLDNS)
 USES+=		python:3.6+
@@ -125,7 +126,7 @@ post-install:
 .if ${PORT_OPTIONS:MDRILL}
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/drill
 .endif
-.if ${PORT_OPTIONS:MEXAMPLES}
+.if ${PORT_OPTIONS:MXEXAMPLES}
 	for p in ldns-chaos ldns-compare-zones ldns-dane ldns-dpa ldns-gen-zone ldns-key2ds \
 		ldns-keyfetcher ldns-keygen ldns-mx ldns-notify ldns-nsec3-hash \
 		ldns-read-zone ldns-resolver ldns-revoke ldns-rrsig ldns-signzone \
