@@ -1,5 +1,5 @@
 PORTNAME=	powerdns
-DISTVERSION=	4.4.1
+DISTVERSION=	4.5.1
 CATEGORIES=	dns
 MASTER_SITES=	https://downloads.powerdns.com/releases/
 DISTNAME=	pdns-${DISTVERSION}
@@ -10,10 +10,11 @@ COMMENT=	Advanced DNS server with multiple backends including SQL
 LICENSE=	GPLv2
 
 BROKEN_sparc64=	Does not compile: error: to_string is not a member of std
+NOT_FOR_ARCHS=	i386
+NOT_FOR_ARCHS_REASON=	archs with 32-bits time_t are no longer supported by upstream
 
 LIB_DEPENDS=	libboost_serialization.so:devel/boost-libs \
-		libcurl.so:ftp/curl \
-		libprotobuf.so:devel/protobuf
+		libcurl.so:ftp/curl
 
 USES=		autoreconf compiler:c++11-lib cpe gmake libtool \
 		localbase:ldflags pathfix pkgconfig ssl tar:bzip2
@@ -28,7 +29,7 @@ CONFIGURE_ARGS=	--disable-static \
 		--with-boost="${LOCALBASE}" \
 		--with-dynmodules="pipe bind ${MODULES}" \
 		--with-modules="" \
-		--with-protobuf
+		--with-libsodium=no
 
 SCRIPTS_ENV=	CURDIR2="${.CURDIR}" \
 		DISTNAME="${DISTNAME}" \
@@ -124,20 +125,9 @@ ZEROMQ_IMPLIES=		REMOTE
 ZEROMQ_LIB_DEPENDS=	libzmq.so:net/libzmq4
 ZEROMQ_CONFIGURE_ON=	--enable-remotebackend-zeromq
 
-.include <bsd.port.pre.mk>
-
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1200085 && ${SSL_DEFAULT} != openssl
-CONFIGURE_ARGS+=	--with-libdecaf \
-			--with-libsodium
-LIB_DEPENDS+=		libdecaf.so:security/libdecaf \
-			libsodium.so:security/libsodium
-.else
-CONFIGURE_ARGS+=	--with-libsodium=no
-.endif
-
 post-install::
 	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR} ${STAGEDIR}/var/run/pdns
 	@${STAGEDIR}${PREFIX}/sbin/pdns_server --module-dir=${STAGEDIR}${PREFIX}/lib/pdns --launch="pipe bind ${MODULES}" --config > ${STAGEDIR}${EXAMPLESDIR}/pdns.conf
 	@${REINPLACE_CMD} -e 's;${STAGEDIR};;' -i '' ${STAGEDIR}${EXAMPLESDIR}/pdns.conf
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
