@@ -1,0 +1,12 @@
+=========================================================================
+For DragonFly 4.2 and earlier:
+
+    To use the ports version instead of the base, add to /etc/rc.conf:
+        hostapd_program="%%PREFIX%%/sbin/hostapd"
+
+For DragonFly 4.3 and later:
+
+    There is no base version in these releases.
+    1. Configure %%PREFIX%%/etc/hostapd.conf properly
+    2. Add "hostapd_enable=YES" to /etc/rc.d
+=========================================================================
