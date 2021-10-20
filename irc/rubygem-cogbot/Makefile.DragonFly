@@ -1,0 +1,7 @@
+
+# just to get through the stage-qa
+dfly-patch:
+	${REINPLACE_CMD} -e '/twitter/s@~>@>=@g'	\
+			 -e '/json/s@~>@>=@g'	\
+			 -e '/daemon/s@~>@>=@g'	\
+		${WRKSRC}/cogbot.gemspec
