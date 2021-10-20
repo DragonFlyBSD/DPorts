@@ -7,14 +7,14 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 DIST_SUBDIR=	${PORTNAME}
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
-MAINTAINER=	yasu@utahime.org
+MAINTAINER=	yasu@FreeBSD.org
 COMMENT=	OpenType to BDF converter
 
 LICENSE=	MIT
 
 LIB_DEPENDS=	libfreetype.so:print/freetype2
 
-USES=		autoreconf tar:tgz
+USES=		autoreconf pkgconfig tar:tgz
 
 GNU_CONFIGURE=	yes
 
