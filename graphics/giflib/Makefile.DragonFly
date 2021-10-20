@@ -1,0 +1,5 @@
+
+# after MF handling changes unbreak on release
+.if ${DFLYVERSION} < 500505
+CFLAGS:=	${CFLAGS:N-DHAVE_REALLOCARRAY}
+.endif
