@@ -2,7 +2,7 @@
 
 PORTNAME=	pixie
 PORTVERSION=	2.2.6
-PORTREVISION=	33
+PORTREVISION=	35
 CATEGORIES=	graphics
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/Pixie%20${PORTVERSION}
 DISTNAME=	Pixie-src-${PORTVERSION}
@@ -17,7 +17,6 @@ BROKEN_aarch64=		fails to compile: ri/atomic.h:149:9: use of undeclared identifi
 BROKEN_armv6=		fails to compile: ri/atomic.h:149:9: use of undeclared identifier CRenderer
 BROKEN_armv7=		fails to compile: ri/atomic.h:149:9: use of undeclared identifier CRenderer
 BROKEN_riscv64=		fails to compile: ri/atomic.h:149:9: use of undeclared identifier CRenderer
-BROKEN_FreeBSD_11_powerpc64=	fails to compile on powerpc64 elfv1: ../common/mathSpec.h:548:37: error: 'max' was not declared in this scope
 BROKEN_FreeBSD_12_powerpc64=	fails to compile on powerpc64 elfv1: ../common/mathSpec.h:548:37: error: 'max' was not declared in this scope
 
 LIB_DEPENDS=	libOpenEXR.so:graphics/openexr \
