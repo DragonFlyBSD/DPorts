@@ -21,7 +21,7 @@ USE_LDCONFIG=	yes
 CONFIGURE_ARGS+=--enable-dbus=no \
 		--with-pcap=bpf
 CONFIGURE_ENV+=	LEX=${LOCALBASE}/bin/flex
-CFLAGS_amd64=	-fPIC
+CFLAGS_x86_64=	-fPIC
 CFLAGS_sparc64=	-fPIC
 PLIST_SUB+=	PORTVERSION=${PORTVERSION}
 
