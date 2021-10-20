@@ -1,0 +1,14 @@
+--- include/proto/openssl-compat.h.orig	2019-10-25 07:59:17 UTC
++++ include/proto/openssl-compat.h
+@@ -89,10 +89,7 @@ static inline int SSL_SESSION_set1_id_co
+ }
+ #endif
+ 
+-#if (OPENSSL_VERSION_NUMBER < 0x1010000fL) || defined(LIBRESSL_VERSION_NUMBER)
+-/*
+- * Functions introduced in OpenSSL 1.1.0 and not yet present in LibreSSL
+- */
++#if (OPENSSL_VERSION_NUMBER < 0x1010000fL)
+ 
+ static inline const unsigned char *SSL_SESSION_get0_id_context(const SSL_SESSION *sess, unsigned int *sid_ctx_length)
+ {
