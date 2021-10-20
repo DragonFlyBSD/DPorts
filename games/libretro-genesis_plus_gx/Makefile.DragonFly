@@ -1,0 +1,6 @@
+
+#CFLAGS+=	-Wundef
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@ -DBYTE_ORDER=LITTLE_ENDIAN@@g' \
+		${WRKSRC}/Makefile.libretro
