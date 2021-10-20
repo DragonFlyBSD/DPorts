@@ -1,11 +1,11 @@
 PORTNAME=	icingaweb2-module-vsphere
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.1.0
-PORTREVISION=	4
+DISTVERSION=	1.1.1
+PORTREVISION=	0
 CATEGORIES=	net-mgmt www
 PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
 
-MAINTAINER=	lme@FreeBSD.org
+MAINTAINER=	joneum@FreeBSD.org
 COMMENT=	Automated import of your VMs and Physical Host from VMware Sphere
 
 RUN_DEPENDS=	icingaweb2${PHP_PKGNAMESUFFIX}>=2.4.1:net-mgmt/icingaweb2@${PHP_FLAVOR} \
