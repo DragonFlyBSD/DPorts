@@ -1,0 +1,2 @@
+CFLAGS:= ${CFLAGS:N-DNO_UTIL:N-D__dead=}
+CFLAGS+= -D__dead=__dead2
