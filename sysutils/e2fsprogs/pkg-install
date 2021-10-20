@@ -6,9 +6,6 @@ MODE="$2" # PRE-INSTALL, POST-INSTALL, DEINSTALL, POST-DEINSTALL
 
 case "$MODE" in
 POST-INSTALL)
-	# do not try to be cute, copy over and allow RO /sbin
-	cp -p ${PKG_PREFIX}/sbin/e2fsck /sbin/ || /usr/bin/true
-	cp -p ${PKG_PREFIX}/sbin/fsck_ext2fs /sbin/ || /usr/bin/true
 	#
 	# install configuration file and update config files from
 	# old "ext4dev" to current "ext4" name.
@@ -59,20 +56,18 @@ DEINSTALL)
 	# !!! the echo messages below deliberately contain spacing errors
 	# so that the file names can be double-clicked in a typical console
 	# window for copying and pasting without keen targeting with the mouse.
-	rm -f /sbin/e2fsck || /usr/bin/true
-	rm -f /sbin/fsck_ext2fs || /usr/bin/true
 	if cmp -s ${PKG_PREFIX}/etc/mke2fs.conf \
 		${PKG_PREFIX}/etc/mke2fs.conf.dist
 	then
 		rm -f ${PKG_PREFIX}/etc/mke2fs.conf
-	else
+	elif [ "_${PKG_UPGRADE-upgrade}" = _upgrade ] ; then
 		echo "If and only if you are deleting e2fsprogs forever,"
 		echo "remember to delete ${PKG_PREFIX}/etc/mke2fs.conf ."
 	fi
 	# e2fsck.conf is no longer part of the distribution, but still supported,
 	# => no pkg-list @sample line possible
 	#    and no reference e2fsck.conf.sample or e2fsck.conf.dist is available 
-	if test -f ${PKG_PREFIX}/etc/e2fsck.conf
+	if test -f ${PKG_PREFIX}/etc/e2fsck.conf -a "_${PKG_UPGRADE-upgrade}" = _upgrade
 	then
 		echo "If and only if you are deleting e2fsprogs forever,"
 		echo "remember to delete ${PKG_PREFIX}/etc/e2fsck.conf ."
