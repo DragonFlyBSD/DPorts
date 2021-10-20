@@ -27,7 +27,7 @@ USE_LDCONFIG=	yes
 
 .include <bsd.port.pre.mk>
 
-.if ${ARCH} == amd64
+.if ${ARCH} == x86_64
 PLIST_SUB+=	X86_64_ONLY=""
 .else
 PLIST_SUB+=	X86_64_ONLY="@comment "
@@ -39,7 +39,7 @@ PLIST_SUB+=	I386_ONLY=""
 PLIST_SUB+=	I386_ONLY="@comment "
 .endif
 
-.if (${ARCH} == amd64) || (${ARCH} == i386)
+.if (${ARCH} == x86_64) || (${ARCH} == i386)
 PLIST_SUB+=	X86_ONLY=""
 .else
 PLIST_SUB+=	X86_ONLY="@comment "
