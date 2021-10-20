@@ -1,6 +1,6 @@
 PORTNAME=	node
 DISTVERSIONPREFIX=	v
-DISTVERSION=	14.17.6
+DISTVERSION=	14.18.1
 CATEGORIES=	www
 MASTER_SITES=	http://nodejs.org/dist/v${DISTVERSION}/
 PKGNAMESUFFIX=	14
@@ -15,12 +15,11 @@ BROKEN_SSL=		libressl libressl-devel
 BROKEN_SSL_REASON=	Node.js 14.x LTS requires OpenSSL 1.1.x or the BUNDLED_SSL option enabled
 ONLY_FOR_ARCHS=		aarch64 amd64 armv6 armv7 i386 powerpc64 powerpc64le
 
-USES=		compiler:c++11-lib gmake python:build pkgconfig \
+USES=		compiler:c++11-lib gmake python:2.7-3.9,build pkgconfig \
 		localbase shebangfix
 
 OPTIONS_DEFINE=		BUNDLED_SSL DOCS NLS DTRACE
 OPTIONS_DEFAULT=	DTRACE
-OPTIONS_DEFAULT_FreeBSD_11=	BUNDLED_SSL
 OPTIONS_DEFAULT+=	${OPTIONS_DEFAULT_${OPSYS}_${OSREL:R}}
 OPTIONS_SUB=		yes
 
@@ -70,8 +69,8 @@ MAKE_ENV+=	CC.host=${CC} CFLAGS.host="${CFLAGS}" \
 		LINK.host=${CXX} LDFLAGS.host="${LDFLAGS}"
 
 BUILD_DEPENDS+=	brotli>=1.0.9,1:archivers/brotli \
-		c-ares>=1.17.1:dns/c-ares \
-		libuv>=1.41.0:devel/libuv \
+		c-ares>=1.17.2:dns/c-ares \
+		libuv>=1.42.0:devel/libuv \
 		libnghttp2>=1.42.0:www/libnghttp2 \
 		
 LIB_DEPENDS+=	libbrotlidec.so:archivers/brotli \
@@ -87,10 +86,6 @@ EXTRA_PATCHES=		${PATCHDIR}/extra-patch-common.gypi
 
 .if ${ARCH} == armv6 || ${ARCH} == armv7
 EXTRA_PATCHES=	${PATCHDIR}/extra-patch-tools_v8__gypfiles_v8.gyp
-.endif
-
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1200085
-BROKEN_SSL+=	base
 .endif
 
 .if ${PORT_OPTIONS:MBUNDLED_SSL} && ${ARCH} != x86_64
