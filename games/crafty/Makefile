@@ -42,7 +42,7 @@ OPT=		-DHASHSTATS -DTRACE -DBOOKDIR=\\\"${WITH_BOOKDIR}\\\" \
 
 .include <bsd.port.pre.mk>
 
-.if ${ARCH} == amd64 || ${ARCH} == i386
+.if ${ARCH} == x86_64 || ${ARCH} == i386
 OPT+=		-DCPUS=4
 .else
 OPT+=		-DCPUS=1 # disables x86 assembler
