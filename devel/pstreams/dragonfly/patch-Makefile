@@ -1,0 +1,11 @@
+--- Makefile.intermediate	2013-12-25 15:39:21.943363000 +0000
++++ Makefile
+@@ -82,7 +82,7 @@ clean:
+ 
+ install:
+ 	@install -d $(DESTDIR)$(includedir)/pstreams
+-	@$(INSTALL_DATA) pstream.h $(DESTDIR)$(includedir)/pstreams/pstream.h
++	@$(BSD_INSTALL_DATA) pstream.h $(DESTDIR)$(includedir)/pstreams/pstream.h
+ 
+ pstreams.wout:
+ 	@echo "Wide Load" | iconv -f ascii -t UTF-32 > $@
