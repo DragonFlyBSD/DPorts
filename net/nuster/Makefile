@@ -50,7 +50,7 @@ PORTEXAMPLES=	*
 
 .include <bsd.port.pre.mk>
 
-.if ${ARCH} == "amd64" || ${ARCH} == "i386"
+.if ${ARCH} == "x86_64" || ${ARCH} == "i386"
 MAKE_ARGS+=	USE_REGPARM=1
 .endif
 
