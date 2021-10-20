@@ -1,0 +1,17 @@
+--- configure.orig	2011-02-10 15:44:43.000000000 +0000
++++ configure
+@@ -4879,14 +4879,6 @@ $as_echo "$PATCH" >&6; }
+ 
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether patch works" >&5
+ $as_echo_n "checking whether patch works... " >&6; }
+-pver=`$PATCH -v 2>&1`
+-if echo "$pver" | grep -q "version 2.0" > /dev/null 2>&1; then
+-   as_fn_error $? "no
+-
+-Sorry, you have version 2.0 of the patch program, which
+-is not supported by interdiff.  Please upgrade.
+-" "$LINENO" 5
+-fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+ $as_echo "yes" >&6; }
+ 
