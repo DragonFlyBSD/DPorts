@@ -1,0 +1,21 @@
+Should be ok?
+--- plugins/check_multi.in.orig	2011-11-18 19:28:13 UTC
++++ plugins/check_multi.in
+@@ -1227,7 +1227,7 @@ sub parse_objects_cache {
+ 	}
+ 	while (<OBJECTS_CACHE>) {
+ 		#--- begin of object, determine type
+-		if (/^define ([a-z0-9\_\-]+) {$/) {
++		if (/^define ([a-z0-9\_\-]+) \{$/) {
+ 			$type="$1";
+ 			$typelist{$type}++;
+ 			$objectcount++;
+@@ -3217,7 +3217,7 @@ sub report_all {
+ 
+ 	#--- some debugging first
+ 	DEBUG4("MULTI Environment (sorted):\n\t".join("\n\t",get_env_vars('^MULTI')));
+-	DEBUG4("${NAGIOS} Environment (sorted):\n\t".join("\n\t",get_env_vars('^${NAGIOS}')));
++	DEBUG4("${NAGIOS} Environment (sorted):\n\t".join("\n\t",get_env_vars('^$\{NAGIOS\}')));
+ 
+ 	#--- construction site for persistence
+ 	if ($opt{set}{test} && $opt{set}{persistent}) {
