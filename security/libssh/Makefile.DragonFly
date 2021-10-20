@@ -1,0 +1,2 @@
+# unbreaks kodi and others
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NGSSAPI}
