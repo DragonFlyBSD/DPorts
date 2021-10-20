@@ -1,0 +1,11 @@
+--- deps/libneon/src/ne_openssl.c.orig	2019-02-15 13:25:39 UTC
++++ deps/libneon/src/ne_openssl.c
+@@ -1272,7 +1272,7 @@ static void thread_lock_neon(int mode, i
+ #define ID_CALLBACK_IS_NEON (CRYPTO_get_id_callback() == thread_id_neon)
+ #endif
+ 
+-#if OPENSSL_VERSION_NUMBER < 0x10100000L
++#if OPENSSL_VERSION_NUMBER < 0x10100000L || defined(LIBRESSL_VERSION_NUMBER)
+ #define OPENSSL_malloc_init CRYPTO_malloc_init
+ #endif
+ 
