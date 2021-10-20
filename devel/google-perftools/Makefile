@@ -55,12 +55,12 @@ PORTDOCS=	*
 CXXFLAGS+=	-fno-builtin
 .endif
 
-.if ${ARCH} == "amd64"
+.if ${ARCH} == "x86_64"
 CONFIGURE_ARGS+=--enable-frame-pointers
 .endif
 
 # keep in sync with all platforms where libunwind is available
-.if ${ARCH} == aarch64 || ${ARCH} == amd64 || ${ARCH} == armv7 || ${ARCH} == i386 || ${ARCH} == powerpc64 || ${ARCH} == powerpc64le
+.if ${ARCH} == aarch64 || ${ARCH} == x86_64 || ${ARCH} == armv7 || ${ARCH} == i386 || ${ARCH} == powerpc64 || ${ARCH} == powerpc64le
 LIB_DEPENDS+=	libunwind.so:devel/libunwind
 .endif
 
