@@ -1,0 +1,3 @@
+
+# to suppress match
+CFLAGS+=	-Wno-array-bounds -Wno-write-strings
