@@ -1,0 +1,21 @@
+--- configure.orig	2016-12-09 22:01:19 UTC
++++ configure
+@@ -12920,6 +12920,9 @@ then
+ elif test $HAVE_UNAME=yes -a x`uname -s` = xSunOS
+ then
+    DISTNAME=sun
++elif test $HAVE_UNAME=yes -a x`uname -s` = xDragonFly
++then
++   DISTNAME=freebsd
+ elif test $HAVE_UNAME=yes -a x`uname -s` = xFreeBSD
+ then
+    DISTNAME=freebsd
+@@ -13054,7 +13057,7 @@ debian)
+       platforms/debian/apcupsd \
+       platforms/debian/ups-monitor"
+    ;;
+-freebsd)
++freebsd|dragonfly)
+    DISTVER=`uname -a |awk '{print $3}'`
+    SERIALDEV=/dev/cuaa0
+    nologdir=/var/run
