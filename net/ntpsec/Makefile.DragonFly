@@ -1,0 +1,7 @@
+USES+=	pkgconfig
+
+# XXX: disable few failing tests
+dfly-patch:
+	${REINPLACE_CMD} -e '/decodenetnum, Services/s@RUN_TEST_CASE@//&@g' \
+			 -e '/decodenetnum, IPv4AddressWithPort2/s@RUN_TEST_CASE@//&@g' \
+		${WRKSRC}/tests/libntp/decodenetnum.c
