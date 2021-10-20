@@ -1,0 +1,1 @@
+CONFIGURE_ARGS += --enable-drivers=freebsd_sysctl
