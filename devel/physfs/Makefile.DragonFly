@@ -1,0 +1,3 @@
+# [-Werror=stringop-truncation]
+dfly-patch:
+	${REINPLACE_CMD} -e 's/-Werror//g' ${WRKSRC}/CMakeLists.txt
