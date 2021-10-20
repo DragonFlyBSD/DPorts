@@ -19,7 +19,7 @@ LIB_DEPENDS=	libfreetype.so:print/freetype2 \
 		libming.so:graphics/ming \
 		libpng.so:graphics/png
 
-USES=		autoreconf bison gmake libtool localbase perl5 shebangfix
+USES=		autoreconf bison gmake libtool localbase perl5 pkgconfig  shebangfix
 
 CONFIGURE_ARGS=	--enable-perl
 GNU_CONFIGURE=	yes
