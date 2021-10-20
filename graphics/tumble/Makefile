@@ -6,14 +6,11 @@ DISTVERSION=	0.36
 PORTREVISION=	1
 CATEGORIES=	graphics print
 
-MAINTAINER=	fuz@fuz.su
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Creates a PDF file from image files
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
-
-NOT_FOR_ARCHS=		mips mips64 powerpc powerpc64 powerpcspe sparc64
-NOT_FOR_ARCHS_REASON=	Only works on little endian systems
 
 LIB_DEPENDS=	libtiff.so:graphics/tiff \
 		libnetpbm.so:graphics/netpbm
