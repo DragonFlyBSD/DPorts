@@ -1,0 +1,2 @@
+# not ready for c++11
+USE_CXXSTD=	c++98
