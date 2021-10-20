@@ -1,0 +1,11 @@
+--- Makefile.orig	2021-06-15 16:46:50.581546000 +0200
++++ Makefile	2021-06-15 16:47:04.051233000 +0200
+@@ -62,7 +62,7 @@
+   LIBS   += -lposix4
+ endif
+ 
+-ifeq ($(SYSTYPE), FreeBSD)
++ifeq ($(SYSTYPE), $(filter $(SYSTYPE), FreeBSD DragonFly))
+   EXTRACFLAGS += -DFREEBSD
+ endif
+ 
