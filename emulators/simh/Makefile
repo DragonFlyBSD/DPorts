@@ -33,7 +33,7 @@ OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.pre.mk>
 
-.if ${ARCH} == aarch64 || ${ARCH} == amd64 || ${ARCH} == armv6 || ${ARCH} == armv7 || ${ARCH} == i386
+.if ${ARCH} == aarch64 || ${ARCH} == x86_64 || ${ARCH} == armv6 || ${ARCH} == armv7 || ${ARCH} == i386
 CFLAGS+=	-Wno-logical-op-parentheses -Wno-bitwise-op-parentheses -Wno-shift-negative-value
 .endif
 
