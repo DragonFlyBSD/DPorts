@@ -1,0 +1,4 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-Wall@& -Wno-deprecated-declarations@g' \
+		${WRKSRC}/Makefile.bsd
