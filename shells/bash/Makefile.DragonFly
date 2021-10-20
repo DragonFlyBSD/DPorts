@@ -1,0 +1,4 @@
+USES+= ncurses
+
+# chase devel/ncurses changes
+MAKE_ARGS+=	TERMCAP_LIB=-ltinfo
