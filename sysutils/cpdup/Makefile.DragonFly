@@ -1,0 +1,6 @@
+
+# unless we bring in base patches and use LibreSSL
+.if ${DFLYVERSION} > 500700
+USES+=	localbase:ldflags
+LIB_DEPENDS+=	libmd.so:security/libmd
+.endif
