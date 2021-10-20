@@ -638,6 +638,9 @@
 %%DRUPAL_BASE%%/modules/simpletest/files/css_test_files/css_subfolder/css_input_with_import.css.unoptimized.css
 %%DRUPAL_BASE%%/modules/simpletest/files/css_test_files/import1.css
 %%DRUPAL_BASE%%/modules/simpletest/files/css_test_files/import2.css
+%%DRUPAL_BASE%%/modules/simpletest/files/css_test_files/quotes.css
+%%DRUPAL_BASE%%/modules/simpletest/files/css_test_files/quotes.css.optimized.css
+%%DRUPAL_BASE%%/modules/simpletest/files/css_test_files/quotes.css.unoptimized.css
 %%DRUPAL_BASE%%/modules/simpletest/files/html-1.txt
 %%DRUPAL_BASE%%/modules/simpletest/files/html-2.html
 %%DRUPAL_BASE%%/modules/simpletest/files/image-1.png
@@ -1152,6 +1155,6 @@
 %%DRUPAL_BASE%%/xmlrpc.php
 @dir %%DRUPAL_BASE%%/sites/all/libraries
 @dir %%DRUPAL_BASE%%/sites/default/files
-@unexec rm -f %%DRUPAL_BASE%%/files/.htaccess 2> /dev/null || true
+@postunexec rm -f %%DRUPAL_BASE%%/files/.htaccess 2> /dev/null || true
 @owner
 @group
