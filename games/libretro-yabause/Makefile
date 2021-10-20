@@ -22,7 +22,7 @@ MAKEFILE=	Makefile.freebsd
 .include <bsd.port.pre.mk>
 
 post-patch:
-.if ${ARCH} != "amd64"
+.if ${ARCH} != "x86_64"
 	@${REINPLACE_CMD} -e "s/HAVE_SSE = 1/HAVE_SSE = 0/" ${WRKSRC}/yabause/src/libretro/Makefile
 .endif
 
