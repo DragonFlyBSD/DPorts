@@ -1,0 +1,3 @@
+# From FreeBSD 10
+PATCH_DEPENDS+=	gpatch:devel/patch
+PATCH=		${LOCALBASE}/bin/gpatch
