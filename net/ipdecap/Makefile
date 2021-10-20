@@ -11,7 +11,7 @@ LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	${LOCALBASE}/include/pcap/vlan.h:net/libpcap
-LIB_DEPENDS=	libpcap.so:net/libpcap	# require ports libpcap
+LIB_DEPENDS=	libpcap.so.1:net/libpcap	# require ports libpcap
 
 USES=		autoreconf gmake ssl
 USE_GITHUB=	yes
