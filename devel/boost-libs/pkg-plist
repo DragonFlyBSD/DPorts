@@ -14177,10 +14177,6 @@ lib/cmake/boost_math_c99f-%%BOOST_SHARED_LIB_VER%%/boost_math_c99f-config-versio
 lib/cmake/boost_math_c99f-%%BOOST_SHARED_LIB_VER%%/boost_math_c99f-config.cmake
 lib/cmake/boost_math_c99f-%%BOOST_SHARED_LIB_VER%%/libboost_math_c99f-variant-shared.cmake
 lib/cmake/boost_math_c99f-%%BOOST_SHARED_LIB_VER%%/libboost_math_c99f-variant-static.cmake
-lib/cmake/boost_math_c99l-%%BOOST_SHARED_LIB_VER%%/boost_math_c99l-config-version.cmake
-lib/cmake/boost_math_c99l-%%BOOST_SHARED_LIB_VER%%/boost_math_c99l-config.cmake
-lib/cmake/boost_math_c99l-%%BOOST_SHARED_LIB_VER%%/libboost_math_c99l-variant-shared.cmake
-lib/cmake/boost_math_c99l-%%BOOST_SHARED_LIB_VER%%/libboost_math_c99l-variant-static.cmake
 lib/cmake/boost_math_tr1-%%BOOST_SHARED_LIB_VER%%/boost_math_tr1-config-version.cmake
 lib/cmake/boost_math_tr1-%%BOOST_SHARED_LIB_VER%%/boost_math_tr1-config.cmake
 lib/cmake/boost_math_tr1-%%BOOST_SHARED_LIB_VER%%/libboost_math_tr1-variant-shared.cmake
@@ -14189,10 +14185,6 @@ lib/cmake/boost_math_tr1f-%%BOOST_SHARED_LIB_VER%%/boost_math_tr1f-config-versio
 lib/cmake/boost_math_tr1f-%%BOOST_SHARED_LIB_VER%%/boost_math_tr1f-config.cmake
 lib/cmake/boost_math_tr1f-%%BOOST_SHARED_LIB_VER%%/libboost_math_tr1f-variant-shared.cmake
 lib/cmake/boost_math_tr1f-%%BOOST_SHARED_LIB_VER%%/libboost_math_tr1f-variant-static.cmake
-lib/cmake/boost_math_tr1l-%%BOOST_SHARED_LIB_VER%%/boost_math_tr1l-config-version.cmake
-lib/cmake/boost_math_tr1l-%%BOOST_SHARED_LIB_VER%%/boost_math_tr1l-config.cmake
-lib/cmake/boost_math_tr1l-%%BOOST_SHARED_LIB_VER%%/libboost_math_tr1l-variant-shared.cmake
-lib/cmake/boost_math_tr1l-%%BOOST_SHARED_LIB_VER%%/libboost_math_tr1l-variant-static.cmake
 lib/cmake/boost_mpi-%%BOOST_SHARED_LIB_VER%%/boost_mpi-config-version.cmake
 lib/cmake/boost_mpi-%%BOOST_SHARED_LIB_VER%%/boost_mpi-config.cmake
 lib/cmake/boost_prg_exec_monitor-%%BOOST_SHARED_LIB_VER%%/boost_prg_exec_monitor-config-version.cmake
@@ -14346,11 +14338,6 @@ lib/libboost_math_c99f.so
 lib/libboost_math_c99f.so.%%MAJOR_VER%%
 lib/libboost_math_c99f.so.%%MAJOR_VER%%.%%MINOR_VER%%
 lib/libboost_math_c99f.so.%%BOOST_SHARED_LIB_VER%%
-lib/libboost_math_c99l.a
-lib/libboost_math_c99l.so
-lib/libboost_math_c99l.so.%%MAJOR_VER%%
-lib/libboost_math_c99l.so.%%MAJOR_VER%%.%%MINOR_VER%%
-lib/libboost_math_c99l.so.%%BOOST_SHARED_LIB_VER%%
 lib/libboost_math_tr1.a
 lib/libboost_math_tr1.so
 lib/libboost_math_tr1.so.%%MAJOR_VER%%
@@ -14361,11 +14348,6 @@ lib/libboost_math_tr1f.so
 lib/libboost_math_tr1f.so.%%MAJOR_VER%%
 lib/libboost_math_tr1f.so.%%MAJOR_VER%%.%%MINOR_VER%%
 lib/libboost_math_tr1f.so.%%BOOST_SHARED_LIB_VER%%
-lib/libboost_math_tr1l.a
-lib/libboost_math_tr1l.so
-lib/libboost_math_tr1l.so.%%MAJOR_VER%%
-lib/libboost_math_tr1l.so.%%MAJOR_VER%%.%%MINOR_VER%%
-lib/libboost_math_tr1l.so.%%BOOST_SHARED_LIB_VER%%
 lib/libboost_prg_exec_monitor.a
 lib/libboost_prg_exec_monitor.so
 lib/libboost_prg_exec_monitor.so.%%MAJOR_VER%%
