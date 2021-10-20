@@ -1,7 +1,7 @@
 # Created by: nork@FreeBSD.org
 
 PORTNAME=	openexr
-PORTVERSION=	3.0.5
+PORTVERSION=	3.1.1
 CATEGORIES=	graphics devel
 
 MAINTAINER=	mandree@FreeBSD.org
@@ -10,7 +10,7 @@ COMMENT=	High dynamic-range (HDR) image file format
 LICENSE=	BSD3CLAUSE
 
 # exact version required to avoid hard-to-debug issues
-LIB_DEPENDS=	libImath-3_0.so.28:math/Imath
+LIB_DEPENDS=	libImath-3_1.so.29:math/Imath
 
 USES=		cmake compiler:c++14-lang pathfix pkgconfig
 
@@ -23,11 +23,11 @@ CPPFLAGS+=	-I.
 # must be linked with -l{thr|pthread} explicitly
 LDFLAGS+=	-lpthread
 
-PATCH_STRIP=	-p1
+PATCH_STRIP=	-p0
 
-_MAJORVER=	3_0
-_VER=		29
-_MINVER=	0
+_MAJORVER=	3_1
+_VER=		30
+_MINVER=	1
 _PLVER=		0
 
 PLIST_SUB+=	MAJORVER=${_MAJORVER} \
