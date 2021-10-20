@@ -65,13 +65,13 @@ CONFIGURE_ARGS+=	--cc-abi="-march=armv8-a+crypto"
 CONFIGURE_ARGS+=	--cpu="ppc64"
 .endif
 
-.if ${ARCH} == i386 || ${ARCH} == amd64
+.if ${ARCH} == i386 || ${ARCH} == x86_64
 PLIST_SUB+=	HAS_RDRAND_RNG=""
 .else
 PLIST_SUB+=	HAS_RDRAND_RNG="@comment "
 .endif
 
-.if ${ARCH} == i386 || ${ARCH} == amd64 || ${ARCH:Mpowerpc64*}
+.if ${ARCH} == i386 || ${ARCH} == x86_64 || ${ARCH:Mpowerpc64*}
 PLIST_SUB+=	HAS_PROCESSOR_RNG=""
 .else
 PLIST_SUB+=	HAS_PROCESSOR_RNG="@comment "
