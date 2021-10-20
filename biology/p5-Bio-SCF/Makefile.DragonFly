@@ -1,0 +1,6 @@
+
+CFLAGS+=	-Wundef
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/-DLITTLE_ENDIAN/d' \
+		${WRKSRC}/Makefile.PL
