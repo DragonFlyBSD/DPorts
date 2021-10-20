@@ -29,10 +29,6 @@ LIBBLACKLIST_MAKE_ARGS=	USE_LIBBLACKLIST=yes
 
 .include <bsd.port.options.mk>
 
-.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1300134
-MAKE_ENV+=		MK_WERROR=no
-.else
 MAKE_ENV+=		NO_WERROR=1
-.endif
 
 .include <bsd.port.mk>
