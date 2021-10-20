@@ -2,7 +2,7 @@
 
 PORTNAME=	pfstools
 DISTVERSION=	2.1.0
-PORTREVISION=	9
+PORTREVISION=	11
 CATEGORIES=	graphics
 MASTER_SITES=	SF
 
@@ -18,7 +18,7 @@ CONFLICTS=	pfstmo-1.* pfscalibration-1.*
 
 CFLAGS+=	-I${LOCALBASE}/include/Imath
 
-USES=		cmake tar:tgz dos2unix jpeg perl5
+USES=		cmake cpe tar:tgz dos2unix jpeg perl5
 USE_PERL5=	run
 USE_LDCONFIG=	yes
 
