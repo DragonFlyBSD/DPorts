@@ -17,7 +17,7 @@ OPTIONS_DEFINE=	DOCS
 .include <bsd.port.pre.mk>
 
 post-patch:
-.if ${ARCH} == amd64
+.if ${ARCH} == x86_64
 		@${REINPLACE_CMD} \
 		-e '/^#define	FBSD32/s/1/0/' \
 		-e '/^#define	FBSD64/s/0/1/'\
