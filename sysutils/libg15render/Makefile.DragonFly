@@ -1,0 +1,2 @@
+
+USES+=	localbase:ldflags
