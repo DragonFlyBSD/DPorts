@@ -1,0 +1,20 @@
+--- libpromises/crypto.c.intermediate	2019-12-18 23:09:48.000000000 +0000
++++ libpromises/crypto.c
+@@ -772,7 +772,7 @@ static pthread_mutex_t *cf_openssl_locks
+ 
+ 
+ #ifndef __MINGW32__
+-#if OPENSSL_VERSION_NUMBER < 0x10100000
++#if OPENSSL_VERSION_NUMBER < 0x10100000 || defined(LIBRESSL_VERSION_NUMBER)
+ unsigned long ThreadId_callback(void)
+ {
+     return (unsigned long) pthread_self();
+@@ -780,7 +780,7 @@ unsigned long ThreadId_callback(void)
+ #endif
+ #endif
+ 
+-#if OPENSSL_VERSION_NUMBER < 0x10100000
++#if OPENSSL_VERSION_NUMBER < 0x10100000 || defined(LIBRESSL_VERSION_NUMBER)
+ 
+ static void OpenSSLLock_callback(int mode, int index, char *file, int line)
+ {
