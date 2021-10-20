@@ -1,0 +1,22 @@
+Avoid use of uninit *c while testing for availability of inet_aton/inet_pton.
+
+--- siteconf.orig	2009-03-08 03:12:50.000000000 +0200
++++ siteconf
+@@ -1607,7 +1607,7 @@ echo $ECHO_N "checking for inet_aton $EC
+ int
+ main ()
+ {
+-  char * c;
++  char * c = "1.1.1.1";
+   struct in_addr in;
+ 
+   inet_aton(c,&in);
+@@ -1663,7 +1663,7 @@ echo $ECHO_N "checking for inet_pton $EC
+ int
+ main ()
+ {
+-  char * c;
++  char * c = "1.1.1.1";
+   struct in_addr in;
+ 
+   inet_pton(AF_INET,c,&in);
