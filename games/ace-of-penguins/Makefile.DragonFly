@@ -1,0 +1,5 @@
+
+# missing -lm for pow()
+dfly-patch:
+	${REINPLACE_CMD} -e '/libcards_la_LIBADD/s@=@= -lm @' \
+		${WRKSRC}/lib/Makefile.in
