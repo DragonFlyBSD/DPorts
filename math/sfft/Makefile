@@ -44,7 +44,7 @@ SRCS=	common.cc computefourier-1.0-2.0.cc \
 
 .include <bsd.port.options.mk>
 
-.if !${ARCH:Mamd64} && !${MACHINE_CPU:Msse2}
+.if !${ARCH:Mx86_64} && !${MACHINE_CPU:Msse2}
 IGNORE=	this port requires SSE2, and benefits from SSE3 -- set CPUTYPE\
 appropriately
 .endif
