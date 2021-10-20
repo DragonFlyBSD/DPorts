@@ -1,0 +1,12 @@
+--- configure.intermediate	2013-06-19 13:08:59.266821000 +0000
++++ configure
+@@ -93,6 +93,9 @@ fi
+ if [ $( echo $UNAME | grep NetBSD | wc | awk '{print $1;}' ) -eq 1 ] ; then
+ 	type="NetBSD"
+ fi
++if [ $( echo $UNAME | grep DragonFly | wc | awk '{print $1;}' ) -eq 1 ] ; then
++	type="FreeBSD"
++fi
+ if [ $( echo $UNAME | grep FreeBSD | wc | awk '{print $1;}' ) -eq 1 ] ; then
+ 	type="FreeBSD"
+ fi
