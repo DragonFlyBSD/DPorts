@@ -1,0 +1,3 @@
+
+dfly-patch:
+	${ECHO} "#include <unistd.h>" >> ${WRKSRC}/cdb/cdb.h
