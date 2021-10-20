@@ -1,0 +1,1 @@
+CXXFLAGS+= -Wno-error -Wno-narrowing -fpermissive
