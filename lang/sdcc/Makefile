@@ -64,7 +64,7 @@ Z80_CONFIGURE_OFF=	--disable-gbz80-port --disable-r2k-port		\
 
 .include <bsd.port.options.mk>
 
-.if ${ARCH} == "amd64"
+.if ${ARCH} == "x86_64"
 CONFIGURE_TARGET=	x86_64-portbld-${OPSYS:tl}${OSREL}
 .endif
 
