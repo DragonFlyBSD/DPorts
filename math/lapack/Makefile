@@ -9,7 +9,8 @@ PORTREVISION?=	0	# Never remove this line, keep PORTREVISION?=0 in case.
 .endif
 CATEGORIES=	math
 MASTER_SITES=	https://github.com/Reference-LAPACK/lapack/archive/refs/tags/:src	\
-		http://www.netlib.org/lapack/:man
+		http://www.netlib.org/lapack/:man	\
+		LOCAL/thierry/lapack-${PORTVERSION}/:man
 DISTFILES=	v${PORTVERSION}${EXTRACT_SUFX}:src
 .if make(makesum) || !(defined(BLAS_SLAVEPORT) || defined(XLAPACK_SLAVEPORT))
 DISTFILES+=	manpages.tgz:man
