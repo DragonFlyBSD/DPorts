@@ -6,14 +6,14 @@ PORTREVISION=	3
 CATEGORIES=	devel scheme
 MASTER_SITES=	SAVANNAH
 
-MAINTAINER=	ndowens@yahoo.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Renderer for User Interfaces in Ncurses
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 NOT_FOR_ARCHS=	mips
-NOT_FOR_ARCHS_REASON=	glib needs gcc7(Not available for mips)
+NOT_FOR_ARCHS_REASON=	glib needs GCC (not available for mips)
 
 BUILD_DEPENDS=	guile-lib>0:devel/guile-lib
 LIB_DEPENDS=	libguile-2.2.so:lang/guile2 \
