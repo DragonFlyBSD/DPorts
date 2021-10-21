@@ -1,24 +1,22 @@
 PORTNAME=	magit
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.1.1-1
-DISTVERSIONSUFFIX=	-ge0fc9946
+DISTVERSION=	3.2.1-76
+DISTVERSIONSUFFIX=	-gb4194014
 CATEGORIES=	devel elisp
 PKGNAMESUFFIX=	-devel${EMACS_PKGNAMESUFFIX}
 
-MAINTAINER=	yasu@utahime.org
+MAINTAINER=	yasu@FreeBSD.org
 COMMENT=	Interface to Git for Emacs (Development Version)
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	dash.el${EMACS_PKGNAMESUFFIX}>=2.14.1:devel/dash.el@${EMACS_FLAVOR} \
-		ghub${EMACS_PKGNAMESUFFIX}>=3.0.0:devel/ghub@${EMACS_FLAVOR} \
-		transient${EMACS_PKGNAMESUFFIX}>=0:devel/transient@${EMACS_FLAVOR} \
-		with-editor${EMACS_PKGNAMESUFFIX}>=2.8.0:editors/with-editor@${EMACS_FLAVOR}
-RUN_DEPENDS=	dash.el${EMACS_PKGNAMESUFFIX}>=2.14.1:devel/dash.el@${EMACS_FLAVOR} \
-		ghub${EMACS_PKGNAMESUFFIX}>=3.0.0:devel/ghub@${EMACS_FLAVOR} \
-		transient${EMACS_PKGNAMESUFFIX}>=0:devel/transient@${EMACS_FLAVOR} \
-		with-editor${EMACS_PKGNAMESUFFIX}>=2.8.0:editors/with-editor@${EMACS_FLAVOR}
+BUILD_DEPENDS=	dash.el${EMACS_PKGNAMESUFFIX}>=2.18.1:devel/dash.el@${EMACS_FLAVOR} \
+		transient${EMACS_PKGNAMESUFFIX}>=0.3.6:devel/transient@${EMACS_FLAVOR} \
+		with-editor${EMACS_PKGNAMESUFFIX}>=3.0.4:editors/with-editor@${EMACS_FLAVOR}
+RUN_DEPENDS=	dash.el${EMACS_PKGNAMESUFFIX}>=2.18.1:devel/dash.el@${EMACS_FLAVOR} \
+		transient${EMACS_PKGNAMESUFFIX}>=0.3.6:devel/transient@${EMACS_FLAVOR} \
+		with-editor${EMACS_PKGNAMESUFFIX}>=3.0.4:editors/with-editor@${EMACS_FLAVOR}
 
 USES=		emacs gmake makeinfo
 USE_GITHUB=	yes
@@ -29,6 +27,8 @@ MAKE_ENV+=	docdir=${DOCSDIR} \
 		lispdir=${PREFIX}/${_ELISPDIR} \
 		LOAD_PATH="-L ${WRKSRC}/lisp -L ${PREFIX}/${EMACS_SITE_LISPDIR} -L ${PREFIX}/${EMACS_VERSION_SITE_LISPDIR} -L ${PREFIX}/${EMACS_VERSION_SITE_LISPDIR}/ghub" \
 		VERSION=${PORTVERSION}
+# Parallel build fails if Emacs is built with native compilation enabled
+MAKE_JOBS_UNSAFE=	yes
 
 CONFLICTS_INSTALL=	magit-emacs*
 
