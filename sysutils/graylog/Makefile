@@ -1,7 +1,7 @@
 # Created by: Thomas Bartelmess <thomas@bartelmess.io>
 
 PORTNAME=	graylog
-DISTVERSION=	4.1.0
+DISTVERSION=	4.1.5
 CATEGORIES=	sysutils java
 MASTER_SITES=	https://downloads.graylog.org/releases/
 DISTFILES=	graylog/${DISTNAME}${EXTRACT_SUFX} \
@@ -10,13 +10,13 @@ DISTFILES=	graylog/${DISTNAME}${EXTRACT_SUFX} \
 MAINTAINER=	dch@FreeBSD.org
 COMMENT=	Tool for centralized log collection
 
-LICENSE=	SSPLv1 APACHE20
+LICENSE=	APACHE20 SSPLv1
 LICENSE_COMB=	multi
 LICENSE_NAME_SSPLv1=	Server Side Public License
 LICENSE_FILE_SSPLv1=	${WRKSRC}/LICENSE
 LICENSE_PERMS_SSPLv1=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
-USES=		tar:tgz
+USES=		cpe tar:tgz
 USE_JAVA=	yes
 
 JAVA_VERSION=	1.8+
@@ -29,29 +29,38 @@ NO_ARCH=	yes
 USE_RC_SUBR=	graylog
 SUB_FILES=	log4j2.xml pkg-message
 
-GRAYLOGUSER?=	graylog
-GRAYLOGGROUP?=	${GRAYLOGUSER}
-USERS=		${GRAYLOGUSER}
-GROUPS=		${GRAYLOGGROUP}
+GRAYLOGUSER?=		graylog
+GRAYLOGGROUP?=		${GRAYLOGUSER}
+USERS=			${GRAYLOGUSER}
+GROUPS=			${GRAYLOGGROUP}
 GRAYLOG_DATA_DIR=	/var/db/graylog
 GRAYLOG_LOGS_DIR=	/var/log/graylog
 
-SUB_LIST=	GRAYLOGUSER=${GRAYLOGUSER} \
-		GRAYLOGGROUP=${GRAYLOGGROUP} \
+SUB_LIST=	GRAYLOG_DATA_DIR=${GRAYLOG_DATA_DIR} \
 		GRAYLOG_LOGS_DIR=${GRAYLOG_LOGS_DIR} \
-		GRAYLOG_DATA_DIR=${GRAYLOG_DATA_DIR}
+		GRAYLOGGROUP=${GRAYLOGGROUP} \
+		GRAYLOGUSER=${GRAYLOGUSER}
 
 PLIST_SUB=	DISTVERSION=${DISTVERSION} \
 		GRAYLOG_DATA_DIR=${GRAYLOG_DATA_DIR} \
 		GRAYLOG_LOGS_DIR=${GRAYLOG_LOGS_DIR} \
-		GRAYLOGUSER=${GRAYLOGUSER} \
 		GRAYLOGGROUP=${GRAYLOGGROUP} \
+		GRAYLOGUSER=${GRAYLOGUSER} \
 		PORTNAME=${PORTNAME}
+
+post-extract:
+	${REINPLACE_CMD} -E \
+		-e 's,^bin_dir .+,bin_dir = ${LOCALBASE}/share/graylog/bin,' \
+		-e 's,^data_dir .+,data_dir = /var/db/graylog,' \
+		-e 's,^message_journal_dir .+,message_journal_dir = ${GRAYLOG_DATA_DIR}/journal,' \
+		-e 's,^node_id_file .+,node_id_file = ${ETCDIR}/server/node-id,' \
+		-e 's,^plugin_dir .+,plugin_dir = ${LOCALBASE}/share/graylog/plugin,' \
+	${WRKSRC}/graylog.conf.example
 
 do-install:
 	@${MKDIR} ${STAGEDIR}${DATADIR}/plugin
-	@${MKDIR} ${STAGEDIR}${ETCDIR}
-	@${MKDIR} ${STAGEDIR}${GRAYLOG_DATA_DIR}
+	@${MKDIR} ${STAGEDIR}${ETCDIR}/server
+	@${MKDIR} ${STAGEDIR}${GRAYLOG_DATA_DIR}/journal
 	@${MKDIR} ${STAGEDIR}${GRAYLOG_LOGS_DIR}
 	${INSTALL_DATA} ${WRKSRC}/graylog.jar ${STAGEDIR}${DATADIR}
 	${INSTALL_DATA} ${WRKSRC}/graylog.conf.example \
