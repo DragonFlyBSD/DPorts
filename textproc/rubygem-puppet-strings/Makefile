@@ -1,5 +1,5 @@
 PORTNAME=	puppet-strings
-PORTVERSION=	2.7.0
+PORTVERSION=	2.8.0
 CATEGORIES=	textproc rubygems
 MASTER_SITES=	RG
 
@@ -14,6 +14,8 @@ RUN_DEPENDS=	rubygem-rgen>=0:devel/rubygem-rgen \
 
 USES=		gem
 USE_RUBY=	yes
+
+NO_ARCH=	yes
 
 OPTIONS_SINGLE=	PUPPET
 OPTIONS_SINGLE_PUPPET=PUPPET5 PUPPET6 PUPPET7
