@@ -30,7 +30,8 @@ x11_PKGNAMESUFFIX=		${_VERSIONSUFFIX}
 x11_BUILD_DEPENDS=	lablgtk2:x11-toolkits/ocaml-lablgtk2 \
 			icotool:graphics/icoutils
 x11_LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
-			libfreetype.so:print/freetype2
+			libfreetype.so:print/freetype2 \
+			libharfbuzz.so:print/harfbuzz
 x11_RUN_DEPENDS=	lablgtk2:x11-toolkits/ocaml-lablgtk2
 x11_CONFLICTS_INSTALL=		unison${_VERSIONSUFFIX}-nox11
 
@@ -59,10 +60,6 @@ USE_GNOME+=		atk cairo gdkpixbuf2 glib20 gtk20 pango
 USES+=			gettext-runtime gnome
 PLIST_SUB+=		X11=""
 .endif
-
-post-patch:
-	@${REINPLACE_CMD} -Ee 's@(\+|/)(lablgtk2)@\1site-lib/\2@' \
-		${WRKSRC}/Makefile.OCaml
 
 post-build:
 	d=$$(mktemp -d) && trap "rm -rf $$d" 0 && ( cd ${WRKSRC} && HOME=$$d ./unison -selftest -ui text -batch )
