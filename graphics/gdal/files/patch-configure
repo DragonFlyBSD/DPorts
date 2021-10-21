@@ -1,8 +1,8 @@
-sed -e 's|-lminizip|-lkmlminizip|; s|IlmImf|OpenEXR|' configure
+% sed -e 's|-lminizip|-lkmlminizip|; s|IlmImf|OpenEXR|' configure
 
---- configure.orig	2021-04-27 09:10:56 UTC
+--- configure.orig	2021-06-28 10:57:58 UTC
 +++ configure
-@@ -36668,9 +36668,9 @@ $as_echo "$LIBKML_VERSION" >&6; }
+@@ -36537,9 +36537,9 @@ $as_echo "$LIBKML_VERSION" >&6; }
              libkml_include_dir2="$libkml_prefix/include/kml"
              libkml_include_dir3="$libkml_prefix/include/kml/third_party/boost_1_34_1"
              if test "$libkml_prefix" = "/usr"; then
@@ -14,7 +14,7 @@ sed -e 's|-lminizip|-lkmlminizip|; s|IlmImf|OpenEXR|' configure
              fi
              run_libkml_test="yes"
          elif test "$libkml_requested" = "yes"; then
-@@ -42248,13 +42248,13 @@ fi
+@@ -42246,13 +42246,13 @@ fi
      # Test that the package found is for the right architecture
      saved_LIBS="$LIBS"
      LIBS="$EXR_LIBS"
@@ -32,7 +32,7 @@ sed -e 's|-lminizip|-lkmlminizip|; s|IlmImf|OpenEXR|' configure
  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  
-@@ -42274,17 +42274,17 @@ return ImfTiledInputReadTile ();
+@@ -42272,17 +42272,17 @@ return ImfTiledInputReadTile ();
  }
  _ACEOF
  if ac_fn_c_try_link "$LINENO"; then :
