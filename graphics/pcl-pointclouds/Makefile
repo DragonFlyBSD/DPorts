@@ -1,7 +1,6 @@
 PORTNAME=	pcl
 DISTVERSIONPREFIX=	${PORTNAME}-
-DISTVERSION=	1.11.1
-PORTREVISION=	2
+DISTVERSION=	1.12.0
 CATEGORIES=	graphics math
 PKGNAMESUFFIX=	-pointclouds
 
@@ -11,7 +10,7 @@ COMMENT=	Point Cloud Library
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-BROKEN_i386=	undefined reference to `__atomic_load'
+BROKEN_i386=		undefined reference to `__atomic_load'
 NOT_FOR_ARCHS=		armv6 armv7
 NOT_FOR_ARCHS_REASON=	common/include/pcl/pcl_macros.h:420:4: error: aligned_malloc not supported on your platform
 
