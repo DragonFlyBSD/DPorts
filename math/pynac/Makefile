@@ -2,7 +2,7 @@
 
 PORTNAME=	pynac
 PORTVERSION=	0.7.27
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	math python
 MASTER_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/archive/
 
@@ -32,11 +32,5 @@ GNU_CONFIGURE=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTNAME}-${PORTVERSION}
 USE_LDCONFIG=	yes
 TEST_TARGET=	check
-
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MGIAC}
-BROKEN_FreeBSD_11=	libgiac is broken (undefined reference to `__divmodti4@GCC_7.0.0')
-.endif
 
 .include <bsd.port.mk>
