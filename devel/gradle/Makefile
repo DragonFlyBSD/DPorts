@@ -1,7 +1,7 @@
 # Created by: Gasol Wu <gasol.wu@gmail.com>
 
 PORTNAME=	gradle
-PORTVERSION=	7.1
+PORTVERSION=	7.2
 CATEGORIES=	devel java
 MASTER_SITES=	https://downloads.gradle.org/distributions/
 EXTRACT_SUFX=	-bin.zip
@@ -13,7 +13,7 @@ LICENSE=	APACHE20 BSD3CLAUSE CDDL EPL LGPL21+ MIT MPL20
 LICENSE_COMB=	multi
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		zip
+USES=		cpe zip
 USE_JAVA=	yes
 NO_ARCH=	yes
 NO_BUILD=	yes
