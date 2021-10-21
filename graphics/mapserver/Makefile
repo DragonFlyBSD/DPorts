@@ -1,8 +1,7 @@
 # Created by: Douglas K. Rand <rand@meridian-enviro.com>
 
 PORTNAME=		mapserver
-PORTVERSION=		7.6.2
-PORTREVISION=	1
+PORTVERSION=		7.6.4
 CATEGORIES=		graphics www geography
 MASTER_SITES=		https://download.osgeo.org/mapserver/
 
@@ -20,7 +19,7 @@ LIB_DEPENDS=		libgd.so:graphics/gd \
 
 USES=			compiler:c++11-lang cpe cmake gnome jpeg \
 			localbase:ldflags
-CPE_VENDOR=		umn
+CPE_VENDOR=		osgeo
 LDFLAGS+=		-pthread
 CMAKE_ARGS+=		-DCMAKE_PREFIX_PATH=${LOCALBASE} \
 			-DCMAKE_INSTALL_PREFIX=${PREFIX} \
