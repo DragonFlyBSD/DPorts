@@ -1,0 +1,11 @@
+@@ -109,10 +109,6 @@
+ 
+ .include <bsd.port.options.mk>
+ 
+-.if ${FORTRAN_DEFAULT} == gfortran && ${GCC_DEFAULT} >= 10
+-FCFLAGS+=	-fallow-argument-mismatch
+-.endif
+-
+ post-patch:
+ 	@${REINPLACE_CMD} -e 's|$$(libdir)/pkgconfig|${LOCALBASE}/libdata/pkgconfig|g' \
+ 		${WRKSRC}/ompi/tools/wrappers/Makefile.am \
