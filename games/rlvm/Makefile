@@ -1,8 +1,8 @@
 PORTNAME=	rlvm
 DISTVERSIONPREFIX=	release-
-DISTVERSION=	0.14-75
-DISTVERSIONSUFFIX=	-g975e740c
-PORTREVISION=	3
+DISTVERSION=	0.14-77
+DISTVERSIONSUFFIX=	-gfabf134a
+PORTREVISION=	1
 CATEGORIES=	games
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -11,7 +11,6 @@ COMMENT=	RealLive virtual machine clone
 LICENSE=	GPLv2 GPLv3 MIT
 LICENSE_COMB=	multi
 
-BROKEN_FreeBSD_11_powerpc64=	fails to link on powerpc64 elfv1: gcn_platform.cc: undefined reference to gcn::Exception::Exception
 BROKEN_FreeBSD_12_powerpc64=	fails to link on powerpc64 elfv1: gcn_platform.cc: undefined reference to gcn::Exception::Exception
 
 BUILD_DEPENDS=	boost-libs>0:devel/boost-libs \
@@ -35,11 +34,6 @@ LDFLAGS+=	-Wl,--as-needed # avoid overlinking (gtk deps)
 MAKE_ARGS=	VERBOSE=1
 INSTALLS_ICONS=	yes
 PORTDOCS=	AUTHORS.TXT NEWS.TXT README.md STATUS.TXT notes
-
-.if exists(/usr/bin/ld.lld) && ${/usr/bin/ld:L:tA} != /usr/bin/ld.lld
-# undefined reference to symbol `inflateEnd@@ZLIB_1.2.4.0' (try adding -lz)
-LDFLAGS+=	-fuse-ld=lld
-.endif
 
 OPTIONS_DEFINE=	DEBUG DOCS NLS TEST
 OPTIONS_DEFAULT=MONA
