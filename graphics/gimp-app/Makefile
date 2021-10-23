@@ -1,12 +1,12 @@
 # Created by: erich@FreeBSD.org
 
-PORTNAME?=	gimp-app
-PORTVERSION=	2.10.24
-PORTREVISION=	7
+PORTNAME?=	gimp
+PORTVERSION=	2.10.28
 PORTEPOCH?=	1
 CATEGORIES?=	graphics gnome
 MASTER_SITES=	GIMP/gimp/v${PORTVERSION:R}
-DISTNAME=	gimp-${PORTVERSION}
+PKGNAMESUFFIX=	-app
+#DISTNAME=	gimp-${PORTVERSION}
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNU Image Manipulation Program
@@ -73,8 +73,8 @@ CONFIGURE_ARGS?=--with-html-dir=${PREFIX}/share/doc/gimp \
 		--enable-default-binary
 CONFIGURE_ENV=	GIMP_THREAD_LIBS=-lpthread
 LIBS+=		-lexecinfo -lm
+CPE_VENDOR=	gimp
 CPE_PRODUCT=	gimp
-CPE_VENDOR=	gnu
 
 SHEBANG_FILES=	plug-ins/pygimp/plug-ins/*.py
 
@@ -118,7 +118,8 @@ LIBMNG_LIB_DEPENDS=	libmng.so:graphics/libmng
 LIBMNG_CONFIGURE_WITH=	libmng
 
 OPENEXR_CONFIGURE_WITH=	openexr
-OPENEXR_LIB_DEPENDS=	libOpenEXR.so:graphics/openexr
+OPENEXR_LIB_DEPENDS=	libImath.so:math/Imath \
+			libOpenEXR.so:graphics/openexr
 
 OPENJPEG_DESC=		Enhanced JPEG (jpeg2000) graphics support
 OPENJPEG_LIB_DEPENDS=	libopenjp2.so:graphics/openjpeg
