@@ -3,7 +3,7 @@
 PORTNAME=	mpv
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.33.1
-PORTREVISION=	4
+PORTREVISION=	8
 PORTEPOCH=	1
 CATEGORIES=	multimedia audio
 MASTER_SITES=	https://waf.io/:waf
@@ -18,8 +18,10 @@ PATCHFILES+=	3f006eced47b.patch:-p1 # required for #7268
 PATCHFILES+=	dbf0fd7d60fa.patch:-p1 # https://github.com/mpv-player/mpv/pull/7268
 PATCHFILES+=	dbbf4a415de7.patch:-p1 # https://github.com/mpv-player/mpv/pull/7268
 PATCHFILES+=	03b9f8e32362.patch:-p1 # https://github.com/mpv-player/mpv/issues/8913
+PATCHFILES+=	747b1520012e.patch:-p1 # https://github.com/mpv-player/mpv/pull/9033
 PATCHFILES+=	968faef86723.patch:-p1 # libplacebo 3.104
 PATCHFILES+=	7c4465cefb27.patch:-p1 # libplacebo 3.104
+PATCHFILES+=	cc4ada655aae.patch:-p1 # https://github.com/mpv-player/mpv/pull/9209
 
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	Free and open-source general-purpose video player
@@ -31,7 +33,7 @@ BUILD_DEPENDS=	ffmpeg>=4.0.2,1:multimedia/ffmpeg
 LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg \
 		libass.so:multimedia/libass
 
-USES=		compiler:c11 desktop-file-utils iconv jpeg localbase:ldflags \
+USES=		compiler:c11 cpe desktop-file-utils iconv jpeg localbase:ldflags \
 		pkgconfig python:build tar:bz2 waf
 USE_LDCONFIG=	yes
 
