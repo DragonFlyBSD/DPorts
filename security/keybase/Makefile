@@ -1,5 +1,5 @@
 PORTNAME=	keybase
-PORTVERSION=	5.6.1
+PORTVERSION=	5.7.1
 DISTVERSIONPREFIX=	v
 MASTER_SITES=	https://github.com/keybase/client/releases/download/v${PORTVERSION}/
 CATEGORIES=	security
@@ -10,7 +10,7 @@ COMMENT=	Keybase.io client and Keybase Filesystem (KBFS)
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/../LICENSE
 
-USES=		go tar:xz
+USES=		cpe go tar:xz
 
 GO_BUILDFLAGS=	-tags production
 GO_PKGNAME=	github.com/keybase/client/go
