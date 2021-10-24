@@ -2,7 +2,6 @@
 
 PORTNAME=	mesa-dri
 PORTVERSION=	${MESAVERSION}
-PORTREVISION=	2
 CATEGORIES=	graphics
 
 COMMENT=	OpenGL hardware acceleration drivers for DRI2+
@@ -29,18 +28,18 @@ ZSTD_MESON_ENABLED=	zstd
 .include <bsd.port.options.mk>
 .include "${.CURDIR:H:H}/graphics/mesa-dri/Makefile.common"
 
-ALL_DRI_DRIVERS=	I915 I965 R100 R200 SWRAST
+ALL_DRI_DRIVERS=	I915 I965 R100 R200
 ALL_GALLIUM_DRIVERS=	IRIS R300 R600 RADEONSI SVGA SWRAST
 ALL_VULKAN_DRIVERS=	INTEL AMD
 
-.if ${ARCH} == aarch64 || ${ARCH} == x86_64 || ${ARCH} == i386 || ${ARCH} == powerpc64
 GALLIUM_DRIVERS+=	SWRAST	# llvmpipe
-.elif ${ARCH:Marm*} || ${ARCH:Mmips*} || ${ARCH:Mpowerpc*} || ${ARCH} == riscv64
-DRI_DRIVERS+=		SWRAST # Mesa Classic swrast
+
+.if ${ARCH:Marm*}
+DRI_DRIVERS+=	R100
 .endif
 
 .if ${ARCH} == aarch64 || ${ARCH} == x86_64 || ${ARCH} == i386 \
- || ${ARCH} == powerpc || ${ARCH} == powerpc64
+ || ${ARCH:Mpowerpc*}
 DRI_DRIVERS+=		R100 R200
 GALLIUM_DRIVERS+=	R300 R600 RADEONSI
 VULKAN_DRIVERS+=	AMD
@@ -72,7 +71,7 @@ MESA_PLATFORMS+=	wayland
 # gallium drivers are installed separately in graphics/mesa-gallium port
 .if ${OPSYS} == DragonFly
 OPTIONS_EXCLUDE:=	VAAPI VDPAU
-DRI_DRIVERS:=		I915 I965 R100 R200 SWRAST
+DRI_DRIVERS:=		I915 I965 R100 R200
 GALLIUM_DRIVERS:=
 VULKAN_DRIVERS:=	# requires render nodes on INTEL # AMD vulkan driver requires llvm
 MESON_ARGS+=		-Dgallium-xvmc=disabled -Dgallium-xa=disabled -Dgallium-va=disabled -Dgallium-vdpau=disabled
@@ -85,11 +84,13 @@ MESON_ARGS+=	-Ddri-drivers="${DRI_DRIVERS:ts,:tl}" \
 
 # Disable some options
 MESON_ARGS+=	-Dgallium-xa=disabled \
+		-Dgallium-vdpau=disabled \
+		-Dgallium-va=disabled \
 		-Dgles1=disabled \
 		-Dgles2=disabled \
 		-Dglx=disabled \
 		-Degl=disabled \
-		-Dosmesa=none \
+		-Dosmesa=false \
 		-Dtools=""
 
 .for _d in ${ALL_DRI_DRIVERS}
