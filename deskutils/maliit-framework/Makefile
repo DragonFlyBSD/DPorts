@@ -1,5 +1,5 @@
 PORTNAME=	framework
-DISTVERSION=	2.0.0
+DISTVERSION=	2.1.1
 CATEGORIES=	deskutils kde
 PKGNAMEPREFIX=	maliit-
 
@@ -23,5 +23,7 @@ CMAKE_ON=	enable-dbus-activation \
 		enable-wayland-gtk
 CMAKE_OFF=	enable-tests \
 		enable-docs
+
+BINARY_ALIAS=	qtwaylandscanner=${QT_BINDIR}/qtwaylandscanner
 
 .include <bsd.port.mk>
