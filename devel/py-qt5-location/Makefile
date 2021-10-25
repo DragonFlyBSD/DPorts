@@ -1,5 +1,5 @@
 PORTNAME=	location
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	devel python
 
 MAINTAINER=	kde@FreeBSD.org
