@@ -1,6 +1,5 @@
 PORTNAME=	qscintilla2
 PORTVERSION=	${QSCI2_VERSION}
-PORTREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITES_QSCI2}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}qt5-
@@ -30,7 +29,7 @@ post-extract:
 	${CP} ${WRKSRC}/pyproject-qt5.toml ${WRKSRC}/pyproject.toml
 
 do-build:
-	(cd ${WRKSRC} ; sip-build-${PYTHON_VER}  --verbose --no-make --build-dir build ; ${MAKE} -C ./build )
+	(cd ${WRKSRC} ; sip-build-${PYTHON_VER} --qmake ${QMAKE} --verbose --no-make --build-dir build ; ${MAKE} -C ./build )
 
 do-install:
 	(cd ${WRKSRC} ; ${MAKE} -C ./build install INSTALL_ROOT=${STAGEDIR} )
