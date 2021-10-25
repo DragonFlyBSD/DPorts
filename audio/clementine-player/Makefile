@@ -2,7 +2,7 @@
 
 PORTNAME=	clementine
 DISTVERSION=	1.4.0
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	audio
 PKGNAMESUFFIX=	-player
 
@@ -23,6 +23,7 @@ LIB_DEPENDS=	libtag.so:audio/taglib \
 
 USES=		cmake \
 		compiler:c++11-lib \
+		cpe \
 		desktop-file-utils \
 		gettext-tools \
 		pkgconfig \
@@ -40,6 +41,7 @@ GH_ACCOUNT=	clementine-player
 GH_PROJECT=	Clementine
 GH_TAGNAME=     1.4.0rc1
 
+CPE_VENDOR=	clementine-player
 
 USE_GL=		gl glew glu
 USE_XORG=	x11
