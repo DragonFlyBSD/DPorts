@@ -1,5 +1,5 @@
 PORTNAME=	printsupport
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	print python
 
 MAINTAINER=	kde@FreeBSD.org
