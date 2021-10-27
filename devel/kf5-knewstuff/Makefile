@@ -1,15 +1,20 @@
 PORTNAME=	knewstuff
 DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
+PORTREVISION=	1
 CATEGORIES=	devel kde kde-frameworks
+
+PATCH_SITES=	https://invent.kde.org/frameworks/knewstuff/-/commit/
+PATCHFILES=	d09ba1917cb7e035a9aac6c27c86fc4df5da3194.diff:-p1
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KF5 library for downloading application assets from the network
 
 USES=		cmake compiler:c++11-lib gettext kde:5 qt:5 tar:xz
 USE_KDE=	archive attica5 auth codecs completion config \
-		configwidgets coreaddons ecm i18n iconthemes itemviews \
+		configwidgets coreaddons i18n iconthemes itemviews \
 		jobwidgets kio kirigami2 package service sonnet textwidgets \
-		widgetsaddons windowsystem xmlgui
+		widgetsaddons windowsystem xmlgui \
+		ecm_build
 USE_QT=		concurrent core dbus declarative gui network widgets xml \
 		buildtools_build qmake_build
 
