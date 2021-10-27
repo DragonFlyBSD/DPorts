@@ -3,6 +3,7 @@
 PORTNAME=	krill
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.9.1
+PORTREVISION=	2
 CATEGORIES=	net
 
 MAINTAINER=	jaap@NLnetLabs.nl
@@ -17,6 +18,8 @@ ONLY_FOR_ARCHS_REASON=	ring crate not ported to other architectures
 USES=		cargo ssl
 USE_GITHUB=	yes
 GH_ACCOUNT=	NLnetLabs
+
+.include <bsd.port.options.mk>
 
 USE_RC_SUBR=	${PORTNAME}
 
