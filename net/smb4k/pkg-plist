@@ -1,8 +1,6 @@
 bin/smb4k
 lib/libexec/kauth/mounthelper
 lib/libsmb4kcore.so
-lib/libsmb4kcore.so.6
-lib/libsmb4kcore.so.6.0.0
 %%QT_PLUGINDIR%%/smb4kconfigdialog.so
 %%QT_QMLDIR%%/org/kde/smb4k/smb4kqmlplugin/libsmb4kqmlplugin.so
 %%QT_QMLDIR%%/org/kde/smb4k/smb4kqmlplugin/qmldir
@@ -82,7 +80,6 @@ share/kconf_update/userinterface3.sh
 share/kconf_update/userinterface4.sh
 share/kconf_update/userinterface5.sh
 share/knotifications5/smb4k.notifyrc
-share/kservices5/plasma-applet-org.kde.smb4kqml.desktop
 share/kxmlgui5/smb4k/smb4k_shell.rc
 share/metainfo/org.kde.smb4k.appdata.xml
 share/metainfo/org.kde.smb4kqml.appdata.xml
