@@ -3,6 +3,8 @@ include/KF5/KConfigWidgets/KCModule
 include/KF5/KConfigWidgets/KCodecAction
 include/KF5/KConfigWidgets/KColorScheme
 include/KF5/KConfigWidgets/KColorSchemeManager
+include/KF5/KConfigWidgets/KColorSchemeModel
+include/KF5/KConfigWidgets/KCommandBar
 include/KF5/KConfigWidgets/KConfigDialog
 include/KF5/KConfigWidgets/KConfigDialogManager
 include/KF5/KConfigWidgets/KConfigViewStateSaver
@@ -19,6 +21,8 @@ include/KF5/KConfigWidgets/kcmodule.h
 include/KF5/KConfigWidgets/kcodecaction.h
 include/KF5/KConfigWidgets/kcolorscheme.h
 include/KF5/KConfigWidgets/kcolorschememanager.h
+include/KF5/KConfigWidgets/kcolorschememodel.h
+include/KF5/KConfigWidgets/kcommandbar.h
 include/KF5/KConfigWidgets/kconfigdialog.h
 include/KF5/KConfigWidgets/kconfigdialogmanager.h
 include/KF5/KConfigWidgets/kconfigviewstatesaver.h
@@ -177,6 +181,7 @@ share/locale/mr/LC_MESSAGES/kconfigwidgets5.mo
 share/locale/mr/kf5_entry.desktop
 share/locale/ms/LC_MESSAGES/kconfigwidgets5.mo
 share/locale/ms/kf5_entry.desktop
+share/locale/my/kf5_entry.desktop
 share/locale/nb/LC_MESSAGES/kconfigwidgets5.mo
 share/locale/nb/kf5_entry.desktop
 share/locale/nds/LC_MESSAGES/kconfigwidgets5.mo
