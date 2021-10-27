@@ -1,12 +1,12 @@
 PORTNAME=	okular
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
+PORTREVISION=	1
 CATEGORIES=	graphics kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE universal document viewer
 
 LICENSE=	GPLv2
-LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	markdown:textproc/discount
 RUN_DEPENDS=	markdown:textproc/discount
@@ -21,17 +21,19 @@ LIB_DEPENDS=	libchm.so:misc/chmlib \
 		libtiff.so:graphics/tiff \
 		libzip.so:archivers/libzip
 
-USES=		cmake compiler:c++11-lib desktop-file-utils \
+USES=		cmake compiler:c++11-lib cpe desktop-file-utils \
 		gettext jpeg kde:5 pkgconfig qca qt:5 tar:xz
 USE_KDE=	activities archive auth bookmarks codecs completion config \
-		configwidgets coreaddons crash dbusaddons ecm emoticons i18n \
+		configwidgets coreaddons crash dbusaddons emoticons i18n \
 		iconthemes init itemmodels itemviews jobwidgets js \
 		kdelibs4support khtml kio libkexiv2 parts pty \
 		service solid sonnet textwidgets threadweaver wallet \
-		widgetsaddons windowsystem xmlgui
+		widgetsaddons windowsystem xmlgui \
+		ecm_build
 USE_QT=		concurrent core dbus declarative gui network phonon4 printsupport speech \
 		svg widgets xml \
 		buildtools_build qmake_build
+CPE_VENDOR=	kde
 
 OPTIONS_DEFINE=	DOCS PURPOSE
 OPTIONS_DEFAULT=	PURPOSE
