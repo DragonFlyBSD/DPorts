@@ -1,7 +1,6 @@
-# TODO: ensure only ${PYTON_CMD} is pixked again
-
 PORTNAME=	cantor
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
+PORTREVISION=	1
 CATEGORIES=	math kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -17,14 +16,17 @@ BUILD_DEPENDS=	${LOCALBASE}/share/xsl/docbook/html/docbook.xsl:textproc/docbook-
 		docbook-xml>0:textproc/docbook-xml
 
 USES=		cmake compiler:c++11-lang desktop-file-utils gettext kde:5 \
-		pkgconfig python:3.4+ qt:5 tar:xz
+		pkgconfig python:3.4+ qt:5 shared-mime-info tar:xz
 USE_KDE=	attica auth archive bookmarks codecs completion config \
-		configwidgets coreaddons crash ecm emoticons i18n iconthemes \
+		configwidgets coreaddons crash emoticons i18n iconthemes \
 		itemmodels itemviews init jobwidgets kdelibs4support kio \
 		newstuff parts pty service solid sonnet syntaxhighlighting \
-		texteditor textwidgets widgetsaddons xmlgui
-USE_QT=		concurrent core dbus gui network printsupport svg widgets xml xmlpatterns \
-		buildtools_build qmake_build
+		texteditor textwidgets widgetsaddons windowsystem xmlgui \
+		ecm_build
+USE_QT=		concurrent core dbus declarative gui help location network \
+		printsupport sql svg webchannel webengine \
+		widgets xml xmlpatterns \
+		buildtools_build qmake_build testlib_build
 USE_LDCONFIG=	yes
 
 OPTIONS_DEFINE=	LUAJIT MAXIMA OCTAVE R SAGE SCILAB DOCS
@@ -52,7 +54,7 @@ SAGE_RUN_DEPENDS=	sage:math/sage
 SCILAB_DESC=	Install Scilab
 SCILAB_RUN_DEPENDS=	scilab:math/scilab
 
-# Disable python2 binding (should probably be an option PYTHON2, PYTHON3)
+# Disable python2 binding
 CMAKE_ON=	CMAKE_DISABLE_FIND_PACKAGE_PythonLibs
 
 post-patch:
