@@ -2,8 +2,7 @@
 
 PORTNAME=	openshadinglanguage
 DISTVERSIONPREFIX=	Release-
-DISTVERSION=	1.11.13.0
-PORTREVISION=	2
+DISTVERSION=	1.11.15.0
 CATEGORIES=	graphics devel
 
 MAINTAINER=	FreeBSD@Shaneware.biz
@@ -28,11 +27,6 @@ USES=		bison cmake compiler:c++14-lang ncurses
 USE_GITHUB=	yes
 GH_ACCOUNT=	imageworks
 GH_PROJECT=	OpenShadingLanguage
-
-# Use LLVM linker where available
-.if exists(/usr/bin/ld.lld) && (${/usr/bin/ld:L:tA} != /usr/bin/ld.lld)
-LDFLAGS+=	-fuse-ld=lld
-.endif
 
 CMAKE_ON=	ENABLERTTI OSL_BUILD_TESTS USE_LLVM_BITCODE USE_LIBCPLUSPLUS
 CMAKE_OFF=	USE_BOOST_WAVE
