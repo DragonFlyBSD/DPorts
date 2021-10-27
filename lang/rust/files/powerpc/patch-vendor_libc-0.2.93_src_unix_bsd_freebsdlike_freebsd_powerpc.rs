@@ -1,10 +1,10 @@
---- /dev/null
-+++ vendor/libc/src/unix/bsd/freebsdlike/freebsd/powerpc.rs
+--- vendor/libc-0.2.93/src/unix/bsd/freebsdlike/freebsd/powerpc.rs.orig	2021-06-23 22:40:24 UTC
++++ vendor/libc-0.2.93/src/unix/bsd/freebsdlike/freebsd/powerpc.rs
 @@ -0,0 +1,47 @@
 +pub type c_char = u8;
 +pub type c_long = i32;
 +pub type c_ulong = u32;
-+pub type wchar_t = u32;
++pub type wchar_t = i32;
 +pub type time_t = i64;
 +pub type suseconds_t = i32;
 +pub type register_t = i32;
@@ -32,7 +32,6 @@
 +        pub st_lspare: i32,
 +        pub st_birthtime: ::time_t,
 +        pub st_birthtime_nsec: ::c_long,
-+        __unused: [u8; 8],
 +    }
 +}
 +
@@ -46,5 +45,6 @@
 +        pub const _ALIGNBYTES: usize = 4 - 1;
 +    }
 +}
++
 +pub const MAP_32BIT: ::c_int = 0x00080000;
 +pub const MINSIGSTKSZ: ::size_t = 2048; // 512 * 4
