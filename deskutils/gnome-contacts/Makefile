@@ -1,10 +1,9 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 
 PORTNAME=	gnome-contacts
-PORTVERSION=	3.38.1
-PORTREVISION=	2
+PORTVERSION=	41.0
 CATEGORIES=	deskutils gnome
-MASTER_SITES=	GNOME
+MASTER_SITES=	GNOME/sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+)\..*/\1/}
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Contacts manager for gnome
@@ -14,8 +13,8 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	vala>=0.14.0:lang/vala
 LIB_DEPENDS=	libchamplain-0.12.so:graphics/libchamplain \
-		libclutter-gtk-1.0.so:graphics/clutter-gtk3 \
 		libclutter-1.0.so:graphics/clutter \
+		libclutter-gtk-1.0.so:graphics/clutter-gtk3 \
 		libcogl.so:graphics/cogl \
 		libdrm.so:graphics/libdrm \
 		libexpat.so:textproc/expat2 \
@@ -24,13 +23,13 @@ LIB_DEPENDS=	libchamplain-0.12.so:graphics/libchamplain \
 		libgeocode-glib.so:net/geocode-glib \
 		libgoa-1.0.so:net/gnome-online-accounts \
 		libgstreamer-1.0.so:multimedia/gstreamer1 \
+		libhandy-1.so:x11-toolkits/libhandy \
 		libjson-glib-1.0.so:devel/json-glib \
 		libnotify.so:devel/libnotify \
 		libnspr4.so:devel/nspr \
 		libsecret-1.so:security/libsecret \
 		libsoup-2.4.so:devel/libsoup \
-		libtelepathy-glib.so:net-im/telepathy-glib \
-		libhandy-1.so:x11-toolkits/libhandy
+		libtelepathy-glib.so:net-im/telepathy-glib
 
 PORTSCOUT=	limitw:1,even
 
@@ -43,9 +42,9 @@ USES=		compiler:c11 gettext gl gnome localbase meson perl5 pkgconfig \
 
 GLIB_SCHEMAS=	org.gnome.Contacts.gschema.xml
 
-OPTIONS_SUB=	yes
-OPTIONS_DEFINE=	MANPAGES
-OPTIONS_DEFAULT=MANPAGES
+OPTIONS_SUB=		yes
+OPTIONS_DEFINE=		MANPAGES
+OPTIONS_DEFAULT=	MANPAGES
 
 OPTIONS_DEFINE_i386=	CHEESE
 OPTIONS_DEFINE_x86_64=	CHEESE
@@ -55,8 +54,8 @@ OPTIONS_DEFAULT_x86_64=	CHEESE
 MANPAGES_MESON_TRUE=	with-manpage
 MANPAGES_USE=		GNOME=libxslt:build
 MANPAGES_BUILD_DEPENDS=	docbook-xml>=0:textproc/docbook-xml \
-			docbook-xsl>=0:textproc/docbook-xsl \
-			docbook-xsl-ns>=0:textproc/docbook-xsl-ns
+			docbook-xsl-ns>=0:textproc/docbook-xsl-ns \
+			docbook-xsl>=0:textproc/docbook-xsl
 
 CHEESE_DESC=		Cheese webcam support
 CHEESE_MESON_YES=	with-cheese
