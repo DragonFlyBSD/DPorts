@@ -1,6 +1,6 @@
 PORTNAME=	obs-studio
 DISTVERSION=	27.0.1
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	multimedia
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -41,7 +41,8 @@ LIB_DEPENDS_powerpc=	libluajit-5.1.so:lang/luajit
 LIB_DEPENDS_powerpc64=	libluajit-5.1.so:lang/luajit-openresty
 LIB_DEPENDS_powerpc64le=	libluajit-5.1.so:lang/luajit-openresty
 
-USES=		cmake gl gnome lua pkgconfig python:3.4+ qt:5 xorg
+USES=		cmake compiler:c++17-lang gl gnome lua pkgconfig python:3.4+ \
+		qt:5 xorg
 USE_QT=		core gui svg widgets x11extras xml buildtools_build imageformats_run qmake_build
 USE_GNOME=	glib20
 USE_GL=		gl
@@ -56,7 +57,6 @@ GH_TUPLE=	obsproject:obs-browser:f1a61c5:obs_browser/plugins/obs-browser \
 CMAKE_ON=	UNIX_STRUCTURE
 CMAKE_OFF=	ENABLE_PIPEWIRE # beginning with 27.0.1 (PR#4287) the linux-capture plugin optionally requires the piperware library and in this case expects the linux/dma-buf.h header
 CMAKE_ARGS=	-DOBS_VERSION_OVERRIDE:STRING="${PORTVERSION}"
-CFLAGS+=	-D_WITH_GETLINE
 
 LDFLAGS+=	-fPIC # pending https://github.com/obsproject/obs-studio/issues/3436
 
@@ -87,15 +87,6 @@ SNDIO_CMAKE_OFF=	-DDISABLE_SNDIO=TRUE
 
 VST_DESC=		Build VST submodule
 VST_CMAKE_BOOL=		BUILD_VST
-
-.include <bsd.port.options.mk>
-
-.if ${ARCH:Mpowerpc64*}
-CFLAGS+=	-Wno-unused-label
-USES+=		compiler:gcc-c++17-lang
-.else
-USES+=		compiler:c++17-lang
-.endif
 
 .include <bsd.port.pre.mk>
 
