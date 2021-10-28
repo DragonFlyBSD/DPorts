@@ -1,0 +1,20 @@
+--- dbus/wscript.orig	2021-10-23 20:04:58.654787000 +0200
++++ dbus/wscript	2021-10-23 20:05:24.684195000 +0200
+@@ -39,7 +39,7 @@
+     obj = bld(features = ['c', 'cprogram'], idx=17)
+     if bld.env['IS_LINUX']:
+         sysdeps_dbus_include = ['../linux', '../posix']
+-    if bld.env['IS_FREEBSD']:
++    if bld.env['IS_FREEBSD'] or bld.env['IS_DRAGONFLY']:
+         sysdeps_dbus_include = ['../freebsd', '../posix']
+     if bld.env['IS_MACOSX']:
+         sysdeps_dbus_include = ['../macosx', '../posix']
+@@ -74,7 +74,7 @@
+             '../linux/uptime.c',
+         ]
+         obj.use += ['PTHREAD', 'EXECINFO', 'LIBSYSINFO', 'DBUS-1', 'EXPAT']
+-    if bld.env['IS_MACOSX']:
++    if bld.env['IS_MACOSX'] or bld.env['IS_DRAGONFLY']:
+         obj.source += [
+             '../macosx/uptime.c',
+         ]

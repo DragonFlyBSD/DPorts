@@ -1,0 +1,11 @@
+--- tests/wscript.ori	2021-10-23 19:06:32.114168000 +0200
++++ tests/wscript	2021-10-23 19:06:47.533820000 +0200
+@@ -20,6 +20,8 @@
+             prog.includes = ['..','../macosx', '../posix', '../common/jack', '../common']
+         if bld.env['IS_LINUX']:
+             prog.includes = ['..','../linux', '../posix', '../common/jack', '../common']
++        if bld.env['IS_DRAGONFLY']:
++            prog.includes = ['..','../freebsd', '../posix', '../common/jack', '../common']
+         if bld.env['IS_FREEBSD']:
+             prog.includes = ['..','../freebsd', '../posix', '../common/jack', '../common']
+         if bld.env['IS_SUN']:

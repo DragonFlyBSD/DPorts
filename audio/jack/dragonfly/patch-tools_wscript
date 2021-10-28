@@ -1,0 +1,11 @@
+--- tools/wscript.ori	2021-10-23 18:38:48.031758000 +0200
++++ tools/wscript	2021-10-23 18:39:29.940821000 +0200
+@@ -27,7 +27,7 @@
+         os_incdir = ['../linux', '../posix']
+     if bld.env['IS_MACOSX']:
+         os_incdir = ['../macosx', '../posix']
+-    if bld.env['IS_FREEBSD']:
++    if bld.env['IS_FREEBSD'] or bld.env['IS_DRAGONFLY']:
+         os_incdir = ['../freebsd', '../posix']
+     if bld.env['IS_SUN']:
+         os_incdir = ['../solaris', '../posix']

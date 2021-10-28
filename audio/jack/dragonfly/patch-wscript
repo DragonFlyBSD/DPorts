@@ -1,0 +1,64 @@
+--- wscript.ori	2021-10-23 18:24:04.541691000 +0200
++++ wscript	2021-10-23 18:27:06.857575000 +0200
+@@ -187,6 +187,7 @@
+         # ('KEY, 'Human readable name', ['strings', 'to', 'check', 'for'])
+         ('IS_LINUX',   'Linux',   ['gnu0', 'gnukfreebsd', 'linux', 'posix']),
+         ('IS_FREEBSD', 'FreeBSD', ['freebsd']),
++        ('IS_DRAGONFLY', 'DragonFly', ['dragonfly']),
+         ('IS_MACOSX',  'MacOS X', ['darwin']),
+         ('IS_SUN',     'SunOS',   ['sunos']),
+         ('IS_WINDOWS', 'Windows', ['cygwin', 'msys', 'win32'])
+@@ -525,6 +526,9 @@
+     if bld.env['IS_LINUX']:
+         obj.includes += ['linux', 'posix']
+ 
++    if bld.env['IS_DRAGONFLY']:
++        obj.includes += ['freebsd', 'posix']
++
+     if bld.env['IS_FREEBSD']:
+         obj.includes += ['freebsd', 'posix']
+ 
+@@ -555,6 +559,9 @@
+     if bld.env['IS_LINUX']:
+         jackd.use += ['DL', 'M', 'PTHREAD', 'RT', 'STDC++']
+ 
++    if bld.env['IS_DRAGONFLY']:
++        jackd.use += ['M', 'PTHREAD']
++
+     if bld.env['IS_FREEBSD']:
+         jackd.use += ['M', 'PTHREAD']
+ 
+@@ -670,6 +677,11 @@
+         'linux/firewire/JackFFADOMidiSendQueue.cpp'
+     ]
+ 
++    dragonfly_oss_src = [
++        'common/memops.c',
++        'freebsd/oss/JackOSSDriver.cpp'
++    ]
++
+     freebsd_oss_src = [
+         'common/memops.c',
+         'freebsd/oss/JackOSSDriver.cpp'
+@@ -781,6 +793,12 @@
+             use = ['serverlib'], # FIXME: Is this needed?
+             framework = ['AudioUnit', 'CoreMIDI', 'CoreServices', 'Foundation'])
+ 
++    if bld.env['IS_DRAGONFLY']:
++        create_driver_obj(
++            bld,
++            target = 'oss',
++            source = freebsd_oss_src)
++
+     if bld.env['IS_FREEBSD']:
+         create_driver_obj(
+             bld,
+@@ -838,6 +856,8 @@
+     bld.recurse('example-clients')
+     bld.recurse('tools')
+ 
++    if bld.env['IS_DRAGONFLY']:
++        bld.recurse('man')
+     if bld.env['IS_LINUX'] or bld.env['IS_FREEBSD']:
+         bld.recurse('man')
+         bld.recurse('systemd')

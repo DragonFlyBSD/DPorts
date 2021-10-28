@@ -1,0 +1,29 @@
+--- example-clients/wscript.ori	2021-10-23 18:35:30.996205000 +0200
++++ example-clients/wscript	2021-10-23 18:36:24.904990000 +0200
+@@ -31,6 +31,8 @@
+         os_incdir = ['../linux', '../posix']
+     if bld.env['IS_MACOSX']:
+         os_incdir = ['../macosx', '../posix']
++    if bld.env['IS_DRAGONFLY']:
++        os_incdir = ['../freebsd', '../posix']
+     if bld.env['IS_FREEBSD']:
+         os_incdir = ['../freebsd', '../posix']
+     if bld.env['IS_SUN']:
+@@ -62,7 +64,7 @@
+             prog.use += ['RT', 'M']
+         if bld.env['IS_SUN']:
+             prog.use += ['M']
+-        if bld.env['IS_FREEBSD']:
++        if bld.env['IS_FREEBSD'] or bld.env['IS_DRAGONFLY']:
+             prog.use += ['M']
+         if bld.env['IS_WINDOWS'] and bld.env['BUILD_STATIC']:
+             prog.env['LIB_PTHREAD'] = [':libwinpthread.a']
+@@ -80,7 +82,7 @@
+             prog.use += ['SNDFILE']
+         if bld.env['IS_LINUX']:
+             prog.use += ['RT', 'SNDFILE']
+-        if bld.env['IS_FREEBSD']:
++        if bld.env['IS_FREEBSD'] or bld.env['IS_DRAGONFLY']:
+             prog.use += ['SNDFILE']
+         if bld.env['IS_SUN']:
+             prog.use += ['RT', 'SNDFILE']
