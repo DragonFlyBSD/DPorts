@@ -2,6 +2,7 @@
 
 PORTNAME=	seahorse
 PORTVERSION=	40.0
+PORTREVISION=	1
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME/sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+)\..*/\1/}
 DIST_SUBDIR=	gnome
@@ -23,7 +24,7 @@ LIB_DEPENDS=	libgcr-base-3.so:security/gcr \
 		libsoup-2.4.so:devel/libsoup
 RUN_DEPENDS=	gnupg>=2.1.4:security/gnupg
 
-USES=		gettext gnome localbase:ldflags meson pkgconfig \
+USES=		cpe gettext gnome localbase:ldflags meson pkgconfig \
 		python:3.5+,build tar:xz xorg
 USE_CSTD=	c99
 USE_GNOME=	gtk30
@@ -33,6 +34,7 @@ GLIB_SCHEMAS=	org.gnome.seahorse.gschema.xml \
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
 USE_XORG=	sm
+CPE_VENDOR=	gnome
 
 MESON_ARGS=	-Dcheck-compatible-gpg=false \
 		-Dhkp-support=true \
@@ -54,11 +56,5 @@ AVAHI_LIB_DEPENDS=	libavahi-client.so:net/avahi-app
 AVAHI_MESON_TRUE=	key-sharing
 LDAP_USE=		OPENLDAP=yes
 LDAP_MESON_TRUE=	ldap-support
-
-.include <bsd.port.options.mk>
-
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1200000
-LDFLAGS+=	-fuse-ld=lld
-.endif
 
 .include <bsd.port.mk>
