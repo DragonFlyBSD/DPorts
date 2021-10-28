@@ -1,7 +1,7 @@
 PORTNAME=	astroid
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.15
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	mail
 
 MAINTAINER=	mylan.connolly@gmail.com
@@ -29,9 +29,8 @@ USES=		cmake compiler:c11 desktop-file-utils gettext-runtime gnome \
 		pkgconfig
 USE_GITHUB=	yes
 GH_ACCOUNT=	astroidmail
-GH_PROJECT=	astroid
-USE_GNOME=	atk atkmm cairo cairomm gdkpixbuf2 glib20 glibmm gtk30 gtkmm30 introspection libsigc++20 pango pangomm vte3
-
+USE_GNOME=	atk atkmm cairo cairomm gdkpixbuf2 glib20 glibmm gtk30 \
+		gtkmm30 introspection libsigc++20 pango pangomm vte3
 INSTALLS_ICONS=	yes
 
 .include <bsd.port.mk>
