@@ -1,7 +1,6 @@
-# $FreeBSD$
-
 PORTNAME=	foliate
-PORTVERSION=	2.5.0
+PORTVERSION=	2.6.3
+PORTREVISION=	1
 CATEGORIES=	deskutils
 
 MAINTAINER=	fox@FreeBSD.org
@@ -17,6 +16,7 @@ RUN_DEPENDS=	gjs-console:lang/gjs
 
 USES=		desktop-file-utils gnome localbase meson python:3.6+ shebangfix
 USE_GNOME=	cairo gtk30 introspection
+GLIB_SCHEMAS=	com.github.johnfactotum.Foliate.gschema.xml
 
 INSTALLS_ICONS=	yes
 
@@ -30,8 +30,6 @@ NLS_USES=	gettext
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	johnfactotum
-
-GLIB_SCHEMAS=	com.github.johnfactotum.Foliate.gschema.xml
 
 post-patch:
 	@${REINPLACE_CMD} -e 's/@PYTHON_VERSION@/${PYTHON_VERSION}/g' \
