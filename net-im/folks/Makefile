@@ -1,8 +1,7 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 
 PORTNAME=	folks
-PORTVERSION=	0.14.0
-PORTREVISION=	1
+PORTVERSION=	0.15.3
 CATEGORIES=	net-im
 MASTER_SITES=	GNOME
 
@@ -33,9 +32,11 @@ MESON_ARGS=	-Dbluez_backend=false
 
 GLIB_SCHEMAS=	org.freedesktop.folks.gschema.xml
 
-PLIST_SUB=	LIBVER=25 LIBVERLONG=25.21.0
+PLIST_SUB=	LIBVER=26 LIBVERLONG=26.0.0
 
 BINARY_ALIAS=	python3=${PYTHON_CMD}
+
+PORTSCOUT=	limitw:1,even
 
 OPTIONS_SUB=	yes
 OPTIONS_DEFINE=	TRACKER
