@@ -1,9 +1,9 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 
 PORTNAME=	gnome-control-center
-PORTVERSION=	3.38.6
+PORTVERSION=	41.0
 CATEGORIES=	sysutils gnome
-MASTER_SITES=	GNOME
+MASTER_SITES=	GNOME/sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+)\..*/\1/}
 DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -65,11 +65,6 @@ CHEESE_MESON_TRUE=	cheese
 
 WAYLAND_MESON_TRUE=	wayland
 WAYLAND_LIB_DEPENDS=	libgudev-1.0.so:devel/libgudev
-
-# This can be removed after 11.x is no longer supported
-.if exists(/usr/bin/ld.lld) && (${/usr/bin/ld:L:tA} != /usr/bin/ld.lld)
-LDFLAGS+=      -fuse-ld=lld
-.endif
 
 .include <bsd.port.pre.mk>
 
