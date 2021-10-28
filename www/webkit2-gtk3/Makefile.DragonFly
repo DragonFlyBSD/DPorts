@@ -1,2 +1,4 @@
+USE_GCC_VERSION=	11
+
 # zrj: too noisy on gcc80
 CXXFLAGS+=	-Wno-expansion-to-defined -Wno-class-memaccess
