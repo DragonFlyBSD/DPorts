@@ -1,0 +1,2 @@
+# Not sure if we're ready, so leave UDEV out for now
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NUDEV}
