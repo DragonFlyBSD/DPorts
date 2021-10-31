@@ -1,6 +1,6 @@
---- gdb/i386-tdep.h.orig	2018-09-05 07:27:13 UTC
-+++ gdb/i386-tdep.h
-@@ -449,12 +449,11 @@ extern int i386_mpx_enabled (void);
+--- gdb/i386-tdep.h.orig	2021-10-29 19:54:52.227305000 +0200
++++ gdb/i386-tdep.h	2021-10-29 19:56:13.315464000 +0200
+@@ -472,12 +472,11 @@
  /* Functions and variables exported from i386-bsd-tdep.c.  */
  
  extern void i386bsd_init_abi (struct gdbarch_info, struct gdbarch *);
@@ -13,6 +13,6 @@
 -extern int i386fbsd4_sc_reg_offset[];
 -extern int i386fbsd_sc_reg_offset[];
 +extern int i386dfly_sc_reg_offset[];
- extern int i386nbsd_sc_reg_offset[];
  extern int i386obsd_sc_reg_offset[];
  extern int i386bsd_sc_reg_offset[];
+ 
