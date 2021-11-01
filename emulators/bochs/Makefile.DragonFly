@@ -1,3 +1,8 @@
+# When TERM option is selected, we need ncurses from dports.
+TERM_USES+=  ncurses
+
 dfly-patch:
 	${REINPLACE_CMD} -e 's|__FreeBSD__|__DragonFly__|' \
 		${WRKSRC}/iodev/network/eth_socket.cc
+	${REINPLACE_CMD} -e 's|__FreeBSD__|__DragonFly__|' \
+		${WRKSRC}/iodev/serial.h
