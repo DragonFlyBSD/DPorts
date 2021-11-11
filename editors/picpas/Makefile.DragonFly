@@ -1,0 +1,5 @@
+
+# zrj: sed dragonfly, there are few runtime issues
+dfly-patch:
+	${REINPLACE_CMD} -e 's@freebsd@dragonfly@g'	\
+		${WRKSRC}/Source/Globales.pas
