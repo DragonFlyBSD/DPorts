@@ -104,10 +104,6 @@ SLURM_PLIST_FILES=	${MPIDIR}/lib/openmpi/mca_ess_slurm.la \
 
 .include <bsd.port.options.mk>
 
-.if ${FORTRAN_DEFAULT} == gfortran && ${GCC_DEFAULT} >= 10
-FCFLAGS+=	-fallow-argument-mismatch
-.endif
-
 .if ${ARCH} != aarch64 && ${ARCH} != x86_64 && ${ARCH} != i386 && !${ARCH:Mpowerpc*}
 PLIST_SUB+=	NO_MCA_PATCHER_OVERWRITE="@comment "
 .else
