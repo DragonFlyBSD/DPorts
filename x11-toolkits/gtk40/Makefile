@@ -1,6 +1,5 @@
 PORTNAME=	gtk
-PORTVERSION=	4.2.1
-PORTREVISION=	4
+PORTVERSION=	4.4.1
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX=	4
@@ -34,7 +33,7 @@ INSTALLS_ICONS=	yes
 
 BINARY_ALIAS=	python3=${PYTHON_CMD}
 
-LIBVERSION=	0.2404.23
+LIBVERSION=	1.400.1
 PLIST_SUB+=	LIBVERSION=${LIBVERSION}
 
 GLIB_SCHEMAS=	org.gtk.Demo4.gschema.xml \
@@ -43,12 +42,7 @@ GLIB_SCHEMAS=	org.gtk.Demo4.gschema.xml \
 		org.gtk.gtk4.Settings.EmojiChooser.gschema.xml \
 		org.gtk.gtk4.Settings.FileChooser.gschema.xml
 
-.if exists(/usr/bin/ld.lld) && ${/usr/bin/ld:L:tA} != /usr/bin/ld.lld
-# undefined reference to symbol `g_module_symbol' (try adding -lgmodule-2.0)
-LDFLAGS+=	-fuse-ld=lld
-.endif
-
-OPTIONS_DEFINE=	CUPS CLOUDPRINT COLORD DEBUG BROADWAY FFMPEG \
+OPTIONS_DEFINE=	CUPS COLORD DEBUG BROADWAY FFMPEG \
 		GSTREAMER VULKAN WAYLAND X11
 OPTIONS_DEFAULT=CUPS COLORD BROADWAY VULKAN WAYLAND X11
 OPTIONS_SUB=	yes
@@ -61,14 +55,7 @@ COLORD_LIB_DEPENDS=	libcolord.so:graphics/colord
 COLORD_MESON_ENABLED=	colord
 
 CUPS_LIB_DEPENDS=	libcups.so:print/cups
-CUPS_MESON_ENABLED=	cups
-
-CLOUDPRINT_DESC=	Cloud printing support
-CLOUDPRINT_MESON_ENABLED=	cloudprint
-CLOUDPRINT_USE=		gnome=libxml2
-CLOUDPRINT_LIB_DEPENDS=	librest-0.7.so:devel/librest \
-			libsoup-2.4.so:devel/libsoup \
-			libjson-glib-1.0.so:devel/json-glib
+CUPS_MESON_ENABLED=	print-cups
 
 FFMPEG_DESC=		FFmpeg multimedia backend
 FFMPEG_MESON_ENABLED=	media-ffmpeg
