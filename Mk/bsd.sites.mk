@@ -26,7 +26,8 @@ MASTER_SITE_LOCAL+= \
 	http://distcache.FreeBSD.org/local-distfiles/%SUBDIR%/ \
 	http://distcache.us-east.FreeBSD.org/local-distfiles/%SUBDIR%/ \
 	http://distcache.eu.FreeBSD.org/local-distfiles/%SUBDIR%/ \
-	http://distcache.us-west.FreeBSD.org/local-distfiles/%SUBDIR%/
+	http://distcache.us-west.FreeBSD.org/local-distfiles/%SUBDIR%/ \
+	http://avalon.dragonflybsd.org/misc/distfiles/%SUBDIR%/
 
 MASTER_SITE_PORTS_JP+= \
 	ftp://ports.jp.FreeBSD.org/pub/FreeBSD-jp/ports-jp/LOCAL_PORTS/%SUBDIR%/ \
