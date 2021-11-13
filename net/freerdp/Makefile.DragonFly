@@ -1,6 +1,3 @@
-OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NWAYLAND}
-LIB_DEPENDS:=           ${LIB_DEPENDS:Nlibepoll-shim.so\:devel\/libepoll-shim}
-
 post-configure:
 	${REINPLACE_CMD} -e '/MNT_UNION/d' \
 		${WRKSRC}/channels/rdpdr/client/mntent_compat.c
