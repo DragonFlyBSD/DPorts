@@ -31,6 +31,9 @@ _l=		${lang:C/=.*//g}
 ${_l:tu}_DEFAULT=	${lang:C/.*=//g}
 .endfor
 
+# tuxillo: since 2021Q4 we default to openssl again
+SSL_DEFAULT?=  openssl
+
 # Possible values: 2.4
 APACHE_DEFAULT?=	2.4
 # Possible values: 5, 18
