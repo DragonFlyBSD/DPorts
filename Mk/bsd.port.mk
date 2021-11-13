@@ -2511,7 +2511,8 @@ PATCH_SITES_TMP=
 
 # The primary backup site.
 MASTER_SITE_BACKUP?=	\
-	http://distcache.FreeBSD.org/ports-distfiles/${DIST_SUBDIR}/
+	http://distcache.FreeBSD.org/ports-distfiles/${DIST_SUBDIR}/ \
+	http://avalon.dragonflybsd.org/misc/distfiles/${DIST_SUBDIR}/
 MASTER_SITE_BACKUP:=	${MASTER_SITE_BACKUP:S^\${DIST_SUBDIR}/^^}
 
 # If the user has MASTER_SITE_FREEBSD set, go to the FreeBSD repository
