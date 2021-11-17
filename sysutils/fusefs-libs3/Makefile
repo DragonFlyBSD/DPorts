@@ -1,7 +1,7 @@
 # Created by: Stefan Esser
 
 PORTNAME=	fusefs-libs3
-DISTVERSION=	3.10.4
+DISTVERSION=	3.10.5
 CATEGORIES=	sysutils
 MASTER_SITES=	https://github.com/libfuse/libfuse/releases/download/fuse-${DISTVERSION}/
 DISTNAME=	fuse-${DISTVERSION}
@@ -21,6 +21,10 @@ LDFLAGS+=	-L${LOCALBASE}/lib ${ICONV_LIB}
 PLIST_SUB=	VERSION=${PORTVERSION}
 
 .include <bsd.port.pre.mk>
+
+.if ${OPSYS} == "FreeBSD" && ${OSVERSION} < 1400014
+EXTRA_PATCHES=	${FILESDIR}/extra-patch-test_meson.build
+.endif
 
 .if ${CHOSEN_COMPILER_TYPE} == gcc
 post-patch:
