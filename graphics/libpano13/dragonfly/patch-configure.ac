@@ -1,11 +1,11 @@
---- configure.ac.intermediate	2019-05-02 20:44:32 UTC
-+++ configure.ac
-@@ -45,7 +45,7 @@ case "${host_os}" in
- 		;;
- 	esac
+--- configure.ac.orig	2021-11-16 15:35:57.915844000 +0100
++++ configure.ac	2021-11-16 15:36:33.395053000 +0100
+@@ -27,7 +27,7 @@
+     HSYS=unknown
+     HCPU="${host_cpu}"
  	;;
--  *freebsd*|dragonfly)
-+  *freebsd*|*dragonfly*)
+-  linux*|k*bsd*|gnu*)
++  linux*|k*bsd*|gnu*|dragonfly*)
      PANO_WIN32_RESOURCE=
-     HSYS=freebsd
-     HCPU="${target_cpu}"
+     HSYS=linux
+     dnl
