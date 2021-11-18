@@ -1,7 +1,7 @@
 # Created by: stas
 
 PORTNAME=	calibre
-PORTVERSION=	5.22.1
+PORTVERSION=	5.28.0
 CATEGORIES=	deskutils python
 MASTER_SITES=	http://download.calibre-ebook.com/${PORTVERSION}/
 

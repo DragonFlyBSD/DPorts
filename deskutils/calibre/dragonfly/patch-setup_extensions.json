@@ -1,0 +1,11 @@
+--- setup/extensions.json.orig	2021-03-26 03:24:02 UTC
++++ setup/extensions.json
+@@ -193,7 +193,7 @@
+     },
+     {
+         "name": "libusb",
+-        "only": "freebsd",
++        "only": "freebsd dragonflybsd",
+         "sources": "calibre/devices/libusb/libusb.c",
+         "libraries": "usb"
+     },

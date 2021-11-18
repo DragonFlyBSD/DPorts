@@ -5,4 +5,4 @@ PLIST:=		${DFLY_PLIST}
 
 dfly-patch:
 	${CP} -v ${.CURDIR:H}/calibre/pkg-plist ${DFLY_PLIST}
-	${REINPLACE_CMD} -e '/libmtp.so/d' -e '/libusb.so/d' ${DFLY_PLIST}
+	${REINPLACE_CMD} -e '/libmtp.so/d' ${DFLY_PLIST}

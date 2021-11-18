@@ -65,6 +65,7 @@ lib/calibre/calibre/db/errors.py
 lib/calibre/calibre/db/fields.py
 lib/calibre/calibre/db/lazy.py
 lib/calibre/calibre/db/legacy.py
+lib/calibre/calibre/db/listeners.py
 lib/calibre/calibre/db/locking.py
 lib/calibre/calibre/db/restore.py
 lib/calibre/calibre/db/schema_upgrades.py
@@ -173,6 +174,7 @@ lib/calibre/calibre/devices/usbms/cli.py
 lib/calibre/calibre/devices/usbms/device.py
 lib/calibre/calibre/devices/usbms/deviceconfig.py
 lib/calibre/calibre/devices/usbms/driver.py
+lib/calibre/calibre/devices/usbms/hal.py
 lib/calibre/calibre/devices/user_defined/__init__.py
 lib/calibre/calibre/devices/user_defined/driver.py
 lib/calibre/calibre/devices/utils.py
@@ -1928,3 +1930,4 @@ share/icons/hicolor/64x64/mimetypes/gnome-mime-application-x-topaz-ebook.png
 share/icons/hicolor/64x64/mimetypes/gnome-mime-text-lrs.png
 share/icons/hicolor/64x64/mimetypes/text-lrs.png
 share/mime/packages/calibre-mimetypes.xml
+share/zsh/site-functions/_calibre
