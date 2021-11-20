@@ -39,6 +39,11 @@ dfly-patch:
 	@${MKDIR} ${WRKSRC}/third_party/node/dragonfly/node-dragonfly-x64/bin
 	${LN} -sf ${LOCALBASE}/bin/node ${WRKSRC}/third_party/node/dragonfly/node-dragonfly-x64/bin/node
 
+	# Chromium uses an unreleased version of FFmpeg, so configure it
+	${CP} -R \
+                ${WRKSRC}/third_party/ffmpeg/chromium/config/Chrome/linux/ \
+                ${WRKSRC}/third_party/ffmpeg/chromium/config/Chrome/dragonfly
+
 	# Setup buildtools/freebsd
 	@${MKDIR} ${WRKSRC}/buildtools/dragonfly
 	${LN} -sf ${WRKSRC}/buildtools/linux64/clang-format ${WRKSRC}/buildtools/dragonfly
