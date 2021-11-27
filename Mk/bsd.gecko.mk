@@ -119,7 +119,7 @@ MOZCONFIG?=		${WRKSRC}/.mozconfig
 MOZILLA_PLIST_DIRS?=	bin lib share/pixmaps share/applications
 
 # Adjust -C target-cpu if -march/-mcpu is set by bsd.cpu.mk
-.if ${ARCH} == amd64 || ${ARCH} == i386
+.if ${ARCH} == x86_64 || ${ARCH} == i386
 RUSTFLAGS+=	${CFLAGS:M-march=*:S/-march=/-C target-cpu=/}
 .elif ${ARCH:Mpowerpc64*}
 RUSTFLAGS+=	${CFLAGS:M-mcpu=*:S/-mcpu=/-C target-cpu=/:S/power/pwr/}
@@ -320,7 +320,7 @@ MOZ_MAKE_FLAGS+=-j${MAKE_JOBS_NUMBER}
 MOZ_MK_OPTIONS+=MOZ_MAKE_FLAGS="${MOZ_MAKE_FLAGS}"
 .endif
 
-.if ${ARCH} == amd64
+.if ${ARCH} == x86_64
 . if ${USE_MOZILLA:M-nss}
 USE_BINUTILS=	# intel-gcm.s
 CFLAGS+=	-B${LOCALBASE}/bin

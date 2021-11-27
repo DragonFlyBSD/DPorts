@@ -14,14 +14,14 @@ fortran_ARGS=	${FORTRAN_DEFAULT}
 .endif
 
 .if ${fortran_ARGS} == flang
-.if ${ARCH} == amd64
+.if ${ARCH} == x86_64
 BUILD_DEPENDS+=	flang>0:devel/flang
 RUN_DEPENDS+=	flang>0:devel/flang
 F77=		flang
 FC=		flang
 LDFLAGS+=	-L${LOCALBASE}/flang/lib -Wl,--as-needed -lflang -lexecinfo -Wl,--no-as-needed
 .else
-IGNORE=		USES=fortran: flang argument only available for amd64
+IGNORE=		USES=fortran: flang argument only available for x86_64
 .endif
 .elif ${fortran_ARGS} == gfortran
 _GCC_VER=	8

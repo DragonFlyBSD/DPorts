@@ -133,7 +133,7 @@ _USE_QT_ALL=		assistant dbus declarative declarative-test designer doc gui help 
 			scripttools sql sql-mysql sql-odbc sql-pgsql \
 			sql-sqlite2 sql-sqlite3 svg testlib webkit \
 			xml xmlpatterns
-.if ${ARCH} == amd64 || ${ARCH} == i386
+.if ${ARCH} == x86_64 || ${ARCH} == i386
 _USE_QT_ALL+=	sql-ibase
 .endif
 

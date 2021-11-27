@@ -92,7 +92,7 @@ CARGO_ENV+= \
 	RUSTFLAGS="${RUSTFLAGS} ${LDFLAGS:C/.+/-C link-arg=&/}"
 
 # Adjust -C target-cpu if -march/-mcpu is set by bsd.cpu.mk
-.if ${ARCH} == amd64 || ${ARCH} == i386
+.if ${ARCH} == x86_64 || ${ARCH} == i386
 RUSTFLAGS+=	${CFLAGS:M-march=*:S/-march=/-C target-cpu=/}
 .elif ${ARCH:Mpowerpc64*}
 RUSTFLAGS+=	${CFLAGS:M-mcpu=*:S/-mcpu=/-C target-cpu=/:S/power/pwr/}
