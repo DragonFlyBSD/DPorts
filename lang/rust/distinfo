@@ -55,9 +55,9 @@ SHA256 (rust/2021-07-29/rust-std-1.54.0-powerpc64-unknown-freebsd-elfv2.tar.xz) 
 SIZE (rust/2021-07-29/rust-std-1.54.0-powerpc64-unknown-freebsd-elfv2.tar.xz) = 17413108
 SHA256 (rust/2021-07-29/cargo-1.54.0-powerpc64-unknown-freebsd-elfv2.tar.xz) = bdc28cc18eb4118faaa952e89c39d6113bf1d30b8b750bd8bd52f1827a6936cd
 SIZE (rust/2021-07-29/cargo-1.54.0-powerpc64-unknown-freebsd-elfv2.tar.xz) = 4714772
-SHA256 (rust/2021-07-29/rustc-1.54.0-x86_64-unknown-dragonfly.tar.xz) = 70429f8d68e29ed488ec445a993ccfb5b688cde6cbdfe9ce099c468581be3be1
-SIZE (rust/2021-07-29/rustc-1.54.0-x86_64-unknown-dragonfly.tar.xz) = 56932932
-SHA256 (rust/2021-07-29/rust-std-1.54.0-x86_64-unknown-dragonfly.tar.xz) = 96a8f8da13984118fdc4350ed9833640ec1a06ac822d350774f7c60889e3c156
-SIZE (rust/2021-07-29/rust-std-1.54.0-x86_64-unknown-dragonfly.tar.xz) = 19118488
-SHA256 (rust/2021-07-29/cargo-1.54.0-x86_64-unknown-dragonfly.tar.xz) = 66187ca8250608b4d45514c440375b722f0d2a9e045a8fa4f2f13c7d1a82eeef
-SIZE (rust/2021-07-29/cargo-1.54.0-x86_64-unknown-dragonfly.tar.xz) = 5278232
+SHA256 (rust/2021-07-29/rustc-1.54.0-x86_64-unknown-dragonfly.tar.xz) = 75502dfbb6b444d911d8f21e918471b409c6703a81e332a0a9d9822459c532c1
+SIZE (rust/2021-07-29/rustc-1.54.0-x86_64-unknown-dragonfly.tar.xz) = 56842136
+SHA256 (rust/2021-07-29/rust-std-1.54.0-x86_64-unknown-dragonfly.tar.xz) = e01b44d370902c4135368660a2599da4328770cd9536cceed02c85690f0761da
+SIZE (rust/2021-07-29/rust-std-1.54.0-x86_64-unknown-dragonfly.tar.xz) = 19071148
+SHA256 (rust/2021-07-29/cargo-1.54.0-x86_64-unknown-dragonfly.tar.xz) = 630563672e89a66d1662a27c8fda9a1d3ca8bf3159bfba993e584a4590f32725
+SIZE (rust/2021-07-29/cargo-1.54.0-x86_64-unknown-dragonfly.tar.xz) = 5201404
