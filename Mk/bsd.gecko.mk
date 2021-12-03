@@ -102,6 +102,7 @@ MOZ_EXPORT+=	LLVM_OBJDUMP="${LOCALBASE}/bin/llvm-objdump${LLVM_DEFAULT}"
 # Ignore Mk/bsd.default-versions.mk but respect make.conf(5) unless LTO is enabled
 .if !defined(DEFAULT_VERSIONS) || ! ${DEFAULT_VERSIONS:Mllvm*} || ${PORT_OPTIONS:MLTO}
 LLVM_DEFAULT=	12 # chase bundled LLVM in lang/rust for LTO
+LLVM_VERSION=	12.0.1 # keep in sync with devel/wasi-compiler-rt${LLVM_DEFAULT}
 .endif
 # Require newer Clang than what's in base system unless user opted out
 . if ${CC} == cc && ${CXX} == c++ && exists(/usr/lib/libc++.so)
@@ -130,9 +131,12 @@ RUSTFLAGS+=	${CFLAGS:M-mcpu=*:S/-mcpu=/-C target-cpu=/}
 # Standard depends
 _ALL_DEPENDS=	av1 event ffi graphite harfbuzz icu jpeg nspr nss png pixman sqlite vpx webp
 
+# firefox 95 uses a dav1d snapshot > 0.9.2
+.if ${MOZILLA_VER:R:R} < 95
 .if exists(${FILESDIR}/patch-bug1559213)
 av1_LIB_DEPENDS=	libaom.so:multimedia/aom libdav1d.so:multimedia/dav1d
 av1_MOZ_OPTIONS=	--with-system-av1
+.endif
 .endif
 
 event_LIB_DEPENDS=	libevent.so:devel/libevent
