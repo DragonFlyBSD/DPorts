@@ -1,6 +1,3 @@
-
-#BROKEN= needs porting
-
 USES+=	xorg
 USE_XORG+=	x11 xtst
 
@@ -9,4 +6,6 @@ BUILD_DEPENDS:=	${BUILD_DEPENDS:Npulseaudio*}
 
 dfly-patch:
 	${REINPLACE_CMD} -e '/pulse/d' \
+		-e '/WEBRTC_ENABLE_LINUX_PULSE/d' \
+		${WRKSRC}/cmake/libwebrtcbuild.cmake \
 		${WRKSRC}/CMakeLists.txt
