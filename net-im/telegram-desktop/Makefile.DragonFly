@@ -4,7 +4,7 @@ CXXFLAGS +=	-DWITHOUT_PULSE
 
 # gcc8 not enough and I don't think we should be adapting code to gcc8, we should
 # really upgrade our base's gcc
-USE_GCC_VERSION=       9
+USE_GCC_VERSION=       11
 
 # bad MF
 BUILD_DEPENDS:=	${BUILD_DEPENDS:Npulseaudio*}
