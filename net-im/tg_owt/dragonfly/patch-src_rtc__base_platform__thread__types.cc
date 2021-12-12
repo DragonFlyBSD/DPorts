@@ -1,24 +1,31 @@
---- src/rtc_base/platform_thread_types.cc.orig	2021-06-19 22:34:52 UTC
+--- src/rtc_base/platform_thread_types.cc.orig	2021-10-21 06:15:41 UTC
 +++ src/rtc_base/platform_thread_types.cc
-@@ -16,6 +16,8 @@
- 
- #ifdef __FreeBSD__
- #include <sys/thr.h>
-+#endif
-+#if defined(__FreeBSD__) || defined(__DragonFly__)
+@@ -30,6 +30,10 @@ typedef HRESULT(WINAPI* RTC_SetThreadDes
  #include <pthread_np.h>
  #endif
  
-@@ -42,10 +44,8 @@ PlatformThreadId CurrentThreadId() {
- #elif defined(WEBRTC_FUCHSIA)
-   return zx_thread_self();
- #elif defined(WEBRTC_LINUX)
--#if defined(__FreeBSD__)
--  long id;
--  thr_self(&id);
--  return id;
-+#if defined(__FreeBSD__) || defined(__DragonFly__)
-+  return pthread_getthreadid_np();
++#if defined(WEBRTC_DRAGONFLY)
++#include <pthread_np.h>
++#endif
++
+ namespace rtc {
+ 
+ PlatformThreadId CurrentThreadId() {
+@@ -48,6 +52,8 @@ PlatformThreadId CurrentThreadId() {
+   long tid;
+   thr_self(&tid);
+   return tid;
++#elif defined(WEBRTC_DRAGONFLY)
++  return (long)pthread_getthreadid_np();
+ #elif defined(__EMSCRIPTEN__)
+   return static_cast<PlatformThreadId>(pthread_self());
  #else
-   return syscall(__NR_gettid);
- #endif
+@@ -116,7 +122,7 @@ void SetCurrentThreadName(const char* na
+ #pragma warning(pop)
+ #elif defined(WEBRTC_LINUX) || defined(WEBRTC_ANDROID)
+   prctl(PR_SET_NAME, reinterpret_cast<unsigned long>(name));  // NOLINT
+-#elif defined(WEBRTC_FREEBSD)
++#elif defined(WEBRTC_FREEBSD) || defined(WEBRTC_DRAGONFLY)
+   pthread_setname_np(pthread_self(), name);
+ #elif defined(WEBRTC_MAC) || defined(WEBRTC_IOS)
+   pthread_setname_np(name);
