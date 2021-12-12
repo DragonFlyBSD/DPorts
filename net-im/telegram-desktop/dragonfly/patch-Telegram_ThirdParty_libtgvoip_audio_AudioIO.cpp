@@ -1,12 +1,12 @@
---- Telegram/ThirdParty/libtgvoip/audio/AudioIO.cpp.intermediate	2020-04-01 17:33:06 UTC
+--- Telegram/ThirdParty/libtgvoip/audio/AudioIO.cpp.orig	2021-09-17 06:49:49 UTC
 +++ Telegram/ThirdParty/libtgvoip/audio/AudioIO.cpp
 @@ -31,7 +31,8 @@
  #endif
  #include "../os/windows/AudioInputWASAPI.h"
  #include "../os/windows/AudioOutputWASAPI.h"
--#elif defined(__linux__) || defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__gnu_hurd__)
-+#elif defined(__linux__) || defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__gnu_hurd__) || \
-+    defined(__DragonFly__)
+-#elif defined(__linux__) || defined(__FreeBSD__) || defined(__gnu_hurd__)
++#elif defined(__linux__) || defined(__FreeBSD__) || defined(__gnu_hurd__) || \
++  defined(__DragonFly__)
  #ifndef WITHOUT_ALSA
  #include "../os/linux/AudioInputALSA.h"
  #include "../os/linux/AudioOutputALSA.h"
