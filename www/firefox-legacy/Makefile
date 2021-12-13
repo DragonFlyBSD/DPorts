@@ -36,8 +36,6 @@ LIB_DEPENDS=	libevent.so:devel/libevent libffi.so:devel/libffi libexpat.so:textp
 		libicui18n.so:devel/icu libwebp.so:graphics/webp libvpx.so:multimedia/libvpx
 RUN_DEPENDS+=	alsa-plugins>0:audio/alsa-plugins ffmpeg>0:multimedia/ffmpeg
 
-BROKEN=		does not build currently, waiting for zrj
-
 ##USE_GECKO=	gecko
 CPE_PRODUCT=	${PORTNAME}_legacy
 CONFLICTS_INSTALL=	firefox firefox-esr
@@ -168,6 +166,14 @@ post-extract:
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
 		${WRKSRC}/browser/app/nsBrowserApp.cpp
+	${REINPLACE_CMD} -e 's@[[:<:]]CLEANUP[[:>:]]@CLEANUPff@g' \
+		${WRKSRC}/dom/indexedDB/ActorsParent.cpp \
+		${WRKSRC}/dom/indexedDB/IDBCursor.cpp \
+		${WRKSRC}/dom/indexedDB/IDBDatabase.cpp \
+		${WRKSRC}/dom/indexedDB/IDBObjectStore.cpp \
+		${WRKSRC}/dom/indexedDB/IDBTransaction.cpp \
+		${WRKSRC}/dom/indexedDB/IDBTransaction.h \
+		${WRKSRC}/dom/indexedDB/ProfilerHelpers.h
 
 pre-configure:
 	(cd ${WRKSRC} && ${LOCALBASE}/bin/autoconf-2.13)
