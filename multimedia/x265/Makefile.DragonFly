@@ -1,3 +1,6 @@
 USES:=		${USES:Ncmake} cmake:noninja
-# libmd is not needed if internal c++ implementation of md5 is used
-CMAKE_ARGS:=	${CMAKE_ARGS:N-DPLATFORM_LIBS=md}
+
+# just to cleanup build log a bit
+dfly-patch:
+	${REINPLACE_CMD} -e "s,-DARCH_X86_64=1 ,& -w-macro-params-legacy ,g" \
+		${WRKSRC}/cmake/CMakeASM_NASMInformation.cmake
