@@ -1,6 +1,6 @@
-
 PORTNAME=	plasma
 DISTVERSION=	${KDE_PLASMA_VERSION}
+PORTREVISION=	1
 CATEGORIES=	x11 kde
 PKGNAMEPREFIX=	plasma5-
 
@@ -11,14 +11,13 @@ LICENSE=	LGPL20
 
 USES=		kde:5 metaport qt:5
 # remove:
-#   * bluedevil as we do have bluez
-#   * plasma-pa don't depend on plamsa-pa by default
-#   * breeze-kde4 don't pull in qt4 bits
+#   * bluedevil we do not have bluez at all
+#   * plasma-pa no plasma-pa (pulseaudio) by default
 #   * kwrited use is as build/run depends (executable on dragonfly)
-USE_KDE=	${_USE_PLASMA_ALL:Nplasma-pa:Nbreeze-kde4:Nkwrited:Nkwallet-pam}
+USE_KDE=	${_USE_PLASMA_ALL:Nplasma-pa:Nkwrited:Nkwallet-pam}
 
 OPTIONS_DEFINE=	PHONON PULSEAUDIO
-OPTIONS_DEFAULT=	PHONON
+OPTIONS_DEFAULT=	${OPTIONS_DEFINE}
 
 # Different from PHONON, because this is about the output plugins
 PHONON_DESC=	Include phonon-gstreamer, for sound output
