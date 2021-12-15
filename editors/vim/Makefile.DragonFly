@@ -3,7 +3,7 @@ PORT_OPTIONS+= CSCOPE EXUBERANT_CTAGS
 .endif
 
 # zrj: Disable python by default
-OPTIONS_DEFAULT:=	${OPTIONS_DEFAULTL:NPTYTHON}
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NPTYTHON}
 
 # zrj: read src/osdef.sh, this is to prevent once full priv of ncurses happens:
 # osdef0.c:10:44: fatal error: termcap.h: No such file or directory
