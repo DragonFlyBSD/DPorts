@@ -116,7 +116,6 @@ bin/split-file-devel
 %%MLIR%%bin/mlir-reduce-devel
 %%MLIR%%bin/mlir-tblgen-devel
 %%MLIR%%bin/mlir-translate-devel
-%%OPENMP%%bin/llvm-omp-device-info-devel
 %%LIT%%bin/FileCheck-devel
 %%LIT%%llvm-devel/bin/FileCheck
 %%LIT%%bin/lit-devel
@@ -230,7 +229,6 @@ llvm-devel/bin/llvm-mt
 llvm-devel/bin/llvm-nm
 llvm-devel/bin/llvm-objcopy
 llvm-devel/bin/llvm-objdump
-%%OPENMP%%llvm-devel/bin/llvm-omp-device-info
 llvm-devel/bin/llvm-opt-report
 llvm-devel/bin/llvm-otool
 llvm-devel/bin/llvm-pdbutil
@@ -5113,8 +5111,6 @@ llvm-devel/lib/libRemarks.so.%%LLVM_MAJOR%%git
 %%MLIR%%llvm-devel/lib/libmlir_runner_utils.so
 %%MLIR%%llvm-devel/lib/libmlir_runner_utils.so.%%LLVM_MAJOR%%git
 %%OPENMP%%llvm-devel/lib/libomp.so
-%%OPENMP%%llvm-devel/lib/libomptarget.rtl.amdgpu.so
-%%OPENMP%%llvm-devel/lib/libomptarget.so
 %%CLANG%%llvm-devel/lib/libscanbuild/__init__.py
 %%CLANG%%llvm-devel/lib/libscanbuild/analyze.py
 %%CLANG%%llvm-devel/lib/libscanbuild/arguments.py
