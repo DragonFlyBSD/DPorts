@@ -9,6 +9,11 @@ MOZ_OPTIONS+=	--with-clang-path=${LOCALBASE}/llvm${LLVM_DEFAULT}/bin/clang \
 		--with-libclang-path=${LOCALBASE}/llvm${LLVM_DEFAULT}/lib
 CXXFLAGS+=	-Wno-multistatement-macros -Wno-class-memaccess
 
+# wasm unable to find clang and c;ang++ and wasm-ld
+BINARY_ALIAS=	clang=${LOCALBASE}/llvm${LLVM_DEFAULT}/bin/clang \
+		clang++=${LOCALBASE}/llvm${LLVM_DEFAULT}/bin/clang++ \
+		wasm-ld=${LOCALBASE}/llvm${LLVM_DEFAULT}/bin/wasm-ld
+
 # alsa headers use 'u_int32_t' and other BerkeleyDB/nvi fixed types (_XOPEN_SOURCE)
 # fix error: 'snprintf' was not declared in this scope
 # disable finding of wayland components, depends on eventfd.h from libepoll-shim
