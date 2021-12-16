@@ -1,0 +1,6 @@
+
+# zrj: Match whatever is default in FP
+BUILD_DEPENDS:=	${BUILD_DEPENDS:Nllvm*}
+RUN_DEPENDS:=	${RUN_DEPENDS:Nllvm*} llvm90>0:devel/llvm90
+USE_CLANG_FALLBACK=	90
+CMAKE_ARGS:=	${CMAKE_ARGS:N-DClang_DIR*} -DClang_DIR=${LOCALBASE}/llvm90/lib/cmake/clang
