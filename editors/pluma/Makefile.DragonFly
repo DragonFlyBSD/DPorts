@@ -1,1 +1,10 @@
 USES+= gettext-tools
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's,/usr/bin/sh,/bin/sh,g' \
+		${WRKSRC}/data/pluma-bugreport.sh.in \
+		${WRKSRC}/plugins/externaltools/data/build.tool.in \
+		${WRKSRC}/plugins/externaltools/data/open-terminal-here.tool.in \
+		${WRKSRC}/plugins/externaltools/data/remove-trailing-spaces.tool.in \
+		${WRKSRC}/plugins/externaltools/data/run-command.tool.in \
+		${WRKSRC}/plugins/externaltools/data/search-recursive.tool.in
