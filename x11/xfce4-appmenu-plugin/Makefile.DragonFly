@@ -1,0 +1,4 @@
+
+# kill locale orphans
+dfly-install:
+	${RM} -rfv ${STAGEDIR}${PREFIX}/share/locale
