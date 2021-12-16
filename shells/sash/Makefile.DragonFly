@@ -5,4 +5,5 @@ dfly-patch:
 			 -e 's@<isofs/@<vfs/isofs/@g' \
 			 -e 's@<fs/msdosfs/@<vfs/msdosfs/@g' \
 			 -e 's@<fs/ntfs/@<vfs/ntfs/@g' \
+			 -e '/#include <vfs\/ufs\/extattr.h>/d' \
 		${WRKSRC}/cmds.c
