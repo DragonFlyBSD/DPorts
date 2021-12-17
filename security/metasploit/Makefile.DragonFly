@@ -3,6 +3,9 @@
 .MAKEFLAGS+=	DFLY_ALLOW_FOREIGN_BINARIES=yes
 DFLY_ALLOW_FOREIGN_BINARIES=yes
 NO_ARCH_IGNORE+=	libndkstager.so CVE-2013-6282.so CVE-2014-3153.so ofs-lib.so \
+			CVE-2019-5736.x64.bin CVE-2019-5736.x86.bin \
+			fedora-5-7.bin fedora-5-8.bin fedora-5-9.bin \
+			fedora-5-10.bin fedora-5-11.bin groovy.bin hirsute.bin \
 			lib_mysqludf_sys_32.so lib_mysqludf_sys_64.so exp.so libXm.so.3 \
 			template_armle_linux.bin template_mipsbe_linux.bin \
 			template_x64_linux.bin template_x86_linux.bin \
