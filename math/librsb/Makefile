@@ -1,7 +1,7 @@
 # Created by: stephen@FreeBSD.org
 
 PORTNAME=	librsb
-PORTVERSION=	1.2.0.9
+PORTVERSION=	1.2.0.10
 CATEGORIES=	math
 MASTER_SITES=	SF/librsb
 DISTNAME=	${PORTNAME}-${PORTVERSION:S/r/-rc/}
@@ -22,16 +22,18 @@ GNU_CONFIGURE=	yes
 CFLAGS+=	-fPIC
 CONFIGURE_ARGS=	--enable-fortran-module-install \
 		--enable-matrix-types="double, double complex"
+CONFIGURE_ENV=	CFLAGS= SPCFLAGS="${CFLAGS}"
 SHEBANG_FILES=	scripts/*.sh examples/make.sh.in
 USE_LDCONFIG=	yes
 
-.if !defined(DPORTS_BUILDER)
-MANUAL_PACKAGE_BUILD=	Optimizes for the local machine
-.endif
-
-OPTIONS_DEFINE=	DOCS
+OPTIONS_DEFINE=	DOCS OPTIMIZE
+OPTIMIZE_CONFIGURE_ENV=	SPCFLAGS="${CFLAGS:N-O*}"
 
 post-patch:
 	@${REINPLACE_CMD} -E s/sed/gsed/g ${WRKSRC}/scripts/*.sh
+
+post-patch-OPTIMIZE-on:
+	@${REINPLACE_CMD} s/enable_optimize=no/enable_optimize=yes/ \
+		${WRKSRC}/configure
 
 .include <bsd.port.mk>
