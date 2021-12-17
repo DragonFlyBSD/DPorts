@@ -17,9 +17,9 @@ lib/fpc/%%PORTVERSION%%/units/%%BUILDNAME%%/fpindexer/ireadertxt.ppu
 lib/fpc/%%PORTVERSION%%/units/%%BUILDNAME%%/fpindexer/memindexdb.o
 lib/fpc/%%PORTVERSION%%/units/%%BUILDNAME%%/fpindexer/memindexdb.ppu
 lib/fpc/%%PORTVERSION%%/units/%%BUILDNAME%%/fpindexer/memindexdb.rsj
+lib/fpc/%%PORTVERSION%%/units/%%BUILDNAME%%/fpindexer/pgindexdb.o
+lib/fpc/%%PORTVERSION%%/units/%%BUILDNAME%%/fpindexer/pgindexdb.ppu
 lib/fpc/%%PORTVERSION%%/units/%%BUILDNAME%%/fpindexer/sqldbindexdb.o
 lib/fpc/%%PORTVERSION%%/units/%%BUILDNAME%%/fpindexer/sqldbindexdb.ppu
 lib/fpc/%%PORTVERSION%%/units/%%BUILDNAME%%/fpindexer/sqliteindexdb.o
 lib/fpc/%%PORTVERSION%%/units/%%BUILDNAME%%/fpindexer/sqliteindexdb.ppu
-lib/fpc/%%PORTVERSION%%/units/%%BUILDNAME%%/fpindexer/pgindexdb.o
-lib/fpc/%%PORTVERSION%%/units/%%BUILDNAME%%/fpindexer/pgindexdb.ppu
