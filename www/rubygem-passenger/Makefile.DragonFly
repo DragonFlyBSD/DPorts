@@ -2,5 +2,7 @@
 dfly-patch:
 	cands=`grep -rl __FreeBSD__ ${WRKSRC}`; \
 	${REINPLACE_CMD} 's|__FreeBSD__|__DragonFly__|g' $${cands}
-	${REINPLACE_CMD} -e "s@return ::isnan@return std::isnan@g" \
-	${WRKSRC}/src/cxx_supportlib/vendor-modified/boost/math/special_functions/fpclassify.hpp
+
+dfly-install:
+	${RM} -fv ${STAGEDIR}${PREFIX}/bin/passenger-install-apache2-module
+	${RM} -fv ${STAGEDIR}${PREFIX}/bin/passenger-install-nginx-module
