@@ -1,1 +1,4 @@
+
+USES+=	pkgconfig
+
 LDFLAGS+= -L${LOCALBASE}/lib
