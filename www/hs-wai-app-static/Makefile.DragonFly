@@ -3,4 +3,4 @@ dfly-patch:
 	awk '{print; if (tolower($$1) == "executable") {print "    extra-libraries: m"}}' \
 		${WRKSRC}/${PORTNAME}.cabal.orig > ${WRKSRC}/${PORTNAME}.cabal
 	${REINPLACE_CMD} -e 's@os(freebsd)@os(dragonfly)@g' \
-		${WRKSRC}/simple-sendfile-*/simple-sendfile.cabal
+		${WRKSRC}/_cabal_deps/simple-sendfile-*/simple-sendfile.cabal
