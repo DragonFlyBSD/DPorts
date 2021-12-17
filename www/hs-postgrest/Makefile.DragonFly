@@ -1,5 +1,5 @@
 
 dfly-patch:
 	${REINPLACE_CMD} -e 's@os(freebsd)@os(dragonfly)@g' \
-		${WRKSRC}/simple-sendfile-*/simple-sendfile.cabal \
-		${WRKSRC}/warp-*/warp.cabal
+		${WRKSRC}/_cabal_deps/simple-sendfile-*/simple-sendfile.cabal \
+		${WRKSRC}/_cabal_deps/warp-*/warp.cabal
