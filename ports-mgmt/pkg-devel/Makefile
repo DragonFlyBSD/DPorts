@@ -1,7 +1,5 @@
-# $FreeBSD$
-
 PORTNAME=	pkg
-DISTVERSION=	1.16.99.2
+DISTVERSION=	1.17.99.5
 _PKG_VERSION=	${DISTVERSION}
 CATEGORIES=	ports-mgmt
 PKGNAMESUFFIX=	-devel
@@ -13,7 +11,7 @@ LICENSE=	BSD2CLAUSE
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	freebsd
-GH_TAGNAME=	c1aba2b2
+GH_TAGNAME=	4ffdaa3e
 
 CFLAGS+=	-O0 -g -Wno-error
 USE_LDCONFIG=	${PREFIX}/lib/compat/pkg
@@ -27,13 +25,23 @@ CONFIGURE_ENV=	CC_FOR_BUILD="${CC}"
 # so that pkg-static is used from the wrkdir
 USE_SUBMAKE=	yes
 
-OPTIONS_DEFINE=	DOCS
+OPTIONS_DEFINE=	DOCS SAN
+SAN_DESC=	Enable sanitizers (ASAN and UBSAN)
 
 .if !exists(/usr/include/jail.h)
 EXTRA_PATCHES=	${FILESDIR}/extra-patch-docs_pkg.8
 .endif
 
 .include <bsd.port.pre.mk>
+
+.if ${PORT_OPTIONS:MSAN}
+CONFIGURE_ARGS+=	--with-asan --with-ubsan
+.endif
+
+# TODO: activate in april 2021
+#.if ${OPSYS} == FreeBSD && ${OSVERSION} > 1400000
+#CONFIGURE_ARGS+=	--default-format=tzst
+#.endif
 
 .if !exists(/usr/libdata/pkgconfig/liblzma.pc)
 LIBLZMA_LIBS=	-llzma
@@ -63,9 +71,18 @@ post-patch:
 	${REINPLACE_CMD} -e "s|-llzma|${LIBLZMA_LIBS}|g" ${WRKSRC}/auto.def \
 		${WRKSRC}/src/Makefile.autosetup ${WRKSRC}/tests/Makefile.autosetup
 
+.if ${PORT_OPTIONS:MSAN}
+post-build:
+	@(cd ${WRKSRC}/src && \
+		${LN} -fs pkg pkg-static)
+.endif
+
 post-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/compat/pkg
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/NEWS ${STAGEDIR}${DOCSDIR}/NEWS
+.if ${PORT_OPTIONS:MSAN}
+	@${CP} ${STAGEDIR}${PREFIX}/sbin/pkg ${STAGEDIR}${PREFIX}/sbin/pkg-static
+.endif
 
 .include <bsd.port.post.mk>

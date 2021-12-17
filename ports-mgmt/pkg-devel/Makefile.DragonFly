@@ -13,6 +13,8 @@ dfly-patch:
 	${REINPLACE_CMD} -e 's@ -pthread@@g' \
 		${WRKSRC}/src/Makefile.autosetup \
 		${WRKSRC}/tests/Makefile.autosetup
+	${REINPLACE_CMD} -e 's,-lprivatezstd,-lprivate_zstd,g' \
+		${WRKSRC}/auto.def
 .if defined(PACKAGE_BUILDING)
 	${REINPLACE_CMD} -e "s|/usr/ports|/usr/dports|g" ${PROBLEM_FILES}
 .else
