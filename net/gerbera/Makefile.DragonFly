@@ -1,0 +1,9 @@
+# needs <filesystem>
+BUILD_DEPENDS+= cxxfs_gcc8>0:misc/cxxfs_gcc8
+CXXFLAGS+=      -isystem ${LOCALBASE}/cxxfs_gcc8
+LDFLAGS+=       -L${LOCALBASE}/cxxfs_gcc8
+
+# libnpupnp (e.g., v4.1.5) fails to listen socket on DragonFly and
+# needs further fix.  However, libupnp works well, so switch to it
+# for the moment.
+OPTIONS_DEFAULT:=${OPTIONS_DEFAULT:NLIBNPUPNP} LIBUPNP
