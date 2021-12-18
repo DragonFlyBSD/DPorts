@@ -1,4 +1,7 @@
-CXXFLAGS+=	-fpermissive
+
+# for now avoid javadoc "issues", too frequent in bulk
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NJAVA}
+
 # for now, disabled Firebird SQL support.  It emits
 # z->z_Magic == ZALLOC_SLAB_MAGIC in _slabfree when running
 # the CppunitTest_dbaccess_firebird_test unit test
@@ -18,10 +21,8 @@ REPLACE_LIST= \
 	external/redland/ExternalProject_redland.mk \
 	external/xmlsec/ExternalProject_xmlsec.mk \
 	include/osl/endian.h \
-	sal/osl/unx/system.cxx \
 	solenv/bin/modules/installer/parameter.pm \
 	soltools/mkdepend/main.c \
-	stoc/source/corereflection/criface.cxx \
 	vcl/qa/cppunit/BitmapTest.cxx \
 	vcl/unx/generic/app/saldata.cxx \
 	vcl/unx/generic/dtrans/X11_selection.cxx \
@@ -31,36 +32,27 @@ REPLACE_LIST= \
 	sal/osl/unx/process_impl.cxx \
 	sal/osl/unx/sockimpl.hxx \
 	sal/osl/unx/pipe.cxx \
-	vcl/unx/gtk3/gtk3gtkdata.cxx \
+	vcl/unx/gtk3/gtkdata.cxx
 
 PERCENT_BSD_LIST= \
 	Repository.mk \
-	canvas/Executable_canvasdemo.mk \
-	chart2/Library_chartcore.mk \
-	desktop/CppunitTest_desktop_app.mk \
 	desktop/Library_crashreport.mk\
-	desktop/Library_sofficeapp.mk \
 	libreofficekit/Module_libreofficekit.mk \
 	libreofficekit/Executable_gtktiledviewer.mk \
 	libreofficekit/Library_libreofficekitgtk.mk \
-	sc/CppunitTest_sc_ucalc.mk \
-	sc/Library_sc.mk \
 	svl/Library_svl.mk \
-	svx/Executable_gengal.mk \
-	vcl/Executable_vcldemo.mk \
-	vcl/Executable_visualbackendtest.mk \
-	vcl/Executable_ui-previewer.mk \
-	vcl/Executable_mtfdemo.mk \
 	vcl/Module_vcl.mk \
 	vcl/Library_desktop_detector.mk \
-	vcl/Library_vcl.mk \
-	vcl/Executable_icontest.mk
+	vcl/Library_vcl.mk
 
 # Avoid stripping in /tmp, it takes too much space for poudriere
 # Also, ooinstall is fed wrong TMPDIR which is redefined a few times
 # So let's just hardcode it for now
 
 dfly-patch:
+	${CP} -v ${DFLY_FILESDIR}/skia-cmath.patch ${WRKSRC}/external/skia
+	${REINPLACE_CMD} -e 's,skia_patches := ,& skia-cmath.patch ,g' \
+		${WRKSRC}/external/skia/UnpackedTarball_skia.mk
 	${REINPLACE_CMD} -e 's|$$ENV{TMPDIR};|"${WRKDIR}";|' \
 		${WRKSRC}/solenv/bin/ooinstall
 	(cd ${WRKSRC} && ${REINPLACE_CMD} -e 's|FREEBSD|DRAGONFLY|' \

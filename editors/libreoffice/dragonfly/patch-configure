@@ -1,0 +1,10 @@
+--- configure.orig	2021-09-08 17:56:00 UTC
++++ configure
+@@ -22309,6 +22314,7 @@ if test -n "$ENABLE_JAVA" -a -z "$JAVAIN
+ 
+     dragonfly*)
+         JAVAINC="-I$JAVA_HOME/include"
++        JAVAINC="$JAVAINC -I$JAVA_HOME/include/dragonfly"
+         test -d "$JAVA_HOME/include/native_thread" && JAVAINC="$JAVAINC -I$JAVA_HOME/include/native_thread"
+         ;;
+ 
