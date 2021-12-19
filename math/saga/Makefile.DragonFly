@@ -1,4 +1,0 @@
-
-dfly-patch:
-	${REINPLACE_CMD} -e 's/[[:<:]]isinf[[:>:]]/std::isinf/g' \
-		${WRKSRC}/src/saga_core/saga_gui/wksp_map_layer.cpp
