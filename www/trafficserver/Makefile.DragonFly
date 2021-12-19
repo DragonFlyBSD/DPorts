@@ -1,1 +1,6 @@
 LDFLAGS+= -pthread
+
+# disable building tests, something with broken missing_ts_plugin_init.so-ver
+dfly-patch:
+	${REINPLACE_CMD} -e 's@configs include tests@configs include@g' \
+		${WRKSRC}/Makefile.in
