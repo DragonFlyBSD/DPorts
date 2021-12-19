@@ -21,7 +21,7 @@ LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 		libpng.so:graphics/png \
 		libtiff.so:graphics/tiff
 
-USES=		autoreconf:build libtool gmake ncurses jpeg xorg
+USES=		autoreconf:build libtool gmake pkgconfig ncurses jpeg xorg
 USE_XORG=	x11 xcursor xext xorgproto xft xrandr xrender
 
 SFSUBDIR=	snapshot_2021-04-13
@@ -36,8 +36,8 @@ ALL_TARGET=
 MAKE_JOBS_UNSAFE=	yes
 
 CONFIGURE_ARGS=	--with-csl
-CPPFLAGS+=	`freetype-config --cflags`
-LDFLAGS+=	`freetype-config --libs`
+CPPFLAGS+=	`pkg-config freetype2 --cflags`
+LDFLAGS+=	`pkg-config freetype2 --libs`
 
 REDUCE_BINS=	${WRKSRC}/cslbuild/${TARGET_SDIR}
 
