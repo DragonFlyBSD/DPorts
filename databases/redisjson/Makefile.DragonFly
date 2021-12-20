@@ -1,0 +1,3 @@
+
+# deal with thread 'main' panicked at 'Unable to find libclang.so'
+MAKE_ENV+=	LIBCLANG_PATH=${LOCALBASE}/llvm${LLVM_DEFAULT}/lib
