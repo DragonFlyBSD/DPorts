@@ -1,0 +1,3 @@
+
+# -Werror=format-truncation=
+CFLAGS+=	-Wno-format
