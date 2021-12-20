@@ -1,7 +1,9 @@
-USES+=	autoreconf
+USES+=	autoreconf pkgconfig
 
+.if ${ZABBIX_BUILD} != "java"
 CFLAGS+=        -I${OPENSSLINC}
 LDFLAGS+=       -L${OPENSSLLIB}
+.endif
 
 pre-patch:
 	${CP} -rv ${WRKSRC}/src/libs/zbxsysinfo/freebsd \
