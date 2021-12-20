@@ -1,6 +1,6 @@
 PORTNAME=	OpenSPH
-DISTVERSION=	0.3.5
-PORTREVISION=	1
+DISTVERSION=	0.3.8
+PORTREVISION=	1 # accounts for the upstream moving 0.3.8 release, including bugfixes
 CATEGORIES=	science
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -18,7 +18,7 @@ USE_WX=		3.1
 GL_SITE=	https://gitlab.com
 GL_ACCOUNT=	sevecekp
 GL_PROJECT=	sph
-GL_COMMIT=	da3692e99fac19bc512c8462b0492eabd2de33af
+GL_COMMIT=	7de6c044339f649e3d19e61f735a6a24572b792a
 
 QMAKE_SOURCE_PATH=	${WRKSRC}/sph.pro
 QMAKE_ARGS=		CONFIG+=release
@@ -50,13 +50,13 @@ OPENMP_QMAKE_ON=		CONFIG+=use_openmp
 
 TBB_DESC=			Parallelize with Intel Threading Building Blocks
 TBB_QMAKE_ON=			CONFIG+=use_tbb
-TBB_LIB_DEPENDS=		libtbb.so:devel/tbb
+TBB_LIB_DEPENDS=		libtbb.so:devel/onetbb
 
 VDB_DESC=			Use OpenVDB for converting particles to volumetric data
 VDB_QMAKE_ON=			CONFIG+=use_vdb
 VDB_LIB_DEPENDS=		libImath.so:math/Imath \
 				libopenvdb.so:misc/openvdb \
-				libtbb.so:devel/tbb
+				libtbb.so:devel/onetbb
 
 do-test:
 	@${REINPLACE_CMD} -e 's|Path(.*|Path("${TEST_WRKSRC}");|' ${WRKSRC}/test/utils/Config.h

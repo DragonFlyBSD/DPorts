@@ -1,17 +1,5 @@
---- lib/system/Platform.cpp.orig	2021-04-08 21:23:28 UTC
-+++ lib/system/Platform.cpp
-@@ -14,7 +14,11 @@ NAMESPACE_SPH_BEGIN
- 
- Expected<Path> getExecutablePath() {
-     char result[PATH_MAX];
-+#if defined(__FreeBSD__)
-+    ssize_t count = readlink("/proc/curproc/file", result, PATH_MAX);
-+#else
-     ssize_t count = readlink("/proc/self/exe", result, PATH_MAX);
-+#endif
-     if (count != -1) {
-         Path path(std::string(result, count));
-         return path.parentPath();
+--- core/system/Platform.cpp.orig	2021-04-08 21:23:28 UTC
++++ core/system/Platform.cpp
 @@ -102,14 +106,18 @@ class CpuUsage { (private)
  
  public:
