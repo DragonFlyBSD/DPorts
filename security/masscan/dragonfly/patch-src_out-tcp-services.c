@@ -1,6 +1,6 @@
---- src/out-unicornscan.c.orig	2017-06-06 03:59:39 UTC
-+++ src/out-unicornscan.c
-@@ -11,6 +11,7 @@
+--- src/out-tcp-services.c.orig	2021-01-31 09:13:30 UTC
++++ src/out-tcp-services.c
+@@ -8,6 +8,7 @@
  #include <WinSock2.h>
  #endif
  #include <ctype.h>
