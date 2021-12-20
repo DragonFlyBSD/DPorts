@@ -1,3 +1,4 @@
 CONFIGURE_ARGS:= ${CONFIGURE_ARGS:N--enable-zfs_arc}
 CONFIGURE_ARGS:= ${CONFIGURE_ARGS:N--enable-disk}
+CONFIGURE_ARGS:= ${CONFIGURE_ARGS:N--enable-ipstats}
 CONFIGURE_ARGS:= ${CONFIGURE_ARGS:N--enable-tcpconns}

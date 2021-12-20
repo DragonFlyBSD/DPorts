@@ -1,6 +1,6 @@
---- src/cpu.c.orig	2019-06-13 09:13:42 UTC
+--- src/cpu.c.orig	2020-09-03 11:09:35 UTC
 +++ src/cpu.c
-@@ -53,6 +53,10 @@
+@@ -53,6 +53,13 @@
  #ifdef HAVE_MACH_VM_MAP_H
  #include <mach/vm_map.h>
  #endif
@@ -8,10 +8,13 @@
 +#include <sys/param.h>
 +#endif
 +
++#ifdef __DragonFly__
++#include <sys/resource.h>
++#endif
  
  #ifdef HAVE_LIBKSTAT
  #include <sys/sysinfo.h>
-@@ -298,8 +302,17 @@ static int init(void) {
+@@ -302,8 +309,17 @@ static int init(void) {
    numcpu_size = sizeof(maxcpu);
  
    if (sysctlbyname("kern.smp.maxcpus", &maxcpu, &numcpu_size, NULL, 0) < 0) {
