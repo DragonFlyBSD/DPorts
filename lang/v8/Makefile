@@ -1,5 +1,8 @@
+# We follow the stable channel on https://omahaproxy.appspot.com/
+# https://chromium.googlesource.com/v8/v8/+/refs/heads/9.3-lkgr
+
 PORTNAME=	v8
-PORTVERSION=	9.0.257.29
+PORTVERSION=	9.3.345.19
 CATEGORIES=	lang
 MASTER_SITES=	LOCAL/sunpoet/v8/${PORTVERSION:R:R}
 DISTFILES=	build-${BUILD_REV}.tar.gz \
@@ -23,10 +26,10 @@ BUILD_DEPENDS=	binutils>=0:devel/binutils \
 		${PYTHON_PKGNAMEPREFIX}Jinja2>=0:devel/py-Jinja2@${PY_FLAVOR}
 LIB_DEPENDS=	libicudata.so:devel/icu
 
-USES=		cpe gnome ninja pkgconfig python:3.5+,build tar:xz
+USES=		compiler:c++17-lang cpe gnome ninja pkgconfig python:3.5+,build tar:xz
 USE_GNOME=	glib20
 
-BINARY_ALIAS=	python=${PYTHON_CMD}
+BINARY_ALIAS=	python3=${PYTHON_CMD}
 MAKE_ARGS=	-C out/Release
 USE_LDCONFIG=	yes
 
@@ -36,18 +39,15 @@ USE_GITHUB=	yes
 
 CPE_VENDOR=	google
 
-# We follow the stable channel on https://omahaproxy.appspot.com/
-PORTSCOUT=	ignore:1
+BUILD_REV=	2d999384c270a340f592cce0a0fb3f8f94c15290
+BUILDTOOLS_REV=	2500c1d8f3a20a66a7cbafe3f69079a2edb742dd
+CLANG_REV=	9d0a403e85d25b5b0d3016a342d4b83b12941fd5
+COMMON_REV=	d5bb24e5d9802c8c917fcaa4375d5239a586c168
+GOOGLETEST_REV=	4ec4cd23f486bf70efcc5d2caa40f24368f752e3
+ICU_REV=	b9dfc58bf9b02ea0365509244aca13841322feb0
+ZLIB_REV=	dfbc590f5855bc2765256a743cad0abc56330a30
 
-BUILD_REV=	446bf3e5a00bfe4fd99d91cb76ec3b3a7b34d226
-BUILDTOOLS_REV=	4c78ef9c38b683c5c5cbac70445378c2362cebfc
-CLANG_REV=	cfd0f628093b7382ac054fb33e23fa9d9a278bc3
-COMMON_REV=	7af6071eddf11ad91fbd5df54138f9d3c6d980d5
-GOOGLETEST_REV=	1e315c5b1a62707fac9b8f1d4e03180ee7507f98
-ICU_REV=	e05b663d1c50b4e9ecc3ff9325f5158f1d071471
-ZLIB_REV=	348acca950b1d6de784a954f4fda0952046c652c
-
-# Run "gn args out/Release --list" for all variables.
+# Run "gn args --list out/Release" for all variables.
 # Some parts don't have use_system_* flag, and can be turned on/off by using
 # replace_gn_files.py script, some parts just turned on/off for target host
 # OS "target_os == is_bsd", like libusb, libpci.
