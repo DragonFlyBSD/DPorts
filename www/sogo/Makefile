@@ -1,5 +1,5 @@
 PORTNAME=		sogo
-PORTVERSION=		5.1.1
+PORTVERSION=		5.2.0
 CATEGORIES=		www gnustep
 MASTER_SITES=		http://www.sogo.nu/files/downloads/SOGo/Sources/
 DISTNAME=		SOGo-${PORTVERSION}
@@ -13,7 +13,9 @@ LIB_DEPENDS=		libmemcached.so:databases/libmemcached \
 			libcurl.so:ftp/curl \
 			libsodium.so:security/libsodium \
 			libzip.so:archivers/libzip \
-			libDOM.so:devel/sope
+			libDOM.so:devel/sope \
+			libytnef.so:converters/ytnef
+
 RUN_DEPENDS=		zip:archivers/zip
 
 OPTIONS_DEFAULT=	MFA
@@ -51,7 +53,7 @@ USE_RC_SUBR=		sogod
 SUB_FILES+=		pkg-message
 SUB_LIST+=		GNUSTEP_LOCAL_TOOLS=${GNUSTEP_LOCAL_TOOLS} \
 			GNUSTEP_MAKEFILES=${GNUSTEP_MAKEFILES}
-CONFIGURE_ARGS+=		--disable-debug --enable-strip
+CONFIGURE_ARGS+=		--disable-debug --disable-strip
 
 post-patch:
 	@${GREP} -rlF '/etc/sogo' ${WRKSRC} \
