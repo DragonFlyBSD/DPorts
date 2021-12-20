@@ -1,6 +1,6 @@
---- wsgi/unixfork.cpp.orig	2019-09-25 13:54:40 UTC
-+++ wsgi/unixfork.cpp
-@@ -559,12 +559,12 @@ void UnixFork::setSched(CWSGI::WSGI *wsg
+--- server/unixfork.cpp.orig	2021-07-30 19:54:47 UTC
++++ server/unixfork.cpp
+@@ -566,12 +566,12 @@ void UnixFork::setSched(Cutelyst::Server
              qCCritical(WSGI_UNIX) << "unable to initialize cpu affinity !!!";
              exit(1);
          }
@@ -15,7 +15,7 @@
          int coreCount = idealThreadCount();
  
          int workerThreads = 1;
-@@ -599,7 +599,7 @@ void UnixFork::setSched(CWSGI::WSGI *wsg
+@@ -606,7 +606,7 @@ void UnixFork::setSched(Cutelyst::Server
              base_cpu++;
          }
  #endif
