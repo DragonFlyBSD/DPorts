@@ -1,4 +1,4 @@
 
 dfly-patch:
-	${REINPLACE_CMD} -e "s@ifdef \(__FreeBSD__\)@if defined(\1) || defined(__DragonFly__)@"	\
+	${REINPLACE_CMD} -e 's@\(defined(__FreeBSD__)\)@(\1||defined(__DragonFly__))@g' \
 		${WRKSRC}/dsp/v4f_IIR2.h
