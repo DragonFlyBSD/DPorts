@@ -1,4 +1,7 @@
 SHEBANG_FILES+=	${WRKSRC}/${PORTNAME}/addons/mail/static/scripts/odoo-mailgate.py
+SHEBANG_FILES+= ${WRKSRC}/${PORTNAME}/addons/web/static/lib/select2/release.sh
+SHEBANG_FILES+= ${WRKSRC}/${PORTNAME}/addons/point_of_sale/tools/posbox/overwrite_before_init/etc/init.d/odoo
+SHEBANG_FILES+= ${WRKSRC}/${PORTNAME}/addons/point_of_sale/tools/posbox/overwrite_before_init/etc/init.d/timesyncd
 
 # to avoid orphans, egg info handled implicitly
 DFLY_PLIST=	${WRKSRC}/pkg-plist
