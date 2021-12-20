@@ -2,5 +2,4 @@
 # FP patches break logic, use sed
 dfly-patch:
 	${REINPLACE_CMD} -e 's@freebsd@dragonfly@g' \
-		${WRKSRC}/app/proc_globdata.pas \
-		${WRKSRC}/python4lazarus/python4lazarus/Sources/Core/PythonEngine.pas
+		${WRKSRC}/app/proc_globdata.pas
