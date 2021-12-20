@@ -1,6 +1,6 @@
 bin/nextcloud
 bin/nextcloudcmd
-etc/Nextcloud/sync-exclude.lst.sample
+@sample etc/Nextcloud/sync-exclude.lst.sample etc/Nextcloud/sync-exclude.lst
 include/nextcloudsync/creds/abstractcredentials.h
 include/nextcloudsync/creds/httpcredentials.h
 include/nextcloudsync/mirall/account.h
@@ -16,6 +16,7 @@ lib/libnextcloud_csync.so.%%VERSION%%
 lib/libnextcloudsync.so
 lib/libnextcloudsync.so.0
 lib/libnextcloudsync.so.%%VERSION%%
+lib/nextcloudsync_vfs_suffix.so
 share/applications/com.nextcloud.desktopclient.nextcloud.desktop
 share/caja-python/extensions/syncstate-Nextcloud.py
 share/icons/hicolor/1024x1024/apps/Nextcloud.png

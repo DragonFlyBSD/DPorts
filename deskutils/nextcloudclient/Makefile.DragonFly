@@ -1,5 +1,10 @@
 USES+=	localbase:ldflags
 
+# testing
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NWEBENGINE}
+OPTIONS_DEFAULT_x86_64:=	${OPTIONS_DEFAULT_x86_64:NWEBENGINE}
+
+
 # nuke version check
 dfly-patch:
 	${REINPLACE_CMD} -e '/find_package/s@(OpenSSL 1.1 REQUIRED )@(OpenSSL REQUIRED )@g' \
