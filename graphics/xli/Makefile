@@ -1,5 +1,4 @@
 # Created by: Satoshi Asami <asami@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	xli
 PORTVERSION=	1.17.0
@@ -15,7 +14,7 @@ LIB_DEPENDS=	libpng.so:graphics/png
 
 CONFLICTS_INSTALL=	xloadimage-*
 
-USES=		imake jpeg xorg
+USES=		cpe imake jpeg xorg
 USE_XORG=	xi
 WRKSRC=		${WRKDIR}/xli-${XLI_SNAPVER}
 
