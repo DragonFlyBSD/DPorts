@@ -6,6 +6,9 @@ _INCLUDE_GAMES_CATACLYSM__DDA_MK=     yes
 
 CXXFLAGS+= -Wno-deprecated-declarations
 
+MAKE_ARGS+=		BSD=1
+NLS_MAKE_ARGS_ON=	LOCALIZE=1
+
 # src/json.cpp:49:12: error: this statement may fall through [-Werror=implicit-fallthrough=]
 dfly-patch:
 	${REINPLACE_CMD} -e "s@ncursesw5-config@ncursesw6-config@g" \
