@@ -1,0 +1,11 @@
+--- src/CMakeLists.txt.intermediate	2021-12-20 18:54:27.000000000 +0000
++++ src/CMakeLists.txt
+@@ -258,7 +258,7 @@ macro(gamenetworkingsockets_common GNS_T
+ 		#if(USE_STEAMWEBRTC AND NOT STEAMWEBRTC_USE_STATIC_LIBS)
+ 		#	target_link_libraries(${GNS_TARGET} PRIVATE dl)
+ 		#endif()
+-	elseif(CMAKE_SYSTEM_NAME MATCHES FreeBSD)
++	elseif(CMAKE_SYSTEM_NAME MATCHES "FreeBSD|DragonFly")
+ 
+ 	elseif(CMAKE_SYSTEM_NAME MATCHES Windows)
+ 		if(CMAKE_CXX_COMPILER_ID MATCHES "MSVC")

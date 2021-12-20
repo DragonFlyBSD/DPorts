@@ -1,0 +1,11 @@
+--- CMakeLists.txt.orig	2021-05-29 00:43:16 UTC
++++ CMakeLists.txt
+@@ -169,7 +169,7 @@ function(set_target_common_gns_propertie
+ 		target_compile_definitions(${TGT} PUBLIC POSIX LINUX)
+ 	elseif(CMAKE_SYSTEM_NAME MATCHES Darwin)
+ 		target_compile_definitions(${TGT} PUBLIC POSIX OSX)
+-	elseif(CMAKE_SYSTEM_NAME MATCHES FreeBSD)
++	elseif(CMAKE_SYSTEM_NAME MATCHES "FreeBSD|DragonFly")
+ 		target_compile_definitions(${TGT} PUBLIC POSIX FREEBSD)
+ 	elseif(CMAKE_SYSTEM_NAME MATCHES Windows)
+ 		target_compile_definitions(${TGT} PUBLIC _WINDOWS)
