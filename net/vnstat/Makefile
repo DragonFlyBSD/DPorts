@@ -1,8 +1,7 @@
 # Created by: Dennis Herrmann <adox@mcx2.org>
 
 PORTNAME=	vnstat
-PORTVERSION=	2.6
-PORTREVISION=	1
+PORTVERSION=	2.8
 CATEGORIES=	net
 MASTER_SITES=	https://humdi.net/vnstat/
 
