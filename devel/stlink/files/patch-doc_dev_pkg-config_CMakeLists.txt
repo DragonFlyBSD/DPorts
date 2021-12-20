@@ -1,5 +1,5 @@
---- cmake/pkgconfig/CMakeLists.txt.orig	2020-05-31 22:00:20 UTC
-+++ cmake/pkgconfig/CMakeLists.txt
+--- doc/dev/pkg-config/CMakeLists.txt.orig	2021-04-24 22:24:02 UTC
++++ doc/dev/pkg-config/CMakeLists.txt
 @@ -11,5 +11,5 @@ configure_file(
  
  install(
