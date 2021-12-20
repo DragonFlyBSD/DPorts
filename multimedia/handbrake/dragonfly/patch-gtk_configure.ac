@@ -1,11 +1,11 @@
---- gtk/configure.ac.orig	2018-04-05 17:31:47.000000000 +0000
+--- gtk/configure.ac.orig	2021-09-30 19:51:00 UTC
 +++ gtk/configure.ac
-@@ -184,7 +184,7 @@ case $host in
- 	fi
-     HB_LIBS="$HB_LIBS -lregex -luuid"
-     ;;
--  *-*-freebsd*)
-+  *-*-freebsd*|*-*-dragonfly*)
-     HB_LIBS="$HB_LIBS -lpthread"
-     ;;
-   *)
+@@ -240,7 +240,7 @@ case $host in
+ 			HB_LIBS="$HB_LIBS -lmfplat -lstrmiids"
+ 		fi
+ 		;;
+-	*-*-freebsd*)
++	*-*-freebsd*|*-*-dragonfly*)
+ 		HB_LIBS="$HB_LIBS -lpthread"
+ 		if test "x$use_qsv" = "xyes" ; then
+ 			HB_LIBS="$HB_LIBS -lva -lva-drm"

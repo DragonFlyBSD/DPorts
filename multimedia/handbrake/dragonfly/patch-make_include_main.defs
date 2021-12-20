@@ -1,6 +1,15 @@
---- make/include/main.defs.orig	2019-11-09 20:44:32 UTC
+--- make/include/main.defs.orig	2021-09-30 19:51:00 UTC
 +++ make/include/main.defs
-@@ -110,6 +110,11 @@ ifeq (1-linux,$(FEATURE.gtk)-$(HOST.syst
+@@ -55,7 +55,7 @@ MODULES += contrib/libdvdnav
+ MODULES += contrib/libbluray
+ 
+ ifeq (1,$(FEATURE.qsv))
+-ifeq (,$(filter $(HOST.system),freebsd))
++ifeq (,$(filter $(HOST.system),freebsd dragonfly))
+     MODULES += contrib/libmfx
+ endif
+ endif
+@@ -114,6 +114,11 @@ ifeq (1-linux,$(FEATURE.gtk)-$(HOST.syst
      MODULES += gtk
  endif
  

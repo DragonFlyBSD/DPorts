@@ -1,5 +1,8 @@
 USES+= alias
 
+# disable libva for now
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NMFX}
+
 # for libhb
 CFLAGS+=	-DSYS_FREEBSD
 
