@@ -1,0 +1,80 @@
+
+# just replace foreign binaries
+REPDJMLJ_LIST=	freebsd32/libjansi.so freebsd64/libjansi.so \
+		linux32/libjansi.so linux64/libjansi.so \
+		osx/libjansi.jnilib \
+		windows32/jansi.dll windows64/jansi.dll
+
+REPDIBN_LIST=	Linux-sparc_64/killall Linux-sparc_64/process_start \
+		Linux-sparc_64/pty Linux-sparc_64/pty_open Linux-sparc_64/sigqueue \
+		Linux-sparc_64/stat Linux-sparc_64/unbuffer.so \
+		Linux-x86/killall Linux-x86/process_start Linux-x86/pty \
+		Linux-x86/pty_open Linux-x86/sigqueue Linux-x86/stat \
+		Linux-x86/unbuffer.so Linux-x86_64/killall \
+		Linux-x86_64/process_start Linux-x86_64/pty \
+		Linux-x86_64/pty_open Linux-x86_64/sigqueue \
+		Linux-x86_64/stat Linux-x86_64/unbuffer.so \
+		MacOSX-x86/killall MacOSX-x86/process_start MacOSX-x86/pty \
+		MacOSX-x86/pty_open MacOSX-x86/stat MacOSX-x86/unbuffer.dylib \
+		MacOSX-x86_64/killall MacOSX-x86_64/process_start \
+		MacOSX-x86_64/pty MacOSX-x86_64/pty_open \
+		MacOSX-x86_64/stat MacOSX-x86_64/unbuffer.dylib \
+		SunOS-sparc_64/killall SunOS-sparc_64/privp \
+		SunOS-sparc_64/process_start SunOS-sparc_64/pty \
+		SunOS-sparc_64/pty_open SunOS-sparc_64/sigqueue \
+		SunOS-sparc_64/stat SunOS-sparc_64/unbuffer.so \
+		SunOS-x86/killall SunOS-x86/privp SunOS-x86/process_start \
+		SunOS-x86/pty SunOS-x86/pty_open SunOS-x86/sigqueue SunOS-x86/stat \
+		SunOS-x86/unbuffer.so SunOS-x86_64/killall SunOS-x86_64/process_start \
+		SunOS-x86_64/pty SunOS-x86_64/pty_open SunOS-x86_64/sigqueue \
+		SunOS-x86_64/stat SunOS-x86_64/unbuffer.so \
+		Windows-x86/killall Windows-x86/process_start Windows-x86/pty \
+		Windows-x86/pty_open Windows-x86/sigqueue Windows-x86/unbuffer.dll \
+		Windows-x86_64/killall Windows-x86_64/process_start Windows-x86_64/pty \
+		Windows-x86_64/pty_open Windows-x86_64/sigqueue Windows-x86_64/unbuffer.dll
+
+REPDPML_LIST=	amd64/jnidispatch-nb.dll x86/jnidispatch-nb.dll \
+		amd64/linux/libjnidispatch-nb.so i386/linux/libjnidispatch-nb.so \
+		libjnidispatch-nb.jnilib
+
+REPDPLD_LIST=	cvm/linux/libprofilerinterface.so cvm/linux/libprofilerinterface_g.so \
+		cvm/windows/profilerinterface.dll cvm/windows/profilerinterface.map \
+		cvm/windows/profilerinterface_g.dll cvm/windows/profilerinterface_g.map \
+		jdk15/hpux-pa_risc2.0/libprofilerinterface.sl \
+		jdk15/hpux-pa_risc2.0w/libprofilerinterface.sl \
+		jdk15/linux-amd64/libprofilerinterface.so jdk15/linux/libprofilerinterface.so \
+		jdk15/mac/libprofilerinterface.jnilib \
+		jdk15/solaris-amd64/libprofilerinterface.so \
+		jdk15/solaris-i386/libprofilerinterface.so \
+		jdk15/solaris-sparc/libprofilerinterface.so \
+		jdk15/solaris-sparcv9/libprofilerinterface.so \
+		jdk15/windows-amd64/profilerinterface.dll jdk15/windows-amd64/profilerinterface.map \
+		jdk15/windows/profilerinterface.dll jdk15/windows/profilerinterface.map \
+		jdk16/hpux-pa_risc2.0/libprofilerinterface.sl \
+		jdk16/hpux-pa_risc2.0w/libprofilerinterface.sl \
+		jdk16/linux-amd64/libprofilerinterface.so jdk16/linux/libprofilerinterface.so \
+		jdk16/mac/libprofilerinterface.jnilib \
+		jdk16/solaris-amd64/libprofilerinterface.so \
+		jdk16/solaris-i386/libprofilerinterface.so \
+		jdk16/solaris-sparc/libprofilerinterface.so \
+		jdk16/solaris-sparcv9/libprofilerinterface.so \
+		jdk16/windows-amd64/profilerinterface.dll jdk16/windows-amd64/profilerinterface.map \
+		jdk16/windows/profilerinterface.dll jdk16/windows/profilerinterface.map
+
+dfly-install:
+.for F in ${REPDJMLJ_LIST}
+	@${RM} -f ${STAGEDIR}${DATADIR}/java/maven/lib/jansi-native/${F}
+	@${TOUCH} ${STAGEDIR}${DATADIR}/java/maven/lib/jansi-native/${F}
+.endfor
+.for F in ${REPDIBN_LIST}
+	@${RM} -f ${STAGEDIR}${DATADIR}/ide/bin/nativeexecution/${F}
+	@${TOUCH} ${STAGEDIR}${DATADIR}/ide/bin/nativeexecution/${F}
+.endfor
+.for F in ${REPDPML_LIST}
+	@${RM} -f ${STAGEDIR}${DATADIR}/platform/modules/lib/${F}
+	@${TOUCH} ${STAGEDIR}${DATADIR}/platform/modules/lib/${F}
+.endfor
+.for F in ${REPDPLD_LIST}
+	@${RM} -f ${STAGEDIR}${DATADIR}/profiler/lib/deployed/${F}
+	@${TOUCH} ${STAGEDIR}${DATADIR}/profiler/lib/deployed/${F}
+.endfor
