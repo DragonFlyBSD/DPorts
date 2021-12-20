@@ -1,0 +1,11 @@
+--- lib/libshout-idjc/CMakeLists.txt.orig	2021-06-28 20:04:59 UTC
++++ lib/libshout-idjc/CMakeLists.txt
+@@ -107,7 +107,7 @@ if (_GNU_SOURCE)
+     target_compile_definitions(${PROJECT_NAME} PRIVATE _GNU_SOURCE)
+ endif ()
+ 
+-if(UNIX AND NOT APPLE)
++if(UNIX AND NOT APPLE AND NOT ${CMAKE_SYSTEM_NAME} MATCHES "DragonFly")
+     list(APPEND CMAKE_REQUIRED_DEFINITIONS -D_XOPEN_SOURCE=600)
+     target_compile_definitions(${PROJECT_NAME} PRIVATE _XOPEN_SOURCE=600)
+ endif()
