@@ -1,0 +1,13 @@
+--- src/zabbix_agent/Makefile.am.orig	2021-06-28 08:11:38 UTC
++++ src/zabbix_agent/Makefile.am
+@@ -43,8 +43,8 @@ zabbix_agentd_LDADD = \
+ 	libzbxagent.a \
+ 	logfiles/libzbxlogfiles.a \
+ 	$(top_builddir)/src/libs/zbxsysinfo/libzbxagentsysinfo.a \
+-	$(top_builddir)/src/libs/zbxsysinfo/$(ARCH)/libspecsysinfo.a \
+-	$(top_builddir)/src/libs/zbxsysinfo/$(ARCH)/libspechostnamesysinfo.a \
++	$(top_builddir)/src/libs/zbxsysinfo/@ARCH@/libspecsysinfo.a \
++	$(top_builddir)/src/libs/zbxsysinfo/@ARCH@/libspechostnamesysinfo.a \
+ 	$(top_builddir)/src/libs/zbxsysinfo/agent/libagentsysinfo.a \
+ 	$(top_builddir)/src/libs/zbxsysinfo/common/libcommonsysinfo.a \
+ 	$(top_builddir)/src/libs/zbxsysinfo/simple/libsimplesysinfo.a \

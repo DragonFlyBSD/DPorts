@@ -1,0 +1,36 @@
+--- configure.ac.orig	2021-07-19 07:21:38 UTC
++++ configure.ac
+@@ -657,15 +657,6 @@ AC_DEFINE(HAVE_SYSINFO_FREERAM,1,[Define
+ AC_MSG_RESULT(yes),
+ AC_MSG_RESULT(no))
+ 
+-AC_MSG_CHECKING(for field uptime in struct sysinfo)
+-AC_TRY_COMPILE([#include <sys/sysinfo.h>],
+-[struct sysinfo sysinfo;
+-sysinfo.uptime=0;
+-],
+-AC_DEFINE(HAVE_SYSINFO_UPTIME,1,[Define to 1 if 'sysinfo.uptime' exists.])
+-AC_MSG_RESULT(yes),
+-AC_MSG_RESULT(no))
+-
+ AC_MSG_CHECKING(for field procs in struct sysinfo)
+ AC_TRY_COMPILE([#include <sys/sysinfo.h>],
+ [struct sysinfo sysinfo;
+@@ -1159,6 +1150,9 @@ hpux*)
+ freebsd*)
+ 	ARCH="freebsd"
+ 	;;
++dragonfly*)
++	ARCH="dragonfly"
++	;;
+ netbsd*)
+ 	ARCH="netbsd"
+ 	;;
+@@ -1997,6 +1991,7 @@ AC_OUTPUT([
+ 	src/libs/zbxsysinfo/linux/Makefile
+ 	src/libs/zbxsysinfo/aix/Makefile
+ 	src/libs/zbxsysinfo/freebsd/Makefile
++	src/libs/zbxsysinfo/dragonfly/Makefile
+ 	src/libs/zbxsysinfo/hpux/Makefile
+ 	src/libs/zbxsysinfo/openbsd/Makefile
+ 	src/libs/zbxsysinfo/osx/Makefile
