@@ -1,5 +1,3 @@
-# $FreeBSD$
-
 PORTNAME=	bsd-plotutils
 DISTVERSION=	1.4.2
 PORTREVISION=	2
@@ -23,7 +21,6 @@ USES+=	fortran
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	Toranktto
-GH_PROJECT=	bsd-plotutils
 
 CONFLICTS_INSTALL=	plotutils
 USE_LDCONFIG=	yes

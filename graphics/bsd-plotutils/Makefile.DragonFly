@@ -1,10 +1,15 @@
 USES+= ncurses
 
+DFLY_PLIST=	${WRKSRC}/pkg-plist
+PLIST:=		${DFLY_PLIST}
+
 dfly-patch:
 	${REINPLACE_CMD} -e "s@-ltermcap@-ltinfo@"	\
 		${WRKSRC}/libplot/dumb/Makefile
 	${REINPLACE_CMD} -e "s@-lcurses@-lncurses@"	\
 		${WRKSRC}/libplot/crt/Makefile
+	${CP} -v ${.CURDIR:H}/bsd-plotutils/pkg-plist ${DFLY_PLIST}
+	${REINPLACE_CMD} -e '/_p.a/d' ${DFLY_PLIST}
 
 # zrj: use of global variables from same header, hack it
 # comes from base bsd.sys.mk
