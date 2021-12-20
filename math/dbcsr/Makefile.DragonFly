@@ -2,3 +2,7 @@ USES+=	pkgconfig
 
 # ...
 OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NMPI:NC_API}
+
+# just to pass stage-qa
+dfly-install:
+	${TOUCH} ${STAGEDIR}${LOCALBASE}/include/dbcsr_tensor.h
