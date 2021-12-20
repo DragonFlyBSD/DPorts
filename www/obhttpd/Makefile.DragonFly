@@ -1,8 +1,8 @@
 
-MAKE_ENV+=	CWARNFLAGS=-fcommon
-
 dfly-patch:
+	${REINPLACE_CMD} -e 's@-lprocstat@@g' \
+		${WRKSRC}/src/usr.sbin/httpd/Makefile
 	-${REINPLACE_CMD} -e 's/TAILQ_FOREACH_SAFE/TAILQ_FOREACH_MUTABLE/g' \
-		${WRKSRC}/usr.sbin/httpd/server.c \
-		${WRKSRC}/usr.sbin/httpd/logger.c \
-		${WRKSRC}/usr.sbin/httpd/parse.y
+		${WRKSRC}/src/usr.sbin/httpd/server.c \
+		${WRKSRC}/src/usr.sbin/httpd/logger.c \
+		${WRKSRC}/src/usr.sbin/httpd/parse.y
