@@ -1,0 +1,4 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@define LJ_TARGET_HAS_GETENTROPY@& 0 //@g' \
+		${WRKSRC}/cargo-crates/luajit-src*/luajit2/src/lj_prng.c
