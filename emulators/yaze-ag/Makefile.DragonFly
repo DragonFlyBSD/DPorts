@@ -1,0 +1,2 @@
+
+MAKE_ARGS+=	CC=cc
