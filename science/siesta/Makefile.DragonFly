@@ -1,0 +1,2 @@
+
+BINARY_ALIAS:=	gfortran=gfortran$(_GCC_VER)
