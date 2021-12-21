@@ -1,7 +1,6 @@
-# $FreeBSD$
-
 PORTNAME=	liquidsfz
-DISTVERSION=	0.2.0
+DISTVERSION=	0.2.3
+PORTREVISION=	1
 CATEGORIES=	audio
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -14,14 +13,22 @@ BUILD_DEPENDS=	lv2>0:audio/lv2
 LIB_DEPENDS=	libjack.so:audio/jack \
 		libsndfile.so:audio/libsndfile
 
-USES=		autoreconf compiler:c++17-lang gmake libtool pkgconfig
-GNU_CONFIGURE=	yes
+USES=		autoreconf compiler:c++17-lang gmake libtool pkgconfig readline
+USE_LDCONFIG=	yes
+
 USE_GITHUB=	yes
 GH_ACCOUNT=	swesterfeld
 
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--enable-shared --disable-static
+
+INSTALL_TARGET=	install-strip
+
 PLIST_FILES=	bin/liquidsfz \
 		include/liquidsfz.hh \
-		lib/libliquidsfz.a \
+		lib/libliquidsfz.so \
+		lib/libliquidsfz.so.2 \
+		lib/libliquidsfz.so.2.0.3 \
 		lib/lv2/liquidsfz.lv2/liquidsfz.ttl \
 		lib/lv2/liquidsfz.lv2/liquidsfz_lv2.so \
 		lib/lv2/liquidsfz.lv2/manifest.ttl \
