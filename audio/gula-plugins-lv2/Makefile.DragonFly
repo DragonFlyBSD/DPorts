@@ -1,0 +1,2 @@
+
+CXXFLAGS:=	${CXXFLAGS:N-fbracket-depth*}
