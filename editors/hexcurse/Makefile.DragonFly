@@ -1,0 +1,4 @@
+
+# -Werror=format-truncation=
+CFLAGS+=	-Wno-format -Wno-implicit-fallthrough
+CFLAGS+=	-Wno-stringop-truncation -Wno-stringop-overflow
