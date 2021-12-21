@@ -1,3 +1,8 @@
+
+CFLAGS+=	-L${LOCALBASE}/lib
+
 # -Werror=misleading-indentation
 dfly-patch:
 	${REINPLACE_CMD} -e 's/ -Werror[[:>:]]//g' ${WRKSRC}/Makefile
+	${REINPLACE_CMD} -e 's@-levent-2.0@-levent@g' \
+		${WRKSRC}/Makefile.inc
