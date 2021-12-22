@@ -1,0 +1,2 @@
+
+MAKE_ARGS+=	EXTRA_CFLAGS=-I${LOCALBASE}/include
