@@ -320,7 +320,7 @@ post-install:
 	# in the regular hierarchy, normally $PREFIX/sbin. Hard links may
 	# crash the install if /usr[/local] is a separate file system from /,
 	# and pkg 1.15.4 can't automatically unroll or install relative symlinks.
-.if ${FLAVOR} != nobootfsck
+.if 0 # ${FLAVOR} != nobootfsck
 	${MKDIR} ${STAGEDIR}/sbin
 	${MV} -f ${STAGEDIR}${PREFIX}/sbin/e2fsck ${STAGEDIR}/sbin/ # from INSTALL_TARGET
 	${INSTALL_PROGRAM} ${WRKSRC}/fsck_ext2fs ${STAGEDIR}/sbin/  # from port

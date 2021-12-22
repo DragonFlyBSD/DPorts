@@ -7,6 +7,7 @@
 
 # jrm: try this instead
 OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NSMALLTESTS} NOTESTS
+PLIST_SUB:=		ROOTSBIN="@comment " ${PLIST_SUB}
 
 # zrj: try linking e2fsck without pthread support
 dfly-patch:
