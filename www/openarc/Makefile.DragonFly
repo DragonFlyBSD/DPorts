@@ -1,0 +1,2 @@
+
+LIB_DEPENDS=	libmilter.so:mail/libmilter
