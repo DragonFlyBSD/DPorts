@@ -2,6 +2,10 @@
 # something strange, libunwind issue in cmake
 CXXFLAGS+=	-lc
 
+BUILD_DEPENDS+=	cxxfs_gcc8>0:misc/cxxfs_gcc8
+CXXFLAGS+=	-isystem ${LOCALBASE}/cxxfs_gcc8
+LDFLAGS+=	-L${LOCALBASE}/cxxfs_gcc8
+
 dfly-patch:
 	${REINPLACE_CMD} -e 's@-latomic@@g' \
 		${WRKSRC}/yarpl/CMakeLists.txt
