@@ -1,11 +1,11 @@
 # Created by: Guerkan Karaman <gk.freebsd@googlemail.com>
-# $FreeBSD$
 
 PORTNAME=	ipxe
-DISTVERSION=	20200610
+DISTVERSION=	g20210727
+PORTEPOCH=	1
 CATEGORIES=	net
 
-MAINTAINER=	tobik@FreeBSD.org
+MAINTAINER=	egypcio@FreeBSD.org
 COMMENT=	Open source network boot firmware
 
 LICENSE=	GPLv2
@@ -15,11 +15,10 @@ ONLY_FOR_ARCHS_REASON=	not yet ported to anything other than amd64/i386
 
 USES=		gmake perl5 shebangfix
 USE_BINUTILS=	yes
-USE_GCC=	yes
+USE_GCC=	yes:build
 USE_GITHUB=	yes
-GH_TAGNAME=	9ee70fb95bc266885ff88be228b044a2bb226eeb
+GH_TAGNAME=	e09e114
 USE_PERL5=	build
-SHEBANG_FILES=	util/geniso util/gensdsk
 MAKE_ARGS=	AR=${AR} \
 		ARCH=${ARCH:S/amd64/i386/} \
 		AS=${AS} \
@@ -34,6 +33,7 @@ MAKE_ARGS=	AR=${AR} \
 		RANLIB=${RANLIB} \
 		SIZE=${SIZE} \
 		V=1
+
 # Append user-settable build args from make.conf
 MAKE_ARGS+=	${IPXE_MAKE_ARGS}
 ALL_TARGET=	bin/ipxe.dsk bin/ipxe.lkrn bin/ipxe.pxe bin/ipxe.usb \
@@ -67,7 +67,7 @@ ISO_DESC=	Create bootable CD image
 
 EFI_BUILD_DEPENDS=	bash:shells/bash \
 			mformat:emulators/mtools
-_EFI_ARCHS=		x86_64
+_EFI_ARCHS=		i386
 _EFI_TARGETS=		ipxe snp snponly
 .for _arch in ${_EFI_ARCHS}
 . for _target in ${_EFI_TARGETS}
@@ -130,5 +130,3 @@ do-install-EFI-on:
 .endfor
 
 .include <bsd.port.post.mk>
-
-RUN_DEPENDS:=	${RUN_DEPENDS:Ngcc*}
