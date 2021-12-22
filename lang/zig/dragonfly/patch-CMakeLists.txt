@@ -1,0 +1,24 @@
+Don't do -Bstatic -lz -Bdynamic when -static!
+
+--- CMakeLists.txt.orig	2021-09-07 02:41:54 UTC
++++ CMakeLists.txt
+@@ -753,6 +753,9 @@ endif()
+ 
+ if("${ZIG_EXECUTABLE}" STREQUAL "")
+   add_executable(zig0 ${ZIG0_SOURCES})
++ if(ZIG_STATIC_LLVM)
++  set_target_properties(zig0 PROPERTIES LINK_SEARCH_START_STATIC 1)
++ endif()
+   set_target_properties(zig0 PROPERTIES
+       COMPILE_FLAGS ${EXE_CFLAGS}
+       LINK_FLAGS ${EXE_LDFLAGS}
+@@ -817,6 +820,9 @@ endif()
+ # cmake won't let us configure an executable without C sources.
+ add_executable(zig "${CMAKE_SOURCE_DIR}/src/stage1/empty.cpp" "${ZIG1_OBJECT}")
+ 
++if(ZIG_STATIC_LLVM)
++  set_target_properties(zig PROPERTIES LINK_SEARCH_START_STATIC 1)
++endif()
+ set_target_properties(zig PROPERTIES
+     COMPILE_FLAGS ${EXE_CFLAGS}
+     LINK_FLAGS ${EXE_LDFLAGS}
