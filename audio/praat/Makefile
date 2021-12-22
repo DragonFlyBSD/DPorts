@@ -1,9 +1,6 @@
-# $FreeBSD$
-
 PORTNAME=		praat
 DISTVERSIONPREFIX=	v
-DISTVERSION=		6.1.35
-PORTREVISION=		1
+DISTVERSION=		6.1.53
 CATEGORIES=		audio science
 
 MAINTAINER=	adridg@FreeBSD.org
@@ -13,10 +10,11 @@ LICENSE=	GPLv2
 
 LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2 \
+		libharfbuzz.so:print/harfbuzz \
 		libasound.so:audio/alsa-lib
 # These are recommended but I can't tell the difference
-# RUN_DEPENDS=	CharisSIL>=0:x11-fonts/charis \
-#		DoulosSIL>=0:x11-fonts/doulos
+RUN_DEPENDS=	CharisSIL>=0:x11-fonts/charis \
+		DoulosSIL>=0:x11-fonts/doulos
 
 USES=		compiler:c++11-lang dos2unix gnome iconv pkgconfig xorg
 USE_GNOME=	cairo gdkpixbuf2 gtk30
@@ -35,7 +33,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|^CPPFLAGS =|CPPFLAGS +=|' \
 		${WRKSRC}/*/Makefile \
 		${WRKSRC}/external/*/Makefile
-	@${CP} ${FILESDIR}/makefile.defs.freebsd.alsa \
+	@${CP} ${WRKSRC}/makefiles/makefile.defs.freebsd.alsa \
 		${WRKSRC}/makefile.defs
 
 do-install:
