@@ -1,0 +1,11 @@
+
+USES+=	alias
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
+		${WRKSRC}/Makefile
+	${REINPLACE_CMD} -e '/define _ACL_OK/d' \
+		${WRKSRC}/src/checks.c
+	${REINPLACE_CMD} -e '/HAVE_ST_BIRTHTIME/s@__BSD_VISIBLE@&__z@g' \
+		${WRKSRC}/src/listing.c \
+		${WRKSRC}/src/properties.c
