@@ -1,0 +1,7 @@
+
+.if ${LIBGDA5_SLAVE}==jdbc
+dfly-patch:
+	${REINPLACE_CMD} -e 's@linux solaris@& dragonfly@g' \
+			 -e 's@lib/server@& -L$${JAVA_HOME}/lib/amd64/server -Wl,-rpath,$${JAVA_HOME}/lib/amd64/server@g' \
+		${WRKSRC}/configure
+.endif
