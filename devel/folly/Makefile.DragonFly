@@ -4,3 +4,8 @@ CXXFLAGS+=      -isystem ${LOCALBASE}/cxxfs_gcc8
 LDFLAGS+=       -L${LOCALBASE}/cxxfs_gcc8
 
 CXXFLAGS+=	-DFOLLY_FORCE_EXCEPTION_COUNT_USE_STD -DFOLLY_HAVE_CLOCK_GETTIME
+
+dfly-install:
+	${REINPLACE_CMD} -e 's,;stdc++fs,,g' -e 's,-lstdc++fs,,g' \
+		${STAGEDIR}${PREFIX}/lib/cmake/folly/folly-targets.cmake \
+		${STAGEDIR}${PREFIX}/libdata/pkgconfig/libfolly.pc
