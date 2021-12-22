@@ -37,6 +37,7 @@ include/proxygen/lib/http/HTTPMessage.h
 include/proxygen/lib/http/HTTPMessageFilters.h
 include/proxygen/lib/http/HTTPMethod.h
 include/proxygen/lib/http/HTTPPriorityFunctions.h
+include/proxygen/lib/http/HeaderConstants.h
 include/proxygen/lib/http/ProxyStatus.h
 include/proxygen/lib/http/ProxygenErrorEnum.h
 include/proxygen/lib/http/RFC2616.h
@@ -53,6 +54,7 @@ include/proxygen/lib/http/codec/FlowControlFilter.h
 include/proxygen/lib/http/codec/HQControlCodec.h
 include/proxygen/lib/http/codec/HQFramedCodec.h
 include/proxygen/lib/http/codec/HQFramer.h
+include/proxygen/lib/http/codec/HQMultiCodec.h
 include/proxygen/lib/http/codec/HQStreamCodec.h
 include/proxygen/lib/http/codec/HQUnidirectionalCodec.h
 include/proxygen/lib/http/codec/HQUtils.h
@@ -68,7 +70,6 @@ include/proxygen/lib/http/codec/HTTPCodecPrinter.h
 include/proxygen/lib/http/codec/HTTPParallelCodec.h
 include/proxygen/lib/http/codec/HTTPRequestVerifier.h
 include/proxygen/lib/http/codec/HTTPSettings.h
-include/proxygen/lib/http/codec/HeaderConstants.h
 include/proxygen/lib/http/codec/HeaderDecodeInfo.h
 include/proxygen/lib/http/codec/QPACKDecoderCodec.h
 include/proxygen/lib/http/codec/QPACKEncoderCodec.h
@@ -78,7 +79,6 @@ include/proxygen/lib/http/codec/SPDYVersion.h
 include/proxygen/lib/http/codec/SPDYVersionSettings.h
 include/proxygen/lib/http/codec/SettingsId.h
 include/proxygen/lib/http/codec/TransportDirection.h
-include/proxygen/lib/http/codec/UnframedBodyOffsetTracker.h
 include/proxygen/lib/http/codec/compress/CompressionInfo.h
 include/proxygen/lib/http/codec/compress/GzipHeaderCodec.h
 include/proxygen/lib/http/codec/compress/HPACKCodec.h
@@ -156,6 +156,8 @@ include/proxygen/lib/http/session/TTLBAStats.h
 include/proxygen/lib/http/session/TransactionByteEvents.h
 include/proxygen/lib/http/stats/ConnectionStats.h
 include/proxygen/lib/http/stats/HeaderCodecStats.h
+include/proxygen/lib/http/stats/HTTPCodecStats.h
+include/proxygen/lib/http/stats/HTTPCodecStatsFilter.h
 include/proxygen/lib/http/stats/ResponseCodeStatsMinute.h
 include/proxygen/lib/http/stats/SPDYStats.h
 include/proxygen/lib/http/stats/SPDYStatsFilter.h
