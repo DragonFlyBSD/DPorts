@@ -1,0 +1,4 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@clang@cc@g' -e 's@-std=c90@@g' \
+		${WRKSRC}/Makefile
