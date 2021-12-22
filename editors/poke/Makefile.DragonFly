@@ -1,0 +1,12 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@__FreeBSD__@__DragonFly__@g' \
+		${WRKSRC}/gl/stdio.in.h \
+		${WRKSRC}/gl-libpoke/stdio.in.h
+	${REINPLACE_CMD} -e 's@[[:<:]]__nonnull[[:>:]]@__nonnull_poke@g' \
+		${WRKSRC}/gl-libpoke/cdefs.h \
+		${WRKSRC}/gl-libpoke/libc-config.h \
+		${WRKSRC}/gl/cdefs.h \
+		${WRKSRC}/gl/libc-config.h \
+		${WRKSRC}/jitter/gnulib-local/cdefs.h \
+		${WRKSRC}/jitter/gnulib-local/libc-config.h
