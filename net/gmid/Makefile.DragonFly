@@ -1,0 +1,7 @@
+
+# zrj: use static version
+USES:=	${USES:Nssl}
+LIB_DEPENDS:=  ${LIB_DEPENDS:Nlibtls*}
+BUILD_DEPENDS+=	libressl-static>0:security/libressl-static
+CFLAGS+=	-I${LOCALBASE}/libressl-static/include
+LDFLAGS:=	-L${LOCALBASE}/libressl-static/lib -ltls -lssl -lcrypto
