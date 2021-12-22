@@ -1,0 +1,15 @@
+--- deps/usrsctp/usrsctplib/netinet/sctp_os_userspace.h.orig	2021-09-09 21:39:26 UTC
++++ deps/usrsctp/usrsctplib/netinet/sctp_os_userspace.h
+@@ -1068,10 +1068,10 @@ sctp_get_mbuf_for_msg(unsigned int space
+ /* with the current included files, this is defined in Linux but
+  *  in FreeBSD, it is behind a _KERNEL in sys/socket.h ...
+  */
+-#if defined(__DragonFly__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__native_client__)
++#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__native_client__)
+ /* stolen from /usr/include/sys/socket.h */
+ #define CMSG_ALIGN(n)   _ALIGN(n)
+-#elif defined(__NetBSD__)
++#elif defined(__NetBSD__) || defined(__DragonFly__)
+ #define CMSG_ALIGN(n)   (((n) + __ALIGNBYTES) & ~__ALIGNBYTES)
+ #elif defined(__APPLE__)
+ #if !defined(__DARWIN_ALIGNBYTES)
