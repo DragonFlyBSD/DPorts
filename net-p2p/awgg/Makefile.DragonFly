@@ -1,5 +1,0 @@
-
-# to avoid orphans
-PLIST_FILES+=	share/pixmaps/AWGG36x36.png \
-		share/pixmaps/editcopy.png \
-		share/pixmaps/icongray.ico
