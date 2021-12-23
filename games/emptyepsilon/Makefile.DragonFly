@@ -1,5 +1,15 @@
 
+LDFLAGS+=	-pthread
+
+BUILD_DEPENDS+=	cxxfs_gcc8>0:misc/cxxfs_gcc8
+CXXFLAGS+=	-isystem ${LOCALBASE}/cxxfs_gcc8
+LDFLAGS+=	-L${LOCALBASE}/cxxfs_gcc8
+
 # zrj: disable -flto, c++ mess
 dfly-patch:
 	${REINPLACE_CMD} -e 's@-O3 -flto@-O3@g' \
 		${WRKSRC}/CMakeLists.txt
+	${REINPLACE_CMD} -e 's|bswap32_|bswap32|g' \
+                ${WRKSRC_sproton}/src/i18n.cpp
+	${REINPLACE_CMD} -e 's@__FreeBSD__@__DragonFly__@g' \
+                ${WRKSRC_sproton}/src/clipboard.cpp
