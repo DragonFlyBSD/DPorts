@@ -9,3 +9,12 @@
  #define HAVE_KQUEUE 1
  #endif
  #endif
+@@ -51,6 +51,8 @@
+ #include <linux/types.h>
+ #include <linux/input.h>
+ #include <linux/kd.h>
++#elif defined(__DragonFly__)
++#include <dev/misc/evdev/input.h>
+ #elif defined(__FreeBSD__)
+ #include <dev/evdev/input.h>
+ #endif
