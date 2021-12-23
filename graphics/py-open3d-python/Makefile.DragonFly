@@ -1,0 +1,3 @@
+
+# fix stage-qa
+PLIST_FILES:=	${PLIST_FILES:N*open3d.so} %%PYTHON_SITELIBDIR%%/open3d%%PYTHON_EXT_SUFFIX%%.so
