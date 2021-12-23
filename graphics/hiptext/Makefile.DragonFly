@@ -1,0 +1,8 @@
+
+USES+=	pkgconfig
+
+CFLAGS+=	-L${LOCALBASE}/lib
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's,freetype-config,pkg-config freetype2,g' \
+		${WRKSRC}/Makefile
