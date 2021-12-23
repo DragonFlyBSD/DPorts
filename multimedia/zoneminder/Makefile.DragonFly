@@ -1,0 +1,10 @@
+
+USES+=	alias
+
+CMAKE_ARGS+=	BSD=1
+CFLAGS+=	-DBSD
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
+		${WRKSRC}/CMakeLists.txt.c++20 \
+		${WRKSRC}/CMakeLists.txt
