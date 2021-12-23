@@ -1,0 +1,3 @@
+
+# disable by default, it is worse than -march=native
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NLTO}
