@@ -1,0 +1,20 @@
+--- lib/core/src/perl/JSON-XS.xxs.orig	2021-05-18 08:50:05 UTC
++++ lib/core/src/perl/JSON-XS.xxs
+@@ -776,7 +776,7 @@ he_cmp_fast (const void *a_, const void
+ 
+ // compare hash entries, used when some keys are sv's or utf-x
+ #ifdef PERL_IMPLICIT_CONTEXT
+-# if defined(__APPLE__) || defined(__FreeBSD__)
++# if defined(__APPLE__) || defined(__FreeBSD__) || defined(__DragonFly__)
+ static int
+ he_cmp_slow_r (void* pi, const void* a, const void* b)
+ {
+@@ -871,7 +871,7 @@ encode_hv (enc_t *enc, HV *hv)
+               SAVEVPTR (PL_curcop);
+               PL_curcop = &cop;
+ #ifdef PERL_IMPLICIT_CONTEXT
+-# if defined(__APPLE__) || defined(__FreeBSD__)
++# if defined(__APPLE__) || defined(__FreeBSD__) || defined(__DragonFly__)
+               qsort_r (hes, count, sizeof (HE *), aTHX_ he_cmp_slow_r);
+ # else
+               qsort_r (hes, count, sizeof (HE *), he_cmp_slow_r, aTHX);

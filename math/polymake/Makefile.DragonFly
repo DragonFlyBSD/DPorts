@@ -1,0 +1,4 @@
+
+USES+=	localbase:ldflags
+
+CONFIGURE_ARGS:=	${CONFIGURE_ARGS:N--with-libcxx}
