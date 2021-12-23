@@ -1,0 +1,4 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@Q_OS_D.*@__unix__@g' \
+		${WRKSRC}/app/mainwindow.cpp
