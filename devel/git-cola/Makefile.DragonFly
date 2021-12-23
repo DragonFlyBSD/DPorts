@@ -1,0 +1,14 @@
+
+# use autoplist
+USE_PYTHON+=	autoplist distutils
+DFLY_PLIST=	${WRKSRC}/pkg-plist
+PLIST:=		${DFLY_PLIST}
+
+dfly-patch:
+	${TOUCH} ${DFLY_PLIST}
+	${REINPLACE_CMD} -e "/icons\/dark', '\*\.png'/d" \
+			 -e "/icons', '\*\.png'/d" \
+		${WRKSRC}/setup.py
+
+dfly-install:
+	${MKDIR} ${STAGEDIR}${DATADIR}/icons/dark
