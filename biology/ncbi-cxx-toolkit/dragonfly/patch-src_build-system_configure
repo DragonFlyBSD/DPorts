@@ -1,6 +1,6 @@
---- src/build-system/configure.orig	2018-03-22 20:17:49 UTC
+--- src/build-system/configure.intermediate	2021-12-24 17:41:27.000000000 +0000
 +++ src/build-system/configure
-@@ -8123,7 +8123,7 @@ fi
+@@ -9128,7 +9128,7 @@ fi
  case "$host_os:$compiler" in
    solaris2.10:GCC ) : ${THREAD_LIBS:="-lposix4"} ;;
    solaris*        ) : ${THREAD_LIBS:="-lpthread -lposix4"} ;;
@@ -9,21 +9,30 @@
    *               ) : ${THREAD_LIBS:="-lpthread"} ;;
  esac
  
-@@ -9665,7 +9665,7 @@ if test "$skip_fast_flags" = no -a -z "$
-       GCC:* )
-         DEF_FAST_FLAGS="-O3 -finline-functions -fstrict-aliasing"
-         case "$host_os:$host_cpu:$compiler_version" in
--           freebsd* | solaris*:*86*:* | *:4[5-9]? | *:[5-9]?? ) ;;
-+           freebsd* | dragonfly* | solaris*:*86*:* | *:4[5-9]? | *:[5-9]?? ) ;;
-            * ) DEF_FAST_FLAGS="$DEF_FAST_FLAGS -ffast-math" ;;
-         esac
-         if test "$with_profiling" != "yes"; then
-@@ -9965,7 +9965,7 @@ LIB_OR_DLL="lib"
- if test "$with_dll" = "yes" ; then
+@@ -10386,7 +10386,7 @@ if test "$with_lfs" = "yes" ; then
+    # off_t, but don't necessarily provide explicit ...64 variants of all
+    # relevant functions.
+    case "$host_os" in
+-      *bsd* | darwin* ) ;;
++      *bsd* | darwin* | dragonfly* ) ;;
+       * ) LFSFLAGS="$LFSFLAGS -D_LARGEFILE64_SOURCE" ;;
+    esac
+    CPPFLAGS="$LFSFLAGS $CPPFLAGS"
+@@ -10697,7 +10697,7 @@ if test "$with_dll" = "yes" ; then
     case "$host_os:$compiler" in
-     linux*:GCC | irix*:* | solaris*:WorkShop* | *:KCC | linux*:ICC \
--    | solaris*:GCC | osf*:* | darwin*:GCC | freebsd*:GCC )
-+    | solaris*:GCC | osf*:* | darwin*:GCC | freebsd*:GCC | dragonfly*:GCC)
+     linux*:GCC | linux*Clang | irix* | solaris*:WorkShop* | linux*:ICC \
+     | solaris*:GCC | osf* | darwin*:GCC | darwin*Clang | freebsd*:GCC \
+-    | freebsd*Clang | *:KCC )
++    | freebsd*Clang | *:KCC | dragonfly*:GCC | dragonfly*:Clang)
        ;;
      * )
        echo
+@@ -13337,7 +13337,7 @@ $as_echo "#define NCBI_OS_AIX 1" >>confd
+ 
+                   WithFeatures="$WithFeatures${WithFeaturesSep}AIX"; WithFeaturesSep=" "
+         ;;
+-     *bsd)
++     *bsd|dragonfly)
+ 
+ $as_echo "#define NCBI_OS_BSD 1" >>confdefs.h
+ 

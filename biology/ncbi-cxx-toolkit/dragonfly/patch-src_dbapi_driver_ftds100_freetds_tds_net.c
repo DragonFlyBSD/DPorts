@@ -1,6 +1,6 @@
---- src/dbapi/driver/ftds64/freetds/tds/net.c.orig	2016-01-04 19:58:41 UTC
-+++ src/dbapi/driver/ftds64/freetds/tds/net.c
-@@ -147,7 +147,7 @@ static int tds_select(TDSSOCKET * tds, u
+--- src/dbapi/driver/ftds100/freetds/tds/net.c.orig	2017-12-28 19:06:51 UTC
++++ src/dbapi/driver/ftds100/freetds/tds/net.c
+@@ -144,7 +144,7 @@ tds_socket_done(void)
   * NOPUSH flag do not behave in the same way
   * cf ML "FreeBSD 5.0 performance problems with TCP_NOPUSH"
   */
