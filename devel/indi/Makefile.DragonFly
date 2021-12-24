@@ -1,0 +1,8 @@
+
+USES:=	${USES:Nninja} gmake alias
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
+		${WRKSRC}/cmake_modules/CMakeCommon.cmake \
+		${WRKSRC}/cmake_modules/FindIconv.cmake \
+		${WRKSRC}/CMakeLists.txt
