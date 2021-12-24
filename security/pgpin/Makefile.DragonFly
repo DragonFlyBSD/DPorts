@@ -1,0 +1,2 @@
+
+ALL_TARGET:=	freebsd-amd64 OS_CFLAGS="${CFLAGS}"
