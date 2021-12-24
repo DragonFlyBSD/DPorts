@@ -1,6 +1,5 @@
-
 PORTNAME=	libdnf
-DISTVERSION=	0.60.0
+DISTVERSION=	0.63.1
 CATEGORIES=	sysutils
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -8,8 +7,6 @@ COMMENT=	Dandified YUM, the next-generation version of YUM
 
 LICENSE=	LGPL21 # no LICENSE tag for Version 2.1
 LICENSE_FILE=	${WRKSRC}/COPYING
-
-BROKEN_FreeBSD_11=	fatal error: sys/auxv.h: No such file or directory
 
 BUILD_DEPENDS=	check>0:devel/check
 LIB_DEPENDS=	libassuan.so:security/libassuan \
@@ -25,7 +22,7 @@ LIB_DEPENDS=	libassuan.so:security/libassuan \
 USES=		cmake compiler:c++11-lang gettext gnome pkgconfig sqlite ssl
 USE_GNOME=	glib20
 USE_LDCONFIG=	yes
-USE_GCC=	any # clang fails: https://github.com/rpm-software-management/libdnf/issues/1038
+USE_GCC=	yes # clang fails: https://github.com/rpm-software-management/libdnf/issues/1038
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	rpm-software-management
