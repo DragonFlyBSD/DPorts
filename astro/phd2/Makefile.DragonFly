@@ -1,0 +1,5 @@
+
+USES:=	${USES:Nninja} gmake localbase:ldflags alias
+
+# zrj: avoid undefs to stderr __assert_fail
+CMAKE_ARGS+=	-DOPENSOURCE_ONLY:BOOL=YES
