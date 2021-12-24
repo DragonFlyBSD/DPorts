@@ -1,0 +1,11 @@
+--- configurie.orig	2021-05-17 18:43:13 UTC
++++ configure
+@@ -16806,7 +16806,7 @@ fi
+ 
+         LIBSOCKET_LDFLAGS="-lsocket"
+         ;;
+-    *bsd* | *BSD*)
++    *bsd* | *BSD* | *DragonFly* | *dragonfly*)
+         HOSTOS='BSD'
+         LIBSOCKET_LDFLAGS=""
+         ;;
