@@ -1,0 +1,20 @@
+
+MAKE_ARGS+=	OS=bsd TOOLS=gcc
+
+dfly-patch:
+	${RM} -f ${WRKSRC}/ncbi-vdb/interfaces/os/bsd/endian.h
+	${REINPLACE_CMD} -e 's@freebsd@dragonfly@g' \
+			 -e "/TOOLS =/s@'clang'@'gcc'@g" \
+		${WRKSRC}/setup/konfigure.perl \
+		${WRKSRC}/*/setup/konfigure.perl
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
+		${WRKSRC}/ncbi-vdb/build/Makefile.shell \
+		${WRKSRC}/ncbi-vdb/test/klib/printf-test.c
+	${REINPLACE_CMD} -e 's,AESNI_SUPPORTED=$$.*,AESNI_SUPPORTED=false \\,g' \
+		${WRKSRC}/ncbi-vdb/libs/krypto/Makefile
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
+		${WRKSRC}/tools/driver-tool/cmdline.cpp
+	${REINPLACE_CMD} -e "s@-lmagic@-lmagic -llzma@g" \
+		${WRKSRC}/ncbi-vdb/libs/kfs/Makefile
+	${REINPLACE_CMD} -e "s@-smagic@-smagic -slzma@g" \
+		${WRKSRC}/tools/copycat/Makefile
