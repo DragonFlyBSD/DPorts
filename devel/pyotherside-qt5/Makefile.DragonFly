@@ -1,0 +1,3 @@
+
+# Project ERROR: Unknown module(s) in QT: qmltest
+USE_QT+=	declarative-test
