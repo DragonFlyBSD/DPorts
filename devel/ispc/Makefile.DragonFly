@@ -1,5 +1,9 @@
 USES+=	ncurses
 
+# no point
+OPTIONS_DEFAULT_x86_64:=	${OPTIONS_DEFAULT_x86_64:NGENX}
+CMAKE_ARGS+=	-DISPCRT_BUILD_TASKING:BOOL=OFF
+
 dfly-patch:
 	${REINPLACE_CMD} -e 's@ curses@ ncurses@g'	\
 		${WRKSRC}/CMakeLists.txt
