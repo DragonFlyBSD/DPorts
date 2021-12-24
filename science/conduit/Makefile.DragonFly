@@ -1,0 +1,11 @@
+
+LIB_DEPENDS:=	${LIB_DEPENDS:Nlibmpi*}
+
+CMAKE_ON:=	${CMAKE_ON:NENABLE_MPI}
+
+DFLY_PLIST=	${WRKSRC}/pkg-plist
+PLIST:=		${DFLY_PLIST}
+
+dfly-patch:
+	${CP} -v ${.CURDIR:H}/conduit/pkg-plist ${DFLY_PLIST}
+	${REINPLACE_CMD} -e '/mpi_/d' -e '/mpi\./d'  ${DFLY_PLIST}
