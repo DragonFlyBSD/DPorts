@@ -1,25 +1,24 @@
-
 PORTNAME=	softether
-DISTVERSION=	5.01.9674
-PORTREVISION=	3
-PORTEPOCH=	1
+DISTVERSION=	5.02.5180
+PORTEPOCH=	2
 CATEGORIES=	security net-vpn
 PKGNAMESUFFIX=	5
 DIST_SUBDIR=	${PORTNAME}
 
 # Some patches are managed in my GitHub fork
 PATCH_SITES=	https://github.com/metalefty/${GH_PROJECT}/commit/
-PATCHFILES=	6d077a2.patch:-p1 9da3bd8.patch:-p1 7128bbc.patch:-p1 \
-		c757899.patch:-p1
-
+PATCHFILES=	f4baf91.patch:-p1 5890ce9.patch:-p1 ddaffd5.patch:-p1 \
+		57aa471.patch:-p1
 MAINTAINER=	meta@FreeBSD.org
 COMMENT=	SoftEther VPN 5 (Developer Edition)
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+LIB_DEPENDS=	libsodium.so:security/libsodium
+
 USES+=		cmake:noninja compiler:c11 iconv:wchar_t \
-		localbase:ldflags ncurses readline ssl
+		localbase:ldflags ncurses pkgconfig readline ssl
 USE_RC_SUBR=	softether_bridge softether_client \
 		softether_server softether_trafficserver
 USE_LDCONFIG=	yes
@@ -27,6 +26,9 @@ USE_GITHUB=	yes
 
 GH_ACCOUNT=	SoftEtherVPN
 GH_PROJECT=	SoftEtherVPN
+GH_TUPLE=	SoftEtherVPN:libhamcore:2951ae5:libhamcore/src/libhamcore \
+		BLAKE2:BLAKE2:b52178a:BLAKE2/3rdparty/BLAKE2 \
+		cxong:tinydir:ec6bff2:tinydir/3rdparty/tinydir
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=RelWithDebInfo \
 		-DSE_DBDIR="${SE_DBDIR}" \
@@ -53,6 +55,7 @@ SUB_FILES=	pkg-message
 CMAKE_BOOL_ON+=	SKIP_CPU_FEATURES
 .else
 BUILD_DEPENDS+=	${LOCALBASE}/include/cpu_features_macros.h:devel/cpu_features
+LIB_DEPENDS+=	libcpu_features.so:devel/cpu_features
 .endif
 
 post-install:
