@@ -1,0 +1,8 @@
+
+MAKE_ARGS+=	OS=bsd TOOLS=gcc
+
+dfly-patch:
+	${RM} -f ${WRKSRC}/interfaces/os/bsd/endian.h
+	${REINPLACE_CMD} -e 's@freebsd@dragonfly@g' \
+			 -e "/TOOLS =/s@'clang'@'gcc'@g" \
+		${WRKSRC}/ngs-*/setup/konfigure.perl
