@@ -111,7 +111,7 @@ MESON_ARGS+=	-Dgallium-xa=disabled \
 		-Dgles2=enabled \
 		-Dglx=dri \
 		-Degl=enabled \
-		-Dosmesa=none \
+		-Dosmesa=false \
 		-Dtools="${MGTOOLS}"
 
 .for _d in ${ALL_DRI_DRIVERS}
