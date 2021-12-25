@@ -1,9 +1,8 @@
 # Created by: Gea-Suan Lin <gslin@gslin.org>
-# $FreeBSD$
 
 PORTNAME=	s3fs
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.88
+DISTVERSION=	1.90
 CATEGORIES=	sysutils
 PKGNAMEPREFIX=	fusefs-
 
