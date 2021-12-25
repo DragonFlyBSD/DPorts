@@ -1,9 +1,8 @@
 # Created by: gahr
-# $FreeBSD$
 
 PORTNAME=	libosmesa-gallium
 PORTVERSION=	${MESAVERSION}
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics
 
 COMMENT=	Off-Screen Mesa implementation of the OpenGL API using gallium
@@ -16,7 +15,7 @@ USE_XORG=	xorgproto
 
 # Disable some options
 MESON_ARGS+=	-Ddri-drivers="" \
-		-Dgallium-drivers=swrast \
+		-Dgallium-drivers="swrast" \
 		-Dvulkan-drivers="" \
 		-Dplatforms="" \
 		-Dgallium-vdpau=disabled \
@@ -36,11 +35,7 @@ MESON_ARGS+=	-Ddri-drivers="" \
 		-Dzstd=disabled
 LDFLAGS_i386=		-Wl,-znotext
 
-.if ${ARCH} == sparc64
-MESON_ARGS+=	-Dosmesa=classic
-.else
-MESON_ARGS+=	-Dosmesa=gallium
-.endif
+MESON_ARGS+=	-Dosmesa=true
 
 .include "${MASTERDIR}/Makefile.targets"
 
