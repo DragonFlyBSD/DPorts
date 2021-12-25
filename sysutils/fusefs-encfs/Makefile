@@ -1,10 +1,9 @@
 # Created by: trasz <trasz@pin.if.uz.zgora.pl>
-# $FreeBSD$
 
 PORTNAME=	encfs
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.9.5
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	sysutils
 PKGNAMEPREFIX=	fusefs-
 
