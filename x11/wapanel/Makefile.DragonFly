@@ -1,0 +1,4 @@
+# std::string starts_with
+USE_GCC_VERSION=        11
+
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NPULSEAUDIO}
