@@ -1,7 +1,7 @@
-
 PORTNAME=	mesa
-DISTVERSION=	21.1-branchpoint-2123
-DISTVERSIONSUFFIX=	-gd71584aec35
+DISTVERSION=	21.2-branchpoint-3070
+DISTVERSIONSUFFIX=	-g2aa705ec87c
+PORTREVISION=	1
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	-devel
 
@@ -10,17 +10,15 @@ PATCHFILES+=	55822330540d.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-
 PATCHFILES+=	f6c7569ad9ea.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/1598
 PATCHFILES+=	cb8f7a253934.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/3568
 PATCHFILES+=	700efacda59c.patch:-p1
-PATCHFILES+=	9f99ac6e45eb.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/issues/966#note_394512
-PATCHFILES+=	167fa293d7b7.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5464
-PATCHFILES+=	19e001833ec1.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/7778
+PATCHFILES+=	e141af3ac859.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/issues/966#note_394512
 PATCHFILES+=	50433886a3e3.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/6881
-PATCHFILES+=	79a9c5e470c2.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/8221
 PATCHFILES+=	891152495cf7.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/9168
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Bleeding edge Mesa drivers (OpenGL, Vulkan)
 
 LICENSE=	MIT
+LICENSE_FILE=	${WRKSRC}/docs/license.rst
 
 ONLY_FOR_ARCHS=	aarch64 amd64 i386 powerpc64 powerpc64le
 ONLY_FOR_ARCHS_REASON=	Limited scope: no old drivers and no software rendering. \
@@ -28,6 +26,7 @@ ONLY_FOR_ARCHS_REASON=	Limited scope: no old drivers and no software rendering. 
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mako>0:textproc/py-mako@${PY_FLAVOR}
 LIB_DEPENDS=	libdrm.so:graphics/libdrm \
+		libOpenGL.so:graphics/libglvnd \
 		libexpat.so:textproc/expat2
 .if !exists(/usr/lib/libelf.so)
 # DragonFly doesn't install it yet
@@ -44,31 +43,25 @@ MESON_ARGS=	-Dgallium-omx=disabled \
 		-Dgallium-opencl=disabled \
 		-Dgallium-xa=disabled \
 		-Dgallium-xvmc=disabled \
+		-Dglvnd=true \
 		-Dplatforms=${PLATFORMS:O:[-1..1]:ts,} \
 		${BINARY_ALIAS:D--native-file=binary_alias.ini} \
 		${NULL}
 PLIST_SUB=	ARCH=${ARCH:S/amd/x86_/}
 
-.if exists(/usr/bin/ld.lld) && ${/usr/bin/ld:L:tA} != /usr/bin/ld.lld
-# --build-id isn't supported by old GNU ld.bfd in base
-LDFLAGS+=	-fuse-ld=lld
-.endif
-
 OPTIONS_DEFINE=		LIBUNWIND LLVM LTO VAAPI VDPAU VKLAYERS WAYLAND X11 ZSTD
 OPTIONS_DEFAULT=	LIBUNWIND LLVM LTO VAAPI VDPAU VKLAYERS WAYLAND X11 ZSTD
 OPTIONS_GROUP=		DRI GALLIUM VULKAN
 OPTIONS_GROUP_DRI=	i965
-OPTIONS_GROUP_GALLIUM=	iris r600 radeonsi
+OPTIONS_GROUP_GALLIUM=	crocus iris r600 radeonsi
 OPTIONS_GROUP_VULKAN=	anv radv
 OPTIONS_EXCLUDE_DragonFly=	LIBUNWIND anv
 OPTIONS_EXCLUDE_i386=	LTO # anv: vkcube fails on vkCreateSwapchainKHR
 OPTIONS_EXCLUDE_powerpc64=	${"${/usr/bin/ld:L:tA}"==/usr/bin/ld.lld:?LTO:} # LLVM bug 47353
-OPTIONS_EXCLUDE+=	${ARCH:Namd64:Ni386:Nx86_64:C/.+/anv i965 iris/}
+OPTIONS_EXCLUDE+=	${ARCH:Namd64:Ni386:Nx86_64:C/.+/anv crocus i965 iris/}
 OPTIONS_EXCLUDE+=	${ARCH:Naarch64:Namd64:Ni386:Npowerpc64:Npowerpc64le:Nx86_64:C/.+/LIBUNWIND/}
 OPTIONS_EXCLUDE+=	${"${GL_DEFAULT:S/,/ /g:[-1]}"==${.CURDIR:T}:?COINST:}
-OPTIONS_EXCLUDE+=	${"${GL_DEFAULT:S/,/ /g:[1]}"!=libglvnd:?GLVND:}
 OPTIONS_SLAVE+=		${"${GL_DEFAULT:S/,/ /g:[-1]}"!=${.CURDIR:T}:?COINST:}
-OPTIONS_SLAVE+=		${"${GL_DEFAULT:S/,/ /g:[1]}"==libglvnd:?GLVND:}
 OPTIONS_SUB=		yes
 
 # Convert options to -D<type>-drivers=<driver1,driver2,etc>
@@ -84,6 +77,7 @@ DRI_DESC=		Classic OpenGL drivers
 i965_DESC=		GMA 3000 (Gen4) and newer
 
 GALLIUM_DESC=		Unified OpenGL drivers
+crocus_DESC=		Broadwater, Eaglelake, Ironlake, Sandybridge, Ivybridge, Haswell
 iris_DESC=		Broadwell and newer
 r600_DESC=		R600, R700, Evergreen, Northern Islands (implies LLVM)
 radeonsi_DESC=		Southern Islands and newer (implies LLVM)
@@ -93,23 +87,18 @@ anv_DESC=		Haswell and newer
 radv_DESC=		Southern Islands and newer (implies LLVM)
 
 COINST_DESC=		Allow co-installation with another Mesa port
-COINST_VARS=		LLVM_DEFAULT=11 # chase intel-compute-runtime
 COINST_MESON_ON=	-Degl-lib-suffix=${PKGNAMESUFFIX}
 COINST_PLIST_SUB=	SUFFIX=${PKGNAMESUFFIX}
 COINST_SUB_FILES=	libmap.conf
 COINST_SUB_LIST=	SUFFIX=${PKGNAMESUFFIX}
 COINST_PLIST_SUB_OFF=	SUFFIX=
 
-GLVND_DESC=		GL Vendor-Neutral Dispatch support
-GLVND_BUILD_DEPENDS=	libglvnd>=1.3.2:graphics/libglvnd
-GLVND_MESON_TRUE=	glvnd
-
 LIBUNWIND_DESC=		Use libunwind for stacktraces
 LIBUNWIND_LIB_DEPENDS=	libunwind.so:devel/libunwind
 LIBUNWIND_MESON_ENABLED=	libunwind
 
 LLVM_DESC=		Build with LLVM support (see implies)
-LLVM_LIB_DEPENDS=	libLLVM-${LLVM_DEFAULT:C/^([6-9])0/\1/:S/-devel/13git/}.so:devel/llvm${LLVM_DEFAULT}
+LLVM_LIB_DEPENDS=	libLLVM-${LLVM_DEFAULT:C/^([6-9])0/\1/:S/-devel/14git/}.so:devel/llvm${LLVM_DEFAULT}
 LLVM_MESON_ENABLED=	llvm
 LLVM_BINARY_ALIAS=	llvm-config=llvm-config${LLVM_DEFAULT}
 .for i in r600 radeonsi radv
@@ -144,6 +133,13 @@ X11_MESON_OFF=		-Dglx=disabled
 ZSTD_DESC=		Use ZSTD for shader cache
 ZSTD_LIB_DEPENDS=	libzstd.so:archivers/zstd
 ZSTD_MESON_ENABLED=	zstd
+
+.include <bsd.port.options.mk>
+
+# Ignore Mk/bsd.default-versions.mk but respect make.conf(5)
+.if !defined(DEFAULT_VERSIONS) || ! ${DEFAULT_VERSIONS:Mllvm*}
+LLVM_DEFAULT=	12 # bump if not latest release
+.endif
 
 post-extract:
 # Work around Meson lookup order e.g., llvm-config
