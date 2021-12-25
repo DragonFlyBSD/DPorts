@@ -1,8 +1,7 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	libsmraw
-DISTVERSION=	alpha-20201210
+DISTVERSION=	alpha-20210807
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/libyal/libsmraw/releases/download/${PORTVERSION:E}/ \
 		LOCAL/antoine
