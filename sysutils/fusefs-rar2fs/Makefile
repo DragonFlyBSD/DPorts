@@ -1,9 +1,7 @@
 # Created by: Joris Vandalon
-# $FreeBSD$
 
 PORTNAME=	rar2fs
-PORTVERSION=	1.29.3
-PORTREVISION=	1
+DISTVERSION=	1.29.5
 DISTVERSIONPREFIX=	v
 CATEGORIES=	sysutils
 PKGNAMEPREFIX=	fusefs-
