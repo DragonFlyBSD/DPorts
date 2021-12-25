@@ -2,6 +2,13 @@
 # include message about gallium split
 PKGMESSAGE=	${.CURDIR}/dragonfly/pkg-mess
 
+.if ${PORTNAME} == mesa-dri
+OPTIONS_DEFINE+=	CLASSIC
+OPTIONS_DEFAULT+=	CLASSIC
+CLASSIC_DESC=		Install classic GL SWRAST renderrer
+CLASSIC_RUN_DEPENDS+=	mesa-dri-classic>0:graphics/mesa-dri-classic
+.endif
+
 .if 0 # XXX
 # zrj: justdoitTM will avoid installing llvmX0 for all Xorg ports.
 STATIC_LLVM=yes
