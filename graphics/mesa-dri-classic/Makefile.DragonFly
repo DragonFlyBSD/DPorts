@@ -1,0 +1,3 @@
+
+# include message about gallium split
+PKGMESSAGE=	${.CURDIR}/dragonfly/pkg-mess

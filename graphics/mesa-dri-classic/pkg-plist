@@ -1,0 +1,17 @@
+@comment include/GL/gl.h
+@comment include/GL/gl_mangle.h
+@comment include/GL/glcorearb.h
+@comment include/GL/glext.h
+@comment include/GL/internal/dri_interface.h
+@comment include/KHR/khrplatform.h
+@comment include/gbm.h
+lib/dri/classic/swrast_dri.so
+lib/dri/swrast_dri.so
+@comment lib/libgbm.so
+@comment lib/libgbm.so.1
+@comment lib/libgbm.so.1.0.0
+@comment lib/libglapi.so
+@comment lib/libglapi.so.0
+@comment lib/libglapi.so.0.0.0
+@comment libdata/pkgconfig/dri.pc
+@comment libdata/pkgconfig/gbm.pc
