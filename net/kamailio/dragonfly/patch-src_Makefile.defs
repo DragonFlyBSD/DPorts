@@ -1,0 +1,10 @@
+--- src/Makefile.defs.intermediate	2021-12-24 22:52:28.000000000 +0000
++++ src/Makefile.defs
+@@ -2004,6 +2004,7 @@ ifeq ($(OS), dragonfly)
+ 		-DHAVE_SCHED_YIELD -DHAVE_MSGHDR_MSG_CONTROL \
+ 		-DHAVE_CONNECT_ECONNRESET_BUG -DHAVE_TIMEGM \
+ 		-DHAVE_NETINET_IN_SYSTM
++	LIBS= -lm
+ 	ifneq ($(found_lock_method), yes)
+ 		C_DEFS+= -DUSE_PTHREAD_MUTEX  # try pthread sems
+ 		found_lock_method=yes

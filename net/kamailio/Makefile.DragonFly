@@ -3,15 +3,16 @@ OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NSCTP}
 #OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NSCTP:NRADIUS}
 
 MAKE_ARGS+=	SCTP=0 LOCALBASE=${LOCALBASE}
+#MAKE_ARGS+=	QUIET=noisy
 
 PLIST_FILES+=	lib/kamailio/libprint.so.1.2
 PLIST_FILES+=	lib/kamailio/libsrdb1.so.1.0 lib/kamailio/libsrdb2.so.1.0
-PLIST_FILES+=	lib/kamailio/libsrutils.so.1.0
 PLIST_FILES+=	lib/kamailio/libtrie.so.1.0
 
 # undo damage
 dfly-patch:
 	${REINPLACE_CMD} -e 's@clang@gcc@g' \
+			 -e 's@"-ldl"@-ldl -lm@g' \
 		${WRKSRC}/src/Makefile.defs
 	${REINPLACE_CMD} -e "s@LIBS = @& -L${LOCALBASE}/lib @g" \
 		${WRKSRC}/src/modules/db_mysql/Makefile
