@@ -1,1 +1,8 @@
 CONFIGURE_ARGS+=	--disable-libutil --without-stackprotect
+
+FLAVORS+=		mit
+mit_PKGNAMESUFFIX=	-portable-mit
+
+.if ${FLAVOR:U} == mit
+OPTIONS_DEFAULT+=	MIT
+.endif
