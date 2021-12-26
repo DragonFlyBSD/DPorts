@@ -1,0 +1,6 @@
+
+.if ${PORTVERSION} == 0.9.6.20040312
+USES:=	${USES:Nssl}
+BUILD_DEPENDS+=	libressl-static>0:security/libressl-static
+CONFIGURE_ARGS+= --with-openssl=${LOCALBASE}/libressl-static
+.endif
