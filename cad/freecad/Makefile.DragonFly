@@ -1,4 +1,4 @@
 
-# reroute to vtk6
-LIB_DEPENDS:=	${LIB_DEPENDS:NlibvtkFiltersTexture*:Nlibmpi*} libvtkFiltersTexture-6.2.so:math/vtk6
-CMAKE_ARGS:=	${CMAKE_ARGS:N-DOPENMPI_INCLUDE_DIRS*:N-DVTK_DIR*}
+# filter mpi
+LIB_DEPENDS:=	${LIB_DEPENDS:Nlibmpi*}
+CMAKE_ARGS:=	${CMAKE_ARGS:N-DOPENMPI_INCLUDE_DIRS*}
