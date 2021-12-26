@@ -1,5 +1,13 @@
 
+.if ${DISTVERSION} == "2.4b1"
+USES:=	${USES:Nssl}
+BUILD_DEPENDS+=	libressl-static>0:security/libressl-static
+CFLAGS+=	-I${LOCALBASE}/libressl-static/include
+LDFLAGS+=	-L${LOCALBASE}/libressl-static/lib
+CONFIGURE_ARGS+= --with-openssl=${LOCALBASE}/libressl-static
+.else
 USES+=	ssl
+.endif
 
 dfly-patch:
 	${REINPLACE_CMD} -e "s@-lmd@-L${LOCALBASE}/lib -lcrypto@g" \

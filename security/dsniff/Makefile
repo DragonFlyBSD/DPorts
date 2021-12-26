@@ -1,9 +1,8 @@
 # Created by: Kris Kennaway <kris@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	dsniff
 DISTVERSION=	2.4b1
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	security
 MASTER_SITES=	http://www.monkey.org/~dugsong/${PORTNAME}/beta/ \
 		LOCAL/sbz
@@ -35,11 +34,7 @@ X11_CONFIGURE_WITH=x
 
 .include <bsd.port.pre.mk>
 
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1200085
-USES+=		ssl
-.endif
-
-.if (${OPSYS} == FreeBSD && ${OSVERSION} >= 1200085) || ${SSL_DEFAULT} == openssl
+.if 0 # ${OPSYS} == FreeBSD || ${SSL_DEFAULT} == openssl
 # Requires LibreSSL for old SSL interface
 BUILD_DEPENDS+=		${NONEXISTENT}:security/libressl:stage
 CPPFLAGS+=		-nostdinc -I/usr/include -I${WRKDIR}/libressl/include
