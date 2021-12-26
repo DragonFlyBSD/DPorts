@@ -1,0 +1,11 @@
+--- configurei.orig	2021-09-18 15:11:42 UTC
++++ configure
+@@ -17892,7 +17892,7 @@ $as_echo "#define __EXTENSIONS__ 1" >>co
+     systype="DFB"
+     alpine_path_delim="/"
+     alpine_mode_readonly="(0600)"
+-    alpine_c_client_target="neb"
++    alpine_c_client_target="bsf"
+     ;;
+   *-*-bsdi*)
+     systype="BSI"
