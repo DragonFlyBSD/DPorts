@@ -35,7 +35,7 @@ PLIST_SUB+=	DISTVERSION=${DISTVERSION}
 
 WRKSRC=		${WRKDIR}/pyside-setup-opensource-src-${DISTVERSION:C/^([0-9].[0-9]+.[0-9])(.[0-9])?/\1/}/sources/pyside2
 
-.if ${ARCH} == x86_64 || ${ARCH} == i386
+.if 0 # ${ARCH} == x86_64 || ${ARCH} == i386
 DEPRECATED=	Uses EOL Python 2.7 via www/qt5-webengine
 EXPIRATION_DATE=2021-06-23
 PLIST_SUB+=	WEBENGINE=""
