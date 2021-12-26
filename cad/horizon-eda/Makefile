@@ -1,6 +1,7 @@
 PORTNAME=	horizon-eda
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.0.0
+DISTVERSION=	2.1.0
+PORTREVISION=	1
 CATEGORIES=	cad
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -15,6 +16,7 @@ BUILD_DEPENDS=	${LOCALBASE}/include/boost/optional.hpp:devel/boost-libs \
 LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libepoxy.so:graphics/libepoxy \
 		libgit2.so:devel/libgit2 \
+		libharfbuzz.so:print/harfbuzz \
 		libpng16.so:graphics/png \
 		libpodofo.so:graphics/podofo \
 		libTKSTEP.so:cad/opencascade \
