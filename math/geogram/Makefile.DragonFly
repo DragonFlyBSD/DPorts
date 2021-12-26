@@ -1,0 +1,28 @@
+
+CMAKE_ARGS:=	${CMAKE_ARGS:N-DVORPALINE_PLATFORM*} -DVORPALINE_PLATFORM:STRING=DragonFly
+
+dfly-patch:
+	${MKDIR} ${WRKSRC}/cmake/platforms/DragonFly
+	${CP} -v ${WRKSRC}/cmake/platforms/FreeBSD-clang.cmake \
+		${WRKSRC}/cmake/platforms/DragonFly-gcc.cmake
+	${REINPLACE_CMD} -e 's@-Qunused-arguments@@g' -e 's@-Weverything@@g' \
+		${WRKSRC}/cmake/platforms/DragonFly-gcc.cmake
+	${CP} -v ${WRKSRC}/cmake/platforms/FreeBSD.cmake \
+		${WRKSRC}/cmake/platforms/DragonFly.cmake
+	${CP} -v ${WRKSRC}/cmake/platforms/FreeBSD/config.cmake \
+		${WRKSRC}/cmake/platforms/DragonFly/config.cmake
+	${REINPLACE_CMD} -e s@FreeBSD-clang@DragonFly-gcc@g \
+		${WRKSRC}/cmake/platforms/DragonFly/config.cmake
+	${CP} -v ${WRKSRC}/cmake/platforms/FreeBSD/setvars.sh \
+		${WRKSRC}/cmake/platforms/DragonFly/setvars.sh
+	${REINPLACE_CMD} -e 's@clang\+\+@g++@g' -e 's@clang@gcc@g' \
+		${WRKSRC}/cmake/platforms/DragonFly/setvars.sh
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
+		${WRKSRC}/src/lib/geogram/NL/nl_private.h
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' -e 's@FREEBSD@DRAGONFLY@g' \
+		${WRKSRC}/src/lib/geogram/basic/atomics.h \
+		${WRKSRC}/src/lib/geogram/basic/common.h \
+		${WRKSRC}/src/lib/geogram/basic/command_line.cpp \
+		${WRKSRC}/src/lib/geogram/basic/thread_sync.h \
+		${WRKSRC}/src/lib/geogram/lua/lua_io.cpp \
+		${WRKSRC}/src/lib/third_party/numerics/LIBF2C/sysdep1.h
