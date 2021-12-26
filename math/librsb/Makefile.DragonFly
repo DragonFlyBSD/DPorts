@@ -1,0 +1,4 @@
+
+dfly-patch:
+	${REINPLACE_CMD} s/enable_optimize=no/enable_optimize=yes/ \
+		${WRKSRC}/configure
