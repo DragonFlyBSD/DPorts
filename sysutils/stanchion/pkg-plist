@@ -1,9 +1,9 @@
 sbin/stanchion
 sbin/stanchion-admin
-@sample %%STANCHION_CONFDIR%%/stanchion.conf
-@sample %%STANCHION_CONFDIR%%/advanced.config
-@sample %%STANCHION_CONFDIR%%/key.pem
-@sample %%STANCHION_CONFDIR%%/cert.pem
+%%STANCHION_CONFDIR%%/stanchion.conf
+%%STANCHION_CONFDIR%%/advanced.config
+%%STANCHION_CONFDIR%%/key.pem
+%%STANCHION_CONFDIR%%/cert.pem
 @dir %%STANCHION_CONFDIR%%
 @owner %%USERS%%
 @group %%GROUPS%%
