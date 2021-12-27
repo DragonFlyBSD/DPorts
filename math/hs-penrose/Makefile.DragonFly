@@ -2,6 +2,8 @@
 # OVERRIDE
 LIB_DEPENDS:=	${LIB_DEPENDS:Nlibgfortran*}
 
+# XXX Meh, this is a hack for the .pre inclusion
+.if !target(dfly-patch)
 dfly-patch:
 	${REINPLACE_CMD} -e 's@os(freebsd)@os(dragonfly)@g' \
 		${WRKSRC}/simple-sendfile-*/simple-sendfile.cabal \
@@ -11,3 +13,4 @@ dfly-patch:
 	${REINPLACE_CMD} -e 's@linux@dragonfly@g' \
 			 -e "s@/usr/lib/openblas/lib@${LOCALBASE}/lib@g" \
 		${WRKSRC}/hmatrix-*/hmatrix.cabal
+.endif
