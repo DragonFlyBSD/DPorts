@@ -1,0 +1,6 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@<sys/dir\.h>@<dirent.h>@g' \
+		${WRKSRC}/toonz/sources/common/tsystem/tpluginmanager.cpp \
+		${WRKSRC}/toonz/sources/common/tsystem/tsystempd.cpp \
+		${WRKSRC}/toonz/sources/toonzfarm/tnzcore_stuff/tsystem.cpp
