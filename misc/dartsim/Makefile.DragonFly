@@ -1,0 +1,3 @@
+
+# conflict between devel/tbb and devel/onetbb (pagmo3)
+LIB_DEPENDS:=	${LIB_DEPENDS:Nlibtbb*}
