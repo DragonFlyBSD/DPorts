@@ -1,0 +1,20 @@
+--- files/rkhunter.intermediate	2021-12-27 09:34:43.000000000 +0000
++++ files/rkhunter
+@@ -4751,7 +4751,7 @@ get_sha_hash_function() {
+ 	fi
+ 
+ 	case ${OPERATING_SYSTEM} in
+-	FreeBSD)
++	FreeBSD|DragonFly)
+ 		HFUNC=`find_cmd sha${SHA_SIZE}` ;;
+ 	*)
+ 		HFUNC=`find_cmd sha${SHA_SIZE}sum` ;;
+@@ -19049,7 +19049,7 @@ ${LINKDIR}"
+ 		PROP_FILE_LIST="${PROP_FILE_LIST} fstat kldload kldstat kldunload procstat
+ 				unhide unhide-posix unhide-tcp"
+ 		;;
+-	*BSD)
++	*BSD|DragonFly)
+ 		PROP_FILE_LIST="${PROP_FILE_LIST} unhide unhide-posix unhide-tcp"
+ 		;;
+ 	Linux)
