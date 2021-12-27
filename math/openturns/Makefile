@@ -47,7 +47,6 @@ CMAKE_OFF=	USE_DOXYGEN USE_SPHINX
 CMAKE_OFF+=	USE_HMAT # broken with hmat-oss-1.7.1: https://github.com/openturns/openturns/issues/1868
 
 OPTIONS_DEFINE=		PYTHON EXAMPLES
-OPTIONS_DEFAULT=	PYTHON
 OPTIONS_SUB=		yes
 
 PYTHON_USES=		python
