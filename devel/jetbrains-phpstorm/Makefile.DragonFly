@@ -1,2 +1,6 @@
 
 RUN_DEPENDS:=	${RUN_DEPENDS:Nlsof*}
+
+.if !defined(DPORTS_BUILDER)
+MANUAL_PACKAGE_BUILD=	huge (342M packaged)
+.endif
