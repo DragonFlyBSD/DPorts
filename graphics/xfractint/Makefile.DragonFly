@@ -1,1 +1,7 @@
-USES+= alias
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
+		${WRKSRC}/common/prompts2.c \
+		${WRKSRC}/headers/port.h \
+		${WRKSRC}/unix/general.c \
+		${WRKSRC}/unix/unixscr.c
