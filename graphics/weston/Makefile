@@ -1,5 +1,6 @@
 PORTNAME=	weston
 PORTVERSION=	1.9.0
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://wayland.freedesktop.org/releases/
 MAINTAINER=	imre@vdsz.com
@@ -7,7 +8,7 @@ COMMENT=	Wayland Reference Compositor
 
 LICENSE=	MIT
 
-USES=		alias gmake jpeg libtool pkgconfig tar:xz
+USES=		alias gmake jpeg libtool pkgconfig tar:xz gl xorg
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
