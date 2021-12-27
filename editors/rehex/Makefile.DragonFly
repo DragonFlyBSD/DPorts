@@ -1,0 +1,6 @@
+
+# wxcore_bind.cpp:3987:82: warning: 'wxAcceleratorEntry* wxGetAccelFromString(const wxString&)' is deprecated [-Wdeprecated-declarations]
+# wxLua/modules/wxbind/src/wxcore_bind.cpp:3987: error: undefined reference to 'wxGetAccelFromString(wxString const&)'
+dfly-patch:
+	${REINPLACE_CMD} -e 's@define wxLUA_USE_wxAcceleratorTable@& 0 //@g' \
+		${WRKSRC}/wxLua/modules/wxbind/setup/wxluasetup.h
