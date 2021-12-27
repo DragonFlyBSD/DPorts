@@ -1,6 +1,0 @@
-USES+= ncurses
-
-# zrj: to fix TEST option
-dfly-patch:
-	${REINPLACE_CMD} -e "/^TEST/ s@ \(UNIMPLEMENTED\)@ DISABLED_\1@g" \
-		${WRKSRC}/base/logging_test.cpp
