@@ -1,3 +1,8 @@
 
-# needs to compile as clang
-USE_CLANG_FALLBACK=	default
+# needs to compile as clang, not newer than llvm 9.0
+USE_CLANG_FALLBACK=	90
+
+# some bug in MF
+dfly-patch:
+	${MKDIR} ${BUILD_WRKSRC}
+	${TOUCH} ${BUILD_WRKSRC}/build.ninja
