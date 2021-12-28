@@ -1,7 +1,0 @@
-USES+=	alias libedit
-
-BROKEN=	needs porting to DragonFly
-
-dfly-patch:
-	${REINPLACE_CMD} -e "s@-ledit@-L${LOCALBASE}/lib -ledit@" \
-		${WRKSRC}/third-party/lua-*/src/Makefile
