@@ -1,3 +1,3 @@
-TIMESTAMP = 1624789669
-SHA256 (stress-ng-0.12.11.tar.xz) = 971393075321c24c3d5769acfabb705911d1f411ced5937b7cfea58528c1b4e6
-SIZE (stress-ng-0.12.11.tar.xz) = 550336
+TIMESTAMP = 1640684629
+SHA256 (stress-ng-0.13.05.tar.xz) = f058c8fba37596ab32c3a4b2aedbdbf5f2b8a8ba1d312059e733290543ad00ac
+SIZE (stress-ng-0.13.05.tar.xz) = 590340
