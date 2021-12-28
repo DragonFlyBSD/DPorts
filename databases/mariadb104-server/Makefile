@@ -1,7 +1,7 @@
 # Created by: Bernard Spil <brnrd@FreeBSD.org>
 
 PORTNAME?=	mariadb
-PORTVERSION=	10.4.19
+PORTVERSION=	10.4.22
 PORTREVISION?=	0
 CATEGORIES=	databases
 MASTER_SITES=	http://mirrors.supportex.net/${SITESDIR}/ \
@@ -19,9 +19,6 @@ COMMENT?=	Multithreaded SQL database (server)
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
-
-BROKEN_i386=	compile error: undeclared identifier 'my_atomic_add32'
-BROKEN_riscv64=	fails to compile: needs FP_X_INV from empty sys/riscv/include/ieeefp.h
 
 USES=		bison:build cmake:insource,noninja compiler:c++11-lib cpe iconv:translit libedit ncurses shebangfix ssl
 
@@ -193,12 +190,6 @@ CMAKE_ARGS+=		-DPLUGIN_${PLUGIN}=NO
 
 .include <bsd.port.options.mk>
 
-.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1200057
-SUB_LIST+=	LEGACY_LIMITS="@comment " MODERN_LIMITS=""
-.else
-SUB_LIST+=	LEGACY_LIMITS="" MODERN_LIMITS="@comment "
-.endif
-
 .if ${SSL_DEFAULT} != base && ${PORT_OPTIONS:MGSSAPI_BASE}
 GSSAPI_BASE_IGNORE=	BASE_GSSAPI is not compatible with OpenSSL from ports. Use other GSSAPI options or OpenSSL from base system
 .endif
@@ -209,6 +200,11 @@ GSSAPI_BASE_IGNORE=	BASE_GSSAPI is not compatible with OpenSSL from ports. Use o
 PLIST_SUB+=	WSREP="@comment "
 .endif
 
+.if ${ARCH} == i386
+USE_GCC=       yes
+CFLAGS+=       -latomic -fasynchronous-unwind-tables
+.endif
+
 .if ${OPSYS} == DragonFly
 CMAKE_OFF+=	WITH_TOKUDB
 .endif
@@ -217,7 +213,6 @@ post-patch:
 	${REINPLACE_CMD} 's|%%LOCALBASE%%|${LOCALBASE}|g' \
 		${WRKSRC}/storage/tokudb/PerconaFT/cmake_modules/TokuThirdParty.cmake
 	${REINPLACE_CMD} 's|%%PREFIX%%|${PREFIX}|' ${WRKSRC}/mysys/my_default.c
-	${MV} ${WRKSRC}/storage/mroonga/version ${WRKSRC}/storage/mroonga/version_txt
 .if ${OPSYS} == DragonFly
 	${CP} ${WRKSRC}/cmake/os/FreeBSD.cmake \
 		${WRKSRC}/cmake/os/DragonFly.cmake
@@ -255,11 +250,9 @@ post-install:
 		${STAGEDIR}${PREFIX}/lib/mysql/pkgconfig
 	${MV} ${STAGEDIR}${PREFIX}/etc/mysql/user_map.conf \
 		${STAGEDIR}${PREFIX}/etc/mysql/user_map.conf.sample
-	${MKDIR} ${STAGEDIR}/${MARIADB_LOGDIR}
-
-post-install-WSREP-on:
 	${MV} ${STAGEDIR}${DATADIR}/wsrep.cnf \
-		${STAGEDIR}${ETCDIR}/conf.d/wsrep.cnf.sample
+		${STAGEDIR}${ETCDIR}/conf.d/wsrep.cnf.sample || true
+	${MKDIR} ${STAGEDIR}/${MARIADB_LOGDIR}
 .endif # ${PKGNAMESUFFIX:M*-client}
 
 .include <bsd.port.post.mk>
