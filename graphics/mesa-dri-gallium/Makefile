@@ -1,7 +1,7 @@
 
 PORTNAME=	mesa-dri-gallium
 PORTVERSION=	${MESAVERSION}
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	graphics
 
 COMMENT=	OpenGL hardware acceleration drivers for DRI2+ using gallium
@@ -47,14 +47,12 @@ VDPAU_LIB_DEPENDS=	libvdpau.so:multimedia/libvdpau
 .include <bsd.port.options.mk>
 .include "${.CURDIR:H:H}/graphics/mesa-dri/Makefile.common"
 
-ALL_DRI_DRIVERS=	I915 I965 R100 R200 SWRAST
+ALL_DRI_DRIVERS=	I915 I965 R100 R200
 ALL_GALLIUM_DRIVERS=	IRIS R300 R600 RADEONSI SVGA SWRAST
 ALL_VULKAN_DRIVERS=	INTEL AMD
 
 .if ${ARCH} == aarch64 || ${ARCH} == x86_64 || ${ARCH} == i386 || ${ARCH} == powerpc64
 GALLIUM_DRIVERS+=	SWRAST	# llvmpipe
-.elif ${ARCH:Marm*} || ${ARCH:Mmips*} || ${ARCH:Mpowerpc*}
-DRI_DRIVERS+=		SWRAST # Mesa Classic swrast
 .endif
 
 .if ${ARCH} == aarch64 || ${ARCH} == x86_64 || ${ARCH} == i386 \

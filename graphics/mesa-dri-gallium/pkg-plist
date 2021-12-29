@@ -49,7 +49,6 @@ misc/mesa-dri-gallium/include/gbm.h
 %%R100_DRIVER%%misc/mesa-dri-gallium/lib/dri/radeon_dri.so
 %%RADEONSI_GDRIVER%%misc/mesa-dri-gallium/lib/dri/radeonsi_dri.so
 %%VAAPI%%%%RADEONSI_GDRIVER%%misc/mesa-dri-gallium/lib/dri/radeonsi_drv_video.so
-%%SWRAST_DRIVER%%misc/mesa-dri-gallium/lib/dri/swrast_dri.so
 %%SWRAST_GDRIVER%%misc/mesa-dri-gallium/lib/dri/swrast_dri.so
 %%SVGA_GDRIVER%%misc/mesa-dri-gallium/lib/dri/vmwgfx_dri.so
 misc/mesa-dri-gallium/lib/libEGL.so
