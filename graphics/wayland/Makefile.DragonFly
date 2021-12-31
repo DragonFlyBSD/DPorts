@@ -1,0 +1,2 @@
+# wayland-scanner created wayland-server-protocols.h gets raced in bulk
+MAKE_JOBS_UNSAFE=	yes
