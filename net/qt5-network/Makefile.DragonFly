@@ -1,4 +1,6 @@
+# DFLYGC 6.2
+
 dfly-patch:
-	# SIOCGHWADDR doesn't exist on DragonFly
+	${GREP} -q SIOCGHWADDR /usr/include/sys/sockio.h || \
 	${REINPLACE_CMD} -e 's|Q_OS_FREEBSD|__FreeBSD__|g' \
 	${WRKSRC}/src/plugins/bearer/generic/qgenericengine.cpp
