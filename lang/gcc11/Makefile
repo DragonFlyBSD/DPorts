@@ -17,8 +17,8 @@ ONLY_FOR_ARCHS=	aarch64 amd64 arm armv6 armv7 i386 powerpc powerpc64 powerpc64le
 LIB_DEPENDS=	libgmp.so:math/gmp \
 		libmpfr.so:math/mpfr \
 		libmpc.so:math/mpc
-BUILD_DEPENDS+=	${LOCALBASE}/bin/as:devel/binutils
-RUN_DEPENDS+=	${LOCALBASE}/bin/as:devel/binutils
+BUILD_DEPENDS+=	${LOCALBASE}/bin/as:devel/binutils@native
+RUN_DEPENDS+=	${LOCALBASE}/bin/as:devel/binutils@native
 .if defined(MAINTAINER_MODE)
 BUILD_DEPENDS+=	runtest:misc/dejagnu
 .endif
