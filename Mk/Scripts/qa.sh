@@ -612,6 +612,15 @@ proxydeps_suggest_uses() {
 	# lua
 	elif expr ${pkg} : "^lang/lua" > /dev/null; then
 		warn "you need USES+=lua"
+	# magick
+	elif [ ${pkg} = "graphics/ImageMagick6" ] ; then
+		warn "you need USES=magick:6"
+	elif [ ${pkg} = "graphics/ImageMagick6-nox11" ] ; then
+		warn "you need USES=magick:6,nox11"
+	elif [ ${pkg} = "graphics/ImageMagick7" ] ; then
+		warn "you need USES=magick:7"
+	elif [ ${pkg} = "graphics/ImageMagick7-nox11" ] ; then
+		warn "you need USES=magick:7,nox11"
 	# motif
 	elif [ ${pkg} = "x11-toolkits/lesstif" -o ${pkg} = "x11-toolkits/open-motif" ]; then
 		warn "you need USES+=motif"
@@ -684,9 +693,13 @@ proxydeps() {
 
 				# Check that the .so we need has a SONAME
 				if [ "${dep_file_pkg}" != "${PKGORIGIN}" ]; then
+					# When grep -q finds a match it will close the pipe immediately.
+					# This may cause the test to fail when pipefail is turned on.
+					set +o pipefail
 					if ! readelf -d "${dep_file}" | grep -q SONAME; then
 						err "${file} is linked to ${dep_file} which does not have a SONAME.  ${dep_file_pkg} needs to be fixed."
 					fi
+					set -o pipefail
 				fi
 
 				# If we don't already depend on it, and we don't provide it

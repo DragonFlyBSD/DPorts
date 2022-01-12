@@ -5,7 +5,409 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
-20210801:
+20211223:
+  AFFECTS: users of security/bastillion
+  AUTHOR: netchild@FreeBSD.org
+
+  This update contains an incompatible DB change. Either recreate your
+  DB (rm /usr/local/jetty_bastillion/bastillion/WEB-INF/classes/keydb/bastillion.*
+  and restart) by hand, or export the old DB while the old version is
+  installed and import the data into a new DB. See
+    https://github.com/bastillion-io/Bastillion/issues/405
+  for details.
+
+20211220:
+  AFFECTS: users of devel/notcurses
+  AUTHOR: nickblack@linux.com
+
+  Notcurses 3 introduces a new SONAME and significant API/ABI changes.
+  Dependent applications must be recompiled at a minimum. A complete
+  guide to updating for the new API is available under "Porting API2
+  Applications to API3" at
+  https://github.com/dankamongmen/notcurses/releases/tag/v3.0.0
+
+20211220:
+  AFFECTS: users of net-im/openfire
+  AUTHOR: nikita@druba.su
+
+  The port options have been renamed to be more readable.
+  When not using the default options, they have to be regenerated.
+
+  # cd /usr/ports/net-im/openfire
+  # make config
+
+20211213:
+  AFFECTS: users of emulators/qemu-utils
+  AUTHOR: bofh@FreeBSD.org
+
+  New port emulators/qemu@tools has been introduced which is similar to
+  emulators/qemu-utils. qemu-utils has also been DEPRECATED in favor for
+  this as it's MASTER port has also been marked DEPRECATED and set to
+  expire on 2022-01-09. For updating to qemu-tools please use one of
+  the following command:
+
+  # pkg install qemu-tools
+    or
+  # portmaster -o emulators/qemu-utils emulators/qemu@tools
+
+20211116:
+  AFFECTS: users of emulators/qemu50
+  AUTHOR: bofh@FreeBSD.org
+
+  emulators/qemu50 has been moved to emulators/qemu5 and updated to 5.2.0 
+  which is the last version from 5.X.X branch. This is done in preparation
+  of updating emulators/qemu into latest 6.X bgranch. If someone wants to
+  stick with 5.X.X branch please use one of the following command:
+
+  # pkg install qemu5
+    or
+  # portmaster -o emulators/qemu50 emulators/qemu5
+
+  This version also introduces a stripped nox11 version which can be
+  installed with:
+  # pkg install qemu5-nox11
+   or
+  # portmaster emulators/qemu5@nox11
+
+20211115:
+  AFFECTS: AFFECTS: users of *-emacs2x-* packages
+  AUTHOR: jrm@FreeBSD.org
+
+  To avoid problems when editors/emacs or editors/emacs-devel are
+  updated, the emacs major version has been removed from these package
+  names.
+
+  For example, the old and new package names of devel/magit are
+
+  -----------------------------------------------------------
+  | Old Package Name          | New Package Name            |
+  |-------------------------- |-----------------------------|
+  | magit-emacs27             | magit                       |
+  | magit-emacs27_nox         | magit-emacs_nox             |
+  | magit-emacs27_canna       | magit-emacs_canna           |
+  |                           |                             |
+  | magit-emacs29_nox         | magit-emacs_devel_nox       |
+  | magit-emacs29             | magit-emacs_devel           |
+  -----------------------------------------------------------
+
+  To handle these final package name changes, follow a similar procedure
+  as the one described in the 20200811 entry.  That is, simply running
+  `pkg upgrade` will not upgrade, e.g., foo-emacs27_nox to
+  foo-emacs_nox.
+
+  Binary package users:
+
+  To update these packages, run these commands under /bin/sh with superuser
+  privileges before upgrading.
+
+  # default flavor of editors/emacs installed
+  for i in $(pkg query -g %n '*-emacs27'); do
+    if [ "$i" != "notmuch-emacs27" ]; then
+      nn=$(echo "$i" | sed -e 's/-emacs27//')
+    else
+      nn=$(echo "$i" | sed -e 's/-emacs27/-emacs/')
+    fi
+    pkg set -yn "$i":"$nn"
+  done
+
+  # canna or nox flavor of editors/emacs installed
+  for i in $(pkg query -g %n '*-emacs27*'); do
+    nn=$(echo "$i" | sed -e 's/emacs27/emacs/')
+    pkg set -yn "$i":"$nn"
+  done
+
+  # editors/emacs-devel installed
+  for i in $(pkg query -g %n '*-emacs29*'); do
+    nn=$(echo "$i" | sed -e 's/emacs29/emacs_devel/')
+    pkg set -yn "$i":"$nn"
+  done
+
+  portmaster users:
+
+  portmaster -r emacs
+
+20211110:
+  AFFECTS: users of www/node*, www/npm*, www/yarn*
+  AUTHOR: mfechner@FreeBSD.org
+
+  The port framework was updated to use a default version for nodejs.
+  The default version is pointing to the latest LTS version which is
+  currently version 16.
+  You can overwrite this by defining in /etc/make.conf, e.g. version 17:
+  DEFAULT_VERSIONS=nodejs=17
+
+  Or if you would like to stick always to the current version use:
+  DEFAULT_VERSIONS=nodejs=current
+
+  If you would like to use yarn or npm together with nodejs version 17,
+  just install the package that is pulling the wanted dependency to nodejs:
+
+  # pkg install yarn-node17
+  # pkg install npm-node17
+
+20211109:
+  AFFECTS: users of security/libressl
+  AUTHOR: brnrd@FreeBSD.org
+
+  The port has been updated to the latest stable version 3.4 of LibreSSL.
+  The shared library versions of the libraries have been bumped.
+
+  After upgrading, manually update all packages that depend on any of the
+  libraries provided by LibreSSL (libssl, libcrypto and libtls) since the
+  versions of these libraries have changed. Normally, you can obtain the
+  list of dependent software by running the following command:
+
+  # pkg info -r libressl
+
+  Then you should rebuild all ports depending on libressl to avoid dangling
+  shared library dependencies.
+
+20211107:
+  AFFECTS: users of sysutils/devcpu-data
+  AUTHOR: jrm@FreeBSD.org
+
+  The RC variable name microcode_cpus is now deprecated.  Users should
+  instead use the variable microcode_update_cpus.
+
+  Two new ports were branched from sysutils/devcpu-data,
+  sysustils/devcpu-data-amd and sysustils/devcpu-data-intel.  The two
+  new ports contain only the CPU microcode updates for each vendor and
+  sysutils/devcpu-data now only contains an RC script.  Both new ports
+  are on-by-default, optional dependencies of sysutils/devcpu-data.
+
+20211101:
+  AFFECTS: users of textproc/redisearch
+  AUTHOR: osa@FreeBSD.org
+
+  The textproc/redisearch port has been updated to the recent stable
+  release - v2.2.  Users wanting to stay on v2.0 can replace
+  textproc/redisearch with textproc/redisearch20 with one of the
+  following commands:
+
+  # pkg install textproc/redisearch20
+    or
+  # portmaster -o textproc/redisearch20 textproc/redisearch
+    or
+  # portupgrade -o textproc/redisearch20 textproc/redisearch
+
+  NOTE: The textproc/redisearch20 brings a new name for the module,
+  i.e. redisearch20.so, so be careful.
+
+20211024:
+  AFFECTS: sysutils/beats7
+  AUTHOR: otis@FreeBSD.org
+
+  The following breaking changes apply to beats 7.15.0 and newer:
+
+    - All beats:
+    Loading Kibana assets (dashboards, index templates) rely on Saved Object API.
+    So to provide a reliable service, Beats can only import and export dashboards
+    using at least Kibana 7.15.
+
+    - Filebeat:
+      - Remove all alias fields pointing to ECS fields from modules. This affects
+        the Suricata and Traefik modules.
+      - Fix Crowdstrike ingest pipeline that was creating flattened process fields.
+      - Rename log.path to log.file.path in filestream to be consistent with log
+        input and ECS.
+
+    - Heartbeat:
+      - Remove long deprecated watch_poll functionality.
+      - Fix inconsistency in event.dataset values between heartbeat and fleet by
+        always setting this value to the monitor type / fleet dataset.
+
+    - Metricbeat:
+      - Fix Elasticsearch jvm.gc.collectors.old being exposed as young
+
+  Full changelog:
+    https://www.elastic.co/guide/en/beats/libbeat/current/release-notes-7.15.0.html
+    https://www.elastic.co/guide/en/beats/libbeat/current/release-notes-7.15.1.html
+
+20211024:
+  AFFECTS: users of databases/postgresql* and other software using PostgreSQL to run
+  AUTHOR: kbowling@FreeBSD.org
+
+  The default version of PostgreSQL has been switched from 12 to 13.
+  The upgrade procedure can use up twice the space the databases
+  currently needs. If you have a big amount of stored data take a
+  closer look at the manpage of pg_upgrade for avoidance and/or
+  speedup of the upgrade.
+
+  The upgrade instructions consider a basic usage and do not match
+  complex scenarios like replication, sharding, or similar.
+
+  Upgrade instructions:
+
+  First stop your PostgreSQL, create PostgreSQL-binaries and backup your data.
+  If you have another Version of PostgreSQL installed, for example 12.8, your
+  files are named according to this.
+
+  # service postgresql stop
+  # pkg create postgresql12-server postgresql12-contrib
+  # mkdir /tmp/pg-upgrade
+  # tar xf postgresql12-server-12.8.pkg -C /tmp/pg-upgrade
+  # tar xf postgresql12-contrib-12.8.pkg -C /tmp/pg-upgrade
+  # pkg delete -f databases/postgresql12-server databases/postgresql12-contrib databases/postgresql12-client
+
+  Now update PostgreSQL:
+
+    pkg user:
+    # pkg install databases/postgresql13-server databases/postgresql13-contrib
+    # pkg upgrade
+
+    Portmaster users:
+    # portmaster databases/postgresql13-server databases/postgresql13-contrib
+    # portmaster -a
+
+    Portupgrade users:
+    # portinstall databases/postgresql13-server databases/postgresql13-contrib
+    # portupgrade -a
+
+  After installing the new PostgreSQL version you need to convert
+  all your databases to new version:
+
+  # su -l postgres -c "/usr/local/bin/initdb --encoding=utf-8 --lc-collate=C -D /var/db/postgres/data13 -U postgres"
+  # su -l postgres -c "pg_upgrade -b /tmp/pg-upgrade/usr/local/bin/ -d /var/db/postgres/data12/ -B /usr/local/bin/ -D /var/db/postgres/data13/ -U postgres "
+
+  Now the migration is finished. You can start PostgreSQL again with:
+
+  # service postgresql start
+
+  ATTENTION:
+  1) The default user changed from "pgsql" to "postgres" in 11. The migration steps above now assume
+     the "postgres" database user and FreeBSD user.
+  2) See the updating entry 20190829 if you are updating from a release prior to 11.
+  3) If you use non-default initdb options, you have to adjust the initdb-command accordingly
+
+20211023:
+  AFFECTS: users of www/node
+  AUTHOR: bhughes@FreeBSD.org
+
+  The www/node port has been updated to Node.js v17.0.0, the latest
+  upstream release. A new port, www/node16, has been created for the
+  upcoming v16.x LTS branch. Users wanting to stay on v16.x can replace
+  www/node with www/node16 with one of the following commands:
+
+  # pkg install www/node16
+    or
+  # portmaster -o www/node16 www/node
+    or
+  # portupgrade -o www/node16 www/node
+
+20211012:
+  AFFECTS: users of devel/git
+  AUTHOR: garga@FreeBSD.org
+
+  devel/git port was split into multiple sub-ports that depend on devel/git
+  and install additional files:
+
+  - devel/git-cvs - CVS related scripts and man pages
+  - devel/git-gui - GUI related scripts and man pages
+  - devel/git-p4  - Perforce related scripts and man pages
+  - devel/git-svn - Subversion related scripts and man pages
+
+  Due to these changes, CVS, GUI, PERFORCE, and SUBVERSION options
+  as well as gui and svn flavors were removed from the port.
+
+20211010:
+  AFFECTS: users of gtk2 flavored devel/geany*
+  AUTHOR: madpilot@FreeBSD.org
+
+  Upstream dropped support for gtk2. Due to this the ports are now
+  unflavored, installing only with gtk3 support.
+
+  If you are already using the default gtk3 flavor will get the new
+  version with a simple "pkg upgrade".
+
+  To upgrade when using the gtk2 flavors you need to use "pkg install"
+  to install the new unflavored gtk3 packages, pkg will automatically
+  uninstall the old gtk2 flavors.
+
+  If using ports, you will need to uninstall all geany packages and
+  its plugins and reinstall from an updated ports tree.
+
+  The "geany-plugin-multiterm" plugin was only available as a gtk2
+  flavor when installing the gtk2 flavor of geany and has not been
+  ported to gtk3, so has been removed from the tree, so the
+  geany-plugin-multiterm-gtk2 package should be removed from the system.
+
+20211007:
+  AFFECTS: user of security/clamav
+  AUTHOR: yasu@FreeBSD.org
+
+  Upstream changed end-of-life policy and introduced long time support
+  (LTS) feature release.
+
+  * LTS feature release will be identified approximately every two
+    years and supported for at least three years from the initial
+    publication date of that LTS feature version.
+  * Regular (non-LTS) feature releases will be supported for at least
+    four months from the initial publication date of the next feature
+    release or until the feature release after that is published.
+
+  According to it new port security/clamav-lts is added for users who
+  want to use LTS version of ClamAV.
+
+  Users wanting to switch to LTS version can replace security/clamav
+  with security/clamav-lts with one of following commands.
+
+  If you use pkg with binary packages:
+    # pkg set -o security/clamav:security/clamav-lts
+    # pkg upgrade
+  If you use portmaster:
+    # portmaster -o security/clamav-lts security/clamav
+  If you use portupgrade:
+    # portupgrade -o security/clamav-lts security/clamav
+
+20211006:
+AFFECTS: users of misc/freebsd-doc-*
+AUTHOR: blackend@FreeBSD.org
+
+The misc/freebsd-doc-* ports have been updated to the new doc toolchain,
+and use a somewhat different arrangement of directories and symlinks,
+which pkg 1.17 does not handle well.
+
+Users are encouraged to delete the misc/freebsd-doc-* ports, then
+reinstall the new ones without using the pkg upgrade facility.
+
+20211006:
+  AFFECTS: users of net/kafkacat
+  AUTHOR: sergey@akhmatov.ru
+
+  kafkacat has been renamed to kcat upstream.
+  So switch to net/kcat instead.
+
+20211004:
+  AFFECTS: users of net-mgmt/netbox
+  AUTHOR: kai@FreeBSD.org
+
+  /!\ WARNING /!\
+
+  The NetBox 3.0 release contains major changes, so at least items 1.), 2.)
+  and 3.) must be checked before proceeding with the upgrade!
+
+  /!\ WARNING /!\
+
+  1. Please ensure that your local installation of net-mgmt/netbox is at
+     the 2.11 release before attemping to upgrade to NetBox 3.0 or later.
+
+  2. Please also note that the previously deprecated secrets functionality
+     has been removed with NetBox 3.0.  This means, all of the secrets still
+     remain in the database once upgraded, only the secrets functionality on
+     the part of NetBox is no longer given.
+
+     In order to continue to be able to access the stored secrets as usual
+     (and then possibly migrate them to another solution, e.g.
+     security/vault), please install the security/py-netbox-secretstore port
+     once NetBox has been upgraded to 3.x and follow its installation
+     instructions how to enable the plugin.
+
+  3. If plugins are used, they should be temporarily deactivated to avoid
+     disruptions during the upgrade process.
+
+  4. Please also check the pkg-message and the changelogs for further info.
+
+20211004:
   AFFECTS: users of www/py-pyjwt
   AUTHOR: rhurlin@FreeBSD.org
 
