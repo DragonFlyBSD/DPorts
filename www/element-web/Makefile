@@ -1,6 +1,6 @@
 PORTNAME=	element
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.9.7
+DISTVERSION=	1.9.8
 CATEGORIES=	www
 MASTER_SITES=	https://github.com/vector-im/element-web/releases/download/${DISTVERSIONFULL}/
 PKGNAMESUFFIX=	-web
@@ -9,6 +9,10 @@ MAINTAINER=	ports@xanderio.de
 COMMENT=	Glossy Matrix collaboration client for the web
 
 LICENSE=	APACHE20
+
+USES=		cpe
+
+CPE_VENDOR=	matrix
 
 NO_ARCH=	yes
 NO_BUILD=	yes
