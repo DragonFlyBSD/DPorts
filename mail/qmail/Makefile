@@ -14,8 +14,8 @@ COMMENT?=	Secure, reliable, efficient, simple, and fast MTA
 
 DIST_SUBDIR=	qmail
 
-CONFLICTS?=	qmail-ldap-[0-9]* *qmail-mysql-[0-9]* qmail-spamcontrol-[0-9]* *qmail-tls-[0-9]*
-CONFLICTS+=	qmail-vida-[0-9]*
+CONFLICTS?=	qmail-ldap *qmail-mysql qmail-spamcontrol *qmail-tls
+CONFLICTS+=	qmail-vida
 
 USES+=		qmail:vars fakeroot
 PREFIX?=	${QMAIL_PREFIX}
@@ -85,6 +85,8 @@ QMAIL_PORTNAME=			netqmail
 QMAIL_VERSION=			1.06
 BARRIER_SENDMAIL_F_PATCH=	yes
 BARRIER_QMAILQUEUE_PATCH=	yes
+USES+=				cpe
+CPE_VENDOR=			netqmail
 .else
 # This is only used for slave ports.
 QMAIL_PORTNAME=			qmail
