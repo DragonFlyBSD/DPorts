@@ -1,5 +1,5 @@
 PORTNAME=	numix-icon-theme
-PORTVERSION=	21.04.14
+PORTVERSION=	21.10.31
 CATEGORIES=	x11-themes
 
 MAINTAINER=	Alexander88207@protonmail.com
@@ -12,8 +12,6 @@ USES=		gnome
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	numixproject
-
-INSTALLS_ICONS=	yes
 
 NO_ARCH=	yes
 NO_BUILD=	yes
