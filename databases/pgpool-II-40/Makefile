@@ -1,5 +1,5 @@
 PORTNAME=	pgpool-II
-PORTVERSION=	4.0.9
+PORTVERSION=	4.0.17
 CATEGORIES=	databases
 MASTER_SITES=	http://www.pgpool.net/mediawiki/images/
 PKGNAMESUFFIX=	40
@@ -10,14 +10,14 @@ COMMENT=	Connection pool server for PostgreSQL
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+USES=		gmake libtool pgsql:9.6+
+USE_LDCONFIG=	yes
+USE_RC_SUBR=	pgpool
+
 PORTSCOUT=	limit:^4.0.[0-9]*
 
-USES=		gmake libtool pgsql:9.6+
 GNU_CONFIGURE=	yes
-USE_LDCONFIG=	yes
-
-USE_RC_SUBR=	pgpool
-CONFLICTS=	pgpool-II-[0-9]*
+CONFLICTS=	pgpool-II
 
 PORTDOCS=	*
 
