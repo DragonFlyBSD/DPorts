@@ -2,13 +2,17 @@ PORTNAME=	php73
 DISTVERSION=	7.3.33
 PORTREVISION?=	0
 CATEGORIES?=	lang devel www
-MASTER_SITES=	PHP/distributions
+MASTER_SITES=	PHP
 DISTNAME=	php-${DISTVERSION}
+DIST_SUBDIR=	php
 
 MAINTAINER=	tz@FreeBSD.org
 COMMENT=	PHP Scripting Language
 
 LICENSE=	PHP301
+
+DEPRECATED=	Upstream active support expired on 2021-12-06
+EXPIRATION_DATE=	2022-01-25
 
 USES+=		tar:xz cpe gnome
 CPE_PRODUCT=	php
@@ -59,7 +63,7 @@ MYSQLND_DESC=	Build with MySQL Native Driver
 LINKTHR_DESC=	Link thread lib (for threaded extensions)
 ZTS_DESC=	Force Zend Thread Safety (ZTS) build
 
-CONFLICTS=	php74-* php80-*
+CONFLICTS=	php74 php80
 
 DESTDIRNAME=	INSTALL_ROOT
 
