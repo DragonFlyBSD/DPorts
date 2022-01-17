@@ -1,8 +1,8 @@
 # Created by: Matthias Andree <mandree@FreeBSD.org>
 
 PORTNAME=		openvpn
-DISTVERSION=		2.5.4
-PORTREVISION?=		2
+DISTVERSION=		2.5.5
+PORTREVISION?=		0
 CATEGORIES=		security net net-vpn
 MASTER_SITES=		https://swupdate.openvpn.org/community/releases/ \
 			https://build.openvpn.net/downloads/releases/ \
@@ -26,7 +26,7 @@ CONFIGURE_ARGS+=	--enable-strict
 # set PLUGIN_LIBDIR so that unqualified plugin paths are found:
 CONFIGURE_ENV+=		PLUGINDIR="${PREFIX}/lib/openvpn/plugins"
 
-CONFLICTS_INSTALL?=	openvpn-2.[!5].* openvpn-devel-[0-9]* openvpn-mbedtls-[0-9]*
+CONFLICTS_INSTALL?=	openvpn-2.[!5].* openvpn-devel openvpn-mbedtls
 
 SUB_FILES=		pkg-message openvpn-client
 
@@ -38,7 +38,7 @@ PORTEXAMPLES=		*
 
 OPTIONS_DEFINE=		ASYNC_PUSH DOCS EASYRSA EXAMPLES LZ4 LZO PKCS11 SMALL \
 			TEST TUNNELBLICK UNITTESTS X509ALTUSERNAME
-OPTIONS_DEFAULT=	EASYRSA LZ4 LZO OPENSSL TEST
+OPTIONS_DEFAULT=	EASYRSA LZ4 LZO OPENSSL PKCS11 TEST
 OPTIONS_SINGLE=		SSL
 OPTIONS_SINGLE_SSL=	OPENSSL MBEDTLS
 ASYNC_PUSH_DESC=	Enable async-push support
