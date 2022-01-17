@@ -1,7 +1,7 @@
 # Created by: Brian Somers <brian@FreeBSD.org>
 
 PORTNAME=	arpwatch
-PORTVERSION=	3.1
+PORTVERSION=	3.2
 CATEGORIES=	net-mgmt
 MASTER_SITES=	https://ee.lbl.gov/downloads/arpwatch/ \
 		LOCAL/leres/arpwatch
@@ -17,8 +17,9 @@ RUN_DEPENDS=	${LOCALBASE}/include/pcap.h:net/libpcap
 USES=		python:run
 
 GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--with-sendmail=/usr/sbin/sendmail
 
-SUB_FILES=      pkg-message
+SUB_FILES=	pkg-message
 
 OPTIONS_DEFINE=	DEBUG ZEROPAD
 OPTIONS_DEFAULT=ZEROPAD
@@ -29,11 +30,11 @@ ZEROPAD_DESC=	zero pad displayed ethernet addresses by default
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDEBUG}
-CONFIGURE_ARGS+=        --disable-optimization
+CONFIGURE_ARGS+=	--disable-optimization
 .endif
 
 .if ${PORT_OPTIONS:MZEROPAD}
-CONFIGURE_ARGS+=        --enable-zeropad
+CONFIGURE_ARGS+=	--enable-zeropad
 .endif
 
 .ifdef ARPDIR
