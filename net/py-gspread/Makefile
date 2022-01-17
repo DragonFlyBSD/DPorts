@@ -1,8 +1,8 @@
 # Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
 
 PORTNAME=	gspread
-PORTVERSION=	4.0.1
-DISTVERSIONPREFIX=     v
+PORTVERSION=	5.1.1
+DISTVERSIONPREFIX=	v
 CATEGORIES=	net python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -16,10 +16,10 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}requests>2.2.1:www/py-requests@${PY_FLAVOR} 
 		${PYTHON_PKGNAMEPREFIX}google-auth>1.12.0:security/py-google-auth@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}google-auth-oauthlib>0.4.1:security/py-google-auth-oauthlib@${PY_FLAVOR}
 
-USES=	python:3.6+
+USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
 
-USE_GITHUB=     yes
-GH_ACCOUNT=     burnash
+USE_GITHUB=	yes
+GH_ACCOUNT=	burnash
 
 .include <bsd.port.mk>
