@@ -1,6 +1,6 @@
 PORTNAME=	libfolia
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.9
+DISTVERSION=	2.10
 CATEGORIES=	textproc
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -14,12 +14,14 @@ LIB_DEPENDS=	libicui18n.so:devel/icu \
 		libticcutils.so:devel/ticcutils
 
 USES=		autoreconf compiler:c++11-lang gmake gnome libtool pkgconfig
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--disable-static
-USE_GITHUB=	yes
-GH_ACCOUNT=	LanguageMachines
 USE_GNOME=	libxml2
 USE_LDCONFIG=	yes
+
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--disable-static
+
+USE_GITHUB=	yes
+GH_ACCOUNT=	LanguageMachines
 
 INSTALL_TARGET=	install-strip
 
