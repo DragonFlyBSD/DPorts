@@ -1,8 +1,0 @@
---- deps/druuid/rebar.config.script.orig	2015-10-14 17:20:52 UTC
-+++ deps/druuid/rebar.config.script
-@@ -1,4 +1,4 @@
--case rebar_utils:is_arch("bsd") of
-+case rebar_utils:is_arch("dragonfly") of
-     true ->
-         [
-             {port_specs, [

@@ -1,7 +1,0 @@
-
-NCURSES_USES=		ncurses
-CONFIGURE_ARGS+=	--disable-netmap --disable-stack-protector --enable-curses
-
-dfly-patch:
-	${REINPLACE_CMD} -e "s@curses_lib_list=\"@&-L${LOCALBASE}/lib @g" \
-		${WRKSRC}/configure
