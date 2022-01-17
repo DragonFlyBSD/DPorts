@@ -14,8 +14,6 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 USES=		compiler:c++11-lib cpe libtool pathfix pkgconfig ssl tar:xz
 
-CPE_VENDOR=	aria2_project
-
 CONFIGURE_ARGS=	--disable-epoll \
 		--enable-bittorrent --enable-libaria2 --enable-metalink --enable-shared --enable-ssl --enable-threads=posix --enable-websocket \
 		--with-disk-cache=${ARIA2_DISK_CACHE} \
@@ -34,6 +32,8 @@ PORTDOCS=	*
 
 ARIA2_DISK_CACHE?=	16M
 
+CPE_VENDOR=	aria2_project
+
 OPTIONS_DEFINE=	CA_BUNDLE CARES DOCS LIBUV NLS SQLITE SSH2 STATIC
 OPTIONS_SINGLE=	XML
 OPTIONS_SINGLE_XML=	EXPAT LIBXML2
@@ -49,7 +49,7 @@ CA_BUNDLE_RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:security/ca_root
 CARES_CONFIGURE_WITH=	libcares
 CARES_LIB_DEPENDS=	libcares.so:dns/c-ares
 EXPAT_CONFIGURE_WITH=	libexpat
-EXPAT_LIB_DEPENDS=	libexpat.so:devel/expat2
+EXPAT_LIB_DEPENDS=	libexpat.so:textproc/expat2
 LIBUV_CONFIGURE_WITH=	libuv
 LIBUV_LIB_DEPENDS=	libuv.so:devel/libuv
 LIBXML2_CONFIGURE_WITH=	libxml2
