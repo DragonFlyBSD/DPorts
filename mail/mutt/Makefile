@@ -1,7 +1,7 @@
 # Created by: Udo Schweigert
 
 PORTNAME=	mutt
-DISTVERSION=	2.1.3
+DISTVERSION=	2.1.5
 CATEGORIES+=	mail
 MASTER_SITES=	ftp://ftp.mutt.org/pub/mutt/ \
 		https://bitbucket.org/mutt/mutt/downloads/ \
@@ -42,8 +42,8 @@ CONFIGURE_ARGS=	--disable-fcntl \
 CONFIGURE_ARGS+=	${MUTT_CONFIGURE_ARGS}
 .endif
 
-CONFLICTS=	ja-mutt-[0-9]* ja-mutt-devel-[0-9]* mutt-1.4* \
-		mutt-devel-lite-[0-9]* mutt-lite-[0-9]* zh-mutt-devel-[0-9]*
+CONFLICTS=	ja-mutt ja-mutt-devel mutt-1.4* \
+		mutt-devel-lite mutt-lite zh-mutt-devel
 
 INFO=		${PORTNAME}
 
