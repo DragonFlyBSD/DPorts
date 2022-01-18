@@ -28,7 +28,7 @@ CONFIGURE_ARGS=	-O -Dyacc='byacc' \
 MAKE_ARGS=	INSTALL_PREFIX="${STAGEDIR}"
 INSTALL_TARGET=	install install.man
 
-PLIST_SUB=	ARCH="${ARCH}" OPSYS="${OPSYS:tl}"
+PLIST_SUB=	ARCH="${ARCH:C/powerpc.*/powerpc/}" OPSYS="${OPSYS:tl}"
 
 OPTIONS_DEFINE=		DBUS DEBUG GUI IPV6 NLS PORTABILITY TLS
 OPTIONS_DEFAULT=	GUI TLS
@@ -38,7 +38,6 @@ DBUS_LIB_DEPENDS=	libdbus-1.so:devel/dbus
 DBUS_CONFIGURE_OFF=	-Ud_dbus
 DEBUG_CONFIGURE_ON=	-Ud_official
 GUI_USE=		gnome=gtk20,cairo
-GUI_VARS=		INSTALLS_ICONS=yes
 GUI_CONFIGURE_OFF=	-Dd_headless
 GUI_LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 			libfreetype.so:print/freetype2
