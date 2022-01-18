@@ -1,9 +1,8 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
 
 PORTNAME=	toxcore
-PORTVERSION=	0.2.12
+PORTVERSION=	0.2.13
 DISTVERSIONPREFIX=	v
-PORTREVISION=	3
 PORTEPOCH=	1
 CATEGORIES=	net-im net-p2p
 
@@ -21,7 +20,7 @@ LIB_DEPENDS=	libvpx.so:multimedia/libvpx		\
 		libsodium.so:security/libsodium		\
 		libopus.so:audio/opus			\
 		libconfig.so:devel/libconfig
-TEST_DEPENDS=	libopencv_core.so:graphics/opencv
+#TEST_DEPENDS=	libopencv_core.so:graphics/opencv
 
 CONFLICTS=	toxcore-legacy-0.1.*
 
@@ -29,7 +28,9 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	TokTok
 GH_PROJECT=	c-toxcore
 
-USES=		cmake compiler:c11 libtool pathfix pkgconfig
+CPE_VENDOR=	digitalocean
+
+USES=		cmake compiler:c11 cpe libtool pathfix pkgconfig
 USE_LDCONFIG=	yes
 PLIST_SUB=	VER=${PORTVERSION:C/0.//}.0 SO=2
 
