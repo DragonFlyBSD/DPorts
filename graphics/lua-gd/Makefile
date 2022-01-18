@@ -27,8 +27,10 @@ EXAMPLESDIR=	${LUA_EXAMPLESDIR}
 
 CFLAGS_aarch64=	-fPIC
 CFLAGS_x86_64=	-fPIC
+CFLAGS_armv7=	-fPIC
 CFLAGS_i386=	-fPIC
 CFLAGS_powerpc=	-fPIC
+CFLAGS_riscv64=	-fPIC
 
 do-build:
 	${CC} -o ${WRKSRC}/gd.so ${CPPFLAGS} ${CFLAGS} ${LDFLAGS} ${GDFEATURES} ${WRKSRC}/luagd.c
