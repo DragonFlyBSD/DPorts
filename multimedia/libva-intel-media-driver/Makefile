@@ -1,19 +1,20 @@
 PORTNAME=	media-driver
 DISTVERSIONPREFIX=	intel-media-
-DISTVERSION=	21.3.5
+DISTVERSION=	22.1.1
 CATEGORIES=	multimedia
 PKGNAMEPREFIX=	libva-intel-
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES+=	a65683be3d3a.patch:-p1 # https://github.com/intel/media-driver/pull/819
-PATCHFILES+=	9783808c766f.patch:-p1 # https://github.com/intel/media-driver/pull/819
-PATCHFILES+=	525dab01c1a2.patch:-p1 # https://github.com/intel/media-driver/pull/819
-PATCHFILES+=	d84559d09c47.patch:-p1 # https://github.com/intel/media-driver/pull/819
-PATCHFILES+=	2b730b48a7aa.patch:-p1 # https://github.com/intel/media-driver/pull/819
-PATCHFILES+=	eb2da1838a51.patch:-p1 # https://github.com/intel/media-driver/pull/819
-PATCHFILES+=	dc18089c0fb4.patch:-p1 # https://github.com/intel/media-driver/pull/819
-PATCHFILES+=	7ff0adca274b.patch:-p1 # https://github.com/intel/media-driver/pull/819
-PATCHFILES+=	217287d7ec2f.patch:-p1 # https://github.com/intel/media-driver/pull/819
+PATCHFILES+=	4a6e36a98c0b.patch:-p1 # https://github.com/intel/media-driver/pull/819
+PATCHFILES+=	533e7ae79ff7.patch:-p1 # https://github.com/intel/media-driver/pull/819
+PATCHFILES+=	c0ecf4c2c725.patch:-p1 # https://github.com/intel/media-driver/pull/819
+PATCHFILES+=	37833db579ab.patch:-p1 # https://github.com/intel/media-driver/pull/819
+PATCHFILES+=	428eab9583eb.patch:-p1 # https://github.com/intel/media-driver/pull/819
+PATCHFILES+=	615ae63a9ca6.patch:-p1 # https://github.com/intel/media-driver/pull/819
+PATCHFILES+=	774ab04fbce1.patch:-p1 # https://github.com/intel/media-driver/pull/819
+PATCHFILES+=	762a39a7da08.patch:-p1 # https://github.com/intel/media-driver/pull/819
+PATCHFILES+=	e1d499bc31b5.patch:-p1 # https://github.com/intel/media-driver/pull/819
+PATCHFILES+=	721cc37f1b56.patch:-p1 # https://github.com/intel/media-driver/pull/819
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	VAAPI driver for Intel HD 5000 (Gen8) or newer
@@ -23,7 +24,7 @@ LICENSE_COMB=	multi
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
 ONLY_FOR_ARCHS=	amd64 i386
-ONLY_FOR_ARCHS_REASON=	Only Intel GPUs on x86 are supported
+ONLY_FOR_ARCHS_REASON=	only Intel GPUs on x86 are supported
 
 BUILD_DEPENDS=	gmmlib>=19.3.1:multimedia/gmmlib \
 		libva>=2.7.0:multimedia/libva
