@@ -12,6 +12,9 @@ COMMENT=	Typo3 content management system
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
+DEPRECATED=	Mainstream support ended 2021-09-30
+EXPIRATION_DATE=2024-09-30
+
 USES=		cpe php:web,flavors shebangfix
 USE_PHP=	ctype dom fileinfo filter hash intl json openssl pcre session simplexml \
 		spl tokenizer xml zip
@@ -24,7 +27,7 @@ PORTSCOUT=	limit:^${PORT_V_MAJOR}\.${PORT_V_MINOR}\.
 
 PORT_V_MAJOR=	9
 PORT_V_MINOR=	5
-PORT_V_PATCH=	27
+PORT_V_PATCH=	31
 
 TYPO3WWW=	www
 TYPO3SRC=	${PORTNAME}_src-${PORTVERSION}
@@ -64,9 +67,9 @@ ZLIB_USE=	PHP=zlib
 
 .if ${PORT_OPTIONS:MIMAGICK}
 .if ${PORT_OPTIONS:MX11}
-RUN_DEPENDS+=	convert:graphics/ImageMagick6
+USES+=		magick:6,run
 .else
-RUN_DEPENDS+=	convert:graphics/ImageMagick6-nox11
+USES+=		magick:6,run,nox11
 .endif
 .endif
 
