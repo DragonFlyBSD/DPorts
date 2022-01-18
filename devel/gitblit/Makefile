@@ -13,7 +13,10 @@ COMMENT=	Open-source servlet for Git repositories
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/WEB-INF/LICENSE
 
-CONFLICTS=	${PORTNAME}-go-[0-9]*
+DEPRECATED=	Depends on expired www/tomcat7
+EXPIRATION_DATE=2022-03-31
+
+CONFLICTS=	${PORTNAME}-go
 
 NO_ARCH=	yes
 NO_BUILD=	yes
