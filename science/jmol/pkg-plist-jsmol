@@ -316,6 +316,7 @@
 %%WWWDIR%%/j2s/J/adapter/readers/xtal/GulpReader.js
 %%WWWDIR%%/j2s/J/adapter/readers/xtal/JanaReader.js
 %%WWWDIR%%/j2s/J/adapter/readers/xtal/MagresReader.js
+%%WWWDIR%%/j2s/J/adapter/readers/xtal/PWmatReader.js
 %%WWWDIR%%/j2s/J/adapter/readers/xtal/ShelxReader.js
 %%WWWDIR%%/j2s/J/adapter/readers/xtal/SiestaReader.js
 %%WWWDIR%%/j2s/J/adapter/readers/xtal/VaspChgcarReader.js
@@ -1019,6 +1020,7 @@
 %%WWWDIR%%/j2s/JSV/popup/JSVGenericPopup.js
 %%WWWDIR%%/j2s/JSV/popup/JSVPopupResourceBundle.js
 %%WWWDIR%%/j2s/JSV/source/AnIMLReader.js
+%%WWWDIR%%/j2s/JSV/source/BrukerReader.js
 %%WWWDIR%%/j2s/JSV/source/CMLReader.js
 %%WWWDIR%%/j2s/JSV/source/JDXDataObject.js
 %%WWWDIR%%/j2s/JSV/source/JDXDecompressor.js
@@ -1725,6 +1727,7 @@
 %%WWWDIR%%/mmtf.htm
 %%WWWDIR%%/nmr_predict_1H.htm
 %%WWWDIR%%/nmr_predict_HC.htm
+%%WWWDIR%%/pgtest.htm
 %%WWWDIR%%/php/jsmol.php
 %%WWWDIR%%/resize.htm
 %%WWWDIR%%/simple.htm
