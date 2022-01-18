@@ -2,7 +2,7 @@
 
 PORTNAME=	pfstools
 DISTVERSION=	2.1.0
-PORTREVISION=	11
+PORTREVISION=	12
 CATEGORIES=	graphics
 MASTER_SITES=	SF
 
@@ -54,7 +54,7 @@ OPENEXR_LIB_DEPENDS=	libOpenEXR.so:graphics/openexr \
 			libImath.so:math/Imath
 
 IMAGEMAGICK_CMAKE_BOOL=	WITH_ImageMagick
-IMAGEMAGICK_LIB_DEPENDS=	libMagick++-6.so:graphics/ImageMagick6
+IMAGEMAGICK_USES=	magick:6
 
 NETPBM_CMAKE_BOOL=	WITH_NetPBM
 NETPBM_LIB_DEPENDS=	libnetpbm.so:graphics/netpbm
@@ -87,8 +87,6 @@ GLVIEW_USE=		GL=glut GL=gl,glu
 VIEW_CMAKE_BOOL=	WITH_QT
 VIEW_USES=		gl qt:5
 VIEW_USE=		GL=glut GL=gl,glu QT=core,gui,widgets,buildtools_build,qmake_build
-
-OPENMP_USES=		compiler:openmp
 
 .include <bsd.port.options.mk>
 
