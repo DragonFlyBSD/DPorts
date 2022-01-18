@@ -1,7 +1,7 @@
 # Created by: Ben Woods <woodsb02@FreeBSD.org>
 
 PORTNAME=	keepass
-PORTVERSION=	2.46
+PORTVERSION=	2.49
 CATEGORIES=	security
 MASTER_SITES=	SF/${PORTNAME}/KeePass%202.x/${PORTVERSION}
 DISTNAME=	KeePass-${PORTVERSION}-Source
@@ -19,7 +19,6 @@ USES=		cpe dos2unix gnome mono zip
 
 DOS2UNIX_GLOB=		*.csproj *.sln
 EXTRACT_AFTER_ARGS=	-d ${WRKDIR}/${DISTNAME}
-INSTALLS_ICONS=		yes
 NO_ARCH=		yes
 SUB_FILES=		${PORTNAME}.sh
 DESKTOP_ENTRIES=	"KeePass" \
