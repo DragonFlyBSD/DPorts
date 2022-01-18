@@ -13,6 +13,9 @@ COMMENT=	Java-PDF Library
 LICENSE=	LGPL20+ MPL11
 LICENSE_COMB=	dual
 
+DEPRECATED=	Outdated version and deprecated by upstream
+EXPIRATION_DATE=2022-03-31
+
 BUILD_DEPENDS=	${JAVALIBDIR}/bcmail.jar:java/bouncycastle \
 		${JAVALIBDIR}/dom4j.jar:textproc/dom4j \
 		${JAVALIBDIR}/pdf-renderer.jar:print/pdf-renderer
@@ -22,7 +25,8 @@ RUN_DEPENDS=	${JAVALIBDIR}/bcmail.jar:java/bouncycastle \
 
 OPTIONS_DEFINE=	DOCS
 
-USES=		dos2unix tar:bzip2
+USES=		cpe dos2unix tar:bzip2
+CPE_VENDOR=	${PORTNAME}pdf
 DOS2UNIX_GLOB=	*.java
 USE_JAVA=	yes
 USE_ANT=	yes
