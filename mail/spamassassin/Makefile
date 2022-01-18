@@ -3,7 +3,7 @@
 PORTNAME=	spamassassin
 PORTVERSION=	3.4.5
 CATEGORIES?=	mail perl5
-MASTER_SITES=	APACHE/spamassassin/source CPAN/Mail
+MASTER_SITES=	https://archive.apache.org/dist/${PORTNAME}/source/ CPAN/Mail
 DISTNAME=	Mail-SpamAssassin-${PORTVERSION}
 
 MAINTAINER?=	zeising@FreeBSD.org
@@ -27,7 +27,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS} \
 TEST_DEPENDS+=	${${dep}_RUN_DEPENDS}
 .endfor
 
-CONFLICTS?=	ja-spamassassin-[0-9]*
+CONFLICTS?=	ja-spamassassin
 
 CPE_VENDOR=	apache
 
