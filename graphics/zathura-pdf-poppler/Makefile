@@ -2,7 +2,7 @@
 
 PORTNAME=	zathura-pdf-poppler
 DISTVERSION=	0.3.0
-PORTREVISION=	8
+PORTREVISION=	10
 CATEGORIES=	graphics
 MASTER_SITES=	https://git.pwmt.org/pwmt/${PORTNAME}/-/archive/${DISTVERSION}/
 
@@ -19,7 +19,7 @@ RUN_DEPENDS=	zathura:graphics/zathura
 USES=		compiler:c11 desktop-file-utils gnome meson ninja pkgconfig
 USE_GNOME=	glib20 gtk30
 
-CONFLICTS=	zathura-pdf-mupdf-[0-9]*
+CONFLICTS=	zathura-pdf-mupdf
 
 PLIST_FILES=	lib/zathura/libpdf-poppler.so \
 		share/appdata/org.pwmt.zathura-pdf-poppler.metainfo.xml \
