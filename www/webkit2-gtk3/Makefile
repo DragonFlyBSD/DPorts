@@ -1,7 +1,7 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
 
 PORTNAME=	webkit
-DISTVERSION=	2.34.0
+DISTVERSION=	2.34.2
 CATEGORIES=	www
 MASTER_SITES=	https://webkitgtk.org/releases/
 PKGNAMESUFFIX=	2-gtk3
@@ -34,7 +34,7 @@ LIB_DEPENDS=	libenchant-2.so:textproc/enchant2 \
 
 PORTSCOUT=	limitw:1,even
 
-USES=		bison cmake compiler:c++14-lang gettext gl gnome gperf \
+USES=		bison cmake compiler:c++14-lang cpe gettext gl gnome gperf \
 		jpeg localbase:ldflags perl5 pkgconfig python:build \
 		sqlite tar:xz xorg
 USE_GNOME=	cairo gdkpixbuf2 gtk30 introspection:build libxml2 libxslt
@@ -44,6 +44,9 @@ USE_PERL5=	build
 USE_RUBY=	yes
 RUBY_NO_RUN_DEPENDS=	yes
 USE_XORG=	x11 xcomposite xdamage xext xrender xt ice
+
+CPE_VENDOR=	webkitgtk
+CPE_PRODUCT=	webkitgtk
 
 BINARY_ALIAS=		python=${PYTHON_CMD}
 CXXFLAGS+=		-DFIXED_EXECUTABLE_MEMORY_POOL_SIZE_IN_MB=32
@@ -61,10 +64,7 @@ CMAKE_OFF_armv6=	ENABLE_JIT
 CMAKE_OFF_armv7=	ENABLE_JIT
 CMAKE_OFF_powerpc=	ENABLE_JIT
 CMAKE_OFF_powerpc64=	ENABLE_JIT
-CONFIGURE_ENV=		XDG_CACHE_HOME=${WRKDIR}
 INSTALL_TARGET=		install
-
-BROWSER_PLUGINS_DIR?=	${LOCALBASE}/lib/browser_plugins/symlinks/webkit-gtk3
 
 OPTIONS_DEFINE=		DEBUG GEOIP GSTREAMER WAYLAND
 OPTIONS_DEFAULT=	GEOIP GSTREAMER WAYLAND
@@ -85,6 +85,7 @@ GSTREAMER_USE=		GSTREAMER1=bad,gl
 GSTREAMER_CMAKE_BOOL=	ENABLE_VIDEO ENABLE_WEB_AUDIO
 
 WAYLAND_CMAKE_BOOL=	ENABLE_WAYLAND_TARGET
+WAYLAND_BUILD_DEPENDS=	wayland-protocols>=1.12:graphics/wayland-protocols
 WAYLAND_LIB_DEPENDS=	libwayland-egl.so:graphics/wayland \
 			libwpe-1.0.so:www/libwpe \
 			libWPEBackend-fdo-1.0.so:www/wpebackend-fdo
