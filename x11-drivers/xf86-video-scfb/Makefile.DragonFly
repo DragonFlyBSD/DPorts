@@ -1,9 +1,0 @@
-
-# zrj: force pkg to avoid breaking xorg on non uefi, else break sanity
-.if ${PORTVERSION} == "0.0.5" && ${PORTREVISION} == "2"
-OPTIONS_DEFINE+=	BUMP
-OPTIONS_DEFAULT+=	BUMP
-.else
-WITH_OPENSSL_PORT= da
-#BROKEN= version updated, clean MD
-.endif
