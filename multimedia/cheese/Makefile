@@ -1,7 +1,7 @@
 # Created by: FreeBSD GNOME Team <gnome@freebsd.org>
 
 PORTNAME=	cheese
-PORTVERSION=	41.0
+PORTVERSION=	41.1
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME/sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+)\..*/\1/}
 DIST_SUBDIR=	gnome
@@ -32,7 +32,6 @@ USE_GNOME=	cairo librsvg2 gnomedesktop3 libxml2:build introspection:build
 USE_GL=		egl
 USE_XORG=	xi xext xdamage xfixes xcomposite xrandr xxf86vm x11
 USE_GSTREAMER1=	bad good jpeg ogg theora v4l2 vorbis vpx
-INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-Wno-format-nonliteral
 
