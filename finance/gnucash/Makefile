@@ -1,7 +1,6 @@
-#   $MCom: ports/finance/gnucash/Makefile,v 1.26 2008/12/31 03:25:18 mezz Exp $
-
 PORTNAME=	gnucash
-PORTVERSION=	4.8
+PORTVERSION=	4.9
+PORTREVISION=	1
 CATEGORIES=	finance gnome
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}%20%28stable%29/${PORTVERSION}
 
@@ -26,7 +25,8 @@ LIB_DEPENDS=	libgnome-keyring.so:security/libgnome-keyring \
 		libharfbuzz.so:print/harfbuzz
 RUN_DEPENDS=	p5-libwww>=0:www/p5-libwww \
 		p5-Date-Manip>=0:devel/p5-Date-Manip \
-		p5-Finance-Quote>=0:finance/p5-Finance-Quote
+		p5-Finance-Quote>=0:finance/p5-Finance-Quote \
+		p5-LWP-Protocol-https>=0:www/p5-LWP-Protocol-https
 
 USES=		cmake:insource compiler:c++11-lib cpe desktop-file-utils \
 		gettext-tools gnome libtool localbase perl5 pkgconfig \
@@ -36,7 +36,6 @@ USE_CXXSTD=	c++11
 USE_GNOME=	cairo gtk30 intltool libxml2 libxslt
 USE_LDCONFIG=	yes
 
-INSTALLS_ICONS=	yes
 CMAKE_ARGS=	-DCOMPILE_GSCHEMAS=OFF \
 		-DENABLE_BINRELOC=OFF \
 		-DGNC_SHELL=/bin/sh
