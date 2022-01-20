@@ -12,9 +12,10 @@ LICENSE_NAME=	Gnuplot license
 LICENSE_FILE=	${WRKSRC}/Copyright
 LICENSE_PERMS=	dist-mirror pkg-mirror auto-accept
 
-CONFLICTS_INSTALL?=	gnuplot-lite-[0-9]*
+CONFLICTS_INSTALL?=	gnuplot-lite
 
-USES+=		compiler:c++11-lang groff iconv pkgconfig readline
+USES+=		compiler:c++11-lang cpe groff iconv pkgconfig readline
+CPE_VENDOR=	gnuplot_project
 GNU_CONFIGURE=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib ${ICONV_LIB}
 CONFIGURE_ARGS+=--with-readline=gnu \
