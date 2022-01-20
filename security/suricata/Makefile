@@ -28,6 +28,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-gccmarch-native \
 			--enable-bundled-htp \
 			--enable-gccprotect
+MAKE_ENV=		RUSTFLAGS="${RUSTFLAGS} -C linker=${CC:Q} ${LDFLAGS:C/.+/-C link-arg=&/}"
 
 INSTALL_TARGET=	install-strip
 TEST_TARGET=	check
