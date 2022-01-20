@@ -2,9 +2,12 @@
 
 PORTNAME=	inkscape
 DISTVERSION=	1.1
-PORTREVISION=	3
+PORTREVISION=	7
 CATEGORIES=	graphics gnome
 MASTER_SITES=	https://inkscape.org/gallery/item/26932/
+
+PATCH_SITES=	https://gitlab.com/inkscape/inkscape/-/commit/
+PATCHFILES=	7d9497b64df1ec3ddfb65efd105dd11212014ce9.patch:-p1
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Full featured open source SVG editor
@@ -54,8 +57,6 @@ USE_LDCONFIG=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${DISTVERSION}_2021-05-24_c4e8f9ed74
 
-INSTALLS_ICONS=	yes
-
 SHEBANG_FILES=	share/extensions/*.py share/extensions/genpofiles.sh \
 		share/templates/*.py man/fix-roff-punct
 
@@ -77,7 +78,6 @@ DBUS_LIB_DEPENDS=	libdbus-glib-1.so:devel/dbus-glib \
 
 GVFS_USE=		GNOME=gvfs
 
-OPENMP_USES=		compiler:openmp
 OPENMP_CMAKE_BOOL=	WITH_OPENMP
 
 POPPLER_DESC=		PDF preview rendering
@@ -99,7 +99,7 @@ WPG_LIB_DEPENDS=	libwpg-0.3.so:graphics/libwpg03
 
 IMAGICK_DESC=		Raster image format library
 IMAGICK6_DESC=		Use ImageMagick6
-IMAGICK6_LIB_DEPENDS=	libMagick++-6.so:graphics/ImageMagick6
+IMAGICK6_USES=		magick:6
 IMAGICK6_CMAKE_BOOL=	WITH_IMAGE_MAGICK
 GM_DESC=		Use GraphicsMagick
 GM_LIB_DEPENDS=		libGraphicsMagick.so:graphics/GraphicsMagick
