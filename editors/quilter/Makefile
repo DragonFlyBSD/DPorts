@@ -1,6 +1,6 @@
 PORTNAME=	quilter
 DISTVERSION=	2.2.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	editors
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -20,8 +20,6 @@ USES=		compiler:c11 desktop-file-utils gettext gnome meson pkgconfig python:buil
 USE_GITHUB=	yes
 GH_ACCOUNT=	lainsce
 USE_GNOME=	glib20 gtk30 gtksourceview3
-
-INSTALLS_ICONS=	yes
 
 GLIB_SCHEMAS=	com.github.lainsce.quilter.gschema.xml
 
