@@ -16,7 +16,6 @@ BUILD_DEPENDS=	vala:lang/vala \
 		itstool:textproc/itstool
 
 USES=		gettext gmake gnome localbase meson pathfix pkgconfig tar:xz
-INSTALLS_ICONS=	yes
 USE_GNOME=	cairo gtk30 intlhack librsvg2 libxml2:build
 GLIB_SCHEMAS=	org.gnome.Mahjongg.gschema.xml
 
