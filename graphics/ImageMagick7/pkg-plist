@@ -259,6 +259,8 @@ lib/ImageMagick-%%PORTVERSION%%/config-%%QBIT%%%%HDRI%%/configure.xml
 %%JPEG2000%%%%MODULES%%lib/ImageMagick-%%PORTVERSION%%/modules-%%QBIT%%%%HDRI%%/coders/jp2.so
 %%JPEG%%%%MODULES%%lib/ImageMagick-%%PORTVERSION%%/modules-%%QBIT%%%%HDRI%%/coders/jpeg.la
 %%JPEG%%%%MODULES%%lib/ImageMagick-%%PORTVERSION%%/modules-%%QBIT%%%%HDRI%%/coders/jpeg.so
+%%JXL%%%%MODULES%%lib/ImageMagick-%%PORTVERSION%%/modules-%%QBIT%%%%HDRI%%/coders/jxl.la
+%%JXL%%%%MODULES%%lib/ImageMagick-%%PORTVERSION%%/modules-%%QBIT%%%%HDRI%%/coders/jxl.so
 %%MODULES%%lib/ImageMagick-%%PORTVERSION%%/modules-%%QBIT%%%%HDRI%%/coders/json.la
 %%MODULES%%lib/ImageMagick-%%PORTVERSION%%/modules-%%QBIT%%%%HDRI%%/coders/json.so
 %%MODULES%%lib/ImageMagick-%%PORTVERSION%%/modules-%%QBIT%%%%HDRI%%/coders/kernel.la
@@ -437,13 +439,13 @@ lib/libMagick++-7.so.5.0.0
 lib/libMagickCore-7.a
 lib/libMagickCore-7.la
 lib/libMagickCore-7.so
-lib/libMagickCore-7.so.9
-lib/libMagickCore-7.so.9.0.0
+lib/libMagickCore-7.so.10
+lib/libMagickCore-7.so.10.0.0
 lib/libMagickWand-7.a
 lib/libMagickWand-7.la
 lib/libMagickWand-7.so
-lib/libMagickWand-7.so.9
-lib/libMagickWand-7.so.9.0.0
+lib/libMagickWand-7.so.10
+lib/libMagickWand-7.so.10.0.0
 %%WITH_PERL%%%%SITE_ARCH%%/Image/Magick.pm
 %%WITH_PERL%%%%SITE_ARCH%%/Image/Magick/%%QBIT%%%%HDRI%%.pm
 %%WITH_PERL%%%%SITE_ARCH%%/auto/Image/Magick/%%QBIT%%%%HDRI%%/%%QBIT%%%%HDRI%%.so
@@ -606,7 +608,7 @@ man/man1/stream.1.gz
 %%PORTDOCS%%%%DOCSDIR%%-7/images/wizard.jpg
 %%PORTDOCS%%%%DOCSDIR%%-7/images/wizard.png
 %%PORTDOCS%%%%DOCSDIR%%-7/index.html
-%%PORTDOCS%%%%DOCSDIR%%-7/%%WWWDIR%%Object.html
+%%PORTDOCS%%%%DOCSDIR%%-7/www/ImageMagickObject.html
 %%PORTDOCS%%%%DOCSDIR%%-7/www/Magick++/Blob.html
 %%PORTDOCS%%%%DOCSDIR%%-7/www/Magick++/Cache.fig
 %%PORTDOCS%%%%DOCSDIR%%-7/www/Magick++/Cache.png
@@ -648,6 +650,7 @@ man/man1/stream.1.gz
 %%PORTDOCS%%%%DOCSDIR%%-7/www/Magick++/thumbnail-anatomy-plain.jpg
 %%PORTDOCS%%%%DOCSDIR%%-7/www/Magick++/thumbnail-sample-framed.jpg
 %%PORTDOCS%%%%DOCSDIR%%-7/www/Magick++/thumbnail-sample-plain.jpg
+%%PORTDOCS%%%%DOCSDIR%%-7/www/advanced-linux-installation.html
 %%PORTDOCS%%%%DOCSDIR%%-7/www/advanced-unix-installation.html
 %%PORTDOCS%%%%DOCSDIR%%-7/www/advanced-windows-installation.html
 %%PORTDOCS%%%%DOCSDIR%%-7/www/animate.html
@@ -712,6 +715,7 @@ man/man1/stream.1.gz
 %%PORTDOCS%%%%DOCSDIR%%-7/www/api/stream.html
 %%PORTDOCS%%%%DOCSDIR%%-7/www/api/transform.html
 %%PORTDOCS%%%%DOCSDIR%%-7/www/api/version.html
+%%PORTDOCS%%%%DOCSDIR%%-7/www/api/vision.html
 %%PORTDOCS%%%%DOCSDIR%%-7/www/api/wand-view.html
 %%PORTDOCS%%%%DOCSDIR%%-7/www/architecture.html
 %%PORTDOCS%%%%DOCSDIR%%-7/www/assets/magick.css
@@ -757,6 +761,7 @@ man/man1/stream.1.gz
 %%PORTDOCS%%%%DOCSDIR%%-7/www/license.html
 %%PORTDOCS%%%%DOCSDIR%%-7/www/links.html
 %%PORTDOCS%%%%DOCSDIR%%-7/www/magick++.html
+%%PORTDOCS%%%%DOCSDIR%%-7/www/magick-cache.html
 %%PORTDOCS%%%%DOCSDIR%%-7/www/magick-core.html
 %%PORTDOCS%%%%DOCSDIR%%-7/www/magick-script.html
 %%PORTDOCS%%%%DOCSDIR%%-7/www/magick-vector-graphics.html
