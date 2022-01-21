@@ -1,5 +1,6 @@
 PORTNAME=	lookbook
 DISTVERSION=	1.2.0
+PORTREVISION=	1
 CATEGORIES=	deskutils
 
 MAINTAINER=	greg@unrelenting.technology
@@ -17,6 +18,5 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	danrabbit
 USE_GNOME=	glib20 gtk30 gtksourceview4
 GLIB_SCHEMAS=	com.github.danrabbit.lookbook.gschema.xml
-INSTALLS_ICONS=	yes
 
 .include <bsd.port.mk>
