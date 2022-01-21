@@ -3,7 +3,7 @@
 
 PORTNAME=	poedit
 PORTVERSION=	1.8.4
-PORTREVISION=	34
+PORTREVISION=	35
 CATEGORIES=	editors
 MASTER_SITES=	https://github.com/vslavik/${PORTNAME}/releases/download/v${PORTVERSION}-oss/
 
@@ -25,7 +25,6 @@ WX_CONF_ARGS=	absolute
 WITH_BDB_HIGHEST=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	WXRC="${WXRC_CMD}"
-INSTALLS_ICONS=	yes
 
 CPPFLAGS+=	-I${BDB_INCLUDE_DIR} -I${LOCALBASE}/include
 ## -stdlib=libc++
