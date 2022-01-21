@@ -1,5 +1,5 @@
 PORTNAME=	knock
-DISTVERSION=	5.1.0
+DISTVERSION=	5.2.0
 CATEGORIES=	dns
 PKGNAMESUFFIX=	py
 
@@ -18,14 +18,11 @@ RUN_DEPENDS=	${PY_DEPENDS}
 
 USES=		python pyqt:5 # pyqt:5 isn't used: https://github.com/guelfoweb/knock/issues/108
 USE_PYTHON=	distutils noflavors autoplist
-USE_PYQT=       core_run
+USE_PYQT=	core_run
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	guelfoweb
 
 NO_ARCH=	yes
-
-post-install: # workaround for: pkg_resources.DistributionNotFound: The 'PyQt5' distribution was not found and is required by knockpy
-	@${REINPLACE_CMD} -e 's|PyQt5||' ${STAGEDIR}/${PYTHON_SITELIBDIR}/*/requires.txt
 
 .include <bsd.port.mk>
