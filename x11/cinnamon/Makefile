@@ -6,6 +6,9 @@ PORTREVISION=	1
 CATEGORIES=	x11 gnome
 DIST_SUBDIR=	gnome
 
+PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+PATCHFILES+=	8fc2df08b40a.patch:-p1 # https://github.com/linuxmint/cinnamon/pull/10489
+
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Fork of GNOME Shell with layout similar to GNOME 2
 
@@ -42,7 +45,8 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}dbus>0:devel/py-dbus@${PY_FLAVOR} \
 		metacity:x11-wm/metacity \
 		tint2:x11/tint
 
-USES=		compiler:c11 gettext gl gnome meson pkgconfig python:3.5+ shebangfix xorg
+USES=		compiler:c11 cpe gettext gl gnome meson pkgconfig python:3.5+ shebangfix xorg
+CPE_VENDOR=	linuxmint
 USE_GNOME=	cairo gdkpixbuf2 glib20 gtk30 intltool introspection libxml2 pygobject3
 USE_XORG=	x11 xfixes
 USE_GL=		gl
@@ -54,7 +58,6 @@ GH_ACCOUNT=	linuxmint
 SHEBANG_GLOB=	*.py
 SHEBANG_FILES=	files/*
 
-INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
 
 BINARY_ALIAS=	python3=${PYTHON_CMD}
