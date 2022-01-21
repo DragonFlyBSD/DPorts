@@ -1,5 +1,6 @@
 PORTNAME=	calendar
-DISTVERSION=	6.0.1
+DISTVERSION=	6.0.3
+PORTREVISION=	1
 CATEGORIES=	deskutils
 PKGNAMEPREFIX=	elementary-
 
@@ -30,6 +31,5 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	elementary
 USE_GNOME=	glib20 gtk30 evolutiondataserver3
 GLIB_SCHEMAS=	io.elementary.calendar.gschema.xml
-INSTALLS_ICONS=	yes
 
 .include <bsd.port.mk>
