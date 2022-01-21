@@ -1,7 +1,7 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 
 PORTNAME=	gnome-control-center
-PORTVERSION=	41.0
+PORTVERSION=	41.2
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME/sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+)\..*/\1/}
 DIST_SUBDIR=	gnome
@@ -48,7 +48,6 @@ USES=		compiler:c++11-lib gettext gnome localbase:ldflags meson \
 USE_GNOME=	cairo gnomedesktop3 libxml2 gsound
 USE_XORG=	x11 xi
 #USE_GSTREAMER1=	yes
-INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
 BINARY_ALIAS=	python3=${PYTHON_VERSION}
 
