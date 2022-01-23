@@ -1,4 +1,4 @@
---- kernel/driver.cc.orig	2019-08-26 08:37:53 UTC
+--- kernel/driver.cc.orig	2021-12-03 11:48:49 UTC
 +++ kernel/driver.cc
 @@ -34,13 +34,13 @@
  #include <limits.h>
@@ -16,28 +16,21 @@
  #  include <sys/sysctl.h>
  #  include <sys/user.h>
  #endif
-@@ -571,14 +571,19 @@
- 					sz_resident * (getpagesize() / 1024.0 / 1024.0));
- 			stats_divider = "\n";
+@@ -602,11 +602,11 @@ int main(int argc, char **argv)
+ 			ru_buffer.ru_utime.tv_usec += ru_buffer_children.ru_utime.tv_usec;
+ 			ru_buffer.ru_stime.tv_sec += ru_buffer_children.ru_stime.tv_sec;
+ 			ru_buffer.ru_stime.tv_usec += ru_buffer_children.ru_stime.tv_usec;
+-#if defined(__linux__) || defined(__FreeBSD__)
++#if defined(__linux__) || defined(__FreeBSD__) || defined(__DragonFly__)
+ 			ru_buffer.ru_maxrss = std::max(ru_buffer.ru_maxrss, ru_buffer_children.ru_maxrss);
+ #endif
  		}
--#  elif defined(__FreeBSD__)
-+#  elif defined(__FreeBSD__) || defined(__DragonFly__)
- 		pid_t pid = getpid();
- 		int mib[4] = {CTL_KERN, KERN_PROC, KERN_PROC_PID, (int)pid};
- 		struct kinfo_proc kip;
- 		size_t kip_len = sizeof(kip);
- 		if (sysctl(mib, 4, &kip, &kip_len, NULL, 0) == 0) {
-+#ifdef __DragonFly__
-+			vm_size_t sz_total = kip.kp_vm_map_size;
-+			segsz_t sz_resident = kip.kp_vm_rssize;
-+#else
- 			vm_size_t sz_total = kip.ki_size;
- 			segsz_t sz_resident = kip.ki_rssize;
-+#endif
- 			meminfo = stringf(", MEM: %.2f MB total, %.2f MB resident",
- 				(int)sz_total / 1024.0 / 1024.0,
- 				(int)sz_resident * (getpagesize() / 1024.0 / 1024.0));
-@@ -627,7 +632,7 @@
+-#if defined(__linux__) || defined(__FreeBSD__)
++#if defined(__linux__) || defined(__FreeBSD__) || defined(__DragonFly__)
+ 		meminfo = stringf(", MEM: %.2f MB peak",
+ 				ru_buffer.ru_maxrss / 1024.0);
+ #endif
+@@ -649,7 +649,7 @@ int main(int argc, char **argv)
  		}
  	}
  
