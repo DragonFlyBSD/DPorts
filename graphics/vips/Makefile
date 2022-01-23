@@ -1,7 +1,8 @@
 # Created by: Lev Serebryakov <lev@FreeBSD.org>
 
 PORTNAME=	vips
-PORTVERSION=	8.11.4
+PORTVERSION=	8.12.0
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	https://github.com/libvips/libvips/releases/download/v${PORTVERSION}/
 
@@ -91,9 +92,9 @@ X11_CONFIGURE_WITH=	x
 
 .if ${PORT_OPTIONS:MIMAGEMAGICK}
 .if ${PORT_OPTIONS:MX11}
-LIB_DEPENDS+=	libMagickCore-7.so:graphics/ImageMagick7
+USES+=		magick:7
 .else
-LIB_DEPENDS+=	libMagickCore-7.so:graphics/ImageMagick7-nox11
+USES+=		magick:7,nox11
 .endif
 .endif
 
