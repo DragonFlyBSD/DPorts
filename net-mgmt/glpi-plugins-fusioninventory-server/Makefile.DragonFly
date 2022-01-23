@@ -1,0 +1,20 @@
+
+# try to fix plist (orphans)
+PLIST_FILES+=	www/glpi/plugins/fusioninventory/ajax/dropdown_taskjob.php \
+		www/glpi/plugins/fusioninventory/front/deployfile.clean.php \
+		www/glpi/plugins/fusioninventory/fusioninventory.xml \
+		www/glpi/plugins/fusioninventory/locales/cs_CZ.mo \
+		www/glpi/plugins/fusioninventory/locales/cs_CZ.po \
+		www/glpi/plugins/fusioninventory/locales/uk_UA.mo \
+		www/glpi/plugins/fusioninventory/locales/uk_UA.po \
+		www/glpi/plugins/fusioninventory/phpunit/1_Unit/DeleteLinkedObjectsTest.php \
+		www/glpi/plugins/fusioninventory/phpunit/2_Integration/CollectsTest.php \
+		www/glpi/plugins/fusioninventory/phpunit/2_Integration/DevicesLocksTest.php \
+		www/glpi/plugins/fusioninventory/pics/fusioninventory_logo.png \
+		www/glpi/plugins/fusioninventory/pics/fusioninventory_logo_square.png \
+		www/glpi/plugins/fusioninventory/pics/menu_cleanfiles.png \
+		www/glpi/plugins/fusioninventory/screenshots/0.90-central.png \
+		www/glpi/plugins/fusioninventory/screenshots/0.90-deploypackage.png \
+		www/glpi/plugins/fusioninventory/screenshots/0.90-monitoring.png \
+		www/glpi/plugins/fusioninventory/screenshots/0.90-rules.png \
+		www/glpi/plugins/fusioninventory/screenshots/0.90-tasks.png
