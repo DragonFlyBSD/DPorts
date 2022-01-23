@@ -1,7 +1,17 @@
 PORTNAME=	citra
-PORTVERSION=	s20211218
+PORTVERSION=	s20220108
 PORTREVISION?=	0
 CATEGORIES=	emulators
+.if make(makesum)
+MASTER_SITES=	https://api.citra-emu.org/gamedb/?dummy=/:gamedb
+.else
+MASTER_SITES=	LOCAL/jbeich:gamedb
+.endif
+DISTFILES=	${PORTNAME}/compatibility_list.json:gamedb
+EXTRACT_ONLY=	${DISTFILES:N*\:gamedb:C/\:.*//}
+
+PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+PATCHFILES+=	4b04175c5d42.patch:-p1 # https://github.com/citra-emu/citra/pull/5917
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Nintendo 3DS emulator/debugger
@@ -21,7 +31,7 @@ BUILD_DEPENDS=	boost-libs>0:devel/boost-libs
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	citra-emu
-GH_TAGNAME=	0126ecb3e
+GH_TAGNAME=	67f1e4111
 GH_TUPLE=	citra-emu:ext-boost:36603a1:boost/externals/boost \
 		citra-emu:ext-libressl-portable:7d01cb0:libressl/externals/libressl \
 		citra-emu:ext-soundtouch:060181e:soundtouch/externals/soundtouch \
@@ -37,7 +47,7 @@ GH_TUPLE=	citra-emu:ext-boost:36603a1:boost/externals/boost \
 		lsalzman:enet:0eaf48e:enet/externals/enet \
 		lvandeve:lodepng:31d9704:lodepng/externals/lodepng/lodepng \
 		neobrain:nihstro:fd69de1:nihstro/externals/nihstro \
-		weidai11:cryptopp:CRYPTOPP_7_0_0-23-gf320e7d9:cryptopp/externals/cryptopp/cryptopp \
+		weidai11:cryptopp:CRYPTOPP_8_5_0:cryptopp/externals/cryptopp/cryptopp \
 		wwylele:teakra:3e032a7:teakra/externals/teakra
 
 USES=		cmake:testing compiler:c++17-lang localbase:ldflags sdl
@@ -88,5 +98,9 @@ post-patch:
 	@${REINPLACE_CMD} -e 's/@GIT_BRANCH@/master/' \
 		-e 's/@GIT_DESC@/${GH_TAGNAME}/' \
 		${WRKSRC}/src/common/scm_rev.cpp.in
+
+post-configure:
+	@${CP} ${DISTFILES:M*\:gamedb:C/\:.*//:S,^,${_DISTDIR},} \
+		${BUILD_WRKSRC}/dist/compatibility_list/
 
 .include <bsd.port.mk>
