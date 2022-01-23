@@ -27,7 +27,7 @@ LIB_DEPENDS=	libltdl.so:devel/libltdl \
 		libdca.so:multimedia/libdca \
 		libgsm.so:audio/gsm
 
-CONFLICTS=	gnash-devel-[0-9]*
+CONFLICTS=	gnash-devel
 
 USES=		cpe tar:bzip2 compiler:c++11-lang autoreconf gmake libtool \
 		pkgconfig jpeg gnome gl sdl desktop-file-utils xorg
@@ -37,7 +37,6 @@ USE_GNOME=	atk gconf2 gtk20 libxml2 pango
 USE_XORG=	x11 xau xdmcp xext xi xinerama ice sm xv
 USE_GL=		egl
 USE_SDL=	sdl
-INSTALLS_ICONS=	yes
 SYSCONFIGDIR=	${PREFIX}/etc
 
 # jemalloc leads to infinite recursion on FreeBSD
