@@ -1,5 +1,13 @@
+
+USES+=	gmake
+
+NJS_LIB_DEPENDS+=	libpcre.so:devel/pcre
+
 post-patch-NJS-on:
+	(cd ${WRKSRC_njs} && ${PATCH} ${PATCH_ARGS} < ${DFLY_PATCHDIR}/extra-auto_openssl.diff)
 	(cd ${WRKSRC_njs} && ${PATCH} ${PATCH_ARGS} < ${DFLY_PATCHDIR}/extra-auto_readline.diff)
+	(cd ${WRKSRC_njs} && ${PATCH} ${PATCH_ARGS} < ${DFLY_PATCHDIR}/extra-njs-birth.diff)
+	(cd ${WRKSRC_njs} && ${PATCH} ${PATCH_ARGS} < ${DFLY_PATCHDIR}/extra-njs-cli.diff)
 
 pre-patch-MODSECURITY-on:
 	-${REINPLACE_CMD} -e 's|\*-\*-freebsd\*|*-*-dragonfly*|' \
