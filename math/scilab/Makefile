@@ -3,8 +3,7 @@
 PORTNAME=	scilab
 PORTVERSION=	6.1.1
 CATEGORIES=	math cad java
-MASTER_SITES=	https://www.scilab.org/download/${PORTVERSION}/
-DISTFILES=	${DISTNAME}-src${EXTRACT_SUFX}
+MASTER_SITES=	https://cgit.scilab.org/scilab/snapshot/
 
 MAINTAINER=	makc@FreeBSD.org
 COMMENT=	Scientific software package for numerical computations
@@ -31,7 +30,6 @@ USES=		compiler:c++17-lang cpe desktop-file-utils eigen:3,build \
 USE_LOCALE=	en_US.UTF-8
 
 GNU_CONFIGURE=	yes
-INSTALLS_ICONS=	yes
 
 CONFIGURE_ARGS=	--with-gfortran \
 		--without-emf \
@@ -41,6 +39,7 @@ LDFLAGS+=	${ICONV_LIB}
 
 CONFIGURE_ENV=	BLAS_LIBS="${BLASLIB}" LAPACK_LIBS="${LAPACKLIB}"
 INSTALL_TARGET=	install-strip
+WRKSRC_SUBDIR=	scilab
 
 PLIST_SUB=	SHLIB_VER=${PORTVERSION}
 
