@@ -1,23 +1,24 @@
---- makefile.orig	2014-05-01 04:50:34.000000000 +0300
+--- makefile.intermediate	2022-01-22 05:50:20.000000000 +0000
 +++ makefile
-@@ -26,6 +26,10 @@ endif  # ifneq ($(filter %BSD,$(DP_ARCH)
+@@ -26,6 +26,10 @@
  endif  # ifdef windir
  endif  # ifndef DP_MAKE_TARGET
  
 +ifeq ($(DP_ARCH), DragonFly)
-+        DP_MAKE_TARGET=bsd
++	DP_MAKE_TARGET=bsd
 +endif
 +
- # If we're not on compiling for Win32, we need additional information
- ifneq ($(DP_MAKE_TARGET), mingw)
- 	DP_ARCH:=$(shell uname)
-@@ -197,6 +201,9 @@ ifeq ($(DP_ARCH),FreeBSD)
- else
- 	DEFAULT_SNDAPI=BSD
+ # If we're targeting an x86 CPU we want to enable DP_SSE (CFLAGS_SSE and SSE2)
+ ifeq ($(DP_MAKE_TARGET), mingw)
+ 	DP_SSE:=1
+@@ -239,6 +243,10 @@
+ 	DP_LINK_CRYPTO_RIJNDAEL?=dlopen
  endif
-+ifeq ($(DP_ARCH),DragonFly)
-+        DEFAULT_SNDAPI=OSS
-+endif
- 	OBJ_CD=$(OBJ_BSDCD)
  
- 	OBJ_CL=$(OBJ_GLX)
++ifeq ($(DP_ARCH),DragonFly)
++	DEFAULT_SNDAPI=OSS
++endif
++
+ # Win32 configuration
+ ifeq ($(WIN32RELEASE), 1)
+ #	TARGET=i686-pc-mingw32

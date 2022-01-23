@@ -1,13 +1,9 @@
 
-# zrj: in Makefile it does 'unzip -xf file.zip -d DIR',
-# EXTRACT_BEFORE_ARGS is wrong, thus extract before patching (harmless)
-pre-patch:
-	${UNZIP_CMD} -u \
-		${WRKDIR}/${PORTNAME}enginesource${PORTVERSION}.zip \
-		-d ${WRKDIR}
-
 dfly-patch:
 	${REINPLACE_CMD} -e 's@ifndef \(__FreeBSD__\)@if \!(defined(\1)||defined(__DragonFly__))@g'	\
 		${WRKSRC}/cd_bsd.c
-	${REINPLACE_CMD} -e 's@lib64@lib@g'	\
+	${REINPLACE_CMD} -e 's@lib64@lib@g' -e 's@amd64@x86_64@g'	\
 		${WRKSRC}/makefile
+	${REINPLACE_CMD} -e "s@LDFLAGS_UNIXCOMMON=@& -L${LOCALBASE}/lib @g" \
+			 -e "s@CFLAGS_COMMON=@& -I${LOCALBASE}/include @g" \
+		${WRKSRC}/makefile.inc
