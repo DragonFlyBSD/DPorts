@@ -1,6 +1,6 @@
 PORTNAME=	kiwix-lib
 DISTVERSION=	9.4.1
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	devel
 
 MAINTAINER=	me@int19h.org
@@ -28,7 +28,6 @@ GH_ACCOUNT=	kiwix
 GH_TUPLE=	kiwix:${PORTNAME}:${PORTVERSION}:DEFAULT \
 		kainjow:Mustache:a7eebc9:mustache
 
-MESON_ARGS=	-Dctpp2-install-prefix=${LOCALBASE}
 CPPFLAGS+=	-I${WRKSRC_mustache}
 CXXFLAGS+=	-I${WRKSRC_mustache}
 LDFLAGS+=	-lz
