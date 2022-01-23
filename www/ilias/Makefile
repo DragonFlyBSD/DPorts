@@ -1,7 +1,7 @@
 # Created by: Bartlomiej Rutkowski <r@robakdesign.com>
 
 PORTNAME=	ilias
-PORTVERSION=	5.4.21
+PORTVERSION=	5.4.25
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www education
 
@@ -10,11 +10,10 @@ COMMENT=	Powerful, dynamic, PHP and MySQL based e-learning platform
 
 LICENSE=	GPLv2
 
-CONFLICTS=	ilias6-[0-9]*
+CONFLICTS=	ilias6
 PORTSCOUT=	limit:^5\.
 
-RUN_DEPENDS=	convert:graphics/ImageMagick6 \
-		zip:archivers/zip \
+RUN_DEPENDS=	zip:archivers/zip \
 		${UNZIP_CMD}:archivers/unzip \
 		${LOCALBASE}/share/pear/PEAR.php:devel/pear@${PHP_FLAVOR} \
 		${LOCALBASE}/share/pear/Auth/Auth.php:security/pear-Auth@${PHP_FLAVOR} \
@@ -26,7 +25,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	ILIAS-eLearning
 GH_PROJECT=	ILIAS
 
-USES=		cpe jpeg php
+USES=		cpe jpeg magick:6,run php
 NO_BUILD=	yes
 PLIST=		${WRKDIR}/plist
 USE_PHP=	pdo_mysql session zlib gd pdf dom xsl pcre simplexml
