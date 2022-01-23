@@ -1,4 +1,8 @@
-# needs <filesystem>
+
+BUILD_DEPENDS:=	${BUILD_DEPENDS:Nelfutils*}
+
+# needs <filesystem> + broken cmake feature tests
+CFLAGS+=        -L${LOCALBASE}/cxxfs_gcc8
 BUILD_DEPENDS+= cxxfs_gcc8>0:misc/cxxfs_gcc8
 CXXFLAGS+=      -isystem ${LOCALBASE}/cxxfs_gcc8
 LDFLAGS+=       -L${LOCALBASE}/cxxfs_gcc8
