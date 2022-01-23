@@ -1,7 +1,7 @@
 
 .if 1
 # zrj: not tracked SOVER is violation, might as well auto-plist/find, bump on updates
-PLIST_SUB+=	LIBSUFX=2103.0.1
+PLIST_SUB+=	LIBSUFX=2111.0.0
 .else
 # XXX No time to find out why WRKSRC is not expanded by when the
 # shell command is called in _GET_SOVER.
