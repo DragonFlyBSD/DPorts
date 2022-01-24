@@ -1,0 +1,19 @@
+
+# needs <filesystem>
+BUILD_DEPENDS+=	cxxfs_gcc8>0:misc/cxxfs_gcc8
+CXXFLAGS+=	-isystem ${LOCALBASE}/cxxfs_gcc8
+LDFLAGS+=	-L${LOCALBASE}/cxxfs_gcc8
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@spdlog::spdlog@& stdc++fs@g' \
+		${WRKSRC}/source/bear/CMakeLists.txt \
+		${WRKSRC}/source/citnames/CMakeLists.txt \
+		${WRKSRC}/source/intercept/CMakeLists.txt
+
+PLIST_FILES+=	lib/bear/wrapper.d/...
+
+# remove wrappers
+dfly-install:
+	${RM} -rfv ${STAGEDIR}${PREFIX}/lib/bear/wrapper.d
+	${MKDIR} ${STAGEDIR}${PREFIX}/lib/bear/wrapper.d
+	${TOUCH} ${STAGEDIR}${PREFIX}/lib/bear/wrapper.d/...
