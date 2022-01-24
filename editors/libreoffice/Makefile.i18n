@@ -31,10 +31,6 @@ RUN_DEPENDS?=	libreoffice:editors/libreoffice
 NO_ARCH=	yes
 NO_BUILD=	yes
 
-.if ${LOVERSION}==7.2.1
-BROKEN= deb packages gone away
-.endif
-
 EXTRACT_AFTER_ARGS=	--exclude '${PORTNAME}*-dict-*.deb' \
 			--strip-components 1
 
