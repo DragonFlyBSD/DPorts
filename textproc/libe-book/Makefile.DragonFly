@@ -1,2 +1,8 @@
+
+# avoid doxygen dep for now
+DOCS_BUILD_DEPENDS:=
+OPTIONS_EXCLUDE+=	DOCS
+CONFIGURE_ARGS+=	--without-docs
+
 LDFLAGS+= -lz
 
