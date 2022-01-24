@@ -8,5 +8,5 @@ dfly-patch:
 	${REINPLACE_CMD} -e '/SYSTEM_CONSOLE_LIBS/d' \
 		${WRKSRC}/cmd_rtl.c
 	${REINPLACE_CMD} -e "/define CC_FLAGS/s@-fdata-sections@& -I${LOCALBASE}/include@g" \
-			 -e "s@SYSTEM_LIBS = -lm@& -L${LOCALBASE}/lib -lncurses@g" \
+			 -e "s@^SYSTEM_LIBS =@& -L${LOCALBASE}/lib -lncurses@g" \
 		${WRKSRC}/mk_freebsd.mk
