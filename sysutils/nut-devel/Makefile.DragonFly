@@ -1,4 +1,0 @@
-
-# deal with orphans
-PLIST_FILES+=	libexec/nut/microsol-apc \
-		man/man8/microsol-apc.8.gz
