@@ -1,2 +1,14 @@
 
-USES+=	alias
+# too specific
+#USES+=	alias
+
+# zrj: disable hwloc pinning for now
+LIB_DEPENDS:=	${LIB_DEPENDS:Nlibhwloc*}
+
+# exclude libtbbbind (hwloc)
+DFLY_PLIST=	${WRKSRC}/pkg-plist
+PLIST:=		${DFLY_PLIST}
+
+dfly-patch:
+	${CP} -v ${.CURDIR:H}/onetbb/pkg-plist ${DFLY_PLIST}
+	${REINPLACE_CMD} -e '/libtbbbind/d' ${DFLY_PLIST}

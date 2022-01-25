@@ -1,0 +1,11 @@
+--- test/CMakeLists.txt.orig	2021-10-04 09:50:18 UTC
++++ test/CMakeLists.txt
+@@ -267,7 +267,7 @@ function(tbb_add_tbbbind_test)
+     endif()
+ 
+     # Disable all HWLOC dependent tests in case of unsupported environment.
+-    if (TBB_WINDOWS_DRIVER OR ANDROID_PLATFORM)
++    if (TBB_WINDOWS_DRIVER OR ANDROID_PLATFORM OR ${CMAKE_SYSTEM_NAME} STREQUAL "DragonFly")
+         return()
+     endif()
+     ProcessorCount(SYSTEM_CONCURRENCY)
