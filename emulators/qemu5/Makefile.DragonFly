@@ -1,0 +1,16 @@
+USES+= ncurses
+
+CONFIGURE_ARGS+=	--disable-netmap --disable-stack-protector --enable-curses
+
+# dance a bit for making meson work w/ hacked up devel/ncurses
+dfly-patch:
+	${REINPLACE_CMD} -e "/find_library/s@'iconv',@& dirs: '${LOCALBASE}/lib',@g" \
+			 -e "/dirs =/s@'/usr/include/ncursesw'@&, '${LOCALBASE}/include/ncurses', '${LOCALBASE}/lib'@g" \
+			 -e "s@'ncursesw', 'ncurses', 'cursesw', 'pdcurses'@'ncurses'@" \
+			 -e "s@dependency(curses_libname,@dependency('ncurses_xxx',@g" \
+			 -e "s@links(curses_test,@& args: '-DNCURSES_WIDECHAR',@g" \
+		${WRKSRC}/meson.build
+
+# just to satisfy stage-qa for plist
+dfly-install:
+	${TOUCH} ${STAGEDIR}${PREFIX}/bin/qemu-i386 ${STAGEDIR}${PREFIX}/bin/qemu-x86_64
