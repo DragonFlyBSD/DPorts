@@ -1,4 +1,7 @@
 
+# avoid doxygen dep for now
+OPTIONS_EXCLUDE+=	DOCS
+
 # zrj: prevent installing into /usr/local/lib64
 dfly-patch:
 	${REINPLACE_CMD} -e 's@lib64@lib@g'	\
