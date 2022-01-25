@@ -13,4 +13,6 @@ dfly-patch:
 
 # just to satisfy stage-qa for plist
 dfly-install:
+.if ${FLAVOR:U} != tools
 	${TOUCH} ${STAGEDIR}${PREFIX}/bin/qemu-i386 ${STAGEDIR}${PREFIX}/bin/qemu-x86_64
+.endif
