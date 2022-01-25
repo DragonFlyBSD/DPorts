@@ -1,0 +1,5 @@
+
+# disable tbb and doxygen for now
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NTBB}
+OPTIONS_EXCLUDE+=	DOCS
+CMAKE_BOOL_OFF+=	NO_DOC
