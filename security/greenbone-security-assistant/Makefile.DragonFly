@@ -1,0 +1,3 @@
+
+# avoid doxygen dep for now (this is strange one, why rundeps?)
+RUN_DEPENDS:=	${RUN_DEPENDS:Ndoxygen*}
