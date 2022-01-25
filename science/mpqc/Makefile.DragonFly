@@ -1,1 +1,4 @@
 CXXFLAGS+=	-fpermissive
+
+# avoid doxygen dep for now
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NDOXYGEN:NMPI}
