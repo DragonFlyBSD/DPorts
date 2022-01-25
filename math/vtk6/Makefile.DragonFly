@@ -1,3 +1,8 @@
+
+# avoid doxygen dep for now
+OPTIONS_EXCLUDE+=	DOCS
+CMAKE_ARGS+=	-DBUILD_DOCUMENTATION:BOOL=OFF
+
 #until update to 6.2.0
 pre-patch:
 	${REINPLACE_CMD} -e 's/_HAS_CPP_DEMANGLE=1/_HAS_C--_DEMANGLE=0/g'	\
