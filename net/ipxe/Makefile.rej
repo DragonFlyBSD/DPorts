@@ -1,9 +1,0 @@
-@@ -67,7 +67,7 @@
- 
- EFI_BUILD_DEPENDS=	bash:shells/bash \
- 			mformat:emulators/mtools
--_EFI_ARCHS=		${ARCH:Mamd64:S/amd64/x86_64/} i386
-+_EFI_ARCHS=		x86_64
- _EFI_TARGETS=		ipxe snp snponly
- .for _arch in ${_EFI_ARCHS}
- . for _target in ${_EFI_TARGETS}
