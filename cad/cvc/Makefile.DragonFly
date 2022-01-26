@@ -1,0 +1,5 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e "s@-lreadline @-L${LOCALBASE}/lib &@g" \
+			 -e 's@-lcurses@-lncurses@g' \
+		${WRKSRC}/src/Makefile.am
