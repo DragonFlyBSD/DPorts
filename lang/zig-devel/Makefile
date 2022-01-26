@@ -35,7 +35,10 @@ _ZIG_BIN=	${STAGEDIR}${PREFIX}/bin/zig
 post-configure-STATIC-on:
 	@${REINPLACE_CMD} 's/-Wl,-Bdynamic//' ${BUILD_WRKSRC}/build.ninja
 
-post-build:
+# speeds up build a lot and avoids peaking 8gb of ram
+OPTIONS_DEFINE+=	DOCGEN
+
+post-build-DOCGEN-on:
 # Produce the experimental std lib documentation.
 	${MKDIR}  ${WRKDIR}/cache ${WRKDIR}/doc
 	${WRKDIR}/.build/zig test ${WRKSRC}/lib/std/std.zig \
@@ -46,7 +49,7 @@ post-build:
 		-fno-emit-bin
 	${RM} ${WRKSRC}/lib/zig/std/zig-cache
 
-post-install:
+post-install-DOCGEN-on:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}/std
 # langref cannot be generated until after install target has run
 	(cd ${WRKSRC} && ${_ZIG_BIN} run \
