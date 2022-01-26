@@ -1,8 +1,0 @@
-@@ -36,6 +36,6 @@
- pre-configure:
- 	${REINPLACE_CMD} -e 's|python3|${PYTHON_CMD}|' ${WRKSRC}/Makefile
- post-build:
--	(cd ${WRKSRC} && LC_ALL=C.UTF-8 ${MAKE} manpages)
-+	(cd ${WRKSRC} && LC_ALL=en_US.UTF-8 ${MAKE} manpages)
- 
- .include <bsd.port.mk>
