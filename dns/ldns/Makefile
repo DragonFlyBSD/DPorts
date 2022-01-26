@@ -126,7 +126,7 @@ post-install:
 .if ${PORT_OPTIONS:MDRILL}
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/drill
 .endif
-.if ${PORT_OPTIONS:MXEXAMPLES}
+.if ${PORT_OPTIONS:MEXAMPLES}
 	for p in ldns-chaos ldns-compare-zones ldns-dane ldns-dpa ldns-gen-zone ldns-key2ds \
 		ldns-keyfetcher ldns-keygen ldns-mx ldns-notify ldns-nsec3-hash \
 		ldns-read-zone ldns-resolver ldns-revoke ldns-rrsig ldns-signzone \
