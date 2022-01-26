@@ -74,9 +74,6 @@ SHR2FIX=	Core/pinot-search.1
 UL2FIX=		Utils/xdgmime/xdgmime.c
 
 pre-configure:
-	${REINPLACE_CMD} -e \
-		'/<command>/s|pdftotext|${LOCALBASE}/libexec/xpdf/pdftotext|' \
-		${WRKSRC}/Tokenize/filters/external-filters.xml
 	${REINPLACE_CMD} -e 's|/usr/share|${LOCALBASE}/share|'	\
 		${LM2FIX:S|^|${WRKSRC}/|}
 	${REINPLACE_CMD} -e 's|/usr/share|${PREFIX}/share|'	\
