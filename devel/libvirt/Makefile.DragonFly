@@ -1,15 +1,11 @@
-OPTIONS_DEFINE:=	${OPTIONS_DEFINE} VBOX
-
-VBOX_DESC=		VirtualBox driver
-
-VBOX_MESON_ENABLED=	driver_vbox
 
 # DragonFly BSD does not have ZFS support.
 # Enable QEMU support by default since we have no other emulation method.
 OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NZFS} QEMU
 
+# deal with orphans
+PLIST_FILES+=	lib/libvirt/storage-backend/libvirt_storage_backend_logical.so
+
 dfly-patch:
-#	${REINPLACE_CMD} -e 's|ACL_LIBS=""|ACL_LIBS="-lposix1e"|' \
-#		${WRKSRC}/configure
 	${REINPLACE_CMD} -e 's|fdatasync|fsync|' \
 		${WRKSRC}/src/util/virfile.c
