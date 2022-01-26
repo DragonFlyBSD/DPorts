@@ -1,0 +1,13 @@
+
+# usual stuff, make it fit
+MAKE_ARGS+=	CC=cc CXX=c++
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@clang@gcc@g' \
+		${WRKSRC}/CPP/7zip/cmpl_clang.mak
+	${REINPLACE_CMD} -e 's@-Waddress-of-packed-member@-Wformat@g' \
+		${WRKSRC}/C/warn_gcc.mak \
+		${WRKSRC}/CPP/7zip/warn_gcc.mak
+
+dfly-build:
+	${LN} -sv ${BUILD_WRKSRC}/b/g ${BUILD_WRKSRC}/b/c
