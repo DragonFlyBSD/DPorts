@@ -1,3 +1,0 @@
-@@ -25,1 +25,1 @@
--LDFLAGS+=	-L${NCURSESLIB} -ltinfow
-+LDFLAGS+=	-L${NCURSESLIB} -ltinfo
