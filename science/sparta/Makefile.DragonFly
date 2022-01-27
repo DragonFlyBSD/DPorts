@@ -1,0 +1,3 @@
+
+# avoid mpi for now
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NMPI} SERIAL
