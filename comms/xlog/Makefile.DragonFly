@@ -1,2 +1,6 @@
 
 CFLAGS+=	-Wno-error=restrict
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@ FILPATHLEN@ HAMLIB_FILPATHLEN@g' \
+		${WRKSRC}/src/hamlib-utils.c
