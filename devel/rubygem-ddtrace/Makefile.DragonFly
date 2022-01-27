@@ -1,0 +1,4 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/debase-ruby_core_source>/s@"=@">=@g' \
+		${WRKSRC}/ddtrace.gemspec
