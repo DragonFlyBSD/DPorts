@@ -1,0 +1,18 @@
+
+USES+=	localbase:ldflags
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NGUI:NOCC}
+
+# avoid mpi for now
+LIB_DEPENDS:=	${LIB_DEPENDS:Nlibmpich*:Nlibparpack.so*}
+CMAKE_OFF+=	WITH_MPI
+
+DFLY_PLIST=	${WRKSRC}/pkg-plist
+PLIST:=		${DFLY_PLIST}
+
+dfly-patch:
+	${CP} -v ${.CURDIR:H}/elmerfem/pkg-plist ${DFLY_PLIST}
+	${REINPLACE_CMD} -e '/ElmerSolver_mpi/d' ${DFLY_PLIST}
+	${REINPLACE_CMD} -e 's@-DUSE_ARPACK@&__z@g' \
+		${WRKSRC}/CMakeLists.txt
+	${REINPLACE_CMD} -e 's@binio arpack@binio@g' \
+		${WRKSRC}/fem/src/CMakeLists.txt
