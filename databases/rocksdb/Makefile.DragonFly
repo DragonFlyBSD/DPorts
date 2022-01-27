@@ -1,11 +1,2 @@
+CFLAGS+=	-Wno-error=unused-parameter
 CXXFLAGS+=	-Wno-unused-variable
-
-# fix MF plist
-.if defined(LITE)
-DFLY_PLIST=	${WRKSRC}/pkg-plist
-PLIST:=		${DFLY_PLIST}
-
-dfly-patch:
-	${CP} -v ${.CURDIR:H}/rocksdb/pkg-plist ${DFLY_PLIST}
-	${REINPLACE_CMD} -e '/^lib\/librocksdb/d' ${DFLY_PLIST}
-.endif
