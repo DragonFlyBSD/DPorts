@@ -1,6 +1,14 @@
 
+# avoid mpi for now
+LIB_DEPENDS:=	${LIB_DEPENDS:Nlibmpich*}
+CONFIGURE_ARGS+=	--disable-parallel FC=gfortran${_GCC_VER}
+
 # exclude binary alias, use base
-BINARY_ALIAS:=	${BINARY_ALIAS:Ncpp*}
+BINARY_ALIAS:=	${BINARY_ALIAS:Ncpp*} gfortran=gfortran${_GCC_VER}
 
 LDFLAGS:=	${LDFLAGS:N*gfortran.so} -L${LOCALBASE}/lib/gcc${_GCC_VER} -lgfortran
-LDFLAGS+=	-L${LOCALBASE}/lib -lmpifort
+#LDFLAGS+=	-L${LOCALBASE}/lib -lmpifort
+
+dfly-patch:
+	${REINPLACE_CMD} -e "s@gfortran g95@gfortran gfortran${_GCC_VER} g95@g" \
+		${WRKSRC}/install/configure
