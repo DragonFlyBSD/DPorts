@@ -1,0 +1,5 @@
+
+USES+=	pkgconfig
+
+# fix stage-qa (orphans)
+PLIST_FILES+=	share/pkgconfig/blis.pc
