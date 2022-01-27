@@ -1,0 +1,8 @@
+
+# deal with orphans
+PLIST_FILES+=	%%PYTHON_SITELIBDIR%%/__pycache__/Hamlib%%PYTHON_EXT_SUFFIX%%.opt-1.pyc \
+		%%PYTHON_SITELIBDIR%%/__pycache__/Hamlib%%PYTHON_EXT_SUFFIX%%.pyc
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
+		${WRKSRC}/tests/testlibusb.c
