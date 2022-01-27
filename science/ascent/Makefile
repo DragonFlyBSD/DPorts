@@ -4,6 +4,7 @@ DISTVERSION=	0.7.1
 CATEGORIES=	science
 PKGNAMESUFFIX=	-visualizer
 
+BROKEN=		pending update for conduit helpers
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Visualization and analysis runtime for multi-physics HPC simulations
 
