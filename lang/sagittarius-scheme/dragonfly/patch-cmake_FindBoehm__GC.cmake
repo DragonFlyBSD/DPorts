@@ -1,5 +1,5 @@
---- cmake/FindGC.cmake.orig	2019-06-09 21:33:40 UTC
-+++ cmake/FindGC.cmake
+--- cmake/FindBoehm_GC.cmake.orig	2021-09-10 19:33:30 UTC
++++ cmake/FindBoehm_GC.cmake
 @@ -50,7 +50,7 @@ ELSE()
  ENDIF()
  
