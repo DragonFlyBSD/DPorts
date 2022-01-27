@@ -1,6 +1,6 @@
---- direwolf.h.orig	2018-10-08 14:15:21 UTC
-+++ direwolf.h
-@@ -274,7 +274,7 @@ char *strtok_r(char *str, const char *de
+--- src/direwolf.h.orig	2020-10-28 00:45:30 UTC
++++ src/direwolf.h
+@@ -282,7 +282,7 @@ char *strtok_r(char *str, const char *de
  char *strcasestr(const char *S, const char *FIND);
  
  

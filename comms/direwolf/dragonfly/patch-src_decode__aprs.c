@@ -1,6 +1,6 @@
---- decode_aprs.c.orig	2018-10-08 14:15:21 UTC
-+++ decode_aprs.c
-@@ -3872,7 +3872,7 @@ static void decode_tocall (decode_aprs_t
+--- src/decode_aprs.c.orig	2020-10-28 00:45:30 UTC
++++ src/decode_aprs.c
+@@ -3930,7 +3930,7 @@ static void decode_tocall (decode_aprs_t
   * models before getting to the more generic APY.
   */
  
