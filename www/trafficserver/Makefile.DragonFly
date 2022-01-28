@@ -1,3 +1,7 @@
+
+LIB_DEPENDS:=	${LIB_DEPENDS:Nlibhwloc*}
+CONFIGURE_ARGS+=	--disable-hwloc
+
 LDFLAGS+= -pthread
 
 # disable building tests, something with broken missing_ts_plugin_init.so-ver
