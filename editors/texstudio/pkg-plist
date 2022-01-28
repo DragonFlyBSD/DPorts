@@ -1,7 +1,7 @@
 bin/texstudio
 share/applications/texstudio.desktop
 share/icons/hicolor/scalable/apps/texstudio.svg
-share/metainfo/texstudio.appdata.xml
+share/metainfo/texstudio.metainfo.xml
 %%DATADIR%%/AUTHORS
 %%DATADIR%%/CHANGELOG.txt
 %%DATADIR%%/COPYING
@@ -87,6 +87,9 @@ share/metainfo/texstudio.appdata.xml
 %%DATADIR%%/template_Article_French.json
 %%DATADIR%%/template_Article_French.png
 %%DATADIR%%/template_Article_French.tex
+%%DATADIR%%/template_Article_LuaLaTeX_French.json
+%%DATADIR%%/template_Article_LuaLaTeX_French.png
+%%DATADIR%%/template_Article_LuaLaTeX_French.tex
 %%DATADIR%%/template_Beamer.json
 %%DATADIR%%/template_Beamer.tex
 %%DATADIR%%/template_Book.json
