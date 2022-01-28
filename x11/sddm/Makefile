@@ -1,8 +1,11 @@
 PORTNAME=	sddm
 PORTVERSION=	0.19.0
 DISTVERSIONPREFIX=	v
-PORTREVISION=	5
+PORTREVISION=	7
 CATEGORIES=	x11
+
+PATCH_SITES=	https://github.com/sddm/sddm/commit/
+PATCHFILES=	e93bf95c54ad8c2a1604f8d7be05339164b19308.patch:-p1
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	QML based login manager
@@ -21,7 +24,8 @@ RUN_DEPENDS=	dbus-run-session:devel/dbus \
 		xauth:x11/xauth \
 		xmessage:x11/xmessage
 
-USES=		cmake compiler:c++11-lang kde:5 pkgconfig python:build qt:5 xorg
+USES=		cmake compiler:c++11-lang cpe kde:5 pkgconfig python:build qt:5 xorg
+CPE_VENDOR=	${PORTNAME}_project
 USE_GITHUB=	yes
 USE_KDE=	ecm_build
 USE_QT=		core declarative dbus gui network \
@@ -55,6 +59,8 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/xinitrc.desktop ${STAGEDIR}${PREFIX}/share/xsessions
 	${INSTALL_SCRIPT} ${FILESDIR}/xinit-session ${STAGEDIR}${PREFIX}/share/sddm/scripts
 	${REINPLACE_CMD} -e 's#@@LOCALBASE@@#${LOCALBASE}#' ${STAGEDIR}${PREFIX}/share/sddm/scripts/xinit-session
-
+	${MV} ${STAGEDIR}${PREFIX}/etc/pam.d/sddm ${STAGEDIR}${PREFIX}/etc/pam.d/sddm.default
+	${MV} ${STAGEDIR}${PREFIX}/etc/pam.d/sddm-autologin ${STAGEDIR}${PREFIX}/etc/pam.d/sddm-autologin.default
+	${MV} ${STAGEDIR}${PREFIX}/etc/pam.d/sddm-greeter ${STAGEDIR}${PREFIX}/etc/pam.d/sddm-greeter.default
 
 .include <bsd.port.mk>
