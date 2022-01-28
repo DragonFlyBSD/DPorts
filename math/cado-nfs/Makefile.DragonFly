@@ -1,3 +1,5 @@
 
+LIB_DEPENDS:=	${LIB_DEPENDS:Nlibhwloc*}
+
 # deal with orphans
 PLIST_FILES+=	lib/cado-nfs-3.0.0/utils/antebuffer
