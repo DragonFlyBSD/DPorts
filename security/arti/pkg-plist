@@ -1,0 +1,5 @@
+bin/arti
+@sample %%ETCDIR%%/arti.toml.sample
+@dir /var/db/arti
+@dir /var/log/arti
+@dir /var/run/arti
