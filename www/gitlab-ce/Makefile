@@ -1,8 +1,8 @@
 # Created by: Torsten Zuehlsdorff <tz@FreeBSD.org>
 
 PORTNAME=	gitlab-ce
-PORTVERSION=	14.6.0
-PORTREVISION=	1
+PORTVERSION=	14.6.3
+PORTREVISION=	0
 CATEGORIES=	www devel
 
 MAINTAINER=	mfechner@FreeBSD.org
@@ -274,7 +274,7 @@ USE_GITLAB=	yes
 GL_ACCOUNT=	gitlab-org
 GL_PROJECT=	gitlab-foss
 # Find the here: https://gitlab.com/gitlab-org/gitlab-foss/-/tags
-GL_COMMIT=	3bc07a0be9ce3b8f736890a0513283f04796b37e
+GL_COMMIT=	e085746f07774a1050d9fceffa7e17b262f3132d
 
 USERS=	git
 GROUPS=	git
