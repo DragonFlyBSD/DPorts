@@ -1,0 +1,6 @@
+
+CMAKE_OFF+=	REPORT_COVERAGE
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/-fsanitize=address/d' \
+		${WRKSRC}/test/CMakeLists.txt
