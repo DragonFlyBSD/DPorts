@@ -9,3 +9,11 @@ dfly-patch:
 		${TOUCH} ${BUILD_WRKSRC}/build.ninja
 	${REINPLACE_CMD} -e 's@LLVM_SYSTEM_LIBS_SPACES}"@LLVM_SYSTEM_LIBS_SPACES} -llzma"@g' \
 		${WRKSRC}/cmake/Findllvm.cmake
+
+# make sure these were created
+dfly-install:
+	${MKDIR} ${STAGEDIR}${DOCSDIR}/std
+	${TOUCH} ${STAGEDIR}${DOCSDIR}/langref.html
+.for f in data.js main.js index.html
+	${TOUCH} ${STAGEDIR}${DOCSDIR}/std/${f}
+.endfor
