@@ -1,0 +1,6 @@
+
+BUILD_DEPENDS+=	cmake:devel/cmake
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@=c++11@=gnu++17@g' \
+		${WRKSRC}/setup.py
