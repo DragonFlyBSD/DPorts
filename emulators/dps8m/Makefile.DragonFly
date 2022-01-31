@@ -1,0 +1,4 @@
+
+USES+=	alias localbase:ldflags
+
+MAKE_ARGS+=	ROUND_ROBIN=1
