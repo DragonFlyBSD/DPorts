@@ -2,4 +2,6 @@ LIBS:=	${LIBS:N-lthr}
 
 # deal with orphans
 PLIST_FILES+=	%%DATADIR%%/factory/dummy.crv \
+		%%DATADIR%%/factory/gravmod.crv \
+		%%DATADIR%%/factory/gravmod.ed \
 		%%DATADIR%%/factory/spinners
