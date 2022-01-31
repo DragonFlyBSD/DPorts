@@ -1,0 +1,4 @@
+
+# deal with orphans
+dfly-install:
+	${RM} -fv ${STAGEDIR}${PREFIX}/man/man1/uwsc.1
