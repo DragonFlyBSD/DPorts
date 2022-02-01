@@ -9,3 +9,8 @@ PG_UID!=		grep -E '^pgsql:' ${PORTSDIR}/GIDs | \
 # Disagree with maintainer's decision to make ICU collation default
 # It's a POLA violation for existing databases
 OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NICU}
+
+# this is not enough for ports reusing installed Makefile.global/pg_config (binary)
+dfly-configure:
+	${REINPLACE_CMD} -e 's@-Wimplicit-fallthrough=3@-Wno-implicit-fallthrough@g' \
+		${WRKSRC}/src/Makefile.global
