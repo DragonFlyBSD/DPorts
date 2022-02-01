@@ -1,4 +1,7 @@
 
+# includes <threads.h> w/o good reason
+BUILD_DEPENDS+=	libstdthreads>0:misc/libstdthreads
+
 USES:=	${USES:N*flang} fortran
 BINARY_ALIAS:=	flang=gfortran8
 
