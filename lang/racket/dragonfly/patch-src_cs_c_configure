@@ -1,0 +1,19 @@
+--- src/cs/c/configure.intermediate	2022-02-01 11:29:32.000000000 +0000
++++ src/cs/c/configure
+@@ -4340,7 +4340,7 @@ case "$host_os" in
+     ;;
+   aix*)
+     ;;
+-  *freebsd*)
++  *freebsd*|dragonfly*)
+     MACH_OS=fb
+     CFLAGS="${CFLAGS} -I/usr/local/include"
+     LDFLAGS="${LDFLAGS} -L/usr/local/lib"
+@@ -4361,6 +4361,7 @@ case "$host_os" in
+     LINK_DYNAMIC="-Wl,--export-dynamic"
+     ;;
+   dragonfly*)
++    MACH_OS=fb
+     LINK_DYNAMIC="-Wl,--export-dynamic"
+     ;;
+   netbsd*)
