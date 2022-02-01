@@ -1,0 +1,5 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
+		${WRKSRC}/libg15daemon_client/g15daemon_net.c \
+		${WRKSRC}/plugins/g15_plugin_net.c
