@@ -1,3 +1,6 @@
+MAKE_JOBS_UNSAFE=yes
+
 USES+= alias shebangfix
 
 SHEBANG_FILES+=	meson_post_install.py
+
