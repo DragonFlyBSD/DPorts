@@ -1,12 +1,21 @@
+
+# running 120 python executables on some systems is abit excessive...
+MAKE_ENV+=	GRPC_PYTHON_BUILD_EXT_COMPILER_JOBS=${MAKE_JOBS_NUMBER}
+
 dfly-patch:
 	${REINPLACE_CMD} -e 's|FreeBSD|DragonFly|' \
 		${WRKSRC}/Makefile \
+		${WRKSRC}/third_party/abseil-cpp/absl/debugging/internal/elf_mem_image.h \
+		${WRKSRC}/third_party/abseil-cpp/absl/debugging/internal/vdso_support.cc \
+		${WRKSRC}/third_party/abseil-cpp/absl/debugging/symbolize_elf.inc \
 		${WRKSRC}/third_party/abseil-cpp/absl/base/config.h \
 		${WRKSRC}/third_party/abseil-cpp/absl/base/internal/endian.h \
 		${WRKSRC}/third_party/abseil-cpp/absl/base/internal/sysinfo.cc \
 		${WRKSRC}/third_party/abseil-cpp/absl/base/internal/raw_logging.cc \
 		${WRKSRC}/include/grpc/impl/codegen/port_platform.h \
+		${WRKSRC}/third_party/cares/cares/test/gmock-*/gtest/gtest.h \
 		${WRKSRC}/third_party/zlib/contrib/minizip/ioapi.h \
+		${WRKSRC}/third_party/boringssl-with-bazel/src/include/openssl/base.h \
 		${WRKSRC}/third_party/boringssl-with-bazel/src/third_party/googletest/include/gtest/internal/gtest-port-arch.h
 	${REINPLACE_CMD} -e 's|FREEBSD|DRAGONFLY|' \
 		${WRKSRC}/third_party/boringssl-with-bazel/src/third_party/googletest/include/gtest/internal/gtest-port-arch.h \
