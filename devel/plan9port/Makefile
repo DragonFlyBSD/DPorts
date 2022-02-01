@@ -1,5 +1,4 @@
 # Created by: Serge Gagnon <serge.gagnon@b2b2c.ca>
-# $FreeBSD$
 
 PORTNAME=	plan9port
 PORTVERSION=	20200816
@@ -7,7 +6,7 @@ CATEGORIES=	devel plan9
 DIST_SUBDIR=	plan9port
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
-MAINTAINER=	tobik@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Plan 9 from User Space
 
 LICENSE=	LUCENT
@@ -18,7 +17,7 @@ LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 BROKEN_armv6=	fails to compile: thread.c:130:5: no member named 'arm_r0' in 'mcontext_t'
 BROKEN_armv7=	fails to compile: thread.c:130:5: no member named 'arm_r0' in 'mcontext_t'
 
-BUILD_DEPENDS=	as:devel/binutils
+BUILD_DEPENDS=	as:devel/binutils@native
 LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2
 
@@ -48,6 +47,8 @@ DATA_DISTFILES=		pgw.tar.bz2 \
 			roget.tar.bz2 \
 			scat.tgz
 
+.include <bsd.port.pre.mk>
+
 post-extract-DATA-on:
 	@cd ${WRKSRC}/dict && ${TAR} -xf ${DISTDIR}/${DIST_SUBDIR}/pgw.tar.bz2
 	@cd ${WRKSRC}/dict && ${TAR} -xf ${DISTDIR}/${DIST_SUBDIR}/roget.tar.bz2
@@ -62,7 +63,10 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|ulong|u64int|' ${WRKSRC}/src/libmach/FreeBSD.c
 
 do-configure:
-	@${ECHO_CMD} 'CFLAGS="${CFLAGS}"' > ${WRKSRC}/LOCAL.config
+.if ${CHOSEN_COMPILER_TYPE} == gcc
+	@${ECHO_CMD} 'CC9="${CC}"' > ${WRKSRC}/LOCAL.config
+.endif
+	@${ECHO_CMD} 'CFLAGS="${CFLAGS}"' >> ${WRKSRC}/LOCAL.config
 	@${ECHO_CMD} 'LDFLAGS="${LDFLAGS}"' >> ${WRKSRC}/LOCAL.config
 	@${ECHO_CMD} 'FONTSRV=fontsrv' >> ${WRKSRC}/LOCAL.config
 
@@ -85,4 +89,4 @@ post-install:
 			${STRIP_CMD} $$f > /dev/null 2>&1 || ${TRUE}; \
 		done
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
