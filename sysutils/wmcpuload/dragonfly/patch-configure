@@ -1,0 +1,11 @@
+--- configure.intermediate	2022-01-31 21:54:57.000000000 +0000
++++ configure
+@@ -4990,7 +4990,7 @@ linux*)
+   ignore_nice=yes
+   use_smp=yes
+   ;;
+-freebsd*)
++freebsd*|dragonfly*)
+   OS=freebsd
+   ignore_nice=yes
+   LIBS="$LIBS -lkvm"
