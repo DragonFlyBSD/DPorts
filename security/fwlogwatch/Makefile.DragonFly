@@ -1,0 +1,5 @@
+
+# boolean_t is kernel only, use lighter _KERNEL_STRUCTURES
+dfly-patch:
+	${REINPLACE_CMD} -e 's@[[:<:]]_KERNEL[[:>:]]@_KERNEL_STRUCTURES@g' \
+		${WRKSRC}/main.h ${WRKSRC}/resolve.c ${WRKSRC}/utils.c ${WRKSRC}/whois.c
