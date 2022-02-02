@@ -1,7 +1,7 @@
---- src/jattach_posix.c.orig	2019-01-08 20:59:18 UTC
-+++ src/jattach_posix.c
+--- src/posix/psutil.c.orig	2021-08-11 00:01:45 UTC
++++ src/posix/psutil.c
 @@ -227,8 +227,13 @@ int get_process_info(int pid, uid_t* uid
-         return 0;
+         return -1;
      }
  
 +#ifdef __DragonFly__
@@ -12,5 +12,5 @@
      *gid = info.ki_groups[0];
 +#endif
      *nspid = pid;
-     return 1;
+     return 0;
  }
