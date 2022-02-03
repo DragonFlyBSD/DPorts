@@ -1,1 +1,2 @@
+# base g++80 generates bad sleef.h depending on host SSE level
 USE_GCC_VERSION=	10
