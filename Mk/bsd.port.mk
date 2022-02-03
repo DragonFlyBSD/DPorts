@@ -2878,6 +2878,14 @@ IGNORE=		is marked as broken on ${OPSYS}: ${BROKEN_${OPSYS}}
 IGNORE=		is forbidden: ${FORBIDDEN}
 .endif
 
+# sting filtering support
+.if defined(DFLY_STING_XFAIL) && exists(${.CURDIR}/dragonfly/XFAIL)
+. include "${.CURDIR}/dragonfly/XFAIL"
+. if defined(XFAIL_${OPSYS})
+IGNORE=		XFAIL: ${XFAIL_${OPSYS}}
+. endif
+.endif
+
 # Define the text to be output to LEGAL
 .if defined(LEGAL_TEXT)
 LEGAL= ${LEGAL_TEXT}
