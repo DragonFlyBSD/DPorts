@@ -1,0 +1,2 @@
+# must match whatever LLVM_DEFAULT is in MF
+USE_CLANG_FALLBACK= 12
