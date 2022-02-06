@@ -1,4 +1,10 @@
 
+# install deps conflict
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NKSH2020} ASTKSH
+
+# fix potentially wrong dep
+ASTKSH_RUN_DEPENDS:=	${ASTKSH_RUN_DEPENDS:N*ast-ksh93} ksh93:shells/ast-ksh
+
 dfly-patch:
 	${REINPLACE_CMD} -e 's@clang@cc@g' \
 		${WRKSRC}/src/colorpicker/Makefile \
