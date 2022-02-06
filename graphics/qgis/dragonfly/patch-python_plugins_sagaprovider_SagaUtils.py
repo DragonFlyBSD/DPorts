@@ -1,5 +1,5 @@
---- python/plugins/processing/algs/saga/SagaUtils.py.orig	2021-06-18 12:10:09 UTC
-+++ python/plugins/processing/algs/saga/SagaUtils.py
+--- python/plugins/sagaprovider/SagaUtils.py.orig	2022-01-14 12:06:34 UTC
++++ python/plugins/sagaprovider/SagaUtils.py
 @@ -56,7 +56,7 @@ def sagaBatchJobFilename():
  
  def findSagaFolder():
@@ -14,7 +14,7 @@
  
  def sagaPath():
 -    if not isWindows() and not isMac() and platform.system() != 'FreeBSD':
-+    if not isWindows() and not isMac() and platform.system() != 'FreeBSD' and platform.system() !=  'DragonFly':
++    if not isWindows() and not isMac() and platform.system() != 'FreeBSD' and platform.system() != 'DragonFly':
          return ''
  
      folder = findSagaFolder()
