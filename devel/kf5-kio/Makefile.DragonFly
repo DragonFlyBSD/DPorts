@@ -1,1 +1,7 @@
 USES+=	gmake
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
+			 -e '/HAVE_SYS_EXTATTR_H/s@sys/extattr.h@&__z@g' \
+		${WRKSRC}/src/ioslaves/file/ConfigureChecks.cmake \
+		${WRKSRC}/cmake/FindACL.cmake
