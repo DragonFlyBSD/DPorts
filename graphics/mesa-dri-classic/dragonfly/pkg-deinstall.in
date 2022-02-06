@@ -1,0 +1,8 @@
+#!/bin/sh
+
+case "$2" in
+"POST-DEINSTALL")
+	echo "Removing classic swrast"
+	[ -f "%%LOCALBASE%%/misc/mesa-dri-gallium/lib/dri/swrast_dri.so" ] || /bin/rm -vf %%LOCALBASE%%/lib/dri/swrast_dri.so
+	;;
+esac

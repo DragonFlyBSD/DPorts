@@ -1,0 +1,9 @@
+#!/bin/sh
+
+case "$2" in
+"POST-INSTALL")
+	echo "Copying swrast classic"
+	[ -f "%%LOCALBASE%%/misc/mesa-dri-gallium/lib/dri/swrast_dri.so" ] || /bin/cp -vf %%LOCALBASE%%/lib/dri/classic/swrast_dri.so %%LOCALBASE%%/lib/dri/swrast_dri.so
+	[ -f "%%LOCALBASE%%/lib/dri/swrast_dri.so" ] || /bin/cp -vf %%LOCALBASE%%/lib/dri/classic/swrast_dri.so %%LOCALBASE%%/lib/dri/swrast_dri.so
+	;;
+esac

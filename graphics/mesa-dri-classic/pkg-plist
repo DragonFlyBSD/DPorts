@@ -6,7 +6,6 @@
 @comment include/KHR/khrplatform.h
 @comment include/gbm.h
 lib/dri/classic/swrast_dri.so
-lib/dri/swrast_dri.so
 @comment lib/libgbm.so
 @comment lib/libgbm.so.1
 @comment lib/libgbm.so.1.0.0
