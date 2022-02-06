@@ -1,7 +1,3 @@
 .if !defined(DPORTS_BUILDER)
 MANUAL_PACKAGE_BUILD=	huge
 .endif
-
-# to avoid orphans
-PLIST_FILES+=	%%DATADIR%%/3dmodels/Package_DFN_QFN.3dshapes/HVQFN-24-1EP_4x4mm_P0.5mm_EP2.1x2.1mm.step \
-		%%DATADIR%%/3dmodels/Package_DFN_QFN.3dshapes/HVQFN-24-1EP_4x4mm_P0.5mm_EP2.1x2.1mm.wrl
