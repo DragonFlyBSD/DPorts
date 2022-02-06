@@ -1,9 +1,9 @@
---- src/util/u_thread.h.orig	2020-09-28 22:52:13 UTC
+--- src/util/u_thread.h.orig	2022-01-12 21:32:28 UTC
 +++ src/util/u_thread.h
-@@ -79,7 +79,7 @@ static inline void u_thread_setname( con
- #if defined(HAVE_PTHREAD)
- #if DETECT_OS_LINUX || DETECT_OS_CYGWIN || DETECT_OS_SOLARIS
-    pthread_setname_np(pthread_self(), name);
+@@ -138,7 +138,7 @@ static inline void u_thread_setname( con
+       buf[len] = '\0';
+       pthread_setname_np(pthread_self(), buf);
+    }
 -#elif DETECT_OS_FREEBSD || DETECT_OS_OPENBSD
 +#elif DETECT_OS_FREEBSD || DETECT_OS_OPENBSD || DETECT_OS_DRAGONFLY
     pthread_set_name_np(pthread_self(), name);
