@@ -1,4 +1,7 @@
 
+# avoid doxygen for now
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NDOXYGEN}
+
 dfly-patch:
 	${REINPLACE_CMD} -e 's@ STREQUAL \(FreeBSD\)@ MATCHES "\1|DragonFly"@g'	\
 		${WRKSRC}/core/CMakeLists.txt					\
