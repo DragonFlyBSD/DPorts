@@ -1,0 +1,6 @@
+
+# some Bind() issue
+USE_CLANG_FALLBACK=	default
+
+# avoid doxygen dep for now
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NDOXYGEN}
