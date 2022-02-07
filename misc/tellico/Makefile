@@ -1,8 +1,8 @@
 # Created by: Kirill Ponomarew <ponomarew@oberon.net>
 
 PORTNAME=	tellico
-DISTVERSION=	3.4.1
-PORTREVISION=	6
+DISTVERSION=	3.4.2
+PORTREVISION=	1
 CATEGORIES=	misc kde
 MASTER_SITES=	http://tellico-project.org/files/
 
