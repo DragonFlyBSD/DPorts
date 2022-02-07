@@ -1,1 +1,4 @@
-CXXFLAGS+= -D__OpenBSD__
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@ifdef REAL_GCC@&__z@g' \
+		${WRKSRC}/common/conf_post.h
