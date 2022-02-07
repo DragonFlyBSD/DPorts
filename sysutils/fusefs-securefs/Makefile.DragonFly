@@ -1,0 +1,6 @@
+
+# cleanup orphans
+dfly-install:
+	${RM} -rfv ${STAGEDIR}${PREFIX}/include/cryptopp
+	${RM} -rfv ${STAGEDIR}${PREFIX}/lib/cmake
+	${RM} -fv ${STAGEDIR}${PREFIX}/lib/libcryptopp.a
