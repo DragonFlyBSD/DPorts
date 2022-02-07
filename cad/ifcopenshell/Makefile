@@ -10,6 +10,8 @@ COMMENT=	Open source IFC library and geometry engine
 LICENSE=	LGPL3+
 LICENSE_FILE=	${WRKSRC}/COPYING.LESSER
 
+BROKEN=		does not build with OpenCascade 7.6 (yet)
+
 BUILD_DEPENDS=	nlohmann-json>0:devel/nlohmann-json
 LIB_DEPENDS=	libboost_system.so:devel/boost-libs \
 		libTKernel.so:cad/opencascade
