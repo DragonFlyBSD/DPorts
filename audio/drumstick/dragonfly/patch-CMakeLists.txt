@@ -1,11 +1,29 @@
---- CMakeLists.txt.orig	2021-08-25 23:25:01 UTC
+--- CMakeLists.txt.orig	2022-02-07 10:11:20.000000000 +0000
 +++ CMakeLists.txt
-@@ -111,7 +111,7 @@ else()
- 	message(FATAL_ERROR "Program pkg-config not found")
+@@ -68,7 +68,7 @@ else()
  endif()
  
--if(${CMAKE_SYSTEM} MATCHES "Linux|FreeBSD")
-+if(${CMAKE_SYSTEM} MATCHES "Linux|FreeBSD|DragonFly")
-     #pkg_check_modules(ALSA REQUIRED IMPORTED_TARGET alsa>=1.0.0)
+ set(_DBUS_INIT OFF)
+-if (UNIX AND NOT APPLE)
++if (UNIX AND NOT APPLE AND NOT ${CMAKE_SYSTEM} MATCHES "DragonFly")
+     set(_PULSE_INIT ON)
+ else ()
+     set(_PULSE_INIT OFF)
+@@ -81,7 +81,7 @@ else()
+ endif()
+ 
+ # ALSA Sequencer is only available on Linux
+-if (${CMAKE_SYSTEM} MATCHES "Linux")
++if (${CMAKE_SYSTEM} MATCHES "Linux|DragonFly")
+     set(_BUILD_ALSA_INIT ON)
+ else()
+     set(_BUILD_ALSA_INIT OFF)
+@@ -173,7 +173,7 @@ else()
+ endif()
+ 
+ # ALSA Sequencer is only available on Linux
+-if(${CMAKE_SYSTEM} MATCHES "Linux")
++if(${CMAKE_SYSTEM} MATCHES "Linux|DragonFly")
+     pkg_check_modules(ALSA REQUIRED IMPORTED_TARGET alsa>=1.0.0)
      if(ALSA_FOUND)
          message(STATUS "Found ALSA version = ${ALSA_VERSION}")
