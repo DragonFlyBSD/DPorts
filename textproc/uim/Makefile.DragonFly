@@ -1,5 +1,5 @@
 
-.if defined(UIM_SLAVE)
+.if defined(UIM_SLAVE) && ${PKGNAMESUFFIX:M-qt5}
 # try to fix plist (orphans)
 PLIST_FILES+=	share/kservices5/plasma-applet-com.github.uim.status.desktop
 .endif
