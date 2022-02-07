@@ -49,6 +49,8 @@ share/kpackage/genericqml/org.kde.plasma.themeexplorer/contents/ui/fakecontrols/
 share/kpackage/genericqml/org.kde.plasma.themeexplorer/contents/ui/main.qml
 share/kpackage/genericqml/org.kde.plasma.themeexplorer/metadata.desktop
 share/kpackage/genericqml/org.kde.plasma.themeexplorer/metadata.json
+share/kservices5/plasma-package-org.kde.plasma.cuttlefish.desktop
+share/kservices5/plasma-shell-org.kde.plasma.plasmoidviewershell.desktop
 share/locale/ar/LC_MESSAGES/cuttlefish.mo
 share/locale/ar/LC_MESSAGES/cuttlefish_editorplugin.mo
 share/locale/ar/LC_MESSAGES/org.kde.plasma.lookandfeelexplorer.mo
@@ -503,8 +505,10 @@ share/plasma/packages/org.kde.plasma.cuttlefish/metadata.json
 share/plasma/shells/org.kde.plasma.plasmoidviewershell/contents/applet/AppletError.qml
 share/plasma/shells/org.kde.plasma.plasmoidviewershell/contents/applet/CompactApplet.qml
 share/plasma/shells/org.kde.plasma.plasmoidviewershell/contents/applet/DefaultCompactRepresentation.qml
+share/plasma/shells/org.kde.plasma.plasmoidviewershell/contents/configuration/AboutPlugin.qml
 share/plasma/shells/org.kde.plasma.plasmoidviewershell/contents/configuration/AppletConfiguration.qml
 share/plasma/shells/org.kde.plasma.plasmoidviewershell/contents/configuration/ConfigCategoryDelegate.qml
+share/plasma/shells/org.kde.plasma.plasmoidviewershell/contents/configuration/ConfigurationAppletPage.qml
 share/plasma/shells/org.kde.plasma.plasmoidviewershell/contents/configuration/ConfigurationContainmentActions.qml
 share/plasma/shells/org.kde.plasma.plasmoidviewershell/contents/configuration/ConfigurationContainmentAppearance.qml
 share/plasma/shells/org.kde.plasma.plasmoidviewershell/contents/configuration/ConfigurationKcmPage.qml
