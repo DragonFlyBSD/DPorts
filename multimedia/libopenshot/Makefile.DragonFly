@@ -1,6 +1,10 @@
 
 USES+=	alias
 
+# avoid doxygen for now
+OPTIONS_EXCLUDE+=	DOCS
+CMAKE_BOOL_OFF+=	CMAKE_DISABLE_FIND_PACKAGE_Doxygen ENABLE_DOCS
+
 dfly-patch:
 	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
 		${WRKSRC}/src/CMakeLists.txt
