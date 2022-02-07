@@ -3,8 +3,16 @@
 LIB_DEPENDS:=	${LIB_DEPENDS:Nlibpulse*}
 
 dfly-patch:
-	${RM} -f ${WRKSRC}/qsstv/sound/soundpulse.*
+	${RM} -f ${WRKSRC}/sound/soundpulse.*
 	${REINPLACE_CMD} -e 's@-lpulse-simple@@g' -e 's@-lpulse@@g' \
 			  -e 's@sound/soundpulse.cpp@@g' \
 			  -e 's@sound/soundpulse.h@@g' \
-		${WRKSRC}/qsstv/qsstv.pro
+		${WRKSRC}/qsstv.pro
+	${REINPLACE_CMD} -e '/<malloc\.h>/d' \
+		${WRKSRC}/drmrx/channeldecode.cpp \
+		${WRKSRC}/drmrx/deinterleaver.cpp \
+		${WRKSRC}/drmrx/getmode.cpp \
+		${WRKSRC}/drmrx/mkfacmap.cpp \
+		${WRKSRC}/drmrx/mkmscmap.cpp \
+		${WRKSRC}/drmrx/psdcmean.cpp \
+		${WRKSRC}/drmrx/psdmean.cpp

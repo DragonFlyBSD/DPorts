@@ -1,5 +1,5 @@
---- qsstv/mainwindow.cpp.orig	2019-04-18 09:26:35 UTC
-+++ qsstv/mainwindow.cpp
+--- mainwindow.cpp.orig	2019-04-18 09:26:35 UTC
++++ mainwindow.cpp
 @@ -24,7 +24,9 @@
  #include "utils/logging.h"
  #include "dispatch/dispatcher.h"
