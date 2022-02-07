@@ -1,9 +1,9 @@
---- Modules/pci/CMakeLists.txt.orig	2019-05-07 09:48:36 UTC
+--- Modules/pci/CMakeLists.txt.orig	2022-01-04 08:54:48 UTC
 +++ Modules/pci/CMakeLists.txt
-@@ -24,7 +24,7 @@ if(KF5Wayland_FOUND)
-     set(KCM_PCI_LIBS ${KCM_PCI_LIBS} KF5::WaylandClient)
-     set(KCM_PCI_PART_SRCS ${KCM_PCI_PART_SRCS} ../base/info_wayland.cpp)
- endif()
+@@ -20,7 +20,7 @@ set(KCM_PCI_LIBS
+ 
+ set(KCM_PCI_PART_SRCS kcm_pci.cpp ../base/os_current.cpp )
+ 
 -if(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
 +if(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD|DragonFly")
      set(KCM_PCI_LIBS ${KCM_PCI_LIBS} devinfo)
