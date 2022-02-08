@@ -2,6 +2,9 @@
 # configure script checks for vendor with cc --version
 CONFIGURE_ARGS+=	CC=gcc
 
+BUILD_DEPENDS+=	cxx_atomics_pic>0:misc/cxx_atomics_pic
+LDFLAGS+=	-L${LOCALBASE}/cxx_atomics_pic -latomic_pic
+
 # zrj: disable knl for binutils-2.34 gas(1)
 dfly-patch:
 	${REINPLACE_CMD} -e 's@haswell,knl/@haswell/@g' \
