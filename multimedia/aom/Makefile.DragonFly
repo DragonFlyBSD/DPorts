@@ -1,0 +1,2 @@
+# unsafe vmaf rules
+MAKE_JOBS_UNSAFE= yes
