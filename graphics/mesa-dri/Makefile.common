@@ -12,7 +12,7 @@
 MESAVERSION=	${MESABASEVERSION}${MESASUBVERSION:C/^(.)/.\1/}
 MESADISTVERSION=${MESABASEVERSION}${MESASUBVERSION:C/^(.)/-\1/}
 
-MESABASEVERSION=	21.3.4
+MESABASEVERSION=	21.3.6
 # if there is a subversion, don't include the '-' between 7.11-rc2.
 MESASUBVERSION=
 
@@ -114,7 +114,6 @@ MESON_ARGS+=	-Dllvm=disabled
 #LDFLAGS+=	-Wl,-rpath=${LOCALBASE}/llvm${LLVM_DEFAULT}/lib
 .  endif
 . else
-BROKEN= uses huge llvm
 LIB_DEPENDS+=	libelf.so:devel/libelf
 BUILD_DEPENDS+=	llvm${LLVM_DEFAULT}>=0:devel/llvm${LLVM_DEFAULT}
 RUN_DEPENDS+=	llvm${LLVM_DEFAULT}>=0:devel/llvm${LLVM_DEFAULT}
