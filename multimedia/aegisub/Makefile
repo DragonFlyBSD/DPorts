@@ -2,11 +2,12 @@
 
 PORTNAME=	aegisub
 PORTVERSION=	3.2.2
-PORTREVISION=	50
+PORTREVISION=	51
 CATEGORIES=	multimedia
 MASTER_SITES=	http://ftp.aegisub.org/pub/archives/releases/source/ \
 		ftp://ftp.aegisub.org/pub/archives/releases/source/ \
-		ftp://ftp2.aegisub.org/pub/archives/releases/source/
+		ftp://ftp2.aegisub.org/pub/archives/releases/source/ \
+		https://github.com/Aegisub/Aegisub/releases/download/v${PORTVERSION}/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Cross-platform subtitle editor
@@ -43,7 +44,6 @@ CONFIGURE_ARGS=	--disable-compiler-flags \
 		--disable-update-checker \
 		--without-libc++ \
 		${ICONV_CONFIGURE_ARG}
-INSTALLS_ICONS=	yes
 
 PLIST_SUB=	VERSION="${PORTVERSION:R}"
 

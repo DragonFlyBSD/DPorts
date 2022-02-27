@@ -14,7 +14,7 @@ LICENSE?=	GPLv3
 
 LIB_DEPENDS?=	libcairo.so:graphics/cairo
 
-CONFLICTS?=	xboard-devel-[0-9]*
+CONFLICTS?=	xboard-devel
 
 OPTIONS_DEFINE?=	NLS DOCS ZIPPY
 OPTIONS_SINGLE?=	FRONTEND
@@ -75,7 +75,6 @@ CFLAGS+=	-I${LOCALBASE}/include -fcommon
 LDFLAGS+=	-L${LOCALBASE}/lib
 INFO=		xboard
 USE_PERL5=	build
-INSTALLS_ICONS=	yes
 DATADIR?=	${PREFIX}/share/games/${PORTNAME}
 XBOARDCONF?=	${WRKSRC}/xboard.conf
 

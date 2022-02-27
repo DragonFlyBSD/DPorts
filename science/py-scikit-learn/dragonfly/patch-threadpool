@@ -1,0 +1,26 @@
+Missing dep, this module imported by science/py-nilearn
+
+--- sklearn/utils/fixes.py.orig	2021-12-25 11:28:25 UTC
++++ sklearn/utils/fixes.py
+@@ -19,7 +19,7 @@ import scipy.sparse as sp
+ import scipy
+ import scipy.stats
+ from scipy.sparse.linalg import lsqr as sparse_lsqr  # noqa
+-import threadpoolctl
++#import threadpoolctl
+ from .._config import config_context, get_config
+ from ..externals._packaging.version import parse as parse_version
+ 
+@@ -292,6 +292,7 @@ else:  # >= 1.22
+     from numpy import percentile  # type: ignore  # noqa
+ 
+ 
++"""
+ # compatibility fix for threadpoolctl >= 3.0.0
+ # since version 3 it's possible to setup a global threadpool controller to avoid
+ # looping through all loaded shared libraries each time.
+@@ -326,3 +327,4 @@ def threadpool_info():
+ 
+ 
+ threadpool_info.__doc__ = threadpoolctl.threadpool_info.__doc__
++"""

@@ -1,0 +1,11 @@
+
+# needs <filesystem>
+BUILD_DEPENDS+=	cxxfs_gcc8>0:misc/cxxfs_gcc8
+CXXFLAGS+=	-isystem ${LOCALBASE}/cxxfs_gcc8
+LDFLAGS+=	-L${LOCALBASE}/cxxfs_gcc8
+
+# exiv2 is not compatible
+dfly-patch:
+	${REINPLACE_CMD} -e 's@HAVE_EXIV2@&__z@g' \
+			 -e 's@-lexiv2@& -lstdc++fs@g' \
+		${WRKSRC}/configure

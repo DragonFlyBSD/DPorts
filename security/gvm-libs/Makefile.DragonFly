@@ -1,3 +1,7 @@
 
+# avoid doxygen dep for now
+BUILD_DEPENDS:=	${BUILD_DEPENDS:Ndoxygen*}
+RUN_DEPENDS:=	${RUN_DEPENDS:Ndoxygen*}
+
 # attempt to fix plist in stage-qa
 PLIST_FILES+=	"@dir /var/run/gvm"

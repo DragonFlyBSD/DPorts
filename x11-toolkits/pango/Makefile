@@ -1,7 +1,7 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
 
 PORTNAME=	pango
-PORTVERSION=	1.48.7
+PORTVERSION=	1.48.11
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -12,7 +12,6 @@ COMMENT=	Open-source framework for the layout and rendering of i18n text
 LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BUILD_DEPENDS=	help2man:misc/help2man
 LIB_DEPENDS=	libfreetype.so:print/freetype2 \
 		libharfbuzz.so:print/harfbuzz \
 		libfontconfig.so:x11-fonts/fontconfig \
@@ -29,18 +28,20 @@ USE_GNOME=	cairo glib20 introspection:build
 CPE_VENDOR=	gnome
 
 VERSION=	1.8.0
-LIBVERSION=	0.4800.7
+LIBVERSION=	0.4800.11
 PLIST_SUB+=     VERSION=${VERSION} LIBVERSION=${LIBVERSION}
 
 FONTSCALE=	${LOCALBASE}/share/fonts/TTF/luximb.ttf
 FONTENCOD=	${LOCALBASE}/share/fonts/encodings/encodings.dir
 
 OPTIONS_SUB=	yes
-OPTIONS_DEFINE=	X11 DOCS
-OPTIONS_DEFAULT=X11
+OPTIONS_DEFINE=	X11 DOCS MANPAGES
+OPTIONS_DEFAULT=X11 MANPAGES
 
 DOCS_MESON_TRUE=	gtk_doc
 DOCS_BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}gi-docgen>=0:textproc/py-gi-docgen
+
+MANPAGES_BUILD_DEPENDS=	help2man:misc/help2man
 
 X11_MESON_ENABLED=	xft
 X11_USES=	xorg

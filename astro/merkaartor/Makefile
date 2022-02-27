@@ -2,7 +2,7 @@
 
 PORTNAME=	merkaartor
 PORTVERSION=	0.19.0
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	astro
 
 MAINTAINER=	dev2@heesakkers.info
@@ -48,8 +48,6 @@ DEBUG_QMAKE_OFF=	NODEBUG=1 RELEASE=1
 
 NLS_USES=	qt:5
 NLS_USE=	QT=linguisttools_build
-
-INSTALLS_ICONS= yes
 
 OPTIONS_SUB=	yes
 

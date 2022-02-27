@@ -1,0 +1,7 @@
+
+USES+=	ncurses
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@ncursesw@ncurses@g' \
+			 -e 's@tinfow@tinfo@g' -e 's@formw@form@g' \
+		${WRKSRC}/Makefile

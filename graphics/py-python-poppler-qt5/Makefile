@@ -1,7 +1,7 @@
 PORTNAME=	python-poppler-qt5
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.75.0
-PORTREVISION=	21
+PORTREVISION=	23
 CATEGORIES=	graphics python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -14,7 +14,7 @@ LICENSE_COMB=	dual
 BUILD_DEPENDS=	qmake-qt5:devel/qt5-qmake
 LIB_DEPENDS=	libpoppler-qt5.so:graphics/poppler-qt5
 
-USES=		compiler:c++11-lang gl pkgconfig pyqt:5 python:3.5+ qt:5
+USES=		compiler:c++11-lang gl pkgconfig pyqt:5 python:3.7-3.9 qt:5
 USE_GITHUB=	yes
 GH_ACCOUNT=	frescobaldi
 USE_GL=		gl
@@ -32,7 +32,7 @@ _PY_SONAME=	${PYTHON_EXT_SUFFIX}
 .endif
 
 do-build:
-	(cd ${WRKSRC} ; sip-build --qmake ${QMAKE} --verbose --no-make --build-dir build ; ${MAKE} -C ./build )
+	(cd ${WRKSRC} ; sip-build-${PYTHON_VER} --qmake ${QMAKE} --verbose --no-make --build-dir build ; ${MAKE} -C ./build )
 
 do-install:
 	(cd ${WRKSRC} ; ${MAKE} -C ./build install INSTALL_ROOT=${STAGEDIR} )

@@ -1,0 +1,9 @@
+
+# deal with orphans
+PLIST_FILES+=	share/rime-data/array30_emoji.dict.yaml \
+		share/rime-data/array30_main.dict.yaml \
+		share/rime-data/array30_phrases.dict.yaml \
+		share/rime-data/array30_query.dict.yaml \
+		share/rime-data/array30_query.schema.yaml \
+		share/rime-data/array30_wsymbols.dict.yaml \
+		share/rime-data/array30_wsymbols.schema.yaml

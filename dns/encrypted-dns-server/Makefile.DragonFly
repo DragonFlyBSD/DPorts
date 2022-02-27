@@ -1,0 +1,4 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-fuse-ld=lld@@g' \
+		${WRKSRC}/cargo-crates/libsodium-sys-stable-*/build.rs

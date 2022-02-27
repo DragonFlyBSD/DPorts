@@ -1,0 +1,3 @@
+
+# deal with orphans
+PLIST_FILES+=	bin/qemu-storage-daemon "@dir qemu"

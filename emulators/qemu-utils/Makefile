@@ -3,12 +3,15 @@ PKGNAMESUFFIX=	-utils
 MAINTAINER=	ken@FreeBSD.org
 COMMENT=	QEMU userland utilities
 
+DEPRECATED?=	Use emulators/qemu@tools
+EXPIRATION_DATE?=2022-01-09
+
 HAS_CONFIGURE=	yes
 USES=		compiler:c11 cpe gettext-runtime gmake gnome perl5 pkgconfig \
 		python:build tar:xz
 USE_GNOME+=	glib20
 MAKE_ENV+=	BSD_MAKE="${MAKE}" PREFIX=${PREFIX}
-CONFLICTS_INSTALL=	qemu-[0-9]* qemu-devel-* qemu-sbruno-*
+CONFLICTS_INSTALL=	qemu qemu-devel qemu-sbruno
 
 OPTIONS_SLAVE=	DOCS
 OPTIONS_EXCLUDE=	SAMBA X11 GTK3 OPENGL GNUTLS SASL JPEG PNG CURL \

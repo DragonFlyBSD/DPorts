@@ -6,7 +6,7 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE download manager
 
 BUILD_DEPENDS=	${LOCALBASE}/include/boost/concept_check.hpp:devel/boost-libs
-LIB_DEPENDS=    libKF5Torrent.so:net-p2p/libktorrent  \
+LIB_DEPENDS=	libKF5Torrent.so:net-p2p/libktorrent  \
 		libassuan.so:security/libassuan \
 		libgcrypt.so:security/libgcrypt \
 		libgmp.so:math/gmp \
@@ -29,7 +29,6 @@ USE_QT=		concurrent core dbus gui network printsupport sql widgets xml \
 		buildtools_build qmake_build testlib_build
 
 USE_LDCONFIG=	yes
-SHEBANG_FILES=	conf/*.pl
 
 MAKE_ENV=	XDG_CONFIG_HOME=/dev/null
 CONFIGURE_ENV=	XDG_CONFIG_HOME=/dev/null

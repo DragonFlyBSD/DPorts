@@ -1,8 +1,8 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
 
 PORTNAME=	evince
-DISTVERSION=	40.4
-PORTREVISION=	2
+DISTVERSION=	41.3
+PORTREVISION=	1
 CATEGORIES=	graphics print gnome
 MASTER_SITES=	GNOME/sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+)\..*/\1/}
 DIST_SUBDIR=	gnome
@@ -37,7 +37,6 @@ USE_GSTREAMER1=	yes
 USE_LDCONFIG=	yes
 USE_XORG=	ice
 CPE_VENDOR=	gnome
-INSTALLS_ICONS=	yes
 MESON_ARGS=	-Dgtk_doc=false \
 		-Dps=enabled \
 		-Dsystemduserunitdir=no

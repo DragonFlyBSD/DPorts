@@ -1,7 +1,8 @@
 # Created by: Brad Hendrickse <bradh@iafrica.com>
 
 PORTNAME=	gifsicle
-PORTVERSION=	1.92
+PORTVERSION=	1.93
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.lcdf.org/gifsicle/
 
@@ -14,6 +15,10 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 BROKEN_mips=		fails to build: undefined reference to '__sync_add_and_fetch_4'
 BROKEN_mips64=		fails to build: undefined reference to '__sync_add_and_fetch_4'
 
+USES=		cpe
+
+CPE_VENDOR=	gifsicle_project
+
 GNU_CONFIGURE=	yes
 
 PORTDOCS=	NEWS.md README.md
@@ -21,7 +26,7 @@ PLIST_FILES=	bin/gifdiff bin/gifsicle \
 		man/man1/gifdiff.1.gz man/man1/gifsicle.1.gz
 
 OPTIONS_DEFINE=		DOCS X11
-OPTIONS_DEFAULT=
+OPTIONS_DEFAULT=	X11
 
 X11_USES=		xorg
 X11_USE=		xorg=x11

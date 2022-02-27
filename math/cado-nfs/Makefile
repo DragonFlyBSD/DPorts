@@ -9,7 +9,6 @@ COMMENT=	Implementation of the Number Field Sieve Algorithm
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BROKEN_i386=	pkg-static: Unable to access file /wrkdirs/usr/ports/math/cado-nfs/work/stage/usr/local/lib/cado-nfs-3.0.0/linalg/bwc/lingen_pz:No such file or directory
 CONFLICTS_BUILD=	libfmt # bundled libfmt conflicts with package-installed headers
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3@${PY_FLAVOR} \
@@ -29,8 +28,18 @@ GL_COMMIT=	f4284e2391121b2bfb97bc4880b6273c7250dc2f
 
 SHEBANG_GLOB=	*.py
 
+CXXFLAGS_i386=	-msse2 # workaround for error: always_inline function '_mm_setzero_si128' requires target feature 'sse2', but would be inlined into function 'gf2x_mul4' that is compiled without support for 'sse2'
+
 TEST_TARGET=	check # 'test' does the same but is less verbose
 
 BINARY_ALIAS=	python3=${PYTHON_CMD} make=${GMAKE}
+
+.include <bsd.port.options.mk>
+
+.if ${ARCH} == x86_64
+PLIST_SUB=	LINGEN_PZ=""
+.else
+PLIST_SUB=	LINGEN_PZ="@comment "
+.endif
 
 .include <bsd.port.mk>

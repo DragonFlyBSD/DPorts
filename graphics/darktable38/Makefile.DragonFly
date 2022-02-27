@@ -1,0 +1,20 @@
+
+# disable use of graphite optimizations when using base compiler
+dfly-patch:
+	${REINPLACE_CMD} -e 's@"loop-nest-optimize",@@g' \
+			 -e 's@"tree-loop-linear",@@g' \
+			 -e 's@"loop-block",@@g' \
+			 -e 's@"loop-strip-mine",@@g' \
+		${WRKSRC}/src/develop/blends/blendif_lab.c \
+		${WRKSRC}/src/develop/blends/blendif_raw.c \
+		${WRKSRC}/src/develop/blends/blendif_rgb_hsl.c \
+		${WRKSRC}/src/develop/blends/blendif_rgb_jzczhz.c \
+		${WRKSRC}/src/common/fast_guided_filter.h \
+		${WRKSRC}/src/common/iop_order.c \
+		${WRKSRC}/src/common/iop_profile.c \
+		${WRKSRC}/src/common/luminance_mask.h \
+		${WRKSRC}/src/iop/channelmixerrgb.c \
+		${WRKSRC}/src/iop/choleski.h \
+		${WRKSRC}/src/iop/filmicrgb.c \
+		${WRKSRC}/src/iop/negadoctor.c \
+		${WRKSRC}/src/iop/toneequal.c

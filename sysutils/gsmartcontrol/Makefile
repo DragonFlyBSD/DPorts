@@ -2,7 +2,7 @@
 
 PORTNAME=	gsmartcontrol
 PORTVERSION=	1.1.3
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	sysutils
 MASTER_SITES=	SF/${PORTNAME}/${PORTVERSION}
 
@@ -27,7 +27,6 @@ RUN_DEPENDS=	bash:shells/bash \
 USES=		compiler:c++11-lang gnome libtool pkgconfig tar:bzip2
 USE_CXXSTD=	c++11
 USE_GNOME=	atkmm cairo glibmm gtk30 gtkmm30 libsigc++20 pangomm
-INSTALLS_ICONS=	yes
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-libglade
@@ -43,5 +42,7 @@ post-patch:
 		${WRKSRC}/src/*/Makefile.in
 	@${REINPLACE_CMD} -i .c++20 '/config\.h/y/<>/""/' \
 		${WRKSRC}/src/global_macros.h
+	@${REINPLACE_CMD} -i '' 's|%%PREFIX%%|${PREFIX}|g' \
+		${WRKSRC}/data/org.gsmartcontrol.policy
 
 .include <bsd.port.mk>

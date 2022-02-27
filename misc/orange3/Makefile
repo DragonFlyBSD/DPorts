@@ -7,9 +7,6 @@ COMMENT=	Component-based data mining software
 
 LICENSE=	GPLv3
 
-DEPRECATED=	Uses EOL Python 2.7 via www/py-qt5-webengine
-EXPIRATION_DATE=2021-06-23
-
 BUILD_DEPENDS=	${PYNUMPY}
 RUN_DEPENDS=	${PYNUMPY} \
 		${PYTHON_PKGNAMEPREFIX}AnyQt>=0.0.11:x11-toolkits/py-AnyQt@${PY_FLAVOR} \
@@ -49,6 +46,14 @@ GH_ACCOUNT=	biolab
 
 CFLAGS+=	-DQSORT_R_STYLE_BSD=yes
 LDFLAGS+=	-Xlinker -strip-all # strip, stage-qa doesn't catch that it isn't stripped
+
+.include <bsd.port.options.mk>
+
+.if ${ARCH} == aarch64 || ${ARCH} == x86_64 || ${ARCH} == i386
+USE_PYQT+=	webengine_run
+.else
+USE_PYQT+=	webkit_run
+.endif
 
 xpost-install:
 	@${REINPLACE_CMD} -e 's|^"${PREFIX}/|| ; s|"$$||' ${_PYTHONPKGLIST} # https://github.com/biolab/orange3/issues/3060

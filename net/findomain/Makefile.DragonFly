@@ -1,1 +1,0 @@
-USES:= ${USES:S/cargo/cargo:extra/}

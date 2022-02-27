@@ -22,19 +22,18 @@ LIB_DEPENDS=	libfcitx-config.so:chinese/fcitx \
 		libFcitxQt5WidgetsAddons.so:textproc/fcitx-qt5
 
 USES=		cmake gettext gnome pkgconfig tar:xz
-INSTALLS_ICONS=	yes
 
 _MODEL_VER=	20161206
 
 OPTIONS_DEFINE=	QT5
-OPTIONS_DEFAULT=QT5
+OPTIONS_DEFAULT_aarch64=	QT5
+OPTIONS_DEFAULT_x86_64=	QT5
+OPTIONS_DEFAULT_i386=	QT5
 QT5_DESC=	Enable Qtr for dictmanager
 
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MQT5}
-DEPRECATED=	Uses EOL Python 2.7 via www/qt5-webengine
-EXPIRATION_DATE=2021-06-23
 USES+=		qt:5
 USE_QT=		qmake_build gui webengine buildtools_build
 USE_LDCONFIG=	${PREFIX}/lib/fcitx/qt

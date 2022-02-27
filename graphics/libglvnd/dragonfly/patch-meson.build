@@ -1,0 +1,11 @@
+--- meson.build	2021-12-17 15:49:38 UTC
++++ meson.build
+@@ -136,7 +136,7 @@ if use_asm
+   thread_type = 'tsd'
+   if get_option('dispatch-tls')
+     if have_tls
+-      if host_machine.system() == 'freebsd' or cc.has_header_symbol('features.h', '__GLIBC__')
++      if host_machine.system() == 'freebsd' or host_machine.system() == 'dragonfly' or cc.has_header_symbol('features.h', '__GLIBC__')
+         thread_type = 'tls'
+       endif
+     endif

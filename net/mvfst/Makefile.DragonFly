@@ -1,0 +1,5 @@
+
+# try to fix plist (orphans)
+PLIST_FILES+=	include/quic/client/connector/QuicConnector.h \
+		include/quic/common/MonitoredObject.h \
+		include/quic/state/QuicStreamPrioritiesObserver.h

@@ -2,7 +2,7 @@
 
 PORTNAME=	libical
 DISTVERSION=	3.0.8
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/libical/libical/releases/download/v${PORTVERSION}/
 
@@ -14,9 +14,11 @@ LICENSE_COMB=	dual
 
 LIB_DEPENDS=	libicuuc.so:devel/icu
 
-USES=		cmake compiler:c++11-lib gnome pathfix perl5 pkgconfig
+USES=		cmake compiler:c++11-lib cpe gnome pathfix perl5 pkgconfig
 USE_PERL5=	build
 USE_LDCONFIG=	yes
+
+CPE_VENDOR=	libical_project
 
 MAKE_JOBS_UNSAFE=	yes
 

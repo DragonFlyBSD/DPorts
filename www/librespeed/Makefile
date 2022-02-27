@@ -1,10 +1,9 @@
 PORTNAME=	librespeed
-DISTVERSION=	5.2.4
-PORTREVISION=	1
+DISTVERSION=	5.2.5
 CATEGORIES=	www net
 PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
 
-MAINTAINER=	driesm.michiels@gmail.com
+MAINTAINER=	driesm@FreeBSD.org
 COMMENT=	Lightweight selfhosted speedtest
 
 LICENSE=	LGPL3

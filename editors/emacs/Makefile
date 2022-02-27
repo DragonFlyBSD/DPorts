@@ -2,6 +2,7 @@
 
 PORTNAME=	emacs
 DISTVERSION=	27.2
+PORTREVISION=	1
 PORTEPOCH=	3
 CATEGORIES=	editors
 MASTER_SITES=	GNU
@@ -34,7 +35,6 @@ USES=		cpe gmake localbase:ldflags makeinfo ncurses pkgconfig tar:xz
 CPE_VENDOR=	gnu
 .if ${FLAVOR:U} != nox
 USES+=		desktop-file-utils gnome xorg
-INSTALLS_ICONS=	yes
 USE_XORG=	ice sm x11 xcb xext xfixes xinerama xmu xrandr xt
 .endif
 
@@ -175,7 +175,7 @@ LCMS2_CONFIGURE_WITH=		lcms2
 M17N_IMPLIES=			XFT
 M17N_LIB_DEPENDS=		libm17n.so:devel/m17n-lib
 M17N_CONFIGURE_WITH=		m17n-flt
-MAGICK_LIB_DEPENDS=		libMagickCore-7.so:graphics/ImageMagick7
+MAGICK_USES=			magick:7
 MAGICK_CONFIGURE_WITH=		imagemagick
 MAILUTILS_LIB_DEPENDS=		libmailutils.so:mail/mailutils
 MAILUTILS_CONFIGURE_WITH=	mailutils

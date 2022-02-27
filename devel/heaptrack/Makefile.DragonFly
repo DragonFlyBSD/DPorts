@@ -1,3 +1,12 @@
 
+USES+=	alias
+
 # DragonFly BSD does not define this
 CFLAGS+=	-D__WORDSIZE=64
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
+		${WRKSRC}/src/track/CMakeLists.txt \
+		${WRKSRC}/tests/auto/CMakeLists.txt \
+		${WRKSRC}/src/track/heaptrack.sh.cmake \
+		${WRKSRC}/CMakeLists.txt

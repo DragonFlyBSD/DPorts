@@ -1,0 +1,5 @@
+
+USES+=	alias
+
+# issues in MF
+CONFIGURE_ARGS+=	--disable-polkit

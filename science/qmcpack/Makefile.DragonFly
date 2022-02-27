@@ -1,0 +1,5 @@
+
+# avoid mpi for now
+LIB_DEPENDS:=	${LIB_DEPENDS:Nlibmpich*}
+
+CMAKE_OFF+=	QMC_MPI ENABLE_OFFLOAD

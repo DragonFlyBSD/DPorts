@@ -1,44 +1,20 @@
---- configure.orig	2016-10-20 05:56:27.000000000 +0200
-+++ configure	2017-08-15 20:23:05.244512000 +0200
-@@ -22616,7 +22616,7 @@
- CheckUSBHID()
+--- configure.intermediate	2022-01-22 07:26:16.000000000 +0000
++++ configure
+@@ -23318,7 +23318,7 @@ CheckInotify()
  {
+     save_LIBS="$LIBS"
      case "$host" in
--        *-*-*bsd*)
-+        *-*-*bsd*|*-*-dragonfly*)
-             if test x$enable_joystick = xyes; then
-                 { $as_echo "$as_me:${as_lineno-$LINENO}: checking for hid_init in -lusbhid" >&5
- $as_echo_n "checking for hid_init in -lusbhid... " >&6; }
-@@ -22741,8 +22741,8 @@
-                   #include <usb.h>
-                   #endif
-                   #ifdef __DragonFly__
--                  # include <bus/usb/usb.h>
--                  # include <bus/usb/usbhid.h>
-+                  # include <bus/u4b/usb.h>
-+                  # include <bus/u4b/usbhid.h>
-                   #else
-                   # include <dev/usb/usb.h>
-                   # include <dev/usb/usbhid.h>
-@@ -22788,8 +22788,8 @@
-                       #include <usb.h>
-                       #endif
-                       #ifdef __DragonFly__
--                      # include <bus/usb/usb.h>
--                      # include <bus/usb/usbhid.h>
-+                      # include <bus/u4b/usb.h>
-+                      # include <bus/u4b/usbhid.h>
-                       #else
-                       # include <dev/usb/usb.h>
-                       # include <dev/usb/usbhid.h>
-@@ -22836,8 +22836,8 @@
-                       #include <usb.h>
-                       #endif
-                       #ifdef __DragonFly__
--                      #include <bus/usb/usb.h>
--                      #include <bus/usb/usbhid.h>
-+                      #include <bus/u4b/usb.h>
-+                      #include <bus/u4b/usbhid.h>
-                       #else
-                       #include <dev/usb/usb.h>
-                       #include <dev/usb/usbhid.h>
+-     *-*-freebsd*) LIBS="$LIBS -linotify"
++     *-*-freebsd*|*-*dragonfly*) LIBS="$LIBS -linotify"
+       ;;
+     esac
+     for ac_header in sys/inotify.h
+@@ -23360,7 +23360,7 @@ done
+ $as_echo "#define HAVE_INOTIFY 1" >>confdefs.h
+ 
+         case "$host" in
+-            *-*-freebsd*)
++            *-*-freebsd*|*-*-dragonfly*)
+                 EXTRA_LDFLAGS="$EXTRA_LDFLAGS -linotify"
+                 ;;
+         esac

@@ -2,5 +2,7 @@
 #CONFIGURE_ARGS+=	--disable-openmp
 
 dfly-patch:
+	${REINPLACE_CMD} -e 's@CPP -P@CC -E -P@'	\
+		${WRKSRC}/configure
 	${REINPLACE_CMD} -e 's@MAYBE_INLINE_BODY void@void@'	\
 		${WRKSRC}/MD5_std.c

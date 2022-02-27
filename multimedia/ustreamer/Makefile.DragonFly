@@ -1,0 +1,5 @@
+# DFLYGC 6.4
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's|strerror_l(error, locale)|strerror(error)|' \
+		${WRKSRC}/src/libs/tools.h

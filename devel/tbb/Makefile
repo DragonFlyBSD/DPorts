@@ -3,7 +3,7 @@
 PORTNAME=	tbb
 PORTVERSION=	2020.3
 DISTVERSIONPREFIX=	v
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	devel
 
 MAINTAINER=	martymac@FreeBSD.org
@@ -16,7 +16,7 @@ ONLY_FOR_ARCHS_REASON=	has not been ported to this platform
 
 USES=	compiler gmake tar:tgz
 
-CONFLICTS=	onetbb-[0-9]*
+CONFLICTS=	onetbb
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	oneapi-src
@@ -27,6 +27,8 @@ SUB_LIST=	prefix="${PREFIX}" \
 		name="${PORTNAME}" \
 		description="${COMMENT}" \
 		version="${PORTVERSION}"
+
+PLIST=	${WRKDIR}/.PLIST.more
 
 OPTIONS_DEFINE=	DOCS
 DOCS_BUILD_DEPENDS=	doxygen:devel/doxygen \
@@ -54,6 +56,14 @@ post-patch:
 post-build-DOCS-on:
 	cd ${WRKSRC}; \
 		${MAKE_CMD} doxygen
+
+pre-install:
+	@${CAT} ${PKGDIR}/pkg-plist >${PLIST}
+.if ${PORT_OPTIONS:MDOCS}
+	cd ${WRKSRC}/html && \
+		${FIND} . -type f | \
+		${SED} 's|^\.|%%PORTDOCS%%%%DOCSDIR%%|' >>${PLIST}
+.endif
 
 do-install:
 	cd ${WRKSRC}; \

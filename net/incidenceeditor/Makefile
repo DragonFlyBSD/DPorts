@@ -7,9 +7,6 @@ COMMENT=	Incidence editor libriares for KDEPim
 
 LICENSE=	LGPL21
 
-DEPRECATED=	Uses EOL Python 2.7 via www/qt5-webengine
-EXPIRATION_DATE=2021-06-23
-
 BUILD_DEPENDS=	${LOCALBASE}/include/boost/range/algorithm.hpp:devel/boost-libs
 LIB_DEPENDS=	libKGantt.so:graphics/kdiagram
 
@@ -27,7 +24,6 @@ USE_QT=		concurrent core dbus gui network printsupport uitools \
 		webkit widgets xml \
 		buildtools_build qmake_build testlib_build
 USE_LDCONFIG=	yes
-
 
 OPTIONS_DEFINE=	DOCS
 

@@ -1,8 +1,7 @@
 # Created by: Maurice Castro <maurice@serc.rmit.edu.au>
 
 PORTNAME=	R
-DISTVERSION=	4.1.1
-PORTREVISION=	1
+DISTVERSION=	4.1.2
 CATEGORIES=	math lang
 MASTER_SITES=	CRAN/src/base/R-${PORTVERSION:C|\..*||}
 
@@ -25,12 +24,11 @@ RUN_DEPENDS=	gmake:devel/gmake
 # - Create ports for each of the recommended packages
 # - Create a meta-port for the recommended packages
 
-USES=		compiler:c++11-lang cpe gmake iconv libtool localbase pathfix perl5 \
-		readline
+USES=		compiler:c++11-lang cpe gmake iconv libtool localbase pathfix \
+		perl5 readline
+CPE_VENDOR=	r-project
 USE_LDCONFIG=	${PREFIX}/lib/R/lib
 USE_PERL5=	build
-
-CPE_VENDOR=	r-project
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-java \

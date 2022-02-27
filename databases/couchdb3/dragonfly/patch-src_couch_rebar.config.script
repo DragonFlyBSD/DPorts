@@ -1,0 +1,10 @@
+--- src/couch/rebar.config.script.orig	2021-11-03 01:01:20 UTC
++++ src/couch/rebar.config.script
+@@ -190,6 +190,7 @@ BaseSpecs = [
+         % ejson_compare
+         {"darwin", ComparePath, CompareSrc, [{env, IcuEnv ++ IcuDarwinEnv}]},
+         {"linux",  ComparePath, CompareSrc, [{env, IcuEnv}]},
++        {"dragonfly",   ComparePath, CompareSrc, [{env, IcuEnv ++ IcuBsdEnv}]},
+         {"bsd",   ComparePath, CompareSrc, [{env, IcuEnv ++ IcuBsdEnv}]},
+         {"win32",  ComparePath, CompareSrc, [{env, IcuWinEnv}]}
+ ].

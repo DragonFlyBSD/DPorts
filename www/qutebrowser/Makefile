@@ -1,5 +1,5 @@
 PORTNAME=	qutebrowser
-DISTVERSION=	2.3.1
+DISTVERSION=	2.4.0
 CATEGORIES=	www
 MASTER_SITES=	CHEESESHOP
 
@@ -42,11 +42,6 @@ WEBENGINE_USE=	PYQT=webengine,webchannel
 WEBKIT_USE=	PYQT=webkit,webkitwidgets
 
 .include <bsd.port.pre.mk>
-
-.if ${PORT_OPTIONS:MWEBENGINE}
-DEPRECATED=	Uses EOL Python 2.7 via www/qt5-webengine
-EXPIRATION_DATE=2021-06-23
-.endif
 
 .if ${PYTHON_REL} < 30700
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}dataclasses>0:devel/py-dataclasses@${PY_FLAVOR}

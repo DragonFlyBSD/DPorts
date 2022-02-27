@@ -1,7 +1,7 @@
 # Created by: Alexander Logvinov <avl@FreeBSD.org>
 
 PORTNAME=	freerdp
-DISTVERSION=	2.4.1
+DISTVERSION=	2.5.0
 CATEGORIES=	net comms
 MASTER_SITES=	https://pub.freerdp.com/releases/ \
 		https://github.com/FreeRDP/FreeRDP/releases/download/${DISTVERSION}/
@@ -17,14 +17,11 @@ BROKEN_SSL_REASON_libressl-devel=	fails to compile: no member named 'alert_dispa
 
 LIB_DEPENDS=	libepoll-shim.so:devel/libepoll-shim
 
-USES=		alias cmake compiler:c++11-lib cpe gettext gnome localbase pathfix pkgconfig ssl
+USES=		alias cmake compiler:c++11-lib cpe gettext localbase pathfix pkgconfig ssl
 USE_LDCONFIG=	yes
 
 PATCHVERSION=	${PORTVERSION}
 MAJORVERSION=	${PORTVERSION:R:R}
-
-PLIST_SUB+=	PATCHVERSION="${PATCHVERSION}"
-PLIST_SUB+=	MAJORVERSION="${MAJORVERSION}"
 
 CMAKE_ARGS+=	${CMAKE_ARGS_${ARCH}}
 CMAKE_ON=	WITH_CHANNELS WITH_OPENSSL WITH_OSS WITH_ZLIB CHANNEL_URBDRC_CLIENT
@@ -36,6 +33,9 @@ CMAKE_OFF=	WITH_DSP_EXPERIMENTAL WITH_GPROF WITH_GSTREAMER_0_10 WITH_IPP \
 
 CMAKE_ARGS_aarch64+=	-DWITH_NEON=ON
 CFLAGS_aarch64+=	-D__ARM_NEON__=__ARM_NEON # clang
+
+PLIST_SUB+=	PATCHVERSION="${PATCHVERSION}"
+PLIST_SUB+=	MAJORVERSION="${MAJORVERSION}"
 
 OPTIONS_DEFINE=		ALSA BROKENFOCUS CUPS FAAC FAAD FFMPEG GSM GSTREAMER \
 			ICU JPEG KERBEROS LAME MANPAGES OPENH264 PCSC \

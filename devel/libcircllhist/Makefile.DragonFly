@@ -1,4 +1,7 @@
 
+# avoid doxygen dep for now
+OPTIONS_EXCLUDE+=	DOCS
+
 dfly-patch:
 	${REINPLACE_CMD} -e 's@\(\*-\*-freebsd\*\))@\1|*-*-dragonfly*)@g' \
 		${WRKSRC}/configure.ac

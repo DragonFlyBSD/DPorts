@@ -1,5 +1,5 @@
 PORTNAME=	pgpool-II
-PORTVERSION=	4.1.6
+PORTVERSION=	4.1.10
 CATEGORIES=	databases
 MASTER_SITES=	http://www.pgpool.net/mediawiki/images/
 PKGNAMESUFFIX=	41
@@ -18,7 +18,7 @@ USE_RC_SUBR=	pgpool
 
 GNU_CONFIGURE=	yes
 
-CONFLICTS=	pgpool-II-[0-9]*
+CONFLICTS=	pgpool-II
 
 PORTDOCS=	*
 

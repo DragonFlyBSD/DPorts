@@ -1,6 +1,7 @@
 bin/virsh
 bin/virt-admin
 bin/virt-host-validate
+bin/virt-pki-query-dn
 bin/virt-pki-validate
 bin/virt-ssh-helper
 %%QEMU%%bin/virt-qemu-run
@@ -11,7 +12,7 @@ sbin/virtproxyd
 %%QEMU%%sbin/virtqemud
 sbin/virtsecretd
 sbin/virtstoraged
-%%VBOX%%sbin/virtvboxd
+sbin/virtvboxd
 %%XEN%%sbin/virtxend
 man/man1/virsh.1.gz
 man/man1/virt-admin.1.gz
@@ -38,7 +39,7 @@ man/man8/virtnetworkd.8.gz
 man/man8/virtproxyd.8.gz
 man/man8/virtsecretd.8.gz
 man/man8/virtstoraged.8.gz
-%%VBOX%%man/man8/virtvboxd.8.gz
+man/man8/virtvboxd.8.gz
 %%BHYVE%%man/man8/virtbhyved.8.gz
 %%QEMU%%man/man8/virtqemud.8.gz
 %%XEN%%man/man8/virtxend.8.gz
@@ -53,7 +54,7 @@ man/man8/virtstoraged.8.gz
 %%QEMU%%@sample %%ETCDIR%%/virtqemud.conf.sample
 @sample %%ETCDIR%%/virtsecretd.conf.sample
 @sample %%ETCDIR%%/virtstoraged.conf.sample
-%%VBOX%%@sample %%ETCDIR%%/virtvboxd.conf.sample
+@sample %%ETCDIR%%/virtvboxd.conf.sample
 %%XEN%%@sample %%ETCDIR%%/virtxend.conf.sample
 %%EXAMPLESDIR%%/networks/default.xml
 %%BHYVE%%@sample %%ETCDIR%%/bhyve.conf.sample
@@ -125,14 +126,14 @@ share/augeas/lenses/tests/test_virtproxyd.aug
 %%QEMU%%share/augeas/lenses/tests/test_virtqemud.aug
 share/augeas/lenses/tests/test_virtsecretd.aug
 share/augeas/lenses/tests/test_virtstoraged.aug
-%%VBOX%%share/augeas/lenses/tests/test_virtvboxd.aug
+share/augeas/lenses/tests/test_virtvboxd.aug
 %%BHYVE%%share/augeas/lenses/virtbhyved.aug
 share/augeas/lenses/virtnetworkd.aug
 share/augeas/lenses/virtproxyd.aug
 %%QEMU%%share/augeas/lenses/virtqemud.aug
 share/augeas/lenses/virtsecretd.aug
 share/augeas/lenses/virtstoraged.aug
-%%VBOX%%share/augeas/lenses/virtvboxd.aug
+share/augeas/lenses/virtvboxd.aug
 %%BHYVE%%share/augeas/lenses/tests/test_libvirtd_bhyve.aug
 %%QEMU%%share/augeas/lenses/tests/test_libvirtd_qemu.aug
 %%XEN%%share/augeas/lenses/libvirtd_libxl.aug
@@ -294,10 +295,9 @@ share/augeas/lenses/virtstoraged.aug
 lib/libvirt/connection-driver/libvirt_driver_network.so
 lib/libvirt/connection-driver/libvirt_driver_secret.so
 lib/libvirt/connection-driver/libvirt_driver_storage.so
-%%VBOX%%lib/libvirt/connection-driver/libvirt_driver_vbox.so
+lib/libvirt/connection-driver/libvirt_driver_vbox.so
 %%XEN%%lib/libvirt/connection-driver/libvirt_driver_libxl.so
 lib/libvirt/storage-backend/libvirt_storage_backend_fs.so
-lib/libvirt/storage-backend/libvirt_storage_backend_logical.so
 %%ZFS%%lib/libvirt/storage-backend/libvirt_storage_backend_zfs.so
 lib/libvirt/storage-file/libvirt_storage_file_fs.so
 %%QEMU%%@dir /var/cache/libvirt/qemu

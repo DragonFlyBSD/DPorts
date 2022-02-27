@@ -35,7 +35,7 @@ REPDIBN_LIST=	Linux-sparc_64/killall Linux-sparc_64/process_start \
 
 REPDPML_LIST=	amd64/jnidispatch-nb.dll x86/jnidispatch-nb.dll \
 		amd64/linux/libjnidispatch-nb.so i386/linux/libjnidispatch-nb.so \
-		libjnidispatch-nb.jnilib
+		aarch64/linux/libjnidispatch-nb.so
 
 REPDPLD_LIST=	cvm/linux/libprofilerinterface.so cvm/linux/libprofilerinterface_g.so \
 		cvm/windows/profilerinterface.dll cvm/windows/profilerinterface.map \

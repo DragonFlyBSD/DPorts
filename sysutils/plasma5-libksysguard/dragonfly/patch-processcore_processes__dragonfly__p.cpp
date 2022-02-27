@@ -1,17 +1,25 @@
---- processcore/processes_dragonfly_p.cpp.orig	2019-10-22 15:30:09 UTC
+--- processcore/processes_dragonfly_p.cpp.orig	2022-01-04 09:00:46 UTC
 +++ processcore/processes_dragonfly_p.cpp
-@@ -37,10 +37,6 @@
- #include <stdlib.h>
- #include <sched.h>
+@@ -4,6 +4,7 @@
  
--#define PP(pp, field) ((pp)->kp_ ## field)
--#define LP(pp, field) ((pp)->kp_lwp.kl_ ## field)
--#define VP(pp, field) ((pp)->kp_vm_ ## field)
+     SPDX-License-Identifier: LGPL-2.0-or-later
+ */
++#include <sys/user.h>
+ 
+ #include "process.h"
+ #include "processes_local_p.h"
+@@ -24,10 +25,6 @@
+ #include <sys/user.h>
+ #include <unistd.h>
+ 
+-#define PP(pp, field) ((pp)->kp_##field)
+-#define LP(pp, field) ((pp)->kp_lwp.kl_##field)
+-#define VP(pp, field) ((pp)->kp_vm_##field)
 -
  namespace KSysGuard
  {
- 
-@@ -78,23 +74,23 @@ void ProcessesLocal::Private::readProcSt
+ class ProcessesLocal::Private
+@@ -68,23 +65,23 @@ void ProcessesLocal::Private::readProcSt
      process->setGid(0);
      process->setTracerpid(-1);
  
@@ -35,18 +43,18 @@
 -    ps->setVmSize(VP(p, map_size) / 1024); /* convert to KiB */
 -    ps->setVmRSS(VP(p, prssize) * getpagesize() / 1024); /* convert to KiB */
 +    ps->setUserTime(p->kp_lwp.kl_uticks / 10000);
-+    ps->setSysTime(p->kp_lwp.kl_sticks + p->kp_lwp.kl_iticks / 10000);
++    ps->setSysTime((p->kp_lwp.kl_sticks + p->kp_lwp.kl_iticks) / 10000);
 +    ps->setNiceLevel(p->kp_nice);
 +    ps->setVmSize(p->kp_vm_map_size / 1024); /* convert to KiB */
 +    ps->setVmRSS(p->kp_vm_prssize * getpagesize() / 1024); /* convert to KiB */
  
- // "idle","run","sleep","stop","zombie"
--    switch( LP(p, stat) ) {
-+    switch(p->kp_lwp.kl_stat) {
-       case LSRUN:
+     // "idle","run","sleep","stop","zombie"
+-    switch (LP(p, stat)) {
++    switch (p->kp_lwp.kl_stat) {
+     case LSRUN:
          ps->setStatus(Process::Running);
          break;
-@@ -108,7 +104,7 @@ void ProcessesLocal::Private::readProcSt
+@@ -98,7 +95,7 @@ void ProcessesLocal::Private::readProcSt
          ps->setStatus(Process::OtherStatus);
          break;
      }
@@ -55,36 +63,36 @@
          ps->setStatus(Process::Zombie);
  }
  
-@@ -130,10 +126,10 @@ bool ProcessesLocal::Private::readProcCm
+@@ -120,10 +117,10 @@ bool ProcessesLocal::Private::readProcCm
  
      if (sysctl(mib, 4, buf, &buflen, NULL, 0) == -1 || (buflen == 0))
          return false;
 -    QString command = QString(buf);
 +    QString command = QString::fromUtf8(buf);
  
-     //cmdline separates parameters with the NULL character
+     // cmdline separates parameters with the NULL character
 -    command.replace('\0', ' ');
 +    command.replace(QLatin1Char('\0'), QLatin1Char(' '));
      process->setCommand(command.trimmed());
  
      return true;
-@@ -149,7 +145,7 @@ long ProcessesLocal::getParentPid(long p
+@@ -140,7 +137,7 @@ long ProcessesLocal::getParentPid(long p
      struct kinfo_proc p;
  
-     if(d->readProc(pid, &p))
+     if (d->readProc(pid, &p))
 -        ppid = PP(&p, ppid);
-+      ppid = p.kp_ppid;
++        ppid = p.kp_ppid;
  
      return ppid;
  }
-@@ -194,8 +190,8 @@ QSet<long> ProcessesLocal::getAllPids( )
+@@ -184,8 +181,8 @@ QSet<long> ProcessesLocal::getAllPids()
+     }
  
-     for (num = 0; num < len / sizeof(struct kinfo_proc); num++)
-     {
+     for (num = 0; num < len / sizeof(struct kinfo_proc); num++) {
 -        long pid = PP((&p[num]), pid);
 -        long long ppid = PP((&p[num]), ppid);
 +        long pid = p[num].kp_pid;
 +        long long ppid = p[num].kp_ppid;
  
-         //skip all process with parent id = 0 but init
-         if(ppid <= 0 && pid != 1)
+         // skip all process with parent id = 0 but init
+         if (ppid <= 0 && pid != 1)

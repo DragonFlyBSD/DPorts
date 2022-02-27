@@ -1,0 +1,10 @@
+
+# avoid doxygen dep for now (should be MANPAGES option)
+BUILD_DEPENDS:=	${BUILD_DEPENDS:Ndoxygen*}
+
+DFLY_PLIST=	${WRKSRC}/pkg-plist
+PLIST:=		${DFLY_PLIST}
+
+dfly-patch:
+	${CP} -v ${.CURDIR:H}/editorconfig-core-c/pkg-plist ${DFLY_PLIST}
+	${REINPLACE_CMD} -e '/man\/man/d' ${DFLY_PLIST}

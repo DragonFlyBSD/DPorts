@@ -7,7 +7,7 @@ CATEGORIES=	databases
 MASTER_SITES=	PGSQL/pgadmin/pgadmin3/v${PORTVERSION}/src
 DIST_SUBDIR=	postgresql
 
-MAINTAINER=	fjoe@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	PostgreSQL database design and management system
 
 LICENSE=	PostgreSQL
@@ -20,7 +20,6 @@ USE_WX=		3.0
 USE_CXXSTD=	c++11
 
 WX_COMPS=	wx
-INSTALLS_ICONS=	yes
 ICON_SIZES=	16 32
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-wx-version=${USE_WX} --enable-databasedesigner

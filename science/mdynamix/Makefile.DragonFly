@@ -1,2 +1,9 @@
 
 BINARY_ALIAS:=	${BINARY_ALIAS:Ngfortran*} gfortran=gfortran${_GCC_VER}
+
+# avoid mpi for now
+LIB_DEPENDS:=	${LIB_DEPENDS:Nlibmpich*}
+ALL_TARGET:=	${ALL_TARGET:Nmpi}
+
+dfly-build:
+	${CP} -v ${WRKSRC}/md ${WRKSRC}/mdp

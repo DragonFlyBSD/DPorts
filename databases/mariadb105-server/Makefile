@@ -1,11 +1,10 @@
 # Created by: Bernard Spil <brnrd@FreeBSD.org>
 
 PORTNAME?=	mariadb
-PORTVERSION=	10.5.13
+PORTVERSION=	10.5.15
 PORTREVISION?=	0
 CATEGORIES=	databases
-MASTER_SITES=	http://mirrors.supportex.net/${SITESDIR}/ \
-		http://mirror2.hs-esslingen.de/pub/Mirrors/${SITESDIR}/ \
+MASTER_SITES=	http://mirror2.hs-esslingen.de/pub/Mirrors/${SITESDIR}/ \
 		http://gd.tuwien.ac.at/db/${SITESDIR}/ \
 		http://mirrors.fe.up.pt/pub/${SITESDIR}/ \
 		http://mirror.de.gsnw.de:56431/${SITESDIR}/ \
@@ -112,10 +111,10 @@ DISABLED_PLUGINS+=	AUTH_TEST_PLUGIN DAEMON_EXAMPLE DIALOG_EXAMPLES \
 DATADIR=	${PREFIX}/share/mysql
 ETCDIR=		${PREFIX}/etc/mysql
 
-CONFLICTS_INSTALL=	mariadb10[0-46-9]-${PKGNAMESUFFIX:C/^[0-9]*-//}-* \
-			mysql[0-9]*-${PKGNAMESUFFIX:C/^[0-9]*-//}-* \
-			mysqlwsrep* \
-			percona[0-9]*-${PKGNAMESUFFIX:C/^[0-9]*-//}-*
+CONFLICTS_INSTALL=	mariadb10[0-46-9]-${PKGNAMESUFFIX:C/^[0-9]*-//} \
+			mysql[0-9]*-${PKGNAMESUFFIX:C/^[0-9]*-//} \
+			mysqlwsrep*-server \
+			percona[0-9]*-${PKGNAMESUFFIX:C/^[0-9]*-//}
 
 FASTMTX_CMAKE_BOOL=	WITH_FAST_MUTEXES
 GSSAPI_BASE_USES=	gssapi

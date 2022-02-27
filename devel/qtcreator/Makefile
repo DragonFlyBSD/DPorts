@@ -1,8 +1,8 @@
 # Created by: Kris Moore <kris@pcbsd.org>
 
 PORTNAME=	qtcreator
-DISTVERSION=	4.13.3
-PORTREVISION=	2
+DISTVERSION=	5.0.3
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	QT/official_releases/qtcreator/${DISTVERSION:R}/${DISTVERSION}
 DISTNAME=	qt-creator-opensource-src-${DISTVERSION}
@@ -86,17 +86,9 @@ SHEBANG_FILES=		tests/system/tools/objectsToTable.py \
 
 .include <bsd.port.pre.mk>
 
-.if ${PORT_OPTIONS:MWEBENGINE}
-DEPRECATED=	Uses EOL Python 2.7 via www/qt5-webengine
-EXPIRATION_DATE=2021-06-23
-.endif
-
-.if ${LLVM_DEFAULT:C/[1-5]./&0/:S,-devel,990,} >= 90
-LLVM_DEFAULT=	80
-.endif
-
-.if ${LLVM_DEFAULT} == 10
-EXTRA_PATCHES=	${PATCHDIR}/llvm10_patch-src_shared_clang_clang__installation.pri
+# Force a modern LLVM >= 10
+.if ${LLVM_DEFAULT:C/[1-5]./&0/:S,-devel,990,} > 80
+LLVM_DEFAULT=	11
 .endif
 
 post-patch:

@@ -1,7 +1,7 @@
 # zrj
 PORTNAME=	mesa-dri-classic
 PORTVERSION=	${MESAVERSION}
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	graphics
 
 COMMENT=	Classic legacy OpenGL software renderer drivers
@@ -111,7 +111,7 @@ post-install:
 	@${RM} -r ${STAGEDIR}/etc/OpenCL
 	${RM} -rfv ${STAGEDIR}${PREFIX}/share/drirc.d
 	${MKDIR} ${STAGEDIR}${PREFIX}/lib/dri/classic
-	${CP} -v ${STAGEDIR}${PREFIX}/lib/dri/swrast_dri.so \
+	${MV} -v ${STAGEDIR}${PREFIX}/lib/dri/swrast_dri.so \
 		${STAGEDIR}${PREFIX}/lib/dri/classic/
 
 .include <bsd.port.post.mk>

@@ -1,6 +1,7 @@
 PORTNAME=	node
 DISTVERSIONPREFIX=	v
 DISTVERSION=	14.18.1
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://nodejs.org/dist/v${DISTVERSION}/
 PKGNAMESUFFIX=	14
@@ -47,7 +48,7 @@ DTRACE_CONFIGURE_ON=	--with-dtrace
 
 HAS_CONFIGURE=	yes
 
-CONFLICTS_INSTALL=	node10-[0-9]* node12-[0-9]* node-[0-9]*
+CONFLICTS_INSTALL=	node10 node16 node
 
 CONFIGURE_ARGS=	--prefix=${PREFIX_RELDEST} \
 		--without-npm \

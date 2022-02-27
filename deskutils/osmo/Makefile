@@ -2,7 +2,7 @@
 
 PORTNAME=	osmo
 PORTVERSION=	0.4.4
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	deskutils
 MASTER_SITES=	SF/${PORTNAME}-pim/${PORTNAME}-pim/${PORTNAME}-${PORTVERSION}
 
@@ -25,7 +25,6 @@ USES=		compiler:c++11-lang gettext gmake gnome libarchive pkgconfig \
 		sqlite
 USE_GNOME=	cairo gtk30 libxml2
 GNU_CONFIGURE=	yes
-INSTALLS_ICONS=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib

@@ -1,6 +1,5 @@
 PORTNAME=	virtualkeyboard
-DISTVERSION=	${QT5_VERSION}
-PORTREVISION=	1
+PORTVERSION=	${QT5_VERSION}${QT5_KDE_PATCH}
 CATEGORIES=	x11-toolkits
 PKGNAMEPREFIX=	qt5-
 
@@ -11,7 +10,6 @@ LIB_DEPENDS=	libhunspell-1.7.so:textproc/hunspell
 
 USES=		compiler:c++11-lang pkgconfig qmake qt-dist:5,virtualkeyboard
 USE_QT=		core declarative network gui widgets svg buildtools_build
-
 
 # Disable the builtin layouts -- otherwise we need to pull in a lot of other
 # stuff.

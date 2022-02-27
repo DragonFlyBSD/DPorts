@@ -380,6 +380,7 @@ _USE_PHP_ALL=	bcmath bitset bz2 calendar ctype curl dba dom \
 _USE_PHP_VER73=	${_USE_PHP_ALL} interbase pdf recode sodium wddx
 _USE_PHP_VER74=	${_USE_PHP_ALL} ffi pdf sodium
 _USE_PHP_VER80=	${_USE_PHP_ALL} ffi sodium
+_USE_PHP_VER81=	${_USE_PHP_ALL} ffi sodium
 
 bcmath_DEPENDS=	math/php${PHP_VER}-bcmath
 bitset_DEPENDS=	math/pecl-bitset@${PHP_FLAVOR}

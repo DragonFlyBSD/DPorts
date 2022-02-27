@@ -1,0 +1,33 @@
+--- js/src/old-configure.in.orig	2018-01-11 18:49:44 UTC
++++ js/src/old-configure.in
+@@ -1623,16 +1623,21 @@ dnl ====================================
+ dnl = Enable jemalloc
+ dnl ========================================================
+ 
+-case "${OS_TARGET}" in
+-Android|WINNT|Darwin)
++dnl In stand-alone builds we always only want to link executables against mozglue.
++if test "$JS_STANDALONE"; then
+   MOZ_GLUE_IN_PROGRAM=
+-  ;;
+-*)
+-  dnl On !Android !Windows !OSX, we only want to link executables against mozglue
+-  MOZ_GLUE_IN_PROGRAM=1
+-  AC_DEFINE(MOZ_GLUE_IN_PROGRAM)
+-  ;;
+-esac
++else
++  case "${OS_TARGET}" in
++  Android|WINNT|Darwin)
++    MOZ_GLUE_IN_PROGRAM=
++    ;;
++  *)
++    dnl On !Android !Windows !OSX, we only want to link executables against mozglue
++    MOZ_GLUE_IN_PROGRAM=1
++    AC_DEFINE(MOZ_GLUE_IN_PROGRAM)
++    ;;
++  esac
++fi
+ 
+ if test "$MOZ_MEMORY"; then
+   if test "x$MOZ_DEBUG" = "x1"; then

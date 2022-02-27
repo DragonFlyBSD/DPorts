@@ -1,0 +1,9 @@
+
+# really wants this
+BUILD_DEPENDS+=	cxxfs_gcc8>0:misc/cxxfs_gcc8
+CXXFLAGS+=	-isystem ${LOCALBASE}/cxxfs_gcc8
+LDFLAGS+=	-L${LOCALBASE}/cxxfs_gcc8
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@PUBLIC dl@PUBLIC stdc++fs@g' \
+		${WRKSRC}/CMakeLists.txt

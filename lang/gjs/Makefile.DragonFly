@@ -1,6 +1,0 @@
-
-# zrj: fix when on global DBUS OFF
-# configure: error: dbus-run-session is required for --with-dbus-tests
-OPTIONS_DEFINE+=	DBUS
-OPTIONS_DEFAULT+=	DBUS
-DBUS_CONFIGURE_OFF+=	--without-dbus-tests

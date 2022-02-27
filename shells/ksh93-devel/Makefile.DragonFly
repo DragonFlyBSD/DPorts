@@ -1,3 +1,4 @@
 
 dfly-patch:
-	${CHMOD} +x ${WRKSRC}/scripts/install_aux_files.sh
+	${REINPLACE_CMD} -e 's@__FreeBSD__@__DragonFly__@g' \
+		${WRKSRC}/src/lib/libast/features/wchar

@@ -1,6 +1,6 @@
 PORTNAME=	deluge
 DISTVERSION=	2.0.3
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	net-p2p python
 MASTER_SITES=	CHEESESHOP
 PKGNAMESUFFIX=	-cli
@@ -28,8 +28,10 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}xdg>=0.18:devel/py-xdg@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}distro>0:sysutils/py-distro@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}setproctitle>0:devel/py-setproctitle@${PY_FLAVOR}
 
-USES=		gettext python:3.5+
+USES=		cpe gettext python:3.5+
 USE_PYTHON=	autoplist distutils
+
+CPE_VENDOR=	deluge-torrent
 
 NO_ARCH=	yes
 

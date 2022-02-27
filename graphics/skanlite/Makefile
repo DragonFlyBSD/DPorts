@@ -6,7 +6,6 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Simple image scanning application
 
 LICENSE=	GPLv2
-LICENSE_FILE=	${WRKSRC}/src/COPYING
 
 LIB_DEPENDS=	libKF5Sane.so:graphics/libksane \
 		libpng.so:graphics/png
@@ -18,6 +17,5 @@ USE_KDE=	auth config configwidgets codecs completion \
 		doctools_build ecm_build
 USE_QT=		core concurrent dbus gui network widgets xml \
 		buildtools_build qmake_build testlib_build
-
 
 .include <bsd.port.mk>

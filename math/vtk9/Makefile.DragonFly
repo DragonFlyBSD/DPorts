@@ -1,6 +1,12 @@
 
 USES:=	${USES:Nalias}
 
+# avoid doxygen dep for now
+OPTIONS_EXCLUDE+=	DOCS
+
+# avoid mpi for now
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NMPI}
+
 dfly-patch:
 	${REINPLACE_CMD} -e 's@\(defined(__OpenBSD__)\)@(\1||defined(__DragonFly__))@g' \
 		${WRKSRC}/ThirdParty/vtkm/vtkvtkm/vtk-m/vtkm/thirdparty/loguru/vtkmloguru/loguru.cpp \

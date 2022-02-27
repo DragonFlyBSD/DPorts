@@ -1,23 +1,74 @@
 
 USES+=	localbase:ldflags
 
-OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NLLVM}
-OPTIONS_SLAVE:=		${OPTIONS_SLAVE:NLLVM}
+FLAVORS:=	${FLAVORS:Nllvm}
 
-GCC_BUILD_DEPENDS:=	gmp>0:math/gmp
-GCC_RUN_DEPENDS:=	gmp>0:math/gmp
-GCC_MAKE_ARGS:=		GCC=gcc GXX=g++
-GCC_CFLAGS:=		-I/usr/lib/gcc80/plugin
+BUILD_DEPENDS:=	gmp>0:math/gmp ginstall:sysutils/coreutils
+RUN_DEPENDS:=	gmp>0:math/gmp
+MAKE_ARGS:=	GCC=gcc GXX=g++
+CFLAGS:=	-I/usr/lib/gcc80/plugin
 
-# attempt to fix plist for non LLVM option
-dfly-install:
-	${TOUCH} ${STAGEDIR}${LOCALBASE}/share/doc/afl/README.cmplog.md
-	${TOUCH} ${STAGEDIR}${LOCALBASE}/share/doc/afl/README.ctx.md
-	${TOUCH} ${STAGEDIR}${LOCALBASE}/share/doc/afl/README.instrim.md
-	${TOUCH} ${STAGEDIR}${LOCALBASE}/share/doc/afl/README.laf-intel.md
-	${TOUCH} ${STAGEDIR}${LOCALBASE}/share/doc/afl/README.llvm_mode.md
-	${TOUCH} ${STAGEDIR}${LOCALBASE}/share/doc/afl/README.lto.md
-	${TOUCH} ${STAGEDIR}${LOCALBASE}/share/doc/afl/README.neverzero.md
-	${TOUCH} ${STAGEDIR}${LOCALBASE}/share/doc/afl/README.ngram.md
-	${TOUCH} ${STAGEDIR}${LOCALBASE}/share/doc/afl/README.snapshot.md
-	${TOUCH} ${STAGEDIR}${LOCALBASE}/share/doc/afl/README.whitelist.md
+dfly-patch:
+	${REINPLACE_CMD} '/alt_cc/ s,"gcc${GCC_DEFAULT:S/-devel$//}","gcc",' \
+		${WRKSRC}/src/afl-cc.c
+	${REINPLACE_CMD} -e 's@ifndef AFL_NO_X86@ifdef AFL_X86z@g' \
+		${WRKSRC}/GNUmakefile
+
+PLIST_FILES+=	bin/afl-analyze bin/afl-c++ bin/afl-cc bin/afl-clang bin/afl-clang++ \
+		bin/afl-cmin bin/afl-cmin.bash bin/afl-fuzz bin/afl-g++ bin/afl-gcc \
+		bin/afl-gotcpu bin/afl-network-client bin/afl-network-server bin/afl-plot \
+		bin/afl-showmap bin/afl-system-config bin/afl-tmin bin/afl-whatsup \
+		lib/afl/afl-as lib/afl/afl-compiler-rt-32.o lib/afl/afl-compiler-rt-64.o \
+		lib/afl/afl-compiler-rt.o lib/afl/afl-llvm-rt-32.o lib/afl/afl-llvm-rt-64.o \
+		lib/afl/afl-llvm-rt.o lib/afl/as lib/afl/dynamic_list.txt lib/afl/libdislocator.so \
+		%%DATADIR%%/README.md %%DATADIR%%/aff.dict \
+		%%DATADIR%%/archives/common/ar/small_archive.a %%DATADIR%%/archives/common/bzip2/small_archive.bz2 \
+		%%DATADIR%%/archives/common/cab/small_archive.cab %%DATADIR%%/archives/common/compress/small_archive.Z \
+		%%DATADIR%%/archives/common/cpio/small_archive.cpio %%DATADIR%%/archives/common/gzip/small_archive.gz \
+		%%DATADIR%%/archives/common/lzo/small_archive.lzo %%DATADIR%%/archives/common/rar/small_archive.rar \
+		%%DATADIR%%/archives/common/tar/small_archive.tar %%DATADIR%%/archives/common/xz/small_archive.xz \
+		%%DATADIR%%/archives/common/zip/small_archive.zip %%DATADIR%%/archives/exotic/arj/small_archive.arj \
+		%%DATADIR%%/archives/exotic/lha/small_archive.lha %%DATADIR%%/archives/exotic/lrzip/small_archive.lrz \
+		%%DATADIR%%/archives/exotic/lzip/small_archive.lz %%DATADIR%%/archives/exotic/lzma/small_archive.lzma \
+		%%DATADIR%%/archives/exotic/rzip/small_archive.rz %%DATADIR%%/archives/exotic/zoo/small_archive.zoo \
+		%%DATADIR%%/ass.dict %%DATADIR%%/atom.dict %%DATADIR%%/av1_dc.dict %%DATADIR%%/bash.dict \
+		%%DATADIR%%/bdf.dict %%DATADIR%%/bmp.dict %%DATADIR%%/bz2.dict %%DATADIR%%/creole.dict %%DATADIR%%/css.dict \
+		%%DATADIR%%/csv.dict %%DATADIR%%/dds.dict %%DATADIR%%/djvu.dict %%DATADIR%%/docommand.dict \
+		%%DATADIR%%/exif.dict %%DATADIR%%/fbs.dict %%DATADIR%%/ftp.dict %%DATADIR%%/gif.dict %%DATADIR%%/graphviz.dict \
+		%%DATADIR%%/heif.dict %%DATADIR%%/hoextdown.dict %%DATADIR%%/html_tags.dict %%DATADIR%%/http.dict \
+		%%DATADIR%%/icc.dict %%DATADIR%%/iccprofile.dict %%DATADIR%%/icns.dict %%DATADIR%%/images/bmp/not_kitty.bmp \
+		%%DATADIR%%/images/gif/not_kitty.gif %%DATADIR%%/images/ico/not_kitty.ico %%DATADIR%%/images/jp2/not_kitty.jp2 \
+		%%DATADIR%%/images/jpeg/not_kitty.jpg %%DATADIR%%/images/jxr/not_kitty.jxr %%DATADIR%%/images/png/not_kitty.png \
+		%%DATADIR%%/images/png/not_kitty_alpha.png %%DATADIR%%/images/png/not_kitty_gamma.png \
+		%%DATADIR%%/images/png/not_kitty_icc.png %%DATADIR%%/images/tiff/not_kitty.tiff %%DATADIR%%/images/webp/not_kitty.webp \
+		%%DATADIR%%/initfile.dict %%DATADIR%%/jbig2.dict %%DATADIR%%/jpeg.dict %%DATADIR%%/jpeg2000.dict %%DATADIR%%/js.dict \
+		%%DATADIR%%/json.dict %%DATADIR%%/jsonnet.dict %%DATADIR%%/markdown.dict %%DATADIR%%/math.dict %%DATADIR%%/mathml.dict \
+		%%DATADIR%%/mp4.dict %%DATADIR%%/multimedia/h264/small_movie.mp4 %%DATADIR%%/mysqld.dict %%DATADIR%%/ogg.dict \
+		%%DATADIR%%/openexr.dict %%DATADIR%%/otf.dict %%DATADIR%%/others/elf/small_exec.elf %%DATADIR%%/others/js/small_script.js \
+		%%DATADIR%%/others/pcap/small_capture.pcap %%DATADIR%%/others/pdf/small.pdf %%DATADIR%%/others/rtf/small_document.rtf \
+		%%DATADIR%%/others/sql/simple_queries.sql %%DATADIR%%/others/text/hello_world.txt \
+		%%DATADIR%%/others/xml/small_document.xml %%DATADIR%%/pbm.dict %%DATADIR%%/pcap.dict %%DATADIR%%/pdf.dict \
+		%%DATADIR%%/perl.dict %%DATADIR%%/png.dict %%DATADIR%%/proj4.dict %%DATADIR%%/protobuf.dict %%DATADIR%%/ps.dict \
+		%%DATADIR%%/psd.dict %%DATADIR%%/regexp.dict %%DATADIR%%/riff.dict %%DATADIR%%/rss.dict %%DATADIR%%/rst.dict \
+		%%DATADIR%%/rtf.dict %%DATADIR%%/sas.dict %%DATADIR%%/spss.dict %%DATADIR%%/sql.dict %%DATADIR%%/stata.dict \
+		%%DATADIR%%/svg.dict %%DATADIR%%/tex.dict %%DATADIR%%/theme-load-fuzz.dict %%DATADIR%%/tiff.dict \
+		%%DATADIR%%/tokener_parse_ex.dict %%DATADIR%%/toml.dict %%DATADIR%%/type42.dict %%DATADIR%%/url.dict \
+		%%DATADIR%%/utf8.dict %%DATADIR%%/vcf.dict %%DATADIR%%/vhd.dict %%DATADIR%%/vpx_dec.dict %%DATADIR%%/wav.dict \
+		%%DATADIR%%/webm.dict %%DATADIR%%/webp.dict %%DATADIR%%/wkt.dict %%DATADIR%%/x86.dict %%DATADIR%%/xml.dict \
+		%%DATADIR%%/xml_UTF_16.dict %%DATADIR%%/xml_UTF_16BE.dict %%DATADIR%%/xml_UTF_16LE.dict %%DATADIR%%/xpath.dict \
+		%%DATADIR%%/xslt.dict %%DATADIR%%/yaml.dict %%DATADIR%%/yara.dict %%DATADIR%%/zip.dict \
+		share/doc/afl/Changelog.md share/doc/afl/FAQ.md share/doc/afl/INSTALL.md share/doc/afl/QuickStartGuide.md \
+		share/doc/afl/README.cmplog.md share/doc/afl/README.ctx.md share/doc/afl/README.gcc_plugin.md \
+		share/doc/afl/README.instrument_list.md share/doc/afl/README.laf-intel.md share/doc/afl/README.llvm.md \
+		share/doc/afl/README.lto.md share/doc/afl/README.network_proxy.md share/doc/afl/README.neverzero.md \
+		share/doc/afl/README.ngram.md share/doc/afl/README.out_of_line.md share/doc/afl/README.persistent_mode.md \
+		share/doc/afl/README.snapshot.md share/doc/afl/binaryonly_fuzzing.md share/doc/afl/custom_mutators.md \
+		share/doc/afl/docs.md share/doc/afl/env_variables.md share/doc/afl/ideas.md share/doc/afl/life_pro_tips.md \
+		share/doc/afl/parallel_fuzzing.md share/doc/afl/perf_tips.md share/doc/afl/rpc_statsd.md \
+		share/doc/afl/sister_projects.md share/doc/afl/status_screen.md share/doc/afl/technical_details.md \
+		share/man/man8/afl-analyze.8.gz share/man/man8/afl-as.8.gz share/man/man8/afl-c++.8.gz \
+		share/man/man8/afl-cc.8.gz share/man/man8/afl-clang-fast++.8.gz share/man/man8/afl-clang-fast.8.gz \
+		share/man/man8/afl-cmin.8.gz share/man/man8/afl-cmin.bash.8.gz share/man/man8/afl-fuzz.8.gz \
+		share/man/man8/afl-g++-fast.8.gz share/man/man8/afl-gcc-fast.8.gz share/man/man8/afl-gotcpu.8.gz \
+		share/man/man8/afl-plot.8.gz share/man/man8/afl-showmap.8.gz share/man/man8/afl-system-config.8.gz \
+		share/man/man8/afl-tmin.8.gz share/man/man8/afl-whatsup.8.gz

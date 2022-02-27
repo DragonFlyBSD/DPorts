@@ -1,4 +1,13 @@
-USE_GCC_VERSION=	11
+
+# really wants this
+BUILD_DEPENDS+=	cxxfs_gcc8>0:misc/cxxfs_gcc8
+CXXFLAGS+=	-isystem ${LOCALBASE}/cxxfs_gcc8
+LDFLAGS+=	-L${LOCALBASE}/cxxfs_gcc8
 
 # zrj: too noisy on gcc80
-CXXFLAGS+=	-Wno-expansion-to-defined -Wno-class-memaccess
+CXXFLAGS+=	-Wno-expansion-to-defined -Wno-class-memaccess \
+		-Wno-unused-but-set-parameter
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@return isnan(@return std::isnan(@g' \
+		${WRKSRC}/Source/WebCore/rendering/shapes/ShapeOutsideInfo.cpp

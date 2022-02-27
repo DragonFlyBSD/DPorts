@@ -1,7 +1,8 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
 
 PORTNAME=	xapp
-DISTVERSION=	2.2.3
+PORTVERSION=	2.2.6
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 DIST_SUBDIR=	gnome
 
@@ -16,7 +17,7 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libdbusmenu-gtk3.so:devel/libdbusmenu
 RUN_DEPENDS=	bash:shells/bash
 
-USES=		gnome meson pkgconfig python:3.5+ shebangfix xorg
+USES=		gettext-tools gnome meson pkgconfig python:3.5+ shebangfix xorg
 USE_GITHUB=	yes
 GH_ACCOUNT=	linuxmint
 USE_GNOME=	cairo gdkpixbuf2 glib20 gtk30 introspection:build intltool \
@@ -24,7 +25,6 @@ USE_GNOME=	cairo gdkpixbuf2 glib20 gtk30 introspection:build intltool \
 USE_LDCONFIG=	yes
 USE_XORG=	x11
 GLIB_SCHEMAS=	org.x.apps.gschema.xml
-INSTALLS_ICONS=	yes
 SHEBANG_FILES=	data libxapp meson-scripts schemas scripts status-applets \
 		test-scripts
 

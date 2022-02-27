@@ -1,5 +1,6 @@
 PORTNAME=	elementary-photos
 DISTVERSION=	2.7.1
+PORTREVISION=	1
 CATEGORIES=	graphics
 
 MAINTAINER=	miguel@gocobachi.dev
@@ -37,7 +38,6 @@ GH_PROJECT=		photos
 USE_GNOME=		cairo gdkpixbuf2 gtk30 intltool
 GLIB_SCHEMAS=		io.elementary.photos-extras.gschema.xml \
 			io.elementary.photos.gschema.xml
-INSTALLS_ICONS=		yes
 USE_GSTREAMER1=		yes
 USE_LDCONFIG=		yes
 USE_XORG=		x11

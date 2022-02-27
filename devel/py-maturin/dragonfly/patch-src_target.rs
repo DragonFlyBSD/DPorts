@@ -1,4 +1,4 @@
---- src/target.rs.orig	2021-08-25 08:52:22 UTC
+--- src/target.rs.intermediate	2022-02-01 06:09:25.000000000 +0000
 +++ src/target.rs
 @@ -16,6 +16,7 @@ enum Os {
      Linux,
@@ -21,7 +21,7 @@
          Os::Windows => vec![Arch::X86, Arch::X86_64, Arch::Aarch64],
          Os::Macos => vec![Arch::Aarch64, Arch::X86_64],
 +        Os::DragonFly => vec![Arch::X86_64],
-         Os::FreeBsd => vec![Arch::X86_64, Arch::Aarch64],
+         Os::FreeBsd => vec![Arch::X86_64, Arch::Aarch64, Arch::Powerpc64, Arch::Powerpc64Le],
          Os::OpenBsd => vec![Arch::X86, Arch::X86_64, Arch::Aarch64],
      }
 @@ -110,6 +113,7 @@ impl Target {
@@ -38,9 +38,9 @@
              (Os::FreeBsd, Arch::X86_64)
 +            | (Os::DragonFly, Arch::X86_64)
              | (Os::FreeBsd, Arch::Aarch64)
-             | (Os::OpenBsd, Arch::X86)
-             | (Os::OpenBsd, Arch::X86_64)
-@@ -200,6 +205,7 @@ impl Target {
+             | (Os::FreeBsd, Arch::Powerpc64)
+             | (Os::FreeBsd, Arch::Powerpc64Le)
+@@ -204,6 +209,7 @@ impl Target {
              Os::Windows => "windows",
              Os::Linux => "linux",
              Os::Macos => "darwin",
@@ -48,7 +48,7 @@
              Os::FreeBsd => "freebsd",
              Os::OpenBsd => "openbsd",
          }
-@@ -237,7 +243,7 @@ impl Target {
+@@ -241,7 +247,7 @@ impl Target {
      pub fn is_unix(&self) -> bool {
          match self.os {
              Os::Windows => false,
@@ -57,7 +57,7 @@
          }
      }
  
-@@ -251,6 +257,11 @@ impl Target {
+@@ -255,6 +261,11 @@ impl Target {
          self.os == Os::Linux
      }
  

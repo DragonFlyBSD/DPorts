@@ -121,7 +121,6 @@ OPTIONS_DEFINE=	COINMP CUPS DOCS GNOME GTK3 GTK4 JAVA KF5 LTO MMEDIA PGSQL MARIA
 OPTIONS_DEFAULT=	CUPS JAVA MMEDIA QT5
 
 COINMP_DESC=	Enable CoinMP (deprecated) math solver
-GTK3_DESC=	GTK+ 3 GUI toolkit support
 GTK4_DESC=	GTK+ 4 GUI toolkit support
 JAVA_DESC=	Add Java support (XML filters, macros, DB connections)
 KF5_DESC=	KF5/Qt5 GUI toolkit support (implies QT5)
@@ -140,7 +139,7 @@ COINMP_LIB_DEPENDS=	libCoinMP.so:math/coinmp
 CUPS_CONFIGURE_ENABLE=	cups
 CUPS_LIB_DEPENDS=	libcups.so:print/cups
 
-DOCS_CONFIGURE_WITH=	help
+DOCS_CONFIGURE_ON=	--with-help=html
 
 GNOME_CONFIGURE_ENABLE=	dbus dconf
 GNOME_IMPLIES=	GTK3
@@ -149,12 +148,10 @@ GNOME_LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 GNOME_USE=	GNOME=dconf
 
 GTK3_CONFIGURE_ENABLE=	gtk3
-GTK3_USE=	GNOME=gtk30,gtk-update-icon-cache
-GTK3_VARS=	POST_PLIST=add-plist-gnome
+GTK3_USE=	GNOME=gtk30
 
 GTK4_CONFIGURE_ENABLE=	gtk4
-GTK4_USE=	GNOME=gtk40,gtk-update-icon-cache
-GTK4_VARS=	POST_PLIST=add-plist-gnome
+GTK4_USE=	GNOME=gtk40
 
 JAVA_BUILD_DEPENDS=	ant:devel/apache-ant \
 			${JAVAJARDIR}/commons-codec.jar:java/apache-commons-codec \
@@ -175,7 +172,7 @@ JAVA_CONFIGURE_ON=	--with-ant-home=${LOCALBASE}/share/java/apache-ant \
 			--without-system-jfreereport
 JAVA_CONFIGURE_WITH=	java
 # XXX jni.h from GNU classpath causes ABI conflicts.
-JAVA_CONFLICTS_BUILD=	classpath-[0-9]*
+JAVA_CONFLICTS_BUILD=	classpath
 JAVA_DISTFILES=	17410483b5b5f267aa18b7e00b65e6e0-hsqldb_1_8_0.zip:src \
 		3404ab6b1792ae5f16bbd603bd1e1d03-libformula-1.1.7.zip:src \
 		35c94d2df8893241173de1d16b6034c0-swingExSrc.zip:src \
@@ -265,6 +262,7 @@ CONFIGURE_ARGS=	--disable-dependency-tracking \
 		--with-vendor="FreeBSD ports" \
 		--without-fonts \
 		--without-myspell-dicts
+#		--with-helppack-integration=no \
 
 CONFIGURE_ENV=	DMAKE=${LOCALBASE}/bin/dmake \
 		FLEX=${LOCALBASE}/bin/flex \
@@ -331,7 +329,6 @@ post-patch:
 
 pre-configure:
 	@${TOUCH} ${WRKSRC}/autogen.lastrun
-	${CP} ${FILESDIR}/skia-freetype2.11.patch ${WRKSRC}/external/skia
 
 post-configure:
 	@${TOUCH} ${WRKSRC}/src.downloaded
@@ -351,13 +348,6 @@ post-install-SDK-on:
 .for subdir in include share share/doc share/idl
 	@cd ${STAGEDIR}${PREFIX} && \
 	${FIND} -s ${subdir}/libreoffice -not -type d >> ${TMPPLIST}
-.endfor
-
-add-plist-gnome:
-.for subdir in gnome hicolor locolor
-	@${ECHO_CMD} "@rmtry share/icons/${subdir}/icon-theme.cache" >> ${TMPPLIST}
-	@${ECHO_CMD} "@postexec ${LOCALBASE}/bin/gtk-update-icon-cache -q -f %D/share/icons/${subdir} 2>/dev/null || ${TRUE}" >> ${TMPPLIST}
-	@${ECHO_CMD} "@postunexec ${LOCALBASE}/bin/gtk-update-icon-cache -q -f %D/share/icons/${subdir} 2>/dev/null || ${TRUE}" >> ${TMPPLIST}
 .endfor
 
 .include <bsd.port.post.mk>

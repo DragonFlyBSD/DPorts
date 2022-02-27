@@ -1,0 +1,11 @@
+--- CMakeLists.txt.orig	2020-10-28 00:45:30 UTC
++++ CMakeLists.txt
+@@ -138,7 +138,7 @@ if(${CMAKE_SYSTEM_NAME} STREQUAL "Linux"
+   configure_file("${CMAKE_SOURCE_DIR}/cmake/cpack/${CMAKE_PROJECT_NAME}.desktop.in"
+     "${CMAKE_BINARY_DIR}/${CMAKE_PROJECT_NAME}.desktop" @ONLY)
+ 
+-elseif(${CMAKE_SYSTEM_NAME} STREQUAL "FreeBSD")
++elseif(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD|DragonFly")
+   set(FREEBSD TRUE)
+   configure_file("${CMAKE_SOURCE_DIR}/cmake/cpack/${CMAKE_PROJECT_NAME}.desktop.in"
+     "${CMAKE_BINARY_DIR}/${CMAKE_PROJECT_NAME}.desktop" @ONLY)

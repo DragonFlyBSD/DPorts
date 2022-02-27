@@ -1,0 +1,4 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's,FreeBSD|OpenBSD),DragonFly|&,g' \
+		${WRKSRC}/build/unix/config_proginfo_host

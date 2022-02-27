@@ -10,7 +10,7 @@ PKGNAMESUFFIX=	-legacy
 DISTNAME=	Python-${PORTVERSION}
 DIST_SUBDIR=	python
 
-MAINTAINER=	zrj@FreeBSD.org
+MAINTAINER=	zrj@ef.irc
 COMMENT=	Interpreted object-oriented programming language (forever edition)
 
 LICENSE=	PSFL

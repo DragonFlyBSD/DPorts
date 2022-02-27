@@ -43,12 +43,15 @@ UGLY_DISTNAME=		gst-plugins-ugly-${UGLY_PORTVERSION}
 UGLY_DISTFILE=		${UGLY_DISTNAME}${EXTRACT_SUFX}
 DIST?=		base
 
-USES+=		gettext gmake gnome libtool pathfix pkgconfig python tar:xz
+USES+=		cpe gettext gmake gnome libtool pathfix pkgconfig python tar:xz
 USE_GNOME+=	glib20 introspection:build libxml2
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
 GST_PLUGIN?=	base
 USE_LDCONFIG=	yes
+
+CPE_VENDOR=	gstreamer_project
+CPE_PRODUCT=	gstreamer
 
 CFLAGS+=	-Wno-format
 CPPFLAGS+=	-I${LOCALBASE}/include
@@ -137,8 +140,8 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|/dev/dvd|${DEFAULT_DVD_DEVICE}|g' \
 		${WRKSRC}/ext/resindvd/resindvdbin.c \
 		${WRKSRC}/ext/resindvd/resindvdsrc.c
-# Fix dependency on neon-0.31
-	${REINPLACE_CMD} -e '/neon/s|0.30.99|0.31.99|g' \
+# Fix dependency on neon-0.31 and 0.32
+	${REINPLACE_CMD} -e '/neon/s|0.30.99|0.32.99|g' \
 		${WRKSRC}/configure
 # Fix build against OpenCV 4.5.1
 	 ${REINPLACE_CMD} '/opencv/s|4\.2\.0|4.6.0|g' \

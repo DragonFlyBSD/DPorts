@@ -20,13 +20,15 @@ DIST_SUBDIR=	lapack-${PORTVERSION}
 MAINTAINER?=	fortran@FreeBSD.org
 COMMENT?=	Linear Algebra PACKage
 
-LICENSE=	BSD3CLAUSE
+LICENSE?=	BSD3CLAUSE
 
-USES=		cmake:testing fortran
+USES=		cmake:testing cpe fortran
 WRKSRC=		${WRKDIR}/lapack-${PORTVERSION}
 # The actual math/scilab needs deprecated functions - to be removed later
 CMAKE_ON=	BUILD_SHARED_LIBS BUILD_DEPRECATED
 USE_LDCONFIG=	yes
+CPE_VENDOR=	lapack_project
+CPE_PROJECT=	lapack
 
 SVERSION=	${PORTVERSION:R:R}
 PLIST_SUB=	SVERSION="${SVERSION}" VER=${PORTVERSION}

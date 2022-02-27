@@ -1,13 +1,14 @@
 # Created by: Ashish SHUKLA <ashish@FreeBSD.org>
 
 PORTNAME=	chez-scheme
-PORTVERSION=	9.5.2
+PORTVERSION=	9.5.4
 DISTVERSIONPREFIX=	v
+PORTREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	http://distfiles.pirateparty.in/ashish/:boot \
 		LOCAL/ashish:boot
-DISTFILES=	${PORTNAME}-boot-a6fb-${PORTVERSION}.tar.xz:boot \
-		${PORTNAME}-boot-i3fb-${PORTVERSION}.tar.xz:boot
+DISTFILES=	${PORTNAME}-boot-ta6fb-${PORTVERSION}.tar.xz:boot \
+		${PORTNAME}-boot-ti3fb-${PORTVERSION}.tar.xz:boot
 
 MAINTAINER=	ashish@FreeBSD.org
 COMMENT=	Chez Scheme system
@@ -17,22 +18,24 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 ONLY_FOR_ARCHS=	amd64 i386
 
-LIB_DEPENDS=	libuuid.so:misc/e2fsprogs-libuuid
+LIB_DEPENDS=	libuuid.so:misc/e2fsprogs-libuuid \
+		libossp-uuid.so:misc/ossp-uuid
 
 USES=		gmake iconv:lib ncurses
 USE_GITHUB=	yes
 GH_ACCOUNT=	cisco
 GH_PROJECT=	ChezScheme
-GH_TUPLE=	nanopass:nanopass-framework-scheme:v1.9:nanopass/nanopass \
+GH_TUPLE=	nanopass:nanopass-framework-scheme:v1.9.1:nanopass/nanopass \
 		madler:zlib:v1.2.11:zlib/zlib \
-		dybvig:stex:v1.2.1:stex/stex
+		dybvig:stex:v1.2.2:stex/stex \
+		lz4:lz4:3d67671:lz4/lz4
 
 OPTIONS_DEFAULT=	X11
 OPTIONS_DEFINE=	X11
 
 HAS_CONFIGURE=	yes
 ALL_TARGET=	build
-CONFLICTS_INSTALL=	petite-chez-[0-9]*
+CONFLICTS_INSTALL=	petite-chez
 STRIP_FILES=	bin/petite bin/${PORTNAME} bin/${PORTNAME}-script
 CHEZ_LIBDIR=lib/csv${PORTVERSION}
 CFLAGS+=	-I${LOCALBASE}/include
@@ -50,11 +53,11 @@ X11_USE=	XORG=x11
 .include <bsd.port.pre.mk>
 
 .if (${ARCH} == "x86_64")
-CONFIGURE_ARGS+=	--threads --64 -m=a6fb
-CHEZ_ARCH=	a6fb
+CONFIGURE_ARGS+=	--threads --64 -m=ta6fb
+CHEZ_ARCH=	ta6fb
 .elif (${ARCH} == "i386")
-CONFIGURE_ARGS+=	--threads --32 -m=i3fb
-CHEZ_ARCH=	i3fb
+CONFIGURE_ARGS+=	--threads --32 -m=ti3fb
+CHEZ_ARCH=	ti3fb
 .endif
 
 post-patch:

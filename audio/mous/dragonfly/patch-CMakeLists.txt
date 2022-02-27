@@ -1,0 +1,11 @@
+--- CMakeLists.txt.orig	2018-04-02 13:44:48 UTC
++++ CMakeLists.txt
+@@ -23,7 +23,7 @@ set(THREADS_PREFER_PTHREAD_FLAG ON)
+ find_package(Threads REQUIRED)
+ 
+ #==== OS Check ====#
+-if(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
++if(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD|DragonFly")
+     set(FREEBSD true)
+ elseif(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
+     set(LINUX true)

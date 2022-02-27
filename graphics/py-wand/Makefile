@@ -1,11 +1,12 @@
 PORTNAME=	Wand
 PORTVERSION=	0.6.7
+PORTREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	python@FreeBSD.org
-COMMENT=	MagickWand Python binding
+MAINTAINER=	sunpoet@FreeBSD.org
+COMMENT=	Ctypes-based simple MagickWand API binding for Python
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -26,15 +27,15 @@ IMAGEMAGICK7_DESC=	Use ImageMagick 7.x (graphics/ImageMagick7*)
 
 .if ${PORT_OPTIONS:MX11}
 .if ${PORT_OPTIONS:MIMAGEMAGICK7}
-LIB_DEPENDS=	libMagickWand-7.so:graphics/ImageMagick7
+USES+=		magick:7
 .else
-LIB_DEPENDS=	libMagickWand-6.so:graphics/ImageMagick6
+USES+=		magick:6
 .endif
 .else
 .if ${PORT_OPTIONS:MIMAGEMAGICK7}
-LIB_DEPENDS=	libMagickWand-7.so:graphics/ImageMagick7-nox11
+USES+=		magick:7,nox11
 .else
-LIB_DEPENDS=	libMagickWand-6.so:graphics/ImageMagick6-nox11
+USES+=		magick:6,nox11
 .endif
 .endif
 

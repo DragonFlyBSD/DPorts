@@ -1,0 +1,13 @@
+--- auto/openssl.orig	2021-12-28 13:55:44 UTC
++++ auto/openssl
+@@ -12,8 +12,8 @@ if [ $NJS_OPENSSL = YES ]; then
+     njs_feature="OpenSSL library"
+     njs_feature_name=NJS_HAVE_OPENSSL
+     njs_feature_run=yes
+-    njs_feature_incs=
+-    njs_feature_libs="-lcrypto"
++    njs_feature_incs="-I/usr/local/include"
++    njs_feature_libs="-L/usr/local/lib -lcrypto"
+     njs_feature_test="#include <openssl/evp.h>
+ 
+                       int main() {

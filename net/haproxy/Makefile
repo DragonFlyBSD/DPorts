@@ -1,7 +1,7 @@
 # Created by: Hugo Saro <hugo@barafranca.com>
 
 PORTNAME=	haproxy
-DISTVERSION=	2.4.5
+DISTVERSION=	2.4.10
 CATEGORIES=	net www
 MASTER_SITES=	http://www.haproxy.org/download/2.4/src/
 
@@ -18,7 +18,7 @@ default_CONFLICTS_INSTALL=	haproxy-lua
 lua_CONFLICTS_INSTALL=		haproxy
 lua_PKGNAMESUFFIX=		-lua
 
-CONFLICTS_INSTALL=	haproxy-devel-[0-9]* haproxy17-[0-9]* haproxy18-[0-9]* haproxy19-[0-9]* haproxy20-[0-9]* haproxy21-[0-9]*
+CONFLICTS_INSTALL=	haproxy-devel haproxy17 haproxy18 haproxy19 haproxy20 haproxy21
 
 USES=		compiler:c++11-lang cpe gmake
 USE_RC_SUBR=	haproxy
@@ -26,7 +26,9 @@ USE_RC_SUBR=	haproxy
 ALL_TARGET=	all admin/halog/halog
 MAKE_ARGS=	TARGET=freebsd DEFINE=-DFREEBSD_PORTS USE_GETADDRINFO=1 \
 		USE_ZLIB=1 USE_CPU_AFFINITY=1 USE_ACCEPT4=1 \
-		CC="${CC}" DEBUG_CFLAGS="" CPU_CFLAGS="${CFLAGS}"
+		CC="${CC}" DEBUG_CFLAGS="" CPU_CFLAGS="${CFLAGS}" \
+		${MAKE_ARGS_${ARCH}}
+MAKE_ARGS_i386=	USE_LIBATOMIC=
 
 OPTIONS_DEFINE=		DOCS EXAMPLES LUA OPENSSL DEVICEATLAS PROMEX
 OPTIONS_RADIO=		PCRE
@@ -51,6 +53,12 @@ LUA_MAKE_ARGS=		USE_LUA=1 LUA_INC=${LUA_INCDIR} LUA_LIB=${LUA_LIBDIR} LUA_LIB_NA
 
 .if ${FLAVOR:U} == lua
 OPTIONS_DEFAULT+=	LUA
+.endif
+
+.include <bsd.port.options.mk>
+
+.if ${ARCH} == powerpc
+MAKE_ARGS+=	USE_LIBATOMIC=
 .endif
 
 .include <bsd.port.pre.mk>

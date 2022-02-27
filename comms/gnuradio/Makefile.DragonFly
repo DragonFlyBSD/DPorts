@@ -1,3 +1,7 @@
+
+BUILD_DEPENDS:=	${BUILD_DEPENDS:Ndoxygen*}
+RUN_DEPENDS:=	${RUN_DEPENDS:Ndoxygen*}
+
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 # zrj: restore damage

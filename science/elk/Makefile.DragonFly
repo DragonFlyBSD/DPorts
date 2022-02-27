@@ -1,4 +1,7 @@
 
+# avoid mpi for now
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NMPI}
+
 LDFLAGS:=	${LDFLAGS:N*libgcc_s.so}
 
 dfly-patch:

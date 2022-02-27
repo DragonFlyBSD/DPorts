@@ -1,4 +1,7 @@
 
+USES+=	perl5
+USE_PERL5+=	run
+
 # add fallback for mainly qt failing transtalions
 PLIST_FILES+=	${QT_MKSPECDIR_REL}/dragonfly-g++/qmake.conf \
 		${QT_MKSPECDIR_REL}/dragonfly-g++/qplatformdefs.h

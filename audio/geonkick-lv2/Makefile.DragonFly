@@ -8,3 +8,5 @@ dfly-patch:
 	${REINPLACE_CMD} -e '/lstdc++fs/s@^#@@g' \
 		${WRKSRC}/plugin/lv2/CMakeLists.txt \
 		${WRKSRC}/standalone/CMakeLists.txt
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
+		${WRKSRC}/redkite/CMakeLists.txt

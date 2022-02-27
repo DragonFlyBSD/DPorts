@@ -1,2 +1,0 @@
-NCURSES_USES=		ncurses
-CONFIGURE_ARGS+=	--disable-netmap --disable-stack-protector

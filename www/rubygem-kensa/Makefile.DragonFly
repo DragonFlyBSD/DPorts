@@ -1,4 +1,0 @@
-
-dfly-patch:
-	${REINPLACE_CMD} -e '/mechanize>/s@~>@>=@g' \
-		${WRKSRC}/kensa.gemspec

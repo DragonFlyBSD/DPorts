@@ -6,6 +6,9 @@ CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome
 
+PATCH_SITES=	https://gitlab.gnome.org/GNOME/${PORTNAME}/-/commit/
+PATCHFILES+=	28e28e9e5983.patch:-p1 # meson >= 0.60
+
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME 3 settings daemon
 
@@ -35,7 +38,6 @@ USE_GNOME=	cairo gnomedesktop3 gtk30
 USES=		gettext gnome localbase:ldflags meson perl5 \
 		pkgconfig python:3.6+,build tar:xz xorg
 USE_PERL5=	build
-INSTALLS_ICONS=	yes
 #		-Dnssdb_dir=${LOCALBASE}/share/certs/ca-root-nss.crt
 MESON_ARGS=	-Dnssdb_dir=${LOCALBASE}/share/certs/ \
 		-Dalsa=false \

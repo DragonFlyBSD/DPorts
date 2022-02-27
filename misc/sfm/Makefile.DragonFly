@@ -1,0 +1,4 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700@@g' \
+		${WRKSRC}/config.mk

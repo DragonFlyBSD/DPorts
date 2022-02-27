@@ -1,0 +1,12 @@
+--- Makefile.intermediate	2022-01-21 17:28:16.000000000 +0000
++++ Makefile
+@@ -62,6 +62,9 @@ CXXFLAGS_NO_GTK := -Wall -std=c++11 -I.
+ CXXFLAGS        := -Wall -std=c++11 -I. -Iinclude/ -IwxLua/modules/ $(DEBUG_CFLAGS) $(CAPSTONE_CFLAGS) $(JANSSON_CFLAGS) $(LUA_CFLAGS) $(WX_CXXFLAGS) $(GTK_CFLAGS) $(CXXFLAGS)
+ 
+ uname_S := $(shell uname -s 2>/dev/null)
++ifeq ($(uname_S),DragonFly)
++	LDLIBS += -liconv
++endif
+ ifeq ($(uname_S),FreeBSD)
+ 	LDLIBS += -liconv
+ endif

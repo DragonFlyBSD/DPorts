@@ -16,3 +16,11 @@
  #endif
  #else
  #include <crypt.h>
+@@ -283,4 +288,7 @@ exit:
+     free (tmp);
+   return result;
+ }
++#else
++char *pba_hash (struct PBASettings *setting, const char *password) { return NULL; }
++enum pba_rc pba_verify_hash (const struct PBASettings *setting, const char *hash, const char *password) { return ERR; }
+ #endif /* #if HAS_CRYPT_R */

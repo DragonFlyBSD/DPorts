@@ -1,7 +1,7 @@
 # Created by: Johannes M Dieterich <jmd@FreeBSD.org>
 
 PORTNAME=	blis
-PORTVERSION=	0.8.0
+PORTVERSION=	0.8.1
 PORTREVISION=	0
 CATEGORIES=	math
 
@@ -26,6 +26,7 @@ CBLAS_DESC=	build the CBLAS compatibility layer
 OPTIONS_DEFAULT=	PARA CBLAS
 OPTIONS_SUB=		yes
 
+CFLAGS_riscv64=	-mno-relax
 HAS_CONFIGURE=	yes
 
 TEST_TARGET=	test

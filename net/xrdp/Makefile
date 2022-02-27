@@ -3,11 +3,13 @@
 PORTNAME=	xrdp
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.9.17
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	net
 DIST_SUBDIR?=	${PORTNAME}
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${PORTNAME}/commit/
+PATCHFILES=	eb4a8e34.patch:-p1
 
 MAINTAINER=	meta@FreeBSD.org
 COMMENT=	Open source Remote Desktop Protocol (RDP) server
@@ -20,11 +22,13 @@ RUN_DEPENDS=	xterm:x11/xterm \
 		${LOCALBASE}/lib/xorg/modules/libxorgxrdp.so:x11-drivers/xorgxrdp \
 		${LOCALBASE}/lib/pulse-14.2/modules/module-xrdp-sink.so:audio/pulseaudio-module-xrdp
 
-USES=		autoreconf:build compiler:c11 jpeg localbase libtool pkgconfig \
+USES=		autoreconf:build compiler:c11 cpe jpeg localbase libtool pkgconfig \
 		ssl xorg
 USE_XORG=	ice pixman sm x11 xfixes xrandr
 USE_LDCONFIG=	${PREFIX}/lib/xrdp
 USE_GITHUB=	yes
+
+CPE_VENDOR=	neutrinolabs
 
 GNU_CONFIGURE=	yes
 GH_ACCOUNT=	neutrinolabs

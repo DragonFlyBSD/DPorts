@@ -1,5 +1,5 @@
 PORTNAME=	din
-PORTVERSION=	51.1.1
+PORTVERSION=	52
 CATEGORIES=	audio
 MASTER_SITES=	https://archive.org/download/dinisnoise_source_code/
 
@@ -18,8 +18,6 @@ USE_GL=		gl
 USE_SDL=	sdl
 
 GNU_CONFIGURE=	yes
-
-INSTALLS_ICONS=	yes
 
 OPTIONS_SINGLE=		BACKEND
 OPTIONS_SINGLE_BACKEND=	ALSA JACK

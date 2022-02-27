@@ -1,0 +1,20 @@
+--- configure.orig	2021-08-12 09:07:19 UTC
++++ configure
+@@ -12521,7 +12521,7 @@ printf "%s\n" "yes" >&6; }
+       { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+ printf "%s\n" "yes" >&6; }
+       ;;
+-    freebsd*)
++    freebsd*|dragonfly*)
+       if $STRIP -V 2>&1 | $GREP "elftoolchain" >/dev/null; then
+         old_striplib="$STRIP --strip-debug"
+         striplib="$STRIP --strip-unneeded"
+@@ -13541,7 +13541,7 @@ printf "%s\n" "#define OSTYPE_LINUX 1" >
+ 	  { printf "%s\n" "$as_me:${as_lineno-$LINENO}: OS is Linux, using uinput if available" >&5
+ printf "%s\n" "$as_me: OS is Linux, using uinput if available" >&6;}
+ 	  ;;
+-	*freebsd*)
++	*freebsd*|*dragonfly*)
+ 
+ printf "%s\n" "#define OSTYPE_FREEBSD 1" >>confdefs.h
+ 

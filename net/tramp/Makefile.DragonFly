@@ -1,5 +1,0 @@
-
-# deal with orphans
-.if ${FLAVOR:U} == devel_full
-PLIST_FILES+=	${TRAMP_LISPDIR}/tramp-gvfs.el ${TRAMP_LISPDIR}/tramp-gvfs.elc
-.endif

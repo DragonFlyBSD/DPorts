@@ -5,4 +5,5 @@ dfly-patch:
 		${WRKSRC}/src/cmd/draw/mc.c \
 		${WRKSRC}/src/lib9/readcons.c
 
-
+dfly-configure:
+	${REINPLACE_CMD} '/CC9=/d' ${WRKSRC}/LOCAL.config

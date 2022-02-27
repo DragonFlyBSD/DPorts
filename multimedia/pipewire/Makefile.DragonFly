@@ -3,10 +3,9 @@ LDFLAGS+=     -L${LOCALBASE}/lib -ltinfo -lncurses
 
 dfly-patch:
 	${REINPLACE_CMD} -e 's@freebsd@dragonfly@g' \
+		${WRKSRC}/subprojects/media-session/meson.build \
 		${WRKSRC}/src/pipewire/meson.build \
 		${WRKSRC}/meson.build
-	${REINPLACE_CMD} -e 's@sched_getcpu@&___@g' \
-		${WRKSRC}/spa/tests/stress-ringbuffer.c
 	${REINPLACE_CMD} -e 's@__FreeBSD__@__FOO__@g' \
 			 -e 's@SYS_gettid@SYS_lwp_gettid@g' \
 			 -e 's@SCHED_RESET_ON_FORK@0@g' \

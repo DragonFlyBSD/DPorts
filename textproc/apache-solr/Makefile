@@ -4,7 +4,7 @@ PORTNAME=	apache-solr
 PORTVERSION=	8.11.1
 PORTREVISION=	0
 CATEGORIES=	textproc java
-MASTER_SITES=	APACHE/lucene/solr/${PORTVERSION}
+MASTER_SITES=	https://archive.apache.org/dist/lucene/solr/${PORTVERSION}/
 DISTNAME=	solr-${PORTVERSION}
 
 MAINTAINER=	mfechner@FreeBSD.org

@@ -1,5 +1,6 @@
 PORTNAME=	telegram-desktop
 DISTVERSION=	3.2.5
+PORTREVISION=	1
 CATEGORIES=	net-im
 MASTER_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/releases/download/v${DISTVERSION}/
 DISTNAME=	tdesktop-${DISTVERSION}-full
@@ -52,7 +53,6 @@ GH_ACCOUNT=	telegramdesktop
 GH_PROJECT=	tdesktop
 USE_GL=		gl
 USE_GNOME=	glib20 glibmm
-INSTALLS_ICONS=	yes
 USE_QT=		core dbus gui imageformats network widgets buildtools_build \
 		qmake_build wayland svg
 USE_XORG=	x11 xcb xcomposite xdamage xext xfixes xrender xrandr xtst
@@ -70,8 +70,6 @@ CXXFLAGS+=	-DNDEBUG
 
 # see Bugzilla #245452 for details
 NO_CCACHE=	yes
-
-INSTALLS_ICONS=	yes
 
 # Telegram uses OpenAL for its audio, but libtgvoip (for voice calls) can use PulseAudio or ALSA.
 # It dynamically loads PulseAudio, and if this fails, it loads ALSA.

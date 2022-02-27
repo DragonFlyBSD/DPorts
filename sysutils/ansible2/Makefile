@@ -12,6 +12,10 @@ COMMENT=	Radically simple IT automation
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+# https://groups.google.com/g/ansible-announce/c/kegIH5_okmg
+DEPRECATED=	Upstream support ceases
+EXPIRATION_DATE=	2022-05-23
+
 RUN_DEPENDS?=	${PYTHON_PKGNAMEPREFIX}cryptography>0:security/py-cryptography@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}Jinja2>0:devel/py-Jinja2@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}jmespath>0:devel/py-jmespath@${PY_FLAVOR} \
@@ -41,7 +45,7 @@ TEST_ARGS=	VERSION=${PORTVERSION} \
 TEST_ENV=	PYTHON_VERSION=${PYTHON_VER}
 TEST_TARGET=	tests
 
-CONFLICTS_INSTALL=	${_ANSIBLE_PACKAGES:N${PKGBASE}-*}
+CONFLICTS_INSTALL=	${_ANSIBLE_PACKAGES:N${PKGBASE}}
 
 EXTRA_PATCHES?=
 NO_ARCH=	yes
@@ -62,9 +66,9 @@ PLIST_FILES?=	man/man1/ansible-config.1.gz \
 PORTEXAMPLES=	ansible.cfg hosts
 
 _ANSIBLE_VERSIONS=	1 2 23 24 25 26 27 28
-_ANSIBLE_PACKAGES=	${PYTHON_PKGNAMEPREFIX}ansible-*
+_ANSIBLE_PACKAGES=	${PYTHON_PKGNAMEPREFIX}ansible
 .for version in ${_ANSIBLE_VERSIONS}
-_ANSIBLE_PACKAGES+=	${PYTHON_PKGNAMEPREFIX}ansible${version}-*
+_ANSIBLE_PACKAGES+=	${PYTHON_PKGNAMEPREFIX}ansible${version}
 .endfor
 
 OPTIONS_DEFINE=	DOCS EXAMPLES

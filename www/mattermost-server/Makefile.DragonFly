@@ -1,0 +1,3 @@
+
+# deal with orphans (plist)
+PLIST_FILES+=	%%WWWDIR%%/templates/cloud_trial_ended_email.html

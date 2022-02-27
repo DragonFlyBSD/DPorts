@@ -1,0 +1,5 @@
+
+USES+=	fortran
+
+# avoid mpi for now
+RUN_DEPENDS:=	${RUN_DEPENDS:N*gcc${GCC_DEFAULT}}

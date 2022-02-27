@@ -3,3 +3,11 @@ USES+=	ssl
 
 CFLAGS+=	-I${OPENSSLINC}
 LDFLAGS+=	-L${OPENSSLLIB}
+
+# rename directory (missing OPSYS:tl)
+DFLY_PLIST=	${WRKSRC}/pkg-plist
+PLIST:=		${DFLY_PLIST}
+
+dfly-patch:
+	${CP} -v ${.CURDIR:H}/sagittarius-scheme/pkg-plist ${DFLY_PLIST}
+	${REINPLACE_CMD} -e 's/pc-freebsd/pc-dragonfly/g' ${DFLY_PLIST}

@@ -1,0 +1,4 @@
+
+.if ${FLAVOR:U} == devel_full || ${FLAVOR:U} == devel_nox
+BROKEN= Extraneous text at end of command line
+.endif

@@ -1,7 +1,7 @@
 # Created by: erich@FreeBSD.org
 
 PORTNAME?=	gimp
-PORTVERSION=	2.10.28
+PORTVERSION=	2.10.30
 PORTEPOCH?=	1
 CATEGORIES?=	graphics gnome
 MASTER_SITES=	GIMP/gimp/v${PORTVERSION:R}
@@ -50,7 +50,6 @@ USES+=		compiler:c++14-lang cpe gettext gmake gnome jpeg libtool \
 USE_XORG=	ice sm x11 xcursor xext xfixes xmu xpm xt
 USE_GNOME+=	cairo gtk20 intltool librsvg2
 USE_LDCONFIG=	yes
-INSTALLS_ICONS=	yes
 INSTALL_TARGET=	install-strip
 TEST_TARGET=	check
 .if !defined(XAUTHORITY)

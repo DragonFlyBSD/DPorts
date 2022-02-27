@@ -1,0 +1,5 @@
+
+# try to fix plist (orphans)
+PLIST_FILES+=	man/man1/smokeinfo.1.gz \
+		man/man3/Smokeping_matchers_ConsecutiveLoss.3.gz \
+		smokeping/lib/Smokeping/matchers/ConsecutiveLoss.pm

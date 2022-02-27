@@ -1,3 +1,7 @@
 
+# avoid doxygen dep for now (why rundeps??)
+BUILD_DEPENDS:=	${BUILD_DEPENDS:Ndoxygen*}
+RUN_DEPENDS:=	${RUN_DEPENDS:Ndoxygen*}
+
 # attempt to fix plist
 PLIST_FILES+=	"@dir /var/lib"

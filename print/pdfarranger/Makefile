@@ -1,8 +1,7 @@
 # Created by: Alexander Vereeken <Alexander88207@protonmail.com>
 
 PORTNAME=	pdfarranger
-DISTVERSION=	1.7.1
-PORTREVISION=	1
+DISTVERSION=	1.8.0
 CATEGORIES=	print
 
 MAINTAINER=	Alexander88207@protonmail.com
@@ -23,6 +22,5 @@ USE_GNOME=	intltool:build gtk30
 USE_GITHUB=	yes
 
 NO_ARCH=	yes
-INSTALLS_ICONS=	yes
 
 .include <bsd.port.mk>

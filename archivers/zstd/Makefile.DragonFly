@@ -1,5 +1,10 @@
 MAKE_JOBS_UNSAFE=yes
 
+# zrj: benchmark-tuning here
+OPTIONS_DEFINE+=	BENCHMARKFIX
+OPTIONS_DEFAULT+=	BENCHMARKFIX
+BENCHMARKFIX_EXTRA_PATCHES+=	${DFLY_PATCHDIR}/extra-timespec_get_benchmark_fix
+
 # zrj: CCVER is reserved variable on DragonFly BSD
 dfly-patch:
 	${REINPLACE_CMD} -e 's@CCVER@zstd&@g' \

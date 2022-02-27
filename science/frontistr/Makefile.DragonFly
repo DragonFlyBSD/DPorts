@@ -1,0 +1,13 @@
+
+# avoid mpi for now
+USES:=	${USES:Nmpi}
+LIB_DEPENDS:=	${LIB_DEPENDS:Nlibscalapack*}
+
+# avoid doxygen for now
+OPTIONS_EXCLUDE+=	DOCS
+
+# for ftime(3) use -lcompat
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/target_link_libraries(hecm/s@)@ compat)@g' \
+		${WRKSRC}/hecmw1/CMakeLists.txt

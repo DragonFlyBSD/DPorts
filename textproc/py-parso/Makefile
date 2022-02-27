@@ -1,7 +1,7 @@
 # Created by: Richard Gallamore <ultima@FreeBSD.org>
 
 PORTNAME=	parso
-DISTVERSION=	0.8.2
+DISTVERSION=	0.8.3
 CATEGORIES=	textproc python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -15,7 +15,8 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest<6.0.0:devel/py-pytest@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}docopt>=0:devel/py-docopt@${PY_FLAVOR}
 
-USES=		python:3.6+
+USES=		cpe python:3.6+
+CPE_VENDOR=	${PORTNAME}_project
 USE_PYTHON=	autoplist distutils
 
 NO_ARCH=	yes

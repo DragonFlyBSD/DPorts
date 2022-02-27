@@ -7,9 +7,6 @@ COMMENT=	Sieve libriares for KDEPim
 
 LICENSE=	LGPL21
 
-DEPRECATED=	Uses EOL Python 2.7 via www/qt5-webengine
-EXPIRATION_DATE=2021-06-23
-
 BUILD_DEPENDS=	${LOCALBASE}/include/boost/range/algorithm.hpp:devel/boost-libs
 LIB_DEPENDS=	libsasl2.so:security/cyrus-sasl2
 
@@ -27,7 +24,6 @@ USE_QT=		concurrent core dbus declarative gui location network printsupport \
 USE_LDCONFIG=	yes
 
 DESCR=		${.CURDIR:H:H}/deskutils/kdepim/pkg-descr
-
 
 OPTIONS_DEFINE=	DOCS
 

@@ -65,11 +65,11 @@ USES+=		compiler:c++17-lang cpe gl gmake gnome iconv localbase perl5 pkgconfig \
 CPE_VENDOR?=mozilla
 USE_GL=		gl
 USE_GNOME=	cairo gdkpixbuf2 gtk30
-.if ${MOZILLA_VER:R:R} < 90
-USE_GNOME+=	gtk20
-.endif
 USE_PERL5=	build
 USE_XORG=	x11 xcb xcomposite xdamage xext xfixes xrender xt
+.if ${MOZILLA_VER:R:R} >= 96
+USE_XORG+=	xrandr xtst
+.endif
 HAS_CONFIGURE=	yes
 CONFIGURE_OUTSOURCE=	yes
 LDFLAGS+=		-Wl,--as-needed
@@ -79,15 +79,11 @@ BUNDLE_LIBS=	yes
 
 BUILD_DEPENDS+=	llvm${LLVM_DEFAULT}>0:devel/llvm${LLVM_DEFAULT} \
 				rust-cbindgen>=0.19.0:devel/rust-cbindgen \
-				${RUST_DEFAULT}>=1.55.0:lang/${RUST_DEFAULT} \
+				${RUST_DEFAULT}>=1.58.1:lang/${RUST_DEFAULT} \
 				node:www/node
 LIB_DEPENDS+=	libdrm.so:graphics/libdrm
-.if ${MOZILLA_VER:R:R} >= 85
 RUN_DEPENDS+=	${LOCALBASE}/lib/libpci.so:devel/libpci
-.endif
-.if ${MOZILLA_VER:R:R} >= 90
 LIB_DEPENDS+=	libepoll-shim.so:devel/libepoll-shim
-.endif
 MOZ_EXPORT+=	${CONFIGURE_ENV} \
 				PERL="${PERL}" \
 				PYTHON3="${PYTHON_CMD}" \
@@ -101,8 +97,8 @@ MOZ_EXPORT+=	LLVM_OBJDUMP="${LOCALBASE}/bin/llvm-objdump${LLVM_DEFAULT}"
 .endif
 # Ignore Mk/bsd.default-versions.mk but respect make.conf(5) unless LTO is enabled
 .if !defined(DEFAULT_VERSIONS) || ! ${DEFAULT_VERSIONS:Mllvm*} || ${PORT_OPTIONS:MLTO}
-LLVM_DEFAULT=	12 # chase bundled LLVM in lang/rust for LTO
-LLVM_VERSION=	12.0.1 # keep in sync with devel/wasi-compiler-rt${LLVM_DEFAULT}
+LLVM_DEFAULT=	13 # chase bundled LLVM in lang/rust for LTO
+LLVM_VERSION=	13.0.1 # keep in sync with devel/wasi-compiler-rt${LLVM_DEFAULT}
 .endif
 # Require newer Clang than what's in base system unless user opted out
 . if ${CC} == cc && ${CXX} == c++ && exists(/usr/lib/libc++.so)
@@ -171,6 +167,9 @@ pixman_MOZ_OPTIONS=	--enable-system-pixman
 
 png_LIB_DEPENDS=	libpng.so:graphics/png
 png_MOZ_OPTIONS=	--with-system-png=${LOCALBASE}
+.if ${MOZILLA_VER:R:R} >= 97
+png_MOZ_OPTIONS=	--with-system-png
+.endif
 
 sqlite_LIB_DEPENDS=	libsqlite3.so:databases/sqlite3
 sqlite_MOZ_OPTIONS=	--enable-system-sqlite

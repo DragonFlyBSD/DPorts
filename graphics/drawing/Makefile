@@ -1,5 +1,5 @@
 PORTNAME=	drawing
-DISTVERSION=	0.8.3
+DISTVERSION=	0.8.4
 CATEGORIES=	graphics
 
 MAINTAINER=	nc@FreeBSD.org
@@ -18,7 +18,6 @@ GH_ACCOUNT=	maoschanz
 USE_GNOME=	gtk30 pygobject3
 
 GLIB_SCHEMAS=	com.github.maoschanz.drawing.gschema.xml
-INSTALLS_ICONS=	yes
 SHEBANG_FILES=	build-aux/meson/postinstall.py
 
 .include <bsd.port.mk>

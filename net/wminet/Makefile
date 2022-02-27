@@ -9,6 +9,7 @@ DISTNAME=	wmnet-${PORTVERSION}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Dockable network monitor for WindowMaker
 
+USES=		xorg
 USE_XORG=	x11 xext xpm
 MAKE_ENV+=	X11BASE=${PREFIX}
 MAKE_ARGS+=	BINDIR=${STAGEDIR}${PREFIX}/bin \

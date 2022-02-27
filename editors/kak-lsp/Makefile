@@ -1,6 +1,7 @@
 PORTNAME=	kak-lsp
 DISTVERSIONPREFIX=	v
-DISTVERSION=	11.0.1
+DISTVERSION=	11.1.0
+PORTREVISION=	1
 CATEGORIES=	editors
 
 MAINTAINER=	mikael@FreeBSD.org
@@ -53,6 +54,7 @@ CARGO_CRATES=	adler32-1.2.0 \
 		glob-0.3.0 \
 		hermit-abi-0.1.19 \
 		idna-0.2.3 \
+		indoc-1.0.3 \
 		itertools-0.10.1 \
 		itoa-0.4.8 \
 		js-sys-0.3.54 \
@@ -62,7 +64,7 @@ CARGO_CRATES=	adler32-1.2.0 \
 		libflate-1.1.1 \
 		libflate_lz77-1.1.0 \
 		log-0.4.14 \
-		lsp-types-0.89.2 \
+		lsp-types-0.91.1 \
 		matches-0.1.9 \
 		memchr-2.4.1 \
 		num-integer-0.1.44 \
@@ -120,6 +122,7 @@ CARGO_CRATES=	adler32-1.2.0 \
 		unicode-normalization-0.1.19 \
 		unicode-width-0.1.8 \
 		unicode-xid-0.2.2 \
+		unindent-0.1.7 \
 		url-2.2.2 \
 		vec_map-0.8.2 \
 		version_check-0.9.3 \

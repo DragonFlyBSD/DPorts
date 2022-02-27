@@ -20,7 +20,7 @@ Ruby_Include_MAINTAINER=	ruby@FreeBSD.org
 # RUBY			- Set to full path of ruby.  If you set this, the values
 #			  of the following variables are automatically obtained
 #			  from the ruby executable: RUBY_VER, RUBY_VERSION,
-#			  RUBY_NAME, RUBY_ARCH, RUBY_LIBDIR, RUBY_ARCHLIBDIR,
+#			  RUBY_ARCH, RUBY_LIBDIR, RUBY_ARCHLIBDIR,
 #			  RUBY_SITELIBDIR, and RUBY_SITEARCHLIBDIR.
 # RUBY_VER		- Set to the alternative short version of ruby in the
 #			  form of `x.y' (see below for current value).
@@ -47,6 +47,8 @@ Ruby_Include_MAINTAINER=	ruby@FreeBSD.org
 #			  the form of `x.y.z' (see below for current value).
 # RUBY_VERSION_CODE	- Integer version of RUBY_VERSION in the form of 
 #			  `xyz'.
+# RUBY_DISTVERSION	- DISTVERSION for the standard ruby ports (ruby,
+#			  ruby-gdbm, etc.).
 # RUBY_PORTVERSION	- PORTVERSION for the standard ruby ports (ruby,
 #			  ruby-gdbm, etc.).
 # RUBY_PORTREVISION	- PORTREVISION for the standard ruby ports.
@@ -66,7 +68,6 @@ Ruby_Include_MAINTAINER=	ruby@FreeBSD.org
 #			  (${RUBY_VER:S/.//}).
 # RUBY_WITHOUT_SUFFIX	- Always ${LOCALBASE}/bin/ruby.
 # RUBY_WITH_SUFFIX	- Always ${RUBY_WITHOUT_SUFFIX}${RUBY_SUFFIX}.
-# RUBY_NAME		- Ruby's name with trailing suffix.
 #
 # RUBY_MODNAME		- Set to the module name (default: ${PORTNAME}).
 #
@@ -120,13 +121,12 @@ RUBY_VERSION!=		${_RUBY_CONFIG} 'puts C["ruby_version"]'
 RUBY_SUFFIX?=		# empty
 
 RUBY_ARCH!=		${_RUBY_CONFIG} 'puts C["target"]'
-RUBY_NAME!=		${_RUBY_CONFIG} 'puts C["ruby_install_name"]'
 
 _RUBY_SYSLIBDIR!=	${_RUBY_CONFIG} 'puts C["libdir"]'
 _RUBY_SITEDIR!=		${_RUBY_CONFIG} 'puts C["sitedir"]'
 _RUBY_VENDORDIR!=	${_RUBY_CONFIG} 'puts C["vendordir"]'
 .else
-RUBY?=			${LOCALBASE}/bin/${RUBY_NAME}
+RUBY?=			${LOCALBASE}/bin/ruby${RUBY_SUFFIX}
 
 .if defined(RUBY_VER)
 # When adding a version, please keep the comment in
@@ -135,7 +135,7 @@ RUBY?=			${LOCALBASE}/bin/${RUBY_NAME}
 #
 # Ruby 2.6
 #
-RUBY_VERSION=		2.6.9
+RUBY_DISTVERSION=	2.6.9
 RUBY_PORTREVISION=	0
 RUBY_PORTEPOCH=		1
 RUBY26=			""	# PLIST_SUB helpers
@@ -144,7 +144,7 @@ RUBY26=			""	# PLIST_SUB helpers
 #
 # Ruby 2.7
 #
-RUBY_VERSION=		2.7.5
+RUBY_DISTVERSION=	2.7.5
 RUBY_PORTREVISION=	0
 RUBY_PORTEPOCH=		1
 RUBY27=			""	# PLIST_SUB helpers
@@ -153,10 +153,18 @@ RUBY27=			""	# PLIST_SUB helpers
 #
 # Ruby 3.0
 #
-RUBY_VERSION=		3.0.3
+RUBY_DISTVERSION=	3.0.3
 RUBY_PORTREVISION=	0
 RUBY_PORTEPOCH=		1
 RUBY30=			""	# PLIST_SUB helpers
+. elif ${RUBY_VER} == 3.1
+#
+# Ruby 3.1
+#
+RUBY_DISTVERSION=	3.1.0
+RUBY_PORTREVISION=	0
+RUBY_PORTEPOCH=		1
+RUBY31=			""	# PLIST_SUB helpers
 
 # When adding a version, please keep the comment in
 # Mk/bsd.default-versions.mk in sync.
@@ -164,9 +172,10 @@ RUBY30=			""	# PLIST_SUB helpers
 #
 # Other versions
 #
-IGNORE=	Only ruby 2.6, 2.7 and 3.0 are supported
+IGNORE=	Only ruby 2.6, 2.7, 3.0 and 3.1 are supported
 _INVALID_RUBY_VER=	1
 . endif
+RUBY_VERSION=	${RUBY_DISTVERSION:C/^([0-9]+\.[0-9]+\.[0-9]+).*/\1/}
 .endif # defined(RUBY_VER)
 
 .if !defined(_INVALID_RUBY_VER)
@@ -174,6 +183,7 @@ _INVALID_RUBY_VER=	1
 RUBY26?=		"@comment "
 RUBY27?=		"@comment "
 RUBY30?=		"@comment "
+RUBY31?=		"@comment "
 
 .if defined(BROKEN_RUBY${RUBY_VER:R}${RUBY_VER:E})
 .if ${BROKEN_RUBY${RUBY_VER:R}${RUBY_VER:E}} == "yes"
@@ -183,7 +193,7 @@ BROKEN=			${BROKEN_RUBY${RUBY_VER:R}${RUBY_VER:E}}
 .endif
 .endif
 
-RUBY_WRKSRC=		${WRKDIR}/ruby-${RUBY_VERSION}
+RUBY_WRKSRC=		${WRKDIR}/ruby-${RUBY_DISTVERSION}
 
 RUBY_CONFIGURE_ARGS+=	--with-rubyhdrdir="${PREFIX}/include/ruby-${RUBY_VER}/" \
 			--with-rubylibprefix="${PREFIX}/lib/ruby" \
@@ -193,7 +203,6 @@ RUBY_CONFIGURE_ARGS+=	--with-rubyhdrdir="${PREFIX}/include/ruby-${RUBY_VER}/" \
 CONFIGURE_TARGET?=	${ARCH}-portbld-${OPSYS:tl}${OSREL:C/\..*//}
 
 RUBY_ARCH?=		${ARCH}-${OPSYS:tl}${OSREL:C/\..*//}
-RUBY_NAME?=		ruby${RUBY_SUFFIX}
 
 _RUBY_SYSLIBDIR?=	${PREFIX}/lib
 _RUBY_SITEDIR?=		${_RUBY_SYSLIBDIR}/ruby/site_ruby
@@ -206,9 +215,9 @@ _RUBY_VENDORDIR?=	${_RUBY_SYSLIBDIR}/ruby/vendor_ruby
 
 RUBY_DEFAULT_SUFFIX?=	${RUBY_DEFAULT_VER:S/.//}
 
-RUBY_PORTVERSION?=	${RUBY_VERSION}
+RUBY_PORTVERSION?=	${RUBY_DISTVERSION:tl:C/([a-z])[a-z]+/\1/g:C/([0-9])([a-z])/\1.\2/g:C/:(.)/\1/g:C/[^a-z0-9+]+/./g}
 MASTER_SITE_SUBDIR_RUBY?=	${RUBY_VER}
-RUBY_DISTNAME?=		ruby-${RUBY_VERSION}
+RUBY_DISTNAME?=		ruby-${RUBY_DISTVERSION}
 
 RUBY_WRKSRC?=		${WRKDIR}/${RUBY_DISTNAME}
 
@@ -254,8 +263,8 @@ RUBY_SITELIBDIR?=	${_RUBY_SITEDIR}/${RUBY_VER}
 RUBY_SITEARCHLIBDIR?=	${RUBY_SITELIBDIR}/${RUBY_ARCH}
 RUBY_VENDORLIBDIR?=	${_RUBY_VENDORDIR}/${RUBY_VER}
 RUBY_VENDORARCHLIBDIR?=	${RUBY_VENDORLIBDIR}/${RUBY_ARCH}
-RUBY_DOCDIR?=		${PREFIX}/share/doc/${RUBY_NAME}
-RUBY_EXAMPLESDIR?=	${PREFIX}/share/examples/${RUBY_NAME}
+RUBY_DOCDIR?=		${PREFIX}/share/doc/ruby${RUBY_SUFFIX}
+RUBY_EXAMPLESDIR?=	${PREFIX}/share/examples/ruby${RUBY_SUFFIX}
 RUBY_RIDIR?=		${PREFIX}/share/ri/${RUBY_VER}/system
 RUBY_SITERIDIR?=	${PREFIX}/share/ri/${RUBY_VER}/site
 RUBY_MODDOCDIR?=	${RUBY_DOCDIR}/${RUBY_MODNAME}
@@ -281,11 +290,11 @@ PLIST_SUB+=		${PLIST_RUBY_DIRS:C,DIR="(${LOCALBASE}|${PREFIX})/,DIR=",} \
 			RUBY_SHLIBVER="${RUBY_SHLIBVER}" \
 			RUBY_ARCH="${RUBY_ARCH}" \
 			RUBY_SUFFIX="${RUBY_SUFFIX}" \
-			RUBY_NAME="${RUBY_NAME}" \
 			RUBY_DEFAULT_SUFFIX="${RUBY_DEFAULT_SUFFIX}" \
 			RUBY26=${RUBY26} \
 			RUBY27=${RUBY27} \
-			RUBY30=${RUBY30}
+			RUBY30=${RUBY30} \
+			RUBY31=${RUBY31}
 
 .if ${PORT_OPTIONS:MDEBUG}
 RUBY_FLAGS+=	-d

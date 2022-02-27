@@ -10,8 +10,3 @@ LDFLAGS+=       -lintl
 dfly-patch:
 	${REINPLACE_CMD} -e 's@sys/acl.h@sys/not_acl.h@g' \
 		${WRKSRC}/core/cmake/BareosCheckIncludes.cmake
-
-# to avoid orphans
-.if ${PKGNAMESUFFIX} == "18-client"
-PLIST_FILES+=	lib/bareos/plugins/test-plugin-fd.so
-.endif

@@ -1,5 +1,5 @@
 PORTNAME=	rmf
-DISTVERSION=	1.3
+DISTVERSION=	1.3.1
 CATEGORIES=	science graphics
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -32,6 +32,5 @@ do-test: # one testcase fails: https://github.com/salilab/rmf/issues/126
 		${SETENV} ${CONFIGURE_ENV} ${CMAKE_BIN} ${CMAKE_ARGS} -DFREEBSD_BUILS_WITH_TESTS:BOOL=ON ${CMAKE_SOURCE_PATH} && \
 		${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} ${ALL_TARGET} && \
 		${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} test
-
 
 .include <bsd.port.mk>

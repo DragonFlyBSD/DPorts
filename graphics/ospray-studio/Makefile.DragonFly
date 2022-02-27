@@ -1,0 +1,3 @@
+
+# -disable-new-dtag
+MAKE_ENV+=	LDVER=ld.bfd

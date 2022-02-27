@@ -2,7 +2,6 @@
 
 PORTNAME=	nut
 PORTVERSION=	${NUT_COMMIT_DATE}
-PORTREVISION=	2
 CATEGORIES=	sysutils
 PKGNAMESUFFIX=	-devel
 # MASTER_SITES=	http://www.networkupstools.org/source/${PORTVERSION:R}/
@@ -13,10 +12,11 @@ MAINTAINER=	cy@FreeBSD.org
 COMMENT=	Network UPS Tools
 
 USE_GITHUB=	yes
-GH_ACCOUNT=     networkupstools 
-GH_TAGNAME=     4722a4f0
-NUT_COMMIT_DATE=	2021.09.28
+GH_ACCOUNT=	networkupstools
+GH_TAGNAME=	9e6a5ab2
+NUT_COMMIT_DATE=	2021.12.20
 
+MAKE_JOBS_UNSAFE=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 USES=		autoreconf:build compiler:c11 gmake libtool pkgconfig python:build

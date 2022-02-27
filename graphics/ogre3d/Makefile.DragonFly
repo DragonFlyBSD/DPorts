@@ -1,3 +1,6 @@
 
+# avoid doxygen dep for now
+OPTIONS_EXCLUDE+=	DOCS
+
 dfly-patch:
 	${REINPLACE_CMD} -e '/latomic/d' ${WRKSRC}/OgreMain/CMakeLists.txt

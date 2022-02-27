@@ -1,0 +1,31 @@
+--- Makefile.orig	2021-02-28 13:22:38 UTC
++++ Makefile
+@@ -1,7 +1,5 @@
+ # $FreeBSD$
+ 
+-.include <src.opts.mk>
+-
+ PROG=	mkimg
+ SRCS+=	format.c image.c mkimg.c scheme.c uuid.c
+ MAN=	mkimg.1
+@@ -11,7 +9,7 @@ mkimg.o: Makefile
+ 
+ CFLAGS+=-DMKIMG_VERSION=${MKIMG_VERSION}
+ CFLAGS+=-DSPARSE_WRITE
+-CFLAGS+=-I${SRCTOP}/sys/sys/disk
++CFLAGS+=-I${.CURDIR}/compat
+ 
+ # List of formats to support
+ SRCS+= \
+@@ -32,9 +30,7 @@ SRCS+=	\
+ 
+ BINDIR?=/usr/bin
+ 
+-LIBADD=	util
+-
+-HAS_TESTS=
+-SUBDIR.${MK_TESTS}+= tests
++LDADD= -lutil
++DPADD= ${LIBUTIL}
+ 
+ .include <bsd.prog.mk>

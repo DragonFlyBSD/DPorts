@@ -1,0 +1,2 @@
+
+LIB_DEPENDS:=	${LIB_DEPENDSLNlibhwloc}

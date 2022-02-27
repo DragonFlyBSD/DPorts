@@ -1,0 +1,7 @@
+
+# disable deprecated warning errors
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-Werror @@g' \
+		${WRKSRC}/e3d/Makefile \
+		${WRKSRC}/plugins_src/import_export/Makefile \
+		${WRKSRC}/plugins_src/autouv/Makefile

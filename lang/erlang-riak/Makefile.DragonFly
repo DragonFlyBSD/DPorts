@@ -1,7 +1,0 @@
-
-# try to salvage until updates
-.if ${PORTVERSION} ==  16.b.02
-USES:=	${USES:Nssl}
-BUILD_DEPENDS+= 	libressl-static>0:security/libressl-static
-CONFIGURE_ARGS+=	--with-ssl=${LOCALBASE}/libressl-static
-.endif

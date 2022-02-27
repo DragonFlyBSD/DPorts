@@ -1,4 +1,3 @@
-
 # -*- coding: utf-8 -*-
 from setuptools import setup
 
@@ -13,15 +12,10 @@ EXTRAS_REQUIRE = {
         'editables==0.2',
     ],
 }
-ENTRY_POINTS = {
-    'distutils.commands': [
-        'editable_wheel = pdm.pep517.setuptools.editable:editable_wheel',
-    ],
-}
 
 setup_kwargs = {
     'name': 'pdm-pep517',
-    'version': '0.8.4',
+    'version': '%%PORTVERSION%%',
     'description': 'A PEP 517 backend for PDM that supports PEP 621 metadata',
     'long_description': long_description,
     'license': 'MIT',
@@ -48,11 +42,11 @@ setup_kwargs = {
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
         'Topic :: Software Development :: Build Tools',
     ],
     'extras_require': EXTRAS_REQUIRE,
     'python_requires': '>=3.6',
-    'entry_points': ENTRY_POINTS,
 
 }
 

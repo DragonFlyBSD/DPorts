@@ -1,8 +1,11 @@
 PORTNAME=	horizon-eda
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.1.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	cad
+
+PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+PATCHFILES=	0d801d4807cbed405998688b361bf0543207f1b1.patch:-p1 # fixes opencascade-7.6.0 compatibility, see https://github.com/horizon-eda/horizon/issues/623
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	EDA package for printed circuit board design
@@ -25,15 +28,14 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libzmq.so:net/libzmq4
 
 USES=		gmake gnome localbase pkgconfig python:build sqlite # compiler:c++17-lang
+USE_GNOME=	atkmm gdkpixbuf2 gtkmm30 librsvg2
+
 USE_GITHUB=	yes
 GH_PROJECT=	horizon
-USE_GNOME=	atkmm gdkpixbuf2 gtkmm30 librsvg2
 
 MAKE_ARGS=	DEBUGFLAGS= OPTIMIZE=
 
 BINARY_ALIAS=	python3=${PYTHON_CMD}
-
-INSTALLS_ICONS=	yes
 
 post-install: # https://github.com/horizon-eda/horizon/issues/558
 	cd ${STAGEDIR}${PREFIX}/bin && ${STRIP_CMD} horizon-eda

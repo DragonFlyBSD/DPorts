@@ -1,8 +1,7 @@
 # Created by: Ewgenij Gawrilow <gawrilow@math.tu-berlin.de>
 
 PORTNAME=	polymake
-DISTVERSION=	4.4
-PORTREVISION=	2
+DISTVERSION=	4.5
 CATEGORIES=	math
 MASTER_SITES=	https://polymake.org/lib/exe/fetch.php/download/
 DISTNAME=	${PORTNAME}-${DISTVERSION}-minimal
@@ -111,7 +110,6 @@ NORMALIZ_CONFIGURE_ON=	--with-libnormaliz=${LOCALBASE}
 NORMALIZ_CONFIGURE_OFF=	--without-libnormaliz
 NORMALIZ_LIB_DEPENDS=	libnormaliz.so:math/libnormaliz
 
-OPENMP_USES=	compiler:openmp
 OPENMP_CONFIGURE_OFF=	--without-openmp
 
 PPL_CONFIGURE_ON=	--with-ppl=${LOCALBASE}

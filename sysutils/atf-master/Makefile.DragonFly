@@ -1,3 +1,16 @@
 
+.if ${PLAT:Mfvp}
+USES+= ssl
+
+BUILD_DEPENDS+=	dtc:sysutils/dtc
+
+MAKE_ARGS+=	LDFLAGS=""
+
+dfly-patch:
+	${REINPLACE_CMD} -e "s@-Wall@& -I${OPENSSLINC}@g" \
+			 -e 's@-lcrypto@-L${OPENSSLLIB} &@g' \
+		${WRKSRC}/tools/fiptool/Makefile
+.endif
+
 dfly-install:
 	${RM} -fv ${STAGEDIR}/README

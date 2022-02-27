@@ -4,7 +4,7 @@ DISTVERSION=	8.2.4
 CATEGORIES=	comms
 PKGNAMESUFFIX=	-com
 
-MAINTAINER=	kuriyama@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Application that allows multiple users to watch serial consoles
 
 LICENSE=	BSD3CLAUSE
@@ -18,7 +18,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-master=${DEFAULTHOST} --with-port=${DEFAULTPORT} \
 		--with-pam --with-libwrap --with-openssl
 
-CONFLICTS_INSTALL=	conserver-[0-9]*
+CONFLICTS_INSTALL=	conserver
 
 OPTIONS_DEFINE=	FREEIPMI GSSAPI GSSAPIONLY STRIPREALM UDS
 FREEIPMI_DESC=	Compile in FreeIPMI support

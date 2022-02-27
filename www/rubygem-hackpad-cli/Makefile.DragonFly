@@ -1,0 +1,4 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/reverse_markdown>/s@~>@>=@g' \
+		${WRKSRC}/hackpad-cli.gemspec

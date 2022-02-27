@@ -1,6 +1,5 @@
 PORTNAME=	strawberry
-DISTVERSION=	0.9.3
-PORTREVISION=	2
+DISTVERSION=	1.0.0
 CATEGORIES=	audio
 MASTER_SITES=	https://github.com/strawberrymusicplayer/${PORTNAME}/releases/download/${DISTVERSION}/ \
 		https://files.jkvinge.net/packages/strawberry/
@@ -27,7 +26,6 @@ USE_QT=		buildtools_build concurrent core dbus gui network \
 		linguisttools qmake_build sql sql-sqlite3 testlib_build \
 		widgets x11extras
 USE_XORG=	ice sm x11 xcb xext
-INSTALLS_ICONS=	yes
 
 CMAKE_ARGS=	-DUSE_SYSTEM_TAGLIB=ON -DENABLE_UDISKS2=OFF \
 		-DENABLE_GSTREAMER:BOOL=true \

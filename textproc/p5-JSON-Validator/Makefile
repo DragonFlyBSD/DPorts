@@ -1,12 +1,12 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
 
 PORTNAME=	JSON-Validator
-PORTVERSION=	4.25
+PORTVERSION=	5.04
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	adamw@FreeBSD.org
+MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Validate data against a JSON schema
 
 LICENSE=	ART20

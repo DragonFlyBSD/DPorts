@@ -1,6 +1,15 @@
---- meson.build.orig	2021-06-01 09:58:21 UTC
+--- meson.build.orig	2021-12-01 09:51:11 UTC
 +++ meson.build
-@@ -705,9 +705,9 @@ endforeach
+@@ -621,7 +621,7 @@ if host_machine.system() == 'linux'
+   headers += 'linux/devlink.h'
+ endif
+ 
+-if host_machine.system() == 'freebsd'
++if host_machine.system() in [ 'freebsd', 'dragonfly' ]
+   headers += 'libutil.h'
+ endif
+ 
+@@ -702,9 +702,9 @@ endforeach
  brd_required_headers = '''#include <stdint.h>
  #include <net/if.h>
  #include <net/ethernet.h>'''
@@ -13,8 +22,8 @@
    conf.set('WITH_BSD_BRIDGE_MGMT', 1)
  endif
  
-@@ -799,7 +799,7 @@ required_programs_groups = [
-   {'name':'rst2man', 'prog':['rst2man', 'rst2man.py', 'rst2man-3']},
+@@ -796,7 +796,7 @@ required_programs_groups = [
+   { 'name': 'rst2man', 'prog': [ 'rst2man', 'rst2man.py', 'rst2man-3' ] },
  ]
  
 -if host_machine.system() == 'freebsd'
@@ -22,39 +31,30 @@
    required_programs += 'ifconfig'
  endif
  
-@@ -965,7 +965,7 @@ gnutls_version = '3.2.0'
+@@ -890,7 +890,7 @@ if host_machine.system() == 'windows'
+   xdr_dep = cc.find_library('portablexdr', required: false)
+ elif host_machine.system() == 'linux'
+   xdr_dep = dependency('libtirpc', required: false)
+-elif host_machine.system() in [ 'freebsd', 'darwin' ]
++elif host_machine.system() in [ 'freebsd', 'darwin', 'dragonfly' ]
+   xdr_dep = cc.find_library('c', required: false)
+ else
+   xdr_dep = dependency('', required: false)
+@@ -1021,7 +1021,7 @@ gnutls_version = '3.2.0'
  gnutls_dep = dependency('gnutls', version: '>=' + gnutls_version)
  
  # Check for BSD kvm (kernel memory interface)
 -if host_machine.system() == 'freebsd'
-+if host_machine.system() in  [ 'freebsd', 'dragonfly' ]
++if host_machine.system() in [ 'freebsd', 'dragonfly' ]
    libkvm_dep = cc.find_library('kvm')
  else
    libkvm_dep = dependency('', required: false)
-@@ -1382,7 +1382,7 @@ if bash_completion_dep.found()
-   endif
- endif
- 
--if host_machine.system() != 'freebsd'
-+if host_machine.system() not in ['freebsd', 'dragonfly']
-   if not get_option('firewalld').disabled()
-     conf.set('WITH_FIREWALLD', 1)
-   endif
-@@ -1406,7 +1406,7 @@ endif
- # build driver options
- 
- if get_option('driver_remote').enabled()
--  if not xdr_dep.found() and host_machine.system() not in [ 'freebsd', 'darwin' ]
-+  if not xdr_dep.found() and host_machine.system() not in [ 'freebsd', 'darwin', 'dragonfly' ]
-     error('XDR is required for remote driver')
-   endif
-   conf.set('WITH_REMOTE', 1)
-@@ -1602,7 +1602,7 @@ if not get_option('driver_qemu').disable
+@@ -1693,7 +1693,7 @@ if not get_option('driver_qemu').disable
      endif
-     conf.set_quoted('QEMU_MODDIR', qemu_moddir)
+     conf.set_quoted('QEMU_DATADIR', qemu_datadir)
  
--    if host_machine.system() in ['freebsd', 'darwin']
-+    if host_machine.system() in ['freebsd', 'darwin', 'dragonfly']
+-    if host_machine.system() in [ 'freebsd', 'darwin' ]
++    if host_machine.system() in [ 'freebsd', 'darwin', 'dragonfly' ]
        default_qemu_user = 'root'
        default_qemu_group = 'wheel'
      else

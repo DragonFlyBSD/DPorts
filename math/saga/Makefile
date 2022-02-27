@@ -1,7 +1,7 @@
 # Created by: Rainer Hurling <rhurlin@gwdg.de>
 
 PORTNAME=	saga
-PORTVERSION=	8.0.1
+PORTVERSION=	8.1.1
 CATEGORIES=	math
 MASTER_SITES=	SF/saga-gis/SAGA%20-%20${PORTVERSION:C/\.[[:digit:]]\.[[:digit:]]*$//}/SAGA%20-%20${PORTVERSION}
 
@@ -19,7 +19,6 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libhdf5.so:science/hdf5 \
 		libhpdf.so:print/libharu \
 		libjasper.so:graphics/jasper \
-		liblas12.so:devel/liblas12 \
 		libodbc.so:databases/unixODBC \
 		libopencv_core.so:graphics/opencv \
 		libpdal_base.so:math/pdal \
@@ -33,16 +32,13 @@ RUN_DEPENDS:=	swig:devel/swig
 USES=		cmake compiler:c++11-lib dos2unix gnome \
 		iconv:wchar_t libtool localbase pkgconfig python
 DOS2UNIX_GLOB=	*.cpp *.h
-INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
 USE_WX=		3.1+
 
-CMAKE_ARGS+=	-DLAS_INCLUDE:PATH=${LOCALBASE}/include/liblas12/capi/liblas.h \
-		-DLAS_LIBRARY:FILEPATH=${LOCALBASE}/lib/liblas12.so \
-		-DSVM_INCLUDE:PATH=${LOCALBASE}/include/svm.h
-CMAKE_ON=	WITH_DEV_TOOLS WITH_EXCERCISES WITH_SYSTEM_SVM
+CMAKE_ARGS+=	-DSVM_INCLUDE:PATH=${LOCALBASE}/include/svm.h
+CMAKE_ON=	WITH_DEV_TOOLS WITH_EXCERCISES WITH_MRMR WITH_SYSTEM_SVM
 CMAKE_ON+=	CMAKE_VERBOSE_MAKEFILE
-CMAKE_OFF+=	WITH_TRIANGLE
+CMAKE_OFF+=	WITH_TOOLS_LAS WITH_TRIANGLE
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/saga-gis
 

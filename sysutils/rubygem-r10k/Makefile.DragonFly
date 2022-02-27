@@ -1,0 +1,4 @@
+
+# fix plist (orphans)
+dfly-install:
+	${RM} -rfv ${STAGEDIR}${PREFIX}/${GEM_LIB_DIR}/spec/fixtures/unit/util/purgeable/managed_one

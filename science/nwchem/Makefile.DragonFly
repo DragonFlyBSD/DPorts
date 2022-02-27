@@ -1,4 +1,4 @@
-BINARY_ALIAS:=   gcc=${CC} gfortran=gfortran${_GCC_VER}
+BINARY_ALIAS:=   gcc=${CC} gfortran=gfortran${_GCC_VER} make=gmake
 
 # Use -fdefault-integer-8 instead of -i8
 # https://gcc.gnu.org/bugzilla/show_bug.cgi?id=37468

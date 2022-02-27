@@ -1,3 +1,7 @@
 # zrj: out libstdc++ is fine but follow free and enforce c++11
 USE_CXXSTD=	c++11
 CXXFLAGS+=	-fpermissive # 'constexpr' needed for in-class init of static member
+
+# prepoison few headers
+dfly-extract:
+	${REINPLACE_CMD} -e 's,<tr1/memory>,<memory>,g' ${WRKSRC}/src/*.h ${WRKSRC}/src/*.cpp

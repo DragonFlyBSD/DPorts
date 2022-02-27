@@ -1,0 +1,16 @@
+--- external/njs_fs_module.c.orig	2021-12-28 13:55:44 UTC
++++ external/njs_fs_module.c
+@@ -2683,8 +2683,13 @@ njs_fs_to_stat(njs_stat_t *dst, struct s
+     dst->st_mtim.tv_nsec = st->st_mtimespec.tv_nsec;
+     dst->st_ctim.tv_sec = st->st_ctimespec.tv_sec;
+     dst->st_ctim.tv_nsec = st->st_ctimespec.tv_nsec;
++#if (NJS_HAVE_STAT_BIRTHTIM)
+     dst->st_birthtim.tv_sec = st->st_birthtimespec.tv_sec;
+     dst->st_birthtim.tv_nsec = st->st_birthtimespec.tv_nsec;
++#else
++    dst->st_birthtim.tv_sec = st->st_ctimespec.tv_sec;
++    dst->st_birthtim.tv_nsec = st->st_ctimespec.tv_nsec;
++#endif
+ 
+ #elif (NJS_HAVE_STAT_ATIM)
+ 

@@ -1,0 +1,4 @@
+
+USES+=	localbase:ldflags
+
+LIB_DEPENDS+=	libmd.so:security/libmd

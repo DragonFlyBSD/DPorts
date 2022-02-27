@@ -1,8 +1,7 @@
 # Created by: thierry@pompo.net
-# $FreeBSD$
 
 PORTNAME=	code_saturne
-PORTVERSION=	6.1.3
+PORTVERSION=	7.1.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	science parallel
 
@@ -26,10 +25,10 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	code-saturne
 
 USES=		autoreconf bison compiler:c11 fortran gettext gnome gmake \
-		iconv libtool pyqt:5 python:3.6+ shebangfix
-
+		iconv localbase libtool pyqt:5 python:3.7+ shebangfix xorg
 USE_GNOME=	libxml2
 USE_PYQT=	core gui sip widgets xml_build
+USE_XORG=	x11
 SHEBANG_FILES=	install_saturne.py tests/unittests.py bin/*.py build-aux/*.py
 CFLAGS+=	-D__XSI_VISIBLE
 CPPFLAGS+=	-I${LOCALBASE}/include -I${LOCALBASE}/include/libxml2
@@ -43,28 +42,42 @@ BINARY_ALIAS=	python=${PYTHON_CMD} \
 		pyrcc5=pyrcc5-${PYTHON_VER} \
 		pyuic5=pyuic5-${PYTHON_VER}
 
-OPTIONS_DEFINE=		DOCS EXAMPLES BATCH BLAS MPI SCOTCH
-OPTIONS_DEFAULT=	BATCH BLAS MPI SCOTCH METIS
+OPTIONS_DEFINE=		DOCS EXAMPLES BATCH BLAS HYPRE MPICH MUMPS PETSC SCOTCH
+OPTIONS_DEFAULT=	BATCH BLAS HYPRE METIS MPICH MUMPS PETSC SCOTCH
 OPTIONS_RADIO=		METIS
 OPTIONS_RADIO_METIS=	METIS PARMETIS
-BLAS_DESC=		Support of OpenBLAS
+OPTIONS_SUB=		yes
+BLAS_DESC=		Support of BLAS
 BLAS_USES=		blaslapack
-BLAS_CONFIGURE_ON=	--with-blas=yes --with-blas-lib=${LOCALBASE}/lib --with-blas-libs=-lopenblas
-BLAS_LIB_DEPENDS=	libopenblas.so:math/openblas
+BLAS_CONFIGURE_ON=	--with-blas=yes --with-blas-type=BLAS	\
+			--with-blas-include=${LOCALBASE}/include/cblas	\
+			--with-blas-lib=${LOCALBASE}/lib
+BLAS_LIB_DEPENDS=	libcblas.so:math/cblas
 BATCH_DESC=		Use Torque to submit batches
 BATCH_RUN_DEPENDS=	pbs-config:sysutils/torque
-MPI_BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mpi4py>0:net/py-mpi4py@${PY_FLAVOR}
-MPI_LIB_DEPENDS=	libmpi.so:net/mpich
-MPI_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mpi4py>0:net/py-mpi4py@${PY_FLAVOR}
-MPI_CONFIGURE_WITH=	mpi
+HYPRE_DESC=		Support of HYPRE
+HYPRE_BUILD_DEPENDS=	hypre>0:science/hypre
+HYPRE_RUN_DEPENDS=	hypre>0:science/hypre
+HYPRE_CONFIGURE_ON=	--with-hypre="${LOCALBASE}"
+MPICH_USES=		mpi
+MPICH_BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mpi4py>0:net/py-mpi4py@${PY_FLAVOR}
+MPICH_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mpi4py>0:net/py-mpi4py@${PY_FLAVOR}
+MPICH_CONFIGURE_WITH=	mpi
 METIS_DESC=		Support of METIS
 METIS_LIB_DEPENDS=	libmetis.so:math/metis
 METIS_CONFIGURE_ON=	--with-metis-include="${LOCALBASE}/include"
+MUMPS_DESC=		Support of MUMPS
+MUMPS_LIB_DEPENDS=	libsmumps.so:math/mumps
+MUMPS_CONFIGURE_ON=	--with-mumps="${LOCALBASE}"
+MUMPS_CONFIGURE_ENV=	MUMPS_LIBS="-lmpiseq -llapack"
 PARMETIS_DESC=		Support of ParMETIS
 PARMETIS_LIB_DEPENDS=	libparmetis.so:math/parmetis
 PARMETIS_CONFIGURE_ON=	--with-metis-include="${LOCALBASE}/include/parmetis"	\
 			--with-metis-lib="${LOCALBASE}/lib/parmetis"
 PARMETIS_CONFIGURE_ENV=	LIBS=-lexecinfo
+PETSC_DESC=		Support of PETSc
+PETSC_LIB_DEPENDS=	libpetsc.so:science/PETSc
+PETSC_CONFIGURE_ON=	--with-petsc="${LOCALBASE}"
 SCOTCH_DESC=		Support of Scotch
 SCOTCH_LIB_DEPENDS=	libscotch.so:cad/scotch
 SCOTCH_CONFIGURE_ON=	--with-scotch-include="${LOCALBASE}/include"
@@ -98,9 +111,6 @@ DOCS=		AUTHORS ChangeLog README
 .endif
 
 pre-configure:
-	${FLEX} -o ${WRKSRC}/src/mei/mei_scanner.c ${WRKSRC}/src/mei/mei_scanner.l
-	${LOCALBASE}/bin/bison --defines=${WRKSRC}/src/mei/mei_parser.h	\
-		-o ${WRKSRC}/src/mei/mei_parser.c ${WRKSRC}/src/mei/mei_parser.y
 	${REINPLACE_CMD} -e 's|/usr/bin/env python|${PYTHON_CMD}|'	\
 		${WRKSRC}/Makefile.am
 

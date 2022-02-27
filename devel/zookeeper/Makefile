@@ -21,6 +21,8 @@ ZOOKEEPER_DBDIR?=		/var/db/zookeeper
 ZOOKEEPER_LOGDIR?=		/var/log/zookeeper
 ZOOKEEPER_LOG4J2_VERSION?=	2.17.0
 
+USES=		cpe
+CPE_VENDOR=	apache
 USE_JAVA=	yes
 JAVA_VERSION=	8+
 JAVA_RUN=	yes

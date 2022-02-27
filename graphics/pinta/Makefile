@@ -1,7 +1,7 @@
 # Created by: Alexander Kojevnikov <alexander@kojevnikov.com>
 
 PORTNAME=	pinta
-PORTVERSION=	1.7
+PORTVERSION=	1.7.1
 CATEGORIES=	graphics
 MASTER_SITES=	https://github.com/PintaProject/Pinta/releases/download/${PORTVERSION}/
 
@@ -23,7 +23,5 @@ OPTIONS_DEFINE=	NLS
 OPTIONS_SUB=	yes
 
 NLS_CONFIGURE_ENABLE=	nls
-
-INSTALLS_ICONS=	yes
 
 .include <bsd.port.mk>

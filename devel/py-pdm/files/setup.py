@@ -1,4 +1,3 @@
-
 # -*- coding: utf-8 -*-
 from setuptools import setup
 
@@ -11,16 +10,18 @@ INSTALL_REQUIRE = [
     'atoml>=1.0.3',
     'click>=7',
     'importlib-metadata; python_version < "3.8"',
-    'pdm-pep517>=0.8.3,<0.9',
+    'installer>=0.3.0,<0.5',
+    'packaging',
+    'pdm-pep517>=0.9,<0.10',
     'pep517>=0.11.0',
     'pip>=20.1',
     'python-dotenv~=0.15',
     'pythonfinder',
-    'resolvelib>=0.7.0,<0.8.0',
+    'resolvelib>=0.8,<0.9',
     'shellingham<2.0.0,>=1.3.2',
-    'wheel<1.0.0,>=0.36.2',
     'tomli>=1.1.0,<2.0.0',
-    'installer~=0.2.3',
+    'typing-extensions; python_version < "3.8"',
+    'wheel<1.0.0,>=0.36.2',
 ]
 ENTRY_POINTS = {
     'console_scripts': [
@@ -30,7 +31,7 @@ ENTRY_POINTS = {
 
 setup_kwargs = {
     'name': 'pdm',
-    'version': '1.8.5',
+    'version': '%%PORTVERSION%%',
     'description': 'Python Development Master',
     'long_description': long_description,
     'license': 'MIT',
@@ -54,7 +55,6 @@ setup_kwargs = {
         'pdm.installers',
         'pdm.models',
         'pdm.models.in_process',
-        'pdm.pep582',
         'pdm.project',
         'pdm.resolver',
     ],
@@ -68,6 +68,7 @@ setup_kwargs = {
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
         'Topic :: Software Development :: Build Tools',
     ],
     'install_requires': INSTALL_REQUIRE,

@@ -1,7 +1,7 @@
 # Created by: will
 
 PORTNAME=	bftpd
-PORTVERSION=	6.0
+PORTVERSION=	6.1
 CATEGORIES=	ftp
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
@@ -10,7 +10,8 @@ COMMENT=	Very configurable FTP server that can do chroot easily
 
 LICENSE=	GPLv2
 
-USES=		autoreconf gmake
+USES=		autoreconf cpe gmake
+CPE_VENDOR=	${PORTNAME}_project
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-pam

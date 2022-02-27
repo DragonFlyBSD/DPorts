@@ -1,8 +1,8 @@
 # Created by: Bernhard Froehlich <decke@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	minisatip
-PORTVERSION=	1.0.4
+PORTVERSION=	1.1.52
+DISTVERSIONPREFIX=	v
 CATEGORIES=	multimedia
 
 MAINTAINER=	decke@FreeBSD.org
@@ -20,6 +20,7 @@ GH_ACCOUNT=	catalinii
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+USE_RC_SUBR=	${PORTNAME}
 GNU_CONFIGURE=	yes
 ALL_TARGET=	minisatip
 

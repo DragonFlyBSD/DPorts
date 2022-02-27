@@ -4,7 +4,7 @@ MASTERDIR=	${.CURDIR}/../../lang/php74
 
 PKGNAMESUFFIX=	-ftp
 
-TEST_TARGET=    test
+TEST_TARGET=	test
 
 USES+=		ssl
 CFLAGS+=	-I${OPENSSLINC}

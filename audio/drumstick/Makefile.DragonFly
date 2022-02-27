@@ -1,7 +1,41 @@
 
+USES+=	localbase:ldflags
+
 # no pulse
 OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NPULSEAUDIO}
 
 LIB_DEPENDS+=	libasound.so:audio/alsa-lib
 RUN_DEPENDS+=	${LOCALBASE}/lib/alsa-lib/libasound_module_pcm_oss.so:audio/alsa-plugins
 RUN_DEPENDS+=	alsa-lib>=1.1.1_1:audio/alsa-lib
+
+# alsa brings more stuff
+PLIST_FILES+=	bin/drumstick-drumgrid \
+		bin/drumstick-dumpmid \
+		bin/drumstick-guiplayer \
+		bin/drumstick-metronome \
+		bin/drumstick-playsmf \
+		bin/drumstick-sysinfo \
+		include/drumstick/alsaclient.h \
+		include/drumstick/alsaevent.h \
+		include/drumstick/alsaport.h \
+		include/drumstick/alsaqueue.h \
+		include/drumstick/alsatimer.h \
+		include/drumstick/playthread.h \
+		include/drumstick/sequencererror.h \
+		include/drumstick/subscription.h \
+		lib/cmake/drumstick/drumstick-alsa-config-version.cmake \
+		lib/cmake/drumstick/drumstick-alsa-config.cmake \
+		lib/cmake/drumstick/drumstick-alsa-targets-%%CMAKE_BUILD_TYPE%%.cmake \
+		lib/cmake/drumstick/drumstick-alsa-targets.cmake \
+		lib/drumstick2/libdrumstick-rt-alsa-in.so \
+		lib/drumstick2/libdrumstick-rt-alsa-out.so \
+		lib/libdrumstick-alsa.so \
+		lib/libdrumstick-alsa.so.2 \
+		lib/libdrumstick-alsa.so.2.5.0 \
+		share/applications/drumstick-drumgrid.desktop \
+		share/applications/drumstick-guiplayer.desktop \
+		%%DATADIR%%/drumstick-drumgrid_en.qm \
+		%%DATADIR%%/drumstick-drumgrid_es.qm \
+		%%DATADIR%%/drumstick-guiplayer_cs.qm \
+		%%DATADIR%%/drumstick-guiplayer_es.qm \
+		%%DATADIR%%/drumstick-guiplayer_ru.qm

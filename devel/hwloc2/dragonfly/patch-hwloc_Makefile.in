@@ -1,78 +1,36 @@
---- hwloc/Makefile.in.intermediate	2021-03-21 08:57:13.000000000 +0000
-+++ hwloc/Makefile.in
-@@ -122,6 +122,7 @@ target_triplet = @target@
- @HWLOC_HAVE_HPUX_TRUE@am__append_21 = -lpthread
- @HWLOC_HAVE_WINDOWS_TRUE@am__append_22 = topology-windows.c
- @HWLOC_HAVE_DARWIN_TRUE@am__append_23 = topology-darwin.c
-+am__append_24 = topology-draonfly.c
- @HWLOC_HAVE_FREEBSD_TRUE@am__append_24 = topology-freebsd.c
- @HWLOC_HAVE_NETBSD_TRUE@am__append_25 = topology-netbsd.c
- @HWLOC_HAVE_NETBSD_TRUE@am__append_26 = -lpthread
-@@ -275,7 +276,7 @@ am__libhwloc_la_SOURCES_DIST = topology.
- 	topology-solaris.c topology-solaris-chiptype.c \
- 	topology-linux.c topology-hardwired.c topology-bgq.c \
- 	topology-aix.c topology-hpux.c topology-windows.c \
--	topology-darwin.c topology-freebsd.c topology-netbsd.c \
-+	topology-darwin.c topology-dragonfly.c topology-freebsd.c topology-netbsd.c \
- 	topology-x86.c
+--- hwloc/Makefile.in.orig	2022-02-01 15:21:07.707322000 +0100
++++ hwloc/Makefile.in	2022-02-01 15:32:40.551356000 +0100
+@@ -125,6 +125,7 @@
+ @HWLOC_HAVE_WINDOWS_TRUE@am__append_24 = topology-windows.c
+ @HWLOC_HAVE_DARWIN_TRUE@am__append_25 = topology-darwin.c
+ @HWLOC_HAVE_FREEBSD_TRUE@am__append_26 = topology-freebsd.c
++am__append_26 = topology-dragonfly.c
+ @HWLOC_HAVE_NETBSD_TRUE@am__append_27 = topology-netbsd.c
+ @HWLOC_HAVE_NETBSD_TRUE@am__append_28 = -lpthread
+ @HWLOC_HAVE_X86_CPUID_TRUE@am__append_29 = topology-x86.c
+@@ -288,7 +289,7 @@
+ 	topology-solaris-chiptype.c topology-linux.c \
+ 	topology-hardwired.c topology-bgq.c topology-aix.c \
+ 	topology-hpux.c topology-windows.c topology-darwin.c \
+-	topology-freebsd.c topology-netbsd.c topology-x86.c
++	topology-dragonfly.c topology-freebsd.c topology-netbsd.c topology-x86.c
  @HWLOC_HAVE_LIBXML2_TRUE@@HWLOC_XML_LIBXML_BUILD_STATIC_TRUE@am__objects_1 = topology-xml-libxml.lo
  @HWLOC_HAVE_PCIACCESS_TRUE@@HWLOC_PCI_BUILD_STATIC_TRUE@am__objects_2 = topology-pci.lo
-@@ -293,6 +294,7 @@ am__libhwloc_la_SOURCES_DIST = topology.
- @HWLOC_HAVE_HPUX_TRUE@am__objects_12 = topology-hpux.lo
- @HWLOC_HAVE_WINDOWS_TRUE@am__objects_13 = topology-windows.lo
- @HWLOC_HAVE_DARWIN_TRUE@am__objects_14 = topology-darwin.lo
-+am__objects_15 = topology-dragonfly.lo
- @HWLOC_HAVE_FREEBSD_TRUE@am__objects_15 = topology-freebsd.lo
- @HWLOC_HAVE_NETBSD_TRUE@am__objects_16 = topology-netbsd.lo
- @HWLOC_HAVE_X86_CPUID_TRUE@am__objects_17 = topology-x86.lo
-@@ -322,7 +324,7 @@ am__libhwloc_embedded_la_SOURCES_DIST =
- 	topology-solaris.c topology-solaris-chiptype.c \
- 	topology-linux.c topology-hardwired.c topology-bgq.c \
- 	topology-aix.c topology-hpux.c topology-windows.c \
--	topology-darwin.c topology-freebsd.c topology-netbsd.c \
-+	topology-darwin.c topology-dragonfly.c topology-freebsd.c topology-netbsd.c \
- 	topology-x86.c
- am_libhwloc_embedded_la_OBJECTS = $(am__objects_18)
+ @HWLOC_HAVE_OPENCL_TRUE@@HWLOC_OPENCL_BUILD_STATIC_TRUE@am__objects_3 = topology-opencl.lo
+@@ -307,6 +308,7 @@
+ @HWLOC_HAVE_WINDOWS_TRUE@am__objects_14 = topology-windows.lo
+ @HWLOC_HAVE_DARWIN_TRUE@am__objects_15 = topology-darwin.lo
+ @HWLOC_HAVE_FREEBSD_TRUE@am__objects_16 = topology-freebsd.lo
++am__objects_16 = topology-dragonfly.lo
+ @HWLOC_HAVE_NETBSD_TRUE@am__objects_17 = topology-netbsd.lo
+ @HWLOC_HAVE_X86_CPUID_TRUE@am__objects_18 = topology-x86.lo
+ am__objects_19 = topology.lo traversal.lo distances.lo memattrs.lo \
+@@ -336,7 +338,7 @@
+ 	topology-solaris-chiptype.c topology-linux.c \
+ 	topology-hardwired.c topology-bgq.c topology-aix.c \
+ 	topology-hpux.c topology-windows.c topology-darwin.c \
+-	topology-freebsd.c topology-netbsd.c topology-x86.c
++	topology-dragonfly.c topology-freebsd.c topology-netbsd.c topology-x86.c
+ am_libhwloc_embedded_la_OBJECTS = $(am__objects_19)
  libhwloc_embedded_la_OBJECTS = $(am_libhwloc_embedded_la_OBJECTS)
-@@ -357,7 +359,7 @@ am__depfiles_remade = ./$(DEPDIR)/base64
- 	./$(DEPDIR)/pci-common.Plo ./$(DEPDIR)/shmem.Plo \
- 	./$(DEPDIR)/topology-aix.Plo ./$(DEPDIR)/topology-bgq.Plo \
- 	./$(DEPDIR)/topology-cuda.Plo ./$(DEPDIR)/topology-darwin.Plo \
--	./$(DEPDIR)/topology-fake.Plo ./$(DEPDIR)/topology-freebsd.Plo \
-+	./$(DEPDIR)/topology-fake.Plo ./$(DEPDIR)/topology-freebsd.Plo ./$(DEPDIR)/topology-dragonfly.Plo \
- 	./$(DEPDIR)/topology-gl.Plo ./$(DEPDIR)/topology-hardwired.Plo \
- 	./$(DEPDIR)/topology-hpux.Plo ./$(DEPDIR)/topology-linux.Plo \
- 	./$(DEPDIR)/topology-netbsd.Plo ./$(DEPDIR)/topology-noos.Plo \
-@@ -432,7 +434,7 @@ ETAGS = etags
- CTAGS = ctags
- am__DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/topology-aix.c \
- 	$(srcdir)/topology-bgq.c $(srcdir)/topology-cuda.c \
--	$(srcdir)/topology-darwin.c $(srcdir)/topology-freebsd.c \
-+	$(srcdir)/topology-darwin.c $(srcdir)/topology-dragonfly.c $(srcdir)/topology-freebsd.c \
- 	$(srcdir)/topology-gl.c $(srcdir)/topology-hpux.c \
- 	$(srcdir)/topology-netbsd.c $(srcdir)/topology-nvml.c \
- 	$(srcdir)/topology-opencl.c $(srcdir)/topology-rsmi.c \
-@@ -910,6 +912,7 @@ distclean-compile:
- @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/topology-cuda.Plo@am__quote@ # am--include-marker
- @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/topology-darwin.Plo@am__quote@ # am--include-marker
- @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/topology-fake.Plo@am__quote@ # am--include-marker
-+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/topology-dragonfly.Plo@am__quote@ # am--include-marker
- @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/topology-freebsd.Plo@am__quote@ # am--include-marker
- @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/topology-gl.Plo@am__quote@ # am--include-marker
- @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/topology-hardwired.Plo@am__quote@ # am--include-marker
-@@ -1198,6 +1201,7 @@ distclean: distclean-am
- 	-rm -f ./$(DEPDIR)/topology-cuda.Plo
- 	-rm -f ./$(DEPDIR)/topology-darwin.Plo
- 	-rm -f ./$(DEPDIR)/topology-fake.Plo
-+	-rm -f ./$(DEPDIR)/topology-dragonfly.Plo
- 	-rm -f ./$(DEPDIR)/topology-freebsd.Plo
- 	-rm -f ./$(DEPDIR)/topology-gl.Plo
- 	-rm -f ./$(DEPDIR)/topology-hardwired.Plo
-@@ -1288,6 +1292,7 @@ maintainer-clean: maintainer-clean-am
- 	-rm -f ./$(DEPDIR)/topology-cuda.Plo
- 	-rm -f ./$(DEPDIR)/topology-darwin.Plo
- 	-rm -f ./$(DEPDIR)/topology-fake.Plo
-+	-rm -f ./$(DEPDIR)/topology-dragonfly.Plo
- 	-rm -f ./$(DEPDIR)/topology-freebsd.Plo
- 	-rm -f ./$(DEPDIR)/topology-gl.Plo
- 	-rm -f ./$(DEPDIR)/topology-hardwired.Plo
+ @HWLOC_BUILD_STANDALONE_FALSE@am_libhwloc_embedded_la_rpath =

@@ -1,3 +1,3 @@
-TIMESTAMP = 1632037530
-SHA256 (rubygem/aws-sdk-greengrassv2-1.8.0.gem) = 5575c0bf7d1377cf921b1e9c7d86676b94c116f6deb64d6eb319466b05237bf1
-SIZE (rubygem/aws-sdk-greengrassv2-1.8.0.gem) = 45568
+TIMESTAMP = 1638556894
+SHA256 (rubygem/aws-sdk-greengrassv2-1.12.0.gem) = dcb0e348ede0ad66d32273ae23b9c41b179ab125b19503fa00911cd91ac47a02
+SIZE (rubygem/aws-sdk-greengrassv2-1.12.0.gem) = 46080

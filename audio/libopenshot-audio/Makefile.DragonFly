@@ -1,0 +1,5 @@
+
+# avoid doxygen dep for now
+OPTIONS_EXCLUDE+=	DOCS
+CMAKE_BOOL_OFF+=	CMAKE_DISABLE_FIND_PACKAGE_Doxygen \
+                        CMAKE_DISABLE_FIND_PACKAGE_PythonInterp

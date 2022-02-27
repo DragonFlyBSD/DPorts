@@ -1,0 +1,15 @@
+
+# disable explicit MPI (conflicts with openmpi)
+OPTIONS_DEFINE+=	MPI
+OPTIONS_SUB=		yes
+LIB_DEPENDS:=		${LIB_DEPENDS:Nlibmpich*}
+CONFIGURE_ARGS+=	--disable-mpi
+DFLY_PLIST=     ${WRKSRC}/pkg-plist
+PLIST:=         ${DFLY_PLIST}
+
+MPI_LIB_DEPENDS+=	libmpich.so:net/mpich
+MPI_CONFIGURE_ENABLE+=	mpi
+
+dfly-patch:
+	${CP} -v ${.CURDIR:H}/arpack-ng/pkg-plist ${DFLY_PLIST}
+	${REINPLACE_CMD} -e '/parpack/s,^,%%MPI%%,g' ${DFLY_PLIST}

@@ -1,0 +1,4 @@
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/<sys\/cpuset.h>/d' \
+		${WRKSRC}/src/SDL/i_system.c

@@ -1,5 +1,5 @@
 PORTNAME=	mattermost-webapp
-PORTVERSION=	5.38.2
+PORTVERSION=	6.0.2
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www
 MASTER_SITES=	https://releases.mattermost.com/${PORTVERSION}/
@@ -28,9 +28,5 @@ do-install:
 	${MKDIR} ${STAGEDIR}${WWWDIR}
 	cd ${WRKDIR}/mattermost && ${COPYTREE_SHARE} client ${STAGEDIR}${WWWDIR}
 	${MKDIR} ${STAGEDIR}${WWWDIR}/client/plugins
-
-post-install:
-	(cd ${STAGEDIR}${PREFIX} && \
-		${FIND} -E -s ${WWWDIR_REL}/client -type f -regex '.*[0-9a-f]{20,}.*\.(apng|css|eot|gif|jpg|js|json|map|mp3|png|svg|ttf|txt|woff|woff2)$$' >> ${TMPPLIST})
 
 .include <bsd.port.mk>

@@ -1,4 +1,8 @@
 
+.if ${MODEL:Msopine-spi}
+BUILD_DEPENDS+=	mkimg:sysutils/mkimg
+.endif
+
 .if ${MODEL} == "clearfog" || ${MODEL} == "qemu-arm" || ${MODEL} == "qemu-arm64"
 USES+=	ssl pkgconfig
 .endif

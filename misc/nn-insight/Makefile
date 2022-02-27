@@ -1,7 +1,6 @@
-# $FreeBSD$
-
 PORTNAME=	nn-insight
-DISTVERSION=	0.1.3
+DISTVERSION=	1.0.5
+PORTREVISION=	1
 CATEGORIES=	misc # machine-learning
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -12,10 +11,11 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	avir>0:graphics/avir \
 		flatbuffers>0:devel/flatbuffers \
+		half>0:math/half \
 		nlohmann-json>0:devel/nlohmann-json \
 		png++>0:graphics/png++
 LIB_DEPENDS=	libcgraph.so:graphics/graphviz \
-		libpng16.so:graphics/png \
+		libpng.so:graphics/png \
 		libtcmalloc.so:devel/google-perftools
 
 USES=		compiler:c++17-lang cmake pkgconfig qt:5
@@ -25,5 +25,7 @@ USE_QT=		core gui svg widgets buildtools_build qmake_build
 
 PLIST_FILES=	bin/nn-insight \
 		libexec/nn-insight/tf-lite-plugin.so
+
+PORTSCOUT=	limit:^.*[1-9]\. # prevent hashes
 
 .include <bsd.port.mk>

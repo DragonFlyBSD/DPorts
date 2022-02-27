@@ -1,7 +1,7 @@
 # Created by: Dan Pelleg <dpelleg+unison@cs.cmu.edu>
 
 PORTNAME=	unison
-PORTVERSION=	2.51.4
+PORTVERSION=	2.51.5
 DISTVERSIONPREFIX=	v
 CATEGORIES=	net
 
@@ -14,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 FLAVORS=	x11 nox11
 FLAVOR?=	${FLAVORS:[1]}
 
-nox11_PKGNAMESUFFIX= -nox11
+nox11_PKGNAMESUFFIX=		-nox11
 nox11_CONFLICTS_INSTALL=	unison
 
 x11_CONFLICTS_INSTALL=		unison-nox11
@@ -30,12 +30,12 @@ USES=		gmake localbase
 USE_OCAML=	yes
 WRKSRC_SUBDIR=	src
 NO_OCAML_RUNDEPENDS=yes
-CONFLICTS=	unison-devel-[0-9]*
+CONFLICTS=	unison-devel
 MAKE_ENV=	CLIBS="${LIBS:S/^-/-ccopt -/}" COFLAGS="${CFLAGS:C/ *(-[^ ]*) */ -ccopt \"\1 \"/gW}"
 ALL_TARGET=	unison all
 
-USE_GITHUB=     yes
-GH_ACCOUNT=     bcpierce00
+USE_GITHUB=	yes
+GH_ACCOUNT=	bcpierce00
 
 DOCS=		NEWS README
 

@@ -7,9 +7,6 @@ COMMENT=	KDE mail client
 
 LICENSE=	LGPL21
 
-DEPRECATED=	Uses EOL Python 2.7 via www/qt5-webengine
-EXPIRATION_DATE=2021-06-23
-
 LIB_DEPENDS=	libassuan.so:security/libassuan \
 		libgpg-error.so:security/libgpg-error \
 		libgpgme.so:security/gpgme \
@@ -22,7 +19,8 @@ RUN_DEPENDS=	accountwizard:deskutils/kmail-account-wizard \
 		mboximporter:deskutils/mbox-importer \
 		sieveeditor:deskutils/pim-sieve-editor
 
-USES=		cmake compiler:c++11-lib desktop-file-utils gettext kde:5 qt:5 tar:xz
+USES=		cmake compiler:c++11-lib cpe desktop-file-utils gettext kde:5 qt:5 tar:xz
+CPE_VENDOR=	kde
 USE_KDE=	auth bookmarks codecs completion config configwidgets \
 		coreaddons crash dbusaddons guiaddons i18n iconthemes imap \
 		itemmodels itemviews jobwidgets kcmutils kdelibs4support kio \
@@ -43,7 +41,6 @@ USE_QT=		concurrent core dbus declarative gui location network printsupport \
 USE_LDCONFIG=	yes
 
 DESCR=		${.CURDIR:H:H}/deskutils/kdepim/pkg-descr
-
 
 OPTIONS_DEFINE=	DOCS
 

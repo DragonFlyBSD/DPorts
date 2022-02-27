@@ -79,10 +79,12 @@ bin/3dDegreeCentrality
 bin/3dDespike
 bin/3dDetrend
 bin/3dECM
+bin/3dEdu_01_scale
 bin/3dEigsToDT
 bin/3dEmpty
 bin/3dEntropy
 bin/3dErrtsCormat
+bin/3dEulerDist
 bin/3dExchange
 bin/3dExtractGroupInCorr
 bin/3dExtrema
@@ -230,6 +232,7 @@ bin/3ddelay
 bin/3ddot
 bin/3ddot_beta
 bin/3dedge3
+bin/3dedgedog
 bin/3dfim+
 bin/3dfractionize
 bin/3dhistog
@@ -678,7 +681,8 @@ include/afni/rcmat.h
 include/afni/tagset.h
 include/afni/thd_atlas.h
 include/afni/thd_compress.h
-include/afni/thd_depth.h
+include/afni/thd_edge_dog.h
+include/afni/thd_euler_dist.h
 include/afni/thd_iochan.h
 include/afni/thd_maker.h
 include/afni/thd_ttatlas_CA_EZ.h
@@ -814,6 +818,7 @@ lib/afni/plug_zeropad.so
 %%PYTHON_SITELIBDIR%%/afnipy/lib_subjects.py
 %%PYTHON_SITELIBDIR%%/afnipy/lib_surf_clustsim.py
 %%PYTHON_SITELIBDIR%%/afnipy/lib_system_check.py
+%%PYTHON_SITELIBDIR%%/afnipy/lib_tedana_afni.py
 %%PYTHON_SITELIBDIR%%/afnipy/lib_textdata.py
 %%PYTHON_SITELIBDIR%%/afnipy/lib_timing.py
 %%PYTHON_SITELIBDIR%%/afnipy/lib_tsv.py
@@ -989,6 +994,7 @@ lib/afni/plug_zeropad.so
 %%DATADIR%%/funstuff/face_gangchen.jpg
 %%DATADIR%%/funstuff/face_gaudi.jpg
 %%DATADIR%%/funstuff/face_gaurav.jpg
+%%DATADIR%%/funstuff/face_genius.jpg
 %%DATADIR%%/funstuff/face_gganis.jpg
 %%DATADIR%%/funstuff/face_ggiulietti.jpg
 %%DATADIR%%/funstuff/face_ginnie.jpg
