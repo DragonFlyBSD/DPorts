@@ -1,0 +1,20 @@
+--- tools/llvm-config/llvm-config.cpp.orig	2022-01-20 21:31:59 UTC
++++ tools/llvm-config/llvm-config.cpp
+@@ -419,7 +419,7 @@ int main(int argc, char **argv) {
+ 
+   bool DyLibExists = false;
+   const std::string DyLibName =
+-      (SharedPrefix + "LLVM-" + SharedVersionedExt).str();
++      (SharedPrefix + "LLVM-mesa-" + SharedVersionedExt).str();
+ 
+   // If LLVM_LINK_DYLIB is ON, the single shared library will be returned
+   // for "--libs", etc, if they exist. This behaviour can be overridden with
+@@ -475,7 +475,7 @@ int main(int argc, char **argv) {
+         assert(Lib.endswith(SharedExt) && "DyLib is missing suffix");
+         LibFileName = std::string(Lib);
+       } else {
+-        LibFileName = (SharedPrefix + Lib + "." + SharedExt).str();
++        LibFileName = (SharedPrefix + Lib + "-mesa." + SharedExt).str();
+       }
+     } else {
+       // default to static
