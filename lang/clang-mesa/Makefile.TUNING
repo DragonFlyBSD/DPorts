@@ -1,0 +1,37 @@
+# vi:syntax=make
+
+# not needed, all exectubles linked with $ORIGIN/../lib
+#USE_LDCONFIG=   ${LLVM_PREFIX}/lib
+
+# Disable assertions.  They should be disabled by cmake, but USES=cmake
+# overrides -DCMAKE_*_FLAGS_RELEASE.
+CFLAGS+=	-DNDEBUG
+CXXFLAGS+=	-DNDEBUG
+
+.if defined(WITH_DEBUG)
+CMAKE_BUILD_TYPE=	RelWithDebInfo
+STRIP=
+.endif
+
+SHEBANG_FILES+=	tools/clang-format/clang-format-diff.py \
+		tools/clang-format/git-clang-format \
+		tools/scan-build-py/bin/analyze-build \
+		tools/scan-build-py/bin/intercept-build \
+		tools/scan-build-py/bin/scan-build \
+		tools/scan-build-py/libexec/analyze-cc \
+		tools/scan-build-py/libexec/analyze-c++ \
+		tools/scan-build-py/libexec/intercept-cc \
+		tools/scan-build-py/libexec/intercept-c++ \
+		tools/scan-view/bin/scan-view \
+		utils/hmaptool/hmaptool
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's|gcc50|gcc80|g' -e 's|5.0"|8.0"|' \
+		${WRKSRC}/lib/Driver/ToolChains/DragonFly.cpp \
+		${WRKSRC}/lib/Frontend/InitHeaderSearch.cpp
+	# mangle clang libnames to avoid conflicts
+	${REINPLACE_CMD} -e 's@clang-cpp[[:>:]]@clang-cpp-mesa@g' \
+		${WRKSRC}/cmake/modules/AddClang.cmake \
+		${WRKSRC}/tools/clang-shlib/CMakeLists.txt
+	${REINPLACE_CMD} -e '/set(output_name/s@[[:<:]]clang[[:>:]]@clang-mesa@g' \
+		${WRKSRC}/tools/libclang/CMakeLists.txt \
