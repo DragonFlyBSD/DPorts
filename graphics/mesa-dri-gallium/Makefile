@@ -25,14 +25,6 @@ ZSTD_DESC=		Use ZSTD for shader cache
 ZSTD_LIB_DEPENDS=	libzstd.so:archivers/zstd
 ZSTD_MESON_ENABLED=	zstd
 
-OPTIONS_DEFINE+=	GTOOLS
-GTOOLS_DESC=		Install several development tools
-
-# install few tools useful for developers, some resed in MD
-.if defined(DEVELOPER)
-#XXX OPTIONS_DEFAULT+=	GTOOLS
-.endif
-
 # usually separate in graphics/mesa-gallium-va and graphics/mesa-gallium-vdpau
 OPTIONS_DEFINE+=	VAAPI VDPAU
 #OPTIONS_DEFAULT+=	VAAPI VDPAU
@@ -48,7 +40,7 @@ VDPAU_LIB_DEPENDS=	libvdpau.so:multimedia/libvdpau
 .include "${.CURDIR:H:H}/graphics/mesa-dri/Makefile.common"
 
 ALL_DRI_DRIVERS=	I915 I965 R100 R200
-ALL_GALLIUM_DRIVERS=	IRIS R300 R600 RADEONSI SVGA SWRAST
+ALL_GALLIUM_DRIVERS=	CROCUS IRIS R300 R600 RADEONSI SVGA SWRAST
 ALL_VULKAN_DRIVERS=	INTEL AMD
 
 .if ${ARCH} == aarch64 || ${ARCH} == x86_64 || ${ARCH} == i386 || ${ARCH} == powerpc64
@@ -56,7 +48,7 @@ GALLIUM_DRIVERS+=	SWRAST	# llvmpipe
 .endif
 
 .if ${ARCH} == aarch64 || ${ARCH} == x86_64 || ${ARCH} == i386 \
- || ${ARCH} == powerpc || ${ARCH} == powerpc64
+ || ${ARCH:Mpowerpc*} || ${ARCH} == riscv64
 DRI_DRIVERS+=		R100 R200
 GALLIUM_DRIVERS+=	R300 R600 RADEONSI
 VULKAN_DRIVERS+=	AMD
@@ -67,7 +59,7 @@ MESON_ARGS+=		-Dgallium-xvmc=enabled
 .endif
 .if ${ARCH} == x86_64 || ${ARCH} == i386
 DRI_DRIVERS+=		I915 I965
-GALLIUM_DRIVERS+=	IRIS SVGA
+GALLIUM_DRIVERS+=	CROCUS IRIS SVGA
 VULKAN_DRIVERS+=	INTEL
 .endif
 
@@ -92,16 +84,10 @@ MESA_PLATFORMS+=	wayland
 VULKAN_DRIVERS:=
 .endif
 
-.if ${PORT_OPTIONS:MGTOOLS}
-MGTOOLS=all
-.else
-MGTOOLS=
-.endif
-
 MESON_ARGS+=	-Ddri-drivers="${DRI_DRIVERS:ts,:tl}" \
-			-Dgallium-drivers="${GALLIUM_DRIVERS:ts,:tl}" \
-			-Dvulkan-drivers="${VULKAN_DRIVERS:ts,:tl}" \
-			-Dplatforms="${MESA_PLATFORMS:ts,:tl}"
+		-Dgallium-drivers="${GALLIUM_DRIVERS:ts,:tl}" \
+		-Dvulkan-drivers="${VULKAN_DRIVERS:ts,:tl}" \
+		-Dplatforms="${MESA_PLATFORMS:ts,:tl}"
 
 # Disable some options
 MESON_ARGS+=	-Dgallium-xa=disabled \
@@ -110,7 +96,7 @@ MESON_ARGS+=	-Dgallium-xa=disabled \
 		-Dglx=dri \
 		-Degl=enabled \
 		-Dosmesa=false \
-		-Dtools="${MGTOOLS}"
+		-Dtools=""
 
 .for _d in ${ALL_DRI_DRIVERS}
 . if defined(DRI_DRIVERS) && ${DRI_DRIVERS:M${_d}}
