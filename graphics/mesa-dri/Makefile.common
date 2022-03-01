@@ -98,8 +98,11 @@ RUN_DEPENDS+=	llvm-config${LLVM_DEFAULT}:devel/llvm${LLVM_DEFAULT}
 .endif
 .endif
 
+.  if 0
+# see .if 1 down
 MESON_ARGS+=	--native-file="${WRKSRC}/llvm.ini"
 LDFLAGS+=	-Wl,-rpath=${LOCALBASE}/llvm${LLVM_DEFAULT}/lib
+.  endif
 MESON_ARGS+=	-Dllvm=enabled
 
 # On DragonFly llvm is only present in mesa-dri-gallium mesa-osmesa-gallium ports
@@ -109,13 +112,16 @@ MESON_ARGS+=	-Dllvm=enabled
 MESON_ARGS+=	-Ddri3=disabled
 . if ${COMPONENT} == libs || ${COMPONENT} == dri || ${COMPONENT} == osmesa
 MESON_ARGS+=	-Dllvm=disabled
-.  if defined(DEVELOPER)
-# reduces binary differences somewhat while investigating
-#LDFLAGS+=	-Wl,-rpath=${LOCALBASE}/llvm${LLVM_DEFAULT}/lib
-.  endif
 . else
 LIB_DEPENDS+=	libelf.so:devel/libelf
+.  if 1
+# zrj small and mean
+BINARY_ALIAS+=	llvm-config=llvm-config-mesa
+BUILD_DEPENDS+=	llvm-mesa>0:graphics/llvm-mesa
+LIB_DEPENDS+=	libLLVM-mesa-13.so:graphics/llvm-libs-mesa
+.  else
 BUILD_DEPENDS+=	llvm${LLVM_DEFAULT}>=0:devel/llvm${LLVM_DEFAULT}
 RUN_DEPENDS+=	llvm${LLVM_DEFAULT}>=0:devel/llvm${LLVM_DEFAULT}
+.  endif
 . endif
 .endif
