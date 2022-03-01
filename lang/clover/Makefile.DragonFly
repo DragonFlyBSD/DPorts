@@ -1,6 +1,11 @@
 
+BUILD_DEPENDS+=	clang-mesa>0:lang/clang-mesa
+RUN_DEPENDS+=	clang-mesa>0:lang/clang-mesa
+
 # unbreak linkage from files/extra-src_gallium_auxiliary_vl_vl__stubs.c
 dfly-patch:
 	${REINPLACE_CMD} -e "s@'vl/vl_decoder.h',@& 'vl/vl_decoder.c',@g" \
 			 -e "s@'vl/vl_video_buffer.h',@& 'vl/vl_video_buffer.c',@g" \
 		${WRKSRC}/src/gallium/auxiliary/meson.build
+	${REINPLACE_CMD} -e "s@[[:<:]]clang-cpp[[:>:]]@clang-cpp-mesa@g" \
+		${WRKSRC}/src/gallium/targets/opencl/meson.build
