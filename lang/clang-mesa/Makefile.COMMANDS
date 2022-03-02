@@ -1,0 +1,20 @@
+CLANG_COMMANDS=	\
+		analyze-build \
+		c-index-test \
+		clang \
+		clang++ \
+		clang-check \
+		clang-cpp \
+		clang-extdef-mapping \
+		clang-format \
+		clang-offload-bundler \
+		clang-offload-wrapper \
+		clang-rename \
+		clang-repl \
+		clang-scan-deps \
+		diagtool \
+		hmaptool \
+		intercept-build \
+		scan-build \
+		scan-build-py \
+		scan-view

@@ -1,0 +1,46 @@
+# Based on https://github.com/ispc/ispc/blob/main/llvm_patches/12_0_disable-A-B-A-B-and-BSWAP-in-InstCombine.patch
+
+--- lib/Transforms/InstCombine/InstCombineAddSub.cpp.orig
++++ lib/Transforms/InstCombine/InstCombineAddSub.cpp
+@@ -15,6 +15,7 @@
+ #include "llvm/ADT/APInt.h"
+ #include "llvm/ADT/STLExtras.h"
+ #include "llvm/ADT/SmallVector.h"
++#include "llvm/ADT/Triple.h"
+ #include "llvm/Analysis/InstructionSimplify.h"
+ #include "llvm/Analysis/ValueTracking.h"
+ #include "llvm/IR/Constant.h"
+@@ -1369,9 +1370,12 @@ Instruction *InstCombinerImpl::visitAdd(BinaryOperator &I) {
+     }
+   }
+ 
+-  // A+B --> A|B iff A and B have no bits set in common.
+-  if (haveNoCommonBitsSet(LHS, RHS, DL, &AC, &I, &DT))
+-    return BinaryOperator::CreateOr(LHS, RHS);
++  // Disable this transformation for ISPC SPIR-V
++  if (!Triple(I.getModule()->getTargetTriple()).isSPIR()) {
++    // A+B --> A|B iff A and B have no bits set in common.
++    if (haveNoCommonBitsSet(LHS, RHS, DL, &AC, &I, &DT))
++      return BinaryOperator::CreateOr(LHS, RHS);
++  }
+ 
+   // add (select X 0 (sub n A)) A  -->  select X A n
+   {
+--- lib/Transforms/InstCombine/InstCombineAndOrXor.cpp.orig
++++ lib/Transforms/InstCombine/InstCombineAndOrXor.cpp
+@@ -2671,9 +2671,12 @@ Instruction *InstCombinerImpl::visitOr(BinaryOperator &I) {
+   if (Instruction *FoldedLogic = foldBinOpIntoSelectOrPhi(I))
+     return FoldedLogic;
+ 
+-  if (Instruction *BitOp = matchBSwapOrBitReverse(I, /*MatchBSwaps*/ true,
+-                                                  /*MatchBitReversals*/ true))
+-    return BitOp;
++  // Disable this transformation for ISPC SPIR-V
++  if (!Triple(I.getModule()->getTargetTriple()).isSPIR()) {
++    if (Instruction *BitOp = matchBSwapOrBitReverse(I, /*MatchBSwaps*/ true,
++                                                    /*MatchBitReversals*/ true))
++      return BitOp;
++  }
+ 
+   if (Instruction *Funnel = matchFunnelShift(I, *this))
+     return Funnel;

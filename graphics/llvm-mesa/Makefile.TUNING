@@ -1,0 +1,43 @@
+# vi:syntax=make
+
+# not needed, all exectubles linked with $ORIGIN/../lib
+#USE_LDCONFIG=   ${LLVM_PREFIX}/lib
+
+# Disable assertions.  They should be disabled by cmake, but USES=cmake
+# overrides -DCMAKE_*_FLAGS_RELEASE.
+CFLAGS+=	-DNDEBUG
+CXXFLAGS+=	-DNDEBUG
+
+.if defined(WITH_DEBUG)
+CMAKE_BUILD_TYPE=	RelWithDebInfo
+STRIP=
+.endif
+
+#SHEBANG_FILES+= tools/opt-viewer/opt-diff.py tools/opt-viewer/opt-stats.py \
+		tools/opt-viewer/opt-viewer.py tools/opt-viewer/optrecord.py
+
+dfly-patch:
+	# remove 24MB worth of tool that is like ice cream scoop on ISS
+	${RM} -rf ${WRKSRC}/tools/llvm-exegesis
+	${RM} -rf ${WRKSRC}/test/tools/llvm-exegesis
+	${RM} -rf ${WRKSRC}/unittests/tools/llvm-exegesis
+	${REINPLACE_CMD} -e 's@llvm-exegesis@@g' \
+		${WRKSRC}/test/CMakeLists.txt
+	${REINPLACE_CMD} -e 's@add_subdirectory(llvm-profgen)@@g' \
+			 -e 's@llvm-exegesis@llvm-profgen@g' \
+		${WRKSRC}/unittests/tools/CMakeLists.txt
+	# exclude whole share/opt-viewer stuff
+	${RM} -rf ${WRKSRC}/tools/opt-viewer
+	${RM} -rf ${WRKSRC}/test/tools/opt-viewer
+	# exclude libLTO.so building (needed only for LLVM gold plugin)
+	${RM} -rf ${WRKSRC}/tools/lto
+	# exclude libRemarks.so build, needed only for some misc tools
+	${RM} -rf ${WRKSRC}/tools/remarks-shlib
+	${RM} -rf ${WRKSRC}/unittests/Remarks
+	${REINPLACE_CMD} -e 's@add_subdirectory(Remarks)@@g' \
+		${WRKSRC}/unittests/CMakeLists.txt
+
+# however these are needed for cmake EXPORTS magicx in clang build
+zdfly-install:
+	# remove 161MB worth of static *.a libs
+	${RM} -v ${STAGEDIR}${LLVM_PREFIX}/lib/libLLVM*.a

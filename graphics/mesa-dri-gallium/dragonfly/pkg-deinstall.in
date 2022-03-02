@@ -1,7 +1,8 @@
 #!/bin/sh
 
-FICHIERS1="dri/swrast_dri.so dri/i915_dri.so dri/i965_dri.so dri/r200_dri.so dri/radeon_dri.so"
-FICHIERS2="dri/iris_dri.so dri/kms_swrast_dri.so dri/r300_dri.so dri/r600_dri.so dri/radeonsi_dri.so dri/vmwgfx_dri.so"
+FICHIERS1="dri/swrast_dri.so dri/i830_dri.so dri/i915_dri.so dri/i965_dri.so dri/r200_dri.so dri/radeon_dri.so"
+FICHIERS2="dri/crocus_dri.so dri/iris_dri.so dri/kms_swrast_dri.so"
+FICHIERS2="${FICHIERS2} dri/r300_dri.so dri/r600_dri.so dri/radeonsi_dri.so dri/vmwgfx_dri.so"
 FICHIERS2="${FICHIERS2} dri/r600_drv_video.so dri/radeonsi_drv_video.so libXvMCr600.so.1.0.0"
 FICHIERS2="${FICHIERS2} vdpau/libvdpau_r300.so.1.0.0 vdpau/libvdpau_r600.so.1.0.0 vdpau/libvdpau_radeonsi.so.1.0.0"
 FICHIERS2="${FICHIERS2} libvulkan_intel.so libvulkan_radeon.so"
