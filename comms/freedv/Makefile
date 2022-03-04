@@ -9,6 +9,8 @@ COMMENT=	Narrow band digital voice
 
 LICENSE=	LGPL21
 
+BROKEN=		Needs update due to Hamlib changes
+
 LIB_DEPENDS=	libcodec2.so:audio/codec2 \
 		libportaudio.so:audio/portaudio \
 		libhamlib.so:comms/hamlib \
@@ -26,6 +28,5 @@ CMAKE_ARGS+=	-DCODEC2_INCLUDE_DIRS=${LOCALBASE}/include/codec2 \
 		-DUSE_STATIC_PORTAUDIO=FALSE \
 		-DUSE_STATIC_SOX=FALSE \
 		-DUSE_STATIC_SPEEXDSP=FALSE
-INSTALLS_ICONS=	yes
 
 .include <bsd.port.mk>
