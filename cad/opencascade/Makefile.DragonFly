@@ -1,6 +1,0 @@
-
-# nein
-.if ${VTKVER} == "8.2"
-VTKVER=  6.2
-LIB_DEPENDS:= ${LIB_DEPENDS:Nlibvtksys-*} libvtksys-${VTKVER}.so:math/vtk6
-.endif
