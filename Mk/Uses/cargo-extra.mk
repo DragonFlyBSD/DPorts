@@ -20,7 +20,8 @@ CARGO_EXTRA_PATCHDIR=	${PORTSDIR}/lang/rust/files
 
 # Iterate over CARGO_CRATES and add to EXTRA_PATCHES patches to specific versions
 # of that specific crate
-.for _crate in ${CARGO_CRATES}
+_LOCAL_CARGO_CRATES=${CARGO_CRATES:N*@git+*}
+.for _crate in ${_LOCAL_CARGO_CRATES}
 .if exists(${CARGO_EXTRA_PATCHDIR}/extra-${_crate})
 EXTRA_PATCHES+= ${CARGO_EXTRA_PATCHDIR}/extra-${_crate}
 .endif
