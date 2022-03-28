@@ -1,3 +1,4 @@
+MAKE_JOBS_UNSAFE= yes
 
 # zrj: fix up after MF
 pre-build:
