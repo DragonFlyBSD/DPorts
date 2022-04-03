@@ -1,9 +1,15 @@
 USE_CLANG_FALLBACK=	default
 
+BINARY_ALIAS+=		cpp=${LOCALBASE}/bin/clang-cpp${LLVM_DEFAULT} \
+			cc=${LOCALBASE}/bin/clang${LLVM_DEFAULT} \
+			c++=${LOCALBASE}/bin/clang++${LLVM_DEFAULT} \
+			ar=${LOCALBASE}/bin/llvm-ar${LLVM_DEFAULT} \
+			nm=${LOCALBASE}/bin/llvm-nm${LLVM_DEFAULT}
+
 .if !defined(GN_ONLY)
 # XXX - This is a hack to force llvm80 to use libc++ C++ includes instead of base's gcc
 CXXFLAGS+=	-stdlib=libc++ -cxx-isystem ${LOCALBASE}/include/c++/v1 -I${LOCALBASE}/include
-LDFLAGS=	-L${LOCALBASE}/lib/c++ -L${LOCALBASE}/lib -L /usr/lib -L /lib
+LDFLAGS=	-L /usr/lib -L${LOCALBASE}/lib/c++ -L /lib
 
 # Since FreeBSD has libc++ in base we need to rely on DPorts' libc++
 LIB_DEPENDS+=  	libc++.so.1:devel/libc++
@@ -28,16 +34,16 @@ EXTRA_PATCHES += ${DFLY_PATCHDIR}/extra-patch_release_5_6
 dfly-patch:
 	# Sandbox stuff
 	@${MKDIR} ${WRKSRC}/sandbox/policy/dragonfly
-	@${CP} ${FILESDIR}/sandbox_freebsd.h ${WRKSRC}/sandbox/policy/dragonfly/sandbox_dragonfly.h
-	@${CP} ${FILESDIR}/sandbox_freebsd.cc ${WRKSRC}/sandbox/policy/dragonfly/sandbox_dragonfly.cc
+	@${CP} ${WRKSRC}/sandbox/policy/freebsd/sandbox_freebsd.h ${WRKSRC}/sandbox/policy/dragonfly/sandbox_dragonfly.h
+	@${CP} ${WRKSRC}/sandbox/policy/freebsd/sandbox_freebsd.cc ${WRKSRC}/sandbox/policy/dragonfly/sandbox_dragonfly.cc
 	${REINPLACE_CMD} -e "s|FreeBSD|DragonFly|g" \
 		-e "s|freebsd\/sandbox_freebsd.h|dragonfly\/sandbox_dragonfly.h|g" \
 		${WRKSRC}/sandbox/policy/dragonfly/sandbox_dragonfly.h \
 		${WRKSRC}/sandbox/policy/dragonfly/sandbox_dragonfly.cc \
 
 	# Setup nodejs dependency
-	@${MKDIR} ${WRKSRC}/third_party/node/dragonfly/node-dragonfly-x64/bin
-	${LN} -sf ${LOCALBASE}/bin/node ${WRKSRC}/third_party/node/dragonfly/node-dragonfly-x64/bin/node
+	@${MKDIR} ${WRKSRC}/third_party/node/dragonfly/node-dragonfly/bin
+	${LN} -sf ${LOCALBASE}/bin/node ${WRKSRC}/third_party/node/dragonfly/node-dragonfly/bin/node
 
 	# Chromium uses an unreleased version of FFmpeg, so configure it
 	${CP} -R \
