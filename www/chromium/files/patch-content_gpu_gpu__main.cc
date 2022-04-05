@@ -1,56 +1,73 @@
---- content/gpu/gpu_main.cc.orig	2021-12-31 00:57:32 UTC
+--- content/gpu/gpu_main.cc.orig	2022-02-28 16:54:41 UTC
 +++ content/gpu/gpu_main.cc
-@@ -89,6 +89,11 @@
- #include "sandbox/policy/sandbox_type.h"
+@@ -83,7 +83,7 @@
+ #include "sandbox/win/src/sandbox.h"
  #endif
  
-+#if defined(OS_FREEBSD)
-+#include "content/public/common/sandbox_init.h"
-+#include "sandbox/policy/freebsd/sandbox_freebsd.h"
-+#endif
-+
- #if defined(OS_MAC)
- #include "base/message_loop/message_pump_mac.h"
- #include "components/metal_util/device_removal.h"
-@@ -109,6 +114,8 @@ namespace {
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+ #include "content/gpu/gpu_sandbox_hook_linux.h"
+ #include "sandbox/policy/linux/sandbox_linux.h"
+ #include "sandbox/policy/sandbox_type.h"
+@@ -105,7 +105,7 @@ namespace content {
+ 
+ namespace {
+ 
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  bool StartSandboxLinux(gpu::GpuWatchdogThread*,
                         const gpu::GPUInfo*,
                         const gpu::GpuPreferences&);
-+#elif defined(OS_FREEBSD)
-+bool StartSandboxFreeBSD();
- #elif defined(OS_WIN)
- bool StartSandboxWindows(const sandbox::SandboxInterfaceInfo*);
- #endif
-@@ -169,6 +176,8 @@ class ContentSandboxHelper : public gpu::GpuSandboxHel
+@@ -167,7 +167,7 @@ class ContentSandboxHelper : public gpu::GpuSandboxHel
+   bool EnsureSandboxInitialized(gpu::GpuWatchdogThread* watchdog_thread,
+                                 const gpu::GPUInfo* gpu_info,
                                  const gpu::GpuPreferences& gpu_prefs) override {
- #if defined(OS_LINUX) || defined(OS_CHROMEOS)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
      return StartSandboxLinux(watchdog_thread, gpu_info, gpu_prefs);
-+#elif defined(OS_BSD)
-+    return StartSandboxFreeBSD();
- #elif defined(OS_WIN)
+ #elif BUILDFLAG(IS_WIN)
      return StartSandboxWindows(sandbox_info_);
- #elif defined(OS_MAC)
-@@ -263,7 +272,7 @@ int GpuMain(const MainFunctionParams& parameters) {
+@@ -263,7 +263,7 @@ int GpuMain(MainFunctionParams parameters) {
            std::make_unique<base::SingleThreadTaskExecutor>(
                gpu_preferences.message_pump_type);
      }
--#elif defined(OS_LINUX) || defined(OS_CHROMEOS)
-+#elif defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_BSD)
+-#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  #error "Unsupported Linux platform."
- #elif defined(OS_MAC)
+ #elif BUILDFLAG(IS_MAC)
      // Cross-process CoreAnimation requires a CFRunLoop to function at all, and
-@@ -446,6 +455,14 @@ bool StartSandboxLinux(gpu::GpuWatchdogThread* watchdo
+@@ -406,17 +406,19 @@ int GpuMain(MainFunctionParams parameters) {
+ 
+ namespace {
+ 
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+ bool StartSandboxLinux(gpu::GpuWatchdogThread* watchdog_thread,
+                        const gpu::GPUInfo* gpu_info,
+                        const gpu::GpuPreferences& gpu_prefs) {
+   TRACE_EVENT0("gpu,startup", "Initialize sandbox");
+ 
++#if !BUILDFLAG(IS_BSD)
+   if (watchdog_thread) {
+     // SandboxLinux needs to be able to ensure that the thread
+     // has really been stopped.
+     sandbox::policy::SandboxLinux::GetInstance()->StopThread(watchdog_thread);
+   }
++#endif
+ 
+   // SandboxLinux::InitializeSandbox() must always be called
+   // with only one thread.
+@@ -437,11 +439,13 @@ bool StartSandboxLinux(gpu::GpuWatchdogThread* watchdo
+           *base::CommandLine::ForCurrentProcess()),
+       base::BindOnce(GpuProcessPreSandboxHook), sandbox_options);
+ 
++#if !BUILDFLAG(IS_BSD)
+   if (watchdog_thread) {
+     base::Thread::Options thread_options;
+     thread_options.timer_slack = base::TIMER_SLACK_MAXIMUM;
+     watchdog_thread->StartWithOptions(std::move(thread_options));
+   }
++#endif
+ 
    return res;
  }
- #endif  // defined(OS_LINUX) || defined(OS_CHROMEOS)
-+
-+#if defined(OS_FREEBSD)
-+bool StartSandboxFreeBSD() {
-+  return sandbox::policy::SandboxFreeBSD::GetInstance()->InitializeSandbox(
-+      sandbox::policy::SandboxTypeFromCommandLine(
-+          *base::CommandLine::ForCurrentProcess()));
-+}
-+#endif  // defined(OS_FREEBSD)
- 
- #if defined(OS_WIN)
- bool StartSandboxWindows(const sandbox::SandboxInterfaceInfo* sandbox_info) {
