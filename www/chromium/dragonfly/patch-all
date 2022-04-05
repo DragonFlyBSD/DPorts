@@ -73,7 +73,7 @@ index 49c9e597559..32d23f7522a 100644
        char bin_dir[PATH_MAX + 1];
        size_t length = sizeof(bin_dir);
 diff --git base/debug/debugger_posix.cc base/debug/debugger_posix.cc
-index 3b534dbf32d..3f4220634a3 100644
+index 3b534dbf32d..17c730cc6f9 100644
 --- base/debug/debugger_posix.cc
 +++ base/debug/debugger_posix.cc
 @@ -40,7 +40,7 @@
@@ -85,21 +85,12 @@ index 3b534dbf32d..3f4220634a3 100644
  #include <sys/user.h>
  #endif
  
-@@ -100,7 +100,7 @@ bool BeingDebugged() {
- 
-   // Caution: struct kinfo_proc is marked __APPLE_API_UNSTABLE.  The source and
-   // binary interfaces may change.
--#if BUILDFLAG(IS_OPENBSD)
-+#if BUILDFLAG(IS_OPENBSD) || BUILDFLAG(IS_DRAGONFLY)
-   struct kinfo_proc *info;
-   size_t info_size;
- #else
 @@ -138,6 +138,8 @@ bool BeingDebugged() {
    being_debugged = (info.ki_flag & P_TRACED) != 0;
  #elif BUILDFLAG(IS_OPENBSD)
    being_debugged = (info->p_psflags & PS_TRACED) != 0;
 +#elif BUILDFLAG(IS_DRAGONFLY)
-+  being_debugged = (info->kp_flags & P_TRACED) != 0;
++  being_debugged = (info.kp_flags & P_TRACED) != 0;
  #else
    being_debugged = (info.kp_proc.p_flag & P_TRACED) != 0;
  #endif
@@ -180,6 +171,29 @@ index 3034764f439..9309632eeb9 100644
  #include <memory>
  #include <vector>
  
+diff --git base/logging_unittest.cc base/logging_unittest.cc
+index b7c4554f153..7e7cd945b55 100644
+--- base/logging_unittest.cc
++++ base/logging_unittest.cc
+@@ -32,7 +32,8 @@
+ #include "base/posix/eintr_wrapper.h"
+ #endif  // BUILDFLAG(IS_POSIX)
+ 
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FREEBSD)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || \
++  BUILDFLAG(IS_FREEBSD) || BUILDFLAG(IS_DRAGONFLY)
+ #include <ucontext.h>
+ #endif
+ 
+@@ -552,7 +553,7 @@ void CheckCrashTestSighandler(int, siginfo_t* info, void* context_ptr) {
+   // need the arch-specific boilerplate below, which is inspired by breakpad.
+   // At the same time, on OSX, ucontext.h is deprecated but si_addr works fine.
+   uintptr_t crash_addr = 0;
+-#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_FREEBSD)
++#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_FREEBSD) || BUILDFLAG(IS_DRAGONFLY)
+   crash_addr = reinterpret_cast<uintptr_t>(info->si_addr);
+ #else  // OS_*
+   ucontext_t* context = reinterpret_cast<ucontext_t*>(context_ptr);
 diff --git base/message_loop/message_loop_task_runner.cc base/message_loop/message_loop_task_runner.cc
 new file mode 100644
 index 00000000000..72989b078cb
@@ -940,6 +954,19 @@ index f0ad7ea1e84..6e8e312f18c 100644
  #include <memory>
  
  #include "base/allocator/buildflags.h"
+diff --git base/threading/thread_local_storage_unittest.cc base/threading/thread_local_storage_unittest.cc
+index 72bb714baa1..2f8e58298ae 100644
+--- base/threading/thread_local_storage_unittest.cc
++++ base/threading/thread_local_storage_unittest.cc
+@@ -90,7 +90,7 @@ class ThreadLocalStorageRunner : public DelegateSimpleThread::Delegate {
+ void ThreadLocalStorageCleanup(void *value) {
+   int *ptr = reinterpret_cast<int*>(value);
+   // Destructors should never be called with a NULL.
+-  ASSERT_NE(NULL, ptr);
++  ASSERT_NE(reinterpret_cast<int*>(NULL), ptr);
+   if (*ptr == kFinalTlsValue)
+     return;  // We've been called enough times.
+   ASSERT_LT(kFinalTlsValue, *ptr);
 diff --git base/tracing/trace_time.cc base/tracing/trace_time.cc
 index bb282acd34b..a4f7f6e1868 100644
 --- base/tracing/trace_time.cc
@@ -1084,6 +1111,19 @@ index ecd8b36c467..94277f06282 100644
      } else if (is_win) {
        ozone_platform = "windows"
        ozone_platform_windows = true
+diff --git build/gn_run_binary.py build/gn_run_binary.py
+index 4440f4b1d41..62050fcbb4f 100644
+--- build/gn_run_binary.py
++++ build/gn_run_binary.py
+@@ -24,7 +24,7 @@ if not os.path.isabs(path):
+ # The rest of the arguments are passed directly to the executable.
+ args = [path] + sys.argv[2:]
+ 
+-ret = subprocess.call(args, env={"CHROME_EXE_PATH":"${WRKSRC}/out/Release/chrome","LD_LIBRARY_PATH":"${WRKSRC}/out/Release"})
++ret = subprocess.call(args, env={"CHROME_EXE_PATH":"${WRKSRC}/out/Release/chrome","LD_LIBRARY_PATH":"${WRKSRC}/out/Release", "FONTCONFIG_PATH": "/usr/local/etc/fonts"})
+ if ret != 0:
+   if ret <= -100:
+     # Windows error codes such as 0xC0000005 and 0xC0000409 are much easier to
 diff --git build/landmine_utils.py build/landmine_utils.py
 index a3f21ff1b83..1c9c8f5e01d 100644
 --- build/landmine_utils.py
