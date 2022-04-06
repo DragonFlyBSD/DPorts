@@ -1,11 +1,10 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 
 PORTNAME=	thunderbird
-DISTVERSION=	91.7.0
-PORTREVISION=	1
+DISTVERSION=	91.8.0
 CATEGORIES=	mail news net-im
 MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}/source \
-		MOZILLA/${PORTNAME}/candidates/${DISTVERSION}-candidates/build2/source
+		MOZILLA/${PORTNAME}/candidates/${DISTVERSION}-candidates/build1/source
 DISTFILES=	${DISTNAME}.source${EXTRACT_SUFX}
 
 MAINTAINER=	gecko@FreeBSD.org
@@ -18,6 +17,7 @@ BUILD_DEPENDS=	nspr>=4.32:devel/nspr \
 		harfbuzz>=2.8.1:print/harfbuzz \
 		graphite2>=1.3.14:graphics/graphite2 \
 		png>=1.6.37:graphics/png \
+		dav1d>=1.0.0:multimedia/dav1d \
 		libvpx>=1.8.2:multimedia/libvpx \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3@${PY_FLAVOR} \
 		v4l_compat>0:multimedia/v4l_compat \
