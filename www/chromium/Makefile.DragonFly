@@ -1,10 +1,4 @@
-USE_CLANG_FALLBACK=	default
-
-BINARY_ALIAS+=		cpp=${LOCALBASE}/bin/clang-cpp${LLVM_DEFAULT} \
-			cc=${LOCALBASE}/bin/clang${LLVM_DEFAULT} \
-			c++=${LOCALBASE}/bin/clang++${LLVM_DEFAULT} \
-			ar=${LOCALBASE}/bin/llvm-ar${LLVM_DEFAULT} \
-			nm=${LOCALBASE}/bin/llvm-nm${LLVM_DEFAULT}
+USE_CLANG_FALLBACK=	13
 
 .if !defined(GN_ONLY)
 # XXX - This is a hack to force llvm80 to use libc++ C++ includes instead of base's gcc
