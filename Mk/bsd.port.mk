@@ -40,9 +40,9 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #				  makefile is being used on.  Automatically set to
 #				  "FreeBSD," "NetBSD," or "OpenBSD" as appropriate.
 # OSREL			- The release version of the operating system as a text
-#				  string (e.g., "12.2").
+#				  string (e.g., "12.3").
 # OSVERSION		- 9999999 - try to ignore FreeBSD version check
-#				  the value of __FreeBSD_version (e.g., 1202000).
+#				  the value of __FreeBSD_version (e.g., 1203000).
 # DFLYVERSION	- The value of __DragonFly_version.
 #
 # This is the beginning of the list of all variables that need to be
@@ -1182,7 +1182,6 @@ _EXPORTED_VARS+=	_OSRELEASE
 # Get __FreeBSD_version
 .if !defined(OSVERSION)
 OSVERSION=     9999999
-.endif
 _EXPORTED_VARS+=	OSVERSION
 
 .if !defined(DFLYVERSION)
@@ -1196,8 +1195,7 @@ OSREL!=		${ECHO} ${DFLYVERSION} | ${AWK} '{a=int($$1/100000); b=int(($$1-(a*1000
 .endif
 _EXPORTED_VARS+=	DFLYVERSION OSREL
 
-.if (${OPSYS} == FreeBSD && ${OSVERSION} < 1202000) || \
-    (${OPSYS} == DragonFly && ${DFLYVERSION} < 400400)
+.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1203000
 _UNSUPPORTED_SYSTEM_MESSAGE=	Ports Collection support for your ${OPSYS} version has ended, and no ports\
 								are guaranteed to build on this system. Please upgrade to a supported release.
 . if defined(ALLOW_UNSUPPORTED_SYSTEM)
@@ -1944,14 +1942,12 @@ PKGPOSTDEINSTALL?=	${PKGDIR}/pkg-post-deinstall
 
 _FORCE_POST_PATTERNS=	rmdir kldxref mkfontscale mkfontdir fc-cache \
 						fonts.dir fonts.scale gtk-update-icon-cache \
-						gio-querymodules \
 						gtk-query-immodules \
 						ldconfig \
 						load-octave-pkg \
 						ocamlfind \
 						update-desktop-database update-mime-database \
-						gdk-pixbuf-query-loaders catalog.ports \
-						glib-compile-schemas \
+						catalog.ports \
 						ccache-update-links
 
 .if defined(USE_LOCAL_MK)
