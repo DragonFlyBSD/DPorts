@@ -13,7 +13,7 @@ COMMENT=	TLSv1.3 capable SSL and crypto library
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-CONFLICTS_INSTALL=	libressl libressl-devel openssl
+CONFLICTS_INSTALL=	boringssl libressl libressl-devel openssl openssl-quictls
 
 HAS_CONFIGURE=	yes
 CONFIGURE_SCRIPT=	config
