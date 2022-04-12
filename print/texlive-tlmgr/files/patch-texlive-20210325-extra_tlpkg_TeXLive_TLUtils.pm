@@ -1,6 +1,6 @@
---- texlive-20150523-extra/tlpkg/TeXLive/TLUtils.pm.orig	2015-05-06 20:30:33 UTC
-+++ texlive-20150523-extra/tlpkg/TeXLive/TLUtils.pm
-@@ -228,22 +228,14 @@ subsequent calls just return that value.
+--- texlive-20210325-extra/tlpkg/TeXLive/TLUtils.pm.orig	2021-03-05 00:26:37 UTC
++++ texlive-20210325-extra/tlpkg/TeXLive/TLUtils.pm
+@@ -250,22 +250,14 @@ subsequent calls just return that value.
  
  sub platform {
    unless (defined $::_platform_) {
@@ -18,15 +18,16 @@
 -      die "$0: could not run $config_guess, cannot proceed, sorry"
 -        if ! $guessed_platform;
 -
-+      chomp(my $uname_m = `uname -m`);
-+      chomp(my $uname_r = `uname -r`);
-+      chomp(my $uname_s = `uname -s`);
-+      $uname_r =~ s/-.*$//;
-+      $uname_s = lc($uname_s);
-+      $guessed_platform = sprintf("%s-unknown-%s%s", $uname_m,
-+          $uname_s, $uname_r);
-       $::_platform_ = platform_name($guessed_platform);
+-      $::_platform_ = platform_name($guessed_platform);
 -    }
++    chomp(my $uname_m = `uname -m`);
++    chomp(my $uname_r = `uname -r`);
++    chomp(my $uname_s = `uname -s`);
++    $uname_r =~ s/-.*$//;
++    $uname_s = lc($uname_s);
++    $guessed_platform = sprintf("%s-unknown-%s%s", $uname_m,
++        $uname_s, $uname_r);
++    $::_platform_ = platform_name($guessed_platform);
    }
    return $::_platform_;
  }
