@@ -1,3 +1,4 @@
+PORTREVISION=	2
 CATEGORIES=	net
 
 MASTERDIR=	${.CURDIR}/../../lang/php74
