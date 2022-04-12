@@ -1,5 +1,0 @@
-
-# zrj: for my fortrany stuff (compiles for local system: NCPU, etc)
-.if !defined(DPORTS_BUILDER)
-MANUAL_PACKAGE_BUILD=	not for general public
-.endif

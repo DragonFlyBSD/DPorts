@@ -1,6 +1,0 @@
-
-# extra patches for dports/openssl vs libressl
-dfly-patch:
-	${REINPLACE_CMD} -e '/OpenSSL 1.1 API not supported in Botan 1.10/d' \
-		${WRKSRC}/src/engine/openssl/ossl_bc.cpp \
-		${WRKSRC}/src/engine/openssl/ossl_md.cpp

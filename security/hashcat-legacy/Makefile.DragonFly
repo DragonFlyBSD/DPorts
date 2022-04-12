@@ -1,6 +1,0 @@
-
-# does not respect CFLAGS
-dfly-patch:
-	${REINPLACE_CMD} -e "/CFLAGS/s@-Wall@& -I${LOCALBASE}/include@g" \
-			 -e "s@LDFLAGS :=@& -L${LOCALBASE}/lib@g" \
-		${WRKSRC}/src/Makefile

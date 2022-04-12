@@ -1,2 +1,0 @@
-# gstutils.h:546:5: error: conflicting C language linkage declaration 
-CMAKE_ARGS+=	-DBUILD_WERROR=OFF

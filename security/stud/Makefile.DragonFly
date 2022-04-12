@@ -1,7 +1,0 @@
-
-.if ${PORTVERSION} == 0.4
-USES:=	${USES:Nssl}
-BUILD_DEPENDS+=	libressl-static>0:security/libressl-static
-CFLAGS+=	-I${LOCALBASE}/libressl-static/include
-LDFLAGS+=	-L${LOCALBASE}/libressl-static/lib
-.endif
