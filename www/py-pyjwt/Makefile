@@ -2,6 +2,7 @@
 
 PORTNAME=	pyjwt
 PORTVERSION=	2.3.0
+PORTREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -13,9 +14,16 @@ COMMENT=	JSON Web Token implementation in Python
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		python:3.6+
+USES=		cpe python:3.6+
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes
+
+CPE_VENDOR=	pyjwt_project
+
+OPTIONS_DEFINE=	CRYPTO
+OPTIONS_DEFAULT=CRYPTO
+
+CRYPTO_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cryptography>=3.3.1:security/py-cryptography@${PY_FLAVOR}
 
 .include <bsd.port.mk>
