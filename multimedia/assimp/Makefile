@@ -1,6 +1,6 @@
 PORTNAME=	assimp
 DISTVERSIONPREFIX=	v
-DISTVERSION=	5.1.3
+DISTVERSION=	5.1.5
 CATEGORIES=	multimedia
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -9,9 +9,7 @@ COMMENT=	Library to import various 3D model formats in a uniform manner
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-LIB_DEPENDS=	libminizip.so:archivers/minizip
-
-USES=		cmake:testing compiler:c++11-lib localbase:ldflags pkgconfig
+USES=		cmake:testing compiler:c++11-lib cpe localbase:ldflags minizip pkgconfig
 
 USE_GITHUB=	yes
 USE_LDCONFIG=	yes
