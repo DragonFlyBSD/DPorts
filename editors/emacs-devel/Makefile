@@ -1,7 +1,8 @@
 # Created by: Kenneth Vestergaard Schmidt <kvs@pil.dk>
 
 PORTNAME=	emacs
-DISTVERSION=	29.0.50.20220101
+DISTVERSION=	29.0.50.20220331
+PORTREVISION=	1
 PORTEPOCH=	2
 CATEGORIES=	editors
 PKGNAMESUFFIX=	-devel
@@ -25,12 +26,7 @@ USES=		autoreconf:build cpe gmake localbase:ldflags ncurses pkgconfig
 CPE_VENDOR=	gnu
 USE_GITHUB=	yes
 GH_ACCOUNT=	emacs-mirror
-GH_TAGNAME=	4d1968b
-
-.if ${FLAVOR:U} != nox
-USES+=		desktop-file-utils gnome xorg
-USE_XORG=	ice sm x11 xcb xext xfixes xinerama xmu xrandr xrender xt
-.endif
+GH_TAGNAME=	c5af19c
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--disable-build-details \
@@ -50,6 +46,7 @@ CONFIGURE_ARGS+=	--with-sound=no \
 			--without-lcms2 \
 			--without-libotf \
 			--without-m17n-flt \
+			--without-pgtk \
 			--without-png \
 			--without-rsvg \
 			--without-tiff \
@@ -76,7 +73,8 @@ INFO=		auth autotype bovine calc ccmode cl dbus dired-x ebrowse ede \
 		idlwave ido info mairix-el message mh-e modus-themes newsticker \
 		nxml-mode octave-mode org pcl-cvs pgg rcirc reftex remember \
 		sasl sc semantic ses sieve smtpmail speedbar srecode todo-mode \
-		tramp url vhdl-mode vip viper widget wisent woman
+		tramp transient url vhdl-mode vip viper vtable widget wisent \
+		woman
 INFO_PATH=	${DATADIR_REL}/info
 PLIST_SUB=	EMACS_VER=${DISTVERSION:R} \
 		GNU_HOST=${CONFIGURE_TARGET}
@@ -86,9 +84,9 @@ OPTIONS_DEFINE=			ACL DBUS GCONF GNUTLS GSETTINGS HARFBUZZ JSON \
 				PGTK SCROLLBARS SOURCES SQLITE3 THREADS XFT XIM \
 				XML XWIDGETS
 OPTIONS_DEFAULT=		ACL CAIRO DBUS GIF GNUTLS GSETTINGS GTK3 \
-				HARFBUZZ JPEG JSON KQUEUE LCMS2 M17N MAILUTILS \
-				MODULES OSS OTF PNG SCROLLBARS SOURCES SQLITE3 \
-				SVG THREADS TIFF WEBP XFT XIM XML XPM
+				HARFBUZZ JPEG JSON KQUEUE LCMS2 MAILUTILS \
+				MODULES OSS PGTK PNG SCROLLBARS SOURCES SQLITE3 \
+				SVG THREADS TIFF WEBP XML
 OPTIONS_GROUP=			GRAPHICS
 OPTIONS_GROUP_GRAPHICS=		CAIRO GIF JPEG MAGICK PNG SVG TIFF WEBP XPM
 OPTIONS_RADIO=			FILENOTIFY SOUND X11TOOLKIT
@@ -98,13 +96,13 @@ OPTIONS_RADIO_X11TOOLKIT=	GTK2 GTK3 XAW XAW3D
 .if ${FLAVOR:U} == nox
 OPTIONS_EXCLUDE=		ALSA CAIRO DBUS GCONF GFILE GIF GSETTINGS GTK2 \
 				GTK3 HARFBUZZ JPEG LCMS2 M17N MAGICK OSS OTF \
-				PNG PGTK SCROLLBARS SVG TIFF WEBP XAW XAW3D XFT \
+				PGTK PNG SCROLLBARS SVG TIFF WEBP XAW XAW3D XFT \
 				XIM XPM XWIDGETS
 .endif
 OPTIONS_SUB=			YES
 
 ACL_DESC=		Access control list support
-CAIRO_DESC=		Cairo graphics library support [implies PNG, XFT]
+CAIRO_DESC=		Cairo graphics library support [implies PNG]
 FILENOTIFY_DESC=	File notification support
 GFILE_DESC=		File notification via gfile
 GRAPHICS_DESC=		Graphics support
@@ -115,7 +113,7 @@ M17N_DESC=		M17N support for text-shaping [implies XFT]
 MAGICK_DESC=		ImageMagick image processing support (deprecated)
 MAILUTILS_DESC=		Mail framework via GNU Mailutils
 MODULES_DESC=		Dynamic modules support
-NATIVECOMP_DESC=	Emacs Lisp native compiler support
+NATIVECOMP_DESC=	Emacs Lisp native compiler support (experimental)
 OTF_DESC=		Opentype fonts [implies XFT]
 PGTK_DESC=		Pure GTK GUI [implies CAIRO, GTK3]
 SCROLLBARS_DESC=	Toolkit scroll-bars
@@ -130,7 +128,8 @@ XWIDGETS_DESC=		Experimental GTK widgets [implies GTK3]
 ACL_CONFIGURE_ENABLE=		acl
 ALSA_LIB_DEPENDS=		libasound.so:audio/alsa-lib
 ALSA_CONFIGURE_ON=		--with-sound=alsa
-CAIRO_IMPLIES=			PNG XFT
+CAIRO_IMPLIES=			PNG
+CAIRO_PREVENTS=			XFT
 CAIRO_USE=			GNOME=cairo
 CAIRO_CONFIGURE_WITH=		cairo
 DBUS_LIB_DEPENDS=		libdbus-1.so:devel/dbus
@@ -149,6 +148,8 @@ GTK2_LIB_DEPENDS=		libfontconfig.so:x11-fonts/fontconfig \
 				libfreetype.so:print/freetype2
 GTK2_USE=			GNOME=cairo,gtk20
 GTK2_CONFIGURE_ON=		--with-x-toolkit=gtk2
+GTK3_LIB_DEPENDS=		libfontconfig.so:x11-fonts/fontconfig \
+				libfreetype.so:print/freetype2
 GTK3_USE=			GNOME=cairo,gtk30
 GTK3_CONFIGURE_ON=		--with-x-toolkit=gtk3
 HARFBUZZ_LIB_DEPENDS=		libharfbuzz.so:print/harfbuzz
@@ -176,10 +177,10 @@ NATIVECOMP_CONFIGURE_WITH=	native-compilation
 NATIVECOMP_MAKE_ARGS=		NATIVE_FULL_AOT=1
 NATIVECOMP_LDFLAGS=		-L${LOCALBASE}/lib/${_GCC_PORT}
 OSS_CONFIGURE_ON=		--with-sound=oss
-OTF_IMPLIES=			XFT
 OTF_LIB_DEPENDS=		libotf.so:print/libotf
 OTF_CONFIGURE_WITH=		libotf
 PGTK_IMPLIES=			CAIRO GTK3
+PGTK_PREVENTS=			M17N XFT XPM
 PGTK_CONFIGURE_WITH=		pgtk
 PNG_LIB_DEPENDS=		libpng.so:graphics/png
 PNG_CONFIGURE_WITH=		png
@@ -218,17 +219,31 @@ XWIDGETS_CONFIGURE_WITH=	xwidgets
 
 .include <bsd.port.options.mk>
 
-.if ${PORT_OPTIONS:MNATIVECOMP} && !defined(_GCC_PORT_CHOSEN)
-_GCC_PORT!=	${BSDMAKE} -V_GCC_PORT USE_GCC=11+ _GCC_PORT_CHOSEN=yes
-.endif
-
 .if ${ARCH:Mpowerpc64*}
 USE_GCC=	yes
 .endif
 
-.if !${PORT_OPTIONS:MGTK2} && !${PORT_OPTIONS:MGTK3} && \
-	!${PORT_OPTIONS:MXAW} && !${PORT_OPTIONS:MXAW3D}
+.if ${PORT_OPTIONS:MNATIVECOMP} && !defined(_GCC_PORT_CHOSEN)
+_GCC_PORT!=	${BSDMAKE} -V_GCC_PORT USE_GCC=11+ _GCC_PORT_CHOSEN=yes
+.endif
+
+.if ${FLAVOR:U} != nox
+USES+=		desktop-file-utils gnome
+.if !${PORT_OPTIONS:MPGTK}
+USES+=		xorg
+USE_XORG+=	ice sm x11 xcb xext xfixes xinerama xmu xrandr xrender xt
+.endif
+.endif
+
+.if !${PORT_OPTIONS:MGTK2} && !${PORT_OPTIONS:MGTK3} && !${PORT_OPTIONS:MXAW} && \
+	!${PORT_OPTIONS:MXAW3D}
 CONFIGURE_ARGS+=	--with-x-toolkit=no
+.endif
+
+# Schema generation is dependent on both PGTK, and GSETTINGS options
+# as per https://git.savannah.gnu.org/cgit/emacs.git/commit/?id=183936ee8e5
+.if ${PORT_OPTIONS:MGSETTINGS} && ${PORT_OPTIONS:MPGTK}
+GLIB_SCHEMAS+=		org.gnu.emacs.defaults.gschema.xml
 .endif
 
 .if ${FLAVOR} == nox
