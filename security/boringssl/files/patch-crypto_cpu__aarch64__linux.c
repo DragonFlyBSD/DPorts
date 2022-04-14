@@ -1,27 +1,27 @@
---- crypto/cpu-aarch64-linux.c.orig	2019-12-02 17:52:12 UTC
-+++ crypto/cpu-aarch64-linux.c
-@@ -14,49 +14,46 @@
+--- crypto/cpu_aarch64_linux.c.orig	2022-01-18 16:46:15 UTC
++++ crypto/cpu_aarch64_linux.c
+@@ -14,51 +14,49 @@
  
- #include <openssl/cpu.h>
+ #include "internal.h"
  
 -#if defined(OPENSSL_AARCH64) && defined(OPENSSL_LINUX) && \
 -    !defined(OPENSSL_STATIC_ARMCAP)
 +#if defined(OPENSSL_AARCH64)
  
 -#include <sys/auxv.h>
--
+ 
  #include <openssl/arm_arch.h>
  
- #include "internal.h"
  
--
  extern uint32_t OPENSSL_armcap_P;
  
 -void OPENSSL_cpuid_setup(void) {
 -  unsigned long hwcap = getauxval(AT_HWCAP);
++#if defined(OPENSSL_FREEBSD)
 +#include <sys/types.h>
 +#include <machine/_stdint.h>
 +#include <machine/armreg.h>
++#endif
  
 -  // See /usr/include/asm/hwcap.h on an aarch64 installation for the source of
 -  // these values.
@@ -30,6 +30,7 @@
 -  static const unsigned long kPMULL = 1 << 4;
 -  static const unsigned long kSHA1 = 1 << 5;
 -  static const unsigned long kSHA256 = 1 << 6;
+-  static const unsigned long kSHA512 = 1 << 21;
 +#ifndef ID_AA64ISAR0_AES_VAL
 +#define ID_AA64ISAR0_AES_VAL ID_AA64ISAR0_AES
 +#endif
@@ -65,10 +66,13 @@
      OPENSSL_armcap_P |= ARMV8_SHA1;
    }
 -  if (hwcap & kSHA256) {
-+  if(ID_AA64ISAR0_SHA2_VAL(id_aa64isar0) >= ID_AA64ISAR0_SHA2_BASE) {
++  if (ID_AA64ISAR0_SHA2_VAL(id_aa64isar0) >= ID_AA64ISAR0_SHA2_BASE) {
      OPENSSL_armcap_P |= ARMV8_SHA256;
    }
+-  if (hwcap & kSHA512) {
+-    OPENSSL_armcap_P |= ARMV8_SHA512;
+-  }
  }
--
--#endif  // OPENSSL_AARCH64 && !OPENSSL_STATIC_ARMCAP
+ 
+-#endif  // OPENSSL_AARCH64 && OPENSSL_LINUX && !OPENSSL_STATIC_ARMCAP
 +#endif  // OPENSSL_AARCH64
