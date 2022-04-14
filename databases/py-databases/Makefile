@@ -1,5 +1,5 @@
 PORTNAME=	databases
-DISTVERSION=	0.5.3
+DISTVERSION=	0.5.5
 CATEGORIES=	databases python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -8,7 +8,6 @@ MAINTAINER=	meka@tilda.center
 COMMENT=	Async database support for Python
 
 LICENSE=	BSD3CLAUSE
-LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlalchemy14>=0:databases/py-sqlalchemy14@${PY_FLAVOR}
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}aiomysql>0:databases/py-aiomysql@${PY_FLAVOR} \
@@ -42,10 +41,4 @@ SQLITE_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}aiosqlite>0:databases/py-aiosqlite@${
 # do-test:
 # 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} TEST_DATABASE_URLS="sqlite:///testsuite" ${PYTHON_CMD} -m pytest -v -rs -o addopts=
 
-.include <bsd.port.pre.mk>
-
-.if ${PYTHON_REL} < 30700
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}aiocontextvars>=0:devel/py-aiocontextvars@${PY_FLAVOR}
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
