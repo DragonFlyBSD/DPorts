@@ -1,7 +1,8 @@
 # Created by: Kevin Golding <ports@caomhin.org>
 
 PORTNAME=	django-registration-redux
-PORTVERSION=	2.8
+PORTVERSION=	2.10
+PORTREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
