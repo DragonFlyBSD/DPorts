@@ -1,5 +1,5 @@
---- texk/lcdf-typetools/lcdf-typetools-2.104/libefont/cff.cc.orig	2014-07-08 06:44:39 UTC
-+++ texk/lcdf-typetools/lcdf-typetools-2.104/libefont/cff.cc
+--- texk/lcdf-typetools/lcdf-typetools-src/libefont/cff.cc.orig	2019-01-28 02:26:31 UTC
++++ texk/lcdf-typetools/lcdf-typetools-src/libefont/cff.cc
 @@ -27,6 +27,7 @@
  #include <ctype.h>
  #include <efont/t1unparser.hh>
