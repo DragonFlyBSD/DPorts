@@ -1,7 +1,7 @@
 # Created by: Torsten Zuehlsdorff <tz@FreeBSD.org>
 
 PORTNAME=	gitlab-workhorse
-PORTVERSION=	14.6.3
+PORTVERSION=	14.9.2
 PORTREVISION=	0
 CATEGORIES=	www
 
@@ -25,7 +25,7 @@ USE_GITLAB=	yes
 GL_ACCOUNT=	gitlab-org
 GL_PROJECT=	gitlab-foss
 # Find the commit hash here: https://gitlab.com/gitlab-org/gitlab-foss/-/tags
-GL_COMMIT=	0a901d60f8ae4a60c04ae82e6e9c3a03e9321417
+GL_COMMIT=	56bec66a79f1fd82a130cb7963d86b76bd5f9185
 
 # for go dependencies
 USE_GITHUB=	nodefault
@@ -160,4 +160,3 @@ post-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/www/${PORTNAME}
 
 .include <bsd.port.mk>
-
