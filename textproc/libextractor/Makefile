@@ -2,6 +2,7 @@
 
 PORTNAME=	libextractor
 PORTVERSION=	1.11
+PORTREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	GNU
 
@@ -21,6 +22,8 @@ CPE_VENDOR=	gnu
 
 USE_GNOME=	gtk20 gdkpixbuf2
 USE_LDCONFIG=	yes
+
+CONFLICTS_INSTALL=	csound outguess # bin/extract
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-gtk-version=2 \
