@@ -2,6 +2,7 @@
 
 PORTNAME=	traitsui
 PORTVERSION=	7.1.1
+PORTREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -41,7 +42,7 @@ OPTIONS_DEFAULT=QT5
 
 QT5_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pygments>=0:textproc/py-pygments@${PY_FLAVOR}
 QT5_USES=		pyqt:5
-QT5_USE=		PYQT=core_run,gui_run,printsupport_run,svg_run,widgets_run
+QT5_USE=		PYQT=pyqt5_run
 
 # These tests were extracted from etstool.py and adapted to the ports test framework
 do-test:
