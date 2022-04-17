@@ -3,7 +3,7 @@
 PORTNAME=	frescobaldi
 DISTVERSIONPREFIX=	v
 DISTVERSION=	3.1.3
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	print kde python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -19,7 +19,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}python-ly>=0:print/py-python-ly@${PY_FLAVOR}
 USES=		desktop-file-utils gettext gmake pyqt:5 python:3.5+ qmake qt:5
 USE_GITHUB=	yes
 GH_ACCOUNT=	frescobaldi
-USE_PYQT=	network printsupport sip svg webengine widgets
+USE_PYQT=	pyqt5 sip webengine
 USE_PYTHON=	autoplist distutils noflavors
 
 NO_ARCH=	yes
