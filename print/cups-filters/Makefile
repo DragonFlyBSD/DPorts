@@ -1,6 +1,6 @@
 PORTNAME=	cups-filters
 PORTVERSION=	1.28.10
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	print
 MASTER_SITES=	https://www.openprinting.org/download/cups-filters/
 
@@ -23,7 +23,7 @@ USE_GNOME=	glib20
 USE_LDCONFIG=	yes
 USE_RC_SUBR=	cups_browsed
 
-CONFLICTS=	cups-pstoraster foomatic-filters
+CONFLICTS=	foomatic-filters # bin/foomatic-rip
 
 CPE_VENDOR=	linuxfoundation
 SHEBANG_FILES=	filter/braille/drivers/generic/brftoembosser.in \
