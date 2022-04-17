@@ -1,7 +1,6 @@
 PORTNAME=	pdf-tools
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.90-90
-DISTVERSIONSUFFIX=	-ga8847b7
+DISTVERSION=	0.91
 PORTREVISION=	1
 CATEGORIES=	print elisp
 PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
@@ -25,6 +24,8 @@ USES=		autoreconf:build emacs gettext-runtime gmake gnome magick:7
 USE_GITHUB=	yes
 GH_ACCOUNT=	vedang
 USE_GNOME=	cairo glib20
+
+CONFLICTS_INSTALL=	pdf-tools pdf-tools-emacs_* # bin/epdfinfo
 
 EMACS_FLAVORS_EXCLUDE=	devel_nox nox
 
