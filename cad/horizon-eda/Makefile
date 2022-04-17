@@ -1,11 +1,8 @@
 PORTNAME=	horizon-eda
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.1.0
+DISTVERSION=	2.2.0
 PORTREVISION=	2
 CATEGORIES=	cad
-
-PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES=	0d801d4807cbed405998688b361bf0543207f1b1.patch:-p1 # fixes opencascade-7.6.0 compatibility, see https://github.com/horizon-eda/horizon/issues/623
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	EDA package for printed circuit board design
@@ -38,6 +35,6 @@ MAKE_ARGS=	DEBUGFLAGS= OPTIMIZE=
 BINARY_ALIAS=	python3=${PYTHON_CMD}
 
 post-install: # https://github.com/horizon-eda/horizon/issues/558
-	cd ${STAGEDIR}${PREFIX}/bin && ${STRIP_CMD} horizon-eda
+	@cd ${STAGEDIR}${PREFIX}/bin && ${STRIP_CMD} horizon-imp
 
 .include <bsd.port.mk>
