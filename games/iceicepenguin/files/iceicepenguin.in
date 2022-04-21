@@ -1,4 +1,0 @@
-#!/bin/sh
-
-cd "%%DATADIR%%"
-exec %%PYTHON_CMD%% ./iceicepengui.py "${@}"

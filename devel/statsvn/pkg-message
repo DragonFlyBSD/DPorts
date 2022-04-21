@@ -1,7 +1,0 @@
-[
-{ type: install
-  message: <<EOM
-Manual: https://wiki.statsvn.org/User%20Manual.ashx
-EOM
-}
-]

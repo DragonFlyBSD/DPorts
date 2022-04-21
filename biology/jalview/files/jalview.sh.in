@@ -1,3 +1,0 @@
-#!/bin/sh
-
-%%JAVA%% -classpath %%DATADIR%% -jar %%DATADIR%%/jalview.jar jalview.bin.Jalview

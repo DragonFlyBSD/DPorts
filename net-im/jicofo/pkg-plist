@@ -1,3 +1,0 @@
-@sample %%ETCDIR%%/jicofo.conf.sample
-%%JAVAJARDIR%%/jicofo.jar
-%%DATADIR%%/lib/logging.properties
