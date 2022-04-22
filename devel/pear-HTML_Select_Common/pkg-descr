@@ -1,0 +1,10 @@
+Provides <select> lists for:
+- Country
+- UK counties
+- US States
+- FR Departments
+- NO Fylke
+- NO Kommuner
+- ptBR
+
+WWW: https://pear.php.net/package/HTML_Select_Common
