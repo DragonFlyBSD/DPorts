@@ -1,0 +1,3 @@
+USES+=	gmake
+
+RUN_DEPENDS:=	${RUN_DEPENDS:N*bsdisks}
