@@ -1,0 +1,20 @@
+--- src/3rdparty/chromium/build/config/compiler/BUILD.gn.orig	2021-01-24 18:55:11 UTC
++++ src/3rdparty/chromium/build/config/compiler/BUILD.gn
+@@ -1497,7 +1497,6 @@ config("default_warnings") {
+       cflags_cc += [ "-Wno-subobject-linkage" ]
+       cflags_cc += [ "-Wno-invalid-offsetof" ]
+       cflags_cc += [ "-Wno-return-type" ]
+-      cflags_cc += [ "-Wno-deprecated-copy" ]
+     }
+   }
+ 
+@@ -1558,9 +1557,6 @@ config("default_warnings") {
+           # TODO(https://crbug.com/1016945) Clean up, enable.
+           "-Wno-builtin-assume-aligned-alignment",
+ 
+-          # TODO(https://crbug.com/1028110): Evaluate and possible enable.
+-          "-Wno-deprecated-copy",
+-
+           # TODO(https://crbug.com/1050281): Clean up, enable.
+           "-Wno-non-c-typedef-for-linkage",
+ 

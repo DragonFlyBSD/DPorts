@@ -1,0 +1,14 @@
+--- src/3rdparty/chromium/third_party/usrsctp/BUILD.gn.intermediate	2019-06-26 15:12:03 UTC
++++ src/3rdparty/chromium/third_party/usrsctp/BUILD.gn
+@@ -123,9 +123,9 @@ static_library("usrsctp") {
+     ]
+   } else if (is_bsd) {
+     defines += [
+-      "__Userspace_os_FreeBSD",
++      "__Userspace_os_DragonFly",
++      "HAVE_SYS_QUEUE_H",
+     ]
+-    cflags += [ "-U__FreeBSD__" ]
+   } else if (is_mac || is_ios) {
+     defines += [
+       "HAVE_SA_LEN",

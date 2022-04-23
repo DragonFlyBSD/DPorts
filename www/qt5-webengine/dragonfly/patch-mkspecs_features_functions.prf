@@ -1,0 +1,18 @@
+--- mkspecs/features/functions.prf.orig	2020-04-21 10:57:34 UTC
++++ mkspecs/features/functions.prf
+@@ -75,6 +75,7 @@ defineReplace(gnArgs) {
+     linux: include($$QTWEBENGINE_ROOT/src/buildtools/config/linux.pri)
+     macos: include($$QTWEBENGINE_ROOT/src/buildtools/config/mac_osx.pri)
+     win32: include($$QTWEBENGINE_ROOT/src/buildtools/config/windows.pri)
++    dragonfly: include($$QTWEBENGINE_ROOT/src/core/config/dragonfly.pri)
+     freebsd: include($$QTWEBENGINE_ROOT/src/buildtools/config/freebsd.pri)
+     isEmpty(gn_args): error(No gn_args found please make sure you have valid configuration.)
+     return($$gn_args)
+@@ -96,6 +97,7 @@ defineReplace(gnOS) {
+     macos: return(mac)
+     win32: return(win)
+     linux: return(linux)
++    dragonfly: return(freebsd)
+     freebsd: return(freebsd)
+     error(Unsupported platform)
+     return(unknown)
