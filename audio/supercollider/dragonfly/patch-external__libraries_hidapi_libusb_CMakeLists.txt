@@ -1,0 +1,14 @@
+--- external_libraries/hidapi/libusb/CMakeLists.txt.orig	2016-09-18 21:51:04 UTC
++++ external_libraries/hidapi/libusb/CMakeLists.txt
+@@ -18,9 +18,9 @@ message(STATUS "    libusb" )
+ find_package( libusb-1.0 )
+ 
+ ## NOT TESTED:
+-IF(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
++IF(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD|DragonFly")
+   find_package( IConv )
+-ENDIF(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
++ENDIF(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD|DragonFly")
+ 
+ #TODO: ADD ICONV
+ # set( hidapi_INCLUDE_DIRS ${LIBUSB_1_INCLUDE_DIRS} ${hidapi_SOURCE_DIR}/hidapi/ ${PTHREADS_INCLUDE_DIR})
