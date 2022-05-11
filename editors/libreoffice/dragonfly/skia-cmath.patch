@@ -1,16 +1,16 @@
---- skia/src/sksl/dsl/DSLExpression.cpp.orig	2021-03-01 14:53:20 UTC
+--- skia/src/sksl/dsl/DSLExpression.cpp.orig	2021-11-25 15:00:28 UTC
 +++ skia/src/sksl/dsl/DSLExpression.cpp
-@@ -41,10 +41,10 @@ DSLExpression::DSLExpression(float value
-     : fExpression(std::make_unique<SkSL::FloatLiteral>(DSLWriter::Context(),
-                                                        /*offset=*/-1,
-                                                        value)) {
+@@ -45,10 +45,10 @@ DSLExpression::DSLExpression(float value
+     : fExpression(SkSL::Literal::MakeFloat(ThreadContext::Context(),
+                                            pos.line(),
+                                            value)) {
 -    if (!isfinite(value)) {
 -        if (isinf(value)) {
 +    if (!std::isfinite(value)) {
-+        if (std::isinf(value)) {
-             DSLWriter::ReportError("error: floating point value is infinite\n");
++	if (std::isinf(value)) {
+             ThreadContext::ReportError("floating point value is infinite");
 -        } else if (isnan(value)) {
 +        } else if (std::isnan(value)) {
-             DSLWriter::ReportError("error: floating point value is NaN\n");
+             ThreadContext::ReportError("floating point value is NaN");
          }
      }

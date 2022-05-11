@@ -1,0 +1,14 @@
+--- external/pdfium/pdfium-dragonfly.patch.orig	2022-05-10 09:53:31 UTC
++++ external/pdfium/pdfium-dragonfly.patch
+@@ -0,0 +1,11 @@
++--- ./core/fpdfapi/page/cpdf_psengine.cpp.orig	2021-11-09 20:48:16 UTC
+++++ ./core/fpdfapi/page/cpdf_psengine.cpp
++@@ -74,7 +74,7 @@ constexpr PDF_PSOpName kPsOpNames[] = {
++ // Round half up is a nearest integer round with half-way numbers always rounded
++ // up. Example: -5.5 rounds to -5.
++ float RoundHalfUp(float f) {
++-  if (isnan(f))
+++  if (std::isnan(f))
++     return 0;
++   if (f > std::numeric_limits<float>::max() - 0.5f)
++     return std::numeric_limits<float>::max();
