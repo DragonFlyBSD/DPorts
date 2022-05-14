@@ -1,9 +1,9 @@
---- CMakeLists.txt.orig	2021-10-04 09:50:18 UTC
+--- CMakeLists.txt.orig	2021-12-17 13:40:54 UTC
 +++ CMakeLists.txt
-@@ -196,7 +196,7 @@ else()
-     if (NOT "${CMAKE_SYSTEM_PROCESSOR}" MATCHES "mips")
-         add_subdirectory(src/tbbmalloc)
-         add_subdirectory(src/tbbmalloc_proxy)
+@@ -202,7 +202,7 @@ else()
+             add_subdirectory(src/tbbmalloc)
+             add_subdirectory(src/tbbmalloc_proxy)
+         endif()
 -        if (APPLE)
 +        if (APPLE OR ${CMAKE_SYSTEM_NAME} STREQUAL "DragonFly")
              message(STATUS "TBBBind build targets are disabled due to unsupported environment")
