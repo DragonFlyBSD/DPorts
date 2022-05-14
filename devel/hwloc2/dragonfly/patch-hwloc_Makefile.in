@@ -1,14 +1,14 @@
---- hwloc/Makefile.in.orig	2022-02-01 15:21:07.707322000 +0100
-+++ hwloc/Makefile.in	2022-02-01 15:32:40.551356000 +0100
-@@ -125,6 +125,7 @@
- @HWLOC_HAVE_WINDOWS_TRUE@am__append_24 = topology-windows.c
+--- hwloc/Makefile.in.orig	2022-05-14 17:18:32 UTC
++++ hwloc/Makefile.in
+@@ -126,6 +126,7 @@ target_triplet = @target@
  @HWLOC_HAVE_DARWIN_TRUE@am__append_25 = topology-darwin.c
- @HWLOC_HAVE_FREEBSD_TRUE@am__append_26 = topology-freebsd.c
+ @HWLOC_HAVE_DARWIN_TRUE@am__append_26 = $(HWLOC_DARWIN_LDFLAGS)
+ @HWLOC_HAVE_FREEBSD_TRUE@am__append_27 = topology-freebsd.c
 +am__append_26 = topology-dragonfly.c
- @HWLOC_HAVE_NETBSD_TRUE@am__append_27 = topology-netbsd.c
- @HWLOC_HAVE_NETBSD_TRUE@am__append_28 = -lpthread
- @HWLOC_HAVE_X86_CPUID_TRUE@am__append_29 = topology-x86.c
-@@ -288,7 +289,7 @@
+ @HWLOC_HAVE_NETBSD_TRUE@am__append_28 = topology-netbsd.c
+ @HWLOC_HAVE_NETBSD_TRUE@am__append_29 = -lpthread
+ @HWLOC_HAVE_X86_CPUID_TRUE@am__append_30 = topology-x86.c
+@@ -288,7 +289,7 @@ am__libhwloc_la_SOURCES_DIST = topology.
  	topology-solaris-chiptype.c topology-linux.c \
  	topology-hardwired.c topology-bgq.c topology-aix.c \
  	topology-hpux.c topology-windows.c topology-darwin.c \
@@ -17,7 +17,7 @@
  @HWLOC_HAVE_LIBXML2_TRUE@@HWLOC_XML_LIBXML_BUILD_STATIC_TRUE@am__objects_1 = topology-xml-libxml.lo
  @HWLOC_HAVE_PCIACCESS_TRUE@@HWLOC_PCI_BUILD_STATIC_TRUE@am__objects_2 = topology-pci.lo
  @HWLOC_HAVE_OPENCL_TRUE@@HWLOC_OPENCL_BUILD_STATIC_TRUE@am__objects_3 = topology-opencl.lo
-@@ -307,6 +308,7 @@
+@@ -307,6 +308,7 @@ am__libhwloc_la_SOURCES_DIST = topology.
  @HWLOC_HAVE_WINDOWS_TRUE@am__objects_14 = topology-windows.lo
  @HWLOC_HAVE_DARWIN_TRUE@am__objects_15 = topology-darwin.lo
  @HWLOC_HAVE_FREEBSD_TRUE@am__objects_16 = topology-freebsd.lo
@@ -25,7 +25,7 @@
  @HWLOC_HAVE_NETBSD_TRUE@am__objects_17 = topology-netbsd.lo
  @HWLOC_HAVE_X86_CPUID_TRUE@am__objects_18 = topology-x86.lo
  am__objects_19 = topology.lo traversal.lo distances.lo memattrs.lo \
-@@ -336,7 +338,7 @@
+@@ -336,7 +338,7 @@ am__libhwloc_embedded_la_SOURCES_DIST =
  	topology-solaris-chiptype.c topology-linux.c \
  	topology-hardwired.c topology-bgq.c topology-aix.c \
  	topology-hpux.c topology-windows.c topology-darwin.c \
