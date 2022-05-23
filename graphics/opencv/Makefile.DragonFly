@@ -1,5 +1,3 @@
-USES:=	${USES:Ncmake*} cmake:noninja
-
 CMAKE_OFF+=	WITH_IPP BUILD_IPP_IW
 
 dfly-patch:
@@ -8,4 +6,7 @@ dfly-patch:
 		${WRKSRC}/modules/dnn/src/vkcom/vulkan/vk_loader.cpp \
 		${WRKSRC}/modules/videoio/src/backend_plugin.cpp \
 		${WRKSRC}/modules/core/src/parallel.cpp \
+		${WRKSRC}/modules/core/src/utils/filesystem.cpp \
+		${WRKSRC}/modules/core/include/opencv2/core/utils/filesystem.private.hpp \
+		${WRKSRC}/modules/core/include/opencv2/core/utils/plugin_loader.private.hpp \
 		${WRKSRC}/modules/core/src/system.cpp
