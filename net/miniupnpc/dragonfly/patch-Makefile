@@ -1,11 +1,11 @@
---- Makefile.intermediate	2018-06-05 22:52:54 UTC
+--- Makefile.orig	2022-05-23 19:05:34 UTC
 +++ Makefile
-@@ -41,7 +41,7 @@ CFLAGS += -D_DEFAULT_SOURCE
+@@ -52,7 +52,7 @@ CPPFLAGS += -D_DEFAULT_SOURCE
  ifneq (, $(findstring netbsd, $(OS)))
- CFLAGS += -D_NETBSD_SOURCE
+ CPPFLAGS += -D_NETBSD_SOURCE
  endif
 -ifeq (, $(findstring freebsd, $(OS))$(findstring darwin, $(OS)))
 +ifeq (, $(findstring freebsd, $(OS))$(findstring dragonfly, $(OS)))
- #CFLAGS += -D_POSIX_C_SOURCE=200112L
- CFLAGS += -D_XOPEN_SOURCE=600
+ #CPPFLAGS += -D_POSIX_C_SOURCE=200112L
+ CPPFLAGS += -D_XOPEN_SOURCE=600
  endif
