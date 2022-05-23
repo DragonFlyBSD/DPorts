@@ -1,6 +1,6 @@
 PORTNAME=	coq
 PORTVERSION=	8.6
-PORTREVISION=	8
+PORTREVISION=	10
 PORTEPOCH=	3
 CATEGORIES=	math
 MASTER_SITES=	http://coq.inria.fr/distrib/V${PORTVERSION}/files/ \
@@ -35,6 +35,8 @@ CONFIGURE_ARGS=	-prefix ${PREFIX} \
 		-byteonly
 MAKE_ENV=	VERBOSE=1
 ALL_TARGET=	world
+
+CONFLICTS_INSTALL=	coq coq-emacs_* # bin/coq-tex bin/coq_makefile bin/coqc bin/coqchk bin/coqdep bin/coqdoc bin/coqide bin/coqmktop bin/coqtop bin/coqtop.byte bin/coqwc bin/coqworkmgr bin/gallina
 
 OPTIONS_DEFINE=		DOCS IDE
 OPTIONS_DEFAULT=	IDE
