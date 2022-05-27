@@ -1,6 +1,6 @@
---- meson.build.orig	2021-12-01 09:51:11 UTC
+--- meson.build.orig	2022-03-01 09:08:21 UTC
 +++ meson.build
-@@ -621,7 +621,7 @@ if host_machine.system() == 'linux'
+@@ -618,7 +618,7 @@ if host_machine.system() == 'linux'
    headers += 'linux/devlink.h'
  endif
  
@@ -9,7 +9,7 @@
    headers += 'libutil.h'
  endif
  
-@@ -702,9 +702,9 @@ endforeach
+@@ -699,9 +699,9 @@ endforeach
  brd_required_headers = '''#include <stdint.h>
  #include <net/if.h>
  #include <net/ethernet.h>'''
@@ -22,8 +22,8 @@
    conf.set('WITH_BSD_BRIDGE_MGMT', 1)
  endif
  
-@@ -796,7 +796,7 @@ required_programs_groups = [
-   { 'name': 'rst2man', 'prog': [ 'rst2man', 'rst2man.py', 'rst2man-3' ] },
+@@ -791,7 +791,7 @@ required_programs_groups = [
+   { 'name': 'rpcgen', 'prog': [ 'rpcgen', 'portable-rpcgen' ] },
  ]
  
 -if host_machine.system() == 'freebsd'
@@ -31,16 +31,16 @@
    required_programs += 'ifconfig'
  endif
  
-@@ -890,7 +890,7 @@ if host_machine.system() == 'windows'
-   xdr_dep = cc.find_library('portablexdr', required: false)
- elif host_machine.system() == 'linux'
-   xdr_dep = dependency('libtirpc', required: false)
--elif host_machine.system() in [ 'freebsd', 'darwin' ]
-+elif host_machine.system() in [ 'freebsd', 'darwin', 'dragonfly' ]
-   xdr_dep = cc.find_library('c', required: false)
- else
-   xdr_dep = dependency('', required: false)
-@@ -1021,7 +1021,7 @@ gnutls_version = '3.2.0'
+@@ -855,7 +855,7 @@ if not get_option('driver_remote').disab
+     xdr_dep = cc.find_library('portablexdr', required: get_option('driver_remote'))
+   elif host_machine.system() == 'linux'
+     xdr_dep = dependency('libtirpc', required: get_option('driver_remote'))
+-  elif host_machine.system() in [ 'freebsd', 'darwin' ]
++  elif host_machine.system() in [ 'freebsd', 'darwin', 'dragonfly' ]
+     xdr_dep = cc.find_library('c', required: get_option('driver_remote'))
+   else
+     xdr_dep = dependency('', required: false)
+@@ -980,7 +980,7 @@ gnutls_version = '3.2.0'
  gnutls_dep = dependency('gnutls', version: '>=' + gnutls_version)
  
  # Check for BSD kvm (kernel memory interface)
@@ -49,12 +49,3 @@
    libkvm_dep = cc.find_library('kvm')
  else
    libkvm_dep = dependency('', required: false)
-@@ -1693,7 +1693,7 @@ if not get_option('driver_qemu').disable
-     endif
-     conf.set_quoted('QEMU_DATADIR', qemu_datadir)
- 
--    if host_machine.system() in [ 'freebsd', 'darwin' ]
-+    if host_machine.system() in [ 'freebsd', 'darwin', 'dragonfly' ]
-       default_qemu_user = 'root'
-       default_qemu_group = 'wheel'
-     else
