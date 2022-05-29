@@ -1,0 +1,2 @@
+post-stage:
+	@${RMDIR} ${STAGEDIR}/${DOCSDIR}/comm

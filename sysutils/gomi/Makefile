@@ -3,9 +3,10 @@
 PORTNAME=	gomi
 PORTVERSION=	1.1.1
 DISTVERSIONPREFIX=	v
+PORTREVISION=	1
 CATEGORIES=	sysutils
 
-MAINTAINER=	danfe@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Unix rm(1) command that can restore deleted files
 
 LICENSE=	MIT
@@ -13,7 +14,6 @@ LICENSE=	MIT
 USES=		go:modules
 USE_GITHUB=	yes
 GH_ACCOUNT=	b4b4r07
-
 GH_TUPLE=	\
 		b4b4r07:go-cli-log:8fac4d71de01:b4b4r07_go_cli_log/vendor/github.com/b4b4r07/go-cli-log \
 		chzyer:readline:2972be24d48e:chzyer_readline/vendor/github.com/chzyer/readline \

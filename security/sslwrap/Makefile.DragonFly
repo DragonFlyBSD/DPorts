@@ -1,8 +1,0 @@
-
-.if ${PORTVERSION} == 2.0.6
-USES:=	${USES:Nssl}
-BUILD_DEPENDS+=	libressl-static>0:security/libressl-static
-MAKE_ARGS+=	OPENSSLINC=${LOCALBASE}/libressl-static/include \
-		OPENSSLLIB=${LOCALBASE}/libressl-static/lib \
-		OPENSSL=${LOCALBASE}/libressl-static
-.endif

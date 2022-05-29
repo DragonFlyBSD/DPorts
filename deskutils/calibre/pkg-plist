@@ -1010,7 +1010,6 @@ lib/calibre/calibre/gui2/store/stores/virtualo_plugin.py
 lib/calibre/calibre/gui2/store/stores/weightless_books_plugin.py
 lib/calibre/calibre/gui2/store/stores/woblink_plugin.py
 lib/calibre/calibre/gui2/store/stores/wolnelektury_plugin.py
-lib/calibre/calibre/gui2/store/stores/xinxii_plugin.py
 lib/calibre/calibre/gui2/store/web_store.py
 lib/calibre/calibre/gui2/store/web_store_dialog.py
 lib/calibre/calibre/gui2/tag_browser/__init__.py
@@ -1183,6 +1182,8 @@ lib/calibre/calibre/plugins/unicode_names.so
 lib/calibre/calibre/prints.py
 lib/calibre/calibre/ptempfile.py
 lib/calibre/calibre/rpdb.py
+lib/calibre/calibre/scraper/__init__.py
+lib/calibre/calibre/scraper/simple.py
 lib/calibre/calibre/spell/__init__.py
 lib/calibre/calibre/spell/break_iterator.py
 lib/calibre/calibre/spell/dictionary.py
@@ -1332,6 +1333,7 @@ lib/calibre/calibre/utils/serialize.py
 lib/calibre/calibre/utils/seven_zip.py
 lib/calibre/calibre/utils/shared_file.py
 lib/calibre/calibre/utils/short_uuid.py
+lib/calibre/calibre/utils/shm.py
 lib/calibre/calibre/utils/smartypants.py
 lib/calibre/calibre/utils/smtp.py
 lib/calibre/calibre/utils/smtplib.py
@@ -1512,6 +1514,7 @@ lib/calibre/tinycss/version.py
 %%DATADIR%%/hyphenation/dictionaries.tar.xz
 %%DATADIR%%/hyphenation/locales.json
 %%DATADIR%%/hyphenation/sha1sum
+%%DATADIR%%/icons.rcc
 %%DATADIR%%/images.qrc
 %%DATADIR%%/images/add_book.png
 %%DATADIR%%/images/apple-touch-icon.png
@@ -1803,6 +1806,7 @@ lib/calibre/tinycss/version.py
 %%DATADIR%%/quick_start/swe.epub
 %%DATADIR%%/quick_start/tur.epub
 %%DATADIR%%/rapydscript/compiler.js.xz
+%%DATADIR%%/scraper.js
 %%DATADIR%%/scripts.calibre_msgpack
 %%DATADIR%%/template-functions.json
 %%DATADIR%%/templates/book_details.css

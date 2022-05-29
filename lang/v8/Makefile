@@ -1,8 +1,8 @@
 # We follow the stable channel on https://omahaproxy.appspot.com/
-# https://chromium.googlesource.com/v8/v8/+/refs/heads/9.6-lkgr
+# https://chromium.googlesource.com/v8/v8/+/refs/heads/9.9-lkgr
 
 PORTNAME=	v8
-PORTVERSION=	9.6.180.12
+PORTVERSION=	9.9.115.10
 CATEGORIES=	lang
 MASTER_SITES=	LOCAL/sunpoet/v8/${PORTVERSION:R:R}
 DISTFILES=	v8-${PORTVERSION}.tar.gz \
@@ -13,14 +13,16 @@ DISTFILES=	v8-${PORTVERSION}.tar.gz \
 		googletest-${GOOGLETEST_REV}.tar.gz \
 		icu-${ICU_REV}.tar.gz \
 		zlib-${ZLIB_REV}.tar.gz
-EXTRACT_ONLY=	${DISTNAME}.tar.gz
 DIST_SUBDIR=	v8/${PORTVERSION:R:R}
+EXTRACT_ONLY=	${DISTNAME}.tar.gz
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Open source JavaScript engine by Google
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+ONLY_FOR_ARCHS=	aarch64 amd64 i386
 
 BUILD_DEPENDS=	binutils>=0:devel/binutils \
 		gn:devel/gn \
@@ -37,19 +39,17 @@ USE_LDCONFIG=	yes
 
 SUB_FILES=	v8.pc v8_libbase.pc v8_libplatform.pc
 
-#USE_GITHUB=	yes
-
 CPE_VENDOR=	google
 
 CONFLICTS_INSTALL=	v8-beta
 
-BUILD_REV=	ebad8533842661f66b9b905e0ee9890a32f628d5
-BUILDTOOLS_REV=	a9bc3e283182a586998338a665c7eae17406ec54
-CLANG_REV=	c06edd1f455183fc89e9f8c2cf745db8f564d8ea
-COMMON_REV=	68d816952258c9d817bba656ee2664b35507f01b
-GOOGLETEST_REV=	3b49be074d5c1340eeb447e6a8e78427051e675a
-ICU_REV=	3f443830bd52d3aa5fab3c1aa2b6d0848bb5039d
-ZLIB_REV=	dfa96e81458fb3b39676e45f7e9e000dff789b05
+BUILD_REV=	f3be6e847f004923466a350274aae3fbf048c19c
+BUILDTOOLS_REV=	f78b4b9f33bd8ef9944d5ce643daff1c31880189
+CLANG_REV=	df50898d39a35c2467fa89f8d7a6eedac1fd6aa4
+COMMON_REV=	7f36dbc19d31e2aad895c60261ca8f726442bfbb
+GOOGLETEST_REV=	c9643a2e45ed0cb18b8409c62994be7c6e66dc1b
+ICU_REV=	b9f6d0a5c5375dc4643f35360d257dba37c1d3e1
+ZLIB_REV=	fc5cfd78a357d5bb7735a58f383634faaafe706a
 
 # Run "gn args --list out/Release" for all variables.
 # Some parts don't have use_system_* flag, and can be turned on/off by using
@@ -78,7 +78,7 @@ post-extract:
 post-patch:
 	@${REINPLACE_CMD} -i '' 's|%%LOCALBASE%%|${LOCALBASE}|' ${WRKSRC}/build/toolchain/gcc_toolchain.gni ${WRKSRC}/buildtools/third_party/libc++/BUILD.gn
 	# https://github.com/klzgrad/naiveproxy/blob/master/src/build/config/gclient_args.gni
-	${ECHO_CMD} 'checkout_google_benchmark = false' > ${WRKSRC}/build/config/gclient_args.gni
+	@${ECHO_CMD} 'checkout_google_benchmark = false' > ${WRKSRC}/build/config/gclient_args.gni
 
 # Use ICU from ports and create needed directory
 pre-configure:

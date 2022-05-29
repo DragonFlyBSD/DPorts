@@ -1,7 +1,7 @@
 # Created by: Alexander Logvinov <avl@FreeBSD.org>
 
 PORTNAME=	gobject-introspection
-DISTVERSION=	1.70.0
+DISTVERSION=	1.72.0
 PORTEPOCH=	1
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
@@ -35,5 +35,8 @@ post-stage:
 		"${STAGEDIR}${PREFIX}/lib/${PORTNAME}"
 	@${PYTHON_CMD} -O -m compileall -d ${PREFIX}/lib/${PORTNAME} \
 		"${STAGEDIR}${PREFIX}/lib/${PORTNAME}"
+
+post-install:
+	@${RM} ${STAGEDIR}${PREFIX}/lib/gobject-introspection/giscanner/doctemplates/*/meson.build*
 
 .include <bsd.port.mk>

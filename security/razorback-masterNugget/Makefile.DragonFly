@@ -1,4 +1,0 @@
-# rzb_nugget.c:329:5: error: this 'for' clause does not guard... [-Werror=misleading-indentation]
-dfly-patch:
-	${REINPLACE_CMD} -e 's/-Werror[[:>:]]//g'	\
-		${WRKSRC}/configure ${WRKSRC}/common_m4/compiler_options.m4

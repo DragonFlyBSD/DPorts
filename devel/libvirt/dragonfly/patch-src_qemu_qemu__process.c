@@ -1,4 +1,4 @@
---- src/qemu/qemu_process.c.orig	2021-09-27 22:10:19 UTC
+--- src/qemu/qemu_process.c.orig	2022-03-01 09:08:21 UTC
 +++ src/qemu/qemu_process.c
 @@ -27,7 +27,7 @@
  #include <sys/stat.h>
@@ -9,12 +9,12 @@
  # include <sys/param.h>
  # include <sys/cpuset.h>
  #endif
-@@ -9081,7 +9081,7 @@ qemuProcessQMPLaunch(qemuProcessQMP *pro
-     if (proc->forceTCG)
-         machine = "none,accel=tcg";
-     else
--        machine = "none,accel=kvm:tcg";
-+        machine = "none,accel=nvmm:kvm:tcg";
+@@ -9283,6 +9283,8 @@ qemuProcessQMPInit(qemuProcessQMP *proc)
  
-     VIR_DEBUG("Try to probe capabilities of '%s' via QMP, machine %s",
-               proc->binary, machine);
+ #if defined(__linux__)
+ # define hwaccel "kvm:tcg"
++#elif defined(__DragonFly__)
++# define hwaccel "nvmm:tcg"
+ #elif defined(__APPLE__)
+ # define hwaccel "hvf:tcg"
+ #else

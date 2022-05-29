@@ -1,6 +1,6 @@
 PORTNAME=	mesa
-DISTVERSION=	22.0-branchpoint-2059
-DISTVERSIONSUFFIX=	-ge8a63cf61ec
+DISTVERSION=	22.1-branchpoint-218
+DISTVERSIONSUFFIX=	-g7af76d1aaec
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	-devel
 
@@ -51,7 +51,7 @@ OPTIONS_GROUP_GALLIUM=	crocus iris panfrost r600 radeonsi
 OPTIONS_GROUP_VULKAN=	anv radv
 OPTIONS_EXCLUDE_DragonFly=	LIBUNWIND anv
 OPTIONS_EXCLUDE_i386=	LTO # anv: vkcube fails on vkCreateSwapchainKHR
-OPTIONS_EXCLUDE_powerpc64=	${"${/usr/bin/ld:L:tA}"==/usr/bin/ld.lld:?LTO:} # LLVM bug 47353
+OPTIONS_EXCLUDE_powerpc64=	${"${/usr/bin/ld:L:tA}"==/usr/bin/ld.lld:?LTO:} # https://github.com/llvm/llvm-project/issues/46697
 OPTIONS_EXCLUDE+=	${ARCH:Naarch64:C/.+/panfrost/}
 OPTIONS_EXCLUDE+=	${ARCH:Namd64:Ni386:Nx86_64:C/.+/anv crocus iris/}
 OPTIONS_EXCLUDE+=	${ARCH:Naarch64:Namd64:Ni386:Npowerpc64:Npowerpc64le:Nx86_64:C/.+/LIBUNWIND/}
@@ -90,7 +90,7 @@ LIBUNWIND_LIB_DEPENDS=	libunwind.so:devel/libunwind
 LIBUNWIND_MESON_ENABLED=	libunwind
 
 LLVM_DESC=		Build with LLVM support (see implies)
-LLVM_LIB_DEPENDS=	libLLVM-${LLVM_DEFAULT:C/^([6-9])0/\1/:S/-devel/14git/}.so:devel/llvm${LLVM_DEFAULT}
+LLVM_LIB_DEPENDS=	libLLVM-${LLVM_DEFAULT:C/^([6-9])0/\1/:S/-devel/15git/}.so:devel/llvm${LLVM_DEFAULT}
 LLVM_MESON_ENABLED=	llvm
 LLVM_BINARY_ALIAS=	llvm-config=llvm-config${LLVM_DEFAULT}
 .for i in r600 radeonsi radv

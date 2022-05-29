@@ -4,7 +4,7 @@
 
 PKGNAMESUFFIX=	-qt5-${FLAVOR:U:S/_/-/}
 DISTNAME=	${PORTNAME}-nolang-${DISTVERSION}
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	devel python
 
 BUILD_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}pip>0:devel/py-pip@${PY_FLAVOR} \
@@ -33,8 +33,8 @@ CONFLICTS_INSTALL=	${FLAVORS:N${FLAVOR}:C/^/${PORTNAME}-qt5-/}
 
 USES+=		desktop-file-utils python:3.5+ pyqt:5 shebangfix
 USE_PYTHON=	flavors
-USE_PYQT=	chart core gui qscintilla2 webengine \
-		help_run network_run svg_run sql_run
+USE_PYQT=	qscintilla2 webengine \
+		pyqt5
 INSTALL_PY=	install.py -c -f eric6config.freebsd -i ${STAGEDIR}
 SHEBANG_FILES=	*.py eric/eric6/*.py eric/scripts/*.py
 SUB_FILES=	eric6.desktop

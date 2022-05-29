@@ -1,24 +1,24 @@
---- configure.orig	2020-04-17 19:19:58 UTC
+--- configure.orig	2022-04-15 15:51:59 UTC
 +++ configure
-@@ -4520,7 +4520,7 @@ case $host in
-             CC_DBG_FLAGS_TO_TRY="-gdwarf-2 -g3 -O0"
+@@ -4654,7 +4654,7 @@ case $host in
+             CC_VISIBILITY_FLAGS_TO_TRY="-fvisibility=hidden"
          fi
          ;;
 -        *bsd*)
 +        *bsd*|*dragonfly*)
-         if test $ac_cv_c_compiler_gnu = yes; then
-             CC_OPT_FLAGS_TO_TRY=""
-             CC_DBG_FLAGS_TO_TRY=""
-@@ -10871,7 +10871,7 @@ case $host in
+         if test $GCC = yes; then
+             CC_OPT_FLAGS_TO_TRY="-O2 -DNDEBUG"
+             CC_DBG_FLAGS_TO_TRY="-gdwarf-2 -g3 -O0"
+@@ -11575,7 +11575,7 @@ case $host in
        GPDL_SONAME_MAJOR="lib\$(GPDL${libname3}"
-       GPDL_SONAME_MAJOR_MINOR="lib\$(GPDL${libname2}"
+       GPDL_SONAME_MAJOR_MINOR="cyg\$(GPDL${libname2}"
      ;;
 -    *bsd*)
 +    *bsd*|*dragonfly*)
        DYNAMIC_CFLAGS="-fPIC $DYNAMIC_CFLAGS"
        GS_DYNAMIC_LDFLAGS="-shared -Wl,\$(LD_SET_DT_SONAME)\$(LDFLAGS_SO_PREFIX)\$(GS_SONAME_MAJOR)"
        PCL_DYNAMIC_LDFLAGS="-shared -Wl,\$(LD_SET_DT_SONAME)\$(LDFLAGS_SO_PREFIX)\$(PCL_SONAME_MAJOR)"
-@@ -10969,7 +10969,7 @@ if test "${enable_dynamic+set}" = set; t
+@@ -11685,7 +11685,7 @@ if test "${enable_dynamic+set}" = set; t
          OPT_CFLAGS="$DYNAMIC_CFLAGS $OPT_CFLAGS"
          DBG_CFLAGS="$DYNAMIC_CFLAGS $DBG_CFLAGS"
        ;;

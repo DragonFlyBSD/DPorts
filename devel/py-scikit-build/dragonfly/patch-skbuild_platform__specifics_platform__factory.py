@@ -1,11 +1,11 @@
---- skbuild/platform_specifics/platform_factory.py.orig	2020-05-07 08:30:32 UTC
+--- skbuild/platform_specifics/platform_factory.py.orig	2022-02-07 18:51:43 UTC
 +++ skbuild/platform_specifics/platform_factory.py
-@@ -17,7 +17,7 @@ def get_platform():
-         from . import linux
-         return linux.LinuxPlatform()
+@@ -21,7 +21,7 @@ def get_platform():
+         from . import osx
+         return osx.OSXPlatform()
  
--    elif this_platform == "freebsd":
-+    elif this_platform == "freebsd" or this_platform == "dragonfly":
+-    elif this_platform in {"freebsd", "os400", "openbsd"}:
++    elif this_platform in {"freebsd", "os400", "openbsd", "dragonfly"}:
          from . import bsd
          return bsd.BSDPlatform()
  

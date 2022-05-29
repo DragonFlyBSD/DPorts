@@ -1,12 +1,16 @@
 PORTNAME=		afni
 DISTVERSIONPREFIX=	AFNI_
-DISTVERSION=		21.3.16
+DISTVERSION=		22.0.21
+PORTREVISION=	2
 CATEGORIES=		science biology graphics perl5 python
 
 MAINTAINER=	fernape@FreeBSD.org
 COMMENT=	Advanced Functional Neuro Imaging
 
 LICENSE=	GPLv2
+
+BROKEN_aarch64=	fails to build: statement requires expression of scalar type \
+		('va_list' (aka '__builtin_va_list') invalid)
 
 CRAN_DEPENDS=	R-cran-lme4>0:math/R-cran-lme4 \
 		R-cran-snow>0:science/R-cran-snow \

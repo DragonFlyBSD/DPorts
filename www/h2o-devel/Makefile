@@ -24,7 +24,7 @@ USE_GITHUB=	yes
 USE_LDCONFIG=	yes
 GH_TAGNAME=	dcc7134
 
-CONFLICTS=	h2o-2*
+CONFLICTS=	h2o
 
 SHEBANG_FILES=	share/h2o/start_server
 

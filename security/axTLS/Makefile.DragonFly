@@ -1,3 +1,0 @@
-
-# avoid doxygen dep for now
-OPTIONS_EXCLUDE+=	DOCS

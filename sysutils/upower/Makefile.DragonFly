@@ -1,3 +1,0 @@
-# DPorts Issue #137
-
-CONFIGURE_ARGS+=	--with-backend=freebsd

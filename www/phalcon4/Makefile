@@ -1,6 +1,6 @@
 PORTNAME=	phalcon
 DISTVERSIONPREFIX=	v
-DISTVERSION=	4.1.1
+DISTVERSION=	4.1.3
 CATEGORIES=	www
 PKGNAMEPREFIX=	${PHP_PKGNAMEPREFIX}
 PKGNAMESUFFIX=	4
@@ -10,6 +10,9 @@ COMMENT=	Phalcon PHP Framework written in C-language
 
 LICENSE=	BSD3CLAUSE
 
+DEPRECATED=Requires php 7.4 which is set to expire on 2022-11-29
+EXPIRATION_DATE=2022-11-28
+
 ONLY_FOR_ARCHS=	aarch64 amd64 armv6 armv7 i386 powerpc powerpc64 powerpc64le riscv64
 
 RUN_DEPENDS=	${PHPBASE}/lib/php/${PHP_EXT_DIR}/psr.so:devel/pecl-psr@${PHP_FLAVOR}
@@ -18,8 +21,8 @@ USES=		localbase php:ext
 USE_GITHUB=	yes
 GH_PROJECT=	c${PORTNAME}
 
-USE_PHP=	hash:build json:build mbstring pdo:build session
-IGNORE_WITH_PHP=	80
+USE_PHP=	json:build mbstring pdo:build session
+IGNORE_WITH_PHP=	80 81
 PHP_MOD_PRIO=	30
 
 CONFIGURE_ARGS=	--enable-phalcon

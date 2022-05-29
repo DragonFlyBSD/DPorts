@@ -2,6 +2,7 @@
 
 PORTNAME=	gcc
 PORTVERSION=	10.3.1.s20211008
+PORTREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	GCC/snapshots/${DIST_VERSION}
 PKGNAMESUFFIX=	${SUFFIX}-devel
@@ -13,6 +14,8 @@ COMMENT=	GNU Compiler Collection 10
 LICENSE=	GPLv3 GPLv3RLE
 LICENSE_COMB=	multi
 
+DEPRECATED=	Not serving its purpose any longer due to lack of maintenance
+EXPIRATION_DATE=2022-04-17
 ONLY_FOR_ARCHS=	aarch64 amd64 arm armv6 armv7 i386 powerpc powerpc64 powerpc64le
 
 LIB_DEPENDS=	libgmp.so:math/gmp \
@@ -28,7 +31,7 @@ USES=		compiler cpe gmake iconv libtool makeinfo perl5 tar:xz
 USE_BINUTILS=	yes
 USE_PERL5=	build
 
-CONFLICTS=	gcc10-10.*
+CONFLICTS=	gcc10
 
 CPE_VENDOR=	gnu
 CPE_VERSION=	${GCC_VERSION}

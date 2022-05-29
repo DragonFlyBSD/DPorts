@@ -1,14 +1,14 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
 
 PORTNAME=	gedit-plugins
-PORTVERSION=	40.1
-PORTREVISION=	1
+PORTVERSION=	41.0
+PORTREVISION=	2
 CATEGORIES=	editors gnome
 MASTER_SITES=	GNOME/sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+)\..*/\1/}
 DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	Plugins for GEdit 3
+COMMENT=	Plugins for GEdit
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

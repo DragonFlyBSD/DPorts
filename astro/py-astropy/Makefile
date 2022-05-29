@@ -1,7 +1,7 @@
 # Created by: nwhitehorn
 
 PORTNAME=	astropy
-DISTVERSION=	5.0
+DISTVERSION=	5.0.2
 PORTEPOCH=	2
 CATEGORIES=	astro
 MASTER_SITES=	CHEESESHOP
@@ -22,5 +22,7 @@ RUN_DEPENDS=	${PYNUMPY} \
 
 USES=		compiler:c11 python:3.8+
 USE_PYTHON=	autoplist cython distutils
+
+CONFLICTS_INSTALL=	p5-Data-ShowTable # bin/showtable
 
 .include <bsd.port.mk>

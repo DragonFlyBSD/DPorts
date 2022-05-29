@@ -1,4 +1,0 @@
-
-dfly-patch:
-	${REINPLACE_CMD} -e 's@-Wall@& -Wno-stringop-truncation -Wno-format-truncation @g'\
-		${WRKSRC}/src/Makefile.in

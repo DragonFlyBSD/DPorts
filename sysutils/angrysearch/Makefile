@@ -2,6 +2,7 @@
 
 PORTNAME=	${GH_PROJECT:tl}
 PORTVERSION=	1.0.3
+PORTREVISION=	1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	sysutils python
 
@@ -19,7 +20,7 @@ GH_PROJECT=	ANGRYsearch
 
 USES=		python pyqt:5
 USE_PYTHON=	autoplist distutils noflavors
-USE_PYQT=	core_run gui_run widgets_run
+USE_PYQT=	pyqt5_run
 
 post-patch:
 	@${REINPLACE_CMD} -e 's,Linux,${OPSYS}, ; s,linux,${OPSYS:tl}, \

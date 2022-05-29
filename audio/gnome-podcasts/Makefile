@@ -1,8 +1,11 @@
 PORTNAME=	podcasts
 DISTVERSION=	0.5.1
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	audio
 PKGNAMEPREFIX=	gnome-
+
+PATCH_SITES=	${GL_SITE}/${GL_ACCOUNT}/${GL_PROJECT}/-/commit/
+PATCHFILES+=	6614bb62ecbe.patch:-p1 # https://gitlab.gnome.org/World/podcasts/-/merge_requests/213
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Podcast app for GNOME

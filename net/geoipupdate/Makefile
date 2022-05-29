@@ -1,8 +1,9 @@
 # Created by: adamw
 
 PORTNAME=	geoipupdate
-PORTVERSION=	4.8.0
+PORTVERSION=	4.9.0
 DISTVERSIONPREFIX=	v
+PORTREVISION=	1
 CATEGORIES=	net geography
 
 MAINTAINER=	adamw@FreeBSD.org

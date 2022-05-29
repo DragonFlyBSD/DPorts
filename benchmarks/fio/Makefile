@@ -1,9 +1,9 @@
 # Created by: luigi@FreeBSD.org
 
 PORTNAME=	fio
-PORTVERSION=	3.29
+PORTVERSION=	3.30
 CATEGORIES=	benchmarks
-MASTER_SITES=	http://brick.kernel.dk/snaps/
+MASTER_SITES=	https://brick.kernel.dk/snaps/
 
 MAINTAINER=	krion@FreeBSD.org
 COMMENT=	Flexible IO tester
@@ -20,6 +20,8 @@ OPTIONS_DEFINE=	EXAMPLES GNUPLOT
 GNUPLOT_DESC=	Support for plotting graphs
 
 GNUPLOT_BUILD_DEPENDS=	${LOCALBASE}/bin/gnuplot:math/gnuplot
+
+CONFLICTS_INSTALL=	py*-Fiona
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/fio ${STAGEDIR}${PREFIX}/bin

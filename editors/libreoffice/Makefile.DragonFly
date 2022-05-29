@@ -20,6 +20,7 @@ REPLACE_LIST= \
 	external/redland/ExternalProject_rasqal.mk \
 	external/redland/ExternalProject_redland.mk \
 	external/xmlsec/ExternalProject_xmlsec.mk \
+	external/pdfium/pdfium-bsd.patch \
 	include/osl/endian.h \
 	solenv/bin/modules/installer/parameter.pm \
 	soltools/mkdepend/main.c \

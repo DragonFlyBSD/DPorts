@@ -2,7 +2,7 @@
 
 PORTNAME=	instabot
 PORTVERSION=	0.117.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -11,9 +11,6 @@ MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Instagram bot scripts and API wrapper
 
 LICENSE=	APACHE20
-
-DEPRECATED=	Depends on expired devel/py-decorator4
-EXPIRATION_DATE=2022-03-31
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}certifi>=2019.11.28:security/py-certifi@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}chardet>=3.0.4,1:textproc/py-chardet@${PY_FLAVOR} \

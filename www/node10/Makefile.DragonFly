@@ -1,6 +1,0 @@
-OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NDTRACE} BUNDLED_SSL
-CONFIGURE_ARGS+=	--openssl-no-asm
-
-dfly-patch:
-	${REINPLACE_CMD} -e '/x64/s@OS=="freebsd"@(& or OS=="dragonflybsd")@' \
-		${WRKSRC}/deps/openssl/*.gypi

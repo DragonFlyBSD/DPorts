@@ -1,7 +1,8 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
 
 PORTNAME=	webkit
-DISTVERSION=	2.34.2
+DISTVERSION=	2.34.6
+PORTREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	https://webkitgtk.org/releases/
 PKGNAMESUFFIX=	2-gtk3
@@ -79,8 +80,6 @@ GEOIP_CMAKE_BOOL=	ENABLE_GEOLOCATION
 GEOIP_BUILD_DEPENDS=	geoclue>=2.4.3:net/geoclue
 GEOIP_RUN_DEPENDS=	geoclue>=2.4.3:net/geoclue
 
-GSTREAMER_EXTRA_PATCHES_OFF=	${PATCHDIR}/extra-patch-revert-7c0f13f37ec5 \
-				${PATCHDIR}/extra-patch-guard-video
 GSTREAMER_USE=		GSTREAMER1=bad,gl
 GSTREAMER_CMAKE_BOOL=	ENABLE_VIDEO ENABLE_WEB_AUDIO
 

@@ -1,2 +1,0 @@
-
-CFLAGS+=	-Wno-incompatible-pointer-types -Wno-pointer-sign

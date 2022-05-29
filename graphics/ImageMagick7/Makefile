@@ -1,5 +1,6 @@
 PORTNAME=	ImageMagick
-DISTVERSION=	7.1.0-19
+DISTVERSION=	7.1.0-29
+PORTREVISION=	1
 CATEGORIES=	graphics perl5
 MASTER_SITES=	https://www.imagemagick.org/download/ \
 		https://www.imagemagick.org/download/releases/ \
@@ -37,7 +38,7 @@ LIB_DEPENDS=	libltdl.so:devel/libltdl	\
 TESTS_DEPENDS=	gsfonts>=0:print/gsfonts
 
 # bin/Magick++-config
-CONFLICTS_INSTALL=	ImageMagick ImageMagick-nox11 ImageMagick6 ImageMagick6-nox11
+CONFLICTS_INSTALL=	ImageMagick6 ImageMagick6-nox11
 
 # This port uses .la files, keep libtool:keepla! (magick/module.c)
 USES=		cpe gettext-runtime gmake gnome libtool:keepla \
@@ -66,7 +67,7 @@ OPTIONS_DEFINE=	BZIP2 DOCS DJVU FFMPEG FFTW FONTCONFIG FPX FREETYPE \
 		OPENEXR OPENMP PANGO PDF PERL PNG RAQM SVG TESTS TIFF WEBP WMF \
 		THREADS X11 16BIT_PIXEL HDRI HEIF RAW
 OPTIONS_DEFAULT=	16BIT_PIXEL BZIP2 FFTW FONTCONFIG FREETYPE \
-		JPEG2000 JBIG JPEG LCMS2 LZMA LQR MODULES PDF PERL PNG RAQM SVG \
+		JPEG2000 JBIG JPEG JXL LCMS2 LZMA LQR MODULES OPENEXR PDF PERL PNG RAQM SVG \
 		TIFF WEBP WMF THREADS X11 HDRI RAW
 
 DJVU_DESC=		DJVU format support (needs THREADS)
@@ -126,7 +127,6 @@ JPEG2000_DESC=		OpenJPEG 2000 support via openjpeg
 JPEG2000_CONFIGURE_WITH=openjp2
 JPEG2000_LIB_DEPENDS=	libopenjp2.so:graphics/openjpeg
 
-JXL_DESC=		JPEG XL image format via libjxl
 JXL_CONFIGURE_WITH=	jxl
 JXL_LIB_DEPENDS=	libjxl.so:graphics/libjxl
 
@@ -176,9 +176,8 @@ WEBP_LIB_DEPENDS=	libwebp.so:graphics/webp
 X11_CONFIGURE_WITH=	x
 X11_USES=		xorg
 X11_USE=		xorg=ice,sm,x11,xext,xt
-X11_VARS=		CONFLICTS_INSTALL+="ImageMagick7-nox11-* \
-			CONFLICTS+=display
-X11_VARS_OFF=		CONFLICTS_INSTALL+="ImageMagick7-*" \
+X11_VARS=		CONFLICTS_INSTALL+="ImageMagick7-nox11"
+X11_VARS_OFF=		CONFLICTS_INSTALL+="ImageMagick7" \
 			PKGNAMESUFFIX=7-nox11
 
 .include <bsd.port.options.mk>

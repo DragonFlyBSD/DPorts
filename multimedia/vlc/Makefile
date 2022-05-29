@@ -1,8 +1,8 @@
 # Created by: Brian Somers <brian@FreeBSD.org>
 
 PORTNAME=	vlc
-DISTVERSION=	3.0.16
-PORTREVISION=	9
+DISTVERSION=	3.0.17.3
+PORTREVISION=	2
 PORTEPOCH=	4
 CATEGORIES=	multimedia audio net www
 MASTER_SITES=	http://download.videolan.org/pub/videolan/${PORTNAME}/${DISTVERSION:S/a$//}/ \
@@ -299,9 +299,8 @@ SIDPLAY_LDFLAGS=	-L${LOCALBASE}/lib/sidplay/builders
 SIDPLAY_CONFIGURE_ENABLE=	sid
 CONFIGURE_ARGS+=	--disable-sid
 
-SKINS_USE=		XORG=xext,xinerama,xpm
-SKINS_LIB_DEPENDS=	libminizip.so:archivers/minizip \
-			libtar.so:devel/libtar
+SKINS_USE=		XORG=xext,xinerama,xpm minizip
+SKINS_LIB_DEPENDS=	libtar.so:devel/libtar
 SKINS_CONFIGURE_ENABLE=	skins2 libtar
 SKINS_IMPLIES=		QT5
 

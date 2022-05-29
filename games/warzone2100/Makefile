@@ -1,13 +1,9 @@
 PORTNAME=	warzone2100
-PORTVERSION=	4.0.1
-PORTREVISION=	1
+PORTVERSION=	4.2.7
 CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/releases/${PORTVERSION}/
 DISTNAME=	${PORTNAME}_src
 DIST_SUBDIR=	${PORTNAME}-${PORTVERSION}
-
-PATCH_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/commit/
-PATCHFILES+=	5e6fdab3feac.patch:-p1 # https://github.com/Warzone2100/warzone2100/pull/2479
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Innovative 3D real-time strategy game
@@ -15,7 +11,7 @@ COMMENT=	Innovative 3D real-time strategy game
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BUILD_DEPENDS=	7z:archivers/p7zip \
+BUILD_DEPENDS=	7zz:archivers/7-zip \
 		a2x:textproc/asciidoc
 LIB_DEPENDS=	libphysfs.so:devel/physfs \
 		libpng.so:graphics/png \

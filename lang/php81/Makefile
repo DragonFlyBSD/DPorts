@@ -1,5 +1,5 @@
 PORTNAME=	php81
-DISTVERSION=	8.1.1
+DISTVERSION=	8.1.5
 PORTREVISION?=	0
 CATEGORIES?=	lang devel www
 MASTER_SITES=	PHP/distributions
@@ -14,6 +14,8 @@ USES+=		compiler:c11 cpe gnome pkgconfig tar:xz
 CPE_PRODUCT=	php
 PHP_VER=	81
 
+CONFLICTS_INSTALL?=	php[0-9][0-9]${PKGNAMESUFFIX}
+
 .if !defined(PKGNAMESUFFIX)
 LIB_DEPENDS=	libargon2.so:security/libargon2 \
 		libpcre2-8.so:devel/pcre2
@@ -24,21 +26,21 @@ CONFIGURE_ARGS+=	--disable-all \
 			--with-config-file-scan-dir=${PREFIX}/etc/php \
 			--with-layout=GNU \
 			--with-libxml \
+			--with-openssl \
 			--with-password-argon2=${LOCALBASE}
 DESTDIRNAME=		INSTALL_ROOT
 
-USES+=		autoreconf:build
+USES+=		autoreconf:build ssl
 USE_GNOME=	libxml2
 
 CPPFLAGS=	-I${LOCALBASE}/include
 
+LDFLAGS=	-L${OPENSSLLIB} -lcrypto -lssl
 # PR230207 Allow relocations against read-only segments (override lld default)
 LDFLAGS_i386=	-Wl,-z,notext
 
-CONFLICTS=	php73 php74 php80
-
 OPTIONS_DEFINE+=		CGI CLI DEBUG DTRACE EMBED FPM IPV6 LINKTHR \
-				MYSQL80 MYSQLND PHPDBG ZTS
+				MYSQLND PHPDBG ZTS
 OPTIONS_DEFAULT=		CGI CLI DTRACE EMBED FPM LINKTHR MYSQLND
 OPTIONS_EXCLUDE_DragonFly=	DTRACE
 # ld(1) fails to link probes: Relocations in generic ELF (EM: 0)
@@ -50,7 +52,6 @@ OPTIONS_EXCLUDE_armv7=	DTRACE
 OPTIONS_EXCLUDE_mips=	DTRACE FPM
 OPTIONS_EXCLUDE_mips64=	DTRACE FPM
 OPTIONS_EXCLUDE_powerpc64=	${OPTIONS_EXCLUDE_${ARCH}_${OSREL:R}}
-OPTIONS_EXCLUDE_powerpc64_11=	DTRACE
 OPTIONS_EXCLUDE_powerpc64_12=	DTRACE
 OPTIONS_EXCLUDE_riscv64=	DTRACE
 OPTIONS_EXCLUDE_sparc64=	DTRACE
@@ -62,7 +63,6 @@ CLI_DESC=	Build CLI version
 EMBED_DESC=	Build embedded library
 FPM_DESC=	Build FPM version
 LINKTHR_DESC=	Link thread lib (for threaded extensions)
-MYSQL80_DESC=	Build with MySQL caching password mechanism
 MYSQLND_DESC=	Build with MySQL Native Driver
 PHPDBG_DESC=	Interactive PHP debugger
 ZTS_DESC=	Force Zend Thread Safety (ZTS) build
@@ -82,12 +82,6 @@ FPM_VARS=		PHP_SAPI+=fpm \
 			USE_RC_SUBR+=php-fpm
 IPV6_CONFIGURE_OFF=	--disable-ipv6
 LINKTHR_LIBS=		-lpthread
-MYSQL80_USES=		ssl
-MYSQL80_CONFIGURE_ON=	--with-openssl
-MYSQL80_CONFIGURE_ENV=	OPENSSL_CFLAGS="-I${OPENSSLINC}" \
-			OPENSSL_LIBS="-L${OPENSSLLIB} -lssl -lcrypto" \
-			PHP_OPENSSL=no
-MYSQL80_LDFLAGS=	-L${OPENSSLLIB} -lcrypto -lssl
 MYSQLND_CONFIGURE_ON=	--enable-mysqlnd
 PHPDBG_CONFIGURE_ON=	--enable-phpdbg
 PHPDBG_VARS=		PHP_SAPI+=phpdbg
@@ -126,11 +120,10 @@ PLIST_SUB+=	SAPI_INC="@comment "
 .endif
 
 CONFIGURE_ENV+=	ac_cv_decimal_fp_supported="no" \
-		lt_cv_path_SED="sed"
-
-.if ${PORT_OPTIONS:MMYSQL80}
-WARNING=	"PHP is now built with MySQL 8.0 support which has caching password mechanism. This implies ${PORTNAME}-openssl module. Hence ${PORTNAME}-openssl can no longer be installed alongside with ${PORTNAME}. If you require ${PORTNAME}-openssl module please rebuild ${PORTNAME} with MYSQL80 OPTION disabled. Otherwise remove ${PORTNAME}-openssl DEPENDENCY from ports."
-.endif
+		lt_cv_path_SED="sed" \
+		OPENSSL_CFLAGS="-I${OPENSSLINC}" \
+		OPENSSL_LIBS="-L${OPENSSLLIB} -lssl -lcrypto" \
+		PHP_OPENSSL=yes
 
 post-patch:
 	@${TOUCH} ${WRKSRC}/ext/php_config.h
@@ -150,11 +143,6 @@ post-build:
 	@${ECHO_CMD} "PHP_SAPI=${PHP_SAPI}" >> ${WRKDIR}/php.conf
 	@${ECHO_CMD} -n "PHP_EXT_DIR=" >> ${WRKDIR}/php.conf
 	@${SH} ${WRKSRC}/scripts/php-config --extension-dir | ${SED} -ne 's,^${PREFIX}/lib/php/,,p' >> ${WRKDIR}/php.conf
-
-post-build-MYSQL80-off:
-	@${ECHO_CMD} "PHP_EXT_INC=hash json pcre spl" >> ${WRKDIR}/php.conf
-
-post-build-MYSQL80-on:
 	@${ECHO_CMD} "PHP_EXT_INC=hash json openssl pcre spl" >> ${WRKDIR}/php.conf
 
 test: build
@@ -176,7 +164,7 @@ COMMENT=	The ${PHP_MODNAME} shared extension for php
 USES+=		php:ext,noflavors
 PHP_MODNAME=	${PKGNAMESUFFIX:S/-//}
 PHP_VER=	81
-IGNORE_WITH_PHP=	72 73 74 80
+IGNORE_WITH_PHP=	74 80
 
 EXTSUBDIR=	${DISTNAME}/ext/${PHP_MODNAME}
 WRKSRC=		${WRKDIR}/${EXTSUBDIR}
@@ -264,19 +252,17 @@ CONFIGURE_ARGS+=	--enable-exif
 
 .if ${PHP_MODNAME} == "ffi"
 LIB_DEPENDS=		libffi.so:devel/libffi
-CONFIGURE_ARGS+=	--enable-ffi
+CONFIGURE_ARGS+=	--with-ffi
 .endif
 
 .if ${PHP_MODNAME} == "fileinfo"
-CONFIGURE_ARGS+=	--enable-fileinfo \
-			--with-pcre-dir=${LOCALBASE}
+CONFIGURE_ARGS+=	--enable-fileinfo
 
 PHP_HEADER_DIRS=	libmagic
 .endif
 
 .if ${PHP_MODNAME} == "filter"
-CONFIGURE_ARGS+=	--enable-filter \
-			--with-pcre-dir=${LOCALBASE}
+CONFIGURE_ARGS+=	--enable-filter
 .endif
 
 .if ${PHP_MODNAME} == "ftp"
@@ -344,13 +330,12 @@ PANDA_LIB_DEPENDS=	libc-client4.so.10:mail/panda-cclient
 PANDA_LIB_DEPENDS_OFF=	libc-client4.so.9:mail/cclient
 
 CONFIGURE_ARGS+=	--with-imap-ssl=${OPENSSLBASE} \
-			--with-imap=${LOCALBASE} \
-			--with-pcre-dir=${LOCALBASE}
+			--with-imap=${LOCALBASE}
 
 CONFIGURE_ENV+=	OPENSSL_CFLAGS="-I${OPENSSLINC}" \
 		OPENSSL_LIBS="-L${OPENSSLLIB} -lssl -lcrypto" \
 		PHP_OPENSSL=yes
-  
+
 LDFLAGS+=	-L${OPENSSLLIB} -lcrypto -lssl
 USES+=		ssl
 .endif
@@ -375,15 +360,13 @@ USE_OPENLDAP=	yes
 
 .if ${PHP_MODNAME} == "mbstring"
 
-CONFIGURE_ARGS+=	--enable-mbstring \
-			--with-pcre-dir=${LOCALBASE}
+CONFIGURE_ARGS+=	--enable-mbstring
 
 OPTIONS_DEFINE=		REGEX
 OPTIONS_DEFAULT=	REGEX
 
 REGEX_DESC=		Enable multibyte regex support
 REGEX_LIB_DEPENDS=	libonig.so:devel/oniguruma
-REGEX_CONFIGURE_ON=	--with-onig=${LOCALBASE}
 REGEX_CONFIGURE_OFF=	--disable-mbregex
 
 PHP_HEADER_DIRS=	libmbfl libmbfl/filters libmbfl/mbfl libmbfl/nls
@@ -394,7 +377,7 @@ OPTIONS_DEFINE=		MYSQLND
 OPTIONS_DEFAULT=	MYSQLND
 
 MYSQLND_DESC=		Use MySQL Native Driver
-MYSQLND_CONFIGURE_ARGS=	--with-mysqli=mysqlnd
+MYSQLND_CONFIGURE_ON=	--with-mysqli=mysqlnd
 MYSQLND_CONFIGURE_OFF=	--with-mysqli=${LOCALBASE}/bin/mysql_config
 MYSQLND_USES_OFF=	mysql
 .endif
@@ -406,18 +389,10 @@ CONFIGURE_ARGS+=	--enable-odbc \
 			--with-unixODBC=${LOCALBASE}
 .endif
 
-.if ${PHP_MODNAME} == "openssl"
-USES+=			ssl
-CONFIGURE_ARGS+=	--with-openssl
-CONFIGURE_ENV+=		OPENSSL_CFLAGS="-I${OPENSSLINC}" \
-			OPENSSL_LIBS="-L${OPENSSLLIB} -lssl -lcrypto"
-.endif
-
 .if ${PHP_MODNAME} == "opcache"
 # This is needed by Zend extensions, keep before everything.
 PHP_MOD_PRIO=		10
 CONFIGURE_ARGS+=	--enable-opcache
-USES+=			localbase php:zend
 .endif
 
 .if ${PHP_MODNAME} == "pcntl"
@@ -459,10 +434,11 @@ OPTIONS_DEFINE=		MYSQLND
 OPTIONS_DEFAULT=	MYSQLND
 
 MYSQLND_DESC=		Use MySQL Native Driver
+
 MYSQLND_CONFIGURE_OFF=	--with-pdo-mysql=${LOCALBASE} \
 			--with-zlib-dir=/usr
-MYSQLND_CONFIGURE_ON=	--with-pdo-mysql=mysqlnd
 MYSQLND_USES_OFF=	mysql
+MYSQLND_CONFIGURE_ON=	--with-pdo-mysql=mysqlnd
 
 USE_PHP=	pdo:build
 .endif
@@ -489,8 +465,7 @@ CONFIGURE_ARGS+=	--with-pgsql=${LOCALBASE}
 .endif
 
 .if ${PHP_MODNAME} == "phar"
-CONFIGURE_ARGS+=	--enable-phar \
-			--with-pcre-dir=${LOCALBASE}
+CONFIGURE_ARGS+=	--enable-phar
 .endif
 
 .if ${PHP_MODNAME} == "posix"
@@ -518,16 +493,14 @@ CONFIGURE_ARGS+=	--enable-shmop
 .endif
 
 .if ${PHP_MODNAME} == "simplexml"
-CONFIGURE_ARGS+=	--enable-simplexml \
-			--with-pcre-dir=${LOCALBASE}
+CONFIGURE_ARGS+=	--enable-simplexml
 
 USES+=		pkgconfig
 USE_GNOME=	libxml2
 .endif
 
 .if ${PHP_MODNAME} == "snmp"
-CONFIGURE_ARGS+=	--with-openssl-dir=${OPENSSLBASE} \
-			--with-snmp=${LOCALBASE}
+CONFIGURE_ARGS+=	--with-snmp=${LOCALBASE}
 
 CONFIGURE_ENV+=	ac_cv_buggy_snprint_value="no"
 
@@ -623,9 +596,7 @@ USE_PHP=	dom:build xml:build
 .if ${PHP_MODNAME} == "zip"
 LIB_DEPENDS+=	libzip.so:archivers/libzip
 
-CONFIGURE_ARGS+=	--enable-zip \
-			--with-libzip=${LOCALBASE} \
-			--with-pcre-dir=${LOCALBASE} \
+CONFIGURE_ARGS+=	--with-zip \
 			--with-zlib-dir=/usr
 USES+=			pkgconfig
 .endif
@@ -637,18 +608,7 @@ USES+=			pkgconfig
 
 .include <bsd.port.pre.mk>
 
-.if ${PHP_MODNAME} == "openssl"
-post-stage:
-	@if ${PREFIX}/bin/php -m | grep openssl 2>/dev/null && ( [ ! -f ${PREFIX}/etc/php/ext-20-openssl.ini ] && [ ! -f ${PREFIX}/etc/php/ext-30-openssl.ini ] ); then \
-		${ECHO_CMD}; \
-		${ECHO_MSG} "===>  ${PKGNAME} "openssl module is already built with php base.; \
-		${ECHO_CMD}; \
-		${FALSE}; \
-	fi
-.endif
-
-.if ${PHP_MODNAME} == "openssl" || ${PHP_MODNAME} == "sqlite3" || ${PHP_MODNAME} == \
-	"zlib"
+.if ${PHP_MODNAME} == "sqlite3" || ${PHP_MODNAME} == "zlib"
 post-extract:
 	@${MV} ${WRKSRC}/config0.m4 ${WRKSRC}/config.m4
 .endif
