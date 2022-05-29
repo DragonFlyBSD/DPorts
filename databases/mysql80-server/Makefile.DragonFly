@@ -3,6 +3,13 @@ USES+=	alias
 # disable sasl with ldap for now
 OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NSASLCLIENT}
 
+# XXX: Attempt to disable FIDO. Remove the FIDO auth from args and also
+# use a custom WITHOUT var to conditionalize the checks
+CMAKE_ARGS:=		${CMAKE_ARGS:N-DWITH_AUTHENTICATION_FIDO*} -DWITHOUT_FIDO=1
+
+# No libfido2 required for now
+LIB_DEPENDS:= ${LIB_DEPENDS:Nlibfido2.so*}
+
 dfly-patch:
 	${REINPLACE_CMD} -e 's@test_stdx_io_file_handle.cc@@g' \
 		${WRKSRC}/router/src/harness/tests/CMakeLists.txt
