@@ -78,7 +78,7 @@ BINARY_ALIAS+=	python3=${PYTHON_CMD}
 BUNDLE_LIBS=	yes
 
 BUILD_DEPENDS+=	llvm${LLVM_DEFAULT}>0:devel/llvm${LLVM_DEFAULT} \
-				rust-cbindgen>=0.19.0:devel/rust-cbindgen \
+				rust-cbindgen>=0.23.0:devel/rust-cbindgen \
 				${RUST_DEFAULT}>=1.59.0:lang/${RUST_DEFAULT} \
 				node:www/node
 LIB_DEPENDS+=	libdrm.so:graphics/libdrm
@@ -270,11 +270,19 @@ MOZ_OPTIONS+=	--disable-pulseaudio
 
 .if ${PORT_OPTIONS:MSNDIO}
 BUILD_DEPENDS+=	${LOCALBASE}/include/sndio.h:audio/sndio
+.      if ${MOZILLA_VER:R:R} < 100
 post-patch-SNDIO-on:
 	@${REINPLACE_CMD} -e 's|OpenBSD|${OPSYS}|g' \
 		-e '/DISABLE_LIBSNDIO_DLOPEN/d' \
 		${MOZSRC}/media/libcubeb/src/moz.build
-.endif
+.      else
+MOZ_OPTIONS+=	--enable-sndio
+.      endif
+.    else
+.      if ${MOZILLA_VER:R:R} >= 100
+MOZ_OPTIONS+=	--disable-sndio
+.      endif
+.    endif
 
 .if ${PORT_OPTIONS:MDEBUG}
 MOZ_OPTIONS+=	--enable-debug --disable-release

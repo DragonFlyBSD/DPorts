@@ -946,29 +946,3 @@ reinstall the new ones without using the pkg upgrade facility.
   # pkg delete -f mesa-libs nvidia-driver
   # portupgrade -a
 
-20210523:
-  AFFECTS: users of www/tt-rss
-  AUTHOR: dereks@lifeofadishwasher.com
-
-  tt-rss config.php syntax has changed.  You can find detailed changes
-  here https://tt-rss.org/wiki/GlobalConfig or look at config.php.sample.
-  Expect your config.php to not work with newer www/tt-rss releases.
-
-  Due to changes in ttrssd before updating you should stop ttrssd or
-  otherwise kill the php process running update_daemon2.php.
-
-20210516:
-  AFFECTS: users of security/bitwarden_rs
-  AUTHOR: mr@FreeBSD.org
-
-  bitwarden_rs has been renamed to vaultwarden upstream.
-  So switch to security/vaultwarden instead.
-
-20210515:
-  AFFECTS: users of databases/postgresql??-server
-  AUTHOR: girgen@FreeBSD.org
-
-  The rc.conf parameter for the login class of the postgresql daemon has
-  changed name from postgresql_class to postgresql_login_class.
-  rc.subr(8) states that the parameter should be named ${name}_login_class.
-
