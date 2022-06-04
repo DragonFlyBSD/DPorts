@@ -1,3 +1,4 @@
+USE_GCC_VERSION=    11
 USES+=	xorg
 USE_XORG+=	x11 xtst
 
