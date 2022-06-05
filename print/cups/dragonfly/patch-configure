@@ -1,56 +1,56 @@
---- configure.orig	2021-02-23 23:43:43 UTC
+--- configure.orig	2022-05-31 17:14:58 UTC
 +++ configure
-@@ -6444,7 +6444,7 @@ fi
+@@ -6696,7 +6696,7 @@ fi
+ PKGCONFIG_LIBS_STATIC="$PKGCONFIG_LIBS_STATIC $LIBZ"
  
+ case host_os_name in #(
+-  darwin* | *bsd*) :
++  darwin* | *bsd* | dragonfly*) :
  
- case $host_os_name in
--        darwin* | *bsd*)
-+        darwin* | *bsd* | dragonfly*)
-                 ARFLAGS="-rcv"
-                 ;;
-         *)
-@@ -7097,7 +7097,7 @@ printf "%s\n" "#define CUPS_FONTPATH \"$
- # Locale data
- if test "$localedir" = "\${datarootdir}/locale"; then
- 	case "$host_os_name" in
--		linux* | gnu* | *bsd* | darwin*)
-+		linux* | gnu* | *bsd* | darwin* | dragonfly*)
- 			CUPS_LOCALEDIR="$datarootdir/locale"
- 			;;
+     ARFLAGS="-rcv"
+  ;; #(
+@@ -7466,7 +7466,7 @@ if test "$localedir" = "\${datarootdir}/
+ then :
  
-@@ -7149,7 +7149,7 @@ case "$host_os_name" in
- 		INSTALL_SYSV="install-sysv"
- 		CUPS_SERVERBIN="$exec_prefix/lib/cups"
- 		;;
--	*bsd* | darwin*)
-+	*bsd* | darwin* | dragonfly*)
- 		# *BSD and Darwin (macOS)
- 		INSTALL_SYSV=""
- 		CUPS_SERVERBIN="$exec_prefix/libexec/cups"
-@@ -7205,7 +7205,7 @@ fi
+     case "$host_os_name" in #(
+-  linux* | gnu* | *bsd* | darwin*) :
++  linux* | gnu* | *bsd* | darwin* | dragonfly*) :
  
- if test "$mandir" = "\${prefix}/man" -a "$prefix" = "/"; then
- 	case "$host_os_name" in
--        	darwin* | linux* | gnu* | *bsd*)
-+        	darwin* | linux* | gnu* | *bsd* | dragonfly*)
-         		# Darwin, macOS, Linux, GNU HURD, and *BSD
-         		mandir="/usr/share/man"
-         		;;
-@@ -7244,7 +7244,7 @@ if test x$enable_shared != xno; then
- 			DSOXX="\$(CXX)"
- 			DSOFLAGS="$DSOFLAGS -Wl,-h\`basename \$@\` -G"
- 			;;
--		linux* | gnu* | *bsd*)
-+		linux* | gnu* | *bsd* | dragonfly*)
- 			LIBCUPS="lib$cupsbase.so.2"
- 			if test "x$cupsimagebase" != x; then
- 				LIBCUPSIMAGE="lib$cupsimagebase.so.2"
-@@ -7318,7 +7318,7 @@ if test "$DSO" != ":"; then
- 				EXPORT_LDFLAGS="-R$libdir"
- 			fi
- 			;;
--                *bsd*)
-+                *bsd* | dragonfly*)
-                         # *BSD...
- 			if test $exec_prefix != /usr; then
- 				DSOFLAGS="-Wl,-R$libdir $DSOFLAGS"
+ 	CUPS_LOCALEDIR="$datarootdir/locale"
+      ;; #(
+@@ -7568,7 +7568,7 @@ case "$host_os_name" in #(
+     INSTALL_SYSV="install-sysv"
+     CUPS_SERVERBIN="$exec_prefix/lib/cups"
+  ;; #(
+-  *bsd* | darwin*) :
++  *bsd* | darwin* | dragonfly*) :
+ 
+     # *BSD and Darwin (macOS)
+     INSTALL_SYSV=""
+@@ -7643,7 +7643,7 @@ if test "$mandir" = "\${prefix}/man" -a
+ then :
+ 
+     case "$host_os_name" in #(
+-  darwin* | linux* | gnu* | *bsd*) :
++  darwin* | linux* | gnu* | *bsd* | dragonfly*) :
+ 
+ 	# Darwin, macOS, Linux, GNU HURD, and *BSD
+ 	mandir="/usr/share/man"
+@@ -7693,7 +7693,7 @@ fi
+ 	DSOXX="\$(CXX)"
+ 	DSOFLAGS="$DSOFLAGS -Wl,-h\`basename \$@\` -G"
+      ;; #(
+-  linux* | gnu* | *bsd*) :
++  linux* | gnu* | *bsd* | dragonfly*) :
+ 
+ 	LIBCUPS="lib$cupsbase.so.2"
+ 	if test "x$cupsimagebase" != x
+@@ -7812,7 +7812,7 @@ then :
+ 
+ fi
+      ;; #(
+-  *bsd*) :
++  *bsd* | dragonfly*) :
+ 
+ 	# *BSD...
+ 	if test $exec_prefix != /usr
