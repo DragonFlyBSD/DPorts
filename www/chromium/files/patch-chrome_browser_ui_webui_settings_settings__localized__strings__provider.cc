@@ -1,6 +1,6 @@
---- chrome/browser/ui/webui/settings/settings_localized_strings_provider.cc.orig	2022-03-25 21:59:56 UTC
+--- chrome/browser/ui/webui/settings/settings_localized_strings_provider.cc.orig	2022-05-19 14:06:27 UTC
 +++ chrome/browser/ui/webui/settings/settings_localized_strings_provider.cc
-@@ -118,7 +118,7 @@
+@@ -116,7 +116,7 @@
  #include "chrome/browser/ui/webui/settings/chromeos/constants/routes.mojom.h"
  #endif
  
@@ -9,7 +9,7 @@
  #include "ui/display/screen.h"
  #endif
  
-@@ -138,7 +138,7 @@
+@@ -137,7 +137,7 @@
  #include "chrome/browser/ui/webui/certificate_manager_localized_strings_provider.h"
  #endif
  

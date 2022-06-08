@@ -1,6 +1,6 @@
---- chrome/browser/ui/chrome_pages.cc.orig	2022-03-25 21:59:56 UTC
+--- chrome/browser/ui/chrome_pages.cc.orig	2022-05-19 14:06:27 UTC
 +++ chrome/browser/ui/chrome_pages.cc
-@@ -550,7 +550,7 @@ void ShowBrowserSigninOrSettings(Browser* browser,
+@@ -561,7 +561,7 @@ void ShowBrowserSigninOrSettings(Browser* browser,
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
