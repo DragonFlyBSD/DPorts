@@ -1,2 +1,5 @@
-
+# No DTRACE
 OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NDTRACE}
+
+# Disable corepack
+CONFIGURE_ARGS+=	--without-corepack
