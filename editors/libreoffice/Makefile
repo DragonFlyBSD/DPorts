@@ -1,4 +1,4 @@
-PORTREVISION=	1
+PORTREVISION=	0
 
 .include "${.CURDIR}/Makefile.common"
 
@@ -19,6 +19,7 @@ BUILD_DEPENDS=	p5-Archive-Zip>=0:archivers/p5-Archive-Zip \
 		dmake:devel/dmake \
 		gperf>=3.1:devel/gperf \
 		${LOCALBASE}/include/libcuckoo/cuckoohash_map.hh:devel/libcuckoo \
+		libunwind>=20211201_1:devel/libunwind \
 		mdds>=2.0:devel/mdds \
 		ucpp:devel/ucpp \
 		${LOCALBASE}/include/sane/sane.h:graphics/sane-backends \
@@ -85,14 +86,7 @@ LIB_DEPENDS=	libapr-1.so:devel/apr1 \
 		libZXing.so:textproc/zxing-cpp \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libxcb-icccm.so:x11/xcb-util-wm \
-		libserf-1.so:www/serf \
-		${LIB_DEPENDS_${ARCH}}
-LIB_DEPENDS_aarch64=	libunwind.so:devel/libunwind
-LIB_DEPENDS_x86_64=	libunwind.so:devel/libunwind
-LIB_DEPENDS_armv7=	libunwind.so:devel/libunwind
-LIB_DEPENDS_i386=	libunwind.so:devel/libunwind
-LIB_DEPENDS_powerpc64=	libunwind.so:devel/libunwind
-LIB_DEPENDS_powerpc64le=	libunwind.so:devel/libunwind
+		libserf-1.so:www/serf
 
 RUN_DEPENDS=	xdg-open:devel/xdg-utils \
 		${LOCALBASE}/share/fonts/Caladea/Caladea-Bold.ttf:x11-fonts/crosextrafonts-caladea-ttf \
@@ -313,6 +307,13 @@ MAKE_ENV+=	verbose=1
 .include <bsd.port.options.mk>
 
 .include <bsd.port.pre.mk>
+
+.if ${OPSYS} == FreeBSD && ( \
+    (${OSVERSION} >= 1300525 && ${OSVERSION} < 1301000) || \
+    (${OSVERSION} >= 1301500 && ${OSVERSION} < 1301502) || \
+    (${OSVERSION} >= 1400051 && ${OSVERSION} < 1400057))
+BROKEN= please update FreeBSD base system first to fix an ABI incompatibility
+.endif
 
 .if ${ARCH:Mpowerpc*}
 EXTRA_PATCHES+=	${FILESDIR}/powerpc64
