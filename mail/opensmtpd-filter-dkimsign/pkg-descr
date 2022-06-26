@@ -1,0 +1,3 @@
+filter-dkim is an opensmtpd filter that signs email with a dkim signature.
+
+WWW: https://imperialat.at/dev/filter-dkimsign/

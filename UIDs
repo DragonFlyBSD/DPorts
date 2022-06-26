@@ -944,5 +944,5 @@ _rmilter:*:998:998::0:0:Rmilter daemon:/nonexistent:/usr/sbin/nologin
 ebnetd:*:999:999::0:0:EBNETD:/nonexistent:/usr/sbin/nologin
 # DO NOT USE: 1000-65533
 avenger:*:60149:60149::0:0:Mail Avenger:/var/spool/avenger:/usr/sbin/nologin
-cbsd:*:60150:150::0:0:Cbsd user:/nonexistent:/bin/sh
+cbsd:*:60150:60150::0:0:Cbsd user:/nonexistent:/bin/sh
 nobody:*:65534:65534::0:0:Unprivileged user:/nonexistent:/usr/sbin/nologin

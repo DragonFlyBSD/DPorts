@@ -30,7 +30,6 @@ LIB_DEPENDS=	libboost_system.so:devel/boost-libs \
 		libflann_cpp.so:math/flann \
 		libfreetype.so:print/freetype2 \
 		liblz4.so:archivers/liblz4 \
-		libpcap.so:net/libpcap \
 		libtiff.so:graphics/tiff
 
 USES=		cmake:testing compiler:c++14-lang eigen:3 jpeg localbase:ldflags python xorg

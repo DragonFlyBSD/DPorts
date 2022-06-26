@@ -1,0 +1,4 @@
+libopensmtpd is an libevent based library which allows for easy writing
+of opensmtpd filter applications in C.
+
+WWW: https://imperialat.at/dev/libopensmtpd
