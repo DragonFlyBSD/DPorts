@@ -1,0 +1,11 @@
+--- CMakeLists.txt.orig	2022-05-02 06:24:50 UTC
++++ CMakeLists.txt
+@@ -58,7 +58,7 @@ set(GENERATE_WARNING "WARNING: This file
+ #
+ if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
+     set(C_LINUX 1)
+-elseif(APPLE OR CMAKE_SYSTEM_NAME MATCHES "BSD")
++elseif(APPLE OR CMAKE_SYSTEM_NAME MATCHES "BSD|DragonFly")
+     set(C_BSD 1)
+ endif()
+ 
