@@ -1,0 +1,4 @@
+.if exists( /usr/include/malloc_np.h )
+EXTRA_PATCHES += ${DFLY_PATCHDIR}/extra-malloc_usable_size
+.endif
+
