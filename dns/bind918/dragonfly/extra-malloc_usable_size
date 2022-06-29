@@ -1,0 +1,31 @@
+--- lib/isc/jemalloc_shim.h.orig	2022-05-09 07:47:10 UTC
++++ lib/isc/jemalloc_shim.h
+@@ -64,7 +64,11 @@ sallocx(void *ptr, int flags) {
+ 
+ #elif HAVE_MALLOC_USABLE_SIZE
+ 
++#ifdef __DragonFly__
++#include <malloc_np.h>
++#else
+ #include <malloc.h>
++#endif
+ 
+ static inline size_t
+ sallocx(void *ptr, int flags) {
+--- lib/isc/mem.c.orig	2022-05-09 07:47:10 UTC
++++ lib/isc/mem.c
+@@ -58,6 +58,14 @@
+ #include "jemalloc_shim.h"
+ #endif
+ 
++/*
++ * DragonFly only has one function in malloc_np, we still
++ * need all the shims.
++ */
++#ifdef __DragonFly__
++#include "jemalloc_shim.h"
++#endif
++
+ #include "mem_p.h"
+ 
+ #define MCTXLOCK(m)   LOCK(&m->lock)
