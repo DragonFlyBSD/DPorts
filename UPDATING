@@ -879,16 +879,3 @@ reinstall the new ones without using the pkg upgrade facility.
 
   Changing "*." to "." should make your bindings work again.
 
-20210704:
-  AFFECTS: users of misc/qtchooser
-  AUTHOR: kde@FreeBSD.org
-
-  QtChooser allows you to select your version of Qt among those installed.
-  However, this tool is no longer supported upstream and will not be
-  available for Qt6.
-
-  By default, our Qt installations are done in:
-  ${LOCALBASE}/lib/qt${QT_VERSION} as recommended.
-  We have added symbolic linking for the main binaries to
-  ${LOCALBASE}/bin with the suffix -qt5.
-
