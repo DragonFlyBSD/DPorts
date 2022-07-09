@@ -46,7 +46,7 @@ PLIST_SUB+=	PORTVERSION="${PORTVERSION}" \
 		GEM_CACHE="${GEM_CACHE}" \
 		EXTRACT_SUFX=".gem"
 
-RUBYGEMBIN=	${LOCALBASE}/bin/gem${RUBY_VER:S/.//}
+RUBYGEMBIN=	${LOCALBASE}/bin/gem
 RAKE_BIN=	${LOCALBASE}/bin/rake
 
 GEMFILES=	${GEM_NAME}.gem
@@ -76,6 +76,7 @@ do-install:
 	@(cd ${INSTALL_WRKSRC}; ${SETENV} ${GEM_ENV} ${RUBYGEMBIN} install ${RUBYGEM_ARGS} pkg/${GEMFILES} -- ${CONFIGURE_ARGS})
 	@${RM} -r ${STAGEDIR}${PREFIX}/${GEMS_BASE_DIR}/build_info
 	@${RMDIR} ${STAGEDIR}/${PREFIX}/${GEMS_BASE_DIR}/extensions
+	@${RMDIR} ${STAGEDIR}/${PREFIX}/${GEMS_BASE_DIR}/plugins
 
 post-install:
 	@${ECHO} ${GEM_CACHE} >> ${TMPPLIST}
