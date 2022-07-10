@@ -1,8 +1,8 @@
 diff --git base/BUILD.gn base/BUILD.gn
-index 3a0df884fea..5b3fd12592a 100644
+index f4c427822c1..2429ae0c183 100644
 --- base/BUILD.gn
 +++ base/BUILD.gn
-@@ -2192,7 +2192,7 @@ mixed_component("base") {
+@@ -2203,7 +2203,7 @@ mixed_component("base") {
        "process/process_metrics_openbsd.cc",
        "system/sys_info_openbsd.cc",
      ]
@@ -152,6 +152,19 @@ index 44b0512359d..6621f0e05d6 100644
    bool CacheMemoryRegions() {
  #if BUILDFLAG(IS_BSD)
      return false;
+diff --git base/files/dir_reader_linux.h base/files/dir_reader_linux.h
+index 18b11193e27..691bed19004 100644
+--- base/files/dir_reader_linux.h
++++ base/files/dir_reader_linux.h
+@@ -62,7 +62,7 @@ class DirReaderLinux {
+   bool Next() {
+     if (size_) {
+       linux_dirent* dirent = reinterpret_cast<linux_dirent*>(&buf_[offset_]);
+-      offset_ += dirent->d_reclen;
++      offset_ += _DIRENT_RECLEN(dirent->d_namlen);
+     }
+ 
+     if (offset_ != size_)
 diff --git base/files/file_path_watcher_kqueue.h base/files/file_path_watcher_kqueue.h
 index 3034764f439..9309632eeb9 100644
 --- base/files/file_path_watcher_kqueue.h
@@ -172,7 +185,7 @@ index 3034764f439..9309632eeb9 100644
  #include <vector>
  
 diff --git base/logging_unittest.cc base/logging_unittest.cc
-index b7c4554f153..7e7cd945b55 100644
+index 070f4737fc2..5bf6ddc1405 100644
 --- base/logging_unittest.cc
 +++ base/logging_unittest.cc
 @@ -32,7 +32,8 @@
@@ -185,7 +198,7 @@ index b7c4554f153..7e7cd945b55 100644
  #include <ucontext.h>
  #endif
  
-@@ -552,7 +553,7 @@ void CheckCrashTestSighandler(int, siginfo_t* info, void* context_ptr) {
+@@ -574,7 +575,7 @@ void CheckCrashTestSighandler(int, siginfo_t* info, void* context_ptr) {
    // need the arch-specific boilerplate below, which is inspired by breakpad.
    // At the same time, on OSX, ucontext.h is deprecated but si_addr works fine.
    uintptr_t crash_addr = 0;
@@ -386,10 +399,10 @@ index 00000000000..72989b078cb
 +
 +}  // namespace base
 diff --git base/message_loop/message_pump.h base/message_loop/message_pump.h
-index 360f5d5eed6..66c9a5e5cbb 100644
+index 39432a3b78a..73e14ec48a8 100644
 --- base/message_loop/message_pump.h
 +++ base/message_loop/message_pump.h
-@@ -231,6 +231,13 @@ class BASE_EXPORT MessagePump {
+@@ -232,6 +232,13 @@ class BASE_EXPORT MessagePump {
  
    // Sets the timer slack to the specified value.
    virtual void SetTimerSlack(TimerSlack timer_slack);
@@ -460,10 +473,10 @@ index 99c47019859..80b99240b27 100644
  #endif
  
 diff --git base/process/launch_posix.cc base/process/launch_posix.cc
-index 7d4d0634cba..3b28180107f 100644
+index 34cdb04e688..c5a4bf47b7c 100644
 --- base/process/launch_posix.cc
 +++ base/process/launch_posix.cc
-@@ -55,7 +55,7 @@
+@@ -54,7 +54,7 @@
  #include <sys/ioctl.h>
  #endif
  
@@ -472,7 +485,7 @@ index 7d4d0634cba..3b28180107f 100644
  #include <sys/event.h>
  #include <sys/ucontext.h>
  #endif
-@@ -207,6 +207,8 @@ static const char kFDDir[] = "/dev/fd";
+@@ -206,6 +206,8 @@ static const char kFDDir[] = "/dev/fd";
  static const char kFDDir[] = "/dev/fd";
  #elif BUILDFLAG(IS_OPENBSD)
  static const char kFDDir[] = "/dev/fd";
@@ -880,7 +893,7 @@ index 3c2ffd5524c..a4c67c35009 100644
  		if (errno != EINTR) {
                          event_warn("kevent");
 diff --git base/threading/platform_thread.h base/threading/platform_thread.h
-index b1520a31273..57a16adc6aa 100644
+index 17883b6aff8..702adc1c3c2 100644
 --- base/threading/platform_thread.h
 +++ base/threading/platform_thread.h
 @@ -41,6 +41,8 @@ typedef zx_handle_t PlatformThreadId;
@@ -1016,10 +1029,10 @@ index 83c2382f68d..cd95e59b95c 100644
  is_nacl = current_os == "nacl"
  is_win = current_os == "win" || current_os == "winuwp"
 diff --git build/config/compiler/BUILD.gn build/config/compiler/BUILD.gn
-index 6a651ad9b86..1a9e804f627 100644
+index 004b4ebde65..779bec4effb 100644
 --- build/config/compiler/BUILD.gn
 +++ build/config/compiler/BUILD.gn
-@@ -1530,7 +1530,7 @@ config("default_warnings") {
+@@ -1529,7 +1529,7 @@ config("default_warnings") {
          # An ABI compat warning we don't care about, https://crbug.com/1102157
          # TODO(thakis): Push this to the (few) targets that need it,
          # instead of having a global flag.
@@ -1028,7 +1041,7 @@ index 6a651ad9b86..1a9e804f627 100644
  
          # Ignore warnings about MSVC optimization pragmas.
          # TODO(thakis): Only for no_chromium_code? http://crbug.com/912662
-@@ -1730,7 +1730,7 @@ config("no_chromium_code") {
+@@ -1726,7 +1726,7 @@ config("no_chromium_code") {
        # third-party libraries.
        "-Wno-c++11-narrowing",
      ]
@@ -1051,7 +1064,7 @@ index 302753d18fa..3e6bea5d3d5 100755
      return 0
  
 diff --git build/config/ozone.gni build/config/ozone.gni
-index c8fa32a54e8..244ca1085f9 100644
+index e19da3597d3..7bb8164ad2c 100644
 --- build/config/ozone.gni
 +++ build/config/ozone.gni
 @@ -103,6 +103,10 @@ declare_args() {
@@ -1250,7 +1263,7 @@ index d6e885a9fba..30637634e00 100644
  #define HOST_NAME_MAX MAXHOSTNAMELEN
  #endif
 diff --git components/update_client/update_query_params.cc components/update_client/update_query_params.cc
-index 4202d6aa097..533643f8bb6 100644
+index dea6d895627..e13f81e5732 100644
 --- components/update_client/update_query_params.cc
 +++ components/update_client/update_query_params.cc
 @@ -42,12 +42,14 @@ const char kOs[] =
@@ -1283,10 +1296,10 @@ index 637d1533473..da017dc8265 100644
    return "Solaris";
  #elif BUILDFLAG(IS_FUCHSIA)
 diff --git content/browser/utility_process_host.cc content/browser/utility_process_host.cc
-index ed3778ace99..a1ae2cbe9e0 100644
+index 76f4fe86265..c9fb95796fd 100644
 --- content/browser/utility_process_host.cc
 +++ content/browser/utility_process_host.cc
-@@ -276,7 +276,7 @@ bool UtilityProcessHost::StartProcess() {
+@@ -283,7 +283,7 @@ bool UtilityProcessHost::StartProcess() {
        switches::kMuteAudio,
        switches::kUseFileForFakeAudioCapture,
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FREEBSD) || \
@@ -1296,10 +1309,10 @@ index ed3778ace99..a1ae2cbe9e0 100644
        switches::kAlsaOutputDevice,
  #endif
 diff --git content/renderer/render_thread_impl.cc content/renderer/render_thread_impl.cc
-index 849f69eb6ee..3204516b23d 100644
+index cf5c5c3d7ef..8cc995338dd 100644
 --- content/renderer/render_thread_impl.cc
 +++ content/renderer/render_thread_impl.cc
-@@ -189,7 +189,7 @@
+@@ -190,7 +190,7 @@
  
  #if BUILDFLAG(IS_MAC)
  #include <malloc/malloc.h>
@@ -1309,20 +1322,19 @@ index 849f69eb6ee..3204516b23d 100644
  #endif
  
 diff --git extensions/common/api/runtime.json extensions/common/api/runtime.json
-index cb3ced530e4..059c8df5a9e 100644
+index 26c062e86ed..01956aa26e5 100644
 --- extensions/common/api/runtime.json
 +++ extensions/common/api/runtime.json
-@@ -78,7 +78,7 @@
-         "id": "PlatformOs",
-         "type": "string",
-         "description": "The operating system Chrome is running on.",
--        "enum": ["mac", "win", "android", "cros", "linux", "openbsd"]
-+          "enum": ["mac", "win", "android", "cros", "linux", "openbsd", "dragonfly"]
+@@ -85,6 +85,7 @@
+           "cros",
+           "linux",
+           "openbsd",
++          "dragonfly",
+           "fuchsia"
+         ]
        },
-       {
-         "id": "PlatformArch",
 diff --git media/base/media_switches.cc media/base/media_switches.cc
-index d04d0db0a9b..29053ab0b4e 100644
+index ccb2b154a1b..2a5769cc784 100644
 --- media/base/media_switches.cc
 +++ media/base/media_switches.cc
 @@ -44,7 +44,7 @@ const char kReportVp9AsAnUnsupportedMimeType[] =
@@ -1335,7 +1347,7 @@ index d04d0db0a9b..29053ab0b4e 100644
  const char kAlsaInputDevice[] = "alsa-input-device";
  // The Alsa device to use when opening an audio stream.
 diff --git media/base/media_switches.h media/base/media_switches.h
-index 2a99980dfed..ffbe317ab0a 100644
+index 94eecf6c72f..777a4865cea 100644
 --- media/base/media_switches.h
 +++ media/base/media_switches.h
 @@ -38,7 +38,7 @@ MEDIA_EXPORT extern const char kDisableBackgroundMediaSuspend[];
@@ -1388,10 +1400,10 @@ index 5c888a4e580..5c0a38db4af 100644
        err = ERR_NAME_RESOLUTION_FAILED;
  #endif
 diff --git net/socket/udp_socket_posix.cc net/socket/udp_socket_posix.cc
-index b6b58bb376d..6e3f667c1b7 100644
+index ee3bdb67e8f..0d679500197 100644
 --- net/socket/udp_socket_posix.cc
 +++ net/socket/udp_socket_posix.cc
-@@ -86,6 +86,34 @@ const int kActivityMonitorBytesThreshold = 65535;
+@@ -79,6 +79,34 @@ const int kActivityMonitorBytesThreshold = 65535;
  const int kActivityMonitorMinimumSamplesForThroughputEstimate = 2;
  const base::TimeDelta kActivityMonitorMsThreshold = base::Milliseconds(100);
  
@@ -1425,8 +1437,8 @@ index b6b58bb376d..6e3f667c1b7 100644
 +
  #if BUILDFLAG(IS_APPLE) && !BUILDFLAG(CRONET_BUILD)
  
- // On OSX the file descriptor is guarded to detect the cause of
-@@ -918,9 +946,21 @@ int UDPSocketPosix::SetMulticastOptions() {
+ // On macOS, the file descriptor is guarded to detect the cause of
+@@ -873,9 +901,21 @@ int UDPSocketPosix::SetMulticastOptions() {
    if (multicast_interface_ != 0) {
      switch (addr_family_) {
        case AF_INET: {
@@ -1448,7 +1460,7 @@ index b6b58bb376d..6e3f667c1b7 100644
          int rv = setsockopt(socket_, IPPROTO_IP, IP_MULTICAST_IF,
                              reinterpret_cast<const char*>(&mreq), sizeof(mreq));
          if (rv)
-@@ -983,9 +1023,17 @@ int UDPSocketPosix::JoinGroup(const IPAddress& group_address) const {
+@@ -938,9 +978,17 @@ int UDPSocketPosix::JoinGroup(const IPAddress& group_address) const {
      case IPAddress::kIPv4AddressSize: {
        if (addr_family_ != AF_INET)
          return ERR_ADDRESS_INVALID;
@@ -1490,10 +1502,10 @@ index afa8f2d5ec7..ebe58950da2 100644
  #endif
  
 diff --git sandbox/policy/BUILD.gn sandbox/policy/BUILD.gn
-index 472e80152bc..0580c062c59 100644
+index aae361d97af..39beef15e89 100644
 --- sandbox/policy/BUILD.gn
 +++ sandbox/policy/BUILD.gn
-@@ -112,6 +112,16 @@ component("policy") {
+@@ -118,6 +118,16 @@ component("policy") {
        "//ui/gfx/x",
      ]
    }
@@ -1511,7 +1523,7 @@ index 472e80152bc..0580c062c59 100644
      sources += [
        "linux/bpf_ime_policy_linux.cc",
 diff --git sandbox/policy/mojom/sandbox.mojom sandbox/policy/mojom/sandbox.mojom
-index 1de107b9f78..8ab24898957 100644
+index 95a1ae9b6de..d3f78259f92 100644
 --- sandbox/policy/mojom/sandbox.mojom
 +++ sandbox/policy/mojom/sandbox.mojom
 @@ -78,6 +78,8 @@ enum Sandbox {
@@ -1537,7 +1549,7 @@ index 0f5b9e52f0d..a7c69dd93fb 100644
  namespace sandbox {
  namespace mojom {
 diff --git services/device/hid/hid_connection_freebsd.cc services/device/hid/hid_connection_freebsd.cc
-index a36e4c038fb..e6adbb98991 100644
+index 5b4156d8223..f0d95b1ec21 100644
 --- services/device/hid/hid_connection_freebsd.cc
 +++ services/device/hid/hid_connection_freebsd.cc
 @@ -4,8 +4,13 @@
@@ -1555,7 +1567,7 @@ index a36e4c038fb..e6adbb98991 100644
  #include "base/bind.h"
  #include "base/files/file_descriptor_watcher_posix.h"
 diff --git services/device/hid/hid_service_freebsd.cc services/device/hid/hid_service_freebsd.cc
-index 24c26a0f1b3..d17afced007 100644
+index 0bd3fb41424..4e627086f37 100644
 --- services/device/hid/hid_service_freebsd.cc
 +++ services/device/hid/hid_service_freebsd.cc
 @@ -4,7 +4,12 @@
@@ -1632,7 +1644,7 @@ index 27aed0f23ea..cd0cbc23373 100644
  // first. @data must be, at least, @height * StrideForWidth(@width) bytes.
  SK_API std::unique_ptr<SkCanvas> CreatePlatformCanvasWithPixels(
 diff --git third_party/abseil-cpp/absl/base/config.h third_party/abseil-cpp/absl/base/config.h
-index 037c12fd65a..3411b0e9612 100644
+index 798544b5372..0a485658041 100644
 --- third_party/abseil-cpp/absl/base/config.h
 +++ third_party/abseil-cpp/absl/base/config.h
 @@ -417,7 +417,7 @@ static_assert(ABSL_INTERNAL_INLINE_NAMESPACE_STR[0] != 'h' ||
@@ -1654,10 +1666,10 @@ index 037c12fd65a..3411b0e9612 100644
  #endif
  
 diff --git third_party/abseil-cpp/absl/base/internal/raw_logging.cc third_party/abseil-cpp/absl/base/internal/raw_logging.cc
-index 509d74600db..115537000c3 100644
+index ca2a75f3258..931de4b4da0 100644
 --- third_party/abseil-cpp/absl/base/internal/raw_logging.cc
 +++ third_party/abseil-cpp/absl/base/internal/raw_logging.cc
-@@ -37,7 +37,8 @@
+@@ -39,7 +39,8 @@
  // this, consider moving both to config.h instead.
  #if defined(__linux__) || defined(__APPLE__) || defined(__FreeBSD__) || \
      defined(__Fuchsia__) || defined(__native_client__) ||               \
@@ -1667,7 +1679,7 @@ index 509d74600db..115537000c3 100644
  
  #include <unistd.h>
  
-@@ -50,7 +51,7 @@
+@@ -52,7 +53,7 @@
  // ABSL_HAVE_SYSCALL_WRITE is defined when the platform provides the syscall
  //   syscall(SYS_write, /*int*/ fd, /*char* */ buf, /*size_t*/ len);
  // for low level operations that want to avoid libc.
@@ -1677,7 +1689,7 @@ index 509d74600db..115537000c3 100644
  #include <sys/syscall.h>
  #define ABSL_HAVE_SYSCALL_WRITE 1
 diff --git third_party/abseil-cpp/absl/base/internal/sysinfo.cc third_party/abseil-cpp/absl/base/internal/sysinfo.cc
-index 8095c4e0ef3..a7b4de8d126 100644
+index 22e76938a75..e21132f2629 100644
 --- third_party/abseil-cpp/absl/base/internal/sysinfo.cc
 +++ third_party/abseil-cpp/absl/base/internal/sysinfo.cc
 @@ -30,7 +30,7 @@
@@ -1712,7 +1724,7 @@ index 78f5559854f..dd4d9510f0a 100644
  #endif
  
 diff --git third_party/abseil-cpp/absl/debugging/internal/vdso_support.cc third_party/abseil-cpp/absl/debugging/internal/vdso_support.cc
-index e63ac4a3bce..ac90c315359 100644
+index 40eb055f691..0d9c9755c1b 100644
 --- third_party/abseil-cpp/absl/debugging/internal/vdso_support.cc
 +++ third_party/abseil-cpp/absl/debugging/internal/vdso_support.cc
 @@ -54,7 +54,7 @@
@@ -1869,7 +1881,7 @@ index b593e9437f0..97cac56ab14 100644
          exe_suffix = ""
      elif sys.platform.startswith("darwin"):
 diff --git third_party/blink/renderer/platform/wtf/math_extras.h third_party/blink/renderer/platform/wtf/math_extras.h
-index 51c272cbc04..f9f553d9fc6 100644
+index 252a3f8eaef..05b0373410b 100644
 --- third_party/blink/renderer/platform/wtf/math_extras.h
 +++ third_party/blink/renderer/platform/wtf/math_extras.h
 @@ -127,7 +127,7 @@ constexpr float Grad2turn(float g) {
@@ -2458,26 +2470,26 @@ index 00000000000..b4845a74e49
 +#endif /* __CLANG_STDATOMIC_H */
 +
 diff --git third_party/dawn/include/dawn/native/VulkanBackend.h third_party/dawn/include/dawn/native/VulkanBackend.h
-index 061a4a9101b..486a44c0f01 100644
+index c1c7653c445..c3479dfbab8 100644
 --- third_party/dawn/include/dawn/native/VulkanBackend.h
 +++ third_party/dawn/include/dawn/native/VulkanBackend.h
-@@ -69,7 +69,8 @@ namespace dawn::native::vulkan {
-     };
+@@ -69,7 +69,8 @@ struct ExternalImageExportInfoVk : ExternalImageExportInfo {
+ };
  
  // Can't use DAWN_PLATFORM_LINUX since header included in both Dawn and Chrome
 -#if defined(__linux__) || defined(__OpenBSD__) || defined(__FreeBSD__)
 +#if defined(__linux__) || defined(__OpenBSD__) || defined(__FreeBSD__) || \
 +  defined(__DragonFly__)
  
-     // Common properties of external images represented by FDs. On successful import the file
-     // descriptor's ownership is transferred to the Dawn implementation and they shouldn't be
+ // Common properties of external images represented by FDs. On successful import the file
+ // descriptor's ownership is transferred to the Dawn implementation and they shouldn't be
 diff --git third_party/dawn/src/dawn/common/Platform.h third_party/dawn/src/dawn/common/Platform.h
-index f11efda1b0a..3e0ff9f40e8 100644
+index 9fdf2c34fc0..2b4947d6fbc 100644
 --- third_party/dawn/src/dawn/common/Platform.h
 +++ third_party/dawn/src/dawn/common/Platform.h
 @@ -26,7 +26,7 @@
- #        error "Unsupported Windows platform."
- #    endif
+ #error "Unsupported Windows platform."
+ #endif
  
 -#elif defined(__OpenBSD__) || defined(__FreeBSD__)
 +#elif defined(__OpenBSD__) || defined(__FreeBSD__) || defined(__DragonFly__)
@@ -2881,18 +2893,6 @@ index 30152e4a5a5..b9c679c6536 100644
  typedef __uint8_t __u8;
  typedef __uint32_t __u32;
  typedef __int32_t __s32;
-diff --git third_party/llvm/compiler-rt/test/fuzzer/lit.cfg.py third_party/llvm/compiler-rt/test/fuzzer/lit.cfg.py
-index f0140c8f3ba..dfbfe37a718 100644
---- third_party/llvm/compiler-rt/test/fuzzer/lit.cfg.py
-+++ third_party/llvm/compiler-rt/test/fuzzer/lit.cfg.py
-@@ -29,6 +29,7 @@ config.test_format = lit.formats.ShTest(execute_external)
- # LeakSanitizer is not supported on OSX or Windows right now.
- if (sys.platform.startswith('darwin') or
-     sys.platform.startswith('freebsd') or
-+    sys.platform.startswith('dragonfly') or
-     sys.platform.startswith('win')):
-   lit_config.note('lsan feature unavailable')
- else:
 diff --git third_party/minizip/src/lib/brg/brg_endian.h third_party/minizip/src/lib/brg/brg_endian.h
 index 9ef4af58030..ec51db6a952 100644
 --- third_party/minizip/src/lib/brg/brg_endian.h
@@ -2920,10 +2920,10 @@ index 2b2ef83188f..ca0629cc2d3 100755
    }[platform.system()])
  
 diff --git third_party/pdfium/fxjs/fx_date_helpers.cpp third_party/pdfium/fxjs/fx_date_helpers.cpp
-index b70d016eeb8..36a9eca04a6 100644
+index 897fce1ae0c..9dc8af10691 100644
 --- third_party/pdfium/fxjs/fx_date_helpers.cpp
 +++ third_party/pdfium/fxjs/fx_date_helpers.cpp
-@@ -36,7 +36,7 @@ double GetLocalTZA() {
+@@ -37,7 +37,7 @@ double GetLocalTZA() {
      return 0;
    time_t t = 0;
    FXSYS_time(&t);
@@ -2932,7 +2932,7 @@ index b70d016eeb8..36a9eca04a6 100644
    struct tm lt;
    localtime_r(&t, &lt);
    return (double)(-(lt.tm_gmtoff * 1000));
-@@ -49,7 +49,7 @@ double GetLocalTZA() {
+@@ -50,7 +50,7 @@ double GetLocalTZA() {
    _get_timezone(&timezone);
  #endif
    return (double)(-(timezone * 1000));
@@ -3017,7 +3017,7 @@ index 260648d7b11..153683e328d 100644
  #else
    // Determine if CLOCK_BOOTTIME is available on the first call.
 diff --git third_party/perfetto/src/base/file_utils.cc third_party/perfetto/src/base/file_utils.cc
-index 09782fee72c..697b3aabdf7 100644
+index ce4584c7fe0..f30917c2af3 100644
 --- third_party/perfetto/src/base/file_utils.cc
 +++ third_party/perfetto/src/base/file_utils.cc
 @@ -163,7 +163,8 @@ bool FlushFile(int fd) {
@@ -3065,167 +3065,6 @@ index 0e1b25128ac..ed022ae32ed 100644
      ]
    }
  
-diff --git third_party/swiftshader/src/Common/Configurator.cpp third_party/swiftshader/src/Common/Configurator.cpp
-index c6f992eb6b9..c4163ca6d8b 100644
---- third_party/swiftshader/src/Common/Configurator.cpp
-+++ third_party/swiftshader/src/Common/Configurator.cpp
-@@ -42,10 +42,9 @@ namespace sw
- 
- 	bool Configurator::readFile()
- 	{
--#if defined(__OpenBSD__) || defined(__FreeBSD__)
-+#if defined(__OpenBSD__) || defined(__FreeBSD__) || defined(__DragonFly__)
- 		return false;
- #endif
--
- 		#if defined(__unix__)
- 			if(access(path.c_str(), R_OK) != 0)
- 			{
-diff --git third_party/swiftshader/src/Common/MutexLock.hpp third_party/swiftshader/src/Common/MutexLock.hpp
-index f4a3e953692..b521b7dded4 100644
---- third_party/swiftshader/src/Common/MutexLock.hpp
-+++ third_party/swiftshader/src/Common/MutexLock.hpp
-@@ -17,7 +17,8 @@
- 
- #include "Thread.hpp"
- 
--#if defined(__linux__) || defined(__OpenBSD__) || defined(__FreeBSD__)
-+#if defined(__linux__) || defined(__OpenBSD__) || defined(__FreeBSD__) || \
-+	defined(__DragonFly__)
- // Use a pthread mutex on Linux. Since many processes may use SwiftShader
- // at the same time it's best to just have the scheduler overhead.
- #include <pthread.h>
-diff --git third_party/swiftshader/src/Common/SharedLibrary.hpp third_party/swiftshader/src/Common/SharedLibrary.hpp
-index a62acfd00d8..93d0a4dc6ea 100644
---- third_party/swiftshader/src/Common/SharedLibrary.hpp
-+++ third_party/swiftshader/src/Common/SharedLibrary.hpp
-@@ -97,7 +97,7 @@ void *loadLibrary(const std::string &libraryDirectory, const char *(&names)[n],
- 
- 	inline void *getLibraryHandle(const char *path)
- 	{
--		#if defined(__ANDROID__) || defined(__OpenBSD__) || defined(__FreeBSD__)
-+		#if defined(__ANDROID__) || defined(__OpenBSD__) || defined(__FreeBSD__) || defined(__DragonFly__)
- 			// bionic doesn't support RTLD_NOLOAD before L
- 			return dlopen(path, RTLD_NOW | RTLD_LOCAL);
- 		#else
-diff --git third_party/swiftshader/src/Main/SwiftConfig.cpp third_party/swiftshader/src/Main/SwiftConfig.cpp
-index 7a974f0f980..0ab9cd4d76f 100644
---- third_party/swiftshader/src/Main/SwiftConfig.cpp
-+++ third_party/swiftshader/src/Main/SwiftConfig.cpp
-@@ -764,7 +764,7 @@ namespace sw
- 		struct stat status;
- 		int lastModified = ini.getInteger("LastModified", "Time", 0);
- 
--#if !defined(__OpenBSD__) && !defined(__FreeBSD__)
-+#if !defined(__OpenBSD__) && !defined(__FreeBSD__) && !defined(__DragonFly__)
- 		bool noConfig = stat("SwiftShader.ini", &status) != 0;
- #else
- 		bool noConfig = false;
-diff --git third_party/swiftshader/src/OpenGL/compiler/osinclude.h third_party/swiftshader/src/OpenGL/compiler/osinclude.h
-index 54d4c75025a..46cbcf125fd 100644
---- third_party/swiftshader/src/OpenGL/compiler/osinclude.h
-+++ third_party/swiftshader/src/OpenGL/compiler/osinclude.h
-@@ -26,7 +26,7 @@
-       defined(__FreeBSD__) || defined(__OpenBSD__) || \
-       defined(__sun) || defined(ANDROID) || \
-       defined(__GLIBC__) || defined(__GNU__) || \
--      defined(__QNX__) || defined(__Fuchsia__)
-+      defined(__QNX__) || defined(__Fuchsia__) || defined(__DragonFly__)
- #define ANGLE_OS_POSIX
- #else
- #error Unsupported platform.
-diff --git third_party/swiftshader/src/OpenGL/libEGL/Display.cpp third_party/swiftshader/src/OpenGL/libEGL/Display.cpp
-index 714af8c2a15..a2e27bfa266 100644
---- third_party/swiftshader/src/OpenGL/libEGL/Display.cpp
-+++ third_party/swiftshader/src/OpenGL/libEGL/Display.cpp
-@@ -677,7 +677,7 @@ bool Display::isValidWindow(EGLNativeWindowType window)
- 			return status != 0;
- 		}
- 		return false;
--	#elif defined(__linux__) || defined(__OpenBSD__) || defined(__FreeBSD__)
-+	#elif defined(__linux__) || defined(__OpenBSD__) || defined(__FreeBSD__) || defined(__DragonFly__)
- 		return false;  // Non X11 linux is headless only
- 	#elif defined(__APPLE__)
- 		return sw::OSX::IsValidWindow(window);
-@@ -855,7 +855,7 @@ sw::Format Display::getDisplayFormat() const
- 		{
- 			return sw::FORMAT_X8R8G8B8;
- 		}
--	#elif defined(__linux__) || defined(__OpenBSD__) || defined(__FreeBSD__)  // Non X11 linux is headless only
-+	#elif defined(__linux__) || defined(__OpenBSD__) || defined(__FreeBSD__)  ||  defined(__DragonFly__)// Non X11 linux is headless only
- 		return sw::FORMAT_A8B8G8R8;
- 	#elif defined(__APPLE__)
- 		return sw::FORMAT_A8B8G8R8;
-diff --git third_party/swiftshader/src/OpenGL/libEGL/Surface.cpp third_party/swiftshader/src/OpenGL/libEGL/Surface.cpp
-index f4c6ebe67f8..50a861d2461 100644
---- third_party/swiftshader/src/OpenGL/libEGL/Surface.cpp
-+++ third_party/swiftshader/src/OpenGL/libEGL/Surface.cpp
-@@ -349,7 +349,7 @@ bool WindowSurface::checkForResize()
- 
- 		int windowWidth = windowAttributes.width;
- 		int windowHeight = windowAttributes.height;
--	#elif defined(__linux__) || defined(__OpenBSD__) || defined(__FreeBSD__)
-+	#elif defined(__linux__) || defined(__OpenBSD__) || defined(__FreeBSD__) || defined(__DragonFly__)
- 		// Non X11 linux is headless only
- 		int windowWidth = 100;
- 		int windowHeight = 100;
-diff --git third_party/swiftshader/src/OpenGL/libEGL/libEGL.cpp third_party/swiftshader/src/OpenGL/libEGL/libEGL.cpp
-index 2631f6b6d8a..7dbc6663086 100644
---- third_party/swiftshader/src/OpenGL/libEGL/libEGL.cpp
-+++ third_party/swiftshader/src/OpenGL/libEGL/libEGL.cpp
-@@ -153,7 +153,7 @@ EGLDisplay EGLAPIENTRY GetDisplay(EGLNativeDisplayType display_id)
- 		// FIXME: Check if display_id is the default display
- 	}
- 
--	#if (defined(__OpenBSD__) || defined(__linux__) || defined(__FreeBSD__)) && !defined(__ANDROID__)
-+	#if (defined(__OpenBSD__) || defined(__linux__) || defined(__FreeBSD__) || defined(__DragonFly__)) && !defined(__ANDROID__)
- 		#if defined(SWIFTSHADER_USE_X11)
- 		if(!libX11)
- 		#endif  // Non X11 linux is headless only
-@@ -216,7 +216,7 @@ const char *EGLAPIENTRY QueryString(EGLDisplay dpy, EGLint name)
- 	{
- 		return success(
- 			"EGL_KHR_client_get_all_proc_addresses "
--#if (defined(__OpenBSD__) || defined(__linux__) || defined(__FreeBSD__)) && !defined(__ANDROID__)
-+#if (defined(__OpenBSD__) || defined(__linux__) || defined(__FreeBSD__) || defined(__DragonFly__)) && !defined(__ANDROID__)
- 			"EGL_KHR_platform_gbm "
- #endif
- #if defined(SWIFTSHADER_USE_X11)
-@@ -1309,7 +1309,7 @@ EGLDisplay EGLAPIENTRY GetPlatformDisplay(EGLenum platform, void *native_display
- {
- 	TRACE("(EGLenum platform = 0x%X, void *native_display = %p, const EGLAttrib *attrib_list = %p)", platform, native_display, attrib_list);
- 
--	#if (defined(__OpenBSD__) || defined(__linux__) || defined(__FreeBSD__)) && !defined(__ANDROID__)
-+	#if (defined(__OpenBSD__) || defined(__linux__) || defined(__FreeBSD__) || defined(__DragonFly__)) && !defined(__ANDROID__)
- 		switch(platform)
- 		{
- 		#if defined(SWIFTSHADER_USE_X11)
-diff --git third_party/swiftshader/src/OpenGL/libEGL/libEGL.hpp third_party/swiftshader/src/OpenGL/libEGL/libEGL.hpp
-index 4c940c783f9..7f19ada177c 100644
---- third_party/swiftshader/src/OpenGL/libEGL/libEGL.hpp
-+++ third_party/swiftshader/src/OpenGL/libEGL/libEGL.hpp
-@@ -100,7 +100,7 @@ private:
- 				#endif
- 			#elif defined(__ANDROID__)
- 				const char *libEGL_lib[] = {"libEGL_swiftshader.so", "libEGL_swiftshader.so"};
--			#elif defined(__linux__) || defined(__OpenBSD__) || defined(__FreeBSD__)
-+			#elif defined(__linux__) || defined(__OpenBSD__) || defined(__FreeBSD__) || defined(__DragonFly__)
- 				#if defined(__LP64__)
- 					const char *libEGL_lib[] = {"lib64EGL_translator.so", "libEGL.so.1", "libEGL.so", "libEGL_deprecated.so.1", "libEGL_deprecated.so"};
- 				#else
-diff --git third_party/swiftshader/src/OpenGL/libGLESv2/libGLESv2.hpp third_party/swiftshader/src/OpenGL/libGLESv2/libGLESv2.hpp
-index 409ca977342..2bca7084abe 100644
---- third_party/swiftshader/src/OpenGL/libGLESv2/libGLESv2.hpp
-+++ third_party/swiftshader/src/OpenGL/libGLESv2/libGLESv2.hpp
-@@ -286,7 +286,7 @@ private:
- 				#endif
- 			#elif defined(__ANDROID__)
- 				const char *libGLESv2_lib[] = {"libGLESv2_swiftshader.so", "libGLESv2_swiftshader.so"};
--			#elif defined(__linux__) || defined(__OpenBSD__) || defined(__FreeBSD__)
-+			#elif defined(__linux__) || defined(__OpenBSD__) || defined(__FreeBSD__) || defined(__DragonFly__)
- 				#if defined(__LP64__)
- 					const char *libGLESv2_lib[] = {"lib64GLES_V2_translator.so", "libGLESv2.so.2", "libGLESv2.so", "libGLESv2_deprecated.so.2", "libGLESv2_deprecated.so"};
- 				#else
 diff --git third_party/swiftshader/src/Reactor/Debug.cpp third_party/swiftshader/src/Reactor/Debug.cpp
 index d4c16fc2f0e..95ecfa2d589 100644
 --- third_party/swiftshader/src/Reactor/Debug.cpp
@@ -3240,6 +3079,19 @@ index d4c16fc2f0e..95ecfa2d589 100644
  	static bool checked = false;
  	static bool res = false;
  
+diff --git third_party/swiftshader/src/System/Configurator.cpp third_party/swiftshader/src/System/Configurator.cpp
+index 62a9b7eef36..fb34f5da1bd 100644
+--- third_party/swiftshader/src/System/Configurator.cpp
++++ third_party/swiftshader/src/System/Configurator.cpp
+@@ -38,7 +38,7 @@ namespace sw {
+ 
+ Configurator::Configurator(const std::string &filePath)
+ {
+-#if defined(__OpenBSD__) || defined(__FreeBSD__)
++#if defined(__OpenBSD__) || defined(__FreeBSD__) || defined(__DragonFly__)
+ 	return;
+ #endif
+ 	std::fstream file(filePath, std::ios::in);
 diff --git third_party/swiftshader/third_party/llvm-subzero/build/Linux/include/llvm/Config/config.h third_party/swiftshader/third_party/llvm-subzero/build/Linux/include/llvm/Config/config.h
 index f9a45cee2c7..346f9f7bdf7 100644
 --- third_party/swiftshader/third_party/llvm-subzero/build/Linux/include/llvm/Config/config.h
@@ -3372,7 +3224,7 @@ index 6617d636c85..1c891607512 100755
    parser = optparse.OptionParser(description=sys.modules[__name__].__doc__)
    parser.add_option(
 diff --git tools/gn/build/gen.py tools/gn/build/gen.py
-index fb00957daa6..9f303cb2da0 100755
+index 144868d78d4..e2c80273337 100755
 --- tools/gn/build/gen.py
 +++ tools/gn/build/gen.py
 @@ -51,6 +51,8 @@ class Platform(object):
@@ -3406,7 +3258,7 @@ index fb00957daa6..9f303cb2da0 100755
  
    def is_zos(self):
      return self._platform == 'zos'
-@@ -281,6 +286,7 @@ def WriteGenericNinja(path, static_libraries, executables,
+@@ -284,6 +289,7 @@ def WriteGenericNinja(path, static_libraries, executables,
        'darwin': 'build_mac.ninja.template',
        'linux': 'build_linux.ninja.template',
        'freebsd': 'build_linux.ninja.template',
@@ -3509,10 +3361,10 @@ index e9b44443954..9aa6b614866 100644
  base::FilePath GetExePath() {
    int mib[] = {CTL_KERN, KERN_PROC, KERN_PROC_PATHNAME, -1};
 diff --git tools/grit/grit/node/base.py tools/grit/grit/node/base.py
-index 8b649674a54..726e35d4858 100644
+index f1ff1e407f6..5c7706ead46 100644
 --- tools/grit/grit/node/base.py
 +++ tools/grit/grit/node/base.py
-@@ -511,11 +511,12 @@ class Node(object):
+@@ -511,10 +511,11 @@ class Node(object):
        elif name == 'is_fuchsia':
          value = target_platform == 'fuchsia'
        elif name == 'is_bsd':
@@ -3520,15 +3372,14 @@ index 8b649674a54..726e35d4858 100644
 +        value = ('dragonfly' in target_platform or
 +                 'bsd' in target_platform)
        elif name == 'is_posix':
-         value = (target_platform.startswith('linux')
-                  or target_platform in ('darwin', 'sunos5', 'android', 'ios')
--                 or 'bsd' in target_platform)
-+                 or 'bsd' in target_platform or 'dragonfly' in target_platform)
+         value = (target_platform in ('linux', 'darwin', 'sunos5', 'android',
+-                                     'ios') or 'bsd' in target_platform)
++                                     'ios') or 'bsd' in target_platform or 'dragonfly' in target_platform)
  
        elif name == 'pp_ifdef':
          def pp_ifdef(symbol):
 diff --git tools/variations/fieldtrial_to_struct.py tools/variations/fieldtrial_to_struct.py
-index d7651cbbddb..7c0be4e512a 100755
+index a77e612ca55..bf0eee0ca96 100755
 --- tools/variations/fieldtrial_to_struct.py
 +++ tools/variations/fieldtrial_to_struct.py
 @@ -43,6 +43,7 @@ _platforms = [
@@ -3575,10 +3426,10 @@ index a7d79eb8d2e..749d44e0e27 100644
    __u64 flags;
  };
 diff --git v8/BUILD.gn v8/BUILD.gn
-index a2b0e40859a..6eca79b8fce 100644
+index d02381a0886..84eefc83fe7 100644
 --- v8/BUILD.gn
 +++ v8/BUILD.gn
-@@ -1234,6 +1234,10 @@ config("toolchain") {
+@@ -1249,6 +1249,10 @@ config("toolchain") {
      defines += [ "V8_HAVE_TARGET_OS" ]
      defines += [ "V8_TARGET_OS_FREEBSD" ]
      defines += [ "V8_TARGET_OS_BSD" ]
@@ -3589,7 +3440,7 @@ index a2b0e40859a..6eca79b8fce 100644
    }
  
    # TODO(infra): Support v8_enable_prof on Windows.
-@@ -3686,7 +3690,7 @@ v8_header_set("v8_internal_headers") {
+@@ -3711,7 +3715,7 @@ v8_header_set("v8_internal_headers") {
        # iOS Xcode simulator builds run on an x64 target. iOS and macOS are both
        # based on Darwin and thus POSIX-compliant to a similar degree.
        if (is_linux || is_chromeos || is_mac || is_ios ||
@@ -3598,7 +3449,7 @@ index a2b0e40859a..6eca79b8fce 100644
          sources += [ "src/trap-handler/handler-inside-posix.h" ]
        } else if (is_win) {
          sources += [ "src/trap-handler/handler-inside-win.h" ]
-@@ -4660,7 +4664,7 @@ v8_source_set("v8_base_without_compiler") {
+@@ -4719,7 +4723,7 @@ v8_source_set("v8_base_without_compiler") {
        # iOS Xcode simulator builds run on an x64 target. iOS and macOS are both
        # based on Darwin and thus POSIX-compliant to a similar degree.
        if (is_linux || is_chromeos || is_mac || is_ios ||
@@ -3607,7 +3458,7 @@ index a2b0e40859a..6eca79b8fce 100644
          sources += [
            "src/trap-handler/handler-inside-posix.cc",
            "src/trap-handler/handler-outside-posix.cc",
-@@ -5263,7 +5267,7 @@ v8_component("v8_libbase") {
+@@ -5323,7 +5327,7 @@ v8_component("v8_libbase") {
        "src/base/platform/platform-openbsd.cc",
      ]
      libs = [ "execinfo" ]
@@ -3617,7 +3468,7 @@ index a2b0e40859a..6eca79b8fce 100644
        "src/base/debug/stack_trace_posix.cc",
        "src/base/platform/platform-freebsd.cc",
 diff --git v8/src/api/api.cc v8/src/api/api.cc
-index 099faac8bf5..a239dea4bbd 100644
+index 9351ea8735e..669b3028458 100644
 --- v8/src/api/api.cc
 +++ v8/src/api/api.cc
 @@ -138,7 +138,8 @@
@@ -3628,9 +3479,9 @@ index 099faac8bf5..a239dea4bbd 100644
 +#if V8_OS_LINUX || V8_OS_DARWIN || V8_OS_FREEBSD || V8_OS_OPENBSD || \
 +  V8_OS_DRAGONFLYBSD
  #include <signal.h>
- #include "include/v8-wasm-trap-handler-posix.h"
- #include "src/trap-handler/handler-inside-posix.h"
-@@ -6064,7 +6065,8 @@ bool v8::V8::Initialize(const int build_config) {
+ 
+ #if V8_ENABLE_WEBASSEMBLY
+@@ -6096,7 +6097,8 @@ bool v8::V8::Initialize(const int build_config) {
    return true;
  }
  
@@ -3683,7 +3534,7 @@ index b958cbce099..e8fb47cf3aa 100644
  }
  
 diff --git v8/src/base/platform/platform-posix.cc v8/src/base/platform/platform-posix.cc
-index 8ad163b7358..a987a6f841e 100644
+index 5cb0828d1ae..18e7048a73b 100644
 --- v8/src/base/platform/platform-posix.cc
 +++ v8/src/base/platform/platform-posix.cc
 @@ -68,7 +68,7 @@
@@ -3695,7 +3546,7 @@ index 8ad163b7358..a987a6f841e 100644
  #define MAP_ANONYMOUS MAP_ANON
  #endif
  
-@@ -149,9 +149,9 @@ int GetFlagsForMemoryPermission(OS::MemoryPermission access,
+@@ -130,9 +130,9 @@ int GetFlagsForMemoryPermission(OS::MemoryPermission access,
    int flags = MAP_ANONYMOUS;
    flags |= (page_type == PageType::kShared) ? MAP_SHARED : MAP_PRIVATE;
    if (access == OS::MemoryPermission::kNoAccess) {
@@ -3707,7 +3558,7 @@ index 8ad163b7358..a987a6f841e 100644
  #if V8_OS_QNX
      flags |= MAP_LAZY;
  #endif  // V8_OS_QNX
-@@ -1239,7 +1239,7 @@ void Thread::SetThreadLocal(LocalStorageKey key, void* value) {
+@@ -1217,7 +1217,7 @@ void Thread::SetThreadLocal(LocalStorageKey key, void* value) {
  // keep this version in POSIX as most Linux-compatible derivatives will
  // support it. MacOS and FreeBSD are different here.
  #if !defined(V8_OS_FREEBSD) && !defined(V8_OS_DARWIN) && !defined(_AIX) && \
@@ -3730,7 +3581,7 @@ index fe91c98ff59..aa14d87f071 100644
    size_t size = sizeof(pages);
    sysctlbyname("vm.stats.vm.v_page_count", &pages, &size, nullptr, 0);
 diff --git v8/src/base/utils/random-number-generator.cc v8/src/base/utils/random-number-generator.cc
-index f6dc62893cf..36e070c0030 100644
+index 91b7c6fc666..49d442235b7 100644
 --- v8/src/base/utils/random-number-generator.cc
 +++ v8/src/base/utils/random-number-generator.cc
 @@ -56,7 +56,7 @@ RandomNumberGenerator::RandomNumberGenerator() {
@@ -3743,7 +3594,7 @@ index f6dc62893cf..36e070c0030 100644
    // It always succeeds while having decent performance and
    // no file descriptor involved.
 diff --git v8/src/d8/d8-posix.cc v8/src/d8/d8-posix.cc
-index 8db4beff0f0..04a8af505cf 100644
+index fc2f3d43721..9d342ba16b8 100644
 --- v8/src/d8/d8-posix.cc
 +++ v8/src/d8/d8-posix.cc
 @@ -340,7 +340,7 @@ static Local<Value> GetStdout(Isolate* isolate, int child_fd,
@@ -3756,10 +3607,10 @@ index 8db4beff0f0..04a8af505cf 100644
  #endif
  #endif
 diff --git v8/src/libsampler/sampler.cc v8/src/libsampler/sampler.cc
-index 9e5569455f8..04d575519a0 100644
+index 7dfff1f8f9c..19e73ab0abc 100644
 --- v8/src/libsampler/sampler.cc
 +++ v8/src/libsampler/sampler.cc
-@@ -484,7 +484,7 @@ void SignalHandler::FillRegisterState(void* context, RegisterState* state) {
+@@ -489,7 +489,7 @@ void SignalHandler::FillRegisterState(void* context, RegisterState* state) {
    state->fp =
        reinterpret_cast<void*>(arm_thread_state64_get_fp(mcontext->__ss));
  #endif  // V8_HOST_ARCH_*
