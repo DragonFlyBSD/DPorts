@@ -1,3 +1,0 @@
-
-# unbreak build
-MAKE_ENV+=	DJANGO_SETTINGS_MODULE=tests.testproject.settings

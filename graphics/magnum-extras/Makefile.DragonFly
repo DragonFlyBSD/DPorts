@@ -1,6 +1,0 @@
-
-# catch up with CORRADE_ASSERT_UNREACHABLE() macro changes
-dfly-patch:
-	${REINPLACE_CMD} -e 's@CORRADE_ASSERT_UNREACHABLE()@std::abort()@g' \
-		${WRKSRC}/src/player/ScenePlayer.cpp \
-		${WRKSRC}/src/Magnum/Ui/Style.cpp
