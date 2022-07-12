@@ -2080,7 +2080,7 @@ MAKE_JOBS_NUMBER=	1
 _MAKE_JOBS_NUMBER:=	${MAKE_JOBS_NUMBER}
 .      else
 .        if !defined(_SMP_CPUS)
-_SMP_CPUS!=		${SYSCTL} -n nw.ncpu
+_SMP_CPUS!=		${SYSCTL} -n hw.ncpu
 .        endif
 _EXPORTED_VARS+=	_SMP_CPUS
 _MAKE_JOBS_NUMBER=	${_SMP_CPUS}
