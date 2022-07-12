@@ -22,7 +22,7 @@ _QT_MK_INCLUDED=	qt.mk
 
 # Qt versions currently supported by the framework.
 _QT_SUPPORTED?=		5
-QT5_VERSION?=		5.15.2
+QT5_VERSION?=		5.15.5
 
 # We accept the Qt version to be passed by either or all of the three mk files.
 .  if empty(qt_ARGS) && empty(qmake_ARGS) && empty(qt-dist_ARGS)
@@ -133,9 +133,9 @@ _USE_QT_ALL=		assistant dbus declarative declarative-test designer doc gui help 
 			scripttools sql sql-mysql sql-odbc sql-pgsql \
 			sql-sqlite2 sql-sqlite3 svg testlib webkit \
 			xml xmlpatterns
-.if ${ARCH} == x86_64 || ${ARCH} == i386
+.  if ${ARCH} == x86_64 || ${ARCH} == i386
 _USE_QT_ALL+=	sql-ibase
-.endif
+.  endif
 
 _USE_QT5_ONLY=		3d buildtools charts concurrent connectivity \
 			core datavis3d diag examples gamepad \
@@ -154,7 +154,7 @@ qt-assistant_PATH=	${LOCALBASE}/${QT_BINDIR_REL}/assistant
 
 # Always build with *this* version's buildtools
 qt-buildtools_PORT=	devel/${_QT_RELNAME}-buildtools
-qt-buildtools_PATH=	${_QT_RELNAME}-buildtools>=${_QT_VERSION}
+qt-buildtools_PATH=	${_QT_RELNAME}-buildtools>=${_QT_VERSION:R}
 
 qt-charts_PORT=		x11-toolkits/${_QT_RELNAME}-charts
 qt-charts_LIB=		libQt${_QT_LIBVER}Charts.so
@@ -263,7 +263,7 @@ qt-qev_PATH=		${LOCALBASE}/${QT_BINDIR_REL}/qev
 
 # Always build with *this* version's qmake
 qt-qmake_PORT=		devel/${_QT_RELNAME}-qmake
-qt-qmake_PATH=		${_QT_RELNAME}-qmake>=${_QT_VERSION}
+qt-qmake_PATH=		${_QT_RELNAME}-qmake>=${_QT_VERSION:R}
 
 qt-quick3d_PORT=	x11-toolkits/${_QT_RELNAME}-quick3d
 qt-quick3d_LIB=		libQt${_QT_LIBVER}Quick3D.so
