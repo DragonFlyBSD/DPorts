@@ -1,7 +1,7 @@
 # Created by: vanilla
 
 PORTNAME=	protobuf
-PORTVERSION=	3.19.4
+PORTVERSION=	3.20.1
 DISTVERSIONPREFIX=	cpp-
 PORTEPOCH=	1
 CATEGORIES=	devel
@@ -17,7 +17,7 @@ BROKEN_sparc64=	fails to compile: no atomic ops available
 
 TEST_DEPENDS=	googletest>=0:devel/googletest
 
-USES=		compiler:c++11-lang cpe gmake libtool localbase pathfix pkgconfig
+USES=		compiler:c++11-lang cpe libtool localbase pathfix pkgconfig
 
 CFLAGS+=	-D_THREAD_SAFE -DGOOGLE_PROTOBUF_NO_RTTI -I${WRKSRC}/src
 CONFIGURE_ENV=	CC_FOR_BUILD="${CC}" \
