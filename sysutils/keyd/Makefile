@@ -1,40 +1,58 @@
 PORTNAME=	keyd
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.3.0
+DISTVERSION=	2.4.1
 CATEGORIES=	sysutils
+
+PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+PATCHFILES+=	bb49007fb074.patch:-p1 # https://github.com/rvaiya/keyd/pull/239
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Key remapping daemon for evdev
 
 BUILD_DEPENDS=	evdev-proto>0:devel/evdev-proto
-LIB_DEPENDS=	libudev.so:devel/libudev-devd
+LIB_DEPENDS=	libinotify.so:devel/libinotify
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+USES=		gmake python:env shebangfix
 USE_GITHUB=	yes
 USE_RC_SUBR=	${PORTNAME}
 GH_ACCOUNT=	rvaiya
+SHEBANG_FILES=	scripts/*
 MAKE_ARGS=	DESTDIR="${DESTDIR}" PREFIX="${PREFIX}" \
 		GIT_HASH="${DISTVERSIONFULL}"
 PLIST_FILES=	bin/${PORTNAME} \
-		share/man/man1/${PORTNAME}.1.gz \
+		bin/${PORTNAME}-application-mapper \
+		${DATADIR}/keyd.compose \
 		"@dir ${ETCDIR}"
+PORTDOCS=	*
+PORTEXAMPLES=	*
+
+USERS=		${PORTNAME}
+GROUPS=		${PORTNAME}
+
+OPTIONS_DEFINE=	DOCS EXAMPLES MANPAGES
+OPTIONS_DEFAULT=MANPAGES
+
+MANPAGES_BUILD_DEPENDS=	scdoc:textproc/scdoc
+MANPAGES_ALL_TARGET=	all man
+MANPAGES_PLIST_FILES=	share/man/man1/${PORTNAME}.1.gz \
+			share/man/man1/${PORTNAME}-application-mapper.1.gz \
 
 post-patch:
-	@${REINPLACE_CMD} -e 's,/etc,${PREFIX}&,' \
-		-e 's,/var/lock,/var/run,' \
+	@${REINPLACE_CMD} -e 's,/etc,$$(PREFIX)&,' \
 		-e 's,/usr/local,${LOCALBASE},' \
-		-e '/systemd/d' \
-		-e '/^CFLAGS/s/=/+=/' \
-		-e '/-l/s/$$/ $$(LDFLAGS)/' \
+		-e 's,${DOCSDIR_REL}/examples,${EXAMPLESDIR_REL},' \
 		-e 's/ -O3//' \
 		${WRKSRC}/Makefile
+	@${REINPLACE_CMD} -e 's,/usr,${PREFIX}&,' \
+		-e 's,/etc,${PREFIX}&,' \
+		${WRKSRC}/docs/*.scdoc \
+		${WRKSRC}/examples/*.conf \
+		${WRKSRC}/src/${PORTNAME}.c
 # https://lists.freebsd.org/pipermail/freebsd-x11/2019-March/023097.html
 	@${REINPLACE_CMD} -e 's,__FreeBSD,&_disabled,' \
-		${WRKSRC}/src/config.h \
-		${WRKSRC}/src/keys.h \
-		${WRKSRC}/src/main.c \
-		${NULL}
+		${WRKSRC}/src/vkbd/uinput.c
 
 .include <bsd.port.mk>
