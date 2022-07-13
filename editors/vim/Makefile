@@ -1,7 +1,7 @@
 # Created by: David O'Brien <obrien@cs.ucdavis.edu>
 
 PORTNAME=	vim
-PORTVERSION=	8.2.4669
+PORTVERSION=	9.0.0016
 DISTVERSIONPREFIX=	v
 CATEGORIES=	editors
 
@@ -115,10 +115,6 @@ XTERM_SAVE_DESC=	Restore xterm screen after exit
 CTAGS_BASE_DESC=	Use system ctags
 CTAGS_EXUBERANT_DESC=	Use exctags instead of ctags
 CTAGS_UNIVERSAL_DESC=	Use uctags instead of ctags
-
-# BROKEN: ruby.h: error: wrong number of arguments specified for 'deprecated' attribute
-OPTIONS_EXCLUDE_powerpc64=	RUBY
-OPTIONS_EXCLUDE_powerpc64le=	RUBY
 
 # GENERAL OPTIONS
 CTAGS_EXUBERANT_RUN_DEPENDS=	exctags:devel/ctags
