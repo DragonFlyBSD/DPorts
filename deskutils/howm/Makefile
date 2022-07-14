@@ -1,5 +1,6 @@
 PORTNAME=	howm
 PORTVERSION=	1.4.8
+PORTREVISION=	1
 CATEGORIES=	deskutils
 MASTER_SITES=	http://howm.sourceforge.jp/a/
 PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
@@ -17,6 +18,8 @@ BROKEN=		Debugger entered--Lisp error: (wrong-type-argument stringp nil)
 USES=		emacs
 
 GNU_CONFIGURE=	yes
+
+CONFLICTS_INSTALL=	howm howm-emacs_* # share/doc/howm/README-j.html
 
 PORTDOCS=	*.html *.png
 PORTEXAMPLES=	en/0000-00-00-000000.txt ja/0000-00-00-000000.txt
