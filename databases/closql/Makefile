@@ -1,6 +1,7 @@
 PORTNAME=	closql
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.2.1
+PORTREVISION=	1
 CATEGORIES=	databases elisp
 PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
 
@@ -16,6 +17,8 @@ RUN_DEPENDS=	emacsql${EMACS_PKGNAMESUFFIX}>=3.0.0:databases/emacsql@${EMACS_FLAV
 USES=		emacs
 USE_GITHUB=	yes
 GH_ACCOUNT=	emacscollective
+
+CONFLICTS_INSTALL=	closql closql-emacs_* # share/doc/closql/README.md
 
 NO_ARCH=	yes
 
