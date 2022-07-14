@@ -1,5 +1,5 @@
 PORTNAME=	yt-dlp
-DISTVERSION=	2022.03.08.1
+DISTVERSION=	2022.06.29
 CATEGORIES=	www
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -9,6 +9,7 @@ LICENSE=	UNLICENSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 PY_DEPENDS=	${PYTHON_PKGNAMEPREFIX}brotli>0:archivers/py-brotli@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}certifi>0:security/py-certifi@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}mutagen>0:audio/py-mutagen@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pycryptodomex>0:security/py-pycryptodomex@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3@${PY_FLAVOR} \
@@ -17,9 +18,9 @@ BUILD_DEPENDS=	${PY_DEPENDS}
 RUN_DEPENDS=	${PY_DEPENDS}
 
 USES=		gmake python:3.7+ shebangfix
-SHEBANG_GLOB=	devscripts/*.py
-
 USE_GITHUB=	yes
+
+SHEBANG_GLOB=	devscripts/*.py
 
 MAKE_ARGS=	PYTHON=${PYTHON_CMD}
 
