@@ -1,9 +1,8 @@
 # Created by: John Hixson <jhixson@FreeBSD.org>
-# $FreeBSD$
 
 PORTNAME=	pianod2
 PORTVERSION=	329
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	http://deviousfish.com/Downloads/pianod2/Devel/
 
@@ -28,10 +27,10 @@ LIB_DEPENDS=	libao.so:audio/libao \
 	libtag.so:audio/taglib
 RUN_DEPENDS=	mksh>0:shells/mksh
 
-USES=	autoreconf compiler:c11 gettext gmake gnome pkgconfig shebangfix
+USES=	autoreconf compiler:c11 gettext gmake gnome gstreamer pkgconfig shebangfix
 
 USE_GNOME=	glib20
-USE_GSTREAMER=	ffmpeg
+USE_GSTREAMER=	#ffmpeg
 
 USE_RC_SUBR=	pianod
 
