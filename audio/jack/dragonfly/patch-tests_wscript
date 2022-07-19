@@ -1,11 +1,11 @@
---- tests/wscript.ori	2021-10-23 19:06:32.114168000 +0200
-+++ tests/wscript	2021-10-23 19:06:47.533820000 +0200
-@@ -20,6 +20,8 @@
-             prog.includes = ['..','../macosx', '../posix', '../common/jack', '../common']
+--- tests/wscript.orig	2022-04-15 19:14:06 UTC
++++ tests/wscript
+@@ -21,6 +21,8 @@ def build(bld):
+             prog.includes = ['..', '../macosx', '../posix', '../common/jack', '../common']
          if bld.env['IS_LINUX']:
-             prog.includes = ['..','../linux', '../posix', '../common/jack', '../common']
+             prog.includes = ['..', '../linux', '../posix', '../common/jack', '../common']
 +        if bld.env['IS_DRAGONFLY']:
 +            prog.includes = ['..','../freebsd', '../posix', '../common/jack', '../common']
          if bld.env['IS_FREEBSD']:
-             prog.includes = ['..','../freebsd', '../posix', '../common/jack', '../common']
+             prog.includes = ['..', '../freebsd', '../posix', '../common/jack', '../common']
          if bld.env['IS_SUN']:
