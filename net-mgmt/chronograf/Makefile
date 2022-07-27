@@ -21,8 +21,6 @@ BUILD_DEPENDS=	go-bindata:devel/go-bindata \
 
 USES=		gmake go:modules python:build
 
-EXTRACT_ONLY:=	${DISTFILES:C/:[^:]+$//}
-
 GO_MODULE=	github.com/influxdata/${PORTNAME}
 GO_TARGET=	./cmd/chronograf/main.go:chronograf \
 		./cmd/chronoctl:chronoctl
@@ -91,6 +89,6 @@ pre-build:
 		npm_config_tarball=${DISTDIR}/${DIST_SUBDIR}/node-v${NODEJS_VERSION}-headers.tar.gz \
 		yarn --frozen-lockfile --offline --no-progress --no-emoji
 	cd ${WRKSRC}/ui && ${SETENV} ${YARN_ENV} yarn run build
-	cd ${WRKSRC} && ${GMAKE} .bindata
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} .bindata
 
 .include <bsd.port.post.mk>
