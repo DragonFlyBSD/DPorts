@@ -1,8 +1,8 @@
 PORTNAME=	swayimg
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.6
-PORTREVISION=	2
-CATEGORIES=	x11
+PORTREVISION=	3
+CATEGORIES=	x11 wayland
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
 PATCHFILES+=	787d13e36783.patch:-p1 # https://github.com/artemsen/swayimg/pull/23
