@@ -2,8 +2,8 @@
 
 PORTNAME=	caddy
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.4.6
-PORTREVISION=	2
+DISTVERSION=	2.5.1
+PORTREVISION=	1
 CATEGORIES=	www
 DIST_SUBDIR=	caddy
 
@@ -12,8 +12,6 @@ COMMENT=	Fast, cross-platform HTTP/2 web server with automatic HTTPS
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
-
-RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss
 
 USES=		cpe go:modules
 CPE_VENDOR=	caddyserver
@@ -26,9 +24,9 @@ PLIST_FILES=	bin/${PORTNAME} \
 
 GO_TARGET=	./cmd/caddy
 # If go.mod is sufficient:
-# GO_MODULE=	github.com/caddyserver/caddy/v2
+GO_MODULE=	github.com/caddyserver/caddy/v2
 # If modules must be specified manually:
-.include "${.CURDIR}/modules.mk"
+# .include "${.CURDIR}/modules.mk"
 
 post-install:
 	${MKDIR} ${STAGEDIR}${ETCDIR}
