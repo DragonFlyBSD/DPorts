@@ -1,6 +1,6 @@
 PORTNAME=	qmcpack
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.13.0
+DISTVERSION=	3.14.0
 PORTREVISION=	3
 CATEGORIES=	science
 
@@ -17,7 +17,7 @@ LIB_DEPENDS=	libboost_system.so:devel/boost-libs \
 		libhdf5.so:science/hdf5 \
 		libmpich.so:net/mpich \
 		libopenblas.so:math/openblas \
-		libsz.so:science/szip
+		libsz.so:science/libaec
 TEST_DEPENDS=	bash:shells/bash
 
 USES=		cmake:testing compiler:c++17-lang fortran gnome localbase:ldflags pkgconfig python shebangfix
