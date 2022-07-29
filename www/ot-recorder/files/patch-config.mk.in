@@ -1,8 +1,8 @@
---- config.mk.orig	2019-07-29 18:58:54 UTC
-+++ config.mk
+--- config.mk.in.orig	2022-05-24 07:25:09 UTC
++++ config.mk.in
 @@ -20,10 +20,10 @@
  #
- # Uncomment the following lines and replaced "no" with "yes":
+ # Uncomment the following lines and replace "no" with "yes":
  #
 -# CC      = clang
 -# CFLAGS += -I/usr/local/include
