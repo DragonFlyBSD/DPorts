@@ -2,6 +2,7 @@
 
 PORTNAME=	Mathics3
 PORTVERSION=	4.0.0
+PORTREVISION=	2
 CATEGORIES=	math python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -21,7 +22,7 @@ BUILD_DEPENDS=	${PYNUMPY}	\
 		${PYTHON_PKGNAMEPREFIX}llvmlite>0:devel/py-llvmlite@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}dateutil>0:devel/py-dateutil@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}palettable>0:misc/py-palettable@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}word_cloud>0:textproc/py-wordcloud@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}wordcloud>0:textproc/py-wordcloud@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}scikit-image>0:graphics/py-scikit-image@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}Mathics_Scanner>0:math/py-mathics-scanner
 RUN_DEPENDS=	${PYNUMPY}	\
@@ -53,16 +54,17 @@ RUN_DEPENDS=	${PYNUMPY}	\
 		${PYTHON_PKGNAMEPREFIX}ipykernel5>0:devel/py-ipykernel5@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}ipywidgets>0:devel/py-ipywidgets@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pycountry>0:textproc/py-pycountry@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}word_cloud>0:textproc/py-wordcloud@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}wordcloud>0:textproc/py-wordcloud@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}scikit-image>0:graphics/py-scikit-image@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}Mathics_Scanner>0:math/py-mathics-scanner
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>0:devel/py-pytest@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pluggy>0:devel/py-pluggy@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pexpect>0:misc/py-pexpect@${PY_FLAVOR}
 
 #USE_GITHUB=	yes
 #GH_ACCOUNT=	${PORTNAME:tl}
 
-USES=		python:3.7+ shebangfix
+USES=		python:3.8+ shebangfix
 USE_PYTHON=	distutils noflavors
 SHEBANG_GLOB=	*.py
 
