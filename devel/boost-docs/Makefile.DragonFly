@@ -1,0 +1,8 @@
+
+# zrj: installs linux based cuda examples + invalid shebang in examples
+#Warning: '/usr/bin/env python' is an invalid shebang you need USES=shebangfix for 'share/doc/boost/libs/python/example/tutorial/hello.py'
+#Error: '/usr/local/share/doc/boost/libs/fiber/examples/cuda/multiple_streams' is 'ELF 64-bit LSB shared object, x86-64, version 1 (GNU/Linux), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 3.2.0, BuildID[sha1]=c7f50ec92c995154cce701fc055565c269b2baa4, with debug_info, not stripped' GNU specific binary file.
+.if defined(DEVELOPER)
+.MAKEFLAGS+=	DFLY_ALLOW_FOREIGN_BINARIES=yes
+DFLY_ALLOW_FOREIGN_BINARIES=yes
+.endif
