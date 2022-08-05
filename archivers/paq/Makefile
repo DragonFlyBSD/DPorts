@@ -24,7 +24,7 @@ SUB_FILES=	pkg-message
 
 .include <bsd.port.options.mk>
 
-.if ${ARCH} == "amd64" || ( ${ARCH} == "i386" && !empty(MACHINE_CPU:Msse2) )
+.if ${ARCH} == "x86_64" || ( ${ARCH} == "i386" && !empty(MACHINE_CPU:Msse2) )
 ZPAQFLAGS=	-Dunix -msse2
 .else
 ZPAQFLAGS=	-Dunix -DNOJIT
