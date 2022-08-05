@@ -1,0 +1,11 @@
+--- configure.intermediate	2020-01-01 15:54:07.000000000 +0000
++++ configure
+@@ -2032,7 +2032,7 @@ case "$host_os" in
+      ELFLIB_MAJOR="lib$(THIS_LIB).$(ELF_MAJOR_VERSION).dylib"
+      ELFLIB_MAJOR_MINOR="lib$(THIS_LIB).$(ELF_MAJOR_VERSION).$(ELF_MINOR_VERSION).dylib"
+      ;;
+-  *freebsd* )
++  *freebsd*  | *dragonfly* )
+        ELF_CC="\$(CC)"
+        ELF_CFLAGS="\$(CFLAGS) -fPIC"
+        ELF_LINK="\$(CC) -shared -Wl,-soname,\$(ELFLIB_MAJOR)"
