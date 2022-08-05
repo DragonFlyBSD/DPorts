@@ -1,0 +1,7 @@
+FIDS=	cond job make suff proc dir main buf targ \
+	shell hash parse str util var for arch
+
+post-patch:
+.for F in ${FIDS}
+	@${REINPLACE_CMD} -e '/^__FBSDID/d' ${WRKSRC}/${F}.c
+.endfor
