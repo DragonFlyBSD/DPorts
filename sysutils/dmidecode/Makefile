@@ -22,7 +22,7 @@ OPTIONS_DEFINE=	DOCS
 .include <bsd.port.pre.mk>
 
 # Additional programs are only built for x86 platforms.
-.if ${ARCH} == "amd64" || ${ARCH} == "i386"
+.if ${ARCH} == "x86_64" || ${ARCH} == "i386"
 PLIST_SUB+=	X86=""
 .else
 PLIST_SUB+=	X86="@comment "
