@@ -147,13 +147,6 @@ GmbH: {
 }
 
 # Germany
-# Philipps-University Marburg
-Marburg: {
-	url		: ftp://ftp.mathematik.uni-marburg.de/pub/mirror/dragonfly/dports/${ABI}/LATEST,
-	enabled		: no
-}
-
-# Germany
 # RWTH Aachen
 Aachen: {
 	url		: https://ftp.halifax.rwth-aachen.de/dragonflybsd/dports/${ABI}/LATEST,
