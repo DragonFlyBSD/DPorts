@@ -1,2 +1,4 @@
 lib/libopensmtpd.so
+lib/libopensmtpd.so.%%SOSHORTVERSION%%
+lib/libopensmtpd.so.%%SOVERSION%%
 include/opensmtpd.h
