@@ -1,0 +1,11 @@
+--- src/lib/CMakeLists.txt.orig	2022-06-10 10:47:31 UTC
++++ src/lib/CMakeLists.txt
+@@ -213,7 +213,7 @@ if(WIN32)
+     target_link_libraries(KF5CoreAddons PRIVATE netapi32 userenv psapi)
+ endif()
+ 
+-if(CMAKE_SYSTEM_NAME MATCHES "FreeBSD")
++if(CMAKE_SYSTEM_NAME MATCHES "FreeBSD|DragonFly")
+     target_link_libraries(KF5CoreAddons PRIVATE kvm)
+ endif()
+ 
