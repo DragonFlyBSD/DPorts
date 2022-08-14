@@ -1,3 +1,7 @@
+# TODO(tuxillo): Update the bootstrap and document how it should
+# be done. freepascal only supports bootstrapping the current release
+# with the previous one and this is going to bite us sooner than later.
+BOOTVER:=   3.0.4
 
 #MAKE_ENV+=	LDVER=ld.bfd
 
