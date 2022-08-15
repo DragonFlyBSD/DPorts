@@ -2,7 +2,7 @@
 
 PORTNAME=	octave-forge-netcdf
 PORTVERSION=	1.0.14
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	math
 
 MAINTAINER=	stephen@FreeBSD.org
@@ -17,6 +17,7 @@ OCTSRC=		${DISTNAME}
 
 WRKSRC=		${WRKDIR}/${OCTSRC}/src
 GNU_CONFIGURE=	yes
+NO_ARCH=	yes
 
 LIB_DEPENDS+=	libnetcdf.so:science/netcdf
 
