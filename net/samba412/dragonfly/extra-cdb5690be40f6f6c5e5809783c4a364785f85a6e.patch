@@ -1,0 +1,111 @@
+From cdb5690be40f6f6c5e5809783c4a364785f85a6e Mon Sep 17 00:00:00 2001
+From: Andrew Bartlett <abartlet@samba.org>
+Date: Fri, 1 Oct 2021 11:09:48 +1300
+Subject: [PATCH] CVE-2020-25718 s4-rpc_server: Obtain the user tokenGroups
+ earlier
+
+This will allow the creation of a common helper routine that
+takes the token SID list (from tokenGroups or struct auth_user_info_dc)
+and returns the allowed/denied result.
+
+BUG: https://bugzilla.samba.org/show_bug.cgi?id=14558
+
+Signed-off-by: Andrew Bartlett <abartlet@samba.org>
+Reviewed-by: Joseph Sutton <josephsutton@catalyst.net.nz>
+---
+ source4/rpc_server/drsuapi/getncchanges.c     | 28 +++++++++----------
+ source4/rpc_server/netlogon/dcerpc_netlogon.c | 28 +++++++++----------
+ 2 files changed, 28 insertions(+), 28 deletions(-)
+
+diff --git a/source4/rpc_server/drsuapi/getncchanges.c b/source4/rpc_server/drsuapi/getncchanges.c
+index c7d2addd104d..bc30e73e06bf 100644
+--- a/source4/rpc_server/drsuapi/getncchanges.c
++++ b/source4/rpc_server/drsuapi/getncchanges.c
+@@ -1282,6 +1282,20 @@ static WERROR getncchanges_repl_secret(struct drsuapi_bind_state *b_state,
+ 		goto allowed;
+ 	}
+ 
++	/*
++	 * The SID list needs to include itself as well as the tokenGroups.
++	 *
++	 * TODO determine if sIDHistory is required for this check
++	 */
++	werr = samdb_result_sid_array_ndr(b_state->sam_ctx_system, obj_res->msgs[0],
++					  mem_ctx, "tokenGroups",
++					  &num_token_sids,
++					  &token_sids,
++					  object_sid, 1);
++	if (!W_ERROR_IS_OK(werr) || token_sids==NULL) {
++		goto denied;
++	}
++
+ 	/* but it isn't allowed to get anyone elses krbtgt secrets */
+ 	if (samdb_result_dn(b_state->sam_ctx_system, mem_ctx,
+ 			    obj_res->msgs[0], "msDS-KrbTgtLinkBL", NULL)) {
+@@ -1310,20 +1324,6 @@ static WERROR getncchanges_repl_secret(struct drsuapi_bind_state *b_state,
+ 		goto denied;
+ 	}
+ 
+-	/*
+-	 * The SID list needs to include itself as well as the tokenGroups.
+-	 *
+-	 * TODO determine if sIDHistory is required for this check
+-	 */
+-	werr = samdb_result_sid_array_ndr(b_state->sam_ctx_system, obj_res->msgs[0],
+-					  mem_ctx, "tokenGroups",
+-					  &num_token_sids,
+-					  &token_sids,
+-					  object_sid, 1);
+-	if (!W_ERROR_IS_OK(werr) || token_sids==NULL) {
+-		goto denied;
+-	}
+-
+ 	if (never_reveal_sids &&
+ 	    sid_list_match(num_token_sids,
+ 			   token_sids,
+diff --git a/source4/rpc_server/netlogon/dcerpc_netlogon.c b/source4/rpc_server/netlogon/dcerpc_netlogon.c
+index b135d1147162..cccd215dc0ba 100644
+--- a/source4/rpc_server/netlogon/dcerpc_netlogon.c
++++ b/source4/rpc_server/netlogon/dcerpc_netlogon.c
+@@ -2878,6 +2878,20 @@ static bool sam_rodc_access_check(struct ldb_context *sam_ctx,
+ 		goto denied;
+ 	}
+ 
++	/*
++	 * The SID list needs to include itself as well as the tokenGroups.
++	 *
++	 * TODO determine if sIDHistory is required for this check
++	 */
++	werr = samdb_result_sid_array_ndr(sam_ctx, obj_res->msgs[0],
++					  mem_ctx, "tokenGroups",
++					  &num_token_sids,
++					  &token_sids,
++					  object_sid, 1);
++	if (!W_ERROR_IS_OK(werr) || token_sids==NULL) {
++		goto denied;
++	}
++
+ 	werr = samdb_result_sid_array_dn(sam_ctx, rodc_res->msgs[0],
+ 					 mem_ctx, "msDS-NeverRevealGroup",
+ 					 &num_never_reveal_sids,
+@@ -2894,20 +2908,6 @@ static bool sam_rodc_access_check(struct ldb_context *sam_ctx,
+ 		goto denied;
+ 	}
+ 
+-	/*
+-	 * The SID list needs to include itself as well as the tokenGroups.
+-	 *
+-	 * TODO determine if sIDHistory is required for this check
+-	 */
+-	werr = samdb_result_sid_array_ndr(sam_ctx, obj_res->msgs[0],
+-					  mem_ctx, "tokenGroups",
+-					  &num_token_sids,
+-					  &token_sids,
+-					  object_sid, 1);
+-	if (!W_ERROR_IS_OK(werr) || token_sids==NULL) {
+-		goto denied;
+-	}
+-
+ 	if (never_reveal_sids &&
+ 	    sid_list_match(num_token_sids,
+ 			   token_sids,

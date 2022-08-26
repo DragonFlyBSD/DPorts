@@ -1,0 +1,49 @@
+From a831ef74c5b2982c108cc16dae9b116e9658dcb8 Mon Sep 17 00:00:00 2001
+From: Andrew Bartlett <abartlet@samba.org>
+Date: Fri, 1 Oct 2021 14:31:00 +1300
+Subject: [PATCH] CVE-2020-25718 s4-rpc_server: Explain why we use
+ DSDB_SEARCH_SHOW_EXTENDED_DN in RODC access check
+
+BUG: https://bugzilla.samba.org/show_bug.cgi?id=14558
+
+Signed-off-by: Andrew Bartlett <abartlet@samba.org>
+Reviewed-by: Joseph Sutton <josephsutton@catalyst.net.nz>
+---
+ source4/rpc_server/drsuapi/getncchanges.c     | 6 +++++-
+ source4/rpc_server/netlogon/dcerpc_netlogon.c | 6 +++++-
+ 2 files changed, 10 insertions(+), 2 deletions(-)
+
+diff --git a/source4/rpc_server/drsuapi/getncchanges.c b/source4/rpc_server/drsuapi/getncchanges.c
+index 3ec5acb5353d..8a5243aba528 100644
+--- a/source4/rpc_server/drsuapi/getncchanges.c
++++ b/source4/rpc_server/drsuapi/getncchanges.c
+@@ -1251,7 +1251,11 @@ static WERROR getncchanges_repl_secret(struct drsuapi_bind_state *b_state,
+ 				 dom_sid_string(mem_ctx, user_sid));
+ 	if (!ldb_dn_validate(rodc_dn)) goto failed;
+ 
+-	/* do the two searches we need */
++	/*
++	 * do the two searches we need
++	 * We need DSDB_SEARCH_SHOW_EXTENDED_DN as we get a SID lists
++	 * out of the extended DNs
++	 */
+ 	ret = dsdb_search_dn(b_state->sam_ctx_system, mem_ctx, &rodc_res, rodc_dn, rodc_attrs,
+ 			     DSDB_SEARCH_SHOW_EXTENDED_DN);
+ 	if (ret != LDB_SUCCESS || rodc_res->count != 1) goto failed;
+diff --git a/source4/rpc_server/netlogon/dcerpc_netlogon.c b/source4/rpc_server/netlogon/dcerpc_netlogon.c
+index 904f430079ad..a70180f34de8 100644
+--- a/source4/rpc_server/netlogon/dcerpc_netlogon.c
++++ b/source4/rpc_server/netlogon/dcerpc_netlogon.c
+@@ -2865,7 +2865,11 @@ static bool sam_rodc_access_check(struct ldb_context *sam_ctx,
+ 				 dom_sid_string(mem_ctx, user_sid));
+ 	if (!ldb_dn_validate(rodc_dn)) goto denied;
+ 
+-	/* do the two searches we need */
++	/*
++	 * do the two searches we need
++	 * We need DSDB_SEARCH_SHOW_EXTENDED_DN as we get a SID list
++	 * out of the extended DNs
++	 */
+ 	ret = dsdb_search_dn(sam_ctx, mem_ctx, &rodc_res, rodc_dn, rodc_attrs,
+ 			     DSDB_SEARCH_SHOW_EXTENDED_DN);
+ 	if (ret != LDB_SUCCESS || rodc_res->count != 1) goto denied;

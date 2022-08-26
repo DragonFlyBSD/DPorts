@@ -1,0 +1,35 @@
+From 104fc3539090ae9e161945ef9d18d897e3b71fed Mon Sep 17 00:00:00 2001
+From: Andreas Schneider <asn@samba.org>
+Date: Thu, 15 Jul 2021 08:48:37 +0200
+Subject: [PATCH] mit-samba: Only set the function opening bracket once
+
+Reviewed-by: Andrew Bartlett <abartlet@samba.org>
+
+Autobuild-User(master): Andreas Schneider <asn@cryptomilk.org>
+Autobuild-Date(master): Thu Aug  5 10:33:18 UTC 2021 on sn-devel-184
+---
+ source4/kdc/mit-kdb/kdb_samba_policies.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+diff --git a/source4/kdc/mit-kdb/kdb_samba_policies.c b/source4/kdc/mit-kdb/kdb_samba_policies.c
+index a8cf280bdb38..c431567a7f41 100644
+--- a/source4/kdc/mit-kdb/kdb_samba_policies.c
++++ b/source4/kdc/mit-kdb/kdb_samba_policies.c
+@@ -304,7 +304,6 @@ krb5_error_code kdb_samba_db_sign_auth_data(krb5_context context,
+ 					    krb5_timestamp authtime,
+ 					    krb5_authdata **tgt_auth_data,
+ 					    krb5_authdata ***signed_auth_data)
+-{
+ #else
+ krb5_error_code kdb_samba_db_sign_auth_data(krb5_context context,
+ 					    unsigned int flags,
+@@ -324,8 +323,8 @@ krb5_error_code kdb_samba_db_sign_auth_data(krb5_context context,
+ 					    void *authdata_info,
+ 					    krb5_data ***auth_indicators,
+ 					    krb5_authdata ***signed_auth_data)
+-{
+ #endif
++{
+ 	krb5_authdata **authdata = NULL;
+ 	krb5_boolean is_as_req;
+ 	krb5_error_code code;

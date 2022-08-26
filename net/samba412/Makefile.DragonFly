@@ -1,3 +1,7 @@
+# TODO(tuxillo): I was not able to get our base patch to do file
+# renames, that's why I used gpatch.
+PATCH_DEPENDS+=        gpatch:devel/patch
+GPATCH=        ${LOCALBASE}/bin/gpatch
 
 USES+=	ncurses
 

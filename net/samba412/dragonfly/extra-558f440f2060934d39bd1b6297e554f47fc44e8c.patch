@@ -1,0 +1,83 @@
+From 558f440f2060934d39bd1b6297e554f47fc44e8c Mon Sep 17 00:00:00 2001
+From: Andrew Bartlett <abartlet@samba.org>
+Date: Mon, 27 Sep 2021 11:20:19 +1300
+Subject: [PATCH] CVE-2020-25721 krb5pac: Add new buffers for samAccountName
+ and objectSID
+
+These appear when PAC_UPN_DNS_FLAG_HAS_SAM_NAME_AND_SID is set.
+
+BUG: https://bugzilla.samba.org/show_bug.cgi?id=14835
+
+Signed-off-by: Andrew Bartlett <abartlet@samba.org>
+Reviewed-by: Joseph Sutton <josephsutton@catalyst.net.nz>
+---
+ librpc/idl/krb5pac.idl   | 18 ++++++++++++++++--
+ librpc/ndr/ndr_krb5pac.c |  4 ++--
+ 2 files changed, 18 insertions(+), 4 deletions(-)
+
+diff --git a/librpc/idl/krb5pac.idl b/librpc/idl/krb5pac.idl
+index 515150ab9cdf..ed488dee4251 100644
+--- a/librpc/idl/krb5pac.idl
++++ b/librpc/idl/krb5pac.idl
+@@ -86,15 +86,29 @@ interface krb5pac
+ 	} PAC_CONSTRAINED_DELEGATION;
+ 
+ 	typedef [bitmap32bit] bitmap {
+-		PAC_UPN_DNS_FLAG_CONSTRUCTED = 0x00000001
++		PAC_UPN_DNS_FLAG_CONSTRUCTED = 0x00000001,
++		PAC_UPN_DNS_FLAG_HAS_SAM_NAME_AND_SID = 0x00000002
+ 	} PAC_UPN_DNS_FLAGS;
+ 
++	typedef struct {
++		[value(2*strlen_m(samaccountname))] uint16 samaccountname_size;
++		[relative_short,subcontext(0),subcontext_size(samaccountname_size),flag(NDR_ALIGN8|STR_NOTERM|NDR_REMAINING)] string *samaccountname;
++		[value(ndr_size_dom_sid(objectsid, ndr->flags))] uint16 objectsid_size;
++		[relative_short,subcontext(0),subcontext_size(objectsid_size)] dom_sid *objectsid;
++	} PAC_UPN_DNS_INFO_SAM_NAME_AND_SID;
++
++	typedef [nodiscriminant] union {
++		[case(PAC_UPN_DNS_FLAG_HAS_SAM_NAME_AND_SID)] PAC_UPN_DNS_INFO_SAM_NAME_AND_SID sam_name_and_sid;
++		[default];
++	} PAC_UPN_DNS_INFO_EX;
++
+ 	typedef struct {
+ 		[value(2*strlen_m(upn_name))] uint16 upn_name_size;
+ 		[relative_short,subcontext(0),subcontext_size(upn_name_size),flag(NDR_ALIGN8|STR_NOTERM|NDR_REMAINING)] string *upn_name;
+ 		[value(2*strlen_m(dns_domain_name))] uint16 dns_domain_name_size;
+ 		[relative_short,subcontext(0),subcontext_size(dns_domain_name_size),flag(NDR_ALIGN8|STR_NOTERM|NDR_REMAINING)] string *dns_domain_name;
+ 		PAC_UPN_DNS_FLAGS flags;
++		[switch_is(flags & PAC_UPN_DNS_FLAG_HAS_SAM_NAME_AND_SID)] PAC_UPN_DNS_INFO_EX ex;
+ 	} PAC_UPN_DNS_INFO;
+ 
+ 	typedef [public] struct {
+@@ -142,7 +156,7 @@ interface krb5pac
+ 
+ 	typedef [public,nopush,nopull] struct {
+ 		PAC_TYPE type;
+-		[value(_ndr_size_PAC_INFO(info, type, 0))] uint32 _ndr_size;
++		[value(_ndr_size_PAC_INFO(info, type, LIBNDR_FLAG_ALIGN8))] uint32 _ndr_size;
+ 		/*
+ 		 * We need to have two subcontexts to get the padding right,
+ 		 * the outer subcontext uses NDR_ROUND(_ndr_size, 8), while
+diff --git a/librpc/ndr/ndr_krb5pac.c b/librpc/ndr/ndr_krb5pac.c
+index a9ae2c4a789c..57b28df9e528 100644
+--- a/librpc/ndr/ndr_krb5pac.c
++++ b/librpc/ndr/ndr_krb5pac.c
+@@ -41,7 +41,7 @@ enum ndr_err_code ndr_push_PAC_BUFFER(struct ndr_push *ndr, int ndr_flags, const
+ 	if (ndr_flags & NDR_SCALARS) {
+ 		NDR_CHECK(ndr_push_align(ndr, 4));
+ 		NDR_CHECK(ndr_push_PAC_TYPE(ndr, NDR_SCALARS, r->type));
+-		NDR_CHECK(ndr_push_uint32(ndr, NDR_SCALARS, _ndr_size_PAC_INFO(r->info,r->type,0)));
++		NDR_CHECK(ndr_push_uint32(ndr, NDR_SCALARS, _ndr_size_PAC_INFO(r->info,r->type,LIBNDR_FLAG_ALIGN8)));
+ 		{
+ 			uint32_t _flags_save_PAC_INFO = ndr->flags;
+ 			ndr_set_flags(&ndr->flags, LIBNDR_FLAG_ALIGN8);
+@@ -59,7 +59,7 @@ enum ndr_err_code ndr_push_PAC_BUFFER(struct ndr_push *ndr, int ndr_flags, const
+ 				{
+ 					struct ndr_push *_ndr_info_pad;
+ 					struct ndr_push *_ndr_info;
+-					size_t _ndr_size = _ndr_size_PAC_INFO(r->info, r->type, 0);
++					size_t _ndr_size = _ndr_size_PAC_INFO(r->info, r->type, LIBNDR_FLAG_ALIGN8);
+ 					NDR_CHECK(ndr_push_subcontext_start(ndr, &_ndr_info_pad, 0, NDR_ROUND(_ndr_size, 8)));
+ 					NDR_CHECK(ndr_push_subcontext_start(_ndr_info_pad, &_ndr_info, 0, _ndr_size));
+ 					NDR_CHECK(ndr_push_set_switch_value(_ndr_info, r->info, r->type));

@@ -1,0 +1,34 @@
+From ff2f38fae79220e16765e17671972f9a55eb7cce Mon Sep 17 00:00:00 2001
+From: Joseph Sutton <josephsutton@catalyst.net.nz>
+Date: Wed, 1 Sep 2021 15:39:19 +1200
+Subject: [PATCH] krb5pac.idl: Add ticket checksum PAC buffer type
+
+Signed-off-by: Joseph Sutton <josephsutton@catalyst.net.nz>
+Reviewed-by: Andrew Bartlett <abartlet@samba.org>
+Reviewed-by: Isaac Boukris <iboukris@samba.org>
+---
+ librpc/idl/krb5pac.idl | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/librpc/idl/krb5pac.idl b/librpc/idl/krb5pac.idl
+index fb360c1257f1..3239d7656b61 100644
+--- a/librpc/idl/krb5pac.idl
++++ b/librpc/idl/krb5pac.idl
+@@ -112,7 +112,8 @@ interface krb5pac
+ 		PAC_TYPE_KDC_CHECKSUM = 7,
+ 		PAC_TYPE_LOGON_NAME = 10,
+ 		PAC_TYPE_CONSTRAINED_DELEGATION = 11,
+-		PAC_TYPE_UPN_DNS_INFO = 12
++		PAC_TYPE_UPN_DNS_INFO = 12,
++		PAC_TYPE_TICKET_CHECKSUM = 16
+ 	} PAC_TYPE;
+ 
+ 	typedef struct {
+@@ -128,6 +129,7 @@ interface krb5pac
+ 		[case(PAC_TYPE_CONSTRAINED_DELEGATION)][subcontext(0xFFFFFC01)]
+ 			PAC_CONSTRAINED_DELEGATION_CTR constrained_delegation;
+ 		[case(PAC_TYPE_UPN_DNS_INFO)]	PAC_UPN_DNS_INFO upn_dns_info;
++		[case(PAC_TYPE_TICKET_CHECKSUM)]	PAC_SIGNATURE_DATA ticket_checksum;
+ 		/* when new PAC info types are added they are supposed to be done
+ 		   in such a way that they are backwards compatible with existing
+ 		   servers. This makes it safe to just use a [default] for

@@ -1,0 +1,83 @@
+From 601403504325f2f0e241da0a4eb3e390e73f3c08 Mon Sep 17 00:00:00 2001
+From: Andrew Bartlett <abartlet@samba.org>
+Date: Fri, 1 Oct 2021 12:01:12 +1300
+Subject: [PATCH] CVE-2020-25718 s4-rpc_server: Confirm that the RODC has the
+ UF_PARTIAL_SECRETS_ACCOUNT bit
+
+BUG: https://bugzilla.samba.org/show_bug.cgi?id=14558
+
+Signed-off-by: Andrew Bartlett <abartlet@samba.org>
+Reviewed-by: Joseph Sutton <josephsutton@catalyst.net.nz>
+---
+ source4/rpc_server/common/sid_helper.c        | 13 +++++++++++++
+ source4/rpc_server/drsuapi/getncchanges.c     |  7 ++++++-
+ source4/rpc_server/netlogon/dcerpc_netlogon.c |  7 ++++++-
+ 3 files changed, 25 insertions(+), 2 deletions(-)
+
+diff --git a/source4/rpc_server/common/sid_helper.c b/source4/rpc_server/common/sid_helper.c
+index ab2b4373b473..99c5fc20d9d5 100644
+--- a/source4/rpc_server/common/sid_helper.c
++++ b/source4/rpc_server/common/sid_helper.c
+@@ -141,6 +141,7 @@ WERROR samdb_confirm_rodc_allowed_to_repl_to_sid_list(struct ldb_context *sam_ct
+ 	struct dom_sid *never_reveal_sids, *reveal_sids;
+ 	TALLOC_CTX *frame = talloc_stackframe();
+ 	WERROR werr;
++	uint32_t rodc_uac;
+ 	
+ 	/*
+ 	 * We are not allowed to get anyone elses krbtgt secrets (and
+@@ -160,6 +161,18 @@ WERROR samdb_confirm_rodc_allowed_to_repl_to_sid_list(struct ldb_context *sam_ct
+ 		return WERR_DS_DRA_SECRETS_DENIED;
+ 	}
+ 
++	/* Be very sure the RODC is really an RODC */
++	rodc_uac = ldb_msg_find_attr_as_uint(rodc_msg,
++					     "userAccountControl",
++					     0);
++	if ((rodc_uac & UF_PARTIAL_SECRETS_ACCOUNT)
++	    != UF_PARTIAL_SECRETS_ACCOUNT) {
++		TALLOC_FREE(frame);
++		DBG_ERR("Attempt to use an RODC account that is not an RODC: %s\n",
++			ldb_dn_get_linearized(rodc_msg->dn));
++		return WERR_DS_DRA_SECRETS_DENIED;
++	}
++
+ 	werr = samdb_result_sid_array_dn(sam_ctx, rodc_msg,
+ 					 frame, "msDS-NeverRevealGroup",
+ 					 &num_never_reveal_sids,
+diff --git a/source4/rpc_server/drsuapi/getncchanges.c b/source4/rpc_server/drsuapi/getncchanges.c
+index a9d305fc9a05..2fbd178cedca 100644
+--- a/source4/rpc_server/drsuapi/getncchanges.c
++++ b/source4/rpc_server/drsuapi/getncchanges.c
+@@ -1168,7 +1168,12 @@ static WERROR getncchanges_repl_secret(struct drsuapi_bind_state *b_state,
+ 	struct ldb_dn *ntds_dn = NULL, *server_dn = NULL;
+ 	struct ldb_dn *rodc_dn, *krbtgt_link_dn;
+ 	int ret;
+-	const char *rodc_attrs[] = { "msDS-KrbTgtLink", "msDS-NeverRevealGroup", "msDS-RevealOnDemandGroup", "objectGUID", NULL };
++	const char *rodc_attrs[] = { "msDS-KrbTgtLink",
++				     "msDS-NeverRevealGroup",
++				     "msDS-RevealOnDemandGroup",
++				     "objectGUID",
++				     "userAccountControl",
++				     NULL };
+ 	const char *obj_attrs[] = { "tokenGroups", "objectSid", "UserAccountControl", "msDS-KrbTgtLinkBL", NULL };
+ 	struct ldb_result *rodc_res = NULL, *obj_res = NULL;
+ 	uint32_t num_token_sids;
+diff --git a/source4/rpc_server/netlogon/dcerpc_netlogon.c b/source4/rpc_server/netlogon/dcerpc_netlogon.c
+index 0b8330b9f218..e3422d8b19f7 100644
+--- a/source4/rpc_server/netlogon/dcerpc_netlogon.c
++++ b/source4/rpc_server/netlogon/dcerpc_netlogon.c
+@@ -2851,7 +2851,12 @@ static bool sam_rodc_access_check(struct ldb_context *sam_ctx,
+ 				  struct dom_sid *user_sid,
+ 				  struct ldb_dn *obj_dn)
+ {
+-	const char *rodc_attrs[] = { "msDS-KrbTgtLink", "msDS-NeverRevealGroup", "msDS-RevealOnDemandGroup", "objectGUID", NULL };
++	const char *rodc_attrs[] = { "msDS-KrbTgtLink",
++				     "msDS-NeverRevealGroup",
++				     "msDS-RevealOnDemandGroup",
++				     "objectGUID",
++				     "userAccountControl",
++				     NULL };
+ 	const char *obj_attrs[] = { "tokenGroups", "objectSid", "UserAccountControl", "msDS-KrbTgtLinkBL", NULL };
+ 	struct ldb_dn *rodc_dn;
+ 	int ret;

@@ -1,0 +1,69 @@
+From 80257fa37c49138fb1af0a910a3ea41954096c11 Mon Sep 17 00:00:00 2001
+From: Joseph Sutton <josephsutton@catalyst.net.nz>
+Date: Mon, 4 Oct 2021 12:43:13 +1300
+Subject: [PATCH] CVE-2020-25718 kdc: Return ERR_POLICY if RODC krbtgt account
+ is invalid
+
+BUG: https://bugzilla.samba.org/show_bug.cgi?id=14558
+
+Signed-off-by: Joseph Sutton <josephsutton@catalyst.net.nz>
+Reviewed-by: Andrew Bartlett <abartlet@samba.org>
+---
+ selftest/knownfail_heimdal_kdc    | 8 --------
+ source4/dsdb/common/rodc_helper.c | 2 +-
+ source4/kdc/pac-glue.c            | 4 ++--
+ source4/kdc/wdc-samba4.c          | 6 +++++-
+ 4 files changed, 8 insertions(+), 12 deletions(-)
+
+diff --git a/source4/dsdb/common/rodc_helper.c b/source4/dsdb/common/rodc_helper.c
+index 1cd644c6def0..e81ecef79c02 100644
+--- a/source4/dsdb/common/rodc_helper.c
++++ b/source4/dsdb/common/rodc_helper.c
+@@ -176,7 +176,7 @@ WERROR samdb_confirm_rodc_allowed_to_repl_to_sid_list(struct ldb_context *sam_ct
+ 		DBG_ERR("Attempt to use an RODC account that is not an RODC: %s\n",
+ 			ldb_dn_get_linearized(rodc_msg->dn));
+ 		TALLOC_FREE(frame);
+-		return WERR_DS_DRA_SECRETS_DENIED;
++		return WERR_DOMAIN_CONTROLLER_NOT_FOUND;
+ 	}
+ 
+ 	werr = samdb_result_sid_array_dn(sam_ctx, rodc_msg,
+diff --git a/source4/kdc/pac-glue.c b/source4/kdc/pac-glue.c
+index c94e4f08e76c..cb0a923fc2d8 100644
+--- a/source4/kdc/pac-glue.c
++++ b/source4/kdc/pac-glue.c
+@@ -1141,7 +1141,7 @@ WERROR samba_rodc_confirm_user_is_allowed(uint32_t num_object_sids,
+ 		DBG_ERR("krbtgt account %s has no msDS-KrbTgtLinkBL to find RODC machine account for allow/deny list\n",
+ 			ldb_dn_get_linearized(rodc->msg->dn));
+ 		TALLOC_FREE(frame);
+-		return WERR_DS_DRA_BAD_DN;
++		return WERR_DOMAIN_CONTROLLER_NOT_FOUND;
+ 	}
+ 
+ 	/*
+@@ -1166,7 +1166,7 @@ WERROR samba_rodc_confirm_user_is_allowed(uint32_t num_object_sids,
+ 			ldb_dn_get_linearized(rodc->msg->dn),
+ 			ldb_errstring(rodc->kdc_db_ctx->samdb));
+ 		TALLOC_FREE(frame);
+-		return WERR_DS_DRA_BAD_DN;
++		return WERR_DOMAIN_CONTROLLER_NOT_FOUND;
+ 	}
+ 
+ 	if (rodc_machine_account->count != 1) {
+diff --git a/source4/kdc/wdc-samba4.c b/source4/kdc/wdc-samba4.c
+index 715070181207..c9bf5dd9cf57 100644
+--- a/source4/kdc/wdc-samba4.c
++++ b/source4/kdc/wdc-samba4.c
+@@ -276,7 +276,11 @@ static krb5_error_code samba_wdc_reget_pac2(krb5_context context,
+ 							  client_skdc_entry);
+ 		if (!W_ERROR_IS_OK(werr)) {
+ 			talloc_free(mem_ctx);
+-			return KRB5KDC_ERR_TGT_REVOKED;
++			if (W_ERROR_EQUAL(werr, WERR_DOMAIN_CONTROLLER_NOT_FOUND)) {
++				return KRB5KDC_ERR_POLICY;
++			} else {
++				return KRB5KDC_ERR_TGT_REVOKED;
++			}
+ 		}
+ 	}
+ 
