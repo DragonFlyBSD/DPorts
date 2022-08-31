@@ -1,0 +1,3 @@
+USES+=	python:3.8+,build
+
+BINARY_ALIAS=        python3=${PYTHON_CMD}
