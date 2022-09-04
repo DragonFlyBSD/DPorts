@@ -2,11 +2,11 @@ bin/kolourpaint
 lib/libkolourpaint_lgpl.so
 lib/libkolourpaint_lgpl.so.5
 share/applications/org.kde.kolourpaint.desktop
-share/icons/hicolor/128x128/apps/kolourpaint.png
 share/icons/hicolor/16x16/apps/kolourpaint.png
 share/icons/hicolor/22x22/apps/kolourpaint.png
 share/icons/hicolor/32x32/apps/kolourpaint.png
 share/icons/hicolor/48x48/apps/kolourpaint.png
+share/icons/hicolor/128x128/apps/kolourpaint.png
 share/icons/hicolor/scalable/apps/kolourpaint.svgz
 %%DATADIR%%/icons/hicolor/16x16/actions/tool_brush.png
 %%DATADIR%%/icons/hicolor/16x16/actions/tool_color_eraser.png
@@ -124,6 +124,7 @@ share/locale/hi/LC_MESSAGES/kolourpaint.mo
 share/locale/hr/LC_MESSAGES/kolourpaint.mo
 share/locale/hu/LC_MESSAGES/kolourpaint.mo
 share/locale/ia/LC_MESSAGES/kolourpaint.mo
+share/locale/id/LC_MESSAGES/kolourpaint.mo
 share/locale/is/LC_MESSAGES/kolourpaint.mo
 share/locale/it/LC_MESSAGES/kolourpaint.mo
 share/locale/ja/LC_MESSAGES/kolourpaint.mo
