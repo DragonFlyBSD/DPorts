@@ -1,5 +1,5 @@
---- src/dns.c.intermediate	2016-07-19 16:34:28 UTC
-+++ src/dns.c
+--- src/dns/dns.c.orig	2022-09-04 01:43:54 UTC
++++ src/dns/dns.c
 @@ -23,7 +23,7 @@
   * USE OR OTHER DEALINGS IN THE SOFTWARE.
   * ==========================================================================
@@ -9,12 +9,11 @@
  #ifndef _XOPEN_SOURCE
  #define _XOPEN_SOURCE	600
  #endif
-@@ -363,6 +363,8 @@ DNS_NOTUSED static unsigned dns_atomic_s
+@@ -473,6 +473,7 @@ static DNS_INLINE unsigned dns_atomic_fe
  
  #ifndef DNS_RANDOM
  #if defined(HAVE_ARC4RANDOM)	\
 + || defined(__DragonFly__)	\
-+ || defined(__OpenBSD__)	\
   || defined(__OpenBSD__)	\
   || defined(__FreeBSD__)	\
   || defined(__NetBSD__)		\
