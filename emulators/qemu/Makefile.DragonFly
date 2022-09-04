@@ -11,8 +11,16 @@ dfly-patch:
 			 -e "s@links(curses_test,@& args: '-DNCURSES_WIDECHAR',@g" \
 		${WRKSRC}/meson.build
 
-# just to satisfy stage-qa for plist
+	# TODO(tuxillo): Not sure why it's not picking MAKE_JOBS_NUMBER to build with all cpus
+	# but any -j specification is filtered-out in the Makefile which defaults to -j1
+	${REINPLACE_CMD} -e "s,-j1,-j${MAKE_JOBS_NUMBER},g" \
+		${WRKSRC}/Makefile
+
 dfly-install:
 .if ${FLAVOR:U} != tools
-	${TOUCH} ${STAGEDIR}${PREFIX}/bin/qemu-i386 ${STAGEDIR}${PREFIX}/bin/qemu-x86_64
+    	# TODO(tuxillo): Make user-mode to work with dfly
+	${TOUCH} ${STAGEDIR}${PREFIX}/bin/qemu-i386 \
+		${STAGEDIR}${PREFIX}/bin/qemu-x86_64 \
+		${STAGEDIR}${PREFIX}/bin/qemu-arm
+	
 .endif
