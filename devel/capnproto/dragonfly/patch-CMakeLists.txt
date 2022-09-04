@@ -1,0 +1,13 @@
+--- CMakeLists.txt.orig	2022-09-04 12:18:48 UTC
++++ CMakeLists.txt
+@@ -83,7 +83,9 @@ if (WITH_FIBERS OR WITH_FIBERS STREQUAL
+     include(CheckLibraryExists)
+     check_library_exists(c makecontext "" HAVE_UCONTEXT_LIBC)
+     if (HAVE_UCONTEXT_LIBC)
+-      set(_capnp_fibers_found ON)
++      if (NOT CMAKE_SYSTEM_NAME MATCHES "DragonFly")
++        set(_capnp_fibers_found ON)
++      endif()
+     else()
+       # Try with libucontext
+       find_package(PkgConfig)
