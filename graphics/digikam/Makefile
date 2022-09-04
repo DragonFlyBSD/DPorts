@@ -1,6 +1,5 @@
 PORTNAME=	digikam
-DISTVERSION=	7.6.0
-PORTREVISION=	2
+DISTVERSION=	7.7.0
 CATEGORIES=	graphics kde
 MASTER_SITES=	KDE/stable/${PORTNAME}/${PORTVERSION}
 DIST_SUBDIR=	KDE/digikam/${PORTVERSION}
@@ -24,6 +23,7 @@ LIB_DEPENDS=	libKF5Sane.so:graphics/libksane \
 		liblensfun.so:graphics/lensfun \
 		liblqr-1.so:graphics/liblqr-1 \
 		libopencv_core.so:graphics/opencv \
+		libheif.so:graphics/libheif \
 		libpgf.so:graphics/libpgf \
 		libpng.so:graphics/png \
 		libtiff.so:graphics/tiff \
@@ -83,7 +83,6 @@ MYSQL_CMAKE_BOOL=	ENABLE_INTERNALMYSQL \
 			ENABLE_MYSQLSUPPORT
 MYSQL_CMAKE_ON=		-DMYSQLD_PATH:PATH=${LOCALBASE}/libexec \
 			-DMYSQL_TOOLS_PATH:PATH=${LOCALBASE}/bin
-MYSQL_BUILD_DEPENDS=	${LOCALBASE}/lib/mysql/libmysqld.a:${_MYSQL_SERVER}
 
 KVKONTAKTE_DESC=	vk.com Plugin
 KVKONTAKTE_LIB_DEPENDS=	libKF5Vkontakte.so:net/libkvkontakte
