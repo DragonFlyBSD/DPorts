@@ -1,3 +1,0 @@
-
-# zrj: XXX for now --disable-gl (serious bugs)
-OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NOPENGL}
