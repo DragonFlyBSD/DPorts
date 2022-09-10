@@ -1,0 +1,14 @@
+# zrj: add missing link against -lm in libFSNode.so
+# NOTYPE  GLOBAL DEFAULT  UND {ceil, floor, floorf}
+# fixes x11/gnustep-app (binutils 2.27 ld.gold is unhappy)
+--- FSNode/GNUmakefile.orig	2022-09-03 18:40:29 UTC
++++ FSNode/GNUmakefile
+@@ -57,6 +57,8 @@ ifeq ($(findstring darwin, $(GNUSTEP_TAR
+   ifeq ($(OBJC_RUNTIME_LIB), gnu)
+     SHARED_LD_POSTFLAGS += -lgnustep-base -lgnustep-gui
+   endif
++else
++  SHARED_LD_POSTFLAGS += -lm
+ endif
+ 
+ SUBPROJECTS = ExtendedInfo 

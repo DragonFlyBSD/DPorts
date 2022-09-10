@@ -1,12 +1,12 @@
 # Created by: Florent Thoumie <flz@FreeBSD.org>
 
 PORTNAME=	chromium
-PORTVERSION=	103.0.5060.114
-TESTVERSION=	103.0.5060.53
-CATEGORIES=	www
+PORTVERSION=	103.0.5060.134
+CATEGORIES=	www wayland
 MASTER_SITES=	https://commondatastorage.googleapis.com/chromium-browser-official/ \
 		https://nerd.hu/distfiles/:external
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX}:external
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
+		chrome-linux-${PORTVERSION}-llvm13.profdata${EXTRACT_SUFX}:external
 
 MAINTAINER=	chromium@FreeBSD.org
 COMMENT=	Google web browser based on WebKit
@@ -64,8 +64,9 @@ LIB_DEPENDS=	libatk-bridge-2.0.so:accessibility/at-spi2-atk \
 RUN_DEPENDS=	xdg-open:devel/xdg-utils \
 		noto-basic>0:x11-fonts/noto-basic
 
-USES=		bison compiler:c++17-lang cpe desktop-file-utils gl gnome jpeg localbase:ldflags \
-		ninja perl5 pkgconfig python:3.7+,build shebangfix tar:xz xorg
+USES=		bison compiler:c++17-lang cpe desktop-file-utils gl gnome iconv jpeg \
+		localbase:ldflags ninja perl5 pkgconfig python:3.7+,build shebangfix \
+		tar:xz xorg
 
 CPE_VENDOR=	google
 CPE_PRODUCT=	chrome
@@ -96,6 +97,7 @@ GN_ARGS+=	clang_use_chrome_plugins=false \
 		enable_remoting=false \
 		enable_wmax_tokens=false \
 		fatal_linker_warnings=false \
+		icu_use_data_file=false \
 		is_clang=true \
 		optimize_webui=true \
 		toolkit_views=true \
@@ -196,7 +198,7 @@ SNDIO_VARS=		GN_ARGS+=use_sndio=true
 SNDIO_VARS_OFF=		GN_ARGS+=use_sndio=false
 
 .include "Makefile.tests"
-TEST_DISTFILES=		${PORTNAME}-${TESTVERSION}-testdata${EXTRACT_SUFX} \
+TEST_DISTFILES=		${PORTNAME}-${DISTVERSION}-testdata${EXTRACT_SUFX} \
 			test_fonts-336e775eec536b2d785cc80eff6ac39051931286.tar.gz:external
 TEST_ALL_TARGET=	${TEST_TARGETS}
 
@@ -249,7 +251,7 @@ pre-configure:
 	#./build/linux/unbundle/remove_bundled_libraries.py [list of preserved]
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${PYTHON_CMD} \
 		./build/linux/unbundle/replace_gn_files.py --system-libraries \
-		flac fontconfig freetype harfbuzz-ng libdrm libevent libpng \
+		flac fontconfig freetype harfbuzz-ng icu libdrm libevent libpng \
 		libusb libwebp libxml libxslt openh264 opus || ${FALSE}
 	# Chromium uses an unreleased version of FFmpeg, so configure it
 .for brand in Chrome Chromium
@@ -293,7 +295,7 @@ do-install:
 .for d in protoc mksnapshot
 	${INSTALL_PROGRAM} ${WRKSRC}/out/${BUILDTYPE}/${d} ${STAGEDIR}${DATADIR}
 .endfor
-.for d in icudtl.dat snapshot_blob.bin v8_context_snapshot.bin
+.for d in snapshot_blob.bin v8_context_snapshot.bin
 	${INSTALL_DATA} ${WRKSRC}/out/${BUILDTYPE}/${d} ${STAGEDIR}${DATADIR}
 .endfor
 	${INSTALL_PROGRAM} ${WRKSRC}/out/${BUILDTYPE}/chrome \

@@ -1,0 +1,121 @@
+From e95fb04c5dec9f0487010fb59b6ebf99effe873f Mon Sep 17 00:00:00 2001
+From: Andreas Schneider <asn@samba.org>
+Date: Mon, 13 Dec 2021 08:33:05 +0100
+Subject: [PATCH] s4:mitkdc: Add support for pac_attrs and requester_sid
+
+Signed-off-by: Andreas Schneider <asn@samba.org>
+Reviewed-by: Andrew Bartlett <abartlet@samba.org>
+---
+ selftest/knownfail_mit_kdc               | 14 +-------------
+ source4/kdc/mit-kdb/kdb_samba_policies.c |  9 ++++++++-
+ source4/kdc/mit_samba.c                  | 14 +++++++++++---
+ source4/kdc/mit_samba.h                  |  1 +
+ 4 files changed, 21 insertions(+), 17 deletions(-)
+
+diff --git a/source4/kdc/mit-kdb/kdb_samba_policies.c b/source4/kdc/mit-kdb/kdb_samba_policies.c
+index 336aa3f711a9..8af7329d369f 100644
+--- a/source4/kdc/mit-kdb/kdb_samba_policies.c
++++ b/source4/kdc/mit-kdb/kdb_samba_policies.c
+@@ -165,6 +165,7 @@ krb5_error_code kdb_samba_db_check_policy_as(krb5_context context,
+ 
+ static krb5_error_code ks_get_pac(krb5_context context,
+ 				  krb5_db_entry *client,
++				  krb5_db_entry *server,
+ 				  krb5_keyblock *client_key,
+ 				  krb5_pac *pac)
+ {
+@@ -179,6 +180,7 @@ static krb5_error_code ks_get_pac(krb5_context context,
+ 	code = mit_samba_get_pac(mit_ctx,
+ 				 context,
+ 				 client,
++				 server,
+ 				 client_key,
+ 				 pac);
+ 	if (code != 0) {
+@@ -426,7 +428,11 @@ krb5_error_code kdb_samba_db_sign_auth_data(krb5_context context,
+ 	 */
+ 	if (with_pac && generate_pac) {
+ 		DBG_DEBUG("Generate PAC for AS-REQ [%s]\n", client_name);
+-		code = ks_get_pac(context, client_entry, client_key, &pac);
++		code = ks_get_pac(context,
++				  client_entry,
++				  server,
++				  client_key,
++				  &pac);
+ 		if (code != 0) {
+ 			goto done;
+ 		}
+@@ -477,6 +483,7 @@ krb5_error_code kdb_samba_db_sign_auth_data(krb5_context context,
+ 
+ 				code = ks_get_pac(context,
+ 						  client_entry,
++						  server,
+ 						  client_key,
+ 						  &pac);
+ 				if (code != 0 && code != ENOENT) {
+diff --git a/source4/kdc/mit_samba.c b/source4/kdc/mit_samba.c
+index 729b646bd88a..748a5f6e30c4 100644
+--- a/source4/kdc/mit_samba.c
++++ b/source4/kdc/mit_samba.c
+@@ -433,6 +433,7 @@ int mit_samba_get_nextkey(struct mit_samba_context *ctx,
+ int mit_samba_get_pac(struct mit_samba_context *smb_ctx,
+ 		      krb5_context context,
+ 		      krb5_db_entry *client,
++		      krb5_db_entry *server,
+ 		      krb5_keyblock *client_key,
+ 		      krb5_pac *pac)
+ {
+@@ -443,9 +444,12 @@ int mit_samba_get_pac(struct mit_samba_context *smb_ctx,
+ 	DATA_BLOB **cred_ndr_ptr = NULL;
+ 	DATA_BLOB cred_blob = data_blob_null;
+ 	DATA_BLOB *pcred_blob = NULL;
++	DATA_BLOB *pac_attrs_blob = NULL;
++	DATA_BLOB *requester_sid_blob = NULL;
+ 	NTSTATUS nt_status;
+ 	krb5_error_code code;
+ 	struct samba_kdc_entry *skdc_entry;
++	bool is_krbtgt;
+ 
+ 	skdc_entry = talloc_get_type_abort(client->e_data,
+ 					   struct samba_kdc_entry);
+@@ -464,12 +468,16 @@ int mit_samba_get_pac(struct mit_samba_context *smb_ctx,
+ 	}
+ #endif
+ 
++	is_krbtgt = ks_is_tgs_principal(smb_ctx, server->princ);
++
+ 	nt_status = samba_kdc_get_pac_blobs(tmp_ctx,
+ 					    skdc_entry,
+ 					    &logon_info_blob,
+ 					    cred_ndr_ptr,
+ 					    &upn_dns_info_blob,
+-					    NULL, NULL, NULL,
++					    is_krbtgt ? &pac_attrs_blob : NULL,
++					    NULL,
++					    is_krbtgt ? &requester_sid_blob : NULL,
+ 					    NULL);
+ 	if (!NT_STATUS_IS_OK(nt_status)) {
+ 		talloc_free(tmp_ctx);
+@@ -497,8 +505,8 @@ int mit_samba_get_pac(struct mit_samba_context *smb_ctx,
+ 				   logon_info_blob,
+ 				   pcred_blob,
+ 				   upn_dns_info_blob,
+-				   NULL,
+-				   NULL,
++				   pac_attrs_blob,
++				   requester_sid_blob,
+ 				   NULL,
+ 				   pac);
+ 
+diff --git a/source4/kdc/mit_samba.h b/source4/kdc/mit_samba.h
+index 636c77ec97cb..4431e82a1b2e 100644
+--- a/source4/kdc/mit_samba.h
++++ b/source4/kdc/mit_samba.h
+@@ -50,6 +50,7 @@ int mit_samba_get_nextkey(struct mit_samba_context *ctx,
+ int mit_samba_get_pac(struct mit_samba_context *smb_ctx,
+ 		      krb5_context context,
+ 		      krb5_db_entry *client,
++		      krb5_db_entry *server,
+ 		      krb5_keyblock *client_key,
+ 		      krb5_pac *pac);
+ 

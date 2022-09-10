@@ -1,2 +1,5 @@
 LIB_DEPENDS+=libffi.so:devel/libffi libpcre.so:devel/pcre libiconv.so:converters/libiconv
-USES+=iconv
+USES+=iconv python:3.8+,build
+
+BINARY_ALIAS=        python3.8=${PYTHON_CMD}
+

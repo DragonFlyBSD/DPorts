@@ -147,6 +147,7 @@ include/evolution/e-util/e-client-selector.h
 include/evolution/e-util/e-collection-account-wizard.h
 include/evolution/e-util/e-color-chooser-widget.h
 include/evolution/e-util/e-color-combo.h
+include/evolution/e-util/e-color-scheme-watcher.h
 include/evolution/e-util/e-config-lookup-result-simple.h
 include/evolution/e-util/e-config-lookup-result.h
 include/evolution/e-util/e-config-lookup-worker.h
@@ -1406,6 +1407,7 @@ share/applications/org.gnome.Evolution.desktop
 %%DATADIR%%/icons/hicolor/scalable/apps/im-msn.svg
 %%DATADIR%%/icons/hicolor/scalable/apps/im-nov.svg
 %%DATADIR%%/icons/hicolor/scalable/apps/im-yahoo.svg
+%%DATADIR%%/icons/hicolor/scalable/emblems/emblem-new.svg
 %%DATADIR%%/images/confidential-stamp.jpg
 %%DATADIR%%/images/draft-paper.png
 %%DATADIR%%/images/draft-stamp.jpg

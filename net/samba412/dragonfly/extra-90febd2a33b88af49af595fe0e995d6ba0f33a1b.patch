@@ -1,0 +1,88 @@
+From 90febd2a33b88af49af595fe0e995d6ba0f33a1b Mon Sep 17 00:00:00 2001
+From: Isaac Boukris <iboukris@gmail.com>
+Date: Sat, 19 Sep 2020 14:16:20 +0200
+Subject: [PATCH] s4:mit-kdb: Force canonicalization for looking up principals
+
+See also
+https://github.com/krb5/krb5/commit/ac8865a22138ab0c657208c41be8fd6bc7968148
+
+Pair-Programmed-With: Andreas Schneider <asn@samba.org>
+Signed-off-by: Isaac Boukris <iboukris@gmail.com>
+Signed-off-by: Andreas Schneider <asn@samba.org>
+Reviewed-by: Alexander Bokovoy <ab@samba.org>
+
+Autobuild-User(master): Andreas Schneider <asn@cryptomilk.org>
+Autobuild-Date(master): Mon Nov 29 09:32:26 UTC 2021 on sn-devel-184
+---
+ selftest/knownfail_mit_kdc    | 14 --------------
+ source4/heimdal/lib/hdb/hdb.h |  1 +
+ source4/kdc/db-glue.c         |  7 ++++++-
+ source4/kdc/mit_samba.c       |  8 ++++++++
+ source4/kdc/sdb.h             |  1 +
+ 5 files changed, 16 insertions(+), 15 deletions(-)
+
+diff --git a/source4/heimdal/lib/hdb/hdb.h b/source4/heimdal/lib/hdb/hdb.h
+index 5ef9d9565f3f..dafaffc6c2dc 100644
+--- a/source4/heimdal/lib/hdb/hdb.h
++++ b/source4/heimdal/lib/hdb/hdb.h
+@@ -63,6 +63,7 @@ enum hdb_lockop{ HDB_RLOCK, HDB_WLOCK };
+ #define HDB_F_ALL_KVNOS		2048	/* we want all the keys, live or not */
+ #define HDB_F_FOR_AS_REQ	4096	/* fetch is for a AS REQ */
+ #define HDB_F_FOR_TGS_REQ	8192	/* fetch is for a TGS REQ */
++#define HDB_F_FORCE_CANON	16384	/* force canonicalition */
+ 
+ /* hdb_capability_flags */
+ #define HDB_CAP_F_HANDLE_ENTERPRISE_PRINCIPAL 1
+diff --git a/source4/kdc/db-glue.c b/source4/kdc/db-glue.c
+index 274a1f26459b..bfde2baf0b59 100644
+--- a/source4/kdc/db-glue.c
++++ b/source4/kdc/db-glue.c
+@@ -922,11 +922,16 @@ static krb5_error_code samba_kdc_message2entry(krb5_context context,
+ 			krb5_clear_error_message(context);
+ 			goto out;
+ 		}
+-	} else if ((flags & SDB_F_CANON) && (flags & SDB_F_FOR_AS_REQ)) {
++	} else if ((flags & SDB_F_FORCE_CANON) ||
++		   ((flags & SDB_F_CANON) && (flags & SDB_F_FOR_AS_REQ))) {
+ 		/*
+ 		 * SDB_F_CANON maps from the canonicalize flag in the
+ 		 * packet, and has a different meaning between AS-REQ
+ 		 * and TGS-REQ.  We only change the principal in the AS-REQ case
++		 *
++		 * The SDB_F_FORCE_CANON if for new MIT KDC code that wants
++		 * the canonical name in all lookups, and takes care to
++		 * canonicalize only when appropriate.
+ 		 */
+ 		ret = smb_krb5_make_principal(context, &entry_ex->entry.principal, lpcfg_realm(lp_ctx), samAccountName, NULL);
+ 		if (ret) {
+diff --git a/source4/kdc/mit_samba.c b/source4/kdc/mit_samba.c
+index 4239332f0d9b..53c137de2fde 100644
+--- a/source4/kdc/mit_samba.c
++++ b/source4/kdc/mit_samba.c
+@@ -221,6 +221,14 @@ int mit_samba_get_principal(struct mit_samba_context *ctx,
+ 		return ENOMEM;
+ 	}
+ 
++#if KRB5_KDB_API_VERSION >= 10
++	/*
++	 * The MIT KDC code that wants the canonical name in all lookups, and
++	 * takes care to canonicalize only when appropriate.
++	 */
++	sflags |= SDB_F_FORCE_CANON;
++#endif
++
+ 	if (kflags & KRB5_KDB_FLAG_CANONICALIZE) {
+ 		sflags |= SDB_F_CANON;
+ 	}
+diff --git a/source4/kdc/sdb.h b/source4/kdc/sdb.h
+index c929acccce6a..a9115ec23d74 100644
+--- a/source4/kdc/sdb.h
++++ b/source4/kdc/sdb.h
+@@ -116,6 +116,7 @@ struct sdb_entry_ex {
+ #define SDB_F_KVNO_SPECIFIED	128	/* we want a particular KVNO */
+ #define SDB_F_FOR_AS_REQ	4096	/* fetch is for a AS REQ */
+ #define SDB_F_FOR_TGS_REQ	8192	/* fetch is for a TGS REQ */
++#define SDB_F_FORCE_CANON	16384	/* force canonicalition */
+ 
+ void sdb_free_entry(struct sdb_entry_ex *e);
+ void free_sdb_entry(struct sdb_entry *s);

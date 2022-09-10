@@ -1,3 +1,0 @@
-
-# licq segfaults during tests with gcc80 + issues with shared_ptr
-USE_CLANG_FALLBACK= default

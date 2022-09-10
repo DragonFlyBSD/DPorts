@@ -22,7 +22,7 @@ BUILD_DEPENDS=	nspr>=4.13.1:devel/nspr \
 		sqlite3>=3.17.0:databases/sqlite3 \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3@${PY_FLAVOR} \
 		v4l_compat>0:multimedia/v4l_compat \
-		autoconf-2.13:devel/autoconf213 \
+		autoconf2.13:devel/autoconf2.13 \
 		yasm:devel/yasm \
 		zip:archivers/zip
 #		soundtouch>=1.9.0:audio/soundtouch \
@@ -176,8 +176,8 @@ post-patch:
 		${WRKSRC}/dom/indexedDB/ProfilerHelpers.h
 
 pre-configure:
-	(cd ${WRKSRC} && ${LOCALBASE}/bin/autoconf-2.13)
-	(cd ${WRKSRC}/js/src/ && ${LOCALBASE}/bin/autoconf-2.13)
+	(cd ${WRKSRC} && ${LOCALBASE}/bin/autoconf2.13)
+	(cd ${WRKSRC}/js/src/ && ${LOCALBASE}/bin/autoconf2.13)
 
 post-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/share/pixmaps

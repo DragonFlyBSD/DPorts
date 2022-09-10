@@ -11,6 +11,8 @@ COMMENT=	ArtyFX plugin bundle
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+BROKEN_armv6=	error: "NEON support not enabled"
+
 BUILD_DEPENDS=	lv2>0:audio/lv2
 LIB_DEPENDS=	libsndfile.so:audio/libsndfile
 
@@ -28,7 +30,6 @@ OPTIONS_DEFAULT_i386=	SSE
 
 SSE_CMAKE_ON=	-DPORT_SIMD_FLAGS:STRING="-msse -msse2 -mfpmath=sse"
 
-CXXFLAGS_powerpc64=	-maltivec
 CXXFLAGS_powerpc=	-maltivec
 
 post-patch:

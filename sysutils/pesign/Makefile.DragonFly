@@ -1,3 +1,0 @@
-
-MAKE_JOBS_UNSAFE=yes
-CFLAGS+=	-Wno-pointer-to-int-cast

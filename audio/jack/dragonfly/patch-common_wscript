@@ -1,6 +1,6 @@
---- common/wscript.ori	2021-10-23 18:30:46.072633000 +0200
-+++ common/wscript	2021-10-23 18:33:06.449464000 +0200
-@@ -28,6 +28,8 @@
+--- common/wscript.orig	2022-04-15 19:14:06 UTC
++++ common/wscript
+@@ -31,6 +31,8 @@ def create_jack_process_obj(bld, target,
          env_includes = ['../macosx', '../posix', '../macosx/coreaudio']
      if bld.env['IS_LINUX']:
          env_includes = ['../linux', '../posix', '../linux/alsa']
@@ -9,16 +9,16 @@
      if bld.env['IS_FREEBSD']:
          env_includes = ['../freebsd', '../posix', '../solaris/oss']
      if bld.env['IS_SUN']:
-@@ -38,7 +40,7 @@
-     process.name     = target
-     process.target   = target
-     process.source   = sources
+@@ -41,7 +43,7 @@ def create_jack_process_obj(bld, target,
+     process.name = target
+     process.target = target
+     process.source = sources
 -    if bld.env['IS_LINUX'] or bld.env['IS_MACOSX'] or bld.env['IS_FREEBSD']:
 +    if bld.env['IS_LINUX'] or bld.env['IS_MACOSX'] or bld.env['IS_FREEBSD'] or bld.env['IS_DRAGONFLY']:
          process.env.append_value('CPPFLAGS', '-fvisibility=hidden')
      process.install_path = '${ADDON_DIR}/'
      process.use = [uselib.name]
-@@ -94,6 +96,20 @@
+@@ -98,6 +100,20 @@ def build(bld):
          uselib.append('RT')
          uselib.append('DL')
  
@@ -39,7 +39,7 @@
      if bld.env['IS_FREEBSD']:
          common_libsources += [
              'JackDebugClient.cpp',
-@@ -192,6 +208,12 @@
+@@ -197,6 +213,12 @@ def build(bld):
              '../posix/JackPosixServerLaunch.cpp',
              ]
  
@@ -52,7 +52,7 @@
      if bld.env['IS_FREEBSD']:
          clientlib.source += [
              '../posix/JackSocketClientChannel.cpp',
-@@ -227,6 +249,9 @@
+@@ -232,6 +254,9 @@ def build(bld):
      if bld.env['IS_LINUX']:
          clientlib.env.append_value('CPPFLAGS', '-fvisibility=hidden')
  
@@ -62,7 +62,7 @@
      if bld.env['IS_FREEBSD']:
          clientlib.env.append_value('CPPFLAGS', '-fvisibility=hidden')
  
-@@ -306,6 +331,14 @@
+@@ -311,6 +336,14 @@ def build(bld):
              '../posix/JackNetUnixSocket.cpp',
              ]
  
@@ -77,8 +77,8 @@
      if bld.env['IS_FREEBSD']:
          serverlib.source += [
              '../posix/JackSocketServerChannel.cpp',
-@@ -393,6 +426,10 @@
-             netlib.source += ['../posix/JackNetUnixSocket.cpp','../posix/JackPosixThread.cpp', '../posix/JackPosixMutex.cpp', '../linux/JackLinuxTime.c']
+@@ -403,6 +436,10 @@ def build(bld):
+             ]
              netlib.env.append_value('CPPFLAGS', '-fvisibility=hidden')
  
 +        if bld.env['IS_DRAGONFLY']:
@@ -86,14 +86,14 @@
 +            netlib.env.append_value('CPPFLAGS', '-fvisibility=hidden')
 +
          if bld.env['IS_FREEBSD']:
-             netlib.source += ['../posix/JackNetUnixSocket.cpp','../posix/JackPosixThread.cpp', '../posix/JackPosixMutex.cpp', '../linux/JackLinuxTime.c']
-             netlib.env.append_value('CPPFLAGS', '-fvisibility=hidden')
-@@ -459,7 +496,7 @@
-          process = create_jack_process_obj(bld, 'audioadapter', audio_adapter_sources, serverlib)
-          process.use += ['ALSA', 'SAMPLERATE']
+             netlib.source += [
+                 '../posix/JackNetUnixSocket.cpp',
+@@ -490,7 +527,7 @@ def build(bld):
+         process = create_jack_process_obj(bld, 'audioadapter', audio_adapter_sources, serverlib)
+         process.use += ['ALSA', 'SAMPLERATE']
  
 -    if bld.env['BUILD_ADAPTER'] and (bld.env['IS_SUN'] or bld.env['IS_FREEBSD']):
 +    if bld.env['BUILD_ADAPTER'] and (bld.env['IS_SUN'] or bld.env['IS_FREEBSD'] or bld.env['IS_DRAGONFLY']):
-          audio_adapter_sources += ['../solaris/oss/JackOSSAdapter.cpp', 'memops.c']
-          process = create_jack_process_obj(bld, 'audioadapter', audio_adapter_sources, serverlib)
-          process.use += 'SAMPLERATE'
+         audio_adapter_sources += ['../solaris/oss/JackOSSAdapter.cpp', 'memops.c']
+         process = create_jack_process_obj(bld, 'audioadapter', audio_adapter_sources, serverlib)
+         process.use += 'SAMPLERATE'

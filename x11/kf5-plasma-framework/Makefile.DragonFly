@@ -1,2 +1,5 @@
 USE_KDE:=	${USE_KDE:Nwayland}
 USES+=	gmake
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
+		${WRKSRC}/metainfo.yaml

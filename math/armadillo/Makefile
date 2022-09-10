@@ -1,20 +1,21 @@
 PORTNAME=	armadillo
-PORTVERSION=	10.8.2
+PORTVERSION=	11.2.0
+PORTREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	SF/arma
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	salvadore@FreeBSD.org
 COMMENT=	C++ linear algebra library
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-LIB_DEPENDS=	libboost_date_time.so:devel/boost-libs \
-		libarpack.so:math/arpack-ng \
-		liblapack.so:math/lapack \
+LIB_DEPENDS=	libarpack.so:math/arpack-ng \
+		libboost_date_time.so:devel/boost-libs \
 		libhdf5.so:science/hdf5 \
+		liblapack.so:math/lapack \
 		libsuperlu.so:math/superlu \
-		libsz.so:science/szip
+		libsz.so:science/libaec
 
 USES=		blaslapack:openblas cmake compiler:c++11-lang pkgconfig tar:xz
 

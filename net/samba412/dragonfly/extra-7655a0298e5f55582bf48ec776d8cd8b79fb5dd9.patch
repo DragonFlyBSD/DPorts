@@ -1,0 +1,58 @@
+From 7655a0298e5f55582bf48ec776d8cd8b79fb5dd9 Mon Sep 17 00:00:00 2001
+From: Isaac Boukris <iboukris@gmail.com>
+Date: Tue, 14 Jan 2020 13:16:02 +0100
+Subject: [PATCH] db-glue.c: set forwardable flag on cross-realm tgt tickets
+
+BUG: https://bugzilla.samba.org/show_bug.cgi?id=14233
+
+Match Windows behavior and allow the forwardable flag to be
+set in cross-realm tickets. We used to allow forwardable to
+any server, but now that we apply disallow-forwardable policy
+in heimdal we need to explicitly allow in the corss-realm case
+(and remove the workaround we have for it the MIT plugin).
+
+Signed-off-by: Isaac Boukris <iboukris@samba.org>
+Reviewed-by: Andreas Schneider <asn@samba.org>
+Reviewed-by: Andrew Bartlett <abartlet@samba.org>
+
+Autobuild-User(master): Andrew Bartlett <abartlet@samba.org>
+Autobuild-Date(master): Fri Jun 12 22:10:34 UTC 2020 on sn-devel-184
+---
+ selftest/knownfail.d/s4u2p_fwd | 2 --
+ selftest/knownfail.d/xrealm    | 1 -
+ source4/kdc/db-glue.c          | 3 +++
+ source4/kdc/mit_samba.c        | 5 -----
+ 4 files changed, 3 insertions(+), 8 deletions(-)
+ delete mode 100644 selftest/knownfail.d/s4u2p_fwd
+ delete mode 100644 selftest/knownfail.d/xrealm
+
+diff --git a/source4/kdc/db-glue.c b/source4/kdc/db-glue.c
+index 023ae7b580d6..27728dab904a 100644
+--- a/source4/kdc/db-glue.c
++++ b/source4/kdc/db-glue.c
+@@ -1556,6 +1556,9 @@ static krb5_error_code samba_kdc_trust_message2entry(krb5_context context,
+ 
+ 	entry_ex->entry.max_renew = NULL;
+ 
++	/* Match Windows behavior and allow forwardable flag in cross-realm. */
++	entry_ex->entry.flags.forwardable = 1;
++
+ 	ret = samba_kdc_sort_encryption_keys(entry_ex);
+ 	if (ret != 0) {
+ 		krb5_clear_error_message(context);
+diff --git a/source4/kdc/mit_samba.c b/source4/kdc/mit_samba.c
+index 5a4f6e73e97c..54dcd545ea12 100644
+--- a/source4/kdc/mit_samba.c
++++ b/source4/kdc/mit_samba.c
+@@ -304,11 +304,6 @@ int mit_samba_get_principal(struct mit_samba_context *ctx,
+ 
+ 	sdb_free_entry(&sentry);
+ 
+-	if ((kflags & KRB5_KDB_FLAG_CLIENT_REFERRALS_ONLY) == 0) {
+-		kentry->attributes &= ~KRB5_KDB_DISALLOW_FORWARDABLE;
+-		kentry->attributes &= ~KRB5_KDB_DISALLOW_PROXIABLE;
+-	}
+-
+ done:
+ 	krb5_free_principal(ctx->context, referral_principal);
+ 	referral_principal = NULL;

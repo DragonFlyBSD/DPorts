@@ -1,0 +1,28 @@
+From aa2e583fdea4fd93e4e71c54630e32a1035d1e2a Mon Sep 17 00:00:00 2001
+From: Joseph Sutton <josephsutton@catalyst.net.nz>
+Date: Wed, 29 Sep 2021 16:15:26 +1300
+Subject: [PATCH] tests/krb5: Check buffer types in PAC with STRICT_CHECKING=1
+
+BUG: https://bugzilla.samba.org/show_bug.cgi?id=14642
+
+Signed-off-by: Joseph Sutton <josephsutton@catalyst.net.nz>
+Reviewed-by: Andrew Bartlett <abartlet@samba.org>
+---
+ librpc/idl/krb5pac.idl                  |  3 ++
+ python/samba/tests/krb5/raw_testcase.py | 52 +++++++++++++++++++++++++
+ 2 files changed, 55 insertions(+)
+
+diff --git a/librpc/idl/krb5pac.idl b/librpc/idl/krb5pac.idl
+index 3239d7656b61..515150ab9cdf 100644
+--- a/librpc/idl/krb5pac.idl
++++ b/librpc/idl/krb5pac.idl
+@@ -113,6 +113,9 @@ interface krb5pac
+ 		PAC_TYPE_LOGON_NAME = 10,
+ 		PAC_TYPE_CONSTRAINED_DELEGATION = 11,
+ 		PAC_TYPE_UPN_DNS_INFO = 12,
++		PAC_TYPE_CLIENT_CLAIMS_INFO = 13,
++		PAC_TYPE_DEVICE_INFO = 14,
++		PAC_TYPE_DEVICE_CLAIMS_INFO = 15,
+ 		PAC_TYPE_TICKET_CHECKSUM = 16
+ 	} PAC_TYPE;
+ 

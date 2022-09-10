@@ -1,6 +1,6 @@
---- external/pdfium/UnpackedTarball_pdfium.mk.orig	2022-05-08 23:54:44 UTC
+--- external/pdfium/UnpackedTarball_pdfium.mk.orig	2022-08-14 16:44:24 UTC
 +++ external/pdfium/UnpackedTarball_pdfium.mk
-@@ -19,12 +19,14 @@ pdfium_patches += cg-instead-of-carbon.p
+@@ -19,14 +19,15 @@ pdfium_patches += cg-instead-of-carbon.p
  # Android NDK 19 - that is known to work well - does not have 2 defines
  pdfium_patches += AndroidNDK19.patch.1
  
@@ -11,6 +11,8 @@
  # --with-latest-c++:
  pdfium_patches += gcc-c++20-comparison.patch
  
+ pdfium_patches += include.patch
+-
 -pdfium_patches += pdfium-bsd.patch
 +pdfium_patches += pdfium-dragonfly.patch
  

@@ -1,9 +1,8 @@
 # Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
 
 PORTNAME=	storj
-PORTVERSION=	1.50.3
+PORTVERSION=	1.57.2
 DISTVERSIONPREFIX=	v
-PORTREVISION=	1
 CATEGORIES=	net
 
 MAINTAINER=	danfe@FreeBSD.org
@@ -18,8 +17,8 @@ USE_GITHUB=	yes
 
 STORJ_CMDS=	certificates connect-test crashcollect identity inspector \
 		metabase-orphaned-segments metabase-verify metric-receiver \
-		multinode satellite storagenode storagenode-updater \
-		partnerid-to-useragent-migration \
+		multinode nullify-bad-user-agents satellite storagenode \
+		storagenode-updater \
 		storj-admin storj-sim uplink versioncontrol
 
 GO_TARGET=	${STORJ_CMDS:S,^,./cmd/,}

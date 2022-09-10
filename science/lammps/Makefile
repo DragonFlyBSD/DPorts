@@ -1,5 +1,6 @@
 PORTNAME=	lammps
 PORTVERSION=	${GH_TAGNAME:C/(stable|patch)_([0-9]{1,2})([A-Z][a-z][a-z])([0-9]{4})/\4.\3.\2/S/Jan/01/S/Feb/02/S/Mar/03/S/Apr/04/S/May/05/S/Jun/06/S/Jul/07/S/Aug/08/S/Sep/09/S/Oct/10/S/Nov/11/S/Dec/12/}
+PORTREVISION=	2
 CATEGORIES=	science
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -9,28 +10,30 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BROKEN_i386=	undefined reference to `__atomic_load'
-CONFLICTS_BUILD=	ga mpich mpich2 # conflicts with include/error.h from ga, already fixed in the head
 
 LIB_DEPENDS=	libevent.so:devel/libevent \
 		libfftw3.so:math/fftw3 \
 		libhwloc.so:devel/hwloc2 \
 		libnghttp2.so:www/libnghttp2 \
 		libpciaccess.so:devel/libpciaccess \
-		libssh2.so:security/libssh2
+		libssh2.so:security/libssh2 \
+		libzstd.so:archivers/zstd
 
-USES=		blaslapack:openblas cmake:noninja compiler:c++11-lang eigen:3 fortran gnome localbase:ldflags shebangfix
+USES=		blaslapack:openblas cmake:noninja compiler:c++14-lang eigen:3 fortran gnome localbase:ldflags python shebangfix
 USE_GNOME=	libxml2
 USE_LDCONFIG=	yes
+USE_PYTHON=	cython
 
 USE_GITHUB=	yes
-GH_TAGNAME=	stable_29Sep2021
+GH_TAGNAME=	stable_23Jun2022
 
 SHEBANG_GLOB=	*.sh *.bash
 SHEBANG_FILES=	lib/kokkos/bin/nvcc_wrapper
 
 CMAKE_ON=	BUILD_SHARED_LIBS
 CMAKE_SOURCE_PATH=	${WRKSRC}/cmake
-CMAKE_ARGS=	-DBLA_VENDOR:STRING="OpenBLAS" ${CMAKE_ARGS_${CHOSEN_COMPILER_TYPE}}
+CMAKE_ARGS=	-DBLA_VENDOR:STRING="OpenBLAS" ${CMAKE_ARGS_${CHOSEN_COMPILER_TYPE}} \
+		-DPython_EXECUTABLE=${PYTHON_CMD}
 CMAKE_ARGS_gcc=	-DBUILD_OMP:BOOL=false
 
 # enable packages (for a complete list see STANDARD_PACKAGES in cmake/CMakeLists.txt)
@@ -59,7 +62,7 @@ EXCEPTIONS_DESC=	Enable the use of C++ exceptions
 EXCEPTIONS_CMAKE_BOOL=	LAMMPS_EXCEPTIONS
 
 MPI_CMAKE_BOOL=		BUILD_MPI PKG_MPIIO PKG_USER-LB
-MPI_LIB_DEPENDS=	libmpi.so:net/openmpi
+MPI_LIB_DEPENDS=	libmpi.so:net/mpich
 MPI_USES=		compiler:c11
 
 FFMPEG_CMAKE_BOOL=	WITH_FFMPEG
@@ -78,7 +81,7 @@ GZIP_CMAKE_BOOL=	WITH_GZIP
 H5MD_DESC=		USER-H5MD package based on libhdf5
 H5MD_CMAKE_BOOL=	PKG_USER-H5MD
 H5MD_LIB_DEPENDS=	libhdf5.so:science/hdf5 \
-			libsz.so:science/szip
+			libsz.so:science/libaec
 
 KIM_DESC=		KIM package based on the OpenKim library/repository
 KIM_USES=		pkgconfig
@@ -108,7 +111,7 @@ VORONOI_LIB_DEPENDS=	libvoro++.so:science/voro++
 
 VTK_DESC=		USER-VTK package based on the external vtk package
 VTK_CMAKE_BOOL=		PKG_USER-VTK
-VTK_CMAKE_ON=		-DVTK_DIR:PATH=${LOCALBASE}/lib/vtk-8.2/cmake/vtk-8.2
+VTK_CMAKE_ON=		-DVTK_DIR:PATH=${LOCALBASE}/lib/cmake/vtk-9.1
 VTK_USES=		qt:5 xorg
 VTK_USE=		qt=core,gui,sql,widgets xorg=ice,sm,x11,xext,xt
 VTK_LIB_DEPENDS=	libvtkImagingMath-8.2.so:math/vtk8 \
@@ -124,8 +127,20 @@ PORTSCOUT=	ignore:1 # due to a special version tagging scheme that this project 
 CMAKE_ARGS+=	-DBUILD_OMP:BOOL=true
 .endif
 
-post-patch:
+xpost-patch:
+	# adjust SHELL in Makefile
 	@${REINPLACE_CMD} 's|SHELL = /bin/bash|SHELL = ${LOCALBASE}/bin/bash|' ${WRKSRC}/src/Makefile
+	# fix python version, also see https://github.com/lammps/lammps/issues/3098, https://github.com/lammps/lammps/issues/3099
+	@${FIND} ${WRKSRC} -name "CMakeLists.txt" -o -name "*.cmake" | ${XARGS} ${REINPLACE_CMD} -e ' \
+		s|find_package(Python3 REQUIRED |find_package(Python $${FREEBSD_PYTHON_VER} EXACT REQUIRED |; \
+		s|find_package(Python 3.5 COMPONENTS |find_package(Python $${FREEBSD_PYTHON_VER} EXACT COMPONENTS |; \
+		s|find_package(Python 3.6 COMPONENTS |find_package(Python $${FREEBSD_PYTHON_VER} EXACT COMPONENTS |; \
+		s|find_package(Python3 REQUIRED |find_package(Python $${FREEBSD_PYTHON_VER} EXACT REQUIRED |; \
+		s|find_package(Python COMPONENTS |find_package(Python3 $${FREEBSD_PYTHON_VER} EXACT COMPONENTS |; \
+		s|find_package(Python3 COMPONENTS |find_package(Python3 $${FREEBSD_PYTHON_VER} EXACT COMPONENTS |; \
+		s|find_package(Python QUIET COMPONENTS |find_package(Python3 $${FREEBSD_PYTHON_VER} EXACT QUIET COMPONENTS |; \
+		s|find_package(Python REQUIRED COMPONENTS |find_package(Python3 $${FREEBSD_PYTHON_VER} EXACT REQUIRED COMPONENTS | \
+		'
 
 post-patch-FFMPEG-off:
 	@${REINPLACE_CMD} 's|find_program(FFMPEG_EXECUTABLE|#&|' ${WRKSRC}/cmake/CMakeLists.txt

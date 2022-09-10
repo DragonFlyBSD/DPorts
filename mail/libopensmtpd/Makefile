@@ -19,15 +19,22 @@ USES=	gmake
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+SOVERSION=	0.1.0
+SOSHORTVERSION= ${SOVERSION:C/\.[0-9].[0-9]$//}
+
+PLIST_SUB+=	SOVERSION=${SOVERSION} \
+		SOSHORTVERSION=${SOSHORTVERSION}
+
 post-patch:
 	${RM} ${BUILD_WRKSRC}/Makefile
 	${MV} ${BUILD_WRKSRC}/Makefile.gnu ${BUILD_WRKSRC}/Makefile
 
-post-build:
-	${MV} ${WRKSRC}/libopensmtpd.so.0.1.0 ${WRKSRC}/libopensmtpd.so
-
 do-install:
-	${INSTALL_LIB} ${WRKSRC}/libopensmtpd.so ${STAGEDIR}${PREFIX}/lib/
+	${INSTALL_LIB} ${WRKSRC}/libopensmtpd.so.${SOVERSION} ${STAGEDIR}${PREFIX}/lib/
 	${INSTALL_DATA} ${WRKSRC}/opensmtpd.h ${STAGEDIR}${PREFIX}/include/
+
+post-install:
+	${LN} -s libopensmtpd.so.${SOVERSION} ${STAGEDIR}${PREFIX}/lib/libopensmtpd.so.${SOSHORTVERSION}
+	${LN} -s libopensmtpd.so.${SOVERSION} ${STAGEDIR}${PREFIX}/lib/libopensmtpd.so
 
 .include <bsd.port.mk>

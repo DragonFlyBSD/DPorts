@@ -1,0 +1,9 @@
+@@ -15,7 +15,7 @@
+ 
+ LIB_DEPENDS=	libpcre.so:devel/pcre \
+ 		libdnet.so:net/libdnet \
+-		libpcap.so:net/libpcap \
++		libpcap.so.1:net/libpcap \
+ 		libhwloc.so:devel/hwloc2 \
+ 		libuuid.so:misc/e2fsprogs-libuuid \
+ 		libdaq.so:net/libdaq

@@ -1,4 +1,5 @@
 bin/appid_detector_builder.sh
+%%FLATBUFFERS%%bin/fbstreamer
 bin/snort
 bin/snort2lua
 bin/u2boat
@@ -79,6 +80,7 @@ include/snort/hash/hash_key_operations.h
 include/snort/hash/hashes.h
 %%HYPERSCAN%%include/snort/helpers/hyper_scratch_allocator.h
 %%HYPERSCAN%%include/snort/helpers/hyper_search.h
+include/snort/hash/lru_cache_local.h
 include/snort/hash/lru_cache_shared.h
 include/snort/hash/xhash.h
 include/snort/helpers/base64_encoder.h
@@ -89,8 +91,8 @@ include/snort/helpers/json_stream.h
 include/snort/helpers/literal_search.h
 include/snort/helpers/scratch_allocator.h
 include/snort/host_tracker/host_cache.h
-include/snort/host_tracker/host_cache_allocator.h
-include/snort/host_tracker/host_cache_interface.h
+include/snort/host_tracker/cache_allocator.h
+include/snort/host_tracker/cache_interface.h
 include/snort/host_tracker/host_tracker.h
 include/snort/log/log.h
 include/snort/log/log_text.h
@@ -103,6 +105,7 @@ include/snort/lua/snort_plugin.lua
 include/snort/main/analyzer.h
 include/snort/main/analyzer_command.h
 include/snort/main/policy.h
+include/snort/main/reload_tuner.h
 include/snort/main/reload_tracker.h
 include/snort/main/snort.h
 include/snort/main/snort_config.h
@@ -112,6 +115,7 @@ include/snort/main/swapper.h
 include/snort/main/thread.h
 include/snort/main/thread_config.h
 include/snort/managers/codec_manager.h
+include/snort/managers/event_manager.h
 include/snort/managers/inspector_manager.h
 include/snort/memory/memory_cap.h
 include/snort/mime/decode_b64.h
@@ -197,12 +201,17 @@ include/snort/pub_sub/expect_events.h
 include/snort/pub_sub/finalize_packet_event.h
 include/snort/pub_sub/http_events.h
 include/snort/pub_sub/http_request_body_event.h
+include/snort/pub_sub/netflow_event.h
 include/snort/pub_sub/opportunistic_tls_event.h
 include/snort/pub_sub/sip_events.h
 include/snort/pub_sub/smb_events.h
 include/snort/pub_sub/ssh_events.h
 include/snort/search_engines/search_common.h
 include/snort/search_engines/search_tool.h
+include/snort/service_inspectors/http_inspect/http_common.h
+include/snort/service_inspectors/http_inspect/http_field.h
+include/snort/service_inspectors/http_inspect/http_inspect_base.h
+include/snort/service_inspectors/http_inspect/http_stream_splitter_base.h
 include/snort/service_inspectors/ssl/ssl_flow_data.h
 include/snort/sfip/sf_cidr.h
 include/snort/sfip/sf_ip.h
@@ -267,6 +276,7 @@ libdata/pkgconfig/snort.pc
 %%PORTDOCS%%%%DOCSDIR%%/http_inspect.txt
 %%PORTDOCS%%%%DOCSDIR%%/http2_inspect.txt
 %%PORTDOCS%%%%DOCSDIR%%/iec104.txt
+%%PORTDOCS%%%%DOCSDIR%%/mms.txt
 %%PORTDOCS%%%%DOCSDIR%%/overview.txt
 %%PORTDOCS%%%%DOCSDIR%%/params.txt
 %%PORTDOCS%%%%DOCSDIR%%/perf_monitor.txt

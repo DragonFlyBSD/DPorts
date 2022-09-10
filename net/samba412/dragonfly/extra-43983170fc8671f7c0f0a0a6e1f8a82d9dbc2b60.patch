@@ -1,0 +1,36 @@
+From 43983170fc8671f7c0f0a0a6e1f8a82d9dbc2b60 Mon Sep 17 00:00:00 2001
+From: Andrew Bartlett <abartlet@samba.org>
+Date: Mon, 27 Sep 2021 12:10:02 +1300
+Subject: [PATCH] CVE-2020-25721 auth: Fill in the new HAS_SAM_NAME_AND_SID
+ values
+
+BUG: https://bugzilla.samba.org/show_bug.cgi?id=14835
+
+Signed-off-by: Andrew Bartlett <abartlet@samba.org>
+Reviewed-by: Joseph Sutton <josephsutton@catalyst.net.nz>
+---
+ python/samba/tests/krb5/s4u_tests.py |  2 --
+ selftest/knownfail_heimdal_kdc       | 10 ----------
+ selftest/knownfail_mit_kdc           |  4 ----
+ source4/kdc/pac-glue.c               |  8 ++++++++
+ 4 files changed, 8 insertions(+), 16 deletions(-)
+
+diff --git a/source4/kdc/pac-glue.c b/source4/kdc/pac-glue.c
+index cb0a923fc2d8..95f71c04b232 100644
+--- a/source4/kdc/pac-glue.c
++++ b/source4/kdc/pac-glue.c
+@@ -101,6 +101,14 @@ NTSTATUS samba_get_upn_info_pac_blob(TALLOC_CTX *mem_ctx,
+ 		pac_upn.upn_dns_info.flags |= PAC_UPN_DNS_FLAG_CONSTRUCTED;
+ 	}
+ 
++	pac_upn.upn_dns_info.flags |= PAC_UPN_DNS_FLAG_HAS_SAM_NAME_AND_SID;
++
++	pac_upn.upn_dns_info.ex.sam_name_and_sid.samaccountname
++		= info->info->account_name;
++
++	pac_upn.upn_dns_info.ex.sam_name_and_sid.objectsid
++		= &info->sids[0];
++
+ 	ndr_err = ndr_push_union_blob(upn_data, mem_ctx, &pac_upn,
+ 				      PAC_TYPE_UPN_DNS_INFO,
+ 				      (ndr_push_flags_fn_t)ndr_push_PAC_INFO);

@@ -1,0 +1,104 @@
+From 8ee6753a6ea782050b5b722ce1ac63a275a94f7c Mon Sep 17 00:00:00 2001
+From: Andrew Bartlett <abartlet@samba.org>
+Date: Fri, 1 Oct 2021 11:55:11 +1300
+Subject: [PATCH] CVE-2020-25718 s4-rpc_server: Put msDS-KrbTgtLinkBL and
+ UF_INTERDOMAIN_TRUST_ACCOUNT RODC checks in common
+
+While these checks were not in the NETLOGON case, there is no sense where
+an RODC should be resetting a bad password count on either a
+UF_INTERDOMAIN_TRUST_ACCOUNT nor a RODC krbtgt account.
+
+BUG: https://bugzilla.samba.org/show_bug.cgi?id=14558
+
+Signed-off-by: Andrew Bartlett <abartlet@samba.org>
+Reviewed-by: Joseph Sutton <josephsutton@catalyst.net.nz>
+---
+ source4/rpc_server/common/sid_helper.c        | 29 ++++++++++++++++---
+ source4/rpc_server/drsuapi/getncchanges.c     | 13 +--------
+ source4/rpc_server/netlogon/dcerpc_netlogon.c |  1 +
+ 3 files changed, 27 insertions(+), 16 deletions(-)
+
+diff --git a/source4/rpc_server/common/sid_helper.c b/source4/rpc_server/common/sid_helper.c
+index eaeab236fc01..ab2b4373b473 100644
+--- a/source4/rpc_server/common/sid_helper.c
++++ b/source4/rpc_server/common/sid_helper.c
+@@ -133,16 +133,37 @@ WERROR samdb_result_sid_array_dn(struct ldb_context *sam_ctx,
+ 
+ WERROR samdb_confirm_rodc_allowed_to_repl_to_sid_list(struct ldb_context *sam_ctx,
+ 						      struct ldb_message *rodc_msg,
++						      struct ldb_message *obj_msg,
+ 						      uint32_t num_token_sids,
+ 						      struct dom_sid *token_sids)
+ {
+ 	uint32_t num_never_reveal_sids, num_reveal_sids;
+ 	struct dom_sid *never_reveal_sids, *reveal_sids;
+ 	TALLOC_CTX *frame = talloc_stackframe();
+-	WERROR werr = samdb_result_sid_array_dn(sam_ctx, rodc_msg,
+-						frame, "msDS-NeverRevealGroup",
+-						&num_never_reveal_sids,
+-						&never_reveal_sids);
++	WERROR werr;
++	
++	/*
++	 * We are not allowed to get anyone elses krbtgt secrets (and
++	 * in callers that don't shortcut before this, the RODC should
++	 * not deal with any krbtgt)
++	 */
++	if (samdb_result_dn(sam_ctx, frame,
++			    obj_msg, "msDS-KrbTgtLinkBL", NULL)) {
++		TALLOC_FREE(frame);
++		return WERR_DS_DRA_SECRETS_DENIED;
++	}
++
++	if (ldb_msg_find_attr_as_uint(obj_msg,
++				      "userAccountControl", 0) &
++	    UF_INTERDOMAIN_TRUST_ACCOUNT) {
++		TALLOC_FREE(frame);
++		return WERR_DS_DRA_SECRETS_DENIED;
++	}
++
++	werr = samdb_result_sid_array_dn(sam_ctx, rodc_msg,
++					 frame, "msDS-NeverRevealGroup",
++					 &num_never_reveal_sids,
++					 &never_reveal_sids);
+ 	if (!W_ERROR_IS_OK(werr)) {
+ 		TALLOC_FREE(frame);
+ 		return WERR_DS_DRA_SECRETS_DENIED;
+diff --git a/source4/rpc_server/drsuapi/getncchanges.c b/source4/rpc_server/drsuapi/getncchanges.c
+index 3b1d674573ff..a9d305fc9a05 100644
+--- a/source4/rpc_server/drsuapi/getncchanges.c
++++ b/source4/rpc_server/drsuapi/getncchanges.c
+@@ -1296,20 +1296,9 @@ static WERROR getncchanges_repl_secret(struct drsuapi_bind_state *b_state,
+ 		goto denied;
+ 	}
+ 
+-	/* but it isn't allowed to get anyone elses krbtgt secrets */
+-	if (samdb_result_dn(b_state->sam_ctx_system, mem_ctx,
+-			    obj_res->msgs[0], "msDS-KrbTgtLinkBL", NULL)) {
+-		goto denied;
+-	}
+-
+-	if (ldb_msg_find_attr_as_uint(obj_res->msgs[0],
+-				      "userAccountControl", 0) &
+-	    UF_INTERDOMAIN_TRUST_ACCOUNT) {
+-		goto denied;
+-	}
+-
+ 	werr = samdb_confirm_rodc_allowed_to_repl_to_sid_list(b_state->sam_ctx_system,
+ 							      rodc_res->msgs[0],
++							      obj_res->msgs[0],
+ 							      num_token_sids,
+ 							      token_sids);
+ 
+diff --git a/source4/rpc_server/netlogon/dcerpc_netlogon.c b/source4/rpc_server/netlogon/dcerpc_netlogon.c
+index 4d8fd0c4b8e8..0b8330b9f218 100644
+--- a/source4/rpc_server/netlogon/dcerpc_netlogon.c
++++ b/source4/rpc_server/netlogon/dcerpc_netlogon.c
+@@ -2894,6 +2894,7 @@ static bool sam_rodc_access_check(struct ldb_context *sam_ctx,
+ 
+ 	werr = samdb_confirm_rodc_allowed_to_repl_to_sid_list(sam_ctx,
+ 							      rodc_res->msgs[0],
++							      obj_res->msgs[0],
+ 							      num_token_sids,
+ 							      token_sids);
+ 

@@ -1,7 +1,7 @@
 PORTNAME=	vulkan-tools
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.3.210
-CATEGORIES=	graphics
+DISTVERSION=	1.3.219
+CATEGORIES=	graphics wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Tools and demos for the Vulkan graphics API

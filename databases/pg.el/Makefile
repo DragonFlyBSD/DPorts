@@ -1,6 +1,6 @@
 PORTNAME=	pg.el
 DISTVERSION=	0.13
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	databases elisp
 PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
 
@@ -14,6 +14,8 @@ USES=		emacs
 USE_GITHUB=	yes
 GH_ACCOUNT=	cbbrowne
 GH_TAGNAME=	4f6516e
+
+CONFLICTS_INSTALL=	pg.el pg.el-emacs_* # share/doc/pg.el/README
 
 NO_ARCH=	yes
 

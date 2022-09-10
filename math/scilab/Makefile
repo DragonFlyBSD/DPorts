@@ -110,7 +110,8 @@ GUI_CONFIGURE_OFF=	--without-gui \
 
 OCAML_IMPLIES=		GUI
 OCAML_CONFIGURE_WITH=	modelica
-OCAML_BUILD_DEPENDS=	ocaml:lang/ocaml
+OCAML_BUILD_DEPENDS=	ocaml:lang/ocaml \
+	${LOCALBASE}/lib/ocaml/site-lib/num/META:math/ocaml-num
 OCAML_RUN_DEPENDS=	ocaml:lang/ocaml
 
 TK_CONFIGURE_OFF=	--without-tk
@@ -135,6 +136,11 @@ CONFIGURE_ARGS+=	--enable-debug
 .if ${GCC_DEFAULT} >= 10
 # workaround for Rank mismatch between actual argument at (1) and actual argument at (2) (rank-1 and scalar)
 FFLAGS+=	-fallow-argument-mismatch
+.endif
+
+.if ${PORT_OPTIONS:MGUI}
+DEPRECATED=	Depends on expired devel/avalon-framework
+EXPIRATION_DATE=2022-09-30
 .endif
 
 post-patch:

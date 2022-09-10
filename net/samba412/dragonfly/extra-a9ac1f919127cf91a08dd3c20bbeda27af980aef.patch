@@ -1,0 +1,98 @@
+From a9ac1f919127cf91a08dd3c20bbeda27af980aef Mon Sep 17 00:00:00 2001
+From: Andrew Bartlett <abartlet@samba.org>
+Date: Fri, 1 Oct 2021 15:59:28 +1300
+Subject: [PATCH] CVE-2020-25718 dsdb: Bring sid_helper.c into common code as
+ rodc_helper.c
+
+These common routines will assist the KDC to do the same access
+checking as the RPC servers need to do regarding which accounts
+a RODC can act with regard to.
+
+BUG: https://bugzilla.samba.org/show_bug.cgi?id=14558
+
+Signed-off-by: Andrew Bartlett <abartlet@samba.org>
+Reviewed-by: Joseph Sutton <josephsutton@catalyst.net.nz>
+---
+ .../common/sid_helper.c => dsdb/common/rodc_helper.c}    | 1 -
+ source4/dsdb/wscript_build                               | 2 +-
+ source4/rpc_server/drsuapi/getncchanges.c                | 1 -
+ source4/rpc_server/netlogon/dcerpc_netlogon.c            | 1 -
+ source4/rpc_server/wscript_build                         | 9 +--------
+ 5 files changed, 2 insertions(+), 12 deletions(-)
+ rename source4/{rpc_server/common/sid_helper.c => dsdb/common/rodc_helper.c} (99%)
+
+diff --git a/source4/rpc_server/common/sid_helper.c b/source4/dsdb/common/rodc_helper.c
+similarity index 99%
+rename from source4/rpc_server/common/sid_helper.c
+rename to source4/dsdb/common/rodc_helper.c
+index c6e7fbeb7ab2..09aa3f5e710d 100644
+--- a/source4/rpc_server/common/sid_helper.c
++++ b/source4/dsdb/common/rodc_helper.c
+@@ -23,7 +23,6 @@
+ #include "rpc_server/dcerpc_server.h"
+ #include "librpc/gen_ndr/ndr_security.h"
+ #include "source4/dsdb/samdb/samdb.h"
+-#include "rpc_server/common/sid_helper.h"
+ #include "libcli/security/security.h"
+ 
+ /*
+diff --git a/source4/dsdb/wscript_build b/source4/dsdb/wscript_build
+index 0238ea2e2d72..7f9b8fe78748 100644
+--- a/source4/dsdb/wscript_build
++++ b/source4/dsdb/wscript_build
+@@ -13,7 +13,7 @@ bld.SAMBA_LIBRARY('samdb',
+ 	)
+ 
+ bld.SAMBA_LIBRARY('samdb-common',
+-	source='common/util.c common/util_trusts.c common/util_groups.c common/util_samr.c common/dsdb_dn.c common/dsdb_access.c common/util_links.c',
++	source='common/util.c common/util_trusts.c common/util_groups.c common/util_samr.c common/dsdb_dn.c common/dsdb_access.c common/util_links.c common/rodc_helper.c',
+ 	autoproto='common/proto.h',
+ 	private_library=True,
+ 	deps='ldb NDR_DRSBLOBS util_ldb LIBCLI_AUTH samba-hostconfig samba_socket cli-ldap-common flag_mapping UTIL_RUNCMD'
+diff --git a/source4/rpc_server/drsuapi/getncchanges.c b/source4/rpc_server/drsuapi/getncchanges.c
+index 8a5243aba528..28223104c946 100644
+--- a/source4/rpc_server/drsuapi/getncchanges.c
++++ b/source4/rpc_server/drsuapi/getncchanges.c
+@@ -31,7 +31,6 @@
+ #include "libcli/security/security.h"
+ #include "libcli/security/session.h"
+ #include "rpc_server/drsuapi/dcesrv_drsuapi.h"
+-#include "rpc_server/common/sid_helper.h"
+ #include "../libcli/drsuapi/drsuapi.h"
+ #include "lib/util/binsearch.h"
+ #include "lib/util/tsort.h"
+diff --git a/source4/rpc_server/netlogon/dcerpc_netlogon.c b/source4/rpc_server/netlogon/dcerpc_netlogon.c
+index a70180f34de8..0cc26afaeb13 100644
+--- a/source4/rpc_server/netlogon/dcerpc_netlogon.c
++++ b/source4/rpc_server/netlogon/dcerpc_netlogon.c
+@@ -42,7 +42,6 @@
+ #include "librpc/gen_ndr/ndr_winbind.h"
+ #include "librpc/gen_ndr/ndr_winbind_c.h"
+ #include "lib/socket/netif.h"
+-#include "rpc_server/common/sid_helper.h"
+ #include "lib/util/util_str_escape.h"
+ #include "lib/param/loadparm.h"
+ 
+diff --git a/source4/rpc_server/wscript_build b/source4/rpc_server/wscript_build
+index c9c1978f2235..8c756721232a 100644
+--- a/source4/rpc_server/wscript_build
++++ b/source4/rpc_server/wscript_build
+@@ -7,17 +7,10 @@ bld.SAMBA_SUBSYSTEM('DCERPC_SHARE',
+ 	enabled=bld.CONFIG_SET('WITH_NTVFS_FILESERVER'),
+ 	)
+ 
+-bld.SAMBA_SUBSYSTEM('DCERPC_SID_HELPER',
+-	source='common/sid_helper.c',
+-	autoproto='common/sid_helper.h',
+-	deps='ldb',
+-	enabled=bld.AD_DC_BUILD_IS_ENABLED(),
+-	)
+-
+ bld.SAMBA_SUBSYSTEM('DCERPC_COMMON',
+ 	source='common/server_info.c common/forward.c common/loadparm.c',
+ 	autoproto='common/proto.h',
+-	deps='ldb DCERPC_SHARE DCERPC_SID_HELPER',
++	deps='ldb DCERPC_SHARE',
+ 	enabled=bld.AD_DC_BUILD_IS_ENABLED()
+ 	)
+ 

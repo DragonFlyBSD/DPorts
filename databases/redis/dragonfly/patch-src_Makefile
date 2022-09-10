@@ -1,0 +1,24 @@
+--- src/Makefile.orig	2022-09-04 09:46:36.892328000 +0200
++++ src/Makefile	2022-09-04 17:46:35.057399000 +0200
+@@ -158,6 +158,13 @@
+         FINAL_CFLAGS?= $(CFLAGS) $(REDIS_CFLAGS) -I${PREFIX}/include
+         FINAL_LDFLAGS= $(LDFLAGS) -pthread
+ else
++ifeq ($(uname_S),DragonFly)
++        # DragonFly
++        FINAL_CFLAGS?= $(CFLAGS) $(REDIS_CFLAGS) -I${PREFIX}/include
++        FINAL_LDFLAGS= $(LDFLAGS) -pthread
++        OPENSSL_CFLAGS+=-I/usr/local/include/
++        OPENSSL_LDFLAGS=-L/usr/local/lib
++else
+ ifeq ($(uname_S),AIX)
+         # AIX
+         FINAL_LDFLAGS+= -Wl,-bexpall
+@@ -210,6 +217,7 @@
+ endif
+ endif
+ endif
++endif
+ endif
+ endif
+ endif

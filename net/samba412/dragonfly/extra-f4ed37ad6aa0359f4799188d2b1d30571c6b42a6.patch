@@ -1,0 +1,47 @@
+From f4ed37ad6aa0359f4799188d2b1d30571c6b42a6 Mon Sep 17 00:00:00 2001
+From: Joseph Sutton <josephsutton@catalyst.net.nz>
+Date: Tue, 26 Oct 2021 20:33:49 +1300
+Subject: [PATCH] CVE-2020-25719 krb5pac.idl: Add PAC_REQUESTER_SID PAC buffer
+ type
+
+BUG: https://bugzilla.samba.org/show_bug.cgi?id=14561
+
+Signed-off-by: Joseph Sutton <josephsutton@catalyst.net.nz>
+Reviewed-by: Andrew Bartlett <abartlet@samba.org>
+---
+ librpc/idl/krb5pac.idl | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+
+diff --git a/librpc/idl/krb5pac.idl b/librpc/idl/krb5pac.idl
+index 11e227026f62..bbe4a253e3a2 100644
+--- a/librpc/idl/krb5pac.idl
++++ b/librpc/idl/krb5pac.idl
+@@ -121,6 +121,10 @@ interface krb5pac
+ 		PAC_ATTRIBUTE_INFO_FLAGS flags;
+ 	} PAC_ATTRIBUTES_INFO;
+ 
++	typedef struct {
++		dom_sid sid;
++	} PAC_REQUESTER_SID;
++
+ 	typedef [public] struct {
+ 		PAC_LOGON_INFO *info;
+ 	} PAC_LOGON_INFO_CTR;
+@@ -141,7 +145,8 @@ interface krb5pac
+ 		PAC_TYPE_DEVICE_INFO = 14,
+ 		PAC_TYPE_DEVICE_CLAIMS_INFO = 15,
+ 		PAC_TYPE_TICKET_CHECKSUM = 16,
+-		PAC_TYPE_ATTRIBUTES_INFO = 17
++		PAC_TYPE_ATTRIBUTES_INFO = 17,
++		PAC_TYPE_REQUESTER_SID = 18
+ 	} PAC_TYPE;
+ 
+ 	typedef struct {
+@@ -159,6 +164,7 @@ interface krb5pac
+ 		[case(PAC_TYPE_UPN_DNS_INFO)]	PAC_UPN_DNS_INFO upn_dns_info;
+ 		[case(PAC_TYPE_TICKET_CHECKSUM)]	PAC_SIGNATURE_DATA ticket_checksum;
+ 		[case(PAC_TYPE_ATTRIBUTES_INFO)]	PAC_ATTRIBUTES_INFO attributes_info;
++		[case(PAC_TYPE_REQUESTER_SID)]	PAC_REQUESTER_SID requester_sid;
+ 		/* when new PAC info types are added they are supposed to be done
+ 		   in such a way that they are backwards compatible with existing
+ 		   servers. This makes it safe to just use a [default] for

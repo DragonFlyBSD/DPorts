@@ -1,3 +1,5 @@
+MASTER_SITES+=  https://avalon.dragonflybsd.org/misc/bootstraps/:bootstrap
+
 # contains freebsd/linux binaries (not used)
 .if defined(DEVELOPER)
 .MAKEFLAGS+=	DFLY_ALLOW_FOREIGN_BINARIES=yes

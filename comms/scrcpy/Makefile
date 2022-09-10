@@ -1,46 +1,44 @@
-# $FreeBSD$
-
 PORTNAME=	scrcpy
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.9
-PORTREVISION=	2
+DISTVERSION=	1.24
 CATEGORIES=	comms net
-MASTER_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/releases/download/${GH_TAGNAME}/:jar
-DISTFILES=	${DIST_JARFILE}:jar
+MASTER_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/releases/download/${DISTVERSIONFULL}/:server
+DISTFILES=	${SERVER_FILE}:server
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
-MAINTAINER=	tagattie@yandex.com
+MAINTAINER=	tagattie@FreeBSD.org
 COMMENT=	Display and control your Android device
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg
-RUN_DEPENDS=	adb:devel/android-tools-adb
+RUN_DEPENDS=	adb:devel/android-tools
 
 USES=		compiler:c++11-lang meson pkgconfig sdl
-USE_SDL=	sdl2
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	Genymobile
 
-MESON_ARGS=	-Dbuild_server=false \
-		-Dportable=false
+USE_SDL=	sdl2
+
+MESON_ARGS=	-Dportable=false \
+		-Dprebuilt_server=${WRKSRC}/${SERVER_FILE}
+
+PLIST_FILES=	bin/scrcpy \
+		etc/bash_completion.d/scrcpy \
+		man/man1/scrcpy.1.gz \
+		share/icons/hicolor/256x256/apps/scrcpy.png \
+		${DATADIR}/scrcpy-server \
+		share/zsh/site-functions/_scrcpy
+PORTDOCS=	FAQ.md README.md
 
 OPTIONS_DEFINE=	DOCS
 
-PORTDOCS=	README.md FAQ.md
-
-DIST_JARFILE=	${PORTNAME}-server-${DISTVERSIONPREFIX}${DISTVERSION}.jar
-INSTALL_JARFILE=	${DIST_JARFILE:C/(server).*/\1/}.jar
-PLIST_FILES=	bin/scrcpy ${DATADIR}/${INSTALL_JARFILE}
+SERVER_FILE=	${PORTNAME}-server-${DISTVERSIONFULL}
 
 post-extract:
-	${CP} ${DISTDIR}/${DIST_JARFILE} ${WRKSRC}/${INSTALL_JARFILE}
-
-post-install:
-	${MKDIR} ${STAGEDIR}${DATADIR}
-	${INSTALL_DATA} ${WRKSRC}/${INSTALL_JARFILE} ${STAGEDIR}${DATADIR}
+	${CP} ${DISTDIR}/${SERVER_FILE} ${WRKSRC}
 
 post-install-DOCS-on:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}

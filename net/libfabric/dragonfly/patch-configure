@@ -1,0 +1,11 @@
+--- configure.orig	2021-11-19 16:37:10 UTC
++++ configure
+@@ -3993,7 +3993,7 @@ case $host_os in
+ *linux*)
+ 	linux=1
+ 	;;
+-*freebsd*)
++*freebsd*|*dragonfly*)
+ 	freebsd=1
+ 	;;
+ *)

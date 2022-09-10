@@ -64,14 +64,15 @@ STRIP?=	-s
 # to child makes explicitly, instead of recomputing them tens of thousands of times.
 
 .if !defined(NOPRECIOUSMAKEVARS)
-.if !defined(ARCH)
-ARCH=	x86_64
-.endif
+.  if !defined(ARCH)
+ARCH!=	${UNAME} -p
+.  endif
 _EXPORTED_VARS+=	ARCH
 
-.if !defined(OSVERSION)
-OSVERSION=	9999999
-.endif
+.  if !defined(OSVERSION)
+OSVERSION= 9999999
+.    endif
+.  endif
 
 .if !defined(DFLYVERSION)
 .   if defined(.MAKE.DF.VERSION)
@@ -91,60 +92,60 @@ _EXPORTED_VARS+=	OSVERSION DFLYVERSION
 WITH_PKG=	yes
 WITH_PKGNG=	yes
 
-.if !defined(_OSRELEASE)
+.  if !defined(_OSRELEASE)
 .   if defined(.MAKE.DF.OSREL)
-_OSRELEASE=		${.MAKE.DF.OSREL}-DPORTS
+_OSRELEASE=        ${.MAKE.DF.OSREL}-DPORTS
 .   else
 _OSRELEASE!=		${UNAME} -r
 .   endif
-.endif
+.  endif
 _EXPORTED_VARS+=	_OSRELEASE
-.if !defined(OSREL)
+.  if !defined(OSREL)
 OSREL=	${_OSRELEASE:C/[-(].*//}
-.endif
+.  endif
 _EXPORTED_VARS+=	OSREL
 
-.if !defined(OPSYS)
-OPSYS=	DragonFly
-.endif
+.  if !defined(OPSYS)
+OPSYS= DragonFly
+.  endif
 _EXPORTED_VARS+=	OPSYS
 
-.if !defined(CONFIGURE_MAX_CMD_LEN)
-CONFIGURE_MAX_CMD_LEN=	262144
-.endif
+.  if !defined(CONFIGURE_MAX_CMD_LEN)
+CONFIGURE_MAX_CMD_LEN!= ${SYSCTL} -n kern.argmax
+.  endif
 _EXPORTED_VARS+=	CONFIGURE_MAX_CMD_LEN
 
-.if defined(USE_JAVA)
-.if !defined(_JAVA_VERSION_LIST_REGEXP)
+.  if defined(USE_JAVA)
+.   if !defined(_JAVA_VERSION_LIST_REGEXP)
 _JAVA_VERSION_LIST_REGEXP!=	${MAKE} -V _JAVA_VERSION_LIST_REGEXP USE_JAVA=1 -f ${PORTSDIR}/Mk/bsd.port.mk
-.endif
+.   endif
 _EXPORTED_VARS+=	_JAVA_VERSION_LIST_REGEXP
 
-.if !defined(_JAVA_VENDOR_LIST_REGEXP)
+.   if !defined(_JAVA_VENDOR_LIST_REGEXP)
 _JAVA_VENDOR_LIST_REGEXP!=	${MAKE} -V _JAVA_VENDOR_LIST_REGEXP USE_JAVA=1 -f ${PORTSDIR}/Mk/bsd.port.mk
-.endif
+.   endif
 _EXPORTED_VARS+=	_JAVA_VENDOR_LIST_REGEXP
 
-.if !defined(_JAVA_OS_LIST_REGEXP)
+.   if !defined(_JAVA_OS_LIST_REGEXP)
 _JAVA_OS_LIST_REGEXP!=		${MAKE} -V _JAVA_OS_LIST_REGEXP USE_JAVA=1 -f ${PORTSDIR}/Mk/bsd.port.mk
-.endif
+.   endif
 _EXPORTED_VARS+=	_JAVA_OS_LIST_REGEXP
 
-.if !defined(_JAVA_PORTS_INSTALLED)
+.   if !defined(_JAVA_PORTS_INSTALLED)
 _JAVA_PORTS_INSTALLED!=		${MAKE} -V _JAVA_PORTS_INSTALLED USE_JAVA=1 -f ${PORTSDIR}/Mk/bsd.port.mk
-.endif
+.   endif
 _EXPORTED_VARS+=	_JAVA_PORTS_INSTALLED
-.else
+.  else
 # export empty variables
 _EXPORTED_VARS+=	_JAVA_VERSION_LIST_REGEXP \
 			_JAVA_VENDOR_LIST_REGEXP \
 			_JAVA_OS_LIST_REGEXP \
 			_JAVA_PORTS_INSTALLED
-.endif
+.  endif
 
-.if !defined(UID)
+.  if !defined(UID)
 UID!=	${ID} -u
-.endif
+.  endif
 _EXPORTED_VARS+=	UID
 
 .endif
@@ -182,20 +183,20 @@ TARGETS+=	reinstall
 TARGETS+=	tags
 
 .for __target in ${TARGETS}
-.if !target(${__target})
-.if defined(SUBDIR) && !empty(SUBDIR)
+.  if !target(${__target})
+.    if defined(SUBDIR) && !empty(SUBDIR)
 ${__target}: ${SUBDIR:S/^/_/:S/$/.${__target}/}
-.else
+.    else
 ${__target}:
-.endif
-.endif
+.    endif
+.  endif
 .endfor
 
 .if defined(SUBDIR) && !empty(SUBDIR)
 
-.for __target in ${TARGETS} checksubdirs describe readmes
+.  for __target in ${TARGETS} checksubdirs describe readmes
 ${SUBDIR:S/^/_/:S/$/.${__target}/}: _SUBDIRUSE
-.endfor
+.  endfor
 
 _SUBDIRUSE: .USE
 	@OK=""; sub=${.TARGET:S/^_//:R}; \
@@ -220,19 +221,19 @@ _SUBDIRUSE: .USE
 			DIRPRFX=${DIRPRFX}$$edir/; \
 	fi
 
-.for _subdir in ${SUBDIR:S/^/_/}
+.  for _subdir in ${SUBDIR:S/^/_/}
 ${_subdir}::   ${_subdir:S/$/.all/}
-.endfor
+.  endfor
 
 .endif
 
 .if !target(install)
-.if !target(beforeinstall)
+.  if !target(beforeinstall)
 beforeinstall:
-.endif
-.if !target(afterinstall)
+.  endif
+.  if !target(afterinstall)
 afterinstall:
-.endif
+.  endif
 install: afterinstall
 afterinstall: realinstall
 realinstall: beforeinstall ${SUBDIR:S/^/_/:S/$/.realinstall/}
@@ -241,11 +242,11 @@ realinstall: beforeinstall ${SUBDIR:S/^/_/:S/$/.realinstall/}
 IGNOREDIR=	Mk Templates Tools distfiles packages pkg Keywords
 
 .if !target(checksubdirs)
-.if defined(PORTSTOP)
+.  if defined(PORTSTOP)
 checksubdirs: checksubdir ${SUBDIR:S/^/_/:S/$/.checksubdirs/}
-.else
+.  else
 checksubdirs: checksubdir
-.endif
+.  endif
 .endif
 
 .if !target(checksubdir)
@@ -272,24 +273,24 @@ checksubdir:
 .endif
 
 .if !target(describe)
-.if defined(PORTSTOP)
+.  if defined(PORTSTOP)
 # This is a bit convoluted to deal with the fact that make will overlap I/O from child make processes
 # if they write more than 2k: this will corrupt the INDEX file.  make -P does not do this, but it adds
 # extraneous output and redirects stderr, so we lose error reporting from child makes.  Instead we have
 # to roll our own implementation of make -P and make sure that each child make writes to their own file,
 # which we will combine at the end.  This gives substantial performance benefits over doing a make -j1
 
-.if defined(BUILDING_INDEX)
+.    if defined(BUILDING_INDEX)
 describe: ${SUBDIR:S/^/describe./}
 
-.for i in ${SUBDIR}
+.      for i in ${SUBDIR}
 describe.$i:
 	@cd ${.CURDIR}; ${MAKE} -B ${i:S/^/_/:S/$/.describe/} > ${INDEX_TMPDIR}/${INDEXFILE}.desc.${i}
-.endfor
-.else
+.      endfor
+.    else
 describe: ${SUBDIR:S/^/_/:S/$/.describe/}
-.endif
-.else
+.    endif
+.  else
 describe:
 	@for sub in ${SUBDIR}; do \
 	if ${TEST} -d ${.CURDIR}/$${sub}; then \
@@ -302,17 +303,17 @@ describe:
 		${ECHO_MSG} "===> ${DIRPRFX}$${sub} non-existent"; \
 	fi; \
 	done
-.endif
+.  endif
 .endif
 
 .if !target(readmes)
-.if defined(PORTSTOP)
+.  if defined(PORTSTOP)
 readmes: readme ${SUBDIR:S/^/_/:S/$/.readmes/}
 	@${ECHO_MSG} "===>   Creating README.html for all ports"
 	@perl ${PORTSDIR}/Tools/make_readmes < ${INDEXDIR}/${INDEXFILE}
-.else
+.  else
 readmes: readme
-.endif
+.  endif
 .endif
 
 .if !target(readme)
@@ -330,14 +331,14 @@ README.html:
 	@${ECHO_CMD} "===>  Creating README.html"
 	@> $@.tmp
 .for entry in ${SUBDIR}
-.if exists(${entry})
-.if defined(PORTSTOP)
+.  if exists(${entry})
+.    if defined(PORTSTOP)
 	@${ECHO_CMD} -n '<a href="'${entry}/README.html'">'"`${ECHO_CMD} ${entry} | ${HTMLIFY}`"'</a>: ' >> $@.tmp
-.else
+.    else
 	@${ECHO_CMD} -n '<a href="'${entry}/README.html'">'"`cd ${entry}; ${MAKE} package-name | ${HTMLIFY}`</a>: " >> $@.tmp
-.endif
+.    endif
 	@${ECHO_CMD} `cd ${entry}; ${MAKE} -V COMMENT` | ${HTMLIFY} >> $@.tmp
-.endif
+.  endif
 .endfor
 	@${SORT} -t '>' +1 -2 $@.tmp > $@.tmp2
 .if exists(${DESCR})
@@ -363,11 +364,11 @@ README.html:
 
 # Pass in the cached invariant variables to child makes.
 .if !defined(NOPRECIOUSMAKEVARS)
-.for var in ${_EXPORTED_VARS}
-.if empty(.MAKEFLAGS:M${var}=*) && !empty(${var})
+.  for var in ${_EXPORTED_VARS}
+.    if empty(.MAKEFLAGS:M${var}=*) && !empty(${var})
 .MAKEFLAGS:	${var}=${${var}:Q}
-.endif
-.endfor
+.    endif
+.  endfor
 .endif
 
 PORTSEARCH_DISPLAY_FIELDS?=name,path,info,maint,index,bdeps,rdeps,www

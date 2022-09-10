@@ -1,5 +1,6 @@
 PORTNAME=	yubikey-manager
-PORTVERSION=	4.0.8
+PORTVERSION=	4.0.9
+PORTREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -9,6 +10,9 @@ COMMENT=	Python library and command line tool for configuring a YubiKey
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING
+
+DEPRECATED=	Depends on expired security/py-pycrypto
+EXPIRATION_DATE=2022-09-30
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}click>0:devel/py-click@${PY_FLAVOR} \
@@ -21,9 +25,13 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}click>0:devel/py-click@${PY_FLAVOR} \
 		pcsc-spy:devel/pcsc-lite \
 		u2f-host:security/libu2f-host \
 		ykpersonalize:security/ykpers
+TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}makefun>0:devel/py-makefun@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pytest>0:devel/py-pytest@${PY_FLAVOR}
 
-USES=		python:3.6+
-USE_PYTHON=	autoplist concurrent distutils
+USES=		dos2unix python:3.6+
+USE_PYTHON=	autoplist concurrent distutils unittest
+
+DOS2UNIX_GLOB=	*.adoc *.py
 
 NO_ARCH=	yes
 
