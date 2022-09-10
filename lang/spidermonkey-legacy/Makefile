@@ -12,7 +12,7 @@ COMMENT=	Standalone JavaScript based from Mozilla 52-esr
 LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	autoconf-2.13:devel/autoconf213
+BUILD_DEPENDS=	autoconf2.13:devel/autoconf2.13
 LIB_DEPENDS=	libnspr4.so:devel/nspr \
 		libffi.so:devel/libffi \
 		libicudata.so:devel/icu
@@ -67,7 +67,7 @@ post-patch:
 		${WRKSRC}/tests/Intl/NumberFormat/StringBuffer.js
 
 pre-configure:
-	cd ${WRKSRC} && ${LOCALBASE}/bin/autoconf-2.13
+	cd ${WRKSRC} && ${LOCALBASE}/bin/autoconf2.13
 # The directory needs to exist, or configure freaks out:
 	@${MKDIR} ${WRKSRC:H:H}/intl/icu/source/common/unicode
 	${LN} -s ${LOCALBASE}/include/unicode/uvernum.h	\
