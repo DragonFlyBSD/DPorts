@@ -1,8 +1,8 @@
---- panel-plugin/devperf.c.orig	2017-02-25 09:57:00 UTC
+--- panel-plugin/devperf.c.orig	2022-03-03 20:02:02 UTC
 +++ panel-plugin/devperf.c
-@@ -228,6 +228,84 @@ int main ()
+@@ -218,6 +218,84 @@ int main ()
  
- 	/**************************	Linux End	***************/
+ /************************** Linux End ***************/
  
 +#elif defined(__DragonFly__)
 +#include <sys/param.h>
@@ -85,11 +85,11 @@
  #elif defined(__FreeBSD__)
  
  #include <sys/disk.h>
-@@ -269,6 +347,7 @@ int DevGetPerfData (const void *p_pvDevi
+@@ -259,6 +337,7 @@ int DevGetPerfData (const void *p_pvDevi
  
- 	if(devstat_getdevs(kd, &stats) == -1) {
- 		syslog(0, "DISKPERF: getdevs fail");
-+		return (-1);
- 	}
+     if(devstat_getdevs(kd, &stats) == -1) {
+         syslog(0, "DISKPERF: getdevs fail");
++	return (-1);
+     }
  
- 	for(found = 0, i = 0; i < (stats.dinfo)->numdevs; i++) {
+     for(found = 0, i = 0; i < (stats.dinfo)->numdevs; i++) {
