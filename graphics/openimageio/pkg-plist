@@ -22,6 +22,7 @@ include/OpenImageIO/detail/fmt/format-inl.h
 include/OpenImageIO/detail/fmt/format.h
 include/OpenImageIO/detail/fmt/ostream.h
 include/OpenImageIO/detail/fmt/printf.h
+include/OpenImageIO/detail/fmt.h
 include/OpenImageIO/detail/pugixml/pugiconfig.hpp
 include/OpenImageIO/detail/pugixml/pugixml.cpp
 include/OpenImageIO/detail/pugixml/pugixml.hpp
@@ -59,6 +60,7 @@ include/OpenImageIO/texture.h
 include/OpenImageIO/thread.h
 include/OpenImageIO/tiffutils.h
 include/OpenImageIO/timer.h
+include/OpenImageIO/type_traits.h
 include/OpenImageIO/typedesc.h
 include/OpenImageIO/unittest.h
 include/OpenImageIO/unordered_map_concurrent.h
