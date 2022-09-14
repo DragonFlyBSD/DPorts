@@ -15,7 +15,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 LIB_DEPENDS=	libdaq.so:net/libdaq \
 		libdnet.so:net/libdnet \
 		libhwloc.so:devel/hwloc2 \
-		libpcap.so:net/libpcap \
+		libpcap.so.1:net/libpcap \
 		libpcre.so:devel/pcre \
 		libuuid.so:misc/e2fsprogs-libuuid
 
