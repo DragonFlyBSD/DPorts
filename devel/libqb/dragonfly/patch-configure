@@ -1,0 +1,11 @@
+--- configure.intermediate	2022-09-17 10:42:28 UTC
++++ configure
+@@ -21572,7 +21572,7 @@ _ACEOF
+ 		{ $as_echo "$as_me:${as_lineno-$LINENO}: result: Darwin" >&5
+ $as_echo "Darwin" >&6; }
+ 	;;
+-	*bsd*)
++	dragonfly*|*bsd*)
+ 
+ cat >>confdefs.h <<_ACEOF
+ #define QB_BSD 1
