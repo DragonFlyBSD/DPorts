@@ -1,4 +1,4 @@
---- chrome/browser/extensions/api/settings_private/prefs_util.cc.orig	2022-06-17 14:20:10 UTC
+--- chrome/browser/extensions/api/settings_private/prefs_util.cc.orig	2022-08-31 12:19:35 UTC
 +++ chrome/browser/extensions/api/settings_private/prefs_util.cc
 @@ -187,7 +187,7 @@ const PrefsUtil::TypedPrefMap& PrefsUtil::GetAllowlist
  

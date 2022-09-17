@@ -1,4 +1,4 @@
---- media/audio/sndio/audio_manager_sndio.cc.orig	2022-02-28 16:54:41 UTC
+--- media/audio/sndio/audio_manager_sndio.cc.orig	2022-08-31 12:19:35 UTC
 +++ media/audio/sndio/audio_manager_sndio.cc
 @@ -0,0 +1,181 @@
 +// Copyright (c) 2012 The Chromium Authors. All rights reserved.

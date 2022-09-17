@@ -1,7 +1,5 @@
-# Created by: Florent Thoumie <flz@FreeBSD.org>
-
 PORTNAME=	chromium
-PORTVERSION=	103.0.5060.134
+PORTVERSION=	105.0.5195.102
 CATEGORIES=	www wayland
 MASTER_SITES=	https://commondatastorage.googleapis.com/chromium-browser-official/ \
 		https://nerd.hu/distfiles/:external
@@ -93,7 +91,6 @@ GN_ARGS+=	clang_use_chrome_plugins=false \
 		enable_hangout_services_extension=true \
 		enable_js_type_check=false \
 		enable_nacl=false \
-		enable_one_click_signin=true \
 		enable_remoting=false \
 		enable_wmax_tokens=false \
 		fatal_linker_warnings=false \
@@ -112,6 +109,7 @@ GN_ARGS+=	clang_use_chrome_plugins=false \
 		use_system_freetype=false \
 		use_system_harfbuzz=true \
 		use_system_libjpeg=true \
+		use_system_libwayland=true \
 		use_system_wayland_scanner=true \
 		use_udev=false \
 		extra_cxxflags="${CXXFLAGS}" \
