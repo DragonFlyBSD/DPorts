@@ -4,6 +4,7 @@ OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NPULSEAUDIO} ALSA
 
 dfly-patch:
 	${REINPLACE_CMD} -e 's@STREQUAL "FreeBSD"@MATCHES "FreeBSD|DragonFly"@g' \
-		${WRKSRC}/cmake/03-libs.cmake
+		${WRKSRC}/cmake/libpoly.cmake \
+		${WRKSRC}/cmake/cxx.cmake
 	${REINPLACE_CMD} -e 's@ifndef \(__FreeBSD__\)@if !defined(\1) \&\& !defined(__DragonFly__)@g' \
 		${WRKSRC}/include/adapters/alsa/generic.hpp
