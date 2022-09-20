@@ -1,4 +1,4 @@
---- src/util/system/system.cpp.orig	2021-07-06 12:59:51 UTC
+--- src/util/system/system.cpp.orig	2022-04-21 13:21:39 UTC
 +++ src/util/system/system.cpp
 @@ -16,7 +16,7 @@
    #include <fcntl.h>
@@ -27,8 +27,8 @@
  }
  
  size_t l3_cache_size() {
--#if defined(_MSC_VER) || defined(__APPLE__) || defined(__FreeBSD__)
-+#if defined(_MSC_VER) || defined(__APPLE__) || defined(__FreeBSD__) || defined(__DragonFly__)
+-#if defined(_MSC_VER) || defined(__APPLE__) || defined(__FreeBSD__) || (! defined(_SC_LEVEL3_CACHE_SIZE))
++#if defined(_MSC_VER) || defined(__APPLE__) || defined(__FreeBSD__) || defined(__DragonFly__) || (! defined(_SC_LEVEL3_CACHE_SIZE))
  	return 0;
  #else
  	const auto s = sysconf(_SC_LEVEL3_CACHE_SIZE);
