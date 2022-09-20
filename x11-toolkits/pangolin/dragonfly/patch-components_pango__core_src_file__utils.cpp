@@ -1,5 +1,5 @@
---- src/utils/file_utils.cpp.orig	2020-05-19 20:42:49 UTC
-+++ src/utils/file_utils.cpp
+--- components/pango_core/src/file_utils.cpp.orig	2022-09-15 02:58:00 UTC
++++ components/pango_core/src/file_utils.cpp
 @@ -49,6 +49,7 @@
  #  include <fcntl.h>
  #  include <errno.h>
