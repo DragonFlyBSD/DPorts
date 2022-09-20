@@ -1,4 +1,4 @@
---- media/libcubeb/src/cubeb_jack.cpp.intermediate	2017-10-06 16:40:09 UTC
+--- media/libcubeb/src/cubeb_jack.cpp.orig	2022-09-12 16:44:45 UTC
 +++ media/libcubeb/src/cubeb_jack.cpp
 @@ -8,9 +8,6 @@
   */
@@ -7,6 +7,6 @@
 -#ifndef __FreeBSD__
 -#define _POSIX_SOURCE
 -#endif
- #include <dlfcn.h>
- #include <stdio.h>
- #include <string.h>
+ #include "cubeb-internal.h"
+ #include "cubeb/cubeb.h"
+ #include "cubeb_resampler.h"
