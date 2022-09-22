@@ -2,10 +2,7 @@
 MAKE_ENV+= OMP_NUM_THREADS=1
 
 # until graphics/oidn is free of fetch crisis
-OPTIONS_DEFAULT_x86_64:=	${OPTIONS_DEFAULT_x86_64:NOPENIMAGEDN}
-
-# no libunwind
-CAMERATRACK_LIB_DEPENDS:=
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NPULSEAUDIO}
 
 ## Tests
 #CMAKE_ARGS+= -DWITH_GTESTS:BOOL=ON -DWITH_TESTS_PERFORMANCE:BOOL=ON -DCMAKE_BUILD_TYPE=Debug
@@ -16,3 +13,5 @@ dfly-patch:
 	${REINPLACE_CMD} -e 's/[[:<:]]isinf[[:>:]]/std::isinf/g' \
 		-e 's@[[:<:]]isnan[[:>:]]@std::isnan@g' \
 		${WRKSRC}/source/blender/gpu/intern/gpu_matrix.cc
+
+USE_GCC_VERSION=  11
