@@ -1,4 +1,4 @@
---- net/BUILD.gn.orig	2022-06-17 14:20:10 UTC
+--- net/BUILD.gn.orig	2022-08-31 12:19:35 UTC
 +++ net/BUILD.gn
 @@ -104,7 +104,7 @@ net_configs = [
    "//build/config/compiler:wexit_time_destructors",
@@ -9,7 +9,7 @@
    net_configs += [ "//build/config/linux:libresolv" ]
  }
  
-@@ -1201,6 +1201,15 @@ component("net") {
+@@ -1193,6 +1193,15 @@ component("net") {
      ]
    }
  
@@ -25,16 +25,16 @@
    if (is_mac) {
      sources += [
        "base/network_notification_thread_mac.cc",
-@@ -1333,7 +1342,7 @@ component("net") {
+@@ -1325,7 +1334,7 @@ component("net") {
      }
    }
  
--  if (is_android || is_chromeos_ash) {
-+  if (is_android || is_chromeos_ash || is_bsd) {
+-  if (is_android || is_chromeos) {
++  if (is_android || is_chromeos || is_bsd) {
      sources += [
        "base/network_change_notifier_posix.cc",
        "base/network_change_notifier_posix.h",
-@@ -1366,7 +1375,7 @@ component("net") {
+@@ -1358,7 +1367,7 @@ component("net") {
    }
  
    # Use getifaddrs() on POSIX platforms, except Linux.
@@ -43,7 +43,7 @@
      sources += [
        "base/network_interfaces_getifaddrs.cc",
        "base/network_interfaces_getifaddrs.h",
-@@ -4373,7 +4382,7 @@ test("net_unittests") {
+@@ -4363,7 +4372,7 @@ test("net_unittests") {
      ]
    }
  
@@ -52,7 +52,7 @@
      sources += [
        "base/address_tracker_linux_unittest.cc",
        "base/network_interfaces_linux_unittest.cc",
-@@ -4445,6 +4454,10 @@ test("net_unittests") {
+@@ -4438,6 +4447,10 @@ test("net_unittests") {
      "//url:buildflags",
    ]
  
@@ -63,16 +63,16 @@
    if (enable_websockets) {
      deps += [ "//net/server:tests" ]
    }
-@@ -4517,7 +4530,7 @@ test("net_unittests") {
+@@ -4509,7 +4522,7 @@ test("net_unittests") {
      ]
    }
  
 -  if (is_linux || is_chromeos) {
 +  if ((is_linux || is_chromeos) && !is_bsd) {
-     sources += [
-       "quic/platform/impl/quic_flags_test.cc",
-       "tools/quic/quic_http_proxy_backend_stream_test.cc",
-@@ -4665,7 +4678,7 @@ test("net_unittests") {
+     sources += [ "tools/quic/quic_simple_server_test.cc" ]
+   }
+ 
+@@ -4650,7 +4663,7 @@ test("net_unittests") {
    }
  
    # Use getifaddrs() on POSIX platforms, except Linux.

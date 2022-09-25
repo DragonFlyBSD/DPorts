@@ -1,0 +1,5 @@
+TIMESTAMP = 1663195217
+SHA256 (crystal/crystal.o) = 7764e22c630093ada5a6f30184b79cb3c5e0afba0907e3724b6586b43a91e09b
+SIZE (crystal/crystal.o) = 37214552
+SHA256 (crystal/crystal-lang-crystal-1.5.1_GH0.tar.gz) = d6d2ed257c688a81c68bad63a9796d34aab3a5667f7e3a86d22f9fce2f8c56fc
+SIZE (crystal/crystal-lang-crystal-1.5.1_GH0.tar.gz) = 2911644

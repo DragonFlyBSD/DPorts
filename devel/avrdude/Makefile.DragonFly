@@ -1,0 +1,2 @@
+# fix plist issues
+PLIST_FILES+=	share/man/avrdude.1.gz

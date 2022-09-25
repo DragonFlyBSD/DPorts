@@ -1,0 +1,20 @@
+--- CMakeLists.txt.orig	2022-05-08 11:58:44 UTC
++++ CMakeLists.txt
+@@ -151,7 +151,7 @@ if(HAVE_LIBUSB_1_0)
+ endif()
+ 
+ # FreeBSD's library 'libusb' supports both the libusb-0.1 and libusb-1.0 API.
+-if (HAVE_LIBUSB AND CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
++if (HAVE_LIBUSB AND CMAKE_SYSTEM_NAME MATCHES "FreeBSD|DragonFly")
+     set(HAVE_LIBUSB_1_0 ${HAVE_LIBUSB})
+ endif()
+ 
+@@ -280,7 +280,7 @@ add_subdirectory(src)
+ if (CMAKE_SYSTEM_NAME STREQUAL "Linux")
+     set(DEFAULT_PAR_PORT "/dev/parport0")
+     set(DEFAULT_SER_PORT "/dev/ttyS0")
+-elseif (CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
++elseif (CMAKE_SYSTEM_NAME MATCHES "FreeBSD|DragonFly")
+     set(DEFAULT_PAR_PORT "/dev/ppi0")
+     set(DEFAULT_SER_PORT "/dev/cuad0")
+ elseif (CMAKE_SYSTEM_NAME STREQUAL "Solaris")
