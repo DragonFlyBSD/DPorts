@@ -1,5 +1,5 @@
 PORTNAME=	cbsd
-DISTVERSION=	13.1.1
+DISTVERSION=	13.1.14
 CATEGORIES=	sysutils
 
 MAINTAINER=	olevole@olevole.ru
@@ -17,33 +17,41 @@ RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:security/ca_root_nss \
 
 USES=		compiler:c++11-lang libedit pkgconfig:both
 USE_GITHUB=	yes
-GH_TAGNAME=	eeec05c
 USE_RC_SUBR=	cbsdd cbsdrsyncd cbsd-statsd-bhyve cbsd-statsd-hoster \
 		cbsd-statsd-jail
 MAKE_JOBS_UNSAFE=	yes
-MAKE_ENV+=      OSTYPE=DragonFly
 
 SUB_FILES=	pkg-deinstall pkg-message
 
 USERS=		${PORTNAME}
 GROUPS=		${PORTNAME}
 
+OPTIONS_DEFINE=	BHYVE_GOP
+OPTIONS_DEFAULT=
+BHYVE_GOP_DESC=	Include bhyve UEFI firmware with GPU PPT+GOP support
+
 CBSD_HOME?=	${PREFIX}/cbsd
 
 .include <bsd.port.options.mk>
 
-.if ${ARCH} == amd64 || ${ARCH} == i386 || ${ARCH} == x86_64
+.if ${ARCH} == x86_64 || ${ARCH} == i386 || ${ARCH} == x86_64
 PLIST_SUB=	X86=""
 .else
 PLIST_SUB=	X86="@comment "
 .endif
 
-.if ${OPSYS} == DragonFly
+.if ${OPSYS} != FreeBSD
 PLIST_SUB+=	FBSD="@comment "
 LIB_DEPENDS+=	libelf.so:devel/libelf
 RUN_DEPENDS+=	sysrc:sysutils/sysrc
 .else
 PLIST_SUB+=	FBSD=""
+.endif
+
+.if !${PORT_OPTIONS:MBHYVE_GOP}
+PLIST_SUB+=	BHYVE_GOP="@comment "
+.else
+PLIST_SUB+=	BHYVE_GOP=""
 .endif
 
 do-install:
@@ -58,12 +66,11 @@ do-install:
 		${STAGEDIR}${PREFIX}/cbsd/lib \
 		${STAGEDIR}${PREFIX}/cbsd/misc/src \
 		${STAGEDIR}${PREFIX}/cbsd/sbin/src \
-		${STAGEDIR}${PREFIX}/cbsd/tools/src \
-		${STAGEDIR}${PREFIX}/cbsd/tests \
-		${STAGEDIR}${PREFIX}/cbsd/.github \
-		${STAGEDIR}${PREFIX}/cbsd/.pre-commit-config.yaml
-		
+		${STAGEDIR}${PREFIX}/cbsd/tools/src
 	${INSTALL_MAN} ${WRKSRC}/man/cbsd.8 ${STAGEDIR}${PREFIX}/man/man8/cbsd.8
+.if !${PORT_OPTIONS:MBHYVE_GOP}
+	${RM} -f ${STAGEDIR}${PREFIX}/cbsd/upgrade/patch/efigop.fd
+.endif
 
 post-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/libexec/bsdconfig
