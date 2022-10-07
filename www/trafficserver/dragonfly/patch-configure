@@ -1,24 +1,24 @@
---- configure.orig	2016-02-03 04:35:34.000000000 +0200
+--- configure.orig	2022-10-06 05:53:57 UTC
 +++ configure
-@@ -7780,7 +7780,7 @@ case $host_os in
+@@ -9782,7 +9782,7 @@ case $host_os in
    darwin*)
      host_os_def="darwin"
      ;;
 -  freebsd*)
 +  freebsd*|dragonfly*)
      host_os_def="freebsd"
-     EXTRA_CXX_LDFLAGS="-rdynamic"
+     AM_LDFLAGS="-rdynamic"
  
-@@ -20509,7 +20509,7 @@ fi
+@@ -22721,7 +22721,7 @@ fi
  
      ;; # darwin)
  
 -  freebsd|kfreebsd)
 +  freebsd|kfreebsd|dragonfly)
-     if test "x$ax_cv_c_compiler_vendor" = "xclang"; then :
+     if test "x$ax_cv_c_compiler_vendor" = "xclang"
+ then :
  
-       common_opt="-pipe -Wall -Wno-deprecated-declarations -Qunused-arguments"
-@@ -28008,7 +28008,7 @@ case $host_os in
+@@ -32803,7 +32803,7 @@ case $host_os in
    linux*)
      default_loopback_iface=lo
    ;;
