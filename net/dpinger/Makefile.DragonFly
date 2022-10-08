@@ -1,0 +1,2 @@
+# zrj: -Wall -Werror in code logic w/ perror()/fatal()
+CFLAGS+= -Wno-maybe-uninitialized

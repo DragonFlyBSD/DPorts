@@ -2,9 +2,6 @@
 USES+= ssl
 OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NBLACKLISTD}
 
-# incompatible with LibreSSL
-OPTIONS_EXCLUDE+= TLS
-
 # suppress redefine warnings
 dfly-patch:
 	${REINPLACE_CMD} -e 's@define HAS_DEV_URANDOM@@g' \
