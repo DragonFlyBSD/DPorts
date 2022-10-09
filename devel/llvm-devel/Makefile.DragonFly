@@ -10,10 +10,7 @@ OPTIONS_DEFAULT_x86_64:= ${OPTIONS_DEFAULT_x86_64:NCOMPILER_RT}
 OPTIONS_DEFINE+=	LLD_LINK
 
 dfly-patch:
-	${REINPLACE_CMD} -e 's|gcc50|gcc80|g' -e 's|5.0"|8.0"|' \
-		${WRKSRC}/clang/lib/Driver/ToolChains/DragonFly.cpp \
-		${WRKSRC}/clang/lib/Frontend/InitHeaderSearch.cpp
-	-${REINPLACE_CMD} -e 's,set(ENABLE_LIBOMPTARGET ON),set(ENABLE_LIBOMPTARGET OFF),g' \
+	${REINPLACE_CMD} -e 's,set(ENABLE_LIBOMPTARGET ON),set(ENABLE_LIBOMPTARGET OFF),g' \
 		${WRKSRC}/openmp/CMakeLists.txt
 
 dfly-install:
