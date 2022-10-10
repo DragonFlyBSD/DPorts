@@ -81,6 +81,7 @@ lib/mysql/plugin/daemon_example.ini
 lib/mysql/plugin/dialog.so
 lib/mysql/plugin/mysql_clear_password.so
 lib/mysql/plugin/sha256_password.so
+lib/mysql/plugin/zstd.so
 libdata/pkgconfig/libmariadb.pc
 share/man/man1/mariadb.1.gz
 share/man/man1/mariadb-access.1.gz

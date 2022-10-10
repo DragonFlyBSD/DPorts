@@ -1,5 +1,5 @@
 PORTNAME=	chromium
-PORTVERSION=	105.0.5195.102
+PORTVERSION=	106.0.5249.91
 CATEGORIES=	www wayland
 MASTER_SITES=	https://commondatastorage.googleapis.com/chromium-browser-official/ \
 		https://nerd.hu/distfiles/:external
@@ -92,7 +92,6 @@ GN_ARGS+=	clang_use_chrome_plugins=false \
 		enable_js_type_check=false \
 		enable_nacl=false \
 		enable_remoting=false \
-		enable_wmax_tokens=false \
 		fatal_linker_warnings=false \
 		icu_use_data_file=false \
 		is_clang=true \
@@ -207,7 +206,7 @@ TEST_ALL_TARGET=	${TEST_TARGETS}
 IGNORE=		you have selected HEIMDAL_BASE but do not have Heimdal installed in base
 .endif
 
-.if ${COMPILER_VERSION} < 130
+.if ${COMPILER_VERSION} != 130
 LLVM_DEFAULT=		13
 BUILD_DEPENDS+=		clang${LLVM_DEFAULT}:devel/llvm${LLVM_DEFAULT}
 BINARY_ALIAS+=		cpp=${LOCALBASE}/bin/clang-cpp${LLVM_DEFAULT} \
