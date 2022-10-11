@@ -66,10 +66,7 @@ CPE_VENDOR?=mozilla
 USE_GL=		gl
 USE_GNOME=	cairo gdkpixbuf2 gtk30
 USE_PERL5=	build
-USE_XORG=	x11 xcb xcomposite xdamage xext xfixes xrender xt
-.    if ${MOZILLA_VER:R:R} >= 96
-USE_XORG+=	xrandr xtst
-.    endif
+USE_XORG=	x11 xcb xcomposite xdamage xext xfixes xrandr xrender xt xtst
 HAS_CONFIGURE=	yes
 CONFIGURE_OUTSOURCE=	yes
 LDFLAGS+=		-Wl,--as-needed
@@ -79,7 +76,7 @@ BUNDLE_LIBS=	yes
 
 BUILD_DEPENDS+=	llvm${LLVM_DEFAULT}>0:devel/llvm${LLVM_DEFAULT} \
 				rust-cbindgen>=0.24.3:devel/rust-cbindgen \
-				${RUST_DEFAULT}>=1.61.0:lang/${RUST_DEFAULT} \
+				${RUST_DEFAULT}>=1.63.0:lang/${RUST_DEFAULT} \
 				node:www/node
 LIB_DEPENDS+=	libdrm.so:graphics/libdrm
 RUN_DEPENDS+=	${LOCALBASE}/lib/libpci.so:devel/libpci
@@ -95,11 +92,12 @@ MOZ_OPTIONS+=	--with-libclang-path="${LOCALBASE}/llvm${LLVM_DEFAULT}/lib"
 .    if !exists(/usr/bin/llvm-objdump)
 MOZ_EXPORT+=	LLVM_OBJDUMP="${LOCALBASE}/bin/llvm-objdump${LLVM_DEFAULT}"
 .    endif
-# Ignore Mk/bsd.default-versions.mk but respect make.conf(5) unless LTO is enabled
-.    if !defined(DEFAULT_VERSIONS) || ! ${DEFAULT_VERSIONS:Mllvm*} || ${PORT_OPTIONS:MLTO}
+# fix LLVM to version 13, as that's the only reasonable wasi-toolchain
+# we currently have
+#    if !defined(DEFAULT_VERSIONS) || ! ${DEFAULT_VERSIONS:Mllvm*} || ${PORT_OPTIONS:MLTO}
 LLVM_DEFAULT=	13 # chase bundled LLVM in lang/rust for LTO
 LLVM_VERSION=	13.0.1 # keep in sync with devel/wasi-compiler-rt${LLVM_DEFAULT}
-.    endif
+#    endif
 # Require newer Clang than what's in base system unless user opted out
 .    if ${CC} == cc && ${CXX} == c++ && exists(/usr/lib/libc++.so)
 BUILD_DEPENDS+=	${LOCALBASE}/bin/clang${LLVM_DEFAULT}:devel/llvm${LLVM_DEFAULT}
@@ -163,10 +161,7 @@ pixman_LIB_DEPENDS=	libpixman-1.so:x11/pixman
 pixman_MOZ_OPTIONS=	--enable-system-pixman
 
 png_LIB_DEPENDS=	libpng.so:graphics/png
-png_MOZ_OPTIONS=	--with-system-png=${LOCALBASE}
-.    if ${MOZILLA_VER:R:R} >= 97
 png_MOZ_OPTIONS=	--with-system-png
-.    endif
 
 sqlite_LIB_DEPENDS=	libsqlite3.so:databases/sqlite3
 sqlite_MOZ_OPTIONS=	--enable-system-sqlite
@@ -270,18 +265,9 @@ MOZ_OPTIONS+=	--disable-pulseaudio
 
 .    if ${PORT_OPTIONS:MSNDIO}
 BUILD_DEPENDS+=	${LOCALBASE}/include/sndio.h:audio/sndio
-.      if ${MOZILLA_VER:R:R} < 100
-post-patch-SNDIO-on:
-	@${REINPLACE_CMD} -e 's|OpenBSD|${OPSYS}|g' \
-		-e '/DISABLE_LIBSNDIO_DLOPEN/d' \
-		${MOZSRC}/media/libcubeb/src/moz.build
-.      else
 MOZ_OPTIONS+=	--enable-sndio
-.      endif
 .    else
-.      if ${MOZILLA_VER:R:R} >= 100
 MOZ_OPTIONS+=	--disable-sndio
-.      endif
 .    endif
 
 .    if ${PORT_OPTIONS:MDEBUG}

@@ -124,9 +124,13 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #
 # (NOTE: by convention, the MAINTAINER entry (see above) should go here.)
 #
-# These variables are typically set in /etc/make.conf to indicate
-# the user's preferred location to fetch files from.  You should
-# rarely need to set these.
+# COMMENT		- A short description of the package (less than 70 characters)
+# WWW			- URL users can get more information on the provided package
+# 				  was previously part of pkg-descr
+#
+# The following variables are typically set in /etc/make.conf to indicate
+# the user's preferred location to fetch files from.  You should rarely
+# need to set these.
 #
 # MASTER_SITE_BACKUP
 #				- Backup location(s) for distribution files and patch
@@ -325,17 +329,6 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 # WITH_* and WITHOUT_* variables, are that the former are restricted to
 # usage inside the ports framework, and the latter are reserved for user-
 # settable options.  (Setting USE_* in /etc/make.conf is always wrong).
-#
-# WITH_DEBUG            - If set, debugging flags are added to CFLAGS and the
-#                         binaries don't get stripped by INSTALL_PROGRAM or
-#                         INSTALL_LIB. Besides, individual ports might
-#                         add their specific to produce binaries for debugging
-#                         purposes. You can override the debug flags that are
-#                         passed to the compiler by setting DEBUG_FLAGS. It is
-#                         set to "-g" at default.
-#
-#			  NOTE: to override a globally defined WITH_DEBUG at a
-#			        later time ".undef WITH_DEBUG" can be used
 #
 # WITH_DEBUG_PORTS		- A list of origins for which WITH_DEBUG will be set
 #
@@ -1026,10 +1019,14 @@ LC_ALL=		C
 # These need to be absolute since we don't know how deep in the ports
 # tree we are and thus can't go relative.  They can, of course, be overridden
 # by individual Makefiles or local system make configuration.
-
+#
+# TODO(tuxillo): Find out why ssp needs to be removed from the list.
+_LIST_OF_WITH_FEATURES=	debug lto
+_DEFAULT_WITH_FEATURES=	ssp
 WITH_PKGNG?=		yes
 WITHOUT_FBSD10_FIX?=	yes
 PORTSDIR?=		/usr/dports
+
 LOCALBASE?=		/usr/local
 LINUXBASE?=		/compat/linux
 DISTDIR?=		/usr/distfiles
@@ -1197,7 +1194,7 @@ OSREL!=		${ECHO} ${DFLYVERSION} | ${AWK} '{a=int($$1/100000); b=int(($$1-(a*1000
 .endif
 _EXPORTED_VARS+=	DFLYVERSION OSREL
 
-.    if ${OPSYS} == FreeBSD && ${OSVERSION} < 1203000
+.    if ${OPSYS} == FreeBSD && (${OSVERSION} < 1203000 || (${OSVERSION} >= 1300000 && ${OSVERSION} < 1301000))
 _UNSUPPORTED_SYSTEM_MESSAGE=	Ports Collection support for your ${OPSYS} version has ended, and no ports\
 								are guaranteed to build on this system. Please upgrade to a supported release.
 .      if defined(ALLOW_UNSUPPORTED_SYSTEM)
@@ -1315,6 +1312,11 @@ TMPDIR?=	/tmp
 .      if ${WITH_DEBUG_PORTS:M${PKGORIGIN}}
 WITH_DEBUG=	yes
 .      endif
+.    endif
+
+.    if defined(USE_LTO)
+WITH_LTO=	${USE_LTO}
+WARNING+=	USE_LTO is deprecated in favor of WITH_LTO
 .    endif
 
 .include "${PORTSDIR}/Mk/bsd.default-versions.mk"
@@ -1693,8 +1695,8 @@ CONFIGURE_ENV+=		PATH=${PATH}
 PKGCONFIG_LINKDIR=	${WRKDIR}/.pkgconfig
 PKGCONFIG_BASEDIR=	/usr/libdata/pkgconfig
 .    if !${MAKE_ENV:MPKG_CONFIG_LIBDIR=*} && !${CONFIGURE_ENV:MPKG_CONFIG_LIBDIR=*}
-MAKE_ENV+=			PKG_CONFIG_LIBDIR=${PKGCONFIG_LINKDIR}:${LOCALBASE}/libdata/pkgconfig:${PKGCONFIG_BASEDIR}
-CONFIGURE_ENV+=		PKG_CONFIG_LIBDIR=${PKGCONFIG_LINKDIR}:${LOCALBASE}/libdata/pkgconfig:${PKGCONFIG_BASEDIR}
+MAKE_ENV+=			PKG_CONFIG_LIBDIR=${PKGCONFIG_LINKDIR}:${LOCALBASE}/libdata/pkgconfig:${LOCALBASE}/share/pkgconfig:${PKGCONFIG_BASEDIR}
+CONFIGURE_ENV+=		PKG_CONFIG_LIBDIR=${PKGCONFIG_LINKDIR}:${LOCALBASE}/libdata/pkgconfig:${LOCALBASE}/share/pkgconfig:${PKGCONFIG_BASEDIR}
 .    endif
 
 .    if !defined(IGNORE_MASTER_SITE_GITHUB) && defined(USE_GITHUB) && empty(USE_GITHUB:Mnodefault)
@@ -1781,29 +1783,11 @@ CFLAGS:=	${CFLAGS:C/${_CPUCFLAGS}//}
 .      endif
 .    endif
 
-# Reset value from bsd.own.mk.
-.    if defined(WITH_DEBUG)
-.      if !defined(INSTALL_STRIPPED)
-STRIP=	#none
-MAKE_ENV+=	DONTSTRIP=yes
-STRIP_CMD=	${TRUE}
+.    for f in ${_LIST_OF_WITH_FEATURES}
+.      if defined(WITH_${f:tu}) || ( ${_DEFAULT_WITH_FEATURES:M${f}} &&  !defined(WITHOUT_${f:tu}) )
+.include "${PORTSDIR}/Mk/Features/$f.mk"
 .      endif
-DEBUG_FLAGS?=	-g
-CFLAGS:=		${CFLAGS:N-O*:N-fno-strict*} ${DEBUG_FLAGS}
-.      if defined(INSTALL_TARGET)
-INSTALL_TARGET:=	${INSTALL_TARGET:S/^install-strip$/install/g}
-.      endif
-.    endif
-
-.    if defined(USE_LTO)
-.include "${PORTSDIR}/Mk/bsd.lto.mk"
-.    endif
-
-.    if !defined(WITHOUT_SSP)
-# Leave the conditional just in case WITHOUT_SSP becomes
-# something else.
-#.include "${PORTSDIR}/Mk/bsd.ssp.mk"
-.    endif
+.    endfor
 
 # XXX PIE support to be added here
 MAKE_ENV+=	NO_PIE=yes
@@ -3627,6 +3611,8 @@ create-users-groups:
 .      endif
 .    endif
 
+_WWW=	${WWW:[1]}
+
 .    if !defined(DISABLE_SECURITY_CHECK)
 .      if !target(security-check)
 security-check: ${TMPPLIST}
@@ -3659,12 +3645,11 @@ security-check: ${TMPPLIST}
 		! ${AWK} -v audit="$${PORTS_AUDIT}" -f ${SCRIPTSDIR}/security-check.awk \
 		  ${WRKDIR}/.PLIST.flattened ${WRKDIR}/.PLIST.readelf ${WRKDIR}/.PLIST.setuid ${WRKDIR}/.PLIST.writable; \
 	then \
-		www_site=$$(cd ${.CURDIR} && ${MAKE} www-site); \
-	    if [ ! -z "$${www_site}" ]; then \
+	    if [ ! -z "${_WWW}" ]; then \
 			${ECHO_MSG}; \
 			${ECHO_MSG} "      For more information, and contact details about the security"; \
 			${ECHO_MSG} "      status of this software, see the following webpage: "; \
-			${ECHO_MSG} "$${www_site}"; \
+			${ECHO_MSG} "${_WWW}"; \
 		fi; \
 	fi
 .      endif
@@ -3719,10 +3704,9 @@ ${stage}-${name}-script:
 
 .    if !target(pretty-print-www-site)
 pretty-print-www-site:
-	@www_site=$$(cd ${.CURDIR} && ${MAKE} www-site); \
-	if [ -n "$${www_site}" ]; then \
+	@if [ -n "${_WWW}" ]; then \
 		${ECHO_MSG} -n " and/or visit the "; \
-		${ECHO_MSG} -n "<a href=\"$${www_site}\">web site</a>"; \
+		${ECHO_MSG} -n "<a href=\"${_WWW}\">web site</a>"; \
 		${ECHO_MSG} " for further information"; \
 	fi
 .    endif
@@ -3921,19 +3905,6 @@ delete-distfiles-list:
 	@${ECHO_CMD} "${RMDIR} ${_DISTDIR} 2>/dev/null || ${TRUE}"
 .      endif
 .    endif
-
-# Generates patches.
-
-update-patches:
-	@toedit=`PATCH_WRKSRC=${PATCH_WRKSRC} \
-		PATCHDIR=${PATCHDIR} \
-		PATCH_LIST=${PATCHDIR}/patch-* \
-		DIFF_ARGS=${DIFF_ARGS} \
-		DISTORIG=${DISTORIG} \
-		${SH} ${PORTSDIR}/Tools/scripts/update-patches`; \
-	case $$toedit in "");; \
-	*) ${ECHO_CMD} -n 'edit patches: '; read i; \
-	cd ${PATCHDIR} && $${VISUAL:-$${EDIT:-/usr/bin/vi}} $$toedit;; esac
 
 # Checksumming utilities
 
@@ -4428,19 +4399,7 @@ INDEX_OUT=/dev/stdout
 
 .      if empty(FLAVORS) || defined(_DESCRIBE_WITH_FLAVOR)
 describe:
-	@(${ECHO_CMD} -n "${PKGNAME}|${.CURDIR}|${PREFIX}|"; \
-	${ECHO_CMD} -n ${COMMENT:Q}; \
-	${ECHO_CMD} -n "|${_DESCR}|${MAINTAINER}|${CATEGORIES}|${_EXTRACT_DEPENDS}|${_PATCH_DEPENDS}|${_FETCH_DEPENDS}|${_BUILD_DEPENDS:O:u}|${_RUN_DEPENDS:O:u}|"; \
-	while read one two discard; do \
-		case "$$one" in \
-		WWW:)   case "$$two" in \
-			https://*|http://*|ftp://*) ${ECHO_CMD} -n "$$two" ;; \
-			*) ${ECHO_CMD} -n "http://$$two" ;; \
-			esac; \
-			break; \
-			;; \
-		esac; \
-	done < ${DESCR}; ${ECHO_CMD}) >>${INDEX_OUT}
+	@(${ECHO_CMD} "${PKGNAME}|${.CURDIR}|${PREFIX}|"${COMMENT:Q}"|${_DESCR}|${MAINTAINER}|${CATEGORIES}|${_EXTRACT_DEPENDS}|${_PATCH_DEPENDS}|${_FETCH_DEPENDS}|${_BUILD_DEPENDS:O:u}|${_RUN_DEPENDS:O:u}|${_WWW}" >> ${INDEX_OUT})
 .      else # empty(FLAVORS)
 describe: ${FLAVORS:S/^/describe-/}
 .        for f in ${FLAVORS}
@@ -4451,11 +4410,7 @@ describe-${f}:
 .    endif
 
 www-site:
-.    if exists(${DESCR})
-	@${AWK} '$$1 ~ /^WWW:/ {print $$2}' ${DESCR} | ${HEAD} -1
-.    else
-	@${ECHO_CMD}
-.    endif
+	@${ECHO_CMD} ${_WWW}
 
 .    if !target(readmes)
 readmes:	readme
@@ -5303,7 +5258,7 @@ _SANITY_SEQ=	050:post-chroot 100:pre-everything \
 				210:show-dev-errors 220:show-dev-warnings \
 				250:check-categories 300:check-makevars \
 				350:check-desktop-entries 400:check-depends \
-				450:identify-install-conflicts 500:check-deprecated \
+				500:check-deprecated \
 				550:check-vulnerable 600:check-license 650:check-config \
 				700:buildanyway-message 750:options-message 780:dfly-sanity ${_USES_sanity}
 
@@ -5363,6 +5318,7 @@ _TEST_SEQ=		100:test-message 150:test-depends 300:pre-test 500:do-test \
 				${_OPTIONS_test} ${_USES_test}
 _INSTALL_DEP=	stage
 _INSTALL_SEQ=	100:install-message \
+				150:identify-install-conflicts \
 				200:check-already-installed \
 				300:create-manifest
 _INSTALL_SUSEQ=	400:fake-pkg 500:security-check
