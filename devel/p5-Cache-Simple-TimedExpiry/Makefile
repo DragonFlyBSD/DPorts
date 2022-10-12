@@ -1,5 +1,3 @@
-# Created by: Palle Girgensohn <girgen@pingpong.net>
-
 PORTNAME=	Cache-Simple-TimedExpiry
 PORTVERSION=	0.27
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Lightweight cache with timed expiration
+WWW=		https://metacpan.org/release/Cache-Simple-TimedExpiry
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
