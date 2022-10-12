@@ -1,5 +1,3 @@
-# Created by: Bob Bomar <bob@fly.homeunix.org>
-
 PORTNAME=	eights
 PORTVERSION=	1.0
 CATEGORIES=	games
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Text based card game, the objective is to get rid of all your cards
+WWW=		http://dxkelly.freeshell.org/games.html
 
 USES=	dos2unix
 DOS2UNIX_FILES=	eights.c
