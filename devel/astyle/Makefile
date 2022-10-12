@@ -1,5 +1,3 @@
-# Created by: Don Croyle <croyle@gelemna.org>
-
 PORTNAME=	astyle
 PORTVERSION=	3.1
 PORTREVISION=	3
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}_linux
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Source code indenter and formatter for C, C++, C\#, and Java
+WWW=		http://astyle.sourceforge.net/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKDIR}/astyle/LICENSE.md
