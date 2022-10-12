@@ -1,5 +1,3 @@
-# Created by: Anton Berezin <tobez@FreeBSD.org>
-
 PORTNAME=	Module-Load
 PORTVERSION=	0.36
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Runtime require of both modules and files
+WWW=		https://metacpan.org/release/Module-Load
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
