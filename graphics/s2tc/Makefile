@@ -1,5 +1,3 @@
-# Created by: David Naylor <dbn@FreeBSD.org>
-
 PORTNAME=	s2tc
 PORTVERSION=	1.0+20151228
 PORTREVISION=	2
@@ -7,6 +5,7 @@ CATEGORIES=	graphics
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Subset of a well-known texture compression scheme
+WWW=		https://github.com/divVerent/s2tc/wiki
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
