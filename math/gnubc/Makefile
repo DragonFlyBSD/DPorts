@@ -1,5 +1,3 @@
-# Created by: Gabor Kovesdan <gabor@FreeBSD.org>
-
 PORTNAME=	bc
 DISTVERSION=	1.07.1
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	gnu
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GNU bc/dc calculator
+WWW=		https://www.gnu.org/software/bc/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
