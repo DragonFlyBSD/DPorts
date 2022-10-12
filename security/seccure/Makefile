@@ -1,5 +1,3 @@
-# Created by: Lukasz Komsta
-
 PORTNAME=	seccure
 PORTVERSION=	0.5
 PORTREVISION=	8
@@ -9,6 +7,7 @@ MASTER_SITES=	http://point-at-infinity.org/seccure/ \
 
 MAINTAINER=	zi@FreeBSD.org
 COMMENT=	Elliptic Curve Crypto Utility for Reliable Encryption
+WWW=		http://point-at-infinity.org/seccure/
 
 LICENSE=	LGPL3
 LICENSE_FILE=	${WRKSRC}/LICENSE
