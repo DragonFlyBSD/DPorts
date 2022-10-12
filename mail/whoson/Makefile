@@ -1,5 +1,3 @@
-# Created by: Sergey Matveychuk <sem@FreeBSD.org>
-
 PORTNAME=	whoson
 PORTVERSION=	2.05
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Implementation of `WHO iS ONline' protocol
+WWW=		http://whoson.sourceforge.net/
 
 LICENSE=	PD OpenSSL
 LICENSE_COMB=	multi
