@@ -1,11 +1,10 @@
-# Created by: Bruce M. Simpson
-
 PORTNAME=	boost_build
 DISTVERSION=	4.8.2.20220318
 CATEGORIES=	devel
 
 MAINTAINER=	fluffy@FreeBSD.org
 COMMENT=	Extensible cross-platform build tool suite
+WWW=		https://boostorg.github.io/build/index.html
 
 LICENSE=	BSL
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
