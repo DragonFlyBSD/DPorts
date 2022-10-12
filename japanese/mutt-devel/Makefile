@@ -1,5 +1,3 @@
-# Created by: IWASHITA Yoji <shuna@pop16.odn.ne.jp>
-
 # WITH_MUTT_CYRUS_SASL2:	if defined, 'Cyrus sasl' support.
 #
 
@@ -40,6 +38,7 @@ PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	st@be.to
 COMMENT=	Text-based mail client (Japanised development version)
+WWW=		http://www.emaillab.org/mutt/
 
 LICENSE=	GPLv2
 
