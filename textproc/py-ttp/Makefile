@@ -1,13 +1,12 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	ttp
-PORTVERSION=	0.9.0
+PORTVERSION=	0.9.1
 CATEGORIES=	textproc python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Template Text Parser
+WWW=		https://github.com/dmulyalin/ttp
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
