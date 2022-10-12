@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Mail-Message
 PORTVERSION=	3.012
 CATEGORIES=	mail perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	General message object
+WWW=		https://metacpan.org/release/Mail-Message
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
