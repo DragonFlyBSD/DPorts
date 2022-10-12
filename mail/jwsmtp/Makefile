@@ -1,5 +1,3 @@
-# Created by: Mohammad S. Babaei <info@babaei.net>
-
 PORTNAME=	jwsmtp
 PORTVERSION=	1.32.15
 CATEGORIES=	mail
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/jwsmtp%20version%201.32.15%20bugfix/
 
 MAINTAINER=	info@babaei.net
 COMMENT=	C++ library for sending email
+WWW=		https://talk.mumbleface.net/jwsmtp/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
