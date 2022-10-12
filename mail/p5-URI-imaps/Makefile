@@ -1,5 +1,3 @@
-# Created by: Lars Thegler <lth@FreeBSD.org>
-
 PORTNAME=	URI-imaps
 PORTVERSION=	1.04
 CATEGORIES=	mail perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Support IMAPS URI
+WWW=		https://metacpan.org/release/URI-imaps
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
