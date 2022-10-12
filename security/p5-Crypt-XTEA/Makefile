@@ -1,5 +1,3 @@
-# Created by: Adam Weinberger <adamw@FreeBSD.org>
-
 PORTNAME=	Crypt-XTEA
 PORTVERSION=	0.0108
 CATEGORIES=	security perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Implementation of the eXtended Tiny Encryption Algorithm
+WWW=		https://metacpan.org/pod/Crypt::XTEA
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
