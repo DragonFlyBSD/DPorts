@@ -1,5 +1,3 @@
-# Created by: Anton Berezin <tobez@FreeBSD.org>
-
 PORTNAME=	Text-Unidecode
 PORTVERSION=	1.30
 CATEGORIES=	converters perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	US-ASCII transliterations of Unicode text
+WWW=		https://metacpan.org/release/Text-Unidecode
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
