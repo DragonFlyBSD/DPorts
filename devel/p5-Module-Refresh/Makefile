@@ -1,5 +1,3 @@
-# Created by: aturetta@commit.it
-
 PORTNAME=	Module-Refresh
 PORTVERSION=	0.18
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Refresh %INC files when updated on disk
+WWW=		https://metacpan.org/release/Module-Refresh
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
