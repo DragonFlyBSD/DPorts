@@ -1,5 +1,3 @@
-# Created by: Simon 'corecode' Schubert <corecode@corecode.ath.cx>
-
 PORTNAME=	mp3gain
 PORTVERSION=	1.6.2
 CATEGORIES=	audio
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:C/\./_/g}-src
 
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Tool to normalize the gain of MP3 files
+WWW=		http://mp3gain.sourceforge.net/
 
 LICENSE=	LGPL21
 
