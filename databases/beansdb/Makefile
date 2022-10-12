@@ -1,5 +1,3 @@
-# Created by: Qing Feng <qingfeng@douban.com>
-
 PORTNAME=	beansdb
 PORTVERSION=	0.7.1.4
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	databases
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Yet another distributed key-value storage system from Douban Inc
+WWW=		https://github.com/douban/beansdb
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
