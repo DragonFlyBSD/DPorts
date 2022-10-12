@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Regexp-Pattern-Perl
 PORTVERSION=	0.006
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Regexp patterns related to Perl
+WWW=		https://metacpan.org/release/Regexp-Pattern-Perl
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
