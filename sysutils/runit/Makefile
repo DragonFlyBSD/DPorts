@@ -1,5 +1,3 @@
-# Created by: Sergei Kolobov <sergei@kolobov.com>
-
 PORTNAME=	runit
 PORTVERSION=	2.1.2
 PORTREVISION=	3
@@ -9,6 +7,7 @@ MASTER_SITES=	http://smarden.org/${PORTNAME}/ \
 
 MAINTAINER=	crees@FreeBSD.org
 COMMENT=	Service supervision tools compatible with DJB daemontools
+WWW=		http://smarden.org/runit/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/package/COPYING
