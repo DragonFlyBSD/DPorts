@@ -1,5 +1,3 @@
-# Created by: Jui-Nan Lin <jnlin@freebsd.cs.nctu.edu.tw>
-
 PORTNAME=	smbftpd
 PORTVERSION=	2.4
 PORTREVISION=	1
@@ -9,6 +7,7 @@ MASTER_SITES=	SF/${PORTNAME}/SmbFTPD/${PORTVERSION}	\
 
 MAINTAINER=	jnlin@freebsd.cs.nctu.edu.tw
 COMMENT=	FTP daemon using Samba-like share management mechanism
+WWW=		https://www.twbsd.org/enu/smbftpd/index.php
 
 OPTIONS_DEFINE=	MYSQL PGSQL SSL ICONV
 ICONV_DESC=	Enable codepage to unicode conversion for UTF-8 FTP
