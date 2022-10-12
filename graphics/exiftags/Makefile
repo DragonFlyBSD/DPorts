@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	exiftags
 PORTVERSION=	1.01
 CATEGORIES=	graphics
@@ -7,6 +5,7 @@ MASTER_SITES=	http://johnst.org/sw/exiftags/
 
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	Parses a specified JPEG file for a JPEG APP1 section containing Exif data
+WWW=		https://johnst.org/sw/exiftags/
 
 LICENSE=	BSD4CLAUSE
 
