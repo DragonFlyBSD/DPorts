@@ -1,5 +1,3 @@
-# Created by: Dmitry Frolov <frol@nov.net>
-
 PORTNAME=	ipmitool
 PORTVERSION=	1.8.18
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	zi@FreeBSD.org
 COMMENT=	CLI to manage IPMI systems
+WWW=		https://sourceforge.net/projects/ipmitool/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING
