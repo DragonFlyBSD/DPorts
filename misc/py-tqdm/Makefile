@@ -1,11 +1,12 @@
 PORTNAME=	tqdm
-PORTVERSION=	4.64.0
+PORTVERSION=	4.64.1
 CATEGORIES=	misc python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Fast, extensible progress bar for Python
+WWW=		https://github.com/tqdm/tqdm
 
 LICENSE=	MIT MPL20
 LICENSE_COMB=	multi
