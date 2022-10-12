@@ -1,5 +1,3 @@
-# Created by: Stefan A. Deutscher (sad@mailaps.org)
-
 PORTNAME=	renattach
 PORTVERSION=	1.2.4
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.pc-tools.net/files/unix/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Rename or remove certain attachments or kill entire messages
+WWW=		http://www.pc-tools.net/unix/renattach/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
