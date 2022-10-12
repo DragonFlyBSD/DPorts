@@ -1,5 +1,3 @@
-# Created by: George Hartzell <hartzell@fruitfly.org>
-
 PORTNAME=	Text-Shellwords
 PORTVERSION=	1.08
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Thin wrapper around the shellwords.pl package
+WWW=		https://metacpan.org/release/Text-Shellwords
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
