@@ -1,5 +1,3 @@
-# Created by: Piotr Smyrak <smyru@heron.pl> and
-
 PORTNAME=	libtlen
 PORTVERSION=	20041113
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Backend for interoperability with Tlen.pl, Polish IM network
+WWW=		http://libtlen.sourceforge.net/
 
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
