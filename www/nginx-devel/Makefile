@@ -1,7 +1,5 @@
-# Created by: Sergey A. Osokin <osa@FreeBSD.org>
-
 PORTNAME?=	nginx
-PORTVERSION=	1.22.0
+PORTVERSION=	1.23.1
 PORTREVISION=	7
 CATEGORIES=	www
 MASTER_SITES=	https://nginx.org/download/ \
@@ -11,6 +9,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER?=	osa@FreeBSD.org
 COMMENT?=	Robust and small WWW server
+WWW=		https://nginx.com/
 
 LICENSE?=	BSD2CLAUSE
 LICENSE_FILE?=	${WRKSRC}/LICENSE
@@ -223,6 +222,11 @@ IGNORE=		requires at least HTTP or MAIL to \
 .if ${PORT_OPTIONS:MPASSENGER} && empty(PORT_OPTIONS:MDEBUG)
 CONFIGURE_ENV+=	OPTIMIZE="yes"
 CFLAGS+=	-DNDEBUG
+.endif
+
+# Fix build failure on clang >= 12
+.if ${PORT_OPTIONS:MHTTP_PERL} && ${OSVERSION} >= 1301000
+CFLAGS+=	-Wno-compound-token-split-by-macro
 .endif
 
 .if empty(PORT_OPTIONS:MPCRE_ONE) && empty(PORT_OPTIONS:MPCRE_TWO)

@@ -47,7 +47,6 @@
 %%DSO%%%%HTTP_PUSH%%libexec/nginx/ngx_nchan_module.so
 %%DSO%%%%HTTP_PUSH_STREAM%%libexec/nginx/ngx_http_push_stream_module.so
 %%DSO%%%%HTTP_REDIS%%libexec/nginx/ngx_http_redis_module.so
-%%DSO%%%%HTTP_RESPONSE%%libexec/nginx/ngx_http_response_module.so
 %%DSO%%%%HTTP_SUBS_FILTER%%libexec/nginx/ngx_http_subs_filter_module.so
 %%DSO%%%%HTTP_TARANTOOL%%libexec/nginx/ngx_http_tnt_module.so
 %%DSO%%%%HTTP_UPLOAD_PROGRESS%%libexec/nginx/ngx_http_uploadprogress_module.so
@@ -81,6 +80,7 @@
 %%DSO%%%%SRCACHE%%libexec/nginx/ngx_http_srcache_filter_module.so
 %%DSO%%%%STREAM%%%%NJS%%libexec/nginx/ngx_stream_js_module.so
 %%DSO%%%%STREAM%%libexec/nginx/ngx_stream_module.so
+%%DSO%%%%STS%%libexec/nginx/ngx_http_stream_server_traffic_status_module.so
 %%DSO%%%%VOD%%libexec/nginx/ngx_http_vod_module.so
 %%DSO%%%%VTS%%libexec/nginx/ngx_http_vhost_traffic_status_module.so
 %%DSO%%%%WEBSOCKIFY%%libexec/nginx/ngx_http_websockify_module.so
