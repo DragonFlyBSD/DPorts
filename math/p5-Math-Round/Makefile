@@ -1,5 +1,3 @@
-# Created by: Foxfair Hu <foxfair@FreeBSD.org>
-
 PORTNAME=	Math-Round
 PORTVERSION=	0.07
 CATEGORIES=	math perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Perl extension for rounding numbers
+WWW=		https://metacpan.org/release/Math-Round
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
