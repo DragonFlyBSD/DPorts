@@ -1,13 +1,12 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	types-typed-ast
-PORTVERSION=	1.5.6
+PORTVERSION=	1.5.8
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Typing stubs for typed-ast
+WWW=		https://github.com/python/typeshed/tree/master/stubs/typed-ast
 
 LICENSE=	APACHE20
 
