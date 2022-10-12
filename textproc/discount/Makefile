@@ -1,5 +1,3 @@
-# Created by: Julien Laffaye <kimelto@gmail.com>
-
 PORTNAME=	discount
 PORTVERSION=	2.2.7b
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	textproc devel
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	C implementation of the Markdown markup language
+WWW=		https://www.pell.portland.or.us/~orc/Code/discount/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
