@@ -1,5 +1,3 @@
-# Created by: Rusty Nejdl
-
 PORTNAME=	apsw
 PORTVERSION=	3.38.5
 DISTVERSIONSUFFIX=	-r1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Another Python SQLite Wrapper
+WWW=		https://rogerbinns.github.io/apsw/
 
 LICENSE=	ZLIB
 LICENSE_FILE=	${WRKSRC}/LICENSE
