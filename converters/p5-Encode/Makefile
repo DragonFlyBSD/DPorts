@@ -1,7 +1,5 @@
-# Created by: Rong-En Fan <rafan@infor.org>
-
 PORTNAME=	Encode
-PORTVERSION=	3.18
+PORTVERSION=	3.19
 CATEGORIES=	converters perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:DANKOGAI
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Provides interfaces between strings and the rest of the system
+WWW=		https://metacpan.org/release/Encode
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
