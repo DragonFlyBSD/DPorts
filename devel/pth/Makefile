@@ -1,5 +1,3 @@
-# Created by: Ralf S. Engelschall <rse@gnu.org>
-
 PORTNAME=	pth
 PORTVERSION=	2.0.7
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMESUFFIX?=	# empty
 
 MAINTAINER=	vd@FreeBSD.org
 COMMENT=	GNU Portable Threads
+WWW=		https://www.gnu.org/software/pth/
 
 MAKE_JOBS_UNSAFE=	yes
 
