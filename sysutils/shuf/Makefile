@@ -1,5 +1,3 @@
-# Created by: Mark Felder <feld@FreeBSD.org>
-
 PORTNAME=	shuf
 DISTVERSION=	3.0
 CATEGORIES=	sysutils
@@ -7,6 +5,7 @@ MASTER_SITES=	https://github.com/ibara/shuf/releases/download/${PORTNAME}-${DIST
 
 MAINTAINER=	feld@FreeBSD.org
 COMMENT=	Randomly permute input lines
+WWW=		https://github.com/ibara/shuf
 
 LICENSE=	ISCL
 LICENSE_FILE=	${WRKSRC}/LICENSE
