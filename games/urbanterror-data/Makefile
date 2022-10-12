@@ -1,5 +1,3 @@
-# Created by: alepulver
-
 PORTNAME=	data
 PORTVERSION=	4.2.023
 CATEGORIES=	games
@@ -13,6 +11,7 @@ EXTRACT_ONLY=
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Standalone realism based mod originally for Quake III Arena
+WWW=		https://www.urbanterror.info/
 
 # Converted from NO_CDROM
 LICENSE=	UrbanTerror
