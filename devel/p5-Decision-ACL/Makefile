@@ -1,5 +1,3 @@
-# Created by: Aaron Dalton <aaron@daltons.ca>
-
 PORTNAME=	Decision-ACL
 PORTVERSION=	0.02
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Manage and Build Access Control Lists
+WWW=		https://metacpan.org/release/Decision-ACL
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
