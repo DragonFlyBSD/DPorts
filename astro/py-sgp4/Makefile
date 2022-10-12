@@ -1,5 +1,3 @@
-# Created by: thierry@pompo.net
-
 PORTNAME=	sgp4
 PORTVERSION=	2.21
 CATEGORIES=	astro python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Python version of the SGP4 satellite position library
+WWW=		https://github.com/brandon-rhodes/python-sgp4
 
 LICENSE=	MIT
 
