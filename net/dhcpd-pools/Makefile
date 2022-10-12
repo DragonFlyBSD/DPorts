@@ -1,5 +1,3 @@
-# Created by: Ryan Steinmetz <zi@FreeBSD.org>
-
 PORTNAME=	dhcpd-pools
 PORTVERSION=	3.1
 CATEGORIES=	net
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME} \
 
 MAINTAINER=	zi@FreeBSD.org
 COMMENT=	Tool to analyze isc-dhcp pool usage based on leases
+WWW=		http://dhcpd-pools.sourceforge.net/
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING
