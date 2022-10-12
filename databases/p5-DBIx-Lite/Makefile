@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wen@FreeBSD.org>
-
 PORTNAME=	DBIx-Lite
 PORTVERSION=	0.33
 CATEGORIES=	databases perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Chained and minimal ORM
+WWW=		https://metacpan.org/release/DBIx-Lite
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
