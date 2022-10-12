@@ -1,13 +1,12 @@
-# Created by: Neil Booth
-
 PORTNAME=	ecdsa
-PORTVERSION=	0.17.0
+PORTVERSION=	0.18.0
 CATEGORIES=	security python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	ECDSA cryptographic signature library (pure python)
+WWW=		https://github.com/tlsfuzzer/python-ecdsa
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
