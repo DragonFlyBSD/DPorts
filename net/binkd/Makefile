@@ -1,5 +1,3 @@
-# Created by: Andrey Zakhvatov
-
 PORTNAME=	binkd
 PORTVERSION=	1.0.4
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	ftp://happy.kiev.ua/pub/fidosoft/mailer/binkd/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Fidonet TCP/IP mailer
+WWW=		http://binkd.grumbler.org/
 
 USE_RC_SUBR=	binkd
 GNU_CONFIGURE=	yes
