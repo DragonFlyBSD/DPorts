@@ -1,5 +1,3 @@
-# Created by: MANTANI Nobutaka <nobutaka@nobutaka.com>
-
 PORTNAME=	libdvdnav
 PORTVERSION=	6.1.1
 CATEGORIES=	multimedia
@@ -7,6 +5,7 @@ MASTER_SITES=	https://download.videolan.org/pub/videolan/${PORTNAME}/${DISTVERSI
 
 MAINTAINER=	martymac@FreeBSD.org
 COMMENT=	Videolan version of the libdvdnav project
+WWW=		https://www.videolan.org/developers/libdvdnav.html
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
