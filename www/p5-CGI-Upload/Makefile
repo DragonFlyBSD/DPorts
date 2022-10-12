@@ -1,5 +1,3 @@
-# Created by: Daniel B. Hemmerich
-
 PORTNAME=	CGI-Upload
 PORTVERSION=	1.11
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	CGI class for handling browser file uploads
+WWW=		https://metacpan.org/release/CGI-Upload
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
