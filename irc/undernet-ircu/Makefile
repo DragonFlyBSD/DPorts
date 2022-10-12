@@ -1,5 +1,3 @@
-# Created by: Walter Venable <weaseal@users.sourceforge.net>
-
 PORTNAME=	undernet-ircu
 PORTVERSION=	2.10.12.19
 CATEGORIES=	irc net
@@ -9,6 +7,7 @@ DISTNAME=	ircu${PORTVERSION}
 
 MAINTAINER=	freebsd-ports@dan.me.uk
 COMMENT=	Undernet IRCU irc daemon
+WWW=		https://coder-com.undernet.org
 
 LICENSE=	GPLv1
 LICENSE_FILE=	${WRKSRC}/LICENSE
