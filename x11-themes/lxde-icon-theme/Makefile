@@ -1,5 +1,3 @@
-# Created by: Kris Moore <kmoore@FreeBSD.org>
-
 PORTNAME=	lxde-icon-theme
 PORTVERSION=	0.5.1
 CATEGORIES=	x11-themes
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/lxde/LXDE%20Icon%20Theme/${DISTNAME}/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	LXDE Icon Theme
+WWW=		https://lxde.org/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
