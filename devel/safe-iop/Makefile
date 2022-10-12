@@ -1,11 +1,10 @@
-# Created by: stas
-
 PORTNAME=	safe-iop
 DISTVERSION=	0.3.2
 CATEGORIES=	devel
 
 MAINTAINER=	portmaster@BSDforge.com
 COMMENT=	Safe integer operation library for C
+WWW=		https://gitlab.com/ports1/safe-iop/
 
 # as defined in /usr/src/include/ifaddrs.h
 LICENSE=	BSD1CLAUSE
