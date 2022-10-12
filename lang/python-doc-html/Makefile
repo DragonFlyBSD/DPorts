@@ -8,10 +8,11 @@ DIST_SUBDIR=	python
 
 MAINTAINER=	python@FreeBSD.org
 COMMENT=	Documentation for the Python programming language
+WWW=		https://www.python.org/doc/
 
 PORTSCOUT=	ignore:1
 
-USES=		python:3.6-3.10,env tar:bzip2
+USES=		python:env tar:bzip2
 
 NO_ARCH=	yes
 NO_BUILD=	yes
