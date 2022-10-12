@@ -1,5 +1,3 @@
-# Created by: Steve Wills <steve@mouf.net>
-
 PORTNAME=	xporthdmv
 PORTVERSION=	1.01
 CATEGORIES=	multimedia
@@ -8,6 +6,7 @@ DISTNAME=	xport
 
 MAINTAINER=	swills@FreeBSD.org
 COMMENT=	The xport Transport Stream Demuxer
+WWW=		https://www.w6rz.net/
 
 USES=		zip
 NO_WRKSUBDIR=	yes
