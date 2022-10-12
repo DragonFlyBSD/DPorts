@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Data-Range-Compare
 PORTVERSION=	1.031
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Find gaps and intersections in lists of ranges
+WWW=		https://metacpan.org/release/Data-Range-Compare
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
