@@ -1,5 +1,3 @@
-# Created by: kuriyama
-
 PORTNAME=	Carp-Datum
 PORTVERSION=	0.1.3
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Debugging And Tracing Ultimate Module
+WWW=		https://metacpan.org/release/Carp-Datum
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-Log-Agent>=0:devel/p5-Log-Agent \
