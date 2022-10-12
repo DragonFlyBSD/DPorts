@@ -1,5 +1,3 @@
-# Created by: Stephon Chen <stephon@gmail.com>
-
 PORTNAME=	Net-SSH-AuthorizedKeysFile
 PORTVERSION=	0.18
 CATEGORIES=	security perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Read and modify SSH authorized_keys files
+WWW=		https://metacpan.org/release/Net-SSH-AuthorizedKeysFile
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
