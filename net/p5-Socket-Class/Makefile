@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	Socket-Class
 PORTVERSION=	2.258
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl class to communicate with sockets
+WWW=		https://metacpan.org/release/Socket-Class
 
 USES=		perl5 ssl
 USE_PERL5=	configure
