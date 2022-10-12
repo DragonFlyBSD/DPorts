@@ -1,5 +1,3 @@
-# Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-
 PORTNAME=	repeater
 PORTVERSION=	0.17
 CATEGORIES=	net
@@ -8,6 +6,7 @@ DISTNAME=	repeater${PORTVERSION:C/\.//}
 
 MAINTAINER=	oleg@newestvision.com
 COMMENT=	UltraVNC repeater
+WWW=		http://ultravnc.sourceforge.net/addons/repeater.html
 
 LICENSE=	GPLv2+
 
