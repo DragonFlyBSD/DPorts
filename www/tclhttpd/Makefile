@@ -1,5 +1,3 @@
-# Created by: Mikhail Teterin <mi@aldan.algebra.com>
-
 PORTNAME=	tclhttpd
 PORTVERSION=	3.5.1
 PORTREVISION=	4
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}${PORTVERSION}
 
 MAINTAINER=	mi@aldan.algebra.com
 COMMENT=	Http-server implemented in TCL
+WWW=		https://www.tcl.tk/software/tclhttpd/
 
 RUN_DEPENDS=	dtplite:devel/tcllib
 
