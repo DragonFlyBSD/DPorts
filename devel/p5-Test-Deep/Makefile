@@ -1,5 +1,3 @@
-# Created by: Alex Kapranoff <alex@kapranoff.ru>
-
 PORTNAME=	Test-Deep
 PORTVERSION=	1.130
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Test data structures for differences deeply
+WWW=		https://metacpan.org/release/Test-Deep
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
