@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Parse-Distname
 PORTVERSION=	0.05
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Parse a distribution name
+WWW=		https://metacpan.org/dist/Parse-Distname
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
