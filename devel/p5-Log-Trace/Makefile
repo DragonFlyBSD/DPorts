@@ -1,5 +1,3 @@
-# Created by: Lars Thegler <lth@FreeBSD.org>
-
 PORTNAME=	Log-Trace
 PORTVERSION=	1.070
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Provides a unified approach to tracing
+WWW=		https://metacpan.org/release/Log-Trace
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
