@@ -1,14 +1,12 @@
-# Created by: nork@cityfujisawa.ne.jp
-
 PORTNAME=	Crypt-OpenSSL-RSA
-PORTVERSION=	0.32
-PORTREVISION=	1
+PORTVERSION=	0.33
 CATEGORIES=	security perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl5 module to RSA encode and decode strings using OpenSSL
+WWW=		https://metacpan.org/release/Crypt-OpenSSL-RSA
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
