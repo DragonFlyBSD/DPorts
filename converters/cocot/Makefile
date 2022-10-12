@@ -1,5 +1,3 @@
-# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-
 PORTNAME=	cocot
 PORTVERSION=	20120313
 DISTVERSIONPREFIX=	${PORTNAME}-1.1-
@@ -8,6 +6,7 @@ CATEGORIES=	converters
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Code Converter on TTY
+WWW=		https://github.com/vmi/cocot
 
 LICENSE=	BSD3CLAUSE
 
