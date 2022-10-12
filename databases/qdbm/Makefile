@@ -1,5 +1,3 @@
-# Created by: Kimura Fuyuki <fuyuki@nigredo.org>
-
 PORTNAME=	qdbm
 PORTVERSION=	1.8.78
 PORTREVISION=	4
@@ -8,6 +6,7 @@ MASTER_SITES=	https://dbmx.net/qdbm/
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	Quick Database Manager
+WWW=		https://dbmx.net/qdbm/
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
