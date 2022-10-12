@@ -1,5 +1,3 @@
-# Created by: Alan Eldridge <alane@geeksrus.net>
-
 PORTNAME=	ex
 PORTVERSION=	1.0.6
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	ossp-
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Small exception handling library for use in C
+WWW=		http://www.ossp.org/pkg/lib/ex/
 
 USES=		libtool
 GNU_CONFIGURE=	yes
