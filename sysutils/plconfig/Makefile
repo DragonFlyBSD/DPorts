@@ -1,5 +1,3 @@
-# Created by: Matt Peterson <matt@peterson.org>
-
 PORTNAME=	plconfig
 PORTVERSION=	0.2
 CATEGORIES=	sysutils
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.neon1.net/prog/ \
 
 MAINTAINER=	matt@peterson.org
 COMMENT=	Tool for configuring HomePlug powerline bridges
+WWW=		http://www.neon1.net/prog/plconfig.html
 
 ALL_TARGET=	plconfig
 
