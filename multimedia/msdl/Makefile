@@ -1,5 +1,3 @@
-# Created by: Ashish Shukla <wahjava@gmail.com>
-
 PORTNAME=	msdl
 PORTVERSION=	1.2.7r2
 CATEGORIES=	multimedia
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:S/r/-r/}
 
 MAINTAINER=	ashish@FreeBSD.org
 COMMENT=	Streaming multimedia files downloader
+WWW=		http://msdl.sourceforge.net/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
