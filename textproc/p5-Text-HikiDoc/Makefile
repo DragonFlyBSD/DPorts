@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	Text-HikiDoc
 PORTVERSION=	1.023
 CATEGORIES=	textproc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Pure Perl implementation of 'HikiDoc'
+WWW=		https://metacpan.org/release/Text-HikiDoc
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
