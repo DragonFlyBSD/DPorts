@@ -1,13 +1,12 @@
-# Created by: Christian Laursen <xi@borderworlds.dk>
-
 PORTNAME=	mlmmj
 PORTVERSION=	1.3.0
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	mail
 MASTER_SITES=	http://mlmmj.org/releases/
 
 MAINTAINER=	bapt@FreeBSD.org
 COMMENT=	Simple and slim mailing list manager
+WWW=		http://mlmmj.org/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
