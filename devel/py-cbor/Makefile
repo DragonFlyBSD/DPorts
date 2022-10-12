@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	cbor
 PORTVERSION=	1.0.0
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	RFC 7049 - Concise Binary Object Representation
+WWW=		https://bitbucket.org/bodhisnarkva/cbor
 
 LICENSE=	APACHE20
 
