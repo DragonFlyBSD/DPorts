@@ -1,5 +1,3 @@
-# Created by: gmarco@giovannelli.it
-
 PORTNAME=	tetrinet-x
 PORTVERSION=	1.13.16
 PORTREVISION=	2
@@ -11,6 +9,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	gmarco@giovannelli.it
 COMMENT=	Addictive 6 player tetr*s game
+WWW=		https://servers.tetrinet.fr/
 
 WRKSRC=		${WRKDIR}/tetrinetx-${PORTVERSION}
 SUB_FILES=	pkg-message
