@@ -1,5 +1,3 @@
-# Created by: Vivek Khera <vivek@khera.org>
-
 PORTNAME=	Business-MaxMind-CreditCardFraudDetection
 PORTVERSION=	1.57
 PORTREVISION=	1
@@ -11,6 +9,7 @@ DISTNAME=	Business-MaxMind-${PORTVERSION}
 
 MAINTAINER=	vivek@khera.org
 COMMENT=	Interface to MaxMind minFraud service
+WWW=		https://www.maxmind.com/app/ccv_overview
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
