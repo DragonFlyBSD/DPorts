@@ -1,5 +1,3 @@
-# Created by: Anton Berezin <tobez@FreeBSD.org>
-
 PORTNAME=	Set-CrossProduct
 PORTVERSION=	2.008
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Work with the cross product of two or more sets
+WWW=		https://metacpan.org/release/Set-CrossProduct
 
 LICENSE=	ART20
 LICENSE_FILE=	${WRKSRC}/LICENSE
