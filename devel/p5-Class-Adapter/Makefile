@@ -1,5 +1,3 @@
-# Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-
 PORTNAME=	Class-Adapter
 PORTVERSION=	1.08
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	snowfly@yuntech.edu.tw
 COMMENT=	Perl implementation of the "Adapter" Design Pattern
+WWW=		https://metacpan.org/release/Class-Adapter
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
