@@ -1,13 +1,12 @@
-# Created by: Anton Berezin <tobez@FreeBSD.org>
-
 PORTNAME=	Badger
-PORTVERSION=	0.13
+PORTVERSION=	0.15
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl Application Programming Toolkit
+WWW=		https://metacpan.org/release/Badger
 
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
