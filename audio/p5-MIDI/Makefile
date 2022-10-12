@@ -1,5 +1,3 @@
-# Created by: Alexandr Kovalenko <never@nevermind.kiev.ua>
-
 PORTNAME=	MIDI
 PORTVERSION=	0.83
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DISTNAME=	MIDI-Perl-${PORTVERSION}
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl5 module for handling MIDI files
+WWW=		https://metacpan.org/release/MIDI-Perl
 
 OPTIONS_DEFINE=	GD
 
