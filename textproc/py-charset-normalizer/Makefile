@@ -1,13 +1,12 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	charset-normalizer
-PORTVERSION=	2.0.12
+PORTVERSION=	2.1.1
 CATEGORIES=	textproc python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Real First Universal Charset Detector
+WWW=		https://github.com/Ousret/charset_normalizer
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
