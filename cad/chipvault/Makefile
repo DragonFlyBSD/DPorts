@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	chipvault
 PORTVERSION=	200607
 CATEGORIES=	cad
@@ -9,6 +7,7 @@ EXTRACT_SUFX=	.gz
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Project organizer for VHDL and Verilog RTL hardware designs
+WWW=		http://chipvault.sourceforge.net/
 
 NO_WRKSUBDIR=	yes
 EXTRACT_CMD=	${GZCAT}
