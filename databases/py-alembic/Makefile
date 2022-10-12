@@ -1,11 +1,12 @@
 PORTNAME=	alembic
-PORTVERSION=	1.8.0
+PORTVERSION=	1.8.1
 CATEGORIES=	databases python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Database migration tool for SQLAlchemy
+WWW=		https://alembic.zzzcomputing.com/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
