@@ -1,14 +1,12 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Text-ANSI-Util
-PORTVERSION=	0.23.3
+PORTVERSION=	0.233
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
-DISTNAME=	${PORTNAME}-${PORTVERSION:R}${PORTVERSION:E}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Routines for text containing ANSI color codes
+WWW=		https://metacpan.org/release/Text-ANSI-Util
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
