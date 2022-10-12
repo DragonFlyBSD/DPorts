@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Benchmark-Stopwatch
 PORTVERSION=	0.05
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Simple timing of stages of your code
+WWW=		https://metacpan.org/release/Benchmark-Stopwatch
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
