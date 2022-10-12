@@ -1,5 +1,3 @@
-# Created by: Gabor Kovesdan
-
 PORTNAME=	Crypt-GOST_PP
 PORTVERSION=	1.10
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	Perl extension for GOST Encryption Algorithm in pure Perl
+WWW=		https://metacpan.org/release/Crypt-GOST_PP
 
 USES=		perl5
 USE_PERL5=	configure
