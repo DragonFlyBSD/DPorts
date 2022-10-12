@@ -1,5 +1,3 @@
-# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-
 PORTNAME=	Audio-Musepack
 PORTVERSION=	1.0.1
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Interface to Musepack file information and APE tag fields
+WWW=		https://metacpan.org/release/Audio-Musepack
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
