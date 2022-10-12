@@ -1,5 +1,3 @@
-# Created by: Bernhard Froehlich <decke@FreeBSD.org>
-
 PORTNAME=	libdvbcsa
 PORTVERSION=	1.1.0
 PORTREVISION=	1
@@ -12,6 +10,7 @@ PATCHFILES=	0001-altivec-powerpc64.patch:-p1
 
 MAINTAINER=	decke@FreeBSD.org
 COMMENT=	Free implementation of the DVB Common Scrambling Algorithm
+WWW=		https://www.videolan.org/developers/libdvbcsa.html
 
 LICENSE=	GPLv2
 
