@@ -1,5 +1,3 @@
-# Created by: Pedro F. Giffuni
-
 PORTNAME=	tetgen
 PORTVERSION=	1.5.1
 CATEGORIES=	math
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}${PORTVERSION}
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	Quality Tetrahedral Mesh Generator and Delaunay Triangulator
+WWW=		http://tetgen.org/
 
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
