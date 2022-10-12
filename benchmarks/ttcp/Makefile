@@ -1,5 +1,3 @@
-# Created by: mharo@FreeBSD.org
-
 PORTNAME=	ttcp
 PORTVERSION=	1.12
 PORTREVISION=	2
@@ -11,6 +9,7 @@ EXTRACT_ONLY=	# none
 
 MAINTAINER=	portmaster@BSDforge.com
 COMMENT=	Benchmarking tool for analysing TCP and UDP performance
+WWW=		https://ftp.arl.army.mil/~mike/ttcp.html
 
 LICENSE=	PD
 
