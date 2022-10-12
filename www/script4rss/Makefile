@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	script4rss
 PORTVERSION=	0.4b
 CATEGORIES=	www
@@ -7,6 +5,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Easily create scripts to convert HTML pages to RSS feeds
+WWW=		http://script4rss.sourceforge.net/
 
 USES=		tar:bzip2 perl5 shebangfix
 USE_PERL5=	run
