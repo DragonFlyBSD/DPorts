@@ -1,13 +1,12 @@
-# Created by: Alan Eldridge <alane@FreeBSD.org>
-
 PORTNAME=	tree
-PORTVERSION=	2.0.2
+PORTVERSION=	2.0.4
 CATEGORIES=	sysutils
 MASTER_SITES=	http://mama.indstate.edu/users/ice/tree/src/ \
 		https://fossies.org/linux/misc/
 
 MAINTAINER=	gb@unistra.fr
 COMMENT=	Display a tree-view of directories with optional color or HTML output
+WWW=		https://mama.indstate.edu/users/ice/tree/
 
 LICENSE=	GPLv2+
 
