@@ -1,5 +1,3 @@
-# Created by: ache
-
 PORTNAME=	playmidi
 PORTVERSION=	2.5
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	MIDI player
+WWW=		https://sourceforge.net/projects/playmidi/
 
 LICENSE=	GPLv2
 
