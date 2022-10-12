@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	Data-HexDump
 PORTVERSION=	0.04
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Simple hexadecimal dumper
+WWW=		https://metacpan.org/release/Data-HexDump
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
