@@ -1,5 +1,3 @@
-# Created by: Sebastien gioria <gioria@FreeBSD.org>
-
 PORTNAME=	Msgcat
 PORTVERSION=	1.03
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Perl module for systems to support the XPG4 message catalog functions
+WWW=		https://metacpan.org/release/Msgcat
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
