@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Sys-Sig
 PORTVERSION=	0.05
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Return signal constants for this host
+WWW=		https://metacpan.org/release/Sys-Sig
 
 LICENSE=	GPLv2
 
