@@ -1,5 +1,3 @@
-# Created by: Ache
-
 PORTNAME=	Text-CSV_XS
 DISTVERSION=	1.48
 CATEGORIES=	textproc perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	svysh.fbsd@gmail.com
 COMMENT=	Comma-separated values manipulation routines
+WWW=		https://metacpan.org/release/Text-CSV_XS
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
