@@ -1,5 +1,3 @@
-# Created by: Will Andrews <andrews@technologist.com>
-
 PORTNAME=	rubix
 PORTVERSION=	1.0.6
 PORTREVISION=	7
@@ -9,6 +7,7 @@ MASTER_SITES=	http://sed.free.fr/rubix/ \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Another Rubik's cube game with a rather interesting interface
+WWW=		http://sed.free.fr/rubix/
 
 USES=		compiler:nestedfct gmake tar:bzip2 xorg
 USE_XORG=	x11
