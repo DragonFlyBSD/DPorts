@@ -1,5 +1,3 @@
-# Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
-
 PORTNAME=	pgpdump
 PORTVERSION=	0.35
 CATEGORIES=	security
@@ -7,6 +5,7 @@ MASTER_SITES=	https://www.mew.org/~kazu/proj/pgpdump/
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	PGP packet visualizer
+WWW=		https://www.mew.org/~kazu/proj/pgpdump/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
