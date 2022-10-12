@@ -1,10 +1,11 @@
 PORTNAME=	lfcbase
-PORTVERSION=	1.16.3
+PORTVERSION=	1.16.6
 CATEGORIES=	devel
 MASTER_SITES=	http://www.lemke-it.com/
 
 MAINTAINER=	pi@FreeBSD.org
 COMMENT=	Collection of basic c++ classes, used for databases/cego
+WWW=		https://www.lemke-it.com/
 
 LICENSE=	GPLv3
 
