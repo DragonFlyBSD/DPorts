@@ -1,5 +1,3 @@
-# Created by: David Thiel <lx@redundancy.redundancy.org>
-
 PORTNAME=	vi
 PORTVERSION=	050325
 PORTREVISION=	2
@@ -10,6 +8,7 @@ DISTNAME=	ex-${PORTVERSION}
 
 MAINTAINER=	portmaster@BSDforge.com
 COMMENT=	The original vi editor, updated to run on modern OSes
+WWW=		http://ex-vi.sourceforge.net/
 
 LICENSE=	BSD4CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
