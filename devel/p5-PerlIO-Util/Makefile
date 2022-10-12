@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	PerlIO-Util
 PORTVERSION=	0.72
 PORTREVISION=	3
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Selection of general PerlIO utilities
+WWW=		https://metacpan.org/release/PerlIO-Util
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
