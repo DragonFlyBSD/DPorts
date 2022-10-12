@@ -1,5 +1,3 @@
-# Created by: Erik Greenwald <erik@smluc.org>
-
 PORTNAME=	bar
 PORTVERSION=	1.4
 DISTVERSIONSUFFIX=	-src
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.theiling.de/downloads/
 
 MAINTAINER=	erik@bz.bzflag.bz
 COMMENT=	Cat with ASCII progress bar
+WWW=		http://www.theiling.de/projects/bar.html
 
 USES=	tar:bzip2
 
