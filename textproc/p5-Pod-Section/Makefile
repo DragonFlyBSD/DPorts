@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Pod-Section
 PORTVERSION=	0.02
 CATEGORIES=	textproc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Select specified section from POD
+WWW=		https://metacpan.org/release/Pod-Section
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
