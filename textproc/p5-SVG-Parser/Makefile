@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	SVG-Parser
 PORTVERSION=	1.03
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	XML Parser for SVG documents
+WWW=		https://metacpan.org/release/SVG-Parser
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
