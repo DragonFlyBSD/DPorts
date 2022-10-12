@@ -1,5 +1,3 @@
-# Created by: Anton Berezin <tobez@tobez.org>
-
 PORTNAME=	Switch
 PORTVERSION=	2.17
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Switch statement for Perl
+WWW=		https://metacpan.org/release/Switch
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
