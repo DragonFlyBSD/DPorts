@@ -1,5 +1,3 @@
-# Created by: Lars Thegler <lth@FreeBSD.org>
-
 PORTNAME=	Regexp-IPv6
 PORTVERSION=	0.03
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Regular expression for IPv6 addresses
+WWW=		https://metacpan.org/release/Regexp-IPv6
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
