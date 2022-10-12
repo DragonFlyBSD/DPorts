@@ -1,5 +1,3 @@
-# Created by: numisemis at yahoo dot com
-
 PORTNAME=	julius
 PORTVERSION=	4.1.2
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	OSDN/julius
 
 MAINTAINER=	numisemis@yahoo.com
 COMMENT=	Large Vocabulary Continuous Speech Recognition Engine
+WWW=		http://julius.sourceforge.jp/en_index.php
 
 BUILD_DEPENDS=	ja-p5-Jcode>=0:japanese/p5-Jcode
 RUN_DEPENDS=	ja-p5-Jcode>=0:japanese/p5-Jcode
