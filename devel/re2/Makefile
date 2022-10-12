@@ -1,11 +1,10 @@
-# Created by: Julien Laffaye <kimelto@gmail.com>
-
 PORTNAME=	re2
 PORTVERSION=	20220601
 CATEGORIES=	devel
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Fast C++ regex library
+WWW=		https://github.com/google/re2
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
