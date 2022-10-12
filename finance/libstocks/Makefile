@@ -1,5 +1,3 @@
-# Created by: Mikhail Teterin
-
 PORTNAME=	libstocks
 PORTVERSION=	0.5.0
 CATEGORIES=	finance devel
@@ -7,6 +5,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	mi@aldan.algebra.com
 COMMENT=	C library which can be used to fetch stocks quotes
+WWW=		http://libstocks.sourceforge.net/
 
 USE_LDCONFIG=	yes
 REINPLACE_ARGS=	-i ""
