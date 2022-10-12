@@ -1,5 +1,3 @@
-# Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-
 PORTNAME=	MP3-Find
 PORTVERSION=	0.07
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Search and sort MP3 files based on their ID3 tags
+WWW=		https://metacpan.org/release/MP3-Find
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
