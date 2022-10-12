@@ -1,5 +1,3 @@
-# Created by: Michael Haro <mharo@FreeBSD.org>
-
 PORTNAME=	Convert-PEM
 PORTVERSION=	0.08
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Read/write access to ASN.1-encoded PEM files with optional encryption
+WWW=		https://metacpan.org/release/Convert-PEM
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
