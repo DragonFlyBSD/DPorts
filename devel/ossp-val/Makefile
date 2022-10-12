@@ -1,5 +1,3 @@
-# Created by: Alan Eldridge <alane@geeksrus.net>
-
 PORTNAME=	val
 PORTVERSION=	0.9.4
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	ossp-
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Flexible name to value mapping library for C variables
+WWW=		http://www.ossp.org/pkg/lib/val/
 
 LIB_DEPENDS=	libex.so:devel/ossp-ex
 
