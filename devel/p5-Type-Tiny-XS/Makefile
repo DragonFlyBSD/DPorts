@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Type-Tiny-XS
 PORTVERSION=	0.022
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Tiny, yet Moo(se)-compatible type constraint
+WWW=		https://metacpan.org/release/Type-Tiny-XS
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
