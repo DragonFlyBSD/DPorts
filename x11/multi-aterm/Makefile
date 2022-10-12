@@ -1,5 +1,3 @@
-# Created by: Sebastian Yepes <esn@x123.info>
-
 PORTNAME=	multi-aterm
 PORTVERSION=	0.2.1
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.nongnu.org/materm/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Multi terminal based on aterm
+WWW=		https://www.nongnu.org/materm/materm.html
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
