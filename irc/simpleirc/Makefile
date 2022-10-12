@@ -1,5 +1,3 @@
-# Created by: Dennis Herrmann <adox@mcx2.org>
-
 PORTNAME=	simpleirc
 PORTVERSION=	1.2
 CATEGORIES=	irc
@@ -9,6 +7,7 @@ DISTNAME=	sic-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Extremely simple IRC client
+WWW=		http://www.suckless.org/programs/sic.html
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
