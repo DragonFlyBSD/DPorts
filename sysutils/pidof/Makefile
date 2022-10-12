@@ -1,5 +1,3 @@
-# Created by: Roman Bogorodskiy <novel@FreeBSD.org>
-
 PORTNAME=	pidof
 PORTVERSION=	20050501
 CATEGORIES=	sysutils
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}
 
 MAINTAINER=	novel@FreeBSD.org
 COMMENT=	Tool which prints PID of given process name
+WWW=		https://people.freebsd.org/~novel/pidof.html
 
 LICENSE=	BSD2CLAUSE
 
