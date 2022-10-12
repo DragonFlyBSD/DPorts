@@ -1,5 +1,3 @@
-# Created by: Eugene Grosbein <eugen@FreeBSD.org>
-
 PORTNAME=	cpupdate
 DISTVERSION=	g20180513
 PORTREVISION=	3
@@ -7,6 +5,7 @@ CATEGORIES=	sysutils
 
 MAINTAINER=	eugen@FreeBSD.org
 COMMENT=	CPU microcode update utility for x86
+WWW=		https://github.com/kernschmelze/cpupdate
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
