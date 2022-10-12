@@ -1,5 +1,3 @@
-# Created by: Lars Thegler <lth@FreeBSD.org>
-
 PORTNAME=	Test-File
 PORTVERSION=	1.44.4
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:R}${PORTVERSION:E}
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Test file attributes
+WWW=		https://metacpan.org/release/Test-File
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
