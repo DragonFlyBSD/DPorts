@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Test-LeakTrace
 PORTVERSION=	0.17
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Traces memory leaks
+WWW=		https://metacpan.org/release/Test-LeakTrace
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
