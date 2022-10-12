@@ -1,11 +1,10 @@
-# Created by: Joao Carlos Mendes Luis <jonny@jonny.eng.br>
-
 PORTNAME=	id3ren
 PORTVERSION=	1.1b0
 CATEGORIES=	audio
 
 MAINTAINER=	crees@FreeBSD.org
 COMMENT=	Rename MP3 files, edit tags, search, etc
+WWW=		https://github.com/sebcode/id3ren
 
 LICENSE=	GPLv2
 
