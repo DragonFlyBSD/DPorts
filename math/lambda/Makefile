@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	lambda
 PORTVERSION=	0.1.4
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	http://uniquesoftwaredesigns.com/${PORTNAME}/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Lambda calculus interpreter
+WWW=		https://uniquesoftwaredesigns.com/lambda/docs/lambda.html
 
 LICENSE=	GPLv2
 
