@@ -1,5 +1,3 @@
-# Created by: NAKAJI Hiroyuki <nakaji@jp.freebsd.org>
-
 PORTNAME=	nqueens
 PORTVERSION=	1.0
 CATEGORIES=	benchmarks
@@ -9,6 +7,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	nakaji@jp.freebsd.org
 COMMENT=	N-queens benchmark
+WWW=		https://www.arch.cs.titech.ac.jp/~kise/nq/index.htm
 
 WRKSRC=		${WRKDIR}/version${PORTVERSION}
 
