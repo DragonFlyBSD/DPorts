@@ -1,17 +1,16 @@
-# Created by: Guixing Bai <khsing.cn@gmail.com>
-
 PORTNAME=	tornado
-PORTVERSION=	6.1
+PORTVERSION=	6.2
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python Web Server from FriendFeed
+WWW=		https://www.tornadoweb.org/
 
 LICENSE=	APACHE20
 
-USES=		cpe python:3.5+
+USES=		cpe python:3.7+
 USE_PYTHON=	autoplist concurrent distutils
 
 CONFLICTS_INSTALL=	${PYTHON_PKGNAMEPREFIX}tornado4 \
