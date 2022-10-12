@@ -1,13 +1,13 @@
-# Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-
 PORTNAME=	flac
-PORTVERSION=	1.3.4
+PORTVERSION=	1.4.1
+PORTREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	https://downloads.xiph.org/releases/flac/ \
 		https://ftp.osuosl.org/pub/xiph/releases/flac/
 
 MAINTAINER=	naddy@FreeBSD.org
 COMMENT=	Free lossless audio codec
+WWW=		https://www.xiph.org/flac/
 
 LICENSE=	BSD3CLAUSE GFDL GPLv2 LGPL21
 LICENSE_COMB=	multi
@@ -19,6 +19,10 @@ LIB_DEPENDS=	libogg.so:audio/libogg
 USES=		compiler:c11 cpe iconv libtool pathfix pkgconfig tar:xz
 
 CPE_VENDOR=	flac_project
+
+# Preserve UTF-8 filenames in test/flac-to-flac-metadata-test-files/.
+# They are referenced by the test suite.
+EXTRACT_CMD=	${SETENV} LC_ALL=C.UTF-8 ${TAR}
 
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
@@ -42,10 +46,5 @@ BUILD_DEPENDS+=	nasm:devel/nasm
 .if ${ARCH} != powerpc64le
 CONFIGURE_ARGS+=--disable-vsx
 .endif
-
-post-install:
-	${REINPLACE_CMD} 's:%%PREFIX%%:${PREFIX}:' \
-	    ${STAGEDIR}${PREFIX}/man/man1/flac.1
-	${RM} ${STAGEDIR}${PREFIX}/man/man1/flac.1.bak
 
 .include <bsd.port.mk>
