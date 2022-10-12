@@ -1,11 +1,10 @@
-# Created by: Dryice Liu
-
 PORTNAME=	tcping
 PORTVERSION=	1.3.6
 CATEGORIES=	net
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Do a TCP connect to the given IP/port combination
+WWW=		https://github.com/mkirchner/tcping
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
