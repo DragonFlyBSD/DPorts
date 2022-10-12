@@ -1,5 +1,3 @@
-# Created by: jupengfei <jupengfei@gmail.com>
-
 PORTNAME=	Text-Extract-Word
 PORTVERSION=	0.04
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Simple module for extracting the text from a Microsoft Word file
+WWW=		https://metacpan.org/release/Text-Extract-Word
 
 LICENSE=	ART20
 
