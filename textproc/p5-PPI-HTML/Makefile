@@ -1,5 +1,3 @@
-# Created by: Lars Thegler <lth@FreeBSD.org>
-
 PORTNAME=	PPI-HTML
 PORTVERSION=	1.08
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Generate syntax-highlighted HTML for Perl using PPI
+WWW=		https://metacpan.org/release/PPI-HTML
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
