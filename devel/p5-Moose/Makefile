@@ -1,5 +1,3 @@
-# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-
 PORTNAME=	Moose
 PORTVERSION=	2.2201
 PORTEPOCH=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Complete modern object system for Perl 5
+WWW=		https://metacpan.org/release/Moose
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
