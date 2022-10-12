@@ -1,5 +1,3 @@
-# Created by: Andrey Zakhvatov
-
 PORTNAME=	ncurses
 DISTVERSION=	6.3
 CATEGORIES=	devel
@@ -9,6 +7,7 @@ DIST_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	swills@FreeBSD.org
 COMMENT=	Library for terminal-independent, full-screen output
+WWW=		https://invisible-island.net/ncurses/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
