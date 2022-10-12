@@ -1,5 +1,3 @@
-# Created by: Mark Pulford <mark@kyne.com.au>
-
 PORTNAME=	greed
 PORTVERSION=	4.2
 CATEGORIES=	games
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	-game
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Text puzzle game with the aim of clearing the game field
+WWW=		http://catb.org/~esr/greed/
 
 LICENSE=	BSD2CLAUSE
 
