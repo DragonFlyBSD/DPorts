@@ -1,5 +1,3 @@
-# Created by: Matthew Seaman <matthew@FreeBSD.org>
-
 PORTNAME=	Role-Basic
 PORTVERSION=	0.13
 PORTREVISION=	2
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	matthew@FreeBSD.org
 COMMENT=	Just roles. Nothing else
+WWW=		https://metacpan.org/release/Role-Basic
 
 NO_ARCH=	yes
 PORTSCOUT=	limit:^0\.[1-9]
