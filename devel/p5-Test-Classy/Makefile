@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	Test-Classy
 PORTVERSION=	0.10
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Write your unit tests in other modules than *.t
+WWW=		https://metacpan.org/release/Test-Classy
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
