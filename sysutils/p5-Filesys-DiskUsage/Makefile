@@ -1,5 +1,3 @@
-# Created by: Alex Deiter <tiamat@komi.mts.ru>
-
 PORTNAME=	Filesys-DiskUsage
 PORTVERSION=	0.13
 CATEGORIES=	sysutils perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl equivalent of du(1)
+WWW=		https://metacpan.org/release/Filesys-DiskUsage
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
