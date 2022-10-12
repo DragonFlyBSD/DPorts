@@ -1,5 +1,3 @@
-# Created by: Sergei Kolobov <sergei@kolobov.com>
-
 PORTNAME=	qlogtools
 PORTVERSION=	3.1
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	http://untroubled.org/${PORTNAME}/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tools for processing logs from qmail and other packages
+WWW=		https://untroubled.org/qlogtools/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
