@@ -1,5 +1,3 @@
-# Created by: Steve Wills <steve@mouf.net>
-
 PORTNAME=	Chemistry-File-VRML
 PORTVERSION=	0.10
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	swills@FreeBSD.org
 COMMENT=	Generate VRML models for molecules
+WWW=		https://metacpan.org/release/Chemistry-File-VRML
 
 BUILD_DEPENDS=	p5-Chemistry-Mol>=0:science/p5-Chemistry-Mol
 RUN_DEPENDS=	p5-Chemistry-Mol>=0:science/p5-Chemistry-Mol
