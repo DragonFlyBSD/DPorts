@@ -1,9 +1,10 @@
 PORTNAME=	calendar
-DISTVERSION=	0.9.2
+DISTVERSION=	0.9.3
 CATEGORIES=	deskutils
 
 MAINTAINER=	se@FreeBSD.org
 COMMENT=	Port of the FreeBSD calendar program
+WWW=		https://freebsd.org
 
 LICENSE=	BSD3CLAUSE
 
