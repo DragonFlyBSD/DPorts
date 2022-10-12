@@ -1,13 +1,13 @@
-# Created by: Robert Gogolok <gogo@cs.uni-sb.de>
-
 PORTNAME=	lxml
-PORTVERSION=	4.9.0
+PORTVERSION=	4.9.1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Pythonic binding for the libxml2 and libxslt libraries
+WWW=		https://lxml.de/ \
+		https://github.com/lxml/lxml
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/doc/licenses/BSD.txt
