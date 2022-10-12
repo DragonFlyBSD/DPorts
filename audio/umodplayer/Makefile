@@ -1,5 +1,3 @@
-# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-
 PORTNAME=	umodplayer
 PORTVERSION=	0.b5.1
 PORTREVISION=	3
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION:S/^0.//:tu}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Console module player
+WWW=		http://umodplayer.sourceforge.net/
 
 LICENSE=	PD
 
