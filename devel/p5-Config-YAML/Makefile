@@ -1,5 +1,3 @@
-# Created by: Steve Wills <steve@mouf.net>
-
 PORTNAME=	Config-YAML
 PORTVERSION=	1.42
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	swills@FreeBSD.org
 COMMENT=	Simple configuration automation
+WWW=		https://metacpan.org/release/Config-YAML
 
 BUILD_DEPENDS=	p5-YAML>=0:textproc/p5-YAML
 RUN_DEPENDS=	p5-YAML>=0:textproc/p5-YAML
