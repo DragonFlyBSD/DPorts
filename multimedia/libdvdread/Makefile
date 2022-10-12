@@ -1,5 +1,3 @@
-# Created by: Marc van Woerkom <3d@FreeBSD.org>
-
 PORTNAME=	libdvdread
 PORTVERSION=	6.1.3
 CATEGORIES=	multimedia
@@ -7,6 +5,7 @@ MASTER_SITES=	https://download.videolan.org/pub/videolan/${PORTNAME}/${DISTVERSI
 
 MAINTAINER=	martymac@FreeBSD.org
 COMMENT=	Videolan version of the libdvdread project
+WWW=		https://www.videolan.org/developers/libdvdnav.html
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
