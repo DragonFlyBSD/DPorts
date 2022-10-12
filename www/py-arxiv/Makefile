@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	arxiv
 PORTVERSION=	1.4.2
 CATEGORIES=	www python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python wrapper for the arXiv API
+WWW=		https://github.com/lukasschwab/arxiv.py
 
 LICENSE=	MIT
 
