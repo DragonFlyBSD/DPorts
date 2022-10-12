@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	recmpeg
 PORTVERSION=	1.0.5
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/fame/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple video encoder
+WWW=		http://fame.sourceforge.net/
 
 LIB_DEPENDS=	libfame.so:multimedia/libfame
 
