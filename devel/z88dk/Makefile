@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	z88dk
 PORTVERSION=	2.1
 PORTREVISION=	3
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-src-${PORTVERSION}
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Complete Z80/Z180 development kit
+WWW=		https://z88dk.org/site/
 
 LICENSE=	ClArtistic
 LICENSE_FILE=	${WRKSRC}/LICENSE
