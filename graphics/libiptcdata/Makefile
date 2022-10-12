@@ -1,5 +1,3 @@
-# Created by: Pav Lucistnik <pav@FreeBSD.org>
-
 PORTNAME=	libiptcdata
 PORTVERSION=	1.0.4
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Library for manipulating IPTC metadata stored in image files
+WWW=		http://libiptcdata.sourceforge.net/
 
 USES=		pkgconfig iconv libtool pathfix
 USE_LDCONFIG=	yes
