@@ -1,5 +1,3 @@
-# Created by: Chris Hutchinson <portmaster@bsdforge.com>
-
 PORTNAME=	sansi
 PORTVERSION=	1.0.2
 CATEGORIES=	textproc sysutils
@@ -7,6 +5,7 @@ MASTER_SITES=	https://BSDforge.com/projects/source/textproc/sansi/
 
 MAINTAINER=	portmaster@bsdforge.com
 COMMENT=	Removes ANSI control sequences/characters, from files
+WWW=		https://BSDforge.com/projects/textproc/sansi/
 
 LICENSE=	ART20 BSD2CLAUSE
 LICENSE_COMB=	multi
