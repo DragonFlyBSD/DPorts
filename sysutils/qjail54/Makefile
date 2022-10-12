@@ -1,5 +1,3 @@
-# Created by: Joe Barbish
-
 PORTNAME=	qjail
 PORTVERSION=	5.4
 CATEGORIES=	sysutils
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	54
 
 MAINTAINER=	qjail1@a1poweruser.com
 COMMENT=	Utility to quickly deploy and manage jails
+WWW=		http://qjail.sourceforge.net/
 
 LICENSE=	BERNE-CONVENTION
 LICENSE_NAME=	Berne Convention
