@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	Test-Harness-Straps
 PORTVERSION=	0.30
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Detailed analysis of test results for Perl
+WWW=		https://metacpan.org/release/Test-Harness-Straps
 
 USES=		perl5
 USE_PERL5=	modbuild
