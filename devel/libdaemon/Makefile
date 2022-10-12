@@ -1,5 +1,3 @@
-# Created by: Michael Johnson <ahze@FreeBSD.org>
-
 PORTNAME=	libdaemon
 PORTVERSION=	0.14
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	http://0pointer.de/lennart/projects/${PORTNAME}/
 
 MAINTAINER=	desktop@FreeBSD.org
 COMMENT=	Lightweight C library that eases the writing of UNIX daemons
+WWW=		https://0pointer.de/lennart/projects/libdaemon/
 
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/LICENSE
