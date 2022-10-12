@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	qccx
 PORTVERSION=	1.0.0
 CATEGORIES=	games devel
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}${PORTVERSION:S/.//g}
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Fast optimizing QuakeC compiler
+WWW=		https://www.quakewiki.net/archives/qccx/
 
 LICENSE=	GPLv2
 
