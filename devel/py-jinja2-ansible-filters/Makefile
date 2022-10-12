@@ -1,13 +1,12 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	jinja2-ansible-filters
-PORTVERSION=	1.3.1
+PORTVERSION=	1.3.2
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Port of Ansible's jinja2 filters without requiring ansible core
+WWW=		https://gitlab.com/dreamer-labs/libraries/jinja2-ansible-filters
 
 LICENSE=	BSD2CLAUSE GPLv3
 LICENSE_COMB=	dual
