@@ -1,5 +1,3 @@
-# Created by: jamie
-
 PORTNAME=	interGif
 PORTVERSION=	6.15
 CATEGORIES=	graphics
@@ -9,6 +7,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Efficient animated GIF optimiser
+WWW=		http://utter.chaos.org.uk/~pdh/software/intergif.htm
 
 WRKSRC=		${WRKDIR}/igsrc
 
