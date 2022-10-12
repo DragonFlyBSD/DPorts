@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	OurNet-BBSAgent
 PORTVERSION=	1.61
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Scriptable telnet-based virtual users
+WWW=		https://metacpan.org/release/OurNet-BBSAgent
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
