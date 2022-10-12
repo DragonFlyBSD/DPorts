@@ -1,11 +1,12 @@
 PORTNAME=	gvm-tools
-DISTVERSION=	21.10.0
+DISTVERSION=	22.6.1
 CATEGORIES=	security python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	The Greenbone Vulnerability Management Tools
+WWW=		https://github.com/greenbone/gvm-tools
 
 LICENSE=	GPLv3+
 
