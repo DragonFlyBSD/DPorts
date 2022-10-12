@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	clipp
 PORTVERSION=	1.2.3
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Command line interfaces for modern C++
+WWW=		https://github.com/muellan/clipp
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
