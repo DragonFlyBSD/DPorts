@@ -1,5 +1,3 @@
-# Created by: Toni Andjelkovic <toni@soth.at>
-
 PORTNAME=	pcsc-lite
 PORTVERSION=	1.9.5
 PORTEPOCH=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	https://pcsclite.apdu.fr/files/
 
 MAINTAINER=	delphij@FreeBSD.org
 COMMENT=	Middleware library to access a smart card using SCard API (PC/SC)
+WWW=		https://pcsclite.apdu.fr/
 
 LICENSE=	BSD3CLAUSE GPLv3+
 LICENSE_COMB=	multi
