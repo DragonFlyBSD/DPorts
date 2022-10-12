@@ -1,5 +1,3 @@
-# Created by: Mikhail Zakharov <zmey20000@yahoo.com>
-
 PORTNAME=	empty
 PORTVERSION=	0.6.20b
 CATEGORIES=	net
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	zmey20000@yahoo.com
 COMMENT=	Expect-like tool for pure shell
+WWW=		http://empty.sourceforge.net/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
