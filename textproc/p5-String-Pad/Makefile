@@ -1,5 +1,3 @@
-# Created by: Zane C. Bowers-Hadley <vvelox@vvelox.net>
-
 PORTNAME=	String-Pad
 PORTVERSION=	0.021
 CATEGORIES=	textproc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	String padding routines for Perl
+WWW=		https://metacpan.org/release/String-Pad
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
