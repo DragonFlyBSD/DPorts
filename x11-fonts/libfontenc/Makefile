@@ -1,11 +1,10 @@
-# Created by: Dejan Lesjak <lesi@FreeBSD.org>
-
 PORTNAME=	libfontenc
 PORTVERSION=	1.1.4
 CATEGORIES=	x11-fonts
 
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	The fontenc Library
+WWW=		https://www.x.org/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
