@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Params-Validate-Dependencies
 PORTVERSION=	1.40
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Validate combinations of parameters
+WWW=		https://metacpan.org/release/Params-Validate-Dependencies
 
 LICENSE=	ART10 GPLv2
 LICENSE_COMB=	dual
