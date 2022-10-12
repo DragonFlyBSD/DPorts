@@ -1,5 +1,3 @@
-# Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-
 PORTNAME=	regexx
 PORTVERSION=	0.98.1
 PORTREVISION=	6
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Complete regular expressions C++ solution
+WWW=		https://sourceforge.net/projects/regexx/
 
 LICENSE=	LGPL21
 
