@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	html2fo
 PORTVERSION=	0.4.2
 CATEGORIES=	textproc
@@ -7,6 +5,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	HTML to xsl:fo converter
+WWW=		http://html2fo.sourceforge.net/
 
 PLIST_FILES=	bin/html2fo
 WRKSRC=		${WRKDIR}/${PORTNAME}
