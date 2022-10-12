@@ -1,5 +1,3 @@
-# Created by: Murray Stokely <murray@cdrom.com>
-
 PORTNAME=	nasm
 PORTVERSION=	2.15.05
 PORTEPOCH=	1
@@ -9,6 +7,7 @@ MASTER_SITES=	https://www.nasm.us/pub/nasm/releasebuilds/${PORTVERSION}/ \
 
 MAINTAINER=	salvadore@FreeBSD.org
 COMMENT=	General-purpose multi-platform x86 and amd64 assembler
+WWW=		https://www.nasm.us/
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
