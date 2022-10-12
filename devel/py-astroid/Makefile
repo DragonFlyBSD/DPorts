@@ -1,23 +1,26 @@
 PORTNAME=	astroid
-PORTVERSION=	2.11.6
+PORTVERSION=	2.12.9
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Abstract syntax tree for Python with inference support
+WWW=		https://github.com/PyCQA/astroid
 
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}lazy-object-proxy>=1.4.0:devel/py-lazy-object-proxy@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}wrapt>=1.11<2:devel/py-wrapt@${PY_FLAVOR}
+		${PYTHON_PKGNAMEPREFIX}wrapt>=1.14<2:devel/py-wrapt@${PY_FLAVOR}
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>=0:devel/py-pytest@${PY_FLAVOR}
 
-USES=		python:3.6+
+USES=		python:3.7+
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes
+
+CONFLICTS=	${PYTHON_PKGNAMEPREFIX}astroid253
 
 .include <bsd.port.pre.mk>
 
