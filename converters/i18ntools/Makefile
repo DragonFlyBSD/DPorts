@@ -1,5 +1,3 @@
-# Created by: G. Adam Stanislav
-
 PORTNAME=	i18ntools
 PORTVERSION=	1.0
 PORTREVISION=	1
@@ -9,6 +7,7 @@ MASTER_SITES=	ftp://ftp.whizkidtech.redprince.net/unix/ \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tools for the conversion to and from UTF-8 Unicode encoding
+WWW=		http://www.whizkidtech.redprince.net/i18n/
 
 LICENSE=	BSD2CLAUSE
 
