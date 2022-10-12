@@ -1,5 +1,3 @@
-# Created by: markm
-
 PORTNAME=	xinetd
 PORTVERSION=	2.3.15
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	GENTOO
 
 MAINTAINER=	garga@FreeBSD.org
 COMMENT=	Replacement for inetd with better control and logging
+WWW=		http://www.xinetd.org/
 
 LICENSE=	XINETD
 LICENSE_NAME=	xinetd license
