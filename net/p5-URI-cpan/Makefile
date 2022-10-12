@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	URI-cpan
 PORTVERSION=	1.008
 CATEGORIES=	net perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	URLs that refer to things on the CPAN
+WWW=		https://metacpan.org/release/URI-cpan
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
