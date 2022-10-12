@@ -1,5 +1,3 @@
-# Created by: Konstantin Reznichenko <kot@premierbank.dp.ua>
-
 PORTNAME=	mapchan
 PORTVERSION=	3.2
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Transform the input and output of a terminal (SCO Unix alike)
+WWW=		https://mapchan.sourceforge.io/
 
 LICENSE=	GPLv2
 
