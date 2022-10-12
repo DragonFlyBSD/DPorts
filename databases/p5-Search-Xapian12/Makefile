@@ -1,5 +1,3 @@
-# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-
 PORTNAME=	Search-Xapian
 PORTVERSION=	1.2.25.2
 CATEGORIES=	databases perl5
@@ -11,6 +9,7 @@ PKGNAMESUFFIX=	12
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Perl XS frontend to the Xapian C++ search library
+WWW=		https://metacpan.org/release/Search-Xapian
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
