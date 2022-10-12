@@ -1,5 +1,3 @@
-# Created by: bf <bf2006a@yahoo.com>
-
 PORTNAME=	rngstreams
 PORTVERSION=	1.0.1
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	http://statmath.wu-wien.ac.at/software/RngStreams/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	C implementation of a high-quality uniform random number generator
+WWW=		http://statmath.wu-wien.ac.at/software/RngStreams/
 
 LICENSE=	GPLv2+ # code says GPLv2+, COPYING is GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
