@@ -1,5 +1,3 @@
-# Created by: Mark Felder <feld@FreeBSD.org>
-
 PORTNAME=	intspan
 PORTVERSION=	1.6.1
 CATEGORIES=	math python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Finite element automatic tabulator
+WWW=		https://github.com/jonathaneunice/intspan
 
 LICENSE=	APACHE20
 
