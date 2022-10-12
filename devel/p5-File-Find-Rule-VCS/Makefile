@@ -1,5 +1,3 @@
-# Created by: Cezary Morga <cm@therek.net>
-
 PORTNAME=	File-Find-Rule-VCS
 PORTVERSION=	1.08
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Exclude files and directories for Version Control Systems
+WWW=		https://metacpan.org/release/File-Find-Rule-VCS
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
