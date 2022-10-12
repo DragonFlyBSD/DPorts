@@ -1,5 +1,3 @@
-# Created by: Alejandro Pulver <alepulver@FreeBSD.org>
-
 PORTNAME=	3zb2
 PORTVERSION=	0.97
 PORTREVISION=	1
@@ -14,6 +12,7 @@ DIST_SUBDIR=	${PKGNAMEPREFIX}${PORTNAME}
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	3rd Zigock II bots for Quake II
+WWW=		http://users.jp.tri6.net/~ponpoko/3zb2/
 
 USES=		dos2unix zip
 DOS2UNIX_FILES=	*.[ch]
