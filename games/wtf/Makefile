@@ -1,12 +1,11 @@
-# Created by: Maxime Henrion <mux@FreeBSD.org>
-
 PORTNAME=	wtf
-PORTVERSION=	20220320
+PORTVERSION=	20220926
 CATEGORIES=	games
 MASTER_SITES=	SF/bsdwtf
 
 MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Translates common Internet acronyms
+WWW=		https://sourceforge.net/projects/bsdwtf/
 
 LICENSE=	PD
 
