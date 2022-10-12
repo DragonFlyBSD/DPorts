@@ -1,5 +1,3 @@
-# Created by: Emanuel Haupt <ehaupt@critical.ch>
-
 PORTNAME=	httping
 PORTVERSION=	2.5
 PORTREVISION=	1
@@ -9,6 +7,7 @@ MASTER_SITES=	https://www.vanheusden.com/httping/ \
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Ping-like tool for HTTP requests
+WWW=		https://www.vanheusden.com/httping/
 
 LICENSE=	GPLv2
 
