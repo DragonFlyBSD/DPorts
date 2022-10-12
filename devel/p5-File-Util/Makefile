@@ -1,5 +1,3 @@
-# Created by: jeffhung
-
 PORTNAME=	File-Util
 PORTVERSION=	4.161950
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	jeffhung@mail2000.com.tw
 COMMENT=	Perl5 module for easy, versatile, portable file handling
+WWW=		https://metacpan.org/release/File-Util
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
