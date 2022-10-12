@@ -1,5 +1,3 @@
-# Created by: bremner@unb.ca
-
 PORTNAME=	nauty
 PORTVERSION=	2.7r3
 PORTEPOCH=	1
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}${PORTVERSION:S/.//}
 
 MAINTAINER=	moritz@schmi.tt
 COMMENT=	Nauty & Traces are programs for computing graph automorphism
+WWW=		https://pallini.di.uniroma1.it/
 
 LICENSE=	APACHE20
 
