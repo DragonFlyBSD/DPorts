@@ -1,5 +1,3 @@
-# Created by: Aldert Nooitgedagt
-
 PORTNAME=	tclwebtest
 PORTVERSION=	1.0
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tool for issuing HTTP requests and dealing with the result
+WWW=		http://tclwebtest.sourceforge.net
 
 LICENSE=	GPLv2
 
