@@ -1,5 +1,3 @@
-# Created by: Sergei Kolobov <sergei@kolobov.com>
-
 PORTNAME=	ipsvd
 PORTVERSION=	1.0.0
 CATEGORIES=	net
@@ -7,6 +5,7 @@ MASTER_SITES=	http://smarden.org/ipsvd/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Internet protocol service daemons
+WWW=		http://smarden.org/ipsvd/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/package/COPYING
