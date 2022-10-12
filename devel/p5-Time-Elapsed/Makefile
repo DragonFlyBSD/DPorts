@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Time-Elapsed
 PORTVERSION=	0.33
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Transform the elapsed seconds into a human readable string
+WWW=		https://metacpan.org/dist/Time-Elapsed
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
