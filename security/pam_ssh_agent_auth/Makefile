@@ -1,5 +1,3 @@
-# Created by: Martin Wilke <miwi@FreeBSD.org>
-
 PORTNAME=	pam_ssh_agent_auth
 PORTVERSION=	0.10.4
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	security
 
 MAINTAINER=	matthew@FreeBSD.org
 COMMENT=	PAM module which permits authentication via ssh-agent
+WWW=		http://pamsshagentauth.sourceforge.net/
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	jbeverly
