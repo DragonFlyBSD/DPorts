@@ -1,5 +1,3 @@
-# Created by: Yuri Pankov <yuri.pankov@gmail.com>
-
 PORTNAME=	libunibreak
 PORTVERSION=	4.3
 PORTEPOCH=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	https://github.com/adah1972/${PORTNAME}/releases/download/${PORTNA
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Implementation of the line and word breaking algorithm for Unicode
+WWW=		http://vimgadgets.sourceforge.net/libunibreak/
 
 LICENSE=	ZLIB
 LICENSE_FILE=	${WRKSRC}/LICENCE
