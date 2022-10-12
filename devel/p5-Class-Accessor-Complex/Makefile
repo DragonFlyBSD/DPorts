@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Class-Accessor-Complex
 PORTVERSION=	1.100880
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Arrays, hashes, booleans, integers, sets, and more
+WWW=		https://metacpan.org/release/Class-Accessor-Complex
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
