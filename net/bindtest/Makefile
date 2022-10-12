@@ -1,5 +1,3 @@
-# Created by: Janos Mohacsi <janos.mohacsi@bsd.hu>
-
 PORTNAME=	bindtest
 PORTVERSION=	1.56
 PORTREVISION=	1
@@ -12,6 +10,7 @@ DISTNAME=	${PORTNAME}
 
 MAINTAINER=	jmohacsi@bsd.hu
 COMMENT=	Test bind() semantics of IPv6 sockets
+WWW=		https://www.kame.net/newsletter/20010504/
 
 USES=		tar:tgz
 
