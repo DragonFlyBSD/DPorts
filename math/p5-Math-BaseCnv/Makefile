@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	Math-BaseCnv
 PORTVERSION=	1.14
 CATEGORIES=	math perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Fast functions to convert between number Bases
+WWW=		https://metacpan.org/release/Math-BaseCnv
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
