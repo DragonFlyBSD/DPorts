@@ -1,5 +1,3 @@
-# Created by: Thomas-Martin Seck <tmseck@web.de>
-
 PORTNAME=	libecap
 PORTVERSION=	1.0.1
 CATEGORIES=	www security
@@ -8,6 +6,7 @@ MASTER_SITES=	https://www.e-cap.org/archive/ \
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Library for module based network content analysis
+WWW=		https://www.e-cap.org/
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
