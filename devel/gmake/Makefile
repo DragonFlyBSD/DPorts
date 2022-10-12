@@ -1,5 +1,3 @@
-# Created by: jkh
-
 PORTNAME=	gmake
 PORTVERSION=	4.3
 PORTREVISION=	2
@@ -12,6 +10,7 @@ DISTNAME=	make-${PORTVERSION}
 # discretion.
 MAINTAINER=	tijl@FreeBSD.org
 COMMENT=	GNU version of 'make' utility
+WWW=		https://www.gnu.org/software/make/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
