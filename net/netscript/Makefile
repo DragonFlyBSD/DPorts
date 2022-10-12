@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	netscript
 PORTVERSION=	1.7.1
 PORTREVISION=	4
@@ -9,6 +7,7 @@ MASTER_SITES=	SF \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Portable/multi-platform lightweight TCP socket scripting
+WWW=		http://netscript.sourceforge.net/
 
 LICENSE=	PD
 
