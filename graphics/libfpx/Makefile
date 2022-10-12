@@ -1,5 +1,3 @@
-# Created by: Mikhail Teterin <mi@aldan.algebra.com>
-
 PORTNAME=	libfpx
 DISTVERSION=	1.3.1-10
 CATEGORIES=	graphics
@@ -14,6 +12,7 @@ MASTER_SITES=	http://imagemagick.mirrorcatalogs.com/delegates/	\
 
 MAINTAINER=	mi@aldan.algebra.com
 COMMENT=	Library routines for working with Flashpix images
+WWW=		https://www.i3a.org/
 
 USES=		cpe tar:xz uidfix
 
