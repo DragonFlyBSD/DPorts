@@ -1,5 +1,3 @@
-# Created by: ache
-
 PORTNAME=	patch
 PORTVERSION=	2.7.6
 PORTREVISION=	2
@@ -10,6 +8,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	GNU patch utility
+WWW=		https://savannah.gnu.org/projects/patch/
 
 LICENSE=	GPLv3+
 
