@@ -1,5 +1,3 @@
-# Created by: Sergey A. Osokin <osa@FreeBSD.org>
-
 PORTNAME=	luajit
 DISTVERSION=	2.0.5
 PORTREVISION=	6
@@ -9,6 +7,7 @@ DISTNAME=	LuaJIT-${DISTVERSION}
 
 MAINTAINER=	osa@FreeBSD.org
 COMMENT=	Just-In-Time Compiler for Lua
+WWW=		https://luajit.org/luajit.html
 
 OPTIONS_DEFINE=	PTHREAD
 PTHREAD_DESC=	with pthread support
