@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	XML-Parser-EasyTree
 PORTVERSION=	0.01
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Easier tree style for XML::Parser
+WWW=		https://metacpan.org/release/XML-Parser-EasyTree
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
