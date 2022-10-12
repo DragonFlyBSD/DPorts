@@ -1,5 +1,3 @@
-# Created by: Daniel Roethlisberger <daniel@roe.ch>
-
 PORTNAME=	dma
 PORTREVISION=	1
 DISTVERSIONPREFIX=	v
@@ -9,6 +7,7 @@ CATEGORIES=	mail
 
 MAINTAINER=	garga@FreeBSD.org
 COMMENT=	DragonFly Mail Agent, a small MTA for local/outbound mail
+WWW=		https://github.com/corecode/dma
 
 LICENSE=	BSD3CLAUSE
 
