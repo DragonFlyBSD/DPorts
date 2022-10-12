@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Proc-FastSpawn
 PORTVERSION=	1.2
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	fork+exec, or spawn, a subprocess as quickly as possible
+WWW=		https://metacpan.org/dist/Proc-FastSpawn
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
