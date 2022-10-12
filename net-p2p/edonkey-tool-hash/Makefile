@@ -1,5 +1,3 @@
-# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-
 PORTNAME=	edonkey
 PORTVERSION=	0.4.0
 CATEGORIES=	net-p2p
@@ -9,6 +7,7 @@ DISTNAME=	ed2k_hash-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Both calculates 'eDonkey/Overnet hashes' producing ed2k:// file links
+WWW=		http://ed2k-tools.sourceforge.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
