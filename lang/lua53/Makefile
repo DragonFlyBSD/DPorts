@@ -1,5 +1,3 @@
-# Created by: GreenDog <fiziologus@gmail.com>
-
 PORTNAME=	lua
 DISTVERSION=	5.3.6
 CATEGORIES=	lang
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	${LUA_VER_STR}
 
 MAINTAINER=	russ.haley@gmail.com
 COMMENT=	Powerful, efficient, lightweight, embeddable scripting language
+WWW=		https://www.lua.org/
 
 LICENSE=	MIT
 
