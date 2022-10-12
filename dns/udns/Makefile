@@ -1,5 +1,3 @@
-# Created by: Martin Matuska <mm@FreeBSD.org>
-
 PORTNAME=	udns
 PORTVERSION=	0.4
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.corpit.ru/mjt/udns/
 
 MAINTAINER=	mm@FreeBSD.org
 COMMENT=	DNS resolver library with sync and async queries
+WWW=		https://www.corpit.ru/mjt/udns.html
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING.LGPL
