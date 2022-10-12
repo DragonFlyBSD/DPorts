@@ -1,5 +1,3 @@
-# Created by: delphij@FreeBSD.org.cn
-
 PORTNAME=	missey
 PORTVERSION=	1.2.0
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DISTNAME=	mps.${PORTVERSION}
 
 MAINTAINER=	delphij@FreeBSD.org
 COMMENT=	Secure small and high performance POP3 server
+WWW=		http://dengh.com/missey/index.html
 
 USES=	tar:bzip2
 
