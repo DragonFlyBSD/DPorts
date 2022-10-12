@@ -1,5 +1,3 @@
-# Created by: Yasuhiro KIMURA <yasu@utahime.org>
-
 PORTNAME=	lockfile-progs
 DISTVERSION=	0.1.19
 CATEGORIES=	sysutils
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	yasu@FreeBSD.org
 COMMENT=	Programs for locking and unlocking files and mailboxes
+WWW=		https://tracker.debian.org/pkg/lockfile-progs
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
