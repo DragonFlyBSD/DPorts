@@ -1,5 +1,3 @@
-# Created by: sterling
-
 PORTNAME=	pcpustat
 PORTVERSION=	1.6
 CATEGORIES=	sysutils
@@ -9,6 +7,7 @@ DIST_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Per-CPU usage statistics
+WWW=		https://bitbucket.org/sterlingcamden/pcpustat
 
 LICENSE=	OWL
 LICENSE_FILE=	${WRKSRC}/license.txt
