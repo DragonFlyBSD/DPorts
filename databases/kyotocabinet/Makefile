@@ -1,5 +1,3 @@
-# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-
 PORTNAME=	kyotocabinet
 PORTVERSION=	1.2.79
 CATEGORIES=	databases
@@ -8,6 +6,7 @@ MASTER_SITES=	https://dbmx.net/kyotocabinet/pkg/ \
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Straightforward implementation of DBM
+WWW=		https://dbmx.net/kyotocabinet/
 
 LICENSE=	GPLv3
 
