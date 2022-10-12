@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Module-Implementation
 PORTVERSION=	0.09
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Loads one of several alternate underlying implementations for a module
+WWW=		https://metacpan.org/release/Module-Implementation
 
 LICENSE=	ART20
 
