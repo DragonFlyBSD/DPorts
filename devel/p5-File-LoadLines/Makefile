@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	File-LoadLines
 PORTVERSION=	1.021
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Load lines from file
+WWW=		https://metacpan.org/dist/File-LoadLines
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
