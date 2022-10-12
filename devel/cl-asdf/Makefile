@@ -1,5 +1,3 @@
-# Created by: Henrik Motakef <henrik.motakef@web.de>
-
 PORTNAME=	asdf
 DISTVERSION=	3.3.4.7
 PORTEPOCH=	2
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	cl-
 
 MAINTAINER=	olgeni@FreeBSD.org
 COMMENT=	System definition facility for Common Lisp
+WWW=		https://www.cliki.net/asdf
 
 LICENSE=	MIT
 
