@@ -1,5 +1,3 @@
-# Created by: janos.mohacsi@bsd.hu
-
 PORTNAME=	findmtu
 PORTVERSION=	0.9
 CATEGORIES=	net
@@ -7,6 +5,7 @@ MASTER_SITES=	http://www.dia.uniroma3.it/~compunet/tunneldiscovery/findmtu/
 
 MAINTAINER=	jmohacsi@bsd.hu
 COMMENT=	Tool for performing IPv6 path MTU discovery on *NIX
+WWW=		https://www.dia.uniroma3.it/~compunet/tunneldiscovery/
 
 OPTIONS_DEFINE=	DOCS
 
