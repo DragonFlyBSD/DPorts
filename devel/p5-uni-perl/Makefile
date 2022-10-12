@@ -1,5 +1,3 @@
-# Created by: Mons Anderson <mons@cpan.org>
-
 PORTNAME=	uni-perl
 PORTVERSION=	0.91
 PORTREVISION=	2
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	mons@cpan.org
 COMMENT=	Modern perl with Unicode
+WWW=		https://metacpan.org/release/MONS/uni-perl-0.92
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
