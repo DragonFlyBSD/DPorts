@@ -1,5 +1,3 @@
-# Created by: Alexander Vereeken <Alexander88207@protonmail.com>
-
 PORTNAME=	ant-dracula-theme
 DISTVERSIONPREFIX=	v
 DISTVERSION=	3.0
@@ -7,6 +5,7 @@ CATEGORIES=	x11-themes
 
 MAINTAINER=	Alexander88207@protonmail.com
 COMMENT=	Dark theme for GTK & KDE
+WWW=		https://github.com/dracula/gtk
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
