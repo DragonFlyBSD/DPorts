@@ -1,5 +1,3 @@
-# Created by: Frederic Culot <frederic@culot.org>
-
 PORTNAME=	Tie-Hash-MultiValue
 PORTVERSION=	1.06
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Store multiple values per key
+WWW=		https://metacpan.org/release/Tie-Hash-MultiValue
 
 LICENSE=	ART10 GPLv2+
 LICENSE_COMB=	dual
