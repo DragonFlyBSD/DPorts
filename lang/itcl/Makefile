@@ -1,5 +1,3 @@
-# Created by: chuckr
-
 PORTNAME=	itcl
 PORTVERSION=	3.4.1
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DISTNAME=	itcl${PORTVERSION}
 
 MAINTAINER=	erik@bz.bzflag.bz
 COMMENT=	Object-oriented extension to Tcl [incr Tcl]
+WWW=		https://sourceforge.net/projects/incrtcl/
 
 USES+=		tcl:tea
 
