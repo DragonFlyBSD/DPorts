@@ -1,13 +1,12 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Term-Choose
-PORTVERSION=	1.754
+PORTVERSION=	1.757
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Choose items from a list interactively
+WWW=		https://metacpan.org/release/Term-Choose
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
