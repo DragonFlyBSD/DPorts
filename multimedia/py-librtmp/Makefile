@@ -1,5 +1,3 @@
-# Created by: William Grzybowski <wg@FreeBSD.org>
-
 PORTNAME=	librtmp
 PORTVERSION=	0.3.0
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DISTNAME=	python-${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Python bindings for librtmp, built with cffi
+WWW=		https://github.com/chrippa/python-librtmp
 
 LICENSE=	BSD2CLAUSE
 
