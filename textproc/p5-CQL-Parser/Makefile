@@ -1,5 +1,3 @@
-# Created by: Aaron Dalton <aaron@FreeBSD.org>
-
 PORTNAME=	CQL-Parser
 PORTVERSION=	1.13
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Compiles CQL strings into parse trees of Node subtypes
+WWW=		https://metacpan.org/release/CQL-Parser
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
