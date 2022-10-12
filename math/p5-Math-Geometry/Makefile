@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Math-Geometry
 PORTVERSION=	0.04
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Geometry related functions
+WWW=		https://metacpan.org/release/Math-Geometry
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
