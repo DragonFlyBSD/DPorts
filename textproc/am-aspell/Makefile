@@ -1,5 +1,3 @@
-# Created by: Thierry Thomas <thierry@pompo.net>
-
 PORTNAME=	${DICT}-aspell
 SPELLVERSION=	6-am-0.03-1
 PORTREVISION=	1
@@ -8,6 +6,7 @@ CATEGORIES=	textproc
 
 MAINTAINER=	office@FreeBSD.org
 COMMENT=	Aspell Amharic dictionary
+WWW=		http://aspell.net/
 
 DICT=	 	am
 
