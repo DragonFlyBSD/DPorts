@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Term-Detect-Software
 PORTVERSION=	0.223
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Detect terminal (emulator) software and its capabilities
+WWW=		https://metacpan.org/release/Term-Detect-Software
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
