@@ -1,5 +1,3 @@
-# Created by: Koen Martens <gmc@sonologic.nl>
-
 PORTNAME=	Net-DNS-Resolver-Programmable
 PORTVERSION=	0.009
 CATEGORIES=	dns net perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	gmc@sonologic.nl
 COMMENT=	Programmable DNS resolver for off-line testing
+WWW=		https://metacpan.org/release/Net-DNS-Resolver-Programmable
 
 LICENSE=	ART10 GPLv2+
 LICENSE_COMB=	dual
