@@ -1,5 +1,3 @@
-# Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-
 PORTNAME=	Math-Spline
 PORTVERSION=	0.02
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Cubic Spline Interpolation of data
+WWW=		https://metacpan.org/release/Math-Spline
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
