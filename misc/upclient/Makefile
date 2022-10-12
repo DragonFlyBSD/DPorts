@@ -1,5 +1,3 @@
-# Created by: Kelly Yancey <kbyanc@posi.net>
-
 PORTNAME=	upclient
 PORTVERSION=	5.0.b8
 PORTREVISION=	7
@@ -10,6 +8,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:R}${PORTVERSION:E}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Uptimes project client
+WWW=		http://upclient.sourceforge.net
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
