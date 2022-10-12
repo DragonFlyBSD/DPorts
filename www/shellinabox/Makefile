@@ -1,5 +1,3 @@
-# Created by: Olivier Cochard-Labbe <olivier@FreeBSD.org>
-
 PORTNAME=	shellinabox
 PORTVERSION=	2.20
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ CATEGORIES=	www
 
 MAINTAINER=	olivier@FreeBSD.org
 COMMENT=	Publish command line shell through AJAX interface
+WWW=		https://github.com/shellinabox/shellinabox
 
 LICENSE=	GPLv2
 
