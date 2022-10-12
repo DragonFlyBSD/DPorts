@@ -1,5 +1,3 @@
-# Created by: will
-
 PORTNAME=	Alias
 PORTVERSION=	2.32
 PORTREVISION=	3
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Perl module that performs aliasing services
+WWW=		https://metacpan.org/release/Alias
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
