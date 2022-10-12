@@ -1,5 +1,3 @@
-# Created by: Florent Thoumie <flz@xbsd.org>
-
 PORTNAME=	ctorrent
 PORTVERSION=	3.3.2
 PORTREVISION=	4
@@ -10,6 +8,7 @@ DISTNAME=	${PORTNAME}-dnh${PORTVERSION}
 
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	BitTorrent Client written in C for FreeBSD and Linux
+WWW=		https://www.rahul.net/dholmes/ctorrent/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
