@@ -1,5 +1,3 @@
-# Created by: bremner@unb.ca
-
 PORTNAME=	hashcash
 PORTVERSION=	1.22
 CATEGORIES=	mail
@@ -7,6 +5,7 @@ MASTER_SITES=	http://www.hashcash.org/source/
 
 MAINTAINER=	chalpin@cs.wisc.edu
 COMMENT=	Anti-spam / denial of service counter-measure tool
+WWW=		http://www.hashcash.org/
 
 LICENSE=	CPL
 LICENSE_NAME=	CPL
