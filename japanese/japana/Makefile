@@ -1,5 +1,3 @@
-# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-
 PORTNAME=	japana
 PORTVERSION=	2.0.6
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Web proxy converting Japanese into Romaji
+WWW=		https://www.cgarbs.de/japana.en.html
 
 RUN_DEPENDS=	ja-p5-Text-Kakasi>=2:japanese/p5-Text-Kakasi \
 		p5-AppConfig>=0:devel/p5-AppConfig \
