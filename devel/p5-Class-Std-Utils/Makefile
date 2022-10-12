@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Class-Std-Utils
 PORTVERSION=	0.0.3
 DISTVERSIONPREFIX=	v
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Utility subroutines for building "inside-out" objects
+WWW=		https://metacpan.org/release/Class-Std-Utils
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
