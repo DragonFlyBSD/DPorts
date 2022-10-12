@@ -1,11 +1,10 @@
-# Created by: Alexander Vereeken <Alexander88207@protonmail.com>
-
 PORTNAME=	flatery-icon-themes
 DISTVERSION=	2022-01-17
 CATEGORIES=	x11-themes
 
 MAINTAINER=	Alexander88207@protonmail.com
 COMMENT=	Flatery is an icon theme for linux in flat style
+WWW=		https://github.com/cbrnix/Flatery
 
 LICENSE=	CC-BY-NC-SA-3.0
 
