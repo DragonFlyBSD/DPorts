@@ -1,5 +1,3 @@
-# Created by: Henk van Oers <hvo.pm@xs4all.nl>
-
 PORTNAME=	Digest-Bcrypt
 PORTVERSION=	1.212
 CATEGORIES=	security perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl interface to the bcrypt digest algorithm
+WWW=		https://metacpan.org/module/Digest::Bcrypt
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
