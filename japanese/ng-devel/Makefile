@@ -1,5 +1,3 @@
-# Created by: Kawaguti Ginga <ginga-freebsd@ginganet.org>
-
 PORTNAME=	ng
 DISTVERSION=	1.5beta1
 CATEGORIES=	japanese editors
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	-devel
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Light Emacs-clone with Japanese support
+WWW=		http://tt.sakura.ne.jp/~amura/ng/
 
 CONFLICTS=	ng
 
