@@ -1,5 +1,3 @@
-# Created by: Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
-
 PORTNAME=	IO-BufferedSelect
 PORTVERSION=	1.0
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Line-buffered select interface
+WWW=		https://metacpan.org/release/IO-BufferedSelect
 
 LICENSE=	PERL
 LICENSE_NAME=	Perl license
