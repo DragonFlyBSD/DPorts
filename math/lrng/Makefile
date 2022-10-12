@@ -1,5 +1,3 @@
-# Created by: b.f. <bf@FreeBSD.org>
-
 PORTNAME=	lrng
 PORTVERSION=	20130314
 CATEGORIES=	math
@@ -15,6 +13,7 @@ EXTRACT_ONLY=
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Uniform random number generators of P. L'Ecuyer and his colleagues
+WWW=		https://www.iro.umontreal.ca/~simardr/
 
 LICENSE=	GPLv3
 
