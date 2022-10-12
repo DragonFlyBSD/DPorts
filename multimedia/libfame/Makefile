@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	libfame
 PORTVERSION=	0.9.1
 PORTREVISION=	6
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/fame/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	Video encoding library
+WWW=		http://fame.sourceforge.net/
 
 LICENSE=	LGPL20+
 LICENSE_FILE=	${WRKSRC}/COPYING
