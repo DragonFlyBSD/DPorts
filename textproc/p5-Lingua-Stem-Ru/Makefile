@@ -1,5 +1,3 @@
-# Created by: Cheng-Lung Sung <clsung@dragon2.net>
-
 PORTNAME=	Lingua-Stem-Ru
 PORTVERSION=	0.04
 CATEGORIES=	textproc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Porter stemming algorithm for Russian (KOI8-R only)
+WWW=		https://metacpan.org/release/Lingua-Stem-Ru
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
