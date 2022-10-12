@@ -1,5 +1,3 @@
-# Created by: Andrey Zakhvatov
-
 PORTNAME=	kcd
 PORTVERSION=	7.15.0
 PORTREVISION=	1
@@ -9,6 +7,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Change directory in full-screen visual mode
+WWW=		http://kcd.sourceforge.net/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
