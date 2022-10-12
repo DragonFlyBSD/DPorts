@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Function-Parameters
 PORTVERSION=	2.001003
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Subroutine definitions with parameter lists
+WWW=		https://metacpan.org/release/Function-Parameters
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
