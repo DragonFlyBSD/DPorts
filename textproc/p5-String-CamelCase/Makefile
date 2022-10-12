@@ -1,5 +1,3 @@
-# Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
-
 PORTNAME=	String-CamelCase
 PORTVERSION=	0.04
 CATEGORIES=	textproc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Perl module for camelcase, de-camelcase
+WWW=		https://metacpan.org/release/String-CamelCase
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
