@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Data-Sah-Normalize
 PORTVERSION=	0.051
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Normalize Sah schema
+WWW=		https://metacpan.org/release/Data-Sah-Normalize
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
