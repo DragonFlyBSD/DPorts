@@ -1,5 +1,3 @@
-# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-
 PORTNAME=	metalink
 PORTVERSION=	1.3
 CATEGORIES=	misc
@@ -9,6 +7,7 @@ DISTNAME=	checker-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Python script to check metalink files and complete a basic download
+WWW=		http://metalinks.sourceforge.net/
 
 LICENSE=	GPLv2+
 
