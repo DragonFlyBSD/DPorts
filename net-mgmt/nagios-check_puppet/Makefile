@@ -1,5 +1,3 @@
-# Created by: Alexey V. Degtyarev
-
 PORTNAME=	check_puppet
 PORTVERSION=	1.3
 CATEGORIES=	net-mgmt
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	nagios-
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Nagios plugin for checking Puppet daemon availability
+WWW=		http://renatasystems.org/freebsd/check_puppet.html
 
 NO_BUILD=	yes
 
