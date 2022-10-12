@@ -1,5 +1,3 @@
-# Created by: George Reid <greid@FreeBSD.org>
-
 PORTNAME=	sbagen
 PORTVERSION=	1.4.5
 CATEGORIES=	audio
@@ -7,6 +5,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Sequenced binaural wave generator
+WWW=		http://sbagen.sourceforge.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING.txt
