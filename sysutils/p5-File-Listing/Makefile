@@ -1,5 +1,3 @@
-# Created by: Frederic Culot <culot@FreeBSD.org>
-
 PORTNAME=	File-Listing
 PORTVERSION=	6.15
 CATEGORIES=	sysutils perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Parse directory listings
+WWW=		https://metacpan.org/release/File-Listing
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
