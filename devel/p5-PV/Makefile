@@ -1,5 +1,3 @@
-# Created by: James FitzGibbon <jfitz@FreeBSD.org>
-
 PORTNAME=	PV
 PORTVERSION=	1.5
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DISTNAME=	PerlVision-${PORTVERSION}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Perl5 library for text-mode user interface widgets
+WWW=		https://metacpan.org/release/PerlVision
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
