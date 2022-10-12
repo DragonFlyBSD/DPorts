@@ -1,5 +1,3 @@
-# Created by: Adam Weinberger <adamw@FreeBSD.org>
-
 PORTNAME=	File-Slurper
 PORTVERSION=	0.013
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Simple, sane and efficient module to slurp a file
+WWW=		https://metacpan.org/pod/File::Slurper
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
