@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Class-Multimethods-Pure
 PORTVERSION=	0.13
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Method-ordered multimethod dispatch
+WWW=		https://metacpan.org/release/Class-Multimethods-Pure
 
 USES=		perl5
 USE_PERL5=	configure
