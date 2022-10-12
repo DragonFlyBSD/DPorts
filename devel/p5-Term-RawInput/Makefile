@@ -1,5 +1,3 @@
-# Created by: Frederic Culot <culot@FreeBSD.org>
-
 PORTNAME=	Term-RawInput
 PORTVERSION=	1.23
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Drop-in replacement for <STDIN> with handling of non-standard keys
+WWW=		https://metacpan.org/release/Term-RawInput
 
 LICENSE=	GPLv2
 
