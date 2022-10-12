@@ -1,5 +1,3 @@
-# Created by: Henrik Motakef <henrik.motakef@web.de>
-
 PORTNAME=	port
 PORTVERSION=	2002.10.02.1
 PORTREVISION=	3
@@ -12,6 +10,7 @@ DISTNAME=	clocc-${PORTNAME}_2002-10-02-1
 
 MAINTAINER=	olgeni@FreeBSD.org
 COMMENT=	Cross-Lisp portability package
+WWW=		http://clocc.sourceforge.net
 
 WRKSRC=		${WRKDIR}/clocc-${PORTNAME}
 NO_BUILD=	yes
