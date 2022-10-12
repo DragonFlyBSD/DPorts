@@ -1,5 +1,3 @@
-# Created by: ache
-
 PORTNAME=	mnogosearch
 PORTVERSION=	3.4.1
 CATEGORIES=	www databases
@@ -7,6 +5,7 @@ MASTER_SITES=	http://www.mnogosearch.org/Download/
 
 MAINTAINER=	crees@FreeBSD.org
 COMMENT=	Full featured SQL-based hypertext search engine
+WWW=		http://www.mnogosearch.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
