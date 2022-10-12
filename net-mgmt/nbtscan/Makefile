@@ -1,11 +1,10 @@
-# Created by: Kris Kennaway <kris@FreeBSD.org>
-
 PORTNAME=	nbtscan
 PORTVERSION=	1.7.2
 CATEGORIES=	net-mgmt
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	NetBIOS name network scanner
+WWW=		https://github.com/resurrecting-open-source-projects/nbtscan
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
