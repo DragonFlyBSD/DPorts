@@ -1,5 +1,3 @@
-# Created by: Anton Berezin <tobez@FreeBSD.org>
-
 PORTNAME=	Params-Check
 PORTVERSION=	0.38
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Generic input parsing/checking mechanism for Perl
+WWW=		https://metacpan.org/release/Params-Check
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
