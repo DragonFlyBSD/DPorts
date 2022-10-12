@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Google-ProtocolBuffers
 PORTVERSION=	0.12
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Simple interface to Google Protocol Buffers
+WWW=		https://metacpan.org/release/Google-ProtocolBuffers
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
