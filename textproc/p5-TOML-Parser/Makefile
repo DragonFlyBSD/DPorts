@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	TOML-Parser
 PORTVERSION=	0.91
 CATEGORIES=	textproc perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Simple toml parser
+WWW=		https://metacpan.org/release/TOML-Parser
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
