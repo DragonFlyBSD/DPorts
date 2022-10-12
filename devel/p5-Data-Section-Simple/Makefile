@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Data-Section-Simple
 PORTVERSION=	0.07
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Read data from __DATA__
+WWW=		https://metacpan.org/release/Data-Section-Simple
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
