@@ -1,5 +1,3 @@
-# Created by: Brian Somers <brian@FreeBSD.org>
-
 PORTNAME=	arpwatch
 PORTVERSION=	3.3
 CATEGORIES=	net-mgmt
@@ -8,6 +6,7 @@ MASTER_SITES=	https://ee.lbl.gov/downloads/arpwatch/ \
 
 MAINTAINER=	leres@FreeBSD.org
 COMMENT=	Monitor arp & rarp requests
+WWW=		https://ee.lbl.gov/downloads/arpwatch/
 
 LICENSE=	BSD3CLAUSE
 
