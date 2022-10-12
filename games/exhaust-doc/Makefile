@@ -1,5 +1,3 @@
-# Created by: Alejandro Pulver <alejandro@varnet.biz>
-
 PORTNAME=	exhaust
 PORTVERSION=	1.9.2
 CATEGORIES=	games
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	-doc
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Redcode simulator easy to embed into applications (docs)
+WWW=		https://corewar.co.uk/pihlaja/exhaust/
 
 NO_BUILD=	yes
 
