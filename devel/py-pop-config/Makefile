@@ -1,5 +1,3 @@
-# Created by: Kirill Ponomarev <krion@FreeBSD.org>
-
 PORTNAME=		pop-config
 PORTVERSION=	8.0.2
 CATEGORIES=		devel python
@@ -7,6 +5,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	krion@FreeBSD.org
 COMMENT=	Tool for creating configuration options for pop projects
+WWW=		https://gitlab.com/saltstack/pop/pop-config
 
 LICENSE=	APACHE20
 
