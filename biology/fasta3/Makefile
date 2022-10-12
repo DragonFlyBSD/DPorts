@@ -1,5 +1,3 @@
-# Created by: Johann Visagie <johann@egenetics.com>
-
 PORTNAME=	fasta3
 PORTVERSION=	36.3.8
 CATEGORIES=	biology
@@ -9,6 +7,7 @@ DIST_SUBDIR=	fasta3/2014-01-29
 
 MAINTAINER=	wendell@bsd.com.br
 COMMENT=	Collection of programs for searching DNA and protein databases
+WWW=		http://fasta.bioch.virginia.edu/
 
 LICENSE=	Fasta
 LICENSE_NAME=	Fasta program copyright W. Pearson and U.Virginia
