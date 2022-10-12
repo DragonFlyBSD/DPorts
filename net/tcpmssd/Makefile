@@ -1,7 +1,6 @@
-# Created by: ru
-
 PORTNAME=	tcpmssd
 PORTVERSION=	1.1
+PORTREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	# none
 DISTFILES=	# none
