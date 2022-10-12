@@ -1,5 +1,3 @@
-# Created by: Vladimir Timofeev <vovkasm@gmail.com>
-
 PORTNAME=	AnyEvent-HTTP
 PORTVERSION=	2.22
 PORTEPOCH=	2
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	vovkasm@gmail.com
 COMMENT=	Simple but non-blocking HTTP/HTTPS client
+WWW=		https://metacpan.org/release/AnyEvent-HTTP
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
