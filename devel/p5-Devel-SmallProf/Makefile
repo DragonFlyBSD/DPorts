@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	Devel-SmallProf
 PORTVERSION=	2.02
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Per-line Perl profiler
+WWW=		https://metacpan.org/release/Devel-SmallProf
 
 USES=		perl5
 USE_PERL5=	configure
