@@ -1,13 +1,12 @@
-# Created by: Dima Dorfman <dima@unixfreak.org>
-
 PORTNAME=	mg
 PORTVERSION=	7.0
 PORTEPOCH=	1
 CATEGORIES=	editors
 MASTER_SITES=	https://github.com/ibara/mg/releases/download/mg-${PORTVERSION}/
 
-MAINTAINER=	tobik@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Small, fast Emacs-like editor
+WWW=		https://github.com/ibara/mg
 
 LICENSE=	PD
 
