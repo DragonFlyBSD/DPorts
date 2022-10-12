@@ -1,5 +1,3 @@
-# Created by: Frederic Culot <culot@FreeBSD.org>
-
 PORTNAME=	HTTP-Date
 PORTVERSION=	6.05
 CATEGORIES=	www perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Conversion routines for the HTTP protocol date formats
+WWW=		https://metacpan.org/release/HTTP-Date
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
