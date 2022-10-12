@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	Apache-Config-Preproc
 PORTVERSION=	1.07
 CATEGORIES=	www perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Preprocess Apache server configuration files
+WWW=		https://metacpan.org/release/Apache-Config-Preproc
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/LICENSE
