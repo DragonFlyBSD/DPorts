@@ -1,5 +1,3 @@
-# Created by: James FitzGibbon <jfitz@FreeBSD.org>
-
 PORTNAME=	Storable
 PORTVERSION=	3.25
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Persistency for perl data structures
+WWW=		https://metacpan.org/release/Storable
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
