@@ -1,5 +1,3 @@
-# Created by: Dreamcat4 <dreamcat4@gmail.com>
-
 PORTNAME=	dtv-scan-tables
 PORTVERSION=	20220307
 CATEGORIES=	multimedia
@@ -7,6 +5,7 @@ MASTER_SITES=	LOCAL/decke
 
 MAINTAINER=	decke@FreeBSD.org
 COMMENT=	Digital TV scan tables from linuxtv.org
+WWW=		https://linuxtv.org/
 
 LICENSE=	GPLv2 LGPL21
 LICENSE_COMB=	multi
