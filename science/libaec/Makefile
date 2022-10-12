@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	libaec
 PORTVERSION=	1.0.6
 CATEGORIES=	science
@@ -7,6 +5,7 @@ MASTER_SITES=	https://gitlab.dkrz.de/k202009/libaec/uploads/45b10e42123edd26ab7b
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Adaptive entropy coding library
+WWW=		https://gitlab.dkrz.de/k202009/libaec
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
