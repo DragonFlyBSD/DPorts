@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Search-Odeum
 PORTVERSION=	0.02
 PORTREVISION=	3
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Perl interface to the Odeum inverted index API
+WWW=		https://metacpan.org/release/Search-Odeum
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
