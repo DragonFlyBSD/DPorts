@@ -1,5 +1,3 @@
-# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-
 PORTNAME=	cabextract
 PORTVERSION=	1.9.1
 CATEGORIES=	archivers
@@ -8,6 +6,7 @@ MASTER_SITES=	https://www.cabextract.org.uk/ \
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Program to extract Microsoft cabinet (.CAB) files
+WWW=		https://www.cabextract.org.uk/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
