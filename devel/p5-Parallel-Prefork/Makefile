@@ -1,5 +1,3 @@
-# Created by: Anton Berezin <tobez@FreeBSD.org>
-
 PORTNAME=	Parallel-Prefork
 PORTVERSION=	0.18
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Simple prefork server framework
+WWW=		https://metacpan.org/release/Parallel-Prefork
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
