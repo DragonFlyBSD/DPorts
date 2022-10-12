@@ -1,5 +1,3 @@
-# Created by: Mark Felder <feld@FreeBSD.org>
-
 PORTNAME=	jaraco.itertools
 PORTVERSION=	6.2.1
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Tools for working with iterables
+WWW=		https://github.com/jaraco/jaraco.itertools
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
