@@ -1,5 +1,3 @@
-# Created by: Yi-Jheng Lin <yzlin@FreeBSD.org>
-
 PORTNAME=	shflags
 PORTVERSION=	1.2.3
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Command-line flags module for Unix shell scripts
+WWW=		https://github.com/kward/shflags
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
