@@ -1,5 +1,3 @@
-# Created by: Lars Thegler <lth@FreeBSD.org>
-
 PORTNAME=	CPAN-Recent-Uploads
 PORTVERSION=	0.16
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Find the distributions recently uploaded to CPAN
+WWW=		https://metacpan.org/release/CPAN-Recent-Uploads
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
