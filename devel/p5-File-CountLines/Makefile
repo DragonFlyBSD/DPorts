@@ -1,5 +1,3 @@
-# Created by: Anton Berezin
-
 PORTNAME=	File-CountLines
 PORTVERSION=	0.0.3
 DISTVERSIONPREFIX=	v
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Efficiently count the number of line breaks in a file
+WWW=		https://metacpan.org/release/File-CountLines
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
