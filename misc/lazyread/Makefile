@@ -1,5 +1,3 @@
-# Created by: Michael L. Hostbaek (mich@freebsdcluster.org)
-
 PORTNAME=	lazyread
 PORTVERSION=	2.0
 CATEGORIES=	misc
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}%20${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Lazyread can auto-scroll files on your screen in movie credit fashion
+WWW=		http://lazyread.sourceforge.net/
 
 USES=		ncurses
 
