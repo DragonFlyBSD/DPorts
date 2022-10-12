@@ -1,5 +1,3 @@
-# Created by: Mark Blackman <tmb_ports@maddog.u-net.com>
-
 PORTNAME=	cronolog
 PORTVERSION=	1.6.2
 PORTREVISION=	6
@@ -7,6 +5,7 @@ CATEGORIES=	sysutils
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Web log rotation utility that provides datestamp filenames
+WWW=		https://github.com/fordmason/cronolog
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
