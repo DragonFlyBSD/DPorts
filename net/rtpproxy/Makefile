@@ -1,5 +1,3 @@
-# Created by: sobomax
-
 PORTNAME=	rtpproxy
 PORTVERSION=	2.1.1
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	net
 
 MAINTAINER=	farrokhi@FreeBSD.org
 COMMENT=	High-performance RTP proxy server for the SIP Express Router (SER)
+WWW=		https://www.rtpproxy.org/
 
 LICENSE=	BSD2CLAUSE
 
