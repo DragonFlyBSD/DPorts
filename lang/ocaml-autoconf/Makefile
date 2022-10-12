@@ -1,5 +1,3 @@
-# Created by: stas
-
 PORTNAME=	autoconf
 PORTVERSION=	1.1
 CATEGORIES=	lang
@@ -9,6 +7,7 @@ DISTNAME=	${PKGNAMEPREFIX}${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Autoconf module for ocaml
+WWW=		https://forge.ocamlcore.org/projects/ocaml-autoconf/
 
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/${PKGNAMEPREFIX}${PORTNAME}-1.0
