@@ -1,5 +1,3 @@
-# Created by: Muhammad Moinur Rahman <5u623l20@gmail.com>
-
 PORTNAME=	Term-ReadLine
 PORTVERSION=	1.14
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Perl interface to various readline packages
+WWW=		https://github.com/rafl/term-readline
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
