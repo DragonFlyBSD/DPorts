@@ -1,5 +1,3 @@
-# Created by: Stanislav Sedov <stas@FreeBSD.org>
-
 PORTNAME=	squidview
 PORTVERSION=	0.86
 CATEGORIES=	www
@@ -7,6 +5,7 @@ MASTER_SITES=	http://www.rillion.net/squidview/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Monitor squid statistics in realtime
+WWW=		http://www.rillion.net/squidview
 
 LICENSE=	GPLv2
 
