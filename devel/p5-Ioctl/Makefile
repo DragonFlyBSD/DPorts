@@ -1,5 +1,3 @@
-# Created by: will
-
 PORTNAME=	Ioctl
 PORTVERSION=	0.81
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module that provides a way to get the value of C ioctl constants
+WWW=		https://metacpan.org/release/JPRIT/Ioctl-0.81
 
 USES=		perl5
 USE_PERL5=	configure
