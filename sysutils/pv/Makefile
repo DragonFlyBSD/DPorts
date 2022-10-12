@@ -1,5 +1,3 @@
-# Created by: Daniel Roethlisberger <daniel@roe.ch>
-
 PORTNAME=	pv
 PORTVERSION=	1.6.20
 CATEGORIES=	sysutils
@@ -7,6 +5,7 @@ MASTER_SITES=	http://www.ivarch.com/programs/sources/
 
 MAINTAINER=	martymac@FreeBSD.org
 COMMENT=	Pipe throughput monitor
+WWW=		https://www.ivarch.com/programs/pv.shtml
 
 LICENSE=	ART20
 
