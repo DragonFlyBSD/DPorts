@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	VM-EC2
 PORTVERSION=	1.28
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Perl interface to Amazon EC2 services
+WWW=		https://metacpan.org/release/VM-EC2
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
