@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Inline-TT
 PORTVERSION=	0.07
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Provides inline support for template toolkit 2.x
+WWW=		https://metacpan.org/release/Inline-TT
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
