@@ -1,5 +1,3 @@
-# Created by: clsung
-
 PORTNAME=	Log-Minimal
 PORTVERSION=	0.19
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Minimal but customizable logger
+WWW=		https://metacpan.org/release/Log-Minimal
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
