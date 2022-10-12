@@ -1,5 +1,3 @@
-# Created by: rkw
-
 PORTNAME=	mgetty
 PORTVERSION=	1.1.37
 PORTREVISION=	2
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}${PORTVERSION}-Jun05
 
 MAINTAINER=	olgeni@FreeBSD.org
 COMMENT=	Handle external logins, send and receive faxes
+WWW=		http://mgetty.greenie.net/
 
 LICENSE=	GPLv2
 
