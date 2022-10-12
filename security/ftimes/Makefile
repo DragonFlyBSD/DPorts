@@ -1,5 +1,3 @@
-# Created by: Klayton Monroe <klm@uidzero.org>
-
 PORTNAME=		ftimes
 PORTVERSION=		3.11.0
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=		SF
 
 MAINTAINER=		klm@uidzero.org
 COMMENT=		System baselining and evidence collection tool
+WWW=		http://ftimes.sourceforge.net/FTimes/
 
 LICENSE=		BSD3CLAUSE APACHE20 MIT
 LICENSE_COMB=		multi
