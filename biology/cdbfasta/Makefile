@@ -1,5 +1,3 @@
-# Created by: Dan Siercks <dsiercks@uwm.edu>
-
 PORTNAME=	cdbfasta
 PORTVERSION=	2010.07.22
 CATEGORIES=	biology
@@ -7,6 +5,7 @@ MASTER_SITES=	http://acadix.biz/Ports/distfiles/
 
 MAINTAINER=	jwb@FreeBSD.org
 COMMENT=	Fast indexing and retrieval of FASTA records from flat file databases
+WWW=		https://sourceforge.net/projects/cdbfasta/
 
 # LICENSE=	unspecified
 
