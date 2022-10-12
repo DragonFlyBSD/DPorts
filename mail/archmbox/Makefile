@@ -1,5 +1,3 @@
-# Created by: Talal Al-Dik <tad@vif.com>
-
 PORTNAME=	archmbox
 PORTVERSION=	4.10.0
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/adc-${PORTNAME}/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Email archiver that parses mailboxes and performs actions
+WWW=		http://adc-archmbox.sourceforge.net/
 
 LICENSE=	GPLv2
 
