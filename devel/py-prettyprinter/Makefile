@@ -1,5 +1,3 @@
-# Created by: Patrice Clement <monsieurp@gentoo.org>
-
 PORTNAME=	prettyprinter
 PORTVERSION=	0.18.0
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	monsieurp@gentoo.org
 COMMENT=	Syntax-highlighting, declarative and composable pretty printer
+WWW=		https://pypi.org/project/prettyprinter/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
