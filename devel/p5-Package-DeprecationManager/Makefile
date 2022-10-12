@@ -1,5 +1,3 @@
-# Created by: Frederic Culot <frederic@culot.org>
-
 PORTNAME=	Package-DeprecationManager
 PORTVERSION=	0.17
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Manage deprecation warnings for your distribution
+WWW=		https://metacpan.org/release/Package-DeprecationManager
 
 LICENSE=	ART20
 LICENSE_FILE=	${WRKSRC}/LICENSE
