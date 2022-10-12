@@ -1,5 +1,3 @@
-# Created by: Hiten Pandya <hiten@uk.FreeBSD.org>
-
 PORTNAME=	larbin
 PORTVERSION=	2.6.3
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	HTTP crawler with an easy interface
+WWW=		http://www.ailleret.com/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
