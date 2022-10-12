@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Hash-Objectify
 PORTVERSION=	0.008
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Create objects from hashes on the fly
+WWW=		https://metacpan.org/release/Hash-Objectify
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
