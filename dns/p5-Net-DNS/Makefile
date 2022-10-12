@@ -1,5 +1,3 @@
-# Created by: James FitzGibbon <jfitz@FreeBSD.org>
-
 PORTNAME=	Net-DNS
 PORTVERSION=	1.34
 PORTEPOCH=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Perl5 interface to the DNS resolver, and dynamic updates
+WWW=		https://metacpan.org/release/Net-DNS
 
 LICENSE=	MIT
 
