@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	JavaScript-Minifier-XS
 PORTVERSION=	0.15
 CATEGORIES=	textproc www perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	XS based JavaScript minifier
+WWW=		https://metacpan.org/release/JavaScript-Minifier-XS
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
