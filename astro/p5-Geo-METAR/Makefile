@@ -1,5 +1,3 @@
-# Created by: will
-
 PORTNAME=	Geo-METAR
 PORTVERSION=	1.15
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module that processes METAR information from NOAA sources
+WWW=		https://jeremy.zawodny.com/perl/Geo-METAR/
 
 LICENSE=	GPLv2+
 
