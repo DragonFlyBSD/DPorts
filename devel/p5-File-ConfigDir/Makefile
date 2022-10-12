@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	File-ConfigDir
 PORTVERSION=	0.021
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Get directories of configuration files
+WWW=		https://metacpan.org/release/File-ConfigDir
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
