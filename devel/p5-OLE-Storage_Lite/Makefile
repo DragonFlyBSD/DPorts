@@ -1,5 +1,3 @@
-# Created by: Jason Portwood <jason@iac.net>
-
 PORTNAME=	OLE-Storage_Lite
 PORTVERSION=	0.20
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module for OLE document interface
+WWW=		https://metacpan.org/release/OLE-Storage_Lite
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
