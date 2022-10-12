@@ -1,5 +1,3 @@
-# Created by: Frank Laszlo <laszlof@vonostingroup.com>
-
 PORTNAME=	ncrypt
 PORTVERSION=	0.8.1
 CATEGORIES=	security
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-${PORTVERSION:R}/${PORTNAME}-${PORTVERS
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Advanced AES file encryption tool
+WWW=		http://ncrypt.sourceforge.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
