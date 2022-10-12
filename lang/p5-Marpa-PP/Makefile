@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Marpa-PP
 PORTVERSION=	0.014
 DISTVERSIONSUFFIX=	000
@@ -11,6 +9,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Pure Perl version of Marpa
+WWW=		https://metacpan.org/release/JKEGL/Marpa-PP-0.014000
 
 LICENSE=	LGPL3+
 LICENSE_FILE=	${WRKSRC}/COPYING.LESSER
