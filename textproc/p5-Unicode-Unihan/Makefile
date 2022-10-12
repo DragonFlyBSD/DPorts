@@ -1,5 +1,3 @@
-# Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-
 PORTNAME=	Unicode-Unihan
 PORTVERSION=	0.04.3
 CATEGORIES=	textproc perl5
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:R}${PORTVERSION:E}
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	The Unihan Data Base 5.1.0
+WWW=		https://metacpan.org/release/Unicode-Unihan
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
