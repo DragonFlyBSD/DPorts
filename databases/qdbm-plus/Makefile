@@ -1,5 +1,3 @@
-# Created by: Michael Johnson <ahze@FreeBSD.org>
-
 PORTNAME=	qdbm
 PORTVERSION=	1.8.78
 PORTREVISION=	5
@@ -9,6 +7,7 @@ PKGNAMESUFFIX=	-plus
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	C++ API for QDBM
+WWW=		https://dbmx.net/qdbm/
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKDIR}/${PORTNAME}-${PORTVERSION}/COPYING
