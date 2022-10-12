@@ -1,5 +1,3 @@
-# Created by: issei
-
 PORTNAME=	ctags
 PORTVERSION=	5.8j2
 CATEGORIES=	japanese devel
@@ -7,6 +5,7 @@ MASTER_SITES=	http://hp.vector.co.jp/authors/VA025040/ctags/downloads/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Feature-filled tagfile generator with Japanese support
+WWW=		https://hp.vector.co.jp/authors/VA025040/ctags/
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-macro-patterns --with-readlib
