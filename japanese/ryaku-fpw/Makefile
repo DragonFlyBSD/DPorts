@@ -1,5 +1,3 @@
-# Created by: Satoshi Taoka <taoka@FreeBSD.org>
-
 PORTNAME=	ryaku-fpw
 PORTVERSION=	1.0.1
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	Ryaku-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Abbreviation (alphabet-->Japanese) dictionary (EPWING V1 format)
+WWW=		http://openlab.ring.gr.jp/edict/fpw/
 
 USES=		zip
 NO_BUILD=	yes
