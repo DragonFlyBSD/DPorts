@@ -1,5 +1,3 @@
-# Created by: Anton Berezin <tobez@FreeBSD.org>
-
 PORTNAME=	CGI-Prototype
 PORTVERSION=	0.9054
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Create a CGI application by subclassing
+WWW=		https://metacpan.org/release/CGI-Prototype
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
