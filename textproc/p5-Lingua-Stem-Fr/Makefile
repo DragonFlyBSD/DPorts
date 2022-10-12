@@ -1,5 +1,3 @@
-# Created by: Cheng-Lung Sung <clsung@dragon2.net>
-
 PORTNAME=	Lingua-Stem-Fr
 PORTVERSION=	0.02
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Perl French Stemming
+WWW=		https://metacpan.org/release/Lingua-Stem-Fr
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
