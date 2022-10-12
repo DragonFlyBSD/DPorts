@@ -1,5 +1,3 @@
-# Created by: Alexander Nusov <alexander.nusov@nfvexpress.com>
-
 PORTNAME=	python-editor
 PORTVERSION=	1.0.4
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Programmatically open an editor, capture the result
+WWW=		https://github.com/fmoo/python-editor
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
