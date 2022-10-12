@@ -1,5 +1,3 @@
-# Created by: Aaron Dalton <aaron@daltons.ca>
-
 PORTNAME=	Smart-Comments
 PORTVERSION=	1.06
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Comments that do more than just sit there
+WWW=		https://metacpan.org/release/Smart-Comments
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
