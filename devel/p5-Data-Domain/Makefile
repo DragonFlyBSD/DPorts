@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Data-Domain
 PORTVERSION=	1.07
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Data description and validation
+WWW=		https://metacpan.org/release/Data-Domain
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
