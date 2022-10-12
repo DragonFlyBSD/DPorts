@@ -1,5 +1,3 @@
-# Created by: Rudolf Polzer <freebsd-dr@durchnull.de>
-
 PORTNAME=	treewm
 PORTVERSION=	0.4.5
 PORTREVISION=	6
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Window manager that arranges windows in a tree
+WWW=		http://treewm.sourceforge.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
