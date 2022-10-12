@@ -1,5 +1,3 @@
-# Created by: Michael Kohn <mike@mikekohn.net>
-
 PORTNAME=	nakenchat
 DISTVERSION=	3.00b1
 CATEGORIES=	net
@@ -7,6 +5,7 @@ MASTER_SITES=	http://downloads.mikekohn.net/nakenchat/
 
 MAINTAINER=	portmaster@BSDforge.com
 COMMENT=	Small (under 50k) chat server with many features
+WWW=		http://nakenchat.naken.cc/
 
 LICENSE=	GPLv2
 
