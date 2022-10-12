@@ -1,5 +1,3 @@
-# Created by: Kurt Jaeger <fbsd-ports@opsec.eu>
-
 PORTNAME=	Math-Int128
 PORTVERSION=	0.22
 PORTREVISION=	6
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	pi@FreeBSD.org
 COMMENT=	Manipulate 128 bits integers in Perl
+WWW=		https://metacpan.org/release/Math-Int128
 
 LICENSE=	ART10
 
