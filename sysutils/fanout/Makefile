@@ -1,5 +1,3 @@
-# Created by: janos.mohacsi@bsd.hu
-
 PORTNAME=	fanout
 PORTVERSION=	0.6.1
 CATEGORIES=	sysutils
@@ -9,6 +7,7 @@ MASTER_SITES=	http://www.stearns.org/fanout/ \
 
 MAINTAINER=	jmohacsi@bsd.hu
 COMMENT=	Tool to run commands on multiple machines
+WWW=		http://www.stearns.org/fanout/
 
 USES=		perl5
 USE_PERL5=	run
