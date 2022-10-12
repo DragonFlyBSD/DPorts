@@ -1,5 +1,3 @@
-# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-
 PORTNAME=	Hash-Merge-Simple
 PORTVERSION=	0.051
 PORTREVISION=	5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Recursively merge two or more hashes, simply
+WWW=		https://metacpan.org/release/Hash-Merge-Simple
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
