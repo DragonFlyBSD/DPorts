@@ -1,10 +1,12 @@
 PORTNAME=	sslsplit
 PORTVERSION=	0.5.5
+PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://mirror.roe.ch/rel/sslsplit/
 
 MAINTAINER=	swills@FreeBSD.org
 COMMENT=	Transparent and scalable SSL/TLS interception
+WWW=		https://www.roe.ch/SSLsplit
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
