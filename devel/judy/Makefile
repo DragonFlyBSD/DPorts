@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	Judy
 DISTVERSION=	1.0.5
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME:tl}/${PORTNAME:tl}/${PORTNAME}-${DISTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	General purpose dynamic array
+WWW=		http://judy.sourceforge.net/
 
 LICENSE=	LGPL21
 
