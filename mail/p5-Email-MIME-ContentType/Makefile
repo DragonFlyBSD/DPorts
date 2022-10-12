@@ -1,11 +1,12 @@
 PORTNAME=	Email-MIME-ContentType
-PORTVERSION=	1.026
+PORTVERSION=	1.027
 CATEGORIES=	mail perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Parse a MIME Content-Type Header
+WWW=		https://metacpan.org/release/Email-MIME-ContentType
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
