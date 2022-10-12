@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Moos
 PORTVERSION=	0.30
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Moo s{imple,peedy,ingle}
+WWW=		https://metacpan.org/release/Moos
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
