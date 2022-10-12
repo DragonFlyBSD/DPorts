@@ -1,5 +1,3 @@
-# Created by: Mark R V Murray <mark@grondar.za>
-
 PORTNAME=	par
 PORTVERSION=	1.53.0
 PKGNAMESUFFIX=	_format
@@ -9,6 +7,7 @@ DISTNAME=	Par-${PORTVERSION}
 
 MAINTAINER=	markm@FreeBSD.org
 COMMENT=	Paragraph reformatter for email
+WWW=		http://www.nicemice.net/par/
 
 CONFLICTS=	quake-par
 
