@@ -1,5 +1,3 @@
-# Created by: Devin Teske <dteske@FreeBSD.org>
-
 PORTNAME=	sysrc
 PORTVERSION=	5.2
 CATEGORIES=	sysutils
@@ -7,6 +5,7 @@ MASTER_SITES=	http://druidbsd.sourceforge.net/download/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Utility to get or set rc.conf(5) values
+WWW=		http://druidbsd.sourceforge.net/
 
 LICENSE=	BSD2CLAUSE
 
