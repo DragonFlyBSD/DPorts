@@ -1,5 +1,3 @@
-# Created by: gary@hayers.org
-
 PORTNAME=	mail2nntp
 PORTVERSION=	1.0
 CATEGORIES=	news mail
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/Stable%201.0/
 
 MAINTAINER=	gary@hayers.org
 COMMENT=	Simple mail to news gateway
+WWW=		https://sourceforge.net/projects/mail2nntp/
 
 LICENSE=	GPLv2
 
