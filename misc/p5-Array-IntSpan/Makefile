@@ -1,5 +1,3 @@
-# Created by: Seamus Venasse <svenasse@polaris.ca>
-
 PORTNAME=	Array-IntSpan
 PORTVERSION=	2.004
 CATEGORIES=	misc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Module for handling arrays using IntSpan techniques
+WWW=		https://metacpan.org/release/Array-IntSpan
 
 LICENSE=	ART20
 LICENSE_FILE=	${WRKSRC}/LICENSE
