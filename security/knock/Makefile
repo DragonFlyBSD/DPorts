@@ -1,5 +1,3 @@
-# Created by: Shaun Amott <shaun@inerd.com>
-
 PORTNAME=	knock
 PORTVERSION=	0.5
 PORTREVISION=	1
@@ -10,6 +8,7 @@ MASTER_SITES=	http://www.zeroflux.org/proj/knock/files/ \
 
 MAINTAINER=	sbz@FreeBSD.org
 COMMENT=	Flexible port-knocking server and client
+WWW=		http://www.zeroflux.org/projects/knock
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
