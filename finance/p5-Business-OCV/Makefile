@@ -1,5 +1,3 @@
-# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-
 PORTNAME=	Business-OCV
 PORTVERSION=	0.1
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Interface to the Ingenico OCV Server
+WWW=		https://metacpan.org/release/Business-OCV
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
