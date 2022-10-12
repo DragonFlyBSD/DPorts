@@ -1,5 +1,3 @@
-# Created by: Anton Berezin <tobez@FreeBSD.org>
-
 PORTNAME=	Data-Validate-Domain
 PORTVERSION=	0.15
 CATEGORIES=	dns perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Domain validation methods in Perl
+WWW=		https://metacpan.org/release/Data-Validate-Domain
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
