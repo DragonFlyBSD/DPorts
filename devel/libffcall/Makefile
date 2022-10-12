@@ -1,5 +1,3 @@
-# Created by: jagapen@home.com
-
 PORTNAME=	libffcall
 PORTVERSION=	2.4
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	GNU
 
 MAINTAINER=	ndowens04@gmail.com
 COMMENT=	Foreign function call libraries
+WWW=		https://www.haible.de/bruno/packages-ffcall.html
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
