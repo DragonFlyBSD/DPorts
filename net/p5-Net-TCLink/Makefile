@@ -1,5 +1,3 @@
-# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-
 PORTNAME=	Net-TCLink
 PORTVERSION=	3.4
 PORTREVISION=	2
@@ -10,6 +8,7 @@ DISTNAME=	Net_TCLink.pm-${PORTVERSION}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Module to for connecting to the TrustCommerce payment gateway
+WWW=		https://metacpan.org/release/Net_TCLink
 
 LICENSE=	LGPL21
 
