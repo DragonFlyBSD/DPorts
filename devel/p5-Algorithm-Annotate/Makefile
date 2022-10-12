@@ -1,5 +1,3 @@
-# Created by: Autrijus Tang <autrijus@autrijus.org>
-
 PORTNAME=	Algorithm-Annotate
 PORTVERSION=	0.10
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Represent a series of changes in annotate form
+WWW=		https://metacpan.org/release/Algorithm-Annotate
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
