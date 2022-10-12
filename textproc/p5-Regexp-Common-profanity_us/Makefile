@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Regexp-Common-profanity_us
 PORTVERSION=	4.112150
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Provide regexes for U.S. profanity
+WWW=		https://metacpan.org/release/Regexp-Common-profanity_us
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
