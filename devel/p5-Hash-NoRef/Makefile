@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Hash-NoRef
 PORTVERSION=	0.03
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	HASH that store values without increase the reference count
+WWW=		https://metacpan.org/release/Hash-NoRef
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
