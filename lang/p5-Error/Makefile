@@ -1,5 +1,3 @@
-# Created by: Peter van Heusden <pvh@egenetics.com>
-
 PORTNAME=	Error
 PORTVERSION=	0.17029
 CATEGORIES=	lang perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Error/exception handling in object-oriented programming style
+WWW=		https://metacpan.org/release/Error
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
