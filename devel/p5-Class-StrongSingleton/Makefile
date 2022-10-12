@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	Class-StrongSingleton
 PORTVERSION=	0.02
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Stronger and more secure Singleton base class
+WWW=		https://metacpan.org/release/Class-StrongSingleton
 
 USES=		perl5
 USE_PERL5=	configure
