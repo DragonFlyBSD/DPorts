@@ -1,5 +1,3 @@
-# Created by: Janos.Mohacsi@bsd.hu
-
 PORTNAME=	beacon
 PORTVERSION=	1.4
 PORTREVISION=	4
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/multicastbeacon/multicastbeacon/beacon%20v${PORTVERSION}
 
 MAINTAINER=	portmaster@bsdforge.com
 COMMENT=	Beacon active measurement tool to monitor multicast
+WWW=		https://sourceforge.net/projects/multicastbeacon/
 
 LICENSE=	BSD4CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING
