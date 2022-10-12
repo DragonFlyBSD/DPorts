@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Test-TempDir-Tiny
 PORTVERSION=	0.018
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Temporary directories that stick around when tests fail
+WWW=		https://metacpan.org/release/Test-TempDir-Tiny
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
