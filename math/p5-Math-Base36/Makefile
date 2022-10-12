@@ -1,5 +1,3 @@
-# Created by: Yi-Hsuan Hsin <mhsin@mhsin.org>
-
 PORTNAME=	Math-Base36
 PORTVERSION=	0.14
 PORTEPOCH=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	svysh.fbsd@gmail.com
 COMMENT=	Encoding and decoding of base36 strings
+WWW=		https://metacpan.org/release/Math-Base36
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
