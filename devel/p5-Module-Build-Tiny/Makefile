@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-#
 # If you have compelling evidence that some ports need at least this version of
 # p5-Module-Build-Tiny to build, be sure to update the BUILD_DEPENDS version in
 # Mk/Uses/perl5.mk.
@@ -13,6 +11,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Tiny replacement for Module::Build
+WWW=		https://metacpan.org/release/Module-Build-Tiny
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
