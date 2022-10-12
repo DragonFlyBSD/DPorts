@@ -1,5 +1,3 @@
-# Created by: Pedro Giffuni <giffunip@asme.org>
-
 PORTNAME=	fastcap
 DISTVERSION=	2.0wr-011109
 CATEGORIES=	science cad
@@ -7,6 +5,7 @@ MASTER_SITES=	http://www.wrcad.com/ftp/pub/ LOCAL/bf
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Three-dimensional capacitance extraction program
+WWW=		https://www.rle.mit.edu/cpg/research_codes.htm
 
 LICENSE=	FASTCAP
 LICENSE_NAME=	fastcap license
