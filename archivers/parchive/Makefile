@@ -1,5 +1,3 @@
-# Created by: Chris D. Faulhaber <jedgar@FreeBSD.org>
-
 PORTNAME=	parchive
 PORTVERSION=	1.1
 CATEGORIES=	archivers
@@ -8,6 +6,7 @@ DISTNAME=	par-v${PORTVERSION}
 
 MAINTAINER=	ak@FreeBSD.org
 COMMENT=	Parity Archiver - makes multiple parity volumes from a set of files
+WWW=		http://parchive.sourceforge.net/
 
 LICENSE=	GPLv2
 
