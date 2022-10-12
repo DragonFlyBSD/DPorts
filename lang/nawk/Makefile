@@ -1,5 +1,3 @@
-# Created by: Josh Gilliam <josh@quick.net>
-
 PORTNAME=	nawk
 PORTVERSION=	20121220
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DIST_SUBDIR=	nawk-${PORTVERSION}
 
 MAINTAINER=	portmaster@BSDforge.com
 COMMENT=	Brian Kernighan's pattern scanning and processing language
+WWW=		http://cm.bell-labs.com/cm/cs/awkbook/index.html
 
 NO_WRKSUBDIR=	yes
 MAKEFILE=	makefile
