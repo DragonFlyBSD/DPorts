@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	path
 PORTVERSION=	16.4.0
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Module wrapper for os.path
+WWW=		https://github.com/jaraco/path
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
