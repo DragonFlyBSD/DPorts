@@ -1,11 +1,10 @@
-# Created by: Michael Johnson <ahze@FreeBSD.org>
-
 PORTNAME=	usbids
 PORTVERSION=	20220520
 CATEGORIES=	misc
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Database of all known IDs used in USB devices
+WWW=		http://www.linux-usb.org/
 
 LICENSE=	BSD3CLAUSE GPLv2+
 LICENSE_COMB=	dual
