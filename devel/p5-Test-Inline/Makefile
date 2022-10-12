@@ -1,5 +1,3 @@
-# Created by: Erwin Lansing <erwin@FreeBSD.org>
-
 PORTNAME=	Test-Inline
 PORTVERSION=	2.214
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Inlining your tests next to the code being tested
+WWW=		https://metacpan.org/release/Test-Inline
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
