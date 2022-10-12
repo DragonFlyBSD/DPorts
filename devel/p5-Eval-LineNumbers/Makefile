@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Eval-LineNumbers
 PORTVERSION=	0.35
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Add line numbers to hereis blocks that contain perl source code
+WWW=		https://metacpan.org/release/Eval-LineNumbers
 
 LICENSE=	ART20 LGPL21
 LICENSE_COMB=	dual
