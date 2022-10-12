@@ -1,5 +1,3 @@
-# Created by: Rong-En Fan <rafan@infor.org>
-
 PORTNAME=	Color-Rgb
 PORTVERSION=	1.4
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Simple rgb.txt parsing class
+WWW=		https://metacpan.org/release/Color-Rgb
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
