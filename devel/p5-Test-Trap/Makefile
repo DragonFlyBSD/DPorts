@@ -1,7 +1,5 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Test-Trap
-PORTVERSION=	0.3.4
+PORTVERSION=	0.3.5
 DISTVERSIONPREFIX=	v
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Trap exit codes, exceptions, output, etc
+WWW=		https://metacpan.org/release/Test-Trap
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
