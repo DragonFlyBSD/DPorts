@@ -1,5 +1,3 @@
-# Created by: Bob Eager <rde@ml1.org.uk>
-
 PORTNAME=	ml1
 PORTVERSION=	4.12
 PORTREVISION=	1
@@ -9,6 +7,7 @@ MASTER_SITES=	http://www.ml1.org.uk/distfiles/ \
 
 MAINTAINER=	bob@eager.cx
 COMMENT=	Original general purpose macro processor
+WWW=		https://www.ml1.org.uk
 
 LICENSE=	BSD3CLAUSE
 
