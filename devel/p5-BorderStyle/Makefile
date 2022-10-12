@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	BorderStyle
 PORTVERSION=	3.0.2
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Border styles
+WWW=		https://metacpan.org/dist/BorderStyle
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
