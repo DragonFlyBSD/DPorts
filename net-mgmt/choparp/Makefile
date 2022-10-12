@@ -1,5 +1,3 @@
-# Created by: itojun@itojun.org
-
 PORTNAME=	choparp
 PORTVERSION=	20150613
 DISTVERSIONPREFIX=	release/
@@ -7,6 +5,7 @@ CATEGORIES=	net-mgmt
 
 MAINTAINER=	garga@FreeBSD.org
 COMMENT=	Simple proxy arp daemon
+WWW=		https://github.com/quinot/choparp
 
 LICENSE=	BSD3CLAUSE
 
