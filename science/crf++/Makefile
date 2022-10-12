@@ -1,5 +1,3 @@
-# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-
 PORTNAME=	crf++
 # 0.59 as defined in
 # https://github.com/taku910/crfpp/commit/d78526835e4cfcc4822156724edda8a3839327c2
@@ -12,6 +10,7 @@ PATCHFILES=	15.patch:-p1:pr \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Yet Another CRF toolkit
+WWW=		https://taku910.github.io/crfpp/
 
 LICENSE=	BSD3CLAUSE LGPL21+
 LICENSE_COMB=	dual
