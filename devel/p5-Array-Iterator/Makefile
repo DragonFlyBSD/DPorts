@@ -1,5 +1,3 @@
-# Created by: Aaron Dalton <aaron@daltons.ca>
-
 PORTNAME=	Array-Iterator
 PORTVERSION=	0.131
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Set of array iterators
+WWW=		https://metacpan.org/release/Array-Iterator
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
