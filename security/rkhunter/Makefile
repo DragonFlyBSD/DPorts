@@ -1,5 +1,3 @@
-# Created by: Radim Kolar
-
 PORTNAME=	rkhunter
 PORTVERSION=	1.4.6
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	lukasz@wasikowski.net
 COMMENT=	Rootkit detection tool
+WWW=		http://rkhunter.sourceforge.net
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/files/LICENSE
