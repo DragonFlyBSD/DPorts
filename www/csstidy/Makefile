@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	csstidy
 PORTVERSION=	1.4
 CATEGORIES=	www
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}-source-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Opensource CSS parser and optimiser
+WWW=		http://csstidy.sourceforge.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKDIR}/COPYING
