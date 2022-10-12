@@ -1,5 +1,3 @@
-# Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-
 PORTNAME=	Exporter
 PORTVERSION=	5.68
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	snowfly@yuntech.edu.tw
 COMMENT=	Implements default import method for modules
+WWW=		https://metacpan.org/release/Exporter
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
