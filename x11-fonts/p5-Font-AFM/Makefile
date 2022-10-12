@@ -1,5 +1,3 @@
-# Created by: Pete Fritchman <petef@databits.net>
-
 PORTNAME=	Font-AFM
 PORTVERSION=	1.20
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Interface to Adobe font metrics files
+WWW=		https://metacpan.org/release/Font-AFM
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
