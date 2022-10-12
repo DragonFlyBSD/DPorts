@@ -1,5 +1,3 @@
-# Created by: Tony Maher
-
 PORTNAME=	seqio
 PORTVERSION=	1.2.2
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Set of C functions which can read/write biological sequence files
+WWW=		https://www.cs.ucdavis.edu/~gusfield/seqio.html
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
