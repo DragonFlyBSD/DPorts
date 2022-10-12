@@ -1,5 +1,3 @@
-# Created by: Dirk Froemberg <dirk@FreeBSD.org>
-
 PORTNAME=	httrack
 PORTVERSION=	3.49.2
 PORTREVISION=	1
@@ -14,6 +12,7 @@ MASTER_SITES=	https://download.httrack.com/ \
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Easy-to-use offline browser utility and website copier
+WWW=		https://www.httrack.com/
 
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual
