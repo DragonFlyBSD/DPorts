@@ -1,5 +1,3 @@
-# Created by: Craig Manley
-
 PORTNAME=	Config-Properties
 PORTVERSION=	1.80
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Read and write property files
+WWW=		https://metacpan.org/release/Config-Properties
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
