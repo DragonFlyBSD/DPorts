@@ -1,5 +1,3 @@
-# Created by: Stefan Pauly <stefan@fh-mainz.de>
-
 PORTNAME=	XML-DOMHandler
 PORTVERSION=	1.0
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Call-back interface to DOM
+WWW=		https://metacpan.org/release/XML-DOMHandler
 
 USES=		perl5
 USE_PERL5=	configure
