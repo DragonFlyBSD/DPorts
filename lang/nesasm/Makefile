@@ -1,5 +1,3 @@
-# Created by: Pontus Stenetorp <ninjin@kth.se>
-
 PORTNAME=	nesasm
 PORTVERSION=	20040314
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	nbasic_2004_03_14
 
 MAINTAINER=	ninjin@kth.se
 COMMENT=	6502 assembler with specific NES support
+WWW=		https://bobrost.com/nes/resources.php
 
 WRKSRC=		${WRKDIR}/nbasic_2004_03_14/source/${PORTNAME}/source/
 USES=		zip
