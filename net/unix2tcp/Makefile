@@ -1,5 +1,3 @@
-# Created by: Michael L. Hostbaek (mich@freebsdcluster.org)
-
 PORTNAME=	unix2tcp
 PORTVERSION=	0.8.2
 CATEGORIES=	net
@@ -8,6 +6,7 @@ MASTER_SITES=	http://freebsdcluster.org/~mich/software/ \
 
 MAINTAINER=	portmaster@bsdforge.com
 COMMENT=	Connection forwarder that converts Unix sockets into TCP sockets
+WWW=		http://ahriman.bucharest.roedu.net/unix2tcp/
 
 CFLAGS+=	-DHAVE_CONFIG_H -I.
 GNU_CONFIGURE=	yes
