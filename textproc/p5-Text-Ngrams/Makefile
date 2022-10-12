@@ -1,5 +1,3 @@
-# Created by: Cheng-Lung Sung <clsung@dragon2.net>
-
 PORTNAME=	Text-Ngrams
 PORTVERSION=	2.006
 CATEGORIES=	textproc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl5 modules for Flexible Ngram analysis
+WWW=		https://metacpan.org/release/Text-Ngrams
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
