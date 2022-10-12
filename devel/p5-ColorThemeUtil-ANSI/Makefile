@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	ColorThemeUtil-ANSI
 PORTVERSION=	0.002
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Utility routines related to color themes and ANSI code
+WWW=		https://metacpan.org/release/ColorThemeUtil-ANSI
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
