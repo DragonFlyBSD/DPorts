@@ -1,5 +1,3 @@
-# Created by: alex@FreeBSD.org
-
 PORTNAME=	mindterm-binary
 PORTVERSION=	1.2.1
 PORTREVISION=	1
@@ -11,6 +9,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Full vt220 compatible Java SSH-1 client (not only for websites)
+WWW=		http://www.mindbright.se/mindterm/
 
 # Converted from NO_CDROM
 LICENSE=	mindterm
