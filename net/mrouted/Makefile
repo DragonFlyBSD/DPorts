@@ -1,5 +1,3 @@
-# Created by: Bruce M Simpson <bms@FreeBSD.org>
-
 PORTNAME=	mrouted
 PORTVERSION=	3.9.8
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	net
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	Multicast routing daemon providing DVMRP for IPv4
+WWW=		http://freecode.com/projects/mrouted
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
