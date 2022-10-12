@@ -1,5 +1,3 @@
-# Created by: Chris D. Faulhaber <jedgar@fxp.org>
-
 PORTNAME=	code2html
 PORTVERSION=	0.9.1
 PORTREVISION=	1
@@ -9,6 +7,7 @@ MASTER_SITES=	SF \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Sourcecode to HTML converter
+WWW=		https://www.palfrader.org/code2html/
 
 NO_BUILD=	yes
 USES=		perl5 shebangfix
