@@ -1,5 +1,3 @@
-# Created by: Daniel Wijnands <daniel@itxl.nl>
-
 PORTNAME=	CGI-Builder
 PORTVERSION=	1.36
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Perl module intended to make it easier to create reusable web apps
+WWW=		https://metacpan.org/release/CGI-Builder
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
