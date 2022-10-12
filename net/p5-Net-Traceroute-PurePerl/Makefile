@@ -1,5 +1,3 @@
-# Created by: jupengfei <jupengfei@gmail.com>
-
 PORTNAME=	Net-Traceroute-PurePerl
 PORTVERSION=	0.10
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Traceroute(1) functionality in perl via raw sockets
+WWW=		https://metacpan.org/release/Net-Traceroute-PurePerl
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
