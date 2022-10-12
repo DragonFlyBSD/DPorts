@@ -1,5 +1,3 @@
-# Created by: Sahil Tandon <sahil@tandon.net>
-
 PORTNAME=	Socket-GetAddrInfo
 PORTVERSION=	0.22
 PORTREVISION=	4
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	RFC 2553's getaddrinfo and getnameinfo functions
+WWW=		https://metacpan.org/release/Socket-GetAddrInfo
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
