@@ -1,5 +1,3 @@
-# Created by: kwm@rainbow-runner.nl
-
 PORTNAME=	libtremor
 PORTVERSION=	1.2.1.s20180316
 CATEGORIES=	audio
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME:S/lib//}-${GIT_COMMIT}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Integer-only fully Ogg Vorbis compliant decoder library
+WWW=		https://xiph.org/vorbis/
 
 LICENSE=	BSD3CLAUSE
 
