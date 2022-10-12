@@ -1,5 +1,3 @@
-# Created by: Dan Langille <dvl@FreeBSD.org>
-
 PORTNAME=	virustotal-api
 PORTVERSION=	1.1.11
 CATEGORIES=	security python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	dvl@FreeBSD.org
 COMMENT=	Virus Total Public/Private/Intel API
+WWW=		https://pypi.org/project/virustotal-api/
 
 LICENSE=	MIT
 
