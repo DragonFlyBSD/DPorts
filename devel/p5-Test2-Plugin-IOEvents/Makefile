@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Test2-Plugin-IOEvents
 PORTVERSION=	0.001001
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Turn STDOUT and STDERR into Test2 events
+WWW=		https://metacpan.org/release/Test2-Plugin-IOEvents
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
