@@ -1,5 +1,3 @@
-# Created by: Dereckson <dereckson@gmail.com>
-
 PORTNAME=	ctcs
 PORTVERSION=	1.4.1
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/dtorrent/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	dereckson@gmail.com
 COMMENT=	CTorrent monitoring and managing interface
+WWW=		https://www.rahul.net/dholmes/ctorrent/ctcs.html
 
 USES=		perl5 shebangfix
 USE_PERL5=	run
