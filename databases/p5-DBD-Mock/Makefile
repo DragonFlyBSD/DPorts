@@ -1,5 +1,3 @@
-# Created by: Espen Tagestad <espen@tagestad.no>
-
 PORTNAME=	DBD-Mock
 PORTVERSION=	1.59
 CATEGORIES=	databases perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Simple mock DBD implementation used for testing
+WWW=		https://metacpan.org/release/DBD-Mock
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
