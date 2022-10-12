@@ -5,12 +5,13 @@ CATEGORIES=	x11-themes
 
 MAINTAINER=	jt@ixsystems.com
 COMMENT=	Lumina desktop wallpapers/colors
+WWW=		https://github.com/trueos/lumina-themes
 
 LICENSE=	BSD2CLAUSE CC0-1.0
 LICENSE_COMB=	multi
 
 USES=	qmake qt:5
-USE_QT=		qmake_build
+USE_QT=		qmake:build
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	trueos
