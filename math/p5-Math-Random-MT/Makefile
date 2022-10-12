@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	Math-Random-MT
 PORTVERSION=	1.17
 CATEGORIES=	math perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	The Mersenne Twister PRNG
+WWW=		https://metacpan.org/release/Math-Random-MT
 
 LICENSE=	BSD3CLAUSE
 
