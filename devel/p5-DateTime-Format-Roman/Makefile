@@ -1,5 +1,3 @@
-# Created by: Mathieu Arnold <m@absolight.net>
-
 PORTNAME=	DateTime-Format-Roman
 PORTVERSION=	0.04
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Roman day numbering for DateTime objects
+WWW=		https://metacpan.org/release/DateTime-Format-Roman
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
