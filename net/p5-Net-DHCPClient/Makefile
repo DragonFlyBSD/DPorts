@@ -1,5 +1,3 @@
-# Created by: Sergey Matveychuk <sem@FreeBSD.org>
-
 PORTNAME=	Net-DHCPClient
 PORTVERSION=	1.0
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl implementation of a DHCP client API
+WWW=		https://metacpan.org/release/Net-DHCPClient
 
 RUN_DEPENDS=	p5-Net-RawIP>=0:net/p5-Net-RawIP
 
