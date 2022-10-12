@@ -1,5 +1,3 @@
-# Created by: Adam Weinberger <adamw@FreeBSD.org>
-
 PORTNAME=	Input-Validator
 PORTVERSION=	0.001005
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Input validator that just validates input
+WWW=		https://metacpan.org/pod/Input::Validator
 
 LICENSE=	ART20
 
