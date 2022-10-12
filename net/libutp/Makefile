@@ -1,5 +1,3 @@
-# Created by: Mikhail Teterin <mi@aldan.algebra.com>
-
 PORTNAME=	bittorrent-libutp
 PORTVERSION=	0.20130514
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	net devel
 
 MAINTAINER=	mi@aldan.algebra.com
 COMMENT=	The uTorrent Transport Protocol library and sample utilities
+WWW=		https://github.com/bittorrent/libutp
 
 LICENSE=	MIT
 
