@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	Want
 PORTVERSION=	0.29
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Generalisation of wantarray
+WWW=		https://metacpan.org/release/Want
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
