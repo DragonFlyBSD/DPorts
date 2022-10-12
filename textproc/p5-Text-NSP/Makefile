@@ -1,5 +1,3 @@
-# Created by: Cheng-Lung Sung <clsung@dragon2.net>
-
 PORTNAME=	Text-NSP
 PORTVERSION=	1.31
 CATEGORIES=	textproc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl5 modules for Ngram Statistics Package
+WWW=		https://metacpan.org/release/Text-NSP
 
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual
