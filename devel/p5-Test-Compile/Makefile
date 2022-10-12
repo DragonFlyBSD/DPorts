@@ -1,5 +1,3 @@
-# Created by: Cezary Morga <cm@therek.net>
-
 PORTNAME=	Test-Compile
 PORTVERSION=	3.1.0
 DISTVERSIONPREFIX=	v
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Check whether Perl module files compile correctly
+WWW=		https://metacpan.org/release/Test-Compile
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
