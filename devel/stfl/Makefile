@@ -1,5 +1,3 @@
-# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-
 PORTNAME=	stfl
 PORTVERSION=	0.24
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.clifford.at/stfl/
 
 MAINTAINER=	arved@FreeBSD.org
 COMMENT=	Structured Terminal Forms Language/Library
+WWW=		https://www.clifford.at/stfl/
 
 LICENSE=	GPLv3
 
