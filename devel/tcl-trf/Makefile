@@ -1,5 +1,3 @@
-# Created by: Mikhail Teterin <mi@aldan.algebra.com>
-
 PORTNAME=	Trf
 PORTVERSION=	2.1.4
 PORTREVISION=	3
@@ -10,6 +8,7 @@ DISTNAME=	trf${PORTVERSION}
 
 MAINTAINER=	mi@aldan.algebra.com
 COMMENT=	Data conversion, digests, compression, error-correction for Tcl
+WWW=		https://wiki.tcl-lang.org/479
 
 LICENSE=	Tcl_Trf_License
 LICENSE_NAME=	Tcl Trf License
