@@ -1,5 +1,3 @@
-# Created by: Blaz Zupan <blaz@si.FreeBSD.org>
-
 PORTNAME=	pyrad
 DISTVERSION=	2.4
 CATEGORIES=	net python
@@ -7,6 +5,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	steve@energistic.com
 COMMENT=	Python implementation of RADIUS client
+WWW=		https://pypi.org/project/pyrad/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
