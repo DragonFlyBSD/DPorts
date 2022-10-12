@@ -1,5 +1,3 @@
-# Created by: Eric Freeman <freebsdports@chillibear.com>
-
 PORTNAME=	Cache-AgainstFile
 PORTVERSION=	1.016
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Cache data structures parsed from files, watching for updates
+WWW=		https://metacpan.org/release/Cache-AgainstFile
 
 LICENSE=	GPLv2
 
