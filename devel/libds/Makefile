@@ -1,5 +1,3 @@
-# Created by: Peter Bozarov (kingofgib@users.sourceforge.net)
-
 PORTNAME=	libds
 PORTVERSION=	2.2
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/libds/libds/libds-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	ANSI Generic Data Structures Library
+WWW=		https://sourceforge.net/projects/libds/
 
 LICENSE=	BSD4CLAUSE
 
