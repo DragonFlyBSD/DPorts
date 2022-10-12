@@ -1,11 +1,10 @@
-# Created by: Naito Yuichiro <naito.yuichiro@gmail.com>
-
 PORTNAME=	tzdiff
 PORTVERSION=	1.1.1
 CATEGORIES=	misc
 
 MAINTAINER=	naito.yuichiro@gmail.com
 COMMENT=	Showing time pairs between target timezone and localtime
+WWW=		https://github.com/belgianbeer/tzdiff
 
 LICENSE=	BSD2CLAUSE
 
