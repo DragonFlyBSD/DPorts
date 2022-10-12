@@ -1,5 +1,3 @@
-# Created by: Uffe Jakobsen <uffe@uffe.org>
-
 PORTNAME=	xa65
 PORTVERSION=	2.3.13
 CATEGORIES=	devel
@@ -8,6 +6,7 @@ DISTNAME=	xa-${PORTVERSION}
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Two-pass cross-assembler for MOS 6502 and compatible CPUs
+WWW=		https://www.floodgap.com/retrotech/xa/
 
 LICENSE=	GPLv2+
 
