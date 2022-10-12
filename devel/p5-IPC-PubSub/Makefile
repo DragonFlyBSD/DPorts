@@ -1,5 +1,3 @@
-# Created by: Anton Berezin <tobez@FreeBSD.org>
-
 PORTNAME=	IPC-PubSub
 PORTVERSION=	0.29
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Interprocess Publish/Subscribe channels
+WWW=		https://metacpan.org/release/IPC-PubSub
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-DBM-Deep>=1:databases/p5-DBM-Deep \
