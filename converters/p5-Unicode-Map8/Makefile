@@ -1,5 +1,3 @@
-# Created by: Ilia Chipitsine <ilia@jane.cgu.chel.su>
-
 PORTNAME=	Unicode-Map8
 PORTVERSION=	0.13
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Mapping table between 8-bit chars and Unicode
+WWW=		https://metacpan.org/release/Unicode-Map8
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
