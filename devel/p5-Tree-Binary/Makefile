@@ -1,5 +1,3 @@
-# Created by: Aaron Dalton <aaron@daltons.ca>
-
 PORTNAME=	Tree-Binary
 PORTVERSION=	1.08
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Object Oriented Binary Tree for Perl
+WWW=		https://metacpan.org/release/Tree-Binary
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
