@@ -1,5 +1,3 @@
-# Created by: Denis Pokataev <catone@cpan.org>
-
 PORTNAME=	URI-Escape-XS
 PORTVERSION=	0.14
 CATEGORIES=	www perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Drop-In replacement for URI::Escape in XS
+WWW=		https://metacpan.org/release/URI-Escape-XS
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
