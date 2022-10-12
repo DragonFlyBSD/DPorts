@@ -1,5 +1,3 @@
-# Created by: Michael Johnson <ahze@FreeBSD.org>
-
 PORTNAME=	mp4v2
 PORTVERSION=	2.0.0
 CATEGORIES=	multimedia
@@ -7,6 +5,7 @@ MASTER_SITES=	GENTOO
 
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	Library and tools to read, create, and modify mp4 files
+WWW=		http://code.google.com/p/mp4v2/
 
 LICENSE=	MPL11
 
