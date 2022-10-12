@@ -1,5 +1,3 @@
-# Created by: Frederic Culot <culot@FreeBSD.org>
-
 PORTNAME=	File-Signature
 PORTVERSION=	1.009
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Detect changes to a file's content or attributes
+WWW=		https://metacpan.org/release/File-Signature
 
 USES=		perl5
 USE_PERL5=	configure
