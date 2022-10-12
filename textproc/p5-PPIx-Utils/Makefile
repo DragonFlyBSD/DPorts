@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	PPIx-Utils
 PORTVERSION=	0.003
 CATEGORIES=	textproc perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Utility functions for PPI
+WWW=		https://metacpan.org/release/PPIx-Utils
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
