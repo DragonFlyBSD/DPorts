@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	File-Find-Object-Rule
 PORTVERSION=	0.0313
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Alternative interface to File::Find::Object
+WWW=		https://metacpan.org/release/File-Find-Object-Rule
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
