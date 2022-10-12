@@ -1,5 +1,3 @@
-# Created by: Henk van Oers <hvo.pm@xs4all.nl>
-
 PORTNAME=	Net-Subnet
 PORTVERSION=	1.03
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Fast IP-in-subnet matcher for IPv4 and IPv6, CIDR or mask
+WWW=		https://metacpan.org/release/Net-Subnet
 
 LICENSE=	ART10
 
