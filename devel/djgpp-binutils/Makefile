@@ -1,5 +1,3 @@
-# Created by: Peter Johnson <johnson.peter@gmail.com>
-
 PORTNAME=	binutils
 PORTVERSION=	2.17
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	djgpp-
 
 MAINTAINER=	johnson.peter@gmail.com
 COMMENT=	FSF binutils for DJGPP cross-development
+WWW=		https://www.delorie.com/djgpp/
 
 LICENSE=	GPLv2
 
