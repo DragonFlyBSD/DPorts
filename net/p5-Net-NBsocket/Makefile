@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Net-NBsocket
 PORTVERSION=	0.24
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Non-Blocking Sockets
+WWW=		https://metacpan.org/release/Net-NBsocket
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-NetAddr-IP>=4.049:net-mgmt/p5-NetAddr-IP
