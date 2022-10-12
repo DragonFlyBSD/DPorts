@@ -1,5 +1,3 @@
-# Created by: Horia Racoviceanu <horia@racoviceanu.com>
-
 PORTNAME=	libscrypt
 PORTVERSION=	1.22
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	security
 
 MAINTAINER=	dbaio@FreeBSD.org
 COMMENT=	C library for the scrypt key derivation function
+WWW=		http://www.lolware.net/libscrypt.html
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
