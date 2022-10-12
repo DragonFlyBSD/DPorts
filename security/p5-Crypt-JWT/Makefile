@@ -1,5 +1,3 @@
-# Created by: Sergei Vyshenski
-
 PORTNAME=	Crypt-JWT
 DISTVERSION=	0.034
 CATEGORIES=	security perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	svysh.fbsd@gmail.com
 COMMENT=	JSON Web Token (JWT, JWS, JWE) as defined by RFC7519, RFC7515, RFC7516
+WWW=		https://metacpan.org/release/Crypt-JWT
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
