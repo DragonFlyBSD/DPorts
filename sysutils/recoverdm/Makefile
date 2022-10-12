@@ -1,11 +1,10 @@
-# Created by: Jeffrey H. Johnson <CPE1704TKS@bellsouth.net>
-
 PORTNAME=	recoverdm
 PORTVERSION=	0.20
 CATEGORIES=	sysutils
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Recover files and discs with damaged sectors
+WWW=		http://www.vanheusden.com/recoverdm/
 
 LICENSE=	AGPLv3
 
