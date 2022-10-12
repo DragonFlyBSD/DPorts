@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Sub-Info
 PORTVERSION=	0.002
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Tool to inspect subroutines
+WWW=		https://metacpan.org/release/Sub-Info
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
