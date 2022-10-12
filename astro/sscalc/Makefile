@@ -1,5 +1,3 @@
-# Created by: Keith Walker <kew@icehouse.net>
-
 PORTNAME=	sscalc
 PORTVERSION=	1.0
 CATEGORIES=	astro
@@ -7,6 +5,7 @@ MASTER_SITES=	https://opsec.eu/src/
 
 MAINTAINER=	brnrd@FreeBSD.org
 COMMENT=	Sunrise and sunset time calculator
+WWW=		http://www.icehouse.net/kew/
 
 OPTIONS_DEFINE=	DOCS
 
