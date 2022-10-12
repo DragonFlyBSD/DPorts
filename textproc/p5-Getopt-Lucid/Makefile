@@ -1,5 +1,3 @@
-# Created by: Felippe de Meirelles Motta <lippemail@gmail.com>
-
 PORTNAME=	Getopt-Lucid
 PORTVERSION=	1.10
 CATEGORIES=	textproc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Clear, readable syntax for command line processing
+WWW=		https://metacpan.org/release/Getopt-Lucid
 
 LICENSE=	APACHE20
 
