@@ -1,5 +1,3 @@
-# Created by: Dima Dorfman <dd@FreeBSD.org>
-
 PORTNAME=	http_ping
 PORTVERSION=	20050629
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}_29jun2005
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	Measure HTTP Latency
+WWW=		https://www.acme.com/software/http_ping/
 
 USES=		ssl
 WRKSRC=		${WRKDIR}/${PORTNAME}
