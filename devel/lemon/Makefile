@@ -1,5 +1,3 @@
-# Created by: Mikhail Teterin
-
 PORTNAME=	lemon
 PORTVERSION=	3.34
 CATEGORIES=	devel
@@ -8,6 +6,7 @@ MASTER_SITES=	http://tx97.net/pub/distfiles/ \
 
 MAINTAINER=	vmagerya@gmail.com
 COMMENT=	LALR(1) parser generator. Similar in function to yacc and bison
+WWW=		https://www.hwaci.com/sw/lemon/
 
 LICENSE=	PD
 
