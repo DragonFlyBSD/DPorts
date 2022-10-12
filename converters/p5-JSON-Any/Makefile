@@ -1,5 +1,3 @@
-# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-
 PORTNAME=	JSON-Any
 PORTVERSION=	1.39
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl Wrapper Class for the various JSON classes
+WWW=		https://metacpan.org/release/JSON-Any
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
