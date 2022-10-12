@@ -1,5 +1,3 @@
-# Created by: Lars Thegler <lth@FreeBSD.org>
-
 PORTNAME=	Filesys-Virtual-Plain
 PORTVERSION=	0.10
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Plain virtual filesystem
+WWW=		https://metacpan.org/release/Filesys-Virtual-Plain
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
