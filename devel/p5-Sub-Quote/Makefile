@@ -1,5 +1,3 @@
-# Created by: Adam Weinberger <adamw@FreeBSD.org>
-
 PORTNAME=	Sub-Quote
 PORTVERSION=	2.006006
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Efficient generation of subroutines via string eval
+WWW=		https://metacpan.org/pod/Sub::Quote
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
