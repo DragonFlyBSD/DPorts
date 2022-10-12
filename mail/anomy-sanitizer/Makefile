@@ -1,5 +1,3 @@
-# Created by: janos.mohacsi@bsd.hu
-
 PORTNAME=	anomy-sanitizer
 PORTVERSION=	1.76
 PORTREVISION=	6
@@ -8,6 +6,7 @@ MASTER_SITES=	http://mailtools.anomy.net/dist/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Sanitize and clean incoming/outgoing mail
+WWW=		http://mailtools.anomy.net/
 
 LICENSE=	GPLv2+
 
