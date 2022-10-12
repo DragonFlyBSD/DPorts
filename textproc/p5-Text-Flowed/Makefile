@@ -1,5 +1,3 @@
-# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-
 PORTNAME=	Text-Flowed
 DISTVERSION=	0.14
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	RFC2646 format=flowed
+WWW=		https://metacpan.org/release/Text-Flowed
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
