@@ -1,5 +1,3 @@
-# Created by: Lars Thegler <lth@FreeBSD.org>
-
 PORTNAME=	String-Truncate
 PORTVERSION=	1.100602
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Module for when strings are too long to be displayed
+WWW=		https://metacpan.org/release/String-Truncate
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
