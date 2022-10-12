@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Perl6-Slurp
 PORTVERSION=	0.051005
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Implements the Perl6 'slurp' built-in
+WWW=		https://metacpan.org/release/Perl6-Slurp
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
