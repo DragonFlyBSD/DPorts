@@ -1,5 +1,3 @@
-# Created by: Lawrence Chen <beastie@tardisi.com>
-
 PORTNAME=	Net-DHCP-Watch
 PORTVERSION=	2.03
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	beastie@tardisi.com
 COMMENT=	Class for monitoring a remote DHCPD server
+WWW=		https://metacpan.org/release/Net-DHCP-Watch
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
