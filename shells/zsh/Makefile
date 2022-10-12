@@ -1,7 +1,6 @@
-# Created by: torstenb
-
 PORTNAME=	zsh
 DISTVERSION=	5.9
+PORTREVISION=	1
 CATEGORIES=	shells
 MASTER_SITES=	https://www.zsh.org/pub/ \
 		SF \
@@ -11,6 +10,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	bapt@FreeBSD.org
 COMMENT=	The Z shell
+WWW=		https://www.zsh.org/
 
 LICENSE=	ZSH
 LICENSE_NAME=	ZSH license
@@ -19,8 +19,9 @@ LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 MAKE_JOBS_UNSAFE=	yes
 
-USES=		autoreconf cpe iconv localbase:ldflags ncurses shebangfix tar:xz
+USES=		cpe iconv localbase:ldflags ncurses perl5 shebangfix tar:xz
 
+USE_PERL5=	build
 SHEBANG_LANG=	zsh
 zsh_OLD_CMD=	zsh	# shebang appears as /bin/zsh and just zsh
 SHEBANG_FILES=	Functions/Calendar/* \
@@ -45,13 +46,12 @@ CPPFLAGS+=	-DBOOL_DEFINED
 LDFLAGS+=	-Wl,--as-needed
 TEST_TARGET=	test
 
-OPTIONS_DEFINE=	DEBUG ETCDIR GDBM MEM PCRE STATIC \
+OPTIONS_DEFINE=	DEBUG ETCDIR GDBM PCRE STATIC \
 		DOCS EXAMPLES
 OPTIONS_SUB=	yes
 
 ETCDIR_DESC=	System-wide defaults in /etc (instead of $${PREFIX}/etc)
 GDBM_DESC=	Enable GDBM support (GPL)
-MEM_DESC=	Enable zsh-mem options
 
 GDBM_LIB_DEPENDS=	libgdbm.so:databases/gdbm
 PCRE_LIB_DEPENDS=	libpcre.so:devel/pcre
@@ -59,7 +59,6 @@ PCRE_LIB_DEPENDS=	libpcre.so:devel/pcre
 DEBUG_CONFIGURE_ENABLE=	zsh-debug
 ETCDIR_CONFIGURE_OFF=	--enable-etcdir=${PREFIX}/etc
 GDBM_CONFIGURE_ENABLE=	gdbm
-MEM_CONFIGURE_ENABLE=	zsh-mem
 PCRE_CONFIGURE_ENABLE=	pcre
 
 ## Some modules can only be built as a shared library.
@@ -88,8 +87,6 @@ CONFIGURE_ENV+=	ac_cv_lib_iconv_libiconv=no
 .endif
 
 post-patch:
-# FreeBSD's clock_gettime(2) is in libc, not librt; see PR 167857
-	@${REINPLACE_CMD} -e '/LIBS/s|-lrt||' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e "s|/etc/|${LOCALBASE}/etc/|" \
 		${WRKSRC}/Functions/MIME/zsh-mime-setup
 	${RM} ${WRKSRC}/Doc/help.txt
