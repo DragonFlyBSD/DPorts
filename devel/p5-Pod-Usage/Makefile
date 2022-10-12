@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Pod-Usage
 PORTVERSION=	2.03
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Print a usage message from embedded pod documentation
+WWW=		https://metacpan.org/release/Pod-Usage
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
