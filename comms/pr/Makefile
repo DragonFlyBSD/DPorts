@@ -1,5 +1,3 @@
-# Created by: Anton Voronin <anton@urc.ac.ru>
-
 PORTNAME=	pr
 PORTVERSION=	1.1
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	https://BSDforge.com/projects/source/comms/pr/
 
 MAINTAINER=	portmaster@bsdforge.com
 COMMENT=	Daemon that connects local terminal device to a terminal server
+WWW=		https://BSDforge.com/projects/comms/pr/
 
 LICENSE=	ARTPERL10
 
