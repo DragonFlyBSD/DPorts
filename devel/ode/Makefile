@@ -1,5 +1,3 @@
-# Created by: David Yeske <dyeske@yahoo.com>
-
 PORTNAME=	ode
 PORTVERSION=	0.13
 PORTREVISION=	4
@@ -9,6 +7,7 @@ MASTER_SITES=	SF/opende/ODE/${PORTVERSION}
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Articulated rigid body dynamics library
+WWW=		https://www.ode.org/
 
 LICENSE=	LGPL21 BSD3CLAUSE
 LICENSE_COMB=	dual
