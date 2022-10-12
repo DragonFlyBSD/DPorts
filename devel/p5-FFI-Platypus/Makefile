@@ -1,13 +1,12 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	FFI-Platypus
-PORTVERSION=	1.58
+PORTVERSION=	2.01
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Write Perl bindings to non-Perl libraries with FFI
+WWW=		https://metacpan.org/release/FFI-Platypus
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
