@@ -1,5 +1,3 @@
-# Created by: gerard
-
 PORTNAME=	Captcha-reCAPTCHA-Mailhide
 PORTVERSION=	0.94
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	gerard@seibercom.net
 COMMENT=	Perl implementation of the reCAPTCHA Mailhide API
+WWW=		https://metacpan.org/release/Captcha-reCAPTCHA-Mailhide
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
