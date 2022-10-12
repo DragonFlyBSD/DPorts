@@ -1,5 +1,3 @@
-# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-
 PORTNAME=	Pod-Markdown
 PORTVERSION=	3.300
 CATEGORIES=	textproc devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Module to convert POD to Markdown
+WWW=		https://metacpan.org/release/Pod-Markdown
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
