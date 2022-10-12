@@ -1,5 +1,3 @@
-# Created by: Murilo Opsfelder <mopsfelder@gmail.com>
-
 PORTNAME=	Unix-Uptime
 PORTVERSION=	0.3701
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	mopsfelder@gmail.com
 COMMENT=	Determine the current uptime in seconds
+WWW=		https://metacpan.org/release/Unix-Uptime
 
 USES=		perl5
 USE_PERL5=	modbuild
