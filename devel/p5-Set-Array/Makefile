@@ -1,5 +1,3 @@
-# Created by: Alex Kapranoff <kappa@rambler-co.ru>
-
 PORTNAME=	Set-Array
 PORTVERSION=	0.30
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Arrays as objects with set operations
+WWW=		https://metacpan.org/release/Set-Array
 
 LICENSE=	ART20
 
