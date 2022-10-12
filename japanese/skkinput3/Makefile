@@ -1,5 +1,3 @@
-# Created by: KOMATSU Shinichiro <koma2@jiro.c.u-tokyo.ac.jp>
-
 PORTNAME=	skkinput3
 PORTVERSION=	3.0.6
 PORTREVISION=	9
@@ -9,6 +7,7 @@ DISTNAME=	skkinput-${PORTVERSION}
 
 MAINTAINER=	koma2@lovepeers.org
 COMMENT=	SKK-like Japanese input method for X11
+WWW=		https://sourceforge.jp/projects/skkinput3/
 
 USES=		imake xorg
 USE_GCC=	yes
