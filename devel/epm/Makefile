@@ -1,5 +1,3 @@
-# Created by: NAKATA Maho <maho@FreeBSD.org>
-
 PORTNAME=	epm
 PORTVERSION=	4.5.1
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ MASTER_SITES=	https://github.com/michaelrsweet/epm/releases/download/v${PORTVERS
 
 MAINTAINER=	office@FreeBSD.org
 COMMENT=	Free UNIX software/file packaging program
+WWW=		https://www.msweet.org/epm/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
