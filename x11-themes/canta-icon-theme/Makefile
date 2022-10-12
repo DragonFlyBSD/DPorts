@@ -1,11 +1,10 @@
-# Created by: Alexander Vereeken <Alexander88207@protonmail.com>
-
 PORTNAME=	canta-icon-theme
 DISTVERSION=	2020-05-17
 CATEGORIES=	x11-themes
 
 MAINTAINER=	Alexander88207@protonmail.com
 COMMENT=	Flat icons for Canta GTK theme
+WWW=		https://github.com/vinceliuice/Canta-theme
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
