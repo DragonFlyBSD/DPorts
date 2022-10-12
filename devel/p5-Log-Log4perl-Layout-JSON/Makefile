@@ -1,5 +1,3 @@
-# Created by: Sergei Vyshenski <svysh.fbsd@gmail.com>
-
 PORTNAME=	Log-Log4perl-Layout-JSON
 PORTVERSION=	0.59
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	svysh.fbsd@gmail.com
 COMMENT=	Layout a log message as a JSON hash, including MDC data
+WWW=		https://metacpan.org/release/Log-Log4perl
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
