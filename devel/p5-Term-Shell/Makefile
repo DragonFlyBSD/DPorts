@@ -1,5 +1,3 @@
-# Created by: Anton Berezin <tobez@FreeBSD.org>
-
 PORTNAME=	Term-Shell
 PORTVERSION=	0.13
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Write command-line shells in Perl
+WWW=		https://metacpan.org/release/Term-Shell
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
