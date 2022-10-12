@@ -1,5 +1,3 @@
-# Created by: Meno Abels <meno.abels@adviser.com>
-
 PORTNAME=	fakeroot
 PORTVERSION=	1.23
 CATEGORIES=	security
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}.orig
 
 MAINTAINER=	martymac@FreeBSD.org
 COMMENT=	Simulate the root user behaviour
+WWW=		http://freshmeat.net/projects/fakeroot
 
 LICENSE=	GPLv3
 
