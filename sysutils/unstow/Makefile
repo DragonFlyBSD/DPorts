@@ -1,5 +1,3 @@
-# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-
 PORTNAME=	unstow
 PORTVERSION=	0.1.1
 CATEGORIES=	sysutils
@@ -9,6 +7,7 @@ DISTNAME=	knu-stow-utils-885c88a
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Script to unstow packages much faster than stow -D
+WWW=		https://github.com/knu/stow-utils
 
 NO_BUILD=	yes
 
