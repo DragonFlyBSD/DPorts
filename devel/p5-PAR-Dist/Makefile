@@ -1,5 +1,3 @@
-# Created by: Autrijus Tang <autrijus@autrijus.org>
-
 PORTNAME=	PAR-Dist
 PORTVERSION=	0.51
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Create and manipulate PAR distributions
+WWW=		https://metacpan.org/release/PAR-Dist
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
