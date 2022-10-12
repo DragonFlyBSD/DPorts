@@ -1,5 +1,3 @@
-# Created by: Matthew Seaman <matthew@FreeBSD.org>
-
 PORTNAME=	Log-Syslog-Fast
 PORTVERSION=	0.67
 CATEGORIES=	sysutils perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	matthew@FreeBSD.org
 COMMENT=	Send syslog messages over TCP, UDP, or UNIX sockets
+WWW=		https://metacpan.org/release/Log-Syslog-Fast
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
