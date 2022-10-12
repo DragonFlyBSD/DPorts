@@ -1,14 +1,13 @@
-# Created by: Choe, Cheng-Dae <whitekid@gmail.com>
-
 PORTNAME=	freeimage
 PORTVERSION=	3.18.0
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	SF/${PORTNAME}/Source%20Distribution/${PORTVERSION}
 DISTNAME=	FreeImage${PORTVERSION:S/.//g}
 
 MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Simple C/C++ bitmap graphics library
+WWW=		http://freeimage.sourceforge.net/
 
 LICENSE=		FIPL GPLv2 GPLv3
 LICENSE_COMB=		multi
