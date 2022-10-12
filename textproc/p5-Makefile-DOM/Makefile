@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Makefile-DOM
 PORTVERSION=	0.008
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Simple DOM parser for Makefiles
+WWW=		https://metacpan.org/release/Makefile-DOM
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
