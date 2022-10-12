@@ -1,5 +1,3 @@
-# Created by: smace
-
 PORTNAME=	trn
 PORTVERSION=	4.0.b77
 PKGNAMESUFFIX=	4
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:S/.b/-test/}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Version 4.0 of the threaded readnews newsreader
+WWW=		https://sourceforge.net/projects/trn/
 
 CONFLICTS_INSTALL=	trn cnews s-news
 
