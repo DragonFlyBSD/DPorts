@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	DBIx-Recordset
 PORTVERSION=	0.26
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module for abstraction and simplification of database access
+WWW=		https://metacpan.org/release/DBIx-Recordset
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
