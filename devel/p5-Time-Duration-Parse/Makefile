@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Time-Duration-Parse
 PORTVERSION=	0.16
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Parse string that represents time duration
+WWW=		https://metacpan.org/release/Time-Duration-Parse
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
