@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	File-TreeCreate
 PORTVERSION=	0.0.1
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Recursively create a directory tree
+WWW=		https://metacpan.org/dist/File-TreeCreate
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
