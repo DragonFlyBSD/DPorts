@@ -1,5 +1,3 @@
-# Created by: Christopher Key <cjk32@cam.ac.uk>
-
 PORTNAME=	Data-Dumper-Concise
 PORTVERSION=	2.023
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Less indentation and newlines plus sub deparsing
+WWW=		https://metacpan.org/release/Data-Dumper-Concise
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
