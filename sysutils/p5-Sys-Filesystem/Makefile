@@ -1,5 +1,3 @@
-# Created by: Jim Pirzyk <pirzyk@FreeBSD.org>
-
 PORTNAME=	Sys-Filesystem
 PORTVERSION=	1.401
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	pirzyk@FreeBSD.org
 COMMENT=	Perl module to Retrieve list of filesystems and their properties
+WWW=		https://metacpan.org/release/Sys-Filesystem
 
 LICENSE=	APACHE20
 
