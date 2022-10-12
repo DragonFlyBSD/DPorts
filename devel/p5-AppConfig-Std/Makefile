@@ -1,5 +1,3 @@
-# Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-
 PORTNAME=	AppConfig-Std
 PORTVERSION=	1.10
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Subclass of AppConfig that provides standard options
+WWW=		https://metacpan.org/release/AppConfig-Std
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
