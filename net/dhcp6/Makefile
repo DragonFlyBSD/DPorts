@@ -1,5 +1,3 @@
-# Created by: Munechika SUMIKAWA <sumikawa@FreeBSD.org>
-
 PORTNAME=	dhcp6
 PORTVERSION=	20080615.2
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ CATEGORIES=	net
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	KAME DHCP6 client, server, and relay
+WWW=		http://wide-dhcpv6.sourceforge.net/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
