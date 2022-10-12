@@ -1,5 +1,3 @@
-# Created by: Christopher Boumenot <boumenot@gmail.com>
-
 PORTNAME=	CPAN-SQLite
 PORTVERSION=	0.199
 PORTREVISION=	2
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	eg@fbsd.lt
 COMMENT=	Search CPAN using a SQLite database
+WWW=		https://metacpan.org/release/CPAN-SQLite
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
