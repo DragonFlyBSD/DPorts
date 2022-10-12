@@ -1,5 +1,3 @@
-# Created by: Anders Nordby <anders@fix.no>
-
 PORTNAME=	xmp
 PORTVERSION=	4.1.0
 PORTREVISION=	2
@@ -9,6 +7,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Player for many different Amiga and PC module formats
+WWW=		http://xmp.sourceforge.net/
 
 LICENSE=	GPLv2
 
