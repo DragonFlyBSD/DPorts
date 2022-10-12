@@ -1,5 +1,3 @@
-# Created by: Paul Dlug <paul@nerdlabs.com>
-
 PORTNAME=	nsca
 PORTVERSION=	2.9.2
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/nagios/nsca-2.x/nsca-${PORTVERSION}
 
 MAINTAINER=	mm@FreeBSD.org
 COMMENT=	Nagios Service Check Acceptor
+WWW=		https://www.nagios.org/
 
 LICENSE=	GPLv2+
 
