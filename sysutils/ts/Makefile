@@ -1,5 +1,3 @@
-# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-
 PORTNAME=	ts
 PORTVERSION=	1.0.2
 CATEGORIES=	sysutils
@@ -7,6 +5,7 @@ MASTER_SITES=	http://vicerveza.homeunix.net/~viric/soft/ts/
 
 MAINTAINER=	demon@FreeBSD.org
 COMMENT=	Serial task spooler
+WWW=		https://vicerveza.homeunix.net/~viric/soft/ts/
 
 LICENSE=	GPLv2+
 
