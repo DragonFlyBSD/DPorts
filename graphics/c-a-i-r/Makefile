@@ -1,5 +1,3 @@
-# Created by: buganini@gmail.com
-
 PORTNAME=	c-a-i-r
 PORTVERSION=	2.19
 CATEGORIES=	graphics
@@ -8,6 +6,7 @@ DISTNAME=	CAIR_v${PORTVERSION}
 
 MAINTAINER=	buganini@gmail.com
 COMMENT=	Content Aware Image Resizer is an implementation of seam carving
+WWW=		https://sourceforge.net/projects/c-a-i-r/
 
 USES=		dos2unix gmake zip
 DOS2UNIX_GLOB=	*.cpp
