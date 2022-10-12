@@ -1,13 +1,12 @@
-# Created by: Lung-Pin Chang <changlp@cs.nctu.edu.tw>
-
 PORTNAME=	django_compressor
-PORTVERSION=	4.0
+PORTVERSION=	4.1
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	ultima@FreeBSD.org
 COMMENT=	Compresses linked and inline JavaScript/CSS into a single cached file
+WWW=		https://github.com/jezdez/django_compressor
 
 LICENSE=	MIT
 
