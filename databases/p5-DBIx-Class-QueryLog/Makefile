@@ -1,5 +1,3 @@
-# Created by: Andrey Kostenko <andrey@kostenko.name>
-
 PORTNAME=	DBIx-Class-QueryLog
 PORTVERSION=	1.005.001
 CATEGORIES=	databases perl5
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:R}${PORTVERSION:E}
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Log queries for later analysis
+WWW=		https://metacpan.org/release/DBIx-Class-QueryLog
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
