@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	Test-Without-Module
 PORTVERSION=	0.20
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Test fallback behaviour in absence of modules
+WWW=		https://metacpan.org/release/Test-Without-Module
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
