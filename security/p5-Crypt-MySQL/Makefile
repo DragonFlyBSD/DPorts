@@ -1,5 +1,3 @@
-# Created by: Gabor Kovesdan
-
 PORTNAME=	Crypt-MySQL
 PORTVERSION=	0.04
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	ashish@FreeBSD.org
 COMMENT=	Perl extension to compare MySQL passwords without libmysqlclient
+WWW=		https://metacpan.org/release/Crypt-MySQL
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
