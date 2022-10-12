@@ -1,11 +1,12 @@
 PORTNAME=	shlock
-PORTVERSION=	2.6.5
+PORTVERSION=	2.7.0
 CATEGORIES=	sysutils
 MASTER_SITES=	ISC/inn
 DISTNAME=	inn-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Create lock files for use in shell scripts
+WWW=		https://www.eyrie.org/~eagle/software/inn/
 
 LICENSE=	ISCL
 LICENSE_FILE=	${WRKSRC}/LICENSE
