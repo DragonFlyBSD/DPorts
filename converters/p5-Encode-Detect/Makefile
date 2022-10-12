@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Encode-Detect
 PORTVERSION=	1.01
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Encode::Encoding subclass that detects the encoding of data
+WWW=		https://metacpan.org/release/Encode-Detect
 
 LICENSE=	MPL11
 LICENSE_FILE=	${WRKSRC}/LICENSE
