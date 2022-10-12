@@ -1,5 +1,3 @@
-# Created by: dikshie <dikshie@lapi.itb.ac.id>
-
 PORTNAME=	Geography-Countries
 PORTVERSION=	2009041301
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	dikshie@lapi.itb.ac.id
 COMMENT=	Handle ISO-3166 country codes
+WWW=		https://metacpan.org/release/Geography-Countries
 
 LICENSE=	MIT
 
