@@ -1,5 +1,3 @@
-# Created by: Alex Kapranoff <kapr@crosswinds.net>
-
 PORTNAME=	HTML-FillInForm
 PORTVERSION=	2.22
 CATEGORIES=	www perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl5 module for auto-filling HTML form fields from previous values
+WWW=		https://metacpan.org/release/HTML-FillInForm
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
