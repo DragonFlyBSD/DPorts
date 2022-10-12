@@ -1,5 +1,3 @@
-# Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-
 PORTNAME=	Encode-HanExtra
 PORTVERSION=	0.23
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Extra sets of Chinese encodings
+WWW=		https://metacpan.org/release/Encode-HanExtra
 
 LICENSE=	MIT
 
