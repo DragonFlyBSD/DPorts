@@ -1,5 +1,3 @@
-# Created by: Seamus Venasse <svenasse@polaris.ca>
-
 PORTNAME=	Crypt-RC4
 PORTVERSION=	2.02
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	Perl implementation of the RC4 encryption algorithm
+WWW=		https://metacpan.org/release/Crypt-RC4
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
