@@ -1,5 +1,3 @@
-# Created by: James FitzGibbon <jfitz@FreeBSD.org>
-
 PORTNAME=	Config-IniFiles
 PORTVERSION=	3.000003
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Read .ini-style configuration files
+WWW=		https://metacpan.org/release/Config-IniFiles
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
