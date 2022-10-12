@@ -1,5 +1,3 @@
-# Created by: Alexey V. Degtyarev
-
 PORTNAME=	Devel-Size-Report
 PORTVERSION=	0.13
 PORTREVISION=	3
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Generate a size report for all elements in a structure
+WWW=		https://metacpan.org/release/Devel-Size-Report
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
