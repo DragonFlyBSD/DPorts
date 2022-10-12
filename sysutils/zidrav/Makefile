@@ -1,5 +1,3 @@
-# Created by: Cosmin Stroe <cstroe1@uic.edu>
-
 PORTNAME=	zidrav
 PORTVERSION=	1.2.0
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	zidrav4unix-${PORTVERSION}
 
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	File corruption detection and repair program
+WWW=		https://sourceforge.net/projects/zidrav/
 
 LICENSE=	GPLv2
 
