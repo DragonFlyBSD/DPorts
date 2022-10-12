@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wen@FreeBSD.org>
-
 PORTNAME=	Moo
 PORTVERSION=	2.005004
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Minimalist Object Orientation (with Moose compatibility)
+WWW=		https://metacpan.org/release/Moo
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
