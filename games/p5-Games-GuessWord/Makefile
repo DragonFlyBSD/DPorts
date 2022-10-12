@@ -1,5 +1,3 @@
-# Created by: Aaron Dalton <aaron@FreeBSD.org>
-
 PORTNAME=	Games-GuessWord
 PORTVERSION=	0.16
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Guess the letters in a word (ie Hangman)
+WWW=		https://metacpan.org/release/Games-GuessWord
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
