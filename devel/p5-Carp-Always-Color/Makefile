@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Carp-Always-Color
 PORTVERSION=	0.08
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Carp::Always, but with color
+WWW=		https://metacpan.org/release/Carp-Always-Color
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
