@@ -1,5 +1,3 @@
-# Created by: Andrey Zakhvatov
-
 PORTNAME=	dbview
 PORTVERSION=	1.0.4
 CATEGORIES=	databases
@@ -7,6 +5,7 @@ MASTER_SITES=	SUNSITE/apps/database/proprietary
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	View dBase III files
+WWW=		https://www.infodrom.org/projects/dbview/
 
 LICENSE=	GPLv2+
 
