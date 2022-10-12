@@ -1,5 +1,3 @@
-# Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-
 PORTNAME=	sqlite
 PORTVERSION=	2.8.17
 PORTREVISION=	5
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.sqlite.org/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	SQL database engine in a C library
+WWW=		https://www.sqlite.org/
 
 GNU_CONFIGURE=	yes
 USES=		cpe gmake libtool pathfix pkgconfig readline
