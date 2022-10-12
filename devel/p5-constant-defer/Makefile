@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	constant-defer
 PORTVERSION=	6
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Constant subs with deferred value calculation
+WWW=		https://metacpan.org/release/constant-defer
 
 LICENSE=	GPLv3
 
