@@ -1,5 +1,3 @@
-# Created by: roam@FreeBSD.org
-
 PORTNAME=	ares
 PORTVERSION=	1.1.1
 PORTREVISION=	1
@@ -9,6 +7,7 @@ MASTER_SITES=	ZI \
 
 MAINTAINER=	zi@FreeBSD.org
 COMMENT=	Asynchronous DNS resolver library
+WWW=		https://github.com/mit-athena/libares/
 
 CONFLICTS=	c-ares-1.* c-ares-config-1.*
 
