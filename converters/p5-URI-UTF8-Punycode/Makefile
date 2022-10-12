@@ -1,5 +1,3 @@
-# Created by: Timur Bakeyev <bat@cpan.org>
-
 PORTNAME=	URI-UTF8-Punycode
 PORTVERSION=	1.05
 CATEGORIES=	converters perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Punycode conversion of UTF-8 string
+WWW=		https://metacpan.org/release/URI-UTF8-Punycode
 
 LICENSE=	GPLv3
 
