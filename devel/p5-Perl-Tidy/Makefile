@@ -1,5 +1,3 @@
-# Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-
 PORTNAME=	Perl-Tidy
 PORTVERSION=	20220613
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Indents and reformats Perl scripts to make them easier to read
+WWW=		https://metacpan.org/release/Perl-Tidy
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
