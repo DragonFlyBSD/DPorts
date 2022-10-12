@@ -1,5 +1,3 @@
-# Created by: marina@surferz.net
-
 PORTNAME=	wanderer
 PORTVERSION=	3.2
 CATEGORIES=	games
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.e271.net/~marina/ \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Rogue like adventure game
+WWW=		https://www.steveshipway.org/software/wanderer/f_wanderer.html
 
 LICENSE=	GPLv2+
 
