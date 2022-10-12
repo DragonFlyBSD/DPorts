@@ -1,5 +1,3 @@
-# Created by: Alexander Panyushkin <vsityz@gmail.com>
-
 PORTNAME=	hans
 DISTVERSION=	1.0
 CATEGORIES=	net security
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/hanstunnel/source
 
 MAINTAINER=	vsityz@gmail.com
 COMMENT=	Hans makes it possible to tunnel IPv4 through ICMP
+WWW=		http://code.gerade.org/hans/
 
 LICENSE=	FPL GPLv3+
 LICENSE_COMB=	multi
