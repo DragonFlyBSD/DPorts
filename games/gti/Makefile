@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	gti
 PORTVERSION=	1.8.0
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	games
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Just a silly git launcher, basically. Inspired by sl
+WWW=		https://r-wos.org/hacks/gti
 
 LICENSE=	GTI
 LICENSE_NAME=	MIT-like license
