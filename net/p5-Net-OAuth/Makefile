@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	Net-OAuth
 PORTVERSION=	0.28
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Implementation of the OAuth protocol
+WWW=		https://metacpan.org/release/Net-OAuth
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
