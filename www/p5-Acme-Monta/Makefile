@@ -1,5 +1,3 @@
-# Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
-
 PORTNAME=	Acme-Monta
 PORTVERSION=	0.01
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Monta Method reproduced in web
+WWW=		https://metacpan.org/release/Acme-Monta
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
