@@ -1,5 +1,3 @@
-# Created by: arved
-
 PORTNAME=	XML-Elemental
 PORTVERSION=	2.11
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Generic classes for simplistic and perlish handling of XML data
+WWW=		https://metacpan.org/release/XML-Elemental
 
 LICENSE=	ART10
 
