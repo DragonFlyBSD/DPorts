@@ -1,5 +1,3 @@
-# Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-
 PORTNAME=	anthy
 PORTVERSION=	0.4
 PORTREVISION=	3
@@ -11,6 +9,7 @@ EXTRACT_ONLY=	${DISTNAME:S/-/_/}.orig${EXTRACT_SUFX}
 
 MAINTAINER=	nobutaka@FreeBSD.org
 COMMENT=	Another Kana-Kanji conversion system
+WWW=		https://salsa.debian.org/debian/anthy
 
 LICENSE=	GPLv2 LGPL21
 LICENSE_COMB=	multi
