@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Term-Choose-Util
 PORTVERSION=	0.137
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	CLI related functions
+WWW=		https://metacpan.org/release/Term-Choose-Util
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
