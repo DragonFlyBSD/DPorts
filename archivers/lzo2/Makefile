@@ -1,5 +1,3 @@
-# Created by: giffunip@asme.org
-
 PORTNAME=	lzo2
 PORTVERSION=	2.10
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DISTNAME=	lzo-${DISTVERSIONPREFIX}${DISTVERSION}${DISTVERSIONSUFFIX}
 
 MAINTAINER=	mandree@FreeBSD.org
 COMMENT=	Portable speedy, lossless data compression library
+WWW=		https://www.oberhumer.com/opensource/lzo/
 
 LICENSE=	GPLv2
 
@@ -26,7 +25,6 @@ DOCS_INSTALL_TARGET_OFF=	install-exec install-pkgincludeHEADERS install-pkgconfi
 post-build:
 .if !defined(WITHOUT_CHECKS)
 	@${ECHO_MSG} "===>  Running self-tests for ${PKGNAME} (can take a few minutes)"
-	@#: override MALLOC_OPTIONS, else tests take excessively long
 	cd ${WRKSRC} && ${SETENV} MALLOC_OPTIONS=jz ${MAKE} check test SHELL="${SH} -x"
 .endif
 
