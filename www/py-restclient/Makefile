@@ -1,5 +1,3 @@
-# Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
-
 PORTNAME=	restclient
 PORTVERSION=	0.11.0
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	lwhsu@FreeBSD.org
 COMMENT=	Convenient library for writing REST clients
+WWW=		http://microapps.sourceforge.net/restclient/
 
 LICENSE=	BSD3CLAUSE
 
