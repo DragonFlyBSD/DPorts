@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	PDF-Writer
 PORTVERSION=	0.06
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	PDF writer abstraction layer
+WWW=		https://metacpan.org/release/PDF-Writer
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
