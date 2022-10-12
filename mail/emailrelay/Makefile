@@ -1,5 +1,3 @@
-# Created by: Robert Nelson <robertn@the-nelsons.org>
-
 PORTNAME=	emailrelay
 PORTVERSION=	1.9
 PORTREVISION=	6
@@ -9,6 +7,7 @@ EXTRACT_SUFX=	-src.tar.gz
 
 MAINTAINER=	robertn@the-nelsons.org
 COMMENT=	Simple SMTP proxy and store-and-forward MTA
+WWW=		http://emailrelay.sourceforge.net/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
