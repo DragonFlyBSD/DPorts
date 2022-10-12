@@ -1,5 +1,3 @@
-# Created by: michael johnson <ahze@ahze.net>
-
 PORTNAME=	minisapserver
 PORTVERSION=	0.3.8
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	http://downloads.videolan.org/pub/videolan/miniSAPserver/${PORTVER
 
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	SAP and SLP announcement for the VLC Media Player
+WWW=		https://www.videolan.org/
 
 LICENSE=	GPLv2
 
