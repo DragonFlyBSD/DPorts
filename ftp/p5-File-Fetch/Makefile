@@ -1,5 +1,3 @@
-# Created by: Aaron Dalton <aaron@FreeBSD.org>
-
 PORTNAME=	File-Fetch
 PORTVERSION=	1.04
 CATEGORIES=	ftp www perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Generic file fetching mechanism
+WWW=		https://metacpan.org/release/File-Fetch
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
