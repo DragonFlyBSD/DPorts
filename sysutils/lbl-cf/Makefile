@@ -1,5 +1,3 @@
-# Created by: Craig Leres <leres@FreeBSD.org>
-
 PORTNAME=	cf
 PORTVERSION=	1.2.5
 CATEGORIES=	sysutils
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	lbl-
 
 MAINTAINER=	leres@FreeBSD.org
 COMMENT=	Unix time to formatted time and date filter
+WWW=		https://ee.lbl.gov/
 
 LICENSE=	BSD3CLAUSE
 
