@@ -1,5 +1,3 @@
-# Created by: Aaron Zauner <az_mail@gmx.at>
-
 PORTNAME=	http_get
 PORTVERSION=	1.0.20140814
 CATEGORIES=	www
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}_14Aug2014
 
 MAINTAINER=	masaki@club.kyutech.ac.jp
 COMMENT=	Dump http-contents to stdout
+WWW=		https://www.acme.com/software/http_get/
 
 WRKSRC=		${WRKDIR}/http_get
 USES=		uidfix
