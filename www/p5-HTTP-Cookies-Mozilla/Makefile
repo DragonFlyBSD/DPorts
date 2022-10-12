@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	HTTP-Cookies-Mozilla
 PORTVERSION=	2.036
 CATEGORIES=	www perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Cookie storage and management for Mozilla
+WWW=		https://metacpan.org/release/HTTP-Cookies-Mozilla
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
