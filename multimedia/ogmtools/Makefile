@@ -1,5 +1,3 @@
-# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-
 PORTNAME=	ogmtools
 PORTVERSION=	1.5
 PORTREVISION=	16
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.bunkus.org/videotools/ogmtools/
 
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	Tools to extract from/get info about/create OGG media streams
+WWW=		https://www.bunkus.org/videotools/ogmtools/
 
 LIB_DEPENDS=	libvorbis.so:audio/libvorbis
 
