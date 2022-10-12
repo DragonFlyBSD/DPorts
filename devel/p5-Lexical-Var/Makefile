@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	Lexical-Var
 PORTVERSION=	0.009
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module for static variables without namespace pollution
+WWW=		https://metacpan.org/release/Lexical-Var
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
