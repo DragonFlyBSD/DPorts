@@ -1,5 +1,3 @@
-# Created by: Andrey Zakhvatov
-
 PORTNAME=	add
 PORTVERSION=	20220117
 CATEGORIES=	math
@@ -7,6 +5,7 @@ MASTER_SITES=	ftp://dickey.his.com/add/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Full-screen editing calculator
+WWW=		https://dickey.his.com/add/add.html
 
 GNU_CONFIGURE=	yes
 USES=		ncurses tar:tgz
