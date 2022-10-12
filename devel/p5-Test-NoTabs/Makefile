@@ -1,5 +1,3 @@
-# Created by: milki <milki@rescomp.berkeley.edu>
-
 PORTNAME=	Test-NoTabs
 PORTVERSION=	1.4
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Check the presence of tabs in your project
+WWW=		https://metacpan.org/release/Test-NoTabs
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
