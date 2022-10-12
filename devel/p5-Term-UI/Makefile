@@ -1,5 +1,3 @@
-# Created by: Aaron Dalton <aaron@FreeBSD.org>
-
 PORTNAME=	Term-UI
 PORTVERSION=	0.50
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Term::ReadLine UI made easy
+WWW=		https://metacpan.org/release/Term-UI
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
