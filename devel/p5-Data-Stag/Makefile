@@ -1,5 +1,3 @@
-# Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-
 PORTNAME=	Data-Stag
 PORTVERSION=	0.14
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Structured Tags data structures
+WWW=		http://stag.sourceforge.net
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
