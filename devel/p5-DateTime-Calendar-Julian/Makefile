@@ -1,5 +1,3 @@
-# Created by: Mathieu Arnold <m@absolight.net>
-
 PORTNAME=	DateTime-Calendar-Julian
 PORTVERSION=	0.107
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Dates in the Julian calendar
+WWW=		https://metacpan.org/release/DateTime-Calendar-Julian
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
