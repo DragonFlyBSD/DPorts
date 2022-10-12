@@ -1,5 +1,3 @@
-# Created by: Oleg A. Mamontov <oleg@mamontov.net>
-
 PORTNAME=	Module-List
 PORTVERSION=	0.004
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	oleg@mamontov.net
 COMMENT=	Module 'directory' listing
+WWW=		https://metacpan.org/release/Module-List
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
