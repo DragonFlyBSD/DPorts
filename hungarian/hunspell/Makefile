@@ -1,5 +1,3 @@
-# Created by: janos.mohacsi@bsd.hu
-
 PORTNAME=	hunspell
 PORTVERSION=	1.6.1
 CATEGORIES=	hungarian textproc
@@ -8,6 +6,7 @@ DISTNAME=	hu_HU-${PORTVERSION}
 
 MAINTAINER=	jmohacsi@bsd.hu
 COMMENT=	Hunspell Hungarian dictionary
+WWW=		http://magyarispell.sourceforge.net/
 
 LICENSE=	GPLv2 LGPL21 MPL11
 LICENSE_COMB=	dual
