@@ -1,12 +1,11 @@
-# Created by: Peter Jeremy <peterjeremy@acm.org>
-
 PORTNAME=	mspdebug
 PORTVERSION=	0.25.20200402
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	peterjeremy@acm.org
 COMMENT=	Debugger for use with MSP 430 MCUs
+WWW=		http://mspdebug.sourceforge.net/
 
 LICENSE=	GPLv2
 
