@@ -1,5 +1,3 @@
-# Created by: Andreas Fehlner (fehlner@gmx.de)
-
 PORTNAME=	userneu
 PORTVERSION=	1.38
 DISTVERSIONSUFFIX=	_1
@@ -11,6 +9,7 @@ MASTER_SITES=	http://btw23.de/johannes/userneu/ \
 
 MAINTAINER=	fehlner@gmx.de
 COMMENT=	Account management and creation tool
+WWW=		http://btw23.de/johannes/userneu/userneu.html
 
 LICENSE=	GPLv2
 
