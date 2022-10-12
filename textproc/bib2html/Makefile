@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	bib2html
 DISTVERSION=	6.7
 CATEGORIES=	textproc print
@@ -9,6 +7,7 @@ DIST_SUBDIR=	${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	BibTeX to HTML Translator
+WWW=		https://www.arakhne.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/../COPYING
