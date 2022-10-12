@@ -1,5 +1,3 @@
-# Created by: Gabor Kovesdan
-
 PORTNAME=	Crypt-Rabbit
 PORTVERSION=	1.0.0
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	Perl extension for Rabbit stream cipher
+WWW=		https://metacpan.org/release/Crypt-Rabbit
 
 LICENSE=	GPLv2
 
