@@ -4,7 +4,7 @@ PORTNAME=	perl
 DISTVERSIONPREFIX=	v
 DISTVERSION=	${GH_TAGNAME:C/^v//:C/-g[0-9a-f]*$//}
 DISTVERSIONSUFFIX=	${GH_TAGNAME:C/.*-g/-g/}
-PORTREVISION=	0
+PORTREVISION=	2
 CATEGORIES=	lang devel perl5
 # XXX Leave only CPAN.
 MASTER_SITES=	LOCAL/mat/perl \
@@ -14,6 +14,7 @@ DIST_SUBDIR=	perl
 
 MAINTAINER=	mat@FreeBSD.org
 COMMENT=	Practical Extraction and Report Language
+WWW=		https://www.perl.org/
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
