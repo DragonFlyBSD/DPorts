@@ -1,5 +1,3 @@
-# Created by: Dirk Froemberg <dirk@FreeBSD.org>
-
 PORTNAME=	expat
 DISTVERSION=	2.4.9
 CATEGORIES=	textproc
@@ -7,6 +5,7 @@ MASTER_SITES=	https://github.com/libexpat/libexpat/releases/download/R_${DISTVER
 
 MAINTAINER=	desktop@FreeBSD.org
 COMMENT=	XML 1.0 parser written in C
+WWW=		https://github.com/libexpat/libexpat
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
