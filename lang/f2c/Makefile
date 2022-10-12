@@ -1,5 +1,3 @@
-# Created by: Steven G. Kargl
-
 PORTNAME=	f2c
 PORTVERSION=	20200916
 CATEGORIES=	lang
@@ -9,6 +7,7 @@ DIST_SUBDIR=	${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	fortran@FreeBSD.org
 COMMENT=	Fortran-to-C converter and its run-time libraries
+WWW=		https://www.netlib.org/
 
 LICENSE=	ATT
 LICENSE_NAME=	Copyright of AT&T, Lucent Technologies and Bellcore
