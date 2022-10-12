@@ -1,5 +1,3 @@
-# Created by: ache
-
 PORTNAME=	png
 PORTVERSION=	1.6.37
 PORTREVISION=	1
@@ -9,8 +7,9 @@ MASTER_SITES=	SF/lib${PORTNAME}/lib${PORTNAME}16/${PORTVERSION} \
 PATCH_SITES=	SF/apng/lib${PORTNAME}/lib${PORTNAME}16/
 DISTNAME=	lib${PORTNAME}-${PORTVERSION}
 
-MAINTAINER=	portmgr@FreeBSD.org
+MAINTAINER=	desktop@FreeBSD.org
 COMMENT=	Library for manipulating PNG images
+WWW=		http://www.libpng.org/pub/png/libpng.html
 
 LICENSE=	Libpng
 LICENSE_GROUPS=	FSF GPL OSI
@@ -18,6 +17,7 @@ LICENSE_NAME=	libpng License
 LICENSE_FILE=	${WRKSRC}/LICENSE
 LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
+USE_CSTD=	gnu89
 USES=		cpe libtool tar:xz
 CPE_PRODUCT=	libpng
 GNU_CONFIGURE=	yes
