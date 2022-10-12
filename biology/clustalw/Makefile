@@ -1,5 +1,3 @@
-# Created by: dbader@eece.unm.edu
-
 PORTNAME=	clustalw
 PORTVERSION=	2.1
 PORTREVISION=	2
@@ -9,6 +7,7 @@ MASTER_SITES=	ftp://ftp.ebi.ac.uk/pub/software/clustalw2/${PORTVERSION}/ \
 
 MAINTAINER=	jwb@FreeBSD.org
 COMMENT=	Multiple alignment program for DNA or proteins
+WWW=		http://www.clustal.org/
 
 LICENSE=	LGPL3
 LICENSE_FILE=	${WRKSRC}/COPYING
