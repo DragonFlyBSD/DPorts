@@ -1,5 +1,3 @@
-# Created by: GreenDog <fiziologus@gmail.com>
-
 PORTNAME=	lua
 PORTVERSION=	5.1.5
 PORTREVISION=	9
@@ -9,6 +7,7 @@ PKGNAMESUFFIX=	51
 
 MAINTAINER=	nicklaus.t@me.com
 COMMENT=	Small, compilable scripting language providing easy access to C code
+WWW=		https://www.lua.org/
 
 LICENSE=	MIT
 
