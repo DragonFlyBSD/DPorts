@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	pytoml
 PORTVERSION=	0.1.21
 CATEGORIES=	textproc python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Parser for TOML 0.4.0
+WWW=		https://github.com/avakar/pytoml
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
