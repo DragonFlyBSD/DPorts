@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	tableschema-to-template
 PORTVERSION=	0.0.12
 CATEGORIES=	textproc python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Generate an Excel template with input validation from Frictionless Table Schema
+WWW=		https://github.com/hubmapconsortium/tableschema-to-template
 
 LICENSE=	MIT
 
