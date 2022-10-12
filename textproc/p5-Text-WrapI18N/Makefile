@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Text-WrapI18N
 PORTVERSION=	0.06
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Line wrapping module
+WWW=		https://metacpan.org/release/Text-WrapI18N
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
