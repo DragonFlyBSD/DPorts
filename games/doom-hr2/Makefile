@@ -1,5 +1,3 @@
-# Created by: Alejandro Pulver <alejandro@varnet.biz>
-
 PORTNAME=	hr2
 PORTVERSION=	1.0
 CATEGORIES=	games
@@ -9,6 +7,7 @@ DISTNAME=	hr2final
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Hell Revealed II is a megawad, a 32-level replacement for DooM II
+WWW=		https://www.doomworld.com/hr2/
 
 USES=		zip
 NO_BUILD=	yes
