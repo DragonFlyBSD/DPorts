@@ -1,5 +1,3 @@
-# Created by: Seamus Venasse <svenasse@polaris.ca>
-
 PORTNAME=	String-Multibyte
 PORTVERSION=	1.12
 CATEGORIES=	converters perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module to manipulate multibyte character strings
+WWW=		https://metacpan.org/release/String-Multibyte
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
