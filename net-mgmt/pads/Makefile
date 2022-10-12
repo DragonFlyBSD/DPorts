@@ -1,5 +1,3 @@
-# Created by: Andrew Thompson <andy@fud.org.nz>
-
 PORTNAME=	pads
 PORTVERSION=	1.2
 PORTREVISION=	6
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/passive/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Passively detect network assets
+WWW=		http://passive.sourceforge.net
 
 USES=		shebangfix
 SHEBANG_FILES=	src/pads-report.pl
