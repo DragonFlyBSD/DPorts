@@ -1,5 +1,3 @@
-# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-
 PORTNAME=	led
 PORTVERSION=	2.0
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}-editor/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tiny text editor, with a number of useful programming features
+WWW=		http://led-editor.sourceforge.net/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
