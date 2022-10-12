@@ -1,5 +1,3 @@
-# Created by: Yuri Victorovich <yuri@rawbw.com>
-
 PORTNAME=	google-perftools
 DISTVERSIONPREFIX=	gperftools-
 DISTVERSION=	2.10
@@ -10,6 +8,7 @@ DISTNAME=	gperftools-${PORTVERSION}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Fast, multi-threaded malloc() and nifty performance analysis tools
+WWW=		https://github.com/gperftools/gperftools
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -63,7 +62,7 @@ PORTDOCS=	*
 
 .include <bsd.port.pre.mk>
 
-.if ${COMPILER_TYPE} == "clang" && !defined(USE_GCC)
+.if ${CHOSEN_COMPILER_TYPE} == "clang" && !defined(USE_GCC)
 # clang cannot disable builtins individually
 CXXFLAGS+=	-fno-builtin
 .endif
