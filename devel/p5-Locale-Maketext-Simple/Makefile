@@ -1,5 +1,3 @@
-# Created by: Autrijus Tang <autrijus@autrijus.org>
-
 PORTNAME=	Locale-Maketext-Simple
 PORTVERSION=	0.21
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Simple interface to Locale::Maketext::Lexicon
+WWW=		https://metacpan.org/release/Locale-Maketext-Simple
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
