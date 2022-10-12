@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin (gslin@ccca.nctu.edu.tw)
-
 PORTNAME=	lbrate
 PORTVERSION=	1.1
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	SUNSITE/utils/compress
 
 MAINTAINER=	ak@FreeBSD.org
 COMMENT=	Extract/decompress CP/M LBR archives
+WWW=		http://freshmeat.net/projects/lbrate/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
