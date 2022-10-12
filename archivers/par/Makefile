@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	par
 PORTVERSION=	0.03.01
 CATEGORIES=	archivers games
@@ -8,10 +6,11 @@ PKGNAMEPREFIX=	quake-
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Archiver for Quake I and II packed data files
+WWW=		https://ibiblio.org/pub/linux/games/quake/
 
 LICENSE=	GPLv2
 
-CONFLICTS=	par_format # bin/par 
+CONFLICTS=	par_format # bin/par
 
 MAKEFILE=	Makefile.Linux
 MAKE_ARGS=	CC="${CC}"
