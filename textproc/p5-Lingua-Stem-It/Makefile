@@ -1,5 +1,3 @@
-# Created by: Thorsten Greiner <thorsten.greiner@web.de>
-
 PORTNAME=	Lingua-Stem-It
 PORTVERSION=	0.02
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Porter stemming algorithm for Italian
+WWW=		https://metacpan.org/release/Lingua-Stem-It
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
