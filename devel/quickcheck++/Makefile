@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	quickcheck++
 PORTVERSION=	0.0.3
 CATEGORIES=	devel
@@ -9,6 +7,7 @@ DISTNAME=	quickcheck_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Tool for testing C++ programs automatically, inspired by QuickCheck
+WWW=		https://software.legiasoft.com/quickcheck/
 
 LICENSE=	GPLv3
 
