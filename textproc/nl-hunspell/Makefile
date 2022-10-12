@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	hunspell
 PORTVERSION=	2.10
 CATEGORIES=	textproc
@@ -11,6 +9,7 @@ DIST_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	office@FreeBSD.org
 COMMENT=	Dutch hunspell dictionaries
+WWW=		https://www.opentaal.org/bestanden
 
 LICENSE=	BSD2CLAUSE CC-BY-3.0
 LICENSE_COMB=	dual
