@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	libecc
 PORTVERSION=	0.14.0
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	C++ Elliptic Curve Library
+WWW=		http://libecc.sourceforge.net/
 
 LICENSE=	GPLv2+
 
