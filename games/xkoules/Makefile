@@ -1,5 +1,3 @@
-# Created by: Andrey Zakhvatov
-
 PORTNAME=	xkoules
 PORTVERSION=	1.4
 PORTREVISION=	4
@@ -13,6 +11,7 @@ EXTRACT_ONLY=	${PORTNAME:S/x//}${PORTVERSION}-src${EXTRACT_SUFX}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Fast action arcade-style game for X Window
+WWW=		https://www.ucw.cz/~hubicka/koules/English/koules.html
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
