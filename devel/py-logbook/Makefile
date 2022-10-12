@@ -1,5 +1,3 @@
-# Created by: Mark Felder <feld@FreeBSD.org>
-
 PORTNAME=	logbook
 PORTVERSION=	1.1.0
 CATEGORIES=	devel python
@@ -9,6 +7,7 @@ DISTNAME=	Logbook-${PORTVERSION}
 
 MAINTAINER=	philip@FreeBSD.org
 COMMENT=	Logging replacement for Python
+WWW=		https://logbook.readthedocs.org/
 
 LICENSE=	BSD3CLAUSE
 
