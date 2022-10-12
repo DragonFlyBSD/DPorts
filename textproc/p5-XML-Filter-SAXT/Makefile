@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@FreeBSD.org>
-
 PORTNAME=	XML-Filter-SAXT
 PORTVERSION=	0.01
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Replicates SAX events to several SAX event handlers
+WWW=		https://metacpan.org/release/XML-Filter-SAXT
 
 USES=		perl5
 USE_PERL5=	configure
