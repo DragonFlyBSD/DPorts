@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	align
 PORTVERSION=	1.7.5
 CATEGORIES=	textproc
@@ -8,6 +6,7 @@ MASTER_SITES=	https://kinzler.com/me/align/ \
 
 MAINTAINER=	jharris@widomaker.com
 COMMENT=	Text column alignment filter
+WWW=		https://kinzler.com/me/align/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
