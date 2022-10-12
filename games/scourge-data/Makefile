@@ -1,5 +1,3 @@
-# Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-
 PORTNAME=	scourge-data
 PORTVERSION=	0.21.1
 CATEGORIES=	games
@@ -9,6 +7,7 @@ DIST_SUBDIR=	scourge
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	S.C.O.U.R.G.E data files
+WWW=		http://scourge.sourceforge.net
 
 NO_BUILD=	yes
 NO_ARCH=	*
