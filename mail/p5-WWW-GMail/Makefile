@@ -1,5 +1,3 @@
-# Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-
 PORTNAME=	WWW-GMail
 PORTVERSION=	0.07
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	snowfly@yuntech.edu.tw
 COMMENT=	Module that simplifies access to Gmail
+WWW=		https://metacpan.org/release/XANTUS/WWW-GMail-0.07
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
