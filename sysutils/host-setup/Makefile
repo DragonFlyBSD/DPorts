@@ -1,5 +1,3 @@
-# Created by: Devin Teske <dteske@vicor.com>
-
 PORTNAME=	host-setup
 PORTVERSION=	4.0.2
 CATEGORIES=	sysutils
@@ -7,6 +5,7 @@ MASTER_SITES=	http://druidbsd.sourceforge.net/download/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	System configuration setup/management utility
+WWW=		http://druidbsd.sourceforge.net/
 
 NO_ARCH=	yes
 NO_BUILD=	yes
