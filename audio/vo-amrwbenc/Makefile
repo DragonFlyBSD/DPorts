@@ -1,5 +1,3 @@
-# Created by: Martin Matuska <mm@FreeBSD.org>
-
 PORTNAME=	vo-amrwbenc
 PORTVERSION=	0.1.3
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/opencore-amr/${PORTNAME}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	VisualOn AMR-WB encoder library
+WWW=		https://sourceforge.net/projects/opencore-amr/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/COPYING
