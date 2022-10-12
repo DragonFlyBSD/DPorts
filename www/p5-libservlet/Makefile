@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	libservlet
 PORTVERSION=	0.9.2
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Servlet API for Perl
+WWW=		http://libservlet.sourceforge.net/
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
