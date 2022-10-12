@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	IPC-MM
 PORTVERSION=	0.03
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl interface to Ralf Engelschall's mm library
+WWW=		https://metacpan.org/release/IPC-MM
 
 LIB_DEPENDS=	libmm.so:devel/mm
 
