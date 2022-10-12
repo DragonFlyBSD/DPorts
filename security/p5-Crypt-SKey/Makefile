@@ -1,5 +1,3 @@
-# Created by: Gabor Kovesdan
-
 PORTNAME=	Crypt-SKey
 PORTVERSION=	0.10
 PORTREVISION=	3
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	ashish@FreeBSD.org
 COMMENT=	Perl S/Key calculator
+WWW=		https://metacpan.org/release/Crypt-SKey
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-Digest-MD4>=0:security/p5-Digest-MD4 \
