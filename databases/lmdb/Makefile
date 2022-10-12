@@ -1,5 +1,3 @@
-# Created by: Xin Li <delphij@FreeBSD.org>
-
 PORTNAME=	lmdb
 PORTVERSION=	0.9.29
 PORTREVISION=	1
@@ -9,6 +7,7 @@ CATEGORIES=	databases
 
 MAINTAINER=	delphij@FreeBSD.org
 COMMENT=	OpenLDAP Lightning Memory-Mapped Database
+WWW=		https://symas.com/lmdb/
 
 LICENSE=	OPENLDAP
 LICENSE_NAME=	OpenLDAP Public License
