@@ -1,5 +1,3 @@
-# Created by: proff
-
 PORTNAME=	an
 PORTVERSION=	1.2
 PORTREVISION=	14
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}.orig
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Fast anagram generator
+WWW=		https://packages.debian.org/unstable/games/an
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
