@@ -1,5 +1,3 @@
-# Created by: Tom Hukins <tom@eborcom.com>
-
 PORTNAME=	serialmail
 PORTVERSION=	0.75
 PORTREVISION=	3
@@ -11,6 +9,7 @@ MASTER_SITES=	http://cr.yp.to/software/ \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tools for passing mail across serial links
+WWW=		https://cr.yp.to/serialmail.html
 
 # Converted from LEGAL_TEXT
 LICENSE=	djb
