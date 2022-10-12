@@ -1,5 +1,3 @@
-# Created by: Hardy Schumacher <lowmaster@web.de>
-
 PORTNAME=	rudeconfig
 PORTVERSION=	5.0.5
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.rudeserver.com/config/download/
 
 MAINTAINER=	lowmaster@web.de
 COMMENT=	Library for handling configuration files, written in C++
+WWW=		http://www.rudeserver.com/
 
 USES=		dos2unix libtool
 DOS2UNIX_GLOB=	*
