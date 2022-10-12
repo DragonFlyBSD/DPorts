@@ -1,5 +1,3 @@
-# Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-
 PORTNAME=	Parse-CSV
 PORTVERSION=	2.07
 CATEGORIES=	textproc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Highly flexible CSV parser for large files
+WWW=		https://metacpan.org/release/Parse-CSV
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
