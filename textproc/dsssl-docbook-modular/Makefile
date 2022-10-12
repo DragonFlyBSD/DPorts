@@ -1,5 +1,3 @@
-# Created by: Jun Kuriyama <kuriyama@opt.phys.waseda.ac.jp>
-
 PORTNAME=	dsssl-docbook-modular
 PORTVERSION=	1.79
 PORTREVISION=	1
@@ -16,6 +14,7 @@ PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	DSSSL stylesheets for the DocBook DTD by Norman Walsh
+WWW=		https://sourceforge.net/projects/docbook/
 
 BUILD_DEPENDS=	xmlcatmgr:textproc/xmlcatmgr
 RUN_DEPENDS:=	${BUILD_DEPENDS}
