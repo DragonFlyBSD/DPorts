@@ -1,5 +1,3 @@
-# Created by: Thomas Spreng <spreng@socket.ch>
-
 PORTNAME=	kismet
 DISTVERSION=	2016-07-R1
 PORTREVISION=	2
@@ -9,6 +7,7 @@ MASTER_SITES=	http://www.kismetwireless.net/code/
 
 MAINTAINER=	pi@FreeBSD.org
 COMMENT=	802.11 layer2 wireless network detector, sniffer, and IDS
+WWW=		https://www.kismetwireless.net/
 
 LICENSE=	GPLv2
 
