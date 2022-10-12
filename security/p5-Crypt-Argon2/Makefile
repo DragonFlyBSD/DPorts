@@ -1,5 +1,3 @@
-# Created by: Sergei Vyshenski <svysh.fbsd@gmail.com>
-
 PORTNAME=	Crypt-Argon2
 DISTVERSION=	0.012
 CATEGORIES=	security
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	svysh.fbsd@gmail.com
 COMMENT=	Perl interface to the Argon2 key derivation functions
+WWW=		https://metacpan.org/release/Crypt-Argon2
 
 LICENSE=	CC0-1.0
 LICENSE_FILE=	${WRKSRC}/README
