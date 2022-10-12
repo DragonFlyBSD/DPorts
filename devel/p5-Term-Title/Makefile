@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	Term-Title
 PORTVERSION=	0.09
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	swills@FreeBSD.org
 COMMENT=	Portable API to set the terminal titlebar
+WWW=		https://metacpan.org/release/Term-Title
 
 USES=		perl5
 USE_PERL5=	configure
