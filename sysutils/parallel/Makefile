@@ -1,12 +1,11 @@
-# Created by: Chris Howey <howeyc@gmail.com>
-
 PORTNAME=	parallel
-PORTVERSION=	20220622
+PORTVERSION=	20220822
 CATEGORIES=	sysutils
 MASTER_SITES=	GNU
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Shell tool for executing jobs in parallel
+WWW=		https://www.gnu.org/software/parallel/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSES/GPL-3.0-or-later.txt
