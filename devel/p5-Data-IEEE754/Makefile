@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Data-IEEE754
 PORTVERSION=	0.02
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Pack and unpack big-endian IEEE754 floats and doubles
+WWW=		https://metacpan.org/release/Data-IEEE754
 
 LICENSE=	ART20
 LICENSE_FILE=	${WRKSRC}/LICENSE
