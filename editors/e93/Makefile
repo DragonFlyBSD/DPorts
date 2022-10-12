@@ -1,5 +1,3 @@
-# Created by: Satoshi Asami (asami)
-
 PORTNAME=	e93
 PORTVERSION=	1.4.3
 CATEGORIES=	editors tcl
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tcl-based, programmer-oriented text editor
+WWW=		http://www.e93.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE.TXT
