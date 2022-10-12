@@ -1,5 +1,3 @@
-# Created by: Satoshi TAOKA <taoka@FreeBSD.org>
-
 PORTNAME=	csrd
 PORTVERSION=	1.0
 PORTREVISION=	1
@@ -11,6 +9,7 @@ PATCHFILES=	csrd.c.diff.gz
 
 MAINTAINER=	yasu@FreeBSD.org
 COMMENT=	Utility for Shogakukan Random House English-Japanese Dictionary
+WWW=		http://openlab.ring.gr.jp/edict/
 
 LICENSE=	PD
 LICENSE_FILE=	${WRKSRC}/csrd.doc
