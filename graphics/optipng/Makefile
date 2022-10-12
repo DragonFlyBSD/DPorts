@@ -1,5 +1,3 @@
-# Created by: Thomas Hurst <tom@hur.st>
-
 PORTNAME=	optipng
 PORTVERSION=	0.7.7
 CATEGORIES=	graphics
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/${PORTNAME}/OptiPNG/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	tom@hur.st
 COMMENT=	Optimizer for PNG files
+WWW=		http://optipng.sourceforge.net/
 
 LICENSE=	ZLIB
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
