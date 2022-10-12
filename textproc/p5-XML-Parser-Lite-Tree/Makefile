@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	XML-Parser-Lite-Tree
 PORTVERSION=	0.14
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Lightweight XML tree builder
+WWW=		https://metacpan.org/release/XML-Parser-Lite-Tree
 
 LICENSE=	ART20
 
