@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	MooseX-Meta-TypeConstraint-ForceCoercion
 PORTVERSION=	0.01
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Force coercion when validating type constraints
+WWW=		https://metacpan.org/release/MooseX-Meta-TypeConstraint-ForceCoercion
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
