@@ -1,5 +1,3 @@
-# Created by: Seiichirou Hiraoka
-
 PORTNAME=	namazu
 PORTVERSION=	1.3.0.11
 PORTREVISION=	1
@@ -9,6 +7,7 @@ MASTER_SITES=	http://www.namazu.org/stable/ \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Search engine software intended for easy use
+WWW=		http://www.namazu.org
 
 BUILD_DEPENDS=	kakasi:japanese/kakasi \
 		nkf:japanese/nkf
