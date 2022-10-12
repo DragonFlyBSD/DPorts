@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Sys-Info-Driver-BSD
 PORTVERSION=	0.7801
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	BSD driver for Sys::Info
+WWW=		https://metacpan.org/release/Sys-Info-Driver-BSD
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
