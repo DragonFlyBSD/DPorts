@@ -1,5 +1,3 @@
-# Created by: Zane C. Bowers-Hadley <vvelox@vvelox.net>
-
 PORTNAME=	Number-Format-Metric
 PORTVERSION=	0.60
 CATEGORIES=	textproc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	vvelox@vvelox.net
 COMMENT=	Format number with metric prefix
+WWW=		https://metacpan.org/dist/Number-Format-Metric
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
