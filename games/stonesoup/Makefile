@@ -1,11 +1,10 @@
-# Created by: Tobias Rehbein <tobias.rehbein@web.de>
-
 PORTNAME=	stonesoup
-DISTVERSION=	0.28.0
+DISTVERSION=	0.29.1
 CATEGORIES=	games
 
 MAINTAINER=	fuz@fuz.su
 COMMENT=	Dungeon Crawl Stone Soup - a fun, free rogue-like game
+WWW=		https://crawl.develz.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/../../LICENSE
