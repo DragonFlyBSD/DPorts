@@ -1,5 +1,3 @@
-# Created by: Kevin Lo <kevlo@FreeBSD.org>
-
 PORTNAME=	Math-RPN
 PORTVERSION=	1.11
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Reverse polish math expression evaluation
+WWW=		https://metacpan.org/release/Math-RPN
 
 TEST_DEPENDS=	p5-Test-Warn>=0:devel/p5-Test-Warn
 
