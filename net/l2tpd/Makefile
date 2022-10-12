@@ -1,12 +1,10 @@
-# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-
 PORTNAME=	l2tpd
 PORTVERSION=	0.69
 PORTREVISION=	10
 CATEGORIES=	net
 MASTER_SITES=	SF/${PORTNAME}/L2TPd/${PORTVERSION}
 
-MAINTAINER=	sobomax@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Implementation of the layer two tunneling protocol
 
 BROKEN_armv6=	fails to link: undefined reference to check_control
