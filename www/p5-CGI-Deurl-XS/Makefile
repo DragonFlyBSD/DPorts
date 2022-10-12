@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	CGI-Deurl-XS
 PORTVERSION=	0.08
 CATEGORIES=	www perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Fast decoder for URL parameter strings
+WWW=		https://metacpan.org/release/CGI-Deurl-XS
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
