@@ -1,5 +1,3 @@
-# Created by: Gabor Kovesdan
-
 PORTNAME=	Crypt-Enigma
 PORTVERSION=	1.4
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	Perl extension for the Enigma cipher
+WWW=		https://metacpan.org/release/Crypt-Enigma
 
 USES=		perl5
 USE_PERL5=	configure
