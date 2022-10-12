@@ -1,5 +1,3 @@
-# Created by: Sylvio Cesar <sylvio@FreeBSD.org>
-
 PORTNAME=	mp3cd
 PORTVERSION=	1.027
 PORTREVISION=	1
@@ -9,6 +7,7 @@ MASTER_SITES=	http://outflux.net/software/pkgs/mp3cd/download/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Perl script that burns MP3 to audio CDs
+WWW=		https://outflux.net
 
 LICENSE=	GPLv2+
 
