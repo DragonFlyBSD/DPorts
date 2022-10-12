@@ -1,12 +1,12 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	proj-data
-PORTVERSION=	1.10
+PORTVERSION=	1.11
 CATEGORIES=	graphics geography
-MASTER_SITES=	https://download.osgeo.org/proj/
+MASTER_SITES=	https://download.osgeo.org/proj/ \
+		https://github.com/OSGeo/PROJ-data/releases/download/${PORTVERSION}.0/
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Datum grid package for PROJ
+WWW=		https://github.com/OSGeo/PROJ-data
 
 NO_ARCH=	yes
 NO_BUILD=	yes
