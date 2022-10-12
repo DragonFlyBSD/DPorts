@@ -1,5 +1,3 @@
-# Created by: Joe Clarke
-
 PORTNAME=	openslp
 PORTVERSION=	2.0.0
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTVERSION}/${PORTVERSION}%20Release
 
 MAINTAINER=	marcus@FreeBSD.org
 COMMENT=	Open-source implementation of the Service Location Protocol
+WWW=		http://www.openslp.org/
 
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
