@@ -1,5 +1,3 @@
-# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-
 PORTNAME=	libmetalink
 PORTVERSION=	0.1.3
 CATEGORIES=	misc
@@ -8,6 +6,7 @@ MASTER_SITES=	https://launchpad.net/libmetalink/trunk/libmetalink-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Metalink library written in C language
+WWW=		https://launchpad.net/libmetalink/
 
 LICENSE=	MIT
 
