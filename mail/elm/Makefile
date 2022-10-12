@@ -1,5 +1,3 @@
-# Created by: dhagan@cs.vt.edu
-
 PORTNAME=	elm
 PORTVERSION=	2.5.8
 PORTREVISION=	5
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}${PORTVERSION}
 
 MAINTAINER=	mi@aldan.algebra.com
 COMMENT=	Once-popular mail user agent, version 2.5.x
+WWW=		https://instinct.org/elm/
 
 LICENSE=	ELM
 LICENSE_NAME=	Elm(tm) Mail System General Public License
