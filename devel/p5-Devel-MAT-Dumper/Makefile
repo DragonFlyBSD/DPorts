@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Devel-MAT-Dumper
 PORTVERSION=	0.45
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Write a heap dump file for later analysis
+WWW=		https://metacpan.org/release/Devel-MAT-Dumper
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
