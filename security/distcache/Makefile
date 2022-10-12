@@ -1,5 +1,3 @@
-# Created by: Marcel Prisi <marcel.prisi@virtua.ch>
-
 PORTNAME=	distcache
 DISTVERSION=	1.5.1
 CATEGORIES=	security www
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/distcache/1.%20distcache-devel/1.5.1
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Distributed OpenSSL session caching tools
+WWW=		http://distcache.sourceforge.net/
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/LICENSE
