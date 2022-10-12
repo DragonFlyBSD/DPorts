@@ -1,5 +1,3 @@
-# Created by: Tom Judge <tj@FreeBSD.org>
-
 PORTNAME=	recaptcha
 PORTVERSION=	3.0.0
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DISTNAME=	django-${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	python@FreeBSD.org
 COMMENT=	Django reCAPTCHA form field/widget integration app
+WWW=		https://github.com/torchbox/django-recaptcha
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
