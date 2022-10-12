@@ -1,5 +1,3 @@
-# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-
 PORTNAME=	SQL-Interp
 PORTVERSION=	1.27
 CATEGORIES=	databases perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Interpolate Perl variables into SQL with DBI
+WWW=		https://metacpan.org/release/SQL-Interp
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
