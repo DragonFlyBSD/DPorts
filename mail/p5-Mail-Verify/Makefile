@@ -1,5 +1,3 @@
-# Created by: Pete Fritchman <petef@databits.net >
-
 PORTNAME=	Mail-Verify
 PORTVERSION=	0.02
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module to verify email addresses
+WWW=		https://metacpan.org/release/Mail-Verify
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-Net-DNS>=0:dns/p5-Net-DNS
