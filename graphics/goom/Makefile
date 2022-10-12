@@ -1,5 +1,3 @@
-# Created by: Koop Mast <kwm@FreeBSD.org>
-
 PORTNAME=	goom
 PORTVERSION=	2k4.0
 PORTREVISION=	7
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:S|.|-|}-src
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Visual effects library
+WWW=		https://sourceforge.net/projects/goom/
 
 LICENSE=	LGPL20
 
