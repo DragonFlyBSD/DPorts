@@ -1,5 +1,3 @@
-# Created by: Jose Alonso Cardenas Marquez <acm@FreeBSD.org>
-
 PORTNAME=	naev
 PORTVERSION=	0.7.0
 DISTVERSIONSUFFIX=	-ndata
@@ -10,6 +8,7 @@ EXTRACT_ONLY=	# empty
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Naev game data file
+WWW=		http://blog.naev.org/
 
 LICENSE=	GPLv2 GPLv3 CC-BY-3.0 CC-BY-SA-3.0 PD
 LICENSE_COMB=	multi
