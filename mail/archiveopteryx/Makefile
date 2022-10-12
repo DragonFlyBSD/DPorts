@@ -1,5 +1,3 @@
-# Created by: Ashish SHUKLA <ashish@FreeBSD.org>
-
 PORTNAME=	archiveopteryx
 PORTVERSION=	3.2.0
 PORTREVISION=	8
@@ -8,6 +6,7 @@ MASTER_SITES=	http://archiveopteryx.org/download/
 
 MAINTAINER=	feld@FreeBSD.org
 COMMENT=	Advanced PostgreSQL-based IMAP/POP server
+WWW=		https://www.archiveopteryx.org/
 
 LICENSE=	MIT
 
