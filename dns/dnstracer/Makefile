@@ -1,5 +1,3 @@
-# Created by: Edwin Groothuis <edwin@mavetju.org>
-
 PORTNAME=	dnstracer
 DISTVERSION=	1.10
 CATEGORIES=	dns
@@ -7,6 +5,7 @@ MASTER_SITES=	http://www.mavetju.org/download/
 
 MAINTAINER=	0mp@FreeBSD.org
 COMMENT=	Trace a chain of DNS servers to the source
+WWW=		https://www.mavetju.org/unix/general.php
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
