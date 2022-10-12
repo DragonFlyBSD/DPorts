@@ -1,5 +1,3 @@
-# Created by: Erwin Lansing <erwin@FreeBSD.org>
-
 PORTNAME=	CGI-Session
 PORTVERSION=	4.48
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl extension for persistent session management
+WWW=		https://metacpan.org/release/CGI-Session
 
 USES=		perl5
 USE_PERL5=	configure
