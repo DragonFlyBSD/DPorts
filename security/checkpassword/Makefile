@@ -1,5 +1,3 @@
-# Created by: sada@FreeBSD.org
-
 PORTNAME=	checkpassword
 PORTVERSION=	0.90
 CATEGORIES=	security
@@ -8,6 +6,7 @@ MASTER_SITES=	http://cr.yp.to/checkpwd/ \
 
 MAINTAINER=	garga@FreeBSD.org
 COMMENT=	Simple password-checking interface
+WWW=		https://cr.yp.to/checkpwd.html
 
 OPTIONS_DEFINE=	DOCS
 
