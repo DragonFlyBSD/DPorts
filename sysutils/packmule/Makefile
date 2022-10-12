@@ -1,5 +1,3 @@
-# Created by: Austin Shafer <ashafer@badland.io>
-
 PORTNAME=	packmule
 DISTVERSIONPREFIX=v
 DISTVERSION=	1.1
@@ -7,6 +5,7 @@ CATEGORIES=	sysutils perl5
 
 MAINTAINER=	ashafer@badland.io
 COMMENT=	Creates and packs custom FreeBSD installation images
+WWW=		http://badland.io/packmule.md
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/Copyright
