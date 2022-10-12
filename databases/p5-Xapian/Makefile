@@ -1,7 +1,5 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Xapian
-PORTVERSION=	1.4.19.0
+PORTVERSION=	1.4.20.0
 CATEGORIES=	databases perl5
 MASTER_SITES=	https://oligarchy.co.uk/xapian/${PORTVERSION:R}/ \
 		LOCAL/sunpoet
@@ -10,6 +8,7 @@ DISTNAME=	xapian-bindings-${PORTVERSION:R}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Perl binding for Xapian
+WWW=		https://xapian.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
