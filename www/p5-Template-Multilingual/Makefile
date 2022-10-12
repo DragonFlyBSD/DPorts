@@ -1,5 +1,3 @@
-# Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
-
 PORTNAME=	Template-Multilingual
 PORTVERSION=	1.00
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Multilingual templates for Template Toolkit
+WWW=		https://metacpan.org/release/Template-Multilingual
 
 RUN_DEPENDS=	p5-Template-Toolkit>=0:www/p5-Template-Toolkit
 
