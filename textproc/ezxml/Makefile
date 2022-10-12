@@ -1,5 +1,3 @@
-# Created by: Marcin Jessa <yazzy@yazzy.org>
-
 PORTNAME=	ezxml
 PORTVERSION=	0.8.6
 CATEGORIES=	textproc devel
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/ezXML/ezXML%20${PORTVERSION} \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Easy to use C library for parsing XML documents
+WWW=		http://ezxml.sourceforge.net/
 
 USES=		cpe
 CPE_VENDOR=	${PORTNAME}_project
