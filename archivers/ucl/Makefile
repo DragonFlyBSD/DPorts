@@ -1,5 +1,3 @@
-# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-
 PORTNAME=	ucl
 PORTVERSION=	1.03
 PORTREVISION=	5
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.oberhumer.com/opensource/ucl/download/
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Data compression library with low memory usage
+WWW=		https://www.oberhumer.com/opensource/ucl/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
