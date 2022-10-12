@@ -1,11 +1,10 @@
-# Created by: oly@world.std.com
-
 PORTNAME=	lout
-PORTVERSION=	3.42
+PORTVERSION=	3.42.1
 CATEGORIES=	print
 
 MAINTAINER=	kbowling@FreeBSD.org
 COMMENT=	LaTeX like document creation system with PostScript/PDF output
+WWW=		https://savannah.nongnu.org/projects/lout/
 
 LICENSE=	GPLv3+
 
