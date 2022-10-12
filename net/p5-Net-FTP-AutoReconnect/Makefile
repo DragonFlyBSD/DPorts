@@ -1,5 +1,3 @@
-# Created by: Jase Thew <freebsd@beardz.net>
-
 PORTNAME=	Net-FTP-AutoReconnect
 PORTVERSION=	0.3
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl5 FTP client class with automatic reconnect on failure
+WWW=		https://metacpan.org/release/Net-FTP-AutoReconnect
 
 USES=		perl5
 USE_PERL5=	configure
