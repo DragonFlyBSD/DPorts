@@ -1,5 +1,3 @@
-# Created by: Jim Pirzyk <pirzyk@uiuc.edu>
-
 PORTNAME=	ParseLex
 PORTVERSION=	2.21
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	pirzyk@FreeBSD.org
 COMMENT=	Object-oriented generator of lexical analyzers
+WWW=		https://metacpan.org/release/ParseLex
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-ParseTemplate>=3.01:devel/p5-ParseTemplate
