@@ -1,5 +1,3 @@
-# Created by: Seamus Venasse <svenasse@polaris.ca>
-
 PORTNAME=	Term-ProgressBar
 PORTVERSION=	2.22
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl extension to display a progress bar
+WWW=		https://metacpan.org/release/Term-ProgressBar
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
