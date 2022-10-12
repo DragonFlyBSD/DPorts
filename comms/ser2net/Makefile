@@ -1,5 +1,3 @@
-# Created by: Devon H. O'Dell <devon.odell@coyotepoint.com>
-
 PORTNAME=	ser2net
 PORTVERSION=	3.5.1
 CATEGORIES=	comms net
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Allows to access serial ports over IP
+WWW=		https://www.sourceforge.net/projects/ser2net/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
