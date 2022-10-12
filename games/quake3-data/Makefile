@@ -1,5 +1,3 @@
-# Created by: Nik Clayton <nik@FreeBSD.org>
-
 PORTNAME=	data
 DISTVERSION=	1.32b-3
 PORTREVISION=	2
@@ -11,6 +9,7 @@ EXTRACT_SUFX=	.run
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Quake III Arena data files
+WWW=		http://www.idsoftware.com/games/quake/quake3-arena/
 
 DATADIR=	${Q3DIR}
 NO_BUILD=	yes
