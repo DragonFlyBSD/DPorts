@@ -1,5 +1,3 @@
-# Created by: Jui-Nan Lin <jnlin@freebsd.cs.nctu.edu.tw>
-
 PORTNAME=	libhsclient
 DISTVERSION=	1.0.6-20110614
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	HandlerSocket-Plugin-for-MySQL-${DISTVERSION}
 
 MAINTAINER=	jnlin@freebsd.cs.nctu.edu.tw
 COMMENT=	Client Library of HandlerSocket Plugin
+WWW=		https://github.com/ahiguti/HandlerSocket-Plugin-for-MySQL
 
 WRKSRC=		${WRKDIR}/HandlerSocket-Plugin-for-MySQL
 
