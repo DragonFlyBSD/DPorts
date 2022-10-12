@@ -1,5 +1,3 @@
-# Created by: Dean Hollister <dean@odyssey.apana.org.au>
-
 PORTNAME=	firedns
 PORTVERSION=	0.9.12
 CATEGORIES=	dns devel
@@ -10,6 +8,7 @@ MASTER_SITES=	https://BSDforge.com/projects/source/dns/firedns/ \
 
 MAINTAINER=	dean@odyssey.apana.org.au
 COMMENT=	C library for handling asynchronous DNS queries
+WWW=		https://www.firestuff.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/GPL
