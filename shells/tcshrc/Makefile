@@ -1,5 +1,3 @@
-# Created by: Sean Chittenden <seanc@FreeBSD.org>
-
 PORTNAME=	tcshrc
 PORTVERSION=	1.6.2
 CATEGORIES=	shells
@@ -7,6 +5,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Set of configuration scripts for the TCSH shell
+WWW=		http://tcshrc.sourceforge.net/
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
