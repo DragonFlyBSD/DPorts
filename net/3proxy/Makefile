@@ -1,11 +1,10 @@
-# Created by: tim@relay.nnn.tstu.ru
-
 PORTNAME=	3proxy
 DISTVERSION=	0.9.4
 CATEGORIES=	net
 
 MAINTAINER=	timp87@gmail.com
 COMMENT=	Proxy servers set (support HTTP(S), FTP, SOCKS, POP3, TCP & UDP)
+WWW=		https://3proxy.ru/
 
 LICENSE=	APACHE20 BSD3CLAUSE GPLv2+ LGPL21+
 LICENSE_COMB=	dual
