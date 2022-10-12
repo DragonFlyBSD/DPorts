@@ -1,10 +1,11 @@
 PORTNAME=	nmrpflash
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.9.17
+DISTVERSION=	0.9.18.2
 CATEGORIES=	sysutils
 
 MAINTAINER=	se@FreeBSD.org
 COMMENT=	Unofficial flash tool for Netgear network devices
+WWW=		https://github.com/jclehner/nmrpflash
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
