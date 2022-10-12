@@ -1,5 +1,3 @@
-# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-
 PORTNAME=	Data-OptList
 PORTVERSION=	0.112
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Parse and validate simple name/value option pairs
+WWW=		https://metacpan.org/release/Data-OptList
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
