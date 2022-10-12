@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Convert-Scalar
 PORTVERSION=	1.12
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Convert between different representations of perl scalars
+WWW=		https://metacpan.org/dist/Convert-Scalar
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
