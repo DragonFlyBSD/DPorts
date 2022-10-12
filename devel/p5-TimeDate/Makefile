@@ -1,5 +1,3 @@
-# Created by: Andreas Klemm <andreas@klemm.gtn.com>
-
 PORTNAME=	TimeDate
 PORTVERSION=	2.33
 PORTEPOCH=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	svysh.fbsd@gmail.com
 COMMENT=	Perl5 module containing a better/faster date parser for absolute dates
+WWW=		https://metacpan.org/release/TimeDate
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
