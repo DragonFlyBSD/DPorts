@@ -1,11 +1,10 @@
-# Created by: Johan Str??m <johan@stromnet.se>
-
 PORTNAME=	jsoncpp
 DISTVERSION=	1.9.5
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	JSON reader and writer library for C++
+WWW=		https://github.com/open-source-parsers/jsoncpp
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
