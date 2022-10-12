@@ -1,5 +1,3 @@
-# Created by: chinsan <chinsan.tw@gmail.com>
-
 PORTNAME=	HTML-WikiConverter-DokuWiki
 PORTVERSION=	0.53
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Convert HTML to DokuWiki markup
+WWW=		https://metacpan.org/release/HTML-WikiConverter-DokuWiki
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
