@@ -1,5 +1,3 @@
-# Created by: Alexander Nusov <alexander.nusov@nfvexpress.com>
-
 PORTNAME=	cachetools
 PORTVERSION=	5.2.0
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Extensible memoizing collections and decorators
+WWW=		https://github.com/tkem/cachetools
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
