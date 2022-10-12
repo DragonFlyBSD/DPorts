@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	cvsd
 PORTVERSION=	1.0.24
 CATEGORIES=	devel
@@ -8,6 +6,7 @@ MASTER_SITES=	http://arthurdejong.org/cvsd/ \
 
 MAINTAINER=	rum1cro@yandex.ru
 COMMENT=	CVS pserver daemon
+WWW=		https://arthurdejong.org/cvsd
 
 LICENSE=	GPLv2
 
