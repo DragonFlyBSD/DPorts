@@ -1,5 +1,3 @@
-# Created by: Andy Kosela <akosela@andykosela.com>
-
 PORTNAME=	fortune-mod-epictetus
 PORTVERSION=	0.2
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	misc
 
 MAINTAINER=	akosela@andykosela.com
 COMMENT=	Quotes from Epictetus
+WWW=		https://github.com/akosela/fortune-mod-epictetus
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
