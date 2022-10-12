@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Template-Plugin-Filter-Minify-CSS-XS
 PORTVERSION=	0.96
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	CSS::Minifier::XS filter for Template Toolkit
+WWW=		https://metacpan.org/release/Template-Plugin-Filter-Minify-CSS-XS
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
