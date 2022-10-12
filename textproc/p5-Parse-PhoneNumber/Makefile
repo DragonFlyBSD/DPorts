@@ -1,5 +1,3 @@
-# Created by: Aaron Dalton <aaron@FreeBSD.org>
-
 PORTNAME=	Parse-PhoneNumber
 PORTVERSION=	1.9
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Parse phone numbers
+WWW=		https://metacpan.org/release/Parse-PhoneNumber
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
