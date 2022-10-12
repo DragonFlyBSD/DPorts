@@ -1,5 +1,3 @@
-# Created by: Thorsten Greiner <thorsten.greiner@web.de>
-
 PORTNAME=	Text-German
 PORTVERSION=	0.06
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	German Grundform reduction
+WWW=		https://metacpan.org/release/Text-German
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
