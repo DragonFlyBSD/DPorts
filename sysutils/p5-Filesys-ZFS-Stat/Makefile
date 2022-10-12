@@ -1,5 +1,3 @@
-# Created by: Gleb Smirnoff <glebius@FreeBSD.org>
-
 PORTNAME=	Filesys-ZFS-Stat
 PORTVERSION=	0.01
 PORTREVISION=	1
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	glebius@FreeBSD.org
 COMMENT=	Perl interface to kstat.zfs
+WWW=		https://github.com/glebius/Filesys-ZFS-Stat
 
 LICENSE=	BSD2CLAUSE
 
