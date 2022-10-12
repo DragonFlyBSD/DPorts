@@ -1,5 +1,3 @@
-# Created by: Hye-Shik Chang <perky@python.or.kr>
-
 PORTNAME=	libart_lgpl
 PORTVERSION=	2.3.21
 PORTREVISION=	3
@@ -11,6 +9,7 @@ DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Library for high-performance 2D graphics
+WWW=		https://www.levien.com/libart/
 
 LICENSE=	LGPL20+
 LICENSE_FILE=	${WRKSRC}/COPYING
