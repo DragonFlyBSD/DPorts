@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Astro-WaveBand
 PORTVERSION=	0.09
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Transparently work in waveband, wavelength, or filter
+WWW=		https://metacpan.org/release/Astro-WaveBand
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
