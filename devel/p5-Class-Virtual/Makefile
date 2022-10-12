@@ -1,5 +1,3 @@
-# Created by: Anton Berezin <tobez@FreeBSD.org>
-
 PORTNAME=	Class-Virtual
 PORTVERSION=	0.08
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Base class for virtual base classes in Perl
+WWW=		https://metacpan.org/release/Class-Virtual
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
