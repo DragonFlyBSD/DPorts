@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	nghttp3
 PORTVERSION=	0.5.0
 CATEGORIES=	www net
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	lib
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	HTTP/3 C Library
+WWW=		https://github.com/ngtcp2/nghttp3
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
