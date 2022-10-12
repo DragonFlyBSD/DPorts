@@ -1,5 +1,3 @@
-# Created by: Xavier Beaudouin <kiwi@oav.net>
-
 PORTNAME=	Test-Dir
 PORTVERSION=	1.014
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	kiwi@oav.net
 COMMENT=	Test directory attributes
+WWW=		https://metacpan.org/release/Test-Dir
 
 USES=		perl5
 USE_PERL5=	configure
