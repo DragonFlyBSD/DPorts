@@ -1,5 +1,3 @@
-# Created by: Andrey Zakhvatov
-
 PORTNAME=	vms-empire
 PORTVERSION=	1.16
 CATEGORIES=	games
@@ -7,6 +5,7 @@ MASTER_SITES=	http://www.catb.org/~esr/vms-empire/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simulation of a full-scale war between two emperors
+WWW=		http://www.catb.org/~esr/vms-empire/
 
 LICENSE=	GPLv2
 
