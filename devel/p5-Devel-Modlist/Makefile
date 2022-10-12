@@ -1,5 +1,3 @@
-# Created by: Anton Berezin <tobez@tobez.org>
-
 PORTNAME=	Devel-Modlist
 PORTVERSION=	0.801
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl extension to collect module use information
+WWW=		https://metacpan.org/release/Devel-Modlist
 
 USES=		perl5
 USE_PERL5=	configure
