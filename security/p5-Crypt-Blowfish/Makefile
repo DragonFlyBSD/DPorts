@@ -1,5 +1,3 @@
-# Created by: patrick@mindstep.com
-
 PORTNAME=	Crypt-Blowfish
 PORTVERSION=	2.14
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl interface to the Blowfish encryption algorithm
+WWW=		https://metacpan.org/release/Crypt-Blowfish
 
 LICENSE=	BSD4CLAUSE  # w/o 3'th clause
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
