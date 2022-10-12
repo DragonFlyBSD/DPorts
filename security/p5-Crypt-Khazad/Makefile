@@ -1,5 +1,3 @@
-# Created by: Gabor Kovesdan
-
 PORTNAME=	Crypt-Khazad
 PORTVERSION=	1.0.3
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	ashish@FreeBSD.org
 COMMENT=	Perl extension for Khazad block cipher
+WWW=		https://metacpan.org/release/Crypt-Khazad
 
 USES=		perl5
 USE_PERL5=	configure
