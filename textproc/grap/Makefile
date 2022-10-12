@@ -1,5 +1,3 @@
-# Created by: faber@lunabase.org
-
 PORTNAME=	grap
 PORTVERSION=	1.46
 CATEGORIES=	textproc graphics
@@ -7,6 +5,7 @@ MASTER_SITES=	http://www.lunabase.org/~faber/Vault/software/grap/
 
 MAINTAINER=	faber@lunabase.org
 COMMENT=	Implementation of Kernigan & Bentley's grap language
+WWW=		https://www.lunabase.org/~faber/Vault/software/grap/
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=--with-freebsd-ports
