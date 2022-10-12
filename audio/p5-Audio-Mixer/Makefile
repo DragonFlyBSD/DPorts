@@ -1,5 +1,3 @@
-# Created by: Dennis Herrmann <adox@mcx2.org>
-
 PORTNAME=	Audio-Mixer
 PORTVERSION=	0.7
 PORTREVISION=	3
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl extension for Sound Mixer control
+WWW=		https://metacpan.org/release/Audio-Mixer
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
