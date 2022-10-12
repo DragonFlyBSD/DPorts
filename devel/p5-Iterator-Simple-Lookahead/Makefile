@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	Iterator-Simple-Lookahead
 PORTVERSION=	0.09
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Simple iterator with lookahead and unget
+WWW=		https://metacpan.org/dist/Iterator-Simple-Lookahead
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
