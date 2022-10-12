@@ -1,5 +1,3 @@
-# Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-
 PORTNAME=	xwinwrap
 PORTVERSION=	0.3
 PORTREVISION=	4
@@ -8,6 +6,7 @@ MASTER_SITES=	LOCAL/vg
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	XWinWrap replace a desktop background with a movie or screensaver
+WWW=		http://tech.shantanugoel.com/projects/linux/shantz-xwinwrap
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
