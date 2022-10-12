@@ -1,5 +1,3 @@
-# Created by: Marcello Coutinho
-
 PORTNAME=	GnuPG
 PORTVERSION=	0.19
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	marcellocoutinho@gmail.com
 COMMENT=	Perl module for interfacing with GnuPG
+WWW=		https://metacpan.org/release/GnuPG
 
 LICENSE=	GPLv2
 
