@@ -1,5 +1,3 @@
-# Created by: Kris Kennaway <kris@FreeBSD.org>
-
 PORTNAME=	adzap
 PORTVERSION=	20110915
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	http://adzapper.sourceforge.net/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Filter out animated ad banners from web pages
+WWW=		http://adzapper.sourceforge.net/
 
 LICENSE=	BSD3CLAUSE
 
