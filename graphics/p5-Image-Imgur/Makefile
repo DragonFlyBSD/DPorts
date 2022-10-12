@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Image-Imgur
 PORTVERSION=	0.01
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Perl extension for uploading images to http://imgur.com
+WWW=		https://metacpan.org/release/Image-Imgur
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
