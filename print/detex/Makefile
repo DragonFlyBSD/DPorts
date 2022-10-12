@@ -1,5 +1,3 @@
-# Created by: David O'Brien (obrien@NUXI.com)
-
 PORTNAME=	detex
 PORTVERSION=	2.8
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.cs.purdue.edu/homes/trinkle/detex/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Strips TeX/LaTeX codes from a file
+WWW=		https://www.cs.purdue.edu/homes/trinkle/detex/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
