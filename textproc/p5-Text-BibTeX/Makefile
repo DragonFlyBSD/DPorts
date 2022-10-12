@@ -1,5 +1,3 @@
-# Created by: David Bremner <bremner@unb.ca>
-
 PORTNAME=	Text-BibTeX
 PORTVERSION=	0.88
 CATEGORIES=	textproc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Manipulate BibTeX files from perl
+WWW=		https://metacpan.org/release/Text-BibTeX
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
