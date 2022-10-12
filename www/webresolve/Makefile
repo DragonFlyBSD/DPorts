@@ -1,5 +1,3 @@
-# Created by: Joseph Scott <joseph@randomnetworks.com>
-
 PORTNAME=	webresolve
 PORTVERSION=	0.2.0
 PORTREVISION=	1
@@ -9,6 +7,7 @@ MASTER_SITES=	http://siag.nu/pub/webresolve/ \
 
 MAINTAINER=	joseph@randomnetworks.com
 COMMENT=	Webresolve resolves IP addresses to host names in web log files
+WWW=		https://siag.nu/webresolve/
 
 LICENSE=	GPLv2
 
