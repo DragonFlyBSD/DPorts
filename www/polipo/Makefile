@@ -1,5 +1,3 @@
-# Created by: Frank Behrens <frank@pinky.sax.de>
-
 PORTNAME=	polipo
 PORTVERSION=	1.1.1
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.pps.univ-paris-diderot.fr/~jch/software/files/polipo/
 
 MAINTAINER=	frank@pinky.sax.de
 COMMENT=	Small and fast caching web proxy
+WWW=		http://www.pps.jussieu.fr/~jch/software/polipo/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
