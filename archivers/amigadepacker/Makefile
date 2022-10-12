@@ -1,5 +1,3 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	amigadepacker
 PORTVERSION=	0.04
 CATEGORIES=	archivers
@@ -8,6 +6,7 @@ MASTER_SITES=	http://zakalwe.fi/~shd/foss/amigadepacker/ \
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Tool for depacking some compressed Amiga formats
+WWW=		https://zakalwe.fi/~shd/opensource.html
 
 LICENSE=	GPLv2
 
