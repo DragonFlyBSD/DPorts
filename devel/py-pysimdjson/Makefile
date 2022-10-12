@@ -1,5 +1,3 @@
-# Created by: thierry@pompo.net
-
 PORTNAME=	pysimdjson
 PORTVERSION=	4.0.3
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Python bindings for the simdjson project
+WWW=		https://pysimdjson.tkte.ch/
 
 LICENSE=	MIT
 
