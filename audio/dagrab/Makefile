@@ -1,5 +1,3 @@
-# Created by: Chia-liang Kao <clkao@CirX.ORG>
-
 PORTNAME=	dagrab
 PORTVERSION=	0.3.5
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SUNSITE/apps/sound/cdrom
 
 MAINTAINER=	clkao@CirX.ORG
 COMMENT=	Read audio tracks from a CD into wav sound files
+WWW=		http://web.tiscalinet.it/marcellou/dagrab.html
 
 PLIST_FILES=	bin/dagrab \
 		man/man1/dagrab.1.gz
