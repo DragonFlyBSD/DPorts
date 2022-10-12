@@ -1,5 +1,3 @@
-# Created by: Brian Somers <brian@FreeBSD.org>
-
 PORTNAME=	httptunnel
 PORTVERSION=	3.3
 PORTREVISION=	3
@@ -7,6 +5,7 @@ CATEGORIES=	www
 
 MAINTAINER=	portmaster@BSDforge.com
 COMMENT=	Tunnel a TCP/IP connection through a HTTP/TCP/IP connection
+WWW=		https://github.com/larsbrinkhoff/httptunnel/
 
 LICENSE=	GPLv2
 
