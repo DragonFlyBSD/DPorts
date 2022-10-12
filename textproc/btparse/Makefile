@@ -1,5 +1,3 @@
-# Created by: Kay Lehmann <kay_lehmann@web.de>
-
 PORTNAME=	btparse
 PORTVERSION=	0.35
 PORTREVISION=	1
@@ -9,6 +7,7 @@ MASTER_SITE_SUBDIR=	CPAN:AMBS/${PORTNAME}
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	C library for parsing and processing BibTeX data files
+WWW=		http://www.gerg.ca/software/btOOL
 
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
