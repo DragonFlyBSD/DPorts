@@ -1,19 +1,18 @@
-# Created by: Charlie Kester <corky1951@comcast.net>
-
 PORTNAME=	moreutils
 PORTVERSION=	0.67
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	https://git.joeyh.name/index.cgi/moreutils.git/snapshot/ \
 		LOCAL/sunpoet
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Additional Unix utilities
+WWW=		https://joeyh.name/code/moreutils/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-#RUN_DEPENDS=	p5-IPC-Run>=0:devel/p5-IPC-Run
+RUN_DEPENDS=	p5-IPC-Run>=0:devel/p5-IPC-Run
 
 USES=		gmake perl5 shebangfix
 
