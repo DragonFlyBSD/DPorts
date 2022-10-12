@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	editdistance
 PORTVERSION=	0.6.0
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Fast implementation of the edit distance (Levenshtein distance)
+WWW=		https://github.com/roy-ht/editdistance
 
 LICENSE=	MIT
 
