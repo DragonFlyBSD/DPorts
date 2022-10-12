@@ -1,5 +1,3 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	plutil
 PORTVERSION=	1.7
 CATEGORIES=	converters perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Perl implementation of Mac OS X plutil
+WWW=		http://scw.us/iPhone/plutil/
 
 USES=		shebangfix perl5 tar:xz
 USE_PERL5=	run
