@@ -1,5 +1,3 @@
-# Created by: Dirk-Willem van Gulik / dirkx@webweaving.org
-
 PORTNAME=	widentd
 PORTVERSION=	1.04
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	https://BSDforge.com/projects/source/net/widentd/
 
 MAINTAINER=	portmaster@BSDforge.com
 COMMENT=	RFC1413 auth/identd daemon providing a fixed fake reply
+WWW=		https://BSDforge.com/projects/net/widentd/
 
 LICENSE=	BSD3CLAUSE
 
