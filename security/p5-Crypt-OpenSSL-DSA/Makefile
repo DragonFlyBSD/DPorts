@@ -1,5 +1,3 @@
-# Created by: nork@FreeBSD.org
-
 PORTNAME=	Crypt-OpenSSL-DSA
 PORTVERSION=	0.20
 CATEGORIES=	security perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl5 module to DSA signature verification using OpenSSL
+WWW=		https://metacpan.org/release/Crypt-OpenSSL-DSA
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
