@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	IO-Socket-IP
 PORTVERSION=	0.41
 CATEGORIES=	net perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Drop-in replacement for IO::Socket::INET supporting IPv4 and IPv6
+WWW=		https://metacpan.org/release/IO-Socket-IP
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
