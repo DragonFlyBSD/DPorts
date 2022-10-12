@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	dataclasses-json
 PORTVERSION=	0.5.7
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Easily serialize dataclasses to and from JSON
+WWW=		https://github.com/lidatong/dataclasses-json
 
 LICENSE=	MIT
 
