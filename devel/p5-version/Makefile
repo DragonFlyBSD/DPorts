@@ -1,5 +1,3 @@
-# Created by: Autrijus Tang <autrijus@autrijus.org>
-
 PORTNAME=	version
 PORTVERSION=	0.9929
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl extension for Version Objects
+WWW=		https://metacpan.org/release/version
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
