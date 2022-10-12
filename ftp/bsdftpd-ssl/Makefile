@@ -1,5 +1,3 @@
-# Created by: Nick Leuta
-
 PORTNAME=	bsdftpd-ssl
 PORTVERSION=	1.1.0
 PORTREVISION=	4
@@ -9,6 +7,7 @@ MASTER_SITES=	http://www.sourcefiles.org/System/Daemons/FTP/ \
 
 MAINTAINER=	skynick@mail.sc.ru
 COMMENT=	Secure FTP client/server with TLS/SSL support
+WWW=		http://bsdftpd-ssl.sc.ru
 
 USES=		ssl
 MAKE_ENV+=	OBJFORMAT=elf
