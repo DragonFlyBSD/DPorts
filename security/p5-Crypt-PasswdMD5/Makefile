@@ -1,13 +1,12 @@
-# Created by: Erwin Lansing <erwin@FreeBSD.org>
-
 PORTNAME=	Crypt-PasswdMD5
-PORTVERSION=	1.41
+PORTVERSION=	1.42
 CATEGORIES=	security perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module that provides interoperable MD5-based crypt() function
+WWW=		https://metacpan.org/release/Crypt-PasswdMD5
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
