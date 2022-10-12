@@ -1,5 +1,3 @@
-# Created by: Chad Castleberry AKA ritalin
-
 PORTNAME=	rename
 PORTVERSION=	1.99.2
 CATEGORIES=	sysutils
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/${PORTNAME}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Rename multiple files using regular expressions
+WWW=		http://rename.sourceforge.net/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
