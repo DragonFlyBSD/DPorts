@@ -1,5 +1,3 @@
-# Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-
 PORTNAME=	autossh
 PORTVERSION=	1.4g
 CATEGORIES=	security
@@ -7,6 +5,7 @@ MASTER_SITES=	http://www.harding.motd.ca/autossh/
 
 MAINTAINER=	egypcio@FreeBSD.org
 COMMENT=	Automatically restart SSH sessions and tunnels
+WWW=		https://www.harding.motd.ca/autossh/
 
 LICENSE=	BSD3CLAUSE
 
