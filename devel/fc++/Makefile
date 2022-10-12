@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	fc++
 PORTVERSION=	1.5
 CATEGORIES=	devel
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME:tu}.${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Functional Programming in C++
+WWW=		https://people.cs.umass.edu/~yannis/fc++/
 
 OPTIONS_DEFINE=	DOCS
 
