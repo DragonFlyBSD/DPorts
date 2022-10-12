@@ -1,5 +1,3 @@
-# Created by: adam
-
 PORTNAME=	nn
 PORTVERSION=	6.7.3
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	ftp://ftp.nndev.org/pub/nn-${PORTVERSION:R}/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Menu based USENET newsreader
+WWW=		http://www.nndev.org/
 
 BROKEN_aarch64=	Fails to link: missing sbrk
 BROKEN_riscv64=	Fails to link: missing sbrk
