@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	http-parser
 PORTVERSION=	2.9.4
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	www
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	HTTP request/response parser written in C
+WWW=		https://github.com/nodejs/http-parser
 
 LICENSE=	MIT
 
