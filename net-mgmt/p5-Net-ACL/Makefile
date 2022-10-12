@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Net-ACL
 PORTVERSION=	0.07
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Class representing a generic access-list/route-map
+WWW=		https://metacpan.org/release/Net-ACL
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
