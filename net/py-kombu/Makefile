@@ -1,5 +1,3 @@
-# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-
 PORTNAME=	kombu
 PORTVERSION=	4.6.11
 CATEGORIES=	net python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	olgeni@FreeBSD.org
 COMMENT=	AMQP messaging framework for Python
+WWW=		https://kombu.readthedocs.org/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
