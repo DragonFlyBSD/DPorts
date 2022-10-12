@@ -1,5 +1,3 @@
-# Created by: Autrijus Tang <autrijus@autrijus.org>
-
 PORTNAME=	Text-Aligner
 PORTVERSION=	0.16
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Align text in columns
+WWW=		https://metacpan.org/release/Text-Aligner
 
 LICENSE=	ISCL
 LICENSE_FILE=	${WRKSRC}/LICENSE
