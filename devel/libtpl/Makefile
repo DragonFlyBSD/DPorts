@@ -1,5 +1,3 @@
-# Created by: Frederic Culot <frederic@culot.org>
-
 PORTNAME=	libtpl
 PORTVERSION=	1.6
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Library for serializing C data
+WWW=		https://troydhanson.github.io/tpl/
 
 LICENSE=	GPLv3 MIT
 LICENSE_COMB=	multi
