@@ -1,5 +1,3 @@
-# Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-
 PORTNAME=	IPC-Shareable
 PORTVERSION=	1.12
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Share Perl variables between processes
+WWW=		https://metacpan.org/release/IPC-Shareable
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
