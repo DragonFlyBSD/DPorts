@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	PerlIO-locale
 PORTVERSION=	0.10
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	PerlIO layer to use the encoding of the current locale
+WWW=		https://metacpan.org/release/PerlIO-locale
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
