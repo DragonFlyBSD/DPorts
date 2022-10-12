@@ -1,5 +1,3 @@
-# Created by: Anton Berezin <tobez@tobez.org>
-
 PORTNAME=	Text-Autoformat
 PORTVERSION=	1.670.000
 PORTREVISION=	1
@@ -11,6 +9,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:C/0\.(000)$//}
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Automatic and manual text wrapping and reformatting
+WWW=		https://metacpan.org/release/Text-Autoformat
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
