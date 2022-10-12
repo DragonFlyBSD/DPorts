@@ -1,5 +1,3 @@
-# Created by: Cheng-Lung Sung <clsung@dragon2.net>
-
 PORTNAME=	XML-Atom
 PORTVERSION=	0.43
 CATEGORIES=	textproc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl5 modules for Atom feed and API implementation
+WWW=		https://metacpan.org/release/XML-Atom
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
