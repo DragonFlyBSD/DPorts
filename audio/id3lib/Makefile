@@ -1,5 +1,3 @@
-# Created by: Roman Shterenzon <roman@xpert.com>
-
 PORTNAME=	id3lib
 PORTVERSION=	3.8.3
 PORTREVISION=	10
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Library for manipulating ID3v1/v1.1 and ID3v2 tags
+WWW=		http://id3lib.sourceforge.net/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
