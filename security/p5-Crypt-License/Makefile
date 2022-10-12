@@ -1,5 +1,3 @@
-# Created by: Gabor Kovesdan
-
 PORTNAME=	Crypt-License
 PORTVERSION=	2.04
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	ashish@FreeBSD.org
 COMMENT=	Perl extension to examine a license
+WWW=		https://metacpan.org/release/Crypt-License
 
 USES=		perl5
 USE_PERL5=	configure
