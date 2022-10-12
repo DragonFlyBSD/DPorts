@@ -1,5 +1,3 @@
-# Created by: Sir l33tname <sirl33tname@gmail.com>
-
 PORTNAME=	zlib
 PORTVERSION=	1.2
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${LUA_PKGNAMEPREFIX}
 
 MAINTAINER=	sirl33tname@gmail.com
 COMMENT=	Simple streaming interface to zlib for the Lua Programming Language
+WWW=		https://github.com/brimworks/lua-zlib
 
 LICENSE=	MIT
 
