@@ -1,5 +1,3 @@
-# Created by: Yen-Ming Lee <leeym@cae.ce.ntu.edu.tw>
-
 PORTNAME=	wakeonlan
 PORTVERSION=	0.41
 PORTREVISION=	3
@@ -7,6 +5,7 @@ CATEGORIES=	net
 
 MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	Sends magic packets to WOL enabled NIC to switch on the called PC
+WWW=		https://github.com/jpoliv/wakeonlan
 
 LICENSE=	ART20
 
