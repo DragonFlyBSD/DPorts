@@ -1,5 +1,3 @@
-# Created by: Alan Eldridge <alane@geeksrus.net>
-
 PORTNAME=	cvsbook
 PORTVERSION=	1.21
 PORTREVISION=	3
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-all
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tutorial and reference for CVS
+WWW=		http://cvsbook.red-bean.com/
 
 LICENSE=	GPLv2+
 
