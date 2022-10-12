@@ -1,5 +1,3 @@
-# Created by: Cheng-Lung Sung	<clsung@dragon2.net>
-
 PORTNAME=	Algorithm-SVM
 PORTVERSION=	0.13
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Perl bindings for the libsvm Support Vector Machine library
+WWW=		https://metacpan.org/release/Algorithm-SVM
 
 LICENSE=	BSD3CLAUSE
 
