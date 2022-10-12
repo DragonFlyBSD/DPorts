@@ -1,5 +1,3 @@
-# Created by: Yoshihiko Sarumaru <mistral@imasy.or.jp>
-
 PORTNAME=	stone
 PORTVERSION=	2.4
 CATEGORIES=	net
@@ -7,6 +5,7 @@ MASTER_SITES=	http://www.gcd.org/sengoku/stone/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	TCP/IP packet repeater in the application layer
+WWW=		https://www.gcd.org/sengoku/stone/
 
 LICENSE=	GPLv2
 
