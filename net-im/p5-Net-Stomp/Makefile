@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	Net-Stomp
 PORTVERSION=	0.61
 CATEGORIES=	net-im perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Streaming Text Orientated Messaging Protocol Client
+WWW=		https://metacpan.org/release/Net-Stomp
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
