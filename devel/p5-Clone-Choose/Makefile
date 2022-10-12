@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Clone-Choose
 PORTVERSION=	0.010
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Choose appropriate clone utility
+WWW=		https://metacpan.org/release/Clone-Choose
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
