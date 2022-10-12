@@ -1,5 +1,3 @@
-# Created by: michael johnson <ahze@ahze.net>
-
 PORTNAME=	Cache-Memcached
 PORTVERSION=	1.30
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl API for memcached, a distributed memory cache daemon
+WWW=		https://metacpan.org/release/Cache-Memcached
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
