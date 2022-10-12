@@ -1,5 +1,3 @@
-# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-
 PORTNAME=	libmpeg2
 PORTVERSION=	0.5.1
 PORTREVISION=	6
@@ -8,6 +6,7 @@ MASTER_SITES=	http://libmpeg2.sourceforge.net/files/
 
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	Free library for decoding MPEG-2 and MPEG-1 video streams
+WWW=		http://libmpeg2.sourceforge.net/
 
 USES=		libtool pathfix
 GNU_CONFIGURE=	yes
