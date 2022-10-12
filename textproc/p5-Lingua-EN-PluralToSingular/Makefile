@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Lingua-EN-PluralToSingular
 PORTVERSION=	0.21
 CATEGORIES=	textproc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Change an English plural to a singular
+WWW=		https://metacpan.org/release/Lingua-EN-PluralToSingular
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
