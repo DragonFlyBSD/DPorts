@@ -1,5 +1,3 @@
-# Created by: Nosov Artem <chip-set@mail.ru>
-
 PORTNAME=	webcpp
 PORTVERSION=	0.8.4
 CATEGORIES=	textproc
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-src
 
 MAINTAINER=	chip-set@mail.ru
 COMMENT=	Convert your source code to syntax highlighted HTML
+WWW=		http://webcpp.sourceforge.net/
 
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
