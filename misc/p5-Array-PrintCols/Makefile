@@ -1,5 +1,3 @@
-# Created by: James FitzGibbon <jfitz@FreeBSD.org>
-
 PORTNAME=	Array-PrintCols
 PORTVERSION=	2.6
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl5 module to print arrays of elements in sorted columns
+WWW=		https://metacpan.org/release/Array-PrintCols
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/GNU-LICENSE
