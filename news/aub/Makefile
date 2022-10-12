@@ -1,5 +1,3 @@
-# Created by: David O'Brien (obrien@cs.ucdavis.edu)
-
 PORTNAME=	aub
 PORTVERSION=	2.2
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Assemble usenet binaries
+WWW=		https://yukidoke.org/~mako/projects/aub/
 
 USES=		shebangfix
 SHEBANG_FILES=	aub
