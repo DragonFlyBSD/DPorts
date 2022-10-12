@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	What
 PORTVERSION=	1.01
 PORTREVISION=	2
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Find out about running services
+WWW=		https://metacpan.org/release/What
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
