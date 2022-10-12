@@ -1,5 +1,3 @@
-# Created by: Douglas Thrift
-
 PORTNAME=	hardlink
 PORTVERSION=	0.3.0
 CATEGORIES=	sysutils
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	douglas@douglasthrift.net
 COMMENT=	Replace file copies using hardlinks
+WWW=		https://jak-linux.org/projects/hardlink/
 
 LICENSE=	MIT
 
