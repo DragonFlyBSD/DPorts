@@ -1,5 +1,3 @@
-# Created by: Ulrich Spoerlein <q@uni.de>
-
 PORTNAME=	ocrad
 DISTVERSION=	0.28
 CATEGORIES=	graphics
@@ -7,6 +5,7 @@ MASTER_SITES=	GNU
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	OCR program implemented as filter
+WWW=		https://www.gnu.org/software/ocrad/ocrad.html
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
