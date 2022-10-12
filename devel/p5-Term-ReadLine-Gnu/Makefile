@@ -1,5 +1,3 @@
-# Created by: Matthew Hunt <mph@pobox.com>
-
 PORTNAME=	Term-ReadLine-Gnu
 PORTVERSION=	1.42
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Allow Term::ReadLine to use GNU readline
+WWW=		https://metacpan.org/release/Term-ReadLine-Gnu
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
