@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Regexp-Trie
 PORTVERSION=	0.02
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Builds trie-ized regexp
+WWW=		https://metacpan.org/release/Regexp-Trie
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
