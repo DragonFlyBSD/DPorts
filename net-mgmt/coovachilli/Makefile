@@ -1,5 +1,3 @@
-# Created by: Sevan Janiyan <venture37@geeklan.co.uk>
-
 PORTNAME=	coovachilli
 PORTVERSION=	1.0.12
 PORTREVISION=	1
@@ -11,6 +9,7 @@ DISTNAME=	coova-chilli-${PORTVERSION}
 
 MAINTAINER=	venture37@geeklan.co.uk
 COMMENT=	Access controller for wired & wireless clients
+WWW=		https://www.coova.org/
 
 CONFLICTS=	chillispot
 #if __FreeBSD__ >= 10.0
