@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	hexcurse
 PORTVERSION=	1.60.0
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	editors
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Versatile ncurses-based hex editor
+WWW=		https://BSDforge.com/projects/editors/hexcurse/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
