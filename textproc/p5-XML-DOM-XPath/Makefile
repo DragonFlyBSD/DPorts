@@ -1,5 +1,3 @@
-# Created by: Mauricio Herrera Cuadra <mauricio@arareko.net>
-
 PORTNAME=	XML-DOM-XPath
 PORTVERSION=	0.14
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	mauricio@arareko.net
 COMMENT=	Adds XPath support to XML::DOM, using XML::XPath engine
+WWW=		https://metacpan.org/release/XML-DOM-XPath
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
