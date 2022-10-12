@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	Chart-Math-Axis
 PORTVERSION=	1.06
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Implements an algorithm to find good values for chart axis
+WWW=		https://metacpan.org/release/Chart-Math-Axis
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-Params-Util>=0.15:devel/p5-Params-Util
