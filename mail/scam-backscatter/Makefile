@@ -1,5 +1,3 @@
-# Created by: Janne Snabb <snabb@epipe.com>
-
 PORTNAME=	scam-backscatter
 PORTVERSION=	1.5.1
 PORTREVISION=	2
@@ -13,6 +11,7 @@ LICENSE_FILE=	${WRKSRC}/License
 
 MAINTAINER=	snabb@epipe.com
 COMMENT=	Address verification milter to prevent spam backscatter
+WWW=		http://www.elandsys.com/scam/scam-backscatter/
 
 USES=		tar:tgz
 WRKSRC=		${WRKDIR}/scamback
