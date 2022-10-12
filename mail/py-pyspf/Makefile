@@ -1,5 +1,3 @@
-# Created by: Marcus Alves Grando <mnag@FreeBSD.org>
-
 PORTNAME=	pyspf
 PORTVERSION=	2.0.14
 CATEGORIES=	mail python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	SPF (Sender Policy Framework) implemented in Python
+WWW=		https://github.com/sdgathman/pyspf
 
 LICENSE=	PSFL
 
