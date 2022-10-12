@@ -1,5 +1,3 @@
-# Created by: Jesse
-
 PORTNAME=	pbimaker
 PORTVERSION=	1.3
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/makeapbi/makeapbi/
 
 MAINTAINER=	jessefrgsmith@yahoo.ca
 COMMENT=	Program to convert ports into PBI modules
+WWW=		http://makeapbi.sourceforge.net/
 
 LICENSE=	BSD3CLAUSE
 
