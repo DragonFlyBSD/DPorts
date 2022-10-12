@@ -1,5 +1,3 @@
-# Created by: vanilla@
-
 PORTNAME=	Test-Nginx
 PORTVERSION=	0.30
 CATEGORIES=	www perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	vanilla@FreeBSD.org
 COMMENT=	Testing modules for Nginx C module development
+WWW=		https://metacpan.org/release/Test-Nginx
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
