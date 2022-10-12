@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	multidimensional
 PORTVERSION=	0.014
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Disables multidimensional array emulation
+WWW=		https://metacpan.org/release/multidimensional
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
