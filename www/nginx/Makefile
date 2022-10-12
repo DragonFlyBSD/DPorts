@@ -1,9 +1,7 @@
-# Created by: Sergey A. Osokin <osa@FreeBSD.org>
-
 PORTNAME=	nginx
 PORTVERSION=	1.22.0
-PORTREVISION?=	6
-PORTEPOCH=	2
+PORTREVISION?=	8
+PORTEPOCH=	3
 CATEGORIES=	www
 MASTER_SITES=	https://nginx.org/download/ \
 		http://nginx.org/download/ \
@@ -12,6 +10,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER?=	joneum@FreeBSD.org
 COMMENT?=	Robust and small WWW server
+WWW=		https://nginx.com/
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
