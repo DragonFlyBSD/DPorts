@@ -1,5 +1,3 @@
-# Created by: Lars Thegler <lth@FreeBSD.org>
-
 PORTNAME=	Text-Truncate
 PORTVERSION=	1.06
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module with simple string truncating routine
+WWW=		https://metacpan.org/release/Text-Truncate
 
 LICENSE=	PD
 
