@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	ngtcp2
 PORTVERSION=	0.6.0
 CATEGORIES=	net
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	lib
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Implementation of QUIC protocol
+WWW=		https://github.com/ngtcp2/ngtcp2
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
