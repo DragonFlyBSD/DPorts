@@ -1,11 +1,10 @@
-# Created by: "Waitman Gobble" <uzimac@da3m0n8t3r.com>
-
 PORTNAME=	libfortuna
 PORTVERSION=	0.1.1
 CATEGORIES=	devel
 
 MAINTAINER=	waitman@waitman.net
 COMMENT=	Fortuna PRNG Library
+WWW=		http://crxwg.com/fortuna/bin/libfortuna.html
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
