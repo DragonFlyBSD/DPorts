@@ -1,5 +1,3 @@
-# Created by: Gleb Smirnoff <glebius@FreeBSD.org>
-
 PORTNAME=	Filesys-ZFS
 PORTVERSION=	1.5
 CATEGORIES=	sysutils perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	glebius@FreeBSD.org
 COMMENT=	Perl interface to zpool(8) and zfs(8)
+WWW=		https://metacpan.org/pod/Filesys::ZFS
 
 LICENSE=	ARTPERL10
 LICENSE_FILE=	${WRKSRC}/LICENSE
