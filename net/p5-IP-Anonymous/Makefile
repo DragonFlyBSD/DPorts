@@ -1,5 +1,3 @@
-# Created by: Paul Schmehl <pauls@utdallas.edu>
-
 PORTNAME=	IP-Anonymous
 PORTVERSION=	0.04
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Perl extension to provide anonymous IP addresses
+WWW=		https://metacpan.org/release/IP-Anonymous
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
