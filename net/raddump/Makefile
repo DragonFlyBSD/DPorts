@@ -1,5 +1,3 @@
-# Created by: shanali
-
 PORTNAME=	raddump
 PORTVERSION=	0.3.1
 CATEGORIES=	net
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Radius Packet Analyzer
+WWW=		https://sourceforge.net/projects/raddump/
 
 GNU_CONFIGURE=	yes
 
