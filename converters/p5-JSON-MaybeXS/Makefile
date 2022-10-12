@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	JSON-MaybeXS
 PORTVERSION=	1.004003
 CATEGORIES=	converters perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Use Cpanel::JSON::XS with a fallback to JSON::PP
+WWW=		https://metacpan.org/release/JSON-MaybeXS
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
