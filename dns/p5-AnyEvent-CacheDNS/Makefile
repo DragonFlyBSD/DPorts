@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	AnyEvent-CacheDNS
 PORTVERSION=	0.08
 CATEGORIES=	dns perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Simple DNS resolver with caching
+WWW=		https://metacpan.org/release/AnyEvent-CacheDNS
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
