@@ -1,5 +1,5 @@
 PORTNAME=	fossil
-PORTVERSION=	2.18
+PORTVERSION=	2.19
 DISTVERSIONPREFIX=	src-
 PORTREVISION=	0
 PORTEPOCH=	2
@@ -8,6 +8,7 @@ MASTER_SITES=	https://fossil-scm.org/home/tarball/version-${PORTVERSION}/
 
 MAINTAINER=	gahr@FreeBSD.org
 COMMENT=	DSCM with built-in wiki, http interface and server, tickets database
+WWW=		https://fossil-scm.org/
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT-BSD2.txt
