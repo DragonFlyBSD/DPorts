@@ -1,5 +1,3 @@
-# Created by: will
-
 PORTNAME=	Convert-Morse
 PORTVERSION=	0.06
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module to convert between ASCII and Morse codes
+WWW=		https://metacpan.org/release/Convert-Morse
 
 USES=		perl5
 USE_PERL5=	configure
