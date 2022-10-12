@@ -1,5 +1,3 @@
-# Created by: Ken McGlothlen <ken.mcglothlen@gmail.com>
-
 PORTNAME=	Template-Simple
 PORTVERSION=	0.06
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	ken.mcglothlen@gmail.com
 COMMENT=	Fast templating module
+WWW=		https://metacpan.org/release/Template-Simple
 
 LICENSE=	ART20
 
