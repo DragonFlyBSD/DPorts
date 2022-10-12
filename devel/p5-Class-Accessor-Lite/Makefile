@@ -1,5 +1,3 @@
-# Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
-
 PORTNAME=	Class-Accessor-Lite
 PORTVERSION=	0.08
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Minimalistic variant of p5-Class-Accessor
+WWW=		https://metacpan.org/release/Class-Accessor-Lite
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
