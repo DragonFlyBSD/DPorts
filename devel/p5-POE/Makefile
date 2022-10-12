@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	POE
 PORTVERSION=	1.370
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Multitasking and networking framework for perl
+WWW=		https://metacpan.org/release/POE
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
