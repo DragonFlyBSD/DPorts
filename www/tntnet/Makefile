@@ -1,5 +1,3 @@
-# Created by: Juergen Lock <nox@FreeBSD.org>
-
 PORTNAME=	tntnet
 PORTVERSION=	2.2.1
 PORTREVISION=	5
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.tntnet.org/download/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Webapplicationserver for C++
+WWW=		https://www.tntnet.org/index.html
 
 LIB_DEPENDS=	libcxxtools.so:devel/cxxtools
 BUILD_DEPENDS=	zip:archivers/zip
