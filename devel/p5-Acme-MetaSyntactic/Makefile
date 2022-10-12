@@ -1,5 +1,3 @@
-# Created by: Anton Berezin <tobez@FreeBSD.org>
-
 PORTNAME=	Acme-MetaSyntactic
 PORTVERSION=	1.015
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Themed metasyntactic variables names
+WWW=		https://metacpan.org/release/Acme-MetaSyntactic
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
