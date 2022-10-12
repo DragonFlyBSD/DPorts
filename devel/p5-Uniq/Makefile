@@ -1,5 +1,3 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	Uniq
 PORTVERSION=	0.01
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Perl extension for managing a uniq list of values
+WWW=		https://metacpan.org/release/Uniq
 
 USES=		perl5
 USE_PERL5=	configure
