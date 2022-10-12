@@ -1,5 +1,3 @@
-# Created by: Dom Mitchell <dom@myrddin.demon.co.uk>
-
 PORTNAME=	daemontools
 PORTVERSION=	0.76
 PORTREVISION=	18
@@ -11,6 +9,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	bdrewery@FreeBSD.org
 COMMENT=	Service monitoring and logging utilities by djb
+WWW=		https://cr.yp.to/daemontools.html
 
 LICENSE=	PD
 
