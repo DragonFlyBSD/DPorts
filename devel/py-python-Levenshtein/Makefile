@@ -1,5 +1,3 @@
-# Created by: Dan Langille <dvl@FreeBSD.org>
-
 PORTNAME=	python-Levenshtein
 PORTVERSION=	0.12.2
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	dvl@FreeBSD.org
 COMMENT=	Fast computation of Levenshtein distance and string similarity
+WWW=		https://github.com/ztane/python-Levenshtein
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
