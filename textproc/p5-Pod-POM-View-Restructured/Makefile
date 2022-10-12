@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Pod-POM-View-Restructured
 PORTVERSION=	1.000003
 CATEGORIES=	textproc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	View for Pod::POM that outputs reStructuredText
+WWW=		https://metacpan.org/release/Pod-POM-View-Restructured
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
