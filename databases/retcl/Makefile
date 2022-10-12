@@ -1,11 +1,10 @@
-# Created by: gahr
-
 PORTNAME=	retcl
 PORTVERSION=	0.4.0
 CATEGORIES=	databases
 
 MAINTAINER=	gahr@FreeBSD.org
 COMMENT=	Tcl client library for Redis
+WWW=		https://github.com/gahr/retcl
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
