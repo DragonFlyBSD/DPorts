@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Color-RGB-Util
 PORTVERSION=	0.606
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Utilities related to RGB colors
+WWW=		https://metacpan.org/release/Color-RGB-Util
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
