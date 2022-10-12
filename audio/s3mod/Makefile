@@ -1,5 +1,3 @@
-# Created by: ugen
-
 PORTNAME=	s3mod
 PORTVERSION=	1.09
 DISTVERSIONPREFIX=	v
@@ -9,6 +7,7 @@ MASTER_SITES=	SUNSITE/apps/sound/players
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	MOD/S3M player
+WWW=		http://dj1.willowmail.com/~jeske/s3mod.html
 
 USES=		alias
 ALL_TARGET=	freebsd
