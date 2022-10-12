@@ -1,5 +1,3 @@
-# Created by: Kirill Ponomarew <ponomarew@oberon.net>
-
 PORTNAME=	prtunnel
 PORTVERSION=	0.2.7
 CATEGORIES=	net
@@ -7,6 +5,7 @@ MASTER_SITES=	http://joshbeam.com/files/
 
 MAINTAINER=	vd@FreeBSD.org
 COMMENT=	Tunnel for TCP connections using an HTTP or SOCKS5 proxy
+WWW=		https://www.joshbeam.com/software/prtunnel/
 
 ALL_TARGET=	${PORTNAME}
 
