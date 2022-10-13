@@ -1,5 +1,3 @@
-# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-
 PORTNAME=	liberator
 PORTVERSION=	2.0.2
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	ofcp-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Command line client to FreeNet Network
+WWW=		https://sourceforge.net/projects/liberator/
 
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/COPYING
