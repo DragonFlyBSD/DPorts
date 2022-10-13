@@ -1,5 +1,3 @@
-# Created by: George Hartzell <hartzell@alerce.com>
-
 PORTNAME=	CGI-Application-Plugin-HTMLPrototype
 PORTVERSION=	0.20
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Access to the prototype JavaScript library using HTML::Prototype
+WWW=		https://metacpan.org/release/CGI-Application-Plugin-HTMLPrototype
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
