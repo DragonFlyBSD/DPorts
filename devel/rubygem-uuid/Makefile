@@ -1,5 +1,3 @@
-# Created by: Wen Heping<wenheping@gmail.com>
-
 PORTNAME=	uuid
 PORTVERSION=	2.3.9
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	UUID Generator for Ruby
+WWW=		https://github.com/assaf/uuid
 
 LICENSE=	MIT
 
