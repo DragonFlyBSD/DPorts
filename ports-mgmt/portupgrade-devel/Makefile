@@ -1,5 +1,3 @@
-# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-
 PORTNAME=	portupgrade
 PORTVERSION=	20180309
 PORTREVISION=	0
@@ -12,6 +10,7 @@ PKGNAMESUFFIX=	-devel
 
 MAINTAINER=	bdrewery@FreeBSD.org
 COMMENT=	FreeBSD ports/packages management tool (devel version)
+WWW=		https://wiki.freebsd.org/portupgrade
 
 LICENSE=	BSD3CLAUSE
 
