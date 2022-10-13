@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	github_api
 PORTVERSION=	0.19.0
 PORTREVISION=	4
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Wrapper that supports all of the GitHub API v3 methods
+WWW=		https://piotrmurach.github.io/github/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
