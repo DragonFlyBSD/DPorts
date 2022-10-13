@@ -1,5 +1,3 @@
-# Created by: Zane C. Bowers-Hadley <vvelox@vvelox.net>
-
 PORTNAME=	Net-Connection-lsof
 PORTVERSION=	0.2.0
 CATEGORIES=	net perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	vvelox@vvelox.net
 COMMENT=	Creates Net::Connection objects using lsof
+WWW=		https://metacpan.org/release/Net-Connection-lsof
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
