@@ -1,5 +1,3 @@
-# Created by: db
-
 PORTNAME=	yfklog
 PORTVERSION=	0.6.0
 PORTREVISION=	1
@@ -12,6 +10,7 @@ EXTRACT_ONLY=	${DISTNAME}.tar.gz
 
 MAINTAINER=	hamradio@FreeBSD.org
 COMMENT=	Amateur Radio curses based logging program
+WWW=		https://fkurz.net/ham/yfklog.html
 
 LICENSE=	GPLv2
 
