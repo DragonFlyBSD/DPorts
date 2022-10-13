@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
-
 PORTNAME=	xnee
 PORTVERSION=	3.19
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	GNU
 
 MAINTAINER=	zab@zltech.eu
 COMMENT=	X11 events recorder and player
+WWW=		http://www.sandklef.com/xnee/
 
 LICENSE=	GPLv3
 
