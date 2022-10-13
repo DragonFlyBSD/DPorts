@@ -1,5 +1,3 @@
-# Created by: George Hartzell <hartzell@alerce.com>
-
 PORTNAME=	CGI-Application-Plugin-Session
 PORTVERSION=	1.05
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Plugin that adds session support to CGI::Application
+WWW=		https://metacpan.org/release/CGI-Application-Plugin-Session
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
