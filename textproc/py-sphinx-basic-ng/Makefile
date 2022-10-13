@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	sphinx-basic-ng
 PORTVERSION=	0.0.1a12
 CATEGORIES=	textproc python
@@ -9,6 +7,7 @@ DISTNAME=	sphinx_basic_ng-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Modern skeleton for Sphinx themes
+WWW=		https://github.com/pradyunsg/sphinx-basic-ng
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
