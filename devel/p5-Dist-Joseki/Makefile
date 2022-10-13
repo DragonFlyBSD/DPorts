@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Dist-Joseki
 PORTVERSION=	0.20
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Tools for the prolific module author
+WWW=		https://metacpan.org/release/MARCEL/Dist-Joseki-0.20
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
