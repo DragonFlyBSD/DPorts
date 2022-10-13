@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	requests-aws4auth
 PORTVERSION=	1.1.2
 CATEGORIES=	www python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	AWS4 authentication for Requests
+WWW=		https://github.com/sam-washington/requests-aws4auth
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
