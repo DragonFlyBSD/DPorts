@@ -1,5 +1,3 @@
-# Created by: Chris Larsen <darth@vader.dk>
-
 PORTNAME=	par2cmdline
 PORTVERSION=	0.8.1
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	archivers
 
 MAINTAINER=	martymac@FreeBSD.org
 COMMENT=	Tools for using Parity v2 Archive files
+WWW=		https://github.com/Parchive/par2cmdline
 
 LICENSE=	GPLv2
 
