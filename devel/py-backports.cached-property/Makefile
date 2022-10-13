@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	backports.cached-property
 PORTVERSION=	1.0.2
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	cached_property() - computed once per instance, cached as attribute
+WWW=		https://github.com/penguinolog/backports.cached_property
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
