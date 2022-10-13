@@ -1,5 +1,3 @@
-# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-
 PORTNAME=	ftpsync
 PORTVERSION=	1.3.06
 PORTEPOCH=	1
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-0
 
 MAINTAINER=	rodrigO@FreeBSD.org
 COMMENT=	Synchronizes a local and a remote FTP directory trees
+WWW=		https://www.clazzes.org/ftpsync
 
 LICENSE=	GPLv2
 
