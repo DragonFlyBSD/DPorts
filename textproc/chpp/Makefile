@@ -1,5 +1,3 @@
-# Created by: Andrey Zakhvatov <andy@FreeBSD.org>
-
 PORTNAME=	chpp
 PORTVERSION=	0.3.5
 PORTREVISION=	7
@@ -9,6 +7,7 @@ MASTER_SITES=	http://www.complang.tuwien.ac.at/schani/chpp/files/ \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Non-intrusive full-featured text preprocessor
+WWW=		https://www.complang.tuwien.ac.at/schani/chpp/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
