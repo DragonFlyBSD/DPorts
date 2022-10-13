@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	sdoc
 PORTVERSION=	2.4.0
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Create rdoc html with javascript search index
+WWW=		https://github.com/voloko/sdoc
 
 LICENSE=	MIT
 
