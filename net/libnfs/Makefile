@@ -1,12 +1,11 @@
-# Created by: Manuel Creach <manuel.creach@icloud.com>
-
 PORTNAME=	libnfs
 DISTVERSIONPREFIX=	${PORTNAME}-
-DISTVERSION=	5.0.1
+DISTVERSION=	5.0.2
 CATEGORIES=	net
 
 MAINTAINER=	snoe925@gmail.com
 COMMENT=	Client library for accessing NFS shares over a network
+WWW=		https://github.com/sahlberg/libnfs
 
 LICENSE=	GPLv3 LGPL21
 LICENSE_COMB=	multi
