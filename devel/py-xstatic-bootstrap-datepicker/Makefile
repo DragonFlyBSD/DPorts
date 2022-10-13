@@ -1,5 +1,3 @@
-# Created by: Alexander Nusov <alexander.nusov@nfvexpress.com>
-
 PORTNAME=	xstatic-bootstrap-datepicker
 PORTVERSION=	1.4.0.0
 CATEGORIES=	devel python
@@ -9,6 +7,7 @@ DISTNAME=	XStatic-Bootstrap-Datepicker-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Datepicker for Bootstrap (bootstrap-datepicker)
+WWW=		https://github.com/uxsolutions/bootstrap-datepicker
 
 LICENSE=	APACHE20
 
