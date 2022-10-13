@@ -1,5 +1,3 @@
-# Created by: Dominic Mitchell
-
 PORTNAME=	SQL-Abstract
 PORTVERSION=	2.000001
 CATEGORIES=	databases perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl extension to generate SQL from Perl data structures
+WWW=		https://metacpan.org/release/SQL-Abstract
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
