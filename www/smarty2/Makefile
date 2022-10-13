@@ -1,15 +1,14 @@
-# Created by: Simon 'corecode' Schubert <corecode@corecode.ath.cx>
-
 PORTNAME=	smarty
 PORTVERSION=	2.6.32
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www
 MASTER_SITES=	http://www.smarty.net/files/docs/:manual
 DISTFILES=	manual-en-${PORTVERSION:R}.zip:manual
-PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
+PKGNAMESUFFIX=	2${PHP_PKGNAMESUFFIX}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	PHP compiling template engine
+WWW=		https://www.smarty.net/
 
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/COPYING.lib
