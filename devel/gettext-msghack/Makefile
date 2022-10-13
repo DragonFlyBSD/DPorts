@@ -1,5 +1,3 @@
-# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-
 PORTNAME=	msghack
 PORTVERSION=	0.21
 CATEGORIES=	devel
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	gettext-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Alter gettext po files in special ways
+WWW=		https://src.fedoraproject.org/rpms/gettext/blob/master/f/msghack.py
 
 LICENSE=	GPLv3+
 
