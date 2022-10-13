@@ -1,11 +1,12 @@
 PORTNAME=	persistent
-DISTVERSION=	4.9.0
+DISTVERSION=	4.9.1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Translucent persistent objects
+WWW=		https://github.com/zopefoundation/persistent/
 
 LICENSE=	ZPL21
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
