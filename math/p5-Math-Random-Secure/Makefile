@@ -1,5 +1,3 @@
-# Created by: Dereckson <dereckson@gmail.com>
-
 PORTNAME=	Math-Random-Secure
 PORTVERSION=	0.080001
 CATEGORIES=	math perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	dereckson@gmail.com
 COMMENT=	Cryptographically-secure rand function
+WWW=		https://metacpan.org/release/Math-Random-Secure
 
 LICENSE=	ART20
 LICENSE_FILE=	${WRKSRC}/LICENSE
