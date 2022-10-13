@@ -1,5 +1,3 @@
-# Created by: Anes Mukhametov <anes@anes.su>
-
 PORTNAME=	icecast
 DISTVERSIONPREFIX=	icecast-
 DISTVERSION=	2.4.0-kh15
@@ -9,6 +7,7 @@ PKGNAMESUFFIX=	-kh
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Streaming mp3/ogg-vorbis audio server, KH branch
+WWW=		https://github.com/karlheyes/icecast-kh
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
