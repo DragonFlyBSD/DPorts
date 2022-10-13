@@ -1,5 +1,3 @@
-# Created by: bauerm
-
 PORTNAME=	ntl
 PORTVERSION=	11.5.1
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.shoup.net/ntl/
 
 MAINTAINER=	ndowens04@gmail.com
 COMMENT=	Victor Shoup's Number Theory Library
+WWW=		https://www.shoup.net/
 
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/../doc/copying.txt
