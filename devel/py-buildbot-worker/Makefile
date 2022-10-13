@@ -1,5 +1,3 @@
-# Created by: Frederic Praca <frederic.praca@freebsd-fr.org>
-
 PORTNAME=	buildbot-worker
 PORTVERSION=	3.5.0
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Buildbot Worker Daemon
+WWW=		https://buildbot.net
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
