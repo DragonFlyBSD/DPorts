@@ -1,5 +1,3 @@
-# Created by: Espen Tagestad <espen@tagestad.no>
-
 PORTNAME=	Excel-Template
 PORTVERSION=	0.34
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module for templating Excel files
+WWW=		https://metacpan.org/release/Excel-Template
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
