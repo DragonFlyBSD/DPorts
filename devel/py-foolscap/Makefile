@@ -1,5 +1,3 @@
-# Created by: Kevin Lo <kevlo@FreeBSD.org>
-
 PORTNAME=	foolscap
 PORTVERSION=	21.7.0
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	RPC protocol for Twisted Python
+WWW=		https://github.com/warner/foolscap
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
