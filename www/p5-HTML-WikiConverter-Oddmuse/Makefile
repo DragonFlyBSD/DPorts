@@ -1,5 +1,3 @@
-# Created by: chinsan <chinsan.tw@gmail.com>
-
 PORTNAME=	HTML-WikiConverter-Oddmuse
 PORTVERSION=	0.52
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Convert HTML to Oddmuse markup
+WWW=		https://metacpan.org/release/HTML-WikiConverter-Oddmuse
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-HTML-WikiConverter>=0.60:www/p5-HTML-WikiConverter \
