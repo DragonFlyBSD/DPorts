@@ -1,5 +1,3 @@
-# Created by: Nicola Vitale	<nivit@email.it>
-
 PORTNAME=	enchant
 PORTVERSION=	3.2.2
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DISTNAME=	py${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Spellchecking library for Python based on the Enchant library
+WWW=		https://pyenchant.github.io/pyenchant/
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
