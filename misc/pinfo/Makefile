@@ -1,5 +1,3 @@
-# Created by: Thomas Gellekum <tg@FreeBSD.org>
-
 PORTNAME=	pinfo
 DISTVERSION=	0.6.13
 CATEGORIES=	misc
@@ -7,6 +5,7 @@ MASTER_SITES=
 
 MAINTAINER=	otis@FreeBSD.org
 COMMENT=	Ncurses based, lynx style info documentation browser
+WWW=		https://github.com/baszoetekouw/pinfo
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
