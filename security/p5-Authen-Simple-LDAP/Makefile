@@ -1,5 +1,3 @@
-# Created by: Aaron Dalton <aaron@FreeBSD.org>
-
 PORTNAME=	Authen-Simple-LDAP
 PORTVERSION=	0.3
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Simple LDAP authentication
+WWW=		https://metacpan.org/release/Authen-Simple-LDAP
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
