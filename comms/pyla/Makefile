@@ -1,5 +1,3 @@
-# Created by: Michael Reifenberger (mike@Reifenberger.com)
-
 PORTNAME=	pyla
 PORTVERSION=	1.1.7.1
 PORTREVISION=	2
@@ -11,6 +9,7 @@ DISTNAME=	pyla${PORTVERSION}
 
 MAINTAINER=	mike@Reifenberger.com
 COMMENT=	Hylafax client written in Python
+WWW=		http://www.teamsw.it/pyla/
 
 #LIB_DEPENDS=	lirc_client.0:comms/lirc
 
