@@ -1,5 +1,3 @@
-# Created by: Dag-Erling C. Smørgrav <des@FreeBSD.org>
-
 PORTNAME=	abuse_sdl
 PORTVERSION=	0.8
 PORTREVISION=	8
@@ -10,6 +8,7 @@ DISTNAME=	abuse-${DISTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	SDL port of the Abuse game engine
+WWW=		http://abuse.zoy.org/
 
 LICENSE=	GPLv2+ PD WTFPL BPRINCE
 LICENSE_COMB=	multi
