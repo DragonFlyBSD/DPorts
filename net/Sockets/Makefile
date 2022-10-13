@@ -1,5 +1,3 @@
-# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-
 PORTNAME=	Sockets
 PORTVERSION=	2.3.9.9
 PORTREVISION=	3
@@ -9,6 +7,7 @@ MASTER_SITES=	http://www.alhem.net/Sockets/ \
 
 MAINTAINER=	ml@netfence.it
 COMMENT=	C++ wrapper for BSD-style sockets
+WWW=		http://www.alhem.net/Sockets/
 
 USES+=		gmake gnome ssl
 USE_GNOME=	libxml2
