@@ -1,5 +1,3 @@
-# Created by: Sheldon Hearn <sheldonh@FreeBSD.org>
-
 PORTNAME=	DBD-Sybase
 PORTVERSION=	1.19
 CATEGORIES=	databases perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Sybase DBI driver for Perl 5
+WWW=		https://metacpan.org/release/DBD-Sybase
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
