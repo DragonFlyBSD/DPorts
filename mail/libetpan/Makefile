@@ -1,11 +1,10 @@
-# Created by: ijliao
-
 PORTNAME=	libetpan
 PORTVERSION=	1.9.4
 CATEGORIES=	mail
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Mail framework for C language
+WWW=		https://www.etpan.org/libetpan.html
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
