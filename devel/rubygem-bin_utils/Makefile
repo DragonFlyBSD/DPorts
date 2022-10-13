@@ -1,5 +1,3 @@
-# Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-
 PORTNAME=	bin_utils
 PORTVERSION=	0.0.7
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Extracting binary integers from binary string and packing back
+WWW=		https://github.com/funny-falcon/bin_utils
 
 LICENSE=	MIT
 
