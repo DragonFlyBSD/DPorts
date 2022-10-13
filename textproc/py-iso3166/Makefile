@@ -1,11 +1,12 @@
 PORTNAME=	iso3166
-PORTVERSION=	1.0.1
+DISTVERSION=	2.1.1
 CATEGORIES=	textproc python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	takefu@airport.fm
 COMMENT=	Standalone ISO 3166-1 country definitions
+WWW=		https://pypi.python.org/pypi/iso3166
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
