@@ -1,5 +1,3 @@
-# Created by: Brad Huntting <huntting@glarp.com>
-
 PORTNAME=	qcl
 PORTVERSION=	0.6.4
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	http://tph.tuwien.ac.at/~oemer/tgz/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Quantum computer simulator
+WWW=		http://tph.tuwien.ac.at/~oemer/qcl.html
 
 LICENSE=	GPLv2+
 
