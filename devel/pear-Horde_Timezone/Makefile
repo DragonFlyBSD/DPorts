@@ -1,11 +1,10 @@
-# Created by: Martin Matuska <mm@FreeBSD.org>
-
 PORTNAME=	Horde_Timezone
 PORTVERSION=	1.1.0
 CATEGORIES=	devel www pear
 
 MAINTAINER=	horde@FreeBSD.org
 COMMENT=	Horde timezone library
+WWW=		https://pear.horde.org
 
 USES=		horde cpe
 USE_HORDE_RUN=	Horde_Date \
