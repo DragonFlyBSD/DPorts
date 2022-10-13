@@ -7,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	akoshibe@gmail.com
 COMMENT=	Component-based Software-defined Networking Framework
+WWW=		http://osrg.github.io/ryu/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -30,7 +31,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}eventlet>0:net/py-eventlet@${PY_FLAVOR} \
 
 NO_ARCH=	yes
 
-USES=		python:3.6+
+USES=		python:3.8+
 USE_PYTHON=	autoplist distutils
 
 USE_GITHUB=	yes
