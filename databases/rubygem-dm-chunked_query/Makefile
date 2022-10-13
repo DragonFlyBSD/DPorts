@@ -1,5 +1,3 @@
-# Created by: Ryan Steinmetz <zi@FreeBSD.org>
-
 PORTNAME=	dm-chunked_query
 PORTVERSION=	0.3.1
 CATEGORIES=	databases rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Allows performing chunked queries
+WWW=		https://github.com/postmodern/dm-chunked_query
 
 LICENSE=	MIT
 
