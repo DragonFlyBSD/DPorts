@@ -1,5 +1,3 @@
-# Created by: se@freebsd.org
-
 PORTNAME=	hexpeek
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.0.20200804
@@ -9,6 +7,7 @@ MASTER_SITES=	https://www.hexpeek.com/releases/${DISTNAME}/
 
 MAINTAINER=	se@freebsd.org
 COMMENT=	Hex file editor
+WWW=		https://www.hexpeek.com/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
