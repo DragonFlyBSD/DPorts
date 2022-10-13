@@ -1,5 +1,3 @@
-# Created by: lbr@FreeBSD.org
-
 PORTNAME=	Catalyst-Plugin-Session-Store-Cache
 PORTVERSION=	0.01
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Store sessions using a Catalyst::Plugin::Cache
+WWW=		https://metacpan.org/release/Catalyst-Plugin-Session-Store-Cache
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
