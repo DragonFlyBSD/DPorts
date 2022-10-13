@@ -1,5 +1,3 @@
-# Created by: Martin Wilke <miwi@FreeBSD.org>
-
 PORTNAME=	yanopaste
 PORTVERSION=	1.3.0
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Yet Another Nopaste
+WWW=		https://sourceforge.net/projects/yanopaste/
 
 NO_BUILD=	yes
 USES+=		php
