@@ -1,5 +1,3 @@
-# Created by: Evaldas Auryla <ea@zaib.as>
-
 PORTNAME=	digitemp
 PORTVERSION=	3.7.2
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	misc
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Dallas Semiconductor 1-wire device reading console application
+WWW=		https://www.digitemp.com/software.shtml
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
