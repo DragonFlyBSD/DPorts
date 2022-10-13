@@ -1,5 +1,3 @@
-# Created by: Rui Lopes (rgl ruilopes com)
-
 PORTNAME=	tzinfo
 PORTVERSION=	1.2.10
 CATEGORIES=	devel rubygems
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	1
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Daylight-savings aware timezone support for Ruby
+WWW=		https://tzinfo.github.io/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
