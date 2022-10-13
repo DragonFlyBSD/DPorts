@@ -1,5 +1,3 @@
-# Created by: Kevin Golding <ports@caomhin.org>
-
 PORTNAME=	django-extensions
 PORTVERSION=	3.1.5
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	ports@caomhin.org
 COMMENT=	Global custom management extensions for the Django Framework
+WWW=		https://github.com/django-extensions/django-extensions
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
