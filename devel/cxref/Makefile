@@ -1,5 +1,3 @@
-# Created by: Thomas Gellekum <tg@FreeBSD.org>
-
 PORTNAME=	cxref
 PORTVERSION=	1.6e
 CATEGORIES=	devel
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.gedanken.org.uk/software/cxref/download/ \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	C program cross-referencing and documentation tool
+WWW=		https://www.gedanken.org.uk/software/cxref/
 
 LICENSE=	GPLv2
 
