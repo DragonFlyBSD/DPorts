@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	rx
 PORTVERSION=	3.2.0
 CATEGORIES=	devel python
@@ -9,6 +7,7 @@ DISTNAME=	Rx-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Reactive Extensions (Rx) for Python
+WWW=		https://github.com/ReactiveX/RxPY
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
