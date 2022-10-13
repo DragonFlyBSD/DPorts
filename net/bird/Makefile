@@ -1,5 +1,3 @@
-# Created by: Pav Lucistnik <pav@FreeBSD.org>
-
 PORTNAME=	bird
 PORTVERSION=	1.6.8
 CATEGORIES=	net
@@ -7,6 +5,7 @@ MASTER_SITES=	ftp://bird.network.cz/pub/bird/
 
 MAINTAINER=	olivier@FreeBSD.org
 COMMENT?=	Dynamic IP routing daemon (${FLAVOR:Uipv4:S/ip/IP/} version)
+WWW=		https://bird.network.cz/
 
 LICENSE=	GPLv2
 
