@@ -1,5 +1,3 @@
-# Created by: buganini@gmail.com
-
 PORTNAME=	chntpw
 PORTVERSION=	140201
 CATEGORIES=	security sysutils
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}-source-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Utility to set the password and edit registry on Microsoft NT system
+WWW=		http://pogostick.net/~pnh/ntpasswd/
 
 LICENSE=	GPLv2
 
