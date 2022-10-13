@@ -1,5 +1,3 @@
-# Created by: Adam Weinberger <adamw@FreeBSD.org>
-
 PORTNAME=	Mojo-Pg
 PORTVERSION=	4.27
 CATEGORIES=	databases www perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	PostgreSQL integration for p5-Mojolicious
+WWW=		https://metacpan.org/release/Mojo-Pg
 
 LICENSE=	ART20
 LICENSE_FILE=	${WRKSRC}/LICENSE
