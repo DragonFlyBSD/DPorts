@@ -1,5 +1,3 @@
-# Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-
 PORTNAME=		busybee
 PORTVERSION=		0.7.0
 DISTVERSIONPREFIX=	releases/
@@ -7,6 +5,7 @@ CATEGORIES=		devel
 
 MAINTAINER=	egypcio@FreeBSD.org
 COMMENT=	High-performance messaging layer
+WWW=		https://github.com/rescrv/busybee
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
