@@ -1,5 +1,3 @@
-# Created by: Anton Berezin <tobez@FreeBSD.org>
-
 PORTNAME=	Lingua-StopWords
 PORTVERSION=	0.12
 CATEGORIES=	textproc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Stop words for several languages
+WWW=		https://metacpan.org/release/Lingua-StopWords
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
