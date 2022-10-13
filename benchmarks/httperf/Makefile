@@ -1,11 +1,10 @@
-# Created by: Will Andrews <andrews@technologist.com>
-
 PORTNAME=	httperf
 PORTVERSION=	0.9.1
 CATEGORIES=	benchmarks www
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tool for measuring webserver performance
+WWW=		https://github.com/httperf/httperf
 
 LICENSE=	GPLv2
 
