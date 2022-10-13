@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	commander
 PORTVERSION=	4.6.0
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Complete solution for Ruby command-line executables
+WWW=		https://github.com/commander-rb/commander
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
