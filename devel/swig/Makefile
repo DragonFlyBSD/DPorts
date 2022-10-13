@@ -1,5 +1,3 @@
-# Created by: jkh
-
 PORTNAME=	swig
 PORTVERSION=	4.0.2
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/swig/swig/swig-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Generate wrappers for calling C/C++ code from other languages
+WWW=		https://www.swig.org/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE-GPL
