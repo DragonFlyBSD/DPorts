@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	MouseX-StrictConstructor
 PORTVERSION=	0.02
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Make your object constructors blow up on unknown attributes
+WWW=		https://metacpan.org/release/MouseX-StrictConstructor
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
