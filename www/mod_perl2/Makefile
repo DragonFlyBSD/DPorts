@@ -1,5 +1,3 @@
-# Created by: Lars Eggert <larse@isi.edu>
-
 PORTNAME=	mod_perl
 PORTVERSION=	2.0.12
 PORTEPOCH=	3
@@ -10,6 +8,7 @@ PKGNAMESUFFIX=	2
 
 MAINTAINER=	apache@FreeBSD.org
 COMMENT=	Embeds a Perl interpreter in the Apache server
+WWW=		https://perl.apache.org/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
