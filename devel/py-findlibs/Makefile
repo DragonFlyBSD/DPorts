@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	findlibs
 PORTVERSION=	0.0.2
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Search for shared libraries on various platforms
+WWW=		https://github.com/ecmwf/findlibs
 
 LICENSE=	APACHE20
 
