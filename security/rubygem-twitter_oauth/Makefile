@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	twitter_oauth
 PORTVERSION=	0.4.94
 CATEGORIES=	security rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Twitter OAuth REST API client library for Ruby
+WWW=		https://github.com/moomerman/twitter_oauth
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
