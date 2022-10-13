@@ -1,5 +1,3 @@
-# Created by: Yuri Victorovich <yuri@rawbw.com>
-
 PORTNAME=	pyVTK
 PORTVERSION=	0.5.18
 CATEGORIES=	math python
@@ -9,6 +7,7 @@ DISTNAME=	PyVTK-${PORTVERSION}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Tools for manipulating VTK files in Python
+WWW=		https://github.com/pearu/pyvtk
 
 LICENSE=	GPLv2
 
