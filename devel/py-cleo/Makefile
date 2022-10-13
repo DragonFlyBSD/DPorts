@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	cleo
 PORTVERSION=	0.8.1
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Create beautiful and testable command-line interfaces
+WWW=		https://github.com/sdispater/cleo
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
