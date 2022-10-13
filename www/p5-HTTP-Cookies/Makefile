@@ -1,5 +1,3 @@
-# Created by: Frederic Culot <culot@FreeBSD.org>
-
 PORTNAME=	HTTP-Cookies
 PORTVERSION=	6.10
 CATEGORIES=	www perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	HTTP Cookie jars
+WWW=		https://metacpan.org/release/HTTP-Cookies
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
