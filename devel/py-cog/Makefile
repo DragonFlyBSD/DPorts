@@ -1,5 +1,3 @@
-# Created by: Alex Pesternikov <apesternikov@page2rss.com>
-
 PORTNAME=	cog
 PORTVERSION=	3.1.0
 CATEGORIES=	devel python
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}app-${PORTVERSION}
 
 MAINTAINER=	apesternikov@page2rss.com
 COMMENT=	Code Generator for any language
+WWW=		https://www.nedbatchelder.com/code/cog/index.html
 
 LICENSE=	MIT
 
