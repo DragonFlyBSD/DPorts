@@ -1,5 +1,3 @@
-# Created by: Adam Weinberger <adamw@FreeBSD.org>
-
 PORTNAME=	Perl-Lint
 PORTVERSION=	0.25
 CATEGORIES=	textproc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Yet another Perl source code linter
+WWW=		https://metacpan.org/pod/Perl::Lint
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
