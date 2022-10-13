@@ -1,12 +1,11 @@
-# Created by: Mikhail T. <m.tsatsenko@gmail.com>
-
 PORTNAME=	sprockets
-PORTVERSION=	4.1.0
+PORTVERSION=	4.1.1
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Rack-based asset packaging system
+WWW=		https://github.com/rails/sprockets
 
 LICENSE=	MIT
 
