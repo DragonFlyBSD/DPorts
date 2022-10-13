@@ -1,5 +1,3 @@
-# Created by: Oliver Lehmann
-
 PORTNAME=	courier-authlib
 PORTVERSION=	0.71.5
 CATEGORIES?=	security mail
@@ -13,6 +11,7 @@ EXTRACT_ONLY=	# empty
 
 MAINTAINER=	madpilot@FreeBSD.org
 COMMENT?=	Meta-port for the courier authentication library
+WWW=		https://www.Courier-MTA.org/authlib/
 
 CONFLICTS=	courier-0.45*
 
