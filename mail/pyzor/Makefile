@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	pyzor
 PORTVERSION=	1.0.0
 PORTREVISION=	2
@@ -13,6 +11,7 @@ PATCHFILES=	67b471dd168db9468548aef3ffadca9554164ac0.diff:-p1 \
 
 MAINTAINER=	dbaio@FreeBSD.org
 COMMENT=	Collaborative, networked system to detect and block spam
+WWW=		https://github.com/SpamExperts/pyzor
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
