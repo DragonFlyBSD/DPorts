@@ -1,5 +1,3 @@
-# Created by: Alexander Logvinov <avl@FreeBSD.org>
-
 PORTNAME=	authlogic
 PORTVERSION=	6.4.2
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Clean, simple, and unobtrusive Ruby authentication solution
+WWW=		https://github.com/binarylogic/authlogic
 
 LICENSE=	MIT
 
