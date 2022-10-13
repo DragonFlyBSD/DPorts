@@ -1,5 +1,3 @@
-# Created by: Alex Deiter <tiamat@komi.mts.ru>
-
 PORTNAME=	imapsync
 PORTVERSION=	2.178
 DISTVERSIONPREFIX=	imapsync-
@@ -7,6 +5,7 @@ CATEGORIES=	mail perl5
 
 MAINTAINER=	pi@FreeBSD.org
 COMMENT=	IMAP synchronization, copy or migration tool
+WWW=		https://imapsync.lamiral.info/
 
 LICENSE=	NO_LIMIT_PUBLIC_LICENSE
 LICENSE_NAME=	NO LIMIT PUBLIC LICENSE
