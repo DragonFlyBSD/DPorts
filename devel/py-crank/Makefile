@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	crank
 PORTVERSION=	0.8.1
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Generalization of dispatch mechanism for use across frameworks
+WWW=		https://github.com/TurboGears/crank
 
 LICENSE=	MIT
 
