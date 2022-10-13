@@ -1,5 +1,3 @@
-# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-
 PORTNAME=	unfoo
 PORTVERSION=	1.0.8
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	archivers
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tiny sh(1) wrapper to simplify decompression of files
+WWW=		https://github.com/vitaminmoo/unfoo
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
