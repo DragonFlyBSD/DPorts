@@ -1,5 +1,3 @@
-# Created by: Steven Kreuzer <skreuzer@exit2shell.com>
-
 PORTNAME=	Net-GeoPlanet
 PORTVERSION=	0.2
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	Access Yahoo's GeoPlanet location service
+WWW=		https://metacpan.org/release/Net-GeoPlanet
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-libwww>=5.805:www/p5-libwww \
