@@ -1,5 +1,3 @@
-# Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-
 PORTNAME=	Data-Stream-Bulk
 PORTVERSION=	0.11
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	N at a time iteration API
+WWW=		https://metacpan.org/release/Data-Stream-Bulk
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
