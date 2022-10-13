@@ -1,5 +1,3 @@
-# Created by: Naram Qashat <cyberbotx@cyberbotx.com>
-
 PORTNAME=	SGML-Parser-OpenSP
 PORTVERSION=	0.994
 PORTREVISION=	3
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	cyberbotx@cyberbotx.com
 COMMENT=	Parse SGML documents using OpenSP
+WWW=		https://metacpan.org/release/SGML-Parser-OpenSP
 
 # The port's README says the port "is licensed under the same terms as Perl
 # itself".
