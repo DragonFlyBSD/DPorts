@@ -1,5 +1,3 @@
-# Created by: Robert Felber <robtone@ek-muc.de>
-
 PORTNAME=	policyd-weight
 PORTVERSION=	0.1.15.2
 PORTREVISION=	6
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	postfix-
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Weighted policy daemon for postfix
+WWW=		https://www.policyd-weight.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSE
