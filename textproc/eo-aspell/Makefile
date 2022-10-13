@@ -1,5 +1,3 @@
-# Created by: Thierry Thomas <thierry@pompo.net>
-
 PORTNAME=	${DICT}-aspell
 SPELLVERSION=	6-eo-2.1.20000225a-2
 PORTREVISION=	1
@@ -8,6 +6,7 @@ CATEGORIES=	textproc
 
 MAINTAINER=	office@FreeBSD.org
 COMMENT=	Aspell Esperanto dictionary
+WWW=		http://aspell.sourceforge.net/
 
 DICT=	 	eo
 
