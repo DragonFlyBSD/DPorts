@@ -1,5 +1,3 @@
-# Created by: Yuri Victorovich <yuri@rawbw.com>
-
 PORTNAME=	gmpy2
 DISTVERSION=	2.1.2
 CATEGORIES=	math python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	GMP/MPIR, MPFR, and MPC interface to Python
+WWW=		https://pypi.org/project/gmpy2/
 
 LICENSE=	GPLv3
 
