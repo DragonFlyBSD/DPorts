@@ -1,5 +1,3 @@
-# Created by: Petar Zhivkov Petrov <pesho.petrov@gmail.com>
-
 PORTNAME=	libmtp
 PORTVERSION=	1.1.18
 CATEGORIES=	multimedia audio
@@ -7,6 +5,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	desktop@FreeBSD.org
 COMMENT=	Media Transfer Protocol (MTP) library
+WWW=		http://libmtp.sourceforge.net/
 
 LICENSE=	LGPL21+
 
