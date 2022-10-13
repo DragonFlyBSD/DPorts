@@ -1,5 +1,3 @@
-# Created by: antoine@FreeBSD.org
-
 PORTNAME=	gevent-websocket
 PORTVERSION=	0.10.1
 CATEGORIES=	www python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	WebSocket library for the gevent networking library
+WWW=		https://www.gitlab.com/noppo/gevent-websocket
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
