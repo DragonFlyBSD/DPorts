@@ -1,5 +1,3 @@
-# Created by: Marco Broeder <marco.broeder@posteo.eu>
-
 PORTNAME=	dulwich
 PORTVERSION=	0.19.16
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	marco.broeder@posteo.eu
 COMMENT=	Python implementation of the Git file formats and protocols
+WWW=		https://www.dulwich.io/
 
 LICENSE=	APACHE20 GPLv2+
 LICENSE_COMB=	dual
