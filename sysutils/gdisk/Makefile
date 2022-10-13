@@ -1,5 +1,3 @@
-# Created by: Dmitry N Fomin <fdn@okbire.ru>
-
 PORTNAME=	gdisk
 PORTVERSION=	1.0.9
 CATEGORIES=	sysutils
@@ -8,6 +6,7 @@ DISTNAME=	gptfdisk-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	GPT fdisk
+WWW=		https://www.rodsbooks.com/fixparts/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
