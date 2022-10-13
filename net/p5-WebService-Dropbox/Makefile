@@ -1,5 +1,3 @@
-# Created by: Lung-Pin Chang <changlp@cs.nctu.edu.tw>
-
 PORTNAME=	WebService-Dropbox
 PORTVERSION=	2.09
 CATEGORIES=	net perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Perl interface to Dropbox API
+WWW=		https://metacpan.org/pod/WebService::Dropbox
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
