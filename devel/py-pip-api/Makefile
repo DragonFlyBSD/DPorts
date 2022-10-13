@@ -1,13 +1,12 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	pip-api
-PORTVERSION=	0.0.29
+PORTVERSION=	0.0.30
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Importable pip API
+WWW=		https://github.com/di/pip-api
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
