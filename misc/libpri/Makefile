@@ -1,5 +1,3 @@
-# Created by: Alexander Timoshenko <gonzo@univ.kiev.ua>
-
 PORTNAME=	libpri
 PORTVERSION=	1.6.0
 CATEGORIES=	misc
@@ -7,6 +5,7 @@ MASTER_SITES=	http://downloads.asterisk.org/pub/telephony/libpri/releases/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	C implementation of the Primary Rate ISDN specification
+WWW=		https://www.asterisk.org/downloads/libpri/
 
 LICENSE=	GPLv2
 
