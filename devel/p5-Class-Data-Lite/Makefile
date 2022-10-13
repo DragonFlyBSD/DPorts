@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Class-Data-Lite
 PORTVERSION=	0.0010
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Minimalistic class accessors
+WWW=		https://metacpan.org/dist/Class-Data-Lite
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
