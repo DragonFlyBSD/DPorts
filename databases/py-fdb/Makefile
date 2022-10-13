@@ -1,5 +1,3 @@
-# Created by: Jose Jachuf <jjachuf@gmail.com>
-
 PORTNAME=	fdb
 PORTVERSION=	2.0.1
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	jjachuf@gmail.com
 COMMENT=	Firebird RDBMS bindings for Python
+WWW=		https://pythonhosted.org/fdb/
 
 LICENSE=	ISCL
 LICENSE_FILE=	${WRKSRC}/LICENSE.TXT
