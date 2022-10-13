@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Media-Type-Simple
 PORTVERSION=	0.31.0
 DISTVERSIONPREFIX=	v
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	MIME Media Types and their file extensions
+WWW=		https://metacpan.org/release/Media-Type-Simple
 
 LICENSE=	ART20
 
