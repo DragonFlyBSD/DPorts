@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	sshpubkeys
 PORTVERSION=	3.3.1
 CATEGORIES=	security python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	SSH public key parser
+WWW=		https://github.com/ojarva/python-sshpubkeys
 
 LICENSE=	BSD3CLAUSE
 
