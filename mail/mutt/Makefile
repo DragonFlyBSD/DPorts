@@ -1,5 +1,3 @@
-# Created by: Udo Schweigert
-
 PORTNAME=	mutt
 DISTVERSION=	2.2.7
 CATEGORIES+=	mail
@@ -17,6 +15,7 @@ PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	dereks@lifeofadishwasher.com
 COMMENT=	Small but powerful text based program for read/writing e-mail
+WWW=		http://www.mutt.org/
 
 LICENSE=	GPLv2+
 
