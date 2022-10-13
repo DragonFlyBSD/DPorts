@@ -1,5 +1,3 @@
-# Created by: Ryan Steinmetz <zi@FreeBSD.org>
-
 PORTNAME=	cookbook-omnifetch
 PORTVERSION=	0.10.1
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Library to fetch Chef cookbooks from a variety of sources
+WWW=		https://github.com/chef/cookbook-omnifetch
 
 LICENSE=	APACHE20
 
