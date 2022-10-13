@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	sphinx-copybutton
 PORTVERSION=	0.5.0
 CATEGORIES=	textproc python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Add a copy button to each of your code cells
+WWW=		https://github.com/executablebooks/sphinx-copybutton
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
