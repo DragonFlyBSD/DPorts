@@ -1,5 +1,3 @@
-# Created by: Jordan DeLong <fracture@allusion.net>
-
 PORTNAME=	prboom
 PORTVERSION=	2.5.0
 PORTREVISION=	13
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}%20stable/${PORTVERSION}
 
 MAINTAINER=	thiagohero501@gmail.com
 COMMENT=	Multiplayer-capable and modified version of ID's classic DOOM game
+WWW=		http://prboom.sourceforge.net/
 
 LICENSE=	GPLv2
 
