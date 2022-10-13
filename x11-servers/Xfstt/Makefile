@@ -1,5 +1,3 @@
-# Created by: jabley@clear.co.nz
-
 PORTNAME=	xfstt
 PORTVERSION=	1.11
 CATEGORIES=	x11-servers
@@ -7,6 +5,7 @@ MASTER_SITES=	http://archive.hadrons.org/software/xfstt/
 
 MAINTAINER=	gspurki@gmail.com
 COMMENT=	TrueType font server for X11
+WWW=		https://www.hadrons.org/software/xfstt/
 
 LICENSE=	LGPL20+
 LICENSE_FILE=	${WRKSRC}/COPYING.LIB
