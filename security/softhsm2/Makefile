@@ -1,5 +1,3 @@
-# Created by: Jaap Akkerhuis <jaap@NLnetLabs.nl>
-
 PORTNAME=	softhsm
 PORTVERSION=	2.6.1
 PORTREVISION=	2
@@ -10,6 +8,7 @@ PKGNAMESUFFIX=	2
 
 MAINTAINER=	jaap@NLnetLabs.nl
 COMMENT=	Software implementation of a Hardware Security Module (HSM)
+WWW=		https://www.opendnssec.org/
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
