@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	google-protobuf
 PORTVERSION=	3.19.4
 CATEGORIES=	devel rubygems
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	319
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Ruby extension to Google Protocol Buffers
+WWW=		https://developers.google.com/protocol-buffers/
 
 LICENSE=	BSD3CLAUSE
 
