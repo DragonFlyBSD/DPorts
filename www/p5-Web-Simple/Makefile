@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Web-Simple
 PORTVERSION=	0.033
 CATEGORIES=	www perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Quick and easy way to build simple web applications
+WWW=		https://metacpan.org/release/Web-Simple
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
