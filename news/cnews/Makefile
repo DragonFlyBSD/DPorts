@@ -1,5 +1,3 @@
-# Created by: adam
-
 PORTNAME=	cnews
 PORTVERSION=	cr.g
 PORTREVISION=	18
@@ -29,6 +27,7 @@ PATCHFILES=	c-news-patch-fileart.c c-news-patch-namelen \
 
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	News server
+WWW=		https://www.dinoex.net/c-news.html
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
