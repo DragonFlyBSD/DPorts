@@ -1,11 +1,10 @@
-# Created by: Alex Dupre <ale@FreeBSD.org>
-
 PORTNAME=	secp256k1
 PORTVERSION=	0.1.20220126
 CATEGORIES=	math security java
 
 MAINTAINER=	ale@FreeBSD.org
 COMMENT=	Optimized C library for EC operations on curve secp256k1
+WWW=		https://github.com/bitcoin-core/secp256k1
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
