@@ -1,5 +1,3 @@
-# Created by: Grzegorz Blach <gblach@FreeBSD.org>
-
 PORTNAME=	pystache
 PORTVERSION=	0.6.0
 PORTREVISION=	0
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Logic-less templates for Python
+WWW=		https://github.com/sarnold/pystache
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
