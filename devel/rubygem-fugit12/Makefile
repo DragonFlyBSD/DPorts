@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	fugit
 PORTVERSION=	1.2.3
 CATEGORIES=	devel rubygems
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	12
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Time tools for flor and the floraison project
+WWW=		https://github.com/floraison/fugit
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
