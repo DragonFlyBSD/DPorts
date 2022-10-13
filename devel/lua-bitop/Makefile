@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	bitop
 PORTVERSION=	1.0.2
 PORTREVISION=	2
@@ -11,6 +9,7 @@ DISTNAME=	LuaBitOp-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Bitwise operations on numbers
+WWW=		https://bitop.luajit.org/
 
 LICENSE=	MIT
 
