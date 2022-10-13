@@ -1,5 +1,3 @@
-# Created by: Autrijus Tang <autrijus@autrijus.org>
-
 PORTNAME=	Module-Signature
 PORTVERSION=	0.88
 CATEGORIES=	security perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Module signature file manipulation
+WWW=		https://metacpan.org/release/Module-Signature
 
 LICENSE=	CC0-1.0
 
