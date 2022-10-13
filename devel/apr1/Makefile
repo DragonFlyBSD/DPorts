@@ -1,5 +1,3 @@
-# Created by: Garrett Rooney <rooneg@electricjellyfish.net>
-
 PORTNAME=	apr
 PORTVERSION=	${APR_VERSION}.${APU_VERSION}
 PORTREVISION=	2
@@ -10,6 +8,7 @@ DISTFILES=	apr-${APR_VERSION}.tar.gz \
 
 MAINTAINER=	apache@FreeBSD.org
 COMMENT=	Apache Portability Library
+WWW=		https://apr.apache.org/
 
 LICENSE=	APACHE20
 
