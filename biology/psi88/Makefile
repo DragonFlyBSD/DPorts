@@ -1,5 +1,3 @@
-# Created by: Ryo MIYAMOTO
-
 PORTNAME=	psi88
 PORTVERSION=	1.0
 PORTREVISION=	16
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Plotting wavefunctions (molecular orbitals) in 3D
+WWW=		http://zarbi.chem.yale.edu/products/psi88/index.shtml
 
 USES=		fortran tar:Z
 MAKE_ARGS=	BIN=${STAGEDIR}${PREFIX}/bin
