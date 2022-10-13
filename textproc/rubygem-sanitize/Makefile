@@ -1,5 +1,3 @@
-# Created by: Eric Freeman <freebsdports@chillibear.com>
-
 PORTNAME=	sanitize
 PORTVERSION=	6.0.0
 CATEGORIES=	textproc rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Whitelist based HTML sanitizer
+WWW=		https://github.com/rgrove/sanitize
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
