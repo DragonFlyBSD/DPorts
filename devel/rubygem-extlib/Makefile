@@ -1,5 +1,3 @@
-# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-
 PORTNAME=	extlib
 PORTVERSION=	0.9.16
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	General Ruby extensions
+WWW=		https://github.com/datamapper/extlib
 
 LICENSE=	MIT
 
