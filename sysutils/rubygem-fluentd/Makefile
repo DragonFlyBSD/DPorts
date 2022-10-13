@@ -1,10 +1,11 @@
 PORTNAME=	fluentd
-PORTVERSION=	1.15.0
+PORTVERSION=	1.15.2
 CATEGORIES=	sysutils rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	girgen@FreeBSD.org
 COMMENT=	Fluent event collector
+WWW=		https://fluentd.org/
 
 LICENSE=	APACHE20
 
