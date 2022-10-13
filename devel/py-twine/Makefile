@@ -1,5 +1,3 @@
-# Created by: Tom Judge <tj@FreeBSD.org>
-
 PORTNAME=	twine
 PORTVERSION=	4.0.1
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Collection of utilities for interacting with PyPI
+WWW=		https://github.com/pypa/twine
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
