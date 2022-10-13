@@ -1,5 +1,3 @@
-# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-
 PORTNAME=	periscope
 PORTVERSION=	0.2.4
 PORTREVISION=	4
@@ -13,6 +11,7 @@ EXTRACT_ONLY=	python-${PORTNAME}_${PORTVERSION}.orig${EXTRACT_SUFX}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Subtitles searching module
+WWW=		https://code.google.com/archive/p/periscope/
 
 LICENSE=	LGPL3
 
