@@ -1,5 +1,3 @@
-# Created by: Matthias Fechner <mfechner@FreeBSD.org>
-
 PORTNAME=	safety_net_attestation
 PORTVERSION=	0.4.0
 CATEGORIES=	security rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	mfechner@FreeBSD.org
 COMMENT=	SafetyNet attestation response verification
+WWW=		https://github.com/bdewater/safety_net_attestation
 
 LICENSE=	MIT
 
