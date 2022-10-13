@@ -1,5 +1,3 @@
-# Created by: Masahiro Teramoto <markun@onohara.to>
-
 PORTNAME=	HTML-MobileJp
 PORTVERSION=	0.08
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	CPAN
 
 MAINTAINER=	markun@onohara.to
 COMMENT=	Generate mobile-jp html tags
+WWW=		https://metacpan.org/release/HTML-MobileJp
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
