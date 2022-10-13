@@ -1,5 +1,3 @@
-# Created by: Joseph Benden <joe@thrallingpenguin.com>
-
 PORTNAME=	mod_vroot
 DISTVERSION=	0.9.5
 PORTREVISION=	2
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	proftpd-
 
 MAINTAINER=	joe@thrallingpenguin.com
 COMMENT=	Virtual Chroot ProFTPD module
+WWW=		http://www.castaglia.org/proftpd/modules/mod_vroot.html
 
 LICENSE=	GPLv2
 
