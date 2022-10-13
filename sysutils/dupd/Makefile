@@ -1,11 +1,10 @@
-# Created by: Thomas Hurst <tom@hur.st>
-
 PORTNAME=	dupd
 PORTVERSION=	1.7
 CATEGORIES=	sysutils
 
 MAINTAINER=	tom@hur.st
 COMMENT=	File duplicate detection CLI utility
+WWW=		https://www.virkki.com/dupd/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
