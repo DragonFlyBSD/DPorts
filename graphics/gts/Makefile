@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	gts
 PORTVERSION=	0.7.6
 PORTREVISION=	5
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	erik@bz.bzflag.bz
 COMMENT=	GNU Triangulated Surface Library
+WWW=		http://gts.sourceforge.net/
 
 LICENSE=	LGPL20
 
