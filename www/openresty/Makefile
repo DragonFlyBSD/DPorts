@@ -1,5 +1,3 @@
-# Created by: Jochen Neumeister <joneum@FreeBSD.org>
-
 PORTNAME=	openresty
 PORTVERSION=	1.21.4.1
 CATEGORIES=	www
@@ -7,6 +5,7 @@ MASTER_SITES=	https://openresty.org/download/
 
 MAINTAINER=	joneum@FreeBSD.org
 COMMENT=	OpenResty a powerful web app server by extending nginx
+WWW=		https://openresty.org/
 
 LICENSE=	BSD2CLAUSE MIT
 LICENSE_COMB=	multi
