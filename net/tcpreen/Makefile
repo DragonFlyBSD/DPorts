@@ -1,5 +1,3 @@
-# Created by: Janos.Mohacsi@bsd.hu
-
 PORTNAME=	tcpreen
 PORTVERSION=	1.4.4
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.remlab.net/files/tcpreen/
 
 MAINTAINER=	jmohacsi@bsd.hu
 COMMENT=	Simple TCP session re-engineering tool
+WWW=		https://www.remlab.net/tcpreen/
 
 LICENSE=	GPLv2+
 
