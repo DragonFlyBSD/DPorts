@@ -1,5 +1,3 @@
-# Created by: Mark Linimon <linimon@lonesome.com>
-
 PORTNAME=	py3dns
 PORTVERSION=	3.2.1
 CATEGORIES=	dns python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python 3 DNS library
+WWW=		https://pypi.org/project/py3dns/
 
 LICENSE=	CNRI
 LICENSE_NAME=	CNRI LICENSE AGREEMENT
