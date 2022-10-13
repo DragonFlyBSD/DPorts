@@ -1,5 +1,3 @@
-# Created by: Russell A. Jackson <rjackson@cserv62.csub.edu>
-
 PORTNAME=	sdig
 PORTVERSION=	0.45
 PORTREVISION=	2
@@ -9,6 +7,7 @@ MASTER_SITES=	SF \
 
 MAINTAINER=	zi@FreeBSD.org
 COMMENT=	Translate IP/DNS/WINS/MAC address into port description
+WWW=		http://sdig.sourceforge.net
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
