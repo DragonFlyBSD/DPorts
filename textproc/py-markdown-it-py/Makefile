@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	markdown-it-py
 PORTVERSION=	2.1.0
 CATEGORIES=	textproc python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python port of markdown-it
+WWW=		https://github.com/executablebooks/markdown-it-py
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
