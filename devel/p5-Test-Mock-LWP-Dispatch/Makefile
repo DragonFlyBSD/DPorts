@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Test-Mock-LWP-Dispatch
 PORTVERSION=	0.08
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Mocks LWP::UserAgent and dispatches your requests/responses
+WWW=		https://metacpan.org/release/Test-Mock-LWP-Dispatch
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
