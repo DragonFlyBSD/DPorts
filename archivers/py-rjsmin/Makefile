@@ -1,13 +1,12 @@
-# Created by: Richard Gallamore <ultima@FreeBSD.org>
-
 PORTNAME=	rjsmin
-PORTVERSION=	1.2.0
+PORTVERSION=	1.2.1
 CATEGORIES=	archivers python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	ultima@FreeBSD.org
 COMMENT=	Fast javascript minifier for Python
+WWW=		https://github.com/ndparker/rjsmin
 
 LICENSE=	APACHE20
 
