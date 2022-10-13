@@ -1,8 +1,5 @@
-# Created by: Ryan Steinmetz <zi@FreeBSD.org>
-
 PORTNAME=	exabgp
-PORTVERSION=	4.2.13
-PORTREVISION=	2
+PORTVERSION=	4.2.21
 CATEGORIES=	net
 MASTER_SITES=	GH \
 		ZI
@@ -11,6 +8,7 @@ PKGNAMESUFFIX=	4
 
 MAINTAINER=	zi@FreeBSD.org
 COMMENT=	BGP engine and route injector
+WWW=		https://github.com/Exa-Networks/exabgp
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENCE.txt
