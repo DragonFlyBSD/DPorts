@@ -1,5 +1,3 @@
-# Created by: Vladimir Kondratyev <wulf@FreeBSD.org>
-
 PORTNAME=	evemu
 PORTVERSION=	2.7.0
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ MASTER_SITES=	http://www.freedesktop.org/software/${PORTNAME}/
 
 MAINTAINER=	wulf@FreeBSD.org
 COMMENT=	Records and replays EVDEV descriptions and events
+WWW=		https://www.freedesktop.org/wiki/Evemu/
 
 LICENSE=	GPLv3
 
