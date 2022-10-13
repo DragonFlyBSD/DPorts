@@ -1,5 +1,3 @@
-# Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-
 PORTNAME=	libdsp
 PORTVERSION=	5.0.2
 PORTREVISION=	3
@@ -11,6 +9,7 @@ DISTNAME=	${PORTNAME}-src-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	C++ class library of common digital signal processing functions
+WWW=		http://libdsp.sourceforge.net/overview.html
 
 WRKSRC=		${WRKDIR}/libdsp-src-${PORTVERSION}/${PORTNAME:S/dsp/DSP/}-${PORTVERSION}
 
