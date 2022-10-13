@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@rtfm.jp>
-
 PORTNAME=	ruby2ruby
 PORTVERSION=	2.4.4
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Pure ruby code generator easily from ParseTree's Sexps # '
+WWW=		https://github.com/seattlerb/ruby2ruby
 
 LICENSE=	MIT
 
