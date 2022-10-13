@@ -1,11 +1,12 @@
 PORTNAME=	lazr.restfulclient
-PORTVERSION=	0.14.3
+DISTVERSION=	0.14.4
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	fullermd@over-yonder.net
 COMMENT=	Additional Launchpad web services using wadllib
+WWW=		https://launchpad.net/lazr.restfulclient
 
 LICENSE=	LGPL3
 LICENSE_FILE=	${WRKSRC}/COPYING.txt
@@ -17,7 +18,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}distro>=0:sysutils/py-distro@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}wadllib>=1.1.4:devel/py-wadllib@${PY_FLAVOR}
 
 USES=		python:3.6+
-USE_PYTHON=	distutils autoplist
+USE_PYTHON=	autoplist distutils
 
 NO_ARCH=	yes
 
