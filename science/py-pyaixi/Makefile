@@ -1,5 +1,3 @@
-# Created by: Johannes Meixner <johannes@perceivon.net>
-
 PORTNAME=	pyaixi
 PORTVERSION=	1.0.4
 DISTVERSIONSUFFIX=	.post1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Implementation of the MC-AIXI-CTW AI algorithm
+WWW=		https://github.com/sgkasselau/pyaixi
 
 LICENSE=	CC-BY-SA-3.0
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
