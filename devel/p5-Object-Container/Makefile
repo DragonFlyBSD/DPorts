@@ -1,13 +1,12 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Object-Container
-PORTVERSION=	0.15
+PORTVERSION=	0.16
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Simple object container
+WWW=		https://metacpan.org/release/Object-Container
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
