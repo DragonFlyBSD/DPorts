@@ -1,12 +1,11 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	async-io
-PORTVERSION=	1.33.0
+PORTVERSION=	1.34.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Provides support for asynchronous TCP, UDP, Unix, and SSL sockets
+WWW=		https://github.com/socketry/async-io
 
 LICENSE=	MIT
 
