@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	tinyatom
 PORTVERSION=	0.3.6
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Small and easy to use ruby Atom feed generator
+WWW=		https://github.com/mmb/tinyatom
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
