@@ -1,5 +1,3 @@
-# Created by: William Grzybowski <william88@gmail.com>
-
 PORTNAME=	billiard
 PORTVERSION=	3.6.3.0
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	olgeni@FreeBSD.org
 COMMENT=	Python multiprocessing fork with improvements and bugfixes
+WWW=		https://github.com/celery/billiard
 
 LICENSE=	BSD3CLAUSE
 
