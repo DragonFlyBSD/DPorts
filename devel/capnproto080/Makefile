@@ -1,5 +1,3 @@
-# Created by: Felix Hanley
-
 PORTNAME=	capnproto
 PORTVERSION=	0.8.0
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	080
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Serialization/RPC system
+WWW=		https://capnproto.org/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/../LICENSE
