@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	faraday-patron
 PORTVERSION=	2.0.1
 CATEGORIES=	www rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Faraday adapter for Patron
+WWW=		https://github.com/lostisland/faraday-patron
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
