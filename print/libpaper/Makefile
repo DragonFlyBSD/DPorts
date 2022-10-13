@@ -1,5 +1,3 @@
-# Created by: lofi@FreeBSD.org
-
 PORTNAME=	libpaper
 DISTVERSION=	1.1.28
 CATEGORIES=	print
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	Library providing routines for paper size management
+WWW=		https://packages.qa.debian.org/libp/libpaper.html
 
 LICENSE=	GPLv2
 
