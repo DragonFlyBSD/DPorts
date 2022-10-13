@@ -1,12 +1,11 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	asset_sync
-PORTVERSION=	2.15.2
+PORTVERSION=	2.16.0
 CATEGORIES=	net rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Synchronizes Assets between Rails and S3
+WWW=		https://github.com/AssetSync/asset_sync
 
 LICENSE=	MIT
 
