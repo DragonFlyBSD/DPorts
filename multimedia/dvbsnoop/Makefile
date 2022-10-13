@@ -1,5 +1,3 @@
-# Created by: J.R. Oldroyd <fbsd@opal.com>
-
 PORTNAME=	dvbsnoop
 PORTVERSION=	1.4.50
 CATEGORIES=	multimedia
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	fbsd@opal.com
 COMMENT=	DVB stream analyzer / MPEG analyzer
+WWW=		http://dvbsnoop.sourceforge.net/
 
 DVB_HEADERS=	dmx.h frontend.h
 
