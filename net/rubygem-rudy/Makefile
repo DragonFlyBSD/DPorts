@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	rudy
 PORTVERSION=	0.9.8.020
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	swills@FreeBSD.org
 COMMENT=	EC2 deployment tool
+WWW=		http://solutious.com/projects/rudy/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
