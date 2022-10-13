@@ -1,5 +1,3 @@
-# Created by: mwlucas
-
 PORTNAME=	mod_auth_xradius
 PORTVERSION=	0.4.6
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${APACHE_PKGNAMEPREFIX}
 
 MAINTAINER=	apache@FreeBSD.org
 COMMENT=	Enables RADIUS authentication
+WWW=		http://www.outoforder.cc/projects/apache/mod_auth_xradius/
 
 LICENSE=	APACHE20
 
