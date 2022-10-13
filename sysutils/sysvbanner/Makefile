@@ -1,5 +1,3 @@
-# Created by: Uffe Jakobsen <uffe@uffe.org>
-
 PORTNAME=	sysvbanner
 PORTVERSION=	1.0.15
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	sysutils
 
 MAINTAINER=	d.oriented@gmail.com
 COMMENT=	SysV banner
+WWW=		https://github.com/uffejakobsen/sysvbanner
 
 USES=		gmake
 USE_GITHUB=	yes
