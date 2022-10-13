@@ -1,11 +1,11 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	libcircllhist
 PORTVERSION=	g20211005
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	fuz@fuz.su
 COMMENT=	Circonus log-linear histogram C implementation
+WWW=		https://github.com/circonus-labs/libcircllhist
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
