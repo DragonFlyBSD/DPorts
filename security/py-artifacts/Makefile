@@ -1,5 +1,3 @@
-# Created by: Antoine Brodin <antoine@FreeBSD.org>
-
 PORTNAME=	artifacts
 PORTVERSION=	20210620
 CATEGORIES=	security python
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	ForensicArtifacts.com Artifact Repository
+WWW=		https://github.com/ForensicArtifacts/artifacts
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
