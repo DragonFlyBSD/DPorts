@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Config-Model-Backend-Yaml
 PORTVERSION=	2.134
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Read and write config as a YAML data structure
+WWW=		https://metacpan.org/release/Config-Model-Backend-Yaml
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/LICENSE
