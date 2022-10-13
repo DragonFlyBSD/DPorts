@@ -1,5 +1,3 @@
-# Created by: Max Laier <max@love2party.net>
-
 PORTNAME=	spamd
 PORTVERSION=	4.9.1
 PORTREVISION=	6
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/freebsdspamd/spamd
 
 MAINTAINER=	koue@chaosophia.net
 COMMENT=	Traps spammers with a very slow smtp-login and return 4xx error
+WWW=		http://freebsdspamd.sourceforge.net/
 
 LICENSE=	BSD2CLAUSE
 
