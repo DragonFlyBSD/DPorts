@@ -1,5 +1,3 @@
-# Created by: Kostya Lukin <lukin@okbmei.msk.su>
-
 PORTNAME=	adns
 PORTVERSION=	1.6.0
 CATEGORIES=	dns
@@ -7,6 +5,7 @@ MASTER_SITES=	http://www.chiark.greenend.org.uk/~ian/adns/ftp/
 
 MAINTAINER=	pi@FreeBSD.org
 COMMENT=	Easy to use asynchronous-capable DNS client library and utilities
+WWW=		https://www.chiark.greenend.org.uk/~ian/adns/
 
 LICENSE=	GPLv3
 
