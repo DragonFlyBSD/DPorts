@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	CPU-Z80-Assembler
 PORTVERSION=	2.18
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Z80 assembler written in Perl
+WWW=		https://metacpan.org/dist/CPU-Z80-Assembler
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
