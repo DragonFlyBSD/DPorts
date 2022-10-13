@@ -1,5 +1,3 @@
-# Created by: Dan Langille
-
 PORTNAME=	robotframework-databaselibrary
 PORTVERSION=	1.1.1
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	dvl@FreeBSD.org
 COMMENT=	Utilities meant for Robot Frameworks usage
+WWW=		https://franz-see.github.io/Robotframework-Database-Library/
 
 LICENSE=	APACHE20
 
