@@ -1,5 +1,3 @@
-# Created by: Ryan Steinmetz <rpsfa@rit.edu>
-
 PORTNAME=	dm-observer
 PORTVERSION=	1.2.0
 CATEGORIES=	databases rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	DataMapper plugin for observing Resources
+WWW=		https://github.com/datamapper/dm-observer
 
 LICENSE=	MIT
 
