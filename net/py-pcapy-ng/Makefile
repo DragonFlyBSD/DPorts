@@ -1,5 +1,3 @@
-# Created by: Michael Muenz <m.muenz@gmail.com>
-
 PORTNAME=	pcapy-ng
 PORTVERSION=	1.0.9
 CATEGORIES=	net python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	m.muenz@gmail.com
 COMMENT=	Python pcap extension
+WWW=		http://www.coresecurity.com/corelabs-research/open-source-tools/pcapy
 
 LICENSE=	APACHE11
 LICENSE_FILE=	${WRKSRC}/LICENSE
