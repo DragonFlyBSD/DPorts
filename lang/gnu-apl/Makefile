@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	apl
 PORTVERSION=	1.8
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	gnu-
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Free interpreter for APL programming language
+WWW=		https://www.gnu.org/software/apl/
 
 LICENSE=	GPLv3+
 
