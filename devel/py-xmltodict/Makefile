@@ -1,5 +1,3 @@
-# Created by: Johannes Meixner <johannes@perceivon.net>
-
 PORTNAME=	xmltodict
 PORTVERSION=	0.13.0
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	XML parser that returns python dictionaries
+WWW=		https://github.com/martinblech/xmltodict
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
