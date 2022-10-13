@@ -1,12 +1,12 @@
-# Created by: thierry@pompo.net
-
 PORTNAME=	lcalc
 PORTVERSION=	2.0.5
+PORTREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp.fu-berlin.de/unix/misc/sage/spkg/upstream/lcalc/
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	L-function c++ class library and the CLI program lcalc
+WWW=		https://gitlab.com/sagemath/lcalc
 
 LICENSE=	GPLv2+
 
