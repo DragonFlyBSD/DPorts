@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	em-websocket
 PORTVERSION=	0.5.3
 CATEGORIES=	www rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	EventMachine based WebSocket server
+WWW=		https://github.com/igrigorik/em-websocket
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENCE
