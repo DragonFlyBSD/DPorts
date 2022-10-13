@@ -1,5 +1,3 @@
-# Created by: Brian Gaeke <brg@dgate.org>
-
 PORTNAME=	vmips
 PORTVERSION=	1.5.1
 PORTREVISION=	1
@@ -9,6 +7,7 @@ MASTER_SITES=	SF \
 
 MAINTAINER=	brg@dgate.org
 COMMENT=	MIPS R3000 simulator
+WWW=		http://www.dgate.org/vmips/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
