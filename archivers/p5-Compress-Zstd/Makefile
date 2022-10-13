@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Compress-Zstd
 PORTVERSION=	0.20
 CATEGORIES=	archivers perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Perl interface to the Zstd (Zstandard) (de)compressor
+WWW=		https://metacpan.org/dist/Compress-Zstd
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
