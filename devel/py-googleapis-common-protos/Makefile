@@ -1,23 +1,23 @@
 PORTNAME=	googleapis-common-protos
-PORTVERSION=	1.56.3
+PORTVERSION=	1.56.4
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Common protobufs used in Google APIs
+WWW=		https://github.com/googleapis/python-api-common-protos
 
 LICENSE=	APACHE20
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}protobuf>=3.15.0,1<5.0.0,1:devel/py-protobuf@${PY_FLAVOR}
 
-USES=		python:3.6+
+USES=		python:3.7+
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes
 
 OPTIONS_DEFINE=	GRPC
-GRPC_DESC=	gRPC support
 
 GRPC_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}grpcio>=1.0.0<2.0.0:devel/py-grpcio@${PY_FLAVOR}
 
