@@ -1,11 +1,10 @@
-# Created by: Anders Nordby <anders@FreeBSD.org>
-
 PORTNAME=	darkstat
 DISTVERSION=	3.0.721
 CATEGORIES=	net-mgmt
 
 MAINTAINER=	emikulic@gmail.com
 COMMENT=	Network statistics gatherer and reporter
+WWW=		https://unix4lyfe.org/darkstat/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING.GPL
