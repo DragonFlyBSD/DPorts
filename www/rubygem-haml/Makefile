@@ -1,5 +1,3 @@
-# Created by: Robert Gogolok <gogo@cs.uni-sb.de>
-
 PORTNAME=	haml
 PORTVERSION=	5.2.2
 CATEGORIES=	www rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Markup language to describe HTML
+WWW=		https://haml.info/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/MIT-LICENSE
