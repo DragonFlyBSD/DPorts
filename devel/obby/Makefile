@@ -1,5 +1,3 @@
-# Created by: Andreas Kohn <andreas@syndrom23.de>
-
 PORTNAME=	obby
 PORTVERSION=	0.4.8
 PORTREVISION=	6
@@ -8,6 +6,7 @@ MASTER_SITES=	http://releases.0x539.de/obby/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Library for synced document buffers
+WWW=		http://gobby.0x539.de
 
 LICENSE=	GPLv2
 
