@@ -1,5 +1,3 @@
-# Created by: Pete Fritchman <petef@databits.net>
-
 PORTNAME=	HTML-Format
 PORTVERSION=	2.12
 CATEGORIES=	textproc perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Module to format HTML to text or PS
+WWW=		https://metacpan.org/release/NIGELM/HTML-Format-2.12
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
