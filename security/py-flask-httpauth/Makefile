@@ -1,11 +1,12 @@
 PORTNAME=	Flask-HTTPAuth
-DISTVERSION=	3.3.0
+DISTVERSION=	4.7.0
 CATEGORIES=	security python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	rm@FreeBSD.org
 COMMENT=	Basic and Digest HTTP authentication for Flask routes
+WWW=		https://github.com/miguelgrinberg/flask-httpauth/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
