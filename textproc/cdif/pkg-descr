@@ -5,5 +5,3 @@ option can be used for that purpose.  If only one file is specified,
 cdif reads that file (stdin if no file) as a output from diff command.
 Lines those don't look like diff output are simply ignored and
 printed.
-
-WWW: https://github.com/kaz-utashiro/cdif
