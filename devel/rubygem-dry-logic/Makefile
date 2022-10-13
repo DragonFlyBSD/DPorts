@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	dry-logic
 PORTVERSION=	1.2.0
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Predicate logic with rule composition
+WWW=		https://github.com/dry-rb/dry-logic
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
