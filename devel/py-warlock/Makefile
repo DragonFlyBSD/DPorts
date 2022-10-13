@@ -1,5 +1,3 @@
-# Created by: Alexander Nusov <alexander.nusov@nfvexpress.com>
-
 PORTNAME=	warlock
 PORTVERSION=	2.0.1
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python object model built on JSON schema and JSON patch
+WWW=		https://github.com/bcwaldon/warlock
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
