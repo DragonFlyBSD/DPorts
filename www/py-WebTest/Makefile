@@ -1,5 +1,3 @@
-# Created by: Wen Heping
-
 PORTNAME=	WebTest
 PORTVERSION=	2.0.32
 CATEGORIES=	www python
@@ -7,6 +5,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	cs@FreeBSD.org
 COMMENT=	Helper to test WSGI applications
+WWW=		https://pythonpaste.org/webtest/
 
 LICENSE=	MIT
 
