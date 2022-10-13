@@ -1,5 +1,3 @@
-# Created by: Peter Schuller <peter.schuller@infidyne.com>
-
 PORTNAME=	stemmer
 PORTVERSION=	1.0.1
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Implementation of the Porter word stemming algorithm
+WWW=		https://rubygems.org/gems/stemmer
 
 USES=		gem
 USE_RUBY=	yes
