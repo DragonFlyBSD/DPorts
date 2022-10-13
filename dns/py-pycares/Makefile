@@ -1,5 +1,3 @@
-# Created by: Dmitry Sivachenko <mitya@yandex-team.ru>
-
 PORTNAME=	pycares
 PORTVERSION=	4.1.2
 CATEGORIES=	dns python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	demon@FreeBSD.org
 COMMENT=	Python interface to c-ares
+WWW=		https://pypi.org/project/pycares/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
