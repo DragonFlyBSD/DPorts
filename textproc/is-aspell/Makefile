@@ -1,5 +1,3 @@
-# Created by: Thierry Thomas <thierry@pompo.net>
-
 PORTNAME=	${DICT}-aspell
 SPELLVERSION=	-is-0.51.1-0
 PORTREVISION=	1
@@ -8,6 +6,7 @@ CATEGORIES=	textproc
 
 MAINTAINER=	office@FreeBSD.org
 COMMENT=	Aspell Icelandic dictionary
+WWW=		http://aspell.net/
 
 DICT=	 	is
 
