@@ -1,5 +1,3 @@
-# Created by: Ashish SHUKLA <ashish@FreeBSD.org>
-
 PORTNAME=	git-crypt
 PORTVERSION=	0.6.0
 PORTREVISION=	1
@@ -9,6 +7,7 @@ MASTER_SITES=	https://www.agwa.name/projects/git-crypt/downloads/ \
 
 MAINTAINER=	ashish@FreeBSD.org
 COMMENT=	Transparent file encryption in git
+WWW=		https://www.agwa.name/projects/git-crypt/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
