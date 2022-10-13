@@ -1,5 +1,3 @@
-# Created by: John Chen <johnpupu@gmail.com>
-
 PORTNAME=	uv
 PORTVERSION=	0.2.4
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	fluffy@FreeBSD.org
 COMMENT=	PHP wrapper for libuv
+WWW=		https://pecl.php.net/package/uv
 
 LICENSE=	PHP301
 LICENSE_FILE=	${WRKSRC}/LICENSE
