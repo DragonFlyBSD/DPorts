@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	POE-Loop-AnyEvent
 PORTVERSION=	0.004
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	AnyEvent event loop support for POE
+WWW=		https://metacpan.org/release/POE-Loop-AnyEvent
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
