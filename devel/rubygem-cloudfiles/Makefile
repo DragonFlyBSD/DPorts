@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	cloudfiles
 PORTVERSION=	1.5.0.3
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Ruby version of the Rackspace Cloud Files API
+WWW=		http://www.rackspacecloud.com/cloud_hosting_products/files
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
