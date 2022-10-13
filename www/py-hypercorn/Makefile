@@ -1,8 +1,5 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	hypercorn
-PORTVERSION=	0.13.2
-PORTREVISION=	1
+PORTVERSION=	0.14.3
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -10,6 +7,7 @@ DISTNAME=	Hypercorn-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	ASGI Server based on Hyper libraries
+WWW=		https://github.com/pgjones/hypercorn
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
