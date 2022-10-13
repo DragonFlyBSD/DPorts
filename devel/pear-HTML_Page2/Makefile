@@ -1,11 +1,10 @@
-# Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-
 PORTNAME=	HTML_Page2
 PORTVERSION=	0.6.5
 CATEGORIES=	devel www pear
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	PEAR base class for XHTML page generation
+WWW=		https://pear.php.net/package/HTML_Page2
 
 LICENSE=	PHP30
 
