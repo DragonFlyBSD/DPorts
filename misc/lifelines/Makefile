@@ -1,5 +1,3 @@
-# Created by: Matt Emmerton <matt@gsicomp.on.ca>
-
 PORTNAME=	lifelines
 PORTVERSION=	3.1.1
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	https://github.com/MarcNo/lifelines/releases/download/${PORTVERSIO
 
 MAINTAINER=	matt@gsicomp.on.ca
 COMMENT=	Advanced genealogical system
+WWW=		http://marcno.github.io/lifelines/
 
 LICENSE=	MIT
 
