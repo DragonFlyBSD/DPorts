@@ -1,5 +1,3 @@
-# Created by: philip@FreeBSD.org
-
 PORTNAME=	threema-msgapi
 PORTVERSION=	3.0.6
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	philip@FreeBSD.org
 COMMENT=	Threema Gateway Message SDK for Python
+WWW=		https://github.com/lgrahl/threema-msgapi-sdk-python/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
