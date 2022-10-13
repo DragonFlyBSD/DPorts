@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	tinc
 PORTVERSION=	1.0.36
 PORTREVISION=	2
@@ -9,6 +7,7 @@ MASTER_SITES=	https://www.tinc-vpn.org/packages/ \
 
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Virtual Private Network (VPN) daemon
+WWW=		https://www.tinc-vpn.org/
 
 LICENSE=	GPLv3
 
