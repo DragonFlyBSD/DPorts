@@ -1,5 +1,3 @@
-# Created by: Matthias Fechner <mfechner@FreeBSD.org>
-
 PORTNAME=	omniauth-salesforce
 PORTVERSION=	1.0.5
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	mfechner@FreeBSD.org
 COMMENT=	OmniAuth strategy for salesforce.com
+WWW=		https://github.com/realdoug/omniauth-salesforce
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
