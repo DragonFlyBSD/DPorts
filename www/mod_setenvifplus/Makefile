@@ -1,5 +1,3 @@
-# Created by: Jim Riggs <ports@christianserving.org>
-
 PORTNAME=	mod_setenvifplus
 PORTVERSION=	0.40
 CATEGORIES=	www
@@ -9,6 +7,7 @@ DIST_SUBDIR=	apache2
 
 MAINTAINER=	joneum@FreeBSD.org
 COMMENT=	Allows setting environment variables based on request attributes
+WWW=		http://modsetenvifplus.sourceforge.net/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/doc/LICENSE.txt
