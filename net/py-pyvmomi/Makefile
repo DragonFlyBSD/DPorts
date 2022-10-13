@@ -1,11 +1,10 @@
-# Created by: Bartek Rutkowski robak@FreeBSD.org
-
 PORTNAME=	pyvmomi
 DISTVERSION=	7.0.3
 CATEGORIES=	net python
 
 MAINTAINER=	robak@FreeBSD.org
 COMMENT=	Python SDK for the VMware vSphere API of ESX, ESXi, and vCenter
+WWW=		https://github.com/vmware/pyvmomi
 
 USE_GITHUB=     yes
 GH_ACCOUNT=     vmware
