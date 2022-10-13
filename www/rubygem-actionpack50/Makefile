@@ -1,5 +1,3 @@
-# Created by: Jonathan Weiss (<jw@innerewut.de>)
-
 PORTNAME=	actionpack
 PORTVERSION=	5.0.7.2
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMESUFFIX=	50
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Action Controller and Action View of Rails MVC Framework
+WWW=		https://github.com/rails/rails/tree/main/actionpack
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/MIT-LICENSE
