@@ -1,5 +1,3 @@
-# Created by: Geraud CONTINSOUZAS <geraud@gcu.info>
-
 PORTNAME=	Log-Dispatchouli
 PORTVERSION=	2.012
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	geraud@gcu.info
 COMMENT=	Log events to an array (reference)
+WWW=		https://metacpan.org/release/Log-Dispatchouli
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
