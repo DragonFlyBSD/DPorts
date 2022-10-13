@@ -1,5 +1,3 @@
-# Created by: Dryice Dong Liu <dryice@dryice.name>
-
 PORTNAME=	sqlalchemy
 PORTVERSION=	1.0.14
 CATEGORIES=	databases python
@@ -10,6 +8,7 @@ DISTNAME=	SQLAlchemy-${DISTVERSION}
 
 MAINTAINER=	m.tsatsenko@gmail.com
 COMMENT=	Python SQL toolkit and Object Relational Mapper 1.0.x
+WWW=		https://www.sqlalchemy.org/
 
 LICENSE=	MIT
 
