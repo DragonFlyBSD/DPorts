@@ -1,5 +1,3 @@
-# Created by: Torsten Zuehlsdorff <tz@FreeBSD.org>
-
 PORTNAME=	u2f
 PORTVERSION=	0.2.1
 CATEGORIES=	net rubygems
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	0
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Library for handling registration and authentication of U2F devices
+WWW=		https://github.com/castle/ruby-u2f
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
