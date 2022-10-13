@@ -1,5 +1,3 @@
-# Created by: Christian Geier <geier@lostpackets.de>
-
 PORTNAME=	click-log
 DISTVERSION=	0.3.2
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	geier@lostpackets.de
 COMMENT=	Logging integration for Click
+WWW=		https://github.com/click-contrib/click-log
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
