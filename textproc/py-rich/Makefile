@@ -1,11 +1,12 @@
 PORTNAME=	rich
-PORTVERSION=	12.4.4
+PORTVERSION=	12.5.1
 CATEGORIES=	textproc python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	matthew@FreeBSD.org
 COMMENT=	Rich text and beautiful formatting in the terminal
+WWW=		https://github.com/willmcgugan/rich
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
