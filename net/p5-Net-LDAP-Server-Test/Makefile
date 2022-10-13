@@ -1,5 +1,3 @@
-# Created by: swills@
-
 PORTNAME=	Net-LDAP-Server-Test
 PORTVERSION=	0.22
 CATEGORIES=	net perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module to test Net::LDAP code
+WWW=		https://metacpan.org/release/Net-LDAP-Server-Test
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
