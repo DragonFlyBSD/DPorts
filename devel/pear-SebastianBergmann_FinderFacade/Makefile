@@ -1,5 +1,3 @@
-# Created by: Gasol Wu <gasol.wu@gmail.com>
-
 PORTNAME=	FinderFacade
 PORTVERSION=	1.2.3
 CATEGORIES=	devel pear
@@ -7,6 +5,7 @@ PKGNAMEPREFIX=	${PEAR_PKGNAMEPREFIX}SebastianBergmann_
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Convenience wrapper for Symfony Finder component
+WWW=		https://github.com/sebastianbergmann/finder-facade
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
