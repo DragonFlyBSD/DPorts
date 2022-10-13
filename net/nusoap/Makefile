@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	nusoap
 PORTVERSION=	0.9.5
 CATEGORIES=	net www
@@ -7,6 +5,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	SOAP Toolkit for PHP
+WWW=		https://sourceforge.net/projects/nusoap/
 
 LICENSE=	LGPL21+
 
