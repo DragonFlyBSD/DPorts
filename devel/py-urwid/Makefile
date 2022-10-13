@@ -1,5 +1,3 @@
-# Created by: Hye-Shik Chang <perky@FreeBSD.org>
-
 PORTNAME=	urwid
 PORTVERSION=	2.1.2
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	python@FreeBSD.org
 COMMENT=	Curses-based user interface library for Python
+WWW=		https://urwid.org/
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
