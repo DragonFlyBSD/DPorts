@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	idna_ssl
 PORTVERSION=	1.1.0
 CATEGORIES=	dns python
@@ -9,6 +7,7 @@ DISTNAME=	idna-ssl-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Patch ssl.match_hostname for Unicode(idna) domains support
+WWW=		https://pypi.org/project/idna_ssl/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
