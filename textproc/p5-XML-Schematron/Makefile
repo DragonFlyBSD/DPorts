@@ -1,5 +1,3 @@
-# Created by: Seamus Venasse <svenasse@polaris.ca>
-
 PORTNAME=	XML-Schematron
 PORTVERSION=	1.10
 CATEGORIES=	textproc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl implementation of the Schematron
+WWW=		https://metacpan.org/release/XML-Schematron
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
