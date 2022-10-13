@@ -1,5 +1,3 @@
-# Created by: Kubilay Kocak <koobs@FreeBSD.org>
-
 PORTNAME=	sshuttle
 PORTVERSION=	1.1.0
 CATEGORIES=	net python net-vpn
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Full-featured VPN over an SSH tunnel
+WWW=		https://github.com/sshuttle/sshuttle
 
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/LICENSE
