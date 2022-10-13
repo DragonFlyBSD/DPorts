@@ -1,5 +1,3 @@
-# Created by: peter.schuller@infidyne.com
-
 PORTNAME=	liquid
 PORTVERSION=	4.0.3
 CATEGORIES=	textproc rubygems
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	4
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Library for rendering safe templates
+WWW=		https://shopify.github.io/liquid/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
