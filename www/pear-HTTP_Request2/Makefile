@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	HTTP_Request2
 PORTVERSION=	2.5.1
 PORTEPOCH=	1
@@ -7,6 +5,7 @@ CATEGORIES=	www pear
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	PEAR classes providing an easy way to perform HTTP requests
+WWW=		https://pear.php.net/package/HTTP_Request2
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/docs/LICENSE
