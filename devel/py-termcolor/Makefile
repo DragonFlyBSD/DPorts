@@ -1,5 +1,3 @@
-# Created by: Volodymyr Kostyrko <c.kworr@gmail.com>
-
 PORTNAME=	termcolor
 PORTVERSION=	1.1.0
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	c.kworr@gmail.com
 COMMENT=	ANSII Color formatting for output in terminal
+WWW=		https://pypi.org/project/termcolor/
 
 LICENSE=	MIT
 
