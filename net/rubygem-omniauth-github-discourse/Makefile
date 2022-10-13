@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	omniauth-github-discourse
 PORTVERSION=	1.1.2
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Fork of Official OmniAuth strategy for GitHub
+WWW=		https://github.com/omniauth/omniauth-github
 
 LICENSE=	MIT
 
