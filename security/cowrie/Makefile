@@ -1,10 +1,11 @@
 PORTNAME=	cowrie
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.3.0
+DISTVERSION=	2.4.0
 CATEGORIES=	security python
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Cowrie SSH/Telnet honeypot
+WWW=		https://www.cowrie.org/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/docs/LICENSE.rst
