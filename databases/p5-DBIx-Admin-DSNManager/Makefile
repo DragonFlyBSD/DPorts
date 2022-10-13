@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	DBIx-Admin-DSNManager
 PORTVERSION=	2.02
 CATEGORIES=	databases perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Manage a file of DSNs, for both testing and production
+WWW=		https://metacpan.org/release/DBIx-Admin-DSNManager
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
