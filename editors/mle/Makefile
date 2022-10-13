@@ -1,5 +1,3 @@
-# Created by: Adam Saponara <as@php.net>
-
 PORTNAME=	mle
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.5.0
@@ -7,6 +5,7 @@ CATEGORIES=	editors
 
 MAINTAINER=	as@php.net
 COMMENT=	Small, flexible, terminal-based text editor
+WWW=		https://github.com/adsr/mle
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
