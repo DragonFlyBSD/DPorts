@@ -1,12 +1,11 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	aws-sdk-lookoutforvision
-PORTVERSION=	1.14.0
+PORTVERSION=	1.16.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Official AWS Ruby gem for Amazon Lookout for Vision
+WWW=		https://github.com/aws/aws-sdk-ruby/tree/version-3/gems/aws-sdk-lookoutforvision
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
