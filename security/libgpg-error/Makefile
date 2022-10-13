@@ -1,5 +1,3 @@
-# Created by: Sergei Kolobov <sergei@kolobov.com>
-
 PORTNAME=	libgpg-error
 PORTVERSION=	1.45
 CATEGORIES=	security devel
@@ -7,6 +5,7 @@ MASTER_SITES=	GNUPG
 
 MAINTAINER=	novel@FreeBSD.org
 COMMENT=	Common error values for all GnuPG components
+WWW=		https://www.gnupg.org/software/libgpg-error/
 
 LICENSE=	GPLv2 LGPL21
 LICENSE_COMB=	multi
