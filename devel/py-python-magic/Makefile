@@ -1,5 +1,3 @@
-# Created by: Kubilay Kocak <koobs@FreeBSD.org>
-
 PORTNAME=	python-magic
 PORTVERSION=	0.4.27
 CATEGORIES=	devel python
@@ -7,6 +5,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	File type identification using libmagic
+WWW=		https://github.com/ahupp/python-magic
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
