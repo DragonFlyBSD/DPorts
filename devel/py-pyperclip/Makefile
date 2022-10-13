@@ -1,5 +1,3 @@
-# Created by: Shaun Amott <shaun@FreeBSD.org>
-
 PORTNAME=	pyperclip
 PORTVERSION=	1.7.0
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	shaun@FreeBSD.org
 COMMENT=	Cross-platform clipboard module for Python
+WWW=		https://github.com/asweigart/pyperclip
 
 LICENSE=	BSD3CLAUSE
 
