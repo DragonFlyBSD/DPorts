@@ -1,10 +1,11 @@
 PORTNAME=	inih
 DISTVERSIONPREFIX=	r
-DISTVERSION=	55
+DISTVERSION=	56
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Simple .INI file parser written in C
+WWW=		https://github.com/benhoyt/inih
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
