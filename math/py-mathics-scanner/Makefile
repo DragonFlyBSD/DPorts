@@ -1,5 +1,3 @@
-# Created by: Thierry Thomas <thierry@pompo.net>
-
 PORTNAME=	Mathics_Scanner
 PORTVERSION=	1.2.4
 CATEGORIES=	math python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Tokeniser, char tables, & conversion routines for the Wolfram Language
+WWW=		https://mathics.org/
 
 LICENSE=	GPLv3
 
