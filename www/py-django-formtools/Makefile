@@ -1,5 +1,3 @@
-# Created by: Sofian Brabez <sbrabez@gmail.com>
-
 PORTNAME=	django-formtools
 PORTVERSION=	2.3
 CATEGORIES=	www python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	alfred@FreeBSD.org
 COMMENT=	Bootstrap forms for django
+WWW=		https://github.com/django/django-formtools
 
 LICENSE=	MIT
 
