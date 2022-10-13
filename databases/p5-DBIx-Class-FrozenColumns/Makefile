@@ -1,5 +1,3 @@
-# Created by: Vladimir Timofeev <vovkasm@gmail.com>
-
 PORTNAME=	DBIx-Class-FrozenColumns
 PORTVERSION=	0.09
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	vovkasm@gmail.com
 COMMENT=	Store virtual columns inside another column
+WWW=		https://metacpan.org/release/DBIx-Class-FrozenColumns
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
