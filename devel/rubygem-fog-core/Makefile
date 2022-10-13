@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	fog-core
 PORTVERSION=	2.3.0
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Shared classes and tests for fog providers and services
+WWW=		https://github.com/fog/fog-core
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
