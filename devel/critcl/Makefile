@@ -1,5 +1,3 @@
-# Created by: gahr@FreeBSD.org
-
 PORTNAME=	critcl
 PORTVERSION=	3.1.18.1
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	tcltk@FreeBSD.org
 COMMENT=	Compiled Runtime in Tcl
+WWW=		https://andreas-kupries.github.io/critcl/
 
 LICENSE=	TclTk
 LICENSE_NAME=	Tcl/Tk License
