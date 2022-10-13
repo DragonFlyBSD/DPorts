@@ -1,5 +1,3 @@
-# Created by: Allan Jude <allanjude@freebsd.org>
-
 PORTNAME=	gdnsd
 PORTVERSION=	2.4.3
 CATEGORIES=	dns
@@ -10,6 +8,7 @@ PKGNAMESUFFIX=	2
 
 MAINTAINER=	zi@FreeBSD.org
 COMMENT=	Authoritative-only GeoIP-aware DNS server
+WWW=		https://github.com/blblack/gdnsd
 
 LICENSE=	GPLv3
 
