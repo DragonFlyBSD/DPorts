@@ -1,5 +1,3 @@
-# Created by: Palle Girgensohn <girgen@FreeBSD.org>
-
 PORTNAME=	serverengine
 PORTVERSION=	2.3.0
 CATEGORIES=	net rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	girgen@FreeBSD.org
 COMMENT=	Framework to implement robust multiprocess servers
+WWW=		https://github.com/treasure-data/serverengine
 
 LICENSE=	APACHE20
 
