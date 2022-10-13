@@ -1,5 +1,3 @@
-# Created by: Olivier Cochard-Labbé <olivier@FreeBSD.org>
-
 PORTNAME=	maxminddb
 PORTVERSION=	2.0.3
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	olivier@FreeBSD.org
 COMMENT=	Python module for reading MaxMind DB file
+WWW=		https://github.com/maxmind/MaxMind-DB-Reader-python
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
