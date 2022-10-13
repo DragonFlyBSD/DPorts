@@ -1,5 +1,3 @@
-# Created by: Henk van Oers <hvo.pm@xs4all.nl>
-
 PORTNAME=	Dancer2-Plugin-Passphrase
 PORTVERSION=	3.4.1
 CATEGORIES=	security perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Passphrases and Passwords as objects for Dancer2
+WWW=		https://metacpan.org/release/Dancer2-Plugin-Passphrase
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
