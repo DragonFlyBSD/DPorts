@@ -1,5 +1,3 @@
-# Created by: tdb
-
 PORTNAME=	atheme-services
 PORTVERSION=	7.2.12
 CATEGORIES=	irc net
@@ -8,6 +6,7 @@ DISTNAME=	atheme-services-v${PORTVERSION}
 
 MAINTAINER=	tdb@FreeBSD.org
 COMMENT=	Set of services for IRC networks
+WWW=		https://atheme.github.io/atheme.html
 
 LICENSE=	ISCL
 LICENSE_FILE=	${WRKSRC}/COPYING
