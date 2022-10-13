@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	fraction
 PORTVERSION=	2.2.0
 CATEGORIES=	math python
@@ -10,6 +8,7 @@ DISTNAME=	Fraction-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Carry out all the fraction operations
+WWW=		https://github.com/bradley101/fraction
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
