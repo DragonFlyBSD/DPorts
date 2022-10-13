@@ -1,10 +1,11 @@
 PORTNAME=	haiti-hash
-DISTVERSION=	1.3.0
+DISTVERSION=	1.4.0
 CATEGORIES=	security rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	salvadore@FreeBSD.org
 COMMENT=	Hash type identifier (CLI tool and library)
+WWW=		https://noraj.github.io/haiti/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
