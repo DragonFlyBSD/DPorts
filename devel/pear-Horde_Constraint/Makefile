@@ -1,11 +1,10 @@
-# Created by: Martin Matuska <mm@FreeBSD.org>
-
 PORTNAME=	Horde_Constraint
 PORTVERSION=	2.0.3
 CATEGORIES=	devel www pear
 
 MAINTAINER=	horde@FreeBSD.org
 COMMENT=	Horde Constraint library
+WWW=		https://pear.horde.org
 
 USES=		horde cpe
 
