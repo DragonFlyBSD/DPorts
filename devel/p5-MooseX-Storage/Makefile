@@ -1,5 +1,3 @@
-# Created by: chinsan
-
 PORTNAME=	MooseX-Storage
 PORTVERSION=	0.53
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Serialization framework for Moose classes
+WWW=		https://metacpan.org/release/MooseX-Storage
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
