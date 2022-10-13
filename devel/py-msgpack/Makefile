@@ -1,5 +1,3 @@
-# Created by: Andrey Zonov <andrey@zonov.org>
-
 PORTNAME=	msgpack
 PORTVERSION=	1.0.4
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	MessagePack (de)serializer for Python
+WWW=		https://msgpack.org/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/COPYING
