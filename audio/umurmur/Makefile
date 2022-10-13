@@ -1,5 +1,3 @@
-# Created by: Ayumi Mitsui <ayu@commun.jp>
-
 PORTNAME=	umurmur
 DISTVERSION=	0.2.17
 PORTREVISION=	2
@@ -7,6 +5,7 @@ CATEGORIES=	audio net
 
 MAINTAINER=	ayu@commun.jp
 COMMENT=	Minimalistic Murmur (Mumble server)
+WWW=		https://umurmur.net/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
