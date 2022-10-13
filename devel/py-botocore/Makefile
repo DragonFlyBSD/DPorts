@@ -1,5 +1,3 @@
-# Created by: Alexey V. Degtyarev <alexey@renatasystems.org>
-
 PORTNAME=	botocore
 
 PORTVERSION=	1.21.61
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	bhughes@FreeBSD.org
 COMMENT=	Low-level, core functionality of boto 3
+WWW=		https://github.com/boto/botocore
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
