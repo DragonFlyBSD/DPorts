@@ -1,5 +1,3 @@
-# Created by: Sergei Kolobov <sergei@kolobov.com>
-
 PORTNAME=	libdjbdns
 PORTVERSION=	1.05
 PORTREVISION=	2
@@ -9,6 +7,7 @@ DISTNAME=	djbdns-pd-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Public domain DNS client library
+WWW=		https://cr.yp.to/djbdns/dns.html
 
 USES=		gmake
 
