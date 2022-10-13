@@ -1,13 +1,12 @@
-# Created by: Matthias Petermann <matthias@petermann-it.de>
-
 PORTNAME=	peewee
-DISTVERSION=	3.14.4
+DISTVERSION=	3.15.0
 CATEGORIES=	databases python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	matthias@petermann-it.de
 COMMENT=	Small, expressive Python ORM
+WWW=		https://peewee.readthedocs.org
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -15,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 OPTIONS_DEFINE=		SQLITE PGSQL
 OPTIONS_DEFAULT=	SQLITE
 
-USES=			localbase:ldflags python:3.6+ sqlite
+USES=			localbase:ldflags python:3.7+ sqlite
 USE_PYTHON=		distutils cython autoplist concurrent
 
 SQLITE_BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3@${PY_FLAVOR}
