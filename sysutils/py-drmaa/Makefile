@@ -1,5 +1,3 @@
-# Created by: Mykola Dzham <i@levsha.me>
-
 PORTNAME=	drmaa
 PORTVERSION=	0.4b3
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	i@levsha.me
 COMMENT=	Interact with DRMAA-compliant distributed resource management systems
+WWW=		http://code.google.com/p/drmaa-python/
 
 LICENSE=	BSD3CLAUSE
 
