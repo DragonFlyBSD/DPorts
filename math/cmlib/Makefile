@@ -1,5 +1,3 @@
-# Created by: Anton Shterenlikht <mexas@bris.ac.uk>
-
 PORTNAME=	cmlib
 PORTVERSION=	3.0
 PORTREVISION=	8
@@ -13,6 +11,7 @@ EXTRACT_ONLY=	src.tar.Z
 
 MAINTAINER=	fortran@FreeBSD.org
 COMMENT=	NIST Core math library (CMLIB)
+WWW=		https://www.nist.gov/itl/math/mcsd-software.cfm
 
 USES=		fortran uidfix
 USE_LDCONFIG=	yes
