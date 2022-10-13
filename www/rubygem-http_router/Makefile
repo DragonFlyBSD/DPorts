@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	http_router
 PORTVERSION=	0.11.2
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	HTTP router for use in Rack
+WWW=		https://github.com/joshbuddy/http_router
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
