@@ -1,5 +1,3 @@
-# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-
 PORTNAME=	Data-Visitor
 PORTVERSION=	0.31
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Visitor style traversal of Perl data structures
+WWW=		https://metacpan.org/release/Data-Visitor
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
