@@ -1,5 +1,3 @@
-# Created by: Ed Schouten <ed@fxq.nl>
-
 PORTNAME=	pdcurses
 PORTVERSION=	3.4
 PORTREVISION=	2
@@ -10,6 +8,7 @@ DISTNAME=	PDCurses-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Curses and Panel terminal library for Windows
+WWW=		http://pdcurses.sourceforge.net/
 
 BUILD_DEPENDS=	${PKGNAMEPREFIX}gcc:devel/${PKGNAMEPREFIX}gcc \
 		mingwm10.dll:devel/mingw32-bin-msvcrt
