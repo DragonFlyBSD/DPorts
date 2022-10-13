@@ -1,11 +1,10 @@
-# Created by: Marcus Alves Grando <mnag@FreeBSD.org>
-
 PORTNAME=	timezonedb
-PORTVERSION=	2021.5
+PORTVERSION=	2022.2
 CATEGORIES=	misc
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Timezone Database to be used with PHP date and time functions
+WWW=		https://pecl.php.net/package/timezonedb
 
 LICENSE=	PHP301
 LICENSE_FILE=	${WRKSRC}/LICENSE
