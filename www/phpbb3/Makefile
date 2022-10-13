@@ -1,5 +1,3 @@
-# Created by: Zhen REN <bg1tpt@gmail.com>
-
 PORTNAME=	phpbb
 DISTVERSION=	3.3.7
 CATEGORIES=	www
@@ -9,6 +7,7 @@ DISTNAME=	phpBB-${PORTVERSION}
 
 MAINTAINER=	joneum@FreeBSD.org
 COMMENT=	PHP-based bulletin board / discussion forum system
+WWW=		https://www.phpbb.com/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/docs/LICENSE.txt
