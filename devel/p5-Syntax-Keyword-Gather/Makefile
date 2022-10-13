@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Syntax-Keyword-Gather
 PORTVERSION=	1.003002
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Implements the Perl 6 'gather/take' control structure in Perl 5
+WWW=		https://metacpan.org/release/Syntax-Keyword-Gather
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
