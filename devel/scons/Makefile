@@ -1,5 +1,3 @@
-# Created by: Peter Haight <peterh@sapros.com>
-
 PORTNAME=	scons
 PORTVERSION=	4.3.0
 CATEGORIES=	devel python
@@ -9,6 +7,7 @@ DISTNAME=	SCons-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Build tool alternative to make
+WWW=		https://scons.org/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
