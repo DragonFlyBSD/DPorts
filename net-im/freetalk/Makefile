@@ -1,5 +1,3 @@
-# Created by: Oleg Ginzburg  (olevole@olevole.ru)
-
 PORTNAME=	freetalk
 PORTVERSION=	4.1
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ CATEGORIES=	net-im
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GNU console based Jabber client
+WWW=		https://www.gnu.org/software/freetalk/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
