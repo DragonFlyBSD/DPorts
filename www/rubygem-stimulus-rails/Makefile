@@ -1,12 +1,11 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	stimulus-rails
-PORTVERSION=	1.0.4
+PORTVERSION=	1.1.0
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Modest JavaScript framework for the HTML you already have
+WWW=		https://github.com/hotwired/stimulus-rails
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/MIT-LICENSE
