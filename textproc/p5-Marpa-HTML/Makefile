@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Marpa-HTML
 PORTVERSION=	0.112
 DISTVERSIONSUFFIX=	000
@@ -11,6 +9,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	High-level HTML Parser
+WWW=		https://metacpan.org/release/JKEGL/Marpa-HTML-0.112000
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
