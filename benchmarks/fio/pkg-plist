@@ -22,6 +22,7 @@ man/man1/fio_generate_plots.1.gz
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/cpuio.png
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/cross-stripe-verify.fio
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/cross-stripe-verify.png
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/dedupe-global.fio
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/dev-dax.fio
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/dev-dax.png
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/dfs.fio
@@ -74,6 +75,8 @@ man/man1/fio_generate_plots.1.gz
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/gpudirect-rdmaio-server.png
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/http-s3.fio
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/http-s3.png
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/http-s3-crypto.fio
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/http-s3-storage-class.fio
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/http-swift.fio
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/http-swift.png
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/http-webdav.fio
@@ -150,8 +153,12 @@ man/man1/fio_generate_plots.1.gz
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/test.png
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/tiobench-example.fio
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/tiobench-example.png
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/uring-cmd-ng.fio
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/uring-cmd-zoned.fio
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/waitfor.fio
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/waitfor.png
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/xnvme-compare.fio
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/xnvme-zoned.fio
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/zbd-rand-write.fio
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/zbd-rand-write.png
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/zbd-seq-read.fio
