@@ -1,5 +1,3 @@
-# Created by: Lukasz Wasikowski <lukasz@wasikowski.net>
-
 PORTNAME=	sgwi
 PORTVERSION=	1.1.8
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DISTNAME=	sqlgreywebinterface-${PORTVERSION}
 
 MAINTAINER=	lukasz@wasikowski.net
 COMMENT=	PHP web interface to SQLGrey
+WWW=		http://www.vanheusden.com/sgwi/
 
 LICENSE=	GPLv2
 
