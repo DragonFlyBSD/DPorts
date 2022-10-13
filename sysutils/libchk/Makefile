@@ -1,5 +1,3 @@
-# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-
 PORTNAME=	libchk
 PORTVERSION=	1.10.3
 CATEGORIES=	sysutils
@@ -8,6 +6,7 @@ MASTER_SITES=	ftp://ftp.iDaemons.org/pub/distfiles/ \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tool to check shared library links
+WWW=		http://svn.idaemons.org/cgi-bin/viewvc.cgi/trunk/?root=libchk
 
 LICENSE=	BSD2CLAUSE
 
