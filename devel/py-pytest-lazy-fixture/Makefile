@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	pytest-lazy-fixture
 PORTVERSION=	0.6.3
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Use fixtures in pytest.mark.parametrize
+WWW=		https://github.com/TvoroG/pytest-lazy-fixture
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
