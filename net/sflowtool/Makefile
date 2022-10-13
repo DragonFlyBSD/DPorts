@@ -1,5 +1,3 @@
-# Created by: Gregory Edigarov <greg@bestnet.kharkov.ua>
-
 PORTNAME=	sflowtool
 DISTVERSIONPREFIX=	v
 DISTVERSION=	5.07
@@ -7,6 +5,7 @@ CATEGORIES=	net
 
 MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	sFlow capture and sFlow-to-NetFlow conversion tool
+WWW=		https://github.com/sflow/sflowtool/
 
 LICENSE=	InMon
 LICENSE_NAME=	InMon Corp
