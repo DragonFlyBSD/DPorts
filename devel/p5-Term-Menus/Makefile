@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Term-Menus
 PORTVERSION=	3.024
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Create Powerful Terminal, Console, and CMD Environment Menus
+WWW=		https://metacpan.org/release/Term-Menus
 
 LICENSE=	AGPLv3
 
