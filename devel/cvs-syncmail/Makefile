@@ -1,5 +1,3 @@
-# Created by: Greg Larkin <glarkin@FreeBSD.org>
-
 PORTNAME=	cvs-syncmail
 PORTVERSION=	2.1
 CATEGORIES=	devel python
@@ -9,6 +7,7 @@ EXTRACT_SUFX=	# none
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	CVS notification tool
+WWW=		https://sourceforge.net/projects/cvs-syncmail/
 
 LICENSE=	BSD3CLAUSE  # see CVS repository on SourceForge
 
