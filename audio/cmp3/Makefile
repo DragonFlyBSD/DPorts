@@ -1,5 +1,3 @@
-# Created by: Chris Piazza <cpiazza@FreeBSD.org>
-
 PORTNAME=	cmp3
 PORTVERSION=	2.0.p6
 PORTREVISION=	2
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:S/.p/pre/}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Ncurses based frontend to mpg123
+WWW=		http://cmp3.sourceforge.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
