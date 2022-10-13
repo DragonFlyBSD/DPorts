@@ -1,5 +1,3 @@
-# Created by: Edward Tomasz Napierala <trasz@FreeBSD.org>
-
 PORTNAME=	efivar
 PORTVERSION=	0.15
 PORTREVISION=	7
@@ -7,6 +5,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tools and library to manipulate EFI variables
+WWW=		https://github.com/rhboot/efivar
 
 LICENSE=	LGPL21
 
