@@ -1,13 +1,14 @@
 PORTNAME=	Redis-Fast
-PORTVERSION=	0.33
+DISTVERSION=	0.34
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bokutin@bokut.in
 COMMENT=	Perl binding for Redis database
+WWW=		https://metacpan.org/release/Redis-Fast
 
-LICENSE=	ART10 GPLv1+
+LICENSE=	ARTPERL10 GPLv1+
 LICENSE_COMB=	dual
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
