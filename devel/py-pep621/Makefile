@@ -1,13 +1,14 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	pep621
 PORTVERSION=	0.4.0
+DISTVERSIONSUFFIX=	.post2
+PORTREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	PEP 621 metadata parsing
+WWW=		https://github.com/FFY00/python-pyproject-metadata
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
