@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Data-Object-Role-Buildable
 PORTVERSION=	0.03
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Buildable Role for Data::Object
+WWW=		https://metacpan.org/release/Data-Object-Role-Buildable
 
 LICENSE=	APACHE20
 
