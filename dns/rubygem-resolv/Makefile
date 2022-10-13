@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	resolv
 PORTVERSION=	0.2.1
 CATEGORIES=	dns rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Thread-aware DNS resolver library in Ruby
+WWW=		https://github.com/ruby/resolv
 
 LICENSE=	BSD2CLAUSE RUBY
 LICENSE_COMB=	dual
