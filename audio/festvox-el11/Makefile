@@ -1,5 +1,3 @@
-# Created by: trevor
-
 PORTNAME=	festvox-el11
 PORTVERSION=	1.4.0
 PORTREVISION=	2
@@ -10,6 +8,7 @@ DIST_SUBDIR=	festival
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Castilian Spanish male voice for Festival
+WWW=		https://www.cstr.ed.ac.uk/projects/festival/
 
 RUN_DEPENDS=	festival:audio/festival
 
