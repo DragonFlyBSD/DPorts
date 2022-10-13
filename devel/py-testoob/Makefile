@@ -1,5 +1,3 @@
-# Created by: Tobias Roth <ports@fsck.ch>
-
 PORTNAME=	testoob
 PORTVERSION=	1.15
 PORTREVISION=	2
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Advanced unit testing framework for PyUnit
+WWW=		https://github.com/testoob/testoob
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/docs/LICENSE-2.0.txt
