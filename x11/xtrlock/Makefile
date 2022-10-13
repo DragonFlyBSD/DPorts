@@ -1,5 +1,3 @@
-# Created by: Alexey Mikhailov <karma@ez.pereslavl.ru>
-
 PORTNAME=	xtrlock
 PORTVERSION=	2.15
 CATEGORIES=	x11
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	romain@FreeBSD.org
 COMMENT=	X Transparent Lock
+WWW=		https://salsa.debian.org/debian/xtrlock
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/GPL-3.txt
