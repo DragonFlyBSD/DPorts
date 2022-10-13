@@ -1,5 +1,3 @@
-# Created by: Johannes Meixner <johannes@perceivon.net>
-
 PORTNAME=	activeresource
 PORTVERSION=	6.0.0
 CATEGORIES=	www rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Coherent wrapper object-relational mapping for REST web services
+WWW=		https://github.com/rails/activeresource
 
 LICENSE=	MIT
 
