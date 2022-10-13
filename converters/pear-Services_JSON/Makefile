@@ -1,11 +1,10 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	Services_JSON
 PORTVERSION=	1.0.3
 CATEGORIES=	converters www pear
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	PHP implementation of json_encode/decode
+WWW=		https://pear.php.net/package/Services_JSON
 
 LICENSE=	BSD2CLAUSE
 
