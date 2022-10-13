@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	App-Genpass
 PORTVERSION=	2.401
 CATEGORIES=	security perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Quickly and easily create secure passwords
+WWW=		https://metacpan.org/release/App-Genpass
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
