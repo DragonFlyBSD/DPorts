@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	sprockets-rails
 PORTVERSION=	3.4.2
 CATEGORIES=	devel rubygems
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	-rails70
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Sprockets Rails integration
+WWW=		https://github.com/rails/sprockets-rails
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/MIT-LICENSE
