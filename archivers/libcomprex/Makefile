@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	libcomprex
 PORTVERSION=	0.3.3
 PORTREVISION=	13
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/gnupdate/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Transparently handles automatic compression and decompression of files
+WWW=		http://gnupdate.sourceforge.net/components/libcomprex/index.xml
 
 LICENSE=	LGPL21
 
