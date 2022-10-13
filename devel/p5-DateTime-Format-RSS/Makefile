@@ -1,5 +1,3 @@
-# Created by: Anes Mukhametov <anes@anes.su>
-
 PORTNAME=	DateTime-Format-RSS
 PORTVERSION=	0.03000
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	anes@anes.su
 COMMENT=	Format DateTime For RSS
+WWW=		https://metacpan.org/release/DateTime-Format-RSS
 
 RUN_DEPENDS=	p5-DateTime-Format-DateParse>=0:devel/p5-DateTime-Format-DateParse \
 		p5-DateTime-Format-ISO8601>=0:devel/p5-DateTime-Format-ISO8601 \
