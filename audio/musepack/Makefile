@@ -1,5 +1,3 @@
-# Created by: Stefan Ehmann <shoesoft@gmx.net>
-
 PORTNAME=	musepack
 PORTVERSION=	2011.08.10
 CATEGORIES=	audio
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}_src_r475
 
 MAINTAINER=	shoesoft@gmx.net
 COMMENT=	Decoder, encoder, and replaygain for musepack (mpc)
+WWW=		https://www.musepack.net/
 
 LICENSE=	BSD3CLAUSE GPLv2+ LGPL21+
 LICENSE_COMB=	multi
