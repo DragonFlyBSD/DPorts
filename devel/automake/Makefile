@@ -1,5 +1,3 @@
-# Created by: Ade Lovett <ade@FreeBSD.org>
-
 PORTNAME=	automake
 PORTVERSION=	1.16.5
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ MASTER_SITES=	GNU
 
 MAINTAINER=	tijl@FreeBSD.org
 COMMENT=	GNU Standards-compliant Makefile generator
+WWW=		https://www.gnu.org/software/automake/
 
 LICENSE=	GPLv2+ GFDL
 LICENSE_COMB=	multi
