@@ -1,5 +1,3 @@
-# Created by: LEVAI Daniel <leva@ecentrum.hu>
-
 PORTNAME=		kc
 PORTVERSION=		2.4.2
 PORTREVISION=	3
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=		24
 
 MAINTAINER=		leva@ecentrum.hu
 COMMENT=		Console based password storing application
+WWW=		https://github.com/levaidaniel/kc
 
 LICENSE=		BSD2CLAUSE
 LICENSE_FILE=		${WRKSRC}/LICENSE
