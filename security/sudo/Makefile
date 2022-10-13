@@ -1,5 +1,3 @@
-# Created by: erich@rrnet.com
-
 PORTNAME=	sudo
 PORTVERSION=	1.9.11p3
 CATEGORIES=	security
@@ -7,6 +5,7 @@ MASTER_SITES=	SUDO
 
 MAINTAINER=	garga@FreeBSD.org
 COMMENT=	Allow others to run commands as root
+WWW=		https://www.sudo.ws/
 
 LICENSE=	sudo
 LICENSE_NAME=	Sudo license
