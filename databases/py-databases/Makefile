@@ -1,11 +1,12 @@
 PORTNAME=	databases
-DISTVERSION=	0.6.0
+DISTVERSION=	0.6.1
 CATEGORIES=	databases python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	meka@tilda.center
 COMMENT=	Async database support for Python
+WWW=		https://github.com/encode/databases
 
 LICENSE=	BSD3CLAUSE
 
@@ -20,9 +21,6 @@ TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}aiomysql>0:databases/py-aiomysql@${PY_FLAVO
 
 USES=		python:3.7+
 USE_PYTHON=	autoplist concurrent distutils
-
-# USE_GITHUB=	yes
-# GH_ACCOUNT=	encode
 
 NO_ARCH=	yes
 
