@@ -1,5 +1,3 @@
-# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-
 PORTNAME=	term-ansicolor
 PORTVERSION=	1.7.1
 CATEGORIES=	devel ruby
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Term::ANSIColor for Ruby
+WWW=		https://flori.github.io/term-ansicolor/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
