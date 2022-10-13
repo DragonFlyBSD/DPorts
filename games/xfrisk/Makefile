@@ -1,5 +1,3 @@
-# Created by: Matthew Hunt <mph@pobox.com>
-
 PORTNAME=	xfrisk
 PORTVERSION=	1.2
 PORTREVISION=	6
@@ -10,6 +8,7 @@ DISTNAME=	XFrisk-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Multi-player networked Risk game for X11
+WWW=		http://old.tuxick.net/xfrisk/
 
 LICENSE=	GPLv2+ CR
 LICENSE_COMB=	multi
