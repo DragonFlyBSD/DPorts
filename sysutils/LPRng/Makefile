@@ -1,5 +1,3 @@
-# Created by: desmo@bandwidth.org
-
 PORTNAME=	LPRng
 PORTVERSION=	3.8.C
 PORTREVISION=	5
@@ -10,6 +8,7 @@ DISTNAME=	${PORTNAME:tl}-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Enhanced Printer Spooler
+WWW=		http://lprng.sourceforge.net/
 
 LICENSE=	ART10 GPLv2
 LICENSE_COMB=	dual
