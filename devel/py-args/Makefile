@@ -1,5 +1,3 @@
-# Created by: Nicola Vitale <nivit@FreeBSD.org>
-
 PORTNAME=	args
 PORTVERSION=	0.1.0
 PORTREVISION=	0
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Command arguments for humans
+WWW=		https://github.com/kennethreitz/args
 
 LICENSE=	BSD2CLAUSE
 
