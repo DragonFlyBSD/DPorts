@@ -1,5 +1,3 @@
-# Created by: Hye-Shik Chang
-
 PORTNAME=	plex
 PORTVERSION=	1.1.5
 CATEGORIES=	devel python
@@ -9,6 +7,7 @@ DISTNAME=	Plex-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Lexical Analysis Module for Python
+WWW=		http://www.cosc.canterbury.ac.nz/~greg/python/Plex/
 
 USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
