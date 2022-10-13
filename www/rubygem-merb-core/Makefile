@@ -1,5 +1,3 @@
-# Created by: Scott Sanders <scott@jssjr.com>
-
 PORTNAME=	merb-core
 PORTVERSION=	1.1.3
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Merb. Pocket rocket web framework
+WWW=		https://github.com/merb/merb-core
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
