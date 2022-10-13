@@ -1,12 +1,11 @@
-# Created by: Steve Wills <swills@freebsd.org>
-
 PORTNAME=	puma
-PORTVERSION=	5.6.4
+PORTVERSION=	5.6.5
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Fast, multithreaded and highly concurrent ruby web server
+WWW=		https://puma.io/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
