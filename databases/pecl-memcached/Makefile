@@ -1,11 +1,10 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	memcached
 PORTVERSION=	3.2.0
 CATEGORIES=	databases
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	PHP extension for interfacing with memcached via libmemcached library
+WWW=		https://pecl.php.net/package/memcached
 
 LICENSE=	PHP30
 LICENSE_FILE=	${WRKSRC}/LICENSE
