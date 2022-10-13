@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	crack
 PORTVERSION=	0.4.5
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Ruby Library of Simple JSON and XML Parsing
+WWW=		https://github.com/jnunemaker/crack
 
 LICENSE=	MIT
 
