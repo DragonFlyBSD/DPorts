@@ -1,13 +1,12 @@
-# Created by: Babak Farrokhi <farrokhi@FreeBSD.org>
-
 PORTNAME=	uvloop
-PORTVERSION=	0.16.0
+PORTVERSION=	0.17.0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	farrokhi@FreeBSD.org
 COMMENT=	Fast drop-in replacement of asyncio event loop based on libuv
+WWW=		https://github.com/MagicStack/uvloop
 
 LICENSE=	APACHE20 MIT
 LICENSE_COMB=	dual
