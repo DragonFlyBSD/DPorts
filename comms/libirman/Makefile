@@ -1,5 +1,3 @@
-# Created by: Douglas K. Rand <rand@meridian-enviro.com>
-
 PORTNAME=	libirman
 PORTVERSION=	0.5.2
 CATEGORIES=	comms
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Library for Evation's Irman infrared receiver
+WWW=		https://libirman.sourceforge.io/
 
 LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING
