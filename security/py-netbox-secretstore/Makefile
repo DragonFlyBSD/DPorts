@@ -1,11 +1,12 @@
 PORTNAME=	netbox-secretstore
-DISTVERSION=	1.2.0
+DISTVERSION=	1.3.0
 CATEGORIES=	security python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	kai@FreeBSD.org
 COMMENT=	Secret store for NetBox
+WWW=		https://github.com/dansheps/netbox-secretstore
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
