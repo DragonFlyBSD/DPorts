@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	ruby_language_server
 PORTVERSION=	0.3.16
 CATEGORIES=	lang rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Language server implementation for Ruby
+WWW=		https://github.com/kwerle/ruby_language_server
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
