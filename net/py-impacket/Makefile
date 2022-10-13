@@ -1,7 +1,6 @@
-# Created by: Marcin Jessa <yazzy@yazzy.org>
-
 PORTNAME=	impacket
 PORTVERSION=	0.9.17
+PORTREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	CHEESESHOP \
 		https://github.com/CoreSecurity/impacket/releases/download/impacket_${PORTVERSION:S,.,_,g}/
@@ -9,17 +8,15 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	contato@kanazuchi.com
 COMMENT=	Collection of Python classes providing access to network packets
+WWW=		https://www.coresecurity.com/corelabs-research/open-source-tools/impacket
 
 LICENSE=	APACHE11 ZLIB
 LICENSE_COMB=	multi
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-DEPRECATED=	Depends on expired security/py-pycrypto
-EXPIRATION_DATE=2022-09-30
-
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pyasn1>=0:devel/py-pyasn1@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pcapy>=0:net/py-pcapy@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}pycrypto>=0:security/py-pycrypto@${PY_FLAVOR}
+		${PYTHON_PKGNAMEPREFIX}pycryptodome>0:security/py-pycryptodome@${PY_FLAVOR}
 
 USES=		dos2unix python:3.6+
 USE_PYTHON=	autoplist distutils
