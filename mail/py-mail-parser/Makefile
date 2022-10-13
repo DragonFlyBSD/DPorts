@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	mail-parser
 PORTVERSION=	3.15.0
 CATEGORIES=	mail python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Wrapper for email standard library
+WWW=		https://github.com/SpamScope/mail-parser
 
 LICENSE=	APACHE20
 
