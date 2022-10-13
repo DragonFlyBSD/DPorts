@@ -1,5 +1,3 @@
-# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-
 PORTNAME=	Catalyst-Plugin-DefaultEnd
 PORTVERSION=	0.08
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Sensible default end action
+WWW=		https://metacpan.org/release/Catalyst-Plugin-DefaultEnd
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
