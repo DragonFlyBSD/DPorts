@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	confusable_homoglyphs
 PORTVERSION=	3.2.0
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Detect confusable usage of unicode homoglyphs
+WWW=		https://pypi.org/project/confusable_homoglyphs/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
