@@ -1,5 +1,3 @@
-# Created by: Samuel Tardieu <sam@inf.enst.fr>
-
 PORTNAME=	ltxml
 PORTVERSION=	1.2.9
 PORTREVISION=	1
@@ -9,6 +7,7 @@ MASTER_SITES=	GENTOO \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	XML Toolkit
+WWW=		https://www.ltg.ed.ac.uk/software/ltxml/
 
 LICENSE=	GPLv2
 
