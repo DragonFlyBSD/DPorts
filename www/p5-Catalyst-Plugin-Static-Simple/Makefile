@@ -1,5 +1,3 @@
-# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-
 PORTNAME=	Catalyst-Plugin-Static-Simple
 PORTVERSION=	0.37
 CATEGORIES=	www perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Make serving static pages painless
+WWW=		https://metacpan.org/release/Catalyst-Plugin-Static-Simple
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
