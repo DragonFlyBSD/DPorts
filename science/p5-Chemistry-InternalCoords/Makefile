@@ -1,5 +1,3 @@
-# Created by: Steve Wills <steve@mouf.net>
-
 PORTNAME=	Chemistry-InternalCoords
 PORTVERSION=	0.18
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	swills@FreeBSD.org
 COMMENT=	Represent the position of an atom using internal coordinates
+WWW=		https://metacpan.org/release/Chemistry-InternalCoords
 
 BUILD_DEPENDS=	p5-Chemistry-Mol>=0:science/p5-Chemistry-Mol \
 		p5-Chemistry-Bond-Find>=0:science/p5-Chemistry-Bond-Find \
