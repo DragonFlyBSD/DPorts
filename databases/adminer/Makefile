@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	adminer
 PORTVERSION=	4.8.1
 CATEGORIES=	databases www
@@ -9,6 +7,7 @@ EXTRACT_ONLY=
 
 MAINTAINER=	uzsolt@uzsolt.hu
 COMMENT=	Full-featured database management tool written in PHP
+WWW=		https://www.adminer.org
 
 LICENSE=	APACHE20
 
