@@ -1,5 +1,3 @@
-# Created by: Johannes Jost Meixner <xmj@FreeBSD.org>
-
 PORTNAME=	sprockets
 PORTVERSION=	3.7.2
 CATEGORIES=	devel rubygems
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	3
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Ruby library that preprocesses and concatenates JavaScript files
+WWW=		https://github.com/rails/sprockets
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
