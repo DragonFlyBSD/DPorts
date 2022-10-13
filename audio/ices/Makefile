@@ -1,5 +1,3 @@
-# Created by: Michael Nottebrock <michaelnottebrock@gmx.net>
-
 PORTNAME=	ices
 PORTVERSION=	2.0.3
 PORTREVISION=	2
@@ -10,6 +8,7 @@ MASTER_SITES=	https://downloads.xiph.org/releases/ices/ \
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Vorbis streaming source client for icecast 2
+WWW=		https://gitlab.xiph.org/xiph/icecast-ices
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
