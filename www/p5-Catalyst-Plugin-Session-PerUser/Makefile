@@ -1,5 +1,3 @@
-# Created by: Anes Mukhametov <anes@anes.su>
-
 PORTNAME=	Catalyst-Plugin-Session-PerUser
 PORTVERSION=	0.05
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	anes@anes.su
 COMMENT=	Per user sessions (instead of per browser sessions)
+WWW=		https://metacpan.org/release/Catalyst-Plugin-Session-PerUser
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
