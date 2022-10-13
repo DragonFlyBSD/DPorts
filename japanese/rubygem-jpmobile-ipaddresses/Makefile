@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	jpmobile-ipaddresses
 PORTVERSION=	0.0.2
 CATEGORIES=	japanese www rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Carrier IP Address List for jpmobile
+WWW=		https://github.com/jpmobile/jpmobile-ipaddresses
 
 LICENSE=	MIT
 
