@@ -1,7 +1,5 @@
-# Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-
 PORTNAME=	GiNaC
-PORTVERSION=	1.8.3
+PORTVERSION=	1.8.4
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftpthep.physik.uni-mainz.de/pub/GiNaC/ \
 		http://www.ginac.de/
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME:tl}-${PORTVERSION}
 
 MAINTAINER=	stephen@FreeBSD.org
 COMMENT=	C++ library for symbolic mathematical calculations
+WWW=		https://www.ginac.de/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
