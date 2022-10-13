@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	covdefaults
 PORTVERSION=	2.2.0
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Coverage plugin to provide sensible default settings
+WWW=		https://github.com/asottile/covdefaults
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
