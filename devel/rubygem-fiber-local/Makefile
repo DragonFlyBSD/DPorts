@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	fiber-local
 PORTVERSION=	1.0.0
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Provide a class-level mixin to make fiber local state easy
+WWW=		https://github.com/socketry/fiber-local
 
 LICENSE=	MIT
 
