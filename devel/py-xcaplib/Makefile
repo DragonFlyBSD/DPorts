@@ -1,5 +1,3 @@
-# Created by: Eugene Grosbein <ports@grosbein.net>
-
 PORTNAME=	xcaplib
 PORTVERSION=	1.2.2
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DISTNAME=	python-${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	python@FreeBSD.org
 COMMENT=	Python XCAP client library
+WWW=		http://openxcap.org/clients/
 
 LICENSE=	LGPL20+
 
