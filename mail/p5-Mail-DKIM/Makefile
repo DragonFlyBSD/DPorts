@@ -1,5 +1,3 @@
-# Created by: Yoshisato YANAGISAWA
-
 PORTNAME=	Mail-DKIM
 PORTVERSION=	1.20220520
 CATEGORIES=	mail perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl5 module to process and/or create DKIM email
+WWW=		http://jason.long.name/dkimproxy/
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
