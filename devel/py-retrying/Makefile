@@ -1,5 +1,3 @@
-# Created by: Alexander Nusov <alexander.nusov@nfvexpress.com>
-
 PORTNAME=	retrying
 PORTVERSION=	1.3.3
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	General-purpose retrying library, written in Python
+WWW=		https://github.com/rholder/retrying
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
