@@ -1,10 +1,11 @@
 PORTNAME=	metasploit-model
-PORTVERSION=	4.0.3
+PORTVERSION=	4.0.6
 CATEGORIES=	security rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Metasploit Model Mixins and Validators
+WWW=		https://github.com/rapid7/metasploit-model
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
