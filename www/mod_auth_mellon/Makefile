@@ -1,5 +1,3 @@
-# Created by: Ryan Steinmetz <zi@FreeBSD.org>
-
 PORTNAME=	mod_auth_mellon
 PORTVERSION=	0.18.0
 CATEGORIES=	www
@@ -8,6 +6,7 @@ DISTVERSIONPREFIX=	v
 
 MAINTAINER=	zi@FreeBSD.org
 COMMENT=	Apache module with a simple SAML 2.0 service provider
+WWW=		https://github.com/latchset/mod_auth_mellon
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
