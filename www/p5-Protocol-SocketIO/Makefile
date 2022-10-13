@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Protocol-SocketIO
 PORTVERSION=	0.07
 CATEGORIES=	www perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Socket.IO protocol implementation
+WWW=		https://metacpan.org/release/Protocol-SocketIO
 
 LICENSE=	ART20
 
