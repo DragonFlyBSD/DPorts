@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	String-Tagged-Terminal
 PORTVERSION=	0.05
 CATEGORIES=	textproc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Format terminal output using String::Tagged
+WWW=		https://metacpan.org/release/String-Tagged-Terminal
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
