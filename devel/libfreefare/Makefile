@@ -1,5 +1,3 @@
-# Created by: Romain Tartiere <romain@blogreen.org>
-
 PORTNAME=	libfreefare
 PORTVERSION=	0.4.0
 DISTVERSIONPREFIX=	${PORTNAME}-
@@ -8,6 +6,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	romain@FreeBSD.org
 COMMENT=	MIFARE contactless tag access library
+WWW=		https://github.com/nfc-tools/libfreefare/
 
 LICENSE=	LGPL3+
 
