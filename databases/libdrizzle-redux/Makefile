@@ -1,5 +1,3 @@
-# Created by: Jim Ohlstein <jim@ohlste.in>
-
 PORTNAME=	libdrizzle
 PORTVERSION=	5.1.4
 PORTREVISION=	2
@@ -11,6 +9,7 @@ EXTRACT_ONLY=	libdrizzle-5.1.4.tar.gz
 
 MAINTAINER=	jim@ohlste.in
 COMMENT=	Client and protocol library for the Drizzle database
+WWW=		https://launchpad.net/libdrizzle
 
 LICENSE=	BSD2CLAUSE
 
