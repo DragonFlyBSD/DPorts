@@ -1,5 +1,3 @@
-# Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-
 PORTNAME=	tarantool-queue
 PORTVERSION=	0.1.4
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python bindings for Tarantool queue
+WWW=		https://pypi.org/project/tarantool-queue/
 
 LICENSE=	MIT
 
