@@ -1,5 +1,3 @@
-# Created by: Douglas K. Rand <rand@meridian-enviro.com>
-
 PORTNAME=	nagcon
 PORTVERSION=	0.0.32
 CATEGORIES=	net-mgmt
@@ -7,6 +5,7 @@ MASTER_SITES=	http://www.vanheusden.com/nagcon/
 
 MAINTAINER=	rand@iteris.com
 COMMENT=	Nagios console monitor
+WWW=		http://www.vanheusden.com/nagcon
 
 LIB_DEPENDS=	libstrfunc.so:devel/libstrfunc
 
