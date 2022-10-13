@@ -1,5 +1,3 @@
-# Created by: rantapaa@uswest.net
-
 PORTNAME=	psmisc
 PORTVERSION=	22.16
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/
 
 MAINTAINER=	douglas@douglasthrift.net
 COMMENT=	Port of the Linux pstree, killall, and pidof commands
+WWW=		http://psmisc.sourceforge.net/
 
 LICENSE=	GPLv2
 
