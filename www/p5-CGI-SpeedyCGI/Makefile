@@ -1,5 +1,3 @@
-# Created by: Lars Thegler <lars@thegler.dk>
-
 PORTNAME=	CGI-SpeedyCGI
 PORTVERSION=	2.22
 PORTREVISION=	9
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Speed up perl CGI scripts by running them persistently
+WWW=		http://daemoninc.com/SpeedyCGI/
 
 LICENSE=	GPLv2
 
