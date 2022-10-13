@@ -1,5 +1,3 @@
-# Created by: thierry@pompo.net
-
 PORTNAME=	palp
 PORTVERSION=	2.20
 CATEGORIES=	math
@@ -7,6 +5,7 @@ MASTER_SITES=	http://hep.itp.tuwien.ac.at/~kreuzer/CY/palp/
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Package for Analyzing Lattice Polytopes
+WWW=		http://hep.itp.tuwien.ac.at/~kreuzer/CY/CYpalp.html
 
 LICENSE=	GPLv3
 
