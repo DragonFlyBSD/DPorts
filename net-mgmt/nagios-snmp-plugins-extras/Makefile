@@ -1,5 +1,3 @@
-# Created by: Alexey V. Degtyarev
-
 PORTNAME=	nagios-snmp-plugins-extras
 PORTVERSION=	1.1.2
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	ftp://ftp.renatasystems.org/pub/FreeBSD/ports/distfiles/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Set of Nagios plugins written in Perl to check devices with SNMP
+WWW=		http://nagios.manubulon.com/
 
 LICENSE=	GPLv2
 
