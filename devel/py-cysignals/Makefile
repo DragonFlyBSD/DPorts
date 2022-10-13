@@ -1,13 +1,13 @@
-# Created by: thierry@pompo.net
-
 PORTNAME=	cysignals
 PORTVERSION=	1.11.2
+PORTREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Interrupt and signal handling for Cython
+WWW=		https://pypi.org/project/cysignals/
 
 LICENSE=	LGPL3
 
