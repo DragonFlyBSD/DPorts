@@ -1,5 +1,3 @@
-# Created by: b.f. <bf@FreeBSD.org>
-
 PORTNAME=	trlan
 PORTVERSION=	201009
 PORTREVISION=	11
@@ -12,6 +10,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Thick-restart Lanczos method for eigenproblems
+WWW=		http://crd.lbl.gov/~kewu/trlan.html
 
 USES=		fortran
 USE_LDCONFIG=	yes
