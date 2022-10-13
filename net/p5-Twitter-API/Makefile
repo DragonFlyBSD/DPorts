@@ -1,5 +1,3 @@
-# Created by: Ryan Steinmetz <zi@FreeBSD.org>
-
 PORTNAME=	Twitter-API
 PORTVERSION=	1.0006
 CATEGORIES=	net perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Twitter REST API library for Perl
+WWW=		https://metacpan.org/release/Twitter-API
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
