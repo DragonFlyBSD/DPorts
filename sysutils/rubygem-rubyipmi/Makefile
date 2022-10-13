@@ -1,5 +1,3 @@
-# Created by: Martin Matuska <mm@FreeBSD.org>
-
 PORTNAME=	rubyipmi
 PORTVERSION=	0.11.1
 CATEGORIES=	sysutils rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Command line wrapper for ipmitool and freeipmi
+WWW=		https://github.com/logicminds/rubyipmi
 
 LICENSE=	LGPL21
 
