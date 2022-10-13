@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	fiddle
 PORTVERSION=	1.1.0
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	libffi wrapper for Ruby
+WWW=		https://github.com/ruby/fiddle
 
 LICENSE=	BSD2CLAUSE RUBY
 LICENSE_COMB=	dual
