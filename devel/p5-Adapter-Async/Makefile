@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Adapter-Async
 PORTVERSION=	0.019
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Provide a way to link a data source with a view
+WWW=		https://metacpan.org/release/Adapter-Async
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
