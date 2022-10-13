@@ -1,5 +1,3 @@
-# Created by: Stephen Roome <steve@pepcross.com>
-
 PORTNAME=	xglurbules
 PORTVERSION=	3.3
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	http://stephenroome.com/xglurbules/
 
 MAINTAINER=	steve@pepcross.com
 COMMENT=	Burning particle system eye candy program thingy for X11
+WWW=		http://stephenroome.com/xglurbules/
 
 USES=		xorg
 USE_XORG=	xt x11 sm ice xpm
