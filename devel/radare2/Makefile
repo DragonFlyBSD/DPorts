@@ -1,5 +1,3 @@
-# Created by: Karsten Pedersen <kpedersen@opencde.org>
-
 PORTNAME=	radare2
 DISTVERSION=	5.1.1
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	swills@FreeBSD.org
 COMMENT=	Tools to disasm, debug, analyze, and manipulate binary files
+WWW=		https://www.radare.org
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
