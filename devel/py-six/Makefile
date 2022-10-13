@@ -1,5 +1,3 @@
-# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-
 PORTNAME=	six
 PORTVERSION=	1.16.0
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	python@FreeBSD.org
 COMMENT=	Python 2 and 3 compatibility utilities
+WWW=		https://github.com/benjaminp/six
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
