@@ -1,5 +1,3 @@
-# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-
 PORTNAME=	Memcached-libmemcached
 PORTVERSION=	1.001801
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Thin fast full interface to the libmemcached client API
+WWW=		https://metacpan.org/release/Memcached-libmemcached
 
 LIB_DEPENDS=	libmemcached.so:databases/libmemcached
 
