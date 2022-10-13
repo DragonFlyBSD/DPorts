@@ -1,5 +1,3 @@
-# Created by: Lars Erik Gullerud <lerik@nolink.net>
-
 PORTNAME=	radix
 PORTVERSION=	0.10.0
 CATEGORIES=	net python
@@ -9,6 +7,7 @@ DISTNAME=	py-${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	lerik@nolink.net
 COMMENT=	Python radix-tree implementation
+WWW=		https://github.com/mjschultz/py-radix
 
 LICENSE=	ISCL BSD4CLAUSE
 LICENSE_COMB=	dual
