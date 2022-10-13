@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	ODF-lpOD
 PORTVERSION=	1.126
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	OpenDocument management interface
+WWW=		https://metacpan.org/release/ODF-lpOD
 
 LICENSE=	GPLv2
 
