@@ -1,5 +1,3 @@
-# Created by: Sergei Vyshenski <svysh.fbsd@gmail.com>
-
 PORTNAME=	Config-Merge
 PORTVERSION=	1.04
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	svysh.fbsd@gmail.com
 COMMENT=	Load a configuration directory tree in a number of languages
+WWW=		https://metacpan.org/release/Config-Merge
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
