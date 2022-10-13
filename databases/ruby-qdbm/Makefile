@@ -1,5 +1,3 @@
-# Created by: Michael Johnson <ahze@FreeBSD.org>
-
 PORTNAME=	qdbm
 PORTVERSION=	1.8.78
 PORTREVISION=	4
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${RUBY_PKGNAMEPREFIX}
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	Ruby API for QDBM
+WWW=		https://dbmx.net/qdbm/
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKDIR}/${PORTNAME}-${PORTVERSION}/COPYING
