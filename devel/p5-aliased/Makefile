@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	aliased
 PORTVERSION=	0.34
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	des@FreeBSD.org
 COMMENT=	Use shorter versions of class names
+WWW=		https://metacpan.org/release/aliased
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
