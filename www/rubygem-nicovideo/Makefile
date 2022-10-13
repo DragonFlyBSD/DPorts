@@ -1,5 +1,3 @@
-# Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
-
 PORTNAME=	nicovideo
 PORTVERSION=	0.1.8
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Scraping NICONICO DOUGA utility for Ruby
+WWW=		http://nicovideo.rubyforge.org/
 
 LICENSE=	BSD2CLAUSE
 
