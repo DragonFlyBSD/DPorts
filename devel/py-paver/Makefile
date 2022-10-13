@@ -1,5 +1,3 @@
-# Created by: William Grzybowski <wg@FreeBSD.org>
-
 PORTNAME=	paver
 PORTVERSION=	1.3.4
 CATEGORIES=	devel
@@ -9,6 +7,7 @@ DISTNAME=	Paver-${PORTVERSION}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Easy build, distribution and deployment scripting
+WWW=		https://pythonhosted.org/Paver/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
