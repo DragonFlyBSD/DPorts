@@ -1,5 +1,3 @@
-# Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-
 PORTNAME=	grc
 PORTVERSION=	1.13
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	misc
 
 MAINTAINER=	walter@lifeforms.nl
 COMMENT=	Generic Colouriser
+WWW=		http://kassiopeia.juls.savba.sk/~garabik/software/grc.html
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
