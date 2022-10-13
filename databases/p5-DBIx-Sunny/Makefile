@@ -1,5 +1,3 @@
-# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-
 PORTNAME=	DBIx-Sunny
 PORTVERSION=	0.9992
 CATEGORIES=	databases perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Simple DBI wrapper supports SQLite and MySQL
+WWW=		https://metacpan.org/release/DBIx-Sunny
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
