@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	amazing_print
 PORTVERSION=	1.4.0
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Great Ruby debugging companion
+WWW=		https://github.com/amazing-print/amazing_print
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
