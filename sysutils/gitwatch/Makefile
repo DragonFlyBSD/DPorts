@@ -1,11 +1,10 @@
-# Created by: Muhammad Moinur Rahman <bofh@FreeBSD.org>
-
 PORTNAME=	gitwatch
 DISTVERSION=	0.1.a.20200814
 CATEGORIES=	sysutils
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Bash script to watch a file or folder and commit changes to a git repo
+WWW=		https://github.com/gitwatch/gitwatch
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
