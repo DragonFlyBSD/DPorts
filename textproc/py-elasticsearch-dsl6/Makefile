@@ -1,5 +1,3 @@
-# Created by: Dan Langille <dvl@FreeBSD.org>
-
 PORTNAME=	elasticsearch-dsl
 PORTVERSION=	6.4.0
 CATEGORIES=	textproc python
@@ -9,6 +7,7 @@ PKGNAMESUFFIX=	6
 
 MAINTAINER=	jbaggs2016@gmail.com
 COMMENT=	High level Python client for Elasticsearch
+WWW=		https://pypi.org/project/elasticsearch-dsl/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
