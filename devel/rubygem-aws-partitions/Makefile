@@ -1,12 +1,11 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	aws-partitions
-PORTVERSION=	1.601.0
+PORTVERSION=	1.628.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Provide interfaces to enumerate AWS partitions, regions, and services
+WWW=		https://github.com/aws/aws-sdk-ruby/tree/version-3/gems/aws-partitions
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
