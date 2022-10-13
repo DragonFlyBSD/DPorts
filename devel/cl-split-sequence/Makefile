@@ -1,5 +1,3 @@
-# Created by: Henrik Motakef <henrik.motakef@web.de>
-
 PORTNAME=	split-sequence
 PORTVERSION=	20011114.1
 PORTREVISION=	2
@@ -12,6 +10,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	olgeni@FreeBSD.org
 COMMENT=	Partitioning Common Lisp sequences
+WWW=		https://www.cliki.net/SPLIT-SEQUENCE
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 NO_BUILD=	yes
