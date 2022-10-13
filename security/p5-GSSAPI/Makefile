@@ -1,5 +1,3 @@
-# Created by: Anton Berezin <tobez@FreeBSD.org>
-
 PORTNAME=	GSSAPI
 PORTVERSION=	0.28
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl extension providing access to the GSSAPIv2 library
+WWW=		https://metacpan.org/release/GSSAPI
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
