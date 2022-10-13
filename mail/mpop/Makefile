@@ -1,5 +1,3 @@
-# Created by: Sylvio Cesar <sylvio@FreeBSD.org>
-
 PORTNAME=	mpop
 DISTVERSION=	1.4.16
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	https://marlam.de/mpop/releases/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Small and fast POP3 client
+WWW=		https://marlam.de/mpop/
 
 LICENSE=	GPLv3+
 
