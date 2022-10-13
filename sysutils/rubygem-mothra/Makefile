@@ -1,5 +1,3 @@
-# Created by: Jin-Sih, Lin <linpct@gmail.com>
-
 PORTNAME=	mothra
 PORTVERSION=	0.0.3
 CATEGORIES=	sysutils rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	linpct@gmail.com
 COMMENT=	FreeBSD send-pr command line tool for Bugzilla system
+WWW=		https://github.com/pct/mothra
 
 LICENSE=	MIT
 
