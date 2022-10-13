@@ -1,5 +1,3 @@
-# Created by: Dmitry Sivachenko <dima@Chg.RU>
-
 PORTNAME=	yaz
 DISTVERSION=	5.31.1
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	https://ftp.indexdata.dk/pub/yaz/
 
 MAINTAINER=	nc@FreeBSD.org
 COMMENT=	Z39.50/SR client and API library
+WWW=		https://www.indexdata.com/resources/software/yaz/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
