@@ -1,5 +1,3 @@
-# Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-
 PORTNAME=	uwsgitop
 PORTVERSION=	0.10
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	CHEESESHOP
 
 MAINTAINER=	demon@FreeBSD.org
 COMMENT=	uWSGI top-like app
+WWW=		https://pypi.org/project/uwsgitop/
 
 USES=		python:3.6+
 USE_PYTHON=	distutils concurrent optsuffix
