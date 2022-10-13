@@ -1,8 +1,5 @@
-# Created by: Kevin Golding <ports@caomhin.org>
-
 PORTNAME=	django-hijack
-PORTVERSION=	3.2.0
-PORTREVISION=	1
+PORTVERSION=	3.2.1
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP \
 		https://ports.caomhin.org/:npmcache
@@ -12,6 +9,7 @@ DISTFILES=	${PORTNAME}-${PORTVERSION}${EXTRACT_SUFX} \
 
 MAINTAINER=	ports@caomhin.org
 COMMENT=	Allows Django superusers to login as other users
+WWW=		https://github.com/arteria/django-hijack
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
