@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	actionmailbox
 PORTVERSION=	6.0.5.1
 CATEGORIES=	mail rubygems
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	60
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Receive and process incoming emails in Rails applications
+WWW=		https://github.com/rails/rails/tree/main/actionmailbox
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/MIT-LICENSE
