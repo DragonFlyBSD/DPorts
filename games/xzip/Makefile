@@ -1,5 +1,3 @@
-# Created by: Matthew Hunt <mph@FreeBSD.org>
-
 PORTNAME=	xzip
 PORTVERSION=	1.8.2
 PORTREVISION=	2
@@ -12,6 +10,7 @@ EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Infocom game interpreter that runs under X11
+WWW=		https://www.eblong.com/zarf/xzip.html
 
 USES=		xorg
 USE_XORG=	x11
