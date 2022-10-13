@@ -1,5 +1,3 @@
-# Created by: Roman Bogorodskiy <novel@FreeBSD.org>
-
 PORTNAME=	pyzmq
 PORTVERSION=	22.3.0
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	novel@FreeBSD.org
 COMMENT=	Python bindings for ZeroMQ
+WWW=		https://github.com/zeromq/pyzmq
 
 LICENSE=			BSD3CLAUSE LGPL3
 LICENSE_COMB=			multi
