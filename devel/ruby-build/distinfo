@@ -1,3 +1,3 @@
-TIMESTAMP = 1662790555
-SHA256 (rbenv/rbenv-ruby-build-v20220910.1_GH0.tar.gz) = 591c8f34b59ee10143393310580e8114cf00b190ee73d23581fb6824569668e5
-SIZE (rbenv/rbenv-ruby-build-v20220910.1_GH0.tar.gz) = 78182
+TIMESTAMP = 1664973132
+SHA256 (rbenv-ruby-build-v20221004_GH0.tar.gz) = da6cefa3f15c44683c749cd8612910768a30eefbfb8213ff3420abe0d3478704
+SIZE (rbenv-ruby-build-v20221004_GH0.tar.gz) = 78907
