@@ -1,12 +1,11 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	jwt
-PORTVERSION=	2.4.1
+PORTVERSION=	2.5.0
 CATEGORIES=	www devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	JSON Web Token implementation in Ruby
+WWW=		https://github.com/jwt/ruby-jwt
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
