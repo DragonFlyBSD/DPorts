@@ -1,5 +1,3 @@
-# Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
-
 PORTNAME=	Mail-IMAPClient
 PORTVERSION=	3.43
 CATEGORIES=	mail perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl5 module to talk to a IMAP4rev1 (RFC2060) server
+WWW=		https://metacpan.org/release/Mail-IMAPClient
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
