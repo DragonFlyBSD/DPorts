@@ -1,5 +1,3 @@
-# Created by: okeeblow <root@cooltrainer.org>
-
 PORTNAME=	abgx360
 PORTVERSION=	1.0.6
 PORTREVISION=	1
@@ -10,6 +8,7 @@ MASTER_SITES=	http://abgx360.xecuter.com/dl/ \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Verify and repair Xbox 360 backup images
+WWW=		https://abgx360.xecuter.com/
 
 LICENSE=	NONE
 
