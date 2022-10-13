@@ -1,5 +1,3 @@
-# Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-
 PORTNAME=	POE-Component-Client-Traceroute
 PORTVERSION=	0.21
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Non-blocking traceroute client
+WWW=		https://metacpan.org/release/POE-Component-Client-Traceroute
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
