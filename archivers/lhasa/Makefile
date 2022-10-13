@@ -1,5 +1,3 @@
-# Created by: Carsten Larsen <cs@innolan.dk>
-
 PORTNAME=	lhasa
 PORTVERSION=	0.3.1
 CATEGORIES=	archivers
@@ -8,6 +6,7 @@ MASTER_SITES=	https://soulsphere.org/projects/lhasa/ \
 
 MAINTAINER=	cs@innolan.dk
 COMMENT=	Command line tool and library for parsing LHA archives
+WWW=		https://fragglet.github.io/lhasa/
 
 LICENSE=	ISCL
 LICENSE_FILE=	${WRKSRC}/COPYING
