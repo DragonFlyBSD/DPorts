@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	net-http-persistent
 PORTVERSION=	4.0.1
 CATEGORIES=	www net rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Manages persistent connections using Net::HTTP
+WWW=		https://github.com/drbrain/net-http-persistent
 
 LICENSE=	MIT
 
