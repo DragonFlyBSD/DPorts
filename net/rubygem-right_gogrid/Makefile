@@ -1,5 +1,3 @@
-# Created by: Greg Larkin <glarkin@FreeBSD.org>
-
 PORTNAME=	right_gogrid
 PORTVERSION=	0.1.0
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Provides Ruby access to the GoGrid API
+WWW=		https://github.com/rightscale/right_gogrid
 
 LICENSE=	MIT
 
