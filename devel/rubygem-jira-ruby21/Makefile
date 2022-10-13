@@ -1,5 +1,3 @@
-# Created by: Torsten Zuehlsdorff <tz@FreeBSD.org>
-
 PORTNAME=	jira-ruby
 PORTVERSION=	2.1.5
 CATEGORIES=	devel rubygems
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	21
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	API for JIRA
+WWW=		https://github.com/sumoheavy/jira-ruby
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
