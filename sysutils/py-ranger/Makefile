@@ -1,5 +1,3 @@
-# Created by: Jin-Sih Lin <linpct@gmail.com>
-
 PORTNAME=	ranger
 PORTVERSION=	1.9.3
 CATEGORIES=	sysutils python
@@ -13,6 +11,7 @@ PATCHFILES=	081e73152a9391211770fab56676d7d974413ae6.patch:-p1
 
 MAINTAINER=	linpct@gmail.com
 COMMENT=	File manager with VI key bindings
+WWW=		https://ranger.github.io/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
