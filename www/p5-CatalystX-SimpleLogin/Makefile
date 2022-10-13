@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	CatalystX-SimpleLogin
 PORTVERSION=	0.21
 CATEGORIES=	www perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Provide a simple Login controller which can be reused
+WWW=		https://metacpan.org/release/CatalystX-SimpleLogin
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
