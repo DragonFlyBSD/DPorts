@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	Lingua-ZH-TaBE
 PORTVERSION=	0.07
 PORTREVISION=	5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Chinese processing via libtabe
+WWW=		https://metacpan.org/release/Lingua-ZH-TaBE
 
 LIB_DEPENDS=	libtabe.so:chinese/libtabe
 
