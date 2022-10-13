@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	json2yaml
 PORTVERSION=	1.2.0
 CATEGORIES=	textproc python
@@ -7,6 +5,7 @@ MASTER_SITES=	CHEESESHOP
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Convert JSON to YAML or vice versa
+WWW=		https://github.com/drbild/json2yaml
 
 LICENSE=	APACHE20
 
