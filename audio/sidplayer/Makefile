@@ -1,5 +1,3 @@
-# Created by: Emanuel Haupt <ehaupt@critical.ch>
-
 PORTNAME=	sidplayer
 PORTVERSION=	4.4
 PORTREVISION=	9
@@ -10,6 +8,7 @@ DISTNAME=	SIDPlayer-${PORTVERSION}
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	C64 SID tune player
+WWW=		https://sidplayer.cebix.net/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
