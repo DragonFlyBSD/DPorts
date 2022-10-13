@@ -1,5 +1,3 @@
-# Created by: db
-
 PORTNAME=	libfec
 PORTVERSION=	3.0.1
 PORTREVISION=	4
@@ -10,6 +8,7 @@ DISTNAME=	fec-${PORTVERSION}
 
 MAINTAINER=	hamradio@FreeBSD.org
 COMMENT=	Several forward error correction (FEC) decoders
+WWW=		http://www.ka9q.net/code/fec/
 
 LICENSE=	LGPL21
 
