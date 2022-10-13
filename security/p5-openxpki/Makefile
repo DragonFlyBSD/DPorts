@@ -1,13 +1,12 @@
-# Created by: Sergei Vyshenski <svysh.fbsd@gmail.com>
-
 PORTNAME=	openxpki
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.20.0
+DISTVERSION=	3.22.2
 CATEGORIES=	security perl5
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	svysh.fbsd@gmail.com
 COMMENT=	Perl based trustcenter for PKI: universal server building block
+WWW=		https://www.openxpki.org/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -27,7 +26,6 @@ MY_DEPENDS=	bash:shells/bash \
 		p5-Crypt-Argon2>=0.007:security/p5-Crypt-Argon2 \
 		p5-Crypt-CBC>=2.29:security/p5-Crypt-CBC \
 		p5-Crypt-JWT>=0.032:security/p5-Crypt-JWT \
-		p5-Crypt-LibSCEP>=0.6:security/p5-Crypt-LibSCEP \
 		p5-Crypt-OpenSSL-AES>=0.02:security/p5-Crypt-OpenSSL-AES \
 		p5-Crypt-PKCS10>=2.000:security/p5-Crypt-PKCS10 \
 		p5-Crypt-Rijndael>=1.13:security/p5-Crypt-Rijndael \
@@ -91,7 +89,7 @@ USES=		gmake perl5 shebangfix ssl
 USE_GITHUB=	yes
 GH_PROJECT=	openxpki-config:conf
 GH_TAGNAME=	${DISTVERSIONPREFIX}${_conf_VERSION}:conf
-_conf_VERSION=	3.16
+_conf_VERSION=	3.22
 
 USE_PERL5=	configure
 USE_RC_SUBR=	openxpki
