@@ -1,5 +1,3 @@
-# Created by: Radim Kolar <hsn@netmag.cz>
-
 PORTNAME=	lzma
 PORTVERSION=	19.00
 CATEGORIES=	archivers
@@ -8,6 +6,7 @@ DISTNAME=	lzma${PORTVERSION:S/.//g}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	High-ratio LZMA compressor
+WWW=		https://www.7-zip.org/sdk.html
 
 CONFLICTS=	lzmautils xz
 
