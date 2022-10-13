@@ -1,5 +1,3 @@
-# Created by: Dan Langille <dvl@freebsd.org>
-
 PORTNAME=	django-auth-kerberos
 PORTVERSION=	1.2.5
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	dvl@FreeBSD.org
 COMMENT=	Kerberos authentication backend for Django
+WWW=		https://github.com/02strich/django-auth-kerberos
 
 LICENSE=	MIT
 
