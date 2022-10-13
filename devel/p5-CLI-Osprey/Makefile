@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	CLI-Osprey
 PORTVERSION=	0.08
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	MooX::Options + MooX::Cmd + Sanity
+WWW=		https://metacpan.org/release/CLI-Osprey
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
