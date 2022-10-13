@@ -1,5 +1,3 @@
-# Created by: meyser@xenet.de
-
 PORTNAME=	OpenOffice-OODoc
 PORTVERSION=	2.125
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	meyser@xenet.de
 COMMENT=	Perl Open OpenDocument Connector
+WWW=		https://metacpan.org/release/OpenOffice-OODoc
 
 LICENSE=	LGPL21
 
