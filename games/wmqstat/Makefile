@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
-
 PORTNAME=	wmqstat
 PORTVERSION=	0.0.4
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/wmQStat%20${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Dockapp for monitoring of various Internet game servers
+WWW=		http://wmqstat.sourceforge.net/
 
 LICENSE=	GPLv2
 
