@@ -1,5 +1,3 @@
-# Created by: Max E. Kuznecov <mek@mek.uz.ua>
-
 PORTNAME=	sendxmpp
 PORTVERSION=	1.24
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ CATEGORIES=	net-im perl5
 
 MAINTAINER=	mek@mek.uz.ua
 COMMENT=	Perl script to send XMPP (Jabber) messages
+WWW=		https://sendxmpp.hostname.sk/
 
 LICENSE=	GPLv2
 
