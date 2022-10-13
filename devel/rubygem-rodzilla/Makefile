@@ -1,5 +1,3 @@
-# Created by: Jin-Sih, Lin <linpct@gmail.com>
-
 PORTNAME=	rodzilla
 PORTVERSION=	0.3.6
 CATEGORIES=	devel ruby
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	linpct@gmail.com
 COMMENT=	Bugzilla API Client
+WWW=		https://github.com/jwaterfaucett/rodzilla
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
