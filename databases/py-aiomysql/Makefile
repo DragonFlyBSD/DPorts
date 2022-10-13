@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	aiomysql
 PORTVERSION=	0.1.1
 CATEGORIES=	databases python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	MySQL driver for asyncio
+WWW=		https://github.com/aio-libs/aiomysql
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
