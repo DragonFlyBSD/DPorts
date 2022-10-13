@@ -6,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	eric@camachat.org
 COMMENT=	Library to extract data from HTML and XML using XPath and CSS selectors
+WWW=		https://github.com/scrapy/parsel
 
 LICENSE=	BSD3CLAUSE
 
@@ -17,5 +18,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cssselect>=0.9:www/py-cssselect@${PY_FLAVOR}
 
 USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
+
+NO_ARCH=	yes
 
 .include <bsd.port.mk>
