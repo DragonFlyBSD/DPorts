@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	capybara
 PORTVERSION=	3.37.1
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Integration testing tool for rack based web applications
+WWW=		https://github.com/teamcapybara/capybara
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/License.txt
