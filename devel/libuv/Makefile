@@ -1,13 +1,12 @@
-# Created by: Thierry Thomas <thierry@pompo.net>
-
 PORTNAME=	libuv
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.42.0
+DISTVERSION=	1.44.2
 CATEGORIES=	devel
 MASTER_SITES=	https://dist.libuv.org/dist/v${DISTVERSION}/
 
 MAINTAINER=	bhughes@FreeBSD.org
 COMMENT=	Multi-platform support library with a focus on asynchronous I/O
+WWW=		https://github.com/libuv/libuv
 
 LICENSE=	NODE
 LICENSE_NAME=	NODE
