@@ -1,5 +1,3 @@
-# Created by: Eugene Grosbein <ports@grosbein.net>
-
 PORTNAME=	msrplib
 PORTVERSION=	0.20.0
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DISTNAME=	python-${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	python@FreeBSD.org
 COMMENT=	Python MSRP client library
+WWW=		http://mediaproxy.ag-projects.com/projects/msrp/wiki
 
 LICENSE=	LGPL21+
 
