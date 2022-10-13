@@ -1,5 +1,3 @@
-# Created by: Sergei Vyshenski <svysh.fbsd@gmail.com>
-
 PORTNAME=	Mock-MonkeyPatch
 PORTVERSION=	1.02
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	svysh.fbsd@gmail.com
 COMMENT=	Monkey patching with test mocking in mind
+WWW=		https://metacpan.org/dist/Mock-MonkeyPatch
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
