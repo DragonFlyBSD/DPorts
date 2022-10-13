@@ -1,5 +1,3 @@
-# Created by: Andrey Chernov <ache@FreeBSD.org>
-
 PORTNAME=	sfnt2woff
 PORTVERSION=	20091004
 CATEGORIES=	www converters
@@ -8,6 +6,7 @@ DISTNAME=	woff-code-latest
 
 MAINTAINER=	portmaster@BSDforge.com
 COMMENT=	Convert TTF/OTF fonts to WOFF web embeddable format and back
+WWW=		http://people.mozilla.org/~jkew/woff/
 
 LICENSE=	GPLv2 LGPL21 MPL11
 LICENSE_COMB=	multi
