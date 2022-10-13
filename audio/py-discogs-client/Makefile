@@ -1,5 +1,3 @@
-# Created by: Mark Felder <feld@FreeBSD.org>
-
 PORTNAME=	discogs-client
 PORTVERSION=	2.2.1
 CATEGORIES=	audio python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	stiginge@pvv.org
 COMMENT=	Python interface to Discogs website
+WWW=		https://github.com/discogs/discogs_client
 
 LICENSE=	BSD2CLAUSE
 
