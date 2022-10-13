@@ -1,5 +1,3 @@
-# Created by: Mark Felder <feld@FreeBSD.org>
-
 PORTNAME=	traceback2
 PORTVERSION=	1.4.0
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	New features in traceback backported to Python 2
+WWW=		https://pypi.org/project/traceback2/
 
 LICENSE=	PSFL
 
