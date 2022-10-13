@@ -1,5 +1,3 @@
-# Created by: Jaap Boender <jaapb@kerguelen.org>
-
 PORTNAME=	dbm
 PORTVERSION=	1.0
 CATEGORIES=	databases
@@ -9,6 +7,7 @@ DISTNAME=	caml${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	OCaml binding to the NDBM and GDBM database library
+WWW=		https://forge.ocamlcore.org/projects/camldbm/
 
 LICENSE=	LGPL20
 
