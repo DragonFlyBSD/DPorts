@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	Apache-Defaults
 PORTVERSION=	1.03
 CATEGORIES=	www perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Get default settings for Apache httpd daemon
+WWW=		https://metacpan.org/release/Apache-Defaults
 
 LICENSE=	GPLv3+
 
