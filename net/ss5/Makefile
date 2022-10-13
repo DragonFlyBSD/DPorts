@@ -1,5 +1,3 @@
-# Created by: Raffaele De Lorenzo  - raffaele.delorenzo@libero.it
-
 PORTNAME=	ss5
 DISTVERSION=	3.8.9-8
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${DISTVERSION}
 
 MAINTAINER=	raffaele.delorenzo@libero.it
 COMMENT=	SOCKS v4/v5 application layer gateway with many features
+WWW=		http://ss5.sourceforge.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/License
