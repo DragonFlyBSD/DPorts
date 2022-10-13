@@ -1,5 +1,3 @@
-# Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-
 PORTNAME=	Math-Random-OO
 PORTVERSION=	0.22
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Consistent object-oriented interface for generating random numbers
+WWW=		https://metacpan.org/release/Math-Random-OO
 
 LICENSE=	APACHE20
 
