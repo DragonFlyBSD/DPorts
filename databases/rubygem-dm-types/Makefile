@@ -1,5 +1,3 @@
-# Created by: Jyun-Yan You <jyyou@cs.nctu.edu.tw>
-
 PORTNAME=	dm-types
 PORTVERSION=	1.2.2
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	DataMapper plugin providing extra data types
+WWW=		https://github.com/datamapper/dm-types
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
