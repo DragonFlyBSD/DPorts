@@ -1,5 +1,3 @@
-# Created by: John Marino <marino@FreeBSD.org>
-
 PORTNAME=	binutils
 PORTVERSION=	2.27
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX?=	gnatdroid-
 
 MAINTAINER?=	jamie@catflap.org
 COMMENT?=	Infrastructure for C/Ada Android cross-compiler (ARMv7)
+WWW=		http://www.dragonlace.net
 
 LICENSE=	GPLv3 LGPL3
 LICENSE_COMB=	multi
