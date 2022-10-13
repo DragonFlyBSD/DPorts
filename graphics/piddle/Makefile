@@ -1,5 +1,3 @@
-# Created by: dom@happygiraffe.net
-
 PORTNAME=	piddle
 PORTVERSION=	1.0.15
 PORTEPOCH=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Graphical Drawing library for Python
+WWW=		http://piddle.sourceforge.net/
 
 LICENSE=	GPLv2+
 
