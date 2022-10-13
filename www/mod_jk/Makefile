@@ -1,5 +1,3 @@
-# Created by: Dirk Froemberg <dirk@FreeBSD.org>
-
 PORTNAME=	mod_jk
 PORTVERSION=	1.2.48
 PORTEPOCH=	1
@@ -10,6 +8,7 @@ DISTNAME=	tomcat-connectors-${PORTVERSION}-src
 
 MAINTAINER?=	girgen@FreeBSD.org
 COMMENT?=	Apache JK module for connecting to Tomcat using AJP1X
+WWW=		https://tomcat.apache.org/connectors-doc/
 
 LICENSE=	APACHE20
 
