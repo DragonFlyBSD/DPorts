@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	xmlppm
 PORTVERSION=	0.98.3
 PORTREVISION=	2
@@ -9,6 +7,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-src/${PORTVERSION} \
 
 MAINTAINER=	hsmtkk@gmail.com
 COMMENT=	XML-Conscious PPM Compression
+WWW=		http://xmlppm.sourceforge.net/
 
 LIB_DEPENDS=	libexpat.so:textproc/expat2
 
