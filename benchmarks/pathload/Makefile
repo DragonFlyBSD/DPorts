@@ -1,5 +1,3 @@
-# Created by: dikshie <dikshie@lapi.itb.ac.id>
-
 PORTNAME=	pathload
 PORTVERSION=	1.3.2
 CATEGORIES=	benchmarks
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Measurement tool for network path available bandwidth estimation
+WWW=		https://www.cc.gatech.edu/~dovrolis/bw-est/pathload.html
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
