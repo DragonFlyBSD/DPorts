@@ -1,5 +1,3 @@
-# Created by: Torsten Zuhlsdorff <ports@toco-domains.de>
-
 PORTNAME=	paranoia
 PORTVERSION=	2.6.0
 CATEGORIES=	databases rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Soft deletion mapper for activerecord
+WWW=		https://github.com/rubysherpas/paranoia
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
