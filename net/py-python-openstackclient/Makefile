@@ -1,13 +1,12 @@
-# Created by: Alexander Nusov <alexander.nusov@nfvexpress.com>
-
 PORTNAME=	python-openstackclient
-PORTVERSION=	5.8.0
+PORTVERSION=	6.0.0
 CATEGORIES=	net python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	OpenStack Command-line Client
+WWW=		https://docs.openstack.org/python-openstackclient/latest/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
