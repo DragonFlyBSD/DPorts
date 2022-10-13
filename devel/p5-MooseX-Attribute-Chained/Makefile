@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	MooseX-Attribute-Chained
 PORTVERSION=	1.0.3
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Attribute that returns the instance to allow for chaining
+WWW=		https://metacpan.org/release/MooseX-Attribute-Chained
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
