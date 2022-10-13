@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	u-msgpack-python
 PORTVERSION=	2.7.1
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Portable, lightweight MessagePack (de)serializer
+WWW=		https://pypi.org/project/u-msgpack-python/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
