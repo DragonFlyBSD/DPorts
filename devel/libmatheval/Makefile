@@ -1,5 +1,3 @@
-# Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-
 PORTNAME=	libmatheval
 PORTVERSION=	1.1.11
 PORTREVISION=	4
@@ -8,6 +6,7 @@ MASTER_SITES=	GNU
 
 MAINTAINER=	demon@FreeBSD.org
 COMMENT=	Library to evaluate mathematical functions
+WWW=		https://www.gnu.org/software/libmatheval/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
