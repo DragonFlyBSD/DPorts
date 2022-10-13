@@ -1,5 +1,3 @@
-# Created by: Nicola Stanislao Vitale <nivit@FreeBSD.org
-
 PORTNAME=	Pallets-Sphinx-Themes
 PORTVERSION=	1.2.3
 CATEGORIES=	textproc python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Sphinx themes for Pallets and related projects
+WWW=		https://pypi.org/project/Pallets-Sphinx-Themes/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.rst
