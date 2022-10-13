@@ -1,5 +1,3 @@
-# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-
 PORTNAME=	pynzb
 PORTVERSION=	0.1.0
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Unified API for parsing NZB files
+WWW=		https://pypi.org/project/pynzb/
 
 LICENSE=	BSD3CLAUSE
 
