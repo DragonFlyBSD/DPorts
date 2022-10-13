@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	MooseX-Types-DateTime-MoreCoercions
 PORTVERSION=	0.15
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Extensions to MooseX::Types::DateTime
+WWW=		https://metacpan.org/release/MooseX-Types-DateTime-MoreCoercions
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
