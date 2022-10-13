@@ -1,11 +1,10 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	xapian-bindings
-PORTVERSION=	1.4.19
+PORTVERSION=	1.4.20
 CATEGORIES=	databases
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Bindings allowing Xapian to be used from various programming languages
+WWW=		https://xapian.org/
 
 LICENSE=	GPLv2
 
