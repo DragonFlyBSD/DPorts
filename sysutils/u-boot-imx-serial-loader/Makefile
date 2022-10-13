@@ -1,11 +1,10 @@
-# Created by: Ian Lepore <ian@FreeBSD.org>
-
 PORTNAME=	u-boot-imx-serial-loader
 PORTVERSION=	2017.01
 CATEGORIES=	sysutils
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Load u-boot via USB or UART on i.MX5, i.MX6, i.MX7, and Vybrid
+WWW=		https://github.com/boundarydevices/imx_usb_loader
 
 LICENSE=	LGPL21
 
