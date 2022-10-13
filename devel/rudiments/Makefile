@@ -1,5 +1,3 @@
-# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-
 PORTNAME=	rudiments
 PORTVERSION=	1.2.2
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	pi@FreeBSD.org
 COMMENT=	C++ class library for daemons, clients, servers, and more
+WWW=		http://rudiments.sourceforge.net
 
 LICENSE=	LGPL20
 
