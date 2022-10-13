@@ -1,5 +1,3 @@
-# Created by: b.f. <bf@FreeBSD.org>
-
 PORTNAME=	libocas
 PORTVERSION=	0.96
 CATEGORIES=	math
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}_v${PORTVERSION:S/.//}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Efficient training of SVM classifiers
+WWW=		https://cmp.felk.cvut.cz/~xfrancv/ocas/html/index.html
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
