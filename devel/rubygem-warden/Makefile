@@ -1,5 +1,3 @@
-# Created by: Ryan Steinmetz <rpsfa@rit.edu>
-
 PORTNAME=	warden
 PORTVERSION=	1.2.9
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Rack middleware that provides authentication for rack applications
+WWW=		https://github.com/wardencommunity/warden
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
