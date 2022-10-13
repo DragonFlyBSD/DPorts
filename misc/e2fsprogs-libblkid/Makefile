@@ -1,6 +1,4 @@
-# Created by: Matthias Andree <matthias.andree@gmx.de>
-
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	misc devel
 PKGNAMESUFFIX=	-libblkid
 
