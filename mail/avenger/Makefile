@@ -1,5 +1,3 @@
-# Created by: dm
-
 PORTNAME=	avenger
 PORTVERSION=	0.8.5
 CATEGORIES=	mail
@@ -7,6 +5,7 @@ MASTER_SITES=	http://www.mailavenger.org/dist/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Anti-spam SMTP server
+WWW=		https://www.mailavenger.org/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
