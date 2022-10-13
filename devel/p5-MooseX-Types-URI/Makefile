@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	MooseX-Types-URI
 PORTVERSION=	0.09
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	URI related types and coercions for Moose
+WWW=		https://metacpan.org/release/MooseX-Types-URI
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
