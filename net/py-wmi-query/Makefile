@@ -1,5 +1,3 @@
-# Created by: Silvio Ap Silva aka kanazuchi <alvolivre@live.com>
-
 PORTNAME=	wmi-query
 PORTVERSION=	0.1.4
 CATEGORIES=	net python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	contato@kanazuchi.com
 COMMENT=	Python scripts to get wmi data classes in a dict
+WWW=		https://github.com/kanazux/wmi-query
 
 LICENSE=	BSD2CLAUSE
 
