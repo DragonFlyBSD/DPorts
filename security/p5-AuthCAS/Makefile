@@ -1,5 +1,3 @@
-# Created by: Frank Wall <fw@moov.de>
-
 PORTNAME=	AuthCAS
 PORTVERSION=	1.6
 PORTREVISION=	2
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	fw@moov.de
 COMMENT=	Perl API to Yale's Central Authentication System (CAS)
+WWW=		http://cpan.uwinnipeg.ca/dist/AuthCAS/
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
