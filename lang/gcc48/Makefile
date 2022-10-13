@@ -1,5 +1,3 @@
-# Created by: Gerald Pfeifer <gerald@FreeBSD.org>
-
 PORTNAME=	gcc
 PORTVERSION=	4.8.5
 PORTREVISION=	14
@@ -9,6 +7,7 @@ PKGNAMESUFFIX=	${SUFFIX}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GNU Compiler Collection 4.8
+WWW=		https://gcc.gnu.org
 
 LICENSE=	GPLv3 GPLv3RLE
 LICENSE_COMB=	multi
