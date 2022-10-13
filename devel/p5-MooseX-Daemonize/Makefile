@@ -1,5 +1,3 @@
-# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-
 PORTNAME=	MooseX-Daemonize
 PORTVERSION=	0.22
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Role for daemonizing your Moose based application
+WWW=		https://metacpan.org/release/MooseX-Daemonize
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
