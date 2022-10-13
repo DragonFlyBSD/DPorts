@@ -1,5 +1,3 @@
-# Created by: Hakisho Nukama <nukama@gmail.com>
-
 PORTNAME=	scalpel
 PORTVERSION=	2.0
 CATEGORIES=	sysutils
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.digitalforensicssolutions.com/Scalpel/ \
 
 MAINTAINER=	nukama+maintainer@gmail.com
 COMMENT=	Frugal, high performance file carver
+WWW=		http://www.digitalforensicssolutions.com/Scalpel/
 
 LICENSE=	GPLv2
 
