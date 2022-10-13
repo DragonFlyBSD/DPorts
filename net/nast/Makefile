@@ -1,13 +1,12 @@
-# Created by: Kirill Ponomarew <ponomarew@oberon.net>
-
 PORTNAME=	nast
 PORTVERSION=	0.2.0
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	net
 MASTER_SITES=	BERLIOS
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Packet sniffer
+WWW=		http://nast.berlios.de
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
