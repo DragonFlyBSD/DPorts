@@ -1,5 +1,3 @@
-# Created by: Jyun-Yan You <jyyou@cs.nctu.edu.tw>
-
 PORTNAME=	dm-aggregates
 PORTVERSION=	1.2.0
 CATEGORIES=	databases rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	DataMapper plugin providing support for aggregates
+WWW=		https://github.com/datamapper/dm-aggregates
 
 LICENSE=	MIT
 
