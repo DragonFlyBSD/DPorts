@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	genty
 PORTVERSION=	1.3.2
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Allows you to run a test with multiple data sets
+WWW=		https://github.com/box/genty
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
