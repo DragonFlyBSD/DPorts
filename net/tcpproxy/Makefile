@@ -1,5 +1,3 @@
-# Created by: Alexander Hausner <alex@hugo.bmg.gv.at>
-
 PORTNAME=	tcpproxy
 PORTVERSION=	1.2
 CATEGORIES=	net
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.spreadspace.org/tcpproxy/releases/ \
 
 MAINTAINER=	alex@hugo.bmg.gv.at
 COMMENT=	Simple TCP connection proxy for IPv4 and IPv6
+WWW=		https://www.spreadspace.org/tcpproxy/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/../LICENSE
