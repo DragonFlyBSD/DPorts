@@ -1,5 +1,3 @@
-# Created by: roman@xpert.com
-
 PORTNAME=	Convert-TNEF
 PORTVERSION=	0.18
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module to read TNEF files
+WWW=		https://metacpan.org/release/Convert-TNEF
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
