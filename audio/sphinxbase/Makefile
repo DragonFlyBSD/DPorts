@@ -1,5 +1,3 @@
-# Created by: r.neese
-
 PORTNAME=	sphinxbase
 PORTVERSION=	0.8
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/cmusphinx/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	CMU Sphinx Speech recognition system base
+WWW=		http://www.speech.cs.cmu.edu/sphinx/
 
 USES=		bison:alias gmake pathfix libtool localbase
 GNU_CONFIGURE=	yes
