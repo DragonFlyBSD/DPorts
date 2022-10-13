@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	unicorn
 PORTVERSION=	6.1.0
 CATEGORIES=	www rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	HTTP server for Rack applications
+WWW=		https://yhbt.net/unicorn/
 
 LICENSE=	GPLv2 GPLv3 RUBY
 LICENSE_COMB=	dual
