@@ -1,5 +1,3 @@
-# Created by: Anes Mukhametov <anes@anes.su>
-
 PORTNAME=	Test-Able-Runner
 PORTVERSION=	1.002
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	anes@anes.su
 COMMENT=	Use Test::Able without a bunch of boilerplate
+WWW=		https://metacpan.org/release/Test-Able-Runner
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
@@ -22,6 +21,5 @@ USE_PERL5=	configure
 
 post-extract:
 	${FIND} ${WRKSRC} -type f \( -name '*.orig' -o -name '*.rej' \) -delete
-
 
 .include <bsd.port.mk>
