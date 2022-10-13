@@ -1,13 +1,12 @@
-# Created by: ijliao
-
 PORTNAME=	gsasl
-PORTVERSION=	2.0.0
+PORTVERSION=	2.2.0
 CATEGORIES=	security
 MASTER_SITES=	GNU
 PKGNAMEPREFIX=	lib
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	GNU SASL library
+WWW=		https://www.gnu.org/software/gsasl/
 
 LICENSE=	LGPL21
 
