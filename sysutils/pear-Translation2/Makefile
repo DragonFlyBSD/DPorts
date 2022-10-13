@@ -1,5 +1,3 @@
-# Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-
 PORTNAME=	Translation2
 PORTVERSION=	2.0.4
 PORTEPOCH=	1
@@ -7,6 +5,7 @@ CATEGORIES=	sysutils devel pear
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	PEAR class for multilingual applications management
+WWW=		https://pear.php.net/package/Translation2
 
 USES=		pear shebangfix
 
