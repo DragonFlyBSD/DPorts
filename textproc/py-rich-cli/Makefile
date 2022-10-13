@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	rich-cli
 PORTVERSION=	1.8.0
 CATEGORIES=	textproc python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Command Line Interface to Rich
+WWW=		https://github.com/Textualize/rich-cli
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
