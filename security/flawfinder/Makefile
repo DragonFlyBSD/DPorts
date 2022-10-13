@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	flawfinder
 PORTVERSION=	2.0.19
 CATEGORIES=	security devel
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.dwheeler.com/flawfinder/ \
 
 MAINTAINER=	se@FreeBSD.org
 COMMENT=	Examines source code looking for security weaknesses
+WWW=		https://dwheeler.com/flawfinder/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
