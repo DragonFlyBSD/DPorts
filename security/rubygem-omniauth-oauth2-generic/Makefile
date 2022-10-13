@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	omniauth-oauth2-generic
 PORTVERSION=	0.2.8
 CATEGORIES=	security rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Generic, Configurable OmniAuth Strategy for OAuth2 providers
+WWW=		https://gitlab.com/satorix/omniauth-oauth2-generic
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
