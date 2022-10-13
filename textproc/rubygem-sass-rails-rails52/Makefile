@@ -1,5 +1,3 @@
-# Created by: Johannes Jost Meixner <xmj@FreeBSD.org>
-
 PORTNAME=	sass-rails
 PORTVERSION=	6.0.0
 CATEGORIES=	textproc rubygems
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	-rails52
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Sass adapter for the Rails asset pipeline
+WWW=		https://github.com/rails/sass-rails
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/MIT-LICENSE
