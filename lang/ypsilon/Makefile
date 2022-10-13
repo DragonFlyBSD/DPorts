@@ -1,5 +1,3 @@
-# Created by: Vitaly Magerya <vmagerya@gmail.com>
-
 PORTNAME=	ypsilon
 PORTVERSION=	0.9.6.3
 PORTREVISION=	12
@@ -7,6 +5,7 @@ CATEGORIES=	lang scheme
 
 MAINTAINER=	vmagerya@gmail.com
 COMMENT=	Scheme implementation for real-time applications
+WWW=		http://www.littlewingpinball.net/mediawiki/index.php/Ypsilon
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/license.txt
