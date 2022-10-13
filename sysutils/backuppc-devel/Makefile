@@ -1,5 +1,3 @@
-# Created by: Alexander Moisseev <moiseev@mezonplus.ru>
-
 PORTNAME=	backuppc
 DISTVERSION=	4.3.3.20200531
 CATEGORIES=	sysutils
@@ -7,6 +5,7 @@ PKGNAMESUFFIX=	-devel
 
 MAINTAINER=	moiseev@mezonplus.ru
 COMMENT=	Multi-platform backup to disk-based storage
+WWW=		https://backuppc.github.io/backuppc/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
