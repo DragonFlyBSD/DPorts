@@ -1,5 +1,3 @@
-# Created by: bland@FreeBSD.org
-
 PORTNAME=	xattr
 PORTVERSION=	0.9.8
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	timur@FreeBSD.org
 COMMENT=	Python wrapper for extended filesystem attributes
+WWW=		https://github.com/xattr/xattr
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
