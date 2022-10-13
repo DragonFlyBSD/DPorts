@@ -1,5 +1,3 @@
-# Created by: Lev Serebryakov <lev@serebryakov.spb.ru>
-
 PORTNAME=	gcc
 PORTVERSION=	${GCCVERSION}
 PORTREVISION=	5
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	mingw32-
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	FSF gcc-4 for Windows cross-development
+WWW=		https://www.mingw.org/
 
 LICENSE=	GPLv3 GPLv3RLE
 LICENSE_COMB=	multi
