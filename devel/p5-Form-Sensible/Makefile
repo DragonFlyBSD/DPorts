@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Form-Sensible
 PORTVERSION=	0.20023
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Sensible way to handle form based user interface
+WWW=		https://metacpan.org/release/Form-Sensible
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
