@@ -1,5 +1,3 @@
-# Created by: Steve Wills <steve@mouf.net
-
 PORTNAME=	Chemistry-3DBuilder
 PORTVERSION=	0.10
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	swills@FreeBSD.org
 COMMENT=	Generate 3D coordinates from a connection table
+WWW=		https://metacpan.org/release/Chemistry-3DBuilder
 
 BUILD_DEPENDS=	p5-Chemistry-Mol>=0:science/p5-Chemistry-Mol \
 		p5-Chemistry-File-SMILES>=0:science/p5-Chemistry-File-SMILES \
