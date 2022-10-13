@@ -1,5 +1,3 @@
-# Created by: George V. Neville-Neil
-
 PORTNAME=	pypcap
 DISTVERSION=	1.2.3
 CATEGORIES=	net python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Simplified object-oriented Python wrapper for libpcap
+WWW=		https://github.com/pynetwork/pypcap
 
 LICENSE=	BSD3CLAUSE
 
