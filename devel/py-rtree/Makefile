@@ -1,5 +1,3 @@
-# Created by: wenheping@gmail.com
-
 PORTNAME=	rtree
 PORTVERSION=	1.0.0
 CATEGORIES=	devel science python
@@ -9,6 +7,7 @@ DISTNAME=	Rtree-${PORTVERSION}
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	R-Tree Spatial Index For Python GIS
+WWW=		https://trac.gispython.org/projects/PCL/wiki/Rtree
 
 LICENSE=	LGPL21
 
