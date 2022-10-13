@@ -1,5 +1,3 @@
-# Created by: anarcat@anarcat.ath.cx
-
 PORTNAME=	nagircbot
 PORTVERSION=	0.0.33
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.vanheusden.com/nagircbot/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	IRC bot for Nagios
+WWW=		http://www.vanheusden.com/nagircbot/
 
 BROKEN_FreeBSD_13=	ld: error: duplicate symbol: pfh
 BROKEN_FreeBSD_14=	ld: error: duplicate symbol: pfh
