@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	DBIx-Class-Schema-PopulateMore
 PORTVERSION=	0.19
 CATEGORIES=	databases perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Enhanced populate method
+WWW=		https://metacpan.org/release/DBIx-Class-Schema-PopulateMore
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
