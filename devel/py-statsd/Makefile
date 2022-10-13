@@ -1,5 +1,3 @@
-# Created by: Tom Judge <tj@FreeBSD.org>
-
 PORTNAME=	statsd
 PORTVERSION=	3.3.0
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	python@FreeBSD.org
 COMMENT=	Simple statsd client
+WWW=		https://github.com/jsocol/pystatsd
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
