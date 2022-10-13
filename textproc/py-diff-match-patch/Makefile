@@ -1,5 +1,3 @@
-# Created by: Rene Ladan <rene@FreeBSD.org>
-
 PORTNAME=	diff-match-patch
 PORTVERSION=	20200713
 CATEGORIES=	textproc python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Algorithms for converting plain text
+WWW=		https://github.com/diff-match-patch-python/diff-match-patch
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
