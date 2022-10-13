@@ -1,5 +1,3 @@
-# Created by: asami
-
 PORTNAME=	nethack34
 PORTVERSION=	3.4.3
 PORTREVISION=	9
@@ -9,6 +7,7 @@ DISTNAME=	${TRUEPORTNAME}-${PORTVERSION:S/.//g}-src
 
 MAINTAINER=	glewis@FreeBSD.org
 COMMENT=	Dungeon explorin', slashin', hackin' game
+WWW=		https://www.nethack.org/
 
 LICENSE=	nethack
 LICENSE_NAME=	NETHACK GENERAL PUBLIC LICENSE
