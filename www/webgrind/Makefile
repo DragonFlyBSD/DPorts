@@ -1,5 +1,3 @@
-# Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
-
 PORTNAME=	webgrind
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.9.2
@@ -7,6 +5,7 @@ CATEGORIES=	www
 
 MAINTAINER=	franco@opnsense.org
 COMMENT=	Xdebug Profiling Web Frontend in PHP
+WWW=		https://github.com/jokkedk/webgrind
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/license.txt
