@@ -1,5 +1,3 @@
-# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-
 PORTNAME=	gettext
 PORTVERSION=	3.4.3
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Ruby implementation of the gettext library
+WWW=		https://ruby-gettext.github.io/
 
 LICENSE=	LGPL3 RUBY
 LICENSE_COMB=	dual
