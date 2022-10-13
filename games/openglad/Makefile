@@ -1,5 +1,3 @@
-# Created by: Kirill Ponomarew <ponomarew@oberon.net>
-
 PORTNAME=	openglad
 PORTVERSION=	0.98
 PORTREVISION=	10
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/snowstorm/OpenGlad/Openglad-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	SDL port of an old DOS game called Gladiator
+WWW=		http://snowstorm.sourceforge.net
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
