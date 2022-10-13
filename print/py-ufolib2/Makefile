@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	ufolib2
 PORTVERSION=	0.13.1
 CATEGORIES=	print python
@@ -9,6 +7,7 @@ DISTNAME=	ufoLib2-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	UFO font processing library
+WWW=		https://github.com/fonttools/ufoLib2
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
