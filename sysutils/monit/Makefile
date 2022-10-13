@@ -1,5 +1,3 @@
-# Created by: Martin Pala <martinp@tildeslash.com>
-
 PORTNAME=	monit
 DISTVERSION=	5.32.0
 CATEGORIES=	sysutils
@@ -7,6 +5,7 @@ MASTER_SITES=	https://mmonit.com/monit/dist/
 
 MAINTAINER=	martinp@tildeslash.com
 COMMENT=	Unix system management and proactive monitoring
+WWW=		https://mmonit.com/monit/
 
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
