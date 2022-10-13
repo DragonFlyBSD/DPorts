@@ -1,5 +1,3 @@
-# Created by: Timur I. Bakeyev <bat@cpan.org>
-
 PORTNAME=	WAP-wbxml
 PORTVERSION=	1.14
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Binarization of XML file
+WWW=		https://metacpan.org/release/WAP-wbxml
 
 LICENSE=	ART20
 LICENSE_FILE=	${WRKSRC}/LICENSE
