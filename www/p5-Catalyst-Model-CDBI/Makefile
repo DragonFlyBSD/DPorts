@@ -1,5 +1,3 @@
-# Created by: Lars Thegler <lth@FreeBSD.org>
-
 PORTNAME=	Catalyst-Model-CDBI
 PORTVERSION=	0.12
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	CDBI model class for Catalyst
+WWW=		https://metacpan.org/release/Catalyst-Model-CDBI
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
