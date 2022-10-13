@@ -1,11 +1,12 @@
 PORTNAME=	dj-database-url
-DISTVERSION=	0.5.0
+DISTVERSION=	1.0.0
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	kai@FreeBSD.org
 COMMENT=	Use Database URLs in your Django Application
+WWW=		https://github.com/jazzband/dj-database-url
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
