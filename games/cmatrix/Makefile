@@ -1,5 +1,3 @@
-# Created by: Andrey Zakhvatov
-
 PORTNAME=	cmatrix
 PORTVERSION=	2.0
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	games
 
 MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Show a scrolling 'Matrix' like screen
+WWW=		https://www.asty.org/cmatrix/
 
 LICENSE=	GPLv3+
 
