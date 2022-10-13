@@ -1,5 +1,3 @@
-# Created by: Graham Todd <gtodd@bellanet.org>
-
 PORTNAME=	markdown
 PORTVERSION=	3.3.7
 CATEGORIES=	textproc python
@@ -9,6 +7,7 @@ DISTNAME=	Markdown-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python implementation of Markdown
+WWW=		https://github.com/Python-Markdown/markdown
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
