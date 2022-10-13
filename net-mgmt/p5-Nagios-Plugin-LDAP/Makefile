@@ -1,5 +1,3 @@
-# Created by: Alexander Kriventsov <avk@vl.ru>
-
 PORTNAME=	Nagios-Plugin-LDAP
 PORTVERSION=	0.04
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	avk@vl.ru
 COMMENT=	Nagios plugin to observe LDAP
+WWW=		https://metacpan.org/release/Nagios-Plugin-LDAP
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
