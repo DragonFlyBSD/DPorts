@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	geolinks
 PORTVERSION=	0.2.0
 CATEGORIES=	science python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Utilities to deal with geospatial links
+WWW=		https://github.com/geopython/geolinks
 
 LICENSE=	MIT
 
