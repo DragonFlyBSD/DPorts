@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	mpc
 PORTVERSION=	1.2.1
 CATEGORIES=	math devel
@@ -7,6 +5,7 @@ MASTER_SITES=	GNU
 
 MAINTAINER=	gerald@FreeBSD.org
 COMMENT=	Library of complex numbers with arbitrarily high precision
+WWW=		https://www.multiprecision.org/
 
 LICENSE=	LGPL3+
 LICENSE_FILE=	${WRKSRC}/COPYING.LESSER
