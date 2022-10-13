@@ -1,5 +1,3 @@
-# Created by: David O'Brien (obrien@cs.ucdavis.edu)
-
 PORTNAME=	spim
 PORTVERSION=	8.0
 CATEGORIES=	emulators
@@ -7,6 +5,7 @@ MASTER_SITES=	http://pages.cs.wisc.edu/~larus/SPIM/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	MIPS32 Simulator
+WWW=		https://pages.cs.wisc.edu/~larus/spim.html
 
 LICENSE=	BSD3CLAUSE
 
