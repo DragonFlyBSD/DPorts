@@ -1,5 +1,3 @@
-# Created by: Gasol Wu <gasol.wu@gmail.com>
-
 PORTNAME=	Finder
 PORTVERSION=	2.4.4
 CATEGORIES=	devel pear
@@ -9,6 +7,7 @@ DIST_SUBDIR=	Symfony2
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Symfony2 Finder Component
+WWW=		http://pear.symfony.com/
 
 LICENSE=	MIT
 
