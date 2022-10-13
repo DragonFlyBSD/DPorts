@@ -1,5 +1,3 @@
-# Created by: Igor Pokrovsky <tiamat@comset.net>
-
 PORTNAME=	glfw
 PORTVERSION=	2.7.9
 PORTREVISION=	3
@@ -9,6 +7,7 @@ PKGNAMESUFFIX=	2
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Portable framework for OpenGL development
+WWW=		https://www.glfw.org/
 
 LICENSE=	ZLIB
 LICENSE_FILE=	${WRKSRC}/COPYING.txt
