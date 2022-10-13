@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	lasso
 PORTVERSION=	2.8.0
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	https://dev.entrouvert.org/releases/lasso/
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Free Liberty Alliance Implementation
+WWW=		https://lasso.entrouvert.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
