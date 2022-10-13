@@ -1,5 +1,3 @@
-# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-
 PORTNAME=	Business-OnlinePayment-SurePay
 PORTVERSION=	0.01
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Business::OnlinePayment backend module for SurePay authorization service
+WWW=		https://metacpan.org/release/AKHOBOV/Business-OnlinePayment-SurePay-0.01
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
