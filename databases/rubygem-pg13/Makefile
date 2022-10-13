@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	pg
 PORTVERSION=	1.3.5
 CATEGORIES=	databases rubygems
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	13
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Ruby interface to PostgreSQL library
+WWW=		https://github.com/ged/ruby-pg
 
 LICENSE=	BSD2CLAUSE RUBY
 LICENSE_COMB=	dual
