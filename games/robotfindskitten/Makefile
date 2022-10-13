@@ -1,5 +1,3 @@
-# Created by: Ceri Davies (ceri@FreeBSD.org)
-
 PORTNAME=	robotfindskitten
 PORTVERSION=	2.8284271.702
 PORTEPOCH=	1
@@ -7,6 +5,7 @@ CATEGORIES=	games
 
 MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	Yet another zen simulation
+WWW=		http://robotfindskitten.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
