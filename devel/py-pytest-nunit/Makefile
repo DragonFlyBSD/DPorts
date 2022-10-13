@@ -1,13 +1,12 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	pytest-nunit
-PORTVERSION=	1.0.0
+PORTVERSION=	1.0.1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	pytest plugin for generating NUnit3 test result XML output
+WWW=		https://github.com/pytest-dev/pytest-nunit
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
