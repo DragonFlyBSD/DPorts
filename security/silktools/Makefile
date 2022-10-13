@@ -1,5 +1,3 @@
-# Created by: David Thiel <lx@redundancy.redundancy.org>
-
 PORTNAME=	silktools
 PORTVERSION=	3.19.1
 CATEGORIES=	security net
@@ -8,6 +6,7 @@ DISTNAME=	silk-${PORTVERSION}
 
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Tools for large-scale network capture analysis
+WWW=		https://tools.netsa.cert.org/silk/
 
 LICENSE=	GPLR GPLv2
 LICENSE_COMB=	multi
