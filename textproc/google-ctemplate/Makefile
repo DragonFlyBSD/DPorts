@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	ctemplate
 PORTVERSION=	2.4
 DISTVERSIONPREFIX=	${PORTNAME}-
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	google-
 
 MAINTAINER=	vanilla@FreeBSD.org
 COMMENT=	Simple but powerful template language for C++
+WWW=		http://goog-ctemplate.sourceforge.net/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING
