@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Net-Async-HTTP
 PORTVERSION=	0.48
 CATEGORIES=	www perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Use HTTP with IO::Async
+WWW=		https://metacpan.org/release/Net-Async-HTTP
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
