@@ -1,5 +1,3 @@
-# Created by: Rick Elrod <codeblock@eighthbit.net>
-
 PORTNAME=	callsign
 PORTVERSION=	2.2.0
 CATEGORIES=	comms rubygems hamradio
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Provides a Ruby-Frontend to callook.info ham Radio Callsign Lookup
+WWW=		https://github.com/codeblock/callsign-gem
 
 LICENSE=	MIT
 
