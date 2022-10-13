@@ -1,11 +1,10 @@
-# Created by: Alex Miller (<asm@asm.kiev.ua>)
-
 PORTNAME=	XML_Serializer
 PORTVERSION=	0.21.0
 CATEGORIES=	devel www pear
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	PEAR Swiss-army knive for reading and writing XML files
+WWW=		https://pear.php.net/package/XML_Serializer
 
 LICENSE=	BSD2CLAUSE
 
