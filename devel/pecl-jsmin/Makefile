@@ -1,11 +1,10 @@
-# Created by: Gasol Wu <gasol.wu@gmail.com>
-
 PORTNAME=	jsmin
 PORTVERSION=	3.0.0
 CATEGORIES=	devel
 
 MAINTAINER=	gasol.wu@gmail.com
 COMMENT=	PHP extension for minifying JavaScript
+WWW=		https://pecl.php.net/package/jsmin
 
 LICENSE=	PHP301
 
