@@ -1,5 +1,3 @@
-# Created by: Zach Thompson <hideo@lastamericanempire.com>
-
 PORTNAME=	Finance-Currency-Convert-WebserviceX
 PORTVERSION=	0.07001
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Lightweight currency conversion using WebserviceX.NET
+WWW=		https://metacpan.org/release/Finance-Currency-Convert-WebserviceX
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
