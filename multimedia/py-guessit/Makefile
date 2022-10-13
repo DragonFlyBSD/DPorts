@@ -1,5 +1,3 @@
-# Created by: William Grzybowski <william88@gmail.com>
-
 PORTNAME=	guessit
 PORTVERSION=	3.4.3
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Extract as much information as possible from a video file
+WWW=		https://guessit-io.github.io/guessit/
 
 LICENSE=	LGPL3
 LICENSE_FILE=	${WRKSRC}/LICENSE
