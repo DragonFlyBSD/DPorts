@@ -1,5 +1,3 @@
-# Created by: Yuri Victorovich <yuri@rawbw.com>
-
 PORTNAME=	scrypt
 DISTVERSION=	0.8.20
 CATEGORIES=	security python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Bindings for the scrypt key derivation function library
+WWW=		https://pypi.org/project/scrypt/
 
 LICENSE=	BSD2CLAUSE
 
