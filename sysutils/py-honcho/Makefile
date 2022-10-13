@@ -1,5 +1,3 @@
-# Created by: Fukang Chen <loader@FreeBSD.org>
-
 PORTNAME=	honcho
 PORTVERSION=	1.0.1
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	loader@FreeBSD.org
 COMMENT=	Managing Procfile-based applications tool
+WWW=		https://github.com/nickstenning/honcho
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
