@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	flowdock
 PORTVERSION=	0.7.1
 CATEGORIES=	www rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Gem for Flowdock API
+WWW=		https://github.com/flowdock/flowdock-api
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
