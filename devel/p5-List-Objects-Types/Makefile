@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	List-Objects-Types
 PORTVERSION=	2.001001
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Type::Tiny-based types for List::Objects::WithUtils
+WWW=		https://metacpan.org/release/List-Objects-Types
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
