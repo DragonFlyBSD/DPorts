@@ -1,5 +1,3 @@
-# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-
 PORTNAME=	vobject
 PORTVERSION=	0.9.6.1
 PORTREVISION=	1
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	jun-g@daemonfreaks.com
 COMMENT=	ICalendar library
+WWW=		https://eventable.github.io/vobject/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE-2.0.txt
