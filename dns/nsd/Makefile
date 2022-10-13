@@ -1,5 +1,3 @@
-# Created by: alexis
-
 PORTNAME=	nsd
 DISTVERSION=	4.6.0
 CATEGORIES=	dns
@@ -7,6 +5,7 @@ MASTER_SITES=	https://www.nlnetlabs.nl/downloads/nsd/
 
 MAINTAINER=	jaap@NLnetLabs.nl
 COMMENT=	Authoritative only non-recursive name server
+WWW=		https://www.nlnetlabs.nl/projects/nsd/about/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
