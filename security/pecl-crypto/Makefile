@@ -1,11 +1,10 @@
-# Created by: Gasol Wu <gasol.wu@gmail.com>
-
 PORTNAME=	crypto
 PORTVERSION=	0.3.2
 CATEGORIES=	security
 
 MAINTAINER=	gasol.wu@gmail.com
 COMMENT=	Objective wrapper for OpenSSL Crypto Library
+WWW=		https://pecl.php.net/package/crypto
 
 LICENSE=	PHP301
 
