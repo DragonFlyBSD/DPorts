@@ -1,5 +1,3 @@
-# Created by: Dennis Herrmann <adox@mcx2.org>
-
 PORTNAME=	lockfile
 PORTVERSION=	2.1.3
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Ruby library for creating NFS safe lockfiles
+WWW=		https://github.com/ahoward/lockfile
 
 LICENSE=	RUBY
 
