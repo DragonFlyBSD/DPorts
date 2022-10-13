@@ -1,5 +1,3 @@
-# Created by: Hirohisa Yamaguchi <umq@ueo.co.jp>
-
 PORTNAME=	validns
 PORTVERSION=	0.8
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.validns.net/download/
 
 MAINTAINER=	umq@ueo.co.jp
 COMMENT=	High performance DNS/DNSSEC zone validator
+WWW=		http://www.validns.net/
 
 LICENSE=	BSD2CLAUSE
 
