@@ -1,5 +1,3 @@
-# Created by: Sylvio Cesar <sylvio@FreeBSD.org>
-
 PORTNAME=	jailkit
 PORTVERSION=	2.22
 CATEGORIES=	shells
@@ -8,6 +6,7 @@ MASTER_SITES=	http://olivier.sessink.nl/jailkit/ \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Utilities to limit user accounts to specific files and/or commands
+WWW=		https://olivier.sessink.nl/jailkit/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
