@@ -1,5 +1,3 @@
-# Created by: David Bushong <david+ports@bushong.net>
-
 PORTNAME=	rbot
 PORTVERSION=	20160325
 PORTREVISION=	1
@@ -8,6 +6,7 @@ CATEGORIES=	irc ruby
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Ruby IRC bot similar to infobot
+WWW=		https://ruby-rbot.org/
 
 LICENSE=	GPLv2 MIT
 LICENSE_COMB=	dual
