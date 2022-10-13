@@ -1,5 +1,3 @@
-# Created by: Dmitry Morozovsky <marck@FreeBSD.org>
-
 PORTNAME=	XML-Driver-HTML
 PORTVERSION=	0.06
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl SAX Driver for non wellformed HTML
+WWW=		https://metacpan.org/release/XML-Driver-HTML
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-XML-TreeBuilder>=0:textproc/p5-XML-TreeBuilder \
