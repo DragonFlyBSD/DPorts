@@ -1,5 +1,3 @@
-# Created by: Anton Berezin <tobez@FreeBSD.org>
-
 PORTNAME=	String-Flogger
 PORTVERSION=	1.101245
 CATEGORIES=	textproc perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	String munging for loggers
+WWW=		https://metacpan.org/release/String-Flogger
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
