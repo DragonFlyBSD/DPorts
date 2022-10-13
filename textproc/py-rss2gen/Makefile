@@ -1,5 +1,3 @@
-# Created by: "Choe, Cheng-Dae" whitekid
-
 PORTNAME=	rss2gen
 PORTVERSION=	1.1
 CATEGORIES=	textproc python
@@ -9,6 +7,7 @@ DISTNAME=	PyRSS2Gen-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python library for generating RSS 2.0 feeds
+WWW=		http://www.dalkescientific.com/Python/PyRSS2Gen.html
 
 LICENSE=	BSD3CLAUSE
 
