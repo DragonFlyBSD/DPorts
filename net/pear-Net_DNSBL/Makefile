@@ -1,5 +1,3 @@
-# Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-
 PORTNAME=	Net_DNSBL
 PORTVERSION=	1.3.7
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	net pear
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	PEAR DNSBL Checker
+WWW=		https://pear.php.net/package/Net_DNSBL
 
 LICENSE=	PHP30
 
