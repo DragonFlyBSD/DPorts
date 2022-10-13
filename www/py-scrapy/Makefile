@@ -1,5 +1,3 @@
-# Created by: Qing Feng <qingfeng@douban.com>
-
 PORTNAME=	Scrapy
 DISTVERSION=	2.5.1
 CATEGORIES=	www python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	High level scraping and web crawling framework
+WWW=		https://scrapy.org/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
