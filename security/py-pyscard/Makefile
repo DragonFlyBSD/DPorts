@@ -1,5 +1,3 @@
-# Created by: mp39590@gmail.com
-
 PORTNAME=	pyscard
 PORTVERSION=	2.0.0
 CATEGORIES=	security python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	mp39590@gmail.com
 COMMENT=	Smartcard module for Python
+WWW=		http://pyscard.sourceforge.net/
 
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/LICENSE
