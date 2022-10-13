@@ -1,9 +1,7 @@
-# Created by: Jakub Kruszona-Zawadzki <acid@moosefs.com> ; Based on port created by: Chifeng Qu <chifeng@gmail.com>
-
 PORTNAME=		moosefs3
 DISTVERSION=		3.0.116
 DISTVERSIONSUFFIX=	1
-PORTREVISION=		0
+PORTREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		http://ppa.moosefs.com/src/
 PKGNAMESUFFIX?=		-master
@@ -11,6 +9,7 @@ DISTNAME=		moosefs-${DISTVERSION}-${DISTVERSIONSUFFIX}
 
 MAINTAINER=		freebsd@moosefs.pro
 COMMENT?=		Fault-tolerant distributed filesystem
+WWW=			https://moosefs.com/
 
 LICENSE=		GPLv2
 
