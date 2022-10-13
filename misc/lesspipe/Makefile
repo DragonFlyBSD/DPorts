@@ -1,5 +1,3 @@
-# Created by: Slaven Rezic <slaven@rezic.de>
-
 PORTNAME=	lesspipe
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.06
@@ -7,6 +5,7 @@ CATEGORIES=	misc
 
 MAINTAINER=	slaven@rezic.de
 COMMENT=	Preprocessor for less
+WWW=		https://www.zeuthen.desy.de/~friebel/unix/lesspipe.html
 
 LICENSE=	GPLv2
 
