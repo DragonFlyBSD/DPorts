@@ -1,5 +1,3 @@
-# Created by: Alfred Perlstein <alfred@freebsd.org>
-
 PORTNAME=	tipper
 PORTVERSION=	0.1
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	alfred@FreeBSD.org
 COMMENT=	Tracebacks for python via SIGUSR1
+WWW=		https://pypi.org/project/tipper/
 
 LICENSE=	MIT
 
