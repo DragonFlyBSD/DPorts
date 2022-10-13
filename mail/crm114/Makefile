@@ -1,5 +1,3 @@
-# Created by: Meno Abels <meno.abels@adviser.com>
-
 PORTNAME=	crm114
 PORTVERSION=	20100106
 PORTREVISION=	6
@@ -15,6 +13,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-${CRM114RELEASENAME}.src
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Markov based SpamFilter
+WWW=		http://crm114.sourceforge.net/
 
 LICENSE=	GPLv2
 
