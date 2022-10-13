@@ -1,5 +1,3 @@
-# Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-
 PORTNAME=	pex
 PORTVERSION=	1.2.7
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	PEX packaging toolchain
+WWW=		https://pex.readthedocs.org/en/latest/
 
 LICENSE=	APACHE20
 
