@@ -1,5 +1,3 @@
-# Created by: Andrew Turner <andrew+ports@fubar.geek.nz>
-
 PORTNAME=	gettext
 DISTVERSION=	1.6
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ PKGNAMEPREFIX=	${LUA_PKGNAMEPREFIX}
 
 MAINTAINER=	portmaster@BSDforge.com
 COMMENT=	Lua 5+ bindings for Gettext
+WWW=		https://gitlab.com/ports1/lua-gettext
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
