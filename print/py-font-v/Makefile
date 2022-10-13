@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	font-v
 PORTVERSION=	2.1.0
 CATEGORIES=	print python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Font version reporting and modification tool
+WWW=		https://github.com/source-foundry/font-v
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/docs/LICENSE
