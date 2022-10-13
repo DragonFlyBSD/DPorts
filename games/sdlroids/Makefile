@@ -1,5 +1,3 @@
-# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-
 PORTNAME=	sdlroids
 PORTVERSION=	1.3.4
 PORTREVISION=	18
@@ -13,6 +11,7 @@ EXTRACT_ONLY=	${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Enhanced shoot-the-asteroids game
+WWW=		https://sourceforge.net/projects/sdlroids/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
