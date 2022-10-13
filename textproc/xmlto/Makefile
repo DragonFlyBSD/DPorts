@@ -1,5 +1,3 @@
-# Created by: Sergei Kolobov <sergei@kolobov.com>
-
 PORTNAME=	xmlto
 PORTVERSION=	0.0.28
 CATEGORIES=	textproc
@@ -14,6 +12,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	mandree@FreeBSD.org
 COMMENT=	Front-end to an XSL toolchain
+WWW=		https://pagure.io/xmlto/
 
 LICENSE=	GPLv2
 
@@ -71,14 +70,12 @@ CONFIGURE_ARGS+=	--with-backend=dblatex
 .endif
 
 post-patch:
-	@# get rid of nonstandard "type" option -t:
 	${SED} -i '' -e 's/type -t/which/;' \
 		${WRKSRC}/format/docbook/epub \
 		${WRKSRC}/format/docbook/txt \
 		${WRKSRC}/format/fo/dvi \
 		${WRKSRC}/format/fo/pdf \
 		${WRKSRC}/format/xhtml1/txt
-	@# get rid of GNU-make-ism (BSD make defines $< only in suffix rules)
 	${REINPLACE_CMD} -e '/^GEN_MANPAGE/{s/\$$</$$>/;}' ${WRKSRC}/Makefile.in
 
 post-install:
