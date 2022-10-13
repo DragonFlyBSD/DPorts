@@ -1,13 +1,12 @@
-# Created by: mm@FreeBSD.org
-
 PORTNAME=	adodb
-PORTVERSION=	5.22.2
+PORTVERSION=	5.22.3
 DISTVERSIONPREFIX=	v
 CATEGORIES=	databases www
 PKGNAMESUFFIX=	5${PHP_PKGNAMESUFFIX}
 
 MAINTAINER=	fluffy@FreeBSD.org
 COMMENT=	Database library for PHP
+WWW=		http://adodb.org/
 
 LICENSE=	BSD3CLAUSE LGPL21+
 LICENSE_COMB=	dual
