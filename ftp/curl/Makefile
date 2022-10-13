@@ -1,5 +1,3 @@
-# Created by: Neil Blakey-Milner <nbm@rucus.ru.ac.za>
-
 PORTNAME=	curl
 PORTVERSION=	7.85.0
 CATEGORIES=	ftp net www
@@ -8,6 +6,7 @@ MASTER_SITES=	https://curl.se/download/ \
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Command line tool and library for transferring data with URLs
+WWW=		https://curl.se/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
