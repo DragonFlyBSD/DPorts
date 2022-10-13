@@ -1,5 +1,3 @@
-# Created by: Hsin-Han You <hhyou@cs.nctu.edu.tw>
-
 PORTNAME=	vmail
 PORTVERSION=	2.9.8
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	hhyou@cs.nctu.edu.tw
 COMMENT=	Vim interface to Gmail
+WWW=		https://danielchoi.com/software/vmail.html
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/MIT-LICENSE.txt
