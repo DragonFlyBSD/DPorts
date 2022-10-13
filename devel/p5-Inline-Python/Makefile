@@ -1,5 +1,3 @@
-# Created by: Ryan Steinmetz <zi@FreeBSD.org>
-
 PORTNAME=	Inline-Python
 PORTVERSION=	0.56
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Write Perl Subroutines in Python
+WWW=		https://metacpan.org/release/Inline-Python
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
