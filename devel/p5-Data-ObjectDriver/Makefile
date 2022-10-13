@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Data-ObjectDriver
 PORTVERSION=	0.21
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Simple, transparent data interface, with caching
+WWW=		https://metacpan.org/release/Data-ObjectDriver
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
