@@ -1,11 +1,10 @@
-# Created by: snowchyld
-
 PORTNAME=	libspf2
 PORTVERSION=	1.2.11
 CATEGORIES=	mail
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Sender Policy Framework 2 C Implementation
+WWW=		https://www.libspf2.org/
 
 LICENSE=	BSD2CLAUSE LGPL21 LGPL3
 LICENSE_COMB=	dual
