@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wen@FreeBSD.org>
-
 PORTNAME=	Git-Repository
 PORTVERSION=	1.325
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Perl interface to Git repositories
+WWW=		https://metacpan.org/release/Git-Repository
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
