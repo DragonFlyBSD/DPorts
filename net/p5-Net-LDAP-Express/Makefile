@@ -1,5 +1,3 @@
-# Created by: Zane C, Bowers <vvelox@vvelox.net>
-
 PORTNAME=	Net-LDAP-Express
 PORTVERSION=	0.12
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	vvelox@vvelox.net
 COMMENT=	Module to simplify connecting up to a LDAP server
+WWW=		https://metacpan.org/release/Net-LDAP-Express
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
