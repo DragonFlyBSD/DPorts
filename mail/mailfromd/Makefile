@@ -1,13 +1,12 @@
-# Created by: Zeus Panchenko <zeus@gnu.org.ua>
-
 PORTNAME=	mailfromd
-PORTVERSION=	8.13
+PORTVERSION=	8.14
 CATEGORIES=	mail
 MASTER_SITES=	http://download.gnu.org.ua/pub/release/${PORTNAME}/ \
 		http://download.gnu.org.ua/pub/alpha/${PORTNAME}/
 
 MAINTAINER=	zeus@gnu.org.ua
 COMMENT=	Mail filtering daemon for Sendmail, Postfix, and MeTA1
+WWW=		https://puszcza.gnu.org.ua/software/mailfromd/
 
 LICENSE=	GPLv3+
 
