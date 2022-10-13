@@ -1,5 +1,3 @@
-# Created by: verm
-
 PORTNAME=	sed
 PORTVERSION=	3.62
 PORTREVISION=	4
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	s
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Heavily enhanced version of sed(1)
+WWW=		http://sed.sourceforge.net/grabbag/ssed/
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--program-prefix=s
