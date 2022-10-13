@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	promise
 PORTVERSION=	2.3
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Promises/A+ implementation for Python
+WWW=		https://github.com/syrusakbary/promise
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
