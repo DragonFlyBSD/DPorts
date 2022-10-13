@@ -1,5 +1,3 @@
-# Created by: refugee
-
 PORTNAME=	typespeed
 PORTVERSION=	0.6.5
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Test your typing speed and get your fingers' CPS
+WWW=		http://typespeed.sourceforge.net/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
