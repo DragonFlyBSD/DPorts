@@ -1,5 +1,3 @@
-# Created by: Timothy Bourke <timbob@bigpond.com>
-
 PORTNAME=	libgmp
 PORTVERSION=	6.0.0
 PORTREVISION=	3
@@ -10,6 +8,7 @@ DISTNAME=	gmp-${DISTVERSION}a
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Library for arbitrary precision arithmetic (MinGW32)
+WWW=		http://www.swox.com/gmp/
 
 BUILD_DEPENDS=	${PKGNAMEPREFIX}gcc:devel/${PKGNAMEPREFIX}gcc \
 		mingwm10.dll:devel/mingw32-bin-msvcrt
