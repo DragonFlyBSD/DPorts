@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	Test-WWW-Selenium
 PORTVERSION=	1.36
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl driver and test library for Selenium Remote Control (SRC)
+WWW=		https://metacpan.org/release/Test-WWW-Selenium
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
