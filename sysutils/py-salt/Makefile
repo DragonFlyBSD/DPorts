@@ -1,14 +1,12 @@
-# Created by: Christer Edwards <christer.edwards@gmail.com>
-
 PORTNAME=	salt
-PORTVERSION=	3004.2
-PORTREVISION=	1
+PORTVERSION=	3005
 CATEGORIES=	sysutils python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	krion@FreeBSD.org
 COMMENT=	Distributed remote execution and configuration management system
+WWW=		https://pypi.org/project/salt/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
