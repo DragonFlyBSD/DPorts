@@ -1,5 +1,3 @@
-# Created by: Johannes Jost Meixner <johannes@FreeBSD.org>
-
 PORTNAME=	msrestazure
 DISTVERSION=	0.6.4
 CATEGORIES=	net-mgmt python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	dbaio@FreeBSD.org
 COMMENT=	Azure-specific AutoRest swagger generator Python client runtime
+WWW=		https://github.com/Azure/msrestazure-for-python
 
 LICENSE=	MIT
 
