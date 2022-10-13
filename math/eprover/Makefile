@@ -4,8 +4,9 @@ DISTVERSION=	2.0
 PORTREVISION=	1
 CATEGORIES=	math
 
-MAINTAINER=	greg@unrelenting.technology
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Theorem prover for full first-order logic with equality
+WWW=		https://www.eprover.org
 
 LICENSE=	LGPL20+ GPLv2+
 LICENSE_COMB=	dual
