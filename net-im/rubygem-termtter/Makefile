@@ -1,5 +1,3 @@
-# Created by: Dennis Herrmann <dhn@FreeBSD.org>
-
 PORTNAME=	termtter
 PORTVERSION=	2.2.9
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Terminal based Twitter client
+WWW=		https://termtter.github.io/
 
 LICENSE=	MIT
 
