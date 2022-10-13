@@ -1,5 +1,3 @@
-# Created by: Bartek Rutkowski <r@robakdesign.com>
-
 PORTNAME=	jggtrans
 PORTVERSION=	2.2.6
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	https://github.com/Jajcus/jggtrans/releases/download/v${DISTVERSIO
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Jabberd XMPP to GG instant messaging service gateway
+WWW=		http://jggtrans.jajcus.net/
 
 LICENSE=	GPLv2
 
