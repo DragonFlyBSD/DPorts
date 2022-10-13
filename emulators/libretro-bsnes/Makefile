@@ -1,11 +1,10 @@
-# Created by: Timothy Beyer <beyert@cs.ucr.edu>
-
 PORTNAME=	libretro-bsnes
 PORTVERSION=	20211218
 CATEGORIES=	emulators games
 
 MAINTAINER=	beyert@cs.ucr.edu
 COMMENT=	Standalone port of bSNES to libretro
+WWW=		https://github.com/libretro/bsnes-libretro
 
 LICENSE=	GPLv3
 
