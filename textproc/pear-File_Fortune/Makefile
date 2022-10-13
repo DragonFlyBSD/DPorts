@@ -1,5 +1,3 @@
-# Created by: Zhen REN <bg1tpt@gmail.com>
-
 PORTNAME=	File_Fortune
 PORTVERSION=	1.0.0
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	textproc pear
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Interface for reading from and writing to fortune files
+WWW=		https://pear.php.net/package/File_Fortune
 
 USES=		pear
 
