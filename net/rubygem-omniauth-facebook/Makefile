@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	omniauth-facebook
 PORTVERSION=	9.0.0
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Facebook OAuth2 Strategy for OmniAuth
+WWW=		https://github.com/simi/omniauth-facebook
 
 LICENSE=	MIT
 
