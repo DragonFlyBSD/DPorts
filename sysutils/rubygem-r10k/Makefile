@@ -1,10 +1,11 @@
 PORTNAME=	r10k
-PORTVERSION=	3.15.0
+PORTVERSION=	3.15.1
 CATEGORIES=	sysutils rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	puppet@FreeBSD.org
 COMMENT=	Tool for deploying Puppet environments and modules
+WWW=		https://github.com/puppetlabs/r10k
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
