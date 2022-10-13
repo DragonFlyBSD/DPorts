@@ -1,5 +1,3 @@
-# Created by: markm
-
 PORTNAME=	gnuchess
 PORTVERSION=	6.2.9
 CATEGORIES=	games
@@ -9,6 +7,7 @@ DISTFILES=	${PORTNAME}-${PORTVERSION}${EXTRACT_SUFX}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Classic Gnu Chess
+WWW=		https://savannah.gnu.org/projects/chess
 
 LICENSE=	GPLv3+
 
