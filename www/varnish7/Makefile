@@ -1,11 +1,12 @@
 PORTNAME=	varnish
-DISTVERSION=	7.1.0
+DISTVERSION=	7.2.0
 DISTVERSIONPREFIX=	varnish-
 CATEGORIES=	www
 PKGNAMESUFFIX=	7
 
 MAINTAINER=	dbaio@FreeBSD.org
 COMMENT=	High-performance HTTP accelerator
+WWW=		https://varnish-cache.org/
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -16,6 +17,8 @@ LIB_DEPENDS=	libpcre2-8.so:devel/pcre2
 
 USES=		autoreconf compiler cpe gmake libedit libtool ncurses pathfix \
 		pkgconfig python:3.6+,build readline shebangfix
+
+SUB_FILES=	pkg-message
 
 CONFLICTS=	varnish4 varnish6
 
