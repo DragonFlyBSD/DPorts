@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Test-Version
 PORTVERSION=	2.09
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Check to see that version in modules are sane
+WWW=		https://metacpan.org/release/Test-Version
 
 LICENSE=	ART20
 LICENSE_FILE=	${WRKSRC}/LICENSE
