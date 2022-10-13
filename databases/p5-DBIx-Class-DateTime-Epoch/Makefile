@@ -1,5 +1,3 @@
-# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-
 PORTNAME=	DBIx-Class-DateTime-Epoch
 PORTVERSION=	0.10
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Automatic inflation/deflation of epoch-based DateTime objects
+WWW=		https://metacpan.org/release/DBIx-Class-DateTime-Epoch
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
