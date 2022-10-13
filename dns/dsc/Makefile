@@ -1,5 +1,3 @@
-# Created by: Leo Vandewoestijne <freebsd@dns.company>
-
 PORTNAME=	dsc
 PORTVERSION=	2.13.0
 CATEGORIES=	dns
@@ -8,6 +6,7 @@ MASTER_SITES=	https://www.dns-oarc.net/files/dsc/ \
 
 MAINTAINER=	freebsd@dns.company
 COMMENT=	Tool used for collecting and exploring statistics from DNS servers
+WWW=		https://www.dns-oarc.net/tools/dsc/
 
 LICENSE=	BSD3CLAUSE
 
