@@ -1,5 +1,3 @@
-# Created by: jmz
-
 PORTNAME=	calc
 PORTVERSION=	2.14.1.0
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	math
 
 MAINTAINER=	adamw@FreeBSD.org
 COMMENT=	Interactive CLI arbitrary-precision calculator
+WWW=		https://github.com/lcn2/calc
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING-LGPL
