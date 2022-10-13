@@ -1,11 +1,10 @@
-# Created by: mnag@FreeBSD.org
-
 PORTNAME=	gnupg
 PORTVERSION=	1.5.1
 CATEGORIES=	security
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	PECL wrapper around the gpgme library
+WWW=		https://pecl.php.net/package/gnupg
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
