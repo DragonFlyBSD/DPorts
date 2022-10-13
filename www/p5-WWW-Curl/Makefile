@@ -1,5 +1,3 @@
-# Created by: Chris Larsen <darth@vader.dk>
-
 PORTNAME=	WWW-Curl
 PORTVERSION=	4.17
 PORTREVISION=	4
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Perl extension interface for libcurl
+WWW=		https://metacpan.org/release/WWW-Curl
 
 LICENSE=	MIT
 
