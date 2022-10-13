@@ -1,10 +1,11 @@
 PORTNAME=	rex-powershell
-PORTVERSION=	0.1.93
+PORTVERSION=	0.1.96
 CATEGORIES=	security rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Ruby Exploitation(Rex) library for generating Powershell scripts
+WWW=		https://github.com/rapid7/rex-powershell
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
