@@ -1,5 +1,3 @@
-# Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-
 PORTNAME=	FusionInventory-Agent
 PORTVERSION=	2.5.2
 CATEGORIES=	net-mgmt
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	freebsd@simweb.ch
 COMMENT=	Agent for OCS Inventory server and FusionInventory for GLPI servers
+WWW=		https://metacpan.org/release/FusionInventory-Agent
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
