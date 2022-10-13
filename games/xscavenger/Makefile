@@ -1,5 +1,3 @@
-# Created by: eivind
-
 PORTNAME=	xscavenger
 PORTVERSION=	1.4.5
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.linuxmotors.com/scavenger/downloads/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Lode Runner clone for X11
+WWW=		http://www.linuxmotors.com/scavenger/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/../copyright
