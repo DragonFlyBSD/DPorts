@@ -1,11 +1,12 @@
 PORTNAME=	Net-Curl
-PORTVERSION=	0.44
+PORTVERSION=	0.52
 CATEGORIES=	www ftp perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	andrew.fengler@scaleengine.com
 COMMENT=	Perl interface for libcurl
+WWW=		https://search.cpan.org/dist/Net-Curl/
 
 LICENSE=	MIT
 
