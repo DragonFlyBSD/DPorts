@@ -1,5 +1,3 @@
-# Created by: Ju Pengfei <jupengfei@gmail.com>
-
 PORTNAME=	tftpy
 PORTVERSION=	0.8.2
 CATEGORIES=	ftp python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Pure Python TFTP library
+WWW=		https://github.com/msoulier/tftpy
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
