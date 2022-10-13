@@ -1,5 +1,3 @@
-# Created by: Alexander Langer <alex@FreeBSD.org>
-
 PORTNAME=	tuxkart
 PORTVERSION=	0.4.0
 PORTREVISION=	7
@@ -12,6 +10,7 @@ EXTRACT_ONLY=	${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Racing game starring Tux
+WWW=		http://tuxkart.sourceforge.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
