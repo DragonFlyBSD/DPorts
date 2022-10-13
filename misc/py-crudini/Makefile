@@ -1,5 +1,3 @@
-# Created by: Alexander Nusov <alexander.nusov@nfvexpress.com>
-
 PORTNAME=	crudini
 PORTVERSION=	0.9.3
 CATEGORIES=	misc python
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Utility for manipulating ini files
+WWW=		https://www.pixelbeat.org/programs/crudini/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
