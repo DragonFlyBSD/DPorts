@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	geomet
 PORTVERSION=	0.3.0
 CATEGORIES=	science python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	GeoJSON <-> WKT/WKB conversion utilities
+WWW=		https://github.com/geomet/geomet
 
 LICENSE=	APACHE20
 
