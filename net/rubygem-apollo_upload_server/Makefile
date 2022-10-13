@@ -1,5 +1,3 @@
-# Created by: Matthias Fechner <mfechner@FreeBSD.org>
-
 PORTNAME=	apollo_upload_server
 PORTVERSION=	2.1.0
 CATEGORIES=	net rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	mfechner@FreeBSD.org
 COMMENT=	Apollo-upload-server middleware for rails
+WWW=		https://github.com/jetruby/apollo_upload_server-ruby
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
