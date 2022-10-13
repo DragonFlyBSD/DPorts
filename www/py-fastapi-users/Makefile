@@ -1,11 +1,12 @@
 PORTNAME=	fastapi-users
-DISTVERSION=	10.1.1
+DISTVERSION=	10.1.4
 CATEGORIES=	www devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	meka@tilda.center
 COMMENT=	Ready-to-use and customizable users management for FastAPI
+WWW=		https://github.com/fastapi-users/fastapi-users
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
