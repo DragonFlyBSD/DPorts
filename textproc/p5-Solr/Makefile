@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Solr
 PORTVERSION=	0.03
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Perl extension for interfacing with Solr
+WWW=		https://metacpan.org/release/Solr
 
 LICENSE=	APACHE20
 
