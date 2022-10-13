@@ -1,5 +1,3 @@
-# Created by: Jacques Marneweck <jacques@php.net>
-
 PORTNAME=	Perlbal
 PORTVERSION=	1.80
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Reverse-proxy load balancer and webserver
+WWW=		https://metacpan.org/release/Perlbal
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
@@ -23,11 +22,13 @@ RUN_DEPENDS=	p5-BSD-Resource>=0:devel/p5-BSD-Resource \
 		p5-Net-Netmask>=0:net-mgmt/p5-Net-Netmask \
 		p5-libwww>=0:www/p5-libwww
 
-OPTIONS_DEFINE=	DOCS
-
 USES=		perl5
 USE_PERL5=	configure
+
+NO_ARCH=	yes
 USE_RC_SUBR=	perlbal
+
+OPTIONS_DEFINE=	DOCS
 
 post-patch:
 	@${REINPLACE_CMD} 's,/etc/perlbal,${PREFIX}/etc/perlbal,g' \
