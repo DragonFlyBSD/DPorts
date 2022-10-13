@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	gollum-grit_adapter
 PORTVERSION=	2.0.0
 CATEGORIES=	www rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Adapter for Gollum to use Grit at the backend
+WWW=		https://github.com/gollum/grit_adapter
 
 LICENSE=	MIT
 
