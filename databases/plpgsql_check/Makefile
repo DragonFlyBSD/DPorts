@@ -1,13 +1,12 @@
-# Created by: Jov <amutu@amutu.com>
-
 PORTNAME=	plpgsql_check
-PORTVERSION=	2.1.7
+PORTVERSION=	2.1.10
 DISTVERSIONPREFIX=	v
 CATEGORIES=	databases
 PKGNAMEPREFIX=	postgresql${PGSQL_VER_NODOT}-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	PostgreSQL extension to check PL/pgSQL code
+WWW=		https://github.com/okbob/plpgsql_check
 
 LICENSE=	UNKNOWN
 LICENSE_NAME=	postcardware
