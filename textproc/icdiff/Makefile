@@ -1,5 +1,3 @@
-# Created by: Ben Woods <woodsb02@FreeBSD.org>
-
 PORTNAME=	icdiff
 PORTVERSION=	2.0.5
 DISTVERSIONPREFIX=	release-
@@ -7,6 +5,7 @@ CATEGORIES=	textproc
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Improved colored diff
+WWW=		https://www.jefftk.com/icdiff
 
 LICENSE=	PSFL
 LICENSE_FILE=	${WRKSRC}/LICENSE
