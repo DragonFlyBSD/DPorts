@@ -1,5 +1,3 @@
-# Created by: Andrew Shevtsov <nyxo@dnuc.polyn.kiae.su>
-
 PORTNAME=	dbench
 PORTVERSION=	4.0
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	SAMBA/tridge/dbench
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simulation of the Ziff-Davis netbench benchmark
+WWW=		https://dbench.samba.org/
 
 LICENSE=	GPLv3
 
