@@ -1,5 +1,3 @@
-# Created by: Jacques Vidrine <nectar@FreeBSD.org>
-
 PORTNAME=	nss_ldap
 PORTVERSION=	1.${NSS_LDAP_VERSION}
 PORTREVISION=	14
@@ -10,6 +8,7 @@ DISTNAME=	${PORTNAME}-${NSS_LDAP_VERSION}
 
 MAINTAINER=	des@FreeBSD.org
 COMMENT=	RFC 2307 NSS module
+WWW=		https://www.padl.com/OSS/nss_ldap.html
 
 LICENSE=	GPLv2
 
