@@ -1,5 +1,3 @@
-# Created by: Andreas Heil <ah@linux-hq.de>
-
 PORTNAME=	XML-Generator
 PORTVERSION=	1.04
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	ah@linux-hq.de
 COMMENT=	Simple Perl module for generating XML documents
+WWW=		https://metacpan.org/release/XML-Generator
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
