@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	notebook-shim
 PORTVERSION=	0.1.0
 CATEGORIES=	devel python
@@ -9,6 +7,7 @@ DISTNAME=	notebook_shim-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Shim layer for notebook traits and config
+WWW=		https://github.com/jupyter/notebook_shim
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
