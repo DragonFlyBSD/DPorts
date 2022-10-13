@@ -1,5 +1,3 @@
-# Created by: Tom Judge <tj@FreeBSD.org>
-
 PORTNAME=	rb
 PORTVERSION=	1.9.0
 CATEGORIES=	databases python
@@ -7,6 +5,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Redis blaster
+WWW=		https://github.com/getsentry/rb
 
 LICENSE=	APACHE20
 
