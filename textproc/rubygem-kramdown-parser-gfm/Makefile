@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	kramdown-parser-gfm
 PORTVERSION=	1.1.0
 CATEGORIES=	textproc rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Kramdown parser for the GFM dialect of Markdown
+WWW=		https://github.com/kramdown/parser-gfm
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
