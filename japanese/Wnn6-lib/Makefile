@@ -1,5 +1,3 @@
-# Created by: Satoshi Taoka <taoka@FreeBSD.org>
-
 PORTNAME=	Wnn6-lib
 PORTVERSION=	2000.9.1
 PORTREVISION=	2
@@ -9,6 +7,7 @@ DISTNAME=	Wnn6-SDK
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	Wnn6 client library
+WWW=		https://www.omronsoft.co.jp/
 
 OPTIONS_DEFINE=	DOCS
 
