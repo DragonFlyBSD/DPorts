@@ -1,5 +1,3 @@
-# Created by: Matthias Fechner <mfechner@FreeBSD.org>
-
 PORTNAME=	asciidoctor-kroki
 PORTVERSION=	0.5.0
 CATEGORIES=	textproc rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	mfechner@FreeBSD.org
 COMMENT=	Asciidoctor convert diagrams to images extension
+WWW=		https://github.com/Mogztter/asciidoctor-kroki
 
 LICENSE=	MIT
 
