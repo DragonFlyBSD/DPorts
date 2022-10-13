@@ -1,5 +1,3 @@
-# Created by: Max Khon
-
 PORTNAME=	golded+
 PORTVERSION=	1.1.5.a${SNAPDATE}
 CATEGORIES=	news mail
@@ -8,6 +6,7 @@ DISTNAME=	gpsrc-115-${SNAPDATE}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GoldEd+ (FTN message editor)
+WWW=		http://golded-plus.sourceforge.net/
 
 LICENSE=	GPLv2 LGPL20
 LICENSE_COMB=	multi
