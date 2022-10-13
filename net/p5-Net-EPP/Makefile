@@ -1,5 +1,3 @@
-# Created by: Aaron Dalton <aaron@FreeBSD.org>
-
 PORTNAME=	Net-EPP
 PORTVERSION=	0.22
 CATEGORIES=	net perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Client library for the TCP transport for EPP
+WWW=		https://metacpan.org/release/Net-EPP
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
