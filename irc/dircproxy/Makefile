@@ -1,5 +1,3 @@
-# Created by: George Reid <greid@ukug.uk.freebsd.org>
-
 PORTNAME=	dircproxy
 DISTVERSION=	1.2.0-RC1
 PORTREVISION=	2
@@ -7,6 +5,7 @@ CATEGORIES=	irc
 
 MAINTAINER=	mm@FreeBSD.org
 COMMENT=	Detachable irc proxy server with many features
+WWW=		http://dircproxy.securiweb.net/
 
 LICENSE=	GPLv2
 
