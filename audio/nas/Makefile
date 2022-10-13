@@ -1,5 +1,3 @@
-# Created by: jkh
-
 PORTNAME=	nas
 PORTVERSION=	1.9.4
 PORTREVISION=	3
@@ -9,6 +7,7 @@ EXTRACT_SUFX=	.src.tar.gz
 
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	Network Audio System
+WWW=		https://radscan.com/nas.html
 
 USES=		imake perl5 shebangfix xorg
 SHEBANG_FILES=	clients/audio/auscope/auscope
