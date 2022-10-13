@@ -1,13 +1,12 @@
-# Created by: Ryan Steinmetz <zi@FreeBSD.org>
-
 PORTNAME=	elasticsearch
-PORTVERSION=	7.17.4
+PORTVERSION=	7.17.6
 CATEGORIES=	textproc python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Official Python low-level client for Elasticsearch
+WWW=		https://github.com/elastic/elasticsearch-py
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
