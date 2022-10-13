@@ -1,5 +1,3 @@
-# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-
 PORTNAME=	Catalyst-Engine-Apache
 PORTVERSION=	1.16
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Catalyst Apache Engines
+WWW=		https://metacpan.org/release/Catalyst-Engine-Apache
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
