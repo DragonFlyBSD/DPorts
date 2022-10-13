@@ -1,5 +1,3 @@
-# Created by: Stephane Legrand
-
 PORTNAME?=	proftpd
 .if !defined(DISTVERSION)
 PORTVERSION?=	${PROFTPD_VERSION}
@@ -16,6 +14,7 @@ DISTNAME=	proftpd-${PROFTPD_VERSION}
 
 MAINTAINER?=	mm@FreeBSD.org
 COMMENT?=	Highly configurable FTP daemon
+WWW?=		http://www.proftpd.org/
 
 LICENSE?=	GPLv2
 LICENSE_FILE?=	${WRKSRC}/COPYING
