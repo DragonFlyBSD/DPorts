@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	cucumber-cucumber-expressions
 PORTVERSION=	15.2.0
 CATEGORIES=	devel rubygems
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	15
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Cucumber Expressions for Ruby
+WWW=		https://github.com/cucumber/cucumber-expressions/tree/main/ruby
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
