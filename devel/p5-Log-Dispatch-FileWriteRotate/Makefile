@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Log-Dispatch-FileWriteRotate
 PORTVERSION=	0.062
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Log to files that archive/rotate themselves, w/ File::Write::Rotate
+WWW=		https://metacpan.org/release/Log-Dispatch-FileWriteRotate
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
