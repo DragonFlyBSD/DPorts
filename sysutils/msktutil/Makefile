@@ -1,5 +1,3 @@
-# Created by: Ryan Steinmetz <zi@FreeBSD.org>
-
 PORTNAME=	msktutil
 PORTVERSION=	1.2
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	sysutils
 
 MAINTAINER=	zi@FreeBSD.org
 COMMENT=	Utility to manage Active Directory interoperability
+WWW=		https://github.com/msktutil/msktutil
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
