@@ -1,5 +1,3 @@
-# Created by: Ryan Steinmetz <zi@FreeBSD.org>
-
 PORTNAME=	jekyll-assets
 PORTVERSION=	3.0.12
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Create JavaScript/CSS assets for Jekyll sites
+WWW=		http://jekyll-assets.github.io/jekyll-assets/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
