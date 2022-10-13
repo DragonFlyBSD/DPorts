@@ -1,5 +1,3 @@
-# Created by: Alexander Vereeken <Alexander88207@protonmail.com>
-
 PORTNAME=	pop-gtk-themes
 DISTVERSIONPREFIX=	v
 DISTVERSION=	5.3.1
@@ -7,6 +5,7 @@ CATEGORIES=	x11-themes
 
 MAINTAINER=	Alexander88207@protonmail.com
 COMMENT=	System76 Pop GTK+ Theme
+WWW=		https://github.com/pop-os/gtk-theme
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
