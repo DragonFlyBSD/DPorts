@@ -1,5 +1,3 @@
-# Created by: chinsan <chinsan.tw@gmail.com>
-
 PORTNAME=	expect
 PORTVERSION=	0.4.0
 PORTREVISION=	2
@@ -7,6 +5,7 @@ CATEGORIES=	devel pear
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	PHP extension for expect library
+WWW=		https://pecl.php.net/package/expect
 
 LICENSE=	PHP301
 
