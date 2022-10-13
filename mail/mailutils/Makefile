@@ -1,12 +1,12 @@
-# Created by: Attila Nagy <bra@fsn.hu>
-
 PORTNAME=	mailutils
-PORTVERSION=	3.13
+PORTVERSION=	3.15
+PORTREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	GNU GNU_ALPHA
 
 MAINTAINER=	zeus@gnu.org.ua
 COMMENT=	Utilities, daemons, and filters for processing e-mail
+WWW=		https://mailutils.org/
 
 LICENSE=	GPLv3+
 
@@ -25,7 +25,7 @@ TEST_TARGET=	check
 
 CONFLICTS_INSTALL=	avenger elm # bin/dotlock bin/frm
 
-PLIST_SUB+=	LIBVERSION=8.0.0 LIBSUFX=8 VERSION=${PORTVERSION}
+PLIST_SUB+=	LIBVERSION=9.0.0 LIBSUFX=9 VERSION=${PORTVERSION}
 
 INFO=		${PORTNAME}
 PORTDOCS=	AUTHORS ChangeLog NEWS README* THANKS TODO
