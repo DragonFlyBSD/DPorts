@@ -1,5 +1,3 @@
-# Created by: Zach Thompson <hideo@lastamericanempire.com>
-
 PORTNAME=	DBIx-Class-UUIDColumns
 PORTVERSION=	0.02006
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module implementing implicit UUID columns
+WWW=		https://metacpan.org/release/DBIx-Class-UUIDColumns
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
