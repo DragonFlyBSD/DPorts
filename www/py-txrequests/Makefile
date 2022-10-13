@@ -1,5 +1,3 @@
-# Created by: Kubilay Kocak <koobs@FreeBSD.org>
-
 PORTNAME=	txrequests
 PORTVERSION=	0.9.6
 CATEGORIES=	www python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Asynchronous Python HTTP for Humans
+WWW=		https://github.com/tardyp/txrequests
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
