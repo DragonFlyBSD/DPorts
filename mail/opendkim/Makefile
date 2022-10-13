@@ -1,5 +1,3 @@
-# Created by: Hirohisa Yamaguchi <umq@ueo.co.jp>
-
 PORTNAME=	opendkim
 PORTVERSION=	2.10.3
 PORTREVISION=	16
@@ -10,6 +8,7 @@ MASTER_SITES=	SF/${PORTNAME} \
 
 MAINTAINER=	freebsd-ports@dan.me.uk
 COMMENT=	DKIM library and milter implementation
+WWW=		http://opendkim.org/
 
 LICENSE=	BSD3CLAUSE SENDMAIL
 LICENSE_COMB=	multi
