@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	LaTeX-Pod
 PORTVERSION=	0.21
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Transform LaTeX source files to POD
+WWW=		https://metacpan.org/release/LaTeX-Pod
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
