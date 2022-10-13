@@ -1,5 +1,3 @@
-# Created by: Enrico M. Crisostomo <enrico.m.crisostomo@gmail.com>
-
 PORTNAME=	fswatch
 DISTVERSION=	1.13.0
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMESUFFIX=	-mon
 
 MAINTAINER=	enrico.m.crisostomo@gmail.com
 COMMENT=	Cross-platform file change monitor
+WWW=		https://github.com/emcrisostomo/fswatch
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
