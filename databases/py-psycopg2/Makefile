@@ -1,5 +1,3 @@
-# Created by: Martin Wilke <miwi@FreeBSD.org>
-
 PORTNAME=	psycopg2
 PORTVERSION=	2.9.3
 CATEGORIES=	databases python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	High performance Python adapter for PostgreSQL
+WWW=		http://initd.org/psycopg/
 
 LICENSE=	LGPL3
 LICENSE_FILE=	${WRKSRC}/doc/COPYING.LESSER
