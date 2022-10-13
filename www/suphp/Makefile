@@ -1,5 +1,3 @@
-# Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
-
 PORTNAME=	suphp
 PORTVERSION=	0.7.2
 PORTREVISION=	2
@@ -11,6 +9,7 @@ PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
 
 MAINTAINER=	freebsd-ports@dan.me.uk
 COMMENT=	Securely execute PHP scripts under Apache
+WWW=		https://www.suphp.org/
 
 LICENSE=	GPLv2
 
