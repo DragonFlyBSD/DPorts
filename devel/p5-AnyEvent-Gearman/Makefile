@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	AnyEvent-Gearman
 PORTVERSION=	0.10
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Asynchronous Gearman client/worker module for AnyEvent applications
+WWW=		https://metacpan.org/release/AnyEvent-Gearman
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
