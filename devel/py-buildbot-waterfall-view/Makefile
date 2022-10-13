@@ -1,5 +1,3 @@
-# Created by: Michael Gmelin <grembo@FreeBSD.org>
-
 PORTNAME=	buildbot-waterfall-view
 PORTVERSION=	3.5.0
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Buildbot Waterfall View plugin
+WWW=		https://buildbot.net
 
 LICENSE=	GPLv2
 #LICENSE_FILE=	Not packaged in sdist
