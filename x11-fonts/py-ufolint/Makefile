@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	ufolint
 PORTVERSION=	1.2.0
 CATEGORIES=	x11-fonts python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	UFO source file linter
+WWW=		https://github.com/source-foundry/ufolint
 
 LICENSE=	MIT
 
