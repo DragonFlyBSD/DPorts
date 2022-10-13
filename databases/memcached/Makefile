@@ -1,5 +1,3 @@
-# Created by: Sean Chittenden <seanc@FreeBSD.org>
-
 PORTNAME=	memcached
 PORTVERSION=	1.6.14
 CATEGORIES=	databases
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.memcached.org/files/ \
 
 MAINTAINER=	swills@FreeBSD.org
 COMMENT=	High-performance distributed memory object cache system
+WWW=		https://memcached.org/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING
