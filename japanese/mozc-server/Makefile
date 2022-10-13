@@ -1,13 +1,12 @@
-# Created by: Daichi GOTO <daichi@FreeBSD.org>
-
 PORTNAME=	mozc
 PORTVERSION=	2.23.2815.102.01
 DISTVERSIONPREFIX=	v
-PORTREVISION?=	7
+PORTREVISION?=	8
 CATEGORIES=	japanese
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT?=	Mozc Japanese Input Method, Server
+WWW=		https://github.com/google/mozc
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}gyp>=20200512:devel/py-gyp@${PY_FLAVOR}
 EXTRACT_DEPENDS=${PYTHON_CMD}:${PYTHON_PORTSDIR}
