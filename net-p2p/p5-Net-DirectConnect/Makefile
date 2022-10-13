@@ -1,5 +1,3 @@
-# Created by: Oleg Alexeenkov <proler@gmail.com>
-
 PORTNAME=	Net-DirectConnect
 PORTVERSION=	0.14
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	proler@gmail.com
 COMMENT=	Perl Direct Connect lib and client
+WWW=		https://metacpan.org/release/Net-DirectConnect
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
