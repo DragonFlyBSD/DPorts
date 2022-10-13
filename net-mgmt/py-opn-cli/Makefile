@@ -1,5 +1,3 @@
-# Created by: Frank Wall <freebsd@moov.de>
-
 PORTNAME=	opn-cli
 DISTVERSION=	0.8.1
 CATEGORIES=	net-mgmt python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	freebsd@moov.de
 COMMENT=	OPNsense CLI written in Python
+WWW=		https://github.com/andeman/opn-cli
 
 LICENSE=	BSD2CLAUSE
 
