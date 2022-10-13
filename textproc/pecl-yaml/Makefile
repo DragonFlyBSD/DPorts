@@ -1,11 +1,10 @@
-# Created by: Wen Heping <wen@FreeBSD.org>
-
 PORTNAME=	yaml
 PORTVERSION=	2.2.2
 CATEGORIES=	textproc pear
 
 MAINTAINER=	dbaio@FreeBSD.org
 COMMENT=	YAML-1.1 parser and emitter
+WWW=		https://pecl.php.net/package/yaml
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
