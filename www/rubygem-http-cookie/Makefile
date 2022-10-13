@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	http-cookie
 PORTVERSION=	1.0.5
 CATEGORIES=	www rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Ruby library to handle HTTP Cookies
+WWW=		https://github.com/sparklemotion/http-cookie
 
 LICENSE=	MIT
 
