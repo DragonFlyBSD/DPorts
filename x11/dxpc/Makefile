@@ -1,5 +1,3 @@
-# Created by: Bruce A. Mah <bmah@ca.sandia.gov>
-
 PORTNAME=	dxpc
 PORTVERSION=	3.9.2
 CATEGORIES=	x11
@@ -7,6 +5,7 @@ MASTER_SITES=	http://www.vigor.nu/dxpc/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Compressing X protocol proxy designed to support X11 over slow links
+WWW=		http://www.vigor.nu/dxpc/
 
 LIB_DEPENDS=	liblzo2.so:archivers/lzo2
 
