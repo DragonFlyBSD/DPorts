@@ -1,5 +1,3 @@
-# Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-
 PORTNAME=	ua_parser
 PORTVERSION=	0.7.1
 CATEGORIES=	devel python
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME:S/_/-/}-${PORTVERSION}
 
 MAINTAINER=	demon@FreeBSD.org
 COMMENT=	Python port of Browserscope's user agent parser
+WWW=		https://github.com/ua-parser/uap-python
 
 LICENSE=	APACHE20
 
