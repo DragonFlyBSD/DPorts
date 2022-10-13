@@ -1,5 +1,3 @@
-# Created by: Sergey Velichkevych <serg@cad.kiev.ua>
-
 PORTNAME=	wmping
 PORTVERSION=	0.2.1
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	serg@cad.kiev.ua
 COMMENT=	Windowmaker dock app to display network hosts status
+WWW=		https://sourceforge.net/projects/wmping/
 
 BROKEN_FreeBSD_13=	ld: error: duplicate symbol: display
 BROKEN_FreeBSD_14=	ld: error: duplicate symbol: display
