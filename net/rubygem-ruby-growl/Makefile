@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	ruby-growl
 PORTVERSION=	4.1
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Pure-ruby growl notifier
+WWW=		https://github.com/drbrain/ruby-growl
 
 LICENSE=	BSD3CLAUSE
 
