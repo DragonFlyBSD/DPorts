@@ -1,5 +1,3 @@
-# Created by: chuynh@biolateral.com.au
-
 PORTNAME=	tRNAscan-SE
 PORTVERSION=	2.0.5
 CATEGORIES=	biology
@@ -8,6 +6,7 @@ DISTFILES=	${DISTNAME:tl}${EXTRACT_SUFX}
 
 MAINTAINER=	mzaki@e-mail.ne.jp
 COMMENT=	Searching for tRNA genes in genomic sequence
+WWW=		http://lowelab.ucsc.edu/tRNAscan-SE/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
