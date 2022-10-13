@@ -1,5 +1,3 @@
-# Created by: dikshie <dikshie@lapi.itb.ac.id>
-
 PORTNAME=	pathchirp
 PORTVERSION=	2.4.1
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.spin.rice.edu/Software/pathChirp/
 
 MAINTAINER=	dikshie@lapi.itb.ac.id
 COMMENT=	Measurement tool for available bandwidth estimation
+WWW=		http://www.spin.rice.edu/Software/pathChirp/
 
 LICENSE=		RICE MARYLAND
 LICENSE_COMB=		multi
