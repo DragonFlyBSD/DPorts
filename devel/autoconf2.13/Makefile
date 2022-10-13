@@ -1,5 +1,3 @@
-# Created by: torstenb@FreeBSD.org
-
 PORTNAME=	autoconf
 PORTVERSION=	2.13
 CATEGORIES=	devel
@@ -9,6 +7,7 @@ DISTNAME=	autoconf-000227 # 2000-02-27 snapshot post 2.13
 
 MAINTAINER=	tijl@FreeBSD.org
 COMMENT=	Generate configure scripts and related files
+WWW=		https://www.gnu.org/software/autoconf/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
