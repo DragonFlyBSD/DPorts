@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	argon2-cffi-bindings
 PORTVERSION=	21.2.0
 CATEGORIES=	security python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Low-level CFFI bindings for Argon2
+WWW=		https://github.com/hynek/argon2-cffi-bindings
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
