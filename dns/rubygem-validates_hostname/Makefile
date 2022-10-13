@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	validates_hostname
 PORTVERSION=	1.0.11
 CATEGORIES=	dns rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Extension to ActiveRecord::Base for validating hostnames
+WWW=		https://github.com/KimNorgaard/validates_hostname
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/MIT-LICENSE
