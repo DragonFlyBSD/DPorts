@@ -1,5 +1,3 @@
-# Created by: Seiichirou Hiraoka
-
 PORTNAME=	xpx
 PORTVERSION=	1.41
 PORTREVISION=	2
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}${PORTVERSION:S/.//}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple pixel editing tool to generate data for KISS
+WWW=		http://www2s.biglobe.ne.jp/~yav/soft/
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
