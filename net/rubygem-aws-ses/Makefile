@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	aws-ses
 PORTVERSION=	0.7.1
 CATEGORIES=	net rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Client library for REST API of Amazon SES
+WWW=		https://github.com/drewblas/aws-ses
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
