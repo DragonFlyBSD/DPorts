@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	blimpy
 PORTVERSION=	0.6.7
 CATEGORIES=	net-mgmt rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Tool for managing a fleet of machines in the cloud
+WWW=		https://github.com/rtyler/blimpy
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
