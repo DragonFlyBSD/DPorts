@@ -1,5 +1,3 @@
-# Created by: Yi-Hsuan Hsin <mhsin@mhsin.org>
-
 PORTNAME=	WWW-LongURL
 PORTVERSION=	0.05
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	mhsin@mhsin.org
 COMMENT=	Perl interface to the LongURL API
+WWW=		https://metacpan.org/release/WWW-LongURL
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
