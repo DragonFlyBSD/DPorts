@@ -1,5 +1,3 @@
-# Created by: Bill Fumerola <billf@chc-chimes.com>
-
 PORTNAME=	htdig
 PORTVERSION=	3.2.0.b6
 PORTREVISION=	6
@@ -9,6 +7,7 @@ DISTNAME=	htdig-3.2.0b6
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	WWW indexing and searching system
+WWW=		https://sourceforge.net/projects/htdig/
 
 LICENSE=	LGPL20+
 LICENSE_FILE=	${WRKSRC}/COPYING
