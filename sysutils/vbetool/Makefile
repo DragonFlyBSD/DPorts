@@ -1,5 +1,3 @@
-# Created by: Jung-uk Kim <jkim@FreeBSD.org>
-
 PORTNAME=	vbetool
 PORTVERSION=	1.1
 PORTREVISION=	2
@@ -9,6 +7,7 @@ MASTER_SITES=	http://www.codon.org.uk/~mjg59/vbetool/download/	\
 
 MAINTAINER=	jkim@FreeBSD.org
 COMMENT=	Application for executing video card BIOS code
+WWW=		http://www.codon.org.uk/~mjg59/vbetool/
 
 LICENSE=	GPLv2
 
