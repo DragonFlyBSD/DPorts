@@ -1,5 +1,3 @@
-# Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-
 PORTNAME=	cgicc
 PORTVERSION=	3.2.19
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	GNU
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	C++ class library for writing CGI applications
+WWW=		https://www.gnu.org/software/cgicc/
 
 LICENSE=	LGPL3+
 
