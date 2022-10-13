@@ -1,5 +1,3 @@
-# Created by: Denis Generalov <gd@rambler-co.ru>
-
 PORTNAME=	hiredis
 PORTVERSION=	2.0.0
 CATEGORIES=	databases python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	gd.workbox@gmail.com
 COMMENT=	Python extension that wraps hiredis
+WWW=		https://github.com/pietern/hiredis-py
 
 LICENSE=	BSD3CLAUSE
 
