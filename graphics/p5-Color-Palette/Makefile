@@ -1,5 +1,3 @@
-# Created by: Anton Berezin <tobez@FreeBSD.org>
-
 PORTNAME=	Color-Palette
 PORTVERSION=	0.100003
 CATEGORIES=	graphics perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Handle sets of named colors in Perl
+WWW=		https://metacpan.org/release/Color-Palette
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
