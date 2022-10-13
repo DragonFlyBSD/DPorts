@@ -1,16 +1,17 @@
 PORTNAME=	resolve-march-native
-DISTVERSION=	1.0.0
+DISTVERSION=	2.1.0
 CATEGORIES=	sysutils python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	pkubaj@FreeBSD.org
 COMMENT=	Command line tool to resolve -march=native into explicit flags
+WWW=		https://github.com/hartwork/resolve-march-native
 
 LICENSE=	GPLv2+
 
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>=0:devel/py-pytest@${PY_FLAVOR}
 
-USES=		python:3.6+
+USES=		python:3.7+
 USE_GITHUB=	yes
 GH_ACCOUNT=	hartwork
 USE_PYTHON=	autoplist concurrent distutils
