@@ -1,5 +1,3 @@
-# Created by: Bill Brinzer <bill.brinzer@gmail.com>
-
 PORTNAME=	Email-Sender-Transport-SQLite
 PORTVERSION=	0.092002
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bill.brinzer@gmail.com
 COMMENT=	Deliver mail to an SQLite db for testing
+WWW=		https://metacpan.org/release/Email-Sender-Transport-SQLite
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-DBD-SQLite>=0:databases/p5-DBD-SQLite \
