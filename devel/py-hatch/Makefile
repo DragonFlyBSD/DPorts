@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	hatch
 PORTVERSION=	0.23.1
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Modern project, package, and virtual env manager
+WWW=		https://github.com/pypa/hatch
 
 LICENSE=	APACHE20 MIT
 LICENSE_COMB=	dual
