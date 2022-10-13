@@ -1,5 +1,3 @@
-# Created by: Alexander Nusov <alexander.nusov@nfvexpress.com>
-
 PORTNAME=	xstatic-d3
 PORTVERSION=	3.5.17.0
 PORTREVISION=	2
@@ -10,6 +8,7 @@ DISTNAME=	XStatic-D3-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	D3 (Data-Driven Documents) (XStatic packaging standard)
+WWW=		https://d3js.org/
 
 LICENSE=	BSD3CLAUSE
 
