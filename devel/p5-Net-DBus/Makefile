@@ -1,5 +1,3 @@
-# Created by: Roman Bogorodskiy <novel@FreeBSD.org>
-
 PORTNAME=	Net-DBus
 PORTVERSION=	1.2.0
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Perl extension for the DBus message system
+WWW=		https://metacpan.org/release/Net-DBus
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
