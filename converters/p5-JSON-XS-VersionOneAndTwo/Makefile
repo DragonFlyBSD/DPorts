@@ -1,5 +1,3 @@
-# Created by: Denis Pokataev <catone@cpan.org>
-
 PORTNAME=	JSON-XS-VersionOneAndTwo
 PORTVERSION=	0.31
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Support versions 1 and 2 of JSON::XS
+WWW=		https://metacpan.org/release/JSON-XS-VersionOneAndTwo
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-JSON-XS>=0:converters/p5-JSON-XS
