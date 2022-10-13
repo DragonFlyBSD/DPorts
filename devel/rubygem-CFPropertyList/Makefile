@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	CFPropertyList
 PORTVERSION=	3.0.5
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Read, write and manipulate both binary and XML property lists
+WWW=		https://github.com/ckruse/CFPropertyList
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
