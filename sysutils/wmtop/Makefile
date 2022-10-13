@@ -1,5 +1,3 @@
-# Created by: Dan Piponi <wmtop@tanelorn.demon.co.uk>
-
 PORTNAME=	wmtop
 PORTVERSION=	0.84
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	https://www.dockapps.net/download/
 
 MAINTAINER=	uqs@FreeBSD.org
 COMMENT=	Dockapp to display top three CPU consuming processes
+WWW=		http://wmtop.sourceforge.net/
 
 LICENSE=	GPLv2
 
