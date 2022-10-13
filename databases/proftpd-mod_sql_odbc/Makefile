@@ -1,11 +1,10 @@
-# Created by: Martin Matuska <mm@FreeBSD.org>
-
 PORTNAME=	mod_sql_odbc
 CATEGORIES=	databases ftp
 PKGNAMEPREFIX=	proftpd-
 
 MAINTAINER=	mm@FreeBSD.org
 COMMENT=	ODBC ProFTPD module
+WWW=		http://www.proftpd.org/docs/contrib/mod_sql.html
 
 LICENSE=	GPLv2
 
