@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	MooseX-Types-Set-Object
 PORTVERSION=	0.05
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Set::Object type with coercions and stuff
+WWW=		https://metacpan.org/release/MooseX-Types-Set-Object
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
