@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@rubick>
-
 PORTNAME=	kramdown
 PORTVERSION=	1.17.0
 CATEGORIES=	textproc rubygems
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	1
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Yet-another-markdown-parser but fast, pure Ruby
+WWW=		https://kramdown.gettalong.org/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
