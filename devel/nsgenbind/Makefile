@@ -1,5 +1,3 @@
-# Created by: Olivier Duchateau
-
 PORTNAME=	nsgenbind
 PORTVERSION=	0.8
 CATEGORIES=	devel
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-src
 
 MAINTAINER=	nc@FreeBSD.org
 COMMENT=	NetSurf Generator for JavaScript bindings
+WWW=		https://www.netsurf-browser.org/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
