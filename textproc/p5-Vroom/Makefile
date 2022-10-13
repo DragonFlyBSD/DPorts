@@ -1,5 +1,3 @@
-# Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
-
 PORTNAME=	Vroom
 PORTVERSION=	0.37
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	lwhsu@FreeBSD.org
 COMMENT=	Slide Shows in Vim
+WWW=		https://metacpan.org/release/Vroom
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
