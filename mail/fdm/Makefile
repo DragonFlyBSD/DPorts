@@ -1,11 +1,10 @@
-# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-
 PORTNAME=	fdm
 PORTVERSION=	2.1
 CATEGORIES=	mail
 
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Fetches and delivers mail
+WWW=		https://github.com/nicm/fdm
 
 LICENSE=	ISCL
 
