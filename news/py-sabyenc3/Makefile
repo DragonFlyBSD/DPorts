@@ -1,5 +1,3 @@
-# Created by: Ralf van der Enden <tremere@cainites.net>
-
 PORTNAME=	sabyenc3
 PORTVERSION=	5.4.3
 CATEGORIES=	news python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python yEnc package optimized for use within SABnzbd
+WWW=		https://github.com/sabnzbd/sabyenc
 
 LICENSE=	LGPL3
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
