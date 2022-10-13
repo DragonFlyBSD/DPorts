@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	UUID
 PORTVERSION=	0.28
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	swills@FreeBSD.org
 COMMENT=	Perl extension for using UUID interfaces as defined in e2fsprogs
+WWW=		https://metacpan.org/release/UUID
 
 LICENSE=	ART20
 LICENSE_FILE=	${WRKSRC}/License
