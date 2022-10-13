@@ -1,5 +1,3 @@
-# Created by: Mark Felder <feld@FreeBSD.org>
-
 PORTNAME=	dateutils
 PORTVERSION=	0.6.12
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Various utilities for working with date and datetime objects
+WWW=		https://github.com/jmcantrell/python-dateutils
 
 LICENSE=	BSD0CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
