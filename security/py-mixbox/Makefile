@@ -1,5 +1,3 @@
-# Created by: Antoine Brodin <antoine@FreeBSD.org>
-
 PORTNAME=	mixbox
 PORTVERSION=	1.0.5
 CATEGORIES=	security python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Utility library for cybox, maec, and stix
+WWW=		https://github.com/CybOXProject/mixbox
 
 LICENSE=	BSD3CLAUSE
 
