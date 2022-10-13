@@ -1,5 +1,3 @@
-# Created by: od <od@iclub.nsu.ru>
-
 PORTNAME=	wmappl
 PORTVERSION=	0.71
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Application launcher dockapp similar to wmbutton
+WWW=		http://wmappl.sourceforge.net/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
