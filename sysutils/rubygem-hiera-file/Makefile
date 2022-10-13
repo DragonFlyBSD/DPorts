@@ -1,5 +1,3 @@
-# Created by: Matthew Seaman <matthew@FreeBSD.org>
-
 PORTNAME=	hiera-file
 PORTVERSION=	1.1.1
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	matthew@FreeBSD.org
 COMMENT=	Data backend for Hiera that returns whole files
+WWW=		https://github.com/adrienthebo/hiera-file
 
 NO_ARCH=	yes
 
