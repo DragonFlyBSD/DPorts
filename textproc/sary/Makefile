@@ -1,5 +1,3 @@
-# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-
 PORTNAME=	sary
 PORTVERSION=	1.2.0
 PORTREVISION=	5
@@ -8,6 +6,7 @@ MASTER_SITES=	http://sary.sourceforge.net/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Suffix array library and tools, which provide fast full-text search
+WWW=		http://sary.sourceforge.net/index.html.en
 
 GNU_CONFIGURE=	yes
 USES=		gnome libtool pathfix pkgconfig
