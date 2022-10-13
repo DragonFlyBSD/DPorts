@@ -1,5 +1,3 @@
-# Created by: Philip Paeps <philip@paeps.cx>
-
 PORTNAME=	crip
 PORTVERSION=	3.9
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	http://bach.dynet.com/crip/src/
 
 MAINTAINER=	philip@FreeBSD.org
 COMMENT=	Terminal-based ripper/encoder/tagger
+WWW=		http://bach.dynet.com/crip/
 
 OPTIONS_DEFINE=	SOX DOCS
 SOX_DESC=	SoX audio support
