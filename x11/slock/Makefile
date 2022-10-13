@@ -1,5 +1,3 @@
-# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-
 PORTNAME=	slock
 PORTVERSION=	1.4
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	http://dl.suckless.org/tools/
 
 MAINTAINER=	portmaster@BSDforge.com
 COMMENT=	Simple X screen locker
+WWW=		https://tools.suckless.org/slock
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
