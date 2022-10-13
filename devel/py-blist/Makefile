@@ -1,5 +1,3 @@
-# Created by: Brendan Molloy <brendan+freebsd@bbqsrc.net>
-
 PORTNAME=	blist
 PORTVERSION=	1.3.6
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Drop-in list replacement with better performance for large lists
+WWW=		http://stutzbachenterprises.com/blist/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
