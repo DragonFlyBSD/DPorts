@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	WWW-Wordnik-API
 PORTVERSION=	0.0.5
 PORTREVISION=	2
@@ -11,6 +9,7 @@ DISTNAME=	${PORTNAME}-v${PORTVERSION}
 
 MAINTAINER=	swills@FreeBSD.org
 COMMENT=	Wordnik API implementation
+WWW=		https://metacpan.org/release/WWW-Wordnik-API
 
 LICENSE=	GPLv3
 
