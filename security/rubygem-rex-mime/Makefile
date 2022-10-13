@@ -1,10 +1,11 @@
 PORTNAME=	rex-mime
-PORTVERSION=	0.1.6
+PORTVERSION=	0.1.7
 CATEGORIES=	security rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Ruby Exploitation(Rex) methods for creating and parsing MIME messages
+WWW=		https://github.com/rapid7/rex-mime
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
