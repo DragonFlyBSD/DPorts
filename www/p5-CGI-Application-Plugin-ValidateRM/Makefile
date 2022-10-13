@@ -1,5 +1,3 @@
-# Created by: Espen Tagestad <espen@tagestad.no>
-
 PORTNAME=	CGI-Application-Plugin-ValidateRM
 PORTVERSION=	2.5
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Help validate forms with the CGI::Application framework
+WWW=		https://metacpan.org/release/CGI-Application-Plugin-ValidateRM
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-HTML-FillInForm>=0:www/p5-HTML-FillInForm \
