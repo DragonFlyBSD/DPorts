@@ -1,5 +1,3 @@
-# Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-
 PORTNAME=	xlutils
 PORTVERSION=	2.0.0
 CATEGORIES=	textproc python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	Utilities for working with Excel files that require both xlrd and xlwt
+WWW=		https://www.python-excel.org/
 
 LICENSE=	MIT
 
