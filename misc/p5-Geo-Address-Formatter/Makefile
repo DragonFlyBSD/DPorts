@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Geo-Address-Formatter
 PORTVERSION=	1.99
 CATEGORIES=	misc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Take structured address data and format it according to the various global/country rules
+WWW=		https://metacpan.org/release/Geo-Address-Formatter
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
