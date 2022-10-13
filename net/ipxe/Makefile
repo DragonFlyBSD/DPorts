@@ -1,5 +1,3 @@
-# Created by: Guerkan Karaman <gk.freebsd@googlemail.com>
-
 PORTNAME=	ipxe
 DISTVERSION=	g20220610
 PORTEPOCH=	1
@@ -7,6 +5,7 @@ CATEGORIES=	net
 
 MAINTAINER=	egypcio@FreeBSD.org
 COMMENT=	Open source network boot firmware
+WWW=		https://ipxe.org
 
 LICENSE=	GPLv2
 
