@@ -1,12 +1,11 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	aws-sdk-elasticache
-PORTVERSION=	1.78.0
+PORTVERSION=	1.79.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Official AWS Ruby gem for Amazon ElastiCache
+WWW=		https://github.com/aws/aws-sdk-ruby/tree/version-3/gems/aws-sdk-elasticache
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
