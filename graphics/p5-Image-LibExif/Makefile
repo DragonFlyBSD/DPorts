@@ -1,5 +1,3 @@
-# Created by: Anes Mukhametov <anes@anes.su>
-
 PORTNAME=	Image-LibExif
 PORTVERSION=	0.04
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	anes@anes.su
 COMMENT=	Read EXIF module
+WWW=		https://metacpan.org/release/Image-LibExif
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
