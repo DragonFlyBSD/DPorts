@@ -1,5 +1,3 @@
-# Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
-
 PORTNAME=	pythontidy
 PORTVERSION=	1.23
 PORTREVISION=	1
@@ -12,6 +10,7 @@ DIST_SUBDIR=	python
 
 MAINTAINER=	lwhsu@FreeBSD.org
 COMMENT=	Cleans up, regularizes, and reformats the text of Python scripts
+WWW=		https://pypi.org/project/PythonTidy/
 
 LICENSE=	GPLv2
 
