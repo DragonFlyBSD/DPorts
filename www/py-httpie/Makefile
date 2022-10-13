@@ -1,5 +1,3 @@
-# Created by: Alex Dupre <ale@FreeBSD.org>
-
 PORTNAME=	httpie
 PORTVERSION=	3.0.2
 CATEGORIES=	www
@@ -7,6 +5,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	ale@FreeBSD.org
 COMMENT=	Command line HTTP client
+WWW=		https://github.com/httpie/httpie
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
