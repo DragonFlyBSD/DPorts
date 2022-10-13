@@ -1,5 +1,3 @@
-# Created by: will
-
 PORTNAME=	Mail-Box
 PORTVERSION=	3.009
 CATEGORIES=	mail perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Perl module implementing a modern mail folder management
+WWW=		https://metacpan.org/release/Mail-Box
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
