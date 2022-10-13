@@ -1,5 +1,3 @@
-# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-
 PORTNAME=	MooseX-Async
 PORTVERSION=	0.07
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	The Orphanange of Asynchronous Love Children
+WWW=		https://metacpan.org/release/MooseX-Async
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
