@@ -1,11 +1,10 @@
-# Created by: Yuri Victorovich <yuri@rawbw.com>
-
 PORTNAME=	inotify-tools
 DISTVERSION=	3.22.6.0
 CATEGORIES=	sysutils
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Command-line utilities to watch for file events
+WWW=		https://github.com/inotify-tools/inotify-tools/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
