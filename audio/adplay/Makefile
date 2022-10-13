@@ -1,5 +1,3 @@
-# Created by: Emanuel Haupt <ehaupt@critical.ch>
-
 PORTNAME=	adplay
 PORTVERSION=	1.8.1
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ CATEGORIES=	audio
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	AdLib player using adplug library
+WWW=		https://adplug.github.io/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
