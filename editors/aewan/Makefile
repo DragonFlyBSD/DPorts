@@ -1,5 +1,3 @@
-# Created by: krion
-
 PORTNAME=	aewan
 PORTVERSION=	1.0.01
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Curses-based program for the creation and editing of ASCII art
+WWW=		http://aewan.sourceforge.net/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
