@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	Catalyst-Plugin-Server
 PORTVERSION=	0.28
 PORTREVISION=	4
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	des@FreeBSD.org
 COMMENT=	Catalyst Server Plugin: Base & XMLRPC
+WWW=		https://metacpan.org/release/Catalyst-Plugin-Server
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
