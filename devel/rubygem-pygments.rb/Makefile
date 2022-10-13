@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	pygments.rb
 PORTVERSION=	2.3.0
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Ruby wrapper for Pygments syntax highlighter
+WWW=		https://github.com/pygments/pygments.rb
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
