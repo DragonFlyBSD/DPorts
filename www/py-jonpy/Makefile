@@ -1,5 +1,3 @@
-# Created by: Søren Straarup <xride@x12.dk>
-
 PORTNAME=	jonpy
 PORTVERSION=	0.12
 CATEGORIES=	www python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Python FastCGI interface library
+WWW=		http://jonpy.sourceforge.net/
 
 LICENSE=	MIT
 
