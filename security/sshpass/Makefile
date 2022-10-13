@@ -1,5 +1,3 @@
-# Created by: Hung-Yi Chen <gaod@hychen.org>
-
 PORTNAME=	sshpass
 PORTVERSION=	1.09
 CATEGORIES=	security
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/${PORTNAME}/sshpass/${PORTVERSION}
 
 MAINTAINER=	gaod@hychen.org
 COMMENT=	Non-interactive ssh password auth tool
+WWW=		https://sourceforge.net/projects/sshpass/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
