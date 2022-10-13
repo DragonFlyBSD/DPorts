@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	fog-ovirt
 PORTVERSION=	2.0.2
 CATEGORIES=	net rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Module for the 'fog' gem to support oVirt platform
+WWW=		https://github.com/fog/fog-ovirt
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
