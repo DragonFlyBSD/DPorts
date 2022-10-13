@@ -1,5 +1,3 @@
-# Created by: Gilbert Morgan <gmm@tutanota.com>
-
 PORTNAME=	PyInquirer
 PORTVERSION=	1.0.3
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	gmm@tutanota.com
 COMMENT=	Collection of common interactive command line user interfaces
+WWW=		https://github.com/CITGuru/PyInquirer/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
