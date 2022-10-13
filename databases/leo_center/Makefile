@@ -1,5 +1,3 @@
-# Created by: Mikolaj Golub <trociny@FreeBSD.org>
-
 PORTNAME=	leo_center
 PORTVERSION=	0.4.70
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	databases
 
 MAINTAINER=	trociny@FreeBSD.org
 COMMENT=	LeoFS Web console
+WWW=		https://leo-project.net/
 
 LICENSE=	APACHE20
 
