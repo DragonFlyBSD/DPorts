@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	benchmark
 PORTVERSION=	0.2.0
 CATEGORIES=	benchmarks rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Performance benchmarking library
+WWW=		https://github.com/ruby/benchmark
 
 LICENSE=	BSD2CLAUSE RUBY
 LICENSE_COMB=	dual
