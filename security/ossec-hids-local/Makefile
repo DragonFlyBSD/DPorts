@@ -1,5 +1,6 @@
 PKGNAMESUFFIX?=	-${OSSEC_TYPE}
 COMMENT?=	Security tool to monitor and check logs and intrusions - local (standalone) installation
+WWW=		https://ossec.github.io
 OSSEC_TYPE?=	local
 
 .include "${.CURDIR}/../ossec-hids/version.mk"
@@ -133,6 +134,7 @@ SHARED_DIR=		${OSSEC_HOME}/etc/shared
 
 SAMPLE_FILES=		${OSSEC_HOME}/etc/local_internal_options.conf \
 			${OSSEC_HOME}/active-response/bin/cloudflare-ban.sh \
+			${OSSEC_HOME}/active-response/bin/ossec-aws-waf.sh \
 			${OSSEC_HOME}/active-response/bin/ossec-pagerduty.sh \
 			${OSSEC_HOME}/active-response/bin/ossec-slack.sh \
 			${OSSEC_HOME}/active-response/bin/ossec-tweeter.sh
