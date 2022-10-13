@@ -1,5 +1,3 @@
-# Created by: Sergey A. Osokin <osa@FreeBSD.org>
-
 PORTNAME=	pflogsumm
 PORTVERSION=	1.1.5
 PORTREVISION=	1
@@ -10,6 +8,7 @@ MASTER_SITES=	http://jimsun.LinxNet.com/downloads/ \
 
 MAINTAINER=	flo@FreeBSD.org
 COMMENT=	Postfix Log Entry Summarizer
+WWW=		https://jimsun.LinxNet.com/postfix_contrib.html
 
 LICENSE=	GPLv2+
 
