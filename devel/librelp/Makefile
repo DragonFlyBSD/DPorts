@@ -1,5 +1,3 @@
-# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-
 PORTNAME=	librelp
 PORTVERSION=	1.10.0
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ MASTER_SITES=	http://download.rsyslog.com/librelp/
 
 MAINTAINER=	matthew@FreeBSD.org
 COMMENT=	Reliable event logging protocol library
+WWW=		https://www.rsyslog.com/librelp/
 
 LICENSE=	GPLv3
 
