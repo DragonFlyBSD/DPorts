@@ -1,5 +1,3 @@
-# Created by: Rainer Hurling <rhurlin@gwdg.de>
-
 PORTNAME=	three-merge
 PORTVERSION=	0.1.1
 CATEGORIES=	textproc python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	rhurlin@FreeBSD.org
 COMMENT=	Perform a 3-way merge between strings
+WWW=		https://github.com/spyder-ide/three-merge
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
