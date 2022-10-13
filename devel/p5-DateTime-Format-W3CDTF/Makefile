@@ -1,5 +1,3 @@
-# Created by: Mathieu Arnold <m@absolight.net>
-
 PORTNAME=	DateTime-Format-W3CDTF
 PORTVERSION=	0.08
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Parse and format W3CDTF datetime strings
+WWW=		https://metacpan.org/release/DateTime-Format-W3CDTF
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
