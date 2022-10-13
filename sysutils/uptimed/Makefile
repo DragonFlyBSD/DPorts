@@ -1,5 +1,3 @@
-# Created by: Andy Fawcett <andy@athame.co.uk>
-
 PORTNAME=	uptimed
 PORTVERSION=	0.4.6
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	sysutils
 
 MAINTAINER=	pkubaj@FreeBSD.org
 COMMENT=	Uptime daemon
+WWW=		https://github.com/rpodgorny/uptimed
 
 LICENSE=	GPLv2 # only
 LICENSE_FILE=	${WRKSRC}/COPYING
