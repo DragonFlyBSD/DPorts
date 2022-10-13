@@ -1,5 +1,3 @@
-# Created by: Seamus Venasse <svenasse@polaris.ca>
-
 PORTNAME=	Finance-QuoteHist
 PORTVERSION=	1.32
 CATEGORIES=	finance perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module for fetching historical stock quotes
+WWW=		https://metacpan.org/release/Finance-QuoteHist
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
