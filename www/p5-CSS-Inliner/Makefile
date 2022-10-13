@@ -1,5 +1,3 @@
-# Created by: Vivek Khera <vivek@khera.org>
-
 PORTNAME=	CSS-Inliner
 PORTVERSION=	4003
 CATEGORIES=	www perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	vivek@khera.org
 COMMENT=	Library for converting CSS blocks and files to inline styles
+WWW=		https://metacpan.org/release/CSS-Inliner
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
