@@ -1,5 +1,3 @@
-# Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
-
 PORTNAME=	pgxnclient
 PORTVERSION=	1.3.2
 CATEGORIES=	databases python
@@ -7,6 +5,7 @@ MASTER_SITES=	CHEESESHOP
 
 MAINTAINER=	lwhsu@FreeBSD.org
 COMMENT=	Command line tool to interact with the PostgreSQL Extension Network
+WWW=		https://pgxn.github.io/pgxnclient/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING
