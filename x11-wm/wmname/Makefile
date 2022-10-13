@@ -1,5 +1,3 @@
-# Created by: V. Jahns <vj562001@yahoo.de>
-
 PORTNAME=	wmname
 PORTVERSION=	0.1
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	http://dl.suckless.org/tools/
 
 MAINTAINER=	nuncupatio@gmail.com
 COMMENT=	Prints/sets the window manager name property of the root window
+WWW=		https://tools.suckless.org/x/wmname
 
 USES=		xorg
 USE_XORG=	x11 xorgproto
