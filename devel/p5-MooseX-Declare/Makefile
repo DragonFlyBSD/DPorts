@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	MooseX-Declare
 PORTVERSION=	0.43
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Declarative syntax for Moose
+WWW=		https://metacpan.org/release/MooseX-Declare
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
