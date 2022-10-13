@@ -1,5 +1,3 @@
-# Created by: Nikos Ntarmos <ntarmos@ceid.upatras.gr>
-
 PORTNAME=	xcb-util
 PORTVERSION=	0.4.0
 PORTREVISION=	2
@@ -9,6 +7,7 @@ MASTER_SITES=	http://xcb.freedesktop.org/dist/
 
 MAINTAINER=	garga@FreeBSD.org
 COMMENT=	Module with libxcb/libX11 extension/replacement libraries
+WWW=		https://xcb.freedesktop.org/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
