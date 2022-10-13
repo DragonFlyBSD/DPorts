@@ -1,5 +1,3 @@
-# Created by: Vaida Bogdan
-
 PORTNAME=	ibsh
 PORTVERSION=	0.3e
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Restricted unix shell
+WWW=		http://ibsh.sourceforge.net/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
