@@ -1,5 +1,3 @@
-# Created by: Bruce M Simpson <bms@FreeBSD.org>
-
 PORTNAME=	quagga
 PORTVERSION=	1.2.4
 PORTREVISION=	9
@@ -8,6 +6,7 @@ MASTER_SITES=	https://github.com/Quagga/quagga/releases/download/${DISTNAME}/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Free RIPv1, RIPv2, OSPFv2, BGP4, IS-IS route software
+WWW=		https://www.quagga.net/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
