@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	protocol-http1
 PORTVERSION=	0.14.4
 CATEGORIES=	www rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Low level implementation of the HTTP/1 protocol
+WWW=		https://github.com/socketry/protocol-http1
 
 LICENSE=	MIT
 
