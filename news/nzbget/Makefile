@@ -1,5 +1,3 @@
-# Created by: Lewis Thompson <purple@lewiz.net>
-
 PORTNAME=	nzbget
 PORTVERSION=	21.1
 PORTREVISION=	2
@@ -8,6 +6,7 @@ CATEGORIES=	news
 
 MAINTAINER=	alexis.praga@free.fr
 COMMENT=	Binary newsreader supporting NZB files
+WWW=		http://nzbget.net/
 
 LICENSE=	GPLv2
 
