@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	parsley
 PORTVERSION=	1.3
 CATEGORIES=	devel python
@@ -9,6 +7,7 @@ DISTNAME=	Parsley-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Parsing and pattern matching made easy
+WWW=		https://github.com/pyga/parsley
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
