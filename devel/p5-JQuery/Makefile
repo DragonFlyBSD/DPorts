@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	JQuery
 PORTVERSION=	1.06
 PORTREVISION=	2
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Interface to Jquery, a language based on JavaScript
+WWW=		https://metacpan.org/release/JQuery
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
