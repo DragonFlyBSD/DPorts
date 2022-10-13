@@ -1,5 +1,3 @@
-# Created by: Maxime Henrion <mux@FreeBSD.org>
-
 PORTNAME=	Math-BigInt-GMP
 PORTVERSION=	1.6011
 CATEGORIES=	math perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Use GMP library for Math::BigInt routines
+WWW=		https://metacpan.org/release/Math-BigInt-GMP
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
