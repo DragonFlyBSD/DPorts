@@ -1,5 +1,3 @@
-# Created by: Torsten Zuehlsdorff <ports@toco-domains.de>
-
 PORTNAME=	omniauth-azure-oauth2
 PORTVERSION=	0.0.10
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	mfechner@FreeBSD.org
 COMMENT=	Azure OAuth2 Strategy for OmniAuth
+WWW=		https://github.com/KonaTeam/omniauth-azure-oauth2
 
 LICENSE=	MIT
 
