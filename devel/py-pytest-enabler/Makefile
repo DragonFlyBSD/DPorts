@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	pytest-enabler
 PORTVERSION=	1.3.0
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Enable installed pytest plugins
+WWW=		https://github.com/jaraco/pytest-enabler
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
