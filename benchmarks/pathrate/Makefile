@@ -1,5 +1,3 @@
-# Created by: dikshie <dikshie@lapi.itb.ac.id>
-
 PORTNAME=	pathrate
 PORTVERSION=	2.4.1
 CATEGORIES=	benchmarks
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Measurement tool for capacity estimation of network paths
+WWW=		https://www.cc.gatech.edu/~dovrolis/bw-est/pathrate.html
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
