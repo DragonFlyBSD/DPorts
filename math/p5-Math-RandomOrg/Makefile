@@ -1,5 +1,3 @@
-# Created by: Aaron Dalton <aaron@FreeBSD.org>
-
 PORTNAME=	Math-RandomOrg
 PORTVERSION=	0.04
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Retrieve random numbers and data from random.org
+WWW=		https://metacpan.org/release/Math-RandomOrg
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
