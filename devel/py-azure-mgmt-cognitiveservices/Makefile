@@ -1,11 +1,12 @@
 PORTNAME=	azure-mgmt-cognitiveservices
-PORTVERSION=	13.1.0
+PORTVERSION=	13.2.0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	dbaio@FreeBSD.org
 COMMENT=	Microsoft Azure Cognitive Services Management Client Library for Python
+WWW=		https://pypi.org/project/azure-mgmt-cognitiveservices/
 
 LICENSE=	MIT
 
