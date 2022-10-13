@@ -1,5 +1,3 @@
-# Created by: Michael Moll <kvedulv at kvedulv.de>
-
 PORTNAME=	pdf-core
 PORTVERSION=	0.9.0
 CATEGORIES=	print rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Ruby library to render PDF documents
+WWW=		https://prawnpdf.org/
 
 LICENSE=	GPLv2 GPLv3 RUBY
 LICENSE_COMB=	dual
