@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	flit-core
 PORTVERSION=	3.7.1
 CATEGORIES=	devel python
@@ -9,6 +7,7 @@ DISTNAME=	flit_core-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Distribution-building parts of Flit
+WWW=		https://github.com/pypa/flit/tree/main/flit_core
 
 LICENSE=	BSD3CLAUSE
 
