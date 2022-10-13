@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	Net-Async-FastCGI
 PORTVERSION=	0.25
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module to use FastCGI with IO::Async
+WWW=		https://metacpan.org/release/Net-Async-FastCGI
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
