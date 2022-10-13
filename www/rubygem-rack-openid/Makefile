@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	rack-openid
 PORTVERSION=	1.4.2
 PORTREVISION=	4
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Provides a more HTTPish API around the ruby-openid library
+WWW=		https://github.com/josh/rack-openid
 
 LICENSE=	MIT
 
