@@ -1,5 +1,3 @@
-# Created by: Stefan Walter <swalter@lettermax.de>
-
 PORTNAME=	vifm
 PORTVERSION=	0.12
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	misc
 
 MAINTAINER=	mp39590@gmail.com
 COMMENT=	Ncurses based file manager with vi like keybindings
+WWW=		https://vifm.info/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
