@@ -1,5 +1,3 @@
-# Created by: markm@FreeBSD.org
-
 PORTNAME=	exim
 PORTVERSION?=	${EXIM_VERSION}
 PORTREVISION?=	5
@@ -15,6 +13,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	fluffy@FreeBSD.org
 COMMENT?=	High performance MTA for Unix systems on the Internet
+WWW=		https://www.exim.org/
 
 LICENSE=	GPLv2
 
