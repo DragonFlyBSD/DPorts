@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	X11-GUITest
 PORTVERSION=	0.28
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Provides GUI testing/interaction facilities
+WWW=		https://metacpan.org/release/X11-GUITest
 
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual
