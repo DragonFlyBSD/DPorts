@@ -1,5 +1,3 @@
-# Created by: Bruce M Simpson <bms@FreeBSD.org>
-
 PORTNAME=	yukon
 PORTVERSION=	2010011201
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	LOCAL/bms
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Real-time capture tool for OpenGL applications
+WWW=		https://github.com/wereHamster/yukon
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
