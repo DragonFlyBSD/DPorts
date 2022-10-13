@@ -1,5 +1,3 @@
-# Created by: Shinsuke Matsui <smatsui@karashi.org>
-
 PORTNAME=	Shell-Perl
 PORTVERSION=	0.0040
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:S|0$||}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Read-eval-print loop in Perl
+WWW=		https://metacpan.org/release/Shell-Perl
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
