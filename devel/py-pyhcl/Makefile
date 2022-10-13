@@ -1,5 +1,3 @@
-# Created by: Alessando Sagratini <ale_sagra@hotmail.com>
-
 PORTNAME=	pyhcl
 PORTVERSION=	0.4.4
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	ale_sagra@hotmail.com
 COMMENT=	HCL configuration parser for Python
+WWW=		https://github.com/virtuald/pyhcl
 
 LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/LICENSE
