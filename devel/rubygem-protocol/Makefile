@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	protocol
 PORTVERSION=	2.0.0
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Method Protocols for Ruby Classes
+WWW=		https://flori.github.io/protocol/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
