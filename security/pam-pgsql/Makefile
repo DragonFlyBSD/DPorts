@@ -1,5 +1,3 @@
-# Created by: Mikhail Teterin <mi@aldan.algebra.com>
-
 PORTNAME=	pam-pgsql
 PORTVERSION=	0.7.3.2
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/0.7/
 
 MAINTAINER=	berend@pobox.com
 COMMENT=	PAM module for authenticating with PostgreSQL
+WWW=		https://sourceforge.net/projects/pam-pgsql/
 
 LICENSE=	GPLv2
 
