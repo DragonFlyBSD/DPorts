@@ -1,5 +1,3 @@
-# Created by: Gasol Wu <gasol.wu@gmail.com>
-
 PORTNAME=	Version
 DISTVERSION=	2.0.1
 CATEGORIES=	devel pear
@@ -7,6 +5,7 @@ PKGNAMEPREFIX=	${PEAR_PKGNAMEPREFIX}SebastianBergmann_
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Managing the version number of Git-hosted PHP projects
+WWW=		https://github.com/sebastianbergmann/version
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
