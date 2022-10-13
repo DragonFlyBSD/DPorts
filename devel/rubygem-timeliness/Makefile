@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	timeliness
 PORTVERSION=	0.4.4
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Fast date/time parser with customisable formats, timezone and I18n support
+WWW=		https://github.com/adzap/timeliness
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
