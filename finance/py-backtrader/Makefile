@@ -1,5 +1,3 @@
-# Created by: Mikhail T.  <m.tsatsenko@gmail.com>
-
 PORTNAME=	backtrader
 PORTVERSION=	1.9.74.123
 PORTREVISION=	1
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	m.tsatsenko@gmail.com
 COMMENT=	Python Backtesting library for trading strategies
+WWW=		https://www.backtrader.com/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
