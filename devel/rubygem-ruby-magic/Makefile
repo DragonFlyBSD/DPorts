@@ -1,5 +1,3 @@
-# Created by: Matthias Fechner <mfechner@FreeBSD.org>
-
 PORTNAME=	ruby-magic
 PORTVERSION=	0.5.4
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	mfechner@FreeBSD.org
 COMMENT=	File Magic in ruby
+WWW=		https://github.com/kwilczynski/ruby-magic
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
