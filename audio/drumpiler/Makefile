@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	drumpiler
 PORTVERSION=	0.9.0
 PORTREVISION=	7
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Drum machine compiler
+WWW=		http://drumpiler.sourceforge.net/
 
 USES=		sdl
 USE_SDL=	sdl
