@@ -1,5 +1,3 @@
-# Created by: Johannes Meixner <johannes@perceivon.net>
-
 PORTNAME=	logan
 PORTVERSION=	0.7.2
 PORTREVISION=	3
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Toolkit for running standalone Django applications
+WWW=		https://pypi.org/project/logan/
 
 LICENSE=	APACHE20
 
