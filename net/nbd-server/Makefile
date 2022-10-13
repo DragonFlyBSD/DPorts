@@ -1,5 +1,3 @@
-# Created by: Christian Laursen <xi@borderworlds.dk>
-
 PORTNAME=	nbd
 PORTVERSION=	3.24
 PORTEPOCH=	1
@@ -9,6 +7,7 @@ PKGNAMESUFFIX=	-server
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Server for the Linux network block device (nbd)
+WWW=		http://nbd.sourceforge.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
