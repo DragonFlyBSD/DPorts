@@ -1,5 +1,3 @@
-# Created by: Cyrille Lefevre <clefevre@citeweb.net>
-
 PORTNAME=	stow
 PORTVERSION=	2.3.1
 CATEGORIES=	sysutils
@@ -7,6 +5,7 @@ MASTER_SITES=	GNU
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	GNU version of Carnegie Mellon's "Depot" program
+WWW=		https://www.gnu.org/software/stow/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
