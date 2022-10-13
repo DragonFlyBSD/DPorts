@@ -1,5 +1,3 @@
-# Created by: Michael Vasilenko <acid@stu.cn.ua>
-
 PORTNAME=	mp3blaster
 PORTVERSION=	3.2.6
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	novel@FreeBSD.org
 COMMENT=	MP3 console ncurses-based player
+WWW=		http://mp3blaster.sourceforge.net/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
