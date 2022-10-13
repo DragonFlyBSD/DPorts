@@ -1,5 +1,3 @@
-# Created by: Mikhail T. <m.tsatsenko@gmail.com>
-
 PORTNAME=	openvpn-auth-radius
 PORTVERSION=	2.1
 PORTREVISION=	4
@@ -10,6 +8,7 @@ DISTNAME=	radiusplugin_v${PORTVERSION}
 
 MAINTAINER=	m.tsatsenko@gmail.com
 COMMENT=	RADIUS authentication plugin for OpenVPN
+WWW=		https://www.nongnu.org/radiusplugin/index.html
 
 LICENSE=	GPLv2
 
