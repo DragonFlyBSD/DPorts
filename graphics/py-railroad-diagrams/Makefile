@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	railroad-diagrams
 PORTVERSION=	2.0.4
 CATEGORIES=	graphics python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Generate SVG railroad syntax diagrams, like on JSON.org
+WWW=		https://github.com/tabatkins/railroad-diagrams
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
