@@ -1,5 +1,3 @@
-# Created by: Alexander Nusov <alexander.nusov@nfvexpress.com>
-
 PORTNAME=	xstatic-smart-table
 PORTVERSION=	1.4.13.2
 PORTREVISION=	2
@@ -10,6 +8,7 @@ DISTNAME=	XStatic-smart-table-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	smart-table (XStatic packaging standard)
+WWW=		https://github.com/lorenzofox3/Smart-Table
 
 LICENSE=	MIT
 
