@@ -1,5 +1,3 @@
-# Created by: jaharkes
-
 PORTNAME=	rvm
 DISTVERSION=	1.20
 CATEGORIES=	devel
@@ -10,6 +8,7 @@ MASTER_SITES=	http://ftp.coda.cs.cmu.edu/pub/rvm/src/ \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Persistent VM library
+WWW=		http://www.coda.cs.cmu.edu/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
