@@ -1,5 +1,3 @@
-# Created by: Olivier Cochard-Labbe <olivier@FreeBSD.org>
-
 PORTNAME=	libsystem
 PORTVERSION=	0.3.1
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DISTNAME=	libSystem-${PORTVERSION}
 
 MAINTAINER=	olivier@FreeBSD.org
 COMMENT=	DeforaOS core system library
+WWW=		https://www.defora.org/
 
 LICENSE=	LGPL3
 LICENSE_FILE=	${WRKSRC}/COPYING
