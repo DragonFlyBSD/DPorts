@@ -1,5 +1,3 @@
-# Created by: Zeus Panchenko <zeus@gnu.org.ua>
-
 PORTNAME=	Template-Plugin-DataPrinter
 PORTVERSION=	0.015
 CATEGORIES=	textproc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Template Toolkit dumper plugin using Data::Printer
+WWW=		https://metacpan.org/release/Template-Plugin-DataPrinter
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
