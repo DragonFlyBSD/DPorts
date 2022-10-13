@@ -1,5 +1,3 @@
-# Created by: aturetta@commit.it
-
 PORTNAME=	Test-WWW-Mechanize
 PORTVERSION=	1.58
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Testing-specific WWW::Mechanize subclass
+WWW=		https://metacpan.org/release/Test-WWW-Mechanize
 
 LICENSE=	ART20
 
