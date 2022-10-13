@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	todo
 PORTVERSION=	2.12.0
 CATEGORIES=	deskutils
@@ -8,6 +6,7 @@ DISTNAME=	todo.txt_cli-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Todo.txt Manager
+WWW=		http://todotxt.org/
 
 LICENSE=	GPLv3
 
