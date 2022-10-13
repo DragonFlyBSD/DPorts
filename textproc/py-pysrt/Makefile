@@ -1,5 +1,3 @@
-# Created by: William Grzybowski <wg@FreeBSD.org>
-
 PORTNAME=	pysrt
 PORTVERSION=	1.1.2
 CATEGORIES=	textproc python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	SubRip (.srt) subtitle parser and writer
+WWW=		https://github.com/byroot/pysrt/
 
 LICENSE=	GPLv3
 
