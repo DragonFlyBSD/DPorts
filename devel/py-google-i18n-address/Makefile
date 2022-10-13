@@ -1,5 +1,3 @@
-# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-
 PORTNAME=	google-i18n-address
 PORTVERSION=	2.5.0
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	marcus@FreeBSD.org
 COMMENT=	Build and validate addresses in localized formats
+WWW=		https://pypi.org/project/google-i18n-address/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
