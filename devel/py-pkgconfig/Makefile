@@ -1,5 +1,3 @@
-# Created by: Johannes Meixner <johannes@perceivon.net>
-
 PORTNAME=	pkgconfig
 PORTVERSION=	1.5.5
 PORTEPOCH=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Interface Python with pkg-config
+WWW=		https://github.com/matze/pkgconfig
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
