@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	spar
 PORTVERSION=	0.5.10
 PORTREVISION=	6
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/Spar/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Modular math parser
+WWW=		http://spar.sourceforge.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
