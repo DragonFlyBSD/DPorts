@@ -1,5 +1,3 @@
-# Created by: kirk@daycos.com
-
 PORTNAME=	pgdbf
 PORTVERSION=	0.6.2
 CATEGORIES=	databases
@@ -7,6 +5,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	kirk@strauser.com
 COMMENT=	Convert XBase / FoxPro tables to PostgreSQL
+WWW=		http://pgdbf.sourceforge.net/
 
 LICENSE=	GPLv3
 
