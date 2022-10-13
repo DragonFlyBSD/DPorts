@@ -1,5 +1,3 @@
-# Created by: Josef El-Rayes <josef@FreeBSD.org>
-
 PORTNAME=	wmbsdbatt
 PORTVERSION=	0.1
 PORTREVISION=	5
@@ -9,6 +7,7 @@ MASTER_SITES=	http://mirror.its.dal.ca/freebsd/distfiles/	\
 
 MAINTAINER=	xride@FreeBSD.org
 COMMENT=	Dockapp for battery & temperature monitoring through ACPI
+WWW=		http://mailbox.univie.ac.at/~le/wmbsdbatt/
 
 LICENSE=	GPLv2
 
