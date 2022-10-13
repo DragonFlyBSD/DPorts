@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	scruffy
 PORTVERSION=	0.2.6
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Beautiful Graphs for Ruby
+WWW=		https://github.com/brasten/scruffy
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/MIT-LICENSE
