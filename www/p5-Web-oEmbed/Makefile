@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Web-oEmbed
 PORTVERSION=	0.04
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	oEmbed consumer
+WWW=		https://metacpan.org/release/Web-oEmbed
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
