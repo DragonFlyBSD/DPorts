@@ -1,5 +1,3 @@
-# Created by: Kirill Ponomarew <ponomarew@oberon.net>
-
 PORTNAME=	noffle
 PORTVERSION=	1.1.5
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}%20%28devel%29/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	News server for low speed dial-up connections
+WWW=		http://noffle.sourceforge.net/
 
 LIB_DEPENDS=	libgdbm.so:databases/gdbm
 
