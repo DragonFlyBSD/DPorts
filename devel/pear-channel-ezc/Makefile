@@ -1,11 +1,10 @@
-# Created by: Gasol Wu <gasol.wu@gmail.com>
-
 PORTNAME=	ezc
 PORTVERSION=	20060124
 CATEGORIES=	devel www pear
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	PEAR channel ${PEAR_CHANNEL_HOST}
+WWW=		https://ezcomponents.org/
 
 PEAR_CHANNEL_HOST=	components.ez.no
 
