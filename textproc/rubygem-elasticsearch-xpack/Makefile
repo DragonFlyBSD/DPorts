@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	elasticsearch-xpack
 PORTVERSION=	7.17.1
 CATEGORIES=	textproc rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Ruby integrations for the X-Pack extensions for Elasticsearch
+WWW=		https://github.com/elastic/elasticsearch-ruby/tree/master/elasticsearch-xpack
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
