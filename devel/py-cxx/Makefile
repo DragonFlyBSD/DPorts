@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	cxx
 PORTVERSION=	7.1.7
 CATEGORIES=	devel python
@@ -9,6 +7,7 @@ DISTNAME=	pycxx-${PORTVERSION}
 
 MAINTAINER=	lwhsu@FreeBSD.org
 COMMENT=	Make it easier to extend Python with C++
+WWW=		http://cxx.sourceforge.net/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
