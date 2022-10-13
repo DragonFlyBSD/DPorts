@@ -5,6 +5,7 @@ MASTER_SITES=	https://kokkinizita.linuxaudio.org/linuxaudio/downloads/
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Easy access to ALSA PCM devices
+WWW=		https://kokkinizita.linuxaudio.org/linuxaudio/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -39,8 +40,11 @@ do-install:
 .endfor
 
 post-install:
+	# add symlink, see comment in the patch
 	@cd ${STAGEDIR}${PREFIX} && \
-		(cd lib && ${RLN} libzita-alsa-pcmi.so.${DISTVERSION} libzita-alsa-pcmi.so.${DISTVERSION:R:R}) && \
+		(cd lib && ${RLN} libzita-alsa-pcmi.so.${DISTVERSION} libzita-alsa-pcmi.so.${DISTVERSION:R:R})
+	# strip binaries
+	@cd ${STAGEDIR}${PREFIX} && \
 		${STRIP_CMD} \
 			bin/alsa_delay \
 			bin/alsa_loopback \
