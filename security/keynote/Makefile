@@ -1,5 +1,3 @@
-# Created by: Stefan Esser <se@FreeBSD.org>
-
 PORTNAME=	keynote
 PORTVERSION=	2.3
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www1.cs.columbia.edu/~angelos/Code/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Trust-Management System
+WWW=		https://www1.cs.columbia.edu/~angelos/keynote.html
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
