@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	markuppy
 PORTVERSION=	1.14
 CATEGORIES=	textproc python
@@ -9,6 +7,7 @@ DISTNAME=	MarkupPy-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	HTML/XML generator
+WWW=		https://github.com/tylerbakke/MarkupPy
 
 LICENSE=	MIT
 
