@@ -1,5 +1,3 @@
-# Created by: Ryan Steinmetz <zi@FreeBSD.org>
-
 PORTNAME=	solve
 PORTVERSION=	4.0.4
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Ruby version constraint solver
+WWW=		https://github.com/berkshelf/solve
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
