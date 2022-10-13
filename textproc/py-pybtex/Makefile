@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	pybtex
 PORTVERSION=	0.24.0
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	BibTeX-compatible bibliography processor in Python
+WWW=		https://bitbucket.org/pybtex-devs/pybtex/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
