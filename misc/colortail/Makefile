@@ -1,5 +1,3 @@
-# Created by: Chris Piazza <cpiazza@FreeBSD.org>
-
 PORTNAME=	colortail
 PORTVERSION=	0.3.3
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	https://github.com/joakim666/colortail/releases/download/${PORTVER
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	tail(1) replacement with color support
+WWW=		https://github.com/joakim666/colortail
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
