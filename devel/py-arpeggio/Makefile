@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	arpeggio
 PORTVERSION=	2.0.0
 CATEGORIES=	devel python
@@ -9,6 +7,7 @@ DISTNAME=	Arpeggio-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Parser interpreter based on PEG grammars
+WWW=		https://github.com/textX/Arpeggio
 
 LICENSE=	MIT
 
