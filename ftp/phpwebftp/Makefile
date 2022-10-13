@@ -1,5 +1,3 @@
-# Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-
 PORTNAME=	phpwebftp
 PORTVERSION=	3.3b
 CATEGORIES=	ftp
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}${PORTVERSION:S/.//}
 
 MAINTAINER=	coco@executive-computing.de
 COMMENT=	Set of PHP-scripts to manage FTP over the web
+WWW=		http://www.phpwebftp.com/
 
 LICENSE=	GPLv2
 
