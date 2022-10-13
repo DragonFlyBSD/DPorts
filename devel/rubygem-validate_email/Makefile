@@ -1,5 +1,3 @@
-# Created by: Matthias Fechner <mfechner@FreeBSD.org>
-
 PORTNAME=	validate_email
 PORTVERSION=	0.1.6
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	mfechner@FreeBSD.org
 COMMENT=	Validating email addresses in Rails 3 models
+WWW=		https://github.com/perfectline/validates_email/tree/master
 
 LICENSE=	MIT
 
