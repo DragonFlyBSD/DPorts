@@ -1,10 +1,11 @@
 PORTNAME=	flexget
 DISTVERSIONPREFIX=	v
-PORTVERSION=	3.3.26
+PORTVERSION=	3.3.33
 CATEGORIES=	www
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Multipurpose automation tool for all of your media
+WWW=		https://flexget.com/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
