@@ -1,5 +1,3 @@
-# Created by: Dmitry Sivachenko <mitya@yandex-team.ru>
-
 PORTNAME=	motor
 PORTVERSION=	1.0
 CATEGORIES=	databases python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	demon@FreeBSD.org
 COMMENT=	Non-blocking MongoDB driver for Tornado or asyncio
+WWW=		https://pypi.org/project/motor/
 
 LICENSE=	APACHE20
 
