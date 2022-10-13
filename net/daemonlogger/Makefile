@@ -1,5 +1,3 @@
-# Created by: lwhsu@FreeBSD.org
-
 PORTNAME=	daemonlogger
 PORTVERSION=	1.2.2
 DISTVERSIONPREFIX=	V
@@ -7,6 +5,7 @@ CATEGORIES=	net
 
 MAINTAINER=	farrokhi@FreeBSD.org
 COMMENT=	Packet sniffer capable of running as a daemon and as a software tap
+WWW=		https://www.talosintelligence.com/daemon
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
