@@ -1,5 +1,3 @@
-# Created by: swallace
-
 PORTNAME=	irsim
 DISTVERSION=	9.7.110
 CATEGORIES=	cad
@@ -7,6 +5,7 @@ MASTER_SITES=	http://opencircuitdesign.com/irsim/archive/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Event-driven logic-level simulator for MOS circuis
+WWW=		http://opencircuitdesign.com/irsim/
 
 LICENSE=	GPLv2
 
