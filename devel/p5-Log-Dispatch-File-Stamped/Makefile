@@ -1,5 +1,3 @@
-# Created by: Jui-Nan Lin <jnlin@freebsd.cs.nctu.edu.tw>
-
 PORTNAME=	Log-Dispatch-File-Stamped
 PORTVERSION=	0.12
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	jnlin@freebsd.cs.nctu.edu.tw
 COMMENT=	Logging to date/time stamped files
+WWW=		https://metacpan.org/release/Log-Dispatch-File-Stamped
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
