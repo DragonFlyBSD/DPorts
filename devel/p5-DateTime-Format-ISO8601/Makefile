@@ -1,5 +1,3 @@
-# Created by: Mathieu Arnold <m@absolight.net>
-
 PORTNAME=	DateTime-Format-ISO8601
 PORTVERSION=	0.16
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Parse ISO8601 formats
+WWW=		https://metacpan.org/release/DateTime-Format-ISO8601
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
