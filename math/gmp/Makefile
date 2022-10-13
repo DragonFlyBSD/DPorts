@@ -1,5 +1,3 @@
-# Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-
 PORTNAME=	gmp
 PORTVERSION=	6.2.1
 CATEGORIES=	math devel
@@ -7,6 +5,7 @@ MASTER_SITES=	GNU
 
 MAINTAINER=	ale@FreeBSD.org
 COMMENT=	Free library for arbitrary precision arithmetic
+WWW=		https://gmplib.org/
 
 LICENSE=	LGPL3
 
