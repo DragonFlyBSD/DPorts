@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	sassc
 PORTVERSION=	2.2.1
 CATEGORIES=	textproc rubygems
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	22
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Use libsass with Ruby
+WWW=		https://github.com/sass/sassc-ruby
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
