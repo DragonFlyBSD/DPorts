@@ -1,5 +1,3 @@
-# Created by: Guixing Bai <khsing.cn@gmail.com>
-
 PORTNAME=	tornado
 PORTVERSION=	5.1.1
 CATEGORIES=	www python
@@ -9,6 +7,7 @@ PKGNAMESUFFIX=	5
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python Web Server from FriendFeed
+WWW=		https://www.tornadoweb.org/
 
 LICENSE=	APACHE20
 
