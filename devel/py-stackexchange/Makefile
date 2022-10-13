@@ -1,5 +1,3 @@
-# Created by: Carlos J. Puga Medina <cpm@FreeBSD.org>
-
 PORTNAME=	stackexchange
 PORTVERSION=	2.2.7
 CATEGORIES=	devel python
@@ -9,6 +7,7 @@ DISTNAME=	py-${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	python@FreeBSD.org
 COMMENT=	Python binding to the StackExchange website APIs
+WWW=		https://github.com/lucjon/Py-StackExchange
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
