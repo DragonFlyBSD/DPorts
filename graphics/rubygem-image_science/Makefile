@@ -1,5 +1,3 @@
-# Created by: Eric Freeman <freebsdports@chillibear.com>
-
 PORTNAME=	image_science
 PORTVERSION=	1.3.1
 CATEGORIES=	graphics rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Ruby library that generates thumbnails
+WWW=		https://github.com/seattlerb/image_science
 
 LICENSE=	MIT
 
