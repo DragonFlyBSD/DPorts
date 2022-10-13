@@ -1,5 +1,3 @@
-# Created by: Alexander Nusov <alexander.nusov@nfvexpress.com>
-
 PORTNAME=	xstatic-angular
 PORTVERSION=	1.8.2.2
 CATEGORIES=	devel python
@@ -9,6 +7,7 @@ DISTNAME=	XStatic-Angular-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Angular (XStatic packaging standard)
+WWW=		https://angularjs.org/
 
 LICENSE=	MIT
 
