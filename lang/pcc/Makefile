@@ -1,5 +1,3 @@
-# Created by: David O'Brien <obrien@NUXI.org>
-
 PORTNAME=	pcc
 PORTVERSION=	1.1.0
 PORTREVISION=	1
@@ -10,6 +8,7 @@ MASTER_SITES=	ftp://pcc.ludd.ltu.se/pub/pcc-releases/ \
 
 MAINTAINER=	joel@FreeBSD.org
 COMMENT=	Portable C Compiler
+WWW=		http://pcc.ludd.ltu.se/
 
 LICENSE=	BSDCOMPATIBLE BSD2CLAUSE BSD3CLAUSE
 LICENSE_COMB=	multi
