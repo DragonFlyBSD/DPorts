@@ -1,5 +1,3 @@
-# Created by: allan@saddi.com
-
 PORTNAME=	yafic
 PORTVERSION=	1.2.2
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	allan@saddi.com
 COMMENT=	Yet Another File Integrity Checker, similar to Tripwire
+WWW=		http://philosophysw.com/software/yafic/
 
 GNU_CONFIGURE=	yes
 USES=		gmake
