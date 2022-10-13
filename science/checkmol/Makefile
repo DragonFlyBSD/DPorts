@@ -1,5 +1,3 @@
-# Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-
 PORTNAME=	checkmol
 PORTVERSION=	0.5
 PORTREVISION=	14
@@ -10,6 +8,7 @@ EXTRACT_SUFX=	.pas
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Analyze molecules for the presence of functional groups
+WWW=		https://homepage.univie.ac.at/norbert.haider/cheminf/cmmm.html
 
 LICENSE=	GPLv2+
 
