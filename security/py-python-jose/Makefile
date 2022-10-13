@@ -1,5 +1,3 @@
-# Created by: Dan Langille <dvl@sourcefire.com>
-
 PORTNAME=	python-jose
 PORTVERSION=	3.3.0
 CATEGORIES=	security
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	dvl@FreeBSD.org
 COMMENT=	Client SDK for TIP API which require Authentication Tokens
+WWW=		https://github.com/mpdavis/python-jose
 
 LICENSE=	MIT
 
