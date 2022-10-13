@@ -1,5 +1,3 @@
-# Created by: Ashish SHUKLA <wahjava@gmail.com>
-
 PORTNAME=	pms
 PORTVERSION=	0.42
 PORTREVISION=	14
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	riggs@FreeBSD.org
 COMMENT=	ncurses-based client for the Music Player Daemon
+WWW=		http://pms.sourceforge.net/
 
 LICENSE=	GPLv3
 
