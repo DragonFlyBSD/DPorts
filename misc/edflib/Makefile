@@ -1,11 +1,12 @@
 PORTNAME=	edflib
-DISTVERSION=	1.21
+DISTVERSION=	1.22
 CATEGORIES=	misc # medicine
 MASTER_SITES=	https://www.teuniz.net/edflib/
 DISTNAME=	${PORTNAME}_${DISTVERSION:S/.//}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	C library to read/write EDF+/BDF+ (medical data series) files
+WWW=		https://www.teuniz.net/edflib/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
