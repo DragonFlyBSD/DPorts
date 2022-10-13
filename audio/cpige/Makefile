@@ -1,5 +1,3 @@
-# Created by: Adam Weinberger <adamw@FreeBSD.org>
-
 PORTNAME=	cpige
 DISTVERSION=	1.5
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	http://old.ed.zehome.com/cpige/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Icecast/Shoutcast stream ripper
+WWW=		https://old.ed.zehome.com/?page=cpige
 
 USES=		gmake
 
