@@ -1,13 +1,12 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Astro-SpaceTrack
-PORTVERSION=	0.153
+PORTVERSION=	0.156
 CATEGORIES=	astro perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Retrieve orbital data from www.space-track.org
+WWW=		https://metacpan.org/release/Astro-SpaceTrack
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
