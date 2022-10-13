@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	graphql-relay
 PORTVERSION=	2.0.1
 CATEGORIES=	devel python
@@ -9,6 +7,7 @@ PKGNAMESUFFIX=	2
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Relay implementation for Python
+WWW=		https://github.com/graphql-python/graphql-relay-py
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
