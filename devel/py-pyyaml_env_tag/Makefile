@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	pyyaml_env_tag
 PORTVERSION=	0.1
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Custom YAML tag for referencing environment variables in YAML files
+WWW=		https://github.com/waylan/pyyaml-env-tag
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
