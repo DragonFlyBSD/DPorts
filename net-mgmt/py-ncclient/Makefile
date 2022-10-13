@@ -1,11 +1,12 @@
 PORTNAME=	ncclient
-DISTVERSION=	0.6.10
+DISTVERSION=	0.6.13
 CATEGORIES=	net-mgmt python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sergey@akhmatov.ru
 COMMENT=	Python library for NETCONF clients
+WWW=		https://github.com/ncclient/ncclient
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
