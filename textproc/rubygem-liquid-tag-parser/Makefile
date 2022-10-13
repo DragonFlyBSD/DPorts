@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	liquid-tag-parser
 PORTVERSION=	2.0.2
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Parse liquid tags easily
+WWW=		https://github.com/envygeeks/liquid-tag-parser
 
 LICENSE=	MIT
 
