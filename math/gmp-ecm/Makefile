@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	gmp-ecm
 DISTVERSION=	7.0.4
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	ecm-${DISTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Elliptic Curve Method for Integer Factorization
+WWW=		https://gforge.inria.fr/projects/ecm/
 
 LICENSE=	GPLv2+ LGPL21+
 LICENSE_COMB=	multi
