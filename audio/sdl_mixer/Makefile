@@ -1,14 +1,13 @@
-# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-
 PORTNAME=	sdl_mixer
 PORTVERSION=	1.2.12
-PORTREVISION=	13
+PORTREVISION=	14
 CATEGORIES=	audio
 MASTER_SITES=	https://www.libsdl.org/projects/SDL_mixer/release/
 DISTNAME=	SDL_mixer-${PORTVERSION}
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Sample multi-channel audio mixer library
+WWW=		https://www.libsdl.org/projects/SDL_mixer/index.html
 
 LICENSE=	ZLIB
 
