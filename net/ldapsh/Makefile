@@ -1,5 +1,3 @@
-# Created by: Florent Thoumie <flz@xbsd.org>
-
 PORTNAME=	ldapsh
 PORTVERSION=	2.00
 PORTREVISION=	4
@@ -10,6 +8,7 @@ MASTER_SITE_SUBDIR=	CPAN:LOOSIFER
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Interactive shell used to administer ldap directories
+WWW=		http://reductivelabs.com/cgi-bin/ldapsh.cgi/wiki
 
 BUILD_DEPENDS=	p5-Term-ReadKey>=0:devel/p5-Term-ReadKey \
 		p5-Term-ReadLine-Perl>=0:devel/p5-Term-ReadLine-Perl \
