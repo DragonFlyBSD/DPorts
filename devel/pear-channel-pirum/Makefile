@@ -1,5 +1,3 @@
-# Created by: Gasol Wu <gasol.wu@gmail.com>
-
 PORTNAME=	pirum
 PORTVERSION=	20110921
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	devel www pear
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	PEAR channel ${PEAR_CHANNEL_HOST}
+WWW=		http://pirum.sensiolabs.org/
 
 PEAR_CHANNEL_HOST=	pear.pirum-project.org
 
