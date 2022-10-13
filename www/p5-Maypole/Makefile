@@ -1,5 +1,3 @@
-# Created by: Lars Thegler <lars@thegler.dk>
-
 PORTNAME=	Maypole
 PORTVERSION=	2.13
 PORTREVISION=	6
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	MVC web application framework
+WWW=		https://metacpan.org/release/Maypole
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
