@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	Method-Signatures-Simple
 PORTVERSION=	1.07
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Basic method declarations with signatures, without source filters
+WWW=		https://metacpan.org/release/Method-Signatures-Simple
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
