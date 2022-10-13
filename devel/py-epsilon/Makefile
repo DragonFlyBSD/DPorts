@@ -1,5 +1,3 @@
-# Created by: Alexander Botero-Lowry <alex@foxybanana.com>
-
 PORTNAME=	epsilon
 PORTVERSION=	0.8.0
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Set of Python utility modules used by DivMod projects
+WWW=		https://github.com/twisted/epsilon
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
