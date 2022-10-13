@@ -1,5 +1,3 @@
-# Created by: Denny Lin <dennylin93@hs.ntnu.edu.tw>
-
 PORTNAME=	App-gist
 PORTVERSION=	0.16
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	GitHub Gist creator
+WWW=		https://metacpan.org/release/App-gist
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
