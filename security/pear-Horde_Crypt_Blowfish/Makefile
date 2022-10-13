@@ -1,5 +1,3 @@
-# Created by: Martin Matuska <mm@FreeBSD.org>
-
 PORTNAME=	Horde_Crypt_Blowfish
 PORTVERSION=	1.1.3
 CATEGORIES=	security www pear
@@ -7,6 +5,7 @@ PKGNAMEPREFIX=	${PEAR_PKGNAMEPREFIX}
 
 MAINTAINER=	horde@FreeBSD.org
 COMMENT=	Horde blowfish encryption for PHP string data
+WWW=		https://pear.horde.org
 
 USE_HORDE_RUN=	Horde_Exception \
 		Horde_Support
