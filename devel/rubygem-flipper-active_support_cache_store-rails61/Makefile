@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	flipper-active_support_cache_store
 PORTVERSION=	0.21.0
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMESUFFIX=	-rails61
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	ActiveSupport::Cache store adapter for Flipper
+WWW=		https://github.com/jnunemaker/flipper
 
 LICENSE=	MIT
 
