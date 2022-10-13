@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	immutables
 PORTVERSION=	0.18
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Immutable collections
+WWW=		https://github.com/MagicStack/immutables
 
 LICENSE=	APACHE20 MIT
 LICENSE_COMB=	multi
