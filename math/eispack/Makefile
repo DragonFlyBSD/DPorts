@@ -1,5 +1,3 @@
-# Created by: ljo
-
 PORTNAME=	eispack
 PORTVERSION=	1.0
 PORTREVISION=	14
@@ -10,6 +8,7 @@ EXTRACT_ONLY=	#empty
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Eigenvalue system package
+WWW=		https://www.netlib.org/eispack/
 
 DIST_SUBDIR=	${PORTNAME}
 NO_WRKSUBDIR=	yes
