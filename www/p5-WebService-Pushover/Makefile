@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	WebService-Pushover
 PORTVERSION=	1.0.0
 DISTVERSIONPREFIX=	v
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Interface to Pushover API
+WWW=		https://metacpan.org/release/WebService-Pushover
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
