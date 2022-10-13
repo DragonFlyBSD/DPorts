@@ -1,5 +1,3 @@
-# Created by: Ryan Steinmetz <zi@FreeBSD.org>
-
 PORTNAME=	semverse
 PORTVERSION=	3.0.0
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Library to represent and compare SemVer versions and constraints
+WWW=		https://github.com/berkshelf/semverse
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
