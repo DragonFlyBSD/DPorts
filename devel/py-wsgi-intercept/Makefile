@@ -1,5 +1,3 @@
-# Created by: Alexander Nusov <alexander.nusov@nfvexpress.com>
-
 PORTNAME=	wsgi-intercept
 PORTVERSION=	1.10.0
 CATEGORIES=	devel python
@@ -9,6 +7,7 @@ DISTNAME=	wsgi_intercept-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	WSGI application in place of a real URI for testing
+WWW=		https://github.com/cdent/wsgi-intercept
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
