@@ -1,5 +1,3 @@
-# Created by: Mark Felder <feld@FreeBSD.org>
-
 PORTNAME=	requests-futures
 PORTVERSION=	1.0.0
 CATEGORIES=	www python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	HTTP library written in Python for human beings
+WWW=		https://github.com/ross/requests-futures
 
 LICENSE=	APACHE20
 
