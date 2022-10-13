@@ -1,5 +1,3 @@
-# Created by: Dryice Liu	<dryice@dryice.name>
-
 PORTNAME=	Paste
 PORTVERSION=	3.4.6
 PORTREVISION=	0
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Tools for using a Web Server Gateway Interface stack
+WWW=		https://github.com/cdent/paste
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/docs/license.txt
