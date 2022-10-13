@@ -1,5 +1,3 @@
-# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-
 PORTNAME=	Config-JFDI
 PORTVERSION=	0.065
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Catalyst::Plugin::ConfigLoader-style layer over Config::Any
+WWW=		https://metacpan.org/release/Config-JFDI
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
