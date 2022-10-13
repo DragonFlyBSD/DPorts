@@ -1,5 +1,3 @@
-# Created by: Espen Volden aka voldern <voldern@hoeggen.net>
-
 PORTNAME=	ruby_parser
 PORTVERSION=	3.15.0
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	voldern@hoeggen.net
 COMMENT=	Ruby parser written in pure ruby
+WWW=		https://github.com/seattlerb/ruby_parser
 
 LICENSE=	MIT
 
