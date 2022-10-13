@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	gsk
 PORTVERSION=	1.0.63
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	C library for writing servers
+WWW=		http://gsk.sourceforge.net/
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
