@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	openssl
 PORTVERSION=	20.0.1
 PORTEPOCH=	1
@@ -10,6 +8,7 @@ DISTNAME=	pyOpenSSL-${PORTVERSION}
 
 MAINTAINER=	sbz@FreeBSD.org
 COMMENT=	Python interface to the OpenSSL library
+WWW=		https://github.com/pyca/pyopenssl
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
