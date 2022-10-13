@@ -1,5 +1,3 @@
-# Created by: Mark Murray <markm@FreeBSD.org>
-
 PORTNAME=	Crypt-CBC
 PORTVERSION=	3.04
 CATEGORIES=	security perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl5 interface to Cipher Block Chaining with DES and IDEA
+WWW=		https://metacpan.org/release/Crypt-CBC
 
 LICENSE=	ART10
 
