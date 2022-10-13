@@ -1,5 +1,3 @@
-# Created by: ports@c0decafe.net <ports@c0decafe.net>
-
 PORTNAME=	notify
 PORTVERSION=	0.5.2
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	meta@FreeBSD.org
 COMMENT=	Desktop notify for many platform
+WWW=		https://github.com/jugyo/notify
 
 LICENSE=	MIT
 
