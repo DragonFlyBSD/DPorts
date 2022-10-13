@@ -1,5 +1,3 @@
-# Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-
 PORTNAME=	omake
 PORTVERSION=	0.10.3
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ MASTER_SITES=	http://download.camlcity.org/download/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Flexible build system
+WWW=		http://omake.metaprl.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
