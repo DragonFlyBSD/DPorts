@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	python-binary-memcached
 PORTVERSION=	0.31.1
 CATEGORIES=	databases python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Pure python module to access memcached via its binary protocol
+WWW=		https://github.com/jaysonsantos/python-binary-memcached
 
 LICENSE=	MIT
 
