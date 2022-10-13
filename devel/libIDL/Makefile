@@ -1,6 +1,3 @@
-# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-#   $MCom: ports/devel/libIDL/Makefile,v 1.7 2010/04/02 17:27:42 kwm Exp $
-
 PORTNAME=	libIDL
 PORTVERSION=	0.8.14
 PORTREVISION=	5
@@ -10,6 +7,7 @@ DIST_SUBDIR=	gnome2
 
 MAINTAINER=	desktop@FreeBSD.org
 COMMENT=	Library for creating trees of CORBA IDL files
+WWW=		https://www.gnome.org/
 
 LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING
