@@ -1,5 +1,3 @@
-# Created by: Charlie & <root@meatwad.mouf.net>
-
 PORTNAME=	bacon
 PORTVERSION=	1.2.0
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Small RSpec clone
+WWW=		https://github.com/leahneukirchen/bacon
 
 LICENSE=	MIT
 
