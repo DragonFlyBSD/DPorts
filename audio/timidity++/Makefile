@@ -1,5 +1,3 @@
-# Created by: Yoichi Asai <yatt@luna2.org>
-
 PORTNAME=	timidity++
 PORTVERSION=	2.15.0
 CATEGORIES+=	audio
@@ -8,6 +6,7 @@ DISTNAME=	TiMidity++-${PORTVERSION}
 
 MAINTAINER?=	fuz@fuz.su
 COMMENT?=	Software MIDI player
+WWW=		http://timidity.sourceforge.net/
 
 LICENSE=	GPLv2+
 
