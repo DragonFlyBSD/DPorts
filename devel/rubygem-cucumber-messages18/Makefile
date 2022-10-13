@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	cucumber-messages
 PORTVERSION=	18.0.0
 CATEGORIES=	devel rubygems
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	18
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Protocol Buffer messages for Cucumber
+WWW=		https://github.com/cucumber/common/tree/main/messages/ruby
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
