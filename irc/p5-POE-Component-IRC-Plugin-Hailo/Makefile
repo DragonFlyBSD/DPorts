@@ -1,5 +1,3 @@
-# Created by: milki <milki@rescomp.berkeley.edu>
-
 PORTNAME=	POE-Component-IRC-Plugin-Hailo
 PORTVERSION=	0.18
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	PoCo-IRC plugin for a Hailo conversation simulator
+WWW=		https://metacpan.org/release/POE-Component-IRC-Plugin-Hailo
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
