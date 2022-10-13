@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	io-like
 PORTVERSION=	0.3.0.20130301
 CATEGORIES=	devel rubygems
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	rubygem-
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Interface of IO objects to classes providing a few simple methods
+WWW=		https://rubygems.org/gems/io-like
 
 LICENSE=	RUBY
 LICENSE_FILE=	${WRKSRC}/LICENSE
