@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	django-bleach
 PORTVERSION=	3.0.0
 CATEGORIES=	www python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Easily use bleach with Django models and templates
+WWW=		https://github.com/marksweb/django-bleach
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
