@@ -1,5 +1,3 @@
-# Created by: Matthias Fechner <mfechner@FreeBSD.org>
-
 PORTNAME=	gitlab-sidekiq-fetcher
 PORTVERSION=	0.8.0
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	mfechner@FreeBSD.org
 COMMENT=	Redis reliable queue pattern implemented in Sidekiq
+WWW=		https://github.com/TEA-ebook/sidekiq-reliable-fetch
 
 LICENSE=	RUBY
 
