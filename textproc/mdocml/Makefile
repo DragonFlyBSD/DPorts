@@ -1,5 +1,3 @@
-# Created by: Ulrich Spoerlein <uspoerlein@gmail.com>
-
 PORTNAME=	mdocml
 PORTVERSION=	1.14.5
 CATEGORIES=	textproc
@@ -9,6 +7,7 @@ DISTNAME=	mandoc-${DISTVERSION}
 
 MAINTAINER=	uqs@FreeBSD.org
 COMMENT=	mdoc macro compiler
+WWW=		https://mdocml.bsd.lv/
 
 LICENSE=	ISCL
 LICENSE_FILE=	${WRKSRC}/LICENSE
