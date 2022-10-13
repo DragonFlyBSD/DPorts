@@ -1,5 +1,3 @@
-# Created by: NAKATA, Maho <maho@FreeBSD.org>
-
 # NB: Do not delete or wrap post-install section, since we have to provide
 #     READMEj and README
 
@@ -11,6 +9,7 @@ MASTER_SITES=	https://people.freebsd.org/~maho/mxico/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Rotating Object on the screen (Zalgaller polyhedra)
+WWW=		https://people.freebsd.org/~maho/mxico/
 
 LICENSE=	MIT
 
