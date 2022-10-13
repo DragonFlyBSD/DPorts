@@ -1,5 +1,3 @@
-# Created by: Alexander Best <arundel@gmx.net>
-
 PORTNAME=	vba
 PORTVERSION=	1.7.2
 PORTREVISION=	13
@@ -9,6 +7,7 @@ DISTNAME=	VisualBoyAdvance-src-${PORTVERSION}
 
 MAINTAINER=	arundel@h3c.de
 COMMENT=	Open source Gameboy Advance emulator
+WWW=		https://web.archive.org/web/20110718045837/http://vba.ngemu.com/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
