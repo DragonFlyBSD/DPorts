@@ -1,5 +1,3 @@
-# Created by: Hirohisa Yamaguchi <umq@ueo.co.jp>
-
 PORTNAME=	enma
 PORTVERSION=	1.2.0
 PORTREVISION=	6
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/ENMA/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Sender authentication milter supporting SPF and Sender ID
+WWW=		https://sourceforge.net/projects/enma/
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
