@@ -1,5 +1,3 @@
-# Created by: Zahatski Aliaksandr <zag@cpan.org>
-
 PORTNAME=	WebDAO
 PORTVERSION=	2.25
 CATEGORIES=	www perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	zag@cpan.org
 COMMENT=	Platform for easy creation of web applications
+WWW=		https://metacpan.org/release/WebDAO
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
