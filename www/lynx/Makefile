@@ -1,5 +1,3 @@
-# Created by: Andrey Chernov <ache@FreeBSD.org>
-
 PORTNAME=	lynx
 PORTVERSION=	2.8.9.1
 PORTREVISION=	1
@@ -11,6 +9,7 @@ DISTNAME=	${PORTNAME}${PORTVERSION:R}rel.${PORTVERSION:E}
 
 MAINTAINER=	jharris@widomaker.com
 COMMENT=	Non-graphical, text-based World-Wide Web client
+WWW=		https://lynx.invisible-island.net/
 
 LICENSE=	GPLv2
 
