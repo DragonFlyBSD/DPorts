@@ -1,5 +1,3 @@
-# Created by: Bob Zimmermann <rpz@cse.wustl.edu>
-
 PORTNAME=	gmap
 PORTVERSION=	2020.09.12
 CATEGORIES=	biology
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}-gsnap-${PORTVERSION:C|\.|-|g}
 
 MAINTAINER=	jwb@FreeBSD.org
 COMMENT=	Genomic Mapping and Alignment Program for mRNA and EST Sequences
+WWW=		http://www.gene.com/share/gmap
 
 LICENSE=	GMAP
 LICENSE_NAME=	GMAP License
