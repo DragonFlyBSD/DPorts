@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	POE-Component-DebugShell
 PORTVERSION=	1.412
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Interactive peeking into a running POE application
+WWW=		https://metacpan.org/release/SUNGO/POE-Component-DebugShell-1.412
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
