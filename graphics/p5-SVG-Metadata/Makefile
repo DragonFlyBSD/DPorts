@@ -1,5 +1,3 @@
-# Created by: Michael Johnson <ahze@FreeBSD.org>
-
 PORTNAME=	SVG-Metadata
 PORTVERSION=	0.28
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module to capture metadata info about an SVG file
+WWW=		https://metacpan.org/release/SVG-Metadata
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	xml_grep:textproc/p5-XML-Twig
