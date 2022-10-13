@@ -1,5 +1,3 @@
-# Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-
 PORTNAME=	kazoo
 PORTVERSION=	2.5.0
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	Higher Level API to Zookeeper for Python
+WWW=		https://pypi.org/project/kazoo/
 
 LICENSE=	APACHE20
 
