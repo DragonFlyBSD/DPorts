@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	bio-executables
 PORTVERSION=	1.0.0
 CATEGORIES=	biology rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Collection of miscellaneous utilities for bioinformatics
+WWW=		https://github.com/bioruby/bioruby-executables
 
 LICENSE=	BSD2CLAUSE RUBY
 LICENSE_COMB=	dual
