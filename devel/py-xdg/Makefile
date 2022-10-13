@@ -1,6 +1,3 @@
-# Created by: michael johnson <ahze@ahze.net>
-#   $MCom: ports/devel/py-xdg/Makefile,v 1.4 2007/09/10 05:35:05 mezz Exp $
-
 PORTNAME=	xdg
 PORTVERSION=	0.28
 CATEGORIES=	devel python
@@ -10,6 +7,7 @@ DISTNAME=	py${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Python library to access freedesktop.org standards
+WWW=		https://freedesktop.org/Software/pyxdg
 
 LICENSE=	LGPL20
 
