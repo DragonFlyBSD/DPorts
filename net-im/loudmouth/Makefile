@@ -1,6 +1,3 @@
-# Created by: Adam Weinberger <adamw@FreeBSD.org>
-#   $MCom: ports/trunk/net-im/loudmouth/Makefile 19914 2014-09-25 22:33:21Z kwm $
-
 PORTNAME=	loudmouth
 DISTVERSION=	1.5.4
 CATEGORIES=	net-im
@@ -9,6 +6,7 @@ MASTER_SITES=	https://mcabber.com/files/loudmouth/ \
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Lightweight Jabber client library
+WWW=		https://mcabber.com/
 
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/COPYING
