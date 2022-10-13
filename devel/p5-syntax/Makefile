@@ -1,5 +1,3 @@
-# Created by: Po-Chien Lin <linpc@cs.nctu.edu.tw>
-
 PORTNAME=	syntax
 PORTVERSION=	0.004
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Activate syntax extensions in Perl
+WWW=		https://metacpan.org/release/syntax
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
