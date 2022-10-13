@@ -1,5 +1,3 @@
-# Created by: Johannes Jost Meixner <johannes@perceivon.net>
-
 PORTNAME=	msrest
 PORTVERSION=	0.7.1
 CATEGORIES=	net-mgmt python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	AutoRest swagger generator Python client runtime
+WWW=		https://github.com/Azure/msrest-for-python
 
 LICENSE=	MIT
 
