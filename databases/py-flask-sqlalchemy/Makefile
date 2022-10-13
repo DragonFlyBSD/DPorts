@@ -1,5 +1,3 @@
-# Created by: Olivier Duchateau <duchateau.olivier@gmail.com>
-
 PORTNAME=	flask-sqlalchemy
 PORTVERSION=	2.5.1
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DISTNAME=	Flask-SQLAlchemy-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Add SQLAlchemy support to your Flask application
+WWW=		https://github.com/pallets/flask-sqlalchemy
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.rst
