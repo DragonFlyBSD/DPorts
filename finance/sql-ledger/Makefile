@@ -1,5 +1,3 @@
-# Created by: lth@FreeBSD.org
-
 PORTNAME=	sql-ledger
 PORTVERSION=	3.2.11
 CATEGORIES=	finance perl5
@@ -7,6 +5,7 @@ MASTER_SITES=	http://www.sql-ledger.com/source/
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Double entry accounting system
+WWW=		https://www.sql-ledger.org/
 
 LICENSE=	GPLv2
 
