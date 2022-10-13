@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Geo-Coder-OSM
 PORTVERSION=	0.03
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Geocode addresses with the OpenStreetMap Nominatim API
+WWW=		https://metacpan.org/release/Geo-Coder-OSM
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
