@@ -1,5 +1,3 @@
-# Created by: Wojciech A. Koszek <wkoszek@FreeBSD.org>
-
 PORTNAME=	fxload
 PORTVERSION=	20140224
 CATEGORIES=	misc
@@ -9,6 +7,7 @@ DIST_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Firmware download for Cypress EZ-USB devices
+WWW=		https://bitbucket.org/DJOConnor/fxload
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
