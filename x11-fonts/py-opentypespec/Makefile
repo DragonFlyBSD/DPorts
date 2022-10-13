@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	opentypespec
 PORTVERSION=	1.8.4
 CATEGORIES=	x11-fonts python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Data derived from the OpenType specification
+WWW=		https://github.com/simoncozens/opentypespec-py
 
 LICENSE=	APACHE20
 
