@@ -1,5 +1,3 @@
-# Created by: Choe, Cheng-Dae
-
 PORTNAME=	formencode
 PORTVERSION=	1.3.0
 CATEGORIES=	www python
@@ -9,6 +7,7 @@ DISTNAME=	FormEncode-${PORTVERSION}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	HTML form validation, generation, and conversion package
+WWW=		https://www.formencode.org/
 
 LICENSE=	PSFL
 
