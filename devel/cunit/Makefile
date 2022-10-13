@@ -1,5 +1,3 @@
-# Created by: Stefan Pauly <stefan@fh-mainz.de>
-
 PORTNAME=	cunit
 PORTVERSION=	2.1.3
 PORTREVISION=	3
@@ -9,6 +7,7 @@ DISTNAME=	CUnit-${PORTVERSION:R}-${PORTVERSION:E}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Automated unit testing framework for C
+WWW=		http://cunit.sourceforge.net/
 
 LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING
