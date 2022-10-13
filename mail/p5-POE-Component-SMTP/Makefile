@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	POE-Component-SMTP
 PORTVERSION=	1.6
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	SMTP Protocol Implementation
+WWW=		https://metacpan.org/release/POE-Component-SMTP
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
