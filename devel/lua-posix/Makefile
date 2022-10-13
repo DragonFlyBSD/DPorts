@@ -1,5 +1,3 @@
-# Created by: Andrew Turner <andrew+ports@fubar.geek.nz>
-
 PORTNAME=	posix
 PORTVERSION=	35.1
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${LUA_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Lua bindings for POSIX APIs
+WWW=		https://github.com/luaposix/luaposix
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
