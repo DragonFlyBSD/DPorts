@@ -1,10 +1,11 @@
 PORTNAME=	rabs
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.25.4
+DISTVERSION=	2.26.0
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Generic imperative build system
+WWW=		https://github.com/wrapl/rabs
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
