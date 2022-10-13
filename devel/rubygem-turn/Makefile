@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	turn
 PORTVERSION=	0.9.7
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	New output format for Test::Unit
+WWW=		https://github.com/turn-project/turn
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
