@@ -1,5 +1,3 @@
-# Created by: MANTANI Nobutaka <nobutaka@FreeBSD.org>
-
 PORTNAME=	cmigemo
 PORTVERSION=	20141220
 CATEGORIES=	japanese
@@ -7,6 +5,7 @@ DIST_SUBDIR=	cmigemo
 
 MAINTAINER=	nobutaka@FreeBSD.org
 COMMENT=	C implementation of Migemo Japanese incremental search tool
+WWW=		https://www.kaoriya.net/software/cmigemo
 
 .if !defined(PKGNAMESUFFIX)
 LICENSE=	MIT
