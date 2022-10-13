@@ -1,5 +1,3 @@
-# Created by: chinsan <chinsan.tw@gmail.com>
-
 PORTNAME=	HTML-WikiConverter-PbWiki
 PORTVERSION=	0.01
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Convert HTML to PbWiki markup
+WWW=		https://metacpan.org/release/HTML-WikiConverter-PbWiki
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
