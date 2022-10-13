@@ -1,11 +1,10 @@
-# Created by: Sylvio Cesar <sylvio@FreeBSD.org>
-
 PORTNAME=	PEAR_PackageFileManager2
 PORTVERSION=	1.0.4
 CATEGORIES=	devel www pear
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	PEAR class to maintain PEAR packages
+WWW=		https://pear.php.net/package/PEAR_PackageFileManager2
 
 LICENSE=	BSD2CLAUSE
 
