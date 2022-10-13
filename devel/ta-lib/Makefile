@@ -1,14 +1,13 @@
-# Created by: Balwinder S "bsd" Dheeman <bsd@rubyforge.org>
-
 PORTNAME=	ta-lib
 PORTVERSION=	0.4.0
+DISTVERSIONSUFFIX=	-src
 PORTREVISION=	2
 CATEGORIES=	devel finance
 MASTER_SITES=	SF
-DISTNAME=	${PORTNAME}-${DISTVERSION}-src
 
 MAINTAINER=	bdheeman@gmail.com
 COMMENT=	UNIX, POSIX Library for Technical Analysis
+WWW=		https://ta-lib.org/
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
