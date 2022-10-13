@@ -1,15 +1,14 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	jupyterlab-server
-PORTVERSION=	2.14.0
-PORTREVISION=	1
+PORTVERSION=	2.15.1
 CATEGORIES=	devel python
-MASTER_SITES=	CHEESESHOP
+MASTER_SITES=	CHEESESHOP \
+		https://github.com/jupyterlab/jupyterlab_server/releases/download/v${PORTVERSION}/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	jupyterlab_server-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	JupyterLab Server
+WWW=		https://jupyter.org/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
