@@ -1,7 +1,5 @@
-# Created by: Xin LI <delphij@FreeBSD.org>
-
 PORTNAME=		openldap
-DISTVERSION=		2.6.2
+DISTVERSION=		2.6.3
 PORTREVISION=		${OPENLDAP_PORTREVISION}
 CATEGORIES=		net databases
 MASTER_SITES=		https://www.openldap.org/software/download/OpenLDAP/%SUBDIR%/ \
@@ -23,6 +21,7 @@ PKGNAMESUFFIX=		26-server
 .endif
 
 MAINTAINER=		delphij@FreeBSD.org
+WWW=		https://www.OpenLDAP.org/
 .if defined(CLIENT_ONLY)
 COMMENT=		Open source LDAP client implementation
 .else
@@ -36,6 +35,7 @@ LICENSE_PERMS=		dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 # :keepla because port uses lt_dlopen
 USES=			cpe gmake libtool:keepla localbase ssl tar:tgz
+BUILD_DEPENDS+=		autoconf>0:devel/autoconf
 
 .if defined(CLIENT_ONLY)
 CONFLICTS_INSTALL=	${PORTNAME}2[0-57-9]-client ${PORTNAME}-client
@@ -56,7 +56,6 @@ OPTIONS_DEFAULT+=	DEBUG
 .if defined(CLIENT_ONLY)
 OPTIONS_DEFINE+=	DOCS FETCH
 
-FETCH_BUILD_DEPENDS=	autoconf>0:devel/autoconf
 FETCH_CONFIGURE_WITH=	fetch
 .else
 OPTIONS_GROUP=		BKNDS OVLYS
@@ -80,6 +79,7 @@ OPTIONS_GROUP_OVLYS+=	DENYOP
 OPTIONS_GROUP_OVLYS+=	DEREF
 OPTIONS_GROUP_OVLYS+=	DYNGROUP
 OPTIONS_GROUP_OVLYS+=	DYNLIST
+OPTIONS_GROUP_OVLYS+=	EMPTYDS
 OPTIONS_GROUP_OVLYS+=	HOMEDIR
 OPTIONS_GROUP_OVLYS+=	LASTBIND
 OPTIONS_GROUP_OVLYS+=	LASTMOD
@@ -167,6 +167,7 @@ ALLOP_DESC=		With allop overlay (experimental)
 AUTOGROUP_DESC=		With autogroup overlay (experimental)
 CLOAK_DESC=		With cloak overlay (experimental)
 DENYOP_DESC=		With denyop overlay (experimental)
+EMPTYDS_DESC=		With emptyds overlay (experimental)
 LASTBIND_DESC=		With lastbind overlay
 LASTMOD_DESC=		With lastmod overlay (experimental)
 TRACE_DESC=		With Trace overlay
@@ -342,6 +343,10 @@ CONTRIB_CLEANFILES+=	cloak.a
 CONTRIB_MODULES+=	slapd-modules/denyop
 CONTRIB_CLEANFILES+=	denyop.a
 .endif
+.if ${PORT_OPTIONS:MEMPTYDS}
+CONTRIB_MODULES+=	slapd-modules/emptyds
+CONTRIB_CLEANFILES+=	emptyds.a
+.endif
 .if ${PORT_OPTIONS:MLASTBIND}
 CONTRIB_MODULES+=	slapd-modules/lastbind
 CONTRIB_CLEANFILES+=	lastbind.a
@@ -385,7 +390,7 @@ post-patch:
 		${CONFIGURE_WRKSRC}/${CONFIGURE_SCRIPT}
 .endif
 
-pre-configure-FETCH-on:
+pre-configure:
 	@(cd ${WRKSRC} && ${LOCALBASE}/bin/autoconf)
 
 .if !defined(CLIENT_ONLY)
