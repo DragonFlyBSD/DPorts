@@ -1,5 +1,3 @@
-# Created by: Kubilay Kocak <koobs@FreeBSD.org>
-
 PORTNAME=	python
 DISTVERSION=	${PYTHON_DISTVERSION}
 CATEGORIES=	lang python
@@ -10,6 +8,7 @@ DIST_SUBDIR=	python
 
 MAINTAINER=	python@FreeBSD.org
 COMMENT=	Interpreted object-oriented programming language
+WWW=		https://www.python.org/
 
 LICENSE=	PSFL
 
