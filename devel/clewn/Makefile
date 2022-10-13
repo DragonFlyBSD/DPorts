@@ -1,5 +1,3 @@
-# Created by: Giacomo Mariani <giacomomariani_at_yahoo_dot_it>
-
 PORTNAME=	clewn
 PORTVERSION=	1.14
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/OldFiles/${PORTNAME}-${PORTVERSION}/
 
 MAINTAINER=	giacomomariani@yahoo.it
 COMMENT=	Clewn provides Gdb support within Vim
+WWW=		http://clewn.sourceforge.net/index.html
 
 RUN_DEPENDS=	vim:editors/vim
 
