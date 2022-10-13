@@ -1,5 +1,3 @@
-# Created by: Lars Thegler <lars@thegler.dk>
-
 PORTNAME=	Email-Filter
 PORTVERSION=	1.035
 CATEGORIES=	mail perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Library for creating easy email filters
+WWW=		https://metacpan.org/release/Email-Filter
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
