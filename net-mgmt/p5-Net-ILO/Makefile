@@ -1,5 +1,3 @@
-# Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-
 PORTNAME=	Net-ILO
 PORTVERSION=	0.54
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	snowfly@yuntech.edu.tw
 COMMENT=	Interface to HP Integrated Lights-Out
+WWW=		https://metacpan.org/release/Net-ILO
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
