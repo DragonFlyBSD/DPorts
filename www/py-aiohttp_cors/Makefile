@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	aiohttp_cors
 PORTVERSION=	0.7.0
 CATEGORIES=	www python
@@ -9,6 +7,7 @@ DISTNAME=	aiohttp-cors-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	CORS support for aiohttp
+WWW=		https://github.com/aio-libs/aiohttp-cors
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
