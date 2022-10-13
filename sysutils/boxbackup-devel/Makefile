@@ -1,5 +1,3 @@
-# Created by: James O'Gorman <james@netinertia.co.uk>
-
 PORTNAME=	boxbackup
 PORTVERSION=	0.11.r${SVNVERSION:C/^[0-9\.]+_[a-z]+_([0-9]+)/\1/}
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DISTNAME=	${PORTNAME}-${SVNVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Open-source, completely automatic on-line backup system
+WWW=		https://www.boxbackup.org/
 
 LICENSE=	BSD3CLAUSE GPLv2
 LICENSE_COMB=	dual
