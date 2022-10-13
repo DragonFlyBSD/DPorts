@@ -1,5 +1,3 @@
-# Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-
 PORTNAME=	Catalyst-Plugin-Scheduler
 PORTVERSION=	0.10
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Schedule events to run in a cron-like manner
+WWW=		https://metacpan.org/release/Catalyst-Plugin-Scheduler
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
