@@ -1,11 +1,10 @@
-# Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-
 PORTNAME=	HTTP_Download
 PORTVERSION=	1.1.4
 CATEGORIES=	www devel pear
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	PEAR class to send HTTP downloads
+WWW=		https://pear.php.net/package/HTTP_Download
 
 BUILD_DEPENDS=	${PEARDIR}/HTTP/Header.php:www/pear-HTTP_Header@${PHP_FLAVOR}
 RUN_DEPENDS=	${PEARDIR}/HTTP/Header.php:www/pear-HTTP_Header@${PHP_FLAVOR}
