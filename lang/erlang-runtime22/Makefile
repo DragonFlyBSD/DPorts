@@ -1,5 +1,3 @@
-# Created by: ruslan@shevchenko.kiev.ua
-
 PORTNAME=	erlang
 DISTVERSIONPREFIX=	OTP-
 DISTVERSION=	22.3.4.26
@@ -11,6 +9,7 @@ DIST_SUBDIR=	erlang
 
 MAINTAINER=	erlang@FreeBSD.org
 COMMENT=	Functional programming language from Ericsson
+WWW=		https://www.erlang.org/
 
 LICENSE=	APACHE20
 
