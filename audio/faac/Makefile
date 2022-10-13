@@ -1,11 +1,10 @@
-# Created by: Michael Johnson <ahze@ahze.net>
-
 PORTNAME=	faac
 PORTVERSION=	1.30
 CATEGORIES=	audio
 
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	MPEG-2 and MPEG-4 AAC audio encoder
+WWW=		https://www.audiocoding.com/
 
 LICENSE=	GPLv2 LGPL21+ ISO
 LICENSE_COMB=	multi
