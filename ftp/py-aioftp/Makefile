@@ -1,11 +1,12 @@
 PORTNAME=	aioftp
-PORTVERSION=	0.21.2
+PORTVERSION=	0.21.3
 CATEGORIES=	ftp python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	FTP client/server for asyncio
+WWW=		https://aioftp.readthedocs.io/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/license.txt
