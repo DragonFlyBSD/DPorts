@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	sre-yield
 PORTVERSION=	1.2
 CATEGORIES=	devel python
@@ -9,6 +7,7 @@ DISTNAME=	sre_yield-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Expand a regular expression to its possible matches
+WWW=		https://github.com/google/sre_yield
 
 LICENSE=	APACHE20
 
