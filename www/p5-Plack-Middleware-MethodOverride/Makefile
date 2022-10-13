@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Plack-Middleware-MethodOverride
 PORTVERSION=	0.20
 CATEGORIES=	www perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Override REST methods to Plack apps via POST
+WWW=		https://metacpan.org/release/Plack-Middleware-MethodOverride
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
