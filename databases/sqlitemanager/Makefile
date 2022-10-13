@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	sqlitemanager
 PORTVERSION=	1.2.4
 CATEGORIES=	databases www
@@ -8,6 +6,7 @@ DISTNAME=	SQliteManager-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Multilingual web based tool to manage SQLite database
+WWW=		https://www.sqlitemanager.org/
 
 LICENSE=	GPLv2
 
