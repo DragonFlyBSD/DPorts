@@ -1,5 +1,3 @@
-# Created by: lbr@FreeBSD.org
-
 PORTNAME=	Catalyst-Plugin-LogWarnings
 PORTVERSION=	0.03
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Log perl warnings to your Catalyst log object
+WWW=		https://metacpan.org/release/Catalyst-Plugin-LogWarnings
 
 BUILD_DEPENDS=	p5-Catalyst-Runtime>=5.7001:www/p5-Catalyst-Runtime
 RUN_DEPENDS:=	${BUILD_DEPENDS} \
