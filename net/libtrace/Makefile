@@ -1,5 +1,3 @@
-# Created by: Matt Peterson <matt@peterson.org>
-
 PORTNAME=	libtrace
 PORTVERSION=	3.0.19
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	http://research.wand.net.nz/software/libtrace/
 
 MAINTAINER=	matt@peterson.org
 COMMENT=	C library for network packet capture and processing
+WWW=		http://research.wand.net.nz/software/libtrace.php
 
 LIB_DEPENDS=	libpcap.so.1:net/libpcap
 
