@@ -1,5 +1,3 @@
-# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-
 PORTNAME=	WWW-Mechanize-GZip
 PORTVERSION=	0.14
 CATEGORIES=	www perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Use WWW::Mechanize by requesting gzip-compression from the webserver
+WWW=		https://metacpan.org/release/WWW-Mechanize-GZip
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
