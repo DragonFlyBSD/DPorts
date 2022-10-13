@@ -1,5 +1,3 @@
-# Created by: Eric Anholt <anholt@FreeBSD.org>
-
 PORTNAME=	libXv
 PORTVERSION=	1.0.11
 PORTREVISION=	2
@@ -8,6 +6,7 @@ CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	X Video Extension library
+WWW=		https://www.freedesktop.org/Software/xlibs
 
 LICENSE=	MIT
 
