@@ -1,5 +1,3 @@
-# Created by: Alex Miller (<asm@asm.kiev.ua>)
-
 PORTNAME=	HTML_Template_IT
 PORTVERSION=	1.3.1
 PORTEPOCH=	1
@@ -7,6 +5,7 @@ CATEGORIES=	devel www pear
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Integrated Templates
+WWW=		https://pear.php.net/package/HTML_Template_IT
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
