@@ -1,12 +1,11 @@
-# Created by: Roderick van Domburg <r.s.a.vandomburg@student.utwente.nl>
-
 PORTNAME=	capistrano
-PORTVERSION=	3.17.0
+PORTVERSION=	3.17.1
 CATEGORIES=	sysutils rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Utility for executing commands in parallel on multiple machines
+WWW=		https://github.com/capistrano/capistrano
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
