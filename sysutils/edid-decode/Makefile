@@ -1,12 +1,11 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	edid-decode
-PORTVERSION=	0.1.20220406
+PORTVERSION=	0.1.20220803
 CATEGORIES=	sysutils
 MASTER_SITES=	LOCAL/ehaupt
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Decodes binary EDID information from monitors
+WWW=		https://git.linuxtv.org/edid-decode.git
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
