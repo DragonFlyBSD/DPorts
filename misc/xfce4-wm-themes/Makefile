@@ -1,5 +1,3 @@
-# Created by: James Earl <jdearl@telus.net>
-
 PORTNAME=	xfce4-wm-themes
 PORTVERSION=	4.10.0
 PORTREVISION=	2
@@ -10,6 +8,7 @@ DIST_SUBDIR=	xfce4
 
 MAINTAINER=	xfce@FreeBSD.org
 COMMENT=	Additional themes for xfwm4
+WWW=		https://www.xfce.org/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
