@@ -1,12 +1,11 @@
-# Created by: Sofian Brabez <sbrabez@gmail.com>
-
 PORTNAME=	goaccess
-PORTVERSION=	1.5.7
+PORTVERSION=	1.6.3
 CATEGORIES=	sysutils
 MASTER_SITES=	http://tar.goaccess.io/
 
 MAINTAINER=	sbz@FreeBSD.org
 COMMENT=	Real-time Apache web log analyzer
+WWW=		https://goaccess.io
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
