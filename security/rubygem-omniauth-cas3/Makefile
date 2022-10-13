@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	omniauth-cas3
 PORTVERSION=	1.1.4
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	CAS 3.0 Strategy for OmniAuth
+WWW=		https://github.com/tduehr/omniauth-cas3
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
