@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wen@FreeBSD.org>
-
 PORTNAME=	Dancer2
 PORTVERSION=	0.400000
 CATEGORIES=	www perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Lightweight yet powerful web application framework
+WWW=		https://metacpan.org/release/Dancer2
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
