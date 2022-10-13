@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	FFI-Platypus-Declare
 PORTVERSION=	1.34
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Declarative interface to FFI::Platypus
+WWW=		https://metacpan.org/release/FFI-Platypus-Declare
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
