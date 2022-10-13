@@ -1,5 +1,3 @@
-# Created by: Juergen Lock <nox@FreeBSD.org>
-
 PORTNAME=	szap_s2
 PORTVERSION=	20100129s
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	LOCAL/nox
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple zapping tool for the Linux DVB S2 API
+WWW=		https://www.linuxtv.org/wiki/index.php/Szap-s2
 
 LICENSE=	GPLv2+
 
