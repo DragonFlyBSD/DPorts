@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	soap2py
 PORTVERSION=	1.16
 CATEGORIES=	net www python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python simple and lightweight SOAP Library
+WWW=		https://github.com/pysimplesoap/pysimplesoap
 
 LICENSE=	LGPL3+
 
