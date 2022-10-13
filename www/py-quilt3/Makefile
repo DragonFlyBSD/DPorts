@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	quilt3
 PORTVERSION=	5.0.0
 CATEGORIES=	www python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python client for Quilt data hub
+WWW=		https://github.com/quiltdata/quilt
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
