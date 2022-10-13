@@ -1,5 +1,3 @@
-# Created by: Mark Felder <feld@FreeBSD.org>
-
 PORTNAME=	fabric3
 DISTVERSION=	1.14
 DISTVERSIONSUFFIX=	.post1
@@ -10,6 +8,7 @@ DISTNAME=	Fabric3-${DISTVERSIONFULL}
 
 MAINTAINER=	egypcio@FreeBSD.org
 COMMENT=	Python tool for remote execution and deployment
+WWW=		https://github.com/mathiasertl/fabric/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
