@@ -1,14 +1,12 @@
-# Created by: Dan Langille <dvl@FreeBSD.org>
-
 PORTNAME=	tldextract
-PORTVERSION=	3.3.0
-PORTREVISION=	1
+PORTVERSION=	3.3.1
 CATEGORIES=	dns python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	dvl@FreeBSD.org
 COMMENT=	Separate the TLD from the registered domain and subdomains of a URL
+WWW=		https://github.com/john-kurkowski/tldextract
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
