@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	brotlicffi
 PORTVERSION=	1.0.9.2
 CATEGORIES=	archivers python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python CFFI bindings to the Brotli library
+WWW=		https://github.com/python-hyper/brotlicffi
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
