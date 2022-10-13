@@ -1,5 +1,3 @@
-# Created by: thierry@pompo.net
-
 PORTNAME=	uniutils
 PORTVERSION=	2.27
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	http://billposer.org/Software/Downloads/
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Unicode Description Utilities
+WWW=		https://billposer.org/Software/unidesc.html
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
