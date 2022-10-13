@@ -1,11 +1,10 @@
-# Created by: Alex Miller (<asm@asm.kiev.ua>)
-
 PORTNAME=	Config
 PORTVERSION=	1.10.12
 CATEGORIES=	devel www pear
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Your configurations swiss-army knife
+WWW=		https://pear.php.net/package/Config
 
 LICENSE=	PHP301
 
