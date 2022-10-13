@@ -1,11 +1,12 @@
 PORTNAME=	stix2-patterns
-PORTVERSION=	1.3.2
+PORTVERSION=	2.0.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	security python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Python library to validate STIX 2 Patterns
+WWW=		https://github.com/oasis-open/cti-pattern-validator
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -19,6 +20,6 @@ GH_PROJECT=	cti-pattern-validator
 
 NO_ARCH=	yes
 USES=		python:3.5+
-USE_PYTHON=	distutils autoplist
+USE_PYTHON=	distutils autoplist concurrent
 
 .include <bsd.port.mk>
