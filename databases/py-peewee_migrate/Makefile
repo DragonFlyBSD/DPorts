@@ -1,11 +1,12 @@
 PORTNAME=	peewee_migrate
-PORTVERSION=	1.4.8
+DISTVERSION=	1.4.12
 CATEGORIES=	databases devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	meka@tilda.center
 COMMENT=	Simple migration engine for Peewee
+WWW=		https://github.com/klen/peewee_migrate
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -21,9 +22,9 @@ TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}psycopg2>=0:databases/py-psycopg2@${PY_FLAV
 
 USES=		python:3.7+
 USE_GITHUB=	yes # tests not shipped with sdist
+GH_ACCOUNT=	klen
 USE_PYTHON=	autoplist concurrent distutils
 
-GH_ACCOUNT=	klen
 TEST_ENV=	PYTHONPATH=${WRKSRC}/src
 
 NO_ARCH=	yes
