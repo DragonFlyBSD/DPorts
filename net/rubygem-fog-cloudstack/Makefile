@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	fog-cloudstack
 PORTVERSION=	0.1.0
 CATEGORIES=	net rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Module for the 'fog' gem to support CloudStack
+WWW=		https://github.com/fog/fog-cloudstack
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
