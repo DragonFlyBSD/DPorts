@@ -1,5 +1,3 @@
-# Created by: Michael Moll <kvedulv@kvedulv.de>
-
 PORTNAME=	smart_proxy_salt
 PORTVERSION=	5.0.0
 CATEGORIES=	sysutils ruby
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	SaltStack Plug-In for Foreman's Smart Proxy
+WWW=		https://github.com/theforeman/smart_proxy_salt
 
 LICENSE=	GPLv3
 
