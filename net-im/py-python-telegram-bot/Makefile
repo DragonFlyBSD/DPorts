@@ -1,5 +1,3 @@
-# Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-
 PORTNAME=	python-telegram-bot
 PORTVERSION=	13.1
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	olgeni@FreeBSD.org
 COMMENT=	Not just a Python wrapper around the Telegram Bot API
+WWW=		https://python-telegram-bot.org/
 
 LICENSE=	LGPL3
 
