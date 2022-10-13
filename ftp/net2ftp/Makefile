@@ -1,5 +1,3 @@
-# Created by: Alexander Kriventsov
-
 PORTNAME=	net2ftp
 PORTVERSION=	1.3
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}_v${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Web-based FTP client written in PHP
+WWW=		https://www.net2ftp.com/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/files_to_upload/LICENSE.txt
