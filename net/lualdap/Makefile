@@ -1,5 +1,3 @@
-# Created by: Piotr Florczyk <pf@itwf.pl>
-
 PORTNAME=	lualdap
 PORTVERSION=	1.3.0
 DISTVERSIONPREFIX=	v
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${LUA_PKGNAMEPREFIX}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	LDAP support for the Lua language
+WWW=		https://github.com/lualdap/lualdap
 
 LICENSE=	MIT
 
