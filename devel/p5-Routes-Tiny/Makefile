@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Routes-Tiny
 PORTVERSION=	0.21
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Lightweight routes implementation
+WWW=		https://metacpan.org/release/Routes-Tiny
 
 LICENSE=	ART20
 
