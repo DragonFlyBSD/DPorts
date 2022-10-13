@@ -1,15 +1,16 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	redis
-PORTVERSION=	4.7.0
+PORTVERSION=	5.0.4
 CATEGORIES=	databases rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Ruby client library for Redis, the key value storage server
+WWW=		https://github.com/redis/redis-rb
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+RUN_DEPENDS=	rubygem-redis-client>=0.7.4:databases/rubygem-redis-client
 
 USES=		gem
 USE_RUBY=	yes
