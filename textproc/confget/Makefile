@@ -1,5 +1,3 @@
-# Created by: Peter Pentchev <roam@FreeBSD.org>
-
 PORTNAME=	confget
 PORTVERSION=	4.1.0
 DISTVERSIONPREFIX=	release-
@@ -8,6 +6,7 @@ MASTER_SITES=	https://gitlab.com/confget/confget/-/archive/release/${PORTVERSION
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Read variables from INI-style configuration files
+WWW=		https://gitlab.com/confget/confget
 
 LICENSE=	BSD2CLAUSE
 
