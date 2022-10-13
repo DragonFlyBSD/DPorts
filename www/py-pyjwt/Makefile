@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	pyjwt
 PORTVERSION=	2.4.0
 CATEGORIES=	www python
@@ -9,6 +7,7 @@ DISTNAME=	PyJWT-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	JSON Web Token implementation in Python
+WWW=		https://github.com/jpadilla/pyjwt
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
