@@ -1,5 +1,3 @@
-# Created by: Uffe Jakobsen <uffe@uffe.org>
-
 PORTNAME=	firmware
 PORTVERSION=	20140418
 PORTREVISION=	2
@@ -11,6 +9,7 @@ DISTFILES=	#none
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Sigrok firmware extraction utilities
+WWW=		https://www.sigrok.org/wiki/Firmware
 
 LICENSE=	GPLv3+
 
