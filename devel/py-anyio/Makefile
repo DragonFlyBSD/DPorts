@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	anyio
 PORTVERSION=	3.6.1
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	High level compatibility layer for multiple asynchronous event loop implementations
+WWW=		https://github.com/agronholm/anyio
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
