@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	oinkmaster
 PORTVERSION=	2.0
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Help you update your snort rules after each update
+WWW=		http://oinkmaster.sourceforge.net/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
