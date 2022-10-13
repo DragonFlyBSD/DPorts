@@ -1,5 +1,3 @@
-# Created by: Cyrille Lefevre <clefevre@citeweb.net>
-
 PORTNAME=	gengetopt
 PORTVERSION=	2.23
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ MASTER_SITES=	GNU
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tool for generating a C function which parses command line arguments
+WWW=		https://www.gnu.org/software/gengetopt/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
