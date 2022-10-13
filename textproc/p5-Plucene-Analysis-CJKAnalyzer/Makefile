@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Plucene-Analysis-CJKAnalyzer
 PORTVERSION=	0.02
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Analyzer for CJK texts
+WWW=		https://metacpan.org/release/XERN/Plucene-Analysis-CJKAnalyzer-0.02
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
