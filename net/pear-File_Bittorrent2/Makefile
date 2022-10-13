@@ -1,11 +1,10 @@
-# Created by: Zhen REN <bg1tpt@gmail.com>
-
 PORTNAME=	File_Bittorrent2
 PORTVERSION=	1.3.1
 CATEGORIES=	net pear
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Decode and Encode data in Bittorrent format
+WWW=		https://pear.php.net/package/File_Bittorrent2
 
 LICENSE=	LGPL21+
 
