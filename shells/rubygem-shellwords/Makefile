@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	shellwords
 PORTVERSION=	0.1.0
 CATEGORIES=	shells rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Manipulate strings with word parsing rules of UNIX Bourne shell
+WWW=		https://github.com/ruby/shellwords
 
 LICENSE=	BSD2CLAUSE RUBY
 LICENSE_COMB=	dual
