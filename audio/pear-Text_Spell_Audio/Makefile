@@ -1,11 +1,10 @@
-# Created by: Ditesh Shashikant Gathani <ditesh@gathani.org>
-
 PORTNAME=	Text_Spell_Audio
 PORTVERSION=	0.1.0
 CATEGORIES=	audio pear
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Generate a sound clip saying the contents of a string of characters
+WWW=		https://pear.php.net/package/Text_Spell_Audio
 
 LICENSE=	PHP301
 
