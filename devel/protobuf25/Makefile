@@ -1,5 +1,3 @@
-# Created by: vanilla
-
 # devel/hadoop2 needs version 2.5.0
 PORTNAME=	protobuf
 PORTVERSION=	2.5.0
@@ -10,6 +8,7 @@ PKGNAMESUFFIX=	25
 
 MAINTAINER=	demon@FreeBSD.org
 COMMENT=	Data interchange format library
+WWW=		https://github.com/google/protobuf
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING.txt
