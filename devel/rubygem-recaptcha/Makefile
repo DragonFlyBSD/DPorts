@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	recaptcha
 PORTVERSION=	4.14.0
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Helpers for the reCAPTCHA API
+WWW=		https://github.com/ambethia/recaptcha
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
