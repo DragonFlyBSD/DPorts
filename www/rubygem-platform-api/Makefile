@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	platform-api
 PORTVERSION=	3.3.0
 CATEGORIES=	www rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Ruby HTTP client for the Heroku API
+WWW=		https://github.com/heroku/platform-api
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
