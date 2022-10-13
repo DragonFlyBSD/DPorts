@@ -1,5 +1,3 @@
-# Created by: Ryan Steinmetz <rpsfa@rit.edu>
-
 PORTNAME=	dm-paperclip
 PORTVERSION=	2.5.0
 CATEGORIES=	databases rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	File attachments as attributes for DataMapper
+WWW=		https://github.com/krobertson/dm-paperclip
 
 LICENSE=	MIT
 
