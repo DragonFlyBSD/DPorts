@@ -1,5 +1,3 @@
-# Created by: Xin LI <delphij@FreeBSD.org>
-
 PORTNAME=		openldap
 DISTVERSION=		2.4.59
 PORTREVISION=		${OPENLDAP_PORTREVISION}
@@ -23,6 +21,7 @@ PKGNAMESUFFIX=		24-server
 .endif
 
 MAINTAINER=		delphij@FreeBSD.org
+WWW=		https://www.OpenLDAP.org/
 .if defined(CLIENT_ONLY)
 COMMENT=		Open source LDAP client implementation
 .else
