@@ -1,11 +1,13 @@
 PORTNAME=	sslproxy
 PORTVERSION=	0.9.3
+PORTREVISION=	1
 DISTVERSIONPREFIX=	v
 PORTEPOCH=	1
 CATEGORIES=	security
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Transparent and scalable SSL/TLS interception
+WWW=		https://github.com/sonertari/SSLproxy
 
 LICENSE=	BSD2CLAUSE
 
