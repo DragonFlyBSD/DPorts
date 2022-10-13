@@ -1,5 +1,3 @@
-# Created by: Gerrit Beine (<tux@pinguru.net>)
-
 PORTNAME=	Net_LDAP
 PORTVERSION=	1.1.5
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	net pear
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	OO interface for searching and manipulating LDAP-entries
+WWW=		https://pear.php.net/package/Net_LDAP
 
 LICENSE=	LGPL3
 
