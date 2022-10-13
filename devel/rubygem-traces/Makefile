@@ -1,12 +1,11 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	traces
-PORTVERSION=	0.6.0
+PORTVERSION=	0.7.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Application instrumentation and tracing
+WWW=		https://github.com/socketry/traces
 
 LICENSE=	MIT
 
