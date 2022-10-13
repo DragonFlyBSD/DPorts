@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	redis
 PORTVERSION=	6.0.16
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMESUFFIX=	6
 
 MAINTAINER=	yasu@FreeBSD.org
 COMMENT=	Persistent key-value database with built-in net interface
+WWW=		https://redis.io/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING
