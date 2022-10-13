@@ -1,5 +1,3 @@
-# Created by: Ju Pengfei <jupengfei@gmail.com>
-
 PORTNAME=	python-distutils-extra
 PORTVERSION=	2.47
 CATEGORIES=	devel python
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Add support for i18n, documentation, and icons to distutils
+WWW=		https://salsa.debian.org/python-team/packages/python-distutils-extra
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
