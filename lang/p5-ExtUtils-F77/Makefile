@@ -1,5 +1,3 @@
-# Created by: jmz
-
 PORTNAME=	ExtUtils-F77
 PORTVERSION=	1.26
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Helps link C programs with Fortran subroutines
+WWW=		https://metacpan.org/release/ExtUtils-F77
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
