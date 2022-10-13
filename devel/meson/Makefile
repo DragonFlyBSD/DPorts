@@ -1,12 +1,11 @@
-# Created by: Ting-Wei Lan <lantw44@gmail.com>
-
 PORTNAME=	meson
-PORTVERSION=	0.62.2
+PORTVERSION=	0.63.2
 CATEGORIES=	devel python
 MASTER_SITES=	https://github.com/mesonbuild/${PORTNAME}/releases/download/${PORTVERSION}/
 
 MAINTAINER=	desktop@FreeBSD.org
 COMMENT=	High performance build system
+WWW=		https://mesonbuild.com/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/COPYING
