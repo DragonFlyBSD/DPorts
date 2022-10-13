@@ -1,5 +1,3 @@
-# Created by: Stanislav Svirid <count@211.ru>
-
 PORTNAME=	south
 PORTVERSION=	1.0.2
 CATEGORIES=	databases python
@@ -9,6 +7,7 @@ DISTNAME=	South-${PORTVERSION}
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Intelligent schema migrations for Django apps
+WWW=		https://south.aeracode.org/
 
 LICENSE=	APACHE20
 
