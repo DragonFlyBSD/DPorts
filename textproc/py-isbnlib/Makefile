@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	isbnlib
 PORTVERSION=	3.10.10
 CATEGORIES=	textproc python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Extract, clean, transform, hyphenate and metadata for ISBNs
+WWW=		https://github.com/xlcnd/isbnlib
 
 LICENSE=	LGPL3
 LICENSE_FILE=	${WRKSRC}/LICENSE-LGPL-3.0.txt
