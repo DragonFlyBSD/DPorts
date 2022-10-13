@@ -1,5 +1,3 @@
-# Created by: Kubilay Kocak <koobs@FreeBSD.org>
-
 PORTNAME=	capstone
 PORTVERSION=	4.0.2
 CATEGORIES=	devel python
@@ -9,6 +7,7 @@ DIST_SUBDIR=	python # Conflicts with devel/capstone distfile
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Python bindings for the Capstone Disassembly Engine
+WWW=		https://www.capstone-engine.org
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.TXT
