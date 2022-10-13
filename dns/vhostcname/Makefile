@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	vhostcname
 PORTVERSION=	2.00
 CATEGORIES=	dns perl5
@@ -7,6 +5,7 @@ MASTER_SITES=	http://download.gnu.org.ua/pub/release/dnstools/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Synchronize DNS with server names and aliases from Apache vhost
+WWW=		https://man.gnu.org.ua/manpage/?1+vhostcname
 
 LICENSE=	GPLv3+
 
