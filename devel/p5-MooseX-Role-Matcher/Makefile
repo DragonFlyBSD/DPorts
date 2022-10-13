@@ -1,5 +1,3 @@
-# Created by: Anes Mukhametov <anes@anes.su>
-
 PORTNAME=	MooseX-Role-Matcher
 PORTVERSION=	0.05
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	anes@anes.su
 COMMENT=	Generic object matching based on attributes and methods
+WWW=		https://metacpan.org/release/MooseX-Role-Matcher
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
