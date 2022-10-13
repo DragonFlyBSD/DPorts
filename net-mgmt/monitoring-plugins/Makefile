@@ -1,5 +1,3 @@
-# Created by: Blaz Zupan <blaz@si.FreeBSD.org>
-
 PORTNAME=	monitoring-plugins
 PORTVERSION=	2.3.1
 CATEGORIES=	net-mgmt
@@ -8,6 +6,7 @@ MASTER_SITES=	https://www.monitoring-plugins.org/download/ \
 
 MAINTAINER=	mat@FreeBSD.org
 COMMENT=	Monitoring Plugins for Nagios
+WWW=		https://www.monitoring-plugins.org/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
