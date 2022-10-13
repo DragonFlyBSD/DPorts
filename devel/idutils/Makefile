@@ -1,5 +1,3 @@
-# Created by: pst@FreeBSD.org
-
 PORTNAME=	idutils
 PORTVERSION=	4.6
 PORTREVISION=	5
@@ -8,6 +6,7 @@ MASTER_SITES=	GNU
 
 MAINTAINER=	peterjeremy@acm.org
 COMMENT=	The classic Berkeley gid/lid tools for looking up variables in code
+WWW=		https://www.gnu.org/software/idutils/
 
 LICENSE=	GPLv3
 
