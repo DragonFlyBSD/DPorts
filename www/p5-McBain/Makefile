@@ -1,5 +1,3 @@
-# Created by: Adam Weinberger <adamw@FreeBSD.org>
-
 PORTNAME=	McBain
 PORTVERSION=	2.001000
 CATEGORIES=	www perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Lightweight auto-validating, self-documenting web framework
+WWW=		https://metacpan.org/release/McBain
 
 LICENSE=	GPLv1 ARTPERL10
 LICENSE_COMB=	dual
