@@ -1,11 +1,12 @@
 PORTNAME=	azure-mgmt-sqlvirtualmachine
-DISTVERSION=	1.0.0b2
+DISTVERSION=	1.0.0b3
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	dbaio@FreeBSD.org
 COMMENT=	Microsoft Azure SQL Virtual Machine Management Client Library for Python
+WWW=		https://pypi.org/project/azure-mgmt-sqlvirtualmachine/
 
 LICENSE=	MIT
 
