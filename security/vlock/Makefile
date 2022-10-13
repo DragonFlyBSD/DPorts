@@ -1,5 +1,3 @@
-# Created by: George Reid <services@nevernet.net>
-
 PORTNAME=	vlock
 PORTVERSION=	2.2.3
 PORTREVISION=	4
@@ -9,6 +7,7 @@ MASTER_SITES=	http://cthulhu.c3d2.de/~toidinamai/vlock/archive/ \
 
 MAINTAINER=	martymac@FreeBSD.org
 COMMENT=	Locks a terminal
+WWW=		http://freshmeat.net/projects/vlock
 
 LICENSE=	GPLv2
 
