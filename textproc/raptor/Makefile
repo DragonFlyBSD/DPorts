@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	raptor
 PORTVERSION=	1.4.21
 PORTREVISION=	8
@@ -9,6 +7,7 @@ MASTER_SITES=	SF/librdf/${PORTNAME}/${PORTVERSION} \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	RDF Parser Toolkit for Redland
+WWW=		https://librdf.org/raptor/
 
 LIB_DEPENDS=	libcurl.so:ftp/curl
 
