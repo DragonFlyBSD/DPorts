@@ -1,5 +1,3 @@
-# Created by: Manuel Kasper <mk@neon1.net>
-
 PORTNAME=	mod_auth_pubtkt
 PORTVERSION=	0.13
 CATEGORIES=	www
@@ -9,6 +7,7 @@ DIST_SUBDIR=	apache2
 
 MAINTAINER=	mk@neon1.net
 COMMENT=	Apache module to provide public key ticket based authentication
+WWW=		https://neon1.net/mod_auth_pubtkt/
 
 USES=		apache:2.2+
 AP_FAST_BUILD=	yes
