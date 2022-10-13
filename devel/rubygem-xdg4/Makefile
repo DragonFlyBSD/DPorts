@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	xdg
 PORTVERSION=	4.5.0
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMESUFFIX=	4
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	XDG Base Directory Standard Library for Ruby
+WWW=		https://github.com/bkuhlmann/xdg
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.adoc
