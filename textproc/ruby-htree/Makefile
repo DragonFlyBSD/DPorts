@@ -1,5 +1,3 @@
-# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-
 PORTNAME=	htree
 PORTVERSION=	0.8
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DIST_SUBDIR=	ruby
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Ruby library to manipulate HTML/XML tree data structure
+WWW=		http://www.a-k-r.org/htree/
 
 BUILD_DEPENDS=	rubygem-rdoc>=0.a:devel/rubygem-rdoc
 
