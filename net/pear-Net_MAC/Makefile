@@ -1,5 +1,3 @@
-# Created by: Zhen REN <bg1tpt@gmail.com>
-
 PORTNAME=	Net_MAC
 PORTVERSION=	0.1.5
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	net pear
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	PEAR class that validates and formats MAC addresses
+WWW=		https://pear.php.net/package/Net_MAC
 
 USES=		pear
 
