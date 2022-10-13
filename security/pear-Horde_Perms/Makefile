@@ -1,11 +1,10 @@
-# Created by: Martin Matuska <mm@FreeBSD.org>
-
 PORTNAME=	Horde_Perms
 PORTVERSION=	2.1.8
 CATEGORIES=	security www pear
 
 MAINTAINER=	horde@FreeBSD.org
 COMMENT=	Horde Permissions System
+WWW=		https://pear.horde.org
 
 USES=	horde cpe
 USE_HORDE_RUN=	Horde_Db \
