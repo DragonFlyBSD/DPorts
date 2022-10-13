@@ -1,11 +1,12 @@
 PORTNAME=	hcloud
-DISTVERSION=	1.17.0
+DISTVERSION=	1.18.0
 CATEGORIES=	sysutils python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	matthew@FreeBSD.org
 COMMENT=	Official Hetzner Cloud python library
+WWW=		https://hcloud-python.readthedocs.io/en/latest/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
