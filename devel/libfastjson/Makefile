@@ -1,5 +1,3 @@
-# Created by: Muhammad Moinur Rahman <bofh@FreeBSD.org>
-
 PORTNAME=	libfastjson
 PORTVERSION=	0.99.9
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Fork of json-c (JSON implementation in C)
+WWW=		https://github.com/rsyslog/libfastjson
 
 LICENSE=	MIT
 
