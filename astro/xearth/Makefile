@@ -1,5 +1,3 @@
-# Created by: Piero Serini <piero@FreeBSD.org>
-
 PORTNAME=	xearth
 PORTVERSION=	1.2
 CATEGORIES=	astro geography
@@ -7,6 +5,7 @@ MASTER_SITES=	LOCAL/madpilot/xearth
 
 MAINTAINER=	ler@FreeBSD.org
 COMMENT=	Set the root window to the image of earth
+WWW=		https://xearth.org/
 
 LICENSE=	Xearth
 LICENSE_NAME=	Xearth license
