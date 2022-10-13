@@ -1,5 +1,3 @@
-# Created by: Jov <amutu@amutu.com>
-
 PORTNAME=	dnsforwarder
 PORTVERSION=	6.1.15
 PORTEPOCH=	1
@@ -7,6 +5,7 @@ CATEGORIES=	dns
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple DNS forwarder
+WWW=		https://github.com/holmium/dnsforwarder
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
