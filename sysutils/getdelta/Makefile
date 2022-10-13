@@ -1,5 +1,3 @@
-# Created by: Anton Statutov <astatutov@gmail.com>
-
 PORTNAME=	getdelta
 PORTVERSION=	0.7.8
 PORTREVISION=	5
@@ -11,6 +9,7 @@ MASTER_SITES=	GENTOO \
 
 MAINTAINER=	astatutov@gmail.com
 COMMENT=	Script for reducing bandwidth load while upgrading ports disfiles
+WWW=		http://linux01.gwdg.de/~nlissne/
 
 LICENSE=	GPLv2
 
