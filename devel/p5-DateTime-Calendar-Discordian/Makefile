@@ -1,5 +1,3 @@
-# Created by: Philip Paeps <philip@FreeBSD.org>
-
 PORTNAME=	DateTime-Calendar-Discordian
 PORTVERSION=	1.0
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	philip@FreeBSD.org
 COMMENT=	Perl extension for the Discordian Calendar
+WWW=		https://metacpan.org/release/DateTime-Calendar-Discordian
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
