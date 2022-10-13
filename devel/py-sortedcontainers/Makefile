@@ -1,13 +1,12 @@
-# Created by: antoine@FreeBSD.org
-
 PORTNAME=	sortedcontainers
-PORTVERSION=	2.3.0
+PORTVERSION=	2.4.0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Python Sorted Container Types: SortedList, SortedDict, and SortedSet
+WWW=		https://www.grantjenks.com/docs/sortedcontainers/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
