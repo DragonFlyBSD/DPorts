@@ -1,5 +1,3 @@
-# Created by: Soeren Boll Overgaard <boll@tolkien.dk>
-
 PORTNAME=	wmcpuload
 DISTVERSION=	1.1.1
 
@@ -8,6 +6,7 @@ MASTER_SITES=	https://www.dockapps.net/download/
 
 MAINTAINER=	drtr0jan@yandex.ru
 COMMENT=	"lcd" dockapp for windowmaker, which displays the current cpuload
+WWW=		https://www.dockapps.net/wmcpuload
 LICENSE=	GPLv2
 
 USES=		xorg
