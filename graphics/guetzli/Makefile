@@ -1,5 +1,3 @@
-# Created by: Yuri Victorovich <yuri@rawbw.com>
-
 PORTNAME=	guetzli
 PORTVERSION=	1.0.1
 PORTREVISION=	5
@@ -8,6 +6,7 @@ CATEGORIES=	graphics
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Perceptual JPEG encoder
+WWW=		https://github.com/google/guetzli
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
