@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	MouseX-App-Cmd
 PORTVERSION=	0.30
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Mashes up MouseX::Getopt and App::Cmd
+WWW=		https://metacpan.org/release/MouseX-App-Cmd
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
