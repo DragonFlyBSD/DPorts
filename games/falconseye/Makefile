@@ -1,5 +1,3 @@
-# Created by: Kris Kennaway <kris@FreeBSD.org>
-
 PORTNAME=	falconseye
 PORTVERSION=	1.9.3
 PORTREVISION=	11
@@ -9,6 +7,7 @@ DISTNAME=	nethack_source_331_jtp_${PORTVERSION:S/.//g}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	NetHack derivative
+WWW=		http://falconseye.sourceforge.net/
 
 RUN_DEPENDS=	timidity:audio/timidity
 
