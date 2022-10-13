@@ -1,5 +1,3 @@
-# Created by: andrew morton
-
 PORTNAME=	cxxtest
 PORTVERSION=	4.4
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	hselasky@FreeBSD.org
 COMMENT=	Simple and powerful JUnit/CppUnit/xUnit-like framework for C++
+WWW=		http://cxxtest.sourceforge.net/
 
 LICENSE=	LGPL3+
 
