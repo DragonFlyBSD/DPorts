@@ -5,6 +5,7 @@ MASTER_SITES=	https://codeberg.org/attachments/ede108eb-28d5-44d6-a518-7ff014934
 
 MAINTAINER=	tobik@FreeBSD.org
 COMMENT=	Format FreeBSD Ports Makefiles
+WWW=		https://codeberg.org/tobik/portfmt
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
