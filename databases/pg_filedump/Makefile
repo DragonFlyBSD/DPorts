@@ -1,11 +1,10 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	pg_filedump
 PORTVERSION=	14.1
 CATEGORIES=	databases
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Display formatted contents of a PostgreSQL heap, index, or control file
+WWW=		https://github.com/df7cb/pg_filedump
 
 LICENSE=	GPLv2+
 
