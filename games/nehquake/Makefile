@@ -1,5 +1,3 @@
-# Created by: alepulver
-
 PORTNAME=	nehquake
 PORTVERSION=	1.0
 PORTREVISION=	9
@@ -9,6 +7,7 @@ DISTNAME=	NehQuake-bjp-bin-src.linux
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Quake engine designed for playing Nehahra
+WWW=		http://planetquake.com/nehahra/
 
 BROKEN_FreeBSD_13=	ld: error: duplicate symbol: sb_lines
 BROKEN_FreeBSD_14=	ld: error: duplicate symbol: sb_lines
