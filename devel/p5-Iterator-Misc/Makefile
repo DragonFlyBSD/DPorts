@@ -1,5 +1,3 @@
-# Created by: Aaron Dalton <aaron@FreeBSD.org>
-
 PORTNAME=	Iterator-Misc
 PORTVERSION=	0.03
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Miscellaneous iterator functions
+WWW=		https://metacpan.org/release/Iterator-Misc
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
