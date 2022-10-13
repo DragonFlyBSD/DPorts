@@ -1,5 +1,3 @@
-# Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-
 PORTNAME=	Net-DNSBL-Statistics
 PORTVERSION=	0.14
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Gather DNSBL Statistics
+WWW=		https://metacpan.org/release/Net-DNSBL-Statistics
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/GPL
