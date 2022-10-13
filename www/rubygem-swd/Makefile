@@ -1,5 +1,3 @@
-# Created by: Matthias Fechner <mfechner@FreeBSD.org>
-
 PORTNAME=	swd
 PORTVERSION=	1.2.0
 CATEGORIES=	www rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	mfechner@FreeBSD.org
 COMMENT=	Simple Web Discovery Client Library
+WWW=		https://github.com/nov/swd
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
