@@ -1,5 +1,3 @@
-# Created by: trevor
-
 PORTNAME=	oidentd
 DISTVERSION=	2.5.1
 CATEGORIES=	security
@@ -7,6 +5,7 @@ MASTER_SITES=	https://files.janikrabe.com/pub/oidentd/releases/${DISTVERSION}/
 
 MAINTAINER=	oliver@FreeBSD.org
 COMMENT=	Ident server that supports user-defined ident strings
+WWW=		https://oidentd.janikrabe.com/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
