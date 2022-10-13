@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	vpim
 PORTVERSION=	13.11.11
 CATEGORIES=	misc rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Pure Ruby library for decoding and encoding vCard and iCalendar data
+WWW=		http://vpim.rubyforge.org/
 
 LICENSE=	BSD2CLAUSE RUBY
 LICENSE_COMB=	dual
