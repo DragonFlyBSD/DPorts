@@ -1,11 +1,10 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	arp-scan
 PORTVERSION=	1.9.7
 CATEGORIES=	net
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	ARP scanning and fingerprinting tool
+WWW=		https://github.com/royhills/arp-scan
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
