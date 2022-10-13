@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	MooseX-Emulate-Class-Accessor-Fast
 PORTVERSION=	0.009032
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Emulate Class::Accessor::Fast behavior using Moose attributes
+WWW=		https://metacpan.org/release/MooseX-Emulate-Class-Accessor-Fast
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
