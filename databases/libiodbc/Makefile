@@ -1,5 +1,3 @@
-# Created by: erikhb@bgnett.no
-
 PORTNAME=	libiodbc
 DISTVERSIONPREFIX=	v
 DISTVERSION=	3.52.15
@@ -7,6 +5,7 @@ CATEGORIES=	databases
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	ODBC 3.x driver manager, for universal data source access
+WWW=		https://www.iodbc.org/
 
 LICENSE=		BSD3CLAUSE LGPL20
 LICENSE_COMB=		dual
