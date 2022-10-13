@@ -1,5 +1,3 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	spc2it
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.4.0
@@ -7,6 +5,7 @@ CATEGORIES=	audio converters
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Convert SPC files to IT (Impulse Tracker) files
+WWW=		https://github.com/uyjulian/spc2it
 
 LICENSE=	GPLv2
 
