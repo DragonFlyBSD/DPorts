@@ -1,5 +1,3 @@
-# Created by: arved
-
 PORTNAME=	chardet
 PORTVERSION=	4.0.0
 PORTEPOCH=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	python@FreeBSD.org
 COMMENT=	Universal encoding detector for Python
+WWW=		https://github.com/chardet/chardet
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/LICENSE
