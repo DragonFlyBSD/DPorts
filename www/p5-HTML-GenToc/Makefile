@@ -1,5 +1,3 @@
-# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-
 PORTNAME=	HTML-GenToc
 PORTVERSION=	3.20
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Generate a Table of Contents for HTML documents
+WWW=		https://metacpan.org/release/HTML-GenToc
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-HTML-LinkList>=0.1501:www/p5-HTML-LinkList \
