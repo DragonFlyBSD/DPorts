@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	CatalystX-InjectComponent
 PORTVERSION=	0.025
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Inject components into your Catalyst application
+WWW=		https://metacpan.org/release/CatalystX-InjectComponent
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
