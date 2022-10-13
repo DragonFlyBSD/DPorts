@@ -1,5 +1,3 @@
-# Created by: Michael Nottebrock <michaelnottebrock@gmx.net> et al
-
 PORTNAME=	xvid
 PORTVERSION=	1.3.7
 PORTEPOCH=	1
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}core-${PORTVERSION}
 
 MAINTAINER=	riggs@FreeBSD.org
 COMMENT=	Opensource MPEG-4 codec, based on OpenDivx
+WWW=		http://www.xvid.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKDIR}/xvidcore/LICENSE
