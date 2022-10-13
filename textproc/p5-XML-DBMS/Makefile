@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	XML-DBMS
 PORTVERSION=	1.03
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DISTNAME=	perl-${PORTNAME:tl}-${PORTVERSION}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Perl port of Java package XML-DBMS v1.0
+WWW=		http://www.rpbourret.com/xmldbms/index.htm
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-libxml>=0:textproc/p5-libxml \
