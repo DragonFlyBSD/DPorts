@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	rspec_junit_formatter
 PORTVERSION=	0.5.1
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Formatter of RSpec results for Jenkins
+WWW=		https://github.com/sj26/rspec_junit_formatter
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
