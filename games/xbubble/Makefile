@@ -1,5 +1,3 @@
-# Created by: Klaus Goger <klaus.goger@reflex.at>
-
 PORTNAME=	xbubble
 PORTVERSION=	0.5.8
 PORTREVISION=	7
@@ -8,6 +6,7 @@ MASTER_SITES=	GENTOO
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Puzzle Bobble clone for Unix/X11 platforms
+WWW=		https://www.nongnu.org/xbubble/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
