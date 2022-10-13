@@ -1,5 +1,3 @@
-# Created by: Dikshie <dikshie@sfc.wide.ad.jp>
-
 PORTNAME=	Mojo-Server-FastCGI
 PORTVERSION=	0.41
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	dikshie@sfc.wide.ad.jp
 COMMENT=	Mojo Server FastCGI
+WWW=		https://metacpan.org/release/Mojo-Server-FastCGI
 
 LICENSE=	ART20
 
