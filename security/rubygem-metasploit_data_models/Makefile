@@ -1,11 +1,12 @@
 PORTNAME=	metasploit_data_models
-PORTVERSION=	5.0.4
+PORTVERSION=	5.0.5
 PORTEPOCH=	2
 CATEGORIES=	security rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Database layer for Metasploit
+WWW=		https://github.com/rapid7/metasploit_data_models
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
