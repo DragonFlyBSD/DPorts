@@ -1,5 +1,3 @@
-# Created by: nork@cityfujisawa.ne.jp
-
 PORTNAME=	HTML-Template-Expr
 PORTVERSION=	0.07
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module to use HTML Templates which allows expressions
+WWW=		https://metacpan.org/release/HTML-Template-Expr
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
