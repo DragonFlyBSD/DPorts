@@ -1,11 +1,10 @@
-# Created by: Matthew Dillon <dillon@backplane.com>
-
 PORTNAME=	cpdup
 PORTVERSION=	1.22
 CATEGORIES=	sysutils
 
 MAINTAINER=	gmarco@giovannelli.it
 COMMENT=	Comprehensive filesystem mirroring and backup program
+WWW=		https://github.com/DragonFlyBSD/cpdup
 
 LICENSE=	BSD2CLAUSE # clarified by Matthew Dillon himself
 
