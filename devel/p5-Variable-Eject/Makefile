@@ -1,5 +1,3 @@
-# Created by: Anes Mukhametov <anes@anes.su>
-
 PORTNAME=	Variable-Eject
 PORTVERSION=	0.04
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	anes@anes.su
 COMMENT=	Eject variables from hash to current namespace
+WWW=		https://metacpan.org/release/Variable-Eject
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
