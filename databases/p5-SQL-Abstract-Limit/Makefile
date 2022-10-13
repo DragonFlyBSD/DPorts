@@ -1,5 +1,3 @@
-# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-
 PORTNAME=	SQL-Abstract-Limit
 PORTVERSION=	0.143
 CATEGORIES=	databases perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	SQL Portability layer for LIMIT emulation
+WWW=		https://metacpan.org/release/SQL-Abstract-Limit
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
