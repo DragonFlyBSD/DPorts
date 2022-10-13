@@ -1,5 +1,3 @@
-# Created by: Hammurabi Mendes <hmendes@brturbo.com>
-
 PORTNAME=	proxytunnel
 PORTVERSION=	1.10.20210604
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	security
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Connects stdin and stdout to an origin server through an HTTPS proxy
+WWW=		https://github.com/proxytunnel/proxytunnel/
 
 LICENSE=	GPLv2+ BSD3CLAUSE MIT
 LICENSE_COMB=	multi
