@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Geo-JSON
 PORTVERSION=	0.007
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Perl OO interface for geojson
+WWW=		https://metacpan.org/release/Geo-JSON
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
