@@ -1,5 +1,3 @@
-# Created by: Alfred Perlstein <alfred@freebsd.org>
-
 PORTNAME=	djangorestframework-xml
 PORTVERSION=	1.3.0
 CATEGORIES=	www python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	alfred@FreeBSD.org
 COMMENT=	Django REST framework
+WWW=		https://jpadilla.github.io/django-rest-framework-xml/
 
 LICENSE=	BSD2CLAUSE
 
