@@ -1,5 +1,3 @@
-# Created by: Mohammad S. Babaei <info@babaei.net>
-
 PORTNAME=	nift
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.4.11
@@ -7,6 +5,7 @@ CATEGORIES=	www
 
 MAINTAINER=	info@babaei.net
 COMMENT=	Cross-platform open source website generator
+WWW=		https://www.nift.cc
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
