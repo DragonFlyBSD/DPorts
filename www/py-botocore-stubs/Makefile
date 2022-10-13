@@ -1,11 +1,12 @@
 PORTNAME=	botocore-stubs
-DISTVERSION=	1.27.21
+DISTVERSION=	1.27.22
 CATEGORIES=	www python devel
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Type annotations for botocore
+WWW=		https://github.com/youtype/mypy_boto3_builder
 
 LICENSE=	MIT
 
