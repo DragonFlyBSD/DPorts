@@ -1,11 +1,10 @@
-# Created by: Chie Taguchi <taguchi.ch@gmail.com>
-
 PORTNAME=	masscan
 DISTVERSION=	1.3.2
 CATEGORIES=	security
 
 MAINTAINER=	taguchi.ch@gmail.com
 COMMENT=	Very fast port scanner
+WWW=		https://github.com/robertdavidgraham/masscan
 
 LICENSE=	GPLv3
 
