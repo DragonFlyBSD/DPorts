@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	erb
 PORTVERSION=	2.2.3
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Easy to use but powerful templating system for Ruby
+WWW=		https://github.com/ruby/erb
 
 LICENSE=	BSD2CLAUSE RUBY
 LICENSE_COMB=	dual
