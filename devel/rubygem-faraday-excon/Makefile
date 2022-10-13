@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	faraday-excon
 PORTVERSION=	2.1.0
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Faraday adapter for Excon
+WWW=		https://github.com/lostisland/faraday-excon
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
