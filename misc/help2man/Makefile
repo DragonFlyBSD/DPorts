@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	help2man
 PORTVERSION=	1.49.2
 CATEGORIES=	misc
@@ -7,6 +5,7 @@ MASTER_SITES=	GNU
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Automatically generating simple manual pages from program output
+WWW=		https://www.gnu.org/software/help2man/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
