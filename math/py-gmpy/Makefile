@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	gmpy
 PORTVERSION=	1.17
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Python Extension that Wraps the GMP Library
+WWW=		http://code.google.com/p/gmpy/
 
 LIB_DEPENDS=	libgmp.so:math/gmp
 
