@@ -1,5 +1,3 @@
-# Created by: Thierry Thomas <thierry@FreeBSD.org>
-
 PORTNAME=	${DICT}-aspell
 SPELLVERSION=	-gv-0.50-0
 PORTREVISION=	1
@@ -8,6 +6,7 @@ CATEGORIES=	textproc
 
 MAINTAINER=	office@FreeBSD.org
 COMMENT=	Aspell Manx Gaelic dictionary
+WWW=		http://aspell.net/
 
 DICT=	 	gv
 
