@@ -1,18 +1,17 @@
-# Created by: Corey Smith <corsmith@gmail.com>
-
 PORTNAME=	zerotier
-DISTVERSION=	1.8.9
+DISTVERSION=	1.10.1
 CATEGORIES=	net
 
 MAINTAINER=	dch@FreeBSD.org
 COMMENT=	Network virtualization everywhere
+WWW=		https://www.zerotier.com/
 
 # No SaaS or Govt usage: https://github.com/zerotier/ZeroTierOne/blob/master/LICENSE.txt
 LICENSE=		BUSINESS MIT PD
 LICENSE_COMB=		multi
 LICENSE_NAME_BUSINESS=	Business Source License
 LICENSE_FILE_BUSINESS=	${WRKSRC}/LICENSE.txt
-LICENSE_FILE_MIT=	${WRKSRC}/ext/json/LICENSE.MIT
+LICENSE_FILE_MIT=	${WRKSRC}/ext/http-parser/LICENSE-MIT
 LICENSE_PERMS_BUSINESS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 BUILD_DEPENDS=	as:devel/binutils
