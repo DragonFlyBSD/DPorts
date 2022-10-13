@@ -1,5 +1,3 @@
-# Created by: Thomas Zander <riggs@FreeBSD.org>
-
 PORTNAME=	gpsoauth
 PORTVERSION=	0.4.2
 CATEGORIES=	security python
@@ -7,6 +5,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	riggs@FreeBSD.org
 COMMENT=	Python client library for Google Play Services OAuth
+WWW=		https://github.com/simon-weber/gpsoauth
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
