@@ -1,5 +1,3 @@
-# Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-
 PORTNAME=	dictd
 PORTVERSION=	1.13.1
 CATEGORIES+=	net textproc
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/dict/dictd/dictd-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Dict protocol (RFC 2229) server
+WWW=		https://www.dict.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
