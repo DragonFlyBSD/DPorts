@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	r18n-desktop
 PORTVERSION=	5.0.1
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	i18n tool to translate your desktop application in several languages
+WWW=		https://github.com/r18n/r18n-desktop
 
 LICENSE=	LGPL3
 LICENSE_FILE=	${WRKSRC}/LICENSE
