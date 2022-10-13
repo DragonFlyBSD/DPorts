@@ -1,5 +1,3 @@
-# Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-
 PORTNAME=	wm2
 PORTVERSION=	4.0
 PORTREVISION=	2
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:R}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple window manager for X
+WWW=		https://www.all-day-breakfast.com/wm2/
 
 BUILD_DEPENDS=	makedepend:devel/makedepend
 
