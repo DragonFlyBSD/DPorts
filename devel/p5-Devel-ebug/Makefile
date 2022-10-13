@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Devel-ebug
 PORTVERSION=	0.64
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Simple, extensible Perl debugger
+WWW=		https://metacpan.org/release/Devel-ebug
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
