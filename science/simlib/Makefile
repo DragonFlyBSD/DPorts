@@ -1,5 +1,3 @@
-# Created by: Pav Lucistnik <pav@FreeBSD.org>
-
 PORTNAME=	simlib
 DISTVERSION=	3.06
 DISTVERSIONSUFFIX=	-20181003
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.fit.vutbr.cz/~peringer/SIMLIB/source/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	SIMulation LIBrary for C++ programming language
+WWW=		https://www.fit.vutbr.cz/~peringer/SIMLIB/index.html.en
 
 LICENSE=	LGPL20
 
