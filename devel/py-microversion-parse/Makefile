@@ -1,5 +1,3 @@
-# Created by: Alexander Nusov <alexander.nusov@nfvexpress.com>
-
 PORTNAME=	microversion-parse
 PORTVERSION=	1.0.1
 CATEGORIES=	devel python
@@ -9,6 +7,7 @@ DISTNAME=	microversion_parse-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	OpenStack microversion header parser
+WWW=		https://github.com/openstack/microversion-parse
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
