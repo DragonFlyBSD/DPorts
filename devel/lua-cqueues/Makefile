@@ -1,5 +1,3 @@
-# Created by: Leo Vandewoestijne <freebsd@dns.company>
-
 PORTNAME=	cqueues
 DISTVERSIONPREFIX=	rel-
 DISTVERSION=	20200726
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${LUA_PKGNAMEPREFIX}
 
 MAINTAINER=	freebsd@dns.company
 COMMENT=	Continuation queues module for Lua
+WWW=		https://25thandclement.com/~william/projects/cqueues.html
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
