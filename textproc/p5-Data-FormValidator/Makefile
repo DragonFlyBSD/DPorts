@@ -1,5 +1,3 @@
-# Created by: Seamus Venasse <svenasse@polaris.ca>
-
 PORTNAME=	Data-FormValidator
 PORTVERSION=	4.88
 CATEGORIES=	textproc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Validates user input (usually from an HTML form) based
+WWW=		https://metacpan.org/release/Data-FormValidator
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
