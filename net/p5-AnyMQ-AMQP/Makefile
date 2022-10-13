@@ -1,5 +1,3 @@
-# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-
 PORTNAME=	AnyMQ-AMQP
 PORTVERSION=	0.30
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	AMQP binding for AnyMQ
+WWW=		https://metacpan.org/release/AnyMQ-AMQP
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
