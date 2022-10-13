@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	fog-rackspace
 PORTVERSION=	0.1.6
 CATEGORIES=	net rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Module for the 'fog' gem to support Rackspace
+WWW=		https://github.com/fog/fog-rackspace
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
