@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Text-Table-TickitWidget
 PORTVERSION=	0.001
 CATEGORIES=	textproc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	View table data on the terminal using Tickit::Widget::Table
+WWW=		https://metacpan.org/release/Text-Table-TickitWidget
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
