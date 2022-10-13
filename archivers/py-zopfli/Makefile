@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	zopfli
 PORTVERSION=	0.2.1
 CATEGORIES=	archivers python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Zopfli module for python
+WWW=		https://github.com/fonttools/py-zopfli
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/COPYING
