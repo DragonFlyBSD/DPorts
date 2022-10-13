@@ -1,5 +1,3 @@
-# Created by: Andrey Slusar <anray@FreeBSD.org>
-
 PORTNAME=	mknmz-wwwoffle
 PORTVERSION=	0.7.2
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.naney.org/comp/distrib/mknmz-wwwoffle/archive/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	WWWOFFLE cache indexer for full-text search system Namazu
+WWW=		https://www.naney.org/comp/distrib/mknmz-wwwoffle/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
