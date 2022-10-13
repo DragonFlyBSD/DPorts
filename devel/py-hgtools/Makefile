@@ -1,5 +1,3 @@
-# Created by: William Grzybowski
-
 PORTNAME=	hgtools
 PORTVERSION=	6.3
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Classes and setuptools plugin for Mercurial repositories
+WWW=		https://github.com/jaraco/hgtools
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
