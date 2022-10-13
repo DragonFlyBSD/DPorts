@@ -1,5 +1,3 @@
-# Created by: Emanuel Haupt <ehaupt@critical.ch>
-
 PORTNAME=	tmpreaper
 PORTVERSION=	1.6.17
 CATEGORIES=	sysutils
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Cleans up files in directories based on their age
+WWW=		https://packages.debian.org/sid/tmpreaper
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
