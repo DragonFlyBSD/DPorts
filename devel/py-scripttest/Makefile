@@ -1,5 +1,3 @@
-# Created by: Nicola Vitale <nivit@FreeBSD.org>
-
 PORTNAME=	scripttest
 PORTVERSION=	1.3.0
 CATEGORIES=	devel python
@@ -7,6 +5,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Helper to test command-line scripts
+WWW=		https://pythonpaste.org/scripttest/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/docs/license.rst
