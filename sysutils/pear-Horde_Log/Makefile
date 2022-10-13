@@ -1,5 +1,3 @@
-# Created by: Martin Matuska <mm@FreeBSD.org>
-
 PORTNAME=	Horde_Log
 PORTVERSION=	2.3.0
 PORTREVISION=	1
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PEAR_PKGNAMEPREFIX}
 
 MAINTAINER=	horde@FreeBSD.org
 COMMENT=	Horde Logging library
+WWW=		https://pear.horde.org
 
 OPTIONS_DEFINE=	SCRIBE
 SCRIBE_DESC=	Enable scribe support
