@@ -1,5 +1,3 @@
-# Created by: rpsfa@rit.edu
-
 PORTNAME=	sugar-high
 PORTVERSION=	0.7.3
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	More Ruby sugar
+WWW=		https://github.com/kristianmandrup/sugar-high
 
 LICENSE=	MIT
 
