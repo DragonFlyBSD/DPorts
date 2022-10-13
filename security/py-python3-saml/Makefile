@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	python3-saml
 PORTVERSION=	1.14.0
 CATEGORIES=	security python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Add SAML support to your Python software
+WWW=		https://github.com/onelogin/python3-saml
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
