@@ -1,5 +1,3 @@
-# Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-
 PORTNAME=	python-digitalocean
 PORTVERSION=	1.16.0
 CATEGORIES=	www python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	API to manage digitalocean.com droplets
+WWW=		https://github.com/koalalorenzo/python-digitalocean
 
 LICENSE=	GPLv3
 
