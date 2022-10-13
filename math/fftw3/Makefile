@@ -1,5 +1,3 @@
-# Created by: Lars Koeller <Lars.Koeller@Uni-Bielefeld.DE>
-
 PORTNAME=	fftw3
 DISTVERSION=	3.3.10
 PORTREVISION=	2
@@ -11,6 +9,7 @@ DISTNAME=	fftw-${DISTVERSION}
 
 MAINTAINER=	jhale@FreeBSD.org
 COMMENT?=	Fast C routines to compute the Discrete Fourier Transform
+WWW=		https://www.fftw.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
