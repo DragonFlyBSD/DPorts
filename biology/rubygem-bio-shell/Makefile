@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	bio-shell
 PORTVERSION=	1.0.1
 CATEGORIES=	biology rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Command-line interface on BioRuby
+WWW=		https://github.com/bioruby/bioruby-shell
 
 LICENSE=	BSD2CLAUSE RUBY
 LICENSE_COMB=	dual
