@@ -1,11 +1,10 @@
-# Created by: Ryan Steinmetz <zi@FreeBSD.org>
-
 PORTNAME=	ip2proxy
 PORTVERSION=	20211122
 CATEGORIES=	net
 
 MAINTAINER=	zi@FreeBSD.org
 COMMENT=	C library to lookup proxies
+WWW=		https://ip2location.com/development-libraries/ip2proxy/c
 
 LICENSE=	MIT
 
