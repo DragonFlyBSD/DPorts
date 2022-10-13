@@ -1,11 +1,10 @@
-# Created by: Martin Matuska <mm@FreeBSD.org>
-
 PORTNAME=	Horde_Mime_Viewer
 PORTVERSION=	2.2.2
 CATEGORIES=	mail www pear
 
 MAINTAINER=	horde@FreeBSD.org
 COMMENT=	Horde MIME Viewer Library
+WWW=		https://pear.horde.org
 
 CONFLICTS=	horde-3*
 
