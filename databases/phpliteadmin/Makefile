@@ -1,5 +1,3 @@
-# Created by: olevole@olevole.ru
-
 PORTNAME=	phpLiteAdmin
 DISTVERSION=	1-9-8-2
 CATEGORIES=	databases www
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}_v${DISTVERSION}
 
 MAINTAINER=	ports@freebsd.org
 COMMENT=	Web-based database management tool for Sqlite
+WWW=		https://www.phpliteadmin.org/
 
 LICENSE=	GPLv3
 
