@@ -1,5 +1,3 @@
-# Created by: Alex Bakhtin <Alex.Bakhtin@gmail.com>
-
 PORTNAME=	Net-MQTT
 PORTVERSION=	1.143260
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	Alex.Bakhtin@gmail.com
 COMMENT=	Perl modules for MQTT protocol
+WWW=		https://metacpan.org/release/Net-MQTT
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
