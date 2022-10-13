@@ -1,5 +1,3 @@
-# Created by: Alexander Nusov <alexander.nusov@nfvexpress.com>
-
 PORTNAME=	xstatic-jquery.quicksearch
 PORTVERSION=	2.0.3.2
 CATEGORIES=	devel python
@@ -9,6 +7,7 @@ DISTNAME=	XStatic-JQuery.quicksearch-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	JQuery.quicksearch (XStatic packaging standard)
+WWW=		https://plugins.jquery.com/jquery.quicksearch/
 
 LICENSE=	MIT
 
