@@ -1,5 +1,3 @@
-# Created by: Steve Wills <steve@mouf.net>
-
 PORTNAME=	Chemistry-Reaction
 PORTVERSION=	0.02
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	swills@FreeBSD.org
 COMMENT=	Represent a ring as a substructure of a molecule
+WWW=		https://metacpan.org/release/Chemistry-Reaction
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
