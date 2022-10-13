@@ -1,11 +1,10 @@
-# Created by: ijliao
-
 PORTNAME=	xclip
 PORTVERSION=	0.13
 CATEGORIES=	x11
 
 MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Interface to X selections ("the clipboard") from the command line
+WWW=		https://github.com/astrand/xclip
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
