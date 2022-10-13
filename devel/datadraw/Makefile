@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	datadraw
 PORTVERSION=	3.1.1
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Feature rich persistent database generator
+WWW=		http://datadraw.sourceforge.net/
 
 LICENSE=	GPLv2
 
