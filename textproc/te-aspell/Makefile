@@ -1,5 +1,3 @@
-# Created by: Thierry Thomas <thierry@pompo.net>
-
 PORTNAME=	${DICT}-aspell
 SPELLVERSION=	6-te-0.01-2
 PORTREVISION=	1
@@ -8,6 +6,7 @@ CATEGORIES=	textproc
 
 MAINTAINER=	prudhvi-krishna-bsd@surapaneni.in
 COMMENT=	Aspell Telugu dictionary
+WWW=		http://www.swecha.org/wiki/Wordlist_and_Dictionaries
 
 DICT=		te
 
