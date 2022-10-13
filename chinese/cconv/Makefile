@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	cconv
 PORTVERSION=	0.6.3
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	chinese converters
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Simplified-Traditional Chinese conversion tool
+WWW=		https://github.com/xiaoyjy/cconv
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/License
