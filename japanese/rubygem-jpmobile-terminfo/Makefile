@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	jpmobile-terminfo
 PORTVERSION=	0.0.3
 CATEGORIES=	japanese www rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Carrier terminal information List for jpmobile
+WWW=		https://github.com/jpmobile/jpmobile-terminfo
 
 LICENSE=	MIT
 
