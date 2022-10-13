@@ -1,5 +1,3 @@
-# Created by: Martin Matuska <mm@FreeBSD.org>
-
 PORTNAME=	epos
 PORTVERSION=	2.5.37
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-dev/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Language independent Text-to-Speech (TTS) system
+WWW=		http://epos.ufe.cz/
 
 LICENSE=	GPLv2+ LGPL20+
 LICENSE_COMB=	multi
