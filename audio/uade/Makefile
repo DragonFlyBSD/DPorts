@@ -1,5 +1,3 @@
-# Created by: Martin Blapp <mbr@FreeBSD.org>
-
 PORTNAME=	uade
 PORTVERSION=	2.13
 PORTREVISION=	2
@@ -9,6 +7,7 @@ MASTER_SITES=	http://zakalwe.fi/uade/uade2/ \
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Unix Amiga Delitracker Emulator
+WWW=		https://zakalwe.fi/uade/
 
 LICENSE=	GPLv2
 
