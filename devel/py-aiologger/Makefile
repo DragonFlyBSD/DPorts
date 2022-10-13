@@ -1,5 +1,3 @@
-# Created by: Kirill Ponomarev <krion@FreeBSD.org>
-
 PORTNAME=		aiologger
 PORTVERSION=	0.6.1
 CATEGORIES=		devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=		krion@FreeBSD.org
 COMMENT=		Asynchronous logging for python and asyncio
+WWW=		https://github.com/b2wdigital/aiologger
 
 LICENSE=		MIT
 
