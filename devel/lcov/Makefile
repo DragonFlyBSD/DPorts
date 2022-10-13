@@ -1,5 +1,3 @@
-# Created by: Romain Tartiere <romain@FreeBSD.org>
-
 PORTNAME=	lcov
 PORTVERSION=	1.15
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/ltp/Coverage%20Analysis/LCOV-${PORTVERSION}
 
 MAINTAINER=	romain@FreeBSD.org
 COMMENT=	Linux Test Project GCOV extension
+WWW=		http://ltp.sourceforge.net/coverage/lcov.php
 
 LICENSE=	GPLv2
 
