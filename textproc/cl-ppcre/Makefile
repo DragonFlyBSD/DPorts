@@ -1,5 +1,3 @@
-# Created by: Henrik Motakef <henrik.motakef@web.de>
-
 PORTNAME=	cl-ppcre
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.1.1
@@ -7,6 +5,7 @@ CATEGORIES=	textproc lisp
 
 MAINTAINER=	olgeni@FreeBSD.org
 COMMENT=	Portable Perl-Compatible Regular Expression for Common Lisp
+WWW=		http://www.weitz.de/cl-ppcre/
 
 LICENSE=	BSD2CLAUSE
 
