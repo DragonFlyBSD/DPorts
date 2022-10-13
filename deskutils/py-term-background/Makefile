@@ -1,5 +1,3 @@
-# Created by: thierry@pompo.net
-
 PORTNAME=	term-background
 PORTVERSION=	1.0.1
 CATEGORIES=	deskutils python shells
@@ -7,6 +5,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Shell scripts and Python module to figure out terminal background
+WWW=		https://github.com/rocky/shell-term-background
 
 LICENSE=	GPLv2
 
