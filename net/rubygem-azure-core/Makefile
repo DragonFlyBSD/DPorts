@@ -1,5 +1,3 @@
-# Created by: Torsten Zuehlsdorff <tz@FreeBSD.org>
-
 PORTNAME=	azure-core
 PORTVERSION=	0.1.15
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Microsoft Azure Client Core Library for Ruby SDK
+WWW=		https://github.com/Azure/azure-ruby-asm-core
 
 LICENSE=	APACHE20
 
