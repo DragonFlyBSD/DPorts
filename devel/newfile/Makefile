@@ -1,5 +1,3 @@
-# Created by: Miguel Mendez <flynn@energyhq.homeip.net>
-
 PORTNAME=	newfile
 PORTVERSION=	1.0.14
 PORTREVISION=	6
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tool for creating starter files in various languages
+WWW=		http://newfile.sourceforge.net/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
