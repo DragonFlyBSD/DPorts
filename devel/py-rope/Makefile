@@ -1,5 +1,3 @@
-# Created by: Jose Jachuf <jjachuf@gmail.com>
-
 PORTNAME=	rope
 DISTVERSION=	0.18.0
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	jjachuf@gmail.com
 COMMENT=	Python refactoring library
+WWW=		http://rope.sourceforge.net
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
