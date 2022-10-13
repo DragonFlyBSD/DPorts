@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	HTML-Parser-Simple
 PORTVERSION=	2.02
 CATEGORIES=	www perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Parse nice HTML files without needing a compiler
+WWW=		https://metacpan.org/release/HTML-Parser-Simple
 
 LICENSE=	ART20
 
