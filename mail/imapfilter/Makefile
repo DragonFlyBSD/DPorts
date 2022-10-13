@@ -1,5 +1,3 @@
-# Created by: Lefteris Chatzibarbas <lefcha@hellug.gr>
-
 PORTNAME=	imapfilter
 PORTVERSION=	2.7.5
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	mail
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	IMAP mail filtering utility
+WWW=		https://github.com/lefcha/imapfilter
 
 LICENSE=	MIT
 
