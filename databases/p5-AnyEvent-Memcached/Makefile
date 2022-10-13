@@ -1,5 +1,3 @@
-# Created by: Anes Mukhametov <anes@anes.su>
-
 PORTNAME=	AnyEvent-Memcached
 PORTVERSION=	0.08
 CATEGORIES=	databases perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	anes@anes.su
 COMMENT=	AnyEvent memcached client
+WWW=		https://metacpan.org/release/AnyEvent-Memcached
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
