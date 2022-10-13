@@ -1,5 +1,3 @@
-# Created by: Antonio Carlos Venancio Junior (<antonio@php.net>)
-
 PORTNAME=	DB_DataObject
 PORTVERSION=	1.11.5
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	databases pear
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	SQL Builder, Object Interface to Database Tables
+WWW=		https://pear.php.net/package/DB_DataObject
 
 LICENSE=	PHP301
 LICENSE_FILE=	${WRKSRC}/docs/LICENCE.txt
