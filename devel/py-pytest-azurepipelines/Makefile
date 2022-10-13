@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	pytest-azurepipelines
 PORTVERSION=	1.0.3
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Formatting PyTest output for Azure Pipelines UI
+WWW=		https://github.com/tonybaloney/pytest-azurepipelines
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
