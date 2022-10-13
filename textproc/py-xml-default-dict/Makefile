@@ -1,5 +1,3 @@
-# Created by: Silvio Ap Silva aka kanazuchi <alvolivre@live.com>
-
 PORTNAME=	xml-default-dict
 PORTVERSION=	0.3
 CATEGORIES=	textproc python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	contato@kanazuchi.com
 COMMENT=	Python scripts to convert xml data into a defaultdict
+WWW=		https://github.com/kanazux/xml-default-dict
 
 LICENSE=	BSD2CLAUSE
 
