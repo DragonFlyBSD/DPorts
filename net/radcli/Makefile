@@ -1,5 +1,3 @@
-# Created by: Jov <amutu@amutu.com>
-
 PORTNAME=	radcli
 PORTVERSION=	1.3.0
 MASTER_SITES=	https://github.com/radcli/radcli/releases/download/${PORTVERSION}/
@@ -7,6 +5,7 @@ CATEGORIES=	net
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Simple RADIUS client library
+WWW=		https://radcli.github.io/radcli/
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
