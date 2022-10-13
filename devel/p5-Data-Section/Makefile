@@ -1,5 +1,3 @@
-# Created by: Andrey Kostenko <andrey@kostenko.name>
-
 PORTNAME=	Data-Section
 PORTVERSION=	0.200007
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Read multiple hunks of data out of your DATA section
+WWW=		https://metacpan.org/release/Data-Section
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
