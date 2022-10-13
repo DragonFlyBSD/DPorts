@@ -1,5 +1,3 @@
-# Created by: Sofian Brabez <sbrabez@gmail.com>
-
 PORTNAME=	bitarray
 PORTVERSION=	2.5.1
 CATEGORIES=	devel python
@@ -7,6 +5,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sbz@FreeBSD.org
 COMMENT=	Efficient arrays of booleans
+WWW=		https://pypi.org/project/bitarray/
 
 LICENSE=	PSFL
 LICENSE_FILE=	${WRKSRC}/LICENSE
