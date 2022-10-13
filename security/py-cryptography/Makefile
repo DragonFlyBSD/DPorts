@@ -1,5 +1,3 @@
-# Created by: Kubilay Kocak <koobs@FreeBSD.org>
-
 PORTNAME=	cryptography
 PORTVERSION=	3.4.8
 CATEGORIES=	security python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Cryptographic recipes and primitives for Python developers
+WWW=		https://github.com/pyca/cryptography
 
 LICENSE=	APACHE20 BSD3CLAUSE
 LICENSE_COMB=	dual
