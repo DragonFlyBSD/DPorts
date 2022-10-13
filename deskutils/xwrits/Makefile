@@ -1,5 +1,3 @@
-# Created by: Matt Braithwaite <mab@red-bean.com>
-
 PORTNAME=	xwrits
 PORTVERSION=	2.26
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.lcdf.org/${PORTNAME}/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Reminds you to take wrist breaks
+WWW=		https://www.lcdf.org/xwrits/
 
 LICENSE=	GPLv2 # only
 
