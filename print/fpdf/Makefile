@@ -1,5 +1,3 @@
-# Created by: Thierry Thomas <thierry@pompo.net>
-
 PORTNAME=	fpdf
 PORTVERSION=	1.81
 PORTEPOCH=	1
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}${PORTVERSION:S|.||}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Free PHP class to generate PDF files with pure PHP
+WWW=		http://www.fpdf.org/
 
 LICENSE=	As_Is
 LICENSE_NAME=	As_Is
