@@ -1,5 +1,3 @@
-# Created by: Philip Paeps <philip@FreeBSD.org>
-
 PORTNAME=	recaptcha
 PORTVERSION=	1.0.6
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DISTNAME=	${PORTNAME}-client-${PORTVERSION}
 
 MAINTAINER=	philip@FreeBSD.org
 COMMENT=	Plugin for reCAPTCHA and reCAPTCHA Mailhide
+WWW=		https://pypi.org/project/recaptcha-client/
 
 USES=		python:3.6+
 USE_PYTHON=	distutils autoplist
