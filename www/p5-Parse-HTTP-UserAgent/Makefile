@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Parse-HTTP-UserAgent
 PORTVERSION=	0.42
 CATEGORIES=	www perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Parser for the User Agent string
+WWW=		https://metacpan.org/release/Parse-HTTP-UserAgent
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
