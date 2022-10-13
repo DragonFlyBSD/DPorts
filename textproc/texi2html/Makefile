@@ -1,5 +1,3 @@
-# Created by: Ian Vaudrey <i.vaudrey@bigfoot.com>
-
 PORTNAME=	texi2html
 PORTVERSION=	5.0
 PORTREVISION=	2
@@ -9,6 +7,7 @@ MASTER_SITES=	SAVANNAH
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Texinfo to HTML converter
+WWW=		https://www.nongnu.org/texi2html/
 
 GNU_CONFIGURE=	yes
 NO_ARCH=	yes
