@@ -1,5 +1,3 @@
-# Created by: Yuri Victorovich <yuri@rawbw.com>
-
 PORTNAME=	pywikibot
 DISTVERSION=	7.3.0
 CATEGORIES=	www python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Wikipedia bot for Python
+WWW=		https://www.mediawiki.org/wiki/Pywikibot
 
 LICENSE=	MIT
 
