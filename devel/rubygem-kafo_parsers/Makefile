@@ -1,5 +1,3 @@
-# Created by: Michael Moll <kvedulv at kvedulv.de>
-
 PORTNAME=	kafo_parsers
 PORTVERSION=	1.2.1
 CATEGORIES=	devel ruby
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Parser for puppet modules
+WWW=		https://github.com/theforeman/kafo_parsers
 
 LICENSE=	GPLv3
 
