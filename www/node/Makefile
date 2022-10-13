@@ -1,17 +1,18 @@
 PORTNAME=	node
 DISTVERSIONPREFIX=	v
-DISTVERSION=	18.2.0
+DISTVERSION=	18.7.0
 CATEGORIES=	www
 MASTER_SITES=	https://nodejs.org/dist/v${DISTVERSION}/
 
 MAINTAINER=	bhughes@FreeBSD.org
 COMMENT=	V8 JavaScript for client and server
+WWW=		https://nodejs.org/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BROKEN_SSL=		libressl libressl-devel
-BROKEN_SSL_REASON=	Node.js 17.x requires OpenSSL 1.1.x or the BUNDLED_SSL option enabled
+BROKEN_SSL_REASON=	Node.js 18.x requires OpenSSL 1.1.x or the BUNDLED_SSL option enabled
 ONLY_FOR_ARCHS=		aarch64 amd64 armv6 armv7 i386 powerpc64 powerpc64le
 
 USES=		compiler:c++11-lib gmake python:3.6-3.10,build pkgconfig \
