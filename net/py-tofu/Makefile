@@ -1,5 +1,3 @@
-# Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-
 PORTNAME=	tofu
 PORTVERSION=	0.5
 PORTREVISION=	1
@@ -11,6 +9,7 @@ DIST_SUBDIR=	python
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Practical high-level network game engine
+WWW=		http://home.gna.org/oomadness/en/tofu/index.html
 
 LICENSE=	GPLv2+
 
