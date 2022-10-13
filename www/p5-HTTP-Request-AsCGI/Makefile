@@ -1,5 +1,3 @@
-# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-
 PORTNAME=	HTTP-Request-AsCGI
 PORTVERSION=	1.2
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Setup a CGI environment from a HTTP::Request
+WWW=		https://metacpan.org/release/HTTP-Request-AsCGI
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
