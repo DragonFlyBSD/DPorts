@@ -1,5 +1,3 @@
-# Created by: Philippe Audeoud <jadawin@tuxaco.net>
-
 PORTNAME=	snoopy
 PORTVERSION=	2.4.15
 CATEGORIES=	security
@@ -7,6 +5,7 @@ MASTER_SITES=	https://github.com/a2o/snoopy/releases/download/snoopy-${PORTVERSI
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Log every executed command to syslog
+WWW=		https://github.com/a2o/snoopy
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
