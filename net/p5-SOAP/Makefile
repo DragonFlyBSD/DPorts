@@ -1,5 +1,3 @@
-# Created by: will
-
 PORTNAME=	SOAP
 PORTVERSION=	0.28
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Perl modules providing an API to the Simple Object Access Protocol
+WWW=		https://www.w3.org/TR/soap/
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
