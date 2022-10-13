@@ -1,5 +1,3 @@
-# Created by: Espen Tagestad <espen@tagestad.no>
-
 PORTNAME=	CGI-Application-Plugin-HTDot
 PORTVERSION=	0.07
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Enable "magic dot" notation in CGI::Application-derived applications
+WWW=		https://metacpan.org/release/CGI-Application-Plugin-HTDot
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-CGI-Application>=4.0:www/p5-CGI-Application \
