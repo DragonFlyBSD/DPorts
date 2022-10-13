@@ -1,5 +1,3 @@
-# Created by: Matthew Seaman
-
 PORTNAME=	phpldapadmin
 PORTVERSION=	1.2.6.3
 PORTREVISION=	1
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
 
 MAINTAINER=	ports@bsdserwis.com
 COMMENT=	PHP application to administer LDAP over the web
+WWW=		http://phpldapadmin.sourceforge.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
