@@ -1,5 +1,3 @@
-# Created by: Johannes Meixner <johannes@perceivon.net>
-
 PORTNAME=	rails
 PORTVERSION=	5.1.7
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMESUFFIX=	5
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Full-stack web application framework
+WWW=		https://github.com/rails/rails
 
 LICENSE=	MIT
 
