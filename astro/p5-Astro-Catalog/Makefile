@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	Astro-Catalog
 PORTVERSION=	4.36
 CATEGORIES=	astro perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Generic stellar catalogue object
+WWW=		https://metacpan.org/release/Astro-Catalog
 
 LICENSE=	GPLv3
 
