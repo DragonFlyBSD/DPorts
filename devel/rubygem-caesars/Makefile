@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	caesars
 PORTVERSION=	0.7.4
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	swills@FreeBSD.org
 COMMENT=	Rapid DSL prototyping in Ruby
+WWW=		https://github.com/delano/caesars
 
 NO_ARCH=	yes
 
