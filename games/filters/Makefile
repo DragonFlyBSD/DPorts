@@ -1,5 +1,3 @@
-# Created by: Emanuel Haupt <ehaupt@critical.ch>
-
 PORTNAME=	filters
 PORTVERSION=	2.55
 DISTVERSIONSUFFIX=	.orig
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}${DISTVERSIONSUFFIX}
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Collection of filters, including B1FF, and the Swedish Chef
+WWW=		https://joeyh.name/code/filters/
 
 LICENSE=	GPLv2
 
