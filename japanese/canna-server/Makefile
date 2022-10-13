@@ -1,5 +1,3 @@
-# Created by: hrs
-
 PORTNAME=	canna
 PORTVERSION=	3.7p3
 PORTREVISION=	10
@@ -10,6 +8,7 @@ DISTNAME=	Canna${PORTVERSION:S/.//g}
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	Kana-to-Kanji conversion system, binary part
+WWW=		http://canna.sourceforge.jp/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
