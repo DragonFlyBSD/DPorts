@@ -1,11 +1,10 @@
-# Created by: Alan Eldridge <alane@FreeBSD.org>
-
 PORTNAME=	txt2tags
 PORTVERSION=	3.7
 CATEGORIES=	textproc
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Convert simply formatted text into markup (e.g., HTML)
+WWW=		https://txt2tags.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
