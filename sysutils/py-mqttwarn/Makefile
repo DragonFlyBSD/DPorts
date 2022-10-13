@@ -1,11 +1,12 @@
 PORTNAME=	mqttwarn
-DISTVERSION=	0.28.1
+DISTVERSION=	0.29.1
 CATEGORIES=	sysutils python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	dvl@FreeBSD.org
 COMMENT=	Subscribe to MQTT topics and notify pluggable services
+WWW=		https://github.com/jpmens/mqttwarn
 
 LICENSE=	EPL
 
