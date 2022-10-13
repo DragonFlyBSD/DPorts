@@ -1,5 +1,3 @@
-# Created by: chinsan
-
 PORTNAME=	Geometry-Primitive
 PORTVERSION=	0.24
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Primitive Geometry Entities
+WWW=		https://metacpan.org/release/Geometry-Primitive
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-Check-ISA>=0.04:devel/p5-Check-ISA \
