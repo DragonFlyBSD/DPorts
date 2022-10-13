@@ -1,5 +1,3 @@
-# Created by: Kubilay Kocak <koobs@FreeBSD.org>
-
 PORTNAME=	pygithub
 PORTVERSION=	1.55
 CATEGORIES=	devel www python
@@ -9,6 +7,7 @@ DISTNAME=	PyGithub-${PORTVERSION}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Python library implementing the full GitHub API v3
+WWW=		https://github.com/jacquev6/PyGithub
 
 LICENSE=	LGPL3
 LICENSE_FILE=	${WRKSRC}/COPYING.LESSER
