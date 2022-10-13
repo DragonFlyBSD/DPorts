@@ -1,5 +1,3 @@
-# Created by: Mikolaj Rydzewski <miki@ceti.pl>
-
 PORTNAME=	yydecode
 PORTVERSION=	0.2.10
 CATEGORIES=	news
@@ -7,6 +5,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	miki@ceti.pl
 COMMENT=	Tool to decode yEnc encoded files
+WWW=		http://yydecode.sf.net/
 
 USES=		gmake
 GNU_CONFIGURE=	yes
