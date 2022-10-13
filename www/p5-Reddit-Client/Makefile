@@ -1,5 +1,3 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	Reddit-Client
 PORTVERSION=	1.389
 PORTEPOCH=	4
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	joneum@FreeBSD.org
 COMMENT=	Methods and object wrappers for objects exposed by the Reddit API
+WWW=		https://metacpan.org/pod/Reddit::Client
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
