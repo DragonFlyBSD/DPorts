@@ -1,5 +1,3 @@
-# Created by: Ryan Steinmetz <zi@FreeBSD.org>
-
 PORTNAME=	freeradius
 DISTVERSION=	3.0.25
 CATEGORIES=	net
@@ -13,6 +11,7 @@ DISTNAME=	freeradius-server-${DISTVERSION}
 
 MAINTAINER=	zi@FreeBSD.org
 COMMENT=	Free RADIUS server implementation
+WWW=		https://www.freeradius.org/
 
 LICENSE=	GPLv2
 
