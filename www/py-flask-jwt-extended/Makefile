@@ -1,5 +1,5 @@
 PORTNAME=	flask-jwt-extended
-PORTVERSION=	4.4.1
+DISTVERSION=	4.4.4
 CATEGORIES=	www devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -7,6 +7,7 @@ DISTNAME=	Flask-JWT-Extended-${DISTVERSION}
 
 MAINTAINER=	meka@tilda.center
 COMMENT=	Extended JWT integration with Flask
+WWW=		https://github.com/vimalloc/flask-jwt-extended
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -19,7 +20,7 @@ TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}coverage>=0:devel/py-coverage@${PY_FLAVOR} 
 		${PYTHON_PKGNAMEPREFIX}cryptography>=0:security/py-cryptography@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}dateutil>=0:devel/py-dateutil@${PY_FLAVOR}
 
-USES=		python:3.6+
+USES=		python:3.7+
 USE_PYTHON=	autoplist concurrent distutils pytest
 
 TEST_ENV=	PYTHONPATH=${WRKSRC}/src
