@@ -1,5 +1,3 @@
-# Created by: Timothy Beyer <beyert@cs.ucr.edu>
-
 PORTNAME=	htmlc
 PORTVERSION=	2.21.0
 CATEGORIES=	textproc
@@ -8,6 +6,7 @@ MASTER_SITES=	http://htmlc.inria.fr/ \
 
 MAINTAINER=	beyert@cs.ucr.edu
 COMMENT=	Text file generator
+WWW=		http://htmlc.inria.fr/eng.htm
 
 BUILD_DEPENDS=	ocamlc:lang/ocaml
 
