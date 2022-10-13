@@ -1,5 +1,3 @@
-# Created by: Nicola Stanislao Vitale <nivit@FreeBSD.org>
-
 PORTNAME=	sphinxcontrib-log-cabinet
 PORTVERSION=	1.0.1
 CATEGORIES=	textproc
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Organize changelog directives in Sphinx docs
+WWW=		https://github.com/davidism/sphinxcontrib-log-cabinet
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.rst
