@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	kyotocabinet
 PORTVERSION=	1.23
 DISTVERSIONPREFIX=	python-
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python binding of kyotocabinet
+WWW=		https://dbmx.net/kyotocabinet/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
