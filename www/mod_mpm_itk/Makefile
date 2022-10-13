@@ -1,5 +1,3 @@
-# Created by: Lukasz Wasikowski <lukasz@wasikowski.net>
-
 PORTNAME=	mod_mpm_itk
 PORTVERSION=	2.4.7
 PORTREVISION=	2
@@ -11,6 +9,7 @@ DISTNAME=	mpm-itk-2.4.7-04
 
 MAINTAINER=	lukasz@wasikowski.net
 COMMENT=	Run each vhost under a separate uid and gid
+WWW=		http://mpm-itk.sesse.net/
 
 LICENSE=	APACHE20
 
