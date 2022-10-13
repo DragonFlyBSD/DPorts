@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	fog-internet-archive
 PORTVERSION=	0.0.2
 CATEGORIES=	net rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Module for the 'fog' gem to support Internet Archive
+WWW=		https://github.com/fog/fog-internet-archive
 
 LICENSE=	MIT
 
