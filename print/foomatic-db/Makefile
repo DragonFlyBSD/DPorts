@@ -1,11 +1,10 @@
-# Created by: Dima Dorfman <dima@unixfreak.org>
-
 PORTNAME=	foomatic-db
 PORTVERSION=	20220113
 CATEGORIES=	print
 
 MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	Database for integrating printer drivers with common spoolers
+WWW=		https://www.linuxfoundation.org/collaborate/workgroups/openprinting/database/foomatic
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
