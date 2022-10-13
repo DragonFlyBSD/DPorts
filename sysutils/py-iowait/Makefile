@@ -1,5 +1,3 @@
-# Created by: Olivier Duchateau <olivierd@FreeBSD.org>
-
 PORTNAME=	iowait
 PORTVERSION=	0.2
 CATEGORIES=	sysutils python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	python@FreeBSD.org
 COMMENT=	Python module for I/O completion events
+WWW=		https://launchpad.net/python-iowait
 
 LICENSE=	GPLv3
 
