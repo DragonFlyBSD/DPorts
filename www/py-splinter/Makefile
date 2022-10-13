@@ -1,13 +1,12 @@
-# Created by: William Grzybowski <wg@FreeBSD.org>
-
 PORTNAME=	splinter
-PORTVERSION=	0.18.0
+PORTVERSION=	0.18.1
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Browser abstraction for web acceptance testing
+WWW=		https://github.com/cobrateam/splinter
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
