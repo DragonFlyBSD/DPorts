@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	Filter-Crypto
 PORTVERSION=	2.09
 CATEGORIES=	security perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Create runnable Perl files encrypted with OpenSSL libcrypto
+WWW=		https://metacpan.org/release/Filter-Crypto
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
