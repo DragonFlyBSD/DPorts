@@ -1,11 +1,10 @@
-# Created by: gahr
-
 PORTNAME=	tivoka
 PORTVERSION=	3.5.2
 CATEGORIES=	www
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	JSON-RPC client/server library for PHP
+WWW=		http://marcelklehr.github.com/tivoka/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
