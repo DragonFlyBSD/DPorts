@@ -1,5 +1,3 @@
-# Created by: Iblis Lin <iblis@hs.ntnu.edu.tw>
-
 PORTNAME=	openlibm
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.8.0
@@ -7,6 +5,7 @@ CATEGORIES=	math
 
 MAINTAINER=	iblis@hs.ntnu.edu.tw
 COMMENT=	High quality system independent, portable, open source libm
+WWW=		http://julialang.org/openlibm/
 
 LICENSE=	MIT ISCL BSD2CLAUSE
 LICENSE_COMB=	multi
