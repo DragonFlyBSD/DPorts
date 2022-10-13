@@ -1,5 +1,3 @@
-# Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
-
 PORTNAME=	tokyodystopia
 PORTVERSION=	0.9.15
 CATEGORIES=	textproc
@@ -7,6 +5,7 @@ MASTER_SITES=	https://dbmx.net/${PORTNAME}/
 
 MAINTAINER=	lwhsu@FreeBSD.org
 COMMENT=	Full-text search system based on Tokyo Cabinet
+WWW=		https://dbmx.net/tokyodystopia/
 
 LICENSE=	LGPL21
 
