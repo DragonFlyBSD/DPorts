@@ -1,5 +1,3 @@
-# Created by: Martin Matuska <mm@FreeBSD.org>
-
 PORTNAME=	mod_sql_tds
 DISTVERSION=	4.13
 PORTREVISION=	2
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	proftpd-
 
 MAINTAINER=	mm@FreeBSD.org
 COMMENT=	TDS ProFTPD module
+WWW=		http://labratsoftware.com/mod_sql_tds/
 
 LICENSE=	GPLv2
 
