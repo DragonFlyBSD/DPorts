@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	asynctest
 PORTVERSION=	0.13.0
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Enhance unittest for testing asyncio libraries
+WWW=		https://github.com/Martiusweb/asynctest
 
 LICENSE=	APACHE20
 
