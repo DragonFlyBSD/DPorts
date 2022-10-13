@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	MaxMind-DB-Common
 PORTVERSION=	0.040001
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Code shared by the DB reader and writer modules
+WWW=		https://metacpan.org/release/MaxMind-DB-Common
 
 LICENSE=	ART20
 LICENSE_FILE=	${WRKSRC}/LICENSE
