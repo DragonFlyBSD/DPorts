@@ -1,5 +1,3 @@
-# Created by: Anton Berezin <tobez@FreeBSD.org>
-
 PORTNAME=	CPAN-Mini
 PORTVERSION=	1.111016
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Create a minimal mirror of CPAN
+WWW=		https://metacpan.org/release/CPAN-Mini
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
