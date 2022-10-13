@@ -1,5 +1,3 @@
-# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-
 PORTNAME=	faraday_middleware
 PORTVERSION=	1.2.0
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Collection of Ruby Faraday middlewares
+WWW=		https://github.com/lostisland/faraday_middleware
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
