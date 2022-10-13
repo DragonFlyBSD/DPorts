@@ -1,5 +1,3 @@
-# Created by: Konstantinos Konstantinidis <kkonstan@daemon.gr>
-
 PORTNAME=	perdition
 PORTVERSION=	2.2
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	http://horms.net/projects/perdition/download/${PORTVERSION}/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	POP3 & IMAP4 proxy that can map users to multiple backend servers
+WWW=		https://www.vergenet.net/linux/perdition/
 
 LIB_DEPENDS=	libpopt.so:devel/popt \
 		libvanessa_logger.so:devel/libvanessa_logger \
