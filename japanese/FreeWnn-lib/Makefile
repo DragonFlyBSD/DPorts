@@ -1,5 +1,3 @@
-# Created by: Satoshi Taoka <taoka@FreeBSD.org>
-
 PORTNAME=	FreeWnn
 PORTVERSION=	1.1.1.a021
 PORTREVISION=	13
@@ -10,6 +8,7 @@ DISTNAME=	${PORTNAME}-1.1.1-a021
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT?=	Japanese/Chinese/Korean input method (Japanese client libraries)
+WWW=		http://www.freewnn.org/
 
 OPTIONS_DEFAULT?=	LIB WNN
 MANLANG?=		ja
