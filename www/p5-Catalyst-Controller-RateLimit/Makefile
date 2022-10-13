@@ -1,5 +1,3 @@
-# Created by: andrey@kostenko.name
-
 PORTNAME=	Catalyst-Controller-RateLimit
 PORTVERSION=	0.28
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Protect your site from robots
+WWW=		https://metacpan.org/release/Catalyst-Controller-RateLimit
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
