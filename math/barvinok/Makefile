@@ -1,11 +1,11 @@
 PORTNAME=	barvinok
-DISTVERSION=	0.41.5
-PORTREVISION=	1
+DISTVERSION=	0.41.6
 CATEGORIES=	math
 MASTER_SITES=	https://barvinok.sourceforge.io/
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Library for counting the number of integer points in polytopes
+WWW=		http://freshmeat.sourceforge.net/projects/barvinok
 
 LICENSE=	GPLv2
 
@@ -23,5 +23,6 @@ CONFIGURE_ARGS=	--disable-static --enable-shared --enable-shared-barvinok \
 USE_LDCONFIG=	yes
 
 INSTALL_TARGET=	install-strip
+TEST_TARGET=	check
 
 .include <bsd.port.mk>
