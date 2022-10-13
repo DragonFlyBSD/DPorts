@@ -1,5 +1,3 @@
-# Created by: Nicola Vitale <nivit@FreeBSD.org>
-
 PORTNAME=	csso
 PORTVERSION=	1.3.9
 DISTVERSIONPREFIX=	v
@@ -9,6 +7,7 @@ MASTER_SITES=	http://nivit.altervista.org/FreeBSD/ports/distfiles/
 
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	CSS optimizer
+WWW=		https://github.com/css/csso/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/MIT-LICENSE.txt
