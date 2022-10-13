@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	tsung
 DISTVERSION=	1.7.0
 CATEGORIES=	benchmarks sysutils
@@ -7,6 +5,7 @@ MASTER_SITES=	http://tsung.erlang-projects.org/dist/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Multi-protocol distributed load testing tool
+WWW=		http://tsung.erlang-projects.org/
 
 LICENSE=	GPLv2
 
