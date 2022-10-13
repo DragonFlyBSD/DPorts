@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	feedparser
 PORTVERSION=	6.0.8
 CATEGORIES=	textproc python
@@ -7,6 +5,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sbz@FreeBSD.org
 COMMENT=	Universal feed parser written in Python
+WWW=		https://github.com/kurtmckee/feedparser
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
