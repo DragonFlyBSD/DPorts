@@ -1,5 +1,3 @@
-# Created by: Danny Warren <danny@dannywarren.com>
-
 PORTNAME=	CatalystX-AppBuilder
 PORTVERSION=	0.00011
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	danny@dannywarren.com
 COMMENT=	Programatically build your Catalyst app
+WWW=		https://metacpan.org/release/CatalystX-AppBuilder
 
 LICENSE=	ART10
 
