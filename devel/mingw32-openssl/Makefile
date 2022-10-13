@@ -1,5 +1,3 @@
-# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-
 PORTNAME=	openssl
 PORTVERSION=	1.0.2d
 PORTREVISION=	2
@@ -11,6 +9,7 @@ DIST_SUBDIR=	${DISTNAME}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	The OpenSSL library cross-compiled for MinGW32
+WWW=		http://sctp.fh-muenster.de/dtls-patches.html
 
 BUILD_DEPENDS=	makedepend:devel/makedepend \
 		${PKGNAMEPREFIX}gcc:devel/${PKGNAMEPREFIX}gcc \
