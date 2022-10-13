@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	pg8000
 PORTVERSION=	1.28.1
 CATEGORIES=	databases python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Pure-Python Interface to the PostgreSQL Database
+WWW=		https://github.com/tlocke/pg8000
 
 LICENSE=	BSD3CLAUSE
 
