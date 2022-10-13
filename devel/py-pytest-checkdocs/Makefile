@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	pytest-checkdocs
 PORTVERSION=	2.7.1
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Check the README when running tests
+WWW=		https://github.com/jaraco/pytest-checkdocs
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
