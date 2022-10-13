@@ -1,5 +1,3 @@
-# Created by: Paul Schmehl <pauls@utdallas.edu>
-
 PORTNAME=	REST-Client
 PORTVERSION=	273
 CATEGORIES=	www perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	michelle@sorbs.net
 COMMENT=	Simple client for interacting with RESTful http/https resources
+WWW=		https://metacpan.org/release/REST-Client
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
