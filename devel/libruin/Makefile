@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	libruin
 PORTVERSION=	0.2.0
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	SAVANNAH
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Renderer for User Interfaces in Ncurses
+WWW=		https://www.nongnu.org/libruin/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
