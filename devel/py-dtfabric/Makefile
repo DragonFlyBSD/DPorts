@@ -1,5 +1,3 @@
-# Created by: Antoine Brodin <antoine@FreeBSD.org>
-
 PORTNAME=	dtfabric
 PORTVERSION=	20200621
 CATEGORIES=	devel python
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Tooling for data type and structure management
+WWW=		https://github.com/libyal/dtfabric
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
