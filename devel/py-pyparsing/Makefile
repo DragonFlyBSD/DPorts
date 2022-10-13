@@ -1,5 +1,3 @@
-# Created by: Hye-Shik Chang
-
 PORTNAME=	pyparsing
 PORTVERSION=	3.0.9
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	General parsing module for Python
+WWW=		https://github.com/pyparsing/pyparsing
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
