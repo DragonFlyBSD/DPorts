@@ -1,5 +1,3 @@
-# Created by: Antoine Brodin <antoine@FreeBSD.org>
-
 PORTNAME=	openpyxl
 PORTVERSION=	2.6.4
 CATEGORIES=	textproc python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Python library to read/write Excel 2007 xlsx/xlsm files
+WWW=		https://openpyxl.readthedocs.org/
 
 LICENSE=	MIT
 
