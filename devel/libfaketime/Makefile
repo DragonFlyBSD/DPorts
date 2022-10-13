@@ -1,5 +1,3 @@
-# Created by: Kubilay Kocak <koobs@FreeBSD.org>
-
 PORTNAME=	libfaketime
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.9.10
@@ -7,6 +5,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Modifies the system time for a single application
+WWW=		https://github.com/wolfcw/libfaketime
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
