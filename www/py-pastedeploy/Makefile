@@ -1,5 +1,3 @@
-# Created by: Dryice Liu	<dryice@dryice.name>
-
 PORTNAME=	pastedeploy
 PORTVERSION=	2.1.1
 CATEGORIES=	www python
@@ -9,6 +7,7 @@ DISTNAME=	PasteDeploy-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Load, configure, and compose WSGI applications and servers
+WWW=		https://pylonsproject.org/
 
 LICENSE=	MIT
 
