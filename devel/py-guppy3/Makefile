@@ -1,5 +1,3 @@
-# Created by: thierry@pompo.net
-
 PORTNAME=	guppy3
 PORTVERSION=	3.1.2
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Python Programming Environment & Heap analysis toolset
+WWW=		https://github.com/zhuyifei1999/guppy3/
 
 LICENSE=	MIT
 
