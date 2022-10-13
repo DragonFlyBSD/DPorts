@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	un
 PORTVERSION=	0.2.0
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Utilities to replace common UNIX commands
+WWW=		https://github.com/ruby/un
 
 LICENSE=	BSD2CLAUSE RUBY
 LICENSE_COMB=	dual
