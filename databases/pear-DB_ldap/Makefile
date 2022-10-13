@@ -1,11 +1,10 @@
-# Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-
 PORTNAME=	DB_ldap
 PORTVERSION=	1.2.1
 CATEGORIES=	databases net pear
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	PEAR DB compliant interface to LDAP servers
+WWW=		https://pear.php.net/package/DB_ldap
 
 LICENSE=	LGPL3
 
