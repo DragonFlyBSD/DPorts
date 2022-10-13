@@ -1,11 +1,12 @@
 PORTNAME=	types-requests
-PORTVERSION=	2.28.0
+PORTVERSION=	2.28.11
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Typing stubs for requests
+WWW=		https://pypi.org/project/types-requests/
 
 LICENSE=	APACHE20
 
