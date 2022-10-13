@@ -1,11 +1,12 @@
 PORTNAME=	i18n
-PORTVERSION=	1.10.0
+PORTVERSION=	1.12.0
 PORTEPOCH=	2
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	New wave Internationalization support for Ruby
+WWW=		https://github.com/ruby-i18n/i18n
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/MIT-LICENSE
