@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	fog-dynect
 PORTVERSION=	0.5.0
 CATEGORIES=	net rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Module for the 'fog' gem to support Dynect DNS
+WWW=		https://github.com/fog/fog-dynect
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
