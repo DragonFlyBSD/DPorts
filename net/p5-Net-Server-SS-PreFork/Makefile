@@ -1,5 +1,3 @@
-# Created by: Denis Pokataev <catone@cpan.org>
-
 PORTNAME=	Net-Server-SS-PreFork
 PORTVERSION=	0.05
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Hot-deployable variant of Net::Server::PreFork
+WWW=		https://metacpan.org/release/Net-Server-SS-PreFork
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
