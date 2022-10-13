@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	XML-Canonical
 PORTVERSION=	0.10
 PORTREVISION=	5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Perl Implementation of Canonical XML
+WWW=		https://metacpan.org/release/XML-Canonical
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
