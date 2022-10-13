@@ -1,5 +1,3 @@
-# Created by: Fukang Chen <loader@FreeBSD.org>
-
 PORTNAME=	pytest-cache
 PORTVERSION=	1.0
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	loader@FreeBSD.org
 COMMENT=	Pytest plugin with mechanisms for caching across test runs
+WWW=		https://bitbucket.org/hpk42/pytest-cache/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
