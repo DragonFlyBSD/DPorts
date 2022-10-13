@@ -1,5 +1,3 @@
-# Created by: Johannes Jost Meixner <xmj@FreeBSD.org>
-
 PORTNAME=	rails-dom-testing
 PORTVERSION=	2.0.3
 CATEGORIES=	textproc rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Analyse and compare DOMs using Nokogiri
+WWW=		https://github.com/rails/rails-dom-testing
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/MIT-LICENSE
