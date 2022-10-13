@@ -1,14 +1,13 @@
-# Created by: Mahlon E. Smith <mahlon@martini.nu>
-
 PORTNAME=	mdbx
-PORTVERSION=	0.11.2
-DISTVERSIONPREFIX=	v
+PORTVERSION=	0.11.9
 CATEGORIES=	databases
 MASTER_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/releases/download/${DISTVERSIONPREFIX}${DISTVERSION}/
-DISTNAME=	${GH_PROJECT}-amalgamated-${DISTVERSION}
+MASTER_SITES=	https://libmdbx.dqdkfa.ru/release/
+DISTNAME=	libmdbx-amalgamated-${DISTVERSION}
 
 MAINTAINER=	mahlon@martini.nu
 COMMENT=	Lightning Memory-Mapped Database (Extended)
+WWW=		https://github.com/erthink/libmdbx
 
 LICENSE=	OPENLDAP
 LICENSE_NAME=	OpenLDAP Public License
@@ -16,9 +15,6 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 USES=		gmake
-# No USE_GITHUB, we want the amalgamated build.
-GH_ACCOUNT=	erthink
-GH_PROJECT=	libmdbx
 USE_LDCONFIG=	yes
 
 MAKEFILE=	GNUmakefile
