@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	guard-livereload
 PORTVERSION=	2.5.2
 CATEGORIES=	sysutils rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Automatically reloads your browser when 'view' files are modified
+WWW=		https://github.com/guard/guard-livereload
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
