@@ -1,5 +1,3 @@
-# Created by: Trevor Caira <trevor@bitba.se>
-
 PORTNAME=	resolver
 PORTVERSION=	0.2.1
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Resolve specially formatted statements to Python objects
+WWW=		http://lukearno.com/projects/resolver/
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
