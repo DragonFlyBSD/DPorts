@@ -1,5 +1,3 @@
-# Created by: Yuri Victorovich
-
 PORTNAME=	pyaxo
 DISTVERSION=	0.8.2
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Python implementation of the Axolotl ratchet protocol
+WWW=		https://github.com/rxcomm/pyaxo
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING
