@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	activerecord-session_store
 PORTVERSION=	2.0.0
 CATEGORIES=	databases rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Action Dispatch session store backed by an Active Record class
+WWW=		https://github.com/rails/activerecord-session_store
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/MIT-LICENSE
