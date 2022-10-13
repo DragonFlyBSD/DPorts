@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	pigz
 PORTVERSION=	2.7
 CATEGORIES=	archivers
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.zlib.net/pigz/ \
 
 MAINTAINER=	delphij@FreeBSD.org
 COMMENT=	Parallel GZIP
+WWW=		https://www.zlib.net/pigz/
 
 LICENSE=	ZLIB
 
