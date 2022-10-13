@@ -1,5 +1,3 @@
-# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-
 PORTNAME=	Math-GSL
 PORTVERSION=	0.43
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bokutin@bokut.in
 COMMENT=	Perl interface to GNU Scientific Library
+WWW=		https://metacpan.org/release/Math-GSL
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
