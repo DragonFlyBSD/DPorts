@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	stringbrewer
 PORTVERSION=	0.0.1
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Generate random strings matching a pattern
+WWW=		https://github.com/simoncozens/stringbrewer
 
 LICENSE=	MIT
 
