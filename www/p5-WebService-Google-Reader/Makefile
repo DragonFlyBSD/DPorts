@@ -1,5 +1,3 @@
-# Created by: Frederic Culot <frederic@culot.org>
-
 PORTNAME=	WebService-Google-Reader
 PORTVERSION=	0.23
 CATEGORIES=	www perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl interface to Google Reader
+WWW=		https://metacpan.org/release/WebService-Google-Reader
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
