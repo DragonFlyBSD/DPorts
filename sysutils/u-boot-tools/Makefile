@@ -1,5 +1,3 @@
-# Created by: Emmanuel Vadot <manu@freebsd.org>
-
 PORTNAME=	u-boot-tools
 DISTVERSION=	2020.07
 CATEGORIES=	sysutils
@@ -8,6 +6,7 @@ DISTNAME=	u-boot-${PORTVERSION}
 
 MAINTAINER=	uboot@FreeBSD.org
 COMMENT=	U-boot related tools
+WWW=		https://www.denx.de/wiki/U-Boot
 
 LICENSE=	GPLv2
 
