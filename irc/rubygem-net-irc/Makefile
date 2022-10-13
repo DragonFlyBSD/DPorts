@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	net-irc
 PORTVERSION=	0.0.9
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Ruby library for implementing IRC server and client
+WWW=		https://github.com/cho45/net-irc
 
 LICENSE=	RUBY
 
