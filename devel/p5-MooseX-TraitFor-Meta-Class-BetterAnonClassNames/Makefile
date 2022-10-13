@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	MooseX-TraitFor-Meta-Class-BetterAnonClassNames
 PORTVERSION=	0.002003
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Metaclass trait to demystify generated anonymous class names
+WWW=		https://metacpan.org/release/MooseX-TraitFor-Meta-Class-BetterAnonClassNames
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/LICENSE
