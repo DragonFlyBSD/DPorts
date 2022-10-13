@@ -1,5 +1,3 @@
-# Created by: Ryan Steinmetz <zi@FreeBSD.org>
-
 PORTNAME=	elasticsearch
 PORTVERSION=	6.8.2
 CATEGORIES=	textproc python
@@ -9,6 +7,7 @@ PKGNAMESUFFIX=	6
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Official Python low-level client for Elasticsearch
+WWW=		https://github.com/elastic/elasticsearch-py
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
