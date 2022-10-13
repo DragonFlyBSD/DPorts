@@ -1,5 +1,3 @@
-# Created by: Alexandr Kovalenko <never@nevermind.kiev.ua>
-
 PORTNAME=	enca
 PORTVERSION=	1.19
 CATEGORIES=	converters textproc russian ukrainian
@@ -7,6 +5,7 @@ MASTER_SITES=	http://dl.cihar.com/enca/
 
 MAINTAINER=	never@nevermind.kiev.ua
 COMMENT=	Detect encoding of text files
+WWW=		http://gitorious.org/enca
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
