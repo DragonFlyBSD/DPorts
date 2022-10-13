@@ -1,5 +1,3 @@
-# Created by: wenheping@gmail.com
-
 PORTNAME=	prawn
 PORTVERSION=	2.4.0
 CATEGORIES=	print rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Fast, tiny, and nimble PDF generator for Ruby
+WWW=		https://prawnpdf.org/
 
 LICENSE=	RUBY GPLv2 GPLv3
 LICENSE_COMB=	dual
