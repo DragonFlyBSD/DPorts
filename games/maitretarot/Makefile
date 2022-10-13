@@ -1,5 +1,3 @@
-# Created by: thierry@pompo.net
-
 PORTNAME=	maitretarot
 PORTVERSION=	0.1.98
 PORTREVISION=	7
@@ -8,6 +6,7 @@ MASTER_SITES=	SAVANNAH
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Server side of MaitreTarot, a Tarot card game
+WWW=		https://www.nongnu.org/maitretarot/
 
 LICENSE=	GPLv2
 
