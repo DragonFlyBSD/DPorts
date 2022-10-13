@@ -1,5 +1,3 @@
-# Created by: Pav Lucistnik <pav@FreeBSD.org>
-
 PORTNAME=	popular
 PORTVERSION=	1.5.5
 PORTREVISION=	8
@@ -8,6 +6,7 @@ MASTER_SITES=	https://www.jochentopf.com/software/popular/
 
 MAINTAINER=	svysh.fbsd@gmail.com
 COMMENT=	Suite of programs for setting up large POP3 server systems
+WWW=		https://www.jochentopf.com/software/popular/index.html
 
 LICENSE=	GPLv2
 
