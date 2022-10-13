@@ -1,5 +1,3 @@
-# Created by: Kubilay Kocak <koobs@FreeBSD.org>
-
 PORTNAME=	pycmd
 PORTVERSION=	1.2
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Tools for managing/searching Python related files
+WWW=		https://pypi.org/project/pycmd/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
