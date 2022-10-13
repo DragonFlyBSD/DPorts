@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	async-rest
 PORTVERSION=	0.12.4
 CATEGORIES=	www rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	RESTful clients (and hopefully servers)
+WWW=		https://github.com/socketry/async-rest
 
 LICENSE=	MIT
 
