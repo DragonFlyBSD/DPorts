@@ -1,5 +1,3 @@
-# Created by: Masahiro Teramoto <markun@onohara.to>
-
 PORTNAME=	Text-Language-Guess
 PORTVERSION=	0.02
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	markun@onohara.to
 COMMENT=	Trained module to guess a document's language
+WWW=		https://metacpan.org/release/Text-Language-Guess
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-Log-Log4perl>=1.0:devel/p5-Log-Log4perl \
