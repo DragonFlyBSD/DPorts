@@ -1,11 +1,10 @@
-# Created by: Chin-San Huang <chinsan.tw@gmail.com>
-
 PORTNAME=	rar
 PORTVERSION=	4.2.0
 CATEGORIES=	archivers pear
 
 MAINTAINER=	fluffy@FreeBSD.org
 COMMENT=	PECL extension to create and read RAR files
+WWW=		https://pecl.php.net/package/rar
 
 LICENSE=	PHP301
 
