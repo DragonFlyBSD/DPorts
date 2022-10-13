@@ -1,5 +1,3 @@
-# Created by: Kubilay Kocak <koobs@FreeBSD.org>
-
 PORTNAME=	limnoria
 PORTVERSION=	2019.09.08
 CATEGORIES=	irc python
@@ -7,6 +5,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Modified version of Supybot (IRC bot and framework)
+WWW=		https://github.com/ProgVal/Limnoria
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
