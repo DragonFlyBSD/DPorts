@@ -1,5 +1,3 @@
-# Created by: Tom Hukins <tom@eborcom.com>
-
 # You can define the following to enable further compile time
 # customizations:
 # MAILDROP_SUID=<username>,
@@ -21,6 +19,7 @@ MASTER_SITES=	SF/courier/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	madpilot@FreeBSD.org
 COMMENT=	Mail delivery agent (MDA) with filtering abilities
+WWW=		https://www.courier-mta.org/maildrop/
 
 LICENSE=	GPLv3
 
