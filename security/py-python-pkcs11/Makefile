@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	python-pkcs11
 PORTVERSION=	0.7.0
 CATEGORIES=	security python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	PKCS\#11 (Cryptoki) support for Python
+WWW=		https://github.com/danni/python-pkcs11
 
 LICENSE=	MIT
 
