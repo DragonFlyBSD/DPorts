@@ -1,11 +1,12 @@
 PORTNAME=	cm
-DISTVERSION=	0.3.1
+DISTVERSION=	0.4.0
 PORTREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	http://www.multiprecision.org/downloads/
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Library for ring class fields of imaginary quadratic number fields
+WWW=		https://www.multiprecision.org/cm/home.html
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -22,6 +23,7 @@ USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 
 INSTALL_TARGET=	install-strip
+TEST_TARGET=	check
 
 INFO=		cm
 
