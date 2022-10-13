@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Authen-TypeKey
 PORTVERSION=	0.05
 PORTREVISION=	3
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	TypeKey authentication verification
+WWW=		https://metacpan.org/release/Authen-TypeKey
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
