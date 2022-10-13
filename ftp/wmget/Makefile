@@ -1,5 +1,3 @@
-# Created by: Ulrich Spoerlein <uspoerlein@gmail.com>
-
 PORTNAME=	wmget
 PORTVERSION=	0.6.0
 PORTREVISION=	8
@@ -10,6 +8,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-src
 
 MAINTAINER=	uqs@FreeBSD.org
 COMMENT=	Dock app for Window Maker providing wget functionality
+WWW=		https://web.archive.org/web/20160322141200/http://amtrickey.net/wmget/
 
 LICENSE=	MIT
 
