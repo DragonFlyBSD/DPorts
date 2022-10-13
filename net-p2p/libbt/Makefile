@@ -1,5 +1,3 @@
-# Created by: Florent Thoumie <flz@xbsd.org>
-
 PORTNAME=	libbt
 DISTVERSION=	1.06
 CATEGORIES=	net-p2p devel
@@ -7,6 +5,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	egypcio@FreeBSD.org
 COMMENT=	C library implementing the core BitTorrent protocol
+WWW=		http://libbt.sourceforge.net/
 
 LICENSE=	GPLv2 LGPL21
 LICENSE_COMB=	multi
