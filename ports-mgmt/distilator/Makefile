@@ -1,5 +1,3 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	distilator
 PORTVERSION=	1.4
 CATEGORIES=	ports-mgmt
@@ -8,6 +6,7 @@ MASTER_SITES=	https://critical.ch/distilator/ \
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Command-line script to check the availability of a ports distfiles
+WWW=		https://critical.ch/distilator/
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING
