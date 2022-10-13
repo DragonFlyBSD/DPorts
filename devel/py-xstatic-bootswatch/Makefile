@@ -1,5 +1,3 @@
-# Created by: Alexander Nusov <alexander.nusov@nfvexpress.com>
-
 PORTNAME=	xstatic-bootswatch
 PORTVERSION=	3.3.7.0
 PORTREVISION=	2
@@ -10,6 +8,7 @@ DISTNAME=	XStatic-bootswatch-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	bootswatch (themes for Bootstrap) (XStatic packaging standard)
+WWW=		https://bootswatch.com/
 
 LICENSE=	MIT
 
