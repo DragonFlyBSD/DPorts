@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	installer
 PORTVERSION=	0.5.1
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Library for installing Python wheels
+WWW=		https://github.com/pypa/installer
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
