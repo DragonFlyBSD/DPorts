@@ -1,5 +1,3 @@
-# Created by: Kubilay Kocak <koobs@FreeBSD.org>
-
 PORTNAME=	sure
 PORTVERSION=	1.4.11
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Utility belt for automated testing in Python for Python
+WWW=		https://github.com/gabrielfalcao/sure
 
 LICENSE=	GPLv3
 
