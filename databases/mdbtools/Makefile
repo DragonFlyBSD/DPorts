@@ -1,5 +1,3 @@
-# Created by: Anders Nordby <anders@fix.no>
-
 PORTNAME=	mdbtools
 DISTVERSION=	1.0.0
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/releases/download/v${DI
 
 MAINTAINER=	rhurlin@FreeBSD.org
 COMMENT=	Utilities and libraries to export data from MS Access databases (.mdb)
+WWW=		https://github.com/mdbtools/mdbtools/
 
 LICENSE=	GPLv2
 
