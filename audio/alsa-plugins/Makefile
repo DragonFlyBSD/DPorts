@@ -1,5 +1,3 @@
-# Created by: Aragon Gouveia <aragon@phat.za.net>
-
 PORTNAME=	alsa-plugins
 PORTVERSION=	1.2.2
 PORTREVISION=	8
@@ -13,6 +11,7 @@ GH_PROJECT=	${PORTNAME}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	ALSA compatibility library plugins
+WWW=		https://www.alsa-project.org/
 
 LICENSE=	LGPL21+
 
