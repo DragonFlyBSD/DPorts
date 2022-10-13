@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	moarchiving
 PORTVERSION=	0.6.0
 CATEGORIES=	math python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Biobjective Archive class with hypervolume indicator and uncrowded hypervolume improvement computation
+WWW=		https://github.com/CMA-ES/moarchiving
 
 LICENSE=	BSD3CLAUSE
 
