@@ -1,5 +1,3 @@
-# Created by: Shin-ya MURAKAMI <murashin@gfd-dennou.org>
-
 PORTNAME=	gsl
 PORTVERSION=	2.1.0.2
 PORTREVISION=	5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	rubygem-rb-
 
 MAINTAINER=	murashin@gfd-dennou.org
 COMMENT=	Ruby extension library for GSL (GNU Scientific Library)
+WWW=		https://github.com/blackwinter/rb-gsl
 
 LICENSE=	GPLv2
 
