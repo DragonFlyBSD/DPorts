@@ -1,11 +1,10 @@
-# Created by: Erik Greenwald <erik@smluc.org>
-
 PORTNAME=	x86info
 DISTVERSION=	1.31snap03
 CATEGORIES=	sysutils
 
 MAINTAINER=	ler@FreeBSD.org
 COMMENT=	x86 CPU identification and feature display utility
+WWW=		https://github.com/kernelslacker/x86info
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
