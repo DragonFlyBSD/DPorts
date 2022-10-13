@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wen@FreeBSD.org>
-
 PORTNAME=	AnyEvent-XMPP
 PORTVERSION=	0.55
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Implementation of the XMPP Protocol
+WWW=		https://metacpan.org/release/AnyEvent-XMPP
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
