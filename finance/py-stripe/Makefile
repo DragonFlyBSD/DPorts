@@ -1,5 +1,3 @@
-# Created by: Trevor Caira <trevor@bitba.se>
-
 PORTNAME=	stripe
 PORTVERSION=	2.76.0
 CATEGORIES=	finance python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Stripe Python bindings
+WWW=		https://github.com/stripe/stripe-python
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
