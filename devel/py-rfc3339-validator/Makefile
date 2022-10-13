@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	rfc3339-validator
 PORTVERSION=	0.1.4
 CATEGORIES=	devel python
@@ -9,6 +7,7 @@ DISTNAME=	rfc3339_validator-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Pure python RFC3339 validator
+WWW=		https://github.com/naimetti/rfc3339-validator
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
