@@ -1,5 +1,3 @@
-# Created by: Michael Haro <mharo@FreeBSD.org>
-
 PORTNAME=	Math-Pari
 PORTVERSION=	2.01080900
 CATEGORIES=	math perl5
@@ -12,6 +10,7 @@ DISTFILES=	${DISTNAME}.zip \
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Numerical/scientific/number-theoretic calculations
+WWW=		https://metacpan.org/dist/Math-Pari
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
