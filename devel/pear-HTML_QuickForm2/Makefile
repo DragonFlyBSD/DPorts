@@ -1,11 +1,10 @@
-# Created by: Gerrit Beine (<gerrit.beine@gmx.de>)
-
 PORTNAME=	HTML_QuickForm2
 PORTVERSION=	2.3.1
 CATEGORIES=	devel www pear
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	PHP5 rewrite of the HTML_QuickForm package
+WWW=		https://pear.php.net/package/HTML_QuickForm2
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/docs/LICENSE
