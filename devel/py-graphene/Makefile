@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	graphene
 PORTVERSION=	3.1
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	GraphQL Framework for Python
+WWW=		https://github.com/graphql-python/graphene
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
