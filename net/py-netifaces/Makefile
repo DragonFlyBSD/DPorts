@@ -1,5 +1,3 @@
-# Created by: Muhammad Moinur Rahman <bofh@FreeBSD.org>
-
 PORTNAME=	netifaces
 PORTVERSION=	0.11.0
 CATEGORIES=	net python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Getting network addresses from Python 3
+WWW=		https://pypi.org/project/netifaces/
 
 LICENSE=	MIT
 
