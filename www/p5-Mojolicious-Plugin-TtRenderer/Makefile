@@ -1,5 +1,3 @@
-# Created by: Adam Weinberger <adamw@FreeBSD.org>
-
 PORTNAME=	Mojolicious-Plugin-TtRenderer
 PORTVERSION=	1.62
 CATEGORIES=	www perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Template-toolkit renderer for Mojolicious
+WWW=		https://metacpan.org/release/Mojolicious-Plugin-TtRenderer
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
