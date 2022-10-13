@@ -1,5 +1,3 @@
-# Created by: Yuichiro NAITO <naito.yuichiro@gmail.com>
-
 PORTNAME=	itamae
 PORTVERSION=	1.10.7
 CATEGORIES=	sysutils rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	naito.yuichiro@gmail.com
 COMMENT=	Simple and lightweight configuration management tool
+WWW=		https://github.com/itamae-kitchen/itamae
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
