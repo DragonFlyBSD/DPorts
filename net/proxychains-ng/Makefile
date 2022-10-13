@@ -1,5 +1,3 @@
-# Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-
 PORTNAME=	proxychains-ng
 DISTVERSION=	4.16
 PORTREVISION=	1
@@ -12,6 +10,7 @@ PATCHFILES=	07c15a0.patch:-p1
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Redirect connection through proxy servers
+WWW=		https://github.com/rofl0r/proxychains-ng
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
