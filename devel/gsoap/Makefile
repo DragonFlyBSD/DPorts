@@ -1,13 +1,12 @@
-# Created by: Sergey Matveychuk <sem@ciam.ru>
-
 PORTNAME=	gsoap
-PORTVERSION=	2.8.122
+PORTVERSION=	2.8.123
 CATEGORIES=	devel
 MASTER_SITES=	SF/${PORTNAME}2
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Generator Tools for Coding SOAP/XML Web Services in C and C++
+WWW=		https://www.cs.fsu.edu/~engelen/soap.html
 
 LICENSE=	GPLv2
 
