@@ -1,13 +1,12 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	pyperf
-PORTVERSION=	2.3.1
+PORTVERSION=	2.4.1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Run and analyze benchmarks
+WWW=		https://github.com/psf/pyperf
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
