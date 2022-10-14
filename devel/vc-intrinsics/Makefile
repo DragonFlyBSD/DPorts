@@ -1,15 +1,16 @@
 PORTNAME=	vc-intrinsics
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.5.0
+DISTVERSION=	0.7.1
 CATEGORIES=	devel
 PKGNAMESUFFIX=	-${FLAVOR}
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	LLVM intrinsics for SIMD on GPU
+WWW=		https://github.com/intel/vc-intrinsics
 
 LICENSE=	MIT
 
-FLAVORS=	${14 13 12 11:L:S/^/llvm/}
+FLAVORS=	${15 14 13 12 11:L:S/^/llvm/}
 
 BUILD_DEPENDS=	${FLAVOR}>0:devel/${FLAVOR}
 
