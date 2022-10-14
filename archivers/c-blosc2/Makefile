@@ -1,12 +1,11 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	c-blosc2
-PORTVERSION=	2.2.0
+PORTVERSION=	2.3.1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	archivers
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	High performance compressor optimized for binary data
+WWW=		https://www.blosc.org/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
