@@ -1,5 +1,3 @@
-# Created by: johalun0@gmail.com
-
 PORTNAME=	libwacom
 DISTVERSION=	1.5
 CATEGORIES=	x11
@@ -7,6 +5,7 @@ MASTER_SITES=	https://github.com/linuxwacom/${PORTNAME}/releases/download/${PORT
 
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	Adds tablet support to libinput
+WWW=		https://github.com/linuxwacom/libwacom/wiki
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
