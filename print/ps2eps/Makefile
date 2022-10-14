@@ -1,5 +1,3 @@
-# Created by: Jui-Nan Lin <jnlin@freebsd.cs.nctu.edu.tw>
-
 PORTNAME=	ps2eps
 PORTVERSION=	1.64
 PORTREVISION=	5
@@ -9,6 +7,7 @@ MASTER_SITES=	http://www.tm.uka.de/~bless/ \
 
 MAINTAINER=	jnlin@freebsd.cs.nctu.edu.tw
 COMMENT=	Generate Encapsulated Postscript file from Postscript document
+WWW=		http://www.tm.uka.de/~bless/ps2eps
 
 CONFLICTS_INSTALL=	texlive-base
 
