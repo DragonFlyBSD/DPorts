@@ -1,10 +1,11 @@
 PORTNAME=	RPostgreSQL
-DISTVERSION=	0.7-3
+DISTVERSION=	0.7-4
 CATEGORIES=	databases
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	R Interface to the 'PostgreSQL' Database System
+WWW=		https://cran.r-project.org/web/packages/RPostgreSQL/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
