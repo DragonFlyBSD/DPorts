@@ -1,5 +1,3 @@
-# Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-
 PORTNAME=	help_hannahs_horse
 PORTVERSION=	1.0
 PORTREVISION=	2
@@ -12,6 +10,7 @@ DIST_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Pacman with a fast food twist
+WWW=		https://sourceforge.net/projects/hannah/
 
 LICENSE=	GPLv2 OFL11
 LICENSE_COMB=	multi
