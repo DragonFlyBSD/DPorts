@@ -1,5 +1,3 @@
-# Created by: ports@rbt.ca
-
 PORTNAME=	GD-SecurityImage
 PORTVERSION=	1.75
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl5 module for creating CAPTCHA security images
+WWW=		https://metacpan.org/release/GD-SecurityImage
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
