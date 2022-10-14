@@ -1,5 +1,3 @@
-# Created by: Pietro Cerutti <gahr@FreeBSD.org>
-
 PORTNAME=	thingylaunch
 PORTVERSION=	2.0.3
 PORTREVISION=	8
@@ -8,6 +6,7 @@ MASTER_SITES=	http://gahr.ch/thingylaunch/
 
 MAINTAINER=	gahr@FreeBSD.org
 COMMENT=	Lightweight launcher for X
+WWW=		https://www.gahr.ch/thingylaunch
 
 LICENSE=	MIT BSD2CLAUSE
 LICENSE_COMB=	multi
