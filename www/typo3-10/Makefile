@@ -1,5 +1,3 @@
-# Created by: Helmut Ritter <freebsd-ports@charlieroot.de>
-
 PORTNAME=	typo3
 PORTVERSION=	${PORT_V_MAJOR}.${PORT_V_MINOR}.${PORT_V_PATCH}
 CATEGORIES=	www
@@ -9,6 +7,7 @@ DISTNAME=	${TYPO3SRC}
 
 MAINTAINER=	freebsd-ports@charlieroot.de
 COMMENT=	Typo3 content management system
+WWW=		https://typo3.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
@@ -31,7 +30,7 @@ PORTSCOUT=	limit:^${PORT_V_MAJOR}\.${PORT_V_MINOR}\.
 
 PORT_V_MAJOR=	10
 PORT_V_MINOR=	4
-PORT_V_PATCH=	30
+PORT_V_PATCH=	32
 
 TYPO3WWW=	www
 TYPO3SRC=	${PORTNAME}_src-${PORTVERSION}
