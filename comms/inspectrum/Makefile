@@ -1,5 +1,3 @@
-# Created by: <mr@freebsd.org>
-
 PORTNAME=	inspectrum
 PORTVERSION=	g20191102
 PORTREVISION=	0
@@ -7,6 +5,7 @@ CATEGORIES=	comms hamradio
 
 MAINTAINER=	mr@FreeBSD.org
 COMMENT=	Offline radio signal analyser
+WWW=		https://github.com/miek/inspectrum
 
 LICENSE=	GPLv3
 
@@ -21,7 +20,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	miek
 GH_TAGNAME=	d6115cb458068fa64c7bbd9020bcbab3373fee0e
 
-USE_QT=		core buildtools_build concurrent widgets
+USE_QT=		core buildtools:build concurrent widgets
 USE_LDCONFIG=	yes
 
 .include <bsd.port.mk>
