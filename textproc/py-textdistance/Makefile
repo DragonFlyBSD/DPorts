@@ -1,13 +1,12 @@
-# Created by: Rainer Hurling <rhurlin@gwdg.de>
-
 PORTNAME=	textdistance
-PORTVERSION=	4.3.0
+PORTVERSION=	4.5.0
 CATEGORIES=	textproc python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	rhurlin@FreeBSD.org
 COMMENT=	Comparing distance between two or more sequences by many algorithms
+WWW=		https://github.com/life4/textdistance
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
