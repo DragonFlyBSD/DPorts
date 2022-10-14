@@ -1,5 +1,3 @@
-# Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-
 PORTNAME=	fbg2
 PORTVERSION=	0.4
 PORTREVISION=	7
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/fbg/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Classic block-stacking arcade game
+WWW=		http://fbg.sourceforge.net/
 
 LICENSE=	GPLv2+ CC-BY-SA-3.0
 LICENSE_COMB=	multi
