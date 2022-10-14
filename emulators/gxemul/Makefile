@@ -1,5 +1,3 @@
-# Created by: Janni
-
 PORTNAME=	gxemul
 PORTVERSION=	0.7.0
 CATEGORIES=	emulators
@@ -7,6 +5,7 @@ MASTER_SITES=	http://gavare.se/gxemul/src/
 
 MAINTAINER=	mclay@astate.edu
 COMMENT=	Instruction-level machine emulator
+WWW=		http://gavare.se/gxemul/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
