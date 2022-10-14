@@ -1,12 +1,11 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	geometry
-DISTVERSION=	0.4.6
+DISTVERSION=	0.4.6.1
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Mesh Generation and Surface Tesselation
+WWW=		https://cran.r-project.org/web/packages/geometry/
 
 LICENSE=	GPLv3
 
