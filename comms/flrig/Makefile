@@ -1,5 +1,3 @@
-# Created by: Stephen Hurd <shurd@FreeBSD.org>
-
 PORTNAME=	flrig
 PORTVERSION=	1.3.54
 CATEGORIES=	comms hamradio
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/fldigi/${PORTNAME}
 
 MAINTAINER=	hamradio@FreeBSD.org
 COMMENT=	Ham Radio rig control program, cooperates with fldigi
+WWW=		http://www.w1hkj.com/flrig-help/index.html
 
 LICENSE=	GPLv2
 
