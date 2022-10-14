@@ -1,11 +1,12 @@
 PORTNAME=	hcloud
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.21.0
-PORTREVISION=	2
+PORTREVISION=	6
 CATEGORIES=	sysutils
 
 MAINTAINER=	uzsolt@uzsolt.hu
 COMMENT=	Official Hetzner Cloud command-line interface
+WWW=		https://github.com/hetznercloud/cli
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
