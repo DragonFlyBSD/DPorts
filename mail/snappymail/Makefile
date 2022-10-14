@@ -1,11 +1,12 @@
 PORTNAME=	snappymail
-DISTVERSION=	2.16.3
+DISTVERSION=	2.18.3
 CATEGORIES=	mail www
 MASTER_SITES=	https://github.com/the-djmaze/snappymail/releases/download/v${DISTVERSION}/
 PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
 
 MAINTAINER=	yasu@FreeBSD.org
 COMMENT=	Simple, modern, lightweight & fast web-based email client
+WWW=		https://snappymail.eu/
 
 LICENSE=	AGPLv3
 
