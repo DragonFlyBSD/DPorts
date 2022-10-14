@@ -1,5 +1,3 @@
-# Created by: Alejandro Pulver <alejandro@varnet.biz>
-
 PORTNAME=	excido
 PORTVERSION=	0.1.5c
 PORTREVISION=	17
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-src
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Portable fast-paced 3D shooter
+WWW=		https://icculus.org/excido/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
