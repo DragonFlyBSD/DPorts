@@ -1,5 +1,3 @@
-# Created by: Robin Schilham
-
 PORTNAME=	Clp
 DISTVERSION=	1.17.6
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	coin-or-
 
 MAINTAINER=	co9co9@gmail.com
 COMMENT=	Linear Programming Solver
+WWW=		https://www.coin-or.org/Clp/index.html
 
 LICENSE=	EPL
 
