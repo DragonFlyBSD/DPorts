@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	memoise
 PORTVERSION=	2.0.1
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Memoise functions for R
+WWW=		https://cran.r-project.org/web/packages/memoise/
 
 LICENSE=	MIT
 
