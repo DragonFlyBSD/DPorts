@@ -1,11 +1,10 @@
-# Created by: Muhammad Moinur Rahman <5u623l20@gmail.com>
-
 PORTNAME=	centreon-clib
 PORTVERSION=	21.04.4
 CATEGORIES=	net-mgmt
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Common library of all Centreon projects written in C or C++
+WWW=		https://www.centreon.com/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
