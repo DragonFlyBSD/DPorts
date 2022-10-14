@@ -1,5 +1,3 @@
-# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-
 PORTNAME=	libxklavier
 PORTVERSION=	5.3
 PORTREVISION=	3
@@ -9,6 +7,7 @@ MASTER_SITES=	GNOME
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Utility library to make XKB stuff easier
+WWW=		http://gswitchit.sourceforge.net/
 
 BUILD_DEPENDS=	iso-codes>=0:misc/iso-codes
 RUN_DEPENDS=	xkbcomp:x11/xkbcomp \
