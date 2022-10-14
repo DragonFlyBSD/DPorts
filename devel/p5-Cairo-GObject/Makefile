@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Cairo-GObject
 PORTVERSION=	1.005
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Integrate Cairo into the Glib type system
+WWW=		https://metacpan.org/release/Cairo-GObject
 
 LICENSE=	LGPL21
 
