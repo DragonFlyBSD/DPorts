@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Glib-Object-Introspection
 PORTVERSION=	0.049
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Dynamically create Perl language bindings
+WWW=		https://metacpan.org/release/Glib-Object-Introspection
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/LICENSE
