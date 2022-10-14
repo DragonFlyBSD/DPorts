@@ -1,12 +1,13 @@
 PORTNAME=	ghostscript
 PORTVERSION=	9.56.1
-PORTREVISION=	1
+PORTREVISION=	4
 CATEGORIES=	print
 MASTER_SITES=	https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs${PORTVERSION:S/.//g}/
 PKGNAMESUFFIX=	9-agpl-base
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	PostScript and PDF interpreter
+WWW=		https://ghostscript.com/
 
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
