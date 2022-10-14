@@ -1,5 +1,3 @@
-# Created by: Martin Matuska (mm@FreeBSD.org)
-
 PORTNAME=	gollem
 PORTVERSION=	3.0.13
 CATEGORIES=	ftp www pear
@@ -7,6 +5,7 @@ PKGNAMEPREFIX=	${PHP_PKGNAMEPREFIX}horde-
 
 MAINTAINER=	horde@FreeBSD.org
 COMMENT=	Horde Web-based File Manager
+WWW=		https://www.horde.org/apps/gollem/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
