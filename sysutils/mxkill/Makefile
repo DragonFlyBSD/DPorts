@@ -1,5 +1,3 @@
-# Created by: Cy Schubert <cy@FreeBSD.org>
-
 PORTNAME=	mxkill
 PORTVERSION=	1.2
 CATEGORIES=	sysutils
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}${PORTVERSION}
 
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	X/Motif interface to ps with kill capability
+WWW=		https://www.muquit.com/muquit/software/mxkill/mxkill.html
 
 USES=		imake:noman motif
 USE_XORG=	xt x11
