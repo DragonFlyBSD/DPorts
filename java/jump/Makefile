@@ -1,5 +1,3 @@
-# Created by: Ernst de Haan <znerd@FreeBSD.org>
-
 PORTNAME=	jump
 PORTVERSION=	0.5
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}-math/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Java library for arbitrary precision computations
+WWW=		http://jump-math.sourceforge.net/
 
 USE_JAVA=	yes
 USE_ANT=	yes
