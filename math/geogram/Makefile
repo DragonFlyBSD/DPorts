@@ -1,10 +1,11 @@
 PORTNAME=	geogram
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.7.7
+DISTVERSION=	1.7.9
 CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Programming library of geometric algorithms
+WWW=		http://alice.loria.fr/software/geogram/doc/html/index.html
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/doc/devkit/license.dox
