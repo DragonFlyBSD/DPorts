@@ -1,5 +1,3 @@
-# Created by: Matthew Seaman
-
 PORTNAME=	mysql-connector-java
 PORTVERSION=	5.1.49
 CATEGORIES=	databases java
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	51
 
 MAINTAINER=	ultima@FreeBSD.org
 COMMENT=	MySQL Connector/J: JDBC interface for MySQL
+WWW=		https://dev.mysql.com/downloads/connector/j/
 
 LICENSE=	GPLv2
 
