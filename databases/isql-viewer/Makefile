@@ -1,5 +1,3 @@
-# Created by: Stefan Schmidt <stefan.schmidt@stadtbuch.de>
-
 PORTNAME=	isql-viewer
 PORTVERSION=	2.1.8
 PORTREVISION=	5
@@ -12,6 +10,7 @@ EXTRACT_ONLY=	# none
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	JDBC 2.x compliant database front end
+WWW=		https://www.isqlviewer.com/
 
 RUN_DEPENDS=	${JYTHON_PREFIX}/${JYTHON_JAR}:lang/jython \
 		${JAVALIBDIR}/postgresql.jar:databases/postgresql-jdbc \
