@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wen@FreeBSD.org>
-
 PORTNAME=	survey
 DISTVERSION=	4.1-1
 CATEGORIES=	math
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Analysis of complex survey samples
+WWW=		https://r-survey.r-forge.r-project.org/survey/
 
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual
