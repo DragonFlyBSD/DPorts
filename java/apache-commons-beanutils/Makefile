@@ -1,5 +1,3 @@
-# Created by: Ernst de Haan <znerd@FreeBSD.org>
-
 PORTNAME=	commons-beanutils
 PORTVERSION=	1.9.4
 CATEGORIES=	java devel
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-src
 
 MAINTAINER=	olgeni@FreeBSD.org
 COMMENT=	JavaBeans utility library
+WWW=		https://commons.apache.org/proper/commons-beanutils/
 
 LICENSE=	APACHE20
 
