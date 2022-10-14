@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	foreach
 PORTVERSION=	1.5.2
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Foreach looping construct for R
+WWW=		https://cran.r-project.org/web/packages/foreach/
 
 LICENSE=	APACHE20
 
