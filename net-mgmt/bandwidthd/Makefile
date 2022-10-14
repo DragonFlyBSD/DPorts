@@ -1,5 +1,3 @@
-# Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
-
 PORTNAME=	bandwidthd
 PORTVERSION=	2.0.1
 PORTREVISION=	12
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}%20${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tracks bandwidth usage by IP address
+WWW=		http://bandwidthd.sourceforge.net/
 
 LICENSE=	GPLv3+ # "any version of the GPL that is current as of your download"
 
