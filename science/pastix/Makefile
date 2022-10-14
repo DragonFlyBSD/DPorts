@@ -1,5 +1,3 @@
-# Created by: thierry@pompo.net
-
 PORTNAME=	pastix
 PORTVERSION=	6.2.1
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	science
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	PaStiX: a sparse direct solver
+WWW=		https://solverstack.gitlabpages.inria.fr/pastix/
 
 LICENSE=	LGPL3
 
