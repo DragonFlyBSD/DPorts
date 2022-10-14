@@ -1,5 +1,3 @@
-# Created by: Martin Wilke <miwi@FreeBSD.org>
-
 PORTNAME=	fluxbox-tenr-styles-pack
 PORTVERSION=	20190912
 CATEGORIES=	x11-themes
@@ -8,6 +6,7 @@ DISTNAME=	tenr.de-styles-pkg_${PORTVERSION}
 
 MAINTAINER=	jgh@FreeBSD.org
 COMMENT=	Tenner themes pack for fluxbox
+WWW=		https://tenr.de/styles/
 
 RUN_DEPENDS=	fluxbox:x11-wm/fluxbox
 
