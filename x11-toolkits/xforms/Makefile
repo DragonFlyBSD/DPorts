@@ -1,5 +1,3 @@
-# Created by: gena
-
 PORTNAME=	xforms
 DISTVERSION=	1.2.4
 PORTREVISION=	5
@@ -9,6 +7,7 @@ MASTER_SITES=	SAVANNAH
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Graphical user interface toolkit for X Window System
+WWW=		http://xforms-toolkit.org/
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING.LIB
