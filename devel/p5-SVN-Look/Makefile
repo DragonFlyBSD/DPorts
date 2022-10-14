@@ -1,5 +1,3 @@
-# Created by: Greg Larkin <glarkin@FreeBSD.org>
-
 PORTNAME=	SVN-Look
 PORTVERSION=	0.43
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Caching wrapper around the svnlook command
+WWW=		https://metacpan.org/release/SVN-Look
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
