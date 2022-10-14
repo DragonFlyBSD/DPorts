@@ -9,6 +9,7 @@ PKGNAMESUFFIX=	4
 
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	Display PDF files and convert them to other formats
+WWW=		https://www.xpdfreader.com/
 
 LICENSE=	GPLv2
 
@@ -52,7 +53,7 @@ LIBPAPER_LIB_DEPENDS=	libpaper.so:print/libpaper
 GUI_CMAKE_OFF=		-DCMAKE_DISABLE_FIND_PACKAGE_Qt5Widgets=1
 GUI_DESC=		QT5 interface
 GUI_USES=		qt:5 desktop-file-utils
-GUI_USE=		QT=buildtools_build,qmake_build,concurrent,core,gui,widgets,printsupport,svg,network,printsupport
+GUI_USE=		QT=buildtools:build,qmake:build,concurrent,core,gui,widgets,printsupport,svg,network,printsupport
 
 PRINT_CMAKE_ON=		-DXPDFWIDGET_PRINTING:BOOL=ON -DCUPS:BOOL=ON
 PRINT_CMAKE_OFF=	-DXPDFWIDGET_PRINTING:BOOL=OFF -DCUPS:BOOL=OFF
