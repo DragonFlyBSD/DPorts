@@ -1,6 +1,7 @@
 PORTNAME=	grafana
 DISTVERSIONPREFIX=	v
 DISTVERSION=	9.1.6
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://dl.grafana.com/oss/release/:public \
 		https://raw.githubusercontent.com/${GH_ACCOUNT}/${GH_PROJECT}/${DISTVERSIONFULL}/:gomod
@@ -10,6 +11,7 @@ DISTFILES=	${GRAFANA_PREBUILT}:public \
 
 MAINTAINER=	drtr0jan@yandex.ru
 COMMENT=	Dashboard and graph editor for multiple data stores
+WWW=		https://github.com/grafana/grafana
 
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
