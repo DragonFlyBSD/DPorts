@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	downloader
 PORTVERSION=	0.4
 PORTREVISION=	4
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Download Files over HTTP and HTTPS
+WWW=		https://cran.r-project.org/web/packages/downloader/
 
 LICENSE=	GPLv2
 
