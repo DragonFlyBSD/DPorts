@@ -1,13 +1,12 @@
-# Created by: Ryan Steinmetz <zi@FreeBSD.org>
-
 PORTNAME=	gron
 PORTVERSION=	0.6.1
-PORTREVISION=	1
+PORTREVISION=	5
 DISTVERSIONPREFIX=	v
 CATEGORIES=	textproc
 
 MAINTAINER=	zi@FreeBSD.org
 COMMENT=	Transforms JSON into discrete assignments that are easier to grep
+WWW=		https://github.com/tomnomnom/gron
 
 LICENSE=	MIT
 
