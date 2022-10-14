@@ -1,5 +1,3 @@
-# Created by: Guangyuan Yang <ygy@FreeBSD.org>
-
 PORTNAME=	whisker
 DISTVERSION=	0.4
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	ygy@FreeBSD.org
 COMMENT=	Logicless Mustache Templating for R
+WWW=		https://github.com/edwindj/whisker
 
 LICENSE=	GPLv3
 
