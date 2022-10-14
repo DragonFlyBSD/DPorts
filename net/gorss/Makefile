@@ -1,13 +1,12 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	gorss
 PORTVERSION=	0.3
 DISTVERSIONPREFIX=	v
-PORTREVISION=	2
+PORTREVISION=	6
 CATEGORIES=	net www
 
-MAINTAINER=	danfe@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple RSS/Atom reader written in Go
+WWW=		https://github.com/Lallassu/gorss
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
