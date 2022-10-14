@@ -1,5 +1,3 @@
-# Created by: Ganael Laplanche <ganael.laplanche@martymac.org>
-
 PORTNAME=	cosmosmash
 DISTVERSION=	1.4.8
 CATEGORIES=	games
@@ -8,6 +6,7 @@ MASTER_SITES=	http://perso.b2b2c.ca/~sarrazip/dev/ \
 
 MAINTAINER=	martymac@FreeBSD.org
 COMMENT=	Clone of the Intellivision(TM) game Astrosmash(TM)
+WWW=		http://sarrazip.com/dev/cosmosmash.html
 
 LICENSE=	GPLv2
 
