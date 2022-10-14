@@ -1,5 +1,3 @@
-# Created by: Renaud Chaput <renchap@cocoa-x.com>
-
 PORTNAME=	chef-zero
 PORTVERSION=	15.0.11
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Self-contained, easy-setup, fast-start in-memory Chef server
+WWW=		https://github.com/chef/chef-zero
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
