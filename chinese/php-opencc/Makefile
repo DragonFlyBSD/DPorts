@@ -1,5 +1,3 @@
-# Created by: Gasol Wu <gasol.wu@gmail.com>
-
 PORTNAME=	opencc
 PORTVERSION=	0.0.0.20201211
 CATEGORIES=	chinese
@@ -7,6 +5,7 @@ PKGNAMEPREFIX=	${PHP_PKGNAMEPREFIX}
 
 MAINTAINER=	gasol.wu@gmail.com
 COMMENT=	OpenCC shared extension for php
+WWW=		https://github.com/NauxLiu/opencc4php
 
 LICENSE=	PHP301
 
