@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	viewklass
 PORTVERSION=	0.7.2
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	ViewKlass-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	C++ Framework for Motif
+WWW=		http://viewklass.sourceforge.net/
 
 LICENSE=	LGPL20+
 
