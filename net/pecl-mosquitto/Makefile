@@ -1,5 +1,3 @@
-# Created by: Gasol Wu <gasol.wu@gmail.com>
-
 PORTNAME=	mosquitto
 PORTVERSION=	0.4.0
 CATEGORIES=	net pear
@@ -7,6 +5,7 @@ DISTNAME=	Mosquitto-${PORTVERSION}
 
 MAINTAINER=	gasol.wu@gmail.com
 COMMENT=	Extension for libmosquitto
+WWW=		https://pecl.php.net/package/Mosquitto
 
 LICENSE=	BSD3CLAUSE
 
