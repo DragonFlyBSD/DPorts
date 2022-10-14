@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	libsbml
 PORTVERSION=	5.19.0
 PORTREVISION=	2
@@ -9,6 +7,7 @@ DISTNAME=	libSBML-${PORTVERSION}-core-src
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	API Library for Working with SBML File
+WWW=		https://sbml.org/software/libsbml/
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING.txt
