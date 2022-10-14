@@ -1,5 +1,3 @@
-# Created by: Zach Garner <zach@neurosoft.org>
-
 PORTNAME=	kawa
 PORTVERSION=	3.1.1
 CATEGORIES=	lang scheme java
@@ -7,6 +5,7 @@ MASTER_SITES=	GNU
 
 MAINTAINER=	ashish@FreeBSD.org
 COMMENT=	Java-based Scheme implementation
+WWW=		https://www.gnu.org/software/kawa/
 
 LICENSE=	MIT
 
