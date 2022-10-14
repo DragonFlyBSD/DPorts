@@ -1,10 +1,11 @@
 PORTNAME=	rbibutils
-PORTVERSION=	2.2.8
+PORTVERSION=	2.2.9
 CATEGORIES=	textproc
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Convert Between Bibliography Formats
+WWW=		https://cran.r-project.org/web/packages/rbibutils/
 
 LICENSE=	GPLv2
 
