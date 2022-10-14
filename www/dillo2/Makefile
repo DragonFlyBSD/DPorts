@@ -1,5 +1,3 @@
-# Created by: bf <bf2006a@yahoo.com>
-
 PORTNAME=	dillo
 PORTVERSION=	3.0.5
 PORTREVISION=	3
@@ -13,6 +11,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	Fast, small graphical Web browser built upon fltk
+WWW=		https://www.dillo.org/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
