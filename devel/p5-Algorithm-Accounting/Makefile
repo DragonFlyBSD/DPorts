@@ -1,5 +1,3 @@
-# Created by: Yuan-Chung Hsiao <ychsiao@ychsiao.idv.tw>
-
 PORTNAME=	Algorithm-Accounting
 PORTVERSION=	0.08
 PORTREVISION=	7
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	ychsiao@ychsiao.org
 COMMENT=	Generate accounting statistic for general logs
+WWW=		https://metacpan.org/release/Algorithm-Accounting
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-Spiffy>=0:devel/p5-Spiffy \
