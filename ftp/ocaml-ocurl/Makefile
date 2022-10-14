@@ -1,5 +1,3 @@
-# Created by: Marwan BURELLE <marwan.burelle@lri.fr>
-
 PORTNAME=	ocurl
 PORTVERSION=	0.8.2
 CATEGORIES=	ftp
@@ -7,6 +5,7 @@ PKGNAMEPREFIX=	ocaml-
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Interface for OCaml to the curl lib
+WWW=		http://ocurl.forge.ocamlcore.org/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
