@@ -1,5 +1,3 @@
-# Created by: Samy Al Bahra <samy@kerneled.com>
-
 PORTNAME=	khotot
 PORTVERSION=	1.0
 PORTREVISION=	3
@@ -7,6 +5,7 @@ CATEGORIES=	arabic x11-fonts
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Meta-port for popular Arabic font packages
+WWW=		http://www.arabeyes.org/project.php?proj=Khotot
 
 USES=		metaport
 
