@@ -1,5 +1,3 @@
-# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-
 PORTNAME=	primegen
 PORTVERSION=	0.97
 CATEGORIES=	math
@@ -7,6 +5,7 @@ MASTER_SITES=	http://cr.yp.to/primegen/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Small, fast library to generate prime numbers in order
+WWW=		https://cr.yp.to/primegen.html
 
 USES=		groff
 ALL_TARGET=	default
