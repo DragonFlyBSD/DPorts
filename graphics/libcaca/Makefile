@@ -1,5 +1,3 @@
-# Created by: Vincent Tantardini <vinc@FreeBSD-fr.org>
-
 PORTNAME=	libcaca
 DISTVERSION=	0.99.beta19
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	http://caca.zoy.org/raw-attachment/wiki/libcaca/
 
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	Graphics library that outputs text instead of pixels
+WWW=		http://caca.zoy.org/
 
 USES=		cpe libtool ncurses pathfix pkgconfig
 GNU_CONFIGURE=	yes
