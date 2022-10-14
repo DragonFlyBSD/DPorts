@@ -1,12 +1,11 @@
-# Created by Kevin Bowling <kbowling@FreeBSD.org>
-
 PORTNAME=	promscale
 DISTVERSION=	0.6.2
-PORTREVISION=	2
+PORTREVISION=	6
 CATEGORIES=	net-mgmt
 
 MAINTAINER=	kbowling@FreeBSD.org
 COMMENT=	Timescale analytical platform for Prometheus metrics
+WWW=		https://www.timescale.com/promscale
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
