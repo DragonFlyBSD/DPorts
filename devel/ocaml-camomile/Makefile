@@ -1,5 +1,3 @@
-# Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-
 PORTNAME=	camomile
 PORTVERSION=	1.0.2
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ PKGNAMEPREFIX=	ocaml-
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Comprehensive Unicode library for Objective Caml
+WWW=		http://camomile.sourceforge.net/
 
 LICENSE=	LGPL21
 
