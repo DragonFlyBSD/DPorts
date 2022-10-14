@@ -1,5 +1,3 @@
-# Created by: Dusan Vejnovic <freebsd@dussan.org>
-
 PORTNAME=	sonarqube-ant-task
 PORTVERSION=	2.7.0.1612
 CATEGORIES=	devel java
@@ -9,6 +7,7 @@ EXTRACT_ONLY=
 
 MAINTAINER=	netchild@FreeBSD.org
 COMMENT=	SonarQube Plugin for analysis projects with an Apache Ant
+WWW=		https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-ant/
 
 LICENSE=	LGPL3
 
