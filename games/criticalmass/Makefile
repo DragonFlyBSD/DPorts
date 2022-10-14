@@ -1,5 +1,3 @@
-# Created by: nbm
-
 PORTNAME=	criticalmass
 PORTVERSION=	1.5.0
 PORTREVISION=	3
@@ -10,6 +8,7 @@ DISTNAME=	CriticalMass-${PORTVERSION:R}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	SDL/OpenGL space shoot'em up game
+WWW=		http://criticalmass.sourceforge.net/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
