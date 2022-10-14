@@ -1,5 +1,3 @@
-# Created by: Babak Farrokhi <babak@farrokhi.net>
-
 PORTNAME=	tikiwiki
 DISTVERSION=	23.1
 CATEGORIES=	www
@@ -8,6 +6,7 @@ DISTNAME=	tiki-${DISTVERSION}
 
 MAINTAINER=	joneum@FreeBSD.org
 COMMENT=	Powerful PHP based Wiki/CMS/Groupware
+WWW=		https://tiki.org/
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/license.txt
