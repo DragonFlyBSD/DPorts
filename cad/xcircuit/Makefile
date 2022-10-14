@@ -1,5 +1,3 @@
-# Created by: Pedro F. Giffuni <giffunip@asme.org>
-
 PORTNAME=	xcircuit
 PORTVERSION=	3.10.30
 PORTEPOCH=	1
@@ -9,6 +7,7 @@ MASTER_SITES=	http://opencircuitdesign.com/xcircuit/archive/ \
 
 MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	X11 circuit schematics drawing program
+WWW=		http://opencircuitdesign.com/xcircuit/
 
 LICENSE=	GPLv2
 
