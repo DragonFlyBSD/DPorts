@@ -1,5 +1,3 @@
-# Created by: Thomas Gellekum <tg@FreeBSD.org>
-
 PORTNAME=	reportlab
 PORTVERSION=	3.5.68
 PORTREVISION=	1
@@ -13,6 +11,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Library to create PDF documents using the Python language
+WWW=		https://www.reportlab.com/
 
 LICENSE=	BSD3CLAUSE
 
