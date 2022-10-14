@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	jcckit
 PORTVERSION=	1.1
 PORTREVISION=	2
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Java Chart Construction Kit
+WWW=		http://jcckit.sourceforge.net/
 
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
