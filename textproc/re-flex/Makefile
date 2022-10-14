@@ -1,10 +1,11 @@
 PORTNAME=	re-flex
-PORTVERSION=	3.2.7
+PORTVERSION=	3.2.8
 DISTVERSIONPREFIX=	v
 CATEGORIES=	textproc
 
 MAINTAINER=	gahr@FreeBSD.org
 COMMENT=	Regex-centric, fast and flexible scanner generator for C++
+WWW=		https://www.genivia.com/reflex.html
 
 LICENSE=	BSD3CLAUSE
 
