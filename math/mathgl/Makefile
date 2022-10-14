@@ -1,11 +1,12 @@
 PORTNAME=	mathgl
 DISTVERSION=	2.5
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	math graphics
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}%20${PORTVERSION}/
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Library for high-quality scientific data visualization
+WWW=		http://mathgl.sourceforge.net
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -54,7 +55,7 @@ MPI_CMAKE_BOOL=		enable-mpi
 MPI_LIB_DEPENDS=	libmpi.so:net/openmpi
 
 QT5_CMAKE_BOOL=		enable-qt5
-QT5_USE=		QT=core,gui,opengl,printsupport,widgets,buildtools_build,qmake_build
+QT5_USE=		QT=core,gui,opengl,printsupport,widgets,buildtools:build,qmake:build
 QT5_USES=		desktop-file-utils qt:5 shared-mime-info
 
 FLTK_CMAKE_BOOL=	enable-fltk
