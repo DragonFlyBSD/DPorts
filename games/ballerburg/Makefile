@@ -1,5 +1,3 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	ballerburg
 PORTVERSION=	1.2.1
 CATEGORIES=	games
@@ -10,6 +8,7 @@ DISTFILES=	${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX} \
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Two players, two castles, and a hill in between
+WWW=		https://baller.tuxfamily.org/
 
 LICENSE=	GPLv3+
 
