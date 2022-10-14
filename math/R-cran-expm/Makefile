@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	expm
 DISTVERSION=	0.999-6
 CATEGORIES=	math
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Matrix Exponential, Log, 'etc'
+WWW=		https://cran.r-project.org/web/packages/expm/
 
 LICENSE=	GPLv2+
 
