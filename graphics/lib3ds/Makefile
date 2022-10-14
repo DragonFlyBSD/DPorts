@@ -1,5 +1,3 @@
-# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-
 PORTNAME=	lib3ds
 PORTVERSION=	1.3.0
 PORTREVISION=	7
@@ -9,6 +7,7 @@ MASTER_SITES=	https://storage.googleapis.com/google-code-archive-downloads/v2/co
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Library for handling 3DS (3D Studio) files
+WWW=		https://code.google.com/archive/p/lib3ds/
 
 LICENSE=	LGPL21+
 
