@@ -1,5 +1,3 @@
-# Created by: chinsan <chinsan.tw@gmail.com>
-
 PORTNAME=	GD-Thumbnail
 PORTVERSION=	1.44
 CATEGORIES=	graphics perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Thumbnail maker for GD
+WWW=		https://metacpan.org/release/GD-Thumbnail
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-GD>=0:graphics/p5-GD
