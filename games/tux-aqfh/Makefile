@@ -1,5 +1,3 @@
-# Created by: Alexander Langer <alex@FreeBSD.org>
-
 PORTNAME=	tux_aqfh
 PORTVERSION=	1.0.14
 PORTREVISION=	12
@@ -12,6 +10,7 @@ EXTRACT_ONLY=	${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tuxedo The Penguin: A Quest for Herring
+WWW=		https://sourceforge.net/projects/tuxaqfh/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
