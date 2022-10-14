@@ -1,5 +1,3 @@
-# Created by: Koop Mast <kwm@FreeBSD.org>
-
 PORTNAME=	libclc
 DISTVERSION=	12.0.1
 CATEGORIES=	devel
@@ -8,6 +6,7 @@ DISTNAME=	libclc-${DISTVERSION}.src
 
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	Required library functions for OpenCL C programming language
+WWW=		https://libclc.llvm.org/
 
 LICENSE=	LLVM
 LICENSE_FILE=	${WRKSRC}/LICENSE.TXT
