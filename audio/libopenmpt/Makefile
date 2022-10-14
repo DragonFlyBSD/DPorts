@@ -1,7 +1,5 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	libopenmpt
-PORTVERSION=	0.6.4
+PORTVERSION=	0.6.6
 DISTVERSIONSUFFIX=	+release.autotools
 CATEGORIES=	audio
 MASTER_SITES=	https://lib.openmpt.org/files/libopenmpt/src/ \
@@ -9,6 +7,7 @@ MASTER_SITES=	https://lib.openmpt.org/files/libopenmpt/src/ \
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Module music library based on OpenMPT
+WWW=		https://lib.openmpt.org/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
