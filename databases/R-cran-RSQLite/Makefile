@@ -1,5 +1,3 @@
-# Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-
 PORTNAME=	RSQLite
 PORTVERSION=	2.2.14
 CATEGORIES=	databases
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	Database Interface R driver for SQLite
+WWW=		https://cran.r-project.org/web/packages/RSQLite/
 
 LICENSE=	LGPL20
 
