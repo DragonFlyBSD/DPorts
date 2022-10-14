@@ -1,5 +1,3 @@
-# Created by: Neil Blakey-Milner <nbm@rucus.ru.ac.za>
-
 PORTNAME=	ezmlm-idx
 PORTVERSION=	7.2.2
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	http://untroubled.org/ezmlm/archive/${PORTVERSION}/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Improved version of the ezmlm mailing list manager
+WWW=		https://www.untroubled.org/ezmlm/
 
 LICENSE=	GPLv2
 
