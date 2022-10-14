@@ -1,11 +1,10 @@
-# Created by: Krzysztof Stryjek <ports@bsdserwis.com>
-
 PORTNAME=	postsrsd
 PORTVERSION=	1.10
 CATEGORIES=	mail
 
 MAINTAINER=	ports@bsdserwis.com
 COMMENT=	Postfix Sender Rewriting Scheme daemon
+WWW=		https://github.com/roehling/postsrsd
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSE
