@@ -1,7 +1,5 @@
-# Created by: Kubilay Kocak <koobs@FreeBSD.org>
-
 PORTNAME=	pillow
-PORTVERSION=	9.1.1
+PORTVERSION=	9.2.0
 CATEGORIES=	graphics python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -9,6 +7,7 @@ DISTNAME=	Pillow-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Fork of the Python Imaging Library (PIL)
+WWW=		https://python-pillow.org/
 
 LICENSE=	PIL
 LICENSE_NAME=	Standard PIL License
