@@ -1,10 +1,11 @@
 PORTNAME=	dxirc
-PORTVERSION=	1.40.0
+PORTVERSION=	1.40.1
 CATEGORIES=	irc
 MASTER_SITES=	SF/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	archdvx@dxsolutions.org
 COMMENT=	Simple IRC client
+WWW=		https://www.dxirc.org/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -39,6 +40,6 @@ NOTIFY_RUN_DEPENDS=	notify-send:devel/libnotify
 
 QT5_USES=	qt:5
 QT5_USE=		QT=core,gui,multimedia,network,widgets \
-			QT=buildtools_build,qmake_build
+			QT=buildtools:build,qmake:build
 
 .include <bsd.port.mk>
