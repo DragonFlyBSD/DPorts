@@ -1,5 +1,3 @@
-# Created by: Nicola Vitale	<nivit@email.it>
-
 PORTNAME=	geogebra
 PORTVERSION=	5.0.625.0
 PORTREVISION=	1
@@ -13,6 +11,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	uzsolt@uzsolt.hu
 COMMENT=	Dynamic software that joins geometry, algebra, and calculus
+WWW=		https://www.geogebra.org/
 
 LICENSE=	GEOGEBRA
 LICENSE_NAME=	GeoGebra Non-Commercial License Agreement
