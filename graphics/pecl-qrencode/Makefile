@@ -1,5 +1,3 @@
-# Created by: vanilla
-
 PORTNAME=	qrencode
 PORTVERSION=	0.9
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ CATEGORIES=	graphics pear
 
 MAINTAINER=	vanilla@FreeBSD.org
 COMMENT=	PECL extension for generate qrcode
+WWW=		https://github.com/vanillahsu/pecl-qrencode
 
 LICENSE=	BSD2CLAUSE
 
