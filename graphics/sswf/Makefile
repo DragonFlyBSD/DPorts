@@ -1,5 +1,3 @@
-# Created by: anhot
-
 PORTNAME=	sswf
 PORTVERSION=	1.8.4
 PORTREVISION=	6
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-src
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Library and script language tool to create Flash movies
+WWW=		https://www.m2osw.com/sswf
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
