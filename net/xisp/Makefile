@@ -1,5 +1,3 @@
-# Created by: tm@onepost.net
-
 PORTNAME=	xisp
 PORTVERSION=	2.7p4
 PORTREVISION=	9
@@ -10,6 +8,7 @@ PATCH_SITES=	http://www.ml-search.com/xisp/distfiles/
 
 MAINTAINER=	tm@onepost.net
 COMMENT=	User-friendly X interface to pppd/chat
+WWW=		https://xisp.hellug.gr/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
