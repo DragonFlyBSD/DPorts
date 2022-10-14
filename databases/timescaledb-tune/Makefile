@@ -1,13 +1,12 @@
-# Created by Kevin Bowling <kbowling@FreeBSD.org>
-
 PORTNAME=	timescaledb-tune
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.12.0
+DISTVERSION=	0.14.1
 PORTREVISION=	2
 CATEGORIES=	databases
 
 MAINTAINER=	kbowling@FreeBSD.org
 COMMENT=	Tool for tuning TimescaleDB for better performance
+WWW=		https://github.com/timescale/timescaledb-tune
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
