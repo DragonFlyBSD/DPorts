@@ -1,5 +1,3 @@
-# Created by: James FitzGibbon <jfitz@FreeBSD.org>
-
 PORTNAME=	mrtg
 PORTVERSION=	2.17.4
 PORTREVISION=	8
@@ -12,6 +10,7 @@ MASTER_SITES=	http://oss.oetiker.ch/mrtg/pub/ \
 
 MAINTAINER=	ports@subnets.ru
 COMMENT=	Multi-router traffic grapher
+WWW=		https://oss.oetiker.ch/mrtg/
 
 LIB_DEPENDS=	libgd.so:${GD_PORT}
 RUN_DEPENDS=	p5-SNMP_Session>=0:net-mgmt/p5-SNMP_Session
