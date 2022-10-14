@@ -1,13 +1,12 @@
-# Created by: Emmanuel Vadot <manu@FreeBSD.org>
-
 PORTNAME=	opensmtpd-filter-rspamd
 PORTVERSION=	0.1.7
 DISTVERSIONPREFIX=	v
-PORTREVISION=	2
+PORTREVISION=	6
 CATEGORIES=	mail
 
 MAINTAINER=	manu@FreeBSD.Org
 COMMENT=	OpenSMTPD filter integration for the Rspamd daemon
+WWW=		https://github.com/poolpOrg/filter-rspamd
 
 LICENSE=	ISCL
 
