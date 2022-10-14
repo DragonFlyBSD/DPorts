@@ -1,5 +1,3 @@
-# Created by: jake@checker.org
-
 PORTNAME=	jlex
 PORTVERSION=	1.2.6
 PORTREVISION=	3
@@ -11,6 +9,7 @@ EXTRACT_ONLY=	#
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Lexical analyzer generator, written for Java, in Java
+WWW=		https://www.cs.princeton.edu/~appel/modern/java/JLex/
 
 PLIST_FILES=	%%JAVAJARDIR%%/jlex.jar bin/jlex
 USE_JAVA=	yes
