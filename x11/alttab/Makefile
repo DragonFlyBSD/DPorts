@@ -1,5 +1,3 @@
-# Created by: Dmitri Goutnik <dg@syrec.org>
-
 PORTNAME=	alttab
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.6.1
@@ -7,6 +5,7 @@ CATEGORIES=	x11
 
 MAINTAINER=	dmgk@FreeBSD.org
 COMMENT=	Task switcher for minimalistic window managers
+WWW=		https://github.com/sagb/alttab
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
