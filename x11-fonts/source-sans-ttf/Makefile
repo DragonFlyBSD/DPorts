@@ -1,5 +1,3 @@
-# Created by: Pedro Giffuni
-
 PORTNAME=	source-sans
 PORTVERSION=	3.046
 MASTER_SITES=	https://github.com/adobe-fonts/source-sans/releases/download/${PORTVERSION}R/
@@ -9,6 +7,7 @@ DISTNAME=	TTF-source-sans-${PORTVERSION}R
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Set of fonts by Adobe designed for user interfaces
+WWW=		https://github.com/adobe-fonts/source-sans
 
 LICENSE=	OFL11
 
