@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	MCMCpack
 DISTVERSION=	1.6-3
 CATEGORIES=	math
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Markov chain Monte Carlo Package
+WWW=		https://cran.r-project.org/web/packages/MCMCpack/
 
 LICENSE=	GPLv3
 
