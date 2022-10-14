@@ -1,5 +1,3 @@
-# Created by: <ports@c0decafe.net>
-
 PORTNAME=	onioncat
 DISTVERSION=	0.3.9
 CATEGORIES=	net security
@@ -7,6 +5,7 @@ MASTER_SITES=	https://www.cypherpunk.at/ocat/download/Source/current/
 
 MAINTAINER=	cs@FreeBSD.org
 COMMENT=	IP-transparent Tor Hidden Service connector
+WWW=		https://www.onioncat.org/
 
 LICENSE=	GPLv3
 
