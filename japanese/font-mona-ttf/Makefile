@@ -1,5 +1,3 @@
-# Created by: MANTANI Nobutaka <nobutaka@FreeBSD.org>
-
 PORTNAME=	mona
 PORTVERSION=	2.90
 PORTREVISION=	1
@@ -11,6 +9,7 @@ DISTNAME=	monafont-ttf-${PORTVERSION}
 
 MAINTAINER=	nobutaka@FreeBSD.org
 COMMENT=	TrueType Kanji fonts
+WWW=		http://monafont.sourceforge.net/
 
 LICENSE=	PD
 
