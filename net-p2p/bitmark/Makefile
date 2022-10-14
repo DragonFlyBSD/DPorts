@@ -1,11 +1,12 @@
 PORTNAME=	bitmark
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.13.3
-PORTREVISION=	2
+PORTREVISION=	6
 CATEGORIES=	net-p2p
 
 MAINTAINER=	hsw@bitmark.com
 COMMENT?=	Bitmark distributed property system programs
+WWW=		https://github.com/bitmark-inc/bitmarkd
 
 LICENSE=	ISCL
 LICENSE_FILE=	${WRKSRC}/LICENSE
