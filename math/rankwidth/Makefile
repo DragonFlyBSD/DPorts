@@ -1,5 +1,3 @@
-# Created by: thierry@pompo.net
-
 PORTNAME=	rankwidth	# Also known as: rw
 PORTVERSION=	0.9
 CATEGORIES=	math
@@ -8,6 +6,7 @@ DISTNAME=	rw-${PORTVERSION}
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Calculation of rank-width and rank-decompositions
+WWW=		https://sourceforge.net/projects/rankwidth/
 
 LICENSE=	GPLv2
 
