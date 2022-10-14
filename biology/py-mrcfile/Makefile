@@ -1,13 +1,15 @@
 PORTNAME=	mrcfile
-DISTVERSION=	1.3.0
+DISTVERSION=	1.4.3
 CATEGORIES=	biology python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	MRC file I/O library which is used in structural biology
+WWW=		https://github.com/ccpem/mrcfile
 
 LICENSE=	BSD3CLAUSE
+LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 RUN_DEPENDS=	${PYNUMPY}
 
