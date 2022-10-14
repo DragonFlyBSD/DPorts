@@ -1,5 +1,3 @@
-# Created by: Ernst de Haan <znerd@FreeBSD.org>
-
 PORTNAME=	apache-jmeter
 PORTVERSION=	2.11
 PORTREVISION=	3
@@ -8,11 +6,9 @@ MASTER_SITES=	https://archive.apache.org/dist/jmeter/binaries/
 
 MAINTAINER=	mi@aldan.algebra.com
 COMMENT=	Functional behaviour load and performance test application
+WWW=		https://jmeter.apache.org/
 
 LICENSE=	APACHE20
-
-DEPRECATED=	Depends on expired devel/avalon-framework
-EXPIRATION_DATE=2022-09-30
 
 # These are JAR-files installed by other ports. The list should keep
 # growing until all Java applications install just their own JARs -- not
