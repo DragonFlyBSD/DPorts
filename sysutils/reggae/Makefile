@@ -1,10 +1,10 @@
 PORTNAME=	reggae
-PORTVERSION=	0.2.1
-PORTREVISION=	1
+DISTVERSION=	0.2.6
 CATEGORIES=	sysutils
 
 MAINTAINER=	meka@tilda.center
 COMMENT=	Powerful DevOps solution heavily relaying on CBSD
+WWW=		https://github.com/cbsd/reggae
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -14,7 +14,7 @@ RUN_DEPENDS=	${LOCALBASE}/bin/cbsd:sysutils/cbsd \
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	cbsd
-USE_RC_SUBR=	reggae_pf
+USE_RC_SUBR=	reggae reggae_pf
 
 NO_ARCH=	yes
 
