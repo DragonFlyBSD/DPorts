@@ -1,5 +1,3 @@
-# Created by: Igor Pokrovsky <ip@doom.homeunix.org>
-
 PORTNAME=	glaxium
 PORTVERSION=	0.5
 PORTREVISION=	18
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	OpenGL based space-ship "shoot-em-up" game
+WWW=		http://xhosxe.free.fr/glaxium/
 
 LIB_DEPENDS=	libpng.so:graphics/png
 
