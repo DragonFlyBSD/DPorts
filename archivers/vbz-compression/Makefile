@@ -1,9 +1,11 @@
 PORTNAME=	vbz-compression
 DISTVERSION=	1.0.2
+PORTREVISION=	1
 CATEGORIES=	archivers
 
 MAINTAINER=	jwb@FreeBSD.org
 COMMENT=	Variable byte integer encoding to compress Oxford Nanopore signal data
+WWW=		https://github.com/nanoporetech/vbz_compression
 
 LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/LICENCE.txt
