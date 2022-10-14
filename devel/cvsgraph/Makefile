@@ -1,5 +1,3 @@
-# Created by: trevor
-
 PORTNAME=	cvsgraph
 PORTVERSION=	1.7.0
 PORTREVISION=	8
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.akhphd.au.dk/~bertho/cvsgraph/release/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Graph the life story of a file under CVS or RCS
+WWW=		https://web.archive.org/web/20181111235708/http://www.akhphd.au.dk/~bertho/cvsgraph/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
