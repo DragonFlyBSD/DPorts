@@ -1,5 +1,3 @@
-# Created by: Michael Butschky <butsch@computi.erols.com>
-
 PORTNAME=	swi-pl
 DISTVERSION=	8.2.3
 PORTREVISION=	3
@@ -9,6 +7,7 @@ DISTNAME=	swipl-${DISTVERSION}
 
 MAINTAINER=	mailinglist@diamondbox.dk
 COMMENT=	Edinburgh-style Prolog compiler
+WWW=		https://www.swi-prolog.org/
 
 LICENSE=	BSD2CLAUSE
 
