@@ -1,9 +1,8 @@
-# Created by: Mark Felder <feld@FreeBSD.org>
-
 PORTNAME=	percona
 PKGNAMESUFFIX=	-pam-for-mysql
 
 COMMENT=	PAM plugin for MySQL
+WWW=		https://www.percona.com/
 
 BROKEN_armv6=		fails to compile: cannot combine with previous 'type-name' declaration specifier
 BROKEN_armv7=		fails to compile: cannot combine with previous 'type-name' declaration specifier
