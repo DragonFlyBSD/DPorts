@@ -1,5 +1,3 @@
-# Created by: Aragon Gouveia <aragon@phat.za.net>
-
 PORTNAME=	spectrwm
 DISTVERSIONPREFIX=	SPECTRWM_
 DISTVERSION=	3_4_1
@@ -7,6 +5,7 @@ CATEGORIES=	x11-wm
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Small, dynamic tiling window manager for X11
+WWW=		https://github.com/conformal/spectrwm
 
 LICENSE=	ISCL
 
