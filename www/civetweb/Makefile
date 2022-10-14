@@ -1,5 +1,3 @@
-# Created by: maintainer.freebsd@xpoundit.com
-
 PORTNAME=	civetweb
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.15
@@ -7,6 +5,7 @@ CATEGORIES=	www
 
 MAINTAINER=	maintainer.freebsd@xpoundit.com
 COMMENT=	Embedded C/C++ web server
+WWW=		https://github.com/civetweb/civetweb
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
