@@ -1,5 +1,3 @@
-# Created by: Kubilay Kocak <koobs@FreeBSD.org>
-
 PORTNAME=	include-what-you-use
 PORTVERSION=	0.18
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Tool for use with clang to analyze \#includes in C and C++ source files
+WWW=		https://include-what-you-use.org
 
 LICENSE=	NCSA
 LICENSE_FILE=	${WRKSRC}/LICENSE.TXT
