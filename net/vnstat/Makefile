@@ -1,5 +1,3 @@
-# Created by: Dennis Herrmann <adox@mcx2.org>
-
 PORTNAME=	vnstat
 PORTVERSION=	2.9
 CATEGORIES=	net
@@ -8,6 +6,7 @@ MASTER_SITES=	https://github.com/vergoh/vnstat/releases/download/v${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Console-based network traffic monitor
+WWW=		https://humdi.net/vnstat/
 
 LICENSE=	GPLv2
 
