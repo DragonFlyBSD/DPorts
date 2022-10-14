@@ -1,5 +1,3 @@
-# Created by: Stefan Esser <se@FreeBSD.org>
-
 PORTNAME=	utidylib
 PORTVERSION=	0.8
 CATEGORIES=	www python
@@ -9,6 +7,7 @@ DISTNAME=	uTidylib-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Wrapper for HTML Tidy
+WWW=		https://github.com/nijel/utidylib
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
