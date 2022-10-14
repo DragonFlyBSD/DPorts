@@ -1,5 +1,3 @@
-# Created by: thierry@pompo.net
-
 PORTNAME=	SciPlot
 PORTVERSION=	1.36
 PORTREVISION=	6
@@ -8,6 +6,7 @@ MASTER_SITES=	XCONTRIB/widgets
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Full-featured Xt widget to display 2D data in a graph
+WWW=		https://www.mathi.uni-heidelberg.de/~flight/eduStep/Subjects/Visualization/Apps/SciPlot/SciPlot.html
 
 LICENSE=	GPLv2
 
