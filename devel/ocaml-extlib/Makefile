@@ -1,5 +1,3 @@
-# Created by: mukai
-
 PORTNAME=	extlib
 PORTVERSION=	1.7.5
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ PKGNAMEPREFIX=	ocaml-
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Complete - yet small - standard library for OCaml
+WWW=		https://github.com/ygrek/ocaml-extlib
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/../LICENSE
