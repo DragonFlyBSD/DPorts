@@ -1,5 +1,3 @@
-# Created by: Bernard Spil <brnrd@freebsd.org>
-
 PORTNAME=	twofactor_admin
 PORTVERSION=	3.2.0
 DISTVERSIONPREFIX=	v
@@ -12,6 +10,7 @@ DIST_SUBDIR=	${PKGNAMEPREFIX:S/-//}/${DISTNAME}-${DISTVERSIONPREFIX}${PORTVERSIO
 
 MAINTAINER=	brnrd@FreeBSD.org
 COMMENT=	Admin create one-time TOTP app for Nextcloud
+WWW=		https://apps.nextcloud.com/apps/twofactor_admin
 
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -19,6 +18,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 RUN_DEPENDS=	nextcloud${PHP_PKGNAMESUFFIX}>=17:www/nextcloud@${PHP_FLAVOR}
 
 USES=		php:flavors
+IGNORE_WITH_PHP=	82
 NO_BUILD=	yes
 NO_ARCH=	yes
 
