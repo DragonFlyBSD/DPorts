@@ -1,5 +1,3 @@
-# Created by: bf@FreeBSD.org
-
 PORTNAME=	kktdirect
 PORTVERSION=	0.5
 PORTREVISION=	12
@@ -9,6 +7,7 @@ DISTNAME=	KKTDirect${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Direct solver package for saddle-point (KKT) matrices
+WWW=		https://www.cs.ubc.ca/~rbridson/kktdirect/
 
 USES=		fortran
 USE_LDCONFIG=	yes
