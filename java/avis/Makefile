@@ -1,5 +1,3 @@
-# Created by: Benjamin Close <benjsc@FreeBSD.org>
-
 PORTNAME=	avis
 PORTVERSION=	1.2.0
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-src-${PORTVERSION}
 
 MAINTAINER=	benjsc@FreeBSD.org
 COMMENT=	Elvin Publish/Subscribe Message Bus server based on the Elvin protocol
+WWW=		http://avis.sourceforge.net/
 
 USES=		zip
 USE_JAVA=	yes
