@@ -1,11 +1,12 @@
 PORTNAME=	iosevka
 DISTVERSIONPREFIX=	v
-DISTVERSION=	15.5.2
+DISTVERSION=	15.6.0
 CATEGORIES=	x11-fonts
 MASTER_SITES=	https://github.com/be5invis/Iosevka/releases/download/${DISTVERSIONFULL}/
 
 MAINTAINER=	0mp@FreeBSD.org
 COMMENT=	Slender monospace sans-serif and slab-serif typeface for programming
+WWW=		https://typeof.net/Iosevka/
 
 # The license file is not downloaded.
 LICENSE=	OFL11
