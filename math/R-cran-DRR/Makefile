@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	DRR
 PORTVERSION=	0.0.4
 PORTREVISION=	1
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Dimensionality Reduction via Regression
+WWW=		https://cran.r-project.org/web/packages/DRR/
 
 LICENSE=	GPLv3
 
