@@ -1,5 +1,3 @@
-# Created by: Pav Lucistnik <pav@FreeBSD.org>
-
 PORTNAME=	cdrkit
 PORTVERSION=	1.1.11
 PORTREVISION=	2
@@ -10,6 +8,7 @@ MASTER_SITES=	http://ponce.cc/slackware/sources/repo/ \
 
 MAINTAINER=	jharris@widomaker.com
 COMMENT?=	Command-line CD/DVD writing suite
+WWW=		http://www.cdrkit.org/
 
 LICENSE=	GPLv2+
 
