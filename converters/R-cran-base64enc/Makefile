@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	base64enc
 DISTVERSION=	0.1-3
 PORTREVISION=	4
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Tools for base64 encoding
+WWW=		https://cran.r-project.org/web/packages/base64enc/
 
 LICENSE=	GPLv2+
 
