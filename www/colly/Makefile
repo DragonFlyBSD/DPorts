@@ -1,11 +1,12 @@
 PORTNAME=	colly
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.1.0
-PORTREVISION=	2
+PORTREVISION=	6
 CATEGORIES=	www
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Elegant scraper and crawler framework for Golang
+WWW=		https://go-colly.org/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
