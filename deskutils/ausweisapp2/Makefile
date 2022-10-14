@@ -4,6 +4,7 @@ CATEGORIES=	deskutils security
 
 MAINTAINER=	freebsd@sysctl.cz
 COMMENT=	Official authentication app for German ID cards and residence permits
+WWW=		https://www.ausweisapp.bund.de/ausweisapp2/
 
 LICENSE=	EUPLv1.2
 LICENSE_NAME=	European Union Public Licence V. 1.2
@@ -21,7 +22,7 @@ GH_ACCOUNT=	Governikus
 GH_PROJECT=	AusweisApp2
 USE_QT=		concurrent core declarative graphicaleffects gui network \
 		quickcontrols2 svg websockets widgets \
-		buildtools_build linguisttools_build
+		buildtools:build linguisttools:build
 
 # The VENDOR variable controls the name of the directory in ${PREFIX}/share.
 CMAKE_ARGS=	-DVENDOR=${PORTNAME}
