@@ -1,11 +1,10 @@
-# Created by: Johannes Dieterich <dieterich@ogolem.org>
-
 PORTNAME=	clpeak
 DISTVERSION=	1.1.2
 CATEGORIES=	benchmarks
 
 MAINTAINER=	jmd@FreeBSD.org
 COMMENT=	Benchmarking tool to measure peak capabilities of opencl devices
+WWW=		https://github.com/krrishnarraj/clpeak
 
 LICENSE=	PD
 LICENSE_FILE=	${WRKSRC}/LICENSE
