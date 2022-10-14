@@ -1,5 +1,3 @@
-# Created by: Randall Hopper <aa8vb@ipass.net>
-
 PORTNAME=	togl
 DISTVERSION=	2.0
 DISTVERSIONSUFFIX=	-src
@@ -10,6 +8,7 @@ DISTNAME=	Togl${DISTVERSIONFULL}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tk OpenGL widget
+WWW=		http://togl.sourceforge.net/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
