@@ -1,5 +1,3 @@
-# Created by: Sergey Osipov <sipopo@yandex.ru>
-
 PORTNAME=	baculum
 PORTVERSION=	11.0.6
 CATEGORIES?=	www
@@ -9,6 +7,7 @@ DISTNAME=	bacula-gui-${PORTVERSION}
 
 MAINTAINER=	sipopo@yandex.ru
 COMMENT?=	common libraries for baculum
+WWW=		https://www.bacula.org/
 
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/${PORTNAME}/LICENSE
