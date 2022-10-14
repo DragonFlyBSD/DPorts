@@ -1,5 +1,3 @@
-# Created by: Craig Leres <leres@FreeBSD.org>
-
 PORTNAME=	nvi2
 PORTVERSION=	2.2.0
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	editors
 
 MAINTAINER=	leres@FreeBSD.org
 COMMENT=	Updated implementation of the ex/vi text editor
+WWW=		https://github.com/lichray/nvi2/
 
 LICENSE=	BSD3CLAUSE
 
