@@ -1,12 +1,11 @@
-# Created by: Sascha Klauder <sklauder@trimind.de>
-
 PORTNAME=	gogglesmm
 PORTVERSION=	1.2.2
-PORTREVISION=	6
+PORTREVISION=	8
 CATEGORIES=	audio
 
 MAINTAINER=	jhale@FreeBSD.org
 COMMENT=	Music collection manager and player
+WWW=		https://gogglesmm.github.io/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
