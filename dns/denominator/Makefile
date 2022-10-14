@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@freebsd.org>
-
 PORTNAME=	denominator
 PORTVERSION=	4.7.1
 CATEGORIES=	dns java
@@ -9,6 +7,7 @@ EXTRACT_SUFX=
 
 MAINTAINER=	swills@FreeBSD.org
 COMMENT=	Portably control DNS clouds
+WWW=		https://github.com/Netflix/denominator
 
 USE_JAVA=	yes
 NO_BUILD=	yes
