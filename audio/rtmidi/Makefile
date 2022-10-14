@@ -1,11 +1,10 @@
-# Created by: Yuri Victorovich <yuri@rawbw.com>
-
 PORTNAME=	rtmidi
 DISTVERSION=	5.0.0
 CATEGORIES=	audio
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Set of C++ classes that provide a common API for realtime MIDI I/O
+WWW=		https://github.com/thestk/rtmidi
 
 LICENSE=	MIT
 
