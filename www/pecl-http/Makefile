@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	http
 PORTVERSION=	4.2.0
 PORTREVISION=	1
@@ -8,6 +6,7 @@ DISTNAME=	pecl_${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Extended HTTP Support
+WWW=		https://pecl.php.net/package/pecl_http
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
