@@ -1,5 +1,3 @@
-# Created by: Chris Piazza <cpiazza@FreeBSD.org>
-
 PORTNAME=	quirc
 PORTVERSION=	0.9.84
 PORTREVISION=	6
@@ -8,6 +6,7 @@ MASTER_SITES=	https://BSDforge.com/projects/source/irc/quirc/
 
 MAINTAINER=	portmaster@BSDforge.com
 COMMENT=	Tcl/Tk IRC client for the X Window System
+WWW=		https://BSDforge.com/projects/irc/quirc/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
