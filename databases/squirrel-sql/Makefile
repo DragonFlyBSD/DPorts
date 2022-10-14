@@ -1,5 +1,3 @@
-# Created by: Roy Boerner
-
 PORTNAME=	squirrel-sql
 PORTVERSION=	4.4.0
 CATEGORIES=	databases java
@@ -8,6 +6,7 @@ DISTNAME=	squirrelsql-${PORTVERSION}-optional
 
 MAINTAINER=	jonc@chen.org.nz
 COMMENT=	Universal SQL Client
+WWW=		http://www.squirrelsql.org/index.php?page=screenshots
 
 LICENSE=	GPLv2
 
