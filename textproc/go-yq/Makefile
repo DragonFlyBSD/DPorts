@@ -1,13 +1,12 @@
-# Created by: Pavel Timofeev <timp87@gmail.com>
-
 PORTNAME=		go-yq
 DISTVERSIONPREFIX=	v
 DISTVERSION=		4.25.1
-PORTREVISION=	1
+PORTREVISION=	5
 CATEGORIES=		textproc
 
 MAINTAINER=	timp87@gmail.com
 COMMENT=	Portable commandline YAML processor written in go
+WWW=		https://github.com/mikefarah/yq
 
 LICENSE=	MIT
 
