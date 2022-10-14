@@ -1,5 +1,3 @@
-# Created by: Thibault Payet <monwarez@mailoo.org>
-
 PORTNAME=	rigsofrods-caelum
 PORTVERSION=	0.6.3
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ CATEGORIES=	graphics
 
 MAINTAINER=	monwarez@mailoo.org
 COMMENT=	OGRE plugin for atmospheric effects
+WWW=		https://www.ogre3d.org/tikiwiki/Caelum
 
 LICENSE=	LGPL3+
 LICENSE_FILE=	${WRKSRC}/lgpl.txt
