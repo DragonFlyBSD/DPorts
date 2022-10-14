@@ -1,5 +1,3 @@
-# Created by: Kevin Golding <ports@caomhin.org>
-
 PORTNAME=	django-photologue
 PORTVERSION=	3.15
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	ports@caomhin.org
 COMMENT=	Powerful image management and gallery application for Django
+WWW=		https://github.com/jdriscoll/django-photologue
 
 LICENSE=	BSD3CLAUSE
 
