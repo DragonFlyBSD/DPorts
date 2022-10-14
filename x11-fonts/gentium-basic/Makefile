@@ -1,5 +1,3 @@
-# Created by: Matthew Seaman
-
 PORTNAME=	GentiumBasic
 PORTVERSION=	1102
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	matthew@FreeBSD.org
 COMMENT=	Gentium Basic and Gentium Book Basic TrueType fonts
+WWW=		https://software.sil.org/gentium/
 
 LICENSE=	OFL11
 
