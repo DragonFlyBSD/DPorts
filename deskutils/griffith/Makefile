@@ -1,11 +1,10 @@
-# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-
 PORTNAME=	griffith
 PORTVERSION=	0.15
 CATEGORIES=	deskutils
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Lightweight film collection manager
+WWW=		https://www.griffith.cc/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
