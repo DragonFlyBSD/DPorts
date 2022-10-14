@@ -1,14 +1,12 @@
-# Created by: Loïc Bartoletti <lbartoletti@FreeBSD.org>
-
 PORTNAME=	freeplane
-DISTVERSION=	1.9.12
-PORTREVISION=	1
+DISTVERSION=	1.10.3
 CATEGORIES=	deskutils editors java
-MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}%20stable/archive/${PORTVERSION}
+MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}%20stable
 DISTNAME=	${PORTNAME}_bin-${PORTVERSION}
 
 MAINTAINER=	lbartoletti@FreeBSD.org
 COMMENT=	Free mind mapping and knowledge management software
+WWW=		https://www.freeplane.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/license.txt
