@@ -1,10 +1,9 @@
-# Created by: Thierry Thomas (<thierry@pompo.net>)
-
 PORTNAME=	${MPORTNAME:tl}
 PORTVERSION=	1.3.9
 CATEGORIES=	math
 
 COMMENT=	Sparse LU factorization, for circuit simulation
+WWW=		https://faculty.cse.tamu.edu/davis/suitesparse.html
 
 LICENSE=	LGPL21+
 
