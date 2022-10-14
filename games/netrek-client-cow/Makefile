@@ -1,5 +1,3 @@
-# Created by: Kevin Zheng <kevinz5000@gmail.com>
-
 PORTNAME=	netrek-client-cow
 PORTVERSION=	3.3.2
 CATEGORIES=	games
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.netrek.org/files/COW/ \
 
 MAINTAINER=	kevinz5000@gmail.com
 COMMENT=	Multi-player battle simulation with a Star Trek theme
+WWW=		https://www.netrek.org/
 
 LICENSE_FILE=	${WRKSRC}/COPYING
 
