@@ -1,5 +1,3 @@
-# Created by: Pedro Giffuni
-
 PORTNAME=	combinat
 DISTVERSION=	0.0-8
 PORTREVISION=	4
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Routines for combinatorics
+WWW=		https://cran.r-project.org/package=combinat
 
 LICENSE=	GPLv2
 
