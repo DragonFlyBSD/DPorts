@@ -1,11 +1,10 @@
-# Created by: Alfonso S. Siciliano <alfix86@gmail.com>
-
 PORTNAME=	beret
 PORTVERSION=	1.2.1
 CATEGORIES=	games
 
 MAINTAINER=	alfix86@gmail.com
 COMMENT=	2D puzzle-platformer game
+WWW=		https://kiwisauce.com/beret/
 
 LICENSE=	LGPL3
 LICENSE_FILE=	${WRKSRC}/lgpl-3.0.txt
