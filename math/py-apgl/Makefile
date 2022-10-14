@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	apgl
 PORTVERSION=	0.8.1
 PORTREVISION=	3
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Fast python graph library with some machine learning features
+WWW=		http://packages.python.org/apgl/
 
 LICENSE=	GPLv3
 
