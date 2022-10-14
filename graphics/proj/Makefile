@@ -1,5 +1,3 @@
-# Created by: jedgar@FreeBSD.org
-
 PORTNAME=	proj
 PORTVERSION=	8.2.1
 PORTREVISION=	2
@@ -9,6 +7,7 @@ MASTER_SITES=	https://download.osgeo.org/proj/
 
 MAINTAINER=	lbartoletti@FreeBSD.org
 COMMENT=	Cartographic Projections library
+WWW=		https://github.com/OSGeo/PROJ
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
