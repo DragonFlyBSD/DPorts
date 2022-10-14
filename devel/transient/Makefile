@@ -1,12 +1,13 @@
 PORTNAME=	transient
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.3.7
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	devel elisp
 PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
 
 MAINTAINER=	yasu@FreeBSD.org
 COMMENT=	Emacs key and popup interface for complex keybindings
+WWW=		https://github.com/magit/transient
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -16,6 +17,8 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	magit
 
 ALL_TARGET=	lisp info
+
+CONFLICTS_INSTALL=	transient-devel-emacs*
 
 NO_ARCH=	yes
 
