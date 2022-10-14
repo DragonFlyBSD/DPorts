@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	Algorithm-Evolutionary
 PORTVERSION=	0.82.1
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Library for doing evolutionary computation in Perl
+WWW=		https://metacpan.org/release/Algorithm-Evolutionary
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
