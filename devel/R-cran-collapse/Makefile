@@ -1,10 +1,11 @@
 PORTNAME=	collapse
-PORTVERSION=	1.8.6
+PORTVERSION=	1.8.8
 CATEGORIES=	devel
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Advanced and Fast Data Transformation
+WWW=		https://cran.r-project.org/web/packages/collapse/
 
 LICENSE=	GPLv2+
 
