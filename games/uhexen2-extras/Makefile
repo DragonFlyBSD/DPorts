@@ -1,5 +1,3 @@
-# Created by: alepulver
-
 PORTNAME=	uhexen2
 PORTVERSION=	1.5.6
 CATEGORIES=	games
@@ -12,6 +10,7 @@ DIST_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Hexen II source port extras (demos, mods, etc)
+WWW=		http://uhexen2.sourceforge.net/
 
 RUN_DEPENDS=	uhexen2>0:games/uhexen2
 
