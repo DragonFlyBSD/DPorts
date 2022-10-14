@@ -1,12 +1,11 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	openssl
-PORTVERSION=	2.0.2
+PORTVERSION=	2.0.3
 CATEGORIES=	security
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Toolkit for Encryption, Signatures and Certificates Based on OpenSSL
+WWW=		https://cran.r-project.org/web/packages/openssl/
 
 LICENSE=	MIT
 
