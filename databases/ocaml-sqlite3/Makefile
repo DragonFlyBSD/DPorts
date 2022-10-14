@@ -1,5 +1,3 @@
-# Created by: "Meikel Brandmeyer" <ocaml-sqlite3-port@kotka.de>
-
 PORTNAME=	sqlite3
 PORTVERSION=	4.0.5
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	ocaml-
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	OCaml bindings to sqlite3 library
+WWW=		https://mmottl.github.io/sqlite3-ocaml/
 
 LICENSE=	OCSQLT3
 LICENSE_NAME=	OCaml-SQLite3 unique permissive license
