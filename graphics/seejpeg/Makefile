@@ -1,5 +1,3 @@
-# Created by: Donn Miller <dmmiller@cvzoom.net>
-
 PORTNAME=	seejpeg
 PORTVERSION=	1.10
 PORTREVISION=	5
@@ -8,6 +6,7 @@ MASTER_SITES=	SUNSITE/apps/graphics/viewers/svga
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Console graphics viewer using the svga console graphics library
+WWW=		https://www.icewalk.com/softlib/app/app_00013.html
 
 LIB_DEPENDS=	libvga.so:graphics/svgalib
 
