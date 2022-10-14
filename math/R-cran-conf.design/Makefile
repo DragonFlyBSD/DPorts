@@ -1,5 +1,3 @@
-# Created by: Pedro Giffuni
-
 PORTNAME=	conf.design
 DISTVERSION=	2.0.0
 PORTREVISION=	4
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Construction of factorial designs
+WWW=		https://cran.r-project.org/package=conf.design
 
 LICENSE=	GPLv2
 
