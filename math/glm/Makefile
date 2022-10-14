@@ -1,5 +1,3 @@
-# Created by: demon@FreeBSD.org
-
 PORTNAME=	glm
 PORTVERSION=	0.9.9.8
 PORTEPOCH=	1
@@ -7,6 +5,7 @@ CATEGORIES=	math graphics
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	C++ mathematics library for software based on the OpenGL GLSL
+WWW=		https://glm.g-truc.net/
 
 LICENSE=	MIT
 
