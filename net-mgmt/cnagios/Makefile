@@ -1,5 +1,3 @@
-# Created by: Alexander Y. Grigoryev <alexander.4mail@gmail.com>
-
 PORTNAME=	cnagios
 PORTVERSION=	0.33
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	net-mgmt
 
 MAINTAINER=	danny@dannywarren.com
 COMMENT=	Curses-based interface for nagios
+WWW=		https://github.com/dannywarren/cnagios
 
 LICENSE=	ISCL
 
