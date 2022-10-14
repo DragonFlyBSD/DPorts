@@ -1,5 +1,3 @@
-# Created by: Ernst de Haan <znerd@FreeBSD.org>
-
 PORTNAME=	commons-lang
 PORTVERSION=	2.6
 CATEGORIES=	java devel
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-src
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Apache library with helper utilities for the java.lang API
+WWW=		https://commons.apache.org/proper/commons-lang/
 
 LICENSE=	APACHE20
 
