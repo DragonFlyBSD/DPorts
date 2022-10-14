@@ -1,10 +1,11 @@
 PORTNAME=	libdatachannel
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.17.7
+DISTVERSION=	0.17.10
 CATEGORIES=	www
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	WebRTC Data Channels, WebRTC Media Transport, and WebSockets library
+WWW=		https://github.com/paullouisageneau/libdatachannel
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -24,6 +25,7 @@ GH_TUPLE=	SergiusTheBest:plog:d8461e9d473e59fbcc1f79eee021550dcf81e618:SergiusTh
 CMAKE_ON=	USE_SYSTEM_SRTP NO_EXAMPLES NO_TESTS
 
 do-test: # tests require dual stack to be enabled with 'sysctl net.inet6.ip6.v6only=0', at least one test is known to fail
+	# tests fail: https://github.com/paullouisageneau/libdatachannel/issues/682
 	@cd ${BUILD_WRKSRC} && \
 		${SETENV} ${CONFIGURE_ENV} ${CMAKE_BIN} ${CMAKE_ARGS} -DNO_TESTS:BOOL=OFF ${CMAKE_SOURCE_PATH} && \
 		${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} ${ALL_TARGET} && \
