@@ -1,25 +1,28 @@
-# Created by: Danilo Egea Gondolfo <danilo@FreeBSD.org>
-
 PORTNAME=	aws-c-sdkutils
-PORTVERSION=	0.1.1
 DISTVERSIONPREFIX=	v
+DISTVERSION=	0.1.3
 CATEGORIES=	devel
 
-MAINTAINER=	danilo@FreeBSD.org
+MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	AWS SDK C utilities
+WWW=		https://github.com/awslabs/aws-c-sdkutils
 
 LICENSE=	APACHE20
+LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libaws-c-common.so:devel/aws-c-common
 
-USES=		cmake compiler:c11
+USES=		cmake:testing compiler:c11
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	awslabs
 
-CMAKE_ARGS+=	-DBUILD_TESTING=OFF -DBUILD_SHARED_LIBS=ON \
-		-DCMAKE_PREFIX_PATH=${LOCALBASE}
-
 USE_LDCONFIG=	yes
+
+CMAKE_ARGS+=	-DCMAKE_PREFIX_PATH=${LOCALBASE}
+CMAKE_ON=	BUILD_SHARED_LIBS
+CMAKE_OFF=	BUILD_TESTING
+
+PORTSCOUT=	limit:^d\.d\.
 
 .include <bsd.port.mk>
