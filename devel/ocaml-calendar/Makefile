@@ -1,5 +1,3 @@
-# Created by: Jaap Boender <jaapb@kerguelen.org>
-
 PORTNAME=	calendar
 PORTVERSION=	2.03.2
 CATEGORIES=	devel
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	ocaml-
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Date and time library for OCaml
+WWW=		http://calendar.forge.ocamlcore.org/
 
 LICENSE=	LGPL21
 
