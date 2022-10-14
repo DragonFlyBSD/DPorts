@@ -1,5 +1,3 @@
-# Created by: Marcin Cieslak <saper@SYSTEM.PL>
-
 PORTNAME=	mtasc
 PORTVERSION=	1.14
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	LOCAL/chinsan
 
 MAINTAINER=	saper@saper.info
 COMMENT=	Motion-Twin ActionScript 2 Compiler
+WWW=		https://mtasc.org/
 
 LICENSE=	GPLv2+
 
