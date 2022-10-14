@@ -1,5 +1,3 @@
-# Created by: OISHI Masakuni <yamasa@bsdhouse.org>
-
 PORTNAME=	jai
 DISTVERSION=	1_1_3
 PORTREVISION=	2
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-${DISTVERSION}-lib
 
 MAINTAINER=	java@FreeBSD.org
 COMMENT=	High performance image processing libraries for Java
+WWW=		http://java.sun.com/products/java-media/jai/
 
 # Converted from RESTRICTED
 LICENSE=	jai
