@@ -1,5 +1,3 @@
-# Created by: Klaus Goger <klaus.goger@reflex.at>
-
 PORTNAME=	SDL
 PORTVERSION=	2.548
 PORTREVISION=	4
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl Bindings for SDL
+WWW=		http://sdl.perl.org/
 
 LICENSE=	GPLv2
 
