@@ -1,12 +1,12 @@
-# Created by: Gabriel M. Dutra <0xdutra@gmail.com>
-
 PORTNAME=	ddosify
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.8.0
+DISTVERSION=	0.8.1
+PORTREVISION=	2
 CATEGORIES=	benchmarks
 
 MAINTAINER=	0xdutra@gmail.com
 COMMENT=	High-performance load testing tool
+WWW=		https://github.com/ddosify/ddosify
 
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
