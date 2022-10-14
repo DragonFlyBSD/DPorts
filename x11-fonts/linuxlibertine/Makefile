@@ -1,5 +1,3 @@
-# Created by: Björn König <bkoenig@alpha-tierchen.de>
-
 PORTNAME=	linuxlibertine
 PORTVERSION=	4.7.5
 PORTREVISION=	4
@@ -10,6 +8,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	office@FreeBSD.org
 COMMENT=	Linux Libertine Open Fonts
+WWW=		http://linuxlibertine.sourceforge.net/Libertine-EN.html
 
 LICENSE=	GPLv2 LINUXLIBERTINE OFL10
 LICENSE_COMB=	multi
