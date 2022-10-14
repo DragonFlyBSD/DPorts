@@ -1,5 +1,3 @@
-# Created by: Andy Pavlo <amp0928@rit.edu>
-
 PORTNAME=	hotkeys
 PORTVERSION=	0.5.7.1
 PORTREVISION=	20
@@ -9,6 +7,7 @@ DISTNAME=	hotkeys_${PORTVERSION}
 
 MAINTAINER=	portmaster@BSDforge.com
 COMMENT=	Allows usage of special keys on internet/multimedia keyboards
+WWW=		http://ypwong.org/hotkeys/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
