@@ -1,9 +1,11 @@
 PORTNAME=	automuteus
-DISTVERSION=	7.2.5
+DISTVERSION=	7.2.7
+PORTREVISION=	3
 CATEGORIES=	games
 
 MAINTAINER=	nc@FreeBSD.org
 COMMENT=	Discord Bot to automute Among Us players at round transitions
+WWW=		https://automute.us/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -14,7 +16,7 @@ GH_ACCOUNT=	denverquane
 
 GH_TUPLE=	\
 		BurntSushi:toml:v1.1.0:burntsushi_toml/vendor/github.com/BurntSushi/toml \
-		automuteus:utils:v0.3.1:automuteus_utils/vendor/github.com/automuteus/utils \
+		automuteus:utils:v0.3.2:automuteus_utils/vendor/github.com/automuteus/utils \
 		beorn7:perks:v1.0.1:beorn7_perks/vendor/github.com/beorn7/perks \
 		bsm:redislock:v0.7.1:bsm_redislock/vendor/github.com/bsm/redislock \
 		bwmarrin:discordgo:v0.24.0:bwmarrin_discordgo/vendor/github.com/bwmarrin/discordgo \
