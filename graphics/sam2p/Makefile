@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	sam2p
 PORTVERSION=	0.49.4
 PORTREVISION=	2
@@ -9,6 +7,7 @@ MASTER_SITES=	https://github.com/${GH_ACCOUNT}/${PORTNAME}/releases/download/v${
 
 MAINTAINER=	des@FreeBSD.org
 COMMENT=	Converts raster (bitmap) image formats into PS or PDF files
+WWW=		https://code.google.com/p/sam2p/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
