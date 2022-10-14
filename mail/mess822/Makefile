@@ -1,5 +1,3 @@
-# Created by: David Siebörger <drs@rucus.ru.ac.za>
-
 PORTNAME=	mess822
 PORTVERSION=	0.58
 PORTREVISION=	2
@@ -11,6 +9,7 @@ MASTER_SITES=	http://cr.yp.to/software/ \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	RFC 822 mail message parsing library and rewriting utilities
+WWW=		https://cr.yp.to/mess822.html
 
 USES=		groff qmail:vars
 
