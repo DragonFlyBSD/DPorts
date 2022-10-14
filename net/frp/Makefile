@@ -1,11 +1,12 @@
 PORTNAME=	frp
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.43.0
+DISTVERSION=	0.44.0
 PORTREVISION=	1
 CATEGORIES=	net
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Reverse proxy to expose local server behind NAT/firewall to Internet
+WWW=		https://github.com/fatedier/frp
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
