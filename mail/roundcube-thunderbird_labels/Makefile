@@ -1,25 +1,25 @@
-# Created by: Alexander Moisseev <moiseev@mezonplus.ru>
-
 PORTNAME=	thunderbird_labels
-PORTVERSION=	1.4.10
 DISTVERSIONPREFIX=	v
+DISTVERSION=	1.4.11
 CATEGORIES=	mail
 PKGNAMEPREFIX=	roundcube-
 PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
 
 MAINTAINER=	moiseev@mezonplus.ru
 COMMENT=	Thunderbird Labels plugin for RoundCube webmail
+WWW=		https://github.com/mike-kfed/roundcube-thunderbird_labels
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
 RUN_DEPENDS=	roundcube${PHP_PKGNAMESUFFIX}>=1.4.0:mail/roundcube@${PHP_FLAVOR}
 
+IGNORE_WITH_PHP=82
 USES=		php:flavors
+
 USE_GITHUB=	yes
 GH_ACCOUNT=	mike-kfed
 GH_PROJECT=	roundcube-thunderbird_labels
-IGNORE_WITH_PHP=	81 82
 
 NO_ARCH=	yes
 NO_BUILD=	yes
