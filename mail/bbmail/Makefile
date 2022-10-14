@@ -1,5 +1,3 @@
-# Created by: Chris Piazza <cpiazza@FreeBSD.org>
-
 PORTNAME=	bbmail
 PORTVERSION=	0.9.3
 CATEGORIES=	mail
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/bbtools/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tool intended for Blackbox that checks for new mail
+WWW=		http://bbtools.sourceforge.net/
 
 LICENSE=	GPLv2+
 
