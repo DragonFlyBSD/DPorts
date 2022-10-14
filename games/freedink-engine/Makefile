@@ -1,14 +1,13 @@
-# Created by: Stephen Hurd <shurd@FreeBSD.org>
-
 PORTNAME=	freedink
 PORTVERSION=	108.4
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	games
 MASTER_SITES=	GNU
 PKGNAMESUFFIX=	-engine
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Dink Smallwood RPG and RPG Construction Set
+WWW=		https://www.gnu.org/software/freedink/
 
 LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 		libcheck.so:devel/check
