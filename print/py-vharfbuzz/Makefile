@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	vharfbuzz
 PORTVERSION=	0.1.4
 CATEGORIES=	print python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	User-friendlier way to use Harfbuzz in Python
+WWW=		https://github.com/simoncozens/vharfbuzz
 
 LICENSE=	MIT
 
