@@ -1,12 +1,11 @@
-# Created by: David Naylor <naylor.b.david@gmail.com>
-
 PORTNAME=	timeSeries
-DISTVERSION=	3062.100
+DISTVERSION=	4021.104
 CATEGORIES=	finance
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	ygy@FreeBSD.org
 COMMENT=	Financial Time Series Objects (Rmetrics)
+WWW=		https://r-forge.r-project.org/scm/viewvc.php/pkg/timeSeries/?root=rmetrics
 
 LICENSE=	GPLv2+
 
