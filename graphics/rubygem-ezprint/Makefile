@@ -1,5 +1,3 @@
-# Created by: rpsfa@rit.edu
-
 PORTNAME=	ezprint
 PORTVERSION=	1.0.1
 CATEGORIES=	graphics rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Rails wrapper for the PDFKit library
+WWW=		https://github.com/jstewart/ezprint
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/MIT-LICENSE
