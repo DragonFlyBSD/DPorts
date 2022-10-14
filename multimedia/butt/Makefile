@@ -1,10 +1,12 @@
 PORTNAME=	butt
 PORTVERSION=	0.1.27
+PORTREVISION=	1
 CATEGORIES=	multimedia graphics
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	pi@FreeBSD.org
 COMMENT=	Broadcast SHOUTcast and Icecast streams
+WWW=		https://danielnoethen.de/butt/
 
 LICENSE=	GPLv2
 
