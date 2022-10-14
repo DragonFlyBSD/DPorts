@@ -1,15 +1,14 @@
-# Created by: bacon@smithers.neuro.mcw.edu
-
 PORTNAME=	InsightToolkit
 PORTVERSION=	5.0.1
 DISTVERSIONPREFIX=v
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	science biology
 MASTER_SITES=	https://github.com/InsightSoftwareConsortium/ITK/releases/download/v5.0.1/:data
 DISTFILES=	InsightData-5.0.1.tar.gz:data
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Insight Toolkit
+WWW=		https://www.itk.org
 
 LICENSE=	APACHE20
 
