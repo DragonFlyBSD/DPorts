@@ -1,5 +1,3 @@
-# Created by: Matthew X. Economou <xenophon+fbsdports@irtnog.org>
-
 PORTNAME=	django-cms
 PORTVERSION=	3.9.0
 PORTREVISION=	1
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	xenophon+fbsdports@irtnog.org
 COMMENT=	Content management system built with the Django framework
+WWW=		https://django-cms.org/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
