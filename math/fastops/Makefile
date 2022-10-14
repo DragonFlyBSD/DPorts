@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	fastops
 PORTVERSION=	1.0.0
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	math
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	AVX/AVX2-accelerated bulk call of math functions
+WWW=		https://github.com/yandex/fastops
 
 LICENSE=	MIT
 
