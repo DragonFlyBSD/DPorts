@@ -1,5 +1,3 @@
-# Created by: Stanislav Sedov <stas@FreeBSD.org>
-
 PORTNAME=	type_conv
 PORTVERSION=	113.00.02
 CATEGORIES=	devel
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	ocaml-
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Type conversion routines for OCaml
+WWW=		https://janestreet.github.io/
 
 LICENSE=	APACHE20 BSD3CLAUSE
 LICENSE_COMB=	multi
