@@ -1,5 +1,3 @@
-# Created by: alp@sfedu.ru
-
 PORTNAME=	postgresql-repmgr
 PORTVERSION=	5.3.2
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	repmgr-${PORTVERSION}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	PostgreSQL replication manager
+WWW=		https://repmgr.org/
 
 LICENSE=	GPLv3
 
