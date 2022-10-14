@@ -1,5 +1,3 @@
-# Created by: Eric Anholt <anholt@FreeBSD.org>
-
 PORTNAME=	mesa-demos
 PORTVERSION=	8.4.0
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	ftp://ftp.freedesktop.org/pub/mesa/demos/ #${PORTVERSION}/
 
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	OpenGL demos distributed with Mesa
+WWW=		https://www.mesa3d.org/
 
 LICENSE=	MIT
 
