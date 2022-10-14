@@ -1,5 +1,3 @@
-# Created by: chinsan <chinsan.tw@gmail.com>
-
 PORTNAME=	RRD-Simple
 PORTVERSION=	1.44
 PORTREVISION=	7
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Simple interface to create and store data in RRD files
+WWW=		https://metacpan.org/release/RRD-Simple
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	rrdtool:databases/rrdtool
