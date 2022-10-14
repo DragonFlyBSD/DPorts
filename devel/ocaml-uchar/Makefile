@@ -1,13 +1,13 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	uchar
 PORTVERSION=	0.0.2
+PORTREVISION=	1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	devel
 PKGNAMEPREFIX=	ocaml-
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Compatibility library for OCaml's Uchar module
+WWW=		https://ocaml.github.io/uchar/
 
 LICENSE=	LGPL21 # (with linking exception)
 LICENSE_FILE=	${WRKSRC}/LICENSE
