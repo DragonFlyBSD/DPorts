@@ -1,5 +1,3 @@
-# Created by: Alex Dupre <ale@FreeBSD.org>
-
 PORTNAME=	tomcat
 PORTVERSION=	8.5.82
 CATEGORIES=	www java
@@ -9,6 +7,7 @@ DISTNAME=	apache-${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	vvd@unislabs.com
 COMMENT=	Open-source Java web server by Apache, 8.5.x branch
+WWW=		https://tomcat.apache.org/
 
 LICENSE=	APACHE20
 
