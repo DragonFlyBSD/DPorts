@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	PerformanceAnalytics
 PORTVERSION=	2.0.4
 PORTREVISION=	1
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Econometric tools for performance and risk analysis
+WWW=		https://cran.r-project.org/web/packages/PerformanceAnalytics/
 
 LICENSE=	GPLv2+
 
