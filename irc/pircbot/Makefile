@@ -1,5 +1,3 @@
-# Created by: Tim Bishop <tim@bishnet.net>
-
 PORTNAME=	pircbot
 PORTVERSION=	1.5.0
 PORTREVISION=	1
@@ -9,6 +7,7 @@ MASTER_SITES=	http://www.jibble.org/files/ \
 
 MAINTAINER=	tdb@FreeBSD.org
 COMMENT=	PircBot Java IRC Bot Framework
+WWW=		http://www.jibble.org/pircbot.php
 
 LICENSE=	GPLv2
 
