@@ -1,5 +1,3 @@
-# Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-
 PORTNAME=	re
 PORTVERSION=	1.4.1
 DISTVERSIONPREFIX=	${PKGNAMEPREFIX}${PORTNAME}-
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	ocaml-
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Pure OCaml regular expressions
+WWW=		https://github.com/ocaml/ocaml-re
 
 LICENSE=	LGPL21
 
