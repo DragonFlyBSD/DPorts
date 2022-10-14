@@ -1,5 +1,3 @@
-# Created by: Marek Holienka	<marekholienka@gmail.com>
-
 PORTNAME=	nibbleblog
 PORTVERSION=	3.0.2
 PORTREVISION=	2
@@ -9,6 +7,7 @@ DISTNAME=	nibbleblogv302
 
 MAINTAINER=	marekholienka@gmail.com
 COMMENT=	Lightweight blog system for general use
+WWW=		https://www.nibbleblog.com/
 
 RUN_DEPENDS=	pear:devel/pear@${PHP_FLAVOR}
 
