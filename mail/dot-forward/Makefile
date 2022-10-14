@@ -1,5 +1,3 @@
-# Created by: Uffe Jakobsen <uffe@uffe.org>
-
 PORTNAME=	dot-forward
 PORTVERSION=	0.71
 CATEGORIES=	mail
@@ -7,6 +5,7 @@ MASTER_SITES=	http://cr.yp.to/software/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Dot-forward reads sendmail's .forward files under qmail
+WWW=		https://cr.yp.to/dot-forward.html
 
 USES=		gmake groff
 
