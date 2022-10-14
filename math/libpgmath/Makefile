@@ -1,5 +1,3 @@
-# Created by: Johannes M Dieterich <jmd@FreeBSD.org>
-
 PORTNAME=	libpgmath
 DISTVERSION=	g20191020
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	math
 
 MAINTAINER=	jmd@FreeBSD.org
 COMMENT=	Compiler-callable math intrinsics library
+WWW=		https://github.com/flang-compiler/flang
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
