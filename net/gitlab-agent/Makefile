@@ -1,13 +1,12 @@
-# Created by: Matthias Fechner <mfechner@FreeBSD.org>
-
 PORTNAME=	gitlab-agent
 PORTVERSION=	15.2.0
 DISTVERSIONPREFIX=	v
-PORTREVISION=	0
+PORTREVISION=	2
 CATEGORIES=	net
 
 MAINTAINER=	mfechner@FreeBSD.org
 COMMENT=	GitLab kubernetes agent
+WWW=		https://gitlab.com/gitlab-org/cluster-integration/gitlab-agent
 
 LICENSE=	MIT
 
