@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	jf-openhuninn
 PORTVERSION=	1.1
 MASTER_SITES=	https://github.com/justfont/open-huninn-font/releases/download/v${PORTVERSION}/
@@ -7,6 +5,7 @@ CATEGORIES=	x11-fonts
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	jf Open Huninn by justfont
+WWW=		https://justfont.com/huninn/
 
 LICENSE=	OFL11
 LICENSE_FILE=	${WRKSRC}/license.txt
