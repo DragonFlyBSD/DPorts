@@ -1,5 +1,3 @@
-# Created by: Bernhard Froehlich <decke@bluelife.at>
-
 PORTNAME=	jgnash
 PORTVERSION=	2.21.0
 CATEGORIES=	finance java
@@ -8,6 +6,7 @@ DISTNAME=	jgnash-${PORTVERSION}-bin
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Free personal finance manager
+WWW=		https://sourceforge.net/projects/jgnash/
 
 LICENSE=	GPLv3
 
