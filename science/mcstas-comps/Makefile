@@ -1,5 +1,3 @@
-# Created by: Erik B Knudsen
-
 PORTNAME=	mcstas-comps
 PORTVERSION=	2.5
 PORTREVISION=	2
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-src
 
 MAINTAINER=	erkn@fysik.dtu.dk
 COMMENT=	Component Library for the McStas neutron ray tracing package
+WWW=		https://www.mcstas.org
 
 LICENSE=	GPLv2
 
