@@ -1,5 +1,3 @@
-# Created by: Morten Slot Kristensen
-
 PORTNAME=	dzen
 PORTVERSION=	0.9.5
 CATEGORIES=	x11
@@ -7,6 +5,7 @@ PKGNAMESUFFIX=	2
 
 MAINTAINER=	uzsolt@uzsolt.hu
 COMMENT=	General purpose messaging, notification and menuing program for X11
+WWW=		https://github.com/robm/dzen
 
 LICENSE=	MIT
 
