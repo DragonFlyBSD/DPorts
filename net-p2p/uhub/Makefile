@@ -1,11 +1,10 @@
-# Created by: Yashin Dmitry <yashin.dm@gmail.com>
-
 PORTNAME=	uhub
 PORTVERSION=	0.5.1
 CATEGORIES=	net-p2p
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	High performance peer-to-peer hub for the ADC network
+WWW=		https://www.uhub.org/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
