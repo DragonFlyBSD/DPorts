@@ -1,13 +1,12 @@
-# Created by: Anton Yuzhaninov <citrin@citrin.ru>
-
 PORTNAME=	libmp3splt
 PORTVERSION=	0.9.2
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	SF/mp3splt/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	citrin@citrin.ru
 COMMENT=	Library for splitting of various audio files
+WWW=		http://mp3splt.sourceforge.net/
 
 LICENSE=	GPLv2
 
