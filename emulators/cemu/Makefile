@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	cemu
 PORTVERSION=	1.3
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ CATEGORIES=	emulators
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	TI-84 Plus CE and TI-83 Premium CE calculator emulator
+WWW=		https://ce-programming.github.io/CEmu/
 
 LICENSE=	GPLv3
 
@@ -16,7 +15,7 @@ LIB_DEPENDS=	libpng.so:graphics/png
 USES=		compiler:c++11-lang desktop-file-utils gl libarchive pkgconfig \
 		qmake qt:5 shared-mime-info
 USE_GL=		gl
-USE_QT=		buildtools_build core gui network widgets
+USE_QT=		buildtools:build core gui network widgets
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	CE-Programming
