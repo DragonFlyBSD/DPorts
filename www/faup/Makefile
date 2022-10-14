@@ -1,5 +1,3 @@
-# Created by: Antoine Brodin <antoine@FreeBSD.org>
-
 PORTNAME=	faup
 DISTVERSION=	1.5-48
 PORTREVISION=	1
@@ -10,6 +8,7 @@ MASTER_SITES=	GH LOCAL/antoine
 
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Fast URL decoder library
+WWW=		https://stricaud.github.io/faup/
 
 LICENSE=	WTFPL
 LICENSE_FILE=	${WRKSRC}/LICENSE
