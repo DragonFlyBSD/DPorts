@@ -1,5 +1,3 @@
-# Created by: Ronald Kuehn <rk@ronald.org>
-
 PORTNAME=	lablgl
 PORTVERSION=	1.05
 PORTREVISION=	4
@@ -11,6 +9,7 @@ PKGNAMEPREFIX=	ocaml-
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	OpenGL interface for Objective Caml
+WWW=		https://forge.ocamlcore.org/projects/lablgl/
 
 LICENSE=	BSD3CLAUSE
 
