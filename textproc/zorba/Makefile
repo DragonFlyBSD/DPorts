@@ -1,5 +1,3 @@
-# Created by: gahr
-
 PORTNAME=	zorba
 PORTVERSION=	2.7.0
 PORTREVISION=	36
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-src-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	General purpose C++ XQuery processor
+WWW=		http://www.zorba.io/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
