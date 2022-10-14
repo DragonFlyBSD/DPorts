@@ -1,7 +1,7 @@
 PORTNAME=	jenkins
-PORTVERSION=	2.357
+PORTVERSION=	2.372
 CATEGORIES=	devel java
-MASTER_SITES=	http://mirrors.jenkins.io/war/${PORTVERSION}/
+MASTER_SITES=	https://get.jenkins.io/war/${PORTVERSION}/
 DISTNAME=	jenkins
 EXTRACT_SUFX=	.war
 DIST_SUBDIR=	${PORTNAME}/${PORTVERSION}
@@ -9,6 +9,7 @@ EXTRACT_ONLY=
 
 MAINTAINER=	lwhsu@FreeBSD.org
 COMMENT=	Open-source continuous integration server
+WWW=		https://jenkins.io/
 
 LICENSE=	MIT
 
