@@ -1,5 +1,3 @@
-# Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-
 PORTNAME=	snappy
 PORTVERSION=	1.1.9
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	archivers
 
 MAINTAINER=	vanilla@FreeBSD.org
 COMMENT=	Fast compressor/decompressor library
+WWW=		https://google.github.io/snappy/
 
 LICENSE=	BSD3CLAUSE
 
