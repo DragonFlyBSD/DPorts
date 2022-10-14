@@ -1,5 +1,3 @@
-# Created by: arved
-
 PORTNAME=	abcm2ps
 PORTVERSION=	8.13.23
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	print audio
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Converts ABC to music sheet in PostScript format
+WWW=		https://github.com/leesavide/abcm2ps
 
 LICENSE=	GPLv2
 
