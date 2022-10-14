@@ -1,6 +1,3 @@
-# Created by: Florent Thoumie <flz@FreeBSD.org>
-#   $MCom: ports/trunk/net-im/telepathy-salut/Makefile 19802 2014-08-13 12:13:08Z gusi $
-
 PORTNAME=	telepathy-salut
 PORTVERSION=	0.8.1
 PORTREVISION=	4
@@ -9,6 +6,7 @@ MASTER_SITES=	http://telepathy.freedesktop.org/releases/${PORTNAME}/
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Link-local Connection Manager for Telepathy Framework
+WWW=		https://telepathy.freedesktop.org/
 
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/COPYING
