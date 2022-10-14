@@ -1,13 +1,13 @@
-# Created by: Thierry Thomas <thierry@pompo.net>
-
 PORTNAME=	toxcore
 PORTVERSION=	0.2.18
 DISTVERSIONPREFIX=	v
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	net-im net-p2p
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	ProjectTox-Core library, a decentralized and secure messenger
+WWW=		https://tox.chat/
 
 LICENSE=	GPLv3
 
