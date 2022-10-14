@@ -1,5 +1,3 @@
-# Created by: Jason Helfman <jgh@FreeBSD.org>
-
 PORTNAME=	ecj
 PORTVERSION=	4.4.2
 PORTREVISION=	1
@@ -11,6 +9,7 @@ EXTRACT_SUFX=	.jar
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Eclipse Java Compiler
+WWW=		https://www.eclipse.org/
 
 LICENSE=	EPL
 
