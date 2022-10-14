@@ -1,5 +1,3 @@
-# Created by: Eugene Grosbein <ports@grosbein.net>
-
 PORTNAME=	bouncycastle
 PORTVERSION=	1.71
 CATEGORIES=	java security
@@ -10,6 +8,7 @@ DISTNAME=	crypto-${DVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Cleanroom build of Java Cryptography Extensions
+WWW=		https://www.bouncycastle.org/
 
 # APACHE20 is used by pg/src/main/java/org/bouncycastle/apache/bzip2/*.
 LICENSE=	APACHE20 MIT
