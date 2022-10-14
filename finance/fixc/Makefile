@@ -1,11 +1,12 @@
 PORTNAME=		fixc
 PORTVERSION=		1.2
 DISTVERSIONPREFIX=	v
-PORTREVISION=		2
+PORTREVISION=		6
 CATEGORIES=		finance
 
 MAINTAINER=		blttll@gmail.com
 COMMENT=		Simple Financial Information eXchange (FIX) protocol console client
+WWW=		https://github.com/blttll/fixc
 
 USES=			go
 
