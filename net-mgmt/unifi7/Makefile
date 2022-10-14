@@ -1,5 +1,5 @@
 PORTNAME=	unifi7
-PORTVERSION=	7.2.92
+PORTVERSION=	7.2.94
 CATEGORIES=	net-mgmt java
 MASTER_SITES=	http://dl.ubnt.com/unifi/%SUBDIR%/:unifi \
 		https://repo1.maven.org/maven2/%SUBDIR%/:jax
@@ -12,6 +12,7 @@ EXTRACT_ONLY=	unifi_sysvinit_all.deb
 
 MAINTAINER=	otis@FreeBSD.org
 COMMENT=	UniFi Controller v7
+WWW=		https://help.ui.com/hc/en-us/categories/200320654-UniFi-Wireless
 
 RUN_DEPENDS=	snappyjava>0:archivers/snappy-java
 
