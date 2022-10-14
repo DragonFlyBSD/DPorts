@@ -1,11 +1,10 @@
-# Created by: Yuri Victorovich <yuri@FreeBSD.org>
-
 PORTNAME=	faust
 DISTVERSION=	2.41.1
 CATEGORIES=	audio devel
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Functional programming language for realtime audio signal processing
+WWW=		https://faust.grame.fr/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING.txt
