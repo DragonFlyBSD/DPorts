@@ -1,5 +1,3 @@
-# Created by: Pavel I Volkov <pavelivolkov@googlemail.com>
-
 PORTNAME=	dynamips
 PORTVERSION=	0.2.17
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	-community
 
 MAINTAINER=	pavelivolkov@gmail.com
 COMMENT=	Cisco 1700/2600/3600/3700/7200 Simulator
+WWW=		https://github.com/GNS3/dynamips
 
 LICENSE=	GPLv2
 
