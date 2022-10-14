@@ -1,10 +1,9 @@
-# Created by: Thierry Thomas (<thierry@pompo.net>)
-
 PORTNAME=	${MPORTNAME:tl}
 PORTVERSION=	5.7.9
 CATEGORIES=	math
 
 COMMENT=	Sparse multifrontal LU factorization
+WWW=		https://faculty.cse.tamu.edu/davis/suitesparse.html
 
 LICENSE=	GPLv2+
 
