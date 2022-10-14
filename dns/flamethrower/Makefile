@@ -1,5 +1,3 @@
-# Created by: Leo Vandewoestijne <freebsd@dns.company>
-
 PORTNAME=	flamethrower
 PORTVERSION=	0.11.0
 DISTVERSIONPREFIX=v
@@ -7,6 +5,7 @@ CATEGORIES=	dns
 
 MAINTAINER=	pcarboni@gmail.com
 COMMENT=	DNS performance and functional testing utility
+WWW=		https://github.com/DNS-OARC/flamethrower
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
