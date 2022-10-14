@@ -1,12 +1,11 @@
-# Created by: Thierry Thomas <thierry@pompo.net>
-
 PORTNAME=	locfit
-DISTVERSION=	1.5-9.5
+DISTVERSION=	1.5-9.6
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Local Regression, Likelihood and Density Estimation
+WWW=		https://cran.r-project.org/package=locfit
 
 LICENSE=	GPLv2+
 
