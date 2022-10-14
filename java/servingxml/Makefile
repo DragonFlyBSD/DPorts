@@ -1,5 +1,3 @@
-# Created by: jpbeconne
-
 PORTNAME=	servingxml
 PORTVERSION=	1.1.2
 CATEGORIES=	java devel
@@ -7,6 +5,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	jpbeconne@free.fr
 COMMENT=	Framework for flat/XML data transformations
+WWW=		http://servingxml.sourceforge.net/
 
 BUILD_DEPENDS=	${ANT_CMD}:devel/apache-ant
 
