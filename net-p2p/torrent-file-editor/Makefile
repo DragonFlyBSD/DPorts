@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	torrent-file-editor
 PORTVERSION=	0.3.17
 DISTVERSIONPREFIX=	v
@@ -7,12 +5,13 @@ CATEGORIES=	net-p2p
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	GUI tool for creating and editing .torrent files
+WWW=		https://torrent-file-editor.github.io/
 
 LICENSE=	GPLv3+
 
 USES=		cmake compiler:c++11-lang desktop-file-utils qt:5
 USE_GITHUB=	yes
-USE_QT=		buildtools_build linguisttools_build qmake_build \
+USE_QT=		buildtools:build linguisttools:build qmake:build \
 		core gui widgets
 
 CMAKE_ARGS=	-DQT5_BUILD:BOOL=ON \
