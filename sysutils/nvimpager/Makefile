@@ -1,5 +1,3 @@
-# Created by: Adam Weinberger <adamw@FreeBSD.org>
-
 PORTNAME=	nvimpager
 PORTVERSION=	0.10.4
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	sysutils
 
 MAINTAINER=	adamw@FreeBSD.org
 COMMENT=	Use NeoVim as a pager, with full syntax highlighting
+WWW=		https://github.com/lucc/nvimpager
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
