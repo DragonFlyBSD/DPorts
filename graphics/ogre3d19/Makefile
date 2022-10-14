@@ -1,5 +1,3 @@
-# Created by: Oliver Lehmann <oliver@FreeBSD.org>
-
 PORTNAME=	ogre3d
 PORTVERSION=	1.9.0
 PORTREVISION=	21
@@ -10,6 +8,7 @@ PKGNAMESUFFIX=	19
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Scene-oriented, flexible 3D engine written in C++ (legacy version 1.9)
+WWW=		https://www.ogre3d.org/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
