@@ -1,11 +1,10 @@
-# Created by: loader <loader@freebsdmall.com>
-
 PORTNAME=	lwjgl
 DISTVERSION=	2.9.4.20161208
 CATEGORIES=	games java
 
 MAINTAINER=	freebsd@skinc.ru
 COMMENT=	Lightweight Java Game Library
+WWW=		https://legacy.lwjgl.org
 
 LICENSE=	BSD3CLAUSE
 
