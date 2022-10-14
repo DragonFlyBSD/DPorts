@@ -1,5 +1,3 @@
-# Created by: Klaus T. Aehlig <aehlig@linta.de>
-
 PORTNAME=	ocaml-gsl
 DISTVERSIONPREFIX=v
 DISTVERSION=	1.19.1
@@ -8,6 +6,7 @@ CATEGORIES=	math
 
 MAINTAINER=	michipili@gmail.com
 COMMENT=	Interface to GSL for the Objective Caml language
+WWW=		http://oandrieu.nerim.net/ocaml/gsl/
 
 LICENSE=	GPLv3
 
