@@ -1,5 +1,3 @@
-# Created by: Radim Kolar
-
 PORTNAME=	zgv
 PORTVERSION=	5.9
 PORTREVISION=	9
@@ -8,6 +6,7 @@ MASTER_SITES=	SUNSITE/apps/graphics/viewers/svga
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Graphics viewer for SVGAlib
+WWW=		https://www.svgalib.org/rus/zgv/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
