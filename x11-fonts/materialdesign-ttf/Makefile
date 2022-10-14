@@ -1,11 +1,12 @@
 PORTNAME=	materialdesign
 DISTVERSIONPREFIX=	v
-DISTVERSION=	6.5.95
+DISTVERSION=	6.9.96
 CATEGORIES=	x11-fonts
 PKGNAMESUFFIX=	-ttf
 
 MAINTAINER=	cs@FreeBSD.org
 COMMENT=	Material Design Webfont
+WWW=		https://materialdesignicons.com/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
