@@ -1,6 +1,6 @@
 PORTNAME=	vtk
 DISTVERSION=	9.1.0
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	math graphics
 MASTER_SITES=	https://vtk.org/files/release/${VTK_SHORT_VER}/
 PKGNAMESUFFIX=	9
@@ -8,6 +8,7 @@ DISTNAME=	${PORTNAME:tu}-${DISTVERSION}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Visualization toolkit
+WWW=		https://vtk.org/
 
 LICENSE=	BSD3CLAUSE
 
@@ -63,7 +64,7 @@ PYTHON_CMAKE_ON=	-DVTK_PYTHON_VERSION=${PYTHON_MAJOR_VER} -DPython3_EXECUTABLE=$
 PYTHON_VARS=		SUB_FILES=PKG-INFO SUB_LIST=PORTVERSION=${PORTVERSION}
 
 QT5_USES=		qt:5
-QT5_USE=		QT=core,declarative,gui,network,opengl,sql,uiplugin,widgets,x11extras,qmake_build,buildtools_build
+QT5_USE=		QT=core,declarative,gui,network,opengl,sql,uiplugin,widgets,x11extras,qmake:build,buildtools:build
 QT5_CMAKE_ON=		-DCMAKE_PREFIX_PATH:STRING=${LOCALBASE}/lib/qt5 \
 			-DVTK_GROUP_ENABLE_Qt:STRING=YES \
 			-DVTK_MODULE_ENABLE_VTK_GUISupportQt:STRING=YES
