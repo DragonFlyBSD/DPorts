@@ -1,5 +1,3 @@
-# Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-
 PORTNAME=	camljava
 PORTVERSION=	0.3
 PORTREVISION=	3
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	ocaml-
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	OCaml-Java library interface
+WWW=		https://caml.inria.fr/
 
 USE_OCAML=	yes
 USE_JAVA=	yes
