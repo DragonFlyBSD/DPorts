@@ -1,5 +1,3 @@
-# Created by: Dennis Herrmann <adox@mcx2.org>
-
 PORTNAME=	silgraphite
 PORTVERSION=	2.3.1
 PORTREVISION=	4
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Font engine for complex non-Roman writing systems
+WWW=		http://silgraphite.sourceforge.net/
 
 LICENSE=	CPL05 LGPL21+
 LICENSE_COMB=	dual
