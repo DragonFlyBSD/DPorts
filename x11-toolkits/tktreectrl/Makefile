@@ -1,5 +1,3 @@
-# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-
 PORTNAME=	tktreectrl
 PORTVERSION=	2.4.1
 CATEGORIES=	x11-toolkits tk
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/tktreectrl/tktreectrl/tktreectrl-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Multi-column hierarchical listbox widget
+WWW=		http://tktreectrl.sourceforge.net/
 
 LICENSE=	TclTk
 LICENSE_NAME=	Tcl/Tk License
