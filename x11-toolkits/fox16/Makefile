@@ -1,5 +1,3 @@
-# Created by: Alexander Novitsky <alecn2002@yandex.ru>
-
 PORTNAME=	fox
 PORTVERSION=	1.6.57
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMESUFFIX=	${PORTVERSION:R:S/.//}
 
 MAINTAINER=	jhale@FreeBSD.org
 COMMENT=	Fast and extensive C++ GUI toolkit -- ver.1.6
+WWW=		http://www.fox-toolkit.org/fox.html
 
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/LICENSE
