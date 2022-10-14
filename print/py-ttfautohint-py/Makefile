@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	ttfautohint-py
 PORTVERSION=	0.5.1
 CATEGORIES=	print python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python wrapper for ttfautohint
+WWW=		https://github.com/fonttools/ttfautohint-py
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
