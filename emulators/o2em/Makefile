@@ -1,5 +1,3 @@
-# Created by: Gunter Wambaugh <techgunter@yahoo.com>
-
 PORTNAME=	o2em
 PORTVERSION=	1.17
 PORTREVISION=	4
@@ -11,6 +9,7 @@ DISTFILES=	o2em117src.zip:1 \
 
 MAINTAINER=	techgunter@yahoo.com
 COMMENT=	Odyssey2 / Videopac console emulator
+WWW=		http://o2em.sourceforge.net/
 
 LIB_DEPENDS=	liballeg.so:devel/allegro
 
