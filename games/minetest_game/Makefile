@@ -1,9 +1,10 @@
 PORTNAME=	minetest_game
-PORTVERSION=	5.5.1
+PORTVERSION=	5.6.1
 CATEGORIES=	games
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	The main game for the Minetest game engine
+WWW=		https://www.minetest.net/
 
 LICENSE=	LGPL21+ CC-BY-SA-3.0
 LICENSE_COMB=	multi
