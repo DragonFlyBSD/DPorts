@@ -1,5 +1,3 @@
-# Created by: Radim Kolar
-
 PORTNAME=	d2x
 PORTVERSION=	0.2.5
 PORTREVISION=	15
@@ -8,6 +6,7 @@ MASTER_SITES=	http://icculus.org/d2x/src/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Unix port of Descent 2 Game
+WWW=		https://www.icculus.org/d2x/
 
 GNU_CONFIGURE=	yes
 USES=		gmake sdl
