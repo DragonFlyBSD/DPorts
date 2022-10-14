@@ -1,5 +1,3 @@
-# Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-
 PORTNAME=	rescue
 PORTVERSION=	1.0.0.3
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DIST_SUBDIR=	java
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Action adventure in Space
+WWW=		http://rescue.sourceforge.net/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/gpl.txt
