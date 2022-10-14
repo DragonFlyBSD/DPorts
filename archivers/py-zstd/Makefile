@@ -1,11 +1,12 @@
 PORTNAME=	zstd
-DISTVERSION=	1.5.2.5
+DISTVERSION=	1.5.2.6
 CATEGORIES=	archivers python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Python binding for Zstandard compression library
+WWW=		https://github.com/sergey-dryabzhinsky/python-zstd
 
 LICENSE=	BSD2CLAUSE
 
