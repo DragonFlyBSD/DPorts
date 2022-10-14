@@ -1,5 +1,3 @@
-# Created by: Matthieu Volat <mazhe@alkumuna.eu>
-
 PORTNAME=	libbpg
 PORTVERSION=	0.9.8
 CATEGORIES=	graphics
@@ -7,6 +5,7 @@ MASTER_SITES=	http://bellard.org/bpg/
 
 MAINTAINER=	mazhe@alkumuna.eu
 COMMENT=	BPG (Better Portable Graphics) is a new image format
+WWW=		https://bellard.org/bpg/
 
 LICENSE=	BSD2CLAUSE LGPL21
 LICENSE_COMB=	multi
