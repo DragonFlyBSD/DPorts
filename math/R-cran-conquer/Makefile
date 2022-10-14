@@ -1,10 +1,11 @@
 PORTNAME=	conquer
-PORTVERSION=	1.3.0
+PORTVERSION=	1.3.1
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Convolution-Type Smoothed Quantile Regression
+WWW=		https://cran.r-project.org/web/packages/conquer/
 
 LICENSE=	GPLv3
 
