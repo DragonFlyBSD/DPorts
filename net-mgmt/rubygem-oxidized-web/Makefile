@@ -1,5 +1,3 @@
-# Created by: Nick Hilliard <nick@foobar.org>
-
 PORTNAME=	oxidized-web
 PORTVERSION=	0.13.1
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	nick@foobar.org
 COMMENT=	Web user interface and RESTful API for rubygems-oxidized
+WWW=		https://github.com/ytti/oxidized-web
 
 LICENSE=	APACHE20
 
