@@ -1,5 +1,3 @@
-# Created by: lbartoletti <lbartoletti@FreeBSD.org>
-
 PORTNAME=	librasterlite2
 PORTVERSION=	1.1.0
 DISTVERSIONSUFFIX=-beta1
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.gaia-gis.it/gaia-sins/librasterlite2-sources/
 
 MAINTAINER=	lbartoletti@FreeBSD.org
 COMMENT=	Library that stores and retrieves raster coverages using a SpatiaLite
+WWW=		https://www.gaia-gis.it/fossil/librasterlite2/index
 
 LICENSE=	MPL11 GPLv2 LGPL21
 LICENSE_COMB=	dual
