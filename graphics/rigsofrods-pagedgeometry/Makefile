@@ -1,5 +1,3 @@
-# Created by: Thibault Payet <monwarez@mailoo.org>
-
 PORTNAME=	rigsofrods-pagedgeometry
 PORTVERSION=	1.2.0
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ CATEGORIES=	graphics
 
 MAINTAINER=	monwarez@mailoo.org
 COMMENT=	OGRE plugin for real-time dense forests
+WWW=		https://www.ogre3d.org/tikiwiki/PagedGeometry+Engine
 
 LICENSE=	ZLIB
 LICENSE_FILE=	${WRKSRC}/zlib.txt
