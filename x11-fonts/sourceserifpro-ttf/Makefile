@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	sourceserifpro
 PORTVERSION=	3.001
 CATEGORIES=	x11-fonts
@@ -9,6 +7,7 @@ DISTNAME=	source-serif-pro-${PORTVERSION}R
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Set of fonts by Adobe designed for UI
+WWW=		https://github.com/adobe-fonts/source-serif-pro
 
 LICENSE=	OFL11
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
