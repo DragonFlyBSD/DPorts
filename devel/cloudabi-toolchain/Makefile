@@ -1,5 +1,3 @@
-# Created by: Ed Schouten <ed@FreeBSD.org>
-
 PORTNAME=	cloudabi-toolchain
 PORTVERSION=	1.11
 PORTREVISION=	2
@@ -9,6 +7,7 @@ DISTFILES=	# None
 
 MAINTAINER=	ed@FreeBSD.org
 COMMENT=	C and C++ toolchain for CloudABI
+WWW=		https://github.com/NuxiNL/cloudlibc
 
 LICENSE=	MIT
 
