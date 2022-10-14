@@ -1,5 +1,3 @@
-# Created by: Christian Laursen <xi@borderworlds.dk>
-
 PORTNAME=	musiccontrol
 PORTVERSION=	0.3
 PORTREVISION=	2
@@ -11,6 +9,7 @@ EXTRACT_ONLY=
 
 MAINTAINER=	xi@borderworlds.dk
 COMMENT=	Advanced music player
+WWW=		https://borderworlds.dk/projects/ #mc
 
 RUN_DEPENDS=	${LOCALBASE}/bin/mpg123:audio/mpg123 \
 		${LOCALBASE}/bin/ogg123:audio/vorbis-tools \
