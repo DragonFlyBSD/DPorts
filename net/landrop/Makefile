@@ -5,6 +5,7 @@ CATEGORIES=	net
 
 MAINTAINER=	lwhsu@FreeBSD.org
 COMMENT=	Drop any files to any devices on your LAN
+WWW=		https://landrop.app
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -19,7 +20,7 @@ GH_ACCOUNT=	LANDrop
 GH_PROJECT=	LANDrop
 
 USE_GL=	gl
-USE_QT=	buildtools_build core gui network widgets
+USE_QT=	buildtools:build core gui network widgets
 
 QMAKE_SOURCE_PATH=	${WRKSRC}/LANDrop/LANDrop.pro
 
