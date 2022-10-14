@@ -1,5 +1,3 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	shairport-sync
 DISTVERSION=	3.3.9
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	audio
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	AirPlay audio player with multi-room audio synchronisation capability
+WWW=		https://github.com/mikebrady/shairport-sync
 
 LICENSE=	BSD3CLAUSE
 
