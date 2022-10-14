@@ -1,9 +1,10 @@
 PORTNAME=	cbsd
-DISTVERSION=	13.1.14
+DISTVERSION=	13.1.15
 CATEGORIES=	sysutils
 
 MAINTAINER=	olevole@olevole.ru
 COMMENT=	Yet another FreeBSD Jail, XEN and Bhyve Management Utility
+WWW=		https://www.bsdstore.ru
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -21,7 +22,7 @@ USE_RC_SUBR=	cbsdd cbsdrsyncd cbsd-statsd-bhyve cbsd-statsd-hoster \
 		cbsd-statsd-jail
 MAKE_JOBS_UNSAFE=	yes
 
-SUB_FILES=	pkg-deinstall pkg-message
+SUB_FILES=	pkg-message
 
 USERS=		${PORTNAME}
 GROUPS=		${PORTNAME}
