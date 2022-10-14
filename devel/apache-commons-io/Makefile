@@ -1,5 +1,3 @@
-# Created by: Michael Winking <mwfp@foldl.net>
-
 PORTNAME=	commons-io
 PORTVERSION=	2.11.0
 CATEGORIES=	devel java
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-bin
 
 MAINTAINER=	makc@FreeBSD.org
 COMMENT=	Collection of I/O utilities for Java
+WWW=		https://commons.apache.org/proper/commons-io/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
