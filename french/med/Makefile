@@ -1,15 +1,15 @@
-# Created by: thierry@pompo.net
-
 PORTNAME=	med
 DISTVERSION=	4.0.0
+PORTREVISION=	2
 CATEGORIES=	french science
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Modelisation et Echanges de Donnees
+WWW=		https://www.salome-platform.org/user-section/about/med
 
 LICENSE=	GPLv3
 
-LIB_DEPENDS=	libhdf5.so:science/hdf5
+LIB_DEPENDS=	libhdf5-110.so:science/hdf5-110
 
 USES=		fortran gmake libtool tk
 
@@ -17,7 +17,9 @@ OPTIONS_DEFINE=	DOCS EXAMPLES
 
 USE_CXXSTD=	gnu++98
 CFLAGS+=	-fPIC
-CONFIGURE_ARGS=	--disable-python --with-hdf5=${LOCALBASE}
+CONFIGURE_ARGS=	--disable-python \
+		--with-hdf5=${LOCALBASE} \
+		--with-hdf5-include=${LOCALBASE}/include/hdf5-110
 CONFIGURE_ENV=	WISH=${WISH}
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
