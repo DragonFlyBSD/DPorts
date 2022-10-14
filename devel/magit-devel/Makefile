@@ -1,24 +1,25 @@
 PORTNAME=	magit
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.3.0-375
-DISTVERSIONSUFFIX=	-ga7953b26
+DISTVERSION=	3.3.0-443
+DISTVERSIONSUFFIX=	-gcfe5a126
 CATEGORIES=	devel elisp
 PKGNAMESUFFIX=	-devel${EMACS_PKGNAMESUFFIX}
 
 MAINTAINER=	yasu@FreeBSD.org
 COMMENT=	Interface to Git for Emacs (Development Version)
+WWW=		https://magit.vc/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	compat.el${EMACS_PKGNAMESUFFIX}>=28.1.1.0:misc/compat.el@${EMACS_FLAVOR} \
 		dash.el${EMACS_PKGNAMESUFFIX}>=2.19.1:devel/dash.el@${EMACS_FLAVOR} \
-		transient${EMACS_PKGNAMESUFFIX}>=0.3.7:devel/transient@${EMACS_FLAVOR} \
-		with-editor${EMACS_PKGNAMESUFFIX}>=3.0.5:editors/with-editor@${EMACS_FLAVOR}
+		transient-devel${EMACS_PKGNAMESUFFIX}>=0.3.7:devel/transient-devel@${EMACS_FLAVOR} \
+		with-editor-devel${EMACS_PKGNAMESUFFIX}>=3.0.5:editors/with-editor-devel@${EMACS_FLAVOR}
 RUN_DEPENDS=	compat.el${EMACS_PKGNAMESUFFIX}>=28.1.1.0:misc/compat.el@${EMACS_FLAVOR} \
 		dash.el${EMACS_PKGNAMESUFFIX}>=2.19.1:devel/dash.el@${EMACS_FLAVOR} \
-		transient${EMACS_PKGNAMESUFFIX}>=0.3.7:devel/transient@${EMACS_FLAVOR} \
-		with-editor${EMACS_PKGNAMESUFFIX}>=3.0.5:editors/with-editor@${EMACS_FLAVOR}
+		transient-devel${EMACS_PKGNAMESUFFIX}>=0.3.7:devel/transient-devel@${EMACS_FLAVOR} \
+		with-editor-devel${EMACS_PKGNAMESUFFIX}>=3.0.5:editors/with-editor-devel@${EMACS_FLAVOR}
 
 USES=		emacs gmake makeinfo
 USE_GITHUB=	yes
