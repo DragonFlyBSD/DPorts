@@ -1,10 +1,11 @@
 PORTNAME=	cpp-peglib
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.5.0
+DISTVERSION=	1.8.2
 CATEGORIES=	textproc devel
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	C++ header-only PEG (Parsing Expression Grammars) library
+WWW=		https://github.com/yhirose/cpp-peglib
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -14,7 +15,8 @@ USES=		cmake:testing compiler:c++17-lang
 USE_GITHUB=	yes
 GH_ACCOUNT=	yhirose
 
-CMAKE_TESTING_ON=	FREEBSD_BUILD_TESTS
+CMAKE_OFF=	PEGLIB_BUILD_TESTS
+CMAKE_TESTING_ON=	PEGLIB_BUILD_TESTS
 
 NO_ARCH=	yes
 
