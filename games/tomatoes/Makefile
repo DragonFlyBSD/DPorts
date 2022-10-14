@@ -1,5 +1,3 @@
-# Created by: Adam Weinberger <adamw@FreeBSD.org>
-
 PORTNAME=	tomatoes
 PORTVERSION=	1.55
 PORTREVISION=	2
@@ -10,6 +8,7 @@ DISTFILES=	${PORTNAME}-linux-src-${PORTVERSION}${EXTRACT_SUFX} \
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Tomato-smashing, Q-Bert style
+WWW=		http://tomatoes.sourceforge.net/
 
 LICENSE=	ZLIB
 
