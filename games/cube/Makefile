@@ -1,5 +1,3 @@
-# Created by: Arjan van Leeuwen <avleeuwen@piwebs.com>
-
 PORTNAME=	cube
 DISTVERSION=	2005_08_29
 PORTREVISION=	19
@@ -9,6 +7,7 @@ DISTFILES=	${CUBE_DATA} ${CUBE_SRC}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	OpenGL 3D FPS (first person shooter) game
+WWW=		http://www.cubeengine.com/
 
 LIB_DEPENDS=	libenet.so:net/enet
 
