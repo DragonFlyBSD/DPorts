@@ -1,13 +1,12 @@
-# Created by: Jev Björsell <ports@ecadlabs.com>
-
 PORTNAME=	nginx-prometheus-exporter
 PORTVERSION=	0.10.0
 DISTVERSIONPREFIX=	v
-PORTREVISION=	2
+PORTREVISION=	6
 CATEGORIES=	www
 
 MAINTAINER=	arcade@b1t.name
 COMMENT=	Prometheus exporter for NGINX and NGINX Plus stats
+WWW=		https://github.com/nginxinc/nginx-prometheus-exporter
 
 LICENSE=	APACHE20
 
