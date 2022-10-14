@@ -1,5 +1,3 @@
-# Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-
 PORTNAME=	server
 PORTVERSION=	${GLPI_VER}.${FUNV_VER}
 PORTEPOCH=	1
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	glpi-plugins-fusioninventory-
 
 MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	Plugin of glpi to get information of networking devices
+WWW=		https://fusioninventory.org/
 
 LICENSE=	AGPLv3
 
