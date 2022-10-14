@@ -1,5 +1,3 @@
-# Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-
 PORTNAME=	libgltext
 PORTVERSION=	0.3.1
 PORTREVISION=	9
@@ -9,6 +7,7 @@ DISTNAME=	gltext-${PORTVERSION}
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Portable font rendering library for C++
+WWW=		http://gltext.sourceforge.net
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
