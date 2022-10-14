@@ -1,5 +1,3 @@
-# Created by: Jimmy Olgeni <olgeni@uli.it>
-
 PORTNAME=	eGroupware
 PORTVERSION=	20.1.20210503
 CATEGORIES=	deskutils
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME:tl}-docker-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Web-based GroupWare system
+WWW=		https://www.egroupware.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKDIR}/${PORTNAME:tl}/doc/LICENSE
