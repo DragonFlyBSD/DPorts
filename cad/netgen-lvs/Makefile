@@ -1,10 +1,11 @@
 PORTNAME=	netgen
-DISTVERSION=	1.5.227
+DISTVERSION=	1.5.233
 CATEGORIES=	cad
 PKGNAMESUFFIX=	-lvs
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Tool for comparing netlists (a process known as LVS)
+WWW=		http://opencircuitdesign.com/netgen/
 
 LICENSE=	GPLv1
 LICENSE_FILE=	${WRKSRC}/Copying
