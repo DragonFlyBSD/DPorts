@@ -1,11 +1,10 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	librtprocess
 PORTVERSION=	0.12.0
 CATEGORIES=	graphics
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Library for raw image processing
+WWW=		https://github.com/CarVac/librtprocess
 
 LICENSE=	GPLv3+
 
