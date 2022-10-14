@@ -3,8 +3,9 @@ DISTVERSION=	0.6.7
 CATEGORIES=	x11 wayland
 MASTER_SITES=	https://github.com/Cloudef/bemenu/releases/download/${DISTVERSION}/
 
-MAINTAINER=	tobik@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Dynamic menu library and client program inspired by dmenu
+WWW=		https://github.com/Cloudef/bemenu
 
 LICENSE=	GPLv3+ LGPL3+
 LICENSE_COMB=	multi
