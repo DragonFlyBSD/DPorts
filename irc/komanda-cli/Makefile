@@ -1,10 +1,11 @@
 PORTNAME=	komanda-cli
 DISTVERSION=	g20190920
-PORTREVISION=	2
+PORTREVISION=	6
 CATEGORIES=	irc
 
 MAINTAINER=	lcook@FreeBSD.org
 COMMENT=	Komanda command-line IRC client
+WWW=		https://github.com/mephux/komanda-cli
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
