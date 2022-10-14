@@ -1,5 +1,3 @@
-# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-
 PORTNAME=	gstreamer
 PORTVERSION=	1.16.2
 CATEGORIES=	multimedia
@@ -9,6 +7,7 @@ PKGNAMESUFFIX=	1
 
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	Media applications framework
+WWW=		https://gstreamer.freedesktop.org/
 
 LICENSE=	LGPL20+
 LICENSE_FILE=	${WRKSRC}/COPYING
