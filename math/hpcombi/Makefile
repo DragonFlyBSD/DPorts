@@ -1,5 +1,3 @@
-# Created by: thierry@pompo.net
-
 PORTNAME=	HPCombi
 PORTVERSION=	0.0.6
 PORTREVISION=	1
@@ -8,6 +6,7 @@ CATEGORIES=	math devel
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Fast combinatorics in C++ using SSE/AVX instruction sets
+WWW=		https://github.com/hivert/HPCombi
 
 LICENSE=	GPLv3
 
