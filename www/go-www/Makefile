@@ -1,13 +1,12 @@
-# Created by: Nicolas de Bari Embriz Garcia Rojas <nbari@tequila.io>
-
 PORTNAME=	www
 PORTVERSION=	2.0.0
-PORTREVISION=	2
+PORTREVISION=	6
 CATEGORIES=	www
 PKGNAMEPREFIX=	go-
 
 MAINTAINER=	nbari@tequila.io
 COMMENT=	Web server for static content
+WWW=		https://go-www.com
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
