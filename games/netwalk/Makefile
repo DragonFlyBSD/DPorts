@@ -1,5 +1,3 @@
-# Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-
 PORTNAME=	netwalk
 PORTVERSION=	0.4.11
 PORTREVISION=	3
@@ -7,6 +5,7 @@ CATEGORIES=	games
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Game where the object is to connect every terminal to the main server
+WWW=		https://github.com/blynn/netwalk
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE
