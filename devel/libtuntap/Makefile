@@ -1,5 +1,3 @@
-# Created by: Mahdi Mokhtari <mokhi64@gmail.com>
-
 PORTNAME=	libtuntap
 DISTVERSIONPREFIX=	${PORTNAME}-
 DISTVERSION=	0.4
@@ -8,6 +6,7 @@ CATEGORIES=	devel net
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Configuring TUN or TAP devices API in a portable manner
+WWW=		https://github.com/LaKabane/libtuntap
 
 LICENSE=	MIT
 
