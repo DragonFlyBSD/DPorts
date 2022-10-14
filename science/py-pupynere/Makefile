@@ -1,5 +1,3 @@
-# Created by: Johannes Meixner <johannes@perceivon.net>
-
 PORTNAME=	pupynere
 PORTVERSION=	1.0.15
 PORTREVISION=	8
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	NetCDF file reader and writer
+WWW=		https://bitbucket.org/robertodealmeida/pupynere
 
 LICENSE=	MIT
 
