@@ -1,5 +1,3 @@
-# Created by: olevole@olevole.ru
-
 PORTNAME=	libspice-server
 DISTVERSION=	0.15.0
 CATEGORIES=	devel
@@ -8,6 +6,7 @@ DISTNAME=	spice-${PORTVERSION}
 
 MAINTAINER=	portmaster@BSDforge.com
 COMMENT=	Implements the server side of the SPICE protocol
+WWW=		https://spice-space.org/
 
 LICENSE=	GPLv2
 
