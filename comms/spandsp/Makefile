@@ -1,11 +1,10 @@
-# Created by: wlloyd@slap.net
-
 PORTNAME=	spandsp
 DISTVERSION=	${SPANDSP_VERSION}.g20211014
 CATEGORIES=	comms
 
 MAINTAINER=	jailbird@fdf.net
 COMMENT=	DSP library and software FAX machine
+WWW=		https://www.soft-switch.org/
 
 LICENSE=	LGPL21
 
