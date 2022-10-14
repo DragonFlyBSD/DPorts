@@ -1,5 +1,3 @@
-# Created by: Martin Dieringer <martin.dieringer@gmx.de>
-
 PORTNAME=	mupdf
 DISTVERSION=	1.18.0
 DISTVERSIONSUFFIX=	-source
@@ -11,6 +9,7 @@ MASTER_SITES=	http://www.mupdf.com/downloads/ \
 
 MAINTAINER=	uzsolt@uzsolt.hu
 COMMENT=	Lightweight PDF viewer and toolkit
+WWW=		https://www.mupdf.com/
 
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
