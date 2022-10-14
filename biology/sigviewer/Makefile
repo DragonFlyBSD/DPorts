@@ -7,6 +7,7 @@ CATEGORIES=	biology
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Viewing application for biosignals
+WWW=		https://github.com/cbrnr/sigviewer
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -15,7 +16,7 @@ LIB_DEPENDS=	libbiosig.so:biology/biosig \
 		libxdf.so:misc/libxdf
 
 USES=		gl qmake qt:5
-USE_QT=		core gui widgets xml qmake_build buildtools_build
+USE_QT=		core gui widgets xml qmake:build buildtools:build
 USE_GL=		gl
 
 USE_GITHUB=	yes
