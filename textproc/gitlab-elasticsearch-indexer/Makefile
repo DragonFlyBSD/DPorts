@@ -1,13 +1,12 @@
-# Created by: Matthias Fechner <mfechner@FreeBSD.org>
-
 PORTNAME=	gitlab-elasticsearch-indexer
 PORTVERSION=	3.0.1
 DISTVERSIONPREFIX=	v
-PORTREVISION=	0
+PORTREVISION=	2
 CATEGORIES=	textproc
 
 MAINTAINER=	mfechner@FreeBSD.org
 COMMENT=	Elasticsearch indexer for GitLab
+WWW=		https://gitlab.com/gitlab-org/gitlab-elasticsearch-indexer
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
