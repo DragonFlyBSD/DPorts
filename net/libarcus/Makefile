@@ -1,12 +1,12 @@
 PORTNAME=	libArcus
-PORTVERSION=	4.12.1
-PORTREVISION=	3
+PORTVERSION=	4.13.1
 PORTEPOCH=	1
 CATEGORIES=	net cad
 DIST_SUBDIR=	Ultimaker
 
 MAINTAINER=	db@FreeBSD.org
 COMMENT=	Communication library between internal components for Ultimaker
+WWW=		https://github.com/Ultimaker/libArcus
 
 LICENSE=	LGPL3
 LICENSE_FILE=	${WRKSRC}/LICENSE
