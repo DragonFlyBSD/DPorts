@@ -1,5 +1,3 @@
-# Created by: Yuri Victorovich <yuri@rawbw.com>
-
 PORTNAME=	stk
 PORTVERSION=	4.6.2
 CATEGORIES=	audio
@@ -7,6 +5,7 @@ MASTER_SITES=	http://ccrma.stanford.edu/software/stk/release/
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Synthesis ToolKit in C++
+WWW=		https://ccrma.stanford.edu/software/stk
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
