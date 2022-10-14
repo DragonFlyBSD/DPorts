@@ -6,6 +6,7 @@ CATEGORIES=	games
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Free crossplatform 2D arcade-puzzle game
+WWW=		https://github.com/ArsMasiuk/bubble-chains
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -15,7 +16,7 @@ GH_ACCOUNT=	ArsMasiuk
 
 USES=		qmake qt:5 xorg
 USE_QT=		core gui widgets xml opengl multimedia x11extras \
-		qmake_build buildtools_build
+		qmake:build buildtools:build
 USE_XORG=	x11 xrandr
 
 QMAKE_ARGS=	DATADIR="${DATADIR}"
