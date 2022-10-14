@@ -1,12 +1,11 @@
-# Created by: Johannes Lundberg <johalun0@gmail.com>
-
 PORTNAME=	libepoll-shim
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.0.20210418
+DISTVERSION=	0.0.20220703
 CATEGORIES=	devel
 
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	Small epoll implementation using kqueue
+WWW=		https://github.com/jiixyj/epoll-shim
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
