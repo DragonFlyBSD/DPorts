@@ -1,5 +1,5 @@
 PORTNAME=	mariadb-connector-c
-PORTVERSION=	3.2.6
+PORTVERSION=	3.3.2
 CATEGORIES=	databases
 MASTER_SITES=	https://mirror.nodesdirect.com/${SITESDIR}/ \
 		https://mirror.one.com/${SITESDIR}/ \
@@ -16,11 +16,13 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-src
 
 MAINTAINER=	brnrd@FreeBSD.org
 COMMENT=	MariaDB database connector for C
+WWW=		https://www.mariadb.com/kb/en/mariadb/about-mariadb-connector-c/
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING.LIB
 
-LIB_DEPENDS=	libcurl.so:ftp/curl
+LIB_DEPENDS=	libcurl.so:ftp/curl \
+		libzstd.so:archivers/zstd
 
 CONFLICTS_INSTALL=	mariadb[0-9]*-client \
 			mariadb102-server \
