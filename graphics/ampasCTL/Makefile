@@ -1,5 +1,3 @@
-# Created by: nork@FreeBSD.org
-
 PORTNAME=	ampasCTL
 PORTVERSION=	1.5.2
 PORTREVISION=	16
@@ -7,6 +5,7 @@ CATEGORIES=	graphics devel
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Color Transformation Language interpreter
+WWW=		https://github.com/ampas/CTL
 
 LICENSE=	AMPAS
 LICENSE_NAME=	AMPAS
