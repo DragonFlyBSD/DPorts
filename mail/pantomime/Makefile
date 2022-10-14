@@ -1,5 +1,3 @@
-# Created by: Thomas Gellekum <tg@FreeBSD.org>
-
 PORTNAME=	pantomime
 PORTVERSION=	1.3.0
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	Pantomime-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Mail/MIME handling library for GNUstep
+WWW=		http://www.collaboration-world.com/cgi-bin/project/index.cgi?pid=3
 
 LICENSE=	LGPL21
 
