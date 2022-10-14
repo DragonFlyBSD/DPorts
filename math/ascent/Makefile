@@ -2,9 +2,11 @@ PORTNAME=	ascent
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.7.0
 CATEGORIES=	math
+PKGNAMESUFFIX=	-simulation-engine
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	C++ simulation engine and differential equation solver
+WWW=		https://github.com/AnyarInc/Ascent
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
