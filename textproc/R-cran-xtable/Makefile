@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	xtable
 DISTVERSION=	1.8-4
 PORTREVISION=	2
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Export tables to LaTeX or HTML
+WWW=		https://cran.r-project.org/web/packages/xtable/
 
 LICENSE=	GPLv2+
 
