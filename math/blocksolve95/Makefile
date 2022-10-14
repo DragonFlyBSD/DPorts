@@ -1,5 +1,3 @@
-# Created by: Thierry Thomas <thierry@pompo.net>
-
 PORTNAME=	blocksolve95
 PORTVERSION=	3.0
 PORTREVISION=	26
@@ -11,6 +9,7 @@ DIST_SUBDIR=	${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Software for the efficient solution of large, sparse linear systems
+WWW=		https://ftp.mcs.anl.gov/pub/BlockSolve95/
 
 LICENSE=	AS-IS
 LICENSE_NAME=	AS-IS
