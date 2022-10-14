@@ -1,9 +1,10 @@
 PORTNAME=	parallel-hashmap
-DISTVERSION=	1.35
+DISTVERSION=	1.36
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Set of excellent hash map implementations (a C++ header-only library)
+WWW=		https://github.com/greg7mdp/parallel-hashmap
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
