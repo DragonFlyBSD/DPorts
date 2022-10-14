@@ -1,11 +1,10 @@
-# Created by: "Waitman Gobble" <uzimac@da3m0n8t3r.com>
-
 PORTNAME=	libbson
 PORTVERSION=	1.8.1
 CATEGORIES=	devel
 
 MAINTAINER=	ports@bsdserwis.com
 COMMENT=	BSON utility library
+WWW=		https://github.com/mongodb/libbson
 
 LICENSE=	APACHE20
 
