@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	cma
 PORTVERSION=	3.2.2
 CATEGORIES=	math python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	CMA-ES for non-linear numerical optimization in Python
+WWW=		https://github.com/CMA-ES/pycma
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/cma/LICENSE
