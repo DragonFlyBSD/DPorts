@@ -1,5 +1,3 @@
-# Created by: Igor Pokrovsky <ip@doom.homeunix.org>
-
 PORTNAME=	fv
 PORTVERSION=	1.03
 PORTREVISION=	7
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-src-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Viewer of hdr/pfm images
+WWW=		http://www.eaflux.com/fv/
 
 LICENSE=	GPLv2+
 
