@@ -1,5 +1,3 @@
-# Created by: Koop Mast <kwm@FreeBSD.org>
-
 PORTNAME=	argyllcms
 PORTVERSION=	1.9.2
 PORTREVISION=	5
@@ -9,6 +7,7 @@ DISTNAME=	Argyll_V${PORTVERSION}_src
 
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	ICC compatible color management system
+WWW=		https://www.argyllcms.com/
 
 LICENSE=	AGPLv3
 
