@@ -1,14 +1,13 @@
-# Created by: Felix Palmen <felix@palmen-it.de>
-
 PORTNAME=	fvwm3
-PORTVERSION=	1.0.4
-PORTREVISION=	6
+DISTVERSION=	1.0.5
+PORTREVISION=	1
 CATEGORIES=	x11-wm
-MASTER_SITES=	https://github.com/fvwmorg/fvwm3/releases/download/${PORTVERSION}/ \
+MASTER_SITES=	https://github.com/fvwmorg/fvwm3/releases/download/${DISTVERSION}/ \
 		http://fvwm.sourceforge.net/generated/icon_download/:icons
 
-MAINTAINER=	felix@palmen-it.de
+MAINTAINER=	zirias@FreeBSD.org
 COMMENT=	F? Virtual Window Manager
+WWW=		https://www.fvwm.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -25,7 +24,7 @@ CONFLICTS_INSTALL=	fvwm
 CPE_VENDOR=	fvwm
 CPE_PRODUCT=	fvwm
 
-PLIST_SUB=	PORTVERSION=${PORTVERSION}
+PLIST_SUB=	DISTVERSION=${DISTVERSION}
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	ac_cv_path_PYTHON=${PYTHON_CMD}
@@ -41,7 +40,6 @@ FRIBIDI_CONFIGURE_ENABLE=	bidi
 GO_DESC=	Build and install modules written in Go
 GO_USES=	go:no_targets
 GO_CONFIGURE_ENABLE=	golang
-GO_MAKE_ARGS=	GOBUILD="go build -ldflags=\"-s -w\""
 
 FVWM_ICONS=	fvwm_icons-20070101
 ICONS_DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${FVWM_ICONS}.tar.bz2:icons
@@ -89,7 +87,7 @@ post-install-PERL-off:
 	${RM} ${STAGEDIR}${PREFIX}/bin/${script}
 .endfor
 .for script in FvwmConsoleC.pl FvwmPerl
-	${RM} ${STAGEDIR}${PREFIX}/libexec/fvwm3/${PORTVERSION}/${script}
+	${RM} ${STAGEDIR}${PREFIX}/libexec/fvwm3/${DISTVERSION}/${script}
 .endfor
 
 .include <bsd.port.mk>
