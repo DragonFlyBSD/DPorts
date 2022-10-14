@@ -1,5 +1,3 @@
-# Created by: Marc Fonvieille <blackend@FreeBSD.org>
-
 PORTNAME=	figurine
 PORTVERSION=	1.0.5
 PORTREVISION=	5
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Drawing program for X11
+WWW=		http://figurine.sourceforge.net/
 
 LICENSE=	GPLv2
 
