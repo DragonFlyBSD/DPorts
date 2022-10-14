@@ -1,5 +1,3 @@
-# Created by: Patrick MARIE <mycroft@virgaria.org>
-
 PORTNAME=	proxychains
 PORTVERSION=	3.1
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/version%20${PORTVERSION}
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Redirect connection through proxy servers
+WWW=		http://proxychains.sourceforge.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
