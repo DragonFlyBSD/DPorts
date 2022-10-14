@@ -1,5 +1,3 @@
-# Created by: ptiJo
-
 PORTNAME=	xfe
 PORTVERSION=	1.44
 CATEGORIES=	x11-fm
@@ -7,6 +5,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Fast MS-Explorer like file manager for X
+WWW=		http://roland65.free.fr/xfe/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
