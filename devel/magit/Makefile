@@ -1,14 +1,13 @@
-# Created by: Jun Kuriyama <kuriyama@FreeBSD.org>
-
 PORTNAME=	magit
 DISTVERSIONPREFIX=	v
 DISTVERSION=	3.3.0
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	devel elisp
 PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
 
 MAINTAINER=	yasu@FreeBSD.org
 COMMENT=	Interface to Git for Emacs
+WWW=		https://magit.vc/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE
