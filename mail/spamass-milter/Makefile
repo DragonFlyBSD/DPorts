@@ -1,5 +1,3 @@
-# Created by: Eugene M. Kim <ab@astralblue.net>
-
 PORTNAME=	spamass-milter
 PORTVERSION=	0.4.0
 PORTREVISION=	4
@@ -8,6 +6,7 @@ MASTER_SITES=	SAVANNAH/spamass-milt
 
 MAINTAINER=	bmah@FreeBSD.org
 COMMENT=	Sendmail Milter (mail filter) plugin for SpamAssassin
+WWW=		https://savannah.nongnu.org/projects/spamass-milt/
 
 BUILD_DEPENDS=	spamc:mail/spamassassin
 RUN_DEPENDS:=	${BUILD_DEPENDS}
