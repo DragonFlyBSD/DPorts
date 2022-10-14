@@ -1,14 +1,13 @@
-# Created by: trevor
-
 PORTNAME=	streamripper
 PORTVERSION=	1.64.6
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	audio
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}%20%28current%29/${PORTVERSION}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	freebsdports@xorcara.com
 COMMENT=	Splits SHOUTcast stream into tracks
+WWW=		http://streamripper.sourceforge.net
 
 LICENSE=	GPLv2
 
