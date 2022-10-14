@@ -1,11 +1,10 @@
-# Created by: Kevin Bowling <kbowling@freebsd.org>
-
 PORTNAME=	timescaledb
-PORTVERSION=	2.7.0
+PORTVERSION=	2.8.0
 CATEGORIES=	databases
 
 MAINTAINER=	kbowling@FreeBSD.org
 COMMENT=	Time-series database built on PostgreSQL
+WWW=		https://www.timescale.com/
 
 LICENSE=		APACHE20 TSL
 LICENSE_COMB=		multi
