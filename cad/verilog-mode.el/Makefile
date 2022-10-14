@@ -1,8 +1,6 @@
-# Created by: stas
-
 PORTNAME=	verilog-mode.el
 PORTVERSION=	801
-PORTREVISION=	13
+PORTREVISION=	14
 CATEGORIES=	cad elisp
 MASTER_SITES=	http://www.veripool.org/ftp/
 PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
@@ -11,6 +9,7 @@ EXTRACT_SUFX=	.gz
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Emacs lisp modules for the Verilog language
+WWW=		https://www.veripool.org/wiki/verilog-mode
 
 LICENSE=	GPLv3+
 
