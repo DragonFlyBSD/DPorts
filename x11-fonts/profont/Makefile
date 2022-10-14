@@ -1,5 +1,3 @@
-# Created by: Manuel Giraud <manuel.giraud@gmail.com>
-
 PORTNAME=	profont
 PORTVERSION=	400
 PORTREVISION=	5
@@ -10,6 +8,7 @@ DISTNAME=	${PORTNAME}-x11
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Ultimate programming font
+WWW=		https://tobiasjung.name/profont/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
