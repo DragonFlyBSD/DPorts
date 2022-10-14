@@ -1,10 +1,11 @@
 PORTNAME=	jest
 DISTVERSION=	3.0.16
-PORTREVISION=	3
+PORTREVISION=	7
 CATEGORIES=	sysutils
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	ReST api for creating and managing FreeBSD jails written in Go
+WWW=		https://github.com/tabrarg/jest
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
