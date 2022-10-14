@@ -1,7 +1,5 @@
-# Created by: Alex Dupre <ale@FreeBSD.org>
-
 PORTNAME=	tomcat
-DISTVERSION=	10.1.0-M17
+DISTVERSION=	10.1.0
 CATEGORIES=	www java
 MASTER_SITES=	APACHE/${PORTNAME}/${PORTNAME}-${DISTVERSION:C/([0-9]+)(.*)/\1/}/v${DISTVERSION}/bin
 PKGNAMESUFFIX=	-devel
@@ -9,6 +7,7 @@ DISTNAME=	apache-${PORTNAME}-${DISTVERSION}
 
 MAINTAINER=	vvd@unislabs.com
 COMMENT=	Open-source Java web server by Apache, 10.1.x branch
+WWW=		https://tomcat.apache.org/
 
 LICENSE=	APACHE20
 
@@ -39,7 +38,7 @@ HOST_MANAGER_DESC=	Install Host Manager application
 MANAGER_DESC=		Install Manager web application
 ROOT_DESC=		Install default ROOT web application
 
-TOMCAT_SUBDIR?=	${DISTNAME:R}
+TOMCAT_SUBDIR?=	${DISTNAME:R}${PKGNAMESUFFIX}
 TOMCAT_HOME=	${PREFIX}/${TOMCAT_SUBDIR}
 
 post-patch:
