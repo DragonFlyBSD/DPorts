@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	soundtouch
 DISTVERSION=	2.3.1
 CATEGORIES=	audio
@@ -7,6 +5,7 @@ MASTER_SITES=	https://www.surina.net/${PORTNAME}/
 
 MAINTAINER=	crees@FreeBSD.org
 COMMENT=	Open-source audio processing library
+WWW=		https://www.surina.net/soundtouch/
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING.TXT
