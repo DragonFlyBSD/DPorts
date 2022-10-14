@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	glyphtools
 PORTVERSION=	0.8.0
 CATEGORIES=	print python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Routines for extracting information from fontTools glyphs
+WWW=		https://github.com/simoncozens/glyphtools
 
 LICENSE=	APACHE20
 
