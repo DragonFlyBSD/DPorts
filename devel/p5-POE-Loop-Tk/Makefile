@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	POE-Loop-Tk
 PORTVERSION=	1.305
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Bridge that allows POE to be driven by Tk
+WWW=		https://metacpan.org/release/POE-Loop-Tk
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
