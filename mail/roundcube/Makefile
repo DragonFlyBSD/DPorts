@@ -1,5 +1,5 @@
 PORTNAME=	roundcube
-DISTVERSION=	1.5.3
+DISTVERSION=	1.6.0
 PORTEPOCH=	1
 CATEGORIES?=	mail www
 MASTER_SITES=	https://github.com/roundcube/roundcubemail/releases/download/${DISTVERSION}/
@@ -8,6 +8,7 @@ DISTNAME=	${PORTNAME}mail-${DISTVERSION}-complete
 
 MAINTAINER=	ale@FreeBSD.org
 COMMENT=	Fully skinnable XHTML/CSS webmail written in PHP
+WWW=		https://roundcube.net/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -26,7 +27,7 @@ CPE_PRODUCT=	webmail
 CPE_VENDOR=	roundcube
 
 USE_PHP=	pcre mbstring session iconv dom xml json intl zip filter openssl fileinfo exif ctype
-IGNORE_WITH_PHP=81 82
+IGNORE_WITH_PHP=82
 
 OPTIONS_DEFINE=	LDAP GD PSPELL NSC DOCS EXAMPLES
 OPTIONS_MULTI=	DB
@@ -55,8 +56,6 @@ SUB_FILES=	newsyslog.conf
 
 post-patch:
 	@${FIND} ${WRKSRC} -name \*.orig -type f -delete
-	@${RMDIR} ${WRKSRC}/plugins/archive/skins/larry
-
 do-install:
 	-${MKDIR} ${STAGEDIR}${WWWDIR}
 	@cd ${WRKSRC} && ${COPYTREE_BIN} bin ${STAGEDIR}${WWWDIR}
