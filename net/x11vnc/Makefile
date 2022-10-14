@@ -1,5 +1,3 @@
-# Created by: Loren M. Lang
-
 PORTNAME=	x11vnc
 PORTVERSION=	0.9.16
 PORTREVISION=	2
@@ -7,6 +5,7 @@ CATEGORIES=	net
 
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	VNC server for use with real X displays
+WWW=		https://github.com/LibVNC/x11vnc
 
 LICENSE=	GPLv2
 
