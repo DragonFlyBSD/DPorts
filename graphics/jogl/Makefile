@@ -1,5 +1,3 @@
-# Created by: Peter Jeremy <peterjeremy@optushome.com.au>
-
 PORTNAME=	jogl
 PORTVERSION=	1.1.1
 PORTREVISION=	9
@@ -9,6 +7,7 @@ EXTRACT_SUFX=	-src.zip
 
 MAINTAINER=	peterj@FreeBSD.org
 COMMENT=	Java bindings for OpenGL
+WWW=		https://jogl.dev.java.net/
 
 LIB_DEPENDS=	libdrm.so:graphics/libdrm
 BUILD_DEPENDS=	${JAVALIBDIR}/antlr.jar:devel/antlr
