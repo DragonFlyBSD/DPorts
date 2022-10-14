@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	magrittr
 PORTVERSION=	2.0.3
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Forward-Pipe Operator for R
+WWW=		http://cran.r-project.org/web/magrittr/
 
 LICENSE=	MIT
 
