@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	png
 DISTVERSION=	0.1-7
 PORTREVISION=	8
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Read and write PNG images
+WWW=		https://www.rforge.net/png/
 
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual
