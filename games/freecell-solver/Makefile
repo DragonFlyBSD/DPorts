@@ -1,5 +1,3 @@
-# Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-
 PORTNAME=	freecell-solver
 PORTVERSION=	6.2.0
 CATEGORIES=	games
@@ -7,6 +5,7 @@ MASTER_SITES=	http://fc-solve.shlomifish.org/downloads/fc-solve/
 
 MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	Open source framework for solving Freecell
+WWW=		https://fc-solve.shlomifish.org/
 
 LICENSE=	MIT
 
