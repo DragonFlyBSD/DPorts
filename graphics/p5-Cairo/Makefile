@@ -1,5 +1,3 @@
-# Created by: Michael Johnson <ahze@FreeBSD.org>
-
 PORTNAME=	Cairo
 PORTVERSION=	1.109
 CATEGORIES=	graphics perl5
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl bindings to the cairo graphics library
+WWW=		http://gtk2-perl.sourceforge.net/
 
 LICENSE=	LGPL21
 
