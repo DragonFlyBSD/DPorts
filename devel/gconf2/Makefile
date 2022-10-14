@@ -1,6 +1,3 @@
-# Created by: Ade Lovett <ade@FreeBSD.org>
-#   $MCom: ports/trunk/devel/gconf2/Makefile 20031 2014-11-02 21:47:55Z kwm $
-
 PORTNAME=	gconf2
 PORTVERSION=	3.2.6
 PORTREVISION=	9
@@ -11,6 +8,7 @@ DIST_SUBDIR=	gnome2
 
 MAINTAINER=	desktop@FreeBSD.org
 COMMENT=	Configuration database system for GNOME
+WWW=		https://www.gnome.org/projects/gconf/
 
 LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING
