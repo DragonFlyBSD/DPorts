@@ -1,6 +1,6 @@
 PORTNAME=	sonarqube
-DISTVERSION=	9.5.0.56709
-PORTREVISION=	1
+DISTVERSION=	9.6.1.59531
+PORTREVISION=	2
 CATEGORIES=	devel security www java
 MASTER_SITES=	https://binaries.sonarsource.com/Distribution/sonarqube/:m_core \
 		https://binaries.sonarsource.com/Distribution/sonar-csharp-plugin/:m_csharp \
@@ -21,6 +21,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	netchild@FreeBSD.org
 COMMENT=	Web-based continuous code inspection tool
+WWW=		https://www.sonarqube.org/
 
 LICENSE=	LGPL3
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -51,11 +52,11 @@ DBBASE_DIR=	/var/db/${PORTNAME}
 DATA_DIR=	${DBBASE_DIR}/data
 TEMP_DIR=	${DBBASE_DIR}/temp
 
-SONARCSHARP_VER=	8.40.0.48530
-SONARJAVA_VER=		7.12.1.29810
-SONARJAVASCRIPT_VER=	9.4.0.18205
-SONARPHP_VER=		3.23.1.8766
-SONARPYTHON_VER=	3.15.1.9817
+SONARCSHARP_VER=	8.45.0.54064
+SONARJAVA_VER=		7.13.0.29990
+SONARJAVASCRIPT_VER=	9.8.0.19239
+SONARPHP_VER=		3.25.0.9077
+SONARPYTHON_VER=	3.17.0.10029
 SONARVBNET_VER=		${SONARCSHARP_VER}
 
 USERS=		sonarqube
