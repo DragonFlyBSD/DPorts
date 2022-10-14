@@ -1,5 +1,3 @@
-# Created by: Erik Cederstrand <erich@FreeBSD.org>
-
 PORTNAME=	xmmix
 PORTVERSION=	1.2.2
 PORTREVISION=	5
@@ -9,6 +7,7 @@ MASTER_SITES=	http://ftp.twaren.net/BSD/OpenBSD/distfiles/ \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Motif-based audio mixer
+WWW=		https://www.ibiblio.org/tkan/xmmix/
 
 WRKSRC=		${WRKDIR}/xmmix-1.2
 
