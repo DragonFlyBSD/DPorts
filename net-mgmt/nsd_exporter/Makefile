@@ -1,12 +1,11 @@
-# Created by: Ryan Steinmetz <zi@FreeBSD.org>
-
 PORTNAME=	nsd_exporter
 PORTVERSION=	0.1.0
-PORTREVISION=	5
+PORTREVISION=	9
 CATEGORIES=	net-mgmt
 
 MAINTAINER=	zi@FreeBSD.org
 COMMENT=	Prometheus exporter for nsd metrics
+WWW=		https://github.com/optix2000/nsd_exporter
 
 LICENSE=	BSD3CLAUSE
 
