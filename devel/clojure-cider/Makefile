@@ -1,11 +1,13 @@
 PORTNAME=	clojure-cider
-PORTVERSION=	1.4.1
+PORTVERSION=	1.5.0
+PORTREVISION=	1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	devel elisp
 PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Clojure IDE and REPL for Emacs
+WWW=		https://github.com/clojure-emacs/cider
 
 LICENSE=	GPLv3+
 
