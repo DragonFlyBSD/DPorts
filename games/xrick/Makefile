@@ -1,5 +1,3 @@
-# Created by: David Siebörger <drs@rucus.ru.ac.za>
-
 PORTNAME=	xrick
 PORTVERSION=	021212
 PORTREVISION=	10
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.bigorno.net/xrick/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Clone of Rick Dangerous
+WWW=		https://www.bigorno.net/xrick/
 
 # Converted from RESTRICTED
 LICENSE=	xrick
