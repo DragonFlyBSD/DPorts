@@ -1,5 +1,3 @@
-# Created by: Ernst de Haan <znerd@FreeBSD.org>
-
 PORTNAME=	xincluder
 PORTVERSION=	1.0.d11
 PORTREVISION=	6
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-1.0d11
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Java-based XInclude processors
+WWW=		http://xincluder.sourceforge.net/
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/lgpl.txt
