@@ -1,5 +1,3 @@
-# Created by: Matthew N. Dodd <mdodd@FreeBSD.org>
-
 PORTNAME=		spamprobe
 PORTVERSION=	1.4d
 PORTREVISION=	19
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Spam detector using Bayesian analysis of word counts
+WWW=		http://spamprobe.sourceforge.net/
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-default-8bit
