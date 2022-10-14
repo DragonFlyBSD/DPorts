@@ -1,5 +1,3 @@
-# Created by: gahr
-
 PORTNAME=	taskwarrior
 PORTVERSION=	2.6.2
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	deskutils
 
 MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	Feature-rich command-line todo list manager
+WWW=		https://taskwarrior.org/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
