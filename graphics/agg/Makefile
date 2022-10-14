@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	agg
 PORTVERSION=	2.5
 PORTREVISION=	11
@@ -10,6 +8,7 @@ MASTER_SITES=	http://distfiles.alpinelinux.org/distfiles/ \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	High Quality Rendering Engine for C++
+WWW=		http://www.antigrain.com/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/copying
