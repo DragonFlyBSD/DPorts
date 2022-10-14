@@ -1,5 +1,3 @@
-# Created by: markand
-
 PORTNAME=	viruskiller
 PORTVERSION=	1.03
 DISTVERSIONSUFFIX=	-1
@@ -9,6 +7,7 @@ MASTER_SITES=	FRUGALWARE/games-extra/${PORTNAME}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Arcade game that relies on quick reflexes
+WWW=		http://www.parallelrealities.co.uk/projects/virusKiller.php
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/doc/LICENSE
