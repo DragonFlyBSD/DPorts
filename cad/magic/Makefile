@@ -1,12 +1,11 @@
-# Created by: swallace
-
 PORTNAME=	magic
-DISTVERSION=	8.3.245
+DISTVERSION=	8.3.315
 CATEGORIES=	cad
 MASTER_SITES=	http://opencircuitdesign.com/magic/archive/
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Interactive editor for VLSI layouts
+WWW=		http://opencircuitdesign.com/magic/
 
 LICENSE=	MIT
 LICENSE_FILE=	${FILESDIR}/license.txt
@@ -35,6 +34,8 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 DESKTOP_ENTRIES="Magic" "" "" "${PORTNAME}" "" ""
 
 PORTSCOUT=	limit:^8\.
+
+BINARY_ALIAS=	python3=${PYTHON_CMD} # this is needed, see https://github.com/RTimothyEdwards/magic/issues/173#issuecomment-1200065429
 
 post-patch:
 	@${REINPLACE_CMD} -e \
