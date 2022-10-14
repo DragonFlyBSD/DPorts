@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	rngtools
 PORTVERSION=	1.5.2
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Utility functions for working with Random Number Generators
+WWW=		https://cran.r-project.org/web/packages/rngtools/
 
 LICENSE=	GPLv3
 
