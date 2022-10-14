@@ -1,5 +1,3 @@
-# Created by: Joe Clarke <marcus@marcuscom.com>
-
 PORTNAME=	confregdecode
 PORTVERSION=	1.2.1
 PORTREVISION=	3
@@ -9,6 +7,7 @@ DISTNAME=	confregdecode-src-${PORTVERSION}
 
 MAINTAINER=	marcus@FreeBSD.org
 COMMENT=	Cisco Systems IOS(tm) configuration register decoder
+WWW=		http://cosi-nms.sourceforge.net/
 
 USE_JAVA=	yes
 ALL_TARGET=	jar
