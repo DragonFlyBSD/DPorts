@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	etm
 DISTVERSION=	1.1.1
 CATEGORIES=	science
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Empirical Transition Matrix
+WWW=		https://cran.r-project.org/web/packages/etm/
 
 LICENSE=	MIT
 
