@@ -1,5 +1,3 @@
-# Created by: Renaud Chaput <renchap@cocoa-x.com>
-
 PORTNAME=	ohai
 PORTVERSION=	16.17.0
 CATEGORIES=	sysutils rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Ohai profiles your system and emits JSON
+WWW=		https://github.com/chef/ohai
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
