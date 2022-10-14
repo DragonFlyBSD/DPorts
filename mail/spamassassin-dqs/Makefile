@@ -1,5 +1,3 @@
-# Created by: Larry Rosenman <ler@FreeBSD.org>
-
 PORTNAME=		spamassassin-dqs
 DISTVERSIONPREFIX=	v
 DISTVERSION=		1.2.2
@@ -7,6 +5,7 @@ CATEGORIES=		mail
 
 MAINTAINER=	ler@FreeBSD.org
 COMMENT=	Real-Time DNSBL's that catch a bunch of additional spam
+WWW=		https://github.com/spamhaus/spamassassin-dqs/
 
 LICENSE=	APACHE20
 
