@@ -1,10 +1,10 @@
 PORTNAME=	sqlitecpp
-DISTVERSION=	3.1.1-28
-DISTVERSIONSUFFIX=	-g0c46d86
+DISTVERSION=	3.2.0
 CATEGORIES=	databases devel
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	SQLiteC++: Easy to use C++ SQLite3 wrapper
+WWW=		https://github.com/SRombauts/SQLiteCpp
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
