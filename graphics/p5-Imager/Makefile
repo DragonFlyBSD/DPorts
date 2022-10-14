@@ -1,13 +1,12 @@
-# Created by: ijliao
-
 PORTNAME=	Imager
-PORTVERSION=	1.018
+PORTVERSION=	1.019
 CATEGORIES=	graphics perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module for manipulating gray, color, and rgba format images
+WWW=		https://metacpan.org/release/Imager
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
