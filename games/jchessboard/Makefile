@@ -1,5 +1,3 @@
-# Created by: Alejandro Pulver <alejandro@varnet.biz>
-
 PORTNAME=	jchessboard
 PORTVERSION=	1.5
 PORTREVISION=	4
@@ -9,6 +7,7 @@ DISTNAME=	JChessBoard-${PORTVERSION}
 
 MAINTAINER=	jgh@FreeBSD.org
 COMMENT=	Chess game and PGN viewer/editor written in Java
+WWW=		http://jchessboard.sourceforge.net/
 
 LICENSE=	GPLv2
 
