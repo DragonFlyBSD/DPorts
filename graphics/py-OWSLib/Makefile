@@ -1,11 +1,12 @@
 PORTNAME=	OWSLib
-PORTVERSION=	0.25.0
+PORTVERSION=	0.27.2
 CATEGORIES=	graphics geography python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	lbartoletti@FreeBSD.org
 COMMENT=	Client programming with OGC web service (hence OWS)
+WWW=		https://pypi.org/project/OWSLib/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -16,7 +17,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}six>0:devel/py-six@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pytz>0:devel/py-pytz@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}requests>=1.0:www/py-requests@${PY_FLAVOR}
 
-USES=		python:3.7+ cpe
+USES=		cpe python:3.8+
 USE_PYTHON=	autoplist distutils
 
 CPE_VENDOR=	osgeo
