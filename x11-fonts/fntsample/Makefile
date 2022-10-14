@@ -1,5 +1,3 @@
-# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-
 PORTNAME=	fntsample
 PORTVERSION=	5.4
 PORTREVISION=	1
@@ -11,6 +9,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Show Unicode coverage of a font
+WWW=		https://github.com/eugmes/fntsample
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
