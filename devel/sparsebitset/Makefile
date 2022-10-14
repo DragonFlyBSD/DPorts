@@ -1,5 +1,3 @@
-# Created by: Thierry Thomas <thierry@pompo.net>
-
 PORTNAME=	SparseBitSet
 PORTVERSION=	1.2
 CATEGORIES=	devel java
@@ -9,6 +7,7 @@ EXTRACT_ONLY=
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Efficient sparse bitset implementation for Java
+WWW=		https://github.com/brettwooldridge/SparseBitSet
 
 LICENSE=	APACHE20
 
