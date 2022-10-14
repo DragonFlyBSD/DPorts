@@ -1,5 +1,3 @@
-# Created by: <intron@intron.ac>
-
 PORTNAME=	fandol
 PORTVERSION=	0.3
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	CTAN Fandol: Four GNU GPLv3-licensed Chinese OpenType fonts
+WWW=		https://ctan.org/pkg/fandol
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/fandol/COPYING
