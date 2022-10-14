@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	GraphViz2-Data-Grapher
 PORTVERSION=	2.51
 CATEGORIES=	graphics perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Visualize a data structure as a graph
+WWW=		https://metacpan.org/release/GraphViz2-Data-Grapher
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
