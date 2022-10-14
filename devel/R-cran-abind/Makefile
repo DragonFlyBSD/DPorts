@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	abind
 DISTVERSION=	1.4-5
 PORTREVISION=	3
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Combine Multidimensional Arrays
+WWW=		https://cran.r-project.org/web/packages/abind/
 
 LICENSE=	LGPL20+
 
