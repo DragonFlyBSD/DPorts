@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	gensen
 PORTVERSION=	1.501
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	x11-fonts
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Free Rounded font family derived from Adobe Source Han Sans
+WWW=		https://github.com/ButTaiwan/gensen-font
 
 LICENSE=	OFL11
 LICENSE_FILE=	${WRKSRC}/SIL_Open_Font_License_1.1.txt
