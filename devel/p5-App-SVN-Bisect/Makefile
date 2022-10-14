@@ -1,5 +1,3 @@
-# Created by: Rui Paulo <rpaulo@FreeBSD.org>
-
 PORTNAME=	App-SVN-Bisect
 PORTVERSION=	1.1
 PORTREVISION=	3
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Binary search through svn revisions
+WWW=		https://metacpan.org/release/App-SVN-Bisect
 
 LICENSE=	ART20
 LICENSE_FILE=	${WRKSRC}/LICENSE
