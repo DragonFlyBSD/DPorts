@@ -1,5 +1,3 @@
-# Created by: Matthew X. Economou <xenophon+fbsdports@irtnog.org>
-
 PORTNAME=	easy-thumbnails
 PORTVERSION=	2.8.1
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}django-
 
 MAINTAINER=	xenophon+fbsdports@irtnog.org
 COMMENT=	Easy thumbnails for Django
+WWW=		https://pypi.org/project/easy-thumbnails/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
