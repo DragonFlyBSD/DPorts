@@ -1,5 +1,3 @@
-# Created by: TOMIDA, Hiroaki <t.hiroaki.209 at gmail.com>
-
 PORTNAME=	taglib
 PORTVERSION=	1.1
 PORTREVISION=	1
@@ -11,6 +9,7 @@ DIST_SUBDIR=	ruby
 
 MAINTAINER=	t.hiroaki.209@gmail.com
 COMMENT=	Ruby library wrapping the Taglib library
+WWW=		https://www.hakubi.us/ruby-taglib/
 
 LICENSE=	MIT
 
