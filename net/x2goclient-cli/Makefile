@@ -1,5 +1,3 @@
-# Created by: arved
-
 PORTNAME=	x2goclient-cli
 DISTVERSION=	3.0.1-1.2
 PORTREVISION=	4
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	nc@FreeBSD.org
 COMMENT=	The x2go perl client
+WWW=		https://www.x2go.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
