@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	GraphViz-Data-Structure
 PORTVERSION=	0.20
 CATEGORIES=	graphics perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Visualise data structures
+WWW=		https://metacpan.org/release/GraphViz-Data-Structure
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
