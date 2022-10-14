@@ -1,5 +1,3 @@
-# Created by: Pedro Giffuni
-
 PORTNAME=	nortest
 DISTVERSION=	1.0-4
 PORTREVISION=	4
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tests for Normality
+WWW=		https://cran.r-project.org/web/packages/nortest/
 
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual
