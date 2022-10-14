@@ -1,11 +1,10 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	leveldb
 PORTVERSION=	1.23
 CATEGORIES=	databases
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Fast and lightweight key/value database library by Google
+WWW=		https://github.com/google/leveldb
 
 LICENSE=	BSD3CLAUSE
 
