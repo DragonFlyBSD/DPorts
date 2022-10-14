@@ -1,5 +1,3 @@
-# Created by: Yuan-Chung Hsiao <ychsiao@ychsiao.org>
-
 PORTNAME=	SVN-Log
 PORTVERSION=	0.03
 PORTREVISION=	6
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	ychsiao@ychsiao.org
 COMMENT=	Extract change logs from Subversion server
+WWW=		https://metacpan.org/release/SVN-Log
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
