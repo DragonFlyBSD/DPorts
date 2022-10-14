@@ -1,5 +1,3 @@
-# Created by: Yuri Victorovich <yuri@rawbw.com>
-
 PORTNAME=	emptyepsilon
 DISTVERSIONPREFIX=	EE-
 DISTVERSION=	2021.06.23
@@ -7,6 +5,7 @@ CATEGORIES=	games
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Spaceship bridge simulator game
+WWW=		https://daid.github.io/EmptyEpsilon/
 
 LICENSE=					GPLv2 AngryFly-Royalty-Free-License
 LICENSE_COMB=					multi
