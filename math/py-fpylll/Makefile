@@ -1,12 +1,12 @@
-# Created by: thierry@pompo.net
-
 PORTNAME=	fpylll
-PORTVERSION=	0.5.6
+PORTVERSION=	0.5.7
+PORTREVISION=	1
 CATEGORIES=	math python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Python interface for fplll
+WWW=		https://github.com/fplll/fpylll
 
 LICENSE=	GPLv2
 
