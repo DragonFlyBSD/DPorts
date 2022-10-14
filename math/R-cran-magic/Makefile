@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	magic
 DISTVERSION=	1.6-0
 CATEGORIES=	math
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Create and Investigate Magic Squares
+WWW=		https://cran.r-project.org/web/packages/magic/
 
 LICENSE=	GPLv2
 
