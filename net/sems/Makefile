@@ -1,5 +1,3 @@
-# Created by: Nathan Whitehon <nwhitehorn@freebsd.org>
-
 PORTNAME=	sems
 DISTVERSION=	${SEMS_VERSION}.g20200510
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	net
 
 MAINTAINER=	nwhitehorn@FreeBSD.org
 COMMENT=	SIP Express Media Server
+WWW=		https://github.com/sems-server
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/doc/COPYING
