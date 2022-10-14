@@ -1,11 +1,12 @@
 PORTNAME=	kotlin
-PORTVERSION=	1.6.10
+PORTVERSION=	1.7.10
 CATEGORIES=	lang java
 MASTER_SITES=	https://github.com/JetBrains/kotlin/releases/download/v${PORTVERSION}/
 DISTNAME=	kotlin-compiler-${PORTVERSION}
 
 MAINTAINER=	mizhka@FreeBSD.org
 COMMENT=	Kotlin Programming Language
+WWW=		https://kotlinlang.org/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/license/LICENSE.txt
