@@ -1,5 +1,3 @@
-# Created by: Dave Glowacki <dglo@ssec.wisc.edu>
-
 PORTNAME=	jakarta-oro
 PORTVERSION=	2.0.8
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	http://archive.apache.org/dist/jakarta/oro/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Perl/awk/sh regular expressions for Java
+WWW=		https://jakarta.apache.org/oro/
 
 LICENSE=	APACHE20
 
