@@ -1,5 +1,3 @@
-# Created by: rfarmer@predatorlabs.net
-
 PORTNAME=	jeuclid
 PORTVERSION=	3.1.9
 CATEGORIES=	math java
@@ -8,6 +6,7 @@ EXTRACT_SUFX=	-distribution.zip
 
 MAINTAINER=	makc@FreeBSD.org
 COMMENT=	Java based MathML rendering solution
+WWW=		http://jeuclid.sourceforge.net/
 
 USES=		zip
 USE_JAVA=	yes
