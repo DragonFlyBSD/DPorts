@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	RgoogleMaps
 PORTVERSION=	1.4.5.3
 PORTREVISION=	1
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Overlays on Google map tiles in R
+WWW=		https://cran.r-project.org/web/packages/RgoogleMaps/
 
 LICENSE=	GPLv2+
 
