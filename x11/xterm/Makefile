@@ -1,7 +1,5 @@
-# Created by: krion
-
 PORTNAME=	xterm
-PORTVERSION=	372
+PORTVERSION=	373
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.invisible-island.net/xterm/:src1 \
 		https://invisible-mirror.net/archives/xterm/:src1 \
@@ -12,6 +10,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}:src1 \
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Terminal emulator for the X Window System
+WWW=		https://invisible-island.net/xterm/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
