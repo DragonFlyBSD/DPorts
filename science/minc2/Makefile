@@ -1,15 +1,14 @@
-# Created by: jbacon
-
 PORTNAME=	minc
 PORTVERSION=	2.2.00
 DISTVERSIONPREFIX=	release-
-PORTREVISION=	11
+PORTREVISION=	12
 PORTEPOCH=	1
 CATEGORIES=	science biology
 PKGNAMESUFFIX=	2
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Medical Imaging NetCDF
+WWW=		https://www.bic.mni.mcgill.ca/ServicesSoftware/MINC
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
