@@ -1,5 +1,3 @@
-# Created by: Andrey Zakhvatov
-
 PORTNAME=	knightcap
 PORTVERSION=	3.6
 PORTREVISION=	9
@@ -10,6 +8,7 @@ DISTNAME=	KnightCap-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Chess program with 3D interface for X Window System
+WWW=		https://samba.anu.edu.au/KnightCap/
 
 WRKSRC=		${WRKDIR}/Export
 
