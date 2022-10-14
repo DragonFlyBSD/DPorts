@@ -1,5 +1,3 @@
-# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-
 PORTNAME=	jedit
 PORTVERSION=	5.6.0
 PORTEPOCH=	1
@@ -10,6 +8,7 @@ EXTRACT_SUFX=	.jar
 
 MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	Powerful programmer's text editor written in Java
+WWW=		http://jedit.sourceforge.net/
 
 LICENSE=	GPLv2
 
