@@ -1,5 +1,3 @@
-# Created by: Douglas K. Rand (rand@meridian-enviro.com)
-
 PORTNAME=	NetCDF
 PORTVERSION=	1.2.4
 PORTREVISION=	8
@@ -10,6 +8,7 @@ DISTNAME=	netcdf-perl-${PORTVERSION}
 
 MAINTAINER=	rand@meridian-enviro.com
 COMMENT=	Perl5 module to read and write netCDF files
+WWW=		http://www.unidata.ucar.edu/packages/netcdf-perl/
 
 LIB_DEPENDS=	libnetcdf.so:science/netcdf
 
