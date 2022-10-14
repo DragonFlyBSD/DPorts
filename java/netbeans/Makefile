@@ -1,5 +1,3 @@
-# Created by: olgeni@FreeBSD.org
-
 PORTNAME=	netbeans
 DISTVERSION=	12.6
 CATEGORIES=	java devel
@@ -8,6 +6,7 @@ DISTNAME=	netbeans-${DISTVERSION}-bin
 
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	Modular, standards-based integrated development environment
+WWW=		https://netbeans.apache.org/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
