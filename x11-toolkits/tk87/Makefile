@@ -1,5 +1,3 @@
-# Created by: Martin Matuska <mm@FreeBSD.org>
-
 PORTNAME=	tk
 DISTVERSION=	${TK_VERSION}${TK_RC}
 CATEGORIES=	x11-toolkits
@@ -10,6 +8,7 @@ DISTNAME=	${PORTNAME}${DISTVERSION}-src
 
 MAINTAINER=	tcltk@FreeBSD.org
 COMMENT=	Graphical toolkit for Tcl
+WWW=		https://www.tcl.tk/
 
 LICENSE=	TclTk
 LICENSE_NAME=	Tcl/Tk License
