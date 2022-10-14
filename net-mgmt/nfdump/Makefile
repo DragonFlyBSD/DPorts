@@ -1,5 +1,3 @@
-# Created by: Janos.Mohacsi@bsd.hu
-
 PORTNAME=	nfdump
 PORTVERSION=	1.6.20
 PORTREVISION=	1
@@ -8,6 +6,7 @@ CATEGORIES=	net-mgmt
 
 MAINTAINER=	pi@FreeBSD.org
 COMMENT=	Command-line tools to collect and process NetFlow data
+WWW=		https://github.com/phaag/nfdump
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/BSD-license.txt
