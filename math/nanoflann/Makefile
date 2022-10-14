@@ -1,10 +1,11 @@
 PORTNAME=	nanoflann
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.4.2
+DISTVERSION=	1.4.3
 CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Header-only library for Nearest Neighbor (NN) search with KD-trees
+WWW=		https://github.com/jlblancoc/nanoflann
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING
