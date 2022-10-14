@@ -1,5 +1,3 @@
-# Created by: mi
-
 PORTNAME=	hdf
 PORTVERSION=	4.2.15
 PORTREVISION=	1
@@ -10,6 +8,7 @@ MASTER_SITES=	http://www.hdfgroup.org/ftp/HDF/releases/HDF${PORTVERSION}/src/ \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Hierarchical Data Format library (from NCSA)
+WWW=		https://www.hdfgroup.org/products/hdf4/
 
 NOT_FOR_ARCHS=		aarch64 armv6 armv7
 NOT_FOR_ARCHS_REASON=	fails to compile: no machine type has been defined
