@@ -1,5 +1,3 @@
-# Created by: Ulrich Spoerlein <q@uni.de>
-
 PORTNAME=	mp3splt
 PORTVERSION=	2.6.2
 CATEGORIES=	audio
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/mp3splt/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	citrin@citrin.ru
 COMMENT=	Utility to split MP3 and Ogg files (via CUE sheets)
+WWW=		http://mp3splt.sourceforge.net/
 
 LICENSE=	GPLv2
 
