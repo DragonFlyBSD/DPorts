@@ -1,5 +1,3 @@
-# Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-
 PORTNAME=	tong
 PORTVERSION=	1.3
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.nongnu.org/tong/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tetris and Pong in the same place at the same time
+WWW=		https://www.nongnu.org/tong/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
