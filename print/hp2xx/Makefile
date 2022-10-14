@@ -1,5 +1,3 @@
-# Created by: Lars Koeller
-
 PORTNAME=	hp2xx
 PORTVERSION=	3.4.4
 PORTREVISION=	8
@@ -8,6 +6,7 @@ MASTER_SITES=	GNU
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	HPGL to vector and raster formats converter and previewer for X11
+WWW=		https://www.gnu.org/software/hp2xx/
 
 LICENSE=	GPLv2+
 
