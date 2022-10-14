@@ -1,5 +1,3 @@
-# Created by: Denise H. G. <darcsis@gmail.com>
-
 PORTNAME=	wavegain
 PORTVERSION=	1.2.8
 PORTREVISION=	2
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}srcs${EXTRACT_SUFFIX}
 
 MAINTAINER=	darcsis@gmail.com
 COMMENT=	Program that applies ReplayGain to wave files
+WWW=		https://www.rarewares.org/others.html
 
 LICENSE=	LGPL21
 
