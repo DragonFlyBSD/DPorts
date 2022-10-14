@@ -1,5 +1,3 @@
-# Created by: Stefan Walter <sw@gegenunendlich.de>
-
 PORTNAME=	pydot
 PORTVERSION=	1.4.2
 CATEGORIES=	graphics python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python interface to the Graphviz Dot language
+WWW=		https://github.com/pydot/pydot
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
