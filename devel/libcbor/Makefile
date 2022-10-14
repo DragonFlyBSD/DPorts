@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	libcbor
 PORTVERSION=	0.9.0
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	CBOR protocol implementation for C and others
+WWW=		https://github.com/PJK/libcbor
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
