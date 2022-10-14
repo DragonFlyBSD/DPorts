@@ -1,5 +1,3 @@
-# Created by: Guangyuan Yang <ygy@FreeBSD.org>
-
 PORTNAME=	blob
 DISTVERSION=	1.2.3
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	ygy@FreeBSD.org
 COMMENT=	A Simple S3 Class for Representing Vectors of Binary Data ('BLOBS')
+WWW=		https://blob.tidyverse.org
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
