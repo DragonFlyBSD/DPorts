@@ -1,5 +1,3 @@
-# Created by: papowell@lprng.com
-
 PORTNAME=	LPRngTool
 PORTVERSION=	1.3.2
 PORTREVISION=	10
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/lprng/lprngtool/LRPngTool-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Configuration Tool for LPRng
+WWW=		http://lprng.sourceforge.net/
 
 LICENSE=	GPLv2
 
