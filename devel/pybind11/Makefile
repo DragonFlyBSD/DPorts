@@ -1,10 +1,11 @@
 PORTNAME=	pybind11
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.9.2
+DISTVERSION=	2.10.0
 CATEGORIES=	devel python
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Seamless interoperability between C++11 and Python (cmake part)
+WWW=		https://github.com/wjakob/pybind11
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
