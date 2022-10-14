@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	snuggs
 PORTVERSION=	1.4.7
 CATEGORIES=	math python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	S-expressions for Numpy
+WWW=		https://github.com/mapbox/snuggs
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
