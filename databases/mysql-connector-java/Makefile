@@ -1,12 +1,11 @@
-# Created by: Matthew Seaman
-
 PORTNAME=	mysql-connector-java
-PORTVERSION=	8.0.29
+PORTVERSION=	8.0.30
 CATEGORIES=	databases java
 MASTER_SITES=	MYSQL/Connector-J
 
 MAINTAINER=	ultima@FreeBSD.org
 COMMENT=	MySQL Connector/J: JDBC interface for MySQL
+WWW=		https://dev.mysql.com/downloads/connector/j/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
