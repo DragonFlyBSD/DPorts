@@ -1,13 +1,12 @@
-# Created by: Andy Kosela <akosela@andykosela.com>
-
 PORTNAME=	go-cs
 PORTVERSION=	0.9
 DISTVERSIONPREFIX=	v
-PORTREVISION=	3
+PORTREVISION=	7
 CATEGORIES=	net
 
 MAINTAINER=	akosela@andykosela.com
 COMMENT=	Concurrent ssh client
+WWW=		https://github.com/akosela/go-cs
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
