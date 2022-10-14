@@ -1,5 +1,3 @@
-# Created by: thierry@pompo.net
-
 PORTNAME=	torcs
 DISTVERSION=	1.3.7
 PORTREVISION=	5
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/all-in-one/${PORTVERSION}
 
 MAINTAINER=	monwarez@mailoo.org
 COMMENT=	Free, open-source racing car simulator
+WWW=		http://torcs.sourceforge.net/
 
 LICENSE=	GPLv2
 
