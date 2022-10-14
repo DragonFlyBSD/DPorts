@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wen@FreeBSD.org>
-
 PORTNAME=	bindr
 PORTVERSION=	0.1.1
 PORTREVISION=	3
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Parametrized Active Bindings
+WWW=		https://cran.r-project.org/web/packages/bindr/
 
 LICENSE=	GPLv2+
 
