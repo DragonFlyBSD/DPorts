@@ -1,12 +1,13 @@
 PORTNAME=	ambit
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.6
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	math
 PKGNAMESUFFIX=	-tensor # avoid clash with shells/ambit
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	C++ library for tensor product calculations
+WWW=		https://github.com/jturney/ambit
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
