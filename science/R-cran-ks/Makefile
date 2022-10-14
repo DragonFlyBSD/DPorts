@@ -1,5 +1,3 @@
-# Created by: Thierry Thomas <thierry@pompo.net>
-
 PORTNAME=	ks
 PORTVERSION=	1.13.5
 CATEGORIES=	science
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Kernel Smoothing
+WWW=		https://cran.r-project.org/package=ks
 
 LICENSE=	GPLv2+
 
