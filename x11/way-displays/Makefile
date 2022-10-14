@@ -1,9 +1,10 @@
 PORTNAME=	way-displays
-DISTVERSION=	1.5.3
+DISTVERSION=	1.6.0
 CATEGORIES=	x11 wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Auto Manage Your Wayland Displays
+WWW=		https://github.com/alex-courtis/way-displays
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -27,7 +28,7 @@ PLIST_FILES=	bin/${PORTNAME} \
 
 post-patch:
 # Respect PREFIX for system-wide config
-	@${REINPLACE_CMD} 's,/usr/local,${PREFIX},' ${WRKSRC}/src/cfg.cpp
+	@${REINPLACE_CMD} 's,/usr/local,${PREFIX},' ${WRKSRC}/src/cfg.c
 
 post-install:
 # Let @sample handle default files under etc/
