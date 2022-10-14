@@ -1,5 +1,3 @@
-# Created by: Mykola Dzham <freebsd@levsha.org.ua>
-
 PORTNAME=	lttoolbox
 PORTVERSION=	${APVER}.${APREV}
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	textproc
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Tool for lexical, morphological analysis and generation of words
+WWW=		https://wiki.apertium.org/wiki/Lttoolbox
 
 LICENSE=	GPLv2
 
