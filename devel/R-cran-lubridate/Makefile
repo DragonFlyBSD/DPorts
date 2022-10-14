@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	lubridate
 PORTVERSION=	1.8.0
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Make Dealing with Dates a Little Easier
+WWW=		https://cran.r-project.org/web/packages/lubridate/
 
 LICENSE=	GPLv2+
 
