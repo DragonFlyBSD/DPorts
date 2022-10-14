@@ -1,11 +1,12 @@
 PORTNAME=	mongodb42-tools
 DISTVERSIONPREFIX=	r
 DISTVERSION=	4.2.19
-PORTREVISION=	2
+PORTREVISION=	6
 CATEGORIES=	databases
 
 MAINTAINER=	ronald-lists@klop.ws
 COMMENT=	Tools for MongoDB 4.2.x
+WWW=		https://github.com/mongodb/mongo-tools
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
