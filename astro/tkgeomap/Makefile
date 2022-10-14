@@ -1,5 +1,3 @@
-# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-
 PORTNAME=	tkgeomap
 PORTVERSION=	2.11.6
 CATEGORIES=	astro tk
@@ -7,6 +5,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	tcltk@FreeBSD.org
 COMMENT=	Read, manipulate, and display geo data
+WWW=		https://web.archive.org/web/20130807000308/http://www.tkgeomap.org/
 
 LICENSE=	GPLv2
 
