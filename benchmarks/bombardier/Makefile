@@ -1,13 +1,12 @@
-# Created by: Danilo Egea Gondolfo <danilo@FreeBSD.org>
-
 PORTNAME=	bombardier
 PORTVERSION=	1.2.5
 DISTVERSIONPREFIX=	v
-PORTREVISION=	2
+PORTREVISION=	6
 CATEGORIES=	benchmarks
 
 MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	Fast cross-platform HTTP benchmarking tool written in Go
+WWW=		https://github.com/codesenberg/bombardier
 
 LICENSE=	MIT
 
