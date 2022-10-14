@@ -1,5 +1,3 @@
-# Created by: Francisco Cabrita <include@npf.pt.freebsd.org>
-
 PORTNAME=	joomla
 DISTVERSION=	3-10-8
 CATEGORIES=	www
@@ -9,6 +7,7 @@ DISTNAME=	Joomla_${DISTVERSION}-Stable-Full_Package.tar.bz2?format=bz2
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Dynamic web content management system (CMS)
+WWW=		https://www.joomla.org/
 
 LICENSE=	GPLv2
 
