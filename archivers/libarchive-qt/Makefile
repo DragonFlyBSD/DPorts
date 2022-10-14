@@ -4,12 +4,13 @@ CATEGORIES=	archivers
 
 MAINTAINER=	jwb@FreeBSD.org
 COMMENT=	Qt based archiving solution with libarchive backend
+WWW=		https://gitlab.com/marcusbritanicus/libarchive-qt
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USES=		cmake qt:5
-USE_QT=		buildtools_build core dbus gui network qmake_build widgets
+USE_QT=		buildtools:build core dbus gui network qmake:build widgets
 USE_LDCONFIG=	yes
 USE_GITLAB=	yes
 
