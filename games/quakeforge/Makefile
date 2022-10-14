@@ -1,5 +1,3 @@
-# Created by: Daniel J. O'Connor <darius@dons.net.au>
-
 PORTNAME=	quakeforge
 PORTVERSION=	0.7.2
 PORTREVISION=	9
@@ -11,6 +9,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Cleaned up copy of the GPL'ed Quake 1 source code
+WWW=		http://www.quakeforge.net/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
