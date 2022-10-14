@@ -1,5 +1,3 @@
-# Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-
 PORTNAME=	avoision
 PORTVERSION=	1.1
 PORTREVISION=	9
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/avsn/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple collect-dots-avoid-blocks game
+WWW=		http://avsn.sourceforge.net/
 
 LICENSE=	GPLv2+ CC-BY-SA-3.0
 LICENSE_COMB=	multi
