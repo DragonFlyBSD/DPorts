@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	omnibus
 PORTVERSION=	8.3.2
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Framework for building self-installing, full-stack software builds
+WWW=		https://github.com/chef/omnibus
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
