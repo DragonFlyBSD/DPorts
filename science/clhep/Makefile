@@ -1,5 +1,3 @@
-# Created by: will
-
 PORTNAME=	clhep
 PORTVERSION=	2.4.1.0
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	http://proj-clhep.web.cern.ch/proj-clhep/DISTRIBUTION/tarFiles/
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Object-oriented toolkit for particle physics applications by CERN
+WWW=		https://proj-clhep.web.cern.ch/proj-clhep/
 
 LICENSE=	GPLv3 LGPL3
 LICENSE_COMB=	multi
