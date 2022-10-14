@@ -4,8 +4,7 @@ CATEGORIES=	x11-fonts
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Google Noto Fonts family (meta port)
-
-LICENSE=	OFL11
+WWW=		https://www.google.com/get/noto/
 
 USES=		metaport
 
