@@ -1,10 +1,11 @@
 PORTNAME=	processx
-DISTVERSION=	3.6.1
+DISTVERSION=	3.7.0
 CATEGORIES=	sysutils
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	ygy@FreeBSD.org
 COMMENT=	Execute and Control System Processes
+WWW=		https://processx.r-lib.org
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
