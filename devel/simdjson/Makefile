@@ -1,10 +1,11 @@
 PORTNAME=	simdjson
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.9.6
+DISTVERSION=	2.2.0
 CATEGORIES=	devel
 
 MAINTAINER=	olevole@olevole.ru
 COMMENT=	Parsing gigabytes of JSON per second
+WWW=		https://simdjson.org/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -16,6 +17,9 @@ USES=		cmake compiler:c++17-lang
 USE_GITHUB=	yes
 USE_LDCONFIG=	yes
 
-CMAKE_ON=	SIMDJSON_JUST_LIBRARY
+CMAKE_TESTING_TARGET=	all_tests
+
+CMAKE_ON=	SIMDJSON_JUST_LIBRARY \
+		BUILD_SHARED_LIBS
 
 .include <bsd.port.mk>
