@@ -1,12 +1,11 @@
-# Created by: David Naylor <naylor.b.david@gmail.com>
-
 PORTNAME=	fBasics
-DISTVERSION=	3042.89.2
+DISTVERSION=	4021.92
 CATEGORIES=	finance
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	ygy@FreeBSD.org
 COMMENT=	Rmetrics - Markets and Basic Statistics
+WWW=		https://r-forge.r-project.org/scm/viewvc.php/pkg/fBasics/?root=rmetrics
 
 LICENSE=	GPLv2+
 
