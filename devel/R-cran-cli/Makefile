@@ -1,18 +1,13 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	cli
-PORTVERSION=	3.3.0
+PORTVERSION=	3.4.0
 CATEGORIES=	devel
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Helpers for Developing Command Line Interfaces
+WWW=		https://cran.r-project.org/web/packages/cli/
 
 LICENSE=	MIT
-
-CRAN_DEPENDS=	R-cran-glue>=1.6.0:devel/R-cran-glue
-BUILD_DEPENDS=	${CRAN_DEPENDS}
-RUN_DEPENDS=	${CRAN_DEPENDS}
 
 USES=		cran:auto-plist,compiles
 
