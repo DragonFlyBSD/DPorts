@@ -1,5 +1,3 @@
-# Created by: Lars Engels <lars.engels@0x20.net>
-
 PORTNAME=	mucommander
 DISTVERSION=	0.9.5-1
 CATEGORIES=	x11-fm java
@@ -7,6 +5,7 @@ MASTER_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/releases/download/${DIS
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Lightweight file manager featuring a Norton Commander style interface
+WWW=		https://www.mucommander.com
 
 LICENSE=	GPLv3
 
