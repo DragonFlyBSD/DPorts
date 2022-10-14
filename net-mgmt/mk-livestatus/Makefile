@@ -1,5 +1,3 @@
-# Created by: Peter C. Lai <cowbert@gmail.com>
-
 PORTNAME=	mk-livestatus
 PORTVERSION=	1.2.8p25
 PORTREVISION=	3
@@ -11,6 +9,7 @@ DIST_SUBDIR=	check_mk
 
 MAINTAINER=	egypcio@FreeBSD.org
 COMMENT=	Nagios event broker module
+WWW=		https://mathias-kettner.de/checkmk_livestatus.html
 
 LICENSE=	GPLv2
 
