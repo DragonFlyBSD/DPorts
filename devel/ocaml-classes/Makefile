@@ -1,5 +1,3 @@
-# Created by: Michaël Grünewald
-
 PORTNAME=	classes
 PORTVERSION=	4.00
 CATEGORIES=	devel
@@ -9,6 +7,7 @@ DISTNAME=	ocaml-${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Ocaml Object interface for ocaml's standard library modules
+WWW=		http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/classes/
 
 LICENSE=	LGPL21
 
