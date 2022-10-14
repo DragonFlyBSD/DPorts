@@ -1,5 +1,3 @@
-# Created by: antoine@FreeBSD.org
-
 PORTNAME=	python-snappy
 PORTVERSION=	0.6.1
 CATEGORIES=	archivers devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Python library for the snappy compression library from Google
+WWW=		https://github.com/andrix/python-snappy
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
