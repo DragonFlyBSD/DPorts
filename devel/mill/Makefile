@@ -1,5 +1,3 @@
-# Created by: Jens Grassel <freebsd-ports@jan0sch.de>
-
 PORTNAME=	mill
 DISTVERSION=	0.10.3
 CATEGORIES=	devel java
@@ -11,6 +9,7 @@ EXTRACT_ONLY=
 
 MAINTAINER=	freebsd-ports@jan0sch.de
 COMMENT=	Java/Scala build tool
+WWW=		https://www.lihaoyi.com/mill/
 
 LICENSE=	MIT
 
