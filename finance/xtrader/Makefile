@@ -1,5 +1,3 @@
-# Created by: Michael Johnson <ahze@FreeBSD.org>
-
 PORTNAME=	xtrader
 PORTVERSION=	0.99.9
 PORTREVISION=	10
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/OldFiles
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Technical analysis program for financial instruments
+WWW=		http://xtrader.sourceforge.net/
 
 LIB_DEPENDS=	libptypes.so:devel/ptypes \
 		libfltk.so.1:x11-toolkits/fltk
