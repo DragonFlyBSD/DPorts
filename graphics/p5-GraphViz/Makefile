@@ -1,5 +1,3 @@
-# Created by: tobez
-
 PORTNAME=	GraphViz
 PORTVERSION=	2.24
 CATEGORIES=	graphics perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl interface to GraphViz graphing tool
+WWW=		https://metacpan.org/release/GraphViz
 
 LICENSE=	ART20
 LICENSE_FILE=	${WRKSRC}/LICENSE
