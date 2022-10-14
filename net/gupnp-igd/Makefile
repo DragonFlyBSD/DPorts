@@ -1,5 +1,3 @@
-# Created by: Martin Wilke <miwi@FreeBSD.org>
-
 PORTNAME=	gupnp-igd
 PORTVERSION=	1.2.0
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	GNOME
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Library to handle UPnP IGD port mapping
+WWW=		https://wiki.gnome.org/Projects/GUPnP
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
