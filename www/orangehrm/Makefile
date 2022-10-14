@@ -1,12 +1,11 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	orangehrm
-PORTVERSION=	5.0
+PORTVERSION=	5.1
 CATEGORIES=	www misc
 MASTER_SITES=	SF/${PORTNAME}/stable/${PORTVERSION}
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Open Source Human Resource Management
+WWW=		https://www.orangehrm.com
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
