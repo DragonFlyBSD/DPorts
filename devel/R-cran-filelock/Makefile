@@ -1,5 +1,3 @@
-# Created by: Guangyuan Yang <ygy@FreeBSD.org>
-
 PORTNAME=	filelock
 DISTVERSION=	1.0.2
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	ygy@FreeBSD.org
 COMMENT=	Portable File Locking
+WWW=		https://github.com/r-lib/filelock #readme
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
