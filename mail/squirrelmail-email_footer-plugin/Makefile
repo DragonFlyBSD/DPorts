@@ -1,5 +1,3 @@
-# Created by: Gerrit Beine <gerrit.beine@gmx.de>
-
 PORTNAME=	email_footer
 PORTVERSION=	0.6
 PORTREVISION=	1
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-1.4.2
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Automatically appends footer to SquirrelMail-generated emails
+WWW=		https://www.squirrelmail.org
 
 USE_SM_COMPAT=	yes
 USE_GENERIC_PKGMESSAGE=	yes
