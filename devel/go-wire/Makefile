@@ -1,11 +1,13 @@
 PORTNAME=	wire
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.5.0
+PORTREVISION=	4
 CATEGORIES=	devel
 PKGNAMEPREFIX=	go-
 
 MAINTAINER=	drtr0jan@yandex.ru
 COMMENT=	Compile-time Dependency Injection for Go
+WWW=		https://github.com/google/wire
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
