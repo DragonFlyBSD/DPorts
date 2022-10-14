@@ -37,7 +37,6 @@ BAD_GST_ALL_PLUGINS+= \
 		kms \
 		ladspa \
 		libde265 \
-		libmms \
 		lv2 \
 		modplug \
 		mpeg2enc \
@@ -323,10 +322,6 @@ gst_libcaca_PLIST_FILES=	${GST_LIB_DIR}/libgstcacasink.so
 gst_libde265_LIB_DEPENDS=	libde265.so:multimedia/libde265
 gst_libde265_PLIST_FILES=	${GST_LIB_DIR}/libgstde265.so
 
-# libmms
-gst_libmms_LIB_DEPENDS=	libmms.so:net/libmms
-gst_libmms_PLIST_FILES=	${GST_LIB_DIR}/libgstmms.so
-
 # librfb
 gst_librfb_USES=	xorg
 gst_librfb_USE_XORG=	x11
@@ -407,7 +402,7 @@ gst_pulse_PLIST_FILES=	${GST_LIB_DIR}/libgstpulseaudio.so
 
 # qt
 gst_qt_USES=	compiler:c++11-lang qt:5
-gst_qt_USE_QT=	core gui declarative buildtools_build network x11extras
+gst_qt_USE_QT=	core gui declarative buildtools:build network x11extras
 gst_qt_USE_GSTREAMER=	gl
 gst_qt_PLIST_FILES=	${GST_LIB_DIR}/libgstqmlgl.so
 
