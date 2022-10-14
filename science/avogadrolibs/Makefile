@@ -1,10 +1,11 @@
 PORTNAME=	avogadrolibs
 DISTVERSION=	1.95.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	science
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Avogadro2 libraries for chemical editor and visualization applications
+WWW=		https://www.openchemistry.org/projects/avogadro2/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -50,7 +51,7 @@ OPENGL_USE=		GL=gl,glew,glu
 
 QT5_CMAKE_BOOL=		USE_QT
 QT5_USES=		qt:5
-QT5_USE=		QT=core,concurrent,gui,network,svg,widgets,buildtools_build,qmake_build
+QT5_USE=		QT=core,concurrent,gui,network,svg,widgets,buildtools:build,qmake:build
 QT5_IMPLIES=		OPENGL
 
 SPGLIB_DESC=		Enable optional features using spglib
