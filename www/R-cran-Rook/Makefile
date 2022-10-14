@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	Rook
 DISTVERSION=	1.1-1
 PORTREVISION=	4
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Web server interface for R
+WWW=		https://cran.r-project.org/web/packages/Rook/
 
 LICENSE=	GPLv2
 
