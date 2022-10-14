@@ -1,5 +1,3 @@
-# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-
 PORTNAME=	ming
 DISTVERSIONPREFIX=	ming-
 DISTVERSION=	0_4_8
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python module for Ming which allows you to create Flash 4/5 movies
+WWW=		http://www.libming.org/
 
 LICENSE=	GPLv2 LGPL21
 LICENSE_COMB=	multi
