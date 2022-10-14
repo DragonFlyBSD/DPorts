@@ -1,5 +1,3 @@
-# Created by: Ganael Laplanche <ganael.laplanche@martymac.org>
-
 PORTNAME=	fpart
 PORTVERSION=	1.5.1
 PORTREVISION=	1
@@ -9,6 +7,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION} \
 
 MAINTAINER=	martymac@FreeBSD.org
 COMMENT=	Sort and pack files into partitions
+WWW=		https://contribs.martymac.org
 
 LICENSE=	BSD2CLAUSE
 
