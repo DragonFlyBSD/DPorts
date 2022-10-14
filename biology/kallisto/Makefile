@@ -1,12 +1,13 @@
 PORTNAME=		kallisto
 DISTVERSIONPREFIX=	v
 DISTVERSION=		0.48.0
-PORTREVISION=	1
+PORTREVISION=	2
 PORTEPOCH=		1
 CATEGORIES=		biology
 
 MAINTAINER=	jwb@FreeBSD.org
 COMMENT=	Quantify abundances of transcripts from RNA-Seq data
+WWW=		https://pachterlab.github.io/kallisto/about.html
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/license.txt
