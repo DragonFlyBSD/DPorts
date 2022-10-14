@@ -1,5 +1,3 @@
-# Created by: Alex Dupre <ale@FreeBSD.org>
-
 PORTNAME=	sabre
 PORTVERSION=	20100501
 CATEGORIES=	devel multimedia java
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}-src-${PORTVERSION}
 
 MAINTAINER=	ale@FreeBSD.org
 COMMENT=	Simple API for Binary REpresentations and an UDF Library
+WWW=		http://sabre-library.sourceforge.net/
 
 LICENSE=	LGPL21
 
