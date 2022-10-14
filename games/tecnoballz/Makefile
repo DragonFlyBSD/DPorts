@@ -1,5 +1,3 @@
-# Created by: Jean-Yves Lefort <jylefort@brutele.be>
-
 PORTNAME=	tecnoballz
 PORTVERSION=	0.93.1
 PORTREVISION=	2
@@ -9,6 +7,7 @@ MASTER_SITES=	http://linux.tlk.fr/games/TecnoballZ/download/ \
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Brick breaker (Arkanoid-like game)
+WWW=		https://linux.tlk.fr/games/TecnoballZ/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
