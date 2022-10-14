@@ -1,5 +1,3 @@
-# Created by: Guangyuan Yang <ygy@FreeBSD.org>
-
 PORTNAME=	hexbin
 DISTVERSION=	1.28.2
 CATEGORIES=	math
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	ygy@FreeBSD.org
 COMMENT=	Hexagonal Binning Routines
+WWW=		https://github.com/edzer/hexbin
 
 LICENSE=	GPLv2
 
