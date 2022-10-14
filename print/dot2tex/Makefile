@@ -1,5 +1,3 @@
-# Created by: Romain Tartiere <romain@FreeBSD.org>
-
 PORTNAME=	dot2tex
 PORTVERSION=	2.11.3
 CATEGORIES=	print python
@@ -7,6 +5,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Graphviz to LaTeX converter
+WWW=		https://github.com/kjellmf/dot2tex
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
