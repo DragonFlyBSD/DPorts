@@ -1,5 +1,3 @@
-# Created by: Eric Anholt <anholt@FreeBSD.org>
-
 PORTNAME=	xorg-libraries
 PORTVERSION=	7.7
 PORTREVISION=	4
@@ -7,6 +5,7 @@ CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	X.org libraries meta-port
+WWW=		https://www.x.org/
 
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/dmx.pc:x11/libdmx \
 		${LOCALBASE}/libdata/pkgconfig/fontenc.pc:x11-fonts/libfontenc \
