@@ -1,13 +1,12 @@
-# Created by: Thierry Thomas <thierry@pompo.net>
-
 PORTNAME=	freefem++
 DISTVERSIONPREFIX=	v
 DISTVERSION=	4.11
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	math science
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Partial differential equation solver
+WWW=		http://www.freefem.org/ff++/
 
 LICENSE=	LGPL3
 
