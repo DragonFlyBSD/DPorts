@@ -1,13 +1,12 @@
-# Created by: Matthias Andree <matthias.andree@gmx.de>
-
 PORTNAME=	squash
 PORTVERSION=	1.0
-PORTREVISION=	18
+PORTREVISION=	20
 CATEGORIES=	audio
 MASTER_SITES=	SAVANNAH
 
 MAINTAINER=	mandree@FreeBSD.org
 COMMENT=	Learning console-based MP3/OGG player
+WWW=		https://savannah.nongnu.org/projects/squash/
 
 LICENSE=	GPLv2+
 
