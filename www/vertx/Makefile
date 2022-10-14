@@ -1,5 +1,3 @@
-# Created by: Nicola Vitale <nivit@FreeBSD.org>
-
 PORTNAME=	vertx
 PORTVERSION=	2.1.1
 PORTREVISION=	0
@@ -9,6 +7,7 @@ DISTNAME=	vert.x-${PORTVERSION}
 
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Effortless asynchronous application development for the modern web
+WWW=		https://vertx.io/
 
 LICENSE=	APACHE20
 
