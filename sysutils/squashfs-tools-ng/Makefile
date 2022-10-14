@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	squashfs-tools-ng
 PORTVERSION=	1.1.4
 CATEGORIES=	sysutils
@@ -7,6 +5,7 @@ MASTER_SITES=	https://infraroot.at/pub/squashfs/
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	New set of tools and libraries to work with SquashFS images
+WWW=		https://infraroot.at/projects/squashfs-tools-ng/
 
 LICENSE=	GPLv3+ LGPL3+
 LICENSE_COMB=	dual
