@@ -1,5 +1,5 @@
 PORTNAME=	calendar
-PORTVERSION=	3.5.5
+PORTVERSION=	3.5.11
 CATEGORIES=	mail
 MASTER_SITES=	https://cgit.kolab.org/roundcubemail-plugins-kolab/snapshot/
 PKGNAMEPREFIX=	roundcube-
@@ -8,6 +8,7 @@ DISTNAME=	roundcubemail-plugins-kolab-${DISTVERSION}
 
 MAINTAINER=	crees@FreeBSD.org
 COMMENT=	Roundcube Calendar plugin from Kolab
+WWW=		https://docs.kolab.org/webmail-user-guide/roundcubemail/_plugins/calendar/index.html
 
 LICENSE=	AGPLv3
 
@@ -15,7 +16,7 @@ BUILD_DEPENDS=	roundcube${PHP_PKGNAMESUFFIX}>=1.0:mail/roundcube@${PHP_FLAVOR}
 RUN_DEPENDS=	roundcube${PHP_PKGNAMESUFFIX}>=1.0:mail/roundcube@${PHP_FLAVOR}
 
 USES=		php:flavors
-IGNORE_WITH_PHP=81 82
+IGNORE_WITH_PHP=82
 
 NO_BUILD=	yes
 NO_ARCH=	yes
