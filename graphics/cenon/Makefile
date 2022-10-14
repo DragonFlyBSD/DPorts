@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	cenon
 # Per r492056, 4.0.2 is the last version which actually works with GNUstep,
 # the later ones use XCode >= 5 .xib files which GNUstep cannot parse.
@@ -15,6 +13,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Vector graphics tool for GNUstep
+WWW=		https://www.cenon.info/dLinux_gb.html
 
 USES=		gnustep tar:bzip2
 USE_GNUSTEP=	gui base build
