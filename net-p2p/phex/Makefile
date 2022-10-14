@@ -1,5 +1,3 @@
-# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-
 PORTNAME=	phex
 PORTVERSION=	3.4.2.116
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	jhale@FreeBSD.org
 COMMENT=	Multi-platform and spyware-free Gnutella client
+WWW=		http://phex.sourceforge.net/
 
 LICENSE=	GPLv2
 
