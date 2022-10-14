@@ -1,5 +1,5 @@
 PORTNAME=	aws-sdk
-PORTVERSION=	3.185.15
+PORTVERSION=	3.232.3
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/aws/${PORTNAME}-php/releases/download/${PORTVERSION}/
 PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
@@ -8,9 +8,10 @@ DIST_SUBDIR=	${PORTNAME}-php-${PORTVERSION}
 
 MAINTAINER=	garga@FreeBSD.org
 COMMENT=	PHP interface for Amazon Web Services (AWS)
+WWW=		https://github.com/aws/aws-sdk-php
 
 LICENSE=	APACHE20
-LICENSE_FILE=	${WRKSRC}/LICENSE.md
+LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USES=		php:flavors zip
 USE_PHP=	filter mbstring simplexml
