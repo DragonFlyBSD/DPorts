@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	brunsli
 PORTVERSION=	0.1
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ CATEGORIES=	graphics
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Lossless JPEG repacking library
+WWW=		https://github.com/google/brunsli
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
