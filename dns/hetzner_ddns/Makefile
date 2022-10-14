@@ -1,11 +1,10 @@
-# Created by: Filip Parag <filip@parag.rs>
-
 PORTNAME=	hetzner_ddns
 DISTVERSION=	0.2.2
 CATEGORIES=	dns
 
 MAINTAINER=	filip@parag.rs
 COMMENT=	Hetzner Dynamic DNS Daemon
+WWW=		https://github.com/filiparag/hetzner_ddns
 
 LICENSE=	BSD2CLAUSE
 
