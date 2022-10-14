@@ -1,13 +1,12 @@
-# Created by: Thierry Thomas <thierry@FreeBSD.org>
-
 PORTNAME=	uni
 PORTVERSION=	2.5.1
-PORTREVISION=	1
+PORTREVISION=	5
 DISTVERSIONPREFIX=	v
 CATEGORIES=	textproc
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Query the Unicode database from the commandline
+WWW=		https://github.com/arp242/uni
 
 LICENSE=	MIT
 
