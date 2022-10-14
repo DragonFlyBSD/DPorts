@@ -1,5 +1,3 @@
-# Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-
 PORTNAME=	moagg
 PORTVERSION=	1.95b
 PORTREVISION=	1
@@ -13,6 +11,7 @@ EXTRACT_ONLY=	${PORTNAME}-${DISTVERSION}-bin.zip
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Pilot a small space ship
+WWW=		http://moagg.sourceforge.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
