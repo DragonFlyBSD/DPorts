@@ -1,5 +1,3 @@
-# Created by: Will Andrews <andrews@technologist.com>
-
 PORTNAME=	makeself
 DISTVERSION=	2.4.5
 CATEGORIES=	archivers
@@ -8,19 +6,21 @@ EXTRACT_SUFX=	.run
 
 MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Neat script to make self-extracting archives
+WWW=		https://makeself.io/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-EXTRACT_CMD=	${SH}
-EXTRACT_BEFORE_ARGS=
-EXTRACT_AFTER_ARGS=	--nox11 --target ${WRKSRC}
+USES=		makeself
 
 NO_ARCH=	yes
 NO_BUILD=	yes
+NO_WRKSUBDIR=	yes
 
-PLIST_FILES=	bin/makeself bin/makeself-header \
-		bin/makeself-header.sh bin/makeself.sh \
+PLIST_FILES=	bin/makeself \
+		bin/makeself-header \
+		bin/makeself-header.sh \
+		bin/makeself.sh \
 		man/man1/makeself.1.gz
 PORTDOCS=	README.md
 
