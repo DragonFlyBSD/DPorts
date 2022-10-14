@@ -1,5 +1,3 @@
-# Created by: Serge Gagnon <serge.gagnon@b2b2c.ca>
-
 PORTNAME=	plan9port
 PORTVERSION=	20200816
 CATEGORIES=	devel plan9
@@ -8,6 +6,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Plan 9 from User Space
+WWW=		https://9fans.github.io/plan9port/
 
 LICENSE=	LUCENT
 LICENSE_NAME=	Lucent Public License Version 1.02
