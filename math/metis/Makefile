@@ -1,5 +1,3 @@
-# Created by: Pedro Giffuni <giffunip@asme.org>
-
 PORTNAME=	metis
 PORTVERSION=	5.1.0
 PORTREVISION=	9
@@ -8,6 +6,7 @@ MASTER_SITES=	http://glaros.dtc.umn.edu/gkhome/fetch/sw/metis/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Package for unstructured graph partitioning
+WWW=		http://glaros.dtc.umn.edu/gkhome/metis/metis/overview
 
 LICENSE=	APACHE20
 
