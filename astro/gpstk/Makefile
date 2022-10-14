@@ -1,5 +1,3 @@
-# Created by: Bruce M Simpson <bms@FreeBSD.org>
-
 PORTNAME=	gpstk
 PORTVERSION=	8.0.0
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	astro devel
 
 MAINTAINER=	lbartoletti@FreeBSD.org
 COMMENT=	Toolkit for developing GPS applications
+WWW=		https://github.com/SGL-UT/GPSTk
 
 LICENSE=	GPLv3 LGPL3
 LICENSE_COMB=	multi
