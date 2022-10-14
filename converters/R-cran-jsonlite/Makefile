@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	jsonlite
 PORTVERSION=	1.8.0
 CATEGORIES=	converters
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Robust, High Performance JSON Parser and Generator for R
+WWW=		https://cran.r-project.org/web/packages/jsonlite/
 
 LICENSE=	MIT
 
