@@ -1,5 +1,3 @@
-# Created by: Eivind Eklund <eivind@FreeBSD.org>
-
 PORTNAME=	re2c
 DISTVERSION=	2.2
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ MASTER_SITES=	https://github.com/skvadrik/${PORTNAME}/releases/download/${DISTVE
 
 MAINTAINER=	chalpin@cs.wisc.edu
 COMMENT=	Lexer generator for C, C++ and Go with a focus on generating fast code
+WWW=		https://re2c.org/
 
 LICENSE=	PD
 
