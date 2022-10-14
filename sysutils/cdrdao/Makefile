@@ -1,14 +1,13 @@
-# Created by: futatuki
-
 PORTNAME=	cdrdao
 PORTVERSION=	1.2.4
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	sysutils audio
 MASTER_SITES=	SF/cdrdao
 DISTNAME=	cdrdao-${PORTVERSION}
 
 MAINTAINER=	marius@FreeBSD.org
 COMMENT?=	Record CD-R[W]s in disk-at-once mode
+WWW=		http://cdrdao.sourceforge.net/
 
 LICENSE=	GPLv2
 
