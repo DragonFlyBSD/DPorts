@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	epicalc
 PORTVERSION=	2.15.1.0
 PORTREVISION=	11
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Epidemiological calculator
+WWW=		https://cran.r-project.org/web/packages/epicalc/
 
 USES=	cran:auto-plist
 
