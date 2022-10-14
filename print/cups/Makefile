@@ -1,5 +1,3 @@
-# Created by: Alan Eldridge <alane@geeksrus.net>
-
 PORTNAME=	cups
 PORTVERSION=	2.4.2
 DISTVERSIONPREFIX=v
@@ -7,6 +5,7 @@ CATEGORIES=	print
 
 MAINTAINER=	tijl@FreeBSD.org
 COMMENT=	Common UNIX Printing System
+WWW=		https://github.com/OpenPrinting/cups
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
