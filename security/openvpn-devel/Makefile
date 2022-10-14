@@ -1,7 +1,5 @@
-# Created by: Matthias Andree <mandree@FreeBSD.org>
-
 PORTNAME=	openvpn
-DISTVERSION=	g20220505
+DISTVERSION=	g20220820
 PORTREVISION=	0
 PORTEPOCH=	1
 CATEGORIES=	security net net-vpn
@@ -11,6 +9,7 @@ MAINTAINER=	gert@greenie.muc.de
 # let's use ?= in spite of portlint WARNings because this might become
 # security/openvpn one day which would then have a slave port:
 COMMENT?=	Secure IP/Ethernet tunnel daemon
+WWW=		https://openvpn.net/community/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT.GPL
@@ -22,7 +21,7 @@ LIB_DEPENDS+=	liblzo2.so:archivers/lzo2
 USES=		autoreconf cpe libtool pkgconfig shebangfix tar:xz
 IGNORE_SSL=	libressl libressl-devel
 USE_GITLAB=	yes
-GL_COMMIT=	413877f522e89ccc6dd2543bc585ac553df3bd42
+GL_COMMIT=	734de8f9aa2df56bcb45ebab7cfa799a23f36403
 USE_RC_SUBR=	openvpn
 
 SHEBANG_FILES=	sample/sample-scripts/auth-pam.pl sample/sample-scripts/ucn.pl \
@@ -50,9 +49,11 @@ SUB_FILES=	openvpn-client pkg-message
 PORTDOCS=	*
 PORTEXAMPLES=	*
 
-OPTIONS_DEFINE=		DOCS EASYRSA EXAMPLES LZ4 PKCS11 SMALL TEST TUNNELBLICK \
+OPTIONS_DEFINE=		DOCS EASYRSA EXAMPLES LZ4 PKCS11 SMALL DCO TEST \
 			X509ALTUSERNAME
 OPTIONS_DEFAULT=	EASYRSA LZ4 OPENSSL TEST
+OPTIONS_EXCLUDE_FreeBSD_12=	DCO # FreeBSD 14 only
+OPTIONS_EXCLUDE_FreeBSD_13=	DCO # FreeBSD 14 only
 OPTIONS_SINGLE=		SSL
 OPTIONS_SINGLE_SSL=	MBEDTLS OPENSSL
 
@@ -65,7 +66,7 @@ PKCS11_PREVENTS=		MBEDTLS
 PKCS11_PREVENTS_MSG=		OpenVPN cannot use pkcs11-helper with mbedTLS. \
 				Disable PKCS11, or use OpenSSL instead
 SMALL_DESC=			Build a smaller executable with fewer features
-TUNNELBLICK_DESC=		Tunnelblick XOR scramble patch (READ HELP!)
+DCO_DESC=			Build with Data Channel Offload (ovpn(4)) support
 X509ALTUSERNAME_DESC=		Enable --x509-username-field (OpenSSL only)
 X509ALTUSERNAME_PREVENTS=	MBEDTLS
 X509ALTUSERNAME_PREVENTS_MSG=	OpenVPN ${DISTVERSION} cannot use \
@@ -90,10 +91,10 @@ PKCS11_CONFIGURE_ENABLE=	pkcs11
 
 SMALL_CONFIGURE_ON=	--enable-small
 
+DCO_CONFIGURE_ON=	--enable-dco
+
 TEST_ALL_TARGET=	check
 TEST_TEST_TARGET_OFF=	check
-
-TUNNELBLICK_EXTRA_PATCHES=	${FILESDIR}/extra-tunnelblick-openvpn_xorpatch
 
 X509ALTUSERNAME_CONFIGURE_ENABLE=	x509-alt-username
 
