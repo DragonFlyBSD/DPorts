@@ -1,5 +1,3 @@
-# Created by: Masaki TAGAWA <masaki@club.kyutech.ac.jp>
-
 PORTNAME=	sourcecodepro
 PORTVERSION=	2.038
 CATEGORIES=	x11-fonts
@@ -9,6 +7,7 @@ DISTNAME=	TTF-source-code-pro-2.038R-ro-1.058R-it
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Set of fonts by Adobe designed for coders
+WWW=		https://github.com/adobe-fonts/source-code-pro
 
 LICENSE=	OFL11
 
