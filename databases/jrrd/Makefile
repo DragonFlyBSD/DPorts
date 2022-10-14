@@ -1,5 +1,3 @@
-# Created by: Ryan T. Dean <rtdean@cytherianage.net>
-
 PORTNAME=	jrrd
 PORTVERSION=	1.1.4
 CATEGORIES=	databases java
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/opennms/JRRD/stable-1.0
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Java native interface (JNI) to RRDtool
+WWW=		https://www.opennms.org/index.php/Jrrd
 
 LIB_DEPENDS=	librrd.so:databases/rrdtool
 
