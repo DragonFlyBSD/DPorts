@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	ttf2pt1
 PORTVERSION=	3.4.4
 PORTREVISION=	7
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	True Type Font to Postscript Type 1 Converter
+WWW=		http://ttf2pt1.sourceforge.net/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
