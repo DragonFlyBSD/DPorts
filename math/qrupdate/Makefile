@@ -1,5 +1,3 @@
-# Created by: Robert Jenssen
-
 PORTNAME=	qrupdate
 PORTVERSION=	1.1.2
 PORTREVISION=	11
@@ -8,6 +6,7 @@ MASTER_SITES=	SOURCEFORGE/qrupdate/qrupdate/1.2
 
 MAINTAINER=	robertjenssen@ozemail.com.au
 COMMENT=	Fortran library for fast updates of QR and Cholesky decomposition
+WWW=		http://qrupdate.sourceforge.net/
 
 LIB_DEPENDS=	libblas.so:math/blas \
 		liblapack.so:math/lapack
