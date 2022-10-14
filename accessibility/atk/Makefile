@@ -1,7 +1,5 @@
-# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-
 PORTNAME=	atk
-PORTVERSION=	2.36.0
+PORTVERSION=	2.38.0
 PORTREVISION?=	0
 CATEGORIES=	accessibility devel
 MASTER_SITES=	GNOME
@@ -9,6 +7,7 @@ DIST_SUBDIR=	gnome
 
 MAINTAINER=	desktop@FreeBSD.org
 COMMENT=	GNOME accessibility toolkit (ATK)
+WWW=		https://developer.gnome.org/atk/
 
 LICENSE=	LGPL20+
 LICENSE_FILE=	${WRKSRC}/COPYING
