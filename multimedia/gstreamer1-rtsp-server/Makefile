@@ -1,5 +1,3 @@
-# Created by: Koop Mast <kwm@FreeBSD.org>
-
 PORTNAME=	gstreamer1-rtsp-server
 PORTVERSION=	1.16.2
 CATEGORIES=	multimedia
@@ -8,6 +6,7 @@ DISTNAME=	gst-rtsp-server-${PORTVERSION}
 
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	GStreamer library for building a RTSP server
+WWW=		https://gstreamer.freedesktop.org/
 
 LICENSE=	LGPL20+
 LICENSE_FILE=	${WRKSRC}/COPYING
