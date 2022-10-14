@@ -1,19 +1,17 @@
-# Created by: Matthias Fechner <mfechner@FreeBSD.org>
-
 PORTNAME=	gitlab-metrics-exporter
 PORTVERSION=	0.1.1
-PORTREVISION=	1
+PORTREVISION=	5
 DISTVERSIONPREFIX=	v
 CATEGORIES=	devel
 
 MAINTAINER=	mfechner@FreeBSD.org
 COMMENT=	GitLab Metrics Exporter (GME) is Ruby Prometheus exporter
+WWW=		https://gitlab.com/gitlab-org/gitlab-metrics-exporter
 
 LICENSE=	MIT
 
 USES=		go:modules
 GO_MODULE=	gitlab.com/gitlab-org/gitlab-metrics-exporter
-
 
 GO_TARGET=	./cmd/srv
 
