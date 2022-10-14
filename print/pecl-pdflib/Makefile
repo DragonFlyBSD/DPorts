@@ -1,5 +1,3 @@
-# Created by: Alex Dupre <ale@FreeBSD.org>
-
 PORTNAME=	pdflib
 PORTVERSION=	4.1.4
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	print pear
 
 MAINTAINER=	ale@FreeBSD.org
 COMMENT=	PECL extension to create PDF on the fly
+WWW=		https://pecl.php.net/package/pdflib
 
 LICENSE=	PDFlib
 LICENSE_NAME=	PDFlib GmbH General License
