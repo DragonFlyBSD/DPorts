@@ -1,5 +1,3 @@
-# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-
 PORTNAME=	Tk-Contrib
 PORTVERSION=	0.07
 PORTREVISION=	5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Contributed Tk widgets
+WWW=		https://metacpan.org/release/Tk-Contrib
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-Tk>=804:x11-toolkits/p5-Tk
