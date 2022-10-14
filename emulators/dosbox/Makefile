@@ -1,5 +1,3 @@
-# Created by: Tom Carrick <knyghtmare@knyghtmare.com>
-
 PORTNAME=	dosbox
 DISTVERSION=	0.74-3
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${DISTVERSION}
 
 MAINTAINER=	knyght@gmail.com
 COMMENT=	Emulator of a PC with DOS
+WWW=		http://dosbox.sourceforge.net/
 
 LICENSE=	GPLv2
 
