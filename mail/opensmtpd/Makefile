@@ -1,5 +1,3 @@
-# Created by: Ashish SHUKLA <ashish@FreeBSD.org>
-
 PORTNAME=	opensmtpd
 PORTVERSION=	6.8.0
 DISTVERSIONSUFFIX=	p2
@@ -9,6 +7,7 @@ MASTER_SITES=	http://www.opensmtpd.org/archives/
 
 MAINTAINER=	fluffy@FreeBSD.org
 COMMENT=	Security- and simplicity-focused SMTP server from OpenBSD
+WWW=		https://www.OpenSMTPD.org/
 
 LICENSE=	ISCL
 LICENSE_FILE=	${WRKSRC}/LICENSE
