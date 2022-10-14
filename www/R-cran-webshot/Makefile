@@ -1,5 +1,3 @@
-# Created by: Guangyuan Yang <ygy@FreeBSD.org>
-
 PORTNAME=	webshot
 DISTVERSION=	0.5.3
 CATEGORIES=	www
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	ygy@FreeBSD.org
 COMMENT=	Take Screenshots of Web Pages
+WWW=		https://wch.github.io/webshot/
 
 LICENSE=	GPLv2
 
