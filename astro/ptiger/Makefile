@@ -1,5 +1,3 @@
-# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-
 PORTNAME=	ptiger
 PORTVERSION=	2.2
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/tkgeomap/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	tcltk@FreeBSD.org
 COMMENT=	Displays U.S. Census Bureau populated places on a map
+WWW=		http://www.tkgeomap.org/ptiger.html
 
 LIB_DEPENDS=	libtkgeomap.so:astro/tkgeomap
 
