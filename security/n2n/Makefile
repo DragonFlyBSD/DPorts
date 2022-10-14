@@ -1,11 +1,10 @@
-# Created by: Babak Farrokhi <farrokhi@FreeBSD.org>
-
 PORTNAME=	n2n
 PORTVERSION=	${PORT_V_MAJOR}.${PORT_V_MINOR}
 CATEGORIES=	security net net-vpn
 
 MAINTAINER=	farrokhi@FreeBSD.org
 COMMENT=	Layer Two Peer-to-peer VPN
+WWW=		https://www.ntop.org/products/n2n/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
