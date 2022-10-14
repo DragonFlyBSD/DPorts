@@ -1,5 +1,3 @@
-# Created by: janos.mohacsi@bsd.hu
-
 PORTNAME=	limesurvey
 PORTVERSION=	3.24.3
 CATEGORIES=	www
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}${PORTVERSION}+201027
 
 MAINTAINER=	flo@FreeBSD.org
 COMMENT=	PHP-based survey building and runing system
+WWW=		https://www.limesurvey.org/
 
 LICENSE=	GPLv2
 
