@@ -1,5 +1,3 @@
-# Created by: Satoshi TAOKA <taoka@FreeBSD.org>
-
 PORTNAME=	intlfonts
 PORTVERSION=	1.4.2
 CATEGORIES=	x11-fonts
@@ -7,6 +5,7 @@ MASTER_SITES=	GNU
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	International X11 fixed fonts
+WWW=		https://directory.fsf.org/wiki/Intlfonts
 
 LICENSE=	GPLv3+
 
