@@ -1,5 +1,3 @@
-# Created by: Frank Laszlo <laszlof@vonostingroup.com>
-
 PORTNAME=	taglib
 DISTVERSION=	1.12
 CATEGORIES=	audio
@@ -8,6 +6,7 @@ MASTER_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/releases/download/v${DI
 
 MAINTAINER=	jhale@FreeBSD.org
 COMMENT=	Library for manipulating ID3 tags and Ogg comments
+WWW=		https://taglib.org/
 
 LICENSE=	LGPL21 MPL11
 LICENSE_COMB=	dual
