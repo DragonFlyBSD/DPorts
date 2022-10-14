@@ -1,5 +1,3 @@
-# Created by: Pedro Giffuni <pfg@FreeBSD.org>
-
 PORTNAME=	commons-csv
 PORTVERSION=	1.9.0
 CATEGORIES=	textproc java devel
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-bin
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Java support for Comma Separated Value format
+WWW=		https://commons.apache.org/proper/commons-csv/
 
 LICENSE=	APACHE20
 
