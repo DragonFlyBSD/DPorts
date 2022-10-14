@@ -1,5 +1,3 @@
-# Created by: will
-
 PORTNAME=	jslice
 PORTVERSION=	1.0.0
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.pldaniels.com/jslice/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Graphics tool to split up a JPEG image and provide HTML for the slices
+WWW=		https://www.pldaniels.com/jslice/
 
 USES=		jpeg
 
