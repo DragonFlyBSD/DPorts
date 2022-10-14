@@ -1,5 +1,3 @@
-# Created by: chris
-
 PORTNAME=	spampd
 PORTVERSION=	2.61
 PORTREVISION=	2
@@ -7,6 +5,7 @@ CATEGORIES=	mail perl5
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Spamassassin SMTP Proxy
+WWW=		https://github.com/mpaperno/spampd
 
 LICENSE=	GPLv3
 
