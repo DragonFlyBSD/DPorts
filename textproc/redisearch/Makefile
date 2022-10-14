@@ -1,5 +1,3 @@
-# Created by: Sergey A. Osokin <osa@FreeBSD.org>
-
 PORTNAME=	redisearch
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.2.10
@@ -7,6 +5,7 @@ CATEGORIES=	textproc
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Full-text search over Redis
+WWW=		https://oss.redislabs.com/redisearch/
 
 LICENSE=	UNKNOWN
 LICENSE_NAME=	Redis Source Available License Agreement
