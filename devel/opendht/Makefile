@@ -1,5 +1,3 @@
-# Created by: Yuri Victorovich <yuri@rawbw.com>
-
 PORTNAME=	opendht
 DISTVERSION=	1.10.1
 PORTREVISION=	4
@@ -7,6 +5,7 @@ CATEGORIES=	devel net
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Lightweight Distributed Hash Table implementation
+WWW=		https://github.com/savoirfairelinux/opendht/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
