@@ -1,5 +1,3 @@
-# Created by: anders@hack.org
-
 PORTNAME=	pekwm
 DISTVERSIONPREFIX=	release-
 DISTVERSION=	0.2.0
@@ -8,6 +6,7 @@ CATEGORIES=	x11-wm
 
 MAINTAINER=	natbsd@instinctive.eu
 COMMENT=	Light, Unobtrusive, and configurable windowmanager
+WWW=		https://www.pekwm.se/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
