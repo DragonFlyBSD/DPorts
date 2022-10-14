@@ -1,5 +1,3 @@
-# Created by: lukin
-
 PORTNAME=	filerunner
 PORTVERSION=	19.07.08.17
 CATEGORIES=	x11-fm tk
@@ -8,6 +6,7 @@ DISTNAME=	fr-${PORTVERSION}
 
 MAINTAINER=	portmaster@BSDforge.com
 COMMENT=	Tcl/Tk-based filemanager with FTP capabilities
+WWW=		https://sourceforge.net/projects/filerunner/
 
 LICENSE=	GPLv2
 
