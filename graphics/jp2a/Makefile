@@ -1,5 +1,3 @@
-# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-
 PORTNAME=	jp2a
 DISTVERSION=	1.1.1
 CATEGORIES=	graphics
@@ -7,6 +5,7 @@ MASTER_SITES=	https://github.com/Talinx/${PORTNAME}/releases/download/v${DISTVER
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Converts JPG images to ASCII
+WWW=		https://github.com/Talinx/jp2a
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
