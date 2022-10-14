@@ -1,5 +1,3 @@
-# Created by: Thierry Thomas <thierry@pompo.net>
-
 PORTNAME=	getdp
 PORTVERSION=	3.5.0
 CATEGORIES=	science
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-source
 
 MAINTAINER=	stephen@FreeBSD.org
 COMMENT=	Rather general finite element solver using mixed finite elements
+WWW=		https://www.geuz.org/getdp/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
