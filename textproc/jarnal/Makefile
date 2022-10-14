@@ -1,5 +1,3 @@
-# Created by: Thierry Thomas <thierry@pompo.net>
-
 PORTNAME=	jarnal
 PORTVERSION=	1079
 CATEGORIES=	textproc editors
@@ -9,6 +7,7 @@ DIST_SUBDIR=	${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Tool to take notes, annotate documents (including PDF), and more
+WWW=		http://www.dklevine.com/general/software/tc1000/jarnal.htm
 
 LICENSE=	GPLv2
 
