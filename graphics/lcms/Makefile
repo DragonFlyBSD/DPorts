@@ -1,5 +1,3 @@
-# Created by: Mikhail Teterin <mi@aldan.algebra.com>
-
 PORTNAME=	lcms
 PORTVERSION=	1.19
 PORTREVISION=	6
@@ -10,6 +8,7 @@ MASTER_SITES=	SF \
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Light Color Management System -- a color management library
+WWW=		https://www.littlecms.com/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
