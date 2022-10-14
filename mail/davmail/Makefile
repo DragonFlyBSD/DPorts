@@ -1,5 +1,3 @@
-# Created by: John Prather
-
 PORTNAME=	davmail
 PORTVERSION=	6.0.1
 CATEGORIES=	mail java
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}-src-${PORTVERSION}-${REVISION}
 
 MAINTAINER=	jjuanino@gmail.com
 COMMENT=	POP/IMAP/SMTP/Caldav/Carddav/LDAP Exchange Gateway
+WWW=		http://davmail.sourceforge.net/
 
 LICENSE=	GPLv2
 
