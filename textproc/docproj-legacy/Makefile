@@ -1,5 +1,3 @@
-# Created by: Nik Clayton <nik@FreeBSD.org>
-
 PORTNAME=	docproj
 PORTVERSION=	3.1
 CATEGORIES=	textproc
@@ -7,6 +5,7 @@ PKGNAMESUFFIX=	-legacy
 
 MAINTAINER=	doceng@FreeBSD.org
 COMMENT=	Meta-port for the FreeBSD Legacy Documentation Project
+WWW=		https://www.freebsd.org/docproj
 
 RUN_DEPENDS=	${LOCALBASE}/share/xml/dtd/xhtml/xhtml.soc:textproc/xhtml \
 		${LOCALBASE}/share/xml/xmlcharent/catalog:textproc/xmlcharent \
