@@ -1,5 +1,3 @@
-# Created by: hrkfrd@gmail.com
-
 PORTNAME=	echinus
 PORTVERSION=	0.4.9
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	http://plhk.ru/static/echinus/
 
 MAINTAINER=	hrkfdn@gmail.com
 COMMENT=	Dynamic window manager for X11 based on dwm
+WWW=		https://plhk.ru/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
