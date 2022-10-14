@@ -1,5 +1,3 @@
-# Created by: Hubert Tournier <hubert@frbsd.org>
-
 PORTNAME=	geneweb
 DISTVERSIONPREFIX=	distrib-
 DISTVERSION=	6-08
@@ -8,6 +6,7 @@ CATEGORIES=	www
 
 MAINTAINER=	alex@stangl.us
 COMMENT=	Advanced genealogy software
+WWW=		https://opensource.geneanet.org/projects/geneweb/
 
 LICENSE=	GPLv2
 
