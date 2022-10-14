@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	highmoon
 PORTVERSION=	1.2.4
 PORTREVISION=	12
@@ -8,6 +6,7 @@ MASTER_SITES=	http://highmoon.gerdsmeier.net/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Duel in the universe
+WWW=		http://highmoon.gerdsmeier.net/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
