@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	gmodels
 DISTVERSION=	2.18.1.1
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Various R Programming Tools for Model Fitting
+WWW=		https://cran.r-project.org/web/packages/gmodels/
 
 LICENSE=	GPLv2
 
