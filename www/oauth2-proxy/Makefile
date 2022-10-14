@@ -1,11 +1,12 @@
 PORTNAME=	oauth2-proxy
 PORTVERSION=	7.2.1
 DISTVERSIONPREFIX=	v
-PORTREVISION=	2
+PORTREVISION=	6
 CATEGORIES=	www
 
 MAINTAINER=	freebsd@rheinwolf.de
 COMMENT=	OAuth 2.0 proxy server
+WWW=		https://github.com/oauth2-proxy/oauth2-proxy
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
