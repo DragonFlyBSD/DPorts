@@ -1,5 +1,3 @@
-# Created by: Gergely Nagy <8@free.bsd.hu>
-
 PORTNAME=	ratpoison
 PORTVERSION=	1.4.9
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	SAVANNAH
 
 MAINTAINER=	jrm@FreeBSD.org
 COMMENT=	Simple window manager with no fat library dependencies
+WWW=		https://www.nongnu.org/ratpoison/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
