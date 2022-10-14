@@ -1,5 +1,3 @@
-# Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-
 PORTNAME=	GDD
 DISTVERSION=	0.1-13.1
 PORTREVISION=	15
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	Graphics device for R for creating bitmap output
+WWW=		http://www.rosuda.org/R/GDD/
 
 LICENSE=	GPLv2
 
