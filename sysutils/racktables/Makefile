@@ -1,5 +1,3 @@
-# Created by: Ryan Steinmetz <zi@FreeBSD.org>
-
 PORTNAME=	racktables
 DISTVERSION=	0.22.0
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DISTNAME=	RackTables-${DISTVERSION}
 
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Server room asset management suite
+WWW=		https://www.racktables.org/
 
 LICENSE=	GPLv2
 
