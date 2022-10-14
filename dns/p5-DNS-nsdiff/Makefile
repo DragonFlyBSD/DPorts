@@ -1,5 +1,3 @@
-# Created by: Matthew Seaman
-
 PORTNAME=	DNS-nsdiff
 PORTVERSION=	1.82
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	matthew@FreeBSD.org
 COMMENT=	Create an "nsupdate" script from DNS zone file differences
+WWW=		https://dotat.at/prog/nsdiff/
 
 LICENSE=	CC0-1.0
 
