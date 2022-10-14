@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	collidoscope
 PORTVERSION=	0.4.1
 CATEGORIES=	print python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Brute force detection of glyph collisions
+WWW=		https://github.com/simoncozens/collidoscope
 
 LICENSE=	MIT
 
