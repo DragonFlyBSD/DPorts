@@ -1,5 +1,3 @@
-# Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-
 PORTNAME=	gl
 PORTVERSION=	0.6
 PORTREVISION=	5
@@ -10,6 +8,7 @@ DISTNAME=	Gauche-${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	OpenGL binding for Gauche
+WWW=		https://practical-scheme.net/gauche/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING
