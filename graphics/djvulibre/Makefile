@@ -1,5 +1,3 @@
-# Created by: Mikhail Teterin <mi@aldan.algebra.com>
-
 PORTNAME=	djvulibre
 PORTVERSION=	3.5.28
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/djvu/DjVuLibre/${PORTVERSION}
 
 MAINTAINER=	nc@FreeBSD.org
 COMMENT=	DjVu base libraries and utilities
+WWW=		http://djvu.sourceforge.net/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
