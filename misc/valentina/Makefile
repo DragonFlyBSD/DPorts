@@ -4,6 +4,7 @@ CATEGORIES=	misc
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Sewing pattern drafting tool aiming to remake the garment industry
+WWW=		https://smart-pattern.com.ua/en/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE_GPL.txt
@@ -11,8 +12,8 @@ LICENSE_FILE=	${WRKSRC}/LICENSE_GPL.txt
 BROKEN_i386=	ld: error: failed to open bin/valentina: Cannot allocate memory
 
 USES=		compiler:c++11-lang desktop-file-utils dos2unix gl gmake qmake qt:5
-USE_QT=		buildtools_build concurrent core gui linguisttools_build network \
-		opengl printsupport svg testlib_build widgets xml xmlpatterns
+USE_QT=		buildtools:build concurrent core gui linguisttools:build network \
+		opengl printsupport svg testlib:build widgets xml xmlpatterns
 USE_GL=		gl
 USE_LDCONFIG=	yes
 
