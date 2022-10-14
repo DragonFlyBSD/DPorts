@@ -1,5 +1,3 @@
-# Created by: Thierry Thomas <thierry@pompo.net>
-
 PORTNAME=	jgoodies-looks
 DISTVERSION=	2.7.0
 CATEGORIES=	devel java
@@ -9,6 +7,7 @@ EXTRACT_ONLY=	# nothing to extract
 
 MAINTAINER=	makc@FreeBSD.org
 COMMENT=	Improved appearance for Java Swing applications
+WWW=		http://www.jgoodies.com
 
 LICENSE=	BSD3CLAUSE
 
