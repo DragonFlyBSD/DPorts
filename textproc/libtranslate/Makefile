@@ -1,5 +1,3 @@
-# Created by: Jean-Yves Lefort <jylefort@brutele.be>
-
 PORTNAME=	libtranslate
 PORTVERSION=	0.99
 PORTREVISION=	11
@@ -13,6 +11,7 @@ PATCH_DIST_STRIP=-p1
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Natural language translation library
+WWW=		https://www.nongnu.org/libtranslate/
 
 USES=		gettext gmake gnome libtool pathfix pkgconfig
 USE_GNOME=	glib20 intlhack
