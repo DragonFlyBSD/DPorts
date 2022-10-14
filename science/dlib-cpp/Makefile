@@ -1,11 +1,12 @@
 PORTNAME=	dlib
-DISTVERSION=	19.22
+DISTVERSION=	19.24
 CATEGORIES=	science devel math
 MASTER_SITES=	http://dlib.net/files/
 PKGNAMESUFFIX=	-cpp
 
 MAINTAINER=	arrowd@FreeBSD.org
 COMMENT=	Machine learning framework written in C++
+WWW=		http://dlib.net
 
 LICENSE=	BSL
 LICENSE_FILE=	${WRKSRC}/dlib/LICENSE.txt
