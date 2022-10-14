@@ -1,7 +1,7 @@
 PORTNAME=	frr
 PORTVERSION=	7.5.1
 DISTVERSIONPREFIX=	frr-
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	net
 .if defined(PYTHONTOOLS)
 PKGNAMESUFFIX=	7-pythontools
@@ -12,6 +12,7 @@ PKGNAMESUFFIX=	7
 MAINTAINER=	olivier@FreeBSD.org
 
 COMMENT?=	IP routing protocol suite including BGP, IS-IS, OSPF and RIP
+WWW=		https://frrouting.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
