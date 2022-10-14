@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	pngwriter
 PORTVERSION=	0.7.0
 PORTREVISION=	2
@@ -7,6 +5,7 @@ CATEGORIES=	graphics devel
 
 MAINTAINER=	rakuco@FreeBSD.org
 COMMENT=	C++ library for creating PNG images
+WWW=		http://pngwriter.sourceforge.net/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/doc/LICENSE
