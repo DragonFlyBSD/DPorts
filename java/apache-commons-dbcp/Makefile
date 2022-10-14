@@ -1,5 +1,3 @@
-# Created by: Anton Yudin <toha@toha.org.ua>
-
 PORTNAME=	commons-dbcp
 PORTVERSION=	2.9.0
 CATEGORIES=	java databases
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}2-${PORTVERSION}-bin
 
 MAINTAINER=	ale@FreeBSD.org
 COMMENT=	Apache Commons Database Connection Pool
+WWW=		https://commons.apache.org/dbcp/
 
 LICENSE=	APACHE20
 
