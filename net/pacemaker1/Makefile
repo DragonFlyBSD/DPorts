@@ -1,8 +1,8 @@
-# Created by: David Shane Holden <dpejesh@yahoo.com>
-
 PORTVERSION=		1.1.24
 PORTREVISION=		4
 PKGNAMESUFFIX=		1
+
+WWW=		https://www.clusterlabs.org/pacemaker/
 
 .include "${.CURDIR}/Makefile.common"
 
