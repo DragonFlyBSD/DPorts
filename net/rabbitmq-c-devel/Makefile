@@ -1,5 +1,3 @@
-# Created by: Geoff Garside
-
 PORTNAME=	rabbitmq-c
 PORTVERSION=	0.10.0
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	-devel
 
 MAINTAINER=	dch@FreeBSD.org
 COMMENT=	RabbitMQ C AMQP client library
+WWW=		https://www.rabbitmq.com/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE-MIT
