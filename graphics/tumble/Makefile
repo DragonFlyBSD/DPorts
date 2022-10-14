@@ -1,5 +1,3 @@
-# Created by: Rob Farmer <rfarmer@predatorlabs.net>
-
 PORTNAME=	tumble
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.38
@@ -7,6 +5,7 @@ CATEGORIES=	graphics print
 
 MAINTAINER=	fuz@fuz.su
 COMMENT=	Creates a PDF file from image files
+WWW=		http://tumble.brouhaha.com/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
