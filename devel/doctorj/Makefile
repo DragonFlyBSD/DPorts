@@ -1,5 +1,3 @@
-# Created by: Michael L. Hostbaek <mich@freebsdcluster.org>
-
 PORTNAME=	doctorj
 PORTVERSION=	5.1.2
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tool for analyzing Java code and documentation
+WWW=		http://doctorj.sourceforge.net/
 
 USE_JAVA=	yes
 USE_ANT=	yes
