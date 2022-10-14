@@ -1,5 +1,3 @@
-# Created by: Andrey Slusar <anray@FreeBSD.org>
-
 PORTNAME=	ida
 PORTVERSION=	2.14
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	fbida-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Small and fast motif-based image viewer and editor
+WWW=		https://www.kraxel.org/blog/linux/fbida/
 
 LICENSE=	GPLv2
 
