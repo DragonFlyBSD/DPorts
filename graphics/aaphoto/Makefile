@@ -1,5 +1,3 @@
-# Created by: Andras Horvath <han@log69.com>
-
 PORTNAME=	aaphoto
 PORTVERSION=	0.43.1
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ CATEGORIES=	graphics
 
 MAINTAINER=	mail@log69.com
 COMMENT=	Auto Adjust Photo, automatic color correction of photos
+WWW=		http://log69.com/aaphoto_en.html
 
 LICENSE=	GPLv3
 
