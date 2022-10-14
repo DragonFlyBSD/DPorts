@@ -1,5 +1,3 @@
-# Created by: Jesse Smith <jessefrgsmith@yahoo.ca>
-
 PORTNAME=	atanks
 PORTVERSION=	6.5
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${DISTNAME}/
 
 MAINTAINER=	jessefrgsmith@yahoo.ca
 COMMENT=	2D tank game with large, cartoonish weapons
+WWW=		http://atanks.sourceforge.net/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
