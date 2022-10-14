@@ -1,12 +1,13 @@
 PORTNAME=	slurm
 DISTVERSION=	20.02.7
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	sysutils python
 MASTER_SITES=	https://download.schedmd.com/slurm/
 PKGNAMESUFFIX=	-wlm
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple Linux Utility for Resource Management
+WWW=		https://slurm.schedmd.com/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
