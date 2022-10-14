@@ -1,11 +1,10 @@
-# Created by: Bernhard Froehlich <decke@bluelife.at>
-
 PORTNAME=	isbg
 PORTVERSION=	2.2.1
 CATEGORIES=	mail
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Scan an IMAP inbox for spam using SpamAssassin
+WWW=		https://github.com/isbg/isbg
 
 LICENSE=	BSD2CLAUSE
 
