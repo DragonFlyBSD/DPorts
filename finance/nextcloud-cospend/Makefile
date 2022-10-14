@@ -1,7 +1,5 @@
-# Created by: Michael Reifenberger <mr@freebsd.org>
-
 PORTNAME=	cospend
-PORTVERSION=	1.4.8
+PORTVERSION=	1.4.10
 CATEGORIES=	finance www editors
 MASTER_SITES=	https://github.com/eneiluj/${PORTNAME}-nc/releases/download/v${PORTVERSION}/
 PKGNAMEPREFIX=	nextcloud-
@@ -10,6 +8,7 @@ DIST_SUBDIR=	nextcloud
 
 MAINTAINER=	mr@FreeBSD.org
 COMMENT=	Cospend app for Nextcloud
+WWW=		https://apps.nextcloud.com/apps/cospend
 
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -17,6 +16,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 RUN_DEPENDS=	nextcloud${PHP_PKGNAMESUFFIX}>=22:www/nextcloud@${PHP_FLAVOR}
 
 USES=		php:flavors
+IGNORE_WITH_PHP=	82
 NO_BUILD=	yes
 NO_ARCH=	yes
 
