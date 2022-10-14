@@ -1,5 +1,3 @@
-# Created by: Hans Petter Selasky <hselasky@FreeBSD.org>
-
 PORTNAME=	libumidi
 DISTVERSIONPREFIX=	v
 DISTVERSION=		2.1.5
@@ -7,6 +5,7 @@ CATEGORIES=	audio
 
 MAINTAINER=	hselasky@FreeBSD.org
 COMMENT=	Universal general purpose MIDI library
+WWW=		https://github.com/hselasky/libumidi
 
 LICENSE=	BSD2CLAUSE
 
