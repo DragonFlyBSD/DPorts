@@ -1,5 +1,3 @@
-# Created by: William Grzybowski <william88@gmail.com>
-
 PORTNAME=	qtile
 PORTVERSION=	0.18.1
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	ericbsd@FreeBSD.org
 COMMENT=	Small, flexible, scriptable tiling window manager written in Python
+WWW=		http://qtile.org
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
