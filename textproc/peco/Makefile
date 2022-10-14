@@ -1,14 +1,13 @@
-# Created by: Akinori MUSHA aka knu <knu@FreeBSD.org>
-
 PORTNAME=	peco
 PORTVERSION=	0.4.4
 DISTVERSIONPREFIX=	v
-PORTREVISION=	3
+PORTREVISION=	7
 CATEGORIES=	textproc
 MASTER_SITES=	LOCAL/knu
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simplistic interactive filtering tool
+WWW=		https://github.com/peco/peco
 
 LICENSE=	MIT
 
