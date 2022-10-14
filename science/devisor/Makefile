@@ -1,5 +1,3 @@
-# Created by: Pedro F. Giffuni
-
 PORTNAME=	devisor
 PORTVERSION=	2.1
 PORTREVISION=	3
@@ -9,6 +7,7 @@ DISTNAME=	devisor${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Design and Visualization Software Resource for FeatFlow
+WWW=		http://www.featflow.de/
 
 USE_JAVA=	yes
 NO_BUILD=	yes	# Sources are available though
