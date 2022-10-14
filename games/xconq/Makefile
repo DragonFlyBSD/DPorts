@@ -1,5 +1,3 @@
-# Created by: Don Croyle <croyle@gelemna.org>
-
 PORTNAME=	xconq
 DISTVERSION=	7.5.0-0pre.0.20050612
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${DISTNAME}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Graphical multi-player strategy game and game design system
+WWW=		http://xconq.sourceforge.net/
 
 LICENSE=	GPLv2+
 
