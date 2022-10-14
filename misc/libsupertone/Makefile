@@ -1,5 +1,3 @@
-# Created by: Max Khon <fjoe@FreeBSD.org>
-
 PORTNAME=	libsupertone
 PORTVERSION=	0.0.2
 PORTREVISION=	9
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.soft-switch.org/downloads/unicall/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Library for supervisory tone generation and detection
+WWW=		http://www.soft-switch.org/
 
 LICENSE=	LGPL21
 
