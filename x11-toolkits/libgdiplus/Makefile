@@ -1,5 +1,3 @@
-# Created by: Tom McLaughlin <tmclaugh@sdf.lonestar.org>
-
 PORTNAME=	libgdiplus
 PORTVERSION=	6.0.4
 CATEGORIES=	x11-toolkits
@@ -7,6 +5,7 @@ MASTER_SITES=	http://download.mono-project.com/sources/${PORTNAME}/
 
 MAINTAINER=	prj@rootwyrm.com
 COMMENT=	GDI+ API for System.Windows.Forms in Mono
+WWW=		https://www.mono-project.com/docs/gui/libgdiplus/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
