@@ -1,5 +1,3 @@
-# Created by: Andreas Klemm <andreas@klemm.gtn.com>
-
 PORTNAME=	ghostscript
 PORTVERSION=	7.07
 PORTREVISION=	32
@@ -13,6 +11,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	Ghostscript 7.x PostScript interpreter
+WWW=		https://www.cs.wisc.edu/~ghost/doc/gnu/index.htm
 
 LICENSE=	GPLv2
 
