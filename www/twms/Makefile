@@ -5,6 +5,7 @@ CATEGORIES=	www astro
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tiny WMS server
+WWW=		https://github.com/Komzpa/twms
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -18,7 +19,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pyproj>0:graphics/py-pyproj@${PY_FLAVOR} \
 USE_GITHUB=	yes
 GH_ACCOUNT=	Komzpa
 
-USES=		python:3.7+
+USES=		python:3.8+
 USE_PYTHON=	distutils py3kplist optsuffix
 NO_ARCH=	yes
 
