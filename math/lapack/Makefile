@@ -1,5 +1,3 @@
-# Created by: jmz
-
 PORTNAME?=	lapack
 PORTVERSION=	3.10.1
 .if !(defined(BLAS_SLAVEPORT) || defined(CBLAS_SLAVEPORT) || defined(XLAPACK_SLAVEPORT) || defined(LAPACKE_SLAVEPORT))
@@ -19,6 +17,7 @@ DIST_SUBDIR=	lapack-${PORTVERSION}
 
 MAINTAINER?=	fortran@FreeBSD.org
 COMMENT?=	Linear Algebra PACKage
+WWW?=		https://www.netlib.org/lapack/
 
 LICENSE?=	BSD3CLAUSE
 
