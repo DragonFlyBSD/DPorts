@@ -1,5 +1,3 @@
-# Created by: Patrick Seal <patseal@hyperhost.net>
-
 PORTNAME=	tkregexp
 PORTVERSION=	3.1
 CATEGORIES=	misc tk
@@ -10,6 +8,7 @@ EXTRACT_ONLY=
 
 MAINTAINER=	tcltk@FreeBSD.org
 COMMENT=	Interactive regexp design tool
+WWW=		http://laurent.riesterer.free.fr/regexp/
 
 USES=		dos2unix tk
 DOS2UNIX_FILES=	visual_regexp-${PORTVERSION}.tcl
