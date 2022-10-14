@@ -1,11 +1,10 @@
-# Created by: rea@FreeBSD.org
-
 PORTNAME=	mu
 PORTVERSION=	1.6.10
 CATEGORIES=	mail
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	Mail searching frontend for Xapian
+WWW=		http://www.djcbsoftware.nl/code/mu/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -14,7 +13,7 @@ LIB_DEPENDS=	libxapian.so:databases/xapian-core \
 		libgmime-3.0.so:mail/gmime30 \
 		libgc-threaded.so:devel/boehm-gc-threaded \
 		libjson-glib-1.0.so:devel/json-glib
- 
+
 USES=		autoreconf compiler:c++14-lang gettext-runtime gmake gnome \
 		libtool makeinfo pkgconfig
 USE_GITHUB=	yes
