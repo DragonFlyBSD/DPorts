@@ -1,14 +1,13 @@
-# Created by: ijliao
-
 PORTNAME=	raptor2
 PORTVERSION=	2.0.15
-PORTREVISION=	22
+PORTREVISION=	23
 CATEGORIES=	textproc
 MASTER_SITES=	http://download.librdf.org/source/ \
 		SF/librdf/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	RDF Parser Toolkit for Redland
+WWW=		https://librdf.org/raptor/
 
 # Even though GPLv3 is not explicitly mentioned in the port's LICENSE.html, one
 # of its licenses is "GPLv2 or newer", which includes GPLv3.
