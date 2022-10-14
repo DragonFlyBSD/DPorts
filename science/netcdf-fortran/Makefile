@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	netcdf-fortran
 PORTVERSION=	4.5.4
 CATEGORIES=	science
@@ -8,6 +6,7 @@ MASTER_SITES=	https://downloads.unidata.ucar.edu/netcdf-fortran/${PORTVERSION}/ 
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Fortran library for machine-independent, array-oriented data access
+WWW=		https://www.unidata.ucar.edu/software/netcdf/
 
 LICENSE=	UCAR_UNIDATA
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
