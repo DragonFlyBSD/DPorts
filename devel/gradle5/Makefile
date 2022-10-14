@@ -1,5 +1,3 @@
-# Created by: Gasol Wu <gasol.wu@gmail.com>
-
 PORTNAME=	gradle
 PORTVERSION=	5.0
 CATEGORIES=	devel java
@@ -9,6 +7,7 @@ PKGNAMESUFFIX=	5
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Project automation tool
+WWW=		https://www.gradle.org/
 
 LICENSE=	APACHE20
 
