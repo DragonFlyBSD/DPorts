@@ -1,13 +1,12 @@
-# Created by: Mathias Monnerville <mathias@monnerville.com>
-
 PORTNAME=	glpi
-PORTVERSION=	9.5.7
+PORTVERSION=	10.0.3
 PORTEPOCH=	1
 CATEGORIES=	www
 MASTER_SITES=	https://github.com/glpi-project/glpi/releases/download/${PORTVERSION}/
 
 MAINTAINER=	mathias@monnerville.com
 COMMENT=	Free IT and asset management software
+WWW=		https://glpi-project.org/
 
 LICENSE=	GPLv2
 
