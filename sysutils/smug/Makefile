@@ -1,11 +1,12 @@
 PORTNAME=	smug
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.2.8
-PORTREVISION=	1
+DISTVERSION=	0.3.2
+PORTREVISION=	3
 CATEGORIES=	sysutils
 
 MAINTAINER=	lcook@FreeBSD.org
 COMMENT=	Session manager and task runner for tmux
+WWW=		https://github.com/ivaaaan/smug
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
