@@ -1,5 +1,3 @@
-# Created by: Stefan Pauly <stefan@fh-mainz.de>
-
 PORTNAME=	RRDTool-OO
 PORTVERSION=	0.36
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Object-oriented interface to RRDTool
+WWW=		https://metacpan.org/release/RRDTool-OO
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
