@@ -1,14 +1,12 @@
-# Created by: Sébastien Santoro <dereckson@gmail.com>
-
 PORTNAME=	astrometry
-PORTVERSION=	0.89
-PORTREVISION=	2
+PORTVERSION=	0.91
 CATEGORIES=	astro
 MASTER_SITES=	http://astrometry.net/downloads/
 DISTNAME=	${PORTNAME}.net-${PORTVERSION}
 
 MAINTAINER=	rhurlin@FreeBSD.org
 COMMENT=	Astronomic calibration service
+WWW=		https://astrometry.net/
 
 LICENSE=	GPLv3+
 
@@ -28,7 +26,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}astropy>0:astro/py-astropy@${PY_FLAVOR} \
 USES=		gmake jpeg localbase pkgconfig python shebangfix
 USE_LDCONFIG=	yes
 
-SHEBANG_FILES=	bin/* sdss/*.py solver/*.py util/[!c]*.py
+SHEBANG_FILES=	bin/* plot/plotann.py sdss/*.py solver/*.py util/[!c]*.py
 
 MAKE_ARGS=	NETPBM_INC="-I${LOCALBASE}/include/netpbm" \
 		NETPBM_LIB="-L${LOCALBASE}/lib -lnetpbm" \
