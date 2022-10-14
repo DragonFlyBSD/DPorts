@@ -1,13 +1,13 @@
-# Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-
 PORTNAME=	jsonm
 PORTVERSION=	1.0.1
+PORTREVISION=	1
 CATEGORIES=	converters
 MASTER_SITES=	https://erratique.ch/software/jsonm/releases/
 PKGNAMEPREFIX=	ocaml-
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Non-blocking streaming JSON codec for OCaml
+WWW=		https://erratique.ch/software/jsonm
 
 LICENSE=	ISCL
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
