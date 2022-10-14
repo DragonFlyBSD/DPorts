@@ -1,5 +1,3 @@
-# Created by: loïc bartoletti <lbartoletti@FreeBSD.org>
-
 PORTNAME=	sqlitebrowser
 PORTVERSION=	3.12.1
 PORTREVISION=	7
@@ -8,6 +6,7 @@ CATEGORIES=	databases
 
 MAINTAINER=	lbartoletti@FreeBSD.org
 COMMENT=	Visual tool to manage SQLite databases
+WWW=		https://sqlitebrowser.org/
 
 LICENSE=	MPL20 GPLv3
 LICENSE_COMB=	dual
@@ -19,7 +18,7 @@ LIB_DEPENDS=	libqscintilla2_qt5.so:devel/qscintilla2-qt5
 USES=		compiler:c++11-lang cmake desktop-file-utils gnome qt:5 sqlite
 CMAKE_ARGS+=	-DQT_INCLUDE_DIR=${QT_INCDIR} -DQT_LIBRARY_DIR=${QT_LIBDIR}
 USE_QT=		core concurrent gui network printsupport testlib widgets \
-		buildtools_build linguisttools_build qmake_build xml
+		buildtools:build linguisttools:build qmake:build xml
 USE_GITHUB=	yes
 
 PORTSCOUT=	ignore:1
