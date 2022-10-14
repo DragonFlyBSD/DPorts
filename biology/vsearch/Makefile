@@ -1,10 +1,11 @@
 PORTNAME=		vsearch
 DISTVERSIONPREFIX=	v
-DISTVERSION=		2.21.1
+DISTVERSION=		2.22.1
 CATEGORIES=		biology
 
 MAINTAINER=	jwb@FreeBSD.org
 COMMENT=	Versatile open-source tool for metagenomics
+WWW=		https://github.com/torognes/vsearch
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
