@@ -1,5 +1,3 @@
-# Created by: George Reid <greid@ukug.uk.freebsd.org>
-
 PORTNAME=	zziplib
 PORTVERSION=	0.13.72
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Library to provide transparent read access to zipped files
+WWW=		https://github.com/gdraheim/zziplib
 
 LICENSE=	LGPL21 MPL11
 LICENSE_COMB=	dual
