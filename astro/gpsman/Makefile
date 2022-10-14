@@ -1,5 +1,3 @@
-# Created by: David Wolfskill
-
 PORTNAME=	gpsman
 PORTVERSION=	6.4.4.2
 CATEGORIES=	astro tk geography
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/${PORTNAME}/distrib
 
 MAINTAINER=	david@catwhisker.org
 COMMENT=	Tcl/Tk-based GPS management utility
+WWW=		http://gpsman.sourceforge.net/
 
 OPTIONS_DEFINE=	DOCS
 
