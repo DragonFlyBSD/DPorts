@@ -1,5 +1,3 @@
-# Created by: Alejandro Pulver <alejandro@varnet.biz>
-
 PORTNAME=	gngeo
 PORTVERSION=	0.8
 DISTVERSIONPREFIX=	${PORTNAME}_
@@ -9,6 +7,7 @@ MASTER_SITES=	LOCAL/acm/${PORTNAME}
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	NeoGeo emulator
+WWW=		https://github.com/pepone42/gngeo
 
 LICENSE=	GPLv2
 
