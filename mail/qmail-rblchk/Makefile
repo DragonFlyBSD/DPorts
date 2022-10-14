@@ -1,5 +1,3 @@
-# Created by: Emanuel Haupt <ehaupt@critical.ch>
-
 PORTNAME=	qmail-rblchk
 PORTVERSION=	2.4.1
 PORTREVISION=	1
@@ -9,6 +7,7 @@ MASTER_SITES=	http://www.morettoni.net/qmail/ \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Qmail RBL filter
+WWW=		http://www.morettoni.net/qmail-rblchk.en.html
 
 USES=		groff qmail:run
 
