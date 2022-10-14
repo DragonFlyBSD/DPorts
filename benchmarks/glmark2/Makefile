@@ -1,11 +1,10 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	glmark2
 PORTVERSION=	2021.12
 CATEGORIES=	benchmarks wayland
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Benchmark for OpenGL (ES) 2.0
+WWW=		https://launchpad.net/glmark2
 
 LICENSE=	GPLv3
 
