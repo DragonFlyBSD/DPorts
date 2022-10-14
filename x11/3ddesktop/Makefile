@@ -1,5 +1,3 @@
-# Created by: Adam Weinberger <adamw@FreeBSD.org>
-
 PORTNAME=	3ddesktop
 PORTVERSION=	0.2.9
 PORTREVISION=	15
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/desk3d/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	3D Virtual Desktop Switcher
+WWW=		http://desk3d.sourceforge.net/
 
 LIB_DEPENDS=	libImlib2.so:graphics/imlib2
 
