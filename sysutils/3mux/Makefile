@@ -1,11 +1,12 @@
 PORTNAME=	3mux
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.1.0
-PORTREVISION=	3
+PORTREVISION=	7
 CATEGORIES=	sysutils
 
 MAINTAINER=	lcook@FreeBSD.org
 COMMENT=	Terminal multiplexer inspired by i3
+WWW=		https://github.com/aaronjanse/3mux
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
