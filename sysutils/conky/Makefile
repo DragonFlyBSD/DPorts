@@ -1,12 +1,11 @@
-# Created by: Roman Bogorodskiy <novel@FreeBSD.org>
-
 PORTNAME=	conky
-PORTVERSION=	1.12.2
+PORTVERSION=	1.13.1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	sysutils
 
 MAINTAINER=	madpilot@FreeBSD.org
 COMMENT?=	Advanced, highly configurable system monitor for X11
+WWW=		https://github.com/brndnmtthws/conky
 
 LIB_DEPENDS=	libinotify.so:devel/libinotify
 BUILD_DEPENDS=	db2x_xsltproc:textproc/docbook2X \
@@ -35,7 +34,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	brndnmtthws
 
 OPTIONS_DEFINE=	APCUPSD CURL DOCS EXAMPLES IPV6 METAR MOC MPD NCURSES RSS \
-		X11 XMMS2 XOAP
+		X11 XOAP
 
 OPTIONS_GROUP?=	X11
 OPTIONS_GROUP_X11=	ARGB DOUBLE_BUFFER IMLIB2 XFT XINERAMA LUA_CAIRO LUA_IMLIB2 LUA_RSVG
@@ -113,10 +112,6 @@ XFT_IMPLIES=		X11
 XINERAMA_CMAKE_BOOL=	BUILD_XINERAMA
 XINERAMA_USE=		xorg=xinerama
 XINERAMA_IMPLIES=	X11
-
-XMMS2_DESC=		Control XMMS2 media player
-XMMS2_CMAKE_BOOL=	BUILD_XMMS2
-XMMS2_LIB_DEPENDS=	libxmmsclient.so:audio/xmms2
 
 XOAP_DESC=		Display XOAP weather reports
 XOAP_CMAKE_BOOL=	BUILD_WEATHER_XOAP
