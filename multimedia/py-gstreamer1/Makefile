@@ -1,5 +1,3 @@
-# Created by: Koop Mast <kwm@rainbow-runner.nl>
-
 PORTNAME=	gstreamer
 DISTVERSION=	1.16.3
 CATEGORIES=	multimedia python
@@ -10,6 +8,7 @@ DISTNAME=	gst-python-${PORTVERSION}
 
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	GStreamer python bindings
+WWW=		https://gstreamer.freedesktop.org/
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
