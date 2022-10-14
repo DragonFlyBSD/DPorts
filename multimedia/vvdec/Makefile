@@ -1,10 +1,11 @@
 PORTNAME=	vvdec
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.5.0
+DISTVERSION=	1.6.0
 CATEGORIES=	multimedia python
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Versatile Video Coding (VVC) decoder
+WWW=		https://github.com/fraunhoferhhi/vvdec
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
