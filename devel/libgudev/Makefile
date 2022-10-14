@@ -1,5 +1,3 @@
-# Created by johalun0@gmail.com
-
 PORTNAME=	libgudev
 PORTVERSION=	234
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ MASTER_SITES=	GNOME
 
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	GObject bindings for libudev
+WWW=		https://wiki.gnome.org/Projects/libgudev
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
