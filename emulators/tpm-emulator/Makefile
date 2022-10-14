@@ -1,5 +1,3 @@
-# Created by: Sebastian Schuetz <sschuetz@fhm.edu>
-
 PORTNAME=	tpm-emulator
 PORTVERSION=	0.7.4
 PORTREVISION=	2
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME:S,-,_,}-${PORTVERSION}
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	Trusted Platform Module (TPM) emulator
+WWW=		http://tpm-emulator.berlios.de/
 
 LICENSE=	GPLv2
 
