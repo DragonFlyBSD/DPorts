@@ -7,8 +7,9 @@ PKGNAMEPREFIX=	wasi-
 DISTNAME=	llvm-project-${DISTVERSION}.src
 DISTFILES=	llvm-project-${DISTVERSION}.src${EXTRACT_SUFX}
 
-MAINTAINER=	greg@unrelenting.technology
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	C++ standard library for WebAssembly System Interface
+WWW=		https://llvm.org/
 
 LICENSE=	LLVM2
 LICENSE_NAME=	Apache License 2.0 with LLVM Exceptions
