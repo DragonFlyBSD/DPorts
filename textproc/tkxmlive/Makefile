@@ -1,5 +1,3 @@
-# Created by: nivit@users.sourceforge.net
-
 PORTNAME=		tkxmlive
 PORTVERSION=		0.1.5
 PORTREVISION=		2
@@ -9,6 +7,7 @@ DISTNAME=		tkxmlive-0.1.5-1
 
 MAINTAINER=		nivit@FreeBSD.org
 COMMENT=		Tcl/Tk XML intelligence visual editor
+WWW=		http://tkxmlive.sourceforge.net/
 
 RUN_DEPENDS+=		${LOCALBASE}/lib/bwidget/pkgIndex.tcl:x11-toolkits/bwidget
 
