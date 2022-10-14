@@ -1,3 +1,6 @@
 A Pluggable Terraform Linter
 
-WWW: https://github.com/terraform-linters/tflint
+Features
+ - Find possible errors
+ - Warn about deprecated syntax, unused declarations
+ - Enforce best practices, naming conventions
