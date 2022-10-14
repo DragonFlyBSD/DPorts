@@ -1,5 +1,3 @@
-# Created by: Stas Timokhin <stast@bsdportal.ru>
-
 PORTNAME=	opensonic
 PORTVERSION=	0.1.4
 PORTREVISION=	5
@@ -12,6 +10,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 
 MAINTAINER=	devel@stasyan.com
 COMMENT=	Game based on the "Sonic the Hedgehog" universe
+WWW=		http://opensnc.sourceforge.net
 
 BUILD_DEPENDS=	alpng>=1.3:graphics/alpng
 LIB_DEPENDS=	liballeg.so:devel/allegro \
