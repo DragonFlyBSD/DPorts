@@ -1,11 +1,12 @@
 PORTNAME=	stressdisk
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.0.12
-PORTREVISION=	2
+PORTREVISION=	6
 CATEGORIES=	sysutils
 
 MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Stress test your disks before trusting your valuable data to them
+WWW=		https://github.com/ncw/stressdisk
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
