@@ -1,14 +1,13 @@
-# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-
 PORTNAME=	frei0r
 PORTVERSION=	1.8.0
 DISTVERSIONPREFIX=	plugins-
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	graphics
 MASTER_SITES?=	https://files.dyne.org/frei0r/releases/
 
 MAINTAINER=	jhale@FreeBSD.org
 COMMENT?=	Minimalistic plugin API for video effects
+WWW=		https://frei0r.dyne.org/
 
 .if !defined(BUILDING_FREI0R_METAPORT)
 
