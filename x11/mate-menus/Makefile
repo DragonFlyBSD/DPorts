@@ -1,5 +1,3 @@
-# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-
 PORTNAME=	mate-menus
 PORTVERSION=	1.26.0
 CATEGORIES=	x11 mate
@@ -8,6 +6,7 @@ DIST_SUBDIR=	mate
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Implementation of the FreeDesktop Desktop Menu Spec
+WWW=		https://mate-desktop.org/
 
 LICENSE=	GPLv2 LGPL20
 LICENSE_COMB=	dual
