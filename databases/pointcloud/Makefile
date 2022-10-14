@@ -1,12 +1,11 @@
-# Created by: lbartoletti <lbartoletti@FreeBSD.org>
-
 PORTNAME=	pointcloud
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.2.2
+DISTVERSION=	1.2.4
 CATEGORIES=	databases geography
 
 MAINTAINER=	lbartoletti@FreeBSD.org
 COMMENT=	LIDAR types for PostgreSQL
+WWW=		https://github.com/pgpointcloud/pointcloud/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
