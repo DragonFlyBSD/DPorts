@@ -1,5 +1,3 @@
-# Created by: Li-Lun Wang <llwang@infor.org>
-
 PORTNAME=	mdp
 PORTVERSION=	3.5
 PORTREVISION=	3
@@ -10,6 +8,7 @@ DISTNAME=	${PORTNAME:tu}-${PORTVERSION}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Modular toolkit for Data Processing
+WWW=		http://mdp-toolkit.sourceforge.net/
 
 LICENSE=	BSD3CLAUSE
 
