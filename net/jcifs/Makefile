@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	jcifs
 PORTVERSION=	1.3.19
 PORTEPOCH=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	http://jcifs.samba.org/src/
 
 MAINTAINER=	ale@FreeBSD.org
 COMMENT=	Java CIFS Client Library
+WWW=		https://jcifs.samba.org/
 
 LICENSE=	LGPL21
 
