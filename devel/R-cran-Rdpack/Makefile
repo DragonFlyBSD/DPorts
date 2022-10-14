@@ -1,10 +1,11 @@
 PORTNAME=	Rdpack
-DISTVERSION=	2.3.1
+DISTVERSION=	2.4
 CATEGORIES=	devel
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Update and Manipulate Rd Documentation Objects
+WWW=		https://cran.r-project.org/web/packages/Rdpack/
 
 LICENSE=	GPLv2+
 
