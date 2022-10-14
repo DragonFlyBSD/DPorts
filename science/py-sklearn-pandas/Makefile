@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	sklearn-pandas
 PORTVERSION=	2.2.0
 CATEGORIES=	science python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Pandas integration with sklearn
+WWW=		https://github.com/scikit-learn-contrib/sklearn-pandas
 
 LICENSE=	BSD2CLAUSE ZLIB
 LICENSE_COMB=	multi
