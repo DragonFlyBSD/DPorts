@@ -1,5 +1,3 @@
-# Created by: David Naylor <dbn@FreeBSD.org>
-
 PORTNAME=	gss
 DISTVERSION=	2.2-3
 CATEGORIES=	math
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	General Smoothing Splines
+WWW=		https://CRAN.R-project.org/package=gss
 
 LICENSE=	GPLv2+
 
