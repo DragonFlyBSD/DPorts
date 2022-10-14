@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	rgeo-shapefile
 PORTVERSION=	3.0.0
 CATEGORIES=	science rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	RGeo module for reading the ESRI shapefile format
+WWW=		https://github.com/rgeo/rgeo-shapefile
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
