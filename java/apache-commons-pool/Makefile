@@ -1,5 +1,3 @@
-# Created by: Anton Yudin <toha@toha.org.ua>
-
 PORTNAME=	commons-pool
 PORTVERSION=	2.11.1
 CATEGORIES=	java devel
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}2-${PORTVERSION}-bin
 
 MAINTAINER=	ale@FreeBSD.org
 COMMENT=	Apache Commons Object-pooling API
+WWW=		https://commons.apache.org/proper/commons-pool/
 
 LICENSE=	APACHE20
 
