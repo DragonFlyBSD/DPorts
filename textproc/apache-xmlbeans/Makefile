@@ -1,5 +1,3 @@
-# Created by: Thierry Thomas <thierry@pompo.net>
-
 PORTNAME=	xmlbeans
 PORTVERSION=	3.1.0 # Do not upgrade without checking compatibility with math/R-cran-XLConnect
 CATEGORIES=	textproc java
@@ -12,6 +10,7 @@ EXTRACT_ONLY=	${PORTNAME}-bin-${PORTVERSION}${EXTRACT_SUFX}
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Java classes for XML
+WWW=		https://xmlbeans.apache.org/
 
 LICENSE=	APACHE20
 
