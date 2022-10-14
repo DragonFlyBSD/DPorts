@@ -1,5 +1,3 @@
-# Created by: Kirill Ponomarew <krion@FreeBSD.org>
-
 PORTNAME=	briquolo
 PORTVERSION=	0.5.7
 PORTREVISION=	16
@@ -8,6 +6,7 @@ MASTER_SITES=	http://briquolo.free.fr/download/
 
 MAINTAINER=	martymac@FreeBSD.org
 COMMENT=	Breakout clone with an OpenGL 3D representation
+WWW=		http://briquolo.free.fr/en/
 
 LICENSE=	GPLv2
 
