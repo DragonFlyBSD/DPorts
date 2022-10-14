@@ -1,11 +1,12 @@
 PORTNAME=	libaccounts-qt5
 DISTVERSION=	1.16
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	net-im
 DIST_SUBDIR=	KDE/${GL_ACCOUNT}
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Qt5 wrapper for SSO framework
+WWW=		https://code.google.com/p/accounts-sso/
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -15,7 +16,7 @@ LIB_DEPENDS=	libaccounts-glib.so:net-im/libaccounts-glib
 USES=		compiler:c++17-lang gettext-runtime gnome qmake \
 		pathfix pkgconfig python qt:5 tar:bz2
 USE_GNOME=	glib20
-USE_QT=		buildtools_build core qmake_build testlib xml
+USE_QT=		buildtools:build core qmake:build testlib xml
 
 # gitlab variables
 USE_GITLAB=	yes
