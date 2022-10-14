@@ -1,5 +1,3 @@
-# Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-
 PORTNAME=	cryptgps
 PORTVERSION=	0.2.1
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	ocaml-
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Symmetric cryptographic algorithms package for OCaml
+WWW=		https://www.ocaml-programming.de/packages/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
