@@ -1,14 +1,13 @@
-# Created by: Jev Björsell <ports@ecadlabs.com>
-
 PORTNAME=	prometheus
 PORTVERSION=	1.8.2
 DISTVERSIONPREFIX=	v
-PORTREVISION=	4
+PORTREVISION=	8
 CATEGORIES=	net-mgmt
 PKGNAMESUFFIX=	1
 
 MAINTAINER=	ports@ecadlabs.com
 COMMENT=	Systems monitoring and alerting toolkit
+WWW=		https://prometheus.io/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
