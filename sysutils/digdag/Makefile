@@ -1,5 +1,3 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	digdag
 DISTVERSION=	0.10.4
 PORTREVISION=	1
@@ -10,6 +8,7 @@ EXTRACT_SUFX=	.jar
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Workload Automation System
+WWW=		https://www.digdag.io/
 
 LICENSE=	APACHE20
 
