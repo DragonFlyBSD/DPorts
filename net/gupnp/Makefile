@@ -1,19 +1,18 @@
-# Created by: Martin Wilke <miwi@FreeBSD.org>
-
 PORTNAME=	gupnp
-PORTVERSION=	1.5.1
+PORTVERSION=	1.5.4
 CATEGORIES=	net
 MASTER_SITES=	GNOME
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Framework for UPnP devices
+WWW=		https://wiki.gnome.org/Projects/GUPnP
 
 LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	glib>=2.69:devel/glib20 \
 		gobject-introspection>=1.36:devel/gobject-introspection \
-		gssdp>=1.5.0:net/gssdp \
+		gssdp>=1.5.2:net/gssdp \
 		libsoup3>=2.99.0:devel/libsoup3
 LIB_DEPENDS=	libgssdp-1.6.so:net/gssdp \
 		libsoup-3.0.so:devel/libsoup3 \
@@ -35,8 +34,8 @@ SHEBANG_FILES=	tools/gupnp-binding-tool
 OPTIONS_DEFINE=	VAPI
 OPTIONS_SUB=	yes
 
-VAPI_BUILD_DEPENDS=	vala>=0.20:lang/vala
 VAPI_MESON_TRUE=	vapi
+VAPI_USES=		vala:build
 
 .include <bsd.port.pre.mk>
 
