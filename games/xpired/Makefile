@@ -1,5 +1,3 @@
-# Created by: Edwin Groothuis <edwin@mavetju.org>
-
 PORTNAME=	xpired
 PORTVERSION=	1.22
 PORTREVISION=	24
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-linux_source
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Action-puzzle maze escape game
+WWW=		http://xpired.sourceforge.net/
 
 LICENSE=	GPLv2+
 
