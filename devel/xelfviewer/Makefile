@@ -1,18 +1,17 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	${GH_PROJECT:[1]:tl}
 PORTVERSION=	0.05
 CATEGORIES=	devel
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Cross-platform graphical ELF file viewer/editor
+WWW=		https://github.com/horsicq/XELFViewer
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USES=		pkgconfig qt:5
 GNU_CONFIGURE=	yes
-USE_QT=		buildtools_build linguisttools_build qmake_build \
+USE_QT=		buildtools:build linguisttools:build qmake:build \
 		concurrent core gui opengl printsupport sql widgets
 USE_GITHUB=	yes
 GH_ACCOUNT=	horsicq
