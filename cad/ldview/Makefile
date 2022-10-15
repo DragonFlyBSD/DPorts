@@ -5,6 +5,7 @@ CATEGORIES=	cad
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	LDraw model viewer
+WWW=		https://tcobbs.github.io/ldview/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/../license.txt
@@ -18,7 +19,7 @@ RUN_DEPENDS=	bash:shells/bash \
 		ldraw>0:cad/ldraw
 
 USES=		desktop-file-utils gl gmake jpeg qmake qt:5 shared-mime-info shebangfix xorg
-USE_QT=		core gui linguist opengl printsupport widgets buildtools_build qmake_build
+USE_QT=		core gui linguist opengl printsupport widgets buildtools:build qmake:build
 USE_GL=		gl glu
 USE_XORG=	x11
 
