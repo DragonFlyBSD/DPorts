@@ -1,18 +1,17 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	${GH_PROJECT:[1]:tl}
 PORTVERSION=	0.03
 CATEGORIES=	devel
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Cross-platform graphical PE file viewer/editor
+WWW=		https://github.com/horsicq/XPEViewer
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USES=		desktop-file-utils pkgconfig qt:5
 GNU_CONFIGURE=	yes
-USE_QT=		buildtools_build linguisttools_build qmake_build \
+USE_QT=		buildtools:build linguisttools:build qmake:build \
 		concurrent core gui opengl printsupport widgets
 USE_GITHUB=	yes
 GH_ACCOUNT=	horsicq
