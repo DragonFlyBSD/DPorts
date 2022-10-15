@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	memisc
 DISTVERSION=	0.99.30.7
 CATEGORIES=	math
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Provides an infrastructure for the management of survey data
+WWW=		https://www.martin-elff.net/software/ #memisc
 
 LICENSE=	GPLv2
 
