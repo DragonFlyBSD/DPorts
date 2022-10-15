@@ -1,10 +1,11 @@
 PORTNAME=	sass
-PORTVERSION=	0.4.1
+PORTVERSION=	0.4.2
 CATEGORIES=	textproc
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Syntactically Awesome Style Sheets ('Sass')
+WWW=		https://cran.r-project.org/web/packages/sass/
 
 LICENSE=	MIT
 
