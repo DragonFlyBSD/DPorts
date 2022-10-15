@@ -1,6 +1,5 @@
 PORTNAME=	prison
 DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
-PORTREVISION=	1
 CATEGORIES=	graphics kde kde-frameworks
 
 MAINTAINER=	kde@FreeBSD.org
@@ -11,8 +10,8 @@ LIB_DEPENDS=	libdmtx.so:graphics/libdmtx \
 		libZXing.so:textproc/zxing-cpp
 
 USES=		cmake compiler:c++11-lang kde:5 qt:5 tar:xz
-USE_KDE=	ecm_build
+USE_KDE=	ecm:build
 USE_QT=		core declarative gui multimedia network widgets \
-		buildtools_build qmake_build testlib_build
+		buildtools:build qmake:build testlib:build
 
 .include <bsd.port.mk>
