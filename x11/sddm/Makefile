@@ -9,6 +9,7 @@ PATCHFILES=	e93bf95c54ad8c2a1604f8d7be05339164b19308.patch:-p1
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	QML based login manager
+WWW=		https://github.com/sddm/sddm
 
 # The source code is GPLv2+, but the provided themes are:
 #  - CC-BY 3.0 (default greeter theme, maldives)
@@ -27,9 +28,9 @@ RUN_DEPENDS=	dbus-run-session:devel/dbus \
 USES=		cmake compiler:c++11-lang cpe kde:5 pkgconfig python:build qt:5 xorg
 CPE_VENDOR=	${PORTNAME}_project
 USE_GITHUB=	yes
-USE_KDE=	ecm_build
+USE_KDE=	ecm:build
 USE_QT=		core declarative dbus gui network \
-		buildtools_build linguisttools_build qmake_build testlib_build
+		buildtools:build linguisttools:build qmake:build testlib:build
 USE_XORG=	xcb
 
 CONFLICTS_INSTALL=	lightdm
