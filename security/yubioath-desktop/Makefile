@@ -6,6 +6,7 @@ CATEGORIES=	security
 
 MAINTAINER=	daniel@shafer.cc
 COMMENT=	GUI for displaying OATH codes with a Yubikey
+WWW=		https://developers.yubico.com/yubioath-desktop/
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -20,7 +21,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}yubikey-manager>=0.7.0:security/py-yubikey-m
 USES=		compiler:c++11-lang desktop-file-utils gl python:3.5+ qmake qt:5 \
 		shebangfix ssl
 USE_GL=		gl
-USE_QT=		core declarative gui network quickcontrols2 svg widgets buildtools_build
+USE_QT=		core declarative gui network quickcontrols2 svg widgets buildtools:build
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	Yubico
