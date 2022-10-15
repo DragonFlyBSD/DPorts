@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	vars
 DISTVERSION=	1.5-6
 CATEGORIES=	finance
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	VAR Modelling
+WWW=		https://cran.r-project.org/web/packages/vars/
 
 LICENSE=	GPLv2+
 
