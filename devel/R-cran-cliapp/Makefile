@@ -1,5 +1,3 @@
-# Created by: Guangyuan Yang <ygy@FreeBSD.org>
-
 PORTNAME=	cliapp
 DISTVERSION=	0.1.1
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	ygy@FreeBSD.org
 COMMENT=	Create Rich Command Line Applications
+WWW=		https://github.com/r-lib/cliapp #readme
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
