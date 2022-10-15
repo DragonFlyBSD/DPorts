@@ -11,6 +11,7 @@ EXTRACT_ONLY=	${DISTNAME}.tar.gz ${DISTFILE_gmic} ${DISTFILE_cimg}
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Versatile Qt front-end to GMIC
+WWW=		https://github.com/c-koi/gmic-qt
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -26,7 +27,7 @@ gimp_PKGNAMESUFFIX=	-gimp
 
 USES=		cmake compiler:c++14-lang pkgconfig qt:5 xorg
 USE_QT=		core gui network widgets \
-		buildtools_build linguisttools_build qmake_build
+		buildtools:build linguisttools:build qmake:build
 USE_XORG=	ice sm x11 xext
 
 USE_GITHUB=	yes
