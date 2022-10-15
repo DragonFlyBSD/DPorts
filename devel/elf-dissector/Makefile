@@ -5,6 +5,7 @@ CATEGORIES=	devel kde
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Tools for inspecting, analyzing and optimizing ELF files
+WWW=		https://invent.kde.org/sdk/elf-dissector
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -18,9 +19,9 @@ USES=		cmake compiler:c++17-lang \
 		kde:5 pkgconfig qt:5
 
 USE_QT=		core \
-		buildtools_build qmake_build testlib_build
+		buildtools:build qmake:build testlib:build
 USE_KDE=	itemmodels \
-		doctools_build ecm_build
+		doctools:build ecm:build
 
 KDE_INVENT=	942274185cc89fabf74f5f1efb886ecf210ab2fb sdk
 
