@@ -1,5 +1,3 @@
-# Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-
 PORTNAME=	microbenchmark
 PORTREVISION=	5
 DISTVERSION=	1.4-2
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	Infrastructure to measure the execution time of R expressions
+WWW=		https://cran.r-project.org/web/packages/microbenchmark/index.html
 
 LICENSE=	BSD3CLAUSE
 
