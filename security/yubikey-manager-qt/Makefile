@@ -6,6 +6,7 @@ CATEGORIES=	security
 
 MAINTAINER=	daniel@shafer.cc
 COMMENT=	Cross-platform application for configuring any YubiKey
+WWW=		https://developers.yubico.com/yubikey-manager-qt/
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -19,7 +20,7 @@ USES=		compiler:c++11-lang gl pkgconfig python:3.5+ qt:5 qmake \
 		shebangfix
 USE_GL=		gl
 USE_QT=		core declarative graphicaleffects gui network quickcontrols \
-		quickcontrols2 svg widgets buildtools_build
+		quickcontrols2 svg widgets buildtools:build
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	Yubico
