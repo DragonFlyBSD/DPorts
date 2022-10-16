@@ -1,5 +1,3 @@
-# Created by: Janni
-
 PORTNAME=	el
 DISTVERSION=	1.9.5.9-1
 PORTREVISION=	2
@@ -8,6 +6,7 @@ CATEGORIES=	games
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Eternal Lands is a free 3D MMORPG
+WWW=		https://www.eternal-lands.com/
 
 BROKEN_sparc64=		fails to build on sparc64
 
