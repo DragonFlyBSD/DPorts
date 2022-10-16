@@ -1,12 +1,13 @@
 PORTNAME=	zabbix6
-DISTVERSION=	6.0.8
+DISTVERSION=	6.0.9
 CATEGORIES=	net-mgmt
 MASTER_SITES=	https://cdn.zabbix.com/zabbix/sources/stable/${DISTVERSION:R}/
 PKGNAMESUFFIX?=	-server
 DISTNAME=	zabbix-${DISTVERSION}
 
-MAINTAINER=	cy@FreeBSD.org
+MAINTAINER=	otis@FreeBSD.org
 COMMENT=	Enterprise-class open source distributed monitoring (${PKGNAMESUFFIX:S/^-//})
+WWW=		https://www.zabbix.com/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -14,7 +15,8 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 LIB_DEPENDS=	libpcre.so:devel/pcre
 
 CONFLICTS_INSTALL=	zabbix5[0-9]${PKGNAMESUFFIX} \
-		zabbix[0-57-9]${PKGNAMESUFFIX}
+		zabbix[0-57-9]${PKGNAMESUFFIX} \
+		${PORTNAME}[0-9]${PKGNAMESUFFIX}
 
 ZABBIX_BUILD=	${PKGNAMESUFFIX:S/^-//:S/-$//}
 
@@ -60,6 +62,8 @@ CONFIGURE_ARGS+=	--enable-${ZABBIX_BUILD} \
 LIB_DEPENDS+=	libnetsnmp.so:net-mgmt/net-snmp
 
 CPPFLAGS+=	-I${LOCALBASE}/include
+
+PORTSCOUT=	limit:^6\.0\.
 
 SUB_FILES=	pkg-message
 
