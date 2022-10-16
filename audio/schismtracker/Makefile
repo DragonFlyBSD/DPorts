@@ -1,27 +1,25 @@
-# Created by: Emanuel Haupt <ehaupt@critical.ch>
-
 PORTNAME=	schismtracker
-PORTVERSION=	20220506
+PORTVERSION=	20220905
 CATEGORIES=	audio
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Module tracker editor/player resembling impulse tracker
+WWW=		https://schismtracker.org/
 
 LICENSE=	GPLv2
 
 ONLY_FOR_ARCHS=	amd64 armv7 i386 powerpc powerpc64 powerpc64le
 
-USES=		autoreconf compiler:c++11-lib desktop-file-utils python sdl \
-		xorg
+USES=		autoreconf compiler:c++11-lib desktop-file-utils localbase \
+		python sdl xorg
 USE_GITHUB=	yes
-USE_SDL=	sdl
+USE_SDL=	sdl2
 USE_XORG=	x11 xext xv
 
 GNU_CONFIGURE=	yes
 
 # if you touch these make sure configure finds X11/XKBlib.h presence
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	`sdl-config --libs`
+LDFLAGS+=	`sdl2-config --libs`
 LIBS+=		-lm -lX11
 
 PLIST_FILES=	bin/schismtracker \
