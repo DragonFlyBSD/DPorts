@@ -8,6 +8,7 @@ DISTNAME=	pyside-setup-opensource-src-${DISTVERSION}
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Pyside2 development tools
+WWW=		https://wiki.qt.io/Qt_for_Python
 
 LICENSE=	BSD3CLAUSE GPLv2
 LICENSE_COMB=	multi
@@ -22,7 +23,7 @@ USE_GL=		gl
 USE_PYTHON=	flavors
 USE_QT=		3d buildtools charts core datavis3d declarative \
 		designer gui help location multimedia network opengl \
-		printsupport qmake_build script scripttools scxml sensors \
+		printsupport qmake:build script scripttools scxml sensors \
 		speech sql svg testlib uitools webchannel \
 		websockets widgets x11extras xml xmlpatterns
 
