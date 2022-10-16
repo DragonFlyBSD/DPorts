@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@FreeBSD.org>
-
 PORTNAME=	DBD-mysql
 PORTVERSION=	4.050
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	MySQL driver for the Perl5 Database Interface (DBI)
+WWW=		https://metacpan.org/release/DBD-mysql
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
