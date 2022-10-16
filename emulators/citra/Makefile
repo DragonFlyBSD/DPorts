@@ -1,5 +1,5 @@
 PORTNAME=	citra
-PORTVERSION=	s20220823
+PORTVERSION=	s20220902
 PORTREVISION?=	0
 CATEGORIES=	emulators
 .if make(makesum)
@@ -12,6 +12,7 @@ EXTRACT_ONLY=	${DISTFILES:N*\:gamedb:C/\:.*//}
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Nintendo 3DS emulator/debugger
+WWW=		https://citra-emu.org
 
 LICENSE=	BSD2CLAUSE BSD3CLAUSE BSL GPLv2+ ISCL LGPL21+ MIT OpenSSL UNLICENSE
 LICENSE_COMB=	multi
@@ -30,7 +31,7 @@ BUILD_DEPENDS=	boost-libs>0:devel/boost-libs
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	citra-emu
-GH_TAGNAME=	141471e38
+GH_TAGNAME=	746609f35
 GH_TUPLE=	citra-emu:ext-boost:36603a1:boost/externals/boost \
 		citra-emu:ext-libressl-portable:8929f81:libressl/externals/libressl \
 		citra-emu:ext-soundtouch:060181e:soundtouch/externals/soundtouch \
@@ -82,7 +83,7 @@ SDL_PLIST_FILES=bin/${PORTNAME} \
 		share/man/man6/${PORTNAME}.6.gz
 
 QT5_USES=	desktop-file-utils qt:5 shared-mime-info
-QT5_USE=	QT=qmake_build,buildtools_build,linguisttools_build,concurrent_build,core,gui,multimedia,widgets
+QT5_USE=	QT=qmake:build,buildtools:build,linguisttools:build,concurrent:build,core,gui,multimedia,widgets
 QT5_CMAKE_BOOL=	ENABLE_QT ENABLE_QT_TRANSLATION
 QT5_PLIST_FILES=bin/${PORTNAME}-qt \
 		"@comment bin/${PORTNAME}-room" \
