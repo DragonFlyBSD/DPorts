@@ -5,6 +5,7 @@ CATEGORIES=	multimedia
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	OBS Studio Plugin: Screenshot plugin
+WWW=		https://github.com/univrsal/scrab
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -15,7 +16,7 @@ USES=		cmake localbase:ldflags qt:5
 USE_GITHUB=	yes
 GH_ACCOUNT=	univrsal
 GH_PROJECT=	scrab
-USE_QT=		core gui widgets buildtools_build qmake_build
+USE_QT=		core gui widgets buildtools:build qmake:build
 
 CXXFLAGS+=	-I${LOCALBASE}/include/obs
 
