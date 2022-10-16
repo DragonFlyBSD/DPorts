@@ -1,10 +1,12 @@
 PORTNAME=	blaze
 DISTVERSION=	3.8
+PORTREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	https://bitbucket.org/${BB_ACCOUNT}/${BB_PROJECT}/downloads/
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	C++ math library for dense and sparse arithmetic
+WWW=		https://bitbucket.org/blaze-lib/blaze/src/master/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
