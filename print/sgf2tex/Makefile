@@ -1,5 +1,3 @@
-# Created by: spcoltri@unm.edu
-
 PORTNAME=	sgf2tex
 PORTVERSION=	3.3
 PORTREVISION=	6
@@ -8,6 +6,7 @@ MASTER_SITES=	http://sporadic.stanford.edu/bump/
 
 MAINTAINER=	spcoltri@omcl.org
 COMMENT=	Convert a Go game record in SGF format into TeX and provide fonts to make a dvi
+WWW=		http://match.stanford.edu/~bump/sgf2tex.html
 
 USES=		shebangfix
 SHEBANG_FILES=	sgf2tex
