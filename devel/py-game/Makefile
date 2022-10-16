@@ -1,5 +1,3 @@
-# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-
 PORTNAME=	game
 DISTVERSION=	2.1.2
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DISTNAME=	py${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Module designed to write games in Python
+WWW=		https://www.pygame.org/news
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/docs/LGPL.txt
