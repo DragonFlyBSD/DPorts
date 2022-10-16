@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	mplfinance
 PORTVERSION=	0.12.9b1
 CATEGORIES=	finance python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Utilities for the visualization, and visual analysis, of financial data
+WWW=		https://github.com/matplotlib/mplfinance
 
 LICENSE=	PSFL
 LICENSE_FILE=	${WRKSRC}/LICENSE
