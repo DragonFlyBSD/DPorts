@@ -1,5 +1,3 @@
-# Created by: Michael Alyn Miller <malyn@strangeGizmo.com>
-
 PORTNAME=	data
 PORTVERSION=	1.0
 PORTREVISION=	10
@@ -11,6 +9,7 @@ DIST_SUBDIR=	alephone
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Released Marathon data files for the Aleph One port
+WWW=		http://source.bungie.org/
 
 # Converted from NO_CDROM
 LICENSE=	alephone-data
