@@ -1,11 +1,12 @@
 PORTNAME=	sly
 DISTVERSION=	1.0.43
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	editors elisp
 PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
 
 MAINTAINER=	olce.freebsd.ports@certner.fr
 COMMENT=	Sylvester the Cat's Common Lisp IDE for Emacs
+WWW=		https://github.com/joaotavora/sly
 
 LICENSE=	PD
 
