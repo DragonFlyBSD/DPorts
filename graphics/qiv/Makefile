@@ -1,5 +1,3 @@
-# Created by: Bill Fumerola <billf@chc-chimes.com>
-
 PORTNAME=	qiv
 PORTVERSION=	2.3.2
 CATEGORIES=	graphics
@@ -8,6 +6,7 @@ MASTER_SITES=	http://spiegl.de/qiv/download/ \
 
 MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	Small, fast GDK/Imlib2 image viewer
+WWW=		https://spiegl.de/qiv/
 
 LICENSE=	GPLv2
 
