@@ -1,8 +1,6 @@
-# Created by: Sutra Zhou <zhoushuqun@gmail.com>
-
 PORTNAME=	libopkele
 PORTVERSION=	2.0.4
-PORTREVISION=	19
+PORTREVISION=	20
 CATEGORIES=	devel
 MASTER_SITES=	http://kin.klever.net/dist/
 
@@ -11,6 +9,7 @@ PATCHFILES=	62f3ba4ecb92.diff:-p1
 
 MAINTAINER=	zhoushuqun@gmail.com
 COMMENT=	C++ implementation of an OpenID decentralized identity system
+WWW=		https://kin.klever.net/libopkele/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
