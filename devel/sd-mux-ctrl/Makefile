@@ -1,5 +1,6 @@
 PORTNAME=	sd-mux-ctrl
 DISTVERSION=	g20200217
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://git.tizen.org/cgit/tools/testlab/sd-mux/snapshot/sd-mux-9dd189d973da64e033a0c5c2adb3d94b23153d94.tar.bz2?/
 
@@ -8,6 +9,7 @@ PATCHFILES=	83f2783ac56bbf42f9bb877c5937cd1f17bb2999.patch:-p1
 
 MAINTAINER=	swills@FreeBSD.org
 COMMENT=	Control utility for Tizen SD card multiplexer
+WWW=		https://git.tizen.org/cgit/tools/testlab/sd-mux/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
