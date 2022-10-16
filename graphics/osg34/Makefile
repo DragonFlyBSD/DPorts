@@ -1,14 +1,13 @@
-# Created by: Randall Hopper <aa8vb@nc.rr.com>
-
 PORTNAME=	osg
 PORTVERSION=	3.4.1
 DISTVERSIONPREFIX=	OpenSceneGraph-
-PORTREVISION=	38
+PORTREVISION=	41
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	34
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	C++ OpenGL scene graph library for real-time rendering
+WWW=		https://www.openscenegraph.org/
 
 LICENSE=	OSGPL
 LICENSE_NAME=	OpenSceneGraph Public License
@@ -95,7 +94,7 @@ PDF_USE=		gnome=cairo
 PDF_VARS=		FORCE_REQUIRE+=Poppler-glib
 PDF_VARS_OFF=		FORCE_IGNORE+=Poppler-glib
 QT5_USES=		qt:5
-QT5_USE=		qt=buildtools_build,core,gui,opengl,qmake_build,webkit,widgets
+QT5_USE=		qt=buildtools:build,core,gui,opengl,qmake:build,webkit,widgets
 QT5_CMAKE_ON=		-DDESIRED_QT_VERSION=5
 QT5_VARS=		FORCE_REQUIRE+="Qt5Widgets Qt5WebKitWidgets"
 QT5_VARS_OFF=		FORCE_IGNORE+="Qt5Widgets Qt5WebKitWidgets"
