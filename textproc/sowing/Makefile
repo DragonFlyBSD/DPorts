@@ -1,5 +1,3 @@
-# Created by: Thierry Thomas <thierry@pompo.net>
-
 PORTNAME=	sowing
 PORTVERSION=	1.1.18
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	http://ftp.mcs.anl.gov/pub/sowing/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Text processing tools to generate documentation from source files
+WWW=		http://web.engr.illinois.edu/~wgropp/projects/software/sowing/
 
 BUILD_DEPENDS=	ppmtogif:graphics/netpbm
 RUN_DEPENDS=	ppmtogif:graphics/netpbm
