@@ -1,10 +1,12 @@
 PORTNAME=	cryptominisat
 DISTVERSION=	5.8.0
+PORTREVISION=	1
 CATEGORIES=	math python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	arrowd@FreeBSD.org
 COMMENT=	Bindings to CryptoMiniSat (a SAT solver)
+WWW=		https://github.com/msoos/cryptominisat
 
 LICENSE=	MIT LGPL21
 LICENSE_COMB=	multi
