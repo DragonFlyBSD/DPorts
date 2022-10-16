@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	deadbeef-jack-plugin
 DISTVERSION=	0.0.2011.03.22
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	audio
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	JACK output plugin for DeaDBeeF music player
+WWW=		https://github.com/Alexey-Yakovenko/jack
 
 LICENSE=	MIT
 
