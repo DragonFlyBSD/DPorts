@@ -1,13 +1,12 @@
-# Created by: Max Khon <fjoe@FreeBSD.org>
-
 PORTNAME=	libiqxmlrpc
 PORTVERSION=	0.13.5
-PORTREVISION=	16
+PORTREVISION=	17
 CATEGORIES=	devel net
 MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Free, object-oriented XML-RPC implementation written in C++
+WWW=		https://libiqxmlrpc.wikidot.com/
 
 LICENSE=	BSD2CLAUSE
 
