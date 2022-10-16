@@ -1,11 +1,10 @@
-# Created by: Jonathan Chen <jonc@chen.org.nz>
-
 PORTNAME=	sigil
-PORTVERSION=	1.9.10
+PORTVERSION=	1.9.20
 CATEGORIES=	textproc
 
 MAINTAINER=	jonc@chen.org.nz
 COMMENT=	WYSIWYG ePub editor
+WWW=		https://sigil-ebook.com/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING.txt
@@ -27,8 +26,8 @@ USE_LDCONFIG=	${PREFIX}/lib/sigil
 
 USE_QT=		concurrent core declarative gui location network printsupport \
 		svg webchannel webengine widgets xml xmlpatterns \
-		buildtools_build linguisttools_build qmake_build \
-		imageformats_run
+		buildtools:build linguisttools:build qmake:build \
+		imageformats:run
 
 SHEBANG_FILES=	src/Resource_Files/plugin_launchers/python/*.py \
 		src/Resource_Files/python3lib/*.py
