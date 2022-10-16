@@ -1,5 +1,3 @@
-# Created by: Kris Moore <kmoore@FreeBSD.org>
-
 PORTNAME=	lxinput
 PORTVERSION=	0.3.5
 CATEGORIES=	sysutils
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/lxde/LXInput%20%28Kbd%20and%20amp_%20mouse%20config%29/LXInput%
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Keyboard and mouse settings
+WWW=		https://lxde.org/
 
 LICENSE=	GPLv2+  # though COPYING is GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
