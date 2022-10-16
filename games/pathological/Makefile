@@ -1,5 +1,3 @@
-# Created by: Janos Mohacsi <janos.mohacsi@bsd.hu>
-
 PORTNAME=	pathological
 PORTVERSION=	1.1.3
 PORTREVISION=	14
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	jmohacsi@bsd.hu
 COMMENT=	Enriched clone of the game "Logical"
+WWW=		http://pathological.sourceforge.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
