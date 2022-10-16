@@ -1,5 +1,3 @@
-# Created by: Olivier Cochard-Labbe <olivier@FreeBSD.org>
-
 PORTNAME=	keyboard
 PORTVERSION=	0.3.1
 CATEGORIES=	x11
@@ -9,6 +7,7 @@ DISTNAME=	Keyboard-${PORTVERSION}
 
 MAINTAINER=	olivier@FreeBSD.org
 COMMENT=	DeforaOS desktop virtual keyboard
+WWW=		https://www.defora.org/
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING
