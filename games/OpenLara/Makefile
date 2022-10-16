@@ -1,10 +1,10 @@
 PORTNAME=	OpenLara
-DISTVERSION=	g20210226
-PORTREVISION=	1
+DISTVERSION=	g20220827
 CATEGORIES=	games
 
 MAINTAINER=	pkubaj@FreeBSD.org
 COMMENT=	Classic Tomb Raider open-source engine
+WWW=		https://github.com/XProger/OpenLara
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -13,7 +13,7 @@ USES=		compiler:c++11-lang gl sdl
 USE_GL=		gl
 USE_GITHUB=	yes
 GH_ACCOUNT=	XProger
-GH_TAGNAME=	b4b19f2
+GH_TAGNAME=	39c9be9
 USE_SDL=	sdl2
 
 PLIST_FILES=	bin/${PORTNAME}
