@@ -1,5 +1,3 @@
-# Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-
 PORTNAME=	innotop
 PORTVERSION=	1.13.0
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	databases
 
 MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	MySQL and InnoDB monitoring program
+WWW=		https://github.com/innotop/innotop
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
