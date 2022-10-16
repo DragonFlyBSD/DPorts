@@ -1,5 +1,3 @@
-# Created by: Aron Schlesinger <as@bsdgroup.de>
-
 PORTNAME=	groupoffice
 DISTVERSIONPREFIX=	com-
 DISTVERSION=	6.6.58
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-${DISTVERSION}
 
 MAINTAINER=	joneum@FreeBSD.org
 COMMENT=	Modular web application framework for office
+WWW=		https://www.group-office.com/
 
 LICENSE=	AGPLv3 PERSONAL
 LICENSE_COMB=	multi
