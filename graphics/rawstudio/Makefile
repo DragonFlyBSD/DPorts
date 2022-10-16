@@ -1,5 +1,3 @@
-# Created by: Alex Samorukov <samm@os2.kiev.ua>
-
 PORTNAME=	rawstudio
 PORTVERSION=	2.0
 PORTREVISION=	22
@@ -8,6 +6,7 @@ MASTER_SITES=	http://rawstudio.org/files/release/
 
 MAINTAINER=	samm@os2.kiev.ua
 COMMENT=	Open-source program to read and manipulate RAW photo images
+WWW=		https://rawstudio.org/
 
 LICENSE=	GPLv2
 
