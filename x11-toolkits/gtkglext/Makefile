@@ -1,5 +1,3 @@
-# Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-
 PORTNAME=	gtkglext
 PORTVERSION=	1.2.0
 PORTREVISION=	20
@@ -9,6 +7,7 @@ DIST_SUBDIR=	gnome2
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	OpenGL extension to GTK+
+WWW=		http://gtkglext.sourceforge.net/
 
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/COPYING.LIB
