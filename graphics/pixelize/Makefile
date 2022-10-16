@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	pixelize
 PORTVERSION=	1.0.0
 PORTREVISION=	4
@@ -10,6 +8,7 @@ MASTER_SITES=	ftp://lashwhip.com/pub/ \
 
 MAINTAINER=	cs@FreeBSD.org
 COMMENT=	Use many scaled down images to try to duplicate another image
+WWW=		http://lashwhip.com/pixelize.html
 
 LICENSE=	GPLv2
 
