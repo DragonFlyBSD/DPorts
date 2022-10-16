@@ -1,13 +1,12 @@
-# Created by: Javier Martin Rueda <jmrueda@diatel.upm.es>
-
 PORTNAME=	moodle
-PORTVERSION=	3.9.14
+PORTVERSION=	3.9.17
 CATEGORIES=	www education
 MASTER_SITES=	SF/moodle/Moodle/stable39/
 PKGNAMESUFFIX=	${PKGORIGIN:T:S/moodle//}${PHP_PKGNAMESUFFIX}
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Course management system based on social constructionism
+WWW=		https://www.moodle.org/
 
 LICENSE=	GPLv3
 
