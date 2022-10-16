@@ -13,6 +13,7 @@ PATCHFILES+=	f29ff57d6ccd.patch:-p1 # https://gitlab.freedesktop.org/pulseaudio/
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	AudioProcessing module from WebRTC project
+WWW=		https://freedesktop.org/software/pulseaudio/webrtc-audio-processing/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -20,7 +21,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 BROKEN_powerpc=		fails to compile: ./webrtc/rtc_base/system/arch.h:54:2: Please add support for your architecture in rtc_base/system/arch.h
 BROKEN_riscv64=		fails to compile: ./webrtc/rtc_base/system/arch.h:54:2: Please add support for your architecture in rtc_base/system/arch.h
 
-BUILD_DEPENDS=	cmake:devel/cmake
+BUILD_DEPENDS=	cmake:devel/cmake-core
 LIB_DEPENDS=	libabsl_strings.so:devel/abseil
 
 USES=		compiler:c++17-lang meson
