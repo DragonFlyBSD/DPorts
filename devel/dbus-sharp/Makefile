@@ -1,5 +1,3 @@
-# Created by: Tom McLaughlin <tmclaugh@sdf.lonestar.org>
-
 PORTNAME=	dbus-sharp
 PORTVERSION=	0.8.1
 PORTREVISION=	1
@@ -9,6 +7,7 @@ CATEGORIES=	devel gnome
 
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Mono interface to the D-BUS messaging system
+WWW=		http://mono.github.com/dbus-sharp/
 
 LICENSE=	MIT
 
