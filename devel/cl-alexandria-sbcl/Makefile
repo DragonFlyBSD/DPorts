@@ -1,6 +1,6 @@
 PORTNAME=	alexandria
 PORTVERSION=	1.2
-PORTREVISION=	18
+PORTREVISION=	19
 PORTEPOCH=	1
 CATEGORIES=	devel lisp
 PKGNAMEPREFIX=	cl-
@@ -10,6 +10,7 @@ LICENSE=	PD
 
 MAINTAINER=	olgeni@FreeBSD.org
 COMMENT=	Collection of portable public domain utilities for Common Lisp
+WWW=		https://common-lisp.net/project/alexandria/
 
 BUILD_DEPENDS=	${LOCALBASE}/${CL_LIBDIR_REL}/alexandria/alexandria.asd:devel/cl-alexandria
 RUN_DEPENDS=	${LOCALBASE}/${CL_LIBDIR_REL}/alexandria/alexandria.asd:devel/cl-alexandria
