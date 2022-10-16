@@ -1,5 +1,3 @@
-# Created by: Mark Kane <mark@mkproductions.org>
-
 PORTNAME=	xarchive
 DISTVERSION=	0.2.8-6
 PORTREVISION=	9
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${DISTVERSION}
 
 MAINTAINER=	mark@mkproductions.org
 COMMENT=	GTK+ front end for various archiving tools
+WWW=		http://xarchive.sourceforge.net/
 
 RUN_DEPENDS=	bash:shells/bash
 
