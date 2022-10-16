@@ -1,12 +1,10 @@
 PORTNAME=	librecad
-DISTVERSION=	2.2.0-rc3
+DISTVERSION=	2.2.0-rc4
 CATEGORIES=	cad
-
-PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES+=	8c3b652a8813.patch:-p1 # https://github.com/LibreCAD/LibreCAD/issues/1488
 
 MAINTAINER=	jhale@FreeBSD.org
 COMMENT=	2D CAD system
+WWW=		https://librecad.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/licenses/gpl-2.0.txt
@@ -21,7 +19,7 @@ GH_ACCOUNT=	LibreCAD
 GH_PROJECT=	LibreCAD
 USE_GL=		gl
 USE_QT=		core gui printsupport svg widgets \
-		buildtools_build linguisttools_build
+		buildtools:build linguisttools:build
 
 QMAKE_ARGS+=	BOOST_DIR="${LOCALBASE}"
 
