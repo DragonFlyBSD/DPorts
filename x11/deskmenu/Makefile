@@ -1,5 +1,3 @@
-# Created by: Matt Peterson <matt@peterson.org>
-
 PORTNAME=	deskmenu
 PORTVERSION=	1.4.5
 CATEGORIES=	x11
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	matt@peterson.org
 COMMENT=	X11 application launcher
+WWW=		https://www.oroborus.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
