@@ -1,11 +1,10 @@
-# Created by: Martin Wilke <miwi@FreeBSD.org>
-
 PORTNAME=	mybb
 DISTVERSION=	1.8.29
 CATEGORIES=	www
 
 MAINTAINER=	joneum@FreeBSD.org
 COMMENT=	PHP-based bulletin board / discussion forum system
+WWW=		https://mybboard.net/
 
 LICENSE=	GPLv3
 
