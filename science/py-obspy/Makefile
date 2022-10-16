@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	obspy
 PORTVERSION=	1.3.0
 CATEGORIES=	science python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Python framework for seismological observatories
+WWW=		https://www.obspy.org/
 
 LICENSE=	LGPL3
 
