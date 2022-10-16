@@ -1,5 +1,3 @@
-# Created by: Andreas Kohn <andreas@syndrom23.de>
-
 PORTNAME=	libsexy
 PORTVERSION=	0.1.11
 PORTREVISION=	12
@@ -8,6 +6,7 @@ MASTER_SITES=	http://releases.chipx86.com/libsexy/libsexy/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Extension widgets for GTK+
+WWW=		http://releases.chipx86.com/libsexy/libsexy/
 
 LICENSE=	LGPL21
 
