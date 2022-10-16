@@ -1,12 +1,11 @@
-# Created by: trevor
-
 PORTNAME=	csound
 DISTVERSION=	6.15.0
-PORTREVISION=	4
+PORTREVISION=	6
 CATEGORIES=	audio lang
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Sound synthesizer
+WWW=		https://csound.com/
 
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/COPYING
