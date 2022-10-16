@@ -1,5 +1,3 @@
-# Created by: pat
-
 PORTNAME=	wmmaiload
 PORTVERSION=	2.3.0
 CATEGORIES=	mail windowmaker
@@ -7,6 +5,7 @@ MASTER_SITES=	http://tnemeth.free.fr/projets/programmes/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Incoming mail monitor dockapp with a similar look to wmcpuload
+WWW=		http://tnemeth.free.fr/projets/dockapps.html
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
