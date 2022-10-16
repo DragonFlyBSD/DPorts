@@ -1,13 +1,12 @@
-# Created by: Hendrik Scholz <hendrik@scholz.net>
-
 PORTNAME=	transcode
 PORTVERSION=	1.1.7
-PORTREVISION=	48
+PORTREVISION=	49
 CATEGORIES=	multimedia
 MASTER_SITES=	https://bitbucket.org/france/transcode-tcforge/downloads/
 
 MAINTAINER=	se@FreeBSD.org
 COMMENT=	Text-console utility for video stream processing
+WWW=		https://www.transcoding.org/
 
 LICENSE=	GPLv2
 
