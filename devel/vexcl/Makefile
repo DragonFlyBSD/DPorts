@@ -1,9 +1,11 @@
 PORTNAME=	vexcl
 DISTVERSION=	1.4.3
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	C++ vector expression template library for OpenCL/CUDA
+WWW=		https://github.com/ddemidov/vexcl
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
