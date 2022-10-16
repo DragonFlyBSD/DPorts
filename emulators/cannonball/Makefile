@@ -1,11 +1,12 @@
 PORTNAME=	cannonball
 DISTVERSION=	0.34
 DISTVERSIONPREFIX=v
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	emulators games
 
 MAINTAINER=	fox@FreeBSD.org
 COMMENT=	Enhanced OutRun Engine
+WWW=		https://github.com/djyt/cannonball/wiki
 
 LICENSE=	MAME-LICENSE
 LICENSE_NAME=	MAME license
