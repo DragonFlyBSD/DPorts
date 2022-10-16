@@ -1,8 +1,6 @@
-# Created by: ijliao
-
 PORTNAME=	vamos
 PORTVERSION=	0.7.1
-PORTREVISION=	24
+PORTREVISION=	25
 CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/ \
 		SF/nemysisfreebsdp/${CATEGORIES}/:icons
@@ -11,6 +9,7 @@ DISTFILES=	${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX} \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Automotive simulation framework
+WWW=		http://vamos.sourceforge.net/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
