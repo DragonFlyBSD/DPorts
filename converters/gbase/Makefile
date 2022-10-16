@@ -1,5 +1,3 @@
-# Created by: Patrick Li <pat@databits.net>
-
 PORTNAME=	gbase
 PORTVERSION=	0.5
 PORTREVISION=	8
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.fluxcode.net/files/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Program to convert between the 4 common bases used in programming
+WWW=		http://www.fluxcode.net/
 
 LICENSE=	ART10
 
