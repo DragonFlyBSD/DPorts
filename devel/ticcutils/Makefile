@@ -1,11 +1,12 @@
 PORTNAME=	ticcutils
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.28
-PORTREVISION=	4
+DISTVERSION=	0.29
+PORTREVISION=	1
 CATEGORIES=	devel textproc
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Generic utility library shared by the Tilburg University software
+WWW=		https://github.com/LanguageMachines/ticcutils
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
