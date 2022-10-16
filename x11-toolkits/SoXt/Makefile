@@ -1,5 +1,3 @@
-# Created by: roland.jesse@gmx.net
-
 PORTNAME=	SoXt
 PORTVERSION=	1.3.0
 PORTREVISION=	8
@@ -8,6 +6,7 @@ MASTER_SITES=	https://bitbucket.org/Coin3D/coin/downloads/
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	GUI binding for using Open Inventor with Xt/Motif
+WWW=		https://bitbucket.org/Coin3D/coin/wiki/Home
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE.GPL
