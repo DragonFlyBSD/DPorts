@@ -1,5 +1,3 @@
-# Created by: Martin Wilke <miwi@FreeBSD.org>
-
 PORTNAME=	clutter-gst
 PORTVERSION=	2.0.18
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	GNOME
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Clutter GStreamer integration
+WWW=		https://clutter-project.org/
 
 LIB_DEPENDS=	libclutter-1.0.so:graphics/clutter
 
