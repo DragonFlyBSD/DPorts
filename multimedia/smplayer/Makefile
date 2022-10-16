@@ -1,5 +1,3 @@
-# Created by: Diego Depaoli <trebestie@gmail.com> and Yinghong Liu <relaxbsd@gmail.com>
-
 PORTNAME=	smplayer
 DISTVERSION=	22.2.0
 CATEGORIES=	multimedia audio kde
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/${PORTNAME}/SMPlayer/${PORTVERSION}
 
 MAINTAINER=	vvd@unislabs.com
 COMMENT=	Complete front-end based on Qt for mplayer
+WWW=		https://www.smplayer.info/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/Copying.txt
@@ -14,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/Copying.txt
 USES=		cpe compiler:c++11-lang desktop-file-utils dos2unix gl \
 		gmake qmake qt:5 tar:bzip2 xorg
 USE_GL=		gl
-USE_QT=		buildtools_build linguisttools_build \
+USE_QT=		buildtools:build linguisttools:build \
 		core dbus gui network script widgets xml
 USE_XORG=	x11 xext
 
