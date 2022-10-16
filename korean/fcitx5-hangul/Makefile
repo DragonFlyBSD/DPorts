@@ -1,11 +1,10 @@
-# Created by: Ka Ho Ng <khng300@gmail.com>
-
 PORTNAME=	fcitx5-hangul
 DISTVERSION=	5.0.2
 CATEGORIES=	korean textproc
 
 MAINTAINER=	khng300@gmail.com
 COMMENT=	Hangul support for Fcitx5
+WWW=		https://github.com/fcitx/fcitx5-anthy
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSES/GPL-2.0-or-later.txt
