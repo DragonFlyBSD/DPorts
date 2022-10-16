@@ -1,5 +1,0 @@
-# https://github.com/boostorg/json/issues/708
-EXTRA_PATCHES+=	${DFLY_PATCHDIR}/extra-81664c.diff:-p2
-EXTRA_PATCHES+=	${DFLY_PATCHDIR}/extra-841296.diff:-p2
-EXTRA_PATCHES+=	${DFLY_PATCHDIR}/extra-002fee.diff:-p2
-EXTRA_PATCHES+=	${DFLY_PATCHDIR}/extra-4797be.diff:-p2
