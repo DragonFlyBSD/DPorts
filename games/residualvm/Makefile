@@ -1,12 +1,11 @@
-# Created by: Alexander Yerenkow <yerenkow@gmail.com>
-
 PORTNAME=	residualvm
 PORTVERSION=	0.3.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	games
 
 MAINTAINER=	yerenkow@gmail.com
 COMMENT=	ResidualVM allows you to indulge with classic games like Grim Fandango and Myst III
+WWW=		https://residualvm.org/
 
 LICENSE=	BSD3CLAUSE GPLv2 GPLv3 ISCL LGPL21 MIT ZLIB
 LICENSE_COMB=	multi
