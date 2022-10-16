@@ -5,9 +5,13 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Orange add-on: widgets for machine learning and data mining
+WWW=		https://github.com/biolab/orange3-educational
 
 LICENSE=	CC-BY-3.0
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+DEPRECATED=	Depends on expired security/py-keyrings.alt (via msic/orange3)
+EXPIRATION_DATE=2022-12-31
 
 RUN_DEPENDS=	orange3>0:misc/orange3 \
 		${PYNUMPY} \
