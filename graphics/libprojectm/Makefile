@@ -6,6 +6,7 @@ CATEGORIES=	graphics audio
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Awesome music visualiser
+WWW=		https://github.com/projectM-visualizer/projectm
 
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
@@ -45,13 +46,13 @@ OPTIONS_SUB=			yes
 
 PULSEAUDIO_LIB_DEPENDS=		libpulse.so:audio/pulseaudio
 PULSEAUDIO_USES=		qt:5
-PULSEAUDIO_USE=			qt=core,gui,opengl,widgets,xml,buildtools_build,qmake_build,linguisttools_build #qt=declarative,network,script,sensors,serialport,sql,xmlpatterns
+PULSEAUDIO_USE=			qt=core,gui,opengl,widgets,xml,buildtools:build,qmake:build,linguisttools:build #qt=declarative,network,script,sensors,serialport,sql,xmlpatterns
 PULSEAUDIO_CONFIGURE_ENABLE=	pulseaudio
 PULSEAUDIO_CONFIGURE_ON=	--enable-qt
 
 JACK_LIB_DEPENDS=		libjack.so:audio/jack
 JACK_USES=			qt:5
-JACK_USE=			qt=core,gui,opengl,widgets,xml,buildtools_build,qmake_build,linguisttools_build #qt=declarative,network,script,sensors,serialport,sql,xmlpatterns
+JACK_USE=			qt=core,gui,opengl,widgets,xml,buildtools:build,qmake:build,linguisttools:build #qt=declarative,network,script,sensors,serialport,sql,xmlpatterns
 JACK_CONFIGURE_ENABLE=		jack
 JACK_CONFIGURE_ON=		--enable-qt
 
