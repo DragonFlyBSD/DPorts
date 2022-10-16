@@ -1,5 +1,3 @@
-# Created by: Ulrich Spoerlein <uspoerlein@gmail.com>
-
 PORTNAME=	librcc
 PORTVERSION=	0.2.12
 PORTREVISION=	13
@@ -9,6 +7,7 @@ MASTER_SITES=	http://dside.dyndns.org/files/rusxmms/ \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Library used by rusxmms for language autodetection
+WWW=		http://rusxmms.sourceforge.net
 
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/COPYING
