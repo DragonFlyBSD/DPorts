@@ -1,5 +1,3 @@
-# Created by: Martin Matuska <martin@matuska.org>
-
 PORTNAME=	luasql
 PORTVERSION=	2.6.0
 CATEGORIES=	databases
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	-${LUASQL_DRIVER}
 
 MAINTAINER=	mbeis@xs4all.nl
 COMMENT=	LuaSQL driver
+WWW=		https://github.com/keplerproject/luasql
 
 LICENSE=	MIT
 
