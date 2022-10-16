@@ -1,13 +1,12 @@
-# Created by: David Yeske <dyeske@gmail.com>
-
 PORTNAME=	yafaray
 DISTVERSIONPREFIX=	v
 DISTVERSION=	3.5.1
-PORTREVISION=	13
+PORTREVISION=	15
 CATEGORIES=	graphics
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Montecarlo raytracing engine
+WWW=		http://www.yafaray.org/
 
 LICENSE=	GPLv2 LGPL21
 LICENSE_COMB=	dual
@@ -42,7 +41,7 @@ OPTIONS_SUB=	yes
 QT_DESC=	Enable Qt Gui build
 QT_USES=	qt:5
 QT_CMAKE_BOOL=	WITH_QT
-QT_USE=		QT=core,gui,widgets,qmake_build,buildtools_build,qmake_build
+QT_USE=		QT=core,gui,widgets,qmake:build,buildtools:build,qmake:build
 
 post-install:
 	@${RM} ${STAGEDIR}${DOCSDIR}/LICENSES
