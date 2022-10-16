@@ -1,10 +1,12 @@
 PORTNAME=	wsjtz
 DISTVERSION=	2.5.4-1.22
+PORTREVISION=	2
 CATEGORIES=	comms hamradio
 MASTER_SITES=	SF/wsjt-z/Source
 
-MAINTAINER=	acm@FreeBSD.org
+MAINTAINER=	hamradio@FreeBSD.org
 COMMENT=	Clone of WSJT-X software with additional features
+WWW=		https://sourceforge.net/projects/wsjt-z/
 
 CONFLICTS=	wsjtx
 
@@ -29,7 +31,7 @@ USES=		cmake compiler:c++11-lib fortran gl \
 USE_GL=		glu
 USE_QT=		core gui network widgets \
 		multimedia concurrent printsupport serialport sql sql-sqlite3 \
-		testlib buildtools_build linguisttools_build qmake_build
+		testlib buildtools:build linguisttools:build qmake:build
 
 CMAKE_ARGS+=	-DCMAKE_PREFIX_PATH+=${LOCALBASE}/wsjtx/lib \
 		-DLOCALBASE::STRING="${LOCALBASE}"
