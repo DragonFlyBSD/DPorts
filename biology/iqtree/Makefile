@@ -1,11 +1,12 @@
 PORTNAME=	iqtree
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.0.6
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	biology
 
 MAINTAINER=	jrm@FreeBSD.org
 COMMENT=	Efficient phylogenomic software by maximum likelihood
+WWW=		http://www.iqtree.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
