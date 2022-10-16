@@ -1,5 +1,3 @@
-# Created by: thierry@pompo.net
-
 PORTNAME=		mt_gtk_client
 PORTVERSION=		0.1.98
 PORTREVISION=		14
@@ -8,6 +6,7 @@ MASTER_SITES=		SAVANNAH/maitretarot
 
 MAINTAINER=		thierry@FreeBSD.org
 COMMENT=		GTK+ client for MaitreTarot, a Tarot card game
+WWW=		https://www.nongnu.org/maitretarot/
 
 LICENSE=		GPLv2
 
