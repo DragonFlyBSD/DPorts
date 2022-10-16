@@ -1,12 +1,13 @@
 PORTNAME=	povray
 DISTVERSIONPREFIX=	v
 DISTVERSION=	3.7.0.10
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	37
 
 MAINTAINER=	bsd@philippost.de
 COMMENT=	Persistence of Vision Ray Tracer
+WWW=		https://www.povray.org/
 
 LICENSE=	AGPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE
