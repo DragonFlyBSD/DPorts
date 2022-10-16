@@ -1,12 +1,11 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	mydumper
-DISTVERSION=	0.12.3-3
 DISTVERSIONPREFIX=	v
+DISTVERSION=	0.12.5-3
 CATEGORIES=	databases
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	MySQL Data Dumper
+WWW=		https://github.com/mydumper/mydumper
 
 LICENSE=	GPLv3
 
