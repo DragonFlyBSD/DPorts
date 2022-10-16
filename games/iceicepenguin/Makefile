@@ -1,5 +1,3 @@
-# Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-
 PORTNAME=	iceicepenguin
 PORTVERSION=	1.5.1
 PORTREVISION=	9
@@ -12,6 +10,7 @@ DIST_SUBDIR=	python
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Remake of an old SEGA Dreamcast game called Chu Chu Rocket
+WWW=		https://sourceforge.net/projects/iceicepenguin/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
