@@ -1,11 +1,13 @@
 PORTNAME=	powerdns
 DISTVERSION=	4.6.3
+PORTREVISION=	1
 CATEGORIES=	dns
 MASTER_SITES=	https://downloads.powerdns.com/releases/
 DISTNAME=	pdns-${DISTVERSION}
 
 MAINTAINER=	tremere@cainites.net
 COMMENT=	Advanced DNS server with multiple backends including SQL
+WWW=		https://www.powerdns.com/auth.html
 
 LICENSE=	GPLv2
 
