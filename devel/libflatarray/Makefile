@@ -1,13 +1,12 @@
-# Created by: Kurt Kanzenbach <kurt@kmk-computers.de>
-
 PORTNAME=	libflatarray
 PORTVERSION=	0.3.0
-PORTREVISION=	17
+PORTREVISION=	18
 CATEGORIES=	devel science
 MASTER_SITES=	http://www.libgeodecomp.org/archive/
 
 MAINTAINER=	kurt@kmk-computers.de
 COMMENT=	Struct of arrays library with object oriented interface for C++
+WWW=		http://www.libgeodecomp.org/libflatarray.html
 
 LICENSE=	BSL
 LICENSE_FILE=	${WRKSRC}/LICENSE
