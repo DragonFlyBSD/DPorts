@@ -1,5 +1,3 @@
-# Created by: Steven Wallace <swallace@FreeBSD.org>
-
 PORTNAME=	xemeraldia
 PORTVERSION=	0.4.3
 PORTREVISION=	1
@@ -13,6 +11,7 @@ EXTRACT_ONLY=	${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Falling blocks game
+WWW=		http://www.reloco.com.ar/xemeraldia/
 
 USES=		gnome pkgconfig
 USE_GNOME=	cairo gtk20
