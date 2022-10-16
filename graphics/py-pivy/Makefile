@@ -1,5 +1,3 @@
-# Created by: Pedro Giffuni <pfg@FreeBSD.org>
-
 PORTNAME=	pivy
 PORTVERSION=	0.6.6
 CATEGORIES=	graphics python
@@ -7,10 +5,11 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	cmt@FreeBSD.org
 COMMENT=	Python binding for Coin
+WWW=		https://github.com/coin3d/pivy
 
 LICENSE=	MIT
 
-BUILD_DEPENDS=	cmake:devel/cmake \
+BUILD_DEPENDS=	cmake:devel/cmake-core \
 		swig:devel/swig
 LIB_DEPENDS=	libCoin.so:graphics/Coin \
 		libSoQt.so:x11-toolkits/soqt
