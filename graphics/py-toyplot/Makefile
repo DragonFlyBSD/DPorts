@@ -1,5 +1,3 @@
-# Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-
 PORTNAME=	toyplot
 PORTVERSION=	0.19.0
 CATEGORIES=	graphics python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	Modern plotting toolkit supporting electronic publishing
+WWW=		https://pypi.org/project/toyplot/
 
 LICENSE=	BSD3CLAUSE
 
