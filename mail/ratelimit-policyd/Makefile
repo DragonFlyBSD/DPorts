@@ -1,11 +1,10 @@
-# Created by: Miroslav Lachman
-
 PORTNAME=	ratelimit-policyd
 PORTVERSION=	1.0.4
 CATEGORIES=	mail
 
 MAINTAINER=	000.fbsd@quip.cz
 COMMENT=	Sender rate limit policy daemon for Postfix
+WWW=		https://github.com/MirLach/ratelimit-policyd
 
 LICENSE=	NONE
 
