@@ -1,11 +1,12 @@
 PORTNAME=	osrm-backend
 DISTVERSIONPREFIX=	v
 DISTVERSION=	5.26.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www
 
 MAINTAINER=	freebsd@mosedal.net
 COMMENT=	Open Source Routing Machine (Backend)
+WWW=		https://project-osrm.org/
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.TXT
