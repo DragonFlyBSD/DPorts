@@ -1,5 +1,3 @@
-# Created by: Bruce M Simpson <bms@FreeBSD.org>
-
 PORTNAME=	gtkwave
 DISTVERSION=	3.3.111
 CATEGORIES=	cad
@@ -7,6 +5,7 @@ MASTER_SITES=	http://gtkwave.sourceforge.net/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Electronic Waveform Viewer
+WWW=		http://gtkwave.sourceforge.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
