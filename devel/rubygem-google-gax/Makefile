@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	google-gax
 PORTVERSION=	1.8.2
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Google API Extensions
+WWW=		https://github.com/googleapis/gax-ruby
 
 LICENSE=	BSD3CLAUSE
 
