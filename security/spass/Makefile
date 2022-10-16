@@ -2,11 +2,12 @@ PORTNAME=	spass
 DISTVERSIONPREFIX=	v
 DISTVERSION=	3.2-5
 DISTVERSIONSUFFIX=	-gd38d173
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	security
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT?=	Secure password generator with a true random number generator
+WWW=		https://www.guyrutenberg.com/2010/08/13/statistical-tests-for-my-audio-based-random-number-generator/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
