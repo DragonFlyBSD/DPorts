@@ -1,5 +1,3 @@
-# Created by: Christopher Nehren <apeiron@coitusmentis.info>
-
 PORTNAME=	log4net
 PORTVERSION=	1.2.10
 PORTREVISION=	3
@@ -9,6 +7,7 @@ DISTNAME=	incubating-${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Port for .NET of the Apache Logging Services project
+WWW=		https://logging.apache.org/log4net/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
