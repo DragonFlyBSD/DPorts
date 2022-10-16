@@ -1,12 +1,12 @@
-# Created by: stas
-
 PORTNAME=	calibre
 PORTVERSION=	5.44.0
+PORTREVISION=	3
 CATEGORIES=	deskutils python
 MASTER_SITES=	http://download.calibre-ebook.com/${PORTVERSION}/
 
 MAINTAINER=	madpilot@FreeBSD.org
 COMMENT=	Ebook management application
+WWW=		https://calibre-ebook.com/
 
 LICENSE=	GPLv3
 
@@ -61,7 +61,7 @@ USES=		desktop-file-utils gettext-runtime gl gnome localbase:ldflags \
 USE_RC_SUBR=	calibre
 SUB_LIST+=	PYTHON_VERSION=${PYTHON_VERSION}
 USE_PYQT=	pyqt5 pysip qtbuilder sip webengine
-USE_QT=		buildtools_build core dbus gui qmake_build widgets
+USE_QT=		buildtools:build core dbus gui qmake:build widgets
 USE_GL=		egl gl
 USE_GNOME=	glib20
 USE_XORG=	xrender xext x11
