@@ -1,5 +1,3 @@
-# Created by: Olivier Cochard-Labbe <olivier@FreeBSD.org>
-
 PORTNAME=	player
 PORTVERSION=	0.1.6
 PORTREVISION=	3
@@ -10,6 +8,7 @@ DISTNAME=	Player-${PORTVERSION}
 
 MAINTAINER=	olivier@FreeBSD.org
 COMMENT=	DeforaOS desktop media player
+WWW=		https://www.defora.org/
 
 LICENSE=	GPLv3
 
