@@ -5,6 +5,7 @@ CATEGORIES=	textproc
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Markdown editor
+WWW=		https://github.com/retext-project/retext
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE_GPL
@@ -21,8 +22,8 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	retext-project
 GH_PROJECT=	retext
 USE_PYTHON=	distutils autoplist noflavors
-USE_QT=		linguisttools_build
-USE_PYQT=	pyqt5_run sip_run
+USE_QT=		linguisttools:build
+USE_PYQT=	pyqt5:run sip:run
 
 BINARY_ALIAS=	lrelease=${LRELEASE}
 
