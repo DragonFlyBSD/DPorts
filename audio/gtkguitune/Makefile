@@ -1,5 +1,3 @@
-# Created by: Eric Anholt <anholt@FreeBSD.org>
-
 PORTNAME=	gtkguitune
 PORTVERSION=	0.8
 DISTVERSIONPREFIX=	gtk2-
@@ -10,6 +8,7 @@ MASTER_SITES=	GENTOO \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Guitar (and other instruments) tuner for GTK+2
+WWW=		http://www.oocities.com/harpin_floh/kguitune_page.html
 
 LICENSE=	GPLv2+
 
