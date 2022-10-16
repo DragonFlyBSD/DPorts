@@ -1,5 +1,3 @@
-# Created by: David Gardner
-
 PORTNAME=	gkrelltop
 PORTVERSION=	2.2.13
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}.orig
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Plugin for gkrellm 2.x shows top three processes, requires procfs
+WWW=		https://sourceforge.net/projects/gkrelltop/
 
 LICENSE=	GPLv2
 
