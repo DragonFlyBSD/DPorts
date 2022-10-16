@@ -1,5 +1,3 @@
-# Created by: chinsan
-
 PORTNAME=	Gtk2-Ex-FormFactory
 PORTVERSION=	0.67
 PORTREVISION=	3
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Makes building complex GUI more easy
+WWW=		https://metacpan.org/release/Gtk2-Ex-FormFactory
 
 LICENSE=	GPLv2+
 
