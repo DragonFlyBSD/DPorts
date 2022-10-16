@@ -1,5 +1,3 @@
-# Created by: Frank Laszlo <laszlof@freebsdmatrix.net>
-
 PORTNAME=	euchre
 PORTVERSION=	0.8
 PORTREVISION=	3
@@ -12,6 +10,7 @@ EXTRACT_ONLY=	${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Very popular card game with variable skill levels
+WWW=		https://sourceforge.net/projects/euchre/
 
 LICENSE=	GPLv2
 
