@@ -1,13 +1,12 @@
-# Created by: Yuri Victorovich <yuri@FreeBSD.org>
-
 PORTNAME=	usbtop
 DISTVERSIONPREFIX=	release-
 DISTVERSION=	1.0
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	sysutils
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Utility that shows an estimated instantaneous USB bandwidth
+WWW=		https://github.com/aguinet/usbtop
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
