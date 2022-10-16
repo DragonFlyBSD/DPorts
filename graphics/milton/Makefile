@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	milton
 PORTVERSION=	1.9.1
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ CATEGORIES=	graphics
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Infinite-canvas paint program
+WWW=		https://www.miltonpaint.com/
 
 LICENSE=	GPLv3+
 
