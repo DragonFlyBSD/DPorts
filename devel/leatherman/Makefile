@@ -1,10 +1,11 @@
 PORTNAME=	leatherman
 PORTVERSION=	1.12.6
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	puppet@FreeBSD.org
 COMMENT=	Leatherman C++ Tool library
+WWW=		https://github.com/puppetlabs/leatherman
 
 LICENSE=	APACHE20
 
