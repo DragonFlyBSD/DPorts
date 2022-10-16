@@ -1,6 +1,6 @@
 PORTNAME=	libetonyek
 PORTVERSION=	0.1.10
-PORTREVISION=	4
+PORTREVISION=	5
 PORTEPOCH=	1
 CATEGORIES=	graphics
 MASTER_SITES=	LODEV/${PORTNAME}
@@ -8,6 +8,7 @@ PKGNAMESUFFIX=	01
 
 MAINTAINER=	office@FreeBSD.org
 COMMENT=	Library to interpret and import Apple Keynote presentations
+WWW=		https://wiki.documentfoundation.org/DLP/Libraries/libetonyek
 
 LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/COPYING
