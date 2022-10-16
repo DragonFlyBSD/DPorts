@@ -1,14 +1,13 @@
-# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-
 PORTNAME=	sweep
 PORTVERSION=	0.9.3
-PORTREVISION=	12
+PORTREVISION=	13
 PORTEPOCH=	1
 CATEGORIES=	audio gnome
 MASTER_SITES=	SF
 
 MAINTAINER=	portmaster@BSDforge.com
 COMMENT=	Sound editor for the GNOME/GTK+2 desktop
+WWW=		http://www.metadecks.org/software/sweep/
 
 LICENSE=	GPLv2
 
