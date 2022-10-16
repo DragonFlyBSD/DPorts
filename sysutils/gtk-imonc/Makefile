@@ -1,5 +1,3 @@
-# Created by: Steffen Vogelreuter
-
 PORTNAME=	gtk-imonc
 PORTVERSION=	0.6.4.1
 PORTREVISION=	16
@@ -8,6 +6,7 @@ MASTER_SITES=	http://stefan-strigler.de/download/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GTK2-based imond-client to control an on(e) disc fli4l router
+WWW=		http://stefan-strigler.de/gtkimonc/
 
 LICENSE=	GPLv2+
 
