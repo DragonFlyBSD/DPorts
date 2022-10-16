@@ -1,5 +1,3 @@
-# Created by: Jim Mock <jim@FreeBSD.org>
-
 PORTNAME?=	libpurple
 PORTVERSION=	2.14.10
 CATEGORIES?=	net-im
@@ -8,6 +6,7 @@ DISTNAME=	pidgin-${PORTVERSION}
 
 MAINTAINER?=	marcus@FreeBSD.org
 COMMENT?=	Backend library for the Pidgin multi-protocol messaging client
+WWW=		https://www.pidgin.im/
 
 LICENSE=	GPLv3
 
