@@ -1,11 +1,12 @@
 PORTNAME=	nest
 DISTVERSIONPREFIX=	v
 DISTVERSION=	3.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	science biology # NEST is used in neuroscience
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Simulator for spiking neural network models
+WWW=		https://www.nest-simulator.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
