@@ -1,5 +1,3 @@
-# Created by: Geoffrey Mainland <mainland@apeiron.net>
-
 PORTNAME=	texmacs
 PORTVERSION=	1.99.4
 PORTREVISION=	5
@@ -9,6 +7,7 @@ DISTNAME=	TeXmacs-${PORTVERSION}-src
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	WYSIWYG scientific text editor
+WWW=		https://www.texmacs.org/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
