@@ -1,5 +1,3 @@
-# Created by: alepulver
-
 PORTNAME=	qmc2
 PORTVERSION=	0.195
 PORTREVISION=	4
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Qt based UNIX MAME/MESS frontend
+WWW=		https://qmc2.batcom-it.net/
 
 RUN_DEPENDS=	mame>=0.154:emulators/mame \
 		mess>=0.154:emulators/mess
@@ -19,8 +18,8 @@ NO_WRKSUBDIR=	yes
 USES=		compiler:c++11-lang dos2unix gl gmake qt:5 sdl tar:bzip2 xorg
 USE_XORG=	x11 xmu
 USE_GL=		gl glu
-USE_QT=		buildtools_build core declarative gui multimedia \
-		network opengl qmake_build \
+USE_QT=		buildtools:build core declarative gui multimedia \
+		network opengl qmake:build \
 		testlib script scripttools sql svg \
 		webkit widgets xml xmlpatterns
 USE_SDL=	sdl
