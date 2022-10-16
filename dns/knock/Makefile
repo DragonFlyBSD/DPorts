@@ -6,6 +6,7 @@ PKGNAMESUFFIX=	py
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Tool designed to enumerate subdomains on a target domain
+WWW=		https://github.com/guelfoweb/knock
 
 LICENSE=	GPLv2
 
@@ -17,7 +18,7 @@ RUN_DEPENDS=	${PY_DEPENDS}
 
 USES=		python pyqt:5 # pyqt:5 isn't used: https://github.com/guelfoweb/knock/issues/108
 USE_PYTHON=	distutils noflavors autoplist
-USE_PYQT=	pyqt5_run
+USE_PYQT=	pyqt5:run
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	guelfoweb
