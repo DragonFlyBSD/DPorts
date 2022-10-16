@@ -1,5 +1,3 @@
-# Created by: smyru@heron.pl
-
 PORTNAME=	gnugadu2
 PORTVERSION=	2.3.0
 PORTREVISION=	17
@@ -9,6 +7,7 @@ DISTNAME=	gg2-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Gadu-Gadu IM network client
+WWW=		https://www.gnugadu.org
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
