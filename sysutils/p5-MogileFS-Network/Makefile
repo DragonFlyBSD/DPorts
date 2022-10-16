@@ -1,5 +1,3 @@
-# Created by: Mikolaj Golub <trociny@FreeBSD.org>
-
 PORTNAME=	MogileFS-Network
 PORTVERSION=	0.06
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	trociny@FreeBSD.org
 COMMENT=	Network awareness and extensions for p5-MogileFS-Server
+WWW=		https://metacpan.org/release/MogileFS-Network
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
