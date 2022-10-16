@@ -1,5 +1,3 @@
-# Created by: Pav Lucistnik <pav@oook.cz>
-
 PORTNAME=	gkrellm-gamma
 PORTVERSION=	2.03
 PORTREVISION=	14
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.sweb.cz/tripie/gkrellm/gamma/dist/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	XFree86 gamma correction plugin for GKrellM
+WWW=		http://www.sweb.cz/tripie/gkrellm/gamma/
 
 BUILD_DEPENDS=	${LOCALBASE}/include/gkrellm2/gkrellm.h:sysutils/gkrellm2
 RUN_DEPENDS=	gkrellm:sysutils/gkrellm2
