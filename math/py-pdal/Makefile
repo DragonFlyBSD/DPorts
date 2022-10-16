@@ -1,5 +1,6 @@
 PORTNAME=	pdal
 DISTVERSION=	3.0.2
+PORTREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -7,13 +8,14 @@ DISTNAME=	${PORTNAME:tu}-${DISTVERSION}
 
 MAINTAINER=	lbartoletti@FreeBSD.org
 COMMENT=	PDAL Python bindings
+WWW=		https://pypi.python.org/pypi/pdal
 
 LICENSE=	BSD3CLAUSE
 
 BUILD_DEPENDS=	${PYNUMPY} \
 		${PYTHON_PKGNAMEPREFIX}scikit-build>0:devel/py-scikit-build@${PY_FLAVOR} \
 		${PREFIX}/share/cmake/pybind11/pybind11Config.cmake:devel/pybind11 \
-		cmake:devel/cmake
+		cmake:devel/cmake-core
 LIB_DEPENDS=	libpdal_base.so:math/pdal
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}packaging>=0:devel/py-packaging@${PY_FLAVOR} \
 		${PYNUMPY}
