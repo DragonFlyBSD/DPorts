@@ -1,10 +1,11 @@
 PORTNAME=	noti
 DISTVERSION=	3.5.0
-PORTREVISION=	2
+PORTREVISION=	6
 CATEGORIES=	deskutils
 
 MAINTAINER=	tagattie@FreeBSD.org
 COMMENT=	Trigger notifications when a process completes
+WWW=		https://github.com/variadico/noti
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
