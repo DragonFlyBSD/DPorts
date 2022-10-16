@@ -1,5 +1,3 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	mrboom
 PORTVERSION=	5.2
 CATEGORIES=	games
@@ -8,6 +6,7 @@ DISTNAME=	MrBoom-src-${PORTVERSION}
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	8 players Bomberman clone
+WWW=		http://mrboom.mumblecore.org/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
