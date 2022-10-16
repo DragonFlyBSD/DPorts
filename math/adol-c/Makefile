@@ -1,12 +1,13 @@
 PORTNAME=	adol-c
 DISTVERSION=	2.7.2
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	math
 MASTER_SITES=	https://www.coin-or.org/download/source/${PORTNAME:tu}/
 DISTNAME=	${PORTNAME:tu}-${DISTVERSION}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Automatic differentiation library
+WWW=		https://github.com/coin-or/ADOL-C
 
 LICENSE=	EPL
 LICENSE_FILE=	${WRKSRC}/LICENSE
