@@ -1,12 +1,11 @@
-# Created by: Richard Gallamore <ultima@freebsd.org>
-
 PORTNAME=	YouCompleteMe
-DISTVERSION=	g20210518
+DISTVERSION=	g20220614
 CATEGORIES=	devel
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	ultima@FreeBSD.org
 COMMENT=	Code-completion engine for Vim
+WWW=		https://github.com/Valloric/YouCompleteMe
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING.txt
@@ -24,8 +23,8 @@ USES=		cmake compiler:c++11-lang python:3.6+
 USE_PYTHON=	flavors
 USE_GITHUB=	yes
 GH_ACCOUNT=	ycm-core
-GH_TAGNAME=	ab73ca2
-GH_TUPLE=	ycm-core:ycmd:df3d7eb:ycm/third_party/ycmd
+GH_TAGNAME=	c99f408
+GH_TUPLE=	ycm-core:ycmd:d1707c1:ycm/third_party/ycmd
 
 CMAKE_SOURCE_PATH=	${WRKSRC}/third_party/ycmd/cpp
 
