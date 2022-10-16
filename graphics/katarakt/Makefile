@@ -1,12 +1,11 @@
-# Created by: Kurt Kanzenbach <kurt@kmk-computers.de>
-
 PORTNAME=	katarakt
 PORTVERSION=	0.2
-PORTREVISION=	18
+PORTREVISION=	21
 CATEGORIES=	graphics
 
 MAINTAINER=	kurt@kmk-computers.de
 COMMENT=	Simple PDF viewer uses as much available screen space as possible
+WWW=		https://gitlab.cs.fau.de/Qui_Sum/katarakt
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -15,7 +14,7 @@ BUILD_DEPENDS=	a2x:textproc/asciidoc
 LIB_DEPENDS=	libpoppler-qt5.so:graphics/poppler-qt5
 
 USES=		compiler:c++11-lang gl pkgconfig qmake qt:5
-USE_QT=		buildtools_build core gui xml dbus network widgets
+USE_QT=		buildtools:build core gui xml dbus network widgets
 USE_GL=		gl
 
 USE_GITLAB=	yes
