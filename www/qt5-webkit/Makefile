@@ -11,6 +11,7 @@ PATCHFILES+=		78360c01c796b6260bf828bc9c8a0ef73c5132fd.patch:-p1
 
 MAINTAINER=		kde@FreeBSD.org
 COMMENT=		QtWebKit with a more modern WebKit code base
+WWW=		https://github.com/annulen/webkit
 
 LIB_DEPENDS=		libfontconfig.so:x11-fonts/fontconfig \
 			libhyphen.so:textproc/hyphen \
@@ -26,7 +27,7 @@ USE_GNOME=		glib20 libxml2 libxslt
 USE_PERL5=		build
 USE_QT=			core declarative gui location network opengl printsupport \
 			sensors webchannel widgets \
-			buildtools_build declarative-test_build qmake_build testlib_build
+			buildtools:build declarative-test:build qmake:build testlib:build
 USE_RUBY=		yes
 USE_XORG=		x11 xcomposite xrender
 
