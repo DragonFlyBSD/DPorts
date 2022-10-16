@@ -1,10 +1,11 @@
 PORTNAME=	oink
 DISTVERSION=	g20210710
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Modern parity game solvers written in C++
+WWW=		https://github.com/trolando/oink
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
