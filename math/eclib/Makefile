@@ -1,12 +1,11 @@
-# Created by: thierry@pompo.net
-
 PORTNAME=	eclib
-PORTVERSION=	20210625
+PORTVERSION=	20220621
 PORTREVISION=	1
 CATEGORIES=	math
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	C++ library for arithmetic on elliptic curves
+WWW=		https://homepages.warwick.ac.uk/staff/J.E.Cremona/mwrank/
 
 LICENSE=	GPLv2
 
