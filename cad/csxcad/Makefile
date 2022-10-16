@@ -2,10 +2,12 @@ PORTNAME=	csxcad
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.6.2-109
 DISTVERSIONSUFFIX=	-gcd9decb
+PORTREVISION=	2
 CATEGORIES=	cad
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	C++ library to describe geometrical objects
+WWW=		https://github.com/thliebig/CSXCAD
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
