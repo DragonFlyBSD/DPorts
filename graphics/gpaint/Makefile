@@ -1,5 +1,3 @@
-# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-
 PORTNAME=	gpaint
 PORTVERSION=	0.3.3
 DISTVERSIONPREFIX=	2-
@@ -9,6 +7,7 @@ MASTER_SITES=	GNU_ALPHA
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Small-scale painting program for GNOME
+WWW=		https://www.gnu.org/software/gpaint/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
