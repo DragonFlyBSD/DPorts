@@ -1,13 +1,12 @@
-# Created by: Hannes Hauswedell <h2+fbsdports@fsfe.org>
-
 PORTNAME=	seqan-apps
 DISTVERSIONPREFIX=	seqan-v
 DISTVERSION=	2.4.0
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	biology
 
 MAINTAINER=	h2+fbsdports@fsfe.org
 COMMENT=	Official bioinformatic applications based on the SeqAn library
+WWW=		https://www.seqan.de/
 
 LICENSE=	BSD3CLAUSE LGPL3 GPLv3
 LICENSE_COMB=	multi
