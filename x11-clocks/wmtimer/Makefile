@@ -1,5 +1,3 @@
-# Created by: Patrick Li <pat@databits.net> et al
-
 PORTNAME=	wmtimer
 PORTVERSION=	2.92
 PORTREVISION=	11
@@ -9,6 +7,7 @@ MASTER_SITES=	https://github.com/bbidulock/wmtimer/releases/download/${PORTVERSI
 
 MAINTAINER=	uqs@FreeBSD.org
 COMMENT=	Multi-Function timer dockapp for WindowMaker
+WWW=		https://github.com/bbidulock/wmtimer
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/wmtimer
 PORTDOCS=	README
