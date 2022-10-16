@@ -1,5 +1,3 @@
-# Created by: gahr
-
 PORTNAME=	igal2
 PORTVERSION=	2.2
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	http://igal.trexler.at/
 
 MAINTAINER=	ports@bsdserwis.com
 COMMENT=	Simple CLI image gallery generator
+WWW=		https://igal.trexler.at/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
