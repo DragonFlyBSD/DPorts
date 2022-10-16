@@ -1,13 +1,13 @@
-# Created by: Adam Weinberger <adamw@FreeBSD.org>
-
 PORTNAME=	highlight
 PORTVERSION=	4.2
+PORTREVISION=	1
 PORTEPOCH=	3
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.andre-simon.de/zip/
 
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	Customizable syntax highlighter
+WWW=		http://www.andre-simon.de/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -29,7 +29,7 @@ OPTIONS_DEFINE=	DOCS GUI
 OPTIONS_SUB=	yes
 
 GUI_USES=	qt:5
-GUI_USE=	QT=buildtools_build,qmake_build,core,gui,widgets
+GUI_USE=	QT=buildtools:build,qmake:build,core,gui,widgets
 GUI_MAKE_ENV=	QMAKE="${QMAKE}"
 GUI_ALL_TARGET=	gui
 GUI_INSTALL_TARGET=	install-gui
