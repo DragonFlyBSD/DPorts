@@ -1,5 +1,3 @@
-# Created by: Alejandro Pulver <alepulver@FreeBSD.org>
-
 PORTNAME=	gtkradiant
 PORTVERSION=	1.5.0
 PORTREVISION=	18
@@ -12,6 +10,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}:id \
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Map editor for FPS games, by id Software and Loki Software
+WWW=		http://www.qeradiant.com/
 
 LICENSE=	GPLv2
 
