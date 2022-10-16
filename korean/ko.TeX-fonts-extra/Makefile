@@ -1,5 +1,3 @@
-# Created by: Hyogeol Lee <hyogeollee@gmail.com>
-
 PORTNAME=	ko.TeX-fonts-extra
 PORTVERSION=	0.1.0
 PORTREVISION=	6
@@ -10,6 +8,7 @@ DISTFILES=	ko.tex-extra-hlfont.tar.gz \
 
 MAINTAINER=	hyogeollee@gmail.com
 COMMENT=	Korean TeX extra fonts
+WWW=		http://project.ktug.or.kr/ko.TeX/
 
 USE_TEX=	dvipsk latex
 CONFLICTS=	hlatex
