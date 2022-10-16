@@ -1,5 +1,3 @@
-# Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
-
 PORTNAME=	gnubg
 PORTVERSION=	1.06.002
 PORTREVISION=	5
@@ -9,6 +7,7 @@ DISTFILES=	gnubg-release-${PORTVERSION}-sources.tar.gz
 
 MAINTAINER=	cs@FreeBSD.org
 COMMENT=	GNU Backgammon
+WWW=		https://www.gnu.org/software/gnubg/
 
 LICENSE=	GPLv3
 
