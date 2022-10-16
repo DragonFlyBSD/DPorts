@@ -1,5 +1,6 @@
 PORTNAME=	blender
-DISTVERSION=	3.2.0
+DISTVERSION=	3.2.2
+PORTREVISION=	1
 CATEGORIES=	graphics multimedia
 MASTER_SITES=	http://download.blender.org/source/ \
 		http://mirror.cs.umn.edu/blender.org/source/ \
@@ -7,6 +8,7 @@ MASTER_SITES=	http://download.blender.org/source/ \
 
 MAINTAINER=	FreeBSD@Shaneware.biz
 COMMENT=	3D modeling/rendering/animation package
+WWW=		https://www.blender.org/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/doc/license/GPL3-license.txt
