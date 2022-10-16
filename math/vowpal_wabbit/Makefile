@@ -1,12 +1,11 @@
-# Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-
 PORTNAME=	vowpal_wabbit
 PORTVERSION=	7.10
-PORTREVISION=	18
+PORTREVISION=	19
 CATEGORIES=	math
 
 MAINTAINER=	demon@FreeBSD.org
 COMMENT=	Fast out-of-core learning system
+WWW=		https://github.com/JohnLangford/vowpal_wabbit/wiki
 
 LIB_DEPENDS=	libboost_thread.so:devel/boost-libs
 
