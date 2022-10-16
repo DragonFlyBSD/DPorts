@@ -1,7 +1,5 @@
-# Created by: Elvis Chiang <elvis@sslab.cs.ccu.edu.tw>
-
 PORTNAME=	wordpress
-DISTVERSION=	5.9.3
+DISTVERSION=	6.0.2
 DISTVERSIONSUFFIX=	-fr_FR
 PORTEPOCH=	1
 CATEGORIES=	french www
@@ -9,6 +7,7 @@ MASTER_SITES=	https://fr.wordpress.org/
 
 MAINTAINER=	joneum@FreeBSD.org
 COMMENT=	State-of-the-art semantic personal publishing platform
+WWW=		https://fr.wordpress.org/
 
 LICENSE=	GPLv2
 
