@@ -1,5 +1,3 @@
-# Created by: Jie Gao <gaoj@cpsc.ucalgary.ca>
-
 PORTNAME=	scim-table-imengine
 PORTVERSION=	0.5.10
 PORTREVISION=	7
@@ -9,6 +7,7 @@ DISTNAME=	scim-tables-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	SCIM table based input method engine
+WWW=		https://github.com/scim-im/scim
 
 BUILD_DEPENDS=	scim:textproc/scim
 RUN_DEPENDS=	scim:textproc/scim
