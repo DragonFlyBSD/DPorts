@@ -1,11 +1,12 @@
 PORTNAME=	openshadinglanguage
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.11.17.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES?=	graphics devel
 
 MAINTAINER=	FreeBSD@Shaneware.biz
 COMMENT?=	Advanced shading language for production GI renderers
+WWW=		https://github.com/AcademySoftwareFoundation/OpenShadingLanguage
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
@@ -23,7 +24,7 @@ RUN_DEPENDS=	llvm-config${LLVM_VER}:devel/llvm${LLVM_VER}
 
 USES=		bison cmake compiler:c++14-lang localbase ncurses qt:5
 
-USE_QT=		buildtools_build qmake_build
+USE_QT=		buildtools:build qmake:build
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	AcademySoftwareFoundation
@@ -44,7 +45,7 @@ MATERIALX_CMAKE_BOOL=	OSL_BUILD_MATERIALX
 
 OSLTOY_DESC=		Interactive shader edit and visualize tool
 OSLTOY_CMAKE_BOOL=	USE_QT
-OSLTOY_USE=		QT=buildtools_build,core,gui,qmake_build,widgets
+OSLTOY_USE=		QT=buildtools:build,core,gui,qmake:build,widgets
 
 #CXXFLAGS+=	-I${STAGEDIR}/include
 
