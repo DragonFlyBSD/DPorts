@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	umark
 DISTVERSION=	2.0.0-Beta3
 PORTREVISION=	8
@@ -9,6 +7,7 @@ DISTNAME=	UMark-for-Linux-v${DISTVERSION:S/.//g}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Unreal Tournament 200x series benchmark utility
+WWW=		http://ut2k3botbench.sourceforge.net/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
