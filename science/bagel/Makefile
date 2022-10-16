@@ -1,11 +1,13 @@
 PORTNAME=	bagel
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.2.2-132
+PORTREVISION=	1
 DISTVERSIONSUFFIX=	-g2955e4d1a
 CATEGORIES=	science
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Brilliantly Advanced General Electronic-structure Library
+WWW=		https://nubakery.org/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
