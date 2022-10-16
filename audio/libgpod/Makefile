@@ -1,5 +1,3 @@
-# Created by: Devon Ryan <dpryan@dpryan.com>
-
 PORTNAME=	libgpod
 PORTVERSION=	0.8.3
 PORTREVISION=	11
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/gtkpod/${PORTNAME}/${PORTNAME}-${PORTVERSION:R}
 
 MAINTAINER?=	ports@FreeBSD.org
 COMMENT?=	Library for direct access to iPod contents
+WWW=		http://www.gtkpod.org/wiki/Libgpod
 
 LICENSE=	LGPL20
 
