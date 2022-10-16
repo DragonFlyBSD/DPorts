@@ -1,5 +1,3 @@
-# Created by: Olivier Cochard-Labbe <olivier@FreeBSD.org>
-
 PORTNAME=	phone
 PORTVERSION=	0.5.1
 PORTREVISION=	2
@@ -10,6 +8,7 @@ DISTNAME=	Phone-${PORTVERSION}
 
 MAINTAINER=	olivier@FreeBSD.org
 COMMENT=	DeforaOS telephony application
+WWW=		https://www.defora.org/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
