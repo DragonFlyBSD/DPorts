@@ -1,5 +1,3 @@
-# Created by: Stephane Legrand <stephane@FreeBSD.org>
-
 PORTNAME=	gnocl
 DISTVERSION=	${BASE_VERSION}-${NIGHTLY_BUILD}
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/Gnocl-Nightly-Build/
 
 MAINTAINER=	tcltk@FreeBSD.org
 COMMENT=	GTK+ and Gnome extension for Tcl
+WWW=		https://gnocl.org/
 
 LICENSE=	TclTk
 LICENSE_NAME=	Tcl/Tk License
