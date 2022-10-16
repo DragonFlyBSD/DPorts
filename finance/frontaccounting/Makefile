@@ -1,5 +1,3 @@
-# Created by: Janky Jay <ek@purplehat.org>
-
 PORTNAME=	frontaccounting
 DISTVERSION=	2.3.25
 CATEGORIES=	finance www
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/${PORTNAME}/FrontAccounting-2.3/${PORTVERSION}
 
 MAINTAINER=	ek@purplehat.org
 COMMENT=	Simple, powerful system for the entire ERP chain
+WWW=		https://www.frontaccounting.com/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/doc/license.txt
