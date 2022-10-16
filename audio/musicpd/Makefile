@@ -1,11 +1,13 @@
 PORTNAME=	musicpd
 PORTVERSION=	0.23.9
+PORTREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	https://www.musicpd.org/download/mpd/${PORTVERSION:R}/
 DISTNAME=	mpd-${PORTVERSION}
 
 MAINTAINER=	riggs@FreeBSD.org
 COMMENT=	Remote-controllable music daemon
+WWW=		https://www.musicpd.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
