@@ -1,5 +1,3 @@
-# Created by: Romain Tartiere <romain@blogreen.org>
-
 PORTNAME=	smartirc4net
 PORTVERSION=	1.1
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	https://smuxi.im/jaws/data/files/
 
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Multi-layered IRC library
+WWW=		http://smartirc4net.meebey.net/jaws/
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/LICENSE
