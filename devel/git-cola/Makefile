@@ -1,5 +1,3 @@
-# Created by: Jonathan Anderson <jonathan@FreeBSD.org>
-
 PORTNAME=		git-cola
 DISTVERSIONPREFIX=	v
 DISTVERSION=		3.10.1
@@ -8,6 +6,7 @@ CATEGORIES=		devel
 
 MAINTAINER=		dch@FreeBSD.org
 COMMENT=		Sleek and powerful Git GUI
+WWW=		https://git-cola.github.io/
 
 LICENSE=		GPLv2+
 LICENSE_FILE=		${WRKSRC}/COPYING
