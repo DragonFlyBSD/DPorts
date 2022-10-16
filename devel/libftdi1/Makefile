@@ -1,11 +1,12 @@
 PORTNAME=	libftdi1
 PORTVERSION=	1.5
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	https://www.intra2net.com/en/developer/libftdi/download/
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Library (using libusb) to talk to FTDI chips
+WWW=		https://www.intra2net.com/en/developer/libftdi/
 
 LICENSE=		GPLv2 LGPL21
 LICENSE_COMB=		multi
