@@ -1,5 +1,3 @@
-# Created by: Björn König <bkoenig@alpha-tierchen.de>
-
 PORTNAME=	sablevm-classpath
 PORTVERSION=	1.13
 PORTREVISION=	12
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/sablevm/sablevm/${PORTVERSION}
 
 MAINTAINER=	java@FreeBSD.org
 COMMENT=	Classpath of SableVM
+WWW=		http://www.sablevm.org/
 
 LICENSE=	GPLv2
 
