@@ -1,5 +1,3 @@
-# Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-
 PORTNAME=	hexchat
 DISTVERSION=	2.16.1
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	https://dl.hexchat.net/hexchat/
 
 MAINTAINER=	pkubaj@FreeBSD.org
 COMMENT=	IRC chat program with GTK and Text Frontend
+WWW=		https://hexchat.github.io/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
