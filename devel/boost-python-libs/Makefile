@@ -1,13 +1,13 @@
-# Created by: Alexander Churanov <churanov.port.maintainer@gmail.com>
-
 PORTNAME=	boost-libs
-PORTREVISION=	1
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
-PATCHDIR=	../boost-libs/files
 
 COMMENT=	Framework for interfacing Python and C++
+WWW=		https://www.boost.org/
 
 LICENSE=	BSL
+LICENSE_FILE=	${WRKSRC}/LICENSE_1_0.txt
+
+PATCHDIR=	${.CURDIR}/../boost-libs/files
 
 BUILD_DEPENDS=	bjam:devel/boost-jam \
 		${PYNUMPY}
