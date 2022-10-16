@@ -1,10 +1,11 @@
 PORTNAME=	coordgenlibs
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.0.0
+DISTVERSION=	3.0.1
 CATEGORIES=	science
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Schrodinger-developed 2D coordinate generation
+WWW=		https://github.com/schrodinger/coordgenlibs
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
