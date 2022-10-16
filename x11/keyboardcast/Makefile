@@ -1,5 +1,3 @@
-# Created by: eimar.koort
-
 PORTNAME=	keyboardcast
 PORTVERSION=	0.1.1
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ CATEGORIES=	x11
 
 MAINTAINER=	eimar.koort@gmail.com
 COMMENT=	Broadcast keystrokes to multiple X windows for Gnome2
+WWW=		https://launchpad.net/keyboardcast
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
