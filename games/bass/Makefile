@@ -1,5 +1,3 @@
-# Created by: Alex Trull <freebsd.alex@trull.org>
-
 PORTNAME=	bass
 PORTVERSION=	1.2
 PORTREVISION=	4
@@ -12,6 +10,7 @@ DISTNAME=	bass-cd-1.2
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Beneath a Steel Sky: a post-apocalyptic futuristic graphical adventure
+WWW=		https://www.scummvm.org/games/ #sky
 
 LICENSE=	unknown
 LICENSE_NAME=	no name
