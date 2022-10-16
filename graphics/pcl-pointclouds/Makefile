@@ -1,6 +1,6 @@
 PORTNAME=	pcl
 DISTVERSION=	1.12.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	graphics math
 MASTER_SITES=	https://github.com/PointCloudLibrary/${PORTNAME}/releases/download/${PORTNAME}-${DISTVERSION}/
 PKGNAMESUFFIX=	-pointclouds
@@ -20,6 +20,7 @@ PATCHFILES+=	ba388061b0f9ed9584e57d6019c30b044a657c3e.patch:-p1 \
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Point Cloud Library
+WWW=		https://pointclouds.org/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
@@ -69,7 +70,7 @@ PNG_LIB_DEPENDS=	libpng.so:graphics/png
 
 QHULL_DESC=		Include convex-hull operations
 QHULL_CMAKE_BOOL=	WITH_QHULL
-QHULL_LIB_DEPENDS=	libqhull_r.so:math/qhull8
+QHULL_LIB_DEPENDS=	libqhull_r.so:math/qhull
 
 QT5_CMAKE_ON=		-DWITH_QT=QT5
 QT5_CMAKE_OFF=		-DWITH_QT=NO
@@ -77,7 +78,7 @@ QT5_BROKEN=		WITH_QT doesn't do anything, should be used by apps, but apps is al
 
 VTK_DESC=		Build VTK visualizations
 VTK_USES=		gl qt:5
-VTK_USE=		GL=gl,glu QT=core,gui,opengl,widgets,buildtools_build,qmake_build
+VTK_USE=		GL=gl,glu QT=core,gui,opengl,widgets,buildtools:build,qmake:build
 VTK_CMAKE_BOOL=		WITH_VTK
 VTK_CMAKE_ON=		-DVTK_DIR=${LOCALBASE}/lib/cmake/vtk-9.1
 VTK_LIB_DEPENDS=	libvtkCommonCore-9.1.so:math/vtk9
