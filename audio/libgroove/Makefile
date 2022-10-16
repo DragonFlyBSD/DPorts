@@ -1,5 +1,3 @@
-# Created by: gahr
-
 PORTNAME=	libgroove
 PORTVERSION=	4.3.0
 PORTREVISION=	8
@@ -7,6 +5,7 @@ CATEGORIES=	audio
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Audio dispatching library
+WWW=		https://github.com/andrewrk/libgroove
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
