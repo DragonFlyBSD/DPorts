@@ -1,9 +1,11 @@
 PORTNAME=	amgcl
 DISTVERSION=	1.4.3
+PORTREVISION=	1
 CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	C++ header-only library for solving large sparse linear systems
+WWW=		https://github.com/ddemidov/amgcl
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
