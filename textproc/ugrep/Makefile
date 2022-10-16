@@ -1,10 +1,11 @@
 PORTNAME=	ugrep
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.8.3
+DISTVERSION=	3.9.2
 CATEGORIES=	textproc
 
 MAINTAINER=	ashish@FreeBSD.org
 COMMENT=	NEW ultra fast grep with interactive query UI
+WWW=		https://github.com/Genivia/ugrep
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
