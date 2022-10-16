@@ -1,11 +1,10 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	deadbeef-musical-spectrum-plugin
 DISTVERSION=	0.0.2015.10.13
 CATEGORIES=	audio
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Musical spectrum plugin for DeaDBeeF audio player
+WWW=		https://github.com/cboxdoerfer/ddb_musical_spectrum
 
 BUILD_DEPENDS=	${LOCALBASE}/include/deadbeef/deadbeef.h:audio/deadbeef
 LIB_DEPENDS=	libfftw3.so:math/fftw3
