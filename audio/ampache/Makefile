@@ -1,5 +1,3 @@
-# Created by: Philippe Audeoud <jadawin@tuxaco.net>
-
 PORTNAME=	ampache
 PORTVERSION=	5.0.0
 DISTVERSIONSUFFIX=	_all
@@ -9,6 +7,7 @@ PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
 
 MAINTAINER=	crees@FreeBSD.org
 COMMENT=	Web-based Audio file manager
+WWW=		https://ampache.org/
 
 LICENSE=	AGPLv3+
 
