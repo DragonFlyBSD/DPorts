@@ -1,3 +1,5 @@
-TIMESTAMP = 1654183841
-SHA256 (google-highway-0.17.0_GH0.tar.gz) = 25158fd5c090b70ecea47fc246c860d150f07f801d2434e1e51ec14a6c15822c
-SIZE (google-highway-0.17.0_GH0.tar.gz) = 1694290
+TIMESTAMP = 1661360790
+SHA256 (google-highway-1.0.1_GH0.tar.gz) = 7ca6af7dc2e3e054de9e17b9dfd88609a7fd202812b1c216f43cc41647c97311
+SIZE (google-highway-1.0.1_GH0.tar.gz) = 1730746
+SHA256 (6a822e2a9ae3.patch) = dcc115c8daad2dfeea3101d0945f25f96c2aa3cc27a50c8c048fd8abcb7a6dc4
+SIZE (6a822e2a9ae3.patch) = 960
