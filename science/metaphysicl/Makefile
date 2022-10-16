@@ -1,10 +1,12 @@
 PORTNAME=	MetaPhysicL
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.3.3
+PORTREVISION=	1
 CATEGORIES=	science
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Metaprogramming, operator-overloaded classes for numerical simulations
+WWW=		https://github.com/libMesh/MetaPhysicL
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
