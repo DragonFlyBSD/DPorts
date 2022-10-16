@@ -1,5 +1,3 @@
-# Created by: Jan Srzednicki <w@wrzask.pl>
-
 PORTNAME=	gkrellmoon2
 PORTVERSION=	0.6
 PORTREVISION=	10
@@ -9,6 +7,7 @@ DISTNAME=	gkrellmoon-${PORTVERSION}
 
 MAINTAINER=	w@wrzask.pl
 COMMENT=	Moon clock plugin for Gkrellm2
+WWW=		http://gkrellmoon.sourceforge.net/
 
 BUILD_DEPENDS=	${LOCALBASE}/include/gkrellm2/gkrellm.h:sysutils/gkrellm2
 RUN_DEPENDS=	gkrellm:sysutils/gkrellm2
