@@ -1,5 +1,3 @@
-# Created by: Mark Felder <feld@FreeBSD.org>
-
 PORTNAME=	pyacoustid
 PORTVERSION=	1.2.2
 CATEGORIES=	audio python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Bindings for Chromaprint acoustic fingerprinting and the Acoustid API
+WWW=		https://github.com/beetbox/pyacoustid
 
 LICENSE=	MIT
 
