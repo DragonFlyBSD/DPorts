@@ -1,12 +1,13 @@
 PORTNAME=	allacrost
 PORTVERSION=	1.0.2
-PORTREVISION=	31
+PORTREVISION=	32
 CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-demo/${PORTVERSION}
 DISTNAME=	${PORTNAME}_demo_source_${PORTVERSION}
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Single player 2D role-playing game
+WWW=		https://web.archive.org/web/20201126135328/http://allacrost.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
