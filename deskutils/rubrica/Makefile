@@ -1,5 +1,3 @@
-# Created by: Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
-
 PORTNAME=	rubrica
 PORTVERSION=	2.1.6
 PORTREVISION=	2
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}2-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Addressbook for the GNOME 2 desktop
+WWW=		https://www.nicolafragale.org/rubrica/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
