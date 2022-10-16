@@ -1,9 +1,10 @@
 PORTNAME=	i2pd
-DISTVERSION=	2.42.1
+DISTVERSION=	2.43.0
 CATEGORIES=	security net-p2p
 
 MAINTAINER=	driesm@FreeBSD.org
 COMMENT=	C++ implementation of I2P client
+WWW=		https://i2pd.website/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
