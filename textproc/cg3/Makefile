@@ -1,11 +1,12 @@
 PORTNAME=	cg3
 DISTVERSION=	1.3.6
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	textproc
 MASTER_SITES=	https://github.com/GrammarSoft/${PORTNAME}/releases/download/v${DISTVERSION}/
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Tools for the Constraint Grammar formalism
+WWW=		https://visl.sdu.dk/constraint_grammar.html
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
