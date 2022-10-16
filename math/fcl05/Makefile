@@ -1,11 +1,12 @@
 PORTNAME=	fcl
 DISTVERSION=	0.5.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	math
 PKGNAMESUFFIX=	05
 
 MAINTAINER=	db@FreeBSD.org
 COMMENT=	Flexible Collision Library (Old version)
+WWW=		https://github.com/flexible-collision-library/fcl
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
