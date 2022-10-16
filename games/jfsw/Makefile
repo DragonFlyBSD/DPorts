@@ -1,11 +1,10 @@
-# Created by: Ganael Laplanche <ganael.laplanche@martymac.org>
-
 PORTNAME=	jfsw
 PORTVERSION=	20211225
 CATEGORIES=	games
 
 MAINTAINER=	martymac@FreeBSD.org
 COMMENT=	Jonathon Fowler's Shadow Warrior Port
+WWW=		https://www.jonof.id.au/jfsw
 
 # Must be distributed only through the Internet and free of charge
 LICENSE=	GPLv2 BuildLic
