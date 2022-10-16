@@ -1,11 +1,12 @@
 PORTNAME=	scikit-build
-DISTVERSION=	0.14.1
+DISTVERSION=	0.15.0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Build system generator for Python C/C++/Fortran/Cython extensions
+WWW=		https://scikit-build.readthedocs.io/en/latest/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
