@@ -1,8 +1,6 @@
-# Created by: Klemm <andreas@klemm.gtn.com>
-
 PORTNAME=	lyx
 PORTVERSION=	${MAJOR_VERSION}.${MINOR_VERSION}
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	print editors
 MASTER_SITES=	ftp://ftp.lyx.org/pub/lyx/stable/${MAJOR_VERSION}.x/ \
 		http://www-ftp.lip6.fr/ftp/pub/lyx/stable/${MAJOR_VERSION}.x/ \
@@ -11,6 +9,7 @@ MASTER_SITES=	ftp://ftp.lyx.org/pub/lyx/stable/${MAJOR_VERSION}.x/ \
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Document processor interfaced with LaTeX (nearly WYSIWYG)
+WWW=		https://www.lyx.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -23,7 +22,7 @@ MINOR_VERSION=	6.1
 
 USES=		autoreconf compiler:c++11-lang desktop-file-utils gmake iconv \
 		pkgconfig perl5 python qt:5 shebangfix tar:xz xorg
-USE_QT=		core concurrent gui svg widgets x11extras buildtools_build qmake_build
+USE_QT=		core concurrent gui svg widgets x11extras buildtools:build qmake:build
 USE_XORG=	xcb
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--without-included-boost \
