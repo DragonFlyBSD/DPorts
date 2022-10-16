@@ -1,5 +1,3 @@
-# Created by: John McAree <john@mcaree.org>
-
 PORTNAME=	comical
 PORTVERSION=	0.8
 PORTREVISION=	14
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Sequential image viewer
+WWW=		http://comical.sourceforge.net/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
