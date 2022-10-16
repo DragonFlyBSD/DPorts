@@ -1,11 +1,12 @@
 PORTNAME=	sly-named-readtables
 PORTVERSION=	20191013
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	editors elisp
 PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
 
 MAINTAINER=	olce.freebsd.ports@certner.fr
 COMMENT=	Support different readtables in the same file for SLY
+WWW=		https://github.com/joaotavora/sly-named-readtables
 
 LICENSE=	PD
 
