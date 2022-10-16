@@ -1,12 +1,11 @@
-# Created by: Michael Beer <beerml@sigma6audio.de>
-
 PORTNAME=	lv2
-PORTVERSION=	1.18.2
+PORTVERSION=	1.18.4
 CATEGORIES=	audio
 MASTER_SITES=	https://lv2plug.in/spec/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Open standard for audio plugins (successor to LADSPA)
+WWW=		https://lv2plug.in/
 
 LICENSE=	ISCL MIT
 LICENSE_COMB=	multi
