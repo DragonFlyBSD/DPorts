@@ -1,5 +1,3 @@
-# Created by: Stefan Esser <se@FreeBSD.org>
-
 PORTNAME=	argus-clients
 PORTVERSION=	3.0.8.3
 CATEGORIES=	net-mgmt security
@@ -8,6 +6,7 @@ MASTER_SITES=	http://qosient.com/argus/src/ \
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Client programs for the argus IP network transaction auditing tool
+WWW=		https://www.qosient.com/argus/
 
 LICENSE=	GPLv3
 
