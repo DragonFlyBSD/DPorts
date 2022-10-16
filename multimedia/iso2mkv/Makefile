@@ -1,5 +1,3 @@
-# Created by: Alexander Botero-Lowry <alexbl@FreeBSD.org>
-
 PORTNAME=	iso2mkv
 DISTVERSION=	2011-05-02
 PORTREVISION=	3
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Script to convert DVD image, device, or VIDEO_TS to mkv
+WWW=		http://5ko.free.fr/en/iso2mkv.html
 
 LICENSE=	MIT
 
