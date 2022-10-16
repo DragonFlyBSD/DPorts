@@ -1,12 +1,11 @@
-# Created by: Wen Heping <wen@FreeBSD.org>
-
 PORTNAME=	mdal
 DISTVERSION=	0.9.4
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	math geography
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Mesh data abstration library
+WWW=		https://www.mdal.xyz/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
