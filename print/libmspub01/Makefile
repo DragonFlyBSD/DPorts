@@ -1,12 +1,13 @@
 PORTNAME=	libmspub
 PORTVERSION=	0.1.4
-PORTREVISION=	20
+PORTREVISION=	21
 CATEGORIES=	print graphics devel
 MASTER_SITES=	LODEV/${PORTNAME}
 PKGNAMESUFFIX=	01
 
 MAINTAINER=	office@FreeBSD.org
 COMMENT=	Library and tools for parsing Microsoft Publisher file format
+WWW=		https://wiki.documentfoundation.org/DLP/Libraries/libmspub
 
 LICENSE=	MPL20
 
