@@ -1,5 +1,3 @@
-# Created by: Rainer Hurling <rhurlin@gwdg.de>
-
 PORTNAME=	matplotlib-scalebar
 PORTVERSION=	0.8.1
 CATEGORIES=	math python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	rhurlin@FreeBSD.org
 COMMENT=	Artist for matplotlib to display a scale bar
+WWW=		https://github.com/ppinard/matplotlib-scalebar
 
 LICENSE=	BSD
 LICENSE_FILE=	${WRKSRC}/LICENSE
