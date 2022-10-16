@@ -1,14 +1,13 @@
-# Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-
 PORTNAME=	impressive
 DISTVERSION=	0.13.1
-PORTREVISION=	2
+PORTREVISION=	5
 CATEGORIES=	graphics python
 MASTER_SITES=	SF/${PORTNAME}/Impressive/${DISTVERSION}/
 DISTNAME=	Impressive-${DISTVERSION}
 
 MAINTAINER=	kai@FreeBSD.org
 COMMENT=	Stylish way of giving presentations
+WWW=		http://impressive.sourceforge.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/license.txt
