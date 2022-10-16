@@ -1,6 +1,3 @@
-# Created by: Jun Mukai <mukai@jmuk.org>
-#    $MCom: ports/japanese/scim-skk/Makefile,v 1.1 2006/09/30 05:17:05 ahze Exp $
-
 PORTNAME=	scim-skk
 PORTVERSION=	0.5.2
 PORTREVISION=	12
@@ -9,6 +6,7 @@ MASTER_SITES=	OSDN/scim-imengine
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	SCIM IMEngine module like SKK
+WWW=		https://sourceforge.jp/projects/scim-imengine/
 
 BUILD_DEPENDS=	scim:textproc/scim
 RUN_DEPENDS:=	${BUILD_DEPENDS}
