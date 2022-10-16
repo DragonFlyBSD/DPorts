@@ -1,5 +1,3 @@
-# Created by: Nikola Lecic <nikola.lecic@anthesphoria.net>
-
 PORTNAME=	scim-kmfl-imengine
 PORTVERSION=	0.9.9
 PORTREVISION=	7
@@ -10,6 +8,7 @@ DIST_SUBDIR=	kmfl
 
 MAINTAINER=	nikola.lecic@anthesphoria.net
 COMMENT=	SCIM KMFL IMEngine platform for Keyman (KMN) language keyboards
+WWW=		http://kmfl.sourceforge.net/
 
 BUILD_DEPENDS=	scim:textproc/scim
 LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
