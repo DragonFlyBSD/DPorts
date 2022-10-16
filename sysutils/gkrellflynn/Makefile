@@ -1,5 +1,3 @@
-# Created by: Patrick Li <pat@databits.net>
-
 PORTNAME=	gkrellflynn
 PORTVERSION=	0.8
 PORTREVISION=	8
@@ -9,6 +7,7 @@ MASTER_SITES=	http://mirror.amdmi3.ru/distfiles/ \
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Tiny system load meter for gkrellm
+WWW=		http://horus.comlab.uni-rostock.de/flynn/
 
 BUILD_DEPENDS=	${LOCALBASE}/include/gkrellm2/gkrellm.h:sysutils/gkrellm2
 RUN_DEPENDS=	gkrellm:sysutils/gkrellm2
