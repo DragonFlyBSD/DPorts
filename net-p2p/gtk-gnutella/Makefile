@@ -1,5 +1,3 @@
-# Created by: Rod Taylor <rbt@zort.on.ca>
-
 PORTNAME=	gtk-gnutella
 PORTVERSION=	1.2.2
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GTK based Gnutella client
+WWW=		http://gtk-gnutella.sourceforge.net/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSE
