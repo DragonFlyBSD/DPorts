@@ -1,10 +1,11 @@
 PORTNAME=	opencv
-DISTVERSION=	4.5.5
-PORTREVISION=	7
+DISTVERSION=	4.6.0
+PORTREVISION=	1
 CATEGORIES=	graphics
 
 MAINTAINER=	desktop@FreeBSD.org
 COMMENT=	Open Source Computer Vision library
+WWW=		https://www.opencv.org/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -125,7 +126,7 @@ VTK_DESC=		Include VTK library support (build opencv_viz module)
 VTK_CMAKE_BOOL=		WITH_VTK
 VTK_LIB_DEPENDS=	libvtkCommonCore-9.1.so:math/vtk9
 VTK_USES=		qt:5
-VTK_USE=		QT=buildtools_build,qmake_build
+VTK_USE=		QT=buildtools:build,qmake:build
 ###
 
 # IMAGE group options (GPHOTO2 JPEG OPENEXR PNG TIFF)
