@@ -1,5 +1,3 @@
-# Created by: Danilo Egea Gondolfo <danilo@FreeBSD.org>
-
 PORTNAME=	solarus-quest-editor
 PORTVERSION=	1.6.4
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ CATEGORIES=	games
 
 MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	GUI to create and modify quests for the Solarus engine
+WWW=		http://www.solarus-games.org/engine/solarus-quest-editor
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/license_gpl.txt
@@ -29,7 +28,7 @@ GL_COMMIT=	e541e1312c242bff10aa1fb84a7eb8b6cb8504ba
 
 CMAKE_ARGS+=	-DSOLARUS_USE_LUAJIT=OFF
 USE_SDL=	sdl2 ttf2 image2
-USE_QT=		buildtools_build concurrent core gui linguist qmake_build widgets
+USE_QT=		buildtools:build concurrent core gui linguist qmake:build widgets
 
 DESKTOP_ENTRIES=	"Solarus Quest Editor" "${COMMENT}" "${PORTNAME}" "${PORTNAME}"  \
 			"Game;" false
