@@ -1,13 +1,12 @@
-# Created by: Babak Farrokhi <farrokhi@FreeBSD.org>
-
 PORTNAME=	fastnetmon
 PORTVERSION=	1.1.4
 DISTVERSIONPREFIX=	v
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	net-mgmt security
 
 MAINTAINER=	farrokhi@FreeBSD.org
 COMMENT=	Very fast DDoS analyzer with sflow/netflow/mirror support
+WWW=		https://fastnetmon.com
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
