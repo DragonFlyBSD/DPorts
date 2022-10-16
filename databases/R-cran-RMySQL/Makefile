@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	RMySQL
 DISTVERSION=	0.10.23
 CATEGORIES=	databases
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	R interface to the MySQL database
+WWW=		https://cran.r-project.org/web/packages/RMySQL/
 
 LICENSE=	GPLv2
 
