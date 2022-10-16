@@ -1,9 +1,11 @@
 PORTNAME=	simple-web-server
 DISTVERSION=	3.0.2
+PORTREVISION=	1
 CATEGORIES=	www devel
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	HTTP and HTTPS server and client library
+WWW=		https://gitlab.com/eidheim/Simple-Web-Server
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
