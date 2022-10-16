@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@rtfm.jp>
-
 PORTNAME=	metauml
 PORTVERSION=	0.2.5
 PORTREVISION=	5
@@ -15,6 +13,7 @@ EXTRACT_ONLY=	${PORTNAME}_lib_${PORTVERSION}.tgz lop-release.tgz
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	MetaPost library for typesetting UML diagrams
+WWW=		http://metauml.sourceforge.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/thrunk/License
