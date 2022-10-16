@@ -1,5 +1,3 @@
-# Created by: Pakhom Golynga <pg@pakhom.spb.ru>
-
 PORTNAME=	zabbix4
 PORTVERSION=	4.0.30
 PORTREVISION?=	0
@@ -10,6 +8,7 @@ DISTNAME=	zabbix-${PORTVERSION}
 
 MAINTAINER=	pg@pakhom.spb.ru
 COMMENT=	Enterprise-class open source distributed monitoring (${PKGNAMESUFFIX:S/^-//}) LTS
+WWW=		https://www.zabbix.com/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
