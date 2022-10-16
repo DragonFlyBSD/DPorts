@@ -1,12 +1,10 @@
-# Created by: Thomas E. Zander
-
 PORTNAME=	mencoder
 PORTVERSION=	${MPLAYER_PORT_VERSION}.${MPLAYER_SNAPSHOT_DATE:S/-//g}
-PORTREVISION=	1
 CATEGORIES=	multimedia audio
 
 MAINTAINER=	riggs@FreeBSD.org
 COMMENT=	Convenient video file and movie encoder
+WWW=		http://www.mplayerhq.hu/
 
 .include "${.CURDIR}/../mplayer/Makefile.common"
 
