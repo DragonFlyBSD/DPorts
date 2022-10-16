@@ -1,5 +1,3 @@
-# Created by: Michael Beer <beerml@sigma6audio.de>
-
 PORTNAME=	sratom
 PORTVERSION=	0.6.10
 CATEGORIES=	audio
@@ -7,6 +5,7 @@ MASTER_SITES=	http://download.drobilla.net/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Library for serialising LV2 atoms to/from RDF
+WWW=		https://drobilla.net/software/sratom
 
 LICENSE=	ISCL
 LICENSE_FILE=	${WRKSRC}/COPYING
