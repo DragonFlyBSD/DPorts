@@ -1,5 +1,3 @@
-# Created by: Aaron VonderHaar <avh4@usa.net>
-
 PORTNAME=	gnurobots
 PORTVERSION=	1.2.0
 PORTREVISION=	15
@@ -8,6 +6,7 @@ MASTER_SITES=	GNU
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GNU diversion wherein Scheme-coded robots explore a world
+WWW=		https://www.gnu.org/software/gnurobots/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
