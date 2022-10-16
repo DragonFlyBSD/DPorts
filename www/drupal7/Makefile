@@ -1,7 +1,5 @@
-# Created by: Nick Hilliard <nick@foobar.org>
-
 PORTNAME=	drupal7
-DISTVERSION=	7.89
+DISTVERSION=	7.92
 CATEGORIES=	www
 MASTER_SITES=	http://ftp.drupal.org/files/projects/
 DISTNAME=	drupal-${PORTVERSION}
@@ -9,6 +7,7 @@ DIST_SUBDIR=	drupal
 
 MAINTAINER=	joneum@FreeBSD.org
 COMMENT=	Database driven web content management system (CMS)
+WWW=		https://www.drupal.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
