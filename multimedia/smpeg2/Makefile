@@ -1,5 +1,3 @@
-# Created by: Vladimir Kondratiev <wulf@mail.mipt.ru>
-
 PORTNAME=	smpeg2
 PORTVERSION=	2.0.0
 PORTREVISION=	4
@@ -9,6 +7,7 @@ MASTER_SITES=	https://www.libsdl.org/projects/smpeg/release/ \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Free MPEG1 video player library with sound support
+WWW=		https://icculus.org/smpeg/
 
 LICENSE=	MIT LGPL20+
 LICENSE_COMB=	multi
