@@ -1,5 +1,3 @@
-# Created by: thierry@pompo.net
-
 PORTNAME=	jupyter-jsmol
 PORTVERSION=	2021.3.0
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	JSmol viewer widget for Jupyter Notebooks and JupyterLab
+WWW=		https://github.com/fekad/jupyter-jsmol
 
 LICENSE=	BSD3CLAUSE
 
