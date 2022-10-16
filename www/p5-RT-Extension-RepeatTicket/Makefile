@@ -1,5 +1,3 @@
-# Created by: Matthew Seaman <matthew@FreeBSD.org>
-
 PORTNAME=	RT-Extension-RepeatTicket
 PORTVERSION=	1.11
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	RT Extension to repeat tickets base on a schedule
+WWW=		https://metacpan.org/release/RT-Extension-RepeatTicket
 
 LICENSE=	GPLv2
 
