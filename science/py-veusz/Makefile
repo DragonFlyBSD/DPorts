@@ -1,5 +1,3 @@
-# Created by: Stas Timokhin <devel@stasyan.com>
-
 PORTNAME=	veusz
 DISTVERSIONPREFIX=	${PORTNAME}-
 DISTVERSION=	3.4
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Scientific plotting package
+WWW=		https://veusz.github.io/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -20,7 +19,7 @@ USES=		compiler:c++11-lang python:3.5+ pyqt:5 qt:5 shebangfix
 USE_GITHUB=	yes
 USE_PYQT=	pyqt5 sip
 USE_PYTHON=	distutils concurrent autoplist
-USE_QT=		core gui xml widgets qmake_build
+USE_QT=		core gui xml widgets qmake:build
 SHEBANG_FILES=	examples/embedexample.py
 
 post-install:
