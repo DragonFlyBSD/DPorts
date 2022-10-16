@@ -1,12 +1,13 @@
 PORTNAME=	lazpaint
 PORTVERSION=	7.1.6
-PORTREVISION=	4
+PORTREVISION=	5
 DISTVERSIONPREFIX=	v
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	${LAZARUS_PKGNAMESUFFIX}
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Image editor written in Lazarus
+WWW=		https://wiki.freepascal.org/LazPaint
 
 LICENSE=	GPLv3
 
