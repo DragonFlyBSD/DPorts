@@ -1,11 +1,11 @@
-# Created by: jockl <jockl@pianojockl.org>
-
 PORTNAME=	squeezelite
 PORTVERSION=	1.9.7.1253
+PORTREVISION=	1
 CATEGORIES=	audio
 
 MAINTAINER=	jockl@pianojockl.org
 COMMENT=	Lightweight headless squeezebox player for Logitech Media Server
+WWW=		https://github.com/ralph-irving/squeezelite
 
 LICENSE=	GPLv3
 
