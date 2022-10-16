@@ -1,13 +1,12 @@
-# Created by: Jose M. Alcaide <jose@we.lc.ehu.es>
-
 PORTNAME=	tcpflow
 PORTVERSION=	1.5.0
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	net
 MASTER_SITES=	http://downloads.digitalcorpora.org/downloads/${PORTNAME}/
 
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Program that captures data transmitted as part of TCP connections
+WWW=		https://github.com/simsong/tcpflow
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
