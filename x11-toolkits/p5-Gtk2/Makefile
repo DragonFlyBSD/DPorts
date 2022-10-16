@@ -1,5 +1,3 @@
-# Created by: clsung@dragon2.net
-
 PORTNAME=	Gtk2
 PORTVERSION=	1.24993
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	swills@FreeBSD.org
 COMMENT=	Perl module for Gtk+ 2.x graphical user interface library
+WWW=		http://gtk2-perl.sourceforge.net/
 
 LICENSE=	LGPL21
 
