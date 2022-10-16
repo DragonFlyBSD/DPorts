@@ -1,5 +1,3 @@
-# Created by: Ade Lovett <ade@FreeBSD.org>
-
 PORTNAME=	librsvg
 PORTVERSION=	2.40.21
 PORTREVISION=	3
@@ -10,6 +8,7 @@ DIST_SUBDIR=	gnome2
 
 MAINTAINER=	desktop@FreeBSD.org
 COMMENT=	Library for parsing and rendering SVG vector-graphic files
+WWW=		https://live.gnome.org/LibRsvg
 
 LICENSE=	GPLv2 LGPL20
 LICENSE_COMB=	multi
@@ -32,7 +31,7 @@ OPTIONS_SUB=		yes
 
 DOCS_CONFIGURE_ENABLE=	grk-doc-html
 
-VAPI_BUILD_DEPENDS=	valac:lang/vala
+VAPI_USES=		vala:build
 VAPI_CONFIGURE_ON=	--enable-vala=yes
 VAPI_CONFIGURE_OFF=	--enable-vala=no
 
