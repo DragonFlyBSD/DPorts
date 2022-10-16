@@ -1,5 +1,3 @@
-# Created by: Thierry Thomas <thierry@pompo.net>
-
 PORTNAME=	toxic
 PORTVERSION=	0.11.3
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ CATEGORIES=	net-im
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Console client for Tox
+WWW=		https://tox.chat/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE
