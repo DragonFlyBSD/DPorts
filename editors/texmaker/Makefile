@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	texmaker
 PORTVERSION=	5.0.3
 PORTREVISION=	4
@@ -9,6 +7,7 @@ MASTER_SITES=	http://www.xm1math.net/texmaker/
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	LaTeX Development Environment
+WWW=		https://www.xm1math.net/texmaker/
 
 LICENSE=	GPLv2+
 
@@ -18,7 +17,7 @@ USES=		compiler:c++11-lang desktop-file-utils ghostscript:x11,run \
 		gl pkgconfig qmake qt:5 tar:bzip2
 USE_GL=		gl
 USE_QT=		concurrent core gui network printsupport script widgets \
-		xml buildtools_build
+		xml buildtools:build
 USE_TEX=	latex dvipsk
 
 EXTRACT_AFTER_ARGS=	--exclude hunspell
