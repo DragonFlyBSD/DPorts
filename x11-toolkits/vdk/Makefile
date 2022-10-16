@@ -1,5 +1,3 @@
-# Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-
 PORTNAME=	vdk
 PORTVERSION=	2.5.1
 PORTREVISION=	6
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}lib/VDK%20for%20both%20Linux%20and%20Windows%20%28th
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	C++ wrapper for GTK+ toolkit
+WWW=		https://sourceforge.net/projects/vdklib/
 
 LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING
