@@ -1,13 +1,12 @@
-# Created by: Joris Dedieu <joris.dedieu@gmail.com>
-
 PORTNAME=	tinyows
 PORTVERSION=	1.2.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	graphics www geography
 MASTER_SITES=	https://download.osgeo.org/mapserver/
 
 MAINTAINER=	joris.dedieu@gmail.com
 COMMENT=	High Performance WFS-T server
+WWW=		https://mapserver.org/tinyows/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
