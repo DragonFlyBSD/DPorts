@@ -1,12 +1,11 @@
-# Created by: Marco Steinbach <coco@executive-computing.de>
-
 PORTNAME=	froxlor
-DISTVERSION=	0.10.35.1
+DISTVERSION=	0.10.38
 CATEGORIES=	sysutils www
 MASTER_SITES=	https://files.froxlor.org/releases/
 
 MAINTAINER=	nc@FreeBSD.org
 COMMENT=	PHP-based ISP Server Management Panel
+WWW=		https://www.froxlor.org/
 
 LICENSE=	GPLv2
 
