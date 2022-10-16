@@ -1,14 +1,13 @@
-# Created by: Yoichi NAKAYAMA <yoichi@FreeBSD.org>
-
 PORTNAME=	bbdb
 DISTVERSIONPREFIX=	v
 DISTVERSION=	3.2.2a
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	databases elisp
 PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
 
 MAINTAINER=	emacs@FreeBSD.org
 COMMENT=	Big Brother Database
+WWW=		https://savannah.nongnu.org/projects/bbdb/
 
 LICENSE=	GPLv3+
 
