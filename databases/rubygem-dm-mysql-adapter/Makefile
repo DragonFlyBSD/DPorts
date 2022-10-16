@@ -1,5 +1,3 @@
-# Created by: Jyun-Yan You <jyyou@cs.nctu.edu.tw>
-
 PORTNAME=	dm-mysql-adapter
 PORTVERSION=	1.2.0
 CATEGORIES=	databases rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	MySQL Adapter for DataMapper
+WWW=		https://github.com/datamapper/dm-mysql-adapter
 
 LICENSE=	MIT
 
