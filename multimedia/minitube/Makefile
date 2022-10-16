@@ -4,6 +4,7 @@ CATEGORIES=	multimedia www
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	TV-like client for YouTube
+WWW=		https://flavio.tordini.org/minitube
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -23,7 +24,7 @@ GH_TUPLE=	\
 
 USE_GL=		gl
 USE_QT=		core dbus declarative gui network script sql widgets \
-		buildtools_build imageformats_run sql-sqlite3_run \
+		buildtools:build imageformats:run sql-sqlite3:run \
 		x11extras
 
 QMAKE_ARGS=	QMAKE_LRELEASE=${LRELEASE} \
@@ -31,7 +32,7 @@ QMAKE_ARGS=	QMAKE_LRELEASE=${LRELEASE} \
 
 OPTIONS_DEFINE=	NLS
 OPTIONS_SUB=	yes
-NLS_USE=	QT=linguisttools_build
+NLS_USE=	QT=linguisttools:build
 
 post-patch:
 # Remove BOM
