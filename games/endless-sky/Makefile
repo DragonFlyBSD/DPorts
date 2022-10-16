@@ -1,10 +1,12 @@
 PORTNAME=	endless-sky
 PORTVERSION=	0.9.14
 DISTVERSIONPREFIX=	v
+PORTREVISION=	1
 CATEGORIES=	games
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Space exploration and combat game similar to Escape Velocity
+WWW=		https://endless-sky.github.io/
 
 LICENSE=	GPLv3+ CC-BY-4.0 CC-BY-SA-3.0 CC-BY-SA-4.0 PD
 LICENSE_COMB=	multi
