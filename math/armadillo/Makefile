@@ -1,11 +1,11 @@
 PORTNAME=	armadillo
-PORTVERSION=	11.2.0
-PORTREVISION=	1
+DISTVERSION=	11.4.0
 CATEGORIES=	math
 MASTER_SITES=	SF/arma
 
 MAINTAINER=	salvadore@FreeBSD.org
 COMMENT=	C++ linear algebra library
+WWW=		http://arma.sourceforge.net/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
@@ -17,9 +17,11 @@ LIB_DEPENDS=	libarpack.so:math/arpack-ng \
 		libsuperlu.so:math/superlu \
 		libsz.so:science/libaec
 
-USES=		blaslapack:openblas cmake compiler:c++11-lang pkgconfig tar:xz
-
+USES=		blaslapack:openblas cmake:testing compiler:c++11-lang pkgconfig tar:xz
 USE_LDCONFIG=	yes
+
 CMAKE_ARGS+=	-DPKG_CONFIG_DIR=${LOCALBASE}/libdata/pkgconfig/
+CMAKE_OFF=	BUILD_SMOKE_TEST
+CMAKE_TESTING_ON=	BUILD_SMOKE_TEST
 
 .include <bsd.port.mk>
