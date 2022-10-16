@@ -7,6 +7,7 @@ DISTNAME=	${PORTNAME}-${ISCVERSION}
 
 MAINTAINER=	apevnev@me.com
 COMMENT=	Alternative DHCP implementation by ISC
+WWW=		https://kea.isc.org/
 
 LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -17,7 +18,7 @@ LIB_DEPENDS=	liblog4cplus.so:devel/log4cplus \
 USES=		autoreconf compiler:c++11-lang iconv libtool pathfix ssl cpe
 
 # ISC releases things like 1.4.0-P1, which our versioning doesn't like
-ISCVERSION=	2.0.2
+ISCVERSION=	2.2.0
 
 CPE_VENDOR=	isc
 CPE_VERSION=	${ISCVERSION:C/-.*//}
