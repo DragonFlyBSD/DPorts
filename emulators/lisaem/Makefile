@@ -1,5 +1,3 @@
-# Created by: Edward Tomasz Napierala <trasz@FreeBSD.org>
-
 PORTNAME=	lisaem
 PORTVERSION=	1.2.6.2
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	http://lisaem.sunder.net/downloads/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Apple Lisa 2 Emulator
+WWW=		https://lisaem.sunder.net/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
