@@ -1,5 +1,3 @@
-# Created by: Koop Mast <kwm@rainbow-runner.nl>
-
 PORTNAME=	gstreamer1-libav
 PORTVERSION=	1.16.2
 CATEGORIES=	multimedia
@@ -11,6 +9,7 @@ PATCHFILES+=	07b43c727c9a.patch:-p1 # https://gitlab.freedesktop.org/gstreamer/g
 
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	GStreamer plug-in with many audio/video decoders/encoders
+WWW=		https://gstreamer.freedesktop.org/
 
 LICENSE=	LGPL20+
 LICENSE_FILE=	${WRKSRC}/COPYING.LIB
