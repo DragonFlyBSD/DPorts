@@ -1,11 +1,12 @@
 PORTNAME=	lib2geom
 DISTVERSION=	1.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	math gnome
 MASTER_SITES=	https://gitlab.com/inkscape/${PORTNAME}/-/archive/${DISTVERSION}/
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Easy to use 2D geometry library in C++
+WWW=		https://gitlab.com/inkscape/lib2geom
 
 BUILD_DEPENDS=	googletest>0:devel/googletest
 LIB_DEPENDS=	libdouble-conversion.so:devel/double-conversion \
