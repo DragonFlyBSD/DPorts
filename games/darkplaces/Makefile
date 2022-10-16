@@ -1,5 +1,3 @@
-# Created by: Alejandro Pulver <alejandro@varnet.biz>
-
 PORTNAME=	darkplaces
 DISTVERSION=	20180412beta1
 CATEGORIES=	games
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}engine${DISTVERSION}
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Quake engine modification
+WWW=		https://icculus.org/twilight/darkplaces/
 
 LICENSE=	GPLv2+
 
