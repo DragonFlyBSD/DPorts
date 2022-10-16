@@ -1,14 +1,16 @@
 PORTNAME=	fheroes2
-PORTVERSION=	0.9.16
+PORTVERSION=	0.9.19
 CATEGORIES=	games
 
 MAINTAINER=	pkubaj@FreeBSD.org
 COMMENT=	Free implementation of Heroes of Might and Magic II engine
+WWW=		https://ihhub.github.io/fheroes2/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libpng.so:graphics/png
+RUN_DEPENDS=	timidity:audio/timidity
 
 USES=		cmake gettext-tools iconv localbase:ldflags pkgconfig sdl \
 		shebangfix
