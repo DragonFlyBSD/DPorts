@@ -1,5 +1,3 @@
-# Created by: Ryan Steinmetz <zi@FreeBSD.org>
-
 PORTNAME=	paperclip
 DISTVERSION=	6.1.0
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMESUFFIX=	-rails5
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Easy upload management for ActiveRecord
+WWW=		https://github.com/thoughtbot/paperclip
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
