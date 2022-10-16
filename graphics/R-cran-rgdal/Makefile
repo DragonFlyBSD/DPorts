@@ -1,12 +1,12 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	rgdal
 DISTVERSION=	1.5-32
+PORTREVISION=	1
 CATEGORIES=	graphics
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Bindings for the Geospatial Data Abstraction Library
+WWW=		https://cran.r-project.org/web/packages/rgdal/
 
 LICENSE=	GPLv2+
 
