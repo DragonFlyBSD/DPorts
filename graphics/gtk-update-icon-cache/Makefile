@@ -1,5 +1,3 @@
-# Created by: Koop Mast <kwm@FreeBSD.org>
-
 PORTNAME=	gtk-update-icon-cache
 PORTVERSION=	3.24.31
 CATEGORIES=	graphics
@@ -7,6 +5,7 @@ DIST_SUBDIR=	gnome
 
 MAINTAINER=	desktop@FreeBSD.org
 COMMENT=	Gtk-update-icon-cache utility from the Gtk+ toolkit
+WWW=		https://www.gtk.org/
 
 LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING
