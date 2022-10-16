@@ -1,13 +1,12 @@
-# Created by: Michael Nottebrock <lofi@FreeBSD.org>
-
 PORTNAME=	bastet
 PORTVERSION=	0.43.2
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	http://fph.altervista.org/prog/files/
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Ncurses Tetris clone which is harder than every other Tetris
+WWW=		https://fph.altervista.org/prog/bastet.html
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE
