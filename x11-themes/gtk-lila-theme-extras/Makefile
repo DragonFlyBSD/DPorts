@@ -1,5 +1,3 @@
-# Created by: Filippo Natali <filippo@widestore.net>
-
 PORTNAME=	gtk-lila-theme-extras
 PORTVERSION=	0.4.5
 PORTREVISION=	7
@@ -9,6 +7,7 @@ DISTNAME=	lila-gtk-extras-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GTK+ 2.0 Lila additional themes
+WWW=		https://lila-center.info/
 
 WRKSRC=		${WRKDIR}/lila-gtk-extras
 NO_BUILD=	yes
