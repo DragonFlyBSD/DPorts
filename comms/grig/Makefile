@@ -1,5 +1,3 @@
-# Created by: Matt Dawson <matt@mattsnetwork.co.uk>
-
 PORTNAME=	grig
 PORTVERSION=	0.9.0
 #DISTNAME=	Grig
@@ -7,6 +5,7 @@ CATEGORIES=	comms hamradio
 
 MAINTAINER=	hamradio@FreeBSD.org
 COMMENT=	Amateur Radio control front-end
+WWW=		http://groundstation.sourceforge.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
