@@ -1,10 +1,12 @@
 PORTNAME=	fineftp-server
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.3.0
+DISTVERSION=	1.3.1
+PORTREVISION=	1
 CATEGORIES=	ftp
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	C++ minimal FTP server library
+WWW=		https://github.com/continental/fineftp-server
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
