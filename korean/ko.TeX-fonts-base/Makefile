@@ -1,5 +1,3 @@
-# Created by: Hyogeol Lee <hyogeollee@gmail.com>
-
 PORTNAME=	ko.TeX-fonts-base
 PORTVERSION=	0.1.0.20070927
 PORTREVISION=	6
@@ -9,6 +7,7 @@ DISTNAME=	ko.tex-unfonts-base-20070927
 
 MAINTAINER=	hyogeollee@gmail.com
 COMMENT=	Korean TeX base fonts
+WWW=		http://project.ktug.or.kr/ko.TeX/
 
 USE_TEX=	dvipsk latex
 CONFLICTS=	hlatex
