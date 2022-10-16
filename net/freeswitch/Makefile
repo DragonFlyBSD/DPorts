@@ -1,5 +1,3 @@
-# Created by: Corey Smith <corsmith@gmail.com>
-
 PORTNAME=	freeswitch
 PORTVERSION=	1.10.3
 PORTREVISION=	2
@@ -10,6 +8,7 @@ DISTFILES=	${PORTNAME}-${PORTVERSION}.-release${EXTRACT_SUFX}
 
 MAINTAINER=	pi@FreeBSD.org
 COMMENT=	Multi-protocol soft switch for telephony applications
+WWW=		https://freeswitch.org
 
 LICENSE=	MPL11
 
@@ -32,7 +31,7 @@ LIB_DEPENDS=	libsqlite3.so:databases/sqlite3 \
 		libtiff.so:graphics/tiff \
 		libuuid.so:misc/e2fsprogs-libuuid
 
-USES=		compiler:c11 cpe gmake iconv jpeg libedit autoreconf libtool lua \
+USES=		compiler:c11 cpe gmake iconv jpeg libedit autoreconf libtool lua:-53 \
 		perl5 pkgconfig shebangfix ssl
 USE_LDCONFIG=	yes
 USE_RC_SUBR=	freeswitch
