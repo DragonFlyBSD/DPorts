@@ -1,5 +1,3 @@
-# Created by: Norio Suzuki <nosuzuki@e-mail.ne.jp>
-
 PORTNAME=	xzgv
 PORTVERSION=	0.9.2
 CATEGORIES=	graphics
@@ -7,6 +5,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	m.ne@gmx.net
 COMMENT=	Image viewer with thumbnail-based file selector for X
+WWW=		https://sourceforge.net/projects/xzgv/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
