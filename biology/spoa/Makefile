@@ -1,10 +1,11 @@
 PORTNAME=	spoa
 DISTVERSION=	4.0.7
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	biology
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	C++ implementation of the partial order alignment (POA) algorithm
+WWW=		https://github.com/rvaser/spoa
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
