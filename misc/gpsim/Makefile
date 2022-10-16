@@ -1,5 +1,3 @@
-# Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-
 PORTNAME=	gpsim
 DISTVERSION=	0.31.0
 CATEGORIES=	misc
@@ -7,6 +5,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Software simulator for Microchip PIC microcontrollers
+WWW=		http://gpsim.sourceforge.net/
 
 LICENSE=	GPLv2 LGPL21
 LICENSE_COMB=	multi
