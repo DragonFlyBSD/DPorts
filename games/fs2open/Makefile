@@ -1,10 +1,11 @@
 PORTNAME=	fs2open
 DISTVERSIONPREFIX=	release_
-DISTVERSION=	22_0_0
+DISTVERSION=	22_2_0
 CATEGORIES=	games
 
 MAINTAINER=	pkubaj@FreeBSD.org
 COMMENT=	Open source video engine of FreeSpace 2
+WWW=		http://scp.indiegames.us
 
 LICENSE=	VOLITION
 LICENSE_NAME=	Volition Copyright
