@@ -1,12 +1,12 @@
-# Created by: Bruce M. Simpson <bms@FreeBSD.org>
-
 PORTNAME=	urjtag
 DISTVERSION=	2021.03
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	SF
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Extended utility to work with JTAG-aware boards
+WWW=		http://urjtag.org/
 
 LICENSE=	GPLv2
 
