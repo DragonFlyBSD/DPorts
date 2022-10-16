@@ -1,5 +1,3 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	face_recognition
 PORTVERSION=	1.3.0
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Recognize faces from Python or from the command line
+WWW=		https://pypi.org/project/face_recognition/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
