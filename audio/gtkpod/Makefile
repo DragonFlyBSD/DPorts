@@ -1,13 +1,12 @@
-# Created by: David Le Brun <david@dyn-ns.net>
-
 PORTNAME=	gtkpod
 PORTVERSION=	1.0.0
-PORTREVISION=	11
+PORTREVISION=	12
 CATEGORIES=	audio
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	GUI for Apple iPod using GTK2
+WWW=		http://www.gtkpod.org/
 
 LICENSE=	GPLv2
 
