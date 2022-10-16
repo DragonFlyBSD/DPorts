@@ -6,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Framework for building interactive map applications
+WWW=		https://kartograph.org/docs/kartograph.py/
 
 LICENSE=	MIT
 
@@ -20,7 +21,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}argparse>0:devel/py-argparse@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}Shapely>=1.0.14:devel/py-shapely@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}tinycss>0:textproc/py-tinycss@${PY_FLAVOR}
 
-USES=		python:3.7+
+USES=		python:3.8+
 USE_GITHUB=	yes
 GH_PROJECT=	${PORTNAME}.py
 USE_PYTHON=	distutils concurrent autoplist
