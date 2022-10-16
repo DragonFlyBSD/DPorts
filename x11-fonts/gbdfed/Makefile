@@ -1,5 +1,3 @@
-# Created by: Zhihao Yuan <lichray@gmail.com>
-
 PORTNAME=	gbdfed
 PORTVERSION=	1.6
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	http://sofia.nmsu.edu/~mleisher/Software/gbdfed/
 
 MAINTAINER=	lichray@gmail.com
 COMMENT=	GTK2 bitmap font editor
+WWW=		http://sofia.nmsu.edu/~mleisher/Software/gbdfed/
 
 LICENSE=	MIT
 
