@@ -1,8 +1,6 @@
-# Created by: Michael Reifenberger <mr@FreeBSD.org>
-
 PORTNAME=	openscad
 PORTVERSION=	2021.01.01
-PORTREVISION=	12
+PORTREVISION=	14
 CATEGORIES=	cad
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
@@ -10,6 +8,7 @@ PATCHFILES+=	cc49ad8dac24.patch:-p1
 
 MAINTAINER=	mr@FreeBSD.org
 COMMENT=	Programmer's solid 3D CAD modeller #'
+WWW=		https://openscad.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -32,7 +31,7 @@ USES=		bison compiler:c++14-lang cpe desktop-file-utils eigen:3 gettext \
 USE_GITHUB=	yes
 USE_GL=		gl glu glew
 USE_GNOME=	glib20 libxml2
-USE_QT=		buildtools_build core concurrent_build dbus gui multimedia widgets
+USE_QT=		buildtools:build core concurrent:build dbus gui multimedia widgets
 USE_XORG=	x11
 GH_TAGNAME=	41f58fe57c03457a3a8b4dc541ef5654ec3e8c78
 QMAKE_ARGS=	CONFIG+="experimental" VERSION=${PORTVERSION}
