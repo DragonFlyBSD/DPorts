@@ -1,10 +1,12 @@
 PORTNAME=	libgltf
 PORTVERSION=	0.1.0
+PORTREVISION=	1
 CATEGORIES=	graphics devel
 MASTER_SITES=	LODEV
 
 MAINTAINER=	office@FreeBSD.org
 COMMENT=	C++ Library for rendering OpenGL models stored in glTF format
+WWW=		https://www.libreoffice.org
 
 LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/COPYING
