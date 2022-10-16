@@ -1,5 +1,3 @@
-# Created by: Kimura Fuyuki <fuyuki@hadaly.org>
-
 PORTNAME=	gtkglextmm
 PORTVERSION=	1.2.0
 PORTREVISION=	15
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/gtkglext/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	C++ wrapper for GtkGLExt
+WWW=		http://gtkglext.sourceforge.net/
 
 LIB_DEPENDS=	libgtkglext-x11-1.0.so:x11-toolkits/gtkglext \
 		libgtkmm-2.4.so:x11-toolkits/gtkmm24
