@@ -1,5 +1,3 @@
-# Created by: Leland Wang <llwang@infor.org>
-
 PORTNAME=	scim-openvanilla
 PORTVERSION=	0.7.2.20070514
 PORTREVISION=	11
@@ -9,6 +7,7 @@ DISTNAME=	openvanilla-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	SCIM OpenVanilla input method (IM)/output filter (OF) framework
+WWW=		https://openvanilla.org/
 
 BUILD_DEPENDS=	scim:textproc/scim	\
 		${LOCALBASE}/include/OpenVanilla/OpenVanilla.h:textproc/openvanilla-framework
