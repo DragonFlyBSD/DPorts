@@ -1,5 +1,3 @@
-# Created by: Nate Underwood <natey@natey.com>
-
 PORTNAME=	libpst
 PORTVERSION=	0.6.76
 PORTREVISION=	1
@@ -10,6 +8,7 @@ MASTER_SITES=	https://www.five-ten-sg.com/libpst/packages/ \
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Tool for converting Outlook .pst files to mbox and other formats
+WWW=		https://www.five-ten-sg.com/libpst/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
