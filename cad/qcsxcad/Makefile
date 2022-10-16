@@ -1,11 +1,13 @@
 PORTNAME=	qcsxcad
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.6.2-9
+PORTREVISION=	1
 DISTVERSIONSUFFIX=	-g3f09a8b
 CATEGORIES=	cad
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Qt-GUI for CSXCAD
+WWW=		https://github.com/thliebig/QCSXCAD
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -19,7 +21,7 @@ LIB_DEPENDS=	libCSXCAD.so:cad/csxcad \
 		libvtkCommonCore-9.1.so:math/vtk9
 
 USES=		cmake gl jpeg pkgconfig qt:5 xorg
-USE_QT=		core gui opengl sql widgets xml buildtools_build qmake_build
+USE_QT=		core gui opengl sql widgets xml buildtools:build qmake:build
 USE_XORG=	ice sm x11 xext xt
 USE_GL=		gl opengl
 USE_LDCONFIG=	yes
