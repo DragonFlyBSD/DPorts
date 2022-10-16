@@ -1,5 +1,3 @@
-# Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-
 PORTNAME=	mahjong
 PORTVERSION=	1.16
 CATEGORIES=	games net
@@ -8,6 +6,7 @@ DISTNAME=	mj-${PORTVERSION}-src
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Networked Mah Jong program, together with a computer player
+WWW=		https://mahjong.julianbradfield.org/
 
 LICENSE=	GPLv2+
 
