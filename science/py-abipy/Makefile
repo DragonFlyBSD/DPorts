@@ -1,10 +1,12 @@
 PORTNAME=	abipy
 DISTVERSION=	0.9.0
+PORTREVISION=	1
 CATEGORIES=	science python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Library for analyzing the results produced by ABINIT
+WWW=		https://abinit.github.io/abipy/
 
 LICENSE=	GPLv2
 
