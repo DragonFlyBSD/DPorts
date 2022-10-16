@@ -1,11 +1,11 @@
 PORTNAME=	mako
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.6
-PORTREVISION=	1
+DISTVERSION=	1.7.1
 CATEGORIES=	x11 wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Lightweight Wayland notification daemon
+WWW=		https://github.com/emersion/mako
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
