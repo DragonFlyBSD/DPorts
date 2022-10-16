@@ -1,5 +1,3 @@
-# Created by: Rainer Hurling <rhurlin@gwdg.de>
-
 PORTNAME=	ggobi
 PORTVERSION=	2.1.11
 PORTREVISION=	4
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.ggobi.org/downloads/
 
 MAINTAINER=	rhurlin@FreeBSD.org
 COMMENT=	Data visualization system
+WWW=		http://www.ggobi.org/
 
 LICENSE=	EPL
 
