@@ -1,5 +1,3 @@
-# Created by: Hajimu UMEMOTO <ume@FreeBSD.org>
-
 PORTNAME=	libtomoe-gtk
 PORTVERSION=	0.6.0
 PORTREVISION=	11
@@ -9,6 +7,7 @@ DISTNAME=	tomoe-gtk-${DISTVERSIONPREFIX}${DISTVERSION}${DISTVERSIONSUFFIX}
 
 MAINTAINER=	ume@FreeBSD.org
 COMMENT=	TOMOE GTK+ library
+WWW=		http://tomoe.sourceforge.jp/
 
 LIB_DEPENDS=	libtomoe.so:japanese/tomoe
 
