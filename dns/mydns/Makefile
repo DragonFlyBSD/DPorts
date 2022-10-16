@@ -1,5 +1,3 @@
-# Created by: Simon Dick <simond@irrelevant.org>
-
 PORTNAME=	mydns
 PORTVERSION=	1.1.0
 PORTREVISION=	8
@@ -8,6 +6,7 @@ MASTER_SITES=	http://mydns.bboy.net/download/
 
 MAINTAINER=	ale@FreeBSD.org
 COMMENT=	DNS server designed to utilize the MySQL database
+WWW=		http://mydns.bboy.net/
 
 LICENSE=	GPLv2
 
