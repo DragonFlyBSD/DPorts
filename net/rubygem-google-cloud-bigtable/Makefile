@@ -1,12 +1,11 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	google-cloud-bigtable
-PORTVERSION=	2.6.5
+PORTVERSION=	2.7.0
 CATEGORIES=	net rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Official library for Cloud Bigtable API
+WWW=		https://github.com/googleapis/google-cloud-ruby/tree/master/google-cloud-bigtable
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
