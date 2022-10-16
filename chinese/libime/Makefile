@@ -1,8 +1,6 @@
-# Created by: Ka Ho Ng <khng300@gmail.com>
-
 PORTNAME=	libime
 DISTVERSION=	1.0.9
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	chinese textproc
 MASTER_SITES=	https://download.fcitx-im.org/data/:opengram_lm,opengram_dict,table_dict
 DISTFILES=	${OPENGRAM_LM_TAR}:opengram_lm \
@@ -12,6 +10,7 @@ DIST_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	khng@FreeBSD.org
 COMMENT=	Library to support generic input method implementation
+WWW=		https://github.com/fcitx/libime
 
 LICENSE=	LGPL21
 
