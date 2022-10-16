@@ -1,5 +1,3 @@
-# Created by: gahr
-
 PORTNAME=	mysql-connector-c
 PORTVERSION=	6.1.11
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-src
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	MySQL database connector for C
+WWW=		https://dev.mysql.com/downloads/c-api/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
