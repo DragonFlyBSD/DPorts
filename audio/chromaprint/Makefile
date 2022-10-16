@@ -1,10 +1,11 @@
 PORTNAME=	chromaprint
-PORTVERSION=	1.5.0
+PORTVERSION=	1.5.1
 CATEGORIES=	audio
 MASTER_SITES=	https://github.com/acoustid/${PORTNAME}/releases/download/v${PORTVERSION}/
 
 MAINTAINER=	jhale@FreeBSD.org
 COMMENT=	AcoustID audio fingerprinting library
+WWW=		https://acoustid.org/chromaprint
 
 LICENSE=	LGPL21 MIT
 LICENSE_COMB=	multi
@@ -18,8 +19,6 @@ USE_LDCONFIG=	yes
 CMAKE_ARGS=	-DBUILD_TOOLS:BOOL=true \
 		-DAUDIO_PROCESSOR_LIB=swresample \
 		-DFFT_LIB:STRING=avfft
-
-WRKSRC=		${WRKDIR}/${PORTNAME}-v${PORTVERSION}
 
 OPTIONS_DEFINE=		DOCS DOXYGEN TEST
 
