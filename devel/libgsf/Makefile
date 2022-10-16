@@ -1,13 +1,12 @@
-# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-
 PORTNAME=	libgsf
-PORTVERSION=	1.14.49
+PORTVERSION=	1.14.50
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	desktop@FreeBSD.org
 COMMENT=	Extensible I/O abstraction for dealing with structured file formats
+WWW=		http://www.gnumeric.org
 
 LICENSE=	GPLv2 LGPL21
 LICENSE_COMB=	multi
@@ -28,5 +27,8 @@ OPTIONS_SUB=	yes
 
 NLS_CONFIGURE_ENABLE=	nls
 NLS_USES=		gettext
+
+PLIST_SUB+=	LIBMINORVER=${PORTVERSION:E} \
+		LIBSHORTVER=${PORTVERSION:R:S/.//}
 
 .include <bsd.port.mk>
