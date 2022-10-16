@@ -1,5 +1,3 @@
-# Created by: Michael Johnson <ahze@FreeBSD.org>
-
 PORTNAME=	gstreamer1-plugins-core
 PORTVERSION=	1.16
 CATEGORIES=	multimedia audio
@@ -9,6 +7,7 @@ EXTRACT_ONLY=	# empty
 
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	Core set of typical audio and video GStreamer plugins
+WWW=		http://gstreamer.net
 
 NO_ARCH=	yes
 NO_BUILD=	yes
