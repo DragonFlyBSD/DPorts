@@ -1,13 +1,12 @@
-# Created by: Kevin Lo <kevlo@FreeBSD.org>
-
 PORTNAME=	libextractor
 PORTVERSION=	1.11
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=	GNU
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Library for keyword extraction
+WWW=		https://www.gnu.org/software/libextractor/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
