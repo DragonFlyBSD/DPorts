@@ -1,5 +1,3 @@
-# Created by: Nicola Vitale <nivit@email.it>
-
 PORTNAME=	ump
 PORTVERSION=	0.8.6
 PORTREVISION=	13
@@ -9,6 +7,7 @@ PKGNAMESUFFIX=	-math
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Graphical, easy to use math program
+WWW=		http://u-m-p.sourceforge.net/
 
 LICENSE=	GPLv2
 
