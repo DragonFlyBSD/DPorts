@@ -1,5 +1,3 @@
-# Created by: giffunip@asme.org
-
 PORTNAME=	rayshade
 PORTVERSION=	4.0.6
 PORTREVISION=	7
@@ -13,6 +11,7 @@ EXTRACT_ONLY=	${PORTNAME}.${PORTVERSION}.tar.Z
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Extensible system for creating ray-traced images
+WWW=		http://www-graphics.stanford.edu/~cek/rayshade/
 
 LICENSE=	rayshade
 LICENSE_NAME=	Rayshade license
