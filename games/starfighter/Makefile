@@ -1,5 +1,3 @@
-# Created by: Alejandro Pulver <alejandro@varnet.biz>
-
 PORTNAME=	starfighter
 PORTVERSION=	2.4
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	games
 
 MAINTAINER=	alfix86@gmail.com
 COMMENT=	Liberate the universe from the evil company WEAPCO
+WWW=		https://pr-starfighter.github.io/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
