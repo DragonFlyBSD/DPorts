@@ -731,8 +731,6 @@ share/applications/cudatext.desktop
 %%DATADIR%%/py/sys/urllib3/packages/backports/__init__.py
 %%DATADIR%%/py/sys/urllib3/packages/backports/makefile.py
 %%DATADIR%%/py/sys/urllib3/packages/six.py
-%%DATADIR%%/py/sys/urllib3/packages/ssl_match_hostname/__init__.py
-%%DATADIR%%/py/sys/urllib3/packages/ssl_match_hostname/_implementation.py
 %%DATADIR%%/py/sys/urllib3/poolmanager.py
 %%DATADIR%%/py/sys/urllib3/request.py
 %%DATADIR%%/py/sys/urllib3/response.py
@@ -744,6 +742,7 @@ share/applications/cudatext.desktop
 %%DATADIR%%/py/sys/urllib3/util/response.py
 %%DATADIR%%/py/sys/urllib3/util/retry.py
 %%DATADIR%%/py/sys/urllib3/util/ssl_.py
+%%DATADIR%%/py/sys/urllib3/util/ssl_match_hostname.py
 %%DATADIR%%/py/sys/urllib3/util/ssltransport.py
 %%DATADIR%%/py/sys/urllib3/util/timeout.py
 %%DATADIR%%/py/sys/urllib3/util/url.py
@@ -783,6 +782,7 @@ share/applications/cudatext.desktop
 %%DATADIR%%/readme/wiki/cudatext-fenced-blocks.png
 %%DATADIR%%/readme/wiki/cudatext-find-dlg.png
 %%DATADIR%%/readme/wiki/cudatext-find-markers.png
+%%DATADIR%%/readme/wiki/cudatext-findinfiles-intabs.png
 %%DATADIR%%/readme/wiki/cudatext-fold-comments.png
 %%DATADIR%%/readme/wiki/cudatext-fuzzy-and-normal.png
 %%DATADIR%%/readme/wiki/cudatext-hex-chars.png
@@ -792,6 +792,8 @@ share/applications/cudatext.desktop
 %%DATADIR%%/readme/wiki/cudatext-line-states_.png
 %%DATADIR%%/readme/wiki/cudatext-lsp-hover_.png
 %%DATADIR%%/readme/wiki/cudatext-lsp-refs.png
+%%DATADIR%%/readme/wiki/cudatext-macro-border.png
+%%DATADIR%%/readme/wiki/cudatext-macro-menu.png
 %%DATADIR%%/readme/wiki/cudatext-markers-html.png
 %%DATADIR%%/readme/wiki/cudatext-menu-colorsetup.png
 %%DATADIR%%/readme/wiki/cudatext-micromap-on-scrollbar.png
@@ -825,9 +827,11 @@ share/applications/cudatext.desktop
 %%DATADIR%%/readme/wiki/cudatext.wiki
 %%DATADIR%%/readme/wiki/cudatext_all_icons.png
 %%DATADIR%%/readme/wiki/cudatext_api.wiki
+%%DATADIR%%/readme/wiki/cudatext_files_formats.wiki
 %%DATADIR%%/readme/wiki/cudatext_options_editor.png
 %%DATADIR%%/readme/wiki/cudatext_plugins.wiki
 %%DATADIR%%/readme/wiki/cudatext_snippets_menu.png
+%%DATADIR%%/readme/wiki/cudatext_vs_other_editors.wiki
 %%DATADIR%%/settings_default/default.json
 %%DATADIR%%/settings_default/lexer Assembly.json
 %%DATADIR%%/settings_default/lexer Bash script.json
