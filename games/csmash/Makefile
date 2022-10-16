@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	csmash
 PORTVERSION=	0.6.6
 PORTREVISION=	22
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/cannonsmash/CannonSmash/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	3D tabletennis game
+WWW=		http://cannonsmash.sourceforge.net/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
