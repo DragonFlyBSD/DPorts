@@ -1,11 +1,12 @@
 PORTNAME=	frand
 PORTVERSION=	0.1
 DISTVERSIONPREFIX=	v
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	sysutils
 
 MAINTAINER=	serpent7776@gmail.com
 COMMENT=	Selects a random file using reservoir sampling algorithm
+WWW=		https://github.com/serpent7776/frand
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
