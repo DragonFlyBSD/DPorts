@@ -1,9 +1,11 @@
 PORTNAME=	siconos
 DISTVERSION=	4.4.0
+PORTREVISION=	1
 CATEGORIES=	science
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Simulation framework for nonsmooth dynamical systems
+WWW=		https://nonsmooth.gricad-pages.univ-grenoble-alpes.fr/siconos/index.html
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/COPYING
