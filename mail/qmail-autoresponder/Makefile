@@ -1,5 +1,3 @@
-# Created by: Sergei Kolobov <sergei@kolobov.com>
-
 PORTNAME=	qmail-autoresponder
 PORTVERSION=	2.0
 CATEGORIES=	mail
@@ -7,6 +5,7 @@ MASTER_SITES=	http://untroubled.org/${PORTNAME}/archive/
 
 MAINTAINER=	gspurki@gmail.com
 COMMENT=	Rate-limited autoresponder for qmail
+WWW=		https://untroubled.org/qmail-autoresponder/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
