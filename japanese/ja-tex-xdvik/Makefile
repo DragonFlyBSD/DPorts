@@ -1,5 +1,3 @@
-# Created by: Kentaro Inagaki <JBD01226@niftyserve.ne.jp>
-
 PORTNAME=	xdvik
 PORTVERSION=	22.87
 CATEGORIES=	japanese print
@@ -9,6 +7,7 @@ DIST_SUBDIR=	TeX
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	DVI Previewer(kpathsearch) for X
+WWW=		http://xdvi.sourceforge.net/
 
 LIB_DEPENDS=	libfreetype.so:print/freetype2 \
 		libpaper.so:print/libpaper
