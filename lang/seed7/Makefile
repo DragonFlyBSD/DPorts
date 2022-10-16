@@ -1,7 +1,5 @@
-# Created by: gahr
-
 PORTNAME=	seed7
-DISTVERSION=	05_20220522
+DISTVERSION=	05_20220724
 PORTREVISION=	0
 CATEGORIES=	lang
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${DISTNAME}/
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	gahr@FreeBSD.org
 COMMENT=	High-level, extensible programming language
+WWW=		http://seed7.sourceforge.net/
 
 # The language libraries are licensed under the LGPL21 license. Starting from
 # version 05_20140601, the compiler libraries are also distributed. These are
@@ -67,10 +66,11 @@ do-install:
 	cd ${WRKSRC}/../lib/comp && ${COPYTREE_SHARE} '*.s7i' ${STAGEDIR}${SEED7_LIBRARY}/comp
 #	install static libraries
 	${INSTALL} -d ${STAGEDIR}${S7_LIB_DIR}
-#	install vim syntax files
+#	install vim and nano syntax files
 	${INSTALL} -d ${STAGEDIR}${DATADIR}
 	${INSTALL_DATA} ${WRKSRC}/../doc/seed7.vim ${STAGEDIR}${DATADIR}
 	${INSTALL_DATA} ${WRKSRC}/../doc/sd7.vim ${STAGEDIR}${DATADIR}
+	${INSTALL_DATA} ${WRKSRC}/../doc/seed7.nanorc ${STAGEDIR}${DATADIR}
 .for s7_lib in ${S7_LIBS}
 	${INSTALL_DATA} ${WRKSRC}/../bin/${s7_lib} ${STAGEDIR}${S7_LIB_DIR}
 .endfor
