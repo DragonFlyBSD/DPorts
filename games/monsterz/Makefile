@@ -1,5 +1,3 @@
-# Created by: thierry@pompo.net
-
 PORTNAME=	monsterz
 PORTVERSION=	0.7.1
 PORTREVISION=	15
@@ -12,6 +10,7 @@ EXTRACT_ONLY=	${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX}
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Arcade puzzle game
+WWW=		http://sam.zoy.org/monsterz/
 
 LICENSE=	WTFPL
 LICENSE_FILE=	${WRKSRC}/COPYING
