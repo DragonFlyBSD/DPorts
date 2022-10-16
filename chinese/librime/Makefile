@@ -1,12 +1,11 @@
-# Created by: Zhihao Yuan <lichray@gmail.com>
-
 PORTNAME=	librime
 PORTVERSION=	1.7.3
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	chinese textproc
 
 MAINTAINER=	khng@FreeBSD.org
 COMMENT=	Rime Input Method Engine, the core library
+WWW=		https://rime.github.io/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
