@@ -1,11 +1,12 @@
 PORTNAME=	pagmo2
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.18.0
-PORTREVISION=	5
+PORTREVISION=	7
 CATEGORIES=	science
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Platform to perform parallel computations of optimization tasks
+WWW=		https://esa.github.io/pagmo2/
 
 LICENSE=	GPLv3 LGPL3
 LICENSE_COMB=	dual
