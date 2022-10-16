@@ -1,5 +1,3 @@
-# Created by: Sven Moeller <smoeller@nichthelfer.de>
-
 PORTNAME=	megaglest
 PORTVERSION=	3.13.0
 PORTREVISION=	10
@@ -7,6 +5,7 @@ CATEGORIES=	games
 
 MAINTAINER=	monwarez@mailoo.org
 COMMENT=	Open source 3D real-time strategy game
+WWW=		https://megaglest.org/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/docs/gnu_gpl_3.0.txt
