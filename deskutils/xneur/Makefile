@@ -1,5 +1,3 @@
-# Created by: Alex "lissyara" Keda <admin@lissyara.su>
-
 PORTNAME=	xneur
 PORTVERSION=	0.20.0
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSIONPREFIX}${DISTVERSION}${DISTVERSIONSUFFIX}
 
 MAINTAINER=	mizhka@gmail.com
 COMMENT=	Auto keyboard switcher
+WWW=		https://launchpad.net/xneur
 
 LICENSE=	GPLv2
 
