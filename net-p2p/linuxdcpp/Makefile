@@ -1,11 +1,12 @@
 PORTNAME=	linuxdcpp
 PORTVERSION=	1.1.0
-PORTREVISION=	19
+PORTREVISION=	20
 CATEGORIES=	net-p2p
 MASTER_SITES=	http://launchpadlibrarian.net/69733951/
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Port of the DC++ Direct Connect client to Unix-like systems
+WWW=		https://launchpad.net/linuxdcpp
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/License.txt
