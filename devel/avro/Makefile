@@ -1,11 +1,10 @@
-# Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-
 PORTNAME=	avro
-PORTVERSION=	1.11.0
+PORTVERSION=	1.11.1
 CATEGORIES=	devel
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Data serialization system
+WWW=		https://avro.apache.org/
 
 LICENSE=	APACHE20
 
