@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	dvisvg
 DISTVERSION=	0.7.1d
 PORTREVISION=	8
@@ -8,6 +6,7 @@ MASTER_SITES=	http://dvisvg.sourceforge.net/files/
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	Converter from DVI to SVG
+WWW=		http://dvisvg.sourceforge.net/
 
 LICENSE=	GPLv2
 
