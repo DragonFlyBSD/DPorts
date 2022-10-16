@@ -1,11 +1,12 @@
 PORTNAME=	scantailor
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.0.16
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics
 
 MAINTAINER=	m.ne@gmx.net
 COMMENT=	Interactive post-processing tool for scanned pages
+WWW=		https://github.com/4lex4/scantailor-advanced
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -19,8 +20,8 @@ USES=		cmake compiler:c++11-lang desktop-file-utils jpeg qt:5 \
 		shared-mime-info xorg
 USE_CXXSTD=	gnu++98
 USE_GITHUB=	yes
-USE_QT=		core gui network opengl widgets xml buildtools_build \
-		linguisttools_build qmake_build
+USE_QT=		core gui network opengl widgets xml buildtools:build \
+		linguisttools:build qmake:build
 USE_XORG+=	xrender
 
 GH_ACCOUNT=	4lex4
