@@ -1,8 +1,6 @@
-# Created by: Cristiano Rolim Pereira <cristianorolim@outlook.com>
-
 PORTNAME=	vera++
 PORTVERSION=	1.3.0
-PORTREVISION=	15
+PORTREVISION=	16
 CATEGORIES=	devel
 MASTER_SITES=	https://bitbucket.org/verateam/vera/downloads/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
@@ -10,6 +8,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 
 MAINTAINER=	cristianorolim@outlook.com
 COMMENT=	Tool for verification of C++ source code
+WWW=		https://bitbucket.org/verateam/vera/wiki/Home
 
 LICENSE=	BSL
 LICENSE_FILE=	${WRKSRC}/LICENSE_1_0.txt
