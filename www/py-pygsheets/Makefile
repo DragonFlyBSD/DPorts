@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	pygsheets
 PORTVERSION=	2.0.5
 CATEGORIES=	www python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Google Spreadsheets Python API v4
+WWW=		https://github.com/nithinmurali/pygsheets
 
 LICENSE=	MIT
 
