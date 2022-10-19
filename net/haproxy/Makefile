@@ -1,12 +1,11 @@
-# Created by: Hugo Saro <hugo@barafranca.com>
-
 PORTNAME=	haproxy
-DISTVERSION=	2.6.1
+DISTVERSION=	2.6.6
 CATEGORIES=	net www
 MASTER_SITES=	http://www.haproxy.org/download/2.6/src/
 
 MAINTAINER=	demon@FreeBSD.org
 COMMENT=	Reliable, high performance TCP/HTTP load balancer
+WWW=		https://www.haproxy.org
 
 LICENSE=	GPLv2 LGPL21
 LICENSE_COMB=	multi
