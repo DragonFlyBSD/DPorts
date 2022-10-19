@@ -1,13 +1,12 @@
-# Created by: vanilla@
-
 PORTNAME=	grpcio
-PORTVERSION=	1.47.0
+PORTVERSION=	1.49.0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	vanilla@FreeBSD.org
 COMMENT=	HTTP/2-based RPC framework
+WWW=		https://pypi.org/project/grpcio/
 
 LICENSE=	APACHE20
 
