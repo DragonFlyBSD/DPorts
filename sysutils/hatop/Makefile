@@ -1,5 +1,3 @@
-# Created by: Jim Riggs <ports@christianserving.org>
-
 PORTNAME=	hatop
 PORTVERSION=	0.8.1
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	sysutils net
 
 MAINTAINER=	mikeg@bsd-box.net
 COMMENT=	Interactive real-time monitoring tool for the HAProxy unix socket
+WWW=		https://github.com/jhunt/hatop
 
 LICENSE=	GPLv3+
 
