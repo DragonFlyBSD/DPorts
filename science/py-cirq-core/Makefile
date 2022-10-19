@@ -1,11 +1,12 @@
 PORTNAME=	cirq-core
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.15.0
-CATEGORIES=	science python
+DISTVERSION=	1.0.0
+CATEGORIES=	science python # quantum-computing
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Framework for Noisy Intermediate Scale Quantum (NISQ) circuits
+WWW=		https://github.com/quantumlib/cirq
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
