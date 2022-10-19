@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	gcalcli
 PORTVERSION=	4.0.4
 DISTVERSIONPREFIX=	v
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	ports@thelanman.net
 COMMENT=	Google Calendar Command Line Interface
+WWW=		https://github.com/insanum/gcalcli
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
