@@ -1,12 +1,13 @@
 PORTNAME=	couchdb3
-PORTVERSION=	3.2.1
-PORTREVISION=	2
+PORTREVISION=	1
+PORTVERSION=	3.2.2
 CATEGORIES=	databases
 MASTER_SITES=	APACHE/couchdb/source/${DISTVERSION}
 DISTNAME=	apache-couchdb-${DISTVERSION}
 
 MAINTAINER=	dch@FreeBSD.org
 COMMENT=	JSON document database with HTTP API and scalable multi-master sync
+WWW=		https://couchdb.apache.org/
 
 LICENSE=	APACHE20 BSD3CLAUSE ISCL OFL11 WTFPL
 LICENSE_COMB=	multi
@@ -14,7 +15,7 @@ LICENSE_COMB=	multi
 BUILD_DEPENDS=	erlang-runtime${ERLVER}>=${ERLVER}.0:lang/erlang-runtime${ERLVER} \
 		rebar:devel/rebar
 LIB_DEPENDS=	libicudata.so:devel/icu \
-		libmozjs-78.so:lang/spidermonkey78
+		libmozjs-91.so:lang/spidermonkey91
 RUN_DEPENDS=	erlang-runtime${ERLVER}>=${ERLVER}.0:lang/erlang-runtime${ERLVER}
 
 USES=		compiler:c++17-lang cpe gmake libtool ncurses
@@ -40,7 +41,7 @@ HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--skip-deps \
 		--user ${USERS} \
 		--rebar ${LOCALBASE}/bin/rebar \
-		--spidermonkey-version 78
+		--spidermonkey-version 91
 
 ALL_TARGET=	release
 
