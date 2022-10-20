@@ -1,5 +1,3 @@
-# Created by: Olivier Duchateau
-
 PORTNAME=	obconf-qt
 PORTVERSION=	0.16.1
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	LXQT/${PORTNAME}
 
 MAINTAINER=	jsm@FreeBSD.org
 COMMENT=	Qt port of preferences manager for Openbox
+WWW=		https://github.com/lxqt/obconf-qt
 
 LICENSE=	GPLv2
 
@@ -19,7 +18,7 @@ LIB_DEPENDS=	libobt.so:x11-wm/openbox \
 USES=		cmake compiler:c++11-lang gettext-runtime localbase qt:5 \
 		gnome lxqt pkgconfig tar:xz xorg
 
-USE_QT=		buildtools_build qmake_build core gui linguisttools \
+USE_QT=		buildtools:build qmake:build core gui linguisttools \
 		widgets x11extras
 
 USE_LXQT=	buildtools
