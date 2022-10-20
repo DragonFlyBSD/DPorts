@@ -22,6 +22,7 @@ include/fizz/crypto/Sha-inl.h
 include/fizz/crypto/Sha.h
 include/fizz/crypto/Sha256.h
 include/fizz/crypto/Sha384.h
+include/fizz/crypto/Sha512.h
 include/fizz/crypto/Utils.h
 include/fizz/crypto/aead/AESGCM128.h
 include/fizz/crypto/aead/AESGCM256.h
@@ -33,7 +34,9 @@ include/fizz/crypto/aead/OpenSSLEVPCipher-inl.h
 include/fizz/crypto/aead/OpenSSLEVPCipher.h
 include/fizz/crypto/aead/test/Mocks.h
 include/fizz/crypto/aead/test/TestUtil.h
+include/fizz/crypto/exchange/AsyncKeyExchange.h
 include/fizz/crypto/exchange/ECCurveKeyExchange.h
+include/fizz/crypto/exchange/HybridKeyExchange.h
 include/fizz/crypto/exchange/KeyExchange.h
 include/fizz/crypto/exchange/OpenSSLKeyExchange-inl.h
 include/fizz/crypto/exchange/OpenSSLKeyExchange.h
