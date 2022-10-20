@@ -1,8 +1,7 @@
-# Created by: Pawel Pekala <c0rn@o2.pl>
-
 PORTNAME=	address_keeper
 
 COMMENT=	Recipient addresses keeper plugin for Claws Mail
+WWW=		https://www.claws-mail.org/plugins.php
 
 CLAWS_PLUGINS_BUILD=	${PORTNAME}
 
