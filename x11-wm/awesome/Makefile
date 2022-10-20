@@ -1,14 +1,13 @@
-# Created by: Nikos Ntarmos <ntarmos@ceid.upatras.gr>
-
 PORTNAME=	awesome
 PORTVERSION=	4.3
-PORTREVISION=	1
 DISTVERSIONPREFIX=	v
+PORTREVISION=	3
 PORTEPOCH=	1
 CATEGORIES=	x11-wm
 
-MAINTAINER=	dbaio@FreeBSD.org
+MAINTAINER=	rigoletto@FreeBSD.org
 COMMENT=	Highly configurable, next generation framework window manager
+WWW=		https://awesomewm.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -28,18 +27,20 @@ LIB_DEPENDS=	libcairo.so:graphics/cairo \
 
 CONFLICTS_INSTALL=	awesome3
 
-USES=		cmake compiler:c11 gettext gnome iconv magick:6,build pkgconfig lua \
+USES=		cmake compiler:c11 gettext gnome iconv magick:build pkgconfig lua:-53 \
 		shebangfix xorg
+USE_GNOME=	glib20 pango gdkpixbuf2 librsvg2
+USE_XORG=	pixman x11 xau xcb xdmcp xext xft xinerama xrandr xrender \
+		xorgproto
+
 USE_GITHUB=	yes
 GH_ACCOUNT=	awesomewm
+
 SHEBANG_FILES=	utils/awesome-client
 CMAKE_ARGS=	-DSYSCONFDIR=${PREFIX}/etc \
 		-DAWESOME_MAN_PATH=${MANPREFIX}/man \
 		-DGENERATE_DOC=OFF \
 		-DLUA_INCLUDE_DIR=${LUA_INCDIR}
-USE_GNOME=	glib20 pango gdkpixbuf2
-USE_XORG=	pixman x11 xau xcb xdmcp xext xft xinerama xrandr xrender \
-		xorgproto
 
 OPTIONS_DEFINE=	DBUS DOCS MANPAGES
 OPTIONS_DEFAULT=DBUS MANPAGES
