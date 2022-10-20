@@ -1,12 +1,13 @@
 PORTNAME=	xd
 DISTVERSION=	0.0.4
-PORTREVISION=	14
+PORTREVISION=	16
 CATEGORIES=	misc
 MASTER_SITES=	https://bitbucket.org/${BB_ACCOUNT}/${BB_PROJECT}/get/${BB_COMMIT}.tar.gz?dummy=/:main
 DISTFILES=	${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX}:main
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Tool that dumps binary input in a variety of formats
+WWW=		https://bitbucket.org/delan/xd/src/default/
 
 LICENSE=	ISCL
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
