@@ -1,5 +1,3 @@
-# Created by: chinsan
-
 PORTNAME=	eqe
 PORTVERSION=	1.3.0
 PORTREVISION=	5
@@ -8,6 +6,7 @@ MASTER_SITES=	http://rlehy.free.fr/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	LaTeX equation editor
+WWW=		http://rlehy.free.fr/
 
 LICENSE=	GPLv2 # only
 LICENSE_FILE=	${WRKSRC}/GPL.txt
