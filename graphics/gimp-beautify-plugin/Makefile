@@ -1,5 +1,3 @@
-# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-
 PORTNAME=	beautify
 PORTVERSION=	2012.08.12.00
 PORTREVISION=	9
@@ -9,6 +7,7 @@ PKGNAMESUFFIX=	-plugin
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GIMP plug-ins to both quickly and easily beautify photo
+WWW=		https://github.com/hejiann/beautify
 
 LICENSE=	GPLv3+
 
