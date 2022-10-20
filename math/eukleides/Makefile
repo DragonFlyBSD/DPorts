@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	eukleides
 PORTVERSION=	1.5.4
 PORTREVISION=	6
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.eukleides.org/files/
 
 MAINTAINER=	ashish@FreeBSD.org
 COMMENT=	Euclidean geometry drawing language
+WWW=		http://www.eukleides.org/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
