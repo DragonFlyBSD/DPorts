@@ -1,5 +1,3 @@
-# Created by: barner
-
 PORTNAME=	fprint_demo
 PORTVERSION=	20080303
 PORTREVISION=	2
@@ -9,6 +7,10 @@ DISTNAME=	${PORTNAME:C/_/-/}_${PORTVERSION}git.orig
 
 MAINTAINER=	lichray@gmail.com
 COMMENT=	Demo and test application for libfprint
+WWW=		http://www.reactivated.net/fprint/wiki/Fprint_demo
+
+DEPRECATED=	Depends on deprecated library libfprint
+EXPIRATION_DATE=2022-12-31
 
 LIB_DEPENDS=	libfprint.so:security/libfprint
 
