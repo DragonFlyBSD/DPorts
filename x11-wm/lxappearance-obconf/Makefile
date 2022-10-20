@@ -1,5 +1,3 @@
-# Created by: Olivier Duchateau
-
 PORTNAME=	lxappearance-obconf
 PORTVERSION=	0.2.3
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/lxde/LXAppearance%20Obconf/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	LXAppearance ObConf plugin
+WWW=		https://www.lxde.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
