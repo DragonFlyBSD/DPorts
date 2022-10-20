@@ -2,11 +2,12 @@ PORTNAME=	admiral
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.0.0-7
 DISTVERSIONSUFFIX=	-g5a9f33b
-PORTREVISION=	40
+PORTREVISION=	42
 CATEGORIES=	x11
 
 MAINTAINER=	rigoletto@FreeBSD.org
 COMMENT=	Merge concurrent outputs for a status bar
+WWW=		https://github.com/sector-f/admiral
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
