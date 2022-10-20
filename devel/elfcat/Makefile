@@ -1,10 +1,11 @@
 PORTNAME=	elfcat
 DISTVERSION=	0.1.8
-PORTREVISION=	6
+PORTREVISION=	8
 CATEGORIES=	devel
 
 MAINTAINER=	lwhsu@FreeBSD.org
 COMMENT=	ELF visualizer, generates HTML files from ELF binaries
+WWW=		https://crates.io/crates/elfcat
 
 LICENSE=	ZLIB
 LICENSE_FILE=	${WRKSRC}/license
