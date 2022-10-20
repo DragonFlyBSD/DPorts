@@ -1,5 +1,3 @@
-# Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-
 PORTNAME=	edje_viewer
 PORTVERSION=	20130520
 PORTREVISION=	5
@@ -8,6 +6,7 @@ MASTER_SITES=	LOCAL/gblach/e17/extra/
 
 MAINTAINER=	enlightenment@FreeBSD.org
 COMMENT=	Simple viewer for .edj files
+WWW=		https://www.enlightenment.org/
 
 LIB_DEPENDS=	libefl.so:devel/efl
 
