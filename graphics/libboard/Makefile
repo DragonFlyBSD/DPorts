@@ -1,5 +1,3 @@
-# Created by: thierry@pompo.net
-
 PORTNAME=	libboard
 DISTVERSION=	0.9.4
 PORTREVISION=	9
@@ -7,6 +5,7 @@ CATEGORIES=	graphics
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Vector graphics C++ library
+WWW=		https://github.com/c-koi/libboard
 
 LICENSE=	LGPL3
 
