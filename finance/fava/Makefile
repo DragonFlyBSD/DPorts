@@ -1,11 +1,11 @@
 PORTNAME=	fava
-PORTVERSION=	1.20.1
-PORTREVISION=	0
+PORTVERSION=	1.22.3
 CATEGORIES=	finance
 MASTER_SITES=	CHEESESHOP
 
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Web interface for Beancount
+WWW=		https://beancount.github.io/fava/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -30,5 +30,9 @@ USE_PYTHON=	autoplist distutils noflavors
 
 # Upstream archive contains files with UTF-8 names
 EXTRACT_CMD=	${SETENV} LC_ALL=en_US.UTF-8 /usr/bin/bsdtar
+
+post-patch:
+	@${ECHO_CMD} "from setuptools import setup" > ${WRKSRC}/setup.py
+	@${ECHO_CMD} "setup()" >> ${WRKSRC}/setup.py
 
 .include <bsd.port.mk>
