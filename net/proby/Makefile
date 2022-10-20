@@ -1,11 +1,12 @@
 PORTNAME=	proby
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.0.2
-PORTREVISION=	17
+PORTREVISION=	19
 CATEGORIES=	net
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Check whether hosts are reachable on certain ports
+WWW=		https://github.com/svenstaro/proby
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
