@@ -1,11 +1,12 @@
 PORTNAME=	cirq-ionq
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.15.0
-CATEGORIES=	science python
+DISTVERSION=	1.0.0
+CATEGORIES=	science python # quantum-computing
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Cirq module to run on IonQ quantum computers
+WWW=		https://github.com/quantumlib/cirq
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
