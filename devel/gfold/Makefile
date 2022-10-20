@@ -1,10 +1,11 @@
 PORTNAME=	gfold
 DISTVERSION=	4.0.0
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	devel
 
 MAINTAINER=	sec.research.2005@gmail.com
 COMMENT=	CLI tool to help keep track of your Git repositories
+WWW=		https://github.com/nickgerace/gfold
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
