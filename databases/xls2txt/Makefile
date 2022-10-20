@@ -1,10 +1,11 @@
 PORTNAME=	xls2txt
 DISTVERSION=	1.0.1
-PORTREVISION=	14
+PORTREVISION=	16
 CATEGORIES=	databases textproc
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Utilities to convert spreadsheet files to text and csv formats
+WWW=		https://github.com/masklinn/xls2txt
 
 LICENSE=	APACHE20
 
