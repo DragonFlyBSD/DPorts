@@ -1,10 +1,11 @@
 PORTNAME=	sctd
 DISTVERSION=	0.2.0
-PORTREVISION=	14
+PORTREVISION=	16
 CATEGORIES=	accessibility
 
 MAINTAINER=	0mp@FreeBSD.org
 COMMENT=	Set color temperature (sct) daemon
+WWW=		https://github.com/amir/sctd
 
 LICENSE=	CC0-1.0 MIT
 LICENSE_COMB=	multi
