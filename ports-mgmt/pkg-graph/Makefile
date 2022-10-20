@@ -1,10 +1,11 @@
 PORTNAME=	pkg-graph
 DISTVERSION=	g20180614
-PORTREVISION=	4
+PORTREVISION=	6
 CATEGORIES=	ports-mgmt
 
 MAINTAINER=	gnn@FreeBSD.org
 COMMENT=	Graphviz generator for pkg
+WWW=		https://github.com/neosmart/pkg-graph
 
 LICENSE=	BSD2CLAUSE
 
