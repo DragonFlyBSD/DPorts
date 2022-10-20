@@ -1,11 +1,12 @@
 PORTNAME=	hexyl
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.10.0
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	sysutils
 
 MAINTAINER=	mikael@FreeBSD.org
 COMMENT=	Command-line hex viewer
+WWW=		https://github.com/sharkdp/hexyl
 
 LICENSE=	APACHE20 MIT
 LICENSE_COMB=	dual
