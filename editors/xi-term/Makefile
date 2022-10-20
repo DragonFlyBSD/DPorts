@@ -1,10 +1,11 @@
 PORTNAME=	xi-term
 DISTVERSION=	g20190913
-PORTREVISION=	15
+PORTREVISION=	17
 CATEGORIES=	editors
 
 MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Terminal frontend for xi-editor
+WWW=		https://github.com/xi-frontend/xi-term
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
