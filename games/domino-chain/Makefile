@@ -1,10 +1,11 @@
 PORTNAME=	domino-chain
 PORTVERSION=	1.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	games
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Rearrange dominoes on different platforms to start a chain reaction
+WWW=		https://domino-chain.gitlab.io/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE
