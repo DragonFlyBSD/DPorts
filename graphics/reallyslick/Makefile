@@ -1,5 +1,3 @@
-# Created by: David Yeske <dyeske@gmail.com>
-
 PORTNAME=	reallyslick
 PORTVERSION=	0.9.1
 PORTREVISION=	23
@@ -9,6 +7,7 @@ DISTNAME=	rss-glx_${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	OpenGL screensaver collection
+WWW=		http://rss-glx.sourceforge.net/
 
 LIB_DEPENDS=	libGLC.so:graphics/quesoglc
 
