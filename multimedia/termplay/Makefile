@@ -1,12 +1,13 @@
 PORTNAME=	termplay
 DISTVERSION=	2.0.6
-PORTREVISION=	17
+PORTREVISION=	19
 CATEGORIES=	multimedia
 MASTER_SITES=	CRATESIO
 DISTFILES=	${CARGO_DIST_SUBDIR}/${DISTNAME}${CARGO_CRATE_EXT}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Tool that converts images to ANSI sequences, plays videos in terminals
+WWW=		https://github.com/jD91mZM2/termplay
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
