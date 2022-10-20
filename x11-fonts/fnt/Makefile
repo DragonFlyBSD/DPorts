@@ -1,5 +1,3 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	fnt
 PORTVERSION=	1.4.1
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	x11-fonts sysutils
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Missing font manager for UNIX
+WWW=		https://github.com/alexmyczko/fnt
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
