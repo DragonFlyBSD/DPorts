@@ -1,13 +1,12 @@
-# Created by: Thomas Gellekum <tg@FreeBSD.org>
-
 PORTNAME=	pstoedit
 PORTVERSION=	3.70
-PORTREVISION=	11
+PORTREVISION=	12
 CATEGORIES=	graphics print
 MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Convert PostScript to other vector graphic formats
+WWW=		http://www.pstoedit.net/
 
 LICENSE=	GPLv2+
 
