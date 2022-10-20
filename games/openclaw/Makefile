@@ -4,8 +4,9 @@ PORTREVISION=	4
 DISTVERSIONSUFFIX=	-gbac7730
 CATEGORIES=	games
 
-MAINTAINER=	greg@unrelenting.technology
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Reimplementation of Captain Claw (1997) platformer
+WWW=		https://github.com/pjasicek/OpenClaw
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
