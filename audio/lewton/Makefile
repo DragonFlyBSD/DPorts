@@ -1,6 +1,6 @@
 PORTNAME=	lewton
 DISTVERSION=	0.10.2
-PORTREVISION=	9
+PORTREVISION=	11
 CATEGORIES=	audio
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
@@ -8,6 +8,7 @@ PATCHFILES+=	05f96f6e6976.patch:-p1 # https://github.com/RustAudio/lewton/pull/9
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Rust vorbis decoder
+WWW=		https://github.com/RustAudio/lewton
 
 LICENSE=	APACHE20 MIT
 LICENSE_COMB=	dual
