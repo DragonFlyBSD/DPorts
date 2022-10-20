@@ -1,5 +1,3 @@
-# Created by: KANOU Hiroki <kanou@mil.allnet.ne.jp>
-
 PORTNAME=	autotrace
 PORTVERSION=	0.31.1
 PORTREVISION=	33
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/AutoTrace/${PORTVERSION}
 
 MAINTAINER=	portmaster@BSDforge.com
 COMMENT=	Convert bitmap to vector graphics
+WWW=		http://AutoTrace.sourceforge.net/
 
 LICENSE=	GPLv2 LGPL21
 LICENSE_COMB=	multi
