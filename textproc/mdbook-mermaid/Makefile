@@ -1,10 +1,12 @@
 PORTNAME=	mdbook-mermaid
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.11.2
+PORTREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Preprocessor for mdBook to add mermaid.js support
+WWW=		https://github.com/badboy/mdbook-mermaid
 
 LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/LICENSE
