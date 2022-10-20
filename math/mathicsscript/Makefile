@@ -1,12 +1,12 @@
-# Created by: Thierry Thomas <thierry@pompo.net>
-
 PORTNAME=	mathicsscript
-PORTVERSION=	4.0.0
+PORTVERSION=	5.0.0
+PORTREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	CHEESESHOP
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Terminal CLI to Mathics
+WWW=		https://mathics.org/
 
 LICENSE=	GPLv3
 
