@@ -1,12 +1,13 @@
 PORTNAME=	libsignal-client
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.9.6
-PORTREVISION=	7
+PORTREVISION=	9
 PORTEPOCH=	1
 CATEGORIES=	net-im java
 
 MAINTAINER=	0mp@FreeBSD.org
 COMMENT=	Implementation of the Signal client protocol
+WWW=		https://github.com/signalapp/libsignal-client
 
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
