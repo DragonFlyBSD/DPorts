@@ -1,7 +1,7 @@
 PORTNAME=	colobot
 DISTVERSIONPREFIX=	${PORTNAME}-gold-
 DISTVERSION=	0.2.0
-PORTREVISION=	2
+PORTREVISION=	3
 DISTVERSIONSUFFIX=	-alpha
 CATEGORIES=	games education
 MASTER_SITES=	https://colobot.info/files/music/:music
@@ -10,6 +10,7 @@ DISTFILES=	colobot-music_ogg_0.1.12-alpha.tar.gz:music
 
 MAINTAINER=	makc@FreeBSD.org
 COMMENT=	Educational game aiming to teach programming to kids
+WWW=		https://colobot.info/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
