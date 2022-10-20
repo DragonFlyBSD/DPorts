@@ -1,11 +1,12 @@
 PORTNAME=	sniffglue
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.15.0
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	security
 
 MAINTAINER=	freebsd@sysctl.cz
 COMMENT=	Secure multithreaded packet sniffer
+WWW=		https://github.com/kpcyrd/sniffglue
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
