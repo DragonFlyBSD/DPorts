@@ -1,12 +1,13 @@
 PORTNAME=	libopenshot
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.2.7
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	multimedia
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	tatsuki_makino@hotmail.com
 COMMENT=	OpenShot Video Library
+WWW=		https://www.openshot.org/
 
 LICENSE=	LGPL3+
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -23,7 +24,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	OpenShot
 USE_LDCONFIG=	yes
 USE_PYTHON=	flavors
-USE_QT=		core gui network multimedia widgets qmake_build buildtools_build
+USE_QT=		core gui network multimedia widgets qmake:build buildtools:build
 CMAKE_ON=	USE_SYSTEM_JSONCPP DISABLE_BUNDLED_JSONCPP\
 		USE_HW_ACCEL ENABLE_PYTHON\
 		CMAKE_DISABLE_FIND_PACKAGE_Catch2\
