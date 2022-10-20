@@ -1,10 +1,11 @@
 PORTNAME=	leftwm
 DISTVERSION=	0.3.0
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	x11-wm
 
 MAINTAINER=	rigoletto@FreeBSD.org
 COMMENT=	Tiling window manager for Adventurers
+WWW=		https://leftwm.org/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
