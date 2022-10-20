@@ -1,13 +1,10 @@
-# Created by: Olivier Duchateau
-
 PORTNAME=	lxqt
 PORTVERSION=	1.1.0
 CATEGORIES=	x11-wm
 
 MAINTAINER=	jsm@FreeBSD.org
 COMMENT=	Meta-port for the LXQt Desktop
-
-LICENSE=	LGPL21+
+WWW=		https://lxqt-project.org
 
 RUN_DEPENDS=	startlxqt:x11-wm/lxqt-session \
 	lxqt-about:x11/lxqt-about \
