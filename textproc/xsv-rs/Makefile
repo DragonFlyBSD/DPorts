@@ -1,11 +1,12 @@
 PORTNAME=	xsv
 DISTVERSION=	0.13.0
-PORTREVISION=	40
+PORTREVISION=	42
 CATEGORIES=	textproc
 PKGNAMESUFFIX=	-rs
 
 MAINTAINER=	mikael@FreeBSD.org
 COMMENT=	Fast CSV toolkit
+WWW=		https://github.com/BurntSushi/xsv
 
 LICENSE=	MIT UNLICENSE
 LICENSE_COMB=	dual
