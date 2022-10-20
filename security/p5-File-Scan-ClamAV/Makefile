@@ -1,5 +1,3 @@
-# Created by: Jan-Peter Koopmann <Jan-Peter.Koopmann@seceidos.de>
-
 PORTNAME=	File-Scan-ClamAV
 PORTVERSION=	1.95
 CATEGORIES=	security perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl extension for the clamav virus scanner
+WWW=		http://www.clamav.net/
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
