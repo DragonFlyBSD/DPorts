@@ -1,5 +1,3 @@
-# Created by: Mateusz Piotrowski <0mp@FreeBSD.org>
-
 PORTNAME=	meh
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.3-27
@@ -8,6 +6,7 @@ CATEGORIES=	graphics
 
 MAINTAINER=	0mp@FreeBSD.org
 COMMENT=	Simple image viewer using raw XLib convert from ImageMagick
+WWW=		https://www.johnhawthorn.com/meh/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
