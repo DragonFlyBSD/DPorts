@@ -1,10 +1,11 @@
 PORTNAME=	scte35dump
 DISTVERSION=	0.1.6
-PORTREVISION=	11
+PORTREVISION=	13
 CATEGORIES=	multimedia
 
 MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	Dump SCTE-35 data from a Transport Stream
+WWW=		https://github.com/m2amedia/scte35dump
 
 LICENSE=	MIT
 
