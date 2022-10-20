@@ -1,11 +1,12 @@
 PORTNAME=	savage
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.2.0
-PORTREVISION=	3
+PORTREVISION=	5
 CATEGORIES=	math
 
 MAINTAINER=	ashish@FreeBSD.org
 COMMENT=	Primitive computer algebra system
+WWW=		https://github.com/p-e-w/savage
 
 LICENSE=	AGPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE
