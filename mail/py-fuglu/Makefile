@@ -1,5 +1,3 @@
-# Created by: Kevin Golding <ports@caomhin.org>
-
 PORTNAME=	fuglu
 PORTVERSION=	0.8.0
 CATEGORIES=	mail python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	ports@caomhin.org
 COMMENT=	Mail scanning daemon for Postfix written in Python
+WWW=		https://fuglu.org/
 
 LICENSE=	APACHE20
 
