@@ -1,5 +1,3 @@
-# Created by: Alejandro Pulver <alejandro@varnet.biz>
-
 PORTNAME=	tuxpaint
 PORTVERSION=	0.9.28
 CATEGORIES=	games
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-sdl2
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Drawing program designed for young children
+WWW=		https://www.tuxpaint.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/docs/COPYING.txt
