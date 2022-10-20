@@ -1,11 +1,12 @@
 PORTNAME=	onefetch
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.12.0
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	sysutils devel
 
 MAINTAINER=	lcook@FreeBSD.org
 COMMENT=	Git repository summary on your terminal
+WWW=		https://github.com/o2sh/onefetch
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
