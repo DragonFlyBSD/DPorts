@@ -1,5 +1,3 @@
-# Created by: Matthias Fechner <mfechner@FreeBSD.org>
-
 PORTNAME=	invisible_captcha
 PORTVERSION=	1.1.0
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	mfechner@FreeBSD.org
 COMMENT=	Unobtrusive CAPTCHA for ruby
+WWW=		https://github.com/markets/invisible_captcha
 
 LICENSE=	MIT
 
