@@ -1,8 +1,7 @@
-# Created by: Pawel Pekala <c0rn@o2.pl>
-
 PORTNAME=	attachwarner
 
 COMMENT=	Not attached file warning plugin for Claws Mail
+WWW=		https://www.claws-mail.org/plugin.php?plugin=attachwarner
 
 CLAWS_PLUGINS_BUILD=	${PORTNAME}
 
