@@ -1,5 +1,3 @@
-# Created by: Alejandro Pulver <alejandro@varnet.biz>
-
 PORTNAME=	tuxpaint
 PORTVERSION=	2004.06.05
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DISTFILES=	#
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	TuxPaint Localized Fonts
+WWW=		https://www.tuxpaint.org/
 
 RUN_DEPENDS=	tuxpaint>=0.9.21:games/tuxpaint
 
