@@ -1,11 +1,12 @@
 PORTNAME=	gpg-tui
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.9.0
+DISTVERSION=	0.9.1
 PORTREVISION=	1
 CATEGORIES=	security
 
 MAINTAINER=	se@FreeBSD.org
 COMMENT=	Terminal User Interface for GnuPG
+WWW=		https://github.com/orhun/gpg-tui
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
