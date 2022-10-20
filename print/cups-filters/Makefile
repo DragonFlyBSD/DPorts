@@ -1,11 +1,12 @@
 PORTNAME=	cups-filters
 PORTVERSION=	1.28.15
-PORTREVISION=	2
+PORTREVISION=	5
 CATEGORIES=	print
 MASTER_SITES=	https://www.openprinting.org/download/cups-filters/
 
 MAINTAINER=	tijl@FreeBSD.org
 COMMENT=	Additional backends, filters and other software for CUPS
+WWW=		https://wiki.linuxfoundation.org/openprinting/cups-filters
 
 LICENSE=	BSD4CLAUSE GPLv2 GPLv2+ GPLv3 GPLv3+ LGPL20 LGPL21+ MIT
 LICENSE_COMB=	multi
