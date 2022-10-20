@@ -1,10 +1,11 @@
 PORTNAME=	ods2sql
 DISTVERSION=	0.4.0
-PORTREVISION=	15
+PORTREVISION=	17
 CATEGORIES=	databases
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Create SQLite3 database from ODS spreadsheet
+WWW=		https://gitlab.com/zetok/ods2sql
 
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
