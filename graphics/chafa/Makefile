@@ -1,5 +1,3 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	chafa
 PORTVERSION=	1.12.3
 CATEGORIES=	graphics
@@ -8,6 +6,7 @@ MASTER_SITES=	https://hpjansson.org/chafa/releases/ \
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Character art facsimile generator
+WWW=		https://hpjansson.org/chafa/
 
 LICENSE=	GPLv3 LGPL3+
 LICENSE_COMB=	multi
