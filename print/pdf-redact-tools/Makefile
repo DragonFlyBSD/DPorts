@@ -1,5 +1,3 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	pdf-redact-tools
 PORTVERSION=	0.1.2
 DISTVERSIONPREFIX=	v
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Securely redact and strip metadata from PDF files
+WWW=		https://github.com/firstlookmedia/pdf-redact-tools
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
