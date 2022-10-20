@@ -1,5 +1,3 @@
-# Created by: Peter Ankerstal <peter@pean.org>
-
 PORTNAME=	npretty
 DISTVERSIONPREFIX=	n
 DISTVERSION=	0.9.3-1
@@ -8,6 +6,7 @@ CATEGORIES=	graphics
 
 MAINTAINER=	peter@pean.org
 COMMENT=	Simple web-gallery generator written in perl
+WWW=		http://www.pulia.nu/coding.html
 
 LICENSE=	GPLv2
 
