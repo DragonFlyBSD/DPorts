@@ -1,5 +1,3 @@
-# Created by: Robert Noland <rnoland@FreeBSD.org>
-
 PORTNAME=	compiz-plugins-main
 PORTVERSION=	0.8.8
 PORTREVISION=	10
@@ -8,6 +6,7 @@ MASTER_SITES=	https://BSDforge.com/projects/source/x11-wm/compiz-plugins-main/
 
 MAINTAINER=	portmaster@BSDforge.com
 COMMENT=	Plugins for Compiz Composite Window Manager
+WWW=		https://gitlab.com/compiz/compiz-plugins-main
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
