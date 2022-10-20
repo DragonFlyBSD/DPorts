@@ -1,14 +1,13 @@
-# Created by: Grzegorz Blach <gblach@FreeBSD.org>
-
 PORTNAME=	efl
 DISTVERSION=	1.26.2
-PORTREVISION=	5
+PORTREVISION=	8
 CATEGORIES=	devel enlightenment
 MASTER_SITES=	http://download.enlightenment.org/rel/libs/${PORTNAME}/
 DIST_SUBDIR=	enlightenment
 
 MAINTAINER=	enlightenment@FreeBSD.org
 COMMENT=	Enlightenment Foundation Libraries
+WWW=		https://docs.enlightenment.org/efl/current/
 
 LICENSE=	BSD2CLAUSE LGPL21
 LICENSE_COMB=	multi
