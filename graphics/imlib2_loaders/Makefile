@@ -1,5 +1,3 @@
-# Created by: Jeremy Norris <ishmael27@home.com>
-
 PORTNAME=	imlib2_loaders
 PORTVERSION=	1.7.0
 PORTEPOCH=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/enlightenment/imlib2-src/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Extra image loader plugins for Imlib 2
+WWW=		https://docs.enlightenment.org/api/imlib2/html/
 
 LICENSE=		imlib2 GPLv2
 LICENSE_COMB=		multi
