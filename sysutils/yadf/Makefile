@@ -1,11 +1,12 @@
 PORTNAME=	yadf
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.0.0
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	sysutils
 
 MAINTAINER=	sec.research.2005@gmail.com
 COMMENT=	Yet Another Duplicate files finder
+WWW=		https://github.com/jrimbault/yadf
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
