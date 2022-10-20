@@ -1,5 +1,5 @@
 PORTNAME=	clamav
-DISTVERSION=	0.105.0
+DISTVERSION=	0.105.1
 PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	security
@@ -7,6 +7,7 @@ MASTER_SITES=	https://www.clamav.net/downloads/production/
 
 MAINTAINER=	yasu@FreeBSD.org
 COMMENT=	Open-source (GPL) anti-virus engine (Regular Feature Release)
+WWW=		https://www.clamav.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING.txt
