@@ -1,5 +1,3 @@
-# Created by: Holger Lamm <holger@e-gitt.net>
-
 PORTNAME=	mldonkey
 PORTVERSION=	3.1.5
 PORTREVISION=	4
@@ -10,6 +8,7 @@ EXTRA_PATCHES=	${FILESDIR}/git-30e77e2:-p1
 
 MAINTAINER?=	danfe@FreeBSD.org
 COMMENT?=	Multi-protocol peer-to-peer client written in OCaml
+WWW=		http://mldonkey.sourceforge.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/Copying.txt
