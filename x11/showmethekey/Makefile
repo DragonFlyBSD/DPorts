@@ -1,10 +1,11 @@
 PORTNAME=	showmethekey
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.6.3
+DISTVERSION=	1.7.3
 CATEGORIES=	x11 wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Show keys you typed on screen
+WWW=		https://showmethekey.alynx.one/
 
 LICENSE=	APACHE20
 
@@ -18,7 +19,7 @@ RUN_DEPENDS=	${PKEXEC}
 
 USES=		compiler:c11 gettext-tools gnome meson pkgconfig
 USE_GITHUB=	yes
-USE_GNOME=	cairo gtk30
+USE_GNOME=	cairo gtk40
 GH_ACCOUNT=	AlynxZhou
 PKEXEC?=	pkexec:sysutils/polkit
 MESON_ARGS=	-Dpkexec_path="${PKEXEC:C/\:.*//}"
