@@ -1,13 +1,13 @@
---- skia/src/sksl/dsl/DSLExpression.cpp.orig	2021-11-25 15:00:28 UTC
-+++ skia/src/sksl/dsl/DSLExpression.cpp
-@@ -45,10 +45,10 @@ DSLExpression::DSLExpression(float value
+--- skia/src/sksl/dsl/DSLExpression.cpp.orig	2022-10-16 18:56:33.122666000 +0200
++++ skia/src/sksl/dsl/DSLExpression.cpp	2022-10-16 18:57:30.011399000 +0200
+@@ -63,10 +63,10 @@
      : fExpression(SkSL::Literal::MakeFloat(ThreadContext::Context(),
-                                            pos.line(),
+                                            pos,
                                             value)) {
 -    if (!isfinite(value)) {
 -        if (isinf(value)) {
 +    if (!std::isfinite(value)) {
-+	if (std::isinf(value)) {
++        if (std::isinf(value)) {
              ThreadContext::ReportError("floating point value is infinite");
 -        } else if (isnan(value)) {
 +        } else if (std::isnan(value)) {

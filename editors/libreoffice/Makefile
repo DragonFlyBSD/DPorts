@@ -10,7 +10,11 @@ DISTFILES=	${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX} \
 DIST_SUBDIR=	libreoffice
 EXTRACT_ONLY:=	${DISTFILES}
 
+PATCH_SITES=	https://raw.githubusercontent.com/archlinux/svntogit-packages/packages/libreoffice-fresh/trunk/
+PATCHFILES=	libreoffice-poppler-22.09.0.patch:-p1
+
 COMMENT=	Full integrated office productivity suite
+WWW?=		https://www.libreoffice.org/
 
 BUILD_DEPENDS=	p5-Archive-Zip>=0:archivers/p5-Archive-Zip \
 		zip:archivers/zip \
@@ -50,6 +54,7 @@ LIB_DEPENDS=	libapr-1.so:devel/apr1 \
 		libpng.so:graphics/png \
 		libpoppler.so:graphics/poppler \
 		libqrcodegencpp.so:graphics/qr-code-generator \
+		libwebp.so:graphics/webp \
 		liblpsolve55.so:math/lp_solve \
 		libcmis-0.5.so:net/libcmis \
 		libfreetype.so:print/freetype2 \
@@ -99,7 +104,8 @@ RUN_DEPENDS=	xdg-open:devel/xdg-utils \
 
 DISTFILES+=	f543e6e2d7275557a839a164941c0a86e5f2c3f2a0042bfc434c88c6dde9e140-opens___.ttf:ext
 DISTFILES+=	dtoa-20180411.tgz:src
-DISTFILES+=	skia-m97-a7230803d64ae9d44f4e1282444801119a3ae967.tar.xz:src
+DISTFILES+=	dragonbox-1.1.0.tar.gz:src
+DISTFILES+=	skia-m103-b301ff025004c9cd82816c86c547588e6c24b466.tar.xz:src
 
 NOT_FOR_ARCHS=		armv6 armv7
 NOT_FOR_ARCHS_REASON=	Unsupported host_cpu
@@ -124,7 +130,9 @@ USE_OPENLDAP=	yes
 USE_PERL5=	build
 USE_XORG=	ice sm x11 xaw xcb xext xinerama xrandr xrender
 
-OPTIONS_DEFINE=	COINMP CUPS DOCS GNOME GTK3 GTK4 JAVA KF5 LTO MMEDIA PDFIUM PGSQL MARIADB QT5 SDK TEST WEBDAV
+OPTIONS_DEFINE=	COINMP CUPS DOCS GNOME GTK3 GTK4 JAVA KF5 LTO MMEDIA PDFIUM PGSQL MARIADB SDK TEST WEBDAV
+OPTIONS_RADIO=	QT
+OPTIONS_RADIO_QT=	QT5 QT6
 OPTIONS_DEFAULT=	CUPS DOCS JAVA MMEDIA PDFIUM QT5
 #OPTIONS_EXCLUDE=	GTK4
 
@@ -136,7 +144,9 @@ MMEDIA_DESC=	Enable multimedia backend for Impress
 PDFIUM_DESC=	Enable PDFium secure engine
 PGSQL_DESC=	Build with PostgreSQL-SDBC driver
 MARIADB_DESC=	Build with MariaDB/MySQL-SDBC driver
+QT_DESC=	Select Qt GUI engine version
 QT5_DESC=	Qt5 GUI toolkit support (default visual style)
+QT6_DESC=	Qt6 GUI toolkit support (experimental visual style)
 SDK_DESC=	Build with SDK
 TEST_DESC=	Run all regression tests
 WEBDAV_DESC=	Enable WebDAV protocol
@@ -214,7 +224,7 @@ MMEDIA_USES=		gstreamer
 MMEDIA_CONFIGURE_ENABLE=	gstreamer-1-0
 
 PDFIUM_CONFIGURE_ENABLE=	pdfium
-PDFIUM_DISTFILES=	pdfium-4699.tar.bz2:src
+PDFIUM_DISTFILES=	pdfium-5058.tar.bz2:src
 PDFIUM_LIB_DEPENDS=	libabsl_strings.so:devel/abseil \
 			libopenjp2.so:graphics/openjpeg
 
@@ -226,8 +236,15 @@ MARIADB_CONFIGURE_ENABLE=	mariadb-sdbc
 MARIADB_USES=	mysql:client
 
 QT5_CONFIGURE_ENABLE=	qt5
-QT5_USE=	qt=buildtools_build,core,gui,network,qmake_build,widgets,x11extras
+QT5_USE=	qt=buildtools:build,core,gui,network,qmake:build,widgets,x11extras
 QT5_USES=	qt:5
+
+QT6_CONFIGURE_ENABLE=	qt6
+QT6_CONFIGURE_ENV=	QMAKE6=${QMAKE} MOC6=${MOC} PATH="${QT_TOOLDIR}:${PATH}"
+QT6_PREVENTS=	KF5
+QT6_PREVENTS_MSG=	KF5 support require Qt5 engine
+QT6_USE=	qt=base,declarative:build,tools:build
+QT6_USES=	qt:6
 
 SDK_BUILD_DEPENDS=	doxygen:devel/doxygen
 SDK_CONFIGURE_ENABLE=	odk
@@ -236,7 +253,7 @@ SDK_CONFIGURE_ON=	--with-doxygen=${LOCALBASE}/bin/doxygen
 SDK_DISTFILES=	185d60944ea767075d27247c3162b3bc-unowinreg.dll:ext
 
 TEST_ALL_TARGET=	build
-TEST_ALL_TARGET_OFF=	build-nocheck
+TEST_ALL_TARGET_OFF=	build
 TEST_CONFIGURE_ENABLE=	cve-tests
 
 WEBDAV_CONFIGURE_ON=	--with-webdav=neon
@@ -269,7 +286,9 @@ CONFIGURE_ARGS=	--disable-dependency-tracking \
 		--with-system-cuckoo \
 		--with-system-curl \
 		--with-system-dicts \
+		--with-system-dragonbox=no \
 		--with-system-gpgmepp \
+		--with-system-libfixmath=no \
 		--with-system-libs \
 		--with-system-libxml \
 		--with-system-mdds \
@@ -293,7 +312,8 @@ CONFIGURE_ENV=	DMAKE=${LOCALBASE}/bin/dmake \
 		ICU_LIBS="`icu-config --ldflags`" \
 		PYTHON_CFLAGS="`${PYTHON_VERSION}-config --cflags`" \
 		PYTHON_LIBS="`${PYTHON_VERSION}-config --libs`" \
-		ZXING_CFLAGS=-I/usr/local/include/ZXing \
+		ZXING_CFLAGS="-I${LOCALBASE}/include/ZXing \
+		CPLUS_INCLUDE_PATH="-I${LOCALBASE}/include \
 		ac_cv_path_SED=${LOCALBASE}/bin/gsed
 
 CONFIGURE_SHELL=	${LOCALBASE}/bin/bash
@@ -305,6 +325,8 @@ MAKE_ENV+=	GNUSED=${LOCALBASE}/bin/gsed
 MAKE_ENV+=	DISPLAY=
 MAKE_ENV+=	verbose=1
 
+#MAKE_JOBS_UNSAFE=	yes
+
 .include <bsd.port.options.mk>
 
 .include <bsd.port.pre.mk>
@@ -313,7 +335,7 @@ MAKE_ENV+=	verbose=1
     (${OSVERSION} >= 1300525 && ${OSVERSION} < 1301000) || \
     (${OSVERSION} >= 1301500 && ${OSVERSION} < 1301502) || \
     (${OSVERSION} >= 1400051 && ${OSVERSION} < 1400057))
-BROKEN= please update FreeBSD base system first to fix an ABI incompatibility
+BROKEN=	please update FreeBSD base system first to fix an ABI incompatibility
 .endif
 
 .if ${ARCH:Mpowerpc*}
@@ -328,7 +350,7 @@ CONFIGURE_ARGS+=	--disable-skia
 CONFIGURE_ARGS+=	--enable-gtk3-kde5
 .endif
 
-.if ${PORT_OPTIONS:MLTO} && ${CHOSEN_COMPILER_TYPE} == clang
+.if ${PORT_OPTIONS:MLTO} && ${CHOSEN_COMPILER_TYPE} == clang && ${COMPILER_VERSION} < 130
 LLVM_DEFAULT=	13
 CPP=	${LOCALBASE}/bin/clang-cpp${LLVM_DEFAULT}
 CC=	${LOCALBASE}/bin/clang${LLVM_DEFAULT}
