@@ -1,11 +1,12 @@
 PORTNAME=	pastel
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.8.1
-PORTREVISION=	9
+PORTREVISION=	11
 CATEGORIES=	graphics
 
 MAINTAINER=	lcook@FreeBSD.org
 COMMENT=	Command-line tool to generate, analyze, convert and manipulate colors
+WWW=		https://github.com/sharkdp/pastel
 
 LICENSE=	APACHE20 MIT
 LICENSE_COMB=	dual
