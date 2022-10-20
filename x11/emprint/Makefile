@@ -1,5 +1,3 @@
-# Created by: Stanislav Sedov <stas@FreeBSD.org>
-
 PORTNAME=	emprint
 PORTVERSION=	20130520
 PORTREVISION=	4
@@ -8,6 +6,7 @@ MASTER_SITES=	LOCAL/gblach/e17/extra/
 
 MAINTAINER=	enlightenment@FreeBSD.org
 COMMENT=	Utility for taking screenshots for E17
+WWW=		https://www.enlightenment.org/
 
 LIB_DEPENDS=	libefl.so:devel/efl
 
