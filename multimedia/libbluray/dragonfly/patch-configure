@@ -1,0 +1,11 @@
+--- configure.orig	2022-10-22 16:43:00.509512000 +0200
++++ configure	2022-10-22 16:43:19.559079000 +0200
+@@ -3630,7 +3630,7 @@
+     ;;
+ dragonfly* |   freebsd*)
+     SYS=freebsd
+-    CFLAGS="${CFLAGS} -D_XOPEN_SOURCE=700"
++    CFLAGS="${CFLAGS}"
+     ;;
+   *)
+     SYS="${host_os}"

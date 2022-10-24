@@ -1,0 +1,18 @@
+--- Makefile.in.orig	2022-10-22 16:29:53.687388000 +0200
++++ Makefile.in	2022-10-22 16:30:06.337100000 +0200
+@@ -852,7 +852,6 @@
+ 
+ ACLOCAL_AMFLAGS = -I m4
+ MOSTLYCLEANFILES = $(DX_CLEANFILES)
+-POSIX_C_SOURCE = 200809L
+ EXTRA_DIST = \
+ 	bootstrap \
+ 	ChangeLog \
+@@ -872,7 +871,6 @@
+ 
+ AM_CPPFLAGS = \
+ 	-D_ISOC99_SOURCE \
+-	-D_POSIX_C_SOURCE=$(POSIX_C_SOURCE) \
+ 	-D_REENTRANT \
+ 	\
+ 	-I$(top_srcdir)/src \
