@@ -1,5 +1,3 @@
-# Created by: Michael Nottebrock <michaelnottebrock@gmx.net>
-
 PORTNAME=	dvdrip
 PORTVERSION=	0.98.11
 PORTREVISION=	12
@@ -9,6 +7,7 @@ MASTER_SITE_SUBDIR=	CPAN:JRED
 
 MAINTAINER=	se@FreeBSD.org
 COMMENT=	Perl Gtk+ based dvd-ripper
+WWW=		https://www.exit1.org/dvdrip/
 
 LICENSE=	ART10 GPLv1 # (ART10 or GPLv1) and CC-BY-SA-2.5
 LICENSE_COMB=	dual
