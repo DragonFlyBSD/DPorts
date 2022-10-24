@@ -1,5 +1,3 @@
-# Created by: Bernhard Froehlich <decke@FreeBSD.org>
-
 PORTNAME=	pvr.hts
 DISTVERSION=	19.0.6
 DISTVERSIONSUFFIX=	-Matrix
@@ -7,6 +5,7 @@ CATEGORIES=	multimedia
 
 MAINTAINER=	decke@FreeBSD.org
 COMMENT=	Tvheadend PVR addon for Kodi
+WWW=		https://github.com/kodi-pvr/pvr.hts
 
 LICENSE=	GPLv2+
 
