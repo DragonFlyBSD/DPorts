@@ -1,5 +1,3 @@
-# Created by: Rozhuk Ivan <rozhuk.im@gmail.com>
-
 PORTNAME=	screensaver.stars
 PORTVERSION=	19.0.0
 DISTVERSIONSUFFIX=	-Matrix
@@ -7,6 +5,7 @@ CATEGORIES=	multimedia
 
 MAINTAINER=	rozhuk.im@gmail.com
 COMMENT=	Starfield screensaver for Kodi
+WWW=		https://github.com/xbmc/screensaver.stars
 
 LICENSE=	GPLv2+
 
