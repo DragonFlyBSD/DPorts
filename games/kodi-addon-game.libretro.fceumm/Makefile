@@ -1,5 +1,3 @@
-# Created by: Rozhuk Ivan <rozhuk.im@gmail.com>
-
 PORTNAME=	game.libretro.fceumm
 PORTVERSION=	0.0.1.36
 DISTVERSIONSUFFIX=	-Matrix
@@ -7,6 +5,7 @@ CATEGORIES=	games
 
 MAINTAINER=	rozhuk.im@gmail.com
 COMMENT=	Kodi game addon for NES / Famicom (FCEUmm)
+WWW=		https://github.com/libretro/libretro-fceumm/
 
 LICENSE=	GPLv2+
 
