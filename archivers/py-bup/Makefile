@@ -1,5 +1,3 @@
-# Created by: José García Juanino <jjuanino@gmail.com>
-
 PORTNAME=	bup
 PORTVERSION=	0.32
 CATEGORIES=	archivers python
@@ -7,6 +5,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	portmaster@BSDforge.com
 COMMENT=	Very efficient backup system based on the git packfile format
+WWW=		https://bup.github.io
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/LICENSE
