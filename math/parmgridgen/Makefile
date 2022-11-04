@@ -1,5 +1,3 @@
-# Created by: Stas Timokhin <devel@stasyan.com>
-
 PORTNAME=	parmgridgen
 PORTVERSION=	1.0
 PORTREVISION=	15
@@ -11,6 +9,7 @@ DISTNAME=	ParMGridGen-${PORTVERSION}
 
 MAINTAINER=	devel@stasyan.com
 COMMENT=	Library for obtaining a sequence of successive coarse grids
+WWW=		http://www.mgnet.org/mgnet-codes-parmgridgen.html
 
 LIB_DEPENDS=	libmpi.so:net/openmpi
 
