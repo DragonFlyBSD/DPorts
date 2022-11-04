@@ -1,0 +1,11 @@
+--- libraries/base/base.cabal.intermediate	2021-10-23 15:18:11.171004000 +0200
++++ libraries/base/base.cabal	2021-10-23 15:18:43.750278000 +0200
+@@ -407,7 +407,7 @@
+     -- The Ports framework always passes this flag when building software that
+     -- uses iconv to make iconv from Ports compatible with iconv from the base system
+     -- See /usr/ports/Mk/Uses/iconv.mk
+-    if os(freebsd)
++    if os(freebsd) || os(dragonfly)
+         cc-options: -DLIBICONV_PLUG
+ 
+     -- We need to set the unit id to base (without a version number)
