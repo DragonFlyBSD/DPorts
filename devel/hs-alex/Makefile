@@ -1,5 +1,3 @@
-# Created by: Volker Stolz <stolz@i2.informatik.rwth-aachen.de>
-
 PORTNAME=	alex
 PORTVERSION=	3.2.6
 PORTREVISION=	2
@@ -7,10 +5,13 @@ CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
 COMMENT=	Tool for generating lexical analysers in Haskell
+WWW=		https://www.haskell.org/alex/
 
 LICENSE=	BSD3CLAUSE
 
 USES=		cabal
+
+CABAL_WRAPPER_SCRIPTS=	${CABAL_EXECUTABLES}
 
 OPTIONS_DEFINE=	EXAMPLES
 
