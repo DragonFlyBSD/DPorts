@@ -1,5 +1,3 @@
-# Created by: Simon Marlow <simonmar@microsoft.com>
-
 PORTNAME=	happy
 PORTVERSION=	1.20.0
 PORTREVISION=	2
@@ -7,10 +5,13 @@ CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
 COMMENT=	Parser generator for Haskell
+WWW=		https://www.haskell.org/happy/
 
 LICENSE=	BSD3CLAUSE
 
 USES=		cabal
+
+CABAL_WRAPPER_SCRIPTS=	${CABAL_EXECUTABLES}
 
 PORTEXAMPLES=	*.ly README glr/* igloo/*
 
