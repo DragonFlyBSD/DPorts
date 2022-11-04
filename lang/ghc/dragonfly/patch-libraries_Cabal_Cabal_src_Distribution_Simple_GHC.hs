@@ -1,7 +1,7 @@
---- libraries/Cabal/Cabal/Distribution/Simple/GHC.hs.intermediate	2015-08-23 08:24:31 UTC
-+++ libraries/Cabal/Cabal/Distribution/Simple/GHC.hs
-@@ -878,7 +878,7 @@ getRPaths lbi clbi | supportRPaths hostO
-     supportRPaths FreeBSD     = True
+--- libraries/Cabal/Cabal/src/Distribution/Simple/GHC.hs.orig	2022-07-27 07:28:45 UTC
++++ libraries/Cabal/Cabal/src/Distribution/Simple/GHC.hs
+@@ -1737,7 +1737,7 @@ getRPaths lbi clbi | supportRPaths hostO
+         _                                              -> False
      supportRPaths OpenBSD     = False
      supportRPaths NetBSD      = False
 -    supportRPaths DragonFly   = False
