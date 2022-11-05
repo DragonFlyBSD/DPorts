@@ -1,5 +1,3 @@
-# Created by: Kris Moore <kmoore@FreeBSD.org>
-
 PORTNAME=	florence
 PORTVERSION=	0.6.3
 PORTREVISION=	4
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/florence/florence/${PORTVERSION}/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Extensible scalable virtual keyboard
+WWW=		http://florence.sourceforge.net/
 
 LICENSE=	GPLv2+ GFDL
 LICENSE_COMB=	multi
