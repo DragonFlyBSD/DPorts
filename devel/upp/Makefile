@@ -1,5 +1,3 @@
-# Created by: Matthias Sund <m.sund@arcor.de>
-
 PORTNAME=	upp
 DISTVERSION=	15260
 CATEGORIES=	devel x11-toolkits
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}-posix-${PORTVERSION}
 
 MAINTAINER=	m.sund@arcor.de
 COMMENT=	Ultimate++, a BSD-licensed, cross-platform, C/C++ RAD suite
+WWW=		http://upp.sourceforge.net/
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/uppsrc/Core/Copying
