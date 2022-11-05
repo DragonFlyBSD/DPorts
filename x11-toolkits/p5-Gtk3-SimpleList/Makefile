@@ -1,5 +1,3 @@
-# Created by: Danilo Egea Gondolfo <danilo@FreeBSD.org>
-
 PORTNAME=	Gtk3-SimpleList
 PORTVERSION=	0.21
 CATEGORIES=	x11-toolkits perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Simple interface to Gtk3's complex MVC list widget
+WWW=		https://metacpan.org/dist/Gtk3-SimpleList
 
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/COPYING
