@@ -1,5 +1,3 @@
-# Created by: Matthew Luckie <mjl@luckie.org.nz>
-
 PORTNAME=	thunderbird-dictionaries
 PORTVERSION=	20060220
 PORTREVISION=	13
@@ -10,6 +8,7 @@ DIST_SUBDIR=	thunderbird
 
 MAINTAINER=	mjl@luckie.org.nz
 COMMENT=	Dictionaries for Mozilla Thunderbird
+WWW=		http://www.mozilla.com/thunderbird/dictionaries.html
 
 RUN_DEPENDS=	thunderbird>=6.0:mail/thunderbird
 
