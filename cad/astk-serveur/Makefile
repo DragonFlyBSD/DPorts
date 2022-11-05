@@ -1,5 +1,3 @@
-# Created by: thierry@pompo.net
-
 PORTNAME=	astk
 DISTVERSION=	2020.0-1
 PORTREVISION=	1
@@ -12,6 +10,7 @@ PKGNAMESUFFIX=	-client
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT?=	Graphical interface for Code_Aster (server side)
+WWW=		http://www.code-aster.org/
 
 LICENSE=	GPLv2
 
