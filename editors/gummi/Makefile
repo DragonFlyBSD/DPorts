@@ -1,13 +1,12 @@
-# Created by: Hakisho Nukama <nukama@gmail.com>
-
 PORTNAME=	gummi
 PORTVERSION=	0.8.1
-PORTREVISION=	13
+PORTREVISION=	16
 CATEGORIES=	editors
 MASTER_SITES=	https://github.com/alexandervdm/gummi/releases/download/${PORTVERSION}/
 
 MAINTAINER=	zab@zltech.eu
 COMMENT=	Simple LaTeX editor for GTK users
+WWW=		https://github.com/alexandervdm/gummi/
 
 LICENSE=	MIT
 
