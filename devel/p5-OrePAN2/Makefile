@@ -1,5 +1,5 @@
 PORTNAME=	OrePAN2
-PORTVERSION=	0.48
+PORTVERSION=	0.49
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:OALDERS
@@ -7,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl extension for yet another DarkPAN manager
+WWW=		https://metacpan.org/release/OrePAN2
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
