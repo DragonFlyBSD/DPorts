@@ -1,5 +1,3 @@
-# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-
 PORTNAME=	goffice
 PORTVERSION=	0.10.52
 CATEGORIES=	devel gnome
@@ -7,6 +5,7 @@ MASTER_SITES=	GNOME
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GLib/GTK+ set of document centric objects and utilities
+WWW=		http://live.gnome.org/libgoffice
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
