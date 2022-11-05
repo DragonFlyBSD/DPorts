@@ -1,5 +1,3 @@
-# Created by: Quentin Stievenart <acieroid@awesom.eu>
-
 PORTNAME=	zathura
 DISTVERSION=	0.4.9
 CATEGORIES=	graphics print
@@ -7,6 +5,7 @@ MASTER_SITES=	https://git.pwmt.org/pwmt/${PORTNAME}/-/archive/${DISTVERSION}/
 
 MAINTAINER=	quentin.stievenart@gmail.com
 COMMENT=	Customizable lightweight pdf viewer
+WWW=		https://pwmt.org/projects/zathura/
 
 LICENSE=	ZLIB
 LICENSE_FILE=	${WRKSRC}/LICENSE
