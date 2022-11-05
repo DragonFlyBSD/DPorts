@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	kickshaw
 PORTVERSION=	0.5.26
 CATEGORIES=	x11-wm
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}_source_only
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Menu editor for the Openbox window manager
+WWW=		https://savannah.nongnu.org/projects/obladi
 
 LICENSE=	GPLv2+
 
