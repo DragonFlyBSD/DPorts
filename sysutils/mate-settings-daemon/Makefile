@@ -1,5 +1,3 @@
-# Created by: Koop Mast <kwm@FreeBSD.org>
-
 PORTNAME=	mate-settings-daemon
 PORTVERSION=	1.26.0
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DIST_SUBDIR=	mate
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	MATE settings daemon
+WWW=		https://mate-desktop.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
