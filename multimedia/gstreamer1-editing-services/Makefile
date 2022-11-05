@@ -1,5 +1,3 @@
-# Created by: Koop Mast <kwm@FreeBSD.org>
-
 PORTNAME=	gstreamer1-editing-services
 PORTVERSION=	1.16.3
 CATEGORIES=	multimedia
@@ -8,6 +6,7 @@ DISTNAME=	gstreamer-editing-services-${PORTVERSION}
 
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	GStreamer editing services
+WWW=		http://gstreamer.freedeskop.org
 
 LICENSE=	LGPL20
 
