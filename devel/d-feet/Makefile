@@ -1,5 +1,3 @@
-# Created by: Thinker K.F. Li <thinker@eeebox.branda.to>
-
 PORTNAME=	d-feet
 PORTVERSION=	0.3.15
 CATEGORIES=	devel
@@ -10,6 +8,7 @@ PATCHFILES+=	05465d486afd.patch:-p1 # https://gitlab.gnome.org/GNOME/d-feet/-/me
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	D-Bus Python introspection debugger
+WWW=		https://wiki.gnome.org/Apps/DFeet
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
