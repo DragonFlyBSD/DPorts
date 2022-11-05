@@ -1,5 +1,3 @@
-# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-
 PORTNAME=	gnome-dictionary
 PORTVERSION=	40.0
 PORTREVISION=	2
@@ -13,6 +11,7 @@ PATCHFILES+=	cf3f8a67cd6f.patch:-p1 # https://gitlab.gnome.org/GNOME/gnome-dicti
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME dictionary lookup application
+WWW=		https://wiki.gnome.org/Dictionary
 
 LICENSE=	GPLv2 LGPL21
 LICENSE_COMB=	multi
