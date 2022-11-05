@@ -1,0 +1,22 @@
+--- CMakeLists.txt.orig	2022-10-20 10:32:07.763215000 +0200
++++ CMakeLists.txt	2022-10-20 10:36:34.017148000 +0200
+@@ -45,8 +45,7 @@
+     target_link_libraries(_tweedledum PRIVATE
+         Eigen3::Eigen3
+         fmt::fmt-header-only
+-        mockturtle
+-        $<$<CXX_COMPILER_ID:GNU>:stdc++fs>)
++        mockturtle)
+     target_compile_options(_tweedledum PRIVATE
+         # clang/gcc warnings
+         $<$<OR:$<CXX_COMPILER_ID:Clang>,$<CXX_COMPILER_ID:GNU>>:
+@@ -69,8 +68,7 @@
+     Eigen3::Eigen3
+     fmt::fmt-header-only
+     mockturtle
+-    nlohmann_json
+-    $<$<CXX_COMPILER_ID:GNU>:stdc++fs>)
++    nlohmann_json)
+ target_compile_options(tweedledum PRIVATE
+     # clang/gcc warnings
+     $<$<OR:$<CXX_COMPILER_ID:Clang>,$<CXX_COMPILER_ID:GNU>>:
