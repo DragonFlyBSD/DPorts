@@ -1,14 +1,12 @@
-# Created by: Pawel Worach <pawel.worach@gmail.com>
-
 PORTNAME=	gjs
-PORTVERSION=	1.72.0
-PORTREVISION=	1
+PORTVERSION=	1.72.2
 CATEGORIES=	lang gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME Javascript binding
+WWW=		https://live.gnome.org/Gjs
 
 LICENSE=	MPL11 LGPL20+ GPLv2+
 LICENSE_COMB=	multi
