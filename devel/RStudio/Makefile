@@ -3,7 +3,7 @@
 
 PORTNAME=	RStudio
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2022.02.3+492
+DISTVERSION=	2022.07.2+576
 CATEGORIES=	devel math java
 MASTER_SITES=	https://s3.amazonaws.com/rstudio-buildtools/dictionaries/:dictionaries \
 		https://s3.amazonaws.com/rstudio-buildtools/:buildtools
@@ -14,6 +14,7 @@ DISTFILES=	core-dictionaries.zip:dictionaries \
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Integrated development environment (IDE) for R
+WWW=		https://rstudio.com/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -68,7 +69,7 @@ GIN_VERSION=	2.1.2
 COMMENT+=	(desktop UI version)
 USES+=		desktop-file-utils qt:5 shared-mime-info
 USE_QT=		core dbus declarative gui location network opengl printsupport quickcontrols sensors \
-		sql svg webchannel webengine webkit widgets xml xmlpatterns buildtools_build qmake_build
+		sql svg webchannel webengine webkit widgets xml xmlpatterns buildtools:build qmake:build
 CMAKE_ARGS+=	-DRSTUDIO_TARGET=Desktop
 INSTALL_SUBDIR=	${PORTNAME:tl}
 EXECUTABLE=	${PORTNAME:tl}
