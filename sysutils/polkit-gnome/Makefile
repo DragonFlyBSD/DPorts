@@ -1,6 +1,3 @@
-# Created by: Koop Mast<kwm@FreeBSD.org>
-#    $MCom: ports/trunk/sysutils/polkit-gnome/Makefile 19804 2014-08-13 14:55:11Z kwm $
-
 PORTNAME=	polkit-gnome
 PORTVERSION=	0.105
 PORTREVISION=	1
@@ -9,6 +6,7 @@ MASTER_SITES=	GNOME
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME frontend to the PolicyKit framework
+WWW=		https://www.freedesktop.org/wiki/Software/polkit/
 
 LIB_DEPENDS=	libpolkit-gobject-1.so:sysutils/polkit
 
