@@ -1,13 +1,15 @@
-# Created by: Alexander Nedotsukov <bland@FreeBSD.org>
-
 PORTNAME=	inkscape
-DISTVERSION=	1.2
-PORTREVISION=	1
+DISTVERSION=	1.2.1
+PORTREVISION=	6
 CATEGORIES=	graphics gnome
 MASTER_SITES=	https://media.inkscape.org/dl/resources/file/
 
+PATCH_SITES=	https://raw.githubusercontent.com/archlinux/svntogit-packages/packages/inkscape/trunk/
+PATCHFILES=	inkscape-1.2.1-poppler-22.09.0.patch:-p1
+
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Full featured open source SVG editor
+WWW=		https://inkscape.org
 
 LICENSE=	GPLv2 GPLv2+ GPLv3 GPLv3+ LGPL21 LGPL3 LGPL3+ MPL11
 LICENSE_COMB=	multi
@@ -20,8 +22,8 @@ LICENSE_FILE_LGPL3  =	${WRKSRC}/LICENSES/LGPL-3.0.txt
 LICENSE_FILE_LGPL3+ =	${WRKSRC}/LICENSES/LGPL-3.0-or-later.txt
 LICENSE_FILE_MPL11  =	${WRKSRC}/LICENSES/MPL-1.1.txt
 
-BUILD_DEPENDS=	${LOCALBASE}/include/boost/concept_check.hpp:devel/boost-libs
-LIB_DEPENDS=	libpopt.so:devel/popt \
+LIB_DEPENDS=	libboost_filesystem.so:devel/boost-libs \
+		libpopt.so:devel/popt \
 		libgc.so:devel/boehm-gc \
 		libgdl-3.so:x11-toolkits/gdl \
 		libgsl.so:math/gsl \
@@ -40,19 +42,23 @@ LIB_DEPENDS=	libpopt.so:devel/popt \
 		libdouble-conversion.so:devel/double-conversion \
 		lib2geom.so:math/lib2geom
 RUN_DEPENDS=	${PYNUMPY} \
+		${PYTHON_PKGNAMEPREFIX}appdirs>0:devel/py-appdirs@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}lxml>0:devel/py-lxml@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}scour>0:textproc/py-scour@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}cssselect>0:www/py-cssselect@${PY_FLAVOR} \
 		ps2pdf:print/ghostscript9-agpl-base \
 		fig2dev:print/fig2dev
 
-USES=		compiler:c++11-lib cmake cpe desktop-file-utils gnome \
+USES=		compiler:c++17-lang cmake cpe desktop-file-utils gnome \
 		iconv:wchar_t jpeg pathfix pkgconfig python:3.7+ \
-		shebangfix tar:xz xorg
-USE_GNOME=	gtkmm30 libxml2 libxslt
+		readline shebangfix tar:xz xorg
+USE_GNOME=	gdkpixbuf2 gtkmm30 libxml2 libxslt
 USE_XORG=	sm ice x11 xext
 USE_LDCONFIG=	yes
 
-DATETAG=	2022-05-15_dc2aedaf03
+CXXSTD=		gnu++17
+
+DATETAG=	2022-07-14_9c6d41e410
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${DISTVERSION}_${DATETAG}
 
