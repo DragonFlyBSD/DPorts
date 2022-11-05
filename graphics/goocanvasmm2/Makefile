@@ -1,6 +1,3 @@
-# Created by: Koop Mast <kwm@FreeBSD.org>
-#   $MCom: ports/trunk/graphics/goocanvasmm2/Makefile 17268 2013-04-01 05:13:11Z marcus $
-
 PORTNAME=	goocanvasmm
 PORTVERSION=	1.90.9
 PORTREVISION=	11
@@ -10,6 +7,7 @@ PKGNAMESUFFIX=	2
 
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	C++ bindings for the goocanvas widget for GTK
+WWW=		https://sourceforge.net/projects/goocanvas/
 
 LIB_DEPENDS=	libgoocanvas-2.0.so:graphics/goocanvas2
 
