@@ -1,5 +1,3 @@
-# Created by: Yukihiro Nakai <Nakai@technologist.com>
-
 PORTNAME=	gnumeric
 PORTVERSION=	1.12.52
 CATEGORIES=	math gnome
@@ -8,6 +6,7 @@ DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME spreadsheet program
+WWW=		http://www.gnumeric.org
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
