@@ -1,5 +1,3 @@
-# Created by: MANTANI Nobutaka <nobutaka@FreeBSD.org>
-
 PORTNAME=	uim
 PORTVERSION=	1.8.9.b.${SNAPDATE}
 CATEGORIES?=	textproc
@@ -9,6 +7,7 @@ PKGNAMESUFFIX=	-nox11
 
 MAINTAINER=	nobutaka@FreeBSD.org
 COMMENT?=	Input method library
+WWW=		https://github.com/uim/uim
 
 LICENSE=	BSD3CLAUSE GPLv2+ GPLv3+ LGPL21+ PD
 LICENSE_COMB=	multi
