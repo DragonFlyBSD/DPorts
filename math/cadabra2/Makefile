@@ -1,10 +1,11 @@
 PORTNAME=	cadabra2
-DISTVERSION=	2.3.8
-PORTREVISION=	3
+DISTVERSION=	2.3.9.3
+PORTREVISION=	1
 CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Computer algebra system for solving field theory problems
+WWW=		https://cadabra.science/
 
 LICENSE=	LGPL3
 LICENSE_FILE=	${WRKSRC}/doc/license.txt
