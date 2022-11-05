@@ -1,11 +1,10 @@
-# Created by: Eric L. Camachat <eric@camachat.org>
-
 PORTNAME=	ibus-chewing
 PORTVERSION=	1.5.1
 CATEGORIES=	chinese
 
 MAINTAINER=	eric@camachat.org
 COMMENT=	Chewing engine for IBus
+WWW=		https://github.com/definite/ibus-chewing
 
 LICENSE=	GPLv2
 
