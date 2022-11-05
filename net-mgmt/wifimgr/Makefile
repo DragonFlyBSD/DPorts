@@ -1,21 +1,21 @@
-# Created by: J.R. Oldroyd <fbsd@opal.com>
-
 PORTNAME=	wifimgr
-PORTVERSION=	1.21
+PORTVERSION=	1.23
 CATEGORIES=	net-mgmt sysutils
 MASTER_SITES=	https://opal.com/src/wifimgr/
 
 MAINTAINER=	fbsd@opal.com
 COMMENT=	WiFi Networks Manager
+WWW=		https://opal.com/src/wifimgr/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
-		libfreetype.so:print/freetype2
+		libfreetype.so:print/freetype2 \
+		libharfbuzz.so:print/harfbuzz
 
 USES=		desktop-file-utils gnome pkgconfig tar:xz xorg
-USE_GNOME=	cairo
+USE_GNOME=	cairo gdkpixbuf2
 USE_XORG=	x11
 
 OPTIONS_DEFINE=	GTK2 NLS
