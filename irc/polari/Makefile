@@ -1,13 +1,12 @@
-# Created by: Gustau Perez <gustau.perez@gmail.com>
-
 PORTNAME=	polari
-PORTVERSION=	42.0
+PORTVERSION=	42.1
 CATEGORIES=	irc gnome
 MASTER_SITES=	GNOME/sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+)\..*/\1/}
 DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Internet Relay Chat (IRC) client designed for GNOME
+WWW=		https://wiki.gnome.org/Apps/Polari
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
