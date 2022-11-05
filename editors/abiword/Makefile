@@ -1,14 +1,13 @@
-# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-
 PORTNAME=	abiword
 PORTVERSION=	3.0.5
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	editors
 MASTER_SITES=	http://www.abisource.com/downloads/abiword/${PORTVERSION}/source/
 DIST_SUBDIR=	AbiWord
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Open-source, cross-platform WYSIWYG word processor
+WWW=		https://www.abisource.com/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
