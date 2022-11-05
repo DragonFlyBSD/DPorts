@@ -1,13 +1,13 @@
-# Created by: George Reid <greid@ukug.uk.freebsd.org>
-
 PORTNAME=	ettercap
 PORTVERSION=	0.8.3.1
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	net-mgmt security
 MASTER_SITES=	https://github.com/Ettercap/ettercap/releases/download/v${PORTVERSION}/
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Network sniffer/interceptor/injector/logger for switched LANs
+WWW=		https://www.ettercap-project.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
