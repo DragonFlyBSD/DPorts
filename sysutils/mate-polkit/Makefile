@@ -1,5 +1,3 @@
-# Created by: Koop Mast <kwm@FreeBSD.org>
-
 PORTNAME=	mate-polkit
 PORTVERSION=	1.26.0
 CATEGORIES=	sysutils mate
@@ -8,6 +6,7 @@ DIST_SUBDIR=	mate
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	MATE frontend to the PolicyKit framework
+WWW=		https://mate-desktop.org/
 
 LICENSE=	LGPL20+
 LICENSE_FILE=	${WRKSRC}/COPYING
