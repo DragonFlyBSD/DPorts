@@ -1,6 +1,6 @@
---- tests/test-runner.c
-+++ tests/test-runner.c
-@@ -28,6 +28,7 @@
+--- tests/test-runner.c.orig	2022-11-01 14:11:31.710109000 +0100
++++ tests/test-runner.c	2022-11-01 14:24:36.312796000 +0100
+@@ -29,6 +29,7 @@
  #include <unistd.h>
  #include <stdio.h>
  #include <stdlib.h>
@@ -8,17 +8,17 @@
  #include <sys/types.h>
  #include <sys/wait.h>
  #include <sys/stat.h>
-@@ -37,7 +38,9 @@
- #include <errno.h>
- #include <limits.h>
- #include <sys/ptrace.h>
+@@ -42,7 +43,9 @@
+ #ifdef HAVE_SYS_PROCCTL_H
+ #include <sys/procctl.h>
+ #elif defined(HAVE_SYS_PRCTL_H)
 +#ifndef __DragonFly__
  #include <sys/prctl.h>
 +#endif
  #ifndef PR_SET_PTRACER
  # define PR_SET_PTRACER 0x59616d61
  #endif
-@@ -307,17 +310,22 @@ is_debugger_attached(void)
+@@ -276,17 +279,22 @@
  		close(pipefd[0]);
  		if (buf == '-')
  			_exit(1);
@@ -41,7 +41,7 @@
  		rc = prctl(PR_SET_PTRACER, pid);
  		if (rc != 0 && errno != EINVAL) {
  			/* An error prevents us from telling if a debugger is attached.
-@@ -331,6 +339,7 @@ is_debugger_attached(void)
+@@ -300,6 +308,7 @@
  			/* Signal to client that parent is ready by passing '+' */
  			write(pipefd[1], "+", 1);
  		}
@@ -49,7 +49,7 @@
  		close(pipefd[1]);
  
  		waitpid(pid, &status, 0);
-@@ -345,7 +354,11 @@ int main(int argc, char *argv[])
+@@ -315,18 +324,16 @@
  	const struct test *t;
  	pid_t pid;
  	int total, pass;
@@ -59,9 +59,22 @@
  	siginfo_t info;
 +#endif
  
- 	/* Load system malloc, free, and realloc */
- 	sys_calloc = dlsym(RTLD_NEXT, "calloc");
-@@ -394,6 +407,12 @@ int main(int argc, char *argv[])
+ 	if (isatty(fileno(stderr)))
+ 		is_atty = 1;
+-
+-	if (is_debugger_attached()) {
+-		fd_leak_check_enabled = 0;
+-		timeouts_enabled = 0;
+-	} else {
+-		fd_leak_check_enabled = !getenv("WAYLAND_TEST_NO_LEAK_CHECK");
+-		timeouts_enabled = !getenv("WAYLAND_TEST_NO_TIMEOUTS");
+-	}
++	fd_leak_check_enabled = !getenv("WAYLAND_TEST_NO_LEAK_CHECK");
++	timeouts_enabled = !getenv("WAYLAND_TEST_NO_TIMEOUTS");
+ 
+ 	if (argc == 2 && strcmp(argv[1], "--help") == 0)
+ 		usage(argv[0], EXIT_SUCCESS);
+@@ -358,6 +365,12 @@
  		if (pid == 0)
  			run_test(t); /* never returns */
  
@@ -73,13 +86,13 @@
 +#else
  		if (waitid(P_PID, pid, &info, WEXITED)) {
  			stderr_set_color(RED);
- 			fprintf(stderr, "waitid failed: %m\n");
-@@ -401,7 +420,20 @@ int main(int argc, char *argv[])
+ 			fprintf(stderr, "waitid failed: %s\n",
+@@ -366,6 +379,21 @@
  
  			abort();
  		}
 +#endif
- 
++
 +		fprintf(stderr, "test \"%s\":\t", t->name);
 +#ifdef __DragonFly__
 +		if (WIFEXITED(status)) {
@@ -92,10 +105,11 @@
 +			break;
 +		}
 +#else
++ 	
+ 
  		switch (info.si_code) {
  		case CLD_EXITED:
- 			if (info.si_status == EXIT_SUCCESS)
-@@ -425,6 +457,7 @@ int main(int argc, char *argv[])
+@@ -390,6 +418,7 @@
  
  			break;
  		}

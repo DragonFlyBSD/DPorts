@@ -1,5 +1,5 @@
---- src/connection.c.orig	2018-07-20 17:20:22.749299000 +0300
-+++ src/connection.c	2018-07-20 17:27:23.761642000 +0300
+--- src/connection.c.orig	2022-10-22 10:58:12.859174000 +0200
++++ src/connection.c	2022-11-01 18:50:36.315356000 +0100
 @@ -38,6 +38,7 @@
  #include <sys/types.h>
  #include <sys/socket.h>
@@ -8,8 +8,8 @@
  #include <ffi.h>
  
  #include "wayland-util.h"
-@@ -299,7 +300,10 @@
- 		msg.msg_namelen = 0;
+@@ -306,7 +307,10 @@
+ 
  		msg.msg_iov = iov;
  		msg.msg_iovlen = count;
 -		msg.msg_control = (clen > 0) ? cmsg : NULL;
@@ -18,9 +18,9 @@
 +		else
 +			msg.msg_control = cmsg;
  		msg.msg_controllen = clen;
- 		msg.msg_flags = 0;
  
-@@ -370,11 +374,25 @@
+ 		do {
+@@ -376,11 +380,25 @@
  wl_connection_write(struct wl_connection *connection,
  		    const void *data, size_t count)
  {
@@ -49,4 +49,4 @@
 +		}
  	}
  
- 	if (wl_buffer_put(&connection->out, data, count) < 0)
+ 	if (ring_buffer_put(&connection->out, data, count) < 0)
