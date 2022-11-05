@@ -1,5 +1,3 @@
-# Created by: Oliver Lehmann <oliver@FreeBSD.org>
-
 PORTNAME=	libxfce4menu
 PORTVERSION=	4.16.1
 CATEGORIES=	x11 xfce
@@ -9,6 +7,7 @@ DIST_SUBDIR=	xfce4
 
 MAINTAINER=	xfce@FreeBSD.org
 COMMENT=	Widgets library for the Xfce desktop environment
+WWW=		https://www.xfce.org/
 
 LICENSE=	GPLv2
 
@@ -53,7 +52,7 @@ STARTUP_CONFIGURE_ENABLE=	startup-notification
 STARTUP_DESC=		Startup notification
 STARTUP_LIB_DEPENDS=	libstartup-notification-1.so:x11/startup-notification
 
-VAPI_BUILD_DEPENDS=	vapigen:lang/vala
+VAPI_USES=		vala:build
 VAPI_CONFIGURE_ENABLE=	vala
 VAPI_IMPLIES=		GIR
 
