@@ -1,0 +1,7 @@
+# The way the configure.ac is made is to use iconv from
+# the system and fallback to libiconv if it doesn't exist.
+# Problem is our system one doesn't have locale_charset()
+# and it only test it's existence in -libiconv but later on
+# it doesn't retain that lib for the final linking.
+CONFIGURE_ENV+=	ICONV_LIBS=-liconv
+LIB_DEPENDS+=	libcharset.so:converters/libiconv
