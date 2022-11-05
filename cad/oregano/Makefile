@@ -1,5 +1,3 @@
-# Created by: Anders Andersson <anders@hack.org>
-
 PORTNAME=	oregano
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.84.43
@@ -8,6 +6,7 @@ CATEGORIES=	cad
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Schematic capture and circuit simulator
+WWW=		https://ahoi.io/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
