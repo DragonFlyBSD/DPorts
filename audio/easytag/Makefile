@@ -1,13 +1,12 @@
-# Created by: Adam Weinberger <adamw@FreeBSD.org>
-
 PORTNAME=	easytag
 PORTVERSION=	2.4.3
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	audio
 MASTER_SITES=	GNOME
 
 MAINTAINER=	novel@FreeBSD.org
 COMMENT=	GTK Tag editor for audio files
+WWW=		http://easytag.sourceforge.net
 
 LICENSE=	GPLv2
 
