@@ -1,5 +1,3 @@
-# Created by: Henry Hu <henry.hu.sh@gmail.com>
-
 PORTNAME=	ibus-pinyin
 PORTVERSION=	1.5.0
 PORTREVISION=	9
@@ -7,6 +5,7 @@ CATEGORIES=	chinese
 
 MAINTAINER=	henry.hu.sh@gmail.com
 COMMENT=	PinYin engine for IBus
+WWW=		http://code.google.com/p/ibus
 
 LICENSE=	GPLv2
 
