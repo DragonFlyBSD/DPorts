@@ -1,5 +1,3 @@
-# Created by: Jean-Yves Lefort <jylefort@brutele.be>
-
 PORTNAME=	devilspie
 PORTVERSION=	0.23
 CATEGORIES=	x11-wm
@@ -7,6 +5,7 @@ MASTER_SITES=	http://www.burtonini.com/computing/
 
 MAINTAINER=	w.schwarzenfeld@utanet.at
 COMMENT=	Window manipulation tool
+WWW=		http://www.burtonini.com/blog/computers/devilspie/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
