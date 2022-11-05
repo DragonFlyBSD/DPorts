@@ -1,5 +1,3 @@
-# Created by: FreeBSD GNOME Team <gnome@FreeBSD.org>
-
 PORTNAME=	gnome-color-manager
 PORTVERSION=	3.36.0
 PORTREVISION=	2
@@ -9,6 +7,7 @@ DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Session framework for the GNOME desktop to manage color profiles
+WWW=		https://git.gnome.org/browse/gnome-color-manager
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
