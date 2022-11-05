@@ -1,12 +1,11 @@
-# Created by: Thierry Thomas <thierry@pompo.net>
-
 PORTNAME=	pinot
 PORTVERSION=	1.21
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	deskutils
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Personal search and metasearch for the Free Desktop
+WWW=		https://github.com/FabriceColin/pinot/
 
 LICENSE=	GPLv2
 
