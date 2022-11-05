@@ -1,5 +1,3 @@
-# Created by: Gustau Perez i Querol <gustau.perez@gmail.com>
-
 PORTNAME=	muffin
 PORTVERSION=	4.8.0
 PORTREVISION=	1
@@ -8,6 +6,7 @@ DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Compositing window manager forked from Mutter for use with Cinnamon
+WWW=		http://cinnamon.linuxmint.com/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
