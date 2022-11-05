@@ -1,5 +1,3 @@
-# Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-
 PORTNAME=	zim
 DISTVERSION=	0.74.3
 CATEGORIES=	deskutils python
@@ -7,6 +5,7 @@ MASTER_SITES=	https://www.zim-wiki.org/downloads/
 
 MAINTAINER=	rm@FreeBSD.org
 COMMENT=	Desktop wiki editor
+WWW=		https://www.zim-wiki.org
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
