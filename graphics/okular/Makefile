@@ -5,6 +5,7 @@ CATEGORIES=	graphics kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE universal document viewer
+WWW=		https://okular.kde.org
 
 LICENSE=	GPLv2
 
@@ -22,23 +23,24 @@ LIB_DEPENDS=	libchm.so:misc/chmlib \
 		libzip.so:archivers/libzip
 
 USES=		cmake compiler:c++11-lib desktop-file-utils \
-		gettext jpeg kde:5 cpe pkgconfig qca qt:5 tar:xz
+		gettext jpeg kde:5 cpe pkgconfig qca qt:5 tar:xz xorg
 USE_KDE=	activities archive auth bookmarks codecs completion config \
 		configwidgets coreaddons crash dbusaddons emoticons i18n \
 		iconthemes init itemmodels itemviews jobwidgets js \
 		kdelibs4support khtml kio libkexiv2 parts pty \
 		service solid sonnet textwidgets threadweaver wallet \
 		widgetsaddons windowsystem xmlgui \
-		ecm_build
+		ecm:build
 USE_QT=		concurrent core dbus declarative gui network phonon4 printsupport speech \
 		svg widgets xml \
-		buildtools_build qmake_build testlib_build
+		buildtools:build qmake:build testlib:build
+USE_XORG=	x11
 
 OPTIONS_DEFINE=	DOCS PURPOSE
 OPTIONS_DEFAULT=	PURPOSE
 
 PURPOSE_DESC=	Enable 'Share' menu
 PURPOSE_USE=	KDE=purpose
-PURPOSE_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_KDEExperimentalPurpose
+PURPOSE_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_KF5Purpose
 
 .include <bsd.port.mk>
