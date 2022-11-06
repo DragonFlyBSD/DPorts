@@ -1,5 +1,3 @@
-# Created by: Aldis Berjoza <aldis@bsdroot.lv>
-
 PORTNAME=	geany-plugins
 PORTVERSION=	${GEANY_VER}
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ DISTFILES=	# none
 
 MAINTAINER=	madpilot@FreeBSD.org
 COMMENT=	Geany plugins (meta port)
+WWW=		https://plugins.geany.org/
 
 USES=		metaport
 
