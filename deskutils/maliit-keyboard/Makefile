@@ -1,10 +1,11 @@
 PORTNAME=	keyboard
-DISTVERSION=	2.2.1.1
+DISTVERSION=	2.3.1
 CATEGORIES=	deskutils kde
 PKGNAMEPREFIX=	maliit-
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Virtual keyboard based on Maliit framework
+WWW=		https://maliit.github.io/
 
 BUILD_DEPENDS=	hunspell:textproc/hunspell
 LIB_DEPENDS=	libmaliit-plugins.so:deskutils/maliit-framework \
@@ -17,8 +18,8 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	maliit
 USE_GNOME=	glib20
 GLIB_SCHEMAS=	org.maliit.keyboard.maliit.gschema.xml
-USE_QT=		core dbus declarative gui multimedia network \
-		buildtools_build qmake_build
+USE_QT=		core dbus declarative gui multimedia network quickcontrols2 \
+		buildtools:build qmake:build
 CMAKE_OFF=	enable-tests
 CMAKE_ARGS=	-DHUNSPELL_DICT_PATH=${PREFIX}/share/hunspell
 
