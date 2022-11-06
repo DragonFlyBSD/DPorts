@@ -1,7 +1,5 @@
-# Created by: Antoine Brodin <antoine@FreeBSD.org>
-
 PORTNAME=	dfwinreg
-PORTVERSION=	20201006
+PORTVERSION=	20211207
 CATEGORIES=	security devel python
 MASTER_SITES=	https://github.com/log2timeline/dfwinreg/releases/download/${PORTVERSION}/ \
 		LOCAL/antoine
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Digital Forensics Windows Registry
+WWW=		https://github.com/log2timeline/dfwinreg
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
