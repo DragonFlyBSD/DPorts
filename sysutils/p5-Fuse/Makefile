@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Fuse
 PORTVERSION=	0.16.1
 PORTREVISION=	2
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Write filesystems in Perl using FUSE
+WWW=		https://metacpan.org/release/Fuse
 
 LICENSE=	LGPL21
 
