@@ -4,6 +4,7 @@ CATEGORIES=	sysutils kde kde-plasma
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Plasma5 utility providing system information
+WWW=		https://www.kde.org/plasma-desktop
 
 RUN_DEPENDS=	lscpu:sysutils/lscpu \
 		glxinfo:graphics/mesa-demos \
@@ -19,11 +20,11 @@ USE_KDE=	auth bookmarks codecs completion config configwidgets \
 		kdeclarative kio notifications package parts service solid \
 		sonnet textwidgets unitconversion wayland widgetsaddons \
 		windowsystem xmlgui \
-		doctools_build ecm_build \
-		systemsettings_run
+		doctools:build ecm:build \
+		systemsettings:run
 USE_QT=		concurrent core dbus declarative gui network printsupport \
 		widgets xml \
-		buildtools_build qmake_build
+		buildtools:build qmake:build
 USE_XORG=	ice sm x11 xext
 
 # TODO	-- this should be handled correctly...
