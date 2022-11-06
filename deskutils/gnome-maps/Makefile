@@ -1,13 +1,12 @@
-# Created by: Gustau Perez <gustau.perez@gmail.com>
-
 PORTNAME=	gnome-maps
-DISTVERSION=	42.2
+DISTVERSION=	42.3
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME/sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+)\..*/\1/}
 DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Map application for GNOME
+WWW=		https://wiki.gnome.org/Apps/Maps
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
