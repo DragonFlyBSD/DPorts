@@ -1,5 +1,3 @@
-# Created by: Manuel Rabade Garica <mig@mig-29.net>
-
 PORTNAME=	xfce4-wavelan-plugin
 PORTVERSION=	0.6.3
 CATEGORIES=	sysutils xfce
@@ -8,6 +6,7 @@ DIST_SUBDIR=	xfce4
 
 MAINTAINER=	xfce@FreeBSD.org
 COMMENT=	Displays various information about a WaveLAN device
+WWW=		https://goodies.xfce.org/projects/panel-plugins/xfce4-wavelan-plugin
 
 LICENSE=	BSD3CLAUSE
 
