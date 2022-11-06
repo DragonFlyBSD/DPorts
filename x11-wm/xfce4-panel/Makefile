@@ -1,13 +1,12 @@
-# Created by: James Earl <jdearl@telus.net>
-
 PORTNAME=	xfce4-panel
-PORTVERSION=	4.16.4
+PORTVERSION=	4.16.5
 CATEGORIES=	x11-wm xfce
 MASTER_SITES=	XFCE
 DIST_SUBDIR=	xfce4
 
 MAINTAINER=	xfce@FreeBSD.org
 COMMENT=	Xfce's panel
+WWW=		https://docs.xfce.org/xfce/xfce4-panel/start
 
 LICENSE=	GPLv2 LGPL21
 LICENSE_COMB=	multi
@@ -45,7 +44,7 @@ GIR_CONFIGURE_OFF=	--enable-introspection=no
 NLS_CONFIGURE_ENABLE=	nls
 NLS_USES=		gettext-runtime
 
-VAPI_BUILD_DEPENDS=	vapigen:lang/vala
+VAPI_USES=		vala:build
 VAPI_CONFIGURE_ENABLE=	vala
 VAPI_IMPLIES=		GIR
 
