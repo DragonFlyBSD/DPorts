@@ -1,5 +1,3 @@
-# Created by: J.R. Oldroyd <fbsd@opal.com>
-
 PORTNAME=	xfce4-power-manager
 PORTVERSION=	4.16.0
 CATEGORIES=	sysutils xfce
@@ -8,6 +6,7 @@ DIST_SUBDIR=	xfce4
 
 MAINTAINER=	xfce@FreeBSD.org
 COMMENT=	Power manager for the Xfce Desktop
+WWW=		https://goodies.xfce.org/projects/applications/xfce4-power-manager
 
 LICENSE=	GPLv2
 
