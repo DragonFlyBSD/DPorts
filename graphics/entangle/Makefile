@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	entangle
 PORTVERSION=	1.0
 CATEGORIES=	graphics
@@ -7,6 +5,7 @@ MASTER_SITES=	https://www.entangle-photo.org/download/sources/
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Digital camera tethered control and capture program
+WWW=		https://www.entangle-photo.org/
 
 LICENSE=	GPLv3
 
