@@ -1,10 +1,10 @@
 PORTNAME=	akonadi
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
-PORTREVISION=	1
 CATEGORIES=	databases kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Storage server for KDE-Pim
+WWW=		https://community.kde.org/KDE_PIM/Akonadi
 
 LICENSE=	LGPL21
 
@@ -15,15 +15,16 @@ BUILD_DEPENDS=	xsltproc:textproc/libxslt
 CONFLICTS=	akonadi akonadi-kf5-git
 
 USES=		cmake compiler:c++11-lib gettext gnome kde:5 qt:5 \
-		shared-mime-info tar:xz
+		shared-mime-info tar:xz xorg
 USE_GNOME=	libxml2
 USE_KDE=	auth codecs completion config configwidgets coreaddons crash \
 		dbusaddons guiaddons i18n iconthemes itemmodels itemviews \
 		kio service windowsystem widgetsaddons xmlgui \
-		designerplugin_build ecm_build \
-		designerplugin_run
+		designerplugin:build ecm:build \
+		designerplugin:run
 USE_QT=		concurrent core dbus designer gui network sql testlib widgets xml \
-		buildtools_build qmake_build
+		buildtools:build qmake:build
+USE_XORG=	x11
 CMAKE_ARGS+=	-DCMAKE_REQUIRED_INCLUDES:STRING="${LOCALBASE}/include"
 
 USE_LDCONFIG=	yes
@@ -36,7 +37,7 @@ OPTIONS_DEFAULT=	MYSQL
 
 MYSQL_DESC=		Install MySQL Qt plugin and server
 MYSQL_USES=	mysql:server qt:5
-MYSQL_USE=		QT=sql-mysql_run
+MYSQL_USE=		QT=sql-mysql:run
 MYSQL_CMAKE_BOOL=	AKONADI_BUILD_MYSQL
 
 PGSQL_DESC=		Install PostgreSQL Qt plugin
@@ -45,12 +46,12 @@ PGSQL_DESC=		Install PostgreSQL Qt plugin
 # remote server.
 #PGSQL_USE=	PGSQL=server
 PGSQL_USES=	qt:5
-PGSQL_USE=		QT=sql-pgsql_run
+PGSQL_USE=		QT=sql-pgsql:run
 PGSQL_CMAKE_BOOL=	AKONADI_BUILD_PGSQL
 
 SQLITE_DESC=		Enable SQLite backend
 SQLITE_USES=		qt:5 sqlite:3
-SQLITE_USE=		QT=sql-sqlite3_run
+SQLITE_USE=		QT=sql-sqlite3:run
 SQLITE_CMAKE_BOOL=	AKONADI_BUILD_QSQLITE
 
 .include <bsd.port.options.mk>
