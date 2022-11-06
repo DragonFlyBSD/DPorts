@@ -1,5 +1,3 @@
-# Created by: Gustau Perez i Querol <gustau.perez@gmail.com>
-
 PORTNAME=	cinnamon-settings-daemon
 PORTVERSION=	4.8.5
 PORTREVISION=	2
@@ -8,6 +6,7 @@ DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Cinnamon desktop settings daemon
+WWW=		http://cinnamon.linuxmint.com/
 
 LICENSE=	GPLv2 LGPL21
 LICENSE_COMB=	multi
