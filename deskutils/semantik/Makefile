@@ -5,6 +5,7 @@ MASTER_SITES=	https://waf.io/
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Mind mapping tool
+WWW=		https://waf.io/semantik.html
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -16,7 +17,7 @@ USE_KDE=	auth config configwidgets coreaddons i18n iconthemes \
 USE_LDCONFIG=	yes
 USE_QT=		core dbus declarative gui location network printsupport \
 		svg webchannel webengine widgets xml \
-		buildtools_build qmake_build
+		buildtools:build qmake:build
 
 SHEBANG_FILES=	src/templates/beamer/wscript \
 		src/templates/pdflatex/wscript \
