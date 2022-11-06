@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	autobench
 PORTVERSION=	2.1.2
 PORTREVISION=	9
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.xenoclast.org/autobench/downloads/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Automating the process of benchmarking a web server
+WWW=		http://www.xenoclast.org/autobench/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENCE
