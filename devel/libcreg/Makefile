@@ -1,11 +1,12 @@
 PORTNAME=	libcreg
-DISTVERSION=	experimental-20210502
+DISTVERSION=	experimental-20210625
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/libyal/libcreg/releases/download/${PORTVERSION:E}/ \
 		LOCAL/antoine
 
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Library and tools to access the Windows 9x/Me Registry File format
+WWW=		https://github.com/libyal/libcreg
 
 LICENSE=	LGPL3+
 LICENSE_FILE=	${WRKSRC}/COPYING
