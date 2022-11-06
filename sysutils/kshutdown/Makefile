@@ -6,6 +6,7 @@ DISTNAME=	${PORTNAME}-source-${DISTVERSION}
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Advanced shutdown utility
+WWW=		http://kshutdown.sourceforge.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -15,7 +16,7 @@ USE_KDE=	auth codecs config configwidgets coreaddons crash \
 		dbusaddons ecm globalaccel i18n idletime \
 		notifications notifyconfig widgetsaddons xmlgui
 USE_QT=		core dbus gui widgets xml \
-		buildtools_build qmake_build
+		buildtools:build qmake:build
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${DISTVERSION}
 
