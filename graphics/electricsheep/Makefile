@@ -1,13 +1,12 @@
-# Created by: David Yeske <dyeske@gmail.com>
-
 PORTNAME=	electricsheep
 DISTVERSION=	3.0.2.20191005 # configure.ac though says that the version is 2.7b33
-PORTREVISION=	3
+PORTREVISION=	4
 PORTEPOCH=	1
 CATEGORIES=	graphics
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Infinite evolving crowdsourced artwork
+WWW=		https://electricsheep.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
