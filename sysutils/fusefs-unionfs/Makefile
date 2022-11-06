@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	unionfs
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.2
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	fusefs-
 
 MAINTAINER=	0mp@FreeBSD.org
 COMMENT=	FUSE based implementation of the well-known unionfs
+WWW=		https://github.com/rpodgorny/unionfs-fuse
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -24,7 +23,7 @@ SUB_FILES=	pkg-message
 
 PLIST_FILES=	bin/unionfs \
 		bin/unionfsctl \
-		man/man8/unionfs.8.gz
+		share/man/man8/unionfs.8.gz
 
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/*
