@@ -366,7 +366,7 @@ lib/gnome-builder/plugins/valgrind_plugin.py
 lib/gnome-builder/plugins/waf.plugin
 lib/gnome-builder/plugins/waf_plugin.py
 %%PYTHON_SITELIBDIR%%/gi/overrides/Ide.py
-libdata/pkgconfig/gnome-builder-42.0.pc
+libdata/pkgconfig/gnome-builder-42.1.pc
 libexec/gnome-builder-clang
 libexec/gnome-builder-git
 share/applications/org.gnome.Builder.desktop
