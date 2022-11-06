@@ -1,5 +1,3 @@
-# Created by: Alex Samorukov <samm@freebsd.org>
-
 PORTNAME=	exfat
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.3.0
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	fusefs-
 
 MAINTAINER=	samm@FreeBSD.org
 COMMENT=	Full-featured exFAT FS implementation as a FUSE module
+WWW=		https://github.com/relan/exfat
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
