@@ -1,8 +1,5 @@
-# Created by: Martin Wilke (miwi@FreeBSD.org)
-
 PORTNAME=	xfce4-screenshooter-plugin
-PORTVERSION=	1.9.10
-PORTREVISION=	2
+PORTVERSION=	1.9.11
 CATEGORIES=	x11 xfce
 MASTER_SITES=	XFCE/apps
 DISTNAME=	xfce4-screenshooter-${DISTVERSIONFULL}
@@ -10,6 +7,7 @@ DIST_SUBDIR=	xfce4
 
 MAINTAINER=	xfce@FreeBSD.org
 COMMENT=	Application and panel plugin to take screenshots
+WWW=		https://goodies.xfce.org/projects/applications/xfce4-screenshooter
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
