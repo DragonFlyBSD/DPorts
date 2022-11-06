@@ -1,4 +1,3 @@
 
 # fix #!/usr/bin/env python3
 USES+=	python:3.4+,build shebangfix
-SHEBANG_FILES+=	meson_post_install.py
