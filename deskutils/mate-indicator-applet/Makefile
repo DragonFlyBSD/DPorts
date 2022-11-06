@@ -1,4 +1,3 @@
-# Created by: Eric Turgeon <ericbsd@FreeBSD.org>
 PORTNAME=	mate-indicator-applet
 PORTVERSION=	1.26.0
 CATEGORIES=	deskutils mate
@@ -7,6 +6,7 @@ DIST_SUBDIR=	mate
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Applet to display information from various applications in the panel
+WWW=		https://mate-desktop.org/
 
 LICENSE=	GPLv3 LGPL21
 LICENSE_COMB=	multi
