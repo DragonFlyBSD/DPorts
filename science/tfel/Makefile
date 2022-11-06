@@ -1,14 +1,13 @@
-# Created by: Pedro F. Giffuni
-
 PORTNAME=	tfel
 PORTVERSION=	4.0.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	science
 MASTER_SITES=	SF/${PORTNAME}/
 PKGNAMESUFFIX=	-mfront
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Code generation tool dedicated to material knowledge
+WWW=		https://github.com/thelfer/tfel
 
 LICENSE=	GPLv3
 
