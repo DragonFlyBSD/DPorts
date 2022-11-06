@@ -1,11 +1,10 @@
-# Created by: Nicola Vitale <nivit@FreeBSD.org>
-
 PORTNAME=	variety
 PORTVERSION=	0.8.5
 CATEGORIES=	graphics
 
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Wallpaper changer
+WWW=		https://peterlevi.com/variety/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
