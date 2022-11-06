@@ -1,5 +1,3 @@
-# Created by: Stefan Esser <se@StefanEsser.FreeBSD.org>
-
 PORTNAME=	sound-of-sorting
 PORTVERSION=	0.6.5
 DISTVERSIONPREFIX=	${PORTNAME}-
@@ -8,6 +6,7 @@ CATEGORIES=	math
 
 MAINTAINER=	se@FreeBSD.org
 COMMENT=	Visualization and "Audibilization" of Sorting Algorithms
+WWW=		https://panthema.net/2013/sound-of-sorting/
 
 LICENSE=	GPLv3
 
