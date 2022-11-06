@@ -1,5 +1,3 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	fusefs-ext2
 PORTVERSION=	0.0.10
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ CATEGORIES=	sysutils
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	FUSE module to mount ext2, ext3 and ext4 with read write support
+WWW=		https://github.com/alperakcan/fuse-ext2
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
