@@ -1,11 +1,12 @@
 PORTNAME=	PrusaSlicer
 DISTVERSIONPREFIX=version_
 DISTVERSION=	2.3.3
-PORTREVISION=	4
+PORTREVISION=	6
 CATEGORIES=	cad
 
 MAINTAINER=	teodorsigaev@gmail.com
 COMMENT=	Slicing application for 3D printers
+WWW=		https://www.prusa3d.com/prusaslicer/
 
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
