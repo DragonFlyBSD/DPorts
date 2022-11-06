@@ -1,13 +1,12 @@
-# Created by: Jean-Yves Lefort <jylefort@brutele.be>
-
 PORTNAME=	${GH_ACCOUNT:tl}
-PORTVERSION=	0.22.1
+PORTVERSION=	0.22.2
 DISTVERSIONPREFIX=	v
 CATEGORIES=	astro
 EXTRACT_ONLY=	${_DISTFILES:Nstars_*.cat:N*.pdf}
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	3D photo-realistic sky renderer (planetarium)
+WWW=		https://www.stellarium.org/
 
 LICENSE=	GPLv2+
 
@@ -16,7 +15,7 @@ GH_ACCOUNT=	Stellarium
 
 USES=		cmake compiler:c++11-lang desktop-file-utils \
 		qt:5 shared-mime-info
-USE_QT=		qmake_build buildtools_build \
+USE_QT=		qmake:build buildtools:build \
 		charts concurrent core gui network opengl \
 		printsupport widgets
 
@@ -48,7 +47,7 @@ GPS_CMAKE_OFF=		-DENABLE_GPS:BOOL=OFF
 MULTIMEDIA_USE=		QT=multimedia
 MULTIMEDIA_CMAKE_OFF=	-DENABLE_MEDIA:BOOL=OFF
 
-NLS_USE=		QT=linguisttools_build
+NLS_USE=		QT=linguisttools:build
 NLS_CMAKE_OFF=		-DENABLE_NLS:BOOL=OFF
 
 SCRIPTS_USE=		QT=script
@@ -57,7 +56,7 @@ SCRIPTS_CMAKE_OFF=	-DENABLE_SCRIPTING:BOOL=OFF
 TELESCOPE_USE=		QT=serialport
 TELESCOPE_CMAKE_OFF=	-DUSE_PLUGIN_TELESCOPECONTROL:BOOL=OFF
 
-TEST_USE=		QT=testlib_build
+TEST_USE=		QT=testlib:build
 TEST_CMAKE_ON=		-DENABLE_TESTING:BOOL=ON
 
 TEXTURES_MASTER_SITES=	SF/${PORTNAME}/Extra-data-files/textures:gfx
