@@ -1,10 +1,11 @@
 PORTNAME=	framework
-DISTVERSION=	2.2.1
+DISTVERSION=	2.3.0
 CATEGORIES=	deskutils kde
 PKGNAMEPREFIX=	maliit-
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Core libraries of Maliit and server
+WWW=		https://maliit.github.io/
 
 BUILD_DEPENDS=	evdev-proto>0:devel/evdev-proto \
 		wayland-protocols>0:graphics/wayland-protocols
@@ -18,7 +19,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	maliit
 USE_GNOME=	atk cairo gdkpixbuf2 glib20 gtk30 pango
 USE_QT=		core dbus declarative gui network wayland widgets \
-		buildtools_build qmake_build
+		buildtools:build qmake:build
 USE_XORG=	xcb
 
 CMAKE_ON=	enable-dbus-activation \
