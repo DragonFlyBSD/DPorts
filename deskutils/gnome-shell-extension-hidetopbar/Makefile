@@ -1,5 +1,3 @@
-# Created by: Gustau Perez i Querol <gustau.perez@gmail.com>
-
 PORTNAME=	gnome-shell-extension-hidetopbar
 PORTVERSION=	0.0.0.20180511
 PORTREVISION=	1
@@ -8,6 +6,7 @@ DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Hide the topbar except in overview mode
+WWW=		https://github.com/mlutfy/hidetopbar
 
 LICENSE=	GPLv2
 
