@@ -1,12 +1,11 @@
-# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-
 PORTNAME=	gscan2pdf
-PORTVERSION=	2.12.7
+PORTVERSION=	2.12.8
 CATEGORIES=	graphics
 MASTER_SITES=	SF
 
 MAINTAINER=	cmt@FreeBSD.org
 COMMENT=	Produce PDF from scanned documents
+WWW=		https://sourceforge.net/projects/gscan2pdf/
 
 LICENSE=	GPLv3
 
