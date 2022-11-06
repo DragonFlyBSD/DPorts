@@ -1,5 +1,3 @@
-# Created by: Thierry Thomas <thierry@FreeBSD.org>
-
 PORTNAME=	kicad
 DISTVERSION=	r${GIT_TMPL_DATE}
 PORTREVISION=	0
@@ -10,6 +8,7 @@ DISTNAME=	${PORTNAME}-templates-${GL_COMMIT}
 
 MAINTAINER=	mr@FreeBSD.org
 COMMENT=	Official KiCad project templates
+WWW=		https://github.com/KiCad/kicad-templates
 
 LICENSE=	GPLv2
 
