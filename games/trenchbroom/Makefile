@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	${GH_PROJECT:tl}
 PORTVERSION=	2.0.0.b
 PORTREVISION=	11
@@ -7,6 +5,7 @@ CATEGORIES=	games cad
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Cross-platform level editor for Quake-engine based games
+WWW=		https://kristianduske.com/trenchbroom/
 
 LICENSE=	GPLv3
 
