@@ -1,5 +1,3 @@
-# Created by: Yuri Victorovich <yuri@rawbw.com>
-
 PORTNAME=	jalv
 DISTVERSION=	1.6.6
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	http://download.drobilla.net/
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Simple but fully featured LV2 plugin host for Jack
+WWW=		https://drobilla.net/software/jalv
 
 LICENSE=	PD
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -26,7 +25,7 @@ USES=		compiler:c++11-lang gnome pkgconfig python:build qmake:no_configure,no_en
 		qt:5 tar:bz2 waf
 CONFIGURE_ARGS=	--no-qt4
 USE_CXXSTD=	c++11
-USE_QT=		core gui widgets buildtools_build
+USE_QT=		core gui widgets buildtools:build
 USE_GNOME=	atk atkmm cairo cairomm pango pangomm libsigc++20 \
 		gdkpixbuf2 glib20 glibmm  gtk20 gtk30 gtkmm24
 
