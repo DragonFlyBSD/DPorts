@@ -1,17 +1,17 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
 #
 # !!!NOTE!!! Update of x11-toolkits/gtk30 (specially >= 3.20.x) must be
 # accompanied by PORTREVISION bumps of this port.
 # Support of GTK+ is checked at compile time and themes directories too.
 
 PORTNAME=	xfce4-notifyd
-PORTVERSION=	0.6.3
+PORTVERSION=	0.6.4
 CATEGORIES=	deskutils xfce
 MASTER_SITES=	XFCE/apps
 DIST_SUBDIR=	xfce4
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Visually-appealing notification daemon for Xfce
+WWW=		https://gitlab.xfce.org/apps/xfce4-notifyd
 
 LICENSE=	GPLv3
 
