@@ -1,5 +1,3 @@
-# Created by: Alexander Kojevnikov <alexander@kojevnikov.com>
-
 PORTNAME=	spek
 PORTVERSION=	0.8.2
 PORTREVISION=	17
@@ -8,6 +6,7 @@ MASTER_SITES=	https://github.com/alexkay/${PORTNAME}/releases/download/v${PORTVE
 
 MAINTAINER=	alexander@kojevnikov.com
 COMMENT=	Acoustic spectrum analyser
+WWW=		http://spek.cc/
 
 LICENSE=	GPLv3+
 
