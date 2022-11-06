@@ -1,10 +1,12 @@
 PORTNAME=	kodaskanna
 DISTVERSION=	0.1.0
+PORTREVISION=	1
 CATEGORIES=	deskutils
 MASTER_SITES=	KDE/unstable/${PORTNAME}/${DISTVERSION}/src
 
 MAINTAINER=	adridg@FreeBSD.org
 COMMENT=	Barcode and QR-code scanner
+WWW=		https://invent.kde.org/graphics/kodaskanna
 
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/LICENSES/LGPL-2.1-or-later.txt
@@ -17,9 +19,9 @@ USE_XORG=	x11
 USE_QT=		concurrent core dbus declarative gui \
 		multimedia network quickcontrols quickcontrols2 \
 		widgets xml \
-		buildtools_build qmake_build
+		buildtools:build qmake:build
 USE_KDE=	auth codecs config configwidgets coreaddons i18n \
 		kio purpose service widgetsaddons windowsystem \
-		ecm_build
+		ecm:build
 
 .include <bsd.port.mk>
