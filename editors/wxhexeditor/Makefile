@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	wxhexeditor
 PORTVERSION=	0.24
 PORTREVISION=	4
@@ -9,6 +7,7 @@ DISTNAME=	wxHexEditor-v${PORTVERSION}-src
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Graphical hex editor for big files with x86 disassembly support
+WWW=		https://www.wxhexeditor.org/
 
 LICENSE=	GPLv2
 
