@@ -1,11 +1,12 @@
 PORTNAME=	syncthingtray
 PORTVERSION=	1.1.8
-PORTREVISION=	1
+PORTREVISION=	2
 DISTVERSIONPREFIX=	v
 CATEGORIES=	deskutils
 
 MAINTAINER=	swills@FreeBSD.org
 COMMENT=	Qt 5-based Syncthing tray application
+WWW=		https://github.com/Martchus/syncthingtray
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKDIR}/syncthingtray/LICENSE
@@ -26,8 +27,8 @@ GH_TUPLE=	Martchus:${PORTNAME}:${DISTVERSIONPREFIX}${DISTVERSION}:syncthingtray/
 USE_KDE=	plasma-framework
 USE_QT=		concurrent core dbus declarative gui location network \
 		printsupport qdbus quickcontrols2 svg webchannel \
-		widgets x11extras buildtools_build doc_build linguist_build \
-		qmake_build testlib_build
+		widgets x11extras buildtools:build doc:build linguist:build \
+		qmake:build testlib:build
 
 CMAKE_OFF=	USE_STANDARD_FILESYSTEM SYSTEMD_SUPPORT
 
