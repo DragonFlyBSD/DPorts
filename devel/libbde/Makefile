@@ -1,13 +1,12 @@
-# Created by: Antoine Brodin <antoine@FreeBSD.org>
-
 PORTNAME=	libbde
-DISTVERSION=	alpha-20210605
+DISTVERSION=	alpha-20220121
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/libyal/libbde/releases/download/${PORTVERSION:E}/ \
 		LOCAL/antoine
 
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Library and tools to access the BitLocker Drive Encryption volumes
+WWW=		https://github.com/libyal/libbde
 
 LICENSE=	LGPL3+
 LICENSE_FILE=	${WRKSRC}/COPYING
