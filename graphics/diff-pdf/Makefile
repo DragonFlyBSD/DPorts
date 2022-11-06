@@ -1,11 +1,12 @@
 PORTNAME=	diff-pdf
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.5
-PORTREVISION=	15
+PORTREVISION=	18
 CATEGORIES=	graphics
 
 MAINTAINER=	uzsolt@uzsolt.hu
 COMMENT=	Tool for visually comparing two PDFs
+WWW=		https://vslavik.github.io/diff-pdf/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
