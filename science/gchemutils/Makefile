@@ -1,14 +1,13 @@
-# Created by: Pav Lucistnik <pav@oook.cz>
-
 PORTNAME=	gchemutils
-PORTVERSION=	0.14.16
-PORTREVISION=	10
+PORTVERSION=	0.14.17
+PORTREVISION=	1
 CATEGORIES=	science
 MASTER_SITES=	SAVANNAH/${PORTNAME}/${PORTVERSION:R}
 DISTNAME=	gnome-chemistry-utils-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	C++ classes and Gtk3 widgets related to chemistry
+WWW=		https://www.nongnu.org/gchemutils/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
