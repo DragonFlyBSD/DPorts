@@ -1,5 +1,3 @@
-# Created by: Oliver Lehmann <oliver@FreeBSD.org>
-
 PORTNAME=	xfce4-appfinder
 PORTVERSION=	4.16.1
 CATEGORIES=	misc xfce
@@ -8,6 +6,7 @@ DIST_SUBDIR=	xfce4
 
 MAINTAINER=	xfce@FreeBSD.org
 COMMENT=	Application launcher and finder
+WWW=		https://www.xfce.org/
 
 LICENSE=	GPLv2
 
