@@ -1,17 +1,15 @@
-# Created by: Stephen Montgomery-Smith <stephen@FreeBSD.org>
-
 PORTNAME=	octave-forge-dicom
-PORTVERSION=	0.4.1
-PORTREVISION=	1
+PORTVERSION=	0.5.0
 CATEGORIES=	math
 
 MAINTAINER=	stephen@FreeBSD.org
 COMMENT=	Octave-forge package ${OCTAVE_PKGNAME}
+WWW=		http://octave.sourceforge.net/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKDIR}/${OCTSRC}/COPYING
 
-BUILD_DEPENDS+=	cmake:devel/cmake
+BUILD_DEPENDS+=	cmake:devel/cmake-core
 
 LIB_DEPENDS+=	libgdcmCommon.so:devel/gdcm
 
