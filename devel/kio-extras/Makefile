@@ -1,9 +1,10 @@
 PORTNAME=	kio-extras
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
-CATEGORIES=	devel kde kde-applications # kde kde-applications-plasma
+CATEGORIES=	devel kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Plasma5 library to increase the functionality of KIO
+WWW=		https://projects.kde.org/projects/kde/workspace/kio-extras
 
 LIB_DEPENDS=	libtag.so:audio/taglib \
 		libImath.so:math/Imath \
@@ -17,11 +18,11 @@ USE_KDE=	activities archive auth bookmarks codecs completion config \
 		jobwidgets js kdelibs4support khtml kio notifications parts \
 		pty service solid sonnet syntaxhighlighting textwidgets unitconversion \
 		widgetsaddons windowsystem xmlgui \
-		ecm_build
+		ecm:build
 USE_QT=		concurrent core dbus declarative gui location network phonon4 printsupport \
 		sql svg testlib webchannel widgets xml \
-		buildtools_build qmake_build
-USE_XORG=	xcursor
+		buildtools:build qmake:build
+USE_XORG=	x11 xcursor
 SHEBANG_FILES=	info/kde-info2html
 
 # CVE-2018-19120
