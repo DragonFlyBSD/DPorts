@@ -1,5 +1,3 @@
-# Created by: Mohammad S. Babaei <info@babaei.net>
-
 PORTNAME=	jucipp
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.7.2
@@ -7,6 +5,7 @@ CATEGORIES=	editors
 
 MAINTAINER=	info@babaei.net
 COMMENT=	Lightweight C++-IDE with support for C++11, C++14 and C++17
+WWW=		https://gitlab.com/cppit/jucipp
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
