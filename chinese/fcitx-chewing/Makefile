@@ -1,5 +1,3 @@
-# Created by: Zhihao Yuan <lichray@gmail.com>
-
 PORTNAME=	fcitx-chewing
 PORTVERSION=	0.2.3
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DIST_SUBDIR=	fcitx
 
 MAINTAINER=	lichray@gmail.com
 COMMENT=	Chewing support for Fcitx
+WWW=		https://fcitx-im.org/wiki/Fcitx
 
 LICENSE=	GPLv2
 
