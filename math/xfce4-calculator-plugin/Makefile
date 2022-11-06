@@ -1,5 +1,3 @@
-# Created by: Olivier Duchateau
-
 PORTNAME=	xfce4-calculator-plugin
 PORTVERSION=	0.7.1
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DIST_SUBDIR=	xfce4
 
 MAINTAINER=	xfce@FreeBSD.org
 COMMENT=	Simple calculator for the Xfce panel
+WWW=		https://goodies.xfce.org/projects/panel-plugins/xfce4-calculator-plugin
 
 LICENSE=	GPLv2
 
