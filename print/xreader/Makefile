@@ -1,13 +1,12 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	xreader
 PORTVERSION=	3.2.2
-PORTREVISION=	7
+PORTREVISION=	10
 CATEGORIES=	print gnome
 DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Multi-format document reader
+WWW=		https://github.com/linuxmint/xreader
 
 LICENSE=	GPLv2+
 
