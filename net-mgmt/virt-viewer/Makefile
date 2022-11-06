@@ -1,5 +1,3 @@
-# Created by: Jason Helfman <jgh@FreeBSD.org>
-
 PORTNAME=	virt-viewer
 PORTVERSION=	11.0
 PORTREVISION=	2
@@ -11,6 +9,7 @@ PATCHFILES+=	41cc016278e7.patch:-p1 # https://gitlab.com/virt-viewer/virt-viewer
 
 MAINTAINER=	novel@FreeBSD.org
 COMMENT=	Provides a graphical viewer for a guest OS display
+WWW=		https://virt-manager.org/
 
 LICENSE=	GPLv2
 
