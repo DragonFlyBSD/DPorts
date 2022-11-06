@@ -1,5 +1,3 @@
-# Created by: Anish Mistry
-
 PORTNAME=	fusefs
 DISTVERSION=	2.9.9
 PORTREVISION=	2
@@ -10,10 +8,10 @@ DISTNAME=	fuse-${DISTVERSION}
 
 MAINTAINER=	se@FreeBSD.org
 COMMENT=	FUSE allows filesystem implementation in userspace
+WWW=		https://github.com/libfuse/libfuse
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING.LIB
-
 
 USES=		autoreconf gettext-tools iconv libtool
 USE_LDCONFIG=	yes
