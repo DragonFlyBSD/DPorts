@@ -1,6 +1,3 @@
-# Created by: Michael Johnson <ahze@FreeBSD.org>
-#   $MCom: ports/x11-themes/clearlooks/Makefile,v 1.8 2007/08/07 04:34:29 mezz Exp $
-
 PORTNAME?=	clearlooks
 PORTVERSION=	0.6.2
 PORTREVISION=	13
@@ -9,6 +6,7 @@ MASTER_SITES=	SF/clearlooks/clearlooks/clearlooks%20${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT?=	GTK+ 2.x engine based on Bluecurve
+WWW=		http://clearlooks.sourceforge.net/
 
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
