@@ -1,5 +1,3 @@
-# Created by: Gustau Perez i Querol <gustau.perez@gmail.com>
-
 PORTNAME=	gnome-shell-extension-filesmenu
 PORTVERSION=	0.0.0.20171125
 PORTREVISION=	1
@@ -8,6 +6,7 @@ DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Quickly navigate your file system
+WWW=		https://github.com/bertoldia/files-menu
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
