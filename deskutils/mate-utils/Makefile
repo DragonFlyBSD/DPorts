@@ -1,5 +1,3 @@
-# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-
 PORTNAME=	mate-utils
 PORTVERSION=	1.26.0
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DIST_SUBDIR=	mate
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	MATE support utilities
+WWW=		https://mate-desktop.org/
 
 LICENSE=	GPLv2+ GFDL LGPL20+
 LICENSE_COMB=	multi
