@@ -1,14 +1,13 @@
-# Created by: ijliao
-
 PORTNAME=	openbabel
 DISTVERSION=	3.1.1
-PORTREVISION=	5
+PORTREVISION=	6
 DISTVERSIONSUFFIX=	-source
 CATEGORIES=	science
 MASTER_SITES=	https://github.com/openbabel/openbabel/releases/download/openbabel-${PORTVERSION:C/\./-/g}/
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Chemical toolbox designed to speak the many languages of chemical data
+WWW=		https://openbabel.org/wiki/Main_Page
 
 LICENSE=	GPLv2+
 
