@@ -1,5 +1,3 @@
-# Created by: Koop Mast <kwm@FreeBSD.org>
-
 PORTNAME=	gnome-calendar
 PORTVERSION=	42.2
 CATEGORIES=	deskutils gnome
@@ -8,6 +6,7 @@ DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Simple and beautiful calendar application for GNOME
+WWW=		https://wiki.gnome.org/Apps/Calendar/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
