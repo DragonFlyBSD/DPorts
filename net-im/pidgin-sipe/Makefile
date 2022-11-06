@@ -1,5 +1,3 @@
-# Created by: John Prather
-
 PORTNAME=	pidgin-sipe
 PORTVERSION=	1.24.0
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/sipe/sipe/${DISTNAME}
 
 MAINTAINER=	john.c.prather@gmail.com
 COMMENT=	Plugin for Pidgin to provide LCS/OCS connectivity
+WWW=		https://www.sourceforge.net/projects/sipe
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
