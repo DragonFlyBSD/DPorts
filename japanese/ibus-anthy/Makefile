@@ -1,5 +1,3 @@
-# Created by: Daichi GOTO <daichi@FreeBSD.org>
-
 PORTNAME=	ibus-anthy
 PORTVERSION=	1.5.11
 CATEGORIES=	japanese
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	ja-
 
 MAINTAINER=	CQG00620@nifty.ne.jp
 COMMENT=	Anthy engine for IBus
+WWW=		https://github.com/ibus/ibus-anthy
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
