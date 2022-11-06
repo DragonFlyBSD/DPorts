@@ -1,5 +1,3 @@
-# Created by: Antoine Brodin <antoine@FreeBSD.org>
-
 PORTNAME=	libevt
 DISTVERSION=	alpha-20210424
 CATEGORIES=	devel
@@ -8,6 +6,7 @@ MASTER_SITES=	https://github.com/libyal/libevt/releases/download/${PORTVERSION:E
 
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Library and tooling to access the Windows Event Log (EVT) format
+WWW=		https://github.com/libyal/libevt
 
 LICENSE=	LGPL3+
 LICENSE_FILE=	${WRKSRC}/COPYING
