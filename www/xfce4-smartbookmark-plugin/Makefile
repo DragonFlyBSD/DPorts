@@ -1,5 +1,3 @@
-# Created by: Martin Wilke (miwi@FreeBSD.org)
-
 PORTNAME=	xfce4-smartbookmark-plugin
 PORTVERSION=	0.5.2
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DIST_SUBDIR=	xfce4
 
 MAINTAINER=	xfce@FreeBSD.org
 COMMENT=	Query search engines from the Xfce panel
+WWW=		https://goodies.xfce.org/projects/panel-plugins/xfce4-smartbookmark-plugin
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
