@@ -1,5 +1,3 @@
-# Created by: Gustau Perez i Querol <gustau.perez@gmail.com>
-
 PORTNAME=	gnome-shell-extension-weather
 PORTVERSION=	0.0.0.20180411
 PORTREVISION=	1
@@ -8,6 +6,7 @@ DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Weather extension for the GNOME3 shell
+WWW=		https://github.com/Neroth/gnome-shell-extension-weather
 
 RUN_DEPENDS=	gnome-shell>=0:x11/gnome-shell
 
