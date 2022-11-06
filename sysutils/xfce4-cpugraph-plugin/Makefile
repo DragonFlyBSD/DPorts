@@ -1,5 +1,3 @@
-# Created by: Matt Lancereau <matt@rimasec.net>
-
 PORTNAME=	xfce4-cpugraph-plugin
 PORTVERSION=	1.2.6
 CATEGORIES=	sysutils xfce
@@ -8,6 +6,7 @@ DIST_SUBDIR=	xfce4
 
 MAINTAINER=	xfce@FreeBSD.org
 COMMENT=	Graphical representation of the CPU load
+WWW=		https://goodies.xfce.org/projects/panel-plugins/xfce4-cpugraph-plugin
 
 LICENSE=	GPLv2
 
