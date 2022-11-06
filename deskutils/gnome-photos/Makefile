@@ -1,5 +1,3 @@
-# Created by: Gustau Perez <gustau.perez@gmail.com>
-
 PORTNAME=	gnome-photos
 DISTVERSION=	42.0
 PORTREVISION=	2
@@ -9,6 +7,7 @@ DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Photo application for GNOME
+WWW=		https://wiki.gnome.org/Design/Apps/Photos
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
