@@ -1,5 +1,3 @@
-# Created by: Michael Johnson <ahze@ahze.net>
-
 PORTNAME=	dvdstyler
 PORTVERSION=	3.2.1
 PORTEPOCH=	2
@@ -9,6 +7,7 @@ DISTNAME=	DVDStyler-${PORTVERSION}
 
 MAINTAINER=	ahicks@p-o.co.uk
 COMMENT=	WxWidgets frontend to dvd recoding and authoring programs
+WWW=		https://www.dvdstyler.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
