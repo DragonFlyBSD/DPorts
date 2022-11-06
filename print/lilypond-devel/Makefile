@@ -1,7 +1,5 @@
-# Created by: patrick, trevor
-
 PORTNAME=	lilypond
-DISTVERSION=	2.23.9
+DISTVERSION=	2.23.11
 PORTREVISION=	1
 CATEGORIES=	print audio
 MASTER_SITES=	http://lilypond.org/download/source/v${DISTVERSION:R}/
@@ -9,6 +7,7 @@ PKGNAMESUFFIX=	-devel
 
 MAINTAINER=	m.ne@gmx.net
 COMMENT=	GNU music typesetter
+WWW=		https://lilypond.org/
 
 LICENSE=	GPLv3
 
@@ -34,13 +33,11 @@ RUN_DEPENDS=	${LOCALBASE}/share/fonts/dejavu/DejaVuSans-Bold.ttf:x11-fonts/dejav
 
 USES=		bison:build compiler:c++11-lib cpe ghostscript gmake gnome \
 		magick:7,build perl5 pkgconfig python:3.5+
-USE_CXXSTD=	c++11
+USE_CXXSTD=	c++14
 USE_GNOME=	pango
 USE_PERL5=	build
-USE_TEX=	latex texmf
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-texgyre-dir=${LOCALBASE}/${TEXMFDISTDIR}/fonts/opentype/public/tex-gyre
 CONFIGURE_ENV+=		ac_cv_prog_MAKEINFO="${LOCALBASE}/bin/makeinfo" \
 			FLEX=${FLEX} \
 			GUILE_FLAVOR=guile-2.2 \
