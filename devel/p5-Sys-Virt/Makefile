@@ -1,5 +1,3 @@
-# Created by: Frank Wall <fw@moov.de>
-
 PORTNAME=	Sys-Virt
 PORTVERSION=	1.1.1
 PORTREVISION=	5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	fw@moov.de
 COMMENT=	Perl bindings for libvirt
+WWW=		https://metacpan.org/release/Sys-Virt
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
