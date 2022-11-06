@@ -1,5 +1,3 @@
-# Created by: lightside <lightside@gmx.com>
-
 PORTNAME=	diaspora
 PORTVERSION=	1.1.1
 PORTREVISION=	2
@@ -15,6 +13,7 @@ DISTFILES=	Diaspora_R1_Linux.tar.lzma:sectorgame1,DEFAULT \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Single and multiplayer space fighter combat game
+WWW=		https://diaspora.hard-light.net
 
 LICENSE=	CC-BY-NC-SA-3.0 VOLITION GPLv2
 LICENSE_COMB=	multi
