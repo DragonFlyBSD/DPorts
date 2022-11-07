@@ -1,12 +1,12 @@
 PORTNAME=	plasma
 DISTVERSION=	${KDE_PLASMA_VERSION}
+PORTREVISION=	1
 CATEGORIES=	x11 kde
 PKGNAMEPREFIX=	plasma5-
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE5 plasma meta port
-
-LICENSE=	LGPL20
+WWW=		https://www.kde.org/plasma-desktop
 
 USES=		kde:5 metaport qt:5
 # remove:
@@ -22,6 +22,6 @@ OPTIONS_DEFAULT=	${OPTIONS_DEFINE}
 PHONON_DESC=	Include phonon-gstreamer, for sound output
 
 PHONON_RUN_DEPENDS=	${QT_PLUGINDIR}/phonon4qt5_backend/phonon_gstreamer.so:multimedia/phonon-gstreamer
-PULSEAUDIO_USE=	KDE=plasma-pa_run
+PULSEAUDIO_USE=	KDE=plasma-pa:run
 
 .include <bsd.port.mk>
