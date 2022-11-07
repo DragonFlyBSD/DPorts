@@ -1,16 +1,18 @@
-
 PORTNAME=	phoc
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.7.0
-CATEGORIES=	x11-wm
+DISTVERSION=	0.21.1
+CATEGORIES=	x11-wm wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Phone compositor
+WWW=		https://gitlab.gnome.org/World/Phosh/phoc
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BUILD_DEPENDS=	evdev-proto>0:devel/evdev-proto
+BUILD_DEPENDS=	evdev-proto>0:devel/evdev-proto \
+		wayland-protocols>=1.15:graphics/wayland-protocols \
+		wlroots>=0.14.1<0.15.0:x11-toolkits/wlroots
 LIB_DEPENDS=	libwayland-server.so:graphics/wayland \
 		libwlroots.so:x11-toolkits/wlroots \
 		libinput.so:x11/libinput \
@@ -22,16 +24,13 @@ USE_GITLAB=	yes
 USE_GL=		glesv2
 USE_GNOME=	gnomedesktop3
 USE_XORG=	pixman xcb
-GL_SITE=	https://source.puri.sm
-GL_ACCOUNT=	Librem5
-GL_COMMIT=	f26fa0123742ba95d303ad552fc1f8d2d0117288
+GL_SITE=	https://gitlab.gnome.org
+GL_ACCOUNT=	World/Phosh
+GL_COMMIT=	0bcb87984fc08f7417baf9aa25a1707126620a6e
 SHEBANG_FILES=	build-aux/post_install.py
 CFLAGS+=	-Wno-error=format-nonliteral # clang
 PLIST_FILES=	bin/${PORTNAME}
 GLIB_SCHEMAS=	sm.puri.phoc.gschema.xml
 
-post-extract:
-# Avoid confusing Meson instead of forcing -Dembed-wlroots=disabled
-	@${RMDIR} ${WRKSRC}/subprojects/wlroots
-
+.include "${.CURDIR}/Makefile.wlroots"
 .include <bsd.port.mk>
