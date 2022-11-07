@@ -1,12 +1,14 @@
-
 PORTNAME=	wayfire
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.7.0
-PORTREVISION=	1
-CATEGORIES=	x11-wm
+DISTVERSION=	0.7.4
+CATEGORIES=	x11-wm wayland
+
+PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+PATCHFILES+=	dd479c06bf84.patch:-p1 # https://github.com/WayfireWM/wayfire/issues/599
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	3D Wayland compositor
+WWW=		https://wayfire.org/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -16,7 +18,7 @@ BUILD_DEPENDS=	evdev-proto>0:devel/evdev-proto \
 		${LOCALBASE}/include/xf86drmMode.h:graphics/libdrm \
 		wayland-protocols>=1.12:graphics/wayland-protocols \
 		glm>=0.9.8:math/glm \
-		wlroots>=0.12.0<0.13.0:x11-toolkits/wlroots
+		wlroots>=0.15.0<0.16.0:x11-toolkits/wlroots
 LIB_DEPENDS=	libinotify.so:devel/libinotify \
 		libwf-config.so:devel/wf-config \
 		libpng.so:graphics/png \
@@ -28,18 +30,14 @@ LIB_DEPENDS=	libinotify.so:devel/libinotify \
 USES=		compiler:c++17-lang gl gnome jpeg meson pkgconfig xorg
 USE_GITHUB=	yes
 USE_GL=		egl glesv2
-USE_GNOME=	cairo
+USE_GNOME=	cairo pango
 USE_XORG=	pixman
 GH_ACCOUNT=	WayfireWM
-GH_TUPLE=	WayfireWM:wf-touch:b1075c5:wftouch/subprojects/wf-touch \
-		WayfireWM:wf-utils:f45641b:wfutils/subprojects/wf-utils
+GH_TUPLE=	WayfireWM:wf-touch:8974eb0:wftouch/subprojects/wf-touch \
+		WayfireWM:wf-utils:889fdaf:wfutils/subprojects/wf-utils
 
-OPTIONS_DEFINE=	SUID X11
-OPTIONS_DEFAULT=SUID X11
-
-SUID_DESC=		setuid bit on "${PORTNAME}" binary (to claim DRM without seatd/console-kit-daemon)
-SUID_PLIST_SUB=		MAYBE_SUID="@(,,4755) "
-SUID_PLIST_SUB_OFF=	MAYBE_SUID=""
+OPTIONS_DEFINE=	X11
+OPTIONS_DEFAULT=X11
 
 X11_USE=		XORG=xcb
 X11_MESON_ENABLED=	xwayland
@@ -53,8 +51,5 @@ post-patch:
 post-install:
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.ini ${STAGEDIR}${EXAMPLESDIR}
-	${MKDIR} ${STAGEDIR}${PREFIX}/share/wayland-sessions
-	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.desktop \
-		${STAGEDIR}${PREFIX}/share/wayland-sessions
 
 .include <bsd.port.mk>
